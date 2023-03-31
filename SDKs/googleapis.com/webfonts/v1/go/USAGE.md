@@ -14,20 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.WebfontsWebfontsListRequest{
-        QueryParams: operations.WebfontsWebfontsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            Sort: "DATE",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PrettyPrint: false,
+        QuotaUser: "illum",
+        Sort: "DATE",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()

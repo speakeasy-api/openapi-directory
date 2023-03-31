@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UsersInstitutionsListPathParams struct {
+type UsersInstitutionsListRequest struct {
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type UsersInstitutionsListRequest struct {
-	PathParams UsersInstitutionsListPathParams
 }
 
 // UsersInstitutionsListInstitutionAttributes - The properties of the institution entity.

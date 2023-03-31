@@ -42,25 +42,17 @@ func (e *DirectionsForDirectionAndTypeRouteTypeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DirectionsForDirectionAndTypePathParams struct {
+type DirectionsForDirectionAndTypeRequest struct {
+	// Your developer id
+	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Identifier of direction of travel; values returned by Directions API - /v3/directions/route/{route_id}
 	DirectionID int `pathParam:"style=simple,explode=false,name=direction_id"`
 	// Number identifying transport mode; values returned via RouteTypes API
 	RouteType DirectionsForDirectionAndTypeRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-}
-
-type DirectionsForDirectionAndTypeQueryParams struct {
-	// Your developer id
-	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DirectionsForDirectionAndTypeRequest struct {
-	PathParams  DirectionsForDirectionAndTypePathParams
-	QueryParams DirectionsForDirectionAndTypeQueryParams
 }
 
 type DirectionsForDirectionAndTypeResponse struct {

@@ -37,7 +37,7 @@ func newKvpairs(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AddKvPairs - Create key-value pair
-func (s *kvpairs) AddKvPairs(ctx context.Context, request operations.AddKvPairsRequest) (*operations.AddKvPairsResponse, error) {
+func (s *kvpairs) AddKvPairs(ctx context.Context, request shared.KeyValuePairInput) (*operations.AddKvPairsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kvpairs"
 
@@ -93,7 +93,7 @@ func (s *kvpairs) AddKvPairs(ctx context.Context, request operations.AddKvPairsR
 // DeleteKvPair - Delete key-value pair
 func (s *kvpairs) DeleteKvPair(ctx context.Context, request operations.DeleteKvPairRequest) (*operations.DeleteKvPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/kvpairs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/kvpairs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *kvpairs) GetKvPairs(ctx context.Context, request operations.GetKvPairsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,7 +185,7 @@ func (s *kvpairs) GetKvPairs(ctx context.Context, request operations.GetKvPairsR
 // GetKvPairsByID - Get key-value pair
 func (s *kvpairs) GetKvPairsByID(ctx context.Context, request operations.GetKvPairsByIDRequest) (*operations.GetKvPairsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/kvpairs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/kvpairs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,9 +229,9 @@ func (s *kvpairs) GetKvPairsByID(ctx context.Context, request operations.GetKvPa
 // UpdateKvPair - Update existing Key-value pair
 func (s *kvpairs) UpdateKvPair(ctx context.Context, request operations.UpdateKvPairRequest) (*operations.UpdateKvPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/kvpairs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/kvpairs/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeyValuePairUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

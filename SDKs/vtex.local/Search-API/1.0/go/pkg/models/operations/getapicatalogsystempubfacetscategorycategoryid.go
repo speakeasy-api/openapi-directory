@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type GetAPICatalogSystemPubFacetsCategoryCategoryIDPathParams struct {
-	// Category unique number identifier.
-	CategoryID string `pathParam:"style=simple,explode=false,name=categoryId"`
-}
-
-type GetAPICatalogSystemPubFacetsCategoryCategoryIDQueryParams struct {
-	// Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
-	From *string `queryParam:"style=form,explode=true,name=_from"`
-	// Finisher page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
-	To *string `queryParam:"style=form,explode=true,name=_to"`
-}
-
-type GetAPICatalogSystemPubFacetsCategoryCategoryIDHeaders struct {
+type GetAPICatalogSystemPubFacetsCategoryCategoryIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAPICatalogSystemPubFacetsCategoryCategoryIDRequest struct {
-	PathParams  GetAPICatalogSystemPubFacetsCategoryCategoryIDPathParams
-	QueryParams GetAPICatalogSystemPubFacetsCategoryCategoryIDQueryParams
-	Headers     GetAPICatalogSystemPubFacetsCategoryCategoryIDHeaders
+	// Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+	From *string `queryParam:"style=form,explode=true,name=_from"`
+	// Finisher page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+	To *string `queryParam:"style=form,explode=true,name=_to"`
+	// Category unique number identifier.
+	CategoryID string `pathParam:"style=simple,explode=false,name=categoryId"`
 }
 
 // GetAPICatalogSystemPubFacetsCategoryCategoryID200ApplicationJSON - Object with name and ID of the category's facet.

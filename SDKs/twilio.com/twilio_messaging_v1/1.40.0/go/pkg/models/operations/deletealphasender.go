@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteAlphaSenderServerList = []string{
@@ -12,20 +11,15 @@ var DeleteAlphaSenderServerList = []string{
 }
 
 type DeleteAlphaSenderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteAlphaSenderPathParams struct {
+type DeleteAlphaSenderRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the AlphaSender resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteAlphaSenderRequest struct {
-	PathParams DeleteAlphaSenderPathParams
-	Security   DeleteAlphaSenderSecurity
-	ServerURL  *string
 }
 
 type DeleteAlphaSenderResponse struct {

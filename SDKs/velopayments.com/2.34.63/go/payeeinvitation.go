@@ -41,7 +41,7 @@ func newPayeeInvitation(defaultClient, securityClient HTTPClient, serverURL, lan
 // within the batch, i.e. if there is a conflict between the data provided for one payee within the batch and
 // that provided for another payee within the same batch). The validation at this stage is intra-batch only.
 // Validation against payees who have already been invited occurs subsequently during processing of the batch.
-func (s *payeeInvitation) CreatePayeeV3JSON(ctx context.Context, request operations.CreatePayeeV3JSONRequest) (*operations.CreatePayeeV3JSONResponse, error) {
+func (s *payeeInvitation) CreatePayeeV3JSON(ctx context.Context, request shared.CreatePayeesRequestV3Input) (*operations.CreatePayeeV3JSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/payees"
 
@@ -139,7 +139,7 @@ func (s *payeeInvitation) CreatePayeeV3JSON(ctx context.Context, request operati
 // within the batch, i.e. if there is a conflict between the data provided for one payee within the batch and
 // that provided for another payee within the same batch). The validation at this stage is intra-batch only.
 // Validation against payees who have already been invited occurs subsequently during processing of the batch.
-func (s *payeeInvitation) CreatePayeeV3Multipart(ctx context.Context, request operations.CreatePayeeV3MultipartRequest) (*operations.CreatePayeeV3MultipartResponse, error) {
+func (s *payeeInvitation) CreatePayeeV3Multipart(ctx context.Context, request operations.CreatePayeeV3MultipartFormData) (*operations.CreatePayeeV3MultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/payees"
 
@@ -234,14 +234,14 @@ func (s *payeeInvitation) CreatePayeeV3Multipart(ctx context.Context, request op
 // <p>Returns a filtered, paginated list of payees associated with a payor, along with invitation status and grace period end date.</p>
 func (s *payeeInvitation) GetPayeesInvitationStatusV3(ctx context.Context, request operations.GetPayeesInvitationStatusV3Request) (*operations.GetPayeesInvitationStatusV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/payors/{payorId}/invitationStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/payors/{payorId}/invitationStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -323,14 +323,14 @@ func (s *payeeInvitation) GetPayeesInvitationStatusV3(ctx context.Context, reque
 // Returns a filtered, paginated list of payees associated with a payor, along with invitation status and grace period end date.
 func (s *payeeInvitation) GetPayeesInvitationStatusV4(ctx context.Context, request operations.GetPayeesInvitationStatusV4Request) (*operations.GetPayeesInvitationStatusV4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/payors/{payorId}/invitationStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/payors/{payorId}/invitationStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -413,7 +413,7 @@ func (s *payeeInvitation) GetPayeesInvitationStatusV4(ctx context.Context, reque
 // Fetch the status of a specific batch of payees. The batch is fully processed when status is ACCEPTED and pendingCount is 0 ( 200 - OK, 404 - batch not found ).
 func (s *payeeInvitation) QueryBatchStatusV3(ctx context.Context, request operations.QueryBatchStatusV3Request) (*operations.QueryBatchStatusV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/batch/{batchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/batch/{batchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -498,7 +498,7 @@ func (s *payeeInvitation) QueryBatchStatusV3(ctx context.Context, request operat
 // Fetch the status of a specific batch of payees. The batch is fully processed when status is ACCEPTED and pendingCount is 0 ( 200 - OK, 404 - batch not found ).
 func (s *payeeInvitation) QueryBatchStatusV4(ctx context.Context, request operations.QueryBatchStatusV4Request) (*operations.QueryBatchStatusV4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/batch/{batchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/batch/{batchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -585,9 +585,9 @@ func (s *payeeInvitation) QueryBatchStatusV4(ctx context.Context, request operat
 // <p>Any previous invites to the payee by this Payor will be invalidated</p>
 func (s *payeeInvitation) ResendPayeeInviteV3(ctx context.Context, request operations.ResendPayeeInviteV3Request) (*operations.ResendPayeeInviteV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}/invite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/payees/{payeeId}/invite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvitePayeeRequestV3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -682,9 +682,9 @@ func (s *payeeInvitation) ResendPayeeInviteV3(ctx context.Context, request opera
 // <p>Any previous invites to the payee by this Payor will be invalidated</p>
 func (s *payeeInvitation) ResendPayeeInviteV4(ctx context.Context, request operations.ResendPayeeInviteV4Request) (*operations.ResendPayeeInviteV4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}/invite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/payees/{payeeId}/invite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvitePayeeRequestV4", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -785,7 +785,7 @@ func (s *payeeInvitation) ResendPayeeInviteV4(ctx context.Context, request opera
 // </ul>
 // <p>The validation at this stage is intra-batch only.</p>
 // <p>Validation against payees who have already been invited occurs subsequently during processing of the batch.</p>
-func (s *payeeInvitation) V4CreatePayeeJSON(ctx context.Context, request operations.V4CreatePayeeJSONRequest) (*operations.V4CreatePayeeJSONResponse, error) {
+func (s *payeeInvitation) V4CreatePayeeJSON(ctx context.Context, request shared.CreatePayeesRequestV4) (*operations.V4CreatePayeeJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/payees"
 
@@ -888,7 +888,7 @@ func (s *payeeInvitation) V4CreatePayeeJSON(ctx context.Context, request operati
 // </ul>
 // <p>The validation at this stage is intra-batch only.</p>
 // <p>Validation against payees who have already been invited occurs subsequently during processing of the batch.</p>
-func (s *payeeInvitation) V4CreatePayeeMultipart(ctx context.Context, request operations.V4CreatePayeeMultipartRequest) (*operations.V4CreatePayeeMultipartResponse, error) {
+func (s *payeeInvitation) V4CreatePayeeMultipart(ctx context.Context, request operations.V4CreatePayeeMultipartFormData) (*operations.V4CreatePayeeMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/payees"
 

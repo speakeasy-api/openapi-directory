@@ -34,16 +34,16 @@ func newPaymentMethodTransactionLogs(defaultClient, securityClient HTTPClient, s
 // ObjectGETPaymentMethodTransactionLog - CRUD: Retrieve a payment method transaction log
 func (s *paymentMethodTransactionLogs) ObjectGETPaymentMethodTransactionLog(ctx context.Context, request operations.ObjectGETPaymentMethodTransactionLogRequest) (*operations.ObjectGETPaymentMethodTransactionLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method-transaction-log/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-method-transaction-log/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

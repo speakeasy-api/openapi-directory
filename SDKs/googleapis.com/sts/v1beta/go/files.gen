@@ -14,7 +14,7 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/ststoken.go
 pkg/models/shared/googleidentitystsv1betaexchangetokenresponse.go
-pkg/models/shared/googleidentitystsv1betaexchangetokenrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googleidentitystsv1betaexchangetokenrequest.go
 pkg/models/shared/xgafvenum.go
 USAGE.md

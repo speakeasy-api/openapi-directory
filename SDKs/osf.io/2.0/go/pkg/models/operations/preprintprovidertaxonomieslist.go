@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PreprintProviderTaxonomiesListPathParams struct {
+type PreprintProviderTaxonomiesListRequest struct {
 	// The unique identifier of the preprint provider.
 	PreprintProviderID string `pathParam:"style=simple,explode=false,name=preprint_provider_id"`
-}
-
-type PreprintProviderTaxonomiesListRequest struct {
-	PathParams PreprintProviderTaxonomiesListPathParams
 }
 
 // PreprintProviderTaxonomiesListTaxonomyAttributes - The properties of the taxonomy entity.

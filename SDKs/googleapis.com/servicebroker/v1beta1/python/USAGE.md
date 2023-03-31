@@ -4,41 +4,33 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ServicebrokerProjectsBrokersCreateRequest(
-    security=operations.ServicebrokerProjectsBrokersCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
+    dollar_xgafv="2",
+    google_cloud_servicebroker_v1beta1_broker=shared.GoogleCloudServicebrokerV1beta1Broker(
+        create_time="provident",
+        name="distinctio",
+        title="Dr.",
+        url="unde",
     ),
-    path_params=operations.ServicebrokerProjectsBrokersCreatePathParams(
-        parent="consequatur",
-    ),
-    query_params=operations.ServicebrokerProjectsBrokersCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="non",
-        alt="proto",
-        callback="earum",
-        fields="voluptatem",
-        key="quidem",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="nam",
-        upload_type="veritatis",
-        upload_protocol="ad",
-    ),
-    request=shared.GoogleCloudServicebrokerV1beta1Broker(
-        create_time="dolores",
-        name="quia",
-        title="animi",
-        url="dicta",
-    ),
+    access_token="nulla",
+    alt="media",
+    callback="illum",
+    fields_="vel",
+    key="error",
+    oauth_token="deserunt",
+    parent="suscipit",
+    pretty_print=False,
+    quota_user="iure",
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
-res = s.projects.servicebroker_projects_brokers_create(req)
+res = s.projects.servicebroker_projects_brokers_create(req, operations.ServicebrokerProjectsBrokersCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.body is not None:
     # handle response

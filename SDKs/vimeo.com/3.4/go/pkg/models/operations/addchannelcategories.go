@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddChannelCategoriesPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
 type AddChannelCategoriesRequestBody struct {
 	// The array of category URIs to add.
 	Channels []string `json:"channels"`
 }
 
 type AddChannelCategoriesRequest struct {
-	PathParams AddChannelCategoriesPathParams
-	Request    AddChannelCategoriesRequestBody `request:"mediaType=application/json"`
+	RequestBody AddChannelCategoriesRequestBody `request:"mediaType=application/json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type AddChannelCategoriesResponse struct {

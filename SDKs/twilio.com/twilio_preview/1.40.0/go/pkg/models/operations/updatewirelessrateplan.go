@@ -12,11 +12,8 @@ var UpdateWirelessRatePlanServerList = []string{
 }
 
 type UpdateWirelessRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWirelessRatePlanPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateWirelessRatePlanUpdateWirelessRatePlanRequest struct {
@@ -25,10 +22,8 @@ type UpdateWirelessRatePlanUpdateWirelessRatePlanRequest struct {
 }
 
 type UpdateWirelessRatePlanRequest struct {
-	PathParams UpdateWirelessRatePlanPathParams
-	Request    *UpdateWirelessRatePlanUpdateWirelessRatePlanRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateWirelessRatePlanSecurity
-	ServerURL  *string
+	RequestBody *UpdateWirelessRatePlanUpdateWirelessRatePlanRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid         string                                               `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateWirelessRatePlanResponse struct {

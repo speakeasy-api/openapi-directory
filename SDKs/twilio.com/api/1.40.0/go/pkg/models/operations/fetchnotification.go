@@ -12,20 +12,15 @@ var FetchNotificationServerList = []string{
 }
 
 type FetchNotificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchNotificationPathParams struct {
+type FetchNotificationRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Notification resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the Notification resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchNotificationRequest struct {
-	PathParams FetchNotificationPathParams
-	Security   FetchNotificationSecurity
-	ServerURL  *string
 }
 
 type FetchNotificationResponse struct {

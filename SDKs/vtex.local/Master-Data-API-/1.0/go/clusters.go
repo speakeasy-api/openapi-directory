@@ -37,9 +37,9 @@ func newClusters(defaultClient, securityClient HTTPClient, serverURL, language, 
 // > There is a limit of five rules per request.
 func (s *clusters) Validatedocumentbyclusters(ctx context.Context, request operations.ValidatedocumentbyclustersRequest) (*operations.ValidatedocumentbyclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/clusters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *clusters) Validatedocumentbyclusters(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -12,26 +12,17 @@ var DeleteServiceUserServerList = []string{
 }
 
 type DeleteServiceUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteServiceUserPathParams struct {
+type DeleteServiceUserRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to delete the User resource from.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// The SID of the User resource to delete. This value can be either the `sid` or the `identity` of the User resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteServiceUserHeaders struct {
 	// The X-Twilio-Webhook-Enabled HTTP request header
 	XTwilioWebhookEnabled *shared.ServiceUserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
-}
-
-type DeleteServiceUserRequest struct {
-	PathParams DeleteServiceUserPathParams
-	Headers    DeleteServiceUserHeaders
-	Security   DeleteServiceUserSecurity
-	ServerURL  *string
 }
 
 type DeleteServiceUserResponse struct {

@@ -22,10 +22,6 @@ type PostPermissionsRequestBody struct {
 	Username *string `multipartForm:"name=username"`
 }
 
-type PostPermissionsRequest struct {
-	Request *PostPermissionsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostPermissionsResponse struct {
 	ContentType string
 	// The Permissions object.

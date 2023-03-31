@@ -14,30 +14,21 @@ func main() {
     s := sdk.New()
 
     req := operations.GroupsSettingsGroupsGetRequest{
-        Security: operations.GroupsSettingsGroupsGetSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GroupsSettingsGroupsGetPathParams{
-            GroupUniqueID: "corrupti",
-        },
-        QueryParams: operations.GroupsSettingsGroupsGetQueryParams{
-            Alt: "json",
-            Fields: "distinctio",
-            Key: "quibusdam",
-            OauthToken: "unde",
-            PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "corrupti",
-        },
+        Alt: "json",
+        Fields: "provident",
+        GroupUniqueID: "distinctio",
+        Key: "quibusdam",
+        OauthToken: "unde",
+        PrettyPrint: false,
+        QuotaUser: "nulla",
+        UserIP: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Groups.GroupsSettingsGroupsGet(ctx, req)
+    res, err := s.Groups.GroupsSettingsGroupsGet(ctx, req, operations.GroupsSettingsGroupsGetSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

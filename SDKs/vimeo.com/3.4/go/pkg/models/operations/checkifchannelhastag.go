@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfChannelHasTagPathParams struct {
+type CheckIfChannelHasTagRequest struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The word to use as the tag.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type CheckIfChannelHasTagRequest struct {
-	PathParams CheckIfChannelHasTagPathParams
 }
 
 type CheckIfChannelHasTagResponse struct {

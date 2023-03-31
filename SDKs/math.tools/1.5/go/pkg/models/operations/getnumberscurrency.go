@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersCurrencySecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
-type GetNumbersCurrencyQueryParams struct {
+type GetNumbersCurrencyRequest struct {
 	// Language to use
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// Number to spell
 	Number *int64 `queryParam:"style=form,explode=true,name=number"`
-}
-
-type GetNumbersCurrencyRequest struct {
-	QueryParams GetNumbersCurrencyQueryParams
-	Security    GetNumbersCurrencySecurity
 }
 
 type GetNumbersCurrencyResponse struct {

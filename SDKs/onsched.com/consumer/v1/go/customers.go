@@ -36,7 +36,7 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // <p>Use this endpoint to permanently <b>Delete</b> a Customer object. A valid <b>customer id</b> is required.</p>
 func (s *customers) DeleteConsumerV1CustomersID(ctx context.Context, request operations.DeleteConsumerV1CustomersIDRequest) (*operations.DeleteConsumerV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *customers) GetConsumerV1Customers(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -128,7 +128,7 @@ func (s *customers) GetConsumerV1CustomersBookingfields(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -222,7 +222,7 @@ func (s *customers) GetConsumerV1CustomersCustomfields(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -271,7 +271,7 @@ func (s *customers) GetConsumerV1CustomersStates(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -313,7 +313,7 @@ func (s *customers) GetConsumerV1CustomersStates(ctx context.Context, request op
 // <p>Use this endpoint to return a <b>Customer</b> object. A valid <b>customer id</b> is required. Find customer id's by using the <i>GET /consumer/v1/customers</i> endpoint.</p>
 func (s *customers) GetConsumerV1CustomersID(ctx context.Context, request operations.GetConsumerV1CustomersIDRequest) (*operations.GetConsumerV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -357,7 +357,7 @@ func (s *customers) GetConsumerV1CustomersID(ctx context.Context, request operat
 // PostConsumerV1Customers - Create Customer
 // <p>Use this endpoint to <b>Create</b> a new Customer. A customer object is automatically created with the first appointment booking if it doesn't already exist. If not specified, the business location id defaults to the primary business location.</p>
 // <p>Required Fields: <b>Email</b> and <b>Name</b> or <b>First and Lastname</b> depending on customer type. Type 0 = Person, Type 1 = Business. For type 0, the firstname and lastname fields are used. For type 1, the Name field is used, and the name field is also used to populate the lastname.</p>
-func (s *customers) PostConsumerV1Customers(ctx context.Context, request operations.PostConsumerV1CustomersRequest) (*operations.PostConsumerV1CustomersResponse, error) {
+func (s *customers) PostConsumerV1Customers(ctx context.Context, request shared.CustomerInputModel) (*operations.PostConsumerV1CustomersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/consumer/v1/customers"
 
@@ -411,9 +411,9 @@ func (s *customers) PostConsumerV1Customers(ctx context.Context, request operati
 // <p>Use this endpoint to <b>Update</b> a Customer object. A valid <b>customer id</b> is required. Note: Blank fields are not changed.</p>
 func (s *customers) PutConsumerV1CustomersID(ctx context.Context, request operations.PutConsumerV1CustomersIDRequest) (*operations.PutConsumerV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerUpdateModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -22,10 +22,6 @@ type CreateMonitorRequestBody struct {
 	Monitor *CreateMonitorRequestBodyMonitor `json:"monitor,omitempty"`
 }
 
-type CreateMonitorRequest struct {
-	Request *CreateMonitorRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateMonitor400ApplicationJSONErrorDetails struct {
 	Param *string `json:"param,omitempty"`
 }

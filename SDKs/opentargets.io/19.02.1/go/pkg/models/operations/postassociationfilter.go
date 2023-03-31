@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostAssociationFilterRequest struct {
-	// Filters to apply when retrieving association objects.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostAssociationFilterResponse struct {
 	ContentType string
 	StatusCode  int

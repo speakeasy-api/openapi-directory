@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestViberProductionNotificationsUsingPOSTPathParams struct {
+type TestViberProductionNotificationsUsingPOSTRequest struct {
+	// messageDetails
+	PushNotificationTestModel shared.PushNotificationTestModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type TestViberProductionNotificationsUsingPOSTRequest struct {
-	PathParams TestViberProductionNotificationsUsingPOSTPathParams
-	// messageDetails
-	Request shared.PushNotificationTestModel `request:"mediaType=application/json"`
 }
 
 type TestViberProductionNotificationsUsingPOSTResponse struct {

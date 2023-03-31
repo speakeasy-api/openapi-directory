@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsListForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // MigrationsListForOrgExcludeEnum - Allowed values that can be passed to the exclude param.
 type MigrationsListForOrgExcludeEnum string
 
@@ -35,18 +30,15 @@ func (e *MigrationsListForOrgExcludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MigrationsListForOrgQueryParams struct {
+type MigrationsListForOrgRequest struct {
 	// Exclude attributes from the API response to improve performance
 	Exclude []MigrationsListForOrgExcludeEnum `queryParam:"style=form,explode=true,name=exclude"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type MigrationsListForOrgRequest struct {
-	PathParams  MigrationsListForOrgPathParams
-	QueryParams MigrationsListForOrgQueryParams
 }
 
 type MigrationsListForOrgResponse struct {

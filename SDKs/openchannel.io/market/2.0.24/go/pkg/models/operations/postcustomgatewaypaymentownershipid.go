@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type PostCustomGatewayPaymentOwnershipIDPathParams struct {
-	// The id of the ownership record involved in this transaction
-	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
-}
-
-type PostCustomGatewayPaymentOwnershipIDQueryParams struct {
+type PostCustomGatewayPaymentOwnershipIDRequest struct {
 	// The total amount paid in cents
 	Amount int64 `queryParam:"style=form,explode=true,name=amount"`
 	// A custom JSON object to attach to this transaction
@@ -24,11 +19,8 @@ type PostCustomGatewayPaymentOwnershipIDQueryParams struct {
 	FeeAmount *int64 `queryParam:"style=form,explode=true,name=feeAmount"`
 	// The amount (in cents) paid to the marketplace owner as a commission for the purchase of this app. Defaults based on the commission amount configured for this marketplace.
 	MarketplaceAmount *int64 `queryParam:"style=form,explode=true,name=marketplaceAmount"`
-}
-
-type PostCustomGatewayPaymentOwnershipIDRequest struct {
-	PathParams  PostCustomGatewayPaymentOwnershipIDPathParams
-	QueryParams PostCustomGatewayPaymentOwnershipIDQueryParams
+	// The id of the ownership record involved in this transaction
+	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
 }
 
 type PostCustomGatewayPaymentOwnershipIDResponse struct {

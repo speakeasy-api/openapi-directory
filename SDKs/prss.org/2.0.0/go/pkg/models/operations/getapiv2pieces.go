@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV2PiecesSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2PiecesQueryParams struct {
-	// The ID of the episode that owns the piece.
-	EpisodeID int64 `queryParam:"style=form,explode=true,name=episodeId"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2PiecesRequest struct {
-	QueryParams GetAPIV2PiecesQueryParams
-	Security    GetAPIV2PiecesSecurity
+	// The ID of the episode that owns the piece.
+	EpisodeID int64 `queryParam:"style=form,explode=true,name=episodeId"`
 }
 
 type GetAPIV2PiecesResponse struct {

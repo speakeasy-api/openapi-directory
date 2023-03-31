@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest(
-    security=operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsPathParams(
-        name="sed",
-    ),
-    query_params=operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsQueryParams(
-        dollar_xgafv="1",
-        access_token="sed",
-        alt="media",
-        callback="ut",
-        fields="voluptatem",
-        key="voluptas",
-        oauth_token="non",
-        pretty_print=False,
-        quota_user="quia",
-        upload_type="unde",
-        upload_protocol="maiores",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.projects.securitycenter_projects_locations_clusters_get_container_threat_detection_settings(req)
+res = s.projects.securitycenter_projects_locations_clusters_get_container_threat_detection_settings(req, operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.container_threat_detection_settings is not None:
     # handle response

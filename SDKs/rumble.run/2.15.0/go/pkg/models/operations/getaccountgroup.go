@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAccountGroupSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountGroupPathParams struct {
-	// UUID of the group
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAccountGroupRequest struct {
-	PathParams GetAccountGroupPathParams
-	Security   GetAccountGroupSecurity
+	// UUID of the group
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type GetAccountGroupResponse struct {

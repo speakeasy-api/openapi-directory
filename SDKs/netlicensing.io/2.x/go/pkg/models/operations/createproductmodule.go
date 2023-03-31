@@ -10,7 +10,8 @@ import (
 )
 
 type CreateProductModuleSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateProductModuleRequestBodyLicenseTemplateEnum string
@@ -80,11 +81,6 @@ type CreateProductModuleRequestBody struct {
 	RedThreshold *int `form:"name=redThreshold"`
 	// Remaining time volume for yellow level. Mandatory for 'Rental' licensing model.
 	YellowThreshold *int `form:"name=yellowThreshold"`
-}
-
-type CreateProductModuleRequest struct {
-	Request  CreateProductModuleRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateProductModuleSecurity
 }
 
 type CreateProductModuleResponse struct {

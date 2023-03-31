@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceTypesListQueryParams struct {
+type DcimDeviceTypesListRequest struct {
 	ConsolePorts       *string `queryParam:"style=form,explode=true,name=console_ports"`
 	ConsoleServerPorts *string `queryParam:"style=form,explode=true,name=console_server_ports"`
 	Created            *string `queryParam:"style=form,explode=true,name=created"`
@@ -77,10 +77,6 @@ type DcimDeviceTypesListQueryParams struct {
 	UHeightLt        *string `queryParam:"style=form,explode=true,name=u_height__lt"`
 	UHeightLte       *string `queryParam:"style=form,explode=true,name=u_height__lte"`
 	UHeightN         *string `queryParam:"style=form,explode=true,name=u_height__n"`
-}
-
-type DcimDeviceTypesListRequest struct {
-	QueryParams DcimDeviceTypesListQueryParams
 }
 
 type DcimDeviceTypesList200ApplicationJSON struct {

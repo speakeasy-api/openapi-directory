@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetFeedConfigurationHeaders struct {
+type GetFeedConfigurationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetFeedConfigurationRequest struct {
-	Headers GetFeedConfigurationHeaders
 }
 
 // GetFeedConfiguration200ApplicationJSONFilter - Information on how orders are filtered to show on the feed.

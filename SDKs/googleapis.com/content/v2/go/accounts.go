@@ -33,7 +33,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ContentAccountsAuthinfo - Returns information about the authenticated user.
-func (s *accounts) ContentAccountsAuthinfo(ctx context.Context, request operations.ContentAccountsAuthinfoRequest) (*operations.ContentAccountsAuthinfoResponse, error) {
+func (s *accounts) ContentAccountsAuthinfo(ctx context.Context, request operations.ContentAccountsAuthinfoRequest, security operations.ContentAccountsAuthinfoSecurity) (*operations.ContentAccountsAuthinfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/authinfo"
 
@@ -42,11 +42,11 @@ func (s *accounts) ContentAccountsAuthinfo(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *accounts) ContentAccountsAuthinfo(ctx context.Context, request operatio
 }
 
 // ContentAccountsClaimwebsite - Claims the website of a Merchant Center sub-account.
-func (s *accounts) ContentAccountsClaimwebsite(ctx context.Context, request operations.ContentAccountsClaimwebsiteRequest) (*operations.ContentAccountsClaimwebsiteResponse, error) {
+func (s *accounts) ContentAccountsClaimwebsite(ctx context.Context, request operations.ContentAccountsClaimwebsiteRequest, security operations.ContentAccountsClaimwebsiteSecurity) (*operations.ContentAccountsClaimwebsiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/claimwebsite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/claimwebsite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *accounts) ContentAccountsClaimwebsite(ctx context.Context, request oper
 }
 
 // ContentAccountsCustombatch - Retrieves, inserts, updates, and deletes multiple Merchant Center (sub-)accounts in a single request.
-func (s *accounts) ContentAccountsCustombatch(ctx context.Context, request operations.ContentAccountsCustombatchRequest) (*operations.ContentAccountsCustombatchResponse, error) {
+func (s *accounts) ContentAccountsCustombatch(ctx context.Context, request operations.ContentAccountsCustombatchRequest, security operations.ContentAccountsCustombatchSecurity) (*operations.ContentAccountsCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountsCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *accounts) ContentAccountsCustombatch(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *accounts) ContentAccountsCustombatch(ctx context.Context, request opera
 }
 
 // ContentAccountsDelete - Deletes a Merchant Center sub-account.
-func (s *accounts) ContentAccountsDelete(ctx context.Context, request operations.ContentAccountsDeleteRequest) (*operations.ContentAccountsDeleteResponse, error) {
+func (s *accounts) ContentAccountsDelete(ctx context.Context, request operations.ContentAccountsDeleteRequest, security operations.ContentAccountsDeleteSecurity) (*operations.ContentAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,20 +223,20 @@ func (s *accounts) ContentAccountsDelete(ctx context.Context, request operations
 }
 
 // ContentAccountsGet - Retrieves a Merchant Center account.
-func (s *accounts) ContentAccountsGet(ctx context.Context, request operations.ContentAccountsGetRequest) (*operations.ContentAccountsGetResponse, error) {
+func (s *accounts) ContentAccountsGet(ctx context.Context, request operations.ContentAccountsGetRequest, security operations.ContentAccountsGetSecurity) (*operations.ContentAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -271,11 +271,11 @@ func (s *accounts) ContentAccountsGet(ctx context.Context, request operations.Co
 }
 
 // ContentAccountsInsert - Creates a Merchant Center sub-account.
-func (s *accounts) ContentAccountsInsert(ctx context.Context, request operations.ContentAccountsInsertRequest) (*operations.ContentAccountsInsertResponse, error) {
+func (s *accounts) ContentAccountsInsert(ctx context.Context, request operations.ContentAccountsInsertRequest, security operations.ContentAccountsInsertSecurity) (*operations.ContentAccountsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -287,11 +287,11 @@ func (s *accounts) ContentAccountsInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -326,11 +326,11 @@ func (s *accounts) ContentAccountsInsert(ctx context.Context, request operations
 }
 
 // ContentAccountsLink - Performs an action on a link between two Merchant Center accounts, namely accountId and linkedAccountId.
-func (s *accounts) ContentAccountsLink(ctx context.Context, request operations.ContentAccountsLinkRequest) (*operations.ContentAccountsLinkResponse, error) {
+func (s *accounts) ContentAccountsLink(ctx context.Context, request operations.ContentAccountsLinkRequest, security operations.ContentAccountsLinkSecurity) (*operations.ContentAccountsLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/link", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/link", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountsLinkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -342,11 +342,11 @@ func (s *accounts) ContentAccountsLink(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -381,20 +381,20 @@ func (s *accounts) ContentAccountsLink(ctx context.Context, request operations.C
 }
 
 // ContentAccountsList - Lists the sub-accounts in your Merchant Center account.
-func (s *accounts) ContentAccountsList(ctx context.Context, request operations.ContentAccountsListRequest) (*operations.ContentAccountsListResponse, error) {
+func (s *accounts) ContentAccountsList(ctx context.Context, request operations.ContentAccountsListRequest, security operations.ContentAccountsListSecurity) (*operations.ContentAccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -429,11 +429,11 @@ func (s *accounts) ContentAccountsList(ctx context.Context, request operations.C
 }
 
 // ContentAccountsUpdate - Updates a Merchant Center account. Any fields that are not provided are deleted from the resource.
-func (s *accounts) ContentAccountsUpdate(ctx context.Context, request operations.ContentAccountsUpdateRequest) (*operations.ContentAccountsUpdateResponse, error) {
+func (s *accounts) ContentAccountsUpdate(ctx context.Context, request operations.ContentAccountsUpdateRequest, security operations.ContentAccountsUpdateSecurity) (*operations.ContentAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -445,11 +445,11 @@ func (s *accounts) ContentAccountsUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

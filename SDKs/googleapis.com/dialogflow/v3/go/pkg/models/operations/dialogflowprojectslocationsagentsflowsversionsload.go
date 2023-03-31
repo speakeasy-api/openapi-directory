@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentsFlowsVersionsLoadPathParams struct {
-	// Required. The Version to be loaded to draft flow. Format: `projects//locations//agents//flows//versions/`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams struct {
+type DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                 *shared.XgafvEnum                                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowCxV3LoadVersionRequest *shared.GoogleCloudDialogflowCxV3LoadVersionRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The Version to be loaded to draft flow. Format: `projects//locations//agents//flows//versions/`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsFlowsVersionsLoadPathParams
-	QueryParams DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams
-	Request     *shared.GoogleCloudDialogflowCxV3LoadVersionRequest `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurity
 }
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse struct {

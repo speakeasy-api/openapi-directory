@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOrders2QueryParams struct {
-	// Filters list to return only orders with non `null` values for the `invoiceInput` field.
-	FHasInputInvoice *bool `queryParam:"style=form,explode=true,name=f_hasInputInvoice"`
-}
-
-type ListOrders2Headers struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type ListOrders2RequestBody struct {
 	// Concatened value sufix {{creationDate}} and range date in Timestamp format.
 	FCreationDate string `json:"f_creationDate"`
@@ -31,9 +19,13 @@ type ListOrders2RequestBody struct {
 }
 
 type ListOrders2Request struct {
-	QueryParams ListOrders2QueryParams
-	Headers     ListOrders2Headers
-	Request     *ListOrders2RequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                  `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *ListOrders2RequestBody `request:"mediaType=application/json"`
+	// Filters list to return only orders with non `null` values for the `invoiceInput` field.
+	FHasInputInvoice *bool `queryParam:"style=form,explode=true,name=f_hasInputInvoice"`
 }
 
 type ListOrders2Response struct {

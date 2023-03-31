@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type VerifyPayoutPathParams struct {
-	WithdrawalsID string `pathParam:"style=simple,explode=false,name=withdrawals-id"`
-}
-
-type VerifyPayoutHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type VerifyPayoutRequestBody struct {
 	VerificationCode *string `json:"verification_code,omitempty"`
 }
 
 type VerifyPayoutRequest struct {
-	PathParams VerifyPayoutPathParams
-	Headers    VerifyPayoutHeaders
-	Request    *VerifyPayoutRequestBody `request:"mediaType=application/json"`
+	RequestBody   *VerifyPayoutRequestBody `request:"mediaType=application/json"`
+	WithdrawalsID string                   `pathParam:"style=simple,explode=false,name=withdrawals-id"`
+	XAPIKey       *string                  `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type VerifyPayoutResponse struct {

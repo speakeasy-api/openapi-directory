@@ -33,16 +33,12 @@ func (e *ScheduleBySeasonFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ScheduleBySeasonPathParams struct {
+type ScheduleBySeasonRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ScheduleBySeasonFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
 	// <br>Examples: <code>2016</code>, <code>2017</code>.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type ScheduleBySeasonRequest struct {
-	PathParams ScheduleBySeasonPathParams
 }
 
 type ScheduleBySeasonResponse struct {

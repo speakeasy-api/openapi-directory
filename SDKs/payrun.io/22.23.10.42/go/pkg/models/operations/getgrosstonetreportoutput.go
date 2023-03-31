@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGrossToNetReportOutputQueryParams struct {
+type GetGrossToNetReportOutputRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employer unique key. E.g. ER001
 	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
 	// The highest element index to return from the report. Used to control paging within large data sets. E.g. 100
@@ -20,18 +24,6 @@ type GetGrossToNetReportOutputQueryParams struct {
 	TaxPeriod *string `queryParam:"style=form,explode=true,name=TaxPeriod"`
 	// The tax year. E.g. 2017 = 2017/18 year.
 	TaxYear string `queryParam:"style=form,explode=true,name=TaxYear"`
-}
-
-type GetGrossToNetReportOutputHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetGrossToNetReportOutputRequest struct {
-	QueryParams GetGrossToNetReportOutputQueryParams
-	Headers     GetGrossToNetReportOutputHeaders
 }
 
 type GetGrossToNetReportOutputResponse struct {

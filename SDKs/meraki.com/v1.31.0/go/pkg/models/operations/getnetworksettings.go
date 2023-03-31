@@ -7,12 +7,8 @@ import (
 	"time"
 )
 
-type GetNetworkSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSettingsRequest struct {
-	PathParams GetNetworkSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkSettings200ApplicationJSONClientPrivacy - Privacy settings

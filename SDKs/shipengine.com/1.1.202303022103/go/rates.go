@@ -38,7 +38,7 @@ func newRates(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CalculateRates - Get Shipping Rates
 // It's not uncommon that you want to give your customer the choice between whether they want to ship the fastest, cheapest, or the most trusted route. Most companies don't solely ship things using a single shipping option;
 // so we provide functionality to show you all your options!
-func (s *rates) CalculateRates(ctx context.Context, request operations.CalculateRatesRequest) (*operations.CalculateRatesResponse, error) {
+func (s *rates) CalculateRates(ctx context.Context, request shared.CalculateRatesRequestBody) (*operations.CalculateRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/rates"
 
@@ -105,7 +105,7 @@ func (s *rates) CalculateRates(ctx context.Context, request operations.Calculate
 
 // CompareBulkRates - Get Bulk Rates
 // Get Bulk Shipment Rates
-func (s *rates) CompareBulkRates(ctx context.Context, request operations.CompareBulkRatesRequest) (*operations.CompareBulkRatesResponse, error) {
+func (s *rates) CompareBulkRates(ctx context.Context, request shared.CompareBulkRatesRequestBody) (*operations.CompareBulkRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/rates/bulk"
 
@@ -172,7 +172,7 @@ func (s *rates) CompareBulkRates(ctx context.Context, request operations.Compare
 
 // EstimateRates - Estimate Rates
 // Get Rate Estimates
-func (s *rates) EstimateRates(ctx context.Context, request operations.EstimateRatesRequest) (*operations.EstimateRatesResponse, error) {
+func (s *rates) EstimateRates(ctx context.Context, request shared.EstimateRatesRequestBody) (*operations.EstimateRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/rates/estimate"
 
@@ -241,7 +241,7 @@ func (s *rates) EstimateRates(ctx context.Context, request operations.EstimateRa
 // Retrieve a previously queried rate by its ID
 func (s *rates) GetRateByID(ctx context.Context, request operations.GetRateByIDRequest) (*operations.GetRateByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/rates/{rate_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/rates/{rate_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

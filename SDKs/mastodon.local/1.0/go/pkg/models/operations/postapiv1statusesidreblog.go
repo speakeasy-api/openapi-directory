@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV1StatusesIDReblogSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1StatusesIDReblogPathParams struct {
-	// Local ID of a status in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1StatusesIDReblogRequestBody struct {
@@ -22,9 +17,9 @@ type PostAPIV1StatusesIDReblogRequestBody struct {
 }
 
 type PostAPIV1StatusesIDReblogRequest struct {
-	PathParams PostAPIV1StatusesIDReblogPathParams
-	Request    *PostAPIV1StatusesIDReblogRequestBody `request:"mediaType=application/json"`
-	Security   PostAPIV1StatusesIDReblogSecurity
+	RequestBody *PostAPIV1StatusesIDReblogRequestBody `request:"mediaType=application/json"`
+	// Local ID of a status in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1StatusesIDReblogResponse struct {

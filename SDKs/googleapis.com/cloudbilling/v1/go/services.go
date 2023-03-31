@@ -33,7 +33,7 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudbillingServicesList - Lists all public cloud services.
-func (s *services) CloudbillingServicesList(ctx context.Context, request operations.CloudbillingServicesListRequest) (*operations.CloudbillingServicesListResponse, error) {
+func (s *services) CloudbillingServicesList(ctx context.Context, request operations.CloudbillingServicesListRequest, security operations.CloudbillingServicesListSecurity) (*operations.CloudbillingServicesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/services"
 
@@ -42,11 +42,11 @@ func (s *services) CloudbillingServicesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *services) CloudbillingServicesList(ctx context.Context, request operati
 }
 
 // CloudbillingServicesSkusList - Lists all publicly available SKUs for a given cloud service.
-func (s *services) CloudbillingServicesSkusList(ctx context.Context, request operations.CloudbillingServicesSkusListRequest) (*operations.CloudbillingServicesSkusListResponse, error) {
+func (s *services) CloudbillingServicesSkusList(ctx context.Context, request operations.CloudbillingServicesSkusListRequest, security operations.CloudbillingServicesSkusListSecurity) (*operations.CloudbillingServicesSkusListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CallAnswerPathParams struct {
+type CallAnswerRequest struct {
 	// Unique identifier of the call
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CallAnswerRequest struct {
-	PathParams CallAnswerPathParams
 }
 
 type CallAnswerResponse struct {

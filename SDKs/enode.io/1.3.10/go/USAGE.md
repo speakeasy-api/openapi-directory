@@ -14,21 +14,16 @@ func main() {
     s := sdk.New()
 
     req := operations.ControlChargerChargingRequest{
-        Security: operations.ControlChargerChargingSecurity{
-            UserAccessToken: &shared.SchemeUserAccessToken{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ControlChargerChargingPathParams{
-            ChargerID: "corrupti",
-        },
-        Request: &operations.ControlChargerChargingRequestBody{
+        RequestBody: &operations.ControlChargerChargingRequestBody{
             Action: "START",
         },
+        ChargerID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Chargers.ControlChargerCharging(ctx, req)
+    res, err := s.Chargers.ControlChargerCharging(ctx, req, operations.ControlChargerChargingSecurity{
+        UserAccessToken: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

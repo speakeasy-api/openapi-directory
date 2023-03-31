@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2ImportsIDJSONPathParams struct {
-	// Import ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2ImportsIDJSONRequestBody struct {
 	// Name, recommended to be easily identifiable to a user
 	Name *string `form:"name=name"`
@@ -19,8 +14,9 @@ type PutV2ImportsIDJSONRequestBody struct {
 }
 
 type PutV2ImportsIDJSONRequest struct {
-	PathParams PutV2ImportsIDJSONPathParams
-	Request    *PutV2ImportsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2ImportsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Import ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2ImportsIDJSONResponse struct {

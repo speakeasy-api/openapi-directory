@@ -4,14 +4,33 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AddUserToAccountRequest(
-    path_params=operations.AddUserToAccountPathParams(
-        account_id="perferendis",
+
+
+req = operations.AddUserToAccountRequestBody(
+    account=operations.AddUserToAccountRequestBodyAccount(
+        account_id="corrupti",
+        domain="provident",
     ),
-    request=operations.AddUserToAccountRequestBody(
-        user_id="qui",
-    ),
+    users=[
+        operations.AddUserToAccountRequestBodyUsers(
+            identification=operations.AddUserToAccountRequestBodyUsersIdentification(
+                email="Leda_Stiedemann@hotmail.com",
+                user_id="vel",
+            ),
+        ),
+        operations.AddUserToAccountRequestBodyUsers(
+            identification=operations.AddUserToAccountRequestBodyUsersIdentification(
+                email="Luna.Hoppe@yahoo.com",
+                user_id="debitis",
+            ),
+        ),
+        operations.AddUserToAccountRequestBodyUsers(
+            identification=operations.AddUserToAccountRequestBodyUsersIdentification(
+                email="Vincenzo.Goldner@gmail.com",
+                user_id="minus",
+            ),
+        ),
+    ],
 )
     
 res = s.accounts.add_user_to_account(req)

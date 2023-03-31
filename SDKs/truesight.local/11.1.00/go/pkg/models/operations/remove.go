@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type RemovePathParams struct {
+type RemoveRequest struct {
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type RemoveQueryParams struct {
 	// The Monitor Class of the device.
 	MonitorClass string `queryParam:"style=form,explode=true,name=monitorClass"`
 	// The Monitor SID of the device.
 	MonitorSid string `queryParam:"style=form,explode=true,name=monitorSid"`
-}
-
-type RemoveRequest struct {
-	PathParams  RemovePathParams
-	QueryParams RemoveQueryParams
 }
 
 type RemoveResponse struct {

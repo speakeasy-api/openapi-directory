@@ -14,41 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest{
-        Security: operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest{
-            Command: "suscipit",
+        DollarXgafv: "2",
+        GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest: &shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest{
+            Command: "provident",
             Params: map[string]interface{}{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
         },
+        AccessToken: "error",
+        Alt: "media",
+        Callback: "suscipit",
+        Fields: "iure",
+        Key: "magnam",
+        Name: "debitis",
+        OauthToken: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        UploadType: "tempora",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Enterprises.SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx, req)
+    res, err := s.Enterprises.SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx, req, operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

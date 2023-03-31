@@ -34,9 +34,9 @@ func newWebhookTests(defaultClient, securityClient HTTPClient, serverURL, langua
 // Send a test webhook for a network
 func (s *webhookTests) CreateNetworkWebhooksWebhookTest(ctx context.Context, request operations.CreateNetworkWebhooksWebhookTestRequest) (*operations.CreateNetworkWebhooksWebhookTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *webhookTests) CreateNetworkWebhooksWebhookTest(ctx context.Context, req
 // Return the status of a webhook test for a network
 func (s *webhookTests) GetNetworkWebhooksWebhookTest(ctx context.Context, request operations.GetNetworkWebhooksWebhookTestRequest) (*operations.GetNetworkWebhooksWebhookTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -10,13 +10,8 @@ import (
 )
 
 type ContentAccountsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ContentAccountsListPathParams struct {
-	// The ID of the managing account. This must be a multi-client account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ContentAccountsListViewEnum - Controls which fields will be populated. Acceptable values are: "merchant" and "css". The default value is "merchant".
@@ -43,7 +38,7 @@ func (e *ContentAccountsListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ContentAccountsListQueryParams struct {
+type ContentAccountsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -60,6 +55,8 @@ type ContentAccountsListQueryParams struct {
 	Label *string `queryParam:"style=form,explode=true,name=label"`
 	// The maximum number of accounts to return in the response, used for paging.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The ID of the managing account. This must be a multi-client account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// If set, only the accounts with the given name (case sensitive) will be returned.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// OAuth 2.0 token for the current user.
@@ -76,12 +73,6 @@ type ContentAccountsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Controls which fields will be populated. Acceptable values are: "merchant" and "css". The default value is "merchant".
 	View *ContentAccountsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ContentAccountsListRequest struct {
-	PathParams  ContentAccountsListPathParams
-	QueryParams ContentAccountsListQueryParams
-	Security    ContentAccountsListSecurity
 }
 
 type ContentAccountsListResponse struct {

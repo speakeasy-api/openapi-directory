@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposRemoveTeamAccessRestrictionsPathParams struct {
-	// The name of the branch.
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposRemoveTeamAccessRestrictionsRequestBody1 struct {
 	// teams parameter
 	Teams []string `json:"teams"`
@@ -91,8 +84,11 @@ func (u ReposRemoveTeamAccessRestrictionsRequestBody) MarshalJSON() ([]byte, err
 }
 
 type ReposRemoveTeamAccessRestrictionsRequest struct {
-	PathParams ReposRemoveTeamAccessRestrictionsPathParams
-	Request    *ReposRemoveTeamAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposRemoveTeamAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch.
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposRemoveTeamAccessRestrictionsResponse struct {

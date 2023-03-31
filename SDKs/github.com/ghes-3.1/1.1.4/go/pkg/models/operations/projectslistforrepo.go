@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ProjectsListForRepoStateEnum - Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
 type ProjectsListForRepoStateEnum string
 
@@ -43,18 +36,17 @@ func (e *ProjectsListForRepoStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListForRepoQueryParams struct {
+type ProjectsListForRepoRequest struct {
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
 	State *ProjectsListForRepoStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ProjectsListForRepoRequest struct {
-	PathParams  ProjectsListForRepoPathParams
-	QueryParams ProjectsListForRepoQueryParams
 }
 
 type ProjectsListForRepoResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackGroupsPartialUpdatePathParams struct {
+type DcimRackGroupsPartialUpdateRequest struct {
+	WritableRackGroupInput shared.WritableRackGroupInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this rack group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRackGroupsPartialUpdateRequest struct {
-	PathParams DcimRackGroupsPartialUpdatePathParams
-	Request    shared.WritableRackGroupInput `request:"mediaType=application/json"`
 }
 
 type DcimRackGroupsPartialUpdateResponse struct {

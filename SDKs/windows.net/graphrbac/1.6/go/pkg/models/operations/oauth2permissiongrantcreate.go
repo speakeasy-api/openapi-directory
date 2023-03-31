@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OAuth2PermissionGrantCreatePathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type OAuth2PermissionGrantCreateQueryParams struct {
+type OAuth2PermissionGrantCreateRequest struct {
+	// The relevant app Service Principal Object Id and the Service Principal Object Id you want to grant.
+	OAuth2PermissionGrant *shared.OAuth2PermissionGrant `request:"mediaType=application/json"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type OAuth2PermissionGrantCreateRequest struct {
-	PathParams  OAuth2PermissionGrantCreatePathParams
-	QueryParams OAuth2PermissionGrantCreateQueryParams
-	// The relevant app Service Principal Object Id and the Service Principal Object Id you want to grant.
-	Request *shared.OAuth2PermissionGrant `request:"mediaType=application/json"`
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type OAuth2PermissionGrantCreateResponse struct {

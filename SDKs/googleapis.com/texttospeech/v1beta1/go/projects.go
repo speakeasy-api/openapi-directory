@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // TexttospeechProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) TexttospeechProjectsLocationsOperationsGet(ctx context.Context, request operations.TexttospeechProjectsLocationsOperationsGetRequest) (*operations.TexttospeechProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) TexttospeechProjectsLocationsOperationsGet(ctx context.Context, request operations.TexttospeechProjectsLocationsOperationsGetRequest, security operations.TexttospeechProjectsLocationsOperationsGetSecurity) (*operations.TexttospeechProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *projects) TexttospeechProjectsLocationsOperationsGet(ctx context.Contex
 }
 
 // TexttospeechProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) TexttospeechProjectsLocationsOperationsList(ctx context.Context, request operations.TexttospeechProjectsLocationsOperationsListRequest) (*operations.TexttospeechProjectsLocationsOperationsListResponse, error) {
+func (s *projects) TexttospeechProjectsLocationsOperationsList(ctx context.Context, request operations.TexttospeechProjectsLocationsOperationsListRequest, security operations.TexttospeechProjectsLocationsOperationsListSecurity) (*operations.TexttospeechProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *projects) TexttospeechProjectsLocationsOperationsList(ctx context.Conte
 }
 
 // TexttospeechProjectsLocationsSynthesizeLongAudio - Synthesizes long form text asynchronously.
-func (s *projects) TexttospeechProjectsLocationsSynthesizeLongAudio(ctx context.Context, request operations.TexttospeechProjectsLocationsSynthesizeLongAudioRequest) (*operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse, error) {
+func (s *projects) TexttospeechProjectsLocationsSynthesizeLongAudio(ctx context.Context, request operations.TexttospeechProjectsLocationsSynthesizeLongAudioRequest, security operations.TexttospeechProjectsLocationsSynthesizeLongAudioSecurity) (*operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:synthesizeLongAudio", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:synthesizeLongAudio", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SynthesizeLongAudioRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *projects) TexttospeechProjectsLocationsSynthesizeLongAudio(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

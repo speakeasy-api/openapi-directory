@@ -8,18 +8,18 @@ import (
 )
 
 type AnalyticsManagementGoalsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementGoalsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementGoalsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementGoalsListSecurity struct {
@@ -28,16 +28,9 @@ type AnalyticsManagementGoalsListSecurity struct {
 	Option3 *AnalyticsManagementGoalsListSecurityOption3 `security:"option"`
 }
 
-type AnalyticsManagementGoalsListPathParams struct {
+type AnalyticsManagementGoalsListRequest struct {
 	// Account ID to retrieve goals for. Can either be a specific account ID or '~all', which refers to all the accounts that user has access to.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// View (Profile) ID to retrieve goals for. Can either be a specific view (profile) ID or '~all', which refers to all the views (profiles) that user has access to.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property ID to retrieve goals for. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementGoalsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -50,18 +43,16 @@ type AnalyticsManagementGoalsListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// View (Profile) ID to retrieve goals for. Can either be a specific view (profile) ID or '~all', which refers to all the views (profiles) that user has access to.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// An index of the first goal to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementGoalsListRequest struct {
-	PathParams  AnalyticsManagementGoalsListPathParams
-	QueryParams AnalyticsManagementGoalsListQueryParams
-	Security    AnalyticsManagementGoalsListSecurity
+	// Web property ID to retrieve goals for. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementGoalsListResponse struct {

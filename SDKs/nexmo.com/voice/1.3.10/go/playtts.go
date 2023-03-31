@@ -34,11 +34,11 @@ func newPlayTTS(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // StartTalk - Play text to speech into a call
 // Play text to speech into a call
-func (s *playTTS) StartTalk(ctx context.Context, request operations.StartTalkRequest) (*operations.StartTalkResponse, error) {
+func (s *playTTS) StartTalk(ctx context.Context, request operations.StartTalkRequest, security operations.StartTalkSecurity) (*operations.StartTalkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartTalkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *playTTS) StartTalk(ctx context.Context, request operations.StartTalkReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *playTTS) StartTalk(ctx context.Context, request operations.StartTalkReq
 
 // StopTalk - Stop text to speech in a call
 // Stop text to speech in a call
-func (s *playTTS) StopTalk(ctx context.Context, request operations.StopTalkRequest) (*operations.StopTalkResponse, error) {
+func (s *playTTS) StopTalk(ctx context.Context, request operations.StopTalkRequest, security operations.StopTalkSecurity) (*operations.StopTalkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

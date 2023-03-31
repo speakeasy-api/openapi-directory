@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsreportingReportsBatchGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsreportingReportsBatchGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsreportingReportsBatchGetSecurity struct {
@@ -22,9 +22,10 @@ type AnalyticsreportingReportsBatchGetSecurity struct {
 	Option2 *AnalyticsreportingReportsBatchGetSecurityOption2 `security:"option"`
 }
 
-type AnalyticsreportingReportsBatchGetQueryParams struct {
+type AnalyticsreportingReportsBatchGetRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv       *shared.XgafvEnum         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GetReportsRequest *shared.GetReportsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -45,12 +46,6 @@ type AnalyticsreportingReportsBatchGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AnalyticsreportingReportsBatchGetRequest struct {
-	QueryParams AnalyticsreportingReportsBatchGetQueryParams
-	Request     *shared.GetReportsRequest `request:"mediaType=application/json"`
-	Security    AnalyticsreportingReportsBatchGetSecurity
 }
 
 type AnalyticsreportingReportsBatchGetResponse struct {

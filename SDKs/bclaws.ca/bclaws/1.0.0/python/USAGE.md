@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetContentAspectIDRequest(
-    path_params=operations.GetContentAspectIDPathParams(
-        aspect_id="psl",
-    ),
+    aspect_id="oic",
 )
     
 res = s.content.get_content_aspect_id_(req)

@@ -14,27 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.UpdateBankAccountRequest{
-        Security: operations.UpdateBankAccountSecurity{
-            APISecretKey: shared.SchemeAPISecretKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.UpdateBankAccountPathParams{
-            BankAccountID: "corrupti",
-        },
-        Headers: operations.UpdateBankAccountHeaders{
-            XAPIKey: "provident",
-        },
-        Request: operations.UpdateBankAccountUpdateRequestBodyForBankAccount{
-            AccountName: "distinctio",
+        RequestBody: operations.UpdateBankAccountUpdateRequestBodyForBankAccount{
+            AccountName: "corrupti",
             AccountStatus: "inactive",
             DefaultAccount: "no",
             ReferenceVersion: 1,
         },
+        BankAccountID: "quibusdam",
+        XAPIKey: "unde",
     }
 
     ctx := context.Background()
-    res, err := s.BankAccounts.UpdateBankAccount(ctx, req)
+    res, err := s.BankAccounts.UpdateBankAccount(ctx, req, operations.UpdateBankAccountSecurity{
+        APISecretKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

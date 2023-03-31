@@ -11,16 +11,11 @@ var GetAccountBalanceServerList = []string{
 	"https://rest.nexmo.com",
 }
 
-type GetAccountBalanceQueryParams struct {
+type GetAccountBalanceRequest struct {
 	// Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
 	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
-}
-
-type GetAccountBalanceRequest struct {
-	QueryParams GetAccountBalanceQueryParams
-	ServerURL   *string
 }
 
 type GetAccountBalanceResponse struct {

@@ -32,11 +32,11 @@ func newDebug(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CloudsearchDebugDatasourcesItemsCheckAccess - Checks whether an item is accessible by specified principal. Principal must be a user; groups and domain values aren't supported. **Note:** This API requires an admin account to execute.
-func (s *debug) CloudsearchDebugDatasourcesItemsCheckAccess(ctx context.Context, request operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest) (*operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse, error) {
+func (s *debug) CloudsearchDebugDatasourcesItemsCheckAccess(ctx context.Context, request operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest, security operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity) (*operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}:checkAccess", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}:checkAccess", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Principal", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *debug) CloudsearchDebugDatasourcesItemsCheckAccess(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *debug) CloudsearchDebugDatasourcesItemsCheckAccess(ctx context.Context,
 }
 
 // CloudsearchDebugDatasourcesItemsSearchByViewURL - Fetches the item whose viewUrl exactly matches that of the URL provided in the request. **Note:** This API requires an admin account to execute.
-func (s *debug) CloudsearchDebugDatasourcesItemsSearchByViewURL(ctx context.Context, request operations.CloudsearchDebugDatasourcesItemsSearchByViewURLRequest) (*operations.CloudsearchDebugDatasourcesItemsSearchByViewURLResponse, error) {
+func (s *debug) CloudsearchDebugDatasourcesItemsSearchByViewURL(ctx context.Context, request operations.CloudsearchDebugDatasourcesItemsSearchByViewURLRequest, security operations.CloudsearchDebugDatasourcesItemsSearchByViewURLSecurity) (*operations.CloudsearchDebugDatasourcesItemsSearchByViewURLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}/items:searchByViewUrl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}/items:searchByViewUrl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchItemsByViewURLRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *debug) CloudsearchDebugDatasourcesItemsSearchByViewURL(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *debug) CloudsearchDebugDatasourcesItemsSearchByViewURL(ctx context.Cont
 }
 
 // CloudsearchDebugIdentitysourcesItemsListForunmappedidentity - Lists names of items associated with an unmapped identity. **Note:** This API requires an admin account to execute.
-func (s *debug) CloudsearchDebugIdentitysourcesItemsListForunmappedidentity(ctx context.Context, request operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest) (*operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse, error) {
+func (s *debug) CloudsearchDebugIdentitysourcesItemsListForunmappedidentity(ctx context.Context, request operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest, security operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity) (*operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/items:forunmappedidentity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/items:forunmappedidentity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *debug) CloudsearchDebugIdentitysourcesItemsListForunmappedidentity(ctx 
 }
 
 // CloudsearchDebugIdentitysourcesUnmappedidsList - Lists unmapped user identities for an identity source. **Note:** This API requires an admin account to execute.
-func (s *debug) CloudsearchDebugIdentitysourcesUnmappedidsList(ctx context.Context, request operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest) (*operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse, error) {
+func (s *debug) CloudsearchDebugIdentitysourcesUnmappedidsList(ctx context.Context, request operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest, security operations.CloudsearchDebugIdentitysourcesUnmappedidsListSecurity) (*operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/unmappedids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/unmappedids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

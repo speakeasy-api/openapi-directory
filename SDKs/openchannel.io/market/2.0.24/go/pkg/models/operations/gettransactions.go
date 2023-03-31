@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetTransactionsQueryParams struct {
+type GetTransactionsRequest struct {
 	// The maximum number of results to return per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The result set page number to be returned
@@ -15,10 +15,6 @@ type GetTransactionsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// A sort document. Example: {'date':1} sorts the results by total in ascending order
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetTransactionsRequest struct {
-	QueryParams GetTransactionsQueryParams
 }
 
 type GetTransactionsResponse struct {

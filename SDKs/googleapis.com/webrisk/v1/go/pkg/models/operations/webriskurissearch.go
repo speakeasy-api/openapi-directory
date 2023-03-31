@@ -10,8 +10,8 @@ import (
 )
 
 type WebriskUrisSearchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebriskUrisSearchThreatTypesEnum string
@@ -46,7 +46,7 @@ func (e *WebriskUrisSearchThreatTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type WebriskUrisSearchQueryParams struct {
+type WebriskUrisSearchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -73,11 +73,6 @@ type WebriskUrisSearchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. The URI to be checked for matches.
 	URI *string `queryParam:"style=form,explode=true,name=uri"`
-}
-
-type WebriskUrisSearchRequest struct {
-	QueryParams WebriskUrisSearchQueryParams
-	Security    WebriskUrisSearchSecurity
 }
 
 type WebriskUrisSearchResponse struct {

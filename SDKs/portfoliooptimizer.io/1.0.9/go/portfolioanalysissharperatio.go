@@ -39,7 +39,7 @@ func newPortfolioAnalysisSharpeRatio(defaultClient, securityClient HTTPClient, s
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
 // * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatio(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioRequest) (*operations.PostPortfolioAnalysisSharpeRatioResponse, error) {
+func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatio(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioRequestBody) (*operations.PostPortfolioAnalysisSharpeRatioResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/sharpe-ratio"
 
@@ -97,7 +97,7 @@ func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatio(ctx cont
 //
 // References
 // * [Opdyke, J., Comparing Sharpe ratios: So where are the p-values?. J Asset Manag 8, 308–336 (2007)](https://link.springer.com/article/10.1057/palgrave.jam.2250084)
-func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioBiasAdjusted(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedRequest) (*operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse, error) {
+func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioBiasAdjusted(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBody) (*operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/sharpe-ratio/bias-adjusted"
 
@@ -155,7 +155,7 @@ func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioBiasAdjus
 //
 // References
 // * [Opdyke, J.D., Comparing Sharpe ratios: So where are the p-values?. J Asset Manag 8, 308–336 (2007)](https://link.springer.com/article/10.1057/palgrave.jam.2250084)
-func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioConfidenceInterval(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequest) (*operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse, error) {
+func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioConfidenceInterval(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody) (*operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/sharpe-ratio/confidence-interval"
 
@@ -214,7 +214,7 @@ func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioConfidenc
 // References
 // * [Opdyke, J.D., Comparing Sharpe ratios: So where are the p-values?. J Asset Manag 8, 308–336 (2007)](https://link.springer.com/article/10.1057/palgrave.jam.2250084)
 // * [Bailey, David H. and Lopez de Prado, Marcos, The Sharpe Ratio Efficient Frontier (April 1, 2012). Journal of Risk, Vol. 15, No. 2, Winter 2012/13](https://ssrn.com/abstract=1821643)
-func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioProbabilistic(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioProbabilisticRequest) (*operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse, error) {
+func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioProbabilistic(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody) (*operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/sharpe-ratio/probabilistic"
 
@@ -272,7 +272,7 @@ func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioProbabili
 //
 // References
 // * [Bailey, David H. and Lopez de Prado, Marcos, The Sharpe Ratio Efficient Frontier (April 1, 2012). Journal of Risk, Vol. 15, No. 2, Winter 2012/13](https://ssrn.com/abstract=1821643)
-func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequest) (*operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse, error) {
+func (s *portfolioAnalysisSharpeRatio) PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody) (*operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/sharpe-ratio/probabilistic/minimum-track-record-length"
 

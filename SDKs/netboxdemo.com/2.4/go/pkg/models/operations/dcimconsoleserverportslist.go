@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsoleServerPortsListQueryParams struct {
+type DcimConsoleServerPortsListRequest struct {
 	Device   *string `queryParam:"style=form,explode=true,name=device"`
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// Number of results to return per page.
@@ -16,10 +16,6 @@ type DcimConsoleServerPortsListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type DcimConsoleServerPortsListRequest struct {
-	QueryParams DcimConsoleServerPortsListQueryParams
 }
 
 type DcimConsoleServerPortsList200ApplicationJSON struct {

@@ -36,7 +36,7 @@ func newSpecTemplate(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get a specific Spec Template
 func (s *specTemplate) GetSpecTemplate(ctx context.Context, request operations.GetSpecTemplateRequest) (*operations.GetSpecTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/specTemplates/{spec_template_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/specTemplates/{spec_template_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *specTemplate) GetSpecTemplate(ctx context.Context, request operations.G
 // List Spec Templates of Workgroup Level
 func (s *specTemplate) GetSpecTemplateList(ctx context.Context, request operations.GetSpecTemplateListRequest) (*operations.GetSpecTemplateListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/specTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/specTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

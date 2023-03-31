@@ -141,7 +141,6 @@ pkg/models/operations/putapiv1filtersid.go
 pkg/models/operations/putapiv1lists.go
 pkg/models/operations/putapiv1pushsubscription.go
 pkg/models/operations/putapiv1scheduledstatusesid.go
-pkg/models/shared/security.go
 pkg/models/shared/relationship.go
 pkg/models/shared/error.go
 pkg/models/shared/account.go

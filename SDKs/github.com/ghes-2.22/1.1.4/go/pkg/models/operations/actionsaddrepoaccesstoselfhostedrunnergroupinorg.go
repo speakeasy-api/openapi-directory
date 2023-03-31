@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams struct {
+type ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest struct {
 	Org          string `pathParam:"style=simple,explode=false,name=org"`
 	RepositoryID int64  `pathParam:"style=simple,explode=false,name=repository_id"`
 	// Unique identifier of the self-hosted runner group.
 	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
-type ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest struct {
-	PathParams ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams
 }
 
 type ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse struct {

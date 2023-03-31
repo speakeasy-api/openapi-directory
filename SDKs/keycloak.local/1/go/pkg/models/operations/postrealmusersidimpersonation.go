@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PostRealmUsersIDImpersonationPathParams struct {
+type PostRealmUsersIDImpersonationRequest struct {
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmUsersIDImpersonationRequest struct {
-	PathParams PostRealmUsersIDImpersonationPathParams
 }
 
 type PostRealmUsersIDImpersonationResponse struct {

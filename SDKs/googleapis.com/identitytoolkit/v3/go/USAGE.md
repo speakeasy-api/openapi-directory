@@ -14,49 +14,43 @@ func main() {
     s := sdk.New()
 
     req := operations.IdentitytoolkitRelyingpartyCreateAuthURIRequest{
-        Security: operations.IdentitytoolkitRelyingpartyCreateAuthURISecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.IdentitytoolkitRelyingpartyCreateAuthURIQueryParams{
-            Alt: "json",
-            Fields: "corrupti",
-            Key: "provident",
-            OauthToken: "distinctio",
-            PrettyPrint: false,
-            QuotaUser: "quibusdam",
-            UserIP: "unde",
-        },
-        Request: &shared.IdentitytoolkitRelyingpartyCreateAuthURIRequest{
-            AppID: "nulla",
-            AuthFlowType: "corrupti",
-            ClientID: "illum",
-            Context: "vel",
-            ContinueURI: "error",
+        IdentitytoolkitRelyingpartyCreateAuthURIRequest: &shared.IdentitytoolkitRelyingpartyCreateAuthURIRequest{
+            AppID: "corrupti",
+            AuthFlowType: "provident",
+            ClientID: "distinctio",
+            Context: "quibusdam",
+            ContinueURI: "unde",
             CustomParameter: map[string]string{
-                "suscipit": "iure",
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
             },
-            HostedDomain: "tempora",
-            Identifier: "suscipit",
-            OauthConsumerKey: "molestiae",
-            OauthScope: "minus",
-            OpenidRealm: "placeat",
-            OtaApp: "voluptatum",
-            ProviderID: "iusto",
-            SessionID: "excepturi",
-            TenantID: "nisi",
-            TenantProjectNumber: "recusandae",
+            HostedDomain: "debitis",
+            Identifier: "ipsa",
+            OauthConsumerKey: "delectus",
+            OauthScope: "tempora",
+            OpenidRealm: "suscipit",
+            OtaApp: "molestiae",
+            ProviderID: "minus",
+            SessionID: "placeat",
+            TenantID: "voluptatum",
+            TenantProjectNumber: "iusto",
         },
+        Alt: "json",
+        Fields: "excepturi",
+        Key: "nisi",
+        OauthToken: "recusandae",
+        PrettyPrint: false,
+        QuotaUser: "temporibus",
+        UserIP: "ab",
     }
 
     ctx := context.Background()
-    res, err := s.Relyingparty.IdentitytoolkitRelyingpartyCreateAuthURI(ctx, req)
+    res, err := s.Relyingparty.IdentitytoolkitRelyingpartyCreateAuthURI(ctx, req, operations.IdentitytoolkitRelyingpartyCreateAuthURISecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

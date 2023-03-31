@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05SubscriptionRequestsCmInitJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05SubscriptionRequestsCmInitJSONRequest struct {
-	Headers PostV05SubscriptionRequestsCmInitJSONHeaders
-	Request shared.SubscriptionRequest `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization       string                     `header:"style=simple,explode=false,name=Authorization"`
+	SubscriptionRequest shared.SubscriptionRequest `request:"mediaType=application/json"`
 }
 
 type PostV05SubscriptionRequestsCmInitJSONResponse struct {

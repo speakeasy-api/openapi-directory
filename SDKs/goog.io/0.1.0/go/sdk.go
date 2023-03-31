@@ -186,7 +186,7 @@ func New(opts ...SDKOption) *SDK {
 // json: a the html source of the results page
 func (s *SDK) Crawl(ctx context.Context, request operations.CrawlRequest) (*operations.CrawlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/crawl/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/crawl/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -298,7 +298,7 @@ func (s *SDK) GetTheStatusOfTheAPIService(ctx context.Context) (*operations.GetT
 // json: a list of results with the link, description, and title for each result
 func (s *SDK) Images(ctx context.Context, request operations.ImagesRequest) (*operations.ImagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/images/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/images/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *SDK) Images(ctx context.Context, request operations.ImagesRequest) (*op
 // json: {"feed": { "title" : "trump" ...} , "entites": [ {"title" : "Trump doubles down on divisive messaging in speech to honor Independence Day - CNN", "links": []} ...]}
 func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operations.NewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/news/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/news/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -428,7 +428,7 @@ func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operat
 // json: a list of results with the link, description, and title for each result
 func (s *SDK) Search(ctx context.Context, request operations.SearchRequest) (*operations.SearchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/search/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/search/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -492,7 +492,7 @@ func (s *SDK) Search(ctx context.Context, request operations.SearchRequest) (*op
 // Returns
 // -------
 // json: a list of results with the query, website, searched_results, and position. json["position"] will be set to -1 if website is not found in results
-func (s *SDK) Serp(ctx context.Context, request operations.SerpRequest) (*operations.SerpResponse, error) {
+func (s *SDK) Serp(ctx context.Context, request shared.SerpData) (*operations.SerpResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/serp/"
 

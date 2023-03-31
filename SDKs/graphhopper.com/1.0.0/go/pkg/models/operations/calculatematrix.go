@@ -78,10 +78,6 @@ func (u CalculateMatrixRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type CalculateMatrixRequest struct {
-	Request *CalculateMatrixRequestBody `request:"mediaType=application/json"`
-}
-
 type CalculateMatrixResponse struct {
 	ContentType string
 	// Unexpected Error

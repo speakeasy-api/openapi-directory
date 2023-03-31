@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRegionsListQueryParams struct {
+type DcimRegionsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
@@ -17,10 +17,6 @@ type DcimRegionsListQueryParams struct {
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	Q        *string `queryParam:"style=form,explode=true,name=q"`
 	Slug     *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type DcimRegionsListRequest struct {
-	QueryParams DcimRegionsListQueryParams
 }
 
 type DcimRegionsList200ApplicationJSON struct {

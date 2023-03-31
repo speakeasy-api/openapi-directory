@@ -25,192 +25,170 @@ func main() {
     s := sdk.New()
 
     req := operations.ComposerProjectsLocationsEnvironmentsCreateRequest{
-        Security: operations.ComposerProjectsLocationsEnvironmentsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ComposerProjectsLocationsEnvironmentsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.ComposerProjectsLocationsEnvironmentsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.EnvironmentInput{
+        DollarXgafv: "2",
+        EnvironmentInput: &shared.EnvironmentInput{
             Config: &shared.EnvironmentConfigInput{
-                AirflowURI: "suscipit",
-                DagGcsPrefix: "iure",
+                AirflowURI: "provident",
+                DagGcsPrefix: "distinctio",
                 DatabaseConfig: &shared.DatabaseConfig{
-                    MachineType: "magnam",
+                    MachineType: "quibusdam",
                 },
                 EncryptionConfig: &shared.EncryptionConfig{
-                    KmsKeyName: "debitis",
+                    KmsKeyName: "unde",
                 },
-                EnvironmentSize: "ENVIRONMENT_SIZE_UNSPECIFIED",
-                GkeCluster: "delectus",
+                EnvironmentSize: "ENVIRONMENT_SIZE_LARGE",
+                GkeCluster: "corrupti",
                 MaintenanceWindow: &shared.MaintenanceWindow{
-                    EndTime: "tempora",
-                    Recurrence: "suscipit",
-                    StartTime: "molestiae",
+                    EndTime: "illum",
+                    Recurrence: "vel",
+                    StartTime: "error",
                 },
                 MasterAuthorizedNetworksConfig: &shared.MasterAuthorizedNetworksConfig{
                     CidrBlocks: []shared.CidrBlock{
                         shared.CidrBlock{
-                            CidrBlock: "placeat",
-                            DisplayName: "voluptatum",
+                            CidrBlock: "suscipit",
+                            DisplayName: "iure",
                         },
                         shared.CidrBlock{
-                            CidrBlock: "iusto",
-                            DisplayName: "excepturi",
+                            CidrBlock: "magnam",
+                            DisplayName: "debitis",
                         },
                         shared.CidrBlock{
-                            CidrBlock: "nisi",
-                            DisplayName: "recusandae",
-                        },
-                        shared.CidrBlock{
-                            CidrBlock: "temporibus",
-                            DisplayName: "ab",
+                            CidrBlock: "ipsa",
+                            DisplayName: "delectus",
                         },
                     },
                     Enabled: false,
                 },
                 NodeConfig: &shared.NodeConfig{
-                    DiskSizeGb: 337396,
+                    DiskSizeGb: 272656,
                     EnableIPMasqAgent: false,
                     IPAllocationPolicy: &shared.IPAllocationPolicy{
-                        ClusterIpv4CidrBlock: "veritatis",
-                        ClusterSecondaryRangeName: "deserunt",
-                        ServicesIpv4CidrBlock: "perferendis",
-                        ServicesSecondaryRangeName: "ipsam",
+                        ClusterIpv4CidrBlock: "suscipit",
+                        ClusterSecondaryRangeName: "molestiae",
+                        ServicesIpv4CidrBlock: "minus",
+                        ServicesSecondaryRangeName: "placeat",
                         UseIPAliases: false,
                     },
-                    Location: "repellendus",
-                    MachineType: "sapiente",
-                    Network: "quo",
+                    Location: "voluptatum",
+                    MachineType: "iusto",
+                    Network: "excepturi",
                     OauthScopes: []string{
-                        "at",
+                        "recusandae",
+                        "temporibus",
                     },
-                    ServiceAccount: "at",
-                    Subnetwork: "maiores",
+                    ServiceAccount: "ab",
+                    Subnetwork: "quis",
                     Tags: []string{
-                        "quod",
-                        "quod",
+                        "deserunt",
                     },
                 },
-                NodeCount: 461479,
+                NodeCount: 20218,
                 PrivateEnvironmentConfig: &shared.PrivateEnvironmentConfigInput{
-                    CloudComposerConnectionSubnetwork: "totam",
-                    CloudComposerNetworkIpv4CidrBlock: "porro",
-                    CloudSQLIpv4CidrBlock: "dolorum",
+                    CloudComposerConnectionSubnetwork: "ipsam",
+                    CloudComposerNetworkIpv4CidrBlock: "repellendus",
+                    CloudSQLIpv4CidrBlock: "sapiente",
                     EnablePrivateEnvironment: false,
                     EnablePrivatelyUsedPublicIps: false,
                     NetworkingConfig: &shared.NetworkingConfig{
-                        ConnectionType: "CONNECTION_TYPE_UNSPECIFIED",
+                        ConnectionType: "PRIVATE_SERVICE_CONNECT",
                     },
                     PrivateClusterConfig: &shared.PrivateClusterConfigInput{
                         EnablePrivateEndpoint: false,
-                        MasterIpv4CidrBlock: "nam",
+                        MasterIpv4CidrBlock: "odit",
                     },
-                    WebServerIpv4CidrBlock: "officia",
+                    WebServerIpv4CidrBlock: "at",
                 },
                 RecoveryConfig: &shared.RecoveryConfig{
                     ScheduledSnapshotsConfig: &shared.ScheduledSnapshotsConfig{
                         Enabled: false,
-                        SnapshotCreationSchedule: "occaecati",
-                        SnapshotLocation: "fugit",
-                        TimeZone: "deleniti",
+                        SnapshotCreationSchedule: "at",
+                        SnapshotLocation: "maiores",
+                        TimeZone: "molestiae",
                     },
                 },
                 SoftwareConfig: &shared.SoftwareConfig{
                     AirflowConfigOverrides: map[string]string{
-                        "optio": "totam",
-                        "beatae": "commodi",
-                        "molestiae": "modi",
-                        "qui": "impedit",
+                        "quod": "esse",
+                        "totam": "porro",
+                        "dolorum": "dicta",
+                        "nam": "officia",
                     },
                     EnvVariables: map[string]string{
-                        "esse": "ipsum",
-                        "excepturi": "aspernatur",
-                        "perferendis": "ad",
+                        "fugit": "deleniti",
+                        "hic": "optio",
+                        "totam": "beatae",
                     },
-                    ImageVersion: "natus",
+                    ImageVersion: "commodi",
                     PypiPackages: map[string]string{
-                        "iste": "dolor",
+                        "modi": "qui",
+                        "impedit": "cum",
                     },
-                    PythonVersion: "natus",
-                    SchedulerCount: 386489,
+                    PythonVersion: "esse",
+                    SchedulerCount: 216550,
                 },
                 WebServerConfig: &shared.WebServerConfig{
-                    MachineType: "hic",
+                    MachineType: "excepturi",
                 },
                 WebServerNetworkAccessControl: &shared.WebServerNetworkAccessControl{
                     AllowedIPRanges: []shared.AllowedIPRange{
                         shared.AllowedIPRange{
-                            Description: "fuga",
-                            Value: "in",
-                        },
-                        shared.AllowedIPRange{
-                            Description: "corporis",
-                            Value: "iste",
-                        },
-                        shared.AllowedIPRange{
-                            Description: "iure",
-                            Value: "saepe",
-                        },
-                        shared.AllowedIPRange{
-                            Description: "quidem",
-                            Value: "architecto",
+                            Description: "perferendis",
+                            Value: "ad",
                         },
                     },
                 },
                 WorkloadsConfig: &shared.WorkloadsConfig{
                     Scheduler: &shared.SchedulerResource{
-                        Count: 60225,
-                        CPU: 9698.1,
-                        MemoryGb: 6667.67,
-                        StorageGb: 6531.4,
+                        Count: 617636,
+                        CPU: 1496.75,
+                        MemoryGb: 6120.96,
+                        StorageGb: 2223.21,
                     },
                     WebServer: &shared.WebServerResource{
-                        CPU: 6706.38,
-                        MemoryGb: 1709.09,
-                        StorageGb: 2103.82,
+                        CPU: 6169.34,
+                        MemoryGb: 3864.89,
+                        StorageGb: 9437.49,
                     },
                     Worker: &shared.WorkerResource{
-                        CPU: 3581.52,
-                        MaxCount: 128926,
-                        MemoryGb: 7506.86,
-                        MinCount: 315428,
-                        StorageGb: 6078.31,
+                        CPU: 9025.99,
+                        MaxCount: 681820,
+                        MemoryGb: 4499.5,
+                        MinCount: 359508,
+                        StorageGb: 6130.64,
                     },
                 },
             },
-            CreateTime: "nemo",
+            CreateTime: "iure",
             Labels: map[string]string{
-                "excepturi": "accusantium",
-                "iure": "culpa",
+                "quidem": "architecto",
+                "ipsa": "reiciendis",
+                "est": "mollitia",
+                "laborum": "dolores",
             },
-            Name: "doloribus",
-            State: "ERROR",
-            UpdateTime: "architecto",
-            UUID: "a3a2fa94-6773-4925-9aa5-2c3f5ad019da",
+            Name: "dolorem",
+            State: "RUNNING",
+            UpdateTime: "explicabo",
+            UUID: "c5955907-aff1-4a3a-afa9-467739251aa5",
         },
+        AccessToken: "odit",
+        Alt: "proto",
+        Callback: "sequi",
+        Fields: "tenetur",
+        Key: "ipsam",
+        OauthToken: "id",
+        Parent: "possimus",
+        PrettyPrint: false,
+        QuotaUser: "aut",
+        UploadType: "quasi",
+        UploadProtocol: "error",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCreate(ctx, req)
+    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCreate(ctx, req, operations.ComposerProjectsLocationsEnvironmentsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -223,7 +201,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -239,4 +217,15 @@ func main() {
 * `ComposerProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

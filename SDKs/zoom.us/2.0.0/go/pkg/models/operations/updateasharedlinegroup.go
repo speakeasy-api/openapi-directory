@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateASharedLineGroupPathParams struct {
-	// Unique identifier of the shared line group that is to be updated.
-	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
 // UpdateASharedLineGroupApplicationJSONPrimaryNumber - If you have multiple direct phone numbers assigned to the shared line group, select a number from those numbers as the primary number. The primary number shares the same line as the extension number. This means if a caller is routed to the shared line group through an auto receptionist, the line associated with the primary number will be used. A pending number cannot be used as a Primary Number.
 type UpdateASharedLineGroupApplicationJSONPrimaryNumber struct {
 	// Phone Number ID. Unique Identifier of the Phone Number.
@@ -59,8 +54,9 @@ type UpdateASharedLineGroupApplicationJSON struct {
 }
 
 type UpdateASharedLineGroupRequest struct {
-	PathParams UpdateASharedLineGroupPathParams
-	Request    *UpdateASharedLineGroupApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *UpdateASharedLineGroupApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the shared line group that is to be updated.
+	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
 }
 
 type UpdateASharedLineGroupResponse struct {

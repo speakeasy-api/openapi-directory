@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDevicePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceRequest struct {
-	PathParams GetDevicePathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceResponse struct {

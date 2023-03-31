@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ListInternalCalloutCountriesPathParams struct {
+type ListInternalCalloutCountriesRequest struct {
 	// Unique identifier of the account. To list Call-out enabled countries to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To list Call-out enabled countries of a sub account, provide the account ID of the sub account in the `accountId` path parameter. To list Call-out enabled countries of a master account, provide `me` as the value of the `accountId` path parameter.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type ListInternalCalloutCountriesRequest struct {
-	PathParams ListInternalCalloutCountriesPathParams
 }
 
 type ListInternalCalloutCountries200ApplicationXMLCalloutCountries struct {

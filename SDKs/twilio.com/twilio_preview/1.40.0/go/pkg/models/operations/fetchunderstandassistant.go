@@ -12,18 +12,13 @@ var FetchUnderstandAssistantServerList = []string{
 }
 
 type FetchUnderstandAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUnderstandAssistantPathParams struct {
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUnderstandAssistantRequest struct {
-	PathParams FetchUnderstandAssistantPathParams
-	Security   FetchUnderstandAssistantSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchUnderstandAssistantResponse struct {

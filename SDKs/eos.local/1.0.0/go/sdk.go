@@ -94,7 +94,7 @@ func New(opts ...SDKOption) *SDK {
 
 // Connect - connect
 // Initiate a connection to a specified peer.
-func (s *SDK) Connect(ctx context.Context, request operations.ConnectRequest) (*operations.ConnectResponse, error) {
+func (s *SDK) Connect(ctx context.Context, request operations.ConnectRequestBody) (*operations.ConnectResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/net/connect"
 
@@ -147,7 +147,7 @@ func (s *SDK) Connect(ctx context.Context, request operations.ConnectRequest) (*
 
 // Connections - connections
 // Returns an array of all peer connection statuses.
-func (s *SDK) Connections(ctx context.Context, request operations.ConnectionsRequest) (*operations.ConnectionsResponse, error) {
+func (s *SDK) Connections(ctx context.Context, request map[string]interface{}) (*operations.ConnectionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/net/connections"
 
@@ -199,7 +199,7 @@ func (s *SDK) Connections(ctx context.Context, request operations.ConnectionsReq
 
 // Disconnect - disconnect
 // Initiate disconnection from a specified peer.
-func (s *SDK) Disconnect(ctx context.Context, request operations.DisconnectRequest) (*operations.DisconnectResponse, error) {
+func (s *SDK) Disconnect(ctx context.Context, request operations.DisconnectRequestBody) (*operations.DisconnectResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/net/disconnect"
 
@@ -252,7 +252,7 @@ func (s *SDK) Disconnect(ctx context.Context, request operations.DisconnectReque
 
 // Status - status
 // Retrieves the connection status for a specified peer.
-func (s *SDK) Status(ctx context.Context, request operations.StatusRequest) (*operations.StatusResponse, error) {
+func (s *SDK) Status(ctx context.Context, request operations.StatusRequestBody) (*operations.StatusResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/net/status"
 

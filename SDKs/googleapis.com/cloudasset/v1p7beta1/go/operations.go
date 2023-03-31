@@ -32,20 +32,20 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // CloudassetOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *operationsT) CloudassetOperationsGet(ctx context.Context, request operations.CloudassetOperationsGetRequest) (*operations.CloudassetOperationsGetResponse, error) {
+func (s *operationsT) CloudassetOperationsGet(ctx context.Context, request operations.CloudassetOperationsGetRequest, security operations.CloudassetOperationsGetSecurity) (*operations.CloudassetOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p7beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p7beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,7 +33,7 @@ func (e *ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum) 
 	}
 }
 
-type ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams struct {
+type ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Each NFL player has a unique ID assigned by FantasyData. Player IDs can be determined by pulling player related data. Example:<code>14257</code>.
@@ -46,10 +46,6 @@ type ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams struc
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest struct {
-	PathParams ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams
 }
 
 type ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type BrowseCSVQueryParams struct {
+type BrowseCSVRequest struct {
 	AdditionalOrder *string `queryParam:"style=form,explode=true,name=additionalOrder"`
 	// secondary csv field separator
 	SecondarySeparator *string `queryParam:"style=form,explode=true,name=secondarySeparator"`
@@ -14,10 +14,6 @@ type BrowseCSVQueryParams struct {
 	Separator *string `queryParam:"style=form,explode=true,name=separator"`
 	// view's identifier
 	ViewID *int64 `queryParam:"style=form,explode=true,name=viewId"`
-}
-
-type BrowseCSVRequest struct {
-	QueryParams BrowseCSVQueryParams
 }
 
 type BrowseCSVResponse struct {

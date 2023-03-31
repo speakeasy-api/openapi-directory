@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkCameraWirelessProfilePathParams struct {
-	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
-	WirelessProfileID string `pathParam:"style=simple,explode=false,name=wirelessProfileId"`
-}
-
 // UpdateNetworkCameraWirelessProfileRequestBodyIdentity - The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
 type UpdateNetworkCameraWirelessProfileRequestBodyIdentity struct {
 	// The password of the identity.
@@ -67,8 +62,9 @@ type UpdateNetworkCameraWirelessProfileRequestBody struct {
 }
 
 type UpdateNetworkCameraWirelessProfileRequest struct {
-	PathParams UpdateNetworkCameraWirelessProfilePathParams
-	Request    *UpdateNetworkCameraWirelessProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody       *UpdateNetworkCameraWirelessProfileRequestBody `request:"mediaType=application/json"`
+	NetworkID         string                                         `pathParam:"style=simple,explode=false,name=networkId"`
+	WirelessProfileID string                                         `pathParam:"style=simple,explode=false,name=wirelessProfileId"`
 }
 
 type UpdateNetworkCameraWirelessProfileResponse struct {

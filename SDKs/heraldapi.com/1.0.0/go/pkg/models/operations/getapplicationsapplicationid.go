@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationsApplicationIDPathParams struct {
+type GetApplicationsApplicationIDRequest struct {
 	// `id` for a specific application
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type GetApplicationsApplicationIDRequest struct {
-	PathParams GetApplicationsApplicationIDPathParams
 }
 
 // GetApplicationsApplicationID200ApplicationJSON - OK

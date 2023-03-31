@@ -51,7 +51,6 @@ pkg/models/operations/deleteversion.go
 pkg/models/operations/getversion.go
 pkg/models/operations/getversions.go
 pkg/models/operations/updateversion.go
-pkg/models/shared/security.go
 pkg/models/shared/changelog.go
 pkg/models/shared/custompage.go
 pkg/models/shared/doc.go

@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetABlockedListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetABlockedListPathParams struct {
-	// Unique Identifier of the blocked list.
-	BlockedListID string `pathParam:"style=simple,explode=false,name=blockedListId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetABlockedListRequest struct {
-	PathParams GetABlockedListPathParams
-	Security   GetABlockedListSecurity
+	// Unique Identifier of the blocked list.
+	BlockedListID string `pathParam:"style=simple,explode=false,name=blockedListId"`
 }
 
 // GetABlockedList200ApplicationXMLBlockTypeEnum - Block type.<br>

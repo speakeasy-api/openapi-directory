@@ -28,10 +28,6 @@ type PostWebhookTestsRequestBody struct {
 	URL string `multipartForm:"name=url"`
 }
 
-type PostWebhookTestsRequest struct {
-	Request PostWebhookTestsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostWebhookTestsResponse struct {
 	ContentType string
 	StatusCode  int

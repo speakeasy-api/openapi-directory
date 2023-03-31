@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLocalSettingsPathParams struct {
+type GetLocalSettingsRequest struct {
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type GetLocalSettingsRequest struct {
-	PathParams GetLocalSettingsPathParams
 }
 
 type GetLocalSettingsResponse struct {

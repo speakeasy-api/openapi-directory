@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1ResourcegroupsQueryParams struct {
+type GetConsumerV1ResourcegroupsRequest struct {
 	// Filter results by deleted status
 	Deleted *bool `queryParam:"style=form,explode=true,name=deleted"`
 	// Page limit default 20, max 100
@@ -16,10 +16,6 @@ type GetConsumerV1ResourcegroupsQueryParams struct {
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetConsumerV1ResourcegroupsRequest struct {
-	QueryParams GetConsumerV1ResourcegroupsQueryParams
 }
 
 type GetConsumerV1ResourcegroupsResponse struct {

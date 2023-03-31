@@ -90,9 +90,9 @@ func (s *collections) AllCollections(ctx context.Context) (*operations.AllCollec
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *collections) CreateAFork(ctx context.Context, request operations.CreateAForkRequest) (*operations.CreateAForkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/fork/{collection_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/fork/{collection_uid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,7 +104,7 @@ func (s *collections) CreateAFork(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -141,7 +141,7 @@ func (s *collections) CreateAFork(ctx context.Context, request operations.Create
 // You can also specify the context of a workspace to create a collection in directly by passing the `workspace` as a query param.
 //
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-func (s *collections) CreateCollection(ctx context.Context, request operations.CreateCollectionRequest) (*operations.CreateCollectionResponse, error) {
+func (s *collections) CreateCollection(ctx context.Context, request operations.CreateCollectionRequestBody) (*operations.CreateCollectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collections"
 
@@ -209,7 +209,7 @@ func (s *collections) CreateCollection(ctx context.Context, request operations.C
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *collections) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest) (*operations.DeleteCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -277,7 +277,7 @@ func (s *collections) DeleteCollection(ctx context.Context, request operations.D
 // If the collections cannot be merged (due to conflicts), appropriate error messages will be returned.
 //
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-func (s *collections) MergeAFork(ctx context.Context, request operations.MergeAForkRequest) (*operations.MergeAForkResponse, error) {
+func (s *collections) MergeAFork(ctx context.Context, request operations.MergeAForkRequestBody) (*operations.MergeAForkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collections/merge"
 
@@ -324,7 +324,7 @@ func (s *collections) MergeAFork(ctx context.Context, request operations.MergeAF
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *collections) SingleCollection(ctx context.Context, request operations.SingleCollectionRequest) (*operations.SingleCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -375,9 +375,9 @@ func (s *collections) SingleCollection(ctx context.Context, request operations.S
 // Note: Please be careful when trying to update the collection, as the existing collection will be replaced by the request body.
 func (s *collections) UpdateCollection(ctx context.Context, request operations.UpdateCollectionRequest) (*operations.UpdateCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

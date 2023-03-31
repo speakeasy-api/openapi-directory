@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GETUserContentRecentJSONSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GETUserContentRecentJSONRequest struct {
-	Security GETUserContentRecentJSONSecurity
-}
 
 type GETUserContentRecentJSON200ApplicationJSONDebug struct {
 	Version *float64 `json:"version,omitempty"`

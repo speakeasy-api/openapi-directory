@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberStructuredGeocodeExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberStructuredGeocodeExtQueryParams struct {
+type GetSearchVersionNumberStructuredGeocodeExtRequest struct {
 	// 2 or 3 letter country code (e.g.: FR, ES).
 	CountryCode string `queryParam:"style=form,explode=true,name=countryCode"`
 	// The county for the structured address.
@@ -25,6 +18,8 @@ type GetSearchVersionNumberStructuredGeocodeExtQueryParams struct {
 	CountryTertiarySubdivision *string `queryParam:"style=form,explode=true,name=countryTertiarySubdivision"`
 	// The cross street name for the structured address.
 	CrossStreet *string `queryParam:"style=form,explode=true,name=crossStreet"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// Indexes for which extended postal codes should be included in the results. Available indexes are:
 	//   - <b>Addr</b> = Address ranges
 	//   - <b>Geo</b> = Geographies
@@ -49,11 +44,8 @@ type GetSearchVersionNumberStructuredGeocodeExtQueryParams struct {
 	StreetName *string `queryParam:"style=form,explode=true,name=streetName"`
 	// The street number for the structured address.
 	StreetNumber *string `queryParam:"style=form,explode=true,name=streetNumber"`
-}
-
-type GetSearchVersionNumberStructuredGeocodeExtRequest struct {
-	PathParams  GetSearchVersionNumberStructuredGeocodeExtPathParams
-	QueryParams GetSearchVersionNumberStructuredGeocodeExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberStructuredGeocodeExtResponse struct {

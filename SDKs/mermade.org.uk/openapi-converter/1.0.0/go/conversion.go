@@ -34,7 +34,7 @@ func newConversion(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // Convert - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x
-func (s *conversion) Convert(ctx context.Context, request operations.ConvertRequest) (*operations.ConvertResponse, error) {
+func (s *conversion) Convert(ctx context.Context, request operations.ConvertRequestBody) (*operations.ConvertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/convert"
 
@@ -118,7 +118,7 @@ func (s *conversion) ConvertURL(ctx context.Context, request operations.ConvertU
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -53,15 +53,11 @@ func (e *ContactsGetJSONEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ContactsGetQueryParams struct {
+type ContactsGetRequest struct {
 	// Determines the action to execute.
 	Action ContactsGetActionEnum `queryParam:"style=form,explode=true,name=action"`
 	// Defines whether to return the response as JSON or CSV separated by semicolon.
 	JSON *ContactsGetJSONEnum `queryParam:"style=form,explode=true,name=json"`
-}
-
-type ContactsGetRequest struct {
-	QueryParams ContactsGetQueryParams
 }
 
 type ContactsGetResponse struct {

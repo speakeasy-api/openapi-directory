@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelModeratorsPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
 // GetChannelModeratorsDirectionEnum - The sort direction of the results.
 type GetChannelModeratorsDirectionEnum string
 
@@ -62,7 +57,9 @@ func (e *GetChannelModeratorsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelModeratorsQueryParams struct {
+type GetChannelModeratorsRequest struct {
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The sort direction of the results.
 	Direction *GetChannelModeratorsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -73,11 +70,6 @@ type GetChannelModeratorsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetChannelModeratorsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetChannelModeratorsRequest struct {
-	PathParams  GetChannelModeratorsPathParams
-	QueryParams GetChannelModeratorsQueryParams
 }
 
 type GetChannelModeratorsResponse struct {

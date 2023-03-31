@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceApplianceDhcpSubnetsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceApplianceDhcpSubnetsRequest struct {
-	PathParams GetDeviceApplianceDhcpSubnetsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceApplianceDhcpSubnetsResponse struct {

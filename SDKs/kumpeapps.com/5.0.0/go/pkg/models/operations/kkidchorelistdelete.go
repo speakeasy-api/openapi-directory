@@ -8,17 +8,12 @@ import (
 )
 
 type KkidChorelistDeleteSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type KkidChorelistDeleteQueryParams struct {
-	// id of the chore you wish to delete
-	IDChoreList int64 `queryParam:"style=form,explode=true,name=idChoreList"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 type KkidChorelistDeleteRequest struct {
-	QueryParams KkidChorelistDeleteQueryParams
-	Security    KkidChorelistDeleteSecurity
+	// id of the chore you wish to delete
+	IDChoreList int64 `queryParam:"style=form,explode=true,name=idChoreList"`
 }
 
 type KkidChorelistDeleteResponse struct {

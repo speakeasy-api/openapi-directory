@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ResourcesIDServicesPathParams struct {
+type PostSetupV1ResourcesIDServicesRequest struct {
+	// Array of valid service object id's
+	RequestBody []string `request:"mediaType=application/json"`
 	// id of resource object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1ResourcesIDServicesRequest struct {
-	PathParams PostSetupV1ResourcesIDServicesPathParams
-	// Array of valid service object id's
-	Request []string `request:"mediaType=application/json"`
 }
 
 type PostSetupV1ResourcesIDServicesResponse struct {

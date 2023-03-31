@@ -54,10 +54,6 @@ func (u SubscriptionsAPIFindRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type SubscriptionsAPIFindRequest struct {
-	Request SubscriptionsAPIFindRequestBody `request:"mediaType=application/json"`
-}
-
 type SubscriptionsAPIFind200ApplicationJSONType string
 
 const (

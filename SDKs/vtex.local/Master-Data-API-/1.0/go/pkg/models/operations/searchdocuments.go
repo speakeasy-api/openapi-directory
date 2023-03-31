@@ -6,12 +6,13 @@ import (
 	"net/http"
 )
 
-type SearchdocumentsPathParams struct {
-	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
-	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
-}
-
-type SearchdocumentsQueryParams struct {
+type SearchdocumentsRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	// Defines the collection of documents to be returned. A range within the collection limited by 100 documents per query.
+	RESTRange string `header:"style=simple,explode=false,name=REST-Range"`
 	// Fields that should be returned by document. Separate fields' names with commas. For example `_fields=email,firstName,document`. You can also use `_all` to fetch all fields.
 	Fields *string `queryParam:"style=form,explode=true,name=_fields"`
 	// String to search. Use quotes for a partial query. For example, `_keyword=Maria` or `_keyword="Maria"`.
@@ -22,21 +23,8 @@ type SearchdocumentsQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=_sort"`
 	// Filter specification.
 	Where *string `queryParam:"style=form,explode=true,name=_where"`
-}
-
-type SearchdocumentsHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-	// Defines the collection of documents to be returned. A range within the collection limited by 100 documents per query.
-	RESTRange string `header:"style=simple,explode=false,name=REST-Range"`
-}
-
-type SearchdocumentsRequest struct {
-	PathParams  SearchdocumentsPathParams
-	QueryParams SearchdocumentsQueryParams
-	Headers     SearchdocumentsHeaders
+	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
 }
 
 type SearchdocumentsResponse struct {

@@ -8,23 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateZRSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateZRSettingsPathParams struct {
-	// Unique Identifier of the Zoom Room.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
-}
-
-type UpdateZRSettingsQueryParams struct {
-	// The type of setting that you would like to update.<br> `alert`: Alert Settings applied on the Zoom Room.<br>
-	// `meeting`: Meeting settings of the Zoom Room.<br>
-	// `signage`: Digital signage settings applied on the Zoom Room.
-	SettingType *string `queryParam:"style=form,explode=true,name=setting_type"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateZRSettingsApplicationJSON2ClientAlert - The Client Alert Settings section includes alerts that display on the TV screen of the Zoom Room. Disable these settings if you have deliberately disconnected one or more peripheral devices or have never enabled them.
@@ -348,10 +335,13 @@ func (u UpdateZRSettingsApplicationJSON) MarshalJSON() ([]byte, error) {
 }
 
 type UpdateZRSettingsRequest struct {
-	PathParams  UpdateZRSettingsPathParams
-	QueryParams UpdateZRSettingsQueryParams
-	Request     *UpdateZRSettingsApplicationJSON `request:"mediaType=application/json"`
-	Security    UpdateZRSettingsSecurity
+	RequestBody *UpdateZRSettingsApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Zoom Room.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	// The type of setting that you would like to update.<br> `alert`: Alert Settings applied on the Zoom Room.<br>
+	// `meeting`: Meeting settings of the Zoom Room.<br>
+	// `signage`: Digital signage settings applied on the Zoom Room.
+	SettingType *string `queryParam:"style=form,explode=true,name=setting_type"`
 }
 
 type UpdateZRSettingsResponse struct {

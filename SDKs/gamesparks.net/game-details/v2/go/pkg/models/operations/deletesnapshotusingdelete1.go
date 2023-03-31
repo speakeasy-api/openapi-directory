@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETESnapshotUsingDELETE1PathParams struct {
+type DELETESnapshotUsingDELETE1Request struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// snapshotId
 	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
-}
-
-type DELETESnapshotUsingDELETE1Request struct {
-	PathParams DELETESnapshotUsingDELETE1PathParams
 }
 
 type DELETESnapshotUsingDELETE1Response struct {

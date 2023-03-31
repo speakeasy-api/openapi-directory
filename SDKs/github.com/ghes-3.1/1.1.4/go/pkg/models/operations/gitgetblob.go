@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitGetBlobPathParams struct {
+type GitGetBlobRequest struct {
 	FileSha string `pathParam:"style=simple,explode=false,name=file_sha"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type GitGetBlobRequest struct {
-	PathParams GitGetBlobPathParams
 }
 
 type GitGetBlobResponse struct {

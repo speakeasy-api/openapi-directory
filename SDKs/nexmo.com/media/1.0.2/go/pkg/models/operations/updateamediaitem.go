@@ -23,10 +23,6 @@ type UpdateAMediaItemRequestBody struct {
 	Title *string `multipartForm:"name=title"`
 }
 
-type UpdateAMediaItemRequest struct {
-	Request *UpdateAMediaItemRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type UpdateAMediaItemResponse struct {
 	ContentType string
 	StatusCode  int

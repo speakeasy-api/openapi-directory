@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientRuntimeAbortPathParams struct {
+type ProtocolMqttClientRuntimeAbortRequest struct {
 	// Agent to set MQTT behavior
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttClientRuntimeAbortRequest struct {
-	PathParams ProtocolMqttClientRuntimeAbortPathParams
 }
 
 type ProtocolMqttClientRuntimeAbortResponse struct {

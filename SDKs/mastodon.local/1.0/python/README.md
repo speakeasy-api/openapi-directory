@@ -1,0 +1,196 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/mastodon.local/1.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.DeleteAPIV1AnnouncementsIDReactionsNameRequest(
+    id="corrupti",
+    name="provident",
+)
+    
+res = s.delete_api_v1_announcements_id_reactions_name_(req, operations.DeleteAPIV1AnnouncementsIDReactionsNameSecurity(
+    bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+))
+
+if res.delete_api_v1_announcements_id_reactions_name_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `delete_api_v1_announcements_id_reactions_name_` - Undo a react emoji to an announcement.
+* `delete_api_v1_conversations_id_` - Remove converstation
+* `delete_api_v1_domain_blocks` - Remove a domain block, if it exists in the user's array of blocked domains.
+* `delete_api_v1_featured_tags_id_` - Unfeature a tag
+* `delete_api_v1_filters_id_` - Delete a filter.
+* `delete_api_v1_lists` - Delete a list
+* `delete_api_v1_lists_id_accounts` - Remove accounts from the given list.
+* `delete_api_v1_push_subscription` - Updates the current push subscription. Only the data part can be updated. To change fundamentals, a new subscription must be created instead.
+* `delete_api_v1_scheduled_statuses_id_` - Cancel a scheduled status
+* `delete_api_v1_statuses_id_`
+* `delete_api_v1_suggestions_id_` - Delete user suggestion
+* `get_api_oembed` - OEmbed as JSON
+* `get_api_proofs` - View identity proof
+* `get_api_v1_admin_accounts` - View accounts matching certain criteria for filtering, up to 100 at a time. Pagination may be done with the HTTP Link header in the response.
+* `get_api_v1_admin_accounts_id_` - View admin-level information about the given account.
+* `get_api_v1_admin_reports` - View all reports. Pagination may be done with HTTP Link header in the response.
+* `get_api_v1_admin_reports_id_` - View information about the report with the given ID.
+* `get_api_v1_announcements` - See all currently active announcements set by admins.
+* `get_api_v1_blocks` - Get blocked users.
+* `get_api_v1_bookmarks` - Statuses the user has bookmarked.
+* `get_api_v1_conversations` - Show conversation.
+* `get_api_v1_custom_emojis` - Returns custom emojis that are available on the server.
+* `get_api_v1_directory` - List accounts visible in the directory.
+* `get_api_v1_domain_blocks` - View domains the user has blocked.
+* `get_api_v1_endorsements` - Accounts that the user is currently featuring on their profile.
+* `get_api_v1_favourites` - Statuses the user has favourited.
+* `get_api_v1_featured_tags` - View your featured tags.
+* `get_api_v1_featured_tags_suggestions` - Shows your 10 most-used tags, with usage history for the past week.
+* `get_api_v1_filters`
+* `get_api_v1_filters_id_` - Get one filter.
+* `get_api_v1_follow_requests` - Pending Follows
+* `get_api_v1_instance` - Information about the server.
+* `get_api_v1_instance_activity` - Instance activity over the last 3 months, binned weekly.
+* `get_api_v1_instance_peers` - Information about the server.
+* `get_api_v1_lists` - Fetch all lists that the user owns.
+* `get_api_v1_lists_id_` - Remove converstation
+* `get_api_v1_lists_id_accounts` - View accounts in List
+* `get_api_v1_media_id_` - Get an attachement.
+* `get_api_v1_mutes` - Accounts the user has muted.
+* `get_api_v1_notifications` - Notifications concerning the user. This API returns Link headers containing links to the next/previous page. However, the links can also be constructed dynamically using query params and id values.
+* `get_api_v1_notifications_id_` - View information about a notification with a given ID.
+* `get_api_v1_polls_id_` - View a poll.
+* `get_api_v1_preferences` - Shows your 10 most-used tags, with usage history for the past week.
+* `get_api_v1_push_subscription` - View the PushSubscription currently associated with this access token.
+* `get_api_v1_scheduled_statuses` - View scheduled statuses
+* `get_api_v1_scheduled_statuses_id_` - View a single scheduled status
+* `get_api_v1_statuses_id_`
+* `get_api_v1_statuses_id_context`
+* `get_api_v1_statuses_id_favourited_by` - View who favourited a given status.
+* `get_api_v1_statuses_id_reblogged_by` - View who boosted a given status.
+* `get_api_v1_suggestions` - Accounts the user has had past positive interactions with, but is not yet following.
+* `get_api_v1_timelines_home` - View statuses from followed users.
+* `get_api_v1_timelines_list_list_id_` - View statuses in the given list timeline.
+* `get_api_v1_timelines_public` - Public timeline
+* `get_api_v1_timelines_tag_hashtag_` - View public statuses containing the given hashtag.
+* `get_api_v1_trends` - Tags that are being used more frequently within the past week.
+* `get_api_v2_search` - Search results
+* `post_api_v1_admin_accounts_id_action` - Perform an action against an account and log this action in the moderation history.
+* `post_api_v1_admin_accounts_id_approve` - Approve the given local account if it is currently pending approval.
+* `post_api_v1_admin_accounts_id_enable` - Re-enable a local account whose login is currently disabled.
+* `post_api_v1_admin_accounts_id_reject` - Reject the given local account if it is currently pending approval.
+* `post_api_v1_admin_accounts_id_unsilence` - Unsilence a currently silenced account.
+* `post_api_v1_admin_accounts_id_unsuspend` - Unsuspend a currently suspended account.
+* `post_api_v1_admin_reports_id_assign_to_self` - Claim the handling of this report to yourself.
+* `post_api_v1_admin_reports_id_reopen` - Mark a report as resolved with no further action taken.
+* `post_api_v1_admin_reports_id_resolve` - Mark a report as resolved with no further action taken.
+* `post_api_v1_admin_reports_id_unassign` - Unassign a report so that someone else can claim it.
+* `post_api_v1_announcements_id_dismiss` - Allows a user to mark the announcement as read.
+* `post_api_v1_conversations_id_read` - Remove converstation
+* `post_api_v1_domain_blocks` - "Block a domain to:
+- hide all public posts from it
+- hide all notifications from it
+- remove all followers from it
+- prevent following new users from it (but does not remove existing follows)"
+
+* `post_api_v1_featured_tags` - Create a feature a tag.
+* `post_api_v1_filters`
+* `post_api_v1_follow_requests_id_authorize` - Accept Follow
+* `post_api_v1_follow_requests_id_reject` - Accept Follow
+* `post_api_v1_lists` - Create a new list.
+* `post_api_v1_lists_id_accounts` - Add accounts to the given list. Note that the user must be following these accounts.
+* `post_api_v1_markers` - Get saved timeline position
+* `post_api_v1_media` - Creates an attachment to be used with a new status.
+* `post_api_v1_media_id_` - Update an Attachment, before it is attached to a status and posted.
+* `post_api_v1_notifications_clear` - Clear all notifications from the server.
+* `post_api_v1_notifications_id_dismiss` - Clear a single notification from the server.
+* `post_api_v1_polls_id_` - Vote on a poll.
+* `post_api_v1_push_subscription` - Add a Web Push API subscription to receive notifications. Each access token can have one push subscription. If you create a new subscription, the old subscription is deleted.
+* `post_api_v1_reports` - File a report.
+* `post_api_v1_statuses`
+* `post_api_v1_statuses_id_bookmark` - Privately bookmark a status.
+* `post_api_v1_statuses_id_favourite` - Add a status to your favourites list.
+* `post_api_v1_statuses_id_mute` - Do not receive notifications for the thread that this status is part of. Must be a thread in which you are a participant.
+* `post_api_v1_statuses_id_pin` - Feature one of your own public statuses at the top of your profile.
+* `post_api_v1_statuses_id_reblog` - Reshare a status.
+* `post_api_v1_statuses_id_unbookmark` - Remove a status from your private bookmarks.
+* `post_api_v1_statuses_id_unfavourite` - Remove a status from your favourites list.
+* `post_api_v1_statuses_id_unmute` - Status's conversation unmuted, or was already unmuted
+* `post_api_v1_statuses_id_unpin` - Unfeature a status from the top of your profile.
+* `post_api_v1_statuses_id_unreblog` - Undo a reshare of a status.
+* `put_api_v1_announcements_id_reactions_name_` - Allows a user to mark the announcement as read.
+* `put_api_v1_filters_id_` - Update a filter.
+* `put_api_v1_lists` - Change the title of a list, or which replies to show.
+* `put_api_v1_push_subscription` - Updates the current push subscription. Only the data part can be updated. To change fundamentals, a new subscription must be created instead.
+* `put_api_v1_scheduled_statuses_id_` - View a single scheduled status
+
+### todo_security
+
+* `post_api_v1_accounts` - Creates a user and account records. Returns an account access token for the app that initiated the request. The app should save this token for later, and should wait for the user to confirm their account by clicking a link in their email inbox.
+
+### accounts
+
+* `get_api_v1_accounts_relationships` - Sets a private note on a user.
+* `get_api_v1_accounts_search` - Search for matching accounts by username or display name.
+* `get_api_v1_accounts_verify_credentials` - Test to make sure that the user token works.
+* `get_api_v1_accounts_id_`
+* `get_api_v1_accounts_id_featured_tags` - Tags featured by this account.
+* `get_api_v1_accounts_id_followers` - Accounts which follow the given account, if network is not hidden by the account owner.
+* `get_api_v1_accounts_id_following` - Accounts which the given account is following, if network is not hidden by the account owner.
+* `get_api_v1_accounts_id_identity_proofs` - Array of IdentityProof
+* `get_api_v1_accounts_id_lists` - User lists that you have added this account to.
+* `get_api_v1_accounts_id_statuses` - Statuses posted to the given account.
+* `patch_api_v1_accounts_update_credentials` - Update the user's display and preferences.
+* `post_api_v1_accounts` - Creates a user and account records. Returns an account access token for the app that initiated the request. The app should save this token for later, and should wait for the user to confirm their account by clicking a link in their email inbox.
+* `post_api_v1_accounts_id_block` - Block the given account. Clients should filter statuses from this account if received (e.g. due to a boost in the Home timeline).
+* `post_api_v1_accounts_id_follow` - Follow the given account. Can also be used to update whether to show reblogs or enable notifications.
+* `post_api_v1_accounts_id_mute` - Mute the given account. Clients should filter statuses and notifications from this account, if received (e.g. due to a boost in the Home timeline).
+* `post_api_v1_accounts_id_note` - Sets a private note on a user.
+* `post_api_v1_accounts_id_pin` - Add the given account to the user's featured profiles. (Featured profiles are currently shown on the user's own public profile.)
+* `post_api_v1_accounts_id_unblock` - Block the given account. Clients should filter statuses from this account if received (e.g. due to a boost in the Home timeline).
+* `post_api_v1_accounts_id_unfollow` - Unfollow the given account.
+* `post_api_v1_accounts_id_unmute` - Unmute the given account.
+* `post_api_v1_accounts_id_unpin` - Remove the given account from the user's featured profiles.
+
+### apps
+
+* `get_api_v1_apps_verify_credentials` - Confirm that the app's OAuth2 credentials work.
+* `post_api_v1_apps` - Create a new application to obtain OAuth2 credentials.
+
+### oauth
+
+* `get_oauth_authorize` - Displays an authorization form to the user. If approved, it will create and return an authorization code, then redirect to the desired redirect_uri, or show the authorization code if urn:ietf:wg:oauth:2.0:oob was requested. The authorization code can be used while requesting a token to obtain access to user-level methods.
+* `post_oauth_revoke` - Revoke an access token to make it no longer valid for use.
+* `post_oauth_token` - Returns an access token, to be used during API calls that are not public.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

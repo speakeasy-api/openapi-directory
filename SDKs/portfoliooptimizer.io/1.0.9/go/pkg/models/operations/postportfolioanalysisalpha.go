@@ -103,10 +103,6 @@ func (u PostPortfolioAnalysisAlphaRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostPortfolioAnalysisAlphaRequest struct {
-	Request PostPortfolioAnalysisAlphaRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisAlpha200ApplicationJSONPortfolios struct {
 	// The portfolio Jensen's alpha, which correponds to the portfolio excess return adjusted for the systematic risk in the Capital Asset Pricing Model (CAPM)
 	PortfolioAlpha float64 `json:"portfolioAlpha"`

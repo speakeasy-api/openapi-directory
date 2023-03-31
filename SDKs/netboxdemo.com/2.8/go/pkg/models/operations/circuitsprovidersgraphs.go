@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsProvidersGraphsPathParams struct {
+type CircuitsProvidersGraphsRequest struct {
 	// A unique integer value identifying this provider.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsProvidersGraphsRequest struct {
-	PathParams CircuitsProvidersGraphsPathParams
 }
 
 type CircuitsProvidersGraphsResponse struct {

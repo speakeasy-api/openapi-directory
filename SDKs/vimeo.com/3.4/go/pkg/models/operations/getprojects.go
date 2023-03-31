@@ -10,12 +10,7 @@ import (
 )
 
 type GetProjectsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetProjectsPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetProjectsDirectionEnum - The sort direction of the results.
@@ -72,7 +67,7 @@ func (e *GetProjectsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectsQueryParams struct {
+type GetProjectsRequest struct {
 	// The sort direction of the results.
 	Direction *GetProjectsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -81,12 +76,8 @@ type GetProjectsQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetProjectsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetProjectsRequest struct {
-	PathParams  GetProjectsPathParams
-	QueryParams GetProjectsQueryParams
-	Security    GetProjectsSecurity
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetProjectsResponse struct {

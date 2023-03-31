@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostNetworksIDActionsChangeProtectionPathParams struct {
-	// ID of the Network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostNetworksIDActionsChangeProtectionChangeProtectionRequest struct {
 	// If true, prevents the Network from being deleted
 	Delete *bool `json:"delete,omitempty"`
 }
 
 type PostNetworksIDActionsChangeProtectionRequest struct {
-	PathParams PostNetworksIDActionsChangeProtectionPathParams
-	Request    *PostNetworksIDActionsChangeProtectionChangeProtectionRequest `request:"mediaType=application/json"`
+	RequestBody *PostNetworksIDActionsChangeProtectionChangeProtectionRequest `request:"mediaType=application/json"`
+	// ID of the Network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostNetworksIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

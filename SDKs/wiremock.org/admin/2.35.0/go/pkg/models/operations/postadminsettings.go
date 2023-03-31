@@ -134,10 +134,6 @@ func (u PostAdminSettingsRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostAdminSettingsRequest struct {
-	Request PostAdminSettingsRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAdminSettingsResponse struct {
 	ContentType string
 	StatusCode  int

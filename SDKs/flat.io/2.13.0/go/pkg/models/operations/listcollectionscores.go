@@ -10,17 +10,7 @@ import (
 )
 
 type ListCollectionScoresSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type ListCollectionScoresPathParams struct {
-	// Unique identifier of the collection.
-	// The following aliases are supported:
-	// - `root`: The root collection of the account
-	// - `sharedWithMe`: Automatically contains new resources that have been shared individually
-	// - `trash`: Automatically contains resources that have been deleted
-	//
-	Collection string `pathParam:"style=simple,explode=false,name=collection"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListCollectionScoresDirectionEnum - Sort direction
@@ -74,7 +64,14 @@ func (e *ListCollectionScoresSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCollectionScoresQueryParams struct {
+type ListCollectionScoresRequest struct {
+	// Unique identifier of the collection.
+	// The following aliases are supported:
+	// - `root`: The root collection of the account
+	// - `sharedWithMe`: Automatically contains new resources that have been shared individually
+	// - `trash`: Automatically contains resources that have been deleted
+	//
+	Collection string `pathParam:"style=simple,explode=false,name=collection"`
 	// Sort direction
 	Direction *ListCollectionScoresDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// This is the maximum number of objects that may be returned
@@ -92,12 +89,6 @@ type ListCollectionScoresQueryParams struct {
 	SharingKey *string `queryParam:"style=form,explode=true,name=sharingKey"`
 	// Sort
 	Sort *ListCollectionScoresSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListCollectionScoresRequest struct {
-	PathParams  ListCollectionScoresPathParams
-	QueryParams ListCollectionScoresQueryParams
-	Security    ListCollectionScoresSecurity
 }
 
 type ListCollectionScoresResponse struct {

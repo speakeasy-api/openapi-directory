@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkL7FirewallRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkL7FirewallRulesRequest struct {
-	PathParams GetNetworkL7FirewallRulesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkL7FirewallRulesResponse struct {

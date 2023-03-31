@@ -4,178 +4,99 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.CreateDomesticPaymentConsentsRequest(
-    security=operations.CreateDomesticPaymentConsentsSecurity(
-        tppo_auth2_security=shared.SchemeTppoAuth2Security(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    headers=operations.CreateDomesticPaymentConsentsHeaders(
-        authorization="doloremque",
-        x_customer_user_agent="maiores",
-        x_fapi_auth_date="atque",
-        x_fapi_customer_ip_address="ipsa",
-        x_fapi_interaction_id="blanditiis",
-        x_idempotency_key="expedita",
-        x_jws_signature="tenetur",
-    ),
-    request=operations.CreateDomesticPaymentConsentsRequests(
-        application_jose_plus_jwe="iusto".encode(),
-        ob_write_domestic_consent4=shared.ObWriteDomesticConsent4(
-            data=shared.ObWriteDomesticConsent4Data(
-                authorisation=shared.ObWriteDomesticConsent4DataAuthorisation(
-                    authorisation_type="Any",
-                    completion_date_time="1985-08-04T09:11:14Z",
-                ),
-                initiation=shared.ObWriteDomesticConsent4DataInitiation(
-                    creditor_account=shared.ObWriteDomesticConsent4DataInitiationCreditorAccount(
-                        identification="corporis",
-                        name="ipsam",
-                        scheme_name="voluptatem",
-                        secondary_identification="repellendus",
-                    ),
-                    creditor_postal_address=shared.ObPostalAddress6(
-                        address_line=[
-                            "expedita",
-                        ],
-                        address_type="Business",
-                        building_number="eligendi",
-                        country="recusandae",
-                        country_sub_division="doloribus",
-                        department="molestiae",
-                        post_code="cupiditate",
-                        street_name="mollitia",
-                        sub_department="reiciendis",
-                        town_name="ad",
-                    ),
-                    debtor_account=shared.ObWriteDomesticConsent4DataInitiationDebtorAccount(
-                        identification="consectetur",
-                        name="molestias",
-                        scheme_name="aliquid",
-                        secondary_identification="enim",
-                    ),
-                    end_to_end_identification="tempore",
-                    instructed_amount=shared.ObWriteDomesticConsent4DataInitiationInstructedAmount(
-                        amount="iure",
-                        currency="recusandae",
-                    ),
-                    instruction_identification="quia",
-                    local_instrument="officia",
-                    remittance_information=shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation(
-                        reference="sit",
-                        unstructured="adipisci",
-                    ),
-                    supplementary_data={
-                        "ut": "voluptatum",
-                        "velit": "eius",
-                        "quo": "aut",
-                    },
-                ),
-                read_refund_account="No",
-                sca_support_data=shared.ObscaSupportData1(
-                    applied_authentication_approach="SCA",
-                    reference_payment_order_id="soluta",
-                    requested_sca_exemption_type="PartyToParty",
-                ),
+
+
+req = operations.CreateDomesticPaymentConsentsJSONRequest(
+    authorization="corrupti",
+    ob_write_domestic_consent4=shared.OBWriteDomesticConsent4(
+        data=shared.OBWriteDomesticConsent4Data(
+            authorisation=shared.OBWriteDomesticConsent4DataAuthorisation(
+                authorisation_type="Single",
+                completion_date_time="2021-04-24T16:27:50.833Z",
             ),
-            risk=shared.ObRisk1(
-                delivery_address=shared.ObRisk1DeliveryAddress(
+            initiation=shared.OBWriteDomesticConsent4DataInitiation(
+                creditor_account=shared.OBWriteDomesticConsent4DataInitiationCreditorAccount(
+                    identification="unde",
+                    name="nulla",
+                    scheme_name="corrupti",
+                    secondary_identification="illum",
+                ),
+                creditor_postal_address=shared.OBPostalAddress6(
                     address_line=[
-                        "officia",
+                        "error",
+                        "deserunt",
                     ],
-                    building_number="reprehenderit",
-                    country="dolorem",
-                    country_sub_division="ea",
-                    post_code="dolore",
-                    street_name="saepe",
-                    town_name="atque",
+                    address_type="MailTo",
+                    building_number="iure",
+                    country="French Guiana",
+                    country_sub_division="debitis",
+                    department="ipsa",
+                    post_code="23478-5453",
+                    street_name="recusandae",
+                    sub_department="temporibus",
+                    town_name="ab",
                 ),
-                merchant_category_code="et",
-                merchant_customer_identification="ut",
-                payment_context_code="Other",
+                debtor_account=shared.OBWriteDomesticConsent4DataInitiationDebtorAccount(
+                    identification="quis",
+                    name="veritatis",
+                    scheme_name="deserunt",
+                    secondary_identification="perferendis",
+                ),
+                end_to_end_identification="ipsam",
+                instructed_amount=shared.OBWriteDomesticConsent4DataInitiationInstructedAmount(
+                    amount="repellendus",
+                    currency="sapiente",
+                ),
+                instruction_identification="quo",
+                local_instrument="odit",
+                remittance_information=shared.OBWriteDomesticConsent4DataInitiationRemittanceInformation(
+                    reference="at",
+                    unstructured="at",
+                ),
+                supplementary_data={
+                    "molestiae": "quod",
+                    "quod": "esse",
+                    "totam": "porro",
+                    "dolorum": "dicta",
+                },
+            ),
+            read_refund_account="Yes",
+            sca_support_data=shared.OBSCASupportData1(
+                applied_authentication_approach="SCA",
+                reference_payment_order_id="occaecati",
+                requested_sca_exemption_type="ContactlessTravel",
             ),
         ),
-        ob_write_domestic_consent5=shared.ObWriteDomesticConsent4(
-            data=shared.ObWriteDomesticConsent4Data(
-                authorisation=shared.ObWriteDomesticConsent4DataAuthorisation(
-                    authorisation_type="Single",
-                    completion_date_time="2017-12-26T15:29:34Z",
-                ),
-                initiation=shared.ObWriteDomesticConsent4DataInitiation(
-                    creditor_account=shared.ObWriteDomesticConsent4DataInitiationCreditorAccount(
-                        identification="quisquam",
-                        name="velit",
-                        scheme_name="veritatis",
-                        secondary_identification="ipsa",
-                    ),
-                    creditor_postal_address=shared.ObPostalAddress6(
-                        address_line=[
-                            "rem",
-                            "quo",
-                        ],
-                        address_type="Correspondence",
-                        building_number="eum",
-                        country="facilis",
-                        country_sub_division="sint",
-                        department="vitae",
-                        post_code="labore",
-                        street_name="accusamus",
-                        sub_department="vero",
-                        town_name="voluptatem",
-                    ),
-                    debtor_account=shared.ObWriteDomesticConsent4DataInitiationDebtorAccount(
-                        identification="perferendis",
-                        name="est",
-                        scheme_name="ea",
-                        secondary_identification="rem",
-                    ),
-                    end_to_end_identification="qui",
-                    instructed_amount=shared.ObWriteDomesticConsent4DataInitiationInstructedAmount(
-                        amount="rerum",
-                        currency="minus",
-                    ),
-                    instruction_identification="perspiciatis",
-                    local_instrument="natus",
-                    remittance_information=shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation(
-                        reference="repellat",
-                        unstructured="est",
-                    ),
-                    supplementary_data={
-                        "et": "eligendi",
-                        "debitis": "dolor",
-                        "qui": "iusto",
-                    },
-                ),
-                read_refund_account="No",
-                sca_support_data=shared.ObscaSupportData1(
-                    applied_authentication_approach="SCA",
-                    reference_payment_order_id="ut",
-                    requested_sca_exemption_type="EcommerceGoods",
-                ),
+        risk=shared.OBRisk1(
+            delivery_address=shared.OBRisk1DeliveryAddress(
+                address_line=[
+                    "hic",
+                    "optio",
+                    "totam",
+                ],
+                building_number="beatae",
+                country="Iraq",
+                country_sub_division="molestiae",
+                post_code="17742",
+                street_name="excepturi",
+                town_name="aspernatur",
             ),
-            risk=shared.ObRisk1(
-                delivery_address=shared.ObRisk1DeliveryAddress(
-                    address_line=[
-                        "ut",
-                        "fugiat",
-                    ],
-                    building_number="voluptatibus",
-                    country="omnis",
-                    country_sub_division="voluptatem",
-                    post_code="et",
-                    street_name="ratione",
-                    town_name="sit",
-                ),
-                merchant_category_code="omnis",
-                merchant_customer_identification="voluptate",
-                payment_context_code="PartyToParty",
-            ),
+            merchant_category_code="perferendis",
+            merchant_customer_identification="ad",
+            payment_context_code="Other",
         ),
     ),
+    x_customer_user_agent="sed",
+    x_fapi_auth_date="iste",
+    x_fapi_customer_ip_address="dolor",
+    x_fapi_interaction_id="natus",
+    x_idempotency_key="laboriosam",
+    x_jws_signature="hic",
 )
     
-res = s.domestic_payments.create_domestic_payment_consents(req)
+res = s.domestic_payments.create_domestic_payment_consents_json(req, operations.CreateDomesticPaymentConsentsJSONSecurity(
+    tppo_auth2_security="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.body is not None:
     # handle response

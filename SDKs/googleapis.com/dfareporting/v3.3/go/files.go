@@ -32,20 +32,20 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DfareportingFilesGet - Retrieves a report file by its report ID and file ID. This method supports media download.
-func (s *files) DfareportingFilesGet(ctx context.Context, request operations.DfareportingFilesGetRequest) (*operations.DfareportingFilesGetResponse, error) {
+func (s *files) DfareportingFilesGet(ctx context.Context, request operations.DfareportingFilesGetRequest, security operations.DfareportingFilesGetSecurity) (*operations.DfareportingFilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *files) DfareportingFilesGet(ctx context.Context, request operations.Dfa
 }
 
 // DfareportingFilesList - Lists files for a user profile.
-func (s *files) DfareportingFilesList(ctx context.Context, request operations.DfareportingFilesListRequest) (*operations.DfareportingFilesListResponse, error) {
+func (s *files) DfareportingFilesList(ctx context.Context, request operations.DfareportingFilesListRequest, security operations.DfareportingFilesListSecurity) (*operations.DfareportingFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -109,7 +109,7 @@ func (s *addressSearch) AddressAutocomplete(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -165,14 +165,14 @@ func (s *addressSearch) AddressAutocomplete(ctx context.Context, request operati
 // Resolved addresses (including global addresses) are returned in a UK format (up to 3 address lines) using UK nomenclature (like postcode and county).
 func (s *addressSearch) Resolve(ctx context.Context, request operations.ResolveRequest) (*operations.ResolveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/autocomplete/addresses/{address}/gbr", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/autocomplete/addresses/{address}/gbr", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -226,14 +226,14 @@ func (s *addressSearch) Resolve(ctx context.Context, request operations.ResolveR
 // Resolved addresses (including global addresses) are returned in a US format (up to 2 address lines) using US nomenclature (like zipcode, state and city).
 func (s *addressSearch) ResolveUsa(ctx context.Context, request operations.ResolveUsaRequest) (*operations.ResolveUsaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/autocomplete/addresses/{address}/usa", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/autocomplete/addresses/{address}/usa", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

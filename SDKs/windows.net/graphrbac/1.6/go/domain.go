@@ -34,14 +34,14 @@ func newDomain(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DomainsGet - Gets a specific domain in the current tenant.
 func (s *domain) DomainsGet(ctx context.Context, request operations.DomainsGetRequest) (*operations.DomainsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/domains/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/domains/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *domain) DomainsGet(ctx context.Context, request operations.DomainsGetRe
 // DomainsList - Gets a list of domains for the current tenant.
 func (s *domain) DomainsList(ctx context.Context, request operations.DomainsListRequest) (*operations.DomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

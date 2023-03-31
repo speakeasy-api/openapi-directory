@@ -105,10 +105,6 @@ func (u PostPortfolioAnalysisDiversificationRatioRequestBody) MarshalJSON() ([]b
 	return nil, nil
 }
 
-type PostPortfolioAnalysisDiversificationRatioRequest struct {
-	Request PostPortfolioAnalysisDiversificationRatioRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisDiversificationRatio200ApplicationJSONPortfolios struct {
 	// The diversification ratio of the portfolio
 	PortfolioDiversificationRatio float64 `json:"portfolioDiversificationRatio"`

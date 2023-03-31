@@ -13,30 +13,28 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AddUserToAccountRequest{
-        Request: operations.AddUserToAccountRequestBody{
-            Account: operations.AddUserToAccountRequestBodyAccount{
-                AccountID: "corrupti",
-                Domain: "provident",
+    req := operations.AddUserToAccountRequestBody{
+        Account: operations.AddUserToAccountRequestBodyAccount{
+            AccountID: "corrupti",
+            Domain: "provident",
+        },
+        Users: []AddUserToAccountRequestBodyUsers{
+            operations.AddUserToAccountRequestBodyUsers{
+                Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                    Email: "Leda_Stiedemann@hotmail.com",
+                    UserID: "vel",
+                },
             },
-            Users: []AddUserToAccountRequestBodyUsers{
-                operations.AddUserToAccountRequestBodyUsers{
-                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                        Email: "Leda_Stiedemann@hotmail.com",
-                        UserID: "vel",
-                    },
+            operations.AddUserToAccountRequestBodyUsers{
+                Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                    Email: "Luna.Hoppe@yahoo.com",
+                    UserID: "debitis",
                 },
-                operations.AddUserToAccountRequestBodyUsers{
-                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                        Email: "Luna.Hoppe@yahoo.com",
-                        UserID: "debitis",
-                    },
-                },
-                operations.AddUserToAccountRequestBodyUsers{
-                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                        Email: "Vincenzo.Goldner@gmail.com",
-                        UserID: "minus",
-                    },
+            },
+            operations.AddUserToAccountRequestBodyUsers{
+                Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                    Email: "Vincenzo.Goldner@gmail.com",
+                    UserID: "minus",
                 },
             },
         },

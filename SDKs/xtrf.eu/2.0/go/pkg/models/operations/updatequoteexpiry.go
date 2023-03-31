@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateQuoteExpiryPathParams struct {
+type UpdateQuoteExpiryRequest struct {
+	// Updated Quote Expiry Date for a quote.
+	TimeDTO shared.TimeDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateQuoteExpiryRequest struct {
-	PathParams UpdateQuoteExpiryPathParams
-	// Updated Quote Expiry Date for a quote.
-	Request shared.TimeDTO `request:"mediaType=application/json"`
 }
 
 type UpdateQuoteExpiryResponse struct {

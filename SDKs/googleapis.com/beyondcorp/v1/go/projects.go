@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BeyondcorpProjectsLocationsAppConnectionsCreate - Creates a new AppConnection in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectionsCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest) (*operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectionsCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest, security operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectionsCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectionsCreate(ctx context.C
 }
 
 // BeyondcorpProjectsLocationsAppConnectionsList - Lists AppConnections in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectionsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectionsListRequest) (*operations.BeyondcorpProjectsLocationsAppConnectionsListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectionsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectionsListRequest, security operations.BeyondcorpProjectsLocationsAppConnectionsListSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectionsList(ctx context.Con
 }
 
 // BeyondcorpProjectsLocationsAppConnectionsResolve - Resolves AppConnections details for a given AppConnector. An internal method called by a connector to find AppConnections to connect to.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectionsResolve(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectionsResolveRequest) (*operations.BeyondcorpProjectsLocationsAppConnectionsResolveResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectionsResolve(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectionsResolveRequest, security operations.BeyondcorpProjectsLocationsAppConnectionsResolveSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectionsResolveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnections:resolve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnections:resolve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectionsResolve(ctx context.
 }
 
 // BeyondcorpProjectsLocationsAppConnectorsCreate - Creates a new AppConnector in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectorsCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsCreateRequest) (*operations.BeyondcorpProjectsLocationsAppConnectorsCreateResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectorsCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsCreateRequest, security operations.BeyondcorpProjectsLocationsAppConnectorsCreateSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnectors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnectors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectorsCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectorsCreate(ctx context.Co
 }
 
 // BeyondcorpProjectsLocationsAppConnectorsList - Lists AppConnectors in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectorsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsListRequest) (*operations.BeyondcorpProjectsLocationsAppConnectorsListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectorsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsListRequest, security operations.BeyondcorpProjectsLocationsAppConnectorsListSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnectors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appConnectors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectorsList(ctx context.Cont
 }
 
 // BeyondcorpProjectsLocationsAppConnectorsReportStatus - Report status for a given connector.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectorsReportStatus(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusRequest) (*operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectorsReportStatus(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusRequest, security operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectorsReportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{appConnector}:reportStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{appConnector}:reportStatus", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectorsReportStatus(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectorsReportStatus(ctx cont
 }
 
 // BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfig - Gets instance configuration for a given AppConnector. An internal method called by a AppConnector to get its container config.
-func (s *projects) BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfig(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRequest) (*operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfig(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRequest, security operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigSecurity) (*operations.BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{appConnector}:resolveInstanceConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{appConnector}:resolveInstanceConfig", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfig
 }
 
 // BeyondcorpProjectsLocationsAppGatewaysCreate - Creates a new AppGateway in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsAppGatewaysCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppGatewaysCreateRequest) (*operations.BeyondcorpProjectsLocationsAppGatewaysCreateResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppGatewaysCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppGatewaysCreateRequest, security operations.BeyondcorpProjectsLocationsAppGatewaysCreateSecurity) (*operations.BeyondcorpProjectsLocationsAppGatewaysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appGateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appGateways", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppGatewayInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppGatewaysCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) BeyondcorpProjectsLocationsAppGatewaysCreate(ctx context.Cont
 }
 
 // BeyondcorpProjectsLocationsAppGatewaysList - Lists AppGateways in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsAppGatewaysList(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppGatewaysListRequest) (*operations.BeyondcorpProjectsLocationsAppGatewaysListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsAppGatewaysList(ctx context.Context, request operations.BeyondcorpProjectsLocationsAppGatewaysListRequest, security operations.BeyondcorpProjectsLocationsAppGatewaysListSecurity) (*operations.BeyondcorpProjectsLocationsAppGatewaysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appGateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/appGateways", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,11 +492,11 @@ func (s *projects) BeyondcorpProjectsLocationsAppGatewaysList(ctx context.Contex
 }
 
 // BeyondcorpProjectsLocationsClientConnectorServicesCreate - Creates a new ClientConnectorService in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest) (*operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest, security operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateSecurity) (*operations.BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientConnectorServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientConnectorServices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientConnectorServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,11 +508,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesCreate(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,20 +547,20 @@ func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesCreate(ctx 
 }
 
 // BeyondcorpProjectsLocationsClientConnectorServicesList - Lists ClientConnectorServices in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesList(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientConnectorServicesListRequest) (*operations.BeyondcorpProjectsLocationsClientConnectorServicesListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesList(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientConnectorServicesListRequest, security operations.BeyondcorpProjectsLocationsClientConnectorServicesListSecurity) (*operations.BeyondcorpProjectsLocationsClientConnectorServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientConnectorServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientConnectorServices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesList(ctx co
 }
 
 // BeyondcorpProjectsLocationsClientConnectorServicesPatch - Updates the parameters of a single ClientConnectorService.
-func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesPatch(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest) (*operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesPatch(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest, security operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchSecurity) (*operations.BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientConnectorServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesPatch(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientConnectorServicesPatch(ctx c
 }
 
 // BeyondcorpProjectsLocationsClientGatewaysCreate - Creates a new ClientGateway in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsClientGatewaysCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysCreateRequest) (*operations.BeyondcorpProjectsLocationsClientGatewaysCreateResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientGatewaysCreate(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysCreateRequest, security operations.BeyondcorpProjectsLocationsClientGatewaysCreateSecurity) (*operations.BeyondcorpProjectsLocationsClientGatewaysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientGateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientGateways", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientGatewayInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysCreate(ctx context.C
 }
 
 // BeyondcorpProjectsLocationsClientGatewaysGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) BeyondcorpProjectsLocationsClientGatewaysGetIamPolicy(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyRequest) (*operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientGatewaysGetIamPolicy(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyRequest, security operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicySecurity) (*operations.BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,20 +753,20 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysGetIamPolicy(ctx con
 }
 
 // BeyondcorpProjectsLocationsClientGatewaysList - Lists ClientGateways in a given project and location.
-func (s *projects) BeyondcorpProjectsLocationsClientGatewaysList(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysListRequest) (*operations.BeyondcorpProjectsLocationsClientGatewaysListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientGatewaysList(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysListRequest, security operations.BeyondcorpProjectsLocationsClientGatewaysListSecurity) (*operations.BeyondcorpProjectsLocationsClientGatewaysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientGateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientGateways", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -801,11 +801,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysList(ctx context.Con
 }
 
 // BeyondcorpProjectsLocationsClientGatewaysSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) BeyondcorpProjectsLocationsClientGatewaysSetIamPolicy(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyRequest) (*operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientGatewaysSetIamPolicy(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyRequest, security operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicySecurity) (*operations.BeyondcorpProjectsLocationsClientGatewaysSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -817,11 +817,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysSetIamPolicy(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -856,11 +856,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysSetIamPolicy(ctx con
 }
 
 // BeyondcorpProjectsLocationsClientGatewaysTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) BeyondcorpProjectsLocationsClientGatewaysTestIamPermissions(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsRequest) (*operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsClientGatewaysTestIamPermissions(ctx context.Context, request operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsRequest, security operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsSecurity) (*operations.BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -872,11 +872,11 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysTestIamPermissions(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -911,20 +911,20 @@ func (s *projects) BeyondcorpProjectsLocationsClientGatewaysTestIamPermissions(c
 }
 
 // BeyondcorpProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) BeyondcorpProjectsLocationsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsListRequest) (*operations.BeyondcorpProjectsLocationsListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsListRequest, security operations.BeyondcorpProjectsLocationsListSecurity) (*operations.BeyondcorpProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -959,11 +959,11 @@ func (s *projects) BeyondcorpProjectsLocationsList(ctx context.Context, request 
 }
 
 // BeyondcorpProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) BeyondcorpProjectsLocationsOperationsCancel(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsCancelRequest) (*operations.BeyondcorpProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsOperationsCancel(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsCancelRequest, security operations.BeyondcorpProjectsLocationsOperationsCancelSecurity) (*operations.BeyondcorpProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -975,11 +975,11 @@ func (s *projects) BeyondcorpProjectsLocationsOperationsCancel(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1014,20 +1014,20 @@ func (s *projects) BeyondcorpProjectsLocationsOperationsCancel(ctx context.Conte
 }
 
 // BeyondcorpProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) BeyondcorpProjectsLocationsOperationsDelete(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsDeleteRequest) (*operations.BeyondcorpProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsOperationsDelete(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsDeleteRequest, security operations.BeyondcorpProjectsLocationsOperationsDeleteSecurity) (*operations.BeyondcorpProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1062,20 +1062,20 @@ func (s *projects) BeyondcorpProjectsLocationsOperationsDelete(ctx context.Conte
 }
 
 // BeyondcorpProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) BeyondcorpProjectsLocationsOperationsGet(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsGetRequest) (*operations.BeyondcorpProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsOperationsGet(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsGetRequest, security operations.BeyondcorpProjectsLocationsOperationsGetSecurity) (*operations.BeyondcorpProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1110,20 +1110,20 @@ func (s *projects) BeyondcorpProjectsLocationsOperationsGet(ctx context.Context,
 }
 
 // BeyondcorpProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) BeyondcorpProjectsLocationsOperationsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsListRequest) (*operations.BeyondcorpProjectsLocationsOperationsListResponse, error) {
+func (s *projects) BeyondcorpProjectsLocationsOperationsList(ctx context.Context, request operations.BeyondcorpProjectsLocationsOperationsListRequest, security operations.BeyondcorpProjectsLocationsOperationsListSecurity) (*operations.BeyondcorpProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

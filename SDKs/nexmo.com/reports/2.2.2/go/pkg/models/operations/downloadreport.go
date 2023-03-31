@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DownloadReportSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DownloadReportPathParams struct {
-	// UUID of the file.
-	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DownloadReportRequest struct {
-	PathParams DownloadReportPathParams
-	Security   DownloadReportSecurity
+	// UUID of the file.
+	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
 }
 
 // DownloadReport404ApplicationJSON - Not found

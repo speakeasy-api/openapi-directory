@@ -4,33 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PriceOffersSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PriceOffersPathParams struct {
+type PriceOffersRequest struct {
+	// Departure date in local time (YYYY-MM-DD)
+	DepartureDate string `queryParam:"style=form,explode=true,name=departureDate"`
 	// Destination city. 3-letter IATA city code
 	Destination string `pathParam:"style=simple,explode=false,name=destination"`
 	// Departure city. 3-letter IATA city code
 	Origin string `pathParam:"style=simple,explode=false,name=origin"`
-}
-
-type PriceOffersQueryParams struct {
-	// Departure date in local time (YYYY-MM-DD)
-	DepartureDate string `queryParam:"style=form,explode=true,name=departureDate"`
 	// Return date in local time (YYYY-MM-DD)
 	ReturnDate string `queryParam:"style=form,explode=true,name=returnDate"`
 	// Optional parameter.
 	Service *string `queryParam:"style=form,explode=true,name=service"`
-}
-
-type PriceOffersRequest struct {
-	PathParams  PriceOffersPathParams
-	QueryParams PriceOffersQueryParams
-	Security    PriceOffersSecurity
 }
 
 type PriceOffersResponse struct {

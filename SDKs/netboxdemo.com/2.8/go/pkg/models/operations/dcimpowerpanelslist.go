@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPanelsListQueryParams struct {
+type DcimPowerPanelsListRequest struct {
 	ID    *string `queryParam:"style=form,explode=true,name=id"`
 	IDGt  *string `queryParam:"style=form,explode=true,name=id__gt"`
 	IDGte *string `queryParam:"style=form,explode=true,name=id__gte"`
@@ -39,10 +39,6 @@ type DcimPowerPanelsListQueryParams struct {
 	SiteN        *string `queryParam:"style=form,explode=true,name=site__n"`
 	SiteID       *string `queryParam:"style=form,explode=true,name=site_id"`
 	SiteIDN      *string `queryParam:"style=form,explode=true,name=site_id__n"`
-}
-
-type DcimPowerPanelsListRequest struct {
-	QueryParams DcimPowerPanelsListQueryParams
 }
 
 type DcimPowerPanelsList200ApplicationJSON struct {

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutVolumesIDPathParams struct {
-	// ID of the Volume to update
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PutVolumesIDUpdateVolumeRequestLabels - User-defined labels (key-value pairs)
 type PutVolumesIDUpdateVolumeRequestLabels struct {
 	Labelkey *string `json:"labelkey,omitempty"`
@@ -26,8 +21,9 @@ type PutVolumesIDUpdateVolumeRequest struct {
 }
 
 type PutVolumesIDRequest struct {
-	PathParams PutVolumesIDPathParams
-	Request    *PutVolumesIDUpdateVolumeRequest `request:"mediaType=application/json"`
+	RequestBody *PutVolumesIDUpdateVolumeRequest `request:"mediaType=application/json"`
+	// ID of the Volume to update
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutVolumesID200ApplicationJSONVolumeLocation - Location of the Volume. Volume can only be attached to Servers in the same Location.

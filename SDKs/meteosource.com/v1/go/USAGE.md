@@ -14,20 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.FindPlacesFindPlacesGetRequest{
-        Security: operations.FindPlacesFindPlacesGetSecurity{
-            APIKeyHeader: shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.FindPlacesFindPlacesGetQueryParams{
-            Key: "corrupti",
-            Language: "fr",
-            Text: "distinctio",
-        },
+        Key: "corrupti",
+        Language: "fr",
+        Text: "distinctio",
     }
 
     ctx := context.Background()
-    res, err := s.LocationEndpoints.FindPlacesFindPlacesGet(ctx, req)
+    res, err := s.LocationEndpoints.FindPlacesFindPlacesGet(ctx, req, operations.FindPlacesFindPlacesGetSecurity{
+        APIKeyHeader: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

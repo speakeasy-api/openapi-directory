@@ -8,21 +8,16 @@ import (
 )
 
 type GETMostemailedSectionTimePeriodJSONSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
-type GETMostemailedSectionTimePeriodJSONPathParams struct {
+type GETMostemailedSectionTimePeriodJSONRequest struct {
 	// Limits the results by one or more sections. You can use
 	// `all-sections` or one or more section names seperated by semicolons. See `viewed/sections.json` call to get a list of sections.
 	//
 	Section shared.SectionEnum `pathParam:"style=simple,explode=false,name=section"`
 	// Number of days `1 | 7 | 30 ` corresponds to a day, a week, or a month of content.
 	TimePeriod shared.TimePeriodEnum `pathParam:"style=simple,explode=false,name=time-period"`
-}
-
-type GETMostemailedSectionTimePeriodJSONRequest struct {
-	PathParams GETMostemailedSectionTimePeriodJSONPathParams
-	Security   GETMostemailedSectionTimePeriodJSONSecurity
 }
 
 // GETMostemailedSectionTimePeriodJSON200ApplicationXML - An array of Articles

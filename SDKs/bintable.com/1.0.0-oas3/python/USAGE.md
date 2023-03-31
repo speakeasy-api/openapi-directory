@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BalanceLookupRequest(
-    query_params=operations.BalanceLookupQueryParams(
-        api_key="asperiores",
-    ),
+    api_key="corrupti",
 )
     
 res = s.balance.balance_lookup(req)

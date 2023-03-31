@@ -8,8 +8,8 @@ import (
 )
 
 type CreateMessengerAccountSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateMessengerAccountRequestBody struct {
@@ -25,11 +25,6 @@ type CreateMessengerAccountRequestBody struct {
 	ExternalID string `json:"external_id"`
 	// Custom account name
 	Name *string `json:"name,omitempty"`
-}
-
-type CreateMessengerAccountRequest struct {
-	Request  CreateMessengerAccountRequestBody `request:"mediaType=application/json"`
-	Security CreateMessengerAccountSecurity
 }
 
 type CreateMessengerAccount400ApplicationJSONInvalidParams struct {

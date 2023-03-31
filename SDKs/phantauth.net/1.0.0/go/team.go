@@ -37,7 +37,7 @@ func newTeam(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // In lack of a team name, all calls generate a different team object to the randomly generated team name.
 func (s *team) GetTeamTeamname(ctx context.Context, request operations.GetTeamTeamnameRequest) (*operations.GetTeamTeamnameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{teamname}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{teamname}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

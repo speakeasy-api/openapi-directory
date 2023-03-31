@@ -3,31 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetIceServerConfigRequest(
-    headers=operations.GetIceServerConfigHeaders(
-        x_amz_algorithm="nemo",
-        x_amz_content_sha256="corporis",
-        x_amz_credential="cupiditate",
-        x_amz_date="soluta",
-        x_amz_security_token="voluptatibus",
-        x_amz_signature="maiores",
-        x_amz_signed_headers="corrupti",
-    ),
-    request=operations.GetIceServerConfigRequestBody(
-        channel_arn="expedita",
-        client_id="nisi",
+    request_body=operations.GetIceServerConfigRequestBody(
+        channel_arn="corrupti",
+        client_id="provident",
         service="TURN",
-        username="magni",
+        username="Micheal_Sporer",
     ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
 )
     
 res = s.get_ice_server_config(req)

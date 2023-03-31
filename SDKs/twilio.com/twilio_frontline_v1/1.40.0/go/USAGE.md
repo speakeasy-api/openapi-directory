@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.FetchUserRequest{
-        Security: operations.FetchUserSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.FetchUserPathParams{
-            Sid: "corrupti",
-        },
+        Sid: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.FetchUser(ctx, req)
+    res, err := s.FetchUser(ctx, req, operations.FetchUserSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

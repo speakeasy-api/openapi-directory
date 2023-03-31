@@ -4,24 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetFlightOffersRequest(
-    query_params=operations.GetFlightOffersQueryParams(
-        adults=4814861198247358488,
-        children=4975249678507640420,
-        currency_code="expedita",
-        departure_date="1989-07-02",
-        destination_location_code="qui",
-        excluded_airline_codes="modi",
-        included_airline_codes="nihil",
-        infants=1011676084465510524,
-        max=8764227983217623240,
-        max_price=4745905187492708501,
-        non_stop=False,
-        origin_location_code="sit",
-        return_date="2001-11-04",
-        travel_class="BUSINESS",
-    ),
+    adults=548814,
+    children=592845,
+    currency_code="distinctio",
+    departure_date="2021-03-11",
+    destination_location_code="nulla",
+    excluded_airline_codes="corrupti",
+    included_airline_codes="illum",
+    infants=423655,
+    max=623564,
+    max_price=645894,
+    non_stop=False,
+    origin_location_code="suscipit",
+    return_date="2022-09-14",
+    travel_class="FIRST",
 )
     
 res = s.shopping.get_flight_offers(req)

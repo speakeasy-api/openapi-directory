@@ -33,7 +33,7 @@ func newMme(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // PostDiseaseMme - Match a patient to diseases based on their phenotypes
-func (s *mme) PostDiseaseMme(ctx context.Context, request operations.PostDiseaseMmeRequest) (*operations.PostDiseaseMmeResponse, error) {
+func (s *mme) PostDiseaseMme(ctx context.Context, request map[string]interface{}) (*operations.PostDiseaseMmeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mme/disease"
 
@@ -78,7 +78,7 @@ func (s *mme) PostDiseaseMme(ctx context.Context, request operations.PostDisease
 }
 
 // PostFlyMme - Match a patient to fruit fly genes based on similar phenotypes
-func (s *mme) PostFlyMme(ctx context.Context, request operations.PostFlyMmeRequest) (*operations.PostFlyMmeResponse, error) {
+func (s *mme) PostFlyMme(ctx context.Context, request map[string]interface{}) (*operations.PostFlyMmeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mme/fly"
 
@@ -123,7 +123,7 @@ func (s *mme) PostFlyMme(ctx context.Context, request operations.PostFlyMmeReque
 }
 
 // PostMouseMme - Match a patient to mouse genes based on similar phenotypes
-func (s *mme) PostMouseMme(ctx context.Context, request operations.PostMouseMmeRequest) (*operations.PostMouseMmeResponse, error) {
+func (s *mme) PostMouseMme(ctx context.Context, request map[string]interface{}) (*operations.PostMouseMmeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mme/mouse"
 
@@ -168,7 +168,7 @@ func (s *mme) PostMouseMme(ctx context.Context, request operations.PostMouseMmeR
 }
 
 // PostNematodeMme - Match a patient to nematode genes based on similar phenotypes
-func (s *mme) PostNematodeMme(ctx context.Context, request operations.PostNematodeMmeRequest) (*operations.PostNematodeMmeResponse, error) {
+func (s *mme) PostNematodeMme(ctx context.Context, request map[string]interface{}) (*operations.PostNematodeMmeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mme/nematode"
 
@@ -213,7 +213,7 @@ func (s *mme) PostNematodeMme(ctx context.Context, request operations.PostNemato
 }
 
 // PostZebrafishMme - Match a patient to zebrafish genes based on similar phenotypes
-func (s *mme) PostZebrafishMme(ctx context.Context, request operations.PostZebrafishMmeRequest) (*operations.PostZebrafishMmeResponse, error) {
+func (s *mme) PostZebrafishMme(ctx context.Context, request map[string]interface{}) (*operations.PostZebrafishMmeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mme/zebrafish"
 

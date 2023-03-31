@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidTrafficShapingRulesPathParams struct {
+type GetNetworkWirelessSsidTrafficShapingRulesRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidTrafficShapingRulesRequest struct {
-	PathParams GetNetworkWirelessSsidTrafficShapingRulesPathParams
 }
 
 type GetNetworkWirelessSsidTrafficShapingRulesResponse struct {

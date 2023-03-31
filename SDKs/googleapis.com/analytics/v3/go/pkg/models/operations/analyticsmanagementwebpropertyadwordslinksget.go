@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementWebPropertyAdWordsLinksGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementWebPropertyAdWordsLinksGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementWebPropertyAdWordsLinksGetSecurity struct {
@@ -22,16 +22,9 @@ type AnalyticsManagementWebPropertyAdWordsLinksGetSecurity struct {
 	Option2 *AnalyticsManagementWebPropertyAdWordsLinksGetSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementWebPropertyAdWordsLinksGetPathParams struct {
+type AnalyticsManagementWebPropertyAdWordsLinksGetRequest struct {
 	// ID of the account which the given web property belongs to.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property-Google Ads link ID.
-	WebPropertyAdWordsLinkID string `pathParam:"style=simple,explode=false,name=webPropertyAdWordsLinkId"`
-	// Web property ID to retrieve the Google Ads link for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementWebPropertyAdWordsLinksGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,12 +39,10 @@ type AnalyticsManagementWebPropertyAdWordsLinksGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementWebPropertyAdWordsLinksGetRequest struct {
-	PathParams  AnalyticsManagementWebPropertyAdWordsLinksGetPathParams
-	QueryParams AnalyticsManagementWebPropertyAdWordsLinksGetQueryParams
-	Security    AnalyticsManagementWebPropertyAdWordsLinksGetSecurity
+	// Web property-Google Ads link ID.
+	WebPropertyAdWordsLinkID string `pathParam:"style=simple,explode=false,name=webPropertyAdWordsLinkId"`
+	// Web property ID to retrieve the Google Ads link for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementWebPropertyAdWordsLinksGetResponse struct {

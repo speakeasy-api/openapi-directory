@@ -39,14 +39,14 @@ func newBillRun(defaultClient, securityClient HTTPClient, serverURL, language, s
 // When deleting a bill run, the logic is the same as when using the UI to delete a bill run. The only required parameter is `BillRunId`. The Status for the bill run must be `Canceled` in order to delete a bill run.
 func (s *billRun) ObjectDELETEBillRun(ctx context.Context, request operations.ObjectDELETEBillRunRequest) (*operations.ObjectDELETEBillRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/bill-run/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/bill-run/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -102,16 +102,16 @@ func (s *billRun) ObjectDELETEBillRun(ctx context.Context, request operations.Ob
 // Business operations depending on the completion of the bill run will not be available while the bill run query returns `PostInProgress`. Upon completion of the bill run, a query will return `Posted`.
 func (s *billRun) ObjectGETBillRun(ctx context.Context, request operations.ObjectGETBillRunRequest) (*operations.ObjectGETBillRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/bill-run/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/bill-run/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,7 +185,7 @@ func (s *billRun) ObjectPOSTBillRun(ctx context.Context, request operations.Obje
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/bill-run"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateBillRun", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,9 +200,9 @@ func (s *billRun) ObjectPOSTBillRun(ctx context.Context, request operations.Obje
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -293,9 +293,9 @@ func (s *billRun) ObjectPOSTBillRun(ctx context.Context, request operations.Obje
 // The Cancel operation may not be successful. Its success depends on its current business validation. Only a bill run that has no posted invoices can be canceled. If any posted invoices belong to the bill run then an invalid value exception will be thrown with the message, "The Bill Run cannot be Cancelled, There are Posted invoices."
 func (s *billRun) ObjectPUTBillRun(ctx context.Context, request operations.ObjectPUTBillRunRequest) (*operations.ObjectPUTBillRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/bill-run/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/bill-run/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyBillRun", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,9 +310,9 @@ func (s *billRun) ObjectPUTBillRun(ctx context.Context, request operations.Objec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -394,9 +394,9 @@ func (s *billRun) ObjectPUTBillRun(ctx context.Context, request operations.Objec
 //     See [Create and Edit Email Templates](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/Notifications/Create_Email_Templates) for more information.
 func (s *billRun) POSTEmailBillingDocumentsfromBillRun(ctx context.Context, request operations.POSTEmailBillingDocumentsfromBillRunRequest) (*operations.POSTEmailBillingDocumentsfromBillRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bill-runs/{billRunId}/emails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/bill-runs/{billRunId}/emails", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTEmailBillingDocfromBillRunType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -411,7 +411,7 @@ func (s *billRun) POSTEmailBillingDocumentsfromBillRun(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

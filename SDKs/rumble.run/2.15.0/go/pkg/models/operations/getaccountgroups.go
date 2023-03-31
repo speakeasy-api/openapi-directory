@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetAccountGroupsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountGroupsRequest struct {
-	Security GetAccountGroupsSecurity
-}
 
 type GetAccountGroupsResponse struct {
 	Body        []byte

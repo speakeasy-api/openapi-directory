@@ -10,7 +10,7 @@ import (
 )
 
 type KkidShareGetSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 // KkidShareGetLinkEnum - Link to share
@@ -157,7 +157,7 @@ func (e *KkidShareGetScope4Enum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type KkidShareGetQueryParams struct {
+type KkidShareGetRequest struct {
 	// Link to share
 	Link KkidShareGetLinkEnum `queryParam:"style=form,explode=true,name=link"`
 	// User ID that the link should be authenticated to
@@ -170,11 +170,6 @@ type KkidShareGetQueryParams struct {
 	Scope3 *KkidShareGetScope3Enum `queryParam:"style=form,explode=true,name=scope3"`
 	// Authentication scope for link
 	Scope4 *KkidShareGetScope4Enum `queryParam:"style=form,explode=true,name=scope4"`
-}
-
-type KkidShareGetRequest struct {
-	QueryParams KkidShareGetQueryParams
-	Security    KkidShareGetSecurity
 }
 
 type KkidShareGetResponse struct {

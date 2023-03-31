@@ -51,9 +51,9 @@ func newInvoice(defaultClient, securityClient HTTPClient, serverURL, language, s
 // > Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.
 func (s *invoice) InvoiceNotification(ctx context.Context, request operations.InvoiceNotificationRequest) (*operations.InvoiceNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/invoice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/invoice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvoiceNotificationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,7 +68,7 @@ func (s *invoice) InvoiceNotification(ctx context.Context, request operations.In
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -112,9 +112,9 @@ func (s *invoice) InvoiceNotification(ctx context.Context, request operations.In
 // > The `Notify invoice` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).
 func (s *invoice) UpdatepartialinvoiceSendTrackingNumber(ctx context.Context, request operations.UpdatepartialinvoiceSendTrackingNumberRequest) (*operations.UpdatepartialinvoiceSendTrackingNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/invoice/{invoiceNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/invoice/{invoiceNumber}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatepartialinvoiceSendTrackingNumberRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -129,7 +129,7 @@ func (s *invoice) UpdatepartialinvoiceSendTrackingNumber(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

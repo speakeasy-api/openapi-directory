@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ActionsDownloadWorkflowRunAttemptLogsPathParams struct {
+type ActionsDownloadWorkflowRunAttemptLogsRequest struct {
 	// The attempt number of the workflow run.
 	AttemptNumber int64 `pathParam:"style=simple,explode=false,name=attempt_number"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -15,10 +15,6 @@ type ActionsDownloadWorkflowRunAttemptLogsPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the workflow run.
 	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsDownloadWorkflowRunAttemptLogsRequest struct {
-	PathParams ActionsDownloadWorkflowRunAttemptLogsPathParams
 }
 
 type ActionsDownloadWorkflowRunAttemptLogsResponse struct {

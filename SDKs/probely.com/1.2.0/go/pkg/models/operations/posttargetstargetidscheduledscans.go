@@ -8,11 +8,6 @@ import (
 	"time"
 )
 
-type PostTargetsTargetIDScheduledscansPathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
 type PostTargetsTargetIDScheduledscansRequestBody struct {
 	// Date time of next scan
 	DateTime time.Time `json:"date_time"`
@@ -27,8 +22,9 @@ type PostTargetsTargetIDScheduledscansRequestBody struct {
 }
 
 type PostTargetsTargetIDScheduledscansRequest struct {
-	PathParams PostTargetsTargetIDScheduledscansPathParams
-	Request    PostTargetsTargetIDScheduledscansRequestBody `request:"mediaType=application/json"`
+	RequestBody PostTargetsTargetIDScheduledscansRequestBody `request:"mediaType=application/json"`
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // PostTargetsTargetIDScheduledscans404ApplicationJSON - Not found

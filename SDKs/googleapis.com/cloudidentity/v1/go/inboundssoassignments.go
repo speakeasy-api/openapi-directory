@@ -33,11 +33,11 @@ func newInboundSsoAssignments(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // CloudidentityInboundSsoAssignmentsCreate - Creates an InboundSsoAssignment for users and devices in a `Customer` under a given `Group` or `OrgUnit`.
-func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsCreate(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsCreateRequest) (*operations.CloudidentityInboundSsoAssignmentsCreateResponse, error) {
+func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsCreate(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsCreateRequest, security operations.CloudidentityInboundSsoAssignmentsCreateSecurity) (*operations.CloudidentityInboundSsoAssignmentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/inboundSsoAssignments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InboundSsoAssignmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsCreate(ctx con
 }
 
 // CloudidentityInboundSsoAssignmentsDelete - Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has `sso_mode` == `SSO_OFF`.
-func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsDelete(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsDeleteRequest) (*operations.CloudidentityInboundSsoAssignmentsDeleteResponse, error) {
+func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsDelete(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsDeleteRequest, security operations.CloudidentityInboundSsoAssignmentsDeleteSecurity) (*operations.CloudidentityInboundSsoAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsDelete(ctx con
 }
 
 // CloudidentityInboundSsoAssignmentsGet - Gets an InboundSsoAssignment.
-func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsGet(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsGetRequest) (*operations.CloudidentityInboundSsoAssignmentsGetResponse, error) {
+func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsGet(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsGetRequest, security operations.CloudidentityInboundSsoAssignmentsGetSecurity) (*operations.CloudidentityInboundSsoAssignmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsGet(ctx contex
 }
 
 // CloudidentityInboundSsoAssignmentsList - Lists the InboundSsoAssignments for a `Customer`.
-func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsList(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsListRequest) (*operations.CloudidentityInboundSsoAssignmentsListResponse, error) {
+func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsList(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsListRequest, security operations.CloudidentityInboundSsoAssignmentsListSecurity) (*operations.CloudidentityInboundSsoAssignmentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/inboundSsoAssignments"
 
@@ -193,11 +193,11 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsList(ctx conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsList(ctx conte
 }
 
 // CloudidentityInboundSsoAssignmentsPatch - Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field and the `update_mask` is relative to that. For example: a PATCH to `/v1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-targeted assignments down in priority.
-func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsPatch(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsPatchRequest) (*operations.CloudidentityInboundSsoAssignmentsPatchResponse, error) {
+func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsPatch(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsPatchRequest, security operations.CloudidentityInboundSsoAssignmentsPatchSecurity) (*operations.CloudidentityInboundSsoAssignmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InboundSsoAssignmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsPatch(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

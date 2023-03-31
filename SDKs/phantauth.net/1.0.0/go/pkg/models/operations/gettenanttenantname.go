@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTenantTenantnamePathParams struct {
+type GetTenantTenantnameRequest struct {
 	// The tenant ID integrated in the `sub` property.
 	Tenantname string `pathParam:"style=simple,explode=false,name=tenantname"`
-}
-
-type GetTenantTenantnameRequest struct {
-	PathParams GetTenantTenantnamePathParams
 }
 
 // GetTenantTenantname200ApplicationJSON - OK

@@ -4,39 +4,25 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ONDRouteSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ONDRoutePathParams struct {
-	// Enter either the destination city or country code (e.g 'MAD' or 'ES'). Enter '*' for all
-	Destination string `pathParam:"style=simple,explode=false,name=destination"`
-	// Enter either the orgin city or orgin country code (e.g 'FRA' or 'DE'). Enter '*' for all
-	Origin string `pathParam:"style=simple,explode=false,name=origin"`
-}
-
-type ONDRouteQueryParams struct {
+type ONDRouteRequest struct {
+	// Mandatory http header:  application/xml or application/json
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Carrier for which the OND will be retrieved (e.g. 'LH')
 	Catalogues *string `queryParam:"style=form,explode=true,name=catalogues"`
+	// Enter either the destination city or country code (e.g 'MAD' or 'ES'). Enter '*' for all
+	Destination string `pathParam:"style=simple,explode=false,name=destination"`
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ONDRouteHeaders struct {
-	// Mandatory http header:  application/xml or application/json
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type ONDRouteRequest struct {
-	PathParams  ONDRoutePathParams
-	QueryParams ONDRouteQueryParams
-	Headers     ONDRouteHeaders
-	Security    ONDRouteSecurity
+	// Enter either the orgin city or orgin country code (e.g 'FRA' or 'DE'). Enter '*' for all
+	Origin string `pathParam:"style=simple,explode=false,name=origin"`
 }
 
 type ONDRouteResponse struct {

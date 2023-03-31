@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodesOfConductGetConductCodePathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
 type CodesOfConductGetConductCodeRequest struct {
-	PathParams CodesOfConductGetConductCodePathParams
+	Key string `pathParam:"style=simple,explode=false,name=key"`
 }
 
 type CodesOfConductGetConductCodeResponse struct {

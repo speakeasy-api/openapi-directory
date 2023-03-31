@@ -112,9 +112,9 @@ func newDocuments(defaultClient, securityClient HTTPClient, serverURL, language,
 // ```
 func (s *documents) Createnewdocument(ctx context.Context, request operations.CreatenewdocumentRequest) (*operations.CreatenewdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -129,9 +129,9 @@ func (s *documents) Createnewdocument(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -214,9 +214,9 @@ func (s *documents) Createnewdocument(ctx context.Context, request operations.Cr
 // ```
 func (s *documents) Createorupdatepartialdocument(ctx context.Context, request operations.CreateorupdatepartialdocumentRequest) (*operations.CreateorupdatepartialdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -231,9 +231,9 @@ func (s *documents) Createorupdatepartialdocument(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -275,14 +275,14 @@ func (s *documents) Createorupdatepartialdocument(ctx context.Context, request o
 // It allows to delete a document.
 func (s *documents) Deletedocument(ctx context.Context, request operations.DeletedocumentRequest) (*operations.DeletedocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -315,14 +315,14 @@ func (s *documents) Deletedocument(ctx context.Context, request operations.Delet
 // > Assign the `_fields` parameter in the query string to retrieve the desired fields. If you want to return all the fields use `_fields=_all`.
 func (s *documents) Getdocument(ctx context.Context, request operations.GetdocumentRequest) (*operations.GetdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -422,9 +422,9 @@ func (s *documents) Getdocument(ctx context.Context, request operations.Getdocum
 // ```
 func (s *documents) Updateentiredocument(ctx context.Context, request operations.UpdateentiredocumentRequest) (*operations.UpdateentiredocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,9 +439,9 @@ func (s *documents) Updateentiredocument(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -524,9 +524,9 @@ func (s *documents) Updateentiredocument(ctx context.Context, request operations
 // ```
 func (s *documents) Updatepartialdocument(ctx context.Context, request operations.UpdatepartialdocumentRequest) (*operations.UpdatepartialdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -541,9 +541,9 @@ func (s *documents) Updatepartialdocument(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -38,7 +38,7 @@ func newInventory(defaultClient, securityClient HTTPClient, serverURL, language,
 // On success: returns the current calculated counts for all objects
 // referenced in the request.
 // On failure: returns a list of related errors.
-func (s *inventory) BatchChangeInventory(ctx context.Context, request operations.BatchChangeInventoryRequest) (*operations.BatchChangeInventoryResponse, error) {
+func (s *inventory) BatchChangeInventory(ctx context.Context, request shared.BatchChangeInventoryRequest, security operations.BatchChangeInventorySecurity) (*operations.BatchChangeInventoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/inventory/changes/batch-create"
 
@@ -57,7 +57,7 @@ func (s *inventory) BatchChangeInventory(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *inventory) BatchChangeInventory(ctx context.Context, request operations
 //
 // BatchRetrieveInventoryChanges is a catch-all query endpoint for queries
 // that cannot be handled by other, simpler endpoints.
-func (s *inventory) BatchRetrieveInventoryChanges(ctx context.Context, request operations.BatchRetrieveInventoryChangesRequest) (*operations.BatchRetrieveInventoryChangesResponse, error) {
+func (s *inventory) BatchRetrieveInventoryChanges(ctx context.Context, request shared.BatchRetrieveInventoryChangesRequest, security operations.BatchRetrieveInventoryChangesSecurity) (*operations.BatchRetrieveInventoryChangesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/inventory/changes/batch-retrieve"
 
@@ -119,7 +119,7 @@ func (s *inventory) BatchRetrieveInventoryChanges(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,7 +165,7 @@ func (s *inventory) BatchRetrieveInventoryChanges(ctx context.Context, request o
 // time (based on the server timestamp for the most recent change) are
 // returned. This allows clients to perform a "sync" operation, for example
 // in response to receiving a Webhook notification.
-func (s *inventory) BatchRetrieveInventoryCounts(ctx context.Context, request operations.BatchRetrieveInventoryCountsRequest) (*operations.BatchRetrieveInventoryCountsResponse, error) {
+func (s *inventory) BatchRetrieveInventoryCounts(ctx context.Context, request shared.BatchRetrieveInventoryCountsRequest, security operations.BatchRetrieveInventoryCountsSecurity) (*operations.BatchRetrieveInventoryCountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/inventory/counts/batch-retrieve"
 
@@ -184,7 +184,7 @@ func (s *inventory) BatchRetrieveInventoryCounts(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *inventory) BatchRetrieveInventoryCounts(ctx context.Context, request op
 // DeprecatedBatchChangeInventory - DeprecatedBatchChangeInventory
 // Deprecated version of [BatchChangeInventory](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/batch-change-inventory) after the endpoint URL
 // is updated to conform to the standard convention.
-func (s *inventory) DeprecatedBatchChangeInventory(ctx context.Context, request operations.DeprecatedBatchChangeInventoryRequest) (*operations.DeprecatedBatchChangeInventoryResponse, error) {
+func (s *inventory) DeprecatedBatchChangeInventory(ctx context.Context, request shared.BatchChangeInventoryRequest, security operations.DeprecatedBatchChangeInventorySecurity) (*operations.DeprecatedBatchChangeInventoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/inventory/batch-change"
 
@@ -240,7 +240,7 @@ func (s *inventory) DeprecatedBatchChangeInventory(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,7 +277,7 @@ func (s *inventory) DeprecatedBatchChangeInventory(ctx context.Context, request 
 // DeprecatedBatchRetrieveInventoryChanges - DeprecatedBatchRetrieveInventoryChanges
 // Deprecated version of [BatchRetrieveInventoryChanges](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/batch-retrieve-inventory-changes) after the endpoint URL
 // is updated to conform to the standard convention.
-func (s *inventory) DeprecatedBatchRetrieveInventoryChanges(ctx context.Context, request operations.DeprecatedBatchRetrieveInventoryChangesRequest) (*operations.DeprecatedBatchRetrieveInventoryChangesResponse, error) {
+func (s *inventory) DeprecatedBatchRetrieveInventoryChanges(ctx context.Context, request shared.BatchRetrieveInventoryChangesRequest, security operations.DeprecatedBatchRetrieveInventoryChangesSecurity) (*operations.DeprecatedBatchRetrieveInventoryChangesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/inventory/batch-retrieve-changes"
 
@@ -296,7 +296,7 @@ func (s *inventory) DeprecatedBatchRetrieveInventoryChanges(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -333,7 +333,7 @@ func (s *inventory) DeprecatedBatchRetrieveInventoryChanges(ctx context.Context,
 // DeprecatedBatchRetrieveInventoryCounts - DeprecatedBatchRetrieveInventoryCounts
 // Deprecated version of [BatchRetrieveInventoryCounts](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/batch-retrieve-inventory-counts) after the endpoint URL
 // is updated to conform to the standard convention.
-func (s *inventory) DeprecatedBatchRetrieveInventoryCounts(ctx context.Context, request operations.DeprecatedBatchRetrieveInventoryCountsRequest) (*operations.DeprecatedBatchRetrieveInventoryCountsResponse, error) {
+func (s *inventory) DeprecatedBatchRetrieveInventoryCounts(ctx context.Context, request shared.BatchRetrieveInventoryCountsRequest, security operations.DeprecatedBatchRetrieveInventoryCountsSecurity) (*operations.DeprecatedBatchRetrieveInventoryCountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/inventory/batch-retrieve-counts"
 
@@ -352,7 +352,7 @@ func (s *inventory) DeprecatedBatchRetrieveInventoryCounts(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,16 +389,16 @@ func (s *inventory) DeprecatedBatchRetrieveInventoryCounts(ctx context.Context, 
 // DeprecatedRetrieveInventoryAdjustment - DeprecatedRetrieveInventoryAdjustment
 // Deprecated version of [RetrieveInventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/retrieve-inventory-adjustment) after the endpoint URL
 // is updated to conform to the standard convention.
-func (s *inventory) DeprecatedRetrieveInventoryAdjustment(ctx context.Context, request operations.DeprecatedRetrieveInventoryAdjustmentRequest) (*operations.DeprecatedRetrieveInventoryAdjustmentResponse, error) {
+func (s *inventory) DeprecatedRetrieveInventoryAdjustment(ctx context.Context, request operations.DeprecatedRetrieveInventoryAdjustmentRequest, security operations.DeprecatedRetrieveInventoryAdjustmentSecurity) (*operations.DeprecatedRetrieveInventoryAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustment/{adjustment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustment/{adjustment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -435,16 +435,16 @@ func (s *inventory) DeprecatedRetrieveInventoryAdjustment(ctx context.Context, r
 // DeprecatedRetrieveInventoryPhysicalCount - DeprecatedRetrieveInventoryPhysicalCount
 // Deprecated version of [RetrieveInventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/retrieve-inventory-physical-count) after the endpoint URL
 // is updated to conform to the standard convention.
-func (s *inventory) DeprecatedRetrieveInventoryPhysicalCount(ctx context.Context, request operations.DeprecatedRetrieveInventoryPhysicalCountRequest) (*operations.DeprecatedRetrieveInventoryPhysicalCountResponse, error) {
+func (s *inventory) DeprecatedRetrieveInventoryPhysicalCount(ctx context.Context, request operations.DeprecatedRetrieveInventoryPhysicalCountRequest, security operations.DeprecatedRetrieveInventoryPhysicalCountSecurity) (*operations.DeprecatedRetrieveInventoryPhysicalCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-count/{physical_count_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-count/{physical_count_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -481,16 +481,16 @@ func (s *inventory) DeprecatedRetrieveInventoryPhysicalCount(ctx context.Context
 // RetrieveInventoryAdjustment - RetrieveInventoryAdjustment
 // Returns the [InventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryAdjustment) object
 // with the provided `adjustment_id`.
-func (s *inventory) RetrieveInventoryAdjustment(ctx context.Context, request operations.RetrieveInventoryAdjustmentRequest) (*operations.RetrieveInventoryAdjustmentResponse, error) {
+func (s *inventory) RetrieveInventoryAdjustment(ctx context.Context, request operations.RetrieveInventoryAdjustmentRequest, security operations.RetrieveInventoryAdjustmentSecurity) (*operations.RetrieveInventoryAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustments/{adjustment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustments/{adjustment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -538,20 +538,20 @@ func (s *inventory) RetrieveInventoryAdjustment(ctx context.Context, request ope
 // There are no limits on how far back the caller can page. This endpoint can be
 // used to display recent changes for a specific item. For more
 // sophisticated queries, use a batch endpoint.
-func (s *inventory) RetrieveInventoryChanges(ctx context.Context, request operations.RetrieveInventoryChangesRequest) (*operations.RetrieveInventoryChangesResponse, error) {
+func (s *inventory) RetrieveInventoryChanges(ctx context.Context, request operations.RetrieveInventoryChangesRequest, security operations.RetrieveInventoryChangesSecurity) (*operations.RetrieveInventoryChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}/changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}/changes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -590,20 +590,20 @@ func (s *inventory) RetrieveInventoryChanges(ctx context.Context, request operat
 // [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject) at a given set of
 // [Location](https://developer.squareup.com/reference/square_2021-08-18/objects/Location)s. Responses are paginated and unsorted.
 // For more sophisticated queries, use a batch endpoint.
-func (s *inventory) RetrieveInventoryCount(ctx context.Context, request operations.RetrieveInventoryCountRequest) (*operations.RetrieveInventoryCountResponse, error) {
+func (s *inventory) RetrieveInventoryCount(ctx context.Context, request operations.RetrieveInventoryCountRequest, security operations.RetrieveInventoryCountSecurity) (*operations.RetrieveInventoryCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -640,16 +640,16 @@ func (s *inventory) RetrieveInventoryCount(ctx context.Context, request operatio
 // RetrieveInventoryPhysicalCount - RetrieveInventoryPhysicalCount
 // Returns the [InventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryPhysicalCount)
 // object with the provided `physical_count_id`.
-func (s *inventory) RetrieveInventoryPhysicalCount(ctx context.Context, request operations.RetrieveInventoryPhysicalCountRequest) (*operations.RetrieveInventoryPhysicalCountResponse, error) {
+func (s *inventory) RetrieveInventoryPhysicalCount(ctx context.Context, request operations.RetrieveInventoryPhysicalCountRequest, security operations.RetrieveInventoryPhysicalCountSecurity) (*operations.RetrieveInventoryPhysicalCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-counts/{physical_count_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-counts/{physical_count_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -686,16 +686,16 @@ func (s *inventory) RetrieveInventoryPhysicalCount(ctx context.Context, request 
 // RetrieveInventoryTransfer - RetrieveInventoryTransfer
 // Returns the [InventoryTransfer](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryTransfer) object
 // with the provided `transfer_id`.
-func (s *inventory) RetrieveInventoryTransfer(ctx context.Context, request operations.RetrieveInventoryTransferRequest) (*operations.RetrieveInventoryTransferResponse, error) {
+func (s *inventory) RetrieveInventoryTransfer(ctx context.Context, request operations.RetrieveInventoryTransferRequest, security operations.RetrieveInventoryTransferSecurity) (*operations.RetrieveInventoryTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/transfers/{transfer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/transfers/{transfer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -10,8 +10,8 @@ import (
 )
 
 type BooksVolumesRecommendedRateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksVolumesRecommendedRateRatingEnum - Rating to be given to the volume.
@@ -41,7 +41,7 @@ func (e *BooksVolumesRecommendedRateRatingEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type BooksVolumesRecommendedRateQueryParams struct {
+type BooksVolumesRecommendedRateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -72,11 +72,6 @@ type BooksVolumesRecommendedRateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// ID of the source volume.
 	VolumeID string `queryParam:"style=form,explode=true,name=volumeId"`
-}
-
-type BooksVolumesRecommendedRateRequest struct {
-	QueryParams BooksVolumesRecommendedRateQueryParams
-	Security    BooksVolumesRecommendedRateSecurity
 }
 
 type BooksVolumesRecommendedRateResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAs2PartnersIDPathParams struct {
+type GetAs2PartnersIDRequest struct {
 	// As2 Partner ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAs2PartnersIDRequest struct {
-	PathParams GetAs2PartnersIDPathParams
 }
 
 type GetAs2PartnersIDResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCoveragePlanPathParams struct {
+type GetCoveragePlanRequest struct {
 	// The unique identifier of the coverage plan in Noyo
 	PlanID string `pathParam:"style=simple,explode=false,name=plan_id"`
-}
-
-type GetCoveragePlanRequest struct {
-	PathParams GetCoveragePlanPathParams
 }
 
 type GetCoveragePlanResponse struct {

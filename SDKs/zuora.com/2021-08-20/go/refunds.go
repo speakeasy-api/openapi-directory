@@ -40,14 +40,14 @@ func newRefunds(defaultClient, securityClient HTTPClient, serverURL, language, s
 // If you have the Invoice Settlement feature enabled, refunds applied to credit balance cannot be deleted.
 func (s *refunds) DELETERefund(ctx context.Context, request operations.DELETERefundRequest) (*operations.DELETERefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *refunds) DELETERefund(ctx context.Context, request operations.DELETERef
 // Retrieves the information about a specific refund.
 func (s *refunds) GETRefund(ctx context.Context, request operations.GETRefundRequest) (*operations.GETRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -142,14 +142,14 @@ func (s *refunds) GETRefund(ctx context.Context, request operations.GETRefundReq
 // Retrieves the information about a specific refund part item. A refund part item is a single line item in a refund part. A refund part can consist of several different types of items.
 func (s *refunds) GETRefundItemPart(ctx context.Context, request operations.GETRefundItemPartRequest) (*operations.GETRefundItemPartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts/{refundpartid}/itemparts/{itempartid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts/{refundpartid}/itemparts/{itempartid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -193,16 +193,16 @@ func (s *refunds) GETRefundItemPart(ctx context.Context, request operations.GETR
 // Retrieves the information about all items of a refund part. A refund part item is a single line item in a refund part. A refund part can consist of several different types of items.
 func (s *refunds) GETRefundItemParts(ctx context.Context, request operations.GETRefundItemPartsRequest) (*operations.GETRefundItemPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts/{refundpartid}/itemparts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts/{refundpartid}/itemparts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -248,14 +248,14 @@ func (s *refunds) GETRefundItemParts(ctx context.Context, request operations.GET
 // Retrieves the information about a specific refund part.
 func (s *refunds) GETRefundPart(ctx context.Context, request operations.GETRefundPartRequest) (*operations.GETRefundPartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts/{refundpartid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts/{refundpartid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -299,14 +299,14 @@ func (s *refunds) GETRefundPart(ctx context.Context, request operations.GETRefun
 // Retrieves the information about all parts of a refund.
 func (s *refunds) GETRefundParts(ctx context.Context, request operations.GETRefundPartsRequest) (*operations.GETRefundPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/parts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -371,9 +371,9 @@ func (s *refunds) GETRefunds(ctx context.Context, request operations.GETRefundsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -416,14 +416,14 @@ func (s *refunds) GETRefunds(ctx context.Context, request operations.GETRefundsR
 // ObjectDELETERefund - CRUD: Delete a refund
 func (s *refunds) ObjectDELETERefund(ctx context.Context, request operations.ObjectDELETERefundRequest) (*operations.ObjectDELETERefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/refund/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/refund/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -476,16 +476,16 @@ func (s *refunds) ObjectDELETERefund(ctx context.Context, request operations.Obj
 // ObjectGETRefund - CRUD: Retrieve a refund
 func (s *refunds) ObjectGETRefund(ctx context.Context, request operations.ObjectGETRefundRequest) (*operations.ObjectGETRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/refund/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/refund/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -563,7 +563,7 @@ func (s *refunds) ObjectPOSTRefund(ctx context.Context, request operations.Objec
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/refund"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateRefund", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -578,9 +578,9 @@ func (s *refunds) ObjectPOSTRefund(ctx context.Context, request operations.Objec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -647,9 +647,9 @@ func (s *refunds) ObjectPOSTRefund(ctx context.Context, request operations.Objec
 // ObjectPUTRefund - CRUD: Update a refund
 func (s *refunds) ObjectPUTRefund(ctx context.Context, request operations.ObjectPUTRefundRequest) (*operations.ObjectPUTRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/refund/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/refund/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyRefund", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -664,9 +664,9 @@ func (s *refunds) ObjectPUTRefund(ctx context.Context, request operations.Object
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -726,14 +726,14 @@ func (s *refunds) ObjectPUTRefund(ctx context.Context, request operations.Object
 // If you have the Invoice Settlement feature enabled, refunds applied to credit balance cannot be cancelled.
 func (s *refunds) PUTCancelRefund(ctx context.Context, request operations.PUTCancelRefundRequest) (*operations.PUTCancelRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -777,9 +777,9 @@ func (s *refunds) PUTCancelRefund(ctx context.Context, request operations.PUTCan
 // Updates the basic and finance information about a refund.
 func (s *refunds) PUTUpdateRefund(ctx context.Context, request operations.PUTUpdateRefundRequest) (*operations.PUTUpdateRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refundId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTRefundType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -794,7 +794,7 @@ func (s *refunds) PUTUpdateRefund(ctx context.Context, request operations.PUTUpd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

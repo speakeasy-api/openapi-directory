@@ -11,8 +11,8 @@ import (
 )
 
 type SearchEditorialVideosSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SearchEditorialVideosResolutionEnum - Show only editorial video content with specific resolution
@@ -69,7 +69,7 @@ func (e *SearchEditorialVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchEditorialVideosQueryParams struct {
+type SearchEditorialVideosRequest struct {
 	// Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Show only editorial video content that is available for distribution in a certain country
@@ -92,11 +92,6 @@ type SearchEditorialVideosQueryParams struct {
 	Sort *SearchEditorialVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Show only editorial video content from certain suppliers
 	SupplierCode []string `queryParam:"style=form,explode=true,name=supplier_code"`
-}
-
-type SearchEditorialVideosRequest struct {
-	QueryParams SearchEditorialVideosQueryParams
-	Security    SearchEditorialVideosSecurity
 }
 
 type SearchEditorialVideosResponse struct {

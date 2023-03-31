@@ -36,14 +36,14 @@ func newLine(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // LineArrivals - Get the list of arrival predictions for given line ids based at the given stop
 func (s *line) LineArrivals(ctx context.Context, request operations.LineArrivalsRequest) (*operations.LineArrivalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Arrivals/{stopPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Arrivals/{stopPointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *line) LineArrivals(ctx context.Context, request operations.LineArrivals
 // LineDisruption - Get disruptions for the given line ids
 func (s *line) LineDisruption(ctx context.Context, request operations.LineDisruptionRequest) (*operations.LineDisruptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Disruption", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Disruption", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *line) LineDisruption(ctx context.Context, request operations.LineDisrup
 // LineDisruptionByMode - Get disruptions for all lines of the given modes.
 func (s *line) LineDisruptionByMode(ctx context.Context, request operations.LineDisruptionByModeRequest) (*operations.LineDisruptionByModeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}/Disruption", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}/Disruption", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *line) LineDisruptionByMode(ctx context.Context, request operations.Line
 // LineGet - Gets lines that match the specified line ids.
 func (s *line) LineGet(ctx context.Context, request operations.LineGetRequest) (*operations.LineGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +300,7 @@ func (s *line) LineGet(ctx context.Context, request operations.LineGetRequest) (
 // LineGetByMode - Gets lines that serve the given modes.
 func (s *line) LineGetByMode(ctx context.Context, request operations.LineGetByModeRequest) (*operations.LineGetByModeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -365,14 +365,14 @@ func (s *line) LineGetByMode(ctx context.Context, request operations.LineGetByMo
 // LineLineRoutesByIds - Get all valid routes for given line ids, including the name and id of the originating and terminating stops for each route.
 func (s *line) LineLineRoutesByIds(ctx context.Context, request operations.LineLineRoutesByIdsRequest) (*operations.LineLineRoutesByIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Route", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Route", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -701,7 +701,7 @@ func (s *line) LineRoute(ctx context.Context, request operations.LineRouteReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -763,14 +763,14 @@ func (s *line) LineRoute(ctx context.Context, request operations.LineRouteReques
 // LineRouteByMode - Gets all lines and their valid routes for given modes, including the name and id of the originating and terminating stops for each route
 func (s *line) LineRouteByMode(ctx context.Context, request operations.LineRouteByModeRequest) (*operations.LineRouteByModeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}/Route", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}/Route", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -832,14 +832,14 @@ func (s *line) LineRouteByMode(ctx context.Context, request operations.LineRoute
 // LineRouteSequence - Gets all valid routes for given line id, including the sequence of stops on each route.
 func (s *line) LineRouteSequence(ctx context.Context, request operations.LineRouteSequenceRequest) (*operations.LineRouteSequenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/Route/Sequence/{direction}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/Route/Sequence/{direction}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -901,14 +901,14 @@ func (s *line) LineRouteSequence(ctx context.Context, request operations.LineRou
 // LineSearch - Search for lines or routes matching the query string
 func (s *line) LineSearch(ctx context.Context, request operations.LineSearchRequest) (*operations.LineSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/Search/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/Search/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -970,14 +970,14 @@ func (s *line) LineSearch(ctx context.Context, request operations.LineSearchRequ
 // LineStatus - Gets the line status for given line ids during the provided dates e.g Minor Delays
 func (s *line) LineStatus(ctx context.Context, request operations.LineStatusRequest) (*operations.LineStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Status/{StartDate}/to/{EndDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Status/{StartDate}/to/{EndDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1039,14 +1039,14 @@ func (s *line) LineStatus(ctx context.Context, request operations.LineStatusRequ
 // LineStatusByIds - Gets the line status of for given line ids e.g Minor Delays
 func (s *line) LineStatusByIds(ctx context.Context, request operations.LineStatusByIdsRequest) (*operations.LineStatusByIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{ids}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1108,14 +1108,14 @@ func (s *line) LineStatusByIds(ctx context.Context, request operations.LineStatu
 // LineStatusByMode - Gets the line status of for all lines for the given modes
 func (s *line) LineStatusByMode(ctx context.Context, request operations.LineStatusByModeRequest) (*operations.LineStatusByModeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/Mode/{modes}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1179,7 +1179,7 @@ func (s *line) LineStatusByMode(ctx context.Context, request operations.LineStat
 //	A list of valid severity codes can be obtained from a call to Line/Meta/Severity
 func (s *line) LineStatusBySeverity(ctx context.Context, request operations.LineStatusBySeverityRequest) (*operations.LineStatusBySeverityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/Status/{severity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/Status/{severity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1244,14 +1244,14 @@ func (s *line) LineStatusBySeverity(ctx context.Context, request operations.Line
 // LineStopPoints - Gets a list of the stations that serve the given line id
 func (s *line) LineStopPoints(ctx context.Context, request operations.LineStopPointsRequest) (*operations.LineStopPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/StopPoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/StopPoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1313,7 +1313,7 @@ func (s *line) LineStopPoints(ctx context.Context, request operations.LineStopPo
 // LineTimetable - Gets the timetable for a specified station on the give line
 func (s *line) LineTimetable(ctx context.Context, request operations.LineTimetableRequest) (*operations.LineTimetableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/Timetable/{fromStopPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/Timetable/{fromStopPointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1378,7 +1378,7 @@ func (s *line) LineTimetable(ctx context.Context, request operations.LineTimetab
 // LineTimetableTo - Gets the timetable for a specified station on the give line with specified destination
 func (s *line) LineTimetableTo(ctx context.Context, request operations.LineTimetableToRequest) (*operations.LineTimetableToResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/Timetable/{fromStopPointId}/to/{toStopPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Line/{id}/Timetable/{fromStopPointId}/to/{toStopPointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PartnerdevicesSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
-}
-
-type PartnerdevicesRequest struct {
-	Security PartnerdevicesSecurity
-}
-
 type PartnerdevicesResponse struct {
 	ContentType string
 	// Successful response

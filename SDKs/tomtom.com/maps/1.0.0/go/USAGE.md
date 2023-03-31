@@ -13,20 +13,14 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetMapVersionNumberCopyrightsFormatRequest{
-        PathParams: operations.GetMapVersionNumberCopyrightsFormatPathParams{
-            Format: "jsonp",
-            VersionNumber: "1",
-        },
-        QueryParams: operations.GetMapVersionNumberCopyrightsFormatQueryParams{
-            Callback: "provident",
-        },
+        Callback: "corrupti",
+        Format: "jsonp",
+        VersionNumber: "1",
     }
 
     ctx := context.Background()

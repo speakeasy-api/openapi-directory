@@ -8,21 +8,16 @@ import (
 )
 
 type GetExamplesByLabel1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetExamplesByLabel1QueryParams struct {
+type GetExamplesByLabel1Request struct {
 	// Number of examples to return.
 	Count *string `queryParam:"style=form,explode=true,name=count"`
 	// Label Id
 	LabelID *string `queryParam:"style=form,explode=true,name=labelId"`
 	// Index of the example from which you want to start paging.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetExamplesByLabel1Request struct {
-	QueryParams GetExamplesByLabel1QueryParams
-	Security    GetExamplesByLabel1Security
 }
 
 type GetExamplesByLabel1Response struct {

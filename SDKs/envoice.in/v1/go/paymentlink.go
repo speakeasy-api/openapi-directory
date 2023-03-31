@@ -43,9 +43,9 @@ func (s *paymentLink) PaymentLinkAPIAll(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,7 +116,7 @@ func (s *paymentLink) PaymentLinkAPIDeleteForm(ctx context.Context, request oper
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/paymentlink/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentLink", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *paymentLink) PaymentLinkAPIDeleteForm(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -200,7 +200,7 @@ func (s *paymentLink) PaymentLinkAPIDeleteJSON(ctx context.Context, request oper
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/paymentlink/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentLink", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -215,7 +215,7 @@ func (s *paymentLink) PaymentLinkAPIDeleteJSON(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -284,7 +284,7 @@ func (s *paymentLink) PaymentLinkAPIDeleteRaw(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/paymentlink/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -299,7 +299,7 @@ func (s *paymentLink) PaymentLinkAPIDeleteRaw(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -368,7 +368,7 @@ func (s *paymentLink) PaymentLinkAPINewForm(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/paymentlink/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentLink", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *paymentLink) PaymentLinkAPINewForm(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -452,7 +452,7 @@ func (s *paymentLink) PaymentLinkAPINewJSON(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/paymentlink/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentLink", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,7 +467,7 @@ func (s *paymentLink) PaymentLinkAPINewJSON(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -536,7 +536,7 @@ func (s *paymentLink) PaymentLinkAPINewRaw(ctx context.Context, request operatio
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/paymentlink/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -551,7 +551,7 @@ func (s *paymentLink) PaymentLinkAPINewRaw(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -625,9 +625,9 @@ func (s *paymentLink) PaymentLinkAPIURI(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

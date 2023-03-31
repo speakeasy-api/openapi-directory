@@ -14,15 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteAEAssessmentRequest{
-        PathParams: operations.DeleteAEAssessmentPathParams{
-            AEAssessmentID: "corrupti",
-            EmployeeID: "provident",
-            EmployerID: "distinctio",
-        },
-        Headers: operations.DeleteAEAssessmentHeaders{
-            APIVersion: "quibusdam",
-            Authorization: "unde",
-        },
+        AEAssessmentID: "corrupti",
+        APIVersion: "provident",
+        Authorization: "distinctio",
+        EmployeeID: "quibusdam",
+        EmployerID: "unde",
     }
 
     ctx := context.Background()

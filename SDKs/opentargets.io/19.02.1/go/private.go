@@ -115,7 +115,7 @@ func (s *private) GetAutocomplete(ctx context.Context, request operations.GetAut
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -148,7 +148,7 @@ func (s *private) GetAutocomplete(ctx context.Context, request operations.GetAut
 // Get `disease` objects.
 func (s *private) GetDiseaseByID(ctx context.Context, request operations.GetDiseaseByIDRequest) (*operations.GetDiseaseByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/disease/{disease}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/private/disease/{disease}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,14 +184,14 @@ func (s *private) GetDiseaseByID(ctx context.Context, request operations.GetDise
 // Get `drug` objects.
 func (s *private) GetDrugByID(ctx context.Context, request operations.GetDrugByIDRequest) (*operations.GetDrugByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/drug/{DRUG_ID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/private/drug/{DRUG_ID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -224,7 +224,7 @@ func (s *private) GetDrugByID(ctx context.Context, request operations.GetDrugByI
 // Get `ECO` objects.
 func (s *private) GetECObyID(ctx context.Context, request operations.GetECObyIDRequest) (*operations.GetECObyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/eco/{ECO_ID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/private/eco/{ECO_ID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *private) GetQuickSearch(ctx context.Context, request operations.GetQuic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -300,7 +300,7 @@ func (s *private) GetQuickSearch(ctx context.Context, request operations.GetQuic
 // Get `relation` objects starting from diseases.
 func (s *private) GetRelationByEFOID(ctx context.Context, request operations.GetRelationByEFOIDRequest) (*operations.GetRelationByEFOIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/disease/{disease}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/disease/{disease}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +336,7 @@ func (s *private) GetRelationByEFOID(ctx context.Context, request operations.Get
 // Get `relation` objects starting from diseases.
 func (s *private) GetRelationByENSGID(ctx context.Context, request operations.GetRelationByENSGIDRequest) (*operations.GetRelationByENSGIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/target/{target}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/target/{target}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +408,7 @@ func (s *private) GetSwagger(ctx context.Context) (*operations.GetSwaggerRespons
 // Get `target` objects.
 func (s *private) GetTargetByENSGID(ctx context.Context, request operations.GetTargetByENSGIDRequest) (*operations.GetTargetByENSGIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/target/{target}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/private/target/{target}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -451,7 +451,7 @@ func (s *private) GetTargetExpressionByENSGID(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -482,7 +482,7 @@ func (s *private) GetTargetExpressionByENSGID(ctx context.Context, request opera
 
 // PostBestHitSearch - Find the best hit
 // Fire the search method for multiple strings
-func (s *private) PostBestHitSearch(ctx context.Context, request operations.PostBestHitSearchRequest) (*operations.PostBestHitSearchResponse, error) {
+func (s *private) PostBestHitSearch(ctx context.Context, request string) (*operations.PostBestHitSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/private/besthitsearch"
 
@@ -528,7 +528,7 @@ func (s *private) PostBestHitSearch(ctx context.Context, request operations.Post
 
 // PostDiseaseByID - Find information about a list of diseases
 // Get `disease` objects.
-func (s *private) PostDiseaseByID(ctx context.Context, request operations.PostDiseaseByIDRequest) (*operations.PostDiseaseByIDResponse, error) {
+func (s *private) PostDiseaseByID(ctx context.Context, request string) (*operations.PostDiseaseByIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/private/disease"
 
@@ -574,7 +574,7 @@ func (s *private) PostDiseaseByID(ctx context.Context, request operations.PostDi
 
 // PostEnrichmentTarget - Enrichment analysis
 // Returns an enrichment analysis for a list of targets passed in the body
-func (s *private) PostEnrichmentTarget(ctx context.Context, request operations.PostEnrichmentTargetRequest) (*operations.PostEnrichmentTargetResponse, error) {
+func (s *private) PostEnrichmentTarget(ctx context.Context, request string) (*operations.PostEnrichmentTargetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/private/enrichment/targets"
 
@@ -620,7 +620,7 @@ func (s *private) PostEnrichmentTarget(ctx context.Context, request operations.P
 
 // PostRelation - Find related entities
 // Get `relation` objects.
-func (s *private) PostRelation(ctx context.Context, request operations.PostRelationRequest) (*operations.PostRelationResponse, error) {
+func (s *private) PostRelation(ctx context.Context, request string) (*operations.PostRelationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/private/relation"
 
@@ -666,7 +666,7 @@ func (s *private) PostRelation(ctx context.Context, request operations.PostRelat
 
 // PostTargetByENSGID - Find information about a list of targets
 // Get `target` objects. Used for the target profile page.
-func (s *private) PostTargetByENSGID(ctx context.Context, request operations.PostTargetByENSGIDRequest) (*operations.PostTargetByENSGIDResponse, error) {
+func (s *private) PostTargetByENSGID(ctx context.Context, request string) (*operations.PostTargetByENSGIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/private/target"
 
@@ -712,7 +712,7 @@ func (s *private) PostTargetByENSGID(ctx context.Context, request operations.Pos
 
 // PostTargetExpressionByENSGID - Batch query expression levels
 // Get `gene-expression` objects.
-func (s *private) PostTargetExpressionByENSGID(ctx context.Context, request operations.PostTargetExpressionByENSGIDRequest) (*operations.PostTargetExpressionByENSGIDResponse, error) {
+func (s *private) PostTargetExpressionByENSGID(ctx context.Context, request string) (*operations.PostTargetExpressionByENSGIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/private/target/expression"
 

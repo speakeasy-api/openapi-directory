@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTokenIDPathParams struct {
+type GetTokenIDRequest struct {
 	// Token symbol
 	Tokensymbol string `pathParam:"style=simple,explode=false,name=tokensymbol"`
-}
-
-type GetTokenIDRequest struct {
-	PathParams GetTokenIDPathParams
 }
 
 type GetTokenIDResponse struct {

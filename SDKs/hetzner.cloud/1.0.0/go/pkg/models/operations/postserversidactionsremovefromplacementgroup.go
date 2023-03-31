@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsRemoveFromPlacementGroupPathParams struct {
+type PostServersIDActionsRemoveFromPlacementGroupRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsRemoveFromPlacementGroupRequest struct {
-	PathParams PostServersIDActionsRemoveFromPlacementGroupPathParams
 }
 
 // PostServersIDActionsRemoveFromPlacementGroupActionResponseActionError - Error message for the Action if error occurred, otherwise null

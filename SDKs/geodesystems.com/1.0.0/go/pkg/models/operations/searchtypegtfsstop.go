@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypeGtfsStopQueryParams struct {
+type SearchTypeGtfsStopRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -52,10 +52,6 @@ type SearchTypeGtfsStopQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypeGtfsStopRequest struct {
-	QueryParams SearchTypeGtfsStopQueryParams
 }
 
 type SearchTypeGtfsStopResponse struct {

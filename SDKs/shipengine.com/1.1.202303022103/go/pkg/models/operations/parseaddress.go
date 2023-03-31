@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ParseAddressRequest struct {
-	// The only required field is `text`, which is the text to be parsed. You can optionally also provide an `address` containing already-known values. For example, you may already know the recipient's name, city, and country, and only want to parse the street address into separate lines.
-	//
-	Request shared.ParseAddressRequestBody `request:"mediaType=application/json"`
-}
-
 type ParseAddressResponse struct {
 	ContentType string
 	StatusCode  int

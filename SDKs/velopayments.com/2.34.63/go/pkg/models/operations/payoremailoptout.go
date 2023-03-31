@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PayorEmailOptOutPathParams struct {
+type PayorEmailOptOutRequest struct {
+	// Reminder Emails Opt-Out Request
+	PayorEmailOptOutRequest shared.PayorEmailOptOutRequest `request:"mediaType=application/json"`
 	// The Payor Id
 	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
-}
-
-type PayorEmailOptOutRequest struct {
-	PathParams PayorEmailOptOutPathParams
-	// Reminder Emails Opt-Out Request
-	Request shared.PayorEmailOptOutRequest `request:"mediaType=application/json"`
 }
 
 type PayorEmailOptOutResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams struct {
+type DeleteCustomersAccountAnnouncementsAnnouncementIDRequest struct {
 	// Account ID of customer
 	Account int64 `pathParam:"style=simple,explode=false,name=account"`
 	// Announcement ID of audio file
 	AnnouncementID string `pathParam:"style=simple,explode=false,name=announcement_id"`
-}
-
-type DeleteCustomersAccountAnnouncementsAnnouncementIDRequest struct {
-	PathParams DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams
 }
 
 type DeleteCustomersAccountAnnouncementsAnnouncementIDResponse struct {

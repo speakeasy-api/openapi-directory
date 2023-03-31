@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFactSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetFactQueryParams struct {
-	// ID of the fact to fetch
-	ID *string `queryParam:"style=form,explode=true,name=id"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type GetFactRequest struct {
-	QueryParams GetFactQueryParams
-	Security    GetFactSecurity
+	// ID of the fact to fetch
+	ID *string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetFactResponse struct {

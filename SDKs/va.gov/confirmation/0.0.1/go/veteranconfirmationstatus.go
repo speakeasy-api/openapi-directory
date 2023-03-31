@@ -34,7 +34,7 @@ func newVeteranConfirmationStatus(defaultClient, securityClient HTTPClient, serv
 }
 
 // GetVeteranStatus - Get confirmation about an individual's Veteran status according to the VA
-func (s *veteranConfirmationStatus) GetVeteranStatus(ctx context.Context, request operations.GetVeteranStatusRequest) (*operations.GetVeteranStatusResponse, error) {
+func (s *veteranConfirmationStatus) GetVeteranStatus(ctx context.Context, request shared.VeteranStatusRequest, security operations.GetVeteranStatusSecurity) (*operations.GetVeteranStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/status"
 
@@ -53,7 +53,7 @@ func (s *veteranConfirmationStatus) GetVeteranStatus(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

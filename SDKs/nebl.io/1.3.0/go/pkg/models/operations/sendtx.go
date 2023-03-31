@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendTxRequest struct {
-	// Object representing a transaction to broadcast
-	Request shared.SendTxRequest `request:"mediaType=application/json"`
-}
-
 type SendTxResponse struct {
 	ContentType string
 	// Unexpected error

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PingWebhookV1PathParams struct {
+type PingWebhookV1Request struct {
 	// Webhook id
 	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type PingWebhookV1Request struct {
-	PathParams PingWebhookV1PathParams
 }
 
 type PingWebhookV1Response struct {

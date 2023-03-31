@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoresReadPathParams struct {
+type StoresReadRequest struct {
 	// A unique integer value identifying this Store.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoresReadRequest struct {
-	PathParams StoresReadPathParams
 }
 
 type StoresReadResponse struct {

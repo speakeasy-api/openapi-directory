@@ -8,13 +8,13 @@ import (
 )
 
 type AdminCustomerDevicesChromeosCommandsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdminCustomerDevicesChromeosCommandsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdminCustomerDevicesChromeosCommandsGetSecurity struct {
@@ -22,16 +22,7 @@ type AdminCustomerDevicesChromeosCommandsGetSecurity struct {
 	Option2 *AdminCustomerDevicesChromeosCommandsGetSecurityOption2 `security:"option"`
 }
 
-type AdminCustomerDevicesChromeosCommandsGetPathParams struct {
-	// Immutable. ID of Chrome OS Device Command.
-	CommandID string `pathParam:"style=simple,explode=false,name=commandId"`
-	// Immutable. ID of the Google Workspace account.
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-	// Immutable. ID of Chrome OS Device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type AdminCustomerDevicesChromeosCommandsGetQueryParams struct {
+type AdminCustomerDevicesChromeosCommandsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +31,12 @@ type AdminCustomerDevicesChromeosCommandsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Immutable. ID of Chrome OS Device Command.
+	CommandID string `pathParam:"style=simple,explode=false,name=commandId"`
+	// Immutable. ID of the Google Workspace account.
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
+	// Immutable. ID of Chrome OS Device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -54,12 +51,6 @@ type AdminCustomerDevicesChromeosCommandsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdminCustomerDevicesChromeosCommandsGetRequest struct {
-	PathParams  AdminCustomerDevicesChromeosCommandsGetPathParams
-	QueryParams AdminCustomerDevicesChromeosCommandsGetQueryParams
-	Security    AdminCustomerDevicesChromeosCommandsGetSecurity
 }
 
 type AdminCustomerDevicesChromeosCommandsGetResponse struct {

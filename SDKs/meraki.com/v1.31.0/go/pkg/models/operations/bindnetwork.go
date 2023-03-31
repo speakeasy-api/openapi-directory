@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type BindNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type BindNetworkRequestBody struct {
 	// Optional boolean indicating whether the network's switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model.
 	AutoBind *bool `json:"autoBind,omitempty"`
@@ -18,8 +14,8 @@ type BindNetworkRequestBody struct {
 }
 
 type BindNetworkRequest struct {
-	PathParams BindNetworkPathParams
-	Request    BindNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody BindNetworkRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                 `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type BindNetworkResponse struct {

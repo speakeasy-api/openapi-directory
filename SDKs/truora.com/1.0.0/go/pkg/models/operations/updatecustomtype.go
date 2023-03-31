@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateCustomTypeSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateCustomTypeRequest struct {
-	Request  shared.CreateConfigInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security UpdateCustomTypeSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type UpdateCustomTypeResponse struct {

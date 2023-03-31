@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReindexrecurrencePathParams struct {
-	RecurrenceID string `pathParam:"style=simple,explode=false,name=recurrenceId"`
-}
-
-type ReindexrecurrenceHeaders struct {
+type ReindexrecurrenceRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ReindexrecurrenceRequest struct {
-	PathParams ReindexrecurrencePathParams
-	Headers    ReindexrecurrenceHeaders
-	Request    []shared.ReindexrecurrenceRequest `request:"mediaType=application/json"`
+	ContentType  string                            `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody  []shared.ReindexrecurrenceRequest `request:"mediaType=application/json"`
+	RecurrenceID string                            `pathParam:"style=simple,explode=false,name=recurrenceId"`
 }
 
 type ReindexrecurrenceResponse struct {

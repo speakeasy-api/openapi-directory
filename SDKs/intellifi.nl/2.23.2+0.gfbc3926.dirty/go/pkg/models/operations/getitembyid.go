@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItemByIDPathParams struct {
+type GetItemByIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetItemByIDRequest struct {
-	PathParams GetItemByIDPathParams
 }
 
 type GetItemByIDResponse struct {

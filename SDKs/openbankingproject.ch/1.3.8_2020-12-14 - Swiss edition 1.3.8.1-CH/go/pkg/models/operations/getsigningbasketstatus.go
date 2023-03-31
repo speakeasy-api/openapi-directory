@@ -8,16 +8,10 @@ import (
 )
 
 type GetSigningBasketStatusSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetSigningBasketStatusPathParams struct {
-	// This identification of the corresponding signing basket object.
-	//
-	BasketID string `pathParam:"style=simple,explode=false,name=basketId"`
-}
-
-type GetSigningBasketStatusHeaders struct {
+type GetSigningBasketStatusRequest struct {
 	// Is contained if and only if the "Signature" element is contained in the header of the request.
 	Digest *string `header:"style=simple,explode=false,name=Digest"`
 	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
@@ -88,12 +82,9 @@ type GetSigningBasketStatusHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetSigningBasketStatusRequest struct {
-	PathParams GetSigningBasketStatusPathParams
-	Headers    GetSigningBasketStatusHeaders
-	Security   GetSigningBasketStatusSecurity
+	// This identification of the corresponding signing basket object.
+	//
+	BasketID string `pathParam:"style=simple,explode=false,name=basketId"`
 }
 
 type GetSigningBasketStatusResponse struct {

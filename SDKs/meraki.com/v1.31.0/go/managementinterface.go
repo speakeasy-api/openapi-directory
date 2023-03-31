@@ -34,7 +34,7 @@ func newManagementInterface(defaultClient, securityClient HTTPClient, serverURL,
 // Return the management interface settings for a device
 func (s *managementInterface) GetDeviceManagementInterface(ctx context.Context, request operations.GetDeviceManagementInterfaceRequest) (*operations.GetDeviceManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *managementInterface) GetDeviceManagementInterface(ctx context.Context, 
 // Update the management interface settings for a device
 func (s *managementInterface) UpdateDeviceManagementInterface(ctx context.Context, request operations.UpdateDeviceManagementInterfaceRequest) (*operations.UpdateDeviceManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

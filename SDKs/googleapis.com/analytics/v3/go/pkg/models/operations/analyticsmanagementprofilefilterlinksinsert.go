@@ -8,20 +8,14 @@ import (
 )
 
 type AnalyticsManagementProfileFilterLinksInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementProfileFilterLinksInsertPathParams struct {
+type AnalyticsManagementProfileFilterLinksInsertRequest struct {
+	ProfileFilterLinkInput *shared.ProfileFilterLinkInput `request:"mediaType=application/json"`
 	// Account ID to create profile filter link for.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Profile ID to create filter link for.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property Id to create profile filter link for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementProfileFilterLinksInsertQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -32,17 +26,14 @@ type AnalyticsManagementProfileFilterLinksInsertQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Profile ID to create filter link for.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementProfileFilterLinksInsertRequest struct {
-	PathParams  AnalyticsManagementProfileFilterLinksInsertPathParams
-	QueryParams AnalyticsManagementProfileFilterLinksInsertQueryParams
-	Request     *shared.ProfileFilterLinkInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementProfileFilterLinksInsertSecurity
+	// Web property Id to create profile filter link for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementProfileFilterLinksInsertResponse struct {

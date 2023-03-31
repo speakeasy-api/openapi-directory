@@ -10,29 +10,24 @@ import (
 )
 
 type StorageObjectsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsInsertSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsInsertSecurity struct {
 	Option1 *StorageObjectsInsertSecurityOption1 `security:"option"`
 	Option2 *StorageObjectsInsertSecurityOption2 `security:"option"`
 	Option3 *StorageObjectsInsertSecurityOption3 `security:"option"`
-}
-
-type StorageObjectsInsertPathParams struct {
-	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 }
 
 // StorageObjectsInsertPredefinedACLEnum - Apply a predefined set of access controls to this object.
@@ -95,9 +90,12 @@ func (e *StorageObjectsInsertProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsInsertQueryParams struct {
+type StorageObjectsInsertRequest struct {
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// If set, sets the contentEncoding property of the final object to this value. Setting this parameter is equivalent to setting the contentEncoding metadata property. This can be useful when uploading an object with uploadType=media to indicate the encoding of the content being uploaded.
 	ContentEncoding *string `queryParam:"style=form,explode=true,name=contentEncoding"`
 	// Selector specifying which fields to include in a partial response.
@@ -132,13 +130,6 @@ type StorageObjectsInsertQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectsInsertRequest struct {
-	PathParams  StorageObjectsInsertPathParams
-	QueryParams StorageObjectsInsertQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
-	Security    StorageObjectsInsertSecurity
 }
 
 type StorageObjectsInsertResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetUUIDSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetUUIDQueryParams struct {
-	// Number of UUID's to generate (defaults to 1)
-	Count *int64 `queryParam:"style=form,explode=true,name=count"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type GetUUIDRequest struct {
-	QueryParams GetUUIDQueryParams
-	Security    GetUUIDSecurity
+	// Number of UUID's to generate (defaults to 1)
+	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 }
 
 type GetUUIDResponse struct {

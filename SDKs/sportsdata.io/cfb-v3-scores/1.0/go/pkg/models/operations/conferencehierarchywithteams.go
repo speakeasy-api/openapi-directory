@@ -33,13 +33,9 @@ func (e *ConferenceHierarchyWithTeamsFormatEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type ConferenceHierarchyWithTeamsPathParams struct {
+type ConferenceHierarchyWithTeamsRequest struct {
 	// Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
 	Format ConferenceHierarchyWithTeamsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type ConferenceHierarchyWithTeamsRequest struct {
-	PathParams ConferenceHierarchyWithTeamsPathParams
 }
 
 type ConferenceHierarchyWithTeamsResponse struct {

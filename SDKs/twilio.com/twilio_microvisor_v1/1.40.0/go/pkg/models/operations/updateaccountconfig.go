@@ -12,12 +12,8 @@ var UpdateAccountConfigServerList = []string{
 }
 
 type UpdateAccountConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAccountConfigPathParams struct {
-	// The config key; up to 100 characters.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAccountConfigUpdateAccountConfigRequest struct {
@@ -26,10 +22,9 @@ type UpdateAccountConfigUpdateAccountConfigRequest struct {
 }
 
 type UpdateAccountConfigRequest struct {
-	PathParams UpdateAccountConfigPathParams
-	Request    *UpdateAccountConfigUpdateAccountConfigRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateAccountConfigSecurity
-	ServerURL  *string
+	// The config key; up to 100 characters.
+	Key         string                                         `pathParam:"style=simple,explode=false,name=Key"`
+	RequestBody *UpdateAccountConfigUpdateAccountConfigRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateAccountConfigResponse struct {

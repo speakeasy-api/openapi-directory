@@ -8,21 +8,16 @@ import (
 )
 
 type CreateCustomerCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateCustomerCardPathParams struct {
-	// The Square ID of the customer profile the card is linked to.
-	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCustomerCardRequest struct {
-	PathParams CreateCustomerCardPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.CreateCustomerCardRequest `request:"mediaType=application/json"`
-	Security CreateCustomerCardSecurity
+	CreateCustomerCardRequest shared.CreateCustomerCardRequest `request:"mediaType=application/json"`
+	// The Square ID of the customer profile the card is linked to.
+	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
 }
 
 type CreateCustomerCardResponse struct {

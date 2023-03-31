@@ -26,10 +26,9 @@ pkg/models/shared/accesslocations.go
 pkg/models/shared/dismissdecision.go
 pkg/models/shared/approvedecision.go
 pkg/models/shared/signatureinfo.go
-pkg/models/shared/approveapprovalrequestmessage.go
 pkg/models/shared/altenum.go
+pkg/models/shared/approveapprovalrequestmessage.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listapprovalrequestsresponse.go
 pkg/models/shared/accessapprovalsettings.go
 pkg/models/shared/enrolledservice.go

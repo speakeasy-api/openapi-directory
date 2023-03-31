@@ -4,15 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAccountRequest(
-    query_params=operations.GetAccountQueryParams(
-        include="maxime",
-    ),
-    headers=operations.GetAccountHeaders(
-        ev_access_token="facilis",
-        ev_api_key="iure",
-    ),
+    ev_access_token="19853ef63a0bc348024a9e4cfd4a92520d2dfd04e88d8679fb1ed6bc551593d1",
+    ev_api_key="exampleaccount-zwSuWUZ8S38h33qPS8v0s",
+    include="masterUser",
 )
     
 res = s.account.get_account(req)

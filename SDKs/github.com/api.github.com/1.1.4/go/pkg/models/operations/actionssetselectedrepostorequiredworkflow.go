@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type ActionsSetSelectedReposToRequiredWorkflowPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The unique identifier of the required workflow.
-	RequiredWorkflowID int64 `pathParam:"style=simple,explode=false,name=required_workflow_id"`
-}
-
 type ActionsSetSelectedReposToRequiredWorkflowRequestBody struct {
 	// The IDs of the repositories for which the workflow should be required.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type ActionsSetSelectedReposToRequiredWorkflowRequest struct {
-	PathParams ActionsSetSelectedReposToRequiredWorkflowPathParams
-	Request    ActionsSetSelectedReposToRequiredWorkflowRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetSelectedReposToRequiredWorkflowRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The unique identifier of the required workflow.
+	RequiredWorkflowID int64 `pathParam:"style=simple,explode=false,name=required_workflow_id"`
 }
 
 type ActionsSetSelectedReposToRequiredWorkflowResponse struct {

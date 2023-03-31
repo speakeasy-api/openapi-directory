@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEntitySetAssociationsQueryParams struct {
+type GetEntitySetAssociationsRequest struct {
 	// Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
 	Background []string `queryParam:"style=form,explode=true,name=background"`
 	// E.g. phenotype, function
@@ -16,10 +16,6 @@ type GetEntitySetAssociationsQueryParams struct {
 	ObjectSlim *string `queryParam:"style=form,explode=true,name=object_slim"`
 	// Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
 	Subject []string `queryParam:"style=form,explode=true,name=subject"`
-}
-
-type GetEntitySetAssociationsRequest struct {
-	QueryParams GetEntitySetAssociationsQueryParams
 }
 
 type GetEntitySetAssociationsResponse struct {

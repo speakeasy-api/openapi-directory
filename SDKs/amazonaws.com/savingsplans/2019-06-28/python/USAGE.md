@@ -3,37 +3,34 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateSavingsPlanRequest(
-    headers=operations.CreateSavingsPlanHeaders(
-        x_amz_algorithm="dolores",
-        x_amz_content_sha256="fuga",
-        x_amz_credential="et",
-        x_amz_date="qui",
-        x_amz_security_token="voluptatum",
-        x_amz_signature="aut",
-        x_amz_signed_headers="distinctio",
-    ),
-    request=operations.CreateSavingsPlanRequestBody(
-        client_token="dicta",
-        commitment="tenetur",
-        purchase_time="2000-01-09T02:09:05Z",
-        savings_plan_offering_id="cupiditate",
+    request_body=operations.CreateSavingsPlanRequestBody(
+        client_token="corrupti",
+        commitment="provident",
+        purchase_time="2021-04-24T16:27:50.833Z",
+        savings_plan_offering_id="unde",
         tags={
-            "facere": "sequi",
-            "rerum": "enim",
-            "qui": "unde",
+            "corrupti": "illum",
+            "vel": "error",
+            "deserunt": "suscipit",
+            "iure": "magnam",
         },
-        upfront_payment_amount="assumenda",
+        upfront_payment_amount="debitis",
     ),
+    x_amz_algorithm="ipsa",
+    x_amz_content_sha256="delectus",
+    x_amz_credential="tempora",
+    x_amz_date="suscipit",
+    x_amz_security_token="molestiae",
+    x_amz_signature="minus",
+    x_amz_signed_headers="placeat",
 )
     
 res = s.create_savings_plan(req)

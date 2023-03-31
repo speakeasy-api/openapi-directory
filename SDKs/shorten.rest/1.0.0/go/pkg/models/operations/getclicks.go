@@ -8,19 +8,14 @@ import (
 )
 
 type GetClicksSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
-type GetClicksQueryParams struct {
+type GetClicksRequest struct {
 	// An ID returned by a previous query to continue clicks retrieval (see lastId in response)
 	ContinueFrom *string `queryParam:"style=form,explode=true,name=continueFrom"`
 	// Number of results to return per request
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetClicksRequest struct {
-	QueryParams GetClicksQueryParams
-	Security    GetClicksSecurity
 }
 
 type GetClicksResponse struct {

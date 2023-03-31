@@ -13,25 +13,22 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateWorkflowRequest{
-        Security: operations.CreateWorkflowSecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: shared.CreateWorkflow{
-            Template: "failover",
-            Workflow: []shared.CreateWorkflowWorkflow{
-                shared.CreateWorkflowWorkflow{},
-                shared.CreateWorkflowWorkflow{},
-                shared.CreateWorkflowWorkflow{},
-            },
+    req := shared.CreateWorkflow{
+        Template: "failover",
+        Workflow: []shared.CreateWorkflowWorkflow{
+            shared.CreateWorkflowWorkflow{},
+            shared.CreateWorkflowWorkflow{},
+            shared.CreateWorkflowWorkflow{},
         },
     }
 
     ctx := context.Background()
-    res, err := s.CreateWorkflow(ctx, req)
+    res, err := s.CreateWorkflow(ctx, req, operations.CreateWorkflowSecurity{
+        BasicAuth: &shared.SchemeBasicAuth{
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

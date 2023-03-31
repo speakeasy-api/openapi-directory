@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackReservationsPartialUpdatePathParams struct {
+type DcimRackReservationsPartialUpdateRequest struct {
+	WritableRackReservationInput shared.WritableRackReservationInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this rack reservation.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRackReservationsPartialUpdateRequest struct {
-	PathParams DcimRackReservationsPartialUpdatePathParams
-	Request    shared.WritableRackReservationInput `request:"mediaType=application/json"`
 }
 
 type DcimRackReservationsPartialUpdateResponse struct {

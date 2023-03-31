@@ -12,7 +12,8 @@ var CreateDeviceCodeServerList = []string{
 }
 
 type CreateDeviceCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDeviceCodeCreateDeviceCodeRequest struct {
@@ -22,12 +23,6 @@ type CreateDeviceCodeCreateDeviceCodeRequest struct {
 	ClientSid string `form:"name=ClientSid"`
 	// An Array of scopes for authorization request
 	Scopes []string `form:"name=Scopes"`
-}
-
-type CreateDeviceCodeRequest struct {
-	Request   *CreateDeviceCodeCreateDeviceCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateDeviceCodeSecurity
-	ServerURL *string
 }
 
 type CreateDeviceCodeResponse struct {

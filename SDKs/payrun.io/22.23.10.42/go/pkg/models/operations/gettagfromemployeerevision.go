@@ -8,7 +8,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTagFromEmployeeRevisionPathParams struct {
+type GetTagFromEmployeeRevisionRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The effective date to be applied. E.g 2016-04-06
 	EffectiveDate types.Date `pathParam:"style=simple,explode=false,name=EffectiveDate"`
 	// The employees' unique identifier. E.g EE001
@@ -17,18 +21,6 @@ type GetTagFromEmployeeRevisionPathParams struct {
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The tag unique identifier. E.g. MyTag
 	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type GetTagFromEmployeeRevisionHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagFromEmployeeRevisionRequest struct {
-	PathParams GetTagFromEmployeeRevisionPathParams
-	Headers    GetTagFromEmployeeRevisionHeaders
 }
 
 type GetTagFromEmployeeRevisionResponse struct {

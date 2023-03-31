@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListColumnsPathParams struct {
-	// The unique identifier of the project.
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type ProjectsListColumnsQueryParams struct {
+type ProjectsListColumnsRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ProjectsListColumnsRequest struct {
-	PathParams  ProjectsListColumnsPathParams
-	QueryParams ProjectsListColumnsQueryParams
+	// The unique identifier of the project.
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type ProjectsListColumnsResponse struct {

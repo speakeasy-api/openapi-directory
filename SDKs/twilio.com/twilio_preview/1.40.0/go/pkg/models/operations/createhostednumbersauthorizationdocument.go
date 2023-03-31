@@ -12,7 +12,8 @@ var CreateHostedNumbersAuthorizationDocumentServerList = []string{
 }
 
 type CreateHostedNumbersAuthorizationDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateHostedNumbersAuthorizationDocumentCreateHostedNumbersAuthorizationDocumentRequest struct {
@@ -28,12 +29,6 @@ type CreateHostedNumbersAuthorizationDocumentCreateHostedNumbersAuthorizationDoc
 	Email string `form:"name=Email"`
 	// A list of HostedNumberOrder sids that this AuthorizationDocument will authorize for hosting phone number capabilities on Twilio's platform.
 	HostedNumberOrderSids []string `form:"name=HostedNumberOrderSids"`
-}
-
-type CreateHostedNumbersAuthorizationDocumentRequest struct {
-	Request   *CreateHostedNumbersAuthorizationDocumentCreateHostedNumbersAuthorizationDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateHostedNumbersAuthorizationDocumentSecurity
-	ServerURL *string
 }
 
 type CreateHostedNumbersAuthorizationDocumentResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSftpHostKeysIDPathParams struct {
+type DeleteSftpHostKeysIDRequest struct {
 	// Sftp Host Key ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSftpHostKeysIDRequest struct {
-	PathParams DeleteSftpHostKeysIDPathParams
 }
 
 type DeleteSftpHostKeysIDResponse struct {

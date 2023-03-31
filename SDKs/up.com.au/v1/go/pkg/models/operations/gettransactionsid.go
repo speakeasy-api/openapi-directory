@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTransactionsIDPathParams struct {
+type GetTransactionsIDRequest struct {
 	// The unique identifier for the transaction.
 	//
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTransactionsIDRequest struct {
-	PathParams GetTransactionsIDPathParams
 }
 
 type GetTransactionsIDResponse struct {

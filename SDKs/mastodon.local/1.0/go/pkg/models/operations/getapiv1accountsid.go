@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1AccountsIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1AccountsIDPathParams struct {
-	// The id of the account in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1AccountsIDRequest struct {
-	PathParams GetAPIV1AccountsIDPathParams
-	Security   GetAPIV1AccountsIDSecurity
+	// The id of the account in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1AccountsIDResponse struct {

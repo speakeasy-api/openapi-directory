@@ -8,21 +8,16 @@ import (
 )
 
 type LinkCustomerToGiftCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type LinkCustomerToGiftCardPathParams struct {
-	// The ID of the gift card to link.
-	GiftCardID string `pathParam:"style=simple,explode=false,name=gift_card_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LinkCustomerToGiftCardRequest struct {
-	PathParams LinkCustomerToGiftCardPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.LinkCustomerToGiftCardRequest `request:"mediaType=application/json"`
-	Security LinkCustomerToGiftCardSecurity
+	LinkCustomerToGiftCardRequest shared.LinkCustomerToGiftCardRequest `request:"mediaType=application/json"`
+	// The ID of the gift card to link.
+	GiftCardID string `pathParam:"style=simple,explode=false,name=gift_card_id"`
 }
 
 type LinkCustomerToGiftCardResponse struct {

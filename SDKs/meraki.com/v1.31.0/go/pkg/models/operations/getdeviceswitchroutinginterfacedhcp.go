@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchRoutingInterfaceDhcpPathParams struct {
+type GetDeviceSwitchRoutingInterfaceDhcpRequest struct {
 	InterfaceID string `pathParam:"style=simple,explode=false,name=interfaceId"`
 	Serial      string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetDeviceSwitchRoutingInterfaceDhcpRequest struct {
-	PathParams GetDeviceSwitchRoutingInterfaceDhcpPathParams
 }
 
 type GetDeviceSwitchRoutingInterfaceDhcpResponse struct {

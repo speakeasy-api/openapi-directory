@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsAttachToNetworkPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsAttachToNetworkAttachToNetworkRequest struct {
 	// Additional IPs to be assigned to this Server
 	AliasIps []string `json:"alias_ips,omitempty"`
@@ -23,8 +18,9 @@ type PostServersIDActionsAttachToNetworkAttachToNetworkRequest struct {
 }
 
 type PostServersIDActionsAttachToNetworkRequest struct {
-	PathParams PostServersIDActionsAttachToNetworkPathParams
-	Request    *PostServersIDActionsAttachToNetworkAttachToNetworkRequest `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsAttachToNetworkAttachToNetworkRequest `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsAttachToNetworkActionResponseActionError - Error message for the Action if error occurred, otherwise null

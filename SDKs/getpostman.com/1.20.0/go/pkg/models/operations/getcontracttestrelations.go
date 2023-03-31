@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetContractTestRelationsPathParams struct {
+type GetContractTestRelationsRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetContractTestRelationsRequest struct {
-	PathParams GetContractTestRelationsPathParams
 }
 
 type GetContractTestRelations200ApplicationJSONContracttest struct {

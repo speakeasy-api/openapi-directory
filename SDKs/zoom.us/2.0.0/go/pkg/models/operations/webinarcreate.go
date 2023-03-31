@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarCreatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarCreateApplicationJSONRecurrenceWebinarMonthlyWeekEnum - Use this field **only if you're scheduling a recurring webinar of type** `3` to state the week of the month when the webinar should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the webinar should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
@@ -614,9 +608,9 @@ type WebinarCreateApplicationJSON struct {
 }
 
 type WebinarCreateRequest struct {
-	PathParams WebinarCreatePathParams
-	Request    WebinarCreateApplicationJSON `request:"mediaType=application/json"`
-	Security   WebinarCreateSecurity
+	RequestBody WebinarCreateApplicationJSON `request:"mediaType=application/json"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // WebinarCreate201ApplicationXMLOccurrences - Occurence object. This object is only returned for Recurring Webinars.

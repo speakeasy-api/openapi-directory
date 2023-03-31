@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ServicesAllocationsIDPathParams struct {
+type GetSetupV1ServicesAllocationsIDRequest struct {
 	// id of serviceAllocation object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ServicesAllocationsIDRequest struct {
-	PathParams GetSetupV1ServicesAllocationsIDPathParams
 }
 
 type GetSetupV1ServicesAllocationsIDResponse struct {

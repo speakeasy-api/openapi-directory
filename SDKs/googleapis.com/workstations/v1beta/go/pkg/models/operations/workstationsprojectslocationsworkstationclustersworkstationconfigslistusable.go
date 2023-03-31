@@ -8,16 +8,11 @@ import (
 )
 
 type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsablePathParams struct {
-	// Required. Parent resource name.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableQueryParams struct {
+type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsabl
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// next_page_token value returned from a previous List request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent resource name.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsabl
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableRequest struct {
-	PathParams  WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsablePathParams
-	QueryParams WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableQueryParams
-	Security    WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableSecurity
 }
 
 type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse struct {

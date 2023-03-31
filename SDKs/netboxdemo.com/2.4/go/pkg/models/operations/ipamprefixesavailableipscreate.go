@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamPrefixesAvailableIpsCreatePathParams struct {
+type IpamPrefixesAvailableIpsCreateRequest struct {
+	WritablePrefixInput shared.WritablePrefixInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this prefix.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamPrefixesAvailableIpsCreateRequest struct {
-	PathParams IpamPrefixesAvailableIpsCreatePathParams
-	Request    shared.WritablePrefixInput `request:"mediaType=application/json"`
 }
 
 type IpamPrefixesAvailableIpsCreateResponse struct {

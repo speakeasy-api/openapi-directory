@@ -32,20 +32,20 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // StorageNotificationsDelete - Permanently deletes a notification subscription.
-func (s *notifications) StorageNotificationsDelete(ctx context.Context, request operations.StorageNotificationsDeleteRequest) (*operations.StorageNotificationsDeleteResponse, error) {
+func (s *notifications) StorageNotificationsDelete(ctx context.Context, request operations.StorageNotificationsDeleteRequest, security operations.StorageNotificationsDeleteSecurity) (*operations.StorageNotificationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs/{notification}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs/{notification}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *notifications) StorageNotificationsDelete(ctx context.Context, request 
 }
 
 // StorageNotificationsGet - View a notification configuration.
-func (s *notifications) StorageNotificationsGet(ctx context.Context, request operations.StorageNotificationsGetRequest) (*operations.StorageNotificationsGetResponse, error) {
+func (s *notifications) StorageNotificationsGet(ctx context.Context, request operations.StorageNotificationsGetRequest, security operations.StorageNotificationsGetSecurity) (*operations.StorageNotificationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs/{notification}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs/{notification}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *notifications) StorageNotificationsGet(ctx context.Context, request ope
 }
 
 // StorageNotificationsInsert - Creates a notification subscription for a given bucket.
-func (s *notifications) StorageNotificationsInsert(ctx context.Context, request operations.StorageNotificationsInsertRequest) (*operations.StorageNotificationsInsertResponse, error) {
+func (s *notifications) StorageNotificationsInsert(ctx context.Context, request operations.StorageNotificationsInsertRequest, security operations.StorageNotificationsInsertSecurity) (*operations.StorageNotificationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Notification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *notifications) StorageNotificationsInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *notifications) StorageNotificationsInsert(ctx context.Context, request 
 }
 
 // StorageNotificationsList - Retrieves a list of notification subscriptions for a given bucket.
-func (s *notifications) StorageNotificationsList(ctx context.Context, request operations.StorageNotificationsListRequest) (*operations.StorageNotificationsListResponse, error) {
+func (s *notifications) StorageNotificationsList(ctx context.Context, request operations.StorageNotificationsListRequest, security operations.StorageNotificationsListSecurity) (*operations.StorageNotificationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/notificationConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

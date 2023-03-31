@@ -12,25 +12,16 @@ var DeleteMemberServerList = []string{
 }
 
 type DeleteMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteMemberPathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteMemberHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.MemberEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteMemberRequest struct {
-	PathParams DeleteMemberPathParams
-	Headers    DeleteMemberHeaders
-	Security   DeleteMemberSecurity
-	ServerURL  *string
+	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.MemberEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type DeleteMemberResponse struct {

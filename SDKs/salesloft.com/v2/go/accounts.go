@@ -40,7 +40,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Deleting an account will remove all connected people from that account.
 func (s *accounts) DeleteV2AccountsIDJSON(ctx context.Context, request operations.DeleteV2AccountsIDJSONRequest) (*operations.DeleteV2AccountsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *accounts) GetV2AccountsJSON(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,7 +126,7 @@ func (s *accounts) GetV2AccountsJSON(ctx context.Context, request operations.Get
 // Fetches an account, by ID only.
 func (s *accounts) GetV2AccountsIDJSON(ctx context.Context, request operations.GetV2AccountsIDJSONRequest) (*operations.GetV2AccountsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *accounts) GetV2AccountsIDJSON(ctx context.Context, request operations.G
 // Creates an account.
 //
 // "domain" must be unique on the current team.
-func (s *accounts) PostV2AccountsJSON(ctx context.Context, request operations.PostV2AccountsJSONRequest) (*operations.PostV2AccountsJSONResponse, error) {
+func (s *accounts) PostV2AccountsJSON(ctx context.Context, request operations.PostV2AccountsJSONRequestBody) (*operations.PostV2AccountsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts.json"
 
@@ -230,9 +230,9 @@ func (s *accounts) PostV2AccountsJSON(ctx context.Context, request operations.Po
 // "domain" must be unique on the current team.
 func (s *accounts) PutV2AccountsIDJSON(ctx context.Context, request operations.PutV2AccountsIDJSONRequest) (*operations.PutV2AccountsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

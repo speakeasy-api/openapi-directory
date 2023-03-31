@@ -36,7 +36,7 @@ func (e *EnterpriseAdminListPublicKeysSortEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type EnterpriseAdminListPublicKeysQueryParams struct {
+type EnterpriseAdminListPublicKeysRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -46,10 +46,6 @@ type EnterpriseAdminListPublicKeysQueryParams struct {
 	// Only show public keys accessed after the given time.
 	Since *string                                `queryParam:"style=form,explode=true,name=since"`
 	Sort  *EnterpriseAdminListPublicKeysSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type EnterpriseAdminListPublicKeysRequest struct {
-	QueryParams EnterpriseAdminListPublicKeysQueryParams
 }
 
 type EnterpriseAdminListPublicKeysResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type GamesScoresListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GamesScoresListCollectionEnum - The collection of scores you're requesting.
@@ -44,13 +44,6 @@ func (e *GamesScoresListCollectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GamesScoresListPathParams struct {
-	// The collection of scores you're requesting.
-	Collection GamesScoresListCollectionEnum `pathParam:"style=simple,explode=false,name=collection"`
-	// The ID of the leaderboard.
-	LeaderboardID string `pathParam:"style=simple,explode=false,name=leaderboardId"`
-}
-
 // GamesScoresListTimeSpanEnum - The time span for the scores and ranks you're requesting.
 type GamesScoresListTimeSpanEnum string
 
@@ -81,7 +74,7 @@ func (e *GamesScoresListTimeSpanEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GamesScoresListQueryParams struct {
+type GamesScoresListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -90,12 +83,16 @@ type GamesScoresListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The collection of scores you're requesting.
+	Collection GamesScoresListCollectionEnum `pathParam:"style=simple,explode=false,name=collection"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The preferred language to use for strings returned by this method.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
+	// The ID of the leaderboard.
+	LeaderboardID string `pathParam:"style=simple,explode=false,name=leaderboardId"`
 	// The maximum number of leaderboard scores to return in the response. For any response, the actual number of leaderboard scores returned may be less than the specified `maxResults`.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.
@@ -112,12 +109,6 @@ type GamesScoresListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesScoresListRequest struct {
-	PathParams  GamesScoresListPathParams
-	QueryParams GamesScoresListQueryParams
-	Security    GamesScoresListSecurity
 }
 
 type GamesScoresListResponse struct {

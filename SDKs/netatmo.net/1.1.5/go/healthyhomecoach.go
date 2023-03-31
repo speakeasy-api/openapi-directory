@@ -34,7 +34,7 @@ func newHealthyhomecoach(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // Gethomecoachsdata - The method gethomecoachsdata Returns data from a user Healthy Home Coach Station (measures and device specific data).
-func (s *healthyhomecoach) Gethomecoachsdata(ctx context.Context, request operations.GethomecoachsdataRequest) (*operations.GethomecoachsdataResponse, error) {
+func (s *healthyhomecoach) Gethomecoachsdata(ctx context.Context, request operations.GethomecoachsdataRequest, security operations.GethomecoachsdataSecurity) (*operations.GethomecoachsdataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/gethomecoachsdata"
 
@@ -43,11 +43,11 @@ func (s *healthyhomecoach) Gethomecoachsdata(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDCustomersAllPathParams struct {
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDCustomersAllQueryParams struct {
+type GetSpacesSpaceIDCustomersAllRequest struct {
 	// CustomerNumber of the employee
 	CustomerNumber *string `queryParam:"style=form,explode=true,name=CustomerNumber"`
 	// if present returns infos of the ContractingPartner too
 	WithContractingPartner *string `queryParam:"style=form,explode=true,name=WithContractingPartner"`
-}
-
-type GetSpacesSpaceIDCustomersAllRequest struct {
-	PathParams  GetSpacesSpaceIDCustomersAllPathParams
-	QueryParams GetSpacesSpaceIDCustomersAllQueryParams
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDCustomersAllResponse struct {

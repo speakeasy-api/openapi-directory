@@ -32,16 +32,16 @@ func newSettingsExternal(defaultClient, securityClient HTTPClient, serverURL, la
 	}
 }
 
-func (s *settingsExternal) GetMarketingV3MarketingEventsAppIDSettingsGetAll(ctx context.Context, request operations.GetMarketingV3MarketingEventsAppIDSettingsGetAllRequest) (*operations.GetMarketingV3MarketingEventsAppIDSettingsGetAllResponse, error) {
+func (s *settingsExternal) GetMarketingV3MarketingEventsAppIDSettingsGetAll(ctx context.Context, request operations.GetMarketingV3MarketingEventsAppIDSettingsGetAllRequest, security operations.GetMarketingV3MarketingEventsAppIDSettingsGetAllSecurity) (*operations.GetMarketingV3MarketingEventsAppIDSettingsGetAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/{appId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/{appId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,11 +84,11 @@ func (s *settingsExternal) GetMarketingV3MarketingEventsAppIDSettingsGetAll(ctx 
 
 	return res, nil
 }
-func (s *settingsExternal) PostMarketingV3MarketingEventsAppIDSettingsCreate(ctx context.Context, request operations.PostMarketingV3MarketingEventsAppIDSettingsCreateRequest) (*operations.PostMarketingV3MarketingEventsAppIDSettingsCreateResponse, error) {
+func (s *settingsExternal) PostMarketingV3MarketingEventsAppIDSettingsCreate(ctx context.Context, request operations.PostMarketingV3MarketingEventsAppIDSettingsCreateRequest, security operations.PostMarketingV3MarketingEventsAppIDSettingsCreateSecurity) (*operations.PostMarketingV3MarketingEventsAppIDSettingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/{appId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/{appId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EventDetailSettingsURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,7 +103,7 @@ func (s *settingsExternal) PostMarketingV3MarketingEventsAppIDSettingsCreate(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

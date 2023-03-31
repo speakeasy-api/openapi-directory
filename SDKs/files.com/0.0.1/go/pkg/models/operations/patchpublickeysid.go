@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchPublicKeysIDPathParams struct {
-	// Public Key ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchPublicKeysIDRequestBody struct {
 	// Internal reference for key.
 	Title string `multipartForm:"name=title"`
 }
 
 type PatchPublicKeysIDRequest struct {
-	PathParams PatchPublicKeysIDPathParams
-	Request    PatchPublicKeysIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PatchPublicKeysIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Public Key ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchPublicKeysIDResponse struct {

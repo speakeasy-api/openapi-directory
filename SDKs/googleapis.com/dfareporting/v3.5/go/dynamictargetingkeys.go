@@ -32,20 +32,20 @@ func newDynamicTargetingKeys(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // DfareportingDynamicTargetingKeysDelete - Deletes an existing dynamic targeting key.
-func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysDelete(ctx context.Context, request operations.DfareportingDynamicTargetingKeysDeleteRequest) (*operations.DfareportingDynamicTargetingKeysDeleteResponse, error) {
+func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysDelete(ctx context.Context, request operations.DfareportingDynamicTargetingKeysDeleteRequest, security operations.DfareportingDynamicTargetingKeysDeleteSecurity) (*operations.DfareportingDynamicTargetingKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,11 +71,11 @@ func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysDelete(ctx contex
 }
 
 // DfareportingDynamicTargetingKeysInsert - Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
-func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysInsert(ctx context.Context, request operations.DfareportingDynamicTargetingKeysInsertRequest) (*operations.DfareportingDynamicTargetingKeysInsertResponse, error) {
+func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysInsert(ctx context.Context, request operations.DfareportingDynamicTargetingKeysInsertRequest, security operations.DfareportingDynamicTargetingKeysInsertSecurity) (*operations.DfareportingDynamicTargetingKeysInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DynamicTargetingKey", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -87,11 +87,11 @@ func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysInsert(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysInsert(ctx contex
 }
 
 // DfareportingDynamicTargetingKeysList - Retrieves a list of dynamic targeting keys.
-func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysList(ctx context.Context, request operations.DfareportingDynamicTargetingKeysListRequest) (*operations.DfareportingDynamicTargetingKeysListResponse, error) {
+func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysList(ctx context.Context, request operations.DfareportingDynamicTargetingKeysListRequest, security operations.DfareportingDynamicTargetingKeysListSecurity) (*operations.DfareportingDynamicTargetingKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

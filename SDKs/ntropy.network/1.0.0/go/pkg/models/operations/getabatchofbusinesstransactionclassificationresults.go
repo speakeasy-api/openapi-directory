@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetABatchOfBusinessTransactionClassificationResultsPathParams struct {
+type GetABatchOfBusinessTransactionClassificationResultsRequest struct {
 	// (Required) Batch id.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetABatchOfBusinessTransactionClassificationResultsRequest struct {
-	PathParams GetABatchOfBusinessTransactionClassificationResultsPathParams
 }
 
 type GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults struct {

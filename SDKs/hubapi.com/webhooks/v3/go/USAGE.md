@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteWebhooksV3AppIDSettingsClearRequest{
-        Security: operations.DeleteWebhooksV3AppIDSettingsClearSecurity{
-            DeveloperHapikey: shared.SchemeDeveloperHapikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.DeleteWebhooksV3AppIDSettingsClearPathParams{
-            AppID: 548814,
-        },
+        AppID: 548814,
     }
 
     ctx := context.Background()
-    res, err := s.Settings.DeleteWebhooksV3AppIDSettingsClear(ctx, req)
+    res, err := s.Settings.DeleteWebhooksV3AppIDSettingsClear(ctx, req, operations.DeleteWebhooksV3AppIDSettingsClearSecurity{
+        DeveloperHapikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

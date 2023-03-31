@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETGameSummaryUsingGETPathParams struct {
-	// apiKey
-	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
 // GETGameSummaryUsingGETStageEnum - stage
 type GETGameSummaryUsingGETStageEnum string
 
@@ -39,18 +34,15 @@ func (e *GETGameSummaryUsingGETStageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGameSummaryUsingGETQueryParams struct {
+type GETGameSummaryUsingGETRequest struct {
+	// apiKey
+	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// yyyy-MM-dd
 	EndDate types.Date `queryParam:"style=form,explode=true,name=endDate"`
 	// stage
 	Stage GETGameSummaryUsingGETStageEnum `queryParam:"style=form,explode=true,name=stage"`
 	// yyyy-MM-dd
 	StartDate types.Date `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GETGameSummaryUsingGETRequest struct {
-	PathParams  GETGameSummaryUsingGETPathParams
-	QueryParams GETGameSummaryUsingGETQueryParams
 }
 
 type GETGameSummaryUsingGETResponse struct {

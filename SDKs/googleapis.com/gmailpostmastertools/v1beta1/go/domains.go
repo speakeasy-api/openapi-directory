@@ -33,7 +33,7 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GmailpostmastertoolsDomainsList - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
-func (s *domains) GmailpostmastertoolsDomainsList(ctx context.Context, request operations.GmailpostmastertoolsDomainsListRequest) (*operations.GmailpostmastertoolsDomainsListResponse, error) {
+func (s *domains) GmailpostmastertoolsDomainsList(ctx context.Context, request operations.GmailpostmastertoolsDomainsListRequest, security operations.GmailpostmastertoolsDomainsListSecurity) (*operations.GmailpostmastertoolsDomainsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/domains"
 
@@ -42,11 +42,11 @@ func (s *domains) GmailpostmastertoolsDomainsList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *domains) GmailpostmastertoolsDomainsList(ctx context.Context, request o
 }
 
 // GmailpostmastertoolsDomainsTrafficStatsGet - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
-func (s *domains) GmailpostmastertoolsDomainsTrafficStatsGet(ctx context.Context, request operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest) (*operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse, error) {
+func (s *domains) GmailpostmastertoolsDomainsTrafficStatsGet(ctx context.Context, request operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest, security operations.GmailpostmastertoolsDomainsTrafficStatsGetSecurity) (*operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *domains) GmailpostmastertoolsDomainsTrafficStatsGet(ctx context.Context
 }
 
 // GmailpostmastertoolsDomainsTrafficStatsList - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
-func (s *domains) GmailpostmastertoolsDomainsTrafficStatsList(ctx context.Context, request operations.GmailpostmastertoolsDomainsTrafficStatsListRequest) (*operations.GmailpostmastertoolsDomainsTrafficStatsListResponse, error) {
+func (s *domains) GmailpostmastertoolsDomainsTrafficStatsList(ctx context.Context, request operations.GmailpostmastertoolsDomainsTrafficStatsListRequest, security operations.GmailpostmastertoolsDomainsTrafficStatsListSecurity) (*operations.GmailpostmastertoolsDomainsTrafficStatsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/trafficStats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/trafficStats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

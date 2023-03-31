@@ -32,11 +32,11 @@ func newReturnpolicyonline(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // ContentReturnpolicyonlineCreate - Creates a new return policy.
-func (s *returnpolicyonline) ContentReturnpolicyonlineCreate(ctx context.Context, request operations.ContentReturnpolicyonlineCreateRequest) (*operations.ContentReturnpolicyonlineCreateResponse, error) {
+func (s *returnpolicyonline) ContentReturnpolicyonlineCreate(ctx context.Context, request operations.ContentReturnpolicyonlineCreateRequest, security operations.ContentReturnpolicyonlineCreateSecurity) (*operations.ContentReturnpolicyonlineCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnPolicyOnlineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *returnpolicyonline) ContentReturnpolicyonlineCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *returnpolicyonline) ContentReturnpolicyonlineCreate(ctx context.Context
 }
 
 // ContentReturnpolicyonlineDelete - Deletes an existing return policy.
-func (s *returnpolicyonline) ContentReturnpolicyonlineDelete(ctx context.Context, request operations.ContentReturnpolicyonlineDeleteRequest) (*operations.ContentReturnpolicyonlineDeleteResponse, error) {
+func (s *returnpolicyonline) ContentReturnpolicyonlineDelete(ctx context.Context, request operations.ContentReturnpolicyonlineDeleteRequest, security operations.ContentReturnpolicyonlineDeleteSecurity) (*operations.ContentReturnpolicyonlineDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *returnpolicyonline) ContentReturnpolicyonlineDelete(ctx context.Context
 }
 
 // ContentReturnpolicyonlineGet - Gets an existing return policy.
-func (s *returnpolicyonline) ContentReturnpolicyonlineGet(ctx context.Context, request operations.ContentReturnpolicyonlineGetRequest) (*operations.ContentReturnpolicyonlineGetResponse, error) {
+func (s *returnpolicyonline) ContentReturnpolicyonlineGet(ctx context.Context, request operations.ContentReturnpolicyonlineGetRequest, security operations.ContentReturnpolicyonlineGetSecurity) (*operations.ContentReturnpolicyonlineGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *returnpolicyonline) ContentReturnpolicyonlineGet(ctx context.Context, r
 }
 
 // ContentReturnpolicyonlineList - Lists all existing return policies.
-func (s *returnpolicyonline) ContentReturnpolicyonlineList(ctx context.Context, request operations.ContentReturnpolicyonlineListRequest) (*operations.ContentReturnpolicyonlineListResponse, error) {
+func (s *returnpolicyonline) ContentReturnpolicyonlineList(ctx context.Context, request operations.ContentReturnpolicyonlineListRequest, security operations.ContentReturnpolicyonlineListSecurity) (*operations.ContentReturnpolicyonlineListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *returnpolicyonline) ContentReturnpolicyonlineList(ctx context.Context, 
 }
 
 // ContentReturnpolicyonlinePatch - Updates an existing return policy.
-func (s *returnpolicyonline) ContentReturnpolicyonlinePatch(ctx context.Context, request operations.ContentReturnpolicyonlinePatchRequest) (*operations.ContentReturnpolicyonlinePatchResponse, error) {
+func (s *returnpolicyonline) ContentReturnpolicyonlinePatch(ctx context.Context, request operations.ContentReturnpolicyonlinePatchRequest, security operations.ContentReturnpolicyonlinePatchSecurity) (*operations.ContentReturnpolicyonlinePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnPolicyOnlineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *returnpolicyonline) ContentReturnpolicyonlinePatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

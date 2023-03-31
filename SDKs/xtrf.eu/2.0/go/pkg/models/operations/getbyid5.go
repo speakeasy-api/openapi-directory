@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByID5PathParams struct {
-	// provider's internal identifier
-	ProviderID int64 `pathParam:"style=simple,explode=false,name=providerId"`
-}
-
-type GetByID5QueryParams struct {
+type GetByID5Request struct {
 	// list of adittional fields which should be embedded in the response (ie. persons)
 	Embed *string `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetByID5Request struct {
-	PathParams  GetByID5PathParams
-	QueryParams GetByID5QueryParams
+	// provider's internal identifier
+	ProviderID int64 `pathParam:"style=simple,explode=false,name=providerId"`
 }
 
 type GetByID5Response struct {

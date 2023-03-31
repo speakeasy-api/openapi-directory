@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UserEmailUpdatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UserEmailUpdateApplicationJSON - User email.
 type UserEmailUpdateApplicationJSON struct {
 	// User’s email. The length should be less than 128 characters.
@@ -18,9 +13,10 @@ type UserEmailUpdateApplicationJSON struct {
 }
 
 type UserEmailUpdateRequest struct {
-	PathParams UserEmailUpdatePathParams
 	// User email.
-	Request UserEmailUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody UserEmailUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserEmailUpdateResponse struct {

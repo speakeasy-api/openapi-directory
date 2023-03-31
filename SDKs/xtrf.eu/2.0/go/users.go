@@ -37,9 +37,9 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Sets user's password to a new value.
 func (s *users) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -125,7 +125,7 @@ func (s *users) GetAllNamesWithIds1(ctx context.Context) (*operations.GetAllName
 // Returns user details.
 func (s *users) GetByID6(ctx context.Context, request operations.GetByID6Request) (*operations.GetByID6Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *users) GetByID6(ctx context.Context, request operations.GetByID6Request
 // Returns custom field of a given user.
 func (s *users) GetCustomField1(ctx context.Context, request operations.GetCustomField1Request) (*operations.GetCustomField1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields/{customFieldKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields/{customFieldKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *users) GetCustomField1(ctx context.Context, request operations.GetCusto
 // Returns custom fields of a given user.
 func (s *users) GetCustomFields4(ctx context.Context, request operations.GetCustomFields4Request) (*operations.GetCustomFields4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,9 +350,9 @@ func (s *users) GetTimeZone(ctx context.Context) (*operations.GetTimeZoneRespons
 // Updates given custom field of a given user.
 func (s *users) UpdateCustomField1(ctx context.Context, request operations.UpdateCustomField1Request) (*operations.UpdateCustomField1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields/{customFieldKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields/{customFieldKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,9 +405,9 @@ func (s *users) UpdateCustomField1(ctx context.Context, request operations.Updat
 // Updates custom fields of a given user.
 func (s *users) UpdateCustomFields2(ctx context.Context, request operations.UpdateCustomFields2Request) (*operations.UpdateCustomFields2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,9 +460,9 @@ func (s *users) UpdateCustomFields2(ctx context.Context, request operations.Upda
 // Updates an existing user.
 func (s *users) Update3(ctx context.Context, request operations.Update3Request) (*operations.Update3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

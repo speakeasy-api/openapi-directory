@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateScoreConfigRequest struct {
-	Request shared.CreateConfigInput `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type CreateScoreConfigResponse struct {
 	ContentType string
 	// Validation error when creating the ScoreConfig

@@ -12,10 +12,11 @@ var ListMediaProcessorServerList = []string{
 }
 
 type ListMediaProcessorSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMediaProcessorQueryParams struct {
+type ListMediaProcessorRequest struct {
 	// The sort order of the list by `date_created`. Can be: `asc` (ascending) or `desc` (descending) with `desc` as the default.
 	Order *shared.MediaProcessorEnumOrderEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -26,12 +27,6 @@ type ListMediaProcessorQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Status to filter by, with possible values `started`, `ended` or `failed`.
 	Status *shared.MediaProcessorEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListMediaProcessorRequest struct {
-	QueryParams ListMediaProcessorQueryParams
-	Security    ListMediaProcessorSecurity
-	ServerURL   *string
 }
 
 type ListMediaProcessorListMediaProcessorResponseMeta struct {

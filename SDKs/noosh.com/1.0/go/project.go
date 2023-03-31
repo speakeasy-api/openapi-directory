@@ -36,9 +36,9 @@ func newProject(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Attach children projects to specific Project
 func (s *project) AttachProjectJSON(ctx context.Context, request operations.AttachProjectJSONRequest) (*operations.AttachProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectIDListVO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -141,9 +141,9 @@ func (s *project) AttachProjectJSON(ctx context.Context, request operations.Atta
 // Attach children projects to specific Project
 func (s *project) AttachProjectRaw(ctx context.Context, request operations.AttachProjectRawRequest) (*operations.AttachProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -246,7 +246,7 @@ func (s *project) AttachProjectRaw(ctx context.Context, request operations.Attac
 // Archieve a specific Project
 func (s *project) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -344,7 +344,7 @@ func (s *project) DeleteProject(ctx context.Context, request operations.DeletePr
 // Get a specific Project
 func (s *project) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -499,7 +499,7 @@ func (s *project) GetProject(ctx context.Context, request operations.GetProjectR
 // List the projects
 func (s *project) GetProjectList(ctx context.Context, request operations.GetProjectListRequest) (*operations.GetProjectListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -654,9 +654,9 @@ func (s *project) GetProjectList(ctx context.Context, request operations.GetProj
 // Patch a specific Project
 func (s *project) PatchProjectJSON(ctx context.Context, request operations.PatchProjectJSONRequest) (*operations.PatchProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectPatchPO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -759,9 +759,9 @@ func (s *project) PatchProjectJSON(ctx context.Context, request operations.Patch
 // Patch a specific Project
 func (s *project) PatchProjectRaw(ctx context.Context, request operations.PatchProjectRawRequest) (*operations.PatchProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -864,9 +864,9 @@ func (s *project) PatchProjectRaw(ctx context.Context, request operations.PatchP
 // Create a Project
 func (s *project) PostProjectJSON(ctx context.Context, request operations.PostProjectJSONRequest) (*operations.PostProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectPersistVO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1026,9 +1026,9 @@ func (s *project) PostProjectJSON(ctx context.Context, request operations.PostPr
 // Create a Project
 func (s *project) PostProjectRaw(ctx context.Context, request operations.PostProjectRawRequest) (*operations.PostProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1188,9 +1188,9 @@ func (s *project) PostProjectRaw(ctx context.Context, request operations.PostPro
 // Update a specific Project
 func (s *project) PutProjectJSON(ctx context.Context, request operations.PutProjectJSONRequest) (*operations.PutProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectPersistVO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1293,9 +1293,9 @@ func (s *project) PutProjectJSON(ctx context.Context, request operations.PutProj
 // Update a specific Project
 func (s *project) PutProjectRaw(ctx context.Context, request operations.PutProjectRawRequest) (*operations.PutProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

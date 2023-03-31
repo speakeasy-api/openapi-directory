@@ -34,7 +34,7 @@ func newClientCredentials(defaultClient, securityClient HTTPClient, serverURL, l
 
 // AddClientSecret - Obtain new client secret.
 // Obtain new client secret for Paylocity-issued client id. See Setup section for details.
-func (s *clientCredentials) AddClientSecret(ctx context.Context, request operations.AddClientSecretRequest) (*operations.AddClientSecretResponse, error) {
+func (s *clientCredentials) AddClientSecret(ctx context.Context, request shared.AddClientSecret, security operations.AddClientSecretSecurity) (*operations.AddClientSecretResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/credentials/secrets"
 
@@ -53,7 +53,7 @@ func (s *clientCredentials) AddClientSecret(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

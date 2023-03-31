@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetProfileSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetProfileQueryParams struct {
-	// to get a contract (if not signed error 404 + html contract)
-	Contract *string `queryParam:"style=form,explode=true,name=Contract"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetProfileRequest struct {
-	QueryParams GetProfileQueryParams
-	Security    GetProfileSecurity
+	// to get a contract (if not signed error 404 + html contract)
+	Contract *string `queryParam:"style=form,explode=true,name=Contract"`
 }
 
 type GetProfile200ApplicationJSONBirth struct {

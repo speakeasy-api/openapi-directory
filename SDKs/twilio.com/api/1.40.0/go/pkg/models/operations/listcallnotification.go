@@ -13,17 +13,15 @@ var ListCallNotificationServerList = []string{
 }
 
 type ListCallNotificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCallNotificationPathParams struct {
+type ListCallNotificationRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call Notification resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the Call Notification resources to read.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-}
-
-type ListCallNotificationQueryParams struct {
 	// Only read notifications of the specified log level. Can be:  `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.
 	Log *int64 `queryParam:"style=form,explode=true,name=Log"`
 	// Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `<=YYYY-MM-DD` for messages logged at or before midnight on a date, or `>=YYYY-MM-DD` for messages logged at or after midnight on a date.
@@ -38,13 +36,6 @@ type ListCallNotificationQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListCallNotificationRequest struct {
-	PathParams  ListCallNotificationPathParams
-	QueryParams ListCallNotificationQueryParams
-	Security    ListCallNotificationSecurity
-	ServerURL   *string
 }
 
 // ListCallNotificationListCallNotificationResponse - OK

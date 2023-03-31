@@ -34,7 +34,7 @@ func (e *CurrenciesHistoryGETFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CurrenciesHistoryGETQueryParams struct {
+type CurrenciesHistoryGETRequest struct {
 	// end date of time period. format is <i>yyyy-mm-dd</i>. Default is current date.
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// to override content negotiation specify a value of json or xml
@@ -56,10 +56,6 @@ type CurrenciesHistoryGETQueryParams struct {
 	Pairs string `queryParam:"style=form,explode=true,name=pairs"`
 	// start date of time period. format is <i>yyyy-mm-dd</i>
 	Start time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type CurrenciesHistoryGETRequest struct {
-	QueryParams CurrenciesHistoryGETQueryParams
 }
 
 type CurrenciesHistoryGETResponse struct {

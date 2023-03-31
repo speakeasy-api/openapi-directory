@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutProjectJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PutProjectJSONRequest struct {
-	PathParams PutProjectJSONPathParams
-	Request    *shared.ProjectPersistVO `request:"mediaType=application/json"`
+	ProjectPersistVO *shared.ProjectPersistVO `request:"mediaType=application/json"`
+	ProjectID        string                   `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID      string                   `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PutProjectJSONResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCorrespondenceAddressPathParams struct {
+type UpdateCorrespondenceAddressRequest struct {
+	// Updated address of a given client.
+	AddressDTO shared.AddressDTO `request:"mediaType=application/json"`
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type UpdateCorrespondenceAddressRequest struct {
-	PathParams UpdateCorrespondenceAddressPathParams
-	// Updated address of a given client.
-	Request shared.AddressDTO `request:"mediaType=application/json"`
 }
 
 type UpdateCorrespondenceAddressResponse struct {

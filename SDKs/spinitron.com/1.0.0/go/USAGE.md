@@ -13,29 +13,25 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AccessToken: &shared.SchemeAccessToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AccessToken: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.GetPersonasRequest{
-        QueryParams: operations.GetPersonasQueryParams{
-            Count: 548814,
-            Expand: []string{
-                "distinctio",
-                "quibusdam",
-                "unde",
-            },
-            Fields: []string{
-                "corrupti",
-                "illum",
-                "vel",
-                "error",
-            },
-            Name: "deserunt",
-            Page: 384382,
+        Count: 548814,
+        Expand: []string{
+            "distinctio",
+            "quibusdam",
+            "unde",
         },
+        Fields: []string{
+            "corrupti",
+            "illum",
+            "vel",
+            "error",
+        },
+        Name: "deserunt",
+        Page: 384382,
     }
 
     ctx := context.Background()

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeleteTagProtectionPathParams struct {
+type ReposDeleteTagProtectionRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the tag protection.
 	TagProtectionID int64 `pathParam:"style=simple,explode=false,name=tag_protection_id"`
-}
-
-type ReposDeleteTagProtectionRequest struct {
-	PathParams ReposDeleteTagProtectionPathParams
 }
 
 type ReposDeleteTagProtectionResponse struct {

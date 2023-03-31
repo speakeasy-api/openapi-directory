@@ -33,7 +33,7 @@ func newSpaces(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // ChatSpacesList - Lists spaces the caller is a member of. Requires [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.spaces` or `chat.spaces.readonly` authorization scope. Lists spaces visible to the caller or authenticated user. Group chats and DMs aren't listed until the first message is sent.
-func (s *spaces) ChatSpacesList(ctx context.Context, request operations.ChatSpacesListRequest) (*operations.ChatSpacesListResponse, error) {
+func (s *spaces) ChatSpacesList(ctx context.Context, request operations.ChatSpacesListRequest, security operations.ChatSpacesListSecurity) (*operations.ChatSpacesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/spaces"
 
@@ -42,11 +42,11 @@ func (s *spaces) ChatSpacesList(ctx context.Context, request operations.ChatSpac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *spaces) ChatSpacesList(ctx context.Context, request operations.ChatSpac
 }
 
 // ChatSpacesMembersList - Lists memberships in a space. Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.memberships` or `chat.memberships.readonly` authorization scope.
-func (s *spaces) ChatSpacesMembersList(ctx context.Context, request operations.ChatSpacesMembersListRequest) (*operations.ChatSpacesMembersListResponse, error) {
+func (s *spaces) ChatSpacesMembersList(ctx context.Context, request operations.ChatSpacesMembersListRequest, security operations.ChatSpacesMembersListSecurity) (*operations.ChatSpacesMembersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *spaces) ChatSpacesMembersList(ctx context.Context, request operations.C
 }
 
 // ChatSpacesMessagesAttachmentsGet - Gets the metadata of a message attachment. The attachment data is fetched using the [media API](https://developers.google.com/chat/api/reference/rest/v1/media/download). Requires [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
-func (s *spaces) ChatSpacesMessagesAttachmentsGet(ctx context.Context, request operations.ChatSpacesMessagesAttachmentsGetRequest) (*operations.ChatSpacesMessagesAttachmentsGetResponse, error) {
+func (s *spaces) ChatSpacesMessagesAttachmentsGet(ctx context.Context, request operations.ChatSpacesMessagesAttachmentsGetRequest, security operations.ChatSpacesMessagesAttachmentsGetSecurity) (*operations.ChatSpacesMessagesAttachmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,11 +177,11 @@ func (s *spaces) ChatSpacesMessagesAttachmentsGet(ctx context.Context, request o
 }
 
 // ChatSpacesMessagesCreate - Creates a message. For example usage, see [Create a message](https://developers.google.com/chat/api/guides/crudl/messages#create_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` or `chat.messages.create` authorization scope. Because Chat provides authentication for [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of the URL that's generated when a webhook is registered, webhooks can create messages without a service account or user authentication.
-func (s *spaces) ChatSpacesMessagesCreate(ctx context.Context, request operations.ChatSpacesMessagesCreateRequest) (*operations.ChatSpacesMessagesCreateResponse, error) {
+func (s *spaces) ChatSpacesMessagesCreate(ctx context.Context, request operations.ChatSpacesMessagesCreateRequest, security operations.ChatSpacesMessagesCreateSecurity) (*operations.ChatSpacesMessagesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -193,11 +193,11 @@ func (s *spaces) ChatSpacesMessagesCreate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,20 +232,20 @@ func (s *spaces) ChatSpacesMessagesCreate(ctx context.Context, request operation
 }
 
 // ChatSpacesMessagesDelete - Deletes a message. For example usage, see [Delete a message](https://developers.google.com/chat/api/guides/crudl/messages#delete_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
-func (s *spaces) ChatSpacesMessagesDelete(ctx context.Context, request operations.ChatSpacesMessagesDeleteRequest) (*operations.ChatSpacesMessagesDeleteResponse, error) {
+func (s *spaces) ChatSpacesMessagesDelete(ctx context.Context, request operations.ChatSpacesMessagesDeleteRequest, security operations.ChatSpacesMessagesDeleteSecurity) (*operations.ChatSpacesMessagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,11 +280,11 @@ func (s *spaces) ChatSpacesMessagesDelete(ctx context.Context, request operation
 }
 
 // ChatSpacesMessagesPatch - Updates a message. For example usage, see [Update a message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
-func (s *spaces) ChatSpacesMessagesPatch(ctx context.Context, request operations.ChatSpacesMessagesPatchRequest) (*operations.ChatSpacesMessagesPatchResponse, error) {
+func (s *spaces) ChatSpacesMessagesPatch(ctx context.Context, request operations.ChatSpacesMessagesPatchRequest, security operations.ChatSpacesMessagesPatchSecurity) (*operations.ChatSpacesMessagesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -296,11 +296,11 @@ func (s *spaces) ChatSpacesMessagesPatch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,11 +335,11 @@ func (s *spaces) ChatSpacesMessagesPatch(ctx context.Context, request operations
 }
 
 // ChatSpacesMessagesUpdate - Updates a message. For example usage, see [Update a message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
-func (s *spaces) ChatSpacesMessagesUpdate(ctx context.Context, request operations.ChatSpacesMessagesUpdateRequest) (*operations.ChatSpacesMessagesUpdateResponse, error) {
+func (s *spaces) ChatSpacesMessagesUpdate(ctx context.Context, request operations.ChatSpacesMessagesUpdateRequest, security operations.ChatSpacesMessagesUpdateSecurity) (*operations.ChatSpacesMessagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -351,11 +351,11 @@ func (s *spaces) ChatSpacesMessagesUpdate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

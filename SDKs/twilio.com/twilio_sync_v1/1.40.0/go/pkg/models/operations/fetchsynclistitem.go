@@ -12,22 +12,17 @@ var FetchSyncListItemServerList = []string{
 }
 
 type FetchSyncListItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSyncListItemPathParams struct {
+type FetchSyncListItemRequest struct {
 	// The index of the Sync List Item resource to fetch.
 	Index int64 `pathParam:"style=simple,explode=false,name=Index"`
 	// The SID of the Sync List with the Sync List Item resource to fetch. Can be the Sync List resource's `sid` or its `unique_name`.
 	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type FetchSyncListItemRequest struct {
-	PathParams FetchSyncListItemPathParams
-	Security   FetchSyncListItemSecurity
-	ServerURL  *string
 }
 
 type FetchSyncListItemResponse struct {

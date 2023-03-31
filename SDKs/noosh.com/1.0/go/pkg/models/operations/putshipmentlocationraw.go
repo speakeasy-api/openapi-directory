@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutShipmentLocationRawPathParams struct {
+type PutShipmentLocationRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	LocationID  string `pathParam:"style=simple,explode=false,name=location_id"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	ShipmentID  string `pathParam:"style=simple,explode=false,name=shipment_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type PutShipmentLocationRawRequest struct {
-	PathParams PutShipmentLocationRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type PutShipmentLocationRawResponse struct {

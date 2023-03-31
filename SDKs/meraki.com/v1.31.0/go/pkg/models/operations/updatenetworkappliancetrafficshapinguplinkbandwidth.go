@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceTrafficShapingUplinkBandwidthPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBodyBandwidthLimitsCellular - The bandwidth settings for the 'cellular' uplink
 type UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBodyBandwidthLimitsCellular struct {
 	// The maximum download limit (integer, in Kbps). null indicates no limit
@@ -50,8 +46,8 @@ type UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody struct {
 }
 
 type UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest struct {
-	PathParams UpdateNetworkApplianceTrafficShapingUplinkBandwidthPathParams
-	Request    *UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceTrafficShapingUplinkBandwidthResponse struct {

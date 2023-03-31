@@ -8,15 +8,12 @@ import (
 )
 
 type ContactsFetchAllSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContactsFetchAllPathParams struct {
+type ContactsFetchAllRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type ContactsFetchAllQueryParams struct {
 	// Filter by email or part of
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Filter by first name or part of
@@ -31,12 +28,6 @@ type ContactsFetchAllQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Filter by tag(s)
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ContactsFetchAllRequest struct {
-	PathParams  ContactsFetchAllPathParams
-	QueryParams ContactsFetchAllQueryParams
-	Security    ContactsFetchAllSecurity
 }
 
 type ContactsFetchAllResponse struct {

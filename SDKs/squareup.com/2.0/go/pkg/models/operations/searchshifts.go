@@ -8,15 +8,7 @@ import (
 )
 
 type SearchShiftsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SearchShiftsRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.SearchShiftsRequest `request:"mediaType=application/json"`
-	Security SearchShiftsSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SearchShiftsResponse struct {

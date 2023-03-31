@@ -20,10 +20,6 @@ type CreateEnvironmentRequestBody struct {
 	Environment *CreateEnvironmentRequestBodyEnvironment `json:"environment,omitempty"`
 }
 
-type CreateEnvironmentRequest struct {
-	Request *CreateEnvironmentRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateEnvironment400ApplicationJSONError struct {
 	Message *string `json:"message,omitempty"`
 	Name    *string `json:"name,omitempty"`

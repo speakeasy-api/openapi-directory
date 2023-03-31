@@ -2,10 +2,6 @@
 
 package shared
 
-type SchemeDeveloperKey struct {
-	APIKey string `security:"name=X-Developer-Key"`
-}
-
 type Security struct {
-	DeveloperKey SchemeDeveloperKey `security:"scheme,type=apiKey,subtype=header"`
+	DeveloperKey string `security:"scheme,type=apiKey,subtype=header,name=X-Developer-Key"`
 }

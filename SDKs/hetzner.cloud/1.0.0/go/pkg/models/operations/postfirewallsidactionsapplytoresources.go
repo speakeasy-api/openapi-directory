@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostFirewallsIDActionsApplyToResourcesPathParams struct {
-	// ID of the Firewall
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector - Configuration for type label_selector, required if type is `label_selector`
 type PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector struct {
 	// Label selector
@@ -64,8 +59,9 @@ type PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequest struct {
 }
 
 type PostFirewallsIDActionsApplyToResourcesRequest struct {
-	PathParams PostFirewallsIDActionsApplyToResourcesPathParams
-	Request    *PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequest `request:"mediaType=application/json"`
+	RequestBody *PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequest `request:"mediaType=application/json"`
+	// ID of the Firewall
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostFirewallsIDActionsApplyToResourcesActionsResponseActionError - Error message for the Action if error occurred, otherwise null

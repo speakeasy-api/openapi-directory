@@ -8,16 +8,11 @@ import (
 )
 
 type CountrySecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CountryPathParams struct {
-	PersonalNameFull string `pathParam:"style=simple,explode=false,name=personalNameFull"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type CountryRequest struct {
-	PathParams CountryPathParams
-	Security   CountrySecurity
+	PersonalNameFull string `pathParam:"style=simple,explode=false,name=personalNameFull"`
 }
 
 type CountryResponse struct {

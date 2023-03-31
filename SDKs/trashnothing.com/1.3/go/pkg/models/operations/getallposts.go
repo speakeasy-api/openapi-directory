@@ -9,12 +9,12 @@ import (
 )
 
 type GetAllPostsSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllPostsQueryParams struct {
+type GetAllPostsRequest struct {
 	// Only posts older than this UTC date and time will be returned. The UTC date and time used must be within a day or less of date_min. And the date and time must be rounded to the nearest second.
 	//
 	DateMax time.Time `queryParam:"style=form,explode=true,name=date_max"`
@@ -30,11 +30,6 @@ type GetAllPostsQueryParams struct {
 	// A comma separated list of the post types to return.  The available post types are: offer, wanted
 	//
 	Types string `queryParam:"style=form,explode=true,name=types"`
-}
-
-type GetAllPostsRequest struct {
-	QueryParams GetAllPostsQueryParams
-	Security    GetAllPostsSecurity
 }
 
 // GetAllPosts200ApplicationJSON - The posts.

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostNewPayRunJobHeaders struct {
+type PostNewPayRunJobRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostNewPayRunJobRequest struct {
-	Headers PostNewPayRunJobHeaders
 	// The pay run job instruction object.
-	Request shared.PayRunJobInstruction `request:"mediaType=application/json"`
+	PayRunJobInstruction shared.PayRunJobInstruction `request:"mediaType=application/json"`
 }
 
 type PostNewPayRunJobResponse struct {

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PreprintsContributorsCreatePathParams struct {
-	// The unique identifier of the Preprint.
-	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
-}
-
 // PreprintsContributorsCreateContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.
 type PreprintsContributorsCreateContributorAttributesPermissionEnum string
 
@@ -56,8 +51,9 @@ type PreprintsContributorsCreateContributorInput struct {
 }
 
 type PreprintsContributorsCreateRequest struct {
-	PathParams PreprintsContributorsCreatePathParams
-	Request    PreprintsContributorsCreateContributorInput `request:"mediaType=application/json"`
+	RequestBody PreprintsContributorsCreateContributorInput `request:"mediaType=application/json"`
+	// The unique identifier of the Preprint.
+	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
 }
 
 type PreprintsContributorsCreateResponse struct {

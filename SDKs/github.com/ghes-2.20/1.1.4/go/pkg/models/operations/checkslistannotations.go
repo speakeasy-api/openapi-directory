@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksListAnnotationsPathParams struct {
+type ChecksListAnnotationsRequest struct {
 	// check_run_id parameter
 	CheckRunID int64  `pathParam:"style=simple,explode=false,name=check_run_id"`
 	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksListAnnotationsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ChecksListAnnotationsRequest struct {
-	PathParams  ChecksListAnnotationsPathParams
-	QueryParams ChecksListAnnotationsQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ChecksListAnnotationsResponse struct {

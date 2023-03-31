@@ -33,17 +33,13 @@ func (e *GetLanguagesFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLanguagesQueryParams struct {
+type GetLanguagesRequest struct {
 	// The attribute by which to filter the results.
 	//
 	// Option descriptions:
 	//  * `texttracks` - Only return text track supported languages
 	//
 	Filter *GetLanguagesFilterEnum `queryParam:"style=form,explode=true,name=filter"`
-}
-
-type GetLanguagesRequest struct {
-	QueryParams GetLanguagesQueryParams
 }
 
 type GetLanguagesResponse struct {

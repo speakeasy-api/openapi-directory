@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchLinkAggregationsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSwitchLinkAggregationsRequest struct {
-	PathParams GetNetworkSwitchLinkAggregationsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSwitchLinkAggregationsResponse struct {

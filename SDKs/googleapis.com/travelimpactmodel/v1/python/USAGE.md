@@ -4,47 +4,57 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest(
-    query_params=operations.TravelimpactmodelFlightsComputeFlightEmissionsQueryParams(
-        dollar_xgafv="1",
-        access_token="amet",
-        alt="proto",
-        callback="velit",
-        fields="id",
-        key="quos",
-        oauth_token="sit",
-        pretty_print=True,
-        quota_user="ut",
-        upload_type="autem",
-        upload_protocol="maxime",
-    ),
-    request=shared.ComputeFlightEmissionsRequest(
+    dollar_xgafv="2",
+    compute_flight_emissions_request=shared.ComputeFlightEmissionsRequest(
         flights=[
             shared.Flight(
                 departure_date=shared.Date(
-                    day=3414330612766374518,
-                    month=7016130896292550698,
-                    year=8639846375246871580,
+                    day=715190,
+                    month=844266,
+                    year=602763,
                 ),
-                destination="et",
-                flight_number=6689465552050660190,
-                operating_carrier_code="quis",
-                origin="dolor",
+                destination="nulla",
+                flight_number=544883,
+                operating_carrier_code="illum",
+                origin="vel",
             ),
             shared.Flight(
                 departure_date=shared.Date(
-                    day=4465709863325755882,
-                    month=150416842709719260,
-                    year=7716596964253133653,
+                    day=623564,
+                    month=645894,
+                    year=384382,
                 ),
-                destination="nihil",
-                flight_number=8732707823561012094,
-                operating_carrier_code="laborum",
-                origin="error",
+                destination="iure",
+                flight_number=297534,
+                operating_carrier_code="debitis",
+                origin="ipsa",
+            ),
+            shared.Flight(
+                departure_date=shared.Date(
+                    day=963663,
+                    month=272656,
+                    year=383441,
+                ),
+                destination="molestiae",
+                flight_number=791725,
+                operating_carrier_code="placeat",
+                origin="voluptatum",
             ),
         ],
     ),
+    access_token="iusto",
+    alt="media",
+    callback="nisi",
+    fields_="recusandae",
+    key="temporibus",
+    oauth_token="ab",
+    pretty_print=False,
+    quota_user="quis",
+    upload_type="veritatis",
+    upload_protocol="deserunt",
 )
     
 res = s.flights.travelimpactmodel_flights_compute_flight_emissions(req)

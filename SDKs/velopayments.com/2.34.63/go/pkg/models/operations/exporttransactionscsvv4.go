@@ -38,7 +38,7 @@ func (e *ExportTransactionsCsvv4IncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ExportTransactionsCsvv4QueryParams struct {
+type ExportTransactionsCsvv4Request struct {
 	// End date, inclusive. Format is YYYY-MM-DD
 	EndDate *types.Date `queryParam:"style=form,explode=true,name=endDate"`
 	// <p>Mode to determine whether to include other Payor's data in the results.</p>
@@ -55,10 +55,6 @@ type ExportTransactionsCsvv4QueryParams struct {
 	PayorID *string `queryParam:"style=form,explode=true,name=payorId"`
 	// Start date, inclusive. Format is YYYY-MM-DD
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type ExportTransactionsCsvv4Request struct {
-	QueryParams ExportTransactionsCsvv4QueryParams
 }
 
 type ExportTransactionsCsvv4Response struct {

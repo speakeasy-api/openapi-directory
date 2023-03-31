@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PadUsersCountUsingPOSTQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type PadUsersCountUsingPOSTRequest struct {
-	QueryParams PadUsersCountUsingPOSTQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // PadUsersCountUsingPOST500ApplicationJSON - internal api error (code 2)

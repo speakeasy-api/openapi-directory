@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkVlansEnabledStatePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkVlansEnabledStateRequest struct {
-	PathParams GetNetworkVlansEnabledStatePathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkVlansEnabledStateResponse struct {

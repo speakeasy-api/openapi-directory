@@ -10,13 +10,8 @@ import (
 )
 
 type VmmigrationProjectsLocationsSourcesUtilizationReportsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type VmmigrationProjectsLocationsSourcesUtilizationReportsListPathParams struct {
-	// Required. The Utilization Reports parent.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // VmmigrationProjectsLocationsSourcesUtilizationReportsListViewEnum - Optional. The level of details of each report. Defaults to BASIC.
@@ -46,7 +41,7 @@ func (e *VmmigrationProjectsLocationsSourcesUtilizationReportsListViewEnum) Unma
 	}
 }
 
-type VmmigrationProjectsLocationsSourcesUtilizationReportsListQueryParams struct {
+type VmmigrationProjectsLocationsSourcesUtilizationReportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type VmmigrationProjectsLocationsSourcesUtilizationReportsListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Required. A page token, received from a previous `ListUtilizationReports` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListUtilizationReports` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The Utilization Reports parent.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -79,12 +76,6 @@ type VmmigrationProjectsLocationsSourcesUtilizationReportsListQueryParams struct
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. The level of details of each report. Defaults to BASIC.
 	View *VmmigrationProjectsLocationsSourcesUtilizationReportsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type VmmigrationProjectsLocationsSourcesUtilizationReportsListRequest struct {
-	PathParams  VmmigrationProjectsLocationsSourcesUtilizationReportsListPathParams
-	QueryParams VmmigrationProjectsLocationsSourcesUtilizationReportsListQueryParams
-	Security    VmmigrationProjectsLocationsSourcesUtilizationReportsListSecurity
 }
 
 type VmmigrationProjectsLocationsSourcesUtilizationReportsListResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteServiceUserConversationServerList = []string{
@@ -12,22 +11,17 @@ var DeleteServiceUserConversationServerList = []string{
 }
 
 type DeleteServiceUserConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteServiceUserConversationPathParams struct {
+type DeleteServiceUserConversationRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
 	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
 	// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
 	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
-}
-
-type DeleteServiceUserConversationRequest struct {
-	PathParams DeleteServiceUserConversationPathParams
-	Security   DeleteServiceUserConversationSecurity
-	ServerURL  *string
 }
 
 type DeleteServiceUserConversationResponse struct {

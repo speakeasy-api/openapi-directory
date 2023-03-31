@@ -7,11 +7,10 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchProfileEmailSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatchProfileEmailRequestBody2 struct {
@@ -90,12 +89,6 @@ func (u PatchProfileEmailRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type PatchProfileEmailRequest struct {
-	// Email to modify
-	Request  PatchProfileEmailRequestBody `request:"mediaType=application/json"`
-	Security PatchProfileEmailSecurity
 }
 
 type PatchProfileEmailResponse struct {

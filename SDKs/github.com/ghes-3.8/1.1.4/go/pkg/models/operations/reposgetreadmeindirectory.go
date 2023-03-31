@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetReadmeInDirectoryPathParams struct {
+type ReposGetReadmeInDirectoryRequest struct {
 	// The alternate path to look for a README file
 	Dir string `pathParam:"style=simple,explode=false,name=dir"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetReadmeInDirectoryQueryParams struct {
 	// The name of the commit/branch/tag. Default: the repository’s default branch (usually `master`)
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type ReposGetReadmeInDirectoryRequest struct {
-	PathParams  ReposGetReadmeInDirectoryPathParams
-	QueryParams ReposGetReadmeInDirectoryQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposGetReadmeInDirectoryResponse struct {

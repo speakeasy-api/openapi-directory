@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCoursesContentIDPermissionsPathParams struct {
+type GetCoursesContentIDPermissionsRequest struct {
 	// The content Id
 	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
-}
-
-type GetCoursesContentIDPermissionsRequest struct {
-	PathParams GetCoursesContentIDPermissionsPathParams
 }
 
 type GetCoursesContentIDPermissionsResponse struct {

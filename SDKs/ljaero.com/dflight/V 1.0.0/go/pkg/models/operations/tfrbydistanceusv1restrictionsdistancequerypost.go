@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TfrByDistanceUsV1RestrictionsDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest struct {
-	Headers TfrByDistanceUsV1RestrictionsDistanceQueryPostHeaders
-	Request shared.NOTAMsByDistance `request:"mediaType=application/json"`
+	NOTAMsByDistance shared.NOTAMsByDistance `request:"mediaType=application/json"`
+	XAPIKey          *string                 `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse struct {

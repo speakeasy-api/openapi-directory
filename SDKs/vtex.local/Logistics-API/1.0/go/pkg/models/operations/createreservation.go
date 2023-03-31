@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateReservationHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension struct {
 	Height int `json:"height"`
 	Length int `json:"length"`
@@ -66,8 +59,11 @@ type CreateReservationCreateReservationRequest struct {
 }
 
 type CreateReservationRequest struct {
-	Headers CreateReservationHeaders
-	Request CreateReservationCreateReservationRequest `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                                    `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody CreateReservationCreateReservationRequest `request:"mediaType=application/json"`
 }
 
 type CreateReservation200ApplicationJSONSLARequestItem1Dimension1 struct {

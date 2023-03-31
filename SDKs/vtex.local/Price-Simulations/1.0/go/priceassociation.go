@@ -36,14 +36,14 @@ func newPriceAssociation(defaultClient, securityClient HTTPClient, serverURL, la
 // Disassociates a price association from a shopping scenario by its ID
 func (s *priceAssociation) DeleteVCustomPricesRulesPriceAssociationID(ctx context.Context, request operations.DeleteVCustomPricesRulesPriceAssociationIDRequest) (*operations.DeleteVCustomPricesRulesPriceAssociationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -84,14 +84,14 @@ func (s *priceAssociation) DeleteVCustomPricesRulesPriceAssociationID(ctx contex
 // Retrieves price association for a shopping scenario by its ID
 func (s *priceAssociation) GetVCustomPricesRulesPriceAssociationID(ctx context.Context, request operations.GetVCustomPricesRulesPriceAssociationIDRequest) (*operations.GetVCustomPricesRulesPriceAssociationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -133,7 +133,7 @@ func (s *priceAssociation) PostVCustomPricesRules(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/_v/custom-prices/rules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *priceAssociation) PostVCustomPricesRules(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -185,9 +185,9 @@ func (s *priceAssociation) PostVCustomPricesRules(ctx context.Context, request o
 // Updates a price association for a shopping scenario by its ID
 func (s *priceAssociation) PutVCustomPricesRulesPriceAssociationID(ctx context.Context, request operations.PutVCustomPricesRulesPriceAssociationIDRequest) (*operations.PutVCustomPricesRulesPriceAssociationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *priceAssociation) PutVCustomPricesRulesPriceAssociationID(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSensorRelationshipsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSensorRelationshipsRequest struct {
-	PathParams GetNetworkSensorRelationshipsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkSensorRelationships200ApplicationJSONDeviceProductTypeEnum - The product type of the device

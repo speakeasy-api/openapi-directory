@@ -8,22 +8,18 @@ import (
 )
 
 type DisplayvideoAdvertisersLineItemsDuplicateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersLineItemsDuplicatePathParams struct {
-	// Required. The ID of the advertiser this line item belongs to.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the line item to duplicate.
-	LineItemID string `pathParam:"style=simple,explode=false,name=lineItemId"`
-}
-
-type DisplayvideoAdvertisersLineItemsDuplicateQueryParams struct {
+type DisplayvideoAdvertisersLineItemsDuplicateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv              *shared.XgafvEnum                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DuplicateLineItemRequest *shared.DuplicateLineItemRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser this line item belongs to.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -32,6 +28,8 @@ type DisplayvideoAdvertisersLineItemsDuplicateQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The ID of the line item to duplicate.
+	LineItemID string `pathParam:"style=simple,explode=false,name=lineItemId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type DisplayvideoAdvertisersLineItemsDuplicateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersLineItemsDuplicateRequest struct {
-	PathParams  DisplayvideoAdvertisersLineItemsDuplicatePathParams
-	QueryParams DisplayvideoAdvertisersLineItemsDuplicateQueryParams
-	Request     *shared.DuplicateLineItemRequest `request:"mediaType=application/json"`
-	Security    DisplayvideoAdvertisersLineItemsDuplicateSecurity
 }
 
 type DisplayvideoAdvertisersLineItemsDuplicateResponse struct {

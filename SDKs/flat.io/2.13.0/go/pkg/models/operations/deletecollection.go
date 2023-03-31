@@ -8,10 +8,10 @@ import (
 )
 
 type DeleteCollectionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteCollectionPathParams struct {
+type DeleteCollectionRequest struct {
 	// Unique identifier of the collection.
 	// The following aliases are supported:
 	// - `root`: The root collection of the account
@@ -19,11 +19,6 @@ type DeleteCollectionPathParams struct {
 	// - `trash`: Automatically contains resources that have been deleted
 	//
 	Collection string `pathParam:"style=simple,explode=false,name=collection"`
-}
-
-type DeleteCollectionRequest struct {
-	PathParams DeleteCollectionPathParams
-	Security   DeleteCollectionSecurity
 }
 
 type DeleteCollectionResponse struct {

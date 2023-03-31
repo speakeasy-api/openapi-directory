@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type PatchBundlesIDPathParams struct {
-	// Bundle ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchBundlesIDRequestBodyPermissionsEnum - Permissions that apply to Folders in this Share Link.
 type PatchBundlesIDRequestBodyPermissionsEnum string
 
@@ -104,8 +99,9 @@ type PatchBundlesIDRequestBody struct {
 }
 
 type PatchBundlesIDRequest struct {
-	PathParams PatchBundlesIDPathParams
-	Request    *PatchBundlesIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchBundlesIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Bundle ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchBundlesIDResponse struct {

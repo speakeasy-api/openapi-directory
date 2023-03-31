@@ -39,16 +39,16 @@ func newRegion(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // 2. Send the `country` (3-digit ISO code) and at least one of the two values (`postal Code` or `geo Coordinates`) as query parameters through the URL. For this method, it is also allowed to send both values (`postalCode` or `geoCoordinates`) in the same request.
 func (s *region) GetSellersByRegion(ctx context.Context, request operations.GetSellersByRegionRequest) (*operations.GetSellersByRegionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/regions/{regionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/regions/{regionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

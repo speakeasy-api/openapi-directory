@@ -33,11 +33,11 @@ func newSpeech(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // SpeechSpeechLongrunningrecognize - Performs asynchronous speech recognition: receive results via the google.longrunning.Operations interface. Returns either an `Operation.error` or an `Operation.response` which contains a `LongRunningRecognizeResponse` message. For more information on asynchronous speech recognition, see the [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
-func (s *speech) SpeechSpeechLongrunningrecognize(ctx context.Context, request operations.SpeechSpeechLongrunningrecognizeRequest) (*operations.SpeechSpeechLongrunningrecognizeResponse, error) {
+func (s *speech) SpeechSpeechLongrunningrecognize(ctx context.Context, request operations.SpeechSpeechLongrunningrecognizeRequest, security operations.SpeechSpeechLongrunningrecognizeSecurity) (*operations.SpeechSpeechLongrunningrecognizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/speech:longrunningrecognize"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LongRunningRecognizeRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *speech) SpeechSpeechLongrunningrecognize(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *speech) SpeechSpeechLongrunningrecognize(ctx context.Context, request o
 }
 
 // SpeechSpeechRecognize - Performs synchronous speech recognition: receive results after all audio has been sent and processed.
-func (s *speech) SpeechSpeechRecognize(ctx context.Context, request operations.SpeechSpeechRecognizeRequest) (*operations.SpeechSpeechRecognizeResponse, error) {
+func (s *speech) SpeechSpeechRecognize(ctx context.Context, request operations.SpeechSpeechRecognizeRequest, security operations.SpeechSpeechRecognizeSecurity) (*operations.SpeechSpeechRecognizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/speech:recognize"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RecognizeRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *speech) SpeechSpeechRecognize(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

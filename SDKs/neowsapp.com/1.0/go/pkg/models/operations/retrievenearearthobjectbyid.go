@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveNearEarthObjectByIDPathParams struct {
+type RetrieveNearEarthObjectByIDRequest struct {
 	// ID of Near Earth Object - (ex: 3729835)
 	AsteroidID string `pathParam:"style=simple,explode=false,name=asteroid_id"`
-}
-
-type RetrieveNearEarthObjectByIDRequest struct {
-	PathParams RetrieveNearEarthObjectByIDPathParams
 }
 
 type RetrieveNearEarthObjectByIDResponse struct {

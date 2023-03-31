@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type AccountPlanBaseDeletePathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountPlanBaseDeleteApplicationJSONReasonEnum - The reason for the cancellation of plan. Reason options:<br>`1` - I am no longer working remote.<br>`2` - I had challenges getting the support I needed.<br>`3` - Features in the Basic Free Plan are sufficient.<br>`4` - The expense is too high.<br>`5` - I purchased the wrong product.<br> `6` - Paid purchase not needed right now, will repurchase in the future.
 type AccountPlanBaseDeleteApplicationJSONReasonEnum string
 
@@ -58,8 +54,8 @@ type AccountPlanBaseDeleteApplicationJSON struct {
 }
 
 type AccountPlanBaseDeleteRequest struct {
-	PathParams AccountPlanBaseDeletePathParams
-	Request    *AccountPlanBaseDeleteApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *AccountPlanBaseDeleteApplicationJSON `request:"mediaType=application/json"`
+	AccountID   string                                `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountPlanBaseDeleteResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationCameraCustomAnalyticsArtifactPathParams struct {
+type GetOrganizationCameraCustomAnalyticsArtifactRequest struct {
 	ArtifactID     string `pathParam:"style=simple,explode=false,name=artifactId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationCameraCustomAnalyticsArtifactRequest struct {
-	PathParams GetOrganizationCameraCustomAnalyticsArtifactPathParams
 }
 
 type GetOrganizationCameraCustomAnalyticsArtifactResponse struct {

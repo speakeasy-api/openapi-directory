@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CancelAuthorizationPathParams struct {
-	AuthorizationToken string `pathParam:"style=simple,explode=false,name=authorizationToken"`
-}
-
 type CancelAuthorizationRequest struct {
-	PathParams CancelAuthorizationPathParams
+	AuthorizationToken string `pathParam:"style=simple,explode=false,name=authorizationToken"`
 }
 
 type CancelAuthorizationResponse struct {

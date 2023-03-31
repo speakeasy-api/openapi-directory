@@ -8,13 +8,14 @@ import (
 )
 
 type DisplayvideoFirstAndThirdPartyAudiencesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoFirstAndThirdPartyAudiencesCreateQueryParams struct {
+type DisplayvideoFirstAndThirdPartyAudiencesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                     *shared.XgafvEnum                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	FirstAndThirdPartyAudienceInput *shared.FirstAndThirdPartyAudienceInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Required. The ID of the advertiser under whom the FirstAndThirdPartyAudience will be created.
@@ -37,12 +38,6 @@ type DisplayvideoFirstAndThirdPartyAudiencesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoFirstAndThirdPartyAudiencesCreateRequest struct {
-	QueryParams DisplayvideoFirstAndThirdPartyAudiencesCreateQueryParams
-	Request     *shared.FirstAndThirdPartyAudienceInput `request:"mediaType=application/json"`
-	Security    DisplayvideoFirstAndThirdPartyAudiencesCreateSecurity
 }
 
 type DisplayvideoFirstAndThirdPartyAudiencesCreateResponse struct {

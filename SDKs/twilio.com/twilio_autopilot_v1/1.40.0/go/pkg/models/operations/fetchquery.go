@@ -12,20 +12,15 @@ var FetchQueryServerList = []string{
 }
 
 type FetchQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchQueryPathParams struct {
+type FetchQueryRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The Twilio-provided string that uniquely identifies the Query resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchQueryRequest struct {
-	PathParams FetchQueryPathParams
-	Security   FetchQuerySecurity
-	ServerURL  *string
 }
 
 type FetchQueryResponse struct {

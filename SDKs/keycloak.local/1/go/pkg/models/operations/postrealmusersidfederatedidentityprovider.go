@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmUsersIDFederatedIdentityProviderPathParams struct {
+type PostRealmUsersIDFederatedIdentityProviderRequest struct {
+	FederatedIdentityRepresentation shared.FederatedIdentityRepresentation `request:"mediaType=application/json"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Social login provider id
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmUsersIDFederatedIdentityProviderRequest struct {
-	PathParams PostRealmUsersIDFederatedIdentityProviderPathParams
-	Request    shared.FederatedIdentityRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmUsersIDFederatedIdentityProviderResponse struct {

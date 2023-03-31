@@ -10,28 +10,28 @@ import (
 )
 
 type SheetsSpreadsheetsValuesBatchGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesBatchGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesBatchGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesBatchGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesBatchGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesBatchGetSecurity struct {
@@ -40,11 +40,6 @@ type SheetsSpreadsheetsValuesBatchGetSecurity struct {
 	Option3 *SheetsSpreadsheetsValuesBatchGetSecurityOption3 `security:"option"`
 	Option4 *SheetsSpreadsheetsValuesBatchGetSecurityOption4 `security:"option"`
 	Option5 *SheetsSpreadsheetsValuesBatchGetSecurityOption5 `security:"option"`
-}
-
-type SheetsSpreadsheetsValuesBatchGetPathParams struct {
-	// The ID of the spreadsheet to retrieve data from.
-	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 }
 
 // SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum - How dates, times, and durations should be represented in the output. This is ignored if value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
@@ -125,7 +120,7 @@ func (e *SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum) UnmarshalJSON(da
 	}
 }
 
-type SheetsSpreadsheetsValuesBatchGetQueryParams struct {
+type SheetsSpreadsheetsValuesBatchGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -150,18 +145,14 @@ type SheetsSpreadsheetsValuesBatchGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values from.
 	Ranges []string `queryParam:"style=form,explode=true,name=ranges"`
+	// The ID of the spreadsheet to retrieve data from.
+	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// How values should be represented in the output. The default render option is ValueRenderOption.FORMATTED_VALUE.
 	ValueRenderOption *SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum `queryParam:"style=form,explode=true,name=valueRenderOption"`
-}
-
-type SheetsSpreadsheetsValuesBatchGetRequest struct {
-	PathParams  SheetsSpreadsheetsValuesBatchGetPathParams
-	QueryParams SheetsSpreadsheetsValuesBatchGetQueryParams
-	Security    SheetsSpreadsheetsValuesBatchGetSecurity
 }
 
 type SheetsSpreadsheetsValuesBatchGetResponse struct {

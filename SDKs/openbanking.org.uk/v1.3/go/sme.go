@@ -42,7 +42,7 @@ func (s *sme) GetUnsecuredSmeLoans(ctx context.Context, request operations.GetUn
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -162,7 +162,7 @@ func (s *sme) HeadUnsecuredSmeLoans(ctx context.Context, request operations.Head
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

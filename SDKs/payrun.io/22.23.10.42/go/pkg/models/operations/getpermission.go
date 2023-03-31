@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPermissionPathParams struct {
-	// The permission unique identifier. E.g PERM001
-	PermissionID string `pathParam:"style=simple,explode=false,name=PermissionId"`
-}
-
-type GetPermissionHeaders struct {
+type GetPermissionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetPermissionRequest struct {
-	PathParams GetPermissionPathParams
-	Headers    GetPermissionHeaders
+	// The permission unique identifier. E.g PERM001
+	PermissionID string `pathParam:"style=simple,explode=false,name=PermissionId"`
 }
 
 type GetPermissionResponse struct {

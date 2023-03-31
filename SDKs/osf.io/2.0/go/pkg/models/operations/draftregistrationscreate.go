@@ -36,10 +36,6 @@ type DraftRegistrationsCreateDraftRegistrationInput struct {
 	Attributes DraftRegistrationsCreateDraftRegistrationAttributesInput `json:"attributes"`
 }
 
-type DraftRegistrationsCreateRequest struct {
-	Request DraftRegistrationsCreateDraftRegistrationInput `request:"mediaType=application/json"`
-}
-
 // DraftRegistrationsCreateDraftRegistrationAttributes - The properties of the Draft Registration entity.
 type DraftRegistrationsCreateDraftRegistrationAttributes struct {
 	// The category of the Draft Registration.

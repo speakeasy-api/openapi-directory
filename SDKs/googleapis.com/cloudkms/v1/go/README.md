@@ -25,63 +25,83 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest{
-        Security: operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity{
-            Option1: &operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            EkmConnectionID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.EkmConnectionInput{
-            CryptoSpacePath: "iure",
-            Etag: "magnam",
+        DollarXgafv: "2",
+        EkmConnectionInput: &shared.EkmConnectionInput{
+            CryptoSpacePath: "provident",
+            Etag: "distinctio",
             KeyManagementMode: "CLOUD_KMS",
             ServiceResolvers: []shared.ServiceResolverInput{
                 shared.ServiceResolverInput{
-                    EndpointFilter: "delectus",
-                    Hostname: "fatherly-geyser.info",
+                    EndpointFilter: "nulla",
+                    Hostname: "moral-star.info",
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "placeat",
+                            RawDer: "deserunt",
                         },
                         shared.CertificateInput{
-                            RawDer: "voluptatum",
+                            RawDer: "suscipit",
                         },
                         shared.CertificateInput{
-                            RawDer: "iusto",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "excepturi",
+                            RawDer: "iure",
                         },
                     },
-                    ServiceDirectoryService: "nisi",
+                    ServiceDirectoryService: "magnam",
+                },
+                shared.ServiceResolverInput{
+                    EndpointFilter: "debitis",
+                    Hostname: "awesome-voter.biz",
+                    ServerCertificates: []shared.CertificateInput{
+                        shared.CertificateInput{
+                            RawDer: "molestiae",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "minus",
+                        },
+                    },
+                    ServiceDirectoryService: "placeat",
+                },
+                shared.ServiceResolverInput{
+                    EndpointFilter: "voluptatum",
+                    Hostname: "lawful-missionary.info",
+                    ServerCertificates: []shared.CertificateInput{
+                        shared.CertificateInput{
+                            RawDer: "temporibus",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "ab",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "quis",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "veritatis",
+                        },
+                    },
+                    ServiceDirectoryService: "deserunt",
                 },
             },
         },
+        AccessToken: "perferendis",
+        Alt: "media",
+        Callback: "repellendus",
+        EkmConnectionID: "sapiente",
+        Fields: "quo",
+        Key: "odit",
+        OauthToken: "at",
+        Parent: "at",
+        PrettyPrint: false,
+        QuotaUser: "maiores",
+        UploadType: "molestiae",
+        UploadProtocol: "quod",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.CloudkmsProjectsLocationsEkmConnectionsCreate(ctx, req)
+    res, err := s.Projects.CloudkmsProjectsLocationsEkmConnectionsCreate(ctx, req, operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity{
+        Option1: &operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -94,7 +114,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -129,4 +149,15 @@ func main() {
 * `CloudkmsProjectsLocationsList` - Lists information about the supported locations for this service.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

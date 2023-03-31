@@ -60,3 +60,4 @@ pkg/models/shared/legstateenum.go
 pkg/models/shared/memberactionenum.go
 pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

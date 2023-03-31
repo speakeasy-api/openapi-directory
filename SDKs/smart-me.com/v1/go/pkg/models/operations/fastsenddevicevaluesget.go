@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type FastSendDeviceValuesGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type FastSendDeviceValuesGetRequest struct {
-	PathParams FastSendDeviceValuesGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type FastSendDeviceValuesGetResponse struct {

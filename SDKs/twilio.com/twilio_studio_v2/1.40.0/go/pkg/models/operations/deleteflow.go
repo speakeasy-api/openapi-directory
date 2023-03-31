@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteFlowServerList = []string{
@@ -12,18 +11,13 @@ var DeleteFlowServerList = []string{
 }
 
 type DeleteFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteFlowPathParams struct {
-	// The SID of the Flow resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteFlowRequest struct {
-	PathParams DeleteFlowPathParams
-	Security   DeleteFlowSecurity
-	ServerURL  *string
+	// The SID of the Flow resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteFlowResponse struct {

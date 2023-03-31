@@ -12,10 +12,11 @@ var ListHostedNumbersAuthorizationDocumentServerList = []string{
 }
 
 type ListHostedNumbersAuthorizationDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListHostedNumbersAuthorizationDocumentQueryParams struct {
+type ListHostedNumbersAuthorizationDocumentRequest struct {
 	// Email that this AuthorizationDocument will be sent to for signing.
 	Email *string `queryParam:"style=form,explode=true,name=Email"`
 	// The page index. This value is simply for client state.
@@ -26,12 +27,6 @@ type ListHostedNumbersAuthorizationDocumentQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/api/phone-numbers/hosted-number-authorization-documents#status-values) for more information on each of these statuses.
 	Status *shared.AuthorizationDocumentEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListHostedNumbersAuthorizationDocumentRequest struct {
-	QueryParams ListHostedNumbersAuthorizationDocumentQueryParams
-	Security    ListHostedNumbersAuthorizationDocumentSecurity
-	ServerURL   *string
 }
 
 type ListHostedNumbersAuthorizationDocumentListHostedNumbersAuthorizationDocumentResponseMeta struct {

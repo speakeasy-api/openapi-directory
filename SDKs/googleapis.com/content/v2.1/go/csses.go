@@ -32,20 +32,20 @@ func newCsses(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // ContentCssesGet - Retrieves a single CSS domain by ID.
-func (s *csses) ContentCssesGet(ctx context.Context, request operations.ContentCssesGetRequest) (*operations.ContentCssesGetResponse, error) {
+func (s *csses) ContentCssesGet(ctx context.Context, request operations.ContentCssesGetRequest, security operations.ContentCssesGetSecurity) (*operations.ContentCssesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *csses) ContentCssesGet(ctx context.Context, request operations.ContentC
 }
 
 // ContentCssesList - Lists CSS domains affiliated with a CSS group.
-func (s *csses) ContentCssesList(ctx context.Context, request operations.ContentCssesListRequest) (*operations.ContentCssesListResponse, error) {
+func (s *csses) ContentCssesList(ctx context.Context, request operations.ContentCssesListRequest, security operations.ContentCssesListSecurity) (*operations.ContentCssesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *csses) ContentCssesList(ctx context.Context, request operations.Content
 }
 
 // ContentCssesUpdatelabels - Updates labels that are assigned to a CSS domain by its CSS group.
-func (s *csses) ContentCssesUpdatelabels(ctx context.Context, request operations.ContentCssesUpdatelabelsRequest) (*operations.ContentCssesUpdatelabelsResponse, error) {
+func (s *csses) ContentCssesUpdatelabels(ctx context.Context, request operations.ContentCssesUpdatelabelsRequest, security operations.ContentCssesUpdatelabelsSecurity) (*operations.ContentCssesUpdatelabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}/updatelabels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}/updatelabels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LabelIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *csses) ContentCssesUpdatelabels(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

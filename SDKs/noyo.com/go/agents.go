@@ -35,9 +35,9 @@ func newAgents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Creates a new agent contact for an agent
 func (s *agents) CreateAgentContact(ctx context.Context, request operations.CreateAgentContactRequest) (*operations.CreateAgentContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentContactCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *agents) CreateAgentContact(ctx context.Context, request operations.Crea
 // Creates a new agent location for an agent
 func (s *agents) CreateAgentLocation(ctx context.Context, request operations.CreateAgentLocationRequest) (*operations.CreateAgentLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentLocationCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,9 +145,9 @@ func (s *agents) CreateAgentLocation(ctx context.Context, request operations.Cre
 // Create a new agent for a group application
 func (s *agents) CreateApplicationAgent(ctx context.Context, request operations.CreateApplicationAgentRequest) (*operations.CreateApplicationAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/agents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/agents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,9 +200,9 @@ func (s *agents) CreateApplicationAgent(ctx context.Context, request operations.
 // Edit an agent based on the ID provided. The version parameter must match the latest agent version.
 func (s *agents) EditAgent(ctx context.Context, request operations.EditAgentRequest) (*operations.EditAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,9 +255,9 @@ func (s *agents) EditAgent(ctx context.Context, request operations.EditAgentRequ
 // Edit an agent contact based on the ID provided. The version parameter must match the latest agent contact version.
 func (s *agents) EditAgentContact(ctx context.Context, request operations.EditAgentContactRequest) (*operations.EditAgentContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts/{contact_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts/{contact_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentContactEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,9 +310,9 @@ func (s *agents) EditAgentContact(ctx context.Context, request operations.EditAg
 // Edit an agent location based on the ID provided. The version parameter must match the latest agent location version.
 func (s *agents) EditAgentLocation(ctx context.Context, request operations.EditAgentLocationRequest) (*operations.EditAgentLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations/{location_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations/{location_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentLocationEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,7 +365,7 @@ func (s *agents) EditAgentLocation(ctx context.Context, request operations.EditA
 // Returns the latest version of a single agent based on the ID provided
 func (s *agents) GetAgent(ctx context.Context, request operations.GetAgentRequest) (*operations.GetAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -410,7 +410,7 @@ func (s *agents) GetAgent(ctx context.Context, request operations.GetAgentReques
 // Returns the latest version of a single agent based on the ID provided
 func (s *agents) GetAgentContact(ctx context.Context, request operations.GetAgentContactRequest) (*operations.GetAgentContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts/{contact_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts/{contact_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -455,14 +455,14 @@ func (s *agents) GetAgentContact(ctx context.Context, request operations.GetAgen
 // Returns a list of all contacts for the given agent
 func (s *agents) GetAgentContacts(ctx context.Context, request operations.GetAgentContactsRequest) (*operations.GetAgentContactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/contacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -504,7 +504,7 @@ func (s *agents) GetAgentContacts(ctx context.Context, request operations.GetAge
 // Returns the latest version of a single agent based on the ID provided
 func (s *agents) GetAgentLocation(ctx context.Context, request operations.GetAgentLocationRequest) (*operations.GetAgentLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,14 +549,14 @@ func (s *agents) GetAgentLocation(ctx context.Context, request operations.GetAge
 // Returns a list of all locations for the given agent
 func (s *agents) GetAgentLocations(ctx context.Context, request operations.GetAgentLocationsRequest) (*operations.GetAgentLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/agents/{agent_id}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -598,14 +598,14 @@ func (s *agents) GetAgentLocations(ctx context.Context, request operations.GetAg
 // Returns a list of all agents for the given application
 func (s *agents) GetApplicationAgents(ctx context.Context, request operations.GetApplicationAgentsRequest) (*operations.GetApplicationAgentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/agents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/agents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

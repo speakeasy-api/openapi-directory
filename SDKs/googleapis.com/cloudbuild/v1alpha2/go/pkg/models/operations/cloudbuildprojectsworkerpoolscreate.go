@@ -8,18 +8,14 @@ import (
 )
 
 type CloudbuildProjectsWorkerPoolsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudbuildProjectsWorkerPoolsCreatePathParams struct {
-	// Required. The parent resource where this book will be created. Format: projects/{project}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudbuildProjectsWorkerPoolsCreateQueryParams struct {
+type CloudbuildProjectsWorkerPoolsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv     *shared.XgafvEnum       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WorkerPoolInput *shared.WorkerPoolInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type CloudbuildProjectsWorkerPoolsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent resource where this book will be created. Format: projects/{project}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type CloudbuildProjectsWorkerPoolsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
 	WorkerPoolID *string `queryParam:"style=form,explode=true,name=workerPoolId"`
-}
-
-type CloudbuildProjectsWorkerPoolsCreateRequest struct {
-	PathParams  CloudbuildProjectsWorkerPoolsCreatePathParams
-	QueryParams CloudbuildProjectsWorkerPoolsCreateQueryParams
-	Request     *shared.WorkerPoolInput `request:"mediaType=application/json"`
-	Security    CloudbuildProjectsWorkerPoolsCreateSecurity
 }
 
 type CloudbuildProjectsWorkerPoolsCreateResponse struct {

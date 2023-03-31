@@ -44,16 +44,12 @@ func (e *GetGetXrefListFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetXrefListQueryParams struct {
+type GetGetXrefListRequest struct {
 	// The database code to translate to (e.g. 'S' for UniProt).
 	Code   string                    `queryParam:"style=form,explode=true,name=code"`
 	Format *GetGetXrefListFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The pathway identifier.
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
-}
-
-type GetGetXrefListRequest struct {
-	QueryParams GetGetXrefListQueryParams
 }
 
 type GetGetXrefListResponse struct {

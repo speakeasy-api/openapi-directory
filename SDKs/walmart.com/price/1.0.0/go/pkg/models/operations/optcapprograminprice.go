@@ -6,17 +6,6 @@ import (
 	"net/http"
 )
 
-type OptCapProgramInPriceHeaders struct {
-	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
-	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
-	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
-	// The access token retrieved in the Token API call
-	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
-	// Walmart Service Name
-	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
 // OptCapProgramInPriceRequestBody - Request fields
 type OptCapProgramInPriceRequestBody struct {
 	// A Boolean parameter that allows all sellers to completely enroll in or out of the Competitive Price Adjustment program
@@ -26,9 +15,16 @@ type OptCapProgramInPriceRequestBody struct {
 }
 
 type OptCapProgramInPriceRequest struct {
-	Headers OptCapProgramInPriceHeaders
 	// Request fields
-	Request OptCapProgramInPriceRequestBody `request:"mediaType=application/json"`
+	RequestBody OptCapProgramInPriceRequestBody `request:"mediaType=application/json"`
+	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
+	// The access token retrieved in the Token API call
+	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
+	// Walmart Service Name
+	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
 }
 
 type OptCapProgramInPrice200ApplicationJSONStatusInfo struct {

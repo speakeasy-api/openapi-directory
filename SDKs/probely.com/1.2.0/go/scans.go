@@ -46,7 +46,7 @@ func (s *scans) GetTargetsAllScans(ctx context.Context, request operations.GetTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,14 +97,14 @@ func (s *scans) GetTargetsAllScans(ctx context.Context, request operations.GetTa
 // GetTargetsTargetIDScans - List scans
 func (s *scans) GetTargetsTargetIDScans(ctx context.Context, request operations.GetTargetsTargetIDScansRequest) (*operations.GetTargetsTargetIDScansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -165,7 +165,7 @@ func (s *scans) GetTargetsTargetIDScans(ctx context.Context, request operations.
 // GetTargetsTargetIDScansDates - Dates where scans have ocurred
 func (s *scans) GetTargetsTargetIDScansDates(ctx context.Context, request operations.GetTargetsTargetIDScansDatesRequest) (*operations.GetTargetsTargetIDScansDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/dates/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/dates/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -230,14 +230,14 @@ func (s *scans) GetTargetsTargetIDScansDates(ctx context.Context, request operat
 // Given a date return the page number
 func (s *scans) GetTargetsTargetIDScansRetrievePage(ctx context.Context, request operations.GetTargetsTargetIDScansRetrievePageRequest) (*operations.GetTargetsTargetIDScansRetrievePageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/retrieve_page/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/retrieve_page/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -308,7 +308,7 @@ func (s *scans) GetTargetsTargetIDScansRetrievePage(ctx context.Context, request
 // GetTargetsTargetIDScansID - Retrieve scan
 func (s *scans) GetTargetsTargetIDScansID(ctx context.Context, request operations.GetTargetsTargetIDScansIDRequest) (*operations.GetTargetsTargetIDScansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *scans) GetTargetsTargetIDScansID(ctx context.Context, request operation
 // GetTargetsTargetIDScansIDEndpoints - Scan endpoints file
 func (s *scans) GetTargetsTargetIDScansIDEndpoints(ctx context.Context, request operations.GetTargetsTargetIDScansIDEndpointsRequest) (*operations.GetTargetsTargetIDScansIDEndpointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/endpoints/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/endpoints/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -436,7 +436,7 @@ func (s *scans) GetTargetsTargetIDScansIDEndpoints(ctx context.Context, request 
 // GetTargetsTargetIDScansIDReport - Scan report PDF, using the report type specified for the target
 func (s *scans) GetTargetsTargetIDScansIDReport(ctx context.Context, request operations.GetTargetsTargetIDScansIDReportRequest) (*operations.GetTargetsTargetIDScansIDReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -500,7 +500,7 @@ func (s *scans) GetTargetsTargetIDScansIDReport(ctx context.Context, request ope
 // GetTargetsTargetIDScansIDReportDefault - Scan report PDF, using the default report type
 func (s *scans) GetTargetsTargetIDScansIDReportDefault(ctx context.Context, request operations.GetTargetsTargetIDScansIDReportDefaultRequest) (*operations.GetTargetsTargetIDScansIDReportDefaultResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/default/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/default/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -564,7 +564,7 @@ func (s *scans) GetTargetsTargetIDScansIDReportDefault(ctx context.Context, requ
 // GetTargetsTargetIDScansIDReportOwasp - Scan report PDF, using the OWASP report type
 func (s *scans) GetTargetsTargetIDScansIDReportOwasp(ctx context.Context, request operations.GetTargetsTargetIDScansIDReportOwaspRequest) (*operations.GetTargetsTargetIDScansIDReportOwaspResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/owasp/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/owasp/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -628,7 +628,7 @@ func (s *scans) GetTargetsTargetIDScansIDReportOwasp(ctx context.Context, reques
 // GetTargetsTargetIDScansIDReportPci - Scan report PDF, using the PCI report type
 func (s *scans) GetTargetsTargetIDScansIDReportPci(ctx context.Context, request operations.GetTargetsTargetIDScansIDReportPciRequest) (*operations.GetTargetsTargetIDScansIDReportPciResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/pci/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/report/pci/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -692,9 +692,9 @@ func (s *scans) GetTargetsTargetIDScansIDReportPci(ctx context.Context, request 
 // PostTargetsTargetIDScanNow - Start a scan on the target
 func (s *scans) PostTargetsTargetIDScanNow(ctx context.Context, request operations.PostTargetsTargetIDScanNowRequest) (*operations.PostTargetsTargetIDScanNowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scan_now/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scan_now/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -783,7 +783,7 @@ func (s *scans) PostTargetsTargetIDScanNow(ctx context.Context, request operatio
 // PostTargetsTargetIDScansIDCancel - Cancel running scan
 func (s *scans) PostTargetsTargetIDScansIDCancel(ctx context.Context, request operations.PostTargetsTargetIDScansIDCancelRequest) (*operations.PostTargetsTargetIDScansIDCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/cancel/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scans/{id}/cancel/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

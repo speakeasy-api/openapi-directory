@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserTagsTagIDShowsPathParams struct {
-	TagID int64 `pathParam:"style=simple,explode=false,name=tag_id"`
-}
-
 // GetUserTagsTagIDShowsEmbedEnum - Embed full show info
 type GetUserTagsTagIDShowsEmbedEnum string
 
@@ -34,14 +30,10 @@ func (e *GetUserTagsTagIDShowsEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserTagsTagIDShowsQueryParams struct {
+type GetUserTagsTagIDShowsRequest struct {
 	// Embed full show info
 	Embed *GetUserTagsTagIDShowsEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetUserTagsTagIDShowsRequest struct {
-	PathParams  GetUserTagsTagIDShowsPathParams
-	QueryParams GetUserTagsTagIDShowsQueryParams
+	TagID int64                           `pathParam:"style=simple,explode=false,name=tag_id"`
 }
 
 type GetUserTagsTagIDShowsResponse struct {

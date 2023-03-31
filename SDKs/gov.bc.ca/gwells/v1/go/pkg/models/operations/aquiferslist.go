@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AquifersListQueryParams struct {
+type AquifersListRequest struct {
 	AquiferID *float64 `queryParam:"style=form,explode=true,name=aquifer_id"`
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -17,10 +17,6 @@ type AquifersListQueryParams struct {
 	Ordering *string `queryParam:"style=form,explode=true,name=ordering"`
 	// A search term.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type AquifersListRequest struct {
-	QueryParams AquifersListQueryParams
 }
 
 type AquifersList200ApplicationJSON struct {

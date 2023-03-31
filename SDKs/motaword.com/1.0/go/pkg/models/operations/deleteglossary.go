@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteGlossaryPathParams struct {
+type DeleteGlossaryRequest struct {
 	// Glossary ID
 	GlossaryID int64 `pathParam:"style=simple,explode=false,name=glossaryId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteGlossaryRequest struct {
-	PathParams DeleteGlossaryPathParams
 }
 
 type DeleteGlossaryResponse struct {

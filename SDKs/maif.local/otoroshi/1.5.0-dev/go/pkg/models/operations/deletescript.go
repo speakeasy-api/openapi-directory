@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteScriptSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteScriptPathParams struct {
-	// The script id
-	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteScriptRequest struct {
-	PathParams DeleteScriptPathParams
-	Security   DeleteScriptSecurity
+	// The script id
+	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
 }
 
 type DeleteScriptResponse struct {

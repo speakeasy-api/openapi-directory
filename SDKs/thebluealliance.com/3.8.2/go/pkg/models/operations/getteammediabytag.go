@@ -8,25 +8,16 @@ import (
 )
 
 type GetTeamMediaByTagSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
-type GetTeamMediaByTagPathParams struct {
+type GetTeamMediaByTagRequest struct {
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
 	// Media Tag which describes the Media.
 	MediaTag string `pathParam:"style=simple,explode=false,name=media_tag"`
 	// TBA Team Key, eg `frc254`
 	TeamKey string `pathParam:"style=simple,explode=false,name=team_key"`
-}
-
-type GetTeamMediaByTagHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetTeamMediaByTagRequest struct {
-	PathParams GetTeamMediaByTagPathParams
-	Headers    GetTeamMediaByTagHeaders
-	Security   GetTeamMediaByTagSecurity
 }
 
 type GetTeamMediaByTagResponse struct {

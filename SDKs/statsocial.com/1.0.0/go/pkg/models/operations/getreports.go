@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportsQueryParams struct {
+type GetReportsRequest struct {
 	// Default value will be 'world'
 	Baseline *int64 `queryParam:"style=form,explode=true,name=baseline"`
 	// report_date represents a Unix timestamp of when the report was generated. Default value will be the latest report generated. You can request the /report/dates/ endpoint in order to obtain available timestamps. Date must be in the future.
@@ -16,10 +16,6 @@ type GetReportsQueryParams struct {
 	ReportHash string `queryParam:"style=form,explode=true,name=report_hash"`
 	// Sample report indicator
 	Sample int64 `queryParam:"style=form,explode=true,name=sample"`
-}
-
-type GetReportsRequest struct {
-	QueryParams GetReportsQueryParams
 }
 
 type GetReportsResponse struct {

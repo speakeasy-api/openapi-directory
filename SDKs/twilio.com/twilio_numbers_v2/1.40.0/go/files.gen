@@ -45,7 +45,6 @@ pkg/models/operations/updatesupportingdocument.go
 pkg/models/shared/numbersv2regulatorycompliancebundle.go
 pkg/models/shared/bundleenumstatusenum.go
 pkg/models/shared/bundleenumendusertypeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/numbersv2regulatorycompliancebundlebundlecopy.go
 pkg/models/shared/bundlecopyenumstatusenum.go
 pkg/models/shared/numbersv2regulatorycomplianceenduser.go
@@ -64,3 +63,4 @@ pkg/models/shared/numbersv2regulatorycompliancesupportingdocumenttype.go
 pkg/models/shared/bundleenumsortdirectionenum.go
 pkg/models/shared/bundleenumsortbyenum.go
 USAGE.md
+pkg/models/operations/options.go

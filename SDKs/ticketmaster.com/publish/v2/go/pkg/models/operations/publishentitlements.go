@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishEntitlementsHeaders struct {
+type PublishEntitlementsRequest struct {
+	// Entitlements information to add to the entity
+	Entitlement shared.Entitlement `request:"mediaType=application/json"`
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PublishEntitlementsRequest struct {
-	Headers PublishEntitlementsHeaders
-	// Entitlements information to add to the entity
-	Request shared.Entitlement `request:"mediaType=application/json"`
 }
 
 type PublishEntitlementsResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSessionWritePathParams struct {
+type ProtocolTftpSessionWriteRequest struct {
 	// Agent to show TFTP statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// File name to upload to server
 	Srcfile string `pathParam:"style=simple,explode=false,name=srcfile"`
-}
-
-type ProtocolTftpSessionWriteRequest struct {
-	PathParams ProtocolTftpSessionWritePathParams
 }
 
 type ProtocolTftpSessionWriteResponse struct {

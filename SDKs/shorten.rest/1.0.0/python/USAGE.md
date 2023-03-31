@@ -4,52 +4,65 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateAliasRequest(
-    security=operations.CreateAliasSecurity(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    query_params=operations.CreateAliasQueryParams(
-        alias_name="aut",
-        domain_name="porro",
-    ),
-    request=shared.CreateAliasModel(
+    create_alias_model=shared.CreateAliasModel(
         destinations=[
             shared.DestinationModel(
-                country="magni",
-                os="nihil",
-                url="est",
+                country="Montenegro",
+                os="distinctio",
+                url="quibusdam",
             ),
             shared.DestinationModel(
-                country="ad",
-                os="autem",
-                url="autem",
+                country="Mozambique",
+                os="nulla",
+                url="corrupti",
+            ),
+            shared.DestinationModel(
+                country="Suriname",
+                os="vel",
+                url="error",
             ),
         ],
         metatags=[
             shared.MetaTagModel(
-                content="a",
-                name="ut",
+                content="suscipit",
+                name="iure",
             ),
             shared.MetaTagModel(
-                content="quia",
-                name="deleniti",
+                content="magnam",
+                name="debitis",
+            ),
+            shared.MetaTagModel(
+                content="ipsa",
+                name="delectus",
             ),
         ],
         snippets=[
             shared.SnippetModel(
-                id="inventore",
+                id="suscipit",
                 parameters={
-                    "in": "soluta",
+                    "minus": "placeat",
+                    "voluptatum": "iusto",
+                },
+            ),
+            shared.SnippetModel(
+                id="excepturi",
+                parameters={
+                    "recusandae": "temporibus",
+                    "ab": "quis",
                 },
             ),
         ],
     ),
+    alias_name="veritatis",
+    domain_name="deserunt",
 )
     
-res = s.alias.create_alias(req)
+res = s.alias.create_alias(req, operations.CreateAliasSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.create_alias_response_model is not None:
     # handle response

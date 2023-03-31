@@ -12,17 +12,13 @@ var ListUnderstandSampleServerList = []string{
 }
 
 type ListUnderstandSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUnderstandSamplePathParams struct {
+type ListUnderstandSampleRequest struct {
 	// The unique ID of the Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The unique ID of the Task associated with this Sample.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type ListUnderstandSampleQueryParams struct {
 	// An ISO language-country string of the sample.
 	Language *string `queryParam:"style=form,explode=true,name=Language"`
 	// The page index. This value is simply for client state.
@@ -31,13 +27,8 @@ type ListUnderstandSampleQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListUnderstandSampleRequest struct {
-	PathParams  ListUnderstandSamplePathParams
-	QueryParams ListUnderstandSampleQueryParams
-	Security    ListUnderstandSampleSecurity
-	ServerURL   *string
+	// The unique ID of the Task associated with this Sample.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type ListUnderstandSampleListUnderstandSampleResponseMeta struct {

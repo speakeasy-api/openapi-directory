@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type AppsRevokeGrantForApplicationPathParams struct {
+type AppsRevokeGrantForApplicationRequest struct {
 	AccessToken string `pathParam:"style=simple,explode=false,name=access_token"`
 	// The client ID of your GitHub app.
 	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type AppsRevokeGrantForApplicationRequest struct {
-	PathParams AppsRevokeGrantForApplicationPathParams
 }
 
 type AppsRevokeGrantForApplicationResponse struct {

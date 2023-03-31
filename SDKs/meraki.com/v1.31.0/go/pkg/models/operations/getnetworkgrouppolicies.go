@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkGroupPoliciesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkGroupPoliciesRequest struct {
-	PathParams GetNetworkGroupPoliciesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkGroupPoliciesResponse struct {

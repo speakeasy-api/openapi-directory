@@ -8,15 +8,7 @@ import (
 )
 
 type CreateShiftSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateShiftRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateShiftRequest `request:"mediaType=application/json"`
-	Security CreateShiftSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateShiftResponse struct {

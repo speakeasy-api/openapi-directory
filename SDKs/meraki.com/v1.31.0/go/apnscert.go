@@ -34,7 +34,7 @@ func newApnsCert(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get the organization's APNS certificate
 func (s *apnsCert) GetOrganizationSmApnsCert(ctx context.Context, request operations.GetOrganizationSmApnsCertRequest) (*operations.GetOrganizationSmApnsCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/apnsCert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/apnsCert", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

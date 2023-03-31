@@ -96,7 +96,7 @@ func (e *GetUserVodsAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserVodsAlt1QueryParams struct {
+type GetUserVodsAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetUserVodsAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The type of On Demand pages to return.
@@ -107,10 +107,6 @@ type GetUserVodsAlt1QueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetUserVodsAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUserVodsAlt1Request struct {
-	QueryParams GetUserVodsAlt1QueryParams
 }
 
 type GetUserVodsAlt1Response struct {

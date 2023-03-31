@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PreprintProviderLicensesListPathParams struct {
+type PreprintProviderLicensesListRequest struct {
 	// The unique identifier of the preprint provider.
 	PreprintProviderID string `pathParam:"style=simple,explode=false,name=preprint_provider_id"`
-}
-
-type PreprintProviderLicensesListRequest struct {
-	PathParams PreprintProviderLicensesListPathParams
 }
 
 // PreprintProviderLicensesListLicenseAttributes - The properties of the license.

@@ -8,17 +8,13 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetMonthCategoryByIDPathParams struct {
+type GetMonthCategoryByIDRequest struct {
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The id of the category
 	CategoryID string `pathParam:"style=simple,explode=false,name=category_id"`
 	// The budget month in ISO format (e.g. 2016-12-01) ("current" can also be used to specify the current calendar month (UTC))
 	Month types.Date `pathParam:"style=simple,explode=false,name=month"`
-}
-
-type GetMonthCategoryByIDRequest struct {
-	PathParams GetMonthCategoryByIDPathParams
 }
 
 type GetMonthCategoryByIDResponse struct {

@@ -33,11 +33,11 @@ func newAlbumsEssentials(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // CreateAlbum - Create an album
-func (s *albumsEssentials) CreateAlbum(ctx context.Context, request operations.CreateAlbumRequest) (*operations.CreateAlbumResponse, error) {
+func (s *albumsEssentials) CreateAlbum(ctx context.Context, request operations.CreateAlbumRequest, security operations.CreateAlbumSecurity) (*operations.CreateAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *albumsEssentials) CreateAlbum(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *albumsEssentials) CreateAlbum(ctx context.Context, request operations.C
 }
 
 // CreateAlbumAlt1 - Create an album
-func (s *albumsEssentials) CreateAlbumAlt1(ctx context.Context, request operations.CreateAlbumAlt1Request) (*operations.CreateAlbumAlt1Response, error) {
+func (s *albumsEssentials) CreateAlbumAlt1(ctx context.Context, request operations.CreateAlbumAlt1RequestBody, security operations.CreateAlbumAlt1Security) (*operations.CreateAlbumAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/albums"
 
@@ -118,7 +118,7 @@ func (s *albumsEssentials) CreateAlbumAlt1(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,16 +165,16 @@ func (s *albumsEssentials) CreateAlbumAlt1(ctx context.Context, request operatio
 }
 
 // DeleteAlbum - Delete an album
-func (s *albumsEssentials) DeleteAlbum(ctx context.Context, request operations.DeleteAlbumRequest) (*operations.DeleteAlbumResponse, error) {
+func (s *albumsEssentials) DeleteAlbum(ctx context.Context, request operations.DeleteAlbumRequest, security operations.DeleteAlbumSecurity) (*operations.DeleteAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,16 +212,16 @@ func (s *albumsEssentials) DeleteAlbum(ctx context.Context, request operations.D
 }
 
 // DeleteAlbumAlt1 - Delete an album
-func (s *albumsEssentials) DeleteAlbumAlt1(ctx context.Context, request operations.DeleteAlbumAlt1Request) (*operations.DeleteAlbumAlt1Response, error) {
+func (s *albumsEssentials) DeleteAlbumAlt1(ctx context.Context, request operations.DeleteAlbumAlt1Request, security operations.DeleteAlbumAlt1Security) (*operations.DeleteAlbumAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,11 +259,11 @@ func (s *albumsEssentials) DeleteAlbumAlt1(ctx context.Context, request operatio
 }
 
 // EditAlbum - Edit an album
-func (s *albumsEssentials) EditAlbum(ctx context.Context, request operations.EditAlbumRequest) (*operations.EditAlbumResponse, error) {
+func (s *albumsEssentials) EditAlbum(ctx context.Context, request operations.EditAlbumRequest, security operations.EditAlbumSecurity) (*operations.EditAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -275,7 +275,7 @@ func (s *albumsEssentials) EditAlbum(ctx context.Context, request operations.Edi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -324,11 +324,11 @@ func (s *albumsEssentials) EditAlbum(ctx context.Context, request operations.Edi
 }
 
 // EditAlbumAlt1 - Edit an album
-func (s *albumsEssentials) EditAlbumAlt1(ctx context.Context, request operations.EditAlbumAlt1Request) (*operations.EditAlbumAlt1Response, error) {
+func (s *albumsEssentials) EditAlbumAlt1(ctx context.Context, request operations.EditAlbumAlt1Request, security operations.EditAlbumAlt1Security) (*operations.EditAlbumAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -340,7 +340,7 @@ func (s *albumsEssentials) EditAlbumAlt1(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -391,7 +391,7 @@ func (s *albumsEssentials) EditAlbumAlt1(ctx context.Context, request operations
 // GetAlbum - Get a specific album
 func (s *albumsEssentials) GetAlbum(ctx context.Context, request operations.GetAlbumRequest) (*operations.GetAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -445,7 +445,7 @@ func (s *albumsEssentials) GetAlbum(ctx context.Context, request operations.GetA
 // GetAlbumAlt1 - Get a specific album
 func (s *albumsEssentials) GetAlbumAlt1(ctx context.Context, request operations.GetAlbumAlt1Request) (*operations.GetAlbumAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -499,14 +499,14 @@ func (s *albumsEssentials) GetAlbumAlt1(ctx context.Context, request operations.
 // GetAlbums - Get all the albums that belong to a user
 func (s *albumsEssentials) GetAlbums(ctx context.Context, request operations.GetAlbumsRequest) (*operations.GetAlbumsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -564,7 +564,7 @@ func (s *albumsEssentials) GetAlbumsAlt1(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

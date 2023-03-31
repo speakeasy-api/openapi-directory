@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateQAReportRequest struct {
-	Request *shared.QaFilter `request:"mediaType=application/json"`
-}
-
 type GenerateQAReportResponse struct {
 	ContentType string
 	// MissingParameter

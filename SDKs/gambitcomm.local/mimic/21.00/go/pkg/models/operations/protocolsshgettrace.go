@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSSHGetTracePathParams struct {
+type ProtocolSSHGetTraceRequest struct {
 	// Agent to show whether SSH tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSSHGetTraceRequest struct {
-	PathParams ProtocolSSHGetTracePathParams
 }
 
 type ProtocolSSHGetTraceResponse struct {

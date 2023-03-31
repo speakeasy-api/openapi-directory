@@ -33,11 +33,11 @@ func newPartners(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // PutOrdersIDShip - Ship an Order
 // Note, this API is used to update orders and is reserved for our shipping partners.
-func (s *partners) PutOrdersIDShip(ctx context.Context, request operations.PutOrdersIDShipRequest) (*operations.PutOrdersIDShipResponse, error) {
+func (s *partners) PutOrdersIDShip(ctx context.Context, request operations.PutOrdersIDShipRequest, security operations.PutOrdersIDShipSecurity) (*operations.PutOrdersIDShipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/ship", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/ship", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *partners) PutOrdersIDShip(ctx context.Context, request operations.PutOr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,11 +89,11 @@ func (s *partners) PutOrdersIDShip(ctx context.Context, request operations.PutOr
 
 // PutOrdersIDStatus - Update Order Status
 // Note, this API is used to update orders and is reserved for our shipping partners.
-func (s *partners) PutOrdersIDStatus(ctx context.Context, request operations.PutOrdersIDStatusRequest) (*operations.PutOrdersIDStatusResponse, error) {
+func (s *partners) PutOrdersIDStatus(ctx context.Context, request operations.PutOrdersIDStatusRequest, security operations.PutOrdersIDStatusSecurity) (*operations.PutOrdersIDStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -108,7 +108,7 @@ func (s *partners) PutOrdersIDStatus(ctx context.Context, request operations.Put
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ArtifactregistryProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) ArtifactregistryProjectsLocationsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsListRequest) (*operations.ArtifactregistryProjectsLocationsListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsListRequest, security operations.ArtifactregistryProjectsLocationsListSecurity) (*operations.ArtifactregistryProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) ArtifactregistryProjectsLocationsList(ctx context.Context, re
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport - Imports Apt artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportAptArtifactsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImpo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImpo
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload - Directly uploads an Apt artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:create", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:create", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUplo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUplo
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesCreate - Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesCreate(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesCreateRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesCreate(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesCreateRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesCreateSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepositoryInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesCreate(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesCreate(ctx conte
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesDockerImagesList - Lists docker images.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesDockerImagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesDockerImagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dockerImages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dockerImages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesDockerImagesList
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesFilesList - Lists files.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesFilesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesFilesListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesFilesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesFilesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesFilesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesFilesList(ctx co
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy - Gets the IAM policy for a given resource.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicySecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy(ctx
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload - Directly uploads a KFP artifact. The returned Operation will complete once the resource is uploaded. Package, Version, and File resources will be created based on the uploaded artifact. Uploaded artifacts that conflict with existing resources will be overwritten.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/kfpArtifacts:create", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/kfpArtifacts:create", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUplo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUplo
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesList - Lists repositories.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,20 +492,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesList(ctx context
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList - Lists maven artifacts.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mavenArtifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mavenArtifacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,20 +540,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsLi
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList - Lists npm packages.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/npmPackages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/npmPackages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,20 +588,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList(
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesList - Lists packages.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/packages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/packages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -636,11 +636,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesList(ctx
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate - Creates a tag.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -652,11 +652,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCrea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -691,20 +691,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCrea
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList - Lists tags.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -739,11 +739,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch - Updates a tag.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -755,11 +755,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -794,20 +794,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatc
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete - Deletes a version and all of its content. The returned operation will complete once the version has been deleted.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -842,20 +842,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersions
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList - Lists versions.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -890,20 +890,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersions
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet - Gets a python package.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -938,20 +938,20 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGe
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList - Lists python packages.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pythonPackages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pythonPackages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -986,11 +986,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesLi
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy - Updates the IAM policy for a given resource.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicySecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1002,11 +1002,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1041,11 +1041,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy(ctx
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions - Tests if the caller has a list of permissions on a resource.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1057,11 +1057,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesTestIamPermissio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1096,11 +1096,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesTestIamPermissio
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport - Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportYumArtifactsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1112,11 +1112,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImpo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1151,11 +1151,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImpo
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload - Directly uploads a Yum artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
-func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadRequest) (*operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse, error) {
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:create", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:create", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1167,11 +1167,11 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUplo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

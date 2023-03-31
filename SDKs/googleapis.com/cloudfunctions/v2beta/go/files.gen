@@ -27,6 +27,7 @@ pkg/models/operations/cloudfunctionsprojectslocationsoperationslist.go
 pkg/models/operations/cloudfunctionsprojectslocationsruntimeslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/function.go
 pkg/models/shared/serviceconfig.go
 pkg/models/shared/secretvolume.go
@@ -39,9 +40,7 @@ pkg/models/shared/sourceprovenance.go
 pkg/models/shared/storagesource.go
 pkg/models/shared/reposource.go
 pkg/models/shared/source.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/generatedownloadurlresponse.go
 pkg/models/shared/generateuploadurlresponse.go
 pkg/models/shared/generateuploadurlrequest.go

@@ -35,7 +35,7 @@ func newLiveFeedItems(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // PostV2ThirdPartyLiveFeedItems - Create a live feed item
 // Creates a live feed item that can be sent to users. May only be used by whitelisted Frontend Integrations. Reference the Salesloft App Directory and Frontend Integrations sections for additional details.
-func (s *liveFeedItems) PostV2ThirdPartyLiveFeedItems(ctx context.Context, request operations.PostV2ThirdPartyLiveFeedItemsRequest) (*operations.PostV2ThirdPartyLiveFeedItemsResponse, error) {
+func (s *liveFeedItems) PostV2ThirdPartyLiveFeedItems(ctx context.Context, request operations.PostV2ThirdPartyLiveFeedItemsRequestBody) (*operations.PostV2ThirdPartyLiveFeedItemsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/third_party_live_feed_items"
 

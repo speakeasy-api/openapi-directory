@@ -35,7 +35,6 @@ pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/batchinputcallbackcompletionbatchrequest.go
 pkg/models/shared/callbackcompletionbatchrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/callbackcompletionrequest.go
 pkg/models/shared/extensionactiondefinition.go
 pkg/models/shared/objectrequestoptions.go

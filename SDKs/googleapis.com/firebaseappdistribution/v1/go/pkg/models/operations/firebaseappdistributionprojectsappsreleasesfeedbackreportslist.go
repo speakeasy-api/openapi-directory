@@ -8,16 +8,11 @@ import (
 )
 
 type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListPathParams struct {
-	// Required. The name of the release resource, which is the parent of the feedback report resources. Format: `projects/{project_number}/apps/{app}/releases/{release}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListQueryParams struct {
+type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListQueryParams s
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListFeedbackReports` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListFeedbackReports` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the release resource, which is the parent of the feedback report resources. Format: `projects/{project_number}/apps/{app}/releases/{release}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListQueryParams s
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest struct {
-	PathParams  FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListPathParams
-	QueryParams FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListQueryParams
-	Security    FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListSecurity
 }
 
 type FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListResponse struct {

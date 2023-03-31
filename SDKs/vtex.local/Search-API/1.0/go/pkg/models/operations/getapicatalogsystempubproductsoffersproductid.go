@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetAPICatalogSystemPubProductsOffersProductIDPathParams struct {
-	// Product unique number identifier.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type GetAPICatalogSystemPubProductsOffersProductIDHeaders struct {
+type GetAPICatalogSystemPubProductsOffersProductIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAPICatalogSystemPubProductsOffersProductIDRequest struct {
-	PathParams GetAPICatalogSystemPubProductsOffersProductIDPathParams
-	Headers    GetAPICatalogSystemPubProductsOffersProductIDHeaders
+	// Product unique number identifier.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 }
 
 // GetAPICatalogSystemPubProductsOffersProductID200ApplicationJSONMainImage - General information of the main image of the SKU.

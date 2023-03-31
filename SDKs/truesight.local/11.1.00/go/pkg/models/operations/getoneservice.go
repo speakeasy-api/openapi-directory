@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOneServicePathParams struct {
+type GetOneServiceRequest struct {
 	// The ID of the service.
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type GetOneServiceRequest struct {
-	PathParams GetOneServicePathParams
 }
 
 type GetOneServiceResponse struct {

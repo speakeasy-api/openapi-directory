@@ -12,20 +12,15 @@ var FetchFieldTypeServerList = []string{
 }
 
 type FetchFieldTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchFieldTypePathParams struct {
+type FetchFieldTypeRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The Twilio-provided string that uniquely identifies the FieldType resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchFieldTypeRequest struct {
-	PathParams FetchFieldTypePathParams
-	Security   FetchFieldTypeSecurity
-	ServerURL  *string
 }
 
 type FetchFieldTypeResponse struct {

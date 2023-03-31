@@ -31,10 +31,6 @@ type PostActionNotificationExportsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostActionNotificationExportsRequest struct {
-	Request *PostActionNotificationExportsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostActionNotificationExportsResponse struct {
 	// The ActionNotificationExports object.
 	ActionNotificationExportEntity *shared.ActionNotificationExportEntity

@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DisconnectVendorSecurity struct {
-	UserAccessToken shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
+	UserAccessToken string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DisconnectVendorVendorEnum - Vendor ID
@@ -52,14 +51,9 @@ func (e *DisconnectVendorVendorEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DisconnectVendorPathParams struct {
+type DisconnectVendorRequest struct {
 	// Vendor to be unlinked
 	Vendor DisconnectVendorVendorEnum `pathParam:"style=simple,explode=false,name=vendor"`
-}
-
-type DisconnectVendorRequest struct {
-	PathParams DisconnectVendorPathParams
-	Security   DisconnectVendorSecurity
 }
 
 type DisconnectVendorResponse struct {

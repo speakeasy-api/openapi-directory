@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersIsSquareSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNumbersIsSquareQueryParams struct {
-	// Number to check
-	Number *int64 `queryParam:"style=form,explode=true,name=number"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
 type GetNumbersIsSquareRequest struct {
-	QueryParams GetNumbersIsSquareQueryParams
-	Security    GetNumbersIsSquareSecurity
+	// Number to check
+	Number *int64 `queryParam:"style=form,explode=true,name=number"`
 }
 
 type GetNumbersIsSquareResponse struct {

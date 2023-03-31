@@ -10,7 +10,7 @@ import (
 )
 
 type PrivateCollectionsListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PrivateCollectionsListOrderEnum - The field by which to order. Default varies by endpoint/resource.
@@ -70,7 +70,7 @@ func (e *PrivateCollectionsListOrderDirectionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type PrivateCollectionsListQueryParams struct {
+type PrivateCollectionsListRequest struct {
 	// Number of results included on a page. Used for pagination with query
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start the listing(the offset of the first result). Used for pagination with limit
@@ -82,11 +82,6 @@ type PrivateCollectionsListQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results included on a page. Used for pagination with page
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type PrivateCollectionsListRequest struct {
-	QueryParams PrivateCollectionsListQueryParams
-	Security    PrivateCollectionsListSecurity
 }
 
 type PrivateCollectionsListResponse struct {

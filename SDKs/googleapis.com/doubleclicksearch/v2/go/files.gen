@@ -31,7 +31,6 @@ pkg/models/shared/custommetric.go
 pkg/models/shared/customdimension.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/updateavailabilityresponse.go
 pkg/models/shared/availability.go
 pkg/models/shared/updateavailabilityrequest.go

@@ -7,20 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesMediaIDSyndicateFormatPathParams struct {
-	// Automatically added
-	Format string `pathParam:"style=simple,explode=false,name=format"`
-	// The id of the media to show embed code for.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDSyndicateFormatQueryParams struct {
+type GetResourcesMediaIDSyndicateFormatRequest struct {
 	// If content is a video, the embeded video will auto play when loaded.
 	Autoplay *bool `queryParam:"style=form,explode=false,name=autoplay"`
 	// The css class to target for extraction.
 	CSSClass *string `queryParam:"style=form,explode=false,name=cssClass"`
 	// Set font size (in points) of p, div, and span tags.
 	FontSize *int `queryParam:"style=form,explode=false,name=font-size"`
+	// Automatically added
+	Format string `pathParam:"style=simple,explode=false,name=format"`
+	// The id of the media to show embed code for.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Accepts valid CSS float options, such as 'left' or 'right'. Will inject a style into the content before rendering.
 	ImageFloat *string `queryParam:"style=form,explode=false,name=imageFloat"`
 	// Accepts 4 CSV values representing pixel sizes of margin similar to CSS. Default format is 'north,east,south,west' - for example '0,10,10,0' would put a 10 pixel margin on the right and bottom sides of an image. Will inject a style into the content before rendering.
@@ -37,11 +34,6 @@ type GetResourcesMediaIDSyndicateFormatQueryParams struct {
 	StripScripts *bool `queryParam:"style=form,explode=false,name=stripScripts"`
 	// Remove in-line styles from content.
 	StripStyles *bool `queryParam:"style=form,explode=false,name=stripStyles"`
-}
-
-type GetResourcesMediaIDSyndicateFormatRequest struct {
-	PathParams  GetResourcesMediaIDSyndicateFormatPathParams
-	QueryParams GetResourcesMediaIDSyndicateFormatQueryParams
 }
 
 type GetResourcesMediaIDSyndicateFormatResponse struct {

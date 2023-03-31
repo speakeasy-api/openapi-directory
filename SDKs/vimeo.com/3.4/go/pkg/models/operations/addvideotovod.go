@@ -10,14 +10,7 @@ import (
 )
 
 type AddVideoToVodSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AddVideoToVodPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddVideoToVodRequestBodyBuyPrice struct {
@@ -121,9 +114,11 @@ type AddVideoToVodRequestBody struct {
 }
 
 type AddVideoToVodRequest struct {
-	PathParams AddVideoToVodPathParams
-	Request    AddVideoToVodRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.video+json"`
-	Security   AddVideoToVodSecurity
+	RequestBody AddVideoToVodRequestBody `request:"mediaType=application/vnd.vimeo.ondemand.video+json"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type AddVideoToVodResponse struct {

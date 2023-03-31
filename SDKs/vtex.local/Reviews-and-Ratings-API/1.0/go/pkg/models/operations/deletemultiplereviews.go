@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteMultipleReviewsHeaders struct {
+type DeleteMultipleReviewsRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeleteMultipleReviewsRequest struct {
-	Headers DeleteMultipleReviewsHeaders
-	Request []string `request:"mediaType=application/json"`
+	ContentType string   `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []string `request:"mediaType=application/json"`
 }
 
 type DeleteMultipleReviewsResponse struct {

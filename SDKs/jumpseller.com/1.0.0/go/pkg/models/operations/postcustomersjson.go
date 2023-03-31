@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCustomersJSONQueryParams struct {
+type PostCustomersJSONRequest struct {
+	// Customer parameters.
+	CustomerWithPasswordNoID shared.CustomerWithPasswordNoID `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostCustomersJSONRequest struct {
-	QueryParams PostCustomersJSONQueryParams
-	// Customer parameters.
-	Request shared.CustomerWithPasswordNoID `request:"mediaType=application/json"`
 }
 
 type PostCustomersJSONResponse struct {

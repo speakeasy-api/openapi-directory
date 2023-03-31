@@ -34,14 +34,14 @@ func newPowerModules(defaultClient, securityClient HTTPClient, serverURL, langua
 // List the power status information for devices in an organization. The data returned by this endpoint is updated every 5 minutes.
 func (s *powerModules) GetOrganizationDevicesPowerModulesStatusesByDevice(ctx context.Context, request operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest) (*operations.GetOrganizationDevicesPowerModulesStatusesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

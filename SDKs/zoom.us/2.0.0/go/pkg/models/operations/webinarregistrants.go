@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarRegistrantsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarRegistrantsPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarRegistrantsStatusEnum - The registrant status:<br>`pending` - Registrant's status is pending.<br>`approved` - Registrant's status is approved.<br>`denied` - Registrant's status is denied.
@@ -46,7 +40,7 @@ func (e *WebinarRegistrantsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type WebinarRegistrantsQueryParams struct {
+type WebinarRegistrantsRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The meeting occurrence ID.
@@ -61,12 +55,8 @@ type WebinarRegistrantsQueryParams struct {
 	Status *WebinarRegistrantsStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// The tracking source ID for the registrants. Useful if you share the webinar registration page in multiple locations. See [Creating source tracking links for webinar registration](https://support.zoom.us/hc/en-us/articles/360000315683-Creating-source-tracking-links-for-webinar-registration) for details.
 	TrackingSourceID *string `queryParam:"style=form,explode=true,name=tracking_source_id"`
-}
-
-type WebinarRegistrantsRequest struct {
-	PathParams  WebinarRegistrantsPathParams
-	QueryParams WebinarRegistrantsQueryParams
-	Security    WebinarRegistrantsSecurity
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // WebinarRegistrantsRegistrationListRegistrantsCustomQuestions - Custom Question.

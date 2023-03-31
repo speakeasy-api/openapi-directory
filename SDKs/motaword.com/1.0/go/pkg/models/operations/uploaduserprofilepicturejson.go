@@ -8,18 +8,13 @@ import (
 )
 
 type UploadUserProfilePictureJSONSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type UploadUserProfilePictureJSONPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadUserProfilePictureJSONRequest struct {
-	PathParams UploadUserProfilePictureJSONPathParams
-	Request    *shared.ProfilePictureUpload `request:"mediaType=application/json"`
-	Security   UploadUserProfilePictureJSONSecurity
+	ProfilePictureUpload *shared.ProfilePictureUpload `request:"mediaType=application/json"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UploadUserProfilePictureJSONResponse struct {

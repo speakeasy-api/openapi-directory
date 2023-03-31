@@ -12,10 +12,11 @@ var FetchMessageInteractionServerList = []string{
 }
 
 type FetchMessageInteractionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchMessageInteractionPathParams struct {
+type FetchMessageInteractionRequest struct {
 	// The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.
 	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
 	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
@@ -24,12 +25,6 @@ type FetchMessageInteractionPathParams struct {
 	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
 	// The Twilio-provided string that uniquely identifies the MessageInteraction resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchMessageInteractionRequest struct {
-	PathParams FetchMessageInteractionPathParams
-	Security   FetchMessageInteractionSecurity
-	ServerURL  *string
 }
 
 type FetchMessageInteractionResponse struct {

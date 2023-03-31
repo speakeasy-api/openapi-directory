@@ -19,10 +19,6 @@ type PostAssetsAnalysisAbsorptionRatioRequestBody struct {
 	AssetsCovarianceMatrixEigenvectors *PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors `json:"assetsCovarianceMatrixEigenvectors,omitempty"`
 }
 
-type PostAssetsAnalysisAbsorptionRatioRequest struct {
-	Request PostAssetsAnalysisAbsorptionRatioRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsAnalysisAbsorptionRatio200ApplicationJSON - OK
 type PostAssetsAnalysisAbsorptionRatio200ApplicationJSON struct {
 	// The absorption ratio of the universe of assets

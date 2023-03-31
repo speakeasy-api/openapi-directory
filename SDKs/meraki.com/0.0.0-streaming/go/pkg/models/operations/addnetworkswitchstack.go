@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type AddNetworkSwitchStackPathParams struct {
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	SwitchStackID string `pathParam:"style=simple,explode=false,name=switchStackId"`
-}
-
 type AddNetworkSwitchStackRequestBody struct {
 	// The serial of the switch to be added
 	Serial string `json:"serial"`
 }
 
 type AddNetworkSwitchStackRequest struct {
-	PathParams AddNetworkSwitchStackPathParams
-	Request    AddNetworkSwitchStackRequestBody `request:"mediaType=application/json"`
+	RequestBody   AddNetworkSwitchStackRequestBody `request:"mediaType=application/json"`
+	NetworkID     string                           `pathParam:"style=simple,explode=false,name=networkId"`
+	SwitchStackID string                           `pathParam:"style=simple,explode=false,name=switchStackId"`
 }
 
 type AddNetworkSwitchStackResponse struct {

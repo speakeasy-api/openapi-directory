@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateCredentialAws - Create a new AWS Credential
-func (s *SDK) CreateCredentialAws(ctx context.Context, request operations.CreateCredentialAwsRequest) (*operations.CreateCredentialAwsResponse, error) {
+func (s *SDK) CreateCredentialAws(ctx context.Context, request operations.CreateCredentialAwsCreateCredentialAwsRequest, security operations.CreateCredentialAwsSecurity, opts ...operations.Option) (*operations.CreateCredentialAwsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCredentialAwsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Credentials/AWS"
@@ -113,7 +123,7 @@ func (s *SDK) CreateCredentialAws(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,10 +158,20 @@ func (s *SDK) CreateCredentialAws(ctx context.Context, request operations.Create
 }
 
 // CreateCredentialPublicKey - Create a new Public Key Credential
-func (s *SDK) CreateCredentialPublicKey(ctx context.Context, request operations.CreateCredentialPublicKeyRequest) (*operations.CreateCredentialPublicKeyResponse, error) {
+func (s *SDK) CreateCredentialPublicKey(ctx context.Context, request operations.CreateCredentialPublicKeyCreateCredentialPublicKeyRequest, security operations.CreateCredentialPublicKeySecurity, opts ...operations.Option) (*operations.CreateCredentialPublicKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCredentialPublicKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Credentials/PublicKeys"
@@ -168,7 +188,7 @@ func (s *SDK) CreateCredentialPublicKey(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,10 +223,20 @@ func (s *SDK) CreateCredentialPublicKey(ctx context.Context, request operations.
 }
 
 // CreateSecondaryAuthToken - Create a new secondary Auth Token
-func (s *SDK) CreateSecondaryAuthToken(ctx context.Context, request operations.CreateSecondaryAuthTokenRequest) (*operations.CreateSecondaryAuthTokenResponse, error) {
+func (s *SDK) CreateSecondaryAuthToken(ctx context.Context, opts ...operations.Option) (*operations.CreateSecondaryAuthTokenResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSecondaryAuthTokenServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/AuthTokens/Secondary"
@@ -216,7 +246,7 @@ func (s *SDK) CreateSecondaryAuthToken(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,20 +281,30 @@ func (s *SDK) CreateSecondaryAuthToken(ctx context.Context, request operations.C
 }
 
 // DeleteCredentialAws - Delete a Credential from your account
-func (s *SDK) DeleteCredentialAws(ctx context.Context, request operations.DeleteCredentialAwsRequest) (*operations.DeleteCredentialAwsResponse, error) {
-	baseURL := operations.DeleteCredentialAwsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCredentialAws(ctx context.Context, request operations.DeleteCredentialAwsRequest, security operations.DeleteCredentialAwsSecurity, opts ...operations.Option) (*operations.DeleteCredentialAwsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/AWS/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCredentialAwsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/AWS/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -290,20 +330,30 @@ func (s *SDK) DeleteCredentialAws(ctx context.Context, request operations.Delete
 }
 
 // DeleteCredentialPublicKey - Delete a Credential from your account
-func (s *SDK) DeleteCredentialPublicKey(ctx context.Context, request operations.DeleteCredentialPublicKeyRequest) (*operations.DeleteCredentialPublicKeyResponse, error) {
-	baseURL := operations.DeleteCredentialPublicKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCredentialPublicKey(ctx context.Context, request operations.DeleteCredentialPublicKeyRequest, security operations.DeleteCredentialPublicKeySecurity, opts ...operations.Option) (*operations.DeleteCredentialPublicKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/PublicKeys/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCredentialPublicKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/PublicKeys/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -329,10 +379,20 @@ func (s *SDK) DeleteCredentialPublicKey(ctx context.Context, request operations.
 }
 
 // DeleteSecondaryAuthToken - Delete the secondary Auth Token from your account
-func (s *SDK) DeleteSecondaryAuthToken(ctx context.Context, request operations.DeleteSecondaryAuthTokenRequest) (*operations.DeleteSecondaryAuthTokenResponse, error) {
+func (s *SDK) DeleteSecondaryAuthToken(ctx context.Context, opts ...operations.Option) (*operations.DeleteSecondaryAuthTokenResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.DeleteSecondaryAuthTokenServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/AuthTokens/Secondary"
@@ -342,7 +402,7 @@ func (s *SDK) DeleteSecondaryAuthToken(ctx context.Context, request operations.D
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,20 +428,30 @@ func (s *SDK) DeleteSecondaryAuthToken(ctx context.Context, request operations.D
 }
 
 // FetchCredentialAws - Fetch the AWS credentials specified by the provided Credential Sid
-func (s *SDK) FetchCredentialAws(ctx context.Context, request operations.FetchCredentialAwsRequest) (*operations.FetchCredentialAwsResponse, error) {
-	baseURL := operations.FetchCredentialAwsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCredentialAws(ctx context.Context, request operations.FetchCredentialAwsRequest, security operations.FetchCredentialAwsSecurity, opts ...operations.Option) (*operations.FetchCredentialAwsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/AWS/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCredentialAwsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/AWS/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -416,20 +486,30 @@ func (s *SDK) FetchCredentialAws(ctx context.Context, request operations.FetchCr
 }
 
 // FetchCredentialPublicKey - Fetch the public key specified by the provided Credential Sid
-func (s *SDK) FetchCredentialPublicKey(ctx context.Context, request operations.FetchCredentialPublicKeyRequest) (*operations.FetchCredentialPublicKeyResponse, error) {
-	baseURL := operations.FetchCredentialPublicKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCredentialPublicKey(ctx context.Context, request operations.FetchCredentialPublicKeyRequest, security operations.FetchCredentialPublicKeySecurity, opts ...operations.Option) (*operations.FetchCredentialPublicKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/PublicKeys/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCredentialPublicKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/PublicKeys/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -464,10 +544,20 @@ func (s *SDK) FetchCredentialPublicKey(ctx context.Context, request operations.F
 }
 
 // ListCredentialAws - Retrieves a collection of AWS Credentials belonging to the account used to make the request
-func (s *SDK) ListCredentialAws(ctx context.Context, request operations.ListCredentialAwsRequest) (*operations.ListCredentialAwsResponse, error) {
+func (s *SDK) ListCredentialAws(ctx context.Context, request operations.ListCredentialAwsRequest, security operations.ListCredentialAwsSecurity, opts ...operations.Option) (*operations.ListCredentialAwsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCredentialAwsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Credentials/AWS"
@@ -477,11 +567,11 @@ func (s *SDK) ListCredentialAws(ctx context.Context, request operations.ListCred
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -516,10 +606,20 @@ func (s *SDK) ListCredentialAws(ctx context.Context, request operations.ListCred
 }
 
 // ListCredentialPublicKey - Retrieves a collection of Public Key Credentials belonging to the account used to make the request
-func (s *SDK) ListCredentialPublicKey(ctx context.Context, request operations.ListCredentialPublicKeyRequest) (*operations.ListCredentialPublicKeyResponse, error) {
+func (s *SDK) ListCredentialPublicKey(ctx context.Context, request operations.ListCredentialPublicKeyRequest, security operations.ListCredentialPublicKeySecurity, opts ...operations.Option) (*operations.ListCredentialPublicKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCredentialPublicKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Credentials/PublicKeys"
@@ -529,11 +629,11 @@ func (s *SDK) ListCredentialPublicKey(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -568,10 +668,20 @@ func (s *SDK) ListCredentialPublicKey(ctx context.Context, request operations.Li
 }
 
 // UpdateAuthTokenPromotion - Promote the secondary Auth Token to primary. After promoting the new token, all requests to Twilio using your old primary Auth Token will result in an error.
-func (s *SDK) UpdateAuthTokenPromotion(ctx context.Context, request operations.UpdateAuthTokenPromotionRequest) (*operations.UpdateAuthTokenPromotionResponse, error) {
+func (s *SDK) UpdateAuthTokenPromotion(ctx context.Context, opts ...operations.Option) (*operations.UpdateAuthTokenPromotionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UpdateAuthTokenPromotionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/AuthTokens/Promote"
@@ -581,7 +691,7 @@ func (s *SDK) UpdateAuthTokenPromotion(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -616,15 +726,25 @@ func (s *SDK) UpdateAuthTokenPromotion(ctx context.Context, request operations.U
 }
 
 // UpdateCredentialAws - Modify the properties of a given Account
-func (s *SDK) UpdateCredentialAws(ctx context.Context, request operations.UpdateCredentialAwsRequest) (*operations.UpdateCredentialAwsResponse, error) {
-	baseURL := operations.UpdateCredentialAwsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCredentialAws(ctx context.Context, request operations.UpdateCredentialAwsRequest, security operations.UpdateCredentialAwsSecurity, opts ...operations.Option) (*operations.UpdateCredentialAwsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/AWS/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCredentialAwsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/AWS/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -636,7 +756,7 @@ func (s *SDK) UpdateCredentialAws(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -671,15 +791,25 @@ func (s *SDK) UpdateCredentialAws(ctx context.Context, request operations.Update
 }
 
 // UpdateCredentialPublicKey - Modify the properties of a given Account
-func (s *SDK) UpdateCredentialPublicKey(ctx context.Context, request operations.UpdateCredentialPublicKeyRequest) (*operations.UpdateCredentialPublicKeyResponse, error) {
-	baseURL := operations.UpdateCredentialPublicKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCredentialPublicKey(ctx context.Context, request operations.UpdateCredentialPublicKeyRequest, security operations.UpdateCredentialPublicKeySecurity, opts ...operations.Option) (*operations.UpdateCredentialPublicKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/PublicKeys/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCredentialPublicKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/PublicKeys/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -691,7 +821,7 @@ func (s *SDK) UpdateCredentialPublicKey(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

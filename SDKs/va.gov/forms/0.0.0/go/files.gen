@@ -15,6 +15,5 @@ pkg/utils/utils.go
 pkg/models/operations/findformbyformname.go
 pkg/models/operations/findforms.go
 pkg/models/shared/formshow.go
-pkg/models/shared/security.go
 pkg/models/shared/formsindex.go
 USAGE.md

@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type ErgoPayCreateBabelBoxPathParams struct {
-	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type ErgoPayCreateBabelBoxQueryParams struct {
+type ErgoPayCreateBabelBoxRequest struct {
+	Address     string `pathParam:"style=simple,explode=false,name=address"`
 	ErgAmount   int64  `queryParam:"style=form,explode=true,name=ergAmount"`
 	TokenAmount int64  `queryParam:"style=form,explode=true,name=tokenAmount"`
 	TokenID     string `queryParam:"style=form,explode=true,name=tokenId"`
-}
-
-type ErgoPayCreateBabelBoxRequest struct {
-	PathParams  ErgoPayCreateBabelBoxPathParams
-	QueryParams ErgoPayCreateBabelBoxQueryParams
 }
 
 type ErgoPayCreateBabelBoxResponse struct {

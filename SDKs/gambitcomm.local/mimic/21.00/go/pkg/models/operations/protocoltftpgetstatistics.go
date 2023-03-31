@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpGetStatisticsPathParams struct {
+type ProtocolTftpGetStatisticsRequest struct {
 	// Agent to show TFTP statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTftpGetStatisticsRequest struct {
-	PathParams ProtocolTftpGetStatisticsPathParams
 }
 
 type ProtocolTftpGetStatisticsResponse struct {

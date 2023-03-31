@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type RootV1ScoringsConsolidatedDailyQueryParams struct {
+type RootV1ScoringsConsolidatedDailyRequest struct {
 	AppID       *string `queryParam:"style=form,explode=true,name=AppId"`
 	CompanyID   *string `queryParam:"style=form,explode=true,name=CompanyId"`
 	DeviceToken *string `queryParam:"style=form,explode=true,name=DeviceToken"`
@@ -14,10 +14,6 @@ type RootV1ScoringsConsolidatedDailyQueryParams struct {
 	InstanceID  *string `queryParam:"style=form,explode=true,name=InstanceId"`
 	StartDate   *string `queryParam:"style=form,explode=true,name=StartDate"`
 	Tag         *string `queryParam:"style=form,explode=true,name=Tag"`
-}
-
-type RootV1ScoringsConsolidatedDailyRequest struct {
-	QueryParams RootV1ScoringsConsolidatedDailyQueryParams
 }
 
 type RootV1ScoringsConsolidatedDaily200ApplicationJSONResult struct {

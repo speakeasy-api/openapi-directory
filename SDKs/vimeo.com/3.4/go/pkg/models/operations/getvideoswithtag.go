@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideosWithTagPathParams struct {
-	// The tag word.
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetVideosWithTagDirectionEnum - The sort direction of the results.
 type GetVideosWithTagDirectionEnum string
 
@@ -65,7 +60,7 @@ func (e *GetVideosWithTagSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideosWithTagQueryParams struct {
+type GetVideosWithTagRequest struct {
 	// The sort direction of the results.
 	Direction *GetVideosWithTagDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -74,11 +69,8 @@ type GetVideosWithTagQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetVideosWithTagSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVideosWithTagRequest struct {
-	PathParams  GetVideosWithTagPathParams
-	QueryParams GetVideosWithTagQueryParams
+	// The tag word.
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetVideosWithTagResponse struct {

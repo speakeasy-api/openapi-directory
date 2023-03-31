@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOGQueryParams struct {
-	URL *string `queryParam:"serialization=json,name=url"`
-}
-
 type GetOGRequest struct {
-	QueryParams GetOGQueryParams
+	URL *string `queryParam:"serialization=json,name=url"`
 }
 
 type GetOGResponse struct {

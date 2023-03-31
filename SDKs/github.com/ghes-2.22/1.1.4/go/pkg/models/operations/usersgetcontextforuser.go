@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersGetContextForUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // UsersGetContextForUserSubjectTypeEnum - Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`.
 type UsersGetContextForUserSubjectTypeEnum string
 
@@ -43,16 +39,12 @@ func (e *UsersGetContextForUserSubjectTypeEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type UsersGetContextForUserQueryParams struct {
+type UsersGetContextForUserRequest struct {
 	// Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`.
 	SubjectID *string `queryParam:"style=form,explode=true,name=subject_id"`
 	// Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`.
 	SubjectType *UsersGetContextForUserSubjectTypeEnum `queryParam:"style=form,explode=true,name=subject_type"`
-}
-
-type UsersGetContextForUserRequest struct {
-	PathParams  UsersGetContextForUserPathParams
-	QueryParams UsersGetContextForUserQueryParams
+	Username    string                                 `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UsersGetContextForUserResponse struct {

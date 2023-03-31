@@ -36,16 +36,16 @@ func newStatus(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus - Get subscription statuses for a contact
 // Returns a list of subscriptions and their status for a given contact.
-func (s *status) GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus(ctx context.Context, request operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest) (*operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse, error) {
+func (s *status) GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus(ctx context.Context, request operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest, security operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity) (*operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/communication-preferences/v3/status/email/{emailAddress}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/communication-preferences/v3/status/email/{emailAddress}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *status) GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailSta
 
 // PostCommunicationPreferencesV3SubscribeSubscribe - Subscribe a contact
 // Subscribes a contact to the given subscription type. This API is not valid to use for subscribing a contact at a brand or portal level and will return an error.
-func (s *status) PostCommunicationPreferencesV3SubscribeSubscribe(ctx context.Context, request operations.PostCommunicationPreferencesV3SubscribeSubscribeRequest) (*operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse, error) {
+func (s *status) PostCommunicationPreferencesV3SubscribeSubscribe(ctx context.Context, request shared.PublicUpdateSubscriptionStatusRequest, security operations.PostCommunicationPreferencesV3SubscribeSubscribeSecurity) (*operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/communication-preferences/v3/subscribe"
 
@@ -110,7 +110,7 @@ func (s *status) PostCommunicationPreferencesV3SubscribeSubscribe(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *status) PostCommunicationPreferencesV3SubscribeSubscribe(ctx context.Co
 
 // PostCommunicationPreferencesV3UnsubscribeUnsubscribe - Unsubscribe a contact
 // Unsubscribes a contact from the given subscription type. This API is not valid to use for unsubscribing a contact at a brand or portal level and will return an error.
-func (s *status) PostCommunicationPreferencesV3UnsubscribeUnsubscribe(ctx context.Context, request operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeRequest) (*operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse, error) {
+func (s *status) PostCommunicationPreferencesV3UnsubscribeUnsubscribe(ctx context.Context, request shared.PublicUpdateSubscriptionStatusRequest, security operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity) (*operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/communication-preferences/v3/unsubscribe"
 
@@ -175,7 +175,7 @@ func (s *status) PostCommunicationPreferencesV3UnsubscribeUnsubscribe(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

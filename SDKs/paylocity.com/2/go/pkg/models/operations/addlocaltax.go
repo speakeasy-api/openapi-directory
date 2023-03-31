@@ -8,21 +8,16 @@ import (
 )
 
 type AddLocalTaxSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddLocalTaxPathParams struct {
+type AddLocalTaxRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-}
-
-type AddLocalTaxRequest struct {
-	PathParams AddLocalTaxPathParams
 	// LocalTax Model
-	Request  shared.LocalTax `request:"mediaType=application/json"`
-	Security AddLocalTaxSecurity
+	LocalTax shared.LocalTax `request:"mediaType=application/json"`
 }
 
 type AddLocalTaxResponse struct {

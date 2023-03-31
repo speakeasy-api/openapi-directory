@@ -37,7 +37,7 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete Notification
 func (s *notifications) DeleteNotificationsID(ctx context.Context, request operations.DeleteNotificationsIDRequest) (*operations.DeleteNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *notifications) GetNotifications(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *notifications) GetNotifications(ctx context.Context, request operations
 // Show Notification
 func (s *notifications) GetNotificationsID(ctx context.Context, request operations.GetNotificationsIDRequest) (*operations.GetNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *notifications) GetNotificationsID(ctx context.Context, request operatio
 // Update Notification
 func (s *notifications) PatchNotificationsID(ctx context.Context, request operations.PatchNotificationsIDRequest) (*operations.PatchNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *notifications) PatchNotificationsID(ctx context.Context, request operat
 
 // PostNotifications - Create Notification
 // Create Notification
-func (s *notifications) PostNotifications(ctx context.Context, request operations.PostNotificationsRequest) (*operations.PostNotificationsResponse, error) {
+func (s *notifications) PostNotifications(ctx context.Context, request operations.PostNotificationsRequestBody) (*operations.PostNotificationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications"
 

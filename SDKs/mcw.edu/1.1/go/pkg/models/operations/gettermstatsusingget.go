@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETTermStatsUsingGETPathParams struct {
+type GETTermStatsUsingGETRequest struct {
 	// accId
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
 	// filterAccId
 	FilterAccID string `pathParam:"style=simple,explode=false,name=filterAccId"`
-}
-
-type GETTermStatsUsingGETRequest struct {
-	PathParams GETTermStatsUsingGETPathParams
 }
 
 type GETTermStatsUsingGETResponse struct {

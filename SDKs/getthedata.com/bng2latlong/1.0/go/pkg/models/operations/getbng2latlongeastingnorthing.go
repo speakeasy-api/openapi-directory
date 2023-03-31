@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetBng2latlongEastingNorthingPathParams struct {
+type GetBng2latlongEastingNorthingRequest struct {
 	// An OSGB36 (British National Grid) easting.
 	Easting int64 `pathParam:"style=simple,explode=false,name=easting"`
 	// An OSGB36 (British National Grid) northing.
 	Northing int64 `pathParam:"style=simple,explode=false,name=northing"`
-}
-
-type GetBng2latlongEastingNorthingRequest struct {
-	PathParams GetBng2latlongEastingNorthingPathParams
 }
 
 type GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum string

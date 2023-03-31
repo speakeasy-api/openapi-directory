@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SearchStationsRequest struct {
-	Request shared.StationSearchParams `request:"mediaType=application/json"`
-}
 
 type SearchStationsResponse struct {
 	Body        []byte

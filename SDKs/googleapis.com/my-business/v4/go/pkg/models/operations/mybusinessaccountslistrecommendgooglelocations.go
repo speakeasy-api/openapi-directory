@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsListRecommendGoogleLocationsPathParams struct {
-	// Name of the account resource to fetch recommended Google locations for.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessAccountsListRecommendGoogleLocationsQueryParams struct {
+type MybusinessAccountsListRecommendGoogleLocationsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -25,6 +20,8 @@ type MybusinessAccountsListRecommendGoogleLocationsQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Name of the account resource to fetch recommended Google locations for.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// How many locations to fetch per page. Default is 25, minimum is 1, and maximum page size is 100.
@@ -39,11 +36,6 @@ type MybusinessAccountsListRecommendGoogleLocationsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsListRecommendGoogleLocationsRequest struct {
-	PathParams  MybusinessAccountsListRecommendGoogleLocationsPathParams
-	QueryParams MybusinessAccountsListRecommendGoogleLocationsQueryParams
 }
 
 type MybusinessAccountsListRecommendGoogleLocationsResponse struct {

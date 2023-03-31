@@ -35,9 +35,9 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // Assign SM seats to a network. This will increase the managed SM device limit of the network
 func (s *organizations) AssignOrganizationLicensesSeats(ctx context.Context, request operations.AssignOrganizationLicensesSeatsRequest) (*operations.AssignOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/assignSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/assignSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *organizations) AssignOrganizationLicensesSeats(ctx context.Context, req
 // Claim a list of devices, licenses, and/or orders into an organization. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory.
 func (s *organizations) ClaimIntoOrganization(ctx context.Context, request operations.ClaimIntoOrganizationRequest) (*operations.ClaimIntoOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -142,9 +142,9 @@ func (s *organizations) ClaimIntoOrganization(ctx context.Context, request opera
 // Claim a list of devices, licenses, and/or orders into an organization inventory. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory. Use /organizations/{organizationId}/inventory/release to release devices from an organization.
 func (s *organizations) ClaimIntoOrganizationInventory(ctx context.Context, request operations.ClaimIntoOrganizationInventoryRequest) (*operations.ClaimIntoOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -194,9 +194,9 @@ func (s *organizations) ClaimIntoOrganizationInventory(ctx context.Context, requ
 // Create a new organization by cloning the addressed organization
 func (s *organizations) CloneOrganization(ctx context.Context, request operations.CloneOrganizationRequest) (*operations.CloneOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clone", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clone", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -249,9 +249,9 @@ func (s *organizations) CloneOrganization(ctx context.Context, request operation
 // Combine multiple networks into a single network
 func (s *organizations) CombineOrganizationNetworks(ctx context.Context, request operations.CombineOrganizationNetworksRequest) (*operations.CombineOrganizationNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks/combine", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks/combine", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,7 +302,7 @@ func (s *organizations) CombineOrganizationNetworks(ctx context.Context, request
 
 // CreateOrganization - Create a new organization
 // Create a new organization
-func (s *organizations) CreateOrganization(ctx context.Context, request operations.CreateOrganizationRequest) (*operations.CreateOrganizationResponse, error) {
+func (s *organizations) CreateOrganization(ctx context.Context, request operations.CreateOrganizationRequestBody) (*operations.CreateOrganizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations"
 
@@ -359,9 +359,9 @@ func (s *organizations) CreateOrganization(ctx context.Context, request operatio
 // Create an action batch
 func (s *organizations) CreateOrganizationActionBatch(ctx context.Context, request operations.CreateOrganizationActionBatchRequest) (*operations.CreateOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -414,9 +414,9 @@ func (s *organizations) CreateOrganizationActionBatch(ctx context.Context, reque
 // Creates new adaptive policy ACL
 func (s *organizations) CreateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyACLRequest) (*operations.CreateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -469,9 +469,9 @@ func (s *organizations) CreateOrganizationAdaptivePolicyACL(ctx context.Context,
 // Creates a new adaptive policy group
 func (s *organizations) CreateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyGroupRequest) (*operations.CreateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -524,9 +524,9 @@ func (s *organizations) CreateOrganizationAdaptivePolicyGroup(ctx context.Contex
 // Add an Adaptive Policy
 func (s *organizations) CreateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyPolicyRequest) (*operations.CreateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -579,9 +579,9 @@ func (s *organizations) CreateOrganizationAdaptivePolicyPolicy(ctx context.Conte
 // Create a new dashboard administrator
 func (s *organizations) CreateOrganizationAdmin(ctx context.Context, request operations.CreateOrganizationAdminRequest) (*operations.CreateOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -634,9 +634,9 @@ func (s *organizations) CreateOrganizationAdmin(ctx context.Context, request ope
 // Create an organization-wide alert configuration
 func (s *organizations) CreateOrganizationAlertsProfile(ctx context.Context, request operations.CreateOrganizationAlertsProfileRequest) (*operations.CreateOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -689,9 +689,9 @@ func (s *organizations) CreateOrganizationAlertsProfile(ctx context.Context, req
 // Add a new branding policy to an organization
 func (s *organizations) CreateOrganizationBrandingPolicy(ctx context.Context, request operations.CreateOrganizationBrandingPolicyRequest) (*operations.CreateOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -741,9 +741,9 @@ func (s *organizations) CreateOrganizationBrandingPolicy(ctx context.Context, re
 // Create a new configuration template
 func (s *organizations) CreateOrganizationConfigTemplate(ctx context.Context, request operations.CreateOrganizationConfigTemplateRequest) (*operations.CreateOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -796,9 +796,9 @@ func (s *organizations) CreateOrganizationConfigTemplate(ctx context.Context, re
 // Create a new early access feature opt-in for an organization
 func (s *organizations) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.CreateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.CreateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -851,9 +851,9 @@ func (s *organizations) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.C
 // Imports event logs related to the onboarding app into elastisearch
 func (s *organizations) CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -906,9 +906,9 @@ func (s *organizations) CreateOrganizationInventoryOnboardingCloudMonitoringExpo
 // Commits the import operation to complete the onboarding of a device into Dashboard for monitoring.
 func (s *organizations) CreateOrganizationInventoryOnboardingCloudMonitoringImport(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -961,9 +961,9 @@ func (s *organizations) CreateOrganizationInventoryOnboardingCloudMonitoringImpo
 // Create a network
 func (s *organizations) CreateOrganizationNetwork(ctx context.Context, request operations.CreateOrganizationNetworkRequest) (*operations.CreateOrganizationNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1016,9 +1016,9 @@ func (s *organizations) CreateOrganizationNetwork(ctx context.Context, request o
 // Creates a new Policy Object.
 func (s *organizations) CreateOrganizationPolicyObject(ctx context.Context, request operations.CreateOrganizationPolicyObjectRequest) (*operations.CreateOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1071,9 +1071,9 @@ func (s *organizations) CreateOrganizationPolicyObject(ctx context.Context, requ
 // Creates a new Policy Object Group.
 func (s *organizations) CreateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.CreateOrganizationPolicyObjectsGroupRequest) (*operations.CreateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1126,9 +1126,9 @@ func (s *organizations) CreateOrganizationPolicyObjectsGroup(ctx context.Context
 // Create a SAML IdP for your organization.
 func (s *organizations) CreateOrganizationSamlIdp(ctx context.Context, request operations.CreateOrganizationSamlIdpRequest) (*operations.CreateOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1181,9 +1181,9 @@ func (s *organizations) CreateOrganizationSamlIdp(ctx context.Context, request o
 // Create a SAML role
 func (s *organizations) CreateOrganizationSamlRole(ctx context.Context, request operations.CreateOrganizationSamlRoleRequest) (*operations.CreateOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1236,7 +1236,7 @@ func (s *organizations) CreateOrganizationSamlRole(ctx context.Context, request 
 // Delete an organization
 func (s *organizations) DeleteOrganization(ctx context.Context, request operations.DeleteOrganizationRequest) (*operations.DeleteOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1272,7 +1272,7 @@ func (s *organizations) DeleteOrganization(ctx context.Context, request operatio
 // Delete an action batch
 func (s *organizations) DeleteOrganizationActionBatch(ctx context.Context, request operations.DeleteOrganizationActionBatchRequest) (*operations.DeleteOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1308,7 +1308,7 @@ func (s *organizations) DeleteOrganizationActionBatch(ctx context.Context, reque
 // Deletes the specified adaptive policy ACL. Note this adaptive policy ACL will also be removed from policies using it.
 func (s *organizations) DeleteOrganizationAdaptivePolicyACL(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyACLRequest) (*operations.DeleteOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1344,7 +1344,7 @@ func (s *organizations) DeleteOrganizationAdaptivePolicyACL(ctx context.Context,
 // Deletes the specified adaptive policy group and any associated policies and references
 func (s *organizations) DeleteOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyGroupRequest) (*operations.DeleteOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1380,7 +1380,7 @@ func (s *organizations) DeleteOrganizationAdaptivePolicyGroup(ctx context.Contex
 // Delete an Adaptive Policy
 func (s *organizations) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyPolicyRequest) (*operations.DeleteOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1416,7 +1416,7 @@ func (s *organizations) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Conte
 // Revoke all access for a dashboard administrator within this organization
 func (s *organizations) DeleteOrganizationAdmin(ctx context.Context, request operations.DeleteOrganizationAdminRequest) (*operations.DeleteOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1452,7 +1452,7 @@ func (s *organizations) DeleteOrganizationAdmin(ctx context.Context, request ope
 // Removes an organization-wide alert config
 func (s *organizations) DeleteOrganizationAlertsProfile(ctx context.Context, request operations.DeleteOrganizationAlertsProfileRequest) (*operations.DeleteOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1488,7 +1488,7 @@ func (s *organizations) DeleteOrganizationAlertsProfile(ctx context.Context, req
 // Delete a branding policy
 func (s *organizations) DeleteOrganizationBrandingPolicy(ctx context.Context, request operations.DeleteOrganizationBrandingPolicyRequest) (*operations.DeleteOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1524,7 +1524,7 @@ func (s *organizations) DeleteOrganizationBrandingPolicy(ctx context.Context, re
 // Remove a configuration template
 func (s *organizations) DeleteOrganizationConfigTemplate(ctx context.Context, request operations.DeleteOrganizationConfigTemplateRequest) (*operations.DeleteOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1560,7 +1560,7 @@ func (s *organizations) DeleteOrganizationConfigTemplate(ctx context.Context, re
 // Delete an early access feature opt-in
 func (s *organizations) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest) (*operations.DeleteOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1596,7 +1596,7 @@ func (s *organizations) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.C
 // Deletes a Policy Object.
 func (s *organizations) DeleteOrganizationPolicyObject(ctx context.Context, request operations.DeleteOrganizationPolicyObjectRequest) (*operations.DeleteOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1632,7 +1632,7 @@ func (s *organizations) DeleteOrganizationPolicyObject(ctx context.Context, requ
 // Deletes a Policy Object Group.
 func (s *organizations) DeleteOrganizationPolicyObjectsGroup(ctx context.Context, request operations.DeleteOrganizationPolicyObjectsGroupRequest) (*operations.DeleteOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1668,7 +1668,7 @@ func (s *organizations) DeleteOrganizationPolicyObjectsGroup(ctx context.Context
 // Remove a SAML IdP in your organization.
 func (s *organizations) DeleteOrganizationSamlIdp(ctx context.Context, request operations.DeleteOrganizationSamlIdpRequest) (*operations.DeleteOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1704,7 +1704,7 @@ func (s *organizations) DeleteOrganizationSamlIdp(ctx context.Context, request o
 // Remove a SAML role
 func (s *organizations) DeleteOrganizationSamlRole(ctx context.Context, request operations.DeleteOrganizationSamlRoleRequest) (*operations.DeleteOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1740,7 +1740,7 @@ func (s *organizations) DeleteOrganizationSamlRole(ctx context.Context, request 
 // Delete a user and all of its authentication methods.
 func (s *organizations) DeleteOrganizationUser(ctx context.Context, request operations.DeleteOrganizationUserRequest) (*operations.DeleteOrganizationUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1776,7 +1776,7 @@ func (s *organizations) DeleteOrganizationUser(ctx context.Context, request oper
 // Return an organization
 func (s *organizations) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1821,7 +1821,7 @@ func (s *organizations) GetOrganization(ctx context.Context, request operations.
 // Return an action batch
 func (s *organizations) GetOrganizationActionBatch(ctx context.Context, request operations.GetOrganizationActionBatchRequest) (*operations.GetOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1866,14 +1866,14 @@ func (s *organizations) GetOrganizationActionBatch(ctx context.Context, request 
 // Return the list of action batches in the organization
 func (s *organizations) GetOrganizationActionBatches(ctx context.Context, request operations.GetOrganizationActionBatchesRequest) (*operations.GetOrganizationActionBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1915,7 +1915,7 @@ func (s *organizations) GetOrganizationActionBatches(ctx context.Context, reques
 // Returns the adaptive policy ACL information
 func (s *organizations) GetOrganizationAdaptivePolicyACL(ctx context.Context, request operations.GetOrganizationAdaptivePolicyACLRequest) (*operations.GetOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1960,7 +1960,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyACL(ctx context.Context, re
 // List adaptive policy ACLs in a organization
 func (s *organizations) GetOrganizationAdaptivePolicyAcls(ctx context.Context, request operations.GetOrganizationAdaptivePolicyAclsRequest) (*operations.GetOrganizationAdaptivePolicyAclsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2005,7 +2005,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyAcls(ctx context.Context, r
 // Returns an adaptive policy group
 func (s *organizations) GetOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupRequest) (*operations.GetOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2050,7 +2050,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyGroup(ctx context.Context, 
 // List adaptive policy groups in a organization
 func (s *organizations) GetOrganizationAdaptivePolicyGroups(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupsRequest) (*operations.GetOrganizationAdaptivePolicyGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2095,7 +2095,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyGroups(ctx context.Context,
 // Returns adaptive policy aggregate statistics for an organization
 func (s *organizations) GetOrganizationAdaptivePolicyOverview(ctx context.Context, request operations.GetOrganizationAdaptivePolicyOverviewRequest) (*operations.GetOrganizationAdaptivePolicyOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2140,7 +2140,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyOverview(ctx context.Contex
 // List adaptive policies in an organization
 func (s *organizations) GetOrganizationAdaptivePolicyPolicies(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPoliciesRequest) (*operations.GetOrganizationAdaptivePolicyPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2185,7 +2185,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyPolicies(ctx context.Contex
 // Return an adaptive policy
 func (s *organizations) GetOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPolicyRequest) (*operations.GetOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2230,7 +2230,7 @@ func (s *organizations) GetOrganizationAdaptivePolicyPolicy(ctx context.Context,
 // Returns global adaptive policy settings in an organization
 func (s *organizations) GetOrganizationAdaptivePolicySettings(ctx context.Context, request operations.GetOrganizationAdaptivePolicySettingsRequest) (*operations.GetOrganizationAdaptivePolicySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2275,7 +2275,7 @@ func (s *organizations) GetOrganizationAdaptivePolicySettings(ctx context.Contex
 // List the dashboard administrators in this organization
 func (s *organizations) GetOrganizationAdmins(ctx context.Context, request operations.GetOrganizationAdminsRequest) (*operations.GetOrganizationAdminsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2320,7 +2320,7 @@ func (s *organizations) GetOrganizationAdmins(ctx context.Context, request opera
 // List all organization-wide alert configurations
 func (s *organizations) GetOrganizationAlertsProfiles(ctx context.Context, request operations.GetOrganizationAlertsProfilesRequest) (*operations.GetOrganizationAlertsProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2365,14 +2365,14 @@ func (s *organizations) GetOrganizationAlertsProfiles(ctx context.Context, reque
 // List the API requests made by an organization
 func (s *organizations) GetOrganizationAPIRequests(ctx context.Context, request operations.GetOrganizationAPIRequestsRequest) (*operations.GetOrganizationAPIRequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2416,14 +2416,14 @@ func (s *organizations) GetOrganizationAPIRequests(ctx context.Context, request 
 // Return an aggregated overview of API requests data
 func (s *organizations) GetOrganizationAPIRequestsOverview(ctx context.Context, request operations.GetOrganizationAPIRequestsOverviewRequest) (*operations.GetOrganizationAPIRequestsOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2465,14 +2465,14 @@ func (s *organizations) GetOrganizationAPIRequestsOverview(ctx context.Context, 
 // Tracks organizations' API requests by response code across a given time period
 func (s *organizations) GetOrganizationAPIRequestsOverviewResponseCodesByInterval(ctx context.Context, request operations.GetOrganizationAPIRequestsOverviewResponseCodesByIntervalRequest) (*operations.GetOrganizationAPIRequestsOverviewResponseCodesByIntervalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2514,7 +2514,7 @@ func (s *organizations) GetOrganizationAPIRequestsOverviewResponseCodesByInterva
 // List the branding policies of an organization
 func (s *organizations) GetOrganizationBrandingPolicies(ctx context.Context, request operations.GetOrganizationBrandingPoliciesRequest) (*operations.GetOrganizationBrandingPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2559,7 +2559,7 @@ func (s *organizations) GetOrganizationBrandingPolicies(ctx context.Context, req
 // Return the branding policy IDs of an organization in priority order. IDs are ordered in ascending order of priority (IDs later in the array have higher priority).
 func (s *organizations) GetOrganizationBrandingPoliciesPriorities(ctx context.Context, request operations.GetOrganizationBrandingPoliciesPrioritiesRequest) (*operations.GetOrganizationBrandingPoliciesPrioritiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2604,7 +2604,7 @@ func (s *organizations) GetOrganizationBrandingPoliciesPriorities(ctx context.Co
 // Return a branding policy
 func (s *organizations) GetOrganizationBrandingPolicy(ctx context.Context, request operations.GetOrganizationBrandingPolicyRequest) (*operations.GetOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2649,14 +2649,14 @@ func (s *organizations) GetOrganizationBrandingPolicy(ctx context.Context, reque
 // Return data usage (in megabits per second) over time for all clients in the given organization within a given time range.
 func (s *organizations) GetOrganizationClientsBandwidthUsageHistory(ctx context.Context, request operations.GetOrganizationClientsBandwidthUsageHistoryRequest) (*operations.GetOrganizationClientsBandwidthUsageHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2698,14 +2698,14 @@ func (s *organizations) GetOrganizationClientsBandwidthUsageHistory(ctx context.
 // Return summary information around client data usage (in mb) across the given organization.
 func (s *organizations) GetOrganizationClientsOverview(ctx context.Context, request operations.GetOrganizationClientsOverviewRequest) (*operations.GetOrganizationClientsOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2747,14 +2747,14 @@ func (s *organizations) GetOrganizationClientsOverview(ctx context.Context, requ
 // Return the client details in an organization
 func (s *organizations) GetOrganizationClientsSearch(ctx context.Context, request operations.GetOrganizationClientsSearchRequest) (*operations.GetOrganizationClientsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2798,7 +2798,7 @@ func (s *organizations) GetOrganizationClientsSearch(ctx context.Context, reques
 // Return a single configuration template
 func (s *organizations) GetOrganizationConfigTemplate(ctx context.Context, request operations.GetOrganizationConfigTemplateRequest) (*operations.GetOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2843,7 +2843,7 @@ func (s *organizations) GetOrganizationConfigTemplate(ctx context.Context, reque
 // List the configuration templates for this organization
 func (s *organizations) GetOrganizationConfigTemplates(ctx context.Context, request operations.GetOrganizationConfigTemplatesRequest) (*operations.GetOrganizationConfigTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2888,14 +2888,14 @@ func (s *organizations) GetOrganizationConfigTemplates(ctx context.Context, requ
 // View the Change Log for your organization
 func (s *organizations) GetOrganizationConfigurationChanges(ctx context.Context, request operations.GetOrganizationConfigurationChangesRequest) (*operations.GetOrganizationConfigurationChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configurationChanges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configurationChanges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2939,14 +2939,14 @@ func (s *organizations) GetOrganizationConfigurationChanges(ctx context.Context,
 // List the devices in an organization
 func (s *organizations) GetOrganizationDevices(ctx context.Context, request operations.GetOrganizationDevicesRequest) (*operations.GetOrganizationDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2990,14 +2990,14 @@ func (s *organizations) GetOrganizationDevices(ctx context.Context, request oper
 // List the availability information for devices in an organization. The data returned by this endpoint is updated every 5 minutes.
 func (s *organizations) GetOrganizationDevicesAvailabilities(ctx context.Context, request operations.GetOrganizationDevicesAvailabilitiesRequest) (*operations.GetOrganizationDevicesAvailabilitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/availabilities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/availabilities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3041,14 +3041,14 @@ func (s *organizations) GetOrganizationDevicesAvailabilities(ctx context.Context
 // List the power status information for devices in an organization. The data returned by this endpoint is updated every 5 minutes.
 func (s *organizations) GetOrganizationDevicesPowerModulesStatusesByDevice(ctx context.Context, request operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest) (*operations.GetOrganizationDevicesPowerModulesStatusesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3092,14 +3092,14 @@ func (s *organizations) GetOrganizationDevicesPowerModulesStatusesByDevice(ctx c
 // List the status of every Meraki device in the organization
 func (s *organizations) GetOrganizationDevicesStatuses(ctx context.Context, request operations.GetOrganizationDevicesStatusesRequest) (*operations.GetOrganizationDevicesStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3143,14 +3143,14 @@ func (s *organizations) GetOrganizationDevicesStatuses(ctx context.Context, requ
 // Return an overview of current device statuses
 func (s *organizations) GetOrganizationDevicesStatusesOverview(ctx context.Context, request operations.GetOrganizationDevicesStatusesOverviewRequest) (*operations.GetOrganizationDevicesStatusesOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3192,14 +3192,14 @@ func (s *organizations) GetOrganizationDevicesStatusesOverview(ctx context.Conte
 // List the current uplink addresses for devices in an organization.
 func (s *organizations) GetOrganizationDevicesUplinksAddressesByDevice(ctx context.Context, request operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest) (*operations.GetOrganizationDevicesUplinksAddressesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3243,14 +3243,14 @@ func (s *organizations) GetOrganizationDevicesUplinksAddressesByDevice(ctx conte
 // Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 func (s *organizations) GetOrganizationDevicesUplinksLossAndLatency(ctx context.Context, request operations.GetOrganizationDevicesUplinksLossAndLatencyRequest) (*operations.GetOrganizationDevicesUplinksLossAndLatencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/uplinksLossAndLatency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/uplinksLossAndLatency", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3292,7 +3292,7 @@ func (s *organizations) GetOrganizationDevicesUplinksLossAndLatency(ctx context.
 // List the available early access features for organization
 func (s *organizations) GetOrganizationEarlyAccessFeatures(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesRequest) (*operations.GetOrganizationEarlyAccessFeaturesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3337,7 +3337,7 @@ func (s *organizations) GetOrganizationEarlyAccessFeatures(ctx context.Context, 
 // Show an early access feature opt-in for an organization
 func (s *organizations) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3382,7 +3382,7 @@ func (s *organizations) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Cont
 // List the early access feature opt-ins for an organization
 func (s *organizations) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInsRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3427,14 +3427,14 @@ func (s *organizations) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Con
 // Get firmware upgrade information for an organization
 func (s *organizations) GetOrganizationFirmwareUpgrades(ctx context.Context, request operations.GetOrganizationFirmwareUpgradesRequest) (*operations.GetOrganizationFirmwareUpgradesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3476,14 +3476,14 @@ func (s *organizations) GetOrganizationFirmwareUpgrades(ctx context.Context, req
 // Get firmware upgrade status for the filtered devices
 func (s *organizations) GetOrganizationFirmwareUpgradesByDevice(ctx context.Context, request operations.GetOrganizationFirmwareUpgradesByDeviceRequest) (*operations.GetOrganizationFirmwareUpgradesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3527,7 +3527,7 @@ func (s *organizations) GetOrganizationFirmwareUpgradesByDevice(ctx context.Cont
 // Return a single device from the inventory of an organization
 func (s *organizations) GetOrganizationInventoryDevice(ctx context.Context, request operations.GetOrganizationInventoryDeviceRequest) (*operations.GetOrganizationInventoryDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3572,14 +3572,14 @@ func (s *organizations) GetOrganizationInventoryDevice(ctx context.Context, requ
 // Return the device inventory for an organization
 func (s *organizations) GetOrganizationInventoryDevices(ctx context.Context, request operations.GetOrganizationInventoryDevicesRequest) (*operations.GetOrganizationInventoryDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3623,14 +3623,14 @@ func (s *organizations) GetOrganizationInventoryDevices(ctx context.Context, req
 // Check the status of a committed Import operation
 func (s *organizations) GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3672,14 +3672,14 @@ func (s *organizations) GetOrganizationInventoryOnboardingCloudMonitoringImports
 // Returns list of networks eligible for adding cloud monitored device
 func (s *organizations) GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3723,7 +3723,7 @@ func (s *organizations) GetOrganizationInventoryOnboardingCloudMonitoringNetwork
 // Display a license
 func (s *organizations) GetOrganizationLicense(ctx context.Context, request operations.GetOrganizationLicenseRequest) (*operations.GetOrganizationLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3768,14 +3768,14 @@ func (s *organizations) GetOrganizationLicense(ctx context.Context, request oper
 // List the licenses for an organization
 func (s *organizations) GetOrganizationLicenses(ctx context.Context, request operations.GetOrganizationLicensesRequest) (*operations.GetOrganizationLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3819,7 +3819,7 @@ func (s *organizations) GetOrganizationLicenses(ctx context.Context, request ope
 // Return an overview of the license state for an organization
 func (s *organizations) GetOrganizationLicensesOverview(ctx context.Context, request operations.GetOrganizationLicensesOverviewRequest) (*operations.GetOrganizationLicensesOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3864,14 +3864,14 @@ func (s *organizations) GetOrganizationLicensesOverview(ctx context.Context, req
 // List the licenses in a coterm organization
 func (s *organizations) GetOrganizationLicensingCotermLicenses(ctx context.Context, request operations.GetOrganizationLicensingCotermLicensesRequest) (*operations.GetOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3915,7 +3915,7 @@ func (s *organizations) GetOrganizationLicensingCotermLicenses(ctx context.Conte
 // Returns the login security settings for an organization.
 func (s *organizations) GetOrganizationLoginSecurity(ctx context.Context, request operations.GetOrganizationLoginSecurityRequest) (*operations.GetOrganizationLoginSecurityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3960,14 +3960,14 @@ func (s *organizations) GetOrganizationLoginSecurity(ctx context.Context, reques
 // List the networks that the user has privileges on in an organization
 func (s *organizations) GetOrganizationNetworks(ctx context.Context, request operations.GetOrganizationNetworksRequest) (*operations.GetOrganizationNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4011,7 +4011,7 @@ func (s *organizations) GetOrganizationNetworks(ctx context.Context, request ope
 // Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON
 func (s *organizations) GetOrganizationOpenapiSpec(ctx context.Context, request operations.GetOrganizationOpenapiSpecRequest) (*operations.GetOrganizationOpenapiSpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/openapiSpec", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/openapiSpec", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4056,7 +4056,7 @@ func (s *organizations) GetOrganizationOpenapiSpec(ctx context.Context, request 
 // Shows details of a Policy Object.
 func (s *organizations) GetOrganizationPolicyObject(ctx context.Context, request operations.GetOrganizationPolicyObjectRequest) (*operations.GetOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4101,14 +4101,14 @@ func (s *organizations) GetOrganizationPolicyObject(ctx context.Context, request
 // Lists Policy Objects belonging to the organization.
 func (s *organizations) GetOrganizationPolicyObjects(ctx context.Context, request operations.GetOrganizationPolicyObjectsRequest) (*operations.GetOrganizationPolicyObjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4152,7 +4152,7 @@ func (s *organizations) GetOrganizationPolicyObjects(ctx context.Context, reques
 // Shows details of a Policy Object Group.
 func (s *organizations) GetOrganizationPolicyObjectsGroup(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupRequest) (*operations.GetOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4197,14 +4197,14 @@ func (s *organizations) GetOrganizationPolicyObjectsGroup(ctx context.Context, r
 // Lists Policy Object Groups belonging to the organization.
 func (s *organizations) GetOrganizationPolicyObjectsGroups(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupsRequest) (*operations.GetOrganizationPolicyObjectsGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4248,7 +4248,7 @@ func (s *organizations) GetOrganizationPolicyObjectsGroups(ctx context.Context, 
 // Returns the SAML SSO enabled settings for an organization.
 func (s *organizations) GetOrganizationSaml(ctx context.Context, request operations.GetOrganizationSamlRequest) (*operations.GetOrganizationSamlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4293,7 +4293,7 @@ func (s *organizations) GetOrganizationSaml(ctx context.Context, request operati
 // Get a SAML IdP from your organization.
 func (s *organizations) GetOrganizationSamlIdp(ctx context.Context, request operations.GetOrganizationSamlIdpRequest) (*operations.GetOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4338,7 +4338,7 @@ func (s *organizations) GetOrganizationSamlIdp(ctx context.Context, request oper
 // List the SAML IdPs in your organization.
 func (s *organizations) GetOrganizationSamlIdps(ctx context.Context, request operations.GetOrganizationSamlIdpsRequest) (*operations.GetOrganizationSamlIdpsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4383,7 +4383,7 @@ func (s *organizations) GetOrganizationSamlIdps(ctx context.Context, request ope
 // Return a SAML role
 func (s *organizations) GetOrganizationSamlRole(ctx context.Context, request operations.GetOrganizationSamlRoleRequest) (*operations.GetOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4428,7 +4428,7 @@ func (s *organizations) GetOrganizationSamlRole(ctx context.Context, request ope
 // List the SAML roles for this organization
 func (s *organizations) GetOrganizationSamlRoles(ctx context.Context, request operations.GetOrganizationSamlRolesRequest) (*operations.GetOrganizationSamlRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4473,7 +4473,7 @@ func (s *organizations) GetOrganizationSamlRoles(ctx context.Context, request op
 // Return the SNMP settings for an organization
 func (s *organizations) GetOrganizationSnmp(ctx context.Context, request operations.GetOrganizationSnmpRequest) (*operations.GetOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4518,14 +4518,14 @@ func (s *organizations) GetOrganizationSnmp(ctx context.Context, request operati
 // Return the top 10 appliances sorted by utilization over given time range.
 func (s *organizations) GetOrganizationSummaryTopAppliancesByUtilization(ctx context.Context, request operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest) (*operations.GetOrganizationSummaryTopAppliancesByUtilizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4567,14 +4567,14 @@ func (s *organizations) GetOrganizationSummaryTopAppliancesByUtilization(ctx con
 // Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 func (s *organizations) GetOrganizationSummaryTopClientsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopClientsByUsageRequest) (*operations.GetOrganizationSummaryTopClientsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4616,14 +4616,14 @@ func (s *organizations) GetOrganizationSummaryTopClientsByUsage(ctx context.Cont
 // Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 func (s *organizations) GetOrganizationSummaryTopClientsManufacturersByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest) (*operations.GetOrganizationSummaryTopClientsManufacturersByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4665,14 +4665,14 @@ func (s *organizations) GetOrganizationSummaryTopClientsManufacturersByUsage(ctx
 // Return metrics for organization's top 10 devices sorted by data usage over given time range. Default unit is megabytes.
 func (s *organizations) GetOrganizationSummaryTopDevicesByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopDevicesByUsageRequest) (*operations.GetOrganizationSummaryTopDevicesByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4714,14 +4714,14 @@ func (s *organizations) GetOrganizationSummaryTopDevicesByUsage(ctx context.Cont
 // Return metrics for organization's top 10 device models sorted by data usage over given time range. Default unit is megabytes.
 func (s *organizations) GetOrganizationSummaryTopDevicesModelsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest) (*operations.GetOrganizationSummaryTopDevicesModelsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4763,14 +4763,14 @@ func (s *organizations) GetOrganizationSummaryTopDevicesModelsByUsage(ctx contex
 // Return metrics for organization's top 10 ssids by data usage over given time range. Default unit is megabytes.
 func (s *organizations) GetOrganizationSummaryTopSsidsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopSsidsByUsageRequest) (*operations.GetOrganizationSummaryTopSsidsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/ssids/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/ssids/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4812,14 +4812,14 @@ func (s *organizations) GetOrganizationSummaryTopSsidsByUsage(ctx context.Contex
 // Return metrics for organization's top 10 switches by energy usage over given time range. Default unit is joules.
 func (s *organizations) GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx context.Context, request operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest) (*operations.GetOrganizationSummaryTopSwitchesByEnergyUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4861,14 +4861,14 @@ func (s *organizations) GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx conte
 // List the uplink status of every Meraki MX, MG and Z series devices in the organization
 func (s *organizations) GetOrganizationUplinksStatuses(ctx context.Context, request operations.GetOrganizationUplinksStatusesRequest) (*operations.GetOrganizationUplinksStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/uplinks/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/uplinks/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4912,14 +4912,14 @@ func (s *organizations) GetOrganizationUplinksStatuses(ctx context.Context, requ
 // Return a list of alert types to be used with managing webhook alerts
 func (s *organizations) GetOrganizationWebhooksAlertTypes(ctx context.Context, request operations.GetOrganizationWebhooksAlertTypesRequest) (*operations.GetOrganizationWebhooksAlertTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/webhooks/alertTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/webhooks/alertTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4961,14 +4961,14 @@ func (s *organizations) GetOrganizationWebhooksAlertTypes(ctx context.Context, r
 // Return the log of webhook POSTs sent
 func (s *organizations) GetOrganizationWebhooksLogs(ctx context.Context, request operations.GetOrganizationWebhooksLogsRequest) (*operations.GetOrganizationWebhooksLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/webhooks/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/webhooks/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5057,9 +5057,9 @@ func (s *organizations) GetOrganizations(ctx context.Context) (*operations.GetOr
 // Move licenses to another organization. This will also move any devices that the licenses are assigned to
 func (s *organizations) MoveOrganizationLicenses(ctx context.Context, request operations.MoveOrganizationLicensesRequest) (*operations.MoveOrganizationLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5112,9 +5112,9 @@ func (s *organizations) MoveOrganizationLicenses(ctx context.Context, request op
 // Move SM seats to another organization
 func (s *organizations) MoveOrganizationLicensesSeats(ctx context.Context, request operations.MoveOrganizationLicensesSeatsRequest) (*operations.MoveOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/moveSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/moveSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5167,9 +5167,9 @@ func (s *organizations) MoveOrganizationLicensesSeats(ctx context.Context, reque
 // Moves a license to a different organization (coterm only)
 func (s *organizations) MoveOrganizationLicensingCotermLicenses(ctx context.Context, request operations.MoveOrganizationLicensingCotermLicensesRequest) (*operations.MoveOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5222,9 +5222,9 @@ func (s *organizations) MoveOrganizationLicensingCotermLicenses(ctx context.Cont
 // Release a list of claimed devices from an organization.
 func (s *organizations) ReleaseFromOrganizationInventory(ctx context.Context, request operations.ReleaseFromOrganizationInventoryRequest) (*operations.ReleaseFromOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/release", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/release", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5274,9 +5274,9 @@ func (s *organizations) ReleaseFromOrganizationInventory(ctx context.Context, re
 // Renew SM seats of a license. This will extend the license expiration date of managed SM devices covered by this license
 func (s *organizations) RenewOrganizationLicensesSeats(ctx context.Context, request operations.RenewOrganizationLicensesSeatsRequest) (*operations.RenewOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/renewSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/renewSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5329,9 +5329,9 @@ func (s *organizations) RenewOrganizationLicensesSeats(ctx context.Context, requ
 // Update an organization
 func (s *organizations) UpdateOrganization(ctx context.Context, request operations.UpdateOrganizationRequest) (*operations.UpdateOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5381,9 +5381,9 @@ func (s *organizations) UpdateOrganization(ctx context.Context, request operatio
 // Update an action batch
 func (s *organizations) UpdateOrganizationActionBatch(ctx context.Context, request operations.UpdateOrganizationActionBatchRequest) (*operations.UpdateOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5433,9 +5433,9 @@ func (s *organizations) UpdateOrganizationActionBatch(ctx context.Context, reque
 // Updates an adaptive policy ACL
 func (s *organizations) UpdateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyACLRequest) (*operations.UpdateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5485,9 +5485,9 @@ func (s *organizations) UpdateOrganizationAdaptivePolicyACL(ctx context.Context,
 // Updates an adaptive policy group. If updating "Infrastructure", only the SGT is allowed. Cannot update "Unknown".
 func (s *organizations) UpdateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyGroupRequest) (*operations.UpdateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5537,9 +5537,9 @@ func (s *organizations) UpdateOrganizationAdaptivePolicyGroup(ctx context.Contex
 // Update an Adaptive Policy
 func (s *organizations) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyPolicyRequest) (*operations.UpdateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5589,9 +5589,9 @@ func (s *organizations) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Conte
 // Update global adaptive policy settings
 func (s *organizations) UpdateOrganizationAdaptivePolicySettings(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicySettingsRequest) (*operations.UpdateOrganizationAdaptivePolicySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5641,9 +5641,9 @@ func (s *organizations) UpdateOrganizationAdaptivePolicySettings(ctx context.Con
 // Update an administrator
 func (s *organizations) UpdateOrganizationAdmin(ctx context.Context, request operations.UpdateOrganizationAdminRequest) (*operations.UpdateOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5693,9 +5693,9 @@ func (s *organizations) UpdateOrganizationAdmin(ctx context.Context, request ope
 // Update an organization-wide alert config
 func (s *organizations) UpdateOrganizationAlertsProfile(ctx context.Context, request operations.UpdateOrganizationAlertsProfileRequest) (*operations.UpdateOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5745,9 +5745,9 @@ func (s *organizations) UpdateOrganizationAlertsProfile(ctx context.Context, req
 // Update the priority ordering of an organization's branding policies.
 func (s *organizations) UpdateOrganizationBrandingPoliciesPriorities(ctx context.Context, request operations.UpdateOrganizationBrandingPoliciesPrioritiesRequest) (*operations.UpdateOrganizationBrandingPoliciesPrioritiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5797,9 +5797,9 @@ func (s *organizations) UpdateOrganizationBrandingPoliciesPriorities(ctx context
 // Update a branding policy
 func (s *organizations) UpdateOrganizationBrandingPolicy(ctx context.Context, request operations.UpdateOrganizationBrandingPolicyRequest) (*operations.UpdateOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5849,9 +5849,9 @@ func (s *organizations) UpdateOrganizationBrandingPolicy(ctx context.Context, re
 // Update a configuration template
 func (s *organizations) UpdateOrganizationConfigTemplate(ctx context.Context, request operations.UpdateOrganizationConfigTemplateRequest) (*operations.UpdateOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5901,9 +5901,9 @@ func (s *organizations) UpdateOrganizationConfigTemplate(ctx context.Context, re
 // Update an early access feature opt-in for an organization
 func (s *organizations) UpdateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.UpdateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5953,9 +5953,9 @@ func (s *organizations) UpdateOrganizationEarlyAccessFeaturesOptIn(ctx context.C
 // Update a license
 func (s *organizations) UpdateOrganizationLicense(ctx context.Context, request operations.UpdateOrganizationLicenseRequest) (*operations.UpdateOrganizationLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6005,9 +6005,9 @@ func (s *organizations) UpdateOrganizationLicense(ctx context.Context, request o
 // Update the login security settings for an organization
 func (s *organizations) UpdateOrganizationLoginSecurity(ctx context.Context, request operations.UpdateOrganizationLoginSecurityRequest) (*operations.UpdateOrganizationLoginSecurityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6057,9 +6057,9 @@ func (s *organizations) UpdateOrganizationLoginSecurity(ctx context.Context, req
 // Updates a Policy Object.
 func (s *organizations) UpdateOrganizationPolicyObject(ctx context.Context, request operations.UpdateOrganizationPolicyObjectRequest) (*operations.UpdateOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6109,9 +6109,9 @@ func (s *organizations) UpdateOrganizationPolicyObject(ctx context.Context, requ
 // Updates a Policy Object Group.
 func (s *organizations) UpdateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.UpdateOrganizationPolicyObjectsGroupRequest) (*operations.UpdateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6161,9 +6161,9 @@ func (s *organizations) UpdateOrganizationPolicyObjectsGroup(ctx context.Context
 // Updates the SAML SSO enabled settings for an organization.
 func (s *organizations) UpdateOrganizationSaml(ctx context.Context, request operations.UpdateOrganizationSamlRequest) (*operations.UpdateOrganizationSamlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6213,9 +6213,9 @@ func (s *organizations) UpdateOrganizationSaml(ctx context.Context, request oper
 // Update a SAML IdP in your organization
 func (s *organizations) UpdateOrganizationSamlIdp(ctx context.Context, request operations.UpdateOrganizationSamlIdpRequest) (*operations.UpdateOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6265,9 +6265,9 @@ func (s *organizations) UpdateOrganizationSamlIdp(ctx context.Context, request o
 // Update a SAML role
 func (s *organizations) UpdateOrganizationSamlRole(ctx context.Context, request operations.UpdateOrganizationSamlRoleRequest) (*operations.UpdateOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6317,9 +6317,9 @@ func (s *organizations) UpdateOrganizationSamlRole(ctx context.Context, request 
 // Update the SNMP settings for an organization
 func (s *organizations) UpdateOrganizationSnmp(ctx context.Context, request operations.UpdateOrganizationSnmpRequest) (*operations.UpdateOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,19 +8,15 @@ import (
 )
 
 type RetrieveSubaccountSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type RetrieveSubaccountPathParams struct {
+type RetrieveSubaccountRequest struct {
 	// ID of the primary account
 	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 	// ID of the subaccount
 	SubaccountKey string `pathParam:"style=simple,explode=false,name=subaccount_key"`
-}
-
-type RetrieveSubaccountRequest struct {
-	PathParams RetrieveSubaccountPathParams
-	Security   RetrieveSubaccountSecurity
 }
 
 // RetrieveSubaccount404ApplicationJSON - Invalid API Key

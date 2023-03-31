@@ -20,7 +20,6 @@ pkg/models/shared/googleiamv1binding.go
 pkg/models/shared/googletypeexpr.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleiamv1setiampolicyrequest.go
 pkg/models/shared/googleiamv1testiampermissionsresponse.go
 pkg/models/shared/googleiamv1testiampermissionsrequest.go

@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryJobsQuerySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryJobsQuerySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryJobsQuerySecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryJobsQuerySecurity struct {
@@ -28,12 +28,8 @@ type BigqueryJobsQuerySecurity struct {
 	Option3 *BigqueryJobsQuerySecurityOption3 `security:"option"`
 }
 
-type BigqueryJobsQueryPathParams struct {
-	// Project ID of the project billed for the query
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BigqueryJobsQueryQueryParams struct {
+type BigqueryJobsQueryRequest struct {
+	QueryRequest *shared.QueryRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -44,17 +40,12 @@ type BigqueryJobsQueryQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the project billed for the query
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryJobsQueryRequest struct {
-	PathParams  BigqueryJobsQueryPathParams
-	QueryParams BigqueryJobsQueryQueryParams
-	Request     *shared.QueryRequest `request:"mediaType=application/json"`
-	Security    BigqueryJobsQuerySecurity
 }
 
 type BigqueryJobsQueryResponse struct {

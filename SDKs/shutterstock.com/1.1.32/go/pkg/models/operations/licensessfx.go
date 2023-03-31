@@ -8,13 +8,8 @@ import (
 )
 
 type LicensesSFXSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type LicensesSFXRequest struct {
-	Request  shared.LicenseSFXRequest `request:"mediaType=application/json"`
-	Security LicensesSFXSecurity
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LicensesSFXResponse struct {

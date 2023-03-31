@@ -6,27 +6,19 @@ import (
 	"net/http"
 )
 
-type IgnoreProfileDataPathParams struct {
-	// ID of the orderForm corresponding to the cart whose items will have the price changed.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type IgnoreProfileDataHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type IgnoreProfileDataRequestBody struct {
 	// Indicates whether profile data should be ignored.
 	IgnoreProfileData *bool `json:"ignoreProfileData,omitempty"`
 }
 
 type IgnoreProfileDataRequest struct {
-	PathParams IgnoreProfileDataPathParams
-	Headers    IgnoreProfileDataHeaders
-	Request    IgnoreProfileDataRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                       `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody IgnoreProfileDataRequestBody `request:"mediaType=application/json"`
+	// ID of the orderForm corresponding to the cart whose items will have the price changed.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type IgnoreProfileDataResponse struct {

@@ -35,7 +35,7 @@ func newAuthentication(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // Create - Create an auth token
 // <html><body> vRealize Network Insight supports token based authentication.Tokens are non-modifiable identifiers returned by the system when the user has successfully authenticated using valid credentials. Token expires after expiry time returned in the response. All API requests must provide the auth token in Authorization header in following format.<br> Authorization &#58; NetworkInsight {token} <br> If a token is invalid or expired, 401-Unauthorized error gets returned in the response of the API request. </body></html>
-func (s *authentication) Create(ctx context.Context, request operations.CreateRequest) (*operations.CreateResponse, error) {
+func (s *authentication) Create(ctx context.Context, request shared.UserCredential) (*operations.CreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/token"
 
@@ -104,7 +104,7 @@ func (s *authentication) Create(ctx context.Context, request operations.CreateRe
 // Delete - Delete an auth token.
 // Deletes the auth token provided in Authorization header.
 // Deleting an expired or invalid token will result in 401 Unauthorized error.
-func (s *authentication) Delete(ctx context.Context, request operations.DeleteRequest) (*operations.DeleteResponse, error) {
+func (s *authentication) Delete(ctx context.Context) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/token"
 
@@ -113,7 +113,7 @@ func (s *authentication) Delete(ctx context.Context, request operations.DeleteRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -34,7 +34,7 @@ func newContentFiltering(defaultClient, securityClient HTTPClient, serverURL, la
 // Return the content filtering settings for an MX network
 func (s *contentFiltering) GetNetworkApplianceContentFiltering(ctx context.Context, request operations.GetNetworkApplianceContentFilteringRequest) (*operations.GetNetworkApplianceContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *contentFiltering) GetNetworkApplianceContentFiltering(ctx context.Conte
 // List all available content filtering categories for an MX network
 func (s *contentFiltering) GetNetworkApplianceContentFilteringCategories(ctx context.Context, request operations.GetNetworkApplianceContentFilteringCategoriesRequest) (*operations.GetNetworkApplianceContentFilteringCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *contentFiltering) GetNetworkApplianceContentFilteringCategories(ctx con
 // Update the content filtering settings for an MX network
 func (s *contentFiltering) UpdateNetworkApplianceContentFiltering(ctx context.Context, request operations.UpdateNetworkApplianceContentFilteringRequest) (*operations.UpdateNetworkApplianceContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

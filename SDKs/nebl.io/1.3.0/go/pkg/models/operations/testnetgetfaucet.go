@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetFaucetQueryParams struct {
+type TestnetGetFaucetRequest struct {
 	// Your Neblio Testnet Address
 	Address string `queryParam:"style=form,explode=true,name=address"`
 	// Amount of NEBL to withdrawal in satoshis
 	Amount *float64 `queryParam:"style=form,explode=true,name=amount"`
-}
-
-type TestnetGetFaucetRequest struct {
-	QueryParams TestnetGetFaucetQueryParams
 }
 
 type TestnetGetFaucetResponse struct {

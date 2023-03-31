@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type RemoveNetworkDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type RemoveNetworkDevicesRequestBody struct {
 	// The serial of a device
 	Serial string `json:"serial"`
 }
 
 type RemoveNetworkDevicesRequest struct {
-	PathParams RemoveNetworkDevicesPathParams
-	Request    RemoveNetworkDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody RemoveNetworkDevicesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type RemoveNetworkDevicesResponse struct {

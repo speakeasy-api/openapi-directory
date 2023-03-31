@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateStyleGuideMultipartPathParams struct {
+type UpdateStyleGuideMultipartRequest struct {
+	StyleGuideUploadRequest1 *shared.StyleGuideUploadRequest1 `request:"mediaType=multipart/form-data"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 	// Style guide ID
 	StyleGuideID int64 `pathParam:"style=simple,explode=false,name=styleGuideId"`
-}
-
-type UpdateStyleGuideMultipartRequest struct {
-	PathParams UpdateStyleGuideMultipartPathParams
-	Request    *shared.StyleGuideUploadRequest1 `request:"mediaType=multipart/form-data"`
 }
 
 type UpdateStyleGuideMultipartResponse struct {

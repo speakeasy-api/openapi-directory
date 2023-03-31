@@ -29,10 +29,6 @@ type SetProfileImageRequestBody struct {
 	SetDefault *int64 `multipartForm:"name=set_default"`
 }
 
-type SetProfileImageRequest struct {
-	Request *SetProfileImageRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // SetProfileImage200ApplicationJSON - The updated user and the photo.
 type SetProfileImage200ApplicationJSON struct {
 	// The result of uploading or editing a photo.

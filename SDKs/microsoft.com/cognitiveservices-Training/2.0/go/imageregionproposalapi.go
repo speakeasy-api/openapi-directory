@@ -35,14 +35,14 @@ func newImageRegionProposalAPI(defaultClient, securityClient HTTPClient, serverU
 // This API will get region proposals for an image along with confidences for the region. It returns an empty array if no proposals are found.
 func (s *imageRegionProposalAPI) GetImageRegionProposals(ctx context.Context, request operations.GetImageRegionProposalsRequest) (*operations.GetImageRegionProposalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/images/{imageId}/regionproposals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/images/{imageId}/regionproposals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutNotificationsIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutNotificationsIDRequest struct {
-	PathParams PutNotificationsIDPathParams
-	Request    shared.Notification `request:"mediaType=application/json"`
+	Notification shared.Notification `request:"mediaType=application/json"`
+	ID           int64               `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutNotificationsIDResponse struct {

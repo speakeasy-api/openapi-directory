@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchProfileMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatchProfileMultipartFormDataBirth struct {
@@ -57,12 +56,6 @@ type PatchProfileMultipartFormData1 struct {
 	IDFile    *PatchProfileMultipartFormDataIDFile  `multipartForm:"file"`
 	Name      *string                               `multipartForm:"name=Name"`
 	Sex       *PatchProfileMultipartFormDataSexEnum `multipartForm:"name=Sex"`
-}
-
-type PatchProfileMultipartRequest struct {
-	// Profile to add
-	Request  PatchProfileMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PatchProfileMultipartSecurity
 }
 
 type PatchProfileMultipartResponse struct {

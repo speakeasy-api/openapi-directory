@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessAlternateManagementInterfacePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkWirelessAlternateManagementInterfaceRequest struct {
-	PathParams GetNetworkWirelessAlternateManagementInterfacePathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkWirelessAlternateManagementInterfaceResponse struct {

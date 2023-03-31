@@ -34,7 +34,7 @@ func newMXL3OutboundFirewall(defaultClient, securityClient HTTPClient, serverURL
 // Return the L3 firewall rules for an MX network
 func (s *mxL3OutboundFirewall) GetNetworkL3FirewallRules(ctx context.Context, request operations.GetNetworkL3FirewallRulesRequest) (*operations.GetNetworkL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/l3FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *mxL3OutboundFirewall) GetNetworkL3FirewallRules(ctx context.Context, re
 // Update the L3 firewall rules of an MX network
 func (s *mxL3OutboundFirewall) UpdateNetworkL3FirewallRules(ctx context.Context, request operations.UpdateNetworkL3FirewallRulesRequest) (*operations.UpdateNetworkL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/l3FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

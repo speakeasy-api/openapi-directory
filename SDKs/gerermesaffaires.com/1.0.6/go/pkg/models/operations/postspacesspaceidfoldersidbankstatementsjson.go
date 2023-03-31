@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDBankStatementsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDBankStatementsJSONPathParams struct {
-	// Id of the folder bank
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDBankStatementsApplicationJSON2AccountingWorkbookEnum string
@@ -166,10 +158,12 @@ func (u PostSpacesSpaceIDFoldersIDBankStatementsApplicationJSON) MarshalJSON() (
 }
 
 type PostSpacesSpaceIDFoldersIDBankStatementsJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDBankStatementsJSONPathParams
 	// Bank statement to add (either DocumentId,StatementDate either (File,Name,Content64Encoded,Title,StatementDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDBankStatementsApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDBankStatementsJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDBankStatementsApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder bank
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDBankStatementsJSON201ApplicationJSON - Id of document created

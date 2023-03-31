@@ -35,9 +35,9 @@ func newTransaction(defaultClient, securityClient HTTPClient, serverURL, languag
 // Creates a cancellation in the transaction. Cancel a item reservation or create a refund.
 func (s *transaction) CancelGiftCardTransaction(ctx context.Context, request operations.CancelGiftCardTransactionRequest) (*operations.CancelGiftCardTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelGiftCardTransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *transaction) CancelGiftCardTransaction(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -92,9 +92,9 @@ func (s *transaction) CancelGiftCardTransaction(ctx context.Context, request ope
 // Register a new giftcard transaction and authorize the item reservation.
 func (s *transaction) CreateGiftCardTransaction(ctx context.Context, request operations.CreateGiftCardTransactionRequest) (*operations.CreateGiftCardTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateGiftCardTransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *transaction) CreateGiftCardTransaction(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -145,14 +145,14 @@ func (s *transaction) CreateGiftCardTransaction(ctx context.Context, request ope
 // GetGiftCardTransactionbyID - Get GiftCard Transaction by ID
 func (s *transaction) GetGiftCardTransactionbyID(ctx context.Context, request operations.GetGiftCardTransactionbyIDRequest) (*operations.GetGiftCardTransactionbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -192,14 +192,14 @@ func (s *transaction) GetGiftCardTransactionbyID(ctx context.Context, request op
 // Returns all transaction of a giftcard.
 func (s *transaction) GetGiftCardTransactions(ctx context.Context, request operations.GetGiftCardTransactionsRequest) (*operations.GetGiftCardTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -239,14 +239,14 @@ func (s *transaction) GetGiftCardTransactions(ctx context.Context, request opera
 // Returns the giftcard transaction authorizations.
 func (s *transaction) GetTransactionAuthorizations(ctx context.Context, request operations.GetTransactionAuthorizationsRequest) (*operations.GetTransactionAuthorizationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/authorization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/authorization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -286,14 +286,14 @@ func (s *transaction) GetTransactionAuthorizations(ctx context.Context, request 
 // Returns the giftcard transaction cancellations.
 func (s *transaction) GetTransactionCancellations(ctx context.Context, request operations.GetTransactionCancellationsRequest) (*operations.GetTransactionCancellationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -333,14 +333,14 @@ func (s *transaction) GetTransactionCancellations(ctx context.Context, request o
 // Returns the giftcard transaction settlements.
 func (s *transaction) GetTransactionSettlements(ctx context.Context, request operations.GetTransactionSettlementsRequest) (*operations.GetTransactionSettlementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -380,9 +380,9 @@ func (s *transaction) GetTransactionSettlements(ctx context.Context, request ope
 // Creates a giftcard transaction settlement.
 func (s *transaction) SettleGiftCardTransaction(ctx context.Context, request operations.SettleGiftCardTransactionRequest) (*operations.SettleGiftCardTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SettleGiftCardTransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -397,7 +397,7 @@ func (s *transaction) SettleGiftCardTransaction(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

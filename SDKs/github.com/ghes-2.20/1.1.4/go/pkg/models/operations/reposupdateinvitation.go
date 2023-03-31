@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateInvitationPathParams struct {
-	// invitation_id parameter
-	InvitationID int64  `pathParam:"style=simple,explode=false,name=invitation_id"`
-	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateInvitationRequestBodyPermissionsEnum - The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
 type ReposUpdateInvitationRequestBodyPermissionsEnum string
 
@@ -55,8 +48,11 @@ type ReposUpdateInvitationRequestBody struct {
 }
 
 type ReposUpdateInvitationRequest struct {
-	PathParams ReposUpdateInvitationPathParams
-	Request    *ReposUpdateInvitationRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateInvitationRequestBody `request:"mediaType=application/json"`
+	// invitation_id parameter
+	InvitationID int64  `pathParam:"style=simple,explode=false,name=invitation_id"`
+	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateInvitationResponse struct {

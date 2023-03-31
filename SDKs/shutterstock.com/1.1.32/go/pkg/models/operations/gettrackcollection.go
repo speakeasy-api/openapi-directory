@@ -10,12 +10,7 @@ import (
 )
 
 type GetTrackCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetTrackCollectionPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTrackCollectionEmbedEnum string
@@ -41,17 +36,13 @@ func (e *GetTrackCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTrackCollectionQueryParams struct {
+type GetTrackCollectionRequest struct {
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed []GetTrackCollectionEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Code to retrieve a shared collection
 	ShareCode *string `queryParam:"style=form,explode=true,name=share_code"`
-}
-
-type GetTrackCollectionRequest struct {
-	PathParams  GetTrackCollectionPathParams
-	QueryParams GetTrackCollectionQueryParams
-	Security    GetTrackCollectionSecurity
 }
 
 type GetTrackCollectionResponse struct {

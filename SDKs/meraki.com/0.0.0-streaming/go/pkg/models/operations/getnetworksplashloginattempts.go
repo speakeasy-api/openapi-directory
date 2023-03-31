@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkSplashLoginAttemptsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkSplashLoginAttemptsSsidNumberEnum - Only return the login attempts for the specified SSID
 type GetNetworkSplashLoginAttemptsSsidNumberEnum string
 
@@ -75,18 +71,14 @@ func (e *GetNetworkSplashLoginAttemptsSsidNumberEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetNetworkSplashLoginAttemptsQueryParams struct {
+type GetNetworkSplashLoginAttemptsRequest struct {
 	// The username, email, or phone number used during login
 	LoginIdentifier *string `queryParam:"style=form,explode=true,name=loginIdentifier"`
+	NetworkID       string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// Only return the login attempts for the specified SSID
 	SsidNumber *GetNetworkSplashLoginAttemptsSsidNumberEnum `queryParam:"style=form,explode=true,name=ssidNumber"`
 	// The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months
 	Timespan *int64 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkSplashLoginAttemptsRequest struct {
-	PathParams  GetNetworkSplashLoginAttemptsPathParams
-	QueryParams GetNetworkSplashLoginAttemptsQueryParams
 }
 
 type GetNetworkSplashLoginAttemptsResponse struct {

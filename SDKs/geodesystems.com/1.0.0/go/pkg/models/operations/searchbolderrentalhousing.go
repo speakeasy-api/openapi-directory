@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchBolderRentalHousingQueryParams struct {
+type SearchBolderRentalHousingRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -82,10 +82,6 @@ type SearchBolderRentalHousingQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchBolderRentalHousingRequest struct {
-	QueryParams SearchBolderRentalHousingQueryParams
 }
 
 type SearchBolderRentalHousingResponse struct {

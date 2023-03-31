@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutBillingDetailsPathParams struct {
+type PutBillingDetailsRequest struct {
+	// billingDetails
+	BillingDetailsModel shared.BillingDetailsModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type PutBillingDetailsRequest struct {
-	PathParams PutBillingDetailsPathParams
-	// billingDetails
-	Request shared.BillingDetailsModel `request:"mediaType=application/json"`
 }
 
 type PutBillingDetailsResponse struct {

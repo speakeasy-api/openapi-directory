@@ -32,7 +32,9 @@ func (e *GetValuesForVariablesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetValuesForVariablesQueryParams struct {
+type GetValuesForVariablesRequest struct {
+	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
 	// The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
 	// used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
 	AppToken *string `queryParam:"style=form,explode=true,name=app_token"`
@@ -69,16 +71,6 @@ type GetValuesForVariablesQueryParams struct {
 	// `demographics.population.count` and `demographics.population.change`.
 	// Note that only variables in the same dataset are allowed.
 	Variable string `queryParam:"style=form,explode=true,name=variable"`
-}
-
-type GetValuesForVariablesHeaders struct {
-	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
-	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
-}
-
-type GetValuesForVariablesRequest struct {
-	QueryParams GetValuesForVariablesQueryParams
-	Headers     GetValuesForVariablesHeaders
 }
 
 type GetValuesForVariablesResponse struct {

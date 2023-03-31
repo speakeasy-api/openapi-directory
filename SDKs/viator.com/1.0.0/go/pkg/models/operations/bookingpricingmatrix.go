@@ -6,12 +6,6 @@ import (
 	"net/http"
 )
 
-type BookingPricingmatrixHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type BookingPricingmatrixRequestBody struct {
 	// **date** for which to retrieve pricing data  (must be in the future) (**note**: this is an optional parameter for normal products; if the date is *not* provided then the nearest available date is determined)
 	BookingDate *string `json:"bookingDate,omitempty"`
@@ -24,8 +18,10 @@ type BookingPricingmatrixRequestBody struct {
 }
 
 type BookingPricingmatrixRequest struct {
-	Headers BookingPricingmatrixHeaders
-	Request *BookingPricingmatrixRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                           `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *BookingPricingmatrixRequestBody `request:"mediaType=application/json"`
 }
 
 type BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices struct {

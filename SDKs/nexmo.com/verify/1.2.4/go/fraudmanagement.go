@@ -43,7 +43,7 @@ func newFraudManagement(defaultClient, securityClient HTTPClient, serverURL, lan
 //	</div>
 //
 // </div>
-func (s *fraudManagement) NetworkUnblock(ctx context.Context, request operations.NetworkUnblockRequest) (*operations.NetworkUnblockResponse, error) {
+func (s *fraudManagement) NetworkUnblock(ctx context.Context, request shared.NetworkUnblock) (*operations.NetworkUnblockResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/network-unblock"
 

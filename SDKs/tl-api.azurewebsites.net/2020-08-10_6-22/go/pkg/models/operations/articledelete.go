@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleDeleteQueryParams struct {
+type ArticleDeleteRequest struct {
 	// indentity number(primary key) for article object
 	ArticleID *int `queryParam:"style=form,explode=true,name=ArticleId"`
-}
-
-type ArticleDeleteRequest struct {
-	QueryParams ArticleDeleteQueryParams
 }
 
 type ArticleDeleteResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetResourcesMediaIDPreviewJpgPathParams struct {
+type GetResourcesMediaIDPreviewJpgRequest struct {
 	// The id of the media to get a preview for.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDPreviewJpgRequest struct {
-	PathParams GetResourcesMediaIDPreviewJpgPathParams
 }
 
 type GetResourcesMediaIDPreviewJpgResponse struct {

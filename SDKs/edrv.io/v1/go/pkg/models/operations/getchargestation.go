@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetChargeStationPathParams struct {
+type GetChargeStationRequest struct {
 	// The charge station id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetChargeStationQueryParams struct {
 	// Populate evses
 	IncludeEvses *bool `queryParam:"style=form,explode=true,name=include_evses"`
 	// Populate location
 	IncludeLocation *bool `queryParam:"style=form,explode=true,name=include_location"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
-}
-
-type GetChargeStationRequest struct {
-	PathParams  GetChargeStationPathParams
-	QueryParams GetChargeStationQueryParams
 }
 
 type GetChargeStationResponse struct {

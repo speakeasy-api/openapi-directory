@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsNotificationChannelsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsNotificationChannelsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsNotificationChannelsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsNotificationChannelsListSecurity struct {
@@ -28,12 +28,7 @@ type MonitoringProjectsNotificationChannelsListSecurity struct {
 	Option3 *MonitoringProjectsNotificationChannelsListSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsNotificationChannelsListPathParams struct {
-	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the notification channels; it does not name a specific channel. To query a specific channel by REST resource name, use the GetNotificationChannel operation.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsNotificationChannelsListQueryParams struct {
+type MonitoringProjectsNotificationChannelsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type MonitoringProjectsNotificationChannelsListQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the notification channels; it does not name a specific channel. To query a specific channel by REST resource name, use the GetNotificationChannel operation.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// A comma-separated list of fields by which to sort the result. Supports the same set of fields as in filter. Entries can be prefixed with a minus sign to sort in descending rather than ascending order.For more details, see sorting and filtering (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
@@ -64,12 +61,6 @@ type MonitoringProjectsNotificationChannelsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsNotificationChannelsListRequest struct {
-	PathParams  MonitoringProjectsNotificationChannelsListPathParams
-	QueryParams MonitoringProjectsNotificationChannelsListQueryParams
-	Security    MonitoringProjectsNotificationChannelsListSecurity
 }
 
 type MonitoringProjectsNotificationChannelsListResponse struct {

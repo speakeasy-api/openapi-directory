@@ -3,43 +3,39 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddTagsToCertificateRequest(
-    headers=operations.AddTagsToCertificateHeaders(
-        x_amz_algorithm="mollitia",
-        x_amz_content_sha256="inventore",
-        x_amz_credential="delectus",
-        x_amz_date="ipsa",
-        x_amz_security_token="animi",
-        x_amz_signature="animi",
-        x_amz_signed_headers="ut",
-        x_amz_target="CertificateManager.AddTagsToCertificate",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddTagsToCertificateRequest(
-        certificate_arn="fuga",
+)
+
+
+req = operations.AddTagsToCertificateRequest(
+    add_tags_to_certificate_request=shared.AddTagsToCertificateRequest(
+        certificate_arn="corrupti",
         tags=[
             shared.Tag(
-                key="sed",
-                value="et",
+                key="distinctio",
+                value="quibusdam",
             ),
             shared.Tag(
-                key="consequuntur",
-                value="non",
+                key="unde",
+                value="nulla",
             ),
             shared.Tag(
-                key="cupiditate",
-                value="provident",
+                key="corrupti",
+                value="illum",
             ),
         ],
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
+    x_amz_target="CertificateManager.AddTagsToCertificate",
 )
     
 res = s.add_tags_to_certificate(req)

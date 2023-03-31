@@ -32,11 +32,11 @@ func newBuyongoogleprograms(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // ContentBuyongoogleprogramsActivate - Reactivates the BoG program in your Merchant Center account. Moves the program to the active state when allowed, for example, when paused. This method is only available to selected merchants.
-func (s *buyongoogleprograms) ContentBuyongoogleprogramsActivate(ctx context.Context, request operations.ContentBuyongoogleprogramsActivateRequest) (*operations.ContentBuyongoogleprogramsActivateResponse, error) {
+func (s *buyongoogleprograms) ContentBuyongoogleprogramsActivate(ctx context.Context, request operations.ContentBuyongoogleprogramsActivateRequest, security operations.ContentBuyongoogleprogramsActivateSecurity) (*operations.ContentBuyongoogleprogramsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/activate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsActivate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsActivate(ctx context.Con
 }
 
 // ContentBuyongoogleprogramsGet - Retrieves a status of the BoG program for your Merchant Center account.
-func (s *buyongoogleprograms) ContentBuyongoogleprogramsGet(ctx context.Context, request operations.ContentBuyongoogleprogramsGetRequest) (*operations.ContentBuyongoogleprogramsGetResponse, error) {
+func (s *buyongoogleprograms) ContentBuyongoogleprogramsGet(ctx context.Context, request operations.ContentBuyongoogleprogramsGetRequest, security operations.ContentBuyongoogleprogramsGetSecurity) (*operations.ContentBuyongoogleprogramsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,11 +126,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsGet(ctx context.Context,
 }
 
 // ContentBuyongoogleprogramsOnboard - Onboards the BoG program in your Merchant Center account. By using this method, you agree to the [Terms of Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest). Calling this method is only possible if the authenticated account is the same as the merchant id in the request. Calling this method multiple times will only accept Terms of Service if the latest version is not currently signed.
-func (s *buyongoogleprograms) ContentBuyongoogleprogramsOnboard(ctx context.Context, request operations.ContentBuyongoogleprogramsOnboardRequest) (*operations.ContentBuyongoogleprogramsOnboardResponse, error) {
+func (s *buyongoogleprograms) ContentBuyongoogleprogramsOnboard(ctx context.Context, request operations.ContentBuyongoogleprogramsOnboardRequest, security operations.ContentBuyongoogleprogramsOnboardSecurity) (*operations.ContentBuyongoogleprogramsOnboardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/onboard", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/onboard", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OnboardBuyOnGoogleProgramRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -142,11 +142,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsOnboard(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -172,11 +172,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsOnboard(ctx context.Cont
 }
 
 // ContentBuyongoogleprogramsPatch - Updates the status of the BoG program for your Merchant Center account.
-func (s *buyongoogleprograms) ContentBuyongoogleprogramsPatch(ctx context.Context, request operations.ContentBuyongoogleprogramsPatchRequest) (*operations.ContentBuyongoogleprogramsPatchResponse, error) {
+func (s *buyongoogleprograms) ContentBuyongoogleprogramsPatch(ctx context.Context, request operations.ContentBuyongoogleprogramsPatchRequest, security operations.ContentBuyongoogleprogramsPatchSecurity) (*operations.ContentBuyongoogleprogramsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BuyOnGoogleProgramStatusInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -188,11 +188,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsPatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -227,11 +227,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsPatch(ctx context.Contex
 }
 
 // ContentBuyongoogleprogramsPause - Pauses the BoG program in your Merchant Center account. This method is only available to selected merchants.
-func (s *buyongoogleprograms) ContentBuyongoogleprogramsPause(ctx context.Context, request operations.ContentBuyongoogleprogramsPauseRequest) (*operations.ContentBuyongoogleprogramsPauseResponse, error) {
+func (s *buyongoogleprograms) ContentBuyongoogleprogramsPause(ctx context.Context, request operations.ContentBuyongoogleprogramsPauseRequest, security operations.ContentBuyongoogleprogramsPauseSecurity) (*operations.ContentBuyongoogleprogramsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/pause", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,11 +243,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsPause(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,11 +273,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsPause(ctx context.Contex
 }
 
 // ContentBuyongoogleprogramsRequestreview - Requests review and then activates the BoG program in your Merchant Center account for the first time. Moves the program to the REVIEW_PENDING state. This method is only available to selected merchants.
-func (s *buyongoogleprograms) ContentBuyongoogleprogramsRequestreview(ctx context.Context, request operations.ContentBuyongoogleprogramsRequestreviewRequest) (*operations.ContentBuyongoogleprogramsRequestreviewResponse, error) {
+func (s *buyongoogleprograms) ContentBuyongoogleprogramsRequestreview(ctx context.Context, request operations.ContentBuyongoogleprogramsRequestreviewRequest, security operations.ContentBuyongoogleprogramsRequestreviewSecurity) (*operations.ContentBuyongoogleprogramsRequestreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/requestreview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/requestreview", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -289,11 +289,11 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsRequestreview(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

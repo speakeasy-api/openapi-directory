@@ -8,12 +8,7 @@ import (
 )
 
 type CreateClassSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateClassRequest struct {
-	Request  shared.ClassCreation `request:"mediaType=application/json"`
-	Security CreateClassSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateClassResponse struct {

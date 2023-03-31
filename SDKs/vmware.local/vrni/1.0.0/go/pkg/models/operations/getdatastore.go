@@ -8,23 +8,14 @@ import (
 )
 
 type GetDatastoreSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetDatastorePathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDatastoreQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetDatastoreRequest struct {
-	PathParams  GetDatastorePathParams
-	QueryParams GetDatastoreQueryParams
-	Security    GetDatastoreSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetDatastoreResponse struct {

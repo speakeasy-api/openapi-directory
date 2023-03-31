@@ -15,10 +15,6 @@ type PostAssetsSkewnessRequestBody struct {
 	Assets []PostAssetsSkewnessRequestBodyAssets `json:"assets"`
 }
 
-type PostAssetsSkewnessRequest struct {
-	Request PostAssetsSkewnessRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsSkewness200ApplicationJSONAssets struct {
 	// The skewness of the asset
 	AssetSkewness float64 `json:"assetSkewness"`

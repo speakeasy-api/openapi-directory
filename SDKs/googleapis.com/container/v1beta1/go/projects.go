@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ContainerProjectsAggregatedUsableSubnetworksList - Lists subnetworks that can be used for creating clusters in a project.
-func (s *projects) ContainerProjectsAggregatedUsableSubnetworksList(ctx context.Context, request operations.ContainerProjectsAggregatedUsableSubnetworksListRequest) (*operations.ContainerProjectsAggregatedUsableSubnetworksListResponse, error) {
+func (s *projects) ContainerProjectsAggregatedUsableSubnetworksList(ctx context.Context, request operations.ContainerProjectsAggregatedUsableSubnetworksListRequest, security operations.ContainerProjectsAggregatedUsableSubnetworksListSecurity) (*operations.ContainerProjectsAggregatedUsableSubnetworksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/aggregated/usableSubnetworks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/aggregated/usableSubnetworks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) ContainerProjectsAggregatedUsableSubnetworksList(ctx context.
 }
 
 // ContainerProjectsLocationsClustersCompleteIPRotation - Completes master IP rotation.
-func (s *projects) ContainerProjectsLocationsClustersCompleteIPRotation(ctx context.Context, request operations.ContainerProjectsLocationsClustersCompleteIPRotationRequest) (*operations.ContainerProjectsLocationsClustersCompleteIPRotationResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersCompleteIPRotation(ctx context.Context, request operations.ContainerProjectsLocationsClustersCompleteIPRotationRequest, security operations.ContainerProjectsLocationsClustersCompleteIPRotationSecurity) (*operations.ContainerProjectsLocationsClustersCompleteIPRotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:completeIpRotation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:completeIpRotation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteIPRotationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) ContainerProjectsLocationsClustersCompleteIPRotation(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) ContainerProjectsLocationsClustersCompleteIPRotation(ctx cont
 }
 
 // ContainerProjectsLocationsClustersCreate - Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
-func (s *projects) ContainerProjectsLocationsClustersCreate(ctx context.Context, request operations.ContainerProjectsLocationsClustersCreateRequest) (*operations.ContainerProjectsLocationsClustersCreateResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersCreate(ctx context.Context, request operations.ContainerProjectsLocationsClustersCreateRequest, security operations.ContainerProjectsLocationsClustersCreateSecurity) (*operations.ContainerProjectsLocationsClustersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clusters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateClusterRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) ContainerProjectsLocationsClustersCreate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,14 +192,14 @@ func (s *projects) ContainerProjectsLocationsClustersCreate(ctx context.Context,
 // ContainerProjectsLocationsClustersGetJwks - Gets the public component of the cluster signing keys in JSON Web Key format. This API is not yet intended for general use, and is not available for all clusters.
 func (s *projects) ContainerProjectsLocationsClustersGetJwks(ctx context.Context, request operations.ContainerProjectsLocationsClustersGetJwksRequest) (*operations.ContainerProjectsLocationsClustersGetJwksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/jwks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/jwks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -238,20 +238,20 @@ func (s *projects) ContainerProjectsLocationsClustersGetJwks(ctx context.Context
 }
 
 // ContainerProjectsLocationsClustersList - Lists all clusters owned by a project in either the specified zone or all zones.
-func (s *projects) ContainerProjectsLocationsClustersList(ctx context.Context, request operations.ContainerProjectsLocationsClustersListRequest) (*operations.ContainerProjectsLocationsClustersListResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersList(ctx context.Context, request operations.ContainerProjectsLocationsClustersListRequest, security operations.ContainerProjectsLocationsClustersListSecurity) (*operations.ContainerProjectsLocationsClustersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) ContainerProjectsLocationsClustersList(ctx context.Context, r
 }
 
 // ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade - CompleteNodePoolUpgrade will signal an on-going node pool upgrade to complete.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeRequest, security operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:completeUpgrade", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:completeUpgrade", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade(ct
 }
 
 // ContainerProjectsLocationsClustersNodePoolsCreate - Creates a node pool for a cluster.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsCreate(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsCreateRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsCreateResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsCreate(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsCreateRequest, security operations.ContainerProjectsLocationsClustersNodePoolsCreateSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/nodePools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/nodePools", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateNodePoolRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsCreate(ctx context
 }
 
 // ContainerProjectsLocationsClustersNodePoolsDelete - Deletes a node pool from a cluster.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsDelete(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsDeleteRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsDeleteResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsDelete(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsDeleteRequest, security operations.ContainerProjectsLocationsClustersNodePoolsDeleteSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsDelete(ctx context
 }
 
 // ContainerProjectsLocationsClustersNodePoolsList - Lists the node pools for a cluster.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsList(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsListRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsListResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsList(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsListRequest, security operations.ContainerProjectsLocationsClustersNodePoolsListSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/nodePools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/nodePools", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,11 +492,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsList(ctx context.C
 }
 
 // ContainerProjectsLocationsClustersNodePoolsRollback - Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsRollback(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsRollbackRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsRollbackResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsRollback(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsRollbackRequest, security operations.ContainerProjectsLocationsClustersNodePoolsRollbackSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:rollback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:rollback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackNodePoolUpgradeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,11 +508,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsRollback(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,11 +547,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsRollback(ctx conte
 }
 
 // ContainerProjectsLocationsClustersNodePoolsSetAutoscaling - Sets the autoscaling settings of a specific node pool.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetAutoscaling(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetAutoscaling(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingRequest, security operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setAutoscaling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setAutoscaling", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNodePoolAutoscalingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -563,11 +563,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetAutoscaling(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetAutoscaling(ctx
 }
 
 // ContainerProjectsLocationsClustersNodePoolsSetManagement - Sets the NodeManagement options for a node pool.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetManagement(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsSetManagementRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsSetManagementResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetManagement(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsSetManagementRequest, security operations.ContainerProjectsLocationsClustersNodePoolsSetManagementSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsSetManagementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setManagement", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setManagement", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNodePoolManagementRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetManagement(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetManagement(ctx 
 }
 
 // ContainerProjectsLocationsClustersNodePoolsSetSize - SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetSize(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsSetSizeRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsSetSizeResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetSize(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsSetSizeRequest, security operations.ContainerProjectsLocationsClustersNodePoolsSetSizeSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsSetSizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setSize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setSize", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNodePoolSizeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetSize(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,11 +712,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsSetSize(ctx contex
 }
 
 // ContainerProjectsLocationsClustersNodePoolsUpdate - Updates the version and/or image type of a specific node pool.
-func (s *projects) ContainerProjectsLocationsClustersNodePoolsUpdate(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsUpdateRequest) (*operations.ContainerProjectsLocationsClustersNodePoolsUpdateResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersNodePoolsUpdate(ctx context.Context, request operations.ContainerProjectsLocationsClustersNodePoolsUpdateRequest, security operations.ContainerProjectsLocationsClustersNodePoolsUpdateSecurity) (*operations.ContainerProjectsLocationsClustersNodePoolsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateNodePoolRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -728,11 +728,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsUpdate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,11 +767,11 @@ func (s *projects) ContainerProjectsLocationsClustersNodePoolsUpdate(ctx context
 }
 
 // ContainerProjectsLocationsClustersSetAddons - Sets the addons for a specific cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetAddons(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetAddonsRequest) (*operations.ContainerProjectsLocationsClustersSetAddonsResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetAddons(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetAddonsRequest, security operations.ContainerProjectsLocationsClustersSetAddonsSecurity) (*operations.ContainerProjectsLocationsClustersSetAddonsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setAddons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setAddons", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetAddonsConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -783,11 +783,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetAddons(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -822,11 +822,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetAddons(ctx context.Conte
 }
 
 // ContainerProjectsLocationsClustersSetLegacyAbac - Enables or disables the ABAC authorization mechanism on a cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetLegacyAbac(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetLegacyAbacRequest) (*operations.ContainerProjectsLocationsClustersSetLegacyAbacResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetLegacyAbac(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetLegacyAbacRequest, security operations.ContainerProjectsLocationsClustersSetLegacyAbacSecurity) (*operations.ContainerProjectsLocationsClustersSetLegacyAbacResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setLegacyAbac", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setLegacyAbac", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLegacyAbacRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -838,11 +838,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetLegacyAbac(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,11 +877,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetLegacyAbac(ctx context.C
 }
 
 // ContainerProjectsLocationsClustersSetLocations - Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
-func (s *projects) ContainerProjectsLocationsClustersSetLocations(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetLocationsRequest) (*operations.ContainerProjectsLocationsClustersSetLocationsResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetLocations(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetLocationsRequest, security operations.ContainerProjectsLocationsClustersSetLocationsSecurity) (*operations.ContainerProjectsLocationsClustersSetLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setLocations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLocationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -893,11 +893,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetLocations(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -932,11 +932,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetLocations(ctx context.Co
 }
 
 // ContainerProjectsLocationsClustersSetLogging - Sets the logging service for a specific cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetLogging(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetLoggingRequest) (*operations.ContainerProjectsLocationsClustersSetLoggingResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetLogging(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetLoggingRequest, security operations.ContainerProjectsLocationsClustersSetLoggingSecurity) (*operations.ContainerProjectsLocationsClustersSetLoggingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setLogging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setLogging", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLoggingServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -948,11 +948,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetLogging(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -987,11 +987,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetLogging(ctx context.Cont
 }
 
 // ContainerProjectsLocationsClustersSetMaintenancePolicy - Sets the maintenance policy for a cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetMaintenancePolicy(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetMaintenancePolicyRequest) (*operations.ContainerProjectsLocationsClustersSetMaintenancePolicyResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetMaintenancePolicy(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetMaintenancePolicyRequest, security operations.ContainerProjectsLocationsClustersSetMaintenancePolicySecurity) (*operations.ContainerProjectsLocationsClustersSetMaintenancePolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setMaintenancePolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setMaintenancePolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMaintenancePolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1003,11 +1003,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetMaintenancePolicy(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,11 +1042,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetMaintenancePolicy(ctx co
 }
 
 // ContainerProjectsLocationsClustersSetMasterAuth - Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
-func (s *projects) ContainerProjectsLocationsClustersSetMasterAuth(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetMasterAuthRequest) (*operations.ContainerProjectsLocationsClustersSetMasterAuthResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetMasterAuth(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetMasterAuthRequest, security operations.ContainerProjectsLocationsClustersSetMasterAuthSecurity) (*operations.ContainerProjectsLocationsClustersSetMasterAuthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setMasterAuth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setMasterAuth", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMasterAuthRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1058,11 +1058,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetMasterAuth(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1097,11 +1097,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetMasterAuth(ctx context.C
 }
 
 // ContainerProjectsLocationsClustersSetMonitoring - Sets the monitoring service for a specific cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetMonitoring(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetMonitoringRequest) (*operations.ContainerProjectsLocationsClustersSetMonitoringResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetMonitoring(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetMonitoringRequest, security operations.ContainerProjectsLocationsClustersSetMonitoringSecurity) (*operations.ContainerProjectsLocationsClustersSetMonitoringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setMonitoring", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setMonitoring", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMonitoringServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1113,11 +1113,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetMonitoring(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1152,11 +1152,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetMonitoring(ctx context.C
 }
 
 // ContainerProjectsLocationsClustersSetNetworkPolicy - Enables or disables Network Policy for a cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetNetworkPolicy(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetNetworkPolicyRequest) (*operations.ContainerProjectsLocationsClustersSetNetworkPolicyResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetNetworkPolicy(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetNetworkPolicyRequest, security operations.ContainerProjectsLocationsClustersSetNetworkPolicySecurity) (*operations.ContainerProjectsLocationsClustersSetNetworkPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setNetworkPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setNetworkPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNetworkPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1168,11 +1168,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetNetworkPolicy(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1207,11 +1207,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetNetworkPolicy(ctx contex
 }
 
 // ContainerProjectsLocationsClustersSetResourceLabels - Sets labels on a cluster.
-func (s *projects) ContainerProjectsLocationsClustersSetResourceLabels(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetResourceLabelsRequest) (*operations.ContainerProjectsLocationsClustersSetResourceLabelsResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersSetResourceLabels(ctx context.Context, request operations.ContainerProjectsLocationsClustersSetResourceLabelsRequest, security operations.ContainerProjectsLocationsClustersSetResourceLabelsSecurity) (*operations.ContainerProjectsLocationsClustersSetResourceLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setResourceLabels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:setResourceLabels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLabelsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1223,11 +1223,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetResourceLabels(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1262,11 +1262,11 @@ func (s *projects) ContainerProjectsLocationsClustersSetResourceLabels(ctx conte
 }
 
 // ContainerProjectsLocationsClustersStartIPRotation - Starts master IP rotation.
-func (s *projects) ContainerProjectsLocationsClustersStartIPRotation(ctx context.Context, request operations.ContainerProjectsLocationsClustersStartIPRotationRequest) (*operations.ContainerProjectsLocationsClustersStartIPRotationResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersStartIPRotation(ctx context.Context, request operations.ContainerProjectsLocationsClustersStartIPRotationRequest, security operations.ContainerProjectsLocationsClustersStartIPRotationSecurity) (*operations.ContainerProjectsLocationsClustersStartIPRotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:startIpRotation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:startIpRotation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartIPRotationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1278,11 +1278,11 @@ func (s *projects) ContainerProjectsLocationsClustersStartIPRotation(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1317,11 +1317,11 @@ func (s *projects) ContainerProjectsLocationsClustersStartIPRotation(ctx context
 }
 
 // ContainerProjectsLocationsClustersUpdateMaster - Updates the master for a specific cluster.
-func (s *projects) ContainerProjectsLocationsClustersUpdateMaster(ctx context.Context, request operations.ContainerProjectsLocationsClustersUpdateMasterRequest) (*operations.ContainerProjectsLocationsClustersUpdateMasterResponse, error) {
+func (s *projects) ContainerProjectsLocationsClustersUpdateMaster(ctx context.Context, request operations.ContainerProjectsLocationsClustersUpdateMasterRequest, security operations.ContainerProjectsLocationsClustersUpdateMasterSecurity) (*operations.ContainerProjectsLocationsClustersUpdateMasterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:updateMaster", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:updateMaster", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMasterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1333,11 +1333,11 @@ func (s *projects) ContainerProjectsLocationsClustersUpdateMaster(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1374,14 +1374,14 @@ func (s *projects) ContainerProjectsLocationsClustersUpdateMaster(ctx context.Co
 // ContainerProjectsLocationsClustersWellKnownGetOpenidConfiguration - Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0 specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This API is not yet intended for general use, and is not available for all clusters.
 func (s *projects) ContainerProjectsLocationsClustersWellKnownGetOpenidConfiguration(ctx context.Context, request operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationRequest) (*operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/.well-known/openid-configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/.well-known/openid-configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1420,20 +1420,20 @@ func (s *projects) ContainerProjectsLocationsClustersWellKnownGetOpenidConfigura
 }
 
 // ContainerProjectsLocationsGetServerConfig - Returns configuration info about the Google Kubernetes Engine service.
-func (s *projects) ContainerProjectsLocationsGetServerConfig(ctx context.Context, request operations.ContainerProjectsLocationsGetServerConfigRequest) (*operations.ContainerProjectsLocationsGetServerConfigResponse, error) {
+func (s *projects) ContainerProjectsLocationsGetServerConfig(ctx context.Context, request operations.ContainerProjectsLocationsGetServerConfigRequest, security operations.ContainerProjectsLocationsGetServerConfigSecurity) (*operations.ContainerProjectsLocationsGetServerConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/serverConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/serverConfig", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1468,20 +1468,20 @@ func (s *projects) ContainerProjectsLocationsGetServerConfig(ctx context.Context
 }
 
 // ContainerProjectsLocationsList - Fetches locations that offer Google Kubernetes Engine.
-func (s *projects) ContainerProjectsLocationsList(ctx context.Context, request operations.ContainerProjectsLocationsListRequest) (*operations.ContainerProjectsLocationsListResponse, error) {
+func (s *projects) ContainerProjectsLocationsList(ctx context.Context, request operations.ContainerProjectsLocationsListRequest, security operations.ContainerProjectsLocationsListSecurity) (*operations.ContainerProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1516,11 +1516,11 @@ func (s *projects) ContainerProjectsLocationsList(ctx context.Context, request o
 }
 
 // ContainerProjectsLocationsOperationsCancel - Cancels the specified operation.
-func (s *projects) ContainerProjectsLocationsOperationsCancel(ctx context.Context, request operations.ContainerProjectsLocationsOperationsCancelRequest) (*operations.ContainerProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) ContainerProjectsLocationsOperationsCancel(ctx context.Context, request operations.ContainerProjectsLocationsOperationsCancelRequest, security operations.ContainerProjectsLocationsOperationsCancelSecurity) (*operations.ContainerProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelOperationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1532,11 +1532,11 @@ func (s *projects) ContainerProjectsLocationsOperationsCancel(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1571,20 +1571,20 @@ func (s *projects) ContainerProjectsLocationsOperationsCancel(ctx context.Contex
 }
 
 // ContainerProjectsLocationsOperationsGet - Gets the specified operation.
-func (s *projects) ContainerProjectsLocationsOperationsGet(ctx context.Context, request operations.ContainerProjectsLocationsOperationsGetRequest) (*operations.ContainerProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) ContainerProjectsLocationsOperationsGet(ctx context.Context, request operations.ContainerProjectsLocationsOperationsGetRequest, security operations.ContainerProjectsLocationsOperationsGetSecurity) (*operations.ContainerProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1619,20 +1619,20 @@ func (s *projects) ContainerProjectsLocationsOperationsGet(ctx context.Context, 
 }
 
 // ContainerProjectsLocationsOperationsList - Lists all operations in a project in the specified zone or all zones.
-func (s *projects) ContainerProjectsLocationsOperationsList(ctx context.Context, request operations.ContainerProjectsLocationsOperationsListRequest) (*operations.ContainerProjectsLocationsOperationsListResponse, error) {
+func (s *projects) ContainerProjectsLocationsOperationsList(ctx context.Context, request operations.ContainerProjectsLocationsOperationsListRequest, security operations.ContainerProjectsLocationsOperationsListSecurity) (*operations.ContainerProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1667,11 +1667,11 @@ func (s *projects) ContainerProjectsLocationsOperationsList(ctx context.Context,
 }
 
 // ContainerProjectsZonesClustersAddons - Sets the addons for a specific cluster.
-func (s *projects) ContainerProjectsZonesClustersAddons(ctx context.Context, request operations.ContainerProjectsZonesClustersAddonsRequest) (*operations.ContainerProjectsZonesClustersAddonsResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersAddons(ctx context.Context, request operations.ContainerProjectsZonesClustersAddonsRequest, security operations.ContainerProjectsZonesClustersAddonsSecurity) (*operations.ContainerProjectsZonesClustersAddonsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/addons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/addons", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetAddonsConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1683,11 +1683,11 @@ func (s *projects) ContainerProjectsZonesClustersAddons(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1722,11 +1722,11 @@ func (s *projects) ContainerProjectsZonesClustersAddons(ctx context.Context, req
 }
 
 // ContainerProjectsZonesClustersCompleteIPRotation - Completes master IP rotation.
-func (s *projects) ContainerProjectsZonesClustersCompleteIPRotation(ctx context.Context, request operations.ContainerProjectsZonesClustersCompleteIPRotationRequest) (*operations.ContainerProjectsZonesClustersCompleteIPRotationResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersCompleteIPRotation(ctx context.Context, request operations.ContainerProjectsZonesClustersCompleteIPRotationRequest, security operations.ContainerProjectsZonesClustersCompleteIPRotationSecurity) (*operations.ContainerProjectsZonesClustersCompleteIPRotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:completeIpRotation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:completeIpRotation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteIPRotationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1738,11 +1738,11 @@ func (s *projects) ContainerProjectsZonesClustersCompleteIPRotation(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1777,11 +1777,11 @@ func (s *projects) ContainerProjectsZonesClustersCompleteIPRotation(ctx context.
 }
 
 // ContainerProjectsZonesClustersCreate - Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
-func (s *projects) ContainerProjectsZonesClustersCreate(ctx context.Context, request operations.ContainerProjectsZonesClustersCreateRequest) (*operations.ContainerProjectsZonesClustersCreateResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersCreate(ctx context.Context, request operations.ContainerProjectsZonesClustersCreateRequest, security operations.ContainerProjectsZonesClustersCreateSecurity) (*operations.ContainerProjectsZonesClustersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateClusterRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1793,11 +1793,11 @@ func (s *projects) ContainerProjectsZonesClustersCreate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1832,20 +1832,20 @@ func (s *projects) ContainerProjectsZonesClustersCreate(ctx context.Context, req
 }
 
 // ContainerProjectsZonesClustersDelete - Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and routes that were configured during cluster creation are also deleted. Other Google Compute Engine resources that might be in use by the cluster, such as load balancer resources, are not deleted if they weren't present when the cluster was initially created.
-func (s *projects) ContainerProjectsZonesClustersDelete(ctx context.Context, request operations.ContainerProjectsZonesClustersDeleteRequest) (*operations.ContainerProjectsZonesClustersDeleteResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersDelete(ctx context.Context, request operations.ContainerProjectsZonesClustersDeleteRequest, security operations.ContainerProjectsZonesClustersDeleteSecurity) (*operations.ContainerProjectsZonesClustersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1880,20 +1880,20 @@ func (s *projects) ContainerProjectsZonesClustersDelete(ctx context.Context, req
 }
 
 // ContainerProjectsZonesClustersGet - Gets the details for a specific cluster.
-func (s *projects) ContainerProjectsZonesClustersGet(ctx context.Context, request operations.ContainerProjectsZonesClustersGetRequest) (*operations.ContainerProjectsZonesClustersGetResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersGet(ctx context.Context, request operations.ContainerProjectsZonesClustersGetRequest, security operations.ContainerProjectsZonesClustersGetSecurity) (*operations.ContainerProjectsZonesClustersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1928,11 +1928,11 @@ func (s *projects) ContainerProjectsZonesClustersGet(ctx context.Context, reques
 }
 
 // ContainerProjectsZonesClustersLegacyAbac - Enables or disables the ABAC authorization mechanism on a cluster.
-func (s *projects) ContainerProjectsZonesClustersLegacyAbac(ctx context.Context, request operations.ContainerProjectsZonesClustersLegacyAbacRequest) (*operations.ContainerProjectsZonesClustersLegacyAbacResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersLegacyAbac(ctx context.Context, request operations.ContainerProjectsZonesClustersLegacyAbacRequest, security operations.ContainerProjectsZonesClustersLegacyAbacSecurity) (*operations.ContainerProjectsZonesClustersLegacyAbacResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/legacyAbac", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/legacyAbac", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLegacyAbacRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1944,11 +1944,11 @@ func (s *projects) ContainerProjectsZonesClustersLegacyAbac(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1983,20 +1983,20 @@ func (s *projects) ContainerProjectsZonesClustersLegacyAbac(ctx context.Context,
 }
 
 // ContainerProjectsZonesClustersList - Lists all clusters owned by a project in either the specified zone or all zones.
-func (s *projects) ContainerProjectsZonesClustersList(ctx context.Context, request operations.ContainerProjectsZonesClustersListRequest) (*operations.ContainerProjectsZonesClustersListResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersList(ctx context.Context, request operations.ContainerProjectsZonesClustersListRequest, security operations.ContainerProjectsZonesClustersListSecurity) (*operations.ContainerProjectsZonesClustersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2031,11 +2031,11 @@ func (s *projects) ContainerProjectsZonesClustersList(ctx context.Context, reque
 }
 
 // ContainerProjectsZonesClustersLocations - Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
-func (s *projects) ContainerProjectsZonesClustersLocations(ctx context.Context, request operations.ContainerProjectsZonesClustersLocationsRequest) (*operations.ContainerProjectsZonesClustersLocationsResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersLocations(ctx context.Context, request operations.ContainerProjectsZonesClustersLocationsRequest, security operations.ContainerProjectsZonesClustersLocationsSecurity) (*operations.ContainerProjectsZonesClustersLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLocationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2047,11 +2047,11 @@ func (s *projects) ContainerProjectsZonesClustersLocations(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2086,11 +2086,11 @@ func (s *projects) ContainerProjectsZonesClustersLocations(ctx context.Context, 
 }
 
 // ContainerProjectsZonesClustersLogging - Sets the logging service for a specific cluster.
-func (s *projects) ContainerProjectsZonesClustersLogging(ctx context.Context, request operations.ContainerProjectsZonesClustersLoggingRequest) (*operations.ContainerProjectsZonesClustersLoggingResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersLogging(ctx context.Context, request operations.ContainerProjectsZonesClustersLoggingRequest, security operations.ContainerProjectsZonesClustersLoggingSecurity) (*operations.ContainerProjectsZonesClustersLoggingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/logging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/logging", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLoggingServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2102,11 +2102,11 @@ func (s *projects) ContainerProjectsZonesClustersLogging(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2141,11 +2141,11 @@ func (s *projects) ContainerProjectsZonesClustersLogging(ctx context.Context, re
 }
 
 // ContainerProjectsZonesClustersMaster - Updates the master for a specific cluster.
-func (s *projects) ContainerProjectsZonesClustersMaster(ctx context.Context, request operations.ContainerProjectsZonesClustersMasterRequest) (*operations.ContainerProjectsZonesClustersMasterResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersMaster(ctx context.Context, request operations.ContainerProjectsZonesClustersMasterRequest, security operations.ContainerProjectsZonesClustersMasterSecurity) (*operations.ContainerProjectsZonesClustersMasterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/master", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/master", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMasterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2157,11 +2157,11 @@ func (s *projects) ContainerProjectsZonesClustersMaster(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2196,11 +2196,11 @@ func (s *projects) ContainerProjectsZonesClustersMaster(ctx context.Context, req
 }
 
 // ContainerProjectsZonesClustersMonitoring - Sets the monitoring service for a specific cluster.
-func (s *projects) ContainerProjectsZonesClustersMonitoring(ctx context.Context, request operations.ContainerProjectsZonesClustersMonitoringRequest) (*operations.ContainerProjectsZonesClustersMonitoringResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersMonitoring(ctx context.Context, request operations.ContainerProjectsZonesClustersMonitoringRequest, security operations.ContainerProjectsZonesClustersMonitoringSecurity) (*operations.ContainerProjectsZonesClustersMonitoringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/monitoring", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/monitoring", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMonitoringServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2212,11 +2212,11 @@ func (s *projects) ContainerProjectsZonesClustersMonitoring(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2251,11 +2251,11 @@ func (s *projects) ContainerProjectsZonesClustersMonitoring(ctx context.Context,
 }
 
 // ContainerProjectsZonesClustersNodePoolsAutoscaling - Sets the autoscaling settings of a specific node pool.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsAutoscaling(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsAutoscalingRequest) (*operations.ContainerProjectsZonesClustersNodePoolsAutoscalingResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsAutoscaling(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsAutoscalingRequest, security operations.ContainerProjectsZonesClustersNodePoolsAutoscalingSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsAutoscalingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/autoscaling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/autoscaling", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNodePoolAutoscalingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2267,11 +2267,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsAutoscaling(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2306,11 +2306,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsAutoscaling(ctx contex
 }
 
 // ContainerProjectsZonesClustersNodePoolsCreate - Creates a node pool for a cluster.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsCreate(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsCreateRequest) (*operations.ContainerProjectsZonesClustersNodePoolsCreateResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsCreate(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsCreateRequest, security operations.ContainerProjectsZonesClustersNodePoolsCreateSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateNodePoolRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2322,11 +2322,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2361,20 +2361,20 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsCreate(ctx context.Con
 }
 
 // ContainerProjectsZonesClustersNodePoolsDelete - Deletes a node pool from a cluster.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsDelete(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsDeleteRequest) (*operations.ContainerProjectsZonesClustersNodePoolsDeleteResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsDelete(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsDeleteRequest, security operations.ContainerProjectsZonesClustersNodePoolsDeleteSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2409,20 +2409,20 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsDelete(ctx context.Con
 }
 
 // ContainerProjectsZonesClustersNodePoolsGet - Retrieves the requested node pool.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsGet(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsGetRequest) (*operations.ContainerProjectsZonesClustersNodePoolsGetResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsGet(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsGetRequest, security operations.ContainerProjectsZonesClustersNodePoolsGetSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2457,20 +2457,20 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsGet(ctx context.Contex
 }
 
 // ContainerProjectsZonesClustersNodePoolsList - Lists the node pools for a cluster.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsList(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsListRequest) (*operations.ContainerProjectsZonesClustersNodePoolsListResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsList(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsListRequest, security operations.ContainerProjectsZonesClustersNodePoolsListSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2505,11 +2505,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsList(ctx context.Conte
 }
 
 // ContainerProjectsZonesClustersNodePoolsRollback - Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsRollback(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsRollbackRequest) (*operations.ContainerProjectsZonesClustersNodePoolsRollbackResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsRollback(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsRollbackRequest, security operations.ContainerProjectsZonesClustersNodePoolsRollbackSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}:rollback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}:rollback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackNodePoolUpgradeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2521,11 +2521,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsRollback(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2560,11 +2560,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsRollback(ctx context.C
 }
 
 // ContainerProjectsZonesClustersNodePoolsSetManagement - Sets the NodeManagement options for a node pool.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsSetManagement(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsSetManagementRequest) (*operations.ContainerProjectsZonesClustersNodePoolsSetManagementResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsSetManagement(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsSetManagementRequest, security operations.ContainerProjectsZonesClustersNodePoolsSetManagementSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsSetManagementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setManagement", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setManagement", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNodePoolManagementRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2576,11 +2576,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsSetManagement(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2615,11 +2615,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsSetManagement(ctx cont
 }
 
 // ContainerProjectsZonesClustersNodePoolsSetSize - SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsSetSize(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsSetSizeRequest) (*operations.ContainerProjectsZonesClustersNodePoolsSetSizeResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsSetSize(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsSetSizeRequest, security operations.ContainerProjectsZonesClustersNodePoolsSetSizeSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsSetSizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setSize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setSize", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNodePoolSizeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2631,11 +2631,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsSetSize(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2670,11 +2670,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsSetSize(ctx context.Co
 }
 
 // ContainerProjectsZonesClustersNodePoolsUpdate - Updates the version and/or image type of a specific node pool.
-func (s *projects) ContainerProjectsZonesClustersNodePoolsUpdate(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsUpdateRequest) (*operations.ContainerProjectsZonesClustersNodePoolsUpdateResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersNodePoolsUpdate(ctx context.Context, request operations.ContainerProjectsZonesClustersNodePoolsUpdateRequest, security operations.ContainerProjectsZonesClustersNodePoolsUpdateSecurity) (*operations.ContainerProjectsZonesClustersNodePoolsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/update", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/update", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateNodePoolRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2686,11 +2686,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsUpdate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2725,11 +2725,11 @@ func (s *projects) ContainerProjectsZonesClustersNodePoolsUpdate(ctx context.Con
 }
 
 // ContainerProjectsZonesClustersResourceLabels - Sets labels on a cluster.
-func (s *projects) ContainerProjectsZonesClustersResourceLabels(ctx context.Context, request operations.ContainerProjectsZonesClustersResourceLabelsRequest) (*operations.ContainerProjectsZonesClustersResourceLabelsResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersResourceLabels(ctx context.Context, request operations.ContainerProjectsZonesClustersResourceLabelsRequest, security operations.ContainerProjectsZonesClustersResourceLabelsSecurity) (*operations.ContainerProjectsZonesClustersResourceLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/resourceLabels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/resourceLabels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLabelsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2741,11 +2741,11 @@ func (s *projects) ContainerProjectsZonesClustersResourceLabels(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2780,11 +2780,11 @@ func (s *projects) ContainerProjectsZonesClustersResourceLabels(ctx context.Cont
 }
 
 // ContainerProjectsZonesClustersSetMaintenancePolicy - Sets the maintenance policy for a cluster.
-func (s *projects) ContainerProjectsZonesClustersSetMaintenancePolicy(ctx context.Context, request operations.ContainerProjectsZonesClustersSetMaintenancePolicyRequest) (*operations.ContainerProjectsZonesClustersSetMaintenancePolicyResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersSetMaintenancePolicy(ctx context.Context, request operations.ContainerProjectsZonesClustersSetMaintenancePolicyRequest, security operations.ContainerProjectsZonesClustersSetMaintenancePolicySecurity) (*operations.ContainerProjectsZonesClustersSetMaintenancePolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMaintenancePolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMaintenancePolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMaintenancePolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2796,11 +2796,11 @@ func (s *projects) ContainerProjectsZonesClustersSetMaintenancePolicy(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2835,11 +2835,11 @@ func (s *projects) ContainerProjectsZonesClustersSetMaintenancePolicy(ctx contex
 }
 
 // ContainerProjectsZonesClustersSetMasterAuth - Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
-func (s *projects) ContainerProjectsZonesClustersSetMasterAuth(ctx context.Context, request operations.ContainerProjectsZonesClustersSetMasterAuthRequest) (*operations.ContainerProjectsZonesClustersSetMasterAuthResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersSetMasterAuth(ctx context.Context, request operations.ContainerProjectsZonesClustersSetMasterAuthRequest, security operations.ContainerProjectsZonesClustersSetMasterAuthSecurity) (*operations.ContainerProjectsZonesClustersSetMasterAuthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMasterAuth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMasterAuth", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMasterAuthRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2851,11 +2851,11 @@ func (s *projects) ContainerProjectsZonesClustersSetMasterAuth(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2890,11 +2890,11 @@ func (s *projects) ContainerProjectsZonesClustersSetMasterAuth(ctx context.Conte
 }
 
 // ContainerProjectsZonesClustersSetNetworkPolicy - Enables or disables Network Policy for a cluster.
-func (s *projects) ContainerProjectsZonesClustersSetNetworkPolicy(ctx context.Context, request operations.ContainerProjectsZonesClustersSetNetworkPolicyRequest) (*operations.ContainerProjectsZonesClustersSetNetworkPolicyResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersSetNetworkPolicy(ctx context.Context, request operations.ContainerProjectsZonesClustersSetNetworkPolicyRequest, security operations.ContainerProjectsZonesClustersSetNetworkPolicySecurity) (*operations.ContainerProjectsZonesClustersSetNetworkPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setNetworkPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setNetworkPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNetworkPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2906,11 +2906,11 @@ func (s *projects) ContainerProjectsZonesClustersSetNetworkPolicy(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2945,11 +2945,11 @@ func (s *projects) ContainerProjectsZonesClustersSetNetworkPolicy(ctx context.Co
 }
 
 // ContainerProjectsZonesClustersStartIPRotation - Starts master IP rotation.
-func (s *projects) ContainerProjectsZonesClustersStartIPRotation(ctx context.Context, request operations.ContainerProjectsZonesClustersStartIPRotationRequest) (*operations.ContainerProjectsZonesClustersStartIPRotationResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersStartIPRotation(ctx context.Context, request operations.ContainerProjectsZonesClustersStartIPRotationRequest, security operations.ContainerProjectsZonesClustersStartIPRotationSecurity) (*operations.ContainerProjectsZonesClustersStartIPRotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:startIpRotation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:startIpRotation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartIPRotationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2961,11 +2961,11 @@ func (s *projects) ContainerProjectsZonesClustersStartIPRotation(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3000,11 +3000,11 @@ func (s *projects) ContainerProjectsZonesClustersStartIPRotation(ctx context.Con
 }
 
 // ContainerProjectsZonesClustersUpdate - Updates the settings for a specific cluster.
-func (s *projects) ContainerProjectsZonesClustersUpdate(ctx context.Context, request operations.ContainerProjectsZonesClustersUpdateRequest) (*operations.ContainerProjectsZonesClustersUpdateResponse, error) {
+func (s *projects) ContainerProjectsZonesClustersUpdate(ctx context.Context, request operations.ContainerProjectsZonesClustersUpdateRequest, security operations.ContainerProjectsZonesClustersUpdateSecurity) (*operations.ContainerProjectsZonesClustersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateClusterRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3016,11 +3016,11 @@ func (s *projects) ContainerProjectsZonesClustersUpdate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3055,20 +3055,20 @@ func (s *projects) ContainerProjectsZonesClustersUpdate(ctx context.Context, req
 }
 
 // ContainerProjectsZonesGetServerconfig - Returns configuration info about the Google Kubernetes Engine service.
-func (s *projects) ContainerProjectsZonesGetServerconfig(ctx context.Context, request operations.ContainerProjectsZonesGetServerconfigRequest) (*operations.ContainerProjectsZonesGetServerconfigResponse, error) {
+func (s *projects) ContainerProjectsZonesGetServerconfig(ctx context.Context, request operations.ContainerProjectsZonesGetServerconfigRequest, security operations.ContainerProjectsZonesGetServerconfigSecurity) (*operations.ContainerProjectsZonesGetServerconfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/serverconfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/serverconfig", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3103,11 +3103,11 @@ func (s *projects) ContainerProjectsZonesGetServerconfig(ctx context.Context, re
 }
 
 // ContainerProjectsZonesOperationsCancel - Cancels the specified operation.
-func (s *projects) ContainerProjectsZonesOperationsCancel(ctx context.Context, request operations.ContainerProjectsZonesOperationsCancelRequest) (*operations.ContainerProjectsZonesOperationsCancelResponse, error) {
+func (s *projects) ContainerProjectsZonesOperationsCancel(ctx context.Context, request operations.ContainerProjectsZonesOperationsCancelRequest, security operations.ContainerProjectsZonesOperationsCancelSecurity) (*operations.ContainerProjectsZonesOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/operations/{operationId}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/operations/{operationId}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelOperationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3119,11 +3119,11 @@ func (s *projects) ContainerProjectsZonesOperationsCancel(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3158,20 +3158,20 @@ func (s *projects) ContainerProjectsZonesOperationsCancel(ctx context.Context, r
 }
 
 // ContainerProjectsZonesOperationsGet - Gets the specified operation.
-func (s *projects) ContainerProjectsZonesOperationsGet(ctx context.Context, request operations.ContainerProjectsZonesOperationsGetRequest) (*operations.ContainerProjectsZonesOperationsGetResponse, error) {
+func (s *projects) ContainerProjectsZonesOperationsGet(ctx context.Context, request operations.ContainerProjectsZonesOperationsGetRequest, security operations.ContainerProjectsZonesOperationsGetSecurity) (*operations.ContainerProjectsZonesOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/operations/{operationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/operations/{operationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3206,20 +3206,20 @@ func (s *projects) ContainerProjectsZonesOperationsGet(ctx context.Context, requ
 }
 
 // ContainerProjectsZonesOperationsList - Lists all operations in a project in the specified zone or all zones.
-func (s *projects) ContainerProjectsZonesOperationsList(ctx context.Context, request operations.ContainerProjectsZonesOperationsListRequest) (*operations.ContainerProjectsZonesOperationsListResponse, error) {
+func (s *projects) ContainerProjectsZonesOperationsList(ctx context.Context, request operations.ContainerProjectsZonesOperationsListRequest, security operations.ContainerProjectsZonesOperationsListSecurity) (*operations.ContainerProjectsZonesOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}/zones/{zone}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

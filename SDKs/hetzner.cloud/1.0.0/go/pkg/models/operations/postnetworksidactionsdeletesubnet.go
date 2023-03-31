@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostNetworksIDActionsDeleteSubnetPathParams struct {
-	// ID of the Network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostNetworksIDActionsDeleteSubnetDeleteSubnetRequest struct {
 	// IP range of subnet to delete
 	IPRange string `json:"ip_range"`
 }
 
 type PostNetworksIDActionsDeleteSubnetRequest struct {
-	PathParams PostNetworksIDActionsDeleteSubnetPathParams
-	Request    *PostNetworksIDActionsDeleteSubnetDeleteSubnetRequest `request:"mediaType=application/json"`
+	RequestBody *PostNetworksIDActionsDeleteSubnetDeleteSubnetRequest `request:"mediaType=application/json"`
+	// ID of the Network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostNetworksIDActionsDeleteSubnetActionResponseActionError - Error message for the Action if error occurred, otherwise null

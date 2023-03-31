@@ -38,7 +38,7 @@ func (s *settings) EditSettings(ctx context.Context, request operations.EditSett
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Settings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *settings) EditSettings(ctx context.Context, request operations.EditSett
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -100,7 +100,7 @@ func (s *settings) GetSettings(ctx context.Context, request operations.GetSettin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

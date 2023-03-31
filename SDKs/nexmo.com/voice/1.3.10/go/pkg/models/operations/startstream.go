@@ -8,19 +8,14 @@ import (
 )
 
 type StartStreamSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type StartStreamPathParams struct {
-	// UUID of the Call Leg
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type StartStreamRequest struct {
-	PathParams StartStreamPathParams
 	// action to perform
-	Request  shared.StartStreamRequest `request:"mediaType=application/json"`
-	Security StartStreamSecurity
+	StartStreamRequest shared.StartStreamRequest `request:"mediaType=application/json"`
+	// UUID of the Call Leg
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type StartStreamResponse struct {

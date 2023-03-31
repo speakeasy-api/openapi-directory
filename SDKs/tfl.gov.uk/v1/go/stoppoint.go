@@ -36,14 +36,14 @@ func newStopPoint(defaultClient, securityClient HTTPClient, serverURL, language,
 // StopPointArrivalDepartures - Gets the list of arrival and departure predictions for the given stop point id (overground, Elizabeth line and thameslink only)
 func (s *stopPoint) StopPointArrivalDepartures(ctx context.Context, request operations.StopPointArrivalDeparturesRequest) (*operations.StopPointArrivalDeparturesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/ArrivalDepartures", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/ArrivalDepartures", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *stopPoint) StopPointArrivalDepartures(ctx context.Context, request oper
 // StopPointArrivals - Gets the list of arrival predictions for the given stop point id
 func (s *stopPoint) StopPointArrivals(ctx context.Context, request operations.StopPointArrivalsRequest) (*operations.StopPointArrivalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/Arrivals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/Arrivals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,14 +170,14 @@ func (s *stopPoint) StopPointArrivals(ctx context.Context, request operations.St
 // StopPointCrowding - Gets all the Crowding data (static) for the StopPointId, plus crowding data for a given line and optionally a particular direction.
 func (s *stopPoint) StopPointCrowding(ctx context.Context, request operations.StopPointCrowdingRequest) (*operations.StopPointCrowdingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/Crowding/{line}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/Crowding/{line}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -239,14 +239,14 @@ func (s *stopPoint) StopPointCrowding(ctx context.Context, request operations.St
 // StopPointDirection - Returns the canonical direction, "inbound" or "outbound", for a given pair of stop point Ids in the direction from -&gt; to.
 func (s *stopPoint) StopPointDirection(ctx context.Context, request operations.StopPointDirectionRequest) (*operations.StopPointDirectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/DirectionTo/{toStopPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/DirectionTo/{toStopPointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -312,14 +312,14 @@ func (s *stopPoint) StopPointDirection(ctx context.Context, request operations.S
 // StopPointDisruption - Gets all disruptions for the specified StopPointId, plus disruptions for any child Naptan records it may have.
 func (s *stopPoint) StopPointDisruption(ctx context.Context, request operations.StopPointDisruptionRequest) (*operations.StopPointDisruptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{ids}/Disruption", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{ids}/Disruption", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -381,14 +381,14 @@ func (s *stopPoint) StopPointDisruption(ctx context.Context, request operations.
 // StopPointDisruptionByMode - Gets a distinct list of disrupted stop points for the given modes
 func (s *stopPoint) StopPointDisruptionByMode(ctx context.Context, request operations.StopPointDisruptionByModeRequest) (*operations.StopPointDisruptionByModeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Mode/{modes}/Disruption", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Mode/{modes}/Disruption", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -450,14 +450,14 @@ func (s *stopPoint) StopPointDisruptionByMode(ctx context.Context, request opera
 // StopPointGet - Gets a list of StopPoints corresponding to the given list of stop ids.
 func (s *stopPoint) StopPointGet(ctx context.Context, request operations.StopPointGetRequest) (*operations.StopPointGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -526,7 +526,7 @@ func (s *stopPoint) StopPointGetByGeoPoint(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -588,14 +588,14 @@ func (s *stopPoint) StopPointGetByGeoPoint(ctx context.Context, request operatio
 // StopPointGetByMode - Gets a list of StopPoints filtered by the modes available at that StopPoint.
 func (s *stopPoint) StopPointGetByMode(ctx context.Context, request operations.StopPointGetByModeRequest) (*operations.StopPointGetByModeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Mode/{modes}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Mode/{modes}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -657,14 +657,14 @@ func (s *stopPoint) StopPointGetByMode(ctx context.Context, request operations.S
 // StopPointGetBySms - Gets a StopPoint for a given sms code.
 func (s *stopPoint) StopPointGetBySms(ctx context.Context, request operations.StopPointGetBySmsRequest) (*operations.StopPointGetBySmsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Sms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Sms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -726,7 +726,7 @@ func (s *stopPoint) StopPointGetBySms(ctx context.Context, request operations.St
 // StopPointGetByType - Gets all stop points of a given type
 func (s *stopPoint) StopPointGetByType(ctx context.Context, request operations.StopPointGetByTypeRequest) (*operations.StopPointGetByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Type/{types}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Type/{types}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -791,7 +791,7 @@ func (s *stopPoint) StopPointGetByType(ctx context.Context, request operations.S
 // StopPointGetByTypeWithPagination - Gets all the stop points of given type(s) with a page number
 func (s *stopPoint) StopPointGetByTypeWithPagination(ctx context.Context, request operations.StopPointGetByTypeWithPaginationRequest) (*operations.StopPointGetByTypeWithPaginationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Type/{types}/page/{page}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Type/{types}/page/{page}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -856,7 +856,7 @@ func (s *stopPoint) StopPointGetByTypeWithPagination(ctx context.Context, reques
 // StopPointGetCarParksByID - Get car parks corresponding to the given stop point id.
 func (s *stopPoint) StopPointGetCarParksByID(ctx context.Context, request operations.StopPointGetCarParksByIDRequest) (*operations.StopPointGetCarParksByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{stopPointId}/CarParks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{stopPointId}/CarParks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -928,7 +928,7 @@ func (s *stopPoint) StopPointGetServiceTypes(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -990,7 +990,7 @@ func (s *stopPoint) StopPointGetServiceTypes(ctx context.Context, request operat
 // StopPointGetTaxiRanksByIds - Gets a list of taxi ranks corresponding to the given stop point id.
 func (s *stopPoint) StopPointGetTaxiRanksByIds(ctx context.Context, request operations.StopPointGetTaxiRanksByIdsRequest) (*operations.StopPointGetTaxiRanksByIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{stopPointId}/TaxiRanks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{stopPointId}/TaxiRanks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1250,14 +1250,14 @@ func (s *stopPoint) StopPointMetaStopTypes(ctx context.Context) (*operations.Sto
 // StopPointReachableFrom - Gets Stopoints that are reachable from a station/line combination.
 func (s *stopPoint) StopPointReachableFrom(ctx context.Context, request operations.StopPointReachableFromRequest) (*operations.StopPointReachableFromResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/CanReachOnLine/{lineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/CanReachOnLine/{lineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1319,14 +1319,14 @@ func (s *stopPoint) StopPointReachableFrom(ctx context.Context, request operatio
 // StopPointRoute - Returns the route sections for all the lines that service the given stop point ids
 func (s *stopPoint) StopPointRoute(ctx context.Context, request operations.StopPointRouteRequest) (*operations.StopPointRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/Route", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/Route", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1388,14 +1388,14 @@ func (s *stopPoint) StopPointRoute(ctx context.Context, request operations.StopP
 // StopPointSearch - Search StopPoints by their common name, or their 5-digit Countdown Bus Stop Code.
 func (s *stopPoint) StopPointSearch(ctx context.Context, request operations.StopPointSearchRequest) (*operations.StopPointSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Search/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/Search/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1464,7 +1464,7 @@ func (s *stopPoint) GetStopPointSearch(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1526,14 +1526,14 @@ func (s *stopPoint) GetStopPointSearch(ctx context.Context, request operations.G
 // GetStopPointIDPlaceTypes - Get a list of places corresponding to a given id and place types.
 func (s *stopPoint) GetStopPointIDPlaceTypes(ctx context.Context, request operations.GetStopPointIDPlaceTypesRequest) (*operations.GetStopPointIDPlaceTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/placeTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/placeTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequestBodyTypeEnum string
 
 const (
@@ -65,9 +56,14 @@ type PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequestBody 
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDPathParams
 	// A contractual document to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDResponse struct {

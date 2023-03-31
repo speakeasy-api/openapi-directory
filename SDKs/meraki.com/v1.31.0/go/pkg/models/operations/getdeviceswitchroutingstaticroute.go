@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchRoutingStaticRoutePathParams struct {
+type GetDeviceSwitchRoutingStaticRouteRequest struct {
 	Serial        string `pathParam:"style=simple,explode=false,name=serial"`
 	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
-}
-
-type GetDeviceSwitchRoutingStaticRouteRequest struct {
-	PathParams GetDeviceSwitchRoutingStaticRoutePathParams
 }
 
 type GetDeviceSwitchRoutingStaticRouteResponse struct {

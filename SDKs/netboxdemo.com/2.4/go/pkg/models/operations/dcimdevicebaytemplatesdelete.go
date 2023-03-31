@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimDeviceBayTemplatesDeletePathParams struct {
+type DcimDeviceBayTemplatesDeleteRequest struct {
 	// A unique integer value identifying this device bay template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceBayTemplatesDeleteRequest struct {
-	PathParams DcimDeviceBayTemplatesDeletePathParams
 }
 
 type DcimDeviceBayTemplatesDeleteResponse struct {

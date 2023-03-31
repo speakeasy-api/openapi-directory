@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetMeInboxQueryParams struct {
+type GetMeInboxRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -47,10 +47,6 @@ type GetMeInboxQueryParams struct {
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
 	//
 	Site string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type GetMeInboxRequest struct {
-	QueryParams GetMeInboxQueryParams
 }
 
 type GetMeInboxResponse struct {

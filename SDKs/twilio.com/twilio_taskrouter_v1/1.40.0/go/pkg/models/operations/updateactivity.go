@@ -12,14 +12,8 @@ var UpdateActivityServerList = []string{
 }
 
 type UpdateActivitySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateActivityPathParams struct {
-	// The SID of the Activity resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the Workspace with the Activity resources to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateActivityUpdateActivityRequest struct {
@@ -28,10 +22,11 @@ type UpdateActivityUpdateActivityRequest struct {
 }
 
 type UpdateActivityRequest struct {
-	PathParams UpdateActivityPathParams
-	Request    *UpdateActivityUpdateActivityRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateActivitySecurity
-	ServerURL  *string
+	RequestBody *UpdateActivityUpdateActivityRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Activity resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the Workspace with the Activity resources to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateActivityResponse struct {

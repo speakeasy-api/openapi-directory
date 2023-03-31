@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserFollowsShowsShowIDPathParams struct {
-	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
-}
-
 type GetUserFollowsShowsShowIDRequest struct {
-	PathParams GetUserFollowsShowsShowIDPathParams
+	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
 }
 
 type GetUserFollowsShowsShowIDResponse struct {

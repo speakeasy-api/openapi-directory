@@ -14,28 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.ChromeuxreportRecordsQueryHistoryRecordRequest{
-        QueryParams: operations.ChromeuxreportRecordsQueryHistoryRecordQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.QueryHistoryRequest{
+        DollarXgafv: "2",
+        QueryHistoryRequest: &shared.QueryHistoryRequest{
             FormFactor: "DESKTOP",
             Metrics: []string{
-                "iure",
-                "magnam",
+                "quibusdam",
+                "unde",
+                "nulla",
             },
-            Origin: "debitis",
-            URL: "ipsa",
+            Origin: "corrupti",
+            URL: "illum",
         },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        UploadType: "ipsa",
+        UploadProtocol: "delectus",
     }
 
     ctx := context.Background()

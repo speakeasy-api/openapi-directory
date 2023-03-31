@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationApplianceSecurityIntrusionPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationApplianceSecurityIntrusionRequest struct {
-	PathParams GetOrganizationApplianceSecurityIntrusionPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationApplianceSecurityIntrusionResponse struct {

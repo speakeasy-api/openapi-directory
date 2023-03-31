@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05SubscriptionRequestsHiuOnNotifyHeaders struct {
+type PostV05SubscriptionRequestsHiuOnNotifyRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization                                     string                                                   `header:"style=simple,explode=false,name=Authorization"`
+	HIUSubscriptionRequestNotificationAcknowledgement shared.HIUSubscriptionRequestNotificationAcknowledgement `request:"mediaType=application/json"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05SubscriptionRequestsHiuOnNotifyRequest struct {
-	Headers PostV05SubscriptionRequestsHiuOnNotifyHeaders
-	Request shared.HIUSubscriptionRequestNotificationAcknowledgement `request:"mediaType=application/json"`
 }
 
 type PostV05SubscriptionRequestsHiuOnNotifyResponse struct {

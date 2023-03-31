@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualBillingMeterActivePostRawRequest struct {
-	// The Meter to activate
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type VirtualBillingMeterActivePostRawResponse struct {
 	Body        []byte
 	ContentType string

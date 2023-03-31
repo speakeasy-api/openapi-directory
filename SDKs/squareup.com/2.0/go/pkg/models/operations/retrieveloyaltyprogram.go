@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveLoyaltyProgramSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveLoyaltyProgramPathParams struct {
-	// The ID of the loyalty program or the keyword `main`. Either value can be used to retrieve the single loyalty program that belongs to the seller.
-	ProgramID string `pathParam:"style=simple,explode=false,name=program_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveLoyaltyProgramRequest struct {
-	PathParams RetrieveLoyaltyProgramPathParams
-	Security   RetrieveLoyaltyProgramSecurity
+	// The ID of the loyalty program or the keyword `main`. Either value can be used to retrieve the single loyalty program that belongs to the seller.
+	ProgramID string `pathParam:"style=simple,explode=false,name=program_id"`
 }
 
 type RetrieveLoyaltyProgramResponse struct {

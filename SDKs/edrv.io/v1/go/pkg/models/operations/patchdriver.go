@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchDriverPathParams struct {
-	// ID of driver that needs to be updated
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchDriverRequestBodyAddress struct {
 	City            *string `json:"city,omitempty"`
 	Country         *string `json:"country,omitempty"`
@@ -37,9 +32,10 @@ type PatchDriverRequestBody struct {
 }
 
 type PatchDriverRequest struct {
-	PathParams PatchDriverPathParams
 	// Include driver properties to create here
-	Request PatchDriverRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchDriverRequestBody `request:"mediaType=application/json"`
+	// ID of driver that needs to be updated
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PatchDriver200ApplicationJSON - Returns the updated driver object

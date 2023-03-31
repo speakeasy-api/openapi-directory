@@ -34,9 +34,9 @@ func newIdentityPsks(defaultClient, securityClient HTTPClient, serverURL, langua
 // Create an Identity PSK
 func (s *identityPsks) CreateNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.CreateNetworkWirelessSsidIdentityPskRequest) (*operations.CreateNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *identityPsks) CreateNetworkWirelessSsidIdentityPsk(ctx context.Context,
 // Delete an Identity PSK
 func (s *identityPsks) DeleteNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.DeleteNetworkWirelessSsidIdentityPskRequest) (*operations.DeleteNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *identityPsks) DeleteNetworkWirelessSsidIdentityPsk(ctx context.Context,
 // Return an Identity PSK
 func (s *identityPsks) GetNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.GetNetworkWirelessSsidIdentityPskRequest) (*operations.GetNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *identityPsks) GetNetworkWirelessSsidIdentityPsk(ctx context.Context, re
 // List all Identity PSKs in a wireless network
 func (s *identityPsks) GetNetworkWirelessSsidIdentityPsks(ctx context.Context, request operations.GetNetworkWirelessSsidIdentityPsksRequest) (*operations.GetNetworkWirelessSsidIdentityPsksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *identityPsks) GetNetworkWirelessSsidIdentityPsks(ctx context.Context, r
 // Update an Identity PSK
 func (s *identityPsks) UpdateNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.UpdateNetworkWirelessSsidIdentityPskRequest) (*operations.UpdateNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

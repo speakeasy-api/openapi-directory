@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/zuora.com/2021-08-20/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.DeleteAccountingCodeRequest(
-    path_params=operations.DeleteAccountingCodePathParams(
-        ac_id="distinctio",
-    ),
-    headers=operations.DeleteAccountingCodeHeaders(
-        zuora_entity_ids="voluptas",
-        zuora_track_id="quos",
-    ),
+
+
+req = operations.DELETEAccountingCodeRequest(
+    zuora_entity_ids="corrupti",
+    zuora_track_id="provident",
+    ac_id="distinctio",
 )
     
 res = s.accounting_codes.delete_accounting_code(req)
@@ -34,9 +31,10 @@ if res.common_response_type is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Accounting Codes
+
+### accounting_codes
 
 * `delete_accounting_code` - Delete an accounting code
 * `get_accounting_code` - Retrieve an accounting code
@@ -46,7 +44,7 @@ if res.common_response_type is not None:
 * `put_activate_accounting_code` - Activate an accounting code
 * `put_deactivate_accounting_code` - Deactivate an accounting code
 
-### Accounting Periods
+### accounting_periods
 
 * `delete_accounting_period` - Delete an accounting period
 * `get_accounting_period` - Retrieve an accounting period
@@ -58,7 +56,7 @@ if res.common_response_type is not None:
 * `put_run_trial_balance` - Run trial balance
 * `put_update_accounting_period` - Update an accounting period
 
-### Accounts
+### accounts
 
 * `get_account` - Retrieve an account
 * `get_account_summary` - Retrieve an account summary
@@ -69,7 +67,7 @@ if res.common_response_type is not None:
 * `post_account` - Create an account
 * `put_account` - Update an account
 
-### Actions
+### actions
 
 * `action_pos_tamend` - Amend
 * `action_pos_tcreate` - Create
@@ -81,7 +79,7 @@ if res.common_response_type is not None:
 * `action_pos_tsubscribe` - Subscribe
 * `action_pos_tupdate` - Update
 
-### Amendments
+### amendments
 
 * `get_amendments_by_key` - Retrieve an amendment
 * `get_amendments_by_subscription_id` - List all amendments of a subscription
@@ -89,7 +87,7 @@ if res.common_response_type is not None:
 * `object_get_amendment` - CRUD: Retrieve an amendment
 * `object_put_amendment` - CRUD: Update an amendment
 
-### Attachments
+### attachments
 
 * `delete_attachments` - Delete an attachment
 * `get_attachments` - Retrieve an attachment
@@ -97,7 +95,7 @@ if res.common_response_type is not None:
 * `post_attachments` - Create an attachment
 * `put_attachments` - Update an attachment
 
-### Bill Run
+### bill_run
 
 * `object_delete_bill_run` - CRUD: Delete a bill run
 * `object_get_bill_run` - CRUD: Retrieve a bill run
@@ -105,43 +103,43 @@ if res.common_response_type is not None:
 * `object_put_bill_run` - CRUD: Post or cancel a bill run
 * `post_email_billing_documentsfrom_bill_run` - Email billing documents generated from a bill run
 
-### Billing Documents
+### billing_documents
 
 * `get_billing_document_files_deletion_job` - Retrieve a job of hard deleting billing document files
 * `get_billing_documents` - List billing documents for an account
 * `post_billing_document_files_deletion_job` - Create a job to hard delete billing document files
 * `post_generate_billing_documents` - Generate billing documents by account ID
 
-### Billing Preview Run
+### billing_preview_run
 
 * `get_billing_preview_run` - Retrieve a billing preview run
 * `post_billing_preview_run` - Create a billing preview run
 
-### Catalog
+### catalog
 
 * `get_catalog` - List all products
 * `get_product` - Retrieve a product
 * `post_catalog` - Multi-entity: Share a product with an entity
 
-### Charge Metrics
+### charge_metrics
 
 * `get_charge_metrics` - List charge metrics by time range
 * `get_charge_metrics_discount_allocation_details` - List discount allocation details by time range
 
-### Charge Revenue Summaries
+### charge_revenue_summaries
 
 * `get_crs_by_crs_number` - List all details of a charge revenue summary
 * `get_crs_by_charge_id` - Retrieve a charge revenue summary by charge ID
 
-### Communication Profiles
+### communication_profiles
 
 * `object_get_communication_profile` - CRUD: Retrieve a communication profile
 
-### Connections
+### connections
 
 * `post_connections` - Establish a connection to Zuora REST API
 
-### Contacts
+### contacts
 
 * `object_delete_contact` - CRUD: Delete a contact
 * `object_get_contact` - CRUD: Retrieve a contact
@@ -149,13 +147,13 @@ if res.common_response_type is not None:
 * `object_put_contact` - CRUD: Update a contact
 * `put_scrub_contact` - Scrub a contact
 
-### Credit Balance Adjustments
+### credit_balance_adjustments
 
 * `object_get_credit_balance_adjustment` - CRUD: Retrieve a credit balance adjustment
 * `object_post_credit_balance_adjustment` - CRUD: Create a credit balance adjustment
 * `object_put_credit_balance_adjustment` - CRUD: Update a credit balance adjustment
 
-### Credit Memos
+### credit_memos
 
 * `delete_credit_memo` - Delete a credit memo
 * `get_credit_memo` - Retrieve a credit memo
@@ -180,11 +178,11 @@ if res.common_response_type is not None:
 * `put_unpost_credit_memo` - Unpost a credit memo
 * `put_update_credit_memo` - Update a credit memo
 
-### Custom Exchange Rates
+### custom_exchange_rates
 
 * `get_custom_exchange_rates` - List custom exchange rates by currency
 
-### Custom Object Definitions
+### custom_object_definitions
 
 * `delete_custom_object_definition_by_type` - Delete a custom object definition
 * `get_all_custom_object_definitions_in_namespace` - List custom object definitions
@@ -192,7 +190,7 @@ if res.common_response_type is not None:
 * `post_custom_object_definitions` - Create custom object definitions
 * `post_update_custom_object_definition` - Update a custom object definition
 
-### Custom Object Jobs
+### custom_object_jobs
 
 * `get_all_custom_object_bulk_jobs` - List all custom object bulk jobs
 * `get_custom_object_bulk_job` - Retrieve a custom object bulk job
@@ -200,7 +198,7 @@ if res.common_response_type is not None:
 * `post_custom_object_bulk_job` - Submit a custom object bulk job
 * `post_upload_file_for_custom_object_bulk_job` - Upload a file for a custom object bulk job
 
-### Custom Object Records
+### custom_object_records
 
 * `delete_custom_object_record_by_id` - Delete a custom object record
 * `get_all_records_for_custom_object_type` - List records for a custom object
@@ -210,14 +208,14 @@ if res.common_response_type is not None:
 * `put_custom_object_record` - Update a custom object record
 * `patch_partial_update_custom_object_record` - Partially update a custom object record
 
-### Data Queries
+### data_queries
 
 * `delete_data_query_job` - Cancel a data query job
 * `get_data_query_job` - Retrieve a data query job
 * `get_data_query_jobs` - List data query jobs
 * `post_data_query_job` - Submit a data query
 
-### Debit Memos
+### debit_memos
 
 * `delete_debit_memo` - Delete a debit memo
 * `get_debit_memo` - Retrieve a debit memo
@@ -238,18 +236,18 @@ if res.common_response_type is not None:
 * `put_post_debit_memo` - Post a debit memo
 * `put_unpost_debit_memo` - Unpost a debit memo
 
-### Describe
+### describe
 
 * `get_describe` - Describe an object
 
-### Document Properties
+### document_properties
 
 * `delete_document_properties` - Delete document properties
 * `get_document_properies` - List all properties of a billing document
 * `post_document_properties` - Create document properties
 * `put_document_properties` - Update document properties
 
-### Entities
+### entities
 
 * `delete_entities` - Multi-entity: Delete an entity
 * `get_entities` - Multi-entity: List entities
@@ -258,7 +256,7 @@ if res.common_response_type is not None:
 * `put_entities` - Multi-entity: Update an entity
 * `put_provision_entity` - Multi-entity: Provision an entity
 
-### Entity Connections
+### entity_connections
 
 * `get_entity_connections` - Multi-entity: List connections
 * `post_entity_connections` - Multi-entity: Initiate a connection request
@@ -266,7 +264,7 @@ if res.common_response_type is not None:
 * `put_entity_connections_deny` - Multi-entity: Deny a connection request
 * `put_entity_connections_disconnect` - Multi-entity: Disconnect a connection
 
-### Event Triggers
+### event_triggers
 
 * `delete_event_trigger` - Delete an event trigger
 * `get_event_trigger` - Retrieve an event trigger
@@ -274,66 +272,66 @@ if res.common_response_type is not None:
 * `post_event_trigger` - Create an event trigger
 * `put_event_trigger` - Update an event trigger
 
-### Exports
+### exports
 
 * `object_get_export` - CRUD: Retrieve an export
 * `object_post_export` - CRUD: Create an export
 
-### Features
+### features
 
 * `object_delete_feature` - CRUD: Delete a feature
 * `object_get_feature` - CRUD: Retrieve a feature
 * `object_post_feature` - CRUD: Create a feature
 * `object_put_feature` - CRUD: Update a feature
 
-### Files
+### files
 
 * `get_files` - Retrieve a file
 
-### HMAC Signatures
+### hmac_signatures
 
 * `post_hmac_signatures` - Generate an HMAC signature
 
-### Hosted Pages
+### hosted_pages
 
 * `get_hosted_pages` - List hosted pages
 
-### Imports
+### imports
 
 * `object_get_import` - CRUD: Retrieve an import
 * `object_post_import` - CRUD: Create an import
 
-### Invoice Adjustments
+### invoice_adjustments
 
 * `object_delete_invoice_adjustment` - CRUD: Delete an invoice adjustment
 * `object_get_invoice_adjustment` - CRUD: Retrieve an invoice adjustment
 * `object_post_invoice_adjustment` - CRUD: Create an invoice adjustment
 * `object_put_invoice_adjustment` - CRUD: Update an invoice adjustment
 
-### Invoice Item Adjustments
+### invoice_item_adjustments
 
 * `object_delete_invoice_item_adjustment` - CRUD: Delete an invoice item adjustment
 * `object_get_invoice_item_adjustment` - CRUD: Retrieve an invoice item adjustment
 
-### Invoice Items
+### invoice_items
 
 * `object_get_invoice_item` - CRUD: Retrieve an invoice item
 
-### Invoice Payments
+### invoice_payments
 
 * `object_get_invoice_payment` - CRUD: Retrieve an invoice payment
 * `object_post_invoice_payment` - CRUD: Create an invoice payment
 * `object_put_invoice_payment` - CRUD: Update an invoice payment
 
-### Invoice Split Items
+### invoice_split_items
 
 * `object_get_invoice_split_item` - CRUD: Retrieve an invoice split item
 
-### Invoice Splits
+### invoice_splits
 
 * `object_get_invoice_split` - CRUD: Retrieve an invoice split
 
-### Invoices
+### invoices
 
 * `get_invoice_application_parts` - List all application parts of an invoice
 * `get_invoice_files` - List all files of an invoice
@@ -352,20 +350,20 @@ if res.common_response_type is not None:
 * `put_update_invoice` - Update an invoice
 * `put_write_off_invoice` - Write off an invoice
 
-### Journal Runs
+### journal_runs
 
 * `delete_journal_run` - Delete a journal run
 * `get_journal_run` - Retrieve a journal run
 * `post_journal_run` - Create a journal run
 * `put_journal_run` - Cancel a journal run
 
-### Mass Updater
+### mass_updater
 
 * `get_mass_updater` - List all results of a mass action
 * `post_mass_updater` - Perform a mass action
 * `put_mass_updater` - Stop a mass action
 
-### Notifications
+### notifications
 
 * `delete_delete_email_template` - Delete an email template
 * `delete_delete_notification_definition` - Delete a notification definition
@@ -382,22 +380,22 @@ if res.common_response_type is not None:
 * `put_update_email_template` - Update an email template
 * `put_update_notification_definition` - Update a notification definition
 
-### OAuth
+### o_auth
 
 * `create_token` - Create an OAuth token
 
-### Operations
+### operations
 
 * `post_billing_preview` - Generate a billing preview
 * `post_transaction_invoice_payment` - Invoice and collect
 
-### Order Line Items
+### order_line_items
 
 * `get_order_line_item` - Retrieve an order line item
 * `put_order_line_item` - Update an order line item
 * `post_order_line_items` - Update order line items
 
-### Orders
+### orders
 
 * `delete_order` - Delete an order
 * `get_all_orders` - List orders
@@ -416,26 +414,26 @@ if res.common_response_type is not None:
 * `put_update_order_custom_fields` - Update order custom fields
 * `put_update_subscription_custom_fields` - Update subscription custom fields
 
-### Payment Gateway Reconciliation
+### payment_gateway_reconciliation
 
 * `post_reconcile_refund` - Reconcile a refund
 * `post_reject_payment` - Reject a payment
 * `post_reverse_payment` - Reverse a payment
 * `post_settle_payment` - Settle a payment
 
-### Payment Gateways
+### payment_gateways
 
 * `get_paymentgateways` - List all payment gateways
 
-### Payment Method Snapshots
+### payment_method_snapshots
 
 * `object_get_payment_method_snapshot` - CRUD: Retrieve a payment method snapshot
 
-### Payment Method Transaction Logs
+### payment_method_transaction_logs
 
 * `object_get_payment_method_transaction_log` - CRUD: Retrieve a payment method transaction log
 
-### Payment Methods
+### payment_methods
 
 * `delete_payment_methods` - Delete a payment method
 * `get_payment_method` - Retrieve a payment method
@@ -458,7 +456,7 @@ if res.common_response_type is not None:
 * `put_scrub_payment_methods` - Scrub a payment method
 * `put_verify_payment_methods` - Verify a payment method
 
-### Payment Runs
+### payment_runs
 
 * `delete_payment_run` - Delete a payment run
 * `get_payment_run` - Retrieve a payment run
@@ -468,11 +466,11 @@ if res.common_response_type is not None:
 * `post_payment_run` - Create a payment run
 * `put_payment_run` - Update a payment run
 
-### Payment Transaction Logs
+### payment_transaction_logs
 
 * `object_get_payment_transaction_log` - CRUD: Retrieve a payment transaction log
 
-### Payments
+### payments
 
 * `delete_payment` - Delete a payment
 * `get_payment` - Retrieve a payment
@@ -493,24 +491,24 @@ if res.common_response_type is not None:
 * `put_unapply_payment` - Unapply a payment
 * `put_update_payment` - Update a payment
 
-### Product Features
+### product_features
 
 * `object_delete_product_feature` - CRUD: Delete a product feature
 * `object_get_product_feature` - CRUD: Retrieve a product feature
 
-### Product Rate Plan Charge Tiers
+### product_rate_plan_charge_tiers
 
 * `object_get_product_rate_plan_charge_tier` - CRUD: Retrieve a product rate plan charge tier
 * `object_put_product_rate_plan_charge_tier` - CRUD: Update a product rate plan charge tier
 
-### Product Rate Plan Charges
+### product_rate_plan_charges
 
 * `object_delete_product_rate_plan_charge` - CRUD: Delete a product rate plan charge
 * `object_get_product_rate_plan_charge` - CRUD: Retrieve a product rate plan charge
 * `object_post_product_rate_plan_charge` - CRUD: Create a product rate plan charge
 * `object_put_product_rate_plan_charge` - CRUD: Update a product rate plan charge
 
-### Product Rate Plans
+### product_rate_plans
 
 * `get_product_rate_plans` - List all product rate plans of a product
 * `object_delete_product_rate_plan` - CRUD: Delete a product rate plan
@@ -518,23 +516,23 @@ if res.common_response_type is not None:
 * `object_post_product_rate_plan` - CRUD: Create a product rate plan
 * `object_put_product_rate_plan` - CRUD: Update a product rate plan
 
-### Products
+### products
 
 * `object_delete_product` - CRUD: Delete a product
 * `object_get_product` - CRUD: Retrieve a product
 * `object_post_product` - CRUD: Create a product
 * `object_put_product` - CRUD: Update a product
 
-### Quotes Document
+### quotes_document
 
 * `post_quotes_document` - Generate a quote document
 
-### RSA Signatures
+### rsa_signatures
 
 * `post_decrypt_rsa_signatures` - Decrypt an RSA signature
 * `post_rsa_signatures` - Generate an RSA signature
 
-### Ramps
+### ramps
 
 * `get_ramp_by_ramp_number` - Retrieve a ramp
 * `get_ramp_metrics_by_order_number` - List ramp metrics by order number
@@ -542,28 +540,28 @@ if res.common_response_type is not None:
 * `get_ramp_metrics_by_subscription_key` - List ramp metrics by subscription key
 * `get_ramps_by_subscription_key` - Retrieve a ramp by subscription key
 
-### Rate Plan Charge Tiers
+### rate_plan_charge_tiers
 
 * `object_get_rate_plan_charge_tier` - CRUD: Retrieve a rate plan charge tier
 
-### Rate Plan Charges
+### rate_plan_charges
 
 * `object_get_rate_plan_charge` - CRUD: Retrieve a rate plan charge
 * `object_put_rate_plan_charge` - CRUD: Update a rate plan charge
 
-### Rate Plans
+### rate_plans
 
 * `object_get_rate_plan` - CRUD: Retrieve a rate plan
 
-### Refund Invoice Payments
+### refund_invoice_payments
 
 * `object_get_refund_invoice_payment` - CRUD: Retrieve a refund invoice payment
 
-### Refund Transaction Logs
+### refund_transaction_logs
 
 * `object_get_refund_transaction_log` - CRUD: Retrieve a refund transaction log
 
-### Refunds
+### refunds
 
 * `delete_refund` - Delete a refund
 * `get_refund` - Retrieve a refund
@@ -579,12 +577,12 @@ if res.common_response_type is not None:
 * `put_cancel_refund` - Cancel a refund
 * `put_update_refund` - Update a refund
 
-### Revenue Events
+### revenue_events
 
 * `get_revenue_event_details` - Retrieve a revenue event
 * `get_revenue_event_for_revenue_schedule` - List all revenue events of a revenue schedule
 
-### Revenue Items
+### revenue_items
 
 * `get_revenue_items_by_charge_revenue_event_number` - List revenue items by revenue event number
 * `get_revenue_items_by_charge_revenue_summary_number` - List revenue items by charge revenue summary number
@@ -592,13 +590,13 @@ if res.common_response_type is not None:
 * `put_custom_fieldson_revenue_items_by_revenue_event` - Update custom fields on revenue items by revenue event number
 * `put_custom_fieldson_revenue_items_by_revenue_schedule` - Update custom fields on revenue items by revenue schedule number
 
-### Revenue Rules
+### revenue_rules
 
 * `get_revenue_automation_start_date` - Retrieve a revenue automation start date
 * `get_revenue_rec_ruleby_product_rate_plan_charge` - Retrieve a revenue recognition rule by product rate plan charge ID
 * `get_revenue_rec_rules` - Retrieve a revenue recognition rule by subscription charge ID
 
-### Revenue Schedules
+### revenue_schedules
 
 * `delete_rs` - Delete a revenue schedule
 * `get_rs` - List all details of a revenue schedule
@@ -629,7 +627,7 @@ if res.common_response_type is not None:
 * `put_revenue_by_recognition_startand_end_dates` - Distribute revenue in a recognition period
 * `put_revenue_specific_date` - Distribute revenue on a specific date
 
-### Sequence Sets
+### sequence_sets
 
 * `delete_sequence_set` - Delete a sequence set
 * `get_sequence_set` - Retrieve a sequence set
@@ -637,16 +635,16 @@ if res.common_response_type is not None:
 * `post_sequence_sets` - Create sequence sets
 * `put_sequence_set` - Update a sequence set
 
-### Settings
+### settings
 
 * `get_list_all_settings` - List all settings
 * `post_process_settings_batch_request` - Submit settings requests
 
-### Subscription Product Features
+### subscription_product_features
 
 * `object_get_subscription_product_feature` - CRUD: Retrieve a subscription product feature
 
-### Subscriptions
+### subscriptions
 
 * `get_subscriptions_by_account` - List subscriptions by account key
 * `get_subscriptions_by_key` - Retrieve a subscription by key
@@ -663,7 +661,7 @@ if res.common_response_type is not None:
 * `put_suspend_subscription` - Suspend a subscription
 * `put_update_subscription_custom_fields_of_a_specified_version` - Update subscription custom fields of a subscription version
 
-### Summary Journal Entries
+### summary_journal_entries
 
 * `delete_summary_journal_entry` - Delete a summary journal entry
 * `get_all_summary_journal_entries` - List all summary journal entries in a journal run
@@ -672,7 +670,7 @@ if res.common_response_type is not None:
 * `put_basic_summary_journal_entry` - Update a summary journal entry
 * `put_summary_journal_entry` - Cancel a summary journal entry
 
-### Taxation Items
+### taxation_items
 
 * `delete_taxation_item` - Delete a taxation item
 * `get_taxation_item` - Retrieve a taxation item
@@ -683,19 +681,19 @@ if res.common_response_type is not None:
 * `object_put_taxation_item` - CRUD: Update a taxation item
 * `put_taxation_item` - Update a taxation item
 
-### Transactions
+### transactions
 
 * `get_transaction_invoice` - List all invoices for an account
 * `get_transaction_payment` - List all payments for an account
 
-### Unit Of Measure
+### unit_of_measure
 
 * `object_delete_unit_of_measure` - CRUD: Delete a unit of measure
 * `object_get_unit_of_measure` - CRUD: Retrieve a unit of measure
 * `object_post_unit_of_measure` - CRUD: Create a unit of measure
 * `object_put_unit_of_measure` - CRUD: Update a unit of measure
 
-### Usage
+### usage
 
 * `get_usage` - Retrieve a usage record
 * `object_delete_usage` - CRUD: Delete a usage record
@@ -704,14 +702,14 @@ if res.common_response_type is not None:
 * `object_put_usage` - CRUD: Update a usage record
 * `post_usage` - Upload a usage file
 
-### Users
+### users
 
 * `get_entities_user_accessible` - Multi-entity: List all entities that a user can access
 * `put_accept_user_access` - Multi-entity: Accept user access
 * `put_deny_user_access` - Multi-entity: Deny user access
 * `put_send_user_access_requests` - Multi-entity: Send user access requests
 
-### Workflows
+### workflows
 
 * `delete_workflow` - Delete a workflow
 * `get_workflow` - Retrieve a workflow
@@ -726,10 +724,20 @@ if res.common_response_type is not None:
 * `post_workflows_task_rerun` - Rerun a workflow task
 * `put_workflows_tasks_update` - Update workflow tasks
 
-### Zuora Revenue Integration
+### zuora_revenue_integration
 
 * `put_rev_pro_accounting_codes` - Update a Zuora Revenue accounting code
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

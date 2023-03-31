@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTaxesJSONQueryParams struct {
+type GetTaxesJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetTaxesJSONRequest struct {
-	QueryParams GetTaxesJSONQueryParams
 }
 
 type GetTaxesJSONResponse struct {

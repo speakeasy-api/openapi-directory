@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type GetSearchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetSearchQueryParams struct {
-	// Company name or stock symbol
-	Q string `queryParam:"style=form,explode=true,name=q"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=token"`
 }
 
 type GetSearchRequest struct {
-	QueryParams GetSearchQueryParams
-	Security    GetSearchSecurity
+	// Company name or stock symbol
+	Q string `queryParam:"style=form,explode=true,name=q"`
 }
 
 // GetSearch200ApplicationJSON - An array of ESG Ratings

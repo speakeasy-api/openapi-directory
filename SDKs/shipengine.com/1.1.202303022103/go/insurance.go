@@ -36,7 +36,7 @@ func newInsurance(defaultClient, securityClient HTTPClient, serverURL, language,
 // AddFundsToInsurance - Add Funds To Insurance
 // You may need to auto fund your account from time to time. For example, if you don't normally ship items over $100,
 // and may want to add funds to insurance rather than keeping the account funded.
-func (s *insurance) AddFundsToInsurance(ctx context.Context, request operations.AddFundsToInsuranceRequest) (*operations.AddFundsToInsuranceResponse, error) {
+func (s *insurance) AddFundsToInsurance(ctx context.Context, request shared.AddFundsToInsuranceRequestBody) (*operations.AddFundsToInsuranceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/insurance/shipsurance/add_funds"
 
@@ -103,7 +103,7 @@ func (s *insurance) AddFundsToInsurance(ctx context.Context, request operations.
 
 // ConnectInsurer - Connect a Shipsurance Account
 // Connect a Shipsurance Account
-func (s *insurance) ConnectInsurer(ctx context.Context, request operations.ConnectInsurerRequest) (*operations.ConnectInsurerResponse, error) {
+func (s *insurance) ConnectInsurer(ctx context.Context, request shared.ConnectInsurerRequestBody) (*operations.ConnectInsurerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/connections/insurance/shipsurance"
 

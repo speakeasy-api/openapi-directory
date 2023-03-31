@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETAnalyticsDataUsingGETPathParams struct {
-	// apiKey
-	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
 // GETAnalyticsDataUsingGETDataTypeEnum - dataType
 type GETAnalyticsDataUsingGETDataTypeEnum string
 
@@ -135,7 +130,9 @@ func (e *GETAnalyticsDataUsingGETStageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAnalyticsDataUsingGETQueryParams struct {
+type GETAnalyticsDataUsingGETRequest struct {
+	// apiKey
+	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// dataType
 	DataType GETAnalyticsDataUsingGETDataTypeEnum `queryParam:"style=form,explode=true,name=dataType"`
 	// yyyy-MM-dd
@@ -148,11 +145,6 @@ type GETAnalyticsDataUsingGETQueryParams struct {
 	Stage GETAnalyticsDataUsingGETStageEnum `queryParam:"style=form,explode=true,name=stage"`
 	// yyyy-MM-dd
 	StartDate types.Date `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GETAnalyticsDataUsingGETRequest struct {
-	PathParams  GETAnalyticsDataUsingGETPathParams
-	QueryParams GETAnalyticsDataUsingGETQueryParams
 }
 
 type GETAnalyticsDataUsingGETResponse struct {

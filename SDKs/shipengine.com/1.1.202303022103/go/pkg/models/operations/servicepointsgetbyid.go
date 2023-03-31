@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePointsGetByIDPathParams struct {
+type ServicePointsGetByIDRequest struct {
 	// Carrier code
 	CarrierCode string `pathParam:"style=simple,explode=false,name=carrier_code"`
 	// A two-letter [ISO 3166-1 country code](https://en.wikipedia.org/wiki/ISO_3166-1)
 	//
 	CountryCode    string `pathParam:"style=simple,explode=false,name=country_code"`
 	ServicePointID string `pathParam:"style=simple,explode=false,name=service_point_id"`
-}
-
-type ServicePointsGetByIDRequest struct {
-	PathParams ServicePointsGetByIDPathParams
 }
 
 type ServicePointsGetByIDResponse struct {

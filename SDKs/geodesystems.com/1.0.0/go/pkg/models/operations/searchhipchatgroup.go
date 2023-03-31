@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchHipchatGroupQueryParams struct {
+type SearchHipchatGroupRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchHipchatGroupQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchHipchatGroupRequest struct {
-	QueryParams SearchHipchatGroupQueryParams
 }
 
 type SearchHipchatGroupResponse struct {

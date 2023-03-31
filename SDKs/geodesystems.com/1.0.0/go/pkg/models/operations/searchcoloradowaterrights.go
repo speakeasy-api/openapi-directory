@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchColoradoWaterRightsQueryParams struct {
+type SearchColoradoWaterRightsRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -76,10 +76,6 @@ type SearchColoradoWaterRightsQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchColoradoWaterRightsRequest struct {
-	QueryParams SearchColoradoWaterRightsQueryParams
 }
 
 type SearchColoradoWaterRightsResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type ListImageCategoriesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type ListImageCategoriesQueryParams struct {
-	// Language for the keywords and categories in the response
-	Language *shared.LanguageEnum `queryParam:"style=form,explode=true,name=language"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ListImageCategoriesRequest struct {
-	QueryParams ListImageCategoriesQueryParams
-	Security    ListImageCategoriesSecurity
+	// Language for the keywords and categories in the response
+	Language *shared.LanguageEnum `queryParam:"style=form,explode=true,name=language"`
 }
 
 type ListImageCategoriesResponse struct {

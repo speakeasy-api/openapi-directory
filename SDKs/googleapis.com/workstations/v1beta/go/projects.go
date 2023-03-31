@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // WorkstationsProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) WorkstationsProjectsLocationsOperationsCancel(ctx context.Context, request operations.WorkstationsProjectsLocationsOperationsCancelRequest) (*operations.WorkstationsProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsOperationsCancel(ctx context.Context, request operations.WorkstationsProjectsLocationsOperationsCancelRequest, security operations.WorkstationsProjectsLocationsOperationsCancelSecurity) (*operations.WorkstationsProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) WorkstationsProjectsLocationsOperationsCancel(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) WorkstationsProjectsLocationsOperationsCancel(ctx context.Con
 }
 
 // WorkstationsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) WorkstationsProjectsLocationsOperationsList(ctx context.Context, request operations.WorkstationsProjectsLocationsOperationsListRequest) (*operations.WorkstationsProjectsLocationsOperationsListResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsOperationsList(ctx context.Context, request operations.WorkstationsProjectsLocationsOperationsListRequest, security operations.WorkstationsProjectsLocationsOperationsListSecurity) (*operations.WorkstationsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) WorkstationsProjectsLocationsOperationsList(ctx context.Conte
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersCreate - Creates a new workstation cluster.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersCreate(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersCreateRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersCreateResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersCreate(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersCreateRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersCreateSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationClusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationClusters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkstationClusterInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersCreate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersCreate(ctx co
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersList - Returns all workstation clusters in the specified location.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersList(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersListRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersListResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersList(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersListRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersListSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationClusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationClusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersList(ctx cont
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreate - Creates a new workstation configuration.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreate(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreate(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkstationConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsList - Returns all workstation configurations in the specified cluster.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsList(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsList(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsable - Returns all workstation configurations in the specified cluster on which the caller has the "workstations.workstation.create" permission.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsable(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsable(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationConfigs:listUsable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstationConfigs:listUsable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreate - Creates a new workstation.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreate(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreate(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkstationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDelete - Deletes the specified workstation.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDelete(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDelete(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,11 +492,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessToken - Returns a short-lived credential that can be used to send authenticated and authorized traffic to a workstation.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessToken(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessToken(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{workstation}:generateAccessToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{workstation}:generateAccessToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateAccessTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,11 +508,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,20 +547,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGet - Returns the requested workstation.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGet(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGet(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,20 +595,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicy(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicy(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicySecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -643,20 +643,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsList - Returns all Workstations using the specified config.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsList(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsList(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -691,20 +691,20 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsable - Returns all Workstations using the specified config on which the caller has the "workstations.workstations.use" permission.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsable(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsable(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstations:listUsable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workstations:listUsable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -739,11 +739,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatch - Updates an existing workstation.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatch(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatch(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkstationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -755,11 +755,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -794,11 +794,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicy(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicy(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicySecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -810,11 +810,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -849,11 +849,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStart - Starts running a workstation so that users can connect to it.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStart(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStart(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartWorkstationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -865,11 +865,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -904,11 +904,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStop - Stops running a workstation, reducing costs.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStop(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStop(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:stop", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StopWorkstationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -920,11 +920,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -959,11 +959,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 }
 
 // WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissions(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsRequest) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsResponse, error) {
+func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissions(ctx context.Context, request operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsRequest, security operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsSecurity) (*operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -975,11 +975,11 @@ func (s *projects) WorkstationsProjectsLocationsWorkstationClustersWorkstationCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

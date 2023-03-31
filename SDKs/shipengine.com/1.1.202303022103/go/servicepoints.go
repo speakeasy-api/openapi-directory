@@ -36,7 +36,7 @@ func newServicePoints(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns a carrier service point by using the service_point_id
 func (s *servicePoints) ServicePointsGetByID(ctx context.Context, request operations.ServicePointsGetByIDRequest) (*operations.ServicePointsGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/service_points/{carrier_code}/{country_code}/{service_point_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/service_points/{carrier_code}/{country_code}/{service_point_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *servicePoints) ServicePointsGetByID(ctx context.Context, request operat
 
 // ServicePointsList - List Service Points
 // List carrier service points by location
-func (s *servicePoints) ServicePointsList(ctx context.Context, request operations.ServicePointsListRequest) (*operations.ServicePointsListResponse, error) {
+func (s *servicePoints) ServicePointsList(ctx context.Context, request shared.GetServicePointsRequest) (*operations.ServicePointsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/service_points/list"
 

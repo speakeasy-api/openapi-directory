@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirestoreProjectsDatabasesDocumentsBatchGet - Gets multiple documents. Documents returned by this method are not guaranteed to be returned in the same order that they were requested.
-func (s *projects) FirestoreProjectsDatabasesDocumentsBatchGet(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBatchGetRequest) (*operations.FirestoreProjectsDatabasesDocumentsBatchGetResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsBatchGet(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBatchGetRequest, security operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurity) (*operations.FirestoreProjectsDatabasesDocumentsBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchGet", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchGetDocumentsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBatchGet(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBatchGet(ctx context.Conte
 }
 
 // FirestoreProjectsDatabasesDocumentsBatchWrite - Applies a batch of write operations. The BatchWrite method does not apply the write operations atomically and can apply them out of order. Method does not allow more than one write per document. Each write succeeds or fails independently. See the BatchWriteResponse for the success status of each write. If you require an atomically applied set of writes, use Commit instead.
-func (s *projects) FirestoreProjectsDatabasesDocumentsBatchWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBatchWriteRequest) (*operations.FirestoreProjectsDatabasesDocumentsBatchWriteResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsBatchWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBatchWriteRequest, security operations.FirestoreProjectsDatabasesDocumentsBatchWriteSecurity) (*operations.FirestoreProjectsDatabasesDocumentsBatchWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchWrite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchWrite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchWriteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBatchWrite(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBatchWrite(ctx context.Con
 }
 
 // FirestoreProjectsDatabasesDocumentsBeginTransaction - Starts a new transaction.
-func (s *projects) FirestoreProjectsDatabasesDocumentsBeginTransaction(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBeginTransactionRequest) (*operations.FirestoreProjectsDatabasesDocumentsBeginTransactionResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsBeginTransaction(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBeginTransactionRequest, security operations.FirestoreProjectsDatabasesDocumentsBeginTransactionSecurity) (*operations.FirestoreProjectsDatabasesDocumentsBeginTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:beginTransaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:beginTransaction", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BeginTransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBeginTransaction(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBeginTransaction(ctx conte
 }
 
 // FirestoreProjectsDatabasesDocumentsCommit - Commits a transaction, while optionally updating documents.
-func (s *projects) FirestoreProjectsDatabasesDocumentsCommit(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsCommitRequest) (*operations.FirestoreProjectsDatabasesDocumentsCommitResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsCommit(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsCommitRequest, security operations.FirestoreProjectsDatabasesDocumentsCommitSecurity) (*operations.FirestoreProjectsDatabasesDocumentsCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:commit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:commit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommitRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsCommit(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsCommit(ctx context.Context
 }
 
 // FirestoreProjectsDatabasesDocumentsCreateDocument - Creates a new document.
-func (s *projects) FirestoreProjectsDatabasesDocumentsCreateDocument(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsCreateDocumentRequest) (*operations.FirestoreProjectsDatabasesDocumentsCreateDocumentResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsCreateDocument(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsCreateDocumentRequest, security operations.FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity) (*operations.FirestoreProjectsDatabasesDocumentsCreateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Document", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,11 +268,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsCreateDocument(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,11 +307,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsCreateDocument(ctx context
 }
 
 // FirestoreProjectsDatabasesDocumentsListCollectionIds - Lists all the collection IDs underneath a document.
-func (s *projects) FirestoreProjectsDatabasesDocumentsListCollectionIds(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsRequest) (*operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsListCollectionIds(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsRequest, security operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsSecurity) (*operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:listCollectionIds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:listCollectionIds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListCollectionIdsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,11 +323,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListCollectionIds(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,20 +362,20 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListCollectionIds(ctx cont
 }
 
 // FirestoreProjectsDatabasesDocumentsListDocuments - Lists documents.
-func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListDocumentsRequest) (*operations.FirestoreProjectsDatabasesDocumentsListDocumentsResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListDocumentsRequest, security operations.FirestoreProjectsDatabasesDocumentsListDocumentsSecurity) (*operations.FirestoreProjectsDatabasesDocumentsListDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,11 +410,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.
 }
 
 // FirestoreProjectsDatabasesDocumentsListen - Listens to changes. This method is only available via gRPC or WebChannel (not REST).
-func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListenRequest) (*operations.FirestoreProjectsDatabasesDocumentsListenResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListenRequest, security operations.FirestoreProjectsDatabasesDocumentsListenSecurity) (*operations.FirestoreProjectsDatabasesDocumentsListenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:listen", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:listen", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -426,11 +426,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -465,11 +465,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context
 }
 
 // FirestoreProjectsDatabasesDocumentsPartitionQuery - Partitions a query by returning partition cursors that can be used to run the query in parallel. The returned partition cursors are split points that can be used by RunQuery as starting/end points for the query results.
-func (s *projects) FirestoreProjectsDatabasesDocumentsPartitionQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsPartitionQueryRequest) (*operations.FirestoreProjectsDatabasesDocumentsPartitionQueryResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsPartitionQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsPartitionQueryRequest, security operations.FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity) (*operations.FirestoreProjectsDatabasesDocumentsPartitionQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:partitionQuery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:partitionQuery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartitionQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -481,11 +481,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsPartitionQuery(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -520,11 +520,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsPartitionQuery(ctx context
 }
 
 // FirestoreProjectsDatabasesDocumentsPatch - Updates or inserts a document.
-func (s *projects) FirestoreProjectsDatabasesDocumentsPatch(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsPatchRequest) (*operations.FirestoreProjectsDatabasesDocumentsPatchResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsPatch(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsPatchRequest, security operations.FirestoreProjectsDatabasesDocumentsPatchSecurity) (*operations.FirestoreProjectsDatabasesDocumentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Document", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -536,11 +536,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -575,11 +575,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsPatch(ctx context.Context,
 }
 
 // FirestoreProjectsDatabasesDocumentsRollback - Rolls back a transaction.
-func (s *projects) FirestoreProjectsDatabasesDocumentsRollback(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRollbackRequest) (*operations.FirestoreProjectsDatabasesDocumentsRollbackResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsRollback(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRollbackRequest, security operations.FirestoreProjectsDatabasesDocumentsRollbackSecurity) (*operations.FirestoreProjectsDatabasesDocumentsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:rollback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:rollback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -591,11 +591,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRollback(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -630,11 +630,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRollback(ctx context.Conte
 }
 
 // FirestoreProjectsDatabasesDocumentsRunAggregationQuery - Runs an aggregation query. Rather than producing Document results like Firestore.RunQuery, this API allows running an aggregation to produce a series of AggregationResult server-side. High-Level Example: ``` -- Return the number of documents in table given a filter. SELECT COUNT(*) FROM ( SELECT * FROM k where a = true ); ```
-func (s *projects) FirestoreProjectsDatabasesDocumentsRunAggregationQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRunAggregationQueryRequest) (*operations.FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsRunAggregationQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRunAggregationQueryRequest, security operations.FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity) (*operations.FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runAggregationQuery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runAggregationQuery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunAggregationQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -646,11 +646,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunAggregationQuery(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -685,11 +685,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunAggregationQuery(ctx co
 }
 
 // FirestoreProjectsDatabasesDocumentsRunQuery - Runs a query.
-func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRunQueryRequest) (*operations.FirestoreProjectsDatabasesDocumentsRunQueryResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRunQueryRequest, security operations.FirestoreProjectsDatabasesDocumentsRunQuerySecurity) (*operations.FirestoreProjectsDatabasesDocumentsRunQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runQuery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runQuery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -701,11 +701,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -740,11 +740,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Conte
 }
 
 // FirestoreProjectsDatabasesDocumentsWrite - Streams batches of document updates and deletes, in order. This method is only available via gRPC or WebChannel (not REST).
-func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsWriteRequest) (*operations.FirestoreProjectsDatabasesDocumentsWriteResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsWriteRequest, security operations.FirestoreProjectsDatabasesDocumentsWriteSecurity) (*operations.FirestoreProjectsDatabasesDocumentsWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:write", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:write", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WriteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -756,11 +756,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -795,11 +795,11 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context,
 }
 
 // FirestoreProjectsDatabasesExportDocuments - Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
-func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesExportDocumentsRequest) (*operations.FirestoreProjectsDatabasesExportDocumentsResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesExportDocumentsRequest, security operations.FirestoreProjectsDatabasesExportDocumentsSecurity) (*operations.FirestoreProjectsDatabasesExportDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportDocuments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportDocuments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta1ExportDocumentsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -811,11 +811,11 @@ func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -850,11 +850,11 @@ func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context
 }
 
 // FirestoreProjectsDatabasesImportDocuments - Imports documents into Google Cloud Firestore. Existing documents with the same name are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Firestore.
-func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesImportDocumentsRequest) (*operations.FirestoreProjectsDatabasesImportDocumentsResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesImportDocumentsRequest, security operations.FirestoreProjectsDatabasesImportDocumentsSecurity) (*operations.FirestoreProjectsDatabasesImportDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importDocuments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importDocuments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta1ImportDocumentsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -866,11 +866,11 @@ func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -905,11 +905,11 @@ func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context
 }
 
 // FirestoreProjectsDatabasesIndexesCreate - Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single field cannot be created.
-func (s *projects) FirestoreProjectsDatabasesIndexesCreate(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesCreateRequest) (*operations.FirestoreProjectsDatabasesIndexesCreateResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesIndexesCreate(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesCreateRequest, security operations.FirestoreProjectsDatabasesIndexesCreateSecurity) (*operations.FirestoreProjectsDatabasesIndexesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta1Index", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -921,11 +921,11 @@ func (s *projects) FirestoreProjectsDatabasesIndexesCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -960,20 +960,20 @@ func (s *projects) FirestoreProjectsDatabasesIndexesCreate(ctx context.Context, 
 }
 
 // FirestoreProjectsDatabasesIndexesDelete - Deletes an index.
-func (s *projects) FirestoreProjectsDatabasesIndexesDelete(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesDeleteRequest) (*operations.FirestoreProjectsDatabasesIndexesDeleteResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesIndexesDelete(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesDeleteRequest, security operations.FirestoreProjectsDatabasesIndexesDeleteSecurity) (*operations.FirestoreProjectsDatabasesIndexesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1008,20 +1008,20 @@ func (s *projects) FirestoreProjectsDatabasesIndexesDelete(ctx context.Context, 
 }
 
 // FirestoreProjectsDatabasesIndexesGet - Gets an index.
-func (s *projects) FirestoreProjectsDatabasesIndexesGet(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesGetRequest) (*operations.FirestoreProjectsDatabasesIndexesGetResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesIndexesGet(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesGetRequest, security operations.FirestoreProjectsDatabasesIndexesGetSecurity) (*operations.FirestoreProjectsDatabasesIndexesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1056,20 +1056,20 @@ func (s *projects) FirestoreProjectsDatabasesIndexesGet(ctx context.Context, req
 }
 
 // FirestoreProjectsDatabasesIndexesList - Lists the indexes that match the specified filters.
-func (s *projects) FirestoreProjectsDatabasesIndexesList(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesListRequest) (*operations.FirestoreProjectsDatabasesIndexesListResponse, error) {
+func (s *projects) FirestoreProjectsDatabasesIndexesList(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesListRequest, security operations.FirestoreProjectsDatabasesIndexesListSecurity) (*operations.FirestoreProjectsDatabasesIndexesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

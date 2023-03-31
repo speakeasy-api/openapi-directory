@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeletePermissionAppsAppIDPathParams struct {
+type DeletePermissionAppsAppIDRequest struct {
 	// The id of the app
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type DeletePermissionAppsAppIDQueryParams struct {
 	// The id of the user
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type DeletePermissionAppsAppIDRequest struct {
-	PathParams  DeletePermissionAppsAppIDPathParams
-	QueryParams DeletePermissionAppsAppIDQueryParams
 }
 
 type DeletePermissionAppsAppIDResponse struct {

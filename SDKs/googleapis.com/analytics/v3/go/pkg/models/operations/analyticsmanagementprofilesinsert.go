@@ -8,18 +8,14 @@ import (
 )
 
 type AnalyticsManagementProfilesInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementProfilesInsertPathParams struct {
+type AnalyticsManagementProfilesInsertRequest struct {
+	ProfileInput *shared.ProfileInput `request:"mediaType=application/json"`
 	// Account ID to create the view (profile) for.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property ID to create the view (profile) for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementProfilesInsertQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,13 +30,8 @@ type AnalyticsManagementProfilesInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementProfilesInsertRequest struct {
-	PathParams  AnalyticsManagementProfilesInsertPathParams
-	QueryParams AnalyticsManagementProfilesInsertQueryParams
-	Request     *shared.ProfileInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementProfilesInsertSecurity
+	// Web property ID to create the view (profile) for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementProfilesInsertResponse struct {

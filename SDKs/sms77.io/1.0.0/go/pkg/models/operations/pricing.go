@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PricingQueryParams struct {
+type PricingRequest struct {
 	// The countries ISO code to get pricings for. Allowed values are de, fr, at. Omit to show pricings for all channels.
 	Country *string `queryParam:"style=form,explode=true,name=country"`
 	// Determines the response format. Allowed values are json and csv. The default value is json.
 	Format *string `queryParam:"style=form,explode=true,name=format"`
-}
-
-type PricingRequest struct {
-	QueryParams PricingQueryParams
 }
 
 type PricingResponse struct {

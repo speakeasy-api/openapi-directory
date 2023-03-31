@@ -12,12 +12,8 @@ var UpdateConfigurationAddressServerList = []string{
 }
 
 type UpdateConfigurationAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConfigurationAddressPathParams struct {
-	// The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConfigurationAddressUpdateConfigurationAddressRequest struct {
@@ -40,10 +36,9 @@ type UpdateConfigurationAddressUpdateConfigurationAddressRequest struct {
 }
 
 type UpdateConfigurationAddressRequest struct {
-	PathParams UpdateConfigurationAddressPathParams
-	Request    *UpdateConfigurationAddressUpdateConfigurationAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConfigurationAddressSecurity
-	ServerURL  *string
+	RequestBody *UpdateConfigurationAddressUpdateConfigurationAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConfigurationAddressResponse struct {

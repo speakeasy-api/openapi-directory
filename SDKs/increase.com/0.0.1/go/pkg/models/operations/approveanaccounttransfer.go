@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApproveAnAccountTransferPathParams struct {
-	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
-}
-
 type ApproveAnAccountTransferRequest struct {
-	PathParams ApproveAnAccountTransferPathParams
+	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
 }
 
 type ApproveAnAccountTransferDefaultApplicationJSON13StatusEnum string

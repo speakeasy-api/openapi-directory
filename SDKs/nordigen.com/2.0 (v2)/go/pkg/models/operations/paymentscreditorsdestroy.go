@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PaymentsCreditorsDestroyPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PaymentsCreditorsDestroyRequest struct {
-	PathParams PaymentsCreditorsDestroyPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PaymentsCreditorsDestroyResponse struct {

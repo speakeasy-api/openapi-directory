@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchRemoteServersIDPathParams struct {
-	// Remote Server ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchRemoteServersIDRequestBodyFilesAgentPermissionSetEnum - Local permissions for files agent. read_only, write_only, or read_write
 type PatchRemoteServersIDRequestBodyFilesAgentPermissionSetEnum string
 
@@ -303,8 +298,9 @@ type PatchRemoteServersIDRequestBody struct {
 }
 
 type PatchRemoteServersIDRequest struct {
-	PathParams PatchRemoteServersIDPathParams
-	Request    *PatchRemoteServersIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchRemoteServersIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Remote Server ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchRemoteServersIDResponse struct {

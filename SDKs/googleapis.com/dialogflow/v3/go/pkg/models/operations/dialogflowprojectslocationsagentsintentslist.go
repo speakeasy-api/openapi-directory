@@ -10,23 +10,18 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsIntentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsIntentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsIntentsListSecurity struct {
 	Option1 *DialogflowProjectsLocationsAgentsIntentsListSecurityOption1 `security:"option"`
 	Option2 *DialogflowProjectsLocationsAgentsIntentsListSecurityOption2 `security:"option"`
-}
-
-type DialogflowProjectsLocationsAgentsIntentsListPathParams struct {
-	// Required. The agent to list all intents for. Format: `projects//locations//agents/`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // DialogflowProjectsLocationsAgentsIntentsListIntentViewEnum - The resource view to apply to the returned intent.
@@ -56,7 +51,7 @@ func (e *DialogflowProjectsLocationsAgentsIntentsListIntentViewEnum) UnmarshalJS
 	}
 }
 
-type DialogflowProjectsLocationsAgentsIntentsListQueryParams struct {
+type DialogflowProjectsLocationsAgentsIntentsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -79,6 +74,8 @@ type DialogflowProjectsLocationsAgentsIntentsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The agent to list all intents for. Format: `projects//locations//agents/`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -87,12 +84,6 @@ type DialogflowProjectsLocationsAgentsIntentsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsIntentsListRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsIntentsListPathParams
-	QueryParams DialogflowProjectsLocationsAgentsIntentsListQueryParams
-	Security    DialogflowProjectsLocationsAgentsIntentsListSecurity
 }
 
 type DialogflowProjectsLocationsAgentsIntentsListResponse struct {

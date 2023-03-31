@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type PhoneUserRecordingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PhoneUserRecordingsPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PhoneUserRecordingsQueryParams struct {
+type PhoneUserRecordingsRequest struct {
 	// Start date for the query in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the response includes only one month worth of recording data. The month defined should fall within the last six months.
 	From *types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -26,12 +20,8 @@ type PhoneUserRecordingsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// End date.
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type PhoneUserRecordingsRequest struct {
-	PathParams  PhoneUserRecordingsPathParams
-	QueryParams PhoneUserRecordingsQueryParams
-	Security    PhoneUserRecordingsSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type PhoneUserRecordings200ApplicationXMLRecordings struct {

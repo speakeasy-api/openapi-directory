@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDSessionPostPathParams struct {
+type StoryIDSessionPostRequest struct {
+	// Collaborator user id and permission type
+	CreateSessionRequest shared.CreateSessionRequest `request:"mediaType=application/json"`
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDSessionPostRequest struct {
-	PathParams StoryIDSessionPostPathParams
-	// Collaborator user id and permission type
-	Request shared.CreateSessionRequest `request:"mediaType=application/json"`
 }
 
 type StoryIDSessionPostResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type GetFulfillmentPolicyByNameSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetFulfillmentPolicyByNameQueryParams struct {
+type GetFulfillmentPolicyByNameRequest struct {
 	// This query parameter specifies the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
 	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
 	// This query parameter specifies the seller-defined name of the fulfillment policy you want to retrieve.
 	Name string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetFulfillmentPolicyByNameRequest struct {
-	QueryParams GetFulfillmentPolicyByNameQueryParams
-	Security    GetFulfillmentPolicyByNameSecurity
 }
 
 type GetFulfillmentPolicyByNameResponse struct {

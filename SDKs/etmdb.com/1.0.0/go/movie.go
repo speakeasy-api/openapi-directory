@@ -42,7 +42,7 @@ func newMovie(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *movie) MovieSearchRead(ctx context.Context, request operations.MovieSearchReadRequest) (*operations.MovieSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/movie/search/{movie_title}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/movie/search/{movie_title}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

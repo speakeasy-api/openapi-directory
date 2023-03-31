@@ -38,12 +38,9 @@ func (e *FindTheRelativesOfAnEntityRelationEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type FindTheRelativesOfAnEntityPathParams struct {
-	// The type of relation to find.
-	Relation FindTheRelativesOfAnEntityRelationEnum `pathParam:"style=simple,explode=false,name=relation"`
-}
-
-type FindTheRelativesOfAnEntityQueryParams struct {
+type FindTheRelativesOfAnEntityRequest struct {
+	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
 	// The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
 	// used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
 	AppToken *string `queryParam:"style=form,explode=true,name=app_token"`
@@ -52,21 +49,12 @@ type FindTheRelativesOfAnEntityQueryParams struct {
 	// Maximum number of entities in each group.
 	// Must be an integer from 1 to 1000.
 	Limit *float64 `queryParam:"style=form,explode=true,name=limit"`
+	// The type of relation to find.
+	Relation FindTheRelativesOfAnEntityRelationEnum `pathParam:"style=simple,explode=false,name=relation"`
 	// If this parameter is included, only entities with data for the given
 	// variable will be returned. Note that this may cause the number of
 	// entities returned to be less than the specified `limit`.
 	VariableID *string `queryParam:"style=form,explode=true,name=variable_id"`
-}
-
-type FindTheRelativesOfAnEntityHeaders struct {
-	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
-	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
-}
-
-type FindTheRelativesOfAnEntityRequest struct {
-	PathParams  FindTheRelativesOfAnEntityPathParams
-	QueryParams FindTheRelativesOfAnEntityQueryParams
-	Headers     FindTheRelativesOfAnEntityHeaders
 }
 
 type FindTheRelativesOfAnEntityResponse struct {

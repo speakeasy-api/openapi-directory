@@ -105,7 +105,7 @@ func New(opts ...SDKOption) *SDK {
 // PremiumNews - Premium News
 func (s *SDK) PremiumNews(ctx context.Context, request operations.PremiumNewsRequest) (*operations.PremiumNewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNews", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNews", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *SDK) PremiumNews(ctx context.Context, request operations.PremiumNewsReq
 // PremiumNewsByDate - Premium News by Date
 func (s *SDK) PremiumNewsByDate(ctx context.Context, request operations.PremiumNewsByDateRequest) (*operations.PremiumNewsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +193,7 @@ func (s *SDK) PremiumNewsByDate(ctx context.Context, request operations.PremiumN
 // PremiumNewsByPlayer - Premium News by Player
 func (s *SDK) PremiumNewsByPlayer(ctx context.Context, request operations.PremiumNewsByPlayerRequest) (*operations.PremiumNewsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

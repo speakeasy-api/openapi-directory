@@ -39,7 +39,7 @@ func (e *FetchPatientPlanSummariesIncludeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type FetchPatientPlanSummariesQueryParams struct {
+type FetchPatientPlanSummariesRequest struct {
 	// Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
 	//
 	FilterGroups *string `queryParam:"style=form,explode=true,name=filter[groups]"`
@@ -51,10 +51,6 @@ type FetchPatientPlanSummariesQueryParams struct {
 	FilterPatient *string `queryParam:"style=form,explode=true,name=filter[patient]"`
 	// List of related resources to include in the response
 	Include *FetchPatientPlanSummariesIncludeEnum `queryParam:"style=form,explode=true,name=include"`
-}
-
-type FetchPatientPlanSummariesRequest struct {
-	QueryParams FetchPatientPlanSummariesQueryParams
 }
 
 type FetchPatientPlanSummariesResponse struct {

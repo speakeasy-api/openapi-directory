@@ -6,7 +6,3 @@ type SchemeBasic struct {
 	Password string `security:"name=password"`
 	Username string `security:"name=username"`
 }
-
-type SchemeCustomerAccessCode struct {
-	Authorization string `security:"name=Authorization"`
-}

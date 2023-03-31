@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFunctionGeneAssociationsPathParams struct {
-	// CURIE identifier of a GO term, e.g. GO:0044598
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetFunctionGeneAssociationsRelationshipTypeEnum - relationship type ('involved_in', 'involved_in_regulation_of' or 'acts_upstream_of_or_within')
 type GetFunctionGeneAssociationsRelationshipTypeEnum string
 
@@ -41,7 +36,7 @@ func (e *GetFunctionGeneAssociationsRelationshipTypeEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetFunctionGeneAssociationsQueryParams struct {
+type GetFunctionGeneAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Set true to exclude inferred taxa
@@ -56,6 +51,8 @@ type GetFunctionGeneAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of a GO term, e.g. GO:0044598
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Query string to filter documents
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// A relation CURIE to filter associations
@@ -76,11 +73,6 @@ type GetFunctionGeneAssociationsQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetFunctionGeneAssociationsRequest struct {
-	PathParams  GetFunctionGeneAssociationsPathParams
-	QueryParams GetFunctionGeneAssociationsQueryParams
 }
 
 type GetFunctionGeneAssociationsResponse struct {

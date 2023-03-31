@@ -8,10 +8,10 @@ import (
 )
 
 type GetAPIV1NotificationsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1NotificationsQueryParams struct {
+type GetAPIV1NotificationsRequest struct {
 	// Return only notifications received from this account
 	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
 	// Array of types to exclude (follow, favourite, reblog, mention, poll, follow_request)
@@ -24,11 +24,6 @@ type GetAPIV1NotificationsQueryParams struct {
 	MinID *string `queryParam:"style=form,explode=true,name=min_id"`
 	// Return results newer than ID
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1NotificationsRequest struct {
-	QueryParams GetAPIV1NotificationsQueryParams
-	Security    GetAPIV1NotificationsSecurity
 }
 
 type GetAPIV1NotificationsResponse struct {

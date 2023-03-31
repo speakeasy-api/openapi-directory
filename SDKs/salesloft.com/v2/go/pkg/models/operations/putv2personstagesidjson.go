@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type PutV2PersonStagesIDJSONPathParams struct {
-	// Stage ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2PersonStagesIDJSONRequestBody struct {
 	// The name of the stage.
 	Name string `form:"name=name"`
 }
 
 type PutV2PersonStagesIDJSONRequest struct {
-	PathParams PutV2PersonStagesIDJSONPathParams
-	Request    PutV2PersonStagesIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody PutV2PersonStagesIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Stage ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2PersonStagesIDJSONResponse struct {

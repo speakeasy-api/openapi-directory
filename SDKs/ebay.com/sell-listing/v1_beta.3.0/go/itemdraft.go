@@ -33,11 +33,11 @@ func newItemDraft(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // CreateItemDraft - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
-func (s *itemDraft) CreateItemDraft(ctx context.Context, request operations.CreateItemDraftRequest) (*operations.CreateItemDraftResponse, error) {
+func (s *itemDraft) CreateItemDraft(ctx context.Context, request operations.CreateItemDraftRequest, security operations.CreateItemDraftSecurity) (*operations.CreateItemDraftResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item_draft/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItemDraft", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,9 +49,9 @@ func (s *itemDraft) CreateItemDraft(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

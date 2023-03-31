@@ -10,13 +10,8 @@ import (
 )
 
 type Adexchangebuyer2AccountsCreativesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type Adexchangebuyer2AccountsCreativesCreatePathParams struct {
-	// The account that this creative belongs to. Can be used to filter the response of the creatives.list method.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum - Indicates if multiple creatives can share an ID or not. Default is NO_DUPLICATES (one ID per creative).
@@ -43,11 +38,14 @@ func (e *Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum) UnmarshalJS
 	}
 }
 
-type Adexchangebuyer2AccountsCreativesCreateQueryParams struct {
+type Adexchangebuyer2AccountsCreativesCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Creative    *shared.Creative  `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The account that this creative belongs to. Can be used to filter the response of the creatives.list method.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -68,13 +66,6 @@ type Adexchangebuyer2AccountsCreativesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsCreativesCreateRequest struct {
-	PathParams  Adexchangebuyer2AccountsCreativesCreatePathParams
-	QueryParams Adexchangebuyer2AccountsCreativesCreateQueryParams
-	Request     *shared.Creative `request:"mediaType=application/json"`
-	Security    Adexchangebuyer2AccountsCreativesCreateSecurity
 }
 
 type Adexchangebuyer2AccountsCreativesCreateResponse struct {

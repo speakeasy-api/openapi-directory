@@ -12,18 +12,13 @@ var FetchFleetServerList = []string{
 }
 
 type FetchFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchFleetPathParams struct {
-	// The SID of the Fleet resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchFleetRequest struct {
-	PathParams FetchFleetPathParams
-	Security   FetchFleetSecurity
-	ServerURL  *string
+	// The SID of the Fleet resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchFleetResponse struct {

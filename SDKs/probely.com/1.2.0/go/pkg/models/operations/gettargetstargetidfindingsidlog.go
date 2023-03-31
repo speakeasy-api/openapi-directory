@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDFindingsIDLogPathParams struct {
+type GetTargetsTargetIDFindingsIDLogRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDFindingsIDLogRequest struct {
-	PathParams GetTargetsTargetIDFindingsIDLogPathParams
 }
 
 // GetTargetsTargetIDFindingsIDLog404ApplicationJSON - Not found

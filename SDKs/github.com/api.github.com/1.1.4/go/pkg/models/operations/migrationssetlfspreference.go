@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsSetLfsPreferencePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // MigrationsSetLfsPreferenceRequestBodyUseLfsEnum - Whether to store large files during the import. `opt_in` means large files will be stored using Git LFS. `opt_out` means large files will be removed during the import.
 type MigrationsSetLfsPreferenceRequestBodyUseLfsEnum string
 
@@ -46,8 +39,11 @@ type MigrationsSetLfsPreferenceRequestBody struct {
 }
 
 type MigrationsSetLfsPreferenceRequest struct {
-	PathParams MigrationsSetLfsPreferencePathParams
-	Request    MigrationsSetLfsPreferenceRequestBody `request:"mediaType=application/json"`
+	RequestBody MigrationsSetLfsPreferenceRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type MigrationsSetLfsPreferenceResponse struct {

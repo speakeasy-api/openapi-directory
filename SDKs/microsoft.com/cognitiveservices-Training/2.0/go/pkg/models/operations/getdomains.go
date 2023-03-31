@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainsHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
 type GetDomainsRequest struct {
-	Headers GetDomainsHeaders
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 }
 
 type GetDomainsResponse struct {

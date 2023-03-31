@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadDocumentsRequest struct {
-	// Generated client invoices documents.
-	Request shared.DownloadDocumentsRequestDTO `request:"mediaType=application/json"`
-}
-
 type DownloadDocumentsResponse struct {
 	ContentType string
 	StatusCode  int

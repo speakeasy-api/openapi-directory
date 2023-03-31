@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TestnetGetAddressBalancePathParams struct {
+type TestnetGetAddressBalanceRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type TestnetGetAddressBalanceRequest struct {
-	PathParams TestnetGetAddressBalancePathParams
 }
 
 type TestnetGetAddressBalanceResponse struct {

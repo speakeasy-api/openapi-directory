@@ -8,16 +8,7 @@ import (
 )
 
 type SetVideoAsAlbumThumbnailSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SetVideoAsAlbumThumbnailPathParams struct {
-	// The ID of the album.
-	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SetVideoAsAlbumThumbnailRequestBody struct {
@@ -26,9 +17,13 @@ type SetVideoAsAlbumThumbnailRequestBody struct {
 }
 
 type SetVideoAsAlbumThumbnailRequest struct {
-	PathParams SetVideoAsAlbumThumbnailPathParams
-	Request    *SetVideoAsAlbumThumbnailRequestBody `request:"mediaType=application/json"`
-	Security   SetVideoAsAlbumThumbnailSecurity
+	RequestBody *SetVideoAsAlbumThumbnailRequestBody `request:"mediaType=application/json"`
+	// The ID of the album.
+	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type SetVideoAsAlbumThumbnailResponse struct {

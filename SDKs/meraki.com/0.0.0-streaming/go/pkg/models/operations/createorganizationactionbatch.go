@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationActionBatchPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationActionBatchRequestBodyActions struct {
 	// The body of the action
 	Body map[string]interface{} `json:"body,omitempty"`
@@ -29,8 +25,8 @@ type CreateOrganizationActionBatchRequestBody struct {
 }
 
 type CreateOrganizationActionBatchRequest struct {
-	PathParams CreateOrganizationActionBatchPathParams
-	Request    CreateOrganizationActionBatchRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationActionBatchRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                   `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationActionBatchResponse struct {

@@ -37,14 +37,14 @@ func newStrings(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Clear/delete continuous project translation cache.
 func (s *stringsT) ClearTranslationCache(ctx context.Context, request operations.ClearTranslationCacheRequest) (*operations.ClearTranslationCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/cached", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/cached", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,7 +86,7 @@ func (s *stringsT) ClearTranslationCache(ctx context.Context, request operations
 // View the strings from a document and their translations in your continuous translation project, for all target languages. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetContinuousProjectFileStrings(ctx context.Context, request operations.GetContinuousProjectFileStringsRequest) (*operations.GetContinuousProjectFileStringsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}/strings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}/strings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *stringsT) GetContinuousProjectFileStrings(ctx context.Context, request 
 // View the strings and their translations in your continuous translation project, for all target languages. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetContinuousProjectStrings(ctx context.Context, request operations.GetContinuousProjectStringsRequest) (*operations.GetContinuousProjectStringsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *stringsT) GetContinuousProjectStrings(ctx context.Context, request oper
 // View the strings and their translations in your translation project for the specified source document. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetDocumentTranslations(ctx context.Context, request operations.GetDocumentTranslationsRequest) (*operations.GetDocumentTranslationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *stringsT) GetDocumentTranslations(ctx context.Context, request operatio
 // View the strings and their translations in the given target language for the specified source document. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetDocumentTranslationsForLanguage(ctx context.Context, request operations.GetDocumentTranslationsForLanguageRequest) (*operations.GetDocumentTranslationsForLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -266,7 +266,7 @@ func (s *stringsT) GetDocumentTranslationsForLanguage(ctx context.Context, reque
 // View the strings and their translations in your translation project, for all target languages. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetProjectStrings(ctx context.Context, request operations.GetProjectStringsRequest) (*operations.GetProjectStringsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -311,7 +311,7 @@ func (s *stringsT) GetProjectStrings(ctx context.Context, request operations.Get
 // View the strings and their translations in your translation project for the specified target language. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetProjectStringsForLanguage(ctx context.Context, request operations.GetProjectStringsForLanguageRequest) (*operations.GetProjectStringsForLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,7 +355,7 @@ func (s *stringsT) GetProjectStringsForLanguage(ctx context.Context, request ope
 // GetProjectTranslations - Deprecated. Use /projects/{projectId}/strings instead.
 func (s *stringsT) GetProjectTranslations(ctx context.Context, request operations.GetProjectTranslationsRequest) (*operations.GetProjectTranslationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/translations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/translations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +399,7 @@ func (s *stringsT) GetProjectTranslations(ctx context.Context, request operation
 // GetProjectTranslationsForLanguage - Deprecated. use /projects/{projectId}/strings/{language} instead.
 func (s *stringsT) GetProjectTranslationsForLanguage(ctx context.Context, request operations.GetProjectTranslationsForLanguageRequest) (*operations.GetProjectTranslationsForLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/translations/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/translations/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -451,7 +451,7 @@ func (s *stringsT) GetStrings(ctx context.Context, request operations.GetStrings
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -493,14 +493,14 @@ func (s *stringsT) GetStrings(ctx context.Context, request operations.GetStrings
 // MotaWord caches your account intensively (and in a smart way) in real-time translation environments. This endpoint will return the currently cached strings and translations in your continuous translation project.
 func (s *stringsT) GetTranslationCache(ctx context.Context, request operations.GetTranslationCacheRequest) (*operations.GetTranslationCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/cached", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/cached", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -542,14 +542,14 @@ func (s *stringsT) GetTranslationCache(ctx context.Context, request operations.G
 // Package and download project translation memory in TMX format
 func (s *stringsT) PackageProjectTranslationMemory(ctx context.Context, request operations.PackageProjectTranslationMemoryRequest) (*operations.PackageProjectTranslationMemoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/package", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/package", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -598,14 +598,14 @@ func (s *stringsT) PackageProjectTranslationMemory(ctx context.Context, request 
 // Package and download project translation memory in TMX format for a specific target language.
 func (s *stringsT) PackageProjectTranslationMemoryForLanguage(ctx context.Context, request operations.PackageProjectTranslationMemoryForLanguageRequest) (*operations.PackageProjectTranslationMemoryForLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{languageCode}/package", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{languageCode}/package", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -654,14 +654,14 @@ func (s *stringsT) PackageProjectTranslationMemoryForLanguage(ctx context.Contex
 // Check translation memory packaging status for async packaging requests, using the key returned from strings/package call.
 func (s *stringsT) PackageProjectTranslationMemoryForLanguageStatus(ctx context.Context, request operations.PackageProjectTranslationMemoryForLanguageStatusRequest) (*operations.PackageProjectTranslationMemoryForLanguageStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{languageCode}/package/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{languageCode}/package/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -703,14 +703,14 @@ func (s *stringsT) PackageProjectTranslationMemoryForLanguageStatus(ctx context.
 // Check translation memory packaging status for async packaging requests, using the key returned from strings/package call.
 func (s *stringsT) PackageProjectTranslationMemoryStatus(ctx context.Context, request operations.PackageProjectTranslationMemoryStatusRequest) (*operations.PackageProjectTranslationMemoryStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/package/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/package/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -752,14 +752,14 @@ func (s *stringsT) PackageProjectTranslationMemoryStatus(ctx context.Context, re
 // Package and download account translation memory in TMX format. If you have the related permission, this will also download your company translation memory.
 func (s *stringsT) PackageUserTranslationMemory(ctx context.Context, request operations.PackageUserTranslationMemoryRequest) (*operations.PackageUserTranslationMemoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/strings/{languageCode}/package", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/strings/{languageCode}/package", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -808,14 +808,14 @@ func (s *stringsT) PackageUserTranslationMemory(ctx context.Context, request ope
 // Check translation memory packaging status for async packaging requests, using the key returned from strings/package call.
 func (s *stringsT) PackageUserTranslationMemoryForLanguageStatus(ctx context.Context, request operations.PackageUserTranslationMemoryForLanguageStatusRequest) (*operations.PackageUserTranslationMemoryForLanguageStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/strings/{languageCode}/package/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/strings/{languageCode}/package/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -856,9 +856,9 @@ func (s *stringsT) PackageUserTranslationMemoryForLanguageStatus(ctx context.Con
 // PostContinuousProjectFileStrings - Get a list of strings and its translations in the project.
 func (s *stringsT) PostContinuousProjectFileStrings(ctx context.Context, request operations.PostContinuousProjectFileStringsRequest) (*operations.PostContinuousProjectFileStringsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/strings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/strings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContinuousProjectDocumentStringsBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -906,7 +906,7 @@ func (s *stringsT) PostContinuousProjectFileStrings(ctx context.Context, request
 
 // PostStrings - Translate Strings with MT
 // Deprecated, use instant translation mechanism for continuous projects.
-func (s *stringsT) PostStrings(ctx context.Context, request operations.PostStringsRequest) (*operations.PostStringsResponse, error) {
+func (s *stringsT) PostStrings(ctx context.Context, request shared.DeprecatedStringTranslationContent) (*operations.PostStringsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/strings"
 
@@ -960,14 +960,14 @@ func (s *stringsT) PostStrings(ctx context.Context, request operations.PostStrin
 // Recache translations for the continuous project.
 func (s *stringsT) RecacheTranslations(ctx context.Context, request operations.RecacheTranslationsRequest) (*operations.RecacheTranslationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/recache-tms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/recache-tms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1007,7 +1007,7 @@ func (s *stringsT) RecacheTranslations(ctx context.Context, request operations.R
 
 // UpdateTranslationMemoryUnit - Update string translation
 // Update the translation of a string from your account strings/translation memory.
-func (s *stringsT) UpdateTranslationMemoryUnit(ctx context.Context, request operations.UpdateTranslationMemoryUnitRequest) (*operations.UpdateTranslationMemoryUnitResponse, error) {
+func (s *stringsT) UpdateTranslationMemoryUnit(ctx context.Context, request shared.TranslationMemoryUnit) (*operations.UpdateTranslationMemoryUnitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/strings"
 

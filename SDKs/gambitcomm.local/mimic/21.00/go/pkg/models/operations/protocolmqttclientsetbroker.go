@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetBrokerPathParams struct {
+type ProtocolMqttClientSetBrokerRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Broker address
 	BrokerAddr string `pathParam:"style=simple,explode=false,name=brokerAddr"`
-}
-
-type ProtocolMqttClientSetBrokerRequest struct {
-	PathParams ProtocolMqttClientSetBrokerPathParams
 }
 
 type ProtocolMqttClientSetBrokerResponse struct {

@@ -4,18 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugReportsSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetWorkspaceSlugReportsPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
-}
-
-type GetWorkspaceSlugReportsQueryParams struct {
+type GetWorkspaceSlugReportsRequest struct {
 	ActivityType *string `queryParam:"style=form,explode=true,name=activity_type"`
 	// Filter activities before this date. Format: YYYY-MM-DD.
 	EndDate    *string `queryParam:"style=form,explode=true,name=end_date"`
@@ -25,13 +20,8 @@ type GetWorkspaceSlugReportsQueryParams struct {
 	// Filter activities after this date. Format: YYYY-MM-DD.
 	StartDate *string `queryParam:"style=form,explode=true,name=start_date"`
 	// Deprecated in favor of the activity_type parameter.
-	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetWorkspaceSlugReportsRequest struct {
-	PathParams  GetWorkspaceSlugReportsPathParams
-	QueryParams GetWorkspaceSlugReportsQueryParams
-	Security    GetWorkspaceSlugReportsSecurity
+	Type          *string `queryParam:"style=form,explode=true,name=type"`
+	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugReportsResponse struct {

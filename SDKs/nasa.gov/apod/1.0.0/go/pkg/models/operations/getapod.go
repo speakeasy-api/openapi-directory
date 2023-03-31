@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetApodSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
-type GetApodQueryParams struct {
+type GetApodRequest struct {
 	// The date of the APOD image to retrieve
 	Date *string `queryParam:"style=form,explode=true,name=date"`
 	// Retrieve the URL for the high resolution image
 	Hd *bool `queryParam:"style=form,explode=true,name=hd"`
-}
-
-type GetApodRequest struct {
-	QueryParams GetApodQueryParams
-	Security    GetApodSecurity
 }
 
 type GetApodResponse struct {

@@ -12,20 +12,15 @@ var FetchAccessTokenServerList = []string{
 }
 
 type FetchAccessTokenSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchAccessTokenPathParams struct {
+type FetchAccessTokenRequest struct {
 	// The unique SID identifier of the Service.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// A 34 character string that uniquely identifies this Access Token.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchAccessTokenRequest struct {
-	PathParams FetchAccessTokenPathParams
-	Security   FetchAccessTokenSecurity
-	ServerURL  *string
 }
 
 type FetchAccessTokenResponse struct {

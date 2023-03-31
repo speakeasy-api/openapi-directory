@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFixedPricesonapricetablePathParams struct {
+type GetFixedPricesonapricetableRequest struct {
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// SKU ID.
 	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
 	// Price Table Name
 	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
-}
-
-type GetFixedPricesonapricetableHeaders struct {
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetFixedPricesonapricetableRequest struct {
-	PathParams GetFixedPricesonapricetablePathParams
-	Headers    GetFixedPricesonapricetableHeaders
 }
 
 type GetFixedPricesonapricetableResponse struct {

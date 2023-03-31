@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1LocationsIDGoogleServiceAccountPathParams struct {
+type PostSetupV1LocationsIDGoogleServiceAccountRequest struct {
+	// Generated Json Key file from Google
+	GoogleServiceAccountCreds *shared.GoogleServiceAccountCreds `request:"mediaType=application/json"`
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1LocationsIDGoogleServiceAccountRequest struct {
-	PathParams PostSetupV1LocationsIDGoogleServiceAccountPathParams
-	// Generated Json Key file from Google
-	Request *shared.GoogleServiceAccountCreds `request:"mediaType=application/json"`
 }
 
 type PostSetupV1LocationsIDGoogleServiceAccountResponse struct {

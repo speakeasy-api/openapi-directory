@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCountriesCountryCodeJSONPathParams struct {
-	// ISO3166 Country Code
-	CountryCode string `pathParam:"style=simple,explode=false,name=country_code"`
-}
-
-type GetCountriesCountryCodeJSONQueryParams struct {
+type GetCountriesCountryCodeJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// ISO3166 Country Code
+	CountryCode string `pathParam:"style=simple,explode=false,name=country_code"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCountriesCountryCodeJSONRequest struct {
-	PathParams  GetCountriesCountryCodeJSONPathParams
-	QueryParams GetCountriesCountryCodeJSONQueryParams
 }
 
 type GetCountriesCountryCodeJSONResponse struct {

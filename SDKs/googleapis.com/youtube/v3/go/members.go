@@ -33,7 +33,7 @@ func newMembers(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // YoutubeMembersList - Retrieves a list of members that match the request criteria for a channel.
-func (s *members) YoutubeMembersList(ctx context.Context, request operations.YoutubeMembersListRequest) (*operations.YoutubeMembersListResponse, error) {
+func (s *members) YoutubeMembersList(ctx context.Context, request operations.YoutubeMembersListRequest, security operations.YoutubeMembersListSecurity) (*operations.YoutubeMembersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/members"
 
@@ -42,11 +42,11 @@ func (s *members) YoutubeMembersList(ctx context.Context, request operations.You
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

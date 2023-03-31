@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteRealmUsersIDConsentsClientPathParams struct {
+type DeleteRealmUsersIDConsentsClientRequest struct {
 	// Client id
 	Client string `pathParam:"style=simple,explode=false,name=client"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmUsersIDConsentsClientRequest struct {
-	PathParams DeleteRealmUsersIDConsentsClientPathParams
 }
 
 type DeleteRealmUsersIDConsentsClientResponse struct {

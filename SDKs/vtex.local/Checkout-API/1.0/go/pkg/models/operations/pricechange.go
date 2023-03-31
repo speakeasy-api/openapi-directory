@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PriceChangePathParams struct {
+type PriceChangeRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType        string                    `header:"style=simple,explode=false,name=Content-Type"`
+	PriceChangeRequest shared.PriceChangeRequest `request:"mediaType=application/json"`
 	// The index of the item in the cart. Each cart item is identified by an index, starting in 0.
 	ItemIndex string `pathParam:"style=simple,explode=false,name=itemIndex"`
 	// ID of the orderForm corresponding to the cart whose items will have the price changed.
 	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type PriceChangeHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PriceChangeRequest struct {
-	PathParams PriceChangePathParams
-	Headers    PriceChangeHeaders
-	Request    shared.PriceChangeRequest `request:"mediaType=application/json"`
 }
 
 type PriceChangeResponse struct {

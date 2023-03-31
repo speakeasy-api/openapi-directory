@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBuyOrderJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostBuyOrderJSONRequest struct {
-	PathParams PostBuyOrderJSONPathParams
-	Request    *shared.OrderPO `request:"mediaType=application/json"`
+	OrderPO     *shared.OrderPO `request:"mediaType=application/json"`
+	ProjectID   string          `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID string          `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostBuyOrderJSONResponse struct {

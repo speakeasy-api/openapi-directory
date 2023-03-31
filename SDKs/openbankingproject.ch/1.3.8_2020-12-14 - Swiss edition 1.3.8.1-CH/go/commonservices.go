@@ -43,18 +43,18 @@ func newCommonServices(defaultClient, securityClient HTTPClient, serverURL, lang
 //
 // Remark: The signing basket as such is not deletable after a first (partial) authorisation has been applied.
 // Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
-func (s *commonServices) DeleteSigningBasket(ctx context.Context, request operations.DeleteSigningBasketRequest) (*operations.DeleteSigningBasketResponse, error) {
+func (s *commonServices) DeleteSigningBasket(ctx context.Context, request operations.DeleteSigningBasketRequest, security operations.DeleteSigningBasketSecurity) (*operations.DeleteSigningBasketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,18 +209,18 @@ func (s *commonServices) DeleteSigningBasket(ctx context.Context, request operat
 
 // GetConsentScaStatus - Read the SCA status of the consent authorisation
 // This method returns the SCA status of a consent initiation's authorisation sub-resource.
-func (s *commonServices) GetConsentScaStatus(ctx context.Context, request operations.GetConsentScaStatusRequest) (*operations.GetConsentScaStatusResponse, error) {
+func (s *commonServices) GetConsentScaStatus(ctx context.Context, request operations.GetConsentScaStatusRequest, security operations.GetConsentScaStatusSecurity) (*operations.GetConsentScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -419,18 +419,18 @@ func (s *commonServices) GetConsentScaStatus(ctx context.Context, request operat
 
 // GetPaymentCancellationScaStatus - Read the SCA status of the payment cancellation's authorisation
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
-func (s *commonServices) GetPaymentCancellationScaStatus(ctx context.Context, request operations.GetPaymentCancellationScaStatusRequest) (*operations.GetPaymentCancellationScaStatusResponse, error) {
+func (s *commonServices) GetPaymentCancellationScaStatus(ctx context.Context, request operations.GetPaymentCancellationScaStatusRequest, security operations.GetPaymentCancellationScaStatusSecurity) (*operations.GetPaymentCancellationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -597,18 +597,18 @@ func (s *commonServices) GetPaymentCancellationScaStatus(ctx context.Context, re
 // Read a list of all authorisation subresources IDs which have been created.
 //
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
-func (s *commonServices) GetPaymentInitiationAuthorisation(ctx context.Context, request operations.GetPaymentInitiationAuthorisationRequest) (*operations.GetPaymentInitiationAuthorisationResponse, error) {
+func (s *commonServices) GetPaymentInitiationAuthorisation(ctx context.Context, request operations.GetPaymentInitiationAuthorisationRequest, security operations.GetPaymentInitiationAuthorisationSecurity) (*operations.GetPaymentInitiationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -773,18 +773,18 @@ func (s *commonServices) GetPaymentInitiationAuthorisation(ctx context.Context, 
 
 // GetPaymentInitiationScaStatus - Read the SCA status of the payment authorisation
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
-func (s *commonServices) GetPaymentInitiationScaStatus(ctx context.Context, request operations.GetPaymentInitiationScaStatusRequest) (*operations.GetPaymentInitiationScaStatusResponse, error) {
+func (s *commonServices) GetPaymentInitiationScaStatus(ctx context.Context, request operations.GetPaymentInitiationScaStatusRequest, security operations.GetPaymentInitiationScaStatusSecurity) (*operations.GetPaymentInitiationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -951,18 +951,18 @@ func (s *commonServices) GetPaymentInitiationScaStatus(ctx context.Context, requ
 // Read a list of all authorisation subresources IDs which have been created.
 //
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
-func (s *commonServices) GetSigningBasketAuthorisation(ctx context.Context, request operations.GetSigningBasketAuthorisationRequest) (*operations.GetSigningBasketAuthorisationResponse, error) {
+func (s *commonServices) GetSigningBasketAuthorisation(ctx context.Context, request operations.GetSigningBasketAuthorisationRequest, security operations.GetSigningBasketAuthorisationSecurity) (*operations.GetSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1127,18 +1127,18 @@ func (s *commonServices) GetSigningBasketAuthorisation(ctx context.Context, requ
 
 // GetSigningBasketScaStatus - Read the SCA status of the signing basket authorisation
 // This method returns the SCA status of a signing basket's authorisation sub-resource.
-func (s *commonServices) GetSigningBasketScaStatus(ctx context.Context, request operations.GetSigningBasketScaStatusRequest) (*operations.GetSigningBasketScaStatusResponse, error) {
+func (s *commonServices) GetSigningBasketScaStatus(ctx context.Context, request operations.GetSigningBasketScaStatusRequest, security operations.GetSigningBasketScaStatusSecurity) (*operations.GetSigningBasketScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1303,18 +1303,18 @@ func (s *commonServices) GetSigningBasketScaStatus(ctx context.Context, request 
 
 // GetSigningBasketStatus - Read the status of the signing basket
 // Returns the status of a signing basket object.
-func (s *commonServices) GetSigningBasketStatus(ctx context.Context, request operations.GetSigningBasketStatusRequest) (*operations.GetSigningBasketStatusResponse, error) {
+func (s *commonServices) GetSigningBasketStatus(ctx context.Context, request operations.GetSigningBasketStatusRequest, security operations.GetSigningBasketStatusSecurity) (*operations.GetSigningBasketStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1510,11 +1510,11 @@ func (s *commonServices) GetSigningBasketStatus(ctx context.Context, request ope
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *commonServices) StartConsentAuthorisation(ctx context.Context, request operations.StartConsentAuthorisationRequest) (*operations.StartConsentAuthorisationResponse, error) {
+func (s *commonServices) StartConsentAuthorisation(ctx context.Context, request operations.StartConsentAuthorisationRequest, security operations.StartConsentAuthorisationSecurity) (*operations.StartConsentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1526,9 +1526,9 @@ func (s *commonServices) StartConsentAuthorisation(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1759,11 +1759,11 @@ func (s *commonServices) StartConsentAuthorisation(ctx context.Context, request 
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *commonServices) StartPaymentAuthorisation(ctx context.Context, request operations.StartPaymentAuthorisationRequest) (*operations.StartPaymentAuthorisationResponse, error) {
+func (s *commonServices) StartPaymentAuthorisation(ctx context.Context, request operations.StartPaymentAuthorisationRequest, security operations.StartPaymentAuthorisationSecurity) (*operations.StartPaymentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1775,9 +1775,9 @@ func (s *commonServices) StartPaymentAuthorisation(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1973,11 +1973,11 @@ func (s *commonServices) StartPaymentAuthorisation(ctx context.Context, request 
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *commonServices) StartPaymentInitiationCancellationAuthorisation(ctx context.Context, request operations.StartPaymentInitiationCancellationAuthorisationRequest) (*operations.StartPaymentInitiationCancellationAuthorisationResponse, error) {
+func (s *commonServices) StartPaymentInitiationCancellationAuthorisation(ctx context.Context, request operations.StartPaymentInitiationCancellationAuthorisationRequest, security operations.StartPaymentInitiationCancellationAuthorisationSecurity) (*operations.StartPaymentInitiationCancellationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1989,9 +1989,9 @@ func (s *commonServices) StartPaymentInitiationCancellationAuthorisation(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2188,11 +2188,11 @@ func (s *commonServices) StartPaymentInitiationCancellationAuthorisation(ctx con
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *commonServices) StartSigningBasketAuthorisation(ctx context.Context, request operations.StartSigningBasketAuthorisationRequest) (*operations.StartSigningBasketAuthorisationResponse, error) {
+func (s *commonServices) StartSigningBasketAuthorisation(ctx context.Context, request operations.StartSigningBasketAuthorisationRequest, security operations.StartSigningBasketAuthorisationSecurity) (*operations.StartSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2204,9 +2204,9 @@ func (s *commonServices) StartSigningBasketAuthorisation(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2408,11 +2408,11 @@ func (s *commonServices) StartSigningBasketAuthorisation(ctx context.Context, re
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *commonServices) UpdateConsentsPsuData(ctx context.Context, request operations.UpdateConsentsPsuDataRequest) (*operations.UpdateConsentsPsuDataResponse, error) {
+func (s *commonServices) UpdateConsentsPsuData(ctx context.Context, request operations.UpdateConsentsPsuDataRequest, security operations.UpdateConsentsPsuDataSecurity) (*operations.UpdateConsentsPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2424,9 +2424,9 @@ func (s *commonServices) UpdateConsentsPsuData(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2662,11 +2662,11 @@ func (s *commonServices) UpdateConsentsPsuData(ctx context.Context, request oper
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *commonServices) UpdatePaymentCancellationPsuData(ctx context.Context, request operations.UpdatePaymentCancellationPsuDataRequest) (*operations.UpdatePaymentCancellationPsuDataResponse, error) {
+func (s *commonServices) UpdatePaymentCancellationPsuData(ctx context.Context, request operations.UpdatePaymentCancellationPsuDataRequest, security operations.UpdatePaymentCancellationPsuDataSecurity) (*operations.UpdatePaymentCancellationPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2678,9 +2678,9 @@ func (s *commonServices) UpdatePaymentCancellationPsuData(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2882,11 +2882,11 @@ func (s *commonServices) UpdatePaymentCancellationPsuData(ctx context.Context, r
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *commonServices) UpdatePaymentPsuData(ctx context.Context, request operations.UpdatePaymentPsuDataRequest) (*operations.UpdatePaymentPsuDataResponse, error) {
+func (s *commonServices) UpdatePaymentPsuData(ctx context.Context, request operations.UpdatePaymentPsuDataRequest, security operations.UpdatePaymentPsuDataSecurity) (*operations.UpdatePaymentPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2898,9 +2898,9 @@ func (s *commonServices) UpdatePaymentPsuData(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3102,11 +3102,11 @@ func (s *commonServices) UpdatePaymentPsuData(ctx context.Context, request opera
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *commonServices) UpdateSigningBasketPsuData(ctx context.Context, request operations.UpdateSigningBasketPsuDataRequest) (*operations.UpdateSigningBasketPsuDataResponse, error) {
+func (s *commonServices) UpdateSigningBasketPsuData(ctx context.Context, request operations.UpdateSigningBasketPsuDataRequest, security operations.UpdateSigningBasketPsuDataSecurity) (*operations.UpdateSigningBasketPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3118,9 +3118,9 @@ func (s *commonServices) UpdateSigningBasketPsuData(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

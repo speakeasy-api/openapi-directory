@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewsPathParams struct {
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type NewsRequest struct {
-	PathParams NewsPathParams
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 }
 
 type News200ApplicationJSONEntries struct {

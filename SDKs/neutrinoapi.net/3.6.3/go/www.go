@@ -34,7 +34,7 @@ func newWww(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 
 // BrowserBot - Browser Bot
 // Browser bot can extract content, interact with keyboard and mouse events, and execute JavaScript on a website
-func (s *www) BrowserBot(ctx context.Context, request operations.BrowserBotRequest) (*operations.BrowserBotResponse, error) {
+func (s *www) BrowserBot(ctx context.Context, request operations.BrowserBotRequestBody) (*operations.BrowserBotResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/browser-bot"
 
@@ -105,7 +105,7 @@ func (s *www) BrowserBot(ctx context.Context, request operations.BrowserBotReque
 
 // HTMLClean - HTML Clean
 // Clean and sanitize untrusted HTML
-func (s *www) HTMLClean(ctx context.Context, request operations.HTMLCleanRequest) (*operations.HTMLCleanResponse, error) {
+func (s *www) HTMLClean(ctx context.Context, request operations.HTMLCleanRequestBody) (*operations.HTMLCleanResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/html-clean"
 
@@ -185,7 +185,7 @@ func (s *www) URLInfo(ctx context.Context, request operations.URLInfoRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

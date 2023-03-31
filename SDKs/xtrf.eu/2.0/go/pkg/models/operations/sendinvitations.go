@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendInvitationsPathParams struct {
+type SendInvitationsRequest struct {
 	// person's internal identifier
 	PersonID int64 `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type SendInvitationsRequest struct {
-	PathParams SendInvitationsPathParams
 }
 
 type SendInvitationsResponse struct {

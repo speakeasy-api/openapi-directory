@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetAuditLogPathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminGetAuditLogQueryParams struct {
+type EnterpriseAdminGetAuditLogRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor.
 	Before *string `queryParam:"style=form,explode=true,name=before"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// The event types to include:
 	//
 	// - `web` - returns web (non-Git) events.
@@ -35,11 +32,6 @@ type EnterpriseAdminGetAuditLogQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// A search phrase. For more information, see [Searching the audit log](https://docs.github.com/enterprise-cloud@latest//admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/searching-the-audit-log-for-your-enterprise#searching-the-audit-log).
 	Phrase *string `queryParam:"style=form,explode=true,name=phrase"`
-}
-
-type EnterpriseAdminGetAuditLogRequest struct {
-	PathParams  EnterpriseAdminGetAuditLogPathParams
-	QueryParams EnterpriseAdminGetAuditLogQueryParams
 }
 
 type EnterpriseAdminGetAuditLogResponse struct {

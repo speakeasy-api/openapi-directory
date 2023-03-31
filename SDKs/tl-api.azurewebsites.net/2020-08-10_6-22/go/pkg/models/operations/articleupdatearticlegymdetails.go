@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleUpdateArticleGymDetailsRequest struct {
-	Request []shared.GymArticleDetailsDTO `request:"mediaType=application/json"`
-}
-
 type ArticleUpdateArticleGymDetailsResponse struct {
 	APIResponse *shared.APIResponse
 	ContentType string

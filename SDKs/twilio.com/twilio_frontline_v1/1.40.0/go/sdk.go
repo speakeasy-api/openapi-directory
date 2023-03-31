@@ -92,20 +92,30 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // FetchUser - Fetch a frontline user
-func (s *SDK) FetchUser(ctx context.Context, request operations.FetchUserRequest) (*operations.FetchUserResponse, error) {
-	baseURL := operations.FetchUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchUser(ctx context.Context, request operations.FetchUserRequest, security operations.FetchUserSecurity, opts ...operations.Option) (*operations.FetchUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,15 +150,25 @@ func (s *SDK) FetchUser(ctx context.Context, request operations.FetchUserRequest
 }
 
 // UpdateUser - Update an existing frontline user
-func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
-	baseURL := operations.UpdateUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserRequest, security operations.UpdateUserSecurity, opts ...operations.Option) (*operations.UpdateUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -160,7 +180,7 @@ func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

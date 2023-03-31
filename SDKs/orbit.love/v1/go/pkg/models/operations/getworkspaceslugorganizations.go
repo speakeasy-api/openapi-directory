@@ -6,15 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugOrganizationsSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugOrganizationsPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetWorkspaceSlugOrganizationsDirectionEnum
@@ -98,18 +93,13 @@ func (e *GetWorkspaceSlugOrganizationsSortEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetWorkspaceSlugOrganizationsQueryParams struct {
-	Direction *GetWorkspaceSlugOrganizationsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	Items     *GetWorkspaceSlugOrganizationsItemsEnum     `queryParam:"style=form,explode=true,name=items"`
-	Page      *string                                     `queryParam:"style=form,explode=true,name=page"`
-	Query     *string                                     `queryParam:"style=form,explode=true,name=query"`
-	Sort      *GetWorkspaceSlugOrganizationsSortEnum      `queryParam:"style=form,explode=true,name=sort"`
-}
-
 type GetWorkspaceSlugOrganizationsRequest struct {
-	PathParams  GetWorkspaceSlugOrganizationsPathParams
-	QueryParams GetWorkspaceSlugOrganizationsQueryParams
-	Security    GetWorkspaceSlugOrganizationsSecurity
+	Direction     *GetWorkspaceSlugOrganizationsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Items         *GetWorkspaceSlugOrganizationsItemsEnum     `queryParam:"style=form,explode=true,name=items"`
+	Page          *string                                     `queryParam:"style=form,explode=true,name=page"`
+	Query         *string                                     `queryParam:"style=form,explode=true,name=query"`
+	Sort          *GetWorkspaceSlugOrganizationsSortEnum      `queryParam:"style=form,explode=true,name=sort"`
+	WorkspaceSlug string                                      `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugOrganizationsResponse struct {

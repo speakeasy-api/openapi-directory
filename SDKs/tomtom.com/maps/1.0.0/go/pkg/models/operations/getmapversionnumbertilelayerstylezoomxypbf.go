@@ -77,6 +77,33 @@ func (e *GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum) UnmarshalJ
 	}
 }
 
+// GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum - Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-api/maps-api-documentation-vector/tile">documentation</a> for an explanation of how this works in live services.
+type GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum string
+
+const (
+	GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnumUnified GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = "Unified"
+	GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnumIl      GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = "IL"
+	GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnumIn      GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = "IN"
+)
+
+func (e *GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "Unified":
+		fallthrough
+	case "IL":
+		fallthrough
+	case "IN":
+		*e = GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum: %s", s)
+	}
+}
+
 // GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum - Zoom level of tile to be rendered
 type GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum string
 
@@ -164,58 +191,23 @@ func (e *GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams struct {
+type GetMapVersionNumberTileLayerStyleZoomXYPbfRequest struct {
 	// x coordinate of tile on zoom grid
 	X int64 `pathParam:"style=simple,explode=false,name=X"`
 	// y coordinate of tile on zoom grid
 	Y int64 `pathParam:"style=simple,explode=false,name=Y"`
+	// Language to be used for labels in the response. The default is NGT: Neutral Ground Truth, which uses each place's local official language and script (where available). See the <a href="/maps-api/maps-api-documentation-vector/tile">documentation</a> for a full list of options.
+	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// Layer of tile to be rendered
 	Layer GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum `pathParam:"style=simple,explode=false,name=layer"`
 	// Style of tile to be rendered
 	Style GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum `pathParam:"style=simple,explode=false,name=style"`
 	// Version of the service to call. The current version is 1
 	VersionNumber GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-	// Zoom level of tile to be rendered
-	Zoom GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum `pathParam:"style=simple,explode=false,name=zoom"`
-}
-
-// GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum - Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-api/maps-api-documentation-vector/tile">documentation</a> for an explanation of how this works in live services.
-type GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum string
-
-const (
-	GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnumUnified GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = "Unified"
-	GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnumIl      GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = "IL"
-	GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnumIn      GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum = "IN"
-)
-
-func (e *GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "Unified":
-		fallthrough
-	case "IL":
-		fallthrough
-	case "IN":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum: %s", s)
-	}
-}
-
-type GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams struct {
-	// Language to be used for labels in the response. The default is NGT: Neutral Ground Truth, which uses each place's local official language and script (where available). See the <a href="/maps-api/maps-api-documentation-vector/tile">documentation</a> for a full list of options.
-	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-api/maps-api-documentation-vector/tile">documentation</a> for an explanation of how this works in live services.
 	View *GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetMapVersionNumberTileLayerStyleZoomXYPbfRequest struct {
-	PathParams  GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams
-	QueryParams GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams
+	// Zoom level of tile to be rendered
+	Zoom GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum `pathParam:"style=simple,explode=false,name=zoom"`
 }
 
 type GetMapVersionNumberTileLayerStyleZoomXYPbfResponse struct {

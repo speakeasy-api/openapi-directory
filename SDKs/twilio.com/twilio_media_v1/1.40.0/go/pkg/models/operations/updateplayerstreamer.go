@@ -12,12 +12,8 @@ var UpdatePlayerStreamerServerList = []string{
 }
 
 type UpdatePlayerStreamerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdatePlayerStreamerPathParams struct {
-	// The SID of the PlayerStreamer resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdatePlayerStreamerUpdatePlayerStreamerRequest struct {
@@ -25,10 +21,9 @@ type UpdatePlayerStreamerUpdatePlayerStreamerRequest struct {
 }
 
 type UpdatePlayerStreamerRequest struct {
-	PathParams UpdatePlayerStreamerPathParams
-	Request    *UpdatePlayerStreamerUpdatePlayerStreamerRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdatePlayerStreamerSecurity
-	ServerURL  *string
+	RequestBody *UpdatePlayerStreamerUpdatePlayerStreamerRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the PlayerStreamer resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdatePlayerStreamerResponse struct {

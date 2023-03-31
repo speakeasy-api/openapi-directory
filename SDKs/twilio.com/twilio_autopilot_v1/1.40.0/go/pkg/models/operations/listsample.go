@@ -12,17 +12,13 @@ var ListSampleServerList = []string{
 }
 
 type ListSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSamplePathParams struct {
+type ListSampleRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to read.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resources to read.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type ListSampleQueryParams struct {
 	// The [ISO language-country](https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html) string that specifies the language used for the sample. For example: `en-US`.
 	Language *string `queryParam:"style=form,explode=true,name=Language"`
 	// The page index. This value is simply for client state.
@@ -31,13 +27,8 @@ type ListSampleQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListSampleRequest struct {
-	PathParams  ListSamplePathParams
-	QueryParams ListSampleQueryParams
-	Security    ListSampleSecurity
-	ServerURL   *string
+	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resources to read.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type ListSampleListSampleResponseMeta struct {

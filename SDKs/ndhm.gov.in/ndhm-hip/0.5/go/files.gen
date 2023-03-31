@@ -145,3 +145,4 @@ pkg/models/shared/patientauthmodequeryresponse.go
 pkg/models/shared/patientauthinitresponse.go
 pkg/models/shared/authmeta.go
 USAGE.md
+pkg/models/operations/options.go

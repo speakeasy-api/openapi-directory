@@ -8,16 +8,11 @@ import (
 )
 
 type DomainsProjectsLocationsRegistrationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DomainsProjectsLocationsRegistrationsListPathParams struct {
-	// Required. The project and location from which to list `Registration`s, specified in the format `projects/*/locations/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DomainsProjectsLocationsRegistrationsListQueryParams struct {
+type DomainsProjectsLocationsRegistrationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type DomainsProjectsLocationsRegistrationsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// When set to the `next_page_token` from a prior response, provides the next page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project and location from which to list `Registration`s, specified in the format `projects/*/locations/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type DomainsProjectsLocationsRegistrationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DomainsProjectsLocationsRegistrationsListRequest struct {
-	PathParams  DomainsProjectsLocationsRegistrationsListPathParams
-	QueryParams DomainsProjectsLocationsRegistrationsListQueryParams
-	Security    DomainsProjectsLocationsRegistrationsListSecurity
 }
 
 type DomainsProjectsLocationsRegistrationsListResponse struct {

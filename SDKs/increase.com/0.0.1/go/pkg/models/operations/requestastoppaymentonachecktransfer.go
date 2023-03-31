@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestAStopPaymentOnACheckTransferPathParams struct {
-	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
-}
-
 type RequestAStopPaymentOnACheckTransferRequest struct {
-	PathParams RequestAStopPaymentOnACheckTransferPathParams
+	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
 type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum string

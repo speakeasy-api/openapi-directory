@@ -8,13 +8,13 @@ import (
 )
 
 type StorageObjectAccessControlsUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectAccessControlsUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectAccessControlsUpdateSecurity struct {
@@ -22,18 +22,14 @@ type StorageObjectAccessControlsUpdateSecurity struct {
 	Option2 *StorageObjectAccessControlsUpdateSecurityOption2 `security:"option"`
 }
 
-type StorageObjectAccessControlsUpdatePathParams struct {
+type StorageObjectAccessControlsUpdateRequest struct {
+	ObjectAccessControl *shared.ObjectAccessControl `request:"mediaType=application/json"`
+	// Data format for the response.
+	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Name of a bucket.
 	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-emailAddress, allUsers, or allAuthenticatedUsers.
 	Entity string `pathParam:"style=simple,explode=false,name=entity"`
-	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type StorageObjectAccessControlsUpdateQueryParams struct {
-	// Data format for the response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, selects a specific revision of this object (as opposed to the latest version, the default).
@@ -42,6 +38,8 @@ type StorageObjectAccessControlsUpdateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
@@ -52,13 +50,6 @@ type StorageObjectAccessControlsUpdateQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectAccessControlsUpdateRequest struct {
-	PathParams  StorageObjectAccessControlsUpdatePathParams
-	QueryParams StorageObjectAccessControlsUpdateQueryParams
-	Request     *shared.ObjectAccessControl `request:"mediaType=application/json"`
-	Security    StorageObjectAccessControlsUpdateSecurity
 }
 
 type StorageObjectAccessControlsUpdateResponse struct {

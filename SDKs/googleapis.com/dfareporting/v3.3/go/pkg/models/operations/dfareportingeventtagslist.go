@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingEventTagsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingEventTagsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DfareportingEventTagsListEventTagTypesEnum string
@@ -93,7 +88,7 @@ func (e *DfareportingEventTagsListSortOrderEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DfareportingEventTagsListQueryParams struct {
+type DfareportingEventTagsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -124,6 +119,8 @@ type DfareportingEventTagsListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for objects by name or ID. Wildcards (*) are allowed. For example, "eventtag*2015" will return objects with names like "eventtag June 2015", "eventtag April 2015", or simply "eventtag 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "eventtag" will match objects with name "my eventtag", "eventtag 2015", or simply "eventtag".
@@ -136,12 +133,6 @@ type DfareportingEventTagsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingEventTagsListRequest struct {
-	PathParams  DfareportingEventTagsListPathParams
-	QueryParams DfareportingEventTagsListQueryParams
-	Security    DfareportingEventTagsListSecurity
 }
 
 type DfareportingEventTagsListResponse struct {

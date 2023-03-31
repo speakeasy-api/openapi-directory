@@ -12,12 +12,8 @@ var CreateConnectionPolicyTargetServerList = []string{
 }
 
 type CreateConnectionPolicyTargetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateConnectionPolicyTargetPathParams struct {
-	// The SID of the Connection Policy that owns the Target.
-	ConnectionPolicySid string `pathParam:"style=simple,explode=false,name=ConnectionPolicySid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest struct {
@@ -34,10 +30,9 @@ type CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest struct {
 }
 
 type CreateConnectionPolicyTargetRequest struct {
-	PathParams CreateConnectionPolicyTargetPathParams
-	Request    *CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateConnectionPolicyTargetSecurity
-	ServerURL  *string
+	// The SID of the Connection Policy that owns the Target.
+	ConnectionPolicySid string                                                           `pathParam:"style=simple,explode=false,name=ConnectionPolicySid"`
+	RequestBody         *CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateConnectionPolicyTargetResponse struct {

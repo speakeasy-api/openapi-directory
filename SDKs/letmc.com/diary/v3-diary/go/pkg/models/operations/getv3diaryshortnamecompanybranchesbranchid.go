@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV3DiaryShortNameCompanyBranchesBranchIDPathParams struct {
+type GetV3DiaryShortNameCompanyBranchesBranchIDRequest struct {
 	// The unique ID of the Branch
 	BranchID string `pathParam:"style=simple,explode=false,name=branchID"`
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type GetV3DiaryShortNameCompanyBranchesBranchIDRequest struct {
-	PathParams GetV3DiaryShortNameCompanyBranchesBranchIDPathParams
 }
 
 type GetV3DiaryShortNameCompanyBranchesBranchIDResponse struct {

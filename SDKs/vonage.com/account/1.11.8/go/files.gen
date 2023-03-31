@@ -24,7 +24,6 @@ pkg/models/shared/firsthref.go
 pkg/models/shared/accountembeddedobject.go
 pkg/models/shared/account.go
 pkg/models/shared/address.go
-pkg/models/shared/security.go
 pkg/models/shared/locationhalresponse.go
 pkg/models/shared/locationembeddedobject.go
 pkg/models/shared/location.go

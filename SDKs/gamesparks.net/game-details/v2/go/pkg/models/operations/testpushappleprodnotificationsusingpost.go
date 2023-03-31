@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestPushAppleProdNotificationsUsingPOSTPathParams struct {
+type TestPushAppleProdNotificationsUsingPOSTRequest struct {
+	// messageDetails
+	PushNotificationTestModel shared.PushNotificationTestModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type TestPushAppleProdNotificationsUsingPOSTRequest struct {
-	PathParams TestPushAppleProdNotificationsUsingPOSTPathParams
-	// messageDetails
-	Request shared.PushNotificationTestModel `request:"mediaType=application/json"`
 }
 
 type TestPushAppleProdNotificationsUsingPOSTResponse struct {

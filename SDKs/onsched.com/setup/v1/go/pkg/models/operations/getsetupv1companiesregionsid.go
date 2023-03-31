@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1CompaniesRegionsIDPathParams struct {
+type GetSetupV1CompaniesRegionsIDRequest struct {
 	// id of a region object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1CompaniesRegionsIDRequest struct {
-	PathParams GetSetupV1CompaniesRegionsIDPathParams
 }
 
 type GetSetupV1CompaniesRegionsIDResponse struct {

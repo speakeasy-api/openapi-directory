@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type NodesWikisListPathParams struct {
+type NodesWikisListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesWikisListRequest struct {
-	PathParams NodesWikisListPathParams
 }
 
 // NodesWikisListWikiAttributes - The properties of the wiki.

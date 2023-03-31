@@ -6,23 +6,19 @@ import (
 	"net/http"
 )
 
-type ActionsReRunWorkflowPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The unique identifier of the workflow run.
-	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
 type ActionsReRunWorkflowRequestBody struct {
 	// Whether to enable debug logging for the re-run.
 	EnableDebugLogging *bool `json:"enable_debug_logging,omitempty"`
 }
 
 type ActionsReRunWorkflowRequest struct {
-	PathParams ActionsReRunWorkflowPathParams
-	Request    *ActionsReRunWorkflowRequestBody `request:"mediaType=application/json"`
+	RequestBody *ActionsReRunWorkflowRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The unique identifier of the workflow run.
+	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
 }
 
 type ActionsReRunWorkflowResponse struct {

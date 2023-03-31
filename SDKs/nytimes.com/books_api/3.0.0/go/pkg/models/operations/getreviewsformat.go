@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GETReviewsFormatSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
 // GETReviewsFormatFormatEnum
@@ -37,24 +36,15 @@ func (e *GETReviewsFormatFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETReviewsFormatPathParams struct {
-	Format GETReviewsFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GETReviewsFormatQueryParams struct {
+type GETReviewsFormatRequest struct {
 	APIKey *string `queryParam:"style=form,explode=true,name=api-key"`
 	// You’ll need to enter the author’s first and last name, separated by a space. This space will be converted into the characters %20.
-	Author *string `queryParam:"style=form,explode=true,name=author"`
+	Author *string                    `queryParam:"style=form,explode=true,name=author"`
+	Format GETReviewsFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Searching by ISBN is the recommended method. You can enter 10- or 13-digit ISBNs.
 	Isbn *int64 `queryParam:"style=form,explode=true,name=isbn"`
 	// You’ll need to enter the full title of the book. Spaces in the title will be converted into the characters %20.
 	Title *string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type GETReviewsFormatRequest struct {
-	PathParams  GETReviewsFormatPathParams
-	QueryParams GETReviewsFormatQueryParams
-	Security    GETReviewsFormatSecurity
 }
 
 type GETReviewsFormat200ApplicationJSONResults struct {

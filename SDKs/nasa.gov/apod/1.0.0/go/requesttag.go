@@ -35,7 +35,7 @@ func newRequestTag(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetApod - Returns images
 // Returns the picture of the day
-func (s *requestTag) GetApod(ctx context.Context, request operations.GetApodRequest) (*operations.GetApodResponse, error) {
+func (s *requestTag) GetApod(ctx context.Context, request operations.GetApodRequest, security operations.GetApodSecurity) (*operations.GetApodResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apod"
 
@@ -44,11 +44,11 @@ func (s *requestTag) GetApod(ctx context.Context, request operations.GetApodRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

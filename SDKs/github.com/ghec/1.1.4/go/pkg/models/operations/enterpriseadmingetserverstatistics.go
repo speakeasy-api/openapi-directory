@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetServerStatisticsPathParams struct {
-	// The slug version of the enterprise name or the login of an organization.
-	EnterpriseOrOrg string `pathParam:"style=simple,explode=false,name=enterprise_or_org"`
-}
-
-type EnterpriseAdminGetServerStatisticsQueryParams struct {
+type EnterpriseAdminGetServerStatisticsRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor.
 	DateEnd *string `queryParam:"style=form,explode=true,name=date_end"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.
 	DateStart *string `queryParam:"style=form,explode=true,name=date_start"`
-}
-
-type EnterpriseAdminGetServerStatisticsRequest struct {
-	PathParams  EnterpriseAdminGetServerStatisticsPathParams
-	QueryParams EnterpriseAdminGetServerStatisticsQueryParams
+	// The slug version of the enterprise name or the login of an organization.
+	EnterpriseOrOrg string `pathParam:"style=simple,explode=false,name=enterprise_or_org"`
 }
 
 type EnterpriseAdminGetServerStatisticsResponse struct {

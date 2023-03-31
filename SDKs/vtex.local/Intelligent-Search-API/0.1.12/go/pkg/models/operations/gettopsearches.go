@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTopSearchesQueryParams struct {
+type GetTopSearchesRequest struct {
 	// Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type GetTopSearchesRequest struct {
-	QueryParams GetTopSearchesQueryParams
 }
 
 type GetTopSearchesResponse struct {

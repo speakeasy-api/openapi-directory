@@ -33,20 +33,20 @@ func newConversion(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // DoubleclicksearchConversionGet - Retrieves a list of conversions from a DoubleClick Search engine account.
-func (s *conversion) DoubleclicksearchConversionGet(ctx context.Context, request operations.DoubleclicksearchConversionGetRequest) (*operations.DoubleclicksearchConversionGetResponse, error) {
+func (s *conversion) DoubleclicksearchConversionGet(ctx context.Context, request operations.DoubleclicksearchConversionGetRequest, security operations.DoubleclicksearchConversionGetSecurity) (*operations.DoubleclicksearchConversionGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *conversion) DoubleclicksearchConversionGet(ctx context.Context, request
 }
 
 // DoubleclicksearchConversionGetByCustomerID - Retrieves a list of conversions from a DoubleClick Search engine account.
-func (s *conversion) DoubleclicksearchConversionGetByCustomerID(ctx context.Context, request operations.DoubleclicksearchConversionGetByCustomerIDRequest) (*operations.DoubleclicksearchConversionGetByCustomerIDResponse, error) {
+func (s *conversion) DoubleclicksearchConversionGetByCustomerID(ctx context.Context, request operations.DoubleclicksearchConversionGetByCustomerIDRequest, security operations.DoubleclicksearchConversionGetByCustomerIDSecurity) (*operations.DoubleclicksearchConversionGetByCustomerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/customer/{customerId}/conversion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/customer/{customerId}/conversion", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *conversion) DoubleclicksearchConversionGetByCustomerID(ctx context.Cont
 }
 
 // DoubleclicksearchConversionInsert - Inserts a batch of new conversions into DoubleClick Search.
-func (s *conversion) DoubleclicksearchConversionInsert(ctx context.Context, request operations.DoubleclicksearchConversionInsertRequest) (*operations.DoubleclicksearchConversionInsertResponse, error) {
+func (s *conversion) DoubleclicksearchConversionInsert(ctx context.Context, request operations.DoubleclicksearchConversionInsertRequest, security operations.DoubleclicksearchConversionInsertSecurity) (*operations.DoubleclicksearchConversionInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/doubleclicksearch/v2/conversion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *conversion) DoubleclicksearchConversionInsert(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *conversion) DoubleclicksearchConversionInsert(ctx context.Context, requ
 }
 
 // DoubleclicksearchConversionUpdate - Updates a batch of conversions in DoubleClick Search.
-func (s *conversion) DoubleclicksearchConversionUpdate(ctx context.Context, request operations.DoubleclicksearchConversionUpdateRequest) (*operations.DoubleclicksearchConversionUpdateResponse, error) {
+func (s *conversion) DoubleclicksearchConversionUpdate(ctx context.Context, request operations.DoubleclicksearchConversionUpdateRequest, security operations.DoubleclicksearchConversionUpdateSecurity) (*operations.DoubleclicksearchConversionUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/doubleclicksearch/v2/conversion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *conversion) DoubleclicksearchConversionUpdate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *conversion) DoubleclicksearchConversionUpdate(ctx context.Context, requ
 }
 
 // DoubleclicksearchConversionUpdateAvailability - Updates the availabilities of a batch of floodlight activities in DoubleClick Search.
-func (s *conversion) DoubleclicksearchConversionUpdateAvailability(ctx context.Context, request operations.DoubleclicksearchConversionUpdateAvailabilityRequest) (*operations.DoubleclicksearchConversionUpdateAvailabilityResponse, error) {
+func (s *conversion) DoubleclicksearchConversionUpdateAvailability(ctx context.Context, request operations.DoubleclicksearchConversionUpdateAvailabilityRequest, security operations.DoubleclicksearchConversionUpdateAvailabilitySecurity) (*operations.DoubleclicksearchConversionUpdateAvailabilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/doubleclicksearch/v2/conversion/updateAvailability"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAvailabilityRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *conversion) DoubleclicksearchConversionUpdateAvailability(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

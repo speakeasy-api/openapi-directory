@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetFeaturesFeatureIDPathParams struct {
+type GetFeaturesFeatureIDRequest struct {
 	// The unique identifier for a feature
 	FeatureID int64 `pathParam:"style=simple,explode=false,name=featureId"`
-}
-
-type GetFeaturesFeatureIDRequest struct {
-	PathParams GetFeaturesFeatureIDPathParams
 }
 
 type GetFeaturesFeatureIDResponse struct {

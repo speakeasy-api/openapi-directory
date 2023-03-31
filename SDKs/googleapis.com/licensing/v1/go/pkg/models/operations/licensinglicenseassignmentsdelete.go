@@ -8,20 +8,11 @@ import (
 )
 
 type LicensingLicenseAssignmentsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type LicensingLicenseAssignmentsDeletePathParams struct {
-	// A product's unique identifier. For more information about products in this version of the API, see Products and SKUs.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-	// A product SKU's unique identifier. For more information about available SKUs in this version of the API, see Products and SKUs.
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-	// The user's current primary email address. If the user's email address changes, use the new email address in your API requests. Since a `userId` is subject to change, do not use a `userId` value as a key for persistent data. This key could break if the current user's email address changes. If the `userId` is suspended, the license status changes.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type LicensingLicenseAssignmentsDeleteQueryParams struct {
+type LicensingLicenseAssignmentsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,18 +29,18 @@ type LicensingLicenseAssignmentsDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// A product's unique identifier. For more information about products in this version of the API, see Products and SKUs.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// A product SKU's unique identifier. For more information about available SKUs in this version of the API, see Products and SKUs.
+	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type LicensingLicenseAssignmentsDeleteRequest struct {
-	PathParams  LicensingLicenseAssignmentsDeletePathParams
-	QueryParams LicensingLicenseAssignmentsDeleteQueryParams
-	Security    LicensingLicenseAssignmentsDeleteSecurity
+	// The user's current primary email address. If the user's email address changes, use the new email address in your API requests. Since a `userId` is subject to change, do not use a `userId` value as a key for persistent data. This key could break if the current user's email address changes. If the `userId` is suspended, the license status changes.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type LicensingLicenseAssignmentsDeleteResponse struct {

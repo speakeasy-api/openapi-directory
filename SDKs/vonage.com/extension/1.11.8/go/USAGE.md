@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.ExtensionCtrlGetAccountExtensionByIDRequest{
-        Security: operations.ExtensionCtrlGetAccountExtensionByIDSecurity{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ExtensionCtrlGetAccountExtensionByIDPathParams{
-            AccountID: "corrupti",
-            ExtensionNumber: 5928.45,
-        },
+        AccountID: "corrupti",
+        ExtensionNumber: 5928.45,
     }
 
     ctx := context.Background()
-    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, req)
+    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, req, operations.ExtensionCtrlGetAccountExtensionByIDSecurity{
+        BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

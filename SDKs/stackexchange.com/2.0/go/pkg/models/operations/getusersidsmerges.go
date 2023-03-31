@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type GetUsersIdsMergesPathParams struct {
-	// Number list (semicolon delimited).
-	Ids string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type GetUsersIdsMergesQueryParams struct {
+type GetUsersIdsMergesRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -46,14 +41,11 @@ type GetUsersIdsMergesQueryParams struct {
 	//
 	// For ease of transition from earlier API versions, the filters _b, _ba, _bc, _bca, _a, _ac, and _c are also built in. These are unsafe, and exclude a combination of question and answer body, comments, and answers so as to mimic the body, answers, and comments parameters that have been removed in V2.0. New applications should not use these filters.
 	//
-	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
-	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
-	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetUsersIdsMergesRequest struct {
-	PathParams  GetUsersIdsMergesPathParams
-	QueryParams GetUsersIdsMergesQueryParams
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Number list (semicolon delimited).
+	Ids      string `pathParam:"style=simple,explode=false,name=ids"`
+	Page     *int64 `queryParam:"style=form,explode=true,name=page"`
+	Pagesize *int64 `queryParam:"style=form,explode=true,name=pagesize"`
 }
 
 type GetUsersIdsMergesResponse struct {

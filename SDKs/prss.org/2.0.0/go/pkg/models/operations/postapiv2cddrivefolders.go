@@ -8,7 +8,7 @@ import (
 )
 
 type PostAPIV2CddriveFoldersSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostAPIV2CddriveFoldersRequestBody struct {
@@ -16,11 +16,6 @@ type PostAPIV2CddriveFoldersRequestBody struct {
 	Name *string `form:"name=name"`
 	// The ID of the parent folder or 0 for the root folder.
 	ParentID *int64 `form:"name=parent-id"`
-}
-
-type PostAPIV2CddriveFoldersRequest struct {
-	Request  *PostAPIV2CddriveFoldersRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostAPIV2CddriveFoldersSecurity
 }
 
 type PostAPIV2CddriveFoldersResponse struct {

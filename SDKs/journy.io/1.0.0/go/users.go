@@ -34,7 +34,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // DeleteUser - Delete user
 // Endpoint to delete a user.
-func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
+func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequestBody) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -169,7 +169,7 @@ func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserReq
 // The cookie on my-domain.tld will also be send to your app domain.
 //
 // You should call this endpoint after the user succesfully logged in (so that you know the user's ID). Use the value of the cookie as device ID.
-func (s *users) Link(ctx context.Context, request operations.LinkRequest) (*operations.LinkResponse, error) {
+func (s *users) Link(ctx context.Context, request operations.LinkRequestBody) (*operations.LinkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link"
 
@@ -286,7 +286,7 @@ func (s *users) Link(ctx context.Context, request operations.LinkRequest) (*oper
 
 // UpsertUser - Create or update user
 // Endpoint to create or update a user.
-func (s *users) UpsertUser(ctx context.Context, request operations.UpsertUserRequest) (*operations.UpsertUserResponse, error) {
+func (s *users) UpsertUser(ctx context.Context, request operations.UpsertUserRequestBody) (*operations.UpsertUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/upsert"
 

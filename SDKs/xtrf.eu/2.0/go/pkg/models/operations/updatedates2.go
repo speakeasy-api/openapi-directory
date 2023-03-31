@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDates2PathParams struct {
+type UpdateDates2Request struct {
+	// Updated dates of a given task.
+	ProjectDatesDTO shared.ProjectDatesDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type UpdateDates2Request struct {
-	PathParams UpdateDates2PathParams
-	// Updated dates of a given task.
-	Request shared.ProjectDatesDTO `request:"mediaType=application/json"`
 }
 
 type UpdateDates2Response struct {

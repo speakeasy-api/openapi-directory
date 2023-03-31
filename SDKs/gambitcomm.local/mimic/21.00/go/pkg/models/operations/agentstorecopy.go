@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type AgentStoreCopyPathParams struct {
+type AgentStoreCopyRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Agent of the value space
 	OtherAgent int `pathParam:"style=simple,explode=false,name=otherAgent"`
-}
-
-type AgentStoreCopyRequest struct {
-	PathParams AgentStoreCopyPathParams
 }
 
 type AgentStoreCopyResponse struct {

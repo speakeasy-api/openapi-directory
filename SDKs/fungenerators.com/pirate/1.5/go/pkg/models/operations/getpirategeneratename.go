@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPirateGenerateNameSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetPirateGenerateNameQueryParams struct {
+type GetPirateGenerateNameRequest struct {
 	// No of names to generate
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Variation to generate `male/female`.
 	Variation *string `queryParam:"style=form,explode=true,name=variation"`
-}
-
-type GetPirateGenerateNameRequest struct {
-	QueryParams GetPirateGenerateNameQueryParams
-	Security    GetPirateGenerateNameSecurity
 }
 
 type GetPirateGenerateNameResponse struct {

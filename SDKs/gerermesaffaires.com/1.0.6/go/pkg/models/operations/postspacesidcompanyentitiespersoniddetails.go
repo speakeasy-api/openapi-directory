@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostSpacesIDCompanyEntitiesPersonIDDetailsPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the person or memberId
-	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
 type PostSpacesIDCompanyEntitiesPersonIDDetailsRequestBodyAddress struct {
 	City       *string `json:"City,omitempty"`
 	Complement *string `json:"Complement,omitempty"`
@@ -30,9 +23,12 @@ type PostSpacesIDCompanyEntitiesPersonIDDetailsRequestBody struct {
 }
 
 type PostSpacesIDCompanyEntitiesPersonIDDetailsRequest struct {
-	PathParams PostSpacesIDCompanyEntitiesPersonIDDetailsPathParams
 	// Contact details to add or replace (Designation and Phone or Mail are mandatory)
-	Request PostSpacesIDCompanyEntitiesPersonIDDetailsRequestBody `request:"mediaType=application/json"`
+	RequestBody PostSpacesIDCompanyEntitiesPersonIDDetailsRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the person or memberId
+	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
 }
 
 type PostSpacesIDCompanyEntitiesPersonIDDetailsResponse struct {

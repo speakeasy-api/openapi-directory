@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTCreateOrderAsynchronouslyQueryParams struct {
-	// Specify whether to return IDs for the [Get job status and response](https://www.zuora.com/developer/api-reference/#operation/GET_JobStatusAndResponse) operation. If you set this query parameter to `true`, the corresponding IDs, which are associated with the numbers returned in this operation, can be returned in the "Get job status and response" response body.
-	//
-	ReturnIds *bool `queryParam:"style=form,explode=true,name=returnIds"`
-}
-
-type POSTCreateOrderAsynchronouslyHeaders struct {
+type POSTCreateOrderAsynchronouslyRequest struct {
+	POSTOrderRequestType shared.POSTOrderRequestType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,6 +17,9 @@ type POSTCreateOrderAsynchronouslyHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
+	// Specify whether to return IDs for the [Get job status and response](https://www.zuora.com/developer/api-reference/#operation/GET_JobStatusAndResponse) operation. If you set this query parameter to `true`, the corresponding IDs, which are associated with the numbers returned in this operation, can be returned in the "Get job status and response" response body.
+	//
+	ReturnIds *bool `queryParam:"style=form,explode=true,name=returnIds"`
 	// The minor version of the Zuora REST API.
 	//
 	// You need to set this parameter if you want to use the following fields:
@@ -30,12 +28,6 @@ type POSTCreateOrderAsynchronouslyHeaders struct {
 	// * subscriptionIds (when the `returnId` query parameter is set to `true`)
 	//
 	ZuoraVersion *string `header:"style=simple,explode=false,name=zuora-version"`
-}
-
-type POSTCreateOrderAsynchronouslyRequest struct {
-	QueryParams POSTCreateOrderAsynchronouslyQueryParams
-	Headers     POSTCreateOrderAsynchronouslyHeaders
-	Request     shared.POSTOrderRequestType `request:"mediaType=application/json"`
 }
 
 // POSTCreateOrderAsynchronously202ApplicationJSON - Accepted

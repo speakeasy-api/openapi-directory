@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmGroupsPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmGroupsQueryParams struct {
-	BriefRepresentation *bool   `queryParam:"style=form,explode=true,name=briefRepresentation"`
-	First               *int    `queryParam:"style=form,explode=true,name=first"`
-	Max                 *int    `queryParam:"style=form,explode=true,name=max"`
-	Search              *string `queryParam:"style=form,explode=true,name=search"`
-}
-
 type GetRealmGroupsRequest struct {
-	PathParams  GetRealmGroupsPathParams
-	QueryParams GetRealmGroupsQueryParams
+	BriefRepresentation *bool `queryParam:"style=form,explode=true,name=briefRepresentation"`
+	First               *int  `queryParam:"style=form,explode=true,name=first"`
+	Max                 *int  `queryParam:"style=form,explode=true,name=max"`
+	// realm name (not id!)
+	Realm  string  `pathParam:"style=simple,explode=false,name=realm"`
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type GetRealmGroupsResponse struct {

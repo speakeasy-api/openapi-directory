@@ -38,14 +38,14 @@ func newCustomData(defaultClient, securityClient HTTPClient, serverURL, language
 // You also need to iform the specific field created in this app (identified by the `appFieldName` parameter, also passed through the URL) whose value you want to remove.
 func (s *customData) Removesinglecustomfieldvalue(ctx context.Context, request operations.RemovesinglecustomfieldvalueRequest) (*operations.RemovesinglecustomfieldvalueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}/{appFieldName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}/{appFieldName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -82,9 +82,9 @@ func (s *customData) Removesinglecustomfieldvalue(ctx context.Context, request o
 // The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) is the data structure which represents a shopping cart and contains all information pertaining to it. Hence, the `orderFormId` is the identification code of a given cart.
 func (s *customData) SetMultipleCustomFieldValues(ctx context.Context, request operations.SetMultipleCustomFieldValuesRequest) (*operations.SetMultipleCustomFieldValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -99,7 +99,7 @@ func (s *customData) SetMultipleCustomFieldValues(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -145,9 +145,9 @@ func (s *customData) SetMultipleCustomFieldValues(ctx context.Context, request o
 // The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) is the data structure which represents a shopping cart and contains all information pertaining to it. Hence, the `orderFormId` is the identification code of a given cart.
 func (s *customData) SetSingleCustomFieldValue(ctx context.Context, request operations.SetSingleCustomFieldValueRequest) (*operations.SetSingleCustomFieldValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}/{appFieldName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}/{appFieldName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetsinglecustomfieldvalueRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,7 +162,7 @@ func (s *customData) SetSingleCustomFieldValue(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

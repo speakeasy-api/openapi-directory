@@ -33,15 +33,11 @@ func (e *PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum) UnmarshalJ
 	}
 }
 
-type PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams struct {
+type PlayerTournamentProjectedStatsWDraftkingsSalariesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are <code>78</code>, <code>79</code>, <code>80</code>, etc.
 	Tournamentid string `pathParam:"style=simple,explode=false,name=tournamentid"`
-}
-
-type PlayerTournamentProjectedStatsWDraftkingsSalariesRequest struct {
-	PathParams PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams
 }
 
 type PlayerTournamentProjectedStatsWDraftkingsSalariesResponse struct {

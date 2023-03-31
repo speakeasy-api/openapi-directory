@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateExchangeRatePathParams struct {
+type CreateExchangeRateRequest struct {
+	// Adding new currency exchange rates
+	CurrencyHistoryDTO shared.CurrencyHistoryDTO `request:"mediaType=application/json"`
 	// iso code, https://www.xe.com/iso4217.php
 	IsoCode string `pathParam:"style=simple,explode=false,name=isoCode"`
-}
-
-type CreateExchangeRateRequest struct {
-	PathParams CreateExchangeRatePathParams
-	// Adding new currency exchange rates
-	Request shared.CurrencyHistoryDTO `request:"mediaType=application/json"`
 }
 
 type CreateExchangeRateResponse struct {

@@ -33,20 +33,20 @@ func newWebResource(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // SiteVerificationWebResourceDelete - Relinquish ownership of a website or domain.
-func (s *webResource) SiteVerificationWebResourceDelete(ctx context.Context, request operations.SiteVerificationWebResourceDeleteRequest) (*operations.SiteVerificationWebResourceDeleteResponse, error) {
+func (s *webResource) SiteVerificationWebResourceDelete(ctx context.Context, request operations.SiteVerificationWebResourceDeleteRequest, security operations.SiteVerificationWebResourceDeleteSecurity) (*operations.SiteVerificationWebResourceDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *webResource) SiteVerificationWebResourceDelete(ctx context.Context, req
 }
 
 // SiteVerificationWebResourceGet - Get the most current data for a website or domain.
-func (s *webResource) SiteVerificationWebResourceGet(ctx context.Context, request operations.SiteVerificationWebResourceGetRequest) (*operations.SiteVerificationWebResourceGetResponse, error) {
+func (s *webResource) SiteVerificationWebResourceGet(ctx context.Context, request operations.SiteVerificationWebResourceGetRequest, security operations.SiteVerificationWebResourceGetSecurity) (*operations.SiteVerificationWebResourceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *webResource) SiteVerificationWebResourceGet(ctx context.Context, reques
 }
 
 // SiteVerificationWebResourceGetToken - Get a verification token for placing on a website or domain.
-func (s *webResource) SiteVerificationWebResourceGetToken(ctx context.Context, request operations.SiteVerificationWebResourceGetTokenRequest) (*operations.SiteVerificationWebResourceGetTokenResponse, error) {
+func (s *webResource) SiteVerificationWebResourceGetToken(ctx context.Context, request operations.SiteVerificationWebResourceGetTokenRequest, security operations.SiteVerificationWebResourceGetTokenSecurity) (*operations.SiteVerificationWebResourceGetTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteVerificationWebResourceGettokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *webResource) SiteVerificationWebResourceGetToken(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *webResource) SiteVerificationWebResourceGetToken(ctx context.Context, r
 }
 
 // SiteVerificationWebResourceInsert - Attempt verification of a website or domain.
-func (s *webResource) SiteVerificationWebResourceInsert(ctx context.Context, request operations.SiteVerificationWebResourceInsertRequest) (*operations.SiteVerificationWebResourceInsertResponse, error) {
+func (s *webResource) SiteVerificationWebResourceInsert(ctx context.Context, request operations.SiteVerificationWebResourceInsertRequest, security operations.SiteVerificationWebResourceInsertSecurity) (*operations.SiteVerificationWebResourceInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteVerificationWebResourceResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *webResource) SiteVerificationWebResourceInsert(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,7 +230,7 @@ func (s *webResource) SiteVerificationWebResourceInsert(ctx context.Context, req
 }
 
 // SiteVerificationWebResourceList - Get the list of your verified websites and domains.
-func (s *webResource) SiteVerificationWebResourceList(ctx context.Context, request operations.SiteVerificationWebResourceListRequest) (*operations.SiteVerificationWebResourceListResponse, error) {
+func (s *webResource) SiteVerificationWebResourceList(ctx context.Context, request operations.SiteVerificationWebResourceListRequest, security operations.SiteVerificationWebResourceListSecurity) (*operations.SiteVerificationWebResourceListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webResource"
 
@@ -239,11 +239,11 @@ func (s *webResource) SiteVerificationWebResourceList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,11 +278,11 @@ func (s *webResource) SiteVerificationWebResourceList(ctx context.Context, reque
 }
 
 // SiteVerificationWebResourcePatch - Modify the list of owners for your website or domain. This method supports patch semantics.
-func (s *webResource) SiteVerificationWebResourcePatch(ctx context.Context, request operations.SiteVerificationWebResourcePatchRequest) (*operations.SiteVerificationWebResourcePatchResponse, error) {
+func (s *webResource) SiteVerificationWebResourcePatch(ctx context.Context, request operations.SiteVerificationWebResourcePatchRequest, security operations.SiteVerificationWebResourcePatchSecurity) (*operations.SiteVerificationWebResourcePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteVerificationWebResourceResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,11 +294,11 @@ func (s *webResource) SiteVerificationWebResourcePatch(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -333,11 +333,11 @@ func (s *webResource) SiteVerificationWebResourcePatch(ctx context.Context, requ
 }
 
 // SiteVerificationWebResourceUpdate - Modify the list of owners for your website or domain.
-func (s *webResource) SiteVerificationWebResourceUpdate(ctx context.Context, request operations.SiteVerificationWebResourceUpdateRequest) (*operations.SiteVerificationWebResourceUpdateResponse, error) {
+func (s *webResource) SiteVerificationWebResourceUpdate(ctx context.Context, request operations.SiteVerificationWebResourceUpdateRequest, security operations.SiteVerificationWebResourceUpdateSecurity) (*operations.SiteVerificationWebResourceUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteVerificationWebResourceResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,11 +349,11 @@ func (s *webResource) SiteVerificationWebResourceUpdate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

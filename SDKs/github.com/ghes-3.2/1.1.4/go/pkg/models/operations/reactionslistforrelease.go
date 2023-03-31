@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForReleasePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The unique identifier of the release.
-	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsListForReleaseContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.2/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a release.
 type ReactionsListForReleaseContentEnum string
 
@@ -54,18 +45,19 @@ func (e *ReactionsListForReleaseContentEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReactionsListForReleaseQueryParams struct {
+type ReactionsListForReleaseRequest struct {
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.2/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a release.
 	Content *ReactionsListForReleaseContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForReleaseRequest struct {
-	PathParams  ReactionsListForReleasePathParams
-	QueryParams ReactionsListForReleaseQueryParams
+	// The unique identifier of the release.
+	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReactionsListForRelease415ApplicationJSON - Preview header missing

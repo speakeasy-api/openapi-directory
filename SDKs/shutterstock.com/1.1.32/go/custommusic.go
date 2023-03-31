@@ -34,7 +34,7 @@ func newCustomMusic(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // CreateAudioRenders - Create rendered audio
 // This endpoint creates rendered audio from timeline data. It returns a render ID that you can use to download the finished audio when it is ready. The render ID is valid for up to 48 hours.
-func (s *customMusic) CreateAudioRenders(ctx context.Context, request operations.CreateAudioRendersRequest) (*operations.CreateAudioRendersResponse, error) {
+func (s *customMusic) CreateAudioRenders(ctx context.Context, request shared.CreateAudioRendersRequest, security operations.CreateAudioRendersSecurity) (*operations.CreateAudioRendersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/ai/audio/renders"
 
@@ -53,7 +53,7 @@ func (s *customMusic) CreateAudioRenders(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *customMusic) CreateAudioRenders(ctx context.Context, request operations
 
 // FetchRenders - Get details about audio renders
 // This endpoint shows the status of one or more audio renders, including download links for completed audio.
-func (s *customMusic) FetchRenders(ctx context.Context, request operations.FetchRendersRequest) (*operations.FetchRendersResponse, error) {
+func (s *customMusic) FetchRenders(ctx context.Context, request operations.FetchRendersRequest, security operations.FetchRendersSecurity) (*operations.FetchRendersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/ai/audio/renders"
 
@@ -103,11 +103,11 @@ func (s *customMusic) FetchRenders(ctx context.Context, request operations.Fetch
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *customMusic) FetchRenders(ctx context.Context, request operations.Fetch
 
 // ListCustomDescriptors - List computer audio descriptors
 // This endpoint lists the descriptors that you can use in the audio regions in an audio render.
-func (s *customMusic) ListCustomDescriptors(ctx context.Context, request operations.ListCustomDescriptorsRequest) (*operations.ListCustomDescriptorsResponse, error) {
+func (s *customMusic) ListCustomDescriptors(ctx context.Context, request operations.ListCustomDescriptorsRequest, security operations.ListCustomDescriptorsSecurity) (*operations.ListCustomDescriptorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/ai/audio/descriptors"
 
@@ -159,11 +159,11 @@ func (s *customMusic) ListCustomDescriptors(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -206,7 +206,7 @@ func (s *customMusic) ListCustomDescriptors(ctx context.Context, request operati
 
 // ListCustomInstruments - List computer audio instruments
 // This endpoint lists the instruments that you can include in computer audio. If you specify more than one search parameter, the API uses an AND condition.
-func (s *customMusic) ListCustomInstruments(ctx context.Context, request operations.ListCustomInstrumentsRequest) (*operations.ListCustomInstrumentsResponse, error) {
+func (s *customMusic) ListCustomInstruments(ctx context.Context, request operations.ListCustomInstrumentsRequest, security operations.ListCustomInstrumentsSecurity) (*operations.ListCustomInstrumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/ai/audio/instruments"
 
@@ -215,11 +215,11 @@ func (s *customMusic) ListCustomInstruments(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

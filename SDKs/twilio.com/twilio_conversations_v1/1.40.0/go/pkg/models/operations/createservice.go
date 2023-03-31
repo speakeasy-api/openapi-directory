@@ -12,18 +12,13 @@ var CreateServiceServerList = []string{
 }
 
 type CreateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceCreateServiceRequest struct {
 	// The human-readable name of this service, limited to 256 characters. Optional.
 	FriendlyName string `form:"name=FriendlyName"`
-}
-
-type CreateServiceRequest struct {
-	Request   *CreateServiceCreateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateServiceSecurity
-	ServerURL *string
 }
 
 type CreateServiceResponse struct {

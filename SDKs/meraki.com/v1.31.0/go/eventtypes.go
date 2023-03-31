@@ -34,7 +34,7 @@ func newEventTypes(defaultClient, securityClient HTTPClient, serverURL, language
 // List the event type to human-readable description
 func (s *eventTypes) GetNetworkEventsEventTypes(ctx context.Context, request operations.GetNetworkEventsEventTypesRequest) (*operations.GetNetworkEventsEventTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/events/eventTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/events/eventTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

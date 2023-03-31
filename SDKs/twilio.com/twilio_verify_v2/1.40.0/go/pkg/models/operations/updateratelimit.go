@@ -12,14 +12,8 @@ var UpdateRateLimitServerList = []string{
 }
 
 type UpdateRateLimitSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRateLimitPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the Rate Limit resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRateLimitUpdateRateLimitRequest struct {
@@ -28,10 +22,11 @@ type UpdateRateLimitUpdateRateLimitRequest struct {
 }
 
 type UpdateRateLimitRequest struct {
-	PathParams UpdateRateLimitPathParams
-	Request    *UpdateRateLimitUpdateRateLimitRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRateLimitSecurity
-	ServerURL  *string
+	RequestBody *UpdateRateLimitUpdateRateLimitRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the Rate Limit resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateRateLimitResponse struct {

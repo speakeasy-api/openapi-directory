@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteHpovManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteHpovManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type DeleteHpovManagerRequest struct {
-	PathParams DeleteHpovManagerPathParams
-	Security   DeleteHpovManagerSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteHpovManagerResponse struct {

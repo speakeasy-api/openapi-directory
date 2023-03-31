@@ -8,33 +8,24 @@ import (
 )
 
 type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearPathParams struct {
+type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest struct {
+	// Retrieve pay statement details related to specific deduction, earning or tax types. Common values include 401k, Memo, Reg, OT, Cash Tips, FED and SITW.
+	Codegroup *string `queryParam:"style=form,explode=true,name=codegroup"`
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-	// The year for which to retrieve pay statement data
-	Year string `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearQueryParams struct {
-	// Retrieve pay statement details related to specific deduction, earning or tax types. Common values include 401k, Memo, Reg, OT, Cash Tips, FED and SITW.
-	Codegroup *string `queryParam:"style=form,explode=true,name=codegroup"`
 	// Whether to include the total record count in the header's X-Pcty-Total-Count property. Default value is true.
 	Includetotalcount *bool `queryParam:"style=form,explode=true,name=includetotalcount"`
 	// Page number to retrieve; page numbers are 0-based (so to get the first page of results, pass pagenumber=0). Default value is 0.
 	Pagenumber *int64 `queryParam:"style=form,explode=true,name=pagenumber"`
 	// Number of records per page. Default value is 25.
 	Pagesize *int64 `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest struct {
-	PathParams  GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearPathParams
-	QueryParams GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearQueryParams
-	Security    GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearSecurity
+	// The year for which to retrieve pay statement data
+	Year string `pathParam:"style=simple,explode=false,name=year"`
 }
 
 type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse struct {

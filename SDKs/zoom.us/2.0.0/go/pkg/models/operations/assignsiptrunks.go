@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AssignSIPTrunksPathParams struct {
-	// Unique Identifier of the sub account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 type AssignSIPTrunksApplicationJSONSIPTrunks struct {
 	// DNIS of the sub account. The prefix of the DNIS (i.e. the first five digits of the DNIS value) must match the DNIS prefix of the master account. To retrieve the DNIS prefix of a master account's SIP Trunk, use the List SIP Trunks API and refer to the first five digits in the `dnis` value.
 	//
@@ -28,8 +23,9 @@ type AssignSIPTrunksApplicationJSON struct {
 }
 
 type AssignSIPTrunksRequest struct {
-	PathParams AssignSIPTrunksPathParams
-	Request    *AssignSIPTrunksApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *AssignSIPTrunksApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the sub account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AssignSIPTrunks201ApplicationXMLSIPTrunks struct {

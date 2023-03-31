@@ -34,7 +34,7 @@ func newUserStorageProvider(defaultClient, securityClient HTTPClient, serverURL,
 // GetIDName - Need this for admin console to display simple name of provider when displaying client detail   KEYCLOAK-4328
 func (s *userStorageProvider) GetIDName(ctx context.Context, request operations.GetIDNameRequest) (*operations.GetIDNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{id}/name", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -78,7 +78,7 @@ func (s *userStorageProvider) GetIDName(ctx context.Context, request operations.
 // GetRealmUserStorageIDName - Need this for admin console to display simple name of provider when displaying user detail   KEYCLOAK-4328
 func (s *userStorageProvider) GetRealmUserStorageIDName(ctx context.Context, request operations.GetRealmUserStorageIDNameRequest) (*operations.GetRealmUserStorageIDNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/name", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +122,7 @@ func (s *userStorageProvider) GetRealmUserStorageIDName(ctx context.Context, req
 // PostRealmUserStorageIDRemoveImportedUsers - Remove imported users
 func (s *userStorageProvider) PostRealmUserStorageIDRemoveImportedUsers(ctx context.Context, request operations.PostRealmUserStorageIDRemoveImportedUsersRequest) (*operations.PostRealmUserStorageIDRemoveImportedUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/remove-imported-users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/remove-imported-users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -157,14 +157,14 @@ func (s *userStorageProvider) PostRealmUserStorageIDRemoveImportedUsers(ctx cont
 // PostRealmUserStorageIDSync - Trigger sync of users   Action can be "triggerFullSync" or "triggerChangedUsersSync"
 func (s *userStorageProvider) PostRealmUserStorageIDSync(ctx context.Context, request operations.PostRealmUserStorageIDSyncRequest) (*operations.PostRealmUserStorageIDSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/sync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/sync", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -205,7 +205,7 @@ func (s *userStorageProvider) PostRealmUserStorageIDSync(ctx context.Context, re
 // PostRealmUserStorageIDUnlinkUsers - Unlink imported users from a storage provider
 func (s *userStorageProvider) PostRealmUserStorageIDUnlinkUsers(ctx context.Context, request operations.PostRealmUserStorageIDUnlinkUsersRequest) (*operations.PostRealmUserStorageIDUnlinkUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/unlink-users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{id}/unlink-users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -240,14 +240,14 @@ func (s *userStorageProvider) PostRealmUserStorageIDUnlinkUsers(ctx context.Cont
 // PostRealmUserStorageParentIDMappersIDSync - Trigger sync of mapper data related to ldap mapper (roles, groups, …​)   direction is "fedToKeycloak" or "keycloakToFed"
 func (s *userStorageProvider) PostRealmUserStorageParentIDMappersIDSync(ctx context.Context, request operations.PostRealmUserStorageParentIDMappersIDSyncRequest) (*operations.PostRealmUserStorageParentIDMappersIDSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{parentId}/mappers/{id}/sync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/user-storage/{parentId}/mappers/{id}/sync", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

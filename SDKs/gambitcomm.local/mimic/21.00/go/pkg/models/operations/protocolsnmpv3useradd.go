@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3UserAddPathParams struct {
+type ProtocolSnmpv3UserAddRequest struct {
 	// Agent to add the SNMPv3 user
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMPv3 user authentication key
@@ -21,10 +21,6 @@ type ProtocolSnmpv3UserAddPathParams struct {
 	SecurityName string `pathParam:"style=simple,explode=false,name=securityName"`
 	// SNMPv3 user name
 	UserName string `pathParam:"style=simple,explode=false,name=userName"`
-}
-
-type ProtocolSnmpv3UserAddRequest struct {
-	PathParams ProtocolSnmpv3UserAddPathParams
 }
 
 type ProtocolSnmpv3UserAddResponse struct {

@@ -12,10 +12,11 @@ var ListWirelessCommandServerList = []string{
 }
 
 type ListWirelessCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListWirelessCommandQueryParams struct {
+type ListWirelessCommandRequest struct {
 	Device    *string `queryParam:"style=form,explode=true,name=Device"`
 	Direction *string `queryParam:"style=form,explode=true,name=Direction"`
 	// The page index. This value is simply for client state.
@@ -26,12 +27,6 @@ type ListWirelessCommandQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	Sim       *string `queryParam:"style=form,explode=true,name=Sim"`
 	Status    *string `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListWirelessCommandRequest struct {
-	QueryParams ListWirelessCommandQueryParams
-	Security    ListWirelessCommandSecurity
-	ServerURL   *string
 }
 
 type ListWirelessCommandListWirelessCommandResponseMeta struct {

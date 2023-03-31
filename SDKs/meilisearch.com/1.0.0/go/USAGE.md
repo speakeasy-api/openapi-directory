@@ -14,10 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.AddOrReplaceDocumentsRequest{
-        QueryParams: operations.AddOrReplaceDocumentsQueryParams{
-            PrimaryKey: "id",
-        },
-        Request: []AddOrReplaceDocumentsRequestBody{
+        RequestBody: []AddOrReplaceDocumentsRequestBody{
             operations.AddOrReplaceDocumentsRequestBody{
                 Author: "Jane Austen",
                 Genre: "romance",
@@ -40,6 +37,7 @@ func main() {
                 Title: "Pride and Prejudice",
             },
         },
+        PrimaryKey: "id",
     }
 
     ctx := context.Background()

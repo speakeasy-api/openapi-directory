@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateUcsManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateUcsManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateUcsManagerRequest struct {
-	PathParams UpdateUcsManagerPathParams
-	Request    *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security   UpdateUcsManagerSecurity
+	SwitchDataSource *shared.SwitchDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateUcsManagerResponse struct {

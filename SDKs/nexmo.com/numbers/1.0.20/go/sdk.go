@@ -107,7 +107,7 @@ func New(opts ...SDKOption) *SDK {
 
 // BuyANumber - Buy a number
 // Request to purchase a specific inbound number.
-func (s *SDK) BuyANumber(ctx context.Context, request operations.BuyANumberRequest) (*operations.BuyANumberResponse, error) {
+func (s *SDK) BuyANumber(ctx context.Context, request shared.NumberDetails) (*operations.BuyANumberResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/number/buy"
 
@@ -203,7 +203,7 @@ func (s *SDK) BuyANumber(ctx context.Context, request operations.BuyANumberReque
 
 // CancelANumber - Cancel a number
 // Cancel your subscription for a specific inbound number.
-func (s *SDK) CancelANumber(ctx context.Context, request operations.CancelANumberRequest) (*operations.CancelANumberResponse, error) {
+func (s *SDK) CancelANumber(ctx context.Context, request shared.NumberDetails) (*operations.CancelANumberResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/number/cancel"
 
@@ -291,7 +291,7 @@ func (s *SDK) GetAvailableNumbers(ctx context.Context, request operations.GetAva
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -364,7 +364,7 @@ func (s *SDK) GetOwnedNumbers(ctx context.Context, request operations.GetOwnedNu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -428,7 +428,7 @@ func (s *SDK) GetOwnedNumbers(ctx context.Context, request operations.GetOwnedNu
 
 // UpdateANumber - Update a number
 // Change the behaviour of a number that you own.
-func (s *SDK) UpdateANumber(ctx context.Context, request operations.UpdateANumberRequest) (*operations.UpdateANumberResponse, error) {
+func (s *SDK) UpdateANumber(ctx context.Context, request shared.NumberDetailsUpdate) (*operations.UpdateANumberResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/number/update"
 

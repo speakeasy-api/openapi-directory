@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV2SegmentsIDContentSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2SegmentsIDContentPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2SegmentsIDContentRequest struct {
-	PathParams GetAPIV2SegmentsIDContentPathParams
-	Security   GetAPIV2SegmentsIDContentSecurity
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV2SegmentsIDContentResponse struct {

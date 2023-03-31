@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNotificationsQueryParams struct {
+type GetNotificationsRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
@@ -34,10 +34,6 @@ type GetNotificationsQueryParams struct {
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 	// DEPRECATED: Show notifications for this User ID. Use `filter[user_id]` instead.
 	UserID *int `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type GetNotificationsRequest struct {
-	QueryParams GetNotificationsQueryParams
 }
 
 type GetNotificationsResponse struct {

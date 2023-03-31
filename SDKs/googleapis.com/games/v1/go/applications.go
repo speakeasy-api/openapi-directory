@@ -33,20 +33,20 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GamesApplicationsGet - Retrieves the metadata of the application with the given ID. If the requested application is not available for the specified `platformType`, the returned response will not include any instance data.
-func (s *applications) GamesApplicationsGet(ctx context.Context, request operations.GamesApplicationsGetRequest) (*operations.GamesApplicationsGetResponse, error) {
+func (s *applications) GamesApplicationsGet(ctx context.Context, request operations.GamesApplicationsGetRequest, security operations.GamesApplicationsGetSecurity) (*operations.GamesApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *applications) GamesApplicationsGet(ctx context.Context, request operati
 }
 
 // GamesApplicationsGetEndPoint - Returns a URL for the requested end point type.
-func (s *applications) GamesApplicationsGetEndPoint(ctx context.Context, request operations.GamesApplicationsGetEndPointRequest) (*operations.GamesApplicationsGetEndPointResponse, error) {
+func (s *applications) GamesApplicationsGetEndPoint(ctx context.Context, request operations.GamesApplicationsGetEndPointRequest, security operations.GamesApplicationsGetEndPointSecurity) (*operations.GamesApplicationsGetEndPointResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/applications/getEndPoint"
 
@@ -90,11 +90,11 @@ func (s *applications) GamesApplicationsGetEndPoint(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *applications) GamesApplicationsGetEndPoint(ctx context.Context, request
 }
 
 // GamesApplicationsPlayed - Indicate that the currently authenticated user is playing your application.
-func (s *applications) GamesApplicationsPlayed(ctx context.Context, request operations.GamesApplicationsPlayedRequest) (*operations.GamesApplicationsPlayedResponse, error) {
+func (s *applications) GamesApplicationsPlayed(ctx context.Context, request operations.GamesApplicationsPlayedRequest, security operations.GamesApplicationsPlayedSecurity) (*operations.GamesApplicationsPlayedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/applications/played"
 
@@ -138,11 +138,11 @@ func (s *applications) GamesApplicationsPlayed(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,20 +168,20 @@ func (s *applications) GamesApplicationsPlayed(ctx context.Context, request oper
 }
 
 // GamesApplicationsVerify - Verifies the auth token provided with this request is for the application with the specified ID, and returns the ID of the player it was granted for.
-func (s *applications) GamesApplicationsVerify(ctx context.Context, request operations.GamesApplicationsVerifyRequest) (*operations.GamesApplicationsVerifyResponse, error) {
+func (s *applications) GamesApplicationsVerify(ctx context.Context, request operations.GamesApplicationsVerifyRequest, security operations.GamesApplicationsVerifySecurity) (*operations.GamesApplicationsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}/verify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}/verify", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

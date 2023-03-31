@@ -13,10 +13,11 @@ var ListEventServerList = []string{
 }
 
 type ListEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListEventQueryParams struct {
+type ListEventRequest struct {
 	// Only include events initiated by this Actor. Useful for auditing actions taken by specific users or API credentials.
 	ActorSid *string `queryParam:"style=form,explode=true,name=ActorSid"`
 	// Only include events that occurred on or before this date. Specify the date in GMT and [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
@@ -35,12 +36,6 @@ type ListEventQueryParams struct {
 	SourceIPAddress *string `queryParam:"style=form,explode=true,name=SourceIpAddress"`
 	// Only include events that occurred on or after this date. Specify the date in GMT and [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type ListEventRequest struct {
-	QueryParams ListEventQueryParams
-	Security    ListEventSecurity
-	ServerURL   *string
 }
 
 type ListEventListEventResponseMeta struct {

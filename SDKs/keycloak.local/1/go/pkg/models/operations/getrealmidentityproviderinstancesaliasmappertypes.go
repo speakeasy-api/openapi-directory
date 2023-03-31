@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetRealmIdentityProviderInstancesAliasMapperTypesPathParams struct {
+type GetRealmIdentityProviderInstancesAliasMapperTypesRequest struct {
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmIdentityProviderInstancesAliasMapperTypesRequest struct {
-	PathParams GetRealmIdentityProviderInstancesAliasMapperTypesPathParams
 }
 
 type GetRealmIdentityProviderInstancesAliasMapperTypesResponse struct {

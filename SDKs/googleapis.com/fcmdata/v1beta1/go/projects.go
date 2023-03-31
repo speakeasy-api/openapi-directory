@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FcmdataProjectsAndroidAppsDeliveryDataList - List aggregate delivery data for the given Android application.
-func (s *projects) FcmdataProjectsAndroidAppsDeliveryDataList(ctx context.Context, request operations.FcmdataProjectsAndroidAppsDeliveryDataListRequest) (*operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse, error) {
+func (s *projects) FcmdataProjectsAndroidAppsDeliveryDataList(ctx context.Context, request operations.FcmdataProjectsAndroidAppsDeliveryDataListRequest, security operations.FcmdataProjectsAndroidAppsDeliveryDataListSecurity) (*operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/deliveryData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/deliveryData", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

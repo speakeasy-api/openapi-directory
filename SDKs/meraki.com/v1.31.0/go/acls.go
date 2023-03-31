@@ -34,9 +34,9 @@ func newAcls(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Creates new adaptive policy ACL
 func (s *acls) CreateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyACLRequest) (*operations.CreateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *acls) CreateOrganizationAdaptivePolicyACL(ctx context.Context, request 
 // Deletes the specified adaptive policy ACL. Note this adaptive policy ACL will also be removed from policies using it.
 func (s *acls) DeleteOrganizationAdaptivePolicyACL(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyACLRequest) (*operations.DeleteOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *acls) DeleteOrganizationAdaptivePolicyACL(ctx context.Context, request 
 // Returns the adaptive policy ACL information
 func (s *acls) GetOrganizationAdaptivePolicyACL(ctx context.Context, request operations.GetOrganizationAdaptivePolicyACLRequest) (*operations.GetOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *acls) GetOrganizationAdaptivePolicyACL(ctx context.Context, request ope
 // List adaptive policy ACLs in a organization
 func (s *acls) GetOrganizationAdaptivePolicyAcls(ctx context.Context, request operations.GetOrganizationAdaptivePolicyAclsRequest) (*operations.GetOrganizationAdaptivePolicyAclsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *acls) GetOrganizationAdaptivePolicyAcls(ctx context.Context, request op
 // Updates an adaptive policy ACL
 func (s *acls) UpdateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyACLRequest) (*operations.UpdateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

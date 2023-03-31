@@ -16,10 +16,6 @@ type EmulationOutputRequestBody struct {
 	File EmulationOutputRequestBodyFile `multipartForm:"file"`
 }
 
-type EmulationOutputRequest struct {
-	Request EmulationOutputRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // EmulationOutput200Wildcard - emulation output after unpacking the file
 type EmulationOutput200Wildcard struct {
 	Output []string

@@ -12,12 +12,8 @@ var CreateNetworkAccessProfileNetworkServerList = []string{
 }
 
 type CreateNetworkAccessProfileNetworkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateNetworkAccessProfileNetworkPathParams struct {
-	// The unique string that identifies the Network Access Profile resource.
-	NetworkAccessProfileSid string `pathParam:"style=simple,explode=false,name=NetworkAccessProfileSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest struct {
@@ -26,10 +22,9 @@ type CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest s
 }
 
 type CreateNetworkAccessProfileNetworkRequest struct {
-	PathParams CreateNetworkAccessProfileNetworkPathParams
-	Request    *CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateNetworkAccessProfileNetworkSecurity
-	ServerURL  *string
+	// The unique string that identifies the Network Access Profile resource.
+	NetworkAccessProfileSid string                                                                     `pathParam:"style=simple,explode=false,name=NetworkAccessProfileSid"`
+	RequestBody             *CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateNetworkAccessProfileNetworkResponse struct {

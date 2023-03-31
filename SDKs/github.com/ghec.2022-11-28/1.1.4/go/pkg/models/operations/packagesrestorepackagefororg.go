@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackagesRestorePackageForOrgPathParams struct {
+type PackagesRestorePackageForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the package.
 	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
 	// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
 	PackageType shared.PackageTypeEnum `pathParam:"style=simple,explode=false,name=package_type"`
-}
-
-type PackagesRestorePackageForOrgQueryParams struct {
 	// package token
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type PackagesRestorePackageForOrgRequest struct {
-	PathParams  PackagesRestorePackageForOrgPathParams
-	QueryParams PackagesRestorePackageForOrgQueryParams
 }
 
 type PackagesRestorePackageForOrgResponse struct {

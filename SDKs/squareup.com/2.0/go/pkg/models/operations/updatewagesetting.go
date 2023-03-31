@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateWageSettingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateWageSettingPathParams struct {
-	// The ID of the team member for which to update the `WageSetting` object.
-	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateWageSettingRequest struct {
-	PathParams UpdateWageSettingPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateWageSettingRequest `request:"mediaType=application/json"`
-	Security UpdateWageSettingSecurity
+	UpdateWageSettingRequest shared.UpdateWageSettingRequest `request:"mediaType=application/json"`
+	// The ID of the team member for which to update the `WageSetting` object.
+	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
 }
 
 type UpdateWageSettingResponse struct {

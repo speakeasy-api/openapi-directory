@@ -10,7 +10,7 @@ import (
 )
 
 type PostAPIV1FiltersSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1FiltersRequestBodyContextEnum string
@@ -53,11 +53,6 @@ type PostAPIV1FiltersRequestBody struct {
 	Phrase string
 	// Consider word boundaries?
 	WholeWord *bool
-}
-
-type PostAPIV1FiltersRequest struct {
-	Request  []byte `request:"mediaType=application/form-data"`
-	Security PostAPIV1FiltersSecurity
 }
 
 type PostAPIV1FiltersResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type AddImageCollectionItemsSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type AddImageCollectionItemsPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddImageCollectionItemsRequest struct {
-	PathParams AddImageCollectionItemsPathParams
 	// Array of image IDs to add to the collection
-	Request  shared.CollectionItemRequest `request:"mediaType=application/json"`
-	Security AddImageCollectionItemsSecurity
+	CollectionItemRequest shared.CollectionItemRequest `request:"mediaType=application/json"`
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AddImageCollectionItemsResponse struct {

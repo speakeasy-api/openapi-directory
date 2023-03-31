@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsGetColumnPathParams struct {
+type ProjectsGetColumnRequest struct {
 	// column_id parameter
 	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
-}
-
-type ProjectsGetColumnRequest struct {
-	PathParams ProjectsGetColumnPathParams
 }
 
 type ProjectsGetColumnResponse struct {

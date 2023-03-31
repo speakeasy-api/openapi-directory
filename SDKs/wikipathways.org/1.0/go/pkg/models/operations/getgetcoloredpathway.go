@@ -44,7 +44,7 @@ func (e *GetGetColoredPathwayFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetColoredPathwayQueryParams struct {
+type GetGetColoredPathwayRequest struct {
 	// string
 	Color []interface{} `queryParam:"style=form,explode=false,name=color"`
 	// The image type (One of 'svg', 'pdf' or 'png').
@@ -56,10 +56,6 @@ type GetGetColoredPathwayQueryParams struct {
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
 	// The revision of the pathway (use '0' for most recent)
 	Revision string `queryParam:"style=form,explode=true,name=revision"`
-}
-
-type GetGetColoredPathwayRequest struct {
-	QueryParams GetGetColoredPathwayQueryParams
 }
 
 type GetGetColoredPathwayResponse struct {

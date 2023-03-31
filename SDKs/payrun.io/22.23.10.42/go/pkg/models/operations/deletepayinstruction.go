@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePayInstructionPathParams struct {
+type DeletePayInstructionRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employees' unique identifier. E.g EE001
 	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The pay instruction unique identifier. E.g. SAL001
 	PayInstructionID string `pathParam:"style=simple,explode=false,name=PayInstructionId"`
-}
-
-type DeletePayInstructionHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeletePayInstructionRequest struct {
-	PathParams DeletePayInstructionPathParams
-	Headers    DeletePayInstructionHeaders
 }
 
 type DeletePayInstructionResponse struct {

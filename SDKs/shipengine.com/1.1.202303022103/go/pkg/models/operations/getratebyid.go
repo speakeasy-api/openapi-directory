@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRateByIDPathParams struct {
+type GetRateByIDRequest struct {
 	// Rate ID
 	RateID string `pathParam:"style=simple,explode=false,name=rate_id"`
-}
-
-type GetRateByIDRequest struct {
-	PathParams GetRateByIDPathParams
 }
 
 type GetRateByIDResponse struct {

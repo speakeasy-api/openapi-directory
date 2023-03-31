@@ -357,7 +357,7 @@ func (s *settings) GetSortableAttributes(ctx context.Context) (*operations.GetSo
 
 // GetStopWords - Get stop-words
 // Get stop-words
-func (s *settings) GetStopWords(ctx context.Context, request operations.GetStopWordsRequest) (*operations.GetStopWordsResponse, error) {
+func (s *settings) GetStopWords(ctx context.Context, request []string) (*operations.GetStopWordsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/stop-words"
 
@@ -832,7 +832,7 @@ func (s *settings) ResetStopWords(ctx context.Context) (*operations.ResetStopWor
 
 // ResetSynonyms - Reset synonyms
 // Reset synonyms
-func (s *settings) ResetSynonyms(ctx context.Context, request operations.ResetSynonymsRequest) (*operations.ResetSynonymsResponse, error) {
+func (s *settings) ResetSynonyms(ctx context.Context, request []byte) (*operations.ResetSynonymsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/synonyms"
 
@@ -911,7 +911,7 @@ func (s *settings) ResetTypoTolerance(ctx context.Context) (*operations.ResetTyp
 
 // UpdateDisplayedAttributes - Update displayed attributes
 // Update displayed attributes
-func (s *settings) UpdateDisplayedAttributes(ctx context.Context, request operations.UpdateDisplayedAttributesRequest) (*operations.UpdateDisplayedAttributesResponse, error) {
+func (s *settings) UpdateDisplayedAttributes(ctx context.Context, request []string) (*operations.UpdateDisplayedAttributesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/displayed-attributes"
 
@@ -954,7 +954,7 @@ func (s *settings) UpdateDisplayedAttributes(ctx context.Context, request operat
 
 // UpdateDistinctAttribute - Update distinct attribute
 // Update distinct attribute
-func (s *settings) UpdateDistinctAttribute(ctx context.Context, request operations.UpdateDistinctAttributeRequest) (*operations.UpdateDistinctAttributeResponse, error) {
+func (s *settings) UpdateDistinctAttribute(ctx context.Context, request []byte) (*operations.UpdateDistinctAttributeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/distinct-attribute"
 
@@ -997,7 +997,7 @@ func (s *settings) UpdateDistinctAttribute(ctx context.Context, request operatio
 
 // UpdateFaceting - Update faceting
 // Update faceting
-func (s *settings) UpdateFaceting(ctx context.Context, request operations.UpdateFacetingRequest) (*operations.UpdateFacetingResponse, error) {
+func (s *settings) UpdateFaceting(ctx context.Context, request operations.UpdateFacetingRequestBody) (*operations.UpdateFacetingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/faceting"
 
@@ -1040,7 +1040,7 @@ func (s *settings) UpdateFaceting(ctx context.Context, request operations.Update
 
 // UpdateFilterableAttributes - Update filterable attributes
 // Update filterable attributes
-func (s *settings) UpdateFilterableAttributes(ctx context.Context, request operations.UpdateFilterableAttributesRequest) (*operations.UpdateFilterableAttributesResponse, error) {
+func (s *settings) UpdateFilterableAttributes(ctx context.Context, request []string) (*operations.UpdateFilterableAttributesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/filterable-attributes"
 
@@ -1083,7 +1083,7 @@ func (s *settings) UpdateFilterableAttributes(ctx context.Context, request opera
 
 // UpdatePagination - Update pagination
 // Update pagination
-func (s *settings) UpdatePagination(ctx context.Context, request operations.UpdatePaginationRequest) (*operations.UpdatePaginationResponse, error) {
+func (s *settings) UpdatePagination(ctx context.Context, request operations.UpdatePaginationRequestBody) (*operations.UpdatePaginationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/pagination"
 
@@ -1126,7 +1126,7 @@ func (s *settings) UpdatePagination(ctx context.Context, request operations.Upda
 
 // UpdateRankingRules - Update ranking rules
 // Update ranking rules
-func (s *settings) UpdateRankingRules(ctx context.Context, request operations.UpdateRankingRulesRequest) (*operations.UpdateRankingRulesResponse, error) {
+func (s *settings) UpdateRankingRules(ctx context.Context, request []string) (*operations.UpdateRankingRulesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/ranking-rules"
 
@@ -1169,7 +1169,7 @@ func (s *settings) UpdateRankingRules(ctx context.Context, request operations.Up
 
 // UpdateSearchableAttributes - Update searchable attributes
 // Update searchable attributes
-func (s *settings) UpdateSearchableAttributes(ctx context.Context, request operations.UpdateSearchableAttributesRequest) (*operations.UpdateSearchableAttributesResponse, error) {
+func (s *settings) UpdateSearchableAttributes(ctx context.Context, request []string) (*operations.UpdateSearchableAttributesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/searchable-attributes"
 
@@ -1212,7 +1212,7 @@ func (s *settings) UpdateSearchableAttributes(ctx context.Context, request opera
 
 // UpdateSettings - Update settings
 // Update settings
-func (s *settings) UpdateSettings(ctx context.Context, request operations.UpdateSettingsRequest) (*operations.UpdateSettingsResponse, error) {
+func (s *settings) UpdateSettings(ctx context.Context, request operations.UpdateSettingsRequestBody) (*operations.UpdateSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings"
 
@@ -1255,7 +1255,7 @@ func (s *settings) UpdateSettings(ctx context.Context, request operations.Update
 
 // UpdateSortableAttributes - Update sortable attributes
 // Update sortable attributes
-func (s *settings) UpdateSortableAttributes(ctx context.Context, request operations.UpdateSortableAttributesRequest) (*operations.UpdateSortableAttributesResponse, error) {
+func (s *settings) UpdateSortableAttributes(ctx context.Context, request []string) (*operations.UpdateSortableAttributesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/sortable-attributes"
 
@@ -1298,7 +1298,7 @@ func (s *settings) UpdateSortableAttributes(ctx context.Context, request operati
 
 // UpdateStopWords - Update stop-words
 // Update stop-words
-func (s *settings) UpdateStopWords(ctx context.Context, request operations.UpdateStopWordsRequest) (*operations.UpdateStopWordsResponse, error) {
+func (s *settings) UpdateStopWords(ctx context.Context, request []string) (*operations.UpdateStopWordsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/stop-words"
 
@@ -1341,7 +1341,7 @@ func (s *settings) UpdateStopWords(ctx context.Context, request operations.Updat
 
 // UpdateSynonyms - Update synonyms
 // Update synonyms
-func (s *settings) UpdateSynonyms(ctx context.Context, request operations.UpdateSynonymsRequest) (*operations.UpdateSynonymsResponse, error) {
+func (s *settings) UpdateSynonyms(ctx context.Context, request operations.UpdateSynonymsRequestBody) (*operations.UpdateSynonymsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/synonyms"
 
@@ -1384,7 +1384,7 @@ func (s *settings) UpdateSynonyms(ctx context.Context, request operations.Update
 
 // UpdateTypoTolerance - Update typo-tolerance
 // Update typo-tolerance
-func (s *settings) UpdateTypoTolerance(ctx context.Context, request operations.UpdateTypoToleranceRequest) (*operations.UpdateTypoToleranceResponse, error) {
+func (s *settings) UpdateTypoTolerance(ctx context.Context, request operations.UpdateTypoToleranceRequestBody) (*operations.UpdateTypoToleranceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/settings/typo-tolerance"
 

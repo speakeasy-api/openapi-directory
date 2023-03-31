@@ -36,14 +36,14 @@ func newConfiguration(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns associated data for the specified affiliation Id, like name and implementation, for example.
 func (s *configuration) AffiliationByID(ctx context.Context, request operations.AffiliationByIDRequest) (*operations.AffiliationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -81,7 +81,7 @@ func (s *configuration) Affiliations(ctx context.Context, request operations.Aff
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -119,7 +119,7 @@ func (s *configuration) AvailablePaymentMethods(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -163,7 +163,7 @@ func (s *configuration) InsertAffiliation(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/pvt/affiliations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertAffiliationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -178,7 +178,7 @@ func (s *configuration) InsertAffiliation(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -211,7 +211,7 @@ func (s *configuration) InsertRule(ctx context.Context, request operations.Inser
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/pvt/rules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertRuleRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -226,7 +226,7 @@ func (s *configuration) InsertRule(ctx context.Context, request operations.Inser
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -257,9 +257,9 @@ func (s *configuration) InsertRule(ctx context.Context, request operations.Inser
 // Update Rule.
 func (s *configuration) PutRuleByID(ctx context.Context, request operations.PutRuleByIDRequest) (*operations.PutRuleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RuleByIDRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -274,7 +274,7 @@ func (s *configuration) PutRuleByID(ctx context.Context, request operations.PutR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -305,14 +305,14 @@ func (s *configuration) PutRuleByID(ctx context.Context, request operations.PutR
 // Deletes rules by specified Id.
 func (s *configuration) Rule(ctx context.Context, request operations.RuleRequest) (*operations.RuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -343,14 +343,14 @@ func (s *configuration) Rule(ctx context.Context, request operations.RuleRequest
 // Returns rule by specified RuleId.
 func (s *configuration) RuleByID(ctx context.Context, request operations.RuleByIDRequest) (*operations.RuleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -388,7 +388,7 @@ func (s *configuration) Rules(ctx context.Context, request operations.RulesReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -419,9 +419,9 @@ func (s *configuration) Rules(ctx context.Context, request operations.RulesReque
 // Returns all affiliations.
 func (s *configuration) UpdateAffiliation(ctx context.Context, request operations.UpdateAffiliationRequest) (*operations.UpdateAffiliationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAffiliationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -436,7 +436,7 @@ func (s *configuration) UpdateAffiliation(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

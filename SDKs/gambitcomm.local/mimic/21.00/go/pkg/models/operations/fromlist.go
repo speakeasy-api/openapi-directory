@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FromListPathParams struct {
+type FromListRequest struct {
 	// Agent to show the IP sources
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type FromListRequest struct {
-	PathParams FromListPathParams
 }
 
 type FromListResponse struct {

@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateStatusCheckProtectionPathParams struct {
-	// The name of the branch.
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposUpdateStatusCheckProtectionRequestBody struct {
 	// The list of status checks to require in order to merge into this branch
 	Contexts []string `json:"contexts,omitempty"`
@@ -24,8 +15,13 @@ type ReposUpdateStatusCheckProtectionRequestBody struct {
 }
 
 type ReposUpdateStatusCheckProtectionRequest struct {
-	PathParams ReposUpdateStatusCheckProtectionPathParams
-	Request    *ReposUpdateStatusCheckProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateStatusCheckProtectionRequestBody `request:"mediaType=application/json"`
+	// The name of the branch.
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateStatusCheckProtectionResponse struct {

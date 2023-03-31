@@ -12,21 +12,16 @@ var FetchSyncDocumentPermissionServerList = []string{
 }
 
 type FetchSyncDocumentPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSyncDocumentPermissionPathParams struct {
+type FetchSyncDocumentPermissionRequest struct {
 	// Identifier of the Sync Document. Either a SID or a unique name.
 	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
 	// Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
 	Identity   string `pathParam:"style=simple,explode=false,name=Identity"`
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type FetchSyncDocumentPermissionRequest struct {
-	PathParams FetchSyncDocumentPermissionPathParams
-	Security   FetchSyncDocumentPermissionSecurity
-	ServerURL  *string
 }
 
 type FetchSyncDocumentPermissionResponse struct {

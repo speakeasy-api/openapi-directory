@@ -11,15 +11,10 @@ var PostV05HealthInformationTransferJSONServerList = []string{
 	"https://dev.ndhm.gov.in/hiu",
 }
 
-type PostV05HealthInformationTransferJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05HealthInformationTransferJSONRequest struct {
-	Headers   PostV05HealthInformationTransferJSONHeaders
-	Request   shared.DataNotification `request:"mediaType=application/json"`
-	ServerURL *string
+	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+	Authorization    string                  `header:"style=simple,explode=false,name=Authorization"`
+	DataNotification shared.DataNotification `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationTransferJSONResponse struct {

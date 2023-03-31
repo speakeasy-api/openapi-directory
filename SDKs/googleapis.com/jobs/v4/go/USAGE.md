@@ -14,51 +14,41 @@ func main() {
     s := sdk.New()
 
     req := operations.JobsProjectsTenantsClientEventsCreateRequest{
-        Security: operations.JobsProjectsTenantsClientEventsCreateSecurity{
-            Option1: &operations.JobsProjectsTenantsClientEventsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.JobsProjectsTenantsClientEventsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.JobsProjectsTenantsClientEventsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ClientEvent{
-            CreateTime: "suscipit",
-            EventID: "iure",
-            EventNotes: "magnam",
+        DollarXgafv: "2",
+        ClientEvent: &shared.ClientEvent{
+            CreateTime: "provident",
+            EventID: "distinctio",
+            EventNotes: "quibusdam",
             JobEvent: &shared.JobEvent{
                 Jobs: []string{
-                    "ipsa",
-                    "delectus",
-                    "tempora",
-                    "suscipit",
+                    "nulla",
+                    "corrupti",
+                    "illum",
                 },
-                Type: "APPLICATION_REDIRECT",
+                Type: "APPLICATION_QUICK_SUBMISSION",
             },
-            RequestID: "minus",
+            RequestID: "error",
         },
+        AccessToken: "deserunt",
+        Alt: "media",
+        Callback: "iure",
+        Fields: "magnam",
+        Key: "debitis",
+        OauthToken: "ipsa",
+        Parent: "delectus",
+        PrettyPrint: false,
+        QuotaUser: "tempora",
+        UploadType: "suscipit",
+        UploadProtocol: "molestiae",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.JobsProjectsTenantsClientEventsCreate(ctx, req)
+    res, err := s.Projects.JobsProjectsTenantsClientEventsCreate(ctx, req, operations.JobsProjectsTenantsClientEventsCreateSecurity{
+        Option1: &operations.JobsProjectsTenantsClientEventsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

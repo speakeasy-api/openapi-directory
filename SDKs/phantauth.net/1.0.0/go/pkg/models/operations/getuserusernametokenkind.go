@@ -44,21 +44,13 @@ func (e *GetUserUsernameTokenKindKindEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserUsernameTokenKindPathParams struct {
+type GetUserUsernameTokenKindRequest struct {
 	// Token type
 	Kind GetUserUsernameTokenKindKindEnum `pathParam:"style=simple,explode=false,name=kind"`
-	// A username or email.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetUserUsernameTokenKindQueryParams struct {
 	// OpenID Connect scope
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
-}
-
-type GetUserUsernameTokenKindRequest struct {
-	PathParams  GetUserUsernameTokenKindPathParams
-	QueryParams GetUserUsernameTokenKindQueryParams
+	// A username or email.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetUserUsernameTokenKindResponse struct {

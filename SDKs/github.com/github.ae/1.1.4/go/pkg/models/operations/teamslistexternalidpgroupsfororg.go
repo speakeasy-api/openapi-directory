@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListExternalIdpGroupsForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type TeamsListExternalIdpGroupsForOrgQueryParams struct {
+type TeamsListExternalIdpGroupsForOrgRequest struct {
 	// Limits the list to groups containing the text in the group name
 	DisplayName *string `queryParam:"style=form,explode=true,name=display_name"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page token
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListExternalIdpGroupsForOrgRequest struct {
-	PathParams  TeamsListExternalIdpGroupsForOrgPathParams
-	QueryParams TeamsListExternalIdpGroupsForOrgQueryParams
 }
 
 type TeamsListExternalIdpGroupsForOrgResponse struct {

@@ -10,13 +10,13 @@ import (
 )
 
 type CloudidentityDevicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityDevicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityDevicesListSecurity struct {
@@ -51,7 +51,7 @@ func (e *CloudidentityDevicesListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CloudidentityDevicesListQueryParams struct {
+type CloudidentityDevicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -86,11 +86,6 @@ type CloudidentityDevicesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. The view to use for the List request.
 	View *CloudidentityDevicesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudidentityDevicesListRequest struct {
-	QueryParams CloudidentityDevicesListQueryParams
-	Security    CloudidentityDevicesListSecurity
 }
 
 type CloudidentityDevicesListResponse struct {

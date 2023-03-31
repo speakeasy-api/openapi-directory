@@ -8,23 +8,14 @@ import (
 )
 
 type GetEmployeeSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetEmployeePathParams struct {
-	// Employee id for single object
-	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeID"`
-}
-
-type GetEmployeeHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetEmployeeRequest struct {
-	PathParams GetEmployeePathParams
-	Headers    GetEmployeeHeaders
-	Security   GetEmployeeSecurity
+	// Employee id for single object
+	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeID"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type GetEmployeeResponse struct {

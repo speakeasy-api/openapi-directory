@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GroundhogRequest{
-        PathParams: operations.GroundhogPathParams{
-            Slug: "corrupti",
-        },
+        Slug: "corrupti",
     }
 
     ctx := context.Background()

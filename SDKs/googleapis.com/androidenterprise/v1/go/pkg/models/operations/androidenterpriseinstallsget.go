@@ -8,22 +8,11 @@ import (
 )
 
 type AndroidenterpriseInstallsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidenterpriseInstallsGetPathParams struct {
-	// The Android ID of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-	// The ID of the enterprise.
-	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
-	// The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-	InstallID string `pathParam:"style=simple,explode=false,name=installId"`
-	// The ID of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type AndroidenterpriseInstallsGetQueryParams struct {
+type AndroidenterpriseInstallsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,8 +21,14 @@ type AndroidenterpriseInstallsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The Android ID of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	// The ID of the enterprise.
+	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+	InstallID string `pathParam:"style=simple,explode=false,name=installId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -46,12 +41,8 @@ type AndroidenterpriseInstallsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseInstallsGetRequest struct {
-	PathParams  AndroidenterpriseInstallsGetPathParams
-	QueryParams AndroidenterpriseInstallsGetQueryParams
-	Security    AndroidenterpriseInstallsGetSecurity
+	// The ID of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type AndroidenterpriseInstallsGetResponse struct {

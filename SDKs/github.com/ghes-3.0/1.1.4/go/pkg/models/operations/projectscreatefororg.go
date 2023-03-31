@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsCreateForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ProjectsCreateForOrgRequestBody struct {
 	// The description of the project.
 	Body *string `json:"body,omitempty"`
@@ -19,8 +15,8 @@ type ProjectsCreateForOrgRequestBody struct {
 }
 
 type ProjectsCreateForOrgRequest struct {
-	PathParams ProjectsCreateForOrgPathParams
-	Request    ProjectsCreateForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsCreateForOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                          `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ProjectsCreateForOrgResponse struct {

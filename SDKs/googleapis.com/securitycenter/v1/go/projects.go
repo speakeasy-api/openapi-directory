@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // SecuritycenterProjectsAssetsGroup - Filters an organization's assets and groups them by their specified properties.
-func (s *projects) SecuritycenterProjectsAssetsGroup(ctx context.Context, request operations.SecuritycenterProjectsAssetsGroupRequest) (*operations.SecuritycenterProjectsAssetsGroupResponse, error) {
+func (s *projects) SecuritycenterProjectsAssetsGroup(ctx context.Context, request operations.SecuritycenterProjectsAssetsGroupRequest, security operations.SecuritycenterProjectsAssetsGroupSecurity) (*operations.SecuritycenterProjectsAssetsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets:group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets:group", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupAssetsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) SecuritycenterProjectsAssetsGroup(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) SecuritycenterProjectsAssetsGroup(ctx context.Context, reques
 }
 
 // SecuritycenterProjectsAssetsList - Lists an organization's assets.
-func (s *projects) SecuritycenterProjectsAssetsList(ctx context.Context, request operations.SecuritycenterProjectsAssetsListRequest) (*operations.SecuritycenterProjectsAssetsListResponse, error) {
+func (s *projects) SecuritycenterProjectsAssetsList(ctx context.Context, request operations.SecuritycenterProjectsAssetsListRequest, security operations.SecuritycenterProjectsAssetsListSecurity) (*operations.SecuritycenterProjectsAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) SecuritycenterProjectsAssetsList(ctx context.Context, request
 }
 
 // SecuritycenterProjectsBigQueryExportsCreate - Creates a BigQuery export.
-func (s *projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsCreateRequest) (*operations.SecuritycenterProjectsBigQueryExportsCreateResponse, error) {
+func (s *projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsCreateRequest, security operations.SecuritycenterProjectsBigQueryExportsCreateSecurity) (*operations.SecuritycenterProjectsBigQueryExportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1BigQueryExportInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Conte
 }
 
 // SecuritycenterProjectsBigQueryExportsList - Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports under that level are also returned e.g. if requesting BigQuery exports under a folder, then all BigQuery exports immediately under the folder plus the ones created under the projects within the folder are returned.
-func (s *projects) SecuritycenterProjectsBigQueryExportsList(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsListRequest) (*operations.SecuritycenterProjectsBigQueryExportsListResponse, error) {
+func (s *projects) SecuritycenterProjectsBigQueryExportsList(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsListRequest, security operations.SecuritycenterProjectsBigQueryExportsListSecurity) (*operations.SecuritycenterProjectsBigQueryExportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) SecuritycenterProjectsBigQueryExportsList(ctx context.Context
 }
 
 // SecuritycenterProjectsFindingsBulkMute - Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either an organization, folder or project. The findings matched by the filter will be muted after the LRO is done.
-func (s *projects) SecuritycenterProjectsFindingsBulkMute(ctx context.Context, request operations.SecuritycenterProjectsFindingsBulkMuteRequest) (*operations.SecuritycenterProjectsFindingsBulkMuteResponse, error) {
+func (s *projects) SecuritycenterProjectsFindingsBulkMute(ctx context.Context, request operations.SecuritycenterProjectsFindingsBulkMuteRequest, security operations.SecuritycenterProjectsFindingsBulkMuteSecurity) (*operations.SecuritycenterProjectsFindingsBulkMuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:bulkMute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:bulkMute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkMuteFindingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) SecuritycenterProjectsFindingsBulkMute(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) SecuritycenterProjectsFindingsBulkMute(ctx context.Context, r
 }
 
 // SecuritycenterProjectsMuteConfigsCreate - Creates a mute config.
-func (s *projects) SecuritycenterProjectsMuteConfigsCreate(ctx context.Context, request operations.SecuritycenterProjectsMuteConfigsCreateRequest) (*operations.SecuritycenterProjectsMuteConfigsCreateResponse, error) {
+func (s *projects) SecuritycenterProjectsMuteConfigsCreate(ctx context.Context, request operations.SecuritycenterProjectsMuteConfigsCreateRequest, security operations.SecuritycenterProjectsMuteConfigsCreateSecurity) (*operations.SecuritycenterProjectsMuteConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1MuteConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) SecuritycenterProjectsMuteConfigsCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) SecuritycenterProjectsMuteConfigsCreate(ctx context.Context, 
 }
 
 // SecuritycenterProjectsMuteConfigsList - Lists mute configs.
-func (s *projects) SecuritycenterProjectsMuteConfigsList(ctx context.Context, request operations.SecuritycenterProjectsMuteConfigsListRequest) (*operations.SecuritycenterProjectsMuteConfigsListResponse, error) {
+func (s *projects) SecuritycenterProjectsMuteConfigsList(ctx context.Context, request operations.SecuritycenterProjectsMuteConfigsListRequest, security operations.SecuritycenterProjectsMuteConfigsListSecurity) (*operations.SecuritycenterProjectsMuteConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) SecuritycenterProjectsMuteConfigsList(ctx context.Context, re
 }
 
 // SecuritycenterProjectsNotificationConfigsCreate - Creates a notification config.
-func (s *projects) SecuritycenterProjectsNotificationConfigsCreate(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsCreateRequest) (*operations.SecuritycenterProjectsNotificationConfigsCreateResponse, error) {
+func (s *projects) SecuritycenterProjectsNotificationConfigsCreate(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsCreateRequest, security operations.SecuritycenterProjectsNotificationConfigsCreateSecurity) (*operations.SecuritycenterProjectsNotificationConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsCreate(ctx context.C
 }
 
 // SecuritycenterProjectsNotificationConfigsDelete - Deletes a notification config.
-func (s *projects) SecuritycenterProjectsNotificationConfigsDelete(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsDeleteRequest) (*operations.SecuritycenterProjectsNotificationConfigsDeleteResponse, error) {
+func (s *projects) SecuritycenterProjectsNotificationConfigsDelete(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsDeleteRequest, security operations.SecuritycenterProjectsNotificationConfigsDeleteSecurity) (*operations.SecuritycenterProjectsNotificationConfigsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,20 +499,20 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsDelete(ctx context.C
 }
 
 // SecuritycenterProjectsNotificationConfigsGet - Gets a notification config.
-func (s *projects) SecuritycenterProjectsNotificationConfigsGet(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsGetRequest) (*operations.SecuritycenterProjectsNotificationConfigsGetResponse, error) {
+func (s *projects) SecuritycenterProjectsNotificationConfigsGet(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsGetRequest, security operations.SecuritycenterProjectsNotificationConfigsGetSecurity) (*operations.SecuritycenterProjectsNotificationConfigsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,20 +547,20 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsGet(ctx context.Cont
 }
 
 // SecuritycenterProjectsNotificationConfigsList - Lists notification configs.
-func (s *projects) SecuritycenterProjectsNotificationConfigsList(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsListRequest) (*operations.SecuritycenterProjectsNotificationConfigsListResponse, error) {
+func (s *projects) SecuritycenterProjectsNotificationConfigsList(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsListRequest, security operations.SecuritycenterProjectsNotificationConfigsListSecurity) (*operations.SecuritycenterProjectsNotificationConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsList(ctx context.Con
 }
 
 // SecuritycenterProjectsSourcesFindingsExternalSystemsPatch - Updates external system. This is for a given finding.
-func (s *projects) SecuritycenterProjectsSourcesFindingsExternalSystemsPatch(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchRequest) (*operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse, error) {
+func (s *projects) SecuritycenterProjectsSourcesFindingsExternalSystemsPatch(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchRequest, security operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchSecurity) (*operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1ExternalSystem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsExternalSystemsPatch(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsExternalSystemsPatch(ctx
 }
 
 // SecuritycenterProjectsSourcesFindingsGroup - Filters an organization or source's findings and groups them by their specified properties. To group across all sources provide a `-` as the source id. Example: /v1/organizations/{organization_id}/sources/-/findings, /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-func (s *projects) SecuritycenterProjectsSourcesFindingsGroup(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsGroupRequest) (*operations.SecuritycenterProjectsSourcesFindingsGroupResponse, error) {
+func (s *projects) SecuritycenterProjectsSourcesFindingsGroup(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsGroupRequest, security operations.SecuritycenterProjectsSourcesFindingsGroupSecurity) (*operations.SecuritycenterProjectsSourcesFindingsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:group", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupFindingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsGroup(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsGroup(ctx context.Contex
 }
 
 // SecuritycenterProjectsSourcesFindingsList - Lists an organization or source's findings. To list across all sources provide a `-` as the source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-func (s *projects) SecuritycenterProjectsSourcesFindingsList(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsListRequest) (*operations.SecuritycenterProjectsSourcesFindingsListResponse, error) {
+func (s *projects) SecuritycenterProjectsSourcesFindingsList(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsListRequest, security operations.SecuritycenterProjectsSourcesFindingsListSecurity) (*operations.SecuritycenterProjectsSourcesFindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,11 +753,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsList(ctx context.Context
 }
 
 // SecuritycenterProjectsSourcesFindingsSetMute - Updates the mute state of a finding.
-func (s *projects) SecuritycenterProjectsSourcesFindingsSetMute(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsSetMuteRequest) (*operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse, error) {
+func (s *projects) SecuritycenterProjectsSourcesFindingsSetMute(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsSetMuteRequest, security operations.SecuritycenterProjectsSourcesFindingsSetMuteSecurity) (*operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setMute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setMute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMuteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,11 +769,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsSetMute(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,11 +808,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsSetMute(ctx context.Cont
 }
 
 // SecuritycenterProjectsSourcesFindingsSetState - Updates the state of a finding.
-func (s *projects) SecuritycenterProjectsSourcesFindingsSetState(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsSetStateRequest) (*operations.SecuritycenterProjectsSourcesFindingsSetStateResponse, error) {
+func (s *projects) SecuritycenterProjectsSourcesFindingsSetState(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsSetStateRequest, security operations.SecuritycenterProjectsSourcesFindingsSetStateSecurity) (*operations.SecuritycenterProjectsSourcesFindingsSetStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setState", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setState", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetFindingStateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -824,11 +824,11 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsSetState(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,20 +863,20 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsSetState(ctx context.Con
 }
 
 // SecuritycenterProjectsSourcesList - Lists all sources belonging to an organization.
-func (s *projects) SecuritycenterProjectsSourcesList(ctx context.Context, request operations.SecuritycenterProjectsSourcesListRequest) (*operations.SecuritycenterProjectsSourcesListResponse, error) {
+func (s *projects) SecuritycenterProjectsSourcesList(ctx context.Context, request operations.SecuritycenterProjectsSourcesListRequest, security operations.SecuritycenterProjectsSourcesListSecurity) (*operations.SecuritycenterProjectsSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

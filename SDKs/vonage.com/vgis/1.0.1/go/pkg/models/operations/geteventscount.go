@@ -66,7 +66,7 @@ func (e *GetEventsCountStatesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEventsCountQueryParams struct {
+type GetEventsCountRequest struct {
 	// Filter by event direction
 	Direction *GetEventsCountDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Return events that occurred after this point in time
@@ -75,10 +75,6 @@ type GetEventsCountQueryParams struct {
 	States *GetEventsCountStatesEnum `queryParam:"style=form,explode=true,name=states"`
 	// Return events that occurred before this point in time
 	ToDate *int64 `queryParam:"style=form,explode=true,name=toDate"`
-}
-
-type GetEventsCountRequest struct {
-	QueryParams GetEventsCountQueryParams
 }
 
 type GetEventsCountResponse struct {

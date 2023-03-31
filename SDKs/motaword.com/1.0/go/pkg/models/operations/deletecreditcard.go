@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCreditCardPathParams struct {
+type DeleteCreditCardRequest struct {
 	// Credit Card ID
 	CardID int64 `pathParam:"style=simple,explode=false,name=cardId"`
-}
-
-type DeleteCreditCardRequest struct {
-	PathParams DeleteCreditCardPathParams
 }
 
 type DeleteCreditCardResponse struct {

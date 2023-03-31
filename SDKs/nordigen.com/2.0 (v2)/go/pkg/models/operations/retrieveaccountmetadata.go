@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAccountMetadataPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type RetrieveAccountMetadataRequest struct {
-	PathParams RetrieveAccountMetadataPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RetrieveAccountMetadataResponse struct {

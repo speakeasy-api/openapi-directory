@@ -37,9 +37,9 @@ func newPolicy(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Creates a new policy from scratch.
 func (s *policy) PolicyCreateOrUpdate(ctx context.Context, request operations.PolicyCreateOrUpdateRequest) (*operations.PolicyCreateOrUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PolicySaveRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *policy) PolicyCreateOrUpdate(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,14 +91,14 @@ func (s *policy) PolicyCreateOrUpdate(ctx context.Context, request operations.Po
 // Deletes a specific policy of the account by its ID.
 func (s *policy) PolicyDelete(ctx context.Context, request operations.PolicyDeleteRequest) (*operations.PolicyDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -131,7 +131,7 @@ func (s *policy) PolicyEvaluate(ctx context.Context, request operations.PolicyEv
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/policy-engine/evaluate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EvaluatePolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -146,7 +146,7 @@ func (s *policy) PolicyEvaluate(ctx context.Context, request operations.PolicyEv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -186,14 +186,14 @@ func (s *policy) PolicyEvaluate(ctx context.Context, request operations.PolicyEv
 // Retrieves general information of a policy by its ID.
 func (s *policy) PolicyGet(ctx context.Context, request operations.PolicyGetRequest) (*operations.PolicyGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -240,7 +240,7 @@ func (s *policy) PolicyList(ctx context.Context, request operations.PolicyListRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -280,9 +280,9 @@ func (s *policy) PolicyList(ctx context.Context, request operations.PolicyListRe
 // Updates an existing policy at your account.
 func (s *policy) PutAPIPolicyEnginePoliciesID(ctx context.Context, request operations.PutAPIPolicyEnginePoliciesIDRequest) (*operations.PutAPIPolicyEnginePoliciesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PolicySaveRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -297,7 +297,7 @@ func (s *policy) PutAPIPolicyEnginePoliciesID(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

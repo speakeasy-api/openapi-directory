@@ -10,38 +10,38 @@ import (
 )
 
 type DriveFilesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurityOption7 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGetSecurity struct {
@@ -52,11 +52,6 @@ type DriveFilesGetSecurity struct {
 	Option5 *DriveFilesGetSecurityOption5 `security:"option"`
 	Option6 *DriveFilesGetSecurityOption6 `security:"option"`
 	Option7 *DriveFilesGetSecurityOption7 `security:"option"`
-}
-
-type DriveFilesGetPathParams struct {
-	// The ID for the file in question.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 // DriveFilesGetProjectionEnum - This parameter is deprecated and has no function.
@@ -83,13 +78,15 @@ func (e *DriveFilesGetProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DriveFilesGetQueryParams struct {
+type DriveFilesGetRequest struct {
 	// Whether the user is acknowledging the risk of downloading known malware or other abusive files.
 	AcknowledgeAbuse *bool `queryParam:"style=form,explode=true,name=acknowledgeAbuse"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID for the file in question.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// A comma-separated list of IDs of labels to include in the labelInfo part of the response.
 	IncludeLabels *string `queryParam:"style=form,explode=true,name=includeLabels"`
 	// Specifies which additional view's permissions to include in the response. Only 'published' is supported.
@@ -114,12 +111,6 @@ type DriveFilesGetQueryParams struct {
 	UpdateViewedDate *bool `queryParam:"style=form,explode=true,name=updateViewedDate"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesGetRequest struct {
-	PathParams  DriveFilesGetPathParams
-	QueryParams DriveFilesGetQueryParams
-	Security    DriveFilesGetSecurity
 }
 
 type DriveFilesGetResponse struct {

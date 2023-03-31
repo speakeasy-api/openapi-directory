@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolDhcpGetArgsPathParams struct {
+type ProtocolDhcpGetArgsRequest struct {
 	// Agent to show the DHCP argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolDhcpGetArgsRequest struct {
-	PathParams ProtocolDhcpGetArgsPathParams
 }
 
 type ProtocolDhcpGetArgsResponse struct {

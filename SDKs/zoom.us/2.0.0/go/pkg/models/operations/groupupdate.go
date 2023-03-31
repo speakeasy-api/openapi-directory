@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GroupUpdatePathParams struct {
-	// The group ID.<br>
-	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupUpdateApplicationJSON struct {
@@ -23,9 +16,10 @@ type GroupUpdateApplicationJSON struct {
 }
 
 type GroupUpdateRequest struct {
-	PathParams GroupUpdatePathParams
-	Request    GroupUpdateApplicationJSON `request:"mediaType=application/json"`
-	Security   GroupUpdateSecurity
+	RequestBody GroupUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The group ID.<br>
+	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type GroupUpdateResponse struct {

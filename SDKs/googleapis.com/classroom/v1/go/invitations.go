@@ -33,20 +33,20 @@ func newInvitations(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // ClassroomInvitationsAccept - Accepts an invitation, removing it and adding the invited user to the teachers or students (as appropriate) of the specified course. Only the invited user may accept an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to accept the requested invitation or for access errors. * `FAILED_PRECONDITION` for the following request errors: * CourseMemberLimitReached * CourseNotModifiable * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation exists with the requested ID.
-func (s *invitations) ClassroomInvitationsAccept(ctx context.Context, request operations.ClassroomInvitationsAcceptRequest) (*operations.ClassroomInvitationsAcceptResponse, error) {
+func (s *invitations) ClassroomInvitationsAccept(ctx context.Context, request operations.ClassroomInvitationsAcceptRequest, security operations.ClassroomInvitationsAcceptSecurity) (*operations.ClassroomInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}:accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}:accept", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *invitations) ClassroomInvitationsAccept(ctx context.Context, request op
 }
 
 // ClassroomInvitationsCreate - Creates an invitation. Only one invitation for a user and course may exist at a time. Delete and re-create an invitation to make changes. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this course or for access errors. * `NOT_FOUND` if the course or the user does not exist. * `FAILED_PRECONDITION`: * if the requested user's account is disabled. * if the user already has this role or a role with greater permissions. * for the following request errors: * IneligibleOwner * `ALREADY_EXISTS` if an invitation for the specified user and course already exists.
-func (s *invitations) ClassroomInvitationsCreate(ctx context.Context, request operations.ClassroomInvitationsCreateRequest) (*operations.ClassroomInvitationsCreateResponse, error) {
+func (s *invitations) ClassroomInvitationsCreate(ctx context.Context, request operations.ClassroomInvitationsCreateRequest, security operations.ClassroomInvitationsCreateSecurity) (*operations.ClassroomInvitationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/invitations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Invitation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *invitations) ClassroomInvitationsCreate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *invitations) ClassroomInvitationsCreate(ctx context.Context, request op
 }
 
 // ClassroomInvitationsDelete - Deletes an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested invitation or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
-func (s *invitations) ClassroomInvitationsDelete(ctx context.Context, request operations.ClassroomInvitationsDeleteRequest) (*operations.ClassroomInvitationsDeleteResponse, error) {
+func (s *invitations) ClassroomInvitationsDelete(ctx context.Context, request operations.ClassroomInvitationsDeleteRequest, security operations.ClassroomInvitationsDeleteSecurity) (*operations.ClassroomInvitationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *invitations) ClassroomInvitationsDelete(ctx context.Context, request op
 }
 
 // ClassroomInvitationsGet - Returns an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to view the requested invitation or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
-func (s *invitations) ClassroomInvitationsGet(ctx context.Context, request operations.ClassroomInvitationsGetRequest) (*operations.ClassroomInvitationsGetResponse, error) {
+func (s *invitations) ClassroomInvitationsGet(ctx context.Context, request operations.ClassroomInvitationsGetRequest, security operations.ClassroomInvitationsGetSecurity) (*operations.ClassroomInvitationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,7 +232,7 @@ func (s *invitations) ClassroomInvitationsGet(ctx context.Context, request opera
 }
 
 // ClassroomInvitationsList - Returns a list of invitations that the requesting user is permitted to view, restricted to those that match the list request. *Note:* At least one of `user_id` or `course_id` must be supplied. Both fields can be supplied. This method returns the following error codes: * `PERMISSION_DENIED` for access errors.
-func (s *invitations) ClassroomInvitationsList(ctx context.Context, request operations.ClassroomInvitationsListRequest) (*operations.ClassroomInvitationsListResponse, error) {
+func (s *invitations) ClassroomInvitationsList(ctx context.Context, request operations.ClassroomInvitationsListRequest, security operations.ClassroomInvitationsListSecurity) (*operations.ClassroomInvitationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/invitations"
 
@@ -241,11 +241,11 @@ func (s *invitations) ClassroomInvitationsList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

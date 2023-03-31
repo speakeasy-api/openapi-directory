@@ -10,7 +10,7 @@ import (
 )
 
 type GetVodPurchasesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetVodPurchasesDirectionEnum - The sort direction of the results.
@@ -127,7 +127,7 @@ func (e *GetVodPurchasesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVodPurchasesQueryParams struct {
+type GetVodPurchasesRequest struct {
 	// The sort direction of the results.
 	Direction *GetVodPurchasesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The type of On Demand videos to show.
@@ -142,11 +142,6 @@ type GetVodPurchasesQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetVodPurchasesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVodPurchasesRequest struct {
-	QueryParams GetVodPurchasesQueryParams
-	Security    GetVodPurchasesSecurity
 }
 
 type GetVodPurchasesResponse struct {

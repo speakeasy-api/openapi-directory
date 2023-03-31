@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShowTaskPathParams struct {
+type ShowTaskRequest struct {
 	// UUID of task
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ShowTaskRequest struct {
-	PathParams ShowTaskPathParams
 }
 
 type ShowTaskResponse struct {

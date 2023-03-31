@@ -34,7 +34,7 @@ func newOnThisDay(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // GetFactOnthisdayBorn - Returns a random ( famous/ relatively famous ) person born on a given day and month
-func (s *onThisDay) GetFactOnthisdayBorn(ctx context.Context, request operations.GetFactOnthisdayBornRequest) (*operations.GetFactOnthisdayBornResponse, error) {
+func (s *onThisDay) GetFactOnthisdayBorn(ctx context.Context, request operations.GetFactOnthisdayBornRequest, security operations.GetFactOnthisdayBornSecurity) (*operations.GetFactOnthisdayBornResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/onthisday/born"
 
@@ -43,11 +43,11 @@ func (s *onThisDay) GetFactOnthisdayBorn(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *onThisDay) GetFactOnthisdayBorn(ctx context.Context, request operations
 }
 
 // GetFactOnthisdayDied - Returns a random ( famous/ relatively famous ) person died on a given day and month
-func (s *onThisDay) GetFactOnthisdayDied(ctx context.Context, request operations.GetFactOnthisdayDiedRequest) (*operations.GetFactOnthisdayDiedResponse, error) {
+func (s *onThisDay) GetFactOnthisdayDied(ctx context.Context, request operations.GetFactOnthisdayDiedRequest, security operations.GetFactOnthisdayDiedSecurity) (*operations.GetFactOnthisdayDiedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/onthisday/died"
 
@@ -84,11 +84,11 @@ func (s *onThisDay) GetFactOnthisdayDied(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *onThisDay) GetFactOnthisdayDied(ctx context.Context, request operations
 }
 
 // GetFactOnthisdayEvent - Returns a random ( famous/ relatively famous ) historic event on a given day and month
-func (s *onThisDay) GetFactOnthisdayEvent(ctx context.Context, request operations.GetFactOnthisdayEventRequest) (*operations.GetFactOnthisdayEventResponse, error) {
+func (s *onThisDay) GetFactOnthisdayEvent(ctx context.Context, request operations.GetFactOnthisdayEventRequest, security operations.GetFactOnthisdayEventSecurity) (*operations.GetFactOnthisdayEventResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/onthisday/event"
 
@@ -125,11 +125,11 @@ func (s *onThisDay) GetFactOnthisdayEvent(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

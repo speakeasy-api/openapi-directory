@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateCommitCommentPathParams struct {
-	// commit_sha parameter
-	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
-	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateCommitCommentRequestBody struct {
 	// The contents of the comment.
 	Body string `json:"body"`
@@ -26,8 +19,11 @@ type ReposCreateCommitCommentRequestBody struct {
 }
 
 type ReposCreateCommitCommentRequest struct {
-	PathParams ReposCreateCommitCommentPathParams
-	Request    ReposCreateCommitCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateCommitCommentRequestBody `request:"mediaType=application/json"`
+	// commit_sha parameter
+	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
+	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateCommitCommentResponse struct {

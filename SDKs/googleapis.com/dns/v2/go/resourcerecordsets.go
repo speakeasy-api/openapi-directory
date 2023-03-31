@@ -32,11 +32,11 @@ func newResourceRecordSets(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // DNSResourceRecordSetsCreate - Creates a new ResourceRecordSet.
-func (s *resourceRecordSets) DNSResourceRecordSetsCreate(ctx context.Context, request operations.DNSResourceRecordSetsCreateRequest) (*operations.DNSResourceRecordSetsCreateResponse, error) {
+func (s *resourceRecordSets) DNSResourceRecordSetsCreate(ctx context.Context, request operations.DNSResourceRecordSetsCreateRequest, security operations.DNSResourceRecordSetsCreateSecurity) (*operations.DNSResourceRecordSetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceRecordSet", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *resourceRecordSets) DNSResourceRecordSetsCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *resourceRecordSets) DNSResourceRecordSetsCreate(ctx context.Context, re
 }
 
 // DNSResourceRecordSetsDelete - Deletes a previously created ResourceRecordSet.
-func (s *resourceRecordSets) DNSResourceRecordSetsDelete(ctx context.Context, request operations.DNSResourceRecordSetsDeleteRequest) (*operations.DNSResourceRecordSetsDeleteResponse, error) {
+func (s *resourceRecordSets) DNSResourceRecordSetsDelete(ctx context.Context, request operations.DNSResourceRecordSetsDeleteRequest, security operations.DNSResourceRecordSetsDeleteSecurity) (*operations.DNSResourceRecordSetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *resourceRecordSets) DNSResourceRecordSetsDelete(ctx context.Context, re
 }
 
 // DNSResourceRecordSetsGet - Fetches the representation of an existing ResourceRecordSet.
-func (s *resourceRecordSets) DNSResourceRecordSetsGet(ctx context.Context, request operations.DNSResourceRecordSetsGetRequest) (*operations.DNSResourceRecordSetsGetResponse, error) {
+func (s *resourceRecordSets) DNSResourceRecordSetsGet(ctx context.Context, request operations.DNSResourceRecordSetsGetRequest, security operations.DNSResourceRecordSetsGetSecurity) (*operations.DNSResourceRecordSetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *resourceRecordSets) DNSResourceRecordSetsGet(ctx context.Context, reque
 }
 
 // DNSResourceRecordSetsList - Enumerates ResourceRecordSets that you have created but not yet deleted.
-func (s *resourceRecordSets) DNSResourceRecordSetsList(ctx context.Context, request operations.DNSResourceRecordSetsListRequest) (*operations.DNSResourceRecordSetsListResponse, error) {
+func (s *resourceRecordSets) DNSResourceRecordSetsList(ctx context.Context, request operations.DNSResourceRecordSetsListRequest, security operations.DNSResourceRecordSetsListSecurity) (*operations.DNSResourceRecordSetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *resourceRecordSets) DNSResourceRecordSetsList(ctx context.Context, requ
 }
 
 // DNSResourceRecordSetsPatch - Applies a partial update to an existing ResourceRecordSet.
-func (s *resourceRecordSets) DNSResourceRecordSetsPatch(ctx context.Context, request operations.DNSResourceRecordSetsPatchRequest) (*operations.DNSResourceRecordSetsPatchResponse, error) {
+func (s *resourceRecordSets) DNSResourceRecordSetsPatch(ctx context.Context, request operations.DNSResourceRecordSetsPatchRequest, security operations.DNSResourceRecordSetsPatchSecurity) (*operations.DNSResourceRecordSetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceRecordSet", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *resourceRecordSets) DNSResourceRecordSetsPatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

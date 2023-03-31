@@ -12,12 +12,8 @@ var CreateInviteServerList = []string{
 }
 
 type CreateInviteSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateInvitePathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInviteCreateInviteRequest struct {
@@ -26,10 +22,9 @@ type CreateInviteCreateInviteRequest struct {
 }
 
 type CreateInviteRequest struct {
-	PathParams CreateInvitePathParams
-	Request    *CreateInviteCreateInviteRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateInviteSecurity
-	ServerURL  *string
+	ChannelSid  string                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateInviteCreateInviteRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                           `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateInviteResponse struct {

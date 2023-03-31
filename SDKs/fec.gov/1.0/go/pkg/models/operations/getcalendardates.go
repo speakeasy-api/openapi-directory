@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetCalendarDatesQueryParams struct {
+type GetCalendarDatesRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -49,10 +49,6 @@ type GetCalendarDatesQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// Longer description of event
 	Summary []string `queryParam:"style=form,explode=true,name=summary"`
-}
-
-type GetCalendarDatesRequest struct {
-	QueryParams GetCalendarDatesQueryParams
 }
 
 type GetCalendarDatesResponse struct {

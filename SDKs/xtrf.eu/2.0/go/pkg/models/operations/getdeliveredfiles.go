@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeliveredFilesPathParams struct {
+type GetDeliveredFilesRequest struct {
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetDeliveredFilesRequest struct {
-	PathParams GetDeliveredFilesPathParams
 }
 
 type GetDeliveredFilesResponse struct {

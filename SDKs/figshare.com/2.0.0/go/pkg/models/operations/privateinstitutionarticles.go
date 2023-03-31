@@ -10,7 +10,7 @@ import (
 )
 
 type PrivateInstitutionArticlesSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PrivateInstitutionArticlesOrderEnum - The field by which to order. Default varies by endpoint/resource.
@@ -73,7 +73,7 @@ func (e *PrivateInstitutionArticlesOrderDirectionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type PrivateInstitutionArticlesQueryParams struct {
+type PrivateInstitutionArticlesRequest struct {
 	// Only return articles with the respective type. Mapping for item_type is: 1 - Figure, 2 - Media, 3 - Dataset, 5 - Poster, 6 - Journal contribution, 7 - Presentation, 8 - Thesis, 9 - Software, 11 - Online resource, 12 - Preprint, 13 - Book, 14 - Conference contribution, 15 - Chapter, 16 - Peer review, 17 - Educational resource, 18 - Report, 19 - Standard, 20 - Composition, 21 - Funding, 22 - Physical object, 23 - Data management plan, 24 - Workflow, 25 - Monograph, 26 - Performance, 27 - Event, 28 - Service, 29 - Model
 	ItemType *int64 `queryParam:"style=form,explode=true,name=item_type"`
 	// Number of results included on a page. Used for pagination with query
@@ -95,11 +95,6 @@ type PrivateInstitutionArticlesQueryParams struct {
 	ResourceDoi *string `queryParam:"style=form,explode=true,name=resource_doi"`
 	// only return collections with this status
 	Status *int64 `queryParam:"style=form,explode=true,name=status"`
-}
-
-type PrivateInstitutionArticlesRequest struct {
-	QueryParams PrivateInstitutionArticlesQueryParams
-	Security    PrivateInstitutionArticlesSecurity
 }
 
 type PrivateInstitutionArticlesResponse struct {

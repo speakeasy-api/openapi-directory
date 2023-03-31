@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImagesFromUrlsFormPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImagesFromUrlsFormHeaders struct {
+type CreateImagesFromUrlsFormRequest struct {
+	// Image urls and tag ids. Limited to 64 images and 20 tags per batch.
+	ImageURLCreateBatch shared.ImageURLCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateImagesFromUrlsFormRequest struct {
-	PathParams CreateImagesFromUrlsFormPathParams
-	Headers    CreateImagesFromUrlsFormHeaders
-	// Image urls and tag ids. Limited to 64 images and 20 tags per batch.
-	Request shared.ImageURLCreateBatch `request:"mediaType=application/x-www-form-urlencoded"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type CreateImagesFromUrlsFormResponse struct {

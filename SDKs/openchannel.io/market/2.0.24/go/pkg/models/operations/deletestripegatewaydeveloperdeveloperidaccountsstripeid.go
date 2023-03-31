@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeIDPathParams struct {
+type DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeIDRequest struct {
 	// The id of the developer disconnecting their Stripe account
 	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
 	// The id of the stripe account to disconnect
 	StripeID string `pathParam:"style=simple,explode=false,name=stripeId"`
-}
-
-type DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeIDRequest struct {
-	PathParams DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeIDPathParams
 }
 
 type DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeIDResponse struct {

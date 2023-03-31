@@ -8,18 +8,13 @@ import (
 )
 
 type CreatePayrollCalendarSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreatePayrollCalendarHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreatePayrollCalendarRequest struct {
-	Headers  CreatePayrollCalendarHeaders
-	Request  []shared.PayrollCalendarInput `request:"mediaType=application/json"`
-	Security CreatePayrollCalendarSecurity
+	RequestBody []shared.PayrollCalendarInput `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type CreatePayrollCalendarResponse struct {

@@ -8,18 +8,14 @@ import (
 )
 
 type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchPathParams struct {
-	// Output only. Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams struct {
+type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                 *shared.XgafvEnum                                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDatacatalogV1beta1PolicyTagInput *shared.GoogleCloudDatacatalogV1beta1PolicyTagInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Output only. Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest struct {
-	PathParams  DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchPathParams
-	QueryParams DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams
-	Request     *shared.GoogleCloudDatacatalogV1beta1PolicyTagInput `request:"mediaType=application/json"`
-	Security    DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchSecurity
 }
 
 type DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse struct {

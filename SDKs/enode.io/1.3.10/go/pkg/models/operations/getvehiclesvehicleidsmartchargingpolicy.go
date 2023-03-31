@@ -8,18 +8,13 @@ import (
 )
 
 type GetVehiclesVehicleidSmartchargingpolicySecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type GetVehiclesVehicleidSmartchargingpolicyPathParams struct {
-	// ID of the Vehicle
-	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetVehiclesVehicleidSmartchargingpolicyRequest struct {
-	PathParams GetVehiclesVehicleidSmartchargingpolicyPathParams
-	Security   GetVehiclesVehicleidSmartchargingpolicySecurity
+	// ID of the Vehicle
+	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
 }
 
 type GetVehiclesVehicleidSmartchargingpolicyResponse struct {

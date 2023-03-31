@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetABatchOfConsumerTransactionClassificationResultsRequest{
-        PathParams: operations.GetABatchOfConsumerTransactionClassificationResultsPathParams{
-            ID: "247ee045-3d04-4b3c-872b-a9160b810f33",
-        },
+        ID: "247ee045-3d04-4b3c-872b-a9160b810f33",
     }
 
     ctx := context.Background()

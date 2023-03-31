@@ -34,7 +34,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GetAllAccounts - Retrieve all accounts you own
-func (s *account) GetAllAccounts(ctx context.Context, request operations.GetAllAccountsRequest) (*operations.GetAllAccountsResponse, error) {
+func (s *account) GetAllAccounts(ctx context.Context, request operations.GetAllAccountsRequest, security operations.GetAllAccountsSecurity) (*operations.GetAllAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -43,11 +43,11 @@ func (s *account) GetAllAccounts(ctx context.Context, request operations.GetAllA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

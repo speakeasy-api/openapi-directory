@@ -12,18 +12,13 @@ var FetchMediaRecordingServerList = []string{
 }
 
 type FetchMediaRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchMediaRecordingPathParams struct {
-	// The SID of the MediaRecording resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchMediaRecordingRequest struct {
-	PathParams FetchMediaRecordingPathParams
-	Security   FetchMediaRecordingSecurity
-	ServerURL  *string
+	// The SID of the MediaRecording resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchMediaRecordingResponse struct {

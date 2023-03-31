@@ -62,10 +62,20 @@ func newPricingConfiguration(defaultClient, securityClient HTTPClient, serverURL
 //	}
 //
 // ```
-func (s *pricingConfiguration) GetPricingConfig(ctx context.Context, request operations.GetPricingConfigRequest) (*operations.GetPricingConfigResponse, error) {
+func (s *pricingConfiguration) GetPricingConfig(ctx context.Context, request operations.GetPricingConfigRequest, opts ...operations.Option) (*operations.GetPricingConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetPricingConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/pricing/config"
@@ -75,7 +85,7 @@ func (s *pricingConfiguration) GetPricingConfig(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -125,10 +135,20 @@ func (s *pricingConfiguration) GetPricingConfig(ctx context.Context, request ope
 //	}
 //
 // ```
-func (s *pricingConfiguration) GetPricingv2Status(ctx context.Context, request operations.GetPricingv2StatusRequest) (*operations.GetPricingv2StatusResponse, error) {
+func (s *pricingConfiguration) GetPricingv2Status(ctx context.Context, request operations.GetPricingv2StatusRequest, opts ...operations.Option) (*operations.GetPricingv2StatusResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetPricingv2StatusServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/pricing/migration"
@@ -138,7 +158,7 @@ func (s *pricingConfiguration) GetPricingv2Status(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

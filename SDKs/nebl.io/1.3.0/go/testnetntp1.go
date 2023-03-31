@@ -34,7 +34,7 @@ func newTestnetNtp1(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // TestnetBroadcastTx - Broadcasts a signed raw transaction to the network
 // Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.
-func (s *testnetNtp1) TestnetBroadcastTx(ctx context.Context, request operations.TestnetBroadcastTxRequest) (*operations.TestnetBroadcastTxResponse, error) {
+func (s *testnetNtp1) TestnetBroadcastTx(ctx context.Context, request shared.BroadcastTxRequest) (*operations.TestnetBroadcastTxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/testnet/ntp1/broadcast"
 
@@ -99,7 +99,7 @@ func (s *testnetNtp1) TestnetBroadcastTx(ctx context.Context, request operations
 
 // TestnetBurnToken - Builds a transaction that burns an NTP1 Token
 // Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.
-func (s *testnetNtp1) TestnetBurnToken(ctx context.Context, request operations.TestnetBurnTokenRequest) (*operations.TestnetBurnTokenResponse, error) {
+func (s *testnetNtp1) TestnetBurnToken(ctx context.Context, request shared.BurnTokenRequest) (*operations.TestnetBurnTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/testnet/ntp1/burntoken"
 
@@ -166,7 +166,7 @@ func (s *testnetNtp1) TestnetBurnToken(ctx context.Context, request operations.T
 // Returns both NEBL and NTP1 token UTXOs held at the given address.
 func (s *testnetNtp1) TestnetGetAddressInfo(ctx context.Context, request operations.TestnetGetAddressInfoRequest) (*operations.TestnetGetAddressInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/addressinfo/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/addressinfo/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *testnetNtp1) TestnetGetAddressInfo(ctx context.Context, request operati
 // Returns the the the addresses holding a token and how many tokens are held
 func (s *testnetNtp1) TestnetGetTokenHolders(ctx context.Context, request operations.TestnetGetTokenHoldersRequest) (*operations.TestnetGetTokenHoldersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/stakeholders/{tokenid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/stakeholders/{tokenid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,7 +276,7 @@ func (s *testnetNtp1) TestnetGetTokenHolders(ctx context.Context, request operat
 // Translates a token symbol to a tokenId if a token exists with that symbol on the network
 func (s *testnetNtp1) TestnetGetTokenID(ctx context.Context, request operations.TestnetGetTokenIDRequest) (*operations.TestnetGetTokenIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenid/{tokensymbol}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenid/{tokensymbol}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,14 +321,14 @@ func (s *testnetNtp1) TestnetGetTokenID(ctx context.Context, request operations.
 // Returns the metadata associated with a token.
 func (s *testnetNtp1) TestnetGetTokenMetadata(ctx context.Context, request operations.TestnetGetTokenMetadataRequest) (*operations.TestnetGetTokenMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -380,14 +380,14 @@ func (s *testnetNtp1) TestnetGetTokenMetadata(ctx context.Context, request opera
 // Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.
 func (s *testnetNtp1) TestnetGetTokenMetadataOfUtxo(ctx context.Context, request operations.TestnetGetTokenMetadataOfUtxoRequest) (*operations.TestnetGetTokenMetadataOfUtxoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}/{utxo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}/{utxo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -439,7 +439,7 @@ func (s *testnetNtp1) TestnetGetTokenMetadataOfUtxo(ctx context.Context, request
 // Returns detailed information regarding an NTP1 transaction.
 func (s *testnetNtp1) TestnetGetTransactionInfo(ctx context.Context, request operations.TestnetGetTransactionInfoRequest) (*operations.TestnetGetTransactionInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/transactioninfo/{txid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/transactioninfo/{txid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -492,7 +492,7 @@ func (s *testnetNtp1) TestnetGetTransactionInfo(ctx context.Context, request ope
 
 // TestnetIssueToken - Builds a transaction that issues a new NTP1 Token
 // Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.
-func (s *testnetNtp1) TestnetIssueToken(ctx context.Context, request operations.TestnetIssueTokenRequest) (*operations.TestnetIssueTokenResponse, error) {
+func (s *testnetNtp1) TestnetIssueToken(ctx context.Context, request shared.IssueTokenRequest) (*operations.TestnetIssueTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/testnet/ntp1/issue"
 
@@ -557,7 +557,7 @@ func (s *testnetNtp1) TestnetIssueToken(ctx context.Context, request operations.
 
 // TestnetSendToken - Builds a transaction that sends an NTP1 Token
 // Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.
-func (s *testnetNtp1) TestnetSendToken(ctx context.Context, request operations.TestnetSendTokenRequest) (*operations.TestnetSendTokenResponse, error) {
+func (s *testnetNtp1) TestnetSendToken(ctx context.Context, request shared.SendTokenRequest) (*operations.TestnetSendTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/testnet/ntp1/sendtoken"
 

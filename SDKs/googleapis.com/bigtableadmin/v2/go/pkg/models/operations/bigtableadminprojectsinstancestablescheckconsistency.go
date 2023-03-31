@@ -8,28 +8,28 @@ import (
 )
 
 type BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesCheckConsistencySecurity struct {
@@ -40,14 +40,10 @@ type BigtableadminProjectsInstancesTablesCheckConsistencySecurity struct {
 	Option5 *BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption5 `security:"option"`
 }
 
-type BigtableadminProjectsInstancesTablesCheckConsistencyPathParams struct {
-	// Required. The unique name of the Table for which to check replication consistency. Values are of the form `projects/{project}/instances/{instance}/tables/{table}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BigtableadminProjectsInstancesTablesCheckConsistencyQueryParams struct {
+type BigtableadminProjectsInstancesTablesCheckConsistencyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CheckConsistencyRequest *shared.CheckConsistencyRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -58,6 +54,8 @@ type BigtableadminProjectsInstancesTablesCheckConsistencyQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The unique name of the Table for which to check replication consistency. Values are of the form `projects/{project}/instances/{instance}/tables/{table}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -68,13 +66,6 @@ type BigtableadminProjectsInstancesTablesCheckConsistencyQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigtableadminProjectsInstancesTablesCheckConsistencyRequest struct {
-	PathParams  BigtableadminProjectsInstancesTablesCheckConsistencyPathParams
-	QueryParams BigtableadminProjectsInstancesTablesCheckConsistencyQueryParams
-	Request     *shared.CheckConsistencyRequest `request:"mediaType=application/json"`
-	Security    BigtableadminProjectsInstancesTablesCheckConsistencySecurity
 }
 
 type BigtableadminProjectsInstancesTablesCheckConsistencyResponse struct {

@@ -14,35 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.DirectoryAspsDeleteRequest{
-        Security: operations.DirectoryAspsDeleteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DirectoryAspsDeletePathParams{
-            CodeID: 548814,
-            UserKey: "provident",
-        },
-        QueryParams: operations.DirectoryAspsDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "quibusdam",
-            Alt: "media",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        CodeID: 602763,
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
+        UserKey: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Asps.DirectoryAspsDelete(ctx, req)
+    res, err := s.Asps.DirectoryAspsDelete(ctx, req, operations.DirectoryAspsDeleteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

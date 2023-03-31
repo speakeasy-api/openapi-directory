@@ -58,7 +58,6 @@ pkg/models/shared/napidalgo.go
 pkg/models/shared/nalinkstation.go
 pkg/models/shared/nahousemodelca.go
 pkg/models/shared/naheatingsystem.go
-pkg/models/shared/security.go
 pkg/models/shared/nathermstateresponse.go
 pkg/models/shared/nathermstatebody.go
 pkg/models/shared/nasetpoint.go

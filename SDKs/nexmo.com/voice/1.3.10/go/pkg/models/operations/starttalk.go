@@ -8,19 +8,14 @@ import (
 )
 
 type StartTalkSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type StartTalkPathParams struct {
-	// UUID of the Call Leg
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type StartTalkRequest struct {
-	PathParams StartTalkPathParams
 	// Action to perform
-	Request  *shared.StartTalkRequest `request:"mediaType=application/json"`
-	Security StartTalkSecurity
+	StartTalkRequest *shared.StartTalkRequest `request:"mediaType=application/json"`
+	// UUID of the Call Leg
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type StartTalkResponse struct {

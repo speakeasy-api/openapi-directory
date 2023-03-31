@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/walletobjects.googleapis.com/pay-passes/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,93 +15,85 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WalletobjectsEventticketclassAddmessageRequest(
-    security=operations.WalletobjectsEventticketclassAddmessageSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WalletobjectsEventticketclassAddmessagePathParams(
-        resource_id="necessitatibus",
-    ),
-    query_params=operations.WalletobjectsEventticketclassAddmessageQueryParams(
-        dollar_xgafv="2",
-        access_token="cum",
-        alt="json",
-        callback="voluptas",
-        fields="quis",
-        key="repellat",
-        oauth_token="quas",
-        pretty_print=False,
-        quota_user="occaecati",
-        upload_type="facere",
-        upload_protocol="fugit",
-    ),
-    request=shared.AddMessageRequest(
+    dollar_xgafv="2",
+    add_message_request=shared.AddMessageRequest(
         message=shared.Message(
-            body="aut",
+            body="provident",
             display_interval=shared.TimeInterval(
                 end=shared.DateTime(
-                    date_="iure",
+                    date_="distinctio",
                 ),
-                kind="voluptatibus",
+                kind="quibusdam",
                 start=shared.DateTime(
-                    date_="necessitatibus",
+                    date_="unde",
                 ),
             ),
-            header="ab",
-            id="magni",
-            kind="accusantium",
+            header="nulla",
+            id="corrupti",
+            kind="illum",
             localized_body=shared.LocalizedString(
                 default_value=shared.TranslatedString(
-                    kind="necessitatibus",
-                    language="excepturi",
-                    value="assumenda",
+                    kind="vel",
+                    language="error",
+                    value="deserunt",
                 ),
-                kind="in",
+                kind="suscipit",
                 translated_values=[
                     shared.TranslatedString(
-                        kind="laborum",
-                        language="corrupti",
-                        value="aut",
+                        kind="magnam",
+                        language="debitis",
+                        value="ipsa",
+                    ),
+                    shared.TranslatedString(
+                        kind="delectus",
+                        language="tempora",
+                        value="suscipit",
                     ),
                 ],
             ),
             localized_header=shared.LocalizedString(
                 default_value=shared.TranslatedString(
-                    kind="voluptatem",
-                    language="nemo",
-                    value="adipisci",
+                    kind="molestiae",
+                    language="minus",
+                    value="placeat",
                 ),
-                kind="voluptatem",
+                kind="voluptatum",
                 translated_values=[
                     shared.TranslatedString(
-                        kind="et",
-                        language="modi",
+                        kind="excepturi",
+                        language="nisi",
+                        value="recusandae",
+                    ),
+                    shared.TranslatedString(
+                        kind="temporibus",
+                        language="ab",
                         value="quis",
-                    ),
-                    shared.TranslatedString(
-                        kind="minus",
-                        language="rerum",
-                        value="animi",
-                    ),
-                    shared.TranslatedString(
-                        kind="at",
-                        language="consequatur",
-                        value="non",
                     ),
                 ],
             ),
-            message_type="text",
+            message_type="MESSAGE_TYPE_UNSPECIFIED",
         ),
     ),
+    access_token="deserunt",
+    alt="json",
+    callback="ipsam",
+    fields_="repellendus",
+    key="sapiente",
+    oauth_token="quo",
+    pretty_print=False,
+    quota_user="odit",
+    resource_id="at",
+    upload_type="at",
+    upload_protocol="maiores",
 )
     
-res = s.eventticketclass.walletobjects_eventticketclass_addmessage(req)
+res = s.eventticketclass.walletobjects_eventticketclass_addmessage(req, operations.WalletobjectsEventticketclassAddmessageSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.event_ticket_class_add_message_response is not None:
     # handle response
@@ -109,7 +101,8 @@ if res.event_ticket_class_add_message_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### eventticketclass
 
@@ -147,6 +140,22 @@ if res.event_ticket_class_add_message_response is not None:
 * `walletobjects_flightobject_list` - Returns a list of all flight objects for a given issuer ID.
 * `walletobjects_flightobject_patch` - Updates the flight object referenced by the given object ID. This method supports patch semantics.
 * `walletobjects_flightobject_update` - Updates the flight object referenced by the given object ID.
+
+### genericclass
+
+* `walletobjects_genericclass_get` - Returns the generic class with the given class ID.
+* `walletobjects_genericclass_insert` - Inserts a generic class with the given ID and properties.
+* `walletobjects_genericclass_list` - Returns a list of all generic classes for a given issuer ID.
+* `walletobjects_genericclass_patch` - Updates the generic class referenced by the given class ID. This method supports patch semantics.
+* `walletobjects_genericclass_update` - Updates the Generic class referenced by the given class ID.
+
+### genericobject
+
+* `walletobjects_genericobject_get` - Returns the generic object with the given object ID.
+* `walletobjects_genericobject_insert` - Inserts a generic object with the given ID and properties.
+* `walletobjects_genericobject_list` - Returns a list of all generic objects for a given issuer ID.
+* `walletobjects_genericobject_patch` - Updates the generic object referenced by the given object ID. This method supports patch semantics.
+* `walletobjects_genericobject_update` - Updates the generic object referenced by the given object ID.
 
 ### giftcardclass
 
@@ -197,6 +206,10 @@ if res.event_ticket_class_add_message_response is not None:
 * `walletobjects_loyaltyobject_patch` - Updates the loyalty object referenced by the given object ID. This method supports patch semantics.
 * `walletobjects_loyaltyobject_update` - Updates the loyalty object referenced by the given object ID.
 
+### media
+
+* `walletobjects_media_upload` - Uploads a private image and returns an Id to be used in its place.
+
 ### offerclass
 
 * `walletobjects_offerclass_addmessage` - Adds a message to the offer class referenced by the given class ID.
@@ -242,14 +255,20 @@ if res.event_ticket_class_add_message_response is not None:
 * `walletobjects_transitobject_patch` - Updates the transit object referenced by the given object ID. This method supports patch semantics.
 * `walletobjects_transitobject_update` - Updates the transit object referenced by the given object ID.
 
-### valuablesclasses
-
-* `walletobjects_valuablesclasses_list` - Returns a list of all valuables classes for a given issuer ID.
-
 ### walletobjects
 
-* `walletobjects_walletobjects_v1_get_valuablesclassescount` - Returns a total number of valuables classes grouped by type for a given issuer ID.
-
+* `walletobjects_walletobjects_v1_private_content_upload_private_data` - Upload private data (text or URI) and returns an Id to be used in its place.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

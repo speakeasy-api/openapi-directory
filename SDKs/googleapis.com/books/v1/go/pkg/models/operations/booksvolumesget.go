@@ -10,13 +10,8 @@ import (
 )
 
 type BooksVolumesGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type BooksVolumesGetPathParams struct {
-	// ID of volume to retrieve.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksVolumesGetProjectionEnum - Restrict information returned to a set of selected fields.
@@ -46,7 +41,7 @@ func (e *BooksVolumesGetProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BooksVolumesGetQueryParams struct {
+type BooksVolumesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -80,12 +75,8 @@ type BooksVolumesGetQueryParams struct {
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol            *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	UserLibraryConsistentRead *bool   `queryParam:"style=form,explode=true,name=user_library_consistent_read"`
-}
-
-type BooksVolumesGetRequest struct {
-	PathParams  BooksVolumesGetPathParams
-	QueryParams BooksVolumesGetQueryParams
-	Security    BooksVolumesGetSecurity
+	// ID of volume to retrieve.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 }
 
 type BooksVolumesGetResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetRateTablesSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetRateTablesQueryParams struct {
-	// This query parameter specifies the two-letter <a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank">ISO 3166</a> code of country for which you want shipping rate table information. If you do not specify a country code, the request returns all of the seller's defined shipping rate tables for all eBay marketplaces. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum
-	CountryCode *string `queryParam:"style=form,explode=true,name=country_code"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetRateTablesRequest struct {
-	QueryParams GetRateTablesQueryParams
-	Security    GetRateTablesSecurity
+	// This query parameter specifies the two-letter <a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank">ISO 3166</a> code of country for which you want shipping rate table information. If you do not specify a country code, the request returns all of the seller's defined shipping rate tables for all eBay marketplaces. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum
+	CountryCode *string `queryParam:"style=form,explode=true,name=country_code"`
 }
 
 type GetRateTablesResponse struct {

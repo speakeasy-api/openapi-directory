@@ -12,10 +12,11 @@ var ListServiceServerList = []string{
 }
 
 type ListServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListServiceQueryParams struct {
+type ListServiceRequest struct {
 	// The string that identifies the Service resources to read.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -24,12 +25,6 @@ type ListServiceQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListServiceRequest struct {
-	QueryParams ListServiceQueryParams
-	Security    ListServiceSecurity
-	ServerURL   *string
 }
 
 type ListServiceListServiceResponseMeta struct {

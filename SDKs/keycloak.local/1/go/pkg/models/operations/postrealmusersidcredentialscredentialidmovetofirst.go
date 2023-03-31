@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PostRealmUsersIDCredentialsCredentialIDMoveToFirstPathParams struct {
+type PostRealmUsersIDCredentialsCredentialIDMoveToFirstRequest struct {
 	// The credential to move
 	CredentialID string `pathParam:"style=simple,explode=false,name=credentialId"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmUsersIDCredentialsCredentialIDMoveToFirstRequest struct {
-	PathParams PostRealmUsersIDCredentialsCredentialIDMoveToFirstPathParams
 }
 
 type PostRealmUsersIDCredentialsCredentialIDMoveToFirstResponse struct {

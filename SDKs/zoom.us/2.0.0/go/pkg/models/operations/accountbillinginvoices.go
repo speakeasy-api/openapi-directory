@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/types"
 )
 
-type AccountBillingInvoicesPathParams struct {
+type AccountBillingInvoicesRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AccountBillingInvoicesQueryParams struct {
 	// Start date for the invoice query in `yyyy-mm-dd` format. The date range defined by the “from” and “to” parameters should not exceed one year. The range defined should fall within the past three years.
 	//
 	From *types.Date `queryParam:"style=form,explode=true,name=from"`
 	// End date for the invoice query in `yyyy-mm-dd` format
 	To *types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type AccountBillingInvoicesRequest struct {
-	PathParams  AccountBillingInvoicesPathParams
-	QueryParams AccountBillingInvoicesQueryParams
 }
 
 type AccountBillingInvoices200ApplicationXMLInvoices struct {

@@ -33,20 +33,20 @@ func newTeamdrives(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // DriveTeamdrivesDelete - Deprecated use drives.delete instead.
-func (s *teamdrives) DriveTeamdrivesDelete(ctx context.Context, request operations.DriveTeamdrivesDeleteRequest) (*operations.DriveTeamdrivesDeleteResponse, error) {
+func (s *teamdrives) DriveTeamdrivesDelete(ctx context.Context, request operations.DriveTeamdrivesDeleteRequest, security operations.DriveTeamdrivesDeleteSecurity) (*operations.DriveTeamdrivesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *teamdrives) DriveTeamdrivesDelete(ctx context.Context, request operatio
 }
 
 // DriveTeamdrivesGet - Deprecated use drives.get instead.
-func (s *teamdrives) DriveTeamdrivesGet(ctx context.Context, request operations.DriveTeamdrivesGetRequest) (*operations.DriveTeamdrivesGetResponse, error) {
+func (s *teamdrives) DriveTeamdrivesGet(ctx context.Context, request operations.DriveTeamdrivesGetRequest, security operations.DriveTeamdrivesGetSecurity) (*operations.DriveTeamdrivesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *teamdrives) DriveTeamdrivesGet(ctx context.Context, request operations.
 }
 
 // DriveTeamdrivesInsert - Deprecated use drives.insert instead.
-func (s *teamdrives) DriveTeamdrivesInsert(ctx context.Context, request operations.DriveTeamdrivesInsertRequest) (*operations.DriveTeamdrivesInsertResponse, error) {
+func (s *teamdrives) DriveTeamdrivesInsert(ctx context.Context, request operations.DriveTeamdrivesInsertRequest, security operations.DriveTeamdrivesInsertSecurity) (*operations.DriveTeamdrivesInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/teamdrives"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TeamDrive", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *teamdrives) DriveTeamdrivesInsert(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *teamdrives) DriveTeamdrivesInsert(ctx context.Context, request operatio
 }
 
 // DriveTeamdrivesList - Deprecated use drives.list instead.
-func (s *teamdrives) DriveTeamdrivesList(ctx context.Context, request operations.DriveTeamdrivesListRequest) (*operations.DriveTeamdrivesListResponse, error) {
+func (s *teamdrives) DriveTeamdrivesList(ctx context.Context, request operations.DriveTeamdrivesListRequest, security operations.DriveTeamdrivesListSecurity) (*operations.DriveTeamdrivesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/teamdrives"
 
@@ -184,11 +184,11 @@ func (s *teamdrives) DriveTeamdrivesList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *teamdrives) DriveTeamdrivesList(ctx context.Context, request operations
 }
 
 // DriveTeamdrivesUpdate - Deprecated use drives.update instead.
-func (s *teamdrives) DriveTeamdrivesUpdate(ctx context.Context, request operations.DriveTeamdrivesUpdateRequest) (*operations.DriveTeamdrivesUpdateResponse, error) {
+func (s *teamdrives) DriveTeamdrivesUpdate(ctx context.Context, request operations.DriveTeamdrivesUpdateRequest, security operations.DriveTeamdrivesUpdateSecurity) (*operations.DriveTeamdrivesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TeamDrive", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *teamdrives) DriveTeamdrivesUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

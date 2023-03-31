@@ -32,7 +32,7 @@ func (e *PostV1OrderScreenFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostV1OrderScreenQueryParams struct {
+type PostV1OrderScreenRequest struct {
 	Amount        *float64                     `queryParam:"style=form,explode=true,name=amount"`
 	AvsResult     *string                      `queryParam:"style=form,explode=true,name=avs_result"`
 	BillAddr      *string                      `queryParam:"style=form,explode=true,name=bill_addr"`
@@ -66,10 +66,6 @@ type PostV1OrderScreenQueryParams struct {
 	UserOrderMemo *string                      `queryParam:"style=form,explode=true,name=user_order_memo"`
 	UserPhone     *string                      `queryParam:"style=form,explode=true,name=user_phone"`
 	UsernameHash  *string                      `queryParam:"style=form,explode=true,name=username_hash"`
-}
-
-type PostV1OrderScreenRequest struct {
-	QueryParams PostV1OrderScreenQueryParams
 }
 
 type PostV1OrderScreenResponse struct {

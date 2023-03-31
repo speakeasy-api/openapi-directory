@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ServicegroupsQueryParams struct {
+type GetSetupV1ServicegroupsRequest struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// id of business location, defaults to primary business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetSetupV1ServicegroupsRequest struct {
-	QueryParams GetSetupV1ServicegroupsQueryParams
 }
 
 type GetSetupV1ServicegroupsResponse struct {

@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ServicedirectoryProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) ServicedirectoryProjectsLocationsList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsListRequest) (*operations.ServicedirectoryProjectsLocationsListResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsListRequest, security operations.ServicedirectoryProjectsLocationsListSecurity) (*operations.ServicedirectoryProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) ServicedirectoryProjectsLocationsList(ctx context.Context, re
 }
 
 // ServicedirectoryProjectsLocationsNamespacesCreate - Creates a namespace, and returns the new namespace.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesCreate(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesCreateRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesCreate(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesCreateRequest, security operations.ServicedirectoryProjectsLocationsNamespacesCreateSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/namespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/namespaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NamespaceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesCreate(ctx context
 }
 
 // ServicedirectoryProjectsLocationsNamespacesList - Lists all namespaces.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesListRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesListResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesListRequest, security operations.ServicedirectoryProjectsLocationsNamespacesListSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/namespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/namespaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesList(ctx context.C
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesCreate - Creates a service, and returns the new service.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesCreate(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesCreate(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesCreate(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesCreate(ctx
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate - Creates an endpoint, and returns the new endpoint.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EndpointInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsC
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete - Deletes an endpoint.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsD
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGet - Gets an endpoint.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGet(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGet(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,20 +389,20 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsG
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesEndpointsList - Lists all endpoints.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -437,11 +437,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsL
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch - Updates an endpoint.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EndpointInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -453,11 +453,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,11 +492,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesEndpointsP
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy - Gets the IAM Policy for a resource (namespace or service only).
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicySecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,11 +508,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesGetIamPoli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,20 +547,20 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesGetIamPoli
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesList - Lists all services belonging to a namespace.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesListRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesList(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesListRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesListSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesList(ctx c
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesResolve - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesResolve(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesResolve(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resolve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resolve", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResolveServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesResolve(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesResolve(ct
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy - Sets the IAM Policy for a resource (namespace or service only).
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicySecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesSetIamPoli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,11 +705,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesSetIamPoli
 }
 
 // ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions - Tests IAM permissions for a resource (namespace or service only).
-func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsRequest) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse, error) {
+func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions(ctx context.Context, request operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsRequest, security operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsSecurity) (*operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,11 +721,11 @@ func (s *projects) ServicedirectoryProjectsLocationsNamespacesServicesTestIamPer
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

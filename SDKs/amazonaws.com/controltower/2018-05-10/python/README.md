@@ -1,0 +1,67 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/controltower/2018-05-10/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        hmac="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.DisableControlRequest(
+    request_body=operations.DisableControlRequestBody(
+        control_identifier="corrupti",
+        target_identifier="provident",
+    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+)
+    
+res = s.disable_control(req)
+
+if res.disable_control_output is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `disable_control` - This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the specified organizational unit and the accounts it contains. The resources will vary according to the control that you specify.
+* `enable_control` - This API call activates a control. It starts an asynchronous operation that creates AWS resources on the specified organizational unit and the accounts it contains. The resources created will vary according to the control that you specify.
+* `get_control_operation` - Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays a message in case of error. Details for an operation are available for 90 days.
+* `list_enabled_controls` - Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it contains.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

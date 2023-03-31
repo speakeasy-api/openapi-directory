@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PostFilesURLQueryParams struct {
+type PostFilesURLRequest struct {
 	// If true, this file will be protected as a private file and require the generation of a signed URL in order to download using the Download File API. The default is false.
 	IsPrivate *bool `queryParam:"style=form,explode=true,name=isPrivate"`
 	// The URL of the file to be uploaded
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type PostFilesURLRequest struct {
-	QueryParams PostFilesURLQueryParams
 }
 
 type PostFilesURLResponse struct {

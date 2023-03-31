@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSubaccountJSONRequest struct {
-	// The subaccount to create
-	Request shared.SubaccountCreate `request:"mediaType=application/json"`
-}
-
 type CreateSubaccountJSONResponse struct {
 	Body        []byte
 	ContentType string

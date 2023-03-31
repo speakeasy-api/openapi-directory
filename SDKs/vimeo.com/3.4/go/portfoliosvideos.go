@@ -32,16 +32,16 @@ func newPortfoliosVideos(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // AddVideoToPortfolio - Add a video to a portfolio
-func (s *portfoliosVideos) AddVideoToPortfolio(ctx context.Context, request operations.AddVideoToPortfolioRequest) (*operations.AddVideoToPortfolioResponse, error) {
+func (s *portfoliosVideos) AddVideoToPortfolio(ctx context.Context, request operations.AddVideoToPortfolioRequest, security operations.AddVideoToPortfolioSecurity) (*operations.AddVideoToPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,16 +77,16 @@ func (s *portfoliosVideos) AddVideoToPortfolio(ctx context.Context, request oper
 }
 
 // AddVideoToPortfolioAlt1 - Add a video to a portfolio
-func (s *portfoliosVideos) AddVideoToPortfolioAlt1(ctx context.Context, request operations.AddVideoToPortfolioAlt1Request) (*operations.AddVideoToPortfolioAlt1Response, error) {
+func (s *portfoliosVideos) AddVideoToPortfolioAlt1(ctx context.Context, request operations.AddVideoToPortfolioAlt1Request, security operations.AddVideoToPortfolioAlt1Security) (*operations.AddVideoToPortfolioAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,16 +122,16 @@ func (s *portfoliosVideos) AddVideoToPortfolioAlt1(ctx context.Context, request 
 }
 
 // DeleteVideoFromPortfolio - Remove a video from a portfolio
-func (s *portfoliosVideos) DeleteVideoFromPortfolio(ctx context.Context, request operations.DeleteVideoFromPortfolioRequest) (*operations.DeleteVideoFromPortfolioResponse, error) {
+func (s *portfoliosVideos) DeleteVideoFromPortfolio(ctx context.Context, request operations.DeleteVideoFromPortfolioRequest, security operations.DeleteVideoFromPortfolioSecurity) (*operations.DeleteVideoFromPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,16 +167,16 @@ func (s *portfoliosVideos) DeleteVideoFromPortfolio(ctx context.Context, request
 }
 
 // DeleteVideoFromPortfolioAlt1 - Remove a video from a portfolio
-func (s *portfoliosVideos) DeleteVideoFromPortfolioAlt1(ctx context.Context, request operations.DeleteVideoFromPortfolioAlt1Request) (*operations.DeleteVideoFromPortfolioAlt1Response, error) {
+func (s *portfoliosVideos) DeleteVideoFromPortfolioAlt1(ctx context.Context, request operations.DeleteVideoFromPortfolioAlt1Request, security operations.DeleteVideoFromPortfolioAlt1Security) (*operations.DeleteVideoFromPortfolioAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *portfoliosVideos) DeleteVideoFromPortfolioAlt1(ctx context.Context, req
 // GetPortfolioVideo - Get a specific video in a portfolio
 func (s *portfoliosVideos) GetPortfolioVideo(ctx context.Context, request operations.GetPortfolioVideoRequest) (*operations.GetPortfolioVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -258,7 +258,7 @@ func (s *portfoliosVideos) GetPortfolioVideo(ctx context.Context, request operat
 // GetPortfolioVideoAlt1 - Get a specific video in a portfolio
 func (s *portfoliosVideos) GetPortfolioVideoAlt1(ctx context.Context, request operations.GetPortfolioVideoAlt1Request) (*operations.GetPortfolioVideoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,14 +302,14 @@ func (s *portfoliosVideos) GetPortfolioVideoAlt1(ctx context.Context, request op
 // GetPortfolioVideos - Get all the videos in a portfolio
 func (s *portfoliosVideos) GetPortfolioVideos(ctx context.Context, request operations.GetPortfolioVideosRequest) (*operations.GetPortfolioVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/portfolios/{portfolio_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -350,14 +350,14 @@ func (s *portfoliosVideos) GetPortfolioVideos(ctx context.Context, request opera
 // GetPortfolioVideosAlt1 - Get all the videos in a portfolio
 func (s *portfoliosVideos) GetPortfolioVideosAlt1(ctx context.Context, request operations.GetPortfolioVideosAlt1Request) (*operations.GetPortfolioVideosAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/portfolios/{portfolio_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

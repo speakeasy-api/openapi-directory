@@ -42,7 +42,7 @@ func (s *platforms) PlatformsList(ctx context.Context, request operations.Platfo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,7 +91,7 @@ func (s *platforms) PlatformsListsParentsList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,7 +132,7 @@ func (s *platforms) PlatformsListsParentsList(ctx context.Context, request opera
 // PlatformsRead - Get details of the platform.
 func (s *platforms) PlatformsRead(ctx context.Context, request operations.PlatformsReadRequest) (*operations.PlatformsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platforms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platforms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

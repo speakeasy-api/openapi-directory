@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitGetBlobPathParams struct {
+type GitGetBlobRequest struct {
 	FileSha string `pathParam:"style=simple,explode=false,name=file_sha"`
 	Owner   string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type GitGetBlobRequest struct {
-	PathParams GitGetBlobPathParams
 }
 
 type GitGetBlobResponse struct {

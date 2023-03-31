@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1CalendarsIDRecoverPathParams struct {
+type PutSetupV1CalendarsIDRecoverRequest struct {
 	// id of calendar object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1CalendarsIDRecoverRequest struct {
-	PathParams PutSetupV1CalendarsIDRecoverPathParams
 }
 
 type PutSetupV1CalendarsIDRecoverResponse struct {

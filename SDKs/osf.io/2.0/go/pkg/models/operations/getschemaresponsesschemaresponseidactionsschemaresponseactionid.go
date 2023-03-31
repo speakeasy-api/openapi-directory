@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDPathParams struct {
+type GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDRequest struct {
 	// The unique identifier of the Schema Response Action example `61b9eae1a7d8ac025c4c46d3`.
 	SchemaResponseActionID string `pathParam:"style=simple,explode=false,name=schema_response_action_id"`
 	// The unique identifier of the Schema Response example `61b9cd62eb66180215222669`.
 	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
-type GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDRequest struct {
-	PathParams GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDPathParams
 }
 
 // GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum - The name of the state of the Schema Response prior to the creation of the action.

@@ -8,20 +8,12 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchPortsStatusesPathParams struct {
+type GetDeviceSwitchPortsStatusesRequest struct {
 	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetDeviceSwitchPortsStatusesQueryParams struct {
 	// The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetDeviceSwitchPortsStatusesRequest struct {
-	PathParams  GetDeviceSwitchPortsStatusesPathParams
-	QueryParams GetDeviceSwitchPortsStatusesQueryParams
 }
 
 // GetDeviceSwitchPortsStatuses200ApplicationJSONCdp - The Cisco Discovery Protocol (CDP) information of the connected device.

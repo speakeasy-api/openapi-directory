@@ -64,7 +64,6 @@ pkg/models/operations/tagmanageraccountsupdate.go
 pkg/models/shared/container.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/environment.go
 pkg/models/shared/listenvironmentsresponse.go
 pkg/models/shared/folder.go

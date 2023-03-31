@@ -12,18 +12,13 @@ var FetchNetworkServerList = []string{
 }
 
 type FetchNetworkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchNetworkPathParams struct {
-	// The SID of the Network resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchNetworkRequest struct {
-	PathParams FetchNetworkPathParams
-	Security   FetchNetworkSecurity
-	ServerURL  *string
+	// The SID of the Network resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchNetworkResponse struct {

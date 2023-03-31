@@ -8,19 +8,14 @@ import (
 )
 
 type RetrieveSettlementSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrieveSettlementPathParams struct {
+type RetrieveSettlementRequest struct {
 	// The ID of the settlements's associated location.
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The settlement's Square-issued ID. You obtain this value from Settlement objects returned by the List Settlements endpoint.
 	SettlementID string `pathParam:"style=simple,explode=false,name=settlement_id"`
-}
-
-type RetrieveSettlementRequest struct {
-	PathParams RetrieveSettlementPathParams
-	Security   RetrieveSettlementSecurity
 }
 
 type RetrieveSettlementResponse struct {

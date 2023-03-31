@@ -125,7 +125,7 @@ func (e *LeagueLeadersByWeekPositionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LeagueLeadersByWeekPathParams struct {
+type LeagueLeadersByWeekRequest struct {
 	// Response member you would like results sorted by.
 	Column LeagueLeadersByWeekColumnEnum `pathParam:"style=simple,explode=false,name=column"`
 	//           Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
@@ -141,10 +141,6 @@ type LeagueLeadersByWeekPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type LeagueLeadersByWeekRequest struct {
-	PathParams LeagueLeadersByWeekPathParams
 }
 
 type LeagueLeadersByWeekResponse struct {

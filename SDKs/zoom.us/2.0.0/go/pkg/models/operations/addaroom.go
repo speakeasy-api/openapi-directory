@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddARoomSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AddARoomApplicationJSONTypeEnum - Type of the Zoom Room.
@@ -49,11 +48,6 @@ type AddARoomApplicationJSON struct {
 	Name string `json:"name"`
 	// Type of the Zoom Room.
 	Type AddARoomApplicationJSONTypeEnum `json:"type"`
-}
-
-type AddARoomRequest struct {
-	Request  *AddARoomApplicationJSON `request:"mediaType=application/json"`
-	Security AddARoomSecurity
 }
 
 // AddARoom201ApplicationXMLTypeEnum - Type of the Zoom Room.

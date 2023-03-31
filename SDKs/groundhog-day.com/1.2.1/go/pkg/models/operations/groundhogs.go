@@ -39,15 +39,11 @@ func (e *GroundhogsIsGroundhogEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroundhogsQueryParams struct {
+type GroundhogsRequest struct {
 	// Filter groundhogs by country of origin (USA or Canada).
 	Country *string `queryParam:"style=form,explode=true,name=country"`
 	// Filter groundhogs by type (actual, alive groundhogs, or other prognosticators)
 	IsGroundhog *GroundhogsIsGroundhogEnum `queryParam:"style=form,explode=true,name=isGroundhog"`
-}
-
-type GroundhogsRequest struct {
-	QueryParams GroundhogsQueryParams
 }
 
 // Groundhogs200ApplicationJSON - OK

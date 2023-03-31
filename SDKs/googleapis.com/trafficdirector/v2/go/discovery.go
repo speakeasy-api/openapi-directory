@@ -32,11 +32,11 @@ func newDiscovery(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
-func (s *discovery) TrafficdirectorDiscoveryClientStatus(ctx context.Context, request operations.TrafficdirectorDiscoveryClientStatusRequest) (*operations.TrafficdirectorDiscoveryClientStatusResponse, error) {
+func (s *discovery) TrafficdirectorDiscoveryClientStatus(ctx context.Context, request operations.TrafficdirectorDiscoveryClientStatusRequest, security operations.TrafficdirectorDiscoveryClientStatusSecurity) (*operations.TrafficdirectorDiscoveryClientStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/discovery:client_status"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientStatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *discovery) TrafficdirectorDiscoveryClientStatus(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -14,22 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.AcmednsAcmeChallengeSetsGetRequest{
-        PathParams: operations.AcmednsAcmeChallengeSetsGetPathParams{
-            RootDomain: "corrupti",
-        },
-        QueryParams: operations.AcmednsAcmeChallengeSetsGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PrettyPrint: false,
+        QuotaUser: "illum",
+        RootDomain: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()

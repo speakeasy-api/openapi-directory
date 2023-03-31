@@ -63,7 +63,7 @@ func (e *GetSchedulesScheduleEEfileSupportOpposeIndicatorEnum) UnmarshalJSON(dat
 	}
 }
 
-type GetSchedulesScheduleEEfileQueryParams struct {
+type GetSchedulesScheduleEEfileRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -149,10 +149,6 @@ type GetSchedulesScheduleEEfileQueryParams struct {
 	SpenderName []string `queryParam:"style=form,explode=true,name=spender_name"`
 	// Explains if the money was spent in order to support or oppose a candidate or candidates. (Coded S or O for support or oppose.) This indicator applies to independent expenditures and communication costs.
 	SupportOpposeIndicator []GetSchedulesScheduleEEfileSupportOpposeIndicatorEnum `queryParam:"style=form,explode=true,name=support_oppose_indicator"`
-}
-
-type GetSchedulesScheduleEEfileRequest struct {
-	QueryParams GetSchedulesScheduleEEfileQueryParams
 }
 
 type GetSchedulesScheduleEEfileResponse struct {

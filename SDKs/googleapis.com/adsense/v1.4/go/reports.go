@@ -33,7 +33,7 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AdsenseReportsGenerate - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
-func (s *reports) AdsenseReportsGenerate(ctx context.Context, request operations.AdsenseReportsGenerateRequest) (*operations.AdsenseReportsGenerateResponse, error) {
+func (s *reports) AdsenseReportsGenerate(ctx context.Context, request operations.AdsenseReportsGenerateRequest, security operations.AdsenseReportsGenerateSecurity) (*operations.AdsenseReportsGenerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports"
 
@@ -42,11 +42,11 @@ func (s *reports) AdsenseReportsGenerate(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *reports) AdsenseReportsGenerate(ctx context.Context, request operations
 }
 
 // AdsenseReportsSavedGenerate - Generate an AdSense report based on the saved report ID sent in the query parameters.
-func (s *reports) AdsenseReportsSavedGenerate(ctx context.Context, request operations.AdsenseReportsSavedGenerateRequest) (*operations.AdsenseReportsSavedGenerateResponse, error) {
+func (s *reports) AdsenseReportsSavedGenerate(ctx context.Context, request operations.AdsenseReportsSavedGenerateRequest, security operations.AdsenseReportsSavedGenerateSecurity) (*operations.AdsenseReportsSavedGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{savedReportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{savedReportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *reports) AdsenseReportsSavedGenerate(ctx context.Context, request opera
 }
 
 // AdsenseReportsSavedList - List all saved reports in this AdSense account.
-func (s *reports) AdsenseReportsSavedList(ctx context.Context, request operations.AdsenseReportsSavedListRequest) (*operations.AdsenseReportsSavedListResponse, error) {
+func (s *reports) AdsenseReportsSavedList(ctx context.Context, request operations.AdsenseReportsSavedListRequest, security operations.AdsenseReportsSavedListSecurity) (*operations.AdsenseReportsSavedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/saved"
 
@@ -138,11 +138,11 @@ func (s *reports) AdsenseReportsSavedList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

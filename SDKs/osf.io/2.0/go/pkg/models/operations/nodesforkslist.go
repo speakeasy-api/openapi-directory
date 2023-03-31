@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type NodesForksListPathParams struct {
+type NodesForksListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesForksListRequest struct {
-	PathParams NodesForksListPathParams
 }
 
 // NodesForksListNodeAttributesCategoryEnum - The category of the node, as selected by project contributors.

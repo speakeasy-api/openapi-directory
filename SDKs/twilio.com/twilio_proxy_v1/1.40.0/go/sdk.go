@@ -93,15 +93,25 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateMessageInteraction - Create a new message Interaction to send directly from your system to one [Participant](https://www.twilio.com/docs/proxy/api/participant).  The `inbound` properties for the Interaction will always be empty.
-func (s *SDK) CreateMessageInteraction(ctx context.Context, request operations.CreateMessageInteractionRequest) (*operations.CreateMessageInteractionResponse, error) {
-	baseURL := operations.CreateMessageInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateMessageInteraction(ctx context.Context, request operations.CreateMessageInteractionRequest, security operations.CreateMessageInteractionSecurity, opts ...operations.Option) (*operations.CreateMessageInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{ParticipantSid}/MessageInteractions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateMessageInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{ParticipantSid}/MessageInteractions", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -113,7 +123,7 @@ func (s *SDK) CreateMessageInteraction(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,15 +158,25 @@ func (s *SDK) CreateMessageInteraction(ctx context.Context, request operations.C
 }
 
 // CreateParticipant - Add a new Participant to the Session
-func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreateParticipantRequest) (*operations.CreateParticipantResponse, error) {
-	baseURL := operations.CreateParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreateParticipantRequest, security operations.CreateParticipantSecurity, opts ...operations.Option) (*operations.CreateParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +188,7 @@ func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreatePa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,15 +223,25 @@ func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreatePa
 }
 
 // CreatePhoneNumber - Add a Phone Number to a Service's Proxy Number Pool.
-func (s *SDK) CreatePhoneNumber(ctx context.Context, request operations.CreatePhoneNumberRequest) (*operations.CreatePhoneNumberResponse, error) {
-	baseURL := operations.CreatePhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreatePhoneNumber(ctx context.Context, request operations.CreatePhoneNumberRequest, security operations.CreatePhoneNumberSecurity, opts ...operations.Option) (*operations.CreatePhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreatePhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +253,7 @@ func (s *SDK) CreatePhoneNumber(ctx context.Context, request operations.CreatePh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,10 +288,20 @@ func (s *SDK) CreatePhoneNumber(ctx context.Context, request operations.CreatePh
 }
 
 // CreateService - Create a new Service for Twilio Proxy
-func (s *SDK) CreateService(ctx context.Context, request operations.CreateServiceRequest) (*operations.CreateServiceResponse, error) {
+func (s *SDK) CreateService(ctx context.Context, request operations.CreateServiceCreateServiceRequest, security operations.CreateServiceSecurity, opts ...operations.Option) (*operations.CreateServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Services"
@@ -278,7 +318,7 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,15 +353,25 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 }
 
 // CreateSession - Create a new Session
-func (s *SDK) CreateSession(ctx context.Context, request operations.CreateSessionRequest) (*operations.CreateSessionResponse, error) {
-	baseURL := operations.CreateSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSession(ctx context.Context, request operations.CreateSessionRequest, security operations.CreateSessionSecurity, opts ...operations.Option) (*operations.CreateSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSessionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +383,7 @@ func (s *SDK) CreateSession(ctx context.Context, request operations.CreateSessio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,15 +418,25 @@ func (s *SDK) CreateSession(ctx context.Context, request operations.CreateSessio
 }
 
 // CreateShortCode - Add a Short Code to the Proxy Number Pool for the Service.
-func (s *SDK) CreateShortCode(ctx context.Context, request operations.CreateShortCodeRequest) (*operations.CreateShortCodeResponse, error) {
-	baseURL := operations.CreateShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateShortCode(ctx context.Context, request operations.CreateShortCodeRequest, security operations.CreateShortCodeSecurity, opts ...operations.Option) (*operations.CreateShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,7 +448,7 @@ func (s *SDK) CreateShortCode(ctx context.Context, request operations.CreateShor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,20 +483,30 @@ func (s *SDK) CreateShortCode(ctx context.Context, request operations.CreateShor
 }
 
 // DeleteInteraction - Delete a specific Interaction.
-func (s *SDK) DeleteInteraction(ctx context.Context, request operations.DeleteInteractionRequest) (*operations.DeleteInteractionResponse, error) {
-	baseURL := operations.DeleteInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteInteraction(ctx context.Context, request operations.DeleteInteractionRequest, security operations.DeleteInteractionSecurity, opts ...operations.Option) (*operations.DeleteInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Interactions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Interactions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -462,20 +532,30 @@ func (s *SDK) DeleteInteraction(ctx context.Context, request operations.DeleteIn
 }
 
 // DeleteParticipant - Delete a specific Participant. This is a soft-delete. The participant remains associated with the session and cannot be re-added. Participants are only permanently deleted when the [Session](https://www.twilio.com/docs/proxy/api/session) is deleted.
-func (s *SDK) DeleteParticipant(ctx context.Context, request operations.DeleteParticipantRequest) (*operations.DeleteParticipantResponse, error) {
-	baseURL := operations.DeleteParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteParticipant(ctx context.Context, request operations.DeleteParticipantRequest, security operations.DeleteParticipantSecurity, opts ...operations.Option) (*operations.DeleteParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -501,20 +581,30 @@ func (s *SDK) DeleteParticipant(ctx context.Context, request operations.DeletePa
 }
 
 // DeletePhoneNumber - Delete a specific Phone Number from a Service.
-func (s *SDK) DeletePhoneNumber(ctx context.Context, request operations.DeletePhoneNumberRequest) (*operations.DeletePhoneNumberResponse, error) {
-	baseURL := operations.DeletePhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeletePhoneNumber(ctx context.Context, request operations.DeletePhoneNumberRequest, security operations.DeletePhoneNumberSecurity, opts ...operations.Option) (*operations.DeletePhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeletePhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,20 +630,30 @@ func (s *SDK) DeletePhoneNumber(ctx context.Context, request operations.DeletePh
 }
 
 // DeleteService - Delete a specific Service.
-func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServiceRequest) (*operations.DeleteServiceResponse, error) {
-	baseURL := operations.DeleteServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServiceRequest, security operations.DeleteServiceSecurity, opts ...operations.Option) (*operations.DeleteServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -579,20 +679,30 @@ func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServic
 }
 
 // DeleteSession - Delete a specific Session.
-func (s *SDK) DeleteSession(ctx context.Context, request operations.DeleteSessionRequest) (*operations.DeleteSessionResponse, error) {
-	baseURL := operations.DeleteSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSession(ctx context.Context, request operations.DeleteSessionRequest, security operations.DeleteSessionSecurity, opts ...operations.Option) (*operations.DeleteSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSessionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -618,20 +728,30 @@ func (s *SDK) DeleteSession(ctx context.Context, request operations.DeleteSessio
 }
 
 // DeleteShortCode - Delete a specific Short Code from a Service.
-func (s *SDK) DeleteShortCode(ctx context.Context, request operations.DeleteShortCodeRequest) (*operations.DeleteShortCodeResponse, error) {
-	baseURL := operations.DeleteShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteShortCode(ctx context.Context, request operations.DeleteShortCodeRequest, security operations.DeleteShortCodeSecurity, opts ...operations.Option) (*operations.DeleteShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,20 +777,30 @@ func (s *SDK) DeleteShortCode(ctx context.Context, request operations.DeleteShor
 }
 
 // FetchInteraction - Retrieve a list of Interactions for a given [Session](https://www.twilio.com/docs/proxy/api/session).
-func (s *SDK) FetchInteraction(ctx context.Context, request operations.FetchInteractionRequest) (*operations.FetchInteractionResponse, error) {
-	baseURL := operations.FetchInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchInteraction(ctx context.Context, request operations.FetchInteractionRequest, security operations.FetchInteractionSecurity, opts ...operations.Option) (*operations.FetchInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Interactions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Interactions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -703,20 +833,30 @@ func (s *SDK) FetchInteraction(ctx context.Context, request operations.FetchInte
 
 	return res, nil
 }
-func (s *SDK) FetchMessageInteraction(ctx context.Context, request operations.FetchMessageInteractionRequest) (*operations.FetchMessageInteractionResponse, error) {
-	baseURL := operations.FetchMessageInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchMessageInteraction(ctx context.Context, request operations.FetchMessageInteractionRequest, security operations.FetchMessageInteractionSecurity, opts ...operations.Option) (*operations.FetchMessageInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{ParticipantSid}/MessageInteractions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchMessageInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{ParticipantSid}/MessageInteractions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -751,20 +891,30 @@ func (s *SDK) FetchMessageInteraction(ctx context.Context, request operations.Fe
 }
 
 // FetchParticipant - Fetch a specific Participant.
-func (s *SDK) FetchParticipant(ctx context.Context, request operations.FetchParticipantRequest) (*operations.FetchParticipantResponse, error) {
-	baseURL := operations.FetchParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchParticipant(ctx context.Context, request operations.FetchParticipantRequest, security operations.FetchParticipantSecurity, opts ...operations.Option) (*operations.FetchParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -799,20 +949,30 @@ func (s *SDK) FetchParticipant(ctx context.Context, request operations.FetchPart
 }
 
 // FetchPhoneNumber - Fetch a specific Phone Number.
-func (s *SDK) FetchPhoneNumber(ctx context.Context, request operations.FetchPhoneNumberRequest) (*operations.FetchPhoneNumberResponse, error) {
-	baseURL := operations.FetchPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchPhoneNumber(ctx context.Context, request operations.FetchPhoneNumberRequest, security operations.FetchPhoneNumberSecurity, opts ...operations.Option) (*operations.FetchPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -847,20 +1007,30 @@ func (s *SDK) FetchPhoneNumber(ctx context.Context, request operations.FetchPhon
 }
 
 // FetchService - Fetch a specific Service.
-func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceRequest) (*operations.FetchServiceResponse, error) {
-	baseURL := operations.FetchServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceRequest, security operations.FetchServiceSecurity, opts ...operations.Option) (*operations.FetchServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -895,20 +1065,30 @@ func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceR
 }
 
 // FetchSession - Fetch a specific Session.
-func (s *SDK) FetchSession(ctx context.Context, request operations.FetchSessionRequest) (*operations.FetchSessionResponse, error) {
-	baseURL := operations.FetchSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSession(ctx context.Context, request operations.FetchSessionRequest, security operations.FetchSessionSecurity, opts ...operations.Option) (*operations.FetchSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSessionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -943,20 +1123,30 @@ func (s *SDK) FetchSession(ctx context.Context, request operations.FetchSessionR
 }
 
 // FetchShortCode - Fetch a specific Short Code.
-func (s *SDK) FetchShortCode(ctx context.Context, request operations.FetchShortCodeRequest) (*operations.FetchShortCodeResponse, error) {
-	baseURL := operations.FetchShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchShortCode(ctx context.Context, request operations.FetchShortCodeRequest, security operations.FetchShortCodeSecurity, opts ...operations.Option) (*operations.FetchShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -991,24 +1181,34 @@ func (s *SDK) FetchShortCode(ctx context.Context, request operations.FetchShortC
 }
 
 // ListInteraction - Retrieve a list of all Interactions for a Session. A maximum of 100 records will be returned per page.
-func (s *SDK) ListInteraction(ctx context.Context, request operations.ListInteractionRequest) (*operations.ListInteractionResponse, error) {
-	baseURL := operations.ListInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListInteraction(ctx context.Context, request operations.ListInteractionRequest, security operations.ListInteractionSecurity, opts ...operations.Option) (*operations.ListInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Interactions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Interactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1041,24 +1241,34 @@ func (s *SDK) ListInteraction(ctx context.Context, request operations.ListIntera
 
 	return res, nil
 }
-func (s *SDK) ListMessageInteraction(ctx context.Context, request operations.ListMessageInteractionRequest) (*operations.ListMessageInteractionResponse, error) {
-	baseURL := operations.ListMessageInteractionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListMessageInteraction(ctx context.Context, request operations.ListMessageInteractionRequest, security operations.ListMessageInteractionSecurity, opts ...operations.Option) (*operations.ListMessageInteractionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{ParticipantSid}/MessageInteractions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListMessageInteractionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants/{ParticipantSid}/MessageInteractions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1093,24 +1303,34 @@ func (s *SDK) ListMessageInteraction(ctx context.Context, request operations.Lis
 }
 
 // ListParticipant - Retrieve a list of all Participants in a Session.
-func (s *SDK) ListParticipant(ctx context.Context, request operations.ListParticipantRequest) (*operations.ListParticipantResponse, error) {
-	baseURL := operations.ListParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListParticipant(ctx context.Context, request operations.ListParticipantRequest, security operations.ListParticipantSecurity, opts ...operations.Option) (*operations.ListParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{SessionSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1145,24 +1365,34 @@ func (s *SDK) ListParticipant(ctx context.Context, request operations.ListPartic
 }
 
 // ListPhoneNumber - Retrieve a list of all Phone Numbers in the Proxy Number Pool for a Service. A maximum of 100 records will be returned per page.
-func (s *SDK) ListPhoneNumber(ctx context.Context, request operations.ListPhoneNumberRequest) (*operations.ListPhoneNumberResponse, error) {
-	baseURL := operations.ListPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListPhoneNumber(ctx context.Context, request operations.ListPhoneNumberRequest, security operations.ListPhoneNumberSecurity, opts ...operations.Option) (*operations.ListPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1197,10 +1427,20 @@ func (s *SDK) ListPhoneNumber(ctx context.Context, request operations.ListPhoneN
 }
 
 // ListService - Retrieve a list of all Services for Twilio Proxy. A maximum of 100 records will be returned per page.
-func (s *SDK) ListService(ctx context.Context, request operations.ListServiceRequest) (*operations.ListServiceResponse, error) {
+func (s *SDK) ListService(ctx context.Context, request operations.ListServiceRequest, security operations.ListServiceSecurity, opts ...operations.Option) (*operations.ListServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Services"
@@ -1210,11 +1450,11 @@ func (s *SDK) ListService(ctx context.Context, request operations.ListServiceReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1249,24 +1489,34 @@ func (s *SDK) ListService(ctx context.Context, request operations.ListServiceReq
 }
 
 // ListSession - Retrieve a list of all Sessions for the Service. A maximum of 100 records will be returned per page.
-func (s *SDK) ListSession(ctx context.Context, request operations.ListSessionRequest) (*operations.ListSessionResponse, error) {
-	baseURL := operations.ListSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSession(ctx context.Context, request operations.ListSessionRequest, security operations.ListSessionSecurity, opts ...operations.Option) (*operations.ListSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSessionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1301,24 +1551,34 @@ func (s *SDK) ListSession(ctx context.Context, request operations.ListSessionReq
 }
 
 // ListShortCode - Retrieve a list of all Short Codes in the Proxy Number Pool for the Service. A maximum of 100 records will be returned per page.
-func (s *SDK) ListShortCode(ctx context.Context, request operations.ListShortCodeRequest) (*operations.ListShortCodeResponse, error) {
-	baseURL := operations.ListShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListShortCode(ctx context.Context, request operations.ListShortCodeRequest, security operations.ListShortCodeSecurity, opts ...operations.Option) (*operations.ListShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1353,15 +1613,25 @@ func (s *SDK) ListShortCode(ctx context.Context, request operations.ListShortCod
 }
 
 // UpdatePhoneNumber - Update a specific Proxy Number.
-func (s *SDK) UpdatePhoneNumber(ctx context.Context, request operations.UpdatePhoneNumberRequest) (*operations.UpdatePhoneNumberResponse, error) {
-	baseURL := operations.UpdatePhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdatePhoneNumber(ctx context.Context, request operations.UpdatePhoneNumberRequest, security operations.UpdatePhoneNumberSecurity, opts ...operations.Option) (*operations.UpdatePhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdatePhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/PhoneNumbers/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1373,7 +1643,7 @@ func (s *SDK) UpdatePhoneNumber(ctx context.Context, request operations.UpdatePh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1408,15 +1678,25 @@ func (s *SDK) UpdatePhoneNumber(ctx context.Context, request operations.UpdatePh
 }
 
 // UpdateService - Update a specific Service.
-func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServiceRequest) (*operations.UpdateServiceResponse, error) {
-	baseURL := operations.UpdateServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServiceRequest, security operations.UpdateServiceSecurity, opts ...operations.Option) (*operations.UpdateServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1428,7 +1708,7 @@ func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1463,15 +1743,25 @@ func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServic
 }
 
 // UpdateSession - Update a specific Session.
-func (s *SDK) UpdateSession(ctx context.Context, request operations.UpdateSessionRequest) (*operations.UpdateSessionResponse, error) {
-	baseURL := operations.UpdateSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSession(ctx context.Context, request operations.UpdateSessionRequest, security operations.UpdateSessionSecurity, opts ...operations.Option) (*operations.UpdateSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSessionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/Sessions/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1483,7 +1773,7 @@ func (s *SDK) UpdateSession(ctx context.Context, request operations.UpdateSessio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1518,15 +1808,25 @@ func (s *SDK) UpdateSession(ctx context.Context, request operations.UpdateSessio
 }
 
 // UpdateShortCode - Update a specific Short Code.
-func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShortCodeRequest) (*operations.UpdateShortCodeResponse, error) {
-	baseURL := operations.UpdateShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShortCodeRequest, security operations.UpdateShortCodeSecurity, opts ...operations.Option) (*operations.UpdateShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ServiceSid}/ShortCodes/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1538,7 +1838,7 @@ func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

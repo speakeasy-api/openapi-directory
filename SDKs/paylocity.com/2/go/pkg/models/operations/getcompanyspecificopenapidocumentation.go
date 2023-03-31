@@ -8,23 +8,14 @@ import (
 )
 
 type GetCompanySpecificOpenAPIDocumentationSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
-}
-
-type GetCompanySpecificOpenAPIDocumentationPathParams struct {
-	// Company Id
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompanySpecificOpenAPIDocumentationHeaders struct {
-	// Bearer + JWT
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetCompanySpecificOpenAPIDocumentationRequest struct {
-	PathParams GetCompanySpecificOpenAPIDocumentationPathParams
-	Headers    GetCompanySpecificOpenAPIDocumentationHeaders
-	Security   GetCompanySpecificOpenAPIDocumentationSecurity
+	// Bearer + JWT
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// Company Id
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 }
 
 type GetCompanySpecificOpenAPIDocumentationResponse struct {

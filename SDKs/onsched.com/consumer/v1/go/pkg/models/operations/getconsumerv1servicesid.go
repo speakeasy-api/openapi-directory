@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1ServicesIDPathParams struct {
+type GetConsumerV1ServicesIDRequest struct {
 	// id of service object
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetConsumerV1ServicesIDRequest struct {
-	PathParams GetConsumerV1ServicesIDPathParams
 }
 
 type GetConsumerV1ServicesIDResponse struct {

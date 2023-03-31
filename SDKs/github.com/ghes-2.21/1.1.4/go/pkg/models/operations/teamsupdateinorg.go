@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsUpdateInOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsUpdateInOrgRequestBodyPermissionEnum - **Deprecated**. The permission that new repositories will be added to the team with when none is specified. Can be one of:
 // \* `pull` - team members can pull, but not push to or administer newly-added repositories.
 // \* `push` - team members can pull and push, but not administer newly-added repositories.
@@ -96,8 +90,10 @@ type TeamsUpdateInOrgRequestBody struct {
 }
 
 type TeamsUpdateInOrgRequest struct {
-	PathParams TeamsUpdateInOrgPathParams
-	Request    *TeamsUpdateInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsUpdateInOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                       `pathParam:"style=simple,explode=false,name=org"`
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsUpdateInOrgResponse struct {

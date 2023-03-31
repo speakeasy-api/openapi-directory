@@ -12,7 +12,8 @@ var CreateNetworkAccessProfileServerList = []string{
 }
 
 type CreateNetworkAccessProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateNetworkAccessProfileCreateNetworkAccessProfileRequest struct {
@@ -20,12 +21,6 @@ type CreateNetworkAccessProfileCreateNetworkAccessProfileRequest struct {
 	Networks []string `form:"name=Networks"`
 	// An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.
 	UniqueName *string `form:"name=UniqueName"`
-}
-
-type CreateNetworkAccessProfileRequest struct {
-	Request   *CreateNetworkAccessProfileCreateNetworkAccessProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateNetworkAccessProfileSecurity
-	ServerURL *string
 }
 
 type CreateNetworkAccessProfileResponse struct {

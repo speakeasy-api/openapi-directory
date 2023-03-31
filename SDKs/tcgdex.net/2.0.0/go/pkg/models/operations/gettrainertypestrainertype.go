@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTrainerTypesTrainerTypePathParams struct {
-	TrainerType string `pathParam:"style=simple,explode=false,name=trainer-type"`
-}
-
 type GetTrainerTypesTrainerTypeRequest struct {
-	PathParams GetTrainerTypesTrainerTypePathParams
+	TrainerType string `pathParam:"style=simple,explode=false,name=trainer-type"`
 }
 
 type GetTrainerTypesTrainerTypeResponse struct {

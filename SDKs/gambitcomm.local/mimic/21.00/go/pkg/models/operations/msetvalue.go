@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type MsetValuePathParams struct {
+type MsetValueRequest struct {
+	// objInsVarValArray
+	RequestBody [][]string `request:"mediaType=application/json"`
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type MsetValueRequest struct {
-	PathParams MsetValuePathParams
-	// objInsVarValArray
-	Request [][]string `request:"mediaType=application/json"`
 }
 
 type MsetValueResponse struct {

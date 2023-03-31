@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDInvoicesJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDInvoicesJSONPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum string
@@ -253,10 +245,12 @@ func (u PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON) MarshalJSON() ([]byte
 }
 
 type PostSpacesSpaceIDFoldersIDInvoicesJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDInvoicesJSONPathParams
 	// Invoice to add (either DocumentId, InvoiceDate either (File,Name,Content64Encoded,Title,InvoiceDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDInvoicesJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDInvoicesJSON201ApplicationJSON - Id of invoice created

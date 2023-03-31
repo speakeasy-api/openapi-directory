@@ -8,18 +8,14 @@ import (
 )
 
 type DataplexProjectsLocationsLakesZonesEntitiesUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataplexProjectsLocationsLakesZonesEntitiesUpdatePathParams struct {
-	// Output only. The resource name of the entity, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{id}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DataplexProjectsLocationsLakesZonesEntitiesUpdateQueryParams struct {
+type DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                      *shared.XgafvEnum                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDataplexV1EntityInput *shared.GoogleCloudDataplexV1EntityInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type DataplexProjectsLocationsLakesZonesEntitiesUpdateQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Output only. The resource name of the entity, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{id}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type DataplexProjectsLocationsLakesZonesEntitiesUpdateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Only validate the request, but do not perform mutations. The default is false.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest struct {
-	PathParams  DataplexProjectsLocationsLakesZonesEntitiesUpdatePathParams
-	QueryParams DataplexProjectsLocationsLakesZonesEntitiesUpdateQueryParams
-	Request     *shared.GoogleCloudDataplexV1EntityInput `request:"mediaType=application/json"`
-	Security    DataplexProjectsLocationsLakesZonesEntitiesUpdateSecurity
 }
 
 type DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse struct {

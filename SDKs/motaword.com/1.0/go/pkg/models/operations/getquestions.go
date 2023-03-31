@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuestionsPathParams struct {
+type GetQuestionsRequest struct {
+	// Project ID
+	AttachAnswersForProject *int64 `queryParam:"style=form,explode=true,name=attach_answers_for_project"`
 	// Scope
 	Scope string `pathParam:"style=simple,explode=false,name=scope"`
 	// Type
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetQuestionsQueryParams struct {
-	// Project ID
-	AttachAnswersForProject *int64 `queryParam:"style=form,explode=true,name=attach_answers_for_project"`
-}
-
-type GetQuestionsRequest struct {
-	PathParams  GetQuestionsPathParams
-	QueryParams GetQuestionsQueryParams
 }
 
 type GetQuestionsResponse struct {

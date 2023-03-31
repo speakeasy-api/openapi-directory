@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchTargetsTargetIDIntegrationsSlackPathParams struct {
+type PatchTargetsTargetIDIntegrationsSlackRequest struct {
+	Slack shared.Slack `request:"mediaType=application/json"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PatchTargetsTargetIDIntegrationsSlackRequest struct {
-	PathParams PatchTargetsTargetIDIntegrationsSlackPathParams
-	Request    shared.Slack `request:"mediaType=application/json"`
 }
 
 // PatchTargetsTargetIDIntegrationsSlack404ApplicationJSON - Not found

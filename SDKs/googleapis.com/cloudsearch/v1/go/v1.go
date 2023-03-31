@@ -33,11 +33,11 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // CloudsearchInitializeCustomer - Enables `third party` support in Google Cloud Search. **Note:** This API requires an admin account to execute.
-func (s *v1) CloudsearchInitializeCustomer(ctx context.Context, request operations.CloudsearchInitializeCustomerRequest) (*operations.CloudsearchInitializeCustomerResponse, error) {
+func (s *v1) CloudsearchInitializeCustomer(ctx context.Context, request operations.CloudsearchInitializeCustomerRequest, security operations.CloudsearchInitializeCustomerSecurity) (*operations.CloudsearchInitializeCustomerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1:initializeCustomer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *v1) CloudsearchInitializeCustomer(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

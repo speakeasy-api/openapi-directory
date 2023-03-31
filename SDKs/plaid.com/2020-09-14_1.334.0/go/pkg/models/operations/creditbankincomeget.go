@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreditBankIncomeGetRequest struct {
-	Request shared.CreditBankIncomeGetRequest `request:"mediaType=application/json"`
-}
 
 type CreditBankIncomeGetResponse struct {
 	ContentType string

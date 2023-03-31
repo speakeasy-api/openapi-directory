@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SignedInUserListOwnedObjectsPathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type SignedInUserListOwnedObjectsQueryParams struct {
+type SignedInUserListOwnedObjectsRequest struct {
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type SignedInUserListOwnedObjectsRequest struct {
-	PathParams  SignedInUserListOwnedObjectsPathParams
-	QueryParams SignedInUserListOwnedObjectsQueryParams
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type SignedInUserListOwnedObjectsResponse struct {

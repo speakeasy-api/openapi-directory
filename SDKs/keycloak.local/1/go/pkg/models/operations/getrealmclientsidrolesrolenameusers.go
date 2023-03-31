@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsIDRolesRoleNameUsersPathParams struct {
+type GetRealmClientsIDRolesRoleNameUsersRequest struct {
+	First *int `queryParam:"style=form,explode=true,name=first"`
 	// id of client (not client-id)
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	ID  string `pathParam:"style=simple,explode=false,name=id"`
+	Max *int   `queryParam:"style=form,explode=true,name=max"`
 	// realm name (not id!)
 	Realm    string `pathParam:"style=simple,explode=false,name=realm"`
 	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type GetRealmClientsIDRolesRoleNameUsersQueryParams struct {
-	First *int `queryParam:"style=form,explode=true,name=first"`
-	Max   *int `queryParam:"style=form,explode=true,name=max"`
-}
-
-type GetRealmClientsIDRolesRoleNameUsersRequest struct {
-	PathParams  GetRealmClientsIDRolesRoleNameUsersPathParams
-	QueryParams GetRealmClientsIDRolesRoleNameUsersQueryParams
 }
 
 type GetRealmClientsIDRolesRoleNameUsersResponse struct {

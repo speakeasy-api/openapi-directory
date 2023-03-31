@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineStatusByModePathParams struct {
-	// A comma-separated list of modes to filter by. e.g. tube,dlr
-	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
-}
-
-type LineStatusByModeQueryParams struct {
+type LineStatusByModeRequest struct {
 	// Include details of the disruptions that are causing the line status including the affected stops and routes
 	Detail *bool `queryParam:"style=form,explode=true,name=detail"`
+	// A comma-separated list of modes to filter by. e.g. tube,dlr
+	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
 	// If specified, ensures that only those line status(es) are returned within the lines that have disruptions with the matching severity level.
 	SeverityLevel *string `queryParam:"style=form,explode=true,name=severityLevel"`
-}
-
-type LineStatusByModeRequest struct {
-	PathParams  LineStatusByModePathParams
-	QueryParams LineStatusByModeQueryParams
 }
 
 type LineStatusByModeResponse struct {

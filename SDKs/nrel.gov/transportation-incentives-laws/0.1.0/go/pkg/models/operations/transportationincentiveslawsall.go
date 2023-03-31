@@ -35,12 +35,7 @@ func (e *TransportationIncentivesLawsAllOutputFormatEnum) UnmarshalJSON(data []b
 	}
 }
 
-type TransportationIncentivesLawsAllPathParams struct {
-	// Response format
-	OutputFormat TransportationIncentivesLawsAllOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
-}
-
-type TransportationIncentivesLawsAllQueryParams struct {
+type TransportationIncentivesLawsAllRequest struct {
 	// API Key
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// The 'true' value returns only expired, repealed, or archived laws and incentives. The default 'false' value returns only current laws and incentives.
@@ -57,6 +52,8 @@ type TransportationIncentivesLawsAllQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Show only local examples of laws and incentives.
 	Local *bool `queryParam:"style=form,explode=true,name=local"`
+	// Response format
+	OutputFormat TransportationIncentivesLawsAllOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
 	// Include points of contacts in the return value.
 	Poc *bool `queryParam:"style=form,explode=true,name=poc"`
 	// Return only recently added or updated laws and incentives
@@ -67,11 +64,6 @@ type TransportationIncentivesLawsAllQueryParams struct {
 	Technology *string `queryParam:"style=form,explode=true,name=technology"`
 	// Search by the user type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'FLEET' for Commercial, 'GOV' for Government Entity, 'TRIBAL' for Tribal Government, 'IND' for Personal Vehicle Owner or Driver, 'STATION' for Alternative Fuel Infrastructure Operator, 'AFP' for Alternative Fuel Producer, 'PURCH' for Alternative Fuel Purchaser, 'MAN' for Alternative Fuel Vehicle (AFV) Manufacturer or Retrofitter, 'MUD' for Multi-Unit Dwelling, 'TRANS' for Transit, and 'OTHER' for Other.
 	UserType *string `queryParam:"style=form,explode=true,name=user_type"`
-}
-
-type TransportationIncentivesLawsAllRequest struct {
-	PathParams  TransportationIncentivesLawsAllPathParams
-	QueryParams TransportationIncentivesLawsAllQueryParams
 }
 
 type TransportationIncentivesLawsAllResponse struct {

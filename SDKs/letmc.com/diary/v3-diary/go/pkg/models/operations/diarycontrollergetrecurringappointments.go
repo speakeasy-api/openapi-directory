@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiaryControllerGetRecurringAppointmentsPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerGetRecurringAppointmentsQueryParams struct {
+type DiaryControllerGetRecurringAppointmentsRequest struct {
 	// The appointment IDs to search for
 	AppointmentTypesToSearch []string `queryParam:"style=form,explode=true,name=appointmentTypesToSearch"`
 	// The unique ID of the Branch
@@ -21,11 +16,8 @@ type DiaryControllerGetRecurringAppointmentsQueryParams struct {
 	Count int `queryParam:"style=form,explode=true,name=count"`
 	// The index of the first item to return
 	Offset int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type DiaryControllerGetRecurringAppointmentsRequest struct {
-	PathParams  DiaryControllerGetRecurringAppointmentsPathParams
-	QueryParams DiaryControllerGetRecurringAppointmentsQueryParams
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerGetRecurringAppointmentsResponse struct {

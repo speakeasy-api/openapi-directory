@@ -33,16 +33,16 @@ func newVehicles(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GetVehicleChargestate - Get Vehicle Charge State
-func (s *vehicles) GetVehicleChargestate(ctx context.Context, request operations.GetVehicleChargestateRequest) (*operations.GetVehicleChargestateResponse, error) {
+func (s *vehicles) GetVehicleChargestate(ctx context.Context, request operations.GetVehicleChargestateRequest, security operations.GetVehicleChargestateSecurity) (*operations.GetVehicleChargestateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/charge-state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/charge-state", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,7 +77,7 @@ func (s *vehicles) GetVehicleChargestate(ctx context.Context, request operations
 }
 
 // GetVehicles - List Vehicles
-func (s *vehicles) GetVehicles(ctx context.Context, request operations.GetVehiclesRequest) (*operations.GetVehiclesResponse, error) {
+func (s *vehicles) GetVehicles(ctx context.Context, request operations.GetVehiclesRequest, security operations.GetVehiclesSecurity) (*operations.GetVehiclesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vehicles"
 
@@ -86,11 +86,11 @@ func (s *vehicles) GetVehicles(ctx context.Context, request operations.GetVehicl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,20 +125,20 @@ func (s *vehicles) GetVehicles(ctx context.Context, request operations.GetVehicl
 }
 
 // GetVehiclesVehicleid - Get Vehicle
-func (s *vehicles) GetVehiclesVehicleid(ctx context.Context, request operations.GetVehiclesVehicleidRequest) (*operations.GetVehiclesVehicleidResponse, error) {
+func (s *vehicles) GetVehiclesVehicleid(ctx context.Context, request operations.GetVehiclesVehicleidRequest, security operations.GetVehiclesVehicleidSecurity) (*operations.GetVehiclesVehicleidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,16 +173,16 @@ func (s *vehicles) GetVehiclesVehicleid(ctx context.Context, request operations.
 }
 
 // GetVehiclesVehicleidInformation - Get Vehicle Information
-func (s *vehicles) GetVehiclesVehicleidInformation(ctx context.Context, request operations.GetVehiclesVehicleidInformationRequest) (*operations.GetVehiclesVehicleidInformationResponse, error) {
+func (s *vehicles) GetVehiclesVehicleidInformation(ctx context.Context, request operations.GetVehiclesVehicleidInformationRequest, security operations.GetVehiclesVehicleidInformationSecurity) (*operations.GetVehiclesVehicleidInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/information", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/information", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -217,16 +217,16 @@ func (s *vehicles) GetVehiclesVehicleidInformation(ctx context.Context, request 
 }
 
 // GetVehiclesVehicleidLocation - Get Vehicle Location
-func (s *vehicles) GetVehiclesVehicleidLocation(ctx context.Context, request operations.GetVehiclesVehicleidLocationRequest) (*operations.GetVehiclesVehicleidLocationResponse, error) {
+func (s *vehicles) GetVehiclesVehicleidLocation(ctx context.Context, request operations.GetVehiclesVehicleidLocationRequest, security operations.GetVehiclesVehicleidLocationSecurity) (*operations.GetVehiclesVehicleidLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/location", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/location", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -261,16 +261,16 @@ func (s *vehicles) GetVehiclesVehicleidLocation(ctx context.Context, request ope
 }
 
 // GetVehiclesVehicleidOdometer - Get Vehicle Odometer
-func (s *vehicles) GetVehiclesVehicleidOdometer(ctx context.Context, request operations.GetVehiclesVehicleidOdometerRequest) (*operations.GetVehiclesVehicleidOdometerResponse, error) {
+func (s *vehicles) GetVehiclesVehicleidOdometer(ctx context.Context, request operations.GetVehiclesVehicleidOdometerRequest, security operations.GetVehiclesVehicleidOdometerSecurity) (*operations.GetVehiclesVehicleidOdometerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/odometer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/odometer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -305,16 +305,16 @@ func (s *vehicles) GetVehiclesVehicleidOdometer(ctx context.Context, request ope
 }
 
 // GetVehiclesVehicleidSmartchargingpolicy - Get Vehicle Smart Charging Policy
-func (s *vehicles) GetVehiclesVehicleidSmartchargingpolicy(ctx context.Context, request operations.GetVehiclesVehicleidSmartchargingpolicyRequest) (*operations.GetVehiclesVehicleidSmartchargingpolicyResponse, error) {
+func (s *vehicles) GetVehiclesVehicleidSmartchargingpolicy(ctx context.Context, request operations.GetVehiclesVehicleidSmartchargingpolicyRequest, security operations.GetVehiclesVehicleidSmartchargingpolicySecurity) (*operations.GetVehiclesVehicleidSmartchargingpolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/smart-charging-policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/smart-charging-policy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,16 +357,16 @@ func (s *vehicles) GetVehiclesVehicleidSmartchargingpolicy(ctx context.Context, 
 // - a request to `stop` charging will override smart charging and charging will be kept off for the duration of the current smart charging cycle.
 //
 // The smart charging settings are not altered by these actions.
-func (s *vehicles) PostVehiclesVehicleidCharging(ctx context.Context, request operations.PostVehiclesVehicleidChargingRequest) (*operations.PostVehiclesVehicleidChargingResponse, error) {
+func (s *vehicles) PostVehiclesVehicleidCharging(ctx context.Context, request operations.PostVehiclesVehicleidChargingRequest, security operations.PostVehiclesVehicleidChargingSecurity) (*operations.PostVehiclesVehicleidChargingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/charging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/charging", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -397,11 +397,11 @@ func (s *vehicles) PostVehiclesVehicleidCharging(ctx context.Context, request op
 // Any data changes resulting from this high-rate updating are reflected everywhere, whether you pull data from the `Vehicles` endpoint, or recieve it via the [Firehose Webhook](#tag/Webhooks)
 //
 // The specifics of the expiration times, watch behaviors, and change thresholds are tuned by us to make sure that they work as expected, without causing undue interruption to the vehicle. For many vendors, it is not appropriate to let the high-rate monitoring last indefinitely, as it will keep systems within the car awake that should be allowed to fall into low-power/standby modes.
-func (s *vehicles) PostVehiclesVehicleidWatch(ctx context.Context, request operations.PostVehiclesVehicleidWatchRequest) (*operations.PostVehiclesVehicleidWatchResponse, error) {
+func (s *vehicles) PostVehiclesVehicleidWatch(ctx context.Context, request operations.PostVehiclesVehicleidWatchRequest, security operations.PostVehiclesVehicleidWatchSecurity) (*operations.PostVehiclesVehicleidWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,7 +413,7 @@ func (s *vehicles) PostVehiclesVehicleidWatch(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -449,11 +449,11 @@ func (s *vehicles) PostVehiclesVehicleidWatch(ctx context.Context, request opera
 
 // PutVehiclesVehicleidSmartchargingpolicy - Update Vehicle Smart Charging Policy
 // Updates the Smart Charging settings for a vehicle
-func (s *vehicles) PutVehiclesVehicleidSmartchargingpolicy(ctx context.Context, request operations.PutVehiclesVehicleidSmartchargingpolicyRequest) (*operations.PutVehiclesVehicleidSmartchargingpolicyResponse, error) {
+func (s *vehicles) PutVehiclesVehicleidSmartchargingpolicy(ctx context.Context, request operations.PutVehiclesVehicleidSmartchargingpolicyRequest, security operations.PutVehiclesVehicleidSmartchargingpolicySecurity) (*operations.PutVehiclesVehicleidSmartchargingpolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/smart-charging-policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vehicles/{vehicleId}/smart-charging-policy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -465,7 +465,7 @@ func (s *vehicles) PutVehiclesVehicleidSmartchargingpolicy(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

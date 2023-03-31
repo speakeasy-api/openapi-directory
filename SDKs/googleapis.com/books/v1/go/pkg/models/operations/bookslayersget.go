@@ -8,18 +8,11 @@ import (
 )
 
 type BooksLayersGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksLayersGetPathParams struct {
-	// The ID for the layer to get the summary for.
-	SummaryID string `pathParam:"style=simple,explode=false,name=summaryId"`
-	// The volume to retrieve layers for.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
-}
-
-type BooksLayersGetQueryParams struct {
+type BooksLayersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,16 +35,14 @@ type BooksLayersGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// String to identify the originator of this request.
 	Source *string `queryParam:"style=form,explode=true,name=source"`
+	// The ID for the layer to get the summary for.
+	SummaryID string `pathParam:"style=simple,explode=false,name=summaryId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksLayersGetRequest struct {
-	PathParams  BooksLayersGetPathParams
-	QueryParams BooksLayersGetQueryParams
-	Security    BooksLayersGetSecurity
+	// The volume to retrieve layers for.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 }
 
 type BooksLayersGetResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseReportsSavedGenerateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseReportsSavedGenerateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseReportsSavedGenerateSecurity struct {
@@ -22,12 +22,7 @@ type AdsenseReportsSavedGenerateSecurity struct {
 	Option2 *AdsenseReportsSavedGenerateSecurityOption2 `security:"option"`
 }
 
-type AdsenseReportsSavedGeneratePathParams struct {
-	// The saved report to retrieve.
-	SavedReportID string `pathParam:"style=simple,explode=false,name=savedReportId"`
-}
-
-type AdsenseReportsSavedGenerateQueryParams struct {
+type AdsenseReportsSavedGenerateRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -44,16 +39,12 @@ type AdsenseReportsSavedGenerateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The saved report to retrieve.
+	SavedReportID string `pathParam:"style=simple,explode=false,name=savedReportId"`
 	// Index of the first row of report data to return.
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseReportsSavedGenerateRequest struct {
-	PathParams  AdsenseReportsSavedGeneratePathParams
-	QueryParams AdsenseReportsSavedGenerateQueryParams
-	Security    AdsenseReportsSavedGenerateSecurity
 }
 
 type AdsenseReportsSavedGenerateResponse struct {

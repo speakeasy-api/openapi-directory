@@ -52,7 +52,7 @@ func (s *aerodromes) AerodromesByDistanceUsV1AerodromesDistanceQueryPost(ctx con
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/aerodromes/distance-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AerodromesByDistance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -67,7 +67,7 @@ func (s *aerodromes) AerodromesByDistanceUsV1AerodromesDistanceQueryPost(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -124,7 +124,7 @@ func (s *aerodromes) AerodromesByPolyUsV1AerodromesPolygonQueryPost(ctx context.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/aerodromes/polygon-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AerodromesByPolygon", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -139,7 +139,7 @@ func (s *aerodromes) AerodromesByPolyUsV1AerodromesPolygonQueryPost(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -196,7 +196,7 @@ func (s *aerodromes) AerodromesByRouteUsV1AerodromesRouteQueryPost(ctx context.C
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/aerodromes/route-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AerodromesByRoute", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,7 +211,7 @@ func (s *aerodromes) AerodromesByRouteUsV1AerodromesRouteQueryPost(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

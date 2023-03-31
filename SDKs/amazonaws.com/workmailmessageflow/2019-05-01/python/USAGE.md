@@ -3,28 +3,22 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetRawMessageContentRequest(
-    path_params=operations.GetRawMessageContentPathParams(
-        message_id="quibusdam",
-    ),
-    headers=operations.GetRawMessageContentHeaders(
-        x_amz_algorithm="vero",
-        x_amz_content_sha256="ea",
-        x_amz_credential="doloremque",
-        x_amz_date="maxime",
-        x_amz_security_token="aperiam",
-        x_amz_signature="ut",
-        x_amz_signed_headers="illum",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    message_id="illum",
 )
     
 res = s.get_raw_message_content(req)

@@ -8,16 +8,11 @@ import (
 )
 
 type RunNamespacesJobsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunNamespacesJobsListPathParams struct {
-	// Required. The namespace from which the jobs should be listed. Replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RunNamespacesJobsListQueryParams struct {
+type RunNamespacesJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type RunNamespacesJobsListQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The namespace from which the jobs should be listed. Replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type RunNamespacesJobsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Not supported by Cloud Run.
 	Watch *bool `queryParam:"style=form,explode=true,name=watch"`
-}
-
-type RunNamespacesJobsListRequest struct {
-	PathParams  RunNamespacesJobsListPathParams
-	QueryParams RunNamespacesJobsListQueryParams
-	Security    RunNamespacesJobsListSecurity
 }
 
 type RunNamespacesJobsListResponse struct {

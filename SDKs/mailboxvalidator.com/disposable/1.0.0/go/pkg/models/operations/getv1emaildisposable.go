@@ -32,17 +32,13 @@ func (e *GetV1EmailDisposableFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetV1EmailDisposableQueryParams struct {
+type GetV1EmailDisposableRequest struct {
 	// The email address to check if is from a disposable email provider.
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// Return the result in json (default) or xml format.
 	Format *GetV1EmailDisposableFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// API key.
 	Key string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetV1EmailDisposableRequest struct {
-	QueryParams GetV1EmailDisposableQueryParams
 }
 
 type GetV1EmailDisposableResponse struct {

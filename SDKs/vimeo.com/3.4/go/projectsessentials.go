@@ -34,11 +34,11 @@ func newProjectsEssentials(defaultClient, securityClient HTTPClient, serverURL, 
 
 // CreateProject - Create a project
 // This method creates a new project for the specified user.
-func (s *projectsEssentials) CreateProject(ctx context.Context, request operations.CreateProjectRequest) (*operations.CreateProjectResponse, error) {
+func (s *projectsEssentials) CreateProject(ctx context.Context, request operations.CreateProjectRequest, security operations.CreateProjectSecurity) (*operations.CreateProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *projectsEssentials) CreateProject(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,7 +103,7 @@ func (s *projectsEssentials) CreateProject(ctx context.Context, request operatio
 
 // CreateProjectAlt1 - Create a project
 // This method creates a new project for the specified user.
-func (s *projectsEssentials) CreateProjectAlt1(ctx context.Context, request operations.CreateProjectAlt1Request) (*operations.CreateProjectAlt1Response, error) {
+func (s *projectsEssentials) CreateProjectAlt1(ctx context.Context, request operations.CreateProjectAlt1RequestBody, security operations.CreateProjectAlt1Security) (*operations.CreateProjectAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/projects"
 
@@ -122,7 +122,7 @@ func (s *projectsEssentials) CreateProjectAlt1(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -172,20 +172,20 @@ func (s *projectsEssentials) CreateProjectAlt1(ctx context.Context, request oper
 
 // DeleteProject - Delete a project
 // This method deletes a project and optionally also the videos that it contains.
-func (s *projectsEssentials) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
+func (s *projectsEssentials) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest, security operations.DeleteProjectSecurity) (*operations.DeleteProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -226,20 +226,20 @@ func (s *projectsEssentials) DeleteProject(ctx context.Context, request operatio
 
 // DeleteProjectAlt1 - Delete a project
 // This method deletes a project and optionally also the videos that it contains.
-func (s *projectsEssentials) DeleteProjectAlt1(ctx context.Context, request operations.DeleteProjectAlt1Request) (*operations.DeleteProjectAlt1Response, error) {
+func (s *projectsEssentials) DeleteProjectAlt1(ctx context.Context, request operations.DeleteProjectAlt1Request, security operations.DeleteProjectAlt1Security) (*operations.DeleteProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,11 +280,11 @@ func (s *projectsEssentials) DeleteProjectAlt1(ctx context.Context, request oper
 
 // EditProject - Edit a project
 // This method edits an existing project.
-func (s *projectsEssentials) EditProject(ctx context.Context, request operations.EditProjectRequest) (*operations.EditProjectResponse, error) {
+func (s *projectsEssentials) EditProject(ctx context.Context, request operations.EditProjectRequest, security operations.EditProjectSecurity) (*operations.EditProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -299,7 +299,7 @@ func (s *projectsEssentials) EditProject(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -351,11 +351,11 @@ func (s *projectsEssentials) EditProject(ctx context.Context, request operations
 
 // EditProjectAlt1 - Edit a project
 // This method edits an existing project.
-func (s *projectsEssentials) EditProjectAlt1(ctx context.Context, request operations.EditProjectAlt1Request) (*operations.EditProjectAlt1Response, error) {
+func (s *projectsEssentials) EditProjectAlt1(ctx context.Context, request operations.EditProjectAlt1Request, security operations.EditProjectAlt1Security) (*operations.EditProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -370,7 +370,7 @@ func (s *projectsEssentials) EditProjectAlt1(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -422,16 +422,16 @@ func (s *projectsEssentials) EditProjectAlt1(ctx context.Context, request operat
 
 // GetProject - Get a specific project
 // This method gets a single project that belongs to the specified user.
-func (s *projectsEssentials) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
+func (s *projectsEssentials) GetProject(ctx context.Context, request operations.GetProjectRequest, security operations.GetProjectSecurity) (*operations.GetProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -479,16 +479,16 @@ func (s *projectsEssentials) GetProject(ctx context.Context, request operations.
 
 // GetProjectAlt1 - Get a specific project
 // This method gets a single project that belongs to the specified user.
-func (s *projectsEssentials) GetProjectAlt1(ctx context.Context, request operations.GetProjectAlt1Request) (*operations.GetProjectAlt1Response, error) {
+func (s *projectsEssentials) GetProjectAlt1(ctx context.Context, request operations.GetProjectAlt1Request, security operations.GetProjectAlt1Security) (*operations.GetProjectAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -536,20 +536,20 @@ func (s *projectsEssentials) GetProjectAlt1(ctx context.Context, request operati
 
 // GetProjects - Get all the projects that belong to a user
 // This method gets all the projects that belong to the specified user.
-func (s *projectsEssentials) GetProjects(ctx context.Context, request operations.GetProjectsRequest) (*operations.GetProjectsResponse, error) {
+func (s *projectsEssentials) GetProjects(ctx context.Context, request operations.GetProjectsRequest, security operations.GetProjectsSecurity) (*operations.GetProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/projects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,7 +595,7 @@ func (s *projectsEssentials) GetProjects(ctx context.Context, request operations
 
 // GetProjectsAlt1 - Get all the projects that belong to a user
 // This method gets all the projects that belong to the specified user.
-func (s *projectsEssentials) GetProjectsAlt1(ctx context.Context, request operations.GetProjectsAlt1Request) (*operations.GetProjectsAlt1Response, error) {
+func (s *projectsEssentials) GetProjectsAlt1(ctx context.Context, request operations.GetProjectsAlt1Request, security operations.GetProjectsAlt1Security) (*operations.GetProjectsAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/projects"
 
@@ -604,11 +604,11 @@ func (s *projectsEssentials) GetProjectsAlt1(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

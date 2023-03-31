@@ -10,28 +10,28 @@ import (
 )
 
 type DocsDocumentsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DocsDocumentsGetSecurity struct {
@@ -40,11 +40,6 @@ type DocsDocumentsGetSecurity struct {
 	Option3 *DocsDocumentsGetSecurityOption3 `security:"option"`
 	Option4 *DocsDocumentsGetSecurityOption4 `security:"option"`
 	Option5 *DocsDocumentsGetSecurityOption5 `security:"option"`
-}
-
-type DocsDocumentsGetPathParams struct {
-	// The ID of the document to retrieve.
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 }
 
 // DocsDocumentsGetSuggestionsViewModeEnum - The suggestions view mode to apply to the document. This allows viewing the document with all suggestions inline, accepted or rejected. If one is not specified, DEFAULT_FOR_CURRENT_ACCESS is used.
@@ -77,7 +72,7 @@ func (e *DocsDocumentsGetSuggestionsViewModeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DocsDocumentsGetQueryParams struct {
+type DocsDocumentsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -86,6 +81,8 @@ type DocsDocumentsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The ID of the document to retrieve.
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -102,12 +99,6 @@ type DocsDocumentsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DocsDocumentsGetRequest struct {
-	PathParams  DocsDocumentsGetPathParams
-	QueryParams DocsDocumentsGetQueryParams
-	Security    DocsDocumentsGetSecurity
 }
 
 type DocsDocumentsGetResponse struct {

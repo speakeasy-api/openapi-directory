@@ -4,55 +4,51 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MetastoreProjectsLocationsFederationsCreateRequest(
-    security=operations.MetastoreProjectsLocationsFederationsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.MetastoreProjectsLocationsFederationsCreatePathParams(
-        parent="ex",
-    ),
-    query_params=operations.MetastoreProjectsLocationsFederationsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="veniam",
-        alt="media",
-        callback="fuga",
-        federation_id="quasi",
-        fields="doloribus",
-        key="maxime",
-        oauth_token="quod",
-        pretty_print=False,
-        quota_user="occaecati",
-        request_id="nisi",
-        upload_type="amet",
-        upload_protocol="iste",
-    ),
-    request=shared.FederationInput(
+    dollar_xgafv="2",
+    federation_input=shared.FederationInput(
         backend_metastores={
-            "ipsam": shared.BackendMetastore(
+            "distinctio": shared.BackendMetastore(
                 metastore_type="DATAPROC_METASTORE",
-                name="voluptas",
+                name="unde",
             ),
-            "animi": shared.BackendMetastore(
-                metastore_type="METASTORE_TYPE_UNSPECIFIED",
-                name="optio",
+            "nulla": shared.BackendMetastore(
+                metastore_type="BIGQUERY",
+                name="illum",
+            ),
+            "vel": shared.BackendMetastore(
+                metastore_type="BIGQUERY",
+                name="deserunt",
             ),
         },
         labels={
-            "labore": "voluptatem",
-            "id": "labore",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
-        name="eos",
-        version="iste",
+        name="delectus",
+        version="tempora",
     ),
+    access_token="suscipit",
+    alt="media",
+    callback="minus",
+    federation_id="placeat",
+    fields_="voluptatum",
+    key="iusto",
+    oauth_token="excepturi",
+    parent="nisi",
+    pretty_print=False,
+    quota_user="recusandae",
+    request_id="temporibus",
+    upload_type="ab",
+    upload_protocol="quis",
 )
     
-res = s.projects.metastore_projects_locations_federations_create(req)
+res = s.projects.metastore_projects_locations_federations_create(req, operations.MetastoreProjectsLocationsFederationsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

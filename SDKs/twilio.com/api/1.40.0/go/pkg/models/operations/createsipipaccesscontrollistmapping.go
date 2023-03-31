@@ -12,14 +12,8 @@ var CreateSipIPAccessControlListMappingServerList = []string{
 }
 
 type CreateSipIPAccessControlListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipIPAccessControlListMappingPathParams struct {
-	// The unique id of the Account that is responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// A 34 character string that uniquely identifies the SIP domain.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipIPAccessControlListMappingCreateSipIPAccessControlListMappingRequest struct {
@@ -28,10 +22,11 @@ type CreateSipIPAccessControlListMappingCreateSipIPAccessControlListMappingReque
 }
 
 type CreateSipIPAccessControlListMappingRequest struct {
-	PathParams CreateSipIPAccessControlListMappingPathParams
-	Request    *CreateSipIPAccessControlListMappingCreateSipIPAccessControlListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipIPAccessControlListMappingSecurity
-	ServerURL  *string
+	// The unique id of the Account that is responsible for this resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// A 34 character string that uniquely identifies the SIP domain.
+	DomainSid   string                                                                         `pathParam:"style=simple,explode=false,name=DomainSid"`
+	RequestBody *CreateSipIPAccessControlListMappingCreateSipIPAccessControlListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipIPAccessControlListMappingResponse struct {

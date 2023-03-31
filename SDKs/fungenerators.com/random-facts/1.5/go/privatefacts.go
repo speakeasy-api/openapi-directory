@@ -34,7 +34,7 @@ func newPrivateFacts(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DeleteFact - Delete a Fact entry identified by the id.
-func (s *privateFacts) DeleteFact(ctx context.Context, request operations.DeleteFactRequest) (*operations.DeleteFactResponse, error) {
+func (s *privateFacts) DeleteFact(ctx context.Context, request operations.DeleteFactRequest, security operations.DeleteFactSecurity) (*operations.DeleteFactResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact"
 
@@ -43,11 +43,11 @@ func (s *privateFacts) DeleteFact(ctx context.Context, request operations.Delete
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *privateFacts) DeleteFact(ctx context.Context, request operations.Delete
 }
 
 // GetFact - Get a Fact belonging to the id.
-func (s *privateFacts) GetFact(ctx context.Context, request operations.GetFactRequest) (*operations.GetFactResponse, error) {
+func (s *privateFacts) GetFact(ctx context.Context, request operations.GetFactRequest, security operations.GetFactSecurity) (*operations.GetFactResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact"
 
@@ -84,11 +84,11 @@ func (s *privateFacts) GetFact(ctx context.Context, request operations.GetFactRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *privateFacts) GetFact(ctx context.Context, request operations.GetFactRe
 }
 
 // PutFact - Add a Fact entry to the database (private collection).
-func (s *privateFacts) PutFact(ctx context.Context, request operations.PutFactRequest) (*operations.PutFactResponse, error) {
+func (s *privateFacts) PutFact(ctx context.Context, request operations.PutFactRequest, security operations.PutFactSecurity) (*operations.PutFactResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact"
 
@@ -125,11 +125,11 @@ func (s *privateFacts) PutFact(ctx context.Context, request operations.PutFactRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

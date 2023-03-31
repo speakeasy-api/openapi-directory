@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetzipcodeinfoRequest(
-    query_params=operations.GetzipcodeinfoQueryParams(
-        license="et",
-        zip="architecto",
-    ),
+    license="corrupti",
+    zip="provident",
 )
     
 res = s.detailed_zip_code_information.getzipcodeinfo(req)

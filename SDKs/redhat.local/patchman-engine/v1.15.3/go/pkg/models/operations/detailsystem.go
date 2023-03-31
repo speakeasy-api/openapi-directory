@@ -8,17 +8,12 @@ import (
 )
 
 type DetailSystemSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DetailSystemPathParams struct {
-	// Inventory ID
-	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 type DetailSystemRequest struct {
-	PathParams DetailSystemPathParams
-	Security   DetailSystemSecurity
+	// Inventory ID
+	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
 }
 
 type DetailSystemResponse struct {

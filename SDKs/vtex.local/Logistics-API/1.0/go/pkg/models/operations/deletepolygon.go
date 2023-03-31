@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type DeletePolygonPathParams struct {
-	PolygonName string `pathParam:"style=simple,explode=false,name=polygonName"`
-}
-
-type DeletePolygonHeaders struct {
+type DeletePolygonRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeletePolygonRequest struct {
-	PathParams DeletePolygonPathParams
-	Headers    DeletePolygonHeaders
+	PolygonName string `pathParam:"style=simple,explode=false,name=polygonName"`
 }
 
 type DeletePolygonResponse struct {

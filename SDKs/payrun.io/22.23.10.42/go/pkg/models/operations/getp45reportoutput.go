@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetP45ReportOutputQueryParams struct {
+type GetP45ReportOutputRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employee unique key. E.g. EE001
 	EmployeeKey string `queryParam:"style=form,explode=true,name=EmployeeKey"`
 	// The employer unique key. E.g. ER001
 	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
 	// The transform definition unique key. E.g. P45-Pdf
 	TransformDefinitionKey *string `queryParam:"style=form,explode=true,name=TransformDefinitionKey"`
-}
-
-type GetP45ReportOutputHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetP45ReportOutputRequest struct {
-	QueryParams GetP45ReportOutputQueryParams
-	Headers     GetP45ReportOutputHeaders
 }
 
 type GetP45ReportOutputResponse struct {

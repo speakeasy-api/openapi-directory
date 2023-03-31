@@ -10,12 +10,7 @@ import (
 )
 
 type GetWatchLaterQueueSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetWatchLaterQueuePathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetWatchLaterQueueDirectionEnum - The sort direction of the results.
@@ -99,7 +94,7 @@ func (e *GetWatchLaterQueueSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWatchLaterQueueQueryParams struct {
+type GetWatchLaterQueueRequest struct {
 	// The sort direction of the results.
 	Direction *GetWatchLaterQueueDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -114,12 +109,8 @@ type GetWatchLaterQueueQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetWatchLaterQueueSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetWatchLaterQueueRequest struct {
-	PathParams  GetWatchLaterQueuePathParams
-	QueryParams GetWatchLaterQueueQueryParams
-	Security    GetWatchLaterQueueSecurity
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetWatchLaterQueueResponse struct {

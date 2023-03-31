@@ -3,31 +3,29 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchDeleteBuildsRequest(
-    headers=operations.BatchDeleteBuildsHeaders(
-        x_amz_algorithm="occaecati",
-        x_amz_content_sha256="veniam",
-        x_amz_credential="sed",
-        x_amz_date="sint",
-        x_amz_security_token="laudantium",
-        x_amz_signature="explicabo",
-        x_amz_signed_headers="maiores",
-        x_amz_target="CodeBuild_20161006.BatchDeleteBuilds",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.BatchDeleteBuildsInput(
+)
+
+
+req = operations.BatchDeleteBuildsRequest(
+    batch_delete_builds_input=shared.BatchDeleteBuildsInput(
         ids=[
-            "explicabo",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
+    x_amz_target="CodeBuild_20161006.BatchDeleteBuilds",
 )
     
 res = s.batch_delete_builds(req)

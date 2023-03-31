@@ -28,7 +28,6 @@ pkg/models/shared/attestorpublickey.go
 pkg/models/shared/pkixpublickey.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listattestorsresponse.go
 pkg/models/shared/validateattestationoccurrenceresponse.go
 pkg/models/shared/validateattestationoccurrencerequest.go

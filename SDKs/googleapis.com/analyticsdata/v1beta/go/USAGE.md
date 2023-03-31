@@ -14,33 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.AnalyticsdataPropertiesBatchRunPivotReportsRequest{
-        Security: operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurity{
-            Option1: &operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.AnalyticsdataPropertiesBatchRunPivotReportsPathParams{
-            Property: "corrupti",
-        },
-        QueryParams: operations.AnalyticsdataPropertiesBatchRunPivotReportsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.BatchRunPivotReportsRequest{
+        DollarXgafv: "2",
+        BatchRunPivotReportsRequest: &shared.BatchRunPivotReportsRequest{
             Requests: []shared.RunPivotReportRequest{
                 shared.RunPivotReportRequest{
                     CohortSpec: &shared.CohortSpec{
@@ -50,6 +25,24 @@ func main() {
                         Cohorts: []shared.Cohort{
                             shared.Cohort{
                                 DateRange: &shared.DateRange{
+                                    EndDate: "quibusdam",
+                                    Name: "unde",
+                                    StartDate: "nulla",
+                                },
+                                Dimension: "corrupti",
+                                Name: "illum",
+                            },
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
+                                    EndDate: "vel",
+                                    Name: "error",
+                                    StartDate: "deserunt",
+                                },
+                                Dimension: "suscipit",
+                                Name: "iure",
+                            },
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
                                     EndDate: "magnam",
                                     Name: "debitis",
                                     StartDate: "ipsa",
@@ -57,98 +50,98 @@ func main() {
                                 Dimension: "delectus",
                                 Name: "tempora",
                             },
-                            shared.Cohort{
-                                DateRange: &shared.DateRange{
-                                    EndDate: "suscipit",
-                                    Name: "molestiae",
-                                    StartDate: "minus",
-                                },
-                                Dimension: "placeat",
-                                Name: "voluptatum",
-                            },
                         },
                         CohortsRange: &shared.CohortsRange{
-                            EndOffset: 479977,
-                            Granularity: "WEEKLY",
-                            StartOffset: 392785,
+                            EndOffset: 383441,
+                            Granularity: "DAILY",
+                            StartOffset: 791725,
                         },
                     },
-                    CurrencyCode: "recusandae",
+                    CurrencyCode: "placeat",
                     DateRanges: []shared.DateRange{
                         shared.DateRange{
-                            EndDate: "ab",
-                            Name: "quis",
-                            StartDate: "veritatis",
+                            EndDate: "iusto",
+                            Name: "excepturi",
+                            StartDate: "nisi",
                         },
                         shared.DateRange{
-                            EndDate: "deserunt",
-                            Name: "perferendis",
-                            StartDate: "ipsam",
+                            EndDate: "recusandae",
+                            Name: "temporibus",
+                            StartDate: "ab",
                         },
                         shared.DateRange{
-                            EndDate: "repellendus",
-                            Name: "sapiente",
-                            StartDate: "quo",
-                        },
-                        shared.DateRange{
-                            EndDate: "odit",
-                            Name: "at",
-                            StartDate: "at",
+                            EndDate: "quis",
+                            Name: "veritatis",
+                            StartDate: "deserunt",
                         },
                     },
                     DimensionFilter: &shared.FilterExpression{
                         AndGroup: &shared.FilterExpressionList{
                             Expressions: []shared.FilterExpression{
                                 shared.FilterExpression{},
-                                shared.FilterExpression{},
-                                shared.FilterExpression{},
-                                shared.FilterExpression{},
                             },
                         },
                         Filter: &shared.Filter{
                             BetweenFilter: &shared.BetweenFilter{
                                 FromValue: &shared.NumericValue{
-                                    DoubleValue: 4736.08,
-                                    Int64Value: "quod",
+                                    DoubleValue: 3682.41,
+                                    Int64Value: "repellendus",
                                 },
                                 ToValue: &shared.NumericValue{
-                                    DoubleValue: 8009.11,
-                                    Int64Value: "esse",
+                                    DoubleValue: 9571.56,
+                                    Int64Value: "quo",
                                 },
                             },
-                            FieldName: "totam",
+                            FieldName: "odit",
                             InListFilter: &shared.InListFilter{
                                 CaseSensitive: false,
                                 Values: []string{
-                                    "dolorum",
-                                    "dicta",
-                                    "nam",
-                                    "officia",
+                                    "at",
+                                    "maiores",
+                                    "molestiae",
+                                    "quod",
                                 },
                             },
                             NumericFilter: &shared.NumericFilter{
-                                Operation: "LESS_THAN_OR_EQUAL",
+                                Operation: "GREATER_THAN",
                                 Value: &shared.NumericValue{
-                                    DoubleValue: 1433.53,
-                                    Int64Value: "deleniti",
+                                    DoubleValue: 4614.79,
+                                    Int64Value: "totam",
                                 },
                             },
                             StringFilter: &shared.StringFilter{
                                 CaseSensitive: false,
-                                MatchType: "PARTIAL_REGEXP",
-                                Value: "optio",
+                                MatchType: "FULL_REGEXP",
+                                Value: "dolorum",
                             },
                         },
                         NotExpression: &shared.FilterExpression{},
                         OrGroup: &shared.FilterExpressionList{
                             Expressions: []shared.FilterExpression{
                                 shared.FilterExpression{},
-                                shared.FilterExpression{},
-                                shared.FilterExpression{},
                             },
                         },
                     },
                     Dimensions: []shared.Dimension{
+                        shared.Dimension{
+                            DimensionExpression: &shared.DimensionExpression{
+                                Concatenate: &shared.ConcatenateExpression{
+                                    Delimiter: "officia",
+                                    DimensionNames: []string{
+                                        "fugit",
+                                        "deleniti",
+                                        "hic",
+                                    },
+                                },
+                                LowerCase: &shared.CaseExpression{
+                                    DimensionName: "optio",
+                                },
+                                UpperCase: &shared.CaseExpression{
+                                    DimensionName: "totam",
+                                },
+                            },
+                            Name: "beatae",
+                        },
                         shared.Dimension{
                             DimensionExpression: &shared.DimensionExpression{
                                 Concatenate: &shared.ConcatenateExpression{
@@ -167,6 +160,25 @@ func main() {
                             },
                             Name: "esse",
                         },
+                        shared.Dimension{
+                            DimensionExpression: &shared.DimensionExpression{
+                                Concatenate: &shared.ConcatenateExpression{
+                                    Delimiter: "ipsum",
+                                    DimensionNames: []string{
+                                        "aspernatur",
+                                        "perferendis",
+                                        "ad",
+                                    },
+                                },
+                                LowerCase: &shared.CaseExpression{
+                                    DimensionName: "natus",
+                                },
+                                UpperCase: &shared.CaseExpression{
+                                    DimensionName: "sed",
+                                },
+                            },
+                            Name: "iste",
+                        },
                     },
                     KeepEmptyRows: false,
                     MetricFilter: &shared.FilterExpression{
@@ -178,32 +190,33 @@ func main() {
                         Filter: &shared.Filter{
                             BetweenFilter: &shared.BetweenFilter{
                                 FromValue: &shared.NumericValue{
-                                    DoubleValue: 5684.34,
-                                    Int64Value: "aspernatur",
+                                    DoubleValue: 6169.34,
+                                    Int64Value: "laboriosam",
                                 },
                                 ToValue: &shared.NumericValue{
-                                    DoubleValue: 187.89,
-                                    Int64Value: "ad",
+                                    DoubleValue: 9437.49,
+                                    Int64Value: "saepe",
                                 },
                             },
-                            FieldName: "natus",
+                            FieldName: "fuga",
                             InListFilter: &shared.InListFilter{
                                 CaseSensitive: false,
                                 Values: []string{
+                                    "corporis",
                                     "iste",
                                 },
                             },
                             NumericFilter: &shared.NumericFilter{
-                                Operation: "EQUAL",
+                                Operation: "LESS_THAN",
                                 Value: &shared.NumericValue{
-                                    DoubleValue: 6169.34,
-                                    Int64Value: "laboriosam",
+                                    DoubleValue: 9023.49,
+                                    Int64Value: "quidem",
                                 },
                             },
                             StringFilter: &shared.StringFilter{
                                 CaseSensitive: false,
-                                MatchType: "PARTIAL_REGEXP",
-                                Value: "saepe",
+                                MatchType: "MATCH_TYPE_UNSPECIFIED",
+                                Value: "ipsa",
                             },
                         },
                         NotExpression: &shared.FilterExpression{},
@@ -212,97 +225,83 @@ func main() {
                                 shared.FilterExpression{},
                                 shared.FilterExpression{},
                                 shared.FilterExpression{},
+                                shared.FilterExpression{},
                             },
                         },
                     },
                     Metrics: []shared.Metric{
                         shared.Metric{
-                            Expression: "corporis",
+                            Expression: "mollitia",
                             Invisible: false,
-                            Name: "iste",
+                            Name: "laborum",
                         },
                         shared.Metric{
-                            Expression: "iure",
+                            Expression: "dolores",
                             Invisible: false,
-                            Name: "saepe",
+                            Name: "dolorem",
+                        },
+                        shared.Metric{
+                            Expression: "corporis",
+                            Invisible: false,
+                            Name: "explicabo",
                         },
                     },
                     Pivots: []shared.Pivot{
                         shared.Pivot{
                             FieldNames: []string{
-                                "ipsa",
+                                "omnis",
+                                "nemo",
                             },
-                            Limit: "reiciendis",
+                            Limit: "minima",
                             MetricAggregations: []shared.PivotMetricAggregationsEnum{
-                                "MAXIMUM",
-                                "MAXIMUM",
                                 "METRIC_AGGREGATION_UNSPECIFIED",
-                            },
-                            Offset: "dolorem",
-                            OrderBys: []shared.OrderBy{
-                                shared.OrderBy{
-                                    Desc: false,
-                                    Dimension: &shared.DimensionOrderBy{
-                                        DimensionName: "explicabo",
-                                        OrderType: "NUMERIC",
-                                    },
-                                    Metric: &shared.MetricOrderBy{
-                                        MetricName: "enim",
-                                    },
-                                    Pivot: &shared.PivotOrderBy{
-                                        MetricName: "omnis",
-                                        PivotSelections: []shared.PivotSelection{
-                                            shared.PivotSelection{
-                                                DimensionName: "minima",
-                                                DimensionValue: "excepturi",
-                                            },
-                                            shared.PivotSelection{
-                                                DimensionName: "accusantium",
-                                                DimensionValue: "iure",
-                                            },
-                                        },
-                                    },
-                                },
-                                shared.OrderBy{
-                                    Desc: false,
-                                    Dimension: &shared.DimensionOrderBy{
-                                        DimensionName: "culpa",
-                                        OrderType: "NUMERIC",
-                                    },
-                                    Metric: &shared.MetricOrderBy{
-                                        MetricName: "sapiente",
-                                    },
-                                    Pivot: &shared.PivotOrderBy{
-                                        MetricName: "architecto",
-                                        PivotSelections: []shared.PivotSelection{
-                                            shared.PivotSelection{
-                                                DimensionName: "dolorem",
-                                                DimensionValue: "culpa",
-                                            },
-                                            shared.PivotSelection{
-                                                DimensionName: "consequuntur",
-                                                DimensionValue: "repellat",
-                                            },
-                                            shared.PivotSelection{
-                                                DimensionName: "mollitia",
-                                                DimensionValue: "occaecati",
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                        shared.Pivot{
-                            FieldNames: []string{
-                                "commodi",
-                                "quam",
-                            },
-                            Limit: "molestiae",
-                            MetricAggregations: []shared.PivotMetricAggregationsEnum{
+                                "MINIMUM",
                                 "MAXIMUM",
                             },
-                            Offset: "quia",
+                            Offset: "doloribus",
                             OrderBys: []shared.OrderBy{
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "architecto",
+                                        OrderType: "CASE_INSENSITIVE_ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "dolorem",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "culpa",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "repellat",
+                                                DimensionValue: "mollitia",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "occaecati",
+                                        OrderType: "ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "commodi",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "quam",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "velit",
+                                                DimensionValue: "error",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "quia",
+                                                DimensionValue: "quis",
+                                            },
+                                        },
+                                    },
+                                },
                                 shared.OrderBy{
                                     Desc: false,
                                     Dimension: &shared.DimensionOrderBy{
@@ -436,8 +435,217 @@ func main() {
                                 },
                             },
                         },
+                        shared.Pivot{
+                            FieldNames: []string{
+                                "incidunt",
+                                "enim",
+                                "consequatur",
+                                "est",
+                            },
+                            Limit: "quibusdam",
+                            MetricAggregations: []shared.PivotMetricAggregationsEnum{
+                                "MAXIMUM",
+                            },
+                            Offset: "distinctio",
+                            OrderBys: []shared.OrderBy{
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "labore",
+                                        OrderType: "ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "qui",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "aliquid",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "quos",
+                                                DimensionValue: "perferendis",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "magni",
+                                                DimensionValue: "assumenda",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "ipsam",
+                                                DimensionValue: "alias",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "fugit",
+                                        OrderType: "CASE_INSENSITIVE_ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "excepturi",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "tempora",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "tempore",
+                                                DimensionValue: "labore",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "delectus",
+                                                DimensionValue: "eum",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "non",
+                                                DimensionValue: "eligendi",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "sint",
+                                        OrderType: "ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "provident",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "necessitatibus",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "officia",
+                                                DimensionValue: "dolor",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "debitis",
+                                                DimensionValue: "a",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "dolorum",
+                                                DimensionValue: "in",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "in",
+                                        OrderType: "NUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "maiores",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "rerum",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "magnam",
+                                                DimensionValue: "cumque",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        shared.Pivot{
+                            FieldNames: []string{
+                                "ea",
+                                "aliquid",
+                                "laborum",
+                                "accusamus",
+                            },
+                            Limit: "non",
+                            MetricAggregations: []shared.PivotMetricAggregationsEnum{
+                                "TOTAL",
+                                "COUNT",
+                                "COUNT",
+                            },
+                            Offset: "quidem",
+                            OrderBys: []shared.OrderBy{
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "nam",
+                                        OrderType: "CASE_INSENSITIVE_ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "blanditiis",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "deleniti",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "amet",
+                                                DimensionValue: "deserunt",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "nisi",
+                                                DimensionValue: "vel",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "natus",
+                                                DimensionValue: "omnis",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "molestiae",
+                                                DimensionValue: "perferendis",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "nihil",
+                                        OrderType: "ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "distinctio",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "id",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "labore",
+                                                DimensionValue: "suscipit",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "natus",
+                                                DimensionValue: "nobis",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "eum",
+                                        OrderType: "NUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "aspernatur",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "architecto",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "et",
+                                                DimensionValue: "excepturi",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "ullam",
+                                                DimensionValue: "provident",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
                     },
-                    Property: "itaque",
+                    Property: "quos",
                     ReturnPropertyQuota: false,
                 },
                 shared.RunPivotReportRequest{
@@ -448,74 +656,86 @@ func main() {
                         Cohorts: []shared.Cohort{
                             shared.Cohort{
                                 DateRange: &shared.DateRange{
-                                    EndDate: "enim",
-                                    Name: "consequatur",
-                                    StartDate: "est",
+                                    EndDate: "accusantium",
+                                    Name: "mollitia",
+                                    StartDate: "reiciendis",
                                 },
-                                Dimension: "quibusdam",
-                                Name: "explicabo",
+                                Dimension: "mollitia",
+                                Name: "ad",
                             },
                             shared.Cohort{
                                 DateRange: &shared.DateRange{
-                                    EndDate: "deserunt",
-                                    Name: "distinctio",
-                                    StartDate: "quibusdam",
+                                    EndDate: "eum",
+                                    Name: "dolor",
+                                    StartDate: "necessitatibus",
                                 },
-                                Dimension: "labore",
-                                Name: "modi",
+                                Dimension: "odit",
+                                Name: "nemo",
+                            },
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
+                                    EndDate: "quasi",
+                                    Name: "iure",
+                                    StartDate: "doloribus",
+                                },
+                                Dimension: "debitis",
+                                Name: "eius",
                             },
                         },
                         CohortsRange: &shared.CohortsRange{
-                            EndOffset: 183191,
-                            Granularity: "DAILY",
-                            StartOffset: 586513,
+                            EndOffset: 806194,
+                            Granularity: "WEEKLY",
+                            StartOffset: 703889,
                         },
                     },
-                    CurrencyCode: "quos",
+                    CurrencyCode: "in",
                     DateRanges: []shared.DateRange{
                         shared.DateRange{
-                            EndDate: "magni",
-                            Name: "assumenda",
-                            StartDate: "ipsam",
+                            EndDate: "architecto",
+                            Name: "repudiandae",
+                            StartDate: "ullam",
                         },
                     },
                     DimensionFilter: &shared.FilterExpression{
                         AndGroup: &shared.FilterExpressionList{
                             Expressions: []shared.FilterExpression{
                                 shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
                             },
                         },
                         Filter: &shared.Filter{
                             BetweenFilter: &shared.BetweenFilter{
                                 FromValue: &shared.NumericValue{
-                                    DoubleValue: 1464.41,
-                                    Int64Value: "dolorum",
+                                    DoubleValue: 4692.49,
+                                    Int64Value: "repellat",
                                 },
                                 ToValue: &shared.NumericValue{
-                                    DoubleValue: 5696.18,
-                                    Int64Value: "tempora",
+                                    DoubleValue: 8411.4,
+                                    Int64Value: "sed",
                                 },
                             },
-                            FieldName: "facilis",
+                            FieldName: "saepe",
                             InListFilter: &shared.InListFilter{
                                 CaseSensitive: false,
                                 Values: []string{
-                                    "labore",
-                                    "delectus",
-                                    "eum",
+                                    "accusantium",
+                                    "consequuntur",
+                                    "praesentium",
+                                    "natus",
                                 },
                             },
                             NumericFilter: &shared.NumericFilter{
                                 Operation: "EQUAL",
                                 Value: &shared.NumericValue{
-                                    DoubleValue: 7561.07,
-                                    Int64Value: "sint",
+                                    DoubleValue: 1238.2,
+                                    Int64Value: "quo",
                                 },
                             },
                             StringFilter: &shared.StringFilter{
                                 CaseSensitive: false,
-                                MatchType: "BEGINS_WITH",
-                                Value: "provident",
+                                MatchType: "FULL_REGEXP",
+                                Value: "pariatur",
                             },
                         },
                         NotExpression: &shared.FilterExpression{},
@@ -532,58 +752,37 @@ func main() {
                         shared.Dimension{
                             DimensionExpression: &shared.DimensionExpression{
                                 Concatenate: &shared.ConcatenateExpression{
-                                    Delimiter: "officia",
+                                    Delimiter: "excepturi",
                                     DimensionNames: []string{
-                                        "debitis",
+                                        "ea",
                                     },
                                 },
                                 LowerCase: &shared.CaseExpression{
-                                    DimensionName: "a",
+                                    DimensionName: "accusantium",
                                 },
                                 UpperCase: &shared.CaseExpression{
-                                    DimensionName: "dolorum",
+                                    DimensionName: "ab",
                                 },
                             },
-                            Name: "in",
+                            Name: "maiores",
                         },
                         shared.Dimension{
                             DimensionExpression: &shared.DimensionExpression{
                                 Concatenate: &shared.ConcatenateExpression{
-                                    Delimiter: "in",
+                                    Delimiter: "quidem",
                                     DimensionNames: []string{
-                                        "maiores",
-                                        "rerum",
-                                        "dicta",
-                                        "magnam",
+                                        "voluptate",
+                                        "autem",
                                     },
                                 },
                                 LowerCase: &shared.CaseExpression{
-                                    DimensionName: "cumque",
+                                    DimensionName: "nam",
                                 },
                                 UpperCase: &shared.CaseExpression{
-                                    DimensionName: "facere",
+                                    DimensionName: "eaque",
                                 },
                             },
-                            Name: "ea",
-                        },
-                        shared.Dimension{
-                            DimensionExpression: &shared.DimensionExpression{
-                                Concatenate: &shared.ConcatenateExpression{
-                                    Delimiter: "aliquid",
-                                    DimensionNames: []string{
-                                        "accusamus",
-                                        "non",
-                                        "occaecati",
-                                    },
-                                },
-                                LowerCase: &shared.CaseExpression{
-                                    DimensionName: "enim",
-                                },
-                                UpperCase: &shared.CaseExpression{
-                                    DimensionName: "accusamus",
-                                },
-                            },
-                            Name: "delectus",
+                            Name: "pariatur",
                         },
                     },
                     KeepEmptyRows: false,
@@ -592,41 +791,40 @@ func main() {
                             Expressions: []shared.FilterExpression{
                                 shared.FilterExpression{},
                                 shared.FilterExpression{},
-                                shared.FilterExpression{},
                             },
                         },
                         Filter: &shared.Filter{
                             BetweenFilter: &shared.BetweenFilter{
                                 FromValue: &shared.NumericValue{
-                                    DoubleValue: 5884.65,
-                                    Int64Value: "nam",
+                                    DoubleValue: 9755.22,
+                                    Int64Value: "perferendis",
                                 },
                                 ToValue: &shared.NumericValue{
-                                    DoubleValue: 6596.69,
-                                    Int64Value: "blanditiis",
+                                    DoubleValue: 8558.04,
+                                    Int64Value: "amet",
                                 },
                             },
-                            FieldName: "deleniti",
+                            FieldName: "aut",
                             InListFilter: &shared.InListFilter{
                                 CaseSensitive: false,
                                 Values: []string{
-                                    "amet",
-                                    "deserunt",
-                                    "nisi",
-                                    "vel",
+                                    "corporis",
+                                    "hic",
+                                    "libero",
+                                    "nobis",
                                 },
                             },
                             NumericFilter: &shared.NumericFilter{
-                                Operation: "LESS_THAN_OR_EQUAL",
+                                Operation: "EQUAL",
                                 Value: &shared.NumericValue{
-                                    DoubleValue: 6063.93,
-                                    Int64Value: "molestiae",
+                                    DoubleValue: 3394.04,
+                                    Int64Value: "totam",
                                 },
                             },
                             StringFilter: &shared.StringFilter{
                                 CaseSensitive: false,
-                                MatchType: "MATCH_TYPE_UNSPECIFIED",
-                                Value: "nihil",
+                                MatchType: "ENDS_WITH",
+                                Value: "eaque",
                             },
                         },
                         NotExpression: &shared.FilterExpression{},
@@ -639,55 +837,311 @@ func main() {
                     },
                     Metrics: []shared.Metric{
                         shared.Metric{
-                            Expression: "id",
+                            Expression: "eos",
                             Invisible: false,
-                            Name: "labore",
-                        },
-                        shared.Metric{
-                            Expression: "labore",
-                            Invisible: false,
-                            Name: "suscipit",
-                        },
-                        shared.Metric{
-                            Expression: "natus",
-                            Invisible: false,
-                            Name: "nobis",
+                            Name: "perferendis",
                         },
                     },
                     Pivots: []shared.Pivot{
                         shared.Pivot{
                             FieldNames: []string{
-                                "aspernatur",
-                                "architecto",
-                                "magnam",
-                                "et",
+                                "quam",
+                                "dolor",
+                                "vero",
+                                "nostrum",
                             },
-                            Limit: "excepturi",
+                            Limit: "hic",
                             MetricAggregations: []shared.PivotMetricAggregationsEnum{
+                                "MAXIMUM",
+                                "MAXIMUM",
                                 "MINIMUM",
-                                "MINIMUM",
+                                "METRIC_AGGREGATION_UNSPECIFIED",
                             },
-                            Offset: "sint",
+                            Offset: "porro",
                             OrderBys: []shared.OrderBy{
                                 shared.OrderBy{
                                     Desc: false,
                                     Dimension: &shared.DimensionOrderBy{
-                                        DimensionName: "mollitia",
-                                        OrderType: "NUMERIC",
+                                        DimensionName: "blanditiis",
+                                        OrderType: "CASE_INSENSITIVE_ALPHANUMERIC",
                                     },
                                     Metric: &shared.MetricOrderBy{
-                                        MetricName: "mollitia",
+                                        MetricName: "eaque",
                                     },
                                     Pivot: &shared.PivotOrderBy{
-                                        MetricName: "ad",
+                                        MetricName: "occaecati",
                                         PivotSelections: []shared.PivotSelection{
                                             shared.PivotSelection{
-                                                DimensionName: "dolor",
-                                                DimensionValue: "necessitatibus",
+                                                DimensionName: "adipisci",
+                                                DimensionValue: "asperiores",
                                             },
                                             shared.PivotSelection{
-                                                DimensionName: "odit",
-                                                DimensionValue: "nemo",
+                                                DimensionName: "earum",
+                                                DimensionValue: "modi",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "iste",
+                                                DimensionValue: "dolorum",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Property: "deleniti",
+                    ReturnPropertyQuota: false,
+                },
+                shared.RunPivotReportRequest{
+                    CohortSpec: &shared.CohortSpec{
+                        CohortReportSettings: &shared.CohortReportSettings{
+                            Accumulate: false,
+                        },
+                        Cohorts: []shared.Cohort{
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
+                                    EndDate: "provident",
+                                    Name: "nobis",
+                                    StartDate: "libero",
+                                },
+                                Dimension: "delectus",
+                                Name: "quaerat",
+                            },
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
+                                    EndDate: "quos",
+                                    Name: "aliquid",
+                                    StartDate: "dolorem",
+                                },
+                                Dimension: "dolorem",
+                                Name: "dolor",
+                            },
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
+                                    EndDate: "qui",
+                                    Name: "ipsum",
+                                    StartDate: "hic",
+                                },
+                                Dimension: "excepturi",
+                                Name: "cum",
+                            },
+                            shared.Cohort{
+                                DateRange: &shared.DateRange{
+                                    EndDate: "voluptate",
+                                    Name: "dignissimos",
+                                    StartDate: "reiciendis",
+                                },
+                                Dimension: "amet",
+                                Name: "dolorum",
+                            },
+                        },
+                        CohortsRange: &shared.CohortsRange{
+                            EndOffset: 254356,
+                            Granularity: "GRANULARITY_UNSPECIFIED",
+                            StartOffset: 58029,
+                        },
+                    },
+                    CurrencyCode: "ipsa",
+                    DateRanges: []shared.DateRange{
+                        shared.DateRange{
+                            EndDate: "odio",
+                            Name: "quaerat",
+                            StartDate: "accusamus",
+                        },
+                        shared.DateRange{
+                            EndDate: "quidem",
+                            Name: "voluptatibus",
+                            StartDate: "voluptas",
+                        },
+                    },
+                    DimensionFilter: &shared.FilterExpression{
+                        AndGroup: &shared.FilterExpressionList{
+                            Expressions: []shared.FilterExpression{
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                            },
+                        },
+                        Filter: &shared.Filter{
+                            BetweenFilter: &shared.BetweenFilter{
+                                FromValue: &shared.NumericValue{
+                                    DoubleValue: 1796.03,
+                                    Int64Value: "atque",
+                                },
+                                ToValue: &shared.NumericValue{
+                                    DoubleValue: 246.78,
+                                    Int64Value: "fugiat",
+                                },
+                            },
+                            FieldName: "ab",
+                            InListFilter: &shared.InListFilter{
+                                CaseSensitive: false,
+                                Values: []string{
+                                    "dolorum",
+                                    "iusto",
+                                    "voluptate",
+                                },
+                            },
+                            NumericFilter: &shared.NumericFilter{
+                                Operation: "GREATER_THAN",
+                                Value: &shared.NumericValue{
+                                    DoubleValue: 5365.79,
+                                    Int64Value: "omnis",
+                                },
+                            },
+                            StringFilter: &shared.StringFilter{
+                                CaseSensitive: false,
+                                MatchType: "PARTIAL_REGEXP",
+                                Value: "distinctio",
+                            },
+                        },
+                        NotExpression: &shared.FilterExpression{},
+                        OrGroup: &shared.FilterExpressionList{
+                            Expressions: []shared.FilterExpression{
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                            },
+                        },
+                    },
+                    Dimensions: []shared.Dimension{
+                        shared.Dimension{
+                            DimensionExpression: &shared.DimensionExpression{
+                                Concatenate: &shared.ConcatenateExpression{
+                                    Delimiter: "ipsum",
+                                    DimensionNames: []string{
+                                        "id",
+                                        "saepe",
+                                    },
+                                },
+                                LowerCase: &shared.CaseExpression{
+                                    DimensionName: "eius",
+                                },
+                                UpperCase: &shared.CaseExpression{
+                                    DimensionName: "aspernatur",
+                                },
+                            },
+                            Name: "perferendis",
+                        },
+                        shared.Dimension{
+                            DimensionExpression: &shared.DimensionExpression{
+                                Concatenate: &shared.ConcatenateExpression{
+                                    Delimiter: "amet",
+                                    DimensionNames: []string{
+                                        "accusamus",
+                                        "ad",
+                                        "saepe",
+                                        "suscipit",
+                                    },
+                                },
+                                LowerCase: &shared.CaseExpression{
+                                    DimensionName: "deserunt",
+                                },
+                                UpperCase: &shared.CaseExpression{
+                                    DimensionName: "provident",
+                                },
+                            },
+                            Name: "minima",
+                        },
+                    },
+                    KeepEmptyRows: false,
+                    MetricFilter: &shared.FilterExpression{
+                        AndGroup: &shared.FilterExpressionList{
+                            Expressions: []shared.FilterExpression{
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                            },
+                        },
+                        Filter: &shared.Filter{
+                            BetweenFilter: &shared.BetweenFilter{
+                                FromValue: &shared.NumericValue{
+                                    DoubleValue: 5197.11,
+                                    Int64Value: "similique",
+                                },
+                                ToValue: &shared.NumericValue{
+                                    DoubleValue: 0.55,
+                                    Int64Value: "at",
+                                },
+                            },
+                            FieldName: "quaerat",
+                            InListFilter: &shared.InListFilter{
+                                CaseSensitive: false,
+                                Values: []string{
+                                    "vel",
+                                    "quod",
+                                },
+                            },
+                            NumericFilter: &shared.NumericFilter{
+                                Operation: "GREATER_THAN_OR_EQUAL",
+                                Value: &shared.NumericValue{
+                                    DoubleValue: 1856.36,
+                                    Int64Value: "dolorum",
+                                },
+                            },
+                            StringFilter: &shared.StringFilter{
+                                CaseSensitive: false,
+                                MatchType: "PARTIAL_REGEXP",
+                                Value: "esse",
+                            },
+                        },
+                        NotExpression: &shared.FilterExpression{},
+                        OrGroup: &shared.FilterExpressionList{
+                            Expressions: []shared.FilterExpression{
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                                shared.FilterExpression{},
+                            },
+                        },
+                    },
+                    Metrics: []shared.Metric{
+                        shared.Metric{
+                            Expression: "ipsum",
+                            Invisible: false,
+                            Name: "quisquam",
+                        },
+                        shared.Metric{
+                            Expression: "tenetur",
+                            Invisible: false,
+                            Name: "amet",
+                        },
+                    },
+                    Pivots: []shared.Pivot{
+                        shared.Pivot{
+                            FieldNames: []string{
+                                "numquam",
+                                "enim",
+                                "dolorem",
+                                "sapiente",
+                            },
+                            Limit: "totam",
+                            MetricAggregations: []shared.PivotMetricAggregationsEnum{
+                                "METRIC_AGGREGATION_UNSPECIFIED",
+                                "MAXIMUM",
+                            },
+                            Offset: "neque",
+                            OrderBys: []shared.OrderBy{
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "vel",
+                                        OrderType: "CASE_INSENSITIVE_ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "voluptas",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "deserunt",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "ipsum",
+                                                DimensionValue: "incidunt",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "qui",
+                                                DimensionValue: "cupiditate",
                                             },
                                         },
                                     },
@@ -696,36 +1150,208 @@ func main() {
                         },
                         shared.Pivot{
                             FieldNames: []string{
-                                "iure",
+                                "pariatur",
+                                "soluta",
+                                "dicta",
+                                "laborum",
                             },
-                            Limit: "doloribus",
+                            Limit: "totam",
                             MetricAggregations: []shared.PivotMetricAggregationsEnum{
-                                "TOTAL",
-                                "COUNT",
-                                "MINIMUM",
-                                "MAXIMUM",
+                                "METRIC_AGGREGATION_UNSPECIFIED",
+                                "METRIC_AGGREGATION_UNSPECIFIED",
                             },
-                            Offset: "in",
+                            Offset: "distinctio",
                             OrderBys: []shared.OrderBy{
                                 shared.OrderBy{
                                     Desc: false,
                                     Dimension: &shared.DimensionOrderBy{
-                                        DimensionName: "architecto",
+                                        DimensionName: "aliquid",
+                                        OrderType: "ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "molestias",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "temporibus",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "neque",
+                                                DimensionValue: "fugit",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "magni",
+                                        OrderType: "ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "sunt",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "ullam",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "hic",
+                                                DimensionValue: "voluptatem",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "cumque",
+                                                DimensionValue: "soluta",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "nobis",
+                                                DimensionValue: "et",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "saepe",
+                                        OrderType: "ORDER_TYPE_UNSPECIFIED",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "veritatis",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "nobis",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "tempore",
+                                                DimensionValue: "cupiditate",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "aperiam",
+                                                DimensionValue: "delectus",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "dolorem",
+                                                DimensionValue: "dolore",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        shared.Pivot{
+                            FieldNames: []string{
+                                "adipisci",
+                                "dolorum",
+                            },
+                            Limit: "architecto",
+                            MetricAggregations: []shared.PivotMetricAggregationsEnum{
+                                "METRIC_AGGREGATION_UNSPECIFIED",
+                            },
+                            Offset: "quas",
+                            OrderBys: []shared.OrderBy{
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "consequatur",
+                                        OrderType: "CASE_INSENSITIVE_ALPHANUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "repellendus",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "porro",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "ut",
+                                                DimensionValue: "facilis",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "cupiditate",
+                                                DimensionValue: "qui",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "quae",
+                                                DimensionValue: "laudantium",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "odio",
+                                                DimensionValue: "occaecati",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "voluptatibus",
                                         OrderType: "NUMERIC",
                                     },
                                     Metric: &shared.MetricOrderBy{
-                                        MetricName: "ullam",
+                                        MetricName: "vero",
                                     },
                                     Pivot: &shared.PivotOrderBy{
-                                        MetricName: "expedita",
+                                        MetricName: "omnis",
                                         PivotSelections: []shared.PivotSelection{
                                             shared.PivotSelection{
-                                                DimensionName: "repellat",
-                                                DimensionValue: "quibusdam",
+                                                DimensionName: "ipsum",
+                                                DimensionValue: "delectus",
                                             },
                                             shared.PivotSelection{
-                                                DimensionName: "sed",
-                                                DimensionValue: "saepe",
+                                                DimensionName: "voluptate",
+                                                DimensionValue: "consectetur",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "vero",
+                                        OrderType: "NUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "dignissimos",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "hic",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "quod",
+                                                DimensionValue: "odio",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "similique",
+                                                DimensionValue: "facilis",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "vero",
+                                                DimensionValue: "ducimus",
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.OrderBy{
+                                    Desc: false,
+                                    Dimension: &shared.DimensionOrderBy{
+                                        DimensionName: "dolore",
+                                        OrderType: "NUMERIC",
+                                    },
+                                    Metric: &shared.MetricOrderBy{
+                                        MetricName: "illum",
+                                    },
+                                    Pivot: &shared.PivotOrderBy{
+                                        MetricName: "sequi",
+                                        PivotSelections: []shared.PivotSelection{
+                                            shared.PivotSelection{
+                                                DimensionName: "impedit",
+                                                DimensionValue: "aut",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "voluptatibus",
+                                                DimensionValue: "exercitationem",
+                                            },
+                                            shared.PivotSelection{
+                                                DimensionName: "nulla",
+                                                DimensionValue: "fugit",
                                             },
                                         },
                                     },
@@ -733,15 +1359,31 @@ func main() {
                             },
                         },
                     },
-                    Property: "pariatur",
+                    Property: "porro",
                     ReturnPropertyQuota: false,
                 },
             },
         },
+        AccessToken: "maiores",
+        Alt: "proto",
+        Callback: "iusto",
+        Fields: "eligendi",
+        Key: "ducimus",
+        OauthToken: "alias",
+        PrettyPrint: false,
+        Property: "officia",
+        QuotaUser: "tempora",
+        UploadType: "ipsam",
+        UploadProtocol: "ea",
     }
 
     ctx := context.Background()
-    res, err := s.Properties.AnalyticsdataPropertiesBatchRunPivotReports(ctx, req)
+    res, err := s.Properties.AnalyticsdataPropertiesBatchRunPivotReports(ctx, req, operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurity{
+        Option1: &operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

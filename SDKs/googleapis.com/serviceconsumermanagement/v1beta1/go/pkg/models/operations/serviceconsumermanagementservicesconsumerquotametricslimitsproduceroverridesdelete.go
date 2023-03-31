@@ -10,13 +10,8 @@ import (
 )
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeletePathParams struct {
-	// The resource name of the override to delete. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteForceOnlyEnum string
@@ -45,7 +40,7 @@ func (e *ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOver
 	}
 }
 
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteQueryParams struct {
+type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -62,6 +57,8 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverride
 	ForceOnly []ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteForceOnlyEnum `queryParam:"style=form,explode=true,name=forceOnly"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the override to delete. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -72,12 +69,6 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverride
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteRequest struct {
-	PathParams  ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeletePathParams
-	QueryParams ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteQueryParams
-	Security    ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteSecurity
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteResponse struct {

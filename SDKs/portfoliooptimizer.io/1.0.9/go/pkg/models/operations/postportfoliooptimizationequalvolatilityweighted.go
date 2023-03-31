@@ -13,10 +13,6 @@ type PostPortfolioOptimizationEqualVolatilityWeightedRequestBody struct {
 	AssetsVolatilities []float64 `json:"assetsVolatilities"`
 }
 
-type PostPortfolioOptimizationEqualVolatilityWeightedRequest struct {
-	Request PostPortfolioOptimizationEqualVolatilityWeightedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationEqualVolatilityWeighted200ApplicationJSON - OK
 type PostPortfolioOptimizationEqualVolatilityWeighted200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

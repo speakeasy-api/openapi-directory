@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // MonitoringProjectsDashboardsCreate - Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-func (s *projects) MonitoringProjectsDashboardsCreate(ctx context.Context, request operations.MonitoringProjectsDashboardsCreateRequest) (*operations.MonitoringProjectsDashboardsCreateResponse, error) {
+func (s *projects) MonitoringProjectsDashboardsCreate(ctx context.Context, request operations.MonitoringProjectsDashboardsCreateRequest, security operations.MonitoringProjectsDashboardsCreateSecurity) (*operations.MonitoringProjectsDashboardsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dashboards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dashboards", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Dashboard", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) MonitoringProjectsDashboardsCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) MonitoringProjectsDashboardsCreate(ctx context.Context, reque
 }
 
 // MonitoringProjectsDashboardsDelete - Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-func (s *projects) MonitoringProjectsDashboardsDelete(ctx context.Context, request operations.MonitoringProjectsDashboardsDeleteRequest) (*operations.MonitoringProjectsDashboardsDeleteResponse, error) {
+func (s *projects) MonitoringProjectsDashboardsDelete(ctx context.Context, request operations.MonitoringProjectsDashboardsDeleteRequest, security operations.MonitoringProjectsDashboardsDeleteSecurity) (*operations.MonitoringProjectsDashboardsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) MonitoringProjectsDashboardsDelete(ctx context.Context, reque
 }
 
 // MonitoringProjectsDashboardsGet - Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-func (s *projects) MonitoringProjectsDashboardsGet(ctx context.Context, request operations.MonitoringProjectsDashboardsGetRequest) (*operations.MonitoringProjectsDashboardsGetResponse, error) {
+func (s *projects) MonitoringProjectsDashboardsGet(ctx context.Context, request operations.MonitoringProjectsDashboardsGetRequest, security operations.MonitoringProjectsDashboardsGetSecurity) (*operations.MonitoringProjectsDashboardsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) MonitoringProjectsDashboardsGet(ctx context.Context, request 
 }
 
 // MonitoringProjectsDashboardsList - Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on the specified project. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-func (s *projects) MonitoringProjectsDashboardsList(ctx context.Context, request operations.MonitoringProjectsDashboardsListRequest) (*operations.MonitoringProjectsDashboardsListResponse, error) {
+func (s *projects) MonitoringProjectsDashboardsList(ctx context.Context, request operations.MonitoringProjectsDashboardsListRequest, security operations.MonitoringProjectsDashboardsListSecurity) (*operations.MonitoringProjectsDashboardsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dashboards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dashboards", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) MonitoringProjectsDashboardsList(ctx context.Context, request
 }
 
 // MonitoringProjectsDashboardsPatch - Replaces an existing custom dashboard with a new definition.This method requires the monitoring.dashboards.update permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-func (s *projects) MonitoringProjectsDashboardsPatch(ctx context.Context, request operations.MonitoringProjectsDashboardsPatchRequest) (*operations.MonitoringProjectsDashboardsPatchResponse, error) {
+func (s *projects) MonitoringProjectsDashboardsPatch(ctx context.Context, request operations.MonitoringProjectsDashboardsPatchRequest, security operations.MonitoringProjectsDashboardsPatchSecurity) (*operations.MonitoringProjectsDashboardsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Dashboard", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) MonitoringProjectsDashboardsPatch(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) MonitoringProjectsDashboardsPatch(ctx context.Context, reques
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1LabelValues - Lists possible values for a given label name.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1LabelValues(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1LabelValuesRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1LabelValuesResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1LabelValues(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1LabelValuesRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1LabelValuesSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1LabelValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/label/{label}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/label/{label}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1LabelValues(ctx cont
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1Labels - Lists labels for metrics.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Labels(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1LabelsRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1LabelsResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Labels(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1LabelsRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1LabelsSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1LabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListLabelsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Labels(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,20 +389,20 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Labels(ctx context.C
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1LabelsList - Lists labels for metrics.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1LabelsList(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1LabelsListRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1LabelsListResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1LabelsList(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1LabelsListRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1LabelsListSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1LabelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -437,20 +437,20 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1LabelsList(ctx conte
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1MetadataList - Lists metadata for metrics.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1MetadataList(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1MetadataListRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1MetadataListResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1MetadataList(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1MetadataListRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1MetadataListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/metadata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,11 +485,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1MetadataList(ctx con
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1Query - Evaluate a PromQL query at a single point in time.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Query(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1QueryRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1QueryResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Query(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1QueryRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1QuerySecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1QueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryInstantRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -501,11 +501,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Query(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,11 +540,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Query(ctx context.Co
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1QueryExemplars - Lists exemplars relevant to a given PromQL query,
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryExemplars(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1QueryExemplarsRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1QueryExemplarsResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryExemplars(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1QueryExemplarsRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1QueryExemplarsSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1QueryExemplarsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/query_exemplars", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/query_exemplars", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryExemplarsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,11 +556,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryExemplars(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryExemplars(ctx c
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1QueryRange - Evaluate a PromQL query with start, end time range.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryRange(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1QueryRangeRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1QueryRangeResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryRange(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1QueryRangeRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1QueryRangeSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1QueryRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/query_range", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/query_range", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryRangeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryRange(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1QueryRange(ctx conte
 }
 
 // MonitoringProjectsLocationPrometheusAPIV1Series - Lists metadata for metrics.
-func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Series(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1SeriesRequest) (*operations.MonitoringProjectsLocationPrometheusAPIV1SeriesResponse, error) {
+func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Series(ctx context.Context, request operations.MonitoringProjectsLocationPrometheusAPIV1SeriesRequest, security operations.MonitoringProjectsLocationPrometheusAPIV1SeriesSecurity) (*operations.MonitoringProjectsLocationPrometheusAPIV1SeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/series", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/location/{location}/prometheus/api/v1/series", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuerySeriesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) MonitoringProjectsLocationPrometheusAPIV1Series(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

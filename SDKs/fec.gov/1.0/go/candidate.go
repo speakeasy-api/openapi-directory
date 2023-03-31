@@ -42,14 +42,14 @@ func newCandidate(defaultClient, securityClient HTTPClient, serverURL, language,
 // `candidate_id` to find the most recent information about that candidate.
 func (s *candidate) GetCandidateCandidateID(ctx context.Context, request operations.GetCandidateCandidateIDRequest) (*operations.GetCandidateCandidateIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -96,14 +96,14 @@ func (s *candidate) GetCandidateCandidateID(ctx context.Context, request operati
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCandidateCandidateIDHistory(ctx context.Context, request operations.GetCandidateCandidateIDHistoryRequest) (*operations.GetCandidateCandidateIDHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,14 +150,14 @@ func (s *candidate) GetCandidateCandidateIDHistory(ctx context.Context, request 
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCandidateCandidateIDHistoryCycle(ctx context.Context, request operations.GetCandidateCandidateIDHistoryCycleRequest) (*operations.GetCandidateCandidateIDHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/{cycle}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/{cycle}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -206,14 +206,14 @@ func (s *candidate) GetCandidateCandidateIDHistoryCycle(ctx context.Context, req
 // For presidential and Senate candidates, multiple two-year cycles exist between elections.
 func (s *candidate) GetCandidateCandidateIDTotals(ctx context.Context, request operations.GetCandidateCandidateIDTotalsRequest) (*operations.GetCandidateCandidateIDTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/totals/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/totals/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,7 +268,7 @@ func (s *candidate) GetCandidates(ctx context.Context, request operations.GetCan
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -326,7 +326,7 @@ func (s *candidate) GetCandidatesSearch(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -375,7 +375,7 @@ func (s *candidate) GetCandidatesTotals(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -423,7 +423,7 @@ func (s *candidate) GetCandidatesTotalsAggregates(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -471,7 +471,7 @@ func (s *candidate) GetCandidatesTotalsByOffice(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -519,7 +519,7 @@ func (s *candidate) GetCandidatesTotalsByOfficeByParty(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -562,14 +562,14 @@ func (s *candidate) GetCandidatesTotalsByOfficeByParty(ctx context.Context, requ
 // `candidate_id` to find the most recent information about that candidate.
 func (s *candidate) GetCommitteeCommitteeIDCandidates(ctx context.Context, request operations.GetCommitteeCommitteeIDCandidatesRequest) (*operations.GetCommitteeCommitteeIDCandidatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -616,14 +616,14 @@ func (s *candidate) GetCommitteeCommitteeIDCandidates(ctx context.Context, reque
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCommitteeCommitteeIDCandidatesHistory(ctx context.Context, request operations.GetCommitteeCommitteeIDCandidatesHistoryRequest) (*operations.GetCommitteeCommitteeIDCandidatesHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -670,14 +670,14 @@ func (s *candidate) GetCommitteeCommitteeIDCandidatesHistory(ctx context.Context
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCommitteeCommitteeIDCandidatesHistoryCycle(ctx context.Context, request operations.GetCommitteeCommitteeIDCandidatesHistoryCycleRequest) (*operations.GetCommitteeCommitteeIDCandidatesHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/{cycle}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/{cycle}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

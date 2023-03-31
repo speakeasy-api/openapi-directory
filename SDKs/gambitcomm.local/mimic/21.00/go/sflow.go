@@ -37,7 +37,7 @@ func newSflow(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Agent's SFLOW configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *sflow) ProtocolSflowGetArgs(ctx context.Context, request operations.ProtocolSflowGetArgsRequest) (*operations.ProtocolSflowGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/args", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/args", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *sflow) ProtocolSflowGetArgs(ctx context.Context, request operations.Pro
 // Agent's SFLOW configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *sflow) ProtocolSflowGetConfig(ctx context.Context, request operations.ProtocolSflowGetConfigRequest) (*operations.ProtocolSflowGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *sflow) ProtocolSflowGetConfig(ctx context.Context, request operations.P
 // Statistics of fields indicated in the headers
 func (s *sflow) ProtocolSflowGetStatistics(ctx context.Context, request operations.ProtocolSflowGetStatisticsRequest) (*operations.ProtocolSflowGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *sflow) ProtocolSflowGetStatsHdr(ctx context.Context) (*operations.Proto
 // Trace 1 means enabled, 0 means not
 func (s *sflow) ProtocolSflowGetTrace(ctx context.Context, request operations.ProtocolSflowGetTraceRequest) (*operations.ProtocolSflowGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/trace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/trace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *sflow) ProtocolSflowGetTrace(ctx context.Context, request operations.Pr
 // Halt SFLOW traffic
 func (s *sflow) ProtocolSflowHalt(ctx context.Context, request operations.ProtocolSflowHaltRequest) (*operations.ProtocolSflowHaltResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/halt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/halt", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -314,7 +314,7 @@ func (s *sflow) ProtocolSflowHalt(ctx context.Context, request operations.Protoc
 // Reload SFLOW configuration before resuming traffic
 func (s *sflow) ProtocolSflowReload(ctx context.Context, request operations.ProtocolSflowReloadRequest) (*operations.ProtocolSflowReloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/reload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/reload", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -361,7 +361,7 @@ func (s *sflow) ProtocolSflowReload(ctx context.Context, request operations.Prot
 // Resuming traffic
 func (s *sflow) ProtocolSflowResume(ctx context.Context, request operations.ProtocolSflowResumeRequest) (*operations.ProtocolSflowResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/resume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -408,7 +408,7 @@ func (s *sflow) ProtocolSflowResume(ctx context.Context, request operations.Prot
 // Agent's SFLOW configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *sflow) ProtocolSflowSetConfig(ctx context.Context, request operations.ProtocolSflowSetConfigRequest) (*operations.ProtocolSflowSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/config/{argument}/{value}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/config/{argument}/{value}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -455,7 +455,7 @@ func (s *sflow) ProtocolSflowSetConfig(ctx context.Context, request operations.P
 // 1 to enable, 0 to disable
 func (s *sflow) ProtocolSflowSetTrace(ctx context.Context, request operations.ProtocolSflowSetTraceRequest) (*operations.ProtocolSflowSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/trace/{enableOrNot}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/trace/{enableOrNot}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

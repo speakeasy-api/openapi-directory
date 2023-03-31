@@ -12,14 +12,8 @@ var UpdateConversationScopedWebhookServerList = []string{
 }
 
 type UpdateConversationScopedWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConversationScopedWebhookPathParams struct {
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest struct {
@@ -35,10 +29,11 @@ type UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest struc
 }
 
 type UpdateConversationScopedWebhookRequest struct {
-	PathParams UpdateConversationScopedWebhookPathParams
-	Request    *UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConversationScopedWebhookSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+	ConversationSid string                                                                 `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConversationScopedWebhookResponse struct {

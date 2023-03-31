@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteCommonAreaPhoneSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteCommonAreaPhonePathParams struct {
-	// Unique Identifier of the common area phone.
-	CommonAreaPhoneID string `pathParam:"style=simple,explode=false,name=commonAreaPhoneId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteCommonAreaPhoneRequest struct {
-	PathParams DeleteCommonAreaPhonePathParams
-	Security   DeleteCommonAreaPhoneSecurity
+	// Unique Identifier of the common area phone.
+	CommonAreaPhoneID string `pathParam:"style=simple,explode=false,name=commonAreaPhoneId"`
 }
 
 type DeleteCommonAreaPhoneResponse struct {

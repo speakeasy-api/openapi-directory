@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMatrixSolutionPathParams struct {
+type GetMatrixSolutionRequest struct {
 	// Request solution with jobId
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetMatrixSolutionRequest struct {
-	PathParams GetMatrixSolutionPathParams
 }
 
 type GetMatrixSolutionResponse struct {

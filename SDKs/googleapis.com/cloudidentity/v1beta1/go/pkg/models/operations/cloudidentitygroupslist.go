@@ -10,18 +10,18 @@ import (
 )
 
 type CloudidentityGroupsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsListSecurity struct {
@@ -57,7 +57,7 @@ func (e *CloudidentityGroupsListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CloudidentityGroupsListQueryParams struct {
+type CloudidentityGroupsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -88,11 +88,6 @@ type CloudidentityGroupsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The level of detail to be returned. If unspecified, defaults to `View.BASIC`.
 	View *CloudidentityGroupsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudidentityGroupsListRequest struct {
-	QueryParams CloudidentityGroupsListQueryParams
-	Security    CloudidentityGroupsListSecurity
 }
 
 type CloudidentityGroupsListResponse struct {

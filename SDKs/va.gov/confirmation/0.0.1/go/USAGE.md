@@ -13,24 +13,19 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetVeteranStatusRequest{
-        Security: operations.GetVeteranStatusSecurity{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: shared.VeteranStatusRequest{
-            BirthDate: "1965-01-01",
-            FirstName: "John",
-            Gender: "M",
-            LastName: "Doe",
-            MiddleName: "Theodore",
-            Ssn: "555-55-5555",
-        },
+    req := shared.VeteranStatusRequest{
+        BirthDate: "1965-01-01",
+        FirstName: "John",
+        Gender: "M",
+        LastName: "Doe",
+        MiddleName: "Theodore",
+        Ssn: "555-55-5555",
     }
 
     ctx := context.Background()
-    res, err := s.VeteranConfirmationStatus.GetVeteranStatus(ctx, req)
+    res, err := s.VeteranConfirmationStatus.GetVeteranStatus(ctx, req, operations.GetVeteranStatusSecurity{
+        Apikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

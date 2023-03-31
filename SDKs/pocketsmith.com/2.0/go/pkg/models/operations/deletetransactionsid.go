@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteTransactionsIDPathParams struct {
+type DeleteTransactionsIDRequest struct {
 	// The unique identifier of the transaction.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteTransactionsIDRequest struct {
-	PathParams DeleteTransactionsIDPathParams
 }
 
 type DeleteTransactionsIDResponse struct {

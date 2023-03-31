@@ -4,41 +4,50 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PlayablelocationsLogImpressionsRequest(
-    query_params=operations.PlayablelocationsLogImpressionsQueryParams(
-        dollar_xgafv="1",
-        access_token="voluptatibus",
-        alt="media",
-        callback="mollitia",
-        fields="adipisci",
-        key="aut",
-        oauth_token="eaque",
-        pretty_print=True,
-        quota_user="ut",
-        upload_type="explicabo",
-        upload_protocol="impedit",
-    ),
-    request=shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest(
+    dollar_xgafv="2",
+    google_maps_playablelocations_v3_log_impressions_request=shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest(
         client_info=shared.GoogleMapsUnityClientInfo(
-            api_client="quia",
-            application_id="quia",
-            application_version="odit",
-            device_model="nihil",
-            language_code="beatae",
-            operating_system="corporis",
-            operating_system_build="voluptas",
-            platform="LINUX",
+            api_client="provident",
+            application_id="distinctio",
+            application_version="quibusdam",
+            device_model="unde",
+            language_code="nulla",
+            operating_system="corrupti",
+            operating_system_build="illum",
+            platform="WINDOWS",
         ),
         impressions=[
             shared.GoogleMapsPlayablelocationsV3Impression(
-                game_object_type=9144622778787384569,
+                game_object_type=645894,
+                impression_type="PRESENTED",
+                location_name="iure",
+            ),
+            shared.GoogleMapsPlayablelocationsV3Impression(
+                game_object_type=297534,
+                impression_type="INTERACTED",
+                location_name="ipsa",
+            ),
+            shared.GoogleMapsPlayablelocationsV3Impression(
+                game_object_type=963663,
                 impression_type="IMPRESSION_TYPE_UNSPECIFIED",
-                location_name="impedit",
+                location_name="suscipit",
             ),
         ],
-        request_id="odit",
+        request_id="molestiae",
     ),
+    access_token="minus",
+    alt="proto",
+    callback="voluptatum",
+    fields_="iusto",
+    key="excepturi",
+    oauth_token="nisi",
+    pretty_print=False,
+    quota_user="recusandae",
+    upload_type="temporibus",
+    upload_protocol="ab",
 )
     
 res = s.v3.playablelocations_log_impressions(req)

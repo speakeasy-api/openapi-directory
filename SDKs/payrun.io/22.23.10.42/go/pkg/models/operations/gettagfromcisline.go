@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagFromCisLinePathParams struct {
+type GetTagFromCisLineRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The CIS line unique identifier. E.g. CISLN001
 	CisLineID string `pathParam:"style=simple,explode=false,name=CisLineId"`
 	// The employers' unique identifier. E.g ER001
@@ -16,18 +20,6 @@ type GetTagFromCisLinePathParams struct {
 	SubContractorID string `pathParam:"style=simple,explode=false,name=SubContractorId"`
 	// The tag unique identifier. E.g. MyTag
 	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type GetTagFromCisLineHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagFromCisLineRequest struct {
-	PathParams GetTagFromCisLinePathParams
-	Headers    GetTagFromCisLineHeaders
 }
 
 type GetTagFromCisLineResponse struct {

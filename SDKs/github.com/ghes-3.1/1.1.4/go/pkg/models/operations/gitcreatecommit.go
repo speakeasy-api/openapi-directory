@@ -8,13 +8,6 @@ import (
 	"time"
 )
 
-type GitCreateCommitPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // GitCreateCommitRequestBodyAuthor - Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
 type GitCreateCommitRequestBodyAuthor struct {
 	// Indicates when this commit was authored (or committed). This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
@@ -51,8 +44,11 @@ type GitCreateCommitRequestBody struct {
 }
 
 type GitCreateCommitRequest struct {
-	PathParams GitCreateCommitPathParams
-	Request    GitCreateCommitRequestBody `request:"mediaType=application/json"`
+	RequestBody GitCreateCommitRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitCreateCommitResponse struct {

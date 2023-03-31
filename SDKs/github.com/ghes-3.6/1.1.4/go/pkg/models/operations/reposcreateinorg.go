@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ReposCreateInOrgRequestBodyMergeCommitMessageEnum - The default value for a merge commit message.
 //
 // - `PR_TITLE` - default to the pull request's title.
@@ -225,8 +220,9 @@ type ReposCreateInOrgRequestBody struct {
 }
 
 type ReposCreateInOrgRequest struct {
-	PathParams ReposCreateInOrgPathParams
-	Request    ReposCreateInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ReposCreateInOrgResponse struct {

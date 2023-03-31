@@ -10,23 +10,18 @@ import (
 )
 
 type DisplayvideoAdvertisersInvoicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DisplayvideoAdvertisersInvoicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DisplayvideoAdvertisersInvoicesListSecurity struct {
 	Option1 *DisplayvideoAdvertisersInvoicesListSecurityOption1 `security:"option"`
 	Option2 *DisplayvideoAdvertisersInvoicesListSecurityOption2 `security:"option"`
-}
-
-type DisplayvideoAdvertisersInvoicesListPathParams struct {
-	// Required. The ID of the advertiser to list invoices for.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 }
 
 // DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum - Select type of invoice to retrieve for Loi Sapin advertisers. Only applicable to Loi Sapin advertisers. Will be ignored otherwise.
@@ -56,11 +51,13 @@ func (e *DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum) UnmarshalJS
 	}
 }
 
-type DisplayvideoAdvertisersInvoicesListQueryParams struct {
+type DisplayvideoAdvertisersInvoicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser to list invoices for.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -87,12 +84,6 @@ type DisplayvideoAdvertisersInvoicesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersInvoicesListRequest struct {
-	PathParams  DisplayvideoAdvertisersInvoicesListPathParams
-	QueryParams DisplayvideoAdvertisersInvoicesListQueryParams
-	Security    DisplayvideoAdvertisersInvoicesListSecurity
 }
 
 type DisplayvideoAdvertisersInvoicesListResponse struct {

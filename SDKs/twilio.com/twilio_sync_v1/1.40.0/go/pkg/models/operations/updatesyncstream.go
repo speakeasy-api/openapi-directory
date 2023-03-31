@@ -12,14 +12,8 @@ var UpdateSyncStreamServerList = []string{
 }
 
 type UpdateSyncStreamSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncStreamPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Stream resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Stream resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncStreamUpdateSyncStreamRequest struct {
@@ -28,10 +22,11 @@ type UpdateSyncStreamUpdateSyncStreamRequest struct {
 }
 
 type UpdateSyncStreamRequest struct {
-	PathParams UpdateSyncStreamPathParams
-	Request    *UpdateSyncStreamUpdateSyncStreamRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncStreamSecurity
-	ServerURL  *string
+	RequestBody *UpdateSyncStreamUpdateSyncStreamRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Stream resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Stream resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSyncStreamResponse struct {

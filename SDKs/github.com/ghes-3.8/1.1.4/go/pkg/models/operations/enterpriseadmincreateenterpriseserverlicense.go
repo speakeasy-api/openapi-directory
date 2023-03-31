@@ -19,11 +19,6 @@ type EnterpriseAdminCreateEnterpriseServerLicenseRequestBody struct {
 	Settings *string `multipartForm:"name=settings"`
 }
 
-type EnterpriseAdminCreateEnterpriseServerLicenseRequest struct {
-	Request   EnterpriseAdminCreateEnterpriseServerLicenseRequestBody `request:"mediaType=multipart/form-data"`
-	ServerURL *string
-}
-
 type EnterpriseAdminCreateEnterpriseServerLicenseResponse struct {
 	ContentType string
 	StatusCode  int

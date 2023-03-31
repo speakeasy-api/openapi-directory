@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidateAccessTokenHeaders struct {
-	// Bearer token authorization leg of validate
-	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type ValidateAccessTokenRequest struct {
-	Headers ValidateAccessTokenHeaders
 	// An OTP from the user's registered MFA Device
 	//
-	Request shared.AccessTokenValidationRequest `request:"mediaType=application/json"`
+	AccessTokenValidationRequest shared.AccessTokenValidationRequest `request:"mediaType=application/json"`
+	// Bearer token authorization leg of validate
+	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
 }
 
 type ValidateAccessTokenResponse struct {

@@ -33,10 +33,20 @@ func newHistoricalWeather(defaultClient, securityClient HTTPClient, serverURL, l
 
 // GetVisualCrossingWebServicesRestServicesWeatherdataHistory - Retrieves hourly or daily historical weather records.
 // The weather history data is suitable for retrieving hourly or daily historical weather records.
-func (s *historicalWeather) GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest) (*operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse, error) {
+func (s *historicalWeather) GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest, opts ...operations.Option) (*operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/VisualCrossingWebServices/rest/services/weatherdata/history"
@@ -46,7 +56,7 @@ func (s *historicalWeather) GetVisualCrossingWebServicesRestServicesWeatherdataH
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetAdminRequestsQueryParams struct {
+type GetAdminRequestsRequest struct {
 	// The maximum number of results to return
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Only return logged requests after this date
 	Since *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type GetAdminRequestsRequest struct {
-	QueryParams GetAdminRequestsQueryParams
 }
 
 type GetAdminRequestsResponse struct {

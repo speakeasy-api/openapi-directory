@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkMerakiAuthUserPathParams struct {
+type DeleteNetworkMerakiAuthUserRequest struct {
 	MerakiAuthUserID string `pathParam:"style=simple,explode=false,name=merakiAuthUserId"`
 	NetworkID        string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type DeleteNetworkMerakiAuthUserRequest struct {
-	PathParams DeleteNetworkMerakiAuthUserPathParams
 }
 
 type DeleteNetworkMerakiAuthUserResponse struct {

@@ -12,17 +12,12 @@ var FetchCredentialServerList = []string{
 }
 
 type FetchCredentialSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCredentialPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchCredentialRequest struct {
-	PathParams FetchCredentialPathParams
-	Security   FetchCredentialSecurity
-	ServerURL  *string
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchCredentialResponse struct {

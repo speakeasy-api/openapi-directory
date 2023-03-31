@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningGetAlertPathParams struct {
+type SecretScanningGetAlertRequest struct {
 	// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
 	AlertNumber int64 `pathParam:"style=simple,explode=false,name=alert_number"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type SecretScanningGetAlertRequest struct {
-	PathParams SecretScanningGetAlertPathParams
 }
 
 // SecretScanningGetAlert503ApplicationJSON - Service unavailable

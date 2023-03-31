@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TranslatePathParams struct {
+type TranslateRequest struct {
+	InstantTranslationRequest *shared.InstantTranslationRequest `request:"mediaType=application/json"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Target language that you want to instantly translate your file into.
 	TargetLanguage string `pathParam:"style=simple,explode=false,name=targetLanguage"`
-}
-
-type TranslateRequest struct {
-	PathParams TranslatePathParams
-	Request    *shared.InstantTranslationRequest `request:"mediaType=application/json"`
 }
 
 type TranslateResponse struct {

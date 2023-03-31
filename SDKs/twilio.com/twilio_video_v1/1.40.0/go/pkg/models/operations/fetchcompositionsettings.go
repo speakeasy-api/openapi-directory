@@ -11,15 +11,6 @@ var FetchCompositionSettingsServerList = []string{
 	"https://video.twilio.com",
 }
 
-type FetchCompositionSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCompositionSettingsRequest struct {
-	Security  FetchCompositionSettingsSecurity
-	ServerURL *string
-}
-
 type FetchCompositionSettingsResponse struct {
 	ContentType string
 	StatusCode  int

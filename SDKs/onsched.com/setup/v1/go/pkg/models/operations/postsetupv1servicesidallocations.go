@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ServicesIDAllocationsPathParams struct {
+type PostSetupV1ServicesIDAllocationsRequest struct {
+	ServiceAllocationInputModel *shared.ServiceAllocationInputModel `request:"mediaType=application/json"`
 	// id of service object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1ServicesIDAllocationsRequest struct {
-	PathParams PostSetupV1ServicesIDAllocationsPathParams
-	Request    *shared.ServiceAllocationInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1ServicesIDAllocationsResponse struct {

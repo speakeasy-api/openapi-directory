@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserVodsPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetUserVodsDirectionEnum - The sort direction of the results.
 type GetUserVodsDirectionEnum string
 
@@ -101,7 +96,7 @@ func (e *GetUserVodsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserVodsQueryParams struct {
+type GetUserVodsRequest struct {
 	// The sort direction of the results.
 	Direction *GetUserVodsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The type of On Demand pages to return.
@@ -112,11 +107,8 @@ type GetUserVodsQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetUserVodsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUserVodsRequest struct {
-	PathParams  GetUserVodsPathParams
-	QueryParams GetUserVodsQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUserVodsResponse struct {

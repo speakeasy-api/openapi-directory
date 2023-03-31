@@ -37,7 +37,7 @@ func newPayors(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // <p>deprecated since v2.10 - Use /v2/payors
 func (s *payors) GetPayorByIDV1(ctx context.Context, request operations.GetPayorByIDV1Request) (*operations.GetPayorByIDV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *payors) GetPayorByIDV1(ctx context.Context, request operations.GetPayor
 // Get a Single Payor by Id.
 func (s *payors) GetPayorByIDV2(ctx context.Context, request operations.GetPayorByIDV2Request) (*operations.GetPayorByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payors/{payorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/payors/{payorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,9 +178,9 @@ func (s *payors) GetPayorByIDV2(ctx context.Context, request operations.GetPayor
 // <p>Logo file is used in your branding and emails sent to payees</p>
 func (s *payors) PayorAddPayorLogoV1(ctx context.Context, request operations.PayorAddPayorLogoV1Request) (*operations.PayorAddPayorLogoV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/branding/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/branding/logos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayorLogoRequest", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -256,9 +256,9 @@ func (s *payors) PayorAddPayorLogoV1(ctx context.Context, request operations.Pay
 // <p>API Keys are programmatic users for integrating your application with the Velo platform</p>
 func (s *payors) PayorCreateAPIKeyV1(ctx context.Context, request operations.PayorCreateAPIKeyV1Request) (*operations.PayorCreateAPIKeyV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/applications/{applicationId}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/applications/{applicationId}/keys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayorCreateAPIKeyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -344,9 +344,9 @@ func (s *payors) PayorCreateAPIKeyV1(ctx context.Context, request operations.Pay
 // <p>You can create an application and then create one or more API keys for the application</p>
 func (s *payors) PayorCreateApplicationV1(ctx context.Context, request operations.PayorCreateApplicationV1Request) (*operations.PayorCreateApplicationV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/applications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayorCreateApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -434,9 +434,9 @@ func (s *payors) PayorCreateApplicationV1(ctx context.Context, request operation
 // such as payees registering and onboarding.
 func (s *payors) PayorEmailOptOut(ctx context.Context, request operations.PayorEmailOptOutRequest) (*operations.PayorEmailOptOutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/reminderEmailsUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/reminderEmailsUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayorEmailOptOutRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -510,7 +510,7 @@ func (s *payors) PayorEmailOptOut(ctx context.Context, request operations.PayorE
 // Get the payor branding details.
 func (s *payors) PayorGetBranding(ctx context.Context, request operations.PayorGetBrandingRequest) (*operations.PayorGetBrandingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/branding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payors/{payorId}/branding", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

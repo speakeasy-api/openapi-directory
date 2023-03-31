@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AccountPlanAddonUpdatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountPlanAddonUpdateApplicationJSON - Account plan object.
 type AccountPlanAddonUpdateApplicationJSON struct {
 	// Number of hosts for this plan.
@@ -20,8 +15,9 @@ type AccountPlanAddonUpdateApplicationJSON struct {
 }
 
 type AccountPlanAddonUpdateRequest struct {
-	PathParams AccountPlanAddonUpdatePathParams
-	Request    AccountPlanAddonUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody AccountPlanAddonUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountPlanAddonUpdateResponse struct {

@@ -11,19 +11,14 @@ import (
 )
 
 type GetMeTracksSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type GetMeTracksQueryParams struct {
+type GetMeTracksRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
-}
-
-type GetMeTracksRequest struct {
-	QueryParams GetMeTracksQueryParams
-	Security    GetMeTracksSecurity
 }
 
 type GetMeTracks200ApplicationJSONType string

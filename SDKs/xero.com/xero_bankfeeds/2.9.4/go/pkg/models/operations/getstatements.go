@@ -8,27 +8,18 @@ import (
 )
 
 type GetStatementsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetStatementsQueryParams struct {
-	// unique id for single object
-	Page *int `queryParam:"style=form,explode=true,name=page"`
-	// Page size which specifies how many records per page will be returned (default 10). Example - https://api.xero.com/bankfeeds.xro/1.0/Statements?pageSize=100 to specify page size of 100.
-	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetStatementsHeaders struct {
+type GetStatementsRequest struct {
 	XeroApplicationID *string `header:"style=simple,explode=false,name=Xero-Application-Id"`
 	// Xero identifier for Tenant
 	XeroTenantID string  `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 	XeroUserID   *string `header:"style=simple,explode=false,name=Xero-User-Id"`
-}
-
-type GetStatementsRequest struct {
-	QueryParams GetStatementsQueryParams
-	Headers     GetStatementsHeaders
-	Security    GetStatementsSecurity
+	// unique id for single object
+	Page *int `queryParam:"style=form,explode=true,name=page"`
+	// Page size which specifies how many records per page will be returned (default 10). Example - https://api.xero.com/bankfeeds.xro/1.0/Statements?pageSize=100 to specify page size of 100.
+	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GetStatementsResponse struct {

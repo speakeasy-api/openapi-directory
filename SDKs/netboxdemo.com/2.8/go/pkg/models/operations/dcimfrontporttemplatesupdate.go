@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimFrontPortTemplatesUpdatePathParams struct {
+type DcimFrontPortTemplatesUpdateRequest struct {
+	WritableFrontPortTemplateInput shared.WritableFrontPortTemplateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this front port template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimFrontPortTemplatesUpdateRequest struct {
-	PathParams DcimFrontPortTemplatesUpdatePathParams
-	Request    shared.WritableFrontPortTemplateInput `request:"mediaType=application/json"`
 }
 
 type DcimFrontPortTemplatesUpdateResponse struct {

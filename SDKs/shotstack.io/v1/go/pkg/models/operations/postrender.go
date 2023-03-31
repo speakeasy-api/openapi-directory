@@ -8,15 +8,7 @@ import (
 )
 
 type PostRenderSecurity struct {
-	DeveloperKey shared.SchemeDeveloperKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostRenderRequest struct {
-	// The video, image or audio edit specified using JSON.
-	//
-	// **base URL:** https://api.shotstack.io/{version}
-	Request  shared.Edit `request:"mediaType=application/json"`
-	Security PostRenderSecurity
+	DeveloperKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type PostRenderResponse struct {

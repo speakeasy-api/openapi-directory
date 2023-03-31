@@ -3,39 +3,39 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddAttachmentsToSetRequest(
-    headers=operations.AddAttachmentsToSetHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="qui",
-        x_amz_credential="deleniti",
-        x_amz_date="eos",
-        x_amz_security_token="error",
-        x_amz_signature="illo",
-        x_amz_signed_headers="veniam",
-        x_amz_target="AWSSupport_20130415.AddAttachmentsToSet",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddAttachmentsToSetRequest(
-        attachment_set_id="fugit",
+)
+
+
+req = operations.AddAttachmentsToSetRequest(
+    add_attachments_to_set_request=shared.AddAttachmentsToSetRequest(
+        attachment_set_id="corrupti",
         attachments=[
             shared.Attachment(
-                data="aut",
-                file_name="modi",
+                data="distinctio",
+                file_name="quibusdam",
             ),
             shared.Attachment(
-                data="ex",
-                file_name="voluptatibus",
+                data="unde",
+                file_name="nulla",
+            ),
+            shared.Attachment(
+                data="corrupti",
+                file_name="illum",
             ),
         ],
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
+    x_amz_target="AWSSupport_20130415.AddAttachmentsToSet",
 )
     
 res = s.add_attachments_to_set(req)

@@ -34,9 +34,9 @@ func newArtifacts(defaultClient, securityClient HTTPClient, serverURL, language,
 // Create custom analytics artifact. Returns an artifact upload URL with expiry time. Upload the artifact file with a put request to the returned upload URL before its expiry.
 func (s *artifacts) CreateOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.CreateOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -86,7 +86,7 @@ func (s *artifacts) CreateOrganizationCameraCustomAnalyticsArtifact(ctx context.
 // Delete Custom Analytics Artifact
 func (s *artifacts) DeleteOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.DeleteOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +122,7 @@ func (s *artifacts) DeleteOrganizationCameraCustomAnalyticsArtifact(ctx context.
 // Get Custom Analytics Artifact
 func (s *artifacts) GetOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.GetOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.GetOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +167,7 @@ func (s *artifacts) GetOrganizationCameraCustomAnalyticsArtifact(ctx context.Con
 // List Custom Analytics Artifacts
 func (s *artifacts) GetOrganizationCameraCustomAnalyticsArtifacts(ctx context.Context, request operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest) (*operations.GetOrganizationCameraCustomAnalyticsArtifactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

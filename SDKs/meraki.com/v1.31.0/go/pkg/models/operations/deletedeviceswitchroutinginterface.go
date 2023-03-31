@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDeviceSwitchRoutingInterfacePathParams struct {
+type DeleteDeviceSwitchRoutingInterfaceRequest struct {
 	InterfaceID string `pathParam:"style=simple,explode=false,name=interfaceId"`
 	Serial      string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type DeleteDeviceSwitchRoutingInterfaceRequest struct {
-	PathParams DeleteDeviceSwitchRoutingInterfacePathParams
 }
 
 type DeleteDeviceSwitchRoutingInterfaceResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDExpenseReportsPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum - name of value for sort
 type GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum string
 
@@ -91,7 +84,7 @@ func (e *GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum) UnmarshalJSON(da
 	}
 }
 
-type GetSpacesSpaceIDFoldersIDExpenseReportsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDExpenseReportsRequest struct {
 	// date range of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// range of ExpenseDate (valid available)
@@ -108,11 +101,10 @@ type GetSpacesSpaceIDFoldersIDExpenseReportsQueryParams struct {
 	SortOrder *GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum `queryParam:"style=form,explode=true,name=SortOrder"`
 	// If present returns also the data extend
 	WithExtend *GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum `queryParam:"style=form,explode=true,name=WithExtend"`
-}
-
-type GetSpacesSpaceIDFoldersIDExpenseReportsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDExpenseReportsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDExpenseReportsQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDExpenseReportsResponse struct {

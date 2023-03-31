@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateApprovalRuleTemplateWithRepositoryRequest(
-    headers=operations.AssociateApprovalRuleTemplateWithRepositoryHeaders(
-        x_amz_algorithm="omnis",
-        x_amz_content_sha256="ut",
-        x_amz_credential="libero",
-        x_amz_date="consequatur",
-        x_amz_security_token="qui",
-        x_amz_signature="sit",
-        x_amz_signed_headers="quasi",
-        x_amz_target="CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository",
+    associate_approval_rule_template_with_repository_input=shared.AssociateApprovalRuleTemplateWithRepositoryInput(
+        approval_rule_template_name="corrupti",
+        repository_name="provident",
     ),
-    request=shared.AssociateApprovalRuleTemplateWithRepositoryInput(
-        approval_rule_template_name="voluptate",
-        repository_name="ut",
-    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+    x_amz_target="CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository",
 )
     
 res = s.associate_approval_rule_template_with_repository(req)

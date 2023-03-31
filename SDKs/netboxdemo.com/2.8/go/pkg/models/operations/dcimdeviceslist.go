@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDevicesListQueryParams struct {
+type DcimDevicesListRequest struct {
 	AssetTag           *string `queryParam:"style=form,explode=true,name=asset_tag"`
 	AssetTagIc         *string `queryParam:"style=form,explode=true,name=asset_tag__ic"`
 	AssetTagIe         *string `queryParam:"style=form,explode=true,name=asset_tag__ie"`
@@ -131,10 +131,6 @@ type DcimDevicesListQueryParams struct {
 	VirtualChassisID     *string `queryParam:"style=form,explode=true,name=virtual_chassis_id"`
 	VirtualChassisIDN    *string `queryParam:"style=form,explode=true,name=virtual_chassis_id__n"`
 	VirtualChassisMember *string `queryParam:"style=form,explode=true,name=virtual_chassis_member"`
-}
-
-type DcimDevicesListRequest struct {
-	QueryParams DcimDevicesListQueryParams
 }
 
 type DcimDevicesList200ApplicationJSON struct {

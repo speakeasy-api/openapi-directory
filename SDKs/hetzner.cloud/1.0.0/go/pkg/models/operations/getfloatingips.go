@@ -44,17 +44,13 @@ func (e *GetFloatingIpsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFloatingIpsQueryParams struct {
+type GetFloatingIpsRequest struct {
 	// Can be used to filter Floating IPs by labels. The response will only contain Floating IPs matching the label selector.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter Floating IPs by their name. The response will only contain the Floating IP matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Can be used multiple times. Choices id id:asc id:desc created created:asc created:desc
 	Sort *GetFloatingIpsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFloatingIpsRequest struct {
-	QueryParams GetFloatingIpsQueryParams
 }
 
 type GetFloatingIps200ApplicationJSONFloatingIpsDNSPtr struct {

@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetV1EmailDisposableRequest(
-    query_params=operations.GetV1EmailDisposableQueryParams(
-        email="minus",
-        format="json",
-        key="dolor",
-    ),
+    email="Larue_Rau85@yahoo.com",
+    format="xml",
+    key="illum",
 )
     
 res = s.get_v1_email_disposable(req)

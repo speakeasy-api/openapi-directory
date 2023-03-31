@@ -33,11 +33,11 @@ func newAlerts(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // AlertcenterAlertsBatchDelete - Performs batch delete operation on alerts.
-func (s *alerts) AlertcenterAlertsBatchDelete(ctx context.Context, request operations.AlertcenterAlertsBatchDeleteRequest) (*operations.AlertcenterAlertsBatchDeleteResponse, error) {
+func (s *alerts) AlertcenterAlertsBatchDelete(ctx context.Context, request operations.AlertcenterAlertsBatchDeleteRequest, security operations.AlertcenterAlertsBatchDeleteSecurity) (*operations.AlertcenterAlertsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/alerts:batchDelete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeleteAlertsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *alerts) AlertcenterAlertsBatchDelete(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *alerts) AlertcenterAlertsBatchDelete(ctx context.Context, request opera
 }
 
 // AlertcenterAlertsBatchUndelete - Performs batch undelete operation on alerts.
-func (s *alerts) AlertcenterAlertsBatchUndelete(ctx context.Context, request operations.AlertcenterAlertsBatchUndeleteRequest) (*operations.AlertcenterAlertsBatchUndeleteResponse, error) {
+func (s *alerts) AlertcenterAlertsBatchUndelete(ctx context.Context, request operations.AlertcenterAlertsBatchUndeleteRequest, security operations.AlertcenterAlertsBatchUndeleteSecurity) (*operations.AlertcenterAlertsBatchUndeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/alerts:batchUndelete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUndeleteAlertsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *alerts) AlertcenterAlertsBatchUndelete(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *alerts) AlertcenterAlertsBatchUndelete(ctx context.Context, request ope
 }
 
 // AlertcenterAlertsDelete - Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
-func (s *alerts) AlertcenterAlertsDelete(ctx context.Context, request operations.AlertcenterAlertsDeleteRequest) (*operations.AlertcenterAlertsDeleteResponse, error) {
+func (s *alerts) AlertcenterAlertsDelete(ctx context.Context, request operations.AlertcenterAlertsDeleteRequest, security operations.AlertcenterAlertsDeleteSecurity) (*operations.AlertcenterAlertsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,11 +191,11 @@ func (s *alerts) AlertcenterAlertsDelete(ctx context.Context, request operations
 }
 
 // AlertcenterAlertsFeedbackCreate - Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
-func (s *alerts) AlertcenterAlertsFeedbackCreate(ctx context.Context, request operations.AlertcenterAlertsFeedbackCreateRequest) (*operations.AlertcenterAlertsFeedbackCreateResponse, error) {
+func (s *alerts) AlertcenterAlertsFeedbackCreate(ctx context.Context, request operations.AlertcenterAlertsFeedbackCreateRequest, security operations.AlertcenterAlertsFeedbackCreateSecurity) (*operations.AlertcenterAlertsFeedbackCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AlertFeedback", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,11 +207,11 @@ func (s *alerts) AlertcenterAlertsFeedbackCreate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,20 +246,20 @@ func (s *alerts) AlertcenterAlertsFeedbackCreate(ctx context.Context, request op
 }
 
 // AlertcenterAlertsFeedbackList - Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
-func (s *alerts) AlertcenterAlertsFeedbackList(ctx context.Context, request operations.AlertcenterAlertsFeedbackListRequest) (*operations.AlertcenterAlertsFeedbackListResponse, error) {
+func (s *alerts) AlertcenterAlertsFeedbackList(ctx context.Context, request operations.AlertcenterAlertsFeedbackListRequest, security operations.AlertcenterAlertsFeedbackListSecurity) (*operations.AlertcenterAlertsFeedbackListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,20 +294,20 @@ func (s *alerts) AlertcenterAlertsFeedbackList(ctx context.Context, request oper
 }
 
 // AlertcenterAlertsGet - Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
-func (s *alerts) AlertcenterAlertsGet(ctx context.Context, request operations.AlertcenterAlertsGetRequest) (*operations.AlertcenterAlertsGetResponse, error) {
+func (s *alerts) AlertcenterAlertsGet(ctx context.Context, request operations.AlertcenterAlertsGetRequest, security operations.AlertcenterAlertsGetSecurity) (*operations.AlertcenterAlertsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,20 +342,20 @@ func (s *alerts) AlertcenterAlertsGet(ctx context.Context, request operations.Al
 }
 
 // AlertcenterAlertsGetMetadata - Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
-func (s *alerts) AlertcenterAlertsGetMetadata(ctx context.Context, request operations.AlertcenterAlertsGetMetadataRequest) (*operations.AlertcenterAlertsGetMetadataResponse, error) {
+func (s *alerts) AlertcenterAlertsGetMetadata(ctx context.Context, request operations.AlertcenterAlertsGetMetadataRequest, security operations.AlertcenterAlertsGetMetadataSecurity) (*operations.AlertcenterAlertsGetMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/metadata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,7 +390,7 @@ func (s *alerts) AlertcenterAlertsGetMetadata(ctx context.Context, request opera
 }
 
 // AlertcenterAlertsList - Lists the alerts.
-func (s *alerts) AlertcenterAlertsList(ctx context.Context, request operations.AlertcenterAlertsListRequest) (*operations.AlertcenterAlertsListResponse, error) {
+func (s *alerts) AlertcenterAlertsList(ctx context.Context, request operations.AlertcenterAlertsListRequest, security operations.AlertcenterAlertsListSecurity) (*operations.AlertcenterAlertsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/alerts"
 
@@ -399,11 +399,11 @@ func (s *alerts) AlertcenterAlertsList(ctx context.Context, request operations.A
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,11 +438,11 @@ func (s *alerts) AlertcenterAlertsList(ctx context.Context, request operations.A
 }
 
 // AlertcenterAlertsUndelete - Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
-func (s *alerts) AlertcenterAlertsUndelete(ctx context.Context, request operations.AlertcenterAlertsUndeleteRequest) (*operations.AlertcenterAlertsUndeleteResponse, error) {
+func (s *alerts) AlertcenterAlertsUndelete(ctx context.Context, request operations.AlertcenterAlertsUndeleteRequest, security operations.AlertcenterAlertsUndeleteSecurity) (*operations.AlertcenterAlertsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UndeleteAlertRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -454,11 +454,11 @@ func (s *alerts) AlertcenterAlertsUndelete(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

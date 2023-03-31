@@ -54,10 +54,6 @@ type PostAssetsReturnsSimulationBootstrapRequestBody struct {
 	SimulationsLength *int64 `json:"simulationsLength,omitempty"`
 }
 
-type PostAssetsReturnsSimulationBootstrapRequest struct {
-	Request PostAssetsReturnsSimulationBootstrapRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets struct {
 	// assetReturns[t] is the simulated return of the i-th asset for the t-th time period, in percentage
 	AssetReturns []float64 `json:"assetReturns"`

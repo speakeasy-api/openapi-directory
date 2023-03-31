@@ -11,11 +11,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsUpdatePathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum - Default permission level members have for organization repositories.
 type OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum string
 
@@ -112,8 +107,9 @@ type OrgsUpdateRequestBody struct {
 }
 
 type OrgsUpdateRequest struct {
-	PathParams OrgsUpdatePathParams
-	Request    *OrgsUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *OrgsUpdateRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsUpdate422ApplicationJSONType string

@@ -8,18 +8,14 @@ import (
 )
 
 type AnalyticsManagementRemarketingAudienceInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementRemarketingAudienceInsertPathParams struct {
+type AnalyticsManagementRemarketingAudienceInsertRequest struct {
+	RemarketingAudienceInput *shared.RemarketingAudienceInput `request:"mediaType=application/json"`
 	// The account ID for which to create the remarketing audience.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property ID for which to create the remarketing audience.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementRemarketingAudienceInsertQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,13 +30,8 @@ type AnalyticsManagementRemarketingAudienceInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementRemarketingAudienceInsertRequest struct {
-	PathParams  AnalyticsManagementRemarketingAudienceInsertPathParams
-	QueryParams AnalyticsManagementRemarketingAudienceInsertQueryParams
-	Request     *shared.RemarketingAudienceInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementRemarketingAudienceInsertSecurity
+	// Web property ID for which to create the remarketing audience.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementRemarketingAudienceInsertResponse struct {

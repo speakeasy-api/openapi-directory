@@ -36,9 +36,9 @@ func newScheduledDelivery(defaultClient, securityClient HTTPClient, serverURL, l
 // > Note that, while most of our API endpoints return time fields in UTC, this endpoint returns time adjusted to the configured time zone of the account.
 func (s *scheduledDelivery) AddBlockedDeliveryWindows(ctx context.Context, request operations.AddBlockedDeliveryWindowsRequest) (*operations.AddBlockedDeliveryWindowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/carriers/{carrierId}/adddayofweekblocked", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/carriers/{carrierId}/adddayofweekblocked", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *scheduledDelivery) AddBlockedDeliveryWindows(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -86,9 +86,9 @@ func (s *scheduledDelivery) AddBlockedDeliveryWindows(ctx context.Context, reque
 // > Note that, while most of our API endpoints return time fields in UTC, this endpoint returns time adjusted to the configured time zone of the account.
 func (s *scheduledDelivery) RemoveBlockedDeliveryWindows(ctx context.Context, request operations.RemoveBlockedDeliveryWindowsRequest) (*operations.RemoveBlockedDeliveryWindowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/carriers/{carrierId}/removedayofweekblocked", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/carriers/{carrierId}/removedayofweekblocked", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,7 +103,7 @@ func (s *scheduledDelivery) RemoveBlockedDeliveryWindows(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -136,14 +136,14 @@ func (s *scheduledDelivery) RemoveBlockedDeliveryWindows(ctx context.Context, re
 // > Note that, while most of our API endpoints return time fields in UTC, this endpoint returns **Scheduled Delivery** related time fields adjusted to the configured time zone of the account.
 func (s *scheduledDelivery) RetrieveBlockedDeliveryWindows(ctx context.Context, request operations.RetrieveBlockedDeliveryWindowsRequest) (*operations.RetrieveBlockedDeliveryWindowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/carriers/{carrierId}/getdayofweekblocked", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/carriers/{carrierId}/getdayofweekblocked", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -178,16 +178,16 @@ func (s *scheduledDelivery) RetrieveBlockedDeliveryWindows(ctx context.Context, 
 // > Note that the combined string `carrier@{capacityType}@{shippingPolicyId}` can be referred to as a "resource" in the API's messages.
 func (s *scheduledDelivery) GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFrames(ctx context.Context, request operations.GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesRequest) (*operations.GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics-capacity/resources/carrier@{capacityType}@{shippingPolicyId}/time-frames", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics-capacity/resources/carrier@{capacityType}@{shippingPolicyId}/time-frames", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -224,14 +224,14 @@ func (s *scheduledDelivery) GetAPILogisticsCapacityResourcesCarrierAtCapacityTyp
 // > Note that the combined string `carrier@{capacityType}@{shippingPolicyId}` can be referred to as a "resource" in the API's messages.
 func (s *scheduledDelivery) GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTime(ctx context.Context, request operations.GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest) (*operations.GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics-capacity/resources/carrier@{capacityType}@{shippingPolicyId}/time-frames/{windowDay}F{windowStartTime}T{windowEndTime}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics-capacity/resources/carrier@{capacityType}@{shippingPolicyId}/time-frames/{windowDay}F{windowStartTime}T{windowEndTime}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

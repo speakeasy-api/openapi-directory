@@ -12,17 +12,11 @@ var ListTaskReservationServerList = []string{
 }
 
 type ListTaskReservationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTaskReservationPathParams struct {
-	// The SID of the reserved Task resource with the TaskReservation resources to read.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-	// The SID of the Workspace with the TaskReservation resources to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListTaskReservationQueryParams struct {
+type ListTaskReservationRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -31,15 +25,12 @@ type ListTaskReservationQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Returns the list of reservations for a task with a specified ReservationStatus.  Can be: `pending`, `accepted`, `rejected`, or `timeout`.
 	ReservationStatus *shared.TaskReservationEnumStatusEnum `queryParam:"style=form,explode=true,name=ReservationStatus"`
+	// The SID of the reserved Task resource with the TaskReservation resources to read.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 	// The SID of the reserved Worker resource to read.
 	WorkerSid *string `queryParam:"style=form,explode=true,name=WorkerSid"`
-}
-
-type ListTaskReservationRequest struct {
-	PathParams  ListTaskReservationPathParams
-	QueryParams ListTaskReservationQueryParams
-	Security    ListTaskReservationSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the TaskReservation resources to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListTaskReservationListTaskReservationResponseMeta struct {

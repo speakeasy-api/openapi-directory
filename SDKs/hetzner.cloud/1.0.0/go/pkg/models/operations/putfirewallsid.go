@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutFirewallsIDPathParams struct {
-	// ID of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutFirewallsIDUpdateFirewallRequest struct {
 	// User-defined labels (key-value pairs)
 	Labels map[string]interface{} `json:"labels,omitempty"`
@@ -21,8 +16,9 @@ type PutFirewallsIDUpdateFirewallRequest struct {
 }
 
 type PutFirewallsIDRequest struct {
-	PathParams PutFirewallsIDPathParams
-	Request    *PutFirewallsIDUpdateFirewallRequest `request:"mediaType=application/json"`
+	RequestBody *PutFirewallsIDUpdateFirewallRequest `request:"mediaType=application/json"`
+	// ID of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesServer struct {

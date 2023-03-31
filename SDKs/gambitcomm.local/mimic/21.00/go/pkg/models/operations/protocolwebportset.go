@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolWebPortSetPathParams struct {
+type ProtocolWebPortSetRequest struct {
 	// Agent to set WEB port
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// TCP port
@@ -15,10 +15,6 @@ type ProtocolWebPortSetPathParams struct {
 	Protocol string `pathParam:"style=simple,explode=false,name=protocol"`
 	// Encryption or related protocol version
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type ProtocolWebPortSetRequest struct {
-	PathParams ProtocolWebPortSetPathParams
 }
 
 type ProtocolWebPortSetResponse struct {

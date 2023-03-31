@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNotificationByIDPathParams struct {
-	// ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetNotificationByIDQueryParams struct {
-	// Related record types to include in the response. You can include multiple types by separating them with commas. Valid options are **ownerUser**, **resource**, and **share**.
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetNotificationByIDHeaders struct {
+type GetNotificationByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetNotificationByIDRequest struct {
-	PathParams  GetNotificationByIDPathParams
-	QueryParams GetNotificationByIDQueryParams
-	Headers     GetNotificationByIDHeaders
+	// ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Related record types to include in the response. You can include multiple types by separating them with commas. Valid options are **ownerUser**, **resource**, and **share**.
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetNotificationByIDResponse struct {

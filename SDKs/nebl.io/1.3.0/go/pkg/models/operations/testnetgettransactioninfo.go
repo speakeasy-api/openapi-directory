@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetTransactionInfoPathParams struct {
+type TestnetGetTransactionInfoRequest struct {
 	// Neblio txid to get information on.
 	Txid string `pathParam:"style=simple,explode=false,name=txid"`
-}
-
-type TestnetGetTransactionInfoRequest struct {
-	PathParams TestnetGetTransactionInfoPathParams
 }
 
 type TestnetGetTransactionInfoResponse struct {

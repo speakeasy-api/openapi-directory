@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CommititemfeedorderstatusHeaders struct {
+type CommititemfeedorderstatusRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Accept                           string                                  `header:"style=simple,explode=false,name=Accept"`
+	CommititemfeedorderstatusRequest shared.CommititemfeedorderstatusRequest `request:"mediaType=application/json"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CommititemfeedorderstatusRequest struct {
-	Headers CommititemfeedorderstatusHeaders
-	Request shared.CommititemfeedorderstatusRequest `request:"mediaType=application/json"`
 }
 
 type CommititemfeedorderstatusResponse struct {

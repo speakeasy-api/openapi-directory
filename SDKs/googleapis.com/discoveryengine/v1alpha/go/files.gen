@@ -26,7 +26,6 @@ pkg/models/operations/discoveryengineprojectsoperationslist.go
 pkg/models/shared/googleclouddiscoveryenginev1alphadocument.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
 pkg/models/shared/googleclouddiscoveryenginev1alphaimportdocumentsrequest.go

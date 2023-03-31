@@ -13,23 +13,18 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateWebChannelRequest{
-        Security: operations.CreateWebChannelSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: &operations.CreateWebChannelCreateWebChannelRequest{
-            AddressSid: "corrupti",
-            ChatFriendlyName: "provident",
-            CustomerFriendlyName: "distinctio",
-            PreEngagementData: "quibusdam",
-        },
+    req := operations.CreateWebChannelCreateWebChannelRequest{
+        AddressSid: "corrupti",
+        ChatFriendlyName: "provident",
+        CustomerFriendlyName: "distinctio",
+        PreEngagementData: "quibusdam",
     }
 
     ctx := context.Background()
-    res, err := s.CreateWebChannel(ctx, req)
+    res, err := s.CreateWebChannel(ctx, req, operations.CreateWebChannelSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

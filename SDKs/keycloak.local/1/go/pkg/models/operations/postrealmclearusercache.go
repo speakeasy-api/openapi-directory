@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostRealmClearUserCachePathParams struct {
+type PostRealmClearUserCacheRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClearUserCacheRequest struct {
-	PathParams PostRealmClearUserCachePathParams
 }
 
 type PostRealmClearUserCacheResponse struct {

@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetTargetsTargetIDFindingsReportPathParams struct {
+type GetTargetsTargetIDFindingsReportRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDFindingsReportQueryParams struct {
 	// Token received from the finding report endpoint.
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type GetTargetsTargetIDFindingsReportRequest struct {
-	PathParams  GetTargetsTargetIDFindingsReportPathParams
-	QueryParams GetTargetsTargetIDFindingsReportQueryParams
 }
 
 // GetTargetsTargetIDFindingsReport404ApplicationJSON - Not found

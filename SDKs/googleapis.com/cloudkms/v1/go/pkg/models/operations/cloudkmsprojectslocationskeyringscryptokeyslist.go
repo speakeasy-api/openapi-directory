@@ -10,23 +10,18 @@ import (
 )
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurity struct {
 	Option1 *CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurityOption1 `security:"option"`
 	Option2 *CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurityOption2 `security:"option"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsCryptoKeysListPathParams struct {
-	// Required. The resource name of the KeyRing to list, in the format `projects/*/locations/*/keyRings/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysListVersionViewEnum - The fields of the primary version to include in the response.
@@ -53,7 +48,7 @@ func (e *CloudkmsProjectsLocationsKeyRingsCryptoKeysListVersionViewEnum) Unmarsh
 	}
 }
 
-type CloudkmsProjectsLocationsKeyRingsCryptoKeysListQueryParams struct {
+type CloudkmsProjectsLocationsKeyRingsCryptoKeysListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -76,6 +71,8 @@ type CloudkmsProjectsLocationsKeyRingsCryptoKeysListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Optional pagination token, returned earlier via ListCryptoKeysResponse.next_page_token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the KeyRing to list, in the format `projects/*/locations/*/keyRings/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -86,12 +83,6 @@ type CloudkmsProjectsLocationsKeyRingsCryptoKeysListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The fields of the primary version to include in the response.
 	VersionView *CloudkmsProjectsLocationsKeyRingsCryptoKeysListVersionViewEnum `queryParam:"style=form,explode=true,name=versionView"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsCryptoKeysListRequest struct {
-	PathParams  CloudkmsProjectsLocationsKeyRingsCryptoKeysListPathParams
-	QueryParams CloudkmsProjectsLocationsKeyRingsCryptoKeysListQueryParams
-	Security    CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurity
 }
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse struct {

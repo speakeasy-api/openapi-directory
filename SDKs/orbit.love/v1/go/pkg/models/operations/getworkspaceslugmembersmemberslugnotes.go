@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugMembersMemberSlugNotesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugMembersMemberSlugNotesPathParams struct {
-	MemberSlug    string `pathParam:"style=simple,explode=false,name=member_slug"`
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
-}
-
-type GetWorkspaceSlugMembersMemberSlugNotesQueryParams struct {
-	Page *string `queryParam:"style=form,explode=true,name=page"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWorkspaceSlugMembersMemberSlugNotesRequest struct {
-	PathParams  GetWorkspaceSlugMembersMemberSlugNotesPathParams
-	QueryParams GetWorkspaceSlugMembersMemberSlugNotesQueryParams
-	Security    GetWorkspaceSlugMembersMemberSlugNotesSecurity
+	MemberSlug    string  `pathParam:"style=simple,explode=false,name=member_slug"`
+	Page          *string `queryParam:"style=form,explode=true,name=page"`
+	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugMembersMemberSlugNotesResponse struct {

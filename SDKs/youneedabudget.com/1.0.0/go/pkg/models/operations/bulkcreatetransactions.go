@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BulkCreateTransactionsPathParams struct {
+type BulkCreateTransactionsRequest struct {
+	// The list of transactions to create
+	BulkTransactions shared.BulkTransactions `request:"mediaType=application/json"`
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
-}
-
-type BulkCreateTransactionsRequest struct {
-	PathParams BulkCreateTransactionsPathParams
-	// The list of transactions to create
-	Request shared.BulkTransactions `request:"mediaType=application/json"`
 }
 
 type BulkCreateTransactionsResponse struct {

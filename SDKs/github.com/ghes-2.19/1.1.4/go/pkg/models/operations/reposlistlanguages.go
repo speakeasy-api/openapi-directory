@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ReposListLanguagesPathParams struct {
+type ReposListLanguagesRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListLanguagesRequest struct {
-	PathParams ReposListLanguagesPathParams
 }
 
 type ReposListLanguagesResponse struct {

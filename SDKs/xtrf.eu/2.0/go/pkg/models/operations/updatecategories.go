@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type UpdateCategoriesPathParams struct {
+type UpdateCategoriesRequest struct {
+	// Updated categories of a given client.
+	RequestBody []int64 `request:"mediaType=application/json"`
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type UpdateCategoriesRequest struct {
-	PathParams UpdateCategoriesPathParams
-	// Updated categories of a given client.
-	Request []int64 `request:"mediaType=application/json"`
 }
 
 type UpdateCategoriesResponse struct {

@@ -15,10 +15,6 @@ type PostPortfolioAnalysisDrawdownsRequestBody struct {
 	Portfolios []PostPortfolioAnalysisDrawdownsRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisDrawdownsRequest struct {
-	Request PostPortfolioAnalysisDrawdownsRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns struct {
 	DrawdownBottom int64   `json:"drawdownBottom"`
 	DrawdownDepth  float64 `json:"drawdownDepth"`

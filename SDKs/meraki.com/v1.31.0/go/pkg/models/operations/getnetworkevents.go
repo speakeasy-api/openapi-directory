@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkEventsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkEventsProductTypeEnum - The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway
 type GetNetworkEventsProductTypeEnum string
 
@@ -48,7 +44,7 @@ func (e *GetNetworkEventsProductTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNetworkEventsQueryParams struct {
+type GetNetworkEventsRequest struct {
 	// The IP of the client which the list of events will be filtered with. Only supported for track-by-IP networks.
 	ClientIP *string `queryParam:"style=form,explode=true,name=clientIp"`
 	// The MAC address of the client which the list of events will be filtered with. Only supported for track-by-MAC networks.
@@ -67,6 +63,7 @@ type GetNetworkEventsQueryParams struct {
 	ExcludedEventTypes []string `queryParam:"style=form,explode=false,name=excludedEventTypes"`
 	// A list of event types. The returned events will be filtered to only include events with these types.
 	IncludedEventTypes []string `queryParam:"style=form,explode=false,name=includedEventTypes"`
+	NetworkID          string   `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway
@@ -77,11 +74,6 @@ type GetNetworkEventsQueryParams struct {
 	SmDeviceName *string `queryParam:"style=form,explode=true,name=smDeviceName"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
-}
-
-type GetNetworkEventsRequest struct {
-	PathParams  GetNetworkEventsPathParams
-	QueryParams GetNetworkEventsQueryParams
 }
 
 // GetNetworkEvents200ApplicationJSONEventsEventData - An object containing more data related to the event.

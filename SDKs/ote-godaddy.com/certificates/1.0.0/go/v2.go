@@ -36,7 +36,7 @@ func newV2(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // Use this endpoint to retrieve a key identifier and Hash-based Message Authentication Code (HMAC) key for Automated Certificate Management Environment (ACME) External Account Binding (EAB). These credentials can be used with an ACME client that supports EAB (ex. CertBot) to automate the issuance request and deployment of DV SSL certificates
 func (s *v2) GetAcmeExternalAccountBinding(ctx context.Context, request operations.GetAcmeExternalAccountBindingRequest) (*operations.GetAcmeExternalAccountBindingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/acme/externalAccountBinding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/acme/externalAccountBinding", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *v2) GetAcmeExternalAccountBinding(ctx context.Context, request operatio
 // Once the certificate order has been created, this method can be used to check the status of the certificate. This method can also be used to retrieve details of the certificate. <ul><li>**shopperId** is **not the same** as **customerId**. **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v2) GetCertificateDetailByCertIdentifier(ctx context.Context, request operations.GetCertificateDetailByCertIdentifierRequest) (*operations.GetCertificateDetailByCertIdentifierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/{certificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/{certificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,14 +166,14 @@ func (s *v2) GetCertificateDetailByCertIdentifier(ctx context.Context, request o
 // This method can be used to retrieve a list of certificates for a specified customer. <ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v2) GetCustomerCertificatesByCustomerID(ctx context.Context, request operations.GetCustomerCertificatesByCustomerIDRequest) (*operations.GetCustomerCertificatesByCustomerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -233,7 +233,7 @@ func (s *v2) GetCustomerCertificatesByCustomerID(ctx context.Context, request op
 // Retrieve detailed information for supplied domain, including domain verification details and Certificate Authority Authorization (CAA) verification details. <ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v2) GetDomainDetailsByDomain(ctx context.Context, request operations.GetDomainDetailsByDomainRequest) (*operations.GetDomainDetailsByDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications/{domain}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications/{domain}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -298,7 +298,7 @@ func (s *v2) GetDomainDetailsByDomain(ctx context.Context, request operations.Ge
 // This method can be used to retrieve the domain verification status for a certificate request.<ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>"
 func (s *v2) GetDomainInformationByCertificateID(ctx context.Context, request operations.GetDomainInformationByCertificateIDRequest) (*operations.GetDomainInformationByCertificateIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

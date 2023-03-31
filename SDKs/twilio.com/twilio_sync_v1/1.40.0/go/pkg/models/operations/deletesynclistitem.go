@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncListItemServerList = []string{
@@ -12,28 +11,19 @@ var DeleteSyncListItemServerList = []string{
 }
 
 type DeleteSyncListItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSyncListItemPathParams struct {
+type DeleteSyncListItemRequest struct {
+	// If provided, applies this mutation if (and only if) the “revision” field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
 	// The index of the Sync List Item resource to delete.
 	Index int64 `pathParam:"style=simple,explode=false,name=Index"`
 	// The SID of the Sync List with the Sync List Item resource to delete. Can be the Sync List resource's `sid` or its `unique_name`.
 	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteSyncListItemHeaders struct {
-	// If provided, applies this mutation if (and only if) the “revision” field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
-}
-
-type DeleteSyncListItemRequest struct {
-	PathParams DeleteSyncListItemPathParams
-	Headers    DeleteSyncListItemHeaders
-	Security   DeleteSyncListItemSecurity
-	ServerURL  *string
 }
 
 type DeleteSyncListItemResponse struct {

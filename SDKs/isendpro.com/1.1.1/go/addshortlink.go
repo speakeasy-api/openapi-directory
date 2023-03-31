@@ -34,7 +34,7 @@ func newAddShortlink(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // AddShortlink - add a shortlink
 // add a shortlink
-func (s *addShortlink) AddShortlink(ctx context.Context, request operations.AddShortlinkRequest) (*operations.AddShortlinkResponse, error) {
+func (s *addShortlink) AddShortlink(ctx context.Context, request shared.ShortlinkRequest) (*operations.AddShortlinkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shortlink"
 

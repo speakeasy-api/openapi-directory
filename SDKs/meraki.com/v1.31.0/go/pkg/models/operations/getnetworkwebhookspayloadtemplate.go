@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWebhooksPayloadTemplatePathParams struct {
+type GetNetworkWebhooksPayloadTemplateRequest struct {
 	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
 	PayloadTemplateID string `pathParam:"style=simple,explode=false,name=payloadTemplateId"`
-}
-
-type GetNetworkWebhooksPayloadTemplateRequest struct {
-	PathParams GetNetworkWebhooksPayloadTemplatePathParams
 }
 
 type GetNetworkWebhooksPayloadTemplate200ApplicationJSONHeaders struct {

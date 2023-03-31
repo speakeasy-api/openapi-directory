@@ -8,17 +8,12 @@ import (
 )
 
 type GetPanoramaFirewallSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPanoramaFirewallPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetPanoramaFirewallRequest struct {
-	PathParams GetPanoramaFirewallPathParams
-	Security   GetPanoramaFirewallSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPanoramaFirewallResponse struct {

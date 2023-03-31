@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2AccountsJSONQueryParams struct {
+type GetV2AccountsJSONRequest struct {
 	// Filters accounts by account_stage_id. Multiple account_stage_ids can be applied. An additional value of "_is_null" can be passed to filter accounts that do not have account_stage_id
 	AccountStageID []int64 `queryParam:"style=form,explode=false,name=account_stage_id"`
 	// Filters accounts by account_tier_id. Multiple account tier ids can be applied
@@ -77,10 +77,6 @@ type GetV2AccountsJSONQueryParams struct {
 	UserRelationships map[string]interface{} `queryParam:"style=form,explode=true,name=user_relationships"`
 	// Filters accounts by website. Multiple websites can be applied. An additional value of "_is_null" can be passed to filter accounts that do not have a website.
 	Website []string `queryParam:"style=form,explode=false,name=website"`
-}
-
-type GetV2AccountsJSONRequest struct {
-	QueryParams GetV2AccountsJSONQueryParams
 }
 
 type GetV2AccountsJSONResponse struct {

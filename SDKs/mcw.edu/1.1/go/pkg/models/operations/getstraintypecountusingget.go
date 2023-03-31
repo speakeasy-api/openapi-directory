@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETStrainTypeCountUsingGETPathParams struct {
+type GETStrainTypeCountUsingGETRequest struct {
 	// dateYYYYMMDD
 	DateYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateYYYYMMDD"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETStrainTypeCountUsingGETRequest struct {
-	PathParams GETStrainTypeCountUsingGETPathParams
 }
 
 type GETStrainTypeCountUsingGETResponse struct {

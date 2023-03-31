@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListJobsForWorkflowRunAttemptPathParams struct {
+type ActionsListJobsForWorkflowRunAttemptRequest struct {
 	// The attempt number of the workflow run.
 	AttemptNumber int64 `pathParam:"style=simple,explode=false,name=attempt_number"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The unique identifier of the workflow run.
-	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsListJobsForWorkflowRunAttemptQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListJobsForWorkflowRunAttemptRequest struct {
-	PathParams  ActionsListJobsForWorkflowRunAttemptPathParams
-	QueryParams ActionsListJobsForWorkflowRunAttemptQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The unique identifier of the workflow run.
+	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
 }
 
 // ActionsListJobsForWorkflowRunAttempt200ApplicationJSON - Response

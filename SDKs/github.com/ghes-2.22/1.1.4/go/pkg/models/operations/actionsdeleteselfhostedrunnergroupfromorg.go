@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteSelfHostedRunnerGroupFromOrgPathParams struct {
+type ActionsDeleteSelfHostedRunnerGroupFromOrgRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Unique identifier of the self-hosted runner group.
 	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
-type ActionsDeleteSelfHostedRunnerGroupFromOrgRequest struct {
-	PathParams ActionsDeleteSelfHostedRunnerGroupFromOrgPathParams
 }
 
 type ActionsDeleteSelfHostedRunnerGroupFromOrgResponse struct {

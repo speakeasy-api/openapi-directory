@@ -14,16 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAssetRequest{
-        Security: operations.CreateAssetSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateAssetHeaders{
-            XeroTenantID: "corrupti",
-        },
-        Request: shared.Asset{
-            AccountingBookValue: 5928.45,
+        Asset: shared.Asset{
+            AccountingBookValue: 5488.14,
             AssetID: "3b5b3a38-5649-495f-87a1-14a4e5918634",
             AssetName: "Awesome Truck 3",
             AssetNumber: "FA-0013",
@@ -57,10 +49,13 @@ func main() {
             SerialNumber: "ca4c6b39-4f4f-43e8-98da-5e1f350a6694",
             WarrantyExpiryDate: "ca4c6b39-4f4f-43e8-98da-5e1f350a6694",
         },
+        XeroTenantID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Asset.CreateAsset(ctx, req)
+    res, err := s.Asset.CreateAsset(ctx, req, operations.CreateAssetSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

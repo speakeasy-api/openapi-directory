@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnAccountPathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
 type RetrieveAnAccountRequest struct {
-	PathParams RetrieveAnAccountPathParams
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type RetrieveAnAccountDefaultApplicationJSON13StatusEnum string

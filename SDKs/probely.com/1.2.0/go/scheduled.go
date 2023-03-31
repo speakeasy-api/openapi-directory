@@ -37,7 +37,7 @@ func newScheduled(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteTargetsTargetIDScheduledscansID - Delete
 func (s *scheduled) DeleteTargetsTargetIDScheduledscansID(ctx context.Context, request operations.DeleteTargetsTargetIDScheduledscansIDRequest) (*operations.DeleteTargetsTargetIDScheduledscansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *scheduled) GetTargetsAllScheduledscansExpanded(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,14 +150,14 @@ func (s *scheduled) GetTargetsAllScheduledscansExpanded(ctx context.Context, req
 // GetTargetsTargetIDScheduledscans - List scheduled scans
 func (s *scheduled) GetTargetsTargetIDScheduledscans(ctx context.Context, request operations.GetTargetsTargetIDScheduledscansRequest) (*operations.GetTargetsTargetIDScheduledscansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -218,14 +218,14 @@ func (s *scheduled) GetTargetsTargetIDScheduledscans(ctx context.Context, reques
 // GetTargetsTargetIDScheduledscansExpanded - List scheduled scans expanding recurrence
 func (s *scheduled) GetTargetsTargetIDScheduledscansExpanded(ctx context.Context, request operations.GetTargetsTargetIDScheduledscansExpandedRequest) (*operations.GetTargetsTargetIDScheduledscansExpandedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/expanded/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/expanded/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -276,7 +276,7 @@ func (s *scheduled) GetTargetsTargetIDScheduledscansExpanded(ctx context.Context
 // GetTargetsTargetIDScheduledscansID - Retrieve a scheduled scan
 func (s *scheduled) GetTargetsTargetIDScheduledscansID(ctx context.Context, request operations.GetTargetsTargetIDScheduledscansIDRequest) (*operations.GetTargetsTargetIDScheduledscansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,9 +340,9 @@ func (s *scheduled) GetTargetsTargetIDScheduledscansID(ctx context.Context, requ
 // PatchTargetsTargetIDScheduledscansID - Partial update
 func (s *scheduled) PatchTargetsTargetIDScheduledscansID(ctx context.Context, request operations.PatchTargetsTargetIDScheduledscansIDRequest) (*operations.PatchTargetsTargetIDScheduledscansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -434,9 +434,9 @@ func (s *scheduled) PatchTargetsTargetIDScheduledscansID(ctx context.Context, re
 // PostTargetsTargetIDScheduledscans - Create new scheduled scan
 func (s *scheduled) PostTargetsTargetIDScheduledscans(ctx context.Context, request operations.PostTargetsTargetIDScheduledscansRequest) (*operations.PostTargetsTargetIDScheduledscansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -528,9 +528,9 @@ func (s *scheduled) PostTargetsTargetIDScheduledscans(ctx context.Context, reque
 // PutTargetsTargetIDScheduledscansID - Update a scheduled scan
 func (s *scheduled) PutTargetsTargetIDScheduledscansID(ctx context.Context, request operations.PutTargetsTargetIDScheduledscansIDRequest) (*operations.PutTargetsTargetIDScheduledscansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/scheduledscans/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,22 +8,19 @@ import (
 )
 
 type DoubleclicksearchReportsGetIDMappingFileSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DoubleclicksearchReportsGetIDMappingFilePathParams struct {
-	// Legacy SA360 advertiser ID.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Legacy SA360 agency ID.
-	AgencyID string `pathParam:"style=simple,explode=false,name=agencyId"`
-}
-
-type DoubleclicksearchReportsGetIDMappingFileQueryParams struct {
+type DoubleclicksearchReportsGetIDMappingFileRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Legacy SA360 advertiser ID.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
+	// Legacy SA360 agency ID.
+	AgencyID string `pathParam:"style=simple,explode=false,name=agencyId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -42,12 +39,6 @@ type DoubleclicksearchReportsGetIDMappingFileQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DoubleclicksearchReportsGetIDMappingFileRequest struct {
-	PathParams  DoubleclicksearchReportsGetIDMappingFilePathParams
-	QueryParams DoubleclicksearchReportsGetIDMappingFileQueryParams
-	Security    DoubleclicksearchReportsGetIDMappingFileSecurity
 }
 
 type DoubleclicksearchReportsGetIDMappingFileResponse struct {

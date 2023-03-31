@@ -8,13 +8,13 @@ import (
 )
 
 type DNSChangesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesCreateSecurity struct {
@@ -22,17 +22,10 @@ type DNSChangesCreateSecurity struct {
 	Option2 *DNSChangesCreateSecurityOption2 `security:"option"`
 }
 
-type DNSChangesCreatePathParams struct {
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
-	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DNSChangesCreateQueryParams struct {
+type DNSChangesCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Change      *shared.Change    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -44,24 +37,22 @@ type DNSChangesCreateQueryParams struct {
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-	Key *string `queryParam:"style=form,explode=true,name=key"`
+	Key      *string `queryParam:"style=form,explode=true,name=key"`
+	Location string  `pathParam:"style=simple,explode=false,name=location"`
+	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSChangesCreateRequest struct {
-	PathParams  DNSChangesCreatePathParams
-	QueryParams DNSChangesCreateQueryParams
-	Request     *shared.Change `request:"mediaType=application/json"`
-	Security    DNSChangesCreateSecurity
 }
 
 type DNSChangesCreateResponse struct {

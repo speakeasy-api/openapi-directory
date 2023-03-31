@@ -4,22 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchBusinessGroupsSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PatchBusinessGroupsRequestBody - BusinessGroup to modify
 type PatchBusinessGroupsRequestBody struct {
 	Name *string `json:"Name,omitempty"`
-}
-
-type PatchBusinessGroupsRequest struct {
-	// BusinessGroup to modify
-	Request  PatchBusinessGroupsRequestBody `request:"mediaType=application/json"`
-	Security PatchBusinessGroupsSecurity
 }
 
 type PatchBusinessGroupsResponse struct {

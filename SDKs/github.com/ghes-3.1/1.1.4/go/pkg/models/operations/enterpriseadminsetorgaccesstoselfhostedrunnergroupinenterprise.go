@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
 type EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody struct {
 	// List of organization IDs that can access the runner group.
 	SelectedOrganizationIds []int64 `json:"selected_organization_ids"`
 }
 
 type EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest struct {
-	PathParams EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams
-	Request    EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 type EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse struct {

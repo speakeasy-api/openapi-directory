@@ -31,16 +31,16 @@ func newActivityTypes(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // GetWorkspaceSlugActivityTypes - List all activity types for a workspace
-func (s *activityTypes) GetWorkspaceSlugActivityTypes(ctx context.Context, request operations.GetWorkspaceSlugActivityTypesRequest) (*operations.GetWorkspaceSlugActivityTypesResponse, error) {
+func (s *activityTypes) GetWorkspaceSlugActivityTypes(ctx context.Context, request operations.GetWorkspaceSlugActivityTypesRequest, security operations.GetWorkspaceSlugActivityTypesSecurity) (*operations.GetWorkspaceSlugActivityTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activity_types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activity_types", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

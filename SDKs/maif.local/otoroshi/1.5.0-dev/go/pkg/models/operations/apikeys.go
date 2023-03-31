@@ -8,17 +8,13 @@ import (
 )
 
 type APIKeysSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type APIKeysPathParams struct {
-	// The api key service id
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type APIKeysRequest struct {
-	PathParams APIKeysPathParams
-	Security   APIKeysSecurity
+	// The api key service id
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type APIKeysResponse struct {

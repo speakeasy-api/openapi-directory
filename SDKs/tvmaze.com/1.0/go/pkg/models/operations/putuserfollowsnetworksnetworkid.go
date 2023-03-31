@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUserFollowsNetworksNetworkIDPathParams struct {
-	NetworkID int64 `pathParam:"style=simple,explode=false,name=network_id"`
-}
-
 type PutUserFollowsNetworksNetworkIDRequest struct {
-	PathParams PutUserFollowsNetworksNetworkIDPathParams
+	NetworkID int64 `pathParam:"style=simple,explode=false,name=network_id"`
 }
 
 type PutUserFollowsNetworksNetworkIDResponse struct {

@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// memberId of the person
-	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-	// id of the portfolio
-	PortfolioID string `pathParam:"style=simple,explode=false,name=portfolioId"`
-}
-
 type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum string
 
 const (
@@ -93,9 +84,14 @@ type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBody struct {
 }
 
 type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequest struct {
-	PathParams PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDPathParams
 	// Portfolio to modify
-	Request PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// memberId of the person
+	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
+	// id of the portfolio
+	PortfolioID string `pathParam:"style=simple,explode=false,name=portfolioId"`
 }
 
 type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDResponse struct {

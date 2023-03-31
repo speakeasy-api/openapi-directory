@@ -34,14 +34,14 @@ func newLicensing(defaultClient, securityClient HTTPClient, serverURL, language,
 // List the licenses in a coterm organization
 func (s *licensing) GetOrganizationLicensingCotermLicenses(ctx context.Context, request operations.GetOrganizationLicensingCotermLicensesRequest) (*operations.GetOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,9 +85,9 @@ func (s *licensing) GetOrganizationLicensingCotermLicenses(ctx context.Context, 
 // Moves a license to a different organization (coterm only)
 func (s *licensing) MoveOrganizationLicensingCotermLicenses(ctx context.Context, request operations.MoveOrganizationLicensingCotermLicensesRequest) (*operations.MoveOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

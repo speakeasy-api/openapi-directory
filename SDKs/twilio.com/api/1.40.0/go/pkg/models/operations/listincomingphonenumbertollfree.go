@@ -12,15 +12,13 @@ var ListIncomingPhoneNumberTollFreeServerList = []string{
 }
 
 type ListIncomingPhoneNumberTollFreeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListIncomingPhoneNumberTollFreePathParams struct {
+type ListIncomingPhoneNumberTollFreeRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListIncomingPhoneNumberTollFreeQueryParams struct {
 	// Whether to include phone numbers new to the Twilio platform. Can be: `true` or `false` and the default is `true`.
 	Beta *bool `queryParam:"style=form,explode=true,name=Beta"`
 	// A string that identifies the resources to read.
@@ -35,13 +33,6 @@ type ListIncomingPhoneNumberTollFreeQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The phone numbers of the IncomingPhoneNumber resources to read. You can specify partial numbers and use '*' as a wildcard for any digit.
 	PhoneNumber *string `queryParam:"style=form,explode=true,name=PhoneNumber"`
-}
-
-type ListIncomingPhoneNumberTollFreeRequest struct {
-	PathParams  ListIncomingPhoneNumberTollFreePathParams
-	QueryParams ListIncomingPhoneNumberTollFreeQueryParams
-	Security    ListIncomingPhoneNumberTollFreeSecurity
-	ServerURL   *string
 }
 
 // ListIncomingPhoneNumberTollFreeListIncomingPhoneNumberTollFreeResponse - OK

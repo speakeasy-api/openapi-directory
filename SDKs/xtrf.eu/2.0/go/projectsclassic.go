@@ -37,9 +37,9 @@ func newProjectsClassic(defaultClient, securityClient HTTPClient, serverURL, lan
 // Creates a new language combination for a given project without creating a task.
 func (s *projectsClassic) CreateLanguageCombination(ctx context.Context, request operations.CreateLanguageCombinationRequest) (*operations.CreateLanguageCombinationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/languageCombinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/languageCombinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommonLanguageCombinationDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -92,9 +92,9 @@ func (s *projectsClassic) CreateLanguageCombination(ctx context.Context, request
 // Adds a payable to a project.
 func (s *projectsClassic) CreatePayable(ctx context.Context, request operations.CreatePayableRequest) (*operations.CreatePayableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/payables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/payables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -147,9 +147,9 @@ func (s *projectsClassic) CreatePayable(ctx context.Context, request operations.
 // Adds a receivable to a project.
 func (s *projectsClassic) CreateReceivable(ctx context.Context, request operations.CreateReceivableRequest) (*operations.CreateReceivableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/receivables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/receivables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,9 +211,9 @@ func (s *projectsClassic) CreateReceivable(ctx context.Context, request operatio
 // </p>
 func (s *projectsClassic) CreateTask(ctx context.Context, request operations.CreateTaskRequest) (*operations.CreateTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -264,7 +264,7 @@ func (s *projectsClassic) CreateTask(ctx context.Context, request operations.Cre
 
 // Create5 - Creates a new Classic Project.
 // Creates a new Classic Project. If the specified service ID refers to Smart Project, 400 Bad Request is returned instead.
-func (s *projectsClassic) Create5(ctx context.Context, request operations.Create5Request) (*operations.Create5Response, error) {
+func (s *projectsClassic) Create5(ctx context.Context, request shared.ClassicProjectCreateDTO) (*operations.Create5Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
 
@@ -321,7 +321,7 @@ func (s *projectsClassic) Create5(ctx context.Context, request operations.Create
 // Deletes a payable.
 func (s *projectsClassic) DeletePayable(ctx context.Context, request operations.DeletePayableRequest) (*operations.DeletePayableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/payables/{payableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/payables/{payableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -357,7 +357,7 @@ func (s *projectsClassic) DeletePayable(ctx context.Context, request operations.
 // Deletes a receivable.
 func (s *projectsClassic) DeleteReceivable(ctx context.Context, request operations.DeleteReceivableRequest) (*operations.DeleteReceivableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/receivables/{receivableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/receivables/{receivableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -393,7 +393,7 @@ func (s *projectsClassic) DeleteReceivable(ctx context.Context, request operatio
 // Removes a project.
 func (s *projectsClassic) Delete12(ctx context.Context, request operations.Delete12Request) (*operations.Delete12Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -436,7 +436,7 @@ func (s *projectsClassic) GetAllIds6(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -478,14 +478,14 @@ func (s *projectsClassic) GetAllIds6(ctx context.Context, request operations.Get
 // Returns project details. If the specified project ID refers to Smart Project, 400 Bad Request is returned instead.
 func (s *projectsClassic) GetByID7(ctx context.Context, request operations.GetByID7Request) (*operations.GetByID7Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -527,7 +527,7 @@ func (s *projectsClassic) GetByID7(ctx context.Context, request operations.GetBy
 // Returns contacts of a given project.
 func (s *projectsClassic) GetContacts(ctx context.Context, request operations.GetContactsRequest) (*operations.GetContactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/contacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -572,7 +572,7 @@ func (s *projectsClassic) GetContacts(ctx context.Context, request operations.Ge
 // Returns custom fields of a given project.
 func (s *projectsClassic) GetCustomFields5(ctx context.Context, request operations.GetCustomFields5Request) (*operations.GetCustomFields5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/customFields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -617,7 +617,7 @@ func (s *projectsClassic) GetCustomFields5(ctx context.Context, request operatio
 // Returns dates of a given project.
 func (s *projectsClassic) GetDates1(ctx context.Context, request operations.GetDates1Request) (*operations.GetDates1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/dates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/dates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -662,7 +662,7 @@ func (s *projectsClassic) GetDates1(ctx context.Context, request operations.GetD
 // Downloads a file.
 func (s *projectsClassic) GetFileByID(ctx context.Context, request operations.GetFileByIDRequest) (*operations.GetFileByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/files/{fileId}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/files/{fileId}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -698,7 +698,7 @@ func (s *projectsClassic) GetFileByID(ctx context.Context, request operations.Ge
 // Returns finance of a given project.
 func (s *projectsClassic) GetFinance(ctx context.Context, request operations.GetFinanceRequest) (*operations.GetFinanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -743,7 +743,7 @@ func (s *projectsClassic) GetFinance(ctx context.Context, request operations.Get
 // Returns instructions of a given project.
 func (s *projectsClassic) GetInstructions(ctx context.Context, request operations.GetInstructionsRequest) (*operations.GetInstructionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/instructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -788,9 +788,9 @@ func (s *projectsClassic) GetInstructions(ctx context.Context, request operation
 // Updates contacts of a given project.
 func (s *projectsClassic) UpdateContacts(ctx context.Context, request operations.UpdateContactsRequest) (*operations.UpdateContactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -843,9 +843,9 @@ func (s *projectsClassic) UpdateContacts(ctx context.Context, request operations
 // Updates custom fields of a given project.
 func (s *projectsClassic) UpdateCustomFields3(ctx context.Context, request operations.UpdateCustomFields3Request) (*operations.UpdateCustomFields3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -898,9 +898,9 @@ func (s *projectsClassic) UpdateCustomFields3(ctx context.Context, request opera
 // Updates dates of a given project.
 func (s *projectsClassic) UpdateDates1(ctx context.Context, request operations.UpdateDates1Request) (*operations.UpdateDates1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/dates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/dates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectDatesDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -953,9 +953,9 @@ func (s *projectsClassic) UpdateDates1(ctx context.Context, request operations.U
 // Updates instructions of a given project.
 func (s *projectsClassic) UpdateInstructions1(ctx context.Context, request operations.UpdateInstructions1Request) (*operations.UpdateInstructions1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/instructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstructionsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1008,9 +1008,9 @@ func (s *projectsClassic) UpdateInstructions1(ctx context.Context, request opera
 // Updates a payable.
 func (s *projectsClassic) UpdatePayable(ctx context.Context, request operations.UpdatePayableRequest) (*operations.UpdatePayableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/payables/{payableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/payables/{payableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1063,9 +1063,9 @@ func (s *projectsClassic) UpdatePayable(ctx context.Context, request operations.
 // Updates a receivable.
 func (s *projectsClassic) UpdateReceivable(ctx context.Context, request operations.UpdateReceivableRequest) (*operations.UpdateReceivableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/receivables/{receivableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/finance/receivables/{receivableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

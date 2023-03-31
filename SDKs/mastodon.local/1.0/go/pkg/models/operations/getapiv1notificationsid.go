@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1NotificationsIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1NotificationsIDPathParams struct {
-	// ID of the notification in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1NotificationsIDRequest struct {
-	PathParams GetAPIV1NotificationsIDPathParams
-	Security   GetAPIV1NotificationsIDSecurity
+	// ID of the notification in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1NotificationsIDResponse struct {

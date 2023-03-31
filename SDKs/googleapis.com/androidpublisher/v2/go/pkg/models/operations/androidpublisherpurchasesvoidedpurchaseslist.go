@@ -8,16 +8,11 @@ import (
 )
 
 type AndroidpublisherPurchasesVoidedpurchasesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherPurchasesVoidedpurchasesListPathParams struct {
-	// The package name of the application for which voided purchases need to be returned (for example, 'com.some.thing').
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-}
-
-type AndroidpublisherPurchasesVoidedpurchasesListQueryParams struct {
+type AndroidpublisherPurchasesVoidedpurchasesListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// The time, in milliseconds since the Epoch, of the newest voided purchase that you want to see in the response. The value of this parameter cannot be greater than the current time and is ignored if a pagination token is set. Default value is current time. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.
@@ -29,6 +24,8 @@ type AndroidpublisherPurchasesVoidedpurchasesListQueryParams struct {
 	MaxResults *int64  `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The package name of the application for which voided purchases need to be returned (for example, 'com.some.thing').
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
@@ -39,12 +36,6 @@ type AndroidpublisherPurchasesVoidedpurchasesListQueryParams struct {
 	Token     *string `queryParam:"style=form,explode=true,name=token"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherPurchasesVoidedpurchasesListRequest struct {
-	PathParams  AndroidpublisherPurchasesVoidedpurchasesListPathParams
-	QueryParams AndroidpublisherPurchasesVoidedpurchasesListQueryParams
-	Security    AndroidpublisherPurchasesVoidedpurchasesListSecurity
 }
 
 type AndroidpublisherPurchasesVoidedpurchasesListResponse struct {

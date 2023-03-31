@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutApplicationSecretPathParams struct {
-	// The secret unique identifier. E.g ERSEC001
-	SecretID string `pathParam:"style=simple,explode=false,name=SecretId"`
-}
-
-type PutApplicationSecretHeaders struct {
+type PutApplicationSecretRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PutApplicationSecretRequest struct {
-	PathParams PutApplicationSecretPathParams
-	Headers    PutApplicationSecretHeaders
+	// The secret unique identifier. E.g ERSEC001
+	SecretID string `pathParam:"style=simple,explode=false,name=SecretId"`
 }
 
 type PutApplicationSecretResponse struct {

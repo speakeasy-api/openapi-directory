@@ -32,16 +32,16 @@ func newGroupsSubscription(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // JoinGroup - Add a user to a group
-func (s *groupsSubscription) JoinGroup(ctx context.Context, request operations.JoinGroupRequest) (*operations.JoinGroupResponse, error) {
+func (s *groupsSubscription) JoinGroup(ctx context.Context, request operations.JoinGroupRequest, security operations.JoinGroupSecurity) (*operations.JoinGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,16 +77,16 @@ func (s *groupsSubscription) JoinGroup(ctx context.Context, request operations.J
 }
 
 // JoinGroupAlt1 - Add a user to a group
-func (s *groupsSubscription) JoinGroupAlt1(ctx context.Context, request operations.JoinGroupAlt1Request) (*operations.JoinGroupAlt1Response, error) {
+func (s *groupsSubscription) JoinGroupAlt1(ctx context.Context, request operations.JoinGroupAlt1Request, security operations.JoinGroupAlt1Security) (*operations.JoinGroupAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,16 +122,16 @@ func (s *groupsSubscription) JoinGroupAlt1(ctx context.Context, request operatio
 }
 
 // LeaveGroup - Remove a user from a group
-func (s *groupsSubscription) LeaveGroup(ctx context.Context, request operations.LeaveGroupRequest) (*operations.LeaveGroupResponse, error) {
+func (s *groupsSubscription) LeaveGroup(ctx context.Context, request operations.LeaveGroupRequest, security operations.LeaveGroupSecurity) (*operations.LeaveGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,16 +167,16 @@ func (s *groupsSubscription) LeaveGroup(ctx context.Context, request operations.
 }
 
 // LeaveGroupAlt1 - Remove a user from a group
-func (s *groupsSubscription) LeaveGroupAlt1(ctx context.Context, request operations.LeaveGroupAlt1Request) (*operations.LeaveGroupAlt1Response, error) {
+func (s *groupsSubscription) LeaveGroupAlt1(ctx context.Context, request operations.LeaveGroupAlt1Request, security operations.LeaveGroupAlt1Security) (*operations.LeaveGroupAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

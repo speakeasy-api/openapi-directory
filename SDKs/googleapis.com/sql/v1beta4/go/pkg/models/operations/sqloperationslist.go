@@ -8,13 +8,13 @@ import (
 )
 
 type SQLOperationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLOperationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLOperationsListSecurity struct {
@@ -22,12 +22,7 @@ type SQLOperationsListSecurity struct {
 	Option2 *SQLOperationsListSecurityOption2 `security:"option"`
 }
 
-type SQLOperationsListPathParams struct {
-	// Project ID of the project that contains the instance.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type SQLOperationsListQueryParams struct {
+type SQLOperationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,18 +45,14 @@ type SQLOperationsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the project that contains the instance.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SQLOperationsListRequest struct {
-	PathParams  SQLOperationsListPathParams
-	QueryParams SQLOperationsListQueryParams
-	Security    SQLOperationsListSecurity
 }
 
 type SQLOperationsListResponse struct {

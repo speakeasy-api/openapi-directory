@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostScenariosIDEventsPathParams struct {
-	// The unique identifier of the scenario.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostScenariosIDEventsRequestBodyRepeatTypeEnum - The repeat type of the event.
 type PostScenariosIDEventsRequestBodyRepeatTypeEnum string
 
@@ -69,8 +64,9 @@ type PostScenariosIDEventsRequestBody struct {
 }
 
 type PostScenariosIDEventsRequest struct {
-	PathParams PostScenariosIDEventsPathParams
-	Request    *PostScenariosIDEventsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostScenariosIDEventsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the scenario.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostScenariosIDEventsResponse struct {

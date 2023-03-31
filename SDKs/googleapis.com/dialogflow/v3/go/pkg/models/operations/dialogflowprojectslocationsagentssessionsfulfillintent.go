@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentsSessionsFulfillIntentPathParams struct {
-	// Required. The name of the session this query is sent to. Format: `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API caller to choose an appropriate `Session ID`. It can be a random number or some type of session identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For more information, see the [sessions guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-	Session string `pathParam:"style=simple,explode=false,name=session"`
-}
-
-type DialogflowProjectsLocationsAgentsSessionsFulfillIntentQueryParams struct {
+type DialogflowProjectsLocationsAgentsSessionsFulfillIntentRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                   *shared.XgafvEnum                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowCxV3FulfillIntentRequest *shared.GoogleCloudDialogflowCxV3FulfillIntentRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,17 +42,12 @@ type DialogflowProjectsLocationsAgentsSessionsFulfillIntentQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The name of the session this query is sent to. Format: `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API caller to choose an appropriate `Session ID`. It can be a random number or some type of session identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For more information, see the [sessions guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+	Session string `pathParam:"style=simple,explode=false,name=session"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsSessionsFulfillIntentRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsSessionsFulfillIntentPathParams
-	QueryParams DialogflowProjectsLocationsAgentsSessionsFulfillIntentQueryParams
-	Request     *shared.GoogleCloudDialogflowCxV3FulfillIntentRequest `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurity
 }
 
 type DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse struct {

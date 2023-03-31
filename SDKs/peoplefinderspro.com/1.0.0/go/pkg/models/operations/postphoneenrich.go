@@ -6,22 +6,18 @@ import (
 	"net/http"
 )
 
-type PostPhoneEnrichHeaders struct {
+type PostPhoneEnrichRequestBody struct {
+	Phone *string `json:"Phone,omitempty"`
+}
+
+type PostPhoneEnrichRequest struct {
+	RequestBody *PostPhoneEnrichRequestBody `request:"mediaType=application/json"`
 	// e.g. Key
 	GalaxyApName *string `header:"style=simple,explode=false,name=galaxy-ap-name"`
 	// e.g. Secret
 	GalaxyApPassword *string `header:"style=simple,explode=false,name=galaxy-ap-password"`
 	// e.g. DevAPICallerID
 	GalaxySearchType *string `header:"style=simple,explode=false,name=galaxy-search-type"`
-}
-
-type PostPhoneEnrichRequestBody struct {
-	Phone *string `json:"Phone,omitempty"`
-}
-
-type PostPhoneEnrichRequest struct {
-	Headers PostPhoneEnrichHeaders
-	Request *PostPhoneEnrichRequestBody `request:"mediaType=application/json"`
 }
 
 type PostPhoneEnrichResponse struct {

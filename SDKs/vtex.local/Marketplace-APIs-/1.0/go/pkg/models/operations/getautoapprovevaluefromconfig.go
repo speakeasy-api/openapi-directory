@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetautoApprovevaluefromconfigQueryParams struct {
-	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
-	SellerID string `queryParam:"style=form,explode=true,name=sellerId"`
-}
-
-type GetautoApprovevaluefromconfigHeaders struct {
+type GetautoApprovevaluefromconfigRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetautoApprovevaluefromconfigRequest struct {
-	QueryParams GetautoApprovevaluefromconfigQueryParams
-	Headers     GetautoApprovevaluefromconfigHeaders
+	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+	SellerID string `queryParam:"style=form,explode=true,name=sellerId"`
 }
 
 // GetautoApprovevaluefromconfig200ApplicationJSON - OK

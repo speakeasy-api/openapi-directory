@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReplaceConversationPathParams struct {
-	// Conversation ID
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 // ReplaceConversationRequestBody - Conversation Request Payload Object
 type ReplaceConversationRequestBody struct {
 	// The display name for the conversation. It does not have to be unique
@@ -25,9 +20,10 @@ type ReplaceConversationRequestBody struct {
 }
 
 type ReplaceConversationRequest struct {
-	PathParams ReplaceConversationPathParams
 	// Conversation Request Payload Object
-	Request *ReplaceConversationRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReplaceConversationRequestBody `request:"mediaType=application/json"`
+	// Conversation ID
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 // ReplaceConversation200ApplicationJSON - Create / Update Conversation Response Payload Object

@@ -8,18 +8,13 @@ import (
 )
 
 type PredictStringSecurity struct {
-	HTTPBearer shared.SchemeHTTPBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PredictStringPathParams struct {
-	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
-	Namespace  string `pathParam:"style=simple,explode=false,name=namespace"`
+	HTTPBearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PredictStringRequest struct {
-	PathParams PredictStringPathParams
-	Request    string `request:"mediaType=text/*"`
-	Security   PredictStringSecurity
+	RequestBody string `request:"mediaType=text/*"`
+	Deployment  string `pathParam:"style=simple,explode=false,name=deployment"`
+	Namespace   string `pathParam:"style=simple,explode=false,name=namespace"`
 }
 
 type PredictStringResponse struct {

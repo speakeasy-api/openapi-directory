@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsRequestReviewersPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsRequestReviewersRequestBody2 struct {
 	// An array of user `login`s that will be requested.
 	Reviewers []string `json:"reviewers,omitempty"`
@@ -31,8 +22,13 @@ type PullsRequestReviewersRequestBody1 struct {
 }
 
 type PullsRequestReviewersRequest struct {
-	PathParams PullsRequestReviewersPathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsRequestReviewersResponse struct {

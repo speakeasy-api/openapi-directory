@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsUpdatePathParams struct {
-	// gist_id parameter
-	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
 type GistsUpdateRequestBody2Files3 struct {
 	// The new content of the file
 	Content *string `json:"content,omitempty"`
@@ -69,8 +64,9 @@ type GistsUpdateRequestBody1 struct {
 }
 
 type GistsUpdateRequest struct {
-	PathParams GistsUpdatePathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	// gist_id parameter
+	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
 }
 
 type GistsUpdateResponse struct {

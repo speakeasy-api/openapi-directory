@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // WorkloadmanagerProjectsLocationsEvaluationsCreate - Creates a new Evaluation in a given project and location.
-func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest) (*operations.WorkloadmanagerProjectsLocationsEvaluationsCreateResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest, security operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity) (*operations.WorkloadmanagerProjectsLocationsEvaluationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/evaluations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/evaluations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EvaluationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx context
 }
 
 // WorkloadmanagerProjectsLocationsEvaluationsList - Lists Evaluations in a given project and location.
-func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsList(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsEvaluationsListRequest) (*operations.WorkloadmanagerProjectsLocationsEvaluationsListResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsList(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsEvaluationsListRequest, security operations.WorkloadmanagerProjectsLocationsEvaluationsListSecurity) (*operations.WorkloadmanagerProjectsLocationsEvaluationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/evaluations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/evaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) WorkloadmanagerProjectsLocationsEvaluationsList(ctx context.C
 }
 
 // WorkloadmanagerProjectsLocationsInsightsWriteInsight - Write the data insights to workload manager data warehouse.
-func (s *projects) WorkloadmanagerProjectsLocationsInsightsWriteInsight(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsInsightsWriteInsightRequest) (*operations.WorkloadmanagerProjectsLocationsInsightsWriteInsightResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsInsightsWriteInsight(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsInsightsWriteInsightRequest, security operations.WorkloadmanagerProjectsLocationsInsightsWriteInsightSecurity) (*operations.WorkloadmanagerProjectsLocationsInsightsWriteInsightResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}/insights:writeInsight", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}/insights:writeInsight", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WriteInsightRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) WorkloadmanagerProjectsLocationsInsightsWriteInsight(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) WorkloadmanagerProjectsLocationsInsightsWriteInsight(ctx cont
 }
 
 // WorkloadmanagerProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) WorkloadmanagerProjectsLocationsList(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsListRequest) (*operations.WorkloadmanagerProjectsLocationsListResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsList(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsListRequest, security operations.WorkloadmanagerProjectsLocationsListSecurity) (*operations.WorkloadmanagerProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) WorkloadmanagerProjectsLocationsList(ctx context.Context, req
 }
 
 // WorkloadmanagerProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) WorkloadmanagerProjectsLocationsOperationsCancel(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsCancelRequest) (*operations.WorkloadmanagerProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsOperationsCancel(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsCancelRequest, security operations.WorkloadmanagerProjectsLocationsOperationsCancelSecurity) (*operations.WorkloadmanagerProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) WorkloadmanagerProjectsLocationsOperationsCancel(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) WorkloadmanagerProjectsLocationsOperationsCancel(ctx context.
 }
 
 // WorkloadmanagerProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) WorkloadmanagerProjectsLocationsOperationsDelete(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsDeleteRequest) (*operations.WorkloadmanagerProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsOperationsDelete(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsDeleteRequest, security operations.WorkloadmanagerProjectsLocationsOperationsDeleteSecurity) (*operations.WorkloadmanagerProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) WorkloadmanagerProjectsLocationsOperationsDelete(ctx context.
 }
 
 // WorkloadmanagerProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) WorkloadmanagerProjectsLocationsOperationsGet(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsGetRequest) (*operations.WorkloadmanagerProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsOperationsGet(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsGetRequest, security operations.WorkloadmanagerProjectsLocationsOperationsGetSecurity) (*operations.WorkloadmanagerProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,20 +389,20 @@ func (s *projects) WorkloadmanagerProjectsLocationsOperationsGet(ctx context.Con
 }
 
 // WorkloadmanagerProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) WorkloadmanagerProjectsLocationsOperationsList(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsListRequest) (*operations.WorkloadmanagerProjectsLocationsOperationsListResponse, error) {
+func (s *projects) WorkloadmanagerProjectsLocationsOperationsList(ctx context.Context, request operations.WorkloadmanagerProjectsLocationsOperationsListRequest, security operations.WorkloadmanagerProjectsLocationsOperationsListSecurity) (*operations.WorkloadmanagerProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

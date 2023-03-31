@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsCreatePathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type GroupsCreateQueryParams struct {
+type GroupsCreateRequest struct {
+	// The parameters for the group to create.
+	RequestBody map[string]map[string]interface{} `request:"mediaType=application/json"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type GroupsCreateRequest struct {
-	PathParams  GroupsCreatePathParams
-	QueryParams GroupsCreateQueryParams
-	// The parameters for the group to create.
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type GroupsCreateResponse struct {

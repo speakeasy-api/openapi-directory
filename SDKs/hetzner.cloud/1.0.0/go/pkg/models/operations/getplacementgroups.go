@@ -74,7 +74,7 @@ func (e *GetPlacementGroupsTypeParameterTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetPlacementGroupsQueryParams struct {
+type GetPlacementGroupsRequest struct {
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter resources by their name. The response will only contain the resources matching the specified name
@@ -83,10 +83,6 @@ type GetPlacementGroupsQueryParams struct {
 	Sort *GetPlacementGroupsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times. The response will only contain PlacementGroups matching the type.
 	Type *GetPlacementGroupsTypeParameterTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetPlacementGroupsRequest struct {
-	QueryParams GetPlacementGroupsQueryParams
 }
 
 type GetPlacementGroupsPlacementGroupsResponseMetaPagination struct {

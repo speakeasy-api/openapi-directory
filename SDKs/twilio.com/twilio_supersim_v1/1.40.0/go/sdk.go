@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateEsimProfile - Order an eSIM Profile.
-func (s *SDK) CreateEsimProfile(ctx context.Context, request operations.CreateEsimProfileRequest) (*operations.CreateEsimProfileResponse, error) {
+func (s *SDK) CreateEsimProfile(ctx context.Context, request operations.CreateEsimProfileCreateEsimProfileRequest, security operations.CreateEsimProfileSecurity, opts ...operations.Option) (*operations.CreateEsimProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateEsimProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ESimProfiles"
@@ -113,7 +123,7 @@ func (s *SDK) CreateEsimProfile(ctx context.Context, request operations.CreateEs
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,10 +158,20 @@ func (s *SDK) CreateEsimProfile(ctx context.Context, request operations.CreateEs
 }
 
 // CreateFleet - Create a Fleet
-func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetRequest) (*operations.CreateFleetResponse, error) {
+func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetCreateFleetRequest, security operations.CreateFleetSecurity, opts ...operations.Option) (*operations.CreateFleetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateFleetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Fleets"
@@ -168,7 +188,7 @@ func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,10 +223,20 @@ func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetReq
 }
 
 // CreateIPCommand - Send an IP Command to a Super SIM.
-func (s *SDK) CreateIPCommand(ctx context.Context, request operations.CreateIPCommandRequest) (*operations.CreateIPCommandResponse, error) {
+func (s *SDK) CreateIPCommand(ctx context.Context, request operations.CreateIPCommandCreateIPCommandRequest, security operations.CreateIPCommandSecurity, opts ...operations.Option) (*operations.CreateIPCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateIPCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/IpCommands"
@@ -223,7 +253,7 @@ func (s *SDK) CreateIPCommand(ctx context.Context, request operations.CreateIPCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,10 +288,20 @@ func (s *SDK) CreateIPCommand(ctx context.Context, request operations.CreateIPCo
 }
 
 // CreateNetworkAccessProfile - Create a new Network Access Profile
-func (s *SDK) CreateNetworkAccessProfile(ctx context.Context, request operations.CreateNetworkAccessProfileRequest) (*operations.CreateNetworkAccessProfileResponse, error) {
+func (s *SDK) CreateNetworkAccessProfile(ctx context.Context, request operations.CreateNetworkAccessProfileCreateNetworkAccessProfileRequest, security operations.CreateNetworkAccessProfileSecurity, opts ...operations.Option) (*operations.CreateNetworkAccessProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateNetworkAccessProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/NetworkAccessProfiles"
@@ -278,7 +318,7 @@ func (s *SDK) CreateNetworkAccessProfile(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,15 +353,25 @@ func (s *SDK) CreateNetworkAccessProfile(ctx context.Context, request operations
 }
 
 // CreateNetworkAccessProfileNetwork - Add a Network resource to the Network Access Profile resource.
-func (s *SDK) CreateNetworkAccessProfileNetwork(ctx context.Context, request operations.CreateNetworkAccessProfileNetworkRequest) (*operations.CreateNetworkAccessProfileNetworkResponse, error) {
-	baseURL := operations.CreateNetworkAccessProfileNetworkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateNetworkAccessProfileNetwork(ctx context.Context, request operations.CreateNetworkAccessProfileNetworkRequest, security operations.CreateNetworkAccessProfileNetworkSecurity, opts ...operations.Option) (*operations.CreateNetworkAccessProfileNetworkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateNetworkAccessProfileNetworkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +383,7 @@ func (s *SDK) CreateNetworkAccessProfileNetwork(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,10 +418,20 @@ func (s *SDK) CreateNetworkAccessProfileNetwork(ctx context.Context, request ope
 }
 
 // CreateSim - Register a Super SIM to your Account
-func (s *SDK) CreateSim(ctx context.Context, request operations.CreateSimRequest) (*operations.CreateSimResponse, error) {
+func (s *SDK) CreateSim(ctx context.Context, request operations.CreateSimCreateSimRequest, security operations.CreateSimSecurity, opts ...operations.Option) (*operations.CreateSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Sims"
@@ -388,7 +448,7 @@ func (s *SDK) CreateSim(ctx context.Context, request operations.CreateSimRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,10 +483,20 @@ func (s *SDK) CreateSim(ctx context.Context, request operations.CreateSimRequest
 }
 
 // CreateSmsCommand - Send SMS Command to a Sim.
-func (s *SDK) CreateSmsCommand(ctx context.Context, request operations.CreateSmsCommandRequest) (*operations.CreateSmsCommandResponse, error) {
+func (s *SDK) CreateSmsCommand(ctx context.Context, request operations.CreateSmsCommandCreateSmsCommandRequest, security operations.CreateSmsCommandSecurity, opts ...operations.Option) (*operations.CreateSmsCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSmsCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SmsCommands"
@@ -443,7 +513,7 @@ func (s *SDK) CreateSmsCommand(ctx context.Context, request operations.CreateSms
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,20 +548,30 @@ func (s *SDK) CreateSmsCommand(ctx context.Context, request operations.CreateSms
 }
 
 // DeleteNetworkAccessProfileNetwork - Remove a Network resource from the Network Access Profile resource's.
-func (s *SDK) DeleteNetworkAccessProfileNetwork(ctx context.Context, request operations.DeleteNetworkAccessProfileNetworkRequest) (*operations.DeleteNetworkAccessProfileNetworkResponse, error) {
-	baseURL := operations.DeleteNetworkAccessProfileNetworkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteNetworkAccessProfileNetwork(ctx context.Context, request operations.DeleteNetworkAccessProfileNetworkRequest, security operations.DeleteNetworkAccessProfileNetworkSecurity, opts ...operations.Option) (*operations.DeleteNetworkAccessProfileNetworkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteNetworkAccessProfileNetworkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -517,20 +597,30 @@ func (s *SDK) DeleteNetworkAccessProfileNetwork(ctx context.Context, request ope
 }
 
 // FetchEsimProfile - Fetch an eSIM Profile.
-func (s *SDK) FetchEsimProfile(ctx context.Context, request operations.FetchEsimProfileRequest) (*operations.FetchEsimProfileResponse, error) {
-	baseURL := operations.FetchEsimProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEsimProfile(ctx context.Context, request operations.FetchEsimProfileRequest, security operations.FetchEsimProfileSecurity, opts ...operations.Option) (*operations.FetchEsimProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ESimProfiles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEsimProfileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ESimProfiles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -565,20 +655,30 @@ func (s *SDK) FetchEsimProfile(ctx context.Context, request operations.FetchEsim
 }
 
 // FetchFleet - Fetch a Fleet instance from your account.
-func (s *SDK) FetchFleet(ctx context.Context, request operations.FetchFleetRequest) (*operations.FetchFleetResponse, error) {
-	baseURL := operations.FetchFleetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchFleet(ctx context.Context, request operations.FetchFleetRequest, security operations.FetchFleetSecurity, opts ...operations.Option) (*operations.FetchFleetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Fleets/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchFleetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Fleets/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -613,20 +713,30 @@ func (s *SDK) FetchFleet(ctx context.Context, request operations.FetchFleetReque
 }
 
 // FetchIPCommand - Fetch IP Command instance from your account.
-func (s *SDK) FetchIPCommand(ctx context.Context, request operations.FetchIPCommandRequest) (*operations.FetchIPCommandResponse, error) {
-	baseURL := operations.FetchIPCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchIPCommand(ctx context.Context, request operations.FetchIPCommandRequest, security operations.FetchIPCommandSecurity, opts ...operations.Option) (*operations.FetchIPCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/IpCommands/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchIPCommandServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/IpCommands/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -661,20 +771,30 @@ func (s *SDK) FetchIPCommand(ctx context.Context, request operations.FetchIPComm
 }
 
 // FetchNetwork - Fetch a Network resource.
-func (s *SDK) FetchNetwork(ctx context.Context, request operations.FetchNetworkRequest) (*operations.FetchNetworkResponse, error) {
-	baseURL := operations.FetchNetworkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchNetwork(ctx context.Context, request operations.FetchNetworkRequest, security operations.FetchNetworkSecurity, opts ...operations.Option) (*operations.FetchNetworkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Networks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchNetworkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Networks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -709,20 +829,30 @@ func (s *SDK) FetchNetwork(ctx context.Context, request operations.FetchNetworkR
 }
 
 // FetchNetworkAccessProfile - Fetch a Network Access Profile instance from your account.
-func (s *SDK) FetchNetworkAccessProfile(ctx context.Context, request operations.FetchNetworkAccessProfileRequest) (*operations.FetchNetworkAccessProfileResponse, error) {
-	baseURL := operations.FetchNetworkAccessProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchNetworkAccessProfile(ctx context.Context, request operations.FetchNetworkAccessProfileRequest, security operations.FetchNetworkAccessProfileSecurity, opts ...operations.Option) (*operations.FetchNetworkAccessProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchNetworkAccessProfileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -757,20 +887,30 @@ func (s *SDK) FetchNetworkAccessProfile(ctx context.Context, request operations.
 }
 
 // FetchNetworkAccessProfileNetwork - Fetch a Network Access Profile resource's Network resource.
-func (s *SDK) FetchNetworkAccessProfileNetwork(ctx context.Context, request operations.FetchNetworkAccessProfileNetworkRequest) (*operations.FetchNetworkAccessProfileNetworkResponse, error) {
-	baseURL := operations.FetchNetworkAccessProfileNetworkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchNetworkAccessProfileNetwork(ctx context.Context, request operations.FetchNetworkAccessProfileNetworkRequest, security operations.FetchNetworkAccessProfileNetworkSecurity, opts ...operations.Option) (*operations.FetchNetworkAccessProfileNetworkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchNetworkAccessProfileNetworkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -805,20 +945,30 @@ func (s *SDK) FetchNetworkAccessProfileNetwork(ctx context.Context, request oper
 }
 
 // FetchSim - Fetch a Super SIM instance from your account.
-func (s *SDK) FetchSim(ctx context.Context, request operations.FetchSimRequest) (*operations.FetchSimResponse, error) {
-	baseURL := operations.FetchSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSim(ctx context.Context, request operations.FetchSimRequest, security operations.FetchSimSecurity, opts ...operations.Option) (*operations.FetchSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSimServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -853,20 +1003,30 @@ func (s *SDK) FetchSim(ctx context.Context, request operations.FetchSimRequest) 
 }
 
 // FetchSmsCommand - Fetch SMS Command instance from your account.
-func (s *SDK) FetchSmsCommand(ctx context.Context, request operations.FetchSmsCommandRequest) (*operations.FetchSmsCommandResponse, error) {
-	baseURL := operations.FetchSmsCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSmsCommand(ctx context.Context, request operations.FetchSmsCommandRequest, security operations.FetchSmsCommandSecurity, opts ...operations.Option) (*operations.FetchSmsCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SmsCommands/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSmsCommandServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SmsCommands/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -901,24 +1061,34 @@ func (s *SDK) FetchSmsCommand(ctx context.Context, request operations.FetchSmsCo
 }
 
 // ListBillingPeriod - Retrieve a list of Billing Periods for a Super SIM.
-func (s *SDK) ListBillingPeriod(ctx context.Context, request operations.ListBillingPeriodRequest) (*operations.ListBillingPeriodResponse, error) {
-	baseURL := operations.ListBillingPeriodServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListBillingPeriod(ctx context.Context, request operations.ListBillingPeriodRequest, security operations.ListBillingPeriodSecurity, opts ...operations.Option) (*operations.ListBillingPeriodResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/BillingPeriods", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListBillingPeriodServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/BillingPeriods", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -953,10 +1123,20 @@ func (s *SDK) ListBillingPeriod(ctx context.Context, request operations.ListBill
 }
 
 // ListEsimProfile - Retrieve a list of eSIM Profiles.
-func (s *SDK) ListEsimProfile(ctx context.Context, request operations.ListEsimProfileRequest) (*operations.ListEsimProfileResponse, error) {
+func (s *SDK) ListEsimProfile(ctx context.Context, request operations.ListEsimProfileRequest, security operations.ListEsimProfileSecurity, opts ...operations.Option) (*operations.ListEsimProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListEsimProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ESimProfiles"
@@ -966,11 +1146,11 @@ func (s *SDK) ListEsimProfile(ctx context.Context, request operations.ListEsimPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1005,10 +1185,20 @@ func (s *SDK) ListEsimProfile(ctx context.Context, request operations.ListEsimPr
 }
 
 // ListFleet - Retrieve a list of Fleets from your account.
-func (s *SDK) ListFleet(ctx context.Context, request operations.ListFleetRequest) (*operations.ListFleetResponse, error) {
+func (s *SDK) ListFleet(ctx context.Context, request operations.ListFleetRequest, security operations.ListFleetSecurity, opts ...operations.Option) (*operations.ListFleetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListFleetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Fleets"
@@ -1018,11 +1208,11 @@ func (s *SDK) ListFleet(ctx context.Context, request operations.ListFleetRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1057,10 +1247,20 @@ func (s *SDK) ListFleet(ctx context.Context, request operations.ListFleetRequest
 }
 
 // ListIPCommand - Retrieve a list of IP Commands from your account.
-func (s *SDK) ListIPCommand(ctx context.Context, request operations.ListIPCommandRequest) (*operations.ListIPCommandResponse, error) {
+func (s *SDK) ListIPCommand(ctx context.Context, request operations.ListIPCommandRequest, security operations.ListIPCommandSecurity, opts ...operations.Option) (*operations.ListIPCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListIPCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/IpCommands"
@@ -1070,11 +1270,11 @@ func (s *SDK) ListIPCommand(ctx context.Context, request operations.ListIPComman
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1109,10 +1309,20 @@ func (s *SDK) ListIPCommand(ctx context.Context, request operations.ListIPComman
 }
 
 // ListNetwork - Retrieve a list of Network resources.
-func (s *SDK) ListNetwork(ctx context.Context, request operations.ListNetworkRequest) (*operations.ListNetworkResponse, error) {
+func (s *SDK) ListNetwork(ctx context.Context, request operations.ListNetworkRequest, security operations.ListNetworkSecurity, opts ...operations.Option) (*operations.ListNetworkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListNetworkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Networks"
@@ -1122,11 +1332,11 @@ func (s *SDK) ListNetwork(ctx context.Context, request operations.ListNetworkReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1161,10 +1371,20 @@ func (s *SDK) ListNetwork(ctx context.Context, request operations.ListNetworkReq
 }
 
 // ListNetworkAccessProfile - Retrieve a list of Network Access Profiles from your account.
-func (s *SDK) ListNetworkAccessProfile(ctx context.Context, request operations.ListNetworkAccessProfileRequest) (*operations.ListNetworkAccessProfileResponse, error) {
+func (s *SDK) ListNetworkAccessProfile(ctx context.Context, request operations.ListNetworkAccessProfileRequest, security operations.ListNetworkAccessProfileSecurity, opts ...operations.Option) (*operations.ListNetworkAccessProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListNetworkAccessProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/NetworkAccessProfiles"
@@ -1174,11 +1394,11 @@ func (s *SDK) ListNetworkAccessProfile(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1213,24 +1433,34 @@ func (s *SDK) ListNetworkAccessProfile(ctx context.Context, request operations.L
 }
 
 // ListNetworkAccessProfileNetwork - Retrieve a list of Network Access Profile resource's Network resource.
-func (s *SDK) ListNetworkAccessProfileNetwork(ctx context.Context, request operations.ListNetworkAccessProfileNetworkRequest) (*operations.ListNetworkAccessProfileNetworkResponse, error) {
-	baseURL := operations.ListNetworkAccessProfileNetworkServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListNetworkAccessProfileNetwork(ctx context.Context, request operations.ListNetworkAccessProfileNetworkRequest, security operations.ListNetworkAccessProfileNetworkSecurity, opts ...operations.Option) (*operations.ListNetworkAccessProfileNetworkResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListNetworkAccessProfileNetworkServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1265,10 +1495,20 @@ func (s *SDK) ListNetworkAccessProfileNetwork(ctx context.Context, request opera
 }
 
 // ListSettingsUpdate - Retrieve a list of Settings Updates.
-func (s *SDK) ListSettingsUpdate(ctx context.Context, request operations.ListSettingsUpdateRequest) (*operations.ListSettingsUpdateResponse, error) {
+func (s *SDK) ListSettingsUpdate(ctx context.Context, request operations.ListSettingsUpdateRequest, security operations.ListSettingsUpdateSecurity, opts ...operations.Option) (*operations.ListSettingsUpdateResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSettingsUpdateServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SettingsUpdates"
@@ -1278,11 +1518,11 @@ func (s *SDK) ListSettingsUpdate(ctx context.Context, request operations.ListSet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1317,10 +1557,20 @@ func (s *SDK) ListSettingsUpdate(ctx context.Context, request operations.ListSet
 }
 
 // ListSim - Retrieve a list of Super SIMs from your account.
-func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest) (*operations.ListSimResponse, error) {
+func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest, security operations.ListSimSecurity, opts ...operations.Option) (*operations.ListSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Sims"
@@ -1330,11 +1580,11 @@ func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1369,24 +1619,34 @@ func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest) (*
 }
 
 // ListSimIPAddress - Retrieve a list of IP Addresses for the given Super SIM.
-func (s *SDK) ListSimIPAddress(ctx context.Context, request operations.ListSimIPAddressRequest) (*operations.ListSimIPAddressResponse, error) {
-	baseURL := operations.ListSimIPAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSimIPAddress(ctx context.Context, request operations.ListSimIPAddressRequest, security operations.ListSimIPAddressSecurity, opts ...operations.Option) (*operations.ListSimIPAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/IpAddresses", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSimIPAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/IpAddresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1421,10 +1681,20 @@ func (s *SDK) ListSimIPAddress(ctx context.Context, request operations.ListSimIP
 }
 
 // ListSmsCommand - Retrieve a list of SMS Commands from your account.
-func (s *SDK) ListSmsCommand(ctx context.Context, request operations.ListSmsCommandRequest) (*operations.ListSmsCommandResponse, error) {
+func (s *SDK) ListSmsCommand(ctx context.Context, request operations.ListSmsCommandRequest, security operations.ListSmsCommandSecurity, opts ...operations.Option) (*operations.ListSmsCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSmsCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SmsCommands"
@@ -1434,11 +1704,11 @@ func (s *SDK) ListSmsCommand(ctx context.Context, request operations.ListSmsComm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1473,10 +1743,20 @@ func (s *SDK) ListSmsCommand(ctx context.Context, request operations.ListSmsComm
 }
 
 // ListUsageRecord - List UsageRecords
-func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageRecordRequest) (*operations.ListUsageRecordResponse, error) {
+func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageRecordRequest, security operations.ListUsageRecordSecurity, opts ...operations.Option) (*operations.ListUsageRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListUsageRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/UsageRecords"
@@ -1486,11 +1766,11 @@ func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1525,15 +1805,25 @@ func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageR
 }
 
 // UpdateFleet - Updates the given properties of a Super SIM Fleet instance from your account.
-func (s *SDK) UpdateFleet(ctx context.Context, request operations.UpdateFleetRequest) (*operations.UpdateFleetResponse, error) {
-	baseURL := operations.UpdateFleetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateFleet(ctx context.Context, request operations.UpdateFleetRequest, security operations.UpdateFleetSecurity, opts ...operations.Option) (*operations.UpdateFleetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Fleets/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateFleetServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Fleets/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1545,7 +1835,7 @@ func (s *SDK) UpdateFleet(ctx context.Context, request operations.UpdateFleetReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1580,15 +1870,25 @@ func (s *SDK) UpdateFleet(ctx context.Context, request operations.UpdateFleetReq
 }
 
 // UpdateNetworkAccessProfile - Updates the given properties of a Network Access Profile in your account.
-func (s *SDK) UpdateNetworkAccessProfile(ctx context.Context, request operations.UpdateNetworkAccessProfileRequest) (*operations.UpdateNetworkAccessProfileResponse, error) {
-	baseURL := operations.UpdateNetworkAccessProfileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateNetworkAccessProfile(ctx context.Context, request operations.UpdateNetworkAccessProfileRequest, security operations.UpdateNetworkAccessProfileSecurity, opts ...operations.Option) (*operations.UpdateNetworkAccessProfileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateNetworkAccessProfileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/NetworkAccessProfiles/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1600,7 +1900,7 @@ func (s *SDK) UpdateNetworkAccessProfile(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1635,15 +1935,25 @@ func (s *SDK) UpdateNetworkAccessProfile(ctx context.Context, request operations
 }
 
 // UpdateSim - Updates the given properties of a Super SIM instance from your account.
-func (s *SDK) UpdateSim(ctx context.Context, request operations.UpdateSimRequest) (*operations.UpdateSimResponse, error) {
-	baseURL := operations.UpdateSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSim(ctx context.Context, request operations.UpdateSimRequest, security operations.UpdateSimSecurity, opts ...operations.Option) (*operations.UpdateSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSimServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1655,7 +1965,7 @@ func (s *SDK) UpdateSim(ctx context.Context, request operations.UpdateSimRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

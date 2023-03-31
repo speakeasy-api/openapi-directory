@@ -37,16 +37,16 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 //
 // See [Delayed capture transactions](https://developer.squareup.com/docs/payments/transactions/overview#delayed-capture)
 // for more information.
-func (s *transactions) CaptureTransaction(ctx context.Context, request operations.CaptureTransactionRequest) (*operations.CaptureTransactionResponse, error) {
+func (s *transactions) CaptureTransaction(ctx context.Context, request operations.CaptureTransactionRequest, security operations.CaptureTransactionSecurity) (*operations.CaptureTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,11 +101,11 @@ func (s *transactions) CaptureTransaction(ctx context.Context, request operation
 // calculated. To obtain the processing fee, wait about ten seconds and call
 // [RetrieveTransaction](https://developer.squareup.com/reference/square_2021-08-18/transactions-api/retrieve-transaction). See the `processing_fee_money`
 // field of each [Tender included](https://developer.squareup.com/reference/square_2021-08-18/objects/Tender) in the transaction.
-func (s *transactions) Charge(ctx context.Context, request operations.ChargeRequest) (*operations.ChargeResponse, error) {
+func (s *transactions) Charge(ctx context.Context, request operations.ChargeRequest, security operations.ChargeSecurity) (*operations.ChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChargeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -120,7 +120,7 @@ func (s *transactions) Charge(ctx context.Context, request operations.ChargeRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -161,20 +161,20 @@ func (s *transactions) Charge(ctx context.Context, request operations.ChargeRequ
 // information from returns and exchanges.
 //
 // Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
-func (s *transactions) ListTransactions(ctx context.Context, request operations.ListTransactionsRequest) (*operations.ListTransactionsResponse, error) {
+func (s *transactions) ListTransactions(ctx context.Context, request operations.ListTransactionsRequest, security operations.ListTransactionsSecurity) (*operations.ListTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -210,16 +210,16 @@ func (s *transactions) ListTransactions(ctx context.Context, request operations.
 
 // RetrieveTransaction - RetrieveTransaction
 // Retrieves details for a single transaction.
-func (s *transactions) RetrieveTransaction(ctx context.Context, request operations.RetrieveTransactionRequest) (*operations.RetrieveTransactionResponse, error) {
+func (s *transactions) RetrieveTransaction(ctx context.Context, request operations.RetrieveTransactionRequest, security operations.RetrieveTransactionSecurity) (*operations.RetrieveTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,16 +259,16 @@ func (s *transactions) RetrieveTransaction(ctx context.Context, request operatio
 //
 // See [Delayed capture transactions](https://developer.squareup.com/docs/payments/transactions/overview#delayed-capture)
 // for more information.
-func (s *transactions) VoidTransaction(ctx context.Context, request operations.VoidTransactionRequest) (*operations.VoidTransactionResponse, error) {
+func (s *transactions) VoidTransaction(ctx context.Context, request operations.VoidTransactionRequest, security operations.VoidTransactionSecurity) (*operations.VoidTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,20 +313,20 @@ func (s *transactions) VoidTransaction(ctx context.Context, request operations.V
 // endpoint's response.
 //
 // Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
-func (s *transactions) GetV2LocationsLocationIDRefunds(ctx context.Context, request operations.GetV2LocationsLocationIDRefundsRequest) (*operations.GetV2LocationsLocationIDRefundsResponse, error) {
+func (s *transactions) GetV2LocationsLocationIDRefunds(ctx context.Context, request operations.GetV2LocationsLocationIDRefundsRequest, security operations.GetV2LocationsLocationIDRefundsSecurity) (*operations.GetV2LocationsLocationIDRefundsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/refunds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/refunds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -370,11 +370,11 @@ func (s *transactions) GetV2LocationsLocationIDRefunds(ctx context.Context, requ
 // NOTE: Card-present transactions with Interac credit cards **cannot be
 // refunded using the Connect API**. Interac transactions must refunded
 // in-person (e.g., dipping the card using POS app).
-func (s *transactions) PostV2LocationsLocationIDTransactionsTransactionIDRefund(ctx context.Context, request operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundRequest) (*operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundResponse, error) {
+func (s *transactions) PostV2LocationsLocationIDTransactionsTransactionIDRefund(ctx context.Context, request operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundRequest, security operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundSecurity) (*operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateRefundRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,7 +389,7 @@ func (s *transactions) PostV2LocationsLocationIDTransactionsTransactionIDRefund(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

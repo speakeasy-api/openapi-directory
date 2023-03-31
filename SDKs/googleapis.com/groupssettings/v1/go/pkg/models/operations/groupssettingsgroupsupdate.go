@@ -8,20 +8,18 @@ import (
 )
 
 type GroupsSettingsGroupsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupsSettingsGroupsUpdatePathParams struct {
-	// The group's email address.
-	GroupUniqueID string `pathParam:"style=simple,explode=false,name=groupUniqueId"`
-}
-
-type GroupsSettingsGroupsUpdateQueryParams struct {
+type GroupsSettingsGroupsUpdateRequest struct {
+	Groups *shared.Groups `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The group's email address.
+	GroupUniqueID string `pathParam:"style=simple,explode=false,name=groupUniqueId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -32,13 +30,6 @@ type GroupsSettingsGroupsUpdateQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type GroupsSettingsGroupsUpdateRequest struct {
-	PathParams  GroupsSettingsGroupsUpdatePathParams
-	QueryParams GroupsSettingsGroupsUpdateQueryParams
-	Request     *shared.Groups `request:"mediaType=application/json"`
-	Security    GroupsSettingsGroupsUpdateSecurity
 }
 
 type GroupsSettingsGroupsUpdateResponse struct {

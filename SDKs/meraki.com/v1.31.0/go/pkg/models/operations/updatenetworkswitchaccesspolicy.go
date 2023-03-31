@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchAccessPolicyPathParams struct {
-	AccessPolicyNumber string `pathParam:"style=simple,explode=false,name=accessPolicyNumber"`
-	NetworkID          string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSwitchAccessPolicyRequestBodyAccessPolicyTypeEnum - Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 type UpdateNetworkSwitchAccessPolicyRequestBodyAccessPolicyTypeEnum string
 
@@ -174,8 +169,9 @@ type UpdateNetworkSwitchAccessPolicyRequestBody struct {
 }
 
 type UpdateNetworkSwitchAccessPolicyRequest struct {
-	PathParams UpdateNetworkSwitchAccessPolicyPathParams
-	Request    *UpdateNetworkSwitchAccessPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody        *UpdateNetworkSwitchAccessPolicyRequestBody `request:"mediaType=application/json"`
+	AccessPolicyNumber string                                      `pathParam:"style=simple,explode=false,name=accessPolicyNumber"`
+	NetworkID          string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkSwitchAccessPolicy200ApplicationJSONAccessPolicyTypeEnum - Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.

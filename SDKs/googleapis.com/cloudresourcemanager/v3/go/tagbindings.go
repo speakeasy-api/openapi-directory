@@ -33,11 +33,11 @@ func newTagBindings(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // CloudresourcemanagerTagBindingsCreate - Creates a TagBinding between a TagValue and a Google Cloud resource.
-func (s *tagBindings) CloudresourcemanagerTagBindingsCreate(ctx context.Context, request operations.CloudresourcemanagerTagBindingsCreateRequest) (*operations.CloudresourcemanagerTagBindingsCreateResponse, error) {
+func (s *tagBindings) CloudresourcemanagerTagBindingsCreate(ctx context.Context, request operations.CloudresourcemanagerTagBindingsCreateRequest, security operations.CloudresourcemanagerTagBindingsCreateSecurity) (*operations.CloudresourcemanagerTagBindingsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/tagBindings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagBindingInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *tagBindings) CloudresourcemanagerTagBindingsCreate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *tagBindings) CloudresourcemanagerTagBindingsCreate(ctx context.Context,
 }
 
 // CloudresourcemanagerTagBindingsList - Lists the TagBindings for the given Google Cloud resource, as specified with `parent`. NOTE: The `parent` field is expected to be a full resource name: https://cloud.google.com/apis/design/resource_names#full_resource_name
-func (s *tagBindings) CloudresourcemanagerTagBindingsList(ctx context.Context, request operations.CloudresourcemanagerTagBindingsListRequest) (*operations.CloudresourcemanagerTagBindingsListResponse, error) {
+func (s *tagBindings) CloudresourcemanagerTagBindingsList(ctx context.Context, request operations.CloudresourcemanagerTagBindingsListRequest, security operations.CloudresourcemanagerTagBindingsListSecurity) (*operations.CloudresourcemanagerTagBindingsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/tagBindings"
 
@@ -97,11 +97,11 @@ func (s *tagBindings) CloudresourcemanagerTagBindingsList(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

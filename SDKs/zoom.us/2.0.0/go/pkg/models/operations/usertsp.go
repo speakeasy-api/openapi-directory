@@ -32,15 +32,11 @@ func (e *UserTSPTSPIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UserTSPPathParams struct {
+type UserTSPRequest struct {
 	// TSP account ID.
 	TspID UserTSPTSPIDEnum `pathParam:"style=simple,explode=false,name=tspId"`
 	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UserTSPRequest struct {
-	PathParams UserTSPPathParams
 }
 
 // UserTSPTSPAccountDialInNumbersTypeEnum - Dial-in number types:<br>`toll` - Toll number.<br>`tollfree` -Toll free number. <br> `media_link` - Media link phone number. This is used for PSTN integration instead of a paid bridge number.

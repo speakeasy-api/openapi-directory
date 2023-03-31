@@ -34,14 +34,14 @@ func newChannelUtilizationHistory(defaultClient, securityClient HTTPClient, serv
 // Return AP channel utilization over time for a device or network client
 func (s *channelUtilizationHistory) GetNetworkWirelessChannelUtilizationHistory(ctx context.Context, request operations.GetNetworkWirelessChannelUtilizationHistoryRequest) (*operations.GetNetworkWirelessChannelUtilizationHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/channelUtilizationHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/channelUtilizationHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

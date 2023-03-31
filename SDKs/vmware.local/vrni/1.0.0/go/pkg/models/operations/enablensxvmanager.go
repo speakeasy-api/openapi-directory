@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type EnableNsxvManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type EnableNsxvManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type EnableNsxvManagerRequest struct {
-	PathParams EnableNsxvManagerPathParams
-	Security   EnableNsxvManagerSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type EnableNsxvManagerResponse struct {

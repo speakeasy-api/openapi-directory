@@ -8,6 +8,42 @@ import (
 	"net/http"
 )
 
+// GetOccupantsNearOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+type GetOccupantsNearOutputFormatLocationDescriptorEnum string
+
+const (
+	GetOccupantsNearOutputFormatLocationDescriptorEnumAny            GetOccupantsNearOutputFormatLocationDescriptorEnum = "any"
+	GetOccupantsNearOutputFormatLocationDescriptorEnumAccessPoint    GetOccupantsNearOutputFormatLocationDescriptorEnum = "accessPoint"
+	GetOccupantsNearOutputFormatLocationDescriptorEnumFrontDoorPoint GetOccupantsNearOutputFormatLocationDescriptorEnum = "frontDoorPoint"
+	GetOccupantsNearOutputFormatLocationDescriptorEnumParcelPoint    GetOccupantsNearOutputFormatLocationDescriptorEnum = "parcelPoint"
+	GetOccupantsNearOutputFormatLocationDescriptorEnumRooftopPoint   GetOccupantsNearOutputFormatLocationDescriptorEnum = "rooftopPoint"
+	GetOccupantsNearOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsNearOutputFormatLocationDescriptorEnum = "routingPoint"
+)
+
+func (e *GetOccupantsNearOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "any":
+		fallthrough
+	case "accessPoint":
+		fallthrough
+	case "frontDoorPoint":
+		fallthrough
+	case "parcelPoint":
+		fallthrough
+	case "rooftopPoint":
+		fallthrough
+	case "routingPoint":
+		*e = GetOccupantsNearOutputFormatLocationDescriptorEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetOccupantsNearOutputFormatLocationDescriptorEnum: %s", s)
+	}
+}
+
 // GetOccupantsNearOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
 //
 // Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
@@ -46,49 +82,6 @@ func (e *GetOccupantsNearOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetOccupantsNearOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetOccupantsNearOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetOccupantsNearOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
-// GetOccupantsNearOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
-type GetOccupantsNearOutputFormatLocationDescriptorEnum string
-
-const (
-	GetOccupantsNearOutputFormatLocationDescriptorEnumAny            GetOccupantsNearOutputFormatLocationDescriptorEnum = "any"
-	GetOccupantsNearOutputFormatLocationDescriptorEnumAccessPoint    GetOccupantsNearOutputFormatLocationDescriptorEnum = "accessPoint"
-	GetOccupantsNearOutputFormatLocationDescriptorEnumFrontDoorPoint GetOccupantsNearOutputFormatLocationDescriptorEnum = "frontDoorPoint"
-	GetOccupantsNearOutputFormatLocationDescriptorEnumParcelPoint    GetOccupantsNearOutputFormatLocationDescriptorEnum = "parcelPoint"
-	GetOccupantsNearOutputFormatLocationDescriptorEnumRooftopPoint   GetOccupantsNearOutputFormatLocationDescriptorEnum = "rooftopPoint"
-	GetOccupantsNearOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsNearOutputFormatLocationDescriptorEnum = "routingPoint"
-)
-
-func (e *GetOccupantsNearOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "any":
-		fallthrough
-	case "accessPoint":
-		fallthrough
-	case "frontDoorPoint":
-		fallthrough
-	case "parcelPoint":
-		fallthrough
-	case "rooftopPoint":
-		fallthrough
-	case "routingPoint":
-		*e = GetOccupantsNearOutputFormatLocationDescriptorEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetOccupantsNearOutputFormatLocationDescriptorEnum: %s", s)
 	}
 }
 
@@ -134,7 +127,7 @@ func (e *GetOccupantsNearOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetOccupantsNearOutputFormatQueryParams struct {
+type GetOccupantsNearOutputFormatRequest struct {
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
 	Brief *bool `queryParam:"style=form,explode=true,name=brief"`
 	// Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
@@ -143,6 +136,10 @@ type GetOccupantsNearOutputFormatQueryParams struct {
 	MaxDistance *int64 `queryParam:"style=form,explode=true,name=maxDistance"`
 	// The maximum number of search results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetOccupantsNearOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetOccupantsNearOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
@@ -151,11 +148,6 @@ type GetOccupantsNearOutputFormatQueryParams struct {
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`
 	// Example: schools;courts;employment<br>A list of tags separated by semicolons.
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type GetOccupantsNearOutputFormatRequest struct {
-	PathParams  GetOccupantsNearOutputFormatPathParams
-	QueryParams GetOccupantsNearOutputFormatQueryParams
 }
 
 type GetOccupantsNearOutputFormatResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerControllerDebuggeesBreakpointsListSecurity struct {
@@ -22,12 +22,7 @@ type ClouddebuggerControllerDebuggeesBreakpointsListSecurity struct {
 	Option2 *ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption2 `security:"option"`
 }
 
-type ClouddebuggerControllerDebuggeesBreakpointsListPathParams struct {
-	// Required. Identifies the debuggee.
-	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
-}
-
-type ClouddebuggerControllerDebuggeesBreakpointsListQueryParams struct {
+type ClouddebuggerControllerDebuggeesBreakpointsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type ClouddebuggerControllerDebuggeesBreakpointsListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. Identifies the debuggee.
+	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,12 +53,6 @@ type ClouddebuggerControllerDebuggeesBreakpointsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// A token that, if specified, blocks the method call until the list of active breakpoints has changed, or a server-selected timeout has expired. The value should be set from the `next_wait_token` field in the last response. The initial value should be set to `"init"`.
 	WaitToken *string `queryParam:"style=form,explode=true,name=waitToken"`
-}
-
-type ClouddebuggerControllerDebuggeesBreakpointsListRequest struct {
-	PathParams  ClouddebuggerControllerDebuggeesBreakpointsListPathParams
-	QueryParams ClouddebuggerControllerDebuggeesBreakpointsListQueryParams
-	Security    ClouddebuggerControllerDebuggeesBreakpointsListSecurity
 }
 
 type ClouddebuggerControllerDebuggeesBreakpointsListResponse struct {

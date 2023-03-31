@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceBayTemplatesReadPathParams struct {
+type DcimDeviceBayTemplatesReadRequest struct {
 	// A unique integer value identifying this device bay template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceBayTemplatesReadRequest struct {
-	PathParams DcimDeviceBayTemplatesReadPathParams
 }
 
 type DcimDeviceBayTemplatesReadResponse struct {

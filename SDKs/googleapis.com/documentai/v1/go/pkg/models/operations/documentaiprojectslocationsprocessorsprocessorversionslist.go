@@ -8,16 +8,11 @@ import (
 )
 
 type DocumentaiProjectsLocationsProcessorsProcessorVersionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DocumentaiProjectsLocationsProcessorsProcessorVersionsListPathParams struct {
-	// Required. The parent (project, location and processor) to list all versions. Format: `projects/{project}/locations/{location}/processors/{processor}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DocumentaiProjectsLocationsProcessorsProcessorVersionsListQueryParams struct {
+type DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DocumentaiProjectsLocationsProcessorsProcessorVersionsListQueryParams struc
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// We will return the processor versions sorted by creation time. The page token will point to the next processor version.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent (project, location and processor) to list all versions. Format: `projects/{project}/locations/{location}/processors/{processor}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type DocumentaiProjectsLocationsProcessorsProcessorVersionsListQueryParams struc
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest struct {
-	PathParams  DocumentaiProjectsLocationsProcessorsProcessorVersionsListPathParams
-	QueryParams DocumentaiProjectsLocationsProcessorsProcessorVersionsListQueryParams
-	Security    DocumentaiProjectsLocationsProcessorsProcessorVersionsListSecurity
 }
 
 type DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse struct {

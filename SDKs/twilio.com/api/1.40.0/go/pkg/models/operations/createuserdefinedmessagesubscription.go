@@ -14,14 +14,8 @@ var CreateUserDefinedMessageSubscriptionServerList = []string{
 }
 
 type CreateUserDefinedMessageSubscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUserDefinedMessageSubscriptionPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that subscribed to the User Defined Messages.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Messages subscription is associated with. This refers to the Call SID that is producing the user defined messages.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequestMethodEnum - The HTTP method Twilio will use when requesting the above `Url`. Either `GET` or `POST`. Default is `POST`.
@@ -70,10 +64,11 @@ type CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionReq
 }
 
 type CreateUserDefinedMessageSubscriptionRequest struct {
-	PathParams CreateUserDefinedMessageSubscriptionPathParams
-	Request    *CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUserDefinedMessageSubscriptionSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that subscribed to the User Defined Messages.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Messages subscription is associated with. This refers to the Call SID that is producing the user defined messages.
+	CallSid     string                                                                           `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUserDefinedMessageSubscriptionResponse struct {

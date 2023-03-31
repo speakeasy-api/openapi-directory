@@ -32,7 +32,7 @@ func (e *GetFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// If not present, json format will be returned as the search result.
 	Format *GetFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// IP address (IPv4) for lookup purpose. If not present, the server IP address will be used for the lookup.
@@ -41,10 +41,6 @@ type GetQueryParams struct {
 	Key string `queryParam:"style=form,explode=true,name=key"`
 	// Package name from PX1 to PX11. If not present, the web service will assume the PX1 package query.
 	Package *string `queryParam:"style=form,explode=true,name=package"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 type GetResponse struct {

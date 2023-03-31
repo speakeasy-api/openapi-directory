@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeleteImpersonationOAuthTokenPathParams struct {
+type EnterpriseAdminDeleteImpersonationOAuthTokenRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type EnterpriseAdminDeleteImpersonationOAuthTokenRequest struct {
-	PathParams EnterpriseAdminDeleteImpersonationOAuthTokenPathParams
 }
 
 type EnterpriseAdminDeleteImpersonationOAuthTokenResponse struct {

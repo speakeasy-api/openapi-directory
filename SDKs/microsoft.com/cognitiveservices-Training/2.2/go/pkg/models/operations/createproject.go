@@ -33,7 +33,8 @@ func (e *CreateProjectClassificationTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateProjectQueryParams struct {
+type CreateProjectRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The type of classifier to create for this project.
 	ClassificationType *CreateProjectClassificationTypeEnum `queryParam:"style=form,explode=true,name=classificationType"`
 	// The description of the project.
@@ -42,15 +43,6 @@ type CreateProjectQueryParams struct {
 	DomainID *string `queryParam:"style=form,explode=true,name=domainId"`
 	// Name of the project.
 	Name string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type CreateProjectHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateProjectRequest struct {
-	QueryParams CreateProjectQueryParams
-	Headers     CreateProjectHeaders
 }
 
 type CreateProjectResponse struct {

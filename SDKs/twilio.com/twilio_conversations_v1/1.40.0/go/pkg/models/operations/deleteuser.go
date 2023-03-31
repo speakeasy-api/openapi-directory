@@ -12,24 +12,15 @@ var DeleteUserServerList = []string{
 }
 
 type DeleteUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteUserPathParams struct {
-	// The SID of the User resource to delete. This value can be either the `sid` or the `identity` of the User resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteUserHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.UserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteUserRequest struct {
-	PathParams DeleteUserPathParams
-	Headers    DeleteUserHeaders
-	Security   DeleteUserSecurity
-	ServerURL  *string
+	// The SID of the User resource to delete. This value can be either the `sid` or the `identity` of the User resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.UserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type DeleteUserResponse struct {

@@ -8,18 +8,14 @@ import (
 )
 
 type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchPathParams struct {
-	// The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchQueryParams struct {
+type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Tag         *shared.Tag       `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchQueryParams s
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchQueryParams s
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchRequest struct {
-	PathParams  ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchPathParams
-	QueryParams ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchQueryParams
-	Request     *shared.Tag `request:"mediaType=application/json"`
-	Security    ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchSecurity
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse struct {

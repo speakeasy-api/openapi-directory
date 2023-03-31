@@ -8,10 +8,10 @@ import (
 )
 
 type GetHealthDashboardSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
-type GetHealthDashboardQueryParams struct {
+type GetHealthDashboardRequest struct {
 	// Country in ISO 3166, uppercase
 	Country *string `queryParam:"style=form,explode=true,name=country"`
 	// Unix timestamp in seconds. Send a day timestamp to view the database hourly status for that day or send the current time to know the current database status
@@ -19,11 +19,6 @@ type GetHealthDashboardQueryParams struct {
 	// Offset between the local time and the UTC time in seconds. (e.g., Colombia is at UTC -18000 seconds)
 	//
 	UnixtimezoneOffsetSeconds *string `queryParam:"style=form,explode=true,name=unixtimezoneOffsetSeconds"`
-}
-
-type GetHealthDashboardRequest struct {
-	QueryParams GetHealthDashboardQueryParams
-	Security    GetHealthDashboardSecurity
 }
 
 type GetHealthDashboardResponse struct {

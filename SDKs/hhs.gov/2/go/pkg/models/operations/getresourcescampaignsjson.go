@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesCampaignsJSONQueryParams struct {
+type GetResourcesCampaignsJSONRequest struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// The offset of the records set to return for pagination
 	Offset *int `queryParam:"style=form,explode=false,name=offset"`
 	// * Set of fields to sort the records by.
 	Sort *string `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetResourcesCampaignsJSONRequest struct {
-	QueryParams GetResourcesCampaignsJSONQueryParams
 }
 
 type GetResourcesCampaignsJSONResponse struct {

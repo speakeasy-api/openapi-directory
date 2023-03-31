@@ -6,15 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugMembersSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugMembersPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetWorkspaceSlugMembersActivityTypeEnum - Comma separated list of activity types
@@ -335,7 +330,7 @@ func (e *GetWorkspaceSlugMembersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWorkspaceSlugMembersQueryParams struct {
+type GetWorkspaceSlugMembersRequest struct {
 	ActivitiesCountMax *string `queryParam:"style=form,explode=true,name=activities_count_max"`
 	ActivitiesCountMin *string `queryParam:"style=form,explode=true,name=activities_count_min"`
 	// Comma separated list of activity types
@@ -368,13 +363,8 @@ type GetWorkspaceSlugMembersQueryParams struct {
 	// Comma separated list of job titles. The union (OR) of job titles is applied.
 	Title *string `queryParam:"style=form,explode=true,name=title[]"`
 	// Deprecated in favor of the activity_type parameter.
-	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetWorkspaceSlugMembersRequest struct {
-	PathParams  GetWorkspaceSlugMembersPathParams
-	QueryParams GetWorkspaceSlugMembersQueryParams
-	Security    GetWorkspaceSlugMembersSecurity
+	Type          *string `queryParam:"style=form,explode=true,name=type"`
+	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugMembersResponse struct {

@@ -42,11 +42,11 @@ func newRoles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //
 // **Prerequisites:**<br>
 // * A Pro or a higher plan.
-func (s *roles) AddRoleMembers(ctx context.Context, request operations.AddRoleMembersRequest) (*operations.AddRoleMembersResponse, error) {
+func (s *roles) AddRoleMembers(ctx context.Context, request operations.AddRoleMembersRequest, security operations.AddRoleMembersSecurity) (*operations.AddRoleMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -61,7 +61,7 @@ func (s *roles) AddRoleMembers(ctx context.Context, request operations.AddRoleMe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *roles) AddRoleMembers(ctx context.Context, request operations.AddRoleMe
 // **Scopes:** `role:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *roles) CreateRole(ctx context.Context, request operations.CreateRoleRequest) (*operations.CreateRoleResponse, error) {
+func (s *roles) CreateRole(ctx context.Context, request operations.CreateRoleApplicationJSON, security operations.CreateRoleSecurity) (*operations.CreateRoleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/roles"
 
@@ -131,7 +131,7 @@ func (s *roles) CreateRole(ctx context.Context, request operations.CreateRoleReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,16 +201,16 @@ func (s *roles) CreateRole(ctx context.Context, request operations.CreateRoleReq
 // **Scopes:** `role:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *roles) DeleteRole(ctx context.Context, request operations.DeleteRoleRequest) (*operations.DeleteRoleResponse, error) {
+func (s *roles) DeleteRole(ctx context.Context, request operations.DeleteRoleRequest, security operations.DeleteRoleSecurity) (*operations.DeleteRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -265,16 +265,16 @@ func (s *roles) DeleteRole(ctx context.Context, request operations.DeleteRoleReq
 // **Scopes:** `role:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *roles) GetRoleInformation(ctx context.Context, request operations.GetRoleInformationRequest) (*operations.GetRoleInformationResponse, error) {
+func (s *roles) GetRoleInformation(ctx context.Context, request operations.GetRoleInformationRequest, security operations.GetRoleInformationSecurity) (*operations.GetRoleInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -325,16 +325,16 @@ func (s *roles) GetRoleInformation(ctx context.Context, request operations.GetRo
 //
 // **Prerequisites:**<br>
 // * A Pro or a higher plan.
-func (s *roles) RoleMemberDelete(ctx context.Context, request operations.RoleMemberDeleteRequest) (*operations.RoleMemberDeleteResponse, error) {
+func (s *roles) RoleMemberDelete(ctx context.Context, request operations.RoleMemberDeleteRequest, security operations.RoleMemberDeleteSecurity) (*operations.RoleMemberDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}/members/{memberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,20 +369,20 @@ func (s *roles) RoleMemberDelete(ctx context.Context, request operations.RoleMem
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>**Prerequisites:**<br>
 //
 // * A Pro or a higher plan.
-func (s *roles) RoleMembers(ctx context.Context, request operations.RoleMembersRequest) (*operations.RoleMembersResponse, error) {
+func (s *roles) RoleMembers(ctx context.Context, request operations.RoleMembersRequest, security operations.RoleMembersSecurity) (*operations.RoleMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -435,7 +435,7 @@ func (s *roles) RoleMembers(ctx context.Context, request operations.RoleMembersR
 // *  Pro or higher plan.
 // *  For setting the initial role, you must be the Account Owner.
 // *  For subsequent role management, you must be the Account Owner or user with role management permissions.
-func (s *roles) Roles(ctx context.Context, request operations.RolesRequest) (*operations.RolesResponse, error) {
+func (s *roles) Roles(ctx context.Context) (*operations.RolesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/roles"
 
@@ -444,7 +444,7 @@ func (s *roles) Roles(ctx context.Context, request operations.RolesRequest) (*op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -495,11 +495,11 @@ func (s *roles) Roles(ctx context.Context, request operations.RolesRequest) (*op
 // * For role management and updates, you must be the Account Owner or user with role management permissions.<br>**Scopes:** `role:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *roles) UpdateRole(ctx context.Context, request operations.UpdateRoleRequest) (*operations.UpdateRoleResponse, error) {
+func (s *roles) UpdateRole(ctx context.Context, request operations.UpdateRoleRequest, security operations.UpdateRoleSecurity) (*operations.UpdateRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/roles/{roleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -511,7 +511,7 @@ func (s *roles) UpdateRole(ctx context.Context, request operations.UpdateRoleReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

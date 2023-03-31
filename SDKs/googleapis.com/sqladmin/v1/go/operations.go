@@ -32,20 +32,20 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // SQLOperationsGet - Retrieves an instance operation that has been performed on an instance.
-func (s *operationsT) SQLOperationsGet(ctx context.Context, request operations.SQLOperationsGetRequest) (*operations.SQLOperationsGetResponse, error) {
+func (s *operationsT) SQLOperationsGet(ctx context.Context, request operations.SQLOperationsGetRequest, security operations.SQLOperationsGetSecurity) (*operations.SQLOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/operations/{operation}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/operations/{operation}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *operationsT) SQLOperationsGet(ctx context.Context, request operations.S
 }
 
 // SQLOperationsList - Lists all instance operations that have been performed on the given Cloud SQL instance in the reverse chronological order of the start time.
-func (s *operationsT) SQLOperationsList(ctx context.Context, request operations.SQLOperationsListRequest) (*operations.SQLOperationsListResponse, error) {
+func (s *operationsT) SQLOperationsList(ctx context.Context, request operations.SQLOperationsListRequest, security operations.SQLOperationsListSecurity) (*operations.SQLOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

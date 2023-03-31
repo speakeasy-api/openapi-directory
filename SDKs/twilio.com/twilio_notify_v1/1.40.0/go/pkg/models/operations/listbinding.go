@@ -13,15 +13,11 @@ var ListBindingServerList = []string{
 }
 
 type ListBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListBindingPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to read the resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListBindingQueryParams struct {
+type ListBindingRequest struct {
 	// Only include usage that occurred on or before this date. Specify the date in GMT and format as `YYYY-MM-DD`.
 	EndDate *types.Date `queryParam:"style=form,explode=true,name=EndDate"`
 	// The [User](https://www.twilio.com/docs/chat/rest/user-resource)'s `identity` value of the resources to read.
@@ -32,17 +28,12 @@ type ListBindingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
+	// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to read the resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// Only include usage that has occurred on or after this date. Specify the date in GMT and format as `YYYY-MM-DD`.
 	StartDate *types.Date `queryParam:"style=form,explode=true,name=StartDate"`
 	// Only list Bindings that have all of the specified Tags. The following implicit tags are available: `all`, `apn`, `fcm`, `gcm`, `sms`, `facebook-messenger`. Up to 5 tags are allowed.
 	Tag []string `queryParam:"style=form,explode=true,name=Tag"`
-}
-
-type ListBindingRequest struct {
-	PathParams  ListBindingPathParams
-	QueryParams ListBindingQueryParams
-	Security    ListBindingSecurity
-	ServerURL   *string
 }
 
 type ListBindingListBindingResponseMeta struct {

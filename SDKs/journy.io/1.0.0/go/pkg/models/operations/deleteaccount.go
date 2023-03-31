@@ -20,10 +20,6 @@ type DeleteAccountRequestBody struct {
 	Identification DeleteAccountRequestBodyIdentification `json:"identification"`
 }
 
-type DeleteAccountRequest struct {
-	Request DeleteAccountRequestBody `request:"mediaType=application/json"`
-}
-
 type DeleteAccount500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

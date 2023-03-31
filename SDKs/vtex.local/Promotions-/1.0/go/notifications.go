@@ -33,15 +33,25 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // Usagenotification - Usage notification
 // Usage notification
-func (s *notifications) Usagenotification(ctx context.Context, request operations.UsagenotificationRequest) (*operations.UsagenotificationResponse, error) {
+func (s *notifications) Usagenotification(ctx context.Context, request operations.UsagenotificationRequest, opts ...operations.Option) (*operations.UsagenotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UsagenotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/api/rnb/pub/notifications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UsagenotificationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +66,7 @@ func (s *notifications) Usagenotification(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

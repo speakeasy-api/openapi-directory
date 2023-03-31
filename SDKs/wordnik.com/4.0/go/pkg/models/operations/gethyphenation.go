@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetHyphenationPathParams struct {
-	// Word to get syllables for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetHyphenationSourceDictionaryEnum - Get from a single dictionary. Valid options: ahd-5, century, wiktionary, webster, and wordnet.
 type GetHyphenationSourceDictionaryEnum string
 
@@ -70,18 +65,15 @@ func (e *GetHyphenationUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetHyphenationQueryParams struct {
+type GetHyphenationRequest struct {
 	// Maximum number of results to return
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Get from a single dictionary. Valid options: ahd-5, century, wiktionary, webster, and wordnet.
 	SourceDictionary *GetHyphenationSourceDictionaryEnum `queryParam:"style=form,explode=true,name=sourceDictionary"`
 	// If true will try to return a correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetHyphenationUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetHyphenationRequest struct {
-	PathParams  GetHyphenationPathParams
-	QueryParams GetHyphenationQueryParams
+	// Word to get syllables for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetHyphenationResponse struct {

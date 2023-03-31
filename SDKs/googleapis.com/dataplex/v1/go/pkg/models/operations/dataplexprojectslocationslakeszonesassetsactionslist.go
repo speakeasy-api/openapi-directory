@@ -8,16 +8,11 @@ import (
 )
 
 type DataplexProjectsLocationsLakesZonesAssetsActionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataplexProjectsLocationsLakesZonesAssetsActionsListPathParams struct {
-	// Required. The resource name of the parent asset: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataplexProjectsLocationsLakesZonesAssetsActionsListQueryParams struct {
+type DataplexProjectsLocationsLakesZonesAssetsActionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DataplexProjectsLocationsLakesZonesAssetsActionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Page token received from a previous ListAssetActions call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListAssetActions must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the parent asset: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type DataplexProjectsLocationsLakesZonesAssetsActionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataplexProjectsLocationsLakesZonesAssetsActionsListRequest struct {
-	PathParams  DataplexProjectsLocationsLakesZonesAssetsActionsListPathParams
-	QueryParams DataplexProjectsLocationsLakesZonesAssetsActionsListQueryParams
-	Security    DataplexProjectsLocationsLakesZonesAssetsActionsListSecurity
 }
 
 type DataplexProjectsLocationsLakesZonesAssetsActionsListResponse struct {

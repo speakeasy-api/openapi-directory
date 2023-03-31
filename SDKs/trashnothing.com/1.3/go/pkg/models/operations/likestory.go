@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LikeStoryPathParams struct {
-	// The ID of the story to like.
-	StoryID string `pathParam:"style=simple,explode=false,name=story_id"`
-}
-
-type LikeStoryQueryParams struct {
+type LikeStoryRequest struct {
 	// Client device pixel ratio used to determine thumbnail size (default 1.0).
 	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
-}
-
-type LikeStoryRequest struct {
-	PathParams  LikeStoryPathParams
-	QueryParams LikeStoryQueryParams
+	// The ID of the story to like.
+	StoryID string `pathParam:"style=simple,explode=false,name=story_id"`
 }
 
 type LikeStoryResponse struct {

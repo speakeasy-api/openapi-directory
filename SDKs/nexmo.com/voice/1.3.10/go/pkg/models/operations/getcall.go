@@ -8,17 +8,12 @@ import (
 )
 
 type GetCallSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetCallPathParams struct {
-	// UUID of the Call
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetCallRequest struct {
-	PathParams GetCallPathParams
-	Security   GetCallSecurity
+	// UUID of the Call
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type GetCallResponse struct {

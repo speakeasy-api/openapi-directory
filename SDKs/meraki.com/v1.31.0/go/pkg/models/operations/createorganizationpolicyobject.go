@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationPolicyObjectPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationPolicyObjectRequestBody struct {
 	// Category of a policy object (one of: adaptivePolicy, network)
 	Category string `json:"category"`
@@ -30,8 +26,8 @@ type CreateOrganizationPolicyObjectRequestBody struct {
 }
 
 type CreateOrganizationPolicyObjectRequest struct {
-	PathParams CreateOrganizationPolicyObjectPathParams
-	Request    CreateOrganizationPolicyObjectRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationPolicyObjectRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                    `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationPolicyObjectResponse struct {

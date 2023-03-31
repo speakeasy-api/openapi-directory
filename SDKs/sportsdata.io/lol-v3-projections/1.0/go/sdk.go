@@ -106,7 +106,7 @@ func New(opts ...SDKOption) *SDK {
 // DfsSlatesByDate - Dfs Slates By Date
 func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesByDateRequest) (*operations.DfsSlatesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +151,7 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 // Projected Player Game Stats by Date
 func (s *SDK) ProjectedPlayerGameStatsByDate(ctx context.Context, request operations.ProjectedPlayerGameStatsByDateRequest) (*operations.ProjectedPlayerGameStatsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -196,7 +196,7 @@ func (s *SDK) ProjectedPlayerGameStatsByDate(ctx context.Context, request operat
 // Projected Player Game Stats by Date
 func (s *SDK) ProjectedPlayerGameStatsByPlayer(ctx context.Context, request operations.ProjectedPlayerGameStatsByPlayerRequest) (*operations.ProjectedPlayerGameStatsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

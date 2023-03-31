@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity struct {
@@ -22,18 +22,16 @@ type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity struc
 	Option2 *DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsPathParams struct {
-	// Required. Name of the base flow version to compare with the target version. Use version ID `0` to indicate the draft version of the specified flow. Format: `projects//locations//agents/ /flows//versions/`.
-	BaseVersion string `pathParam:"style=simple,explode=false,name=baseVersion"`
-}
-
-type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsQueryParams struct {
+type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                     *shared.XgafvEnum                                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowCxV3CompareVersionsRequest *shared.GoogleCloudDialogflowCxV3CompareVersionsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. Name of the base flow version to compare with the target version. Use version ID `0` to indicate the draft version of the specified flow. Format: `projects//locations//agents/ /flows//versions/`.
+	BaseVersion string `pathParam:"style=simple,explode=false,name=baseVersion"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -50,13 +48,6 @@ type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsQueryParams st
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsPathParams
-	QueryParams DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsQueryParams
-	Request     *shared.GoogleCloudDialogflowCxV3CompareVersionsRequest `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity
 }
 
 type DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse struct {

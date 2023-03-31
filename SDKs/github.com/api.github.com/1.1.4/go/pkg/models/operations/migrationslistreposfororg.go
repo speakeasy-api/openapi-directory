@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsListReposForOrgPathParams struct {
+type MigrationsListReposForOrgRequest struct {
 	// The unique identifier of the migration.
 	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type MigrationsListReposForOrgQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type MigrationsListReposForOrgRequest struct {
-	PathParams  MigrationsListReposForOrgPathParams
-	QueryParams MigrationsListReposForOrgQueryParams
 }
 
 type MigrationsListReposForOrgResponse struct {

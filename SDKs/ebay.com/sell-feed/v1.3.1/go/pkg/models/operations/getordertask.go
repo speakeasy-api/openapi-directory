@@ -8,17 +8,12 @@ import (
 )
 
 type GetOrderTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetOrderTaskPathParams struct {
-	// The ID of the task. This ID is generated when the task was created by the <b> createOrderTask</b> method.
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetOrderTaskRequest struct {
-	PathParams GetOrderTaskPathParams
-	Security   GetOrderTaskSecurity
+	// The ID of the task. This ID is generated when the task was created by the <b> createOrderTask</b> method.
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetOrderTaskResponse struct {

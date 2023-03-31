@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteIPRecordServerList = []string{
@@ -12,18 +11,13 @@ var DeleteIPRecordServerList = []string{
 }
 
 type DeleteIPRecordSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteIPRecordPathParams struct {
-	// The Twilio-provided string that uniquely identifies the IP Record resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteIPRecordRequest struct {
-	PathParams DeleteIPRecordPathParams
-	Security   DeleteIPRecordSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the IP Record resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteIPRecordResponse struct {

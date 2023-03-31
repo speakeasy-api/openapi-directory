@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PolicyCreateOrUpdatePathParams struct {
-	// Policy ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PolicyCreateOrUpdateHeaders struct {
+type PolicyCreateOrUpdateRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PolicyCreateOrUpdateRequest struct {
-	PathParams PolicyCreateOrUpdatePathParams
-	Headers    PolicyCreateOrUpdateHeaders
-	Request    *shared.PolicySaveRequest `request:"mediaType=application/json"`
+	ContentType       string                    `header:"style=simple,explode=false,name=Content-Type"`
+	PolicySaveRequest *shared.PolicySaveRequest `request:"mediaType=application/json"`
+	// Policy ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PolicyCreateOrUpdateResponse struct {

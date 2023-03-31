@@ -45,7 +45,7 @@ func (s *cadences) GetV2CadencesJSON(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *cadences) GetV2CadencesJSON(ctx context.Context, request operations.Get
 // Fetches a cadence, by ID only.
 func (s *cadences) GetV2CadencesIDJSON(ctx context.Context, request operations.GetV2CadencesIDJSONRequest) (*operations.GetV2CadencesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cadences/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cadences/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -8,13 +8,13 @@ import (
 )
 
 type CloudresourcemanagerTagValuesTagHoldsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerTagValuesTagHoldsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudresourcemanagerTagValuesTagHoldsDeleteSecurity struct {
@@ -22,12 +22,7 @@ type CloudresourcemanagerTagValuesTagHoldsDeleteSecurity struct {
 	Option2 *CloudresourcemanagerTagValuesTagHoldsDeleteSecurityOption2 `security:"option"`
 }
 
-type CloudresourcemanagerTagValuesTagHoldsDeletePathParams struct {
-	// Required. The resource name of the TagHold to delete. Must be of the form: `tagValues/{tag-value-id}/tagHolds/{tag-hold-id}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudresourcemanagerTagValuesTagHoldsDeleteQueryParams struct {
+type CloudresourcemanagerTagValuesTagHoldsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type CloudresourcemanagerTagValuesTagHoldsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the TagHold to delete. Must be of the form: `tagValues/{tag-value-id}/tagHolds/{tag-hold-id}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,12 +49,6 @@ type CloudresourcemanagerTagValuesTagHoldsDeleteQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Set to true to perform the validations necessary for deleting the resource, but not actually perform the action.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type CloudresourcemanagerTagValuesTagHoldsDeleteRequest struct {
-	PathParams  CloudresourcemanagerTagValuesTagHoldsDeletePathParams
-	QueryParams CloudresourcemanagerTagValuesTagHoldsDeleteQueryParams
-	Security    CloudresourcemanagerTagValuesTagHoldsDeleteSecurity
 }
 
 type CloudresourcemanagerTagValuesTagHoldsDeleteResponse struct {

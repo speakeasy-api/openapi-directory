@@ -14,14 +14,8 @@ var UpdateShortCodeServerList = []string{
 }
 
 type UpdateShortCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateShortCodePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the ShortCode resource to update
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateShortCodeUpdateShortCodeRequestSmsFallbackMethodEnum - The HTTP method that we should use to call the `sms_fallback_url`. Can be: `GET` or `POST`.
@@ -112,10 +106,11 @@ type UpdateShortCodeUpdateShortCodeRequest struct {
 }
 
 type UpdateShortCodeRequest struct {
-	PathParams UpdateShortCodePathParams
-	Request    *UpdateShortCodeUpdateShortCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateShortCodeSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to update.
+	AccountSid  string                                 `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateShortCodeUpdateShortCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the ShortCode resource to update
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateShortCodeResponse struct {

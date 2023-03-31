@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type ConfirmReservationPathParams struct {
-	ReservationID string `pathParam:"style=simple,explode=false,name=reservationId"`
-}
-
-type ConfirmReservationHeaders struct {
+type ConfirmReservationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ConfirmReservationRequest struct {
-	PathParams ConfirmReservationPathParams
-	Headers    ConfirmReservationHeaders
+	ContentType   string `header:"style=simple,explode=false,name=Content-Type"`
+	ReservationID string `pathParam:"style=simple,explode=false,name=reservationId"`
 }
 
 type ConfirmReservationResponse struct {

@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRelatedSearchesQueryParams struct {
+type GetRelatedSearchesRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// Search term, e.g., person, place, topic...
 	//
 	Q string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetRelatedSearchesHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetRelatedSearchesRequest struct {
-	QueryParams GetRelatedSearchesQueryParams
-	Headers     GetRelatedSearchesHeaders
 }
 
 type GetRelatedSearchesResponse struct {

@@ -33,16 +33,12 @@ func (e *UpcomingDfsSlatesByCompetitionFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type UpcomingDfsSlatesByCompetitionPathParams struct {
+type UpcomingDfsSlatesByCompetitionRequest struct {
 	// The Competition Id.
 	// <br>Examples: <code>3</code>
 	CompetitionID string `pathParam:"style=simple,explode=false,name=competitionId"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format UpcomingDfsSlatesByCompetitionFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type UpcomingDfsSlatesByCompetitionRequest struct {
-	PathParams UpcomingDfsSlatesByCompetitionPathParams
 }
 
 type UpcomingDfsSlatesByCompetitionResponse struct {

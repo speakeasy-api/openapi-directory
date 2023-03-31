@@ -94,16 +94,16 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // ExtensionCtrlGetAccountExtensionByID - Get extension data by account ID and extension number
-func (s *SDK) ExtensionCtrlGetAccountExtensionByID(ctx context.Context, request operations.ExtensionCtrlGetAccountExtensionByIDRequest) (*operations.ExtensionCtrlGetAccountExtensionByIDResponse, error) {
+func (s *SDK) ExtensionCtrlGetAccountExtensionByID(ctx context.Context, request operations.ExtensionCtrlGetAccountExtensionByIDRequest, security operations.ExtensionCtrlGetAccountExtensionByIDSecurity) (*operations.ExtensionCtrlGetAccountExtensionByIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions/{extension_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions/{extension_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,20 +148,20 @@ func (s *SDK) ExtensionCtrlGetAccountExtensionByID(ctx context.Context, request 
 }
 
 // ExtensionCtrlGetAccountExtensions - Get account extensions data by account ID
-func (s *SDK) ExtensionCtrlGetAccountExtensions(ctx context.Context, request operations.ExtensionCtrlGetAccountExtensionsRequest) (*operations.ExtensionCtrlGetAccountExtensionsResponse, error) {
+func (s *SDK) ExtensionCtrlGetAccountExtensions(ctx context.Context, request operations.ExtensionCtrlGetAccountExtensionsRequest, security operations.ExtensionCtrlGetAccountExtensionsSecurity) (*operations.ExtensionCtrlGetAccountExtensionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

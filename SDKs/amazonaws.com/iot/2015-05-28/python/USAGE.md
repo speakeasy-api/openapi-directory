@@ -3,31 +3,23 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptCertificateTransferRequest(
-    path_params=operations.AcceptCertificateTransferPathParams(
-        certificate_id="quis",
-    ),
-    query_params=operations.AcceptCertificateTransferQueryParams(
-        set_as_active=False,
-    ),
-    headers=operations.AcceptCertificateTransferHeaders(
-        x_amz_algorithm="fugit",
-        x_amz_content_sha256="aut",
-        x_amz_credential="id",
-        x_amz_date="sequi",
-        x_amz_security_token="dicta",
-        x_amz_signature="quis",
-        x_amz_signed_headers="molestiae",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    certificate_id="illum",
+    set_as_active=False,
 )
     
 res = s.accept_certificate_transfer(req)

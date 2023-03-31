@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFulfillmentsCountJSONQueryParams struct {
+type GetFulfillmentsCountJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetFulfillmentsCountJSONRequest struct {
-	QueryParams GetFulfillmentsCountJSONQueryParams
 }
 
 type GetFulfillmentsCountJSONResponse struct {

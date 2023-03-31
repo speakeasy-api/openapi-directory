@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdatePreReceiveHookPathParams struct {
-	// The unique identifier of the pre-receive hook.
-	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-}
-
 type EnterpriseAdminUpdatePreReceiveHookRequestBody struct {
 	// Whether enforcement can be overridden at the org or repo level.
 	AllowDownstreamConfiguration *bool `json:"allow_downstream_configuration,omitempty"`
@@ -28,8 +23,9 @@ type EnterpriseAdminUpdatePreReceiveHookRequestBody struct {
 }
 
 type EnterpriseAdminUpdatePreReceiveHookRequest struct {
-	PathParams EnterpriseAdminUpdatePreReceiveHookPathParams
-	Request    *EnterpriseAdminUpdatePreReceiveHookRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdatePreReceiveHookRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the pre-receive hook.
+	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
 }
 
 type EnterpriseAdminUpdatePreReceiveHookResponse struct {

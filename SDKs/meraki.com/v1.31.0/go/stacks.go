@@ -34,9 +34,9 @@ func newStacks(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Add a switch to a stack
 func (s *stacks) AddNetworkSwitchStack(ctx context.Context, request operations.AddNetworkSwitchStackRequest) (*operations.AddNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *stacks) AddNetworkSwitchStack(ctx context.Context, request operations.A
 // Create a stack
 func (s *stacks) CreateNetworkSwitchStack(ctx context.Context, request operations.CreateNetworkSwitchStackRequest) (*operations.CreateNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,9 +144,9 @@ func (s *stacks) CreateNetworkSwitchStack(ctx context.Context, request operation
 // Create a layer 3 interface for a switch stack
 func (s *stacks) CreateNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.CreateNetworkSwitchStackRoutingInterfaceRequest) (*operations.CreateNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,9 +199,9 @@ func (s *stacks) CreateNetworkSwitchStackRoutingInterface(ctx context.Context, r
 // Create a layer 3 static route for a switch stack
 func (s *stacks) CreateNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.CreateNetworkSwitchStackRoutingStaticRouteRequest) (*operations.CreateNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,7 +254,7 @@ func (s *stacks) CreateNetworkSwitchStackRoutingStaticRoute(ctx context.Context,
 // Delete a stack
 func (s *stacks) DeleteNetworkSwitchStack(ctx context.Context, request operations.DeleteNetworkSwitchStackRequest) (*operations.DeleteNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -290,7 +290,7 @@ func (s *stacks) DeleteNetworkSwitchStack(ctx context.Context, request operation
 // Delete a layer 3 interface from a switch stack
 func (s *stacks) DeleteNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.DeleteNetworkSwitchStackRoutingInterfaceRequest) (*operations.DeleteNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -326,7 +326,7 @@ func (s *stacks) DeleteNetworkSwitchStackRoutingInterface(ctx context.Context, r
 // Delete a layer 3 static route for a switch stack
 func (s *stacks) DeleteNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.DeleteNetworkSwitchStackRoutingStaticRouteRequest) (*operations.DeleteNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *stacks) DeleteNetworkSwitchStackRoutingStaticRoute(ctx context.Context,
 // Show a switch stack
 func (s *stacks) GetNetworkSwitchStack(ctx context.Context, request operations.GetNetworkSwitchStackRequest) (*operations.GetNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -407,7 +407,7 @@ func (s *stacks) GetNetworkSwitchStack(ctx context.Context, request operations.G
 // Return a layer 3 interface from a switch stack
 func (s *stacks) GetNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfaceRequest) (*operations.GetNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -452,7 +452,7 @@ func (s *stacks) GetNetworkSwitchStackRoutingInterface(ctx context.Context, requ
 // Return a layer 3 interface DHCP configuration for a switch stack
 func (s *stacks) GetNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest) (*operations.GetNetworkSwitchStackRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -497,7 +497,7 @@ func (s *stacks) GetNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, 
 // List layer 3 interfaces for a switch stack
 func (s *stacks) GetNetworkSwitchStackRoutingInterfaces(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfacesRequest) (*operations.GetNetworkSwitchStackRoutingInterfacesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +542,7 @@ func (s *stacks) GetNetworkSwitchStackRoutingInterfaces(ctx context.Context, req
 // Return a layer 3 static route for a switch stack
 func (s *stacks) GetNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.GetNetworkSwitchStackRoutingStaticRouteRequest) (*operations.GetNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -587,7 +587,7 @@ func (s *stacks) GetNetworkSwitchStackRoutingStaticRoute(ctx context.Context, re
 // List layer 3 static routes for a switch stack
 func (s *stacks) GetNetworkSwitchStackRoutingStaticRoutes(ctx context.Context, request operations.GetNetworkSwitchStackRoutingStaticRoutesRequest) (*operations.GetNetworkSwitchStackRoutingStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -632,7 +632,7 @@ func (s *stacks) GetNetworkSwitchStackRoutingStaticRoutes(ctx context.Context, r
 // List the switch stacks in a network
 func (s *stacks) GetNetworkSwitchStacks(ctx context.Context, request operations.GetNetworkSwitchStacksRequest) (*operations.GetNetworkSwitchStacksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -677,9 +677,9 @@ func (s *stacks) GetNetworkSwitchStacks(ctx context.Context, request operations.
 // Remove a switch from a stack
 func (s *stacks) RemoveNetworkSwitchStack(ctx context.Context, request operations.RemoveNetworkSwitchStackRequest) (*operations.RemoveNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -732,9 +732,9 @@ func (s *stacks) RemoveNetworkSwitchStack(ctx context.Context, request operation
 // Update a layer 3 interface for a switch stack
 func (s *stacks) UpdateNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingInterfaceRequest) (*operations.UpdateNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -784,9 +784,9 @@ func (s *stacks) UpdateNetworkSwitchStackRoutingInterface(ctx context.Context, r
 // Update a layer 3 interface DHCP configuration for a switch stack
 func (s *stacks) UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest) (*operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -836,9 +836,9 @@ func (s *stacks) UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Contex
 // Update a layer 3 static route for a switch stack
 func (s *stacks) UpdateNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingStaticRouteRequest) (*operations.UpdateNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

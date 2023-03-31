@@ -30,7 +30,6 @@ pkg/models/operations/servicebrokertestiampermissions.go
 pkg/models/shared/googlecloudservicebrokerv1beta1broker.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudservicebrokerv1beta1listbindingsresponse.go
 pkg/models/shared/googlecloudservicebrokerv1beta1binding.go
 pkg/models/shared/googlecloudservicebrokerv1beta1listserviceinstancesresponse.go

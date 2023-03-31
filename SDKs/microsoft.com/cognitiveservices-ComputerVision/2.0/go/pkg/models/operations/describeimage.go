@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeImageQueryParams struct {
+type DescribeImageRequest struct {
+	// A JSON document with a URL pointing to the image that is to be analyzed.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
 	// The desired language for output generation. If this parameter is not specified, the default value is &quot;en&quot;.Supported languages:en - English, Default. es - Spanish, ja - Japanese, pt - Portuguese, zh - Simplified Chinese.
 	Language *shared.ServiceLanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// Maximum number of candidate descriptions to be returned.  The default is 1.
 	MaxCandidates *int `queryParam:"style=form,explode=true,name=maxCandidates"`
-}
-
-type DescribeImageRequest struct {
-	QueryParams DescribeImageQueryParams
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
 }
 
 type DescribeImageResponse struct {

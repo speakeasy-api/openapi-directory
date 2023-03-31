@@ -22,11 +22,6 @@ type PostOauthRequestTokenRequestBody struct {
 	OauthTimestamp *string `json:"oauth_timestamp,omitempty"`
 }
 
-type PostOauthRequestTokenRequest struct {
-	// OAuth Parameters
-	Request PostOauthRequestTokenRequestBody `request:"mediaType=application/json"`
-}
-
 // PostOauthRequestToken200ApplicationJSON - OAuth token
 type PostOauthRequestToken200ApplicationJSON struct {
 	OauthToken *string `json:"oauth_token,omitempty"`

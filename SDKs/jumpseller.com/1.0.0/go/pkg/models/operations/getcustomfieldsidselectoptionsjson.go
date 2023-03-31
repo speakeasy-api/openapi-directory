@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFieldsIDSelectOptionsJSONPathParams struct {
-	// Id of the CustomField
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCustomFieldsIDSelectOptionsJSONQueryParams struct {
+type GetCustomFieldsIDSelectOptionsJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the CustomField
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCustomFieldsIDSelectOptionsJSONRequest struct {
-	PathParams  GetCustomFieldsIDSelectOptionsJSONPathParams
-	QueryParams GetCustomFieldsIDSelectOptionsJSONQueryParams
 }
 
 type GetCustomFieldsIDSelectOptionsJSONResponse struct {

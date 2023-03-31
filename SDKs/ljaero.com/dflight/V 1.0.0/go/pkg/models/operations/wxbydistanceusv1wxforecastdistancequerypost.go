@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WxByDistanceUsV1WxForecastDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type WxByDistanceUsV1WxForecastDistanceQueryPostRequest struct {
-	Headers WxByDistanceUsV1WxForecastDistanceQueryPostHeaders
-	Request shared.WxByDistance `request:"mediaType=application/json"`
+	WxByDistance shared.WxByDistance `request:"mediaType=application/json"`
+	XAPIKey      *string             `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type WxByDistanceUsV1WxForecastDistanceQueryPostResponse struct {

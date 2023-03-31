@@ -33,20 +33,20 @@ func newCreatives(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AdexchangebuyerCreativesAddDeal - Add a deal id association for the creative.
-func (s *creatives) AdexchangebuyerCreativesAddDeal(ctx context.Context, request operations.AdexchangebuyerCreativesAddDealRequest) (*operations.AdexchangebuyerCreativesAddDealResponse, error) {
+func (s *creatives) AdexchangebuyerCreativesAddDeal(ctx context.Context, request operations.AdexchangebuyerCreativesAddDealRequest, security operations.AdexchangebuyerCreativesAddDealSecurity) (*operations.AdexchangebuyerCreativesAddDealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *creatives) AdexchangebuyerCreativesAddDeal(ctx context.Context, request
 }
 
 // AdexchangebuyerCreativesGet - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
-func (s *creatives) AdexchangebuyerCreativesGet(ctx context.Context, request operations.AdexchangebuyerCreativesGetRequest) (*operations.AdexchangebuyerCreativesGetResponse, error) {
+func (s *creatives) AdexchangebuyerCreativesGet(ctx context.Context, request operations.AdexchangebuyerCreativesGetRequest, security operations.AdexchangebuyerCreativesGetSecurity) (*operations.AdexchangebuyerCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *creatives) AdexchangebuyerCreativesGet(ctx context.Context, request ope
 }
 
 // AdexchangebuyerCreativesInsert - Submit a new creative.
-func (s *creatives) AdexchangebuyerCreativesInsert(ctx context.Context, request operations.AdexchangebuyerCreativesInsertRequest) (*operations.AdexchangebuyerCreativesInsertResponse, error) {
+func (s *creatives) AdexchangebuyerCreativesInsert(ctx context.Context, request operations.AdexchangebuyerCreativesInsertRequest, security operations.AdexchangebuyerCreativesInsertSecurity) (*operations.AdexchangebuyerCreativesInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/creatives"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *creatives) AdexchangebuyerCreativesInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *creatives) AdexchangebuyerCreativesInsert(ctx context.Context, request 
 }
 
 // AdexchangebuyerCreativesList - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
-func (s *creatives) AdexchangebuyerCreativesList(ctx context.Context, request operations.AdexchangebuyerCreativesListRequest) (*operations.AdexchangebuyerCreativesListResponse, error) {
+func (s *creatives) AdexchangebuyerCreativesList(ctx context.Context, request operations.AdexchangebuyerCreativesListRequest, security operations.AdexchangebuyerCreativesListSecurity) (*operations.AdexchangebuyerCreativesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/creatives"
 
@@ -184,11 +184,11 @@ func (s *creatives) AdexchangebuyerCreativesList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,20 +223,20 @@ func (s *creatives) AdexchangebuyerCreativesList(ctx context.Context, request op
 }
 
 // AdexchangebuyerCreativesListDeals - Lists the external deal ids associated with the creative.
-func (s *creatives) AdexchangebuyerCreativesListDeals(ctx context.Context, request operations.AdexchangebuyerCreativesListDealsRequest) (*operations.AdexchangebuyerCreativesListDealsResponse, error) {
+func (s *creatives) AdexchangebuyerCreativesListDeals(ctx context.Context, request operations.AdexchangebuyerCreativesListDealsRequest, security operations.AdexchangebuyerCreativesListDealsSecurity) (*operations.AdexchangebuyerCreativesListDealsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/listDeals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/listDeals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -271,20 +271,20 @@ func (s *creatives) AdexchangebuyerCreativesListDeals(ctx context.Context, reque
 }
 
 // AdexchangebuyerCreativesRemoveDeal - Remove a deal id associated with the creative.
-func (s *creatives) AdexchangebuyerCreativesRemoveDeal(ctx context.Context, request operations.AdexchangebuyerCreativesRemoveDealRequest) (*operations.AdexchangebuyerCreativesRemoveDealResponse, error) {
+func (s *creatives) AdexchangebuyerCreativesRemoveDeal(ctx context.Context, request operations.AdexchangebuyerCreativesRemoveDealRequest, security operations.AdexchangebuyerCreativesRemoveDealSecurity) (*operations.AdexchangebuyerCreativesRemoveDealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

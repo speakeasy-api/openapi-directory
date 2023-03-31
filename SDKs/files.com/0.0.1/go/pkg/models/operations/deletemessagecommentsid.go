@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteMessageCommentsIDPathParams struct {
+type DeleteMessageCommentsIDRequest struct {
 	// Message Comment ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteMessageCommentsIDRequest struct {
-	PathParams DeleteMessageCommentsIDPathParams
 }
 
 type DeleteMessageCommentsIDResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VehicleGetPathParams struct {
+type VehicleGetRequest struct {
 	// A comma-separated list of vehicle ids e.g. LX58CFV,LX11AZB,LX58CFE. Max approx. 25 ids.
 	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type VehicleGetRequest struct {
-	PathParams VehicleGetPathParams
 }
 
 type VehicleGetResponse struct {

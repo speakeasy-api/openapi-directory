@@ -77,7 +77,6 @@ pkg/models/shared/usablesubnetwork.go
 pkg/models/shared/usablesubnetworksecondaryrange.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/operation.go
 pkg/models/shared/operationprogress.go
 pkg/models/shared/metric.go

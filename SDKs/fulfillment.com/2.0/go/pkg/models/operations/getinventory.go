@@ -8,10 +8,10 @@ import (
 )
 
 type GetInventorySecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetInventoryQueryParams struct {
+type GetInventoryRequest struct {
 	// A CSV of sku reference names, 'skuName1' or 'skuName1,skuName2,skuName3'
 	ExternalSkuNames []string `queryParam:"style=form,explode=false,name=externalSkuNames"`
 	// The numbers of items to return
@@ -22,11 +22,6 @@ type GetInventoryQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// A CSV of warehouse id, '123' or '1,2,3'
 	WarehouseIds []int64 `queryParam:"style=form,explode=false,name=warehouseIds"`
-}
-
-type GetInventoryRequest struct {
-	QueryParams GetInventoryQueryParams
-	Security    GetInventorySecurity
 }
 
 // GetInventoryItemInventoryArrayV2ItemInventoryV2Item - Item this inventory data is based on

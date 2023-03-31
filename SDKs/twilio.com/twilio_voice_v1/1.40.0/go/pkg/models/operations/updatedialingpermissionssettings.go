@@ -12,18 +12,13 @@ var UpdateDialingPermissionsSettingsServerList = []string{
 }
 
 type UpdateDialingPermissionsSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDialingPermissionsSettingsUpdateDialingPermissionsSettingsRequest struct {
 	// `true` for the sub-account to inherit voice dialing permissions from the Master Project; otherwise `false`.
 	DialingPermissionsInheritance *bool `form:"name=DialingPermissionsInheritance"`
-}
-
-type UpdateDialingPermissionsSettingsRequest struct {
-	Request   *UpdateDialingPermissionsSettingsUpdateDialingPermissionsSettingsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  UpdateDialingPermissionsSettingsSecurity
-	ServerURL *string
 }
 
 type UpdateDialingPermissionsSettingsResponse struct {

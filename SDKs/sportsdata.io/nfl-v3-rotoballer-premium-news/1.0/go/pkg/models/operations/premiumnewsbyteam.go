@@ -33,15 +33,11 @@ func (e *PremiumNewsByTeamFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PremiumNewsByTeamPathParams struct {
+type PremiumNewsByTeamRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PremiumNewsByTeamFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Abbreviation of the team. Example: <code>WAS</code>.
 	Team string `pathParam:"style=simple,explode=false,name=team"`
-}
-
-type PremiumNewsByTeamRequest struct {
-	PathParams PremiumNewsByTeamPathParams
 }
 
 type PremiumNewsByTeamResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PicoLoadmanagementGroupGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PicoLoadmanagementGroupGetRequest struct {
-	PathParams PicoLoadmanagementGroupGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PicoLoadmanagementGroupGetResponse struct {

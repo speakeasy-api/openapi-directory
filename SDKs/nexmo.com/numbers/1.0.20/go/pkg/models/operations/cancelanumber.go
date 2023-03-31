@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelANumberRequest struct {
-	// Number details
-	Request shared.NumberDetails `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type CancelANumberResponse struct {
 	Body        []byte
 	ContentType string

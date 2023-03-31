@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type UpdateWindowToChangeSellerHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type UpdateWindowToChangeSellerRequestBody struct {
 	// Number of days after order cancelation by a seller, during which another seller may be assigned to fulfill the order.
 	WaitingTime int64 `json:"waitingTime"`
 }
 
 type UpdateWindowToChangeSellerRequest struct {
-	Headers UpdateWindowToChangeSellerHeaders
-	Request UpdateWindowToChangeSellerRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                                `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody UpdateWindowToChangeSellerRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateWindowToChangeSellerResponse struct {

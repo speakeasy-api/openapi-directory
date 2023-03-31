@@ -8,13 +8,13 @@ import (
 )
 
 type MonitoringProjectsAlertPoliciesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsAlertPoliciesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsAlertPoliciesCreateSecurity struct {
@@ -22,14 +22,10 @@ type MonitoringProjectsAlertPoliciesCreateSecurity struct {
 	Option2 *MonitoringProjectsAlertPoliciesCreateSecurityOption2 `security:"option"`
 }
 
-type MonitoringProjectsAlertPoliciesCreatePathParams struct {
-	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which the alerting policy will be written, not the name of the created policy. |name| must be a host project of a Metrics Scope, otherwise INVALID_ARGUMENT error will return. The alerting policy that is returned will have a name that contains a normalized representation of this name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsAlertPoliciesCreateQueryParams struct {
+type MonitoringProjectsAlertPoliciesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AlertPolicy *shared.AlertPolicy `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type MonitoringProjectsAlertPoliciesCreateQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which the alerting policy will be written, not the name of the created policy. |name| must be a host project of a Metrics Scope, otherwise INVALID_ARGUMENT error will return. The alerting policy that is returned will have a name that contains a normalized representation of this name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type MonitoringProjectsAlertPoliciesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsAlertPoliciesCreateRequest struct {
-	PathParams  MonitoringProjectsAlertPoliciesCreatePathParams
-	QueryParams MonitoringProjectsAlertPoliciesCreateQueryParams
-	Request     *shared.AlertPolicy `request:"mediaType=application/json"`
-	Security    MonitoringProjectsAlertPoliciesCreateSecurity
 }
 
 type MonitoringProjectsAlertPoliciesCreateResponse struct {

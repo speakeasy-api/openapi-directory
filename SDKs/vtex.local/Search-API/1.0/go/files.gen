@@ -33,3 +33,4 @@ pkg/models/operations/productsearchfilteredandordered.go
 pkg/models/operations/searchbyproducturl.go
 pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

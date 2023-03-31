@@ -67,7 +67,7 @@ func (s *extras) ExtrasChoicesList(ctx context.Context) (*operations.ExtrasChoic
 }
 func (s *extras) ExtrasChoicesRead(ctx context.Context, request operations.ExtrasChoicesReadRequest) (*operations.ExtrasChoicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/_choices/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/_choices/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -98,7 +98,7 @@ func (s *extras) ExtrasChoicesRead(ctx context.Context, request operations.Extra
 
 	return res, nil
 }
-func (s *extras) ExtrasConfigContextsCreate(ctx context.Context, request operations.ExtrasConfigContextsCreateRequest) (*operations.ExtrasConfigContextsCreateResponse, error) {
+func (s *extras) ExtrasConfigContextsCreate(ctx context.Context, request shared.WritableConfigContextInput) (*operations.ExtrasConfigContextsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/extras/config-contexts/"
 
@@ -152,7 +152,7 @@ func (s *extras) ExtrasConfigContextsCreate(ctx context.Context, request operati
 }
 func (s *extras) ExtrasConfigContextsDelete(ctx context.Context, request operations.ExtrasConfigContextsDeleteRequest) (*operations.ExtrasConfigContextsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *extras) ExtrasConfigContextsList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,9 +231,9 @@ func (s *extras) ExtrasConfigContextsList(ctx context.Context, request operation
 }
 func (s *extras) ExtrasConfigContextsPartialUpdate(ctx context.Context, request operations.ExtrasConfigContextsPartialUpdateRequest) (*operations.ExtrasConfigContextsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConfigContextInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *extras) ExtrasConfigContextsPartialUpdate(ctx context.Context, request 
 }
 func (s *extras) ExtrasConfigContextsRead(ctx context.Context, request operations.ExtrasConfigContextsReadRequest) (*operations.ExtrasConfigContextsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,9 +325,9 @@ func (s *extras) ExtrasConfigContextsRead(ctx context.Context, request operation
 }
 func (s *extras) ExtrasConfigContextsUpdate(ctx context.Context, request operations.ExtrasConfigContextsUpdateRequest) (*operations.ExtrasConfigContextsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/config-contexts/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableConfigContextInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -375,7 +375,7 @@ func (s *extras) ExtrasConfigContextsUpdate(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *extras) ExtrasExportTemplatesCreate(ctx context.Context, request operations.ExtrasExportTemplatesCreateRequest) (*operations.ExtrasExportTemplatesCreateResponse, error) {
+func (s *extras) ExtrasExportTemplatesCreate(ctx context.Context, request shared.ExportTemplateInput) (*operations.ExtrasExportTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/extras/export-templates/"
 
@@ -429,7 +429,7 @@ func (s *extras) ExtrasExportTemplatesCreate(ctx context.Context, request operat
 }
 func (s *extras) ExtrasExportTemplatesDelete(ctx context.Context, request operations.ExtrasExportTemplatesDeleteRequest) (*operations.ExtrasExportTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -469,7 +469,7 @@ func (s *extras) ExtrasExportTemplatesList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -508,9 +508,9 @@ func (s *extras) ExtrasExportTemplatesList(ctx context.Context, request operatio
 }
 func (s *extras) ExtrasExportTemplatesPartialUpdate(ctx context.Context, request operations.ExtrasExportTemplatesPartialUpdateRequest) (*operations.ExtrasExportTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -560,7 +560,7 @@ func (s *extras) ExtrasExportTemplatesPartialUpdate(ctx context.Context, request
 }
 func (s *extras) ExtrasExportTemplatesRead(ctx context.Context, request operations.ExtrasExportTemplatesReadRequest) (*operations.ExtrasExportTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -602,9 +602,9 @@ func (s *extras) ExtrasExportTemplatesRead(ctx context.Context, request operatio
 }
 func (s *extras) ExtrasExportTemplatesUpdate(ctx context.Context, request operations.ExtrasExportTemplatesUpdateRequest) (*operations.ExtrasExportTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/export-templates/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportTemplateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -652,7 +652,7 @@ func (s *extras) ExtrasExportTemplatesUpdate(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *extras) ExtrasGraphsCreate(ctx context.Context, request operations.ExtrasGraphsCreateRequest) (*operations.ExtrasGraphsCreateResponse, error) {
+func (s *extras) ExtrasGraphsCreate(ctx context.Context, request shared.WritableGraphInput) (*operations.ExtrasGraphsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/extras/graphs/"
 
@@ -706,7 +706,7 @@ func (s *extras) ExtrasGraphsCreate(ctx context.Context, request operations.Extr
 }
 func (s *extras) ExtrasGraphsDelete(ctx context.Context, request operations.ExtrasGraphsDeleteRequest) (*operations.ExtrasGraphsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -746,7 +746,7 @@ func (s *extras) ExtrasGraphsList(ctx context.Context, request operations.Extras
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -785,9 +785,9 @@ func (s *extras) ExtrasGraphsList(ctx context.Context, request operations.Extras
 }
 func (s *extras) ExtrasGraphsPartialUpdate(ctx context.Context, request operations.ExtrasGraphsPartialUpdateRequest) (*operations.ExtrasGraphsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableGraphInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -837,7 +837,7 @@ func (s *extras) ExtrasGraphsPartialUpdate(ctx context.Context, request operatio
 }
 func (s *extras) ExtrasGraphsRead(ctx context.Context, request operations.ExtrasGraphsReadRequest) (*operations.ExtrasGraphsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -879,9 +879,9 @@ func (s *extras) ExtrasGraphsRead(ctx context.Context, request operations.Extras
 }
 func (s *extras) ExtrasGraphsUpdate(ctx context.Context, request operations.ExtrasGraphsUpdateRequest) (*operations.ExtrasGraphsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/graphs/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableGraphInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -929,7 +929,7 @@ func (s *extras) ExtrasGraphsUpdate(ctx context.Context, request operations.Extr
 
 	return res, nil
 }
-func (s *extras) ExtrasImageAttachmentsCreate(ctx context.Context, request operations.ExtrasImageAttachmentsCreateRequest) (*operations.ExtrasImageAttachmentsCreateResponse, error) {
+func (s *extras) ExtrasImageAttachmentsCreate(ctx context.Context, request shared.ImageAttachmentInput) (*operations.ExtrasImageAttachmentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/extras/image-attachments/"
 
@@ -983,7 +983,7 @@ func (s *extras) ExtrasImageAttachmentsCreate(ctx context.Context, request opera
 }
 func (s *extras) ExtrasImageAttachmentsDelete(ctx context.Context, request operations.ExtrasImageAttachmentsDeleteRequest) (*operations.ExtrasImageAttachmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1023,7 +1023,7 @@ func (s *extras) ExtrasImageAttachmentsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1062,9 +1062,9 @@ func (s *extras) ExtrasImageAttachmentsList(ctx context.Context, request operati
 }
 func (s *extras) ExtrasImageAttachmentsPartialUpdate(ctx context.Context, request operations.ExtrasImageAttachmentsPartialUpdateRequest) (*operations.ExtrasImageAttachmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageAttachmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1114,7 +1114,7 @@ func (s *extras) ExtrasImageAttachmentsPartialUpdate(ctx context.Context, reques
 }
 func (s *extras) ExtrasImageAttachmentsRead(ctx context.Context, request operations.ExtrasImageAttachmentsReadRequest) (*operations.ExtrasImageAttachmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1156,9 +1156,9 @@ func (s *extras) ExtrasImageAttachmentsRead(ctx context.Context, request operati
 }
 func (s *extras) ExtrasImageAttachmentsUpdate(ctx context.Context, request operations.ExtrasImageAttachmentsUpdateRequest) (*operations.ExtrasImageAttachmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/image-attachments/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageAttachmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1217,7 +1217,7 @@ func (s *extras) ExtrasObjectChangesList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1258,7 +1258,7 @@ func (s *extras) ExtrasObjectChangesList(ctx context.Context, request operations
 // ExtrasObjectChangesRead - Retrieve a list of recent changes.
 func (s *extras) ExtrasObjectChangesRead(ctx context.Context, request operations.ExtrasObjectChangesReadRequest) (*operations.ExtrasObjectChangesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/object-changes/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/object-changes/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1307,7 +1307,7 @@ func (s *extras) ExtrasRecentActivityList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1346,7 +1346,7 @@ func (s *extras) ExtrasRecentActivityList(ctx context.Context, request operation
 }
 func (s *extras) ExtrasRecentActivityRead(ctx context.Context, request operations.ExtrasRecentActivityReadRequest) (*operations.ExtrasRecentActivityReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/recent-activity/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/recent-activity/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1386,7 +1386,7 @@ func (s *extras) ExtrasRecentActivityRead(ctx context.Context, request operation
 
 	return res, nil
 }
-func (s *extras) ExtrasTagsCreate(ctx context.Context, request operations.ExtrasTagsCreateRequest) (*operations.ExtrasTagsCreateResponse, error) {
+func (s *extras) ExtrasTagsCreate(ctx context.Context, request shared.TagInput) (*operations.ExtrasTagsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/extras/tags/"
 
@@ -1440,7 +1440,7 @@ func (s *extras) ExtrasTagsCreate(ctx context.Context, request operations.Extras
 }
 func (s *extras) ExtrasTagsDelete(ctx context.Context, request operations.ExtrasTagsDeleteRequest) (*operations.ExtrasTagsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1480,7 +1480,7 @@ func (s *extras) ExtrasTagsList(ctx context.Context, request operations.ExtrasTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1519,9 +1519,9 @@ func (s *extras) ExtrasTagsList(ctx context.Context, request operations.ExtrasTa
 }
 func (s *extras) ExtrasTagsPartialUpdate(ctx context.Context, request operations.ExtrasTagsPartialUpdateRequest) (*operations.ExtrasTagsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1571,7 +1571,7 @@ func (s *extras) ExtrasTagsPartialUpdate(ctx context.Context, request operations
 }
 func (s *extras) ExtrasTagsRead(ctx context.Context, request operations.ExtrasTagsReadRequest) (*operations.ExtrasTagsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1613,9 +1613,9 @@ func (s *extras) ExtrasTagsRead(ctx context.Context, request operations.ExtrasTa
 }
 func (s *extras) ExtrasTagsUpdate(ctx context.Context, request operations.ExtrasTagsUpdateRequest) (*operations.ExtrasTagsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/tags/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1663,7 +1663,7 @@ func (s *extras) ExtrasTagsUpdate(ctx context.Context, request operations.Extras
 
 	return res, nil
 }
-func (s *extras) ExtrasTopologyMapsCreate(ctx context.Context, request operations.ExtrasTopologyMapsCreateRequest) (*operations.ExtrasTopologyMapsCreateResponse, error) {
+func (s *extras) ExtrasTopologyMapsCreate(ctx context.Context, request shared.WritableTopologyMapInput) (*operations.ExtrasTopologyMapsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/extras/topology-maps/"
 
@@ -1717,7 +1717,7 @@ func (s *extras) ExtrasTopologyMapsCreate(ctx context.Context, request operation
 }
 func (s *extras) ExtrasTopologyMapsDelete(ctx context.Context, request operations.ExtrasTopologyMapsDeleteRequest) (*operations.ExtrasTopologyMapsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1757,7 +1757,7 @@ func (s *extras) ExtrasTopologyMapsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1796,9 +1796,9 @@ func (s *extras) ExtrasTopologyMapsList(ctx context.Context, request operations.
 }
 func (s *extras) ExtrasTopologyMapsPartialUpdate(ctx context.Context, request operations.ExtrasTopologyMapsPartialUpdateRequest) (*operations.ExtrasTopologyMapsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableTopologyMapInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1848,7 +1848,7 @@ func (s *extras) ExtrasTopologyMapsPartialUpdate(ctx context.Context, request op
 }
 func (s *extras) ExtrasTopologyMapsRead(ctx context.Context, request operations.ExtrasTopologyMapsReadRequest) (*operations.ExtrasTopologyMapsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1890,7 +1890,7 @@ func (s *extras) ExtrasTopologyMapsRead(ctx context.Context, request operations.
 }
 func (s *extras) ExtrasTopologyMapsRender(ctx context.Context, request operations.ExtrasTopologyMapsRenderRequest) (*operations.ExtrasTopologyMapsRenderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/render/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/render/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1932,9 +1932,9 @@ func (s *extras) ExtrasTopologyMapsRender(ctx context.Context, request operation
 }
 func (s *extras) ExtrasTopologyMapsUpdate(ctx context.Context, request operations.ExtrasTopologyMapsUpdateRequest) (*operations.ExtrasTopologyMapsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extras/topology-maps/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WritableTopologyMapInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

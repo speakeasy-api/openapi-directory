@@ -12,17 +12,8 @@ var CreateServiceUserServerList = []string{
 }
 
 type CreateServiceUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateServiceUserPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the User resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-}
-
-type CreateServiceUserHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ServiceUserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceUserCreateServiceUserRequest struct {
@@ -37,11 +28,11 @@ type CreateServiceUserCreateServiceUserRequest struct {
 }
 
 type CreateServiceUserRequest struct {
-	PathParams CreateServiceUserPathParams
-	Headers    CreateServiceUserHeaders
-	Request    *CreateServiceUserCreateServiceUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateServiceUserSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the User resource is associated with.
+	ChatServiceSid string                                     `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *CreateServiceUserCreateServiceUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ServiceUserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateServiceUserResponse struct {

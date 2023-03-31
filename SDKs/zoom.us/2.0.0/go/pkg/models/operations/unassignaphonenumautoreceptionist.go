@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignAPhoneNumAutoReceptionistSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UnassignAPhoneNumAutoReceptionistPathParams struct {
+type UnassignAPhoneNumAutoReceptionistRequest struct {
 	// Unique identifier of the auto receptionist. This can be retrieved from the List Phone Sites API.
 	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
 	// Unique Identifier of the phone number or provide the actual phone number in e164 format (example: +19995550123).
 	PhoneNumberID string `pathParam:"style=simple,explode=false,name=phoneNumberId"`
-}
-
-type UnassignAPhoneNumAutoReceptionistRequest struct {
-	PathParams UnassignAPhoneNumAutoReceptionistPathParams
-	Security   UnassignAPhoneNumAutoReceptionistSecurity
 }
 
 type UnassignAPhoneNumAutoReceptionistResponse struct {

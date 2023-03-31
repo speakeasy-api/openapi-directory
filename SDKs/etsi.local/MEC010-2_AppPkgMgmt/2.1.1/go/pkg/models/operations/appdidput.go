@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppDIDPUTPathParams struct {
+type AppDIDPUTRequest struct {
+	RequestBody []byte `request:"mediaType=application/zip"`
 	// Identifier of an application descriptor
 	AppDID string `pathParam:"style=simple,explode=false,name=appDId"`
-}
-
-type AppDIDPUTRequest struct {
-	PathParams AppDIDPUTPathParams
-	Request    []byte `request:"mediaType=application/zip"`
 }
 
 type AppDIDPUTResponse struct {

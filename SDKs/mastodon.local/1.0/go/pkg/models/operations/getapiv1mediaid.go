@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1MediaIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1MediaIDPathParams struct {
-	// The id of the Attachment entity to be updated.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1MediaIDRequest struct {
-	PathParams GetAPIV1MediaIDPathParams
-	Security   GetAPIV1MediaIDSecurity
+	// The id of the Attachment entity to be updated.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1MediaIDResponse struct {

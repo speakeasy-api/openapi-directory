@@ -32,7 +32,7 @@ func newInternal(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-func (s *internal) Aggregate2(ctx context.Context, request operations.Aggregate2Request) (*operations.Aggregate2Response, error) {
+func (s *internal) Aggregate2(ctx context.Context, request operations.Aggregate2RequestBody) (*operations.Aggregate2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/aggregate"
 
@@ -84,7 +84,7 @@ func (s *internal) Aggregate2(ctx context.Context, request operations.Aggregate2
 
 	return res, nil
 }
-func (s *internal) Route(ctx context.Context, request operations.RouteRequest) (*operations.RouteResponse, error) {
+func (s *internal) Route(ctx context.Context, request operations.RouteRequestBody) (*operations.RouteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/route"
 
@@ -136,7 +136,7 @@ func (s *internal) Route(ctx context.Context, request operations.RouteRequest) (
 
 	return res, nil
 }
-func (s *internal) SendFeedback(ctx context.Context, request operations.SendFeedbackRequest) (*operations.SendFeedbackResponse, error) {
+func (s *internal) SendFeedback(ctx context.Context, request operations.SendFeedbackRequestBody) (*operations.SendFeedbackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/send-feedback"
 
@@ -188,7 +188,7 @@ func (s *internal) SendFeedback(ctx context.Context, request operations.SendFeed
 
 	return res, nil
 }
-func (s *internal) TransformInput(ctx context.Context, request operations.TransformInputRequest) (*operations.TransformInputResponse, error) {
+func (s *internal) TransformInput(ctx context.Context, request operations.TransformInputRequestBody) (*operations.TransformInputResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transform-input"
 
@@ -240,7 +240,7 @@ func (s *internal) TransformInput(ctx context.Context, request operations.Transf
 
 	return res, nil
 }
-func (s *internal) TransformInput3(ctx context.Context, request operations.TransformInput3Request) (*operations.TransformInput3Response, error) {
+func (s *internal) TransformInput3(ctx context.Context, request operations.TransformInput3RequestBody) (*operations.TransformInput3Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/predict"
 
@@ -292,7 +292,7 @@ func (s *internal) TransformInput3(ctx context.Context, request operations.Trans
 
 	return res, nil
 }
-func (s *internal) TransformOutput(ctx context.Context, request operations.TransformOutputRequest) (*operations.TransformOutputResponse, error) {
+func (s *internal) TransformOutput(ctx context.Context, request operations.TransformOutputRequestBody) (*operations.TransformOutputResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transform-output"
 

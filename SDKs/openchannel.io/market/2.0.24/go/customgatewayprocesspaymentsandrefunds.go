@@ -36,14 +36,14 @@ func newCustomGatewayProcessPaymentsAndRefunds(defaultClient, securityClient HTT
 // - Payments must be enabled and 'Custom' must be selected as the gateway in order to use this API endpoint
 func (s *customGatewayProcessPaymentsAndRefunds) PostCustomGatewayPaymentOwnershipID(ctx context.Context, request operations.PostCustomGatewayPaymentOwnershipIDRequest) (*operations.PostCustomGatewayPaymentOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-gateway/payment/{ownershipId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-gateway/payment/{ownershipId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *customGatewayProcessPaymentsAndRefunds) PostCustomGatewayPaymentOwnersh
 // - Payments must be enabled and 'Custom' must be selected as the gateway in order to use this API endpoint
 func (s *customGatewayProcessPaymentsAndRefunds) PostCustomGatewayRefundOwnershipID(ctx context.Context, request operations.PostCustomGatewayRefundOwnershipIDRequest) (*operations.PostCustomGatewayRefundOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-gateway/refund/{ownershipId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-gateway/refund/{ownershipId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

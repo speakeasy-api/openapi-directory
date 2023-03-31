@@ -8,23 +8,14 @@ import (
 )
 
 type GetTracksTrackIDRepostersSecurity struct {
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetTracksTrackIDRepostersPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
-}
-
-type GetTracksTrackIDRepostersQueryParams struct {
-	// Number of results to return in the collection.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	ClientID string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type GetTracksTrackIDRepostersRequest struct {
-	PathParams  GetTracksTrackIDRepostersPathParams
-	QueryParams GetTracksTrackIDRepostersQueryParams
-	Security    GetTracksTrackIDRepostersSecurity
+	// Number of results to return in the collection.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type GetTracksTrackIDRepostersResponse struct {

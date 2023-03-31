@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequestBody - A social contract to modify
 type PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequestBody struct {
 	ContractDate      *string  `json:"ContractDate,omitempty"`
@@ -25,9 +16,14 @@ type PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequestBody struc
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDPathParams
 	// A social contract to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDResponse struct {

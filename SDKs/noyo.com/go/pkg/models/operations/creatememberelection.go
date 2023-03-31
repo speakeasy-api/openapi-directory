@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateMemberElectionPathParams struct {
+type CreateMemberElectionRequest struct {
+	MemberElectionCreateRequest shared.MemberElectionCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the coverage plan in Noyo
 	PlanID string `pathParam:"style=simple,explode=false,name=plan_id"`
-}
-
-type CreateMemberElectionRequest struct {
-	PathParams CreateMemberElectionPathParams
-	Request    shared.MemberElectionCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateMemberElectionResponse struct {

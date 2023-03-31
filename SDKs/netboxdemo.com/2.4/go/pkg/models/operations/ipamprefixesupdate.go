@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamPrefixesUpdatePathParams struct {
+type IpamPrefixesUpdateRequest struct {
+	WritablePrefixInput shared.WritablePrefixInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this prefix.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamPrefixesUpdateRequest struct {
-	PathParams IpamPrefixesUpdatePathParams
-	Request    shared.WritablePrefixInput `request:"mediaType=application/json"`
 }
 
 type IpamPrefixesUpdateResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListIdpGroupsForOrgPathParams struct {
+type TeamsListIdpGroupsForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type TeamsListIdpGroupsForOrgQueryParams struct {
 	// Page token
 	Page *string `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Filters the results to return only those that begin with the value specified by this parameter. For example, a value of `ab` will return results that begin with "ab".
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type TeamsListIdpGroupsForOrgRequest struct {
-	PathParams  TeamsListIdpGroupsForOrgPathParams
-	QueryParams TeamsListIdpGroupsForOrgQueryParams
 }
 
 type TeamsListIdpGroupsForOrgResponse struct {

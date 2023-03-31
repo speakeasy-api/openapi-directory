@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmIdentityProviderInstancesAliasManagementPermissionsPathParams struct {
+type GetRealmIdentityProviderInstancesAliasManagementPermissionsRequest struct {
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmIdentityProviderInstancesAliasManagementPermissionsRequest struct {
-	PathParams GetRealmIdentityProviderInstancesAliasManagementPermissionsPathParams
 }
 
 type GetRealmIdentityProviderInstancesAliasManagementPermissionsResponse struct {

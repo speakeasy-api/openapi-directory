@@ -34,7 +34,7 @@ func newSecurityCenters(defaultClient, securityClient HTTPClient, serverURL, lan
 // List the security centers on a device
 func (s *securityCenters) GetNetworkSmDeviceSecurityCenters(ctx context.Context, request operations.GetNetworkSmDeviceSecurityCentersRequest) (*operations.GetNetworkSmDeviceSecurityCentersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/securityCenters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/securityCenters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

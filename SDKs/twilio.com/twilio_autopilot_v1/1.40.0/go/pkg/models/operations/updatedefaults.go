@@ -12,12 +12,8 @@ var UpdateDefaultsServerList = []string{
 }
 
 type UpdateDefaultsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDefaultsPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDefaultsUpdateDefaultsRequest struct {
@@ -26,10 +22,9 @@ type UpdateDefaultsUpdateDefaultsRequest struct {
 }
 
 type UpdateDefaultsRequest struct {
-	PathParams UpdateDefaultsPathParams
-	Request    *UpdateDefaultsUpdateDefaultsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDefaultsSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+	AssistantSid string                               `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateDefaultsUpdateDefaultsRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateDefaultsResponse struct {

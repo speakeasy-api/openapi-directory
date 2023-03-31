@@ -12,24 +12,15 @@ var FetchTrunkingNumberServerList = []string{
 }
 
 type FetchTrunkingNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchTrunkingNumberPathParams struct {
-	// The destination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
-	DestinationNumber string `pathParam:"style=simple,explode=false,name=DestinationNumber"`
-}
-
-type FetchTrunkingNumberQueryParams struct {
-	// The origination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
-	OriginationNumber *string `queryParam:"style=form,explode=true,name=OriginationNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchTrunkingNumberRequest struct {
-	PathParams  FetchTrunkingNumberPathParams
-	QueryParams FetchTrunkingNumberQueryParams
-	Security    FetchTrunkingNumberSecurity
-	ServerURL   *string
+	// The destination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
+	DestinationNumber string `pathParam:"style=simple,explode=false,name=DestinationNumber"`
+	// The origination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
+	OriginationNumber *string `queryParam:"style=form,explode=true,name=OriginationNumber"`
 }
 
 type FetchTrunkingNumberResponse struct {

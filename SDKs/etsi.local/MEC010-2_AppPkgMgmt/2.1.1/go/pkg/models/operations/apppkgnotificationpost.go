@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPkgNotificationPOSTRequest struct {
-	// Notification endpoint to be created
-	Request shared.AppPkgNotification `request:"mediaType=application/json"`
-}
-
 type AppPkgNotificationPOSTResponse struct {
 	ContentType string
 	// Unauthorized :  used when the client did not submit credentials.

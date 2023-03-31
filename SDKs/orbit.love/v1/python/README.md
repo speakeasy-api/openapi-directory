@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/orbit.love/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,21 +15,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest(
-    security=operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDSecurity(
-        bearer=shared.SchemeBearer(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    path_params=operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams(
-        id="ipsum",
-        member_id="commodi",
-        workspace_id="qui",
-    ),
+
+
+req = operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest(
+    id="corrupti",
+    member_slug="provident",
+    workspace_slug="distinctio",
 )
     
-res = s.activities.delete_workspace_id_members_member_id_activities_id_(req)
+res = s.activities.delete_workspace_slug_members_member_slug_activities_id_(req, operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity(
+    bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response
@@ -37,52 +33,79 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Activities
 
-* `delete_workspace_id_members_member_id_activities_id_` - Delete a post activity
-* `get_workspace_id_activities` - List activities for a workspace
-* `get_workspace_id_activities_id_` - Get an activity in the workspace
-* `get_workspace_id_members_member_id_activities` - List activities for a member
-* `post_workspace_id_activities` - Create a Custom or a Content activity for a new or existing member
-* `post_workspace_id_members_member_id_activities` - Create a Custom or a Content activity for a member
-* `put_workspace_id_members_member_id_activities_id_` - Update a custom activity for a member
+### activities
 
-### Activity Types
+* `delete_workspace_slug_members_member_slug_activities_id_` - Delete a post activity
+* `get_workspace_slug_activities` - List activities for a workspace
+* `get_workspace_slug_activities_id_` - Get an activity in the workspace
+* `get_workspace_slug_members_member_slug_activities` - List activities for a member
+* `get_workspace_slug_organizations_organization_id_activities` - List member activities in an organization
+* `post_workspace_slug_activities` - Create a Custom or a Content activity for a new or existing member
+* `post_workspace_slug_members_member_slug_activities` - Create a Custom or a Content activity for a member
+* `put_workspace_slug_members_member_slug_activities_id_` - Update a custom activity for a member
 
-* `get_workspace_id_activity_types` - List all activity types for a workspace
+### activity_types
 
-### Members
+* `get_workspace_slug_activity_types` - List all activity types for a workspace
 
-* `delete_workspace_id_members_id_` - Delete a member
-* `delete_workspace_id_members_member_id_identities` - Remove identity from a member
-* `get_workspace_id_members` - List members in a workspace
-* `get_workspace_id_members_find` - Find a member by an identity
-* `get_workspace_id_members_id_` - Get a member
-* `post_workspace_id_members` - Create or update a member
-* `post_workspace_id_members_member_id_identities` - Add identity to a member
-* `put_workspace_id_members_id_` - Update a member
+### members
 
-### Notes
+* `delete_workspace_slug_members_member_slug_` - Delete a member
+* `delete_workspace_slug_members_member_slug_identities` - Remove identity from a member
+* `get_workspace_slug_members` - List members in a workspace
+* `get_workspace_slug_members_find` - Find a member by an identity
+* `get_workspace_slug_members_member_slug_` - Get a member
+* `get_workspace_slug_organizations_organization_id_members` - List members in an organization
+* `post_workspace_slug_members` - Create or update a member
+* `post_workspace_slug_members_member_slug_identities` - Add identity to a member
+* `put_workspace_slug_members_member_slug_` - Update a member
 
-* `get_workspace_id_members_member_id_notes` - Get the member's notes
-* `post_workspace_id_members_member_id_notes` - Create a note
-* `put_workspace_id_members_member_id_notes_id_` - Update a note
+### notes
 
-### Reports
+* `get_workspace_slug_members_member_slug_notes` - Get the member's notes
+* `post_workspace_slug_members_member_slug_notes` - Create a note
+* `put_workspace_slug_members_member_slug_notes_id_` - Update a note
 
-* `get_workspace_id_reports` - Get a workspace stats
+### organizations
 
-### Users
+* `get_workspace_slug_organizations` - List organizations in a workspace
+* `get_workspace_slug_organizations_organization_id_` - Get an organization
+* `put_workspace_slug_organizations_organization_id_` - Update an organization
+
+### reports
+
+* `get_workspace_slug_reports` - Get a workspace stats
+
+### users
 
 * `get_user` - Get info about the current user
 
-### Workspaces
+### webhooks
+
+* `delete_workspace_slug_webhooks_id_` - Delete a webhook
+* `get_workspace_slug_webhooks` - List webhooks in a workspace
+* `get_workspace_slug_webhooks_id_` - Get a webhook
+* `post_workspace_slug_webhooks` - Create a webhook
+* `put_workspace_slug_webhooks_id_` - Update a webhook
+
+### workspaces
 
 * `get_workspaces` - Get all workspaces for the current user
-* `get_workspaces_workspace_id_` - Get a workspace
-
+* `get_workspaces_workspace_slug_` - Get a workspace
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

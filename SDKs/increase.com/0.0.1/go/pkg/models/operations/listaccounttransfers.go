@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type ListAccountTransfersQueryParams struct {
+type ListAccountTransfersRequest struct {
 	AccountID           *string    `queryParam:"style=form,explode=true,name=account_id"`
 	CreatedAtAfter      *time.Time `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time `queryParam:"style=form,explode=true,name=created_at.before"`
@@ -18,10 +18,6 @@ type ListAccountTransfersQueryParams struct {
 	CreatedAtOnOrBefore *time.Time `queryParam:"style=form,explode=true,name=created_at.on_or_before"`
 	Cursor              *string    `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64     `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListAccountTransfersRequest struct {
-	QueryParams ListAccountTransfersQueryParams
 }
 
 type ListAccountTransfersDefaultApplicationJSON13StatusEnum string

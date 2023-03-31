@@ -12,17 +12,12 @@ var FetchUnderstandAssistantInitiationActionsServerList = []string{
 }
 
 type FetchUnderstandAssistantInitiationActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUnderstandAssistantInitiationActionsPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUnderstandAssistantInitiationActionsRequest struct {
-	PathParams FetchUnderstandAssistantInitiationActionsPathParams
-	Security   FetchUnderstandAssistantInitiationActionsSecurity
-	ServerURL  *string
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 }
 
 type FetchUnderstandAssistantInitiationActionsResponse struct {

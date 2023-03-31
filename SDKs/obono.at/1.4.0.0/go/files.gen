@@ -35,7 +35,6 @@ pkg/models/operations/getmonatsbelege.go
 pkg/models/operations/getdep.go
 pkg/models/operations/getregistrierkasse.go
 pkg/models/shared/authresult.go
-pkg/models/shared/security.go
 pkg/models/shared/belegdaten.go
 pkg/models/shared/zahlung.go
 pkg/models/shared/rabatt.go
@@ -46,4 +45,5 @@ pkg/models/shared/signiertebelegdaten.go
 pkg/models/shared/belege.go
 pkg/models/shared/monatsbeleg.go
 pkg/models/shared/registrierkasse.go
+pkg/models/shared/security.go
 USAGE.md

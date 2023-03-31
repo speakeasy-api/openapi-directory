@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInterfacesListQueryParams struct {
+type DcimInterfacesListRequest struct {
 	Cabled            *string `queryParam:"style=form,explode=true,name=cabled"`
 	ConnectionStatus  *string `queryParam:"style=form,explode=true,name=connection_status"`
 	ConnectionStatusN *string `queryParam:"style=form,explode=true,name=connection_status__n"`
@@ -81,10 +81,6 @@ type DcimInterfacesListQueryParams struct {
 	TypeN     *string `queryParam:"style=form,explode=true,name=type__n"`
 	Vlan      *string `queryParam:"style=form,explode=true,name=vlan"`
 	VlanID    *string `queryParam:"style=form,explode=true,name=vlan_id"`
-}
-
-type DcimInterfacesListRequest struct {
-	QueryParams DcimInterfacesListQueryParams
 }
 
 type DcimInterfacesList200ApplicationJSON struct {

@@ -41,7 +41,7 @@ func newMerchants(defaultClient, securityClient HTTPClient, serverURL, language,
 //
 // If you know the merchant ID, you can also use the [RetrieveMerchant](https://developer.squareup.com/reference/square_2021-08-18/merchants-api/retrieve-merchant)
 // endpoint to get the merchant information.
-func (s *merchants) ListMerchants(ctx context.Context, request operations.ListMerchantsRequest) (*operations.ListMerchantsResponse, error) {
+func (s *merchants) ListMerchants(ctx context.Context, request operations.ListMerchantsRequest, security operations.ListMerchantsSecurity) (*operations.ListMerchantsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/merchants"
 
@@ -50,11 +50,11 @@ func (s *merchants) ListMerchants(ctx context.Context, request operations.ListMe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,16 +90,16 @@ func (s *merchants) ListMerchants(ctx context.Context, request operations.ListMe
 
 // RetrieveMerchant - RetrieveMerchant
 // Retrieve a `Merchant` object for the given `merchant_id`.
-func (s *merchants) RetrieveMerchant(ctx context.Context, request operations.RetrieveMerchantRequest) (*operations.RetrieveMerchantResponse, error) {
+func (s *merchants) RetrieveMerchant(ctx context.Context, request operations.RetrieveMerchantRequest, security operations.RetrieveMerchantSecurity) (*operations.RetrieveMerchantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/merchants/{merchant_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/merchants/{merchant_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

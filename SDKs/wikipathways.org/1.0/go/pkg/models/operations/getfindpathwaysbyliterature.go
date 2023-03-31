@@ -44,14 +44,10 @@ func (e *GetFindPathwaysByLiteratureFormatEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetFindPathwaysByLiteratureQueryParams struct {
+type GetFindPathwaysByLiteratureRequest struct {
 	Format *GetFindPathwaysByLiteratureFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The query, can be a pubmed id, author name or title keyword.
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetFindPathwaysByLiteratureRequest struct {
-	QueryParams GetFindPathwaysByLiteratureQueryParams
 }
 
 type GetFindPathwaysByLiteratureResponse struct {

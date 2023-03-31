@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkVlanPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	VlanID    string `pathParam:"style=simple,explode=false,name=vlanId"`
-}
-
 // UpdateNetworkVlanRequestBodyDhcpHandlingEnum - The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
 type UpdateNetworkVlanRequestBodyDhcpHandlingEnum string
 
@@ -158,8 +153,9 @@ type UpdateNetworkVlanRequestBody struct {
 }
 
 type UpdateNetworkVlanRequest struct {
-	PathParams UpdateNetworkVlanPathParams
-	Request    *UpdateNetworkVlanRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkVlanRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                        `pathParam:"style=simple,explode=false,name=networkId"`
+	VlanID      string                        `pathParam:"style=simple,explode=false,name=vlanId"`
 }
 
 type UpdateNetworkVlanResponse struct {

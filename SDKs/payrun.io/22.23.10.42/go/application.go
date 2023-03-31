@@ -36,14 +36,14 @@ func newApplication(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes an Application secret from the given resource location
 func (s *application) DeleteApplicationSecret(ctx context.Context, request operations.DeleteApplicationSecretRequest) (*operations.DeleteApplicationSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *application) DeleteApplicationSecret(ctx context.Context, request opera
 // Get the public visible Application secret object
 func (s *application) GetApplicationSecret(ctx context.Context, request operations.GetApplicationSecretRequest) (*operations.GetApplicationSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -160,7 +160,7 @@ func (s *application) GetApplicationSecrets(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -223,7 +223,7 @@ func (s *application) PostApplicationSecret(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -279,14 +279,14 @@ func (s *application) PostApplicationSecret(ctx context.Context, request operati
 // Create / update an Application secret at the given resource location
 func (s *application) PutApplicationSecret(ctx context.Context, request operations.PutApplicationSecretRequest) (*operations.PutApplicationSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDPathParams struct {
+type DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDRequest struct {
 	// assessment's id
 	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDRequest struct {
-	PathParams DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDPathParams
 }
 
 type DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDResponse struct {

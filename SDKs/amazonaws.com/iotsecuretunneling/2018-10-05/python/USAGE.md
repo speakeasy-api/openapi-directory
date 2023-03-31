@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CloseTunnelRequest(
-    headers=operations.CloseTunnelHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="est",
-        x_amz_credential="consequatur",
-        x_amz_date="quia",
-        x_amz_security_token="ad",
-        x_amz_signature="nemo",
-        x_amz_signed_headers="quia",
-        x_amz_target="IoTSecuredTunneling.CloseTunnel",
+    close_tunnel_request=shared.CloseTunnelRequest(
+        delete=False,
+        tunnel_id="corrupti",
     ),
-    request=shared.CloseTunnelRequest(
-        delete=True,
-        tunnel_id="dolores",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="IoTSecuredTunneling.CloseTunnel",
 )
     
 res = s.close_tunnel(req)

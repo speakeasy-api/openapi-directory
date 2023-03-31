@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VersionhistoryPlatformsChannelsListPathParams struct {
-	// Required. The platform, which owns this collection of channels. Format: {product}/platforms/{platform}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type VersionhistoryPlatformsChannelsListQueryParams struct {
+type VersionhistoryPlatformsChannelsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type VersionhistoryPlatformsChannelsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListChannels` call. Provide this to retrieve the subsequent page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The platform, which owns this collection of channels. Format: {product}/platforms/{platform}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type VersionhistoryPlatformsChannelsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VersionhistoryPlatformsChannelsListRequest struct {
-	PathParams  VersionhistoryPlatformsChannelsListPathParams
-	QueryParams VersionhistoryPlatformsChannelsListQueryParams
 }
 
 type VersionhistoryPlatformsChannelsListResponse struct {

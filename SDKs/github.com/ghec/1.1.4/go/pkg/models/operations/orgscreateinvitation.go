@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsCreateInvitationPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsCreateInvitationRequestBodyRoleEnum - The role for the new member.
 //   - `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
 //   - `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.
@@ -59,8 +54,9 @@ type OrgsCreateInvitationRequestBody struct {
 }
 
 type OrgsCreateInvitationRequest struct {
-	PathParams OrgsCreateInvitationPathParams
-	Request    *OrgsCreateInvitationRequestBody `request:"mediaType=application/json"`
+	RequestBody *OrgsCreateInvitationRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsCreateInvitationResponse struct {

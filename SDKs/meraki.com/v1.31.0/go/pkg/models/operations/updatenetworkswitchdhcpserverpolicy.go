@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchDhcpServerPolicyPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSwitchDhcpServerPolicyRequestBodyAlertsEmail - Email alert settings for DHCP servers
 type UpdateNetworkSwitchDhcpServerPolicyRequestBodyAlertsEmail struct {
 	// When enabled, send an email if a new DHCP server is seen. Default value is false.
@@ -68,8 +64,8 @@ type UpdateNetworkSwitchDhcpServerPolicyRequestBody struct {
 }
 
 type UpdateNetworkSwitchDhcpServerPolicyRequest struct {
-	PathParams UpdateNetworkSwitchDhcpServerPolicyPathParams
-	Request    *UpdateNetworkSwitchDhcpServerPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchDhcpServerPolicyRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchDhcpServerPolicyResponse struct {

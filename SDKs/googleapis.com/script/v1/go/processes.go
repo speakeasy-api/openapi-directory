@@ -33,7 +33,7 @@ func newProcesses(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ScriptProcessesList - List information about processes made by or on behalf of a user, such as process type and current status.
-func (s *processes) ScriptProcessesList(ctx context.Context, request operations.ScriptProcessesListRequest) (*operations.ScriptProcessesListResponse, error) {
+func (s *processes) ScriptProcessesList(ctx context.Context, request operations.ScriptProcessesListRequest, security operations.ScriptProcessesListSecurity) (*operations.ScriptProcessesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/processes"
 
@@ -42,11 +42,11 @@ func (s *processes) ScriptProcessesList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *processes) ScriptProcessesList(ctx context.Context, request operations.
 }
 
 // ScriptProcessesListScriptProcesses - List information about a script's executed processes, such as process type and current status.
-func (s *processes) ScriptProcessesListScriptProcesses(ctx context.Context, request operations.ScriptProcessesListScriptProcessesRequest) (*operations.ScriptProcessesListScriptProcessesResponse, error) {
+func (s *processes) ScriptProcessesListScriptProcesses(ctx context.Context, request operations.ScriptProcessesListScriptProcessesRequest, security operations.ScriptProcessesListScriptProcessesSecurity) (*operations.ScriptProcessesListScriptProcessesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/processes:listScriptProcesses"
 
@@ -90,11 +90,11 @@ func (s *processes) ScriptProcessesListScriptProcesses(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

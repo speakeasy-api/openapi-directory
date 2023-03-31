@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidIdentityPsksPathParams struct {
+type GetNetworkWirelessSsidIdentityPsksRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidIdentityPsksRequest struct {
-	PathParams GetNetworkWirelessSsidIdentityPsksPathParams
 }
 
 type GetNetworkWirelessSsidIdentityPsks200ApplicationJSON struct {

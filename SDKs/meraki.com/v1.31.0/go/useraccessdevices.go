@@ -34,7 +34,7 @@ func newUserAccessDevices(defaultClient, securityClient HTTPClient, serverURL, l
 // Delete a User Access Device
 func (s *userAccessDevices) DeleteNetworkSmUserAccessDevice(ctx context.Context, request operations.DeleteNetworkSmUserAccessDeviceRequest) (*operations.DeleteNetworkSmUserAccessDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices/{userAccessDeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices/{userAccessDeviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -70,14 +70,14 @@ func (s *userAccessDevices) DeleteNetworkSmUserAccessDevice(ctx context.Context,
 // List User Access Devices and its Trusted Access Connections
 func (s *userAccessDevices) GetNetworkSmUserAccessDevices(ctx context.Context, request operations.GetNetworkSmUserAccessDevicesRequest) (*operations.GetNetworkSmUserAccessDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

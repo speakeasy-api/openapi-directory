@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminPingGlobalWebhookPathParams struct {
+type EnterpriseAdminPingGlobalWebhookRequest struct {
 	// The unique identifier of the hook.
 	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
-type EnterpriseAdminPingGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminPingGlobalWebhookPathParams
 }
 
 type EnterpriseAdminPingGlobalWebhookResponse struct {

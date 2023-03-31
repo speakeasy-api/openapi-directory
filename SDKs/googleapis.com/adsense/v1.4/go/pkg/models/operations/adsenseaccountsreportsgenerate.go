@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsReportsGenerateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsGenerateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsGenerateSecurity struct {
@@ -22,12 +22,9 @@ type AdsenseAccountsReportsGenerateSecurity struct {
 	Option2 *AdsenseAccountsReportsGenerateSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsReportsGeneratePathParams struct {
+type AdsenseAccountsReportsGenerateRequest struct {
 	// Account upon which to report.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AdsenseAccountsReportsGenerateQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
@@ -64,12 +61,6 @@ type AdsenseAccountsReportsGenerateQueryParams struct {
 	UseTimezoneReporting *bool `queryParam:"style=form,explode=true,name=useTimezoneReporting"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsReportsGenerateRequest struct {
-	PathParams  AdsenseAccountsReportsGeneratePathParams
-	QueryParams AdsenseAccountsReportsGenerateQueryParams
-	Security    AdsenseAccountsReportsGenerateSecurity
 }
 
 type AdsenseAccountsReportsGenerateResponse struct {

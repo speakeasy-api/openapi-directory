@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsolePortsListQueryParams struct {
+type DcimConsolePortsListRequest struct {
 	Cabled            *string `queryParam:"style=form,explode=true,name=cabled"`
 	ConnectionStatus  *string `queryParam:"style=form,explode=true,name=connection_status"`
 	ConnectionStatusN *string `queryParam:"style=form,explode=true,name=connection_status__n"`
@@ -58,10 +58,6 @@ type DcimConsolePortsListQueryParams struct {
 	TagN      *string `queryParam:"style=form,explode=true,name=tag__n"`
 	Type      *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN     *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimConsolePortsListRequest struct {
-	QueryParams DcimConsolePortsListQueryParams
 }
 
 type DcimConsolePortsList200ApplicationJSON struct {

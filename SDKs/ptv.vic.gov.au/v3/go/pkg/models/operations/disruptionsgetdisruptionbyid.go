@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisruptionsGetDisruptionByIDPathParams struct {
-	// Identifier of disruption; values returned by Disruptions API - /v3/disruptions OR /v3/disruptions/route/{route_id}
-	DisruptionID int64 `pathParam:"style=simple,explode=false,name=disruption_id"`
-}
-
-type DisruptionsGetDisruptionByIDQueryParams struct {
+type DisruptionsGetDisruptionByIDRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
+	// Identifier of disruption; values returned by Disruptions API - /v3/disruptions OR /v3/disruptions/route/{route_id}
+	DisruptionID int64 `pathParam:"style=simple,explode=false,name=disruption_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DisruptionsGetDisruptionByIDRequest struct {
-	PathParams  DisruptionsGetDisruptionByIDPathParams
-	QueryParams DisruptionsGetDisruptionByIDQueryParams
 }
 
 type DisruptionsGetDisruptionByIDResponse struct {

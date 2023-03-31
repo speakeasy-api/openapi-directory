@@ -34,7 +34,7 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // ReportsCreate - Create a new report.
 // This POST-Method creates a new report.
-func (s *reports) ReportsCreate(ctx context.Context, request operations.ReportsCreateRequest) (*operations.ReportsCreateResponse, error) {
+func (s *reports) ReportsCreate(ctx context.Context, request shared.ReportRequest) (*operations.ReportsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/"
 
@@ -144,7 +144,7 @@ func (s *reports) ReportsList(ctx context.Context) (*operations.ReportsListRespo
 // This GET-Method returns the details of a specific report.
 func (s *reports) ReportsRead(ctx context.Context, request operations.ReportsReadRequest) (*operations.ReportsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{report_number}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{report_number}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

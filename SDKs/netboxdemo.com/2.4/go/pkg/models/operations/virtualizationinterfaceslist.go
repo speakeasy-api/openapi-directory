@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationInterfacesListQueryParams struct {
+type VirtualizationInterfacesListRequest struct {
 	Enabled *string `queryParam:"style=form,explode=true,name=enabled"`
 	// Number of results to return per page.
 	Limit      *int64   `queryParam:"style=form,explode=true,name=limit"`
@@ -18,10 +18,6 @@ type VirtualizationInterfacesListQueryParams struct {
 	Offset           *int64  `queryParam:"style=form,explode=true,name=offset"`
 	VirtualMachine   *string `queryParam:"style=form,explode=true,name=virtual_machine"`
 	VirtualMachineID *string `queryParam:"style=form,explode=true,name=virtual_machine_id"`
-}
-
-type VirtualizationInterfacesListRequest struct {
-	QueryParams VirtualizationInterfacesListQueryParams
 }
 
 type VirtualizationInterfacesList200ApplicationJSON struct {

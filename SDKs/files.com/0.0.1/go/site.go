@@ -108,7 +108,7 @@ func (s *site) GetSiteAPIKeys(ctx context.Context, request operations.GetSiteAPI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,7 +176,7 @@ func (s *site) GetSiteDNSRecords(ctx context.Context, request operations.GetSite
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,7 +244,7 @@ func (s *site) GetSiteIPAddresses(ctx context.Context, request operations.GetSit
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -367,7 +367,7 @@ func (s *site) GetSiteUsage(ctx context.Context) (*operations.GetSiteUsageRespon
 
 // PatchSite - Update site settings.
 // Update site settings.
-func (s *site) PatchSite(ctx context.Context, request operations.PatchSiteRequest) (*operations.PatchSiteResponse, error) {
+func (s *site) PatchSite(ctx context.Context, request operations.PatchSiteRequestBody) (*operations.PatchSiteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/site"
 
@@ -438,7 +438,7 @@ func (s *site) PatchSite(ctx context.Context, request operations.PatchSiteReques
 
 // PostSiteAPIKeys - Create Api Key
 // Create Api Key
-func (s *site) PostSiteAPIKeys(ctx context.Context, request operations.PostSiteAPIKeysRequest) (*operations.PostSiteAPIKeysResponse, error) {
+func (s *site) PostSiteAPIKeys(ctx context.Context, request operations.PostSiteAPIKeysRequestBody) (*operations.PostSiteAPIKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/site/api_keys"
 
@@ -509,7 +509,7 @@ func (s *site) PostSiteAPIKeys(ctx context.Context, request operations.PostSiteA
 
 // PostSiteTestWebhook - Test webhook.
 // Test webhook.
-func (s *site) PostSiteTestWebhook(ctx context.Context, request operations.PostSiteTestWebhookRequest) (*operations.PostSiteTestWebhookResponse, error) {
+func (s *site) PostSiteTestWebhook(ctx context.Context, request operations.PostSiteTestWebhookRequestBody) (*operations.PostSiteTestWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/site/test-webhook"
 

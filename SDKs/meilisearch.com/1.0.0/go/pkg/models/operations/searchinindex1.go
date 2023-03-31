@@ -11,10 +11,6 @@ type SearchInIndex1RequestBody struct {
 	Q                     *string  `json:"q,omitempty"`
 }
 
-type SearchInIndex1Request struct {
-	Request *SearchInIndex1RequestBody `request:"mediaType=application/json"`
-}
-
 type SearchInIndex1Response struct {
 	ContentType string
 	StatusCode  int

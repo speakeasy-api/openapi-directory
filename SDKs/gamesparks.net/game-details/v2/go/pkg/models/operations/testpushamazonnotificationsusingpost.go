@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestPushAmazonNotificationsUsingPOSTPathParams struct {
+type TestPushAmazonNotificationsUsingPOSTRequest struct {
+	// messageDetails
+	PushNotificationTestModel shared.PushNotificationTestModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type TestPushAmazonNotificationsUsingPOSTRequest struct {
-	PathParams TestPushAmazonNotificationsUsingPOSTPathParams
-	// messageDetails
-	Request shared.PushNotificationTestModel `request:"mediaType=application/json"`
 }
 
 type TestPushAmazonNotificationsUsingPOSTResponse struct {

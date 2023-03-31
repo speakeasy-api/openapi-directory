@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1ResourcesIDServicesPathParams struct {
+type GetConsumerV1ResourcesIDServicesRequest struct {
 	// id of resource object
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetConsumerV1ResourcesIDServicesQueryParams struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetConsumerV1ResourcesIDServicesRequest struct {
-	PathParams  GetConsumerV1ResourcesIDServicesPathParams
-	QueryParams GetConsumerV1ResourcesIDServicesQueryParams
 }
 
 type GetConsumerV1ResourcesIDServicesResponse struct {

@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveACardDisputePathParams struct {
-	CardDisputeID string `pathParam:"style=simple,explode=false,name=card_dispute_id"`
-}
-
 type RetrieveACardDisputeRequest struct {
-	PathParams RetrieveACardDisputePathParams
+	CardDisputeID string `pathParam:"style=simple,explode=false,name=card_dispute_id"`
 }
 
 type RetrieveACardDisputeDefaultApplicationJSON13StatusEnum string

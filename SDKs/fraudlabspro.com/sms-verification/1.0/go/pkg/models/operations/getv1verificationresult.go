@@ -32,7 +32,7 @@ func (e *GetV1VerificationResultFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetV1VerificationResultQueryParams struct {
+type GetV1VerificationResultRequest struct {
 	// Returns the API response in json (default) or xml format.
 	Format *GetV1VerificationResultFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// FraudLabs Pro API key.
@@ -41,10 +41,6 @@ type GetV1VerificationResultQueryParams struct {
 	Otp string `queryParam:"style=form,explode=true,name=otp"`
 	// The unique ID that was returned by the Send Verification SMS API that triggered the OTP sms.
 	TranID string `queryParam:"style=form,explode=true,name=tran_id"`
-}
-
-type GetV1VerificationResultRequest struct {
-	QueryParams GetV1VerificationResultQueryParams
 }
 
 type GetV1VerificationResultResponse struct {

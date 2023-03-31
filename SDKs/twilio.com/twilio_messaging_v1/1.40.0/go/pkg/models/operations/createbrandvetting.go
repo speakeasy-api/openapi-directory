@@ -12,12 +12,8 @@ var CreateBrandVettingServerList = []string{
 }
 
 type CreateBrandVettingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateBrandVettingPathParams struct {
-	// The SID of the Brand Registration resource of the vettings to create .
-	BrandSid string `pathParam:"style=simple,explode=false,name=BrandSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBrandVettingCreateBrandVettingRequest struct {
@@ -27,10 +23,9 @@ type CreateBrandVettingCreateBrandVettingRequest struct {
 }
 
 type CreateBrandVettingRequest struct {
-	PathParams CreateBrandVettingPathParams
-	Request    *CreateBrandVettingCreateBrandVettingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateBrandVettingSecurity
-	ServerURL  *string
+	// The SID of the Brand Registration resource of the vettings to create .
+	BrandSid    string                                       `pathParam:"style=simple,explode=false,name=BrandSid"`
+	RequestBody *CreateBrandVettingCreateBrandVettingRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateBrandVettingResponse struct {

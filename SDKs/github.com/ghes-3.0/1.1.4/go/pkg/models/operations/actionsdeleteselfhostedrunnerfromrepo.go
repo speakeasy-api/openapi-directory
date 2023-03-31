@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteSelfHostedRunnerFromRepoPathParams struct {
+type ActionsDeleteSelfHostedRunnerFromRepoRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsDeleteSelfHostedRunnerFromRepoRequest struct {
-	PathParams ActionsDeleteSelfHostedRunnerFromRepoPathParams
 }
 
 type ActionsDeleteSelfHostedRunnerFromRepoResponse struct {

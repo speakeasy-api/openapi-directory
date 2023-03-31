@@ -12,12 +12,8 @@ var CreateRateLimitServerList = []string{
 }
 
 type CreateRateLimitSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateRateLimitPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateRateLimitCreateRateLimitRequest struct {
@@ -28,10 +24,9 @@ type CreateRateLimitCreateRateLimitRequest struct {
 }
 
 type CreateRateLimitRequest struct {
-	PathParams CreateRateLimitPathParams
-	Request    *CreateRateLimitCreateRateLimitRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateRateLimitSecurity
-	ServerURL  *string
+	RequestBody *CreateRateLimitCreateRateLimitRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateRateLimitResponse struct {

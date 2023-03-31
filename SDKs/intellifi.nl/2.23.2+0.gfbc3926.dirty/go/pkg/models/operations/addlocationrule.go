@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddLocationRuleRequest struct {
-	// A JSON object containing the location rule
-	Request shared.LocationRuleUpdate `request:"mediaType=application/json"`
-}
-
 type AddLocationRuleResponse struct {
 	ContentType string
 	// A JSON object containing the newly added resource

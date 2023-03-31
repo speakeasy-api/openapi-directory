@@ -12,10 +12,11 @@ var ListEsimProfileServerList = []string{
 }
 
 type ListEsimProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListEsimProfileQueryParams struct {
+type ListEsimProfileRequest struct {
 	// List the eSIM Profiles that have been associated with an EId.
 	Eid *string `queryParam:"style=form,explode=true,name=Eid"`
 	// The page index. This value is simply for client state.
@@ -28,12 +29,6 @@ type ListEsimProfileQueryParams struct {
 	SimSid *string `queryParam:"style=form,explode=true,name=SimSid"`
 	// List the eSIM Profiles that are in a given status.
 	Status *shared.EsimProfileEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListEsimProfileRequest struct {
-	QueryParams ListEsimProfileQueryParams
-	Security    ListEsimProfileSecurity
-	ServerURL   *string
 }
 
 type ListEsimProfileListEsimProfileResponseMeta struct {

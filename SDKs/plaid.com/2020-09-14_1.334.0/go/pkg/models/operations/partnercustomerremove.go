@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PartnerCustomerRemoveRequest struct {
-	Request shared.PartnerCustomerRemoveRequest `request:"mediaType=application/json"`
-}
 
 type PartnerCustomerRemoveResponse struct {
 	ContentType string

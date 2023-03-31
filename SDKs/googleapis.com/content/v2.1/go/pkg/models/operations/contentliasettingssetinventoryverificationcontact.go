@@ -8,22 +8,17 @@ import (
 )
 
 type ContentLiasettingsSetinventoryverificationcontactSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentLiasettingsSetinventoryverificationcontactPathParams struct {
-	// The ID of the account that manages the order. This cannot be a multi-client account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentLiasettingsSetinventoryverificationcontactQueryParams struct {
+type ContentLiasettingsSetinventoryverificationcontactRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The ID of the account that manages the order. This cannot be a multi-client account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,6 +35,8 @@ type ContentLiasettingsSetinventoryverificationcontactQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The language for which inventory verification is requested.
 	Language string `queryParam:"style=form,explode=true,name=language"`
+	// The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type ContentLiasettingsSetinventoryverificationcontactQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentLiasettingsSetinventoryverificationcontactRequest struct {
-	PathParams  ContentLiasettingsSetinventoryverificationcontactPathParams
-	QueryParams ContentLiasettingsSetinventoryverificationcontactQueryParams
-	Security    ContentLiasettingsSetinventoryverificationcontactSecurity
 }
 
 type ContentLiasettingsSetinventoryverificationcontactResponse struct {

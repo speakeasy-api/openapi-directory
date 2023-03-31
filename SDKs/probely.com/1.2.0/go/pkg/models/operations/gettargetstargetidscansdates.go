@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTargetsTargetIDScansDatesPathParams struct {
+type GetTargetsTargetIDScansDatesRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDScansDatesRequest struct {
-	PathParams GetTargetsTargetIDScansDatesPathParams
 }
 
 // GetTargetsTargetIDScansDates404ApplicationJSON - Not found

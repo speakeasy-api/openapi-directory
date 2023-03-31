@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type ListtasksbyassigneeQueryParams struct {
+type ListtasksbyassigneeRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// If you wish to list tasks by assignee, insert the desired assignee's email and status.
 	AssigneeEmail *string `queryParam:"style=form,explode=true,name=assignee.email"`
 	// If you wish to list tasks by context, insert the desired context, `page`, `perPage` and `status`.
@@ -19,18 +23,6 @@ type ListtasksbyassigneeQueryParams struct {
 	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// If you wish to list tasks by target, insert the desired `targetId` and `status`.
 	TargetID *string `queryParam:"style=form,explode=true,name=target.id"`
-}
-
-type ListtasksbyassigneeHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ListtasksbyassigneeRequest struct {
-	QueryParams ListtasksbyassigneeQueryParams
-	Headers     ListtasksbyassigneeHeaders
 }
 
 type ListtasksbyassigneeResponse struct {

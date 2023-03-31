@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarPollGetSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebinarPollGetPathParams struct {
+type WebinarPollGetRequest struct {
 	// The poll ID
 	PollID string `pathParam:"style=simple,explode=false,name=pollId"`
 	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
 	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarPollGetRequest struct {
-	PathParams WebinarPollGetPathParams
-	Security   WebinarPollGetSecurity
 }
 
 // WebinarPollGetPollQuestionsTypeEnum - Poll Question & Answer type:<br>`single` - Single choice<br>`mutliple` - Multiple choice

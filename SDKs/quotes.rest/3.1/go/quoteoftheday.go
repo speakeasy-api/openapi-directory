@@ -35,7 +35,7 @@ func newQuoteOfTheDay(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // GetQod - Gets `Quote of the Day`. Optional `category` param determines the category of returned quote of the day
-func (s *quoteOfTheDay) GetQod(ctx context.Context, request operations.GetQodRequest) (*operations.GetQodResponse, error) {
+func (s *quoteOfTheDay) GetQod(ctx context.Context, request operations.GetQodRequest, security operations.GetQodSecurity) (*operations.GetQodResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qod"
 
@@ -44,11 +44,11 @@ func (s *quoteOfTheDay) GetQod(ctx context.Context, request operations.GetQodReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *quoteOfTheDay) GetQod(ctx context.Context, request operations.GetQodReq
 }
 
 // GetQodCategories - Gets a list of `Quote of the Day` Categories.
-func (s *quoteOfTheDay) GetQodCategories(ctx context.Context, request operations.GetQodCategoriesRequest) (*operations.GetQodCategoriesResponse, error) {
+func (s *quoteOfTheDay) GetQodCategories(ctx context.Context, request operations.GetQodCategoriesRequest, security operations.GetQodCategoriesSecurity) (*operations.GetQodCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qod/categories"
 
@@ -93,11 +93,11 @@ func (s *quoteOfTheDay) GetQodCategories(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *quoteOfTheDay) GetQodCategories(ctx context.Context, request operations
 }
 
 // GetQodLanguages - Gets a list of supported languages for `Quote of the Day`.
-func (s *quoteOfTheDay) GetQodLanguages(ctx context.Context, request operations.GetQodLanguagesRequest) (*operations.GetQodLanguagesResponse, error) {
+func (s *quoteOfTheDay) GetQodLanguages(ctx context.Context) (*operations.GetQodLanguagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qod/languages"
 
@@ -134,7 +134,7 @@ func (s *quoteOfTheDay) GetQodLanguages(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

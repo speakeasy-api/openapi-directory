@@ -50,10 +50,6 @@ type PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody struct {
 	RiskFreeRate float64 `json:"riskFreeRate"`
 }
 
-type PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequest struct {
-	Request PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisSharpeRatioConfidenceInterval200ApplicationJSONPortfolios struct {
 	// portfolioSharpeRatioConfidenceInterval[0] (resp. portfolioSharpeRatioConfidenceInterval[1]) is the lower (resp. upper) bound of the built confidence interval, possibly equal to null in case of a negative infinite (resp. positive infinite) bound
 	PortfolioSharpeRatioConfidenceInterval []float64 `json:"portfolioSharpeRatioConfidenceInterval"`

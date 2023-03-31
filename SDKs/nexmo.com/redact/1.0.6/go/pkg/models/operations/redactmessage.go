@@ -11,12 +11,8 @@ import (
 )
 
 type RedactMessageSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type RedactMessageRequest struct {
-	Request  shared.RedactTransaction `request:"mediaType=application/json"`
-	Security RedactMessageSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type RedactMessage422ApplicationJSONType string

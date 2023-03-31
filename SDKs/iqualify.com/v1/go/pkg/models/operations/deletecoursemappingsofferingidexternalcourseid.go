@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCourseMappingsOfferingIDExternalCourseIDPathParams struct {
+type DeleteCourseMappingsOfferingIDExternalCourseIDRequest struct {
 	// external course's id
 	ExternalCourseID string `pathParam:"style=simple,explode=false,name=externalCourseId"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type DeleteCourseMappingsOfferingIDExternalCourseIDRequest struct {
-	PathParams DeleteCourseMappingsOfferingIDExternalCourseIDPathParams
 }
 
 type DeleteCourseMappingsOfferingIDExternalCourseIDResponse struct {

@@ -12,20 +12,15 @@ var FetchSessionServerList = []string{
 }
 
 type FetchSessionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSessionPathParams struct {
+type FetchSessionRequest struct {
 	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Session resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSessionRequest struct {
-	PathParams FetchSessionPathParams
-	Security   FetchSessionSecurity
-	ServerURL  *string
 }
 
 type FetchSessionResponse struct {

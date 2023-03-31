@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateAccountConfig - Create a config for an Account.
-func (s *SDK) CreateAccountConfig(ctx context.Context, request operations.CreateAccountConfigRequest) (*operations.CreateAccountConfigResponse, error) {
+func (s *SDK) CreateAccountConfig(ctx context.Context, request operations.CreateAccountConfigCreateAccountConfigRequest, security operations.CreateAccountConfigSecurity, opts ...operations.Option) (*operations.CreateAccountConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateAccountConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configs"
@@ -113,7 +123,7 @@ func (s *SDK) CreateAccountConfig(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,10 +158,20 @@ func (s *SDK) CreateAccountConfig(ctx context.Context, request operations.Create
 }
 
 // CreateAccountSecret - Create a secret for an Account.
-func (s *SDK) CreateAccountSecret(ctx context.Context, request operations.CreateAccountSecretRequest) (*operations.CreateAccountSecretResponse, error) {
+func (s *SDK) CreateAccountSecret(ctx context.Context, request operations.CreateAccountSecretCreateAccountSecretRequest, security operations.CreateAccountSecretSecurity, opts ...operations.Option) (*operations.CreateAccountSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateAccountSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Secrets"
@@ -168,7 +188,7 @@ func (s *SDK) CreateAccountSecret(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,15 +223,25 @@ func (s *SDK) CreateAccountSecret(ctx context.Context, request operations.Create
 }
 
 // CreateDeviceConfig - Create a config for a Microvisor Device.
-func (s *SDK) CreateDeviceConfig(ctx context.Context, request operations.CreateDeviceConfigRequest) (*operations.CreateDeviceConfigResponse, error) {
-	baseURL := operations.CreateDeviceConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateDeviceConfig(ctx context.Context, request operations.CreateDeviceConfigRequest, security operations.CreateDeviceConfigSecurity, opts ...operations.Option) (*operations.CreateDeviceConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateDeviceConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +253,7 @@ func (s *SDK) CreateDeviceConfig(ctx context.Context, request operations.CreateD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,15 +288,25 @@ func (s *SDK) CreateDeviceConfig(ctx context.Context, request operations.CreateD
 }
 
 // CreateDeviceSecret - Create a secret for a Microvisor Device.
-func (s *SDK) CreateDeviceSecret(ctx context.Context, request operations.CreateDeviceSecretRequest) (*operations.CreateDeviceSecretResponse, error) {
-	baseURL := operations.CreateDeviceSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateDeviceSecret(ctx context.Context, request operations.CreateDeviceSecretRequest, security operations.CreateDeviceSecretSecurity, opts ...operations.Option) (*operations.CreateDeviceSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateDeviceSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,7 +318,7 @@ func (s *SDK) CreateDeviceSecret(ctx context.Context, request operations.CreateD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,20 +353,30 @@ func (s *SDK) CreateDeviceSecret(ctx context.Context, request operations.CreateD
 }
 
 // DeleteAccountConfig - Delete a config for an Account.
-func (s *SDK) DeleteAccountConfig(ctx context.Context, request operations.DeleteAccountConfigRequest) (*operations.DeleteAccountConfigResponse, error) {
-	baseURL := operations.DeleteAccountConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteAccountConfig(ctx context.Context, request operations.DeleteAccountConfigRequest, security operations.DeleteAccountConfigSecurity, opts ...operations.Option) (*operations.DeleteAccountConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Configs/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteAccountConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Configs/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -352,20 +402,30 @@ func (s *SDK) DeleteAccountConfig(ctx context.Context, request operations.Delete
 }
 
 // DeleteAccountSecret - Delete a secret for an Account.
-func (s *SDK) DeleteAccountSecret(ctx context.Context, request operations.DeleteAccountSecretRequest) (*operations.DeleteAccountSecretResponse, error) {
-	baseURL := operations.DeleteAccountSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteAccountSecret(ctx context.Context, request operations.DeleteAccountSecretRequest, security operations.DeleteAccountSecretSecurity, opts ...operations.Option) (*operations.DeleteAccountSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Secrets/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteAccountSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Secrets/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -391,20 +451,30 @@ func (s *SDK) DeleteAccountSecret(ctx context.Context, request operations.Delete
 }
 
 // DeleteApp - Delete a specific App.
-func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest) (*operations.DeleteAppResponse, error) {
-	baseURL := operations.DeleteAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest, security operations.DeleteAppSecurity, opts ...operations.Option) (*operations.DeleteAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Apps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Apps/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,20 +500,30 @@ func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest
 }
 
 // DeleteDeviceConfig - Delete a config for a Microvisor Device.
-func (s *SDK) DeleteDeviceConfig(ctx context.Context, request operations.DeleteDeviceConfigRequest) (*operations.DeleteDeviceConfigResponse, error) {
-	baseURL := operations.DeleteDeviceConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteDeviceConfig(ctx context.Context, request operations.DeleteDeviceConfigRequest, security operations.DeleteDeviceConfigSecurity, opts ...operations.Option) (*operations.DeleteDeviceConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteDeviceConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -469,20 +549,30 @@ func (s *SDK) DeleteDeviceConfig(ctx context.Context, request operations.DeleteD
 }
 
 // DeleteDeviceSecret - Delete a secret for a Microvisor Device.
-func (s *SDK) DeleteDeviceSecret(ctx context.Context, request operations.DeleteDeviceSecretRequest) (*operations.DeleteDeviceSecretResponse, error) {
-	baseURL := operations.DeleteDeviceSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteDeviceSecret(ctx context.Context, request operations.DeleteDeviceSecretRequest, security operations.DeleteDeviceSecretSecurity, opts ...operations.Option) (*operations.DeleteDeviceSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteDeviceSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -508,20 +598,30 @@ func (s *SDK) DeleteDeviceSecret(ctx context.Context, request operations.DeleteD
 }
 
 // FetchAccountConfig - Retrieve a Config for an Account.
-func (s *SDK) FetchAccountConfig(ctx context.Context, request operations.FetchAccountConfigRequest) (*operations.FetchAccountConfigResponse, error) {
-	baseURL := operations.FetchAccountConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAccountConfig(ctx context.Context, request operations.FetchAccountConfigRequest, security operations.FetchAccountConfigSecurity, opts ...operations.Option) (*operations.FetchAccountConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Configs/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAccountConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Configs/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -556,20 +656,30 @@ func (s *SDK) FetchAccountConfig(ctx context.Context, request operations.FetchAc
 }
 
 // FetchAccountSecret - Retrieve a Secret for an Account.
-func (s *SDK) FetchAccountSecret(ctx context.Context, request operations.FetchAccountSecretRequest) (*operations.FetchAccountSecretResponse, error) {
-	baseURL := operations.FetchAccountSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAccountSecret(ctx context.Context, request operations.FetchAccountSecretRequest, security operations.FetchAccountSecretSecurity, opts ...operations.Option) (*operations.FetchAccountSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Secrets/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAccountSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Secrets/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -604,20 +714,30 @@ func (s *SDK) FetchAccountSecret(ctx context.Context, request operations.FetchAc
 }
 
 // FetchApp - Fetch a specific App.
-func (s *SDK) FetchApp(ctx context.Context, request operations.FetchAppRequest) (*operations.FetchAppResponse, error) {
-	baseURL := operations.FetchAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchApp(ctx context.Context, request operations.FetchAppRequest, security operations.FetchAppSecurity, opts ...operations.Option) (*operations.FetchAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Apps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Apps/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -652,20 +772,30 @@ func (s *SDK) FetchApp(ctx context.Context, request operations.FetchAppRequest) 
 }
 
 // FetchAppManifest - Retrieve the Manifest for an App.
-func (s *SDK) FetchAppManifest(ctx context.Context, request operations.FetchAppManifestRequest) (*operations.FetchAppManifestResponse, error) {
-	baseURL := operations.FetchAppManifestServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAppManifest(ctx context.Context, request operations.FetchAppManifestRequest, security operations.FetchAppManifestSecurity, opts ...operations.Option) (*operations.FetchAppManifestResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Apps/{AppSid}/Manifest", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAppManifestServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Apps/{AppSid}/Manifest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -700,20 +830,30 @@ func (s *SDK) FetchAppManifest(ctx context.Context, request operations.FetchAppM
 }
 
 // FetchDevice - Fetch a specific Device.
-func (s *SDK) FetchDevice(ctx context.Context, request operations.FetchDeviceRequest) (*operations.FetchDeviceResponse, error) {
-	baseURL := operations.FetchDeviceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDevice(ctx context.Context, request operations.FetchDeviceRequest, security operations.FetchDeviceSecurity, opts ...operations.Option) (*operations.FetchDeviceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDeviceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -748,20 +888,30 @@ func (s *SDK) FetchDevice(ctx context.Context, request operations.FetchDeviceReq
 }
 
 // FetchDeviceConfig - Retrieve a Config for a Device.
-func (s *SDK) FetchDeviceConfig(ctx context.Context, request operations.FetchDeviceConfigRequest) (*operations.FetchDeviceConfigResponse, error) {
-	baseURL := operations.FetchDeviceConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDeviceConfig(ctx context.Context, request operations.FetchDeviceConfigRequest, security operations.FetchDeviceConfigSecurity, opts ...operations.Option) (*operations.FetchDeviceConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDeviceConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -796,20 +946,30 @@ func (s *SDK) FetchDeviceConfig(ctx context.Context, request operations.FetchDev
 }
 
 // FetchDeviceSecret - Retrieve a Secret for a Device.
-func (s *SDK) FetchDeviceSecret(ctx context.Context, request operations.FetchDeviceSecretRequest) (*operations.FetchDeviceSecretResponse, error) {
-	baseURL := operations.FetchDeviceSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchDeviceSecret(ctx context.Context, request operations.FetchDeviceSecretRequest, security operations.FetchDeviceSecretSecurity, opts ...operations.Option) (*operations.FetchDeviceSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchDeviceSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -844,10 +1004,20 @@ func (s *SDK) FetchDeviceSecret(ctx context.Context, request operations.FetchDev
 }
 
 // ListAccountConfig - Retrieve a list of all Configs for an Account.
-func (s *SDK) ListAccountConfig(ctx context.Context, request operations.ListAccountConfigRequest) (*operations.ListAccountConfigResponse, error) {
+func (s *SDK) ListAccountConfig(ctx context.Context, request operations.ListAccountConfigRequest, security operations.ListAccountConfigSecurity, opts ...operations.Option) (*operations.ListAccountConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListAccountConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configs"
@@ -857,11 +1027,11 @@ func (s *SDK) ListAccountConfig(ctx context.Context, request operations.ListAcco
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -896,10 +1066,20 @@ func (s *SDK) ListAccountConfig(ctx context.Context, request operations.ListAcco
 }
 
 // ListAccountSecret - Retrieve a list of all Secrets for an Account.
-func (s *SDK) ListAccountSecret(ctx context.Context, request operations.ListAccountSecretRequest) (*operations.ListAccountSecretResponse, error) {
+func (s *SDK) ListAccountSecret(ctx context.Context, request operations.ListAccountSecretRequest, security operations.ListAccountSecretSecurity, opts ...operations.Option) (*operations.ListAccountSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListAccountSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Secrets"
@@ -909,11 +1089,11 @@ func (s *SDK) ListAccountSecret(ctx context.Context, request operations.ListAcco
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -948,10 +1128,20 @@ func (s *SDK) ListAccountSecret(ctx context.Context, request operations.ListAcco
 }
 
 // ListApp - Retrieve a list of all Apps for an Account.
-func (s *SDK) ListApp(ctx context.Context, request operations.ListAppRequest) (*operations.ListAppResponse, error) {
+func (s *SDK) ListApp(ctx context.Context, request operations.ListAppRequest, security operations.ListAppSecurity, opts ...operations.Option) (*operations.ListAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Apps"
@@ -961,11 +1151,11 @@ func (s *SDK) ListApp(ctx context.Context, request operations.ListAppRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1000,10 +1190,20 @@ func (s *SDK) ListApp(ctx context.Context, request operations.ListAppRequest) (*
 }
 
 // ListDevice - Retrieve a list of all Devices registered with the Account.
-func (s *SDK) ListDevice(ctx context.Context, request operations.ListDeviceRequest) (*operations.ListDeviceResponse, error) {
+func (s *SDK) ListDevice(ctx context.Context, request operations.ListDeviceRequest, security operations.ListDeviceSecurity, opts ...operations.Option) (*operations.ListDeviceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListDeviceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Devices"
@@ -1013,11 +1213,11 @@ func (s *SDK) ListDevice(ctx context.Context, request operations.ListDeviceReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1052,24 +1252,34 @@ func (s *SDK) ListDevice(ctx context.Context, request operations.ListDeviceReque
 }
 
 // ListDeviceConfig - Retrieve a list of all Configs for a Device.
-func (s *SDK) ListDeviceConfig(ctx context.Context, request operations.ListDeviceConfigRequest) (*operations.ListDeviceConfigResponse, error) {
-	baseURL := operations.ListDeviceConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDeviceConfig(ctx context.Context, request operations.ListDeviceConfigRequest, security operations.ListDeviceConfigSecurity, opts ...operations.Option) (*operations.ListDeviceConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDeviceConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1104,24 +1314,34 @@ func (s *SDK) ListDeviceConfig(ctx context.Context, request operations.ListDevic
 }
 
 // ListDeviceSecret - Retrieve a list of all Secrets for a Device.
-func (s *SDK) ListDeviceSecret(ctx context.Context, request operations.ListDeviceSecretRequest) (*operations.ListDeviceSecretResponse, error) {
-	baseURL := operations.ListDeviceSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDeviceSecret(ctx context.Context, request operations.ListDeviceSecretRequest, security operations.ListDeviceSecretSecurity, opts ...operations.Option) (*operations.ListDeviceSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDeviceSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1156,15 +1376,25 @@ func (s *SDK) ListDeviceSecret(ctx context.Context, request operations.ListDevic
 }
 
 // UpdateAccountConfig - Update a config for an Account.
-func (s *SDK) UpdateAccountConfig(ctx context.Context, request operations.UpdateAccountConfigRequest) (*operations.UpdateAccountConfigResponse, error) {
-	baseURL := operations.UpdateAccountConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateAccountConfig(ctx context.Context, request operations.UpdateAccountConfigRequest, security operations.UpdateAccountConfigSecurity, opts ...operations.Option) (*operations.UpdateAccountConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Configs/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateAccountConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Configs/{Key}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1176,7 +1406,7 @@ func (s *SDK) UpdateAccountConfig(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1211,15 +1441,25 @@ func (s *SDK) UpdateAccountConfig(ctx context.Context, request operations.Update
 }
 
 // UpdateAccountSecret - Update a secret for an Account.
-func (s *SDK) UpdateAccountSecret(ctx context.Context, request operations.UpdateAccountSecretRequest) (*operations.UpdateAccountSecretResponse, error) {
-	baseURL := operations.UpdateAccountSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateAccountSecret(ctx context.Context, request operations.UpdateAccountSecretRequest, security operations.UpdateAccountSecretSecurity, opts ...operations.Option) (*operations.UpdateAccountSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Secrets/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateAccountSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Secrets/{Key}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1231,7 +1471,7 @@ func (s *SDK) UpdateAccountSecret(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1266,15 +1506,25 @@ func (s *SDK) UpdateAccountSecret(ctx context.Context, request operations.Update
 }
 
 // UpdateDevice - Update a specific Device.
-func (s *SDK) UpdateDevice(ctx context.Context, request operations.UpdateDeviceRequest) (*operations.UpdateDeviceResponse, error) {
-	baseURL := operations.UpdateDeviceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateDevice(ctx context.Context, request operations.UpdateDeviceRequest, security operations.UpdateDeviceSecurity, opts ...operations.Option) (*operations.UpdateDeviceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateDeviceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1286,7 +1536,7 @@ func (s *SDK) UpdateDevice(ctx context.Context, request operations.UpdateDeviceR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1321,15 +1571,25 @@ func (s *SDK) UpdateDevice(ctx context.Context, request operations.UpdateDeviceR
 }
 
 // UpdateDeviceConfig - Update a config for a Microvisor Device.
-func (s *SDK) UpdateDeviceConfig(ctx context.Context, request operations.UpdateDeviceConfigRequest) (*operations.UpdateDeviceConfigResponse, error) {
-	baseURL := operations.UpdateDeviceConfigServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateDeviceConfig(ctx context.Context, request operations.UpdateDeviceConfigRequest, security operations.UpdateDeviceConfigSecurity, opts ...operations.Option) (*operations.UpdateDeviceConfigResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateDeviceConfigServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Configs/{Key}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1341,7 +1601,7 @@ func (s *SDK) UpdateDeviceConfig(ctx context.Context, request operations.UpdateD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1376,15 +1636,25 @@ func (s *SDK) UpdateDeviceConfig(ctx context.Context, request operations.UpdateD
 }
 
 // UpdateDeviceSecret - Update a secret for a Microvisor Device.
-func (s *SDK) UpdateDeviceSecret(ctx context.Context, request operations.UpdateDeviceSecretRequest) (*operations.UpdateDeviceSecretResponse, error) {
-	baseURL := operations.UpdateDeviceSecretServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateDeviceSecret(ctx context.Context, request operations.UpdateDeviceSecretRequest, security operations.UpdateDeviceSecretSecurity, opts ...operations.Option) (*operations.UpdateDeviceSecretResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateDeviceSecretServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1396,7 +1666,7 @@ func (s *SDK) UpdateDeviceSecret(ctx context.Context, request operations.UpdateD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

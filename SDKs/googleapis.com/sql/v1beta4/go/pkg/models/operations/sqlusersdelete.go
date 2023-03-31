@@ -8,13 +8,13 @@ import (
 )
 
 type SQLUsersDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLUsersDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLUsersDeleteSecurity struct {
@@ -22,14 +22,7 @@ type SQLUsersDeleteSecurity struct {
 	Option2 *SQLUsersDeleteSecurityOption2 `security:"option"`
 }
 
-type SQLUsersDeletePathParams struct {
-	// Database instance ID. This does not include the project ID.
-	Instance string `pathParam:"style=simple,explode=false,name=instance"`
-	// Project ID of the project that contains the instance.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type SQLUsersDeleteQueryParams struct {
+type SQLUsersDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +35,8 @@ type SQLUsersDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Host of the user in the instance.
 	Host *string `queryParam:"style=form,explode=true,name=host"`
+	// Database instance ID. This does not include the project ID.
+	Instance string `pathParam:"style=simple,explode=false,name=instance"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Name of the user in the instance.
@@ -50,18 +45,14 @@ type SQLUsersDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the project that contains the instance.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SQLUsersDeleteRequest struct {
-	PathParams  SQLUsersDeletePathParams
-	QueryParams SQLUsersDeleteQueryParams
-	Security    SQLUsersDeleteSecurity
 }
 
 type SQLUsersDeleteResponse struct {

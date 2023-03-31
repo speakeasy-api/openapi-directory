@@ -12,14 +12,8 @@ var UpdateSipCredentialListServerList = []string{
 }
 
 type UpdateSipCredentialListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSipCredentialListPathParams struct {
-	// The unique id of the Account that is responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The credential list Sid that uniquely identifies this resource
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSipCredentialListUpdateSipCredentialListRequest struct {
@@ -28,10 +22,11 @@ type UpdateSipCredentialListUpdateSipCredentialListRequest struct {
 }
 
 type UpdateSipCredentialListRequest struct {
-	PathParams UpdateSipCredentialListPathParams
-	Request    *UpdateSipCredentialListUpdateSipCredentialListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSipCredentialListSecurity
-	ServerURL  *string
+	// The unique id of the Account that is responsible for this resource.
+	AccountSid  string                                                 `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateSipCredentialListUpdateSipCredentialListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The credential list Sid that uniquely identifies this resource
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSipCredentialListResponse struct {

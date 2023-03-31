@@ -8,14 +8,8 @@ import (
 )
 
 type UploadImageSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type UploadImageRequest struct {
-	// A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height
-	Request  shared.ImageCreateRequest `request:"mediaType=application/json"`
-	Security UploadImageSecurity
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadImageResponse struct {

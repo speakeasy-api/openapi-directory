@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type GetsuggestionsQueryParams struct {
+type GetsuggestionsRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Define your pagination range, by adding the pagination starting value. Values should be bigger than 0, with a maximum of 50 records per page.
 	From *int `queryParam:"style=form,explode=true,name=_from"`
 	// Define your pagination range, by adding the pagination ending value. Values should be bigger than 0, with a maximum of 50 records per page.
@@ -25,18 +29,6 @@ type GetsuggestionsQueryParams struct {
 	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// This field allows users to filter SKU suggestions, by searching only the new suggestions that were just sent, and suggestions that have already been sent, but were updated. Possible values for this field include `new` and `update`.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetsuggestionsHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetsuggestionsRequest struct {
-	QueryParams GetsuggestionsQueryParams
-	Headers     GetsuggestionsHeaders
 }
 
 type GetsuggestionsResponse struct {

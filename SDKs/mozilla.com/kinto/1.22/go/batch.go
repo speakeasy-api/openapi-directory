@@ -31,7 +31,7 @@ func newBatch(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
-func (s *batch) Batch(ctx context.Context, request operations.BatchRequest) (*operations.BatchResponse, error) {
+func (s *batch) Batch(ctx context.Context, request operations.BatchBatchPayloadSchema) (*operations.BatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/batch"
 

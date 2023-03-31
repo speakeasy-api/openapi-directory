@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PreprintsCitationReadPathParams struct {
+type PreprintsCitationReadRequest struct {
 	// The unique identifier of the preprint.
 	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
 	// The unique identifier of the citation style.
 	StyleID string `pathParam:"style=simple,explode=false,name=style_id"`
-}
-
-type PreprintsCitationReadRequest struct {
-	PathParams PreprintsCitationReadPathParams
 }
 
 // PreprintsCitationReadStyledCitationAttributes - The properties of the citation style entity.

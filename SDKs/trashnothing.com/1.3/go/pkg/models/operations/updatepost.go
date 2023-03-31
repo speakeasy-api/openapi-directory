@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdatePostPathParams struct {
-	// The ID of the post to update.
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
 type UpdatePostRequestBody struct {
 	// A longer description of the item(s).
 	Content *string `multipartForm:"name=content"`
@@ -46,8 +41,9 @@ type UpdatePostRequestBody struct {
 }
 
 type UpdatePostRequest struct {
-	PathParams UpdatePostPathParams
-	Request    UpdatePostRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody UpdatePostRequestBody `request:"mediaType=multipart/form-data"`
+	// The ID of the post to update.
+	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 // UpdatePost200ApplicationJSON - Post update result.

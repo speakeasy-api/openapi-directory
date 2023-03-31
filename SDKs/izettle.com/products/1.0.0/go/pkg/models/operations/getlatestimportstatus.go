@@ -8,16 +8,11 @@ import (
 )
 
 type GetLatestImportStatusSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetLatestImportStatusPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetLatestImportStatusRequest struct {
-	PathParams GetLatestImportStatusPathParams
-	Security   GetLatestImportStatusSecurity
+	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type GetLatestImportStatusResponse struct {

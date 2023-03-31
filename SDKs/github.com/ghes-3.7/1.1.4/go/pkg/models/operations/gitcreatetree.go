@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitCreateTreePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // GitCreateTreeRequestBodyTreeModeEnum - The file mode; one of `100644` for file (blob), `100755` for executable (blob), `040000` for subdirectory (tree), `160000` for submodule (commit), or `120000` for a blob that specifies the path of a symlink.
 type GitCreateTreeRequestBodyTreeModeEnum string
 
@@ -103,8 +96,11 @@ type GitCreateTreeRequestBody struct {
 }
 
 type GitCreateTreeRequest struct {
-	PathParams GitCreateTreePathParams
-	Request    GitCreateTreeRequestBody `request:"mediaType=application/json"`
+	RequestBody GitCreateTreeRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitCreateTreeResponse struct {

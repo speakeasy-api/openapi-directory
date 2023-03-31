@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteRemoteServersIDPathParams struct {
+type DeleteRemoteServersIDRequest struct {
 	// Remote Server ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteRemoteServersIDRequest struct {
-	PathParams DeleteRemoteServersIDPathParams
 }
 
 type DeleteRemoteServersIDResponse struct {

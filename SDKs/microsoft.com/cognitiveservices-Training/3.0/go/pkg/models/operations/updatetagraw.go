@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTagRawPathParams struct {
+type UpdateTagRawRequest struct {
+	// The updated tag model.
+	RequestBody []byte `request:"mediaType=text/xml"`
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The id of the target tag.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type UpdateTagRawHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateTagRawRequest struct {
-	PathParams UpdateTagRawPathParams
-	Headers    UpdateTagRawHeaders
-	// The updated tag model.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type UpdateTagRawResponse struct {

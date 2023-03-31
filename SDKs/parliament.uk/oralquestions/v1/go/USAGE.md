@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.PublishedEarlyDayMotionGetRequest{
-        PathParams: operations.PublishedEarlyDayMotionGetPathParams{
-            ID: 548814,
-        },
+        ID: 548814,
     }
 
     ctx := context.Background()

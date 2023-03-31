@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListReportsQueryParams struct {
+type ListReportsRequest struct {
 	// Start value for pagination.
 	StartKey *string `queryParam:"style=form,explode=true,name=start_key"`
 	// filter reports created by the specified username
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type ListReportsRequest struct {
-	QueryParams ListReportsQueryParams
 }
 
 type ListReportsResponse struct {

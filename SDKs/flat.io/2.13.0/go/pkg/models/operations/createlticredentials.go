@@ -8,12 +8,7 @@ import (
 )
 
 type CreateLtiCredentialsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateLtiCredentialsRequest struct {
-	Request  shared.LtiCredentialsCreation `request:"mediaType=application/json"`
-	Security CreateLtiCredentialsSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateLtiCredentialsResponse struct {

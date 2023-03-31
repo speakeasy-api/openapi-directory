@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkContentFilteringCategoriesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkContentFilteringCategoriesRequest struct {
-	PathParams GetNetworkContentFilteringCategoriesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkContentFilteringCategoriesResponse struct {

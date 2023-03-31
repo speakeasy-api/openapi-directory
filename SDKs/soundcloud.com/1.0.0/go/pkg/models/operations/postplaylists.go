@@ -8,13 +8,7 @@ import (
 )
 
 type PostPlaylistsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostPlaylistsRequest struct {
-	// Create Playlist request
-	Request  *shared.CreateUpdatePlaylistRequest `request:"mediaType=application/json"`
-	Security PostPlaylistsSecurity
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 // PostPlaylists201ApplicationJSONTracks - Soundcloud Track object.

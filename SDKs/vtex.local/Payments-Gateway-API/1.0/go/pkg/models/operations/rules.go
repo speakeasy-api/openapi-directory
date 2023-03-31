@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type RulesHeaders struct {
+type RulesRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
@@ -15,10 +15,6 @@ type RulesHeaders struct {
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type RulesRequest struct {
-	Headers RulesHeaders
 }
 
 type RulesResponse struct {

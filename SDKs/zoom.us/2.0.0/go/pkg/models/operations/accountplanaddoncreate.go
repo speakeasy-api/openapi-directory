@@ -9,11 +9,6 @@ import (
 	"net/http"
 )
 
-type AccountPlanAddonCreatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountPlanAddonCreateApplicationJSON2PhonePlanPlanBase - Additional phone base plans.
 type AccountPlanAddonCreateApplicationJSON2PhonePlanPlanBase struct {
 	// Call-out countries: multiple values should separated by  commas. For a list of allowed values, refer to the "ID" field in [this](https://marketplace.zoom.us/docs/api-reference/other-references/abbreviation-lists#tsp-call-out-countries) table.
@@ -129,8 +124,9 @@ func (u AccountPlanAddonCreateApplicationJSON) MarshalJSON() ([]byte, error) {
 }
 
 type AccountPlanAddonCreateRequest struct {
-	PathParams AccountPlanAddonCreatePathParams
-	Request    AccountPlanAddonCreateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody AccountPlanAddonCreateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountPlanAddonCreateResponse struct {

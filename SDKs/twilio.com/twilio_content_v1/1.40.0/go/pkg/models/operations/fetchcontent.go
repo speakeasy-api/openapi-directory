@@ -12,18 +12,13 @@ var FetchContentServerList = []string{
 }
 
 type FetchContentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchContentPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Content resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchContentRequest struct {
-	PathParams FetchContentPathParams
-	Security   FetchContentSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the Content resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchContentResponse struct {

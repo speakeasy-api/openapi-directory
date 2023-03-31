@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTCreditMemoFromInvoicePathParams struct {
-	// The ID of an invoice that you want to create a credit memo from.
-	//
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type POSTCreditMemoFromInvoiceHeaders struct {
+type POSTCreditMemoFromInvoiceRequest struct {
+	CreditMemoFromInvoiceType shared.CreditMemoFromInvoiceType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,6 +17,9 @@ type POSTCreditMemoFromInvoiceHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
+	// The ID of an invoice that you want to create a credit memo from.
+	//
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
 	// The minor version of the Zuora REST API. See [Minor Version](https://www.zuora.com/developer/api-reference/#section/API-Versions/Minor-Version) for information about REST API version control.
 	//
 	// This header affects the availability of the following request fields:
@@ -29,12 +27,6 @@ type POSTCreditMemoFromInvoiceHeaders struct {
 	// * `items` > `description`
 	//
 	ZuoraVersion *string `header:"style=simple,explode=false,name=zuora-version"`
-}
-
-type POSTCreditMemoFromInvoiceRequest struct {
-	PathParams POSTCreditMemoFromInvoicePathParams
-	Headers    POSTCreditMemoFromInvoiceHeaders
-	Request    shared.CreditMemoFromInvoiceType `request:"mediaType=application/json"`
 }
 
 type POSTCreditMemoFromInvoiceResponse struct {

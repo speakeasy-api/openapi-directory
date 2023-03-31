@@ -33,7 +33,7 @@ func newCaseClassifications(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // CloudsupportCaseClassificationsSearch - Retrieve valid classifications to be used when creating a support case. The classications are hierarchical, with each classification containing all levels of the hierarchy, separated by " > ". For example "Technical Issue > Compute > Compute Engine".
-func (s *caseClassifications) CloudsupportCaseClassificationsSearch(ctx context.Context, request operations.CloudsupportCaseClassificationsSearchRequest) (*operations.CloudsupportCaseClassificationsSearchResponse, error) {
+func (s *caseClassifications) CloudsupportCaseClassificationsSearch(ctx context.Context, request operations.CloudsupportCaseClassificationsSearchRequest, security operations.CloudsupportCaseClassificationsSearchSecurity) (*operations.CloudsupportCaseClassificationsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2beta/caseClassifications:search"
 
@@ -42,11 +42,11 @@ func (s *caseClassifications) CloudsupportCaseClassificationsSearch(ctx context.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

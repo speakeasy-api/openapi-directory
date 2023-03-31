@@ -94,7 +94,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // PostRegressionAPI - Returns regression analysis.
-func (s *SDK) PostRegressionAPI(ctx context.Context, request operations.PostRegressionAPIRequest) (*operations.PostRegressionAPIResponse, error) {
+func (s *SDK) PostRegressionAPI(ctx context.Context, request shared.RegressionAPIBody) (*operations.PostRegressionAPIResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/regression/api"
 

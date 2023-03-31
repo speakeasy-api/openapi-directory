@@ -10,13 +10,13 @@ import (
 )
 
 type VaultMattersListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersListSecurity struct {
@@ -81,7 +81,7 @@ func (e *VaultMattersListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VaultMattersListQueryParams struct {
+type VaultMattersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -112,11 +112,6 @@ type VaultMattersListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies how much information about the matter to return in response.
 	View *VaultMattersListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type VaultMattersListRequest struct {
-	QueryParams VaultMattersListQueryParams
-	Security    VaultMattersListSecurity
 }
 
 type VaultMattersListResponse struct {

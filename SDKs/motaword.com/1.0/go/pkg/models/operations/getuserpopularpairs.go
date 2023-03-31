@@ -8,17 +8,12 @@ import (
 )
 
 type GetUserPopularPairsSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type GetUserPopularPairsPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetUserPopularPairsRequest struct {
-	PathParams GetUserPopularPairsPathParams
-	Security   GetUserPopularPairsSecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetUserPopularPairsResponse struct {

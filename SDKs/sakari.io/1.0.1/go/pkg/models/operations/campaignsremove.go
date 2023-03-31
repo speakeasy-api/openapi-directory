@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CampaignsRemoveSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CampaignsRemovePathParams struct {
+type CampaignsRemoveRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Campaign id to delete
 	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
-}
-
-type CampaignsRemoveRequest struct {
-	PathParams CampaignsRemovePathParams
-	Security   CampaignsRemoveSecurity
 }
 
 // CampaignsRemove200ApplicationJSON - successful operation

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2PersonStagesIDJSONPathParams struct {
+type GetV2PersonStagesIDJSONRequest struct {
 	// Stage ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2PersonStagesIDJSONRequest struct {
-	PathParams GetV2PersonStagesIDJSONPathParams
 }
 
 type GetV2PersonStagesIDJSONResponse struct {

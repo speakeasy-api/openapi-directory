@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type TaxRatesByIPAddressQueryParams struct {
+type TaxRatesByIPAddressRequest struct {
 	// Domain name: api.taxrates.io
 	Domain *string `queryParam:"style=form,explode=true,name=domain"`
 	// For US sales tax you can filter the tax type
@@ -17,10 +17,6 @@ type TaxRatesByIPAddressQueryParams struct {
 	ProductCode *string `queryParam:"style=form,explode=true,name=product_code"`
 	// For US sales tax a Zipcode must be proivded
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type TaxRatesByIPAddressRequest struct {
-	QueryParams TaxRatesByIPAddressQueryParams
 }
 
 // TaxRatesByIPAddress500ApplicationJSON - Unexpected error

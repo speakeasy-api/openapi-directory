@@ -14,10 +14,6 @@ type PostFileCommentsRequestBody struct {
 	Path string `multipartForm:"name=path"`
 }
 
-type PostFileCommentsRequest struct {
-	Request PostFileCommentsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostFileCommentsResponse struct {
 	ContentType string
 	// The FileComments object.

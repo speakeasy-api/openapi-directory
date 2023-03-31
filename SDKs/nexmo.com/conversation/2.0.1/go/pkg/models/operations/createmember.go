@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateMemberPathParams struct {
-	// Conversation ID
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 // CreateMemberRequestBody - Create a Member in invite state
 type CreateMemberRequestBody struct {
 	// Invite or join a member to a conversation
@@ -31,8 +26,9 @@ type CreateMemberRequestBody struct {
 }
 
 type CreateMemberRequest struct {
-	PathParams CreateMemberPathParams
-	Request    *CreateMemberRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateMemberRequestBody `request:"mediaType=application/json"`
+	// Conversation ID
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 // CreateMember201ApplicationJSON - Create or invite Member in invite state

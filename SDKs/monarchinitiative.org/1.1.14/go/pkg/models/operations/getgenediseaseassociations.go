@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGeneDiseaseAssociationsPathParams struct {
-	// CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetGeneDiseaseAssociationsAssociationTypeEnum - Additional filters: causal, non_causal, both
 type GetGeneDiseaseAssociationsAssociationTypeEnum string
 
@@ -41,7 +36,7 @@ func (e *GetGeneDiseaseAssociationsAssociationTypeEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetGeneDiseaseAssociationsQueryParams struct {
+type GetGeneDiseaseAssociationsRequest struct {
 	// Additional filters: causal, non_causal, both
 	AssociationType *GetGeneDiseaseAssociationsAssociationTypeEnum `queryParam:"style=form,explode=true,name=association_type"`
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
@@ -58,6 +53,8 @@ type GetGeneDiseaseAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Query string to filter documents
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// A relation CURIE to filter associations
@@ -76,11 +73,6 @@ type GetGeneDiseaseAssociationsQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetGeneDiseaseAssociationsRequest struct {
-	PathParams  GetGeneDiseaseAssociationsPathParams
-	QueryParams GetGeneDiseaseAssociationsQueryParams
 }
 
 type GetGeneDiseaseAssociationsResponse struct {

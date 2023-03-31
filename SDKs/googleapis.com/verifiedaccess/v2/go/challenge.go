@@ -33,11 +33,11 @@ func newChallenge(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // VerifiedaccessChallengeGenerate - Generates a new challenge.
-func (s *challenge) VerifiedaccessChallengeGenerate(ctx context.Context, request operations.VerifiedaccessChallengeGenerateRequest) (*operations.VerifiedaccessChallengeGenerateResponse, error) {
+func (s *challenge) VerifiedaccessChallengeGenerate(ctx context.Context, request operations.VerifiedaccessChallengeGenerateRequest, security operations.VerifiedaccessChallengeGenerateSecurity) (*operations.VerifiedaccessChallengeGenerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/challenge:generate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *challenge) VerifiedaccessChallengeGenerate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *challenge) VerifiedaccessChallengeGenerate(ctx context.Context, request
 }
 
 // VerifiedaccessChallengeVerify - Verifies the challenge response.
-func (s *challenge) VerifiedaccessChallengeVerify(ctx context.Context, request operations.VerifiedaccessChallengeVerifyRequest) (*operations.VerifiedaccessChallengeVerifyResponse, error) {
+func (s *challenge) VerifiedaccessChallengeVerify(ctx context.Context, request operations.VerifiedaccessChallengeVerifyRequest, security operations.VerifiedaccessChallengeVerifySecurity) (*operations.VerifiedaccessChallengeVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/challenge:verify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyChallengeResponseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *challenge) VerifiedaccessChallengeVerify(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

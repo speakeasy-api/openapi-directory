@@ -32,20 +32,20 @@ func newTokens(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // DirectoryTokensDelete - Deletes all access tokens issued by a user for an application.
-func (s *tokens) DirectoryTokensDelete(ctx context.Context, request operations.DirectoryTokensDeleteRequest) (*operations.DirectoryTokensDeleteResponse, error) {
+func (s *tokens) DirectoryTokensDelete(ctx context.Context, request operations.DirectoryTokensDeleteRequest, security operations.DirectoryTokensDeleteSecurity) (*operations.DirectoryTokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *tokens) DirectoryTokensDelete(ctx context.Context, request operations.D
 }
 
 // DirectoryTokensGet - Gets information about an access token issued by a user.
-func (s *tokens) DirectoryTokensGet(ctx context.Context, request operations.DirectoryTokensGetRequest) (*operations.DirectoryTokensGetResponse, error) {
+func (s *tokens) DirectoryTokensGet(ctx context.Context, request operations.DirectoryTokensGetRequest, security operations.DirectoryTokensGetSecurity) (*operations.DirectoryTokensGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *tokens) DirectoryTokensGet(ctx context.Context, request operations.Dire
 }
 
 // DirectoryTokensList - Returns the set of tokens specified user has issued to 3rd party applications.
-func (s *tokens) DirectoryTokensList(ctx context.Context, request operations.DirectoryTokensListRequest) (*operations.DirectoryTokensListResponse, error) {
+func (s *tokens) DirectoryTokensList(ctx context.Context, request operations.DirectoryTokensListRequest, security operations.DirectoryTokensListSecurity) (*operations.DirectoryTokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

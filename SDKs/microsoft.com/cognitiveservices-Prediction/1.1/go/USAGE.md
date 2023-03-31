@@ -14,22 +14,16 @@ func main() {
     s := sdk.New()
 
     req := operations.PredictImageRequest{
-        PathParams: operations.PredictImagePathParams{
-            ProjectID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
-        QueryParams: operations.PredictImageQueryParams{
-            Application: "deserunt",
-            IterationID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
-        },
-        Headers: operations.PredictImageHeaders{
-            PredictionKey: "cum",
-        },
-        Request: operations.PredictImageRequestBody{
+        PredictionKey: "corrupti",
+        RequestBody: operations.PredictImageRequestBody{
             ImageData: operations.PredictImageRequestBodyImageData{
-                Content: []byte("esse"),
-                ImageData: "ipsum",
+                Content: []byte("provident"),
+                ImageData: "distinctio",
             },
         },
+        Application: "quibusdam",
+        IterationID: "9d8d69a6-74e0-4f46-bcc8-796ed151a05d",
+        ProjectID: "fc2ddf7c-c78c-4a1b-a928-fc816742cb73",
     }
 
     ctx := context.Background()

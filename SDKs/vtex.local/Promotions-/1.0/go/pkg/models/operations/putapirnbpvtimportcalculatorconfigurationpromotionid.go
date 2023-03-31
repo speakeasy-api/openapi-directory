@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type PutAPIRnbPvtImportCalculatorConfigurationPromotionIDPathParams struct {
-	// Promotion unique identifier.
-	PromotionID string `pathParam:"style=simple,explode=false,name=promotionId"`
-}
-
-type PutAPIRnbPvtImportCalculatorConfigurationPromotionIDHeaders struct {
+type PutAPIRnbPvtImportCalculatorConfigurationPromotionIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []byte `request:"mediaType=text/csv"`
 	// Condition that will accumulate the Promotion with manual prices or not.
 	XVTEXAccumulateWithManualPrices bool `header:"style=simple,explode=false,name=X-VTEX-accumulate-with-manual-prices"`
 	// Promotion Name.
@@ -30,12 +26,8 @@ type PutAPIRnbPvtImportCalculatorConfigurationPromotionIDHeaders struct {
 	XVTEXEndDate string `header:"style=simple,explode=false,name=X-VTEX-end-date"`
 	// Promotion start date.
 	XVTEXStartDate string `header:"style=simple,explode=false,name=X-VTEX-start-date"`
-}
-
-type PutAPIRnbPvtImportCalculatorConfigurationPromotionIDRequest struct {
-	PathParams PutAPIRnbPvtImportCalculatorConfigurationPromotionIDPathParams
-	Headers    PutAPIRnbPvtImportCalculatorConfigurationPromotionIDHeaders
-	Request    []byte `request:"mediaType=text/csv"`
+	// Promotion unique identifier.
+	PromotionID string `pathParam:"style=simple,explode=false,name=promotionId"`
 }
 
 type PutAPIRnbPvtImportCalculatorConfigurationPromotionIDResponse struct {

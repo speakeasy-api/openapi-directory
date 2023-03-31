@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBehaviorsIDPathParams struct {
+type GetBehaviorsIDRequest struct {
 	// Behavior ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBehaviorsIDRequest struct {
-	PathParams GetBehaviorsIDPathParams
 }
 
 type GetBehaviorsIDResponse struct {

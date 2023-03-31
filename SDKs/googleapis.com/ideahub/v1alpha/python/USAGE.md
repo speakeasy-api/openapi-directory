@@ -4,26 +4,25 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.IdeahubIdeasListRequest(
-    query_params=operations.IdeahubIdeasListQueryParams(
-        dollar_xgafv="2",
-        access_token="sed",
-        alt="json",
-        callback="mollitia",
-        fields="nulla",
-        filter="voluptatem",
-        key="dolor",
-        oauth_token="labore",
-        order_by="voluptatem",
-        page_size=2574732703467464352,
-        page_token="animi",
-        parent="possimus",
-        pretty_print=False,
-        quota_user="maiores",
-        upload_type="nobis",
-        upload_protocol="id",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    order_by="vel",
+    page_size=623564,
+    page_token="deserunt",
+    parent="suscipit",
+    pretty_print=False,
+    quota_user="iure",
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
 res = s.ideas.ideahub_ideas_list(req)

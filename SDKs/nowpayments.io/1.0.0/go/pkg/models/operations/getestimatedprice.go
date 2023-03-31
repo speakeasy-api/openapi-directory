@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetEstimatedPriceQueryParams struct {
+type GetEstimatedPriceRequest struct {
 	Amount       *string `queryParam:"style=form,explode=true,name=amount"`
 	CurrencyFrom *string `queryParam:"style=form,explode=true,name=currency_from"`
 	CurrencyTo   *string `queryParam:"style=form,explode=true,name=currency_to"`
-}
-
-type GetEstimatedPriceHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetEstimatedPriceRequest struct {
-	QueryParams GetEstimatedPriceQueryParams
-	Headers     GetEstimatedPriceHeaders
+	XAPIKey      *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetEstimatedPrice200ApplicationJSON - 200

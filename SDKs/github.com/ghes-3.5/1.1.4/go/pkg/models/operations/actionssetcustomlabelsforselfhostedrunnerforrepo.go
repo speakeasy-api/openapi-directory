@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetCustomLabelsForSelfHostedRunnerForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// Unique identifier of the self-hosted runner.
-	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
 type ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequestBody struct {
 	// The names of the custom labels to set for the runner. You can pass an empty array to remove all custom labels.
 	Labels []string `json:"labels"`
 }
 
 type ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest struct {
-	PathParams ActionsSetCustomLabelsForSelfHostedRunnerForRepoPathParams
-	Request    ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// Unique identifier of the self-hosted runner.
+	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
 }
 
 // ActionsSetCustomLabelsForSelfHostedRunnerForRepo200ApplicationJSON - Response

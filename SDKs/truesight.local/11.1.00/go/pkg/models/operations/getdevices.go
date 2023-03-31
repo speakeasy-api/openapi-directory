@@ -32,7 +32,7 @@ func (e *GetDevicesDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDevicesQueryParams struct {
+type GetDevicesRequest struct {
 	// The ID of the application.
 	ApplicationID *string `queryParam:"style=form,explode=true,name=applicationId"`
 	// The sorting order (case insensitive).
@@ -47,10 +47,6 @@ type GetDevicesQueryParams struct {
 	ServiceID *string `queryParam:"style=form,explode=true,name=serviceId"`
 	// The column to sort by (case insensitive).
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetDevicesRequest struct {
-	QueryParams GetDevicesQueryParams
 }
 
 type GetDevicesResponse struct {

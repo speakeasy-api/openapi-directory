@@ -33,7 +33,7 @@ func (e *PlayerSeasonStatsByPlayerFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayerSeasonStatsByPlayerPathParams struct {
+type PlayerSeasonStatsByPlayerRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerSeasonStatsByPlayerFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID.
@@ -41,10 +41,6 @@ type PlayerSeasonStatsByPlayerPathParams struct {
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
 	// Year of the season (with optional season type).<br>Examples: <code>2018</code>, <code>2018POST</code>, <code>2019</code>.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type PlayerSeasonStatsByPlayerRequest struct {
-	PathParams PlayerSeasonStatsByPlayerPathParams
 }
 
 type PlayerSeasonStatsByPlayerResponse struct {

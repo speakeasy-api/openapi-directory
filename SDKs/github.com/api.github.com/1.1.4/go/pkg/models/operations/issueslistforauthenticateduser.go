@@ -100,7 +100,7 @@ func (e *IssuesListForAuthenticatedUserStateEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type IssuesListForAuthenticatedUserQueryParams struct {
+type IssuesListForAuthenticatedUserRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation.
@@ -117,10 +117,6 @@ type IssuesListForAuthenticatedUserQueryParams struct {
 	Sort *IssuesListForAuthenticatedUserSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Indicates the state of the issues to return.
 	State *IssuesListForAuthenticatedUserStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type IssuesListForAuthenticatedUserRequest struct {
-	QueryParams IssuesListForAuthenticatedUserQueryParams
 }
 
 type IssuesListForAuthenticatedUserResponse struct {

@@ -12,12 +12,8 @@ var CreateUsAppToPersonServerList = []string{
 }
 
 type CreateUsAppToPersonSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUsAppToPersonPathParams struct {
-	// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to create the resources from.
-	MessagingServiceSid string `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUsAppToPersonCreateUsAppToPersonRequest struct {
@@ -50,10 +46,9 @@ type CreateUsAppToPersonCreateUsAppToPersonRequest struct {
 }
 
 type CreateUsAppToPersonRequest struct {
-	PathParams CreateUsAppToPersonPathParams
-	Request    *CreateUsAppToPersonCreateUsAppToPersonRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUsAppToPersonSecurity
-	ServerURL  *string
+	// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to create the resources from.
+	MessagingServiceSid string                                         `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
+	RequestBody         *CreateUsAppToPersonCreateUsAppToPersonRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateUsAppToPersonResponse struct {

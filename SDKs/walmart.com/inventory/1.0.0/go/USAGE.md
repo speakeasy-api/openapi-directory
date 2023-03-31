@@ -14,16 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.GetInventoryRequest{
-        QueryParams: operations.GetInventoryQueryParams{
-            ShipNode: "corrupti",
-            Sku: "provident",
-        },
-        Headers: operations.GetInventoryHeaders{
-            WmConsumerChannelType: "distinctio",
-            WmQosCorrelationID: "quibusdam",
-            WmSecAccessToken: "unde",
-            WmSvcName: "nulla",
-        },
+        WmConsumerChannelType: "corrupti",
+        WmQosCorrelationID: "provident",
+        WmSecAccessToken: "distinctio",
+        WmSvcName: "quibusdam",
+        ShipNode: "unde",
+        Sku: "nulla",
     }
 
     ctx := context.Background()

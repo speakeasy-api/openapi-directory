@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserAndRelatedDataPathParams struct {
+type GetUserAndRelatedDataRequest struct {
 	// A user ID.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUserAndRelatedDataRequest struct {
-	PathParams GetUserAndRelatedDataPathParams
 }
 
 // GetUserAndRelatedData200ApplicationJSON - The user and related data.

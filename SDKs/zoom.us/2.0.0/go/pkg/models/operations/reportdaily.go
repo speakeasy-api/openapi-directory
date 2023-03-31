@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ReportDailySecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReportDailyQueryParams struct {
+type ReportDailyRequest struct {
 	// Month for this report
 	Month *int64 `queryParam:"style=form,explode=true,name=month"`
 	// Year for this report
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type ReportDailyRequest struct {
-	QueryParams ReportDailyQueryParams
-	Security    ReportDailySecurity
 }
 
 type ReportDaily200ApplicationXMLDates struct {

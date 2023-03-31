@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlanGroupsReadPathParams struct {
+type IpamVlanGroupsReadRequest struct {
 	// A unique integer value identifying this VLAN group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVlanGroupsReadRequest struct {
-	PathParams IpamVlanGroupsReadPathParams
 }
 
 type IpamVlanGroupsReadResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDevicesIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutDevicesIDRequest struct {
-	PathParams PutDevicesIDPathParams
-	Request    shared.Device `request:"mediaType=application/json"`
+	Device shared.Device `request:"mediaType=application/json"`
+	ID     int64         `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutDevicesIDResponse struct {

@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type NodesDraftRegistrationsPartialUpdatePathParams struct {
-	// The unique identifier of the draft registration.
-	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-	// The unique identifier of the node.
-	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 type NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesNodeLicense struct {
 	// A list of names of copyright holders for the license.
 	CopyrightHolders []string `json:"copyright_holders,omitempty"`
@@ -43,8 +36,11 @@ type NodesDraftRegistrationsPartialUpdateDraftRegistrationInput struct {
 }
 
 type NodesDraftRegistrationsPartialUpdateRequest struct {
-	PathParams NodesDraftRegistrationsPartialUpdatePathParams
-	Request    NodesDraftRegistrationsPartialUpdateDraftRegistrationInput `request:"mediaType=application/json"`
+	RequestBody NodesDraftRegistrationsPartialUpdateDraftRegistrationInput `request:"mediaType=application/json"`
+	// The unique identifier of the draft registration.
+	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
+	// The unique identifier of the node.
+	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type NodesDraftRegistrationsPartialUpdateResponse struct {

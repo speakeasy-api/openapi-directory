@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIterationPathParams struct {
+type GetIterationRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The id of the iteration to get
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The id of the project the iteration belongs to
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetIterationHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetIterationRequest struct {
-	PathParams GetIterationPathParams
-	Headers    GetIterationHeaders
 }
 
 type GetIterationResponse struct {

@@ -33,16 +33,16 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetUsersUserID - Returns a user.
-func (s *users) GetUsersUserID(ctx context.Context, request operations.GetUsersUserIDRequest) (*operations.GetUsersUserIDResponse, error) {
+func (s *users) GetUsersUserID(ctx context.Context, request operations.GetUsersUserIDRequest, security operations.GetUsersUserIDSecurity) (*operations.GetUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,20 +97,20 @@ func (s *users) GetUsersUserID(ctx context.Context, request operations.GetUsersU
 }
 
 // GetUsersUserIDComments - Returns a list of user's comments.
-func (s *users) GetUsersUserIDComments(ctx context.Context, request operations.GetUsersUserIDCommentsRequest) (*operations.GetUsersUserIDCommentsResponse, error) {
+func (s *users) GetUsersUserIDComments(ctx context.Context, request operations.GetUsersUserIDCommentsRequest, security operations.GetUsersUserIDCommentsSecurity) (*operations.GetUsersUserIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,20 +165,20 @@ func (s *users) GetUsersUserIDComments(ctx context.Context, request operations.G
 }
 
 // GetUsersUserIDFavorites - Returns a list of user's favorited or liked tracks. (use /users/:userId/likes/tracks instead, to fetch a user's likes)
-func (s *users) GetUsersUserIDFavorites(ctx context.Context, request operations.GetUsersUserIDFavoritesRequest) (*operations.GetUsersUserIDFavoritesResponse, error) {
+func (s *users) GetUsersUserIDFavorites(ctx context.Context, request operations.GetUsersUserIDFavoritesRequest, security operations.GetUsersUserIDFavoritesSecurity) (*operations.GetUsersUserIDFavoritesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/favorites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/favorites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,20 +224,20 @@ func (s *users) GetUsersUserIDFavorites(ctx context.Context, request operations.
 
 // GetUsersUserIDFollowers - Returns a list of user’s followers.
 // Returns a list of users that follows (user_id).
-func (s *users) GetUsersUserIDFollowers(ctx context.Context, request operations.GetUsersUserIDFollowersRequest) (*operations.GetUsersUserIDFollowersResponse, error) {
+func (s *users) GetUsersUserIDFollowers(ctx context.Context, request operations.GetUsersUserIDFollowersRequest, security operations.GetUsersUserIDFollowersSecurity) (*operations.GetUsersUserIDFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -283,20 +283,20 @@ func (s *users) GetUsersUserIDFollowers(ctx context.Context, request operations.
 
 // GetUsersUserIDFollowings - Returns a list of user’s followings.
 // Returns list of users that (user_id) follows.
-func (s *users) GetUsersUserIDFollowings(ctx context.Context, request operations.GetUsersUserIDFollowingsRequest) (*operations.GetUsersUserIDFollowingsResponse, error) {
+func (s *users) GetUsersUserIDFollowings(ctx context.Context, request operations.GetUsersUserIDFollowingsRequest, security operations.GetUsersUserIDFollowingsSecurity) (*operations.GetUsersUserIDFollowingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,16 +342,16 @@ func (s *users) GetUsersUserIDFollowings(ctx context.Context, request operations
 
 // GetUsersUserIDFollowingsFollowingID - Returns a user's following. (use /users/{user_id} instead, to fetch the user details)
 // Returns (following_id) that is followed by (user_id).
-func (s *users) GetUsersUserIDFollowingsFollowingID(ctx context.Context, request operations.GetUsersUserIDFollowingsFollowingIDRequest) (*operations.GetUsersUserIDFollowingsFollowingIDResponse, error) {
+func (s *users) GetUsersUserIDFollowingsFollowingID(ctx context.Context, request operations.GetUsersUserIDFollowingsFollowingIDRequest, security operations.GetUsersUserIDFollowingsFollowingIDSecurity) (*operations.GetUsersUserIDFollowingsFollowingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followings/{following_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/followings/{following_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,20 +406,20 @@ func (s *users) GetUsersUserIDFollowingsFollowingID(ctx context.Context, request
 }
 
 // GetUsersUserIDLikesTracks - Returns a list of user's liked tracks.
-func (s *users) GetUsersUserIDLikesTracks(ctx context.Context, request operations.GetUsersUserIDLikesTracksRequest) (*operations.GetUsersUserIDLikesTracksResponse, error) {
+func (s *users) GetUsersUserIDLikesTracks(ctx context.Context, request operations.GetUsersUserIDLikesTracksRequest, security operations.GetUsersUserIDLikesTracksSecurity) (*operations.GetUsersUserIDLikesTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/tracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/likes/tracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -476,20 +476,20 @@ func (s *users) GetUsersUserIDLikesTracks(ctx context.Context, request operation
 }
 
 // GetUsersUserIDPlaylists - Returns a list of user's playlists.
-func (s *users) GetUsersUserIDPlaylists(ctx context.Context, request operations.GetUsersUserIDPlaylistsRequest) (*operations.GetUsersUserIDPlaylistsResponse, error) {
+func (s *users) GetUsersUserIDPlaylists(ctx context.Context, request operations.GetUsersUserIDPlaylistsRequest, security operations.GetUsersUserIDPlaylistsSecurity) (*operations.GetUsersUserIDPlaylistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/playlists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/playlists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,20 +534,20 @@ func (s *users) GetUsersUserIDPlaylists(ctx context.Context, request operations.
 }
 
 // GetUsersUserIDTracks - Returns a list of user's tracks.
-func (s *users) GetUsersUserIDTracks(ctx context.Context, request operations.GetUsersUserIDTracksRequest) (*operations.GetUsersUserIDTracksResponse, error) {
+func (s *users) GetUsersUserIDTracks(ctx context.Context, request operations.GetUsersUserIDTracksRequest, security operations.GetUsersUserIDTracksSecurity) (*operations.GetUsersUserIDTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/tracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/tracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -592,20 +592,20 @@ func (s *users) GetUsersUserIDTracks(ctx context.Context, request operations.Get
 }
 
 // GetUsersUserIDWebProfiles - Returns list of user's links added to their profile (website, facebook, instagram).
-func (s *users) GetUsersUserIDWebProfiles(ctx context.Context, request operations.GetUsersUserIDWebProfilesRequest) (*operations.GetUsersUserIDWebProfilesResponse, error) {
+func (s *users) GetUsersUserIDWebProfiles(ctx context.Context, request operations.GetUsersUserIDWebProfilesRequest, security operations.GetUsersUserIDWebProfilesSecurity) (*operations.GetUsersUserIDWebProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/web-profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/web-profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

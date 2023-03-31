@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1BusinessusersIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutSetupV1BusinessusersIDRequest struct {
-	PathParams PutSetupV1BusinessusersIDPathParams
-	Request    *shared.BusinessUserUpdateModel `request:"mediaType=application/json"`
+	BusinessUserUpdateModel *shared.BusinessUserUpdateModel `request:"mediaType=application/json"`
+	ID                      string                          `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutSetupV1BusinessusersIDResponse struct {

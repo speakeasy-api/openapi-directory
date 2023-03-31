@@ -8,18 +8,18 @@ import (
 )
 
 type AppengineProjectsLocationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsListSecurity struct {
@@ -28,12 +28,7 @@ type AppengineProjectsLocationsListSecurity struct {
 	Option3 *AppengineProjectsLocationsListSecurityOption3 `security:"option"`
 }
 
-type AppengineProjectsLocationsListPathParams struct {
-	// Part of `name`. The resource that owns the locations collection, if applicable.
-	ProjectsID string `pathParam:"style=simple,explode=false,name=projectsId"`
-}
-
-type AppengineProjectsLocationsListQueryParams struct {
+type AppengineProjectsLocationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -56,18 +51,14 @@ type AppengineProjectsLocationsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Part of `name`. The resource that owns the locations collection, if applicable.
+	ProjectsID string `pathParam:"style=simple,explode=false,name=projectsId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineProjectsLocationsListRequest struct {
-	PathParams  AppengineProjectsLocationsListPathParams
-	QueryParams AppengineProjectsLocationsListQueryParams
-	Security    AppengineProjectsLocationsListSecurity
 }
 
 type AppengineProjectsLocationsListResponse struct {

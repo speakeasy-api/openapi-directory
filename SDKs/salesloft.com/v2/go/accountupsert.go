@@ -36,7 +36,7 @@ func newAccountUpsert(defaultClient, securityClient HTTPClient, serverURL, langu
 // PostV2AccountUpsertsJSON - Upsert an account
 // Upserts an account record. The upsert_key dictates how the upsert will be performed. The create and update behavior
 // is exactly the same as the individual create and update endpoints.
-func (s *accountUpsert) PostV2AccountUpsertsJSON(ctx context.Context, request operations.PostV2AccountUpsertsJSONRequest) (*operations.PostV2AccountUpsertsJSONResponse, error) {
+func (s *accountUpsert) PostV2AccountUpsertsJSON(ctx context.Context, request operations.PostV2AccountUpsertsJSONRequestBody) (*operations.PostV2AccountUpsertsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/account_upserts.json"
 

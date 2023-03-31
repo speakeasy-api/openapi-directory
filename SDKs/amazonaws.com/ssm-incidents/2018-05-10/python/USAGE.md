@@ -3,39 +3,39 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateReplicationSetRequest(
-    headers=operations.CreateReplicationSetHeaders(
-        x_amz_algorithm="non",
-        x_amz_content_sha256="totam",
-        x_amz_credential="similique",
-        x_amz_date="sunt",
-        x_amz_security_token="aut",
-        x_amz_signature="quis",
-        x_amz_signed_headers="quis",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateReplicationSetRequestBody(
-        client_token="amet",
+)
+
+
+req = operations.CreateReplicationSetRequest(
+    request_body=operations.CreateReplicationSetRequestBody(
+        client_token="corrupti",
         regions={
-            "totam": shared.RegionMapInputValue(
-                sse_kms_key_id="perspiciatis",
+            "distinctio": shared.RegionMapInputValue(
+                sse_kms_key_id="quibusdam",
             ),
-            "cupiditate": shared.RegionMapInputValue(
-                sse_kms_key_id="asperiores",
+            "unde": shared.RegionMapInputValue(
+                sse_kms_key_id="nulla",
             ),
-            "quasi": shared.RegionMapInputValue(
-                sse_kms_key_id="eius",
+            "corrupti": shared.RegionMapInputValue(
+                sse_kms_key_id="illum",
             ),
         },
+        tags={
+            "error": "deserunt",
+            "suscipit": "iure",
+        },
     ),
+    x_amz_algorithm="magnam",
+    x_amz_content_sha256="debitis",
+    x_amz_credential="ipsa",
+    x_amz_date="delectus",
+    x_amz_security_token="tempora",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="molestiae",
 )
     
 res = s.create_replication_set(req)

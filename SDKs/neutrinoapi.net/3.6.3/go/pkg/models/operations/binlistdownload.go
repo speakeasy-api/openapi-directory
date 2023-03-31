@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BINListDownloadQueryParams struct {
+type BINListDownloadRequest struct {
 	// Include 8-digit and higher BIN codes. This option includes all 6-digit BINs and all 8-digit and higher BINs (including some 9, 10 and 11 digit BINs where available)
 	Include8digit *bool `queryParam:"style=form,explode=true,name=include-8digit"`
 	// Include ISO 3-letter country codes and ISO 3-letter currency codes in the data. These will be added to columns 10 and 11 respectively
 	IncludeIso3 *bool `queryParam:"style=form,explode=true,name=include-iso3"`
-}
-
-type BINListDownloadRequest struct {
-	QueryParams BINListDownloadQueryParams
 }
 
 type BINListDownloadResponse struct {

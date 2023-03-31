@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsMoveColumnPathParams struct {
-	// The unique identifier of the column.
-	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
-}
-
 type ProjectsMoveColumnRequestBody struct {
 	// The position of the column in a project. Can be one of: `first`, `last`, or `after:<column_id>` to place after the specified column.
 	Position string `json:"position"`
 }
 
 type ProjectsMoveColumnRequest struct {
-	PathParams ProjectsMoveColumnPathParams
-	Request    ProjectsMoveColumnRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsMoveColumnRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the column.
+	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
 }
 
 type ProjectsMoveColumnResponse struct {

@@ -37,7 +37,7 @@ func newLabels(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // CreateLabel - Purchase Label
 // Purchase and print a label for shipment
-func (s *labels) CreateLabel(ctx context.Context, request operations.CreateLabelRequest) (*operations.CreateLabelResponse, error) {
+func (s *labels) CreateLabel(ctx context.Context, request shared.CreateLabelRequestBodyInput) (*operations.CreateLabelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/labels"
 
@@ -109,9 +109,9 @@ func (s *labels) CreateLabel(ctx context.Context, request operations.CreateLabel
 // to generate a label without having to refill in the shipment information repeatedly.
 func (s *labels) CreateLabelFromRate(ctx context.Context, request operations.CreateLabelFromRateRequest) (*operations.CreateLabelFromRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/rates/{rate_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/rates/{rate_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateLabelFromRateRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -179,9 +179,9 @@ func (s *labels) CreateLabelFromRate(ctx context.Context, request operations.Cre
 // package info.
 func (s *labels) CreateLabelFromShipment(ctx context.Context, request operations.CreateLabelFromShipmentRequest) (*operations.CreateLabelFromShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/shipment/{shipment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/shipment/{shipment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateLabelFromShipmentRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,9 +248,9 @@ func (s *labels) CreateLabelFromShipment(ctx context.Context, request operations
 // Create a return label
 func (s *labels) CreateReturnLabel(ctx context.Context, request operations.CreateReturnLabelRequest) (*operations.CreateReturnLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}/return", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}/return", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateReturnLabelRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -317,14 +317,14 @@ func (s *labels) CreateReturnLabel(ctx context.Context, request operations.Creat
 // Find a label by using the external shipment id that was used during label creation
 func (s *labels) GetLabelByExternalShipmentID(ctx context.Context, request operations.GetLabelByExternalShipmentIDRequest) (*operations.GetLabelByExternalShipmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/external_shipment_id/{external_shipment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/external_shipment_id/{external_shipment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -380,14 +380,14 @@ func (s *labels) GetLabelByExternalShipmentID(ctx context.Context, request opera
 // Retrieve information for individual labels.
 func (s *labels) GetLabelByID(ctx context.Context, request operations.GetLabelByIDRequest) (*operations.GetLabelByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -443,7 +443,7 @@ func (s *labels) GetLabelByID(ctx context.Context, request operations.GetLabelBy
 // Retrieve the label's tracking information
 func (s *labels) GetTrackingLogFromLabel(ctx context.Context, request operations.GetTrackingLogFromLabelRequest) (*operations.GetTrackingLogFromLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}/track", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}/track", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -511,7 +511,7 @@ func (s *labels) ListLabels(ctx context.Context, request operations.ListLabelsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -565,7 +565,7 @@ func (s *labels) ListLabels(ctx context.Context, request operations.ListLabelsRe
 // Void a label by ID to get a refund.
 func (s *labels) VoidLabel(ctx context.Context, request operations.VoidLabelRequest) (*operations.VoidLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}/void", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/labels/{label_id}/void", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

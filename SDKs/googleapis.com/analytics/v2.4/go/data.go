@@ -32,7 +32,7 @@ func newData(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // AnalyticsDataGet - Returns Analytics report data for a view (profile).
-func (s *data) AnalyticsDataGet(ctx context.Context, request operations.AnalyticsDataGetRequest) (*operations.AnalyticsDataGetResponse, error) {
+func (s *data) AnalyticsDataGet(ctx context.Context, request operations.AnalyticsDataGetRequest, security operations.AnalyticsDataGetSecurity) (*operations.AnalyticsDataGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data"
 
@@ -41,11 +41,11 @@ func (s *data) AnalyticsDataGet(ctx context.Context, request operations.Analytic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

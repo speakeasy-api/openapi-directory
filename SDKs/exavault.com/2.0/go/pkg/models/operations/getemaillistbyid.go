@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmailListByIDPathParams struct {
-	// ID of the email list to return.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEmailListByIDQueryParams struct {
-	// Related record types to include in the response. Valid option is `ownerUser`
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetEmailListByIDHeaders struct {
+type GetEmailListByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetEmailListByIDRequest struct {
-	PathParams  GetEmailListByIDPathParams
-	QueryParams GetEmailListByIDQueryParams
-	Headers     GetEmailListByIDHeaders
+	// ID of the email list to return.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Related record types to include in the response. Valid option is `ownerUser`
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetEmailListByIDResponse struct {

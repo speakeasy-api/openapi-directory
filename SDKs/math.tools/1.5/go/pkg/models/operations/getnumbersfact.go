@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersFactSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNumbersFactQueryParams struct {
-	// Number value
-	Number int64 `queryParam:"style=form,explode=true,name=number"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
 type GetNumbersFactRequest struct {
-	QueryParams GetNumbersFactQueryParams
-	Security    GetNumbersFactSecurity
+	// Number value
+	Number int64 `queryParam:"style=form,explode=true,name=number"`
 }
 
 type GetNumbersFactResponse struct {

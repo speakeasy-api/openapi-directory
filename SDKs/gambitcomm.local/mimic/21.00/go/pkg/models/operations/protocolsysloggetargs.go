@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSyslogGetArgsPathParams struct {
+type ProtocolSyslogGetArgsRequest struct {
 	// Agent to show the SYSLOG argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSyslogGetArgsRequest struct {
-	PathParams ProtocolSyslogGetArgsPathParams
 }
 
 type ProtocolSyslogGetArgsResponse struct {

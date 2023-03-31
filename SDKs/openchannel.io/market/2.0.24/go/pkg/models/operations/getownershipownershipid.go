@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOwnershipOwnershipIDPathParams struct {
+type GetOwnershipOwnershipIDRequest struct {
 	// The id belonging to the ownership record
 	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
-}
-
-type GetOwnershipOwnershipIDRequest struct {
-	PathParams GetOwnershipOwnershipIDPathParams
 }
 
 type GetOwnershipOwnershipIDResponse struct {

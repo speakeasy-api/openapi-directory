@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type MaintenanceControllerCreateMaintenanceJobRawPathParams struct {
+type MaintenanceControllerCreateMaintenanceJobRawRequest struct {
+	// A JSON object containing details of the maintenance job
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The unique ID of the Branch
 	BranchID string `pathParam:"style=simple,explode=false,name=branchID"`
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type MaintenanceControllerCreateMaintenanceJobRawRequest struct {
-	PathParams MaintenanceControllerCreateMaintenanceJobRawPathParams
-	// A JSON object containing details of the maintenance job
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type MaintenanceControllerCreateMaintenanceJobRawResponse struct {

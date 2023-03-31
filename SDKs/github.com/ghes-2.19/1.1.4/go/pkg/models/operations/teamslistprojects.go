@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListProjectsPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsListProjectsQueryParams struct {
+type TeamsListProjectsRequest struct {
+	// This API is under preview and subject to change.
+	Accept string `header:"style=simple,explode=false,name=accept"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListProjectsHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type TeamsListProjectsRequest struct {
-	PathParams  TeamsListProjectsPathParams
-	QueryParams TeamsListProjectsQueryParams
-	Headers     TeamsListProjectsHeaders
+	TeamID  int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListProjectsResponse struct {

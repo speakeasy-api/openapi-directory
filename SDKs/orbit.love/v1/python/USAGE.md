@@ -4,21 +4,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest(
-    security=operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDSecurity(
-        bearer=shared.SchemeBearer(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    path_params=operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams(
-        id="ipsum",
-        member_id="commodi",
-        workspace_id="qui",
-    ),
+
+
+req = operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest(
+    id="corrupti",
+    member_slug="provident",
+    workspace_slug="distinctio",
 )
     
-res = s.activities.delete_workspace_id_members_member_id_activities_id_(req)
+res = s.activities.delete_workspace_slug_members_member_slug_activities_id_(req, operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity(
+    bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

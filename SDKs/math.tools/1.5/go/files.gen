@@ -46,5 +46,4 @@ pkg/models/operations/getnumbersprimefactors.go
 pkg/models/operations/getnumberscardinal.go
 pkg/models/operations/getnumberscurrency.go
 pkg/models/operations/getnumbersordinal.go
-pkg/models/shared/security.go
 USAGE.md

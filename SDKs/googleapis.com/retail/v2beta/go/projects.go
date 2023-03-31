@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute - Adds the specified CatalogAttribute to the AttributesConfig. If the CatalogAttribute to add already exists, an ALREADY_EXISTS error is returned.
-func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest) (*operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest, security operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeSecurity) (*operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:addCatalogAttribute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:addCatalogAttribute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaAddCatalogAttributeRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttr
 }
 
 // RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributes - Removes all specified CatalogAttributes from the AttributesConfig.
-func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributes(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesRequest) (*operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributes(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesRequest, security operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesSecurity) (*operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:batchRemoveCatalogAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:batchRemoveCatalogAttributes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaBatchRemoveCatalogAttributesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCat
 }
 
 // RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttribute - Removes the specified CatalogAttribute from the AttributesConfig. If the CatalogAttribute to remove does not exist, a NOT_FOUND error is returned.
-func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttribute(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest) (*operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttribute(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest, security operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeSecurity) (*operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:removeCatalogAttribute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:removeCatalogAttribute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaRemoveCatalogAttributeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogA
 }
 
 // RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttribute - Replaces the specified CatalogAttribute in the AttributesConfig by updating the catalog attribute with the same CatalogAttribute.key. If the CatalogAttribute to replace does not exist, a NOT_FOUND error is returned.
-func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttribute(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeRequest) (*operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttribute(ctx context.Context, request operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeRequest, security operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeSecurity) (*operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:replaceCatalogAttribute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{attributesConfig}:replaceCatalogAttribute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaReplaceCatalogAttributeRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalog
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalog
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces - It is recommended to use the ProductService.AddLocalInventories method instead of ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the added place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:addFulfillmentPlaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:addFulfillmentPlaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaAddFulfillmentPlacesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,11 +268,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddFulfillment
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,11 +307,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddFulfillment
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventories - Updates local inventory information for a Product at a list of places, while respecting the last update timestamps of each inventory field. This process is asynchronous and does not require the Product to exist before updating inventory information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, updates are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. Local inventory information can only be modified using this method. ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventories(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventories(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:addLocalInventories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:addLocalInventories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaAddLocalInventoriesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,11 +323,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddLocalInvent
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,11 +362,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddLocalInvent
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsCreate - Creates a Product.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsCreateRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsCreateRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsCreateSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/products", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaProductInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -378,11 +378,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -417,11 +417,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsCreate(ctx con
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsImport - Bulk import of multiple Products. Request processing may be synchronous. Non-existing items are created. Note that it is possible for a subset of the Products to be successfully updated.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsImport(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsImportRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsImport(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsImportRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsImportSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/products:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/products:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaImportProductsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -433,11 +433,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsImport(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -472,20 +472,20 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsImport(ctx con
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsList - Gets a list of Products.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsListRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsListRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsListSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/products", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -520,11 +520,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsList(ctx conte
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces - It is recommended to use the ProductService.RemoveLocalInventories method instead of ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the removed place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:removeFulfillmentPlaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:removeFulfillmentPlaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaRemoveFulfillmentPlacesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -536,11 +536,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -575,11 +575,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillm
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventories - Remove local inventory information for a Product at a list of places at a removal timestamp. This process is asynchronous. If the request is valid, the removal will be enqueued and processed downstream. As a consequence, when a response is returned, removals are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. Local inventory information can only be removed using this method. ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventories(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventories(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesSecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:removeLocalInventories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{product}:removeLocalInventories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaRemoveLocalInventoriesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -591,11 +591,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -630,11 +630,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInv
 }
 
 // RetailProjectsLocationsCatalogsBranchesProductsSetInventory - Updates inventory information for a Product while respecting the last update timestamps of each inventory field. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update is enqueued and processed downstream. As a consequence, when a response is returned, updates are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. When inventory is updated with ProductService.CreateProduct and ProductService.UpdateProduct, the specified inventory field value(s) overwrite any existing value(s) while ignoring the last update time for this field. Furthermore, the last update times for the specified inventory fields are overwritten by the times of the ProductService.CreateProduct or ProductService.UpdateProduct request. If no inventory fields are set in CreateProductRequest.product, then any pre-existing inventory information for this product is used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing inventory information is preserved. Pre-existing inventory information can only be updated with ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and ProductService.RemoveFulfillmentPlaces. The returned Operations is obsolete after one day, and the GetOperation API returns `NOT_FOUND` afterwards. If conflicting updates are issued, the Operations associated with the stale updates are not marked as done until they are obsolete.
-func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsSetInventory(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsSetInventory(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest, security operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventorySecurity) (*operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:setInventory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:setInventory", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaSetInventoryRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -646,11 +646,11 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsSetInventory(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -685,20 +685,20 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsSetInventory(c
 }
 
 // RetailProjectsLocationsCatalogsCompleteQuery - Completes the specified prefix with keyword suggestions. This feature is only available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
-func (s *projects) RetailProjectsLocationsCatalogsCompleteQuery(ctx context.Context, request operations.RetailProjectsLocationsCatalogsCompleteQueryRequest) (*operations.RetailProjectsLocationsCatalogsCompleteQueryResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsCompleteQuery(ctx context.Context, request operations.RetailProjectsLocationsCatalogsCompleteQueryRequest, security operations.RetailProjectsLocationsCatalogsCompleteQuerySecurity) (*operations.RetailProjectsLocationsCatalogsCompleteQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{catalog}:completeQuery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{catalog}:completeQuery", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -733,11 +733,11 @@ func (s *projects) RetailProjectsLocationsCatalogsCompleteQuery(ctx context.Cont
 }
 
 // RetailProjectsLocationsCatalogsCompletionDataImport - Bulk import of processed completion dataset. Request processing is asynchronous. Partial updating is not supported. The operation is successfully finished only after the imported suggestions are indexed successfully and ready for serving. The process takes hours. This feature is only available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
-func (s *projects) RetailProjectsLocationsCatalogsCompletionDataImport(ctx context.Context, request operations.RetailProjectsLocationsCatalogsCompletionDataImportRequest) (*operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsCompletionDataImport(ctx context.Context, request operations.RetailProjectsLocationsCatalogsCompletionDataImportRequest, security operations.RetailProjectsLocationsCatalogsCompletionDataImportSecurity) (*operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/completionData:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/completionData:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaImportCompletionDataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -749,11 +749,11 @@ func (s *projects) RetailProjectsLocationsCatalogsCompletionDataImport(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -788,11 +788,11 @@ func (s *projects) RetailProjectsLocationsCatalogsCompletionDataImport(ctx conte
 }
 
 // RetailProjectsLocationsCatalogsControlsCreate - Creates a Control. If the Control to create already exists, an ALREADY_EXISTS error is returned.
-func (s *projects) RetailProjectsLocationsCatalogsControlsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsControlsCreateRequest) (*operations.RetailProjectsLocationsCatalogsControlsCreateResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsControlsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsControlsCreateRequest, security operations.RetailProjectsLocationsCatalogsControlsCreateSecurity) (*operations.RetailProjectsLocationsCatalogsControlsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/controls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/controls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaControlInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -804,11 +804,11 @@ func (s *projects) RetailProjectsLocationsCatalogsControlsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -843,20 +843,20 @@ func (s *projects) RetailProjectsLocationsCatalogsControlsCreate(ctx context.Con
 }
 
 // RetailProjectsLocationsCatalogsControlsList - Lists all Controls by their parent Catalog.
-func (s *projects) RetailProjectsLocationsCatalogsControlsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsControlsListRequest) (*operations.RetailProjectsLocationsCatalogsControlsListResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsControlsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsControlsListRequest, security operations.RetailProjectsLocationsCatalogsControlsListSecurity) (*operations.RetailProjectsLocationsCatalogsControlsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/controls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/controls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -891,20 +891,20 @@ func (s *projects) RetailProjectsLocationsCatalogsControlsList(ctx context.Conte
 }
 
 // RetailProjectsLocationsCatalogsGetDefaultBranch - Get which branch is currently default branch set by CatalogService.SetDefaultBranch method under a specified parent catalog.
-func (s *projects) RetailProjectsLocationsCatalogsGetDefaultBranch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsGetDefaultBranchRequest) (*operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsGetDefaultBranch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsGetDefaultBranchRequest, security operations.RetailProjectsLocationsCatalogsGetDefaultBranchSecurity) (*operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{catalog}:getDefaultBranch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{catalog}:getDefaultBranch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -939,20 +939,20 @@ func (s *projects) RetailProjectsLocationsCatalogsGetDefaultBranch(ctx context.C
 }
 
 // RetailProjectsLocationsCatalogsList - Lists all the Catalogs associated with the project.
-func (s *projects) RetailProjectsLocationsCatalogsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsListRequest) (*operations.RetailProjectsLocationsCatalogsListResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsListRequest, security operations.RetailProjectsLocationsCatalogsListSecurity) (*operations.RetailProjectsLocationsCatalogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/catalogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/catalogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -987,11 +987,11 @@ func (s *projects) RetailProjectsLocationsCatalogsList(ctx context.Context, requ
 }
 
 // RetailProjectsLocationsCatalogsModelsCreate - Creates a new model.
-func (s *projects) RetailProjectsLocationsCatalogsModelsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsCreateRequest) (*operations.RetailProjectsLocationsCatalogsModelsCreateResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsModelsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsCreateRequest, security operations.RetailProjectsLocationsCatalogsModelsCreateSecurity) (*operations.RetailProjectsLocationsCatalogsModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaModelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1003,11 +1003,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,20 +1042,20 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsCreate(ctx context.Conte
 }
 
 // RetailProjectsLocationsCatalogsModelsList - Lists all the models linked to this event store.
-func (s *projects) RetailProjectsLocationsCatalogsModelsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsListRequest) (*operations.RetailProjectsLocationsCatalogsModelsListResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsModelsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsListRequest, security operations.RetailProjectsLocationsCatalogsModelsListSecurity) (*operations.RetailProjectsLocationsCatalogsModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1090,11 +1090,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsList(ctx context.Context
 }
 
 // RetailProjectsLocationsCatalogsModelsPause - Pauses the training of an existing model.
-func (s *projects) RetailProjectsLocationsCatalogsModelsPause(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsPauseRequest) (*operations.RetailProjectsLocationsCatalogsModelsPauseResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsModelsPause(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsPauseRequest, security operations.RetailProjectsLocationsCatalogsModelsPauseSecurity) (*operations.RetailProjectsLocationsCatalogsModelsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:pause", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1106,11 +1106,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsPause(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1145,11 +1145,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsPause(ctx context.Contex
 }
 
 // RetailProjectsLocationsCatalogsModelsResume - Resumes the training of an existing model.
-func (s *projects) RetailProjectsLocationsCatalogsModelsResume(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsResumeRequest) (*operations.RetailProjectsLocationsCatalogsModelsResumeResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsModelsResume(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsResumeRequest, security operations.RetailProjectsLocationsCatalogsModelsResumeSecurity) (*operations.RetailProjectsLocationsCatalogsModelsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:resume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1161,11 +1161,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsResume(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1200,11 +1200,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsResume(ctx context.Conte
 }
 
 // RetailProjectsLocationsCatalogsModelsTune - Tunes an existing model.
-func (s *projects) RetailProjectsLocationsCatalogsModelsTune(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsTuneRequest) (*operations.RetailProjectsLocationsCatalogsModelsTuneResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsModelsTune(ctx context.Context, request operations.RetailProjectsLocationsCatalogsModelsTuneRequest, security operations.RetailProjectsLocationsCatalogsModelsTuneSecurity) (*operations.RetailProjectsLocationsCatalogsModelsTuneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:tune", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:tune", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1216,11 +1216,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsTune(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1255,11 +1255,11 @@ func (s *projects) RetailProjectsLocationsCatalogsModelsTune(ctx context.Context
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsAddControl - Enables a Control on the specified ServingConfig. The control is added in the last position of the list of controls it belongs to (e.g. if it's a facet spec control it will be applied in the last position of servingConfig.facetSpecIds) Returns a ALREADY_EXISTS error if the control has already been applied. Returns a FAILED_PRECONDITION error if the addition could exceed maximum number of control allowed for that type of control.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsAddControl(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsAddControlRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsAddControl(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsAddControlRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsAddControlSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{servingConfig}:addControl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{servingConfig}:addControl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaAddControlRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1271,11 +1271,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsAddControl(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1310,11 +1310,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsAddControl(ctx c
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsCreate - Creates a ServingConfig. A maximum of 100 ServingConfigs are allowed in a Catalog, otherwise a FAILED_PRECONDITION error is returned.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsCreateRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsCreate(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsCreateRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsCreateSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/servingConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/servingConfigs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaServingConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1326,11 +1326,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsCreate(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1365,20 +1365,20 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsCreate(ctx conte
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsDelete - Deletes a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsDelete(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsDeleteRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsDelete(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsDeleteRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsDeleteSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1413,20 +1413,20 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsDelete(ctx conte
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsList - Lists all ServingConfigs linked to this catalog.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsListRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsListResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsListRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsListSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/servingConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/servingConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1461,11 +1461,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsList(ctx context
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsPatch - Updates a ServingConfig.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPatch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsPatchRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPatch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsPatchRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsPatchSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaServingConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1477,11 +1477,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPatch(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1516,11 +1516,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPatch(ctx contex
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsPredict - Makes a recommendation prediction.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPredict(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsPredictRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPredict(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsPredictRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsPredictSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{placement}:predict", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{placement}:predict", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaPredictRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1532,11 +1532,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPredict(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1571,11 +1571,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsPredict(ctx cont
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsRemoveControl - Disables a Control on the specified ServingConfig. The control is removed from the ServingConfig. Returns a NOT_FOUND error if the Control is not enabled for the ServingConfig.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsRemoveControl(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsRemoveControl(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{servingConfig}:removeControl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{servingConfig}:removeControl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaRemoveControlRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1587,11 +1587,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsRemoveControl(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1626,11 +1626,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsRemoveControl(ct
 }
 
 // RetailProjectsLocationsCatalogsServingConfigsSearch - Performs a search. This feature is only available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
-func (s *projects) RetailProjectsLocationsCatalogsServingConfigsSearch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsSearchRequest) (*operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsServingConfigsSearch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsServingConfigsSearchRequest, security operations.RetailProjectsLocationsCatalogsServingConfigsSearchSecurity) (*operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{placement}:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{placement}:search", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaSearchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1642,11 +1642,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsSearch(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1681,11 +1681,11 @@ func (s *projects) RetailProjectsLocationsCatalogsServingConfigsSearch(ctx conte
 }
 
 // RetailProjectsLocationsCatalogsSetDefaultBranch - Set a specified branch id as default branch. API methods such as SearchService.Search, ProductService.GetProduct, ProductService.ListProducts will treat requests using "default_branch" to the actual branch id set as default. For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as default, setting SearchRequest.branch to `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent to setting SearchRequest.branch to `projects/*/locations/*/catalogs/*/branches/1`. Using multiple branches can be useful when developers would like to have a staging branch to test and verify for future usage. When it becomes ready, developers switch on the staging branch using this API while keeping using `projects/*/locations/*/catalogs/*/branches/default_branch` as SearchRequest.branch to route the traffic to this staging branch. CAUTION: If you have live predict/search traffic, switching the default branch could potentially cause outages if the ID space of the new branch is very different from the old one. More specifically: * PredictionService will only return product IDs from branch {newBranch}. * SearchService will only return product IDs from branch {newBranch} (if branch is not explicitly set). * UserEventService will only join events with products from branch {newBranch}.
-func (s *projects) RetailProjectsLocationsCatalogsSetDefaultBranch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsSetDefaultBranchRequest) (*operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsSetDefaultBranch(ctx context.Context, request operations.RetailProjectsLocationsCatalogsSetDefaultBranchRequest, security operations.RetailProjectsLocationsCatalogsSetDefaultBranchSecurity) (*operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{catalog}:setDefaultBranch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{catalog}:setDefaultBranch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaSetDefaultBranchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1697,11 +1697,11 @@ func (s *projects) RetailProjectsLocationsCatalogsSetDefaultBranch(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1736,20 +1736,20 @@ func (s *projects) RetailProjectsLocationsCatalogsSetDefaultBranch(ctx context.C
 }
 
 // RetailProjectsLocationsCatalogsUserEventsCollect - Writes a single user event from the browser. This uses a GET request to due to browser restriction of POST-ing to a 3rd party domain. This method is used only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
-func (s *projects) RetailProjectsLocationsCatalogsUserEventsCollect(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsCollectRequest) (*operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsUserEventsCollect(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsCollectRequest, security operations.RetailProjectsLocationsCatalogsUserEventsCollectSecurity) (*operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:collect", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:collect", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1784,11 +1784,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsCollect(ctx context.
 }
 
 // RetailProjectsLocationsCatalogsUserEventsImport - Bulk import of User events. Request processing might be synchronous. Events that already exist are skipped. Use this method for backfilling historical user events. `Operation.response` is of type `ImportResponse`. Note that it is possible for a subset of the items to be successfully inserted. `Operation.metadata` is of type `ImportMetadata`.
-func (s *projects) RetailProjectsLocationsCatalogsUserEventsImport(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsImportRequest) (*operations.RetailProjectsLocationsCatalogsUserEventsImportResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsUserEventsImport(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsImportRequest, security operations.RetailProjectsLocationsCatalogsUserEventsImportSecurity) (*operations.RetailProjectsLocationsCatalogsUserEventsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaImportUserEventsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1800,11 +1800,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsImport(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1839,11 +1839,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsImport(ctx context.C
 }
 
 // RetailProjectsLocationsCatalogsUserEventsPurge - Deletes permanently all user events specified by the filter provided. Depending on the number of events specified by the filter, this operation could take hours or days to complete. To test a filter, use the list command first.
-func (s *projects) RetailProjectsLocationsCatalogsUserEventsPurge(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsPurgeRequest) (*operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsUserEventsPurge(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsPurgeRequest, security operations.RetailProjectsLocationsCatalogsUserEventsPurgeSecurity) (*operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:purge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:purge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaPurgeUserEventsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1855,11 +1855,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsPurge(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1894,11 +1894,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsPurge(ctx context.Co
 }
 
 // RetailProjectsLocationsCatalogsUserEventsRejoin - Starts a user-event rejoin operation with latest product catalog. Events are not annotated with detailed product information for products that are missing from the catalog when the user event is ingested. These events are stored as unjoined events with limited usage on training and serving. You can use this method to start a join operation on specified events with the latest version of product catalog. You can also use this method to correct events joined with the wrong product catalog. A rejoin operation can take hours or days to complete.
-func (s *projects) RetailProjectsLocationsCatalogsUserEventsRejoin(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsRejoinRequest) (*operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsUserEventsRejoin(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsRejoinRequest, security operations.RetailProjectsLocationsCatalogsUserEventsRejoinSecurity) (*operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:rejoin", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:rejoin", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaRejoinUserEventsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1910,11 +1910,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsRejoin(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1949,11 +1949,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsRejoin(ctx context.C
 }
 
 // RetailProjectsLocationsCatalogsUserEventsWrite - Writes a single user event.
-func (s *projects) RetailProjectsLocationsCatalogsUserEventsWrite(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsWriteRequest) (*operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse, error) {
+func (s *projects) RetailProjectsLocationsCatalogsUserEventsWrite(ctx context.Context, request operations.RetailProjectsLocationsCatalogsUserEventsWriteRequest, security operations.RetailProjectsLocationsCatalogsUserEventsWriteSecurity) (*operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:write", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/userEvents:write", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRetailV2betaUserEventInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1965,11 +1965,11 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsWrite(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2004,20 +2004,20 @@ func (s *projects) RetailProjectsLocationsCatalogsUserEventsWrite(ctx context.Co
 }
 
 // RetailProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) RetailProjectsOperationsGet(ctx context.Context, request operations.RetailProjectsOperationsGetRequest) (*operations.RetailProjectsOperationsGetResponse, error) {
+func (s *projects) RetailProjectsOperationsGet(ctx context.Context, request operations.RetailProjectsOperationsGetRequest, security operations.RetailProjectsOperationsGetSecurity) (*operations.RetailProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2052,20 +2052,20 @@ func (s *projects) RetailProjectsOperationsGet(ctx context.Context, request oper
 }
 
 // RetailProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) RetailProjectsOperationsList(ctx context.Context, request operations.RetailProjectsOperationsListRequest) (*operations.RetailProjectsOperationsListResponse, error) {
+func (s *projects) RetailProjectsOperationsList(ctx context.Context, request operations.RetailProjectsOperationsListRequest, security operations.RetailProjectsOperationsListSecurity) (*operations.RetailProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

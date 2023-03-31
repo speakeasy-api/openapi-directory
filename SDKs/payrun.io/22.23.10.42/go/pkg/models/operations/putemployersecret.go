@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutEmployerSecretPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The secret unique identifier. E.g ERSEC001
-	SecretID string `pathParam:"style=simple,explode=false,name=SecretId"`
-}
-
-type PutEmployerSecretHeaders struct {
+type PutEmployerSecretRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PutEmployerSecretRequest struct {
-	PathParams PutEmployerSecretPathParams
-	Headers    PutEmployerSecretHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The secret unique identifier. E.g ERSEC001
+	SecretID string `pathParam:"style=simple,explode=false,name=SecretId"`
 }
 
 type PutEmployerSecretResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PhoneNumberValidationQueryParams struct {
+type PhoneNumberValidationRequest struct {
 	APIKey string `queryParam:"style=form,explode=false,name=api_key"`
 	// Specifies the phone number to validate. Phone number must include a country code in acceptable format. For instance, UK phone numbers should be suffixed `+44`, `44` or `0044`.
 	Query string `queryParam:"style=form,explode=false,name=query"`
-}
-
-type PhoneNumberValidationRequest struct {
-	QueryParams PhoneNumberValidationQueryParams
 }
 
 type PhoneNumberValidationResponse struct {

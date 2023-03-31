@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteActiveWidgetPathParams struct {
+type DeleteActiveWidgetRequest struct {
 	// Continuous Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 	// Active widget ID belonging to this Continuous Project
 	WidgetID int64 `pathParam:"style=simple,explode=false,name=widgetId"`
-}
-
-type DeleteActiveWidgetRequest struct {
-	PathParams DeleteActiveWidgetPathParams
 }
 
 type DeleteActiveWidgetResponse struct {

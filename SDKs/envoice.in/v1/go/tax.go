@@ -43,7 +43,7 @@ func (s *tax) TaxAPIAll(ctx context.Context, request operations.TaxAPIAllRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -112,7 +112,7 @@ func (s *tax) TaxAPIDeleteForm(ctx context.Context, request operations.TaxAPIDel
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxDeleteAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,7 +127,7 @@ func (s *tax) TaxAPIDeleteForm(ctx context.Context, request operations.TaxAPIDel
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -196,7 +196,7 @@ func (s *tax) TaxAPIDeleteJSON(ctx context.Context, request operations.TaxAPIDel
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxDeleteAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,7 +211,7 @@ func (s *tax) TaxAPIDeleteJSON(ctx context.Context, request operations.TaxAPIDel
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -280,7 +280,7 @@ func (s *tax) TaxAPIDeleteRaw(ctx context.Context, request operations.TaxAPIDele
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,7 +295,7 @@ func (s *tax) TaxAPIDeleteRaw(ctx context.Context, request operations.TaxAPIDele
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -364,7 +364,7 @@ func (s *tax) TaxAPINewForm(ctx context.Context, request operations.TaxAPINewFor
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxCreateAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -379,7 +379,7 @@ func (s *tax) TaxAPINewForm(ctx context.Context, request operations.TaxAPINewFor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -448,7 +448,7 @@ func (s *tax) TaxAPINewJSON(ctx context.Context, request operations.TaxAPINewJSO
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxCreateAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -463,7 +463,7 @@ func (s *tax) TaxAPINewJSON(ctx context.Context, request operations.TaxAPINewJSO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -532,7 +532,7 @@ func (s *tax) TaxAPINewRaw(ctx context.Context, request operations.TaxAPINewRawR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -547,7 +547,7 @@ func (s *tax) TaxAPINewRaw(ctx context.Context, request operations.TaxAPINewRawR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -616,7 +616,7 @@ func (s *tax) TaxAPIUpdateForm(ctx context.Context, request operations.TaxAPIUpd
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxUpdateAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -631,7 +631,7 @@ func (s *tax) TaxAPIUpdateForm(ctx context.Context, request operations.TaxAPIUpd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -663,7 +663,7 @@ func (s *tax) TaxAPIUpdateJSON(ctx context.Context, request operations.TaxAPIUpd
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxUpdateAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -678,7 +678,7 @@ func (s *tax) TaxAPIUpdateJSON(ctx context.Context, request operations.TaxAPIUpd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -710,7 +710,7 @@ func (s *tax) TaxAPIUpdateRaw(ctx context.Context, request operations.TaxAPIUpda
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tax/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -725,7 +725,7 @@ func (s *tax) TaxAPIUpdateRaw(ctx context.Context, request operations.TaxAPIUpda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

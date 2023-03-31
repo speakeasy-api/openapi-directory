@@ -33,20 +33,20 @@ func newPromotion(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // GetListingSet - This method returns the set of listings associated with the <b>promotion_id</b> specified in the path parameter. Call <a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions">getPromotions</a> to retrieve the IDs of a seller's promotions.  <p>The listing details are returned in a paginated set and you can control and results returned using the following query parameters: <b>limit</b>, <b>offset</b>, <b>q</b>, <b>sort</b>, and <b>status</b>.</p>  <ul><li><b>Maximum associated listings returned:</b> 200</li>  <li><b>Default number of listings returned:</b> 200</li></ul>
-func (s *promotion) GetListingSet(ctx context.Context, request operations.GetListingSetRequest) (*operations.GetListingSetResponse, error) {
+func (s *promotion) GetListingSet(ctx context.Context, request operations.GetListingSetRequest, security operations.GetListingSetSecurity) (*operations.GetListingSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotion/{promotion_id}/get_listing_set", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotion/{promotion_id}/get_listing_set", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *promotion) GetListingSet(ctx context.Context, request operations.GetLis
 }
 
 // GetPromotions - This method returns a list of a seller's undeleted promotions. <p>The call returns up to 200 currently-available promotions on the specified marketplace. While the response body does not include the promotion's <b>discountRules</b> or <b>inventoryCriterion</b> containers, it does include the <b>promotionHref</b> (which you can use to retrieve the complete details of the promotion).</p>  <p>Use query parameters to sort and filter the results by the number of promotions to return, the promotion state or type, and the eBay marketplace. You can also supply keywords to limit the response to the promotions that contain that keywords in the title of the promotion.</p> <p><b>Maximum returned:</b> 200</p>
-func (s *promotion) GetPromotions(ctx context.Context, request operations.GetPromotionsRequest) (*operations.GetPromotionsResponse, error) {
+func (s *promotion) GetPromotions(ctx context.Context, request operations.GetPromotionsRequest, security operations.GetPromotionsSecurity) (*operations.GetPromotionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/promotion"
 
@@ -95,11 +95,11 @@ func (s *promotion) GetPromotions(ctx context.Context, request operations.GetPro
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,16 +137,16 @@ func (s *promotion) GetPromotions(ctx context.Context, request operations.GetPro
 }
 
 // PausePromotion - This method pauses a currently-active (RUNNING) threshold promotion and changes the state of the promotion from <code>RUNNING</code> to <code>PAUSED</code>. Pausing a promotion makes the promotion temporarily unavailable to buyers and any currently-incomplete transactions will not receive the promotional offer until the promotion is resumed. Also, promotion teasers are not displayed when a promotion is paused.  <br><br>Pass the ID of the promotion you want to pause using the <b>promotion_id</b> path parameter. Call <a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions">getPromotions</a> to retrieve the IDs of the seller's promotions. <br><br><b>Note:</b> You can only pause threshold promotions (you cannot pause markdown promotions).
-func (s *promotion) PausePromotion(ctx context.Context, request operations.PausePromotionRequest) (*operations.PausePromotionResponse, error) {
+func (s *promotion) PausePromotion(ctx context.Context, request operations.PausePromotionRequest, security operations.PausePromotionSecurity) (*operations.PausePromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotion/{promotion_id}/pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotion/{promotion_id}/pause", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,16 +178,16 @@ func (s *promotion) PausePromotion(ctx context.Context, request operations.Pause
 }
 
 // ResumePromotion - This method restarts a threshold promotion that was previously paused and changes the state of the promotion from <code>PAUSED</code> to <code>RUNNING</code>. Only promotions that have been previously paused can be resumed. Resuming a promotion reinstates the promotional teasers and any transactions that were in motion before the promotion was paused will again be eligible for the promotion.  <br><br>Pass the ID of the promotion you want to resume using the <b>promotion_id</b> path parameter. Call <a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions">getPromotions</a> to retrieve the IDs of the seller's promotions.
-func (s *promotion) ResumePromotion(ctx context.Context, request operations.ResumePromotionRequest) (*operations.ResumePromotionResponse, error) {
+func (s *promotion) ResumePromotion(ctx context.Context, request operations.ResumePromotionRequest, security operations.ResumePromotionSecurity) (*operations.ResumePromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotion/{promotion_id}/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/promotion/{promotion_id}/resume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

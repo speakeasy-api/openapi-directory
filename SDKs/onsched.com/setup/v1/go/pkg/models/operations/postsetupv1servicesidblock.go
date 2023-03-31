@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ServicesIDBlockPathParams struct {
+type PostSetupV1ServicesIDBlockRequest struct {
+	ServiceBlockInputModel *shared.ServiceBlockInputModel `request:"mediaType=application/json"`
 	// id of service object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1ServicesIDBlockRequest struct {
-	PathParams PostSetupV1ServicesIDBlockPathParams
-	Request    *shared.ServiceBlockInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1ServicesIDBlockResponse struct {

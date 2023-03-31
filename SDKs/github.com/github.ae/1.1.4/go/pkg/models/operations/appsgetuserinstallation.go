@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetUserInstallationPathParams struct {
+type AppsGetUserInstallationRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type AppsGetUserInstallationRequest struct {
-	PathParams AppsGetUserInstallationPathParams
 }
 
 type AppsGetUserInstallationResponse struct {

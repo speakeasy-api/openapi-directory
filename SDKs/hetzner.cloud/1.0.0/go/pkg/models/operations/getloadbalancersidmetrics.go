@@ -10,11 +10,6 @@ import (
 	"net/http"
 )
 
-type GetLoadBalancersIDMetricsPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetLoadBalancersIDMetricsTypeEnum - Type of metrics to get
 type GetLoadBalancersIDMetricsTypeEnum string
 
@@ -45,20 +40,17 @@ func (e *GetLoadBalancersIDMetricsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLoadBalancersIDMetricsQueryParams struct {
+type GetLoadBalancersIDMetricsRequest struct {
 	// End of period to get Metrics for (in ISO-8601 format)
 	End string `queryParam:"style=form,explode=true,name=end"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Start of period to get Metrics for (in ISO-8601 format)
 	Start string `queryParam:"style=form,explode=true,name=start"`
 	// Resolution of results in seconds
 	Step *string `queryParam:"style=form,explode=true,name=step"`
 	// Type of metrics to get
 	Type GetLoadBalancersIDMetricsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetLoadBalancersIDMetricsRequest struct {
-	PathParams  GetLoadBalancersIDMetricsPathParams
-	QueryParams GetLoadBalancersIDMetricsQueryParams
 }
 
 type GetLoadBalancersIDMetrics200ApplicationJSONMetricsTimeSeriesValuesType string

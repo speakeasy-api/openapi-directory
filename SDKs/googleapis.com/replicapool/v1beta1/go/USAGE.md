@@ -14,40 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.ReplicapoolPoolsDeleteRequest{
-        Security: operations.ReplicapoolPoolsDeleteSecurity{
-            Option1: &operations.ReplicapoolPoolsDeleteSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.ReplicapoolPoolsDeletePathParams{
-            PoolName: "corrupti",
-            ProjectName: "provident",
-            Zone: "distinctio",
-        },
-        QueryParams: operations.ReplicapoolPoolsDeleteQueryParams{
-            Alt: "json",
-            Fields: "quibusdam",
-            Key: "unde",
-            OauthToken: "nulla",
-            PrettyPrint: false,
-            QuotaUser: "corrupti",
-            UserIP: "illum",
-        },
-        Request: &shared.PoolsDeleteRequest{
+        PoolsDeleteRequest: &shared.PoolsDeleteRequest{
             AbandonInstances: []string{
-                "error",
-                "deserunt",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
+        Alt: "json",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PoolName: "illum",
+        PrettyPrint: false,
+        ProjectName: "vel",
+        QuotaUser: "error",
+        UserIP: "deserunt",
+        Zone: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Pools.ReplicapoolPoolsDelete(ctx, req)
+    res, err := s.Pools.ReplicapoolPoolsDelete(ctx, req, operations.ReplicapoolPoolsDeleteSecurity{
+        Option1: &operations.ReplicapoolPoolsDeleteSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

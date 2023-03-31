@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSessionSetParameterPathParams struct {
+type ProtocolTftpSessionSetParameterRequest struct {
 	// Agent to set TFTP parameter
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set
@@ -15,10 +15,6 @@ type ProtocolTftpSessionSetParameterPathParams struct {
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionID"`
 	// Value to set
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolTftpSessionSetParameterRequest struct {
-	PathParams ProtocolTftpSessionSetParameterPathParams
 }
 
 type ProtocolTftpSessionSetParameterResponse struct {

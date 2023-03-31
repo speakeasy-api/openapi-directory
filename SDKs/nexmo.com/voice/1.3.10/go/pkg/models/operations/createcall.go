@@ -11,7 +11,7 @@ import (
 )
 
 type CreateCallSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateCallRequestBodyType string
@@ -80,12 +80,6 @@ func (u CreateCallRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type CreateCallRequest struct {
-	// Call Details
-	Request  *CreateCallRequestBody `request:"mediaType=application/json"`
-	Security CreateCallSecurity
 }
 
 type CreateCallResponse struct {

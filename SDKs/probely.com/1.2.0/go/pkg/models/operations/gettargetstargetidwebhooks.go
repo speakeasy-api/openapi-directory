@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDWebhooksPathParams struct {
+type GetTargetsTargetIDWebhooksRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDWebhooksRequest struct {
-	PathParams GetTargetsTargetIDWebhooksPathParams
 }
 
 // GetTargetsTargetIDWebhooks403ApplicationJSON - Not allowed to perform operation

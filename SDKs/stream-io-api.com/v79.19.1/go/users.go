@@ -34,7 +34,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // Ban - Ban user
 // Restricts user activity either in specific channel or globally
-func (s *users) Ban(ctx context.Context, request operations.BanRequest) (*operations.BanResponse, error) {
+func (s *users) Ban(ctx context.Context, request shared.BanRequest) (*operations.BanResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/ban"
 
@@ -120,7 +120,7 @@ func (s *users) Connect(ctx context.Context, request operations.ConnectRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,7 +172,7 @@ func (s *users) Connect(ctx context.Context, request operations.ConnectRequest) 
 
 // CreateGuest - Create guest
 // Creates guest user
-func (s *users) CreateGuest(ctx context.Context, request operations.CreateGuestRequest) (*operations.CreateGuestResponse, error) {
+func (s *users) CreateGuest(ctx context.Context, request shared.GuestRequest) (*operations.CreateGuestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/guest"
 
@@ -249,7 +249,7 @@ func (s *users) CreateGuest(ctx context.Context, request operations.CreateGuestR
 
 // DeactivateUsers - Deactivate users
 // Deactivate users in batches
-func (s *users) DeactivateUsers(ctx context.Context, request operations.DeactivateUsersRequest) (*operations.DeactivateUsersResponse, error) {
+func (s *users) DeactivateUsers(ctx context.Context, request shared.DeactivateUsersRequest) (*operations.DeactivateUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/deactivate"
 
@@ -326,7 +326,7 @@ func (s *users) DeactivateUsers(ctx context.Context, request operations.Deactiva
 
 // DeleteUsers - Delete Users
 // Deletes users and optionally all their belongings asynchronously.
-func (s *users) DeleteUsers(ctx context.Context, request operations.DeleteUsersRequest) (*operations.DeleteUsersResponse, error) {
+func (s *users) DeleteUsers(ctx context.Context, request shared.DeleteUsersRequest) (*operations.DeleteUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/delete"
 
@@ -403,7 +403,7 @@ func (s *users) DeleteUsers(ctx context.Context, request operations.DeleteUsersR
 
 // ExportUser - Export users
 // Exports user profile, reactions and messages for list of given users
-func (s *users) ExportUser(ctx context.Context, request operations.ExportUserRequest) (*operations.ExportUserResponse, error) {
+func (s *users) ExportUser(ctx context.Context, request shared.ExportUsersRequest) (*operations.ExportUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/users"
 
@@ -480,7 +480,7 @@ func (s *users) ExportUser(ctx context.Context, request operations.ExportUserReq
 
 // Flag - Flag
 // Reports message or user for review by moderators
-func (s *users) Flag(ctx context.Context, request operations.FlagRequest) (*operations.FlagResponse, error) {
+func (s *users) Flag(ctx context.Context, request shared.FlagRequest) (*operations.FlagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/flag"
 
@@ -566,7 +566,7 @@ func (s *users) LongPoll(ctx context.Context, request operations.LongPollRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -618,7 +618,7 @@ func (s *users) LongPoll(ctx context.Context, request operations.LongPollRequest
 
 // MuteUser - Mute user
 // Mutes one or several users
-func (s *users) MuteUser(ctx context.Context, request operations.MuteUserRequest) (*operations.MuteUserResponse, error) {
+func (s *users) MuteUser(ctx context.Context, request shared.MuteUserRequest) (*operations.MuteUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/mute"
 
@@ -704,7 +704,7 @@ func (s *users) QueryBannedUsers(ctx context.Context, request operations.QueryBa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -775,7 +775,7 @@ func (s *users) QueryUsers(ctx context.Context, request operations.QueryUsersReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -837,7 +837,7 @@ func (s *users) QueryUsers(ctx context.Context, request operations.QueryUsersReq
 
 // ReactivateUsers - Reactivate users
 // Reactivate users in batches
-func (s *users) ReactivateUsers(ctx context.Context, request operations.ReactivateUsersRequest) (*operations.ReactivateUsersResponse, error) {
+func (s *users) ReactivateUsers(ctx context.Context, request shared.ReactivateUsersRequest) (*operations.ReactivateUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/reactivate"
 
@@ -914,7 +914,7 @@ func (s *users) ReactivateUsers(ctx context.Context, request operations.Reactiva
 
 // RestoreUsers - Restore users
 // Restore soft deleted users
-func (s *users) RestoreUsers(ctx context.Context, request operations.RestoreUsersRequest) (*operations.RestoreUsersResponse, error) {
+func (s *users) RestoreUsers(ctx context.Context, request shared.RestoreUsersRequest) (*operations.RestoreUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/restore"
 
@@ -1000,7 +1000,7 @@ func (s *users) Unban(ctx context.Context, request operations.UnbanRequest) (*op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1062,7 +1062,7 @@ func (s *users) Unban(ctx context.Context, request operations.UnbanRequest) (*op
 
 // Unflag - Unflag
 // Removes previously created user or message flag
-func (s *users) Unflag(ctx context.Context, request operations.UnflagRequest) (*operations.UnflagResponse, error) {
+func (s *users) Unflag(ctx context.Context, request shared.FlagRequest) (*operations.UnflagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/unflag"
 
@@ -1139,7 +1139,7 @@ func (s *users) Unflag(ctx context.Context, request operations.UnflagRequest) (*
 
 // UnmuteUser - Unmute user
 // Unmutes previously muted user
-func (s *users) UnmuteUser(ctx context.Context, request operations.UnmuteUserRequest) (*operations.UnmuteUserResponse, error) {
+func (s *users) UnmuteUser(ctx context.Context, request shared.UnmuteUserRequest) (*operations.UnmuteUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/unmute"
 
@@ -1216,7 +1216,7 @@ func (s *users) UnmuteUser(ctx context.Context, request operations.UnmuteUserReq
 
 // UpdateUsers - Upsert users
 // Update or create users in bulk
-func (s *users) UpdateUsers(ctx context.Context, request operations.UpdateUsersRequest) (*operations.UpdateUsersResponse, error) {
+func (s *users) UpdateUsers(ctx context.Context, request shared.UpdateUsersRequest) (*operations.UpdateUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -1293,7 +1293,7 @@ func (s *users) UpdateUsers(ctx context.Context, request operations.UpdateUsersR
 
 // UpdateUsersPartial - Partially update user
 // Updates certain fields of the user
-func (s *users) UpdateUsersPartial(ctx context.Context, request operations.UpdateUsersPartialRequest) (*operations.UpdateUsersPartialResponse, error) {
+func (s *users) UpdateUsersPartial(ctx context.Context, request shared.UpdateUserPartialRequest) (*operations.UpdateUsersPartialResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 

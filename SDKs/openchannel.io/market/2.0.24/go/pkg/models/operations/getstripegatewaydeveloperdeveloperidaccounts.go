@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetStripeGatewayDeveloperDeveloperIDAccountsPathParams struct {
+type GetStripeGatewayDeveloperDeveloperIDAccountsRequest struct {
 	// The id of the developer connecting their Stripe account
 	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
-}
-
-type GetStripeGatewayDeveloperDeveloperIDAccountsRequest struct {
-	PathParams GetStripeGatewayDeveloperDeveloperIDAccountsPathParams
 }
 
 type GetStripeGatewayDeveloperDeveloperIDAccountsResponse struct {

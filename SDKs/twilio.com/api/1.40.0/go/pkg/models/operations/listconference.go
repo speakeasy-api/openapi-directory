@@ -13,15 +13,13 @@ var ListConferenceServerList = []string{
 }
 
 type ListConferenceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListConferencePathParams struct {
+type ListConferenceRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListConferenceQueryParams struct {
 	// The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. To read conferences that started on or before midnight on a date, use `<=YYYY-MM-DD`, and to specify  conferences that started on or after midnight on a date, use `>=YYYY-MM-DD`.
 	DateCreated *types.Date `queryParam:"style=form,explode=true,name=DateCreated"`
 	// The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. To read conferences that started on or before midnight on a date, use `<=YYYY-MM-DD`, and to specify  conferences that started on or after midnight on a date, use `>=YYYY-MM-DD`.
@@ -44,13 +42,6 @@ type ListConferenceQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The status of the resources to read. Can be: `init`, `in-progress`, or `completed`.
 	Status *shared.ConferenceEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListConferenceRequest struct {
-	PathParams  ListConferencePathParams
-	QueryParams ListConferenceQueryParams
-	Security    ListConferenceSecurity
-	ServerURL   *string
 }
 
 // ListConferenceListConferenceResponse - OK

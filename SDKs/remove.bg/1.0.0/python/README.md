@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/remove.bg/1.0.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,83 +14,33 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_header=shared.SchemeAPIKeyHeader(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.PostRemovebgRequest(
-    request=operations.PostRemovebgRequests(
-        remove_bg_json=shared.RemoveBgJSON(
-            add_shadow=True,
-            bg_color="culpa",
-            bg_image_url="officia",
-            channels="rgba",
-            crop=False,
-            crop_margin="aliquid",
-            format="png",
-            image_file_b64="iusto",
-            image_url="quia",
-            position="sint",
-            roi="veritatis",
-            scale="ipsum",
-            semitransparency=True,
-            size="auto",
-            type="auto",
-            type_level="2",
-        ),
-        remove_bg_json1=shared.RemoveBgJSON(
-            add_shadow=False,
-            bg_color="nobis",
-            bg_image_url="animi",
-            channels="alpha",
-            crop=False,
-            crop_margin="dolor",
-            format="png",
-            image_file_b64="et",
-            image_url="fugit",
-            position="veritatis",
-            roi="aut",
-            scale="est",
-            semitransparency=False,
-            size="full",
-            type="auto",
-            type_level="latest",
-        ),
-        remove_bg_multipart=shared.RemoveBgMultipart(
-            add_shadow=False,
-            bg_color="rerum",
-            bg_image_file=shared.RemoveBgMultipartBgImageFile(
-                bg_image_file="accusamus",
-                content="voluptatibus".encode(),
-            ),
-            bg_image_url="eos",
-            channels="alpha",
-            crop=True,
-            crop_margin="consectetur",
-            format="png",
-            image_file=shared.RemoveBgMultipartImageFile(
-                content="quaerat".encode(),
-                image_file="voluptas",
-            ),
-            image_file_b64="iusto",
-            image_url="rerum",
-            position="non",
-            roi="possimus",
-            scale="eius",
-            semitransparency=True,
-            size="preview",
-            type="auto",
-            type_level="latest",
-        ),
+        api_key_header="YOUR_API_KEY_HERE",
     ),
 )
+
+
+req = shared.RemoveBgJSON(
+    add_shadow=False,
+    bg_color="corrupti",
+    bg_image_url="provident",
+    channels="alpha",
+    crop=False,
+    crop_margin="quibusdam",
+    format="jpg",
+    image_file_b64="nulla",
+    image_url="https://www.remove.bg/example-hd.jpg",
+    position="corrupti",
+    roi="illum",
+    scale="vel",
+    semitransparency=False,
+    size="full",
+    type="product",
+    type_level="1",
+)
     
-res = s.background_removal.post_removebg(req)
+res = s.background_removal.post_removebg_form(req)
 
 if res.remove_bg_json_response is not None:
     # handle response
@@ -98,19 +48,22 @@ if res.remove_bg_json_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Background Removal
 
-* `post_removebg` - Remove the background of an image
+### background_removal
 
-### Fetch account info
+* `post_removebg_form` - Remove the background of an image
+* `post_removebg_json` - Remove the background of an image
+* `post_removebg_multipart` - Remove the background of an image
+
+### fetch_account_info
 
 * `get_account` - Fetch credit balance and free API calls.
 
-### Improvement Program
+### improvement_program
 
-* `post_improve` - Submit an image to the remove.bg Improvement program
+* `post_improve_form` - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -118,13 +71,51 @@ if res.remove_bg_json_response is not None:
 Notes:
   * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
   * File size: up to 12MB
-  * up to 100 files per day (up to 1000 for Enterprise customers). <br> Higher Rate Limits are available <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
 
 Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
+* `post_improve_json` - Submit an image to the remove.bg Improvement program
+* Contribute an image that remove.bg is currently not able to remove the background from properly
+* Help us make remove.bg better
+* Get better results for similiar images in the future
+
+Notes:
+  * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
+  * File size: up to 12MB
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+
+Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
+
+Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
+
+* `post_improve_multipart` - Submit an image to the remove.bg Improvement program
+* Contribute an image that remove.bg is currently not able to remove the background from properly
+* Help us make remove.bg better
+* Get better results for similiar images in the future
+
+Notes:
+  * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
+  * File size: up to 12MB
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+
+Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
+
+Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

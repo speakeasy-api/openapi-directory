@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLocationsQueryParams struct {
+type GetLocationsRequest struct {
 	// Can be used to filter Locations by their name. The response will only contain the Location matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetLocationsRequest struct {
-	QueryParams GetLocationsQueryParams
 }
 
 type GetLocations200ApplicationJSONLocations struct {

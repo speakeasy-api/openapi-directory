@@ -11,7 +11,7 @@ import (
 )
 
 type PostOrdersSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostOrdersOrderRequestV2IntegratorEnum - Use of this property requires special permission and must be discussed with your account executive; values are restricted while custom values need to be accepted by your AE.
@@ -258,12 +258,6 @@ type PostOrdersOrderRequestV2 struct {
 	ShippingMethod string `json:"shippingMethod"`
 	// We automatically select a warehouse based on inventory availability, requested carrier and delivery schedule, and carrier cost. You may however override this process. Because this is not recommended please inform your AE prior to using so they may enable this feature.
 	Warehouse *PostOrdersOrderRequestV2Warehouse `json:"warehouse,omitempty"`
-}
-
-type PostOrdersRequest struct {
-	// The order to create
-	Request  PostOrdersOrderRequestV2 `request:"mediaType=application/json"`
-	Security PostOrdersSecurity
 }
 
 // PostOrdersErrorStandardWithContextV2 - Conflict

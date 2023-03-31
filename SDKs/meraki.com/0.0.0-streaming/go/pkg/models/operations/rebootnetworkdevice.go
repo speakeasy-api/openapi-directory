@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RebootNetworkDevicePathParams struct {
+type RebootNetworkDeviceRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Serial    string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type RebootNetworkDeviceRequest struct {
-	PathParams RebootNetworkDevicePathParams
 }
 
 type RebootNetworkDeviceResponse struct {

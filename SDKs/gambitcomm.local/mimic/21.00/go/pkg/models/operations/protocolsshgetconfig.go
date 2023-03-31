@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSSHGetConfigPathParams struct {
+type ProtocolSSHGetConfigRequest struct {
 	// Agent to show the SSH configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSSHGetConfigRequest struct {
-	PathParams ProtocolSSHGetConfigPathParams
 }
 
 type ProtocolSSHGetConfigResponse struct {

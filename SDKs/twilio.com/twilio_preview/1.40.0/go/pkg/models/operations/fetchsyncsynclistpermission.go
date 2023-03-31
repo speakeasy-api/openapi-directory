@@ -12,21 +12,16 @@ var FetchSyncSyncListPermissionServerList = []string{
 }
 
 type FetchSyncSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSyncSyncListPermissionPathParams struct {
+type FetchSyncSyncListPermissionRequest struct {
 	// Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// Identifier of the Sync List. Either a SID or a unique name.
 	ListSid    string `pathParam:"style=simple,explode=false,name=ListSid"`
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type FetchSyncSyncListPermissionRequest struct {
-	PathParams FetchSyncSyncListPermissionPathParams
-	Security   FetchSyncSyncListPermissionSecurity
-	ServerURL  *string
 }
 
 type FetchSyncSyncListPermissionResponse struct {

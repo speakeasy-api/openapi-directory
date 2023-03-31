@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteTagFromChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteTagFromChannelPathParams struct {
+type DeleteTagFromChannelRequest struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The word to use as the tag.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type DeleteTagFromChannelRequest struct {
-	PathParams DeleteTagFromChannelPathParams
-	Security   DeleteTagFromChannelSecurity
 }
 
 type DeleteTagFromChannelResponse struct {

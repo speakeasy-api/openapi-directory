@@ -34,9 +34,9 @@ func newSm(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // Force check-in a set of devices
 func (s *sm) CheckinNetworkSmDevices(ctx context.Context, request operations.CheckinNetworkSmDevicesRequest) (*operations.CheckinNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/checkin", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/checkin", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -86,9 +86,9 @@ func (s *sm) CheckinNetworkSmDevices(ctx context.Context, request operations.Che
 // Bypass activation lock attempt
 func (s *sm) CreateNetworkSmBypassActivationLockAttempt(ctx context.Context, request operations.CreateNetworkSmBypassActivationLockAttemptRequest) (*operations.CreateNetworkSmBypassActivationLockAttemptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -141,7 +141,7 @@ func (s *sm) CreateNetworkSmBypassActivationLockAttempt(ctx context.Context, req
 // Bypass activation lock attempt status
 func (s *sm) GetNetworkSmBypassActivationLockAttempt(ctx context.Context, request operations.GetNetworkSmBypassActivationLockAttemptRequest) (*operations.GetNetworkSmBypassActivationLockAttemptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +186,7 @@ func (s *sm) GetNetworkSmBypassActivationLockAttempt(ctx context.Context, reques
 // Return the client's daily cellular data usage history. Usage data is in kilobytes.
 func (s *sm) GetNetworkSmCellularUsageHistory(ctx context.Context, request operations.GetNetworkSmCellularUsageHistoryRequest) (*operations.GetNetworkSmCellularUsageHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/cellularUsageHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/cellularUsageHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +231,7 @@ func (s *sm) GetNetworkSmCellularUsageHistory(ctx context.Context, request opera
 // List the certs on a device
 func (s *sm) GetNetworkSmCerts(ctx context.Context, request operations.GetNetworkSmCertsRequest) (*operations.GetNetworkSmCertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/certs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/certs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,14 +276,14 @@ func (s *sm) GetNetworkSmCerts(ctx context.Context, request operations.GetNetwor
 // Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
 func (s *sm) GetNetworkSmConnectivity(ctx context.Context, request operations.GetNetworkSmConnectivityRequest) (*operations.GetNetworkSmConnectivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/connectivity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/connectivity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -327,14 +327,14 @@ func (s *sm) GetNetworkSmConnectivity(ctx context.Context, request operations.Ge
 // Return historical records of various Systems Manager network connection details for desktop devices.
 func (s *sm) GetNetworkSmDesktopLogs(ctx context.Context, request operations.GetNetworkSmDesktopLogsRequest) (*operations.GetNetworkSmDesktopLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/desktopLogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/desktopLogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -378,14 +378,14 @@ func (s *sm) GetNetworkSmDesktopLogs(ctx context.Context, request operations.Get
 // Return historical records of commands sent to Systems Manager devices. Note that this will include the name of the Dashboard user who initiated the command if it was generated by a Dashboard admin rather than the automatic behavior of the system; you may wish to filter this out of any reports.
 func (s *sm) GetNetworkSmDeviceCommandLogs(ctx context.Context, request operations.GetNetworkSmDeviceCommandLogsRequest) (*operations.GetNetworkSmDeviceCommandLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/deviceCommandLogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/deviceCommandLogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -429,7 +429,7 @@ func (s *sm) GetNetworkSmDeviceCommandLogs(ctx context.Context, request operatio
 // Get the profiles associated with a device
 func (s *sm) GetNetworkSmDeviceProfiles(ctx context.Context, request operations.GetNetworkSmDeviceProfilesRequest) (*operations.GetNetworkSmDeviceProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/deviceProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/deviceProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -474,14 +474,14 @@ func (s *sm) GetNetworkSmDeviceProfiles(ctx context.Context, request operations.
 // List the devices enrolled in an SM network with various specified fields and filters
 func (s *sm) GetNetworkSmDevices(ctx context.Context, request operations.GetNetworkSmDevicesRequest) (*operations.GetNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -523,7 +523,7 @@ func (s *sm) GetNetworkSmDevices(ctx context.Context, request operations.GetNetw
 // List the network adapters of a device
 func (s *sm) GetNetworkSmNetworkAdapters(ctx context.Context, request operations.GetNetworkSmNetworkAdaptersRequest) (*operations.GetNetworkSmNetworkAdaptersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/networkAdapters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/networkAdapters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -568,14 +568,14 @@ func (s *sm) GetNetworkSmNetworkAdapters(ctx context.Context, request operations
 // Return historical records of various Systems Manager client metrics for desktop devices.
 func (s *sm) GetNetworkSmPerformanceHistory(ctx context.Context, request operations.GetNetworkSmPerformanceHistoryRequest) (*operations.GetNetworkSmPerformanceHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/performanceHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/{id}/performanceHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -619,7 +619,7 @@ func (s *sm) GetNetworkSmPerformanceHistory(ctx context.Context, request operati
 // List all the profiles in the network
 func (s *sm) GetNetworkSmProfiles(ctx context.Context, request operations.GetNetworkSmProfilesRequest) (*operations.GetNetworkSmProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -664,7 +664,7 @@ func (s *sm) GetNetworkSmProfiles(ctx context.Context, request operations.GetNet
 // List the restrictions on a device
 func (s *sm) GetNetworkSmRestrictions(ctx context.Context, request operations.GetNetworkSmRestrictionsRequest) (*operations.GetNetworkSmRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/restrictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/restrictions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -709,7 +709,7 @@ func (s *sm) GetNetworkSmRestrictions(ctx context.Context, request operations.Ge
 // List the security centers on a device
 func (s *sm) GetNetworkSmSecurityCenters(ctx context.Context, request operations.GetNetworkSmSecurityCentersRequest) (*operations.GetNetworkSmSecurityCentersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/securityCenters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/securityCenters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -754,7 +754,7 @@ func (s *sm) GetNetworkSmSecurityCenters(ctx context.Context, request operations
 // Get a list of softwares associated with a device
 func (s *sm) GetNetworkSmSoftwares(ctx context.Context, request operations.GetNetworkSmSoftwaresRequest) (*operations.GetNetworkSmSoftwaresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/softwares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/softwares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -799,7 +799,7 @@ func (s *sm) GetNetworkSmSoftwares(ctx context.Context, request operations.GetNe
 // Get the profiles associated with a user
 func (s *sm) GetNetworkSmUserDeviceProfiles(ctx context.Context, request operations.GetNetworkSmUserDeviceProfilesRequest) (*operations.GetNetworkSmUserDeviceProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/user/{userId}/deviceProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/user/{userId}/deviceProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -844,7 +844,7 @@ func (s *sm) GetNetworkSmUserDeviceProfiles(ctx context.Context, request operati
 // Get a list of softwares associated with a user
 func (s *sm) GetNetworkSmUserSoftwares(ctx context.Context, request operations.GetNetworkSmUserSoftwaresRequest) (*operations.GetNetworkSmUserSoftwaresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/user/{userId}/softwares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/user/{userId}/softwares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -889,14 +889,14 @@ func (s *sm) GetNetworkSmUserSoftwares(ctx context.Context, request operations.G
 // List the owners in an SM network with various specified fields and filters
 func (s *sm) GetNetworkSmUsers(ctx context.Context, request operations.GetNetworkSmUsersRequest) (*operations.GetNetworkSmUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -938,7 +938,7 @@ func (s *sm) GetNetworkSmUsers(ctx context.Context, request operations.GetNetwor
 // List the saved SSID names on a device
 func (s *sm) GetNetworkSmWlanLists(ctx context.Context, request operations.GetNetworkSmWlanListsRequest) (*operations.GetNetworkSmWlanListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/wlanLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/{deviceId}/wlanLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -983,9 +983,9 @@ func (s *sm) GetNetworkSmWlanLists(ctx context.Context, request operations.GetNe
 // Lock a set of devices
 func (s *sm) LockNetworkSmDevices(ctx context.Context, request operations.LockNetworkSmDevicesRequest) (*operations.LockNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/devices/lock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{network_id}/sm/devices/lock", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1035,7 +1035,7 @@ func (s *sm) LockNetworkSmDevices(ctx context.Context, request operations.LockNe
 // Refresh the details of a device
 func (s *sm) RefreshNetworkSmDeviceDetails(ctx context.Context, request operations.RefreshNetworkSmDeviceDetailsRequest) (*operations.RefreshNetworkSmDeviceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/device/{deviceId}/refreshDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/device/{deviceId}/refreshDetails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1071,7 +1071,7 @@ func (s *sm) RefreshNetworkSmDeviceDetails(ctx context.Context, request operatio
 // Unenroll a device
 func (s *sm) UnenrollNetworkSmDevice(ctx context.Context, request operations.UnenrollNetworkSmDeviceRequest) (*operations.UnenrollNetworkSmDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/unenroll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/unenroll", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1116,9 +1116,9 @@ func (s *sm) UnenrollNetworkSmDevice(ctx context.Context, request operations.Une
 // Modify the fields of a device
 func (s *sm) UpdateNetworkSmDeviceFields(ctx context.Context, request operations.UpdateNetworkSmDeviceFieldsRequest) (*operations.UpdateNetworkSmDeviceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/device/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/device/fields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1171,9 +1171,9 @@ func (s *sm) UpdateNetworkSmDeviceFields(ctx context.Context, request operations
 // Add, delete, or update the tags of a set of devices
 func (s *sm) UpdateNetworkSmDevicesTags(ctx context.Context, request operations.UpdateNetworkSmDevicesTagsRequest) (*operations.UpdateNetworkSmDevicesTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1226,9 +1226,9 @@ func (s *sm) UpdateNetworkSmDevicesTags(ctx context.Context, request operations.
 // Wipe a device
 func (s *sm) WipeNetworkSmDevice(ctx context.Context, request operations.WipeNetworkSmDeviceRequest) (*operations.WipeNetworkSmDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/device/wipe", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/device/wipe", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

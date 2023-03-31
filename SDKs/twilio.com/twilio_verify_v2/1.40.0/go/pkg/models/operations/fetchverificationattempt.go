@@ -12,18 +12,13 @@ var FetchVerificationAttemptServerList = []string{
 }
 
 type FetchVerificationAttemptSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchVerificationAttemptPathParams struct {
-	// The unique SID identifier of a Verification Attempt
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchVerificationAttemptRequest struct {
-	PathParams FetchVerificationAttemptPathParams
-	Security   FetchVerificationAttemptSecurity
-	ServerURL  *string
+	// The unique SID identifier of a Verification Attempt
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchVerificationAttemptResponse struct {

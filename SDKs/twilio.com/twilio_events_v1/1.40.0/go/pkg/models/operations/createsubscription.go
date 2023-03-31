@@ -12,7 +12,8 @@ var CreateSubscriptionServerList = []string{
 }
 
 type CreateSubscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSubscriptionCreateSubscriptionRequest struct {
@@ -22,12 +23,6 @@ type CreateSubscriptionCreateSubscriptionRequest struct {
 	SinkSid string `form:"name=SinkSid"`
 	// An array of objects containing the subscribed Event Types
 	Types []interface{} `form:"name=Types"`
-}
-
-type CreateSubscriptionRequest struct {
-	Request   *CreateSubscriptionCreateSubscriptionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSubscriptionSecurity
-	ServerURL *string
 }
 
 type CreateSubscriptionResponse struct {

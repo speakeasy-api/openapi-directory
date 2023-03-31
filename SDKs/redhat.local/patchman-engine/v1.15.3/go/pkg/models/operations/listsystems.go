@@ -10,7 +10,7 @@ import (
 )
 
 type ListSystemsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 // ListSystemsSortEnum - Sort field
@@ -64,7 +64,7 @@ func (e *ListSystemsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSystemsQueryParams struct {
+type ListSystemsRequest struct {
 	// Filter
 	FilterCreated *string `queryParam:"style=form,explode=true,name=filter[created]"`
 	// Filter
@@ -111,11 +111,6 @@ type ListSystemsQueryParams struct {
 	Sort *ListSystemsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ListSystemsRequest struct {
-	QueryParams ListSystemsQueryParams
-	Security    ListSystemsSecurity
 }
 
 type ListSystemsResponse struct {

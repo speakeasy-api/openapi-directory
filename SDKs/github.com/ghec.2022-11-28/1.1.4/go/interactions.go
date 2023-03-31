@@ -85,7 +85,7 @@ func (s *interactions) InteractionsGetRestrictionsForAuthenticatedUser(ctx conte
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#get-interaction-restrictions-for-an-organization - API method documentation
 func (s *interactions) InteractionsGetRestrictionsForOrg(ctx context.Context, request operations.InteractionsGetRestrictionsForOrgRequest) (*operations.InteractionsGetRestrictionsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *interactions) InteractionsGetRestrictionsForOrg(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#get-interaction-restrictions-for-a-repository - API method documentation
 func (s *interactions) InteractionsGetRestrictionsForRepo(ctx context.Context, request operations.InteractionsGetRestrictionsForRepoRequest) (*operations.InteractionsGetRestrictionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *interactions) InteractionsRemoveRestrictionsForAuthenticatedUser(ctx co
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#remove-interaction-restrictions-for-an-organization - API method documentation
 func (s *interactions) InteractionsRemoveRestrictionsForOrg(ctx context.Context, request operations.InteractionsRemoveRestrictionsForOrgRequest) (*operations.InteractionsRemoveRestrictionsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *interactions) InteractionsRemoveRestrictionsForOrg(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#remove-interaction-restrictions-for-a-repository - API method documentation
 func (s *interactions) InteractionsRemoveRestrictionsForRepo(ctx context.Context, request operations.InteractionsRemoveRestrictionsForRepoRequest) (*operations.InteractionsRemoveRestrictionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -288,7 +288,7 @@ func (s *interactions) InteractionsRemoveRestrictionsForRepo(ctx context.Context
 // InteractionsSetRestrictionsForAuthenticatedUser - Set interaction restrictions for your public repositories
 // Temporarily restricts which type of GitHub user can interact with your public repositories. Setting the interaction limit at the user level will overwrite any interaction limits that are set for individual repositories owned by the user.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#set-interaction-restrictions-for-your-public-repositories - API method documentation
-func (s *interactions) InteractionsSetRestrictionsForAuthenticatedUser(ctx context.Context, request operations.InteractionsSetRestrictionsForAuthenticatedUserRequest) (*operations.InteractionsSetRestrictionsForAuthenticatedUserResponse, error) {
+func (s *interactions) InteractionsSetRestrictionsForAuthenticatedUser(ctx context.Context, request shared.InteractionLimit) (*operations.InteractionsSetRestrictionsForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/interaction-limits"
 
@@ -356,9 +356,9 @@ func (s *interactions) InteractionsSetRestrictionsForAuthenticatedUser(ctx conte
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#set-interaction-restrictions-for-an-organization - API method documentation
 func (s *interactions) InteractionsSetRestrictionsForOrg(ctx context.Context, request operations.InteractionsSetRestrictionsForOrgRequest) (*operations.InteractionsSetRestrictionsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InteractionLimit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -422,9 +422,9 @@ func (s *interactions) InteractionsSetRestrictionsForOrg(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/interactions#set-interaction-restrictions-for-a-repository - API method documentation
 func (s *interactions) InteractionsSetRestrictionsForRepo(ctx context.Context, request operations.InteractionsSetRestrictionsForRepoRequest) (*operations.InteractionsSetRestrictionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InteractionLimit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

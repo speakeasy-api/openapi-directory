@@ -37,11 +37,11 @@ func newAlias(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This POST method creates a new alias under a specified domain. If no domain is specified in the request the alias will be attached to the default domain Short.fyi
 //
 //	**NOTE:** You can override the domain level Meta Tags and Tracking Snippets by specifying them for each URL. Any variables you add to a specific URL will always override domain level settings.
-func (s *alias) CreateAlias(ctx context.Context, request operations.CreateAliasRequest) (*operations.CreateAliasResponse, error) {
+func (s *alias) CreateAlias(ctx context.Context, request operations.CreateAliasRequest, security operations.CreateAliasSecurity) (*operations.CreateAliasResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/aliases"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAliasModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,11 +56,11 @@ func (s *alias) CreateAlias(ctx context.Context, request operations.CreateAliasR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *alias) CreateAlias(ctx context.Context, request operations.CreateAliasR
 
 // DeleteAlias - Delete alias
 // Deletes a single alias by providing alias and domain. If no domain is provided the API will search for the matching alias within the Short.fyi domain
-func (s *alias) DeleteAlias(ctx context.Context, request operations.DeleteAliasRequest) (*operations.DeleteAliasResponse, error) {
+func (s *alias) DeleteAlias(ctx context.Context, request operations.DeleteAliasRequest, security operations.DeleteAliasSecurity) (*operations.DeleteAliasResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/aliases"
 
@@ -105,11 +105,11 @@ func (s *alias) DeleteAlias(ctx context.Context, request operations.DeleteAliasR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *alias) DeleteAlias(ctx context.Context, request operations.DeleteAliasR
 
 // GetAlias - Get alias
 // Get detailed information for a single alias by providing its alias and domain name
-func (s *alias) GetAlias(ctx context.Context, request operations.GetAliasRequest) (*operations.GetAliasResponse, error) {
+func (s *alias) GetAlias(ctx context.Context, request operations.GetAliasRequest, security operations.GetAliasSecurity) (*operations.GetAliasResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/aliases"
 
@@ -145,11 +145,11 @@ func (s *alias) GetAlias(ctx context.Context, request operations.GetAliasRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -189,7 +189,7 @@ func (s *alias) GetAlias(ctx context.Context, request operations.GetAliasRequest
 //	If no domain is specified you will receive a list of all the alias names you have created using the Short.fyi domain.
 //
 //	If there are more results than the limit for the request the response will return you a value in lastId property you can specify it in the continueFrom query parameter to get the next batch of records.
-func (s *alias) GetAliases(ctx context.Context, request operations.GetAliasesRequest) (*operations.GetAliasesResponse, error) {
+func (s *alias) GetAliases(ctx context.Context, request operations.GetAliasesRequest, security operations.GetAliasesSecurity) (*operations.GetAliasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/aliases/all"
 
@@ -198,11 +198,11 @@ func (s *alias) GetAliases(ctx context.Context, request operations.GetAliasesReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,11 +246,11 @@ func (s *alias) GetAliases(ctx context.Context, request operations.GetAliasesReq
 //	( ** ) When you update any array property (like destinations) the block is updated **completely** so you have to specify the old records to avoid deleting them
 //
 //	( *** ) The method updates only the specified properties so if there was no change in one of them you don't have to send it.
-func (s *alias) UpdateAlias(ctx context.Context, request operations.UpdateAliasRequest) (*operations.UpdateAliasResponse, error) {
+func (s *alias) UpdateAlias(ctx context.Context, request operations.UpdateAliasRequest, security operations.UpdateAliasSecurity) (*operations.UpdateAliasResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/aliases"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAliasModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -265,11 +265,11 @@ func (s *alias) UpdateAlias(ctx context.Context, request operations.UpdateAliasR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

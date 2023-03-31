@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetWorkflowRunAttemptPathParams struct {
+type ActionsGetWorkflowRunAttemptRequest struct {
 	// The attempt number of the workflow run.
 	AttemptNumber int64 `pathParam:"style=simple,explode=false,name=attempt_number"`
+	// If `true` pull requests are omitted from the response (empty array).
+	ExcludePullRequests *bool `queryParam:"style=form,explode=true,name=exclude_pull_requests"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the workflow run.
 	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsGetWorkflowRunAttemptQueryParams struct {
-	// If `true` pull requests are omitted from the response (empty array).
-	ExcludePullRequests *bool `queryParam:"style=form,explode=true,name=exclude_pull_requests"`
-}
-
-type ActionsGetWorkflowRunAttemptRequest struct {
-	PathParams  ActionsGetWorkflowRunAttemptPathParams
-	QueryParams ActionsGetWorkflowRunAttemptQueryParams
 }
 
 type ActionsGetWorkflowRunAttemptResponse struct {

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAccountInfoRequest{
-        Headers: operations.GetAccountInfoHeaders{
-            TrainingKey: "corrupti",
-        },
+        TrainingKey: "corrupti",
     }
 
     ctx := context.Background()

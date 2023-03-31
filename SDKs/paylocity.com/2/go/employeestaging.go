@@ -33,11 +33,11 @@ func newEmployeeStaging(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // AddNewEmployeeToWebLink - Add new employee to Web Link
 // Add new employee to Web Link will send partially completed or potentially erroneous new hire record to Web Link, where it can be corrected and competed by company administrator or authorized Paylocity Service Bureau employee.
-func (s *employeeStaging) AddNewEmployeeToWebLink(ctx context.Context, request operations.AddNewEmployeeToWebLinkRequest) (*operations.AddNewEmployeeToWebLinkResponse, error) {
+func (s *employeeStaging) AddNewEmployeeToWebLink(ctx context.Context, request operations.AddNewEmployeeToWebLinkRequest, security operations.AddNewEmployeeToWebLinkSecurity) (*operations.AddNewEmployeeToWebLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/weblinkstaging/companies/{companyId}/employees/newemployees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/weblinkstaging/companies/{companyId}/employees/newemployees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StagedEmployee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *employeeStaging) AddNewEmployeeToWebLink(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

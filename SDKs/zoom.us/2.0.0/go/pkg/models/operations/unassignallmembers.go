@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignAllMembersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UnassignAllMembersPathParams struct {
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnassignAllMembersRequest struct {
-	PathParams UnassignAllMembersPathParams
-	Security   UnassignAllMembersSecurity
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type UnassignAllMembersResponse struct {

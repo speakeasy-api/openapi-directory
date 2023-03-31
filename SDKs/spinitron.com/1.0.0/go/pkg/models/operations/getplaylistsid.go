@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlaylistsIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPlaylistsIDQueryParams struct {
+type GetPlaylistsIDRequest struct {
 	// Allows to select extra fields
 	Expand []string `queryParam:"style=form,explode=true,name=expand"`
 	// Allows to select only needed fields
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-}
-
-type GetPlaylistsIDRequest struct {
-	PathParams  GetPlaylistsIDPathParams
-	QueryParams GetPlaylistsIDQueryParams
+	ID     int64    `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPlaylistsIDResponse struct {

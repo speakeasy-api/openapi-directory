@@ -14,33 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateFundsConfirmationConsentsRequest{
-        Security: operations.CreateFundsConfirmationConsentsSecurity{
-            TPPOAuth2Security: shared.SchemeTppoAuth2Security{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateFundsConfirmationConsentsHeaders{
-            Authorization: "corrupti",
-            XCustomerUserAgent: "provident",
-            XFapiAuthDate: "distinctio",
-            XFapiCustomerIPAddress: "quibusdam",
-            XFapiInteractionID: "unde",
-        },
-        Request: shared.OBFundsConfirmationConsent1{
+        Authorization: "corrupti",
+        OBFundsConfirmationConsent1: shared.OBFundsConfirmationConsent1{
             Data: shared.OBFundsConfirmationConsent1Data{
                 DebtorAccount: shared.OBFundsConfirmationConsent1DataDebtorAccount{
-                    Identification: "nulla",
-                    Name: "corrupti",
-                    SchemeName: "illum",
-                    SecondaryIdentification: "vel",
+                    Identification: "provident",
+                    Name: "distinctio",
+                    SchemeName: "quibusdam",
+                    SecondaryIdentification: "unde",
                 },
-                ExpirationDateTime: "2021-09-16T11:56:06.019Z",
+                ExpirationDateTime: "2021-05-14T08:28:11.899Z",
             },
         },
+        XCustomerUserAgent: "illum",
+        XFapiAuthDate: "vel",
+        XFapiCustomerIPAddress: "error",
+        XFapiInteractionID: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.FundsConfirmations.CreateFundsConfirmationConsents(ctx, req)
+    res, err := s.FundsConfirmations.CreateFundsConfirmationConsents(ctx, req, operations.CreateFundsConfirmationConsentsSecurity{
+        TPPOAuth2Security: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

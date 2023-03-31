@@ -33,20 +33,20 @@ func newChannel(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetChannel - Channel Detail
 // Return the content of the selected channel.
-func (s *channel) GetChannel(ctx context.Context, request operations.GetChannelRequest) (*operations.GetChannelResponse, error) {
+func (s *channel) GetChannel(ctx context.Context, request operations.GetChannelRequest, security operations.GetChannelSecurity) (*operations.GetChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channel/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channel/{channelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *channel) GetChannel(ctx context.Context, request operations.GetChannelR
 // /channel?platform={uuid}&scheduleStart={today}&scheduleEnd={today + 2 weeks}&updatedSince={10 minutes ago}
 //
 // Also please note epg numbers are only exposed when a platform and region are passed to the query.
-func (s *channel) ListChannels(ctx context.Context, request operations.ListChannelsRequest) (*operations.ListChannelsResponse, error) {
+func (s *channel) ListChannels(ctx context.Context, request operations.ListChannelsRequest, security operations.ListChannelsSecurity) (*operations.ListChannelsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channel"
 
@@ -102,11 +102,11 @@ func (s *channel) ListChannels(ctx context.Context, request operations.ListChann
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

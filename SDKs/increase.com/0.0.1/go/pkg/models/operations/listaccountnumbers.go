@@ -36,16 +36,12 @@ func (e *ListAccountNumbersStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAccountNumbersQueryParams struct {
+type ListAccountNumbersRequest struct {
 	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
 	Cursor    *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit     *int64  `queryParam:"style=form,explode=true,name=limit"`
 	// The status to retrieve Account Numbers for.
 	Status *ListAccountNumbersStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListAccountNumbersRequest struct {
-	QueryParams ListAccountNumbersQueryParams
 }
 
 type ListAccountNumbersDefaultApplicationJSON13StatusEnum string

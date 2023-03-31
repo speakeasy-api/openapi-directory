@@ -13,19 +13,17 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.ApplyYaraRulesRequest{
-        Request: operations.ApplyYaraRulesRequestBody{
-            File: operations.ApplyYaraRulesRequestBodyFile{
-                Content: []byte("corrupti"),
-                File: "provident",
-            },
-            IsUnpackingRequired: "false",
-            Rules: []string{
-                "unde",
-                "nulla",
-                "corrupti",
-                "illum",
-            },
+    req := operations.ApplyYaraRulesRequestBody{
+        File: operations.ApplyYaraRulesRequestBodyFile{
+            Content: []byte("corrupti"),
+            File: "provident",
+        },
+        IsUnpackingRequired: "false",
+        Rules: []string{
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
         },
     }
 

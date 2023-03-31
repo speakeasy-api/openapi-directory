@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.ConvertcurrencyRequest{
-        QueryParams: operations.ConvertcurrencyQueryParams{
-            Amount: "corrupti",
-            From: "provident",
-            License: "distinctio",
-            To: "quibusdam",
-        },
+        Amount: "corrupti",
+        From: "provident",
+        License: "distinctio",
+        To: "quibusdam",
     }
 
     ctx := context.Background()

@@ -8,21 +8,16 @@ import (
 )
 
 type CancelInvoiceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CancelInvoicePathParams struct {
-	// The ID of the [invoice](https://developer.squareup.com/reference/square_2021-08-18/objects/Invoice) to cancel.
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelInvoiceRequest struct {
-	PathParams CancelInvoicePathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.CancelInvoiceRequest `request:"mediaType=application/json"`
-	Security CancelInvoiceSecurity
+	CancelInvoiceRequest shared.CancelInvoiceRequest `request:"mediaType=application/json"`
+	// The ID of the [invoice](https://developer.squareup.com/reference/square_2021-08-18/objects/Invoice) to cancel.
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
 }
 
 type CancelInvoiceResponse struct {

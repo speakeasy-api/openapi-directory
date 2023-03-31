@@ -45,16 +45,16 @@ func newPhone(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
 // 3. User must have been previously assigned a Zoom Phone number.
-func (s *phone) UnassignPhoneNumber(ctx context.Context, request operations.UnassignPhoneNumberRequest) (*operations.UnassignPhoneNumberResponse, error) {
+func (s *phone) UnassignPhoneNumber(ctx context.Context, request operations.UnassignPhoneNumberRequest, security operations.UnassignPhoneNumberSecurity) (*operations.UnassignPhoneNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/phone_numbers/{phoneNumberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/phone_numbers/{phoneNumberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -109,7 +109,7 @@ func (s *phone) UnassignPhoneNumber(ctx context.Context, request operations.Unas
 // 1. Business or Enterprise account<br>
 // 2. A Zoom Phone license<br>
 // 3. Account Owner and a [role](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-Access-Control) with Zoom Phone Management<br>
-func (s *phone) AccountCallLogs(ctx context.Context, request operations.AccountCallLogsRequest) (*operations.AccountCallLogsResponse, error) {
+func (s *phone) AccountCallLogs(ctx context.Context, request operations.AccountCallLogsRequest, security operations.AccountCallLogsSecurity) (*operations.AccountCallLogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/call_logs"
 
@@ -118,11 +118,11 @@ func (s *phone) AccountCallLogs(ctx context.Context, request operations.AccountC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *phone) AccountCallLogs(ctx context.Context, request operations.AccountC
 // * The account must hold a business or enterprise plan and Zoom Phone license.
 //
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) AddBYOCNumber(ctx context.Context, request operations.AddBYOCNumberRequest) (*operations.AddBYOCNumberResponse, error) {
+func (s *phone) AddBYOCNumber(ctx context.Context, request operations.AddBYOCNumberApplicationJSON) (*operations.AddBYOCNumberResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/byoc_numbers"
 
@@ -252,7 +252,7 @@ func (s *phone) AddBYOCNumber(ctx context.Context, request operations.AddBYOCNum
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 //
 // <br>
-func (s *phone) AddSettingTemplate(ctx context.Context, request operations.AddSettingTemplateRequest) (*operations.AddSettingTemplateResponse, error) {
+func (s *phone) AddSettingTemplate(ctx context.Context, request operations.AddSettingTemplateApplicationJSON) (*operations.AddSettingTemplateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/setting_templates"
 
@@ -322,11 +322,11 @@ func (s *phone) AddSettingTemplate(ctx context.Context, request operations.AddSe
 //
 // **Prerequisites**: <br>
 // Business or Enterprise Account
-func (s *phone) AddUserSetting(ctx context.Context, request operations.AddUserSettingRequest) (*operations.AddUserSettingResponse, error) {
+func (s *phone) AddUserSetting(ctx context.Context, request operations.AddUserSettingRequest, security operations.AddUserSettingSecurity) (*operations.AddUserSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings/{settingType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings/{settingType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,7 +338,7 @@ func (s *phone) AddUserSetting(ctx context.Context, request operations.AddUserSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -407,11 +407,11 @@ func (s *phone) AddUserSetting(ctx context.Context, request operations.AddUserSe
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) AssignCallingPlan(ctx context.Context, request operations.AssignCallingPlanRequest) (*operations.AssignCallingPlanResponse, error) {
+func (s *phone) AssignCallingPlan(ctx context.Context, request operations.AssignCallingPlanRequest, security operations.AssignCallingPlanSecurity) (*operations.AssignCallingPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/calling_plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/calling_plans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -423,7 +423,7 @@ func (s *phone) AssignCallingPlan(ctx context.Context, request operations.Assign
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -477,11 +477,11 @@ func (s *phone) AssignCallingPlan(ctx context.Context, request operations.Assign
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) AssignPhoneNumber(ctx context.Context, request operations.AssignPhoneNumberRequest) (*operations.AssignPhoneNumberResponse, error) {
+func (s *phone) AssignPhoneNumber(ctx context.Context, request operations.AssignPhoneNumberRequest, security operations.AssignPhoneNumberSecurity) (*operations.AssignPhoneNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/phone_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/phone_numbers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -493,7 +493,7 @@ func (s *phone) AssignPhoneNumber(ctx context.Context, request operations.Assign
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,7 +547,7 @@ func (s *phone) AssignPhoneNumber(ctx context.Context, request operations.Assign
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phone) ChangeMainCompanyNumber(ctx context.Context, request operations.ChangeMainCompanyNumberRequest) (*operations.ChangeMainCompanyNumberResponse, error) {
+func (s *phone) ChangeMainCompanyNumber(ctx context.Context, request operations.ChangeMainCompanyNumberApplicationJSON, security operations.ChangeMainCompanyNumberSecurity) (*operations.ChangeMainCompanyNumberResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/company_number"
 
@@ -563,7 +563,7 @@ func (s *phone) ChangeMainCompanyNumber(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -619,7 +619,7 @@ func (s *phone) ChangeMainCompanyNumber(ctx context.Context, request operations.
 // 2. User must hold a Zoom Phone license.
 func (s *phone) DeleteCallLog(ctx context.Context, request operations.DeleteCallLogRequest) (*operations.DeleteCallLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/call_logs/{callLogId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/call_logs/{callLogId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -679,20 +679,20 @@ func (s *phone) DeleteCallLog(ctx context.Context, request operations.DeleteCall
 // **Prerequisites**:<br>
 // * Business or enterprise Account<br>
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) DeleteUserSetting(ctx context.Context, request operations.DeleteUserSettingRequest) (*operations.DeleteUserSettingResponse, error) {
+func (s *phone) DeleteUserSetting(ctx context.Context, request operations.DeleteUserSettingRequest, security operations.DeleteUserSettingSecurity) (*operations.DeleteUserSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings/{settingType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings/{settingType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -747,7 +747,7 @@ func (s *phone) DeleteUserSetting(ctx context.Context, request operations.Delete
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *phone) DeleteVoicemail(ctx context.Context, request operations.DeleteVoicemailRequest) (*operations.DeleteVoicemailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/voice_mails/{voicemailId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/voice_mails/{voicemailId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -805,16 +805,16 @@ func (s *phone) DeleteVoicemail(ctx context.Context, request operations.DeleteVo
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phone) GetPhoneNumberDetails(ctx context.Context, request operations.GetPhoneNumberDetailsRequest) (*operations.GetPhoneNumberDetailsResponse, error) {
+func (s *phone) GetPhoneNumberDetails(ctx context.Context, request operations.GetPhoneNumberDetailsRequest, security operations.GetPhoneNumberDetailsSecurity) (*operations.GetPhoneNumberDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/numbers/{numberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/numbers/{numberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -865,7 +865,7 @@ func (s *phone) GetPhoneNumberDetails(ctx context.Context, request operations.Ge
 // **Prerequisties:** <br>
 // * Pro or higher account with Zoom Phone license.
 // * Account owner or admin privileges.
-func (s *phone) GetPhoneRecordings(ctx context.Context, request operations.GetPhoneRecordingsRequest) (*operations.GetPhoneRecordingsResponse, error) {
+func (s *phone) GetPhoneRecordings(ctx context.Context, request operations.GetPhoneRecordingsRequest, security operations.GetPhoneRecordingsSecurity) (*operations.GetPhoneRecordingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/recordings"
 
@@ -874,11 +874,11 @@ func (s *phone) GetPhoneRecordings(ctx context.Context, request operations.GetPh
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -947,20 +947,20 @@ func (s *phone) GetPhoneRecordings(ctx context.Context, request operations.GetPh
 // 1. Business or Enterprise Account
 // 2. A Zoom Phone license
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) GetSettingTemplate(ctx context.Context, request operations.GetSettingTemplateRequest) (*operations.GetSettingTemplateResponse, error) {
+func (s *phone) GetSettingTemplate(ctx context.Context, request operations.GetSettingTemplateRequest, security operations.GetSettingTemplateSecurity) (*operations.GetSettingTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/setting_templates/{templateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/setting_templates/{templateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1027,7 +1027,7 @@ func (s *phone) GetSettingTemplate(ctx context.Context, request operations.GetSe
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *phone) ListAccountPhoneNumbers(ctx context.Context, request operations.ListAccountPhoneNumbersRequest) (*operations.ListAccountPhoneNumbersResponse, error) {
+func (s *phone) ListAccountPhoneNumbers(ctx context.Context, request operations.ListAccountPhoneNumbersRequest, security operations.ListAccountPhoneNumbersSecurity) (*operations.ListAccountPhoneNumbersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/numbers"
 
@@ -1036,11 +1036,11 @@ func (s *phone) ListAccountPhoneNumbers(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1090,7 +1090,7 @@ func (s *phone) ListAccountPhoneNumbers(ctx context.Context, request operations.
 // **Prerequisites**:<br>
 // * Business or Enterprise Account
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) ListBYOCSIPTrunk(ctx context.Context, request operations.ListBYOCSIPTrunkRequest) (*operations.ListBYOCSIPTrunkResponse, error) {
+func (s *phone) ListBYOCSIPTrunk(ctx context.Context, request operations.ListBYOCSIPTrunkRequest, security operations.ListBYOCSIPTrunkSecurity) (*operations.ListBYOCSIPTrunkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/sip_trunk/trunks"
 
@@ -1099,11 +1099,11 @@ func (s *phone) ListBYOCSIPTrunk(ctx context.Context, request operations.ListBYO
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1151,7 +1151,7 @@ func (s *phone) ListBYOCSIPTrunk(ctx context.Context, request operations.ListBYO
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *phone) ListCallingPlans(ctx context.Context, request operations.ListCallingPlansRequest) (*operations.ListCallingPlansResponse, error) {
+func (s *phone) ListCallingPlans(ctx context.Context) (*operations.ListCallingPlansResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/calling_plans"
 
@@ -1160,7 +1160,7 @@ func (s *phone) ListCallingPlans(ctx context.Context, request operations.ListCal
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1208,7 +1208,7 @@ func (s *phone) ListCallingPlans(ctx context.Context, request operations.ListCal
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phone) ListPhoneUsers(ctx context.Context, request operations.ListPhoneUsersRequest) (*operations.ListPhoneUsersResponse, error) {
+func (s *phone) ListPhoneUsers(ctx context.Context, request operations.ListPhoneUsersRequest, security operations.ListPhoneUsersSecurity) (*operations.ListPhoneUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/users"
 
@@ -1217,11 +1217,11 @@ func (s *phone) ListPhoneUsers(ctx context.Context, request operations.ListPhone
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1272,7 +1272,7 @@ func (s *phone) ListPhoneUsers(ctx context.Context, request operations.ListPhone
 // 2. A Zoom Phone license
 //
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) ListSettingTemplates(ctx context.Context, request operations.ListSettingTemplatesRequest) (*operations.ListSettingTemplatesResponse, error) {
+func (s *phone) ListSettingTemplates(ctx context.Context, request operations.ListSettingTemplatesRequest, security operations.ListSettingTemplatesSecurity) (*operations.ListSettingTemplatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/setting_templates"
 
@@ -1281,11 +1281,11 @@ func (s *phone) ListSettingTemplates(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1341,16 +1341,16 @@ func (s *phone) ListSettingTemplates(ctx context.Context, request operations.Lis
 // **Prerequisites** :
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) PhoneUser(ctx context.Context, request operations.PhoneUserRequest) (*operations.PhoneUserResponse, error) {
+func (s *phone) PhoneUser(ctx context.Context, request operations.PhoneUserRequest, security operations.PhoneUserSecurity) (*operations.PhoneUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1404,20 +1404,20 @@ func (s *phone) PhoneUser(ctx context.Context, request operations.PhoneUserReque
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) PhoneUserCallLogs(ctx context.Context, request operations.PhoneUserCallLogsRequest) (*operations.PhoneUserCallLogsResponse, error) {
+func (s *phone) PhoneUserCallLogs(ctx context.Context, request operations.PhoneUserCallLogsRequest, security operations.PhoneUserCallLogsSecurity) (*operations.PhoneUserCallLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/call_logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/call_logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1470,20 +1470,20 @@ func (s *phone) PhoneUserCallLogs(ctx context.Context, request operations.PhoneU
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) PhoneUserRecordings(ctx context.Context, request operations.PhoneUserRecordingsRequest) (*operations.PhoneUserRecordingsResponse, error) {
+func (s *phone) PhoneUserRecordings(ctx context.Context, request operations.PhoneUserRecordingsRequest, security operations.PhoneUserRecordingsSecurity) (*operations.PhoneUserRecordingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1537,16 +1537,16 @@ func (s *phone) PhoneUserRecordings(ctx context.Context, request operations.Phon
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) PhoneUserSettings(ctx context.Context, request operations.PhoneUserSettingsRequest) (*operations.PhoneUserSettingsResponse, error) {
+func (s *phone) PhoneUserSettings(ctx context.Context, request operations.PhoneUserSettingsRequest, security operations.PhoneUserSettingsSecurity) (*operations.PhoneUserSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1600,20 +1600,20 @@ func (s *phone) PhoneUserSettings(ctx context.Context, request operations.PhoneU
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) PhoneUserVoiceMails(ctx context.Context, request operations.PhoneUserVoiceMailsRequest) (*operations.PhoneUserVoiceMailsResponse, error) {
+func (s *phone) PhoneUserVoiceMails(ctx context.Context, request operations.PhoneUserVoiceMailsRequest, security operations.PhoneUserVoiceMailsSecurity) (*operations.PhoneUserVoiceMailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/voice_mails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/voice_mails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1666,11 +1666,11 @@ func (s *phone) PhoneUserVoiceMails(ctx context.Context, request operations.Phon
 // **Prerequisites**:<br>
 // * Business or enterprise Account.<br>
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) PostPhoneSIPTrunk(ctx context.Context, request operations.PostPhoneSIPTrunkRequest) (*operations.PostPhoneSIPTrunkResponse, error) {
+func (s *phone) PostPhoneSIPTrunk(ctx context.Context, request operations.PostPhoneSIPTrunkRequest, security operations.PostPhoneSIPTrunkSecurity) (*operations.PostPhoneSIPTrunkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/sip_trunk/trunks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/sip_trunk/trunks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1682,7 +1682,7 @@ func (s *phone) PostPhoneSIPTrunk(ctx context.Context, request operations.PostPh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1734,11 +1734,11 @@ func (s *phone) PostPhoneSIPTrunk(ctx context.Context, request operations.PostPh
 // * Pro or a higher paid account with master account option enabled.
 //
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) SetUpAccount(ctx context.Context, request operations.SetUpAccountRequest) (*operations.SetUpAccountResponse, error) {
+func (s *phone) SetUpAccount(ctx context.Context, request operations.SetUpAccountRequest, security operations.SetUpAccountSecurity) (*operations.SetUpAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/setup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/setup", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1750,7 +1750,7 @@ func (s *phone) SetUpAccount(ctx context.Context, request operations.SetUpAccoun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1789,16 +1789,16 @@ func (s *phone) SetUpAccount(ctx context.Context, request operations.SetUpAccoun
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) UnassignCallingPlan(ctx context.Context, request operations.UnassignCallingPlanRequest) (*operations.UnassignCallingPlanResponse, error) {
+func (s *phone) UnassignCallingPlan(ctx context.Context, request operations.UnassignCallingPlanRequest, security operations.UnassignCallingPlanSecurity) (*operations.UnassignCallingPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/calling_plans/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/calling_plans/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1853,11 +1853,11 @@ func (s *phone) UnassignCallingPlan(ctx context.Context, request operations.Unas
 // * Paid account
 //
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phone) UpdatePhoneNumberDetails(ctx context.Context, request operations.UpdatePhoneNumberDetailsRequest) (*operations.UpdatePhoneNumberDetailsResponse, error) {
+func (s *phone) UpdatePhoneNumberDetails(ctx context.Context, request operations.UpdatePhoneNumberDetailsRequest, security operations.UpdatePhoneNumberDetailsSecurity) (*operations.UpdatePhoneNumberDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/numbers/{numberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/numbers/{numberId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1869,7 +1869,7 @@ func (s *phone) UpdatePhoneNumberDetails(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1922,11 +1922,11 @@ func (s *phone) UpdatePhoneNumberDetails(ctx context.Context, request operations
 // **Prerequisites**:<br>
 // Business or Enterprise Account.<br>
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) UpdatePhoneSIPTrunk(ctx context.Context, request operations.UpdatePhoneSIPTrunkRequest) (*operations.UpdatePhoneSIPTrunkResponse, error) {
+func (s *phone) UpdatePhoneSIPTrunk(ctx context.Context, request operations.UpdatePhoneSIPTrunkRequest, security operations.UpdatePhoneSIPTrunkSecurity) (*operations.UpdatePhoneSIPTrunkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/sip_trunk/trunks/{sipTrunkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/sip_trunk/trunks/{sipTrunkId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1938,7 +1938,7 @@ func (s *phone) UpdatePhoneSIPTrunk(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1988,11 +1988,11 @@ func (s *phone) UpdatePhoneSIPTrunk(ctx context.Context, request operations.Upda
 //
 // **Prerequisites**: <br>
 // * Business or enterprise Account.<br>
-func (s *phone) UpdatePhoneSettings(ctx context.Context, request operations.UpdatePhoneSettingsRequest) (*operations.UpdatePhoneSettingsResponse, error) {
+func (s *phone) UpdatePhoneSettings(ctx context.Context, request operations.UpdatePhoneSettingsRequest, security operations.UpdatePhoneSettingsSecurity) (*operations.UpdatePhoneSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/phone/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2004,7 +2004,7 @@ func (s *phone) UpdatePhoneSettings(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2056,11 +2056,11 @@ func (s *phone) UpdatePhoneSettings(ctx context.Context, request operations.Upda
 // 1. Business or Enterprise Account
 // 2. A Zoom Phone license
 // <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *phone) UpdateSettingTemplate(ctx context.Context, request operations.UpdateSettingTemplateRequest) (*operations.UpdateSettingTemplateResponse, error) {
+func (s *phone) UpdateSettingTemplate(ctx context.Context, request operations.UpdateSettingTemplateRequest, security operations.UpdateSettingTemplateSecurity) (*operations.UpdateSettingTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/setting_templates/{templateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/setting_templates/{templateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2072,7 +2072,7 @@ func (s *phone) UpdateSettingTemplate(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2128,11 +2128,11 @@ func (s *phone) UpdateSettingTemplate(ctx context.Context, request operations.Up
 // **Prerequisite:**
 // 1. Business or Enterprise account
 // 2. A Zoom Phone license
-func (s *phone) UpdateUserProfile(ctx context.Context, request operations.UpdateUserProfileRequest) (*operations.UpdateUserProfileResponse, error) {
+func (s *phone) UpdateUserProfile(ctx context.Context, request operations.UpdateUserProfileRequest, security operations.UpdateUserProfileSecurity) (*operations.UpdateUserProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2144,7 +2144,7 @@ func (s *phone) UpdateUserProfile(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2198,11 +2198,11 @@ func (s *phone) UpdateUserProfile(ctx context.Context, request operations.Update
 //
 // **Prerequisites**:<br>
 // Business or Enterprise Account
-func (s *phone) UpdateUserSetting(ctx context.Context, request operations.UpdateUserSettingRequest) (*operations.UpdateUserSettingResponse, error) {
+func (s *phone) UpdateUserSetting(ctx context.Context, request operations.UpdateUserSettingRequest, security operations.UpdateUserSettingSecurity) (*operations.UpdateUserSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings/{settingType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/users/{userId}/settings/{settingType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2214,7 +2214,7 @@ func (s *phone) UpdateUserSetting(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

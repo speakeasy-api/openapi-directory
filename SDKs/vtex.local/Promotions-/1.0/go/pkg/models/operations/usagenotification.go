@@ -11,17 +11,12 @@ var UsagenotificationServerList = []string{
 	"http://example.com/.{environment}.com.br/api/rnb",
 }
 
-type UsagenotificationHeaders struct {
+type UsagenotificationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UsagenotificationRequest struct {
-	Headers   UsagenotificationHeaders
-	Request   shared.UsagenotificationRequest `request:"mediaType=application/json"`
-	ServerURL *string
+	ContentType              string                          `header:"style=simple,explode=false,name=Content-Type"`
+	UsagenotificationRequest shared.UsagenotificationRequest `request:"mediaType=application/json"`
 }
 
 type UsagenotificationResponse struct {

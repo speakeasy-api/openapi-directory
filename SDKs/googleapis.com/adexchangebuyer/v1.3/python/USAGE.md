@@ -4,31 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AdexchangebuyerAccountsGetRequest(
-    security=operations.AdexchangebuyerAccountsGetSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.AdexchangebuyerAccountsGetPathParams(
-        id=3833738016273364856,
-    ),
-    query_params=operations.AdexchangebuyerAccountsGetQueryParams(
-        alt="json",
-        fields="et",
-        key="dicta",
-        oauth_token="sed",
-        pretty_print=False,
-        quota_user="cumque",
-        user_ip="cupiditate",
-    ),
+    alt="json",
+    fields_="corrupti",
+    id=592845,
+    key="distinctio",
+    oauth_token="quibusdam",
+    pretty_print=False,
+    quota_user="unde",
+    user_ip="nulla",
 )
     
-res = s.accounts.adexchangebuyer_accounts_get(req)
+res = s.accounts.adexchangebuyer_accounts_get(req, operations.AdexchangebuyerAccountsGetSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.account is not None:
     # handle response

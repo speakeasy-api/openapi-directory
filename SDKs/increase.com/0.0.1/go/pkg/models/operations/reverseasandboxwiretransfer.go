@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReverseASandboxWireTransferPathParams struct {
-	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
-}
-
 type ReverseASandboxWireTransferRequest struct {
-	PathParams ReverseASandboxWireTransferPathParams
+	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
 type ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum string

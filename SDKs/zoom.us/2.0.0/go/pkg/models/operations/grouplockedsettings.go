@@ -8,29 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupLockedSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GroupLockedSettingsPathParams struct {
-	// The Id of the group.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupLockedSettingsQueryParams struct {
-	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
-	// {
-	//     "schedule_meeting": {
-	//         "host_video": false
-	//     }
-	// }
-	// <br>You can provide multiple values by separating them with commas(example: "host_video,participant_video”).
-	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
-	// Specify `meeting_security` as the value of this field if you would like to view security settings applied on a meeting hosted by the users in this group.
-	Option *string `queryParam:"style=form,explode=true,name=option"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GroupLockedSettingsApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
@@ -447,10 +428,19 @@ func (u GroupLockedSettingsApplicationJSON) MarshalJSON() ([]byte, error) {
 }
 
 type GroupLockedSettingsRequest struct {
-	PathParams  GroupLockedSettingsPathParams
-	QueryParams GroupLockedSettingsQueryParams
-	Request     *GroupLockedSettingsApplicationJSON `request:"mediaType=application/json"`
-	Security    GroupLockedSettingsSecurity
+	RequestBody *GroupLockedSettingsApplicationJSON `request:"mediaType=application/json"`
+	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
+	// {
+	//     "schedule_meeting": {
+	//         "host_video": false
+	//     }
+	// }
+	// <br>You can provide multiple values by separating them with commas(example: "host_video,participant_video”).
+	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
+	// The Id of the group.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	// Specify `meeting_security` as the value of this field if you would like to view security settings applied on a meeting hosted by the users in this group.
+	Option *string `queryParam:"style=form,explode=true,name=option"`
 }
 
 type GroupLockedSettingsResponse struct {

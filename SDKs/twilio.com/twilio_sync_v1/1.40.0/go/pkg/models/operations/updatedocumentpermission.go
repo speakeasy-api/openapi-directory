@@ -12,16 +12,8 @@ var UpdateDocumentPermissionServerList = []string{
 }
 
 type UpdateDocumentPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDocumentPermissionPathParams struct {
-	// The SID of the Sync Document with the Document Permission resource to update. Can be the Document resource's `sid` or its `unique_name`.
-	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
-	// The application-defined string that uniquely identifies the User's Document Permission resource to update.
-	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDocumentPermissionUpdateDocumentPermissionRequest struct {
@@ -34,10 +26,13 @@ type UpdateDocumentPermissionUpdateDocumentPermissionRequest struct {
 }
 
 type UpdateDocumentPermissionRequest struct {
-	PathParams UpdateDocumentPermissionPathParams
-	Request    *UpdateDocumentPermissionUpdateDocumentPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDocumentPermissionSecurity
-	ServerURL  *string
+	// The SID of the Sync Document with the Document Permission resource to update. Can be the Document resource's `sid` or its `unique_name`.
+	DocumentSid string `pathParam:"style=simple,explode=false,name=DocumentSid"`
+	// The application-defined string that uniquely identifies the User's Document Permission resource to update.
+	Identity    string                                                   `pathParam:"style=simple,explode=false,name=Identity"`
+	RequestBody *UpdateDocumentPermissionUpdateDocumentPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateDocumentPermissionResponse struct {

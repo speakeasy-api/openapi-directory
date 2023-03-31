@@ -8,19 +8,14 @@ import (
 )
 
 type DownloadImageSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type DownloadImagePathParams struct {
-	// License ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DownloadImageRequest struct {
-	PathParams DownloadImagePathParams
 	// Information about the images to redownload
-	Request  shared.RedownloadImage `request:"mediaType=application/json"`
-	Security DownloadImageSecurity
+	RedownloadImage shared.RedownloadImage `request:"mediaType=application/json"`
+	// License ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DownloadImageResponse struct {

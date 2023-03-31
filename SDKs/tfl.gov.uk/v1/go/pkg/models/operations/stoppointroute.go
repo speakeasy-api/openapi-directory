@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointRoutePathParams struct {
-	// A stop point id (station naptan codes e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type StopPointRouteServiceTypesEnum string
 
 const (
@@ -37,14 +32,11 @@ func (e *StopPointRouteServiceTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StopPointRouteQueryParams struct {
+type StopPointRouteRequest struct {
+	// A stop point id (station naptan codes e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// A comma-separated list of service types to filter on. If not specified. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
 	ServiceTypes []StopPointRouteServiceTypesEnum `queryParam:"style=form,explode=true,name=serviceTypes"`
-}
-
-type StopPointRouteRequest struct {
-	PathParams  StopPointRoutePathParams
-	QueryParams StopPointRouteQueryParams
 }
 
 type StopPointRouteResponse struct {

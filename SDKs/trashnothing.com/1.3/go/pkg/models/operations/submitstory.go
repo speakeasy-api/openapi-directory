@@ -21,10 +21,6 @@ type SubmitStoryRequestBody struct {
 	Title string `multipartForm:"name=title"`
 }
 
-type SubmitStoryRequest struct {
-	Request SubmitStoryRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type SubmitStoryResponse struct {
 	ContentType string
 	StatusCode  int

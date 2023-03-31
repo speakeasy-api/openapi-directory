@@ -158,7 +158,7 @@ func (e *GetNamesInsideSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNamesInsideQueryParams struct {
+type GetNamesInsideRequest struct {
 	// A geographic bounding box defining the search area.  Must be specified as a string of the form 'minLongitude,minLatitude,maxLongitude,maxLatitude' (WGS84). e.g. -119,49,-118,50
 	Bbox string `queryParam:"style=form,explode=true,name=bbox"`
 	// A flag to indicate whether to embed the corresponding 'feature' into each matching name
@@ -181,10 +181,6 @@ type GetNamesInsideQueryParams struct {
 	SortBy *GetNamesInsideSortByEnum `queryParam:"style=form,explode=true,name=sortBy"`
 	// The index of the first record to be returned (>= 1)
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type GetNamesInsideRequest struct {
-	QueryParams GetNamesInsideQueryParams
 }
 
 type GetNamesInsideResponse struct {

@@ -33,20 +33,20 @@ func newContributor(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // GetContributor - Contributor Detail
 // Return the content of the selected contributor.
-func (s *contributor) GetContributor(ctx context.Context, request operations.GetContributorRequest) (*operations.GetContributorResponse, error) {
+func (s *contributor) GetContributor(ctx context.Context, request operations.GetContributorRequest, security operations.GetContributorSecurity) (*operations.GetContributorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributor/{contributorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributor/{contributorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *contributor) GetContributor(ctx context.Context, request operations.Get
 
 // ListContributor - Contributor Collection
 // Return a collection of Contributors.
-func (s *contributor) ListContributor(ctx context.Context, request operations.ListContributorRequest) (*operations.ListContributorResponse, error) {
+func (s *contributor) ListContributor(ctx context.Context, request operations.ListContributorRequest, security operations.ListContributorSecurity) (*operations.ListContributorResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contributor"
 
@@ -91,11 +91,11 @@ func (s *contributor) ListContributor(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

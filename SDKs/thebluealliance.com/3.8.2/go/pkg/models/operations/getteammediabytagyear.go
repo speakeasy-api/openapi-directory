@@ -8,27 +8,18 @@ import (
 )
 
 type GetTeamMediaByTagYearSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
-type GetTeamMediaByTagYearPathParams struct {
+type GetTeamMediaByTagYearRequest struct {
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
 	// Media Tag which describes the Media.
 	MediaTag string `pathParam:"style=simple,explode=false,name=media_tag"`
 	// TBA Team Key, eg `frc254`
 	TeamKey string `pathParam:"style=simple,explode=false,name=team_key"`
 	// Competition Year (or Season). Must be 4 digits.
 	Year int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetTeamMediaByTagYearHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetTeamMediaByTagYearRequest struct {
-	PathParams GetTeamMediaByTagYearPathParams
-	Headers    GetTeamMediaByTagYearHeaders
-	Security   GetTeamMediaByTagYearSecurity
 }
 
 type GetTeamMediaByTagYearResponse struct {

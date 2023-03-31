@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.LatestPackageRequest{
-        Security: operations.LatestPackageSecurity{
-            RhIdentity: shared.SchemeRhIdentity{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.LatestPackagePathParams{
-            PackageName: "corrupti",
-        },
+        PackageName: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.LatestPackage(ctx, req)
+    res, err := s.LatestPackage(ctx, req, operations.LatestPackageSecurity{
+        RhIdentity: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

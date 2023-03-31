@@ -8,18 +8,13 @@ import (
 )
 
 type ImportScanDataSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ImportScanDataPathParams struct {
-	// UUID or name of the site to import scan data into
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ImportScanDataRequest struct {
-	PathParams ImportScanDataPathParams
-	Request    []byte `request:"mediaType=application/octet-stream"`
-	Security   ImportScanDataSecurity
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
+	// UUID or name of the site to import scan data into
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type ImportScanDataResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminProvisionEnterpriseGroupRequest struct {
-	Request shared.Group `request:"mediaType=application/json"`
-}
-
 type EnterpriseAdminProvisionEnterpriseGroupResponse struct {
 	ContentType string
 	StatusCode  int

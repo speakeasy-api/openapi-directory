@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsChangeProtectionPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostLoadBalancersIDActionsChangeProtectionRequestBody struct {
 	// If true, prevents the Load Balancer from being deleted
 	Delete *bool `json:"delete,omitempty"`
 }
 
 type PostLoadBalancersIDActionsChangeProtectionRequest struct {
-	PathParams PostLoadBalancersIDActionsChangeProtectionPathParams
-	Request    *PostLoadBalancersIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

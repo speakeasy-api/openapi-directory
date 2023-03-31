@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AnonymizePathParams struct {
+type AnonymizeRequest struct {
 	Anonymized bool   `pathParam:"style=simple,explode=false,name=anonymized"`
 	Source     string `pathParam:"style=simple,explode=false,name=source"`
 	Token      string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type AnonymizeRequest struct {
-	PathParams AnonymizePathParams
 }
 
 type AnonymizeResponse struct {

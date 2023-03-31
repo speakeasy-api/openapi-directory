@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxProcessorTokenCreateRequest struct {
-	Request shared.SandboxProcessorTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type SandboxProcessorTokenCreateResponse struct {
 	ContentType string

@@ -3,43 +3,37 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.SearchRequest(
-    query_params=operations.SearchQueryParams(
-        cursor="cumque",
-        expr="occaecati",
-        facet="iusto",
-        format="sdk",
-        fq="deserunt",
-        highlight="maiores",
-        partial=False,
-        pretty="true",
-        q="dolorem",
-        q_options="ratione",
-        q_parser="dismax",
-        return_="excepturi",
-        size=3784438660469815446,
-        sort="quo",
-        start=4099325840936144508,
-        stats="vel",
-    ),
-    headers=operations.SearchHeaders(
-        x_amz_algorithm="optio",
-        x_amz_content_sha256="at",
-        x_amz_credential="a",
-        x_amz_date="rerum",
-        x_amz_security_token="repudiandae",
-        x_amz_signature="praesentium",
-        x_amz_signed_headers="tempora",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    cursor="illum",
+    expr="vel",
+    facet="error",
+    format="sdk",
+    fq="deserunt",
+    highlight="suscipit",
+    partial=False,
+    pretty="true",
+    q="iure",
+    q_options="magnam",
+    q_parser="dismax",
+    return_="ipsa",
+    size=963663,
+    sort="tempora",
+    start=383441,
+    stats="molestiae",
 )
     
 res = s.search(req)

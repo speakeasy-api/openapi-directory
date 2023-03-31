@@ -36,16 +36,16 @@ func newMe(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // Disconnect a single Vendor from the User's account.
 //
 // All stored data about their Vendor account will be deleted, and any vehicles that were provided by that Vendor will disappear from the system.
-func (s *me) DisconnectVendor(ctx context.Context, request operations.DisconnectVendorRequest) (*operations.DisconnectVendorResponse, error) {
+func (s *me) DisconnectVendor(ctx context.Context, request operations.DisconnectVendorRequest, security operations.DisconnectVendorSecurity) (*operations.DisconnectVendorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/vendors/{vendor}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/vendors/{vendor}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *me) DisconnectVendor(ctx context.Context, request operations.Disconnect
 
 // GetMe - Get My User
 // Returns metadata about the authenticated User, including a list of vendors for which the user has provided credentials.
-func (s *me) GetMe(ctx context.Context, request operations.GetMeRequest) (*operations.GetMeResponse, error) {
+func (s *me) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -81,7 +81,7 @@ func (s *me) GetMe(ctx context.Context, request operations.GetMeRequest) (*opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -11,8 +11,8 @@ import (
 )
 
 type SearchEditorialImagesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SearchEditorialImagesSortEnum - Sort by
@@ -42,7 +42,7 @@ func (e *SearchEditorialImagesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchEditorialImagesQueryParams struct {
+type SearchEditorialImagesRequest struct {
 	// Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Show only editorial content that is available for distribution in a certain country
@@ -61,11 +61,6 @@ type SearchEditorialImagesQueryParams struct {
 	Sort *SearchEditorialImagesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Show only editorial content from certain suppliers
 	SupplierCode []string `queryParam:"style=form,explode=true,name=supplier_code"`
-}
-
-type SearchEditorialImagesRequest struct {
-	QueryParams SearchEditorialImagesQueryParams
-	Security    SearchEditorialImagesSecurity
 }
 
 type SearchEditorialImagesResponse struct {

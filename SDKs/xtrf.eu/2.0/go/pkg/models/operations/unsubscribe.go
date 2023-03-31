@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type UnsubscribePathParams struct {
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
 type UnsubscribeRequest struct {
-	PathParams UnsubscribePathParams
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type UnsubscribeResponse struct {

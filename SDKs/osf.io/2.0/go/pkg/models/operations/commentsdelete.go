@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CommentsDeletePathParams struct {
+type CommentsDeleteRequest struct {
 	// The unique identifier of the comment you wish to delete.
 	CommentID string `pathParam:"style=simple,explode=false,name=comment_id"`
-}
-
-type CommentsDeleteRequest struct {
-	PathParams CommentsDeletePathParams
 }
 
 type CommentsDeleteResponse struct {

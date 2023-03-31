@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsDeleteCommentPathParams struct {
+type GistsDeleteCommentRequest struct {
 	// The unique identifier of the comment.
 	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// The unique identifier of the gist.
 	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
-type GistsDeleteCommentRequest struct {
-	PathParams GistsDeleteCommentPathParams
 }
 
 type GistsDeleteCommentResponse struct {

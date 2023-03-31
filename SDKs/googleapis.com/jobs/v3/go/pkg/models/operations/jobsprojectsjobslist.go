@@ -10,23 +10,18 @@ import (
 )
 
 type JobsProjectsJobsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsJobsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsJobsListSecurity struct {
 	Option1 *JobsProjectsJobsListSecurityOption1 `security:"option"`
 	Option2 *JobsProjectsJobsListSecurityOption2 `security:"option"`
-}
-
-type JobsProjectsJobsListPathParams struct {
-	// Required. The resource name of the project under which the job is created. The format is "projects/{project_id}", for example, "projects/api-test-project".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // JobsProjectsJobsListJobViewEnum - Optional. The desired job attributes returned for jobs in the search response. Defaults to JobView.JOB_VIEW_FULL if no value is specified.
@@ -62,7 +57,7 @@ func (e *JobsProjectsJobsListJobViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type JobsProjectsJobsListQueryParams struct {
+type JobsProjectsJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -85,6 +80,8 @@ type JobsProjectsJobsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The starting point of a query result.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the project under which the job is created. The format is "projects/{project_id}", for example, "projects/api-test-project".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -93,12 +90,6 @@ type JobsProjectsJobsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsJobsListRequest struct {
-	PathParams  JobsProjectsJobsListPathParams
-	QueryParams JobsProjectsJobsListQueryParams
-	Security    JobsProjectsJobsListSecurity
 }
 
 type JobsProjectsJobsListResponse struct {

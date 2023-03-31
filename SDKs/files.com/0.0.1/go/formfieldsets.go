@@ -37,7 +37,7 @@ func newFormFieldSets(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete Form Field Set
 func (s *formFieldSets) DeleteFormFieldSetsID(ctx context.Context, request operations.DeleteFormFieldSetsIDRequest) (*operations.DeleteFormFieldSetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *formFieldSets) GetFormFieldSets(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *formFieldSets) GetFormFieldSets(ctx context.Context, request operations
 // Show Form Field Set
 func (s *formFieldSets) GetFormFieldSetsID(ctx context.Context, request operations.GetFormFieldSetsIDRequest) (*operations.GetFormFieldSetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *formFieldSets) GetFormFieldSetsID(ctx context.Context, request operatio
 // Update Form Field Set
 func (s *formFieldSets) PatchFormFieldSetsID(ctx context.Context, request operations.PatchFormFieldSetsIDRequest) (*operations.PatchFormFieldSetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchFormFieldSets", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -297,7 +297,7 @@ func (s *formFieldSets) PatchFormFieldSetsID(ctx context.Context, request operat
 
 // PostFormFieldSets - Create Form Field Set
 // Create Form Field Set
-func (s *formFieldSets) PostFormFieldSets(ctx context.Context, request operations.PostFormFieldSetsRequest) (*operations.PostFormFieldSetsResponse, error) {
+func (s *formFieldSets) PostFormFieldSets(ctx context.Context, request shared.PostFormFieldSets) (*operations.PostFormFieldSetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/form_field_sets"
 

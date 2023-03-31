@@ -41,15 +41,25 @@ func newDataTransfer(defaultClient, securityClient HTTPClient, serverURL, langua
 //  4. Media contains the mimetype of content, and for v1, it is "application/fhir+json"
 //  5. checksum is Md5 checksum of the data conent, before encryption
 //  6. Please refer to the NDHM Sandbox Documentation for the format of FHIR bundle that is passed through content
-func (s *dataTransfer) PostV05HealthInformationTransferJSON(ctx context.Context, request operations.PostV05HealthInformationTransferJSONRequest) (*operations.PostV05HealthInformationTransferJSONResponse, error) {
+func (s *dataTransfer) PostV05HealthInformationTransferJSON(ctx context.Context, request operations.PostV05HealthInformationTransferJSONRequest, opts ...operations.Option) (*operations.PostV05HealthInformationTransferJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationTransferJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/transfer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DataNotification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -64,7 +74,7 @@ func (s *dataTransfer) PostV05HealthInformationTransferJSON(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -118,15 +128,25 @@ func (s *dataTransfer) PostV05HealthInformationTransferJSON(ctx context.Context,
 //  4. Media contains the mimetype of content, and for v1, it is "application/fhir+json"
 //  5. checksum is Md5 checksum of the data conent, before encryption
 //  6. Please refer to the NDHM Sandbox Documentation for the format of FHIR bundle that is passed through content
-func (s *dataTransfer) PostV05HealthInformationTransferRaw(ctx context.Context, request operations.PostV05HealthInformationTransferRawRequest) (*operations.PostV05HealthInformationTransferRawResponse, error) {
+func (s *dataTransfer) PostV05HealthInformationTransferRaw(ctx context.Context, request operations.PostV05HealthInformationTransferRawRequest, opts ...operations.Option) (*operations.PostV05HealthInformationTransferRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationTransferRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/transfer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -141,7 +161,7 @@ func (s *dataTransfer) PostV05HealthInformationTransferRaw(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -12,28 +12,19 @@ var ListMessagingConfigurationServerList = []string{
 }
 
 type ListMessagingConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMessagingConfigurationPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListMessagingConfigurationQueryParams struct {
+type ListMessagingConfigurationRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListMessagingConfigurationRequest struct {
-	PathParams  ListMessagingConfigurationPathParams
-	QueryParams ListMessagingConfigurationQueryParams
-	Security    ListMessagingConfigurationSecurity
-	ServerURL   *string
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListMessagingConfigurationListMessagingConfigurationResponseMeta struct {

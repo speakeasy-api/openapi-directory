@@ -33,20 +33,20 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // MirrorSubscriptionsDelete - Deletes a subscription.
-func (s *subscriptions) MirrorSubscriptionsDelete(ctx context.Context, request operations.MirrorSubscriptionsDeleteRequest) (*operations.MirrorSubscriptionsDeleteResponse, error) {
+func (s *subscriptions) MirrorSubscriptionsDelete(ctx context.Context, request operations.MirrorSubscriptionsDeleteRequest, security operations.MirrorSubscriptionsDeleteSecurity) (*operations.MirrorSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *subscriptions) MirrorSubscriptionsDelete(ctx context.Context, request o
 }
 
 // MirrorSubscriptionsInsert - Creates a new subscription.
-func (s *subscriptions) MirrorSubscriptionsInsert(ctx context.Context, request operations.MirrorSubscriptionsInsertRequest) (*operations.MirrorSubscriptionsInsertResponse, error) {
+func (s *subscriptions) MirrorSubscriptionsInsert(ctx context.Context, request operations.MirrorSubscriptionsInsertRequest, security operations.MirrorSubscriptionsInsertSecurity) (*operations.MirrorSubscriptionsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *subscriptions) MirrorSubscriptionsInsert(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *subscriptions) MirrorSubscriptionsInsert(ctx context.Context, request o
 }
 
 // MirrorSubscriptionsList - Retrieves a list of subscriptions for the authenticated user and service.
-func (s *subscriptions) MirrorSubscriptionsList(ctx context.Context, request operations.MirrorSubscriptionsListRequest) (*operations.MirrorSubscriptionsListResponse, error) {
+func (s *subscriptions) MirrorSubscriptionsList(ctx context.Context, request operations.MirrorSubscriptionsListRequest, security operations.MirrorSubscriptionsListSecurity) (*operations.MirrorSubscriptionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscriptions"
 
@@ -136,11 +136,11 @@ func (s *subscriptions) MirrorSubscriptionsList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *subscriptions) MirrorSubscriptionsList(ctx context.Context, request ope
 }
 
 // MirrorSubscriptionsUpdate - Updates an existing subscription in place.
-func (s *subscriptions) MirrorSubscriptionsUpdate(ctx context.Context, request operations.MirrorSubscriptionsUpdateRequest) (*operations.MirrorSubscriptionsUpdateResponse, error) {
+func (s *subscriptions) MirrorSubscriptionsUpdate(ctx context.Context, request operations.MirrorSubscriptionsUpdateRequest, security operations.MirrorSubscriptionsUpdateSecurity) (*operations.MirrorSubscriptionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *subscriptions) MirrorSubscriptionsUpdate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

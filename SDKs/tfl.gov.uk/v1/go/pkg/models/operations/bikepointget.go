@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BikePointGetPathParams struct {
+type BikePointGetRequest struct {
 	// A bike point id (a list of ids can be obtained from the above BikePoint call)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type BikePointGetRequest struct {
-	PathParams BikePointGetPathParams
 }
 
 type BikePointGetResponse struct {

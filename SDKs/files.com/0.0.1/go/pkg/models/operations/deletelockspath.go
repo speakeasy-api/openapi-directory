@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteLocksPathPathParams struct {
+type DeleteLocksPathRequest struct {
 	// Path
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type DeleteLocksPathQueryParams struct {
 	// Lock token
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DeleteLocksPathRequest struct {
-	PathParams  DeleteLocksPathPathParams
-	QueryParams DeleteLocksPathQueryParams
 }
 
 type DeleteLocksPathResponse struct {

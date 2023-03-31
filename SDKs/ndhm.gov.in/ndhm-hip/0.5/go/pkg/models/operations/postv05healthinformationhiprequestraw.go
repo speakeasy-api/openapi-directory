@@ -11,17 +11,12 @@ var PostV05HealthInformationHipRequestRawServerList = []string{
 	"https://your-hrp-server.com",
 }
 
-type PostV05HealthInformationHipRequestRawHeaders struct {
+type PostV05HealthInformationHipRequestRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
-}
-
-type PostV05HealthInformationHipRequestRawRequest struct {
-	Headers   PostV05HealthInformationHipRequestRawHeaders
-	Request   []byte `request:"mediaType=application/xml"`
-	ServerURL *string
 }
 
 type PostV05HealthInformationHipRequestRawResponse struct {

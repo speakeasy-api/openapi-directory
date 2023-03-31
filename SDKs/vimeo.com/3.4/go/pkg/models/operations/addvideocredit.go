@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddVideoCreditPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 type AddVideoCreditRequestBody struct {
 	// The email address of the credited person.
 	Email string `json:"email"`
@@ -24,8 +19,9 @@ type AddVideoCreditRequestBody struct {
 }
 
 type AddVideoCreditRequest struct {
-	PathParams AddVideoCreditPathParams
-	Request    AddVideoCreditRequestBody `request:"mediaType=application/vnd.vimeo.credit+json"`
+	RequestBody AddVideoCreditRequestBody `request:"mediaType=application/vnd.vimeo.credit+json"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type AddVideoCreditResponse struct {

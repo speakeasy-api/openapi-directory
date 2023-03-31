@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersListQueryParams struct {
+type UsersListRequest struct {
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// A user ID. Only return users with an ID greater than this ID.
 	Since *int64 `queryParam:"style=form,explode=true,name=since"`
-}
-
-type UsersListRequest struct {
-	QueryParams UsersListQueryParams
 }
 
 type UsersListResponse struct {

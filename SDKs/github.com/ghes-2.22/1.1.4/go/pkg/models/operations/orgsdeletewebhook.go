@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsDeleteWebhookPathParams struct {
+type OrgsDeleteWebhookRequest struct {
 	HookID int64  `pathParam:"style=simple,explode=false,name=hook_id"`
 	Org    string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsDeleteWebhookRequest struct {
-	PathParams OrgsDeleteWebhookPathParams
 }
 
 type OrgsDeleteWebhookResponse struct {

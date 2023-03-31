@@ -8,18 +8,13 @@ import (
 )
 
 type DeleteSandboxSandboxIDSecurity struct {
-	AuthorizationCodeToken shared.SchemeAuthorizationCodeToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteSandboxSandboxIDPathParams struct {
-	// Sandbox Id
-	SandboxID string `pathParam:"style=simple,explode=false,name=sandboxId"`
+	AuthorizationCodeToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
 type DeleteSandboxSandboxIDRequest struct {
-	PathParams DeleteSandboxSandboxIDPathParams
-	Security   DeleteSandboxSandboxIDSecurity
+	// Sandbox Id
+	SandboxID string `pathParam:"style=simple,explode=false,name=sandboxId"`
 }
 
 type DeleteSandboxSandboxIDResponse struct {

@@ -3,35 +3,31 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetMediaRequest(
-    headers=operations.GetMediaHeaders(
-        x_amz_algorithm="corporis",
-        x_amz_content_sha256="at",
-        x_amz_credential="nostrum",
-        x_amz_date="recusandae",
-        x_amz_security_token="iste",
-        x_amz_signature="at",
-        x_amz_signed_headers="qui",
-    ),
-    request=operations.GetMediaRequestBody(
+    request_body=operations.GetMediaRequestBody(
         start_selector=operations.GetMediaRequestBodyStartSelector(
-            after_fragment_number="fugit",
-            continuation_token="repellat",
-            start_selector_type="PRODUCER_TIMESTAMP",
-            start_timestamp="2002-04-24T14:41:47Z",
+            after_fragment_number="corrupti",
+            continuation_token="provident",
+            start_selector_type="EARLIEST",
+            start_timestamp="2021-03-11T23:22:42.658Z",
         ),
-        stream_arn="omnis",
-        stream_name="magni",
+        stream_arn="nulla",
+        stream_name="corrupti",
     ),
+    x_amz_algorithm="illum",
+    x_amz_content_sha256="vel",
+    x_amz_credential="error",
+    x_amz_date="deserunt",
+    x_amz_security_token="suscipit",
+    x_amz_signature="iure",
+    x_amz_signed_headers="magnam",
 )
     
 res = s.get_media(req)

@@ -12,7 +12,8 @@ var CreateInteractionServerList = []string{
 }
 
 type CreateInteractionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInteractionCreateInteractionRequest struct {
@@ -20,12 +21,6 @@ type CreateInteractionCreateInteractionRequest struct {
 	Channel interface{} `form:"name=Channel"`
 	// The Interaction's routing logic.
 	Routing interface{} `form:"name=Routing"`
-}
-
-type CreateInteractionRequest struct {
-	Request   *CreateInteractionCreateInteractionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateInteractionSecurity
-	ServerURL *string
 }
 
 type CreateInteractionResponse struct {

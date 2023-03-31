@@ -12,18 +12,12 @@ var GetPaymentDisputeServerList = []string{
 }
 
 type GetPaymentDisputeSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPaymentDisputePathParams struct {
-	// This is the unique identifier of the payment dispute. This path parameter must be passed in at the end of the call URI to identify the payment dispute to retrieve. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the <strong>paymentDisputeId</strong> field in the <strong>getPaymentDisputeSummaries</strong> response.
-	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPaymentDisputeRequest struct {
-	PathParams GetPaymentDisputePathParams
-	Security   GetPaymentDisputeSecurity
-	ServerURL  *string
+	// This is the unique identifier of the payment dispute. This path parameter must be passed in at the end of the call URI to identify the payment dispute to retrieve. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the <strong>paymentDisputeId</strong> field in the <strong>getPaymentDisputeSummaries</strong> response.
+	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
 }
 
 type GetPaymentDisputeResponse struct {

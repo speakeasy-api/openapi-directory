@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsAttachIsoPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsAttachIsoRequestBody struct {
 	// ID or name of ISO to attach to the Server as listed in GET `/isos`
 	Iso string `json:"iso"`
 }
 
 type PostServersIDActionsAttachIsoRequest struct {
-	PathParams PostServersIDActionsAttachIsoPathParams
-	Request    *PostServersIDActionsAttachIsoRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsAttachIsoRequestBody `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsAttachIsoActionResponseActionError - Error message for the Action if error occurred, otherwise null

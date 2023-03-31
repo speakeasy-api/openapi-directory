@@ -62,7 +62,6 @@ pkg/models/operations/updateinteractionchannel.go
 pkg/models/operations/updateinteractionchannelparticipant.go
 pkg/models/operations/updatewebchannel.go
 pkg/models/shared/flexv1channel.go
-pkg/models/shared/security.go
 pkg/models/shared/flexv1flexflow.go
 pkg/models/shared/flexflowenumintegrationtypeenum.go
 pkg/models/shared/flexflowenumchanneltypeenum.go
@@ -91,3 +90,4 @@ pkg/models/shared/interactionchannelenumstatusenum.go
 pkg/models/shared/interactionchannelparticipantenumstatusenum.go
 pkg/models/shared/webchannelenumchatstatusenum.go
 USAGE.md
+pkg/models/operations/options.go

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMultiPathParams struct {
+type GetMultiRequest struct {
 	// The slave device to get data from
 	Address string `pathParam:"style=simple,explode=false,name=address"`
 	// Baudrate to communicate with M-Bus devices
@@ -16,10 +16,6 @@ type GetMultiPathParams struct {
 	Device string `pathParam:"style=simple,explode=false,name=device"`
 	// The slave device to get data from
 	Maxframes int `pathParam:"style=simple,explode=false,name=maxframes"`
-}
-
-type GetMultiRequest struct {
-	PathParams GetMultiPathParams
 }
 
 type GetMultiResponse struct {

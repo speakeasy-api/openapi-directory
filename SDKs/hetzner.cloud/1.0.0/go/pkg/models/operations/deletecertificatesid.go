@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteCertificatesIDPathParams struct {
+type DeleteCertificatesIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCertificatesIDRequest struct {
-	PathParams DeleteCertificatesIDPathParams
 }
 
 type DeleteCertificatesIDResponse struct {

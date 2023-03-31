@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDates3PathParams struct {
+type GetDates3Request struct {
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type GetDates3Request struct {
-	PathParams GetDates3PathParams
 }
 
 type GetDates3Response struct {

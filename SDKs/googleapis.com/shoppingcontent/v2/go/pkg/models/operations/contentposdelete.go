@@ -8,20 +8,11 @@ import (
 )
 
 type ContentPosDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentPosDeletePathParams struct {
-	// The ID of the POS or inventory data provider.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-	// A store code that is unique per merchant.
-	StoreCode string `pathParam:"style=simple,explode=false,name=storeCode"`
-	// The ID of the target merchant.
-	TargetMerchantID string `pathParam:"style=simple,explode=false,name=targetMerchantId"`
-}
-
-type ContentPosDeleteQueryParams struct {
+type ContentPosDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,22 +27,22 @@ type ContentPosDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The ID of the POS or inventory data provider.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// A store code that is unique per merchant.
+	StoreCode string `pathParam:"style=simple,explode=false,name=storeCode"`
+	// The ID of the target merchant.
+	TargetMerchantID string `pathParam:"style=simple,explode=false,name=targetMerchantId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentPosDeleteRequest struct {
-	PathParams  ContentPosDeletePathParams
-	QueryParams ContentPosDeleteQueryParams
-	Security    ContentPosDeleteSecurity
 }
 
 type ContentPosDeleteResponse struct {

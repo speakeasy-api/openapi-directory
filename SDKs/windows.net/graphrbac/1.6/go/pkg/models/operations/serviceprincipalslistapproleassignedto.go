@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePrincipalsListAppRoleAssignedToPathParams struct {
+type ServicePrincipalsListAppRoleAssignedToRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the service principal for which to get owners.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ServicePrincipalsListAppRoleAssignedToQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ServicePrincipalsListAppRoleAssignedToRequest struct {
-	PathParams  ServicePrincipalsListAppRoleAssignedToPathParams
-	QueryParams ServicePrincipalsListAppRoleAssignedToQueryParams
 }
 
 type ServicePrincipalsListAppRoleAssignedToResponse struct {

@@ -37,7 +37,7 @@ func (s *documents) AddOrReplaceDocuments(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/documents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *documents) AddOrReplaceDocuments(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,7 +84,7 @@ func (s *documents) AddOrUpdateDocuments(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/documents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *documents) AddOrUpdateDocuments(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -163,7 +163,7 @@ func (s *documents) DeleteAllDocuments(ctx context.Context) (*operations.DeleteA
 
 // DeleteDocuments - Delete documents
 // Delete documents
-func (s *documents) DeleteDocuments(ctx context.Context, request operations.DeleteDocumentsRequest) (*operations.DeleteDocumentsResponse, error) {
+func (s *documents) DeleteDocuments(ctx context.Context, request []float64) (*operations.DeleteDocumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/documents/delete-batch"
 
@@ -206,7 +206,7 @@ func (s *documents) DeleteDocuments(ctx context.Context, request operations.Dele
 
 // DeleteOneDocument - Delete one document
 // Delete one document
-func (s *documents) DeleteOneDocument(ctx context.Context, request operations.DeleteOneDocumentRequest) (*operations.DeleteOneDocumentResponse, error) {
+func (s *documents) DeleteOneDocument(ctx context.Context, request []byte) (*operations.DeleteOneDocumentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books/documents/1"
 
@@ -258,7 +258,7 @@ func (s *documents) GetDocuments(ctx context.Context, request operations.GetDocu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -298,7 +298,7 @@ func (s *documents) GetOneDocument(ctx context.Context, request operations.GetOn
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

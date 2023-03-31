@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateCampaignSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateCampaignRequest struct {
-	// This type defines the fields for the create campaign request.
-	Request  shared.CreateCampaignRequest `request:"mediaType=application/json"`
-	Security CreateCampaignSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCampaignResponse struct {

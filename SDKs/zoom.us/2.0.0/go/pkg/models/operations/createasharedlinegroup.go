@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateASharedLineGroupSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateASharedLineGroupApplicationJSON struct {
@@ -22,11 +21,6 @@ type CreateASharedLineGroupApplicationJSON struct {
 	//
 	// This field is required only if the [multiple sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-multiple-sites) option has been enabled for the account.
 	SiteID *string `json:"site_id,omitempty"`
-}
-
-type CreateASharedLineGroupRequest struct {
-	Request  *CreateASharedLineGroupApplicationJSON `request:"mediaType=application/json"`
-	Security CreateASharedLineGroupSecurity
 }
 
 type CreateASharedLineGroupResponse struct {

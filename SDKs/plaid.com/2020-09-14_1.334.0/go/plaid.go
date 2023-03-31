@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -36,7 +37,7 @@ func newPlaid(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AccountsBalanceGet - Retrieve real-time balance data
 // The `/accounts/balance/get` endpoint returns the real-time balance for each of an Item's accounts. While other endpoints may return a balance object, only `/accounts/balance/get` forces the available and current balance fields to be refreshed rather than cached. This endpoint can be used for existing Items that were added via any of Plaid’s other products. This endpoint can be used as long as Link has been initialized with any other product, `balance` itself is not a product that can be used to initialize Link. As this endpoint triggers a synchronous request for fresh data, latency may be higher than for other Plaid endpoints; if you encounter errors, you may find it necessary to adjust your timeout period when making requests.
 // /api/products/balance/#accountsbalanceget
-func (s *plaid) AccountsBalanceGet(ctx context.Context, request operations.AccountsBalanceGetRequest) (*operations.AccountsBalanceGetResponse, error) {
+func (s *plaid) AccountsBalanceGet(ctx context.Context, request shared.AccountsBalanceGetRequest) (*operations.AccountsBalanceGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/balance/get"
 
@@ -95,7 +96,7 @@ func (s *plaid) AccountsBalanceGet(ctx context.Context, request operations.Accou
 //
 // This endpoint retrieves cached information, rather than extracting fresh information from the institution. As a result, balances returned may not be up-to-date; for realtime balance information, use `/accounts/balance/get` instead. Note that some information is nullable.
 // /api/accounts/#accountsget
-func (s *plaid) AccountsGet(ctx context.Context, request operations.AccountsGetRequest) (*operations.AccountsGetResponse, error) {
+func (s *plaid) AccountsGet(ctx context.Context, request shared.AccountsGetRequest) (*operations.AccountsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts/get"
 
@@ -160,7 +161,7 @@ func (s *plaid) AccountsGet(ctx context.Context, request operations.AccountsGetR
 
 // ApplicationGet - Retrieve information about a Plaid application
 // Allows financial institutions to retrieve information about Plaid clients for the purpose of building control-tower experiences
-func (s *plaid) ApplicationGet(ctx context.Context, request operations.ApplicationGetRequest) (*operations.ApplicationGetResponse, error) {
+func (s *plaid) ApplicationGet(ctx context.Context, request shared.ApplicationGetRequest) (*operations.ApplicationGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/application/get"
 
@@ -228,7 +229,7 @@ func (s *plaid) ApplicationGet(ctx context.Context, request operations.Applicati
 //
 // To grant access to an Audit Copy, use the `/asset_report/audit_copy/create` endpoint to create an `audit_copy_token` and then pass that token to the third party who needs access. Each third party has its own `auditor_id`, for example `fannie_mae`. You’ll need to create a separate Audit Copy for each third party to whom you want to grant access to the Report.
 // /api/products/assets/#asset_reportaudit_copycreate
-func (s *plaid) AssetReportAuditCopyCreate(ctx context.Context, request operations.AssetReportAuditCopyCreateRequest) (*operations.AssetReportAuditCopyCreateResponse, error) {
+func (s *plaid) AssetReportAuditCopyCreate(ctx context.Context, request shared.AssetReportAuditCopyCreateRequest) (*operations.AssetReportAuditCopyCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/audit_copy/create"
 
@@ -284,7 +285,7 @@ func (s *plaid) AssetReportAuditCopyCreate(ctx context.Context, request operatio
 // AssetReportAuditCopyGet - Retrieve an Asset Report Audit Copy
 // `/asset_report/audit_copy/get` allows auditors to get a copy of an Asset Report that was previously shared via the `/asset_report/audit_copy/create` endpoint.  The caller of `/asset_report/audit_copy/create` must provide the `audit_copy_token` to the auditor.  This token can then be used to call `/asset_report/audit_copy/create`.
 // /none/
-func (s *plaid) AssetReportAuditCopyGet(ctx context.Context, request operations.AssetReportAuditCopyGetRequest) (*operations.AssetReportAuditCopyGetResponse, error) {
+func (s *plaid) AssetReportAuditCopyGet(ctx context.Context, request shared.AssetReportAuditCopyGetRequest) (*operations.AssetReportAuditCopyGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/audit_copy/get"
 
@@ -340,7 +341,7 @@ func (s *plaid) AssetReportAuditCopyGet(ctx context.Context, request operations.
 // AssetReportAuditCopyRemove - Remove Asset Report Audit Copy
 // The `/asset_report/audit_copy/remove` endpoint allows you to remove an Audit Copy. Removing an Audit Copy invalidates the `audit_copy_token` associated with it, meaning both you and any third parties holding the token will no longer be able to use it to access Report data. Items associated with the Asset Report, the Asset Report itself and other Audit Copies of it are not affected and will remain accessible after removing the given Audit Copy.
 // /api/products/assets/#asset_reportaudit_copyremove
-func (s *plaid) AssetReportAuditCopyRemove(ctx context.Context, request operations.AssetReportAuditCopyRemoveRequest) (*operations.AssetReportAuditCopyRemoveResponse, error) {
+func (s *plaid) AssetReportAuditCopyRemove(ctx context.Context, request shared.AssetReportAuditCopyRemoveRequest) (*operations.AssetReportAuditCopyRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/audit_copy/remove"
 
@@ -400,7 +401,7 @@ func (s *plaid) AssetReportAuditCopyRemove(ctx context.Context, request operatio
 //
 // The `/asset_report/create` endpoint creates an Asset Report at a moment in time. Asset Reports are immutable. To get an updated Asset Report, use the `/asset_report/refresh` endpoint.
 // /api/products/assets/#asset_reportcreate
-func (s *plaid) AssetReportCreate(ctx context.Context, request operations.AssetReportCreateRequest) (*operations.AssetReportCreateResponse, error) {
+func (s *plaid) AssetReportCreate(ctx context.Context, request shared.AssetReportCreateRequest) (*operations.AssetReportCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/create"
 
@@ -462,7 +463,7 @@ func (s *plaid) AssetReportCreate(ctx context.Context, request operations.AssetR
 //
 // Plaid will fire a [`PRODUCT_READY`](https://plaid.com/docs/api/products/assets/#product_ready) webhook once generation of the filtered Asset Report has completed.
 // /api/products/assets/#asset_reportfilter
-func (s *plaid) AssetReportFilter(ctx context.Context, request operations.AssetReportFilterRequest) (*operations.AssetReportFilterResponse, error) {
+func (s *plaid) AssetReportFilter(ctx context.Context, request shared.AssetReportFilterRequest) (*operations.AssetReportFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/filter"
 
@@ -522,7 +523,7 @@ func (s *plaid) AssetReportFilter(ctx context.Context, request operations.AssetR
 //
 // To retrieve an Asset Report with Insights, call the `/asset_report/get` endpoint with `include_insights` set to `true`.
 // /api/products/assets/#asset_reportget
-func (s *plaid) AssetReportGet(ctx context.Context, request operations.AssetReportGetRequest) (*operations.AssetReportGetResponse, error) {
+func (s *plaid) AssetReportGet(ctx context.Context, request shared.AssetReportGetRequest) (*operations.AssetReportGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/get"
 
@@ -582,7 +583,7 @@ func (s *plaid) AssetReportGet(ctx context.Context, request operations.AssetRepo
 //
 // [View a sample PDF Asset Report](https://plaid.com/documents/sample-asset-report.pdf).
 // /api/products/assets/#asset_reportpdfget
-func (s *plaid) AssetReportPdfGet(ctx context.Context, request operations.AssetReportPdfGetRequest) (*operations.AssetReportPdfGetResponse, error) {
+func (s *plaid) AssetReportPdfGet(ctx context.Context, request shared.AssetReportPDFGetRequest) (*operations.AssetReportPdfGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/pdf/get"
 
@@ -640,7 +641,7 @@ func (s *plaid) AssetReportPdfGet(ctx context.Context, request operations.AssetR
 //
 // The new Asset Report will contain the same Items as the original Report, as well as the same filters applied by any call to `/asset_report/filter`. By default, the new Asset Report will also use the same parameters you submitted with your original `/asset_report/create` request, but the original `days_requested` value and the values of any parameters in the `options` object can be overridden with new values. To change these arguments, simply supply new values for them in your request to `/asset_report/refresh`. Submit an empty string ("") for any previously-populated fields you would like set as empty.
 // /api/products/assets/#asset_reportrefresh
-func (s *plaid) AssetReportRefresh(ctx context.Context, request operations.AssetReportRefreshRequest) (*operations.AssetReportRefreshResponse, error) {
+func (s *plaid) AssetReportRefresh(ctx context.Context, request shared.AssetReportRefreshRequest) (*operations.AssetReportRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/refresh"
 
@@ -698,7 +699,7 @@ func (s *plaid) AssetReportRefresh(ctx context.Context, request operations.Asset
 //
 // The `/asset_report/remove` endpoint allows you to remove an Asset Report. Removing an Asset Report invalidates its `asset_report_token`, meaning you will no longer be able to use it to access Report data or create new Audit Copies. Removing an Asset Report does not affect the underlying Items, but does invalidate any `audit_copy_tokens` associated with the Asset Report.
 // /api/products/assets/#asset_reportremove
-func (s *plaid) AssetReportRemove(ctx context.Context, request operations.AssetReportRemoveRequest) (*operations.AssetReportRemoveResponse, error) {
+func (s *plaid) AssetReportRemove(ctx context.Context, request shared.AssetReportRemoveRequest) (*operations.AssetReportRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset_report/remove"
 
@@ -758,7 +759,7 @@ func (s *plaid) AssetReportRemove(ctx context.Context, request operations.AssetR
 //
 // Versioning note: In API version 2017-03-08, the schema of the `numbers` object returned by this endpoint is substantially different. For details, see [Plaid API versioning](https://plaid.com/docs/api/versioning/#version-2018-05-22).
 // /api/products/auth/#authget
-func (s *plaid) AuthGet(ctx context.Context, request operations.AuthGetRequest) (*operations.AuthGetResponse, error) {
+func (s *plaid) AuthGet(ctx context.Context, request shared.AuthGetRequest) (*operations.AuthGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/get"
 
@@ -828,7 +829,7 @@ func (s *plaid) AuthGet(ctx context.Context, request operations.AuthGetRequest) 
 //
 // Note that this endpoint can only be used with FBO accounts, when using Bank Transfers in the Full Service configuration. It cannot be used on your own account when using Bank Transfers in the BTS Platform configuration.
 // /bank-transfers/reference#bank_transferbalanceget
-func (s *plaid) BankTransferBalanceGet(ctx context.Context, request operations.BankTransferBalanceGetRequest) (*operations.BankTransferBalanceGetResponse, error) {
+func (s *plaid) BankTransferBalanceGet(ctx context.Context, request shared.BankTransferBalanceGetRequest) (*operations.BankTransferBalanceGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/balance/get"
 
@@ -894,7 +895,7 @@ func (s *plaid) BankTransferBalanceGet(ctx context.Context, request operations.B
 // BankTransferCancel - Cancel a bank transfer
 // Use the `/bank_transfer/cancel` endpoint to cancel a bank transfer.  A transfer is eligible for cancelation if the `cancellable` property returned by `/bank_transfer/get` is `true`.
 // /bank-transfers/reference#bank_transfercancel
-func (s *plaid) BankTransferCancel(ctx context.Context, request operations.BankTransferCancelRequest) (*operations.BankTransferCancelResponse, error) {
+func (s *plaid) BankTransferCancel(ctx context.Context, request shared.BankTransferCancelRequest) (*operations.BankTransferCancelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/cancel"
 
@@ -960,7 +961,7 @@ func (s *plaid) BankTransferCancel(ctx context.Context, request operations.BankT
 // BankTransferCreate - Create a bank transfer
 // Use the `/bank_transfer/create` endpoint to initiate a new bank transfer.
 // /bank-transfers/reference#bank_transfercreate
-func (s *plaid) BankTransferCreate(ctx context.Context, request operations.BankTransferCreateRequest) (*operations.BankTransferCreateResponse, error) {
+func (s *plaid) BankTransferCreate(ctx context.Context, request shared.BankTransferCreateRequest) (*operations.BankTransferCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/create"
 
@@ -1026,7 +1027,7 @@ func (s *plaid) BankTransferCreate(ctx context.Context, request operations.BankT
 // BankTransferEventList - List bank transfer events
 // Use the `/bank_transfer/event/list` endpoint to get a list of Plaid-initiated ACH or bank transfer events based on specified filter criteria. When using Auth with micro-deposit verification enabled, this endpoint can be used to fetch status updates on ACH micro-deposits. For more details, see [micro-deposit events](https://plaid.com/docs/auth/coverage/microdeposit-events/).
 // /api/products/auth#bank_transfereventlist
-func (s *plaid) BankTransferEventList(ctx context.Context, request operations.BankTransferEventListRequest) (*operations.BankTransferEventListResponse, error) {
+func (s *plaid) BankTransferEventList(ctx context.Context, request shared.BankTransferEventListRequest) (*operations.BankTransferEventListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/event/list"
 
@@ -1092,7 +1093,7 @@ func (s *plaid) BankTransferEventList(ctx context.Context, request operations.Ba
 // BankTransferEventSync - Sync bank transfer events
 // `/bank_transfer/event/sync` allows you to request up to the next 25 Plaid-initiated bank transfer events that happened after a specific `event_id`. When using Auth with micro-deposit verification enabled, this endpoint can be used to fetch status updates on ACH micro-deposits. For more details, see [micro-deposit events](https://www.plaid.com/docs/auth/coverage/microdeposit-events/).
 // /api/products/auth/#bank_transfereventsync
-func (s *plaid) BankTransferEventSync(ctx context.Context, request operations.BankTransferEventSyncRequest) (*operations.BankTransferEventSyncResponse, error) {
+func (s *plaid) BankTransferEventSync(ctx context.Context, request shared.BankTransferEventSyncRequest) (*operations.BankTransferEventSyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/event/sync"
 
@@ -1158,7 +1159,7 @@ func (s *plaid) BankTransferEventSync(ctx context.Context, request operations.Ba
 // BankTransferGet - Retrieve a bank transfer
 // The `/bank_transfer/get` fetches information about the bank transfer corresponding to the given `bank_transfer_id`.
 // /bank-transfers/reference#bank_transferget
-func (s *plaid) BankTransferGet(ctx context.Context, request operations.BankTransferGetRequest) (*operations.BankTransferGetResponse, error) {
+func (s *plaid) BankTransferGet(ctx context.Context, request shared.BankTransferGetRequest) (*operations.BankTransferGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/get"
 
@@ -1225,7 +1226,7 @@ func (s *plaid) BankTransferGet(ctx context.Context, request operations.BankTran
 // Use the `/bank_transfer/list` endpoint to see a list of all your bank transfers and their statuses. Results are paginated; use the `count` and `offset` query parameters to retrieve the desired bank transfers.
 //
 // /bank-transfers/reference#bank_transferlist
-func (s *plaid) BankTransferList(ctx context.Context, request operations.BankTransferListRequest) (*operations.BankTransferListResponse, error) {
+func (s *plaid) BankTransferList(ctx context.Context, request shared.BankTransferListRequest) (*operations.BankTransferListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/list"
 
@@ -1291,7 +1292,7 @@ func (s *plaid) BankTransferList(ctx context.Context, request operations.BankTra
 // BankTransferMigrateAccount - Migrate account into Bank Transfers
 // As an alternative to adding Items via Link, you can also use the `/bank_transfer/migrate_account` endpoint to migrate known account and routing numbers to Plaid Items.  Note that Items created in this way are not compatible with endpoints for other products, such as `/accounts/balance/get`, and can only be used with Bank Transfer endpoints.  If you require access to other endpoints, create the Item through Link instead.  Access to `/bank_transfer/migrate_account` is not enabled by default; to obtain access, contact your Plaid Account Manager.
 // /bank-transfers/reference#bank_transfermigrate_account
-func (s *plaid) BankTransferMigrateAccount(ctx context.Context, request operations.BankTransferMigrateAccountRequest) (*operations.BankTransferMigrateAccountResponse, error) {
+func (s *plaid) BankTransferMigrateAccount(ctx context.Context, request shared.BankTransferMigrateAccountRequest) (*operations.BankTransferMigrateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/migrate_account"
 
@@ -1357,7 +1358,7 @@ func (s *plaid) BankTransferMigrateAccount(ctx context.Context, request operatio
 // BankTransferSweepGet - Retrieve a sweep
 // The `/bank_transfer/sweep/get` endpoint fetches information about the sweep corresponding to the given `sweep_id`.
 // /api/products/transfer/#bank_transfersweepget
-func (s *plaid) BankTransferSweepGet(ctx context.Context, request operations.BankTransferSweepGetRequest) (*operations.BankTransferSweepGetResponse, error) {
+func (s *plaid) BankTransferSweepGet(ctx context.Context, request shared.BankTransferSweepGetRequest) (*operations.BankTransferSweepGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/sweep/get"
 
@@ -1423,7 +1424,7 @@ func (s *plaid) BankTransferSweepGet(ctx context.Context, request operations.Ban
 // BankTransferSweepList - List sweeps
 // The `/bank_transfer/sweep/list` endpoint fetches information about the sweeps matching the given filters.
 // /api/products/transfer/#bank_transfersweeplist
-func (s *plaid) BankTransferSweepList(ctx context.Context, request operations.BankTransferSweepListRequest) (*operations.BankTransferSweepListResponse, error) {
+func (s *plaid) BankTransferSweepList(ctx context.Context, request shared.BankTransferSweepListRequest) (*operations.BankTransferSweepListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank_transfer/sweep/list"
 
@@ -1489,7 +1490,7 @@ func (s *plaid) BankTransferSweepList(ctx context.Context, request operations.Ba
 // CategoriesGet - Get Categories
 // Send a request to the `/categories/get` endpoint to get detailed information on categories returned by Plaid. This endpoint does not require authentication.
 // /api/products/transactions/#categoriesget
-func (s *plaid) CategoriesGet(ctx context.Context, request operations.CategoriesGetRequest) (*operations.CategoriesGetResponse, error) {
+func (s *plaid) CategoriesGet(ctx context.Context, request map[string]interface{}) (*operations.CategoriesGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/categories/get"
 
@@ -1557,7 +1558,7 @@ func (s *plaid) CategoriesGet(ctx context.Context, request operations.Categories
 //
 // The `/payment_initiation/payment/token/create` is used to create a `payment_token`, which can then be used in Link initialization to enter a payment initiation flow. You can only use a `payment_token` once. If this attempt fails, the end user aborts the flow, or the token expires, you will need to create a new payment token. Creating a new payment token does not require end user input.
 // /link/maintain-legacy-integration/#creating-a-payment-token
-func (s *plaid) CreatePaymentToken(ctx context.Context, request operations.CreatePaymentTokenRequest) (*operations.CreatePaymentTokenResponse, error) {
+func (s *plaid) CreatePaymentToken(ctx context.Context, request shared.PaymentInitiationPaymentTokenCreateRequest) (*operations.CreatePaymentTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/payment/token/create"
 
@@ -1613,7 +1614,7 @@ func (s *plaid) CreatePaymentToken(ctx context.Context, request operations.Creat
 // CreditAssetReportFreddieMacGet - Retrieve an Asset Report with Freddie Mac format. Only Freddie Mac can use this endpoint.
 // The `credit/asset_report/freddie_mac/get` endpoint retrieves the Asset Report in Freddie Mac's JSON format.
 // /none/
-func (s *plaid) CreditAssetReportFreddieMacGet(ctx context.Context, request operations.CreditAssetReportFreddieMacGetRequest) (*operations.CreditAssetReportFreddieMacGetResponse, error) {
+func (s *plaid) CreditAssetReportFreddieMacGet(ctx context.Context, request map[string]interface{}) (*operations.CreditAssetReportFreddieMacGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/asset_report/freddie_mac/get"
 
@@ -1671,7 +1672,7 @@ func (s *plaid) CreditAssetReportFreddieMacGet(ctx context.Context, request oper
 //
 // Use the `/credit/audit_copy_token/create` endpoint to create an `audit_copy_token` and then pass that token to the GSE who needs access.
 // /api/products/income/#creditaudit_copy_tokencreate
-func (s *plaid) CreditAuditCopyTokenCreate(ctx context.Context, request operations.CreditAuditCopyTokenCreateRequest) (*operations.CreditAuditCopyTokenCreateResponse, error) {
+func (s *plaid) CreditAuditCopyTokenCreate(ctx context.Context, request shared.CreditAuditCopyTokenCreateRequest) (*operations.CreditAuditCopyTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/audit_copy_token/create"
 
@@ -1727,7 +1728,7 @@ func (s *plaid) CreditAuditCopyTokenCreate(ctx context.Context, request operatio
 // CreditAuditCopyTokenUpdate - Update an Audit Copy Token
 // The `/credit/audit_copy_token/update` endpoint updates the Audit Copy Token by adding the report tokens in the `report_tokens` field to the `audit_copy_token`. If the Audit Copy Token already contains a report of a certain type, it will be replaced with the token provided in the `report_tokens` field.
 // /none/
-func (s *plaid) CreditAuditCopyTokenUpdate(ctx context.Context, request operations.CreditAuditCopyTokenUpdateRequest) (*operations.CreditAuditCopyTokenUpdateResponse, error) {
+func (s *plaid) CreditAuditCopyTokenUpdate(ctx context.Context, request shared.CreditAuditCopyTokenUpdateRequest) (*operations.CreditAuditCopyTokenUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/audit_copy_token/update"
 
@@ -1783,7 +1784,7 @@ func (s *plaid) CreditAuditCopyTokenUpdate(ctx context.Context, request operatio
 // CreditBankEmploymentGet - Retrieve information from the bank accounts used for employment verification
 // `/credit/bank_employment/get` returns the employment report(s) derived from bank transaction data for a specified user.
 // /api/products/income/#creditbank_employmentget
-func (s *plaid) CreditBankEmploymentGet(ctx context.Context, request operations.CreditBankEmploymentGetRequest) (*operations.CreditBankEmploymentGetResponse, error) {
+func (s *plaid) CreditBankEmploymentGet(ctx context.Context, request shared.CreditBankEmploymentGetRequest) (*operations.CreditBankEmploymentGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/beta/credit/v1/bank_employment/get"
 
@@ -1839,7 +1840,7 @@ func (s *plaid) CreditBankEmploymentGet(ctx context.Context, request operations.
 // CreditBankIncomeGet - Retrieve information from the bank accounts used for income verification
 // `/credit/bank_income/get` returns the bank income report(s) for a specified user.
 // /api/products/income/#creditbank_incomeget
-func (s *plaid) CreditBankIncomeGet(ctx context.Context, request operations.CreditBankIncomeGetRequest) (*operations.CreditBankIncomeGetResponse, error) {
+func (s *plaid) CreditBankIncomeGet(ctx context.Context, request shared.CreditBankIncomeGetRequest) (*operations.CreditBankIncomeGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/bank_income/get"
 
@@ -1895,7 +1896,7 @@ func (s *plaid) CreditBankIncomeGet(ctx context.Context, request operations.Cred
 // CreditBankIncomePdfGet - Retrieve information from the bank accounts used for income verification in PDF format
 // `/credit/bank_income/pdf/get` returns the most recent bank income report for a specified user in PDF format.
 // /api/products/income/#creditbank_incomepdfget
-func (s *plaid) CreditBankIncomePdfGet(ctx context.Context, request operations.CreditBankIncomePdfGetRequest) (*operations.CreditBankIncomePdfGetResponse, error) {
+func (s *plaid) CreditBankIncomePdfGet(ctx context.Context, request shared.CreditBankIncomePDFGetRequest) (*operations.CreditBankIncomePdfGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/bank_income/pdf/get"
 
@@ -1951,7 +1952,7 @@ func (s *plaid) CreditBankIncomePdfGet(ctx context.Context, request operations.C
 // CreditBankIncomeRefresh - Refresh a user's bank income information
 // `/credit/bank_income/refresh` refreshes the bank income report data for a specific user.
 // /api/products/income/#creditbank_incomerefresh
-func (s *plaid) CreditBankIncomeRefresh(ctx context.Context, request operations.CreditBankIncomeRefreshRequest) (*operations.CreditBankIncomeRefreshResponse, error) {
+func (s *plaid) CreditBankIncomeRefresh(ctx context.Context, request map[string]interface{}) (*operations.CreditBankIncomeRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/bank_income/refresh"
 
@@ -2007,7 +2008,7 @@ func (s *plaid) CreditBankIncomeRefresh(ctx context.Context, request operations.
 // CreditEmploymentGet - Retrieve a summary of an individual's employment information
 // `/credit/employment/get` returns a list of items with employment information from a user's payroll provider that was verified by an end user.
 // /api/products/income/#creditemploymentget
-func (s *plaid) CreditEmploymentGet(ctx context.Context, request operations.CreditEmploymentGetRequest) (*operations.CreditEmploymentGetResponse, error) {
+func (s *plaid) CreditEmploymentGet(ctx context.Context, request shared.CreditEmploymentGetRequest) (*operations.CreditEmploymentGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/employment/get"
 
@@ -2063,7 +2064,7 @@ func (s *plaid) CreditEmploymentGet(ctx context.Context, request operations.Cred
 // CreditFreddieMacReportsGet - Retrieve an Asset Report with Freddie Mac format (aka VOA - Verification Of Assets), and a Verification Of Employment (VOE) report if this one is available. Only Freddie Mac can use this endpoint.
 // The `credit/asset_report/freddie_mac/get` endpoint retrieves the Verification of Assets and Verification of Employment reports.
 // /none/
-func (s *plaid) CreditFreddieMacReportsGet(ctx context.Context, request operations.CreditFreddieMacReportsGetRequest) (*operations.CreditFreddieMacReportsGetResponse, error) {
+func (s *plaid) CreditFreddieMacReportsGet(ctx context.Context, request map[string]interface{}) (*operations.CreditFreddieMacReportsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/freddie_mac/reports/get"
 
@@ -2119,7 +2120,7 @@ func (s *plaid) CreditFreddieMacReportsGet(ctx context.Context, request operatio
 // CreditPayrollIncomeGet - Retrieve a user's payroll information
 // This endpoint gets payroll income information for a specific user, either as a result of the user connecting to their payroll provider or uploading a pay related document.
 // /api/products/income/#creditpayroll_incomeget
-func (s *plaid) CreditPayrollIncomeGet(ctx context.Context, request operations.CreditPayrollIncomeGetRequest) (*operations.CreditPayrollIncomeGetResponse, error) {
+func (s *plaid) CreditPayrollIncomeGet(ctx context.Context, request shared.CreditPayrollIncomeGetRequest) (*operations.CreditPayrollIncomeGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/payroll_income/get"
 
@@ -2179,7 +2180,7 @@ func (s *plaid) CreditPayrollIncomeGet(ctx context.Context, request operations.C
 //
 // When testing in Sandbox, you can control the results by providing special test values in the `employer` and `access_tokens` fields. `employer_good` and `employer_bad` will result in `HIGH` and `LOW` confidence values, respectively. `employer_multi` will result in a `HIGH` confidence with multiple payroll options. Likewise, `access_good` and `access_bad` will result in `HIGH` and `LOW` confidence values, respectively. Any other value for `employer` and `access_tokens` in Sandbox will result in `UNKNOWN` confidence.
 // /api/products/income/#creditpayroll_incomeprecheck
-func (s *plaid) CreditPayrollIncomePrecheck(ctx context.Context, request operations.CreditPayrollIncomePrecheckRequest) (*operations.CreditPayrollIncomePrecheckResponse, error) {
+func (s *plaid) CreditPayrollIncomePrecheck(ctx context.Context, request shared.CreditPayrollIncomePrecheckRequest) (*operations.CreditPayrollIncomePrecheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/payroll_income/precheck"
 
@@ -2235,7 +2236,7 @@ func (s *plaid) CreditPayrollIncomePrecheck(ctx context.Context, request operati
 // CreditPayrollIncomeRefresh - Refresh a digital payroll income verification
 // `/credit/payroll_income/refresh` refreshes a given digital payroll income verification.
 // /api/products/income/#creditpayroll_incomerefresh
-func (s *plaid) CreditPayrollIncomeRefresh(ctx context.Context, request operations.CreditPayrollIncomeRefreshRequest) (*operations.CreditPayrollIncomeRefreshResponse, error) {
+func (s *plaid) CreditPayrollIncomeRefresh(ctx context.Context, request shared.CreditPayrollIncomeRefreshRequest) (*operations.CreditPayrollIncomeRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/payroll_income/refresh"
 
@@ -2303,7 +2304,7 @@ func (s *plaid) CreditPayrollIncomeRefresh(ctx context.Context, request operatio
 //
 // To grant a third party access to an Asset Report, use the `/credit/relay/create` endpoint to create a `relay_token` and then pass that token to your third party. Each third party has its own `secondary_client_id`; for example, `ce5bd328dcd34123456`. You'll need to create a separate `relay_token` for each third party that needs access to the report on your behalf.
 // /api/products/assets/#creditrelaycreate
-func (s *plaid) CreditRelayCreate(ctx context.Context, request operations.CreditRelayCreateRequest) (*operations.CreditRelayCreateResponse, error) {
+func (s *plaid) CreditRelayCreate(ctx context.Context, request shared.CreditRelayCreateRequest) (*operations.CreditRelayCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/relay/create"
 
@@ -2359,7 +2360,7 @@ func (s *plaid) CreditRelayCreate(ctx context.Context, request operations.Credit
 // CreditRelayGet - Retrieve the reports associated with a relay token that was shared with you (beta)
 // `/credit/relay/get` allows third parties to receive a report that was shared with them, using a `relay_token` that was created by the report owner.
 // /api/products/assets/#creditrelayget
-func (s *plaid) CreditRelayGet(ctx context.Context, request operations.CreditRelayGetRequest) (*operations.CreditRelayGetResponse, error) {
+func (s *plaid) CreditRelayGet(ctx context.Context, request shared.CreditRelayGetRequest) (*operations.CreditRelayGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/relay/get"
 
@@ -2415,7 +2416,7 @@ func (s *plaid) CreditRelayGet(ctx context.Context, request operations.CreditRel
 // CreditRelayRefresh - Refresh a report of a relay token (beta)
 // The `/credit/relay/refresh` endpoint allows third parties to refresh a report that was relayed to them, using a `relay_token` that was created by the report owner. A new report will be created with the original report parameters, but with the most recent data available based on the `days_requested` value of the original report.
 // /api/products/assets/#creditrelayrefresh
-func (s *plaid) CreditRelayRefresh(ctx context.Context, request operations.CreditRelayRefreshRequest) (*operations.CreditRelayRefreshResponse, error) {
+func (s *plaid) CreditRelayRefresh(ctx context.Context, request shared.CreditRelayRefreshRequest) (*operations.CreditRelayRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/relay/refresh"
 
@@ -2471,7 +2472,7 @@ func (s *plaid) CreditRelayRefresh(ctx context.Context, request operations.Credi
 // CreditRelayRemove - Remove relay token (beta)
 // The `/credit/relay/remove` endpoint allows you to invalidate a `relay_token`. The third party holding the token will no longer be able to access or refresh the reports which the `relay_token` gives access to. The original report, associated Items, and other relay tokens that provide access to the same report are not affected and will remain accessible after removing the given `relay_token`.
 // /api/products/assets/#creditrelayremove
-func (s *plaid) CreditRelayRemove(ctx context.Context, request operations.CreditRelayRemoveRequest) (*operations.CreditRelayRemoveResponse, error) {
+func (s *plaid) CreditRelayRemove(ctx context.Context, request shared.CreditRelayRemoveRequest) (*operations.CreditRelayRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/relay/remove"
 
@@ -2527,7 +2528,7 @@ func (s *plaid) CreditRelayRemove(ctx context.Context, request operations.Credit
 // CreditReportAuditCopyRemove - Remove an Audit Copy token
 // The `/credit/audit_copy_token/remove` endpoint allows you to remove an Audit Copy. Removing an Audit Copy invalidates the `audit_copy_token` associated with it, meaning both you and any third parties holding the token will no longer be able to use it to access Report data. Items associated with the Report data and other Audit Copies of it are not affected and will remain accessible after removing the given Audit Copy.
 // /api/products/income/#creditaudit_copy_tokenremove
-func (s *plaid) CreditReportAuditCopyRemove(ctx context.Context, request operations.CreditReportAuditCopyRemoveRequest) (*operations.CreditReportAuditCopyRemoveResponse, error) {
+func (s *plaid) CreditReportAuditCopyRemove(ctx context.Context, request shared.CreditAuditCopyTokenRemoveRequest) (*operations.CreditReportAuditCopyRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/audit_copy_token/remove"
 
@@ -2585,7 +2586,7 @@ func (s *plaid) CreditReportAuditCopyRemove(ctx context.Context, request operati
 //
 // These results include details about the Item that was created and some product related metadata (showing, for example, whether the user finished the bank income verification step).
 // /api/products/income/#creditsessionsget
-func (s *plaid) CreditSessionsGet(ctx context.Context, request operations.CreditSessionsGetRequest) (*operations.CreditSessionsGetResponse, error) {
+func (s *plaid) CreditSessionsGet(ctx context.Context, request shared.CreditSessionsGetRequest) (*operations.CreditSessionsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/sessions/get"
 
@@ -2641,7 +2642,7 @@ func (s *plaid) CreditSessionsGet(ctx context.Context, request operations.Credit
 // DashboardUserGet - Retrieve a dashboard user
 // Retrieve information about a dashboard user.
 // /api/products/monitor/#dashboard_userget
-func (s *plaid) DashboardUserGet(ctx context.Context, request operations.DashboardUserGetRequest) (*operations.DashboardUserGetResponse, error) {
+func (s *plaid) DashboardUserGet(ctx context.Context, request shared.DashboardUserGetRequest) (*operations.DashboardUserGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dashboard_user/get"
 
@@ -2697,7 +2698,7 @@ func (s *plaid) DashboardUserGet(ctx context.Context, request operations.Dashboa
 // DashboardUserList - List dashboard users
 // List all dashboard users associated with your account.
 // /api/products/monitor/#dashboard_userlist
-func (s *plaid) DashboardUserList(ctx context.Context, request operations.DashboardUserListRequest) (*operations.DashboardUserListResponse, error) {
+func (s *plaid) DashboardUserList(ctx context.Context, request shared.DashboardUserListRequest) (*operations.DashboardUserListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dashboard_user/list"
 
@@ -2753,7 +2754,7 @@ func (s *plaid) DashboardUserList(ctx context.Context, request operations.Dashbo
 // DepositSwitchAltCreate - Create a deposit switch without using Plaid Exchange
 // This endpoint provides an alternative to `/deposit_switch/create` for customers who have not yet fully integrated with Plaid Exchange. Like `/deposit_switch/create`, it creates a deposit switch entity that will be persisted throughout the lifecycle of the switch.
 // /deposit-switch/reference#deposit_switchaltcreate
-func (s *plaid) DepositSwitchAltCreate(ctx context.Context, request operations.DepositSwitchAltCreateRequest) (*operations.DepositSwitchAltCreateResponse, error) {
+func (s *plaid) DepositSwitchAltCreate(ctx context.Context, request shared.DepositSwitchAltCreateRequest) (*operations.DepositSwitchAltCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deposit_switch/alt/create"
 
@@ -2809,7 +2810,7 @@ func (s *plaid) DepositSwitchAltCreate(ctx context.Context, request operations.D
 // DepositSwitchCreate - Create a deposit switch
 // This endpoint creates a deposit switch entity that will be persisted throughout the lifecycle of the switch.
 // /deposit-switch/reference#deposit_switchcreate
-func (s *plaid) DepositSwitchCreate(ctx context.Context, request operations.DepositSwitchCreateRequest) (*operations.DepositSwitchCreateResponse, error) {
+func (s *plaid) DepositSwitchCreate(ctx context.Context, request shared.DepositSwitchCreateRequest) (*operations.DepositSwitchCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deposit_switch/create"
 
@@ -2865,7 +2866,7 @@ func (s *plaid) DepositSwitchCreate(ctx context.Context, request operations.Depo
 // DepositSwitchGet - Retrieve a deposit switch
 // This endpoint returns information related to how the user has configured their payroll allocation and the state of the switch. You can use this information to build logic related to the user's direct deposit allocation preferences.
 // /deposit-switch/reference#deposit_switchget
-func (s *plaid) DepositSwitchGet(ctx context.Context, request operations.DepositSwitchGetRequest) (*operations.DepositSwitchGetResponse, error) {
+func (s *plaid) DepositSwitchGet(ctx context.Context, request shared.DepositSwitchGetRequest) (*operations.DepositSwitchGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deposit_switch/get"
 
@@ -2922,7 +2923,7 @@ func (s *plaid) DepositSwitchGet(ctx context.Context, request operations.Deposit
 // In order for the end user to take action, you will need to create a public token representing the deposit switch. This token is used to initialize Link. It can be used one time and expires after 30 minutes.
 //
 // /deposit-switch/reference#deposit_switchtokencreate
-func (s *plaid) DepositSwitchTokenCreate(ctx context.Context, request operations.DepositSwitchTokenCreateRequest) (*operations.DepositSwitchTokenCreateResponse, error) {
+func (s *plaid) DepositSwitchTokenCreate(ctx context.Context, request shared.DepositSwitchTokenCreateRequest) (*operations.DepositSwitchTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deposit_switch/token/create"
 
@@ -2980,7 +2981,7 @@ func (s *plaid) DepositSwitchTokenCreate(ctx context.Context, request operations
 //
 // The data in the employer database is currently limited. As the Deposit Switch and Income products progress through their respective beta periods, more employers are being regularly added. Because the employer database is frequently updated, we recommend that you do not cache or store data from this endpoint for more than a day.
 // /api/employers/#employerssearch
-func (s *plaid) EmployersSearch(ctx context.Context, request operations.EmployersSearchRequest) (*operations.EmployersSearchResponse, error) {
+func (s *plaid) EmployersSearch(ctx context.Context, request shared.EmployersSearchRequest) (*operations.EmployersSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/employers/search"
 
@@ -3038,7 +3039,7 @@ func (s *plaid) EmployersSearch(ctx context.Context, request operations.Employer
 //
 // This endpoint has been deprecated; new integrations should use `/credit/employment/get` instead.
 // /api/products/income/#employmentverificationget
-func (s *plaid) EmploymentVerificationGet(ctx context.Context, request operations.EmploymentVerificationGetRequest) (*operations.EmploymentVerificationGetResponse, error) {
+func (s *plaid) EmploymentVerificationGet(ctx context.Context, request shared.EmploymentVerificationGetRequest) (*operations.EmploymentVerificationGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/employment/verification/get"
 
@@ -3094,7 +3095,7 @@ func (s *plaid) EmploymentVerificationGet(ctx context.Context, request operation
 // FdxNotifications - Webhook receiver for fdx notifications
 // A generic webhook receiver endpoint for FDX Event Notifications
 // /api/fdx/notifications/#post
-func (s *plaid) FdxNotifications(ctx context.Context, request operations.FdxNotificationsRequest) (*operations.FdxNotificationsResponse, error) {
+func (s *plaid) FdxNotifications(ctx context.Context, request shared.FDXNotification) (*operations.FdxNotificationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fdx/notifications"
 
@@ -3155,7 +3156,7 @@ func (s *plaid) FdxNotifications(ctx context.Context, request operations.FdxNoti
 //
 // Note: In API versions 2018-05-22 and earlier, the `owners` object is not returned, and instead identity information is returned in the top level `identity` object. For more details, see [Plaid API versioning](https://plaid.com/docs/api/versioning/#version-2019-05-29).
 // /api/products/identity/#identityget
-func (s *plaid) IdentityGet(ctx context.Context, request operations.IdentityGetRequest) (*operations.IdentityGetResponse, error) {
+func (s *plaid) IdentityGet(ctx context.Context, request shared.IdentityGetRequest) (*operations.IdentityGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity/get"
 
@@ -3213,7 +3214,7 @@ func (s *plaid) IdentityGet(ctx context.Context, request operations.IdentityGetR
 //
 // This request may take some time to complete if Identity was not specified as an initial product when creating the Item. This is because Plaid must communicate directly with the institution to retrieve the data.
 // /api/products/identity/#identitymatch
-func (s *plaid) IdentityMatch(ctx context.Context, request operations.IdentityMatchRequest) (*operations.IdentityMatchResponse, error) {
+func (s *plaid) IdentityMatch(ctx context.Context, request shared.IdentityMatchRequest) (*operations.IdentityMatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity/match"
 
@@ -3271,7 +3272,7 @@ func (s *plaid) IdentityMatch(ctx context.Context, request operations.IdentityMa
 // If you don't know whether the associated user already has an active Identity Verification, you can specify `"is_idempotent": true` in the request body. With idempotency enabled, a new Identity Verification will only be created if one does not already exist for the associated `client_user_id` and `template_id`. If an Identity Verification is found, it will be returned unmodified with an `200 OK` HTTP status code.
 //
 // /api/products/identity-verification/#identity_verificationcreate
-func (s *plaid) IdentityVerificationCreate(ctx context.Context, request operations.IdentityVerificationCreateRequest) (*operations.IdentityVerificationCreateResponse, error) {
+func (s *plaid) IdentityVerificationCreate(ctx context.Context, request shared.IdentityVerificationCreateRequest) (*operations.IdentityVerificationCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity_verification/create"
 
@@ -3327,7 +3328,7 @@ func (s *plaid) IdentityVerificationCreate(ctx context.Context, request operatio
 // IdentityVerificationGet - Retrieve Identity Verification
 // Retrieve a previously created identity verification.
 // /api/products/identity-verification/#identity_verificationget
-func (s *plaid) IdentityVerificationGet(ctx context.Context, request operations.IdentityVerificationGetRequest) (*operations.IdentityVerificationGetResponse, error) {
+func (s *plaid) IdentityVerificationGet(ctx context.Context, request shared.IdentityVerificationGetRequest) (*operations.IdentityVerificationGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity_verification/get"
 
@@ -3383,7 +3384,7 @@ func (s *plaid) IdentityVerificationGet(ctx context.Context, request operations.
 // IdentityVerificationList - List Identity Verifications
 // Filter and list Identity Verifications created by your account
 // /api/products/identity-verification/#identity_verificationlist
-func (s *plaid) IdentityVerificationList(ctx context.Context, request operations.IdentityVerificationListRequest) (*operations.IdentityVerificationListResponse, error) {
+func (s *plaid) IdentityVerificationList(ctx context.Context, request shared.IdentityVerificationListRequest) (*operations.IdentityVerificationListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity_verification/list"
 
@@ -3439,7 +3440,7 @@ func (s *plaid) IdentityVerificationList(ctx context.Context, request operations
 // IdentityVerificationRetry - Retry an Identity Verification
 // Allow a customer to retry their identity verification
 // /api/products/identity-verification/#identity_verificationretry
-func (s *plaid) IdentityVerificationRetry(ctx context.Context, request operations.IdentityVerificationRetryRequest) (*operations.IdentityVerificationRetryResponse, error) {
+func (s *plaid) IdentityVerificationRetry(ctx context.Context, request shared.IdentityVerificationRetryRequest) (*operations.IdentityVerificationRetryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity_verification/retry"
 
@@ -3495,7 +3496,7 @@ func (s *plaid) IdentityVerificationRetry(ctx context.Context, request operation
 // IncomeVerificationCreate - (Deprecated) Create an income verification instance
 // `/income/verification/create` begins the income verification process by returning an `income_verification_id`. You can then provide the `income_verification_id` to `/link/token/create` under the `income_verification` parameter in order to create a Link instance that will prompt the user to go through the income verification flow. Plaid will fire an `INCOME` webhook once the user completes the Payroll Income flow, or when the uploaded documents in the Document Income flow have finished processing.
 // /api/products/income/#incomeverificationcreate
-func (s *plaid) IncomeVerificationCreate(ctx context.Context, request operations.IncomeVerificationCreateRequest) (*operations.IncomeVerificationCreateResponse, error) {
+func (s *plaid) IncomeVerificationCreate(ctx context.Context, request shared.IncomeVerificationCreateRequest) (*operations.IncomeVerificationCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/income/verification/create"
 
@@ -3559,7 +3560,7 @@ func (s *plaid) IncomeVerificationCreate(ctx context.Context, request operations
 //
 // The `request_id` is returned in the `Plaid-Request-ID` header.
 // /api/products/income/#incomeverificationdocumentsdownload
-func (s *plaid) IncomeVerificationDocumentsDownload(ctx context.Context, request operations.IncomeVerificationDocumentsDownloadRequest) (*operations.IncomeVerificationDocumentsDownloadResponse, error) {
+func (s *plaid) IncomeVerificationDocumentsDownload(ctx context.Context, request shared.IncomeVerificationDocumentsDownloadRequest) (*operations.IncomeVerificationDocumentsDownloadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/income/verification/documents/download"
 
@@ -3617,7 +3618,7 @@ func (s *plaid) IncomeVerificationDocumentsDownload(ctx context.Context, request
 //
 // This endpoint has been deprecated; new integrations should use `/credit/payroll_income/get` instead.
 // /api/products/income/#incomeverificationpaystubsget
-func (s *plaid) IncomeVerificationPaystubsGet(ctx context.Context, request operations.IncomeVerificationPaystubsGetRequest) (*operations.IncomeVerificationPaystubsGetResponse, error) {
+func (s *plaid) IncomeVerificationPaystubsGet(ctx context.Context, request shared.IncomeVerificationPaystubsGetRequest) (*operations.IncomeVerificationPaystubsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/income/verification/paystubs/get"
 
@@ -3677,7 +3678,7 @@ func (s *plaid) IncomeVerificationPaystubsGet(ctx context.Context, request opera
 //
 // This endpoint has been deprecated; new integrations should use `/credit/payroll_income/precheck` instead.
 // /api/products/income/#incomeverificationprecheck
-func (s *plaid) IncomeVerificationPrecheck(ctx context.Context, request operations.IncomeVerificationPrecheckRequest) (*operations.IncomeVerificationPrecheckResponse, error) {
+func (s *plaid) IncomeVerificationPrecheck(ctx context.Context, request shared.IncomeVerificationPrecheckRequest) (*operations.IncomeVerificationPrecheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/income/verification/precheck"
 
@@ -3735,7 +3736,7 @@ func (s *plaid) IncomeVerificationPrecheck(ctx context.Context, request operatio
 //
 // This endpoint has been deprecated; new integrations should use `/credit/payroll_income/get` instead.
 // /api/products/income/#incomeverificationtaxformsget
-func (s *plaid) IncomeVerificationTaxformsGet(ctx context.Context, request operations.IncomeVerificationTaxformsGetRequest) (*operations.IncomeVerificationTaxformsGetResponse, error) {
+func (s *plaid) IncomeVerificationTaxformsGet(ctx context.Context, request map[string]interface{}) (*operations.IncomeVerificationTaxformsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/income/verification/taxforms/get"
 
@@ -3803,7 +3804,7 @@ func (s *plaid) IncomeVerificationTaxformsGet(ctx context.Context, request opera
 //
 // If there is no overlap between an institution’s enabled products and a client’s enabled products, then the institution will be filtered out from the response. As a result, the number of institutions returned may not match the count specified in the call.
 // /api/institutions/#institutionsget
-func (s *plaid) InstitutionsGet(ctx context.Context, request operations.InstitutionsGetRequest) (*operations.InstitutionsGetResponse, error) {
+func (s *plaid) InstitutionsGet(ctx context.Context, request shared.InstitutionsGetRequest) (*operations.InstitutionsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/institutions/get"
 
@@ -3872,7 +3873,7 @@ func (s *plaid) InstitutionsGet(ctx context.Context, request operations.Institut
 // Versioning note: API versions 2019-05-29 and earlier allow use of the `public_key` parameter instead of the `client_id` and `secret` to authenticate to this endpoint. The `public_key` has been deprecated; all customers are encouraged to use `client_id` and `secret` instead.
 //
 // /api/institutions/#institutionsget_by_id
-func (s *plaid) InstitutionsGetByID(ctx context.Context, request operations.InstitutionsGetByIDRequest) (*operations.InstitutionsGetByIDResponse, error) {
+func (s *plaid) InstitutionsGetByID(ctx context.Context, request shared.InstitutionsGetByIDRequest) (*operations.InstitutionsGetByIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/institutions/get_by_id"
 
@@ -3941,7 +3942,7 @@ func (s *plaid) InstitutionsGetByID(ctx context.Context, request operations.Inst
 // Versioning note: API versions 2019-05-29 and earlier allow use of the `public_key` parameter instead of the `client_id` and `secret` parameters to authenticate to this endpoint. The `public_key` parameter has since been deprecated; all customers are encouraged to use `client_id` and `secret` instead.
 //
 // /api/institutions/#institutionssearch
-func (s *plaid) InstitutionsSearch(ctx context.Context, request operations.InstitutionsSearchRequest) (*operations.InstitutionsSearchResponse, error) {
+func (s *plaid) InstitutionsSearch(ctx context.Context, request shared.InstitutionsSearchRequest) (*operations.InstitutionsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/institutions/search"
 
@@ -4007,7 +4008,7 @@ func (s *plaid) InstitutionsSearch(ctx context.Context, request operations.Insti
 // InvestmentsHoldingsGet - Get Investment holdings
 // The `/investments/holdings/get` endpoint allows developers to receive user-authorized stock position data for `investment`-type accounts.
 // /api/products/investments/#investmentsholdingsget
-func (s *plaid) InvestmentsHoldingsGet(ctx context.Context, request operations.InvestmentsHoldingsGetRequest) (*operations.InvestmentsHoldingsGetResponse, error) {
+func (s *plaid) InvestmentsHoldingsGet(ctx context.Context, request shared.InvestmentsHoldingsGetRequest) (*operations.InvestmentsHoldingsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/investments/holdings/get"
 
@@ -4069,7 +4070,7 @@ func (s *plaid) InvestmentsHoldingsGet(ctx context.Context, request operations.I
 //
 // Note that Investments does not have a webhook to indicate when initial transaction data has loaded. Instead, if transactions data is not ready when `/investments/transactions/get` is first called, Plaid will wait for the data. For this reason, calling `/investments/transactions/get` immediately after Link may take up to one to two minutes to return.
 // /api/products/investments/#investmentstransactionsget
-func (s *plaid) InvestmentsTransactionsGet(ctx context.Context, request operations.InvestmentsTransactionsGetRequest) (*operations.InvestmentsTransactionsGetResponse, error) {
+func (s *plaid) InvestmentsTransactionsGet(ctx context.Context, request shared.InvestmentsTransactionsGetRequest) (*operations.InvestmentsTransactionsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/investments/transactions/get"
 
@@ -4128,7 +4129,7 @@ func (s *plaid) InvestmentsTransactionsGet(ctx context.Context, request operatio
 // You can use the `/item/access_token/invalidate` endpoint to rotate the `access_token` associated with an Item. The endpoint returns a new `access_token` and immediately invalidates the previous `access_token`.
 //
 // /api/tokens/#itemaccess_tokeninvalidate
-func (s *plaid) ItemAccessTokenInvalidate(ctx context.Context, request operations.ItemAccessTokenInvalidateRequest) (*operations.ItemAccessTokenInvalidateResponse, error) {
+func (s *plaid) ItemAccessTokenInvalidate(ctx context.Context, request shared.ItemAccessTokenInvalidateRequest) (*operations.ItemAccessTokenInvalidateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/access_token/invalidate"
 
@@ -4183,7 +4184,7 @@ func (s *plaid) ItemAccessTokenInvalidate(ctx context.Context, request operation
 
 // ItemActivityList - List a historical log of user consent events
 // List a historical log of user consent events
-func (s *plaid) ItemActivityList(ctx context.Context, request operations.ItemActivityListRequest) (*operations.ItemActivityListResponse, error) {
+func (s *plaid) ItemActivityList(ctx context.Context, request shared.ItemActivityListRequest) (*operations.ItemActivityListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/activity/list"
 
@@ -4248,7 +4249,7 @@ func (s *plaid) ItemActivityList(ctx context.Context, request operations.ItemAct
 
 // ItemApplicationList - List a user’s connected applications
 // List a user’s connected applications
-func (s *plaid) ItemApplicationList(ctx context.Context, request operations.ItemApplicationListRequest) (*operations.ItemApplicationListResponse, error) {
+func (s *plaid) ItemApplicationList(ctx context.Context, request shared.ItemApplicationListRequest) (*operations.ItemApplicationListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/application/list"
 
@@ -4313,7 +4314,7 @@ func (s *plaid) ItemApplicationList(ctx context.Context, request operations.Item
 
 // ItemApplicationScopesUpdate - Update the scopes of access for a particular application
 // Enable consumers to update product access on selected accounts for an application.
-func (s *plaid) ItemApplicationScopesUpdate(ctx context.Context, request operations.ItemApplicationScopesUpdateRequest) (*operations.ItemApplicationScopesUpdateResponse, error) {
+func (s *plaid) ItemApplicationScopesUpdate(ctx context.Context, request shared.ItemApplicationScopesUpdateRequest) (*operations.ItemApplicationScopesUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/application/scopes/update"
 
@@ -4385,7 +4386,7 @@ func (s *plaid) ItemApplicationScopesUpdate(ctx context.Context, request operati
 //
 // The `/item/public_token/create` endpoint is **not** used to create your initial `public_token`. If you have not already received an `access_token` for a specific Item, use Link to obtain your `public_token` instead. See the [Quickstart](https://plaid.com/docs/quickstart) for more information.
 // /api/tokens/#itempublic_tokencreate
-func (s *plaid) ItemCreatePublicToken(ctx context.Context, request operations.ItemCreatePublicTokenRequest) (*operations.ItemCreatePublicTokenResponse, error) {
+func (s *plaid) ItemCreatePublicToken(ctx context.Context, request shared.ItemPublicTokenCreateRequest) (*operations.ItemCreatePublicTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/public_token/create"
 
@@ -4441,7 +4442,7 @@ func (s *plaid) ItemCreatePublicToken(ctx context.Context, request operations.It
 // ItemGet - Retrieve an Item
 // Returns information about the status of an Item.
 // /api/items/#itemget
-func (s *plaid) ItemGet(ctx context.Context, request operations.ItemGetRequest) (*operations.ItemGetResponse, error) {
+func (s *plaid) ItemGet(ctx context.Context, request shared.ItemGetRequest) (*operations.ItemGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/get"
 
@@ -4508,7 +4509,7 @@ func (s *plaid) ItemGet(ctx context.Context, request operations.ItemGetRequest) 
 // `/item/import` creates an Item via your Plaid Exchange Integration and returns an `access_token`. As part of an `/item/import` request, you will include a User ID (`user_auth.user_id`) and Authentication Token (`user_auth.auth_token`) that enable data aggregation through your Plaid Exchange API endpoints. These authentication principals are to be chosen by you.
 //
 // Upon creating an Item via `/item/import`, Plaid will automatically begin an extraction of that Item through the Plaid Exchange infrastructure you have already integrated. This will automatically generate the Plaid native account ID for the account the user will switch their direct deposit to (`target_account_id`).
-func (s *plaid) ItemImport(ctx context.Context, request operations.ItemImportRequest) (*operations.ItemImportResponse, error) {
+func (s *plaid) ItemImport(ctx context.Context, request shared.ItemImportRequest) (*operations.ItemImportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/import"
 
@@ -4566,7 +4567,7 @@ func (s *plaid) ItemImport(ctx context.Context, request operations.ItemImportReq
 //
 // The response also includes an `item_id` that should be stored with the `access_token`. The `item_id` is used to identify an Item in a webhook. The `item_id` can also be retrieved by making an `/item/get` request.
 // /api/tokens/#itempublic_tokenexchange
-func (s *plaid) ItemPublicTokenExchange(ctx context.Context, request operations.ItemPublicTokenExchangeRequest) (*operations.ItemPublicTokenExchangeResponse, error) {
+func (s *plaid) ItemPublicTokenExchange(ctx context.Context, request shared.ItemPublicTokenExchangeRequest) (*operations.ItemPublicTokenExchangeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/public_token/exchange"
 
@@ -4628,7 +4629,7 @@ func (s *plaid) ItemPublicTokenExchange(ctx context.Context, request operations.
 //
 // API versions 2019-05-29 and earlier return a `removed` boolean as part of the response.
 // /api/items/#itemremove
-func (s *plaid) ItemRemove(ctx context.Context, request operations.ItemRemoveRequest) (*operations.ItemRemoveResponse, error) {
+func (s *plaid) ItemRemove(ctx context.Context, request shared.ItemRemoveRequest) (*operations.ItemRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/remove"
 
@@ -4694,7 +4695,7 @@ func (s *plaid) ItemRemove(ctx context.Context, request operations.ItemRemoveReq
 // ItemWebhookUpdate - Update Webhook URL
 // The POST `/item/webhook/update` allows you to update the webhook URL associated with an Item. This request triggers a [`WEBHOOK_UPDATE_ACKNOWLEDGED`](https://plaid.com/docs/api/items/#webhook_update_acknowledged) webhook to the newly specified webhook URL.
 // /api/items/#itemwebhookupdate
-func (s *plaid) ItemWebhookUpdate(ctx context.Context, request operations.ItemWebhookUpdateRequest) (*operations.ItemWebhookUpdateResponse, error) {
+func (s *plaid) ItemWebhookUpdate(ctx context.Context, request shared.ItemWebhookUpdateRequest) (*operations.ItemWebhookUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/item/webhook/update"
 
@@ -4754,7 +4755,7 @@ func (s *plaid) ItemWebhookUpdate(ctx context.Context, request operations.ItemWe
 //
 // Note: This request may take some time to complete if `liabilities` was not specified as an initial product when creating the Item. This is because Plaid must communicate directly with the institution to retrieve the additional data.
 // /api/products/liabilities/#liabilitiesget
-func (s *plaid) LiabilitiesGet(ctx context.Context, request operations.LiabilitiesGetRequest) (*operations.LiabilitiesGetResponse, error) {
+func (s *plaid) LiabilitiesGet(ctx context.Context, request shared.LiabilitiesGetRequest) (*operations.LiabilitiesGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/liabilities/get"
 
@@ -4810,7 +4811,7 @@ func (s *plaid) LiabilitiesGet(ctx context.Context, request operations.Liabiliti
 // LinkDeliveryCreate - Create Link Delivery session
 // Use the `/link_delivery/create` endpoint to create a Link Delivery session.
 // /docs/assets/waitlist/link-delivery/
-func (s *plaid) LinkDeliveryCreate(ctx context.Context, request operations.LinkDeliveryCreateRequest) (*operations.LinkDeliveryCreateResponse, error) {
+func (s *plaid) LinkDeliveryCreate(ctx context.Context, request shared.LinkDeliveryCreateRequest) (*operations.LinkDeliveryCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link_delivery/create"
 
@@ -4876,7 +4877,7 @@ func (s *plaid) LinkDeliveryCreate(ctx context.Context, request operations.LinkD
 // LinkDeliveryGet - Get Link Delivery session
 // Use the `/link_delivery/get` endpoint to get the status of a Link Delivery session.
 // /docs/assets/waitlist/link-delivery/
-func (s *plaid) LinkDeliveryGet(ctx context.Context, request operations.LinkDeliveryGetRequest) (*operations.LinkDeliveryGetResponse, error) {
+func (s *plaid) LinkDeliveryGet(ctx context.Context, request shared.LinkDeliveryGetRequest) (*operations.LinkDeliveryGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link_delivery/get"
 
@@ -4943,7 +4944,7 @@ func (s *plaid) LinkDeliveryGet(ctx context.Context, request operations.LinkDeli
 // Exchange an OAuth `link_correlation_id` for the corresponding `link_token`. The `link_correlation_id` is only available for 'payment_initiation' products and is provided to the client via the OAuth `redirect_uri` as a query parameter.
 // The `link_correlation_id` is ephemeral and expires in a brief period, after which it can no longer be exchanged for the 'link_token'.
 // /api/oauth/#linkcorrelationid
-func (s *plaid) LinkOauthCorrelationIDExchange(ctx context.Context, request operations.LinkOauthCorrelationIDExchangeRequest) (*operations.LinkOauthCorrelationIDExchangeResponse, error) {
+func (s *plaid) LinkOauthCorrelationIDExchange(ctx context.Context, request shared.LinkOAuthCorrelationIDExchangeRequest) (*operations.LinkOauthCorrelationIDExchangeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link/oauth/correlation_id/exchange"
 
@@ -5001,7 +5002,7 @@ func (s *plaid) LinkOauthCorrelationIDExchange(ctx context.Context, request oper
 //
 // A `link_token` generated by `/link/token/create` is also used to initialize other Link flows, such as the update mode flow for tokens with expired credentials, or the Payment Initiation (Europe) flow.
 // /api/tokens/#linktokencreate
-func (s *plaid) LinkTokenCreate(ctx context.Context, request operations.LinkTokenCreateRequest) (*operations.LinkTokenCreateResponse, error) {
+func (s *plaid) LinkTokenCreate(ctx context.Context, request shared.LinkTokenCreateRequest) (*operations.LinkTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link/token/create"
 
@@ -5058,7 +5059,7 @@ func (s *plaid) LinkTokenCreate(ctx context.Context, request operations.LinkToke
 // The `/link/token/get` endpoint gets information about a previously-created `link_token` using the
 // `/link/token/create` endpoint. It can be useful for debugging purposes.
 // /api/tokens/#linktokenget
-func (s *plaid) LinkTokenGet(ctx context.Context, request operations.LinkTokenGetRequest) (*operations.LinkTokenGetResponse, error) {
+func (s *plaid) LinkTokenGet(ctx context.Context, request shared.LinkTokenGetRequest) (*operations.LinkTokenGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link/token/get"
 
@@ -5114,7 +5115,7 @@ func (s *plaid) LinkTokenGet(ctx context.Context, request operations.LinkTokenGe
 // PartnerCustomerCreate - Creates a new end customer for a Plaid reseller.
 // The `/partner/customer/create` endpoint is used by reseller partners to create end customers.
 // /api/partner/#partnercustomercreate
-func (s *plaid) PartnerCustomerCreate(ctx context.Context, request operations.PartnerCustomerCreateRequest) (*operations.PartnerCustomerCreateResponse, error) {
+func (s *plaid) PartnerCustomerCreate(ctx context.Context, request shared.PartnerCustomerCreateRequest) (*operations.PartnerCustomerCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partner/customer/create"
 
@@ -5180,7 +5181,7 @@ func (s *plaid) PartnerCustomerCreate(ctx context.Context, request operations.Pa
 // PartnerCustomerEnable - Enables a Plaid reseller's end customer in the Production environment.
 // The `/partner/customer/enable` endpoint is used by reseller partners to enable an end customer in the Production environment.
 // /api/partner/#partnercustomerenable
-func (s *plaid) PartnerCustomerEnable(ctx context.Context, request operations.PartnerCustomerEnableRequest) (*operations.PartnerCustomerEnableResponse, error) {
+func (s *plaid) PartnerCustomerEnable(ctx context.Context, request shared.PartnerCustomerEnableRequest) (*operations.PartnerCustomerEnableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partner/customer/enable"
 
@@ -5246,7 +5247,7 @@ func (s *plaid) PartnerCustomerEnable(ctx context.Context, request operations.Pa
 // PartnerCustomerGet - Returns a Plaid reseller's end customer.
 // The `/partner/customer/get` endpoint is used by reseller partners to retrieve data about a single end customer.
 // /api/partner/#partnercustomerget
-func (s *plaid) PartnerCustomerGet(ctx context.Context, request operations.PartnerCustomerGetRequest) (*operations.PartnerCustomerGetResponse, error) {
+func (s *plaid) PartnerCustomerGet(ctx context.Context, request shared.PartnerCustomerGetRequest) (*operations.PartnerCustomerGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partner/customer/get"
 
@@ -5312,7 +5313,7 @@ func (s *plaid) PartnerCustomerGet(ctx context.Context, request operations.Partn
 // PartnerCustomerOauthInstitutionsGet - Returns OAuth-institution registration information for a given end customer.
 // The `/partner/customer/oauth_institutions/get` endpoint is used by reseller partners to retrieve OAuth-institution registration information about a single end customer. To learn how to set up a webhook to listen to status update events, visit the [reseller documentation](https://plaid.com/docs/account/resellers/#enabling-end-customers).
 // /api/partner/#partnercustomeroauth_institutionsget
-func (s *plaid) PartnerCustomerOauthInstitutionsGet(ctx context.Context, request operations.PartnerCustomerOauthInstitutionsGetRequest) (*operations.PartnerCustomerOauthInstitutionsGetResponse, error) {
+func (s *plaid) PartnerCustomerOauthInstitutionsGet(ctx context.Context, request shared.PartnerCustomerOAuthInstitutionsGetRequest) (*operations.PartnerCustomerOauthInstitutionsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partner/customer/oauth_institutions/get"
 
@@ -5378,7 +5379,7 @@ func (s *plaid) PartnerCustomerOauthInstitutionsGet(ctx context.Context, request
 // PartnerCustomerRemove - Removes a Plaid reseller's end customer.
 // The `/partner/customer/remove` endpoint is used by reseller partners to remove an end customer. Removing an end customer will remove it from view in the Plaid Dashboard and deactivate its API keys. This endpoint can only be used to remove an end customer that has not yet been enabled in Production.
 // /api/partner/#partnercustomerremove
-func (s *plaid) PartnerCustomerRemove(ctx context.Context, request operations.PartnerCustomerRemoveRequest) (*operations.PartnerCustomerRemoveResponse, error) {
+func (s *plaid) PartnerCustomerRemove(ctx context.Context, request shared.PartnerCustomerRemoveRequest) (*operations.PartnerCustomerRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partner/customer/remove"
 
@@ -5446,7 +5447,7 @@ func (s *plaid) PartnerCustomerRemove(ctx context.Context, request operations.Pa
 //
 // Consents can be limited in time and scope, and have constraints that describe limitations for payments.
 // /api/products/payment-initiation/#payment_initiationconsentcreate
-func (s *plaid) PaymentInitiationConsentCreate(ctx context.Context, request operations.PaymentInitiationConsentCreateRequest) (*operations.PaymentInitiationConsentCreateResponse, error) {
+func (s *plaid) PaymentInitiationConsentCreate(ctx context.Context, request shared.PaymentInitiationConsentCreateRequest) (*operations.PaymentInitiationConsentCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/consent/create"
 
@@ -5502,7 +5503,7 @@ func (s *plaid) PaymentInitiationConsentCreate(ctx context.Context, request oper
 // PaymentInitiationConsentGet - Get payment consent
 // The `/payment_initiation/consent/get` endpoint can be used to check the status of a payment consent, as well as to receive basic information such as recipient and constraints.
 // /api/products/payment-initiation/#payment_initiationconsentget
-func (s *plaid) PaymentInitiationConsentGet(ctx context.Context, request operations.PaymentInitiationConsentGetRequest) (*operations.PaymentInitiationConsentGetResponse, error) {
+func (s *plaid) PaymentInitiationConsentGet(ctx context.Context, request shared.PaymentInitiationConsentGetRequest) (*operations.PaymentInitiationConsentGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/consent/get"
 
@@ -5558,7 +5559,7 @@ func (s *plaid) PaymentInitiationConsentGet(ctx context.Context, request operati
 // PaymentInitiationConsentPaymentExecute - Execute a single payment using consent
 // The `/payment_initiation/consent/payment/execute` endpoint can be used to execute payments using payment consent.
 // /api/products/payment-initiation/#payment_initiationconsentpaymentexecute
-func (s *plaid) PaymentInitiationConsentPaymentExecute(ctx context.Context, request operations.PaymentInitiationConsentPaymentExecuteRequest) (*operations.PaymentInitiationConsentPaymentExecuteResponse, error) {
+func (s *plaid) PaymentInitiationConsentPaymentExecute(ctx context.Context, request shared.PaymentInitiationConsentPaymentExecuteRequest) (*operations.PaymentInitiationConsentPaymentExecuteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/consent/payment/execute"
 
@@ -5614,7 +5615,7 @@ func (s *plaid) PaymentInitiationConsentPaymentExecute(ctx context.Context, requ
 // PaymentInitiationConsentRevoke - Revoke payment consent
 // The `/payment_initiation/consent/revoke` endpoint can be used to revoke the payment consent. Once the consent is revoked, it is not possible to initiate payments using it.
 // /api/products/payment-initiation/#payment_initiationconsentrevoke
-func (s *plaid) PaymentInitiationConsentRevoke(ctx context.Context, request operations.PaymentInitiationConsentRevokeRequest) (*operations.PaymentInitiationConsentRevokeResponse, error) {
+func (s *plaid) PaymentInitiationConsentRevoke(ctx context.Context, request shared.PaymentInitiationConsentRevokeRequest) (*operations.PaymentInitiationConsentRevokeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/consent/revoke"
 
@@ -5674,7 +5675,7 @@ func (s *plaid) PaymentInitiationConsentRevoke(ctx context.Context, request oper
 //
 // In the Development environment, payments must be below 5 GBP or other chosen [currency](https://plaid.com/docs/api/products/payment-initiation/#payment_initiation-payment-create-request-amount-currency). For details on any payment limits in Production, contact your Plaid Account Manager.
 // /api/products/payment-initiation/#payment_initiationpaymentcreate
-func (s *plaid) PaymentInitiationPaymentCreate(ctx context.Context, request operations.PaymentInitiationPaymentCreateRequest) (*operations.PaymentInitiationPaymentCreateResponse, error) {
+func (s *plaid) PaymentInitiationPaymentCreate(ctx context.Context, request shared.PaymentInitiationPaymentCreateRequest) (*operations.PaymentInitiationPaymentCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/payment/create"
 
@@ -5730,7 +5731,7 @@ func (s *plaid) PaymentInitiationPaymentCreate(ctx context.Context, request oper
 // PaymentInitiationPaymentGet - Get payment details
 // The `/payment_initiation/payment/get` endpoint can be used to check the status of a payment, as well as to receive basic information such as recipient and payment amount. In the case of standing orders, the `/payment_initiation/payment/get` endpoint will provide information about the status of the overall standing order itself; the API cannot be used to retrieve payment status for individual payments within a standing order.
 // /api/products/payment-initiation/#payment_initiationpaymentget
-func (s *plaid) PaymentInitiationPaymentGet(ctx context.Context, request operations.PaymentInitiationPaymentGetRequest) (*operations.PaymentInitiationPaymentGetResponse, error) {
+func (s *plaid) PaymentInitiationPaymentGet(ctx context.Context, request shared.PaymentInitiationPaymentGetRequest) (*operations.PaymentInitiationPaymentGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/payment/get"
 
@@ -5786,7 +5787,7 @@ func (s *plaid) PaymentInitiationPaymentGet(ctx context.Context, request operati
 // PaymentInitiationPaymentList - List payments
 // The `/payment_initiation/payment/list` endpoint can be used to retrieve all created payments. By default, the 10 most recent payments are returned. You can request more payments and paginate through the results using the optional `count` and `cursor` parameters.
 // /api/products/payment-initiation/#payment_initiationpaymentlist
-func (s *plaid) PaymentInitiationPaymentList(ctx context.Context, request operations.PaymentInitiationPaymentListRequest) (*operations.PaymentInitiationPaymentListResponse, error) {
+func (s *plaid) PaymentInitiationPaymentList(ctx context.Context, request shared.PaymentInitiationPaymentListRequest) (*operations.PaymentInitiationPaymentListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/payment/list"
 
@@ -5854,7 +5855,7 @@ func (s *plaid) PaymentInitiationPaymentList(ctx context.Context, request operat
 // so that this account can be used to initiate the refund.
 //
 // /api/products/payment-initiation/#payment_initiationpaymentreverse
-func (s *plaid) PaymentInitiationPaymentReverse(ctx context.Context, request operations.PaymentInitiationPaymentReverseRequest) (*operations.PaymentInitiationPaymentReverseResponse, error) {
+func (s *plaid) PaymentInitiationPaymentReverse(ctx context.Context, request shared.PaymentInitiationPaymentReverseRequest) (*operations.PaymentInitiationPaymentReverseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/payment/reverse"
 
@@ -5915,7 +5916,7 @@ func (s *plaid) PaymentInitiationPaymentReverse(ctx context.Context, request ope
 // The endpoint is idempotent: if a developer has already made a request with the same payment details, Plaid will return the same `recipient_id`.
 //
 // /api/products/payment-initiation/#payment_initiationrecipientcreate
-func (s *plaid) PaymentInitiationRecipientCreate(ctx context.Context, request operations.PaymentInitiationRecipientCreateRequest) (*operations.PaymentInitiationRecipientCreateResponse, error) {
+func (s *plaid) PaymentInitiationRecipientCreate(ctx context.Context, request shared.PaymentInitiationRecipientCreateRequest) (*operations.PaymentInitiationRecipientCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/recipient/create"
 
@@ -5971,7 +5972,7 @@ func (s *plaid) PaymentInitiationRecipientCreate(ctx context.Context, request op
 // PaymentInitiationRecipientGet - Get payment recipient
 // Get details about a payment recipient you have previously created.
 // /api/products/payment-initiation/#payment_initiationrecipientget
-func (s *plaid) PaymentInitiationRecipientGet(ctx context.Context, request operations.PaymentInitiationRecipientGetRequest) (*operations.PaymentInitiationRecipientGetResponse, error) {
+func (s *plaid) PaymentInitiationRecipientGet(ctx context.Context, request shared.PaymentInitiationRecipientGetRequest) (*operations.PaymentInitiationRecipientGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/recipient/get"
 
@@ -6027,7 +6028,7 @@ func (s *plaid) PaymentInitiationRecipientGet(ctx context.Context, request opera
 // PaymentInitiationRecipientList - List payment recipients
 // The `/payment_initiation/recipient/list` endpoint list the payment recipients that you have previously created.
 // /api/products/payment-initiation/#payment_initiationrecipientlist
-func (s *plaid) PaymentInitiationRecipientList(ctx context.Context, request operations.PaymentInitiationRecipientListRequest) (*operations.PaymentInitiationRecipientListResponse, error) {
+func (s *plaid) PaymentInitiationRecipientList(ctx context.Context, request shared.PaymentInitiationRecipientListRequest) (*operations.PaymentInitiationRecipientListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_initiation/recipient/list"
 
@@ -6085,7 +6086,7 @@ func (s *plaid) PaymentInitiationRecipientList(ctx context.Context, request oper
 // To initiate the account linking experience, call `/link/token/create` and provide the `payment_profile_token` in the `transfer.payment_profile_token` field.
 // You can then use the `payment_profile_token` when creating transfers using `/transfer/authorization/create` and `/transfer/create`.
 // /api/products/transfer/#payment_profilecreate
-func (s *plaid) PaymentProfileCreate(ctx context.Context, request operations.PaymentProfileCreateRequest) (*operations.PaymentProfileCreateResponse, error) {
+func (s *plaid) PaymentProfileCreate(ctx context.Context, request shared.PaymentProfileCreateRequest) (*operations.PaymentProfileCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_profile/create"
 
@@ -6151,7 +6152,7 @@ func (s *plaid) PaymentProfileCreate(ctx context.Context, request operations.Pay
 // PaymentProfileGet - Get payment profile
 // Use `/payment_profile/get` endpoint to get the status of a given Payment Profile.
 // /api/products/transfer/#payment_profileget
-func (s *plaid) PaymentProfileGet(ctx context.Context, request operations.PaymentProfileGetRequest) (*operations.PaymentProfileGetResponse, error) {
+func (s *plaid) PaymentProfileGet(ctx context.Context, request shared.PaymentProfileGetRequest) (*operations.PaymentProfileGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_profile/get"
 
@@ -6217,7 +6218,7 @@ func (s *plaid) PaymentProfileGet(ctx context.Context, request operations.Paymen
 // PaymentProfileRemove - Remove payment profile
 // Use the `/payment_profile/remove` endpoint to remove a given Payment Profile. Once it’s removed, it can no longer be used to create transfers.
 // /api/products/transfer/#payment_profileremove
-func (s *plaid) PaymentProfileRemove(ctx context.Context, request operations.PaymentProfileRemoveRequest) (*operations.PaymentProfileRemoveResponse, error) {
+func (s *plaid) PaymentProfileRemove(ctx context.Context, request shared.PaymentProfileRemoveRequest) (*operations.PaymentProfileRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_profile/remove"
 
@@ -6283,7 +6284,7 @@ func (s *plaid) PaymentProfileRemove(ctx context.Context, request operations.Pay
 // ProcessorApexProcessorTokenCreate - Create Apex bank account token
 // Used to create a token suitable for sending to Apex to enable Plaid-Apex integrations.
 // /none/
-func (s *plaid) ProcessorApexProcessorTokenCreate(ctx context.Context, request operations.ProcessorApexProcessorTokenCreateRequest) (*operations.ProcessorApexProcessorTokenCreateResponse, error) {
+func (s *plaid) ProcessorApexProcessorTokenCreate(ctx context.Context, request shared.ProcessorApexProcessorTokenCreateRequest) (*operations.ProcessorApexProcessorTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/apex/processor_token/create"
 
@@ -6342,7 +6343,7 @@ func (s *plaid) ProcessorApexProcessorTokenCreate(ctx context.Context, request o
 // Versioning note: API versions 2019-05-29 and earlier use a different schema for the `numbers` object returned by this endpoint. For details, see [Plaid API versioning](https://plaid.com/docs/api/versioning/#version-2020-09-14).
 //
 // /api/processors/#processorauthget
-func (s *plaid) ProcessorAuthGet(ctx context.Context, request operations.ProcessorAuthGetRequest) (*operations.ProcessorAuthGetResponse, error) {
+func (s *plaid) ProcessorAuthGet(ctx context.Context, request shared.ProcessorAuthGetRequest) (*operations.ProcessorAuthGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/auth/get"
 
@@ -6398,7 +6399,7 @@ func (s *plaid) ProcessorAuthGet(ctx context.Context, request operations.Process
 // ProcessorBalanceGet - Retrieve Balance data
 // The `/processor/balance/get` endpoint returns the real-time balance for each of an Item's accounts. While other endpoints may return a balance object, only `/processor/balance/get` forces the available and current balance fields to be refreshed rather than cached.
 // /api/processors/#processorbalanceget
-func (s *plaid) ProcessorBalanceGet(ctx context.Context, request operations.ProcessorBalanceGetRequest) (*operations.ProcessorBalanceGetResponse, error) {
+func (s *plaid) ProcessorBalanceGet(ctx context.Context, request shared.ProcessorBalanceGetRequest) (*operations.ProcessorBalanceGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/balance/get"
 
@@ -6454,7 +6455,7 @@ func (s *plaid) ProcessorBalanceGet(ctx context.Context, request operations.Proc
 // ProcessorBankTransferCreate - Create a bank transfer as a processor
 // Use the `/processor/bank_transfer/create` endpoint to initiate a new bank transfer as a processor
 // /api/processors/#bank_transfercreate
-func (s *plaid) ProcessorBankTransferCreate(ctx context.Context, request operations.ProcessorBankTransferCreateRequest) (*operations.ProcessorBankTransferCreateResponse, error) {
+func (s *plaid) ProcessorBankTransferCreate(ctx context.Context, request shared.ProcessorBankTransferCreateRequest) (*operations.ProcessorBankTransferCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/bank_transfer/create"
 
@@ -6520,7 +6521,7 @@ func (s *plaid) ProcessorBankTransferCreate(ctx context.Context, request operati
 // ProcessorIdentityGet - Retrieve Identity data
 // The `/processor/identity/get` endpoint allows you to retrieve various account holder information on file with the financial institution, including names, emails, phone numbers, and addresses.
 // /api/processors/#processoridentityget
-func (s *plaid) ProcessorIdentityGet(ctx context.Context, request operations.ProcessorIdentityGetRequest) (*operations.ProcessorIdentityGetResponse, error) {
+func (s *plaid) ProcessorIdentityGet(ctx context.Context, request shared.ProcessorIdentityGetRequest) (*operations.ProcessorIdentityGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/identity/get"
 
@@ -6576,7 +6577,7 @@ func (s *plaid) ProcessorIdentityGet(ctx context.Context, request operations.Pro
 // ProcessorSignalDecisionReport - Report whether you initiated an ACH transaction
 // After calling `/processor/signal/evaluate`, call `/processor/signal/decision/report` to report whether the transaction was initiated. This endpoint will return an [`INVALID_FIELD`](/docs/errors/invalid-request/#invalid_field) error if called a second time with a different value for `initiated`.
 // /api/processors/#processorsignaldecisionreport
-func (s *plaid) ProcessorSignalDecisionReport(ctx context.Context, request operations.ProcessorSignalDecisionReportRequest) (*operations.ProcessorSignalDecisionReportResponse, error) {
+func (s *plaid) ProcessorSignalDecisionReport(ctx context.Context, request shared.ProcessorSignalDecisionReportRequest) (*operations.ProcessorSignalDecisionReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/signal/decision/report"
 
@@ -6646,7 +6647,7 @@ func (s *plaid) ProcessorSignalDecisionReport(ctx context.Context, request opera
 //
 // Note: This request may take some time to complete if Signal is being added to an existing Item. This is because Plaid must communicate directly with the institution when retrieving the data for the first time.
 // /api/processors/#processorsignalevaluate
-func (s *plaid) ProcessorSignalEvaluate(ctx context.Context, request operations.ProcessorSignalEvaluateRequest) (*operations.ProcessorSignalEvaluateResponse, error) {
+func (s *plaid) ProcessorSignalEvaluate(ctx context.Context, request shared.ProcessorSignalEvaluateRequest) (*operations.ProcessorSignalEvaluateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/signal/evaluate"
 
@@ -6712,7 +6713,7 @@ func (s *plaid) ProcessorSignalEvaluate(ctx context.Context, request operations.
 // ProcessorSignalReturnReport - Report a return for an ACH transaction
 // Call the `/processor/signal/return/report` endpoint to report a returned transaction that was previously sent to the `/processor/signal/evaluate` endpoint. Your feedback will be used by the model to incorporate the latest risk trend in your portfolio.
 // /api/processors/#processorsignalreturnreport
-func (s *plaid) ProcessorSignalReturnReport(ctx context.Context, request operations.ProcessorSignalReturnReportRequest) (*operations.ProcessorSignalReturnReportResponse, error) {
+func (s *plaid) ProcessorSignalReturnReport(ctx context.Context, request shared.ProcessorSignalReturnReportRequest) (*operations.ProcessorSignalReturnReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/signal/return/report"
 
@@ -6783,7 +6784,7 @@ func (s *plaid) ProcessorSignalReturnReport(ctx context.Context, request operati
 //
 // Bank account tokens can also be revoked, using `/item/remove`.'
 // /api/processors/#processorstripebank_account_tokencreate
-func (s *plaid) ProcessorStripeBankAccountTokenCreate(ctx context.Context, request operations.ProcessorStripeBankAccountTokenCreateRequest) (*operations.ProcessorStripeBankAccountTokenCreateResponse, error) {
+func (s *plaid) ProcessorStripeBankAccountTokenCreate(ctx context.Context, request shared.ProcessorStripeBankAccountTokenCreateRequest) (*operations.ProcessorStripeBankAccountTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/stripe/bank_account_token/create"
 
@@ -6839,7 +6840,7 @@ func (s *plaid) ProcessorStripeBankAccountTokenCreate(ctx context.Context, reque
 // ProcessorTokenCreate - Create processor token
 // Used to create a token suitable for sending to one of Plaid's partners to enable integrations. Note that Stripe partnerships use bank account tokens instead; see `/processor/stripe/bank_account_token/create` for creating tokens for use with Stripe integrations. Once created, a processor token for a given Item cannot be modified or updated. If the account must be linked to a new or different partner resource, create a new Item by having the user go through the Link flow again; a new processor token can then be created from the new `access_token`. Processor tokens can also be revoked, using `/item/remove`.
 // /api/processors/#processortokencreate
-func (s *plaid) ProcessorTokenCreate(ctx context.Context, request operations.ProcessorTokenCreateRequest) (*operations.ProcessorTokenCreateResponse, error) {
+func (s *plaid) ProcessorTokenCreate(ctx context.Context, request shared.ProcessorTokenCreateRequest) (*operations.ProcessorTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/processor/token/create"
 
@@ -6895,7 +6896,7 @@ func (s *plaid) ProcessorTokenCreate(ctx context.Context, request operations.Pro
 // SandboxBankTransferFireWebhook - Manually fire a Bank Transfer webhook
 // Use the `/sandbox/bank_transfer/fire_webhook` endpoint to manually trigger a Bank Transfers webhook in the Sandbox environment.
 // /bank-transfers/reference/#sandboxbank_transferfire_webhook
-func (s *plaid) SandboxBankTransferFireWebhook(ctx context.Context, request operations.SandboxBankTransferFireWebhookRequest) (*operations.SandboxBankTransferFireWebhookResponse, error) {
+func (s *plaid) SandboxBankTransferFireWebhook(ctx context.Context, request shared.SandboxBankTransferFireWebhookRequest) (*operations.SandboxBankTransferFireWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/bank_transfer/fire_webhook"
 
@@ -6961,7 +6962,7 @@ func (s *plaid) SandboxBankTransferFireWebhook(ctx context.Context, request oper
 // SandboxBankTransferSimulate - Simulate a bank transfer event in Sandbox
 // Use the `/sandbox/bank_transfer/simulate` endpoint to simulate a bank transfer event in the Sandbox environment.  Note that while an event will be simulated and will appear when using endpoints such as `/bank_transfer/event/sync` or `/bank_transfer/event/list`, no transactions will actually take place and funds will not move between accounts, even within the Sandbox.
 // /bank-transfers/reference/#sandboxbank_transfersimulate
-func (s *plaid) SandboxBankTransferSimulate(ctx context.Context, request operations.SandboxBankTransferSimulateRequest) (*operations.SandboxBankTransferSimulateResponse, error) {
+func (s *plaid) SandboxBankTransferSimulate(ctx context.Context, request shared.SandboxBankTransferSimulateRequest) (*operations.SandboxBankTransferSimulateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/bank_transfer/simulate"
 
@@ -7027,7 +7028,7 @@ func (s *plaid) SandboxBankTransferSimulate(ctx context.Context, request operati
 // SandboxIncomeFireWebhook - Manually fire an Income webhook
 // Use the `/sandbox/income/fire_webhook` endpoint to manually trigger an Income webhook in the Sandbox environment.
 // /api/sandbox/#sandboxincomefire_webhook
-func (s *plaid) SandboxIncomeFireWebhook(ctx context.Context, request operations.SandboxIncomeFireWebhookRequest) (*operations.SandboxIncomeFireWebhookResponse, error) {
+func (s *plaid) SandboxIncomeFireWebhook(ctx context.Context, request shared.SandboxIncomeFireWebhookRequest) (*operations.SandboxIncomeFireWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/income/fire_webhook"
 
@@ -7105,7 +7106,7 @@ func (s *plaid) SandboxIncomeFireWebhook(ctx context.Context, request operations
 //
 // Note that this endpoint is provided for developer ease-of-use and is not required for testing webhooks; webhooks will also fire in Sandbox under the same conditions that they would in Production or Development.
 // /api/sandbox/#sandboxitemfire_webhook
-func (s *plaid) SandboxItemFireWebhook(ctx context.Context, request operations.SandboxItemFireWebhookRequest) (*operations.SandboxItemFireWebhookResponse, error) {
+func (s *plaid) SandboxItemFireWebhook(ctx context.Context, request shared.SandboxItemFireWebhookRequest) (*operations.SandboxItemFireWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/item/fire_webhook"
 
@@ -7173,7 +7174,7 @@ func (s *plaid) SandboxItemFireWebhook(ctx context.Context, request operations.S
 //
 // In the Sandbox, Items will transition to an `ITEM_LOGIN_REQUIRED` error state automatically after 30 days, even if this endpoint is not called.
 // /api/sandbox/#sandboxitemreset_login
-func (s *plaid) SandboxItemResetLogin(ctx context.Context, request operations.SandboxItemResetLoginRequest) (*operations.SandboxItemResetLoginResponse, error) {
+func (s *plaid) SandboxItemResetLogin(ctx context.Context, request shared.SandboxItemResetLoginRequest) (*operations.SandboxItemResetLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/item/reset_login"
 
@@ -7233,7 +7234,7 @@ func (s *plaid) SandboxItemResetLogin(ctx context.Context, request operations.Sa
 //
 // For more information on testing Automated Micro-deposits in Sandbox, see [Auth full coverage testing](https://plaid.com/docs/auth/coverage/testing#).
 // /api/sandbox/#sandboxitemset_verification_status
-func (s *plaid) SandboxItemSetVerificationStatus(ctx context.Context, request operations.SandboxItemSetVerificationStatusRequest) (*operations.SandboxItemSetVerificationStatusResponse, error) {
+func (s *plaid) SandboxItemSetVerificationStatus(ctx context.Context, request shared.SandboxItemSetVerificationStatusRequest) (*operations.SandboxItemSetVerificationStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/item/set_verification_status"
 
@@ -7288,7 +7289,7 @@ func (s *plaid) SandboxItemSetVerificationStatus(ctx context.Context, request op
 
 // SandboxOauthSelectAccounts - Save the selected accounts when connecting to the Platypus Oauth institution
 // Save the selected accounts when connecting to the Platypus Oauth institution
-func (s *plaid) SandboxOauthSelectAccounts(ctx context.Context, request operations.SandboxOauthSelectAccountsRequest) (*operations.SandboxOauthSelectAccountsResponse, error) {
+func (s *plaid) SandboxOauthSelectAccounts(ctx context.Context, request shared.SandboxOauthSelectAccountsRequest) (*operations.SandboxOauthSelectAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/oauth/select_accounts"
 
@@ -7359,7 +7360,7 @@ func (s *plaid) SandboxOauthSelectAccounts(ctx context.Context, request operatio
 //	In order to invoke this endpoint, you must first [create a Payment Profile](https://plaid.com/docs/transfer/add-to-app/#create-a-payment-profile-optional) and [go through the Link flow](https://plaid.com/docs/transfer/add-to-app/#create-a-link-token).
 //
 // /api/sandbox/#sandboxpayment_profilereset_login
-func (s *plaid) SandboxPaymentProfileResetLogin(ctx context.Context, request operations.SandboxPaymentProfileResetLoginRequest) (*operations.SandboxPaymentProfileResetLoginResponse, error) {
+func (s *plaid) SandboxPaymentProfileResetLogin(ctx context.Context, request shared.SandboxPaymentProfileResetLoginRequest) (*operations.SandboxPaymentProfileResetLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/payment_profile/reset_login"
 
@@ -7415,7 +7416,7 @@ func (s *plaid) SandboxPaymentProfileResetLogin(ctx context.Context, request ope
 // SandboxProcessorTokenCreate - Create a test Item and processor token
 // Use the `/sandbox/processor_token/create` endpoint to create a valid `processor_token` for an arbitrary institution ID and test credentials. The created `processor_token` corresponds to a new Sandbox Item. You can then use this `processor_token` with the `/processor/` API endpoints in Sandbox. You can also use `/sandbox/processor_token/create` with the [`user_custom` test username](https://plaid.com/docs/sandbox/user-custom) to generate a test account with custom data.
 // /api/sandbox/#sandboxprocessor_tokencreate
-func (s *plaid) SandboxProcessorTokenCreate(ctx context.Context, request operations.SandboxProcessorTokenCreateRequest) (*operations.SandboxProcessorTokenCreateResponse, error) {
+func (s *plaid) SandboxProcessorTokenCreate(ctx context.Context, request shared.SandboxProcessorTokenCreateRequest) (*operations.SandboxProcessorTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/processor_token/create"
 
@@ -7481,7 +7482,7 @@ func (s *plaid) SandboxProcessorTokenCreate(ctx context.Context, request operati
 // SandboxPublicTokenCreate - Create a test Item
 // Use the `/sandbox/public_token/create` endpoint to create a valid `public_token`  for an arbitrary institution ID, initial products, and test credentials. The created `public_token` maps to a new Sandbox Item. You can then call `/item/public_token/exchange` to exchange the `public_token` for an `access_token` and perform all API actions. `/sandbox/public_token/create` can also be used with the [`user_custom` test username](https://plaid.com/docs/sandbox/user-custom) to generate a test account with custom data. `/sandbox/public_token/create` cannot be used with OAuth institutions.
 // /api/sandbox/#sandboxpublic_tokencreate
-func (s *plaid) SandboxPublicTokenCreate(ctx context.Context, request operations.SandboxPublicTokenCreateRequest) (*operations.SandboxPublicTokenCreateResponse, error) {
+func (s *plaid) SandboxPublicTokenCreate(ctx context.Context, request shared.SandboxPublicTokenCreateRequest) (*operations.SandboxPublicTokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/public_token/create"
 
@@ -7547,7 +7548,7 @@ func (s *plaid) SandboxPublicTokenCreate(ctx context.Context, request operations
 // SandboxTransferFireWebhook - Manually fire a Transfer webhook
 // Use the `/sandbox/transfer/fire_webhook` endpoint to manually trigger a Transfer webhook in the Sandbox environment.
 // /api/sandbox/#sandboxtransferfire_webhook
-func (s *plaid) SandboxTransferFireWebhook(ctx context.Context, request operations.SandboxTransferFireWebhookRequest) (*operations.SandboxTransferFireWebhookResponse, error) {
+func (s *plaid) SandboxTransferFireWebhook(ctx context.Context, request shared.SandboxTransferFireWebhookRequest) (*operations.SandboxTransferFireWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/fire_webhook"
 
@@ -7613,7 +7614,7 @@ func (s *plaid) SandboxTransferFireWebhook(ctx context.Context, request operatio
 // SandboxTransferRepaymentSimulate - Trigger the creation of a repayment
 // Use the `/sandbox/transfer/repayment/simulate` endpoint to trigger the creation of a repayment. As a side effect of calling this route, a repayment is created that includes all unreimbursed returns of guaranteed transfers. If there are no such returns, an 400 error is returned.
 // /api/sandbox/#sandboxtransferrepaymentsimulate
-func (s *plaid) SandboxTransferRepaymentSimulate(ctx context.Context, request operations.SandboxTransferRepaymentSimulateRequest) (*operations.SandboxTransferRepaymentSimulateResponse, error) {
+func (s *plaid) SandboxTransferRepaymentSimulate(ctx context.Context, request shared.SandboxTransferRepaymentSimulateRequest) (*operations.SandboxTransferRepaymentSimulateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/repayment/simulate"
 
@@ -7679,7 +7680,7 @@ func (s *plaid) SandboxTransferRepaymentSimulate(ctx context.Context, request op
 // SandboxTransferSimulate - Simulate a transfer event in Sandbox
 // Use the `/sandbox/transfer/simulate` endpoint to simulate a transfer event in the Sandbox environment.  Note that while an event will be simulated and will appear when using endpoints such as `/transfer/event/sync` or `/transfer/event/list`, no transactions will actually take place and funds will not move between accounts, even within the Sandbox.
 // /api/sandbox/#sandboxtransfersimulate
-func (s *plaid) SandboxTransferSimulate(ctx context.Context, request operations.SandboxTransferSimulateRequest) (*operations.SandboxTransferSimulateResponse, error) {
+func (s *plaid) SandboxTransferSimulate(ctx context.Context, request shared.SandboxTransferSimulateRequest) (*operations.SandboxTransferSimulateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/simulate"
 
@@ -7745,7 +7746,7 @@ func (s *plaid) SandboxTransferSimulate(ctx context.Context, request operations.
 // SandboxTransferSweepSimulate - Simulate creating a sweep
 // Use the `/sandbox/transfer/sweep/simulate` endpoint to create a sweep and associated events in the Sandbox environment. Upon calling this endpoint, all `posted` or `pending` transfers with a sweep status of `unswept` will become `swept`, and all `returned` transfers with a sweep status of `swept` will become `return_swept`.
 // /api/sandbox/#sandboxtransfersweepsimulate
-func (s *plaid) SandboxTransferSweepSimulate(ctx context.Context, request operations.SandboxTransferSweepSimulateRequest) (*operations.SandboxTransferSweepSimulateResponse, error) {
+func (s *plaid) SandboxTransferSweepSimulate(ctx context.Context, request shared.SandboxTransferSweepSimulateRequest) (*operations.SandboxTransferSweepSimulateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/sweep/simulate"
 
@@ -7819,7 +7820,7 @@ func (s *plaid) SandboxTransferSweepSimulate(ctx context.Context, request operat
 // The advancement of the test clock from its current `virtual_time` should be limited such that there are no more than 20 originations resulting from the advance operation on each `recurring_transfer` associated with the `test_clock`.
 // For instance, if the recurring transfer associated with this test clock originates once every 4 weeks, you can advance the `virtual_time` up to 80 weeks on each API call.
 // /api/sandbox/#sandboxtransfertest_clockadvance
-func (s *plaid) SandboxTransferTestClockAdvance(ctx context.Context, request operations.SandboxTransferTestClockAdvanceRequest) (*operations.SandboxTransferTestClockAdvanceResponse, error) {
+func (s *plaid) SandboxTransferTestClockAdvance(ctx context.Context, request shared.SandboxTransferTestClockAdvanceRequest) (*operations.SandboxTransferTestClockAdvanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/test_clock/advance"
 
@@ -7889,7 +7890,7 @@ func (s *plaid) SandboxTransferTestClockAdvance(ctx context.Context, request ope
 //
 // A test clock can be associated with up to 5 recurring transfers.
 // /api/sandbox/#sandboxtransfertest_clockcreate
-func (s *plaid) SandboxTransferTestClockCreate(ctx context.Context, request operations.SandboxTransferTestClockCreateRequest) (*operations.SandboxTransferTestClockCreateResponse, error) {
+func (s *plaid) SandboxTransferTestClockCreate(ctx context.Context, request shared.SandboxTransferTestClockCreateRequest) (*operations.SandboxTransferTestClockCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/test_clock/create"
 
@@ -7955,7 +7956,7 @@ func (s *plaid) SandboxTransferTestClockCreate(ctx context.Context, request oper
 // SandboxTransferTestClockGet - Get a test clock
 // Use the `/sandbox/transfer/test_clock/get` endpoint to get a `test_clock` in the Sandbox environment.
 // /api/sandbox/#sandboxtransfertest_clockget
-func (s *plaid) SandboxTransferTestClockGet(ctx context.Context, request operations.SandboxTransferTestClockGetRequest) (*operations.SandboxTransferTestClockGetResponse, error) {
+func (s *plaid) SandboxTransferTestClockGet(ctx context.Context, request shared.SandboxTransferTestClockGetRequest) (*operations.SandboxTransferTestClockGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/test_clock/get"
 
@@ -8021,7 +8022,7 @@ func (s *plaid) SandboxTransferTestClockGet(ctx context.Context, request operati
 // SandboxTransferTestClockList - List test clocks
 // Use the `/sandbox/transfer/test_clock/list` endpoint to see a list of all your test clocks in the Sandbox environment, by ascending `virtual_time`. Results are paginated; use the `count` and `offset` query parameters to retrieve the desired test clocks.
 // /api/sandbox/#sandboxtransfertest_clocklist
-func (s *plaid) SandboxTransferTestClockList(ctx context.Context, request operations.SandboxTransferTestClockListRequest) (*operations.SandboxTransferTestClockListResponse, error) {
+func (s *plaid) SandboxTransferTestClockList(ctx context.Context, request shared.SandboxTransferTestClockListRequest) (*operations.SandboxTransferTestClockListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sandbox/transfer/test_clock/list"
 
@@ -8087,7 +8088,7 @@ func (s *plaid) SandboxTransferTestClockList(ctx context.Context, request operat
 // SignalDecisionReport - Report whether you initiated an ACH transaction
 // After calling `/signal/evaluate`, call `/signal/decision/report` to report whether the transaction was initiated. This endpoint will return an [`INVALID_FIELD`](/docs/errors/invalid-request/#invalid_field) error if called a second time with a different value for `initiated`.
 // /api/products/signal#signaldecisionreport
-func (s *plaid) SignalDecisionReport(ctx context.Context, request operations.SignalDecisionReportRequest) (*operations.SignalDecisionReportResponse, error) {
+func (s *plaid) SignalDecisionReport(ctx context.Context, request shared.SignalDecisionReportRequest) (*operations.SignalDecisionReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signal/decision/report"
 
@@ -8157,7 +8158,7 @@ func (s *plaid) SignalDecisionReport(ctx context.Context, request operations.Sig
 //
 // Note: This request may take some time to complete if Signal is being added to an existing Item. This is because Plaid must communicate directly with the institution when retrieving the data for the first time.
 // /api/products/signal#signalevaluate
-func (s *plaid) SignalEvaluate(ctx context.Context, request operations.SignalEvaluateRequest) (*operations.SignalEvaluateResponse, error) {
+func (s *plaid) SignalEvaluate(ctx context.Context, request shared.SignalEvaluateRequest) (*operations.SignalEvaluateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signal/evaluate"
 
@@ -8227,7 +8228,7 @@ func (s *plaid) SignalEvaluate(ctx context.Context, request operations.SignalEva
 //
 // Example flow: Link is initialized with Auth, call `/auth/get` for the account and routing number, call `/identity/get` to retrieve bank ownership details, then call `/signal/prepare` to begin Signal data collection. Later, once you have obtained details about the proposed transaction from the user, call `/signal/evaluate` for a Signal score. For more information please see [Recommendations for initializing Link with specific product combinations](https://www.plaid.com/docs/link/initializing-products/#recommendations-for-initializing-link-with-specific-product-combinations).
 // /api/products/signal#signalprepare
-func (s *plaid) SignalPrepare(ctx context.Context, request operations.SignalPrepareRequest) (*operations.SignalPrepareResponse, error) {
+func (s *plaid) SignalPrepare(ctx context.Context, request shared.SignalPrepareRequest) (*operations.SignalPrepareResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signal/prepare"
 
@@ -8293,7 +8294,7 @@ func (s *plaid) SignalPrepare(ctx context.Context, request operations.SignalPrep
 // SignalReturnReport - Report a return for an ACH transaction
 // Call the `/signal/return/report` endpoint to report a returned transaction that was previously sent to the `/signal/evaluate` endpoint. Your feedback will be used by the model to incorporate the latest risk trend in your portfolio.
 // /api/products/signal#signalreturnreport
-func (s *plaid) SignalReturnReport(ctx context.Context, request operations.SignalReturnReportRequest) (*operations.SignalReturnReportResponse, error) {
+func (s *plaid) SignalReturnReport(ctx context.Context, request shared.SignalReturnReportRequest) (*operations.SignalReturnReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signal/return/report"
 
@@ -8360,7 +8361,7 @@ func (s *plaid) SignalReturnReport(ctx context.Context, request operations.Signa
 // The `/beta/transactions/v1/enhance` endpoint enriches raw transaction data provided directly by clients.
 //
 // The product is currently in beta.
-func (s *plaid) TransactionsEnhance(ctx context.Context, request operations.TransactionsEnhanceRequest) (*operations.TransactionsEnhanceResponse, error) {
+func (s *plaid) TransactionsEnhance(ctx context.Context, request shared.TransactionsEnhanceGetRequest) (*operations.TransactionsEnhanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/beta/transactions/v1/enhance"
 
@@ -8428,7 +8429,7 @@ func (s *plaid) TransactionsEnhance(ctx context.Context, request operations.Tran
 //
 // The product is currently in beta. To request access, contact enrich-feedback@plaid.com
 // /api/products/enrich/#transactionsenrich
-func (s *plaid) TransactionsEnrich(ctx context.Context, request operations.TransactionsEnrichRequest) (*operations.TransactionsEnrichResponse, error) {
+func (s *plaid) TransactionsEnrich(ctx context.Context, request shared.TransactionsEnrichGetRequest) (*operations.TransactionsEnrichResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactions/enrich"
 
@@ -8502,7 +8503,7 @@ func (s *plaid) TransactionsEnrich(ctx context.Context, request operations.Trans
 //
 // Note that data may not be immediately available to `/transactions/get`. Plaid will begin to prepare transactions data upon Item link, if Link was initialized with `transactions`, or upon the first call to `/transactions/get`, if it wasn't. To be alerted when transaction data is ready to be fetched, listen for the [`INITIAL_UPDATE`](https://plaid.com/docs/api/products/transactions/#initial_update) and [`HISTORICAL_UPDATE`](https://plaid.com/docs/api/products/transactions/#historical_update) webhooks. If no transaction history is ready when `/transactions/get` is called, it will return a `PRODUCT_NOT_READY` error.
 // /api/products/transactions/#transactionsget
-func (s *plaid) TransactionsGet(ctx context.Context, request operations.TransactionsGetRequest) (*operations.TransactionsGetResponse, error) {
+func (s *plaid) TransactionsGet(ctx context.Context, request shared.TransactionsGetRequest) (*operations.TransactionsGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactions/get"
 
@@ -8574,7 +8575,7 @@ func (s *plaid) TransactionsGet(ctx context.Context, request operations.Transact
 //
 // After the initial call, you can call `/transactions/recurring/get` endpoint at any point in the future to retrieve the latest summary of recurring streams. Listen to the [`RECURRING_TRANSACTIONS_UPDATE`](https://plaid.com/docs/api/products/transactions/#recurring_transactions_update) webhook to be notified when new updates are available.
 // /api/products/transactions/#transactionsrecurringget
-func (s *plaid) TransactionsRecurringGet(ctx context.Context, request operations.TransactionsRecurringGetRequest) (*operations.TransactionsRecurringGetResponse, error) {
+func (s *plaid) TransactionsRecurringGet(ctx context.Context, request shared.TransactionsRecurringGetRequest) (*operations.TransactionsRecurringGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactions/recurring/get"
 
@@ -8642,7 +8643,7 @@ func (s *plaid) TransactionsRecurringGet(ctx context.Context, request operations
 //
 // `/transactions/refresh` is offered as an add-on to Transactions and has a separate [fee model](/docs/account/billing/#per-request-flat-fee). To request access to this endpoint, submit a [product access request](https://dashboard.plaid.com/team/products) or contact your Plaid account manager.
 // /api/products/transactions/#transactionsrefresh
-func (s *plaid) TransactionsRefresh(ctx context.Context, request operations.TransactionsRefreshRequest) (*operations.TransactionsRefreshResponse, error) {
+func (s *plaid) TransactionsRefresh(ctx context.Context, request shared.TransactionsRefreshRequest) (*operations.TransactionsRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactions/refresh"
 
@@ -8711,7 +8712,7 @@ func (s *plaid) TransactionsRefresh(ctx context.Context, request operations.Tran
 // Rules will be applied on the Item's transactions returned in `/transactions/get` response.
 //
 // The product is currently in beta. To request access, contact transactions-feedback@plaid.com.
-func (s *plaid) TransactionsRulesCreate(ctx context.Context, request operations.TransactionsRulesCreateRequest) (*operations.TransactionsRulesCreateResponse, error) {
+func (s *plaid) TransactionsRulesCreate(ctx context.Context, request shared.TransactionsRulesCreateRequest) (*operations.TransactionsRulesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/beta/transactions/rules/v1/create"
 
@@ -8776,7 +8777,7 @@ func (s *plaid) TransactionsRulesCreate(ctx context.Context, request operations.
 
 // TransactionsRulesList - Return a list of rules created for the Item associated with the access token.
 // The `/transactions/rules/v1/list` returns a list of transaction rules created for the Item associated with the access token.
-func (s *plaid) TransactionsRulesList(ctx context.Context, request operations.TransactionsRulesListRequest) (*operations.TransactionsRulesListResponse, error) {
+func (s *plaid) TransactionsRulesList(ctx context.Context, request shared.TransactionsRulesListRequest) (*operations.TransactionsRulesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/beta/transactions/rules/v1/list"
 
@@ -8841,7 +8842,7 @@ func (s *plaid) TransactionsRulesList(ctx context.Context, request operations.Tr
 
 // TransactionsRulesRemove - Remove transaction rule
 // The `/transactions/rules/v1/remove` endpoint is used to remove a transaction rule.
-func (s *plaid) TransactionsRulesRemove(ctx context.Context, request operations.TransactionsRulesRemoveRequest) (*operations.TransactionsRulesRemoveResponse, error) {
+func (s *plaid) TransactionsRulesRemove(ctx context.Context, request shared.TransactionsRulesRemoveRequest) (*operations.TransactionsRulesRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/beta/transactions/rules/v1/remove"
 
@@ -8925,7 +8926,7 @@ func (s *plaid) TransactionsRulesRemove(ctx context.Context, request operations.
 //
 // To be alerted when new data is available, listen for the [`SYNC_UPDATES_AVAILABLE`](https://plaid.com/docs/api/products/transactions/#sync_updates_available) webhook.
 // /api/products/transactions/#transactionssync
-func (s *plaid) TransactionsSync(ctx context.Context, request operations.TransactionsSyncRequest) (*operations.TransactionsSyncResponse, error) {
+func (s *plaid) TransactionsSync(ctx context.Context, request shared.TransactionsSyncRequest) (*operations.TransactionsSyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactions/sync"
 
@@ -9007,7 +9008,7 @@ func (s *plaid) TransactionsSync(ctx context.Context, request operations.Transac
 //
 // For [Guarantee](https://www.plaid.com/docs//transfer/guarantee/), the following fields are required : `idempotency_key`, `user.phone_number` (optional if `email_address` provided), `user.email_address` (optional if `phone_number` provided), `device.ip_address`, `device.user_agent`, and `user_present`.
 // /api/products/transfer/#transferauthorizationcreate
-func (s *plaid) TransferAuthorizationCreate(ctx context.Context, request operations.TransferAuthorizationCreateRequest) (*operations.TransferAuthorizationCreateResponse, error) {
+func (s *plaid) TransferAuthorizationCreate(ctx context.Context, request shared.TransferAuthorizationCreateRequest) (*operations.TransferAuthorizationCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/authorization/create"
 
@@ -9073,7 +9074,7 @@ func (s *plaid) TransferAuthorizationCreate(ctx context.Context, request operati
 // TransferCancel - Cancel a transfer
 // Use the `/transfer/cancel` endpoint to cancel a transfer.  A transfer is eligible for cancellation if the `cancellable` property returned by `/transfer/get` is `true`.
 // /api/products/transfer/#transfercancel
-func (s *plaid) TransferCancel(ctx context.Context, request operations.TransferCancelRequest) (*operations.TransferCancelResponse, error) {
+func (s *plaid) TransferCancel(ctx context.Context, request shared.TransferCancelRequest) (*operations.TransferCancelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/cancel"
 
@@ -9139,7 +9140,7 @@ func (s *plaid) TransferCancel(ctx context.Context, request operations.TransferC
 // TransferCapabilitiesGet - Get RTP eligibility information of a transfer
 // Use the `/transfer/capabilities/get` endpoint to determine the RTP eligibility information of a transfer.
 // /api/products/transfer/#transfercapabilitiesget
-func (s *plaid) TransferCapabilitiesGet(ctx context.Context, request operations.TransferCapabilitiesGetRequest) (*operations.TransferCapabilitiesGetResponse, error) {
+func (s *plaid) TransferCapabilitiesGet(ctx context.Context, request shared.TransferCapabilitiesGetRequest) (*operations.TransferCapabilitiesGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/capabilities/get"
 
@@ -9205,7 +9206,7 @@ func (s *plaid) TransferCapabilitiesGet(ctx context.Context, request operations.
 // TransferCreate - Create a transfer
 // Use the `/transfer/create` endpoint to initiate a new transfer.
 // /api/products/transfer/#transfercreate
-func (s *plaid) TransferCreate(ctx context.Context, request operations.TransferCreateRequest) (*operations.TransferCreateResponse, error) {
+func (s *plaid) TransferCreate(ctx context.Context, request shared.TransferCreateRequest) (*operations.TransferCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/create"
 
@@ -9271,7 +9272,7 @@ func (s *plaid) TransferCreate(ctx context.Context, request operations.TransferC
 // TransferEventList - List transfer events
 // Use the `/transfer/event/list` endpoint to get a list of transfer events based on specified filter criteria.
 // /api/products/transfer/#transfereventlist
-func (s *plaid) TransferEventList(ctx context.Context, request operations.TransferEventListRequest) (*operations.TransferEventListResponse, error) {
+func (s *plaid) TransferEventList(ctx context.Context, request shared.TransferEventListRequest) (*operations.TransferEventListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/event/list"
 
@@ -9337,7 +9338,7 @@ func (s *plaid) TransferEventList(ctx context.Context, request operations.Transf
 // TransferEventSync - Sync transfer events
 // `/transfer/event/sync` allows you to request up to the next 25 transfer events that happened after a specific `event_id`. Use the `/transfer/event/sync` endpoint to guarantee you have seen all transfer events. When using Auth with micro-deposit verification enabled, this endpoint can be used to fetch status updates on ACH micro-deposits. For more details, see [micro-deposit events](https://www.plaid.com/docs/auth/coverage/microdeposit-events/).
 // /api/products/transfer/#transfereventsync
-func (s *plaid) TransferEventSync(ctx context.Context, request operations.TransferEventSyncRequest) (*operations.TransferEventSyncResponse, error) {
+func (s *plaid) TransferEventSync(ctx context.Context, request shared.TransferEventSyncRequest) (*operations.TransferEventSyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/event/sync"
 
@@ -9403,7 +9404,7 @@ func (s *plaid) TransferEventSync(ctx context.Context, request operations.Transf
 // TransferGet - Retrieve a transfer
 // The `/transfer/get` endpoint fetches information about the transfer corresponding to the given `transfer_id`.
 // /api/products/transfer/#transferget
-func (s *plaid) TransferGet(ctx context.Context, request operations.TransferGetRequest) (*operations.TransferGetResponse, error) {
+func (s *plaid) TransferGet(ctx context.Context, request shared.TransferGetRequest) (*operations.TransferGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/get"
 
@@ -9469,7 +9470,7 @@ func (s *plaid) TransferGet(ctx context.Context, request operations.TransferGetR
 // TransferIntentCreate - Create a transfer intent object to invoke the Transfer UI
 // Use the `/transfer/intent/create` endpoint to generate a transfer intent object and invoke the Transfer UI.
 // /api/products/transfer/#transferintentcreate
-func (s *plaid) TransferIntentCreate(ctx context.Context, request operations.TransferIntentCreateRequest) (*operations.TransferIntentCreateResponse, error) {
+func (s *plaid) TransferIntentCreate(ctx context.Context, request shared.TransferIntentCreateRequest) (*operations.TransferIntentCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/intent/create"
 
@@ -9535,7 +9536,7 @@ func (s *plaid) TransferIntentCreate(ctx context.Context, request operations.Tra
 // TransferIntentGet - Retrieve more information about a transfer intent
 // Use the `/transfer/intent/get` endpoint to retrieve more information about a transfer intent.
 // /api/products/transfer/#transferintentget
-func (s *plaid) TransferIntentGet(ctx context.Context, request operations.TransferIntentGetRequest) (*operations.TransferIntentGetResponse, error) {
+func (s *plaid) TransferIntentGet(ctx context.Context, request map[string]interface{}) (*operations.TransferIntentGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/intent/get"
 
@@ -9602,7 +9603,7 @@ func (s *plaid) TransferIntentGet(ctx context.Context, request operations.Transf
 // Use the `/transfer/list` endpoint to see a list of all your transfers and their statuses. Results are paginated; use the `count` and `offset` query parameters to retrieve the desired transfers.
 //
 // /api/products/transfer/#transferlist
-func (s *plaid) TransferList(ctx context.Context, request operations.TransferListRequest) (*operations.TransferListResponse, error) {
+func (s *plaid) TransferList(ctx context.Context, request shared.TransferListRequest) (*operations.TransferListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/list"
 
@@ -9668,7 +9669,7 @@ func (s *plaid) TransferList(ctx context.Context, request operations.TransferLis
 // TransferMigrateAccount - Migrate account into Transfers
 // As an alternative to adding Items via Link, you can also use the `/transfer/migrate_account` endpoint to migrate known account and routing numbers to Plaid Items.  Note that Items created in this way are not compatible with endpoints for other products, such as `/accounts/balance/get`, and can only be used with Transfer endpoints.  If you require access to other endpoints, create the Item through Link instead.  Access to `/transfer/migrate_account` is not enabled by default; to obtain access, contact your Plaid Account Manager.
 // /api/products/transfer/#transfermigrate_account
-func (s *plaid) TransferMigrateAccount(ctx context.Context, request operations.TransferMigrateAccountRequest) (*operations.TransferMigrateAccountResponse, error) {
+func (s *plaid) TransferMigrateAccount(ctx context.Context, request shared.TransferMigrateAccountRequest) (*operations.TransferMigrateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/migrate_account"
 
@@ -9734,7 +9735,7 @@ func (s *plaid) TransferMigrateAccount(ctx context.Context, request operations.T
 // TransferOriginatorCreate - Create a new originator
 // Use the `/transfer/originator/create` endpoint to create a new originator and return an `originator_client_id`.
 // /api/products/transfer/#transferoriginatorcreate
-func (s *plaid) TransferOriginatorCreate(ctx context.Context, request operations.TransferOriginatorCreateRequest) (*operations.TransferOriginatorCreateResponse, error) {
+func (s *plaid) TransferOriginatorCreate(ctx context.Context, request shared.TransferOriginatorCreateRequest) (*operations.TransferOriginatorCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/originator/create"
 
@@ -9800,7 +9801,7 @@ func (s *plaid) TransferOriginatorCreate(ctx context.Context, request operations
 // TransferOriginatorGetJSON - Get status of an originator's onboarding
 // The `/transfer/originator/get` endpoint gets status updates for an originator's onboarding process. This information is also available via the Transfer page on the Plaid dashboard.
 // /api/products/transfer/#transferoriginatorget
-func (s *plaid) TransferOriginatorGetJSON(ctx context.Context, request operations.TransferOriginatorGetJSONRequest) (*operations.TransferOriginatorGetJSONResponse, error) {
+func (s *plaid) TransferOriginatorGetJSON(ctx context.Context, request shared.TransferOriginatorGetRequest) (*operations.TransferOriginatorGetJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/originator/get"
 
@@ -9866,7 +9867,7 @@ func (s *plaid) TransferOriginatorGetJSON(ctx context.Context, request operation
 // TransferOriginatorGetRaw - Get status of an originator's onboarding
 // The `/transfer/originator/get` endpoint gets status updates for an originator's onboarding process. This information is also available via the Transfer page on the Plaid dashboard.
 // /api/products/transfer/#transferoriginatorget
-func (s *plaid) TransferOriginatorGetRaw(ctx context.Context, request operations.TransferOriginatorGetRawRequest) (*operations.TransferOriginatorGetRawResponse, error) {
+func (s *plaid) TransferOriginatorGetRaw(ctx context.Context, request []byte) (*operations.TransferOriginatorGetRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/originator/get"
 
@@ -9932,7 +9933,7 @@ func (s *plaid) TransferOriginatorGetRaw(ctx context.Context, request operations
 // TransferOriginatorList - Get status of all originators' onboarding
 // The `/transfer/originator/list` endpoint gets status updates for all of your originators' onboarding. This information is also available via the Plaid dashboard.
 // /api/products/transfer/#transferoriginatorlist
-func (s *plaid) TransferOriginatorList(ctx context.Context, request operations.TransferOriginatorListRequest) (*operations.TransferOriginatorListResponse, error) {
+func (s *plaid) TransferOriginatorList(ctx context.Context, request shared.TransferOriginatorListRequest) (*operations.TransferOriginatorListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/originator/list"
 
@@ -9998,7 +9999,7 @@ func (s *plaid) TransferOriginatorList(ctx context.Context, request operations.T
 // TransferQuestionnaireCreate - Generate a Plaid-hosted onboarding UI URL.
 // The `/transfer/questionnaire/create` endpoint generates a Plaid-hosted onboarding UI URL. Redirect the originator to this URL to provide their due diligence information and agree to Plaid’s terms for ACH money movement.
 // /api/products/transfer/#transferquestionnairecreate
-func (s *plaid) TransferQuestionnaireCreate(ctx context.Context, request operations.TransferQuestionnaireCreateRequest) (*operations.TransferQuestionnaireCreateResponse, error) {
+func (s *plaid) TransferQuestionnaireCreate(ctx context.Context, request shared.TransferQuestionnaireCreateRequest) (*operations.TransferQuestionnaireCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/questionnaire/create"
 
@@ -10064,7 +10065,7 @@ func (s *plaid) TransferQuestionnaireCreate(ctx context.Context, request operati
 // TransferRecurringCancel - Cancel a recurring transfer.
 // Use the `/transfer/recurring/cancel` endpoint to cancel a recurring transfer.  Scheduled transfer that hasn't been submitted to bank will be cancelled.
 // /api/products/transfer/#transferrecurringcancel
-func (s *plaid) TransferRecurringCancel(ctx context.Context, request operations.TransferRecurringCancelRequest) (*operations.TransferRecurringCancelResponse, error) {
+func (s *plaid) TransferRecurringCancel(ctx context.Context, request shared.TransferRecurringCancelRequest) (*operations.TransferRecurringCancelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/recurring/cancel"
 
@@ -10130,7 +10131,7 @@ func (s *plaid) TransferRecurringCancel(ctx context.Context, request operations.
 // TransferRecurringCreate - Create a recurring transfer
 // Use the `/transfer/recurring/create` endpoint to initiate a new recurring transfer.
 // /api/products/transfer/#transferrecurringcreate
-func (s *plaid) TransferRecurringCreate(ctx context.Context, request operations.TransferRecurringCreateRequest) (*operations.TransferRecurringCreateResponse, error) {
+func (s *plaid) TransferRecurringCreate(ctx context.Context, request shared.TransferRecurringCreateRequest) (*operations.TransferRecurringCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/recurring/create"
 
@@ -10196,7 +10197,7 @@ func (s *plaid) TransferRecurringCreate(ctx context.Context, request operations.
 // TransferRecurringGet - Retrieve a recurring transfer
 // The `/transfer/recurring/get` fetches information about the recurring transfer corresponding to the given `recurring_transfer_id`.
 // /api/products/transfer/#transferrecurringget
-func (s *plaid) TransferRecurringGet(ctx context.Context, request operations.TransferRecurringGetRequest) (*operations.TransferRecurringGetResponse, error) {
+func (s *plaid) TransferRecurringGet(ctx context.Context, request shared.TransferRecurringGetRequest) (*operations.TransferRecurringGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/recurring/get"
 
@@ -10263,7 +10264,7 @@ func (s *plaid) TransferRecurringGet(ctx context.Context, request operations.Tra
 // Use the `/transfer/recurring/list` endpoint to see a list of all your recurring transfers and their statuses. Results are paginated; use the `count` and `offset` query parameters to retrieve the desired recurring transfers.
 //
 // /api/products/transfer/#transferrecurringlist
-func (s *plaid) TransferRecurringList(ctx context.Context, request operations.TransferRecurringListRequest) (*operations.TransferRecurringListResponse, error) {
+func (s *plaid) TransferRecurringList(ctx context.Context, request shared.TransferRecurringListRequest) (*operations.TransferRecurringListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/recurring/list"
 
@@ -10329,7 +10330,7 @@ func (s *plaid) TransferRecurringList(ctx context.Context, request operations.Tr
 // TransferRefundCancel - Cancel a refund
 // Use the `/transfer/refund/cancel` endpoint to cancel a refund.  A refund is eligible for cancellation if it has not yet been submitted to the payment network.
 // /api/products/transfer/#transferrefundcancel
-func (s *plaid) TransferRefundCancel(ctx context.Context, request operations.TransferRefundCancelRequest) (*operations.TransferRefundCancelResponse, error) {
+func (s *plaid) TransferRefundCancel(ctx context.Context, request shared.TransferRefundCancelRequest) (*operations.TransferRefundCancelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/refund/cancel"
 
@@ -10397,7 +10398,7 @@ func (s *plaid) TransferRefundCancel(ctx context.Context, request operations.Tra
 //
 // Processing of the refund will not occur until at least 3 business days following the transfer's settlement date, plus any hold/settlement delays. This 3-day window helps better protect your business from regular ACH returns. Consumer initiated returns (unauthorized returns) could still happen for about 60 days from the settlement date. If the original transfer is canceled, returned or failed, all pending refunds will automatically be canceled. Processed refunds cannot be revoked.
 // /api/products/transfer/#transferrefundcreate
-func (s *plaid) TransferRefundCreate(ctx context.Context, request operations.TransferRefundCreateRequest) (*operations.TransferRefundCreateResponse, error) {
+func (s *plaid) TransferRefundCreate(ctx context.Context, request shared.TransferRefundCreateRequest) (*operations.TransferRefundCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/refund/create"
 
@@ -10463,7 +10464,7 @@ func (s *plaid) TransferRefundCreate(ctx context.Context, request operations.Tra
 // TransferRefundGet - Retrieve a refund
 // The `/transfer/refund/get` endpoint fetches information about the refund corresponding to the given `refund_id`.
 // /api/products/transfer/#transferrefundget
-func (s *plaid) TransferRefundGet(ctx context.Context, request operations.TransferRefundGetRequest) (*operations.TransferRefundGetResponse, error) {
+func (s *plaid) TransferRefundGet(ctx context.Context, request shared.TransferRefundGetRequest) (*operations.TransferRefundGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/refund/get"
 
@@ -10529,7 +10530,7 @@ func (s *plaid) TransferRefundGet(ctx context.Context, request operations.Transf
 // TransferRepaymentList - Lists historical repayments
 // The `/transfer/repayment/list` endpoint fetches repayments matching the given filters. Repayments are returned in reverse-chronological order (most recent first) starting at the given `start_time`.
 // /api/products/transfer/#transferrepaymentlist
-func (s *plaid) TransferRepaymentList(ctx context.Context, request operations.TransferRepaymentListRequest) (*operations.TransferRepaymentListResponse, error) {
+func (s *plaid) TransferRepaymentList(ctx context.Context, request shared.TransferRepaymentListRequest) (*operations.TransferRepaymentListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/repayment/list"
 
@@ -10595,7 +10596,7 @@ func (s *plaid) TransferRepaymentList(ctx context.Context, request operations.Tr
 // TransferRepaymentReturnList - List the returns included in a repayment
 // The `/transfer/repayment/return/list` endpoint retrieves the set of returns that were batched together into the specified repayment. The sum of amounts of returns retrieved by this request equals the amount of the repayment.
 // /api/products/transfer/#transferrepaymentreturnlist
-func (s *plaid) TransferRepaymentReturnList(ctx context.Context, request operations.TransferRepaymentReturnListRequest) (*operations.TransferRepaymentReturnListResponse, error) {
+func (s *plaid) TransferRepaymentReturnList(ctx context.Context, request shared.TransferRepaymentReturnListRequest) (*operations.TransferRepaymentReturnListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/repayment/return/list"
 
@@ -10661,7 +10662,7 @@ func (s *plaid) TransferRepaymentReturnList(ctx context.Context, request operati
 // TransferSweepGet - Retrieve a sweep
 // The `/transfer/sweep/get` endpoint fetches a sweep corresponding to the given `sweep_id`.
 // /api/products/transfer/#transfersweepget
-func (s *plaid) TransferSweepGet(ctx context.Context, request operations.TransferSweepGetRequest) (*operations.TransferSweepGetResponse, error) {
+func (s *plaid) TransferSweepGet(ctx context.Context, request shared.TransferSweepGetRequest) (*operations.TransferSweepGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/sweep/get"
 
@@ -10727,7 +10728,7 @@ func (s *plaid) TransferSweepGet(ctx context.Context, request operations.Transfe
 // TransferSweepList - List sweeps
 // The `/transfer/sweep/list` endpoint fetches sweeps matching the given filters.
 // /api/products/transfer/#transfersweeplist
-func (s *plaid) TransferSweepList(ctx context.Context, request operations.TransferSweepListRequest) (*operations.TransferSweepListResponse, error) {
+func (s *plaid) TransferSweepList(ctx context.Context, request shared.TransferSweepListRequest) (*operations.TransferSweepListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfer/sweep/list"
 
@@ -10797,7 +10798,7 @@ func (s *plaid) TransferSweepList(ctx context.Context, request operations.Transf
 //
 // Ensure that you store the `user_token` along with your user's identifier in your database, as it is not possible to retrieve a previously created `user_token`.
 // /api/products/income/#usercreate
-func (s *plaid) UserCreate(ctx context.Context, request operations.UserCreateRequest) (*operations.UserCreateResponse, error) {
+func (s *plaid) UserCreate(ctx context.Context, request shared.UserCreateRequest) (*operations.UserCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/create"
 
@@ -10853,7 +10854,7 @@ func (s *plaid) UserCreate(ctx context.Context, request operations.UserCreateReq
 // WalletCreate - Create an e-wallet
 // Create an e-wallet. The response is the newly created e-wallet object.
 // /api/products/virtual-accounts/#walletcreate
-func (s *plaid) WalletCreate(ctx context.Context, request operations.WalletCreateRequest) (*operations.WalletCreateResponse, error) {
+func (s *plaid) WalletCreate(ctx context.Context, request shared.WalletCreateRequest) (*operations.WalletCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wallet/create"
 
@@ -10909,7 +10910,7 @@ func (s *plaid) WalletCreate(ctx context.Context, request operations.WalletCreat
 // WalletGet - Fetch an e-wallet
 // Fetch an e-wallet. The response includes the current balance.
 // /api/products/virtual-accounts/#walletget
-func (s *plaid) WalletGet(ctx context.Context, request operations.WalletGetRequest) (*operations.WalletGetResponse, error) {
+func (s *plaid) WalletGet(ctx context.Context, request shared.WalletGetRequest) (*operations.WalletGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wallet/get"
 
@@ -10965,7 +10966,7 @@ func (s *plaid) WalletGet(ctx context.Context, request operations.WalletGetReque
 // WalletList - Fetch a list of e-wallets
 // This endpoint lists all e-wallets in descending order of creation.
 // /api/products/virtual-accounts/#walletlist
-func (s *plaid) WalletList(ctx context.Context, request operations.WalletListRequest) (*operations.WalletListResponse, error) {
+func (s *plaid) WalletList(ctx context.Context, request shared.WalletListRequest) (*operations.WalletListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wallet/list"
 
@@ -11023,7 +11024,7 @@ func (s *plaid) WalletList(ctx context.Context, request operations.WalletListReq
 // Specify the e-wallet to debit from, the counterparty to credit to, the idempotency key to prevent duplicate transactions, the amount and reference for the transaction.
 // Transactions will settle in seconds to several days, depending on the underlying payment rail.
 // /api/products/virtual-accounts/#wallettransactionexecute
-func (s *plaid) WalletTransactionExecute(ctx context.Context, request operations.WalletTransactionExecuteRequest) (*operations.WalletTransactionExecuteResponse, error) {
+func (s *plaid) WalletTransactionExecute(ctx context.Context, request shared.WalletTransactionExecuteRequest) (*operations.WalletTransactionExecuteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wallet/transaction/execute"
 
@@ -11079,7 +11080,7 @@ func (s *plaid) WalletTransactionExecute(ctx context.Context, request operations
 // WalletTransactionGet - Fetch an e-wallet transaction
 // Fetch a specific e-wallet transaction
 // /api/products/virtual-accounts/#wallettransactionget
-func (s *plaid) WalletTransactionGet(ctx context.Context, request operations.WalletTransactionGetRequest) (*operations.WalletTransactionGetResponse, error) {
+func (s *plaid) WalletTransactionGet(ctx context.Context, request shared.WalletTransactionGetRequest) (*operations.WalletTransactionGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wallet/transaction/get"
 
@@ -11135,7 +11136,7 @@ func (s *plaid) WalletTransactionGet(ctx context.Context, request operations.Wal
 // WalletTransactionList - List e-wallet transactions
 // This endpoint lists the latest transactions of the specified e-wallet. Transactions are returned in descending order by the `created_at` time.
 // /api/products/virtual-accounts/#wallettransactionlist
-func (s *plaid) WalletTransactionList(ctx context.Context, request operations.WalletTransactionListRequest) (*operations.WalletTransactionListResponse, error) {
+func (s *plaid) WalletTransactionList(ctx context.Context, request shared.WalletTransactionListRequest) (*operations.WalletTransactionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wallet/transaction/list"
 
@@ -11191,7 +11192,7 @@ func (s *plaid) WalletTransactionList(ctx context.Context, request operations.Wa
 // WatchlistScreeningEntityCreate - Create a watchlist screening for an entity
 // Create a new entity watchlist screening to check your customer against watchlists defined in the associated entity watchlist program. If your associated program has ongoing screening enabled, this is the profile information that will be used to monitor your customer over time.
 // /api/products/monitor/#watchlist_screeningentitycreate
-func (s *plaid) WatchlistScreeningEntityCreate(ctx context.Context, request operations.WatchlistScreeningEntityCreateRequest) (*operations.WatchlistScreeningEntityCreateResponse, error) {
+func (s *plaid) WatchlistScreeningEntityCreate(ctx context.Context, request shared.WatchlistScreeningEntityCreateRequest) (*operations.WatchlistScreeningEntityCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/create"
 
@@ -11247,7 +11248,7 @@ func (s *plaid) WatchlistScreeningEntityCreate(ctx context.Context, request oper
 // WatchlistScreeningEntityGet - Get an entity screening
 // Retrieve an entity watchlist screening.
 // /api/products/monitor/#watchlist_screeningentityget
-func (s *plaid) WatchlistScreeningEntityGet(ctx context.Context, request operations.WatchlistScreeningEntityGetRequest) (*operations.WatchlistScreeningEntityGetResponse, error) {
+func (s *plaid) WatchlistScreeningEntityGet(ctx context.Context, request shared.WatchlistScreeningEntityGetRequest) (*operations.WatchlistScreeningEntityGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/get"
 
@@ -11303,7 +11304,7 @@ func (s *plaid) WatchlistScreeningEntityGet(ctx context.Context, request operati
 // WatchlistScreeningEntityHistoryList - List history for entity watchlist screenings
 // List all changes to the entity watchlist screening in reverse-chronological order. If the watchlist screening has not been edited, no history will be returned.
 // /api/products/monitor/#watchlist_screeningentityhistorylist
-func (s *plaid) WatchlistScreeningEntityHistoryList(ctx context.Context, request operations.WatchlistScreeningEntityHistoryListRequest) (*operations.WatchlistScreeningEntityHistoryListResponse, error) {
+func (s *plaid) WatchlistScreeningEntityHistoryList(ctx context.Context, request shared.WatchlistScreeningEntityHistoryListRequest) (*operations.WatchlistScreeningEntityHistoryListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/history/list"
 
@@ -11359,7 +11360,7 @@ func (s *plaid) WatchlistScreeningEntityHistoryList(ctx context.Context, request
 // WatchlistScreeningEntityHitList - List hits for entity watchlist screenings
 // List all hits for the entity watchlist screening.
 // /api/products/monitor/#watchlist_screeningentityhitlist
-func (s *plaid) WatchlistScreeningEntityHitList(ctx context.Context, request operations.WatchlistScreeningEntityHitListRequest) (*operations.WatchlistScreeningEntityHitListResponse, error) {
+func (s *plaid) WatchlistScreeningEntityHitList(ctx context.Context, request shared.WatchlistScreeningEntityHitListRequest) (*operations.WatchlistScreeningEntityHitListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/hit/list"
 
@@ -11415,7 +11416,7 @@ func (s *plaid) WatchlistScreeningEntityHitList(ctx context.Context, request ope
 // WatchlistScreeningEntityList - List entity watchlist screenings
 // List all entity screenings.
 // /api/products/monitor/#watchlist_screeningentitylist
-func (s *plaid) WatchlistScreeningEntityList(ctx context.Context, request operations.WatchlistScreeningEntityListRequest) (*operations.WatchlistScreeningEntityListResponse, error) {
+func (s *plaid) WatchlistScreeningEntityList(ctx context.Context, request shared.WatchlistScreeningEntityListRequest) (*operations.WatchlistScreeningEntityListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/list"
 
@@ -11471,7 +11472,7 @@ func (s *plaid) WatchlistScreeningEntityList(ctx context.Context, request operat
 // WatchlistScreeningEntityProgramGet - Get entity watchlist screening program
 // Get an entity watchlist screening program
 // /api/products/monitor/#watchlist_screeningentityprogramget
-func (s *plaid) WatchlistScreeningEntityProgramGet(ctx context.Context, request operations.WatchlistScreeningEntityProgramGetRequest) (*operations.WatchlistScreeningEntityProgramGetResponse, error) {
+func (s *plaid) WatchlistScreeningEntityProgramGet(ctx context.Context, request shared.WatchlistScreeningEntityProgramGetRequest) (*operations.WatchlistScreeningEntityProgramGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/program/get"
 
@@ -11527,7 +11528,7 @@ func (s *plaid) WatchlistScreeningEntityProgramGet(ctx context.Context, request 
 // WatchlistScreeningEntityProgramList - List entity watchlist screening programs
 // List all entity watchlist screening programs
 // /api/products/monitor/#watchlist_screeningentityprogramlist
-func (s *plaid) WatchlistScreeningEntityProgramList(ctx context.Context, request operations.WatchlistScreeningEntityProgramListRequest) (*operations.WatchlistScreeningEntityProgramListResponse, error) {
+func (s *plaid) WatchlistScreeningEntityProgramList(ctx context.Context, request shared.WatchlistScreeningEntityProgramListRequest) (*operations.WatchlistScreeningEntityProgramListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/program/list"
 
@@ -11583,7 +11584,7 @@ func (s *plaid) WatchlistScreeningEntityProgramList(ctx context.Context, request
 // WatchlistScreeningEntityReviewCreate - Create a review for an entity watchlist screening
 // Create a review for an entity watchlist screening. Reviews are compliance reports created by users in your organization regarding the relevance of potential hits found by Plaid.
 // /api/products/monitor/#watchlist_screeningentityreviewcreate
-func (s *plaid) WatchlistScreeningEntityReviewCreate(ctx context.Context, request operations.WatchlistScreeningEntityReviewCreateRequest) (*operations.WatchlistScreeningEntityReviewCreateResponse, error) {
+func (s *plaid) WatchlistScreeningEntityReviewCreate(ctx context.Context, request shared.WatchlistScreeningEntityReviewCreateRequest) (*operations.WatchlistScreeningEntityReviewCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/review/create"
 
@@ -11639,7 +11640,7 @@ func (s *plaid) WatchlistScreeningEntityReviewCreate(ctx context.Context, reques
 // WatchlistScreeningEntityReviewList - List reviews for entity watchlist screenings
 // List all reviews for a particular entity watchlist screening. Reviews are compliance reports created by users in your organization regarding the relevance of potential hits found by Plaid.
 // /api/products/monitor/#watchlist_screeningentityreviewlist
-func (s *plaid) WatchlistScreeningEntityReviewList(ctx context.Context, request operations.WatchlistScreeningEntityReviewListRequest) (*operations.WatchlistScreeningEntityReviewListResponse, error) {
+func (s *plaid) WatchlistScreeningEntityReviewList(ctx context.Context, request shared.WatchlistScreeningEntityReviewListRequest) (*operations.WatchlistScreeningEntityReviewListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/review/list"
 
@@ -11695,7 +11696,7 @@ func (s *plaid) WatchlistScreeningEntityReviewList(ctx context.Context, request 
 // WatchlistScreeningEntityUpdate - Update an entity screening
 // Update an entity watchlist screening.
 // /api/products/monitor/#watchlist_screeningentityupdate
-func (s *plaid) WatchlistScreeningEntityUpdate(ctx context.Context, request operations.WatchlistScreeningEntityUpdateRequest) (*operations.WatchlistScreeningEntityUpdateResponse, error) {
+func (s *plaid) WatchlistScreeningEntityUpdate(ctx context.Context, request shared.WatchlistScreeningEntityUpdateRequest) (*operations.WatchlistScreeningEntityUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/entity/update"
 
@@ -11751,7 +11752,7 @@ func (s *plaid) WatchlistScreeningEntityUpdate(ctx context.Context, request oper
 // WatchlistScreeningIndividualCreate - Create a watchlist screening for a person
 // Create a new Watchlist Screening to check your customer against watchlists defined in the associated Watchlist Program. If your associated program has ongoing screening enabled, this is the profile information that will be used to monitor your customer over time.
 // /api/products/monitor/#watchlist_screeningindividualcreate
-func (s *plaid) WatchlistScreeningIndividualCreate(ctx context.Context, request operations.WatchlistScreeningIndividualCreateRequest) (*operations.WatchlistScreeningIndividualCreateResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualCreate(ctx context.Context, request shared.WatchlistScreeningIndividualCreateRequest) (*operations.WatchlistScreeningIndividualCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/create"
 
@@ -11807,7 +11808,7 @@ func (s *plaid) WatchlistScreeningIndividualCreate(ctx context.Context, request 
 // WatchlistScreeningIndividualGet - Retrieve an individual watchlist screening
 // Retrieve a previously created individual watchlist screening
 // /api/products/monitor/#watchlist_screeningindividualget
-func (s *plaid) WatchlistScreeningIndividualGet(ctx context.Context, request operations.WatchlistScreeningIndividualGetRequest) (*operations.WatchlistScreeningIndividualGetResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualGet(ctx context.Context, request shared.WatchlistScreeningIndividualGetRequest) (*operations.WatchlistScreeningIndividualGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/get"
 
@@ -11863,7 +11864,7 @@ func (s *plaid) WatchlistScreeningIndividualGet(ctx context.Context, request ope
 // WatchlistScreeningIndividualHistoryList - List history for individual watchlist screenings
 // List all changes to the individual watchlist screening in reverse-chronological order. If the watchlist screening has not been edited, no history will be returned.
 // /api/products/monitor/#watchlist_screeningindividualhistorylist
-func (s *plaid) WatchlistScreeningIndividualHistoryList(ctx context.Context, request operations.WatchlistScreeningIndividualHistoryListRequest) (*operations.WatchlistScreeningIndividualHistoryListResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualHistoryList(ctx context.Context, request shared.WatchlistScreeningIndividualHistoryListRequest) (*operations.WatchlistScreeningIndividualHistoryListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/history/list"
 
@@ -11919,7 +11920,7 @@ func (s *plaid) WatchlistScreeningIndividualHistoryList(ctx context.Context, req
 // WatchlistScreeningIndividualHitList - List hits for individual watchlist screening
 // List all hits found by Plaid for a particular individual watchlist screening.
 // /api/products/monitor/#watchlist_screeningindividualhitlist
-func (s *plaid) WatchlistScreeningIndividualHitList(ctx context.Context, request operations.WatchlistScreeningIndividualHitListRequest) (*operations.WatchlistScreeningIndividualHitListResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualHitList(ctx context.Context, request shared.WatchlistScreeningIndividualHitListRequest) (*operations.WatchlistScreeningIndividualHitListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/hit/list"
 
@@ -11975,7 +11976,7 @@ func (s *plaid) WatchlistScreeningIndividualHitList(ctx context.Context, request
 // WatchlistScreeningIndividualList - List Individual Watchlist Screenings
 // List previously created watchlist screenings for individuals
 // /api/products/monitor/#watchlist_screeningindividuallist
-func (s *plaid) WatchlistScreeningIndividualList(ctx context.Context, request operations.WatchlistScreeningIndividualListRequest) (*operations.WatchlistScreeningIndividualListResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualList(ctx context.Context, request shared.WatchlistScreeningIndividualListRequest) (*operations.WatchlistScreeningIndividualListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/list"
 
@@ -12031,7 +12032,7 @@ func (s *plaid) WatchlistScreeningIndividualList(ctx context.Context, request op
 // WatchlistScreeningIndividualProgramGet - Get individual watchlist screening program
 // Get an individual watchlist screening program
 // /api/products/monitor/#watchlist_screeningindividualprogramget
-func (s *plaid) WatchlistScreeningIndividualProgramGet(ctx context.Context, request operations.WatchlistScreeningIndividualProgramGetRequest) (*operations.WatchlistScreeningIndividualProgramGetResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualProgramGet(ctx context.Context, request shared.WatchlistScreeningIndividualProgramGetRequest) (*operations.WatchlistScreeningIndividualProgramGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/program/get"
 
@@ -12087,7 +12088,7 @@ func (s *plaid) WatchlistScreeningIndividualProgramGet(ctx context.Context, requ
 // WatchlistScreeningIndividualProgramList - List individual watchlist screening programs
 // List all individual watchlist screening programs
 // /api/products/monitor/#watchlist_screeningindividualprogramlist
-func (s *plaid) WatchlistScreeningIndividualProgramList(ctx context.Context, request operations.WatchlistScreeningIndividualProgramListRequest) (*operations.WatchlistScreeningIndividualProgramListResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualProgramList(ctx context.Context, request shared.WatchlistScreeningIndividualProgramListRequest) (*operations.WatchlistScreeningIndividualProgramListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/program/list"
 
@@ -12143,7 +12144,7 @@ func (s *plaid) WatchlistScreeningIndividualProgramList(ctx context.Context, req
 // WatchlistScreeningIndividualReviewCreate - Create a review for an individual watchlist screening
 // Create a review for the individual watchlist screening. Reviews are compliance reports created by users in your organization regarding the relevance of potential hits found by Plaid.
 // /api/products/monitor/#watchlist_screeningindividualreviewcreate
-func (s *plaid) WatchlistScreeningIndividualReviewCreate(ctx context.Context, request operations.WatchlistScreeningIndividualReviewCreateRequest) (*operations.WatchlistScreeningIndividualReviewCreateResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualReviewCreate(ctx context.Context, request shared.WatchlistScreeningIndividualReviewCreateRequest) (*operations.WatchlistScreeningIndividualReviewCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/review/create"
 
@@ -12199,7 +12200,7 @@ func (s *plaid) WatchlistScreeningIndividualReviewCreate(ctx context.Context, re
 // WatchlistScreeningIndividualReviewList - List reviews for individual watchlist screenings
 // List all reviews for the individual watchlist screening.
 // /api/products/monitor/#watchlist_screeningindividualreviewlist
-func (s *plaid) WatchlistScreeningIndividualReviewList(ctx context.Context, request operations.WatchlistScreeningIndividualReviewListRequest) (*operations.WatchlistScreeningIndividualReviewListResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualReviewList(ctx context.Context, request shared.WatchlistScreeningIndividualReviewListRequest) (*operations.WatchlistScreeningIndividualReviewListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/review/list"
 
@@ -12255,7 +12256,7 @@ func (s *plaid) WatchlistScreeningIndividualReviewList(ctx context.Context, requ
 // WatchlistScreeningIndividualUpdate - Update individual watchlist screening
 // Update a specific individual watchlist screening. This endpoint can be used to add additional customer information, correct outdated information, add a reference id, assign the individual to a reviewer, and update which program it is associated with. Please note that you may not update `search_terms` and `status` at the same time since editing `search_terms` may trigger an automatic `status` change.
 // /api/products/monitor/#watchlist_screeningindividualupdate
-func (s *plaid) WatchlistScreeningIndividualUpdate(ctx context.Context, request operations.WatchlistScreeningIndividualUpdateRequest) (*operations.WatchlistScreeningIndividualUpdateResponse, error) {
+func (s *plaid) WatchlistScreeningIndividualUpdate(ctx context.Context, request shared.WatchlistScreeningIndividualUpdateRequest) (*operations.WatchlistScreeningIndividualUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/watchlist_screening/individual/update"
 
@@ -12313,7 +12314,7 @@ func (s *plaid) WatchlistScreeningIndividualUpdate(ctx context.Context, request 
 //
 // The `/webhook_verification_key/get` endpoint provides a JSON Web Key (JWK) that can be used to verify a JWT.
 // /api/webhooks/webhook-verification/#get-webhook-verification-key
-func (s *plaid) WebhookVerificationKeyGet(ctx context.Context, request operations.WebhookVerificationKeyGetRequest) (*operations.WebhookVerificationKeyGetResponse, error) {
+func (s *plaid) WebhookVerificationKeyGet(ctx context.Context, request shared.WebhookVerificationKeyGetRequest) (*operations.WebhookVerificationKeyGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhook_verification_key/get"
 

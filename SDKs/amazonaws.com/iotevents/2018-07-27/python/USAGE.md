@@ -3,251 +3,327 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAlarmModelRequest(
-    headers=operations.CreateAlarmModelHeaders(
-        x_amz_algorithm="iusto",
-        x_amz_content_sha256="voluptatum",
-        x_amz_credential="illo",
-        x_amz_date="exercitationem",
-        x_amz_security_token="aut",
-        x_amz_signature="nemo",
-        x_amz_signed_headers="voluptate",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateAlarmModelRequestBody(
+)
+
+
+req = operations.CreateAlarmModelRequest(
+    request_body=operations.CreateAlarmModelRequestBody(
         alarm_capabilities=operations.CreateAlarmModelRequestBodyAlarmCapabilities(
             acknowledge_flow=shared.AcknowledgeFlow(
-                enabled=True,
+                enabled=False,
             ),
             initialization_configuration=shared.InitializationConfiguration(
-                disabled_on_initialization=True,
+                disabled_on_initialization=False,
             ),
         ),
         alarm_event_actions=operations.CreateAlarmModelRequestBodyAlarmEventActions(
             alarm_actions=[
                 shared.AlarmAction(
-                    dynamo_db=shared.DynamoDbAction(
-                        hash_key_field="ut",
-                        hash_key_type="fugit",
-                        hash_key_value="sit",
-                        operation="quidem",
+                    dynamo_db=shared.DynamoDBAction(
+                        hash_key_field="provident",
+                        hash_key_type="distinctio",
+                        hash_key_value="quibusdam",
+                        operation="unde",
                         payload=shared.Payload(
-                            content_expression="et",
-                            type="STRING",
+                            content_expression="nulla",
+                            type="JSON",
                         ),
-                        payload_field="cum",
-                        range_key_field="dicta",
-                        range_key_type="cupiditate",
-                        range_key_value="impedit",
-                        table_name="voluptas",
+                        payload_field="illum",
+                        range_key_field="vel",
+                        range_key_type="error",
+                        range_key_value="deserunt",
+                        table_name="suscipit",
                     ),
                     dynamo_d_bv2=shared.DynamoDBv2Action(
                         payload=shared.Payload(
-                            content_expression="reprehenderit",
-                            type="JSON",
+                            content_expression="iure",
+                            type="STRING",
                         ),
-                        table_name="aut",
+                        table_name="debitis",
                     ),
                     firehose=shared.FirehoseAction(
-                        delivery_stream_name="necessitatibus",
+                        delivery_stream_name="ipsa",
                         payload=shared.Payload(
-                            content_expression="corrupti",
-                            type="JSON",
+                            content_expression="delectus",
+                            type="STRING",
                         ),
-                        separator="tempore",
+                        separator="suscipit",
                     ),
                     iot_events=shared.IotEventsAction(
-                        input_name="saepe",
+                        input_name="molestiae",
                         payload=shared.Payload(
-                            content_expression="aut",
+                            content_expression="minus",
                             type="JSON",
                         ),
                     ),
                     iot_site_wise=shared.IotSiteWiseAction(
-                        asset_id="odit",
-                        entry_id="et",
-                        property_alias="debitis",
-                        property_id="voluptates",
+                        asset_id="voluptatum",
+                        entry_id="iusto",
+                        property_alias="excepturi",
+                        property_id="nisi",
                         property_value=shared.AssetPropertyValue(
-                            quality="mollitia",
+                            quality="recusandae",
                             timestamp=shared.AssetPropertyTimestamp(
-                                offset_in_nanos="odio",
-                                time_in_seconds="molestiae",
+                                offset_in_nanos="temporibus",
+                                time_in_seconds="ab",
                             ),
                             value=shared.AssetPropertyVariant(
-                                boolean_value="error",
-                                double_value="dolores",
-                                integer_value="non",
-                                string_value="aspernatur",
+                                boolean_value="quis",
+                                double_value="veritatis",
+                                integer_value="deserunt",
+                                string_value="perferendis",
                             ),
                         ),
                     ),
                     iot_topic_publish=shared.IotTopicPublishAction(
-                        mqtt_topic="rem",
+                        mqtt_topic="ipsam",
                         payload=shared.Payload(
-                            content_expression="vel",
-                            type="STRING",
+                            content_expression="repellendus",
+                            type="JSON",
                         ),
                     ),
                     lambda_=shared.LambdaAction(
-                        function_arn="at",
+                        function_arn="quo",
                         payload=shared.Payload(
-                            content_expression="tempora",
-                            type="STRING",
+                            content_expression="odit",
+                            type="JSON",
                         ),
                     ),
-                    sns=shared.SnsTopicPublishAction(
+                    sns=shared.SNSTopicPublishAction(
                         payload=shared.Payload(
-                            content_expression="voluptas",
-                            type="STRING",
+                            content_expression="at",
+                            type="JSON",
                         ),
-                        target_arn="maiores",
+                        target_arn="molestiae",
                     ),
                     sqs=shared.SqsAction(
                         payload=shared.Payload(
-                            content_expression="aliquid",
-                            type="STRING",
+                            content_expression="quod",
+                            type="JSON",
                         ),
-                        queue_url="mollitia",
+                        queue_url="esse",
                         use_base64=False,
                     ),
                 ),
                 shared.AlarmAction(
-                    dynamo_db=shared.DynamoDbAction(
-                        hash_key_field="libero",
-                        hash_key_type="in",
-                        hash_key_value="ut",
-                        operation="velit",
+                    dynamo_db=shared.DynamoDBAction(
+                        hash_key_field="totam",
+                        hash_key_type="porro",
+                        hash_key_value="dolorum",
+                        operation="dicta",
                         payload=shared.Payload(
-                            content_expression="architecto",
-                            type="STRING",
+                            content_expression="nam",
+                            type="JSON",
                         ),
-                        payload_field="tempora",
-                        range_key_field="velit",
-                        range_key_type="aut",
-                        range_key_value="aut",
-                        table_name="nobis",
+                        payload_field="occaecati",
+                        range_key_field="fugit",
+                        range_key_type="deleniti",
+                        range_key_value="hic",
+                        table_name="optio",
                     ),
                     dynamo_d_bv2=shared.DynamoDBv2Action(
                         payload=shared.Payload(
-                            content_expression="iste",
+                            content_expression="totam",
                             type="STRING",
                         ),
-                        table_name="expedita",
+                        table_name="commodi",
                     ),
                     firehose=shared.FirehoseAction(
-                        delivery_stream_name="impedit",
-                        payload=shared.Payload(
-                            content_expression="rerum",
-                            type="STRING",
-                        ),
-                        separator="in",
-                    ),
-                    iot_events=shared.IotEventsAction(
-                        input_name="assumenda",
+                        delivery_stream_name="molestiae",
                         payload=shared.Payload(
                             content_expression="modi",
-                            type="JSON",
+                            type="STRING",
+                        ),
+                        separator="impedit",
+                    ),
+                    iot_events=shared.IotEventsAction(
+                        input_name="cum",
+                        payload=shared.Payload(
+                            content_expression="esse",
+                            type="STRING",
                         ),
                     ),
                     iot_site_wise=shared.IotSiteWiseAction(
-                        asset_id="vel",
-                        entry_id="aut",
-                        property_alias="beatae",
-                        property_id="consectetur",
+                        asset_id="excepturi",
+                        entry_id="aspernatur",
+                        property_alias="perferendis",
+                        property_id="ad",
                         property_value=shared.AssetPropertyValue(
-                            quality="et",
+                            quality="natus",
                             timestamp=shared.AssetPropertyTimestamp(
-                                offset_in_nanos="rem",
-                                time_in_seconds="provident",
+                                offset_in_nanos="sed",
+                                time_in_seconds="iste",
                             ),
                             value=shared.AssetPropertyVariant(
-                                boolean_value="inventore",
-                                double_value="quas",
-                                integer_value="dolorum",
-                                string_value="dolores",
+                                boolean_value="dolor",
+                                double_value="natus",
+                                integer_value="laboriosam",
+                                string_value="hic",
                             ),
                         ),
                     ),
                     iot_topic_publish=shared.IotTopicPublishAction(
-                        mqtt_topic="aut",
+                        mqtt_topic="saepe",
                         payload=shared.Payload(
-                            content_expression="sit",
+                            content_expression="fuga",
                             type="STRING",
                         ),
                     ),
                     lambda_=shared.LambdaAction(
-                        function_arn="doloribus",
+                        function_arn="corporis",
+                        payload=shared.Payload(
+                            content_expression="iste",
+                            type="STRING",
+                        ),
+                    ),
+                    sns=shared.SNSTopicPublishAction(
                         payload=shared.Payload(
                             content_expression="saepe",
                             type="JSON",
                         ),
-                    ),
-                    sns=shared.SnsTopicPublishAction(
-                        payload=shared.Payload(
-                            content_expression="praesentium",
-                            type="JSON",
-                        ),
-                        target_arn="accusantium",
+                        target_arn="architecto",
                     ),
                     sqs=shared.SqsAction(
                         payload=shared.Payload(
-                            content_expression="reiciendis",
+                            content_expression="ipsa",
                             type="JSON",
                         ),
-                        queue_url="id",
+                        queue_url="est",
+                        use_base64=False,
+                    ),
+                ),
+                shared.AlarmAction(
+                    dynamo_db=shared.DynamoDBAction(
+                        hash_key_field="mollitia",
+                        hash_key_type="laborum",
+                        hash_key_value="dolores",
+                        operation="dolorem",
+                        payload=shared.Payload(
+                            content_expression="corporis",
+                            type="STRING",
+                        ),
+                        payload_field="nobis",
+                        range_key_field="enim",
+                        range_key_type="omnis",
+                        range_key_value="nemo",
+                        table_name="minima",
+                    ),
+                    dynamo_d_bv2=shared.DynamoDBv2Action(
+                        payload=shared.Payload(
+                            content_expression="excepturi",
+                            type="STRING",
+                        ),
+                        table_name="iure",
+                    ),
+                    firehose=shared.FirehoseAction(
+                        delivery_stream_name="culpa",
+                        payload=shared.Payload(
+                            content_expression="doloribus",
+                            type="JSON",
+                        ),
+                        separator="architecto",
+                    ),
+                    iot_events=shared.IotEventsAction(
+                        input_name="mollitia",
+                        payload=shared.Payload(
+                            content_expression="dolorem",
+                            type="JSON",
+                        ),
+                    ),
+                    iot_site_wise=shared.IotSiteWiseAction(
+                        asset_id="consequuntur",
+                        entry_id="repellat",
+                        property_alias="mollitia",
+                        property_id="occaecati",
+                        property_value=shared.AssetPropertyValue(
+                            quality="numquam",
+                            timestamp=shared.AssetPropertyTimestamp(
+                                offset_in_nanos="commodi",
+                                time_in_seconds="quam",
+                            ),
+                            value=shared.AssetPropertyVariant(
+                                boolean_value="molestiae",
+                                double_value="velit",
+                                integer_value="error",
+                                string_value="quia",
+                            ),
+                        ),
+                    ),
+                    iot_topic_publish=shared.IotTopicPublishAction(
+                        mqtt_topic="quis",
+                        payload=shared.Payload(
+                            content_expression="vitae",
+                            type="JSON",
+                        ),
+                    ),
+                    lambda_=shared.LambdaAction(
+                        function_arn="animi",
+                        payload=shared.Payload(
+                            content_expression="enim",
+                            type="STRING",
+                        ),
+                    ),
+                    sns=shared.SNSTopicPublishAction(
+                        payload=shared.Payload(
+                            content_expression="quo",
+                            type="STRING",
+                        ),
+                        target_arn="tenetur",
+                    ),
+                    sqs=shared.SqsAction(
+                        payload=shared.Payload(
+                            content_expression="ipsam",
+                            type="JSON",
+                        ),
+                        queue_url="possimus",
                         use_base64=False,
                     ),
                 ),
             ],
         ),
-        alarm_model_description="temporibus",
-        alarm_model_name="aut",
+        alarm_model_description="aut",
+        alarm_model_name="quasi",
         alarm_notification=operations.CreateAlarmModelRequestBodyAlarmNotification(
             notification_actions=[
                 shared.NotificationAction(
                     action=shared.NotificationTargetActions(
                         lambda_action=shared.LambdaAction(
-                            function_arn="ea",
+                            function_arn="temporibus",
                             payload=shared.Payload(
-                                content_expression="quis",
-                                type="JSON",
+                                content_expression="laborum",
+                                type="STRING",
                             ),
                         ),
                     ),
                     email_configurations=[
                         shared.EmailConfiguration(
                             content=shared.EmailContent(
-                                additional_message="rem",
-                                subject="non",
+                                additional_message="voluptatibus",
+                                subject="vero",
                             ),
-                            from_="aperiam",
+                            from_="nihil",
                             recipients=shared.EmailRecipients(
                                 to=[
                                     shared.RecipientDetail(
-                                        sso_identity=shared.SsoIdentity(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="voluptatibus",
+                                            user_id="ipsa",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
                                             identity_store_id="omnis",
-                                            user_id="rerum",
+                                            user_id="voluptate",
                                         ),
                                     ),
                                     shared.RecipientDetail(
-                                        sso_identity=shared.SsoIdentity(
-                                            identity_store_id="et",
-                                            user_id="quia",
-                                        ),
-                                    ),
-                                    shared.RecipientDetail(
-                                        sso_identity=shared.SsoIdentity(
-                                            identity_store_id="quasi",
-                                            user_id="eum",
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="cum",
+                                            user_id="perferendis",
                                         ),
                                     ),
                                 ],
@@ -255,22 +331,34 @@ req = operations.CreateAlarmModelRequest(
                         ),
                         shared.EmailConfiguration(
                             content=shared.EmailContent(
-                                additional_message="dolor",
-                                subject="ut",
+                                additional_message="doloremque",
+                                subject="reprehenderit",
                             ),
-                            from_="sit",
+                            from_="ut",
                             recipients=shared.EmailRecipients(
                                 to=[
                                     shared.RecipientDetail(
-                                        sso_identity=shared.SsoIdentity(
-                                            identity_store_id="rem",
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="dicta",
+                                            user_id="corporis",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="dolore",
                                             user_id="iusto",
                                         ),
                                     ),
                                     shared.RecipientDetail(
-                                        sso_identity=shared.SsoIdentity(
-                                            identity_store_id="sed",
-                                            user_id="numquam",
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="dicta",
+                                            user_id="harum",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="enim",
+                                            user_id="accusamus",
                                         ),
                                     ),
                                 ],
@@ -278,16 +366,45 @@ req = operations.CreateAlarmModelRequest(
                         ),
                         shared.EmailConfiguration(
                             content=shared.EmailContent(
-                                additional_message="corrupti",
-                                subject="eveniet",
+                                additional_message="commodi",
+                                subject="repudiandae",
                             ),
-                            from_="nobis",
+                            from_="quae",
                             recipients=shared.EmailRecipients(
                                 to=[
                                     shared.RecipientDetail(
-                                        sso_identity=shared.SsoIdentity(
-                                            identity_store_id="molestiae",
-                                            user_id="veniam",
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="quidem",
+                                            user_id="molestias",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="excepturi",
+                                subject="pariatur",
+                            ),
+                            from_="modi",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="rem",
+                                            user_id="voluptates",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="quasi",
+                                            user_id="repudiandae",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="sint",
+                                            user_id="veritatis",
                                         ),
                                     ),
                                 ],
@@ -295,47 +412,395 @@ req = operations.CreateAlarmModelRequest(
                         ),
                     ],
                     sms_configurations=[
-                        shared.SmsConfiguration(
-                            additional_message="voluptatum",
+                        shared.SMSConfiguration(
+                            additional_message="incidunt",
                             recipients=[
                                 shared.RecipientDetail(
-                                    sso_identity=shared.SsoIdentity(
-                                        identity_store_id="perspiciatis",
-                                        user_id="aut",
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="consequatur",
+                                        user_id="est",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="quibusdam",
+                                        user_id="explicabo",
                                     ),
                                 ),
                             ],
-                            sender_id="fugiat",
+                            sender_id="deserunt",
                         ),
-                        shared.SmsConfiguration(
-                            additional_message="est",
+                        shared.SMSConfiguration(
+                            additional_message="distinctio",
                             recipients=[
                                 shared.RecipientDetail(
-                                    sso_identity=shared.SsoIdentity(
-                                        identity_store_id="voluptatibus",
-                                        user_id="sapiente",
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="labore",
+                                        user_id="modi",
                                     ),
                                 ),
                                 shared.RecipientDetail(
-                                    sso_identity=shared.SsoIdentity(
-                                        identity_store_id="quasi",
-                                        user_id="minima",
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="qui",
+                                        user_id="aliquid",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="cupiditate",
+                                        user_id="quos",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="perferendis",
+                                        user_id="magni",
                                     ),
                                 ),
                             ],
-                            sender_id="odit",
+                            sender_id="assumenda",
                         ),
-                        shared.SmsConfiguration(
-                            additional_message="modi",
+                        shared.SMSConfiguration(
+                            additional_message="ipsam",
                             recipients=[
                                 shared.RecipientDetail(
-                                    sso_identity=shared.SsoIdentity(
-                                        identity_store_id="pariatur",
-                                        user_id="velit",
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="fugit",
+                                        user_id="dolorum",
                                     ),
                                 ),
                             ],
-                            sender_id="possimus",
+                            sender_id="excepturi",
+                        ),
+                        shared.SMSConfiguration(
+                            additional_message="tempora",
+                            recipients=[
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="tempore",
+                                        user_id="labore",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="delectus",
+                                        user_id="eum",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="non",
+                                        user_id="eligendi",
+                                    ),
+                                ),
+                            ],
+                            sender_id="sint",
+                        ),
+                    ],
+                ),
+                shared.NotificationAction(
+                    action=shared.NotificationTargetActions(
+                        lambda_action=shared.LambdaAction(
+                            function_arn="aliquid",
+                            payload=shared.Payload(
+                                content_expression="provident",
+                                type="JSON",
+                            ),
+                        ),
+                    ),
+                    email_configurations=[
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="officia",
+                                subject="dolor",
+                            ),
+                            from_="debitis",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="dolorum",
+                                            user_id="in",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="in",
+                                            user_id="illum",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="maiores",
+                                            user_id="rerum",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="dicta",
+                                            user_id="magnam",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="cumque",
+                                subject="facere",
+                            ),
+                            from_="ea",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="laborum",
+                                            user_id="accusamus",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="non",
+                                            user_id="occaecati",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="enim",
+                                subject="accusamus",
+                            ),
+                            from_="delectus",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="provident",
+                                            user_id="nam",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="id",
+                                            user_id="blanditiis",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="deleniti",
+                                            user_id="sapiente",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ],
+                    sms_configurations=[
+                        shared.SMSConfiguration(
+                            additional_message="deserunt",
+                            recipients=[
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="vel",
+                                        user_id="natus",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="omnis",
+                                        user_id="molestiae",
+                                    ),
+                                ),
+                            ],
+                            sender_id="perferendis",
+                        ),
+                    ],
+                ),
+                shared.NotificationAction(
+                    action=shared.NotificationTargetActions(
+                        lambda_action=shared.LambdaAction(
+                            function_arn="nihil",
+                            payload=shared.Payload(
+                                content_expression="magnam",
+                                type="JSON",
+                            ),
+                        ),
+                    ),
+                    email_configurations=[
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="labore",
+                                subject="labore",
+                            ),
+                            from_="suscipit",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="nobis",
+                                            user_id="eum",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="vero",
+                                            user_id="aspernatur",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="architecto",
+                                            user_id="magnam",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="et",
+                                subject="excepturi",
+                            ),
+                            from_="ullam",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="quos",
+                                            user_id="sint",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="accusantium",
+                                            user_id="mollitia",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="reiciendis",
+                                            user_id="mollitia",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        shared.EmailConfiguration(
+                            content=shared.EmailContent(
+                                additional_message="ad",
+                                subject="eum",
+                            ),
+                            from_="dolor",
+                            recipients=shared.EmailRecipients(
+                                to=[
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="odit",
+                                            user_id="nemo",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="quasi",
+                                            user_id="iure",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="doloribus",
+                                            user_id="debitis",
+                                        ),
+                                    ),
+                                    shared.RecipientDetail(
+                                        sso_identity=shared.SSOIdentity(
+                                            identity_store_id="eius",
+                                            user_id="maxime",
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ],
+                    sms_configurations=[
+                        shared.SMSConfiguration(
+                            additional_message="facilis",
+                            recipients=[
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="architecto",
+                                        user_id="architecto",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="repudiandae",
+                                        user_id="ullam",
+                                    ),
+                                ),
+                            ],
+                            sender_id="expedita",
+                        ),
+                        shared.SMSConfiguration(
+                            additional_message="nihil",
+                            recipients=[
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="quibusdam",
+                                        user_id="sed",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="saepe",
+                                        user_id="pariatur",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="accusantium",
+                                        user_id="consequuntur",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="praesentium",
+                                        user_id="natus",
+                                    ),
+                                ),
+                            ],
+                            sender_id="magni",
+                        ),
+                        shared.SMSConfiguration(
+                            additional_message="sunt",
+                            recipients=[
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="illum",
+                                        user_id="pariatur",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="maxime",
+                                        user_id="ea",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="excepturi",
+                                        user_id="odit",
+                                    ),
+                                ),
+                                shared.RecipientDetail(
+                                    sso_identity=shared.SSOIdentity(
+                                        identity_store_id="ea",
+                                        user_id="accusantium",
+                                    ),
+                                ),
+                            ],
+                            sender_id="ab",
                         ),
                     ],
                 ),
@@ -343,21 +808,28 @@ req = operations.CreateAlarmModelRequest(
         ),
         alarm_rule=operations.CreateAlarmModelRequestBodyAlarmRule(
             simple_rule=shared.SimpleRule(
-                comparison_operator="EQUAL",
-                input_property="ut",
-                threshold="corrupti",
+                comparison_operator="NOT_EQUAL",
+                input_property="quidem",
+                threshold="ipsam",
             ),
         ),
-        key="officia",
-        role_arn="optio",
-        severity=8289392119546275015,
+        key="voluptate",
+        role_arn="autem",
+        severity=722056,
         tags=[
             shared.Tag(
-                key="quas",
-                value="reiciendis",
+                key="pariatur",
+                value="nemo",
             ),
         ],
     ),
+    x_amz_algorithm="voluptatibus",
+    x_amz_content_sha256="perferendis",
+    x_amz_credential="fugiat",
+    x_amz_date="amet",
+    x_amz_security_token="aut",
+    x_amz_signature="cumque",
+    x_amz_signed_headers="corporis",
 )
     
 res = s.create_alarm_model(req)

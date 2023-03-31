@@ -12,18 +12,13 @@ var FetchAnnotationServerList = []string{
 }
 
 type FetchAnnotationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAnnotationPathParams struct {
-	// The unique SID identifier of the Call.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAnnotationRequest struct {
-	PathParams FetchAnnotationPathParams
-	Security   FetchAnnotationSecurity
-	ServerURL  *string
+	// The unique SID identifier of the Call.
+	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 }
 
 type FetchAnnotationResponse struct {

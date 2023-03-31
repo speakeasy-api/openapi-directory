@@ -8,23 +8,14 @@ import (
 )
 
 type GetFirewallRuleSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetFirewallRulePathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFirewallRuleQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetFirewallRuleRequest struct {
-	PathParams  GetFirewallRulePathParams
-	QueryParams GetFirewallRuleQueryParams
-	Security    GetFirewallRuleSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetFirewallRuleResponse struct {

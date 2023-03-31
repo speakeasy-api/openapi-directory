@@ -13,18 +13,13 @@ var FetchDeactivationServerList = []string{
 }
 
 type FetchDeactivationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDeactivationQueryParams struct {
-	// The request will return a list of all United States Phone Numbers that were deactivated on the day specified by this parameter. This date should be specified in YYYY-MM-DD format.
-	Date *types.Date `queryParam:"style=form,explode=true,name=Date"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDeactivationRequest struct {
-	QueryParams FetchDeactivationQueryParams
-	Security    FetchDeactivationSecurity
-	ServerURL   *string
+	// The request will return a list of all United States Phone Numbers that were deactivated on the day specified by this parameter. This date should be specified in YYYY-MM-DD format.
+	Date *types.Date `queryParam:"style=form,explode=true,name=Date"`
 }
 
 type FetchDeactivationResponse struct {

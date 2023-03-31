@@ -8,13 +8,13 @@ import (
 )
 
 type TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurity struct {
@@ -22,12 +22,7 @@ type TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurity struct {
 	Option2 *TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurityOption2 `security:"option"`
 }
 
-type TagmanagerAccountsContainersWorkspacesFoldersEntitiesPathParams struct {
-	// GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type TagmanagerAccountsContainersWorkspacesFoldersEntitiesQueryParams struct {
+type TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,6 +39,8 @@ type TagmanagerAccountsContainersWorkspacesFoldersEntitiesQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Continuation token for fetching the next page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type TagmanagerAccountsContainersWorkspacesFoldersEntitiesQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest struct {
-	PathParams  TagmanagerAccountsContainersWorkspacesFoldersEntitiesPathParams
-	QueryParams TagmanagerAccountsContainersWorkspacesFoldersEntitiesQueryParams
-	Security    TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurity
 }
 
 type TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse struct {

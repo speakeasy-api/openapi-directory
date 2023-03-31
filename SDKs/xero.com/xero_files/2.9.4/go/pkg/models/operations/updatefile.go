@@ -8,24 +8,15 @@ import (
 )
 
 type UpdateFileSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateFilePathParams struct {
-	// File id for single object
-	FileID string `pathParam:"style=simple,explode=false,name=FileId"`
-}
-
-type UpdateFileHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateFileRequest struct {
-	PathParams UpdateFilePathParams
-	Headers    UpdateFileHeaders
-	Request    *shared.FileObject `request:"mediaType=application/json"`
-	Security   UpdateFileSecurity
+	// File id for single object
+	FileID     string             `pathParam:"style=simple,explode=false,name=FileId"`
+	FileObject *shared.FileObject `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type UpdateFileResponse struct {

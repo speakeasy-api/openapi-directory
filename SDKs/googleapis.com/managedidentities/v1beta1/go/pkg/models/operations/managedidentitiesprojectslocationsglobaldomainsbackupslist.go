@@ -8,16 +8,11 @@ import (
 )
 
 type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListPathParams struct {
-	// Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListQueryParams struct {
+type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListQueryParams struc
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The next_page_token value returned from a previous List request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListQueryParams struc
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListRequest struct {
-	PathParams  ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListPathParams
-	QueryParams ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListQueryParams
-	Security    ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListSecurity
 }
 
 type ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListResponse struct {

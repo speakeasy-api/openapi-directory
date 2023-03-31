@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCustomFieldsJSONQueryParams struct {
+type PostCustomFieldsJSONRequest struct {
+	// Custom Field parameters.
+	CustomFieldEdit shared.CustomFieldEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostCustomFieldsJSONRequest struct {
-	QueryParams PostCustomFieldsJSONQueryParams
-	// Custom Field parameters.
-	Request shared.CustomFieldEdit `request:"mediaType=application/json"`
 }
 
 type PostCustomFieldsJSONResponse struct {

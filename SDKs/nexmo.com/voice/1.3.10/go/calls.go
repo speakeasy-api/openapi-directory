@@ -35,7 +35,7 @@ func newCalls(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateCall - Create an outbound call
 // Create an outbound Call
-func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallRequest) (*operations.CreateCallResponse, error) {
+func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallRequestBody, security operations.CreateCallSecurity) (*operations.CreateCallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -51,7 +51,7 @@ func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,16 +87,16 @@ func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallReq
 
 // GetCall - Get detail of a specific call
 // Get detail of a specific call
-func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest) (*operations.GetCallResponse, error) {
+func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest, security operations.GetCallSecurity) (*operations.GetCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -132,7 +132,7 @@ func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest) 
 
 // GetCalls - Get details of your calls
 // Get details of your calls
-func (s *calls) GetCalls(ctx context.Context, request operations.GetCallsRequest) (*operations.GetCallsResponse, error) {
+func (s *calls) GetCalls(ctx context.Context, request operations.GetCallsRequest, security operations.GetCallsSecurity) (*operations.GetCallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -141,11 +141,11 @@ func (s *calls) GetCalls(ctx context.Context, request operations.GetCallsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,11 +181,11 @@ func (s *calls) GetCalls(ctx context.Context, request operations.GetCallsRequest
 
 // UpdateCall - Modify an in progress call
 // Modify an in progress call
-func (s *calls) UpdateCall(ctx context.Context, request operations.UpdateCallRequest) (*operations.UpdateCallResponse, error) {
+func (s *calls) UpdateCall(ctx context.Context, request operations.UpdateCallRequest, security operations.UpdateCallSecurity) (*operations.UpdateCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,7 +200,7 @@ func (s *calls) UpdateCall(ctx context.Context, request operations.UpdateCallReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

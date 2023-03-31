@@ -36,14 +36,14 @@ func newEmployer(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete the specified employer
 func (s *employer) DeleteEmployer(ctx context.Context, request operations.DeleteEmployerRequest) (*operations.DeleteEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *employer) DeleteEmployer(ctx context.Context, request operations.Delete
 // Deletes the specified employer revision for the matching revision date
 func (s *employer) DeleteEmployerRevision(ctx context.Context, request operations.DeleteEmployerRevisionRequest) (*operations.DeleteEmployerRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,14 +144,14 @@ func (s *employer) DeleteEmployerRevision(ctx context.Context, request operation
 // Deletes the specified employer revision for the matching revision number
 func (s *employer) DeleteEmployerRevisionByNumber(ctx context.Context, request operations.DeleteEmployerRevisionByNumberRequest) (*operations.DeleteEmployerRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -198,14 +198,14 @@ func (s *employer) DeleteEmployerRevisionByNumber(ctx context.Context, request o
 // Deletes an employer secret from the given resource location
 func (s *employer) DeleteEmployerSecret(ctx context.Context, request operations.DeleteEmployerSecretRequest) (*operations.DeleteEmployerSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -259,7 +259,7 @@ func (s *employer) GetAllEmployerTags(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -315,14 +315,14 @@ func (s *employer) GetAllEmployerTags(ctx context.Context, request operations.Ge
 // Get the specified employer object
 func (s *employer) GetEmployer(ctx context.Context, request operations.GetEmployerRequest) (*operations.GetEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -378,14 +378,14 @@ func (s *employer) GetEmployer(ctx context.Context, request operations.GetEmploy
 // Returns the employer's state at the specified effective date.
 func (s *employer) GetEmployerByEffectiveDate(ctx context.Context, request operations.GetEmployerByEffectiveDateRequest) (*operations.GetEmployerByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -441,14 +441,14 @@ func (s *employer) GetEmployerByEffectiveDate(ctx context.Context, request opera
 // Get the employer revision matching the specified revision number
 func (s *employer) GetEmployerRevisionByNumber(ctx context.Context, request operations.GetEmployerRevisionByNumberRequest) (*operations.GetEmployerRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -504,14 +504,14 @@ func (s *employer) GetEmployerRevisionByNumber(ctx context.Context, request oper
 // Gets links to all employer revision summaries
 func (s *employer) GetEmployerRevisionSummaries(ctx context.Context, request operations.GetEmployerRevisionSummariesRequest) (*operations.GetEmployerRevisionSummariesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revisions/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revisions/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -567,14 +567,14 @@ func (s *employer) GetEmployerRevisionSummaries(ctx context.Context, request ope
 // Get the employer revision summary matching the specified revision number
 func (s *employer) GetEmployerRevisionSummaryByNumber(ctx context.Context, request operations.GetEmployerRevisionSummaryByNumberRequest) (*operations.GetEmployerRevisionSummaryByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revision/{RevisionNumber}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revision/{RevisionNumber}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -630,14 +630,14 @@ func (s *employer) GetEmployerRevisionSummaryByNumber(ctx context.Context, reque
 // Gets links to all the employer revisions
 func (s *employer) GetEmployerRevisions(ctx context.Context, request operations.GetEmployerRevisionsRequest) (*operations.GetEmployerRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -693,14 +693,14 @@ func (s *employer) GetEmployerRevisions(ctx context.Context, request operations.
 // Get the public visible employer secret object
 func (s *employer) GetEmployerSecret(ctx context.Context, request operations.GetEmployerSecretRequest) (*operations.GetEmployerSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -756,14 +756,14 @@ func (s *employer) GetEmployerSecret(ctx context.Context, request operations.Get
 // Get all the employer secret links
 func (s *employer) GetEmployerSecrets(ctx context.Context, request operations.GetEmployerSecretsRequest) (*operations.GetEmployerSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secrets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secrets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -826,7 +826,7 @@ func (s *employer) GetEmployerSummaries(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -882,14 +882,14 @@ func (s *employer) GetEmployerSummaries(ctx context.Context, request operations.
 // Get links to all employer summaries on specified effective date.
 func (s *employer) GetEmployerSummariesByEffectiveDate(ctx context.Context, request operations.GetEmployerSummariesByEffectiveDateRequest) (*operations.GetEmployerSummariesByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employers/{EffectiveDate}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employers/{EffectiveDate}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -945,14 +945,14 @@ func (s *employer) GetEmployerSummariesByEffectiveDate(ctx context.Context, requ
 // Gets the specified employer summary data.
 func (s *employer) GetEmployerSummary(ctx context.Context, request operations.GetEmployerSummaryRequest) (*operations.GetEmployerSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1008,14 +1008,14 @@ func (s *employer) GetEmployerSummary(ctx context.Context, request operations.Ge
 // Gets the employer summary for the specified effective date.
 func (s *employer) GetEmployerSummaryByEffectiveDate(ctx context.Context, request operations.GetEmployerSummaryByEffectiveDateRequest) (*operations.GetEmployerSummaryByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/{EffectiveDate}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/{EffectiveDate}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1078,7 +1078,7 @@ func (s *employer) GetEmployers(ctx context.Context, request operations.GetEmplo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1134,14 +1134,14 @@ func (s *employer) GetEmployers(ctx context.Context, request operations.GetEmplo
 // Gets links to all employers contained under the authorised application scope for the specified effective date.
 func (s *employer) GetEmployersByEffectiveDate(ctx context.Context, request operations.GetEmployersByEffectiveDateRequest) (*operations.GetEmployersByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employers/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employers/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1197,14 +1197,14 @@ func (s *employer) GetEmployersByEffectiveDate(ctx context.Context, request oper
 // Gets the employers with the tag
 func (s *employer) GetEmployersWithTag(ctx context.Context, request operations.GetEmployersWithTagRequest) (*operations.GetEmployersWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employers/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employers/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1260,9 +1260,9 @@ func (s *employer) GetEmployersWithTag(ctx context.Context, request operations.G
 // Patches the specified employer with the supplied values
 func (s *employer) PatchEmployer(ctx context.Context, request operations.PatchEmployerRequest) (*operations.PatchEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1277,7 +1277,7 @@ func (s *employer) PatchEmployer(ctx context.Context, request operations.PatchEm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1335,7 +1335,7 @@ func (s *employer) PostEmployer(ctx context.Context, request operations.PostEmpl
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Employers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1350,7 +1350,7 @@ func (s *employer) PostEmployer(ctx context.Context, request operations.PostEmpl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1406,14 +1406,14 @@ func (s *employer) PostEmployer(ctx context.Context, request operations.PostEmpl
 // Create new employer secret using auto generated resource location key
 func (s *employer) PostEmployerSecret(ctx context.Context, request operations.PostEmployerSecretRequest) (*operations.PostEmployerSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secrets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secrets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1469,9 +1469,9 @@ func (s *employer) PostEmployerSecret(ctx context.Context, request operations.Po
 // Updates the existing specified employer object
 func (s *employer) PutEmployer(ctx context.Context, request operations.PutEmployerRequest) (*operations.PutEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1486,7 +1486,7 @@ func (s *employer) PutEmployer(ctx context.Context, request operations.PutEmploy
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1542,14 +1542,14 @@ func (s *employer) PutEmployer(ctx context.Context, request operations.PutEmploy
 // Create / update an employer secret at the given resource location
 func (s *employer) PutEmployerSecret(ctx context.Context, request operations.PutEmployerSecretRequest) (*operations.PutEmployerSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

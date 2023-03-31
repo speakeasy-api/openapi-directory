@@ -8,21 +8,13 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetEmployerSummariesByEffectiveDatePathParams struct {
-	// The effective date to be applied. E.g 2016-04-06
-	EffectiveDate types.Date `pathParam:"style=simple,explode=false,name=EffectiveDate"`
-}
-
-type GetEmployerSummariesByEffectiveDateHeaders struct {
+type GetEmployerSummariesByEffectiveDateRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetEmployerSummariesByEffectiveDateRequest struct {
-	PathParams GetEmployerSummariesByEffectiveDatePathParams
-	Headers    GetEmployerSummariesByEffectiveDateHeaders
+	// The effective date to be applied. E.g 2016-04-06
+	EffectiveDate types.Date `pathParam:"style=simple,explode=false,name=EffectiveDate"`
 }
 
 type GetEmployerSummariesByEffectiveDateResponse struct {

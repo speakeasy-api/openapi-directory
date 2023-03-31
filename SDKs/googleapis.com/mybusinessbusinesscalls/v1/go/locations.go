@@ -34,14 +34,14 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinessbusinesscallsLocationsBusinesscallsinsightsList - Returns insights for Business calls for a location.
 func (s *locations) MybusinessbusinesscallsLocationsBusinesscallsinsightsList(ctx context.Context, request operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest) (*operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/businesscallsinsights", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/businesscallsinsights", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *locations) MybusinessbusinesscallsLocationsBusinesscallsinsightsList(ct
 // MybusinessbusinesscallsLocationsGetBusinesscallssettings - Returns the Business calls settings resource for the given location.
 func (s *locations) MybusinessbusinesscallsLocationsGetBusinesscallssettings(ctx context.Context, request operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsRequest) (*operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,9 +130,9 @@ func (s *locations) MybusinessbusinesscallsLocationsGetBusinesscallssettings(ctx
 // MybusinessbusinesscallsLocationsUpdateBusinesscallssettings - Updates the Business call settings for the specified location.
 func (s *locations) MybusinessbusinesscallsLocationsUpdateBusinesscallssettings(ctx context.Context, request operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsRequest) (*operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessCallsSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *locations) MybusinessbusinesscallsLocationsUpdateBusinesscallssettings(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

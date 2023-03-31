@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsDeleteServicePathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostLoadBalancersIDActionsDeleteServiceRequestBody struct {
 	// The listen port of the service you want to delete
 	ListenPort float64 `json:"listen_port"`
 }
 
 type PostLoadBalancersIDActionsDeleteServiceRequest struct {
-	PathParams PostLoadBalancersIDActionsDeleteServicePathParams
-	Request    *PostLoadBalancersIDActionsDeleteServiceRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsDeleteServiceRequestBody `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsDeleteServiceActionResponseActionError - Error message for the Action if error occurred, otherwise null

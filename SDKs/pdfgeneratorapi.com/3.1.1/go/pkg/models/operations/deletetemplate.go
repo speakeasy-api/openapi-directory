@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type DeleteTemplateQueryParams struct {
+type DeleteTemplateRequest struct {
 	// Template unique identifier
 	TemplateID int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type DeleteTemplateRequest struct {
-	QueryParams DeleteTemplateQueryParams
 }
 
 // DeleteTemplate500ApplicationJSON - Internal Server Error

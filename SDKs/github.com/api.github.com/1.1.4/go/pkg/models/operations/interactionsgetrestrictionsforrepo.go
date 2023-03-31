@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type InteractionsGetRestrictionsForRepoPathParams struct {
+type InteractionsGetRestrictionsForRepoRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type InteractionsGetRestrictionsForRepoRequest struct {
-	PathParams InteractionsGetRestrictionsForRepoPathParams
 }
 
 type InteractionsGetRestrictionsForRepoResponse struct {

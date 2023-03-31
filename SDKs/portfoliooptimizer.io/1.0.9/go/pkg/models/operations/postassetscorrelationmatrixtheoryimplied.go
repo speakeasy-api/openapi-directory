@@ -121,10 +121,6 @@ type PostAssetsCorrelationMatrixTheoryImpliedRequestBody struct {
 	ClusteringMethod *PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum `json:"clusteringMethod,omitempty"`
 }
 
-type PostAssetsCorrelationMatrixTheoryImpliedRequest struct {
-	Request PostAssetsCorrelationMatrixTheoryImpliedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixTheoryImplied200ApplicationJSON - OK
 type PostAssetsCorrelationMatrixTheoryImplied200ApplicationJSON struct {
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j

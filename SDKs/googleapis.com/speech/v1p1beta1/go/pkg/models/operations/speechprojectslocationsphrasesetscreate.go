@@ -8,18 +8,14 @@ import (
 )
 
 type SpeechProjectsLocationsPhraseSetsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SpeechProjectsLocationsPhraseSetsCreatePathParams struct {
-	// Required. The parent resource where this phrase set will be created. Format: `projects/{project}/locations/{location}` Speech-to-Text supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type SpeechProjectsLocationsPhraseSetsCreateQueryParams struct {
+type SpeechProjectsLocationsPhraseSetsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CreatePhraseSetRequest *shared.CreatePhraseSetRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type SpeechProjectsLocationsPhraseSetsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent resource where this phrase set will be created. Format: `projects/{project}/locations/{location}` Speech-to-Text supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type SpeechProjectsLocationsPhraseSetsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SpeechProjectsLocationsPhraseSetsCreateRequest struct {
-	PathParams  SpeechProjectsLocationsPhraseSetsCreatePathParams
-	QueryParams SpeechProjectsLocationsPhraseSetsCreateQueryParams
-	Request     *shared.CreatePhraseSetRequest `request:"mediaType=application/json"`
-	Security    SpeechProjectsLocationsPhraseSetsCreateSecurity
 }
 
 type SpeechProjectsLocationsPhraseSetsCreateResponse struct {

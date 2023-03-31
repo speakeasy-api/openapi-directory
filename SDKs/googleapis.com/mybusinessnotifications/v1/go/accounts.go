@@ -34,14 +34,14 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MybusinessnotificationsAccountsGetNotificationSetting - Returns the pubsub notification settings for the account.
 func (s *accounts) MybusinessnotificationsAccountsGetNotificationSetting(ctx context.Context, request operations.MybusinessnotificationsAccountsGetNotificationSettingRequest) (*operations.MybusinessnotificationsAccountsGetNotificationSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,9 +82,9 @@ func (s *accounts) MybusinessnotificationsAccountsGetNotificationSetting(ctx con
 // MybusinessnotificationsAccountsUpdateNotificationSetting - Sets the pubsub notification setting for the account informing Google which topic to send pubsub notifications for. Use the notification_types field within notification_setting to manipulate the events an account wants to subscribe to. An account will only have one notification setting resource, and only one pubsub topic can be set. To delete the setting, update with an empty notification_types
 func (s *accounts) MybusinessnotificationsAccountsUpdateNotificationSetting(ctx context.Context, request operations.MybusinessnotificationsAccountsUpdateNotificationSettingRequest) (*operations.MybusinessnotificationsAccountsUpdateNotificationSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationSetting", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *accounts) MybusinessnotificationsAccountsUpdateNotificationSetting(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

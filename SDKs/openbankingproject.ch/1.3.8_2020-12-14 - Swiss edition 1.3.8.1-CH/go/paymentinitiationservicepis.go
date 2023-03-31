@@ -48,18 +48,18 @@ func newPaymentInitiationServicePIS(defaultClient, securityClient HTTPClient, se
 //   - access method was rejected,
 //   - access method was successful, or
 //   - access method is generally applicable, but further authorisation processes are needed.
-func (s *paymentInitiationServicePIS) CancelPayment(ctx context.Context, request operations.CancelPaymentRequest) (*operations.CancelPaymentResponse, error) {
+func (s *paymentInitiationServicePIS) CancelPayment(ctx context.Context, request operations.CancelPaymentRequest, security operations.CancelPaymentSecurity) (*operations.CancelPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -226,18 +226,18 @@ func (s *paymentInitiationServicePIS) CancelPayment(ctx context.Context, request
 
 // GetPaymentCancellationScaStatus - Read the SCA status of the payment cancellation's authorisation
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
-func (s *paymentInitiationServicePIS) GetPaymentCancellationScaStatus(ctx context.Context, request operations.GetPaymentCancellationScaStatusRequest) (*operations.GetPaymentCancellationScaStatusResponse, error) {
+func (s *paymentInitiationServicePIS) GetPaymentCancellationScaStatus(ctx context.Context, request operations.GetPaymentCancellationScaStatusRequest, security operations.GetPaymentCancellationScaStatusSecurity) (*operations.GetPaymentCancellationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -402,18 +402,18 @@ func (s *paymentInitiationServicePIS) GetPaymentCancellationScaStatus(ctx contex
 
 // GetPaymentInformation - Get payment information
 // Returns the content of a payment object
-func (s *paymentInitiationServicePIS) GetPaymentInformation(ctx context.Context, request operations.GetPaymentInformationRequest) (*operations.GetPaymentInformationResponse, error) {
+func (s *paymentInitiationServicePIS) GetPaymentInformation(ctx context.Context, request operations.GetPaymentInformationRequest, security operations.GetPaymentInformationSecurity) (*operations.GetPaymentInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -594,18 +594,18 @@ func (s *paymentInitiationServicePIS) GetPaymentInformation(ctx context.Context,
 // Read a list of all authorisation subresources IDs which have been created.
 //
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
-func (s *paymentInitiationServicePIS) GetPaymentInitiationAuthorisation(ctx context.Context, request operations.GetPaymentInitiationAuthorisationRequest) (*operations.GetPaymentInitiationAuthorisationResponse, error) {
+func (s *paymentInitiationServicePIS) GetPaymentInitiationAuthorisation(ctx context.Context, request operations.GetPaymentInitiationAuthorisationRequest, security operations.GetPaymentInitiationAuthorisationSecurity) (*operations.GetPaymentInitiationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -770,18 +770,18 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationAuthorisation(ctx cont
 
 // GetPaymentInitiationCancellationAuthorisationInformation - Will deliver an array of resource identifications to all generated cancellation authorisation sub-resources
 // Retrieve a list of all created cancellation authorisation sub-resources.
-func (s *paymentInitiationServicePIS) GetPaymentInitiationCancellationAuthorisationInformation(ctx context.Context, request operations.GetPaymentInitiationCancellationAuthorisationInformationRequest) (*operations.GetPaymentInitiationCancellationAuthorisationInformationResponse, error) {
+func (s *paymentInitiationServicePIS) GetPaymentInitiationCancellationAuthorisationInformation(ctx context.Context, request operations.GetPaymentInitiationCancellationAuthorisationInformationRequest, security operations.GetPaymentInitiationCancellationAuthorisationInformationSecurity) (*operations.GetPaymentInitiationCancellationAuthorisationInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -946,18 +946,18 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationCancellationAuthorisat
 
 // GetPaymentInitiationScaStatus - Read the SCA status of the payment authorisation
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
-func (s *paymentInitiationServicePIS) GetPaymentInitiationScaStatus(ctx context.Context, request operations.GetPaymentInitiationScaStatusRequest) (*operations.GetPaymentInitiationScaStatusResponse, error) {
+func (s *paymentInitiationServicePIS) GetPaymentInitiationScaStatus(ctx context.Context, request operations.GetPaymentInitiationScaStatusRequest, security operations.GetPaymentInitiationScaStatusSecurity) (*operations.GetPaymentInitiationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1122,18 +1122,18 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationScaStatus(ctx context.
 
 // GetPaymentInitiationStatus - Payment initiation status request
 // Check the transaction status of a payment initiation.
-func (s *paymentInitiationServicePIS) GetPaymentInitiationStatus(ctx context.Context, request operations.GetPaymentInitiationStatusRequest) (*operations.GetPaymentInitiationStatusResponse, error) {
+func (s *paymentInitiationServicePIS) GetPaymentInitiationStatus(ctx context.Context, request operations.GetPaymentInitiationStatusRequest, security operations.GetPaymentInitiationStatusSecurity) (*operations.GetPaymentInitiationStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1354,11 +1354,11 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationStatus(ctx context.Con
 // Also if any data is needed for the next action, like selecting an SCA method is not supported in the response,
 // since all starts of the multiple authorisations are fully equal.
 // In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
-func (s *paymentInitiationServicePIS) InitiatePaymentJSON(ctx context.Context, request operations.InitiatePaymentJSONRequest) (*operations.InitiatePaymentJSONResponse, error) {
+func (s *paymentInitiationServicePIS) InitiatePaymentJSON(ctx context.Context, request operations.InitiatePaymentJSONRequest, security operations.InitiatePaymentJSONSecurity) (*operations.InitiatePaymentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1373,9 +1373,9 @@ func (s *paymentInitiationServicePIS) InitiatePaymentJSON(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1588,11 +1588,11 @@ func (s *paymentInitiationServicePIS) InitiatePaymentJSON(ctx context.Context, r
 // Also if any data is needed for the next action, like selecting an SCA method is not supported in the response,
 // since all starts of the multiple authorisations are fully equal.
 // In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
-func (s *paymentInitiationServicePIS) InitiatePaymentMultipart(ctx context.Context, request operations.InitiatePaymentMultipartRequest) (*operations.InitiatePaymentMultipartResponse, error) {
+func (s *paymentInitiationServicePIS) InitiatePaymentMultipart(ctx context.Context, request operations.InitiatePaymentMultipartRequest, security operations.InitiatePaymentMultipartSecurity) (*operations.InitiatePaymentMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PeriodicPaymentInitiationMultipartBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1607,9 +1607,9 @@ func (s *paymentInitiationServicePIS) InitiatePaymentMultipart(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1822,11 +1822,11 @@ func (s *paymentInitiationServicePIS) InitiatePaymentMultipart(ctx context.Conte
 // Also if any data is needed for the next action, like selecting an SCA method is not supported in the response,
 // since all starts of the multiple authorisations are fully equal.
 // In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
-func (s *paymentInitiationServicePIS) InitiatePaymentRaw(ctx context.Context, request operations.InitiatePaymentRawRequest) (*operations.InitiatePaymentRawResponse, error) {
+func (s *paymentInitiationServicePIS) InitiatePaymentRaw(ctx context.Context, request operations.InitiatePaymentRawRequest, security operations.InitiatePaymentRawSecurity) (*operations.InitiatePaymentRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1841,9 +1841,9 @@ func (s *paymentInitiationServicePIS) InitiatePaymentRaw(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2040,11 +2040,11 @@ func (s *paymentInitiationServicePIS) InitiatePaymentRaw(ctx context.Context, re
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *paymentInitiationServicePIS) StartPaymentAuthorisation(ctx context.Context, request operations.StartPaymentAuthorisationRequest) (*operations.StartPaymentAuthorisationResponse, error) {
+func (s *paymentInitiationServicePIS) StartPaymentAuthorisation(ctx context.Context, request operations.StartPaymentAuthorisationRequest, security operations.StartPaymentAuthorisationSecurity) (*operations.StartPaymentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2056,9 +2056,9 @@ func (s *paymentInitiationServicePIS) StartPaymentAuthorisation(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2254,11 +2254,11 @@ func (s *paymentInitiationServicePIS) StartPaymentAuthorisation(ctx context.Cont
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *paymentInitiationServicePIS) StartPaymentInitiationCancellationAuthorisation(ctx context.Context, request operations.StartPaymentInitiationCancellationAuthorisationRequest) (*operations.StartPaymentInitiationCancellationAuthorisationResponse, error) {
+func (s *paymentInitiationServicePIS) StartPaymentInitiationCancellationAuthorisation(ctx context.Context, request operations.StartPaymentInitiationCancellationAuthorisationRequest, security operations.StartPaymentInitiationCancellationAuthorisationSecurity) (*operations.StartPaymentInitiationCancellationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2270,9 +2270,9 @@ func (s *paymentInitiationServicePIS) StartPaymentInitiationCancellationAuthoris
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2474,11 +2474,11 @@ func (s *paymentInitiationServicePIS) StartPaymentInitiationCancellationAuthoris
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *paymentInitiationServicePIS) UpdatePaymentCancellationPsuData(ctx context.Context, request operations.UpdatePaymentCancellationPsuDataRequest) (*operations.UpdatePaymentCancellationPsuDataResponse, error) {
+func (s *paymentInitiationServicePIS) UpdatePaymentCancellationPsuData(ctx context.Context, request operations.UpdatePaymentCancellationPsuDataRequest, security operations.UpdatePaymentCancellationPsuDataSecurity) (*operations.UpdatePaymentCancellationPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2490,9 +2490,9 @@ func (s *paymentInitiationServicePIS) UpdatePaymentCancellationPsuData(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2694,11 +2694,11 @@ func (s *paymentInitiationServicePIS) UpdatePaymentCancellationPsuData(ctx conte
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *paymentInitiationServicePIS) UpdatePaymentPsuData(ctx context.Context, request operations.UpdatePaymentPsuDataRequest) (*operations.UpdatePaymentPsuDataResponse, error) {
+func (s *paymentInitiationServicePIS) UpdatePaymentPsuData(ctx context.Context, request operations.UpdatePaymentPsuDataRequest, security operations.UpdatePaymentPsuDataSecurity) (*operations.UpdatePaymentPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2710,9 +2710,9 @@ func (s *paymentInitiationServicePIS) UpdatePaymentPsuData(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

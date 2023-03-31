@@ -8,20 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONPathParams struct {
-	// Id of the folder social
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the payroll
-	PayrollID string `pathParam:"style=simple,explode=false,name=payrollId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum string
@@ -162,10 +152,14 @@ func (u PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationAp
 }
 
 type PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONPathParams
 	// Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder social
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the payroll
+	PayrollID string `pathParam:"style=simple,explode=false,name=payrollId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSON201ApplicationJSON - Id of document created

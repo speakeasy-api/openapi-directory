@@ -8,18 +8,18 @@ import (
 )
 
 type TagmanagerAccountsContainersVersionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersVersionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersVersionsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersVersionsListSecurity struct {
@@ -28,22 +28,19 @@ type TagmanagerAccountsContainersVersionsListSecurity struct {
 	Option3 *TagmanagerAccountsContainersVersionsListSecurityOption3 `security:"option"`
 }
 
-type TagmanagerAccountsContainersVersionsListPathParams struct {
-	// The GTM Account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The GTM Container ID.
-	ContainerID string `pathParam:"style=simple,explode=false,name=containerId"`
-}
-
-type TagmanagerAccountsContainersVersionsListQueryParams struct {
+type TagmanagerAccountsContainersVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The GTM Account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The GTM Container ID.
+	ContainerID string `pathParam:"style=simple,explode=false,name=containerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Retrieve headers only when true.
@@ -62,12 +59,6 @@ type TagmanagerAccountsContainersVersionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersVersionsListRequest struct {
-	PathParams  TagmanagerAccountsContainersVersionsListPathParams
-	QueryParams TagmanagerAccountsContainersVersionsListQueryParams
-	Security    TagmanagerAccountsContainersVersionsListSecurity
 }
 
 type TagmanagerAccountsContainersVersionsListResponse struct {

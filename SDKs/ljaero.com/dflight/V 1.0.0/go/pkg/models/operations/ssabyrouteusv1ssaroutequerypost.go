@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SsaByRouteUsV1SsaRouteQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type SsaByRouteUsV1SsaRouteQueryPostRequest struct {
-	Headers SsaByRouteUsV1SsaRouteQueryPostHeaders
-	Request shared.SSAByRoute `request:"mediaType=application/json"`
+	SSAByRoute shared.SSAByRoute `request:"mediaType=application/json"`
+	XAPIKey    *string           `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type SsaByRouteUsV1SsaRouteQueryPostResponse struct {

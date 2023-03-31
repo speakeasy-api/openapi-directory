@@ -8,10 +8,10 @@ import (
 )
 
 type UntrashCollectionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UntrashCollectionPathParams struct {
+type UntrashCollectionRequest struct {
 	// Unique identifier of the collection.
 	// The following aliases are supported:
 	// - `root`: The root collection of the account
@@ -19,11 +19,6 @@ type UntrashCollectionPathParams struct {
 	// - `trash`: Automatically contains resources that have been deleted
 	//
 	Collection string `pathParam:"style=simple,explode=false,name=collection"`
-}
-
-type UntrashCollectionRequest struct {
-	PathParams UntrashCollectionPathParams
-	Security   UntrashCollectionSecurity
 }
 
 type UntrashCollectionResponse struct {

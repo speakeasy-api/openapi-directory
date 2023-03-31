@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetServerTypesQueryParams struct {
+type GetServerTypesRequest struct {
 	// Can be used to filter Server types by their name. The response will only contain the Server type matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetServerTypesRequest struct {
-	QueryParams GetServerTypesQueryParams
 }
 
 // GetServerTypes200ApplicationJSONServerTypesCPUTypeEnum - Type of cpu

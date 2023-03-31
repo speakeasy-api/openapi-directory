@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCheckPermissionsForProjectInOrgPathParams struct {
+type TeamsCheckPermissionsForProjectInOrgRequest struct {
 	Org       string `pathParam:"style=simple,explode=false,name=org"`
 	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
 	// team_slug parameter
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsCheckPermissionsForProjectInOrgRequest struct {
-	PathParams TeamsCheckPermissionsForProjectInOrgPathParams
 }
 
 type TeamsCheckPermissionsForProjectInOrgResponse struct {

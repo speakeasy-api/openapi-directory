@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostDiseaseByIDRequest struct {
-	// An EFO identifier.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostDiseaseByIDResponse struct {
 	ContentType string
 	StatusCode  int

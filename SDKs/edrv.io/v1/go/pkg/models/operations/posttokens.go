@@ -46,11 +46,6 @@ type PostTokensRequestBody struct {
 	Type       *string                          `json:"type,omitempty"`
 }
 
-type PostTokensRequest struct {
-	// Include token properties to create here
-	Request PostTokensRequestBody `request:"mediaType=application/json"`
-}
-
 // PostTokens201ApplicationJSON - Returns a newly created token object
 type PostTokens201ApplicationJSON struct {
 	Message *string       `json:"message,omitempty"`

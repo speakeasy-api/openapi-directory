@@ -12,22 +12,17 @@ var FetchSampleServerList = []string{
 }
 
 type FetchSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSamplePathParams struct {
+type FetchSampleRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to fetch.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The Twilio-provided string that uniquely identifies the Sample resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to create.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type FetchSampleRequest struct {
-	PathParams FetchSamplePathParams
-	Security   FetchSampleSecurity
-	ServerURL  *string
 }
 
 type FetchSampleResponse struct {

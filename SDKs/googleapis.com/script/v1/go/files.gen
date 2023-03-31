@@ -34,7 +34,6 @@ pkg/models/shared/listuserprocessesresponse.go
 pkg/models/shared/googleappsscripttypeprocess.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listscriptprocessesresponse.go
 pkg/models/shared/project.go
 pkg/models/shared/googleappsscripttypeuser.go

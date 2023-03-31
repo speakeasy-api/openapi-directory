@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccessSetEnabledPathParams struct {
+type AccessSetEnabledRequest struct {
 	// indicator
 	EnabledOrNot string `pathParam:"style=simple,explode=false,name=enabledOrNot"`
-}
-
-type AccessSetEnabledRequest struct {
-	PathParams AccessSetEnabledPathParams
 }
 
 type AccessSetEnabledResponse struct {

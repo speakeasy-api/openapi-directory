@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetcurrencyrateRequest(
-    query_params=operations.GetcurrencyrateQueryParams(
-        license="cupiditate",
-        symbol="ut",
-    ),
+    license="corrupti",
+    symbol="provident",
 )
     
 res = s.currency_rates.getcurrencyrate(req)

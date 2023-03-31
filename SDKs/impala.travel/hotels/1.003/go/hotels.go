@@ -60,7 +60,7 @@ func (s *hotels) ListHotels(ctx context.Context, request operations.ListHotelsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -138,14 +138,14 @@ func (s *hotels) ListHotels(ctx context.Context, request operations.ListHotelsRe
 // Using the `rateId` of any of those rates, you can use the [Create a booking](https://docs.impala.travel/docs/booking-api/spec/openapi.seller.yaml/paths/~1bookings/post) endpoint to make a booking.
 func (s *hotels) RetrieveHotel(ctx context.Context, request operations.RetrieveHotelRequest) (*operations.RetrieveHotelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

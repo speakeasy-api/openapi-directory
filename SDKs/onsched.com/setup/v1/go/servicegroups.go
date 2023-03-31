@@ -36,7 +36,7 @@ func newServiceGroups(defaultClient, securityClient HTTPClient, serverURL, langu
 // <p>Use this endpoint to <b>Delete</b> a Service Group object. A valid <b>serviceGroup id</b> is required. The service group is not permanently deleted and can be recovered by using the <i>PUT ​/setup​/v1​/servicegroups​/{id}​/recover</i> endpoint.</p>
 func (s *serviceGroups) DeleteSetupV1ServicegroupsID(ctx context.Context, request operations.DeleteSetupV1ServicegroupsIDRequest) (*operations.DeleteSetupV1ServicegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *serviceGroups) GetSetupV1Servicegroups(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,7 +130,7 @@ func (s *serviceGroups) GetSetupV1Servicegroups(ctx context.Context, request ope
 // <p>Use this endpoint to return a <b>Service Group</b> object. A valid <b>serviceGroup id</b> is required. Find service group id's by using the <i>GET /setup/v1/serviceGroups</i> endpoint.</p>
 func (s *serviceGroups) GetSetupV1ServicegroupsID(ctx context.Context, request operations.GetSetupV1ServicegroupsIDRequest) (*operations.GetSetupV1ServicegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *serviceGroups) GetSetupV1ServicegroupsID(ctx context.Context, request o
 
 // PostSetupV1Servicegroups - Create Service Group
 // <p>Use this endpoint to <b>Create</b> a Service Group. If no locationId is specified in the body, the business location will default to the primary business location. Service groups are used to categorize services. Service groups are optional and only make sense if you have multiple services that will be easier read if categorized. Only the service group Type of 0 is supported by the API. It defaults to 0 if not supplied.</p>
-func (s *serviceGroups) PostSetupV1Servicegroups(ctx context.Context, request operations.PostSetupV1ServicegroupsRequest) (*operations.PostSetupV1ServicegroupsResponse, error) {
+func (s *serviceGroups) PostSetupV1Servicegroups(ctx context.Context, request shared.ServiceGroupInputModel) (*operations.PostSetupV1ServicegroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setup/v1/servicegroups"
 
@@ -227,9 +227,9 @@ func (s *serviceGroups) PostSetupV1Servicegroups(ctx context.Context, request op
 // <p>Use this endpoint to <b>Update</b> a Service Group object. A valid <b>serviceGroup id</b> is required. </p>
 func (s *serviceGroups) PutSetupV1ServicegroupsID(ctx context.Context, request operations.PutSetupV1ServicegroupsIDRequest) (*operations.PutSetupV1ServicegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceGroupInputModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -279,7 +279,7 @@ func (s *serviceGroups) PutSetupV1ServicegroupsID(ctx context.Context, request o
 // <p>Use this endpoint to <b>Recover</b> a deleted Service Group. A valid <b>serviceGroup id</b> is required. </p>
 func (s *serviceGroups) PutSetupV1ServicegroupsIDRecover(ctx context.Context, request operations.PutSetupV1ServicegroupsIDRecoverRequest) (*operations.PutSetupV1ServicegroupsIDRecoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}/recover", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/servicegroups/{id}/recover", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

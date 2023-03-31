@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUserInGroupQueryParams struct {
-	Activate *string `queryParam:"style=form,explode=true,name=activate"`
-}
-
 type CreateUserInGroupRequestBodyProfile struct {
 	Email     *string `json:"email,omitempty"`
 	FirstName *string `json:"firstName,omitempty"`
@@ -23,8 +19,8 @@ type CreateUserInGroupRequestBody struct {
 }
 
 type CreateUserInGroupRequest struct {
-	QueryParams CreateUserInGroupQueryParams
-	Request     *CreateUserInGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateUserInGroupRequestBody `request:"mediaType=application/json"`
+	Activate    *string                       `queryParam:"style=form,explode=true,name=activate"`
 }
 
 type CreateUserInGroupResponse struct {

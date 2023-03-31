@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeviceBySerialGetQueryParams struct {
+type DeviceBySerialGetRequest struct {
 	// The Serial Number of the device
 	Serial int64 `queryParam:"style=form,explode=true,name=serial"`
-}
-
-type DeviceBySerialGetRequest struct {
-	QueryParams DeviceBySerialGetQueryParams
 }
 
 type DeviceBySerialGetResponse struct {

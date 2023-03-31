@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInstanceObjectPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetInstanceObjectQueryParams struct {
+type GetInstanceObjectRequest struct {
 	// string to search for in contributor of model
 	Contributor *string `queryParam:"style=form,explode=true,name=contributor"`
+	ID          string  `pathParam:"style=simple,explode=false,name=id"`
 	// string to search for in title of model
 	Title *string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type GetInstanceObjectRequest struct {
-	PathParams  GetInstanceObjectPathParams
-	QueryParams GetInstanceObjectQueryParams
 }
 
 type GetInstanceObjectResponse struct {

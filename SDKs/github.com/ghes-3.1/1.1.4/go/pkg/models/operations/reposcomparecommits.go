@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCompareCommitsPathParams struct {
+type ReposCompareCommitsRequest struct {
 	// The base branch and head branch to compare. This parameter expects the format `{base}...{head}`.
 	Basehead string `pathParam:"style=simple,explode=false,name=basehead"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposCompareCommitsRequest struct {
-	PathParams ReposCompareCommitsPathParams
 }
 
 type ReposCompareCommitsResponse struct {

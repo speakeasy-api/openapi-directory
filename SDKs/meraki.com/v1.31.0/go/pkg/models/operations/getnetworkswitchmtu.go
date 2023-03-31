@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchMtuPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSwitchMtuRequest struct {
-	PathParams GetNetworkSwitchMtuPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSwitchMtuResponse struct {

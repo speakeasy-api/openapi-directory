@@ -22,5 +22,4 @@ pkg/models/shared/googlefirebasefcmdatav1beta1messageinsightpercents.go
 pkg/models/shared/googlefirebasefcmdatav1beta1deliveryperformancepercents.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

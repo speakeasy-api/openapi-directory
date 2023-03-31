@@ -35,9 +35,9 @@ func newPaymentGatewayReconciliation(defaultClient, securityClient HTTPClient, s
 // Reconciles a refund when receiving the gateway reconciliation request or event.
 func (s *paymentGatewayReconciliation) POSTReconcileRefund(ctx context.Context, request operations.POSTReconcileRefundRequest) (*operations.POSTReconcileRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refund-id}/reconcile", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/refunds/{refund-id}/reconcile", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTReconcileRefundRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *paymentGatewayReconciliation) POSTReconcileRefund(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -94,9 +94,9 @@ func (s *paymentGatewayReconciliation) POSTReconcileRefund(ctx context.Context, 
 // Sets the Payment status to "Rejected", creates a refund for the payment amount, and returns the Refund object as response.
 func (s *paymentGatewayReconciliation) POSTRejectPayment(ctx context.Context, request operations.POSTRejectPaymentRequest) (*operations.POSTRejectPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/gateway-settlement/payments/{payment-id}/reject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/gateway-settlement/payments/{payment-id}/reject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTRejectPaymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +111,7 @@ func (s *paymentGatewayReconciliation) POSTRejectPayment(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -153,9 +153,9 @@ func (s *paymentGatewayReconciliation) POSTRejectPayment(ctx context.Context, re
 // Sets the Payment status to "Reversed", creates a refund for the amount specified in the request, and returns the Refund object as response.
 func (s *paymentGatewayReconciliation) POSTReversePayment(ctx context.Context, request operations.POSTReversePaymentRequest) (*operations.POSTReversePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/gateway-settlement/payments/{payment-id}/chargeback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/gateway-settlement/payments/{payment-id}/chargeback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTReversePaymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -170,7 +170,7 @@ func (s *paymentGatewayReconciliation) POSTReversePayment(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -212,9 +212,9 @@ func (s *paymentGatewayReconciliation) POSTReversePayment(ctx context.Context, r
 // Sets the Payment status to "Settled" and returns the Payment object as response.
 func (s *paymentGatewayReconciliation) POSTSettlePayment(ctx context.Context, request operations.POSTSettlePaymentRequest) (*operations.POSTSettlePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/gateway-settlement/payments/{payment-id}/settle", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/gateway-settlement/payments/{payment-id}/settle", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTSettlePaymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -229,7 +229,7 @@ func (s *paymentGatewayReconciliation) POSTSettlePayment(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,7 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFilteredVendorsQueryParams struct {
+type GetFilteredVendorsRequest struct {
+	FilterVendorRequest *shared.FilterVendorRequest `request:"mediaType=application/json"`
 	// The order to sort the results by (ascending or descending)
 	Order *string `queryParam:"style=form,explode=true,name=order"`
 	// The field to order the results by
@@ -16,11 +17,6 @@ type GetFilteredVendorsQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items per page
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetFilteredVendorsRequest struct {
-	QueryParams GetFilteredVendorsQueryParams
-	Request     *shared.FilterVendorRequest `request:"mediaType=application/json"`
 }
 
 type GetFilteredVendorsResponse struct {

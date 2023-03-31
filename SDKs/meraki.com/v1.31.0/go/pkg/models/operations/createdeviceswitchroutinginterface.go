@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateDeviceSwitchRoutingInterfacePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // CreateDeviceSwitchRoutingInterfaceRequestBodyIpv6 - The IPv6 settings of the interface.
 type CreateDeviceSwitchRoutingInterfaceRequestBodyIpv6 struct {
 	// The IPv6 address of the interface. Required if assignmentMode is 'static'. Must not be included if           assignmentMode is 'eui-64'.
@@ -93,8 +89,8 @@ type CreateDeviceSwitchRoutingInterfaceRequestBody struct {
 }
 
 type CreateDeviceSwitchRoutingInterfaceRequest struct {
-	PathParams CreateDeviceSwitchRoutingInterfacePathParams
-	Request    *CreateDeviceSwitchRoutingInterfaceRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateDeviceSwitchRoutingInterfaceRequestBody `request:"mediaType=application/json"`
+	Serial      string                                         `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // CreateDeviceSwitchRoutingInterface201ApplicationJSONIpv6 - IPv6 addressing

@@ -34,9 +34,9 @@ func newPlatforms(defaultClient, securityClient HTTPClient, serverURL, language,
 // IdeahubPlatformsPropertiesIdeaActivitiesCreate - Creates an idea activity entry.
 func (s *platforms) IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx context.Context, request operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest) (*operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/ideaActivities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/ideaActivities", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleSearchIdeahubV1betaIdeaActivity", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *platforms) IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *platforms) IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx context.C
 // IdeahubPlatformsPropertiesIdeasList - List ideas for a given Creator and filter and sort options.
 func (s *platforms) IdeahubPlatformsPropertiesIdeasList(ctx context.Context, request operations.IdeahubPlatformsPropertiesIdeasListRequest) (*operations.IdeahubPlatformsPropertiesIdeasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/ideas", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/ideas", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,14 +137,14 @@ func (s *platforms) IdeahubPlatformsPropertiesIdeasList(ctx context.Context, req
 // IdeahubPlatformsPropertiesLocalesList - Returns which locales ideas are available in for a given Creator.
 func (s *platforms) IdeahubPlatformsPropertiesLocalesList(ctx context.Context, request operations.IdeahubPlatformsPropertiesLocalesListRequest) (*operations.IdeahubPlatformsPropertiesLocalesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/locales", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/locales", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,9 +185,9 @@ func (s *platforms) IdeahubPlatformsPropertiesLocalesList(ctx context.Context, r
 // IdeahubPlatformsPropertiesTopicStatesPatch - Update a topic state resource.
 func (s *platforms) IdeahubPlatformsPropertiesTopicStatesPatch(ctx context.Context, request operations.IdeahubPlatformsPropertiesTopicStatesPatchRequest) (*operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleSearchIdeahubV1betaTopicState", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *platforms) IdeahubPlatformsPropertiesTopicStatesPatch(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

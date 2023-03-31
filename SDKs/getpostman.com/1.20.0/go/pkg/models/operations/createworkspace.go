@@ -40,10 +40,6 @@ type CreateWorkspaceRequestBody struct {
 	Workspace *CreateWorkspaceRequestBodyWorkspace `json:"workspace,omitempty"`
 }
 
-type CreateWorkspaceRequest struct {
-	Request *CreateWorkspaceRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateWorkspace400ApplicationJSONError struct {
 	Message *string `json:"message,omitempty"`
 	Name    *string `json:"name,omitempty"`

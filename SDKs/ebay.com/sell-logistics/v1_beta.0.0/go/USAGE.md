@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.CancelShipmentRequest{
-        Security: operations.CancelShipmentSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CancelShipmentPathParams{
-            ShipmentID: "corrupti",
-        },
+        ShipmentID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Shipment.CancelShipment(ctx, req)
+    res, err := s.Shipment.CancelShipment(ctx, req, operations.CancelShipmentSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

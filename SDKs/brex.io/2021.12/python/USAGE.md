@@ -4,29 +4,25 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CompanyAlternativeSearchRequest(
-    security=operations.CompanyAlternativeSearchSecurity(
-        user_key=shared.SchemeUserKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
+    request_body=operations.CompanyAlternativeSearchRequestBody(
+        address="5786 Little Streets",
+        name="vel",
+        number="error",
+        phone="1-542-909-2347 x8545",
+        url="nisi",
+        vat="recusandae",
     ),
-    path_params=operations.CompanyAlternativeSearchPathParams(
-        country="quia",
-    ),
-    request=operations.CompanyAlternativeSearchRequestBody(
-        address="velit",
-        name="sed",
-        number="occaecati",
-        phone="quidem",
-        url="maxime",
-        vat="eos",
-    ),
+    country="temporibus",
 )
     
-res = s.v1_company.company_alternative_search(req)
+res = s.v1_company.company_alternative_search(req, operations.CompanyAlternativeSearchSecurity(
+    user_key="YOUR_API_KEY_HERE",
+))
 
-if res.company_alternative_search_200_application_json_anies is not None:
+if res.company_alternative_search_200_application_json_objects is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

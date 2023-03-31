@@ -34,7 +34,7 @@ func newSms(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 
 // SendSms - Envoyer un sms
 // Envoi un sms vers un unique destinataire
-func (s *sms) SendSms(ctx context.Context, request operations.SendSmsRequest) (*operations.SendSmsResponse, error) {
+func (s *sms) SendSms(ctx context.Context, request shared.SmsUniqueRequest) (*operations.SendSmsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sms"
 
@@ -99,7 +99,7 @@ func (s *sms) SendSms(ctx context.Context, request operations.SendSmsRequest) (*
 
 // SendSmsMulti - Envoyer des SMS
 // Envoi de SMS vers 1 ou plusieurs destinataires
-func (s *sms) SendSmsMulti(ctx context.Context, request operations.SendSmsMultiRequest) (*operations.SendSmsMultiResponse, error) {
+func (s *sms) SendSmsMulti(ctx context.Context, request shared.SMSRequest) (*operations.SendSmsMultiResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/smsmulti"
 

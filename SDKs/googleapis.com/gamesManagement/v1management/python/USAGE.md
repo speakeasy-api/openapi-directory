@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GamesManagementAchievementsResetRequest(
-    security=operations.GamesManagementAchievementsResetSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GamesManagementAchievementsResetPathParams(
-        achievement_id="ullam",
-    ),
-    query_params=operations.GamesManagementAchievementsResetQueryParams(
-        dollar_xgafv="1",
-        access_token="perferendis",
-        alt="proto",
-        callback="et",
-        fields="ea",
-        key="rerum",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="occaecati",
-        upload_type="non",
-        upload_protocol="sint",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    achievement_id="distinctio",
+    alt="proto",
+    callback="unde",
+    fields_="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.achievements.games_management_achievements_reset(req)
+res = s.achievements.games_management_achievements_reset(req, operations.GamesManagementAchievementsResetSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.achievement_reset_response is not None:
     # handle response

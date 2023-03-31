@@ -37,14 +37,14 @@ func newSKUBindings(defaultClient, securityClient HTTPClient, serverURL, languag
 //	> ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/activate/{sellerId}/{skuSellerId}`.
 func (s *skuBindings) ActivateSKUBinding(ctx context.Context, request operations.ActivateSKUBindingRequest) (*operations.ActivateSKUBindingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/activate/{sellerId}/{skuSellerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/activate/{sellerId}/{skuSellerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -87,9 +87,9 @@ func (s *skuBindings) ActivateSKUBinding(ctx context.Context, request operations
 // ```
 func (s *skuBindings) Bindtoanothersku(ctx context.Context, request operations.BindtoanotherskuRequest) (*operations.BindtoanotherskuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -101,7 +101,7 @@ func (s *skuBindings) Bindtoanothersku(ctx context.Context, request operations.B
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -138,14 +138,14 @@ func (s *skuBindings) Bindtoanothersku(ctx context.Context, request operations.B
 //	> ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/changenotification/{skuId}`.
 func (s *skuBindings) ChangeNotification(ctx context.Context, request operations.ChangeNotificationRequest) (*operations.ChangeNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/changenotification/{skuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/changenotification/{skuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -186,14 +186,14 @@ func (s *skuBindings) ChangeNotification(ctx context.Context, request operations
 //	> ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}`.
 func (s *skuBindings) DeactivateSKUBinding(ctx context.Context, request operations.DeactivateSKUBindingRequest) (*operations.DeactivateSKUBindingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -226,14 +226,14 @@ func (s *skuBindings) DeactivateSKUBinding(ctx context.Context, request operatio
 //	> ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/remove/{sellerId}/{sellerSkuId}`.
 func (s *skuBindings) DeleteSKUsellerassociation(ctx context.Context, request operations.DeleteSKUsellerassociationRequest) (*operations.DeleteSKUsellerassociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/remove/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/remove/{sellerId}/{sellerSkuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -284,14 +284,14 @@ func (s *skuBindings) DeleteSKUsellerassociation(ctx context.Context, request op
 // ```
 func (s *skuBindings) GetSKUseller(ctx context.Context, request operations.GetSKUsellerRequest) (*operations.GetSKUsellerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -350,14 +350,14 @@ func (s *skuBindings) GetSKUseller(ctx context.Context, request operations.GetSK
 // ```
 func (s *skuBindings) GetallbySellerID(ctx context.Context, request operations.GetallbySellerIDRequest) (*operations.GetallbySellerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/list/bysellerId/{sellerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/list/bysellerId/{sellerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -415,14 +415,14 @@ func (s *skuBindings) GetallbySellerID(ctx context.Context, request operations.G
 // ```
 func (s *skuBindings) GetbySkuID(ctx context.Context, request operations.GetbySkuIDRequest) (*operations.GetbySkuIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalog/pvt/skusellers/{skuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/catalog/pvt/skusellers/{skuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -491,9 +491,9 @@ func (s *skuBindings) Getpagedadmin(ctx context.Context, request operations.Getp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -562,16 +562,16 @@ func (s *skuBindings) Getpagedadmin(ctx context.Context, request operations.Getp
 // ```
 func (s *skuBindings) GetpagedbySellerID(ctx context.Context, request operations.GetpagedbySellerIDRequest) (*operations.GetpagedbySellerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/paged/sellerid/{sellerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/paged/sellerid/{sellerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -617,7 +617,7 @@ func (s *skuBindings) InsertSKUBinding(ctx context.Context, request operations.I
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sku-binding/pvt/skuseller/insertion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -632,7 +632,7 @@ func (s *skuBindings) InsertSKUBinding(ctx context.Context, request operations.I
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -693,14 +693,14 @@ func (s *skuBindings) InsertSKUBinding(ctx context.Context, request operations.I
 // * 429: Failure due to too many requests.
 func (s *skuBindings) PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuID(ctx context.Context, request operations.PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDRequest) (*operations.PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/changenotification/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sku-binding/pvt/skuseller/changenotification/{sellerId}/{sellerSkuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

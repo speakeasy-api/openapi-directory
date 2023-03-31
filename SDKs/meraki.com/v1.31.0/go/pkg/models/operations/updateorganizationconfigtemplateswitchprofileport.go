@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationConfigTemplateSwitchProfilePortPathParams struct {
-	ConfigTemplateID string `pathParam:"style=simple,explode=false,name=configTemplateId"`
-	OrganizationID   string `pathParam:"style=simple,explode=false,name=organizationId"`
-	PortID           string `pathParam:"style=simple,explode=false,name=portId"`
-	ProfileID        string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
 // UpdateOrganizationConfigTemplateSwitchProfilePortRequestBodyAccessPolicyTypeEnum - The type of the access policy of the switch profile port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
 type UpdateOrganizationConfigTemplateSwitchProfilePortRequestBodyAccessPolicyTypeEnum string
 
@@ -183,8 +176,11 @@ type UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody struct {
 }
 
 type UpdateOrganizationConfigTemplateSwitchProfilePortRequest struct {
-	PathParams UpdateOrganizationConfigTemplateSwitchProfilePortPathParams
-	Request    *UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody `request:"mediaType=application/json"`
+	RequestBody      *UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody `request:"mediaType=application/json"`
+	ConfigTemplateID string                                                        `pathParam:"style=simple,explode=false,name=configTemplateId"`
+	OrganizationID   string                                                        `pathParam:"style=simple,explode=false,name=organizationId"`
+	PortID           string                                                        `pathParam:"style=simple,explode=false,name=portId"`
+	ProfileID        string                                                        `pathParam:"style=simple,explode=false,name=profileId"`
 }
 
 // UpdateOrganizationConfigTemplateSwitchProfilePort200ApplicationJSONAccessPolicyTypeEnum - The type of the access policy of the switch profile port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.

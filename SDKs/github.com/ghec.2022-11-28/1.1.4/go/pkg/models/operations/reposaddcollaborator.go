@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposAddCollaboratorPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type ReposAddCollaboratorRequestBody struct {
 	// The permission to grant the collaborator. **Only valid on organization-owned repositories.** We accept the following permissions to be set: `pull`, `triage`, `push`, `maintain`, `admin` and you can also specify a custom repository role name, if the owning organization has defined any.
 	Permission *string `json:"permission,omitempty"`
 }
 
 type ReposAddCollaboratorRequest struct {
-	PathParams ReposAddCollaboratorPathParams
-	Request    *ReposAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ReposAddCollaboratorResponse struct {

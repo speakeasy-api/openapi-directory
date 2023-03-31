@@ -8,17 +8,13 @@ import (
 )
 
 type GetProductModuleSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetProductModulePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Product Module. Vendor can assign this number when creating a Product Module or let NetLicensing generate one. Read-only after creation of the first Licensee for the Product.
-	ProductModuleNumber string `pathParam:"style=simple,explode=false,name=productModuleNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetProductModuleRequest struct {
-	PathParams GetProductModulePathParams
-	Security   GetProductModuleSecurity
+	// Unique number (across all Products of a Vendor) that identifies the Product Module. Vendor can assign this number when creating a Product Module or let NetLicensing generate one. Read-only after creation of the first Licensee for the Product.
+	ProductModuleNumber string `pathParam:"style=simple,explode=false,name=productModuleNumber"`
 }
 
 type GetProductModuleResponse struct {

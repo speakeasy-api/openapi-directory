@@ -12,20 +12,15 @@ var FetchDocumentServerList = []string{
 }
 
 type FetchDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchDocumentPathParams struct {
+type FetchDocumentRequest struct {
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Document resource to fetch. Can be the Document resource's `sid` or its `unique_name`.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchDocumentRequest struct {
-	PathParams FetchDocumentPathParams
-	Security   FetchDocumentSecurity
-	ServerURL  *string
 }
 
 type FetchDocumentResponse struct {

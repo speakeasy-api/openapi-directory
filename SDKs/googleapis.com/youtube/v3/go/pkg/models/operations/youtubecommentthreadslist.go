@@ -10,8 +10,8 @@ import (
 )
 
 type YoutubeCommentThreadsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // YoutubeCommentThreadsListModerationStatusEnum - Limits the returned comment threads to those with the specified moderation status. Not compatible with the 'id' filter. Valid values: published, heldForReview, likelySpam.
@@ -98,7 +98,7 @@ func (e *YoutubeCommentThreadsListTextFormatEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type YoutubeCommentThreadsListQueryParams struct {
+type YoutubeCommentThreadsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -142,11 +142,6 @@ type YoutubeCommentThreadsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Returns the comment threads of the specified video.
 	VideoID *string `queryParam:"style=form,explode=true,name=videoId"`
-}
-
-type YoutubeCommentThreadsListRequest struct {
-	QueryParams YoutubeCommentThreadsListQueryParams
-	Security    YoutubeCommentThreadsListSecurity
 }
 
 type YoutubeCommentThreadsListResponse struct {

@@ -10,23 +10,23 @@ import (
 )
 
 type FirebasehostingSitesVersionsFilesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingSitesVersionsFilesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingSitesVersionsFilesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingSitesVersionsFilesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingSitesVersionsFilesListSecurity struct {
@@ -34,11 +34,6 @@ type FirebasehostingSitesVersionsFilesListSecurity struct {
 	Option2 *FirebasehostingSitesVersionsFilesListSecurityOption2 `security:"option"`
 	Option3 *FirebasehostingSitesVersionsFilesListSecurityOption3 `security:"option"`
 	Option4 *FirebasehostingSitesVersionsFilesListSecurityOption4 `security:"option"`
-}
-
-type FirebasehostingSitesVersionsFilesListPathParams struct {
-	// Required. The version for which to list files, in the format: sites/SITE_ID /versions/VERSION_ID
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // FirebasehostingSitesVersionsFilesListStatusEnum -  The type of files that should be listed for the specified version.
@@ -68,7 +63,7 @@ func (e *FirebasehostingSitesVersionsFilesListStatusEnum) UnmarshalJSON(data []b
 	}
 }
 
-type FirebasehostingSitesVersionsFilesListQueryParams struct {
+type FirebasehostingSitesVersionsFilesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -87,6 +82,8 @@ type FirebasehostingSitesVersionsFilesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token from a previous call to `ListVersionFiles` that tells the server where to resume listing.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The version for which to list files, in the format: sites/SITE_ID /versions/VERSION_ID
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -97,12 +94,6 @@ type FirebasehostingSitesVersionsFilesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebasehostingSitesVersionsFilesListRequest struct {
-	PathParams  FirebasehostingSitesVersionsFilesListPathParams
-	QueryParams FirebasehostingSitesVersionsFilesListQueryParams
-	Security    FirebasehostingSitesVersionsFilesListSecurity
 }
 
 type FirebasehostingSitesVersionsFilesListResponse struct {

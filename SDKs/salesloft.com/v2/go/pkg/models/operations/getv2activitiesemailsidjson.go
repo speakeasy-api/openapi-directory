@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2ActivitiesEmailsIDJSONPathParams struct {
+type GetV2ActivitiesEmailsIDJSONRequest struct {
 	// Email ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2ActivitiesEmailsIDJSONRequest struct {
-	PathParams GetV2ActivitiesEmailsIDJSONPathParams
 }
 
 type GetV2ActivitiesEmailsIDJSONResponse struct {

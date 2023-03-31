@@ -33,7 +33,7 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudchannelProductsList - Lists the Products the reseller is authorized to sell. Possible error codes: * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-func (s *products) CloudchannelProductsList(ctx context.Context, request operations.CloudchannelProductsListRequest) (*operations.CloudchannelProductsListResponse, error) {
+func (s *products) CloudchannelProductsList(ctx context.Context, request operations.CloudchannelProductsListRequest, security operations.CloudchannelProductsListSecurity) (*operations.CloudchannelProductsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/products"
 
@@ -42,11 +42,11 @@ func (s *products) CloudchannelProductsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *products) CloudchannelProductsList(ctx context.Context, request operati
 }
 
 // CloudchannelProductsSkusList - Lists the SKUs for a product the reseller is authorized to sell. Possible error codes: * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-func (s *products) CloudchannelProductsSkusList(ctx context.Context, request operations.CloudchannelProductsSkusListRequest) (*operations.CloudchannelProductsSkusListResponse, error) {
+func (s *products) CloudchannelProductsSkusList(ctx context.Context, request operations.CloudchannelProductsSkusListRequest, security operations.CloudchannelProductsSkusListSecurity) (*operations.CloudchannelProductsSkusListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

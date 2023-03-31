@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AquifersReadPathParams struct {
+type AquifersReadRequest struct {
 	// A unique integer value identifying this aquifer.
 	AquiferID int64 `pathParam:"style=simple,explode=false,name=aquifer_id"`
-}
-
-type AquifersReadRequest struct {
-	PathParams AquifersReadPathParams
 }
 
 type AquifersReadResponse struct {

@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddMembersToCallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AddMembersToCallQueuePathParams struct {
-	// Unique Identifier of the Call Queue.
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddMembersToCallQueueApplicationJSONMembersUsers struct {
@@ -36,9 +30,9 @@ type AddMembersToCallQueueApplicationJSON struct {
 }
 
 type AddMembersToCallQueueRequest struct {
-	PathParams AddMembersToCallQueuePathParams
-	Request    *AddMembersToCallQueueApplicationJSON `request:"mediaType=application/json"`
-	Security   AddMembersToCallQueueSecurity
+	RequestBody *AddMembersToCallQueueApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Call Queue.
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type AddMembersToCallQueueResponse struct {

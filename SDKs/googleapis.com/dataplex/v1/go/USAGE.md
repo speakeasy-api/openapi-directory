@@ -14,67 +14,62 @@ func main() {
     s := sdk.New()
 
     req := operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest{
-        Security: operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DataplexProjectsLocationsDataAttributeBindingsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DataplexProjectsLocationsDataAttributeBindingsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            DataAttributeBindingID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-            ValidateOnly: false,
-        },
-        Request: &shared.GoogleCloudDataplexV1DataAttributeBindingInput{
+        DollarXgafv: "2",
+        GoogleCloudDataplexV1DataAttributeBindingInput: &shared.GoogleCloudDataplexV1DataAttributeBindingInput{
             Attributes: []string{
-                "magnam",
-                "debitis",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            Description: "ipsa",
-            DisplayName: "delectus",
-            Etag: "tempora",
+            Description: "nulla",
+            DisplayName: "corrupti",
+            Etag: "illum",
             Labels: map[string]string{
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
             Paths: []shared.GoogleCloudDataplexV1DataAttributeBindingPath{
                 shared.GoogleCloudDataplexV1DataAttributeBindingPath{
                     Attributes: []string{
-                        "nisi",
-                        "recusandae",
-                        "temporibus",
+                        "ipsa",
+                        "delectus",
+                        "tempora",
+                        "suscipit",
                     },
-                    Name: "ab",
+                    Name: "molestiae",
                 },
                 shared.GoogleCloudDataplexV1DataAttributeBindingPath{
                     Attributes: []string{
-                        "veritatis",
-                        "deserunt",
+                        "placeat",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
                     },
-                    Name: "perferendis",
+                    Name: "nisi",
                 },
             },
-            Resource: "ipsam",
+            Resource: "recusandae",
         },
+        AccessToken: "temporibus",
+        Alt: "json",
+        Callback: "quis",
+        DataAttributeBindingID: "veritatis",
+        Fields: "deserunt",
+        Key: "perferendis",
+        OauthToken: "ipsam",
+        Parent: "repellendus",
+        PrettyPrint: false,
+        QuotaUser: "sapiente",
+        UploadType: "quo",
+        UploadProtocol: "odit",
+        ValidateOnly: false,
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DataplexProjectsLocationsDataAttributeBindingsCreate(ctx, req)
+    res, err := s.Projects.DataplexProjectsLocationsDataAttributeBindingsCreate(ctx, req, operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

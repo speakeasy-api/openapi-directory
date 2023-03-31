@@ -39,10 +39,6 @@ type ConvertAccessTokenRequestBody struct {
 	TokenSecret string `json:"token_secret"`
 }
 
-type ConvertAccessTokenRequest struct {
-	Request ConvertAccessTokenRequestBody `request:"mediaType=application/vnd.vimeo.auth+json"`
-}
-
 type ConvertAccessTokenResponse struct {
 	ContentType string
 	StatusCode  int

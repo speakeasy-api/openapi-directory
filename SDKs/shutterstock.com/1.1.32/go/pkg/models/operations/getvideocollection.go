@@ -10,12 +10,7 @@ import (
 )
 
 type GetVideoCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetVideoCollectionPathParams struct {
-	// The ID of the collection to return
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetVideoCollectionEmbedEnum string
@@ -41,17 +36,13 @@ func (e *GetVideoCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideoCollectionQueryParams struct {
+type GetVideoCollectionRequest struct {
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed []GetVideoCollectionEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
+	// The ID of the collection to return
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Code to retrieve a shared collection
 	ShareCode *string `queryParam:"style=form,explode=true,name=share_code"`
-}
-
-type GetVideoCollectionRequest struct {
-	PathParams  GetVideoCollectionPathParams
-	QueryParams GetVideoCollectionQueryParams
-	Security    GetVideoCollectionSecurity
 }
 
 type GetVideoCollectionResponse struct {

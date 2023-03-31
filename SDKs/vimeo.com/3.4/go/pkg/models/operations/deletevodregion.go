@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteVodRegionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVodRegionPathParams struct {
+type DeleteVodRegionRequest struct {
 	// The country code.
 	Country string `pathParam:"style=simple,explode=false,name=country"`
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type DeleteVodRegionRequest struct {
-	PathParams DeleteVodRegionPathParams
-	Security   DeleteVodRegionSecurity
 }
 
 type DeleteVodRegionResponse struct {

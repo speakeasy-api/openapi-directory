@@ -17,5 +17,4 @@ pkg/models/shared/veteranstatusconfirmation.go
 pkg/models/shared/authorizationerror.go
 pkg/models/shared/apierror.go
 pkg/models/shared/veteranstatusrequest.go
-pkg/models/shared/security.go
 USAGE.md

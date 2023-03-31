@@ -8,20 +8,11 @@ import (
 )
 
 type DataprocProjectsRegionsJobsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsRegionsJobsDeletePathParams struct {
-	// Required. The job ID.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// Required. The ID of the Google Cloud Platform project that the job belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Required. The Dataproc region in which to handle the request.
-	Region string `pathParam:"style=simple,explode=false,name=region"`
-}
-
-type DataprocProjectsRegionsJobsDeleteQueryParams struct {
+type DataprocProjectsRegionsJobsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,24 +23,24 @@ type DataprocProjectsRegionsJobsDeleteQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The job ID.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the Google Cloud Platform project that the job belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The Dataproc region in which to handle the request.
+	Region string `pathParam:"style=simple,explode=false,name=region"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsRegionsJobsDeleteRequest struct {
-	PathParams  DataprocProjectsRegionsJobsDeletePathParams
-	QueryParams DataprocProjectsRegionsJobsDeleteQueryParams
-	Security    DataprocProjectsRegionsJobsDeleteSecurity
 }
 
 type DataprocProjectsRegionsJobsDeleteResponse struct {

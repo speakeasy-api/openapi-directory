@@ -8,19 +8,14 @@ import (
 )
 
 type ConversationsCloseSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ConversationsClosePathParams struct {
+type ConversationsCloseRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of conversation
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversationId"`
-}
-
-type ConversationsCloseRequest struct {
-	PathParams ConversationsClosePathParams
-	Security   ConversationsCloseSecurity
 }
 
 type ConversationsCloseResponse struct {

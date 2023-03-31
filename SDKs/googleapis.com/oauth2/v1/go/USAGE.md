@@ -14,17 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.Oauth2TokeninfoRequest{
-        QueryParams: operations.Oauth2TokeninfoQueryParams{
-            AccessToken: "corrupti",
-            Alt: "json",
-            Fields: "provident",
-            IDToken: "distinctio",
-            Key: "quibusdam",
-            OauthToken: "unde",
-            PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "corrupti",
-        },
+        AccessToken: "corrupti",
+        Alt: "json",
+        Fields: "provident",
+        IDToken: "distinctio",
+        Key: "quibusdam",
+        OauthToken: "unde",
+        PrettyPrint: false,
+        QuotaUser: "nulla",
+        UserIP: "corrupti",
     }
 
     ctx := context.Background()

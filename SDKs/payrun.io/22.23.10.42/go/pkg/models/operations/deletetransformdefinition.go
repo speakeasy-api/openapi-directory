@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteTransformDefinitionPathParams struct {
-	// The transform definition unique identifier.
-	TransformDefinitionID string `pathParam:"style=simple,explode=false,name=TransformDefinitionId"`
-}
-
-type DeleteTransformDefinitionHeaders struct {
+type DeleteTransformDefinitionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeleteTransformDefinitionRequest struct {
-	PathParams DeleteTransformDefinitionPathParams
-	Headers    DeleteTransformDefinitionHeaders
+	// The transform definition unique identifier.
+	TransformDefinitionID string `pathParam:"style=simple,explode=false,name=TransformDefinitionId"`
 }
 
 type DeleteTransformDefinitionResponse struct {

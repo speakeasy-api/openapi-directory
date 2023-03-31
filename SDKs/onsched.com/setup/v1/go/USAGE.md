@@ -13,29 +13,25 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
     req := operations.GetSetupV1AppointmentsRequest{
-        QueryParams: operations.GetSetupV1AppointmentsQueryParams{
-            BookedBy: "corrupti",
-            CalendarID: "provident",
-            CustomerID: "distinctio",
-            Email: "Leda_Stiedemann@hotmail.com",
-            EndDate: "2022-05-18T09:34:54.894Z",
-            Lastname: "Oberbrunner",
-            Limit: 384382,
-            LocationID: "iure",
-            Offset: 297534,
-            ResourceID: "debitis",
-            ServiceAllocationID: "ipsa",
-            ServiceID: "delectus",
-            StartDate: "2022-08-14T01:03:07.567Z",
-            Status: "molestiae",
-        },
+        BookedBy: "corrupti",
+        CalendarID: "provident",
+        CustomerID: "distinctio",
+        Email: "Leda_Stiedemann@hotmail.com",
+        EndDate: "2022-05-18T09:34:54.894Z",
+        Lastname: "Oberbrunner",
+        Limit: 384382,
+        LocationID: "iure",
+        Offset: 297534,
+        ResourceID: "debitis",
+        ServiceAllocationID: "ipsa",
+        ServiceID: "delectus",
+        StartDate: "2022-08-14T01:03:07.567Z",
+        Status: "molestiae",
     }
 
     ctx := context.Background()

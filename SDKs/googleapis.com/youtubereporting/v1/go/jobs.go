@@ -33,11 +33,11 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // YoutubereportingJobsCreate - Creates a job and returns it.
-func (s *jobs) YoutubereportingJobsCreate(ctx context.Context, request operations.YoutubereportingJobsCreateRequest) (*operations.YoutubereportingJobsCreateResponse, error) {
+func (s *jobs) YoutubereportingJobsCreate(ctx context.Context, request operations.YoutubereportingJobsCreateRequest, security operations.YoutubereportingJobsCreateSecurity) (*operations.YoutubereportingJobsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Job", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *jobs) YoutubereportingJobsCreate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *jobs) YoutubereportingJobsCreate(ctx context.Context, request operation
 }
 
 // YoutubereportingJobsDelete - Deletes a job.
-func (s *jobs) YoutubereportingJobsDelete(ctx context.Context, request operations.YoutubereportingJobsDeleteRequest) (*operations.YoutubereportingJobsDeleteResponse, error) {
+func (s *jobs) YoutubereportingJobsDelete(ctx context.Context, request operations.YoutubereportingJobsDeleteRequest, security operations.YoutubereportingJobsDeleteSecurity) (*operations.YoutubereportingJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *jobs) YoutubereportingJobsDelete(ctx context.Context, request operation
 }
 
 // YoutubereportingJobsGet - Gets a job.
-func (s *jobs) YoutubereportingJobsGet(ctx context.Context, request operations.YoutubereportingJobsGetRequest) (*operations.YoutubereportingJobsGetResponse, error) {
+func (s *jobs) YoutubereportingJobsGet(ctx context.Context, request operations.YoutubereportingJobsGetRequest, security operations.YoutubereportingJobsGetSecurity) (*operations.YoutubereportingJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *jobs) YoutubereportingJobsGet(ctx context.Context, request operations.Y
 }
 
 // YoutubereportingJobsList - Lists jobs.
-func (s *jobs) YoutubereportingJobsList(ctx context.Context, request operations.YoutubereportingJobsListRequest) (*operations.YoutubereportingJobsListResponse, error) {
+func (s *jobs) YoutubereportingJobsList(ctx context.Context, request operations.YoutubereportingJobsListRequest, security operations.YoutubereportingJobsListSecurity) (*operations.YoutubereportingJobsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/jobs"
 
@@ -193,11 +193,11 @@ func (s *jobs) YoutubereportingJobsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,20 +232,20 @@ func (s *jobs) YoutubereportingJobsList(ctx context.Context, request operations.
 }
 
 // YoutubereportingJobsReportsGet - Gets the metadata of a specific report.
-func (s *jobs) YoutubereportingJobsReportsGet(ctx context.Context, request operations.YoutubereportingJobsReportsGetRequest) (*operations.YoutubereportingJobsReportsGetResponse, error) {
+func (s *jobs) YoutubereportingJobsReportsGet(ctx context.Context, request operations.YoutubereportingJobsReportsGetRequest, security operations.YoutubereportingJobsReportsGetSecurity) (*operations.YoutubereportingJobsReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,20 +280,20 @@ func (s *jobs) YoutubereportingJobsReportsGet(ctx context.Context, request opera
 }
 
 // YoutubereportingJobsReportsList - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
-func (s *jobs) YoutubereportingJobsReportsList(ctx context.Context, request operations.YoutubereportingJobsReportsListRequest) (*operations.YoutubereportingJobsReportsListResponse, error) {
+func (s *jobs) YoutubereportingJobsReportsList(ctx context.Context, request operations.YoutubereportingJobsReportsListRequest, security operations.YoutubereportingJobsReportsListSecurity) (*operations.YoutubereportingJobsReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,13 +8,13 @@ import (
 )
 
 type FirebasehostingSitesReleasesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingSitesReleasesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingSitesReleasesCreateSecurity struct {
@@ -22,14 +22,10 @@ type FirebasehostingSitesReleasesCreateSecurity struct {
 	Option2 *FirebasehostingSitesReleasesCreateSecurityOption2 `security:"option"`
 }
 
-type FirebasehostingSitesReleasesCreatePathParams struct {
-	// Required. The site or channel to which the release belongs, in either of the following formats: - sites/SITE_ID - sites/SITE_ID/channels/CHANNEL_ID
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebasehostingSitesReleasesCreateQueryParams struct {
+type FirebasehostingSitesReleasesCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Release     *shared.Release   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type FirebasehostingSitesReleasesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The site or channel to which the release belongs, in either of the following formats: - sites/SITE_ID - sites/SITE_ID/channels/CHANNEL_ID
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type FirebasehostingSitesReleasesCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	//  The unique identifier for a version, in the format: sites/SITE_ID/versions/ VERSION_ID The SITE_ID in this version identifier must match the SITE_ID in the `parent` parameter. This query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
 	VersionName *string `queryParam:"style=form,explode=true,name=versionName"`
-}
-
-type FirebasehostingSitesReleasesCreateRequest struct {
-	PathParams  FirebasehostingSitesReleasesCreatePathParams
-	QueryParams FirebasehostingSitesReleasesCreateQueryParams
-	Request     *shared.Release `request:"mediaType=application/json"`
-	Security    FirebasehostingSitesReleasesCreateSecurity
 }
 
 type FirebasehostingSitesReleasesCreateResponse struct {

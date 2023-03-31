@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type PutConsumerV1AppointmentsIDConfirmPathParams struct {
+type PutConsumerV1AppointmentsIDConfirmRequest struct {
 	// appointment id to confirm
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1AppointmentsIDConfirmQueryParams struct {
 	// Use this parameter to undo the confirmed status
 	Undo *bool `queryParam:"style=form,explode=true,name=undo"`
-}
-
-type PutConsumerV1AppointmentsIDConfirmRequest struct {
-	PathParams  PutConsumerV1AppointmentsIDConfirmPathParams
-	QueryParams PutConsumerV1AppointmentsIDConfirmQueryParams
 }
 
 type PutConsumerV1AppointmentsIDConfirmResponse struct {

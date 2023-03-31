@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependabotListAlertsForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type DependabotListAlertsForRepoQueryParams struct {
+type DependabotListAlertsForRepoRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
@@ -35,12 +28,16 @@ type DependabotListAlertsForRepoQueryParams struct {
 	Last *int64 `queryParam:"style=form,explode=true,name=last"`
 	// A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
 	Manifest *string `queryParam:"style=form,explode=true,name=manifest"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
 	Package *string `queryParam:"style=form,explode=true,name=package"`
 	// **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
 	Scope *shared.DependabotAlertScopeEnum `queryParam:"style=form,explode=true,name=scope"`
 	// A comma-separated list of severities. If specified, only alerts with these severities will be returned.
@@ -55,11 +52,6 @@ type DependabotListAlertsForRepoQueryParams struct {
 	//
 	// Can be: `dismissed`, `fixed`, `open`
 	State *string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type DependabotListAlertsForRepoRequest struct {
-	PathParams  DependabotListAlertsForRepoPathParams
-	QueryParams DependabotListAlertsForRepoQueryParams
 }
 
 type DependabotListAlertsForRepoResponse struct {

@@ -38,7 +38,7 @@ func (s *giftCard) CreateGiftCard(ctx context.Context, request operations.Create
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/giftcards"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateGiftCardRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *giftCard) CreateGiftCard(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -93,14 +93,14 @@ func (s *giftCard) CreateGiftCard(ctx context.Context, request operations.Create
 // Returns associated data for a specified giftcardId.
 func (s *giftCard) GetGiftCardbyID(ctx context.Context, request operations.GetGiftCardbyIDRequest) (*operations.GetGiftCardbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -142,7 +142,7 @@ func (s *giftCard) GetGiftCardusingJSON(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/giftcards/_search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetGiftCardusingJSONRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -157,7 +157,7 @@ func (s *giftCard) GetGiftCardusingJSON(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

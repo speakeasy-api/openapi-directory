@@ -12,14 +12,8 @@ var CreateFieldServerList = []string{
 }
 
 type CreateFieldSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateFieldPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) resource associated with the new Field resource.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateFieldCreateFieldRequest struct {
@@ -30,10 +24,11 @@ type CreateFieldCreateFieldRequest struct {
 }
 
 type CreateFieldRequest struct {
-	PathParams CreateFieldPathParams
-	Request    *CreateFieldCreateFieldRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateFieldSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
+	AssistantSid string                         `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateFieldCreateFieldRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) resource associated with the new Field resource.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type CreateFieldResponse struct {

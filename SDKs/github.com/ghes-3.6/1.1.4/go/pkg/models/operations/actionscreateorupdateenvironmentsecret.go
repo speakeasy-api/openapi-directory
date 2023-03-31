@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type ActionsCreateOrUpdateEnvironmentSecretPathParams struct {
-	// The name of the environment.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
-	// The unique identifier of the repository.
-	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type ActionsCreateOrUpdateEnvironmentSecretRequestBody struct {
 	// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/enterprise-server@3.6/rest/reference/actions#get-an-environment-public-key) endpoint.
 	EncryptedValue string `json:"encrypted_value"`
@@ -23,8 +14,13 @@ type ActionsCreateOrUpdateEnvironmentSecretRequestBody struct {
 }
 
 type ActionsCreateOrUpdateEnvironmentSecretRequest struct {
-	PathParams ActionsCreateOrUpdateEnvironmentSecretPathParams
-	Request    ActionsCreateOrUpdateEnvironmentSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateOrUpdateEnvironmentSecretRequestBody `request:"mediaType=application/json"`
+	// The name of the environment.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
+	// The unique identifier of the repository.
+	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type ActionsCreateOrUpdateEnvironmentSecretResponse struct {

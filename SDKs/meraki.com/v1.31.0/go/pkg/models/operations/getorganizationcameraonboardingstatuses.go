@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetOrganizationCameraOnboardingStatusesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationCameraOnboardingStatusesQueryParams struct {
+type GetOrganizationCameraOnboardingStatusesRequest struct {
 	// A list of network IDs. The returned cameras will be filtered to only include these networks.
-	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
+	NetworkIds     []string `queryParam:"style=form,explode=false,name=networkIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// A list of serial numbers. The returned cameras will be filtered to only include these serials.
 	Serials []string `queryParam:"style=form,explode=false,name=serials"`
-}
-
-type GetOrganizationCameraOnboardingStatusesRequest struct {
-	PathParams  GetOrganizationCameraOnboardingStatusesPathParams
-	QueryParams GetOrganizationCameraOnboardingStatusesQueryParams
 }
 
 type GetOrganizationCameraOnboardingStatusesResponse struct {

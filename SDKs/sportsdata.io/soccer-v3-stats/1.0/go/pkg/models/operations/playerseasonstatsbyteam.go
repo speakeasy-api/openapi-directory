@@ -33,7 +33,7 @@ func (e *PlayerSeasonStatsByTeamFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayerSeasonStatsByTeamPathParams struct {
+type PlayerSeasonStatsByTeamRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerSeasonStatsByTeamFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Round ID. RoundIDs can be found in the Competition Hierarchy (League Hierarchy).
@@ -42,10 +42,6 @@ type PlayerSeasonStatsByTeamPathParams struct {
 	// Unique FantasyData Team ID.
 	// Example:<code>516</code>.
 	Team string `pathParam:"style=simple,explode=false,name=team"`
-}
-
-type PlayerSeasonStatsByTeamRequest struct {
-	PathParams PlayerSeasonStatsByTeamPathParams
 }
 
 type PlayerSeasonStatsByTeamResponse struct {

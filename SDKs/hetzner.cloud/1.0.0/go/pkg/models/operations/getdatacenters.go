@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDatacentersQueryParams struct {
+type GetDatacentersRequest struct {
 	// Can be used to filter Datacenters by their name. The response will only contain the Datacenter matching the specified name. When the name does not match the Datacenter name format, an `invalid_input` error is returned.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetDatacentersRequest struct {
-	QueryParams GetDatacentersQueryParams
 }
 
 type GetDatacenters200ApplicationJSONDatacentersLocation struct {

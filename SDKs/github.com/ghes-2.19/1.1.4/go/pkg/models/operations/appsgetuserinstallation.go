@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetUserInstallationPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type AppsGetUserInstallationHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
 type AppsGetUserInstallationRequest struct {
-	PathParams AppsGetUserInstallationPathParams
-	Headers    AppsGetUserInstallationHeaders
+	// This API is under preview and subject to change.
+	Accept   string `header:"style=simple,explode=false,name=accept"`
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type AppsGetUserInstallationResponse struct {

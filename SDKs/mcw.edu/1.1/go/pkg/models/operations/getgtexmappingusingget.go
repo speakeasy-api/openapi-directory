@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETGTEXMappingUsingGETPathParams struct {
+type GETGTEXMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETGTEXMappingUsingGETRequest struct {
-	PathParams GETGTEXMappingUsingGETPathParams
 }
 
 type GETGTEXMappingUsingGETResponse struct {

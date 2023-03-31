@@ -8,21 +8,16 @@ import (
 )
 
 type RedeemLoyaltyRewardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RedeemLoyaltyRewardPathParams struct {
-	// The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to redeem.
-	RewardID string `pathParam:"style=simple,explode=false,name=reward_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RedeemLoyaltyRewardRequest struct {
-	PathParams RedeemLoyaltyRewardPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.RedeemLoyaltyRewardRequest `request:"mediaType=application/json"`
-	Security RedeemLoyaltyRewardSecurity
+	RedeemLoyaltyRewardRequest shared.RedeemLoyaltyRewardRequest `request:"mediaType=application/json"`
+	// The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to redeem.
+	RewardID string `pathParam:"style=simple,explode=false,name=reward_id"`
 }
 
 type RedeemLoyaltyRewardResponse struct {

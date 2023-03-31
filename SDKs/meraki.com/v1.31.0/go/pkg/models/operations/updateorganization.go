@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationRequestBodyAPI - API-specific settings
 type UpdateOrganizationRequestBodyAPI struct {
 	// If true, enable the access to the Cisco Meraki Dashboard API
@@ -41,8 +37,8 @@ type UpdateOrganizationRequestBody struct {
 }
 
 type UpdateOrganizationRequest struct {
-	PathParams UpdateOrganizationPathParams
-	Request    *UpdateOrganizationRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                         `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // UpdateOrganization200ApplicationJSONAPI - API related settings

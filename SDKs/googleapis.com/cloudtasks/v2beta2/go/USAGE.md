@@ -14,48 +14,50 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudtasksAPIQueueUpdateRequest{
-        Security: operations.CloudtasksAPIQueueUpdateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.CloudtasksAPIQueueUpdateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            AppID: "quibusdam",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.HTTPBody{
-            ContentType: "suscipit",
-            Data: "iure",
+        DollarXgafv: "2",
+        HTTPBody: &shared.HTTPBody{
+            ContentType: "provident",
+            Data: "distinctio",
             Extensions: []map[string]interface{}{
                 map[string]interface{}{
-                    "ipsa": "delectus",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
+                },
+                map[string]interface{}{
+                    "iure": "magnam",
+                    "debitis": "ipsa",
+                },
+                map[string]interface{}{
                     "tempora": "suscipit",
                     "molestiae": "minus",
                     "placeat": "voluptatum",
+                    "iusto": "excepturi",
                 },
                 map[string]interface{}{
-                    "excepturi": "nisi",
                     "recusandae": "temporibus",
+                    "ab": "quis",
                 },
             },
         },
+        AccessToken: "veritatis",
+        Alt: "media",
+        AppID: "perferendis",
+        Callback: "ipsam",
+        Fields: "repellendus",
+        Key: "sapiente",
+        OauthToken: "quo",
+        PrettyPrint: false,
+        QuotaUser: "odit",
+        UploadType: "at",
+        UploadProtocol: "at",
     }
 
     ctx := context.Background()
-    res, err := s.API.CloudtasksAPIQueueUpdate(ctx, req)
+    res, err := s.API.CloudtasksAPIQueueUpdate(ctx, req, operations.CloudtasksAPIQueueUpdateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRearPortTemplatesReadPathParams struct {
+type DcimRearPortTemplatesReadRequest struct {
 	// A unique integer value identifying this rear port template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRearPortTemplatesReadRequest struct {
-	PathParams DcimRearPortTemplatesReadPathParams
 }
 
 type DcimRearPortTemplatesReadResponse struct {

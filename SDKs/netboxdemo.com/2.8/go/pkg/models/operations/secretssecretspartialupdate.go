@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretsSecretsPartialUpdatePathParams struct {
+type SecretsSecretsPartialUpdateRequest struct {
+	WritableSecretInput shared.WritableSecretInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this secret.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SecretsSecretsPartialUpdateRequest struct {
-	PathParams SecretsSecretsPartialUpdatePathParams
-	Request    shared.WritableSecretInput `request:"mediaType=application/json"`
 }
 
 type SecretsSecretsPartialUpdateResponse struct {

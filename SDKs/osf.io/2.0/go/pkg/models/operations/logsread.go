@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type LogsReadPathParams struct {
+type LogsReadRequest struct {
 	// The unique identifier of the log you wish to retrieve.
 	LogID string `pathParam:"style=simple,explode=false,name=log_id"`
-}
-
-type LogsReadRequest struct {
-	PathParams LogsReadPathParams
 }
 
 // LogsReadLogAttributesLogParams - The type of action performed on the OSF. See description for full list of possible actions.

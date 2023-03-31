@@ -8,17 +8,12 @@ import (
 )
 
 type AccountCtrlGetAccountServicesByAccountIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type AccountCtrlGetAccountServicesByAccountIDPathParams struct {
-	// The Vonage Business Cloud account ID
-	AccountID float64 `pathParam:"style=simple,explode=false,name=account_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type AccountCtrlGetAccountServicesByAccountIDRequest struct {
-	PathParams AccountCtrlGetAccountServicesByAccountIDPathParams
-	Security   AccountCtrlGetAccountServicesByAccountIDSecurity
+	// The Vonage Business Cloud account ID
+	AccountID float64 `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type AccountCtrlGetAccountServicesByAccountIDResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsDeleteLegacyPathParams struct {
-	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
-}
-
 type ReactionsDeleteLegacyRequest struct {
-	PathParams ReactionsDeleteLegacyPathParams
+	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
 }
 
 // ReactionsDeleteLegacy415ApplicationJSON - Preview header missing

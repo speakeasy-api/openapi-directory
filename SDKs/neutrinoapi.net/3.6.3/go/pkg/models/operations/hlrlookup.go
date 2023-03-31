@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type HLRLookupQueryParams struct {
+type HLRLookupRequest struct {
 	// ISO 2-letter country code, assume numbers are based in this country. <br>If not set numbers are assumed to be in international format (with or without the leading + sign)
 	CountryCode *string `queryParam:"style=form,explode=true,name=country-code"`
 	// A phone number
 	Number string `queryParam:"style=form,explode=true,name=number"`
-}
-
-type HLRLookupRequest struct {
-	QueryParams HLRLookupQueryParams
 }
 
 type HLRLookupResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCreditSessionPathParams struct {
+type UpdateCreditSessionRequest struct {
+	// session_request
+	SessionInput shared.SessionInput `request:"mediaType=application/json"`
 	// session_id
 	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
-}
-
-type UpdateCreditSessionRequest struct {
-	PathParams UpdateCreditSessionPathParams
-	// session_request
-	Request shared.SessionInput `request:"mediaType=application/json"`
 }
 
 type UpdateCreditSessionResponse struct {

@@ -32,11 +32,11 @@ func newOnDemandVideos(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // AddVideoToVod - Add a video to an On Demand page
-func (s *onDemandVideos) AddVideoToVod(ctx context.Context, request operations.AddVideoToVodRequest) (*operations.AddVideoToVodResponse, error) {
+func (s *onDemandVideos) AddVideoToVod(ctx context.Context, request operations.AddVideoToVodRequest, security operations.AddVideoToVodSecurity) (*operations.AddVideoToVodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *onDemandVideos) AddVideoToVod(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,16 +98,16 @@ func (s *onDemandVideos) AddVideoToVod(ctx context.Context, request operations.A
 }
 
 // DeleteVideoFromVod - Remove a video from an On Demand page
-func (s *onDemandVideos) DeleteVideoFromVod(ctx context.Context, request operations.DeleteVideoFromVodRequest) (*operations.DeleteVideoFromVodResponse, error) {
+func (s *onDemandVideos) DeleteVideoFromVod(ctx context.Context, request operations.DeleteVideoFromVodRequest, security operations.DeleteVideoFromVodSecurity) (*operations.DeleteVideoFromVodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,7 +145,7 @@ func (s *onDemandVideos) DeleteVideoFromVod(ctx context.Context, request operati
 // GetVodVideo - Get a specific video on an On Demand page
 func (s *onDemandVideos) GetVodVideo(ctx context.Context, request operations.GetVodVideoRequest) (*operations.GetVodVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,14 +189,14 @@ func (s *onDemandVideos) GetVodVideo(ctx context.Context, request operations.Get
 // GetVodVideos - Get all the videos on an On Demand page
 func (s *onDemandVideos) GetVodVideos(ctx context.Context, request operations.GetVodVideosRequest) (*operations.GetVodVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

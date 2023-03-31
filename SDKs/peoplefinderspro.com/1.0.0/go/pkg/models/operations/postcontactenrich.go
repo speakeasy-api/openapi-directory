@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PostContactEnrichHeaders struct {
-	// e.g. Key
-	GalaxyApName *string `header:"style=simple,explode=false,name=galaxy-ap-name"`
-	// e.g. Secret
-	GalaxyApPassword *string `header:"style=simple,explode=false,name=galaxy-ap-password"`
-	// e.g. DevAPIContactEnrich
-	GalaxySearchType *string `header:"style=simple,explode=false,name=galaxy-search-type"`
-}
-
 type PostContactEnrichRequestBodyAddress struct {
 	AddressLine1 *string `json:"addressLine1,omitempty"`
 	AddressLine2 *string `json:"addressLine2,omitempty"`
@@ -32,8 +23,13 @@ type PostContactEnrichRequestBody struct {
 }
 
 type PostContactEnrichRequest struct {
-	Headers PostContactEnrichHeaders
-	Request *PostContactEnrichRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostContactEnrichRequestBody `request:"mediaType=application/json"`
+	// e.g. Key
+	GalaxyApName *string `header:"style=simple,explode=false,name=galaxy-ap-name"`
+	// e.g. Secret
+	GalaxyApPassword *string `header:"style=simple,explode=false,name=galaxy-ap-password"`
+	// e.g. DevAPIContactEnrich
+	GalaxySearchType *string `header:"style=simple,explode=false,name=galaxy-search-type"`
 }
 
 type PostContactEnrichResponse struct {

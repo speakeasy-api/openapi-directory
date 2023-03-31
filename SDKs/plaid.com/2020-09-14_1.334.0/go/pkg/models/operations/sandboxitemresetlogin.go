@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxItemResetLoginRequest struct {
-	Request shared.SandboxItemResetLoginRequest `request:"mediaType=application/json"`
-}
 
 type SandboxItemResetLoginResponse struct {
 	ContentType string

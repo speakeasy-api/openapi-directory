@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StatusGetQueryParams struct {
+type StatusGetRequest struct {
 	// respose of POST request
 	MessageID *string `queryParam:"style=form,explode=true,name=messageId"`
-}
-
-type StatusGetRequest struct {
-	QueryParams StatusGetQueryParams
 }
 
 type StatusGetResponse struct {

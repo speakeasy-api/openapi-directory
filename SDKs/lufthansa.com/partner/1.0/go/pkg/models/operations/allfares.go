@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AllFaresSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AllFaresQueryParams struct {
+type AllFaresRequest struct {
+	// Mandatory http header:  application/xml or application/json
+	Accept *string `header:"style=simple,explode=false,name=Accept"`
 	// Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: "", "economy", "premium economy", "business", "first")
 	CabinClass *string `queryParam:"style=form,explode=true,name=cabin-class"`
 	// Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').
@@ -30,17 +31,6 @@ type AllFaresQueryParams struct {
 	TravelDate string `queryParam:"style=form,explode=true,name=travel-date"`
 	// Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.
 	Travelers *string `queryParam:"style=form,explode=true,name=travelers"`
-}
-
-type AllFaresHeaders struct {
-	// Mandatory http header:  application/xml or application/json
-	Accept *string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type AllFaresRequest struct {
-	QueryParams AllFaresQueryParams
-	Headers     AllFaresHeaders
-	Security    AllFaresSecurity
 }
 
 type AllFaresResponse struct {

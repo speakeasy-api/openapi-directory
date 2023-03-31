@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV2CddriveFilesFileIDContentSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2CddriveFilesFileIDContentPathParams struct {
-	// The ID of the file to download.
-	FileID int64 `pathParam:"style=simple,explode=false,name=file-id"`
-}
-
-type GetAPIV2CddriveFilesFileIDContentHeaders struct {
-	// Can be used to limit the range of bytes retrieved. Only a single byte range in the format ```bytes={start-range}-{end-range}``` is supported.
-	Range *string `header:"style=simple,explode=false,name=Range"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2CddriveFilesFileIDContentRequest struct {
-	PathParams GetAPIV2CddriveFilesFileIDContentPathParams
-	Headers    GetAPIV2CddriveFilesFileIDContentHeaders
-	Security   GetAPIV2CddriveFilesFileIDContentSecurity
+	// Can be used to limit the range of bytes retrieved. Only a single byte range in the format ```bytes={start-range}-{end-range}``` is supported.
+	Range *string `header:"style=simple,explode=false,name=Range"`
+	// The ID of the file to download.
+	FileID int64 `pathParam:"style=simple,explode=false,name=file-id"`
 }
 
 type GetAPIV2CddriveFilesFileIDContentResponse struct {

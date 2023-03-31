@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddLogPathParams struct {
-	// Order ID is a unique code that identifies an order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-}
-
-type AddLogHeaders struct {
+type AddLogRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Accept        string               `header:"style=simple,explode=false,name=Accept"`
+	AddLogRequest shared.AddLogRequest `request:"mediaType=application/json"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type AddLogRequest struct {
-	PathParams AddLogPathParams
-	Headers    AddLogHeaders
-	Request    shared.AddLogRequest `request:"mediaType=application/json"`
+	// Order ID is a unique code that identifies an order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 type AddLogResponse struct {

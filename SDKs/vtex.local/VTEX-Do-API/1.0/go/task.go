@@ -35,9 +35,9 @@ func newTask(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Adds a comment to a given task, filtering by `taskId`.
 func (s *task) AddComment(ctx context.Context, request operations.AddCommentRequest) (*operations.AddCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddCommentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *task) AddComment(ctx context.Context, request operations.AddCommentRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -92,9 +92,9 @@ func (s *task) AddComment(ctx context.Context, request operations.AddCommentRequ
 // Updates a given task's status, for example, filtering by `taskId`.
 func (s *task) EditTask(ctx context.Context, request operations.EditTaskRequest) (*operations.EditTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditTaskRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -109,7 +109,7 @@ func (s *task) EditTask(ctx context.Context, request operations.EditTaskRequest)
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -149,14 +149,14 @@ func (s *task) EditTask(ctx context.Context, request operations.EditTaskRequest)
 // Retrieves a given task, filtering by `taskId`.
 func (s *task) GetTask(ctx context.Context, request operations.GetTaskRequest) (*operations.GetTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -211,9 +211,9 @@ func (s *task) Listtasksbyassignee(ctx context.Context, request operations.Listt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -257,7 +257,7 @@ func (s *task) NewTask(ctx context.Context, request operations.NewTaskRequest) (
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tasks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NewTaskRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -272,7 +272,7 @@ func (s *task) NewTask(ctx context.Context, request operations.NewTaskRequest) (
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

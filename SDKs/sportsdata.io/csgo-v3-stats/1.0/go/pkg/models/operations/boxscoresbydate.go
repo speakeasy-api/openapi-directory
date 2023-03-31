@@ -33,16 +33,12 @@ func (e *BoxScoresByDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BoxScoresByDatePathParams struct {
+type BoxScoresByDateRequest struct {
 	// The date of the game(s).
 	// <br>Examples: <code>2018-01-13</code>, <code>2018-06-13</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BoxScoresByDateFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type BoxScoresByDateRequest struct {
-	PathParams BoxScoresByDatePathParams
 }
 
 type BoxScoresByDateResponse struct {

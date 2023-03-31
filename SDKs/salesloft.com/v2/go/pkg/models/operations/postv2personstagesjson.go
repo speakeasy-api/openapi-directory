@@ -11,10 +11,6 @@ type PostV2PersonStagesJSONRequestBody struct {
 	Name string `form:"name=name"`
 }
 
-type PostV2PersonStagesJSONRequest struct {
-	Request PostV2PersonStagesJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2PersonStagesJSONResponse struct {
 	Body        []byte
 	ContentType string

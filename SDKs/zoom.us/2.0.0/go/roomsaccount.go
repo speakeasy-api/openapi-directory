@@ -41,7 +41,7 @@ func newRoomsAccount(defaultClient, securityClient HTTPClient, serverURL, langua
 // **Scopes:** `room:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *roomsAccount) GetZRAccountProfile(ctx context.Context, request operations.GetZRAccountProfileRequest) (*operations.GetZRAccountProfileResponse, error) {
+func (s *roomsAccount) GetZRAccountProfile(ctx context.Context) (*operations.GetZRAccountProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms/account_profile"
 
@@ -50,7 +50,7 @@ func (s *roomsAccount) GetZRAccountProfile(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *roomsAccount) GetZRAccountProfile(ctx context.Context, request operatio
 // **Scopes:** `room:read:admin`<br><br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *roomsAccount) GetZRAccountSettings(ctx context.Context, request operations.GetZRAccountSettingsRequest) (*operations.GetZRAccountSettingsResponse, error) {
+func (s *roomsAccount) GetZRAccountSettings(ctx context.Context, request operations.GetZRAccountSettingsRequest, security operations.GetZRAccountSettingsSecurity) (*operations.GetZRAccountSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms/account_settings"
 
@@ -109,11 +109,11 @@ func (s *roomsAccount) GetZRAccountSettings(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -164,7 +164,7 @@ func (s *roomsAccount) GetZRAccountSettings(ctx context.Context, request operati
 // **Scopes:** `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *roomsAccount) UpdateZRAccProfile(ctx context.Context, request operations.UpdateZRAccProfileRequest) (*operations.UpdateZRAccProfileResponse, error) {
+func (s *roomsAccount) UpdateZRAccProfile(ctx context.Context, request operations.UpdateZRAccProfileApplicationJSON, security operations.UpdateZRAccProfileSecurity) (*operations.UpdateZRAccProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms/account_profile"
 
@@ -180,7 +180,7 @@ func (s *roomsAccount) UpdateZRAccProfile(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,11 +230,11 @@ func (s *roomsAccount) UpdateZRAccProfile(ctx context.Context, request operation
 // **Scopes:** `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *roomsAccount) UpdateZoomRoomAccSettings(ctx context.Context, request operations.UpdateZoomRoomAccSettingsRequest) (*operations.UpdateZoomRoomAccSettingsResponse, error) {
+func (s *roomsAccount) UpdateZoomRoomAccSettings(ctx context.Context, request operations.UpdateZoomRoomAccSettingsRequest, security operations.UpdateZoomRoomAccSettingsSecurity) (*operations.UpdateZoomRoomAccSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms/account_settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -246,11 +246,11 @@ func (s *roomsAccount) UpdateZoomRoomAccSettings(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

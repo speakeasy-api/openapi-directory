@@ -10,8 +10,8 @@ import (
 )
 
 type GetSfxListDetailsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetSfxListDetailsLibraryEnum - Which library to fetch from
@@ -65,7 +65,7 @@ func (e *GetSfxListDetailsViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSfxListDetailsQueryParams struct {
+type GetSfxListDetailsRequest struct {
 	// One or more sound effect IDs
 	ID []string `queryParam:"style=form,explode=true,name=id"`
 	// Language for the keywords and categories in the response
@@ -76,11 +76,6 @@ type GetSfxListDetailsQueryParams struct {
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 	// Amount of detail to render in the response
 	View *GetSfxListDetailsViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetSfxListDetailsRequest struct {
-	QueryParams GetSfxListDetailsQueryParams
-	Security    GetSfxListDetailsSecurity
 }
 
 type GetSfxListDetailsResponse struct {

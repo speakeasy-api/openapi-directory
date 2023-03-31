@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateInlineScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum - インラインスクリプトを出力するページ。
@@ -87,12 +86,6 @@ type CreateInlineScriptTagRequestBodyInlineScriptTag struct {
 // CreateInlineScriptTagRequestBody - 作成するインラインスクリプトタグの情報
 type CreateInlineScriptTagRequestBody struct {
 	InlineScriptTag *CreateInlineScriptTagRequestBodyInlineScriptTag `json:"inline_script_tag,omitempty"`
-}
-
-type CreateInlineScriptTagRequest struct {
-	// 作成するインラインスクリプトタグの情報
-	Request  *CreateInlineScriptTagRequestBody `request:"mediaType=application/json"`
-	Security CreateInlineScriptTagSecurity
 }
 
 // CreateInlineScriptTag201ApplicationJSONInlineScriptTagDisplayScopeEnum - インラインスクリプトを出力するページ。

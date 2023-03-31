@@ -12,18 +12,13 @@ var FetchAppServerList = []string{
 }
 
 type FetchAppSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAppPathParams struct {
-	// A 34-character string that uniquely identifies this App.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAppRequest struct {
-	PathParams FetchAppPathParams
-	Security   FetchAppSecurity
-	ServerURL  *string
+	// A 34-character string that uniquely identifies this App.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchAppResponse struct {

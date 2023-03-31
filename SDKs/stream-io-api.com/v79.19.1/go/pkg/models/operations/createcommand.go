@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCommandRequest struct {
-	// Command
-	Request shared.CreateCommandRequest `request:"mediaType=application/json"`
-}
-
 type CreateCommandResponse struct {
 	// Bad request
 	APIError    *shared.APIError

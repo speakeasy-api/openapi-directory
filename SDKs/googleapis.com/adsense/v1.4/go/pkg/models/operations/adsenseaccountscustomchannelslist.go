@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsCustomchannelsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsCustomchannelsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsCustomchannelsListSecurity struct {
@@ -22,14 +22,11 @@ type AdsenseAccountsCustomchannelsListSecurity struct {
 	Option2 *AdsenseAccountsCustomchannelsListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsCustomchannelsListPathParams struct {
+type AdsenseAccountsCustomchannelsListRequest struct {
 	// Account to which the ad client belongs.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Ad client for which to list custom channels.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-}
-
-type AdsenseAccountsCustomchannelsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -48,12 +45,6 @@ type AdsenseAccountsCustomchannelsListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsCustomchannelsListRequest struct {
-	PathParams  AdsenseAccountsCustomchannelsListPathParams
-	QueryParams AdsenseAccountsCustomchannelsListQueryParams
-	Security    AdsenseAccountsCustomchannelsListSecurity
 }
 
 type AdsenseAccountsCustomchannelsListResponse struct {

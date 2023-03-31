@@ -33,7 +33,7 @@ func newResellernotify(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // ResellerResellernotifyGetwatchdetails - Returns all the details of the watch corresponding to the reseller.
-func (s *resellernotify) ResellerResellernotifyGetwatchdetails(ctx context.Context, request operations.ResellerResellernotifyGetwatchdetailsRequest) (*operations.ResellerResellernotifyGetwatchdetailsResponse, error) {
+func (s *resellernotify) ResellerResellernotifyGetwatchdetails(ctx context.Context, request operations.ResellerResellernotifyGetwatchdetailsRequest, security operations.ResellerResellernotifyGetwatchdetailsSecurity) (*operations.ResellerResellernotifyGetwatchdetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/reseller/v1/resellernotify/getwatchdetails"
 
@@ -42,11 +42,11 @@ func (s *resellernotify) ResellerResellernotifyGetwatchdetails(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *resellernotify) ResellerResellernotifyGetwatchdetails(ctx context.Conte
 }
 
 // ResellerResellernotifyRegister - Registers a Reseller for receiving notifications.
-func (s *resellernotify) ResellerResellernotifyRegister(ctx context.Context, request operations.ResellerResellernotifyRegisterRequest) (*operations.ResellerResellernotifyRegisterResponse, error) {
+func (s *resellernotify) ResellerResellernotifyRegister(ctx context.Context, request operations.ResellerResellernotifyRegisterRequest, security operations.ResellerResellernotifyRegisterSecurity) (*operations.ResellerResellernotifyRegisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/reseller/v1/resellernotify/register"
 
@@ -90,11 +90,11 @@ func (s *resellernotify) ResellerResellernotifyRegister(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *resellernotify) ResellerResellernotifyRegister(ctx context.Context, req
 }
 
 // ResellerResellernotifyUnregister - Unregisters a Reseller for receiving notifications.
-func (s *resellernotify) ResellerResellernotifyUnregister(ctx context.Context, request operations.ResellerResellernotifyUnregisterRequest) (*operations.ResellerResellernotifyUnregisterResponse, error) {
+func (s *resellernotify) ResellerResellernotifyUnregister(ctx context.Context, request operations.ResellerResellernotifyUnregisterRequest, security operations.ResellerResellernotifyUnregisterSecurity) (*operations.ResellerResellernotifyUnregisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/reseller/v1/resellernotify/unregister"
 
@@ -138,11 +138,11 @@ func (s *resellernotify) ResellerResellernotifyUnregister(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

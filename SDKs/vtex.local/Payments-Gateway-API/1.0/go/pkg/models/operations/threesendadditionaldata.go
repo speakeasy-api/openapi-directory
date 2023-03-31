@@ -6,26 +6,18 @@ import (
 	"net/http"
 )
 
-type ThreeSendAdditionalDataPathParams struct {
-	// Transaction identification.
-	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type ThreeSendAdditionalDataHeaders struct {
+type ThreeSendAdditionalDataRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	ContentType string          `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody [][]interface{} `request:"mediaType=application/json"`
 	// The AppKey configured by the merchant (optional configuration)
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type ThreeSendAdditionalDataRequest struct {
-	PathParams ThreeSendAdditionalDataPathParams
-	Headers    ThreeSendAdditionalDataHeaders
-	Request    [][]interface{} `request:"mediaType=application/json"`
+	// Transaction identification.
+	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
 }
 
 type ThreeSendAdditionalDataResponse struct {

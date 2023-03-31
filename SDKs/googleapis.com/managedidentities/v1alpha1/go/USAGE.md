@@ -14,51 +14,45 @@ func main() {
     s := sdk.New()
 
     req := operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
-        Security: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AttachTrustRequest{
+        DollarXgafv: "2",
+        AttachTrustRequest: &shared.AttachTrustRequest{
             Trust: &shared.Trust{
-                CreateTime: "suscipit",
-                LastKnownTrustConnectedHeartbeatTime: "iure",
+                CreateTime: "provident",
+                LastKnownTrustConnectedHeartbeatTime: "distinctio",
                 SelectiveAuthentication: false,
-                State: "CREATING",
-                StateDescription: "debitis",
+                State: "DISCONNECTED",
+                StateDescription: "unde",
                 TargetDNSIPAddresses: []string{
-                    "delectus",
+                    "corrupti",
+                    "illum",
+                    "vel",
+                    "error",
                 },
-                TargetDomainName: "tempora",
+                TargetDomainName: "deserunt",
                 TrustDirection: "INBOUND",
-                TrustHandshakeSecret: "molestiae",
-                TrustType: "EXTERNAL",
-                UpdateTime: "placeat",
+                TrustHandshakeSecret: "iure",
+                TrustType: "TRUST_TYPE_UNSPECIFIED",
+                UpdateTime: "debitis",
             },
         },
+        AccessToken: "ipsa",
+        Alt: "proto",
+        Callback: "tempora",
+        Fields: "suscipit",
+        Key: "molestiae",
+        Name: "minus",
+        OauthToken: "placeat",
+        PrettyPrint: false,
+        QuotaUser: "voluptatum",
+        UploadType: "iusto",
+        UploadProtocol: "excepturi",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req)
+    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

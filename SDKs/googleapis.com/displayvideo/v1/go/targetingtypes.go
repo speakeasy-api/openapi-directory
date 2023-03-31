@@ -32,20 +32,20 @@ func newTargetingTypes(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DisplayvideoTargetingTypesTargetingOptionsGet - Gets a single targeting option.
-func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest) (*operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse, error) {
+func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest, security operations.DisplayvideoTargetingTypesTargetingOptionsGetSecurity) (*operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions/{targetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions/{targetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsGet(ctx conte
 }
 
 // DisplayvideoTargetingTypesTargetingOptionsList - Lists targeting options of a given type.
-func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsList(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsListRequest) (*operations.DisplayvideoTargetingTypesTargetingOptionsListResponse, error) {
+func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsList(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsListRequest, security operations.DisplayvideoTargetingTypesTargetingOptionsListSecurity) (*operations.DisplayvideoTargetingTypesTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsList(ctx cont
 }
 
 // DisplayvideoTargetingTypesTargetingOptionsSearch - Searches for targeting options of a given type based on the given search terms.
-func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsSearch(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest) (*operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse, error) {
+func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsSearch(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest, security operations.DisplayvideoTargetingTypesTargetingOptionsSearchSecurity) (*operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions:search", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchTargetingOptionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsSearch(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

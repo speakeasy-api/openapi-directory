@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAFileRequest struct {
-	Request shared.CreateAFileParameters `request:"mediaType=multipart/form-data"`
-}
-
 type CreateAFileDefaultApplicationJSON13StatusEnum string
 
 const (

@@ -4,47 +4,40 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest(
-    security=operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams(
-        name="esse",
-    ),
-    query_params=operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams(
-        dollar_xgafv="1",
-        access_token="rerum",
-        alt="json",
-        callback="voluptatem",
-        fields="harum",
-        key="qui",
-        oauth_token="quos",
-        pretty_print=True,
-        quota_user="sunt",
-        upload_type="maiores",
-        upload_protocol="et",
-    ),
-    request=shared.GenerateAccessTokenRequest(
+    dollar_xgafv="2",
+    generate_access_token_request=shared.GenerateAccessTokenRequest(
         delegates=[
-            "eligendi",
-            "tenetur",
-            "et",
+            "distinctio",
+            "quibusdam",
+            "unde",
         ],
-        lifetime="consectetur",
+        lifetime="nulla",
         scope=[
-            "quas",
-            "consequuntur",
+            "illum",
+            "vel",
+            "error",
         ],
     ),
+    access_token="deserunt",
+    alt="media",
+    callback="iure",
+    fields_="magnam",
+    key="debitis",
+    name="ipsa",
+    oauth_token="delectus",
+    pretty_print=False,
+    quota_user="tempora",
+    upload_type="suscipit",
+    upload_protocol="molestiae",
 )
     
-res = s.projects.iamcredentials_projects_service_accounts_generate_access_token(req)
+res = s.projects.iamcredentials_projects_service_accounts_generate_access_token(req, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.generate_access_token_response is not None:
     # handle response

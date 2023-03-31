@@ -16,11 +16,6 @@ type PostConnectorsRequestBody struct {
 	Type          *string `json:"type,omitempty"`
 }
 
-type PostConnectorsRequest struct {
-	// Include Connector properties to create here
-	Request PostConnectorsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostConnectors200ApplicationJSON - Returns the new connector object
 type PostConnectors200ApplicationJSON struct {
 	Message *string                `json:"message,omitempty"`

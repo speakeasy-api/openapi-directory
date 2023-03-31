@@ -6,20 +6,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetAccountCloudRecordingSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAccountCloudRecordingPathParams struct {
+type GetAccountCloudRecordingRequest struct {
 	// Unique identifier of the account.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type GetAccountCloudRecordingQueryParams struct {
 	// The start date in UTC for the monthly range for which you would like to retrieve recordings. The maximum range can be a month. If no value is provided for this field, the default will be current date. For example, if you make the API request on June 30, 2020, without providing the “from” and “to” parameters, by default the value of 'from' field will be “2020-06-30” and the value of the 'to' field will be “2020-07-01”.
 	From *time.Time `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -28,12 +24,6 @@ type GetAccountCloudRecordingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The end date for the monthly range for which you would like to retrieve recordings. The maximum range can be a month.
 	To *time.Time `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetAccountCloudRecordingRequest struct {
-	PathParams  GetAccountCloudRecordingPathParams
-	QueryParams GetAccountCloudRecordingQueryParams
-	Security    GetAccountCloudRecordingSecurity
 }
 
 // GetAccountCloudRecording200ApplicationXMLMeetingsRecordingFilesFileTypeEnum - The recording file type. The value of this field could be one of the following:<br>

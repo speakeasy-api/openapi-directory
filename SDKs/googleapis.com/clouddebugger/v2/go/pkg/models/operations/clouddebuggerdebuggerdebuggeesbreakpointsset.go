@@ -10,23 +10,18 @@ import (
 )
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity struct {
 	Option1 *ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption1 `security:"option"`
 	Option2 *ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurityOption2 `security:"option"`
-}
-
-type ClouddebuggerDebuggerDebuggeesBreakpointsSetPathParams struct {
-	// Required. ID of the debuggee where the breakpoint is to be set.
-	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
 }
 
 // ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum - The canary option set by the user upon setting breakpoint.
@@ -56,9 +51,10 @@ func (e *ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum) Unmarshal
 	}
 }
 
-type ClouddebuggerDebuggerDebuggeesBreakpointsSetQueryParams struct {
+type ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Breakpoint  *shared.Breakpoint `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -69,6 +65,8 @@ type ClouddebuggerDebuggerDebuggeesBreakpointsSetQueryParams struct {
 	CanaryOption *ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum `queryParam:"style=form,explode=true,name=canaryOption"`
 	// Required. The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
 	ClientVersion *string `queryParam:"style=form,explode=true,name=clientVersion"`
+	// Required. ID of the debuggee where the breakpoint is to be set.
+	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -83,13 +81,6 @@ type ClouddebuggerDebuggerDebuggeesBreakpointsSetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest struct {
-	PathParams  ClouddebuggerDebuggerDebuggeesBreakpointsSetPathParams
-	QueryParams ClouddebuggerDebuggerDebuggeesBreakpointsSetQueryParams
-	Request     *shared.Breakpoint `request:"mediaType=application/json"`
-	Security    ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse struct {

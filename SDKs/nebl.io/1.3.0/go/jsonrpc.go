@@ -34,10 +34,20 @@ func newJSONRPC(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // JSONRPC - Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
 // Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from a browser due to CORS restrictions. Requires a node to be running locally at 127.0.0.1
-func (s *jsonRPC) JSONRPC(ctx context.Context, request operations.JSONRPCRequest) (*operations.JSONRPCResponse, error) {
+func (s *jsonRPC) JSONRPC(ctx context.Context, request shared.RPCRequest, security operations.JSONRPCSecurity, opts ...operations.Option) (*operations.JSONRPCResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.JSONRPCServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/"
@@ -57,7 +67,7 @@ func (s *jsonRPC) JSONRPC(ctx context.Context, request operations.JSONRPCRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -14,47 +14,49 @@ func main() {
     s := sdk.New()
 
     req := operations.MirrorAccountsInsertRequest{
-        PathParams: operations.MirrorAccountsInsertPathParams{
-            AccountName: "corrupti",
-            AccountType: "provident",
-            UserToken: "distinctio",
-        },
-        QueryParams: operations.MirrorAccountsInsertQueryParams{
-            Alt: "json",
-            Fields: "quibusdam",
-            Key: "unde",
-            OauthToken: "nulla",
-            PrettyPrint: false,
-            QuotaUser: "corrupti",
-            UserIP: "illum",
-        },
-        Request: &shared.Account{
+        Account: &shared.Account{
             AuthTokens: []shared.AuthToken{
                 shared.AuthToken{
-                    AuthToken: "error",
-                    Type: "deserunt",
+                    AuthToken: "provident",
+                    Type: "distinctio",
                 },
                 shared.AuthToken{
-                    AuthToken: "suscipit",
-                    Type: "iure",
+                    AuthToken: "quibusdam",
+                    Type: "unde",
+                },
+                shared.AuthToken{
+                    AuthToken: "nulla",
+                    Type: "corrupti",
                 },
             },
             Features: []string{
-                "debitis",
-                "ipsa",
+                "vel",
+                "error",
+                "deserunt",
+                "suscipit",
             },
-            Password: "delectus",
+            Password: "iure",
             UserData: []shared.UserData{
                 shared.UserData{
-                    Key: "suscipit",
-                    Value: "molestiae",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
                 shared.UserData{
-                    Key: "minus",
-                    Value: "placeat",
+                    Key: "delectus",
+                    Value: "tempora",
                 },
             },
         },
+        AccountName: "suscipit",
+        AccountType: "molestiae",
+        Alt: "json",
+        Fields: "minus",
+        Key: "placeat",
+        OauthToken: "voluptatum",
+        PrettyPrint: false,
+        QuotaUser: "iusto",
+        UserIP: "excepturi",
+        UserToken: "nisi",
     }
 
     ctx := context.Background()

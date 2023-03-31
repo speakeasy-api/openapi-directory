@@ -65,7 +65,8 @@ func (e *ListHistoricalGWSOrderingEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListHistoricalGWSQueryParams struct {
+type ListHistoricalGWSRequest struct {
+	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
 	// The lowercase color of the wine.
 	Color *ListHistoricalGWSColorEnum `queryParam:"style=form,explode=true,name=color"`
 	// Only show the <a href="See https://en.wikipedia.org/wiki/En_primeur">en primeur</a> GlobalWineScores
@@ -88,15 +89,6 @@ type ListHistoricalGWSQueryParams struct {
 	// The exact `id` of the wine. Can be used multiple times (e.g `?wine_id=114959&wine_id=114952`) <br/> If you need to find the `wine_id` for your wines, use our <a href="https://api.globalwinescore.com/search/" target="_blank">search page</a>
 	//
 	WineID []int64 `queryParam:"style=form,explode=true,name=wine_id"`
-}
-
-type ListHistoricalGWSHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type ListHistoricalGWSRequest struct {
-	QueryParams ListHistoricalGWSQueryParams
-	Headers     ListHistoricalGWSHeaders
 }
 
 type ListHistoricalGWSResponse struct {

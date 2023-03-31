@@ -43,15 +43,25 @@ func newDiscovery(defaultClient, securityClient HTTPClient, serverURL, language,
 //  6. **If there would be still more than one patients (after ranking) error would be returned**
 //  7. **Intended HIP should be able to resolve and identify results returned in the subsequent link confirmation request via the specified transactionId**
 //  8. **Intended HIP should store the discovery results with transactionId and care contexts discovered for subsequent link initiation**
-func (s *discovery) PostV05CareContextsDiscoverJSON(ctx context.Context, request operations.PostV05CareContextsDiscoverJSONRequest) (*operations.PostV05CareContextsDiscoverJSONResponse, error) {
+func (s *discovery) PostV05CareContextsDiscoverJSON(ctx context.Context, request operations.PostV05CareContextsDiscoverJSONRequest, opts ...operations.Option) (*operations.PostV05CareContextsDiscoverJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05CareContextsDiscoverJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/care-contexts/discover"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientDiscoveryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -66,7 +76,7 @@ func (s *discovery) PostV05CareContextsDiscoverJSON(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -132,15 +142,25 @@ func (s *discovery) PostV05CareContextsDiscoverJSON(ctx context.Context, request
 //  6. **If there would be still more than one patients (after ranking) error would be returned**
 //  7. **Intended HIP should be able to resolve and identify results returned in the subsequent link confirmation request via the specified transactionId**
 //  8. **Intended HIP should store the discovery results with transactionId and care contexts discovered for subsequent link initiation**
-func (s *discovery) PostV05CareContextsDiscoverRaw(ctx context.Context, request operations.PostV05CareContextsDiscoverRawRequest) (*operations.PostV05CareContextsDiscoverRawResponse, error) {
+func (s *discovery) PostV05CareContextsDiscoverRaw(ctx context.Context, request operations.PostV05CareContextsDiscoverRawRequest, opts ...operations.Option) (*operations.PostV05CareContextsDiscoverRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05CareContextsDiscoverRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/care-contexts/discover"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -155,7 +175,7 @@ func (s *discovery) PostV05CareContextsDiscoverRaw(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

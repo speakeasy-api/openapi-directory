@@ -8,16 +8,11 @@ import (
 )
 
 type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListPathParams struct {
-	// Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integration_name}/executions/{execution_name}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListQueryParams struct {
+type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListQ
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token to retrieve a specific page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integration_name}/executions/{execution_name}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListQ
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest struct {
-	PathParams  IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListPathParams
-	QueryParams IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListQueryParams
-	Security    IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListSecurity
 }
 
 type IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse struct {

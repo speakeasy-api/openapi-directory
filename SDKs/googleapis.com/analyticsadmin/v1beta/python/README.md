@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/analyticsadmin/v1beta/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,36 +15,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AnalyticsadminAccountSummariesListRequest(
-    security=operations.AnalyticsadminAccountSummariesListSecurity(
-        option1=operations.AnalyticsadminAccountSummariesListSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.AnalyticsadminAccountSummariesListQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
-        alt="json",
-        callback="vel",
-        fields="quia",
-        key="voluptatibus",
-        oauth_token="beatae",
-        page_size=3724472702297372290,
-        page_token="sequi",
-        pretty_print=False,
-        quota_user="occaecati",
-        upload_type="et",
-        upload_protocol="in",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.account_summaries.analyticsadmin_account_summaries_list(req)
+res = s.account_summaries.analyticsadmin_account_summaries_list(req, operations.AnalyticsadminAccountSummariesListSecurity(
+    option1=operations.AnalyticsadminAccountSummariesListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.google_analytics_admin_v1beta_list_account_summaries_response is not None:
     # handle response
@@ -52,9 +46,10 @@ if res.google_analytics_admin_v1beta_list_account_summaries_response is not None
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### accountSummaries
+
+### account_summaries
 
 * `analyticsadmin_account_summaries_list` - Returns summaries of all accounts accessible by the caller.
 
@@ -66,7 +61,7 @@ if res.google_analytics_admin_v1beta_list_account_summaries_response is not None
 
 ### properties
 
-* `analyticsadmin_properties_acknowledge_user_data_collection` - Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or via this API) before MeasurementProtocolSecret resources may be created.
+* `analyticsadmin_properties_acknowledge_user_data_collection` - Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or through this API) before MeasurementProtocolSecret resources may be created.
 * `analyticsadmin_properties_conversion_events_create` - Creates a conversion event with the specified attributes.
 * `analyticsadmin_properties_conversion_events_list` - Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
 * `analyticsadmin_properties_create` - Creates an "GA4" property with the specified location and attributes.
@@ -87,7 +82,18 @@ if res.google_analytics_admin_v1beta_list_account_summaries_response is not None
 * `analyticsadmin_properties_google_ads_links_list` - Lists GoogleAdsLinks on a property.
 * `analyticsadmin_properties_google_ads_links_patch` - Updates a GoogleAdsLink on a property
 * `analyticsadmin_properties_list` - Returns child Properties under the specified parent Account. Only "GA4" properties will be returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default. Returns an empty list if no relevant properties are found.
-
+* `analyticsadmin_properties_run_access_report` - Returns a customized report of data access records. The report provides records of each time a user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data Access Reports can be requested for a property. The property must be in Google Analytics 360. This method is only available to Administrators. These data access records include GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can retrieve data from Google Analytics through a linkage. These records don't include property configuration changes like adding a stream or changing a property's time zone. For configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

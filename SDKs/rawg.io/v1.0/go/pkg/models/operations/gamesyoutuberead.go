@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesYoutubeReadPathParams struct {
+type GamesYoutubeReadRequest struct {
 	// An ID or a slug identifying this Game.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GamesYoutubeReadRequest struct {
-	PathParams GamesYoutubeReadPathParams
 }
 
 type GamesYoutubeReadResponse struct {

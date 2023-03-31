@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CancelJobRequest(
-    headers=operations.CancelJobHeaders(
-        x_amz_algorithm="beatae",
-        x_amz_content_sha256="tempore",
-        x_amz_credential="reprehenderit",
-        x_amz_date="nostrum",
-        x_amz_security_token="velit",
-        x_amz_signature="necessitatibus",
-        x_amz_signed_headers="illo",
+    request_body=operations.CancelJobRequestBody(
+        job_id="corrupti",
+        reason="provident",
     ),
-    request=operations.CancelJobRequestBody(
-        job_id="aut",
-        reason="quis",
-    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
 )
     
 res = s.cancel_job(req)

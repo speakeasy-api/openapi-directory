@@ -8,16 +8,11 @@ import (
 )
 
 type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListPathParams struct {
-	// Required. The resource name of the parent entity: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListQueryParams struct {
+type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Page token received from a previous ListPartitions call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListPartitions must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the parent entity: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest struct {
-	PathParams  DataplexProjectsLocationsLakesZonesEntitiesPartitionsListPathParams
-	QueryParams DataplexProjectsLocationsLakesZonesEntitiesPartitionsListQueryParams
-	Security    DataplexProjectsLocationsLakesZonesEntitiesPartitionsListSecurity
 }
 
 type DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse struct {

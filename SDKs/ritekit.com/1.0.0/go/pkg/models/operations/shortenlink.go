@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ShortenLinkQueryParams struct {
+type ShortenLinkRequest struct {
 	// cta id
 	Cta int64 `queryParam:"style=form,explode=true,name=cta"`
 	// URL
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type ShortenLinkRequest struct {
-	QueryParams ShortenLinkQueryParams
 }
 
 type ShortenLinkResponse struct {

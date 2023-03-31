@@ -8,13 +8,8 @@ import (
 )
 
 type UpdateMessengerAccountSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateMessengerAccountPathParams struct {
-	// External id of the account you want to update. In this case it is the Facebook Page ID.
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // UpdateMessengerAccountRequestBody - Request body can contain any of the following
@@ -26,10 +21,10 @@ type UpdateMessengerAccountRequestBody struct {
 }
 
 type UpdateMessengerAccountRequest struct {
-	PathParams UpdateMessengerAccountPathParams
 	// Request body can contain any of the following
-	Request  UpdateMessengerAccountRequestBody `request:"mediaType=application/json"`
-	Security UpdateMessengerAccountSecurity
+	RequestBody UpdateMessengerAccountRequestBody `request:"mediaType=application/json"`
+	// External id of the account you want to update. In this case it is the Facebook Page ID.
+	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 }
 
 type UpdateMessengerAccount400ApplicationJSONInvalidParams struct {

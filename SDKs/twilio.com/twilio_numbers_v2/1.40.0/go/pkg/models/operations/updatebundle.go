@@ -12,12 +12,8 @@ var UpdateBundleServerList = []string{
 }
 
 type UpdateBundleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateBundlePathParams struct {
-	// The unique string that we created to identify the Bundle resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateBundleUpdateBundleRequest struct {
@@ -31,10 +27,9 @@ type UpdateBundleUpdateBundleRequest struct {
 }
 
 type UpdateBundleRequest struct {
-	PathParams UpdateBundlePathParams
-	Request    *UpdateBundleUpdateBundleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateBundleSecurity
-	ServerURL  *string
+	RequestBody *UpdateBundleUpdateBundleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the Bundle resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateBundleResponse struct {

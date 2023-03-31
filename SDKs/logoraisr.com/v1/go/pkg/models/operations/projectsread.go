@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsReadPathParams struct {
+type ProjectsReadRequest struct {
 	// Number of the project.
 	ProjectNumber string `pathParam:"style=simple,explode=false,name=project_number"`
-}
-
-type ProjectsReadRequest struct {
-	PathParams ProjectsReadPathParams
 }
 
 type ProjectsReadResponse struct {

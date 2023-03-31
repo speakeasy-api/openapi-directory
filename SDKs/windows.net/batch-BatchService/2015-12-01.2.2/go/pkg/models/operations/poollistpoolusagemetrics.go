@@ -8,33 +8,25 @@ import (
 	"time"
 )
 
-type PoolListPoolUsageMetricsQueryParams struct {
+type PoolListPoolUsageMetricsRequest struct {
 	// Sets an OData $filter clause.
 	DollarFilter *string `queryParam:"style=form,explode=true,name=$filter"`
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
+	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The latest time from which to include metrics. This must be at least two hours before the current time.
 	Endtime *time.Time `queryParam:"style=form,explode=true,name=endtime"`
 	// Sets the maximum number of items to return in the response.
 	Maxresults *int `queryParam:"style=form,explode=true,name=maxresults"`
-	// The earliest time from which to include metrics. This must be at least two and a half hours before the current time.
-	Starttime *time.Time `queryParam:"style=form,explode=true,name=starttime"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type PoolListPoolUsageMetricsHeaders struct {
-	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
-	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type PoolListPoolUsageMetricsRequest struct {
-	QueryParams PoolListPoolUsageMetricsQueryParams
-	Headers     PoolListPoolUsageMetricsHeaders
+	// The earliest time from which to include metrics. This must be at least two and a half hours before the current time.
+	Starttime *time.Time `queryParam:"style=form,explode=true,name=starttime"`
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type PoolListPoolUsageMetricsResponse struct {

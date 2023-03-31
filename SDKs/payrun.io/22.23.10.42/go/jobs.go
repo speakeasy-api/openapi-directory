@@ -36,14 +36,14 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Deletes the the Batch job
 func (s *jobs) DeleteBatchJob(ctx context.Context, request operations.DeleteBatchJobRequest) (*operations.DeleteBatchJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *jobs) DeleteBatchJob(ctx context.Context, request operations.DeleteBatc
 // Deletes the the CIS job
 func (s *jobs) DeleteCisJob(ctx context.Context, request operations.DeleteCisJobRequest) (*operations.DeleteCisJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,14 +144,14 @@ func (s *jobs) DeleteCisJob(ctx context.Context, request operations.DeleteCisJob
 // Deletes the the DPS job
 func (s *jobs) DeleteDpsJob(ctx context.Context, request operations.DeleteDpsJobRequest) (*operations.DeleteDpsJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -198,14 +198,14 @@ func (s *jobs) DeleteDpsJob(ctx context.Context, request operations.DeleteDpsJob
 // Deletes the the payrun job
 func (s *jobs) DeletePayRunJob(ctx context.Context, request operations.DeletePayRunJobRequest) (*operations.DeletePayRunJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -252,14 +252,14 @@ func (s *jobs) DeletePayRunJob(ctx context.Context, request operations.DeletePay
 // Deletes the the RTI job
 func (s *jobs) DeleteRtiJob(ctx context.Context, request operations.DeleteRtiJobRequest) (*operations.DeleteRtiJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -306,14 +306,14 @@ func (s *jobs) DeleteRtiJob(ctx context.Context, request operations.DeleteRtiJob
 // Deletes the the Third Party job
 func (s *jobs) DeleteThirdPartyJob(ctx context.Context, request operations.DeleteThirdPartyJobRequest) (*operations.DeleteThirdPartyJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -360,14 +360,14 @@ func (s *jobs) DeleteThirdPartyJob(ctx context.Context, request operations.Delet
 // Return the the Batch job information
 func (s *jobs) GetBatchJobInfo(ctx context.Context, request operations.GetBatchJobInfoRequest) (*operations.GetBatchJobInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}/Info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}/Info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -423,14 +423,14 @@ func (s *jobs) GetBatchJobInfo(ctx context.Context, request operations.GetBatchJ
 // Return the the Batch job progress
 func (s *jobs) GetBatchJobProgress(ctx context.Context, request operations.GetBatchJobProgressRequest) (*operations.GetBatchJobProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}/Progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}/Progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -477,14 +477,14 @@ func (s *jobs) GetBatchJobProgress(ctx context.Context, request operations.GetBa
 // Return the the Batch job status
 func (s *jobs) GetBatchJobStatus(ctx context.Context, request operations.GetBatchJobStatusRequest) (*operations.GetBatchJobStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Batch/{JobId}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -538,7 +538,7 @@ func (s *jobs) GetBatchJobs(ctx context.Context, request operations.GetBatchJobs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -594,14 +594,14 @@ func (s *jobs) GetBatchJobs(ctx context.Context, request operations.GetBatchJobs
 // Return the the CIS job information
 func (s *jobs) GetCisJobInfo(ctx context.Context, request operations.GetCisJobInfoRequest) (*operations.GetCisJobInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}/Info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}/Info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -657,14 +657,14 @@ func (s *jobs) GetCisJobInfo(ctx context.Context, request operations.GetCisJobIn
 // Return the the CIS job progress
 func (s *jobs) GetCisJobProgress(ctx context.Context, request operations.GetCisJobProgressRequest) (*operations.GetCisJobProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}/Progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}/Progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -711,14 +711,14 @@ func (s *jobs) GetCisJobProgress(ctx context.Context, request operations.GetCisJ
 // Return the the CIS job status
 func (s *jobs) GetCisJobStatus(ctx context.Context, request operations.GetCisJobStatusRequest) (*operations.GetCisJobStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Cis/{JobId}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -772,7 +772,7 @@ func (s *jobs) GetCisJobs(ctx context.Context, request operations.GetCisJobsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -828,14 +828,14 @@ func (s *jobs) GetCisJobs(ctx context.Context, request operations.GetCisJobsRequ
 // Return the the DPS job information
 func (s *jobs) GetDpsJobInfo(ctx context.Context, request operations.GetDpsJobInfoRequest) (*operations.GetDpsJobInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}/Info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}/Info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -891,14 +891,14 @@ func (s *jobs) GetDpsJobInfo(ctx context.Context, request operations.GetDpsJobIn
 // Return the the DPS job progress
 func (s *jobs) GetDpsJobProgress(ctx context.Context, request operations.GetDpsJobProgressRequest) (*operations.GetDpsJobProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}/Progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}/Progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -945,14 +945,14 @@ func (s *jobs) GetDpsJobProgress(ctx context.Context, request operations.GetDpsJ
 // Return the the DPS job status
 func (s *jobs) GetDpsJobStatus(ctx context.Context, request operations.GetDpsJobStatusRequest) (*operations.GetDpsJobStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Dps/{JobId}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1006,7 +1006,7 @@ func (s *jobs) GetDpsJobs(ctx context.Context, request operations.GetDpsJobsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1062,14 +1062,14 @@ func (s *jobs) GetDpsJobs(ctx context.Context, request operations.GetDpsJobsRequ
 // Returns all job information objects for the specified employer.
 func (s *jobs) GetEmployerJobs(ctx context.Context, request operations.GetEmployerJobsRequest) (*operations.GetEmployerJobsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Employer/{EmployerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Employer/{EmployerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1125,14 +1125,14 @@ func (s *jobs) GetEmployerJobs(ctx context.Context, request operations.GetEmploy
 // Return the the payrun job information
 func (s *jobs) GetPayRunJobInfo(ctx context.Context, request operations.GetPayRunJobInfoRequest) (*operations.GetPayRunJobInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}/Info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}/Info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1188,14 +1188,14 @@ func (s *jobs) GetPayRunJobInfo(ctx context.Context, request operations.GetPayRu
 // Return the the payrun job progress
 func (s *jobs) GetPayRunJobProgress(ctx context.Context, request operations.GetPayRunJobProgressRequest) (*operations.GetPayRunJobProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}/Progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}/Progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1242,14 +1242,14 @@ func (s *jobs) GetPayRunJobProgress(ctx context.Context, request operations.GetP
 // Return the the payrun job status
 func (s *jobs) GetPayRunJobStatus(ctx context.Context, request operations.GetPayRunJobStatusRequest) (*operations.GetPayRunJobStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/PayRuns/{JobId}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1303,7 +1303,7 @@ func (s *jobs) GetPayRunJobs(ctx context.Context, request operations.GetPayRunJo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1359,14 +1359,14 @@ func (s *jobs) GetPayRunJobs(ctx context.Context, request operations.GetPayRunJo
 // Return the the RTI job information
 func (s *jobs) GetRtiJobInfo(ctx context.Context, request operations.GetRtiJobInfoRequest) (*operations.GetRtiJobInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}/Info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}/Info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1422,14 +1422,14 @@ func (s *jobs) GetRtiJobInfo(ctx context.Context, request operations.GetRtiJobIn
 // Return the the RTI job progress
 func (s *jobs) GetRtiJobProgress(ctx context.Context, request operations.GetRtiJobProgressRequest) (*operations.GetRtiJobProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}/Progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}/Progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1476,14 +1476,14 @@ func (s *jobs) GetRtiJobProgress(ctx context.Context, request operations.GetRtiJ
 // Return the the RTI job status
 func (s *jobs) GetRtiJobStatus(ctx context.Context, request operations.GetRtiJobStatusRequest) (*operations.GetRtiJobStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/Rti/{JobId}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1537,7 +1537,7 @@ func (s *jobs) GetRtiJobs(ctx context.Context, request operations.GetRtiJobsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1593,14 +1593,14 @@ func (s *jobs) GetRtiJobs(ctx context.Context, request operations.GetRtiJobsRequ
 // Return the the Third Party job information
 func (s *jobs) GetThirdPartyJobInfo(ctx context.Context, request operations.GetThirdPartyJobInfoRequest) (*operations.GetThirdPartyJobInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}/Info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}/Info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1656,14 +1656,14 @@ func (s *jobs) GetThirdPartyJobInfo(ctx context.Context, request operations.GetT
 // Return the the Third Party job progress
 func (s *jobs) GetThirdPartyJobProgress(ctx context.Context, request operations.GetThirdPartyJobProgressRequest) (*operations.GetThirdPartyJobProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}/Progress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}/Progress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1710,14 +1710,14 @@ func (s *jobs) GetThirdPartyJobProgress(ctx context.Context, request operations.
 // Return the the Third Party job status
 func (s *jobs) GetThirdPartyJobStatus(ctx context.Context, request operations.GetThirdPartyJobStatusRequest) (*operations.GetThirdPartyJobStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}/Status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Jobs/ThirdParty/{JobId}/Status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1771,7 +1771,7 @@ func (s *jobs) GetThirdPartyJobs(ctx context.Context, request operations.GetThir
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1829,7 +1829,7 @@ func (s *jobs) PostNewBatchJob(ctx context.Context, request operations.PostNewBa
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Jobs/Batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchJobInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1844,7 +1844,7 @@ func (s *jobs) PostNewBatchJob(ctx context.Context, request operations.PostNewBa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1902,7 +1902,7 @@ func (s *jobs) PostNewCisJob(ctx context.Context, request operations.PostNewCisJ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Jobs/Cis"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CisJobInstructionBase", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1917,7 +1917,7 @@ func (s *jobs) PostNewCisJob(ctx context.Context, request operations.PostNewCisJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1975,7 +1975,7 @@ func (s *jobs) PostNewDpsJob(ctx context.Context, request operations.PostNewDpsJ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Jobs/Dps"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DpsJobInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1990,7 +1990,7 @@ func (s *jobs) PostNewDpsJob(ctx context.Context, request operations.PostNewDpsJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2048,7 +2048,7 @@ func (s *jobs) PostNewPayRunJob(ctx context.Context, request operations.PostNewP
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Jobs/PayRuns"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayRunJobInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2063,7 +2063,7 @@ func (s *jobs) PostNewPayRunJob(ctx context.Context, request operations.PostNewP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2121,7 +2121,7 @@ func (s *jobs) PostNewRtiJob(ctx context.Context, request operations.PostNewRtiJ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Jobs/Rti"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RtiJobInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2136,7 +2136,7 @@ func (s *jobs) PostNewRtiJob(ctx context.Context, request operations.PostNewRtiJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2194,7 +2194,7 @@ func (s *jobs) PostNewThirdPartyJob(ctx context.Context, request operations.Post
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Jobs/ThirdParty"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ThirdPartyJobInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2209,7 +2209,7 @@ func (s *jobs) PostNewThirdPartyJob(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

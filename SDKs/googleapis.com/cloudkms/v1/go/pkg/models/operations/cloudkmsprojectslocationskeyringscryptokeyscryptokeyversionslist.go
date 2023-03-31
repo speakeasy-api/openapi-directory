@@ -10,23 +10,18 @@ import (
 )
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurity struct {
 	Option1 *CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurityOption1 `security:"option"`
 	Option2 *CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurityOption2 `security:"option"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListPathParams struct {
-	// Required. The resource name of the CryptoKey to list, in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum - The fields to include in the response.
@@ -53,7 +48,7 @@ func (e *CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnu
 	}
 }
 
-type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListQueryParams struct {
+type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -76,6 +71,8 @@ type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListQueryParams
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Optional pagination token, returned earlier via ListCryptoKeyVersionsResponse.next_page_token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the CryptoKey to list, in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -86,12 +83,6 @@ type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListQueryParams
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The fields to include in the response.
 	View *CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListRequest struct {
-	PathParams  CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListPathParams
-	QueryParams CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListQueryParams
-	Security    CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurity
 }
 
 type CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse struct {

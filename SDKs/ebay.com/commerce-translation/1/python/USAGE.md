@@ -4,25 +4,22 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.TranslateRequest(
-    security=operations.TranslateSecurity(
-        api_auth=shared.SchemeAPIAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    request=shared.TranslateRequest(
-        from_="facilis",
-        text=[
-            "aliquid",
-            "ad",
-        ],
-        to="labore",
-        translation_context="totam",
-    ),
+
+
+req = shared.TranslateRequest(
+    from_="corrupti",
+    text=[
+        "distinctio",
+        "quibusdam",
+        "unde",
+    ],
+    to="nulla",
+    translation_context="corrupti",
 )
     
-res = s.language.translate(req)
+res = s.language.translate(req, operations.TranslateSecurity(
+    api_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.translate_response is not None:
     # handle response

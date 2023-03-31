@@ -6,31 +6,19 @@ import (
 	"net/http"
 )
 
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesPathParams struct {
-	// How the delivery capacity is measured as defined in the shipping policy. Capacity can be measured by maximum number of orders (`"orders_quantity"`) or SKUs (`"skus_quantity"`).
-	CapacityType string `pathParam:"style=simple,explode=false,name=capacityType"`
-	// ID of shipping policy to search.
-	ShippingPolicyID string `pathParam:"style=simple,explode=false,name=shippingPolicyId"`
-}
-
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesQueryParams struct {
-	// End date of time range.
-	RangeEnd string `queryParam:"style=form,explode=true,name=rangeEnd"`
-	// Starting date of time range
-	RangeStart string `queryParam:"style=form,explode=true,name=rangeStart"`
-}
-
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesHeaders struct {
+type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesRequest struct {
-	PathParams  GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesPathParams
-	QueryParams GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesQueryParams
-	Headers     GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesHeaders
+	// How the delivery capacity is measured as defined in the shipping policy. Capacity can be measured by maximum number of orders (`"orders_quantity"`) or SKUs (`"skus_quantity"`).
+	CapacityType string `pathParam:"style=simple,explode=false,name=capacityType"`
+	// End date of time range.
+	RangeEnd string `queryParam:"style=form,explode=true,name=rangeEnd"`
+	// Starting date of time range
+	RangeStart string `queryParam:"style=form,explode=true,name=rangeStart"`
+	// ID of shipping policy to search.
+	ShippingPolicyID string `pathParam:"style=simple,explode=false,name=shippingPolicyId"`
 }
 
 type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RecreateProjectPathParams struct {
+type RecreateProjectRequest struct {
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RecreateProjectRequest struct {
-	PathParams RecreateProjectPathParams
 }
 
 type RecreateProjectResponse struct {

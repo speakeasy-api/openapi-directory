@@ -8,13 +8,13 @@ import (
 )
 
 type DeploymentmanagerDeploymentsSetIamPolicySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerDeploymentsSetIamPolicySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerDeploymentsSetIamPolicySecurity struct {
@@ -22,16 +22,10 @@ type DeploymentmanagerDeploymentsSetIamPolicySecurity struct {
 	Option2 *DeploymentmanagerDeploymentsSetIamPolicySecurityOption2 `security:"option"`
 }
 
-type DeploymentmanagerDeploymentsSetIamPolicyPathParams struct {
-	// Project ID for this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// Name or id of the resource for this request.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type DeploymentmanagerDeploymentsSetIamPolicyQueryParams struct {
+type DeploymentmanagerDeploymentsSetIamPolicyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GlobalSetPolicyRequest *shared.GlobalSetPolicyRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,19 +40,16 @@ type DeploymentmanagerDeploymentsSetIamPolicyQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID for this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Name or id of the resource for this request.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DeploymentmanagerDeploymentsSetIamPolicyRequest struct {
-	PathParams  DeploymentmanagerDeploymentsSetIamPolicyPathParams
-	QueryParams DeploymentmanagerDeploymentsSetIamPolicyQueryParams
-	Request     *shared.GlobalSetPolicyRequest `request:"mediaType=application/json"`
-	Security    DeploymentmanagerDeploymentsSetIamPolicySecurity
 }
 
 type DeploymentmanagerDeploymentsSetIamPolicyResponse struct {

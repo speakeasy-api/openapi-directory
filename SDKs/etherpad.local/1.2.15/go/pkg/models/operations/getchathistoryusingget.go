@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GETChatHistoryUsingGETQueryParams struct {
+type GETChatHistoryUsingGETRequest struct {
 	End   *string `queryParam:"style=form,explode=true,name=end"`
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 	Start *string `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GETChatHistoryUsingGETRequest struct {
-	QueryParams GETChatHistoryUsingGETQueryParams
 }
 
 // GETChatHistoryUsingGET500ApplicationJSON - internal api error (code 2)

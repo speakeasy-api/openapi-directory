@@ -8,17 +8,12 @@ import (
 )
 
 type StopStreamSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type StopStreamPathParams struct {
-	// UUID of the Call Leg
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type StopStreamRequest struct {
-	PathParams StopStreamPathParams
-	Security   StopStreamSecurity
+	// UUID of the Call Leg
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type StopStreamResponse struct {

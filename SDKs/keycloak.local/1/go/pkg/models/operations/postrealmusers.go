@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmUsersPathParams struct {
+type PostRealmUsersRequest struct {
+	UserRepresentation shared.UserRepresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmUsersRequest struct {
-	PathParams PostRealmUsersPathParams
-	Request    shared.UserRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmUsersResponse struct {

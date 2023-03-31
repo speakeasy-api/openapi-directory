@@ -33,11 +33,11 @@ func newForms(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // FormsFormsBatchUpdate - Change the form with a batch of updates.
-func (s *forms) FormsFormsBatchUpdate(ctx context.Context, request operations.FormsFormsBatchUpdateRequest) (*operations.FormsFormsBatchUpdateResponse, error) {
+func (s *forms) FormsFormsBatchUpdate(ctx context.Context, request operations.FormsFormsBatchUpdateRequest, security operations.FormsFormsBatchUpdateSecurity) (*operations.FormsFormsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateFormRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *forms) FormsFormsBatchUpdate(ctx context.Context, request operations.Fo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *forms) FormsFormsBatchUpdate(ctx context.Context, request operations.Fo
 }
 
 // FormsFormsCreate - Create a new form using the title given in the provided form message in the request. *Important:* Only the form.info.title and form.info.document_title fields are copied to the new form. All other fields including the form description, items and settings are disallowed. To create a new form and add items, you must first call forms.create to create an empty form with a title and (optional) document title, and then call forms.update to add the items.
-func (s *forms) FormsFormsCreate(ctx context.Context, request operations.FormsFormsCreateRequest) (*operations.FormsFormsCreateResponse, error) {
+func (s *forms) FormsFormsCreate(ctx context.Context, request operations.FormsFormsCreateRequest, security operations.FormsFormsCreateSecurity) (*operations.FormsFormsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/forms"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FormInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *forms) FormsFormsCreate(ctx context.Context, request operations.FormsFo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *forms) FormsFormsCreate(ctx context.Context, request operations.FormsFo
 }
 
 // FormsFormsGet - Get a form.
-func (s *forms) FormsFormsGet(ctx context.Context, request operations.FormsFormsGetRequest) (*operations.FormsFormsGetResponse, error) {
+func (s *forms) FormsFormsGet(ctx context.Context, request operations.FormsFormsGetRequest, security operations.FormsFormsGetSecurity) (*operations.FormsFormsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *forms) FormsFormsGet(ctx context.Context, request operations.FormsForms
 }
 
 // FormsFormsResponsesGet - Get one response from the form.
-func (s *forms) FormsFormsResponsesGet(ctx context.Context, request operations.FormsFormsResponsesGetRequest) (*operations.FormsFormsResponsesGetResponse, error) {
+func (s *forms) FormsFormsResponsesGet(ctx context.Context, request operations.FormsFormsResponsesGetRequest, security operations.FormsFormsResponsesGetSecurity) (*operations.FormsFormsResponsesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses/{responseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses/{responseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,20 +239,20 @@ func (s *forms) FormsFormsResponsesGet(ctx context.Context, request operations.F
 }
 
 // FormsFormsResponsesList - List a form's responses.
-func (s *forms) FormsFormsResponsesList(ctx context.Context, request operations.FormsFormsResponsesListRequest) (*operations.FormsFormsResponsesListResponse, error) {
+func (s *forms) FormsFormsResponsesList(ctx context.Context, request operations.FormsFormsResponsesListRequest, security operations.FormsFormsResponsesListSecurity) (*operations.FormsFormsResponsesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *forms) FormsFormsResponsesList(ctx context.Context, request operations.
 }
 
 // FormsFormsWatchesCreate - Create a new watch. If a watch ID is provided, it must be unused. For each invoking project, the per form limit is one watch per Watch.EventType. A watch expires seven days after it is created (see Watch.expire_time).
-func (s *forms) FormsFormsWatchesCreate(ctx context.Context, request operations.FormsFormsWatchesCreateRequest) (*operations.FormsFormsWatchesCreateResponse, error) {
+func (s *forms) FormsFormsWatchesCreate(ctx context.Context, request operations.FormsFormsWatchesCreateRequest, security operations.FormsFormsWatchesCreateSecurity) (*operations.FormsFormsWatchesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateWatchRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *forms) FormsFormsWatchesCreate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,20 +342,20 @@ func (s *forms) FormsFormsWatchesCreate(ctx context.Context, request operations.
 }
 
 // FormsFormsWatchesDelete - Delete a watch.
-func (s *forms) FormsFormsWatchesDelete(ctx context.Context, request operations.FormsFormsWatchesDeleteRequest) (*operations.FormsFormsWatchesDeleteResponse, error) {
+func (s *forms) FormsFormsWatchesDelete(ctx context.Context, request operations.FormsFormsWatchesDeleteRequest, security operations.FormsFormsWatchesDeleteSecurity) (*operations.FormsFormsWatchesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,20 +390,20 @@ func (s *forms) FormsFormsWatchesDelete(ctx context.Context, request operations.
 }
 
 // FormsFormsWatchesList - Return a list of the watches owned by the invoking project. The maximum number of watches is two: For each invoker, the limit is one for each event type per form.
-func (s *forms) FormsFormsWatchesList(ctx context.Context, request operations.FormsFormsWatchesListRequest) (*operations.FormsFormsWatchesListResponse, error) {
+func (s *forms) FormsFormsWatchesList(ctx context.Context, request operations.FormsFormsWatchesListRequest, security operations.FormsFormsWatchesListSecurity) (*operations.FormsFormsWatchesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,11 +438,11 @@ func (s *forms) FormsFormsWatchesList(ctx context.Context, request operations.Fo
 }
 
 // FormsFormsWatchesRenew - Renew an existing watch for seven days. The state of the watch after renewal is `ACTIVE`, and the `expire_time` is seven days from the renewal. Renewing a watch in an error state (e.g. `SUSPENDED`) succeeds if the error is no longer present, but fail otherwise. After a watch has expired, RenewWatch returns `NOT_FOUND`.
-func (s *forms) FormsFormsWatchesRenew(ctx context.Context, request operations.FormsFormsWatchesRenewRequest) (*operations.FormsFormsWatchesRenewResponse, error) {
+func (s *forms) FormsFormsWatchesRenew(ctx context.Context, request operations.FormsFormsWatchesRenewRequest, security operations.FormsFormsWatchesRenewSecurity) (*operations.FormsFormsWatchesRenewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}:renew", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}:renew", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -454,11 +454,11 @@ func (s *forms) FormsFormsWatchesRenew(ctx context.Context, request operations.F
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

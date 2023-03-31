@@ -54,7 +54,7 @@ func (e *GetProductsSearchJSONFieldsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProductsSearchJSONQueryParams struct {
+type GetProductsSearchJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Comma separated values of the fields to query for the Product
@@ -65,10 +65,6 @@ type GetProductsSearchJSONQueryParams struct {
 	Login string `queryParam:"style=form,explode=true,name=login"`
 	// Text to query for the Product
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetProductsSearchJSONRequest struct {
-	QueryParams GetProductsSearchJSONQueryParams
 }
 
 type GetProductsSearchJSONResponse struct {

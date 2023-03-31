@@ -34,9 +34,9 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Claim devices into a network. (Note: for recently claimed devices, it may take a few minutes for API requests against that device to succeed)
 func (s *devices) ClaimNetworkDevices(ctx context.Context, request operations.ClaimNetworkDevicesRequest) (*operations.ClaimNetworkDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -77,9 +77,9 @@ func (s *devices) ClaimNetworkDevices(ctx context.Context, request operations.Cl
 // Cycle a set of switch ports
 func (s *devices) CycleDeviceSwitchPorts(ctx context.Context, request operations.CycleDeviceSwitchPortsRequest) (*operations.CycleDeviceSwitchPortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/cycle", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/cycle", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -132,7 +132,7 @@ func (s *devices) CycleDeviceSwitchPorts(ctx context.Context, request operations
 // Return a single device
 func (s *devices) GetNetworkDevice(ctx context.Context, request operations.GetNetworkDeviceRequest) (*operations.GetNetworkDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,14 +177,14 @@ func (s *devices) GetNetworkDevice(ctx context.Context, request operations.GetNe
 // Get the uplink loss percentage and latency in milliseconds for a wired network device.
 func (s *devices) GetNetworkDeviceLossAndLatencyHistory(ctx context.Context, request operations.GetNetworkDeviceLossAndLatencyHistoryRequest) (*operations.GetNetworkDeviceLossAndLatencyHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/lossAndLatencyHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/lossAndLatencyHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -226,7 +226,7 @@ func (s *devices) GetNetworkDeviceLossAndLatencyHistory(ctx context.Context, req
 // Return the performance score for a single MX. Only primary MX devices supported. If no data is available, a 204 error code is returned.
 func (s *devices) GetNetworkDevicePerformance(ctx context.Context, request operations.GetNetworkDevicePerformanceRequest) (*operations.GetNetworkDevicePerformanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/performance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/performance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *devices) GetNetworkDevicePerformance(ctx context.Context, request opera
 // Return the uplink information for a device.
 func (s *devices) GetNetworkDeviceUplink(ctx context.Context, request operations.GetNetworkDeviceUplinkRequest) (*operations.GetNetworkDeviceUplinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/uplink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/uplink", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +316,7 @@ func (s *devices) GetNetworkDeviceUplink(ctx context.Context, request operations
 // List the devices in a network
 func (s *devices) GetNetworkDevices(ctx context.Context, request operations.GetNetworkDevicesRequest) (*operations.GetNetworkDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -361,14 +361,14 @@ func (s *devices) GetNetworkDevices(ctx context.Context, request operations.GetN
 // List the devices in an organization
 func (s *devices) GetOrganizationDevices(ctx context.Context, request operations.GetOrganizationDevicesRequest) (*operations.GetOrganizationDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -412,7 +412,7 @@ func (s *devices) GetOrganizationDevices(ctx context.Context, request operations
 // Reboot a device
 func (s *devices) RebootNetworkDevice(ctx context.Context, request operations.RebootNetworkDeviceRequest) (*operations.RebootNetworkDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/reboot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/reboot", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -457,7 +457,7 @@ func (s *devices) RebootNetworkDevice(ctx context.Context, request operations.Re
 // Remove a single device
 func (s *devices) RemoveNetworkDevice(ctx context.Context, request operations.RemoveNetworkDeviceRequest) (*operations.RemoveNetworkDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/remove", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -493,9 +493,9 @@ func (s *devices) RemoveNetworkDevice(ctx context.Context, request operations.Re
 // Update the attributes of a device
 func (s *devices) UpdateNetworkDevice(ctx context.Context, request operations.UpdateNetworkDeviceRequest) (*operations.UpdateNetworkDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

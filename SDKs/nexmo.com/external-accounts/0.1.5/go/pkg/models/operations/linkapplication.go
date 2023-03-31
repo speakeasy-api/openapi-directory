@@ -10,8 +10,14 @@ import (
 )
 
 type LinkApplicationSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
+// LinkApplicationRequestBody - Request body can contain any of the following. Please note, the only one application can be linked to the account.
+type LinkApplicationRequestBody struct {
+	// There is just one application allowed per an account. The application type must be type "messages". For more information please see [Application API Spec](https://developer.nexmo.com/api/application.v2)
+	Application string `json:"application"`
 }
 
 // LinkApplicationProviderEnum - Provider of the account you want to assign an application to
@@ -41,24 +47,13 @@ func (e *LinkApplicationProviderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LinkApplicationPathParams struct {
+type LinkApplicationRequest struct {
+	// Request body can contain any of the following. Please note, the only one application can be linked to the account.
+	RequestBody LinkApplicationRequestBody `request:"mediaType=application/json"`
 	// External id of the account you want to assign an application to. This is channel dependent. For Facebook it will be your Facebook Page ID, for Viber your Viber Service Message ID and for WhatsApp your WhatsApp number.
 	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 	// Provider of the account you want to assign an application to
 	Provider LinkApplicationProviderEnum `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-// LinkApplicationRequestBody - Request body can contain any of the following. Please note, the only one application can be linked to the account.
-type LinkApplicationRequestBody struct {
-	// There is just one application allowed per an account. The application type must be type "messages". For more information please see [Application API Spec](https://developer.nexmo.com/api/application.v2)
-	Application string `json:"application"`
-}
-
-type LinkApplicationRequest struct {
-	PathParams LinkApplicationPathParams
-	// Request body can contain any of the following. Please note, the only one application can be linked to the account.
-	Request  LinkApplicationRequestBody `request:"mediaType=application/json"`
-	Security LinkApplicationSecurity
 }
 
 // LinkApplication409ApplicationJSON - Conflict.

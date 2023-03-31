@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLabelFromRatePathParams struct {
+type CreateLabelFromRateRequest struct {
+	CreateLabelFromRateRequestBody shared.CreateLabelFromRateRequestBody `request:"mediaType=application/json"`
 	// Rate ID
 	RateID string `pathParam:"style=simple,explode=false,name=rate_id"`
-}
-
-type CreateLabelFromRateRequest struct {
-	PathParams CreateLabelFromRatePathParams
-	Request    shared.CreateLabelFromRateRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateLabelFromRateResponse struct {

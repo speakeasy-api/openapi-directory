@@ -65,9 +65,9 @@ func newPricesAndFixedPrices(defaultClient, securityClient HTTPClient, serverURL
 // ```
 func (s *pricesAndFixedPrices) CreateUpdatePriceOrFixedPrice(ctx context.Context, request operations.CreateUpdatePriceOrFixedPriceRequest) (*operations.CreateUpdatePriceOrFixedPriceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -79,7 +79,7 @@ func (s *pricesAndFixedPrices) CreateUpdatePriceOrFixedPrice(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -110,14 +110,14 @@ func (s *pricesAndFixedPrices) CreateUpdatePriceOrFixedPrice(ctx context.Context
 // Deletes the Base Price and all available Fixed Prices for an SKU in all trade policies.
 func (s *pricesAndFixedPrices) DeletePrice(ctx context.Context, request operations.DeletePriceRequest) (*operations.DeletePriceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -148,14 +148,14 @@ func (s *pricesAndFixedPrices) DeletePrice(ctx context.Context, request operatio
 // Deletes all Fixed Prices of an SKU in a specific Price Table or Trade Policy.
 func (s *pricesAndFixedPrices) Deletefixedpricesonapricetableortradepolicy(ctx context.Context, request operations.DeletefixedpricesonapricetableortradepolicyRequest) (*operations.DeletefixedpricesonapricetableortradepolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed/{priceTableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed/{priceTableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -198,22 +198,32 @@ func (s *pricesAndFixedPrices) Deletefixedpricesonapricetableortradepolicy(ctx c
 //	}
 //
 // ```
-func (s *pricesAndFixedPrices) GetComputedPricebypricetable(ctx context.Context, request operations.GetComputedPricebypricetableRequest) (*operations.GetComputedPricebypricetableResponse, error) {
-	baseURL := operations.GetComputedPricebypricetableServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *pricesAndFixedPrices) GetComputedPricebypricetable(ctx context.Context, request operations.GetComputedPricebypricetableRequest, opts ...operations.Option) (*operations.GetComputedPricebypricetableResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/computed/{priceTableId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.GetComputedPricebypricetableServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/computed/{priceTableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -290,14 +300,14 @@ func (s *pricesAndFixedPrices) GetComputedPricebypricetable(ctx context.Context,
 // ```
 func (s *pricesAndFixedPrices) GetFixedPrices(ctx context.Context, request operations.GetFixedPricesRequest) (*operations.GetFixedPricesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -362,14 +372,14 @@ func (s *pricesAndFixedPrices) GetFixedPrices(ctx context.Context, request opera
 // ```
 func (s *pricesAndFixedPrices) GetFixedPricesonapricetable(ctx context.Context, request operations.GetFixedPricesonapricetableRequest) (*operations.GetFixedPricesonapricetableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed/{priceTableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed/{priceTableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -441,14 +451,14 @@ func (s *pricesAndFixedPrices) GetFixedPricesonapricetable(ctx context.Context, 
 // ```
 func (s *pricesAndFixedPrices) GetPrice(ctx context.Context, request operations.GetPriceRequest) (*operations.GetPriceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -506,9 +516,9 @@ func (s *pricesAndFixedPrices) GetPrice(ctx context.Context, request operations.
 // ```
 func (s *pricesAndFixedPrices) Createorupdatefixedpricesonpricetableortradepolicy(ctx context.Context, request operations.CreateorupdatefixedpricesonpricetableortradepolicyRequest) (*operations.CreateorupdatefixedpricesonpricetableortradepolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed/{priceTableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/prices/{itemId}/fixed/{priceTableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -520,7 +530,7 @@ func (s *pricesAndFixedPrices) Createorupdatefixedpricesonpricetableortradepolic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

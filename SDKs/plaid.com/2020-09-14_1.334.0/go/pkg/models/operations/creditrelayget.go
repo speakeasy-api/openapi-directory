@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreditRelayGetRequest struct {
-	Request shared.CreditRelayGetRequest `request:"mediaType=application/json"`
-}
 
 type CreditRelayGetResponse struct {
 	// OK

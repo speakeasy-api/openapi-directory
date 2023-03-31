@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type StatusQueryParams struct {
+type StatusRequest struct {
 	// The ID from the SMS.
 	MsgID string `queryParam:"style=form,explode=true,name=msg_id"`
-}
-
-type StatusRequest struct {
-	QueryParams StatusQueryParams
 }
 
 type StatusResponse struct {

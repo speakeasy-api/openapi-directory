@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutApplicationsApplicationIDPathParams struct {
+type PutApplicationsApplicationIDRequest struct {
+	ApplicationWriteV1 *shared.ApplicationWriteV1 `request:"mediaType=application/json"`
 	// `id` for a specific application
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type PutApplicationsApplicationIDRequest struct {
-	PathParams PutApplicationsApplicationIDPathParams
-	Request    *shared.ApplicationWriteV1 `request:"mediaType=application/json"`
 }
 
 // PutApplicationsApplicationID200ApplicationJSON - OK

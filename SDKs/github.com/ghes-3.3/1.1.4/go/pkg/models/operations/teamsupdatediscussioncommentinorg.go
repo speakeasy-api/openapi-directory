@@ -7,7 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsUpdateDiscussionCommentInOrgPathParams struct {
+type TeamsUpdateDiscussionCommentInOrgRequestBody struct {
+	// The discussion comment's body text.
+	Body string `json:"body"`
+}
+
+type TeamsUpdateDiscussionCommentInOrgRequest struct {
+	RequestBody TeamsUpdateDiscussionCommentInOrgRequestBody `request:"mediaType=application/json"`
 	// The number that identifies the comment.
 	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// The number that identifies the discussion.
@@ -16,16 +22,6 @@ type TeamsUpdateDiscussionCommentInOrgPathParams struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsUpdateDiscussionCommentInOrgRequestBody struct {
-	// The discussion comment's body text.
-	Body string `json:"body"`
-}
-
-type TeamsUpdateDiscussionCommentInOrgRequest struct {
-	PathParams TeamsUpdateDiscussionCommentInOrgPathParams
-	Request    TeamsUpdateDiscussionCommentInOrgRequestBody `request:"mediaType=application/json"`
 }
 
 type TeamsUpdateDiscussionCommentInOrgResponse struct {

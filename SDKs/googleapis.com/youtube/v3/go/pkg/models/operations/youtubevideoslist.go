@@ -10,23 +10,23 @@ import (
 )
 
 type YoutubeVideosListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeVideosListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeVideosListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeVideosListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeVideosListSecurity struct {
@@ -87,7 +87,7 @@ func (e *YoutubeVideosListMyRatingEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type YoutubeVideosListQueryParams struct {
+type YoutubeVideosListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -134,11 +134,6 @@ type YoutubeVideosListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Use chart that is specific to the specified video category
 	VideoCategoryID *string `queryParam:"style=form,explode=true,name=videoCategoryId"`
-}
-
-type YoutubeVideosListRequest struct {
-	QueryParams YoutubeVideosListQueryParams
-	Security    YoutubeVideosListSecurity
 }
 
 type YoutubeVideosListResponse struct {

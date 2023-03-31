@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DoNotDisturbHeaders struct {
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type DoNotDisturbRequest struct {
-	Headers DoNotDisturbHeaders
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 }
 
 type DoNotDisturbResponse struct {

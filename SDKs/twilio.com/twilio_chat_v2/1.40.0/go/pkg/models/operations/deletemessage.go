@@ -12,28 +12,19 @@ var DeleteMessageServerList = []string{
 }
 
 type DeleteMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteMessagePathParams struct {
+type DeleteMessageRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Message resource to delete belongs to. This value can be the Channel resource's `sid` or `unique_name`.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the Message resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Message resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteMessageHeaders struct {
 	// The X-Twilio-Webhook-Enabled HTTP request header
 	XTwilioWebhookEnabled *shared.MessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
-}
-
-type DeleteMessageRequest struct {
-	PathParams DeleteMessagePathParams
-	Headers    DeleteMessageHeaders
-	Security   DeleteMessageSecurity
-	ServerURL  *string
 }
 
 type DeleteMessageResponse struct {

@@ -12,14 +12,8 @@ var UpdateConnectionPolicyTargetServerList = []string{
 }
 
 type UpdateConnectionPolicyTargetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConnectionPolicyTargetPathParams struct {
-	// The SID of the Connection Policy that owns the Target.
-	ConnectionPolicySid string `pathParam:"style=simple,explode=false,name=ConnectionPolicySid"`
-	// The unique string that we created to identify the Target resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest struct {
@@ -36,10 +30,11 @@ type UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest struct {
 }
 
 type UpdateConnectionPolicyTargetRequest struct {
-	PathParams UpdateConnectionPolicyTargetPathParams
-	Request    *UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConnectionPolicyTargetSecurity
-	ServerURL  *string
+	// The SID of the Connection Policy that owns the Target.
+	ConnectionPolicySid string                                                           `pathParam:"style=simple,explode=false,name=ConnectionPolicySid"`
+	RequestBody         *UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the Target resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConnectionPolicyTargetResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1LocationsIDHolidaysHolidayIDClosedPathParams struct {
+type PutSetupV1LocationsIDHolidaysHolidayIDClosedRequest struct {
 	Closed    bool   `pathParam:"style=simple,explode=false,name=closed"`
 	HolidayID string `pathParam:"style=simple,explode=false,name=holidayId"`
 	ID        string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1LocationsIDHolidaysHolidayIDClosedRequest struct {
-	PathParams PutSetupV1LocationsIDHolidaysHolidayIDClosedPathParams
 }
 
 type PutSetupV1LocationsIDHolidaysHolidayIDClosedResponse struct {

@@ -17,7 +17,7 @@ pkg/models/operations/fetchfax.go
 pkg/models/operations/fetchfaxmedia.go
 pkg/models/operations/listfax.go
 pkg/models/operations/listfaxmedia.go
-pkg/models/shared/security.go
 pkg/models/shared/faxv1fax.go
 pkg/models/shared/faxv1faxfaxmedia.go
 USAGE.md
+pkg/models/operations/options.go

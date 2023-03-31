@@ -45,11 +45,11 @@ func newLoyalty(defaultClient, securityClient HTTPClient, serverURL, language, s
 //
 // __Note:__ The country of the seller's Square account determines whether tax is included in the purchase amount when accruing points for spend-based and visit-based programs.
 // For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
-func (s *loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operations.AccumulateLoyaltyPointsRequest) (*operations.AccumulateLoyaltyPointsResponse, error) {
+func (s *loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operations.AccumulateLoyaltyPointsRequest, security operations.AccumulateLoyaltyPointsSecurity) (*operations.AccumulateLoyaltyPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/accumulate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/accumulate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccumulateLoyaltyPointsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -64,7 +64,7 @@ func (s *loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -104,11 +104,11 @@ func (s *loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operation
 // Use this endpoint only when you need to manually adjust points. Otherwise, in your application flow, you call
 // [AccumulateLoyaltyPoints](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/accumulate-loyalty-points)
 // to add points when a buyer pays for the purchase.
-func (s *loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.AdjustLoyaltyPointsRequest) (*operations.AdjustLoyaltyPointsResponse, error) {
+func (s *loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.AdjustLoyaltyPointsRequest, security operations.AdjustLoyaltyPointsSecurity) (*operations.AdjustLoyaltyPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/adjust", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/adjust", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdjustLoyaltyPointsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -123,7 +123,7 @@ func (s *loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.Ad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,11 +170,11 @@ func (s *loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.Ad
 //
 // __Note:__ The country of the seller's Square account determines whether tax is included in the purchase amount when accruing points for spend-based and visit-based programs.
 // For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
-func (s *loyalty) CalculateLoyaltyPoints(ctx context.Context, request operations.CalculateLoyaltyPointsRequest) (*operations.CalculateLoyaltyPointsResponse, error) {
+func (s *loyalty) CalculateLoyaltyPoints(ctx context.Context, request operations.CalculateLoyaltyPointsRequest, security operations.CalculateLoyaltyPointsSecurity) (*operations.CalculateLoyaltyPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}/calculate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}/calculate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalculateLoyaltyPointsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -189,7 +189,7 @@ func (s *loyalty) CalculateLoyaltyPoints(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *loyalty) CalculateLoyaltyPoints(ctx context.Context, request operations
 
 // CreateLoyaltyAccount - CreateLoyaltyAccount
 // Creates a loyalty account. To create a loyalty account, you must provide the `program_id` and a `mapping` with the `phone_number` of the buyer.
-func (s *loyalty) CreateLoyaltyAccount(ctx context.Context, request operations.CreateLoyaltyAccountRequest) (*operations.CreateLoyaltyAccountResponse, error) {
+func (s *loyalty) CreateLoyaltyAccount(ctx context.Context, request shared.CreateLoyaltyAccountRequest, security operations.CreateLoyaltyAccountSecurity) (*operations.CreateLoyaltyAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/accounts"
 
@@ -244,7 +244,7 @@ func (s *loyalty) CreateLoyaltyAccount(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,7 +287,7 @@ func (s *loyalty) CreateLoyaltyAccount(ctx context.Context, request operations.C
 //
 // After a reward is created, the points are locked and
 // not available for the buyer to redeem another reward.
-func (s *loyalty) CreateLoyaltyReward(ctx context.Context, request operations.CreateLoyaltyRewardRequest) (*operations.CreateLoyaltyRewardResponse, error) {
+func (s *loyalty) CreateLoyaltyReward(ctx context.Context, request shared.CreateLoyaltyRewardRequest, security operations.CreateLoyaltyRewardSecurity) (*operations.CreateLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/rewards"
 
@@ -306,7 +306,7 @@ func (s *loyalty) CreateLoyaltyReward(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -350,16 +350,16 @@ func (s *loyalty) CreateLoyaltyReward(ctx context.Context, request operations.Cr
 // discounts.
 //
 // You cannot delete a reward that has reached the terminal state (REDEEMED).
-func (s *loyalty) DeleteLoyaltyReward(ctx context.Context, request operations.DeleteLoyaltyRewardRequest) (*operations.DeleteLoyaltyRewardResponse, error) {
+func (s *loyalty) DeleteLoyaltyReward(ctx context.Context, request operations.DeleteLoyaltyRewardRequest, security operations.DeleteLoyaltyRewardSecurity) (*operations.DeleteLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *loyalty) DeleteLoyaltyReward(ctx context.Context, request operations.De
 // Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
 //
 // Replaced with [RetrieveLoyaltyProgram](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-program) when used with the keyword `main`.
-func (s *loyalty) ListLoyaltyPrograms(ctx context.Context, request operations.ListLoyaltyProgramsRequest) (*operations.ListLoyaltyProgramsResponse, error) {
+func (s *loyalty) ListLoyaltyPrograms(ctx context.Context) (*operations.ListLoyaltyProgramsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/programs"
 
@@ -407,7 +407,7 @@ func (s *loyalty) ListLoyaltyPrograms(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -453,11 +453,11 @@ func (s *loyalty) ListLoyaltyPrograms(ctx context.Context, request operations.Li
 // After the reward reaches the terminal state, it cannot be deleted.
 // In other words, points used for the reward cannot be returned
 // to the account.
-func (s *loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.RedeemLoyaltyRewardRequest) (*operations.RedeemLoyaltyRewardResponse, error) {
+func (s *loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.RedeemLoyaltyRewardRequest, security operations.RedeemLoyaltyRewardSecurity) (*operations.RedeemLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}/redeem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}/redeem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RedeemLoyaltyRewardRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -472,7 +472,7 @@ func (s *loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -508,16 +508,16 @@ func (s *loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.Re
 
 // RetrieveLoyaltyAccount - RetrieveLoyaltyAccount
 // Retrieves a loyalty account.
-func (s *loyalty) RetrieveLoyaltyAccount(ctx context.Context, request operations.RetrieveLoyaltyAccountRequest) (*operations.RetrieveLoyaltyAccountResponse, error) {
+func (s *loyalty) RetrieveLoyaltyAccount(ctx context.Context, request operations.RetrieveLoyaltyAccountRequest, security operations.RetrieveLoyaltyAccountSecurity) (*operations.RetrieveLoyaltyAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -555,16 +555,16 @@ func (s *loyalty) RetrieveLoyaltyAccount(ctx context.Context, request operations
 // Retrieves the loyalty program in a seller's account, specified by the program ID or the keyword `main`.
 //
 // Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
-func (s *loyalty) RetrieveLoyaltyProgram(ctx context.Context, request operations.RetrieveLoyaltyProgramRequest) (*operations.RetrieveLoyaltyProgramResponse, error) {
+func (s *loyalty) RetrieveLoyaltyProgram(ctx context.Context, request operations.RetrieveLoyaltyProgramRequest, security operations.RetrieveLoyaltyProgramSecurity) (*operations.RetrieveLoyaltyProgramResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -600,16 +600,16 @@ func (s *loyalty) RetrieveLoyaltyProgram(ctx context.Context, request operations
 
 // RetrieveLoyaltyReward - RetrieveLoyaltyReward
 // Retrieves a loyalty reward.
-func (s *loyalty) RetrieveLoyaltyReward(ctx context.Context, request operations.RetrieveLoyaltyRewardRequest) (*operations.RetrieveLoyaltyRewardResponse, error) {
+func (s *loyalty) RetrieveLoyaltyReward(ctx context.Context, request operations.RetrieveLoyaltyRewardRequest, security operations.RetrieveLoyaltyRewardSecurity) (*operations.RetrieveLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -649,7 +649,7 @@ func (s *loyalty) RetrieveLoyaltyReward(ctx context.Context, request operations.
 // You can search for a loyalty account using the phone number or customer ID associated with the account. To return all loyalty accounts, specify an empty `query` object or omit it entirely.
 //
 // Search results are sorted by `created_at` in ascending order.
-func (s *loyalty) SearchLoyaltyAccounts(ctx context.Context, request operations.SearchLoyaltyAccountsRequest) (*operations.SearchLoyaltyAccountsResponse, error) {
+func (s *loyalty) SearchLoyaltyAccounts(ctx context.Context, request shared.SearchLoyaltyAccountsRequest, security operations.SearchLoyaltyAccountsSecurity) (*operations.SearchLoyaltyAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/accounts/search"
 
@@ -668,7 +668,7 @@ func (s *loyalty) SearchLoyaltyAccounts(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -711,7 +711,7 @@ func (s *loyalty) SearchLoyaltyAccounts(ctx context.Context, request operations.
 // recorded in the ledger. Using this endpoint, you can search the ledger for events.
 //
 // Search results are sorted by `created_at` in descending order.
-func (s *loyalty) SearchLoyaltyEvents(ctx context.Context, request operations.SearchLoyaltyEventsRequest) (*operations.SearchLoyaltyEventsResponse, error) {
+func (s *loyalty) SearchLoyaltyEvents(ctx context.Context, request shared.SearchLoyaltyEventsRequest, security operations.SearchLoyaltyEventsSecurity) (*operations.SearchLoyaltyEventsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/events/search"
 
@@ -730,7 +730,7 @@ func (s *loyalty) SearchLoyaltyEvents(ctx context.Context, request operations.Se
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -773,7 +773,7 @@ func (s *loyalty) SearchLoyaltyEvents(ctx context.Context, request operations.Se
 // [RetrieveLoyaltyReward](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-reward) endpoint.
 //
 // Search results are sorted by `updated_at` in descending order.
-func (s *loyalty) SearchLoyaltyRewards(ctx context.Context, request operations.SearchLoyaltyRewardsRequest) (*operations.SearchLoyaltyRewardsResponse, error) {
+func (s *loyalty) SearchLoyaltyRewards(ctx context.Context, request shared.SearchLoyaltyRewardsRequest, security operations.SearchLoyaltyRewardsSecurity) (*operations.SearchLoyaltyRewardsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/rewards/search"
 
@@ -792,7 +792,7 @@ func (s *loyalty) SearchLoyaltyRewards(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

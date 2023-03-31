@@ -19,6 +19,5 @@ pkg/models/operations/realtimebiddingbiddersbiddingfunctionslist.go
 pkg/models/shared/biddingfunction.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listbiddingfunctionsresponse.go
 USAGE.md

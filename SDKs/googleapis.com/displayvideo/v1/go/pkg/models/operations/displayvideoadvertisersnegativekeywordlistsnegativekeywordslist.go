@@ -8,22 +8,17 @@ import (
 )
 
 type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListPathParams struct {
-	// Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the parent negative keyword list to which the requested negative keywords belong.
-	NegativeKeywordListID string `pathParam:"style=simple,explode=false,name=negativeKeywordListId"`
-}
-
-type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListQueryParams struct {
+type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -34,6 +29,8 @@ type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListQueryParams 
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The ID of the parent negative keyword list to which the requested negative keywords belong.
+	NegativeKeywordListID string `pathParam:"style=simple,explode=false,name=negativeKeywordListId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Field by which to sort the list. Acceptable values are: * `keywordValue` (default) The default sorting order is ascending. To specify descending order for a field, a suffix " desc" should be added to the field name. Example: `keywordValue desc`.
@@ -50,12 +47,6 @@ type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest struct {
-	PathParams  DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListPathParams
-	QueryParams DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListQueryParams
-	Security    DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListSecurity
 }
 
 type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse struct {

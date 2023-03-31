@@ -8,17 +8,12 @@ import (
 )
 
 type CreateProjectAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateProjectAlt1RequestBody struct {
 	// The name of the project.
 	Name string `json:"name"`
-}
-
-type CreateProjectAlt1Request struct {
-	Request  CreateProjectAlt1RequestBody `request:"mediaType=application/json"`
-	Security CreateProjectAlt1Security
 }
 
 type CreateProjectAlt1Response struct {

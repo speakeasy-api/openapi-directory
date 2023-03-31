@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsDashboardsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsDashboardsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsDashboardsCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsDashboardsCreateSecurity struct {
@@ -28,14 +28,10 @@ type MonitoringProjectsDashboardsCreateSecurity struct {
 	Option3 *MonitoringProjectsDashboardsCreateSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsDashboardsCreatePathParams struct {
-	// Required. The project on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] The [PROJECT_ID_OR_NUMBER] must match the dashboard resource name.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MonitoringProjectsDashboardsCreateQueryParams struct {
+type MonitoringProjectsDashboardsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Dashboard   *shared.Dashboard `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -48,6 +44,8 @@ type MonitoringProjectsDashboardsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The project on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] The [PROJECT_ID_OR_NUMBER] must match the dashboard resource name.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -58,13 +56,6 @@ type MonitoringProjectsDashboardsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// If set, validate the request and preview the review, but do not actually save it.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type MonitoringProjectsDashboardsCreateRequest struct {
-	PathParams  MonitoringProjectsDashboardsCreatePathParams
-	QueryParams MonitoringProjectsDashboardsCreateQueryParams
-	Request     *shared.Dashboard `request:"mediaType=application/json"`
-	Security    MonitoringProjectsDashboardsCreateSecurity
 }
 
 type MonitoringProjectsDashboardsCreateResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETGenBankProteinMappingUsingGETPathParams struct {
+type GETGenBankProteinMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETGenBankProteinMappingUsingGETRequest struct {
-	PathParams GETGenBankProteinMappingUsingGETPathParams
 }
 
 type GETGenBankProteinMappingUsingGETResponse struct {

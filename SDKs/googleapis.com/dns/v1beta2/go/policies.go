@@ -32,11 +32,11 @@ func newPolicies(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DNSPoliciesCreate - Creates a new Policy.
-func (s *policies) DNSPoliciesCreate(ctx context.Context, request operations.DNSPoliciesCreateRequest) (*operations.DNSPoliciesCreateResponse, error) {
+func (s *policies) DNSPoliciesCreate(ctx context.Context, request operations.DNSPoliciesCreateRequest, security operations.DNSPoliciesCreateSecurity) (*operations.DNSPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Policy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *policies) DNSPoliciesCreate(ctx context.Context, request operations.DNS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *policies) DNSPoliciesCreate(ctx context.Context, request operations.DNS
 }
 
 // DNSPoliciesDelete - Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
-func (s *policies) DNSPoliciesDelete(ctx context.Context, request operations.DNSPoliciesDeleteRequest) (*operations.DNSPoliciesDeleteResponse, error) {
+func (s *policies) DNSPoliciesDelete(ctx context.Context, request operations.DNSPoliciesDeleteRequest, security operations.DNSPoliciesDeleteSecurity) (*operations.DNSPoliciesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *policies) DNSPoliciesDelete(ctx context.Context, request operations.DNS
 }
 
 // DNSPoliciesGet - Fetches the representation of an existing Policy.
-func (s *policies) DNSPoliciesGet(ctx context.Context, request operations.DNSPoliciesGetRequest) (*operations.DNSPoliciesGetResponse, error) {
+func (s *policies) DNSPoliciesGet(ctx context.Context, request operations.DNSPoliciesGetRequest, security operations.DNSPoliciesGetSecurity) (*operations.DNSPoliciesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *policies) DNSPoliciesGet(ctx context.Context, request operations.DNSPol
 }
 
 // DNSPoliciesList - Enumerates all Policies associated with a project.
-func (s *policies) DNSPoliciesList(ctx context.Context, request operations.DNSPoliciesListRequest) (*operations.DNSPoliciesListResponse, error) {
+func (s *policies) DNSPoliciesList(ctx context.Context, request operations.DNSPoliciesListRequest, security operations.DNSPoliciesListSecurity) (*operations.DNSPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *policies) DNSPoliciesList(ctx context.Context, request operations.DNSPo
 }
 
 // DNSPoliciesPatch - Applies a partial update to an existing Policy.
-func (s *policies) DNSPoliciesPatch(ctx context.Context, request operations.DNSPoliciesPatchRequest) (*operations.DNSPoliciesPatchResponse, error) {
+func (s *policies) DNSPoliciesPatch(ctx context.Context, request operations.DNSPoliciesPatchRequest, security operations.DNSPoliciesPatchSecurity) (*operations.DNSPoliciesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Policy1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *policies) DNSPoliciesPatch(ctx context.Context, request operations.DNSP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *policies) DNSPoliciesPatch(ctx context.Context, request operations.DNSP
 }
 
 // DNSPoliciesUpdate - Updates an existing Policy.
-func (s *policies) DNSPoliciesUpdate(ctx context.Context, request operations.DNSPoliciesUpdateRequest) (*operations.DNSPoliciesUpdateResponse, error) {
+func (s *policies) DNSPoliciesUpdate(ctx context.Context, request operations.DNSPoliciesUpdateRequest, security operations.DNSPoliciesUpdateSecurity) (*operations.DNSPoliciesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/policies/{policy}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Policy1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *policies) DNSPoliciesUpdate(ctx context.Context, request operations.DNS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

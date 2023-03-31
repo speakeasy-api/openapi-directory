@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type PostExtractOntologySubgraphResourcePathParams struct {
-	// class ID, e.g. HP:0001288
-	Node string `pathParam:"style=simple,explode=false,name=node"`
-	// ontology ID, e.g. go, uberon, mp, hp
-	Ontology string `pathParam:"style=simple,explode=false,name=ontology"`
-}
-
-type PostExtractOntologySubgraphResourceQueryParams struct {
+type PostExtractOntologySubgraphResourceRequest struct {
 	// Additional classes
 	Cnode []string `queryParam:"style=form,explode=true,name=cnode"`
 	// Include Ancestors
@@ -22,13 +15,12 @@ type PostExtractOntologySubgraphResourceQueryParams struct {
 	IncludeDescendants *bool `queryParam:"style=form,explode=true,name=include_descendants"`
 	// Include metadata in response
 	IncludeMeta *bool `queryParam:"style=form,explode=true,name=include_meta"`
+	// class ID, e.g. HP:0001288
+	Node string `pathParam:"style=simple,explode=false,name=node"`
+	// ontology ID, e.g. go, uberon, mp, hp
+	Ontology string `pathParam:"style=simple,explode=false,name=ontology"`
 	// Additional classes
 	Relation []string `queryParam:"style=form,explode=true,name=relation"`
-}
-
-type PostExtractOntologySubgraphResourceRequest struct {
-	PathParams  PostExtractOntologySubgraphResourcePathParams
-	QueryParams PostExtractOntologySubgraphResourceQueryParams
 }
 
 type PostExtractOntologySubgraphResourceResponse struct {

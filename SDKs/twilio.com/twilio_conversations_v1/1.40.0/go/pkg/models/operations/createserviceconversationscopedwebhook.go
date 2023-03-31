@@ -12,14 +12,8 @@ var CreateServiceConversationScopedWebhookServerList = []string{
 }
 
 type CreateServiceConversationScopedWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateServiceConversationScopedWebhookPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest struct {
@@ -38,10 +32,11 @@ type CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhoo
 }
 
 type CreateServiceConversationScopedWebhookRequest struct {
-	PathParams CreateServiceConversationScopedWebhookPathParams
-	Request    *CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateServiceConversationScopedWebhookSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+	ConversationSid string                                                                               `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateServiceConversationScopedWebhookResponse struct {

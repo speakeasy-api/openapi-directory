@@ -36,17 +36,13 @@ func (e *GetOrdersOrderStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOrdersQueryParams struct {
+type GetOrdersRequest struct {
 	// The maximum number of items to return. If the value exceeds the maximum, then the maximum value will be used.
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// The number of items to skip before starting to collect the result set.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// Filter by status
 	OrderStatus *GetOrdersOrderStatusEnum `queryParam:"style=form,explode=true,name=orderStatus"`
-}
-
-type GetOrdersRequest struct {
-	QueryParams GetOrdersQueryParams
 }
 
 type GetOrdersResponse struct {

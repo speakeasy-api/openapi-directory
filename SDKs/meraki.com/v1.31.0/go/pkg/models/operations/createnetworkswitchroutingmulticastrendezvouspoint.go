@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchRoutingMulticastRendezvousPointPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody struct {
 	// The IP address of the interface where the RP needs to be created.
 	InterfaceIP string `json:"interfaceIp"`
@@ -18,8 +14,8 @@ type CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody struct {
 }
 
 type CreateNetworkSwitchRoutingMulticastRendezvousPointRequest struct {
-	PathParams CreateNetworkSwitchRoutingMulticastRendezvousPointPathParams
-	Request    CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                        `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkSwitchRoutingMulticastRendezvousPointResponse struct {

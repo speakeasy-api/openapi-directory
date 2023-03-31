@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CreatePotSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreatePotHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // CreatePotRequestBodyPotCurrencyEnum - If not populated, will be defaulted to tenancy currency
@@ -86,9 +80,9 @@ type CreatePotRequestBodyInput struct {
 }
 
 type CreatePotRequest struct {
-	Headers  CreatePotHeaders
-	Request  *CreatePotRequestBodyInput `request:"mediaType=application/json"`
-	Security CreatePotSecurity
+	RequestBody *CreatePotRequestBodyInput `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreatePot500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

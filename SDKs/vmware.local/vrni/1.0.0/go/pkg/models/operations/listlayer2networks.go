@@ -8,10 +8,10 @@ import (
 )
 
 type ListLayer2NetworksSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ListLayer2NetworksQueryParams struct {
+type ListLayer2NetworksRequest struct {
 	// cursor from previous response
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// end time for query in epoch seconds
@@ -20,11 +20,6 @@ type ListLayer2NetworksQueryParams struct {
 	Size *float64 `queryParam:"style=form,explode=true,name=size"`
 	// start time for query in epoch seconds
 	StartTime *float64 `queryParam:"style=form,explode=true,name=start_time"`
-}
-
-type ListLayer2NetworksRequest struct {
-	QueryParams ListLayer2NetworksQueryParams
-	Security    ListLayer2NetworksSecurity
 }
 
 type ListLayer2NetworksResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateEmployeeRoleSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateEmployeeRolePathParams struct {
-	// The ID of the role to modify.
-	RoleID string `pathParam:"style=simple,explode=false,name=role_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateEmployeeRoleRequest struct {
-	PathParams UpdateEmployeeRolePathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.V1EmployeeRole `request:"mediaType=application/json"`
-	Security UpdateEmployeeRoleSecurity
+	V1EmployeeRole shared.V1EmployeeRole `request:"mediaType=application/json"`
+	// The ID of the role to modify.
+	RoleID string `pathParam:"style=simple,explode=false,name=role_id"`
 }
 
 type UpdateEmployeeRoleResponse struct {

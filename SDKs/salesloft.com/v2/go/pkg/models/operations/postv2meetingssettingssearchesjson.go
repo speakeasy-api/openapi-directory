@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostV2MeetingsSettingsSearchesJSONQueryParams struct {
+type PostV2MeetingsSettingsSearchesJSONRequest struct {
 	// Filters meeting settings by calendar type
 	CalendarType *string `queryParam:"style=form,explode=true,name=calendar_type"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -25,10 +25,6 @@ type PostV2MeetingsSettingsSearchesJSONQueryParams struct {
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
 	// Filters meeting settings by array of user_guids
 	UserGuids []string `queryParam:"style=form,explode=false,name=user_guids"`
-}
-
-type PostV2MeetingsSettingsSearchesJSONRequest struct {
-	QueryParams PostV2MeetingsSettingsSearchesJSONQueryParams
 }
 
 type PostV2MeetingsSettingsSearchesJSONResponse struct {

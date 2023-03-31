@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteGlobalJwtVerifierSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteGlobalJwtVerifierPathParams struct {
-	// The jwt verifier id
-	VerifierID string `pathParam:"style=simple,explode=false,name=verifierId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteGlobalJwtVerifierRequest struct {
-	PathParams DeleteGlobalJwtVerifierPathParams
-	Security   DeleteGlobalJwtVerifierSecurity
+	// The jwt verifier id
+	VerifierID string `pathParam:"style=simple,explode=false,name=verifierId"`
 }
 
 type DeleteGlobalJwtVerifierResponse struct {

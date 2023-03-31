@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteWorkerServerList = []string{
@@ -12,26 +11,17 @@ var DeleteWorkerServerList = []string{
 }
 
 type DeleteWorkerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteWorkerPathParams struct {
+type DeleteWorkerRequest struct {
+	// The If-Match HTTP request header
+	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
 	// The SID of the Worker resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the Worker to delete.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type DeleteWorkerHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
-}
-
-type DeleteWorkerRequest struct {
-	PathParams DeleteWorkerPathParams
-	Headers    DeleteWorkerHeaders
-	Security   DeleteWorkerSecurity
-	ServerURL  *string
 }
 
 type DeleteWorkerResponse struct {

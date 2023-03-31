@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostExchangeRateJSONPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostExchangeRateJSONRequest struct {
-	PathParams PostExchangeRateJSONPathParams
-	Request    *shared.MultiExchangeRatePersistListVO `request:"mediaType=application/json"`
+	MultiExchangeRatePersistListVO *shared.MultiExchangeRatePersistListVO `request:"mediaType=application/json"`
+	WorkgroupID                    string                                 `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostExchangeRateJSONResponse struct {

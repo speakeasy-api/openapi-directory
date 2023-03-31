@@ -57,14 +57,14 @@ func newFinancial(defaultClient, securityClient HTTPClient, serverURL, language,
 // label these fields while conveying clear meaning to ensure accessibility for all users.
 func (s *financial) GetCommitteeCommitteeIDReports(ctx context.Context, request operations.GetCommitteeCommitteeIDReportsRequest) (*operations.GetCommitteeCommitteeIDReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/reports/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/reports/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -113,14 +113,14 @@ func (s *financial) GetCommitteeCommitteeIDReports(ctx context.Context, request 
 // For presidential and Senate candidates, multiple two-year cycles exist between elections.
 func (s *financial) GetCommitteeCommitteeIDTotals(ctx context.Context, request operations.GetCommitteeCommitteeIDTotalsRequest) (*operations.GetCommitteeCommitteeIDTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/totals/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/totals/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,7 +181,7 @@ func (s *financial) GetElections(ctx context.Context, request operations.GetElec
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -230,7 +230,7 @@ func (s *financial) GetElectionsSearch(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -279,7 +279,7 @@ func (s *financial) GetElectionsSummary(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -335,14 +335,14 @@ func (s *financial) GetElectionsSummary(ctx context.Context, request operations.
 // label these fields while conveying clear meaning to ensure accessibility for all users.
 func (s *financial) GetReportsEntityType(ctx context.Context, request operations.GetReportsEntityTypeRequest) (*operations.GetReportsEntityTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{entity_type}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reports/{entity_type}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -393,7 +393,7 @@ func (s *financial) GetTotalsByEntity(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -442,14 +442,14 @@ func (s *financial) GetTotalsByEntity(ctx context.Context, request operations.Ge
 // For presidential and Senate candidates, multiple two-year cycles exist between elections.
 func (s *financial) GetTotalsEntityType(ctx context.Context, request operations.GetTotalsEntityTypeRequest) (*operations.GetTotalsEntityTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/totals/{entity_type}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/totals/{entity_type}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

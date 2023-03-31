@@ -14,27 +14,22 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateExportCustomJobRequest{
-        Security: operations.CreateExportCustomJobSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateExportCustomJobPathParams{
-            ResourceType: "corrupti",
-        },
-        Request: &operations.CreateExportCustomJobCreateExportCustomJobRequest{
-            Email: "Micheal_Sporer@yahoo.com",
+        RequestBody: &operations.CreateExportCustomJobCreateExportCustomJobRequest{
+            Email: "Larue_Rau85@yahoo.com",
             EndDay: "corrupti",
             FriendlyName: "illum",
             StartDay: "vel",
             WebhookMethod: "error",
             WebhookURL: "deserunt",
         },
+        ResourceType: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.CreateExportCustomJob(ctx, req)
+    res, err := s.CreateExportCustomJob(ctx, req, operations.CreateExportCustomJobSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

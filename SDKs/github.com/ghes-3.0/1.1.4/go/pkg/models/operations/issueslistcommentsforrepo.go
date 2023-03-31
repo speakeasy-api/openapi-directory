@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type IssuesListCommentsForRepoPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesListCommentsForRepoDirectionEnum - Either `asc` or `desc`. Ignored without the `sort` parameter.
 type IssuesListCommentsForRepoDirectionEnum string
 
@@ -39,22 +34,19 @@ func (e *IssuesListCommentsForRepoDirectionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type IssuesListCommentsForRepoQueryParams struct {
+type IssuesListCommentsForRepoRequest struct {
 	// Either `asc` or `desc`. Ignored without the `sort` parameter.
 	Direction *IssuesListCommentsForRepoDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Owner     string                                  `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
 	// One of `created` (when the repository was starred) or `updated` (when it was last pushed to).
 	Sort *shared.SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type IssuesListCommentsForRepoRequest struct {
-	PathParams  IssuesListCommentsForRepoPathParams
-	QueryParams IssuesListCommentsForRepoQueryParams
 }
 
 type IssuesListCommentsForRepoResponse struct {

@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScimSetInformationForProvisionedUserPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The unique identifier of the SCIM user.
-	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
 type ScimSetInformationForProvisionedUserRequestBodyEmails struct {
 	Primary *bool   `json:"primary,omitempty"`
 	Type    *string `json:"type,omitempty"`
@@ -41,8 +34,11 @@ type ScimSetInformationForProvisionedUserRequestBody struct {
 }
 
 type ScimSetInformationForProvisionedUserRequest struct {
-	PathParams ScimSetInformationForProvisionedUserPathParams
-	Request    ScimSetInformationForProvisionedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody ScimSetInformationForProvisionedUserRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The unique identifier of the SCIM user.
+	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
 }
 
 type ScimSetInformationForProvisionedUserResponse struct {

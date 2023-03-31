@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkAlertsSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkAlertsSettingsRequest struct {
-	PathParams GetNetworkAlertsSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkAlertsSettingsResponse struct {

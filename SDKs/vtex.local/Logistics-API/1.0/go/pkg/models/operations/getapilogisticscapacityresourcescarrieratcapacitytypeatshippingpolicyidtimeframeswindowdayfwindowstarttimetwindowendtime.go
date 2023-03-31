@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimePathParams struct {
+type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// How the delivery capacity is measured as defined in the shipping policy. Capacity can be measured by maximum number of orders (`"orders_quantity"`) or SKUs (`"skus_quantity"`).
 	CapacityType string `pathParam:"style=simple,explode=false,name=capacityType"`
 	// ID of shipping policy to search.
@@ -17,18 +21,6 @@ type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTime
 	WindowEndTime string `pathParam:"style=simple,explode=false,name=windowEndTime"`
 	// Start time of specific scheduled delivery window to be consulted for reservations.
 	WindowStartTime string `pathParam:"style=simple,explode=false,name=windowStartTime"`
-}
-
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest struct {
-	PathParams GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimePathParams
-	Headers    GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeHeaders
 }
 
 type GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTimeResponse struct {

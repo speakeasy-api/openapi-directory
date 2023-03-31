@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateCollectionAuthorsReplaceSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateCollectionAuthorsReplacePathParams struct {
-	// Collection unique identifier
-	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateCollectionAuthorsReplaceRequest struct {
-	PathParams PrivateCollectionAuthorsReplacePathParams
 	// List of authors
-	Request  shared.AuthorsCreator `request:"mediaType=application/json"`
-	Security PrivateCollectionAuthorsReplaceSecurity
+	AuthorsCreator shared.AuthorsCreator `request:"mediaType=application/json"`
+	// Collection unique identifier
+	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type PrivateCollectionAuthorsReplaceResponse struct {

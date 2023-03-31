@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetRawTxPathParams struct {
+type TestnetGetRawTxRequest struct {
 	// Transaction ID
 	Txid string `pathParam:"style=simple,explode=false,name=txid"`
-}
-
-type TestnetGetRawTxRequest struct {
-	PathParams TestnetGetRawTxPathParams
 }
 
 type TestnetGetRawTxResponse struct {

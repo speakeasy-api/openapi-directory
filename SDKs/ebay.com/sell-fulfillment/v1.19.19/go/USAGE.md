@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetOrderRequest{
-        Security: operations.GetOrderSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GetOrderPathParams{
-            OrderID: "corrupti",
-        },
-        QueryParams: operations.GetOrderQueryParams{
-            FieldGroups: "provident",
-        },
+        FieldGroups: "corrupti",
+        OrderID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Order.GetOrder(ctx, req)
+    res, err := s.Order.GetOrder(ctx, req, operations.GetOrderSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

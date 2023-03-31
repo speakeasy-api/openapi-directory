@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateAccountGroupMappingSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateAccountGroupMappingRequest struct {
-	Request  shared.GroupMapping `request:"mediaType=application/json"`
-	Security UpdateAccountGroupMappingSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateAccountGroupMappingResponse struct {

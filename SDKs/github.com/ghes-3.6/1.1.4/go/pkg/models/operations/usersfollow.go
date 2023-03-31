@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersFollowPathParams struct {
+type UsersFollowRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersFollowRequest struct {
-	PathParams UsersFollowPathParams
 }
 
 type UsersFollowResponse struct {

@@ -4,37 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OperationsFlightstatusByFlightNumberAndDateGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OperationsFlightstatusByFlightNumberAndDateGetPathParams struct {
+type OperationsFlightstatusByFlightNumberAndDateGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The departure date (YYYY-MM-DD) in the local time of the departure airport
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Flight number including carrier code and any suffix (e.g. 'LH400')
 	FlightNumber string `pathParam:"style=simple,explode=false,name=flightNumber"`
-}
-
-type OperationsFlightstatusByFlightNumberAndDateGetQueryParams struct {
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type OperationsFlightstatusByFlightNumberAndDateGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OperationsFlightstatusByFlightNumberAndDateGetRequest struct {
-	PathParams  OperationsFlightstatusByFlightNumberAndDateGetPathParams
-	QueryParams OperationsFlightstatusByFlightNumberAndDateGetQueryParams
-	Headers     OperationsFlightstatusByFlightNumberAndDateGetHeaders
-	Security    OperationsFlightstatusByFlightNumberAndDateGetSecurity
 }
 
 type OperationsFlightstatusByFlightNumberAndDateGetResponse struct {

@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationAdaptivePolicySettingsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationAdaptivePolicySettingsRequestBody struct {
 	// List of network IDs with adaptive policy enabled
 	EnabledNetworks []string `json:"enabledNetworks,omitempty"`
 }
 
 type UpdateOrganizationAdaptivePolicySettingsRequest struct {
-	PathParams UpdateOrganizationAdaptivePolicySettingsPathParams
-	Request    *UpdateOrganizationAdaptivePolicySettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationAdaptivePolicySettingsRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                               `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationAdaptivePolicySettingsResponse struct {

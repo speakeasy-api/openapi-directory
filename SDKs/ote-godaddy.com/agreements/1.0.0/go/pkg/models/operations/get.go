@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQueryParams struct {
-	// Keys for Agreements whose details are to be retrieved
-	Keys []string `queryParam:"style=form,explode=false,name=keys"`
-}
-
-type GetHeaders struct {
+type GetRequest struct {
 	// Unique identifier of the Market used to retrieve/translate Legal Agreements
 	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
 	// PrivateLabelId to operate as, if different from JWT
 	XPrivateLabelID *int64 `header:"style=simple,explode=false,name=X-Private-Label-Id"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
-	Headers     GetHeaders
+	// Keys for Agreements whose details are to be retrieved
+	Keys []string `queryParam:"style=form,explode=false,name=keys"`
 }
 
 type GetResponse struct {

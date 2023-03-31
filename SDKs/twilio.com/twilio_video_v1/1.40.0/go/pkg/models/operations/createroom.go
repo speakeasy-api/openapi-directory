@@ -14,7 +14,8 @@ var CreateRoomServerList = []string{
 }
 
 type CreateRoomSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateRoomCreateRoomRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback`. Can be `POST` or `GET`.
@@ -83,12 +84,6 @@ type CreateRoomCreateRoomRequest struct {
 	UnusedRoomTimeout *int64 `form:"name=UnusedRoomTimeout"`
 	// An array of the video codecs that are supported when publishing a track in the room.  Can be: `VP8` and `H264`.  ***This feature is not available in `peer-to-peer` rooms***
 	VideoCodecs []shared.RoomEnumVideoCodecEnum `form:"name=VideoCodecs"`
-}
-
-type CreateRoomRequest struct {
-	Request   *CreateRoomCreateRoomRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateRoomSecurity
-	ServerURL *string
 }
 
 type CreateRoomResponse struct {

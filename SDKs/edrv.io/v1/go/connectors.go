@@ -34,7 +34,7 @@ func newConnectors(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteConnector - Delete a connector
 func (s *connectors) DeleteConnector(ctx context.Context, request operations.DeleteConnectorRequest) (*operations.DeleteConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,14 +69,14 @@ func (s *connectors) DeleteConnector(ctx context.Context, request operations.Del
 // GetConnector - Get a connector
 func (s *connectors) GetConnector(ctx context.Context, request operations.GetConnectorRequest) (*operations.GetConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,7 +115,7 @@ func (s *connectors) GetConnectors(ctx context.Context, request operations.GetCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -147,9 +147,9 @@ func (s *connectors) GetConnectors(ctx context.Context, request operations.GetCo
 // PatchConnector - Update a connector's data
 func (s *connectors) PatchConnector(ctx context.Context, request operations.PatchConnectorRequest) (*operations.PatchConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,7 +200,7 @@ func (s *connectors) PatchConnector(ctx context.Context, request operations.Patc
 }
 
 // PostConnectors - Create a new connector
-func (s *connectors) PostConnectors(ctx context.Context, request operations.PostConnectorsRequest) (*operations.PostConnectorsResponse, error) {
+func (s *connectors) PostConnectors(ctx context.Context, request operations.PostConnectorsRequestBody) (*operations.PostConnectorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/connectors"
 

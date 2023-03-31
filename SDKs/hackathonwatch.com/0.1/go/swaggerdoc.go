@@ -70,7 +70,7 @@ func (s *swaggerDoc) GETSwaggerDocFormat(ctx context.Context) (*operations.GETSw
 // GETSwaggerDocNameFormat - Swagger compatible API description for specific API
 func (s *swaggerDoc) GETSwaggerDocNameFormat(ctx context.Context, request operations.GETSwaggerDocNameFormatRequest) (*operations.GETSwaggerDocNameFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/swagger_doc/{name}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/swagger_doc/{name}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,7 +15,6 @@ pkg/models/operations/check.go
 pkg/models/operations/executeappactionendpoint.go
 pkg/models/operations/getconfigurationlink.go
 pkg/models/operations/listexposedactions.go
-pkg/models/shared/security.go
 pkg/models/shared/executeresponse.go
 pkg/models/shared/errorresponse.go
 pkg/models/shared/executerequest.go

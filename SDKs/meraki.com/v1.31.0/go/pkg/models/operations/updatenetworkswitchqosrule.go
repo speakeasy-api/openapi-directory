@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchQosRulePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	QosRuleID string `pathParam:"style=simple,explode=false,name=qosRuleId"`
-}
-
 // UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum - The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP". Default value is "ANY".
 type UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum string
 
@@ -58,8 +53,9 @@ type UpdateNetworkSwitchQosRuleRequestBody struct {
 }
 
 type UpdateNetworkSwitchQosRuleRequest struct {
-	PathParams UpdateNetworkSwitchQosRulePathParams
-	Request    *UpdateNetworkSwitchQosRuleRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchQosRuleRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                 `pathParam:"style=simple,explode=false,name=networkId"`
+	QosRuleID   string                                 `pathParam:"style=simple,explode=false,name=qosRuleId"`
 }
 
 type UpdateNetworkSwitchQosRuleResponse struct {

@@ -34,14 +34,14 @@ func newEthernet(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Endpoint to see power status for wireless devices
 func (s *ethernet) GetOrganizationWirelessDevicesEthernetStatuses(ctx context.Context, request operations.GetOrganizationWirelessDevicesEthernetStatusesRequest) (*operations.GetOrganizationWirelessDevicesEthernetStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

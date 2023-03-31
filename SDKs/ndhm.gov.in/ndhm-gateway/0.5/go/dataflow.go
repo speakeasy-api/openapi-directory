@@ -42,7 +42,7 @@ func (s *dataFlow) PostV05HealthInformationCmOnRequestJSON(ctx context.Context, 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/cm/on-request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUHealthInformationRequestResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -57,7 +57,7 @@ func (s *dataFlow) PostV05HealthInformationCmOnRequestJSON(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -114,7 +114,7 @@ func (s *dataFlow) PostV05HealthInformationCmOnRequestRaw(ctx context.Context, r
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/cm/on-request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -129,7 +129,7 @@ func (s *dataFlow) PostV05HealthInformationCmOnRequestRaw(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -183,7 +183,7 @@ func (s *dataFlow) PostV05HealthInformationCmRequestJSON(ctx context.Context, re
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/cm/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -198,7 +198,7 @@ func (s *dataFlow) PostV05HealthInformationCmRequestJSON(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -252,7 +252,7 @@ func (s *dataFlow) PostV05HealthInformationCmRequestRaw(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/cm/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -267,7 +267,7 @@ func (s *dataFlow) PostV05HealthInformationCmRequestRaw(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -321,7 +321,7 @@ func (s *dataFlow) PostV05HealthInformationHipOnRequestJSON(ctx context.Context,
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hip/on-request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIPHealthInformationRequestAcknowledgement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -336,7 +336,7 @@ func (s *dataFlow) PostV05HealthInformationHipOnRequestJSON(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -390,7 +390,7 @@ func (s *dataFlow) PostV05HealthInformationHipOnRequestRaw(ctx context.Context, 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hip/on-request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,7 +405,7 @@ func (s *dataFlow) PostV05HealthInformationHipOnRequestRaw(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -459,7 +459,7 @@ func (s *dataFlow) PostV05HealthInformationHipRequestJSON(ctx context.Context, r
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hip/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIPHIRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,7 +474,7 @@ func (s *dataFlow) PostV05HealthInformationHipRequestJSON(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -528,7 +528,7 @@ func (s *dataFlow) PostV05HealthInformationHipRequestRaw(ctx context.Context, re
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hip/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -543,7 +543,7 @@ func (s *dataFlow) PostV05HealthInformationHipRequestRaw(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -601,7 +601,7 @@ func (s *dataFlow) PostV05HealthInformationNotifyJSON(ctx context.Context, reque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HealthInformationNotification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -616,7 +616,7 @@ func (s *dataFlow) PostV05HealthInformationNotifyJSON(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -674,7 +674,7 @@ func (s *dataFlow) PostV05HealthInformationNotifyRaw(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -689,7 +689,7 @@ func (s *dataFlow) PostV05HealthInformationNotifyRaw(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

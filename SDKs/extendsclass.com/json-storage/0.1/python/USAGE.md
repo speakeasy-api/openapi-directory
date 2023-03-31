@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeleteBinIDRequest(
-    path_params=operations.DeleteBinIDPathParams(
-        id="ipsum",
-    ),
+    id="corrupti",
 )
     
 res = s.delete_bin_id_(req)

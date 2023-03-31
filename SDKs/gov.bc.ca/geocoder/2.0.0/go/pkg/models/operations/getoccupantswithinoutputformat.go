@@ -8,6 +8,42 @@ import (
 	"net/http"
 )
 
+// GetOccupantsWithinOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+type GetOccupantsWithinOutputFormatLocationDescriptorEnum string
+
+const (
+	GetOccupantsWithinOutputFormatLocationDescriptorEnumAny            GetOccupantsWithinOutputFormatLocationDescriptorEnum = "any"
+	GetOccupantsWithinOutputFormatLocationDescriptorEnumAccessPoint    GetOccupantsWithinOutputFormatLocationDescriptorEnum = "accessPoint"
+	GetOccupantsWithinOutputFormatLocationDescriptorEnumFrontDoorPoint GetOccupantsWithinOutputFormatLocationDescriptorEnum = "frontDoorPoint"
+	GetOccupantsWithinOutputFormatLocationDescriptorEnumParcelPoint    GetOccupantsWithinOutputFormatLocationDescriptorEnum = "parcelPoint"
+	GetOccupantsWithinOutputFormatLocationDescriptorEnumRooftopPoint   GetOccupantsWithinOutputFormatLocationDescriptorEnum = "rooftopPoint"
+	GetOccupantsWithinOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsWithinOutputFormatLocationDescriptorEnum = "routingPoint"
+)
+
+func (e *GetOccupantsWithinOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "any":
+		fallthrough
+	case "accessPoint":
+		fallthrough
+	case "frontDoorPoint":
+		fallthrough
+	case "parcelPoint":
+		fallthrough
+	case "rooftopPoint":
+		fallthrough
+	case "routingPoint":
+		*e = GetOccupantsWithinOutputFormatLocationDescriptorEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetOccupantsWithinOutputFormatLocationDescriptorEnum: %s", s)
+	}
+}
+
 // GetOccupantsWithinOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
 //
 // Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
@@ -46,49 +82,6 @@ func (e *GetOccupantsWithinOutputFormatOutputFormatEnum) UnmarshalJSON(data []by
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetOccupantsWithinOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetOccupantsWithinOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetOccupantsWithinOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
-// GetOccupantsWithinOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
-type GetOccupantsWithinOutputFormatLocationDescriptorEnum string
-
-const (
-	GetOccupantsWithinOutputFormatLocationDescriptorEnumAny            GetOccupantsWithinOutputFormatLocationDescriptorEnum = "any"
-	GetOccupantsWithinOutputFormatLocationDescriptorEnumAccessPoint    GetOccupantsWithinOutputFormatLocationDescriptorEnum = "accessPoint"
-	GetOccupantsWithinOutputFormatLocationDescriptorEnumFrontDoorPoint GetOccupantsWithinOutputFormatLocationDescriptorEnum = "frontDoorPoint"
-	GetOccupantsWithinOutputFormatLocationDescriptorEnumParcelPoint    GetOccupantsWithinOutputFormatLocationDescriptorEnum = "parcelPoint"
-	GetOccupantsWithinOutputFormatLocationDescriptorEnumRooftopPoint   GetOccupantsWithinOutputFormatLocationDescriptorEnum = "rooftopPoint"
-	GetOccupantsWithinOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsWithinOutputFormatLocationDescriptorEnum = "routingPoint"
-)
-
-func (e *GetOccupantsWithinOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "any":
-		fallthrough
-	case "accessPoint":
-		fallthrough
-	case "frontDoorPoint":
-		fallthrough
-	case "parcelPoint":
-		fallthrough
-	case "rooftopPoint":
-		fallthrough
-	case "routingPoint":
-		*e = GetOccupantsWithinOutputFormatLocationDescriptorEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetOccupantsWithinOutputFormatLocationDescriptorEnum: %s", s)
 	}
 }
 
@@ -134,7 +127,7 @@ func (e *GetOccupantsWithinOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetOccupantsWithinOutputFormatQueryParams struct {
+type GetOccupantsWithinOutputFormatRequest struct {
 	// A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank">bbox</a>
 	Bbox string `queryParam:"style=form,explode=true,name=bbox"`
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
@@ -143,17 +136,16 @@ type GetOccupantsWithinOutputFormatQueryParams struct {
 	LocationDescriptor *GetOccupantsWithinOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	// The maximum number of search results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetOccupantsWithinOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetOccupantsWithinOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`
 	// Example: schools;courts;employment<br>A list of tags separated by semicolons.
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type GetOccupantsWithinOutputFormatRequest struct {
-	PathParams  GetOccupantsWithinOutputFormatPathParams
-	QueryParams GetOccupantsWithinOutputFormatQueryParams
 }
 
 type GetOccupantsWithinOutputFormatResponse struct {

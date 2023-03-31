@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutProductsIDOptionsOptionIDJSONPathParams struct {
-	// Id of the Product
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the Product Option
-	OptionID int `pathParam:"style=simple,explode=false,name=option_id"`
-}
-
-type PutProductsIDOptionsOptionIDJSONQueryParams struct {
+type PutProductsIDOptionsOptionIDJSONRequest struct {
+	// Product option parameters to change
+	ProductOptionEdit shared.ProductOptionEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Product
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutProductsIDOptionsOptionIDJSONRequest struct {
-	PathParams  PutProductsIDOptionsOptionIDJSONPathParams
-	QueryParams PutProductsIDOptionsOptionIDJSONQueryParams
-	// Product option parameters to change
-	Request shared.ProductOptionEdit `request:"mediaType=application/json"`
+	// Id of the Product Option
+	OptionID int `pathParam:"style=simple,explode=false,name=option_id"`
 }
 
 type PutProductsIDOptionsOptionIDJSONResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type CheckIfVodWasPurchasedSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CheckIfVodWasPurchasedPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CheckIfVodWasPurchasedRequest struct {
-	PathParams CheckIfVodWasPurchasedPathParams
-	Security   CheckIfVodWasPurchasedSecurity
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type CheckIfVodWasPurchasedResponse struct {

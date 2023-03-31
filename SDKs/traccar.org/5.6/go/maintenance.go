@@ -36,7 +36,7 @@ func newMaintenance(defaultClient, securityClient HTTPClient, serverURL, languag
 // DeleteMaintenanceID - Delete a Maintenance
 func (s *maintenance) DeleteMaintenanceID(ctx context.Context, request operations.DeleteMaintenanceIDRequest) (*operations.DeleteMaintenanceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *maintenance) GetMaintenance(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,7 +118,7 @@ func (s *maintenance) GetMaintenance(ctx context.Context, request operations.Get
 }
 
 // PostMaintenance - Create a Maintenance
-func (s *maintenance) PostMaintenance(ctx context.Context, request operations.PostMaintenanceRequest) (*operations.PostMaintenanceResponse, error) {
+func (s *maintenance) PostMaintenance(ctx context.Context, request shared.Maintenance) (*operations.PostMaintenanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/maintenance"
 
@@ -174,9 +174,9 @@ func (s *maintenance) PostMaintenance(ctx context.Context, request operations.Po
 // PutMaintenanceID - Update a Maintenance
 func (s *maintenance) PutMaintenanceID(ctx context.Context, request operations.PutMaintenanceIDRequest) (*operations.PutMaintenanceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Maintenance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -36,14 +36,14 @@ func newAttachments(defaultClient, securityClient HTTPClient, serverURL, languag
 // Use the Delete Attachment REST request to delete an attachment from a Zuora object.
 func (s *attachments) DELETEAttachments(ctx context.Context, request operations.DELETEAttachmentsRequest) (*operations.DELETEAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{attachment-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{attachment-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -85,14 +85,14 @@ func (s *attachments) DELETEAttachments(ctx context.Context, request operations.
 // Use the View Attachment REST request to retrieve information about an attachment document.
 func (s *attachments) GETAttachments(ctx context.Context, request operations.GETAttachmentsRequest) (*operations.GETAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{attachment-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{attachment-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -136,16 +136,16 @@ func (s *attachments) GETAttachments(ctx context.Context, request operations.GET
 // **Note**: The Credit and Debit Memos feature is only available if you have [Invoice Settlement](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement) enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
 func (s *attachments) GETAttachmentsList(ctx context.Context, request operations.GETAttachmentsListRequest) (*operations.GETAttachmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{object-type}/{object-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{object-type}/{object-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -193,7 +193,7 @@ func (s *attachments) POSTAttachments(ctx context.Context, request operations.PO
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attachments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -208,9 +208,9 @@ func (s *attachments) POSTAttachments(ctx context.Context, request operations.PO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -254,9 +254,9 @@ func (s *attachments) POSTAttachments(ctx context.Context, request operations.PO
 // Use the Edit Attachment REST request to make changes to the descriptive fields of an attachment, such as the description and the file name. You cannot change the actual content of the attached file in Zuora. If you need to change the actual content, you need to delete the attachment and add the updated file as a new attachment.
 func (s *attachments) PUTAttachments(ctx context.Context, request operations.PUTAttachmentsRequest) (*operations.PUTAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{attachment-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/attachments/{attachment-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTAttachmentType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,7 +268,7 @@ func (s *attachments) PUTAttachments(ctx context.Context, request operations.PUT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

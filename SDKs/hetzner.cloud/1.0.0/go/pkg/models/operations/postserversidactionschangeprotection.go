@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsChangeProtectionPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsChangeProtectionRequestBody struct {
 	// If true, prevents the Server from being deleted (currently delete and rebuild attribute needs to have the same value)
 	Delete *bool `json:"delete,omitempty"`
@@ -21,8 +16,9 @@ type PostServersIDActionsChangeProtectionRequestBody struct {
 }
 
 type PostServersIDActionsChangeProtectionRequest struct {
-	PathParams PostServersIDActionsChangeProtectionPathParams
-	Request    *PostServersIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

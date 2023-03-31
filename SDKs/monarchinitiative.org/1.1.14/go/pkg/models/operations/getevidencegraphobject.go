@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEvidenceGraphObjectPathParams struct {
+type GetEvidenceGraphObjectRequest struct {
 	// association id, e.g. 68e686f6-d05b-46b8-ab1f-1da2fff97ada
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEvidenceGraphObjectRequest struct {
-	PathParams GetEvidenceGraphObjectPathParams
 }
 
 type GetEvidenceGraphObjectResponse struct {

@@ -13,29 +13,24 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateChannelRequest{
-        Security: operations.CreateChannelSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: &operations.CreateChannelCreateChannelRequest{
-            ChatFriendlyName: "corrupti",
-            ChatUniqueName: "provident",
-            ChatUserFriendlyName: "distinctio",
-            FlexFlowSid: "quibusdam",
-            Identity: "unde",
-            LongLived: false,
-            PreEngagementData: "nulla",
-            Target: "corrupti",
-            TaskAttributes: "illum",
-            TaskSid: "vel",
-        },
+    req := operations.CreateChannelCreateChannelRequest{
+        ChatFriendlyName: "corrupti",
+        ChatUniqueName: "provident",
+        ChatUserFriendlyName: "distinctio",
+        FlexFlowSid: "quibusdam",
+        Identity: "unde",
+        LongLived: false,
+        PreEngagementData: "nulla",
+        Target: "corrupti",
+        TaskAttributes: "illum",
+        TaskSid: "vel",
     }
 
     ctx := context.Background()
-    res, err := s.CreateChannel(ctx, req)
+    res, err := s.CreateChannel(ctx, req, operations.CreateChannelSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

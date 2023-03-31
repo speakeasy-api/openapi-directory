@@ -35,14 +35,14 @@ func newAEAssessment(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes an existing auto enrolment assessment for the employee. Used to remove historical assessments
 func (s *aeAssessment) DeleteAEAssessment(ctx context.Context, request operations.DeleteAEAssessmentRequest) (*operations.DeleteAEAssessmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *aeAssessment) DeleteAEAssessment(ctx context.Context, request operation
 // Gets the auto enrolment assessment from the specified employee
 func (s *aeAssessment) GetAEAssessmentFromEmployee(ctx context.Context, request operations.GetAEAssessmentFromEmployeeRequest) (*operations.GetAEAssessmentFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *aeAssessment) GetAEAssessmentFromEmployee(ctx context.Context, request 
 // Gets all auto enrolment assessments from the specified employee
 func (s *aeAssessment) GetAEAssessmentsFromEmployee(ctx context.Context, request operations.GetAEAssessmentsFromEmployeeRequest) (*operations.GetAEAssessmentsFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *aeAssessment) GetAEAssessmentsFromEmployee(ctx context.Context, request
 // Gets all auto enrolment assessments from the specified pay run
 func (s *aeAssessment) GetAEAssessmentsFromPayRun(ctx context.Context, request operations.GetAEAssessmentsFromPayRunRequest) (*operations.GetAEAssessmentsFromPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/AEAssessments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/AEAssessments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,9 +278,9 @@ func (s *aeAssessment) GetAEAssessmentsFromPayRun(ctx context.Context, request o
 // Creates a new auto enrolment assessment for the employee. Used to insert historical assessments
 func (s *aeAssessment) PostNewAEAssessment(ctx context.Context, request operations.PostNewAEAssessmentRequest) (*operations.PostNewAEAssessmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AEAssessment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,7 +295,7 @@ func (s *aeAssessment) PostNewAEAssessment(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -351,9 +351,9 @@ func (s *aeAssessment) PostNewAEAssessment(ctx context.Context, request operatio
 // Creates a new auto enrolment assessment for the employee. Used to insert historical assessments
 func (s *aeAssessment) PutNewAEAssessment(ctx context.Context, request operations.PutNewAEAssessmentRequest) (*operations.PutNewAEAssessmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AEAssessment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -368,7 +368,7 @@ func (s *aeAssessment) PutNewAEAssessment(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

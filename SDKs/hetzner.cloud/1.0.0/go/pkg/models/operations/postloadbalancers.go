@@ -313,10 +313,6 @@ type PostLoadBalancersCreateLoadBalancerRequest struct {
 	Targets []PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTarget `json:"targets,omitempty"`
 }
 
-type PostLoadBalancersRequest struct {
-	Request *PostLoadBalancersCreateLoadBalancerRequest `request:"mediaType=application/json"`
-}
-
 // PostLoadBalancers201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null
 type PostLoadBalancers201ApplicationJSONActionError struct {
 	// Fixed machine readable code

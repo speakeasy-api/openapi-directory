@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type TeamsRemoveRepoLegacyPathParams struct {
+type TeamsRemoveRepoLegacyRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsRemoveRepoLegacyRequest struct {
-	PathParams TeamsRemoveRepoLegacyPathParams
 }
 
 type TeamsRemoveRepoLegacyResponse struct {

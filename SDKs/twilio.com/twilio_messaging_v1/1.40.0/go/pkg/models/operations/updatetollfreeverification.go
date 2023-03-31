@@ -12,12 +12,8 @@ var UpdateTollfreeVerificationServerList = []string{
 }
 
 type UpdateTollfreeVerificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTollfreeVerificationPathParams struct {
-	// The unique string to identify Tollfree Verification.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTollfreeVerificationUpdateTollfreeVerificationRequest struct {
@@ -63,10 +59,9 @@ type UpdateTollfreeVerificationUpdateTollfreeVerificationRequest struct {
 }
 
 type UpdateTollfreeVerificationRequest struct {
-	PathParams UpdateTollfreeVerificationPathParams
-	Request    *UpdateTollfreeVerificationUpdateTollfreeVerificationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTollfreeVerificationSecurity
-	ServerURL  *string
+	RequestBody *UpdateTollfreeVerificationUpdateTollfreeVerificationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string to identify Tollfree Verification.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateTollfreeVerificationResponse struct {

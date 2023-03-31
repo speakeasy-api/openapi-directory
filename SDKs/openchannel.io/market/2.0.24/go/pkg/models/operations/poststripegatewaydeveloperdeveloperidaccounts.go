@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type PostStripeGatewayDeveloperDeveloperIDAccountsPathParams struct {
+type PostStripeGatewayDeveloperDeveloperIDAccountsRequest struct {
 	// The id of the developer connecting their Stripe account
 	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
-}
-
-type PostStripeGatewayDeveloperDeveloperIDAccountsQueryParams struct {
 	// The URL to redirect this developer after they have connected their Stripe account
 	RedirectURL string `queryParam:"style=form,explode=true,name=redirectUrl"`
-}
-
-type PostStripeGatewayDeveloperDeveloperIDAccountsRequest struct {
-	PathParams  PostStripeGatewayDeveloperDeveloperIDAccountsPathParams
-	QueryParams PostStripeGatewayDeveloperDeveloperIDAccountsQueryParams
 }
 
 type PostStripeGatewayDeveloperDeveloperIDAccountsResponse struct {

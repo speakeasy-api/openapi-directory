@@ -32,11 +32,11 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ServiceusageServicesBatchEnable - Enable multiple services on a project. The operation is atomic: if enabling any service fails, then the entire batch fails, and no state changes occur. To enable a single service, use the `EnableService` method instead.
-func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request operations.ServiceusageServicesBatchEnableRequest) (*operations.ServiceusageServicesBatchEnableResponse, error) {
+func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request operations.ServiceusageServicesBatchEnableRequest, security operations.ServiceusageServicesBatchEnableSecurity) (*operations.ServiceusageServicesBatchEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services:batchEnable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services:batchEnable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchEnableServicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request 
 }
 
 // ServiceusageServicesBatchGet - Returns the service configurations and enabled states for a given list of services.
-func (s *services) ServiceusageServicesBatchGet(ctx context.Context, request operations.ServiceusageServicesBatchGetRequest) (*operations.ServiceusageServicesBatchGetResponse, error) {
+func (s *services) ServiceusageServicesBatchGet(ctx context.Context, request operations.ServiceusageServicesBatchGetRequest, security operations.ServiceusageServicesBatchGetSecurity) (*operations.ServiceusageServicesBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *services) ServiceusageServicesBatchGet(ctx context.Context, request ope
 }
 
 // ServiceusageServicesDisable - Disable a service so that it can no longer be used with a project. This prevents unintended usage that may cause unexpected billing charges or security leaks. It is not valid to call the disable method on a service that is not currently enabled. Callers will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled.
-func (s *services) ServiceusageServicesDisable(ctx context.Context, request operations.ServiceusageServicesDisableRequest) (*operations.ServiceusageServicesDisableResponse, error) {
+func (s *services) ServiceusageServicesDisable(ctx context.Context, request operations.ServiceusageServicesDisableRequest, security operations.ServiceusageServicesDisableSecurity) (*operations.ServiceusageServicesDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:disable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisableServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *services) ServiceusageServicesDisable(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *services) ServiceusageServicesDisable(ctx context.Context, request oper
 }
 
 // ServiceusageServicesEnable - Enable a service so that it can be used with a project.
-func (s *services) ServiceusageServicesEnable(ctx context.Context, request operations.ServiceusageServicesEnableRequest) (*operations.ServiceusageServicesEnableResponse, error) {
+func (s *services) ServiceusageServicesEnable(ctx context.Context, request operations.ServiceusageServicesEnableRequest, security operations.ServiceusageServicesEnableSecurity) (*operations.ServiceusageServicesEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *services) ServiceusageServicesEnable(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *services) ServiceusageServicesEnable(ctx context.Context, request opera
 }
 
 // ServiceusageServicesGet - Returns the service configuration and enabled state for a given service.
-func (s *services) ServiceusageServicesGet(ctx context.Context, request operations.ServiceusageServicesGetRequest) (*operations.ServiceusageServicesGetResponse, error) {
+func (s *services) ServiceusageServicesGet(ctx context.Context, request operations.ServiceusageServicesGetRequest, security operations.ServiceusageServicesGetSecurity) (*operations.ServiceusageServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *services) ServiceusageServicesGet(ctx context.Context, request operatio
 }
 
 // ServiceusageServicesList - List all services available to the specified project, and the current state of those services with respect to the project. The list includes all public services, all services for which the calling user has the `servicemanagement.services.bind` permission, and all services that have already been enabled on the project. The list can be filtered to only include services in a specific state, for example to only include services enabled on the project. WARNING: If you need to query enabled services frequently or across an organization, you should use [Cloud Asset Inventory API](https://cloud.google.com/asset-inventory/docs/apis), which provides higher throughput and richer filtering capability.
-func (s *services) ServiceusageServicesList(ctx context.Context, request operations.ServiceusageServicesListRequest) (*operations.ServiceusageServicesListResponse, error) {
+func (s *services) ServiceusageServicesList(ctx context.Context, request operations.ServiceusageServicesListRequest, security operations.ServiceusageServicesListSecurity) (*operations.ServiceusageServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

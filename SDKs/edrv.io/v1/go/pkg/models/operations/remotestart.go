@@ -13,10 +13,6 @@ type RemotestartRequestBody struct {
 	Token         *string `json:"token,omitempty"`
 }
 
-type RemotestartRequest struct {
-	Request RemotestartRequestBody `request:"mediaType=application/json"`
-}
-
 // Remotestart201ApplicationJSON - A successful response
 type Remotestart201ApplicationJSON struct {
 	Command map[string]interface{} `json:"command,omitempty"`

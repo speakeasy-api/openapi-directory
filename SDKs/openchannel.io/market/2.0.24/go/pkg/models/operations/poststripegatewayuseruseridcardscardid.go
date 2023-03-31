@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type PostStripeGatewayUserUserIDCardsCardIDPathParams struct {
-	// The id of the card to be updated
-	CardID string `pathParam:"style=simple,explode=false,name=cardId"`
-	// The id of the user adding their credit card
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PostStripeGatewayUserUserIDCardsCardIDQueryParams struct {
+type PostStripeGatewayUserUserIDCardsCardIDRequest struct {
 	// The card holder's city
 	AddressCity *string `queryParam:"style=form,explode=true,name=address_city"`
 	// The card holder's country
@@ -26,13 +19,12 @@ type PostStripeGatewayUserUserIDCardsCardIDQueryParams struct {
 	AddressState *string `queryParam:"style=form,explode=true,name=address_state"`
 	// The card holder's zip/postal code
 	AddressZip *string `queryParam:"style=form,explode=true,name=address_zip"`
+	// The id of the card to be updated
+	CardID string `pathParam:"style=simple,explode=false,name=cardId"`
 	// Set to true if this should be set to be the default credit card
 	IsDefault *bool `queryParam:"style=form,explode=true,name=isDefault"`
-}
-
-type PostStripeGatewayUserUserIDCardsCardIDRequest struct {
-	PathParams  PostStripeGatewayUserUserIDCardsCardIDPathParams
-	QueryParams PostStripeGatewayUserUserIDCardsCardIDQueryParams
+	// The id of the user adding their credit card
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type PostStripeGatewayUserUserIDCardsCardIDResponse struct {

@@ -9,18 +9,12 @@ import (
 )
 
 type GetUserPostsSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetUserPostsPathParams struct {
-	// The user ID of the user whose posts will be retrieved. Using 'me' as the user_id will return the posts for the current user.
-	//
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUserPostsQueryParams struct {
+type GetUserPostsRequest struct {
 	// Only posts older than this UTC date and time will be returned.
 	DateMax *time.Time `queryParam:"style=form,explode=true,name=date_max"`
 	// Only posts newer than or equal to this UTC date and time will be returned.
@@ -60,12 +54,9 @@ type GetUserPostsQueryParams struct {
 	// A comma separated list of the post types to return.  The available post types are: offer, taken, wanted, received, admin
 	//
 	Types string `queryParam:"style=form,explode=true,name=types"`
-}
-
-type GetUserPostsRequest struct {
-	PathParams  GetUserPostsPathParams
-	QueryParams GetUserPostsQueryParams
-	Security    GetUserPostsSecurity
+	// The user ID of the user whose posts will be retrieved. Using 'me' as the user_id will return the posts for the current user.
+	//
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 // GetUserPosts200ApplicationJSON - The posts and paging data.

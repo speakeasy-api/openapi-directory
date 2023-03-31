@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceWarmSparePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkApplianceWarmSpareRequestBody struct {
 	// Enable warm spare
 	Enabled bool `json:"enabled"`
@@ -24,8 +20,8 @@ type UpdateNetworkApplianceWarmSpareRequestBody struct {
 }
 
 type UpdateNetworkApplianceWarmSpareRequest struct {
-	PathParams UpdateNetworkApplianceWarmSparePathParams
-	Request    UpdateNetworkApplianceWarmSpareRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkApplianceWarmSpareRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceWarmSpareResponse struct {

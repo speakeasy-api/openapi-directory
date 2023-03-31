@@ -14,12 +14,8 @@ var CreateIncomingPhoneNumberTollFreeServerList = []string{
 }
 
 type CreateIncomingPhoneNumberTollFreeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateIncomingPhoneNumberTollFreePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequestSmsFallbackMethodEnum - The HTTP method that we should use to call `sms_fallback_url`. Can be: `GET` or `POST` and defaults to `POST`.
@@ -250,10 +246,9 @@ type CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest s
 }
 
 type CreateIncomingPhoneNumberTollFreeRequest struct {
-	PathParams CreateIncomingPhoneNumberTollFreePathParams
-	Request    *CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateIncomingPhoneNumberTollFreeSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                                                                     `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateIncomingPhoneNumberTollFreeResponse struct {

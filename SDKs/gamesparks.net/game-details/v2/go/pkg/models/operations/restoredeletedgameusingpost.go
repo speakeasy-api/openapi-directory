@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RestoreDeletedGameUsingPOSTPathParams struct {
+type RestoreDeletedGameUsingPOSTRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type RestoreDeletedGameUsingPOSTRequest struct {
-	PathParams RestoreDeletedGameUsingPOSTPathParams
 }
 
 type RestoreDeletedGameUsingPOSTResponse struct {

@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ListSipTrunkNumbersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ListSipTrunkNumbersRequest struct {
-	Security ListSipTrunkNumbersSecurity
-}
 
 type ListSipTrunkNumbers200ApplicationXMLPhoneNumbers struct {
 	// Country ID (example: US)

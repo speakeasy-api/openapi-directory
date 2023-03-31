@@ -25,11 +25,10 @@ pkg/models/operations/webmasterssitesget.go
 pkg/models/operations/webmasterssiteslist.go
 pkg/models/shared/searchanalyticsqueryresponse.go
 pkg/models/shared/apidatarow.go
+pkg/models/shared/altenum.go
 pkg/models/shared/searchanalyticsqueryrequest.go
 pkg/models/shared/apidimensionfiltergroup.go
 pkg/models/shared/apidimensionfilter.go
-pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/wmxsitemap.go
 pkg/models/shared/wmxsitemapcontent.go
 pkg/models/shared/sitemapslistresponse.go

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasRecentActivityReadPathParams struct {
+type ExtrasRecentActivityReadRequest struct {
 	// A unique integer value identifying this user action.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasRecentActivityReadRequest struct {
-	PathParams ExtrasRecentActivityReadPathParams
 }
 
 type ExtrasRecentActivityReadResponse struct {

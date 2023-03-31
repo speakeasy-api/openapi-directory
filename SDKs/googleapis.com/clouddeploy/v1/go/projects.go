@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesCreate - Creates a new DeliveryPipeline in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deliveryPipelines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deliveryPipelines", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeliveryPipelineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx conte
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesList - Lists DeliveryPipelines in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesListRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesListRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesListSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deliveryPipelines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deliveryPipelines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesList(ctx context
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon - Abandons a Release in the Delivery Pipeline.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:abandon", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:abandon", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandon(
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreate - Creates a new Release in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReleaseInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreate(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreate(c
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesList - Lists Releases in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesList(ctx
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvance - Advances a Rollout in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvance(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvance(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:advance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:advance", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvanceRolloutRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,11 +348,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove - Approves a Rollout.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApproveRolloutRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,11 +364,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,11 +403,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreate - Creates a new Rollout in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rollouts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rollouts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RolloutInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,11 +419,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -458,11 +458,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJob - Ignores the specified Job in a Rollout.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJob(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJob(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{rollout}:ignoreJob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{rollout}:ignoreJob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IgnoreJobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,11 +474,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,20 +513,20 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList - Lists JobRuns in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobRuns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,11 +561,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminate - Terminates a Job Run in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:terminate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:terminate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -577,11 +577,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -616,20 +616,20 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsList - Lists Rollouts in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rollouts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rollouts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,11 +664,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJob - Retries the specified Job in a Rollout.
-func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJob(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJob(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobRequest, security operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobSecurity) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{rollout}:retryJob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{rollout}:retryJob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RetryJobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -680,11 +680,11 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,20 +719,20 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 }
 
 // ClouddeployProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) ClouddeployProjectsLocationsList(ctx context.Context, request operations.ClouddeployProjectsLocationsListRequest) (*operations.ClouddeployProjectsLocationsListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsList(ctx context.Context, request operations.ClouddeployProjectsLocationsListRequest, security operations.ClouddeployProjectsLocationsListSecurity) (*operations.ClouddeployProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,11 +767,11 @@ func (s *projects) ClouddeployProjectsLocationsList(ctx context.Context, request
 }
 
 // ClouddeployProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) ClouddeployProjectsLocationsOperationsCancel(ctx context.Context, request operations.ClouddeployProjectsLocationsOperationsCancelRequest) (*operations.ClouddeployProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsOperationsCancel(ctx context.Context, request operations.ClouddeployProjectsLocationsOperationsCancelRequest, security operations.ClouddeployProjectsLocationsOperationsCancelSecurity) (*operations.ClouddeployProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -783,11 +783,11 @@ func (s *projects) ClouddeployProjectsLocationsOperationsCancel(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -822,20 +822,20 @@ func (s *projects) ClouddeployProjectsLocationsOperationsCancel(ctx context.Cont
 }
 
 // ClouddeployProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) ClouddeployProjectsLocationsOperationsList(ctx context.Context, request operations.ClouddeployProjectsLocationsOperationsListRequest) (*operations.ClouddeployProjectsLocationsOperationsListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsOperationsList(ctx context.Context, request operations.ClouddeployProjectsLocationsOperationsListRequest, security operations.ClouddeployProjectsLocationsOperationsListSecurity) (*operations.ClouddeployProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -870,11 +870,11 @@ func (s *projects) ClouddeployProjectsLocationsOperationsList(ctx context.Contex
 }
 
 // ClouddeployProjectsLocationsTargetsCreate - Creates a new Target in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsTargetsCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsCreateRequest) (*operations.ClouddeployProjectsLocationsTargetsCreateResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsCreate(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsCreateRequest, security operations.ClouddeployProjectsLocationsTargetsCreateSecurity) (*operations.ClouddeployProjectsLocationsTargetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -886,11 +886,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -925,20 +925,20 @@ func (s *projects) ClouddeployProjectsLocationsTargetsCreate(ctx context.Context
 }
 
 // ClouddeployProjectsLocationsTargetsDelete - Deletes a single Target.
-func (s *projects) ClouddeployProjectsLocationsTargetsDelete(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsDeleteRequest) (*operations.ClouddeployProjectsLocationsTargetsDeleteResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsDelete(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsDeleteRequest, security operations.ClouddeployProjectsLocationsTargetsDeleteSecurity) (*operations.ClouddeployProjectsLocationsTargetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -973,20 +973,20 @@ func (s *projects) ClouddeployProjectsLocationsTargetsDelete(ctx context.Context
 }
 
 // ClouddeployProjectsLocationsTargetsGet - Gets details of a single Target.
-func (s *projects) ClouddeployProjectsLocationsTargetsGet(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsGetRequest) (*operations.ClouddeployProjectsLocationsTargetsGetResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsGet(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsGetRequest, security operations.ClouddeployProjectsLocationsTargetsGetSecurity) (*operations.ClouddeployProjectsLocationsTargetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1021,20 +1021,20 @@ func (s *projects) ClouddeployProjectsLocationsTargetsGet(ctx context.Context, r
 }
 
 // ClouddeployProjectsLocationsTargetsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) ClouddeployProjectsLocationsTargetsGetIamPolicy(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsGetIamPolicyRequest) (*operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsGetIamPolicy(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsGetIamPolicyRequest, security operations.ClouddeployProjectsLocationsTargetsGetIamPolicySecurity) (*operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1069,20 +1069,20 @@ func (s *projects) ClouddeployProjectsLocationsTargetsGetIamPolicy(ctx context.C
 }
 
 // ClouddeployProjectsLocationsTargetsList - Lists Targets in a given project and location.
-func (s *projects) ClouddeployProjectsLocationsTargetsList(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsListRequest) (*operations.ClouddeployProjectsLocationsTargetsListResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsList(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsListRequest, security operations.ClouddeployProjectsLocationsTargetsListSecurity) (*operations.ClouddeployProjectsLocationsTargetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1117,11 +1117,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsList(ctx context.Context, 
 }
 
 // ClouddeployProjectsLocationsTargetsPatch - Updates the parameters of a single Target.
-func (s *projects) ClouddeployProjectsLocationsTargetsPatch(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsPatchRequest) (*operations.ClouddeployProjectsLocationsTargetsPatchResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsPatch(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsPatchRequest, security operations.ClouddeployProjectsLocationsTargetsPatchSecurity) (*operations.ClouddeployProjectsLocationsTargetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1133,11 +1133,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1172,11 +1172,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsPatch(ctx context.Context,
 }
 
 // ClouddeployProjectsLocationsTargetsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) ClouddeployProjectsLocationsTargetsSetIamPolicy(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsSetIamPolicyRequest) (*operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsSetIamPolicy(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsSetIamPolicyRequest, security operations.ClouddeployProjectsLocationsTargetsSetIamPolicySecurity) (*operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1188,11 +1188,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsSetIamPolicy(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1227,11 +1227,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsSetIamPolicy(ctx context.C
 }
 
 // ClouddeployProjectsLocationsTargetsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) ClouddeployProjectsLocationsTargetsTestIamPermissions(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsRequest) (*operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse, error) {
+func (s *projects) ClouddeployProjectsLocationsTargetsTestIamPermissions(ctx context.Context, request operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsRequest, security operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsSecurity) (*operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1243,11 +1243,11 @@ func (s *projects) ClouddeployProjectsLocationsTargetsTestIamPermissions(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,11 +33,11 @@ func newPages(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // FactchecktoolsPagesCreate - Create `ClaimReview` markup on a page.
-func (s *pages) FactchecktoolsPagesCreate(ctx context.Context, request operations.FactchecktoolsPagesCreateRequest) (*operations.FactchecktoolsPagesCreateResponse, error) {
+func (s *pages) FactchecktoolsPagesCreate(ctx context.Context, request operations.FactchecktoolsPagesCreateRequest, security operations.FactchecktoolsPagesCreateSecurity) (*operations.FactchecktoolsPagesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/pages"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *pages) FactchecktoolsPagesCreate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *pages) FactchecktoolsPagesCreate(ctx context.Context, request operation
 }
 
 // FactchecktoolsPagesDelete - Delete all `ClaimReview` markup on a page.
-func (s *pages) FactchecktoolsPagesDelete(ctx context.Context, request operations.FactchecktoolsPagesDeleteRequest) (*operations.FactchecktoolsPagesDeleteResponse, error) {
+func (s *pages) FactchecktoolsPagesDelete(ctx context.Context, request operations.FactchecktoolsPagesDeleteRequest, security operations.FactchecktoolsPagesDeleteSecurity) (*operations.FactchecktoolsPagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *pages) FactchecktoolsPagesDelete(ctx context.Context, request operation
 }
 
 // FactchecktoolsPagesGet - Get all `ClaimReview` markup on a page.
-func (s *pages) FactchecktoolsPagesGet(ctx context.Context, request operations.FactchecktoolsPagesGetRequest) (*operations.FactchecktoolsPagesGetResponse, error) {
+func (s *pages) FactchecktoolsPagesGet(ctx context.Context, request operations.FactchecktoolsPagesGetRequest, security operations.FactchecktoolsPagesGetSecurity) (*operations.FactchecktoolsPagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *pages) FactchecktoolsPagesGet(ctx context.Context, request operations.F
 }
 
 // FactchecktoolsPagesList - List the `ClaimReview` markup pages for a specific URL or for an organization.
-func (s *pages) FactchecktoolsPagesList(ctx context.Context, request operations.FactchecktoolsPagesListRequest) (*operations.FactchecktoolsPagesListResponse, error) {
+func (s *pages) FactchecktoolsPagesList(ctx context.Context, request operations.FactchecktoolsPagesListRequest, security operations.FactchecktoolsPagesListSecurity) (*operations.FactchecktoolsPagesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/pages"
 
@@ -193,11 +193,11 @@ func (s *pages) FactchecktoolsPagesList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *pages) FactchecktoolsPagesList(ctx context.Context, request operations.
 }
 
 // FactchecktoolsPagesUpdate - Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
-func (s *pages) FactchecktoolsPagesUpdate(ctx context.Context, request operations.FactchecktoolsPagesUpdateRequest) (*operations.FactchecktoolsPagesUpdateResponse, error) {
+func (s *pages) FactchecktoolsPagesUpdate(ctx context.Context, request operations.FactchecktoolsPagesUpdateRequest, security operations.FactchecktoolsPagesUpdateSecurity) (*operations.FactchecktoolsPagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *pages) FactchecktoolsPagesUpdate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

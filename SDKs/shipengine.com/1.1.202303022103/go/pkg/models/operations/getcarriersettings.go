@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCarrierSettingsPathParams struct {
+type GetCarrierSettingsRequest struct {
 	// Carrier ID
 	CarrierID string `pathParam:"style=simple,explode=false,name=carrier_id"`
 	// The carrier name, such as `ups`, `fedex`, or `dhl_express`.
 	CarrierName shared.CarrierNameWithSettingsEnum `pathParam:"style=simple,explode=false,name=carrier_name"`
-}
-
-type GetCarrierSettingsRequest struct {
-	PathParams GetCarrierSettingsPathParams
 }
 
 type GetCarrierSettingsResponse struct {

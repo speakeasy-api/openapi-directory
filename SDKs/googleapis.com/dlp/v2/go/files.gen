@@ -44,7 +44,6 @@ pkg/models/shared/googleprivacydlpv2sensitivityscore.go
 pkg/models/shared/googleprivacydlpv2infotypecategory.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleprivacydlpv2deidentifycontentresponse.go
 pkg/models/shared/googleprivacydlpv2transformationoverview.go
 pkg/models/shared/googleprivacydlpv2transformationsummary.go

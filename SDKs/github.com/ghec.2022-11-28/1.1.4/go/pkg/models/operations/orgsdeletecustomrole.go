@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrgsDeleteCustomRolePathParams struct {
+type OrgsDeleteCustomRoleRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the role.
 	RoleID int64 `pathParam:"style=simple,explode=false,name=role_id"`
-}
-
-type OrgsDeleteCustomRoleRequest struct {
-	PathParams OrgsDeleteCustomRolePathParams
 }
 
 type OrgsDeleteCustomRoleResponse struct {

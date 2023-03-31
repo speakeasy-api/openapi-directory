@@ -8,10 +8,10 @@ import (
 )
 
 type MapMapGetSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
-type MapMapGetQueryParams struct {
+type MapMapGetRequest struct {
 	// There are two ways to specify date and time for your map:
 	//
 	// 1. Datetime in `YYYY-MM-DDTHH:MM` format and `UTC` timezone, e.g. `2021-08-24T12:00`
@@ -58,11 +58,6 @@ type MapMapGetQueryParams struct {
 	// * `pm2.5`: Particulate matter d < 2.5 µm (PM2.5)
 	//
 	Variable string `queryParam:"style=form,explode=true,name=variable"`
-}
-
-type MapMapGetRequest struct {
-	QueryParams MapMapGetQueryParams
-	Security    MapMapGetSecurity
 }
 
 type MapMapGetResponse struct {

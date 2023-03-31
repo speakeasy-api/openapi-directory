@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteCharginglocationsCharginglocationidSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type DeleteCharginglocationsCharginglocationidPathParams struct {
-	// ID of the Charging Location
-	ChargingLocationID string `pathParam:"style=simple,explode=false,name=chargingLocationId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteCharginglocationsCharginglocationidRequest struct {
-	PathParams DeleteCharginglocationsCharginglocationidPathParams
-	Security   DeleteCharginglocationsCharginglocationidSecurity
+	// ID of the Charging Location
+	ChargingLocationID string `pathParam:"style=simple,explode=false,name=chargingLocationId"`
 }
 
 type DeleteCharginglocationsCharginglocationidResponse struct {

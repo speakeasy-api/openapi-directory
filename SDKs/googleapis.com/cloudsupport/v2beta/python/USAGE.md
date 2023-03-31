@@ -4,35 +4,29 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudsupportCaseClassificationsSearchRequest(
-    security=operations.CloudsupportCaseClassificationsSearchSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.CloudsupportCaseClassificationsSearchQueryParams(
-        dollar_xgafv="1",
-        access_token="tempore",
-        alt="json",
-        callback="et",
-        fields="et",
-        key="sed",
-        oauth_token="aut",
-        page_size=8094092916024648142,
-        page_token="aperiam",
-        pretty_print=False,
-        query="quaerat",
-        quota_user="dolor",
-        upload_type="tempore",
-        upload_protocol="et",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    query="error",
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.case_classifications.cloudsupport_case_classifications_search(req)
+res = s.case_classifications.cloudsupport_case_classifications_search(req, operations.CloudsupportCaseClassificationsSearchSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.search_case_classifications_response is not None:
     # handle response

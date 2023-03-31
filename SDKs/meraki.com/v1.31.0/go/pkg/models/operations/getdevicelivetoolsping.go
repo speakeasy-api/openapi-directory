@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDeviceLiveToolsPingPathParams struct {
+type GetDeviceLiveToolsPingRequest struct {
 	ID     string `pathParam:"style=simple,explode=false,name=id"`
 	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetDeviceLiveToolsPingRequest struct {
-	PathParams GetDeviceLiveToolsPingPathParams
 }
 
 // GetDeviceLiveToolsPing200ApplicationJSONRequest - Ping request parameters

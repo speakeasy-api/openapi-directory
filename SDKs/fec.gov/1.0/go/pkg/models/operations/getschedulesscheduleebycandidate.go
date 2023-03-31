@@ -60,7 +60,7 @@ func (e *GetSchedulesScheduleEByCandidateSupportOpposeEnum) UnmarshalJSON(data [
 	}
 }
 
-type GetSchedulesScheduleEByCandidateQueryParams struct {
+type GetSchedulesScheduleEByCandidateRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -100,10 +100,6 @@ type GetSchedulesScheduleEByCandidateQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// Support or opposition
 	SupportOppose *GetSchedulesScheduleEByCandidateSupportOpposeEnum `queryParam:"style=form,explode=true,name=support_oppose"`
-}
-
-type GetSchedulesScheduleEByCandidateRequest struct {
-	QueryParams GetSchedulesScheduleEByCandidateQueryParams
 }
 
 type GetSchedulesScheduleEByCandidateResponse struct {

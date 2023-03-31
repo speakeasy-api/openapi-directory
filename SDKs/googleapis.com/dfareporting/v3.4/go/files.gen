@@ -280,7 +280,6 @@ pkg/models/operations/dfareportingvideoformatslist.go
 pkg/models/shared/accountactiveadsummary.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/accountpermissiongroup.go
 pkg/models/shared/accountpermissiongroupslistresponse.go
 pkg/models/shared/accountpermission.go

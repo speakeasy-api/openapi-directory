@@ -8,17 +8,13 @@ import (
 )
 
 type FindGlobalJwtVerifiersByIDSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindGlobalJwtVerifiersByIDPathParams struct {
-	// The jwt verifier id
-	VerifierID string `pathParam:"style=simple,explode=false,name=verifierId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindGlobalJwtVerifiersByIDRequest struct {
-	PathParams FindGlobalJwtVerifiersByIDPathParams
-	Security   FindGlobalJwtVerifiersByIDSecurity
+	// The jwt verifier id
+	VerifierID string `pathParam:"style=simple,explode=false,name=verifierId"`
 }
 
 type FindGlobalJwtVerifiersByIDResponse struct {

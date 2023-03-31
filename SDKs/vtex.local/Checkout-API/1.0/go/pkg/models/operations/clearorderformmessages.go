@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type ClearorderFormMessagesPathParams struct {
-	// ID of the orderForm corresponding to the cart whose messages you want to remove.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type ClearorderFormMessagesHeaders struct {
+type ClearorderFormMessagesRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ClearorderFormMessagesRequest struct {
-	PathParams ClearorderFormMessagesPathParams
-	Headers    ClearorderFormMessagesHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
+	ContentType string                 `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	// ID of the orderForm corresponding to the cart whose messages you want to remove.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type ClearorderFormMessages200ApplicationJSONAvailableAddresses struct {

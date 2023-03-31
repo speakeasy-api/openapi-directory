@@ -7,35 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ComputeNodeDeleteUserPathParams struct {
-	// The id of the machine on which you want to delete a user account.
-	NodeID string `pathParam:"style=simple,explode=false,name=nodeId"`
-	// The id of the pool that contains the compute node.
-	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
-	// The name of the user account to delete.
-	UserName string `pathParam:"style=simple,explode=false,name=userName"`
-}
-
-type ComputeNodeDeleteUserQueryParams struct {
+type ComputeNodeDeleteUserRequest struct {
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type ComputeNodeDeleteUserHeaders struct {
 	// The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The id of the machine on which you want to delete a user account.
+	NodeID string `pathParam:"style=simple,explode=false,name=nodeId"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
+	// The id of the pool that contains the compute node.
+	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
 	// Whether the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type ComputeNodeDeleteUserRequest struct {
-	PathParams  ComputeNodeDeleteUserPathParams
-	QueryParams ComputeNodeDeleteUserQueryParams
-	Headers     ComputeNodeDeleteUserHeaders
+	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
+	// The name of the user account to delete.
+	UserName string `pathParam:"style=simple,explode=false,name=userName"`
 }
 
 type ComputeNodeDeleteUserResponse struct {

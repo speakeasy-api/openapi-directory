@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsDeletePathParams struct {
+type GroupsDeleteRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the group to delete.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type GroupsDeleteQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type GroupsDeleteRequest struct {
-	PathParams  GroupsDeletePathParams
-	QueryParams GroupsDeleteQueryParams
 }
 
 type GroupsDeleteResponse struct {

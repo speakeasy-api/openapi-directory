@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// The maximum number of results to return per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The result set page number to be returned
@@ -15,10 +15,6 @@ type GetUsersQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// A sort document. Example: {'name':1} sorts the results by name in ascending order
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 type GetUsersResponse struct {

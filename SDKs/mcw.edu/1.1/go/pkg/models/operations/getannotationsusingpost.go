@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetAnnotationsUsingPOSTRequest struct {
-	// data
-	Request *shared.AnnotationRequest `request:"mediaType=application/json"`
-}
 
 type GetAnnotationsUsingPOSTResponse struct {
 	Body        []byte

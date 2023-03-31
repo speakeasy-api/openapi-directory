@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportAssetsCiscoCSVSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ExportAssetsCiscoCSVQueryParams struct {
-	// an optional search string for filtering results
-	Search *string `queryParam:"style=form,explode=true,name=search"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ExportAssetsCiscoCSVRequest struct {
-	QueryParams ExportAssetsCiscoCSVQueryParams
-	Security    ExportAssetsCiscoCSVSecurity
+	// an optional search string for filtering results
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type ExportAssetsCiscoCSVResponse struct {

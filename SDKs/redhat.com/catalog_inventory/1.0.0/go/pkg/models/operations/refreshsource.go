@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RefreshSourcePathParams struct {
+type RefreshSourceRequest struct {
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RefreshSourceRequest struct {
-	PathParams RefreshSourcePathParams
 }
 
 type RefreshSourceResponse struct {

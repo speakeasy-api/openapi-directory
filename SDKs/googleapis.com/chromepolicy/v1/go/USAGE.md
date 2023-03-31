@@ -14,60 +14,63 @@ func main() {
     s := sdk.New()
 
     req := operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest{
-        Security: operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams{
-            Customer: "corrupti",
-        },
-        QueryParams: operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest{
+        DollarXgafv: "2",
+        GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest: &shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest{
             Requests: []shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "iure",
+                    PolicySchema: "distinctio",
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
-                            "debitis": "ipsa",
-                            "delectus": "tempora",
+                            "unde": "nulla",
+                            "corrupti": "illum",
+                            "vel": "error",
+                            "deserunt": "suscipit",
                         },
-                        TargetResource: "suscipit",
+                        TargetResource: "iure",
                     },
                 },
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "molestiae",
+                    PolicySchema: "magnam",
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
+                            "ipsa": "delectus",
+                            "tempora": "suscipit",
+                            "molestiae": "minus",
                             "placeat": "voluptatum",
-                            "iusto": "excepturi",
-                            "nisi": "recusandae",
-                            "temporibus": "ab",
                         },
-                        TargetResource: "quis",
+                        TargetResource: "iusto",
+                    },
+                },
+                shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
+                    PolicySchema: "excepturi",
+                    PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
+                        AdditionalTargetKeys: map[string]string{
+                            "recusandae": "temporibus",
+                            "ab": "quis",
+                        },
+                        TargetResource: "veritatis",
                     },
                 },
             },
         },
+        AccessToken: "deserunt",
+        Alt: "json",
+        Callback: "ipsam",
+        Customer: "repellendus",
+        Fields: "sapiente",
+        Key: "quo",
+        OauthToken: "odit",
+        PrettyPrint: false,
+        QuotaUser: "at",
+        UploadType: "at",
+        UploadProtocol: "maiores",
     }
 
     ctx := context.Background()
-    res, err := s.Customers.ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx, req)
+    res, err := s.Customers.ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx, req, operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

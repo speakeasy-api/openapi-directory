@@ -8,19 +8,14 @@ import (
 )
 
 type GetUploadAttemptSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetUploadAttemptPathParams struct {
+type GetUploadAttemptRequest struct {
 	// The ID of the upload attempt.
 	Upload float64 `pathParam:"style=simple,explode=false,name=upload"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUploadAttemptRequest struct {
-	PathParams GetUploadAttemptPathParams
-	Security   GetUploadAttemptSecurity
 }
 
 type GetUploadAttemptResponse struct {

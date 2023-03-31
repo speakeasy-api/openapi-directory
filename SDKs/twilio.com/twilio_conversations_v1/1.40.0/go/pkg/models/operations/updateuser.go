@@ -12,17 +12,8 @@ var UpdateUserServerList = []string{
 }
 
 type UpdateUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUserPathParams struct {
-	// The SID of the User resource to update. This value can be either the `sid` or the `identity` of the User resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateUserHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.UserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUserUpdateUserRequest struct {
@@ -35,11 +26,11 @@ type UpdateUserUpdateUserRequest struct {
 }
 
 type UpdateUserRequest struct {
-	PathParams UpdateUserPathParams
-	Headers    UpdateUserHeaders
-	Request    *UpdateUserUpdateUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUserSecurity
-	ServerURL  *string
+	RequestBody *UpdateUserUpdateUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the User resource to update. This value can be either the `sid` or the `identity` of the User resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.UserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type UpdateUserResponse struct {

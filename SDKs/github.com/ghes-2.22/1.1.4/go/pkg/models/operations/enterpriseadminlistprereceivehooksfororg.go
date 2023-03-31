@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListPreReceiveHooksForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // EnterpriseAdminListPreReceiveHooksForOrgSortEnum - The sort order for the response collection.
 type EnterpriseAdminListPreReceiveHooksForOrgSortEnum string
 
@@ -40,20 +36,16 @@ func (e *EnterpriseAdminListPreReceiveHooksForOrgSortEnum) UnmarshalJSON(data []
 	}
 }
 
-type EnterpriseAdminListPreReceiveHooksForOrgQueryParams struct {
+type EnterpriseAdminListPreReceiveHooksForOrgRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Org       string                `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The sort order for the response collection.
 	Sort *EnterpriseAdminListPreReceiveHooksForOrgSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type EnterpriseAdminListPreReceiveHooksForOrgRequest struct {
-	PathParams  EnterpriseAdminListPreReceiveHooksForOrgPathParams
-	QueryParams EnterpriseAdminListPreReceiveHooksForOrgQueryParams
 }
 
 type EnterpriseAdminListPreReceiveHooksForOrgResponse struct {

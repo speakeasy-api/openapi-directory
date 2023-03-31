@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type ReposDownloadZipballArchivePathParams struct {
+type ReposDownloadZipballArchiveRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Ref   string `pathParam:"style=simple,explode=false,name=ref"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDownloadZipballArchiveRequest struct {
-	PathParams ReposDownloadZipballArchivePathParams
 }
 
 type ReposDownloadZipballArchiveResponse struct {

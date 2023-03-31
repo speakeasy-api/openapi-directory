@@ -8,13 +8,7 @@ import (
 )
 
 type PhoneCodeGeoBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PhoneCodeGeoBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchFirstLastNamePhoneNumberGeoIn `request:"mediaType=application/json"`
-	Security PhoneCodeGeoBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type PhoneCodeGeoBatchResponse struct {

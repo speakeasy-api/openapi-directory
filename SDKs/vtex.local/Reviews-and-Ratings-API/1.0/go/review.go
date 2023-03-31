@@ -37,7 +37,7 @@ func (s *review) DeleteMultipleReviews(ctx context.Context, request operations.D
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reviews"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *review) DeleteMultipleReviews(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -89,14 +89,14 @@ func (s *review) DeleteMultipleReviews(ctx context.Context, request operations.D
 // Deletes an existing review.
 func (s *review) DeleteReview(ctx context.Context, request operations.DeleteReviewRequest) (*operations.DeleteReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -136,9 +136,9 @@ func (s *review) DeleteReview(ctx context.Context, request operations.DeleteRevi
 // Updates the information of a review.
 func (s *review) EditReview(ctx context.Context, request operations.EditReviewRequest) (*operations.EditReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -153,7 +153,7 @@ func (s *review) EditReview(ctx context.Context, request operations.EditReviewRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -193,14 +193,14 @@ func (s *review) EditReview(ctx context.Context, request operations.EditReviewRe
 // Retrieves information of a product review by its ID.
 func (s *review) GetReviewbyReviewID(ctx context.Context, request operations.GetReviewbyReviewIDRequest) (*operations.GetReviewbyReviewIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -247,9 +247,9 @@ func (s *review) GetalistofReviews(ctx context.Context, request operations.Getal
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -293,7 +293,7 @@ func (s *review) SaveMultipleReviews(ctx context.Context, request operations.Sav
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reviews"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -308,7 +308,7 @@ func (s *review) SaveMultipleReviews(ctx context.Context, request operations.Sav
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -350,7 +350,7 @@ func (s *review) SaveReview(ctx context.Context, request operations.SaveReviewRe
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/review"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveReviewRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,7 +365,7 @@ func (s *review) SaveReview(ctx context.Context, request operations.SaveReviewRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

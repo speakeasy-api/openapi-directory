@@ -10,9 +10,9 @@ import (
 )
 
 type GetChargersSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken2 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken2 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetChargersFieldEnum string
@@ -38,16 +38,11 @@ func (e *GetChargersFieldEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChargersQueryParams struct {
+type GetChargersRequest struct {
 	// An optional array of Charger fields that should be included in the response, for example: `?field[]=information&field[]=chargeState`
 	//
 	// By default, no optional fields are included and only the Charger ID will be returned. Response time will generally be slower the more fields you request.
 	Field []GetChargersFieldEnum `queryParam:"style=form,explode=true,name=field[]"`
-}
-
-type GetChargersRequest struct {
-	QueryParams GetChargersQueryParams
-	Security    GetChargersSecurity
 }
 
 type GetChargersResponse struct {

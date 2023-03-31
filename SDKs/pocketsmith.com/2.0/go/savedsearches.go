@@ -35,7 +35,7 @@ func newSavedSearches(defaultClient, securityClient HTTPClient, serverURL, langu
 // Lists saved searches belonging to a user by their ID.
 func (s *savedSearches) GetUsersIDSavedSearches(ctx context.Context, request operations.GetUsersIDSavedSearchesRequest) (*operations.GetUsersIDSavedSearchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/saved_searches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/saved_searches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

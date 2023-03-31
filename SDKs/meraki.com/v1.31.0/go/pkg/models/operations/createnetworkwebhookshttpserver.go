@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkWebhooksHTTPServerPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkWebhooksHTTPServerRequestBodyPayloadTemplate - The payload template to use when posting data to the HTTP server.
 type CreateNetworkWebhooksHTTPServerRequestBodyPayloadTemplate struct {
 	// The name of the payload template.
@@ -30,8 +26,8 @@ type CreateNetworkWebhooksHTTPServerRequestBody struct {
 }
 
 type CreateNetworkWebhooksHTTPServerRequest struct {
-	PathParams CreateNetworkWebhooksHTTPServerPathParams
-	Request    CreateNetworkWebhooksHTTPServerRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkWebhooksHTTPServerRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkWebhooksHTTPServer201ApplicationJSONPayloadTemplate - The payload template to use when posting data to the HTTP server.

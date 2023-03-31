@@ -9,18 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteConfigPathParams struct {
-	Config string `pathParam:"style=simple,explode=false,name=config"`
-	Key    string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type DeleteConfigQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type DeleteConfigRequest struct {
-	PathParams  DeleteConfigPathParams
-	QueryParams DeleteConfigQueryParams
+	Config    string  `pathParam:"style=simple,explode=false,name=config"`
+	Key       string  `pathParam:"style=simple,explode=false,name=key"`
+	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type DeleteConfigConfigDeleteResponseCodeEnum string

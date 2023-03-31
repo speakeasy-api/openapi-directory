@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLocationRulePathParams struct {
+type UpdateLocationRuleRequest struct {
+	// A JSON object containing new properties
+	LocationRuleUpdate shared.LocationRuleUpdate `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateLocationRuleRequest struct {
-	PathParams UpdateLocationRulePathParams
-	// A JSON object containing new properties
-	Request shared.LocationRuleUpdate `request:"mediaType=application/json"`
 }
 
 type UpdateLocationRuleResponse struct {

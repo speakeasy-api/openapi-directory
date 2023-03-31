@@ -35,14 +35,14 @@ func newPaySchedule(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete the specified pay schedule
 func (s *paySchedule) DeletePaySchedule(ctx context.Context, request operations.DeletePayScheduleRequest) (*operations.DeletePayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *paySchedule) DeletePaySchedule(ctx context.Context, request operations.
 // Gets all the pay schedule tags
 func (s *paySchedule) GetAllPayScheduleTags(ctx context.Context, request operations.GetAllPayScheduleTagsRequest) (*operations.GetAllPayScheduleTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *paySchedule) GetAllPayScheduleTags(ctx context.Context, request operati
 // Gets links to all employee revisions that have ever existed in the specified pay schedule.
 func (s *paySchedule) GetEmployeesFromPaySchedule(ctx context.Context, request operations.GetEmployeesFromPayScheduleRequest) (*operations.GetEmployeesFromPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *paySchedule) GetEmployeesFromPaySchedule(ctx context.Context, request o
 // Gets links to all employee revisions in the specified pay schedule for the given effective date.
 func (s *paySchedule) GetEmployeesFromPayScheduleOnEffectiveDate(ctx context.Context, request operations.GetEmployeesFromPayScheduleOnEffectiveDateRequest) (*operations.GetEmployeesFromPayScheduleOnEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,14 +278,14 @@ func (s *paySchedule) GetEmployeesFromPayScheduleOnEffectiveDate(ctx context.Con
 // Returns the pay run from the pay schedule
 func (s *paySchedule) GetPayRunFromPaySchedule(ctx context.Context, request operations.GetPayRunFromPayScheduleRequest) (*operations.GetPayRunFromPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -341,14 +341,14 @@ func (s *paySchedule) GetPayRunFromPaySchedule(ctx context.Context, request oper
 // Get links to all pay runs for the specified pay schedule
 func (s *paySchedule) GetPayRunsFromPaySchedule(ctx context.Context, request operations.GetPayRunsFromPayScheduleRequest) (*operations.GetPayRunsFromPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -404,14 +404,14 @@ func (s *paySchedule) GetPayRunsFromPaySchedule(ctx context.Context, request ope
 // Returns the specified pay schedule object from employer
 func (s *paySchedule) GetPayScheduleFromEmployer(ctx context.Context, request operations.GetPayScheduleFromEmployerRequest) (*operations.GetPayScheduleFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -467,14 +467,14 @@ func (s *paySchedule) GetPayScheduleFromEmployer(ctx context.Context, request op
 // Get links to all pay schedules for the specified employer
 func (s *paySchedule) GetPaySchedulesFromEmployer(ctx context.Context, request operations.GetPaySchedulesFromEmployerRequest) (*operations.GetPaySchedulesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -530,14 +530,14 @@ func (s *paySchedule) GetPaySchedulesFromEmployer(ctx context.Context, request o
 // Gets the pay schedules with the tag
 func (s *paySchedule) GetPaySchedulesWithTag(ctx context.Context, request operations.GetPaySchedulesWithTagRequest) (*operations.GetPaySchedulesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -593,9 +593,9 @@ func (s *paySchedule) GetPaySchedulesWithTag(ctx context.Context, request operat
 // Create a new pay schedule object
 func (s *paySchedule) PostPaySchedule(ctx context.Context, request operations.PostPayScheduleRequest) (*operations.PostPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaySchedule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -610,7 +610,7 @@ func (s *paySchedule) PostPaySchedule(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -666,9 +666,9 @@ func (s *paySchedule) PostPaySchedule(ctx context.Context, request operations.Po
 // Updates the existing specified pay schedule object
 func (s *paySchedule) PutPaySchedule(ctx context.Context, request operations.PutPayScheduleRequest) (*operations.PutPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaySchedule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -683,7 +683,7 @@ func (s *paySchedule) PutPaySchedule(ctx context.Context, request operations.Put
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

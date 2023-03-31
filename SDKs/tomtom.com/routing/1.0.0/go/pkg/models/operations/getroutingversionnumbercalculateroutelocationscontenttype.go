@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRoutingVersionNumberCalculateRouteLocationsContentTypePathParams struct {
-	// The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
-	ContentType shared.ContentTypeEnum `pathParam:"style=simple,explode=false,name=contentType"`
-	// Locations through which the calculated route must pass.
-	Locations string `pathParam:"style=simple,explode=false,name=locations"`
-	// Service version number. The current value is 1.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams struct {
+type GetRoutingVersionNumberCalculateRouteLocationsContentTypeRequest struct {
 	// Specifies the efficiency of converting chemical energy stored in fuel to kinetic energy when the vehicle accelerates (i.e. KineticEnergyGained/ChemicalEnergyConsumed).
 	AccelerationEfficiency *float32 `queryParam:"style=form,explode=true,name=accelerationEfficiency"`
 	// Determines whether the alternative routes to be calculated should be better with respect to the planning criteria provided than the reference route.
@@ -44,6 +35,8 @@ type GetRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams struct
 	ConstantSpeedConsumptionInLitersPerHundredkm *string `queryParam:"style=form,explode=true,name=constantSpeedConsumptionInLitersPerHundredkm"`
 	// Specifies the speed-dependent component of consumption. Provided as an unordered list of speed/consumption-rate pairs.
 	ConstantSpeedConsumptionInkWhPerHundredkm *string `queryParam:"style=form,explode=true,name=constantSpeedConsumptionInkWhPerHundredkm"`
+	// The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
+	ContentType shared.ContentTypeEnum `pathParam:"style=simple,explode=false,name=contentType"`
 	// Specifies the current supply of fuel in liters.
 	CurrentFuelInLiters *float32 `queryParam:"style=form,explode=true,name=currentFuelInLiters"`
 	// Specifies the efficiency of converting kinetic energy to saved (not consumed) fuel when the vehicle decelerates (i.e. ChemicalEnergySaved/KineticEnergyLost).
@@ -60,6 +53,8 @@ type GetRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams struct
 	InstructionsType *shared.InstructionsTypeEnum `queryParam:"style=form,explode=true,name=instructionsType"`
 	// The language parameter determines the language of the guidance messages.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
+	// Locations through which the calculated route must pass.
+	Locations string `pathParam:"style=simple,explode=false,name=locations"`
 	// Number of alternative routes to be calculated.
 	MaxAlternatives *int64 `queryParam:"style=form,explode=true,name=maxAlternatives"`
 	// All alternative routes will follow the reference route for the specified minimum number of meters starting from the origin point.
@@ -126,13 +121,10 @@ type GetRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams struct
 	VehicleWeight *int64 `queryParam:"style=form,explode=true,name=vehicleWeight"`
 	// Width of the vehicle in meters.
 	VehicleWidth *float32 `queryParam:"style=form,explode=true,name=vehicleWidth"`
+	// Service version number. The current value is 1.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Amount that a thrilling route should wind.
 	Windingness *shared.WindingnessEnum `queryParam:"style=form,explode=true,name=windingness"`
-}
-
-type GetRoutingVersionNumberCalculateRouteLocationsContentTypeRequest struct {
-	PathParams  GetRoutingVersionNumberCalculateRouteLocationsContentTypePathParams
-	QueryParams GetRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams
 }
 
 type GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse struct {

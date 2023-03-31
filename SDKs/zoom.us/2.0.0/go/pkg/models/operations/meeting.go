@@ -6,32 +6,22 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type MeetingSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MeetingPathParams struct {
+type MeetingRequest struct {
 	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
 	//
 	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
 	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type MeetingQueryParams struct {
 	// Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
 	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 	// Set the value of this field to `true` if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
 	ShowPreviousOccurrences *bool `queryParam:"style=form,explode=true,name=show_previous_occurrences"`
-}
-
-type MeetingRequest struct {
-	PathParams  MeetingPathParams
-	QueryParams MeetingQueryParams
-	Security    MeetingSecurity
 }
 
 // Meeting200ApplicationXMLOccurrences - Occurence object. This object is only returned for Recurring Webinars.

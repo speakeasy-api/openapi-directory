@@ -8,14 +8,8 @@ import (
 )
 
 type CreateWorkflowSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateWorkflowRequest struct {
-	// Please note that last message does not have failover attribute inside it. All other messages must contain a failover attribute.
-	Request  shared.CreateWorkflow `request:"mediaType=application/json"`
-	Security CreateWorkflowSecurity
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateWorkflowResponse struct {

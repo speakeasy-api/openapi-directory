@@ -14,35 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetRequest{
-        Security: operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            LanguageCode: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        LanguageCode: "corrupti",
+        Name: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Organizations.AdvisorynotificationsOrganizationsLocationsNotificationsGet(ctx, req)
+    res, err := s.Organizations.AdvisorynotificationsOrganizationsLocationsNotificationsGet(ctx, req, operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -33,7 +33,7 @@ func newQshow(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DeleteQshow - Delete a qshow.
-func (s *qshow) DeleteQshow(ctx context.Context, request operations.DeleteQshowRequest) (*operations.DeleteQshowResponse, error) {
+func (s *qshow) DeleteQshow(ctx context.Context, request operations.DeleteQshowRequest, security operations.DeleteQshowSecurity) (*operations.DeleteQshowResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow"
 
@@ -42,11 +42,11 @@ func (s *qshow) DeleteQshow(ctx context.Context, request operations.DeleteQshowR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -76,7 +76,7 @@ func (s *qshow) DeleteQshow(ctx context.Context, request operations.DeleteQshowR
 }
 
 // GetQshow - Gets a details about a qshow.
-func (s *qshow) GetQshow(ctx context.Context, request operations.GetQshowRequest) (*operations.GetQshowResponse, error) {
+func (s *qshow) GetQshow(ctx context.Context, request operations.GetQshowRequest, security operations.GetQshowSecurity) (*operations.GetQshowResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow"
 
@@ -85,11 +85,11 @@ func (s *qshow) GetQshow(ctx context.Context, request operations.GetQshowRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,7 +119,7 @@ func (s *qshow) GetQshow(ctx context.Context, request operations.GetQshowRequest
 }
 
 // GetQshowList - Get the list of Qshows in They Said So platform.
-func (s *qshow) GetQshowList(ctx context.Context, request operations.GetQshowListRequest) (*operations.GetQshowListResponse, error) {
+func (s *qshow) GetQshowList(ctx context.Context, request operations.GetQshowListRequest, security operations.GetQshowListSecurity) (*operations.GetQshowListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow/list"
 
@@ -128,11 +128,11 @@ func (s *qshow) GetQshowList(ctx context.Context, request operations.GetQshowLis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,7 +160,7 @@ func (s *qshow) GetQshowList(ctx context.Context, request operations.GetQshowLis
 }
 
 // GetQshowQuotes - Get the quotes in a given Qshow.
-func (s *qshow) GetQshowQuotes(ctx context.Context, request operations.GetQshowQuotesRequest) (*operations.GetQshowQuotesResponse, error) {
+func (s *qshow) GetQshowQuotes(ctx context.Context, request operations.GetQshowQuotesRequest, security operations.GetQshowQuotesSecurity) (*operations.GetQshowQuotesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow/quotes"
 
@@ -169,11 +169,11 @@ func (s *qshow) GetQshowQuotes(ctx context.Context, request operations.GetQshowQ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,7 +203,7 @@ func (s *qshow) GetQshowQuotes(ctx context.Context, request operations.GetQshowQ
 }
 
 // PatchQshow - Update an existing qshow.
-func (s *qshow) PatchQshow(ctx context.Context, request operations.PatchQshowRequest) (*operations.PatchQshowResponse, error) {
+func (s *qshow) PatchQshow(ctx context.Context, request operations.PatchQshowRequest, security operations.PatchQshowSecurity) (*operations.PatchQshowResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow"
 
@@ -212,11 +212,11 @@ func (s *qshow) PatchQshow(ctx context.Context, request operations.PatchQshowReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,7 +246,7 @@ func (s *qshow) PatchQshow(ctx context.Context, request operations.PatchQshowReq
 }
 
 // PostQshowQuotesAdd - Add a quote to a given Qshow.
-func (s *qshow) PostQshowQuotesAdd(ctx context.Context, request operations.PostQshowQuotesAddRequest) (*operations.PostQshowQuotesAddResponse, error) {
+func (s *qshow) PostQshowQuotesAdd(ctx context.Context, request operations.PostQshowQuotesAddRequest, security operations.PostQshowQuotesAddSecurity) (*operations.PostQshowQuotesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow/quotes/add"
 
@@ -255,11 +255,11 @@ func (s *qshow) PostQshowQuotesAdd(ctx context.Context, request operations.PostQ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,7 +289,7 @@ func (s *qshow) PostQshowQuotesAdd(ctx context.Context, request operations.PostQ
 }
 
 // PostQshowQuotesRemove - Remove a quote to a given Qshow.
-func (s *qshow) PostQshowQuotesRemove(ctx context.Context, request operations.PostQshowQuotesRemoveRequest) (*operations.PostQshowQuotesRemoveResponse, error) {
+func (s *qshow) PostQshowQuotesRemove(ctx context.Context, request operations.PostQshowQuotesRemoveRequest, security operations.PostQshowQuotesRemoveSecurity) (*operations.PostQshowQuotesRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow/quotes/remove"
 
@@ -298,11 +298,11 @@ func (s *qshow) PostQshowQuotesRemove(ctx context.Context, request operations.Po
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,7 +332,7 @@ func (s *qshow) PostQshowQuotesRemove(ctx context.Context, request operations.Po
 }
 
 // PutQshow - Create and add a new qshow to your private collection.
-func (s *qshow) PutQshow(ctx context.Context, request operations.PutQshowRequest) (*operations.PutQshowResponse, error) {
+func (s *qshow) PutQshow(ctx context.Context, request operations.PutQshowRequest, security operations.PutQshowSecurity) (*operations.PutQshowResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/qshow"
 
@@ -341,11 +341,11 @@ func (s *qshow) PutQshow(ctx context.Context, request operations.PutQshowRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

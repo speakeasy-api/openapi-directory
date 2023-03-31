@@ -45,7 +45,7 @@ func (s *groups) GetV2GroupsJSON(ctx context.Context, request operations.GetV2Gr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *groups) GetV2GroupsJSON(ctx context.Context, request operations.GetV2Gr
 // Fetches a group, by ID only.
 func (s *groups) GetV2GroupsIDJSON(ctx context.Context, request operations.GetV2GroupsIDJSONRequest) (*operations.GetV2GroupsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/groups/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/groups/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

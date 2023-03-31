@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateVodPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // CreateVodRequestBodyAcceptedCurrenciesEnum - An array of accepted currencies.
 //
 // Option descriptions:
@@ -379,8 +374,9 @@ type CreateVodRequestBody struct {
 }
 
 type CreateVodRequest struct {
-	PathParams CreateVodPathParams
-	Request    CreateVodRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateVodRequestBody `request:"mediaType=application/json"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type CreateVodResponse struct {

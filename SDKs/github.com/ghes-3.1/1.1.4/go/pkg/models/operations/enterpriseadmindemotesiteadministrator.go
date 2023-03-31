@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDemoteSiteAdministratorPathParams struct {
+type EnterpriseAdminDemoteSiteAdministratorRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type EnterpriseAdminDemoteSiteAdministratorRequest struct {
-	PathParams EnterpriseAdminDemoteSiteAdministratorPathParams
 }
 
 type EnterpriseAdminDemoteSiteAdministratorResponse struct {

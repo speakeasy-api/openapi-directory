@@ -39,16 +39,16 @@ func newDeprecatedAPIEndpoints(defaultClient, securityClient HTTPClient, serverU
 // **Scope:** `meeting:read`, `meeting:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *deprecatedAPIEndpoints) ListPastMeetingFiles(ctx context.Context, request operations.ListPastMeetingFilesRequest) (*operations.ListPastMeetingFilesResponse, error) {
+func (s *deprecatedAPIEndpoints) ListPastMeetingFiles(ctx context.Context, request operations.ListPastMeetingFilesRequest, security operations.ListPastMeetingFilesSecurity) (*operations.ListPastMeetingFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,16 +100,16 @@ func (s *deprecatedAPIEndpoints) ListPastMeetingFiles(ctx context.Context, reque
 // **Scope:** `webinar:read`, `webinar:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *deprecatedAPIEndpoints) ListPastWebinarFiles(ctx context.Context, request operations.ListPastWebinarFilesRequest) (*operations.ListPastWebinarFilesResponse, error) {
+func (s *deprecatedAPIEndpoints) ListPastWebinarFiles(ctx context.Context, request operations.ListPastWebinarFilesRequest, security operations.ListPastWebinarFilesSecurity) (*operations.ListPastWebinarFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

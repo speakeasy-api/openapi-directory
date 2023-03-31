@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2UsersJSONQueryParams struct {
+type GetV2UsersJSONRequest struct {
 	// Filters users based on active attribute. Defaults to not applied
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Filters users by group_id.  An additional value of "_is_null" can be passed to filter users that are not in a group
@@ -39,10 +39,6 @@ type GetV2UsersJSONQueryParams struct {
 	VisibleOnly *bool `queryParam:"style=form,explode=true,name=visible_only"`
 	// Filters users based on assigned work_country.
 	WorkCountry []string `queryParam:"style=form,explode=false,name=work_country"`
-}
-
-type GetV2UsersJSONRequest struct {
-	QueryParams GetV2UsersJSONQueryParams
 }
 
 type GetV2UsersJSONResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidateQueryParams struct {
+type ValidateRequest struct {
 	// Integer ID
 	ID int64 `queryParam:"style=form,explode=true,name=id"`
 	// List of tags
 	Tag []string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type ValidateHeaders struct {
 	// User agent
 	UserAgent *string `header:"style=simple,explode=false,name=user-agent"`
-}
-
-type ValidateRequest struct {
-	QueryParams ValidateQueryParams
-	Headers     ValidateHeaders
 }
 
 type ValidateResponse struct {

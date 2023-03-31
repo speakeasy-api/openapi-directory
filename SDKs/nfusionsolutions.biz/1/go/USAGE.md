@@ -13,20 +13,16 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Token: shared.SchemeToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Token: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CurrenciesHistoryGETRequest{
-        QueryParams: operations.CurrenciesHistoryGETQueryParams{
-            End: "2021-10-25T05:21:43.948Z",
-            Format: "xml",
-            Interval: "quibusdam",
-            Pairs: "unde",
-            Start: "2021-05-14T08:28:11.899Z",
-        },
+        End: "2021-10-25T05:21:43.948Z",
+        Format: "xml",
+        Interval: "quibusdam",
+        Pairs: "unde",
+        Start: "2021-05-14T08:28:11.899Z",
     }
 
     ctx := context.Background()

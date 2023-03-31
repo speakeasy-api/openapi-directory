@@ -33,11 +33,11 @@ func newIam(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // PolicytroubleshooterIamTroubleshoot - Checks whether a member has a specific permission for a specific resource, and explains why the member does or does not have that permission.
-func (s *iam) PolicytroubleshooterIamTroubleshoot(ctx context.Context, request operations.PolicytroubleshooterIamTroubleshootRequest) (*operations.PolicytroubleshooterIamTroubleshootResponse, error) {
+func (s *iam) PolicytroubleshooterIamTroubleshoot(ctx context.Context, request operations.PolicytroubleshooterIamTroubleshootRequest, security operations.PolicytroubleshooterIamTroubleshootSecurity) (*operations.PolicytroubleshooterIamTroubleshootResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta/iam:troubleshoot"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *iam) PolicytroubleshooterIamTroubleshoot(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

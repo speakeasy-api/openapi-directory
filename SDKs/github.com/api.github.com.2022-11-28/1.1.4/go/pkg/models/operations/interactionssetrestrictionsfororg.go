@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InteractionsSetRestrictionsForOrgPathParams struct {
+type InteractionsSetRestrictionsForOrgRequest struct {
+	InteractionLimit shared.InteractionLimit `request:"mediaType=application/json"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type InteractionsSetRestrictionsForOrgRequest struct {
-	PathParams InteractionsSetRestrictionsForOrgPathParams
-	Request    shared.InteractionLimit `request:"mediaType=application/json"`
 }
 
 type InteractionsSetRestrictionsForOrgResponse struct {

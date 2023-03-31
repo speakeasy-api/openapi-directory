@@ -34,7 +34,7 @@ func newEapOverride(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return the EAP overridden parameters for an SSID
 func (s *eapOverride) GetNetworkWirelessSsidEapOverride(ctx context.Context, request operations.GetNetworkWirelessSsidEapOverrideRequest) (*operations.GetNetworkWirelessSsidEapOverrideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *eapOverride) GetNetworkWirelessSsidEapOverride(ctx context.Context, req
 // Update the EAP overridden parameters for an SSID.
 func (s *eapOverride) UpdateNetworkWirelessSsidEapOverride(ctx context.Context, request operations.UpdateNetworkWirelessSsidEapOverrideRequest) (*operations.UpdateNetworkWirelessSsidEapOverrideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

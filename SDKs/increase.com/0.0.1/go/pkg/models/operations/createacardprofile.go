@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateACardProfileRequest struct {
-	Request shared.CreateACardProfileParameters `request:"mediaType=application/json"`
-}
-
 type CreateACardProfileDefaultApplicationJSON13StatusEnum string
 
 const (

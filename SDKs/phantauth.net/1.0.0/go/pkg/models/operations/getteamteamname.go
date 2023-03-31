@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetTeamTeamnamePathParams struct {
+type GetTeamTeamnameRequest struct {
 	// The identifier or email address of the team; it is integrated in the `sub` property and is the basis of the other generated properties.
 	//
 	Teamname string `pathParam:"style=simple,explode=false,name=teamname"`
-}
-
-type GetTeamTeamnameRequest struct {
-	PathParams GetTeamTeamnamePathParams
 }
 
 // GetTeamTeamname200ApplicationJSON - OK

@@ -33,7 +33,7 @@ func (e *BoxScoresByDateDeltaFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BoxScoresByDateDeltaPathParams struct {
+type BoxScoresByDateDeltaRequest struct {
 	// The date of the game(s).
 	// <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
@@ -42,10 +42,6 @@ type BoxScoresByDateDeltaPathParams struct {
 	// Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back. Valid entries are:
 	// <code>1</code>, <code>2</code> ... <code>all</code>.
 	Minutes string `pathParam:"style=simple,explode=false,name=minutes"`
-}
-
-type BoxScoresByDateDeltaRequest struct {
-	PathParams BoxScoresByDateDeltaPathParams
 }
 
 type BoxScoresByDateDeltaResponse struct {

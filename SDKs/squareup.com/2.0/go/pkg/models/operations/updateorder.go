@@ -8,23 +8,18 @@ import (
 )
 
 type UpdateOrderSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateOrderPathParams struct {
+type UpdateOrderRequest struct {
+	// An object containing the fields to POST for the request.
+	//
+	// See the corresponding object definition for field details.
+	V1UpdateOrderRequest shared.V1UpdateOrderRequest `request:"mediaType=application/json"`
 	// The ID of the order's associated location.
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The order's Square-issued ID. You obtain this value from Order objects returned by the List Orders endpoint
 	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
-}
-
-type UpdateOrderRequest struct {
-	PathParams UpdateOrderPathParams
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.V1UpdateOrderRequest `request:"mediaType=application/json"`
-	Security UpdateOrderSecurity
 }
 
 type UpdateOrderResponse struct {

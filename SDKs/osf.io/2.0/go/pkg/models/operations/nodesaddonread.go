@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type NodesAddonReadPathParams struct {
+type NodesAddonReadRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 	// The unique identifier of the addon.
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type NodesAddonReadRequest struct {
-	PathParams NodesAddonReadPathParams
 }
 
 // NodesAddonReadNodeAddonAttributes - The properties of the node addon entity.

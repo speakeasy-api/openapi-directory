@@ -33,15 +33,11 @@ func (e *CurrenciesRateGETFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CurrenciesRateGETQueryParams struct {
+type CurrenciesRateGETRequest struct {
 	// to override content negotiation specify a value of json or xml
 	Format *CurrenciesRateGETFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// comma separated list of currency pairs. For example: USD/CAD,USD/EUR,USD/AUD
 	Pairs string `queryParam:"style=form,explode=true,name=pairs"`
-}
-
-type CurrenciesRateGETRequest struct {
-	QueryParams CurrenciesRateGETQueryParams
 }
 
 type CurrenciesRateGETResponse struct {

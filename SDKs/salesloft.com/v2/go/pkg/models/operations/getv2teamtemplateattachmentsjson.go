@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2TeamTemplateAttachmentsJSONQueryParams struct {
+type GetV2TeamTemplateAttachmentsJSONRequest struct {
 	// IDs of team template attachments to fetch. If a record can't be found, that record won't be returned and your request will be successful
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -19,10 +19,6 @@ type GetV2TeamTemplateAttachmentsJSONQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Filters template attachments by team template IDs
 	TeamTemplateID []int64 `queryParam:"style=form,explode=false,name=team_template_id"`
-}
-
-type GetV2TeamTemplateAttachmentsJSONRequest struct {
-	QueryParams GetV2TeamTemplateAttachmentsJSONQueryParams
 }
 
 type GetV2TeamTemplateAttachmentsJSONResponse struct {

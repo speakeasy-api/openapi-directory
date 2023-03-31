@@ -11,7 +11,7 @@ import (
 )
 
 type GetTrackLicenseListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetTrackLicenseListDownloadAvailabilityEnum - Filter licenses by download availability
@@ -65,7 +65,7 @@ func (e *GetTrackLicenseListSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTrackLicenseListQueryParams struct {
+type GetTrackLicenseListRequest struct {
 	// Show licenses for the specified track ID
 	AudioID *string `queryParam:"style=form,explode=true,name=audio_id"`
 	// Filter licenses by download availability
@@ -86,11 +86,6 @@ type GetTrackLicenseListQueryParams struct {
 	TeamHistory *bool `queryParam:"style=form,explode=true,name=team_history"`
 	// Filter licenses by username of licensee
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetTrackLicenseListRequest struct {
-	QueryParams GetTrackLicenseListQueryParams
-	Security    GetTrackLicenseListSecurity
 }
 
 type GetTrackLicenseListResponse struct {

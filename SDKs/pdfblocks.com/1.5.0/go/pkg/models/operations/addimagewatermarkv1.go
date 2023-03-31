@@ -27,10 +27,6 @@ type AddImageWatermarkV1RequestBody struct {
 	Transparency *int `multipartForm:"name=transparency"`
 }
 
-type AddImageWatermarkV1Request struct {
-	Request AddImageWatermarkV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // AddImageWatermarkV14XXApplicationProblemPlusJSON - Error
 type AddImageWatermarkV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

@@ -41,7 +41,6 @@ pkg/models/shared/size.go
 pkg/models/shared/range.go
 pkg/models/shared/poster.go
 pkg/models/shared/shotstackdestination.go
-pkg/models/shared/security.go
 pkg/models/shared/queuedresponse.go
 pkg/models/shared/queuedresponsedata.go
 pkg/models/shared/assetresponse.go

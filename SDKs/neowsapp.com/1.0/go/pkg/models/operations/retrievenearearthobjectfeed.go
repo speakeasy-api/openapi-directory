@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveNearEarthObjectFeedQueryParams struct {
+type RetrieveNearEarthObjectFeedRequest struct {
 	// detailed
 	Detailed *bool `queryParam:"style=form,explode=true,name=detailed"`
 	// End of date range search, format: yyyy-MM-dd - (ex: 2015-04-28). If left off search will extends 7 days from start_date
 	EndDate *string `queryParam:"style=form,explode=true,name=end_date"`
 	// Start of date range search, format: yyyy-MM-dd - (ex: 2015-04-28)
 	StartDate *string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type RetrieveNearEarthObjectFeedRequest struct {
-	QueryParams RetrieveNearEarthObjectFeedQueryParams
 }
 
 type RetrieveNearEarthObjectFeedResponse struct {

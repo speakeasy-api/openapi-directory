@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01ConferenceDeafSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01ConferenceDeafRequest struct {
-	// POST parameters
-	Request  *shared.ConferenceDeafParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01ConferenceDeafSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01ConferenceDeafResponse struct {

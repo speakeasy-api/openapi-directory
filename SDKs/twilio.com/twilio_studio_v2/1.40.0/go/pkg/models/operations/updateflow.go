@@ -12,12 +12,8 @@ var UpdateFlowServerList = []string{
 }
 
 type UpdateFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateFlowPathParams struct {
-	// The SID of the Flow resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateFlowUpdateFlowRequest struct {
@@ -31,10 +27,9 @@ type UpdateFlowUpdateFlowRequest struct {
 }
 
 type UpdateFlowRequest struct {
-	PathParams UpdateFlowPathParams
-	Request    *UpdateFlowUpdateFlowRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateFlowSecurity
-	ServerURL  *string
+	RequestBody *UpdateFlowUpdateFlowRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Flow resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateFlowResponse struct {

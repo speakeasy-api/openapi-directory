@@ -10,10 +10,6 @@ type PostResetRequestBody struct {
 	Email string `json:"email"`
 }
 
-type PostResetRequest struct {
-	Request PostResetRequestBody `request:"mediaType=application/json"`
-}
-
 // PostReset400ApplicationJSON - Bad Request
 type PostReset400ApplicationJSON struct {
 	// Error message

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSnmpPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSnmpRequestBodyAccessEnum - The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
 type UpdateNetworkSnmpRequestBodyAccessEnum string
 
@@ -56,8 +52,8 @@ type UpdateNetworkSnmpRequestBody struct {
 }
 
 type UpdateNetworkSnmpRequest struct {
-	PathParams UpdateNetworkSnmpPathParams
-	Request    *UpdateNetworkSnmpRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSnmpRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                        `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSnmpResponse struct {

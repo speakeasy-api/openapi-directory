@@ -10,12 +10,7 @@ import (
 )
 
 type EditVideoSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditVideoPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditVideoRequestBodyEmbedButtons struct {
@@ -521,9 +516,9 @@ type EditVideoRequestBody struct {
 }
 
 type EditVideoRequest struct {
-	PathParams EditVideoPathParams
-	Request    EditVideoRequestBody `request:"mediaType=application/vnd.vimeo.video+json"`
-	Security   EditVideoSecurity
+	RequestBody EditVideoRequestBody `request:"mediaType=application/vnd.vimeo.video+json"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type EditVideoResponse struct {

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CancelFineTuneRequest{
-        PathParams: operations.CancelFineTunePathParams{
-            FineTuneID: "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
-        },
+        FineTuneID: "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
     }
 
     ctx := context.Background()

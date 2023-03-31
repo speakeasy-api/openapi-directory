@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchSuggestionsQueryParams struct {
+type GetSearchSuggestionsRequest struct {
 	// Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// Search term. It can contain any character.
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetSearchSuggestionsRequest struct {
-	QueryParams GetSearchSuggestionsQueryParams
 }
 
 type GetSearchSuggestionsResponse struct {

@@ -10,7 +10,8 @@ import (
 )
 
 type CreateTokenSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateTokenRequestBodyActionEnum - For <i>type=ACTION</i> only; defines token action to be perfromed
@@ -142,11 +143,6 @@ type CreateTokenRequestBody struct {
 	TokenType CreateTokenRequestBodyTokenTypeEnum `form:"name=tokenType"`
 	// For <i>tokenType=DEFAULT</i> only; action type to be set
 	Type *CreateTokenRequestBodyTypeEnum `form:"name=type"`
-}
-
-type CreateTokenRequest struct {
-	Request  CreateTokenRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateTokenSecurity
 }
 
 type CreateTokenResponse struct {

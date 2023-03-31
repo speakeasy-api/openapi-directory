@@ -8,26 +8,20 @@ import (
 )
 
 type AppengineAppsServicesVersionsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppengineAppsServicesVersionsPatchPathParams struct {
-	// Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
-	// Part of `name`. See documentation of `appsId`.
-	VersionsID string `pathParam:"style=simple,explode=false,name=versionsId"`
-}
-
-type AppengineAppsServicesVersionsPatchQueryParams struct {
+type AppengineAppsServicesVersionsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Version     *shared.Version   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,19 +34,16 @@ type AppengineAppsServicesVersionsPatchQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Part of `name`. See documentation of `appsId`.
+	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
 	// Standard field mask for the set of fields to be updated.
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsServicesVersionsPatchRequest struct {
-	PathParams  AppengineAppsServicesVersionsPatchPathParams
-	QueryParams AppengineAppsServicesVersionsPatchQueryParams
-	Request     *shared.Version `request:"mediaType=application/json"`
-	Security    AppengineAppsServicesVersionsPatchSecurity
+	// Part of `name`. See documentation of `appsId`.
+	VersionsID string `pathParam:"style=simple,explode=false,name=versionsId"`
 }
 
 type AppengineAppsServicesVersionsPatchResponse struct {

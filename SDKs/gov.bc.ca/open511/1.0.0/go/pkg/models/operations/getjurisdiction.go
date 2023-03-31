@@ -32,13 +32,9 @@ func (e *GetJurisdictionFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetJurisdictionQueryParams struct {
+type GetJurisdictionRequest struct {
 	// The format of the response
 	Format *GetJurisdictionFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetJurisdictionRequest struct {
-	QueryParams GetJurisdictionQueryParams
 }
 
 type GetJurisdictionResponse struct {

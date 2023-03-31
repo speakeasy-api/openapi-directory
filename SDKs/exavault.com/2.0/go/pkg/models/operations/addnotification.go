@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddNotificationHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 // AddNotificationAddNotificationRequestBodyActionEnum - Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
 type AddNotificationAddNotificationRequestBodyActionEnum string
 
@@ -100,8 +93,11 @@ type AddNotificationAddNotificationRequestBody struct {
 }
 
 type AddNotificationRequest struct {
-	Headers AddNotificationHeaders
-	Request *AddNotificationAddNotificationRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddNotificationAddNotificationRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddNotificationResponse struct {

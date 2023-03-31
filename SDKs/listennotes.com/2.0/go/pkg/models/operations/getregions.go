@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRegionsHeaders struct {
+type GetRegionsRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetRegionsRequest struct {
-	Headers GetRegionsHeaders
 }
 
 type GetRegionsResponse struct {

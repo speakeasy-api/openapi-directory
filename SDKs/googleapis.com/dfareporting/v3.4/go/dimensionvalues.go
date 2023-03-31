@@ -32,11 +32,11 @@ func newDimensionValues(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DfareportingDimensionValuesQuery - Retrieves list of report dimension values for a list of filters.
-func (s *dimensionValues) DfareportingDimensionValuesQuery(ctx context.Context, request operations.DfareportingDimensionValuesQueryRequest) (*operations.DfareportingDimensionValuesQueryResponse, error) {
+func (s *dimensionValues) DfareportingDimensionValuesQuery(ctx context.Context, request operations.DfareportingDimensionValuesQueryRequest, security operations.DfareportingDimensionValuesQuerySecurity) (*operations.DfareportingDimensionValuesQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dimensionvalues/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dimensionvalues/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DimensionValueRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *dimensionValues) DfareportingDimensionValuesQuery(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductAPIUpdateFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type ProductAPIUpdateFormRequest struct {
-	Headers ProductAPIUpdateFormHeaders
-	Request shared.ProductUpdateAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	ProductUpdateAPIModel shared.ProductUpdateAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	XAuthKey              string                       `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret           string                       `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type ProductAPIUpdateFormResponse struct {

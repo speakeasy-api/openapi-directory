@@ -40,9 +40,9 @@ func newRequests(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ```
 func (s *requests) CreateNetworkPiiRequest(ctx context.Context, request operations.CreateNetworkPiiRequestRequest) (*operations.CreateNetworkPiiRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -98,7 +98,7 @@ func (s *requests) CreateNetworkPiiRequest(ctx context.Context, request operatio
 // ```
 func (s *requests) DeleteNetworkPiiRequest(ctx context.Context, request operations.DeleteNetworkPiiRequestRequest) (*operations.DeleteNetworkPiiRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *requests) DeleteNetworkPiiRequest(ctx context.Context, request operatio
 // ```
 func (s *requests) GetNetworkPiiRequest(ctx context.Context, request operations.GetNetworkPiiRequestRequest) (*operations.GetNetworkPiiRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *requests) GetNetworkPiiRequest(ctx context.Context, request operations.
 // ```
 func (s *requests) GetNetworkPiiRequests(ctx context.Context, request operations.GetNetworkPiiRequestsRequest) (*operations.GetNetworkPiiRequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

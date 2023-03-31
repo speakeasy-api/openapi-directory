@@ -33,16 +33,16 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // NameType - Infer the likely type of a proper noun (personal name, brand name, place name etc.)
-func (s *general) NameType(ctx context.Context, request operations.NameTypeRequest) (*operations.NameTypeResponse, error) {
+func (s *general) NameType(ctx context.Context, request operations.NameTypeRequest, security operations.NameTypeSecurity) (*operations.NameTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/nameType/{properNoun}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/nameType/{properNoun}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *general) NameType(ctx context.Context, request operations.NameTypeReque
 }
 
 // NameTypeBatch - Infer the likely common type of up to 100 proper nouns (personal name, brand name, place name etc.)
-func (s *general) NameTypeBatch(ctx context.Context, request operations.NameTypeBatchRequest) (*operations.NameTypeBatchResponse, error) {
+func (s *general) NameTypeBatch(ctx context.Context, request shared.BatchNameIn, security operations.NameTypeBatchSecurity) (*operations.NameTypeBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/nameTypeBatch"
 
@@ -96,7 +96,7 @@ func (s *general) NameTypeBatch(ctx context.Context, request operations.NameType
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,16 +136,16 @@ func (s *general) NameTypeBatch(ctx context.Context, request operations.NameType
 }
 
 // NameTypeGeo - Infer the likely type of a proper noun (personal name, brand name, place name etc.)
-func (s *general) NameTypeGeo(ctx context.Context, request operations.NameTypeGeoRequest) (*operations.NameTypeGeoResponse, error) {
+func (s *general) NameTypeGeo(ctx context.Context, request operations.NameTypeGeoRequest, security operations.NameTypeGeoSecurity) (*operations.NameTypeGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/nameTypeGeo/{properNoun}/{countryIso2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/nameTypeGeo/{properNoun}/{countryIso2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,7 +183,7 @@ func (s *general) NameTypeGeo(ctx context.Context, request operations.NameTypeGe
 }
 
 // NameTypeGeoBatch - Infer the likely common type of up to 100 proper nouns (personal name, brand name, place name etc.)
-func (s *general) NameTypeGeoBatch(ctx context.Context, request operations.NameTypeGeoBatchRequest) (*operations.NameTypeGeoBatchResponse, error) {
+func (s *general) NameTypeGeoBatch(ctx context.Context, request shared.BatchNameGeoIn, security operations.NameTypeGeoBatchSecurity) (*operations.NameTypeGeoBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/nameTypeGeoBatch"
 
@@ -199,7 +199,7 @@ func (s *general) NameTypeGeoBatch(ctx context.Context, request operations.NameT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

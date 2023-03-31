@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSchedulesScheduleAByZipQueryParams struct {
+type GetSchedulesScheduleAByZipRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -36,10 +36,6 @@ type GetSchedulesScheduleAByZipQueryParams struct {
 	State []string `queryParam:"style=form,explode=true,name=state"`
 	// Zip code of contributor
 	Zip []string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSchedulesScheduleAByZipRequest struct {
-	QueryParams GetSchedulesScheduleAByZipQueryParams
 }
 
 type GetSchedulesScheduleAByZipResponse struct {

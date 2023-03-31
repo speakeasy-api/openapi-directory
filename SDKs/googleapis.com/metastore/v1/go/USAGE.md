@@ -14,56 +14,49 @@ func main() {
     s := sdk.New()
 
     req := operations.MetastoreProjectsLocationsFederationsCreateRequest{
-        Security: operations.MetastoreProjectsLocationsFederationsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            FederationID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.FederationInput{
+        DollarXgafv: "2",
+        FederationInput: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "debitis": shared.BackendMetastore{
-                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
-                    Name: "delectus",
+                "distinctio": shared.BackendMetastore{
+                    MetastoreType: "DATAPROC_METASTORE",
+                    Name: "unde",
                 },
-                "tempora": shared.BackendMetastore{
-                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
-                    Name: "molestiae",
+                "nulla": shared.BackendMetastore{
+                    MetastoreType: "DATAPROC_METASTORE",
+                    Name: "illum",
+                },
+                "vel": shared.BackendMetastore{
+                    MetastoreType: "DATAPROC_METASTORE",
+                    Name: "deserunt",
                 },
             },
             Labels: map[string]string{
-                "placeat": "voluptatum",
-                "iusto": "excepturi",
-                "nisi": "recusandae",
-                "temporibus": "ab",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            Name: "quis",
-            Version: "veritatis",
+            Name: "delectus",
+            Version: "tempora",
         },
+        AccessToken: "suscipit",
+        Alt: "media",
+        Callback: "minus",
+        FederationID: "placeat",
+        Fields: "voluptatum",
+        Key: "iusto",
+        OauthToken: "excepturi",
+        Parent: "nisi",
+        PrettyPrint: false,
+        QuotaUser: "recusandae",
+        RequestID: "temporibus",
+        UploadType: "ab",
+        UploadProtocol: "quis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, req)
+    res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, req, operations.MetastoreProjectsLocationsFederationsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

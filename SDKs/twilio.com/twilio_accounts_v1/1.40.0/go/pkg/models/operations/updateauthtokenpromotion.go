@@ -11,15 +11,6 @@ var UpdateAuthTokenPromotionServerList = []string{
 	"https://accounts.twilio.com",
 }
 
-type UpdateAuthTokenPromotionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAuthTokenPromotionRequest struct {
-	Security  UpdateAuthTokenPromotionSecurity
-	ServerURL *string
-}
-
 type UpdateAuthTokenPromotionResponse struct {
 	ContentType string
 	StatusCode  int

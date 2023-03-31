@@ -40,7 +40,7 @@ func newSIPPhone(defaultClient, securityClient HTTPClient, serverURL, language, 
 // <br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipPhone) CreateSIPPhone(ctx context.Context, request operations.CreateSIPPhoneRequest) (*operations.CreateSIPPhoneResponse, error) {
+func (s *sipPhone) CreateSIPPhone(ctx context.Context, request operations.CreateSIPPhoneApplicationJSON, security operations.CreateSIPPhoneSecurity) (*operations.CreateSIPPhoneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sip_phones"
 
@@ -56,7 +56,7 @@ func (s *sipPhone) CreateSIPPhone(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,16 +93,16 @@ func (s *sipPhone) CreateSIPPhone(ctx context.Context, request operations.Create
 // <br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipPhone) DeleteSIPPhone(ctx context.Context, request operations.DeleteSIPPhoneRequest) (*operations.DeleteSIPPhoneResponse, error) {
+func (s *sipPhone) DeleteSIPPhone(ctx context.Context, request operations.DeleteSIPPhoneRequest, security operations.DeleteSIPPhoneSecurity) (*operations.DeleteSIPPhoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sip_phones/{phoneId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sip_phones/{phoneId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *sipPhone) DeleteSIPPhone(ctx context.Context, request operations.Delete
 //   - Currently only supported on Cisco and Avaya PBX systems.
 //   - User must enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:read:admin`<br>
 //     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *sipPhone) ListSipPhones(ctx context.Context, request operations.ListSipPhonesRequest) (*operations.ListSipPhonesResponse, error) {
+func (s *sipPhone) ListSipPhones(ctx context.Context, request operations.ListSipPhonesRequest, security operations.ListSipPhonesSecurity) (*operations.ListSipPhonesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sip_phones"
 
@@ -161,11 +161,11 @@ func (s *sipPhone) ListSipPhones(ctx context.Context, request operations.ListSip
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,11 +215,11 @@ func (s *sipPhone) ListSipPhones(ctx context.Context, request operations.ListSip
 // <br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipPhone) UpdateSIPPhone(ctx context.Context, request operations.UpdateSIPPhoneRequest) (*operations.UpdateSIPPhoneResponse, error) {
+func (s *sipPhone) UpdateSIPPhone(ctx context.Context, request operations.UpdateSIPPhoneRequest, security operations.UpdateSIPPhoneSecurity) (*operations.UpdateSIPPhoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sip_phones/{phoneId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sip_phones/{phoneId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -231,7 +231,7 @@ func (s *sipPhone) UpdateSIPPhone(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

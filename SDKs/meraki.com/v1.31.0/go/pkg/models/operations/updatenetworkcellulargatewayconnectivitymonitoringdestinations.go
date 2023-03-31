@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations struct {
 	// Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
 	Default *bool `json:"default,omitempty"`
@@ -25,8 +21,8 @@ type UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody s
 }
 
 type UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest struct {
-	PathParams UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams
-	Request    *UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse struct {

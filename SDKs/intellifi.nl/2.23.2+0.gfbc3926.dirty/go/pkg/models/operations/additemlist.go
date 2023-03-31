@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddItemListRequest struct {
-	// A JSON object containing item list information
-	Request shared.ItemListInput `request:"mediaType=application/json"`
-}
-
 type AddItemListResponse struct {
 	ContentType string
 	// A JSON object containing the newly added resource

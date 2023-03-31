@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDPathParams struct {
-	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-	// ID of the binding of the seller with the SKU.
-	SellerSkuID string `pathParam:"style=simple,explode=false,name=sellerSkuId"`
-}
-
-type PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDHeaders struct {
+type PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDRequest struct {
-	PathParams PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDPathParams
-	Headers    PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDHeaders
+	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
+	// ID of the binding of the seller with the SKU.
+	SellerSkuID string `pathParam:"style=simple,explode=false,name=sellerSkuId"`
 }
 
 type PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuIDResponse struct {

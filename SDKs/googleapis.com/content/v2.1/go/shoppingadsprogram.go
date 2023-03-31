@@ -32,20 +32,20 @@ func newShoppingadsprogram(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // ContentShoppingadsprogramGet - Retrieves the status and review eligibility for the Shopping Ads program. Returns errors and warnings if they require action to resolve, will become disapprovals, or impact impressions. Use `accountstatuses` to view all issues for an account.
-func (s *shoppingadsprogram) ContentShoppingadsprogramGet(ctx context.Context, request operations.ContentShoppingadsprogramGetRequest) (*operations.ContentShoppingadsprogramGetResponse, error) {
+func (s *shoppingadsprogram) ContentShoppingadsprogramGet(ctx context.Context, request operations.ContentShoppingadsprogramGetRequest, security operations.ContentShoppingadsprogramGetSecurity) (*operations.ContentShoppingadsprogramGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *shoppingadsprogram) ContentShoppingadsprogramGet(ctx context.Context, r
 }
 
 // ContentShoppingadsprogramRequestreview - Requests a review of Shopping ads in a specific region. This method is only available to selected merchants.
-func (s *shoppingadsprogram) ContentShoppingadsprogramRequestreview(ctx context.Context, request operations.ContentShoppingadsprogramRequestreviewRequest) (*operations.ContentShoppingadsprogramRequestreviewResponse, error) {
+func (s *shoppingadsprogram) ContentShoppingadsprogramRequestreview(ctx context.Context, request operations.ContentShoppingadsprogramRequestreviewRequest, security operations.ContentShoppingadsprogramRequestreviewSecurity) (*operations.ContentShoppingadsprogramRequestreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram/requestreview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram/requestreview", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestReviewShoppingAdsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *shoppingadsprogram) ContentShoppingadsprogramRequestreview(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

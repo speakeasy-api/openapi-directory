@@ -32,16 +32,16 @@ func newAlbumsCustomAlbumThumbnails(defaultClient, securityClient HTTPClient, se
 }
 
 // CreateAlbumCustomThumb - Add a custom uploaded thumbnail
-func (s *albumsCustomAlbumThumbnails) CreateAlbumCustomThumb(ctx context.Context, request operations.CreateAlbumCustomThumbRequest) (*operations.CreateAlbumCustomThumbResponse, error) {
+func (s *albumsCustomAlbumThumbnails) CreateAlbumCustomThumb(ctx context.Context, request operations.CreateAlbumCustomThumbRequest, security operations.CreateAlbumCustomThumbSecurity) (*operations.CreateAlbumCustomThumbResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,16 +89,16 @@ func (s *albumsCustomAlbumThumbnails) CreateAlbumCustomThumb(ctx context.Context
 
 // DeleteAlbumCustomThumbnail - Remove a custom uploaded album thumbnail
 // This method removes a custom uploaded thumbnail from the specified album.
-func (s *albumsCustomAlbumThumbnails) DeleteAlbumCustomThumbnail(ctx context.Context, request operations.DeleteAlbumCustomThumbnailRequest) (*operations.DeleteAlbumCustomThumbnailResponse, error) {
+func (s *albumsCustomAlbumThumbnails) DeleteAlbumCustomThumbnail(ctx context.Context, request operations.DeleteAlbumCustomThumbnailRequest, security operations.DeleteAlbumCustomThumbnailSecurity) (*operations.DeleteAlbumCustomThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *albumsCustomAlbumThumbnails) DeleteAlbumCustomThumbnail(ctx context.Con
 // GetAlbumCustomThumbnail - Get a specific custom uploaded album thumbnail
 func (s *albumsCustomAlbumThumbnails) GetAlbumCustomThumbnail(ctx context.Context, request operations.GetAlbumCustomThumbnailRequest) (*operations.GetAlbumCustomThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,14 +194,14 @@ func (s *albumsCustomAlbumThumbnails) GetAlbumCustomThumbnail(ctx context.Contex
 // GetAlbumCustomThumbs - Get all the custom upload thumbnails of an album
 func (s *albumsCustomAlbumThumbnails) GetAlbumCustomThumbs(ctx context.Context, request operations.GetAlbumCustomThumbsRequest) (*operations.GetAlbumCustomThumbsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -250,11 +250,11 @@ func (s *albumsCustomAlbumThumbnails) GetAlbumCustomThumbs(ctx context.Context, 
 }
 
 // ReplaceAlbumCustomThumb - Replace a custom uploaded album thumbnail
-func (s *albumsCustomAlbumThumbnails) ReplaceAlbumCustomThumb(ctx context.Context, request operations.ReplaceAlbumCustomThumbRequest) (*operations.ReplaceAlbumCustomThumbResponse, error) {
+func (s *albumsCustomAlbumThumbnails) ReplaceAlbumCustomThumb(ctx context.Context, request operations.ReplaceAlbumCustomThumbRequest, security operations.ReplaceAlbumCustomThumbSecurity) (*operations.ReplaceAlbumCustomThumbResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -266,7 +266,7 @@ func (s *albumsCustomAlbumThumbnails) ReplaceAlbumCustomThumb(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

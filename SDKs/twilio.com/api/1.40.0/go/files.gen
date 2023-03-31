@@ -213,7 +213,6 @@ pkg/models/operations/updateusagetrigger.go
 pkg/models/shared/apiv2010account.go
 pkg/models/shared/accountenumtypeenum.go
 pkg/models/shared/accountenumstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/apiv2010accountaddress.go
 pkg/models/shared/apiv2010accountapplication.go
 pkg/models/shared/apiv2010accountcall.go
@@ -357,3 +356,4 @@ pkg/models/shared/paymentsenumcaptureenum.go
 pkg/models/shared/siprecenumupdatestatusenum.go
 pkg/models/shared/streamenumupdatestatusenum.go
 USAGE.md
+pkg/models/operations/options.go

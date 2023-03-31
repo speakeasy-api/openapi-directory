@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetSalesTaxJurisdictionsRequest{
-        Security: operations.GetSalesTaxJurisdictionsSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GetSalesTaxJurisdictionsPathParams{
-            CountryCode: "corrupti",
-        },
+        CountryCode: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Country.GetSalesTaxJurisdictions(ctx, req)
+    res, err := s.Country.GetSalesTaxJurisdictions(ctx, req, operations.GetSalesTaxJurisdictionsSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

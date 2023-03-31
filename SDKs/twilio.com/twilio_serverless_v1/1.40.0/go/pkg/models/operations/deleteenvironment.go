@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteEnvironmentServerList = []string{
@@ -12,20 +11,15 @@ var DeleteEnvironmentServerList = []string{
 }
 
 type DeleteEnvironmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteEnvironmentPathParams struct {
+type DeleteEnvironmentRequest struct {
 	// The SID of the Service to delete the Environment resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Environment resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteEnvironmentRequest struct {
-	PathParams DeleteEnvironmentPathParams
-	Security   DeleteEnvironmentSecurity
-	ServerURL  *string
 }
 
 type DeleteEnvironmentResponse struct {

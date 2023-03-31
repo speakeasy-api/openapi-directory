@@ -8,17 +8,13 @@ import (
 )
 
 type FindScriptByIDSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindScriptByIDPathParams struct {
-	// The script id
-	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindScriptByIDRequest struct {
-	PathParams FindScriptByIDPathParams
-	Security   FindScriptByIDSecurity
+	// The script id
+	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
 }
 
 type FindScriptByIDResponse struct {

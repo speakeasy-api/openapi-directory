@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV1AccountsIDFollowSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AccountsIDFollowPathParams struct {
-	// The id of the account in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AccountsIDFollowRequestBody struct {
@@ -24,9 +19,9 @@ type PostAPIV1AccountsIDFollowRequestBody struct {
 }
 
 type PostAPIV1AccountsIDFollowRequest struct {
-	PathParams PostAPIV1AccountsIDFollowPathParams
-	Request    []byte `request:"mediaType=application/form-data"`
-	Security   PostAPIV1AccountsIDFollowSecurity
+	RequestBody []byte `request:"mediaType=application/form-data"`
+	// The id of the account in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AccountsIDFollowResponse struct {

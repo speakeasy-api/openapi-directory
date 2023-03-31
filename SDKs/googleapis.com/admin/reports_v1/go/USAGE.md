@@ -14,45 +14,36 @@ func main() {
     s := sdk.New()
 
     req := operations.ReportsActivitiesListRequest{
-        Security: operations.ReportsActivitiesListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ReportsActivitiesListPathParams{
-            ApplicationName: "meet",
-            UserKey: "provident",
-        },
-        QueryParams: operations.ReportsActivitiesListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "quibusdam",
-            ActorIPAddress: "unde",
-            Alt: "proto",
-            Callback: "corrupti",
-            CustomerID: "illum",
-            EndTime: "vel",
-            EventName: "error",
-            Fields: "deserunt",
-            Filters: "suscipit",
-            GroupIDFilter: "iure",
-            Key: "magnam",
-            MaxResults: 891773,
-            OauthToken: "ipsa",
-            OrgUnitID: "delectus",
-            PageToken: "tempora",
-            PrettyPrint: false,
-            QuotaUser: "suscipit",
-            StartTime: "molestiae",
-            UploadType: "minus",
-            UploadProtocol: "placeat",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        ActorIPAddress: "distinctio",
+        Alt: "proto",
+        ApplicationName: "mobile",
+        Callback: "nulla",
+        CustomerID: "corrupti",
+        EndTime: "illum",
+        EventName: "vel",
+        Fields: "error",
+        Filters: "deserunt",
+        GroupIDFilter: "suscipit",
+        Key: "iure",
+        MaxResults: 297534,
+        OauthToken: "debitis",
+        OrgUnitID: "ipsa",
+        PageToken: "delectus",
+        PrettyPrint: false,
+        QuotaUser: "tempora",
+        StartTime: "suscipit",
+        UploadType: "molestiae",
+        UploadProtocol: "minus",
+        UserKey: "placeat",
     }
 
     ctx := context.Background()
-    res, err := s.Activities.ReportsActivitiesList(ctx, req)
+    res, err := s.Activities.ReportsActivitiesList(ctx, req, operations.ReportsActivitiesListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

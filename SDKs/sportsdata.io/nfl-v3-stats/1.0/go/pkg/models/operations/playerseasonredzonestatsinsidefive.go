@@ -33,17 +33,13 @@ func (e *PlayerSeasonRedZoneStatsInsideFiveFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type PlayerSeasonRedZoneStatsInsideFivePathParams struct {
+type PlayerSeasonRedZoneStatsInsideFiveRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerSeasonRedZoneStatsInsideFiveFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season and the season type. If no season type is provided, then the default is regular season.
 	//           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
 	//
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type PlayerSeasonRedZoneStatsInsideFiveRequest struct {
-	PathParams PlayerSeasonRedZoneStatsInsideFivePathParams
 }
 
 type PlayerSeasonRedZoneStatsInsideFiveResponse struct {

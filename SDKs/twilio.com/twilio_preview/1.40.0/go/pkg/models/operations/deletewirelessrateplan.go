@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteWirelessRatePlanServerList = []string{
@@ -12,17 +11,12 @@ var DeleteWirelessRatePlanServerList = []string{
 }
 
 type DeleteWirelessRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteWirelessRatePlanPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteWirelessRatePlanRequest struct {
-	PathParams DeleteWirelessRatePlanPathParams
-	Security   DeleteWirelessRatePlanSecurity
-	ServerURL  *string
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteWirelessRatePlanResponse struct {

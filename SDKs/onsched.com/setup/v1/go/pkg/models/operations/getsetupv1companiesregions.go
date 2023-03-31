@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1CompaniesRegionsQueryParams struct {
+type GetSetupV1CompaniesRegionsRequest struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetSetupV1CompaniesRegionsRequest struct {
-	QueryParams GetSetupV1CompaniesRegionsQueryParams
 }
 
 type GetSetupV1CompaniesRegionsResponse struct {

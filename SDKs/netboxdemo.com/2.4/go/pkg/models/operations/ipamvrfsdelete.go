@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type IpamVrfsDeletePathParams struct {
+type IpamVrfsDeleteRequest struct {
 	// A unique integer value identifying this VRF.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVrfsDeleteRequest struct {
-	PathParams IpamVrfsDeletePathParams
 }
 
 type IpamVrfsDeleteResponse struct {

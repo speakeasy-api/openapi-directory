@@ -32,7 +32,6 @@ pkg/models/operations/updateflowvalidate.go
 pkg/models/operations/updatetestuser.go
 pkg/models/shared/studiov2flowexecution.go
 pkg/models/shared/executionenumstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/studiov2flow.go
 pkg/models/shared/flowenumstatusenum.go
 pkg/models/shared/studiov2flowexecutionexecutioncontext.go
@@ -44,3 +43,4 @@ pkg/models/shared/studiov2flowtestuser.go
 pkg/models/shared/studiov2flowvalidate.go
 pkg/models/shared/flowvalidateenumstatusenum.go
 USAGE.md
+pkg/models/operations/options.go

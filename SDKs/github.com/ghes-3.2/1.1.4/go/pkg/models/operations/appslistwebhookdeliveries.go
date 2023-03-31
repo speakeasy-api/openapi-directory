@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsListWebhookDeliveriesQueryParams struct {
+type AppsListWebhookDeliveriesRequest struct {
 	// Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type AppsListWebhookDeliveriesRequest struct {
-	QueryParams AppsListWebhookDeliveriesQueryParams
 }
 
 type AppsListWebhookDeliveriesResponse struct {

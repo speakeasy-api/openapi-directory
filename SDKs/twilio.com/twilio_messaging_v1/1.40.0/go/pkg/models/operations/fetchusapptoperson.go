@@ -12,20 +12,15 @@ var FetchUsAppToPersonServerList = []string{
 }
 
 type FetchUsAppToPersonSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchUsAppToPersonPathParams struct {
+type FetchUsAppToPersonRequest struct {
 	// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
 	MessagingServiceSid string `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
 	// The SID of the US A2P Compliance resource to fetch `QE2c6890da8086d771620e9b13fadeba0b`.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchUsAppToPersonRequest struct {
-	PathParams FetchUsAppToPersonPathParams
-	Security   FetchUsAppToPersonSecurity
-	ServerURL  *string
 }
 
 type FetchUsAppToPersonResponse struct {

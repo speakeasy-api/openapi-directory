@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ListPastWebinarPollResultsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListPastWebinarPollResultsPathParams struct {
+type ListPastWebinarPollResultsRequest struct {
 	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
 	//
 	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
 	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type ListPastWebinarPollResultsRequest struct {
-	PathParams ListPastWebinarPollResultsPathParams
-	Security   ListPastWebinarPollResultsSecurity
 }
 
 type ListPastWebinarPollResults200ApplicationXMLQuestionsQuestionDetails struct {

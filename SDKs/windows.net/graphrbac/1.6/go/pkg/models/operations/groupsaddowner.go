@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsAddOwnerPathParams struct {
+type GroupsAddOwnerRequest struct {
+	// The URL of the owner object, such as https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
+	RequestBody map[string]map[string]interface{} `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the application to which to add the owner.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type GroupsAddOwnerQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type GroupsAddOwnerRequest struct {
-	PathParams  GroupsAddOwnerPathParams
-	QueryParams GroupsAddOwnerQueryParams
-	// The URL of the owner object, such as https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GroupsAddOwnerResponse struct {

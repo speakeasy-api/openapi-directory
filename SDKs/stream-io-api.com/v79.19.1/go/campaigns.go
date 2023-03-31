@@ -34,7 +34,7 @@ func newCampaigns(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // CreateCampaign - Create campaign
 // Creates a new campaign
-func (s *campaigns) CreateCampaign(ctx context.Context, request operations.CreateCampaignRequest) (*operations.CreateCampaignResponse, error) {
+func (s *campaigns) CreateCampaign(ctx context.Context, request shared.CreateCampaignRequest) (*operations.CreateCampaignResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns"
 
@@ -111,7 +111,7 @@ func (s *campaigns) CreateCampaign(ctx context.Context, request operations.Creat
 
 // CreateSegment - Create segment
 // Create a segment
-func (s *campaigns) CreateSegment(ctx context.Context, request operations.CreateSegmentRequest) (*operations.CreateSegmentResponse, error) {
+func (s *campaigns) CreateSegment(ctx context.Context, request shared.CreateSegmentRequest) (*operations.CreateSegmentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/segments"
 
@@ -197,7 +197,7 @@ func (s *campaigns) QueryCampaigns(ctx context.Context, request operations.Query
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,7 +268,7 @@ func (s *campaigns) QueryRecipients(ctx context.Context, request operations.Quer
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -339,7 +339,7 @@ func (s *campaigns) QuerySegments(ctx context.Context, request operations.QueryS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

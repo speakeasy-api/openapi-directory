@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSimpleQueryQueryParams struct {
+type PostSimpleQueryRequest struct {
+	// The text of the input document (in JSON format)
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type PostSimpleQueryRequest struct {
-	QueryParams PostSimpleQueryQueryParams
-	// The text of the input document (in JSON format)
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostSimpleQueryResponse struct {

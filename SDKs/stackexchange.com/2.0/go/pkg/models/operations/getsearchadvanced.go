@@ -182,7 +182,7 @@ func (e *GetSearchAdvancedWikiEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSearchAdvancedQueryParams struct {
+type GetSearchAdvancedRequest struct {
 	Accepted *GetSearchAdvancedAcceptedEnum `queryParam:"style=form,explode=true,name=accepted"`
 	Answers  *int64                         `queryParam:"style=form,explode=true,name=answers"`
 	Body     *string                        `queryParam:"style=form,explode=true,name=body"`
@@ -257,10 +257,6 @@ type GetSearchAdvancedQueryParams struct {
 	User   *int64                     `queryParam:"style=form,explode=true,name=user"`
 	Views  *int64                     `queryParam:"style=form,explode=true,name=views"`
 	Wiki   *GetSearchAdvancedWikiEnum `queryParam:"style=form,explode=true,name=wiki"`
-}
-
-type GetSearchAdvancedRequest struct {
-	QueryParams GetSearchAdvancedQueryParams
 }
 
 type GetSearchAdvancedResponse struct {

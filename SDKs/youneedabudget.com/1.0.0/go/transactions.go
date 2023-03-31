@@ -36,9 +36,9 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Creates a single transaction or multiple transactions.  If you provide a body containing a `transaction` object, a single transaction will be created and if you provide a body containing a `transactions` array, multiple transactions will be created.  Scheduled transactions cannot be created on this endpoint.
 func (s *transactions) CreateTransaction(ctx context.Context, request operations.CreateTransactionRequest) (*operations.CreateTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostTransactionsWrapper", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,7 +103,7 @@ func (s *transactions) CreateTransaction(ctx context.Context, request operations
 // Deletes a transaction
 func (s *transactions) DeleteTransaction(ctx context.Context, request operations.DeleteTransactionRequest) (*operations.DeleteTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/{transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/{transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *transactions) DeleteTransaction(ctx context.Context, request operations
 // Returns a single transaction
 func (s *transactions) GetTransactionByID(ctx context.Context, request operations.GetTransactionByIDRequest) (*operations.GetTransactionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/{transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/{transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,14 +215,14 @@ func (s *transactions) GetTransactionByID(ctx context.Context, request operation
 // Returns budget transactions
 func (s *transactions) GetTransactions(ctx context.Context, request operations.GetTransactionsRequest) (*operations.GetTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -276,14 +276,14 @@ func (s *transactions) GetTransactions(ctx context.Context, request operations.G
 // Returns all transactions for a specified account
 func (s *transactions) GetTransactionsByAccount(ctx context.Context, request operations.GetTransactionsByAccountRequest) (*operations.GetTransactionsByAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts/{account_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts/{account_id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -337,14 +337,14 @@ func (s *transactions) GetTransactionsByAccount(ctx context.Context, request ope
 // Returns all transactions for a specified category
 func (s *transactions) GetTransactionsByCategory(ctx context.Context, request operations.GetTransactionsByCategoryRequest) (*operations.GetTransactionsByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/categories/{category_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/categories/{category_id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -398,14 +398,14 @@ func (s *transactions) GetTransactionsByCategory(ctx context.Context, request op
 // Returns all transactions for a specified payee
 func (s *transactions) GetTransactionsByPayee(ctx context.Context, request operations.GetTransactionsByPayeeRequest) (*operations.GetTransactionsByPayeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees/{payee_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees/{payee_id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -459,7 +459,7 @@ func (s *transactions) GetTransactionsByPayee(ctx context.Context, request opera
 // Imports available transactions on all linked accounts for the given budget.  Linked accounts allow transactions to be imported directly from a specified financial institution and this endpoint initiates that import.  Sending a request to this endpoint is the equivalent of clicking "Import" on each account in the web application or tapping the "New Transactions" banner in the mobile applications.  The response for this endpoint contains the transaction ids that have been imported.
 func (s *transactions) ImportTransactions(ctx context.Context, request operations.ImportTransactionsRequest) (*operations.ImportTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -516,9 +516,9 @@ func (s *transactions) ImportTransactions(ctx context.Context, request operation
 // Updates a single transaction
 func (s *transactions) UpdateTransaction(ctx context.Context, request operations.UpdateTransactionRequest) (*operations.UpdateTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/{transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/{transaction_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutTransactionWrapper", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -581,9 +581,9 @@ func (s *transactions) UpdateTransaction(ctx context.Context, request operations
 // Updates multiple transactions, by `id` or `import_id`.
 func (s *transactions) UpdateTransactions(ctx context.Context, request operations.UpdateTransactionsRequest) (*operations.UpdateTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchTransactionsWrapper", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

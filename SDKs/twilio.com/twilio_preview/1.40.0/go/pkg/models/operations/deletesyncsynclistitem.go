@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncSyncListItemServerList = []string{
@@ -12,25 +11,16 @@ var DeleteSyncSyncListItemServerList = []string{
 }
 
 type DeleteSyncSyncListItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteSyncSyncListItemPathParams struct {
-	Index      int64  `pathParam:"style=simple,explode=false,name=Index"`
-	ListSid    string `pathParam:"style=simple,explode=false,name=ListSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteSyncSyncListItemHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteSyncSyncListItemRequest struct {
-	PathParams DeleteSyncSyncListItemPathParams
-	Headers    DeleteSyncSyncListItemHeaders
-	Security   DeleteSyncSyncListItemSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch    *string `header:"style=simple,explode=false,name=If-Match"`
+	Index      int64   `pathParam:"style=simple,explode=false,name=Index"`
+	ListSid    string  `pathParam:"style=simple,explode=false,name=ListSid"`
+	ServiceSid string  `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type DeleteSyncSyncListItemResponse struct {

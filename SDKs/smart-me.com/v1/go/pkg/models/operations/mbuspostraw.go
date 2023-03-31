@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type MBusPostRawRequest struct {
-	// The M-BUS Telegram
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type MBusPostRawResponse struct {
 	Body        []byte
 	ContentType string

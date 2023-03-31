@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetProfileImageFilePathParams struct {
-	// The user ID of the user to return the profile image of.
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetProfileImageFileQueryParams struct {
+type GetProfileImageFileRequest struct {
 	// A default image URL to use when the user has no profile image. Or to use one of the Gravatar default images, you can set default to any one of (404, mm, identicon, monsterid, wavatar, retro, blank). <br /><br /> To learn how the Gravatar default images options work, see the Default Image section on the page at:<br /> https://en.gravatar.com/site/implement/images/
 	//
 	Default *string `queryParam:"style=form,explode=true,name=default"`
-}
-
-type GetProfileImageFileRequest struct {
-	PathParams  GetProfileImageFilePathParams
-	QueryParams GetProfileImageFileQueryParams
+	// The user ID of the user to return the profile image of.
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetProfileImageFileResponse struct {

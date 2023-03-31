@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type PostGroupsGroupIDUsersPathParams struct {
-	// Group ID to associate this user with.
-	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 // PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum - How is this user authenticated?
 type PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum string
 
@@ -200,8 +195,9 @@ type PostGroupsGroupIDUsersRequestBody struct {
 }
 
 type PostGroupsGroupIDUsersRequest struct {
-	PathParams PostGroupsGroupIDUsersPathParams
-	Request    *PostGroupsGroupIDUsersRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostGroupsGroupIDUsersRequestBody `request:"mediaType=multipart/form-data"`
+	// Group ID to associate this user with.
+	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type PostGroupsGroupIDUsersResponse struct {

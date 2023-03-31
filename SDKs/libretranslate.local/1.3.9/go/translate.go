@@ -77,7 +77,7 @@ func (s *translate) GetLanguages(ctx context.Context) (*operations.GetLanguagesR
 }
 
 // PostDetect - Detect the language of a single text
-func (s *translate) PostDetect(ctx context.Context, request operations.PostDetectRequest) (*operations.PostDetectResponse, error) {
+func (s *translate) PostDetect(ctx context.Context, request string) (*operations.PostDetectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/detect"
 
@@ -136,7 +136,7 @@ func (s *translate) PostDetect(ctx context.Context, request operations.PostDetec
 }
 
 // PostTranslate - Translate text from a language to another
-func (s *translate) PostTranslate(ctx context.Context, request operations.PostTranslateRequest) (*operations.PostTranslateResponse, error) {
+func (s *translate) PostTranslate(ctx context.Context, request string) (*operations.PostTranslateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/translate"
 
@@ -195,7 +195,7 @@ func (s *translate) PostTranslate(ctx context.Context, request operations.PostTr
 }
 
 // PostTranslateFile - Translate file from a language to another
-func (s *translate) PostTranslateFile(ctx context.Context, request operations.PostTranslateFileRequest) (*operations.PostTranslateFileResponse, error) {
+func (s *translate) PostTranslateFile(ctx context.Context, request string) (*operations.PostTranslateFileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/translate_file"
 

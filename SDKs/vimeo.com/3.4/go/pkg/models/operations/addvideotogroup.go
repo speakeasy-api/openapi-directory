@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoToGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoToGroupPathParams struct {
+type AddVideoToGroupRequest struct {
 	// The ID of the group.
 	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type AddVideoToGroupRequest struct {
-	PathParams AddVideoToGroupPathParams
-	Security   AddVideoToGroupSecurity
 }
 
 type AddVideoToGroupResponse struct {

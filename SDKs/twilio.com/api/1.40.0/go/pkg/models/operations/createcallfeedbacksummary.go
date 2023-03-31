@@ -15,12 +15,8 @@ var CreateCallFeedbackSummaryServerList = []string{
 }
 
 type CreateCallFeedbackSummarySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCallFeedbackSummaryPathParams struct {
-	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequestStatusCallbackMethodEnum - The HTTP method (`GET` or `POST`) we use to make the request to the `StatusCallback` URL.
@@ -73,10 +69,9 @@ type CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest struct {
 }
 
 type CreateCallFeedbackSummaryRequest struct {
-	PathParams CreateCallFeedbackSummaryPathParams
-	Request    *CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateCallFeedbackSummarySecurity
-	ServerURL  *string
+	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+	AccountSid  string                                                     `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateCallFeedbackSummaryResponse struct {

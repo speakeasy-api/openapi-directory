@@ -12,18 +12,13 @@ var FetchStyleSheetServerList = []string{
 }
 
 type FetchStyleSheetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchStyleSheetPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchStyleSheetRequest struct {
-	PathParams FetchStyleSheetPathParams
-	Security   FetchStyleSheetSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 }
 
 type FetchStyleSheetResponse struct {

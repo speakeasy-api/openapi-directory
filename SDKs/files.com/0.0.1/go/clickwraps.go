@@ -37,7 +37,7 @@ func newClickwraps(defaultClient, securityClient HTTPClient, serverURL, language
 // Delete Clickwrap
 func (s *clickwraps) DeleteClickwrapsID(ctx context.Context, request operations.DeleteClickwrapsIDRequest) (*operations.DeleteClickwrapsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clickwraps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clickwraps/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *clickwraps) GetClickwraps(ctx context.Context, request operations.GetCl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *clickwraps) GetClickwraps(ctx context.Context, request operations.GetCl
 // Show Clickwrap
 func (s *clickwraps) GetClickwrapsID(ctx context.Context, request operations.GetClickwrapsIDRequest) (*operations.GetClickwrapsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clickwraps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clickwraps/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *clickwraps) GetClickwrapsID(ctx context.Context, request operations.Get
 // Update Clickwrap
 func (s *clickwraps) PatchClickwrapsID(ctx context.Context, request operations.PatchClickwrapsIDRequest) (*operations.PatchClickwrapsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clickwraps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clickwraps/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *clickwraps) PatchClickwrapsID(ctx context.Context, request operations.P
 
 // PostClickwraps - Create Clickwrap
 // Create Clickwrap
-func (s *clickwraps) PostClickwraps(ctx context.Context, request operations.PostClickwrapsRequest) (*operations.PostClickwrapsResponse, error) {
+func (s *clickwraps) PostClickwraps(ctx context.Context, request operations.PostClickwrapsRequestBody) (*operations.PostClickwrapsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clickwraps"
 

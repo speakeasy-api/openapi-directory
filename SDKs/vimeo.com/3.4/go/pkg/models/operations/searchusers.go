@@ -66,7 +66,7 @@ func (e *SearchUsersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchUsersQueryParams struct {
+type SearchUsersRequest struct {
 	// The sort direction of the results.
 	Direction *SearchUsersDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -77,10 +77,6 @@ type SearchUsersQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *SearchUsersSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchUsersRequest struct {
-	QueryParams SearchUsersQueryParams
 }
 
 type SearchUsersResponse struct {

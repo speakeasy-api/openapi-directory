@@ -12,12 +12,8 @@ var CreateVerificationCheckServerList = []string{
 }
 
 type CreateVerificationCheckSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateVerificationCheckPathParams struct {
-	// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to create the resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateVerificationCheckCreateVerificationCheckRequest struct {
@@ -34,10 +30,9 @@ type CreateVerificationCheckCreateVerificationCheckRequest struct {
 }
 
 type CreateVerificationCheckRequest struct {
-	PathParams CreateVerificationCheckPathParams
-	Request    *CreateVerificationCheckCreateVerificationCheckRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateVerificationCheckSecurity
-	ServerURL  *string
+	RequestBody *CreateVerificationCheckCreateVerificationCheckRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to create the resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateVerificationCheckResponse struct {

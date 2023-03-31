@@ -25,6 +25,7 @@ pkg/models/shared/createnamedrangeresponse.go
 pkg/models/shared/createheaderresponse.go
 pkg/models/shared/createfootnoteresponse.go
 pkg/models/shared/createfooterresponse.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchupdatedocumentrequest.go
 pkg/models/shared/request.go
 pkg/models/shared/updatetextstylerequest.go
@@ -86,9 +87,7 @@ pkg/models/shared/createnamedrangerequest.go
 pkg/models/shared/createheaderrequest.go
 pkg/models/shared/createfootnoterequest.go
 pkg/models/shared/createfooterrequest.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/document.go
 pkg/models/shared/suggestednamedstyles.go
 pkg/models/shared/namedstylessuggestionstate.go

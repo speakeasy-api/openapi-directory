@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETTransactionInvoicePathParams struct {
-	// Account number or account ID.
-	//
-	AccountKey string `pathParam:"style=simple,explode=false,name=account-key"`
-}
-
-type GETTransactionInvoiceQueryParams struct {
-	// Number of rows returned per page.
-	//
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETTransactionInvoiceHeaders struct {
+type GETTransactionInvoiceRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -28,12 +16,12 @@ type GETTransactionInvoiceHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETTransactionInvoiceRequest struct {
-	PathParams  GETTransactionInvoicePathParams
-	QueryParams GETTransactionInvoiceQueryParams
-	Headers     GETTransactionInvoiceHeaders
+	// Account number or account ID.
+	//
+	AccountKey string `pathParam:"style=simple,explode=false,name=account-key"`
+	// Number of rows returned per page.
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GETTransactionInvoiceResponse struct {

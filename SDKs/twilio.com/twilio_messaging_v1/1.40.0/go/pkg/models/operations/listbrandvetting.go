@@ -12,15 +12,13 @@ var ListBrandVettingServerList = []string{
 }
 
 type ListBrandVettingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListBrandVettingPathParams struct {
+type ListBrandVettingRequest struct {
 	// The SID of the Brand Registration resource of the vettings to read .
 	BrandSid string `pathParam:"style=simple,explode=false,name=BrandSid"`
-}
-
-type ListBrandVettingQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -29,13 +27,6 @@ type ListBrandVettingQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The third-party provider of the vettings to read
 	VettingProvider *shared.BrandVettingEnumVettingProviderEnum `queryParam:"style=form,explode=true,name=VettingProvider"`
-}
-
-type ListBrandVettingRequest struct {
-	PathParams  ListBrandVettingPathParams
-	QueryParams ListBrandVettingQueryParams
-	Security    ListBrandVettingSecurity
-	ServerURL   *string
 }
 
 type ListBrandVettingListBrandVettingResponseMeta struct {

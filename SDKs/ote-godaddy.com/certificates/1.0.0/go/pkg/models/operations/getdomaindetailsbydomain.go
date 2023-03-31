@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainDetailsByDomainPathParams struct {
+type GetDomainDetailsByDomainRequest struct {
 	// Certificate id to lookup
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 	// An identifier for a customer
 	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 	// A valid domain name in the certificate request
 	Domain string `pathParam:"style=simple,explode=false,name=domain"`
-}
-
-type GetDomainDetailsByDomainRequest struct {
-	PathParams GetDomainDetailsByDomainPathParams
 }
 
 type GetDomainDetailsByDomainResponse struct {

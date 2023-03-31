@@ -8,13 +8,13 @@ import (
 )
 
 type PubsubSubscriptionsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PubsubSubscriptionsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PubsubSubscriptionsGetSecurity struct {
@@ -22,12 +22,7 @@ type PubsubSubscriptionsGetSecurity struct {
 	Option2 *PubsubSubscriptionsGetSecurityOption2 `security:"option"`
 }
 
-type PubsubSubscriptionsGetPathParams struct {
-	// The name of the subscription to get.
-	Subscription string `pathParam:"style=simple,explode=false,name=subscription"`
-}
-
-type PubsubSubscriptionsGetQueryParams struct {
+type PubsubSubscriptionsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,16 +41,12 @@ type PubsubSubscriptionsGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The name of the subscription to get.
+	Subscription string `pathParam:"style=simple,explode=false,name=subscription"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PubsubSubscriptionsGetRequest struct {
-	PathParams  PubsubSubscriptionsGetPathParams
-	QueryParams PubsubSubscriptionsGetQueryParams
-	Security    PubsubSubscriptionsGetSecurity
 }
 
 type PubsubSubscriptionsGetResponse struct {

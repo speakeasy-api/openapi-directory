@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type PatchUsersUserIDPathParams struct {
-	// The id of the user to be updated
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PatchUsersUserIDQueryParams struct {
+type PatchUsersUserIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
 	// The user's email
@@ -20,13 +15,10 @@ type PatchUsersUserIDQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// The type for this user
 	Type *string `queryParam:"style=form,explode=true,name=type"`
+	// The id of the user to be updated
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 	// The user's username
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type PatchUsersUserIDRequest struct {
-	PathParams  PatchUsersUserIDPathParams
-	QueryParams PatchUsersUserIDQueryParams
 }
 
 type PatchUsersUserIDResponse struct {

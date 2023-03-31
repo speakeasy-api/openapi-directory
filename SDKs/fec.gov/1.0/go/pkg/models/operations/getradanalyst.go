@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetRadAnalystQueryParams struct {
+type GetRadAnalystRequest struct {
 	// ID of RAD analyst
 	AnalystID []int `queryParam:"style=form,explode=true,name=analyst_id"`
 	// Short ID of RAD analyst
@@ -44,10 +44,6 @@ type GetRadAnalystQueryParams struct {
 	TelephoneExt []int `queryParam:"style=form,explode=true,name=telephone_ext"`
 	// Title of RAD analyst
 	Title []string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type GetRadAnalystRequest struct {
-	QueryParams GetRadAnalystQueryParams
 }
 
 type GetRadAnalystResponse struct {

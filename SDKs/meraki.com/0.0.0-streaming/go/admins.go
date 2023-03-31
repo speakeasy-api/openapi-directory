@@ -34,9 +34,9 @@ func newAdmins(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Create a new dashboard administrator
 func (s *admins) CreateOrganizationAdmin(ctx context.Context, request operations.CreateOrganizationAdminRequest) (*operations.CreateOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *admins) CreateOrganizationAdmin(ctx context.Context, request operations
 // Revoke all access for a dashboard administrator within this organization
 func (s *admins) DeleteOrganizationAdmin(ctx context.Context, request operations.DeleteOrganizationAdminRequest) (*operations.DeleteOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *admins) DeleteOrganizationAdmin(ctx context.Context, request operations
 // List the dashboard administrators in this organization
 func (s *admins) GetOrganizationAdmins(ctx context.Context, request operations.GetOrganizationAdminsRequest) (*operations.GetOrganizationAdminsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,9 +170,9 @@ func (s *admins) GetOrganizationAdmins(ctx context.Context, request operations.G
 // Update an administrator
 func (s *admins) UpdateOrganizationAdmin(ctx context.Context, request operations.UpdateOrganizationAdminRequest) (*operations.UpdateOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

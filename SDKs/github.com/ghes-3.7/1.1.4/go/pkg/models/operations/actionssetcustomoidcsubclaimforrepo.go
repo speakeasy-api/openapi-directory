@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetCustomOidcSubClaimForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository - Actions OIDC subject customization for a repository
 type ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository struct {
 	// Whether to use the default template or not.
@@ -21,8 +14,11 @@ type ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepos
 }
 
 type ActionsSetCustomOidcSubClaimForRepoRequest struct {
-	PathParams ActionsSetCustomOidcSubClaimForRepoPathParams
-	Request    ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository `request:"mediaType=application/json"`
+	RequestBody ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ActionsSetCustomOidcSubClaimForRepoResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasConfigContextsPartialUpdatePathParams struct {
+type ExtrasConfigContextsPartialUpdateRequest struct {
+	WritableConfigContextInput shared.WritableConfigContextInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this config context.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasConfigContextsPartialUpdateRequest struct {
-	PathParams ExtrasConfigContextsPartialUpdatePathParams
-	Request    shared.WritableConfigContextInput `request:"mediaType=application/json"`
 }
 
 type ExtrasConfigContextsPartialUpdateResponse struct {

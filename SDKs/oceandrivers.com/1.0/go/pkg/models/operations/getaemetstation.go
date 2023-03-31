@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetAemetStationPathParams struct {
+type GetAemetStationRequest struct {
 	// Period of time to get the data. Options: lastdata lastday
 	Period string `pathParam:"style=simple,explode=false,name=period"`
 	// station name currently: aeropuertopalma | caboblanco
 	StationName string `pathParam:"style=simple,explode=false,name=stationName"`
-}
-
-type GetAemetStationRequest struct {
-	PathParams GetAemetStationPathParams
 }
 
 type GetAemetStationResponse struct {

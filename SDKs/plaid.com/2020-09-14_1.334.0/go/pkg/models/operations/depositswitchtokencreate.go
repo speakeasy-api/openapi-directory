@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type DepositSwitchTokenCreateRequest struct {
-	Request shared.DepositSwitchTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type DepositSwitchTokenCreateResponse struct {
 	ContentType string

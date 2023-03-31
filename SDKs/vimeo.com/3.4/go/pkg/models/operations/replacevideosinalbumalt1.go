@@ -8,12 +8,7 @@ import (
 )
 
 type ReplaceVideosInAlbumAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ReplaceVideosInAlbumAlt1PathParams struct {
-	// The ID of the album.
-	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplaceVideosInAlbumAlt1RequestBody struct {
@@ -22,9 +17,9 @@ type ReplaceVideosInAlbumAlt1RequestBody struct {
 }
 
 type ReplaceVideosInAlbumAlt1Request struct {
-	PathParams ReplaceVideosInAlbumAlt1PathParams
-	Request    ReplaceVideosInAlbumAlt1RequestBody `request:"mediaType=application/json"`
-	Security   ReplaceVideosInAlbumAlt1Security
+	RequestBody ReplaceVideosInAlbumAlt1RequestBody `request:"mediaType=application/json"`
+	// The ID of the album.
+	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 }
 
 type ReplaceVideosInAlbumAlt1Response struct {

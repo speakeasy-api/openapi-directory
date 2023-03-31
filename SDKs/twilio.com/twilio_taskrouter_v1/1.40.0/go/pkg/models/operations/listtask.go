@@ -12,15 +12,11 @@ var ListTaskServerList = []string{
 }
 
 type ListTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTaskPathParams struct {
-	// The SID of the Workspace with the Tasks to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListTaskQueryParams struct {
+type ListTaskRequest struct {
 	// The `assignment_status` of the Tasks you want to read. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`. Returns all Tasks in the Workspace with the specified `assignment_status`.
 	AssignmentStatus []string `queryParam:"style=form,explode=true,name=AssignmentStatus"`
 	// The attributes of the Tasks to read. Returns the Tasks that match the attributes specified in this parameter.
@@ -45,13 +41,8 @@ type ListTaskQueryParams struct {
 	WorkflowName *string `queryParam:"style=form,explode=true,name=WorkflowName"`
 	// The SID of the Workflow with the Tasks to read. Returns the Tasks controlled by the Workflow identified by this SID.
 	WorkflowSid *string `queryParam:"style=form,explode=true,name=WorkflowSid"`
-}
-
-type ListTaskRequest struct {
-	PathParams  ListTaskPathParams
-	QueryParams ListTaskQueryParams
-	Security    ListTaskSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the Tasks to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListTaskListTaskResponseMeta struct {

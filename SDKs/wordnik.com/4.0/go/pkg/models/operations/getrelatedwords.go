@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetRelatedWordsPathParams struct {
-	// Word to fetch relationships for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetRelatedWordsRelationshipTypesEnum - Limits the total results per type of relationship type
 type GetRelatedWordsRelationshipTypesEnum string
 
@@ -106,18 +101,15 @@ func (e *GetRelatedWordsUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRelatedWordsQueryParams struct {
+type GetRelatedWordsRequest struct {
 	// Restrict to the supplied relationship types
 	LimitPerRelationshipType *int `queryParam:"style=form,explode=true,name=limitPerRelationshipType"`
 	// Limits the total results per type of relationship type
 	RelationshipTypes *GetRelatedWordsRelationshipTypesEnum `queryParam:"style=form,explode=true,name=relationshipTypes"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetRelatedWordsUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetRelatedWordsRequest struct {
-	PathParams  GetRelatedWordsPathParams
-	QueryParams GetRelatedWordsQueryParams
+	// Word to fetch relationships for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetRelatedWordsResponse struct {

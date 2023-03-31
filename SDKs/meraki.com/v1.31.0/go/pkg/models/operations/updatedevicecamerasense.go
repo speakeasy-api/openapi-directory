@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCameraSensePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceCameraSenseRequestBodyAudioDetection - The details of the audio detection config.
 type UpdateDeviceCameraSenseRequestBodyAudioDetection struct {
 	// Boolean indicating if audio detection is enabled(true) or disabled(false) on the camera
@@ -28,8 +24,8 @@ type UpdateDeviceCameraSenseRequestBody struct {
 }
 
 type UpdateDeviceCameraSenseRequest struct {
-	PathParams UpdateDeviceCameraSensePathParams
-	Request    *UpdateDeviceCameraSenseRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCameraSenseRequestBody `request:"mediaType=application/json"`
+	Serial      string                              `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCameraSenseResponse struct {

@@ -12,18 +12,13 @@ var FetchInsightsSettingsAnswersetsServerList = []string{
 }
 
 type FetchInsightsSettingsAnswersetsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchInsightsSettingsAnswersetsHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchInsightsSettingsAnswersetsRequest struct {
-	Headers   FetchInsightsSettingsAnswersetsHeaders
-	Security  FetchInsightsSettingsAnswersetsSecurity
-	ServerURL *string
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type FetchInsightsSettingsAnswersetsResponse struct {

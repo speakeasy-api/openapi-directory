@@ -7,28 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomerProfilePathParams struct {
-	// ID of the Document.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateCustomerProfileQueryParams struct {
-	// Name of the schema the document to be created needs to be compliant with.
-	Schema *string `queryParam:"style=form,explode=true,name=_schema"`
-}
-
-type UpdateCustomerProfileHeaders struct {
+type UpdateCustomerProfileRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdateCustomerProfileRequest struct {
-	PathParams  UpdateCustomerProfilePathParams
-	QueryParams UpdateCustomerProfileQueryParams
-	Headers     UpdateCustomerProfileHeaders
-	Request     shared.CreateUpdateProfileRequests `request:"mediaType=application/json"`
+	// Name of the schema the document to be created needs to be compliant with.
+	Schema                      *string                            `queryParam:"style=form,explode=true,name=_schema"`
+	CreateUpdateProfileRequests shared.CreateUpdateProfileRequests `request:"mediaType=application/json"`
+	// ID of the Document.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateCustomerProfileResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ReposListForOrgDirectionEnum - The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
 type ReposListForOrgDirectionEnum string
 
@@ -107,9 +102,11 @@ func (e *ReposListForOrgTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReposListForOrgQueryParams struct {
+type ReposListForOrgRequest struct {
 	// The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
 	Direction *ReposListForOrgDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
@@ -118,11 +115,6 @@ type ReposListForOrgQueryParams struct {
 	Sort *ReposListForOrgSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Specifies the types of repositories you want returned. `internal` is not yet supported when a GitHub App calls this endpoint with an installation access token.
 	Type *ReposListForOrgTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ReposListForOrgRequest struct {
-	PathParams  ReposListForOrgPathParams
-	QueryParams ReposListForOrgQueryParams
 }
 
 type ReposListForOrgResponse struct {

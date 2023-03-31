@@ -43,7 +43,7 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 // Returns a specific Location object.
 func (s *locations) GetLocationsID(ctx context.Context, request operations.GetLocationsIDRequest) (*operations.GetLocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -10,7 +10,7 @@ import (
 )
 
 type GetCollectionsSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetCollectionsSortEnum - Sort by
@@ -37,7 +37,7 @@ func (e *GetCollectionsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCollectionsQueryParams struct {
+type GetCollectionsRequest struct {
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
@@ -46,11 +46,6 @@ type GetCollectionsQueryParams struct {
 	Shared *bool `queryParam:"style=form,explode=true,name=shared"`
 	// Sort by
 	Sort *GetCollectionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCollectionsRequest struct {
-	QueryParams GetCollectionsQueryParams
-	Security    GetCollectionsSecurity
 }
 
 type GetCollectionsResponse struct {

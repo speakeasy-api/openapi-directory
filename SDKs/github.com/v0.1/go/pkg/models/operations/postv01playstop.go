@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01PlayStopSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01PlayStopRequest struct {
-	// POST parameters
-	Request  *shared.PlayStopParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01PlayStopSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01PlayStopResponse struct {

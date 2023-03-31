@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateExperimentUsingPUTPathParams struct {
+type UpdateExperimentUsingPUTRequest struct {
+	// input
+	ExperimentModel shared.ExperimentModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// id
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateExperimentUsingPUTRequest struct {
-	PathParams UpdateExperimentUsingPUTPathParams
-	// input
-	Request shared.ExperimentModel `request:"mediaType=application/json"`
 }
 
 type UpdateExperimentUsingPUTResponse struct {

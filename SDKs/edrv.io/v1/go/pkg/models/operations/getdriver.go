@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetDriverPathParams struct {
+type GetDriverRequest struct {
 	// The driver id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDriverQueryParams struct {
 	// Populate group
 	IncludeGroup *bool `queryParam:"style=form,explode=true,name=include_group"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
 	// Populate tokens
 	IncludeTokens *bool `queryParam:"style=form,explode=true,name=include_tokens"`
-}
-
-type GetDriverRequest struct {
-	PathParams  GetDriverPathParams
-	QueryParams GetDriverQueryParams
 }
 
 type GetDriverResponse struct {

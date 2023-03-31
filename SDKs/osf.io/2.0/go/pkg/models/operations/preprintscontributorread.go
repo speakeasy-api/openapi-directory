@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PreprintsContributorReadPathParams struct {
+type PreprintsContributorReadRequest struct {
 	// The unique identifier of the Preprint.
 	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type PreprintsContributorReadRequest struct {
-	PathParams PreprintsContributorReadPathParams
 }
 
 type PreprintsContributorReadResponse struct {

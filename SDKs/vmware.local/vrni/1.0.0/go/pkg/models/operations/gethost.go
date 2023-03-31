@@ -8,23 +8,14 @@ import (
 )
 
 type GetHostSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetHostPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetHostQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetHostRequest struct {
-	PathParams  GetHostPathParams
-	QueryParams GetHostQueryParams
-	Security    GetHostSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetHostResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmUsersPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmUsersQueryParams struct {
+type GetRealmUsersRequest struct {
 	BriefRepresentation *bool   `queryParam:"style=form,explode=true,name=briefRepresentation"`
 	Email               *string `queryParam:"style=form,explode=true,name=email"`
 	First               *int    `queryParam:"style=form,explode=true,name=first"`
@@ -20,14 +15,11 @@ type GetRealmUsersQueryParams struct {
 	LastName            *string `queryParam:"style=form,explode=true,name=lastName"`
 	// Maximum results size (defaults to 100)
 	Max *int `queryParam:"style=form,explode=true,name=max"`
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// A String contained in username, first or last name, or email
 	Search   *string `queryParam:"style=form,explode=true,name=search"`
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetRealmUsersRequest struct {
-	PathParams  GetRealmUsersPathParams
-	QueryParams GetRealmUsersQueryParams
 }
 
 type GetRealmUsersResponse struct {

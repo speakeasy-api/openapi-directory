@@ -8,10 +8,10 @@ import (
 )
 
 type GetAPIV1AdminAccountsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1AdminAccountsQueryParams struct {
+type GetAPIV1AdminAccountsRequest struct {
 	// Filter for currently active accounts?
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Filter by the given domain
@@ -38,11 +38,6 @@ type GetAPIV1AdminAccountsQueryParams struct {
 	Suspended *bool `queryParam:"style=form,explode=true,name=suspended"`
 	// Username to search for
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetAPIV1AdminAccountsRequest struct {
-	QueryParams GetAPIV1AdminAccountsQueryParams
-	Security    GetAPIV1AdminAccountsSecurity
 }
 
 type GetAPIV1AdminAccountsResponse struct {

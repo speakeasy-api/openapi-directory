@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedPathParams struct {
+type GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedRequest struct {
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// either realm name OR client UUID
-	RoleContainerID string `pathParam:"style=simple,explode=false,name=roleContainerId"`
-}
-
-type GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedQueryParams struct {
-	Scope *string `queryParam:"style=form,explode=true,name=scope"`
-}
-
-type GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedRequest struct {
-	PathParams  GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedPathParams
-	QueryParams GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedQueryParams
+	RoleContainerID string  `pathParam:"style=simple,explode=false,name=roleContainerId"`
+	Scope           *string `queryParam:"style=form,explode=true,name=scope"`
 }
 
 type GetRealmClientsIDEvaluateScopesScopeMappingsRoleContainerIDGrantedResponse struct {

@@ -33,14 +33,14 @@ func newReverseGeocoding(defaultClient, securityClient HTTPClient, serverURL, la
 // GetSearchVersionNumberReverseGeocodeCrossStreetPositionExt - Cross Street lookup
 func (s *reverseGeocoding) GetSearchVersionNumberReverseGeocodeCrossStreetPositionExt(ctx context.Context, request operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest) (*operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *reverseGeocoding) GetSearchVersionNumberReverseGeocodeCrossStreetPositi
 // GetSearchVersionNumberReverseGeocodePositionExt - Reverse Geocode
 func (s *reverseGeocoding) GetSearchVersionNumberReverseGeocodePositionExt(ctx context.Context, request operations.GetSearchVersionNumberReverseGeocodePositionExtRequest) (*operations.GetSearchVersionNumberReverseGeocodePositionExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/{position}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/{position}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

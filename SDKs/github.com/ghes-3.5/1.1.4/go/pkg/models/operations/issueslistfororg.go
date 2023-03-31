@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type IssuesListForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // IssuesListForOrgFilterEnum - Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation.
 type IssuesListForOrgFilterEnum string
 
@@ -105,13 +100,15 @@ func (e *IssuesListForOrgStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IssuesListForOrgQueryParams struct {
+type IssuesListForOrgRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation.
 	Filter *IssuesListForOrgFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// A list of comma separated label names. Example: `bug,ui,@high`
 	Labels *string `queryParam:"style=form,explode=true,name=labels"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
@@ -122,11 +119,6 @@ type IssuesListForOrgQueryParams struct {
 	Sort *IssuesListForOrgSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Indicates the state of the issues to return.
 	State *IssuesListForOrgStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type IssuesListForOrgRequest struct {
-	PathParams  IssuesListForOrgPathParams
-	QueryParams IssuesListForOrgQueryParams
 }
 
 type IssuesListForOrgResponse struct {

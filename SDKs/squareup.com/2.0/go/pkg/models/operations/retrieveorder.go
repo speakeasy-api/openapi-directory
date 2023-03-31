@@ -8,19 +8,14 @@ import (
 )
 
 type RetrieveOrderSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrieveOrderPathParams struct {
+type RetrieveOrderRequest struct {
 	// The ID of the order's associated location.
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The order's Square-issued ID. You obtain this value from Order objects returned by the List Orders endpoint
 	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
-}
-
-type RetrieveOrderRequest struct {
-	PathParams RetrieveOrderPathParams
-	Security   RetrieveOrderSecurity
 }
 
 type RetrieveOrderResponse struct {

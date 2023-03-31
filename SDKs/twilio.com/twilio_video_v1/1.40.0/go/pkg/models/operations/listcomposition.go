@@ -13,10 +13,11 @@ var ListCompositionServerList = []string{
 }
 
 type ListCompositionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCompositionQueryParams struct {
+type ListCompositionRequest struct {
 	// Read only Composition resources created on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time with time zone.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Read only Composition resources created before this ISO 8601 date-time with time zone.
@@ -31,12 +32,6 @@ type ListCompositionQueryParams struct {
 	RoomSid *string `queryParam:"style=form,explode=true,name=RoomSid"`
 	// Read only Composition resources with this status. Can be: `enqueued`, `processing`, `completed`, `deleted`, or `failed`.
 	Status *shared.CompositionEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListCompositionRequest struct {
-	QueryParams ListCompositionQueryParams
-	Security    ListCompositionSecurity
-	ServerURL   *string
 }
 
 type ListCompositionListCompositionResponseMeta struct {

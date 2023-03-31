@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            GithubAccessCode: &shared.SchemeGithubAccessCode{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            GithubAccessCode: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
         }),
     )
 
     req := operations.GetActionOrganizationActivityListRequest{
-        QueryParams: operations.GetActionOrganizationActivityListQueryParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()

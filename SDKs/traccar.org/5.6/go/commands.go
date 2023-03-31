@@ -36,7 +36,7 @@ func newCommands(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteCommandsID - Delete a Saved Command
 func (s *commands) DeleteCommandsID(ctx context.Context, request operations.DeleteCommandsIDRequest) (*operations.DeleteCommandsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *commands) GetCommands(ctx context.Context, request operations.GetComman
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -128,7 +128,7 @@ func (s *commands) GetCommandsSend(ctx context.Context, request operations.GetCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -177,7 +177,7 @@ func (s *commands) GetCommandsTypes(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -217,7 +217,7 @@ func (s *commands) GetCommandsTypes(ctx context.Context, request operations.GetC
 }
 
 // PostCommands - Create a Saved Command
-func (s *commands) PostCommands(ctx context.Context, request operations.PostCommandsRequest) (*operations.PostCommandsResponse, error) {
+func (s *commands) PostCommands(ctx context.Context, request shared.Command) (*operations.PostCommandsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/commands"
 
@@ -272,7 +272,7 @@ func (s *commands) PostCommands(ctx context.Context, request operations.PostComm
 
 // PostCommandsSend - Dispatch commands to device
 // Dispatch a new command or Saved Command if _body.id_ set
-func (s *commands) PostCommandsSend(ctx context.Context, request operations.PostCommandsSendRequest) (*operations.PostCommandsSendResponse, error) {
+func (s *commands) PostCommandsSend(ctx context.Context, request shared.Command) (*operations.PostCommandsSendResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/commands/send"
 
@@ -331,9 +331,9 @@ func (s *commands) PostCommandsSend(ctx context.Context, request operations.Post
 // PutCommandsID - Update a Saved Command
 func (s *commands) PutCommandsID(ctx context.Context, request operations.PutCommandsIDRequest) (*operations.PutCommandsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Command", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

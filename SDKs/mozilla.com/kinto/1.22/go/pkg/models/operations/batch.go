@@ -103,10 +103,6 @@ type BatchBatchPayloadSchema struct {
 	Requests []BatchBatchPayloadSchemaRequests `json:"requests"`
 }
 
-type BatchRequest struct {
-	Request BatchBatchPayloadSchema `request:"mediaType=application/json"`
-}
-
 // BatchErrorSchema - The request was badly formatted.
 type BatchErrorSchema struct {
 	Code    int64       `json:"code"`

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetManifestByIDPathParams struct {
+type GetManifestByIDRequest struct {
 	// The Manifest Id
 	ManifestID string `pathParam:"style=simple,explode=false,name=manifest_id"`
-}
-
-type GetManifestByIDRequest struct {
-	PathParams GetManifestByIDPathParams
 }
 
 type GetManifestByIDResponse struct {

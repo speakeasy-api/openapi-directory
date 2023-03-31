@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CompareStationRequest{
-        PathParams: operations.CompareStationPathParams{
-            StationName: "corrupti",
-        },
+        StationName: "corrupti",
     }
 
     ctx := context.Background()

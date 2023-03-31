@@ -32,20 +32,20 @@ func newBlogUserInfos(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // BloggerBlogUserInfosGet - Gets one blog and user info pair by blog id and user id.
-func (s *blogUserInfos) BloggerBlogUserInfosGet(ctx context.Context, request operations.BloggerBlogUserInfosGetRequest) (*operations.BloggerBlogUserInfosGetResponse, error) {
+func (s *blogUserInfos) BloggerBlogUserInfosGet(ctx context.Context, request operations.BloggerBlogUserInfosGetRequest, security operations.BloggerBlogUserInfosGetSecurity) (*operations.BloggerBlogUserInfosGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}/blogs/{blogId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}/blogs/{blogId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

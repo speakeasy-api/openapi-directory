@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAllBankAccountsPathParams struct {
+type GetAllBankAccountsRequest struct {
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type GetAllBankAccountsRequest struct {
-	PathParams GetAllBankAccountsPathParams
 }
 
 type GetAllBankAccountsResponse struct {

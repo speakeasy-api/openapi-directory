@@ -36,7 +36,7 @@ func newDrivers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteDriversID - Delete a Driver
 func (s *drivers) DeleteDriversID(ctx context.Context, request operations.DeleteDriversIDRequest) (*operations.DeleteDriversIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *drivers) GetDrivers(ctx context.Context, request operations.GetDriversR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,7 +118,7 @@ func (s *drivers) GetDrivers(ctx context.Context, request operations.GetDriversR
 }
 
 // PostDrivers - Create a Driver
-func (s *drivers) PostDrivers(ctx context.Context, request operations.PostDriversRequest) (*operations.PostDriversResponse, error) {
+func (s *drivers) PostDrivers(ctx context.Context, request shared.Driver) (*operations.PostDriversResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/drivers"
 
@@ -174,9 +174,9 @@ func (s *drivers) PostDrivers(ctx context.Context, request operations.PostDriver
 // PutDriversID - Update a Driver
 func (s *drivers) PutDriversID(ctx context.Context, request operations.PutDriversIDRequest) (*operations.PutDriversIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Driver", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

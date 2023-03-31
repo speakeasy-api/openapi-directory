@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePromotionsIDJSONPathParams struct {
-	// Id of the Promotion
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletePromotionsIDJSONQueryParams struct {
+type DeletePromotionsIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Promotion
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeletePromotionsIDJSONRequest struct {
-	PathParams  DeletePromotionsIDJSONPathParams
-	QueryParams DeletePromotionsIDJSONQueryParams
 }
 
 type DeletePromotionsIDJSONResponse struct {

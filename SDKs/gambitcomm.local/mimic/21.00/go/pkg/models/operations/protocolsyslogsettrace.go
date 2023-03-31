@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSyslogSetTracePathParams struct {
+type ProtocolSyslogSetTraceRequest struct {
 	// Agent to set the SYSLOG tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the SYSLOG tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolSyslogSetTraceRequest struct {
-	PathParams ProtocolSyslogSetTracePathParams
 }
 
 type ProtocolSyslogSetTraceResponse struct {

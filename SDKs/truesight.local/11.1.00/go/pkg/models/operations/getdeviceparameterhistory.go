@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDeviceParameterHistoryPathParams struct {
+type GetDeviceParameterHistoryRequest struct {
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type GetDeviceParameterHistoryQueryParams struct {
 	// Beginning of the period (Epoch time, in seconds).
 	From *int64 `queryParam:"style=form,explode=true,name=from"`
 	// The Monitor SID (to filter the list of Monitors).
@@ -22,11 +19,6 @@ type GetDeviceParameterHistoryQueryParams struct {
 	ParameterName string `queryParam:"style=form,explode=true,name=parameterName"`
 	// End of the period (Epoch time, in seconds).
 	To *int64 `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetDeviceParameterHistoryRequest struct {
-	PathParams  GetDeviceParameterHistoryPathParams
-	QueryParams GetDeviceParameterHistoryQueryParams
 }
 
 type GetDeviceParameterHistoryResponse struct {

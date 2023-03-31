@@ -8,47 +8,10 @@ import (
 )
 
 type GetPaymentCancellationScaStatusSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetPaymentCancellationScaStatusPathParams struct {
-	// Resource identification of the related SCA.
-	AuthorisationID string `pathParam:"style=simple,explode=false,name=authorisationId"`
-	// The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
-	// The ASPSP will publish which of the payment products/endpoints will be supported.
-	//
-	// The following payment products are supported:
-	//   - domestic-swiss-credit-transfers-isr
-	//   - domestic-swiss-credit-transfers
-	//   - domestic-swiss-credit-transfers-qr
-	//   - domestic-swiss-foreign-credit-transfers
-	//   - swiss-sepa-credit-transfers
-	//   - swiss-cross-border-credit-transfers
-	//   - pain.001-sepa-credit-transfers
-	//   - pain.001-cross-border-credit-transfers
-	//   - pain.001-swiss-six-credit-transfers
-	//
-	// **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
-	// the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
-	// Further XML schemes might be supported by some communities.
-	//
-	// **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
-	// There are plenty of country specificic scheme variants.
-	//
-	PaymentProduct shared.PaymentProductEnum `pathParam:"style=simple,explode=false,name=payment-product"`
-	// Payment service:
-	//
-	// Possible values are:
-	// * payments
-	// * bulk-payments
-	// * periodic-payments
-	//
-	PaymentService shared.PaymentServiceEnum `pathParam:"style=simple,explode=false,name=payment-service"`
-	// Resource identification of the generated payment initiation resource.
-	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type GetPaymentCancellationScaStatusHeaders struct {
+type GetPaymentCancellationScaStatusRequest struct {
 	// Is contained if and only if the "Signature" element is contained in the header of the request.
 	Digest *string `header:"style=simple,explode=false,name=Digest"`
 	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
@@ -98,12 +61,40 @@ type GetPaymentCancellationScaStatusHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetPaymentCancellationScaStatusRequest struct {
-	PathParams GetPaymentCancellationScaStatusPathParams
-	Headers    GetPaymentCancellationScaStatusHeaders
-	Security   GetPaymentCancellationScaStatusSecurity
+	// Resource identification of the related SCA.
+	AuthorisationID string `pathParam:"style=simple,explode=false,name=authorisationId"`
+	// The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
+	// The ASPSP will publish which of the payment products/endpoints will be supported.
+	//
+	// The following payment products are supported:
+	//   - domestic-swiss-credit-transfers-isr
+	//   - domestic-swiss-credit-transfers
+	//   - domestic-swiss-credit-transfers-qr
+	//   - domestic-swiss-foreign-credit-transfers
+	//   - swiss-sepa-credit-transfers
+	//   - swiss-cross-border-credit-transfers
+	//   - pain.001-sepa-credit-transfers
+	//   - pain.001-cross-border-credit-transfers
+	//   - pain.001-swiss-six-credit-transfers
+	//
+	// **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
+	// the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
+	// Further XML schemes might be supported by some communities.
+	//
+	// **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
+	// There are plenty of country specificic scheme variants.
+	//
+	PaymentProduct shared.PaymentProductEnum `pathParam:"style=simple,explode=false,name=payment-product"`
+	// Payment service:
+	//
+	// Possible values are:
+	// * payments
+	// * bulk-payments
+	// * periodic-payments
+	//
+	PaymentService shared.PaymentServiceEnum `pathParam:"style=simple,explode=false,name=payment-service"`
+	// Resource identification of the generated payment initiation resource.
+	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
 }
 
 type GetPaymentCancellationScaStatusResponse struct {

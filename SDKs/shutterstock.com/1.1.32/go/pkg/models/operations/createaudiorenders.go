@@ -8,14 +8,8 @@ import (
 )
 
 type CreateAudioRendersSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type CreateAudioRendersRequest struct {
-	// Parameters for the audio, including the timeline and information about the output file
-	Request  shared.CreateAudioRendersRequest `request:"mediaType=application/json"`
-	Security CreateAudioRendersSecurity
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateAudioRendersResponse struct {

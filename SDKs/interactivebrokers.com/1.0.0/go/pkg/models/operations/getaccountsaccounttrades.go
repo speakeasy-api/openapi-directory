@@ -9,16 +9,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountsAccountTradesPathParams struct {
-	// Account Number
-	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
 type GetAccountsAccountTradesRequest struct {
-	PathParams GetAccountsAccountTradesPathParams
 	// Start time specified in UTC. Allowed formats are "yyyy-MM-dd" or "yyyy-MM-dd'T'HH:mm:ss". Time is optional and is set to midnight if omitted, e.g. "00:00:00 hh:mm:ss".
 	//
-	Request *string `request:"mediaType=application/json"`
+	RequestBody *string `request:"mediaType=application/json"`
+	// Account Number
+	Account string `pathParam:"style=simple,explode=false,name=account"`
 }
 
 type GetAccountsAccountTrades200ApplicationJSONSideEnum string

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHistoryExportsIDPathParams struct {
+type GetHistoryExportsIDRequest struct {
 	// History Export ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetHistoryExportsIDRequest struct {
-	PathParams GetHistoryExportsIDPathParams
 }
 
 type GetHistoryExportsIDResponse struct {

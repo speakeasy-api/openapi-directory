@@ -93,20 +93,30 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // FetchTrunkingCountry - Fetch a specific Country.
-func (s *SDK) FetchTrunkingCountry(ctx context.Context, request operations.FetchTrunkingCountryRequest) (*operations.FetchTrunkingCountryResponse, error) {
-	baseURL := operations.FetchTrunkingCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTrunkingCountry(ctx context.Context, request operations.FetchTrunkingCountryRequest, security operations.FetchTrunkingCountrySecurity, opts ...operations.Option) (*operations.FetchTrunkingCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/Trunking/Countries/{IsoCountry}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTrunkingCountryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/Trunking/Countries/{IsoCountry}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,24 +151,34 @@ func (s *SDK) FetchTrunkingCountry(ctx context.Context, request operations.Fetch
 }
 
 // FetchTrunkingNumber - Fetch pricing information for a specific destination and, optionally, origination phone number.
-func (s *SDK) FetchTrunkingNumber(ctx context.Context, request operations.FetchTrunkingNumberRequest) (*operations.FetchTrunkingNumberResponse, error) {
-	baseURL := operations.FetchTrunkingNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTrunkingNumber(ctx context.Context, request operations.FetchTrunkingNumberRequest, security operations.FetchTrunkingNumberSecurity, opts ...operations.Option) (*operations.FetchTrunkingNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/Trunking/Numbers/{DestinationNumber}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTrunkingNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/Trunking/Numbers/{DestinationNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -193,20 +213,30 @@ func (s *SDK) FetchTrunkingNumber(ctx context.Context, request operations.FetchT
 }
 
 // FetchVoiceCountry - Fetch a specific Country.
-func (s *SDK) FetchVoiceCountry(ctx context.Context, request operations.FetchVoiceCountryRequest) (*operations.FetchVoiceCountryResponse, error) {
-	baseURL := operations.FetchVoiceCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchVoiceCountry(ctx context.Context, request operations.FetchVoiceCountryRequest, security operations.FetchVoiceCountrySecurity, opts ...operations.Option) (*operations.FetchVoiceCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/Voice/Countries/{IsoCountry}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchVoiceCountryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/Voice/Countries/{IsoCountry}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -241,24 +271,34 @@ func (s *SDK) FetchVoiceCountry(ctx context.Context, request operations.FetchVoi
 }
 
 // FetchVoiceNumber - Fetch pricing information for a specific destination and, optionally, origination phone number.
-func (s *SDK) FetchVoiceNumber(ctx context.Context, request operations.FetchVoiceNumberRequest) (*operations.FetchVoiceNumberResponse, error) {
-	baseURL := operations.FetchVoiceNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchVoiceNumber(ctx context.Context, request operations.FetchVoiceNumberRequest, security operations.FetchVoiceNumberSecurity, opts ...operations.Option) (*operations.FetchVoiceNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/Voice/Numbers/{DestinationNumber}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchVoiceNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/Voice/Numbers/{DestinationNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -291,10 +331,20 @@ func (s *SDK) FetchVoiceNumber(ctx context.Context, request operations.FetchVoic
 
 	return res, nil
 }
-func (s *SDK) ListTrunkingCountry(ctx context.Context, request operations.ListTrunkingCountryRequest) (*operations.ListTrunkingCountryResponse, error) {
+func (s *SDK) ListTrunkingCountry(ctx context.Context, request operations.ListTrunkingCountryRequest, security operations.ListTrunkingCountrySecurity, opts ...operations.Option) (*operations.ListTrunkingCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListTrunkingCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/Trunking/Countries"
@@ -304,11 +354,11 @@ func (s *SDK) ListTrunkingCountry(ctx context.Context, request operations.ListTr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,10 +391,20 @@ func (s *SDK) ListTrunkingCountry(ctx context.Context, request operations.ListTr
 
 	return res, nil
 }
-func (s *SDK) ListVoiceCountry(ctx context.Context, request operations.ListVoiceCountryRequest) (*operations.ListVoiceCountryResponse, error) {
+func (s *SDK) ListVoiceCountry(ctx context.Context, request operations.ListVoiceCountryRequest, security operations.ListVoiceCountrySecurity, opts ...operations.Option) (*operations.ListVoiceCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListVoiceCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/Voice/Countries"
@@ -354,11 +414,11 @@ func (s *SDK) ListVoiceCountry(ctx context.Context, request operations.ListVoice
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

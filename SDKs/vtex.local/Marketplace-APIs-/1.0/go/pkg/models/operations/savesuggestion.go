@@ -7,30 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveSuggestionPathParams struct {
+type SaveSuggestionRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType           string                       `header:"style=simple,explode=false,name=Content-Type"`
+	SaveSuggestionRequest shared.SaveSuggestionRequest `request:"mediaType=application/json"`
+	// Name of the VTEX account to which the seller wants to suggest a new SKU. It is used as part of the request URL.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
 	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
 	// A string that identifies the SKU in the seller. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
 	SellerSkuID string `pathParam:"style=simple,explode=false,name=sellerSkuId"`
-}
-
-type SaveSuggestionQueryParams struct {
-	// Name of the VTEX account to which the seller wants to suggest a new SKU. It is used as part of the request URL.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-}
-
-type SaveSuggestionHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SaveSuggestionRequest struct {
-	PathParams  SaveSuggestionPathParams
-	QueryParams SaveSuggestionQueryParams
-	Headers     SaveSuggestionHeaders
-	Request     shared.SaveSuggestionRequest `request:"mediaType=application/json"`
 }
 
 type SaveSuggestionResponse struct {

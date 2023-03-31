@@ -37,7 +37,7 @@ func newWorkgroup(defaultClient, securityClient HTTPClient, serverURL, language,
 // List client workgroups
 func (s *workgroup) GetClientWorkgroupList(ctx context.Context, request operations.GetClientWorkgroupListRequest) (*operations.GetClientWorkgroupListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *workgroup) GetClientWorkgroupList(ctx context.Context, request operatio
 // Get a specific client workgroups
 func (s *workgroup) GetSpecificClientWorkgroup(ctx context.Context, request operations.GetSpecificClientWorkgroupRequest) (*operations.GetSpecificClientWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -347,7 +347,7 @@ func (s *workgroup) GetSpecificClientWorkgroup(ctx context.Context, request oper
 // Get the specific supplier of My Group
 func (s *workgroup) GetSupplierWorkgroupDetail(ctx context.Context, request operations.GetSupplierWorkgroupDetailRequest) (*operations.GetSupplierWorkgroupDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/supplierWorkgroups/{bu_supplier_workgroup_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/supplierWorkgroups/{bu_supplier_workgroup_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -502,7 +502,7 @@ func (s *workgroup) GetSupplierWorkgroupDetail(ctx context.Context, request oper
 // List supplier workgroups
 func (s *workgroup) GetSupplierWorkgroupList(ctx context.Context, request operations.GetSupplierWorkgroupListRequest) (*operations.GetSupplierWorkgroupListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/supplierWorkgroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/supplierWorkgroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -657,7 +657,7 @@ func (s *workgroup) GetSupplierWorkgroupList(ctx context.Context, request operat
 // Detail workgroup info
 func (s *workgroup) GetWorkgroupDetail(ctx context.Context, request operations.GetWorkgroupDetailRequest) (*operations.GetWorkgroupDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/detail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/detail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -819,7 +819,7 @@ func (s *workgroup) GetWorkgroupList(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -971,9 +971,9 @@ func (s *workgroup) GetWorkgroupList(ctx context.Context, request operations.Get
 // Update a specific Workgroup
 func (s *workgroup) PutWorkgroupJSON(ctx context.Context, request operations.PutWorkgroupJSONRequest) (*operations.PutWorkgroupJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/detail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/detail", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkgroupUpdPersistVO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1133,9 +1133,9 @@ func (s *workgroup) PutWorkgroupJSON(ctx context.Context, request operations.Put
 // Update a specific Workgroup
 func (s *workgroup) PutWorkgroupRaw(ctx context.Context, request operations.PutWorkgroupRawRequest) (*operations.PutWorkgroupRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/detail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/detail", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

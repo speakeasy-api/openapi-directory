@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ListScheduledPickupsQueryParams struct {
+type ListScheduledPickupsRequest struct {
 	// Carrier ID
 	CarrierID *string `queryParam:"style=form,explode=true,name=carrier_id"`
 	// Only return scheduled pickups that were created on or before a specific date/time
@@ -22,10 +22,6 @@ type ListScheduledPickupsQueryParams struct {
 	PageSize *int `queryParam:"style=form,explode=true,name=page_size"`
 	// Warehouse ID
 	WarehouseID *string `queryParam:"style=form,explode=true,name=warehouse_id"`
-}
-
-type ListScheduledPickupsRequest struct {
-	QueryParams ListScheduledPickupsQueryParams
 }
 
 type ListScheduledPickupsResponse struct {

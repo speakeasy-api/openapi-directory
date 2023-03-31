@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOntologySubsetPathParams struct {
+type GetOntologySubsetRequest struct {
 	// name of a slim subset, e.g. goslim_agr, goslim_generic
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetOntologySubsetRequest struct {
-	PathParams GetOntologySubsetPathParams
 }
 
 type GetOntologySubsetResponse struct {

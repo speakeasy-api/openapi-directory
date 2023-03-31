@@ -8,23 +8,23 @@ import (
 )
 
 type FirebaseProjectsWebAppsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseProjectsWebAppsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseProjectsWebAppsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseProjectsWebAppsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseProjectsWebAppsListSecurity struct {
@@ -34,12 +34,7 @@ type FirebaseProjectsWebAppsListSecurity struct {
 	Option4 *FirebaseProjectsWebAppsListSecurityOption4 `security:"option"`
 }
 
-type FirebaseProjectsWebAppsListPathParams struct {
-	// The resource name of the parent FirebaseProject for which to list each associated WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseProjectsWebAppsListQueryParams struct {
+type FirebaseProjectsWebAppsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,6 +53,8 @@ type FirebaseProjectsWebAppsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token returned from a previous call to `ListWebApps` indicating where in the set of Apps to resume listing.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The resource name of the parent FirebaseProject for which to list each associated WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -68,12 +65,6 @@ type FirebaseProjectsWebAppsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseProjectsWebAppsListRequest struct {
-	PathParams  FirebaseProjectsWebAppsListPathParams
-	QueryParams FirebaseProjectsWebAppsListQueryParams
-	Security    FirebaseProjectsWebAppsListSecurity
 }
 
 type FirebaseProjectsWebAppsListResponse struct {

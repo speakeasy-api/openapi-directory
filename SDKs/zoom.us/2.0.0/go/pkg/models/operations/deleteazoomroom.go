@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAZoomRoomSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteAZoomRoomPathParams struct {
-	// Unique Identifier of a Zoom Room.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAZoomRoomRequest struct {
-	PathParams DeleteAZoomRoomPathParams
-	Security   DeleteAZoomRoomSecurity
+	// Unique Identifier of a Zoom Room.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
 }
 
 type DeleteAZoomRoomResponse struct {

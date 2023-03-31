@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CloneOrganizationSwitchDevicesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CloneOrganizationSwitchDevicesRequestBody struct {
 	// Serial number of the source switch (must be on a network not bound to a template)
 	SourceSerial string `json:"sourceSerial"`
@@ -18,8 +14,8 @@ type CloneOrganizationSwitchDevicesRequestBody struct {
 }
 
 type CloneOrganizationSwitchDevicesRequest struct {
-	PathParams CloneOrganizationSwitchDevicesPathParams
-	Request    CloneOrganizationSwitchDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody    CloneOrganizationSwitchDevicesRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                    `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CloneOrganizationSwitchDevicesResponse struct {

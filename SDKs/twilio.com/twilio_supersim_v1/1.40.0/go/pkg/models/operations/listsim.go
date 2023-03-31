@@ -12,10 +12,11 @@ var ListSimServerList = []string{
 }
 
 type ListSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSimQueryParams struct {
+type ListSimRequest struct {
 	// The SID or unique name of the Fleet to which a list of Sims are assigned.
 	Fleet *string `queryParam:"style=form,explode=true,name=Fleet"`
 	// The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with a Super SIM to filter the list by. Passing this parameter will always return a list containing zero or one SIMs.
@@ -28,12 +29,6 @@ type ListSimQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The status of the Sim resources to read. Can be `new`, `ready`, `active`, `inactive`, or `scheduled`.
 	Status *shared.SimEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListSimRequest struct {
-	QueryParams ListSimQueryParams
-	Security    ListSimSecurity
-	ServerURL   *string
 }
 
 type ListSimListSimResponseMeta struct {

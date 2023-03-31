@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteVideoFromVodSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVideoFromVodPathParams struct {
+type DeleteVideoFromVodRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteVideoFromVodRequest struct {
-	PathParams DeleteVideoFromVodPathParams
-	Security   DeleteVideoFromVodSecurity
 }
 
 type DeleteVideoFromVodResponse struct {

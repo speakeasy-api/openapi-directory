@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncMapItemServerList = []string{
@@ -12,28 +11,19 @@ var DeleteSyncMapItemServerList = []string{
 }
 
 type DeleteSyncMapItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSyncMapItemPathParams struct {
+type DeleteSyncMapItemRequest struct {
+	// If provided, applies this mutation if (and only if) the “revision” field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
 	// The `key` value of the Sync Map Item resource to delete.
 	Key string `pathParam:"style=simple,explode=false,name=Key"`
 	// The SID of the Sync Map with the Sync Map Item resource to delete. Can be the Sync Map resource's `sid` or its `unique_name`.
 	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteSyncMapItemHeaders struct {
-	// If provided, applies this mutation if (and only if) the “revision” field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
-}
-
-type DeleteSyncMapItemRequest struct {
-	PathParams DeleteSyncMapItemPathParams
-	Headers    DeleteSyncMapItemHeaders
-	Security   DeleteSyncMapItemSecurity
-	ServerURL  *string
 }
 
 type DeleteSyncMapItemResponse struct {

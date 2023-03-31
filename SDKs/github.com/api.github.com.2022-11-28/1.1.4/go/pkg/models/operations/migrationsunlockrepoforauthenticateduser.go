@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsUnlockRepoForAuthenticatedUserPathParams struct {
+type MigrationsUnlockRepoForAuthenticatedUserRequest struct {
 	// The unique identifier of the migration.
 	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
 	// repo_name parameter
 	RepoName string `pathParam:"style=simple,explode=false,name=repo_name"`
-}
-
-type MigrationsUnlockRepoForAuthenticatedUserRequest struct {
-	PathParams MigrationsUnlockRepoForAuthenticatedUserPathParams
 }
 
 type MigrationsUnlockRepoForAuthenticatedUserResponse struct {

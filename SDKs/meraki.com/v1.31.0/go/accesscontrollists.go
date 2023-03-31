@@ -34,7 +34,7 @@ func newAccessControlLists(defaultClient, securityClient HTTPClient, serverURL, 
 // Return the access control lists for a MS network
 func (s *accessControlLists) GetNetworkSwitchAccessControlLists(ctx context.Context, request operations.GetNetworkSwitchAccessControlListsRequest) (*operations.GetNetworkSwitchAccessControlListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *accessControlLists) GetNetworkSwitchAccessControlLists(ctx context.Cont
 // Update the access control lists for a MS network
 func (s *accessControlLists) UpdateNetworkSwitchAccessControlLists(ctx context.Context, request operations.UpdateNetworkSwitchAccessControlListsRequest) (*operations.UpdateNetworkSwitchAccessControlListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

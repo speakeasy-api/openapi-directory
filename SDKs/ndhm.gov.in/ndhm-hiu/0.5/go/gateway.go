@@ -179,7 +179,7 @@ func (s *gateway) PostV05ConsentRequestsInitJSON(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConsentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -194,7 +194,7 @@ func (s *gateway) PostV05ConsentRequestsInitJSON(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -248,7 +248,7 @@ func (s *gateway) PostV05ConsentRequestsInitRaw(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -263,7 +263,7 @@ func (s *gateway) PostV05ConsentRequestsInitRaw(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -317,7 +317,7 @@ func (s *gateway) PostV05ConsentRequestsStatusJSON(ctx context.Context, request 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/status"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConsentRequestStatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -332,7 +332,7 @@ func (s *gateway) PostV05ConsentRequestsStatusJSON(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -386,7 +386,7 @@ func (s *gateway) PostV05ConsentRequestsStatusRaw(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consent-requests/status"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -401,7 +401,7 @@ func (s *gateway) PostV05ConsentRequestsStatusRaw(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -454,7 +454,7 @@ func (s *gateway) PostV05ConsentsFetch(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/fetch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConsentFetchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -469,7 +469,7 @@ func (s *gateway) PostV05ConsentsFetch(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -523,7 +523,7 @@ func (s *gateway) PostV05ConsentsHiuOnNotify(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/consents/hiu/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUConsentNotificationResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -538,7 +538,7 @@ func (s *gateway) PostV05ConsentsHiuOnNotify(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -590,7 +590,7 @@ func (s *gateway) PostV05HealthInformationCmRequestJSON(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/cm/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -605,7 +605,7 @@ func (s *gateway) PostV05HealthInformationCmRequestJSON(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -659,7 +659,7 @@ func (s *gateway) PostV05HealthInformationCmRequestRaw(ctx context.Context, requ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/cm/request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -674,7 +674,7 @@ func (s *gateway) PostV05HealthInformationCmRequestRaw(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -732,7 +732,7 @@ func (s *gateway) PostV05HealthInformationNotifyJSON(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HealthInformationNotification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -747,7 +747,7 @@ func (s *gateway) PostV05HealthInformationNotifyJSON(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -805,7 +805,7 @@ func (s *gateway) PostV05HealthInformationNotifyRaw(ctx context.Context, request
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -820,7 +820,7 @@ func (s *gateway) PostV05HealthInformationNotifyRaw(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -874,7 +874,7 @@ func (s *gateway) PostV05PatientsFindJSON(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/patients/find"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientIdentificationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -889,7 +889,7 @@ func (s *gateway) PostV05PatientsFindJSON(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -951,7 +951,7 @@ func (s *gateway) PostV05PatientsFindRaw(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/patients/find"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -966,7 +966,7 @@ func (s *gateway) PostV05PatientsFindRaw(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1023,7 +1023,7 @@ func (s *gateway) PostV05PatientsFindRaw(ctx context.Context, request operations
 }
 
 // PostV05SessionsJSON - Get access token
-func (s *gateway) PostV05SessionsJSON(ctx context.Context, request operations.PostV05SessionsJSONRequest) (*operations.PostV05SessionsJSONResponse, error) {
+func (s *gateway) PostV05SessionsJSON(ctx context.Context, request shared.SessionRequest) (*operations.PostV05SessionsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/sessions"
 
@@ -1105,7 +1105,7 @@ func (s *gateway) PostV05SessionsJSON(ctx context.Context, request operations.Po
 }
 
 // PostV05SessionsRaw - Get access token
-func (s *gateway) PostV05SessionsRaw(ctx context.Context, request operations.PostV05SessionsRawRequest) (*operations.PostV05SessionsRawResponse, error) {
+func (s *gateway) PostV05SessionsRaw(ctx context.Context, request []byte) (*operations.PostV05SessionsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/sessions"
 
@@ -1192,7 +1192,7 @@ func (s *gateway) PostV05SubscriptionRequestsCmInitJSON(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/subscription-requests/cm/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1207,7 +1207,7 @@ func (s *gateway) PostV05SubscriptionRequestsCmInitJSON(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1261,7 +1261,7 @@ func (s *gateway) PostV05SubscriptionRequestsCmInitRaw(ctx context.Context, requ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/subscription-requests/cm/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1276,7 +1276,7 @@ func (s *gateway) PostV05SubscriptionRequestsCmInitRaw(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1330,7 +1330,7 @@ func (s *gateway) PostV05SubscriptionRequestsHiuOnNotify(ctx context.Context, re
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/subscription-requests/hiu/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUSubscriptionRequestNotificationAcknowledgement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1345,7 +1345,7 @@ func (s *gateway) PostV05SubscriptionRequestsHiuOnNotify(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1397,7 +1397,7 @@ func (s *gateway) PostV05SubscriptionsHiuOnNotify(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/subscriptions/hiu/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUSubscriptionNotificationAcknowledgment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1412,7 +1412,7 @@ func (s *gateway) PostV05SubscriptionsHiuOnNotify(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1468,7 +1468,7 @@ func (s *gateway) PostV05UsersAuthConfirmJSON(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/confirm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientAuthConfirmRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1483,7 +1483,7 @@ func (s *gateway) PostV05UsersAuthConfirmJSON(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1541,7 +1541,7 @@ func (s *gateway) PostV05UsersAuthConfirmRaw(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/confirm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1556,7 +1556,7 @@ func (s *gateway) PostV05UsersAuthConfirmRaw(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1610,7 +1610,7 @@ func (s *gateway) PostV05UsersAuthFetchModesJSON(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/fetch-modes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientAuthModeQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1625,7 +1625,7 @@ func (s *gateway) PostV05UsersAuthFetchModesJSON(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1687,7 +1687,7 @@ func (s *gateway) PostV05UsersAuthFetchModesRaw(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/fetch-modes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1702,7 +1702,7 @@ func (s *gateway) PostV05UsersAuthFetchModesRaw(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1765,7 +1765,7 @@ func (s *gateway) PostV05UsersAuthInitJSON(ctx context.Context, request operatio
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientAuthInitRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1780,7 +1780,7 @@ func (s *gateway) PostV05UsersAuthInitJSON(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1835,7 +1835,7 @@ func (s *gateway) PostV05UsersAuthInitRaw(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/init"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1850,7 +1850,7 @@ func (s *gateway) PostV05UsersAuthInitRaw(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1904,7 +1904,7 @@ func (s *gateway) PostV05UsersAuthOnNotifyJSON(ctx context.Context, request oper
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientAuthNotificationAcknowledgement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1919,7 +1919,7 @@ func (s *gateway) PostV05UsersAuthOnNotifyJSON(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1973,7 +1973,7 @@ func (s *gateway) PostV05UsersAuthOnNotifyRaw(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1988,7 +1988,7 @@ func (s *gateway) PostV05UsersAuthOnNotifyRaw(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -8,11 +8,11 @@ import (
 )
 
 type BooksCloudloadingDeleteBookSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksCloudloadingDeleteBookQueryParams struct {
+type BooksCloudloadingDeleteBookRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -37,11 +37,6 @@ type BooksCloudloadingDeleteBookQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The id of the book to be removed.
 	VolumeID string `queryParam:"style=form,explode=true,name=volumeId"`
-}
-
-type BooksCloudloadingDeleteBookRequest struct {
-	QueryParams BooksCloudloadingDeleteBookQueryParams
-	Security    BooksCloudloadingDeleteBookSecurity
 }
 
 type BooksCloudloadingDeleteBookResponse struct {

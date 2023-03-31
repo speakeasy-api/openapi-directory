@@ -8,17 +8,13 @@ import (
 	"time"
 )
 
-type ListFundingAuditDeltasQueryParams struct {
+type ListFundingAuditDeltasRequest struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
 	PageSize     *int      `queryParam:"style=form,explode=true,name=pageSize"`
 	PayorID      string    `queryParam:"style=form,explode=true,name=payorId"`
 	UpdatedSince time.Time `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type ListFundingAuditDeltasRequest struct {
-	QueryParams ListFundingAuditDeltasQueryParams
 }
 
 type ListFundingAuditDeltasResponse struct {

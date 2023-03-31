@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TestnetGetStatusQueryParams struct {
+type TestnetGetStatusRequest struct {
 	// Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type TestnetGetStatusRequest struct {
-	QueryParams TestnetGetStatusQueryParams
 }
 
 type TestnetGetStatusResponse struct {

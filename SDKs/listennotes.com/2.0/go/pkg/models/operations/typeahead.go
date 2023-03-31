@@ -81,7 +81,9 @@ func (e *TypeaheadShowPodcastsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TypeaheadQueryParams struct {
+type TypeaheadRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// Search term, e.g., person, place, topic... You can use double quotes to do verbatim match, e.g., "game of thrones". Otherwise, it's fuzzy search.
 	//
 	Q string `queryParam:"style=form,explode=true,name=q"`
@@ -94,16 +96,6 @@ type TypeaheadQueryParams struct {
 	// Autosuggest podcasts. This only searches podcast title and publisher and returns very limited info of 5 podcasts. 1 is yes, 0 is no. It's a bit slow to autosuggest podcasts, so we turn it off by default. If show_podcasts=1, you can also pass iTunes id (e.g., 474722933) to the q parameter to fetch podcast meta data.
 	//
 	ShowPodcasts *TypeaheadShowPodcastsEnum `queryParam:"style=form,explode=true,name=show_podcasts"`
-}
-
-type TypeaheadHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type TypeaheadRequest struct {
-	QueryParams TypeaheadQueryParams
-	Headers     TypeaheadHeaders
 }
 
 type TypeaheadResponse struct {

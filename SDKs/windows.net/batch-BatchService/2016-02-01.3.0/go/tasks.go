@@ -34,9 +34,9 @@ func newTasks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // TaskAdd - Adds a task to the specified job.
 func (s *tasks) TaskAdd(ctx context.Context, request operations.TaskAddRequest) (*operations.TaskAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskAddParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,9 +51,9 @@ func (s *tasks) TaskAdd(ctx context.Context, request operations.TaskAddRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,9 +97,9 @@ func (s *tasks) TaskAdd(ctx context.Context, request operations.TaskAddRequest) 
 // TaskAddCollection - Adds a collection of tasks to the specified job.
 func (s *tasks) TaskAddCollection(ctx context.Context, request operations.TaskAddCollectionRequest) (*operations.TaskAddCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/addtaskcollection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/addtaskcollection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskAddCollectionParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,9 +114,9 @@ func (s *tasks) TaskAddCollection(ctx context.Context, request operations.TaskAd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -169,16 +169,16 @@ func (s *tasks) TaskAddCollection(ctx context.Context, request operations.TaskAd
 // TaskDelete - Deletes a task from the specified job.
 func (s *tasks) TaskDelete(ctx context.Context, request operations.TaskDeleteRequest) (*operations.TaskDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -222,16 +222,16 @@ func (s *tasks) TaskDelete(ctx context.Context, request operations.TaskDeleteReq
 // TaskGet - Gets information about the specified task.
 func (s *tasks) TaskGet(ctx context.Context, request operations.TaskGetRequest) (*operations.TaskGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -284,16 +284,16 @@ func (s *tasks) TaskGet(ctx context.Context, request operations.TaskGetRequest) 
 // TaskList - Lists all of the tasks that are associated with the specified job.
 func (s *tasks) TaskList(ctx context.Context, request operations.TaskListRequest) (*operations.TaskListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -346,16 +346,16 @@ func (s *tasks) TaskList(ctx context.Context, request operations.TaskListRequest
 // TaskListSubtasks - Lists all of the subtasks that are associated with the specified multi-instance task.
 func (s *tasks) TaskListSubtasks(ctx context.Context, request operations.TaskListSubtasksRequest) (*operations.TaskListSubtasksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/subtasksinfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/subtasksinfo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -408,16 +408,16 @@ func (s *tasks) TaskListSubtasks(ctx context.Context, request operations.TaskLis
 // TaskTerminate - Terminates the specified task.
 func (s *tasks) TaskTerminate(ctx context.Context, request operations.TaskTerminateRequest) (*operations.TaskTerminateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/terminate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/terminate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -461,9 +461,9 @@ func (s *tasks) TaskTerminate(ctx context.Context, request operations.TaskTermin
 // TaskUpdate - Updates the properties of the specified task.
 func (s *tasks) TaskUpdate(ctx context.Context, request operations.TaskUpdateRequest) (*operations.TaskUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskUpdateParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -478,9 +478,9 @@ func (s *tasks) TaskUpdate(ctx context.Context, request operations.TaskUpdateReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

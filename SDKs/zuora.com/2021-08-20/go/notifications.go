@@ -48,14 +48,14 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 // **Note**: This operation is only applicable to notifications for custom events.
 func (s *notifications) DELETEDELETEEmailTemplate(ctx context.Context, request operations.DELETEDELETEEmailTemplateRequest) (*operations.DELETEDELETEEmailTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/email-templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/email-templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -110,14 +110,14 @@ func (s *notifications) DELETEDELETEEmailTemplate(ctx context.Context, request o
 // **Note**: This operation is only applicable to notifications for custom events.
 func (s *notifications) DELETEDELETENotificationDefinition(ctx context.Context, request operations.DELETEDELETENotificationDefinitionRequest) (*operations.DELETEDELETENotificationDefinitionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/notification-definitions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/notification-definitions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -179,9 +179,9 @@ func (s *notifications) DELETEDELETENotificationHistoryForAccount(ctx context.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -257,9 +257,9 @@ func (s *notifications) GETCalloutHistory(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -317,9 +317,9 @@ func (s *notifications) GETEmailHistory(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -365,14 +365,14 @@ func (s *notifications) GETEmailHistory(ctx context.Context, request operations.
 // **Note**: This operation is only applicable to email templates for custom events.
 func (s *notifications) GETGETEmailTemplate(ctx context.Context, request operations.GETGETEmailTemplateRequest) (*operations.GETGETEmailTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/email-templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/email-templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -436,14 +436,14 @@ func (s *notifications) GETGETEmailTemplate(ctx context.Context, request operati
 // **Note**: This operation is only applicable to notifications for custom events.
 func (s *notifications) GETGETNotificationDefinition(ctx context.Context, request operations.GETGETNotificationDefinitionRequest) (*operations.GETGETNotificationDefinitionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/notification-definitions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/notification-definitions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -505,14 +505,14 @@ func (s *notifications) GETGETNotificationDefinition(ctx context.Context, reques
 // **Note**: This operation is only available if you have the Notification and the Configurable Event features enabled.
 func (s *notifications) GETGETNotificationHistoryDeletionTask(ctx context.Context, request operations.GETGETNotificationHistoryDeletionTaskRequest) (*operations.GETGETNotificationHistoryDeletionTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/history/tasks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/history/tasks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -575,9 +575,9 @@ func (s *notifications) GETQueryEmailTemplates(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -648,9 +648,9 @@ func (s *notifications) GETQueryNotificationDefinitions(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -716,7 +716,7 @@ func (s *notifications) POSTCreateEmailTemplate(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications/email-templates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTPublicEmailTemplateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -731,7 +731,7 @@ func (s *notifications) POSTCreateEmailTemplate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -802,7 +802,7 @@ func (s *notifications) POSTCreateNotificationDefinition(ctx context.Context, re
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications/notification-definitions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTPublicNotificationDefinitionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -817,7 +817,7 @@ func (s *notifications) POSTCreateNotificationDefinition(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -881,9 +881,9 @@ func (s *notifications) POSTCreateNotificationDefinition(ctx context.Context, re
 // **Note**: This operation is only applicable to email templates for custom events.
 func (s *notifications) PUTUpdateEmailTemplate(ctx context.Context, request operations.PUTUpdateEmailTemplateRequest) (*operations.PUTUpdateEmailTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/email-templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/email-templates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTPublicEmailTemplateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -898,7 +898,7 @@ func (s *notifications) PUTUpdateEmailTemplate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -962,9 +962,9 @@ func (s *notifications) PUTUpdateEmailTemplate(ctx context.Context, request oper
 // **Note**: This operation is only applicable to notifications for custom events.
 func (s *notifications) PUTUpdateNotificationDefinition(ctx context.Context, request operations.PUTUpdateNotificationDefinitionRequest) (*operations.PUTUpdateNotificationDefinitionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/notification-definitions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/notification-definitions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTPublicNotificationDefinitionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -979,7 +979,7 @@ func (s *notifications) PUTUpdateNotificationDefinition(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

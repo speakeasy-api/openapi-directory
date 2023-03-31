@@ -8,13 +8,7 @@ import (
 )
 
 type GenderJapaneseNameFullBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GenderJapaneseNameFullBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchPersonalNameIn `request:"mediaType=application/json"`
-	Security GenderJapaneseNameFullBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type GenderJapaneseNameFullBatchResponse struct {

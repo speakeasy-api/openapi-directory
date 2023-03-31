@@ -15,10 +15,6 @@ type PostUsersRequestBodyInput struct {
 	Title *shared.UserTitleEnum `json:"title,omitempty"`
 }
 
-type PostUsersRequest struct {
-	Request PostUsersRequestBodyInput `request:"mediaType=application/json"`
-}
-
 type PostUsersResponse struct {
 	ContentType string
 	StatusCode  int

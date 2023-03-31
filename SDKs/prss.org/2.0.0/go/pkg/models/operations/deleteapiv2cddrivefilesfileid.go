@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAPIV2CddriveFilesFileIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteAPIV2CddriveFilesFileIDPathParams struct {
-	// The ID of the file to access.
-	FileID int64 `pathParam:"style=simple,explode=false,name=file-id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAPIV2CddriveFilesFileIDRequest struct {
-	PathParams DeleteAPIV2CddriveFilesFileIDPathParams
-	Security   DeleteAPIV2CddriveFilesFileIDSecurity
+	// The ID of the file to access.
+	FileID int64 `pathParam:"style=simple,explode=false,name=file-id"`
 }
 
 type DeleteAPIV2CddriveFilesFileIDResponse struct {

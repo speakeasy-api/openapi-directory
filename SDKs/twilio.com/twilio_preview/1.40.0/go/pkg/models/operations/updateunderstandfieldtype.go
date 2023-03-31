@@ -12,12 +12,8 @@ var UpdateUnderstandFieldTypeServerList = []string{
 }
 
 type UpdateUnderstandFieldTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandFieldTypePathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest struct {
@@ -28,10 +24,9 @@ type UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest struct {
 }
 
 type UpdateUnderstandFieldTypeRequest struct {
-	PathParams UpdateUnderstandFieldTypePathParams
-	Request    *UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandFieldTypeSecurity
-	ServerURL  *string
+	AssistantSid string                                                     `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid          string                                                     `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateUnderstandFieldTypeResponse struct {

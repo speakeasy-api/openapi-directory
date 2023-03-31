@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ComposerProjectsLocationsEnvironmentsCreate - Create a new environment.
-func (s *projects) ComposerProjectsLocationsEnvironmentsCreate(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsCreateRequest) (*operations.ComposerProjectsLocationsEnvironmentsCreateResponse, error) {
+func (s *projects) ComposerProjectsLocationsEnvironmentsCreate(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsCreateRequest, security operations.ComposerProjectsLocationsEnvironmentsCreateSecurity) (*operations.ComposerProjectsLocationsEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnvironmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsCreate(ctx context.Conte
 }
 
 // ComposerProjectsLocationsEnvironmentsList - List environments.
-func (s *projects) ComposerProjectsLocationsEnvironmentsList(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsListRequest) (*operations.ComposerProjectsLocationsEnvironmentsListResponse, error) {
+func (s *projects) ComposerProjectsLocationsEnvironmentsList(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsListRequest, security operations.ComposerProjectsLocationsEnvironmentsListSecurity) (*operations.ComposerProjectsLocationsEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsList(ctx context.Context
 }
 
 // ComposerProjectsLocationsEnvironmentsLoadSnapshot - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
-func (s *projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotRequest) (*operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse, error) {
+func (s *projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotRequest, security operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotSecurity) (*operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:loadSnapshot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:loadSnapshot", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LoadSnapshotRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context
 }
 
 // ComposerProjectsLocationsEnvironmentsPatch - Update an environment.
-func (s *projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsPatchRequest) (*operations.ComposerProjectsLocationsEnvironmentsPatchResponse, error) {
+func (s *projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsPatchRequest, security operations.ComposerProjectsLocationsEnvironmentsPatchSecurity) (*operations.ComposerProjectsLocationsEnvironmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnvironmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Contex
 }
 
 // ComposerProjectsLocationsEnvironmentsSaveSnapshot - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
-func (s *projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotRequest) (*operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse, error) {
+func (s *projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotRequest, security operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotSecurity) (*operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:saveSnapshot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:saveSnapshot", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveSnapshotRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,20 +300,20 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context
 }
 
 // ComposerProjectsLocationsImageVersionsList - List ImageVersions for provided location.
-func (s *projects) ComposerProjectsLocationsImageVersionsList(ctx context.Context, request operations.ComposerProjectsLocationsImageVersionsListRequest) (*operations.ComposerProjectsLocationsImageVersionsListResponse, error) {
+func (s *projects) ComposerProjectsLocationsImageVersionsList(ctx context.Context, request operations.ComposerProjectsLocationsImageVersionsListRequest, security operations.ComposerProjectsLocationsImageVersionsListSecurity) (*operations.ComposerProjectsLocationsImageVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/imageVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/imageVersions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) ComposerProjectsLocationsImageVersionsList(ctx context.Contex
 }
 
 // ComposerProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) ComposerProjectsLocationsOperationsDelete(ctx context.Context, request operations.ComposerProjectsLocationsOperationsDeleteRequest) (*operations.ComposerProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) ComposerProjectsLocationsOperationsDelete(ctx context.Context, request operations.ComposerProjectsLocationsOperationsDeleteRequest, security operations.ComposerProjectsLocationsOperationsDeleteSecurity) (*operations.ComposerProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) ComposerProjectsLocationsOperationsDelete(ctx context.Context
 }
 
 // ComposerProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) ComposerProjectsLocationsOperationsGet(ctx context.Context, request operations.ComposerProjectsLocationsOperationsGetRequest) (*operations.ComposerProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) ComposerProjectsLocationsOperationsGet(ctx context.Context, request operations.ComposerProjectsLocationsOperationsGetRequest, security operations.ComposerProjectsLocationsOperationsGetSecurity) (*operations.ComposerProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) ComposerProjectsLocationsOperationsGet(ctx context.Context, r
 }
 
 // ComposerProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) ComposerProjectsLocationsOperationsList(ctx context.Context, request operations.ComposerProjectsLocationsOperationsListRequest) (*operations.ComposerProjectsLocationsOperationsListResponse, error) {
+func (s *projects) ComposerProjectsLocationsOperationsList(ctx context.Context, request operations.ComposerProjectsLocationsOperationsListRequest, security operations.ComposerProjectsLocationsOperationsListSecurity) (*operations.ComposerProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

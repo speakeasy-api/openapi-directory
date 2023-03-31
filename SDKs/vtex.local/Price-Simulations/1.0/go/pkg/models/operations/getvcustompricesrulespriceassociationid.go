@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetVCustomPricesRulesPriceAssociationIDPathParams struct {
-	// Price Association unique identifier
-	PriceAssociationID int64 `pathParam:"style=simple,explode=false,name=priceAssociationId"`
-}
-
-type GetVCustomPricesRulesPriceAssociationIDHeaders struct {
+type GetVCustomPricesRulesPriceAssociationIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetVCustomPricesRulesPriceAssociationIDRequest struct {
-	PathParams GetVCustomPricesRulesPriceAssociationIDPathParams
-	Headers    GetVCustomPricesRulesPriceAssociationIDHeaders
+	// Price Association unique identifier
+	PriceAssociationID int64 `pathParam:"style=simple,explode=false,name=priceAssociationId"`
 }
 
 // GetVCustomPricesRulesPriceAssociationID200ApplicationJSON - OK

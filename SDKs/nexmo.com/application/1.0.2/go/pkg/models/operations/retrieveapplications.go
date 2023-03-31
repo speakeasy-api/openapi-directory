@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveApplicationsQueryParams struct {
+type RetrieveApplicationsRequest struct {
 	// You can find your API key in your [account overview](https://dashboard.nexmo.com/account-overview)
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// You can find your API secret in your [account overview](https://dashboard.nexmo.com/account-overview)
@@ -16,10 +16,6 @@ type RetrieveApplicationsQueryParams struct {
 	PageIndex *int64 `queryParam:"style=form,explode=true,name=page_index"`
 	// Set the number of items returned on each call to this endpoint. The default is 10 records.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type RetrieveApplicationsRequest struct {
-	QueryParams RetrieveApplicationsQueryParams
 }
 
 type RetrieveApplicationsResponse struct {

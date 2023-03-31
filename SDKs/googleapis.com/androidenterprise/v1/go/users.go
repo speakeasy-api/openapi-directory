@@ -32,20 +32,20 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // AndroidenterpriseUsersDelete - Deleted an EMM-managed user.
-func (s *users) AndroidenterpriseUsersDelete(ctx context.Context, request operations.AndroidenterpriseUsersDeleteRequest) (*operations.AndroidenterpriseUsersDeleteResponse, error) {
+func (s *users) AndroidenterpriseUsersDelete(ctx context.Context, request operations.AndroidenterpriseUsersDeleteRequest, security operations.AndroidenterpriseUsersDeleteSecurity) (*operations.AndroidenterpriseUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *users) AndroidenterpriseUsersDelete(ctx context.Context, request operat
 }
 
 // AndroidenterpriseUsersGenerateAuthenticationToken - Generates an authentication token which the device policy client can use to provision the given EMM-managed user account on a device. The generated token is single-use and expires after a few minutes. You can provision a maximum of 10 devices per user. This call only works with EMM-managed accounts.
-func (s *users) AndroidenterpriseUsersGenerateAuthenticationToken(ctx context.Context, request operations.AndroidenterpriseUsersGenerateAuthenticationTokenRequest) (*operations.AndroidenterpriseUsersGenerateAuthenticationTokenResponse, error) {
+func (s *users) AndroidenterpriseUsersGenerateAuthenticationToken(ctx context.Context, request operations.AndroidenterpriseUsersGenerateAuthenticationTokenRequest, security operations.AndroidenterpriseUsersGenerateAuthenticationTokenSecurity) (*operations.AndroidenterpriseUsersGenerateAuthenticationTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/authenticationToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/authenticationToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *users) AndroidenterpriseUsersGenerateAuthenticationToken(ctx context.Co
 }
 
 // AndroidenterpriseUsersGet - Retrieves a user's details.
-func (s *users) AndroidenterpriseUsersGet(ctx context.Context, request operations.AndroidenterpriseUsersGetRequest) (*operations.AndroidenterpriseUsersGetResponse, error) {
+func (s *users) AndroidenterpriseUsersGet(ctx context.Context, request operations.AndroidenterpriseUsersGetRequest, security operations.AndroidenterpriseUsersGetSecurity) (*operations.AndroidenterpriseUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,20 +167,20 @@ func (s *users) AndroidenterpriseUsersGet(ctx context.Context, request operation
 }
 
 // AndroidenterpriseUsersGetAvailableProductSet - Retrieves the set of products a user is entitled to access. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
-func (s *users) AndroidenterpriseUsersGetAvailableProductSet(ctx context.Context, request operations.AndroidenterpriseUsersGetAvailableProductSetRequest) (*operations.AndroidenterpriseUsersGetAvailableProductSetResponse, error) {
+func (s *users) AndroidenterpriseUsersGetAvailableProductSet(ctx context.Context, request operations.AndroidenterpriseUsersGetAvailableProductSetRequest, security operations.AndroidenterpriseUsersGetAvailableProductSetSecurity) (*operations.AndroidenterpriseUsersGetAvailableProductSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,11 +215,11 @@ func (s *users) AndroidenterpriseUsersGetAvailableProductSet(ctx context.Context
 }
 
 // AndroidenterpriseUsersInsert - Creates a new EMM-managed user. The Users resource passed in the body of the request should include an accountIdentifier and an accountType. If a corresponding user already exists with the same account identifier, the user will be updated with the resource. In this case only the displayName field can be changed.
-func (s *users) AndroidenterpriseUsersInsert(ctx context.Context, request operations.AndroidenterpriseUsersInsertRequest) (*operations.AndroidenterpriseUsersInsertResponse, error) {
+func (s *users) AndroidenterpriseUsersInsert(ctx context.Context, request operations.AndroidenterpriseUsersInsertRequest, security operations.AndroidenterpriseUsersInsertSecurity) (*operations.AndroidenterpriseUsersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -231,11 +231,11 @@ func (s *users) AndroidenterpriseUsersInsert(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,20 +270,20 @@ func (s *users) AndroidenterpriseUsersInsert(ctx context.Context, request operat
 }
 
 // AndroidenterpriseUsersList - Looks up a user by primary email address. This is only supported for Google-managed users. Lookup of the id is not needed for EMM-managed users because the id is already returned in the result of the Users.insert call.
-func (s *users) AndroidenterpriseUsersList(ctx context.Context, request operations.AndroidenterpriseUsersListRequest) (*operations.AndroidenterpriseUsersListResponse, error) {
+func (s *users) AndroidenterpriseUsersList(ctx context.Context, request operations.AndroidenterpriseUsersListRequest, security operations.AndroidenterpriseUsersListSecurity) (*operations.AndroidenterpriseUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -318,20 +318,20 @@ func (s *users) AndroidenterpriseUsersList(ctx context.Context, request operatio
 }
 
 // AndroidenterpriseUsersRevokeDeviceAccess - Revokes access to all devices currently provisioned to the user. The user will no longer be able to use the managed Play store on any of their managed devices. This call only works with EMM-managed accounts.
-func (s *users) AndroidenterpriseUsersRevokeDeviceAccess(ctx context.Context, request operations.AndroidenterpriseUsersRevokeDeviceAccessRequest) (*operations.AndroidenterpriseUsersRevokeDeviceAccessResponse, error) {
+func (s *users) AndroidenterpriseUsersRevokeDeviceAccess(ctx context.Context, request operations.AndroidenterpriseUsersRevokeDeviceAccessRequest, security operations.AndroidenterpriseUsersRevokeDeviceAccessSecurity) (*operations.AndroidenterpriseUsersRevokeDeviceAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/deviceAccess", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/deviceAccess", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,11 +357,11 @@ func (s *users) AndroidenterpriseUsersRevokeDeviceAccess(ctx context.Context, re
 }
 
 // AndroidenterpriseUsersSetAvailableProductSet - Modifies the set of products that a user is entitled to access (referred to as *whitelisted* products). Only products that are approved or products that were previously approved (products with revoked approval) can be whitelisted. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
-func (s *users) AndroidenterpriseUsersSetAvailableProductSet(ctx context.Context, request operations.AndroidenterpriseUsersSetAvailableProductSetRequest) (*operations.AndroidenterpriseUsersSetAvailableProductSetResponse, error) {
+func (s *users) AndroidenterpriseUsersSetAvailableProductSet(ctx context.Context, request operations.AndroidenterpriseUsersSetAvailableProductSetRequest, security operations.AndroidenterpriseUsersSetAvailableProductSetSecurity) (*operations.AndroidenterpriseUsersSetAvailableProductSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductSet", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -373,11 +373,11 @@ func (s *users) AndroidenterpriseUsersSetAvailableProductSet(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -412,11 +412,11 @@ func (s *users) AndroidenterpriseUsersSetAvailableProductSet(ctx context.Context
 }
 
 // AndroidenterpriseUsersUpdate - Updates the details of an EMM-managed user. Can be used with EMM-managed users only (not Google managed users). Pass the new details in the Users resource in the request body. Only the displayName field can be changed. Other fields must either be unset or have the currently active value.
-func (s *users) AndroidenterpriseUsersUpdate(ctx context.Context, request operations.AndroidenterpriseUsersUpdateRequest) (*operations.AndroidenterpriseUsersUpdateResponse, error) {
+func (s *users) AndroidenterpriseUsersUpdate(ctx context.Context, request operations.AndroidenterpriseUsersUpdateRequest, security operations.AndroidenterpriseUsersUpdateSecurity) (*operations.AndroidenterpriseUsersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -428,11 +428,11 @@ func (s *users) AndroidenterpriseUsersUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

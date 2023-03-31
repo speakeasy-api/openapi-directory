@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1CompaniesRegionsIDPathParams struct {
+type PutSetupV1CompaniesRegionsIDRequest struct {
+	// Region Update Model
+	RegionUpdateModel *shared.RegionUpdateModel `request:"mediaType=application/json"`
 	// id of Region
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1CompaniesRegionsIDRequest struct {
-	PathParams PutSetupV1CompaniesRegionsIDPathParams
-	// Region Update Model
-	Request *shared.RegionUpdateModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1CompaniesRegionsIDResponse struct {

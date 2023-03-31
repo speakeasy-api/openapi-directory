@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Duplicate1PathParams struct {
+type Duplicate1Request struct {
 	// report's internal identifier
 	ReportID int64 `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type Duplicate1Request struct {
-	PathParams Duplicate1PathParams
 }
 
 type Duplicate1Response struct {

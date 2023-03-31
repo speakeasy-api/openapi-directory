@@ -46,11 +46,6 @@ func (e *GetTotalsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTotalsEntityTypePathParams struct {
-	// Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac`, `party`, `pac-party`,                 `house-senate`, or `ie-only`
-	EntityType GetTotalsEntityTypeEntityTypeEnum `pathParam:"style=simple,explode=false,name=entity_type"`
-}
-
 type GetTotalsEntityTypeFilingFrequencyEnum string
 
 const (
@@ -133,7 +128,7 @@ func (e *GetTotalsEntityTypeOrganizationTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetTotalsEntityTypeQueryParams struct {
+type GetTotalsEntityTypeRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -175,6 +170,8 @@ type GetTotalsEntityTypeQueryParams struct {
 	// for its ending, even year.
 	//
 	Cycle []int `queryParam:"style=form,explode=true,name=cycle"`
+	// Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac`, `party`, `pac-party`,                 `house-senate`, or `ie-only`
+	EntityType GetTotalsEntityTypeEntityTypeEnum `pathParam:"style=simple,explode=false,name=entity_type"`
 	// The one-letter
 	//     code of the filing frequency:
 	//          - A Administratively terminated
@@ -241,11 +238,6 @@ type GetTotalsEntityTypeQueryParams struct {
 	SponsorCandidateID []string `queryParam:"style=form,explode=true,name=sponsor_candidate_id"`
 	// Name of the Committee's treasurer. If multiple treasurers for the committee, the most recent treasurer will be shown.
 	TreasurerName []string `queryParam:"style=form,explode=true,name=treasurer_name"`
-}
-
-type GetTotalsEntityTypeRequest struct {
-	PathParams  GetTotalsEntityTypePathParams
-	QueryParams GetTotalsEntityTypeQueryParams
 }
 
 type GetTotalsEntityTypeResponse struct {

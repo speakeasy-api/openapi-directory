@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05HealthInformationNotifyRawHeaders struct {
+type PostV05HealthInformationNotifyRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05HealthInformationNotifyRawRequest struct {
-	Headers PostV05HealthInformationNotifyRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05HealthInformationNotifyRawResponse struct {

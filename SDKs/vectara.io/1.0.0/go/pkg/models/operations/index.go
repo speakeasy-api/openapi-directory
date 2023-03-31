@@ -8,19 +8,14 @@ import (
 )
 
 type IndexSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	OAuth      *shared.SchemeOAuth      `security:"scheme,type=oauth2"`
-}
-
-type IndexHeaders struct {
-	// The Customer ID to use for the request.
-	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
+	APIKeyAuth *string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
+	OAuth      *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IndexRequest struct {
-	Headers  IndexHeaders
-	Request  shared.VectaraIndexDocumentRequest `request:"mediaType=application/json"`
-	Security IndexSecurity
+	// The Customer ID to use for the request.
+	CustomerID                  int64                              `header:"style=simple,explode=false,name=customer-id"`
+	VectaraIndexDocumentRequest shared.VectaraIndexDocumentRequest `request:"mediaType=application/json"`
 }
 
 type IndexResponse struct {

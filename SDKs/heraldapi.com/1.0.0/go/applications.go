@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -37,7 +38,7 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get the latest details for a specific [application](https://www.heraldapi.com/docs/dynamic-application-steps).
 func (s *applications) GetApplicationsApplicationID(ctx context.Context, request operations.GetApplicationsApplicationIDRequest) (*operations.GetApplicationsApplicationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +85,7 @@ func (s *applications) GetApplicationsApplicationID(ctx context.Context, request
 // Create an [application](https://www.heraldapi.com/docs/dynamic-application) for a product or set of products. An application contains the set of information a carrier requires to get a quote for the product(s). Submitting only `products` will create a blank application. Including values when creating the application is optional.
 //
 // Read our step-by-step guide to [building a Dynamic Application](https://www.heraldapi.com/docs/dynamic-application-steps).
-func (s *applications) PostApplications(ctx context.Context, request operations.PostApplicationsRequest) (*operations.PostApplicationsResponse, error) {
+func (s *applications) PostApplications(ctx context.Context, request shared.ApplicationWriteV1) (*operations.PostApplicationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/applications"
 
@@ -142,9 +143,9 @@ func (s *applications) PostApplications(ctx context.Context, request operations.
 // Read our step-by-step guide to [building a Dynamic Application](https://www.heraldapi.com/docs/dynamic-application-steps).
 func (s *applications) PutApplicationsApplicationID(ctx context.Context, request operations.PutApplicationsApplicationIDRequest) (*operations.PutApplicationsApplicationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationWriteV1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

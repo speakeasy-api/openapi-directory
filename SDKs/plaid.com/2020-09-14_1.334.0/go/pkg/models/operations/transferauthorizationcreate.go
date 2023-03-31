@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferAuthorizationCreateRequest struct {
-	Request shared.TransferAuthorizationCreateRequest `request:"mediaType=application/json"`
-}
 
 type TransferAuthorizationCreateResponse struct {
 	ContentType string

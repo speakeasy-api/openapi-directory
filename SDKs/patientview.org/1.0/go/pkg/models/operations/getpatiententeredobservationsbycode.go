@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPatientEnteredObservationsByCodePathParams struct {
+type GetPatientEnteredObservationsByCodeRequest struct {
 	// code
 	Code string `pathParam:"style=simple,explode=false,name=code"`
 	// userId
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetPatientEnteredObservationsByCodeRequest struct {
-	PathParams GetPatientEnteredObservationsByCodePathParams
 }
 
 type GetPatientEnteredObservationsByCodeResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAdclientsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAdclientsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAdclientsListSecurity struct {
@@ -22,7 +22,7 @@ type AdsenseAdclientsListSecurity struct {
 	Option2 *AdsenseAdclientsListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAdclientsListQueryParams struct {
+type AdsenseAdclientsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -41,11 +41,6 @@ type AdsenseAdclientsListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAdclientsListRequest struct {
-	QueryParams AdsenseAdclientsListQueryParams
-	Security    AdsenseAdclientsListSecurity
 }
 
 type AdsenseAdclientsListResponse struct {

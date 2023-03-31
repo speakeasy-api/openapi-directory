@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteLoyaltyRewardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteLoyaltyRewardPathParams struct {
-	// The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to delete.
-	RewardID string `pathParam:"style=simple,explode=false,name=reward_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteLoyaltyRewardRequest struct {
-	PathParams DeleteLoyaltyRewardPathParams
-	Security   DeleteLoyaltyRewardSecurity
+	// The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to delete.
+	RewardID string `pathParam:"style=simple,explode=false,name=reward_id"`
 }
 
 type DeleteLoyaltyRewardResponse struct {

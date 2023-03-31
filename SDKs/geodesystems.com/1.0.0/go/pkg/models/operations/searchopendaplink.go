@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchOpendaplinkQueryParams struct {
+type SearchOpendaplinkRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchOpendaplinkQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchOpendaplinkRequest struct {
-	QueryParams SearchOpendaplinkQueryParams
 }
 
 type SearchOpendaplinkResponse struct {

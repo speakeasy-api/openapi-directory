@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkFloorPlanPathParams struct {
+type DeleteNetworkFloorPlanRequest struct {
 	FloorPlanID string `pathParam:"style=simple,explode=false,name=floorPlanId"`
 	NetworkID   string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type DeleteNetworkFloorPlanRequest struct {
-	PathParams DeleteNetworkFloorPlanPathParams
 }
 
 type DeleteNetworkFloorPlanResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDevicesQueryParams struct {
-	UserID *string `queryParam:"serialization=json,name=user_id"`
-}
-
 type ListDevicesRequest struct {
-	QueryParams ListDevicesQueryParams
+	UserID *string `queryParam:"serialization=json,name=user_id"`
 }
 
 type ListDevicesResponse struct {

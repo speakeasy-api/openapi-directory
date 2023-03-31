@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RecordingRegistrantsQuestionsGetSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RecordingRegistrantsQuestionsGetPathParams struct {
+type RecordingRegistrantsQuestionsGetRequest struct {
 	// To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.
 	//
 	// To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.
 	//
 	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request.
 	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type RecordingRegistrantsQuestionsGetRequest struct {
-	PathParams RecordingRegistrantsQuestionsGetPathParams
-	Security   RecordingRegistrantsQuestionsGetSecurity
 }
 
 // RecordingRegistrantsQuestionsGetRecordingRegistrantQuestionsCustomQuestionsTypeEnum - The type of registration question and answers.

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateReceivable3PathParams struct {
+type CreateReceivable3Request struct {
+	ReceivableCreateDTO shared.ReceivableCreateDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type CreateReceivable3Request struct {
-	PathParams CreateReceivable3PathParams
-	Request    shared.ReceivableCreateDTO `request:"mediaType=application/json"`
 }
 
 type CreateReceivable3Response struct {

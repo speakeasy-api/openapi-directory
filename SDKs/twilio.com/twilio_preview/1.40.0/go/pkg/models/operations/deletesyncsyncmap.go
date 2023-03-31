@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncSyncMapServerList = []string{
@@ -12,18 +11,13 @@ var DeleteSyncSyncMapServerList = []string{
 }
 
 type DeleteSyncSyncMapSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteSyncSyncMapPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteSyncSyncMapRequest struct {
-	PathParams DeleteSyncSyncMapPathParams
-	Security   DeleteSyncSyncMapSecurity
-	ServerURL  *string
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteSyncSyncMapResponse struct {

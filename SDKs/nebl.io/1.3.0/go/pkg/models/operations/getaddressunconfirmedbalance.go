@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAddressUnconfirmedBalancePathParams struct {
+type GetAddressUnconfirmedBalanceRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type GetAddressUnconfirmedBalanceRequest struct {
-	PathParams GetAddressUnconfirmedBalancePathParams
 }
 
 type GetAddressUnconfirmedBalanceResponse struct {

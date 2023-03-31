@@ -4,56 +4,58 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinessAccountsCreateRequest(
-    query_params=operations.MybusinessAccountsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="quas",
-        alt="json",
-        callback="quasi",
-        fields="modi",
-        key="blanditiis",
-        oauth_token="hic",
-        pretty_print=True,
-        primary_owner="perferendis",
-        quota_user="voluptatem",
-        upload_type="quia",
-        upload_protocol="animi",
-    ),
-    request=shared.Account(
-        account_name="ea",
-        account_number="velit",
-        name="ratione",
+    dollar_xgafv="2",
+    account=shared.Account(
+        account_name="provident",
+        account_number="distinctio",
+        name="quibusdam",
         organization_info=shared.OrganizationInfo(
-            phone_number="et",
+            phone_number="unde",
             postal_address=shared.PostalAddress(
                 address_lines=[
-                    "repellendus",
-                    "enim",
-                    "veritatis",
+                    "corrupti",
+                    "illum",
+                    "vel",
+                    "error",
                 ],
-                administrative_area="quidem",
-                language_code="ut",
-                locality="porro",
-                organization="voluptatem",
-                postal_code="saepe",
+                administrative_area="deserunt",
+                language_code="suscipit",
+                locality="iure",
+                organization="magnam",
+                postal_code="09234-7854",
                 recipients=[
-                    "esse",
+                    "nisi",
+                    "recusandae",
+                    "temporibus",
                 ],
-                region_code="quibusdam",
-                revision=5367062260347718474,
-                sorting_code="deleniti",
-                sublocality="debitis",
+                region_code="ab",
+                revision=337396,
+                sorting_code="veritatis",
+                sublocality="deserunt",
             ),
-            registered_domain="assumenda",
+            registered_domain="perferendis",
         ),
-        permission_level="PERMISSION_LEVEL_UNSPECIFIED",
+        permission_level="OWNER_LEVEL",
         role="COMMUNITY_MANAGER",
         state=shared.AccountState(
             status="VERIFICATION_REQUESTED",
         ),
-        type="PERSONAL",
+        type="USER_GROUP",
     ),
+    access_token="odit",
+    alt="proto",
+    callback="at",
+    fields_="maiores",
+    key="molestiae",
+    oauth_token="quod",
+    pretty_print=False,
+    primary_owner="quod",
+    quota_user="esse",
+    upload_type="totam",
+    upload_protocol="porro",
 )
     
 res = s.accounts.mybusiness_accounts_create(req)

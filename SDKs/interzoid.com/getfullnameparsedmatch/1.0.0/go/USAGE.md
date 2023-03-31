@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetfullnameparsedmatchRequest{
-        QueryParams: operations.GetfullnameparsedmatchQueryParams{
-            Firstname: "Katharina",
-            Lastname: "Medhurst",
-            License: "distinctio",
-        },
+        Firstname: "Katharina",
+        Lastname: "Medhurst",
+        License: "distinctio",
     }
 
     ctx := context.Background()

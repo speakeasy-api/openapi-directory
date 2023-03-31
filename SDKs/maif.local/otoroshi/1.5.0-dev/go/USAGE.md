@@ -13,17 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AllAPIKeysRequest{
-        Security: operations.AllAPIKeysSecurity{
-            OtoroshiAuth: shared.SchemeOtoroshiAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Apikeys.AllAPIKeys(ctx, req)
+    res, err := s.Apikeys.AllAPIKeys(ctx)
     if err != nil {
         log.Fatal(err)
     }

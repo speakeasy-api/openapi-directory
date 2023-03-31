@@ -8,13 +8,13 @@ import (
 )
 
 type BillingbudgetsBillingAccountsBudgetsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BillingbudgetsBillingAccountsBudgetsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BillingbudgetsBillingAccountsBudgetsListSecurity struct {
@@ -22,12 +22,7 @@ type BillingbudgetsBillingAccountsBudgetsListSecurity struct {
 	Option2 *BillingbudgetsBillingAccountsBudgetsListSecurityOption2 `security:"option"`
 }
 
-type BillingbudgetsBillingAccountsBudgetsListPathParams struct {
-	// Required. Name of billing account to list budgets under. Values are of the form `billingAccounts/{billingAccountId}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BillingbudgetsBillingAccountsBudgetsListQueryParams struct {
+type BillingbudgetsBillingAccountsBudgetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type BillingbudgetsBillingAccountsBudgetsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The value returned by the last `ListBudgetsResponse` which indicates that this is a continuation of a prior `ListBudgets` call, and that the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Name of billing account to list budgets under. Values are of the form `billingAccounts/{billingAccountId}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type BillingbudgetsBillingAccountsBudgetsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BillingbudgetsBillingAccountsBudgetsListRequest struct {
-	PathParams  BillingbudgetsBillingAccountsBudgetsListPathParams
-	QueryParams BillingbudgetsBillingAccountsBudgetsListQueryParams
-	Security    BillingbudgetsBillingAccountsBudgetsListSecurity
 }
 
 type BillingbudgetsBillingAccountsBudgetsListResponse struct {

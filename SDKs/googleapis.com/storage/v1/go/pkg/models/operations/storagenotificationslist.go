@@ -8,28 +8,28 @@ import (
 )
 
 type StorageNotificationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageNotificationsListSecurity struct {
@@ -40,14 +40,11 @@ type StorageNotificationsListSecurity struct {
 	Option5 *StorageNotificationsListSecurityOption5 `security:"option"`
 }
 
-type StorageNotificationsListPathParams struct {
-	// Name of a Google Cloud Storage bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-}
-
-type StorageNotificationsListQueryParams struct {
+type StorageNotificationsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a Google Cloud Storage bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,12 +61,6 @@ type StorageNotificationsListQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageNotificationsListRequest struct {
-	PathParams  StorageNotificationsListPathParams
-	QueryParams StorageNotificationsListQueryParams
-	Security    StorageNotificationsListSecurity
 }
 
 type StorageNotificationsListResponse struct {

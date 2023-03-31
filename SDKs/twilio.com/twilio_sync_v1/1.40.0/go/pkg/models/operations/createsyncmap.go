@@ -12,12 +12,8 @@ var CreateSyncMapServerList = []string{
 }
 
 type CreateSyncMapSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSyncMapPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Sync Map in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncMapCreateSyncMapRequest struct {
@@ -30,10 +26,9 @@ type CreateSyncMapCreateSyncMapRequest struct {
 }
 
 type CreateSyncMapRequest struct {
-	PathParams CreateSyncMapPathParams
-	Request    *CreateSyncMapCreateSyncMapRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSyncMapSecurity
-	ServerURL  *string
+	RequestBody *CreateSyncMapCreateSyncMapRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Sync Map in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSyncMapResponse struct {

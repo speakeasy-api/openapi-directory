@@ -8,26 +8,20 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesPathParams struct {
-	// Required. The unique base plan ID of the base plan to update prices on.
-	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
-	// Required. Package name of the parent app. Must be equal to the package_name field on the Subscription resource.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. The ID of the subscription to update. Must be equal to the product_id field on the Subscription resource.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                  *shared.XgafvEnum                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	MigrateBasePlanPricesRequest *shared.MigrateBasePlanPricesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The unique base plan ID of the base plan to update prices on.
+	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -36,21 +30,18 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesQueryParams 
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Package name of the parent app. Must be equal to the package_name field on the Subscription resource.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the subscription to update. Must be equal to the product_id field on the Subscription resource.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesPathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesQueryParams
-	Request     *shared.MigrateBasePlanPricesRequest `request:"mediaType=application/json"`
-	Security    AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse struct {

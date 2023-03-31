@@ -8,18 +8,10 @@ import (
 )
 
 type GetConsentScaStatusSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetConsentScaStatusPathParams struct {
-	// Resource identification of the related SCA.
-	AuthorisationID string `pathParam:"style=simple,explode=false,name=authorisationId"`
-	// ID of the corresponding consent object as returned by an account information consent request.
-	//
-	ConsentID string `pathParam:"style=simple,explode=false,name=consentId"`
-}
-
-type GetConsentScaStatusHeaders struct {
+type GetConsentScaStatusRequest struct {
 	// Is contained if and only if the "Signature" element is contained in the header of the request.
 	Digest *string `header:"style=simple,explode=false,name=Digest"`
 	// The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
@@ -71,12 +63,11 @@ type GetConsentScaStatusHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetConsentScaStatusRequest struct {
-	PathParams GetConsentScaStatusPathParams
-	Headers    GetConsentScaStatusHeaders
-	Security   GetConsentScaStatusSecurity
+	// Resource identification of the related SCA.
+	AuthorisationID string `pathParam:"style=simple,explode=false,name=authorisationId"`
+	// ID of the corresponding consent object as returned by an account information consent request.
+	//
+	ConsentID string `pathParam:"style=simple,explode=false,name=consentId"`
 }
 
 type GetConsentScaStatusResponse struct {

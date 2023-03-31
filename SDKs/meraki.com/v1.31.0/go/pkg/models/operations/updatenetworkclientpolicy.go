@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkClientPolicyPathParams struct {
-	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkClientPolicyRequestBody struct {
 	// The policy to assign. Can be 'Whitelisted', 'Blocked', 'Normal' or 'Group policy'. Required.
 	DevicePolicy string `json:"devicePolicy"`
@@ -19,8 +14,9 @@ type UpdateNetworkClientPolicyRequestBody struct {
 }
 
 type UpdateNetworkClientPolicyRequest struct {
-	PathParams UpdateNetworkClientPolicyPathParams
-	Request    UpdateNetworkClientPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkClientPolicyRequestBody `request:"mediaType=application/json"`
+	ClientID    string                               `pathParam:"style=simple,explode=false,name=clientId"`
+	NetworkID   string                               `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkClientPolicyResponse struct {

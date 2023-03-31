@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type DeleteAPIV1PushSubscriptionSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1PushSubscriptionRequest struct {
-	Security DeleteAPIV1PushSubscriptionSecurity
-}
 
 type DeleteAPIV1PushSubscriptionResponse struct {
 	ContentType string

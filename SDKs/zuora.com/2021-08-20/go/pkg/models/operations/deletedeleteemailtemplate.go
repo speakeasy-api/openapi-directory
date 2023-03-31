@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEDELETEEmailTemplatePathParams struct {
-	// The ID of the email template to be deleted.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DELETEDELETEEmailTemplateHeaders struct {
+type DELETEDELETEEmailTemplateRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
@@ -26,11 +21,8 @@ type DELETEDELETEEmailTemplateHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETEDELETEEmailTemplateRequest struct {
-	PathParams DELETEDELETEEmailTemplatePathParams
-	Headers    DELETEDELETEEmailTemplateHeaders
+	// The ID of the email template to be deleted.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DELETEDELETEEmailTemplateResponse struct {

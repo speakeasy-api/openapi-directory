@@ -34,7 +34,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CreateWebhook - Create a new webhook subscription
-func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateWebhookRequest) (*operations.CreateWebhookResponse, error) {
+func (s *webhooks) CreateWebhook(ctx context.Context, request shared.WebhookCreate) (*operations.CreateWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/self/webhooks"
 
@@ -111,7 +111,7 @@ func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateW
 // DestroyWebhook - Remove a web hook
 func (s *webhooks) DestroyWebhook(ctx context.Context, request operations.DestroyWebhookRequest) (*operations.DestroyWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -233,7 +233,7 @@ func (s *webhooks) ListWebhooks(ctx context.Context) (*operations.ListWebhooksRe
 // RenewWebhook - Renews a web hook
 func (s *webhooks) RenewWebhook(ctx context.Context, request operations.RenewWebhookRequest) (*operations.RenewWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}/renew", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}/renew", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -298,7 +298,7 @@ func (s *webhooks) RenewWebhook(ctx context.Context, request operations.RenewWeb
 // ViewWebhook - Get web hook details
 func (s *webhooks) ViewWebhook(ctx context.Context, request operations.ViewWebhookRequest) (*operations.ViewWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

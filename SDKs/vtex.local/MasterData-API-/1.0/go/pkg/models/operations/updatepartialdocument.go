@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdatepartialdocumentPathParams struct {
+type UpdatepartialdocumentRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept      string                 `header:"style=simple,explode=false,name=Accept"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Two letter word that identifies the data structure
 	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdatepartialdocumentHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type UpdatepartialdocumentRequest struct {
-	PathParams UpdatepartialdocumentPathParams
-	Headers    UpdatepartialdocumentHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdatepartialdocumentResponse struct {

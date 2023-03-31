@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignAllPhoneNumsAutoReceptionistSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UnassignAllPhoneNumsAutoReceptionistPathParams struct {
-	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UnassignAllPhoneNumsAutoReceptionistRequest struct {
-	PathParams UnassignAllPhoneNumsAutoReceptionistPathParams
-	Security   UnassignAllPhoneNumsAutoReceptionistSecurity
+	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
 }
 
 type UnassignAllPhoneNumsAutoReceptionistResponse struct {

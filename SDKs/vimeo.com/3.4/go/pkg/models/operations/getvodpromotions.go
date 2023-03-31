@@ -10,12 +10,7 @@ import (
 )
 
 type GetVodPromotionsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetVodPromotionsPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetVodPromotionsFilterEnum - The filter to apply to the results.
@@ -48,19 +43,15 @@ func (e *GetVodPromotionsFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVodPromotionsQueryParams struct {
+type GetVodPromotionsRequest struct {
 	// The filter to apply to the results.
 	Filter GetVodPromotionsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVodPromotionsRequest struct {
-	PathParams  GetVodPromotionsPathParams
-	QueryParams GetVodPromotionsQueryParams
-	Security    GetVodPromotionsSecurity
 }
 
 type GetVodPromotionsResponse struct {

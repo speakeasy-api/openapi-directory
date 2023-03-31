@@ -8,12 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTargetsTargetIDScansPathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDScansQueryParams struct {
+type GetTargetsTargetIDScansRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -27,11 +22,8 @@ type GetTargetsTargetIDScansQueryParams struct {
 	Started []types.Date `queryParam:"style=form,explode=true,name=started"`
 	// Filter by scan statuses
 	Status *shared.ScanStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetTargetsTargetIDScansRequest struct {
-	PathParams  GetTargetsTargetIDScansPathParams
-	QueryParams GetTargetsTargetIDScansQueryParams
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // GetTargetsTargetIDScans404ApplicationJSON - Not found

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BurnTokenRequest struct {
-	// Object representing the token to be burned
-	Request shared.BurnTokenRequest `request:"mediaType=application/json"`
-}
-
 type BurnTokenResponse struct {
 	ContentType string
 	// Unexpected error

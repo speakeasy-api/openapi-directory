@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Start1PathParams struct {
+type Start1Request struct {
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type Start1Request struct {
-	PathParams Start1PathParams
 }
 
 type Start1Response struct {

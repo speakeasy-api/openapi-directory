@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCompanyAttendancesRequest struct {
-	// List of attendance periods to create
-	Request shared.NewAttendancePeriodRequest `request:"mediaType=application/json"`
-}
-
 type PostCompanyAttendancesResponse struct {
 	ContentType string
 	// Invalid request

@@ -3,31 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AssociateServiceQuotaTemplateRequest(
-    headers=operations.AssociateServiceQuotaTemplateHeaders(
-        x_amz_algorithm="dolore",
-        x_amz_content_sha256="eveniet",
-        x_amz_credential="aut",
-        x_amz_date="velit",
-        x_amz_security_token="omnis",
-        x_amz_signature="amet",
-        x_amz_signed_headers="numquam",
-        x_amz_target="ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request={
-        "ex": "id",
-        "ea": "non",
-        "non": "quam",
+)
+
+
+req = operations.AssociateServiceQuotaTemplateRequest(
+    request_body={
+        "provident": "distinctio",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
     },
+    x_amz_algorithm="illum",
+    x_amz_content_sha256="vel",
+    x_amz_credential="error",
+    x_amz_date="deserunt",
+    x_amz_security_token="suscipit",
+    x_amz_signature="iure",
+    x_amz_signed_headers="magnam",
+    x_amz_target="ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
 )
     
 res = s.associate_service_quota_template(req)

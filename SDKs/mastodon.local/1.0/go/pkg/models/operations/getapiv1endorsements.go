@@ -8,21 +8,16 @@ import (
 )
 
 type GetAPIV1EndorsementsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1EndorsementsQueryParams struct {
+type GetAPIV1EndorsementsRequest struct {
 	// Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Internal parameter. Use HTTP Link header from response for pagination
 	MaxID *string `queryParam:"style=form,explode=true,name=max_id"`
 	// Internal parameter. Use HTTP Link header from response for pagination.
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1EndorsementsRequest struct {
-	QueryParams GetAPIV1EndorsementsQueryParams
-	Security    GetAPIV1EndorsementsSecurity
 }
 
 type GetAPIV1EndorsementsResponse struct {

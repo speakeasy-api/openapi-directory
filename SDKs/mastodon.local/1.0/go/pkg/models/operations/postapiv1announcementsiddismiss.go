@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1AnnouncementsIDDismissSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AnnouncementsIDDismissPathParams struct {
-	// Local ID of an announcement in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AnnouncementsIDDismissRequest struct {
-	PathParams PostAPIV1AnnouncementsIDDismissPathParams
-	Security   PostAPIV1AnnouncementsIDDismissSecurity
+	// Local ID of an announcement in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AnnouncementsIDDismissResponse struct {

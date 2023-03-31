@@ -8,17 +8,12 @@ import (
 )
 
 type ParseNameGeoSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ParseNameGeoPathParams struct {
-	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
-	NameFull    string `pathParam:"style=simple,explode=false,name=nameFull"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ParseNameGeoRequest struct {
-	PathParams ParseNameGeoPathParams
-	Security   ParseNameGeoSecurity
+	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
+	NameFull    string `pathParam:"style=simple,explode=false,name=nameFull"`
 }
 
 type ParseNameGeoResponse struct {

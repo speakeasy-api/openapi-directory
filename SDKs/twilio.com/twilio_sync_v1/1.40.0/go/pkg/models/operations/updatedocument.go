@@ -12,19 +12,8 @@ var UpdateDocumentServerList = []string{
 }
 
 type UpdateDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDocumentPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Document resource to update. Can be the Document resource's `sid` or its `unique_name`.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateDocumentHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDocumentUpdateDocumentRequest struct {
@@ -35,11 +24,13 @@ type UpdateDocumentUpdateDocumentRequest struct {
 }
 
 type UpdateDocumentRequest struct {
-	PathParams UpdateDocumentPathParams
-	Headers    UpdateDocumentHeaders
-	Request    *UpdateDocumentUpdateDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDocumentSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch     *string                              `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody *UpdateDocumentUpdateDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Document resource to update. Can be the Document resource's `sid` or its `unique_name`.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateDocumentResponse struct {

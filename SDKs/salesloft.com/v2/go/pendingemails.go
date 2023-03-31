@@ -44,7 +44,7 @@ func (s *pendingEmails) GetV2PendingEmailsJSON(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,9 +86,9 @@ func (s *pendingEmails) GetV2PendingEmailsJSON(ctx context.Context, request oper
 // Updates the status of an email sent by an External Email Client. Does not affect lofted emails.
 func (s *pendingEmails) PutV2PendingEmailsIDJSON(ctx context.Context, request operations.PutV2PendingEmailsIDJSONRequest) (*operations.PutV2PendingEmailsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/pending_emails/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/pending_emails/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

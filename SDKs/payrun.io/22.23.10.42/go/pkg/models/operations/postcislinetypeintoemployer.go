@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCisLineTypeIntoEmployerPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type PostCisLineTypeIntoEmployerHeaders struct {
+type PostCisLineTypeIntoEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostCisLineTypeIntoEmployerRequest struct {
-	PathParams PostCisLineTypeIntoEmployerPathParams
-	Headers    PostCisLineTypeIntoEmployerHeaders
 	// The CIS line type object.
-	Request shared.CisLineType `request:"mediaType=application/json"`
+	CisLineType shared.CisLineType `request:"mediaType=application/json"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type PostCisLineTypeIntoEmployerResponse struct {

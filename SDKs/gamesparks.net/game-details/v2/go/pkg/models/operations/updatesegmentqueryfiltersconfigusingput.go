@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSegmentQueryFiltersConfigUsingPUTPathParams struct {
+type UpdateSegmentQueryFiltersConfigUsingPUTRequest struct {
+	// segmentQueryConfig
+	SegmentQueryFilterConfigModel shared.SegmentQueryFilterConfigModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type UpdateSegmentQueryFiltersConfigUsingPUTRequest struct {
-	PathParams UpdateSegmentQueryFiltersConfigUsingPUTPathParams
-	// segmentQueryConfig
-	Request shared.SegmentQueryFilterConfigModel `request:"mediaType=application/json"`
 }
 
 type UpdateSegmentQueryFiltersConfigUsingPUTResponse struct {

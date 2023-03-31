@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.SvgconvertRequest(
-    request=operations.SvgconvertFileToConvert(
-        file=operations.SvgconvertFileToConvertFile(
-            content="assumenda".encode(),
-            file="sit",
-        ),
+
+
+req = operations.SvgconvertFileToConvert(
+    file=operations.SvgconvertFileToConvertFile(
+        content="corrupti".encode(),
+        file="provident",
     ),
 )
     

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetKeysIDPathParams struct {
+type GetKeysIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetKeysIDRequest struct {
-	PathParams GetKeysIDPathParams
 }
 
 // GetKeysID403ApplicationJSON - Not allowed to perform operation

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListIdpGroupsInOrgPathParams struct {
+type TeamsListIdpGroupsInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsListIdpGroupsInOrgRequest struct {
-	PathParams TeamsListIdpGroupsInOrgPathParams
 }
 
 type TeamsListIdpGroupsInOrgResponse struct {

@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetKYCSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetKYCRequest struct {
-	Security GetKYCSecurity
-}
-
 type GetKYCResponse struct {
 	ContentType string
 	// OK

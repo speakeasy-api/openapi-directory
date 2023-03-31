@@ -12,14 +12,8 @@ var CreateSipIPAddressServerList = []string{
 }
 
 type CreateSipIPAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipIPAddressPathParams struct {
-	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The IpAccessControlList Sid with which to associate the created IpAddress resource.
-	IPAccessControlListSid string `pathParam:"style=simple,explode=false,name=IpAccessControlListSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipIPAddressCreateSipIPAddressRequest struct {
@@ -32,10 +26,11 @@ type CreateSipIPAddressCreateSipIPAddressRequest struct {
 }
 
 type CreateSipIPAddressRequest struct {
-	PathParams CreateSipIPAddressPathParams
-	Request    *CreateSipIPAddressCreateSipIPAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipIPAddressSecurity
-	ServerURL  *string
+	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The IpAccessControlList Sid with which to associate the created IpAddress resource.
+	IPAccessControlListSid string                                       `pathParam:"style=simple,explode=false,name=IpAccessControlListSid"`
+	RequestBody            *CreateSipIPAddressCreateSipIPAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipIPAddressResponse struct {

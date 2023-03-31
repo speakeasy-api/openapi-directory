@@ -24,11 +24,6 @@ type PostOauthAccessTokenRequestBody struct {
 	OauthVerifier *string `json:"oauth_verifier,omitempty"`
 }
 
-type PostOauthAccessTokenRequest struct {
-	// OAuth Parameters
-	Request PostOauthAccessTokenRequestBody `request:"mediaType=application/json"`
-}
-
 // PostOauthAccessToken200ApplicationJSON - Access token and token secret
 type PostOauthAccessToken200ApplicationJSON struct {
 	OauthToken       *string `json:"oauth_token,omitempty"`

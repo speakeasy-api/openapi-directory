@@ -4,41 +4,27 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OperationsSchedulesFromDateTimeByOriginAndDestinationGetPathParams struct {
+type OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Destination airport. 3-letter IATA airport code (e.g. 'FRA')
 	Destination string `pathParam:"style=simple,explode=false,name=destination"`
-	// Local departure date and optionally departure time (YYYY-MM-DD or YYYY-MM-DDTHH:mm). When not provided, time is assumed to be 00:01
-	FromDateTime string `pathParam:"style=simple,explode=false,name=fromDateTime"`
-	// Departure airport. 3-letter IATA airport code (e.g. 'ZRH')
-	Origin string `pathParam:"style=simple,explode=false,name=origin"`
-}
-
-type OperationsSchedulesFromDateTimeByOriginAndDestinationGetQueryParams struct {
 	// Show only direct flights (false=0, true=1). Default is false
 	DirectFlights *bool `queryParam:"style=form,explode=true,name=directFlights"`
+	// Local departure date and optionally departure time (YYYY-MM-DD or YYYY-MM-DDTHH:mm). When not provided, time is assumed to be 00:01
+	FromDateTime string `pathParam:"style=simple,explode=false,name=fromDateTime"`
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type OperationsSchedulesFromDateTimeByOriginAndDestinationGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest struct {
-	PathParams  OperationsSchedulesFromDateTimeByOriginAndDestinationGetPathParams
-	QueryParams OperationsSchedulesFromDateTimeByOriginAndDestinationGetQueryParams
-	Headers     OperationsSchedulesFromDateTimeByOriginAndDestinationGetHeaders
-	Security    OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity
+	// Departure airport. 3-letter IATA airport code (e.g. 'ZRH')
+	Origin string `pathParam:"style=simple,explode=false,name=origin"`
 }
 
 type OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse struct {

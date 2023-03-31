@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAllFacilitiesRequest{
-        Security: operations.GetAllFacilitiesSecurity{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Headers: operations.GetAllFacilitiesHeaders{
-            Accept: "application/vnd.geo+json",
-        },
+        Accept: "application/vnd.geo+json",
     }
 
     ctx := context.Background()
-    res, err := s.Facilities.GetAllFacilities(ctx, req)
+    res, err := s.Facilities.GetAllFacilities(ctx, req, operations.GetAllFacilitiesSecurity{
+        Apikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -30,7 +30,6 @@ pkg/models/shared/capacitycommitment.go
 pkg/models/shared/status.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listcapacitycommitmentsresponse.go
 pkg/models/shared/mergecapacitycommitmentsrequest.go
 pkg/models/shared/splitcapacitycommitmentresponse.go

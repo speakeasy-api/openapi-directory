@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetCleansessionPathParams struct {
+type ProtocolMqttClientSetCleansessionRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Clean session
 	CleanOrNot int `pathParam:"style=simple,explode=false,name=cleanOrNot"`
-}
-
-type ProtocolMqttClientSetCleansessionRequest struct {
-	PathParams ProtocolMqttClientSetCleansessionPathParams
 }
 
 type ProtocolMqttClientSetCleansessionResponse struct {

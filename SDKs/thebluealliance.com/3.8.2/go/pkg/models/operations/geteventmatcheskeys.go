@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetEventMatchesKeysSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetEventMatchesKeysPathParams struct {
-	// TBA Event Key, eg `2016nytr`
-	EventKey string `pathParam:"style=simple,explode=false,name=event_key"`
-}
-
-type GetEventMatchesKeysHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetEventMatchesKeysRequest struct {
-	PathParams GetEventMatchesKeysPathParams
-	Headers    GetEventMatchesKeysHeaders
-	Security   GetEventMatchesKeysSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// TBA Event Key, eg `2016nytr`
+	EventKey string `pathParam:"style=simple,explode=false,name=event_key"`
 }
 
 type GetEventMatchesKeysResponse struct {

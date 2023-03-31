@@ -3,76 +3,72 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddCustomAttributesRequest(
-    headers=operations.AddCustomAttributesHeaders(
-        x_amz_algorithm="consectetur",
-        x_amz_content_sha256="voluptatibus",
-        x_amz_credential="doloremque",
-        x_amz_date="neque",
-        x_amz_security_token="sint",
-        x_amz_signature="iste",
-        x_amz_signed_headers="temporibus",
-        x_amz_target="AWSCognitoIdentityProviderService.AddCustomAttributes",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddCustomAttributesRequest(
+)
+
+
+req = operations.AddCustomAttributesRequest(
+    add_custom_attributes_request=shared.AddCustomAttributesRequest(
         custom_attributes=[
+            shared.SchemaAttributeType(
+                attribute_data_type="DateTime",
+                developer_only_attribute=False,
+                mutable=False,
+                name="distinctio",
+                number_attribute_constraints=shared.NumberAttributeConstraintsType(
+                    max_value="quibusdam",
+                    min_value="unde",
+                ),
+                required=False,
+                string_attribute_constraints=shared.StringAttributeConstraintsType(
+                    max_length="nulla",
+                    min_length="corrupti",
+                ),
+            ),
             shared.SchemaAttributeType(
                 attribute_data_type="Boolean",
                 developer_only_attribute=False,
-                mutable=True,
-                name="ducimus",
-                number_attribute_constraints=shared.NumberAttributeConstraintsType(
-                    max_value="ut",
-                    min_value="incidunt",
-                ),
-                required=False,
-                string_attribute_constraints=shared.StringAttributeConstraintsType(
-                    max_length="voluptatem",
-                    min_length="voluptates",
-                ),
-            ),
-            shared.SchemaAttributeType(
-                attribute_data_type="DateTime",
-                developer_only_attribute=True,
                 mutable=False,
-                name="ut",
+                name="vel",
                 number_attribute_constraints=shared.NumberAttributeConstraintsType(
-                    max_value="quaerat",
-                    min_value="ut",
-                ),
-                required=True,
-                string_attribute_constraints=shared.StringAttributeConstraintsType(
-                    max_length="vel",
-                    min_length="et",
-                ),
-            ),
-            shared.SchemaAttributeType(
-                attribute_data_type="DateTime",
-                developer_only_attribute=False,
-                mutable=True,
-                name="inventore",
-                number_attribute_constraints=shared.NumberAttributeConstraintsType(
-                    max_value="impedit",
-                    min_value="molestiae",
+                    max_value="error",
+                    min_value="deserunt",
                 ),
                 required=False,
                 string_attribute_constraints=shared.StringAttributeConstraintsType(
-                    max_length="dignissimos",
-                    min_length="consectetur",
+                    max_length="suscipit",
+                    min_length="iure",
+                ),
+            ),
+            shared.SchemaAttributeType(
+                attribute_data_type="Number",
+                developer_only_attribute=False,
+                mutable=False,
+                name="debitis",
+                number_attribute_constraints=shared.NumberAttributeConstraintsType(
+                    max_value="ipsa",
+                    min_value="delectus",
+                ),
+                required=False,
+                string_attribute_constraints=shared.StringAttributeConstraintsType(
+                    max_length="tempora",
+                    min_length="suscipit",
                 ),
             ),
         ],
-        user_pool_id="repellendus",
+        user_pool_id="molestiae",
     ),
+    x_amz_algorithm="minus",
+    x_amz_content_sha256="placeat",
+    x_amz_credential="voluptatum",
+    x_amz_date="iusto",
+    x_amz_security_token="excepturi",
+    x_amz_signature="nisi",
+    x_amz_signed_headers="recusandae",
+    x_amz_target="AWSCognitoIdentityProviderService.AddCustomAttributes",
 )
     
 res = s.add_custom_attributes(req)

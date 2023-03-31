@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PersonalityQueryParams struct {
-	All *bool `queryParam:"style=form,explode=true,name=all"`
-}
-
 type PersonalityRequest struct {
-	QueryParams PersonalityQueryParams
-	Request     []shared.Post `request:"mediaType=application/json"`
+	RequestBody []shared.Post `request:"mediaType=application/json"`
+	All         *bool         `queryParam:"style=form,explode=true,name=all"`
 }
 
 type PersonalityResponse struct {

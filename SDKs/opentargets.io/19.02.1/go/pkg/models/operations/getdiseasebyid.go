@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDiseaseByIDPathParams struct {
+type GetDiseaseByIDRequest struct {
 	// An EFO identifier.
 	Disease string `pathParam:"style=simple,explode=false,name=disease"`
-}
-
-type GetDiseaseByIDRequest struct {
-	PathParams GetDiseaseByIDPathParams
 }
 
 type GetDiseaseByIDResponse struct {

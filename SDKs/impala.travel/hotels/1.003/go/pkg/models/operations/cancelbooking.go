@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelBookingPathParams struct {
+type CancelBookingRequest struct {
 	// The unique identifier of the booking you would like to update.
 	BookingID string `pathParam:"style=simple,explode=false,name=bookingId"`
-}
-
-type CancelBookingRequest struct {
-	PathParams CancelBookingPathParams
 }
 
 type CancelBookingResponse struct {

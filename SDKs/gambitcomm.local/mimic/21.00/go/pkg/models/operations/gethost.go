@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetHostPathParams struct {
+type GetHostRequest struct {
 	// Agent to return the primary IP
 	AgentNum int64 `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetHostRequest struct {
-	PathParams GetHostPathParams
 }
 
 type GetHostResponse struct {

@@ -34,7 +34,7 @@ func newQtl(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // GETMappedQTLByPositionUsingGET - Returns a list QTL for given position and assembly map
 func (s *qtl) GETMappedQTLByPositionUsingGET(ctx context.Context, request operations.GETMappedQTLByPositionUsingGETRequest) (*operations.GETMappedQTLByPositionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/qtls/mapped/{chr}/{start}/{stop}/{mapKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/qtls/mapped/{chr}/{start}/{stop}/{mapKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *qtl) GETMappedQTLByPositionUsingGET(ctx context.Context, request operat
 // GETQTLByRgdIDUsingGET - Return a QTL for provided RGD ID
 func (s *qtl) GETQTLByRgdIDUsingGET(ctx context.Context, request operations.GETQTLByRgdIDUsingGETRequest) (*operations.GETQTLByRgdIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/qtls/{rgdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/qtls/{rgdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +132,7 @@ func (s *qtl) GETQTLByRgdIDUsingGET(ctx context.Context, request operations.GETQ
 // GETQtlListByPositionUsingGET - Returns a list QTL for given position and assembly map
 func (s *qtl) GETQtlListByPositionUsingGET(ctx context.Context, request operations.GETQtlListByPositionUsingGETRequest) (*operations.GETQtlListByPositionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/qtls/{chr}/{start}/{stop}/{mapKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/qtls/{chr}/{start}/{stop}/{mapKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

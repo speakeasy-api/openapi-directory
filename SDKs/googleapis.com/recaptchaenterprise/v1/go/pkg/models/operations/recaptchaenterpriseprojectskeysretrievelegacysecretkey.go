@@ -8,16 +8,11 @@ import (
 )
 
 type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyPathParams struct {
-	// Required. The public key name linked to the requested secret key in the format "projects/{project}/keys/{key}".
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams struct {
+type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,6 +23,8 @@ type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The public key name linked to the requested secret key in the format "projects/{project}/keys/{key}".
+	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -38,12 +35,6 @@ type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest struct {
-	PathParams  RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyPathParams
-	QueryParams RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams
-	Security    RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity
 }
 
 type RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse struct {

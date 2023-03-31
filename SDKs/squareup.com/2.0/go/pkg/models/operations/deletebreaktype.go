@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteBreakTypeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteBreakTypePathParams struct {
-	// The UUID for the `BreakType` being deleted.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteBreakTypeRequest struct {
-	PathParams DeleteBreakTypePathParams
-	Security   DeleteBreakTypeSecurity
+	// The UUID for the `BreakType` being deleted.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteBreakTypeResponse struct {

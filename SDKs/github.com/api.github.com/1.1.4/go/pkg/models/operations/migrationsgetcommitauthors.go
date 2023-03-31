@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsGetCommitAuthorsPathParams struct {
+type MigrationsGetCommitAuthorsRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type MigrationsGetCommitAuthorsQueryParams struct {
 	// A user ID. Only return users with an ID greater than this ID.
 	Since *int64 `queryParam:"style=form,explode=true,name=since"`
-}
-
-type MigrationsGetCommitAuthorsRequest struct {
-	PathParams  MigrationsGetCommitAuthorsPathParams
-	QueryParams MigrationsGetCommitAuthorsQueryParams
 }
 
 type MigrationsGetCommitAuthorsResponse struct {

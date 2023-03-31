@@ -7,29 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PredictImageURLWithNoStoreJSONPathParams struct {
-	// The project id
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PredictImageURLWithNoStoreJSONQueryParams struct {
+type PredictImageURLWithNoStoreJSONRequest struct {
+	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
+	ImageURL      shared.ImageURL `request:"mediaType=application/json"`
+	PredictionKey string          `header:"style=simple,explode=false,name=Prediction-Key"`
 	// Optional. Specifies the name of application using the endpoint
 	Application *string `queryParam:"style=form,explode=true,name=application"`
 	// Optional. Specifies the id of a particular iteration to evaluate against.
 	//             The default iteration for the project will be used when not specified
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type PredictImageURLWithNoStoreJSONHeaders struct {
-	PredictionKey string `header:"style=simple,explode=false,name=Prediction-Key"`
-}
-
-type PredictImageURLWithNoStoreJSONRequest struct {
-	PathParams  PredictImageURLWithNoStoreJSONPathParams
-	QueryParams PredictImageURLWithNoStoreJSONQueryParams
-	Headers     PredictImageURLWithNoStoreJSONHeaders
-	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
-	Request shared.ImageURL `request:"mediaType=application/json"`
+	// The project id
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type PredictImageURLWithNoStoreJSONResponse struct {

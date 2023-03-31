@@ -8,49 +8,6 @@ import (
 	"net/http"
 )
 
-type UserUpdatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-// UserUpdateLoginTypeEnum - `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
-type UserUpdateLoginTypeEnum string
-
-const (
-	UserUpdateLoginTypeEnumZero             UserUpdateLoginTypeEnum = "0"
-	UserUpdateLoginTypeEnumOne              UserUpdateLoginTypeEnum = "1"
-	UserUpdateLoginTypeEnumNinetyNine       UserUpdateLoginTypeEnum = "99"
-	UserUpdateLoginTypeEnumOneHundred       UserUpdateLoginTypeEnum = "100"
-	UserUpdateLoginTypeEnumOneHundredAndOne UserUpdateLoginTypeEnum = "101"
-)
-
-func (e *UserUpdateLoginTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "0":
-		fallthrough
-	case "1":
-		fallthrough
-	case "99":
-		fallthrough
-	case "100":
-		fallthrough
-	case "101":
-		*e = UserUpdateLoginTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UserUpdateLoginTypeEnum: %s", s)
-	}
-}
-
-type UserUpdateQueryParams struct {
-	// `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
-	LoginType *UserUpdateLoginTypeEnum `queryParam:"style=form,explode=true,name=login_type"`
-}
-
 // UserUpdateApplicationJSONCustomAttributes - Custom attribute(s) of the user.
 type UserUpdateApplicationJSONCustomAttributes struct {
 	// Identifier for the custom attribute.
@@ -150,11 +107,46 @@ type UserUpdateApplicationJSON struct {
 	VanityName *string `json:"vanity_name,omitempty"`
 }
 
+// UserUpdateLoginTypeEnum - `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
+type UserUpdateLoginTypeEnum string
+
+const (
+	UserUpdateLoginTypeEnumZero             UserUpdateLoginTypeEnum = "0"
+	UserUpdateLoginTypeEnumOne              UserUpdateLoginTypeEnum = "1"
+	UserUpdateLoginTypeEnumNinetyNine       UserUpdateLoginTypeEnum = "99"
+	UserUpdateLoginTypeEnumOneHundred       UserUpdateLoginTypeEnum = "100"
+	UserUpdateLoginTypeEnumOneHundredAndOne UserUpdateLoginTypeEnum = "101"
+)
+
+func (e *UserUpdateLoginTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "0":
+		fallthrough
+	case "1":
+		fallthrough
+	case "99":
+		fallthrough
+	case "100":
+		fallthrough
+	case "101":
+		*e = UserUpdateLoginTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UserUpdateLoginTypeEnum: %s", s)
+	}
+}
+
 type UserUpdateRequest struct {
-	PathParams  UserUpdatePathParams
-	QueryParams UserUpdateQueryParams
 	// User
-	Request UserUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody UserUpdateApplicationJSON `request:"mediaType=application/json"`
+	// `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
+	LoginType *UserUpdateLoginTypeEnum `queryParam:"style=form,explode=true,name=login_type"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserUpdateResponse struct {

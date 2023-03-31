@@ -13,10 +13,6 @@ type PostV2OngoingActionsJSONRequestBody struct {
 	ActionID *int64 `form:"name=action_id"`
 }
 
-type PostV2OngoingActionsJSONRequest struct {
-	Request *PostV2OngoingActionsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2OngoingActionsJSONResponse struct {
 	Body        []byte
 	ContentType string

@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetProfileRequest(
-    query_params=operations.GetProfileQueryParams(
-        id="inventore",
-        service="quia",
-    ),
+    id="{{your-member-id}}",
+    service="{{service-identifier}}",
 )
     
 res = s.get_profile(req)

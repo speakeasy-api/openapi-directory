@@ -28,10 +28,6 @@ type CreateOrganizationRequestBody struct {
 	Name string `json:"name"`
 }
 
-type CreateOrganizationRequest struct {
-	Request CreateOrganizationRequestBody `request:"mediaType=application/json"`
-}
-
 // CreateOrganization201ApplicationJSONAPI - API related settings
 type CreateOrganization201ApplicationJSONAPI struct {
 	// Enable API access

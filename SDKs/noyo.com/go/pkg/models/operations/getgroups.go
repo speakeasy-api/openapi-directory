@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupsQueryParams struct {
+type GetGroupsRequest struct {
 	// The comma separated list of group_ids to filter by
 	GroupIds *string `queryParam:"style=form,explode=true,name=group_ids"`
 	// The integer offset at which to start the page. Possible values are 0 to total_records - 1
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// The max size of each page of results
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetGroupsRequest struct {
-	QueryParams GetGroupsQueryParams
 }
 
 type GetGroupsResponse struct {

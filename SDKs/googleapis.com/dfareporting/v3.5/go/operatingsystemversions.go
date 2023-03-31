@@ -32,20 +32,20 @@ func newOperatingSystemVersions(defaultClient, securityClient HTTPClient, server
 }
 
 // DfareportingOperatingSystemVersionsGet - Gets one operating system version by ID.
-func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsGet(ctx context.Context, request operations.DfareportingOperatingSystemVersionsGetRequest) (*operations.DfareportingOperatingSystemVersionsGetResponse, error) {
+func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsGet(ctx context.Context, request operations.DfareportingOperatingSystemVersionsGetRequest, security operations.DfareportingOperatingSystemVersionsGetSecurity) (*operations.DfareportingOperatingSystemVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsGet(ctx con
 }
 
 // DfareportingOperatingSystemVersionsList - Retrieves a list of operating system versions.
-func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsList(ctx context.Context, request operations.DfareportingOperatingSystemVersionsListRequest) (*operations.DfareportingOperatingSystemVersionsListResponse, error) {
+func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsList(ctx context.Context, request operations.DfareportingOperatingSystemVersionsListRequest, security operations.DfareportingOperatingSystemVersionsListSecurity) (*operations.DfareportingOperatingSystemVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

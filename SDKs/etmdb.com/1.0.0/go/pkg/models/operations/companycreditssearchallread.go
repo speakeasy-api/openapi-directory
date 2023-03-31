@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CompanyCreditsSearchallReadPathParams struct {
-	Param string `pathParam:"style=simple,explode=false,name=param"`
-}
-
 type CompanyCreditsSearchallReadRequest struct {
-	PathParams CompanyCreditsSearchallReadPathParams
+	Param string `pathParam:"style=simple,explode=false,name=param"`
 }
 
 type CompanyCreditsSearchallReadResponse struct {

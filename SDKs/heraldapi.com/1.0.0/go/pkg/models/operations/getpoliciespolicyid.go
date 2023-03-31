@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPoliciesPolicyIDPathParams struct {
+type GetPoliciesPolicyIDRequest struct {
 	// `id` for a specific policy
 	PolicyID string `pathParam:"style=simple,explode=false,name=policy_id"`
-}
-
-type GetPoliciesPolicyIDRequest struct {
-	PathParams GetPoliciesPolicyIDPathParams
 }
 
 // GetPoliciesPolicyID200ApplicationJSON - OK

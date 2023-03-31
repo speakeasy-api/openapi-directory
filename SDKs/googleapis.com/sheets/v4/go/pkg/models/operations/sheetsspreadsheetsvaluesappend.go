@@ -10,31 +10,24 @@ import (
 )
 
 type SheetsSpreadsheetsValuesAppendSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesAppendSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesAppendSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesAppendSecurity struct {
 	Option1 *SheetsSpreadsheetsValuesAppendSecurityOption1 `security:"option"`
 	Option2 *SheetsSpreadsheetsValuesAppendSecurityOption2 `security:"option"`
 	Option3 *SheetsSpreadsheetsValuesAppendSecurityOption3 `security:"option"`
-}
-
-type SheetsSpreadsheetsValuesAppendPathParams struct {
-	// The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of data. Values are appended after the last row of the table.
-	Range string `pathParam:"style=simple,explode=false,name=range"`
-	// The ID of the spreadsheet to update.
-	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 }
 
 // SheetsSpreadsheetsValuesAppendInsertDataOptionEnum - How the input data should be inserted.
@@ -139,9 +132,10 @@ func (e *SheetsSpreadsheetsValuesAppendValueInputOptionEnum) UnmarshalJSON(data 
 	}
 }
 
-type SheetsSpreadsheetsValuesAppendQueryParams struct {
+type SheetsSpreadsheetsValuesAppendRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ValueRange  *shared.ValueRange `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -162,23 +156,20 @@ type SheetsSpreadsheetsValuesAppendQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of data. Values are appended after the last row of the table.
+	Range string `pathParam:"style=simple,explode=false,name=range"`
 	// Determines how dates, times, and durations in the response should be rendered. This is ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
 	ResponseDateTimeRenderOption *SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum `queryParam:"style=form,explode=true,name=responseDateTimeRenderOption"`
 	// Determines how values in the response should be rendered. The default render option is FORMATTED_VALUE.
 	ResponseValueRenderOption *SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum `queryParam:"style=form,explode=true,name=responseValueRenderOption"`
+	// The ID of the spreadsheet to update.
+	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// How the input data should be interpreted.
 	ValueInputOption *SheetsSpreadsheetsValuesAppendValueInputOptionEnum `queryParam:"style=form,explode=true,name=valueInputOption"`
-}
-
-type SheetsSpreadsheetsValuesAppendRequest struct {
-	PathParams  SheetsSpreadsheetsValuesAppendPathParams
-	QueryParams SheetsSpreadsheetsValuesAppendQueryParams
-	Request     *shared.ValueRange `request:"mediaType=application/json"`
-	Security    SheetsSpreadsheetsValuesAppendSecurity
 }
 
 type SheetsSpreadsheetsValuesAppendResponse struct {

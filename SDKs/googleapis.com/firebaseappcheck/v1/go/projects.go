@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirebaseappcheckProjectsAppsAppAttestConfigBatchGet - Atomically gets the AppAttestConfigs for the specified list of apps.
-func (s *projects) FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest) (*operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/appAttestConfig:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/appAttestConfig:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx conte
 }
 
 // FirebaseappcheckProjectsAppsDebugTokensCreate - Creates a new DebugToken for the specified app. For security reasons, after the creation operation completes, the `token` field cannot be updated or retrieved, but you can revoke the debug token using DeleteDebugToken. Each app can have a maximum of 20 debug tokens.
-func (s *projects) FirebaseappcheckProjectsAppsDebugTokensCreate(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest) (*operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsDebugTokensCreate(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest, security operations.FirebaseappcheckProjectsAppsDebugTokensCreateSecurity) (*operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/debugTokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/debugTokens", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1DebugToken", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensCreate(ctx context.Con
 }
 
 // FirebaseappcheckProjectsAppsDebugTokensDelete - Deletes the specified DebugToken. A deleted debug token cannot be used to exchange for an App Check token. Use this method when you suspect the secret `token` has been compromised or when you no longer need the debug token.
-func (s *projects) FirebaseappcheckProjectsAppsDebugTokensDelete(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest) (*operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsDebugTokensDelete(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest, security operations.FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity) (*operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensDelete(ctx context.Con
 }
 
 // FirebaseappcheckProjectsAppsDebugTokensList - Lists all DebugTokens for the specified app. For security reasons, the `token` field is never populated in the response.
-func (s *projects) FirebaseappcheckProjectsAppsDebugTokensList(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensListRequest) (*operations.FirebaseappcheckProjectsAppsDebugTokensListResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsDebugTokensList(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensListRequest, security operations.FirebaseappcheckProjectsAppsDebugTokensListSecurity) (*operations.FirebaseappcheckProjectsAppsDebugTokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/debugTokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/debugTokens", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensList(ctx context.Conte
 }
 
 // FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet - Atomically gets the DeviceCheckConfigs for the specified list of apps. For security reasons, the `private_key` field is never populated in the response.
-func (s *projects) FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest) (*operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/deviceCheckConfig:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/deviceCheckConfig:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,11 +279,11 @@ func (s *projects) FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(ctx con
 }
 
 // FirebaseappcheckProjectsAppsExchangeAppAttestAssertion - Accepts an App Attest assertion and an artifact previously obtained from ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAssertion(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest) (*operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAssertion(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest, security operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeAppAttestAssertion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeAppAttestAssertion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeAppAttestAssertionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,11 +295,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAssertion(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAssertion(ctx co
 }
 
 // FirebaseappcheckProjectsAppsExchangeAppAttestAttestation - Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's response object will also contain an AppCheckToken (if the verification is successful).
-func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAttestation(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest) (*operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAttestation(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest, security operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeAppAttestAttestation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeAppAttestAttestation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAttestation(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAttestation(ctx 
 }
 
 // FirebaseappcheckProjectsAppsExchangeCustomToken - Validates a custom token signed using your project's Admin SDK service account credentials. If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeCustomToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeCustomToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeCustomTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeCustomToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeCustomToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeCustomTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeCustomToken(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeCustomToken(ctx context.C
 }
 
 // FirebaseappcheckProjectsAppsExchangeDebugToken - Validates a debug token secret that you have previously created using CreateDebugToken. If valid, returns an AppCheckToken. Note that a restrictive quota is enforced on this method to prevent accidental exposure of the app to abuse.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeDebugToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeDebugToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeDebugTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeDebugToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeDebugToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeDebugToken(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeDebugToken(ctx context.Co
 }
 
 // FirebaseappcheckProjectsAppsExchangeDeviceCheckToken - Accepts a [`device_token`](https://developer.apple.com/documentation/devicecheck/dcdevice) issued by DeviceCheck, and attempts to validate it with Apple. If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeDeviceCheckToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeDeviceCheckToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeDeviceCheckToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeDeviceCheckToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeDeviceCheckToken(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,11 +554,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeDeviceCheckToken(ctx cont
 }
 
 // FirebaseappcheckProjectsAppsExchangePlayIntegrityToken - Validates an [integrity verdict response token from Play Integrity](https://developer.android.com/google/play/integrity/verdict#decrypt-verify). If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangePlayIntegrityToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangePlayIntegrityToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangePlayIntegrityToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangePlayIntegrityToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangePlayIntegrityTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,11 +570,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangePlayIntegrityToken(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,11 +609,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangePlayIntegrityToken(ctx co
 }
 
 // FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken - Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com/recaptcha-enterprise/docs/create-assessment#retrieve_token). If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeRecaptchaEnterpriseToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeRecaptchaEnterpriseToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -625,11 +625,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,11 +664,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(
 }
 
 // FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token - Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeRecaptchaV3Token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeRecaptchaV3Token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeRecaptchaV3TokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -680,11 +680,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,11 +719,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token(ctx cont
 }
 
 // FirebaseappcheckProjectsAppsExchangeSafetyNetToken - Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If valid, returns an AppCheckToken.
-func (s *projects) FirebaseappcheckProjectsAppsExchangeSafetyNetToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest) (*operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsExchangeSafetyNetToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeSafetyNetToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:exchangeSafetyNetToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1ExchangeSafetyNetTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -735,11 +735,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeSafetyNetToken(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,11 +774,11 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeSafetyNetToken(ctx contex
 }
 
 // FirebaseappcheckProjectsAppsGenerateAppAttestChallenge - Generates a challenge that protects the integrity of an immediately following call to ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for multiple calls.
-func (s *projects) FirebaseappcheckProjectsAppsGenerateAppAttestChallenge(ctx context.Context, request operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest) (*operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsGenerateAppAttestChallenge(ctx context.Context, request operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest, security operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeSecurity) (*operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:generateAppAttestChallenge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:generateAppAttestChallenge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -790,11 +790,11 @@ func (s *projects) FirebaseappcheckProjectsAppsGenerateAppAttestChallenge(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,11 +829,11 @@ func (s *projects) FirebaseappcheckProjectsAppsGenerateAppAttestChallenge(ctx co
 }
 
 // FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge - Generates a challenge that protects the integrity of an immediately following integrity verdict request to the Play Integrity API. The next call to ExchangePlayIntegrityToken using the resulting integrity token will verify the presence and validity of the challenge. A challenge should not be reused for multiple calls.
-func (s *projects) FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(ctx context.Context, request operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest) (*operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(ctx context.Context, request operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest, security operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeSecurity) (*operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:generatePlayIntegrityChallenge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}:generatePlayIntegrityChallenge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -845,11 +845,11 @@ func (s *projects) FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -884,20 +884,20 @@ func (s *projects) FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(ct
 }
 
 // FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet - Atomically gets the PlayIntegrityConfigs for the specified list of apps.
-func (s *projects) FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest) (*operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/playIntegrityConfig:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/playIntegrityConfig:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -932,20 +932,20 @@ func (s *projects) FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(ctx c
 }
 
 // FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet - Atomically gets the RecaptchaEnterpriseConfigs for the specified list of apps.
-func (s *projects) FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest) (*operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/recaptchaEnterpriseConfig:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/recaptchaEnterpriseConfig:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -980,20 +980,20 @@ func (s *projects) FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet
 }
 
 // FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet - Atomically gets the RecaptchaV3Configs for the specified list of apps. For security reasons, the `site_secret` field is never populated in the response.
-func (s *projects) FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest) (*operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/recaptchaV3Config:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/recaptchaV3Config:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1028,20 +1028,20 @@ func (s *projects) FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(ctx con
 }
 
 // FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet - Atomically gets the SafetyNetConfigs for the specified list of apps.
-func (s *projects) FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest) (*operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/safetyNetConfig:batchGet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apps/-/safetyNetConfig:batchGet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1076,11 +1076,11 @@ func (s *projects) FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet(ctx conte
 }
 
 // FirebaseappcheckProjectsServicesBatchUpdate - Atomically updates the specified Service configurations.
-func (s *projects) FirebaseappcheckProjectsServicesBatchUpdate(ctx context.Context, request operations.FirebaseappcheckProjectsServicesBatchUpdateRequest) (*operations.FirebaseappcheckProjectsServicesBatchUpdateResponse, error) {
+func (s *projects) FirebaseappcheckProjectsServicesBatchUpdate(ctx context.Context, request operations.FirebaseappcheckProjectsServicesBatchUpdateRequest, security operations.FirebaseappcheckProjectsServicesBatchUpdateSecurity) (*operations.FirebaseappcheckProjectsServicesBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1BatchUpdateServicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1092,11 +1092,11 @@ func (s *projects) FirebaseappcheckProjectsServicesBatchUpdate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1131,20 +1131,20 @@ func (s *projects) FirebaseappcheckProjectsServicesBatchUpdate(ctx context.Conte
 }
 
 // FirebaseappcheckProjectsServicesGet - Gets the Service configuration for the specified service name.
-func (s *projects) FirebaseappcheckProjectsServicesGet(ctx context.Context, request operations.FirebaseappcheckProjectsServicesGetRequest) (*operations.FirebaseappcheckProjectsServicesGetResponse, error) {
+func (s *projects) FirebaseappcheckProjectsServicesGet(ctx context.Context, request operations.FirebaseappcheckProjectsServicesGetRequest, security operations.FirebaseappcheckProjectsServicesGetSecurity) (*operations.FirebaseappcheckProjectsServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1179,20 +1179,20 @@ func (s *projects) FirebaseappcheckProjectsServicesGet(ctx context.Context, requ
 }
 
 // FirebaseappcheckProjectsServicesList - Lists all Service configurations for the specified project. Only Services which were explicitly configured using UpdateService or BatchUpdateServices will be returned.
-func (s *projects) FirebaseappcheckProjectsServicesList(ctx context.Context, request operations.FirebaseappcheckProjectsServicesListRequest) (*operations.FirebaseappcheckProjectsServicesListResponse, error) {
+func (s *projects) FirebaseappcheckProjectsServicesList(ctx context.Context, request operations.FirebaseappcheckProjectsServicesListRequest, security operations.FirebaseappcheckProjectsServicesListSecurity) (*operations.FirebaseappcheckProjectsServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1227,11 +1227,11 @@ func (s *projects) FirebaseappcheckProjectsServicesList(ctx context.Context, req
 }
 
 // FirebaseappcheckProjectsServicesPatch - Updates the specified Service configuration.
-func (s *projects) FirebaseappcheckProjectsServicesPatch(ctx context.Context, request operations.FirebaseappcheckProjectsServicesPatchRequest) (*operations.FirebaseappcheckProjectsServicesPatchResponse, error) {
+func (s *projects) FirebaseappcheckProjectsServicesPatch(ctx context.Context, request operations.FirebaseappcheckProjectsServicesPatchRequest, security operations.FirebaseappcheckProjectsServicesPatchSecurity) (*operations.FirebaseappcheckProjectsServicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1Service", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1243,11 +1243,11 @@ func (s *projects) FirebaseappcheckProjectsServicesPatch(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

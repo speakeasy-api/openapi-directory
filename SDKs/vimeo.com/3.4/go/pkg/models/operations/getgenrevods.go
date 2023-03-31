@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGenreVodsPathParams struct {
-	// The ID of the genre.
-	GenreID string `pathParam:"style=simple,explode=false,name=genre_id"`
-}
-
 // GetGenreVodsDirectionEnum - The sort direction of the results.
 type GetGenreVodsDirectionEnum string
 
@@ -95,11 +90,13 @@ func (e *GetGenreVodsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGenreVodsQueryParams struct {
+type GetGenreVodsRequest struct {
 	// The sort direction of the results.
 	Direction *GetGenreVodsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
 	Filter *GetGenreVodsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The ID of the genre.
+	GenreID string `pathParam:"style=simple,explode=false,name=genre_id"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
@@ -108,11 +105,6 @@ type GetGenreVodsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetGenreVodsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetGenreVodsRequest struct {
-	PathParams  GetGenreVodsPathParams
-	QueryParams GetGenreVodsQueryParams
 }
 
 type GetGenreVodsResponse struct {

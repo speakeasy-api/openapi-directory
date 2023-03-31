@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateRoleSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateRolePathParams struct {
-	// Role Id
-	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateRoleApplicationJSONSubAccountPrivileges - This field will only be displayed to accounts that are enrolled in the partner plan and follow master accounts and sub accounts structure.
@@ -42,9 +36,9 @@ type UpdateRoleApplicationJSON struct {
 }
 
 type UpdateRoleRequest struct {
-	PathParams UpdateRolePathParams
-	Request    *UpdateRoleApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateRoleSecurity
+	RequestBody *UpdateRoleApplicationJSON `request:"mediaType=application/json"`
+	// Role Id
+	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
 }
 
 type UpdateRoleResponse struct {

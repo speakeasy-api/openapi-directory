@@ -30,10 +30,9 @@ pkg/models/operations/eventarcprojectslocationstriggerssetiampolicy.go
 pkg/models/operations/eventarcprojectslocationstriggerstestiampermissions.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
-pkg/models/shared/channelconnection.go
 pkg/models/shared/altenum.go
+pkg/models/shared/channelconnection.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listchannelconnectionsresponse.go
 pkg/models/shared/channel.go
 pkg/models/shared/listchannelsresponse.go

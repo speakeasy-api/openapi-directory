@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // RedactMessage - Redact a specific message
-func (s *SDK) RedactMessage(ctx context.Context, request operations.RedactMessageRequest) (*operations.RedactMessageResponse, error) {
+func (s *SDK) RedactMessage(ctx context.Context, request shared.RedactTransaction, security operations.RedactMessageSecurity) (*operations.RedactMessageResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transaction"
 
@@ -112,7 +112,7 @@ func (s *SDK) RedactMessage(ctx context.Context, request operations.RedactMessag
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

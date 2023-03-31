@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type NewMovieRequest struct {
-	Request shared.Movie `request:"mediaType=application/json"`
-}
 
 type NewMovieResponse struct {
 	ContentType string

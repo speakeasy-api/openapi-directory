@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetemailinfoRequest{
-        QueryParams: operations.GetemailinfoQueryParams{
-            Email: "Larue_Rau85@yahoo.com",
-            License: "corrupti",
-        },
+        Email: "Larue_Rau85@yahoo.com",
+        License: "corrupti",
     }
 
     ctx := context.Background()

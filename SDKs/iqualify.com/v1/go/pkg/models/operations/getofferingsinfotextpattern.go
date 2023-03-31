@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferingsInfoTextPatternPathParams struct {
+type GetOfferingsInfoTextPatternRequest struct {
 	// Text pattern to search for (minimum of 3 characters length).
 	TextPattern string `pathParam:"style=simple,explode=false,name=textPattern"`
-}
-
-type GetOfferingsInfoTextPatternRequest struct {
-	PathParams GetOfferingsInfoTextPatternPathParams
 }
 
 type GetOfferingsInfoTextPatternResponse struct {

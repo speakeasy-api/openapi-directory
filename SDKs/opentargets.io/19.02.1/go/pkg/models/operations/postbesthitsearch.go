@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostBestHitSearchRequest struct {
-	// list of strings to search for
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostBestHitSearchResponse struct {
 	ContentType string
 	StatusCode  int

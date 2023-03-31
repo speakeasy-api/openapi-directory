@@ -8,17 +8,12 @@ import (
 )
 
 type GetQuoteSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetQuoteQueryParams struct {
-	// Quote ID
-	ID *string `queryParam:"style=form,explode=true,name=id"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type GetQuoteRequest struct {
-	QueryParams GetQuoteQueryParams
-	Security    GetQuoteSecurity
+	// Quote ID
+	ID *string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetQuoteResponse struct {

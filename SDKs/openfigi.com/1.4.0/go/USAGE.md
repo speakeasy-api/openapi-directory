@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.GetMappingValuesKeyRequest{
-        PathParams: operations.GetMappingValuesKeyPathParams{
-            Key: "currency",
-        },
+        Key: "currency",
     }
 
     ctx := context.Background()

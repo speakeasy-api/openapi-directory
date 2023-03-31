@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportNsxRecommendedRulesSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ExportNsxRecommendedRulesRequest struct {
-	// NSX Recommended Rules Request
-	Request  *shared.RecommendedRulesRequest `request:"mediaType=application/json"`
-	Security ExportNsxRecommendedRulesSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ExportNsxRecommendedRulesResponse struct {

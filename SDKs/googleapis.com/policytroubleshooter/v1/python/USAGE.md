@@ -4,39 +4,33 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PolicytroubleshooterIamTroubleshootRequest(
-    security=operations.PolicytroubleshooterIamTroubleshootSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.PolicytroubleshooterIamTroubleshootQueryParams(
-        dollar_xgafv="2",
-        access_token="commodi",
-        alt="proto",
-        callback="aut",
-        fields="culpa",
-        key="doloribus",
-        oauth_token="nulla",
-        pretty_print=True,
-        quota_user="accusantium",
-        upload_type="alias",
-        upload_protocol="dolor",
-    ),
-    request=shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest(
+    dollar_xgafv="2",
+    google_cloud_policytroubleshooter_v1_troubleshoot_iam_policy_request=shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest(
         access_tuple=shared.GoogleCloudPolicytroubleshooterV1AccessTuple(
-            full_resource_name="voluptatem",
-            permission="veritatis",
-            principal="dolores",
+            full_resource_name="provident",
+            permission="distinctio",
+            principal="quibusdam",
         ),
     ),
+    access_token="unde",
+    alt="proto",
+    callback="corrupti",
+    fields_="illum",
+    key="vel",
+    oauth_token="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.iam.policytroubleshooter_iam_troubleshoot(req)
+res = s.iam.policytroubleshooter_iam_troubleshoot(req, operations.PolicytroubleshooterIamTroubleshootSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_policytroubleshooter_v1_troubleshoot_iam_policy_response is not None:
     # handle response

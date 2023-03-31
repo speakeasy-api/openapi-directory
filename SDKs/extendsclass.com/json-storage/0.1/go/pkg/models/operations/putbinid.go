@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutBinIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutBinIDRequest struct {
-	PathParams PutBinIDPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutBinIDResponse struct {

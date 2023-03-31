@@ -8,12 +8,7 @@ import (
 )
 
 type IntentMultipartSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type IntentMultipartRequest struct {
-	Request  *shared.IntentPredictRequest `request:"mediaType=application/json"`
-	Security IntentMultipartSecurity
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type IntentMultipartResponse struct {

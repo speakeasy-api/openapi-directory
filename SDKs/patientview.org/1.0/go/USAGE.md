@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetBasicUserInformationRequest{
-        PathParams: operations.GetBasicUserInformationPathParams{
-            Token: "corrupti",
-        },
+        Token: "corrupti",
     }
 
     ctx := context.Background()

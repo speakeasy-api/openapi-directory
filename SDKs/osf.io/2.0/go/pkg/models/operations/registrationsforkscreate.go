@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RegistrationsForksCreatePathParams struct {
+type RegistrationsForksCreateRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsForksCreateRequest struct {
-	PathParams RegistrationsForksCreatePathParams
 }
 
 type RegistrationsForksCreateResponse struct {

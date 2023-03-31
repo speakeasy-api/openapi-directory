@@ -101,7 +101,7 @@ func New(opts ...SDKOption) *SDK {
 
 // CreateApplication - Create Application
 // You use a `POST` request to create a new application.
-func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateApplicationRequest) (*operations.CreateApplicationResponse, error) {
+func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateApplicationRequestBody) (*operations.CreateApplicationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -155,7 +155,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 // You use a `DELETE` request to delete a single application.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,14 +191,14 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 // You use a `GET` request to retrieve details about a single application.
 func (s *SDK) RetrieveApplication(ctx context.Context, request operations.RetrieveApplicationRequest) (*operations.RetrieveApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -247,7 +247,7 @@ func (s *SDK) RetrieveApplications(ctx context.Context, request operations.Retri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -289,9 +289,9 @@ func (s *SDK) RetrieveApplications(ctx context.Context, request operations.Retri
 // You use a `PUT` request to update an existing application.
 func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

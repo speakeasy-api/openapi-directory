@@ -40,6 +40,7 @@ pkg/models/operations/gkehubprojectslocationsscopeslist.go
 pkg/models/operations/gkehubprojectslocationsscopespatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/feature.go
 pkg/models/shared/commonfeaturestate.go
 pkg/models/shared/featurestate.go
@@ -80,9 +81,7 @@ pkg/models/shared/configmanagementgitconfig.go
 pkg/models/shared/configmanagementbinauthzconfig.go
 pkg/models/shared/cloudbuildmembershipspec.go
 pkg/models/shared/commonfleetdefaultmemberconfigspec.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listfeaturesresponse.go
 pkg/models/shared/servicemeshfeaturestate.go
 pkg/models/shared/servicemeshanalysismessage.go

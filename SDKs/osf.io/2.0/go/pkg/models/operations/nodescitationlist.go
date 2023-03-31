@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type NodesCitationListPathParams struct {
+type NodesCitationListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesCitationListRequest struct {
-	PathParams NodesCitationListPathParams
 }
 
 // NodesCitationListCitationDetailAttributes - The properties of the citation entity.

@@ -8,13 +8,13 @@ import (
 )
 
 type ServiceusageOperationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageOperationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageOperationsListSecurity struct {
@@ -22,7 +22,7 @@ type ServiceusageOperationsListSecurity struct {
 	Option2 *ServiceusageOperationsListSecurityOption2 `security:"option"`
 }
 
-type ServiceusageOperationsListQueryParams struct {
+type ServiceusageOperationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -53,11 +53,6 @@ type ServiceusageOperationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageOperationsListRequest struct {
-	QueryParams ServiceusageOperationsListQueryParams
-	Security    ServiceusageOperationsListSecurity
 }
 
 type ServiceusageOperationsListResponse struct {

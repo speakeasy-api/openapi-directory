@@ -8,13 +8,13 @@ import (
 )
 
 type KeepNotesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type KeepNotesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type KeepNotesGetSecurity struct {
@@ -22,12 +22,7 @@ type KeepNotesGetSecurity struct {
 	Option2 *KeepNotesGetSecurityOption2 `security:"option"`
 }
 
-type KeepNotesGetPathParams struct {
-	// Required. Name of the resource.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type KeepNotesGetQueryParams struct {
+type KeepNotesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type KeepNotesGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The IANA MIME type format requested. The requested MIME type must be one specified in the attachment.mime_type. Required when downloading attachment media and ignored otherwise.
 	MimeType *string `queryParam:"style=form,explode=true,name=mimeType"`
+	// Required. Name of the resource.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,12 +49,6 @@ type KeepNotesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type KeepNotesGetRequest struct {
-	PathParams  KeepNotesGetPathParams
-	QueryParams KeepNotesGetQueryParams
-	Security    KeepNotesGetSecurity
 }
 
 type KeepNotesGetResponse struct {

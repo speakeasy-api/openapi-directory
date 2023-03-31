@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkSmTargetGroupPathParams struct {
+type DeleteNetworkSmTargetGroupRequest struct {
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	TargetGroupID string `pathParam:"style=simple,explode=false,name=targetGroupId"`
-}
-
-type DeleteNetworkSmTargetGroupRequest struct {
-	PathParams DeleteNetworkSmTargetGroupPathParams
 }
 
 type DeleteNetworkSmTargetGroupResponse struct {

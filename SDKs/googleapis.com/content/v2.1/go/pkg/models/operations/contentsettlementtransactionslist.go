@@ -8,18 +8,11 @@ import (
 )
 
 type ContentSettlementtransactionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentSettlementtransactionsListPathParams struct {
-	// The Merchant Center account to list transactions for.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-	// The Google-provided ID of the settlement.
-	SettlementID string `pathParam:"style=simple,explode=false,name=settlementId"`
-}
-
-type ContentSettlementtransactionsListQueryParams struct {
+type ContentSettlementtransactionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +27,8 @@ type ContentSettlementtransactionsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The maximum number of transactions to return in the response, used for paging. The default value is 200 transactions per page, and the maximum allowed value is 5000 transactions per page.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The Merchant Center account to list transactions for.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The token returned by the previous request.
@@ -42,18 +37,14 @@ type ContentSettlementtransactionsListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The Google-provided ID of the settlement.
+	SettlementID string `pathParam:"style=simple,explode=false,name=settlementId"`
 	// The list of transactions to return. If not set, all transactions will be returned.
 	TransactionIds []string `queryParam:"style=form,explode=true,name=transactionIds"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentSettlementtransactionsListRequest struct {
-	PathParams  ContentSettlementtransactionsListPathParams
-	QueryParams ContentSettlementtransactionsListQueryParams
-	Security    ContentSettlementtransactionsListSecurity
 }
 
 type ContentSettlementtransactionsListResponse struct {

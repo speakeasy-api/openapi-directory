@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationLoginSecurityPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationLoginSecurityRequestBodyAPIAuthenticationIPRestrictionsForKeys - Details for API-only IP restrictions.
 type UpdateOrganizationLoginSecurityRequestBodyAPIAuthenticationIPRestrictionsForKeys struct {
 	// Boolean indicating whether the organization will restrict API key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR ranges.
@@ -54,8 +50,8 @@ type UpdateOrganizationLoginSecurityRequestBody struct {
 }
 
 type UpdateOrganizationLoginSecurityRequest struct {
-	PathParams UpdateOrganizationLoginSecurityPathParams
-	Request    *UpdateOrganizationLoginSecurityRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationLoginSecurityRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                      `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // UpdateOrganizationLoginSecurity200ApplicationJSONAPIAuthenticationIPRestrictionsForKeys - Details for API-only IP restrictions.

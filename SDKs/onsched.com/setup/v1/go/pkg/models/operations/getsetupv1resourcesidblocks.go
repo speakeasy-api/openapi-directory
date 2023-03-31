@@ -8,25 +8,17 @@ import (
 	"time"
 )
 
-type GetSetupV1ResourcesIDBlocksPathParams struct {
-	// id of resource to list blocks for
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ResourcesIDBlocksQueryParams struct {
+type GetSetupV1ResourcesIDBlocksRequest struct {
 	// YYYY-MM-DD, filter on/before endDate
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// id of resource to list blocks for
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// YYYY-MM-DD, filter blocks on/after startDate
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GetSetupV1ResourcesIDBlocksRequest struct {
-	PathParams  GetSetupV1ResourcesIDBlocksPathParams
-	QueryParams GetSetupV1ResourcesIDBlocksQueryParams
 }
 
 type GetSetupV1ResourcesIDBlocksResponse struct {

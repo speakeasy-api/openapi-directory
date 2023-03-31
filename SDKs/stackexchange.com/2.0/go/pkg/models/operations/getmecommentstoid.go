@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetMeCommentsToIDPathParams struct {
-	ToID int64 `pathParam:"style=simple,explode=false,name=toId"`
-}
-
 // GetMeCommentsToIDOrderEnum
 type GetMeCommentsToIDOrderEnum string
 
@@ -60,7 +56,7 @@ func (e *GetMeCommentsToIDSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMeCommentsToIDQueryParams struct {
+type GetMeCommentsToIDRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -113,13 +109,9 @@ type GetMeCommentsToIDQueryParams struct {
 	//
 	Site string                     `queryParam:"style=form,explode=true,name=site"`
 	Sort *GetMeCommentsToIDSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	ToID int64                      `pathParam:"style=simple,explode=false,name=toId"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetMeCommentsToIDRequest struct {
-	PathParams  GetMeCommentsToIDPathParams
-	QueryParams GetMeCommentsToIDQueryParams
 }
 
 type GetMeCommentsToIDResponse struct {

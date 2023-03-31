@@ -32,20 +32,20 @@ func newTargetingTemplates(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // DfareportingTargetingTemplatesGet - Gets one targeting template by ID.
-func (s *targetingTemplates) DfareportingTargetingTemplatesGet(ctx context.Context, request operations.DfareportingTargetingTemplatesGetRequest) (*operations.DfareportingTargetingTemplatesGetResponse, error) {
+func (s *targetingTemplates) DfareportingTargetingTemplatesGet(ctx context.Context, request operations.DfareportingTargetingTemplatesGetRequest, security operations.DfareportingTargetingTemplatesGetSecurity) (*operations.DfareportingTargetingTemplatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesGet(ctx context.Conte
 }
 
 // DfareportingTargetingTemplatesInsert - Inserts a new targeting template.
-func (s *targetingTemplates) DfareportingTargetingTemplatesInsert(ctx context.Context, request operations.DfareportingTargetingTemplatesInsertRequest) (*operations.DfareportingTargetingTemplatesInsertResponse, error) {
+func (s *targetingTemplates) DfareportingTargetingTemplatesInsert(ctx context.Context, request operations.DfareportingTargetingTemplatesInsertRequest, security operations.DfareportingTargetingTemplatesInsertSecurity) (*operations.DfareportingTargetingTemplatesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetingTemplate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesInsert(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesInsert(ctx context.Co
 }
 
 // DfareportingTargetingTemplatesList - Retrieves a list of targeting templates, optionally filtered. This method supports paging.
-func (s *targetingTemplates) DfareportingTargetingTemplatesList(ctx context.Context, request operations.DfareportingTargetingTemplatesListRequest) (*operations.DfareportingTargetingTemplatesListResponse, error) {
+func (s *targetingTemplates) DfareportingTargetingTemplatesList(ctx context.Context, request operations.DfareportingTargetingTemplatesListRequest, security operations.DfareportingTargetingTemplatesListSecurity) (*operations.DfareportingTargetingTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesList(ctx context.Cont
 }
 
 // DfareportingTargetingTemplatesPatch - Updates an existing targeting template. This method supports patch semantics.
-func (s *targetingTemplates) DfareportingTargetingTemplatesPatch(ctx context.Context, request operations.DfareportingTargetingTemplatesPatchRequest) (*operations.DfareportingTargetingTemplatesPatchResponse, error) {
+func (s *targetingTemplates) DfareportingTargetingTemplatesPatch(ctx context.Context, request operations.DfareportingTargetingTemplatesPatchRequest, security operations.DfareportingTargetingTemplatesPatchSecurity) (*operations.DfareportingTargetingTemplatesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetingTemplate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesPatch(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesPatch(ctx context.Con
 }
 
 // DfareportingTargetingTemplatesUpdate - Updates an existing targeting template.
-func (s *targetingTemplates) DfareportingTargetingTemplatesUpdate(ctx context.Context, request operations.DfareportingTargetingTemplatesUpdateRequest) (*operations.DfareportingTargetingTemplatesUpdateResponse, error) {
+func (s *targetingTemplates) DfareportingTargetingTemplatesUpdate(ctx context.Context, request operations.DfareportingTargetingTemplatesUpdateRequest, security operations.DfareportingTargetingTemplatesUpdateSecurity) (*operations.DfareportingTargetingTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetingTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetingTemplate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *targetingTemplates) DfareportingTargetingTemplatesUpdate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,11 +33,11 @@ func newManagedShortLinks(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // FirebasedynamiclinksManagedShortLinksCreate - Creates a managed short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not expire. This differs from CreateShortDynamicLink in the following ways: - The request will also contain a name for the link (non unique name for the front end). - The response must be authenticated with an auth token (generated with the admin service account). - The link will appear in the FDL list of links in the console front end. The Dynamic Link domain in the request must be owned by requester's Firebase project.
-func (s *managedShortLinks) FirebasedynamiclinksManagedShortLinksCreate(ctx context.Context, request operations.FirebasedynamiclinksManagedShortLinksCreateRequest) (*operations.FirebasedynamiclinksManagedShortLinksCreateResponse, error) {
+func (s *managedShortLinks) FirebasedynamiclinksManagedShortLinksCreate(ctx context.Context, request operations.FirebasedynamiclinksManagedShortLinksCreateRequest, security operations.FirebasedynamiclinksManagedShortLinksCreateSecurity) (*operations.FirebasedynamiclinksManagedShortLinksCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/managedShortLinks:create"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateManagedShortLinkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *managedShortLinks) FirebasedynamiclinksManagedShortLinksCreate(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

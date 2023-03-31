@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        cookie_auth=shared.SchemeCookieAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetAccountsRequest(
-    query_params=operations.GetAccountsQueryParams(
-        account="neque",
+        cookie_auth="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetAccountsRequest(
+    account="corrupti",
 )
     
 res = s.account_and_portfolio.get_accounts(req)

@@ -8,22 +8,10 @@ import (
 )
 
 type GetTransactionDetailsSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetTransactionDetailsPathParams struct {
-	// This identification is denoting the addressed (card) account.
-	// The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call.
-	// The account-id is the "resourceId" attribute of the account structure.
-	// Its value is constant at least throughout the lifecycle of a given consent.
-	//
-	AccountID string `pathParam:"style=simple,explode=false,name=account-id"`
-	// This identification is given by the attribute transactionId of the corresponding entry of a transaction list.
-	//
-	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type GetTransactionDetailsHeaders struct {
+type GetTransactionDetailsRequest struct {
 	// This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
 	//
 	ConsentID string `header:"style=simple,explode=false,name=Consent-ID"`
@@ -78,12 +66,15 @@ type GetTransactionDetailsHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetTransactionDetailsRequest struct {
-	PathParams GetTransactionDetailsPathParams
-	Headers    GetTransactionDetailsHeaders
-	Security   GetTransactionDetailsSecurity
+	// This identification is denoting the addressed (card) account.
+	// The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call.
+	// The account-id is the "resourceId" attribute of the account structure.
+	// Its value is constant at least throughout the lifecycle of a given consent.
+	//
+	AccountID string `pathParam:"style=simple,explode=false,name=account-id"`
+	// This identification is given by the attribute transactionId of the corresponding entry of a transaction list.
+	//
+	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
 }
 
 // GetTransactionDetails200ApplicationJSON - OK

@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01RecordStopSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01RecordStopRequest struct {
-	// POST parameters
-	Request  *shared.RecordStopParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01RecordStopSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01RecordStopResponse struct {

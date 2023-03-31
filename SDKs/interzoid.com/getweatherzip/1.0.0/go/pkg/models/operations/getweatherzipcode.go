@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetweatherzipcodeQueryParams struct {
+type GetweatherzipcodeRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Zip code for weather information
 	Zip string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetweatherzipcodeRequest struct {
-	QueryParams GetweatherzipcodeQueryParams
 }
 
 // Getweatherzipcode200ApplicationJSON - Current weather information for zip code

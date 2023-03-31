@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AvailableProductsHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type AvailableProductsRequestBody struct {
 	// **currency** in which to display product pricing
 	// - default: `'USD'`
@@ -33,8 +27,10 @@ type AvailableProductsRequestBody struct {
 }
 
 type AvailableProductsRequest struct {
-	Headers AvailableProductsHeaders
-	Request *AvailableProductsRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                        `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *AvailableProductsRequestBody `request:"mediaType=application/json"`
 }
 
 // AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote - **pricing object** for *this* tour grade

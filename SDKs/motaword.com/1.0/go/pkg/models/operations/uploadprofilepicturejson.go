@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadProfilePictureJSONRequest struct {
-	Request *shared.ProfilePictureUpload `request:"mediaType=application/json"`
-}
-
 type UploadProfilePictureJSONResponse struct {
 	ContentType string
 	// Email already exists

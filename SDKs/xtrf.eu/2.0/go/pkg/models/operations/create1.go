@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Create1Request struct {
-	// Created new invoice.
-	Request shared.CustomerInvoiceCreateDTO `request:"mediaType=application/json"`
-}
-
 type Create1Response struct {
 	ContentType string
 	// Success

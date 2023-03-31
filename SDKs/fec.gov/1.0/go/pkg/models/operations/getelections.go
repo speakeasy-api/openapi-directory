@@ -36,7 +36,7 @@ func (e *GetElectionsOfficeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetElectionsQueryParams struct {
+type GetElectionsRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -71,10 +71,6 @@ type GetElectionsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// US state or territory where a candidate runs for office
 	State *string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetElectionsRequest struct {
-	QueryParams GetElectionsQueryParams
 }
 
 type GetElectionsResponse struct {

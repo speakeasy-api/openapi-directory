@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type UserAssistantCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UserAssistantCreatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UserAssistantCreateUserAssistantsListAssistants struct {
@@ -31,10 +25,10 @@ type UserAssistantCreateUserAssistantsList struct {
 }
 
 type UserAssistantCreateRequest struct {
-	PathParams UserAssistantCreatePathParams
 	// User assistant.
-	Request  UserAssistantCreateUserAssistantsList `request:"mediaType=application/json"`
-	Security UserAssistantCreateSecurity
+	RequestBody UserAssistantCreateUserAssistantsList `request:"mediaType=application/json"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // UserAssistantCreate201ApplicationXML - **HTTP Status Code:** `201`<br>

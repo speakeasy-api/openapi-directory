@@ -43,20 +43,20 @@ func newCollection(defaultClient, securityClient HTTPClient, serverURL, language
 // AddScoreToCollection - Add a score to the collection
 // This operation will add a score to a collection. The default behavior will make the score available across multiple collections.
 // You must have the capability `canAddScores` on the provided `collection` to perform the action.
-func (s *collection) AddScoreToCollection(ctx context.Context, request operations.AddScoreToCollectionRequest) (*operations.AddScoreToCollectionResponse, error) {
+func (s *collection) AddScoreToCollection(ctx context.Context, request operations.AddScoreToCollectionRequest, security operations.AddScoreToCollectionSecurity) (*operations.AddScoreToCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *collection) AddScoreToCollection(ctx context.Context, request operation
 
 // CreateCollection - Create a new collection
 // This method will create a new collection and add it to your `root` collection.
-func (s *collection) CreateCollection(ctx context.Context, request operations.CreateCollectionRequest) (*operations.CreateCollectionResponse, error) {
+func (s *collection) CreateCollection(ctx context.Context, request shared.CollectionCreation, security operations.CreateCollectionSecurity) (*operations.CreateCollectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collections"
 
@@ -125,7 +125,7 @@ func (s *collection) CreateCollection(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,16 +173,16 @@ func (s *collection) CreateCollection(ctx context.Context, request operations.Cr
 
 // DeleteCollection - Delete the collection
 // This method will schedule the deletion of the collection. Until deleted, the collection will be available in the `trash`.
-func (s *collection) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest) (*operations.DeleteCollectionResponse, error) {
+func (s *collection) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest, security operations.DeleteCollectionSecurity) (*operations.DeleteCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,20 +224,20 @@ func (s *collection) DeleteCollection(ctx context.Context, request operations.De
 // DeleteScoreFromCollection - Delete a score from the collection
 // This method will delete a score from the collection. Unlike [`DELETE /scores/{score}`](#operation/deleteScore), this score will not remove the score from your account, but only from the collection.
 // This can be used to *move* a score from one collection to another, or simply remove a score from one collection when this one is contained in multiple collections.
-func (s *collection) DeleteScoreFromCollection(ctx context.Context, request operations.DeleteScoreFromCollectionRequest) (*operations.DeleteScoreFromCollectionResponse, error) {
+func (s *collection) DeleteScoreFromCollection(ctx context.Context, request operations.DeleteScoreFromCollectionRequest, security operations.DeleteScoreFromCollectionSecurity) (*operations.DeleteScoreFromCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *collection) DeleteScoreFromCollection(ctx context.Context, request oper
 }
 
 // EditCollection - Update a collection's metadata
-func (s *collection) EditCollection(ctx context.Context, request operations.EditCollectionRequest) (*operations.EditCollectionResponse, error) {
+func (s *collection) EditCollection(ctx context.Context, request operations.EditCollectionRequest, security operations.EditCollectionSecurity) (*operations.EditCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionModification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,7 +293,7 @@ func (s *collection) EditCollection(ctx context.Context, request operations.Edit
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,20 +342,20 @@ func (s *collection) EditCollection(ctx context.Context, request operations.Edit
 }
 
 // GetCollection - Get collection details
-func (s *collection) GetCollection(ctx context.Context, request operations.GetCollectionRequest) (*operations.GetCollectionResponse, error) {
+func (s *collection) GetCollection(ctx context.Context, request operations.GetCollectionRequest, security operations.GetCollectionSecurity) (*operations.GetCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,20 +406,20 @@ func (s *collection) GetCollection(ctx context.Context, request operations.GetCo
 // ListCollectionScores - List the scores contained in a collection
 // Use this method to list the scores contained in a collection.
 // If no sort option is provided, the scores are sorted by `modificationDate` `desc`.
-func (s *collection) ListCollectionScores(ctx context.Context, request operations.ListCollectionScoresRequest) (*operations.ListCollectionScoresResponse, error) {
+func (s *collection) ListCollectionScores(ctx context.Context, request operations.ListCollectionScoresRequest, security operations.ListCollectionScoresSecurity) (*operations.ListCollectionScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -469,7 +469,7 @@ func (s *collection) ListCollectionScores(ctx context.Context, request operation
 //
 // Note that this method will not include the `parent` collection in the listing.
 // For example, if you need the details of the `root` collection, you can use `GET /v2/collections/root`.
-func (s *collection) ListCollections(ctx context.Context, request operations.ListCollectionsRequest) (*operations.ListCollectionsResponse, error) {
+func (s *collection) ListCollections(ctx context.Context, request operations.ListCollectionsRequest, security operations.ListCollectionsSecurity) (*operations.ListCollectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collections"
 
@@ -478,11 +478,11 @@ func (s *collection) ListCollections(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -528,16 +528,16 @@ func (s *collection) ListCollections(ctx context.Context, request operations.Lis
 
 // UntrashCollection - Untrash a collection
 // This method will restore the collection by removing it from the `trash` and add it back to the `root` collection.
-func (s *collection) UntrashCollection(ctx context.Context, request operations.UntrashCollectionRequest) (*operations.UntrashCollectionResponse, error) {
+func (s *collection) UntrashCollection(ctx context.Context, request operations.UntrashCollectionRequest, security operations.UntrashCollectionSecurity) (*operations.UntrashCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/untrash", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/untrash", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

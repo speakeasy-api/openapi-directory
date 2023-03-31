@@ -10,10 +10,6 @@ type PostSendCodeRequestBody struct {
 	Email *string `json:"email,omitempty"`
 }
 
-type PostSendCodeRequest struct {
-	Request PostSendCodeRequestBody `request:"mediaType=application/json"`
-}
-
 // PostSendCode401ApplicationJSON - Invalid API key
 type PostSendCode401ApplicationJSON struct {
 	Message *string `json:"message,omitempty"`

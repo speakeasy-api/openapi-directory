@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimManufacturersUpdatePathParams struct {
+type DcimManufacturersUpdateRequest struct {
+	ManufacturerInput shared.ManufacturerInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this manufacturer.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimManufacturersUpdateRequest struct {
-	PathParams DcimManufacturersUpdatePathParams
-	Request    shared.ManufacturerInput `request:"mediaType=application/json"`
 }
 
 type DcimManufacturersUpdateResponse struct {

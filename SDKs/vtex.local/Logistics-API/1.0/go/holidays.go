@@ -42,7 +42,7 @@ func (s *holidays) AllHolidays(ctx context.Context, request operations.AllHolida
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -73,9 +73,9 @@ func (s *holidays) AllHolidays(ctx context.Context, request operations.AllHolida
 // Creates or updates holidays through holiday ID.
 func (s *holidays) CreateUpdateHoliday(ctx context.Context, request operations.CreateUpdateHolidayRequest) (*operations.CreateUpdateHolidayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,7 +90,7 @@ func (s *holidays) CreateUpdateHoliday(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -121,14 +121,14 @@ func (s *holidays) CreateUpdateHoliday(ctx context.Context, request operations.C
 // Deletes given holidays set up in your store.
 func (s *holidays) Holiday(ctx context.Context, request operations.HolidayRequest) (*operations.HolidayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -159,14 +159,14 @@ func (s *holidays) Holiday(ctx context.Context, request operations.HolidayReques
 // Lists holiday's information by holiday ID.
 func (s *holidays) HolidayByID(ctx context.Context, request operations.HolidayByIDRequest) (*operations.HolidayByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

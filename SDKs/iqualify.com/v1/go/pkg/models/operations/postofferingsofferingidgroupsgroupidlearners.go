@@ -7,20 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOfferingsOfferingIDGroupsGroupIDLearnersPathParams struct {
-	// Assessment group id
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-	// offering's id
-	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
 type PostOfferingsOfferingIDGroupsGroupIDLearnersRequestBody struct {
 	Email *string `json:"email,omitempty"`
 }
 
 type PostOfferingsOfferingIDGroupsGroupIDLearnersRequest struct {
-	PathParams PostOfferingsOfferingIDGroupsGroupIDLearnersPathParams
-	Request    PostOfferingsOfferingIDGroupsGroupIDLearnersRequestBody `request:"mediaType=application/json"`
+	RequestBody PostOfferingsOfferingIDGroupsGroupIDLearnersRequestBody `request:"mediaType=application/json"`
+	// Assessment group id
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	// offering's id
+	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
 }
 
 type PostOfferingsOfferingIDGroupsGroupIDLearnersResponse struct {

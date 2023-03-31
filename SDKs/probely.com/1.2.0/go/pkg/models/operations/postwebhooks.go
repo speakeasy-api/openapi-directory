@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostWebhooksRequest struct {
-	Request shared.WebhookInput `request:"mediaType=application/json"`
-}
-
 // PostWebhooks404ApplicationJSON - Not found
 type PostWebhooks404ApplicationJSON struct {
 	// Not found.

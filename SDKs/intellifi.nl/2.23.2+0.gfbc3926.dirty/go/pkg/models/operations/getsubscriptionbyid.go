@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionByIDPathParams struct {
+type GetSubscriptionByIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSubscriptionByIDRequest struct {
-	PathParams GetSubscriptionByIDPathParams
 }
 
 type GetSubscriptionByIDResponse struct {

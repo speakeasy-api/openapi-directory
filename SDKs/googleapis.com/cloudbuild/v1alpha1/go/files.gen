@@ -20,7 +20,6 @@ pkg/models/operations/cloudbuildprojectsworkerpoolslist.go
 pkg/models/operations/cloudbuildprojectsworkerpoolspatch.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/workerpool.go
 pkg/models/shared/workerconfig.go
 pkg/models/shared/network.go

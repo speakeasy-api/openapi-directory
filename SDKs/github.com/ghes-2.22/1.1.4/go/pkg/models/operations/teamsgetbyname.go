@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetByNamePathParams struct {
+type TeamsGetByNameRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// team_slug parameter
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsGetByNameRequest struct {
-	PathParams TeamsGetByNamePathParams
 }
 
 type TeamsGetByNameResponse struct {

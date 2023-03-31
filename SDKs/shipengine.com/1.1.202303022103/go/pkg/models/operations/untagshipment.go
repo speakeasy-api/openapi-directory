@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UntagShipmentPathParams struct {
+type UntagShipmentRequest struct {
 	// Shipment ID
 	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
 	TagName    string `pathParam:"style=simple,explode=false,name=tag_name"`
-}
-
-type UntagShipmentRequest struct {
-	PathParams UntagShipmentPathParams
 }
 
 type UntagShipmentResponse struct {

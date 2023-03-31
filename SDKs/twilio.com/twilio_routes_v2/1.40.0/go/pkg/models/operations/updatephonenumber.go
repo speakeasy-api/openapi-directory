@@ -12,12 +12,8 @@ var UpdatePhoneNumberServerList = []string{
 }
 
 type UpdatePhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdatePhoneNumberPathParams struct {
-	// The phone number in E.164 format
-	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdatePhoneNumberUpdatePhoneNumberRequest struct {
@@ -28,10 +24,9 @@ type UpdatePhoneNumberUpdatePhoneNumberRequest struct {
 }
 
 type UpdatePhoneNumberRequest struct {
-	PathParams UpdatePhoneNumberPathParams
-	Request    *UpdatePhoneNumberUpdatePhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdatePhoneNumberSecurity
-	ServerURL  *string
+	// The phone number in E.164 format
+	PhoneNumber string                                     `pathParam:"style=simple,explode=false,name=PhoneNumber"`
+	RequestBody *UpdatePhoneNumberUpdatePhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdatePhoneNumberResponse struct {

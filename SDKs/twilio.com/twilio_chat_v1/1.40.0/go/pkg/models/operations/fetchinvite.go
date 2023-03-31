@@ -12,22 +12,17 @@ var FetchInviteServerList = []string{
 }
 
 type FetchInviteSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchInvitePathParams struct {
+type FetchInviteRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the resource to fetch belongs to.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to fetch the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Invite resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchInviteRequest struct {
-	PathParams FetchInvitePathParams
-	Security   FetchInviteSecurity
-	ServerURL  *string
 }
 
 type FetchInviteResponse struct {

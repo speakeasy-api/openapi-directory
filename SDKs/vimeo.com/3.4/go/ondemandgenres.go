@@ -33,16 +33,16 @@ func newOnDemandGenres(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // AddVodGenre - Add a genre to an On Demand page
-func (s *onDemandGenres) AddVodGenre(ctx context.Context, request operations.AddVodGenreRequest) (*operations.AddVodGenreResponse, error) {
+func (s *onDemandGenres) AddVodGenre(ctx context.Context, request operations.AddVodGenreRequest, security operations.AddVodGenreSecurity) (*operations.AddVodGenreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,16 +91,16 @@ func (s *onDemandGenres) AddVodGenre(ctx context.Context, request operations.Add
 }
 
 // DeleteVodGenre - Remove a genre from an On Demand page
-func (s *onDemandGenres) DeleteVodGenre(ctx context.Context, request operations.DeleteVodGenreRequest) (*operations.DeleteVodGenreResponse, error) {
+func (s *onDemandGenres) DeleteVodGenre(ctx context.Context, request operations.DeleteVodGenreRequest, security operations.DeleteVodGenreSecurity) (*operations.DeleteVodGenreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,7 +143,7 @@ func (s *onDemandGenres) DeleteVodGenre(ctx context.Context, request operations.
 // Check whether a genre contains an On Demand page.
 func (s *onDemandGenres) GetGenreVod(ctx context.Context, request operations.GetGenreVodRequest) (*operations.GetGenreVodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/genres/{genre_id}/pages/{ondemand_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/genres/{genre_id}/pages/{ondemand_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,14 +197,14 @@ func (s *onDemandGenres) GetGenreVod(ctx context.Context, request operations.Get
 // GetGenreVods - Get all the On Demand pages in a genre
 func (s *onDemandGenres) GetGenreVods(ctx context.Context, request operations.GetGenreVodsRequest) (*operations.GetGenreVodsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/genres/{genre_id}/pages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/genres/{genre_id}/pages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -245,7 +245,7 @@ func (s *onDemandGenres) GetGenreVods(ctx context.Context, request operations.Ge
 // GetVodGenre - Get a specific On Demand genre
 func (s *onDemandGenres) GetVodGenre(ctx context.Context, request operations.GetVodGenreRequest) (*operations.GetVodGenreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/genres/{genre_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/genres/{genre_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -299,7 +299,7 @@ func (s *onDemandGenres) GetVodGenre(ctx context.Context, request operations.Get
 // GetVodGenreByOndemandID - Check whether an On Demand page belongs to a genre
 func (s *onDemandGenres) GetVodGenreByOndemandID(ctx context.Context, request operations.GetVodGenreByOndemandIDRequest) (*operations.GetVodGenreByOndemandIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -397,7 +397,7 @@ func (s *onDemandGenres) GetVodGenres(ctx context.Context) (*operations.GetVodGe
 // GetVodGenresByOndemandID - Get all the genres of an On Demand page
 func (s *onDemandGenres) GetVodGenresByOndemandID(ctx context.Context, request operations.GetVodGenresByOndemandIDRequest) (*operations.GetVodGenresByOndemandIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/genres", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

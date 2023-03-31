@@ -35,10 +35,6 @@ type PostAdminRequestsFindRequestBody struct {
 	URLPattern *string `json:"urlPattern,omitempty"`
 }
 
-type PostAdminRequestsFindRequest struct {
-	Request PostAdminRequestsFindRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAdminRequestsFindResponse struct {
 	ContentType string
 	StatusCode  int

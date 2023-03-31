@@ -1,0 +1,130 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/analyticsadmin/v1alpha/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.AnalyticsadminAccountSummariesListRequest(
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
+)
+    
+res = s.account_summaries.analyticsadmin_account_summaries_list(req, operations.AnalyticsadminAccountSummariesListSecurity(
+    option1=operations.AnalyticsadminAccountSummariesListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
+
+if res.google_analytics_admin_v1alpha_list_account_summaries_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### account_summaries
+
+* `analyticsadmin_account_summaries_list` - Returns summaries of all accounts accessible by the caller.
+
+### accounts
+
+* `analyticsadmin_accounts_list` - Returns all accounts accessible by the caller. Note that these accounts might not currently have GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty list if no relevant accounts are found.
+* `analyticsadmin_accounts_provision_account_ticket` - Requests a ticket for creating an account.
+* `analyticsadmin_accounts_search_change_history_events` - Searches through all changes to an account or its children given the specified set of filters.
+
+### properties
+
+* `analyticsadmin_properties_access_bindings_batch_create` - Creates information about multiple access bindings to an account or property. This method is transactional. If any AccessBinding cannot be created, none of the AccessBindings will be created.
+* `analyticsadmin_properties_access_bindings_batch_delete` - Deletes information about multiple users' links to an account or property.
+* `analyticsadmin_properties_access_bindings_batch_get` - Gets information about multiple access bindings to an account or property.
+* `analyticsadmin_properties_access_bindings_batch_update` - Updates information about multiple access bindings to an account or property.
+* `analyticsadmin_properties_access_bindings_create` - Creates an access binding on an account or property.
+* `analyticsadmin_properties_access_bindings_list` - Lists all access bindings on an account or property.
+* `analyticsadmin_properties_acknowledge_user_data_collection` - Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or through this API) before MeasurementProtocolSecret resources may be created.
+* `analyticsadmin_properties_audiences_create` - Creates an Audience.
+* `analyticsadmin_properties_audiences_list` - Lists Audiences on a property. Audiences created before 2020 may not be supported. Default audiences will not show filter definitions.
+* `analyticsadmin_properties_big_query_links_list` - Lists BigQuery Links on a property.
+* `analyticsadmin_properties_conversion_events_create` - Creates a conversion event with the specified attributes.
+* `analyticsadmin_properties_conversion_events_list` - Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
+* `analyticsadmin_properties_create` - Creates an "GA4" property with the specified location and attributes.
+* `analyticsadmin_properties_create_connected_site_tag` - Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20 connected site tags per property. Note: This API cannot be used on GA4 properties.
+* `analyticsadmin_properties_custom_dimensions_create` - Creates a CustomDimension.
+* `analyticsadmin_properties_custom_dimensions_list` - Lists CustomDimensions on a property.
+* `analyticsadmin_properties_custom_metrics_archive` - Archives a CustomMetric on a property.
+* `analyticsadmin_properties_custom_metrics_create` - Creates a CustomMetric.
+* `analyticsadmin_properties_custom_metrics_list` - Lists CustomMetrics on a property.
+* `analyticsadmin_properties_data_streams_create` - Creates a DataStream.
+* `analyticsadmin_properties_data_streams_list` - Lists DataStreams on a property.
+* `analyticsadmin_properties_data_streams_measurement_protocol_secrets_create` - Creates a measurement protocol secret.
+* `analyticsadmin_properties_data_streams_measurement_protocol_secrets_list` - Returns child MeasurementProtocolSecrets under the specified parent Property.
+* `analyticsadmin_properties_delete_connected_site_tag` - Deletes a connected site tag for a Universal Analytics property. Note: this has no effect on GA4 properties.
+* `analyticsadmin_properties_display_video360_advertiser_link_proposals_approve` - Approves a DisplayVideo360AdvertiserLinkProposal. The DisplayVideo360AdvertiserLinkProposal will be deleted and a new DisplayVideo360AdvertiserLink will be created.
+* `analyticsadmin_properties_display_video360_advertiser_link_proposals_cancel` - Cancels a DisplayVideo360AdvertiserLinkProposal. Cancelling can mean either: - Declining a proposal initiated from Display & Video 360 - Withdrawing a proposal initiated from Google Analytics After being cancelled, a proposal will eventually be deleted automatically.
+* `analyticsadmin_properties_display_video360_advertiser_link_proposals_create` - Creates a DisplayVideo360AdvertiserLinkProposal.
+* `analyticsadmin_properties_display_video360_advertiser_link_proposals_list` - Lists DisplayVideo360AdvertiserLinkProposals on a property.
+* `analyticsadmin_properties_display_video360_advertiser_links_create` - Creates a DisplayVideo360AdvertiserLink. This can only be utilized by users who have proper authorization both on the Google Analytics property and on the Display & Video 360 advertiser. Users who do not have access to the Display & Video 360 advertiser should instead seek to create a DisplayVideo360LinkProposal.
+* `analyticsadmin_properties_display_video360_advertiser_links_list` - Lists all DisplayVideo360AdvertiserLinks on a property.
+* `analyticsadmin_properties_expanded_data_sets_create` - Creates a ExpandedDataSet.
+* `analyticsadmin_properties_expanded_data_sets_list` - Lists ExpandedDataSets on a property.
+* `analyticsadmin_properties_fetch_automated_ga4_configuration_opt_out` - Fetches the opt out status for the automated GA4 setup process for a UA property. Note: this has no effect on GA4 property.
+* `analyticsadmin_properties_firebase_links_create` - Creates a FirebaseLink. Properties can have at most one FirebaseLink.
+* `analyticsadmin_properties_firebase_links_list` - Lists FirebaseLinks on a property. Properties can have at most one FirebaseLink.
+* `analyticsadmin_properties_google_ads_links_create` - Creates a GoogleAdsLink.
+* `analyticsadmin_properties_google_ads_links_list` - Lists GoogleAdsLinks on a property.
+* `analyticsadmin_properties_list` - Returns child Properties under the specified parent Account. Only "GA4" properties will be returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default. Returns an empty list if no relevant properties are found.
+* `analyticsadmin_properties_list_connected_site_tags` - Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected site tags will be returned. Note: this has no effect on GA4 property.
+* `analyticsadmin_properties_run_access_report` - Returns a customized report of data access records. The report provides records of each time a user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data Access Reports can be requested for a property. The property must be in Google Analytics 360. This method is only available to Administrators. These data access records include GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can retrieve data from Google Analytics through a linkage. These records don't include property configuration changes like adding a stream or changing a property's time zone. For configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+* `analyticsadmin_properties_search_ads360_links_create` - Creates a SearchAds360Link.
+* `analyticsadmin_properties_search_ads360_links_list` - Lists all SearchAds360Links on a property.
+* `analyticsadmin_properties_set_automated_ga4_configuration_opt_out` - Sets the opt out status for the automated GA4 setup process for a UA property. Note: this has no effect on GA4 property.
+* `analyticsadmin_properties_user_links_audit` - Lists all user links on an account or property, including implicit ones that come from effective permissions granted by groups or organization admin roles. If a returned user link does not have direct permissions, they cannot be removed from the account or property directly with the DeleteUserLink command. They have to be removed from the group/etc that gives them permissions, which is currently only usable/discoverable in the GA or GMP UIs.
+* `analyticsadmin_properties_user_links_batch_create` - Creates information about multiple users' links to an account or property. This method is transactional. If any UserLink cannot be created, none of the UserLinks will be created.
+* `analyticsadmin_properties_user_links_batch_delete` - Deletes information about multiple users' links to an account or property.
+* `analyticsadmin_properties_user_links_batch_get` - Gets information about multiple users' links to an account or property.
+* `analyticsadmin_properties_user_links_batch_update` - Updates information about multiple users' links to an account or property.
+* `analyticsadmin_properties_user_links_create` - Creates a user link on an account or property. If the user with the specified email already has permissions on the account or property, then the user's existing permissions will be unioned with the permissions specified in the new UserLink.
+* `analyticsadmin_properties_user_links_delete` - Deletes a user link on an account or property.
+* `analyticsadmin_properties_user_links_get` - Gets information about a user's link to an account or property.
+* `analyticsadmin_properties_user_links_list` - Lists all user links on an account or property.
+* `analyticsadmin_properties_user_links_patch` - Updates a user link on an account or property.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

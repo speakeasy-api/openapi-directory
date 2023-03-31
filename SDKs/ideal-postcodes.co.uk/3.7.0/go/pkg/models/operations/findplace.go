@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FindPlaceQueryParams struct {
+type FindPlaceRequest struct {
 	APIKey         string  `queryParam:"style=form,explode=false,name=api_key"`
 	BiasCountryIso *string `queryParam:"style=form,explode=false,name=bias_country_iso"`
 	// Biases search based on approximate geolocation of IP address.
@@ -17,10 +17,6 @@ type FindPlaceQueryParams struct {
 	CountryIso *string                 `queryParam:"style=form,explode=false,name=country_iso"`
 	// Specifies the place you wish to query. Query can be shortened to `q=`
 	Query *string `queryParam:"style=form,explode=false,name=query"`
-}
-
-type FindPlaceRequest struct {
-	QueryParams FindPlaceQueryParams
 }
 
 type FindPlaceResponse struct {

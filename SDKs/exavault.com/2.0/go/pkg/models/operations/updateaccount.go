@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAccountHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type UpdateAccountUpdateAccountRequestBodyAllowedIPRanges struct {
 	IPEnd   *string `json:"ipEnd,omitempty"`
 	IPStart *string `json:"ipStart,omitempty"`
@@ -64,9 +57,12 @@ type UpdateAccountUpdateAccountRequestBody struct {
 }
 
 type UpdateAccountRequest struct {
-	Headers UpdateAccountHeaders
 	// Update Account Settings
-	Request *UpdateAccountUpdateAccountRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateAccountUpdateAccountRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type UpdateAccountResponse struct {

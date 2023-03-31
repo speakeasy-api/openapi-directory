@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubaccountEditRequest struct {
-	// edit sub account request
-	Request shared.SubaccountRequest `request:"mediaType=application/json"`
-}
-
 type SubaccountEditResponse struct {
 	ContentType string
 	// Dysfonctionnement

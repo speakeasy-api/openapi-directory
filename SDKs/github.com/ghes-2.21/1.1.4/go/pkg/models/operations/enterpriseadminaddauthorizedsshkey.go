@@ -12,10 +12,6 @@ type EnterpriseAdminAddAuthorizedSSHKeyRequestBody struct {
 	AuthorizedKey string `form:"name=authorized_key"`
 }
 
-type EnterpriseAdminAddAuthorizedSSHKeyRequest struct {
-	Request EnterpriseAdminAddAuthorizedSSHKeyRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type EnterpriseAdminAddAuthorizedSSHKeyResponse struct {
 	ContentType string
 	StatusCode  int

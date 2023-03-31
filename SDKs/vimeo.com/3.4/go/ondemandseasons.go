@@ -34,7 +34,7 @@ func newOnDemandSeasons(defaultClient, securityClient HTTPClient, serverURL, lan
 // GetVodSeason - Get a specific season on an On Demand page
 func (s *onDemandSeasons) GetVodSeason(ctx context.Context, request operations.GetVodSeasonRequest) (*operations.GetVodSeasonResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/seasons/{season_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/seasons/{season_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -88,14 +88,14 @@ func (s *onDemandSeasons) GetVodSeason(ctx context.Context, request operations.G
 // GetVodSeasonVideos - Get all the videos in a season on an On Demand page
 func (s *onDemandSeasons) GetVodSeasonVideos(ctx context.Context, request operations.GetVodSeasonVideosRequest) (*operations.GetVodSeasonVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -136,14 +136,14 @@ func (s *onDemandSeasons) GetVodSeasonVideos(ctx context.Context, request operat
 // GetVodSeasons - Get all the seasons on an On Demand page
 func (s *onDemandSeasons) GetVodSeasons(ctx context.Context, request operations.GetVodSeasonsRequest) (*operations.GetVodSeasonsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/seasons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/seasons", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

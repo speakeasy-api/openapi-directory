@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEdgeResourcePathParams struct {
-	// CURIE e.g. HP:0000465
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetEdgeResourceDirectionEnum - Which direction to traverse (used only if relationship_type is defined)
 type GetEdgeResourceDirectionEnum string
 
@@ -65,7 +60,7 @@ func (e *GetEdgeResourceGraphEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEdgeResourceQueryParams struct {
+type GetEdgeResourceRequest struct {
 	// How far to traverse for neighbors
 	Depth *int64 `queryParam:"style=form,explode=true,name=depth"`
 	// Which direction to traverse (used only if relationship_type is defined)
@@ -74,13 +69,10 @@ type GetEdgeResourceQueryParams struct {
 	Entail *bool `queryParam:"style=form,explode=true,name=entail"`
 	// Which monarch graph to query
 	Graph *GetEdgeResourceGraphEnum `queryParam:"style=form,explode=true,name=graph"`
+	// CURIE e.g. HP:0000465
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Relationship type to traverse
 	RelationshipType []string `queryParam:"style=form,explode=true,name=relationship_type"`
-}
-
-type GetEdgeResourceRequest struct {
-	PathParams  GetEdgeResourcePathParams
-	QueryParams GetEdgeResourceQueryParams
 }
 
 type GetEdgeResourceResponse struct {

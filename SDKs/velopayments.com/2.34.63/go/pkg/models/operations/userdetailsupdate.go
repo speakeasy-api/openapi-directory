@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserDetailsUpdatePathParams struct {
+type UserDetailsUpdateRequest struct {
+	// The details of the user to update
+	UserDetailsUpdateRequest shared.UserDetailsUpdateRequest `request:"mediaType=application/json"`
 	// The UUID of the User.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UserDetailsUpdateRequest struct {
-	PathParams UserDetailsUpdatePathParams
-	// The details of the user to update
-	Request shared.UserDetailsUpdateRequest `request:"mediaType=application/json"`
 }
 
 type UserDetailsUpdateResponse struct {

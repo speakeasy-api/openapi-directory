@@ -45,10 +45,6 @@ type GeneratePartialYaraRuleRequestBody struct {
 	StringsToIgnore     []string                                                   `multipartForm:"name=strings_to_ignore"`
 }
 
-type GeneratePartialYaraRuleRequest struct {
-	Request GeneratePartialYaraRuleRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // GeneratePartialYaraRule200Wildcard - Yara rules
 type GeneratePartialYaraRule200Wildcard struct {
 	Rule *shared.Yara

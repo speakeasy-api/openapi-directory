@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesCreateLabelPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesCreateLabelRequestBody struct {
 	// The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
 	Color *string `json:"color,omitempty"`
@@ -24,8 +17,11 @@ type IssuesCreateLabelRequestBody struct {
 }
 
 type IssuesCreateLabelRequest struct {
-	PathParams IssuesCreateLabelPathParams
-	Request    IssuesCreateLabelRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesCreateLabelRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesCreateLabelResponse struct {

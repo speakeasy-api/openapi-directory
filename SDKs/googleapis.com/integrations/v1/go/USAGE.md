@@ -14,36 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.IntegrationsCallbackGenerateTokenRequest{
-        Security: operations.IntegrationsCallbackGenerateTokenSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.IntegrationsCallbackGenerateTokenQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Code: "unde",
-            Fields: "nulla",
-            GcpProjectID: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            Product: "APIGEE",
-            QuotaUser: "deserunt",
-            RedirectURI: "suscipit",
-            State: "iure",
-            UploadType: "magnam",
-            UploadProtocol: "debitis",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Code: "unde",
+        Fields: "nulla",
+        GcpProjectID: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        Product: "APIGEE",
+        QuotaUser: "deserunt",
+        RedirectURI: "suscipit",
+        State: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Callback.IntegrationsCallbackGenerateToken(ctx, req)
+    res, err := s.Callback.IntegrationsCallbackGenerateToken(ctx, req, operations.IntegrationsCallbackGenerateTokenSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

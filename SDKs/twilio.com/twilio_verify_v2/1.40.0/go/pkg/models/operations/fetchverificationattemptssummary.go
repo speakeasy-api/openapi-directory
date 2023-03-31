@@ -13,10 +13,11 @@ var FetchVerificationAttemptsSummaryServerList = []string{
 }
 
 type FetchVerificationAttemptsSummarySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchVerificationAttemptsSummaryQueryParams struct {
+type FetchVerificationAttemptsSummaryRequest struct {
 	// Filter Verification Attempts considered on the summary aggregation by communication channel. Valid values are `SMS` and `CALL`
 	Channel *shared.VerificationAttemptsSummaryEnumChannelsEnum `queryParam:"style=form,explode=true,name=Channel"`
 	// Filter used to consider only Verification Attempts sent to the specified destination country on the summary aggregation.
@@ -29,12 +30,6 @@ type FetchVerificationAttemptsSummaryQueryParams struct {
 	DestinationPrefix *string `queryParam:"style=form,explode=true,name=DestinationPrefix"`
 	// Filter used to consider only Verification Attempts of the given verify service on the summary aggregation.
 	VerifyServiceSid *string `queryParam:"style=form,explode=true,name=VerifyServiceSid"`
-}
-
-type FetchVerificationAttemptsSummaryRequest struct {
-	QueryParams FetchVerificationAttemptsSummaryQueryParams
-	Security    FetchVerificationAttemptsSummarySecurity
-	ServerURL   *string
 }
 
 type FetchVerificationAttemptsSummaryResponse struct {

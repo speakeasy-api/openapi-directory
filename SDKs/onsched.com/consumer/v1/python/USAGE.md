@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.DeleteConsumerV1AppointmentsIDRequest(
-    path_params=operations.DeleteConsumerV1AppointmentsIDPathParams(
-        id="voluptate",
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.DeleteConsumerV1AppointmentsIDRequest(
+    id="corrupti",
 )
     
 res = s.appointments.delete_consumer_v1_appointments_id_(req)

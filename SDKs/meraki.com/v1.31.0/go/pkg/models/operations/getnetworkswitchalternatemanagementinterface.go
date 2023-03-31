@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchAlternateManagementInterfacePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSwitchAlternateManagementInterfaceRequest struct {
-	PathParams GetNetworkSwitchAlternateManagementInterfacePathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSwitchAlternateManagementInterfaceResponse struct {

@@ -77,7 +77,7 @@ func (e *GetVolumesStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVolumesQueryParams struct {
+type GetVolumesRequest struct {
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter resources by their name. The response will only contain the resources matching the specified name
@@ -86,10 +86,6 @@ type GetVolumesQueryParams struct {
 	Sort *GetVolumesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times. The response will only contain Volumes matching the status.
 	Status *GetVolumesStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetVolumesRequest struct {
-	QueryParams GetVolumesQueryParams
 }
 
 type GetVolumes200ApplicationJSONMetaPagination struct {

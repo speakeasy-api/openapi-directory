@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSurveyPathParams struct {
+type GetSurveyRequest struct {
 	// ID of survey (eg. SV_123)
 	SurveyID string `pathParam:"style=simple,explode=false,name=SurveyId"`
-}
-
-type GetSurveyRequest struct {
-	PathParams GetSurveyPathParams
 }
 
 type GetSurveyResponse struct {

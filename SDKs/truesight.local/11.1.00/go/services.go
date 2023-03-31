@@ -37,7 +37,7 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // You need to provide a <b>Service ID</b> ID :<br>- use the <b>hardware/services</b> service to get all available service IDs.
 func (s *services) GetOneService(ctx context.Context, request operations.GetOneServiceRequest) (*operations.GetOneServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/services/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hardware/services/{serviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *services) GetServices(ctx context.Context, request operations.GetServic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

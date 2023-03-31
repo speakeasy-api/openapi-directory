@@ -37,7 +37,7 @@ func newArchive(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // PostTargetsActivate - Activate targets
-func (s *archive) PostTargetsActivate(ctx context.Context, request operations.PostTargetsActivateRequest) (*operations.PostTargetsActivateResponse, error) {
+func (s *archive) PostTargetsActivate(ctx context.Context, request []string) (*operations.PostTargetsActivateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/targets/activate/"
 
@@ -121,7 +121,7 @@ func (s *archive) PostTargetsActivate(ctx context.Context, request operations.Po
 }
 
 // PostTargetsArchive - Archive targets
-func (s *archive) PostTargetsArchive(ctx context.Context, request operations.PostTargetsArchiveRequest) (*operations.PostTargetsArchiveResponse, error) {
+func (s *archive) PostTargetsArchive(ctx context.Context, request []string) (*operations.PostTargetsArchiveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/targets/archive/"
 
@@ -205,7 +205,7 @@ func (s *archive) PostTargetsArchive(ctx context.Context, request operations.Pos
 }
 
 // PostTargetsArchived - List archived targets
-func (s *archive) PostTargetsArchived(ctx context.Context, request operations.PostTargetsArchivedRequest) (*operations.PostTargetsArchivedResponse, error) {
+func (s *archive) PostTargetsArchived(ctx context.Context, request []string) (*operations.PostTargetsArchivedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/targets/archived/"
 

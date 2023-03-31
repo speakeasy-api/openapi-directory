@@ -38,7 +38,7 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // A filter expression is a predicate expression (similar to SQL where clause) used to define the search criteria.
 // Please refer to API Guide on details of how to construct filter expression. A successful search request will return a
 // list of entity ids that matches the search criteria.
-func (s *search) SearchEntities(ctx context.Context, request operations.SearchEntitiesRequest) (*operations.SearchEntitiesResponse, error) {
+func (s *search) SearchEntities(ctx context.Context, request shared.SearchRequest, security operations.SearchEntitiesSecurity) (*operations.SearchEntitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search"
 
@@ -54,7 +54,7 @@ func (s *search) SearchEntities(ctx context.Context, request operations.SearchEn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

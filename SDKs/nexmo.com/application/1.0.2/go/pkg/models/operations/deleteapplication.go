@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteApplicationPathParams struct {
+type DeleteApplicationRequest struct {
 	// The ID allocated to your application by Nexmo.
 	AppID string `pathParam:"style=simple,explode=false,name=app_id"`
-}
-
-type DeleteApplicationRequest struct {
-	PathParams DeleteApplicationPathParams
 }
 
 type DeleteApplicationResponse struct {

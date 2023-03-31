@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTargetsTargetIDTopVulnsPathParams struct {
+type GetTargetsTargetIDTopVulnsRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDTopVulnsRequest struct {
-	PathParams GetTargetsTargetIDTopVulnsPathParams
 }
 
 type GetTargetsTargetIDTopVulns200ApplicationJSON struct {

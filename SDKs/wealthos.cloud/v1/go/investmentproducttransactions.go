@@ -36,11 +36,11 @@ func newInvestmentProductTransactions(defaultClient, securityClient HTTPClient, 
 
 // ExecuteBuyTrasaction - Execute Buy Transaction(s)
 // Invoke execution of one or more buy transactions as defined in the request
-func (s *investmentProductTransactions) ExecuteBuyTrasaction(ctx context.Context, request operations.ExecuteBuyTrasactionRequest) (*operations.ExecuteBuyTrasactionResponse, error) {
+func (s *investmentProductTransactions) ExecuteBuyTrasaction(ctx context.Context, request operations.ExecuteBuyTrasactionRequest, security operations.ExecuteBuyTrasactionSecurity) (*operations.ExecuteBuyTrasactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/buy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *investmentProductTransactions) ExecuteBuyTrasaction(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,11 +160,11 @@ func (s *investmentProductTransactions) ExecuteBuyTrasaction(ctx context.Context
 
 // ExecuteSellTrasaction - Execute Sell Transaction(s)
 // Invoke execution of one or more Sell transactions as defined in the request
-func (s *investmentProductTransactions) ExecuteSellTrasaction(ctx context.Context, request operations.ExecuteSellTrasactionRequest) (*operations.ExecuteSellTrasactionResponse, error) {
+func (s *investmentProductTransactions) ExecuteSellTrasaction(ctx context.Context, request operations.ExecuteSellTrasactionRequest, security operations.ExecuteSellTrasactionSecurity) (*operations.ExecuteSellTrasactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/sell"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,9 +176,9 @@ func (s *investmentProductTransactions) ExecuteSellTrasaction(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

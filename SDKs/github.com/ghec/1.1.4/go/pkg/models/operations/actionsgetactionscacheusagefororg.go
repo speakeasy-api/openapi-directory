@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetActionsCacheUsageForOrgPathParams struct {
+type ActionsGetActionsCacheUsageForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsGetActionsCacheUsageForOrgRequest struct {
-	PathParams ActionsGetActionsCacheUsageForOrgPathParams
 }
 
 type ActionsGetActionsCacheUsageForOrgResponse struct {

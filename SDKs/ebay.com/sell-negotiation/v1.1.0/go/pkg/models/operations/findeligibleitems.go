@@ -8,25 +8,16 @@ import (
 )
 
 type FindEligibleItemsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FindEligibleItemsQueryParams struct {
+type FindEligibleItemsRequest struct {
+	// The eBay marketplace on which you want to search for eligible listings. For a complete list of supported marketplaces, see Negotiation API requirements and restrictions.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 	// This query parameter specifies the maximum number of items to return from the result set on a page in the paginated response. Minimum: 1 &nbsp; &nbsp;Maximum: 200 Default: 10
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// This query parameter specifies the number of results to skip in the result set before returning the first result in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 results from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type FindEligibleItemsHeaders struct {
-	// The eBay marketplace on which you want to search for eligible listings. For a complete list of supported marketplaces, see Negotiation API requirements and restrictions.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
-}
-
-type FindEligibleItemsRequest struct {
-	QueryParams FindEligibleItemsQueryParams
-	Headers     FindEligibleItemsHeaders
-	Security    FindEligibleItemsSecurity
 }
 
 type FindEligibleItemsResponse struct {

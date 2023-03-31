@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfUserSubscribedToChannelAlt1PathParams struct {
+type CheckIfUserSubscribedToChannelAlt1Request struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
-type CheckIfUserSubscribedToChannelAlt1Request struct {
-	PathParams CheckIfUserSubscribedToChannelAlt1PathParams
 }
 
 type CheckIfUserSubscribedToChannelAlt1Response struct {

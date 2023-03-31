@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesLockPathParams struct {
-	// issue_number parameter
-	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesLockRequestBodyLockReasonEnum - The reason for locking the issue or pull request conversation. Lock will fail if you don't use one of these reasons:
 // \* `off-topic`
 // \* `too heated`
@@ -60,8 +53,11 @@ type IssuesLockRequestBody struct {
 }
 
 type IssuesLockRequest struct {
-	PathParams IssuesLockPathParams
-	Request    *IssuesLockRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesLockRequestBody `request:"mediaType=application/json"`
+	// issue_number parameter
+	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesLockResponse struct {

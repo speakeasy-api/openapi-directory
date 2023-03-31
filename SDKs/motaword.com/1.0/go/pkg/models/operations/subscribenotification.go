@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubscribeNotificationRequest struct {
-	Request *shared.NotificationSubscription `request:"mediaType=application/json"`
-}
-
 type SubscribeNotificationResponse struct {
 	ContentType string
 	// MissingParameter | Failed to save subscription

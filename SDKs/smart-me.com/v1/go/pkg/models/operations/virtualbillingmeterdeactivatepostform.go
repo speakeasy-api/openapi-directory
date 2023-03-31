@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type VirtualBillingMeterDeactivatePostFormRequest struct {
-	// The Meter to activate
-	Request shared.VMeterToDeactivate `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type VirtualBillingMeterDeactivatePostFormResponse struct {
 	Body        []byte

@@ -14,84 +14,85 @@ func main() {
     s := sdk.New()
 
     req := operations.TranslateProjectsLocationsBatchTranslateDocumentRequest{
-        Security: operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.BatchTranslateDocumentRequest{
-            CustomizedAttribution: "suscipit",
+        DollarXgafv: "2",
+        BatchTranslateDocumentRequest: &shared.BatchTranslateDocumentRequest{
+            CustomizedAttribution: "provident",
             EnableShadowRemovalNativePdf: false,
             FormatConversions: map[string]string{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "suscipit": shared.TranslateTextGlossaryConfig{
-                    Glossary: "molestiae",
+                "deserunt": shared.TranslateTextGlossaryConfig{
+                    Glossary: "suscipit",
                     IgnoreCase: false,
                 },
-                "minus": shared.TranslateTextGlossaryConfig{
-                    Glossary: "placeat",
+                "iure": shared.TranslateTextGlossaryConfig{
+                    Glossary: "magnam",
+                    IgnoreCase: false,
+                },
+                "debitis": shared.TranslateTextGlossaryConfig{
+                    Glossary: "ipsa",
                     IgnoreCase: false,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "iusto",
+                        InputURI: "tempora",
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "excepturi",
+                        InputURI: "suscipit",
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "nisi",
+                        InputURI: "molestiae",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "minus",
                     },
                 },
             },
             Models: map[string]string{
-                "temporibus": "ab",
-                "quis": "veritatis",
-                "deserunt": "perferendis",
-                "ipsam": "repellendus",
+                "voluptatum": "iusto",
+                "excepturi": "nisi",
+                "recusandae": "temporibus",
+                "ab": "quis",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "sapiente",
+                    OutputURIPrefix: "veritatis",
                 },
             },
-            SourceLanguageCode: "quo",
+            SourceLanguageCode: "deserunt",
             TargetLanguageCodes: []string{
-                "at",
+                "ipsam",
             },
         },
+        AccessToken: "repellendus",
+        Alt: "proto",
+        Callback: "quo",
+        Fields: "odit",
+        Key: "at",
+        OauthToken: "at",
+        Parent: "maiores",
+        PrettyPrint: false,
+        QuotaUser: "molestiae",
+        UploadType: "quod",
+        UploadProtocol: "quod",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.TranslateProjectsLocationsBatchTranslateDocument(ctx, req)
+    res, err := s.Projects.TranslateProjectsLocationsBatchTranslateDocument(ctx, req, operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

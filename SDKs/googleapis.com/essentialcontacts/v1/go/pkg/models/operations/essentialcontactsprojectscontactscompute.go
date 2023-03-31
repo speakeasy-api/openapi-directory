@@ -10,13 +10,8 @@ import (
 )
 
 type EssentialcontactsProjectsContactsComputeSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type EssentialcontactsProjectsContactsComputePathParams struct {
-	// Required. The name of the resource to compute contacts for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum string
@@ -63,7 +58,7 @@ func (e *EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum) Unm
 	}
 }
 
-type EssentialcontactsProjectsContactsComputeQueryParams struct {
+type EssentialcontactsProjectsContactsComputeRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -84,6 +79,8 @@ type EssentialcontactsProjectsContactsComputeQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. If present, retrieves the next batch of results from the preceding call to this method. `page_token` must be the value of `next_page_token` from the previous response. The values of other method parameters should be identical to those in the previous call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the resource to compute contacts for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -92,12 +89,6 @@ type EssentialcontactsProjectsContactsComputeQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type EssentialcontactsProjectsContactsComputeRequest struct {
-	PathParams  EssentialcontactsProjectsContactsComputePathParams
-	QueryParams EssentialcontactsProjectsContactsComputeQueryParams
-	Security    EssentialcontactsProjectsContactsComputeSecurity
 }
 
 type EssentialcontactsProjectsContactsComputeResponse struct {

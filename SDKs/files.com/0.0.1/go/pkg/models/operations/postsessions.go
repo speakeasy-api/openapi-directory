@@ -18,10 +18,6 @@ type PostSessionsRequestBody struct {
 	Username *string `multipartForm:"name=username"`
 }
 
-type PostSessionsRequest struct {
-	Request *PostSessionsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostSessionsResponse struct {
 	ContentType string
 	// The Sessions object.

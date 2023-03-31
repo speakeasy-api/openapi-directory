@@ -31,16 +31,16 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DeleteWorkspaceSlugWebhooksID - Delete a webhook
-func (s *webhooks) DeleteWorkspaceSlugWebhooksID(ctx context.Context, request operations.DeleteWorkspaceSlugWebhooksIDRequest) (*operations.DeleteWorkspaceSlugWebhooksIDResponse, error) {
+func (s *webhooks) DeleteWorkspaceSlugWebhooksID(ctx context.Context, request operations.DeleteWorkspaceSlugWebhooksIDRequest, security operations.DeleteWorkspaceSlugWebhooksIDSecurity) (*operations.DeleteWorkspaceSlugWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -68,16 +68,16 @@ func (s *webhooks) DeleteWorkspaceSlugWebhooksID(ctx context.Context, request op
 }
 
 // GetWorkspaceSlugWebhooks - List webhooks in a workspace
-func (s *webhooks) GetWorkspaceSlugWebhooks(ctx context.Context, request operations.GetWorkspaceSlugWebhooksRequest) (*operations.GetWorkspaceSlugWebhooksResponse, error) {
+func (s *webhooks) GetWorkspaceSlugWebhooks(ctx context.Context, request operations.GetWorkspaceSlugWebhooksRequest, security operations.GetWorkspaceSlugWebhooksSecurity) (*operations.GetWorkspaceSlugWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,16 +103,16 @@ func (s *webhooks) GetWorkspaceSlugWebhooks(ctx context.Context, request operati
 }
 
 // GetWorkspaceSlugWebhooksID - Get a webhook
-func (s *webhooks) GetWorkspaceSlugWebhooksID(ctx context.Context, request operations.GetWorkspaceSlugWebhooksIDRequest) (*operations.GetWorkspaceSlugWebhooksIDResponse, error) {
+func (s *webhooks) GetWorkspaceSlugWebhooksID(ctx context.Context, request operations.GetWorkspaceSlugWebhooksIDRequest, security operations.GetWorkspaceSlugWebhooksIDSecurity) (*operations.GetWorkspaceSlugWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -138,11 +138,11 @@ func (s *webhooks) GetWorkspaceSlugWebhooksID(ctx context.Context, request opera
 }
 
 // PostWorkspaceSlugWebhooks - Create a webhook
-func (s *webhooks) PostWorkspaceSlugWebhooks(ctx context.Context, request operations.PostWorkspaceSlugWebhooksRequest) (*operations.PostWorkspaceSlugWebhooksResponse, error) {
+func (s *webhooks) PostWorkspaceSlugWebhooks(ctx context.Context, request operations.PostWorkspaceSlugWebhooksRequest, security operations.PostWorkspaceSlugWebhooksSecurity) (*operations.PostWorkspaceSlugWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookSubscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -154,7 +154,7 @@ func (s *webhooks) PostWorkspaceSlugWebhooks(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,11 +182,11 @@ func (s *webhooks) PostWorkspaceSlugWebhooks(ctx context.Context, request operat
 }
 
 // PutWorkspaceSlugWebhooksID - Update a webhook
-func (s *webhooks) PutWorkspaceSlugWebhooksID(ctx context.Context, request operations.PutWorkspaceSlugWebhooksIDRequest) (*operations.PutWorkspaceSlugWebhooksIDResponse, error) {
+func (s *webhooks) PutWorkspaceSlugWebhooksID(ctx context.Context, request operations.PutWorkspaceSlugWebhooksIDRequest, security operations.PutWorkspaceSlugWebhooksIDSecurity) (*operations.PutWorkspaceSlugWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookSubscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -198,7 +198,7 @@ func (s *webhooks) PutWorkspaceSlugWebhooksID(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

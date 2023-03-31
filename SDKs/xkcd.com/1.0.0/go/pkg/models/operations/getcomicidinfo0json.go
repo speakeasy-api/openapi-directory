@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetComicIDInfo0JSONPathParams struct {
-	ComicID float64 `pathParam:"style=simple,explode=false,name=comicId"`
-}
-
 type GetComicIDInfo0JSONRequest struct {
-	PathParams GetComicIDInfo0JSONPathParams
+	ComicID float64 `pathParam:"style=simple,explode=false,name=comicId"`
 }
 
 type GetComicIDInfo0JSONResponse struct {

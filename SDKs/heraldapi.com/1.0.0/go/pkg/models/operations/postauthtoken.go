@@ -11,10 +11,6 @@ type PostAuthTokenRequestBody struct {
 	APIKey string `json:"api_key"`
 }
 
-type PostAuthTokenRequest struct {
-	Request *PostAuthTokenRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAuthToken200ApplicationJSON - OK
 type PostAuthToken200ApplicationJSON struct {
 	// An expiring access token that can be used as a bearer token for all auth-protected Herald endpoints.

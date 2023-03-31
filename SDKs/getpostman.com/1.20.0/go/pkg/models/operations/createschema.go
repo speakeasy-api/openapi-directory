@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateSchemaPathParams struct {
-	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
-	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
 type CreateSchemaRequestBodySchema struct {
 	Language *string `json:"language,omitempty"`
 	Schema   *string `json:"schema,omitempty"`
@@ -22,8 +17,9 @@ type CreateSchemaRequestBody struct {
 }
 
 type CreateSchemaRequest struct {
-	PathParams CreateSchemaPathParams
-	Request    *CreateSchemaRequestBody `request:"mediaType=application/json"`
+	RequestBody  *CreateSchemaRequestBody `request:"mediaType=application/json"`
+	APIID        string                   `pathParam:"style=simple,explode=false,name=apiId"`
+	APIVersionID string                   `pathParam:"style=simple,explode=false,name=apiVersionId"`
 }
 
 type CreateSchema200ApplicationJSONSchema struct {

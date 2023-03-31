@@ -32,20 +32,20 @@ func newRoles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DirectoryRolesDelete - Deletes a role.
-func (s *roles) DirectoryRolesDelete(ctx context.Context, request operations.DirectoryRolesDeleteRequest) (*operations.DirectoryRolesDeleteResponse, error) {
+func (s *roles) DirectoryRolesDelete(ctx context.Context, request operations.DirectoryRolesDeleteRequest, security operations.DirectoryRolesDeleteSecurity) (*operations.DirectoryRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *roles) DirectoryRolesDelete(ctx context.Context, request operations.Dir
 }
 
 // DirectoryRolesGet - Retrieves a role.
-func (s *roles) DirectoryRolesGet(ctx context.Context, request operations.DirectoryRolesGetRequest) (*operations.DirectoryRolesGetResponse, error) {
+func (s *roles) DirectoryRolesGet(ctx context.Context, request operations.DirectoryRolesGetRequest, security operations.DirectoryRolesGetSecurity) (*operations.DirectoryRolesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *roles) DirectoryRolesGet(ctx context.Context, request operations.Direct
 }
 
 // DirectoryRolesInsert - Creates a role.
-func (s *roles) DirectoryRolesInsert(ctx context.Context, request operations.DirectoryRolesInsertRequest) (*operations.DirectoryRolesInsertResponse, error) {
+func (s *roles) DirectoryRolesInsert(ctx context.Context, request operations.DirectoryRolesInsertRequest, security operations.DirectoryRolesInsertSecurity) (*operations.DirectoryRolesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Role", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *roles) DirectoryRolesInsert(ctx context.Context, request operations.Dir
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *roles) DirectoryRolesInsert(ctx context.Context, request operations.Dir
 }
 
 // DirectoryRolesList - Retrieves a paginated list of all the roles in a domain.
-func (s *roles) DirectoryRolesList(ctx context.Context, request operations.DirectoryRolesListRequest) (*operations.DirectoryRolesListResponse, error) {
+func (s *roles) DirectoryRolesList(ctx context.Context, request operations.DirectoryRolesListRequest, security operations.DirectoryRolesListSecurity) (*operations.DirectoryRolesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *roles) DirectoryRolesList(ctx context.Context, request operations.Direc
 }
 
 // DirectoryRolesPatch - Patches a role.
-func (s *roles) DirectoryRolesPatch(ctx context.Context, request operations.DirectoryRolesPatchRequest) (*operations.DirectoryRolesPatchResponse, error) {
+func (s *roles) DirectoryRolesPatch(ctx context.Context, request operations.DirectoryRolesPatchRequest, security operations.DirectoryRolesPatchSecurity) (*operations.DirectoryRolesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Role", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *roles) DirectoryRolesPatch(ctx context.Context, request operations.Dire
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *roles) DirectoryRolesPatch(ctx context.Context, request operations.Dire
 }
 
 // DirectoryRolesUpdate - Updates a role.
-func (s *roles) DirectoryRolesUpdate(ctx context.Context, request operations.DirectoryRolesUpdateRequest) (*operations.DirectoryRolesUpdateResponse, error) {
+func (s *roles) DirectoryRolesUpdate(ctx context.Context, request operations.DirectoryRolesUpdateRequest, security operations.DirectoryRolesUpdateSecurity) (*operations.DirectoryRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Role", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *roles) DirectoryRolesUpdate(ctx context.Context, request operations.Dir
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -34,11 +34,11 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AddImageCollectionItems - Add images to collections
 // This endpoint adds one or more images to a collection by image IDs.
-func (s *images) AddImageCollectionItems(ctx context.Context, request operations.AddImageCollectionItemsRequest) (*operations.AddImageCollectionItemsResponse, error) {
+func (s *images) AddImageCollectionItems(ctx context.Context, request operations.AddImageCollectionItemsRequest, security operations.AddImageCollectionItemsSecurity) (*operations.AddImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *images) AddImageCollectionItems(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *images) AddImageCollectionItems(ctx context.Context, request operations
 
 // BulkSearchImages - Run multiple image searches
 // This endpoint runs up to 5 image searches in a single request and returns up to 20 results per search. You can provide global search parameters in the query parameters and override them for each search in the body parameter. The query and body parameters are the same as in the `GET /v2/images/search` endpoint.
-func (s *images) BulkSearchImages(ctx context.Context, request operations.BulkSearchImagesRequest) (*operations.BulkSearchImagesResponse, error) {
+func (s *images) BulkSearchImages(ctx context.Context, request operations.BulkSearchImagesRequest, security operations.BulkSearchImagesSecurity) (*operations.BulkSearchImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bulk_search/images"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,11 +107,11 @@ func (s *images) BulkSearchImages(ctx context.Context, request operations.BulkSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *images) BulkSearchImages(ctx context.Context, request operations.BulkSe
 
 // CreateImageCollection - Create image collections
 // This endpoint creates one or more image collections (lightboxes). To add images to the collections, use `POST /v2/images/collections/{id}/items`.
-func (s *images) CreateImageCollection(ctx context.Context, request operations.CreateImageCollectionRequest) (*operations.CreateImageCollectionResponse, error) {
+func (s *images) CreateImageCollection(ctx context.Context, request shared.CollectionCreateRequest, security operations.CreateImageCollectionSecurity) (*operations.CreateImageCollectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/collections"
 
@@ -171,7 +171,7 @@ func (s *images) CreateImageCollection(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,16 +212,16 @@ func (s *images) CreateImageCollection(ctx context.Context, request operations.C
 
 // DeleteImageCollection - Delete image collections
 // This endpoint deletes an image collection.
-func (s *images) DeleteImageCollection(ctx context.Context, request operations.DeleteImageCollectionRequest) (*operations.DeleteImageCollectionResponse, error) {
+func (s *images) DeleteImageCollection(ctx context.Context, request operations.DeleteImageCollectionRequest, security operations.DeleteImageCollectionSecurity) (*operations.DeleteImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -256,20 +256,20 @@ func (s *images) DeleteImageCollection(ctx context.Context, request operations.D
 
 // DeleteImageCollectionItems - Remove images from collections
 // This endpoint removes one or more images from a collection.
-func (s *images) DeleteImageCollectionItems(ctx context.Context, request operations.DeleteImageCollectionItemsRequest) (*operations.DeleteImageCollectionItemsResponse, error) {
+func (s *images) DeleteImageCollectionItems(ctx context.Context, request operations.DeleteImageCollectionItemsRequest, security operations.DeleteImageCollectionItemsSecurity) (*operations.DeleteImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -304,11 +304,11 @@ func (s *images) DeleteImageCollectionItems(ctx context.Context, request operati
 
 // DownloadImage - Download images
 // This endpoint redownloads images that you have already received a license for. The download links in the response are valid for 8 hours.
-func (s *images) DownloadImage(ctx context.Context, request operations.DownloadImageRequest) (*operations.DownloadImageResponse, error) {
+func (s *images) DownloadImage(ctx context.Context, request operations.DownloadImageRequest, security operations.DownloadImageSecurity) (*operations.DownloadImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/licenses/{id}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/licenses/{id}/downloads", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RedownloadImage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *images) DownloadImage(ctx context.Context, request operations.DownloadI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -364,20 +364,20 @@ func (s *images) DownloadImage(ctx context.Context, request operations.DownloadI
 
 // GetFeaturedImageCollection - Get the details of featured image collections
 // This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use `GET /v2/images/collections/featured/{id}/items`.
-func (s *images) GetFeaturedImageCollection(ctx context.Context, request operations.GetFeaturedImageCollectionRequest) (*operations.GetFeaturedImageCollectionResponse, error) {
+func (s *images) GetFeaturedImageCollection(ctx context.Context, request operations.GetFeaturedImageCollectionRequest, security operations.GetFeaturedImageCollectionSecurity) (*operations.GetFeaturedImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -420,20 +420,20 @@ func (s *images) GetFeaturedImageCollection(ctx context.Context, request operati
 
 // GetFeaturedImageCollectionItems - Get the contents of featured image collections
 // This endpoint lists the IDs of images in a featured collection and the date that each was added.
-func (s *images) GetFeaturedImageCollectionItems(ctx context.Context, request operations.GetFeaturedImageCollectionItemsRequest) (*operations.GetFeaturedImageCollectionItemsResponse, error) {
+func (s *images) GetFeaturedImageCollectionItems(ctx context.Context, request operations.GetFeaturedImageCollectionItemsRequest, security operations.GetFeaturedImageCollectionItemsSecurity) (*operations.GetFeaturedImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -476,7 +476,7 @@ func (s *images) GetFeaturedImageCollectionItems(ctx context.Context, request op
 
 // GetFeaturedImageCollectionList - List featured image collections
 // This endpoint lists featured collections of specific types and a name and cover image for each collection.
-func (s *images) GetFeaturedImageCollectionList(ctx context.Context, request operations.GetFeaturedImageCollectionListRequest) (*operations.GetFeaturedImageCollectionListResponse, error) {
+func (s *images) GetFeaturedImageCollectionList(ctx context.Context, request operations.GetFeaturedImageCollectionListRequest, security operations.GetFeaturedImageCollectionListSecurity) (*operations.GetFeaturedImageCollectionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/collections/featured"
 
@@ -485,11 +485,11 @@ func (s *images) GetFeaturedImageCollectionList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -530,20 +530,20 @@ func (s *images) GetFeaturedImageCollectionList(ctx context.Context, request ope
 
 // GetImage - Get details about images
 // This endpoint shows information about an image, including a URL to a preview image and the sizes that it is available in.
-func (s *images) GetImage(ctx context.Context, request operations.GetImageRequest) (*operations.GetImageResponse, error) {
+func (s *images) GetImage(ctx context.Context, request operations.GetImageRequest, security operations.GetImageSecurity) (*operations.GetImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -584,20 +584,20 @@ func (s *images) GetImage(ctx context.Context, request operations.GetImageReques
 
 // GetImageCollection - Get the details of image collections
 // This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use `GET /v2/images/collections/{id}/items`.
-func (s *images) GetImageCollection(ctx context.Context, request operations.GetImageCollectionRequest) (*operations.GetImageCollectionResponse, error) {
+func (s *images) GetImageCollection(ctx context.Context, request operations.GetImageCollectionRequest, security operations.GetImageCollectionSecurity) (*operations.GetImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -640,20 +640,20 @@ func (s *images) GetImageCollection(ctx context.Context, request operations.GetI
 
 // GetImageCollectionItems - Get the contents of image collections
 // This endpoint lists the IDs of images in a collection and the date that each was added.
-func (s *images) GetImageCollectionItems(ctx context.Context, request operations.GetImageCollectionItemsRequest) (*operations.GetImageCollectionItemsResponse, error) {
+func (s *images) GetImageCollectionItems(ctx context.Context, request operations.GetImageCollectionItemsRequest, security operations.GetImageCollectionItemsSecurity) (*operations.GetImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -696,7 +696,7 @@ func (s *images) GetImageCollectionItems(ctx context.Context, request operations
 
 // GetImageCollectionList - List image collections
 // This endpoint lists your collections of images and their basic attributes.
-func (s *images) GetImageCollectionList(ctx context.Context, request operations.GetImageCollectionListRequest) (*operations.GetImageCollectionListResponse, error) {
+func (s *images) GetImageCollectionList(ctx context.Context, request operations.GetImageCollectionListRequest, security operations.GetImageCollectionListSecurity) (*operations.GetImageCollectionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/collections"
 
@@ -705,11 +705,11 @@ func (s *images) GetImageCollectionList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -750,7 +750,7 @@ func (s *images) GetImageCollectionList(ctx context.Context, request operations.
 
 // GetImageKeywordSuggestions - Get keywords from text
 // This endpoint returns up to 10 important keywords from a block of plain text.
-func (s *images) GetImageKeywordSuggestions(ctx context.Context, request operations.GetImageKeywordSuggestionsRequest) (*operations.GetImageKeywordSuggestionsResponse, error) {
+func (s *images) GetImageKeywordSuggestions(ctx context.Context, request shared.SearchEntitiesRequest, security operations.GetImageKeywordSuggestionsSecurity) (*operations.GetImageKeywordSuggestionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/search/suggestions"
 
@@ -769,7 +769,7 @@ func (s *images) GetImageKeywordSuggestions(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -810,7 +810,7 @@ func (s *images) GetImageKeywordSuggestions(ctx context.Context, request operati
 
 // GetImageLicenseList - List image licenses
 // This endpoint lists existing licenses.
-func (s *images) GetImageLicenseList(ctx context.Context, request operations.GetImageLicenseListRequest) (*operations.GetImageLicenseListResponse, error) {
+func (s *images) GetImageLicenseList(ctx context.Context, request operations.GetImageLicenseListRequest, security operations.GetImageLicenseListSecurity) (*operations.GetImageLicenseListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/licenses"
 
@@ -819,11 +819,11 @@ func (s *images) GetImageLicenseList(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -864,7 +864,7 @@ func (s *images) GetImageLicenseList(ctx context.Context, request operations.Get
 
 // GetImageList - List images
 // This endpoint lists information about one or more images, including the available sizes.
-func (s *images) GetImageList(ctx context.Context, request operations.GetImageListRequest) (*operations.GetImageListResponse, error) {
+func (s *images) GetImageList(ctx context.Context, request operations.GetImageListRequest, security operations.GetImageListSecurity) (*operations.GetImageListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images"
 
@@ -873,11 +873,11 @@ func (s *images) GetImageList(ctx context.Context, request operations.GetImageLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,7 +918,7 @@ func (s *images) GetImageList(ctx context.Context, request operations.GetImageLi
 
 // GetImageRecommendations - List recommended images
 // This endpoint returns images that customers put in the same collection as the specified image IDs.
-func (s *images) GetImageRecommendations(ctx context.Context, request operations.GetImageRecommendationsRequest) (*operations.GetImageRecommendationsResponse, error) {
+func (s *images) GetImageRecommendations(ctx context.Context, request operations.GetImageRecommendationsRequest, security operations.GetImageRecommendationsSecurity) (*operations.GetImageRecommendationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/recommendations"
 
@@ -927,11 +927,11 @@ func (s *images) GetImageRecommendations(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -972,7 +972,7 @@ func (s *images) GetImageRecommendations(ctx context.Context, request operations
 
 // GetImageSuggestions - Get suggestions for a search term
 // This endpoint provides autocomplete suggestions for partial search terms.
-func (s *images) GetImageSuggestions(ctx context.Context, request operations.GetImageSuggestionsRequest) (*operations.GetImageSuggestionsResponse, error) {
+func (s *images) GetImageSuggestions(ctx context.Context, request operations.GetImageSuggestionsRequest, security operations.GetImageSuggestionsSecurity) (*operations.GetImageSuggestionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/search/suggestions"
 
@@ -981,11 +981,11 @@ func (s *images) GetImageSuggestions(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1026,7 +1026,7 @@ func (s *images) GetImageSuggestions(ctx context.Context, request operations.Get
 
 // GetUpdatedImages - List updated images
 // This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the `interval` parameter to show images that were updated recently, but you can also use the `start_date` and `end_date` parameters to specify a range of no more than three days. Do not use the `interval` parameter with either `start_date` or `end_date`.
-func (s *images) GetUpdatedImages(ctx context.Context, request operations.GetUpdatedImagesRequest) (*operations.GetUpdatedImagesResponse, error) {
+func (s *images) GetUpdatedImages(ctx context.Context, request operations.GetUpdatedImagesRequest, security operations.GetUpdatedImagesSecurity) (*operations.GetUpdatedImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/updated"
 
@@ -1035,11 +1035,11 @@ func (s *images) GetUpdatedImages(ctx context.Context, request operations.GetUpd
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1075,11 +1075,11 @@ func (s *images) GetUpdatedImages(ctx context.Context, request operations.GetUpd
 
 // LicenseImages - License images
 // This endpoint gets licenses for one or more images. You must specify the image IDs in the body parameter and other details like the format, size, and subscription ID either in the query parameter or with each image ID in the body parameter. Values in the body parameter override values in the query parameters. The download links in the response are valid for 8 hours.
-func (s *images) LicenseImages(ctx context.Context, request operations.LicenseImagesRequest) (*operations.LicenseImagesResponse, error) {
+func (s *images) LicenseImages(ctx context.Context, request operations.LicenseImagesRequest, security operations.LicenseImagesSecurity) (*operations.LicenseImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/licenses"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseImageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1094,11 +1094,11 @@ func (s *images) LicenseImages(ctx context.Context, request operations.LicenseIm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1139,7 +1139,7 @@ func (s *images) LicenseImages(ctx context.Context, request operations.LicenseIm
 
 // ListImageCategories - List image categories
 // This endpoint lists the categories (Shutterstock-assigned genres) that images can belong to.
-func (s *images) ListImageCategories(ctx context.Context, request operations.ListImageCategoriesRequest) (*operations.ListImageCategoriesResponse, error) {
+func (s *images) ListImageCategories(ctx context.Context, request operations.ListImageCategoriesRequest, security operations.ListImageCategoriesSecurity) (*operations.ListImageCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/categories"
 
@@ -1148,11 +1148,11 @@ func (s *images) ListImageCategories(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1193,20 +1193,20 @@ func (s *images) ListImageCategories(ctx context.Context, request operations.Lis
 
 // ListSimilarImages - List similar images
 // This endpoint returns images that are visually similar to an image that you specify.
-func (s *images) ListSimilarImages(ctx context.Context, request operations.ListSimilarImagesRequest) (*operations.ListSimilarImagesResponse, error) {
+func (s *images) ListSimilarImages(ctx context.Context, request operations.ListSimilarImagesRequest, security operations.ListSimilarImagesSecurity) (*operations.ListSimilarImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}/similar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}/similar", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1247,11 +1247,11 @@ func (s *images) ListSimilarImages(ctx context.Context, request operations.ListS
 
 // RenameImageCollection - Rename image collections
 // This endpoint sets a new name for an image collection.
-func (s *images) RenameImageCollection(ctx context.Context, request operations.RenameImageCollectionRequest) (*operations.RenameImageCollectionResponse, error) {
+func (s *images) RenameImageCollection(ctx context.Context, request operations.RenameImageCollectionRequest, security operations.RenameImageCollectionSecurity) (*operations.RenameImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1266,7 +1266,7 @@ func (s *images) RenameImageCollection(ctx context.Context, request operations.R
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1301,7 +1301,7 @@ func (s *images) RenameImageCollection(ctx context.Context, request operations.R
 
 // SearchImages - Search for images
 // This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT. Free API accounts show results only from a limited library of media, not the full Shutterstock media library. Also, the number of search fields they can use in a request is limited.
-func (s *images) SearchImages(ctx context.Context, request operations.SearchImagesRequest) (*operations.SearchImagesResponse, error) {
+func (s *images) SearchImages(ctx context.Context, request operations.SearchImagesRequest, security operations.SearchImagesSecurity) (*operations.SearchImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images/search"
 
@@ -1310,11 +1310,11 @@ func (s *images) SearchImages(ctx context.Context, request operations.SearchImag
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClickwrapsIDPathParams struct {
+type GetClickwrapsIDRequest struct {
 	// Clickwrap ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetClickwrapsIDRequest struct {
-	PathParams GetClickwrapsIDPathParams
 }
 
 type GetClickwrapsIDResponse struct {

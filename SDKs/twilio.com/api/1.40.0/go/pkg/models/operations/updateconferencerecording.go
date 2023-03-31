@@ -12,16 +12,8 @@ var UpdateConferenceRecordingServerList = []string{
 }
 
 type UpdateConferenceRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConferenceRecordingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resource to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Conference SID that identifies the conference associated with the recording to update.
-	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
-	// The Twilio-provided string that uniquely identifies the Conference Recording resource to update. Use `Twilio.CURRENT` to reference the current active recording.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConferenceRecordingUpdateConferenceRecordingRequest struct {
@@ -31,10 +23,13 @@ type UpdateConferenceRecordingUpdateConferenceRecordingRequest struct {
 }
 
 type UpdateConferenceRecordingRequest struct {
-	PathParams UpdateConferenceRecordingPathParams
-	Request    *UpdateConferenceRecordingUpdateConferenceRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConferenceRecordingSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resource to update.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The Conference SID that identifies the conference associated with the recording to update.
+	ConferenceSid string                                                     `pathParam:"style=simple,explode=false,name=ConferenceSid"`
+	RequestBody   *UpdateConferenceRecordingUpdateConferenceRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Conference Recording resource to update. Use `Twilio.CURRENT` to reference the current active recording.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateConferenceRecordingResponse struct {

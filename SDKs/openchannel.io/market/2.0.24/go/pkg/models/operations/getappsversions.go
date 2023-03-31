@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAppsVersionsQueryParams struct {
+type GetAppsVersionsRequest struct {
 	// The unique id of the developer requesting this resource
 	DeveloperID *string `queryParam:"style=form,explode=true,name=developerId"`
 	// The maximum number of results to return per page
@@ -17,10 +17,6 @@ type GetAppsVersionsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// A sort document. Example: {'name':1} sorts the results by name in ascending order
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAppsVersionsRequest struct {
-	QueryParams GetAppsVersionsQueryParams
 }
 
 type GetAppsVersionsResponse struct {

@@ -34,14 +34,14 @@ func newStatuses(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Return the status for all the ports of a switch
 func (s *statuses) GetDeviceSwitchPortsStatuses(ctx context.Context, request operations.GetDeviceSwitchPortsStatusesRequest) (*operations.GetDeviceSwitchPortsStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *statuses) GetDeviceSwitchPortsStatuses(ctx context.Context, request ope
 // Return the packet counters for all the ports of a switch
 func (s *statuses) GetDeviceSwitchPortsStatusesPackets(ctx context.Context, request operations.GetDeviceSwitchPortsStatusesPacketsRequest) (*operations.GetDeviceSwitchPortsStatusesPacketsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/statuses/packets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/statuses/packets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,14 +132,14 @@ func (s *statuses) GetDeviceSwitchPortsStatusesPackets(ctx context.Context, requ
 // List the uplink status of every Meraki MX and Z series appliances in the organization
 func (s *statuses) GetOrganizationApplianceUplinkStatuses(ctx context.Context, request operations.GetOrganizationApplianceUplinkStatusesRequest) (*operations.GetOrganizationApplianceUplinkStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/uplink/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/uplink/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -183,14 +183,14 @@ func (s *statuses) GetOrganizationApplianceUplinkStatuses(ctx context.Context, r
 // Show VPN status for networks in an organization
 func (s *statuses) GetOrganizationApplianceVpnStatuses(ctx context.Context, request operations.GetOrganizationApplianceVpnStatusesRequest) (*operations.GetOrganizationApplianceVpnStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -234,14 +234,14 @@ func (s *statuses) GetOrganizationApplianceVpnStatuses(ctx context.Context, requ
 // Fetch onboarding status of cameras
 func (s *statuses) GetOrganizationCameraOnboardingStatuses(ctx context.Context, request operations.GetOrganizationCameraOnboardingStatusesRequest) (*operations.GetOrganizationCameraOnboardingStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -283,14 +283,14 @@ func (s *statuses) GetOrganizationCameraOnboardingStatuses(ctx context.Context, 
 // List the uplink status of every Meraki MG cellular gateway in the organization
 func (s *statuses) GetOrganizationCellularGatewayUplinkStatuses(ctx context.Context, request operations.GetOrganizationCellularGatewayUplinkStatusesRequest) (*operations.GetOrganizationCellularGatewayUplinkStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -334,14 +334,14 @@ func (s *statuses) GetOrganizationCellularGatewayUplinkStatuses(ctx context.Cont
 // List the power status information for devices in an organization. The data returned by this endpoint is updated every 5 minutes.
 func (s *statuses) GetOrganizationDevicesPowerModulesStatusesByDevice(ctx context.Context, request operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest) (*operations.GetOrganizationDevicesPowerModulesStatusesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -385,14 +385,14 @@ func (s *statuses) GetOrganizationDevicesPowerModulesStatusesByDevice(ctx contex
 // List the status of every Meraki device in the organization
 func (s *statuses) GetOrganizationDevicesStatuses(ctx context.Context, request operations.GetOrganizationDevicesStatusesRequest) (*operations.GetOrganizationDevicesStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -436,14 +436,14 @@ func (s *statuses) GetOrganizationDevicesStatuses(ctx context.Context, request o
 // Return an overview of current device statuses
 func (s *statuses) GetOrganizationDevicesStatusesOverview(ctx context.Context, request operations.GetOrganizationDevicesStatusesOverviewRequest) (*operations.GetOrganizationDevicesStatusesOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/statuses/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -485,14 +485,14 @@ func (s *statuses) GetOrganizationDevicesStatusesOverview(ctx context.Context, r
 // List the uplink status of every Meraki MX, MG and Z series devices in the organization
 func (s *statuses) GetOrganizationUplinksStatuses(ctx context.Context, request operations.GetOrganizationUplinksStatusesRequest) (*operations.GetOrganizationUplinksStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/uplinks/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/uplinks/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -536,14 +536,14 @@ func (s *statuses) GetOrganizationUplinksStatuses(ctx context.Context, request o
 // Endpoint to see power status for wireless devices
 func (s *statuses) GetOrganizationWirelessDevicesEthernetStatuses(ctx context.Context, request operations.GetOrganizationWirelessDevicesEthernetStatusesRequest) (*operations.GetOrganizationWirelessDevicesEthernetStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -587,9 +587,9 @@ func (s *statuses) GetOrganizationWirelessDevicesEthernetStatuses(ctx context.Co
 // Notify that credential handoff to camera has completed
 func (s *statuses) UpdateOrganizationCameraOnboardingStatuses(ctx context.Context, request operations.UpdateOrganizationCameraOnboardingStatusesRequest) (*operations.UpdateOrganizationCameraOnboardingStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

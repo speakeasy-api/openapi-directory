@@ -4,15 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAChatbotMessageSecurity struct {
-	ClientCredentials shared.SchemeClientCredentials `security:"scheme,type=oauth2"`
-}
-
-type DeleteAChatbotMessagePathParams struct {
-	MessageID string `pathParam:"style=simple,explode=false,name=message_id"`
+	ClientCredentials string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAChatbotMessageApplicationJSON struct {
@@ -25,9 +20,8 @@ type DeleteAChatbotMessageApplicationJSON struct {
 }
 
 type DeleteAChatbotMessageRequest struct {
-	PathParams DeleteAChatbotMessagePathParams
-	Request    *DeleteAChatbotMessageApplicationJSON `request:"mediaType=application/json"`
-	Security   DeleteAChatbotMessageSecurity
+	RequestBody *DeleteAChatbotMessageApplicationJSON `request:"mediaType=application/json"`
+	MessageID   string                                `pathParam:"style=simple,explode=false,name=message_id"`
 }
 
 // DeleteAChatbotMessage200ApplicationXML - **HTTP Status Code:** `200` **OK**<br>

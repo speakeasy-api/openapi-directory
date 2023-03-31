@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationBrandingPoliciesPrioritiesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationBrandingPoliciesPrioritiesRequest struct {
-	PathParams GetOrganizationBrandingPoliciesPrioritiesPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationBrandingPoliciesPriorities200ApplicationJSON - Successful operation

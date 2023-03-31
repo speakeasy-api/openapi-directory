@@ -4,15 +4,10 @@ package callbacks
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SendAnSmsDeliveryReceiptResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-}
-
-type SendAnSmsDeliveryReceiptRequest struct {
-	Request shared.DeliveryReceipt `request:"mediaType=application/json"`
 }

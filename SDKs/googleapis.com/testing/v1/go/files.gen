@@ -25,10 +25,9 @@ pkg/models/shared/apkmanifest.go
 pkg/models/shared/usesfeature.go
 pkg/models/shared/metadata.go
 pkg/models/shared/intentfilter.go
-pkg/models/shared/filereference.go
 pkg/models/shared/altenum.go
+pkg/models/shared/filereference.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/canceltestmatrixresponse.go
 pkg/models/shared/testmatrix.go
 pkg/models/shared/testspecification.go

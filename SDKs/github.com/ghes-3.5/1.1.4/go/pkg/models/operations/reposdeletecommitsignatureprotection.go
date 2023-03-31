@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeleteCommitSignatureProtectionPathParams struct {
+type ReposDeleteCommitSignatureProtectionRequest struct {
 	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.5/graphql).
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteCommitSignatureProtectionRequest struct {
-	PathParams ReposDeleteCommitSignatureProtectionPathParams
 }
 
 type ReposDeleteCommitSignatureProtectionResponse struct {

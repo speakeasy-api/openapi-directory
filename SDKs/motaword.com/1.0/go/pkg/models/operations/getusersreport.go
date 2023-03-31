@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersReportRequest struct {
-	Request *shared.ReportFilter `request:"mediaType=application/json"`
-}
-
 type GetUsersReportResponse struct {
 	ContentType string
 	// UserNotFound

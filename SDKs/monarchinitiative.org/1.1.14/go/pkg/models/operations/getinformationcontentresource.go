@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type GetInformationContentResourcePathParams struct {
-	ObjectCategory  string `pathParam:"style=simple,explode=false,name=object_category"`
-	SubjectCategory string `pathParam:"style=simple,explode=false,name=subject_category"`
-	SubjectTaxon    string `pathParam:"style=simple,explode=false,name=subject_taxon"`
-}
-
-type GetInformationContentResourceQueryParams struct {
+type GetInformationContentResourceRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)
 	//                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.
 	//
-	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
-}
-
-type GetInformationContentResourceRequest struct {
-	PathParams  GetInformationContentResourcePathParams
-	QueryParams GetInformationContentResourceQueryParams
+	Evidence        *string `queryParam:"style=form,explode=true,name=evidence"`
+	ObjectCategory  string  `pathParam:"style=simple,explode=false,name=object_category"`
+	SubjectCategory string  `pathParam:"style=simple,explode=false,name=subject_category"`
+	SubjectTaxon    string  `pathParam:"style=simple,explode=false,name=subject_taxon"`
 }
 
 type GetInformationContentResourceResponse struct {

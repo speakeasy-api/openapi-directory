@@ -92,10 +92,6 @@ type PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody
 	SubsetSize *int64 `json:"subsetSize,omitempty"`
 }
 
-type PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequest struct {
-	Request PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSON - OK
 type PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

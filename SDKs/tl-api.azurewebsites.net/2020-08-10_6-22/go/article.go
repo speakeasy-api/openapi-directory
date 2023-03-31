@@ -33,7 +33,7 @@ func newArticle(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // ArticleAddMeasureUnit - Add measure unit
-func (s *article) ArticleAddMeasureUnit(ctx context.Context, request operations.ArticleAddMeasureUnitRequest) (*operations.ArticleAddMeasureUnitResponse, error) {
+func (s *article) ArticleAddMeasureUnit(ctx context.Context, request []shared.MeasureUnitDTO) (*operations.ArticleAddMeasureUnitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Article/MeasureUnit"
 
@@ -106,7 +106,7 @@ func (s *article) ArticleDelete(ctx context.Context, request operations.ArticleD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -164,7 +164,7 @@ func (s *article) ArticleGetAddons(ctx context.Context, request operations.Artic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -224,7 +224,7 @@ func (s *article) ArticleGetMeasureUnits(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -329,7 +329,7 @@ func (s *article) ArticleGetRevenueAccounts(ctx context.Context) (*operations.Ar
 // ArticleGymArticleDetails - Get Gym specific properties for article
 func (s *article) ArticleGymArticleDetails(ctx context.Context, request operations.ArticleGymArticleDetailsRequest) (*operations.ArticleGymArticleDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Article/GymArticle/{articleId}/{gymId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/Article/GymArticle/{articleId}/{gymId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +391,7 @@ func (s *article) ArticleGymArticleDetails(ctx context.Context, request operatio
 }
 
 // ArticlePost - Add new article
-func (s *article) ArticlePost(ctx context.Context, request operations.ArticlePostRequest) (*operations.ArticlePostResponse, error) {
+func (s *article) ArticlePost(ctx context.Context, request shared.ArticleDTO) (*operations.ArticlePostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Article"
 
@@ -455,7 +455,7 @@ func (s *article) ArticlePost(ctx context.Context, request operations.ArticlePos
 }
 
 // ArticlePut - update existing article
-func (s *article) ArticlePut(ctx context.Context, request operations.ArticlePutRequest) (*operations.ArticlePutResponse, error) {
+func (s *article) ArticlePut(ctx context.Context, request shared.ArticleDTO) (*operations.ArticlePutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Article"
 
@@ -529,7 +529,7 @@ func (s *article) ArticleSearch(ctx context.Context, request operations.ArticleS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -580,7 +580,7 @@ func (s *article) ArticleSearch(ctx context.Context, request operations.ArticleS
 }
 
 // ArticleUpdateArticleGymDetails - Add article details that associate with a Gym
-func (s *article) ArticleUpdateArticleGymDetails(ctx context.Context, request operations.ArticleUpdateArticleGymDetailsRequest) (*operations.ArticleUpdateArticleGymDetailsResponse, error) {
+func (s *article) ArticleUpdateArticleGymDetails(ctx context.Context, request []shared.GymArticleDetailsDTO) (*operations.ArticleUpdateArticleGymDetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Article/ArticleGymDetails"
 
@@ -653,7 +653,7 @@ func (s *article) ArticleUpdateStatus(ctx context.Context, request operations.Ar
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -707,7 +707,7 @@ func (s *article) ArticleUpdateStatus(ctx context.Context, request operations.Ar
 // This will return all properties related to article entity
 func (s *article) ArticleGet(ctx context.Context, request operations.ArticleGetRequest) (*operations.ArticleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Article/{articleID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/Article/{articleID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

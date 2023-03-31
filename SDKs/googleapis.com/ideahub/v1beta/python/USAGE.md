@@ -4,38 +4,36 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest(
-    path_params=operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams(
-        parent="at",
-    ),
-    query_params=operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="et",
-        alt="media",
-        callback="sint",
-        fields="vel",
-        key="culpa",
-        oauth_token="fuga",
-        pretty_print=False,
-        quota_user="cumque",
-        upload_type="debitis",
-        upload_protocol="optio",
-    ),
-    request=shared.GoogleSearchIdeahubV1betaIdeaActivity(
+    dollar_xgafv="2",
+    google_search_ideahub_v1beta_idea_activity=shared.GoogleSearchIdeahubV1betaIdeaActivity(
         ideas=[
-            "placeat",
-            "nihil",
+            "distinctio",
+            "quibusdam",
+            "unde",
         ],
-        name="quia",
+        name="nulla",
         topics=[
-            "voluptas",
-            "impedit",
-            "earum",
+            "illum",
+            "vel",
+            "error",
         ],
-        type="POST_DRAFTED",
-        uri="quia",
+        type="POST_DELETED",
+        uri="http://innocent-effect.org",
     ),
+    access_token="ipsa",
+    alt="proto",
+    callback="tempora",
+    fields_="suscipit",
+    key="molestiae",
+    oauth_token="minus",
+    parent="placeat",
+    pretty_print=False,
+    quota_user="voluptatum",
+    upload_type="iusto",
+    upload_protocol="excepturi",
 )
     
 res = s.platforms.ideahub_platforms_properties_idea_activities_create(req)

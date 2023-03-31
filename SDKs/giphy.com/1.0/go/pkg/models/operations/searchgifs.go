@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchGifsQueryParams struct {
+type SearchGifsRequest struct {
 	// Specify default language for regional content; use a 2-letter ISO 639-1 language code.
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The maximum number of records to return.
@@ -18,10 +18,6 @@ type SearchGifsQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Filters results by specified rating.
 	Rating *string `queryParam:"style=form,explode=true,name=rating"`
-}
-
-type SearchGifsRequest struct {
-	QueryParams SearchGifsQueryParams
 }
 
 // SearchGifs200ApplicationJSON - Search results

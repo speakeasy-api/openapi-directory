@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type MediaSearchReadPathParams struct {
-	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
-}
-
 type MediaSearchReadRequest struct {
-	PathParams MediaSearchReadPathParams
+	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
 }
 
 type MediaSearchReadResponse struct {

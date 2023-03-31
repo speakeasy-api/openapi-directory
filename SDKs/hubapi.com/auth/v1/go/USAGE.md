@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetOauthV1AccessTokensTokenGetRequest{
-        PathParams: operations.GetOauthV1AccessTokensTokenGetPathParams{
-            Token: "corrupti",
-        },
+        Token: "corrupti",
     }
 
     ctx := context.Background()

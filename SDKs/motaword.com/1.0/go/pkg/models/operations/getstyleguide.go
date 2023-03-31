@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStyleGuidePathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-	// Style Guide ID
-	StyleGuideID int64 `pathParam:"style=simple,explode=false,name=styleGuideId"`
-}
-
 type GetStyleGuideWithEnum string
 
 const (
@@ -36,14 +29,13 @@ func (e *GetStyleGuideWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetStyleGuideQueryParams struct {
+type GetStyleGuideRequest struct {
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
+	// Style Guide ID
+	StyleGuideID int64 `pathParam:"style=simple,explode=false,name=styleGuideId"`
 	// Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
 	With []GetStyleGuideWithEnum `queryParam:"style=form,explode=true,name=with[]"`
-}
-
-type GetStyleGuideRequest struct {
-	PathParams  GetStyleGuidePathParams
-	QueryParams GetStyleGuideQueryParams
 }
 
 type GetStyleGuideResponse struct {

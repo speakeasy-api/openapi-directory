@@ -40,14 +40,14 @@ func newPiiKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ```
 func (s *piiKeys) GetNetworkPiiPiiKeys(ctx context.Context, request operations.GetNetworkPiiPiiKeysRequest) (*operations.GetNetworkPiiPiiKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/piiKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/piiKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

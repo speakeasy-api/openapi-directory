@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type JobSearchReadPathParams struct {
-	JobTitle string `pathParam:"style=simple,explode=false,name=job_title"`
-}
-
 type JobSearchReadRequest struct {
-	PathParams JobSearchReadPathParams
+	JobTitle string `pathParam:"style=simple,explode=false,name=job_title"`
 }
 
 type JobSearchReadResponse struct {

@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.BaggageTripAndContactRequest{
-        Security: operations.BaggageTripAndContactSecurity{
-            Auth: shared.SchemeAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.BaggageTripAndContactPathParams{
-            SearchID: "corrupti",
-        },
-        Headers: operations.BaggageTripAndContactHeaders{
-            Accept: "provident",
-        },
+        Accept: "corrupti",
+        SearchID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Baggage.BaggageTripAndContact(ctx, req)
+    res, err := s.Baggage.BaggageTripAndContact(ctx, req, operations.BaggageTripAndContactSecurity{
+        Auth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,18 +7,10 @@ import (
 	"time"
 )
 
-type GetDeviceCameraVideoLinkPathParams struct {
+type GetDeviceCameraVideoLinkRequest struct {
 	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetDeviceCameraVideoLinkQueryParams struct {
 	// [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time.
 	Timestamp *time.Time `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type GetDeviceCameraVideoLinkRequest struct {
-	PathParams  GetDeviceCameraVideoLinkPathParams
-	QueryParams GetDeviceCameraVideoLinkQueryParams
 }
 
 type GetDeviceCameraVideoLinkResponse struct {

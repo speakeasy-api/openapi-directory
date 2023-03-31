@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlaceGetByTypePathParams struct {
+type PlaceGetByTypeRequest struct {
+	// An optional parameter to limit the results to active records only (Currently only the 'VariableMessageSign' place type is supported)
+	ActiveOnly *bool `queryParam:"style=form,explode=true,name=activeOnly"`
 	// A comma-separated list of the types to return. Max. approx 12 types.
 	//             A valid list of place types can be obtained from the /Place/Meta/placeTypes endpoint.
 	Types []string `pathParam:"style=simple,explode=false,name=types"`
-}
-
-type PlaceGetByTypeQueryParams struct {
-	// An optional parameter to limit the results to active records only (Currently only the 'VariableMessageSign' place type is supported)
-	ActiveOnly *bool `queryParam:"style=form,explode=true,name=activeOnly"`
-}
-
-type PlaceGetByTypeRequest struct {
-	PathParams  PlaceGetByTypePathParams
-	QueryParams PlaceGetByTypeQueryParams
 }
 
 type PlaceGetByTypeResponse struct {

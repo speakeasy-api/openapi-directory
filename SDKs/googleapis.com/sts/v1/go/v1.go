@@ -37,7 +37,7 @@ func (s *v1) StsIntrospect(ctx context.Context, request operations.StsIntrospect
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/introspect"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIdentityStsV1IntrospectTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *v1) StsIntrospect(ctx context.Context, request operations.StsIntrospect
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,7 +92,7 @@ func (s *v1) StsOauthtoken(ctx context.Context, request operations.StsOauthtoken
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/oauthtoken"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIdentityStsV1ExchangeOauthTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,7 +104,7 @@ func (s *v1) StsOauthtoken(ctx context.Context, request operations.StsOauthtoken
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -147,7 +147,7 @@ func (s *v1) StsToken(ctx context.Context, request operations.StsTokenRequest) (
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/token"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIdentityStsV1ExchangeTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,7 +159,7 @@ func (s *v1) StsToken(ctx context.Context, request operations.StsTokenRequest) (
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

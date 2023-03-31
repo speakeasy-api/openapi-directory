@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryRoleAssignmentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryRoleAssignmentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryRoleAssignmentsListSecurity struct {
@@ -22,12 +22,7 @@ type DirectoryRoleAssignmentsListSecurity struct {
 	Option2 *DirectoryRoleAssignmentsListSecurityOption2 `security:"option"`
 }
 
-type DirectoryRoleAssignmentsListPathParams struct {
-	// The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to fetch all groups for a customer, use this field instead of `domain`. You can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the `customer` or the `domain` parameter.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-}
-
-type DirectoryRoleAssignmentsListQueryParams struct {
+type DirectoryRoleAssignmentsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DirectoryRoleAssignmentsListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to fetch all groups for a customer, use this field instead of `domain`. You can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the `customer` or the `domain` parameter.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// When set to `true`, fetches indirect role assignments (i.e. role assignment via a group) as well as direct ones. Defaults to `false`. You must specify `user_key` or the indirect role assignments will not be included.
@@ -60,12 +57,6 @@ type DirectoryRoleAssignmentsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The primary email address, alias email address, or unique user or group ID. If included in the request, returns role assignments only for this user or group.
 	UserKey *string `queryParam:"style=form,explode=true,name=userKey"`
-}
-
-type DirectoryRoleAssignmentsListRequest struct {
-	PathParams  DirectoryRoleAssignmentsListPathParams
-	QueryParams DirectoryRoleAssignmentsListQueryParams
-	Security    DirectoryRoleAssignmentsListSecurity
 }
 
 type DirectoryRoleAssignmentsListResponse struct {

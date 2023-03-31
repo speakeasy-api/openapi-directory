@@ -10,23 +10,18 @@ import (
 )
 
 type VaultMattersHoldsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersHoldsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersHoldsListSecurity struct {
 	Option1 *VaultMattersHoldsListSecurityOption1 `security:"option"`
 	Option2 *VaultMattersHoldsListSecurityOption2 `security:"option"`
-}
-
-type VaultMattersHoldsListPathParams struct {
-	// The matter ID.
-	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 }
 
 // VaultMattersHoldsListViewEnum - The amount of detail to return for a hold.
@@ -56,7 +51,7 @@ func (e *VaultMattersHoldsListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VaultMattersHoldsListQueryParams struct {
+type VaultMattersHoldsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type VaultMattersHoldsListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The matter ID.
+	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The number of holds to return in the response, between 0 and 100 inclusive. Leaving this empty, or as 0, is the same as **page_size** = 100.
@@ -85,12 +82,6 @@ type VaultMattersHoldsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The amount of detail to return for a hold.
 	View *VaultMattersHoldsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type VaultMattersHoldsListRequest struct {
-	PathParams  VaultMattersHoldsListPathParams
-	QueryParams VaultMattersHoldsListQueryParams
-	Security    VaultMattersHoldsListSecurity
 }
 
 type VaultMattersHoldsListResponse struct {

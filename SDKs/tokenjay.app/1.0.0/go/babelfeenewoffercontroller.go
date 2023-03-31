@@ -32,7 +32,7 @@ func newBabelFeeNewOfferController(defaultClient, securityClient HTTPClient, ser
 	}
 }
 
-func (s *babelFeeNewOfferController) DoCreateBabelBox(ctx context.Context, request operations.DoCreateBabelBoxRequest) (*operations.DoCreateBabelBoxResponse, error) {
+func (s *babelFeeNewOfferController) DoCreateBabelBox(ctx context.Context, request map[string]map[string]interface{}) (*operations.DoCreateBabelBoxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/babelfee/newoffer/doit"
 
@@ -130,14 +130,14 @@ func (s *babelFeeNewOfferController) DoCreateBabelBox(ctx context.Context, reque
 }
 func (s *babelFeeNewOfferController) ErgoPayCreateBabelBox(ctx context.Context, request operations.ErgoPayCreateBabelBoxRequest) (*operations.ErgoPayCreateBabelBoxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/createbabel/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/createbabel/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -304,7 +304,7 @@ func (s *babelFeeNewOfferController) GetBabelFeeNewOffer(ctx context.Context) (*
 
 	return res, nil
 }
-func (s *babelFeeNewOfferController) ReplaceTokenAmountInputFields(ctx context.Context, request operations.ReplaceTokenAmountInputFieldsRequest) (*operations.ReplaceTokenAmountInputFieldsResponse, error) {
+func (s *babelFeeNewOfferController) ReplaceTokenAmountInputFields(ctx context.Context, request map[string]map[string]interface{}) (*operations.ReplaceTokenAmountInputFieldsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/babelfee/newoffer/new-input"
 

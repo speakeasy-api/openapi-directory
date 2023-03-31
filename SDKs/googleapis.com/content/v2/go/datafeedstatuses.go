@@ -33,11 +33,11 @@ func newDatafeedstatuses(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // ContentDatafeedstatusesCustombatch - Gets multiple Merchant Center datafeed statuses in a single request.
-func (s *datafeedstatuses) ContentDatafeedstatusesCustombatch(ctx context.Context, request operations.ContentDatafeedstatusesCustombatchRequest) (*operations.ContentDatafeedstatusesCustombatchResponse, error) {
+func (s *datafeedstatuses) ContentDatafeedstatusesCustombatch(ctx context.Context, request operations.ContentDatafeedstatusesCustombatchRequest, security operations.ContentDatafeedstatusesCustombatchSecurity) (*operations.ContentDatafeedstatusesCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datafeedstatuses/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatafeedstatusesCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *datafeedstatuses) ContentDatafeedstatusesCustombatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *datafeedstatuses) ContentDatafeedstatusesCustombatch(ctx context.Contex
 }
 
 // ContentDatafeedstatusesGet - Retrieves the status of a datafeed from your Merchant Center account.
-func (s *datafeedstatuses) ContentDatafeedstatusesGet(ctx context.Context, request operations.ContentDatafeedstatusesGetRequest) (*operations.ContentDatafeedstatusesGetResponse, error) {
+func (s *datafeedstatuses) ContentDatafeedstatusesGet(ctx context.Context, request operations.ContentDatafeedstatusesGetRequest, security operations.ContentDatafeedstatusesGetSecurity) (*operations.ContentDatafeedstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses/{datafeedId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses/{datafeedId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *datafeedstatuses) ContentDatafeedstatusesGet(ctx context.Context, reque
 }
 
 // ContentDatafeedstatusesList - Lists the statuses of the datafeeds in your Merchant Center account.
-func (s *datafeedstatuses) ContentDatafeedstatusesList(ctx context.Context, request operations.ContentDatafeedstatusesListRequest) (*operations.ContentDatafeedstatusesListResponse, error) {
+func (s *datafeedstatuses) ContentDatafeedstatusesList(ctx context.Context, request operations.ContentDatafeedstatusesListRequest, security operations.ContentDatafeedstatusesListSecurity) (*operations.ContentDatafeedstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

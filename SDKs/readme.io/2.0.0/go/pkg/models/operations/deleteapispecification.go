@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAPISpecificationSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteAPISpecificationPathParams struct {
-	// ID of the API specification. The unique ID for each API can be found by navigating to your **API Definitions** page.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteAPISpecificationRequest struct {
-	PathParams DeleteAPISpecificationPathParams
-	Security   DeleteAPISpecificationSecurity
+	// ID of the API specification. The unique ID for each API can be found by navigating to your **API Definitions** page.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPISpecificationResponse struct {

@@ -12,22 +12,17 @@ var FetchFunctionVersionServerList = []string{
 }
 
 type FetchFunctionVersionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchFunctionVersionPathParams struct {
+type FetchFunctionVersionRequest struct {
 	// The SID of the function that is the parent of the Function Version resource to fetch.
 	FunctionSid string `pathParam:"style=simple,explode=false,name=FunctionSid"`
 	// The SID of the Service to fetch the Function Version resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Function Version resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchFunctionVersionRequest struct {
-	PathParams FetchFunctionVersionPathParams
-	Security   FetchFunctionVersionSecurity
-	ServerURL  *string
 }
 
 type FetchFunctionVersionResponse struct {

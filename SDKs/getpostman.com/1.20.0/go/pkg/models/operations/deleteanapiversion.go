@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAnAPIVersionPathParams struct {
+type DeleteAnAPIVersionRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type DeleteAnAPIVersionRequest struct {
-	PathParams DeleteAnAPIVersionPathParams
 }
 
 type DeleteAnAPIVersion200ApplicationJSONVersion struct {

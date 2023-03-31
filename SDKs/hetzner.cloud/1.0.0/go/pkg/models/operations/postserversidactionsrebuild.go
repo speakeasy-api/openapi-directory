@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsRebuildPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostServersIDActionsRebuildRebuildServerRequest - To select which Image to rebuild from you can either pass an ID or a name as the `image` argument. Passing a name only works for `system` Images since the other Image types do not have a name set.
 type PostServersIDActionsRebuildRebuildServerRequest struct {
 	// ID or name of Image to rebuilt from.
@@ -20,9 +15,10 @@ type PostServersIDActionsRebuildRebuildServerRequest struct {
 }
 
 type PostServersIDActionsRebuildRequest struct {
-	PathParams PostServersIDActionsRebuildPathParams
 	// To select which Image to rebuild from you can either pass an ID or a name as the `image` argument. Passing a name only works for `system` Images since the other Image types do not have a name set.
-	Request *PostServersIDActionsRebuildRebuildServerRequest `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsRebuildRebuildServerRequest `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsRebuild201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null

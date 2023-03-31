@@ -39,7 +39,7 @@ func (s *hiuFacing) PostV05SubscriptionsHiuOnNotify(ctx context.Context, request
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/subscriptions/hiu/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUSubscriptionNotificationAcknowledgment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *hiuFacing) PostV05SubscriptionsHiuOnNotify(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -106,7 +106,7 @@ func (s *hiuFacing) PostV05UsersAuthOnNotifyJSON(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientAuthNotificationAcknowledgement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -121,7 +121,7 @@ func (s *hiuFacing) PostV05UsersAuthOnNotifyJSON(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -175,7 +175,7 @@ func (s *hiuFacing) PostV05UsersAuthOnNotifyRaw(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/users/auth/on-notify"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *hiuFacing) PostV05UsersAuthOnNotifyRaw(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationApplianceVPNThirdPartyVPNPeersPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum - [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
 type UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum string
 
@@ -235,8 +231,8 @@ type UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody struct {
 }
 
 type UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest struct {
-	PathParams UpdateOrganizationApplianceVPNThirdPartyVPNPeersPathParams
-	Request    UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody `request:"mediaType=application/json"`
+	RequestBody    UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                      `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // UpdateOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONPeersIkeVersionEnum - [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.

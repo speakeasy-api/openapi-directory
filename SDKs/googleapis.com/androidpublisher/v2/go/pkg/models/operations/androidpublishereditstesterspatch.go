@@ -8,41 +8,32 @@ import (
 )
 
 type AndroidpublisherEditsTestersPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherEditsTestersPatchPathParams struct {
-	// Unique identifier for this edit.
-	EditID string `pathParam:"style=simple,explode=false,name=editId"`
-	// Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// The track to read or modify.
-	Track string `pathParam:"style=simple,explode=false,name=track"`
-}
-
-type AndroidpublisherEditsTestersPatchQueryParams struct {
+type AndroidpublisherEditsTestersPatchRequest struct {
+	Testers *shared.Testers `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Unique identifier for this edit.
+	EditID string `pathParam:"style=simple,explode=false,name=editId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The track to read or modify.
+	Track string `pathParam:"style=simple,explode=false,name=track"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherEditsTestersPatchRequest struct {
-	PathParams  AndroidpublisherEditsTestersPatchPathParams
-	QueryParams AndroidpublisherEditsTestersPatchQueryParams
-	Request     *shared.Testers `request:"mediaType=application/json"`
-	Security    AndroidpublisherEditsTestersPatchSecurity
 }
 
 type AndroidpublisherEditsTestersPatchResponse struct {

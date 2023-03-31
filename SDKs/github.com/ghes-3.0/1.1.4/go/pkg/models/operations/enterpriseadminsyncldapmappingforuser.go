@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSyncLdapMappingForUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminSyncLdapMappingForUserRequest struct {
-	PathParams EnterpriseAdminSyncLdapMappingForUserPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // EnterpriseAdminSyncLdapMappingForUser201ApplicationJSON - Response

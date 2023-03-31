@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetValidatePathParams struct {
+type GetValidateRequest struct {
 	// Agent to return the bitmask integer
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetValidateRequest struct {
-	PathParams GetValidatePathParams
 }
 
 type GetValidateResponse struct {

@@ -42,7 +42,7 @@ func (s *institutions) RetrieveAllSupportedInstitutionsInAGivenCountry(ctx conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,7 +123,7 @@ func (s *institutions) RetrieveAllSupportedInstitutionsInAGivenCountry(ctx conte
 // RetrieveInstitution - Get details about a specific Institution
 func (s *institutions) RetrieveInstitution(ctx context.Context, request operations.RetrieveInstitutionRequest) (*operations.RetrieveInstitutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/institutions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/institutions/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

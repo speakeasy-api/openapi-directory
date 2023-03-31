@@ -10,23 +10,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetContentPathParams struct {
+type ReposGetContentRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// path parameter
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetContentQueryParams struct {
 	// The name of the commit/branch/tag. Default: the repository’s default branch (usually `master`)
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type ReposGetContentRequest struct {
-	PathParams  ReposGetContentPathParams
-	QueryParams ReposGetContentQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposGetContent200ApplicationJSONType string

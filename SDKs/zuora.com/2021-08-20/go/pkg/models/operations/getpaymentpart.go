@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETPaymentPartPathParams struct {
-	// The unique ID of a specific payment part. You can get the payment part ID from the response of [List all parts of a payment](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts).
-	//
-	Partid string `pathParam:"style=simple,explode=false,name=partid"`
-	// The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.
-	//
-	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type GETPaymentPartHeaders struct {
+type GETPaymentPartRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -25,11 +16,12 @@ type GETPaymentPartHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETPaymentPartRequest struct {
-	PathParams GETPaymentPartPathParams
-	Headers    GETPaymentPartHeaders
+	// The unique ID of a specific payment part. You can get the payment part ID from the response of [List all parts of a payment](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts).
+	//
+	Partid string `pathParam:"style=simple,explode=false,name=partid"`
+	// The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.
+	//
+	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
 }
 
 type GETPaymentPartResponse struct {

@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingPlacementsGeneratetagsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingPlacementsGeneratetagsPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DfareportingPlacementsGeneratetagsTagFormatsEnum string
@@ -96,7 +91,7 @@ func (e *DfareportingPlacementsGeneratetagsTagFormatsEnum) UnmarshalJSON(data []
 	}
 }
 
-type DfareportingPlacementsGeneratetagsQueryParams struct {
+type DfareportingPlacementsGeneratetagsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -117,6 +112,8 @@ type DfareportingPlacementsGeneratetagsQueryParams struct {
 	PlacementIds []string `queryParam:"style=form,explode=true,name=placementIds"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Tag formats to generate for these placements. *Note:* PLACEMENT_TAG_STANDARD can only be generated for 1x1 placements.
@@ -125,12 +122,6 @@ type DfareportingPlacementsGeneratetagsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingPlacementsGeneratetagsRequest struct {
-	PathParams  DfareportingPlacementsGeneratetagsPathParams
-	QueryParams DfareportingPlacementsGeneratetagsQueryParams
-	Security    DfareportingPlacementsGeneratetagsSecurity
 }
 
 type DfareportingPlacementsGeneratetagsResponse struct {

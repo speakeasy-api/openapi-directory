@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolTelnetServerGetStatePathParams struct {
+type ProtocolTelnetServerGetStateRequest struct {
 	// Agent to show TELNET statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTelnetServerGetStateRequest struct {
-	PathParams ProtocolTelnetServerGetStatePathParams
 }
 
 type ProtocolTelnetServerGetStateResponse struct {

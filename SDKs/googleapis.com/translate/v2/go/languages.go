@@ -33,7 +33,7 @@ func newLanguages(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // LanguageLanguagesList - Returns a list of supported languages for translation.
-func (s *languages) LanguageLanguagesList(ctx context.Context, request operations.LanguageLanguagesListRequest) (*operations.LanguageLanguagesListResponse, error) {
+func (s *languages) LanguageLanguagesList(ctx context.Context, request operations.LanguageLanguagesListRequest, security operations.LanguageLanguagesListSecurity) (*operations.LanguageLanguagesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/languages"
 
@@ -42,11 +42,11 @@ func (s *languages) LanguageLanguagesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

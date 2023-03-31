@@ -33,7 +33,7 @@ func newGroupItems(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // YoutubeAnalyticsGroupItemsDelete - Removes an item from a group.
-func (s *groupItems) YoutubeAnalyticsGroupItemsDelete(ctx context.Context, request operations.YoutubeAnalyticsGroupItemsDeleteRequest) (*operations.YoutubeAnalyticsGroupItemsDeleteResponse, error) {
+func (s *groupItems) YoutubeAnalyticsGroupItemsDelete(ctx context.Context, request operations.YoutubeAnalyticsGroupItemsDeleteRequest, security operations.YoutubeAnalyticsGroupItemsDeleteSecurity) (*operations.YoutubeAnalyticsGroupItemsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groupItems"
 
@@ -42,11 +42,11 @@ func (s *groupItems) YoutubeAnalyticsGroupItemsDelete(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *groupItems) YoutubeAnalyticsGroupItemsDelete(ctx context.Context, reque
 }
 
 // YoutubeAnalyticsGroupItemsInsert - Creates a group item.
-func (s *groupItems) YoutubeAnalyticsGroupItemsInsert(ctx context.Context, request operations.YoutubeAnalyticsGroupItemsInsertRequest) (*operations.YoutubeAnalyticsGroupItemsInsertResponse, error) {
+func (s *groupItems) YoutubeAnalyticsGroupItemsInsert(ctx context.Context, request operations.YoutubeAnalyticsGroupItemsInsertRequest, security operations.YoutubeAnalyticsGroupItemsInsertSecurity) (*operations.YoutubeAnalyticsGroupItemsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groupItems"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *groupItems) YoutubeAnalyticsGroupItemsInsert(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *groupItems) YoutubeAnalyticsGroupItemsInsert(ctx context.Context, reque
 }
 
 // YoutubeAnalyticsGroupItemsList - Returns a collection of group items that match the API request parameters.
-func (s *groupItems) YoutubeAnalyticsGroupItemsList(ctx context.Context, request operations.YoutubeAnalyticsGroupItemsListRequest) (*operations.YoutubeAnalyticsGroupItemsListResponse, error) {
+func (s *groupItems) YoutubeAnalyticsGroupItemsList(ctx context.Context, request operations.YoutubeAnalyticsGroupItemsListRequest, security operations.YoutubeAnalyticsGroupItemsListSecurity) (*operations.YoutubeAnalyticsGroupItemsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/groupItems"
 
@@ -145,11 +145,11 @@ func (s *groupItems) YoutubeAnalyticsGroupItemsList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

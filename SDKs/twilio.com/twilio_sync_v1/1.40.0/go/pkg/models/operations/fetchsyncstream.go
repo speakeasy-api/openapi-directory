@@ -12,20 +12,15 @@ var FetchSyncStreamServerList = []string{
 }
 
 type FetchSyncStreamSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSyncStreamPathParams struct {
+type FetchSyncStreamRequest struct {
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Stream resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Stream resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSyncStreamRequest struct {
-	PathParams FetchSyncStreamPathParams
-	Security   FetchSyncStreamSecurity
-	ServerURL  *string
 }
 
 type FetchSyncStreamResponse struct {

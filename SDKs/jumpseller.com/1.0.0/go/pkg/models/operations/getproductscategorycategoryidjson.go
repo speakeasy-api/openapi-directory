@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProductsCategoryCategoryIDJSONPathParams struct {
-	// Category ID of the Product used as filter
-	CategoryID int `pathParam:"style=simple,explode=false,name=category_id"`
-}
-
-type GetProductsCategoryCategoryIDJSONQueryParams struct {
+type GetProductsCategoryCategoryIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Category ID of the Product used as filter
+	CategoryID int `pathParam:"style=simple,explode=false,name=category_id"`
 	// Locale code of the translation
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetProductsCategoryCategoryIDJSONRequest struct {
-	PathParams  GetProductsCategoryCategoryIDJSONPathParams
-	QueryParams GetProductsCategoryCategoryIDJSONQueryParams
 }
 
 type GetProductsCategoryCategoryIDJSONResponse struct {

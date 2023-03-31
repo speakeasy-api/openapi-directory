@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMeSecurity struct {
-	UserAccessToken shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type GetMeRequest struct {
-	Security GetMeSecurity
-}
-
 type GetMe200ApplicationJSONLinkedVendors struct {
 	// Whether the provided credentials are currently valid. A `false` value here indicates that a credential has become invalidated, and [Link User](#operation/postUsersUseridLink) should be used to get new credentials from this user.
 	IsValid *bool `json:"isValid,omitempty"`

@@ -6,41 +6,27 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPotPaymentsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
-type GetPotPaymentsPathParams struct {
-	// Pot Id
-	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
-}
-
-type GetPotPaymentsQueryParams struct {
+type GetPotPaymentsRequest struct {
 	// Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
 	// Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageSize *string `queryParam:"style=form,explode=true,name=page_size"`
 	// Payment type of the payment to be retrieved from the API (electronic_fund_transfer, card)
 	PaymentType *string `queryParam:"style=form,explode=true,name=payment_type"`
+	// Pot Id
+	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
 	// Purpose of the payment to be retrieved from the API (cash, invest)
 	Purpose *string `queryParam:"style=form,explode=true,name=purpose"`
 	// Service provider of the payment to be retrieved from the API (truelayer, stripe, none)
 	ServiceProvider *string `queryParam:"style=form,explode=true,name=service_provider"`
-}
-
-type GetPotPaymentsHeaders struct {
 	// ApiSecretKey
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetPotPaymentsRequest struct {
-	PathParams  GetPotPaymentsPathParams
-	QueryParams GetPotPaymentsQueryParams
-	Headers     GetPotPaymentsHeaders
-	Security    GetPotPaymentsSecurity
 }
 
 // GetPotPayments500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

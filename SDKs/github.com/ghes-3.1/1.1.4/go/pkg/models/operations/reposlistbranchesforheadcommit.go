@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListBranchesForHeadCommitPathParams struct {
+type ReposListBranchesForHeadCommitRequest struct {
 	// The SHA of the commit.
 	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListBranchesForHeadCommitRequest struct {
-	PathParams ReposListBranchesForHeadCommitPathParams
 }
 
 type ReposListBranchesForHeadCommitResponse struct {

@@ -3,25 +3,21 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_header=shared.SchemeAPIKeyHeader(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.DfsSlatesByDateRequest(
-    path_params=operations.DfsSlatesByDatePathParams(
-        date_="nihil",
-        format="JSON",
+        api_key_header="YOUR_API_KEY_HERE",
     ),
 )
-    
-res = s.dfs_slates_by_date(req)
 
-if res.dfs_slates is not None:
+
+req = operations.DfsSlateOwnershipProjectionsBySlateidRequest(
+    format="JSON",
+    slate_id="provident",
+)
+    
+res = s.dfs_slate_ownership_projections_by_slateid(req)
+
+if res.dfs_slate_with_ownership_projection is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

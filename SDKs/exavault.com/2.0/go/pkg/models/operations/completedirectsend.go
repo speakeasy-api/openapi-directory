@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteDirectSendPathParams struct {
-	// ID of the share to trigger invitations for.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CompleteDirectSendHeaders struct {
+type CompleteDirectSendRequest struct {
 	// Access Token
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type CompleteDirectSendRequest struct {
-	PathParams CompleteDirectSendPathParams
-	Headers    CompleteDirectSendHeaders
+	// ID of the share to trigger invitations for.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type CompleteDirectSendResponse struct {

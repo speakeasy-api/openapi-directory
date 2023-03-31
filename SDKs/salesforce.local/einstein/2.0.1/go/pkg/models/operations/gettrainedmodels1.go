@@ -8,25 +8,16 @@ import (
 )
 
 type GetTrainedModels1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTrainedModels1PathParams struct {
-	// Dataset Id
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-}
-
-type GetTrainedModels1QueryParams struct {
-	// Number of models to return.
-	Count *string `queryParam:"style=form,explode=true,name=count"`
-	// Index of the model from which you want to start paging.
-	Offset *string `queryParam:"style=form,explode=true,name=offset"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTrainedModels1Request struct {
-	PathParams  GetTrainedModels1PathParams
-	QueryParams GetTrainedModels1QueryParams
-	Security    GetTrainedModels1Security
+	// Number of models to return.
+	Count *string `queryParam:"style=form,explode=true,name=count"`
+	// Dataset Id
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
+	// Index of the model from which you want to start paging.
+	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 }
 
 type GetTrainedModels1Response struct {

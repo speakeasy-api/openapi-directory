@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetDiscussionInOrgPathParams struct {
+type TeamsGetDiscussionInOrgRequest struct {
 	// The number that identifies the discussion.
 	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsGetDiscussionInOrgRequest struct {
-	PathParams TeamsGetDiscussionInOrgPathParams
 }
 
 type TeamsGetDiscussionInOrgResponse struct {

@@ -12,14 +12,8 @@ var UpdateDeviceSecretServerList = []string{
 }
 
 type UpdateDeviceSecretSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDeviceSecretPathParams struct {
-	// A 34-character string that uniquely identifies the Device.
-	DeviceSid string `pathParam:"style=simple,explode=false,name=DeviceSid"`
-	// The secret key; up to 100 characters.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDeviceSecretUpdateDeviceSecretRequest struct {
@@ -28,10 +22,11 @@ type UpdateDeviceSecretUpdateDeviceSecretRequest struct {
 }
 
 type UpdateDeviceSecretRequest struct {
-	PathParams UpdateDeviceSecretPathParams
-	Request    *UpdateDeviceSecretUpdateDeviceSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDeviceSecretSecurity
-	ServerURL  *string
+	// A 34-character string that uniquely identifies the Device.
+	DeviceSid string `pathParam:"style=simple,explode=false,name=DeviceSid"`
+	// The secret key; up to 100 characters.
+	Key         string                                       `pathParam:"style=simple,explode=false,name=Key"`
+	RequestBody *UpdateDeviceSecretUpdateDeviceSecretRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateDeviceSecretResponse struct {

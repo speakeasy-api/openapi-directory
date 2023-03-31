@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type FilesVersionsPathParams struct {
+type FilesVersionsRequest struct {
 	// The unique identifier of the file from which you want to retrieve versions.
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type FilesVersionsRequest struct {
-	PathParams FilesVersionsPathParams
 }
 
 // FilesVersionsFileVersionAttributes - The properties of the file versions entity.

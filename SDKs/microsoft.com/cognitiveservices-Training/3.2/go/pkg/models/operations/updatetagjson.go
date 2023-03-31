@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTagJSONPathParams struct {
+type UpdateTagJSONRequest struct {
+	// The updated tag model.
+	TagInput shared.TagInput `request:"mediaType=application/json"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The id of the target tag.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type UpdateTagJSONRequest struct {
-	PathParams UpdateTagJSONPathParams
-	// The updated tag model.
-	Request shared.TagInput `request:"mediaType=application/json"`
 }
 
 type UpdateTagJSONResponse struct {

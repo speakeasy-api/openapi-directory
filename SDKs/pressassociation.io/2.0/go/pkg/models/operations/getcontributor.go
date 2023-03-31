@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetContributorSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetContributorPathParams struct {
-	// Filter the schedule items by contributor ID
-	ContributorID string `pathParam:"style=simple,explode=false,name=contributorId"`
-}
-
-type GetContributorQueryParams struct {
-	// Flag to display Legacy and Provider Ids.
-	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetContributorRequest struct {
-	PathParams  GetContributorPathParams
-	QueryParams GetContributorQueryParams
-	Security    GetContributorSecurity
+	// Flag to display Legacy and Provider Ids.
+	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	// Filter the schedule items by contributor ID
+	ContributorID string `pathParam:"style=simple,explode=false,name=contributorId"`
 }
 
 type GetContributorResponse struct {

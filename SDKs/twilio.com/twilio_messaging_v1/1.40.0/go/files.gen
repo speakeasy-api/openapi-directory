@@ -56,7 +56,6 @@ pkg/models/operations/updatedomainconfig.go
 pkg/models/operations/updateservice.go
 pkg/models/operations/updatetollfreeverification.go
 pkg/models/shared/messagingv1servicealphasender.go
-pkg/models/shared/security.go
 pkg/models/shared/messagingv1brandregistrations.go
 pkg/models/shared/brandregistrationsenumstatusenum.go
 pkg/models/shared/brandregistrationsenumidentitystatusenum.go
@@ -80,3 +79,4 @@ pkg/models/shared/messagingv1domainconfigmessagingservice.go
 pkg/models/shared/messagingv1serviceusapptopersonusecase.go
 pkg/models/shared/messagingv1usecase.go
 USAGE.md
+pkg/models/operations/options.go

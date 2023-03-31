@@ -224,7 +224,7 @@ func (e *SmsUTF8Enum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SmsQueryParams struct {
+type SmsRequest struct {
 	// Disable message sending.
 	Debug *SmsDebugEnum `queryParam:"style=form,explode=true,name=debug"`
 	// Date/Time for delayed dispatch.
@@ -257,10 +257,6 @@ type SmsQueryParams struct {
 	Unicode *SmsUnicodeEnum `queryParam:"style=form,explode=true,name=unicode"`
 	// Force UTF8 encoding.
 	UTF8 *SmsUTF8Enum `queryParam:"style=form,explode=true,name=utf8"`
-}
-
-type SmsRequest struct {
-	QueryParams SmsQueryParams
 }
 
 type Sms200ApplicationJSONMessages struct {

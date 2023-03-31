@@ -46,7 +46,7 @@ func newWeatherMaps(defaultClient, securityClient HTTPClient, serverURL, languag
 // * As Meteosource only covers areas between latitudes 80° and -80°, you can only request maps within these bounds, when specifying the latitude and longitude boundaries. When specifying the area using Google Maps Tile notation, the regions outside our supported latitudes will be fully transparent.
 // * The finest resolution is not available for maps covering very large regions. The resulting map will be automatically downscaled in this case, to guarantee high-speed responses.
 // * Weather maps are only supported for forecasts, not for archive data.
-func (s *weatherMaps) MapMapGet(ctx context.Context, request operations.MapMapGetRequest) (*operations.MapMapGetResponse, error) {
+func (s *weatherMaps) MapMapGet(ctx context.Context, request operations.MapMapGetRequest, security operations.MapMapGetSecurity) (*operations.MapMapGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/map"
 
@@ -55,11 +55,11 @@ func (s *weatherMaps) MapMapGet(ctx context.Context, request operations.MapMapGe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

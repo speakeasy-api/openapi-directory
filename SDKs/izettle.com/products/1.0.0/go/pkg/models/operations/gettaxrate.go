@@ -8,16 +8,11 @@ import (
 )
 
 type GetTaxRateSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetTaxRatePathParams struct {
-	TaxRateUUID string `pathParam:"style=simple,explode=false,name=taxRateUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTaxRateRequest struct {
-	PathParams GetTaxRatePathParams
-	Security   GetTaxRateSecurity
+	TaxRateUUID string `pathParam:"style=simple,explode=false,name=taxRateUuid"`
 }
 
 type GetTaxRateResponse struct {

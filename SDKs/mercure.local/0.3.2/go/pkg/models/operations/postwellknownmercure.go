@@ -21,10 +21,6 @@ type PostWellKnownMercureRequestBody struct {
 	Type *string `form:"name=type"`
 }
 
-type PostWellKnownMercureRequest struct {
-	Request *PostWellKnownMercureRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostWellKnownMercureResponse struct {
 	ContentType string
 	StatusCode  int

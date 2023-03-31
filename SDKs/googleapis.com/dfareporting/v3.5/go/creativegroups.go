@@ -32,20 +32,20 @@ func newCreativeGroups(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DfareportingCreativeGroupsGet - Gets one creative group by ID.
-func (s *creativeGroups) DfareportingCreativeGroupsGet(ctx context.Context, request operations.DfareportingCreativeGroupsGetRequest) (*operations.DfareportingCreativeGroupsGetResponse, error) {
+func (s *creativeGroups) DfareportingCreativeGroupsGet(ctx context.Context, request operations.DfareportingCreativeGroupsGetRequest, security operations.DfareportingCreativeGroupsGetSecurity) (*operations.DfareportingCreativeGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *creativeGroups) DfareportingCreativeGroupsGet(ctx context.Context, requ
 }
 
 // DfareportingCreativeGroupsInsert - Inserts a new creative group.
-func (s *creativeGroups) DfareportingCreativeGroupsInsert(ctx context.Context, request operations.DfareportingCreativeGroupsInsertRequest) (*operations.DfareportingCreativeGroupsInsertResponse, error) {
+func (s *creativeGroups) DfareportingCreativeGroupsInsert(ctx context.Context, request operations.DfareportingCreativeGroupsInsertRequest, security operations.DfareportingCreativeGroupsInsertSecurity) (*operations.DfareportingCreativeGroupsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *creativeGroups) DfareportingCreativeGroupsInsert(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *creativeGroups) DfareportingCreativeGroupsInsert(ctx context.Context, r
 }
 
 // DfareportingCreativeGroupsList - Retrieves a list of creative groups, possibly filtered. This method supports paging.
-func (s *creativeGroups) DfareportingCreativeGroupsList(ctx context.Context, request operations.DfareportingCreativeGroupsListRequest) (*operations.DfareportingCreativeGroupsListResponse, error) {
+func (s *creativeGroups) DfareportingCreativeGroupsList(ctx context.Context, request operations.DfareportingCreativeGroupsListRequest, security operations.DfareportingCreativeGroupsListSecurity) (*operations.DfareportingCreativeGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *creativeGroups) DfareportingCreativeGroupsList(ctx context.Context, req
 }
 
 // DfareportingCreativeGroupsPatch - Updates an existing creative group. This method supports patch semantics.
-func (s *creativeGroups) DfareportingCreativeGroupsPatch(ctx context.Context, request operations.DfareportingCreativeGroupsPatchRequest) (*operations.DfareportingCreativeGroupsPatchResponse, error) {
+func (s *creativeGroups) DfareportingCreativeGroupsPatch(ctx context.Context, request operations.DfareportingCreativeGroupsPatchRequest, security operations.DfareportingCreativeGroupsPatchSecurity) (*operations.DfareportingCreativeGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *creativeGroups) DfareportingCreativeGroupsPatch(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *creativeGroups) DfareportingCreativeGroupsPatch(ctx context.Context, re
 }
 
 // DfareportingCreativeGroupsUpdate - Updates an existing creative group.
-func (s *creativeGroups) DfareportingCreativeGroupsUpdate(ctx context.Context, request operations.DfareportingCreativeGroupsUpdateRequest) (*operations.DfareportingCreativeGroupsUpdateResponse, error) {
+func (s *creativeGroups) DfareportingCreativeGroupsUpdate(ctx context.Context, request operations.DfareportingCreativeGroupsUpdateRequest, security operations.DfareportingCreativeGroupsUpdateSecurity) (*operations.DfareportingCreativeGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *creativeGroups) DfareportingCreativeGroupsUpdate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

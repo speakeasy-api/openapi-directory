@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitsReadPathParams struct {
+type CircuitsCircuitsReadRequest struct {
 	// A unique integer value identifying this circuit.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsCircuitsReadRequest struct {
-	PathParams CircuitsCircuitsReadPathParams
 }
 
 type CircuitsCircuitsReadResponse struct {

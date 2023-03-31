@@ -34,14 +34,14 @@ func newOAuth2PermissionGrantDelete(defaultClient, securityClient HTTPClient, se
 // OAuth2PermissionGrantDelete - Delete a OAuth2 permission grant for the relevant resource Ids of an app.
 func (s *oAuth2PermissionGrantDelete) OAuth2PermissionGrantDelete(ctx context.Context, request operations.OAuth2PermissionGrantDeleteRequest) (*operations.OAuth2PermissionGrantDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/oauth2PermissionGrants/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/oauth2PermissionGrants/{objectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

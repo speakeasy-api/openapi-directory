@@ -8,19 +8,14 @@ import (
 )
 
 type ServicebrokerSetIamPolicySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServicebrokerSetIamPolicyPathParams struct {
-	// REQUIRED: The resource for which the policy is being specified.
-	// See the operation documentation for the appropriate value for this field.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type ServicebrokerSetIamPolicyQueryParams struct {
+type ServicebrokerSetIamPolicyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                    *shared.XgafvEnum                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleIamV1SetIamPolicyRequest *shared.GoogleIamV1SetIamPolicyRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -37,17 +32,13 @@ type ServicebrokerSetIamPolicyQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// REQUIRED: The resource for which the policy is being specified.
+	// See the operation documentation for the appropriate value for this field.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicebrokerSetIamPolicyRequest struct {
-	PathParams  ServicebrokerSetIamPolicyPathParams
-	QueryParams ServicebrokerSetIamPolicyQueryParams
-	Request     *shared.GoogleIamV1SetIamPolicyRequest `request:"mediaType=application/json"`
-	Security    ServicebrokerSetIamPolicySecurity
 }
 
 type ServicebrokerSetIamPolicyResponse struct {

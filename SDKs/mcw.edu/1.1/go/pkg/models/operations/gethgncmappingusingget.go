@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETHGNCMappingUsingGETPathParams struct {
+type GETHGNCMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETHGNCMappingUsingGETRequest struct {
-	PathParams GETHGNCMappingUsingGETPathParams
 }
 
 type GETHGNCMappingUsingGETResponse struct {

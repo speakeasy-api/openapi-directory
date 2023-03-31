@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGiftCardTransactionsPathParams struct {
-	GiftCardID string `pathParam:"style=simple,explode=false,name=giftCardID"`
-}
-
-type GetGiftCardTransactionsHeaders struct {
+type GetGiftCardTransactionsRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request. Default value for payment provider protocol is application/json
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetGiftCardTransactionsRequest struct {
-	PathParams GetGiftCardTransactionsPathParams
-	Headers    GetGiftCardTransactionsHeaders
+	GiftCardID  string `pathParam:"style=simple,explode=false,name=giftCardID"`
 }
 
 type GetGiftCardTransactionsResponse struct {

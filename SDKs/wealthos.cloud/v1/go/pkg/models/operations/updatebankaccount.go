@@ -6,22 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type UpdateBankAccountSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateBankAccountPathParams struct {
-	// Bank Account Id
-	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
-}
-
-type UpdateBankAccountHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum string
@@ -81,10 +70,11 @@ type UpdateBankAccountUpdateRequestBodyForBankAccount struct {
 }
 
 type UpdateBankAccountRequest struct {
-	PathParams UpdateBankAccountPathParams
-	Headers    UpdateBankAccountHeaders
-	Request    UpdateBankAccountUpdateRequestBodyForBankAccount `request:"mediaType=application/json"`
-	Security   UpdateBankAccountSecurity
+	RequestBody UpdateBankAccountUpdateRequestBodyForBankAccount `request:"mediaType=application/json"`
+	// Bank Account Id
+	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // UpdateBankAccount500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

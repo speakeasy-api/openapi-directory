@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostChargeStationsRequest struct {
-	// Include charge station properties to create here
-	Request shared.Schema1 `request:"mediaType=application/json"`
-}
 
 // PostChargeStations201ApplicationJSON - Returns the newly created chargestion object
 type PostChargeStations201ApplicationJSON struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchPatientsQueryParams struct {
+type FetchPatientsRequest struct {
 	// If not specified, return all patients. If set to 'true' return only archived patients, if set to 'false', return only patients who are not archived.
 	FilterArchived *bool `queryParam:"style=form,explode=true,name=filter[archived]"`
 	// The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
@@ -32,10 +32,6 @@ type FetchPatientsQueryParams struct {
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page[number]"`
 	// Page size
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type FetchPatientsRequest struct {
-	QueryParams FetchPatientsQueryParams
 }
 
 type FetchPatientsResponse struct {

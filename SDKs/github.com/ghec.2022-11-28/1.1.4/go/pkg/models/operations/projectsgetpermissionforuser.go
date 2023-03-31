@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsGetPermissionForUserPathParams struct {
+type ProjectsGetPermissionForUserRequest struct {
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ProjectsGetPermissionForUserRequest struct {
-	PathParams ProjectsGetPermissionForUserPathParams
 }
 
 type ProjectsGetPermissionForUserResponse struct {

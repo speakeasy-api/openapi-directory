@@ -12,12 +12,8 @@ var UpdateDomainCertV4ServerList = []string{
 }
 
 type UpdateDomainCertV4Security struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDomainCertV4PathParams struct {
-	// Unique string used to identify the domain that this certificate should be associated with.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDomainCertV4UpdateDomainCertV4Request struct {
@@ -26,10 +22,9 @@ type UpdateDomainCertV4UpdateDomainCertV4Request struct {
 }
 
 type UpdateDomainCertV4Request struct {
-	PathParams UpdateDomainCertV4PathParams
-	Request    *UpdateDomainCertV4UpdateDomainCertV4Request `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDomainCertV4Security
-	ServerURL  *string
+	// Unique string used to identify the domain that this certificate should be associated with.
+	DomainSid   string                                       `pathParam:"style=simple,explode=false,name=DomainSid"`
+	RequestBody *UpdateDomainCertV4UpdateDomainCertV4Request `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateDomainCertV4Response struct {

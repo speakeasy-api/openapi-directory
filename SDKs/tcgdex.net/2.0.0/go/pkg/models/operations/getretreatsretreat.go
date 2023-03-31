@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRetreatsRetreatPathParams struct {
-	Retreat string `pathParam:"style=simple,explode=false,name=retreat"`
-}
-
 type GetRetreatsRetreatRequest struct {
-	PathParams GetRetreatsRetreatPathParams
+	Retreat string `pathParam:"style=simple,explode=false,name=retreat"`
 }
 
 type GetRetreatsRetreatResponse struct {

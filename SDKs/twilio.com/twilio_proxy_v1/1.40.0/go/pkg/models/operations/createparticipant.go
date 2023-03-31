@@ -12,14 +12,8 @@ var CreateParticipantServerList = []string{
 }
 
 type CreateParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateParticipantPathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.
-	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateParticipantCreateParticipantRequest struct {
@@ -34,10 +28,11 @@ type CreateParticipantCreateParticipantRequest struct {
 }
 
 type CreateParticipantRequest struct {
-	PathParams CreateParticipantPathParams
-	Request    *CreateParticipantCreateParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateParticipantSecurity
-	ServerURL  *string
+	RequestBody *CreateParticipantCreateParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.
+	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
 }
 
 type CreateParticipantResponse struct {

@@ -25,116 +25,31 @@ func main() {
     s := sdk.New()
 
     req := operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest{
-        Security: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AccessLevel{
+        DollarXgafv: "2",
+        AccessLevel: &shared.AccessLevel{
             Basic: &shared.BasicLevel{
-                CombiningFunction: "AND",
+                CombiningFunction: "OR",
                 Conditions: []shared.Condition{
-                    shared.Condition{
-                        DevicePolicy: &shared.DevicePolicy{
-                            AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "COMPLETE",
-                                "MANAGEMENT_UNSPECIFIED",
-                            },
-                            AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "ENCRYPTION_UNSUPPORTED",
-                                "ENCRYPTION_UNSUPPORTED",
-                                "ENCRYPTION_UNSUPPORTED",
-                                "ENCRYPTED",
-                            },
-                            OsConstraints: []shared.OsConstraint{
-                                shared.OsConstraint{
-                                    MinimumVersion: "voluptatum",
-                                    OsType: "DESKTOP_LINUX",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                                shared.OsConstraint{
-                                    MinimumVersion: "excepturi",
-                                    OsType: "DESKTOP_WINDOWS",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                                shared.OsConstraint{
-                                    MinimumVersion: "recusandae",
-                                    OsType: "ANDROID",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                                shared.OsConstraint{
-                                    MinimumVersion: "ab",
-                                    OsType: "DESKTOP_WINDOWS",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                            },
-                            RequireAdminApproval: false,
-                            RequireCorpOwned: false,
-                            RequireScreenlock: false,
-                        },
-                        IPSubnetworks: []string{
-                            "deserunt",
-                        },
-                        Members: []string{
-                            "ipsam",
-                        },
-                        Negate: false,
-                        Regions: []string{
-                            "sapiente",
-                            "quo",
-                            "odit",
-                            "at",
-                        },
-                        RequiredAccessLevels: []string{
-                            "maiores",
-                            "molestiae",
-                            "quod",
-                            "quod",
-                        },
-                    },
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
                                 "BASIC",
                                 "COMPLETE",
+                                "BASIC",
+                                "COMPLETE",
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "ENCRYPTION_UNSPECIFIED",
                                 "UNENCRYPTED",
                                 "UNENCRYPTED",
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "fugit",
-                                    OsType: "DESKTOP_LINUX",
+                                    MinimumVersion: "iure",
+                                    OsType: "DESKTOP_WINDOWS",
                                     RequireVerifiedChromeOs: false,
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "hic",
-                                    OsType: "ANDROID",
-                                    RequireVerifiedChromeOs: false,
-                                },
-                                shared.OsConstraint{
-                                    MinimumVersion: "totam",
+                                    MinimumVersion: "debitis",
                                     OsType: "OS_UNSPECIFIED",
                                     RequireVerifiedChromeOs: false,
                                 },
@@ -144,40 +59,167 @@ func main() {
                             RequireScreenlock: false,
                         },
                         IPSubnetworks: []string{
+                            "tempora",
+                            "suscipit",
                             "molestiae",
-                            "modi",
+                            "minus",
                         },
                         Members: []string{
-                            "impedit",
+                            "voluptatum",
+                            "iusto",
+                            "excepturi",
+                            "nisi",
                         },
                         Negate: false,
                         Regions: []string{
+                            "temporibus",
+                            "ab",
+                            "quis",
+                            "veritatis",
+                        },
+                        RequiredAccessLevels: []string{
+                            "perferendis",
+                            "ipsam",
+                            "repellendus",
+                        },
+                    },
+                    shared.Condition{
+                        DevicePolicy: &shared.DevicePolicy{
+                            AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
+                                "COMPLETE",
+                                "MANAGEMENT_UNSPECIFIED",
+                                "COMPLETE",
+                                "COMPLETE",
+                            },
+                            AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
+                                "ENCRYPTION_UNSUPPORTED",
+                                "ENCRYPTED",
+                                "ENCRYPTED",
+                                "ENCRYPTION_UNSUPPORTED",
+                            },
+                            OsConstraints: []shared.OsConstraint{
+                                shared.OsConstraint{
+                                    MinimumVersion: "porro",
+                                    OsType: "DESKTOP_CHROME_OS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "dicta",
+                                    OsType: "ANDROID",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "officia",
+                                    OsType: "DESKTOP_CHROME_OS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                            },
+                            RequireAdminApproval: false,
+                            RequireCorpOwned: false,
+                            RequireScreenlock: false,
+                        },
+                        IPSubnetworks: []string{
+                            "deleniti",
+                        },
+                        Members: []string{
+                            "optio",
+                            "totam",
+                            "beatae",
+                            "commodi",
+                        },
+                        Negate: false,
+                        Regions: []string{
+                            "modi",
+                            "qui",
+                        },
+                        RequiredAccessLevels: []string{
+                            "cum",
                             "esse",
                             "ipsum",
                             "excepturi",
                         },
+                    },
+                    shared.Condition{
+                        DevicePolicy: &shared.DevicePolicy{
+                            AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
+                                "MANAGEMENT_UNSPECIFIED",
+                            },
+                            AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
+                                "UNENCRYPTED",
+                                "ENCRYPTION_UNSPECIFIED",
+                            },
+                            OsConstraints: []shared.OsConstraint{
+                                shared.OsConstraint{
+                                    MinimumVersion: "dolor",
+                                    OsType: "DESKTOP_CHROME_OS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "laboriosam",
+                                    OsType: "IOS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "saepe",
+                                    OsType: "DESKTOP_CHROME_OS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                            },
+                            RequireAdminApproval: false,
+                            RequireCorpOwned: false,
+                            RequireScreenlock: false,
+                        },
+                        IPSubnetworks: []string{
+                            "corporis",
+                            "iste",
+                        },
+                        Members: []string{
+                            "saepe",
+                            "quidem",
+                        },
+                        Negate: false,
+                        Regions: []string{
+                            "ipsa",
+                        },
                         RequiredAccessLevels: []string{
-                            "perferendis",
+                            "est",
+                            "mollitia",
+                            "laborum",
+                            "dolores",
                         },
                     },
                 },
             },
             Custom: &shared.CustomLevel{
                 Expr: &shared.Expr{
-                    Description: "ad",
-                    Expression: "natus",
-                    Location: "sed",
+                    Description: "dolorem",
+                    Expression: "corporis",
+                    Location: "explicabo",
                     Title: "Miss",
                 },
             },
-            Description: "dolor",
-            Name: "natus",
+            Description: "enim",
+            Name: "omnis",
             Title: "Mrs.",
         },
+        AccessToken: "minima",
+        Alt: "media",
+        Callback: "accusantium",
+        Fields: "iure",
+        Key: "culpa",
+        OauthToken: "doloribus",
+        Parent: "sapiente",
+        PrettyPrint: false,
+        QuotaUser: "architecto",
+        UploadType: "mollitia",
+        UploadProtocol: "dolorem",
     }
 
     ctx := context.Background()
-    res, err := s.AccessPolicies.AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx, req)
+    res, err := s.AccessPolicies.AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx, req, operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -190,7 +232,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### AccessPolicies
@@ -209,4 +251,15 @@ func main() {
 * `AccesscontextmanagerOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

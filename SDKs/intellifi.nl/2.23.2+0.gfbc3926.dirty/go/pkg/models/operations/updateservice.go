@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateServicePathParams struct {
+type UpdateServiceRequest struct {
+	// A JSON object containing service information
+	ServiceInput shared.ServiceInput `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateServiceRequest struct {
-	PathParams UpdateServicePathParams
-	// A JSON object containing service information
-	Request shared.ServiceInput `request:"mediaType=application/json"`
 }
 
 type UpdateServiceResponse struct {

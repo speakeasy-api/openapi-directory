@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type AccountPlansPathParams struct {
+type AccountPlansRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AccountPlansRequest struct {
-	PathParams AccountPlansPathParams
 }
 
 // AccountPlans200ApplicationXMLPlanAudioStatusEnum - Status of the plan.

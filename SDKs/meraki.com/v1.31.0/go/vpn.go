@@ -34,7 +34,7 @@ func newVpn(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Return a Hub BGP Configuration
 func (s *vpn) GetNetworkApplianceVpnBgp(ctx context.Context, request operations.GetNetworkApplianceVpnBgpRequest) (*operations.GetNetworkApplianceVpnBgpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *vpn) GetNetworkApplianceVpnBgp(ctx context.Context, request operations.
 // Return the site-to-site VPN settings of a network. Only valid for MX networks.
 func (s *vpn) GetNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request operations.GetNetworkApplianceVpnSiteToSiteVpnRequest) (*operations.GetNetworkApplianceVpnSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *vpn) GetNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request o
 // List the VPN settings for the SSID.
 func (s *vpn) GetNetworkWirelessSsidVpn(ctx context.Context, request operations.GetNetworkWirelessSsidVpnRequest) (*operations.GetNetworkWirelessSsidVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,14 +169,14 @@ func (s *vpn) GetNetworkWirelessSsidVpn(ctx context.Context, request operations.
 // Show VPN history stat for networks in an organization
 func (s *vpn) GetOrganizationApplianceVpnStats(ctx context.Context, request operations.GetOrganizationApplianceVpnStatsRequest) (*operations.GetOrganizationApplianceVpnStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/stats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/stats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -220,14 +220,14 @@ func (s *vpn) GetOrganizationApplianceVpnStats(ctx context.Context, request oper
 // Show VPN status for networks in an organization
 func (s *vpn) GetOrganizationApplianceVpnStatuses(ctx context.Context, request operations.GetOrganizationApplianceVpnStatusesRequest) (*operations.GetOrganizationApplianceVpnStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -271,7 +271,7 @@ func (s *vpn) GetOrganizationApplianceVpnStatuses(ctx context.Context, request o
 // Return the third party VPN peers for an organization
 func (s *vpn) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.GetOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +316,7 @@ func (s *vpn) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context,
 // Return the firewall rules for an organization's site-to-site VPN
 func (s *vpn) GetOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, request operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest) (*operations.GetOrganizationApplianceVpnVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -361,9 +361,9 @@ func (s *vpn) GetOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, r
 // Update a Hub BGP Configuration
 func (s *vpn) UpdateNetworkApplianceVpnBgp(ctx context.Context, request operations.UpdateNetworkApplianceVpnBgpRequest) (*operations.UpdateNetworkApplianceVpnBgpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -416,9 +416,9 @@ func (s *vpn) UpdateNetworkApplianceVpnBgp(ctx context.Context, request operatio
 // Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.
 func (s *vpn) UpdateNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest) (*operations.UpdateNetworkApplianceVpnSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -471,9 +471,9 @@ func (s *vpn) UpdateNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, reques
 // Update the VPN settings for the SSID
 func (s *vpn) UpdateNetworkWirelessSsidVpn(ctx context.Context, request operations.UpdateNetworkWirelessSsidVpnRequest) (*operations.UpdateNetworkWirelessSsidVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,9 +523,9 @@ func (s *vpn) UpdateNetworkWirelessSsidVpn(ctx context.Context, request operatio
 // Update the third party VPN peers for an organization
 func (s *vpn) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -578,9 +578,9 @@ func (s *vpn) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Conte
 // Update the firewall rules of an organization's site-to-site VPN
 func (s *vpn) UpdateOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, request operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest) (*operations.UpdateOrganizationApplianceVpnVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -4,30 +4,29 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.StsTokenRequest(
-    query_params=operations.StsTokenQueryParams(
-        dollar_xgafv="2",
-        access_token="quas",
-        alt="proto",
-        callback="aut",
-        fields="at",
-        key="sint",
-        oauth_token="at",
-        pretty_print=True,
-        quota_user="enim",
-        upload_type="vel",
-        upload_protocol="temporibus",
+    dollar_xgafv="2",
+    google_identity_sts_v1beta_exchange_token_request=shared.GoogleIdentityStsV1betaExchangeTokenRequest(
+        audience="provident",
+        grant_type="distinctio",
+        options="quibusdam",
+        requested_token_type="unde",
+        scope="nulla",
+        subject_token="corrupti",
+        subject_token_type="illum",
     ),
-    request=shared.GoogleIdentityStsV1betaExchangeTokenRequest(
-        audience="nihil",
-        grant_type="repellendus",
-        options="blanditiis",
-        requested_token_type="possimus",
-        scope="animi",
-        subject_token="quo",
-        subject_token_type="est",
-    ),
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    pretty_print=False,
+    quota_user="debitis",
+    upload_type="ipsa",
+    upload_protocol="delectus",
 )
     
 res = s.v1beta.sts_token(req)

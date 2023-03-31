@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudtraceProjectsPatchTraces - Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send matches that of an existing trace, any fields in the existing trace and its spans are overwritten by the provided values, and any new fields provided are merged with the existing trace data. If the ID does not match, a new trace is created.
-func (s *projects) CloudtraceProjectsPatchTraces(ctx context.Context, request operations.CloudtraceProjectsPatchTracesRequest) (*operations.CloudtraceProjectsPatchTracesResponse, error) {
+func (s *projects) CloudtraceProjectsPatchTraces(ctx context.Context, request operations.CloudtraceProjectsPatchTracesRequest, security operations.CloudtraceProjectsPatchTracesSecurity) (*operations.CloudtraceProjectsPatchTracesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Traces", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CloudtraceProjectsPatchTraces(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) CloudtraceProjectsPatchTraces(ctx context.Context, request op
 }
 
 // CloudtraceProjectsTracesGet - Gets a single trace by its ID.
-func (s *projects) CloudtraceProjectsTracesGet(ctx context.Context, request operations.CloudtraceProjectsTracesGetRequest) (*operations.CloudtraceProjectsTracesGetResponse, error) {
+func (s *projects) CloudtraceProjectsTracesGet(ctx context.Context, request operations.CloudtraceProjectsTracesGetRequest, security operations.CloudtraceProjectsTracesGetSecurity) (*operations.CloudtraceProjectsTracesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces/{traceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces/{traceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) CloudtraceProjectsTracesGet(ctx context.Context, request oper
 }
 
 // CloudtraceProjectsTracesList - Returns a list of traces that match the specified filter conditions.
-func (s *projects) CloudtraceProjectsTracesList(ctx context.Context, request operations.CloudtraceProjectsTracesListRequest) (*operations.CloudtraceProjectsTracesListResponse, error) {
+func (s *projects) CloudtraceProjectsTracesList(ctx context.Context, request operations.CloudtraceProjectsTracesListRequest, security operations.CloudtraceProjectsTracesListSecurity) (*operations.CloudtraceProjectsTracesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningListRecentAnalysesPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // CodeScanningListRecentAnalysesSortEnum - The property by which to sort the results.
 type CodeScanningListRecentAnalysesSortEnum string
 
@@ -37,15 +30,19 @@ func (e *CodeScanningListRecentAnalysesSortEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type CodeScanningListRecentAnalysesQueryParams struct {
+type CodeScanningListRecentAnalysesRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Filter analyses belonging to the same SARIF upload.
 	SarifID *string `queryParam:"style=form,explode=true,name=sarif_id"`
 	// The property by which to sort the results.
@@ -54,11 +51,6 @@ type CodeScanningListRecentAnalysesQueryParams struct {
 	ToolGUID *string `queryParam:"style=form,explode=true,name=tool_guid"`
 	// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
 	ToolName *string `queryParam:"style=form,explode=true,name=tool_name"`
-}
-
-type CodeScanningListRecentAnalysesRequest struct {
-	PathParams  CodeScanningListRecentAnalysesPathParams
-	QueryParams CodeScanningListRecentAnalysesQueryParams
 }
 
 // CodeScanningListRecentAnalyses503ApplicationJSON - Service unavailable

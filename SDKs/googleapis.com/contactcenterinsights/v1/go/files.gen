@@ -37,6 +37,7 @@ pkg/models/operations/contactcenterinsightsprojectslocationsviewslist.go
 pkg/models/operations/contactcenterinsightsprojectslocationsviewspatch.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1analysis.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1annotatorselector.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1analysisresult.go
@@ -53,9 +54,7 @@ pkg/models/shared/googlecloudcontactcenterinsightsv1issuematchdata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1intentmatchdata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1entitymentiondata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1annotationboundary.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1listanalysesresponse.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1bulkanalyzeconversationsrequest.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1calculatestatsresponse.go

@@ -8,30 +8,27 @@ import (
 )
 
 type Adexchangebuyer2AccountsClientsInvitationsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsClientsInvitationsGetPathParams struct {
-	// Numerical account ID of the client's sponsor buyer. (required)
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Numerical account ID of the client buyer that the user invitation to be retrieved is associated with. (required)
-	ClientAccountID string `pathParam:"style=simple,explode=false,name=clientAccountId"`
-	// Numerical identifier of the user invitation to retrieve. (required)
-	InvitationID string `pathParam:"style=simple,explode=false,name=invitationId"`
-}
-
-type Adexchangebuyer2AccountsClientsInvitationsGetQueryParams struct {
+type Adexchangebuyer2AccountsClientsInvitationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Numerical account ID of the client's sponsor buyer. (required)
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Numerical account ID of the client buyer that the user invitation to be retrieved is associated with. (required)
+	ClientAccountID string `pathParam:"style=simple,explode=false,name=clientAccountId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Numerical identifier of the user invitation to retrieve. (required)
+	InvitationID string `pathParam:"style=simple,explode=false,name=invitationId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -44,12 +41,6 @@ type Adexchangebuyer2AccountsClientsInvitationsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsClientsInvitationsGetRequest struct {
-	PathParams  Adexchangebuyer2AccountsClientsInvitationsGetPathParams
-	QueryParams Adexchangebuyer2AccountsClientsInvitationsGetQueryParams
-	Security    Adexchangebuyer2AccountsClientsInvitationsGetSecurity
 }
 
 type Adexchangebuyer2AccountsClientsInvitationsGetResponse struct {

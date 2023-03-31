@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteVideoCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type DeleteVideoCollectionPathParams struct {
-	// The ID of the collection to delete
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteVideoCollectionRequest struct {
-	PathParams DeleteVideoCollectionPathParams
-	Security   DeleteVideoCollectionSecurity
+	// The ID of the collection to delete
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteVideoCollectionResponse struct {

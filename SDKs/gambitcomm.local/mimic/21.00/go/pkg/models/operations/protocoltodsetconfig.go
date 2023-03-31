@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolTodSetConfigPathParams struct {
+type ProtocolTodSetConfigRequest struct {
 	// Agent to set the TOD configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the TOD configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the TOD configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolTodSetConfigRequest struct {
-	PathParams ProtocolTodSetConfigPathParams
 }
 
 type ProtocolTodSetConfigResponse struct {

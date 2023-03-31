@@ -14,53 +14,44 @@ func main() {
     s := sdk.New()
 
     req := operations.VisionFilesAnnotateRequest{
-        Security: operations.VisionFilesAnnotateSecurity{
-            Option1: &operations.VisionFilesAnnotateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.VisionFilesAnnotateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest{
-            Parent: "deserunt",
+        DollarXgafv: "2",
+        GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest: &shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest{
+            Parent: "provident",
             Requests: []shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p1beta1Feature{
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 602763,
+                            Model: "nulla",
+                            Type: "SAFE_SEARCH_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 847252,
+                            Model: "vel",
+                            Type: "IMAGE_PROPERTIES",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 645894,
+                            Model: "suscipit",
+                            Type: "TEXT_DETECTION",
+                        },
                         shared.GoogleCloudVisionV1p1beta1Feature{
                             MaxResults: 297534,
                             Model: "debitis",
                             Type: "TYPE_UNSPECIFIED",
                         },
-                        shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 963663,
-                            Model: "tempora",
-                            Type: "LABEL_DETECTION",
-                        },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p1beta1CropHintsParams{
                             AspectRatios: []float32{
+                                2726.56,
+                                3834.41,
+                                4776.65,
                                 7917.25,
-                                8121.69,
                             },
                         },
                         LanguageHints: []string{
+                            "voluptatum",
                             "iusto",
                             "excepturi",
                             "nisi",
@@ -219,12 +210,129 @@ func main() {
                         988374,
                     },
                 },
+                shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
+                    Features: []shared.GoogleCloudVisionV1p1beta1Feature{
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 102044,
+                            Model: "mollitia",
+                            Type: "LANDMARK_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 635059,
+                            Model: "consequuntur",
+                            Type: "OBJECT_LOCALIZATION",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 653108,
+                            Model: "occaecati",
+                            Type: "LOGO_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 414369,
+                            Model: "quam",
+                            Type: "DOCUMENT_TEXT_DETECTION",
+                        },
+                    },
+                    ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
+                        CropHintsParams: &shared.GoogleCloudVisionV1p1beta1CropHintsParams{
+                            AspectRatios: []float32{
+                                6235.1,
+                            },
+                        },
+                        LanguageHints: []string{
+                            "quis",
+                        },
+                        LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
+                            MaxLatLng: &shared.LatLng{
+                                Latitude: 1103.75,
+                                Longitude: 6747.52,
+                            },
+                            MinLatLng: &shared.LatLng{
+                                Latitude: 6563.3,
+                                Longitude: 3172.02,
+                            },
+                        },
+                        ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
+                            BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
+                                NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 7783.46,
+                                        Y: 1965.82,
+                                    },
+                                },
+                                Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
+                                    shared.GoogleCloudVisionV1p1beta1Vertex{
+                                        X: 368725,
+                                        Y: 662527,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1Vertex{
+                                        X: 820994,
+                                        Y: 13571,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1Vertex{
+                                        X: 97101,
+                                        Y: 622846,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1Vertex{
+                                        X: 837945,
+                                        Y: 673660,
+                                    },
+                                },
+                            },
+                            Filter: "quasi",
+                            ProductCategories: []string{
+                                "voluptatibus",
+                                "vero",
+                                "nihil",
+                                "praesentium",
+                            },
+                            ProductSet: "voluptatibus",
+                        },
+                        TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
+                            AdvancedOcrOptions: []string{
+                                "omnis",
+                            },
+                            EnableTextDetectionConfidenceScore: false,
+                        },
+                        WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
+                            IncludeGeoResults: false,
+                        },
+                    },
+                    InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
+                        Content: "voluptate",
+                        GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
+                            URI: "https://agile-arch-rival.info",
+                        },
+                        MimeType: "ut",
+                    },
+                    Pages: []int{
+                        120196,
+                        359444,
+                        296140,
+                        480894,
+                    },
+                },
             },
         },
+        AccessToken: "dicta",
+        Alt: "proto",
+        Callback: "enim",
+        Fields: "accusamus",
+        Key: "commodi",
+        OauthToken: "repudiandae",
+        PrettyPrint: false,
+        QuotaUser: "quae",
+        UploadType: "ipsum",
+        UploadProtocol: "quidem",
     }
 
     ctx := context.Background()
-    res, err := s.Files.VisionFilesAnnotate(ctx, req)
+    res, err := s.Files.VisionFilesAnnotate(ctx, req, operations.VisionFilesAnnotateSecurity{
+        Option1: &operations.VisionFilesAnnotateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

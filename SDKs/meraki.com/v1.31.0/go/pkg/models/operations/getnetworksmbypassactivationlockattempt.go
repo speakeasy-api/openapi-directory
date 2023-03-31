@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmBypassActivationLockAttemptPathParams struct {
+type GetNetworkSmBypassActivationLockAttemptRequest struct {
 	AttemptID string `pathParam:"style=simple,explode=false,name=attemptId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmBypassActivationLockAttemptRequest struct {
-	PathParams GetNetworkSmBypassActivationLockAttemptPathParams
 }
 
 type GetNetworkSmBypassActivationLockAttemptResponse struct {

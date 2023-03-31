@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetweatherzipcodeRequest(
-    query_params=operations.GetweatherzipcodeQueryParams(
-        license="illo",
-        zip="repudiandae",
-    ),
+    license="corrupti",
+    zip="provident",
 )
     
 res = s.weather_by_zip_code.getweatherzipcode(req)

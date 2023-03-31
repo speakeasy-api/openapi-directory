@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetV2GroupsJSONQueryParams struct {
+type GetV2GroupsJSONRequest struct {
 	// IDs of groups to fetch.
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2GroupsJSONRequest struct {
-	QueryParams GetV2GroupsJSONQueryParams
 }
 
 type GetV2GroupsJSONResponse struct {

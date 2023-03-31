@@ -8,12 +8,7 @@ import (
 )
 
 type CreateAccountScanTemplateSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateAccountScanTemplateRequest struct {
-	Request  shared.ScanTemplateOptions `request:"mediaType=application/json"`
-	Security CreateAccountScanTemplateSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateAccountScanTemplateResponse struct {

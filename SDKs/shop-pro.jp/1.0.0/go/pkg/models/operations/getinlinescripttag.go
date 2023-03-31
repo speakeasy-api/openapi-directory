@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetInlineScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetInlineScriptTagPathParams struct {
-	// インラインスクリプトタグID
-	InlineScriptTagID int64 `pathParam:"style=simple,explode=false,name=inlineScriptTagId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetInlineScriptTagRequest struct {
-	PathParams GetInlineScriptTagPathParams
-	Security   GetInlineScriptTagSecurity
+	// インラインスクリプトタグID
+	InlineScriptTagID int64 `pathParam:"style=simple,explode=false,name=inlineScriptTagId"`
 }
 
 // GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum - インラインスクリプトを出力するページ。

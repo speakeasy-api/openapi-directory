@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type LookupCnamQueryParams struct {
+type LookupCnamRequest struct {
 	// The phone number to look up.
 	Number []string `queryParam:"style=form,explode=false,name=number"`
-}
-
-type LookupCnamRequest struct {
-	QueryParams LookupCnamQueryParams
 }
 
 type LookupCnamResponse struct {

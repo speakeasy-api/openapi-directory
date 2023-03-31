@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountQueryParams struct {
-	// Related records to include in the response. Valid option is **masterUser**
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetAccountHeaders struct {
+type GetAccountRequest struct {
 	// Access Token for the request
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required for the request
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetAccountRequest struct {
-	QueryParams GetAccountQueryParams
-	Headers     GetAccountHeaders
+	// Related records to include in the response. Valid option is **masterUser**
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetAccountResponse struct {

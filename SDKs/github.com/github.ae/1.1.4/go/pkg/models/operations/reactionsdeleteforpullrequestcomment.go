@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ReactionsDeleteForPullRequestCommentPathParams struct {
+type ReactionsDeleteForPullRequestCommentRequest struct {
 	// The unique identifier of the comment.
 	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -15,10 +15,6 @@ type ReactionsDeleteForPullRequestCommentPathParams struct {
 	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReactionsDeleteForPullRequestCommentRequest struct {
-	PathParams ReactionsDeleteForPullRequestCommentPathParams
 }
 
 type ReactionsDeleteForPullRequestCommentResponse struct {

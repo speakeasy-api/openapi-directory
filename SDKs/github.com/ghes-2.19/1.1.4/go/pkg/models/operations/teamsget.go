@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsGetRequest struct {
-	PathParams TeamsGetPathParams
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsGetResponse struct {

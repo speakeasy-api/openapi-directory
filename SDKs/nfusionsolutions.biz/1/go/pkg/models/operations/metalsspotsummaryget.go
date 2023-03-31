@@ -83,7 +83,7 @@ func (e *MetalsSpotSummaryGETUnitofmeasureEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type MetalsSpotSummaryGETQueryParams struct {
+type MetalsSpotSummaryGETRequest struct {
 	// comma separated list of conversion currencies, defaults to USD
 	Currency *string `queryParam:"style=form,explode=true,name=currency"`
 	// to override content negotiation specify a value of json or xml
@@ -100,10 +100,6 @@ type MetalsSpotSummaryGETQueryParams struct {
 	// ct=carat
 	// dwt=pennyweight
 	Unitofmeasure *MetalsSpotSummaryGETUnitofmeasureEnum `queryParam:"style=form,explode=true,name=unitofmeasure"`
-}
-
-type MetalsSpotSummaryGETRequest struct {
-	QueryParams MetalsSpotSummaryGETQueryParams
 }
 
 type MetalsSpotSummaryGETResponse struct {

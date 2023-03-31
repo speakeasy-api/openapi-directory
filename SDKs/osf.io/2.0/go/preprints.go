@@ -52,7 +52,7 @@ func newPreprints(defaultClient, securityClient HTTPClient, serverURL, language,
 // Contributors may be filtered by their `bibliographic` and `permission` attributes.
 func (s *preprints) PreprintsBibliographicContributorsList(ctx context.Context, request operations.PreprintsBibliographicContributorsListRequest) (*operations.PreprintsBibliographicContributorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/bibliographic_contributors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/bibliographic_contributors/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *preprints) PreprintsBibliographicContributorsList(ctx context.Context, 
 // Returns a JSON object with a `data` key that contains the representation of the details necessary for the preprint citation.
 func (s *preprints) PreprintsCitationList(ctx context.Context, request operations.PreprintsCitationListRequest) (*operations.PreprintsCitationListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/citation/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/citation/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *preprints) PreprintsCitationList(ctx context.Context, request operation
 // Returns a JSON object with a `data` key that contains the representation of the preprint citation, in the requested style.
 func (s *preprints) PreprintsCitationRead(ctx context.Context, request operations.PreprintsCitationReadRequest) (*operations.PreprintsCitationReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/citation/{style_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/citation/{style_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *preprints) PreprintsCitationRead(ctx context.Context, request operation
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *preprints) PreprintsContributorRead(ctx context.Context, request operations.PreprintsContributorReadRequest) (*operations.PreprintsContributorReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/contributors/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/contributors/{user_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -248,9 +248,9 @@ func (s *preprints) PreprintsContributorRead(ctx context.Context, request operat
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *preprints) PreprintsContributorsCreate(ctx context.Context, request operations.PreprintsContributorsCreateRequest) (*operations.PreprintsContributorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/contributors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/contributors/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -311,7 +311,7 @@ func (s *preprints) PreprintsContributorsCreate(ctx context.Context, request ope
 // Contributors may be filtered by their `bibliographic` and `permission` attributes.
 func (s *preprints) PreprintsContributorsList(ctx context.Context, request operations.PreprintsContributorsListRequest) (*operations.PreprintsContributorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/contributors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/contributors/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -358,7 +358,7 @@ func (s *preprints) PreprintsContributorsList(ctx context.Context, request opera
 // Returns a JSON object with a `data` key containing the representation of the created preprint, if the request is successful.
 //
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
-func (s *preprints) PreprintsCreate(ctx context.Context, request operations.PreprintsCreateRequest) (*operations.PreprintsCreateResponse, error) {
+func (s *preprints) PreprintsCreate(ctx context.Context, request operations.PreprintsCreatePreprintInput) (*operations.PreprintsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/preprints/"
 
@@ -468,9 +468,9 @@ func (s *preprints) PreprintsList(ctx context.Context) (*operations.PreprintsLis
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
 func (s *preprints) PreprintsPartialUpdate(ctx context.Context, request operations.PreprintsPartialUpdateRequest) (*operations.PreprintsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -518,7 +518,7 @@ func (s *preprints) PreprintsPartialUpdate(ctx context.Context, request operatio
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *preprints) PreprintsRead(ctx context.Context, request operations.PreprintsReadRequest) (*operations.PreprintsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/preprints/{preprint_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

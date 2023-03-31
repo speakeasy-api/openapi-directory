@@ -45,7 +45,7 @@ func (s *calls) GetV2ActivitiesCallsJSON(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *calls) GetV2ActivitiesCallsJSON(ctx context.Context, request operations
 // Fetches a call, by ID only.
 func (s *calls) GetV2ActivitiesCallsIDJSON(ctx context.Context, request operations.GetV2ActivitiesCallsIDJSONRequest) (*operations.GetV2ActivitiesCallsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/activities/calls/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/activities/calls/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *calls) GetV2ActivitiesCallsIDJSON(ctx context.Context, request operatio
 // PostV2ActivitiesCallsJSON - Create a call
 // Creates a call. The parameters of this endpoint can be used to create an action
 // and ensure that the CRM Task is mapped correctly.
-func (s *calls) PostV2ActivitiesCallsJSON(ctx context.Context, request operations.PostV2ActivitiesCallsJSONRequest) (*operations.PostV2ActivitiesCallsJSONResponse, error) {
+func (s *calls) PostV2ActivitiesCallsJSON(ctx context.Context, request operations.PostV2ActivitiesCallsJSONRequestBody) (*operations.PostV2ActivitiesCallsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/activities/calls.json"
 

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmailListsQueryParams struct {
-	// Related record types to include in the response. Valid option is `ownerUser`
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetEmailListsHeaders struct {
+type GetEmailListsRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetEmailListsRequest struct {
-	QueryParams GetEmailListsQueryParams
-	Headers     GetEmailListsHeaders
+	// Related record types to include in the response. Valid option is `ownerUser`
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetEmailListsResponse struct {

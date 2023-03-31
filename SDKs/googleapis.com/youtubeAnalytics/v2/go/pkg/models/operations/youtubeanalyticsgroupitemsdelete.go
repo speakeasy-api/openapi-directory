@@ -8,28 +8,28 @@ import (
 )
 
 type YoutubeAnalyticsGroupItemsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeAnalyticsGroupItemsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeAnalyticsGroupItemsDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeAnalyticsGroupItemsDeleteSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeAnalyticsGroupItemsDeleteSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeAnalyticsGroupItemsDeleteSecurity struct {
@@ -40,7 +40,7 @@ type YoutubeAnalyticsGroupItemsDeleteSecurity struct {
 	Option5 *YoutubeAnalyticsGroupItemsDeleteSecurityOption5 `security:"option"`
 }
 
-type YoutubeAnalyticsGroupItemsDeleteQueryParams struct {
+type YoutubeAnalyticsGroupItemsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,11 +67,6 @@ type YoutubeAnalyticsGroupItemsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubeAnalyticsGroupItemsDeleteRequest struct {
-	QueryParams YoutubeAnalyticsGroupItemsDeleteQueryParams
-	Security    YoutubeAnalyticsGroupItemsDeleteSecurity
 }
 
 type YoutubeAnalyticsGroupItemsDeleteResponse struct {

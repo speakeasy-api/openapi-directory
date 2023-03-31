@@ -9,17 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsDismissReviewPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The unique identifier of the review.
-	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
 type PullsDismissReviewRequestBodyEventEnum string
 
 const (
@@ -47,8 +36,15 @@ type PullsDismissReviewRequestBody struct {
 }
 
 type PullsDismissReviewRequest struct {
-	PathParams PullsDismissReviewPathParams
-	Request    PullsDismissReviewRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsDismissReviewRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The unique identifier of the review.
+	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
 }
 
 type PullsDismissReviewResponse struct {

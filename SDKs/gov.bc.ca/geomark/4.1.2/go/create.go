@@ -42,7 +42,7 @@ func (s *create) PostGeomarksCopy(ctx context.Context, request operations.PostGe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -79,7 +79,7 @@ func (s *create) PostGeomarksCopy(ctx context.Context, request operations.PostGe
 
 // PostGeomarksNew - Create a new geomark
 // Create a new geomark from the geometries read from the 'body' parameter or file.
-func (s *create) PostGeomarksNew(ctx context.Context, request operations.PostGeomarksNewRequest) (*operations.PostGeomarksNewResponse, error) {
+func (s *create) PostGeomarksNew(ctx context.Context, request operations.PostGeomarksNewRequestBody) (*operations.PostGeomarksNewResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/geomarks/new"
 

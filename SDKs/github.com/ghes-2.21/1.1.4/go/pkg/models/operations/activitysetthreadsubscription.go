@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivitySetThreadSubscriptionPathParams struct {
-	// thread_id parameter
-	ThreadID int64 `pathParam:"style=simple,explode=false,name=thread_id"`
-}
-
 type ActivitySetThreadSubscriptionRequestBody struct {
 	// Whether to block all notifications from a thread.
 	Ignored *bool `json:"ignored,omitempty"`
 }
 
 type ActivitySetThreadSubscriptionRequest struct {
-	PathParams ActivitySetThreadSubscriptionPathParams
-	Request    *ActivitySetThreadSubscriptionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ActivitySetThreadSubscriptionRequestBody `request:"mediaType=application/json"`
+	// thread_id parameter
+	ThreadID int64 `pathParam:"style=simple,explode=false,name=thread_id"`
 }
 
 type ActivitySetThreadSubscriptionResponse struct {

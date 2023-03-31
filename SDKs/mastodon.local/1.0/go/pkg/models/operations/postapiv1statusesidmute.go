@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1StatusesIDMuteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1StatusesIDMutePathParams struct {
-	// Local ID of a status in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1StatusesIDMuteRequest struct {
-	PathParams PostAPIV1StatusesIDMutePathParams
-	Security   PostAPIV1StatusesIDMuteSecurity
+	// Local ID of a status in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1StatusesIDMuteResponse struct {

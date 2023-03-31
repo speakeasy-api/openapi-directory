@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolDhcpSetTracePathParams struct {
+type ProtocolDhcpSetTraceRequest struct {
 	// Agent to set the DHCP tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the DHCP tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolDhcpSetTraceRequest struct {
-	PathParams ProtocolDhcpSetTracePathParams
 }
 
 type ProtocolDhcpSetTraceResponse struct {

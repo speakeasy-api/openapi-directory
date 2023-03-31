@@ -12,14 +12,8 @@ var CreateChannelWebhookServerList = []string{
 }
 
 type CreateChannelWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateChannelWebhookPathParams struct {
-	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Channel Webhook resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel to create the Webhook resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateChannelWebhookCreateChannelWebhookRequest struct {
@@ -38,10 +32,11 @@ type CreateChannelWebhookCreateChannelWebhookRequest struct {
 }
 
 type CreateChannelWebhookRequest struct {
-	PathParams CreateChannelWebhookPathParams
-	Request    *CreateChannelWebhookCreateChannelWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateChannelWebhookSecurity
-	ServerURL  *string
+	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Channel Webhook resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateChannelWebhookCreateChannelWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel to create the Webhook resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateChannelWebhookResponse struct {

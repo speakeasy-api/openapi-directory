@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPDFPathParams struct {
+type GetPDFRequest struct {
 	// ID of the check
 	CheckID string `pathParam:"style=simple,explode=false,name=check_id"`
-}
-
-type GetPDFQueryParams struct {
 	// Used to specify the language for the PDF, if not specified the PDF will be downloaded in Spanish.
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetPDFRequest struct {
-	PathParams  GetPDFPathParams
-	QueryParams GetPDFQueryParams
 }
 
 type GetPDFResponse struct {

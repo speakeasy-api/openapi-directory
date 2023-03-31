@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteFilePathParams struct {
+type DeleteFileRequest struct {
 	// The ID of the file to use for this request
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type DeleteFileRequest struct {
-	PathParams DeleteFilePathParams
 }
 
 type DeleteFileResponse struct {

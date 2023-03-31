@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetADeviceSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetADevicePathParams struct {
-	// Unique Identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetADeviceRequest struct {
-	PathParams GetADevicePathParams
-	Security   GetADeviceSecurity
+	// Unique Identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 // GetADevice200ApplicationXMLAssignee - User to whom the device has been assigned.

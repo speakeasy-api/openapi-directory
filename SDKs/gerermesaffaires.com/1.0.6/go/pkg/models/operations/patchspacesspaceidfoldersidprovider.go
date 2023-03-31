@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDProviderPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersIDProviderRequestBodyLevelEnum string
 
 const (
@@ -55,9 +48,12 @@ type PatchSpacesSpaceIDFoldersIDProviderRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDProviderRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDProviderPathParams
 	// Provider to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDFoldersIDProviderRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDProviderRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDProviderResponse struct {

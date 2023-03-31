@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupCreateApplicationJSON struct {
 	// Group name.
 	Name *string `json:"name,omitempty"`
-}
-
-type GroupCreateRequest struct {
-	Request  GroupCreateApplicationJSON `request:"mediaType=application/json"`
-	Security GroupCreateSecurity
 }
 
 // GroupCreate201ApplicationXML - **HTTP Status Code:** `201`<br>

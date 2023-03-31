@@ -33,20 +33,20 @@ func newBillingInfo(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // AdexchangebuyerBillingInfoGet - Returns the billing information for one account specified by account ID.
-func (s *billingInfo) AdexchangebuyerBillingInfoGet(ctx context.Context, request operations.AdexchangebuyerBillingInfoGetRequest) (*operations.AdexchangebuyerBillingInfoGetResponse, error) {
+func (s *billingInfo) AdexchangebuyerBillingInfoGet(ctx context.Context, request operations.AdexchangebuyerBillingInfoGetRequest, security operations.AdexchangebuyerBillingInfoGetSecurity) (*operations.AdexchangebuyerBillingInfoGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *billingInfo) AdexchangebuyerBillingInfoGet(ctx context.Context, request
 }
 
 // AdexchangebuyerBillingInfoList - Retrieves a list of billing information for all accounts of the authenticated user.
-func (s *billingInfo) AdexchangebuyerBillingInfoList(ctx context.Context, request operations.AdexchangebuyerBillingInfoListRequest) (*operations.AdexchangebuyerBillingInfoListResponse, error) {
+func (s *billingInfo) AdexchangebuyerBillingInfoList(ctx context.Context, request operations.AdexchangebuyerBillingInfoListRequest, security operations.AdexchangebuyerBillingInfoListSecurity) (*operations.AdexchangebuyerBillingInfoListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billinginfo"
 
@@ -90,11 +90,11 @@ func (s *billingInfo) AdexchangebuyerBillingInfoList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

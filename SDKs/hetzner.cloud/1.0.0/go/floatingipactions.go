@@ -34,14 +34,14 @@ func newFloatingIPActions(defaultClient, securityClient HTTPClient, serverURL, l
 // Returns all Action objects for a Floating IP. You can sort the results by using the `sort` URI parameter, and filter them with the `status` parameter.
 func (s *floatingIPActions) GetFloatingIpsIDActions(ctx context.Context, request operations.GetFloatingIpsIDActionsRequest) (*operations.GetFloatingIpsIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *floatingIPActions) GetFloatingIpsIDActions(ctx context.Context, request
 // Returns a specific Action object for a Floating IP.
 func (s *floatingIPActions) GetFloatingIpsIDActionsActionID(ctx context.Context, request operations.GetFloatingIpsIDActionsActionIDRequest) (*operations.GetFloatingIpsIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/{action_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/{action_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,9 +128,9 @@ func (s *floatingIPActions) GetFloatingIpsIDActionsActionID(ctx context.Context,
 // Assigns a Floating IP to a Server.
 func (s *floatingIPActions) PostFloatingIpsIDActionsAssign(ctx context.Context, request operations.PostFloatingIpsIDActionsAssignRequest) (*operations.PostFloatingIpsIDActionsAssignResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/assign", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/assign", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -180,9 +180,9 @@ func (s *floatingIPActions) PostFloatingIpsIDActionsAssign(ctx context.Context, 
 // Changes the hostname that will appear when getting the hostname belonging to this Floating IP.
 func (s *floatingIPActions) PostFloatingIpsIDActionsChangeDNSPtr(ctx context.Context, request operations.PostFloatingIpsIDActionsChangeDNSPtrRequest) (*operations.PostFloatingIpsIDActionsChangeDNSPtrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/change_dns_ptr", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/change_dns_ptr", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -232,9 +232,9 @@ func (s *floatingIPActions) PostFloatingIpsIDActionsChangeDNSPtr(ctx context.Con
 // Changes the protection configuration of the Floating IP.
 func (s *floatingIPActions) PostFloatingIpsIDActionsChangeProtection(ctx context.Context, request operations.PostFloatingIpsIDActionsChangeProtectionRequest) (*operations.PostFloatingIpsIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/change_protection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/change_protection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -284,7 +284,7 @@ func (s *floatingIPActions) PostFloatingIpsIDActionsChangeProtection(ctx context
 // Unassigns a Floating IP, resulting in it being unreachable. You may assign it to a Server again at a later time.
 func (s *floatingIPActions) PostFloatingIpsIDActionsUnassign(ctx context.Context, request operations.PostFloatingIpsIDActionsUnassignRequest) (*operations.PostFloatingIpsIDActionsUnassignResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/unassign", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}/actions/unassign", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

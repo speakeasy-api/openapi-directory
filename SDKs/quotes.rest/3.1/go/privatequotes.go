@@ -34,7 +34,7 @@ func newPrivateQuotes(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // DeleteQuote - Delete a quote. The user needs to be the owner of the quote to be able to delete it.
-func (s *privateQuotes) DeleteQuote(ctx context.Context, request operations.DeleteQuoteRequest) (*operations.DeleteQuoteResponse, error) {
+func (s *privateQuotes) DeleteQuote(ctx context.Context, request operations.DeleteQuoteRequest, security operations.DeleteQuoteSecurity) (*operations.DeleteQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote"
 
@@ -43,11 +43,11 @@ func (s *privateQuotes) DeleteQuote(ctx context.Context, request operations.Dele
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,7 +77,7 @@ func (s *privateQuotes) DeleteQuote(ctx context.Context, request operations.Dele
 }
 
 // GetQuote - Gets a `Quote` with a given `id`.
-func (s *privateQuotes) GetQuote(ctx context.Context, request operations.GetQuoteRequest) (*operations.GetQuoteResponse, error) {
+func (s *privateQuotes) GetQuote(ctx context.Context, request operations.GetQuoteRequest, security operations.GetQuoteSecurity) (*operations.GetQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote"
 
@@ -86,11 +86,11 @@ func (s *privateQuotes) GetQuote(ctx context.Context, request operations.GetQuot
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *privateQuotes) GetQuote(ctx context.Context, request operations.GetQuot
 }
 
 // GetQuoteList - Get the list of quotes in your private collection.
-func (s *privateQuotes) GetQuoteList(ctx context.Context, request operations.GetQuoteListRequest) (*operations.GetQuoteListResponse, error) {
+func (s *privateQuotes) GetQuoteList(ctx context.Context, request operations.GetQuoteListRequest, security operations.GetQuoteListSecurity) (*operations.GetQuoteListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/list"
 
@@ -135,11 +135,11 @@ func (s *privateQuotes) GetQuoteList(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,7 +167,7 @@ func (s *privateQuotes) GetQuoteList(ctx context.Context, request operations.Get
 }
 
 // PatchQuote - Update a quote
-func (s *privateQuotes) PatchQuote(ctx context.Context, request operations.PatchQuoteRequest) (*operations.PatchQuoteResponse, error) {
+func (s *privateQuotes) PatchQuote(ctx context.Context, request operations.PatchQuoteRequest, security operations.PatchQuoteSecurity) (*operations.PatchQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote"
 
@@ -176,11 +176,11 @@ func (s *privateQuotes) PatchQuote(ctx context.Context, request operations.Patch
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -208,7 +208,7 @@ func (s *privateQuotes) PatchQuote(ctx context.Context, request operations.Patch
 }
 
 // PostQuote - Add a new quote to your private collection. Same as 'PUT' but added since some clients don't handle PUT well.
-func (s *privateQuotes) PostQuote(ctx context.Context, request operations.PostQuoteRequest) (*operations.PostQuoteResponse, error) {
+func (s *privateQuotes) PostQuote(ctx context.Context, request operations.PostQuoteRequest, security operations.PostQuoteSecurity) (*operations.PostQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote"
 
@@ -217,11 +217,11 @@ func (s *privateQuotes) PostQuote(ctx context.Context, request operations.PostQu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,7 +249,7 @@ func (s *privateQuotes) PostQuote(ctx context.Context, request operations.PostQu
 }
 
 // PostQuoteTagsAdd - Add a tag to a given Quote.
-func (s *privateQuotes) PostQuoteTagsAdd(ctx context.Context, request operations.PostQuoteTagsAddRequest) (*operations.PostQuoteTagsAddResponse, error) {
+func (s *privateQuotes) PostQuoteTagsAdd(ctx context.Context, request operations.PostQuoteTagsAddRequest, security operations.PostQuoteTagsAddSecurity) (*operations.PostQuoteTagsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/tags/add"
 
@@ -258,11 +258,11 @@ func (s *privateQuotes) PostQuoteTagsAdd(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,7 +292,7 @@ func (s *privateQuotes) PostQuoteTagsAdd(ctx context.Context, request operations
 }
 
 // PostQuoteTagsRemove - Remove a tag from a given quote.
-func (s *privateQuotes) PostQuoteTagsRemove(ctx context.Context, request operations.PostQuoteTagsRemoveRequest) (*operations.PostQuoteTagsRemoveResponse, error) {
+func (s *privateQuotes) PostQuoteTagsRemove(ctx context.Context, request operations.PostQuoteTagsRemoveRequest, security operations.PostQuoteTagsRemoveSecurity) (*operations.PostQuoteTagsRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/tags/remove"
 
@@ -301,11 +301,11 @@ func (s *privateQuotes) PostQuoteTagsRemove(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,7 +335,7 @@ func (s *privateQuotes) PostQuoteTagsRemove(ctx context.Context, request operati
 }
 
 // PutQuote - Add a new quote to your private collection.
-func (s *privateQuotes) PutQuote(ctx context.Context, request operations.PutQuoteRequest) (*operations.PutQuoteResponse, error) {
+func (s *privateQuotes) PutQuote(ctx context.Context, request operations.PutQuoteRequest, security operations.PutQuoteSecurity) (*operations.PutQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote"
 
@@ -344,11 +344,11 @@ func (s *privateQuotes) PutQuote(ctx context.Context, request operations.PutQuot
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductAPIAllQueryParams struct {
-	QueryOptionsPage     *int `queryParam:"style=form,explode=true,name=queryOptions.page"`
-	QueryOptionsPageSize *int `queryParam:"style=form,explode=true,name=queryOptions.pageSize"`
-}
-
-type ProductAPIAllHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type ProductAPIAllRequest struct {
-	QueryParams ProductAPIAllQueryParams
-	Headers     ProductAPIAllHeaders
+	QueryOptionsPage     *int   `queryParam:"style=form,explode=true,name=queryOptions.page"`
+	QueryOptionsPageSize *int   `queryParam:"style=form,explode=true,name=queryOptions.pageSize"`
+	XAuthKey             string `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret          string `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type ProductAPIAllResponse struct {

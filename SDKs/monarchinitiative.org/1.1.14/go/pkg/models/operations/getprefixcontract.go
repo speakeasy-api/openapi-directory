@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPrefixContractPathParams struct {
+type GetPrefixContractRequest struct {
 	// URI of entity to be contracted to identifier/CURIE, e.g "http://www.informatics.jax.org/accession/MGI:1"
 	URI string `pathParam:"style=simple,explode=false,name=uri"`
-}
-
-type GetPrefixContractRequest struct {
-	PathParams GetPrefixContractPathParams
 }
 
 type GetPrefixContractResponse struct {

@@ -35,7 +35,7 @@ func newLanguagePrediction(defaultClient, securityClient HTTPClient, serverURL, 
 
 // IntentMultipart - Prediction for Intent
 // Returns an intent prediction for the given string.
-func (s *languagePrediction) IntentMultipart(ctx context.Context, request operations.IntentMultipartRequest) (*operations.IntentMultipartResponse, error) {
+func (s *languagePrediction) IntentMultipart(ctx context.Context, request shared.IntentPredictRequest, security operations.IntentMultipartSecurity) (*operations.IntentMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/intent"
 
@@ -51,7 +51,7 @@ func (s *languagePrediction) IntentMultipart(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,7 +97,7 @@ func (s *languagePrediction) IntentMultipart(ctx context.Context, request operat
 
 // SentimentMultipart - Prediction for Sentiment
 // Returns a sentiment prediction for the given string.
-func (s *languagePrediction) SentimentMultipart(ctx context.Context, request operations.SentimentMultipartRequest) (*operations.SentimentMultipartResponse, error) {
+func (s *languagePrediction) SentimentMultipart(ctx context.Context, request shared.SentimentPredictRequest, security operations.SentimentMultipartSecurity) (*operations.SentimentMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/language/sentiment"
 
@@ -113,7 +113,7 @@ func (s *languagePrediction) SentimentMultipart(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

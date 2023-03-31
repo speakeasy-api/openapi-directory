@@ -35,7 +35,7 @@ func newUserAccountsFindAndModifyUserAccounts(defaultClient, securityClient HTTP
 // DeleteUserAccountsUserAccountID - Removes the user account
 func (s *userAccountsFindAndModifyUserAccounts) DeleteUserAccountsUserAccountID(ctx context.Context, request operations.DeleteUserAccountsUserAccountIDRequest) (*operations.DeleteUserAccountsUserAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *userAccountsFindAndModifyUserAccounts) GetUserAccounts(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -122,7 +122,7 @@ func (s *userAccountsFindAndModifyUserAccounts) GetUserAccounts(ctx context.Cont
 // GetUserAccountsUserAccountID - Returns a single user account
 func (s *userAccountsFindAndModifyUserAccounts) GetUserAccountsUserAccountID(ctx context.Context, request operations.GetUserAccountsUserAccountIDRequest) (*operations.GetUserAccountsUserAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,14 +169,14 @@ func (s *userAccountsFindAndModifyUserAccounts) GetUserAccountsUserAccountID(ctx
 // PatchUserAccountsUserAccountID - Updates the user account fields
 func (s *userAccountsFindAndModifyUserAccounts) PatchUserAccountsUserAccountID(ctx context.Context, request operations.PatchUserAccountsUserAccountIDRequest) (*operations.PatchUserAccountsUserAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -220,14 +220,14 @@ func (s *userAccountsFindAndModifyUserAccounts) PatchUserAccountsUserAccountID(c
 // PostUserAccountsUserAccountID - Updates the user account or adds the user account if it doesn't exist
 func (s *userAccountsFindAndModifyUserAccounts) PostUserAccountsUserAccountID(ctx context.Context, request operations.PostUserAccountsUserAccountIDRequest) (*operations.PostUserAccountsUserAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userAccounts/{userAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

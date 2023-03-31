@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRealmAuthenticationConfigIDPathParams struct {
+type PutRealmAuthenticationConfigIDRequest struct {
+	// JSON describing new state of authenticator configuration
+	AuthenticatorConfigRepresentation shared.AuthenticatorConfigRepresentation `request:"mediaType=application/json"`
 	// Configuration id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmAuthenticationConfigIDRequest struct {
-	PathParams PutRealmAuthenticationConfigIDPathParams
-	// JSON describing new state of authenticator configuration
-	Request shared.AuthenticatorConfigRepresentation `request:"mediaType=application/json"`
 }
 
 type PutRealmAuthenticationConfigIDResponse struct {

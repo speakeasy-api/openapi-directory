@@ -8,10 +8,10 @@ import (
 )
 
 type ListFirewallsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ListFirewallsQueryParams struct {
+type ListFirewallsRequest struct {
 	// cursor from previous response
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// end time for query in epoch seconds
@@ -20,11 +20,6 @@ type ListFirewallsQueryParams struct {
 	Size *float64 `queryParam:"style=form,explode=true,name=size"`
 	// start time for query in epoch seconds
 	StartTime *float64 `queryParam:"style=form,explode=true,name=start_time"`
-}
-
-type ListFirewallsRequest struct {
-	QueryParams ListFirewallsQueryParams
-	Security    ListFirewallsSecurity
 }
 
 type ListFirewallsResponse struct {

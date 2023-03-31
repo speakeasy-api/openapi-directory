@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningGetCodeqlDatabasePathParams struct {
+type CodeScanningGetCodeqlDatabaseRequest struct {
 	// The language of the CodeQL database.
 	Language string `pathParam:"style=simple,explode=false,name=language"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodeScanningGetCodeqlDatabaseRequest struct {
-	PathParams CodeScanningGetCodeqlDatabasePathParams
 }
 
 // CodeScanningGetCodeqlDatabase503ApplicationJSON - Service unavailable

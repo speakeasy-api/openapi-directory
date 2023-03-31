@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUntaggedImageCountPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetUntaggedImageCountQueryParams struct {
+type GetUntaggedImageCountRequest struct {
 	// The iteration id. Defaults to workspace.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type GetUntaggedImageCountRequest struct {
-	PathParams  GetUntaggedImageCountPathParams
-	QueryParams GetUntaggedImageCountQueryParams
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetUntaggedImageCountResponse struct {

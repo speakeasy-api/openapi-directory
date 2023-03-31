@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFacetsFacetsPathParams struct {
+type GetFacetsFacetsRequest struct {
 	// # Format
 	//
 	// The `facets` parameter follows the format : `/${facetKey1}/${facetValue1}/${facetKey2}/${facetValue2}/.../${facetKeyN}/${facetValueN}`.
@@ -27,20 +27,12 @@ type GetFacetsFacetsPathParams struct {
 	// | `region-id`     | Filter the search by a region id (aka regionalization). The value is the region id               | `/color/blue/region-id/v2.26219C7C3DE42BAAD11CFB92CD0BFE91?query=shirt`. |
 	//
 	Facets string `pathParam:"style=simple,explode=false,name=facets"`
-}
-
-type GetFacetsFacetsQueryParams struct {
 	// Whether the result should hide unavailable items (`true`), or not (`false`)
 	HideUnavailableItems *bool `queryParam:"style=form,explode=true,name=hideUnavailableItems"`
 	// Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// Search term. It can contain any character.
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetFacetsFacetsRequest struct {
-	PathParams  GetFacetsFacetsPathParams
-	QueryParams GetFacetsFacetsQueryParams
 }
 
 type GetFacetsFacetsResponse struct {

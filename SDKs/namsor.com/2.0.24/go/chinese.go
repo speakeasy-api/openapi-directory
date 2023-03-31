@@ -34,16 +34,16 @@ func newChinese(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // ChineseNameCandidates - Identify Chinese name candidates, based on the romanized name ex. Wang Xiaoming
-func (s *chinese) ChineseNameCandidates(ctx context.Context, request operations.ChineseNameCandidatesRequest) (*operations.ChineseNameCandidatesResponse, error) {
+func (s *chinese) ChineseNameCandidates(ctx context.Context, request operations.ChineseNameCandidatesRequest, security operations.ChineseNameCandidatesSecurity) (*operations.ChineseNameCandidatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/chineseNameCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/chineseNameCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *chinese) ChineseNameCandidates(ctx context.Context, request operations.
 }
 
 // ChineseNameCandidatesBatch - Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname), ex. Wang Xiaoming
-func (s *chinese) ChineseNameCandidatesBatch(ctx context.Context, request operations.ChineseNameCandidatesBatchRequest) (*operations.ChineseNameCandidatesBatchResponse, error) {
+func (s *chinese) ChineseNameCandidatesBatch(ctx context.Context, request shared.BatchFirstLastNameIn, security operations.ChineseNameCandidatesBatchSecurity) (*operations.ChineseNameCandidatesBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/chineseNameCandidatesBatch"
 
@@ -97,7 +97,7 @@ func (s *chinese) ChineseNameCandidatesBatch(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *chinese) ChineseNameCandidatesBatch(ctx context.Context, request operat
 }
 
 // ChineseNameCandidatesGenderBatch - Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname) ex. Wang Xiaoming.
-func (s *chinese) ChineseNameCandidatesGenderBatch(ctx context.Context, request operations.ChineseNameCandidatesGenderBatchRequest) (*operations.ChineseNameCandidatesGenderBatchResponse, error) {
+func (s *chinese) ChineseNameCandidatesGenderBatch(ctx context.Context, request shared.BatchFirstLastNameGenderIn, security operations.ChineseNameCandidatesGenderBatchSecurity) (*operations.ChineseNameCandidatesGenderBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/chineseNameCandidatesGenderBatch"
 
@@ -153,7 +153,7 @@ func (s *chinese) ChineseNameCandidatesGenderBatch(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -193,16 +193,16 @@ func (s *chinese) ChineseNameCandidatesGenderBatch(ctx context.Context, request 
 }
 
 // ChineseNameGenderCandidates - Identify Chinese name candidates, based on the romanized name ex. Wang Xiaoming - having a known gender ('male' or 'female')
-func (s *chinese) ChineseNameGenderCandidates(ctx context.Context, request operations.ChineseNameGenderCandidatesRequest) (*operations.ChineseNameGenderCandidatesResponse, error) {
+func (s *chinese) ChineseNameGenderCandidates(ctx context.Context, request operations.ChineseNameGenderCandidatesRequest, security operations.ChineseNameGenderCandidatesSecurity) (*operations.ChineseNameGenderCandidatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/chineseNameGenderCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}/{knownGender}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/chineseNameGenderCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}/{knownGender}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *chinese) ChineseNameGenderCandidates(ctx context.Context, request opera
 }
 
 // ChineseNameMatch - Return a score for matching Chinese name ex. 王晓明 with a romanized name ex. Wang Xiaoming
-func (s *chinese) ChineseNameMatch(ctx context.Context, request operations.ChineseNameMatchRequest) (*operations.ChineseNameMatchResponse, error) {
+func (s *chinese) ChineseNameMatch(ctx context.Context, request operations.ChineseNameMatchRequest, security operations.ChineseNameMatchSecurity) (*operations.ChineseNameMatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/chineseNameMatch/{chineseSurnameLatin}/{chineseGivenNameLatin}/{chineseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/chineseNameMatch/{chineseSurnameLatin}/{chineseGivenNameLatin}/{chineseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,7 +287,7 @@ func (s *chinese) ChineseNameMatch(ctx context.Context, request operations.Chine
 }
 
 // ChineseNameMatchBatch - Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname), ex. Wang Xiaoming
-func (s *chinese) ChineseNameMatchBatch(ctx context.Context, request operations.ChineseNameMatchBatchRequest) (*operations.ChineseNameMatchBatchResponse, error) {
+func (s *chinese) ChineseNameMatchBatch(ctx context.Context, request shared.BatchMatchPersonalFirstLastNameIn, security operations.ChineseNameMatchBatchSecurity) (*operations.ChineseNameMatchBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/chineseNameMatchBatch"
 
@@ -303,7 +303,7 @@ func (s *chinese) ChineseNameMatchBatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,16 +343,16 @@ func (s *chinese) ChineseNameMatchBatch(ctx context.Context, request operations.
 }
 
 // GenderChineseName - Infer the likely gender of a Chinese full name ex. 王晓明
-func (s *chinese) GenderChineseName(ctx context.Context, request operations.GenderChineseNameRequest) (*operations.GenderChineseNameResponse, error) {
+func (s *chinese) GenderChineseName(ctx context.Context, request operations.GenderChineseNameRequest, security operations.GenderChineseNameSecurity) (*operations.GenderChineseNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderChineseName/{chineseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderChineseName/{chineseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,7 +390,7 @@ func (s *chinese) GenderChineseName(ctx context.Context, request operations.Gend
 }
 
 // GenderChineseNameBatch - Infer the likely gender of up to 100 full names ex. 王晓明
-func (s *chinese) GenderChineseNameBatch(ctx context.Context, request operations.GenderChineseNameBatchRequest) (*operations.GenderChineseNameBatchResponse, error) {
+func (s *chinese) GenderChineseNameBatch(ctx context.Context, request shared.BatchPersonalNameIn, security operations.GenderChineseNameBatchSecurity) (*operations.GenderChineseNameBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/genderChineseNameBatch"
 
@@ -406,7 +406,7 @@ func (s *chinese) GenderChineseNameBatch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -446,16 +446,16 @@ func (s *chinese) GenderChineseNameBatch(ctx context.Context, request operations
 }
 
 // GenderChineseNamePinyin - Infer the likely gender of a Chinese name in LATIN (Pinyin).
-func (s *chinese) GenderChineseNamePinyin(ctx context.Context, request operations.GenderChineseNamePinyinRequest) (*operations.GenderChineseNamePinyinResponse, error) {
+func (s *chinese) GenderChineseNamePinyin(ctx context.Context, request operations.GenderChineseNamePinyinRequest, security operations.GenderChineseNamePinyinSecurity) (*operations.GenderChineseNamePinyinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderChineseNamePinyin/{chineseSurnameLatin}/{chineseGivenNameLatin}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderChineseNamePinyin/{chineseSurnameLatin}/{chineseGivenNameLatin}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -493,7 +493,7 @@ func (s *chinese) GenderChineseNamePinyin(ctx context.Context, request operation
 }
 
 // GenderChineseNamePinyinBatch - Infer the likely gender of up to 100 Chinese names in LATIN (Pinyin).
-func (s *chinese) GenderChineseNamePinyinBatch(ctx context.Context, request operations.GenderChineseNamePinyinBatchRequest) (*operations.GenderChineseNamePinyinBatchResponse, error) {
+func (s *chinese) GenderChineseNamePinyinBatch(ctx context.Context, request shared.BatchFirstLastNameIn, security operations.GenderChineseNamePinyinBatchSecurity) (*operations.GenderChineseNamePinyinBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/genderChineseNamePinyinBatch"
 
@@ -509,7 +509,7 @@ func (s *chinese) GenderChineseNamePinyinBatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -549,16 +549,16 @@ func (s *chinese) GenderChineseNamePinyinBatch(ctx context.Context, request oper
 }
 
 // ParseChineseName - Infer the likely first/last name structure of a name, ex. 王晓明 -> 王(surname) 晓明(given name)
-func (s *chinese) ParseChineseName(ctx context.Context, request operations.ParseChineseNameRequest) (*operations.ParseChineseNameResponse, error) {
+func (s *chinese) ParseChineseName(ctx context.Context, request operations.ParseChineseNameRequest, security operations.ParseChineseNameSecurity) (*operations.ParseChineseNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/parseChineseName/{chineseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/parseChineseName/{chineseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -596,7 +596,7 @@ func (s *chinese) ParseChineseName(ctx context.Context, request operations.Parse
 }
 
 // ParseChineseNameBatch - Infer the likely first/last name structure of a name, ex. 王晓明 -> 王(surname) 晓明(given name).
-func (s *chinese) ParseChineseNameBatch(ctx context.Context, request operations.ParseChineseNameBatchRequest) (*operations.ParseChineseNameBatchResponse, error) {
+func (s *chinese) ParseChineseNameBatch(ctx context.Context, request shared.BatchPersonalNameIn, security operations.ParseChineseNameBatchSecurity) (*operations.ParseChineseNameBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/parseChineseNameBatch"
 
@@ -612,7 +612,7 @@ func (s *chinese) ParseChineseNameBatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -652,16 +652,16 @@ func (s *chinese) ParseChineseNameBatch(ctx context.Context, request operations.
 }
 
 // PinyinChineseName - Romanize the Chinese name to Pinyin, ex. 王晓明 -> Wang (surname) Xiaoming (given name)
-func (s *chinese) PinyinChineseName(ctx context.Context, request operations.PinyinChineseNameRequest) (*operations.PinyinChineseNameResponse, error) {
+func (s *chinese) PinyinChineseName(ctx context.Context, request operations.PinyinChineseNameRequest, security operations.PinyinChineseNameSecurity) (*operations.PinyinChineseNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/pinyinChineseName/{chineseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/pinyinChineseName/{chineseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -699,7 +699,7 @@ func (s *chinese) PinyinChineseName(ctx context.Context, request operations.Piny
 }
 
 // PinyinChineseNameBatch - Romanize a list of Chinese name to Pinyin, ex. 王晓明 -> Wang (surname) Xiaoming (given name).
-func (s *chinese) PinyinChineseNameBatch(ctx context.Context, request operations.PinyinChineseNameBatchRequest) (*operations.PinyinChineseNameBatchResponse, error) {
+func (s *chinese) PinyinChineseNameBatch(ctx context.Context, request shared.BatchPersonalNameIn, security operations.PinyinChineseNameBatchSecurity) (*operations.PinyinChineseNameBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/pinyinChineseNameBatch"
 
@@ -715,7 +715,7 @@ func (s *chinese) PinyinChineseNameBatch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

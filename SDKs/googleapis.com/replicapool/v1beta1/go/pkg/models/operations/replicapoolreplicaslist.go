@@ -8,33 +8,33 @@ import (
 )
 
 type ReplicapoolReplicasListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasListSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasListSecurity struct {
@@ -46,16 +46,7 @@ type ReplicapoolReplicasListSecurity struct {
 	Option6 *ReplicapoolReplicasListSecurityOption6 `security:"option"`
 }
 
-type ReplicapoolReplicasListPathParams struct {
-	// The replica pool name for this request.
-	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
-	// The project ID for this request.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The zone where the replica pool lives.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ReplicapoolReplicasListQueryParams struct {
+type ReplicapoolReplicasListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -68,18 +59,18 @@ type ReplicapoolReplicasListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Set this to the nextPageToken value returned by a previous list request to obtain the next page of results from the previous list request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The replica pool name for this request.
+	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this request.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type ReplicapoolReplicasListRequest struct {
-	PathParams  ReplicapoolReplicasListPathParams
-	QueryParams ReplicapoolReplicasListQueryParams
-	Security    ReplicapoolReplicasListSecurity
+	// The zone where the replica pool lives.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ReplicapoolReplicasListResponse struct {

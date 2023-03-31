@@ -8,22 +8,18 @@ import (
 )
 
 type DisplayvideoAdvertisersManualTriggersDeactivateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersManualTriggersDeactivatePathParams struct {
-	// Required. The ID of the advertiser that the manual trigger belongs.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the manual trigger to deactivate.
-	TriggerID string `pathParam:"style=simple,explode=false,name=triggerId"`
-}
-
-type DisplayvideoAdvertisersManualTriggersDeactivateQueryParams struct {
+type DisplayvideoAdvertisersManualTriggersDeactivateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser that the manual trigger belongs.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -38,17 +34,12 @@ type DisplayvideoAdvertisersManualTriggersDeactivateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The ID of the manual trigger to deactivate.
+	TriggerID string `pathParam:"style=simple,explode=false,name=triggerId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersManualTriggersDeactivateRequest struct {
-	PathParams  DisplayvideoAdvertisersManualTriggersDeactivatePathParams
-	QueryParams DisplayvideoAdvertisersManualTriggersDeactivateQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    DisplayvideoAdvertisersManualTriggersDeactivateSecurity
 }
 
 type DisplayvideoAdvertisersManualTriggersDeactivateResponse struct {

@@ -14,27 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateFileAssociationRequest{
-        Security: operations.CreateFileAssociationSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        Association: &shared.Association{
+            FileID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+            ObjectGroup: "Overpayment",
+            ObjectID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+            ObjectType: "Current",
         },
-        PathParams: operations.CreateFileAssociationPathParams{
-            FileID: "4ff1e5cc-9835-40d5-bb18-09fdb118db9c",
-        },
-        Headers: operations.CreateFileAssociationHeaders{
-            XeroTenantID: "corrupti",
-        },
-        Request: &shared.Association{
-            FileID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
-            ObjectGroup: "Account",
-            ObjectID: "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb",
-            ObjectType: "ManJournal",
-        },
+        FileID: "4ff1e5cc-9835-40d5-bb18-09fdb118db9c",
+        XeroTenantID: "esse",
     }
 
     ctx := context.Background()
-    res, err := s.Files.CreateFileAssociation(ctx, req)
+    res, err := s.Files.CreateFileAssociation(ctx, req, operations.CreateFileAssociationSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

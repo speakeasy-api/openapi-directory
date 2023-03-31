@@ -34,14 +34,14 @@ func newFirmware(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get firmware upgrade information for an organization
 func (s *firmware) GetOrganizationFirmwareUpgrades(ctx context.Context, request operations.GetOrganizationFirmwareUpgradesRequest) (*operations.GetOrganizationFirmwareUpgradesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *firmware) GetOrganizationFirmwareUpgrades(ctx context.Context, request 
 // Get firmware upgrade status for the filtered devices
 func (s *firmware) GetOrganizationFirmwareUpgradesByDevice(ctx context.Context, request operations.GetOrganizationFirmwareUpgradesByDeviceRequest) (*operations.GetOrganizationFirmwareUpgradesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RunPathParams struct {
+type RunRequest struct {
+	// Generated client invoices documents.
+	MacroRequestDTO shared.MacroRequestDTO `request:"mediaType=application/json"`
 	// macro internal identifier
 	MacroID int64 `pathParam:"style=simple,explode=false,name=macroId"`
-}
-
-type RunRequest struct {
-	PathParams RunPathParams
-	// Generated client invoices documents.
-	Request shared.MacroRequestDTO `request:"mediaType=application/json"`
 }
 
 type RunResponse struct {

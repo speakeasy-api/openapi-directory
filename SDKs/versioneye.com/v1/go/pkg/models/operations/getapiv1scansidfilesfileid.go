@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1ScansIDFilesFileIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAPIV1ScansIDFilesFileIDPathParams struct {
-	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-	ID     string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV1ScansIDFilesFileIDQueryParams struct {
-	PerPage *string `queryParam:"style=form,explode=true,name=per_page"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=apiKey"`
 }
 
 type GetAPIV1ScansIDFilesFileIDRequest struct {
-	PathParams  GetAPIV1ScansIDFilesFileIDPathParams
-	QueryParams GetAPIV1ScansIDFilesFileIDQueryParams
-	Security    GetAPIV1ScansIDFilesFileIDSecurity
+	FileID  string  `pathParam:"style=simple,explode=false,name=file_id"`
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	PerPage *string `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type GetAPIV1ScansIDFilesFileIDResponse struct {

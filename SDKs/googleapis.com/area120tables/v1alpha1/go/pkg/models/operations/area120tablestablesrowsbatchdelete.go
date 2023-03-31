@@ -8,23 +8,23 @@ import (
 )
 
 type Area120tablesTablesRowsBatchDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchDeleteSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchDeleteSecurity struct {
@@ -34,14 +34,10 @@ type Area120tablesTablesRowsBatchDeleteSecurity struct {
 	Option4 *Area120tablesTablesRowsBatchDeleteSecurityOption4 `security:"option"`
 }
 
-type Area120tablesTablesRowsBatchDeletePathParams struct {
-	// Required. The parent table shared by all rows being deleted. Format: tables/{table}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type Area120tablesTablesRowsBatchDeleteQueryParams struct {
+type Area120tablesTablesRowsBatchDeleteRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BatchDeleteRowsRequest *shared.BatchDeleteRowsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -54,6 +50,8 @@ type Area120tablesTablesRowsBatchDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent table shared by all rows being deleted. Format: tables/{table}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -62,13 +60,6 @@ type Area120tablesTablesRowsBatchDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Area120tablesTablesRowsBatchDeleteRequest struct {
-	PathParams  Area120tablesTablesRowsBatchDeletePathParams
-	QueryParams Area120tablesTablesRowsBatchDeleteQueryParams
-	Request     *shared.BatchDeleteRowsRequest `request:"mediaType=application/json"`
-	Security    Area120tablesTablesRowsBatchDeleteSecurity
 }
 
 type Area120tablesTablesRowsBatchDeleteResponse struct {

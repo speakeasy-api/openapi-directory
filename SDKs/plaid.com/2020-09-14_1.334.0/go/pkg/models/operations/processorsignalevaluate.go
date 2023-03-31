@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ProcessorSignalEvaluateRequest struct {
-	Request shared.ProcessorSignalEvaluateRequest `request:"mediaType=application/json"`
-}
 
 type ProcessorSignalEvaluateResponse struct {
 	ContentType string

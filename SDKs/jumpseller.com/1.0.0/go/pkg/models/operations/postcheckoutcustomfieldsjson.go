@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCheckoutCustomFieldsJSONQueryParams struct {
+type PostCheckoutCustomFieldsJSONRequest struct {
+	// CheckoutCustomField parameters.
+	CheckoutCustomFieldEdit shared.CheckoutCustomFieldEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostCheckoutCustomFieldsJSONRequest struct {
-	QueryParams PostCheckoutCustomFieldsJSONQueryParams
-	// CheckoutCustomField parameters.
-	Request shared.CheckoutCustomFieldEdit `request:"mediaType=application/json"`
 }
 
 type PostCheckoutCustomFieldsJSONResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkMqttBrokerPathParams struct {
+type GetNetworkMqttBrokerRequest struct {
 	MqttBrokerID string `pathParam:"style=simple,explode=false,name=mqttBrokerId"`
 	NetworkID    string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkMqttBrokerRequest struct {
-	PathParams GetNetworkMqttBrokerPathParams
 }
 
 type GetNetworkMqttBrokerResponse struct {

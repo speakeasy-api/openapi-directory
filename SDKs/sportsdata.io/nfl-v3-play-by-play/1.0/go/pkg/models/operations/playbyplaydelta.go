@@ -33,7 +33,7 @@ func (e *PlayByPlayDeltaFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayByPlayDeltaPathParams struct {
+type PlayByPlayDeltaRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayByPlayDeltaFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:<br>
@@ -48,10 +48,6 @@ type PlayByPlayDeltaPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type PlayByPlayDeltaRequest struct {
-	PathParams PlayByPlayDeltaPathParams
 }
 
 type PlayByPlayDeltaResponse struct {

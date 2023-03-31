@@ -57,7 +57,6 @@ pkg/models/shared/achievementdefinitionslistresponse.go
 pkg/models/shared/achievementdefinition.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/achievementincrementresponse.go
 pkg/models/shared/playerachievementlistresponse.go
 pkg/models/shared/playerachievement.go

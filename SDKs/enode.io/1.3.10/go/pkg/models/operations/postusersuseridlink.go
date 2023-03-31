@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostUsersUseridLinkSecurity struct {
-	ClientAccessToken shared.SchemeClientAccessToken `security:"scheme,type=oauth2"`
-}
-
-type PostUsersUseridLinkPathParams struct {
-	// ID of the User
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	ClientAccessToken string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostUsersUseridLinkRequestBodyVendorEnum - Automatically skip to the credential input screen for this vendor, skipping the Vendor selection menu.
@@ -71,9 +65,9 @@ type PostUsersUseridLinkRequestBody struct {
 }
 
 type PostUsersUseridLinkRequest struct {
-	PathParams PostUsersUseridLinkPathParams
-	Request    *PostUsersUseridLinkRequestBody `request:"mediaType=application/json"`
-	Security   PostUsersUseridLinkSecurity
+	RequestBody *PostUsersUseridLinkRequestBody `request:"mediaType=application/json"`
+	// ID of the User
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // PostUsersUseridLink200ApplicationJSON - Successful

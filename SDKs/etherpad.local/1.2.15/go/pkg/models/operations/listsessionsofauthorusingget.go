@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListSessionsOfAuthorUsingGETQueryParams struct {
-	AuthorID *string `queryParam:"style=form,explode=true,name=authorID"`
-}
-
 type ListSessionsOfAuthorUsingGETRequest struct {
-	QueryParams ListSessionsOfAuthorUsingGETQueryParams
+	AuthorID *string `queryParam:"style=form,explode=true,name=authorID"`
 }
 
 // ListSessionsOfAuthorUsingGET500ApplicationJSON - internal api error (code 2)

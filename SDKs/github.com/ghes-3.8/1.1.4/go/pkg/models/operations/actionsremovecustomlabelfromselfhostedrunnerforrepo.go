@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoPathParams struct {
+type ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest struct {
 	// The name of a self-hosted runner's custom label.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -16,10 +16,6 @@ type ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest struct {
-	PathParams ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoPathParams
 }
 
 // ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo200ApplicationJSON - Response

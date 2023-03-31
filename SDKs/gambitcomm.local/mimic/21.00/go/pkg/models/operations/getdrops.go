@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDropsPathParams struct {
+type GetDropsRequest struct {
 	// Agent to return the drop rate
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetDropsRequest struct {
-	PathParams GetDropsPathParams
 }
 
 type GetDropsResponse struct {

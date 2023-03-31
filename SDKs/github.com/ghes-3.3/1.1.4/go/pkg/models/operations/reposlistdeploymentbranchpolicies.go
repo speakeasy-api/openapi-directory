@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListDeploymentBranchPoliciesPathParams struct {
+type ReposListDeploymentBranchPoliciesRequest struct {
 	// The name of the environment.
 	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListDeploymentBranchPoliciesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListDeploymentBranchPoliciesRequest struct {
-	PathParams  ReposListDeploymentBranchPoliciesPathParams
-	QueryParams ReposListDeploymentBranchPoliciesQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposListDeploymentBranchPolicies200ApplicationJSON - Response

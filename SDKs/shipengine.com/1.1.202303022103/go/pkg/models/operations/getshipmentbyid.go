@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetShipmentByIDPathParams struct {
+type GetShipmentByIDRequest struct {
 	// Shipment ID
 	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
-}
-
-type GetShipmentByIDRequest struct {
-	PathParams GetShipmentByIDPathParams
 }
 
 type GetShipmentByIDResponse struct {

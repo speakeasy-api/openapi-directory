@@ -12,20 +12,15 @@ var FetchWorkflowServerList = []string{
 }
 
 type FetchWorkflowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchWorkflowPathParams struct {
+type FetchWorkflowRequest struct {
 	// The SID of the Workflow resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the Workflow to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchWorkflowRequest struct {
-	PathParams FetchWorkflowPathParams
-	Security   FetchWorkflowSecurity
-	ServerURL  *string
 }
 
 type FetchWorkflowResponse struct {

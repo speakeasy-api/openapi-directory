@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MatchPathParams struct {
+type MatchRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType  string              `header:"style=simple,explode=false,name=Content-Type"`
+	MatchRequest shared.MatchRequest `request:"mediaType=application/json"`
+	// Name of the VTEX account. Used as part of the URL
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Whenever an SKU suggestion is matched, it is associated to a unique ID. Fill in this field with the matchId you wish to filter by. The `matchId`'s value can be obtained through the *[Get SKU Suggestion by ID](https://developers.vtex.com/vtex-rest-api/reference/getsuggestion) endpoint.
 	Matchid string `pathParam:"style=simple,explode=false,name=matchid"`
 	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
@@ -16,25 +23,6 @@ type MatchPathParams struct {
 	Sellerskuid string `pathParam:"style=simple,explode=false,name=sellerskuid"`
 	// Whenever an SKU Suggestion is updated or changed, a new version of the original one is created. All versions are logged, so you can search for previous our current states of SKU suggestions. This field is the versionId associated to the version you choose to search for. You can get this field's value through the[Get SKU Suggestion by ID](https://developers.vtex.com/vtex-rest-api/reference/getsuggestion). through the `latestVersionId` field.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type MatchQueryParams struct {
-	// Name of the VTEX account. Used as part of the URL
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-}
-
-type MatchHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type MatchRequest struct {
-	PathParams  MatchPathParams
-	QueryParams MatchQueryParams
-	Headers     MatchHeaders
-	Request     shared.MatchRequest `request:"mediaType=application/json"`
 }
 
 type MatchResponse struct {

@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type MeetingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingsPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingsTypeEnum - The meeting types: <br>`scheduled` - This includes all valid past meetings (unexpired), live meetings and upcoming scheduled meetings. It is equivalent to the combined list of "Previous Meetings" and "Upcoming Meetings" displayed in the user's [Meetings page](https://zoom.us/meeting) on the Zoom Web Portal.<br>`live` - All the ongoing meetings.<br>`upcoming` - All upcoming meetings including live meetings.
@@ -46,7 +40,7 @@ func (e *MeetingsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MeetingsQueryParams struct {
+type MeetingsRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The page number of the current page in the returned records.
@@ -55,12 +49,8 @@ type MeetingsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The meeting types: <br>`scheduled` - This includes all valid past meetings (unexpired), live meetings and upcoming scheduled meetings. It is equivalent to the combined list of "Previous Meetings" and "Upcoming Meetings" displayed in the user's [Meetings page](https://zoom.us/meeting) on the Zoom Web Portal.<br>`live` - All the ongoing meetings.<br>`upcoming` - All upcoming meetings including live meetings.
 	Type *MeetingsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type MeetingsRequest struct {
-	PathParams  MeetingsPathParams
-	QueryParams MeetingsQueryParams
-	Security    MeetingsSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // MeetingsGroupListMeetingsTypeEnum - Meeting Types:<br>`1` - Instant meeting.<br>`2` - Scheduled meeting.<br>`3` - Recurring meeting with no fixed time.<br>`8` - Recurring meeting with fixed time.

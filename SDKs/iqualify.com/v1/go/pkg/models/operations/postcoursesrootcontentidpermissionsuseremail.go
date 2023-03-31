@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCoursesRootContentIDPermissionsUserEmailPathParams struct {
-	// The content Id
-	RootContentID string `pathParam:"style=simple,explode=false,name=rootContentId"`
-	// The user email
-	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
 type PostCoursesRootContentIDPermissionsUserEmailPermissionToBeGrantedToTheUser struct {
 	IsBuilder  *bool `json:"isBuilder,omitempty"`
 	IsReviewer *bool `json:"isReviewer,omitempty"`
 }
 
 type PostCoursesRootContentIDPermissionsUserEmailRequest struct {
-	PathParams PostCoursesRootContentIDPermissionsUserEmailPathParams
-	Request    PostCoursesRootContentIDPermissionsUserEmailPermissionToBeGrantedToTheUser `request:"mediaType=application/json"`
+	RequestBody PostCoursesRootContentIDPermissionsUserEmailPermissionToBeGrantedToTheUser `request:"mediaType=application/json"`
+	// The content Id
+	RootContentID string `pathParam:"style=simple,explode=false,name=rootContentId"`
+	// The user email
+	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
 }
 
 // PostCoursesRootContentIDPermissionsUserEmail201ApplicationJSON - user successfully added to the course with the specified permission.

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QuerySuggestedImageCountRawPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QuerySuggestedImageCountRawQueryParams struct {
+type QuerySuggestedImageCountRawRequest struct {
+	// Model that contains tagIds, threshold and projectType to query by.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// IterationId to use for the suggested tags and regions.
 	IterationID string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type QuerySuggestedImageCountRawRequest struct {
-	PathParams  QuerySuggestedImageCountRawPathParams
-	QueryParams QuerySuggestedImageCountRawQueryParams
-	// Model that contains tagIds, threshold and projectType to query by.
-	Request []byte `request:"mediaType=text/xml"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type QuerySuggestedImageCountRawResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumCustomThumbsPathParams struct {
+type GetAlbumCustomThumbsRequest struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetAlbumCustomThumbsQueryParams struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetAlbumCustomThumbsRequest struct {
-	PathParams  GetAlbumCustomThumbsPathParams
-	QueryParams GetAlbumCustomThumbsQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetAlbumCustomThumbsResponse struct {

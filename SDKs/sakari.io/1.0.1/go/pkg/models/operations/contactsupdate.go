@@ -8,19 +8,14 @@ import (
 )
 
 type ContactsUpdateSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContactsUpdatePathParams struct {
+type ContactsUpdateRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of contact
 	ContactID string `pathParam:"style=simple,explode=false,name=contactId"`
-}
-
-type ContactsUpdateRequest struct {
-	PathParams ContactsUpdatePathParams
-	Security   ContactsUpdateSecurity
 }
 
 type ContactsUpdateResponse struct {

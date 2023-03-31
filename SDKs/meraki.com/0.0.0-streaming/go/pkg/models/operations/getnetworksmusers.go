@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmUsersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmUsersQueryParams struct {
+type GetNetworkSmUsersRequest struct {
 	// Filter users by email(s). Multiple emails can be passed in as comma separated values.
 	Emails *string `queryParam:"style=form,explode=true,name=emails"`
 	// Filter users by id(s). Multiple ids can be passed in as comma separated values.
-	Ids *string `queryParam:"style=form,explode=true,name=ids"`
+	Ids       *string `queryParam:"style=form,explode=true,name=ids"`
+	NetworkID string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags as comma separated values.
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
 	// Filter users by username(s). Multiple usernames can be passed in as comma separated values.
 	Usernames *string `queryParam:"style=form,explode=true,name=usernames"`
-}
-
-type GetNetworkSmUsersRequest struct {
-	PathParams  GetNetworkSmUsersPathParams
-	QueryParams GetNetworkSmUsersQueryParams
 }
 
 type GetNetworkSmUsersResponse struct {

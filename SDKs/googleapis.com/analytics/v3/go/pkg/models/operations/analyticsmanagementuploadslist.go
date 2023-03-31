@@ -8,18 +8,18 @@ import (
 )
 
 type AnalyticsManagementUploadsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUploadsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUploadsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUploadsListSecurity struct {
@@ -28,18 +28,13 @@ type AnalyticsManagementUploadsListSecurity struct {
 	Option3 *AnalyticsManagementUploadsListSecurityOption3 `security:"option"`
 }
 
-type AnalyticsManagementUploadsListPathParams struct {
+type AnalyticsManagementUploadsListRequest struct {
 	// Account Id for the uploads to retrieve.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Custom data source Id for uploads to retrieve.
-	CustomDataSourceID string `pathParam:"style=simple,explode=false,name=customDataSourceId"`
-	// Web property Id for the uploads to retrieve.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementUploadsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom data source Id for uploads to retrieve.
+	CustomDataSourceID string `pathParam:"style=simple,explode=false,name=customDataSourceId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,12 +51,8 @@ type AnalyticsManagementUploadsListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementUploadsListRequest struct {
-	PathParams  AnalyticsManagementUploadsListPathParams
-	QueryParams AnalyticsManagementUploadsListQueryParams
-	Security    AnalyticsManagementUploadsListSecurity
+	// Web property Id for the uploads to retrieve.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementUploadsListResponse struct {

@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GETUserContentByDateJSONSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GETUserContentByDateJSONQueryParams struct {
-	Date *string `queryParam:"style=form,explode=true,name=date"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
 type GETUserContentByDateJSONRequest struct {
-	QueryParams GETUserContentByDateJSONQueryParams
-	Security    GETUserContentByDateJSONSecurity
+	Date *string `queryParam:"style=form,explode=true,name=date"`
 }
 
 type GETUserContentByDateJSON200ApplicationJSONDebug struct {

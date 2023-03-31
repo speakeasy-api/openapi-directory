@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type GetProductoffersPathParams struct {
-	// A string that identifies the seller's product. This is the ID that the marketplace will use for all references to this product, such as price and inventory notifications.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type GetProductoffersQueryParams struct {
-	// Name of the VTEX account. Used as part of the URL.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-	// Environment to use. Used as part of the URL.
-	Environment string `queryParam:"style=form,explode=true,name=environment"`
-}
-
-type GetProductoffersHeaders struct {
+type GetProductoffersRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetProductoffersRequest struct {
-	PathParams  GetProductoffersPathParams
-	QueryParams GetProductoffersQueryParams
-	Headers     GetProductoffersHeaders
+	// Name of the VTEX account. Used as part of the URL.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// Environment to use. Used as part of the URL.
+	Environment string `queryParam:"style=form,explode=true,name=environment"`
+	// A string that identifies the seller's product. This is the ID that the marketplace will use for all references to this product, such as price and inventory notifications.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 }
 
 type GetProductoffersResponse struct {

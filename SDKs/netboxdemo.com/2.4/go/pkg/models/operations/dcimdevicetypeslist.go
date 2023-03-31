@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceTypesListQueryParams struct {
+type DcimDeviceTypesListRequest struct {
 	// Multiple values may be separated by commas.
 	IDIn            *string `queryParam:"style=form,explode=true,name=id__in"`
 	IsConsoleServer *string `queryParam:"style=form,explode=true,name=is_console_server"`
@@ -27,10 +27,6 @@ type DcimDeviceTypesListQueryParams struct {
 	SubdeviceRole *string  `queryParam:"style=form,explode=true,name=subdevice_role"`
 	Tag           *string  `queryParam:"style=form,explode=true,name=tag"`
 	UHeight       *float64 `queryParam:"style=form,explode=true,name=u_height"`
-}
-
-type DcimDeviceTypesListRequest struct {
-	QueryParams DcimDeviceTypesListQueryParams
 }
 
 type DcimDeviceTypesList200ApplicationJSON struct {

@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DownloadQueryParams struct {
+type DownloadRequest struct {
 	// When downloading multiple files, this will be used as the name of the zip file that is created.
 	DownloadArchiveName *string `queryParam:"style=form,explode=true,name=downloadArchiveName"`
-	// Path of file or folder to be downloaded, starting from the root. Can also be an array of paths.
-	Resources []string `queryParam:"style=form,explode=true,name=resources[]"`
-}
-
-type DownloadHeaders struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DownloadRequest struct {
-	QueryParams DownloadQueryParams
-	Headers     DownloadHeaders
+	// Path of file or folder to be downloaded, starting from the root. Can also be an array of paths.
+	Resources []string `queryParam:"style=form,explode=true,name=resources[]"`
 }
 
 type DownloadResponse struct {

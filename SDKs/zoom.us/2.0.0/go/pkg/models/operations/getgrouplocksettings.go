@@ -8,19 +8,13 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetGroupLockSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetGroupLockSettingsPathParams struct {
-	// Id of the group.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GetGroupLockSettingsQueryParams struct {
+type GetGroupLockSettingsRequest struct {
 	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
 	// {
 	//     "schedule_meeting": {
@@ -29,14 +23,10 @@ type GetGroupLockSettingsQueryParams struct {
 	// }
 	// <br>You can provide multiple values by separating them with commas(example: "host_video,participant_video”).
 	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
+	// Id of the group.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// Specify `meeting_security` as the value of this field if you would like to view security settings applied on a meeting hosted by the users in this group.
 	Option *string `queryParam:"style=form,explode=true,name=option"`
-}
-
-type GetGroupLockSettingsRequest struct {
-	PathParams  GetGroupLockSettingsPathParams
-	QueryParams GetGroupLockSettingsQueryParams
-	Security    GetGroupLockSettingsSecurity
 }
 
 // GetGroupLockSettings200ApplicationXMLMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>

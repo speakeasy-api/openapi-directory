@@ -10,7 +10,7 @@ import (
 )
 
 type GetCategorySubscriptionsAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetCategorySubscriptionsAlt1DirectionEnum - The sort direction of the results.
@@ -64,7 +64,7 @@ func (e *GetCategorySubscriptionsAlt1SortEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetCategorySubscriptionsAlt1QueryParams struct {
+type GetCategorySubscriptionsAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetCategorySubscriptionsAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -73,11 +73,6 @@ type GetCategorySubscriptionsAlt1QueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetCategorySubscriptionsAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCategorySubscriptionsAlt1Request struct {
-	QueryParams GetCategorySubscriptionsAlt1QueryParams
-	Security    GetCategorySubscriptionsAlt1Security
 }
 
 type GetCategorySubscriptionsAlt1Response struct {

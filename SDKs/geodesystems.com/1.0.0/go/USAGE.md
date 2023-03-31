@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.MediaTabularExtractsheetRequest{
-        QueryParams: operations.MediaTabularExtractsheetQueryParams{
-            Arg1: "corrupti",
-            Entryid: "provident",
-            Output: "distinctio",
-        },
+        Arg1: "corrupti",
+        Entryid: "provident",
+        Output: "distinctio",
     }
 
     ctx := context.Background()

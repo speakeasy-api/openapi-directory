@@ -8,17 +8,12 @@ import (
 )
 
 type GetAssetSettingsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAssetSettingsHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAssetSettingsRequest struct {
-	Headers  GetAssetSettingsHeaders
-	Security GetAssetSettingsSecurity
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type GetAssetSettingsResponse struct {

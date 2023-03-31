@@ -12,20 +12,15 @@ var FetchNetworkAccessProfileNetworkServerList = []string{
 }
 
 type FetchNetworkAccessProfileNetworkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchNetworkAccessProfileNetworkPathParams struct {
+type FetchNetworkAccessProfileNetworkRequest struct {
 	// The unique string that identifies the Network Access Profile resource.
 	NetworkAccessProfileSid string `pathParam:"style=simple,explode=false,name=NetworkAccessProfileSid"`
 	// The SID of the Network resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchNetworkAccessProfileNetworkRequest struct {
-	PathParams FetchNetworkAccessProfileNetworkPathParams
-	Security   FetchNetworkAccessProfileNetworkSecurity
-	ServerURL  *string
 }
 
 type FetchNetworkAccessProfileNetworkResponse struct {

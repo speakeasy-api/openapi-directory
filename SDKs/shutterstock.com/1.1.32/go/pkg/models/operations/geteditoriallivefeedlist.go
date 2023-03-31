@@ -8,22 +8,17 @@ import (
 )
 
 type GetEditorialLivefeedListSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetEditorialLivefeedListQueryParams struct {
+type GetEditorialLivefeedListRequest struct {
 	// Returns only livefeeds that are available for distribution in a certain country
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetEditorialLivefeedListRequest struct {
-	QueryParams GetEditorialLivefeedListQueryParams
-	Security    GetEditorialLivefeedListSecurity
 }
 
 type GetEditorialLivefeedListResponse struct {

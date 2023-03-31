@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsStartImportPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // MigrationsStartImportRequestBodyVcsEnum - The originating VCS type. Without this parameter, the import job will take additional time to detect the VCS type before beginning the import. This detection step will be reflected in the response.
 type MigrationsStartImportRequestBodyVcsEnum string
 
@@ -60,8 +53,11 @@ type MigrationsStartImportRequestBody struct {
 }
 
 type MigrationsStartImportRequest struct {
-	PathParams MigrationsStartImportPathParams
-	Request    MigrationsStartImportRequestBody `request:"mediaType=application/json"`
+	RequestBody MigrationsStartImportRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type MigrationsStartImportResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type ReportsActivitiesWatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportsActivitiesWatchApplicationNameEnum - Application name for which the events are to be retrieved.
@@ -95,22 +95,18 @@ func (e *ReportsActivitiesWatchApplicationNameEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ReportsActivitiesWatchPathParams struct {
-	// Application name for which the events are to be retrieved.
-	ApplicationName ReportsActivitiesWatchApplicationNameEnum `pathParam:"style=simple,explode=false,name=applicationName"`
-	// Represents the profile ID or the user email for which the data should be filtered. Can be `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or their primary email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type ReportsActivitiesWatchQueryParams struct {
+type ReportsActivitiesWatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Channel     *shared.Channel   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// The Internet Protocol (IP) Address of host where the event was performed. This is an additional way to filter a report's summary using the IP address of the user whose activity is being reported. This IP address may or may not reflect the user's physical location. For example, the IP address can be the user's proxy server's address or a virtual private network (VPN) address. This parameter supports both IPv4 and IPv6 address versions.
 	ActorIPAddress *string `queryParam:"style=form,explode=true,name=actorIpAddress"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Application name for which the events are to be retrieved.
+	ApplicationName ReportsActivitiesWatchApplicationNameEnum `pathParam:"style=simple,explode=false,name=applicationName"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// The unique ID of the customer to retrieve data for.
@@ -145,13 +141,8 @@ type ReportsActivitiesWatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ReportsActivitiesWatchRequest struct {
-	PathParams  ReportsActivitiesWatchPathParams
-	QueryParams ReportsActivitiesWatchQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    ReportsActivitiesWatchSecurity
+	// Represents the profile ID or the user email for which the data should be filtered. Can be `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or their primary email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type ReportsActivitiesWatchResponse struct {

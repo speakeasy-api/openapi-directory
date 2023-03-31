@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitCommentJSONPathParams struct {
+type SubmitCommentJSONRequest struct {
+	Comment *shared.Comment `request:"mediaType=application/json"`
 	// Activity ID
 	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type SubmitCommentJSONRequest struct {
-	PathParams SubmitCommentJSONPathParams
-	Request    *shared.Comment `request:"mediaType=application/json"`
 }
 
 type SubmitCommentJSONResponse struct {

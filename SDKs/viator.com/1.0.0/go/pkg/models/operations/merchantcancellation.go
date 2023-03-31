@@ -6,12 +6,6 @@ import (
 	"net/http"
 )
 
-type MerchantCancellationHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type MerchantCancellationRequestBodyCancelItems struct {
 	// **cancellation code** that describes the reason for the cancellation
 	// - see: [Suggested cancellation codes](#suggested-cancellation-codes)
@@ -35,8 +29,10 @@ type MerchantCancellationRequestBody struct {
 }
 
 type MerchantCancellationRequest struct {
-	Headers MerchantCancellationHeaders
-	Request *MerchantCancellationRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                           `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *MerchantCancellationRequestBody `request:"mediaType=application/json"`
 }
 
 type MerchantCancellation400ApplicationJSONData struct {

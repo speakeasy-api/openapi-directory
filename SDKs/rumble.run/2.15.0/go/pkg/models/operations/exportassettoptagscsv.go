@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ExportAssetTopTagsCSVSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ExportAssetTopTagsCSVRequest struct {
-	Security ExportAssetTopTagsCSVSecurity
-}
 
 type ExportAssetTopTagsCSVResponse struct {
 	ContentType string

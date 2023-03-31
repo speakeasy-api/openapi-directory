@@ -12,7 +12,8 @@ var CreateFlowServerList = []string{
 }
 
 type CreateFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateFlowCreateFlowRequest struct {
@@ -23,12 +24,6 @@ type CreateFlowCreateFlowRequest struct {
 	// The string that you assigned to describe the Flow.
 	FriendlyName string                    `form:"name=FriendlyName"`
 	Status       shared.FlowEnumStatusEnum `form:"name=Status"`
-}
-
-type CreateFlowRequest struct {
-	Request   *CreateFlowCreateFlowRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateFlowSecurity
-	ServerURL *string
 }
 
 type CreateFlowResponse struct {

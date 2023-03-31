@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CountriesGetV2CountriesCountryIDGetPathParams struct {
-	CountryID string `pathParam:"style=simple,explode=false,name=country_id"`
-}
-
 // CountriesGetV2CountriesCountryIDGetOrderByCountriesOrderEnum - An enumeration.
 type CountriesGetV2CountriesCountryIDGetOrderByCountriesOrderEnum string
 
@@ -70,24 +66,20 @@ func (e *CountriesGetV2CountriesCountryIDGetSortSortEnum) UnmarshalJSON(data []b
 	}
 }
 
-type CountriesGetV2CountriesCountryIDGetQueryParams struct {
+type CountriesGetV2CountriesCountryIDGetRequest struct {
 	//         Limit results by a certain country using two letter country code.
 	//         (ex. ?country=US or ?country=US&country=MX)
 	//
-	Country []string `queryParam:"style=form,explode=true,name=country"`
-	Limit   *int64   `queryParam:"style=form,explode=true,name=limit"`
-	Offset  *int64   `queryParam:"style=form,explode=true,name=offset"`
+	Country   []string `queryParam:"style=form,explode=true,name=country"`
+	CountryID string   `pathParam:"style=simple,explode=false,name=country_id"`
+	Limit     *int64   `queryParam:"style=form,explode=true,name=limit"`
+	Offset    *int64   `queryParam:"style=form,explode=true,name=offset"`
 	// An enumeration.
 	OrderBy *CountriesGetV2CountriesCountryIDGetOrderByCountriesOrderEnum `queryParam:"style=form,explode=true,name=order_by"`
 	// Paginate through results.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Define sort order.
 	Sort *CountriesGetV2CountriesCountryIDGetSortSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type CountriesGetV2CountriesCountryIDGetRequest struct {
-	PathParams  CountriesGetV2CountriesCountryIDGetPathParams
-	QueryParams CountriesGetV2CountriesCountryIDGetQueryParams
 }
 
 type CountriesGetV2CountriesCountryIDGetResponse struct {

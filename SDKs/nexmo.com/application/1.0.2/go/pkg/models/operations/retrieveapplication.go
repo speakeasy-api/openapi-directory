@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveApplicationPathParams struct {
-	// The ID allocated to your application by Nexmo.
-	AppID string `pathParam:"style=simple,explode=false,name=app_id"`
-}
-
-type RetrieveApplicationQueryParams struct {
+type RetrieveApplicationRequest struct {
 	// You can find your API key in your [account overview](https://dashboard.nexmo.com/account-overview)
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// You can find your API secret in your [account overview](https://dashboard.nexmo.com/account-overview)
 	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
-}
-
-type RetrieveApplicationRequest struct {
-	PathParams  RetrieveApplicationPathParams
-	QueryParams RetrieveApplicationQueryParams
+	// The ID allocated to your application by Nexmo.
+	AppID string `pathParam:"style=simple,explode=false,name=app_id"`
 }
 
 type RetrieveApplicationResponse struct {

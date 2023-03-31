@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ComptageRequest struct {
-	// sms request
-	Request shared.ComptageRequest `request:"mediaType=application/json"`
-}
-
 type ComptageResponse struct {
 	// Reponse OK
 	ComptageReponse *shared.ComptageReponse

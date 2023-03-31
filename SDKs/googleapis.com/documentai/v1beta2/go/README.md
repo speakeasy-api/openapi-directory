@@ -25,44 +25,37 @@ func main() {
     s := sdk.New()
 
     req := operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest{
-        Security: operations.DocumentaiProjectsLocationsDocumentsBatchProcessSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DocumentaiProjectsLocationsDocumentsBatchProcessPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DocumentaiProjectsLocationsDocumentsBatchProcessQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest{
+        DollarXgafv: "2",
+        GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest: &shared.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest{
             Requests: []shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest{
                 shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest{
                     AutomlParams: &shared.GoogleCloudDocumentaiV1beta2AutoMlParams{
-                        Model: "iure",
+                        Model: "distinctio",
                     },
-                    DocumentType: "magnam",
+                    DocumentType: "quibusdam",
                     EntityExtractionParams: &shared.GoogleCloudDocumentaiV1beta2EntityExtractionParams{
                         Enabled: false,
-                        ModelVersion: "debitis",
+                        ModelVersion: "unde",
                     },
                     FormExtractionParams: &shared.GoogleCloudDocumentaiV1beta2FormExtractionParams{
                         Enabled: false,
                         KeyValuePairHints: []shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                                Key: "corrupti",
+                                ValueTypes: []string{
+                                    "vel",
+                                    "error",
+                                    "deserunt",
+                                    "suscipit",
+                                },
+                            },
+                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                                Key: "iure",
+                                ValueTypes: []string{
+                                    "debitis",
+                                    "ipsa",
+                                },
+                            },
                             shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
                                 Key: "delectus",
                                 ValueTypes: []string{
@@ -70,165 +63,132 @@ func main() {
                                     "molestiae",
                                 },
                             },
+                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                                Key: "minus",
+                                ValueTypes: []string{
+                                    "voluptatum",
+                                    "iusto",
+                                    "excepturi",
+                                    "nisi",
+                                },
+                            },
                         },
-                        ModelVersion: "minus",
+                        ModelVersion: "recusandae",
                     },
                     InputConfig: &shared.GoogleCloudDocumentaiV1beta2InputConfig{
-                        Contents: "placeat",
+                        Contents: "temporibus",
                         GcsSource: &shared.GoogleCloudDocumentaiV1beta2GcsSource{
-                            URI: "https://lawful-missionary.info",
+                            URI: "http://gloomy-blanket.name",
                         },
-                        MimeType: "recusandae",
+                        MimeType: "perferendis",
                     },
                     OcrParams: &shared.GoogleCloudDocumentaiV1beta2OcrParams{
                         LanguageHints: []string{
-                            "ab",
-                            "quis",
-                            "veritatis",
-                            "deserunt",
+                            "repellendus",
+                            "sapiente",
                         },
                     },
                     OutputConfig: &shared.GoogleCloudDocumentaiV1beta2OutputConfig{
                         GcsDestination: &shared.GoogleCloudDocumentaiV1beta2GcsDestination{
-                            URI: "http://happy-spear.org",
+                            URI: "https://constant-sundae.org",
                         },
-                        PagesPerShard: 778157,
+                        PagesPerShard: 978619,
                     },
-                    Parent: "odit",
+                    Parent: "molestiae",
                     TableExtractionParams: &shared.GoogleCloudDocumentaiV1beta2TableExtractionParams{
                         Enabled: false,
                         HeaderHints: []string{
-                            "at",
-                            "maiores",
-                            "molestiae",
                             "quod",
+                            "esse",
+                            "totam",
+                            "porro",
                         },
-                        ModelVersion: "quod",
+                        ModelVersion: "dolorum",
                         TableBoundHints: []shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
                             shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
                                 BoundingBox: &shared.GoogleCloudDocumentaiV1beta2BoundingPoly{
                                     NormalizedVertices: []shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 7805.29,
-                                            Y: 6788.8,
-                                        },
-                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 1182.74,
-                                            Y: 7206.33,
-                                        },
-                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
                                             X: 6399.21,
                                             Y: 5820.2,
                                         },
-                                    },
-                                    Vertices: []shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                        shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 537373,
-                                            Y: 944669,
-                                        },
-                                    },
-                                },
-                                PageNumber: 758616,
-                            },
-                            shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
-                                BoundingBox: &shared.GoogleCloudDocumentaiV1beta2BoundingPoly{
-                                    NormalizedVertices: []shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 1059.07,
-                                            Y: 4146.62,
+                                            X: 1433.53,
+                                            Y: 5373.73,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 4736,
-                                            Y: 2645.55,
-                                        },
-                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 1863.32,
-                                            Y: 7742.34,
+                                            X: 9446.69,
+                                            Y: 7586.16,
                                         },
                                     },
                                     Vertices: []shared.GoogleCloudDocumentaiV1beta2Vertex{
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 456150,
-                                            Y: 216550,
+                                            X: 105907,
+                                            Y: 414662,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 568434,
-                                            Y: 135218,
+                                            X: 473600,
+                                            Y: 264555,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 18789,
-                                            Y: 324141,
+                                            X: 186332,
+                                            Y: 774234,
                                         },
                                     },
                                 },
-                                PageNumber: 617636,
+                                PageNumber: 736918,
                             },
                         },
                     },
                 },
                 shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest{
                     AutomlParams: &shared.GoogleCloudDocumentaiV1beta2AutoMlParams{
-                        Model: "sed",
+                        Model: "esse",
                     },
-                    DocumentType: "iste",
+                    DocumentType: "ipsum",
                     EntityExtractionParams: &shared.GoogleCloudDocumentaiV1beta2EntityExtractionParams{
                         Enabled: false,
-                        ModelVersion: "dolor",
+                        ModelVersion: "excepturi",
                     },
                     FormExtractionParams: &shared.GoogleCloudDocumentaiV1beta2FormExtractionParams{
                         Enabled: false,
                         KeyValuePairHints: []shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
                             shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
-                                Key: "laboriosam",
+                                Key: "perferendis",
                                 ValueTypes: []string{
-                                    "saepe",
-                                    "fuga",
-                                    "in",
-                                    "corporis",
-                                },
-                            },
-                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
-                                Key: "iste",
-                                ValueTypes: []string{
-                                    "saepe",
-                                    "quidem",
-                                },
-                            },
-                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
-                                Key: "architecto",
-                                ValueTypes: []string{
-                                    "reiciendis",
+                                    "natus",
+                                    "sed",
                                 },
                             },
                         },
-                        ModelVersion: "est",
+                        ModelVersion: "iste",
                     },
                     InputConfig: &shared.GoogleCloudDocumentaiV1beta2InputConfig{
-                        Contents: "mollitia",
+                        Contents: "dolor",
                         GcsSource: &shared.GoogleCloudDocumentaiV1beta2GcsSource{
-                            URI: "https://deadly-corsage.info",
+                            URI: "https://hoarse-upper.org",
                         },
-                        MimeType: "explicabo",
+                        MimeType: "fuga",
                     },
                     OcrParams: &shared.GoogleCloudDocumentaiV1beta2OcrParams{
                         LanguageHints: []string{
-                            "enim",
-                            "omnis",
-                            "nemo",
-                            "minima",
+                            "corporis",
+                            "iste",
                         },
                     },
                     OutputConfig: &shared.GoogleCloudDocumentaiV1beta2OutputConfig{
                         GcsDestination: &shared.GoogleCloudDocumentaiV1beta2GcsDestination{
-                            URI: "https://antique-housework.name",
+                            URI: "http://unsteady-progress.com",
                         },
-                        PagesPerShard: 988374,
+                        PagesPerShard: 60225,
                     },
-                    Parent: "sapiente",
+                    Parent: "reiciendis",
                     TableExtractionParams: &shared.GoogleCloudDocumentaiV1beta2TableExtractionParams{
                         Enabled: false,
                         HeaderHints: []string{
                             "mollitia",
+                            "laborum",
+                            "dolores",
                         },
                         ModelVersion: "dolorem",
                         TableBoundHints: []shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
@@ -236,86 +196,224 @@ func main() {
                                 BoundingBox: &shared.GoogleCloudDocumentaiV1beta2BoundingPoly{
                                     NormalizedVertices: []shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 9953,
-                                            Y: 6531.08,
+                                            X: 7506.86,
+                                            Y: 3154.28,
                                         },
                                     },
                                     Vertices: []shared.GoogleCloudDocumentaiV1beta2Vertex{
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 253291,
-                                            Y: 414369,
+                                            X: 363711,
+                                            Y: 325047,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 466311,
-                                            Y: 474697,
+                                            X: 570197,
+                                            Y: 38425,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 244425,
-                                            Y: 623510,
+                                            X: 438601,
+                                            Y: 634274,
                                         },
                                     },
                                 },
-                                PageNumber: 158969,
+                                PageNumber: 988374,
                             },
                             shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
                                 BoundingBox: &shared.GoogleCloudDocumentaiV1beta2BoundingPoly{
                                     NormalizedVertices: []shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 1103.75,
-                                            Y: 6747.52,
+                                            X: 1020.44,
+                                            Y: 6527.9,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 6563.3,
-                                            Y: 3172.02,
+                                            X: 2088.76,
+                                            Y: 6350.59,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 1613.09,
+                                            Y: 9953,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 6531.08,
+                                            Y: 5818.5,
                                         },
                                     },
                                     Vertices: []shared.GoogleCloudDocumentaiV1beta2Vertex{
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 778346,
-                                            Y: 196582,
+                                            X: 414369,
+                                            Y: 466311,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2Vertex{
+                                            X: 474697,
+                                            Y: 244425,
                                         },
                                     },
                                 },
-                                PageNumber: 949572,
+                                PageNumber: 623510,
+                            },
+                        },
+                    },
+                },
+                shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest{
+                    AutomlParams: &shared.GoogleCloudDocumentaiV1beta2AutoMlParams{
+                        Model: "quia",
+                    },
+                    DocumentType: "quis",
+                    EntityExtractionParams: &shared.GoogleCloudDocumentaiV1beta2EntityExtractionParams{
+                        Enabled: false,
+                        ModelVersion: "vitae",
+                    },
+                    FormExtractionParams: &shared.GoogleCloudDocumentaiV1beta2FormExtractionParams{
+                        Enabled: false,
+                        KeyValuePairHints: []shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                                Key: "animi",
+                                ValueTypes: []string{
+                                    "odit",
+                                    "quo",
+                                },
+                            },
+                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                                Key: "sequi",
+                                ValueTypes: []string{
+                                    "ipsam",
+                                    "id",
+                                    "possimus",
+                                    "aut",
+                                },
+                            },
+                            shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint{
+                                Key: "quasi",
+                                ValueTypes: []string{
+                                    "temporibus",
+                                    "laborum",
+                                    "quasi",
+                                },
+                            },
+                        },
+                        ModelVersion: "reiciendis",
+                    },
+                    InputConfig: &shared.GoogleCloudDocumentaiV1beta2InputConfig{
+                        Contents: "voluptatibus",
+                        GcsSource: &shared.GoogleCloudDocumentaiV1beta2GcsSource{
+                            URI: "https://klutzy-level.org",
+                        },
+                        MimeType: "ipsa",
+                    },
+                    OcrParams: &shared.GoogleCloudDocumentaiV1beta2OcrParams{
+                        LanguageHints: []string{
+                            "voluptate",
+                            "cum",
+                            "perferendis",
+                        },
+                    },
+                    OutputConfig: &shared.GoogleCloudDocumentaiV1beta2OutputConfig{
+                        GcsDestination: &shared.GoogleCloudDocumentaiV1beta2GcsDestination{
+                            URI: "http://insubstantial-dramaturge.org",
+                        },
+                        PagesPerShard: 120196,
+                    },
+                    Parent: "corporis",
+                    TableExtractionParams: &shared.GoogleCloudDocumentaiV1beta2TableExtractionParams{
+                        Enabled: false,
+                        HeaderHints: []string{
+                            "iusto",
+                            "dicta",
+                        },
+                        ModelVersion: "harum",
+                        TableBoundHints: []shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
+                            shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
+                                BoundingBox: &shared.GoogleCloudDocumentaiV1beta2BoundingPoly{
+                                    NormalizedVertices: []shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 4142.63,
+                                            Y: 9182.36,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 641.47,
+                                            Y: 2168.22,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 6924.72,
+                                            Y: 5651.89,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 5666.02,
+                                            Y: 8651.03,
+                                        },
+                                    },
+                                    Vertices: []shared.GoogleCloudDocumentaiV1beta2Vertex{
+                                        shared.GoogleCloudDocumentaiV1beta2Vertex{
+                                            X: 508969,
+                                            Y: 523248,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2Vertex{
+                                            X: 916723,
+                                            Y: 93940,
+                                        },
+                                    },
+                                },
+                                PageNumber: 921158,
                             },
                             shared.GoogleCloudDocumentaiV1beta2TableBoundHint{
                                 BoundingBox: &shared.GoogleCloudDocumentaiV1beta2BoundingPoly{
                                     NormalizedVertices: []shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 6625.27,
-                                            Y: 8209.94,
+                                            X: 831.12,
+                                            Y: 9292.97,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
-                                            X: 135.71,
-                                            Y: 971.01,
+                                            X: 2777.18,
+                                            Y: 3185.69,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2NormalizedVertex{
+                                            X: 93.56,
+                                            Y: 6674.11,
                                         },
                                     },
                                     Vertices: []shared.GoogleCloudDocumentaiV1beta2Vertex{
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 837945,
-                                            Y: 673660,
+                                            X: 131797,
+                                            Y: 647174,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 96098,
-                                            Y: 971945,
+                                            X: 716327,
+                                            Y: 841386,
                                         },
                                         shared.GoogleCloudDocumentaiV1beta2Vertex{
-                                            X: 976460,
-                                            Y: 878194,
+                                            X: 289406,
+                                            Y: 264730,
+                                        },
+                                        shared.GoogleCloudDocumentaiV1beta2Vertex{
+                                            X: 183191,
+                                            Y: 397821,
                                         },
                                     },
                                 },
-                                PageNumber: 468651,
+                                PageNumber: 586513,
                             },
                         },
                     },
                 },
             },
         },
+        AccessToken: "quos",
+        Alt: "json",
+        Callback: "magni",
+        Fields: "assumenda",
+        Key: "ipsam",
+        OauthToken: "alias",
+        Parent: "fugit",
+        PrettyPrint: false,
+        QuotaUser: "dolorum",
+        UploadType: "excepturi",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DocumentaiProjectsLocationsDocumentsBatchProcess(ctx, req)
+    res, err := s.Projects.DocumentaiProjectsLocationsDocumentsBatchProcess(ctx, req, operations.DocumentaiProjectsLocationsDocumentsBatchProcessSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -328,7 +426,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -338,4 +436,15 @@ func main() {
 * `DocumentaiProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

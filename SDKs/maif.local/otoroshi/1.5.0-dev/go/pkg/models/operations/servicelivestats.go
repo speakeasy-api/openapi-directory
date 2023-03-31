@@ -8,17 +8,13 @@ import (
 )
 
 type ServiceLiveStatsSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ServiceLiveStatsPathParams struct {
-	// The service id or global for otoroshi stats
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ServiceLiveStatsRequest struct {
-	PathParams ServiceLiveStatsPathParams
-	Security   ServiceLiveStatsSecurity
+	// The service id or global for otoroshi stats
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ServiceLiveStatsResponse struct {

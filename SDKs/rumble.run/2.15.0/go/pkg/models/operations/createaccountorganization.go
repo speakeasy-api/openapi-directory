@@ -8,13 +8,7 @@ import (
 )
 
 type CreateAccountOrganizationSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateAccountOrganizationRequest struct {
-	// organization definition
-	Request  shared.OrgOptions `request:"mediaType=application/json"`
-	Security CreateAccountOrganizationSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateAccountOrganizationResponse struct {

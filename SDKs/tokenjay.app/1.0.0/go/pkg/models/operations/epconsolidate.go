@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type EpConsolidatePathParams struct {
-	P2pkaddress string `pathParam:"style=simple,explode=false,name=p2pkaddress"`
-}
-
 type EpConsolidateRequest struct {
-	PathParams EpConsolidatePathParams
+	P2pkaddress string `pathParam:"style=simple,explode=false,name=p2pkaddress"`
 }
 
 type EpConsolidateResponse struct {

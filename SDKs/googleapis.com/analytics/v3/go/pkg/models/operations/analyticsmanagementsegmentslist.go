@@ -8,18 +8,18 @@ import (
 )
 
 type AnalyticsManagementSegmentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementSegmentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementSegmentsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementSegmentsListSecurity struct {
@@ -28,7 +28,7 @@ type AnalyticsManagementSegmentsListSecurity struct {
 	Option3 *AnalyticsManagementSegmentsListSecurityOption3 `security:"option"`
 }
 
-type AnalyticsManagementSegmentsListQueryParams struct {
+type AnalyticsManagementSegmentsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -47,11 +47,6 @@ type AnalyticsManagementSegmentsListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementSegmentsListRequest struct {
-	QueryParams AnalyticsManagementSegmentsListQueryParams
-	Security    AnalyticsManagementSegmentsListSecurity
 }
 
 type AnalyticsManagementSegmentsListResponse struct {

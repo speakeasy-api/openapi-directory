@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLocationPathParams struct {
+type GetLocationRequest struct {
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 	// The unique identifier of the location in Noyo
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
-type GetLocationRequest struct {
-	PathParams GetLocationPathParams
 }
 
 type GetLocationResponse struct {

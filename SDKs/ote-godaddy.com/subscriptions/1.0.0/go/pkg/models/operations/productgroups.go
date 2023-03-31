@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductGroupsHeaders struct {
+type ProductGroupsRequest struct {
 	// The market that the response should be formatted for
 	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
 	// Shopper ID to return data for when not using JWT
 	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
-}
-
-type ProductGroupsRequest struct {
-	Headers ProductGroupsHeaders
 }
 
 type ProductGroupsResponse struct {

@@ -14,30 +14,21 @@ func main() {
     s := sdk.New()
 
     req := operations.SiteVerificationWebResourceDeleteRequest{
-        Security: operations.SiteVerificationWebResourceDeleteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.SiteVerificationWebResourceDeletePathParams{
-            ID: "corrupti",
-        },
-        QueryParams: operations.SiteVerificationWebResourceDeleteQueryParams{
-            Alt: "json",
-            Fields: "provident",
-            Key: "distinctio",
-            OauthToken: "quibusdam",
-            PrettyPrint: false,
-            QuotaUser: "unde",
-            UserIP: "nulla",
-        },
+        Alt: "json",
+        Fields: "corrupti",
+        ID: "provident",
+        Key: "distinctio",
+        OauthToken: "quibusdam",
+        PrettyPrint: false,
+        QuotaUser: "unde",
+        UserIP: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.WebResource.SiteVerificationWebResourceDelete(ctx, req)
+    res, err := s.WebResource.SiteVerificationWebResourceDelete(ctx, req, operations.SiteVerificationWebResourceDeleteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

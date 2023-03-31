@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type GetStopWordsRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 type GetStopWordsResponse struct {
 	ContentType string
 	StatusCode  int

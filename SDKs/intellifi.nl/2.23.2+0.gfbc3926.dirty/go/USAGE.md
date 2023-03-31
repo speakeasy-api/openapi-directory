@@ -13,9 +13,7 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            CookieSid: &shared.SchemeCookieSid{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            CookieSid: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 

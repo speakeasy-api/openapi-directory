@@ -53,9 +53,9 @@ func (s *entityConnections) GETEntityConnections(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,7 +106,7 @@ func (s *entityConnections) POSTEntityConnections(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/entity-connections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTEntityConnectionsType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -118,7 +118,7 @@ func (s *entityConnections) POSTEntityConnections(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -165,14 +165,14 @@ func (s *entityConnections) POSTEntityConnections(ctx context.Context, request o
 // You must make the call as an entity administrator to accept a connection request.
 func (s *entityConnections) PUTEntityConnectionsAccept(ctx context.Context, request operations.PUTEntityConnectionsAcceptRequest) (*operations.PUTEntityConnectionsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entity-connections/{connection-id}/accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entity-connections/{connection-id}/accept", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -219,14 +219,14 @@ func (s *entityConnections) PUTEntityConnectionsAccept(ctx context.Context, requ
 // You must make the call as an entity administrator to deny a connection request.
 func (s *entityConnections) PUTEntityConnectionsDeny(ctx context.Context, request operations.PUTEntityConnectionsDenyRequest) (*operations.PUTEntityConnectionsDenyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entity-connections/{connection-id}/deny", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entity-connections/{connection-id}/deny", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -273,14 +273,14 @@ func (s *entityConnections) PUTEntityConnectionsDeny(ctx context.Context, reques
 // You must make the call as an administrator of the target entity or source entity.
 func (s *entityConnections) PUTEntityConnectionsDisconnect(ctx context.Context, request operations.PUTEntityConnectionsDisconnectRequest) (*operations.PUTEntityConnectionsDisconnectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entity-connections/{connection-id}/disconnect", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entity-connections/{connection-id}/disconnect", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

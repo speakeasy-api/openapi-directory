@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteInsightsQuestionnairesQuestionServerList = []string{
@@ -12,24 +11,15 @@ var DeleteInsightsQuestionnairesQuestionServerList = []string{
 }
 
 type DeleteInsightsQuestionnairesQuestionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteInsightsQuestionnairesQuestionPathParams struct {
-	// The unique ID of the question
-	QuestionID string `pathParam:"style=simple,explode=false,name=QuestionId"`
-}
-
-type DeleteInsightsQuestionnairesQuestionHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteInsightsQuestionnairesQuestionRequest struct {
-	PathParams DeleteInsightsQuestionnairesQuestionPathParams
-	Headers    DeleteInsightsQuestionnairesQuestionHeaders
-	Security   DeleteInsightsQuestionnairesQuestionSecurity
-	ServerURL  *string
+	// The unique ID of the question
+	QuestionID string `pathParam:"style=simple,explode=false,name=QuestionId"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type DeleteInsightsQuestionnairesQuestionResponse struct {

@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/types"
 )
 
-type RetrieveAccountTransactionsV2PathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetrieveAccountTransactionsV2QueryParams struct {
+type RetrieveAccountTransactionsV2Request struct {
 	// ISO 3166 two-character country code
 	Country  *string     `queryParam:"style=form,explode=true,name=country"`
 	DateFrom *types.Date `queryParam:"style=form,explode=true,name=date_from"`
 	DateTo   *types.Date `queryParam:"style=form,explode=true,name=date_to"`
-}
-
-type RetrieveAccountTransactionsV2Request struct {
-	PathParams  RetrieveAccountTransactionsV2PathParams
-	QueryParams RetrieveAccountTransactionsV2QueryParams
+	ID       string      `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RetrieveAccountTransactionsV2Response struct {

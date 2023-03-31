@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type AddTimerScriptPathParams struct {
+type AddTimerScriptRequest struct {
 	// Agent to return the timer script list
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Arguments to the script
@@ -15,10 +15,6 @@ type AddTimerScriptPathParams struct {
 	Interval int `pathParam:"style=simple,explode=false,name=interval"`
 	// Script name
 	Script string `pathParam:"style=simple,explode=false,name=script"`
-}
-
-type AddTimerScriptRequest struct {
-	PathParams AddTimerScriptPathParams
 }
 
 type AddTimerScriptResponse struct {

@@ -10,38 +10,38 @@ import (
 )
 
 type DriveFilesWatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurityOption7 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesWatchSecurity struct {
@@ -52,11 +52,6 @@ type DriveFilesWatchSecurity struct {
 	Option5 *DriveFilesWatchSecurityOption5 `security:"option"`
 	Option6 *DriveFilesWatchSecurityOption6 `security:"option"`
 	Option7 *DriveFilesWatchSecurityOption7 `security:"option"`
-}
-
-type DriveFilesWatchPathParams struct {
-	// The ID for the file in question.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 // DriveFilesWatchProjectionEnum - This parameter is deprecated and has no function.
@@ -83,13 +78,16 @@ func (e *DriveFilesWatchProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DriveFilesWatchQueryParams struct {
+type DriveFilesWatchRequest struct {
+	Channel *shared.Channel `request:"mediaType=application/json"`
 	// Whether the user is acknowledging the risk of downloading known malware or other abusive files.
 	AcknowledgeAbuse *bool `queryParam:"style=form,explode=true,name=acknowledgeAbuse"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID for the file in question.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// A comma-separated list of IDs of labels to include in the labelInfo part of the response.
 	IncludeLabels *string `queryParam:"style=form,explode=true,name=includeLabels"`
 	// Specifies which additional view's permissions to include in the response. Only 'published' is supported.
@@ -114,13 +112,6 @@ type DriveFilesWatchQueryParams struct {
 	UpdateViewedDate *bool `queryParam:"style=form,explode=true,name=updateViewedDate"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesWatchRequest struct {
-	PathParams  DriveFilesWatchPathParams
-	QueryParams DriveFilesWatchQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    DriveFilesWatchSecurity
 }
 
 type DriveFilesWatchResponse struct {

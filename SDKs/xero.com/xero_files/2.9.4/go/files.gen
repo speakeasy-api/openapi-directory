@@ -31,7 +31,6 @@ pkg/models/operations/uploadfile.go
 pkg/models/shared/association.go
 pkg/models/shared/objecttypeenum.go
 pkg/models/shared/objectgroupenum.go
-pkg/models/shared/security.go
 pkg/models/shared/folder.go
 pkg/models/shared/fileobject.go
 pkg/models/shared/user.go

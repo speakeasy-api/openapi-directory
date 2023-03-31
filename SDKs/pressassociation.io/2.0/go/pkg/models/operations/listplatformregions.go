@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListPlatformRegionsSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListPlatformRegionsPathParams struct {
-	// The identifier for the selected platform.
-	PlatformID string `pathParam:"style=simple,explode=false,name=platformId"`
-}
-
-type ListPlatformRegionsQueryParams struct {
-	// Flag to display Legacy and Provider Ids.
-	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type ListPlatformRegionsRequest struct {
-	PathParams  ListPlatformRegionsPathParams
-	QueryParams ListPlatformRegionsQueryParams
-	Security    ListPlatformRegionsSecurity
+	// Flag to display Legacy and Provider Ids.
+	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	// The identifier for the selected platform.
+	PlatformID string `pathParam:"style=simple,explode=false,name=platformId"`
 }
 
 type ListPlatformRegionsResponse struct {

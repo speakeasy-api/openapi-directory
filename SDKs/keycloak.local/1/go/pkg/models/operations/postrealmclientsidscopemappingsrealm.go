@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmClientsIDScopeMappingsRealmPathParams struct {
+type PostRealmClientsIDScopeMappingsRealmRequest struct {
+	RequestBody []shared.RoleRepresentation `request:"mediaType=application/json"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClientsIDScopeMappingsRealmRequest struct {
-	PathParams PostRealmClientsIDScopeMappingsRealmPathParams
-	Request    []shared.RoleRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmClientsIDScopeMappingsRealmResponse struct {

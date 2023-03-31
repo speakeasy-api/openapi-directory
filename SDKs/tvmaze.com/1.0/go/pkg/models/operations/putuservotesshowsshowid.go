@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUserVotesShowsShowIDPathParams struct {
-	ShowID int64 `pathParam:"style=simple,explode=false,name=show_id"`
-}
-
 type PutUserVotesShowsShowIDRequest struct {
-	PathParams PutUserVotesShowsShowIDPathParams
-	Request    *shared.ShowVoteInput `request:"mediaType=application/json"`
+	ShowVoteInput *shared.ShowVoteInput `request:"mediaType=application/json"`
+	ShowID        int64                 `pathParam:"style=simple,explode=false,name=show_id"`
 }
 
 type PutUserVotesShowsShowIDResponse struct {

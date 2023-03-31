@@ -8,18 +8,18 @@ import (
 )
 
 type CloudsearchStatsSessionSearchapplicationsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchStatsSessionSearchapplicationsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchStatsSessionSearchapplicationsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchStatsSessionSearchapplicationsGetSecurity struct {
@@ -28,12 +28,7 @@ type CloudsearchStatsSessionSearchapplicationsGetSecurity struct {
 	Option3 *CloudsearchStatsSessionSearchapplicationsGetSecurityOption3 `security:"option"`
 }
 
-type CloudsearchStatsSessionSearchapplicationsGetPathParams struct {
-	// The resource id of the search application session stats, in the following format: searchapplications/{application_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudsearchStatsSessionSearchapplicationsGetQueryParams struct {
+type CloudsearchStatsSessionSearchapplicationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type CloudsearchStatsSessionSearchapplicationsGetQueryParams struct {
 	FromDateYear *int64 `queryParam:"style=form,explode=true,name=fromDate.year"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource id of the search application session stats, in the following format: searchapplications/{application_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -68,12 +65,6 @@ type CloudsearchStatsSessionSearchapplicationsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchStatsSessionSearchapplicationsGetRequest struct {
-	PathParams  CloudsearchStatsSessionSearchapplicationsGetPathParams
-	QueryParams CloudsearchStatsSessionSearchapplicationsGetQueryParams
-	Security    CloudsearchStatsSessionSearchapplicationsGetSecurity
 }
 
 type CloudsearchStatsSessionSearchapplicationsGetResponse struct {

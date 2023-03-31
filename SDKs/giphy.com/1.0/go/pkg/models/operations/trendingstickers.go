@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrendingStickersQueryParams struct {
+type TrendingStickersRequest struct {
 	// The maximum number of records to return.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// An optional results offset.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Filters results by specified rating.
 	Rating *string `queryParam:"style=form,explode=true,name=rating"`
-}
-
-type TrendingStickersRequest struct {
-	QueryParams TrendingStickersQueryParams
 }
 
 type TrendingStickers200ApplicationJSON struct {

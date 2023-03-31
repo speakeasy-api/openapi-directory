@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForIssuePathParams struct {
-	// issue_number parameter
-	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsListForIssueContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
 type ReactionsListForIssueContentEnum string
 
@@ -58,18 +51,17 @@ func (e *ReactionsListForIssueContentEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReactionsListForIssueQueryParams struct {
+type ReactionsListForIssueRequest struct {
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
 	Content *ReactionsListForIssueContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// issue_number parameter
+	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForIssueRequest struct {
-	PathParams  ReactionsListForIssuePathParams
-	QueryParams ReactionsListForIssueQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReactionsListForIssue415ApplicationJSON - Preview header missing

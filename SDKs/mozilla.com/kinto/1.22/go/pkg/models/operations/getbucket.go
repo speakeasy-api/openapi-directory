@@ -6,23 +6,11 @@ import (
 	"net/http"
 )
 
-type GetBucketPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBucketQueryParams struct {
-	Fields []string `queryParam:"style=form,explode=false,name=_fields"`
-}
-
-type GetBucketHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
 type GetBucketRequest struct {
-	PathParams  GetBucketPathParams
-	QueryParams GetBucketQueryParams
-	Headers     GetBucketHeaders
+	IfMatch     *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch *string  `header:"style=simple,explode=false,name=If-None-Match"`
+	Fields      []string `queryParam:"style=form,explode=false,name=_fields"`
+	ID          string   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetBucketErrorSchema - The request is invalid.

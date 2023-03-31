@@ -8,13 +8,13 @@ import (
 )
 
 type SasportalInstallerValidateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SasportalInstallerValidateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SasportalInstallerValidateSecurity struct {
@@ -22,9 +22,10 @@ type SasportalInstallerValidateSecurity struct {
 	Option2 *SasportalInstallerValidateSecurityOption2 `security:"option"`
 }
 
-type SasportalInstallerValidateQueryParams struct {
+type SasportalInstallerValidateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                       *shared.XgafvEnum                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SasPortalValidateInstallerRequest *shared.SasPortalValidateInstallerRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -45,12 +46,6 @@ type SasportalInstallerValidateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SasportalInstallerValidateRequest struct {
-	QueryParams SasportalInstallerValidateQueryParams
-	Request     *shared.SasPortalValidateInstallerRequest `request:"mediaType=application/json"`
-	Security    SasportalInstallerValidateSecurity
 }
 
 type SasportalInstallerValidateResponse struct {

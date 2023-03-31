@@ -34,7 +34,7 @@ func (e *GetCalendarDatesExportRendererEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCalendarDatesExportQueryParams struct {
+type GetCalendarDatesExportRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -76,10 +76,6 @@ type GetCalendarDatesExportQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// Longer description of event
 	Summary []string `queryParam:"style=form,explode=true,name=summary"`
-}
-
-type GetCalendarDatesExportRequest struct {
-	QueryParams GetCalendarDatesExportQueryParams
 }
 
 type GetCalendarDatesExportResponse struct {

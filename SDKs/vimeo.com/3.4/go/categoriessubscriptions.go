@@ -33,16 +33,16 @@ func newCategoriesSubscriptions(defaultClient, securityClient HTTPClient, server
 }
 
 // CheckIfUserSubscribedToCategory - Check if a user follows a category
-func (s *categoriesSubscriptions) CheckIfUserSubscribedToCategory(ctx context.Context, request operations.CheckIfUserSubscribedToCategoryRequest) (*operations.CheckIfUserSubscribedToCategoryResponse, error) {
+func (s *categoriesSubscriptions) CheckIfUserSubscribedToCategory(ctx context.Context, request operations.CheckIfUserSubscribedToCategoryRequest, security operations.CheckIfUserSubscribedToCategorySecurity) (*operations.CheckIfUserSubscribedToCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -68,16 +68,16 @@ func (s *categoriesSubscriptions) CheckIfUserSubscribedToCategory(ctx context.Co
 }
 
 // CheckIfUserSubscribedToCategoryAlt1 - Check if a user follows a category
-func (s *categoriesSubscriptions) CheckIfUserSubscribedToCategoryAlt1(ctx context.Context, request operations.CheckIfUserSubscribedToCategoryAlt1Request) (*operations.CheckIfUserSubscribedToCategoryAlt1Response, error) {
+func (s *categoriesSubscriptions) CheckIfUserSubscribedToCategoryAlt1(ctx context.Context, request operations.CheckIfUserSubscribedToCategoryAlt1Request, security operations.CheckIfUserSubscribedToCategoryAlt1Security) (*operations.CheckIfUserSubscribedToCategoryAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,20 +103,20 @@ func (s *categoriesSubscriptions) CheckIfUserSubscribedToCategoryAlt1(ctx contex
 }
 
 // GetCategorySubscriptions - Get all the categories that a user follows
-func (s *categoriesSubscriptions) GetCategorySubscriptions(ctx context.Context, request operations.GetCategorySubscriptionsRequest) (*operations.GetCategorySubscriptionsResponse, error) {
+func (s *categoriesSubscriptions) GetCategorySubscriptions(ctx context.Context, request operations.GetCategorySubscriptionsRequest, security operations.GetCategorySubscriptionsSecurity) (*operations.GetCategorySubscriptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *categoriesSubscriptions) GetCategorySubscriptions(ctx context.Context, 
 }
 
 // GetCategorySubscriptionsAlt1 - Get all the categories that a user follows
-func (s *categoriesSubscriptions) GetCategorySubscriptionsAlt1(ctx context.Context, request operations.GetCategorySubscriptionsAlt1Request) (*operations.GetCategorySubscriptionsAlt1Response, error) {
+func (s *categoriesSubscriptions) GetCategorySubscriptionsAlt1(ctx context.Context, request operations.GetCategorySubscriptionsAlt1Request, security operations.GetCategorySubscriptionsAlt1Security) (*operations.GetCategorySubscriptionsAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/categories"
 
@@ -170,11 +170,11 @@ func (s *categoriesSubscriptions) GetCategorySubscriptionsAlt1(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -219,16 +219,16 @@ func (s *categoriesSubscriptions) GetCategorySubscriptionsAlt1(ctx context.Conte
 }
 
 // SubscribeToCategory - Subscribe a user to a single category
-func (s *categoriesSubscriptions) SubscribeToCategory(ctx context.Context, request operations.SubscribeToCategoryRequest) (*operations.SubscribeToCategoryResponse, error) {
+func (s *categoriesSubscriptions) SubscribeToCategory(ctx context.Context, request operations.SubscribeToCategoryRequest, security operations.SubscribeToCategorySecurity) (*operations.SubscribeToCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,16 +254,16 @@ func (s *categoriesSubscriptions) SubscribeToCategory(ctx context.Context, reque
 }
 
 // SubscribeToCategoryAlt1 - Subscribe a user to a single category
-func (s *categoriesSubscriptions) SubscribeToCategoryAlt1(ctx context.Context, request operations.SubscribeToCategoryAlt1Request) (*operations.SubscribeToCategoryAlt1Response, error) {
+func (s *categoriesSubscriptions) SubscribeToCategoryAlt1(ctx context.Context, request operations.SubscribeToCategoryAlt1Request, security operations.SubscribeToCategoryAlt1Security) (*operations.SubscribeToCategoryAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,16 +289,16 @@ func (s *categoriesSubscriptions) SubscribeToCategoryAlt1(ctx context.Context, r
 }
 
 // UnsubscribeFromCategory - Unsubscribe a user from a category
-func (s *categoriesSubscriptions) UnsubscribeFromCategory(ctx context.Context, request operations.UnsubscribeFromCategoryRequest) (*operations.UnsubscribeFromCategoryResponse, error) {
+func (s *categoriesSubscriptions) UnsubscribeFromCategory(ctx context.Context, request operations.UnsubscribeFromCategoryRequest, security operations.UnsubscribeFromCategorySecurity) (*operations.UnsubscribeFromCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -324,16 +324,16 @@ func (s *categoriesSubscriptions) UnsubscribeFromCategory(ctx context.Context, r
 }
 
 // UnsubscribeFromCategoryAlt1 - Unsubscribe a user from a category
-func (s *categoriesSubscriptions) UnsubscribeFromCategoryAlt1(ctx context.Context, request operations.UnsubscribeFromCategoryAlt1Request) (*operations.UnsubscribeFromCategoryAlt1Response, error) {
+func (s *categoriesSubscriptions) UnsubscribeFromCategoryAlt1(ctx context.Context, request operations.UnsubscribeFromCategoryAlt1Request, security operations.UnsubscribeFromCategoryAlt1Security) (*operations.UnsubscribeFromCategoryAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

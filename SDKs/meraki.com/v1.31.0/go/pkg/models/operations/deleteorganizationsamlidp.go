@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOrganizationSamlIdpPathParams struct {
+type DeleteOrganizationSamlIdpRequest struct {
 	IdpID          string `pathParam:"style=simple,explode=false,name=idpId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type DeleteOrganizationSamlIdpRequest struct {
-	PathParams DeleteOrganizationSamlIdpPathParams
 }
 
 type DeleteOrganizationSamlIdpResponse struct {

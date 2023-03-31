@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequestBody - A VAT Declaration to modify
 type PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequestBody struct {
 	Begin           *string  `json:"Begin,omitempty"`
@@ -29,9 +20,14 @@ type PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequestBody struc
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDPathParams
 	// A VAT Declaration to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDResponse struct {

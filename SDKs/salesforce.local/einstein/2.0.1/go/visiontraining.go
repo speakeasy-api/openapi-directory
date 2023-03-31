@@ -35,16 +35,16 @@ func newVisionTraining(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetTrainStatusAndProgress1 - Get Training Status
 // Returns the status of a model's training process. Use the progress field to determine how far the training has progressed. When training completes successfully, the status is SUCCEEDED and the progress is 1.
-func (s *visionTraining) GetTrainStatusAndProgress1(ctx context.Context, request operations.GetTrainStatusAndProgress1Request) (*operations.GetTrainStatusAndProgress1Response, error) {
+func (s *visionTraining) GetTrainStatusAndProgress1(ctx context.Context, request operations.GetTrainStatusAndProgress1Request, security operations.GetTrainStatusAndProgress1Security) (*operations.GetTrainStatusAndProgress1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/train/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/train/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *visionTraining) GetTrainStatusAndProgress1(ctx context.Context, request
 
 // Retrain1 - Retrain a Dataset
 // Retrains a dataset and updates a model. Use this API call when you want to update a model and keep the model ID instead of creating a new model.
-func (s *visionTraining) Retrain1(ctx context.Context, request operations.Retrain1Request) (*operations.Retrain1Response, error) {
+func (s *visionTraining) Retrain1(ctx context.Context, request operations.Retrain1RequestBody, security operations.Retrain1Security) (*operations.Retrain1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/retrain"
 
@@ -96,7 +96,7 @@ func (s *visionTraining) Retrain1(ctx context.Context, request operations.Retrai
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -132,7 +132,7 @@ func (s *visionTraining) Retrain1(ctx context.Context, request operations.Retrai
 
 // Train1 - Train a Dataset
 // Trains a dataset and creates a model.
-func (s *visionTraining) Train1(ctx context.Context, request operations.Train1Request) (*operations.Train1Response, error) {
+func (s *visionTraining) Train1(ctx context.Context, request operations.Train1RequestBody, security operations.Train1Security) (*operations.Train1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/train"
 
@@ -148,7 +148,7 @@ func (s *visionTraining) Train1(ctx context.Context, request operations.Train1Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

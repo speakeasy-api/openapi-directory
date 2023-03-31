@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSubscriptionPathParams struct {
+type DeleteSubscriptionRequest struct {
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSubscriptionRequest struct {
-	PathParams DeleteSubscriptionPathParams
 }
 
 type DeleteSubscriptionResponse struct {

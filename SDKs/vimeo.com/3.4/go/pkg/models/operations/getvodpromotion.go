@@ -8,19 +8,14 @@ import (
 )
 
 type GetVodPromotionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetVodPromotionPathParams struct {
+type GetVodPromotionRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The ID of the promotion.
 	PromotionID float64 `pathParam:"style=simple,explode=false,name=promotion_id"`
-}
-
-type GetVodPromotionRequest struct {
-	PathParams GetVodPromotionPathParams
-	Security   GetVodPromotionSecurity
 }
 
 type GetVodPromotionResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAccountOrganizationExportTokenSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAccountOrganizationExportTokenPathParams struct {
-	// UUID of the organization to retrieve
-	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAccountOrganizationExportTokenRequest struct {
-	PathParams DeleteAccountOrganizationExportTokenPathParams
-	Security   DeleteAccountOrganizationExportTokenSecurity
+	// UUID of the organization to retrieve
+	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
 }
 
 type DeleteAccountOrganizationExportTokenResponse struct {

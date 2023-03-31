@@ -16,10 +16,6 @@ type RemoveSignaturesV1RequestBody struct {
 	File RemoveSignaturesV1RequestBodyFile `multipartForm:"file"`
 }
 
-type RemoveSignaturesV1Request struct {
-	Request RemoveSignaturesV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // RemoveSignaturesV14XXApplicationProblemPlusJSON - Error
 type RemoveSignaturesV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

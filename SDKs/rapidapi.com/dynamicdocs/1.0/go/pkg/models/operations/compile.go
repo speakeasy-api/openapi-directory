@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type CompilePathParams struct {
-	// The template-token is available in your template settings after publishing your template.
-	TemplateToken string `pathParam:"style=simple,explode=false,name=template-token"`
-}
-
 // CompileLatexCompilerEnum - The latex-compiler parameter can take the following values:  pdflatex lualatex
 type CompileLatexCompilerEnum string
 
@@ -37,7 +32,11 @@ func (e *CompileLatexCompilerEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CompileQueryParams struct {
+type CompileRequest struct {
+	// Should be set to "application/json"
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	// Post the dynamic data for the template to compile the document PDF.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The doc-file-name is a string parameter which determines the name of the file. Note that the extension of the file is not required.
 	DocFileName *string `queryParam:"style=form,explode=true,name=doc-file-name"`
 	// The doc-url-expires-in is a numerical parameter which takes integers and describes after how many seconds the provided URL is available to download the document.
@@ -48,19 +47,8 @@ type CompileQueryParams struct {
 	LatexRuns *int64 `queryParam:"style=form,explode=true,name=latex-runs "`
 	// The main-file-name is a string parameter which identifies the main file to compile.
 	MainFileName *string `queryParam:"style=form,explode=true,name=main-file-name"`
-}
-
-type CompileHeaders struct {
-	// Should be set to "application/json"
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CompileRequest struct {
-	PathParams  CompilePathParams
-	QueryParams CompileQueryParams
-	Headers     CompileHeaders
-	// Post the dynamic data for the template to compile the document PDF.
-	Request map[string]interface{} `request:"mediaType=application/json"`
+	// The template-token is available in your template settings after publishing your template.
+	TemplateToken string `pathParam:"style=simple,explode=false,name=template-token"`
 }
 
 type CompileResponse struct {

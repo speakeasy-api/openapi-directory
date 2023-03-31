@@ -10,10 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetSchedulesScheduleASubIDPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
 type GetSchedulesScheduleASubIDContributorTypeEnum string
 
 const (
@@ -181,7 +177,7 @@ func (e *GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum) UnmarshalJSON(dat
 	}
 }
 
-type GetSchedulesScheduleASubIDQueryParams struct {
+type GetSchedulesScheduleASubIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -278,7 +274,8 @@ type GetSchedulesScheduleASubIDQueryParams struct {
 	// Hide null values on sorted column(s).
 	SortHideNull *bool `queryParam:"style=form,explode=true,name=sort_hide_null"`
 	// Toggle that filters out all rows having sort column that is non-null
-	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
+	SortNullOnly *bool  `queryParam:"style=form,explode=true,name=sort_null_only"`
+	SubID        string `pathParam:"style=simple,explode=false,name=sub_id"`
 	// This is a two-year period that is derived from the year a transaction took place in the
 	// Itemized Schedule A and Schedule B tables. In cases where we have the date of the transaction
 	// (contribution_receipt_date in schedules/schedule_a, disbursement_date in schedules/schedule_b)
@@ -288,11 +285,6 @@ type GetSchedulesScheduleASubIDQueryParams struct {
 	// specified, the results default to the most current cycle.
 	//
 	TwoYearTransactionPeriod []int `queryParam:"style=form,explode=true,name=two_year_transaction_period"`
-}
-
-type GetSchedulesScheduleASubIDRequest struct {
-	PathParams  GetSchedulesScheduleASubIDPathParams
-	QueryParams GetSchedulesScheduleASubIDQueryParams
 }
 
 type GetSchedulesScheduleASubIDResponse struct {

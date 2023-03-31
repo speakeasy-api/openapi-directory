@@ -36,22 +36,14 @@ func (e *WorkTypeAPISearchQueryOptionsOrderEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type WorkTypeAPISearchQueryParams struct {
+type WorkTypeAPISearchRequest struct {
 	QueryOptionsOrder    *WorkTypeAPISearchQueryOptionsOrderEnum `queryParam:"style=form,explode=true,name=queryOptions.order"`
 	QueryOptionsOrderBy  *string                                 `queryParam:"style=form,explode=true,name=queryOptions.orderBy"`
 	QueryOptionsPage     *int                                    `queryParam:"style=form,explode=true,name=queryOptions.page"`
 	QueryOptionsPageSize *int                                    `queryParam:"style=form,explode=true,name=queryOptions.pageSize"`
 	QueryOptionsQuery    *string                                 `queryParam:"style=form,explode=true,name=queryOptions.query"`
-}
-
-type WorkTypeAPISearchHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type WorkTypeAPISearchRequest struct {
-	QueryParams WorkTypeAPISearchQueryParams
-	Headers     WorkTypeAPISearchHeaders
+	XAuthKey             string                                  `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret          string                                  `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type WorkTypeAPISearchResponse struct {

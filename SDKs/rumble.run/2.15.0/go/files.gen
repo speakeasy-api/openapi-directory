@@ -146,7 +146,6 @@ pkg/models/shared/censyscredentialfields.go
 pkg/models/shared/snmpv2communitiescredentialfields.go
 pkg/models/shared/snmpv3credentialfields.go
 pkg/models/shared/vmwarecredentialfields.go
-pkg/models/shared/security.go
 pkg/models/shared/group.go
 pkg/models/shared/grouppost.go
 pkg/models/shared/groupmapping.go

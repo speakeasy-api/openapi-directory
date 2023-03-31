@@ -8,11 +8,11 @@ import (
 )
 
 type ListCustomInstrumentsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCustomInstrumentsQueryParams struct {
+type ListCustomInstrumentsRequest struct {
 	// Show instruments with the specified ID
 	ID []string `queryParam:"style=form,explode=true,name=id"`
 	// Show instruments with the specified name (case-sensitive)
@@ -23,11 +23,6 @@ type ListCustomInstrumentsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Show instruments with the specified tag, such as Percussion or Strings (case-sensitive)
 	Tag *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type ListCustomInstrumentsRequest struct {
-	QueryParams ListCustomInstrumentsQueryParams
-	Security    ListCustomInstrumentsSecurity
 }
 
 type ListCustomInstrumentsResponse struct {

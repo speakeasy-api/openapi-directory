@@ -31,11 +31,11 @@ func newExternalAmbassadorAPI(defaultClient, securityClient HTTPClient, serverUR
 	}
 }
 
-func (s *externalAmbassadorAPI) PredictJSON(ctx context.Context, request operations.PredictJSONRequest) (*operations.PredictJSONResponse, error) {
+func (s *externalAmbassadorAPI) PredictJSON(ctx context.Context, request operations.PredictJSONRequest, security operations.PredictJSONSecurity) (*operations.PredictJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SeldonMessage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *externalAmbassadorAPI) PredictJSON(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,11 +83,11 @@ func (s *externalAmbassadorAPI) PredictJSON(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *externalAmbassadorAPI) PredictRaw(ctx context.Context, request operations.PredictRawRequest) (*operations.PredictRawResponse, error) {
+func (s *externalAmbassadorAPI) PredictRaw(ctx context.Context, request operations.PredictRawRequest, security operations.PredictRawSecurity) (*operations.PredictRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -102,7 +102,7 @@ func (s *externalAmbassadorAPI) PredictRaw(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *externalAmbassadorAPI) PredictRaw(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *externalAmbassadorAPI) PredictString(ctx context.Context, request operations.PredictStringRequest) (*operations.PredictStringResponse, error) {
+func (s *externalAmbassadorAPI) PredictString(ctx context.Context, request operations.PredictStringRequest, security operations.PredictStringSecurity) (*operations.PredictStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -154,7 +154,7 @@ func (s *externalAmbassadorAPI) PredictString(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -187,11 +187,11 @@ func (s *externalAmbassadorAPI) PredictString(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *externalAmbassadorAPI) SendFeedback(ctx context.Context, request operations.SendFeedbackRequest) (*operations.SendFeedbackResponse, error) {
+func (s *externalAmbassadorAPI) SendFeedback(ctx context.Context, request operations.SendFeedbackRequest, security operations.SendFeedbackSecurity) (*operations.SendFeedbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Feedback", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,7 +206,7 @@ func (s *externalAmbassadorAPI) SendFeedback(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

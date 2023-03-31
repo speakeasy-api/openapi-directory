@@ -35,9 +35,9 @@ func newMiscellaneous(defaultClient, securityClient HTTPClient, serverURL, langu
 // Adds an item to a Subscription (formerly Recurrence).
 func (s *miscellaneous) Addrecurrenceitem(ctx context.Context, request operations.AddrecurrenceitemRequest) (*operations.AddrecurrenceitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *miscellaneous) Addrecurrenceitem(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -90,9 +90,9 @@ func (s *miscellaneous) GetRecurrencebyemail(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,14 +125,14 @@ func (s *miscellaneous) GetRecurrencebyemail(ctx context.Context, request operat
 // Retrieves a given Subscription (formerly recurrence) by recurrenceId.
 func (s *miscellaneous) GetRecurrencebyrecurrenceID(ctx context.Context, request operations.GetRecurrencebyrecurrenceIDRequest) (*operations.GetRecurrencebyrecurrenceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -163,14 +163,14 @@ func (s *miscellaneous) GetRecurrencebyrecurrenceID(ctx context.Context, request
 // Lists payment accounts of a given Subscription (formerly Recurrence) by recurrenceId.
 func (s *miscellaneous) Getpaymentaccounts(ctx context.Context, request operations.GetpaymentaccountsRequest) (*operations.GetpaymentaccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceid}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceid}/accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -201,14 +201,14 @@ func (s *miscellaneous) Getpaymentaccounts(ctx context.Context, request operatio
 // Retrieves the addresses attached to a given subscription (formerly recurrence) by recurrenceId.
 func (s *miscellaneous) Getrecurrenceaddresses(ctx context.Context, request operations.GetrecurrenceaddressesRequest) (*operations.GetrecurrenceaddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/addresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -246,7 +246,7 @@ func (s *miscellaneous) Getrecurrencesettings(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -284,7 +284,7 @@ func (s *miscellaneous) Getselfrecurrence(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -315,9 +315,9 @@ func (s *miscellaneous) Getselfrecurrence(ctx context.Context, request operation
 // Alters the frequency of a given Subscription (formerly Recurrence) by changing period and interval.
 func (s *miscellaneous) Reindexrecurrence(ctx context.Context, request operations.ReindexrecurrenceRequest) (*operations.ReindexrecurrenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/reindex", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/reindex", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -332,7 +332,7 @@ func (s *miscellaneous) Reindexrecurrence(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -363,9 +363,9 @@ func (s *miscellaneous) Reindexrecurrence(ctx context.Context, request operation
 // Updates partial information of a given subscription (formerly Recurrence).
 func (s *miscellaneous) Updatepartialrecurrence(ctx context.Context, request operations.UpdatepartialrecurrenceRequest) (*operations.UpdatepartialrecurrenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatepartialrecurrenceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -380,7 +380,7 @@ func (s *miscellaneous) Updatepartialrecurrence(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -413,7 +413,7 @@ func (s *miscellaneous) Updaterecurrence(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdaterecurrenceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -428,7 +428,7 @@ func (s *miscellaneous) Updaterecurrence(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -461,7 +461,7 @@ func (s *miscellaneous) Updaterecurrencesettings(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscriptions/settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdaterecurrencesettingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -476,7 +476,7 @@ func (s *miscellaneous) Updaterecurrencesettings(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

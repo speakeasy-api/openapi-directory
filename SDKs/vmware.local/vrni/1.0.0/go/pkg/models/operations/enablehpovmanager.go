@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type EnableHpovManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type EnableHpovManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type EnableHpovManagerRequest struct {
-	PathParams EnableHpovManagerPathParams
-	Security   EnableHpovManagerSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type EnableHpovManagerResponse struct {

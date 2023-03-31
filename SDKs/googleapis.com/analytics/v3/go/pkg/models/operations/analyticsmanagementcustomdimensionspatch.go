@@ -8,22 +8,18 @@ import (
 )
 
 type AnalyticsManagementCustomDimensionsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementCustomDimensionsPatchPathParams struct {
+type AnalyticsManagementCustomDimensionsPatchRequest struct {
+	CustomDimensionInput *shared.CustomDimensionInput `request:"mediaType=application/json"`
 	// Account ID for the custom dimension to update.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Custom dimension ID for the custom dimension to update.
-	CustomDimensionID string `pathParam:"style=simple,explode=false,name=customDimensionId"`
-	// Web property ID for the custom dimension to update.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementCustomDimensionsPatchQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom dimension ID for the custom dimension to update.
+	CustomDimensionID string `pathParam:"style=simple,explode=false,name=customDimensionId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Force the update and ignore any warnings related to the custom dimension being linked to a custom data source / data set.
@@ -38,13 +34,8 @@ type AnalyticsManagementCustomDimensionsPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementCustomDimensionsPatchRequest struct {
-	PathParams  AnalyticsManagementCustomDimensionsPatchPathParams
-	QueryParams AnalyticsManagementCustomDimensionsPatchQueryParams
-	Request     *shared.CustomDimensionInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementCustomDimensionsPatchSecurity
+	// Web property ID for the custom dimension to update.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementCustomDimensionsPatchResponse struct {

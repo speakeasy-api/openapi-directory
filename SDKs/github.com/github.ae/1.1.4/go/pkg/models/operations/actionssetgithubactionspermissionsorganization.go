@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetGithubActionsPermissionsOrganizationPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsSetGithubActionsPermissionsOrganizationRequestBody struct {
 	// The permissions policy that controls the actions that are allowed to run.
 	AllowedActions *shared.AllowedActionsEnum `json:"allowed_actions,omitempty"`
@@ -20,8 +15,9 @@ type ActionsSetGithubActionsPermissionsOrganizationRequestBody struct {
 }
 
 type ActionsSetGithubActionsPermissionsOrganizationRequest struct {
-	PathParams ActionsSetGithubActionsPermissionsOrganizationPathParams
-	Request    ActionsSetGithubActionsPermissionsOrganizationRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetGithubActionsPermissionsOrganizationRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsSetGithubActionsPermissionsOrganizationResponse struct {

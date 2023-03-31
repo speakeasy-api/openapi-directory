@@ -35,14 +35,14 @@ func newChargeRevenueSummaries(defaultClient, securityClient HTTPClient, serverU
 // Retrieves the details of a charge revenue summary by specifying the charge revenue summary number. The response includes all revenue items associated with the charge revenue summary.
 func (s *chargeRevenueSummaries) GETCRSByCRSNumber(ctx context.Context, request operations.GETCRSByCRSNumberRequest) (*operations.GETCRSByCRSNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/charge-revenue-summaries/{crs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/charge-revenue-summaries/{crs-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -84,14 +84,14 @@ func (s *chargeRevenueSummaries) GETCRSByCRSNumber(ctx context.Context, request 
 // Retrieves the details of a charge revenue summary by specifying the subscription charge ID. This response retrieves all revenue items associated with a charge revenue summary.
 func (s *chargeRevenueSummaries) GETCRSByChargeID(ctx context.Context, request operations.GETCRSByChargeIDRequest) (*operations.GETCRSByChargeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/charge-revenue-summaries/subscription-charges/{charge-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/charge-revenue-summaries/subscription-charges/{charge-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

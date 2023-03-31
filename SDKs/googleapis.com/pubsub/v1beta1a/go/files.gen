@@ -28,10 +28,9 @@ pkg/models/operations/pubsubtopicsget.go
 pkg/models/operations/pubsubtopicslist.go
 pkg/models/operations/pubsubtopicspublish.go
 pkg/models/operations/pubsubtopicspublishbatch.go
-pkg/models/shared/acknowledgerequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/acknowledgerequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/subscription.go
 pkg/models/shared/pushconfig.go
 pkg/models/shared/listsubscriptionsresponse.go

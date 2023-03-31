@@ -33,11 +33,11 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DriveFilesCopy - Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied.
-func (s *files) DriveFilesCopy(ctx context.Context, request operations.DriveFilesCopyRequest) (*operations.DriveFilesCopyResponse, error) {
+func (s *files) DriveFilesCopy(ctx context.Context, request operations.DriveFilesCopyRequest, security operations.DriveFilesCopySecurity) (*operations.DriveFilesCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/copy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/copy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *files) DriveFilesCopy(ctx context.Context, request operations.DriveFile
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *files) DriveFilesCopy(ctx context.Context, request operations.DriveFile
 }
 
 // DriveFilesCreate - Creates a file.
-func (s *files) DriveFilesCreate(ctx context.Context, request operations.DriveFilesCreateRequest) (*operations.DriveFilesCreateResponse, error) {
+func (s *files) DriveFilesCreate(ctx context.Context, request operations.DriveFilesCreateRequest, security operations.DriveFilesCreateSecurity) (*operations.DriveFilesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *files) DriveFilesCreate(ctx context.Context, request operations.DriveFi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *files) DriveFilesCreate(ctx context.Context, request operations.DriveFi
 }
 
 // DriveFilesDelete - Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. If the target is a folder, all descendants owned by the user are also deleted.
-func (s *files) DriveFilesDelete(ctx context.Context, request operations.DriveFilesDeleteRequest) (*operations.DriveFilesDeleteResponse, error) {
+func (s *files) DriveFilesDelete(ctx context.Context, request operations.DriveFilesDeleteRequest, security operations.DriveFilesDeleteSecurity) (*operations.DriveFilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,7 +182,7 @@ func (s *files) DriveFilesDelete(ctx context.Context, request operations.DriveFi
 }
 
 // DriveFilesEmptyTrash - Permanently deletes all of the user's trashed files.
-func (s *files) DriveFilesEmptyTrash(ctx context.Context, request operations.DriveFilesEmptyTrashRequest) (*operations.DriveFilesEmptyTrashResponse, error) {
+func (s *files) DriveFilesEmptyTrash(ctx context.Context, request operations.DriveFilesEmptyTrashRequest, security operations.DriveFilesEmptyTrashSecurity) (*operations.DriveFilesEmptyTrashResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files/trash"
 
@@ -191,11 +191,11 @@ func (s *files) DriveFilesEmptyTrash(ctx context.Context, request operations.Dri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,20 +221,20 @@ func (s *files) DriveFilesEmptyTrash(ctx context.Context, request operations.Dri
 }
 
 // DriveFilesExport - Exports a Google Workspace document to the requested MIME type and returns exported byte content. Note that the exported content is limited to 10MB.
-func (s *files) DriveFilesExport(ctx context.Context, request operations.DriveFilesExportRequest) (*operations.DriveFilesExportResponse, error) {
+func (s *files) DriveFilesExport(ctx context.Context, request operations.DriveFilesExportRequest, security operations.DriveFilesExportSecurity) (*operations.DriveFilesExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -260,7 +260,7 @@ func (s *files) DriveFilesExport(ctx context.Context, request operations.DriveFi
 }
 
 // DriveFilesGenerateIds - Generates a set of file IDs which can be provided in create or copy requests.
-func (s *files) DriveFilesGenerateIds(ctx context.Context, request operations.DriveFilesGenerateIdsRequest) (*operations.DriveFilesGenerateIdsResponse, error) {
+func (s *files) DriveFilesGenerateIds(ctx context.Context, request operations.DriveFilesGenerateIdsRequest, security operations.DriveFilesGenerateIdsSecurity) (*operations.DriveFilesGenerateIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files/generateIds"
 
@@ -269,11 +269,11 @@ func (s *files) DriveFilesGenerateIds(ctx context.Context, request operations.Dr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,20 +308,20 @@ func (s *files) DriveFilesGenerateIds(ctx context.Context, request operations.Dr
 }
 
 // DriveFilesGet - Gets a file's metadata or content by ID.
-func (s *files) DriveFilesGet(ctx context.Context, request operations.DriveFilesGetRequest) (*operations.DriveFilesGetResponse, error) {
+func (s *files) DriveFilesGet(ctx context.Context, request operations.DriveFilesGetRequest, security operations.DriveFilesGetSecurity) (*operations.DriveFilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -356,7 +356,7 @@ func (s *files) DriveFilesGet(ctx context.Context, request operations.DriveFiles
 }
 
 // DriveFilesList - Lists or searches files.
-func (s *files) DriveFilesList(ctx context.Context, request operations.DriveFilesListRequest) (*operations.DriveFilesListResponse, error) {
+func (s *files) DriveFilesList(ctx context.Context, request operations.DriveFilesListRequest, security operations.DriveFilesListSecurity) (*operations.DriveFilesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files"
 
@@ -365,11 +365,11 @@ func (s *files) DriveFilesList(ctx context.Context, request operations.DriveFile
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,20 +404,20 @@ func (s *files) DriveFilesList(ctx context.Context, request operations.DriveFile
 }
 
 // DriveFilesListLabels - Lists the labels on a file.
-func (s *files) DriveFilesListLabels(ctx context.Context, request operations.DriveFilesListLabelsRequest) (*operations.DriveFilesListLabelsResponse, error) {
+func (s *files) DriveFilesListLabels(ctx context.Context, request operations.DriveFilesListLabelsRequest, security operations.DriveFilesListLabelsSecurity) (*operations.DriveFilesListLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/listLabels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/listLabels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -452,11 +452,11 @@ func (s *files) DriveFilesListLabels(ctx context.Context, request operations.Dri
 }
 
 // DriveFilesModifyLabels - Modifies the set of labels on a file.
-func (s *files) DriveFilesModifyLabels(ctx context.Context, request operations.DriveFilesModifyLabelsRequest) (*operations.DriveFilesModifyLabelsResponse, error) {
+func (s *files) DriveFilesModifyLabels(ctx context.Context, request operations.DriveFilesModifyLabelsRequest, security operations.DriveFilesModifyLabelsSecurity) (*operations.DriveFilesModifyLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/modifyLabels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/modifyLabels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyLabelsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -468,11 +468,11 @@ func (s *files) DriveFilesModifyLabels(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,11 +507,11 @@ func (s *files) DriveFilesModifyLabels(ctx context.Context, request operations.D
 }
 
 // DriveFilesUpdate - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might change automatically, such as modifiedDate. This method supports patch semantics.
-func (s *files) DriveFilesUpdate(ctx context.Context, request operations.DriveFilesUpdateRequest) (*operations.DriveFilesUpdateResponse, error) {
+func (s *files) DriveFilesUpdate(ctx context.Context, request operations.DriveFilesUpdateRequest, security operations.DriveFilesUpdateSecurity) (*operations.DriveFilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,11 +523,11 @@ func (s *files) DriveFilesUpdate(ctx context.Context, request operations.DriveFi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,11 +562,11 @@ func (s *files) DriveFilesUpdate(ctx context.Context, request operations.DriveFi
 }
 
 // DriveFilesWatch - Subscribes to changes to a file. While you can establish a channel for changes to a file on a shared drive, a change to a shared drive file won't create a notification.
-func (s *files) DriveFilesWatch(ctx context.Context, request operations.DriveFilesWatchRequest) (*operations.DriveFilesWatchResponse, error) {
+func (s *files) DriveFilesWatch(ctx context.Context, request operations.DriveFilesWatchRequest, security operations.DriveFilesWatchSecurity) (*operations.DriveFilesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -578,11 +578,11 @@ func (s *files) DriveFilesWatch(ctx context.Context, request operations.DriveFil
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

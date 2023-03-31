@@ -33,16 +33,12 @@ func (e *ProBowlersFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProBowlersPathParams struct {
+type ProBowlersRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProBowlersFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season
 	// <br>Examples: <code>2016</code>, <code>2017</code>
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type ProBowlersRequest struct {
-	PathParams ProBowlersPathParams
 }
 
 type ProBowlersResponse struct {

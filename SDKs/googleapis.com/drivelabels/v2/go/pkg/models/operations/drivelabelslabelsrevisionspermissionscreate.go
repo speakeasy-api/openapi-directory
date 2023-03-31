@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsLabelsRevisionsPermissionsCreatePathParams struct {
-	// Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsCreateQueryParams struct {
+type DrivelabelsLabelsRevisionsPermissionsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                            *shared.XgafvEnum                              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleAppsDriveLabelsV2LabelPermission *shared.GoogleAppsDriveLabelsV2LabelPermission `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type DrivelabelsLabelsRevisionsPermissionsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -37,12 +35,6 @@ type DrivelabelsLabelsRevisionsPermissionsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Set to `true` in order to use the user's admin credentials. The server will verify the user is an admin for the Label before allowing access.
 	UseAdminAccess *bool `queryParam:"style=form,explode=true,name=useAdminAccess"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsCreateRequest struct {
-	PathParams  DrivelabelsLabelsRevisionsPermissionsCreatePathParams
-	QueryParams DrivelabelsLabelsRevisionsPermissionsCreateQueryParams
-	Request     *shared.GoogleAppsDriveLabelsV2LabelPermission `request:"mediaType=application/json"`
 }
 
 type DrivelabelsLabelsRevisionsPermissionsCreateResponse struct {

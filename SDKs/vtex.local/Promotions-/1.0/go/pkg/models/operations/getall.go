@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetallHeaders struct {
+type GetallRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept      string `header:"style=simple,explode=false,name=Accept"`
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetallRequest struct {
-	Headers GetallHeaders
 }
 
 // Getall200ApplicationJSON - Object with information about the coupon.

@@ -7,18 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupApplicationsPathParams struct {
-	// The unique identifier of the group in Noyo
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type GetGroupApplicationsQueryParams struct {
+type GetGroupApplicationsRequest struct {
 	// The application type used to filter results
 	ApplicationType *string `queryParam:"style=form,explode=true,name=application_type"`
 	// The associated carrier group ID used to filter results
 	CarrierGroupID *string `queryParam:"style=form,explode=true,name=carrier_group_id"`
 	// The associated carrier ID used to filter results
 	CarrierID *string `queryParam:"style=form,explode=true,name=carrier_id"`
+	// The unique identifier of the group in Noyo
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 	// The integer offset at which to start the page. Possible values are 0 to total_records - 1
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// The max size of each page of results
@@ -29,11 +26,6 @@ type GetGroupApplicationsQueryParams struct {
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
 	// The application status used to filter results
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetGroupApplicationsRequest struct {
-	PathParams  GetGroupApplicationsPathParams
-	QueryParams GetGroupApplicationsQueryParams
 }
 
 type GetGroupApplicationsResponse struct {

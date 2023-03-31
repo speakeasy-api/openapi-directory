@@ -10,15 +10,6 @@ import (
 	"time"
 )
 
-type PullsListReviewCommentsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsListReviewCommentsDirectionEnum - The direction to sort results. Ignored without `sort` parameter.
 type PullsListReviewCommentsDirectionEnum string
 
@@ -43,22 +34,23 @@ func (e *PullsListReviewCommentsDirectionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type PullsListReviewCommentsQueryParams struct {
+type PullsListReviewCommentsRequest struct {
 	// The direction to sort results. Ignored without `sort` parameter.
 	Direction *PullsListReviewCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
 	// The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
 	Sort *shared.SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type PullsListReviewCommentsRequest struct {
-	PathParams  PullsListReviewCommentsPathParams
-	QueryParams PullsListReviewCommentsQueryParams
 }
 
 type PullsListReviewCommentsResponse struct {

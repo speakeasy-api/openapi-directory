@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetglobaltimeRequest(
-    query_params=operations.GetglobaltimeQueryParams(
-        license="quo",
-        locale="ea",
-    ),
+    license="corrupti",
+    locale="provident",
 )
     
 res = s.current_global_time.getglobaltime(req)

@@ -8,23 +8,14 @@ import (
 )
 
 type GetTeamEventsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetTeamEventsPathParams struct {
-	// TBA Team Key, eg `frc254`
-	TeamKey string `pathParam:"style=simple,explode=false,name=team_key"`
-}
-
-type GetTeamEventsHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetTeamEventsRequest struct {
-	PathParams GetTeamEventsPathParams
-	Headers    GetTeamEventsHeaders
-	Security   GetTeamEventsSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// TBA Team Key, eg `frc254`
+	TeamKey string `pathParam:"style=simple,explode=false,name=team_key"`
 }
 
 type GetTeamEventsResponse struct {

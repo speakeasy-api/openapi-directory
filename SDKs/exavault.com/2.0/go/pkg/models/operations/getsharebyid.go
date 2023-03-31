@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetShareByIDPathParams struct {
-	// ID of the share entry
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetShareByIDQueryParams struct {
-	// Comma separated list of relationships to include in response. Possible values are **owner**, **resources**, **notifications**, **activity**.
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetShareByIDHeaders struct {
+type GetShareByIDRequest struct {
 	// Access Token
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetShareByIDRequest struct {
-	PathParams  GetShareByIDPathParams
-	QueryParams GetShareByIDQueryParams
-	Headers     GetShareByIDHeaders
+	// ID of the share entry
+	ID int `pathParam:"style=simple,explode=false,name=id"`
+	// Comma separated list of relationships to include in response. Possible values are **owner**, **resources**, **notifications**, **activity**.
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetShareByIDResponse struct {

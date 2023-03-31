@@ -12,18 +12,13 @@ var FetchDomainCertV4ServerList = []string{
 }
 
 type FetchDomainCertV4Security struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDomainCertV4PathParams struct {
-	// Unique string used to identify the domain that this certificate should be associated with.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDomainCertV4Request struct {
-	PathParams FetchDomainCertV4PathParams
-	Security   FetchDomainCertV4Security
-	ServerURL  *string
+	// Unique string used to identify the domain that this certificate should be associated with.
+	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 }
 
 type FetchDomainCertV4Response struct {

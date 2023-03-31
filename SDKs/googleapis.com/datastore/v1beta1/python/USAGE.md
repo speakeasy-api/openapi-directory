@@ -4,53 +4,50 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatastoreProjectsExportRequest(
-    security=operations.DatastoreProjectsExportSecurity(
-        option1=operations.DatastoreProjectsExportSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.DatastoreProjectsExportPathParams(
-        project_id="sint",
-    ),
-    query_params=operations.DatastoreProjectsExportQueryParams(
-        dollar_xgafv="2",
-        access_token="odio",
-        alt="proto",
-        callback="reiciendis",
-        fields="velit",
-        key="non",
-        oauth_token="in",
-        pretty_print=False,
-        quota_user="omnis",
-        upload_type="enim",
-        upload_protocol="aspernatur",
-    ),
-    request=shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest(
+    dollar_xgafv="2",
+    google_datastore_admin_v1beta1_export_entities_request=shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest(
         entity_filter=shared.GoogleDatastoreAdminV1beta1EntityFilter(
             kinds=[
-                "blanditiis",
+                "distinctio",
+                "quibusdam",
+                "unde",
             ],
             namespace_ids=[
-                "voluptas",
-                "perspiciatis",
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
             ],
         ),
         labels={
-            "explicabo": "ut",
-            "consequuntur": "tenetur",
+            "suscipit": "iure",
+            "magnam": "debitis",
+            "ipsa": "delectus",
         },
-        output_url_prefix="eos",
+        output_url_prefix="tempora",
     ),
+    access_token="suscipit",
+    alt="media",
+    callback="minus",
+    fields_="placeat",
+    key="voluptatum",
+    oauth_token="iusto",
+    pretty_print=False,
+    project_id="excepturi",
+    quota_user="nisi",
+    upload_type="recusandae",
+    upload_protocol="temporibus",
 )
     
-res = s.projects.datastore_projects_export(req)
+res = s.projects.datastore_projects_export(req, operations.DatastoreProjectsExportSecurity(
+    option1=operations.DatastoreProjectsExportSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.google_longrunning_operation is not None:
     # handle response

@@ -33,7 +33,7 @@ func newSignupUrls(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AndroidmanagementSignupUrlsCreate - Creates an enterprise signup URL.
-func (s *signupUrls) AndroidmanagementSignupUrlsCreate(ctx context.Context, request operations.AndroidmanagementSignupUrlsCreateRequest) (*operations.AndroidmanagementSignupUrlsCreateResponse, error) {
+func (s *signupUrls) AndroidmanagementSignupUrlsCreate(ctx context.Context, request operations.AndroidmanagementSignupUrlsCreateRequest, security operations.AndroidmanagementSignupUrlsCreateSecurity) (*operations.AndroidmanagementSignupUrlsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/signupUrls"
 
@@ -42,11 +42,11 @@ func (s *signupUrls) AndroidmanagementSignupUrlsCreate(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

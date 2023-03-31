@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAnAccountPathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
 type UpdateAnAccountRequest struct {
-	PathParams UpdateAnAccountPathParams
-	Request    shared.UpdateAnAccountParameters `request:"mediaType=application/json"`
+	AccountID                 string                           `pathParam:"style=simple,explode=false,name=account_id"`
+	UpdateAnAccountParameters shared.UpdateAnAccountParameters `request:"mediaType=application/json"`
 }
 
 type UpdateAnAccountDefaultApplicationJSON13StatusEnum string

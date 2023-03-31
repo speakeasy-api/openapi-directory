@@ -8,18 +8,13 @@ import (
 )
 
 type PhoneCodeSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PhoneCodePathParams struct {
-	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
-	PhoneNumber string `pathParam:"style=simple,explode=false,name=phoneNumber"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type PhoneCodeRequest struct {
-	PathParams PhoneCodePathParams
-	Security   PhoneCodeSecurity
+	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
+	PhoneNumber string `pathParam:"style=simple,explode=false,name=phoneNumber"`
 }
 
 type PhoneCodeResponse struct {

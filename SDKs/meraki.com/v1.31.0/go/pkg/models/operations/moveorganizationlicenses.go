@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type MoveOrganizationLicensesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type MoveOrganizationLicensesRequestBody struct {
 	// The ID of the organization to move the licenses to
 	DestOrganizationID string `json:"destOrganizationId"`
@@ -18,8 +14,8 @@ type MoveOrganizationLicensesRequestBody struct {
 }
 
 type MoveOrganizationLicensesRequest struct {
-	PathParams MoveOrganizationLicensesPathParams
-	Request    MoveOrganizationLicensesRequestBody `request:"mediaType=application/json"`
+	RequestBody    MoveOrganizationLicensesRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                              `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // MoveOrganizationLicenses200ApplicationJSON - Successful operation

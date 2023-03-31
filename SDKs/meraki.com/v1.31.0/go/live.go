@@ -34,7 +34,7 @@ func newLive(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Returns live state from camera of analytics zones
 func (s *live) GetDeviceCameraAnalyticsLive(ctx context.Context, request operations.GetDeviceCameraAnalyticsLiveRequest) (*operations.GetDeviceCameraAnalyticsLiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/live", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/live", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,41 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.RuntimeconfigProjectsConfigsCreateRequest{
-        Security: operations.RuntimeconfigProjectsConfigsCreateSecurity{
-            Option1: &operations.RuntimeconfigProjectsConfigsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        RuntimeConfig: &shared.RuntimeConfig{
+            Description: "provident",
+            Name: "distinctio",
         },
-        PathParams: operations.RuntimeconfigProjectsConfigsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.RuntimeconfigProjectsConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            RequestID: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.RuntimeConfig{
-            Description: "iure",
-            Name: "magnam",
-        },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        Parent: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        RequestID: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.RuntimeconfigProjectsConfigsCreate(ctx, req)
+    res, err := s.Projects.RuntimeconfigProjectsConfigsCreate(ctx, req, operations.RuntimeconfigProjectsConfigsCreateSecurity{
+        Option1: &operations.RuntimeconfigProjectsConfigsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

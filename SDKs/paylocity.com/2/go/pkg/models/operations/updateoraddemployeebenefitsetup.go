@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateOrAddEmployeeBenefitSetupSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateOrAddEmployeeBenefitSetupPathParams struct {
+type UpdateOrAddEmployeeBenefitSetupRequest struct {
+	// BenefitSetup Model
+	BenefitSetup shared.BenefitSetup `request:"mediaType=application/json"`
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-}
-
-type UpdateOrAddEmployeeBenefitSetupRequest struct {
-	PathParams UpdateOrAddEmployeeBenefitSetupPathParams
-	// BenefitSetup Model
-	Request  shared.BenefitSetup `request:"mediaType=application/json"`
-	Security UpdateOrAddEmployeeBenefitSetupSecurity
 }
 
 type UpdateOrAddEmployeeBenefitSetupResponse struct {

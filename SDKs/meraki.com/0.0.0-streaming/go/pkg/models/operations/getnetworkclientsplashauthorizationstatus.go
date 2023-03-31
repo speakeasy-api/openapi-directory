@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientSplashAuthorizationStatusPathParams struct {
+type GetNetworkClientSplashAuthorizationStatusRequest struct {
 	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkClientSplashAuthorizationStatusRequest struct {
-	PathParams GetNetworkClientSplashAuthorizationStatusPathParams
 }
 
 type GetNetworkClientSplashAuthorizationStatusResponse struct {

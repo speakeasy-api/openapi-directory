@@ -53,7 +53,7 @@ func (s *uk) AddressCleanse(ctx context.Context, request operations.AddressClean
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cleanse/addresses"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,7 +68,7 @@ func (s *uk) AddressCleanse(ctx context.Context, request operations.AddressClean
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -208,7 +208,7 @@ func (s *uk) Addresses(ctx context.Context, request operations.AddressesRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -298,14 +298,14 @@ func (s *uk) Addresses(ctx context.Context, request operations.AddressesRequest)
 // A small number of postcodes will return more than 100 premises. These may require pagination. Use `page` to paginate the result set.
 func (s *uk) Postcodes(ctx context.Context, request operations.PostcodesRequest) (*operations.PostcodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/postcodes/{postcode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/postcodes/{postcode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -386,14 +386,14 @@ func (s *uk) Postcodes(ctx context.Context, request operations.PostcodesRequest)
 // Test request undergo the usual authentication and restriction rules. This is to help surface any issues that occur during implementation and does not cost you a lookup.
 func (s *uk) Udprn(ctx context.Context, request operations.UDPRNRequest) (*operations.UDPRNResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/udprn/{udprn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/udprn/{udprn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -462,14 +462,14 @@ func (s *uk) Udprn(ctx context.Context, request operations.UDPRNRequest) (*opera
 // Per lookup charges apply. Empty responses are not charged.
 func (s *uk) Umprn(ctx context.Context, request operations.UMPRNRequest) (*operations.UMPRNResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/umprn/{umprn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/umprn/{umprn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

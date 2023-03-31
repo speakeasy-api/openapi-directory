@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetModelPropertyValuesQueryParams struct {
+type GetModelPropertyValuesRequest struct {
 	// string to search for in contributor of model
 	Contributor *string `queryParam:"style=form,explode=true,name=contributor"`
 	// string to search for in title of model
 	Title *string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type GetModelPropertyValuesRequest struct {
-	QueryParams GetModelPropertyValuesQueryParams
 }
 
 type GetModelPropertyValuesResponse struct {

@@ -36,7 +36,7 @@ func newPortfolioSimulation(defaultClient, securityClient HTTPClient, serverURL,
 //
 // References
 // * [Hillion, Pierre, The Ex-Ante Rebalancing Premium (March 11, 2016). INSEAD Working Paper No. 2016/15/FIN](https://ssrn.com/abstract=2746471)
-func (s *portfolioSimulation) PostPortfolioSimulationRebalancingDriftWeight(ctx context.Context, request operations.PostPortfolioSimulationRebalancingDriftWeightRequest) (*operations.PostPortfolioSimulationRebalancingDriftWeightResponse, error) {
+func (s *portfolioSimulation) PostPortfolioSimulationRebalancingDriftWeight(ctx context.Context, request operations.PostPortfolioSimulationRebalancingDriftWeightRequestBody) (*operations.PostPortfolioSimulationRebalancingDriftWeightResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/simulation/rebalancing/drift-weight"
 
@@ -94,7 +94,7 @@ func (s *portfolioSimulation) PostPortfolioSimulationRebalancingDriftWeight(ctx 
 //
 // References
 // * [Hillion, Pierre, The Ex-Ante Rebalancing Premium (March 11, 2016). INSEAD Working Paper No. 2016/15/FIN](https://ssrn.com/abstract=2746471)
-func (s *portfolioSimulation) PostPortfolioSimulationRebalancingFixedWeight(ctx context.Context, request operations.PostPortfolioSimulationRebalancingFixedWeightRequest) (*operations.PostPortfolioSimulationRebalancingFixedWeightResponse, error) {
+func (s *portfolioSimulation) PostPortfolioSimulationRebalancingFixedWeight(ctx context.Context, request operations.PostPortfolioSimulationRebalancingFixedWeightRequestBody) (*operations.PostPortfolioSimulationRebalancingFixedWeightResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/simulation/rebalancing/fixed-weight"
 
@@ -152,7 +152,7 @@ func (s *portfolioSimulation) PostPortfolioSimulationRebalancingFixedWeight(ctx 
 //
 // References
 // * [R Stein, Not fooled by randomness: Using random portfolios to analyse investment funds, Investment Analysts Journal, 43:79, 1-15, DOI: 10.1080/10293523.2014.11082564](https://www.tandfonline.com/doi/abs/10.1080/10293523.2014.11082564)
-func (s *portfolioSimulation) PostPortfolioSimulationRebalancingRandomWeight(ctx context.Context, request operations.PostPortfolioSimulationRebalancingRandomWeightRequest) (*operations.PostPortfolioSimulationRebalancingRandomWeightResponse, error) {
+func (s *portfolioSimulation) PostPortfolioSimulationRebalancingRandomWeight(ctx context.Context, request operations.PostPortfolioSimulationRebalancingRandomWeightRequestBody) (*operations.PostPortfolioSimulationRebalancingRandomWeightResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/simulation/rebalancing/random-weight"
 

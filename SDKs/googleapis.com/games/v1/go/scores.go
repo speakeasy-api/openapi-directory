@@ -33,20 +33,20 @@ func newScores(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GamesScoresGet - Get high scores, and optionally ranks, in leaderboards for the currently authenticated player. For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same request; only one parameter may be set to 'ALL'.
-func (s *scores) GamesScoresGet(ctx context.Context, request operations.GamesScoresGetRequest) (*operations.GamesScoresGetResponse, error) {
+func (s *scores) GamesScoresGet(ctx context.Context, request operations.GamesScoresGetRequest, security operations.GamesScoresGetSecurity) (*operations.GamesScoresGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/leaderboards/{leaderboardId}/scores/{timeSpan}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/leaderboards/{leaderboardId}/scores/{timeSpan}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *scores) GamesScoresGet(ctx context.Context, request operations.GamesSco
 }
 
 // GamesScoresList - Lists the scores in a leaderboard, starting from the top.
-func (s *scores) GamesScoresList(ctx context.Context, request operations.GamesScoresListRequest) (*operations.GamesScoresListResponse, error) {
+func (s *scores) GamesScoresList(ctx context.Context, request operations.GamesScoresListRequest, security operations.GamesScoresListSecurity) (*operations.GamesScoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *scores) GamesScoresList(ctx context.Context, request operations.GamesSc
 }
 
 // GamesScoresListWindow - Lists the scores in a leaderboard around (and including) a player's score.
-func (s *scores) GamesScoresListWindow(ctx context.Context, request operations.GamesScoresListWindowRequest) (*operations.GamesScoresListWindowResponse, error) {
+func (s *scores) GamesScoresListWindow(ctx context.Context, request operations.GamesScoresListWindowRequest, security operations.GamesScoresListWindowSecurity) (*operations.GamesScoresListWindowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/window/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/window/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,20 +177,20 @@ func (s *scores) GamesScoresListWindow(ctx context.Context, request operations.G
 }
 
 // GamesScoresSubmit - Submits a score to the specified leaderboard.
-func (s *scores) GamesScoresSubmit(ctx context.Context, request operations.GamesScoresSubmitRequest) (*operations.GamesScoresSubmitResponse, error) {
+func (s *scores) GamesScoresSubmit(ctx context.Context, request operations.GamesScoresSubmitRequest, security operations.GamesScoresSubmitSecurity) (*operations.GamesScoresSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,11 +225,11 @@ func (s *scores) GamesScoresSubmit(ctx context.Context, request operations.Games
 }
 
 // GamesScoresSubmitMultiple - Submits multiple scores to leaderboards.
-func (s *scores) GamesScoresSubmitMultiple(ctx context.Context, request operations.GamesScoresSubmitMultipleRequest) (*operations.GamesScoresSubmitMultipleResponse, error) {
+func (s *scores) GamesScoresSubmitMultiple(ctx context.Context, request operations.GamesScoresSubmitMultipleRequest, security operations.GamesScoresSubmitMultipleSecurity) (*operations.GamesScoresSubmitMultipleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/leaderboards/scores"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlayerScoreSubmissionList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -241,11 +241,11 @@ func (s *scores) GamesScoresSubmitMultiple(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

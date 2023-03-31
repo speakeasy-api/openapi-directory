@@ -35,7 +35,7 @@ func newRewardProgramActivation(defaultClient, securityClient HTTPClient, server
 
 // CreateRewardProgramActivation - Create a reward program activation
 // Create a reward program activation for a patient. There can only be one activation for a patient for a given reward program.
-func (s *rewardProgramActivation) CreateRewardProgramActivation(ctx context.Context, request operations.CreateRewardProgramActivationRequest) (*operations.CreateRewardProgramActivationResponse, error) {
+func (s *rewardProgramActivation) CreateRewardProgramActivation(ctx context.Context, request shared.CreateRewardProgramActivationRequestInput) (*operations.CreateRewardProgramActivationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reward_program_activation"
 
@@ -106,7 +106,7 @@ func (s *rewardProgramActivation) CreateRewardProgramActivation(ctx context.Cont
 // Get a reward program activationrecord by id.
 func (s *rewardProgramActivation) FetchRewardProgramActivation(ctx context.Context, request operations.FetchRewardProgramActivationRequest) (*operations.FetchRewardProgramActivationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_program_activation/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reward_program_activation/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *rewardProgramActivation) FetchRewardProgramActivations(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -34,14 +34,14 @@ func newOntol(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GetExtractOntologySubgraphResource - Extract a subgraph from an ontology
 func (s *ontol) GetExtractOntologySubgraphResource(ctx context.Context, request operations.GetExtractOntologySubgraphResourceRequest) (*operations.GetExtractOntologySubgraphResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -79,14 +79,14 @@ func (s *ontol) GetExtractOntologySubgraphResource(ctx context.Context, request 
 // e.g. all human disease-phenotype associations
 func (s *ontol) GetInformationContentResource(ctx context.Context, request operations.GetInformationContentResourceRequest) (*operations.GetInformationContentResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontol/information_content/{subject_category}/{object_category}/{subject_taxon}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ontol/information_content/{subject_category}/{object_category}/{subject_taxon}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,14 +118,14 @@ func (s *ontol) GetInformationContentResource(ctx context.Context, request opera
 // PostExtractOntologySubgraphResource - Extract a subgraph from an ontology
 func (s *ontol) PostExtractOntologySubgraphResource(ctx context.Context, request operations.PostExtractOntologySubgraphResourceRequest) (*operations.PostExtractOntologySubgraphResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

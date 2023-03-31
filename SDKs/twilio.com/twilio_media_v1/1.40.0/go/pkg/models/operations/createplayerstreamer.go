@@ -14,7 +14,8 @@ var CreatePlayerStreamerServerList = []string{
 }
 
 type CreatePlayerStreamerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreatePlayerStreamerCreatePlayerStreamerRequestStatusCallbackMethodEnum - The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.
@@ -62,12 +63,6 @@ type CreatePlayerStreamerCreatePlayerStreamerRequest struct {
 	StatusCallbackMethod *CreatePlayerStreamerCreatePlayerStreamerRequestStatusCallbackMethodEnum `form:"name=StatusCallbackMethod"`
 	// Specifies whether the PlayerStreamer is configured to stream video. Defaults to `true`.
 	Video *bool `form:"name=Video"`
-}
-
-type CreatePlayerStreamerRequest struct {
-	Request   *CreatePlayerStreamerCreatePlayerStreamerRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreatePlayerStreamerSecurity
-	ServerURL *string
 }
 
 type CreatePlayerStreamerResponse struct {

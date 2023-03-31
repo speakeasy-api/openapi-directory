@@ -48,6 +48,7 @@ pkg/models/operations/dataprocprojectsregionsworkflowtemplatestestiampermissions
 pkg/models/operations/dataprocprojectsregionsworkflowtemplatesupdate.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batch.go
 pkg/models/shared/sparksqlbatch.go
 pkg/models/shared/sparkrbatch.go
@@ -61,9 +62,7 @@ pkg/models/shared/environmentconfig.go
 pkg/models/shared/peripheralsconfig.go
 pkg/models/shared/sparkhistoryserverconfig.go
 pkg/models/shared/executionconfig.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listbatchesresponse.go
 pkg/models/shared/statehistory.go
 pkg/models/shared/autoscalingpolicy.go

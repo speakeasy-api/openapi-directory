@@ -8,22 +8,19 @@ import (
 )
 
 type BooksMylibraryAnnotationsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksMylibraryAnnotationsDeletePathParams struct {
-	// The ID for the annotation to delete.
-	AnnotationID string `pathParam:"style=simple,explode=false,name=annotationId"`
-}
-
-type BooksMylibraryAnnotationsDeleteQueryParams struct {
+type BooksMylibraryAnnotationsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID for the annotation to delete.
+	AnnotationID string `pathParam:"style=simple,explode=false,name=annotationId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -42,12 +39,6 @@ type BooksMylibraryAnnotationsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksMylibraryAnnotationsDeleteRequest struct {
-	PathParams  BooksMylibraryAnnotationsDeletePathParams
-	QueryParams BooksMylibraryAnnotationsDeleteQueryParams
-	Security    BooksMylibraryAnnotationsDeleteSecurity
 }
 
 type BooksMylibraryAnnotationsDeleteResponse struct {

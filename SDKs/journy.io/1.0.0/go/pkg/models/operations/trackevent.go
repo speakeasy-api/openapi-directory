@@ -41,10 +41,6 @@ type TrackEventRequestBody struct {
 	TriggeredAt *string `json:"triggeredAt,omitempty"`
 }
 
-type TrackEventRequest struct {
-	Request TrackEventRequestBody `request:"mediaType=application/json"`
-}
-
 type TrackEvent500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

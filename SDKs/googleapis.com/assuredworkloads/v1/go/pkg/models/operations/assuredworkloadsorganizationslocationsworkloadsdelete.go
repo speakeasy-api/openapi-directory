@@ -8,16 +8,11 @@ import (
 )
 
 type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AssuredworkloadsOrganizationsLocationsWorkloadsDeletePathParams struct {
-	// Required. The `name` field is used to identify the workload. Format: organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteQueryParams struct {
+type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The `name` field is used to identify the workload. Format: organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,12 +39,6 @@ type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest struct {
-	PathParams  AssuredworkloadsOrganizationsLocationsWorkloadsDeletePathParams
-	QueryParams AssuredworkloadsOrganizationsLocationsWorkloadsDeleteQueryParams
-	Security    AssuredworkloadsOrganizationsLocationsWorkloadsDeleteSecurity
 }
 
 type AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse struct {

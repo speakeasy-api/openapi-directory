@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddMemberLegacyPathParams struct {
+type TeamsAddMemberLegacyRequest struct {
 	TeamID   int64  `pathParam:"style=simple,explode=false,name=team_id"`
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type TeamsAddMemberLegacyRequest struct {
-	PathParams TeamsAddMemberLegacyPathParams
 }
 
 type TeamsAddMemberLegacyResponse struct {

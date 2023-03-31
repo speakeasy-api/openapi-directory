@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type IssuesCreateMilestonePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesCreateMilestoneRequestBodyStateEnum - The state of the milestone. Either `open` or `closed`.
 type IssuesCreateMilestoneRequestBodyStateEnum string
 
@@ -51,8 +46,9 @@ type IssuesCreateMilestoneRequestBody struct {
 }
 
 type IssuesCreateMilestoneRequest struct {
-	PathParams IssuesCreateMilestonePathParams
-	Request    IssuesCreateMilestoneRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesCreateMilestoneRequestBody `request:"mediaType=application/json"`
+	Owner       string                           `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                           `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesCreateMilestoneResponse struct {

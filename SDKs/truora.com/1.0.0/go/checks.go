@@ -35,7 +35,7 @@ func newChecks(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GetHealthDashboard - Get Health Dashboard
 // Get the status of a database
-func (s *checks) GetHealthDashboard(ctx context.Context, request operations.GetHealthDashboardRequest) (*operations.GetHealthDashboardResponse, error) {
+func (s *checks) GetHealthDashboard(ctx context.Context, request operations.GetHealthDashboardRequest, security operations.GetHealthDashboardSecurity) (*operations.GetHealthDashboardResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/checks/health"
 
@@ -44,11 +44,11 @@ func (s *checks) GetHealthDashboard(ctx context.Context, request operations.GetH
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,11 +100,11 @@ func (s *checks) GetHealthDashboard(ctx context.Context, request operations.GetH
 // | International<br>ALL | name* | name* | company_name* | N/A | N/A |
 //
 // (*) Required field
-func (s *checks) CreateCheck(ctx context.Context, request operations.CreateCheckRequest) (*operations.CreateCheckResponse, error) {
+func (s *checks) CreateCheck(ctx context.Context, request operations.CreateCheckRequest, security operations.CreateCheckSecurity) (*operations.CreateCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/checks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCheckInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -119,9 +119,9 @@ func (s *checks) CreateCheck(ctx context.Context, request operations.CreateCheck
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,16 +181,16 @@ func (s *checks) CreateCheck(ctx context.Context, request operations.CreateCheck
 // In order to calculate these scores, a weighted average is considered with different weights allocated to each dataset. Scores can be customized using the config endpoints by assigning a weight to each dataset according to its relevance.
 //
 // Keep in mind that results from the API vary depending on the country, check type and the inputs entered on check creation.
-func (s *checks) GetCheck(ctx context.Context, request operations.GetCheckRequest) (*operations.GetCheckResponse, error) {
+func (s *checks) GetCheck(ctx context.Context, request operations.GetCheckRequest, security operations.GetCheckSecurity) (*operations.GetCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,20 +236,20 @@ func (s *checks) GetCheck(ctx context.Context, request operations.GetCheckReques
 
 // ListCheckDetails - List Check Details
 // Lists all details associated with a Check. It can be paginated.
-func (s *checks) ListCheckDetails(ctx context.Context, request operations.ListCheckDetailsRequest) (*operations.ListCheckDetailsResponse, error) {
+func (s *checks) ListCheckDetails(ctx context.Context, request operations.ListCheckDetailsRequest, security operations.ListCheckDetailsSecurity) (*operations.ListCheckDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,7 +285,7 @@ func (s *checks) ListCheckDetails(ctx context.Context, request operations.ListCh
 
 // ListChecks - List Checks
 // Lists the existing checks in the account or in a specified report.
-func (s *checks) ListChecks(ctx context.Context, request operations.ListChecksRequest) (*operations.ListChecksResponse, error) {
+func (s *checks) ListChecks(ctx context.Context, request operations.ListChecksRequest, security operations.ListChecksSecurity) (*operations.ListChecksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/checks"
 
@@ -294,11 +294,11 @@ func (s *checks) ListChecks(ctx context.Context, request operations.ListChecksRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

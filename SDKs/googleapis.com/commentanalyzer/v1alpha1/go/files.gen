@@ -18,14 +18,13 @@ pkg/models/shared/analyzecommentresponse.go
 pkg/models/shared/attributescores.go
 pkg/models/shared/score.go
 pkg/models/shared/spanscore.go
+pkg/models/shared/altenum.go
 pkg/models/shared/analyzecommentrequest.go
 pkg/models/shared/attributeparameters.go
 pkg/models/shared/context.go
 pkg/models/shared/textentry.go
 pkg/models/shared/articleandparentcomment.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/suggestcommentscoreresponse.go
 pkg/models/shared/suggestcommentscorerequest.go
 USAGE.md

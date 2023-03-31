@@ -12,7 +12,8 @@ var CreateTollfreeVerificationServerList = []string{
 }
 
 type CreateTollfreeVerificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTollfreeVerificationCreateTollfreeVerificationRequest struct {
@@ -61,12 +62,6 @@ type CreateTollfreeVerificationCreateTollfreeVerificationRequest struct {
 	UseCaseCategories []string `form:"name=UseCaseCategories"`
 	// Use this to further explain how messaging is used by the business or organization.
 	UseCaseSummary string `form:"name=UseCaseSummary"`
-}
-
-type CreateTollfreeVerificationRequest struct {
-	Request   *CreateTollfreeVerificationCreateTollfreeVerificationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateTollfreeVerificationSecurity
-	ServerURL *string
 }
 
 type CreateTollfreeVerificationResponse struct {

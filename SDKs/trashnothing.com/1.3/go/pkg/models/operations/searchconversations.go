@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchConversationsQueryParams struct {
+type SearchConversationsRequest struct {
 	// Client device pixel ratio used to determine thumbnail size (default 1.0).
 	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
 	// The page of conversations to return.
@@ -16,10 +16,6 @@ type SearchConversationsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The search query used to find conversations and messages.
 	Search string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type SearchConversationsRequest struct {
-	QueryParams SearchConversationsQueryParams
 }
 
 // SearchConversations200ApplicationJSON - The conversations and paging data.

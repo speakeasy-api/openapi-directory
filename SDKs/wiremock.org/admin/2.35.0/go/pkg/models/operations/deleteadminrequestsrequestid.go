@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAdminRequestsRequestIDPathParams struct {
+type DeleteAdminRequestsRequestIDRequest struct {
 	// The UUID of the logged request
 	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
-}
-
-type DeleteAdminRequestsRequestIDRequest struct {
-	PathParams DeleteAdminRequestsRequestIDPathParams
 }
 
 type DeleteAdminRequestsRequestIDResponse struct {

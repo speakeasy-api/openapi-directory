@@ -18,10 +18,6 @@ type PostBundleNotificationsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostBundleNotificationsRequest struct {
-	Request *PostBundleNotificationsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostBundleNotificationsResponse struct {
 	// The BundleNotifications object.
 	BundleNotificationEntity *shared.BundleNotificationEntity

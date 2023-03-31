@@ -47,7 +47,7 @@ func (s *isOs) GetIsos(ctx context.Context, request operations.GetIsosRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,7 +89,7 @@ func (s *isOs) GetIsos(ctx context.Context, request operations.GetIsosRequest) (
 // Returns a specific ISO object.
 func (s *isOs) GetIsosID(ctx context.Context, request operations.GetIsosIDRequest) (*operations.GetIsosIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/isos/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/isos/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

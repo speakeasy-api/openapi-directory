@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TimeframesPathParams struct {
+type TimeframesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// The type of timeframes to return.  Valid entries are <code>current</code> or <code>upcoming</code> or <code>completed</code> or <code>recent</code> or <code>all</code>.
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type TimeframesRequest struct {
-	PathParams TimeframesPathParams
 }
 
 type TimeframesResponse struct {

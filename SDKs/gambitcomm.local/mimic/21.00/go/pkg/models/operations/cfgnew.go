@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CfgNewPathParams struct {
+type CfgNewRequest struct {
 	// Agent number to start clearing
 	FirstAgentNum int `pathParam:"style=simple,explode=false,name=firstAgentNum"`
 	// Agent number to end the clearing
 	LastAgentNum int `pathParam:"style=simple,explode=false,name=lastAgentNum"`
-}
-
-type CfgNewRequest struct {
-	PathParams CfgNewPathParams
 }
 
 type CfgNewResponse struct {

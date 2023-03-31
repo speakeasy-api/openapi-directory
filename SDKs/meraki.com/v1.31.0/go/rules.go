@@ -34,7 +34,7 @@ func newRules(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Display the traffic shaping settings rules for an MX network
 func (s *rules) GetNetworkApplianceTrafficShapingRules(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingRulesRequest) (*operations.GetNetworkApplianceTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *rules) GetNetworkApplianceTrafficShapingRules(ctx context.Context, requ
 // Display the traffic shaping settings for a SSID on an MR network
 func (s *rules) GetNetworkWirelessSsidTrafficShapingRules(ctx context.Context, request operations.GetNetworkWirelessSsidTrafficShapingRulesRequest) (*operations.GetNetworkWirelessSsidTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *rules) GetNetworkWirelessSsidTrafficShapingRules(ctx context.Context, r
 // Update the traffic shaping settings rules for an MX network
 func (s *rules) UpdateNetworkApplianceTrafficShapingRules(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingRulesRequest) (*operations.UpdateNetworkApplianceTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,9 +176,9 @@ func (s *rules) UpdateNetworkApplianceTrafficShapingRules(ctx context.Context, r
 // Update the traffic shaping settings for an SSID on an MR network
 func (s *rules) UpdateNetworkWirelessSsidTrafficShapingRules(ctx context.Context, request operations.UpdateNetworkWirelessSsidTrafficShapingRulesRequest) (*operations.UpdateNetworkWirelessSsidTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

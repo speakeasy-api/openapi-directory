@@ -113,7 +113,7 @@ func (s *SDK) Find(ctx context.Context, request operations.FindRequest) (*operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -155,14 +155,14 @@ func (s *SDK) Find(ctx context.Context, request operations.FindRequest) (*operat
 // Get details for a specific attraction using the unique identifier for the attraction.
 func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/attractions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/attractions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -204,14 +204,14 @@ func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operatio
 // Get details for a specific genre using its unique identifier.
 func (s *SDK) GetGenre(ctx context.Context, request operations.GetGenreRequest) (*operations.GetGenreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/genres/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/genres/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -253,14 +253,14 @@ func (s *SDK) GetGenre(ctx context.Context, request operations.GetGenreRequest) 
 // Get images for a specific event using the unique identifier for the event.
 func (s *SDK) GetImages(ctx context.Context, request operations.GetImagesRequest) (*operations.GetImagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}/images", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}/images", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -302,14 +302,14 @@ func (s *SDK) GetImages(ctx context.Context, request operations.GetImagesRequest
 // Get details for a specific segment using its unique identifier.
 func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentRequest) (*operations.GetSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/segments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/segments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -351,14 +351,14 @@ func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentReque
 // Get details for a specific sub-genre using its unique identifier.
 func (s *SDK) GetSubgenre(ctx context.Context, request operations.GetSubgenreRequest) (*operations.GetSubgenreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/subgenres/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/subgenres/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -407,7 +407,7 @@ func (s *SDK) GetDiscoveryV2Classifications(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -449,14 +449,14 @@ func (s *SDK) GetDiscoveryV2Classifications(ctx context.Context, request operati
 // Get details for a specific segment, genre, or sub-genre using its unique identifier.
 func (s *SDK) GetDiscoveryV2ClassificationsID(ctx context.Context, request operations.GetDiscoveryV2ClassificationsIDRequest) (*operations.GetDiscoveryV2ClassificationsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -505,7 +505,7 @@ func (s *SDK) GetDiscoveryV2Events(ctx context.Context, request operations.GetDi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -547,14 +547,14 @@ func (s *SDK) GetDiscoveryV2Events(ctx context.Context, request operations.GetDi
 // Get details for a specific event using the unique identifier for the event. This includes the venue and location, the attraction(s), and the Ticketmaster Website URL for purchasing tickets for the event.
 func (s *SDK) GetDiscoveryV2EventsID(ctx context.Context, request operations.GetDiscoveryV2EventsIDRequest) (*operations.GetDiscoveryV2EventsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -603,7 +603,7 @@ func (s *SDK) GetDiscoveryV2Venues(ctx context.Context, request operations.GetDi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -645,14 +645,14 @@ func (s *SDK) GetDiscoveryV2Venues(ctx context.Context, request operations.GetDi
 // Get details for a specific venue using the unique identifier for the venue.
 func (s *SDK) GetDiscoveryV2VenuesID(ctx context.Context, request operations.GetDiscoveryV2VenuesIDRequest) (*operations.GetDiscoveryV2VenuesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/venues/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/venues/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

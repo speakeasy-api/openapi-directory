@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProjectMultipartRequest struct {
-	Request *shared.NewProject1 `request:"mediaType=multipart/form-data"`
-}
-
 type CreateProjectMultipartResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall FileWasAlreadyUploaded

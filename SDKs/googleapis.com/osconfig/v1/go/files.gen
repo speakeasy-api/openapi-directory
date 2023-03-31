@@ -43,7 +43,6 @@ pkg/models/shared/date.go
 pkg/models/shared/inventorywindowsquickfixengineeringpackage.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listospolicyassignmentreportsresponse.go
 pkg/models/shared/ospolicyassignmentreport.go
 pkg/models/shared/ospolicyassignmentreportospolicycompliance.go

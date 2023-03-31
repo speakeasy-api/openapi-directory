@@ -32,11 +32,11 @@ func newCreativeAssets(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DfareportingCreativeAssetsInsert - Inserts a new creative asset.
-func (s *creativeAssets) DfareportingCreativeAssetsInsert(ctx context.Context, request operations.DfareportingCreativeAssetsInsertRequest) (*operations.DfareportingCreativeAssetsInsertResponse, error) {
+func (s *creativeAssets) DfareportingCreativeAssetsInsert(ctx context.Context, request operations.DfareportingCreativeAssetsInsertRequest, security operations.DfareportingCreativeAssetsInsertSecurity) (*operations.DfareportingCreativeAssetsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *creativeAssets) DfareportingCreativeAssetsInsert(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsCreateInstallationAccessTokenPathParams struct {
-	// installation_id parameter
-	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
-}
-
 type AppsCreateInstallationAccessTokenRequestBody struct {
 	// The permissions granted to the user-to-server access token.
 	Permissions *shared.AppPermissions `json:"permissions,omitempty"`
@@ -22,8 +17,9 @@ type AppsCreateInstallationAccessTokenRequestBody struct {
 }
 
 type AppsCreateInstallationAccessTokenRequest struct {
-	PathParams AppsCreateInstallationAccessTokenPathParams
-	Request    *AppsCreateInstallationAccessTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody *AppsCreateInstallationAccessTokenRequestBody `request:"mediaType=application/json"`
+	// installation_id parameter
+	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
 }
 
 // AppsCreateInstallationAccessToken415ApplicationJSON - Preview header missing

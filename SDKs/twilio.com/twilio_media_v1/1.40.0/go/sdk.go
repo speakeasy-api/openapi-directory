@@ -92,10 +92,20 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateMediaProcessor(ctx context.Context, request operations.CreateMediaProcessorRequest) (*operations.CreateMediaProcessorResponse, error) {
+func (s *SDK) CreateMediaProcessor(ctx context.Context, request operations.CreateMediaProcessorCreateMediaProcessorRequest, security operations.CreateMediaProcessorSecurity, opts ...operations.Option) (*operations.CreateMediaProcessorResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateMediaProcessorServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/MediaProcessors"
@@ -112,7 +122,7 @@ func (s *SDK) CreateMediaProcessor(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,10 +155,20 @@ func (s *SDK) CreateMediaProcessor(ctx context.Context, request operations.Creat
 
 	return res, nil
 }
-func (s *SDK) CreatePlayerStreamer(ctx context.Context, request operations.CreatePlayerStreamerRequest) (*operations.CreatePlayerStreamerResponse, error) {
+func (s *SDK) CreatePlayerStreamer(ctx context.Context, request operations.CreatePlayerStreamerCreatePlayerStreamerRequest, security operations.CreatePlayerStreamerSecurity, opts ...operations.Option) (*operations.CreatePlayerStreamerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreatePlayerStreamerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/PlayerStreamers"
@@ -165,7 +185,7 @@ func (s *SDK) CreatePlayerStreamer(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,15 +218,25 @@ func (s *SDK) CreatePlayerStreamer(ctx context.Context, request operations.Creat
 
 	return res, nil
 }
-func (s *SDK) CreatePlayerStreamerPlaybackGrant(ctx context.Context, request operations.CreatePlayerStreamerPlaybackGrantRequest) (*operations.CreatePlayerStreamerPlaybackGrantResponse, error) {
-	baseURL := operations.CreatePlayerStreamerPlaybackGrantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreatePlayerStreamerPlaybackGrant(ctx context.Context, request operations.CreatePlayerStreamerPlaybackGrantRequest, security operations.CreatePlayerStreamerPlaybackGrantSecurity, opts ...operations.Option) (*operations.CreatePlayerStreamerPlaybackGrantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreatePlayerStreamerPlaybackGrantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +248,7 @@ func (s *SDK) CreatePlayerStreamerPlaybackGrant(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,20 +283,30 @@ func (s *SDK) CreatePlayerStreamerPlaybackGrant(ctx context.Context, request ope
 }
 
 // DeleteMediaRecording - Deletes a MediaRecording resource identified by a SID.
-func (s *SDK) DeleteMediaRecording(ctx context.Context, request operations.DeleteMediaRecordingRequest) (*operations.DeleteMediaRecordingResponse, error) {
-	baseURL := operations.DeleteMediaRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteMediaRecording(ctx context.Context, request operations.DeleteMediaRecordingRequest, security operations.DeleteMediaRecordingSecurity, opts ...operations.Option) (*operations.DeleteMediaRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaRecordings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteMediaRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaRecordings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,20 +332,30 @@ func (s *SDK) DeleteMediaRecording(ctx context.Context, request operations.Delet
 }
 
 // FetchMediaProcessor - Returns a single MediaProcessor resource identified by a SID.
-func (s *SDK) FetchMediaProcessor(ctx context.Context, request operations.FetchMediaProcessorRequest) (*operations.FetchMediaProcessorResponse, error) {
-	baseURL := operations.FetchMediaProcessorServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchMediaProcessor(ctx context.Context, request operations.FetchMediaProcessorRequest, security operations.FetchMediaProcessorSecurity, opts ...operations.Option) (*operations.FetchMediaProcessorResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaProcessors/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchMediaProcessorServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaProcessors/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -340,20 +390,30 @@ func (s *SDK) FetchMediaProcessor(ctx context.Context, request operations.FetchM
 }
 
 // FetchMediaRecording - Returns a single MediaRecording resource identified by a SID.
-func (s *SDK) FetchMediaRecording(ctx context.Context, request operations.FetchMediaRecordingRequest) (*operations.FetchMediaRecordingResponse, error) {
-	baseURL := operations.FetchMediaRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchMediaRecording(ctx context.Context, request operations.FetchMediaRecordingRequest, security operations.FetchMediaRecordingSecurity, opts ...operations.Option) (*operations.FetchMediaRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaRecordings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchMediaRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaRecordings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,20 +448,30 @@ func (s *SDK) FetchMediaRecording(ctx context.Context, request operations.FetchM
 }
 
 // FetchPlayerStreamer - Returns a single PlayerStreamer resource identified by a SID.
-func (s *SDK) FetchPlayerStreamer(ctx context.Context, request operations.FetchPlayerStreamerRequest) (*operations.FetchPlayerStreamerResponse, error) {
-	baseURL := operations.FetchPlayerStreamerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchPlayerStreamer(ctx context.Context, request operations.FetchPlayerStreamerRequest, security operations.FetchPlayerStreamerSecurity, opts ...operations.Option) (*operations.FetchPlayerStreamerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchPlayerStreamerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -436,20 +506,30 @@ func (s *SDK) FetchPlayerStreamer(ctx context.Context, request operations.FetchP
 }
 
 // FetchPlayerStreamerPlaybackGrant - **This method is not enabled.** Returns a single PlaybackGrant resource identified by a SID.
-func (s *SDK) FetchPlayerStreamerPlaybackGrant(ctx context.Context, request operations.FetchPlayerStreamerPlaybackGrantRequest) (*operations.FetchPlayerStreamerPlaybackGrantResponse, error) {
-	baseURL := operations.FetchPlayerStreamerPlaybackGrantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchPlayerStreamerPlaybackGrant(ctx context.Context, request operations.FetchPlayerStreamerPlaybackGrantRequest, security operations.FetchPlayerStreamerPlaybackGrantSecurity, opts ...operations.Option) (*operations.FetchPlayerStreamerPlaybackGrantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchPlayerStreamerPlaybackGrantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -484,10 +564,20 @@ func (s *SDK) FetchPlayerStreamerPlaybackGrant(ctx context.Context, request oper
 }
 
 // ListMediaProcessor - Returns a list of MediaProcessors.
-func (s *SDK) ListMediaProcessor(ctx context.Context, request operations.ListMediaProcessorRequest) (*operations.ListMediaProcessorResponse, error) {
+func (s *SDK) ListMediaProcessor(ctx context.Context, request operations.ListMediaProcessorRequest, security operations.ListMediaProcessorSecurity, opts ...operations.Option) (*operations.ListMediaProcessorResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListMediaProcessorServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/MediaProcessors"
@@ -497,11 +587,11 @@ func (s *SDK) ListMediaProcessor(ctx context.Context, request operations.ListMed
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -536,10 +626,20 @@ func (s *SDK) ListMediaProcessor(ctx context.Context, request operations.ListMed
 }
 
 // ListMediaRecording - Returns a list of MediaRecordings.
-func (s *SDK) ListMediaRecording(ctx context.Context, request operations.ListMediaRecordingRequest) (*operations.ListMediaRecordingResponse, error) {
+func (s *SDK) ListMediaRecording(ctx context.Context, request operations.ListMediaRecordingRequest, security operations.ListMediaRecordingSecurity, opts ...operations.Option) (*operations.ListMediaRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListMediaRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/MediaRecordings"
@@ -549,11 +649,11 @@ func (s *SDK) ListMediaRecording(ctx context.Context, request operations.ListMed
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,10 +688,20 @@ func (s *SDK) ListMediaRecording(ctx context.Context, request operations.ListMed
 }
 
 // ListPlayerStreamer - Returns a list of PlayerStreamers.
-func (s *SDK) ListPlayerStreamer(ctx context.Context, request operations.ListPlayerStreamerRequest) (*operations.ListPlayerStreamerResponse, error) {
+func (s *SDK) ListPlayerStreamer(ctx context.Context, request operations.ListPlayerStreamerRequest, security operations.ListPlayerStreamerSecurity, opts ...operations.Option) (*operations.ListPlayerStreamerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListPlayerStreamerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/PlayerStreamers"
@@ -601,11 +711,11 @@ func (s *SDK) ListPlayerStreamer(ctx context.Context, request operations.ListPla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -640,15 +750,25 @@ func (s *SDK) ListPlayerStreamer(ctx context.Context, request operations.ListPla
 }
 
 // UpdateMediaProcessor - Updates a MediaProcessor resource identified by a SID.
-func (s *SDK) UpdateMediaProcessor(ctx context.Context, request operations.UpdateMediaProcessorRequest) (*operations.UpdateMediaProcessorResponse, error) {
-	baseURL := operations.UpdateMediaProcessorServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateMediaProcessor(ctx context.Context, request operations.UpdateMediaProcessorRequest, security operations.UpdateMediaProcessorSecurity, opts ...operations.Option) (*operations.UpdateMediaProcessorResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaProcessors/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateMediaProcessorServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/MediaProcessors/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -660,7 +780,7 @@ func (s *SDK) UpdateMediaProcessor(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -695,15 +815,25 @@ func (s *SDK) UpdateMediaProcessor(ctx context.Context, request operations.Updat
 }
 
 // UpdatePlayerStreamer - Updates a PlayerStreamer resource identified by a SID.
-func (s *SDK) UpdatePlayerStreamer(ctx context.Context, request operations.UpdatePlayerStreamerRequest) (*operations.UpdatePlayerStreamerResponse, error) {
-	baseURL := operations.UpdatePlayerStreamerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdatePlayerStreamer(ctx context.Context, request operations.UpdatePlayerStreamerRequest, security operations.UpdatePlayerStreamerSecurity, opts ...operations.Option) (*operations.UpdatePlayerStreamerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdatePlayerStreamerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/PlayerStreamers/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -715,7 +845,7 @@ func (s *SDK) UpdatePlayerStreamer(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

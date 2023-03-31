@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetProfileQueryParams struct {
+type GetProfileRequest struct {
 	// This is your unique username or member ID
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// The service name given to you by TruAnon
 	Service *string `queryParam:"style=form,explode=true,name=service"`
-}
-
-type GetProfileRequest struct {
-	QueryParams GetProfileQueryParams
 }
 
 type GetProfileResponse struct {

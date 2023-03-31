@@ -33,16 +33,16 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-func (s *settings) DeleteWebhooksV3AppIDSettingsClear(ctx context.Context, request operations.DeleteWebhooksV3AppIDSettingsClearRequest) (*operations.DeleteWebhooksV3AppIDSettingsClearResponse, error) {
+func (s *settings) DeleteWebhooksV3AppIDSettingsClear(ctx context.Context, request operations.DeleteWebhooksV3AppIDSettingsClearRequest, security operations.DeleteWebhooksV3AppIDSettingsClearSecurity) (*operations.DeleteWebhooksV3AppIDSettingsClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -76,16 +76,16 @@ func (s *settings) DeleteWebhooksV3AppIDSettingsClear(ctx context.Context, reque
 
 	return res, nil
 }
-func (s *settings) GetWebhooksV3AppIDSettingsGetAll(ctx context.Context, request operations.GetWebhooksV3AppIDSettingsGetAllRequest) (*operations.GetWebhooksV3AppIDSettingsGetAllResponse, error) {
+func (s *settings) GetWebhooksV3AppIDSettingsGetAll(ctx context.Context, request operations.GetWebhooksV3AppIDSettingsGetAllRequest, security operations.GetWebhooksV3AppIDSettingsGetAllSecurity) (*operations.GetWebhooksV3AppIDSettingsGetAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *settings) GetWebhooksV3AppIDSettingsGetAll(ctx context.Context, request
 
 	return res, nil
 }
-func (s *settings) PutWebhooksV3AppIDSettingsConfigure(ctx context.Context, request operations.PutWebhooksV3AppIDSettingsConfigureRequest) (*operations.PutWebhooksV3AppIDSettingsConfigureResponse, error) {
+func (s *settings) PutWebhooksV3AppIDSettingsConfigure(ctx context.Context, request operations.PutWebhooksV3AppIDSettingsConfigureRequest, security operations.PutWebhooksV3AppIDSettingsConfigureSecurity) (*operations.PutWebhooksV3AppIDSettingsConfigureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SettingsChangeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -147,7 +147,7 @@ func (s *settings) PutWebhooksV3AppIDSettingsConfigure(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

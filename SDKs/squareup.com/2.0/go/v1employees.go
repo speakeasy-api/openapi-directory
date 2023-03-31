@@ -43,7 +43,7 @@ func newV1Employees(defaultClient, securityClient HTTPClient, serverURL, languag
 //
 // Employee entities cannot be deleted. To disable employee profiles,
 // set the employee's status to <code>INACTIVE</code>
-func (s *v1Employees) CreateEmployee(ctx context.Context, request operations.CreateEmployeeRequest) (*operations.CreateEmployeeResponse, error) {
+func (s *v1Employees) CreateEmployee(ctx context.Context, request shared.V1Employee, security operations.CreateEmployeeSecurity) (*operations.CreateEmployeeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/me/employees"
 
@@ -62,7 +62,7 @@ func (s *v1Employees) CreateEmployee(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,7 +110,7 @@ func (s *v1Employees) CreateEmployee(ctx context.Context, request operations.Cre
 //
 // If an employee has no role, they have none of the permissions associated
 // with roles. All employees can accept payments with Square Point of Sale.
-func (s *v1Employees) CreateEmployeeRole(ctx context.Context, request operations.CreateEmployeeRoleRequest) (*operations.CreateEmployeeRoleResponse, error) {
+func (s *v1Employees) CreateEmployeeRole(ctx context.Context, request shared.V1EmployeeRole, security operations.CreateEmployeeRoleSecurity) (*operations.CreateEmployeeRoleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/me/roles"
 
@@ -129,7 +129,7 @@ func (s *v1Employees) CreateEmployeeRole(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,7 +165,7 @@ func (s *v1Employees) CreateEmployeeRole(ctx context.Context, request operations
 
 // ListEmployeeRoles - ListEmployeeRoles
 // Provides summary information for all of a business's employee roles.
-func (s *v1Employees) ListEmployeeRoles(ctx context.Context, request operations.ListEmployeeRolesRequest) (*operations.ListEmployeeRolesResponse, error) {
+func (s *v1Employees) ListEmployeeRoles(ctx context.Context, request operations.ListEmployeeRolesRequest, security operations.ListEmployeeRolesSecurity) (*operations.ListEmployeeRolesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/me/roles"
 
@@ -174,11 +174,11 @@ func (s *v1Employees) ListEmployeeRoles(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *v1Employees) ListEmployeeRoles(ctx context.Context, request operations.
 
 // ListEmployees - ListEmployees
 // Provides summary information for all of a business's employees.
-func (s *v1Employees) ListEmployees(ctx context.Context, request operations.ListEmployeesRequest) (*operations.ListEmployeesResponse, error) {
+func (s *v1Employees) ListEmployees(ctx context.Context, request operations.ListEmployeesRequest, security operations.ListEmployeesSecurity) (*operations.ListEmployeesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/me/employees"
 
@@ -223,11 +223,11 @@ func (s *v1Employees) ListEmployees(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -263,16 +263,16 @@ func (s *v1Employees) ListEmployees(ctx context.Context, request operations.List
 
 // RetrieveEmployee - RetrieveEmployee
 // Provides the details for a single employee.
-func (s *v1Employees) RetrieveEmployee(ctx context.Context, request operations.RetrieveEmployeeRequest) (*operations.RetrieveEmployeeResponse, error) {
+func (s *v1Employees) RetrieveEmployee(ctx context.Context, request operations.RetrieveEmployeeRequest, security operations.RetrieveEmployeeSecurity) (*operations.RetrieveEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,16 +308,16 @@ func (s *v1Employees) RetrieveEmployee(ctx context.Context, request operations.R
 
 // RetrieveEmployeeRole - RetrieveEmployeeRole
 // Provides the details for a single employee role.
-func (s *v1Employees) RetrieveEmployeeRole(ctx context.Context, request operations.RetrieveEmployeeRoleRequest) (*operations.RetrieveEmployeeRoleResponse, error) {
+func (s *v1Employees) RetrieveEmployeeRole(ctx context.Context, request operations.RetrieveEmployeeRoleRequest, security operations.RetrieveEmployeeRoleSecurity) (*operations.RetrieveEmployeeRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -352,11 +352,11 @@ func (s *v1Employees) RetrieveEmployeeRole(ctx context.Context, request operatio
 }
 
 // UpdateEmployee - UpdateEmployee
-func (s *v1Employees) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest) (*operations.UpdateEmployeeResponse, error) {
+func (s *v1Employees) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest, security operations.UpdateEmployeeSecurity) (*operations.UpdateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1Employee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -371,7 +371,7 @@ func (s *v1Employees) UpdateEmployee(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -407,11 +407,11 @@ func (s *v1Employees) UpdateEmployee(ctx context.Context, request operations.Upd
 
 // UpdateEmployeeRole - UpdateEmployeeRole
 // Modifies the details of an employee role.
-func (s *v1Employees) UpdateEmployeeRole(ctx context.Context, request operations.UpdateEmployeeRoleRequest) (*operations.UpdateEmployeeRoleResponse, error) {
+func (s *v1Employees) UpdateEmployeeRole(ctx context.Context, request operations.UpdateEmployeeRoleRequest, security operations.UpdateEmployeeRoleSecurity) (*operations.UpdateEmployeeRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1EmployeeRole", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -426,7 +426,7 @@ func (s *v1Employees) UpdateEmployeeRole(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

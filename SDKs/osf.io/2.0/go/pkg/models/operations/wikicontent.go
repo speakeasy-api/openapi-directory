@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type WikiContentPathParams struct {
+type WikiContentRequest struct {
 	// The unique identifier of the wiki.
 	WikiID string `pathParam:"style=simple,explode=false,name=wiki_id"`
-}
-
-type WikiContentRequest struct {
-	PathParams WikiContentPathParams
 }
 
 type WikiContentResponse struct {

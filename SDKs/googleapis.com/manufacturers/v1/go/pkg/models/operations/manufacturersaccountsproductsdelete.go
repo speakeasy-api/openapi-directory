@@ -8,18 +8,11 @@ import (
 )
 
 type ManufacturersAccountsProductsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ManufacturersAccountsProductsDeletePathParams struct {
-	// Name in the format `{target_country}:{content_language}:{product_id}`. `target_country` - The target country of the product as a CLDR territory code (for example, US). `content_language` - The content language of the product as a two-letter ISO 639-1 language code (for example, en). `product_id` - The ID of the product. For more information, see https://support.google.com/manufacturers/answer/6124116#id.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer Center account.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ManufacturersAccountsProductsDeleteQueryParams struct {
+type ManufacturersAccountsProductsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,8 +25,12 @@ type ManufacturersAccountsProductsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Name in the format `{target_country}:{content_language}:{product_id}`. `target_country` - The target country of the product as a CLDR territory code (for example, US). `content_language` - The content language of the product as a two-letter ISO 639-1 language code (for example, en). `product_id` - The ID of the product. For more information, see https://support.google.com/manufacturers/answer/6124116#id.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer Center account.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,12 +39,6 @@ type ManufacturersAccountsProductsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ManufacturersAccountsProductsDeleteRequest struct {
-	PathParams  ManufacturersAccountsProductsDeletePathParams
-	QueryParams ManufacturersAccountsProductsDeleteQueryParams
-	Security    ManufacturersAccountsProductsDeleteSecurity
 }
 
 type ManufacturersAccountsProductsDeleteResponse struct {

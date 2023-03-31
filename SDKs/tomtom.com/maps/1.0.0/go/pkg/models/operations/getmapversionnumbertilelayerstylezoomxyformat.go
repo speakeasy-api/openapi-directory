@@ -83,6 +83,30 @@ func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum) UnmarshalJSON(d
 	}
 }
 
+// GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum - Tile dimensions in pixels. <em>512</em> is only available for the <em>main</em> style and <em>basic</em> or <em>labels</em> layers.
+type GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum string
+
+const (
+	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumTwoHundredAndFiftySix GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = "256"
+	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumFiveHundredAndTwelve  GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = "512"
+)
+
+func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "256":
+		fallthrough
+	case "512":
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum: %s", s)
+	}
+}
+
 // GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum - Version of the service to call. The current version is 1.
 type GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum string
 
@@ -101,6 +125,30 @@ func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum) Unmarsh
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum: %s", s)
+	}
+}
+
+// GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum - Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-sdk-web/functional-examples#geopolitical-views">documentation</a> for an explanation of how this works in live services.
+type GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum string
+
+const (
+	GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnumUnified GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum = "Unified"
+	GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnumIn      GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum = "IN"
+)
+
+func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "Unified":
+		fallthrough
+	case "IN":
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum: %s", s)
 	}
 }
 
@@ -191,7 +239,7 @@ func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum) UnmarshalJSON(da
 	}
 }
 
-type GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams struct {
+type GetMapVersionNumberTileLayerStyleZoomXYFormatRequest struct {
 	// x coordinate of tile on zoom grid
 	X int64 `pathParam:"style=simple,explode=false,name=X"`
 	// y coordinate of tile on zoom grid
@@ -202,70 +250,14 @@ type GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams struct {
 	Layer GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum `pathParam:"style=simple,explode=false,name=layer"`
 	// Style of tile to be rendered
 	Style GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum `pathParam:"style=simple,explode=false,name=style"`
-	// Version of the service to call. The current version is 1.
-	VersionNumber GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-	// Zoom level of tile to be rendered
-	Zoom GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum `pathParam:"style=simple,explode=false,name=zoom"`
-}
-
-// GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum - Tile dimensions in pixels. <em>512</em> is only available for the <em>main</em> style and <em>basic</em> or <em>labels</em> layers.
-type GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum string
-
-const (
-	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumTwoHundredAndFiftySix GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = "256"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumFiveHundredAndTwelve  GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = "512"
-)
-
-func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "256":
-		fallthrough
-	case "512":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum: %s", s)
-	}
-}
-
-// GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum - Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-sdk-web/functional-examples#geopolitical-views">documentation</a> for an explanation of how this works in live services.
-type GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum string
-
-const (
-	GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnumUnified GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum = "Unified"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnumIn      GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum = "IN"
-)
-
-func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "Unified":
-		fallthrough
-	case "IN":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum: %s", s)
-	}
-}
-
-type GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams struct {
 	// Tile dimensions in pixels. <em>512</em> is only available for the <em>main</em> style and <em>basic</em> or <em>labels</em> layers.
 	TileSize *GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum `queryParam:"style=form,explode=true,name=tileSize"`
+	// Version of the service to call. The current version is 1.
+	VersionNumber GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Geopolitical view. Determines rendering of disputed areas. See the <a href="/maps-sdk-web/functional-examples#geopolitical-views">documentation</a> for an explanation of how this works in live services.
 	View *GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetMapVersionNumberTileLayerStyleZoomXYFormatRequest struct {
-	PathParams  GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams
-	QueryParams GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams
+	// Zoom level of tile to be rendered
+	Zoom GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum `pathParam:"style=simple,explode=false,name=zoom"`
 }
 
 type GetMapVersionNumberTileLayerStyleZoomXYFormatResponse struct {

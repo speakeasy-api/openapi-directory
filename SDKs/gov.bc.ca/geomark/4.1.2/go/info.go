@@ -34,14 +34,14 @@ func newInfo(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // The attribution can be downloaded as a info file format. The download files can then be processed by a client application to access the geomark info fields and to get the URLs to the geometry download resources.
 func (s *info) GetGeomarksGeomarkIDFileFormatExtension(ctx context.Context, request operations.GetGeomarksGeomarkIDFileFormatExtensionRequest) (*operations.GetGeomarksGeomarkIDFileFormatExtensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/geomarks/{geomarkId}.{fileFormatExtension}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/geomarks/{geomarkId}.{fileFormatExtension}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

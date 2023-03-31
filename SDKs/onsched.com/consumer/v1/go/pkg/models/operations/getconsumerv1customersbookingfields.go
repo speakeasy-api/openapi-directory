@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1CustomersBookingfieldsQueryParams struct {
+type GetConsumerV1CustomersBookingfieldsRequest struct {
 	// id of business location, defaults to primary business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
-}
-
-type GetConsumerV1CustomersBookingfieldsRequest struct {
-	QueryParams GetConsumerV1CustomersBookingfieldsQueryParams
 }
 
 type GetConsumerV1CustomersBookingfieldsResponse struct {

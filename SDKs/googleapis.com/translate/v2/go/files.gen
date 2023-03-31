@@ -21,10 +21,9 @@ pkg/models/operations/languagetranslationslist.go
 pkg/models/operations/languagetranslationstranslate.go
 pkg/models/shared/detectionslistresponse.go
 pkg/models/shared/detectionsresource.go
-pkg/models/shared/detectlanguagerequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/detectlanguagerequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/languageslistresponse.go
 pkg/models/shared/languagesresource.go
 pkg/models/shared/translationslistresponse.go

@@ -14,10 +14,6 @@ type UsersCreateGpgKeyForAuthenticatedUserRequestBody struct {
 	Name *string `json:"name,omitempty"`
 }
 
-type UsersCreateGpgKeyForAuthenticatedUserRequest struct {
-	Request UsersCreateGpgKeyForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersCreateGpgKeyForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

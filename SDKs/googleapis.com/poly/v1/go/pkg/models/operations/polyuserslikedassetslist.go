@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PolyUsersLikedassetsListPathParams struct {
-	// A valid user id. Currently, only the special value 'me', representing the currently-authenticated user is supported. To use 'me', you must pass an OAuth token with the request.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type PolyUsersLikedassetsListQueryParams struct {
+type PolyUsersLikedassetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -27,6 +22,8 @@ type PolyUsersLikedassetsListQueryParams struct {
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// A valid user id. Currently, only the special value 'me', representing the currently-authenticated user is supported. To use 'me', you must pass an OAuth token with the request.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`, 'LIKED_TIME'. Defaults to `LIKED_TIME`, which ranks assets based on how recently they were liked.
@@ -43,11 +40,6 @@ type PolyUsersLikedassetsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PolyUsersLikedassetsListRequest struct {
-	PathParams  PolyUsersLikedassetsListPathParams
-	QueryParams PolyUsersLikedassetsListQueryParams
 }
 
 type PolyUsersLikedassetsListResponse struct {

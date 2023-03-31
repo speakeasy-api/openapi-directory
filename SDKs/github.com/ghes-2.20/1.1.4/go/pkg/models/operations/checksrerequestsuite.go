@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ChecksRerequestSuitePathParams struct {
+type ChecksRerequestSuiteRequest struct {
 	// check_suite_id parameter
 	CheckSuiteID int64  `pathParam:"style=simple,explode=false,name=check_suite_id"`
 	Owner        string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo         string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksRerequestSuiteRequest struct {
-	PathParams ChecksRerequestSuitePathParams
 }
 
 type ChecksRerequestSuiteResponse struct {

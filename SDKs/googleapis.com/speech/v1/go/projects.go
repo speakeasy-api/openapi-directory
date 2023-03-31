@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // SpeechProjectsLocationsCustomClassesCreate - Create a custom class.
-func (s *projects) SpeechProjectsLocationsCustomClassesCreate(ctx context.Context, request operations.SpeechProjectsLocationsCustomClassesCreateRequest) (*operations.SpeechProjectsLocationsCustomClassesCreateResponse, error) {
+func (s *projects) SpeechProjectsLocationsCustomClassesCreate(ctx context.Context, request operations.SpeechProjectsLocationsCustomClassesCreateRequest, security operations.SpeechProjectsLocationsCustomClassesCreateSecurity) (*operations.SpeechProjectsLocationsCustomClassesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customClasses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customClasses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCustomClassRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) SpeechProjectsLocationsCustomClassesCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) SpeechProjectsLocationsCustomClassesCreate(ctx context.Contex
 }
 
 // SpeechProjectsLocationsCustomClassesList - List custom classes.
-func (s *projects) SpeechProjectsLocationsCustomClassesList(ctx context.Context, request operations.SpeechProjectsLocationsCustomClassesListRequest) (*operations.SpeechProjectsLocationsCustomClassesListResponse, error) {
+func (s *projects) SpeechProjectsLocationsCustomClassesList(ctx context.Context, request operations.SpeechProjectsLocationsCustomClassesListRequest, security operations.SpeechProjectsLocationsCustomClassesListSecurity) (*operations.SpeechProjectsLocationsCustomClassesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customClasses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customClasses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) SpeechProjectsLocationsCustomClassesList(ctx context.Context,
 }
 
 // SpeechProjectsLocationsPhraseSetsCreate - Create a set of phrase hints. Each item in the set can be a single word or a multi-word phrase. The items in the PhraseSet are favored by the recognition model when you send a call that includes the PhraseSet.
-func (s *projects) SpeechProjectsLocationsPhraseSetsCreate(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsCreateRequest) (*operations.SpeechProjectsLocationsPhraseSetsCreateResponse, error) {
+func (s *projects) SpeechProjectsLocationsPhraseSetsCreate(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsCreateRequest, security operations.SpeechProjectsLocationsPhraseSetsCreateSecurity) (*operations.SpeechProjectsLocationsPhraseSetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseSets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseSets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreatePhraseSetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) SpeechProjectsLocationsPhraseSetsCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) SpeechProjectsLocationsPhraseSetsCreate(ctx context.Context, 
 }
 
 // SpeechProjectsLocationsPhraseSetsDelete - Delete a phrase set.
-func (s *projects) SpeechProjectsLocationsPhraseSetsDelete(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsDeleteRequest) (*operations.SpeechProjectsLocationsPhraseSetsDeleteResponse, error) {
+func (s *projects) SpeechProjectsLocationsPhraseSetsDelete(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsDeleteRequest, security operations.SpeechProjectsLocationsPhraseSetsDeleteSecurity) (*operations.SpeechProjectsLocationsPhraseSetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) SpeechProjectsLocationsPhraseSetsDelete(ctx context.Context, 
 }
 
 // SpeechProjectsLocationsPhraseSetsGet - Get a phrase set.
-func (s *projects) SpeechProjectsLocationsPhraseSetsGet(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsGetRequest) (*operations.SpeechProjectsLocationsPhraseSetsGetResponse, error) {
+func (s *projects) SpeechProjectsLocationsPhraseSetsGet(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsGetRequest, security operations.SpeechProjectsLocationsPhraseSetsGetSecurity) (*operations.SpeechProjectsLocationsPhraseSetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) SpeechProjectsLocationsPhraseSetsGet(ctx context.Context, req
 }
 
 // SpeechProjectsLocationsPhraseSetsList - List phrase sets.
-func (s *projects) SpeechProjectsLocationsPhraseSetsList(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsListRequest) (*operations.SpeechProjectsLocationsPhraseSetsListResponse, error) {
+func (s *projects) SpeechProjectsLocationsPhraseSetsList(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsListRequest, security operations.SpeechProjectsLocationsPhraseSetsListSecurity) (*operations.SpeechProjectsLocationsPhraseSetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseSets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseSets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *projects) SpeechProjectsLocationsPhraseSetsList(ctx context.Context, re
 }
 
 // SpeechProjectsLocationsPhraseSetsPatch - Update a phrase set.
-func (s *projects) SpeechProjectsLocationsPhraseSetsPatch(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsPatchRequest) (*operations.SpeechProjectsLocationsPhraseSetsPatchResponse, error) {
+func (s *projects) SpeechProjectsLocationsPhraseSetsPatch(ctx context.Context, request operations.SpeechProjectsLocationsPhraseSetsPatchRequest, security operations.SpeechProjectsLocationsPhraseSetsPatchSecurity) (*operations.SpeechProjectsLocationsPhraseSetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PhraseSet", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *projects) SpeechProjectsLocationsPhraseSetsPatch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

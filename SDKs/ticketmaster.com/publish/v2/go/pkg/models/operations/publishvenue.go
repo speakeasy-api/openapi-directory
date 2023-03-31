@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishVenueHeaders struct {
+type PublishVenueRequest struct {
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PublishVenueRequest struct {
-	Headers PublishVenueHeaders
 	// Venue
-	Request shared.Venue `request:"mediaType=application/json"`
+	Venue shared.Venue `request:"mediaType=application/json"`
 }
 
 type PublishVenueResponse struct {

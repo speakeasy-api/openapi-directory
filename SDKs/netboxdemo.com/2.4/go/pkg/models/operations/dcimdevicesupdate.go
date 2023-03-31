@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDevicesUpdatePathParams struct {
+type DcimDevicesUpdateRequest struct {
+	WritableDeviceInput shared.WritableDeviceInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this device.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDevicesUpdateRequest struct {
-	PathParams DcimDevicesUpdatePathParams
-	Request    shared.WritableDeviceInput `request:"mediaType=application/json"`
 }
 
 type DcimDevicesUpdateResponse struct {

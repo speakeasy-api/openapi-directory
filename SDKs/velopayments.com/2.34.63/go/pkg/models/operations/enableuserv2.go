@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnableUserV2PathParams struct {
+type EnableUserV2Request struct {
 	// The UUID of the User.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type EnableUserV2Request struct {
-	PathParams EnableUserV2PathParams
 }
 
 type EnableUserV2Response struct {

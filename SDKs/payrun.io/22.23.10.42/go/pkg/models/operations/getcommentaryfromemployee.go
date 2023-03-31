@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommentaryFromEmployeePathParams struct {
+type GetCommentaryFromEmployeeRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The commentary unique identifier. E.g. C001
 	CommentaryID string `pathParam:"style=simple,explode=false,name=CommentaryId"`
 	// The employees' unique identifier. E.g EE001
 	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type GetCommentaryFromEmployeeHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetCommentaryFromEmployeeRequest struct {
-	PathParams GetCommentaryFromEmployeePathParams
-	Headers    GetCommentaryFromEmployeeHeaders
 }
 
 type GetCommentaryFromEmployeeResponse struct {

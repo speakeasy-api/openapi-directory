@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDPersonsPersonIDPortfoliosSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDPersonsPersonIDPortfoliosPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the person who will be the owner of the portfolio
-	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesIDPersonsPersonIDPortfoliosRequestBodyLevelEnum string
@@ -58,10 +50,12 @@ type PostSpacesIDPersonsPersonIDPortfoliosRequestBody struct {
 }
 
 type PostSpacesIDPersonsPersonIDPortfoliosRequest struct {
-	PathParams PostSpacesIDPersonsPersonIDPortfoliosPathParams
 	// Portfolio to add (except Class and Name)
-	Request  *PostSpacesIDPersonsPersonIDPortfoliosRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDPersonsPersonIDPortfoliosSecurity
+	RequestBody *PostSpacesIDPersonsPersonIDPortfoliosRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the person who will be the owner of the portfolio
+	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
 }
 
 // PostSpacesIDPersonsPersonIDPortfolios201ApplicationJSON - Id of the portfolio created

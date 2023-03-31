@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddBatchWebinarRegistrantsSecurity struct {
-	Bearer *shared.SchemeBearer `security:"scheme,type=apiKey,subtype=header"`
-	OAuth  *shared.SchemeOAuth  `security:"scheme,type=oauth2"`
-}
-
-type AddBatchWebinarRegistrantsPathParams struct {
-	// Unique identifier of the webinar.
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
+	Bearer *string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	OAuth  *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddBatchWebinarRegistrantsApplicationJSONRegistrants struct {
@@ -35,9 +29,9 @@ type AddBatchWebinarRegistrantsApplicationJSON struct {
 }
 
 type AddBatchWebinarRegistrantsRequest struct {
-	PathParams AddBatchWebinarRegistrantsPathParams
-	Request    *AddBatchWebinarRegistrantsApplicationJSON `request:"mediaType=application/json"`
-	Security   AddBatchWebinarRegistrantsSecurity
+	RequestBody *AddBatchWebinarRegistrantsApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the webinar.
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type AddBatchWebinarRegistrants200ApplicationXMLRegistrants struct {

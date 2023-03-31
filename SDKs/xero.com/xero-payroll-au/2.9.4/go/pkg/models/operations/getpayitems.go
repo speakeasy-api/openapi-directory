@@ -8,29 +8,20 @@ import (
 )
 
 type GetPayItemsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPayItemsQueryParams struct {
+type GetPayItemsRequest struct {
+	// Only records created or modified since this timestamp will be returned
+	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 	// Order by an any element
 	Order *string `queryParam:"style=form,explode=true,name=order"`
 	// e.g. page=1 – Up to 100 objects will be returned in a single API call
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Filter by an any element
 	Where *string `queryParam:"style=form,explode=true,name=where"`
-}
-
-type GetPayItemsHeaders struct {
-	// Only records created or modified since this timestamp will be returned
-	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
-}
-
-type GetPayItemsRequest struct {
-	QueryParams GetPayItemsQueryParams
-	Headers     GetPayItemsHeaders
-	Security    GetPayItemsSecurity
 }
 
 type GetPayItemsResponse struct {

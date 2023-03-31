@@ -8,18 +8,11 @@ import (
 )
 
 type DisplayvideoPartnersChannelsSitesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoPartnersChannelsSitesListPathParams struct {
-	// Required. The ID of the parent channel to which the requested sites belong.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-	// The ID of the partner that owns the parent channel.
-	PartnerID string `pathParam:"style=simple,explode=false,name=partnerId"`
-}
-
-type DisplayvideoPartnersChannelsSitesListQueryParams struct {
+type DisplayvideoPartnersChannelsSitesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +23,8 @@ type DisplayvideoPartnersChannelsSitesListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The ID of the parent channel to which the requested sites belong.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Allows filtering by site fields. Supported syntax: * Filter expressions for site currently can only contain at most one * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
@@ -44,6 +39,8 @@ type DisplayvideoPartnersChannelsSitesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return. Typically, this is the value of next_page_token returned from the previous call to `ListSites` method. If not specified, the first page of results will be returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The ID of the partner that owns the parent channel.
+	PartnerID string `pathParam:"style=simple,explode=false,name=partnerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type DisplayvideoPartnersChannelsSitesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoPartnersChannelsSitesListRequest struct {
-	PathParams  DisplayvideoPartnersChannelsSitesListPathParams
-	QueryParams DisplayvideoPartnersChannelsSitesListQueryParams
-	Security    DisplayvideoPartnersChannelsSitesListSecurity
 }
 
 type DisplayvideoPartnersChannelsSitesListResponse struct {

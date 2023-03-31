@@ -7,7 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCandidateCandidateIDHistoryCyclePathParams struct {
+type GetCandidateCandidateIDHistoryCycleRequest struct {
+	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+	//
+	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
 	//
@@ -21,12 +24,6 @@ type GetCandidateCandidateIDHistoryCyclePathParams struct {
 	// you will need the `election_full` flag.
 	//
 	Cycle int `pathParam:"style=simple,explode=false,name=cycle"`
-}
-
-type GetCandidateCandidateIDHistoryCycleQueryParams struct {
-	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
-	//
-	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// `True` indicates that full election period of a candidate.
 	// `False` indicates that two year election cycle.
 	ElectionFull *bool `queryParam:"style=form,explode=true,name=election_full"`
@@ -43,11 +40,6 @@ type GetCandidateCandidateIDHistoryCycleQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCandidateCandidateIDHistoryCycleRequest struct {
-	PathParams  GetCandidateCandidateIDHistoryCyclePathParams
-	QueryParams GetCandidateCandidateIDHistoryCycleQueryParams
 }
 
 type GetCandidateCandidateIDHistoryCycleResponse struct {

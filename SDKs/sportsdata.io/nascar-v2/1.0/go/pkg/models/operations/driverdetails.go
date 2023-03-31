@@ -33,16 +33,12 @@ func (e *DriverDetailsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DriverDetailsPathParams struct {
+type DriverDetailsRequest struct {
 	// Unique FantasyData Driver ID.
 	// Example:<code>80000268</code>.
 	Driverid string `pathParam:"style=simple,explode=false,name=driverid"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DriverDetailsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type DriverDetailsRequest struct {
-	PathParams DriverDetailsPathParams
 }
 
 type DriverDetailsResponse struct {

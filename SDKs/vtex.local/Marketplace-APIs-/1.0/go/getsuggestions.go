@@ -48,16 +48,16 @@ func newGetSuggestions(defaultClient, securityClient HTTPClient, serverURL, lang
 // Note that  if the autoApprove setting is enabled, the SKUs will be approved, regardless of the Score.
 func (s *getSuggestions) GetSuggestion(ctx context.Context, request operations.GetSuggestionRequest) (*operations.GetSuggestionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerSkuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -109,9 +109,9 @@ func (s *getSuggestions) Getsuggestions(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

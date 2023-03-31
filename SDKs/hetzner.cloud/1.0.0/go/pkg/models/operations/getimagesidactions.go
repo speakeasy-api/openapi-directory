@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetImagesIDActionsPathParams struct {
-	// ID of the Image
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetImagesIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetImagesIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetImagesIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetImagesIDActionsQueryParams struct {
+type GetImagesIDActionsRequest struct {
+	// ID of the Image
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetImagesIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetImagesIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetImagesIDActionsRequest struct {
-	PathParams  GetImagesIDActionsPathParams
-	QueryParams GetImagesIDActionsQueryParams
 }
 
 // GetImagesIDActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

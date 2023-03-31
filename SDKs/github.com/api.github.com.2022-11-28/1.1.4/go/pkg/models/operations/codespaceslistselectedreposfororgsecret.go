@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesListSelectedReposForOrgSecretPathParams struct {
+type CodespacesListSelectedReposForOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type CodespacesListSelectedReposForOrgSecretQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type CodespacesListSelectedReposForOrgSecretRequest struct {
-	PathParams  CodespacesListSelectedReposForOrgSecretPathParams
-	QueryParams CodespacesListSelectedReposForOrgSecretQueryParams
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 // CodespacesListSelectedReposForOrgSecret200ApplicationJSON - Response

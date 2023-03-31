@@ -36,7 +36,7 @@ func newKKid(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // KkidAllowanceGet - returns allowance balance and allowance transactions
 // By passing in the appropriate options, you can view allowance balance and allowance transactions for a given user provided that they are within the masterID account of the authenticated user.
-func (s *kKid) KkidAllowanceGet(ctx context.Context, request operations.KkidAllowanceGetRequest) (*operations.KkidAllowanceGetResponse, error) {
+func (s *kKid) KkidAllowanceGet(ctx context.Context, request operations.KkidAllowanceGetRequest, security operations.KkidAllowanceGetSecurity) (*operations.KkidAllowanceGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/allowance"
 
@@ -45,11 +45,11 @@ func (s *kKid) KkidAllowanceGet(ctx context.Context, request operations.KkidAllo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,7 +122,7 @@ func (s *kKid) KkidAllowanceGet(ctx context.Context, request operations.KkidAllo
 
 // KkidAllowancePost - adds new allowance transaction to kidUserID
 // By passing in the appropriate options, you can add an allowance transaction to a given user.
-func (s *kKid) KkidAllowancePost(ctx context.Context, request operations.KkidAllowancePostRequest) (*operations.KkidAllowancePostResponse, error) {
+func (s *kKid) KkidAllowancePost(ctx context.Context, request operations.KkidAllowancePostRequest, security operations.KkidAllowancePostSecurity) (*operations.KkidAllowancePostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/allowance"
 
@@ -131,11 +131,11 @@ func (s *kKid) KkidAllowancePost(ctx context.Context, request operations.KkidAll
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,7 +207,7 @@ func (s *kKid) KkidAllowancePost(ctx context.Context, request operations.KkidAll
 }
 
 // KkidApnsPost - subscribes/unsubscribes/registers for apns push notifications
-func (s *kKid) KkidApnsPost(ctx context.Context, request operations.KkidApnsPostRequest) (*operations.KkidApnsPostResponse, error) {
+func (s *kKid) KkidApnsPost(ctx context.Context, request operations.KkidApnsPostRequest, security operations.KkidApnsPostSecurity) (*operations.KkidApnsPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/apns"
 
@@ -216,11 +216,11 @@ func (s *kKid) KkidApnsPost(ctx context.Context, request operations.KkidApnsPost
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,7 +293,7 @@ func (s *kKid) KkidApnsPost(ctx context.Context, request operations.KkidApnsPost
 
 // KkidChorelistDelete - deletes chore for given chore id
 // By passing in the appropriate options, you can delete a chore for the given chore id under authenticated user's master account
-func (s *kKid) KkidChorelistDelete(ctx context.Context, request operations.KkidChorelistDeleteRequest) (*operations.KkidChorelistDeleteResponse, error) {
+func (s *kKid) KkidChorelistDelete(ctx context.Context, request operations.KkidChorelistDeleteRequest, security operations.KkidChorelistDeleteSecurity) (*operations.KkidChorelistDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/chorelist"
 
@@ -302,11 +302,11 @@ func (s *kKid) KkidChorelistDelete(ctx context.Context, request operations.KkidC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,7 +382,7 @@ func (s *kKid) KkidChorelistDelete(ctx context.Context, request operations.KkidC
 // KkidChorelistGet - returns list of chores for given user
 // By passing in the appropriate options, you can search for
 // chores assigned to a given user within the authenticated user's master account
-func (s *kKid) KkidChorelistGet(ctx context.Context, request operations.KkidChorelistGetRequest) (*operations.KkidChorelistGetResponse, error) {
+func (s *kKid) KkidChorelistGet(ctx context.Context, request operations.KkidChorelistGetRequest, security operations.KkidChorelistGetSecurity) (*operations.KkidChorelistGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/chorelist"
 
@@ -391,11 +391,11 @@ func (s *kKid) KkidChorelistGet(ctx context.Context, request operations.KkidChor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -468,7 +468,7 @@ func (s *kKid) KkidChorelistGet(ctx context.Context, request operations.KkidChor
 
 // KkidChorelistPost - adds chore for given user
 // By passing in the appropriate options, you can add a chore to given kid username under authenticated user's master account
-func (s *kKid) KkidChorelistPost(ctx context.Context, request operations.KkidChorelistPostRequest) (*operations.KkidChorelistPostResponse, error) {
+func (s *kKid) KkidChorelistPost(ctx context.Context, request operations.KkidChorelistPostRequest, security operations.KkidChorelistPostSecurity) (*operations.KkidChorelistPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/chorelist"
 
@@ -477,11 +477,11 @@ func (s *kKid) KkidChorelistPost(ctx context.Context, request operations.KkidCho
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -556,7 +556,7 @@ func (s *kKid) KkidChorelistPost(ctx context.Context, request operations.KkidCho
 
 // KkidChorelistPut - updates chore for given chore id
 // By passing in the appropriate options, you can update the fields of a specific core within the authenticated user's master account
-func (s *kKid) KkidChorelistPut(ctx context.Context, request operations.KkidChorelistPutRequest) (*operations.KkidChorelistPutResponse, error) {
+func (s *kKid) KkidChorelistPut(ctx context.Context, request operations.KkidChorelistPutRequest, security operations.KkidChorelistPutSecurity) (*operations.KkidChorelistPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/chorelist"
 
@@ -565,11 +565,11 @@ func (s *kKid) KkidChorelistPut(ctx context.Context, request operations.KkidChor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -642,7 +642,7 @@ func (s *kKid) KkidChorelistPut(ctx context.Context, request operations.KkidChor
 
 // KkidMasteruserPost - adds new master user account
 // By passing in the appropriate variables this method creates a new user with master account access. (The use of this method is restricted to Superusers ONLY)
-func (s *kKid) KkidMasteruserPost(ctx context.Context, request operations.KkidMasteruserPostRequest) (*operations.KkidMasteruserPostResponse, error) {
+func (s *kKid) KkidMasteruserPost(ctx context.Context, request operations.KkidMasteruserPostRequest, security operations.KkidMasteruserPostSecurity) (*operations.KkidMasteruserPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/masteruser"
 
@@ -651,11 +651,11 @@ func (s *kKid) KkidMasteruserPost(ctx context.Context, request operations.KkidMa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -704,7 +704,7 @@ func (s *kKid) KkidMasteruserPost(ctx context.Context, request operations.KkidMa
 
 // KkidShareGet - Create Share Link
 // Create share link
-func (s *kKid) KkidShareGet(ctx context.Context, request operations.KkidShareGetRequest) (*operations.KkidShareGetResponse, error) {
+func (s *kKid) KkidShareGet(ctx context.Context, request operations.KkidShareGetRequest, security operations.KkidShareGetSecurity) (*operations.KkidShareGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/share"
 
@@ -713,11 +713,11 @@ func (s *kKid) KkidShareGet(ctx context.Context, request operations.KkidShareGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -762,7 +762,7 @@ func (s *kKid) KkidUserGet(ctx context.Context, request operations.KkidUserGetRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -802,7 +802,7 @@ func (s *kKid) KkidUserGet(ctx context.Context, request operations.KkidUserGetRe
 
 // KkidUserlistDelete - deletes user
 // By passing in the appropriate variables this method deletes the specified user. (This function is restricted to Superusers ONLY)
-func (s *kKid) KkidUserlistDelete(ctx context.Context, request operations.KkidUserlistDeleteRequest) (*operations.KkidUserlistDeleteResponse, error) {
+func (s *kKid) KkidUserlistDelete(ctx context.Context, request operations.KkidUserlistDeleteRequest, security operations.KkidUserlistDeleteSecurity) (*operations.KkidUserlistDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/userlist"
 
@@ -811,11 +811,11 @@ func (s *kKid) KkidUserlistDelete(ctx context.Context, request operations.KkidUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -876,7 +876,7 @@ func (s *kKid) KkidUserlistGet(ctx context.Context, request operations.KkidUserl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -953,7 +953,7 @@ func (s *kKid) KkidUserlistGet(ctx context.Context, request operations.KkidUserl
 
 // KkidUserlistPost - adds new child user
 // By passing in the appropriate variables this method creates a new user and assigns it to the master account of the authenticated user. By default this user will have chores and allowance access.
-func (s *kKid) KkidUserlistPost(ctx context.Context, request operations.KkidUserlistPostRequest) (*operations.KkidUserlistPostResponse, error) {
+func (s *kKid) KkidUserlistPost(ctx context.Context, request operations.KkidUserlistPostRequest, security operations.KkidUserlistPostSecurity) (*operations.KkidUserlistPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kkid/userlist"
 
@@ -962,11 +962,11 @@ func (s *kKid) KkidUserlistPost(ctx context.Context, request operations.KkidUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1034,7 +1034,7 @@ func (s *kKid) KkidUserlistPut(ctx context.Context, request operations.KkidUserl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1105,7 +1105,7 @@ func (s *kKid) KkidWishlistDelete(ctx context.Context, request operations.KkidWi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1153,7 +1153,7 @@ func (s *kKid) KkidWishlistGet(ctx context.Context, request operations.KkidWishl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1201,7 +1201,7 @@ func (s *kKid) KkidWishlistPost(ctx context.Context, request operations.KkidWish
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1249,7 +1249,7 @@ func (s *kKid) KkidWishlistPut(ctx context.Context, request operations.KkidWishl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

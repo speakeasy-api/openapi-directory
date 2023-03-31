@@ -44,7 +44,7 @@ func (s *groups) GetGroups(ctx context.Context, request operations.GetGroupsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *groups) GetGroups(ctx context.Context, request operations.GetGroupsRequ
 // You need to provide a <b>Device ID</b>:<br>- use the <b>hardware/groups</b> service to get all available group ID.
 func (s *groups) GetOneGroup(ctx context.Context, request operations.GetOneGroupRequest) (*operations.GetOneGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hardware/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,9 +139,9 @@ func (s *groups) GetOneGroup(ctx context.Context, request operations.GetOneGroup
 // You need to provide a <b>Device ID</b>:<br>- use the <b>hardware/groups</b> service to get all available group ID.<br><br>If the ID is <em>"global"</em>, then the group being updated is the GlobalSummary.
 func (s *groups) UpdateEnergyCost(ctx context.Context, request operations.UpdateEnergyCostRequest) (*operations.UpdateEnergyCostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hardware/groups/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

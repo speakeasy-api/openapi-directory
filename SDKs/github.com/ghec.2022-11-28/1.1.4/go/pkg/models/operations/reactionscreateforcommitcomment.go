@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForCommitCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForCommitCommentRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-cloud@latest//rest/reference/reactions#reaction-types) to add to the commit comment.
 type ReactionsCreateForCommitCommentRequestBodyContentEnum string
 
@@ -66,8 +57,13 @@ type ReactionsCreateForCommitCommentRequestBody struct {
 }
 
 type ReactionsCreateForCommitCommentRequest struct {
-	PathParams ReactionsCreateForCommitCommentPathParams
-	Request    ReactionsCreateForCommitCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForCommitCommentRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsCreateForCommitCommentResponse struct {

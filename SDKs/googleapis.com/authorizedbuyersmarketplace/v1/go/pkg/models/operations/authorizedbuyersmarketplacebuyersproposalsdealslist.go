@@ -8,16 +8,11 @@ import (
 )
 
 type AuthorizedbuyersmarketplaceBuyersProposalsDealsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AuthorizedbuyersmarketplaceBuyersProposalsDealsListPathParams struct {
-	// Required. The name of the proposal containing the deals to retrieve. Format: buyers/{accountId}/proposals/{proposalId}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersProposalsDealsListQueryParams struct {
+type AuthorizedbuyersmarketplaceBuyersProposalsDealsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type AuthorizedbuyersmarketplaceBuyersProposalsDealsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The page token as returned from ListDealsResponse.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the proposal containing the deals to retrieve. Format: buyers/{accountId}/proposals/{proposalId}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type AuthorizedbuyersmarketplaceBuyersProposalsDealsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersProposalsDealsListRequest struct {
-	PathParams  AuthorizedbuyersmarketplaceBuyersProposalsDealsListPathParams
-	QueryParams AuthorizedbuyersmarketplaceBuyersProposalsDealsListQueryParams
-	Security    AuthorizedbuyersmarketplaceBuyersProposalsDealsListSecurity
 }
 
 type AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse struct {

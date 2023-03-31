@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualMeterCalculateFormulaGetQueryParams struct {
-	Formula string `queryParam:"style=form,explode=true,name=formula"`
-}
-
 type VirtualMeterCalculateFormulaGetRequest struct {
-	QueryParams VirtualMeterCalculateFormulaGetQueryParams
+	Formula string `queryParam:"style=form,explode=true,name=formula"`
 }
 
 type VirtualMeterCalculateFormulaGetResponse struct {

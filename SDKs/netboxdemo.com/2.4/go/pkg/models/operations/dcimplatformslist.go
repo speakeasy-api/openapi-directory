@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPlatformsListQueryParams struct {
+type DcimPlatformsListRequest struct {
 	// Number of results to return per page.
 	Limit          *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Manufacturer   *string `queryParam:"style=form,explode=true,name=manufacturer"`
@@ -16,10 +16,6 @@ type DcimPlatformsListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type DcimPlatformsListRequest struct {
-	QueryParams DcimPlatformsListQueryParams
 }
 
 type DcimPlatformsList200ApplicationJSON struct {

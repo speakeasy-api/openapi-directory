@@ -7,12 +7,6 @@ import (
 	"time"
 )
 
-type GroupMembersCreatePathParams struct {
-	// The group ID.<br>
-	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
 type GroupMembersCreateApplicationJSONMembers struct {
 	// User email. If the user ID is given then the user email should be ignored.
 	Email *string `json:"email,omitempty"`
@@ -26,8 +20,10 @@ type GroupMembersCreateApplicationJSON struct {
 }
 
 type GroupMembersCreateRequest struct {
-	PathParams GroupMembersCreatePathParams
-	Request    GroupMembersCreateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody GroupMembersCreateApplicationJSON `request:"mediaType=application/json"`
+	// The group ID.<br>
+	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupMembersCreate201ApplicationXML - Member added.

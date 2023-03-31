@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UoaByDistanceUsV1UoaDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type UoaByDistanceUsV1UoaDistanceQueryPostRequest struct {
-	Headers UoaByDistanceUsV1UoaDistanceQueryPostHeaders
-	Request shared.UOAsByDistance `request:"mediaType=application/json"`
+	UOAsByDistance shared.UOAsByDistance `request:"mediaType=application/json"`
+	XAPIKey        *string               `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type UoaByDistanceUsV1UoaDistanceQueryPostResponse struct {

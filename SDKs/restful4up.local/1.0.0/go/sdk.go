@@ -94,7 +94,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // ApplyYaraRules - apply given YARA rules to the given executable. (upto 10 rules)
-func (s *SDK) ApplyYaraRules(ctx context.Context, request operations.ApplyYaraRulesRequest) (*operations.ApplyYaraRulesResponse, error) {
+func (s *SDK) ApplyYaraRules(ctx context.Context, request operations.ApplyYaraRulesRequestBody) (*operations.ApplyYaraRulesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apply-yara-rules"
 
@@ -197,7 +197,7 @@ func (s *SDK) Clean(ctx context.Context) (*operations.CleanResponse, error) {
 }
 
 // EmulationOutput - try to get the emulation output after unpacking the file
-func (s *SDK) EmulationOutput(ctx context.Context, request operations.EmulationOutputRequest) (*operations.EmulationOutputResponse, error) {
+func (s *SDK) EmulationOutput(ctx context.Context, request operations.EmulationOutputRequestBody) (*operations.EmulationOutputResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/emulation-output"
 
@@ -255,7 +255,7 @@ func (s *SDK) EmulationOutput(ctx context.Context, request operations.EmulationO
 }
 
 // GeneratePartialYaraRule - generate partial YARA rules for give executable. (Rule without the condition section)
-func (s *SDK) GeneratePartialYaraRule(ctx context.Context, request operations.GeneratePartialYaraRuleRequest) (*operations.GeneratePartialYaraRuleResponse, error) {
+func (s *SDK) GeneratePartialYaraRule(ctx context.Context, request operations.GeneratePartialYaraRuleRequestBody) (*operations.GeneratePartialYaraRuleResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/generate-partial-yara-rules"
 
@@ -313,7 +313,7 @@ func (s *SDK) GeneratePartialYaraRule(ctx context.Context, request operations.Ge
 }
 
 // Unpack - try to unpack the given file
-func (s *SDK) Unpack(ctx context.Context, request operations.UnpackRequest) (*operations.UnpackResponse, error) {
+func (s *SDK) Unpack(ctx context.Context, request operations.UnpackRequestBody) (*operations.UnpackResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/unpack"
 

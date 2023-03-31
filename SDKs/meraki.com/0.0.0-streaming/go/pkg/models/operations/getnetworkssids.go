@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSsidsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSsidsRequest struct {
-	PathParams GetNetworkSsidsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSsidsResponse struct {

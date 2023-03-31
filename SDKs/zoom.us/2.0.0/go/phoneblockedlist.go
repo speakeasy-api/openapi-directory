@@ -39,7 +39,7 @@ func newPhoneBlockedList(defaultClient, securityClient HTTPClient, serverURL, la
 // **Scope:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneBlockedList) AddAnumberToBlockedList(ctx context.Context, request operations.AddAnumberToBlockedListRequest) (*operations.AddAnumberToBlockedListResponse, error) {
+func (s *phoneBlockedList) AddAnumberToBlockedList(ctx context.Context, request operations.AddAnumberToBlockedListApplicationJSON, security operations.AddAnumberToBlockedListSecurity) (*operations.AddAnumberToBlockedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/blocked_list"
 
@@ -55,7 +55,7 @@ func (s *phoneBlockedList) AddAnumberToBlockedList(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,16 +105,16 @@ func (s *phoneBlockedList) AddAnumberToBlockedList(ctx context.Context, request 
 // **Scope:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneBlockedList) DeleteABlockedList(ctx context.Context, request operations.DeleteABlockedListRequest) (*operations.DeleteABlockedListResponse, error) {
+func (s *phoneBlockedList) DeleteABlockedList(ctx context.Context, request operations.DeleteABlockedListRequest, security operations.DeleteABlockedListSecurity) (*operations.DeleteABlockedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/blocked_list/{blockedListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/blocked_list/{blockedListId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,16 +163,16 @@ func (s *phoneBlockedList) DeleteABlockedList(ctx context.Context, request opera
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneBlockedList) GetABlockedList(ctx context.Context, request operations.GetABlockedListRequest) (*operations.GetABlockedListResponse, error) {
+func (s *phoneBlockedList) GetABlockedList(ctx context.Context, request operations.GetABlockedListRequest, security operations.GetABlockedListSecurity) (*operations.GetABlockedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/blocked_list/{blockedListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/blocked_list/{blockedListId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *phoneBlockedList) GetABlockedList(ctx context.Context, request operatio
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *phoneBlockedList) ListBlockedList(ctx context.Context, request operations.ListBlockedListRequest) (*operations.ListBlockedListResponse, error) {
+func (s *phoneBlockedList) ListBlockedList(ctx context.Context, request operations.ListBlockedListRequest, security operations.ListBlockedListSecurity) (*operations.ListBlockedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/blocked_list"
 
@@ -230,11 +230,11 @@ func (s *phoneBlockedList) ListBlockedList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -282,11 +282,11 @@ func (s *phoneBlockedList) ListBlockedList(ctx context.Context, request operatio
 // **Scope:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneBlockedList) UpdateBlockedList(ctx context.Context, request operations.UpdateBlockedListRequest) (*operations.UpdateBlockedListResponse, error) {
+func (s *phoneBlockedList) UpdateBlockedList(ctx context.Context, request operations.UpdateBlockedListRequest, security operations.UpdateBlockedListSecurity) (*operations.UpdateBlockedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/blocked_list/{blockedListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/blocked_list/{blockedListId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -298,7 +298,7 @@ func (s *phoneBlockedList) UpdateBlockedList(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

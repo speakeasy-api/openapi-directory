@@ -9,12 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDocumentWithPathPathParams struct {
-	// A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type GetDocumentWithPathQueryParams struct {
+type GetDocumentWithPathRequest struct {
+	// The input document (in JSON format)
+	RequestBody []byte `request:"mediaType=application/x-yaml"`
 	// If set to *full*, response will include query explanations in addition to the result.
 	Explain *string `queryParam:"style=form,explode=true,name=explain"`
 	// If true, response will return additional performance metrics in addition to the result and the standard metrics.
@@ -23,17 +20,12 @@ type GetDocumentWithPathQueryParams struct {
 	Instrument *bool `queryParam:"style=form,explode=true,name=instrument"`
 	// If true, compiler performance metrics will be returned in the response.
 	Metrics *bool `queryParam:"style=form,explode=true,name=metrics"`
+	// A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
 	// If true, response will include build and version information in addition to the result.
 	Provenance *bool `queryParam:"style=form,explode=true,name=provenance"`
-}
-
-type GetDocumentWithPathRequest struct {
-	PathParams  GetDocumentWithPathPathParams
-	QueryParams GetDocumentWithPathQueryParams
-	// The input document (in JSON format)
-	Request []byte `request:"mediaType=application/x-yaml"`
 }
 
 type GetDocumentWithPath200ApplicationJSONExplanationLocalsKey struct {

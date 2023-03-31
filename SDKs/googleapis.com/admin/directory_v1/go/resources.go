@@ -32,20 +32,20 @@ func newResources(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DirectoryResourcesBuildingsDelete - Deletes a building.
-func (s *resources) DirectoryResourcesBuildingsDelete(ctx context.Context, request operations.DirectoryResourcesBuildingsDeleteRequest) (*operations.DirectoryResourcesBuildingsDeleteResponse, error) {
+func (s *resources) DirectoryResourcesBuildingsDelete(ctx context.Context, request operations.DirectoryResourcesBuildingsDeleteRequest, security operations.DirectoryResourcesBuildingsDeleteSecurity) (*operations.DirectoryResourcesBuildingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *resources) DirectoryResourcesBuildingsDelete(ctx context.Context, reque
 }
 
 // DirectoryResourcesBuildingsGet - Retrieves a building.
-func (s *resources) DirectoryResourcesBuildingsGet(ctx context.Context, request operations.DirectoryResourcesBuildingsGetRequest) (*operations.DirectoryResourcesBuildingsGetResponse, error) {
+func (s *resources) DirectoryResourcesBuildingsGet(ctx context.Context, request operations.DirectoryResourcesBuildingsGetRequest, security operations.DirectoryResourcesBuildingsGetSecurity) (*operations.DirectoryResourcesBuildingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *resources) DirectoryResourcesBuildingsGet(ctx context.Context, request 
 }
 
 // DirectoryResourcesBuildingsInsert - Inserts a building.
-func (s *resources) DirectoryResourcesBuildingsInsert(ctx context.Context, request operations.DirectoryResourcesBuildingsInsertRequest) (*operations.DirectoryResourcesBuildingsInsertResponse, error) {
+func (s *resources) DirectoryResourcesBuildingsInsert(ctx context.Context, request operations.DirectoryResourcesBuildingsInsertRequest, security operations.DirectoryResourcesBuildingsInsertSecurity) (*operations.DirectoryResourcesBuildingsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Building", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *resources) DirectoryResourcesBuildingsInsert(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *resources) DirectoryResourcesBuildingsInsert(ctx context.Context, reque
 }
 
 // DirectoryResourcesBuildingsList - Retrieves a list of buildings for an account.
-func (s *resources) DirectoryResourcesBuildingsList(ctx context.Context, request operations.DirectoryResourcesBuildingsListRequest) (*operations.DirectoryResourcesBuildingsListResponse, error) {
+func (s *resources) DirectoryResourcesBuildingsList(ctx context.Context, request operations.DirectoryResourcesBuildingsListRequest, security operations.DirectoryResourcesBuildingsListSecurity) (*operations.DirectoryResourcesBuildingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *resources) DirectoryResourcesBuildingsList(ctx context.Context, request
 }
 
 // DirectoryResourcesBuildingsPatch - Patches a building.
-func (s *resources) DirectoryResourcesBuildingsPatch(ctx context.Context, request operations.DirectoryResourcesBuildingsPatchRequest) (*operations.DirectoryResourcesBuildingsPatchResponse, error) {
+func (s *resources) DirectoryResourcesBuildingsPatch(ctx context.Context, request operations.DirectoryResourcesBuildingsPatchRequest, security operations.DirectoryResourcesBuildingsPatchSecurity) (*operations.DirectoryResourcesBuildingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Building", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *resources) DirectoryResourcesBuildingsPatch(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *resources) DirectoryResourcesBuildingsPatch(ctx context.Context, reques
 }
 
 // DirectoryResourcesBuildingsUpdate - Updates a building.
-func (s *resources) DirectoryResourcesBuildingsUpdate(ctx context.Context, request operations.DirectoryResourcesBuildingsUpdateRequest) (*operations.DirectoryResourcesBuildingsUpdateResponse, error) {
+func (s *resources) DirectoryResourcesBuildingsUpdate(ctx context.Context, request operations.DirectoryResourcesBuildingsUpdateRequest, security operations.DirectoryResourcesBuildingsUpdateSecurity) (*operations.DirectoryResourcesBuildingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Building", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *resources) DirectoryResourcesBuildingsUpdate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,20 +332,20 @@ func (s *resources) DirectoryResourcesBuildingsUpdate(ctx context.Context, reque
 }
 
 // DirectoryResourcesCalendarsDelete - Deletes a calendar resource.
-func (s *resources) DirectoryResourcesCalendarsDelete(ctx context.Context, request operations.DirectoryResourcesCalendarsDeleteRequest) (*operations.DirectoryResourcesCalendarsDeleteResponse, error) {
+func (s *resources) DirectoryResourcesCalendarsDelete(ctx context.Context, request operations.DirectoryResourcesCalendarsDeleteRequest, security operations.DirectoryResourcesCalendarsDeleteSecurity) (*operations.DirectoryResourcesCalendarsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -371,20 +371,20 @@ func (s *resources) DirectoryResourcesCalendarsDelete(ctx context.Context, reque
 }
 
 // DirectoryResourcesCalendarsGet - Retrieves a calendar resource.
-func (s *resources) DirectoryResourcesCalendarsGet(ctx context.Context, request operations.DirectoryResourcesCalendarsGetRequest) (*operations.DirectoryResourcesCalendarsGetResponse, error) {
+func (s *resources) DirectoryResourcesCalendarsGet(ctx context.Context, request operations.DirectoryResourcesCalendarsGetRequest, security operations.DirectoryResourcesCalendarsGetSecurity) (*operations.DirectoryResourcesCalendarsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -419,11 +419,11 @@ func (s *resources) DirectoryResourcesCalendarsGet(ctx context.Context, request 
 }
 
 // DirectoryResourcesCalendarsInsert - Inserts a calendar resource.
-func (s *resources) DirectoryResourcesCalendarsInsert(ctx context.Context, request operations.DirectoryResourcesCalendarsInsertRequest) (*operations.DirectoryResourcesCalendarsInsertResponse, error) {
+func (s *resources) DirectoryResourcesCalendarsInsert(ctx context.Context, request operations.DirectoryResourcesCalendarsInsertRequest, security operations.DirectoryResourcesCalendarsInsertSecurity) (*operations.DirectoryResourcesCalendarsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -435,11 +435,11 @@ func (s *resources) DirectoryResourcesCalendarsInsert(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -474,20 +474,20 @@ func (s *resources) DirectoryResourcesCalendarsInsert(ctx context.Context, reque
 }
 
 // DirectoryResourcesCalendarsList - Retrieves a list of calendar resources for an account.
-func (s *resources) DirectoryResourcesCalendarsList(ctx context.Context, request operations.DirectoryResourcesCalendarsListRequest) (*operations.DirectoryResourcesCalendarsListResponse, error) {
+func (s *resources) DirectoryResourcesCalendarsList(ctx context.Context, request operations.DirectoryResourcesCalendarsListRequest, security operations.DirectoryResourcesCalendarsListSecurity) (*operations.DirectoryResourcesCalendarsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -522,11 +522,11 @@ func (s *resources) DirectoryResourcesCalendarsList(ctx context.Context, request
 }
 
 // DirectoryResourcesCalendarsPatch - Patches a calendar resource.
-func (s *resources) DirectoryResourcesCalendarsPatch(ctx context.Context, request operations.DirectoryResourcesCalendarsPatchRequest) (*operations.DirectoryResourcesCalendarsPatchResponse, error) {
+func (s *resources) DirectoryResourcesCalendarsPatch(ctx context.Context, request operations.DirectoryResourcesCalendarsPatchRequest, security operations.DirectoryResourcesCalendarsPatchSecurity) (*operations.DirectoryResourcesCalendarsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -538,11 +538,11 @@ func (s *resources) DirectoryResourcesCalendarsPatch(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -577,11 +577,11 @@ func (s *resources) DirectoryResourcesCalendarsPatch(ctx context.Context, reques
 }
 
 // DirectoryResourcesCalendarsUpdate - Updates a calendar resource. This method supports patch semantics, meaning you only need to include the fields you wish to update. Fields that are not present in the request will be preserved.
-func (s *resources) DirectoryResourcesCalendarsUpdate(ctx context.Context, request operations.DirectoryResourcesCalendarsUpdateRequest) (*operations.DirectoryResourcesCalendarsUpdateResponse, error) {
+func (s *resources) DirectoryResourcesCalendarsUpdate(ctx context.Context, request operations.DirectoryResourcesCalendarsUpdateRequest, security operations.DirectoryResourcesCalendarsUpdateSecurity) (*operations.DirectoryResourcesCalendarsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarResource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -593,11 +593,11 @@ func (s *resources) DirectoryResourcesCalendarsUpdate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -632,20 +632,20 @@ func (s *resources) DirectoryResourcesCalendarsUpdate(ctx context.Context, reque
 }
 
 // DirectoryResourcesFeaturesDelete - Deletes a feature.
-func (s *resources) DirectoryResourcesFeaturesDelete(ctx context.Context, request operations.DirectoryResourcesFeaturesDeleteRequest) (*operations.DirectoryResourcesFeaturesDeleteResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesDelete(ctx context.Context, request operations.DirectoryResourcesFeaturesDeleteRequest, security operations.DirectoryResourcesFeaturesDeleteSecurity) (*operations.DirectoryResourcesFeaturesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -671,20 +671,20 @@ func (s *resources) DirectoryResourcesFeaturesDelete(ctx context.Context, reques
 }
 
 // DirectoryResourcesFeaturesGet - Retrieves a feature.
-func (s *resources) DirectoryResourcesFeaturesGet(ctx context.Context, request operations.DirectoryResourcesFeaturesGetRequest) (*operations.DirectoryResourcesFeaturesGetResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesGet(ctx context.Context, request operations.DirectoryResourcesFeaturesGetRequest, security operations.DirectoryResourcesFeaturesGetSecurity) (*operations.DirectoryResourcesFeaturesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,11 +719,11 @@ func (s *resources) DirectoryResourcesFeaturesGet(ctx context.Context, request o
 }
 
 // DirectoryResourcesFeaturesInsert - Inserts a feature.
-func (s *resources) DirectoryResourcesFeaturesInsert(ctx context.Context, request operations.DirectoryResourcesFeaturesInsertRequest) (*operations.DirectoryResourcesFeaturesInsertResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesInsert(ctx context.Context, request operations.DirectoryResourcesFeaturesInsertRequest, security operations.DirectoryResourcesFeaturesInsertSecurity) (*operations.DirectoryResourcesFeaturesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Feature", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -735,11 +735,11 @@ func (s *resources) DirectoryResourcesFeaturesInsert(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,20 +774,20 @@ func (s *resources) DirectoryResourcesFeaturesInsert(ctx context.Context, reques
 }
 
 // DirectoryResourcesFeaturesList - Retrieves a list of features for an account.
-func (s *resources) DirectoryResourcesFeaturesList(ctx context.Context, request operations.DirectoryResourcesFeaturesListRequest) (*operations.DirectoryResourcesFeaturesListResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesList(ctx context.Context, request operations.DirectoryResourcesFeaturesListRequest, security operations.DirectoryResourcesFeaturesListSecurity) (*operations.DirectoryResourcesFeaturesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -822,11 +822,11 @@ func (s *resources) DirectoryResourcesFeaturesList(ctx context.Context, request 
 }
 
 // DirectoryResourcesFeaturesPatch - Patches a feature.
-func (s *resources) DirectoryResourcesFeaturesPatch(ctx context.Context, request operations.DirectoryResourcesFeaturesPatchRequest) (*operations.DirectoryResourcesFeaturesPatchResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesPatch(ctx context.Context, request operations.DirectoryResourcesFeaturesPatchRequest, security operations.DirectoryResourcesFeaturesPatchSecurity) (*operations.DirectoryResourcesFeaturesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Feature", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -838,11 +838,11 @@ func (s *resources) DirectoryResourcesFeaturesPatch(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,11 +877,11 @@ func (s *resources) DirectoryResourcesFeaturesPatch(ctx context.Context, request
 }
 
 // DirectoryResourcesFeaturesRename - Renames a feature.
-func (s *resources) DirectoryResourcesFeaturesRename(ctx context.Context, request operations.DirectoryResourcesFeaturesRenameRequest) (*operations.DirectoryResourcesFeaturesRenameResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesRename(ctx context.Context, request operations.DirectoryResourcesFeaturesRenameRequest, security operations.DirectoryResourcesFeaturesRenameSecurity) (*operations.DirectoryResourcesFeaturesRenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{oldName}/rename", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{oldName}/rename", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeatureRename", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -893,11 +893,11 @@ func (s *resources) DirectoryResourcesFeaturesRename(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -923,11 +923,11 @@ func (s *resources) DirectoryResourcesFeaturesRename(ctx context.Context, reques
 }
 
 // DirectoryResourcesFeaturesUpdate - Updates a feature.
-func (s *resources) DirectoryResourcesFeaturesUpdate(ctx context.Context, request operations.DirectoryResourcesFeaturesUpdateRequest) (*operations.DirectoryResourcesFeaturesUpdateResponse, error) {
+func (s *resources) DirectoryResourcesFeaturesUpdate(ctx context.Context, request operations.DirectoryResourcesFeaturesUpdateRequest, security operations.DirectoryResourcesFeaturesUpdateSecurity) (*operations.DirectoryResourcesFeaturesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/resources/features/{featureKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Feature", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -939,11 +939,11 @@ func (s *resources) DirectoryResourcesFeaturesUpdate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

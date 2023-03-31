@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // EssentialcontactsProjectsContactsCompute - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
-func (s *projects) EssentialcontactsProjectsContactsCompute(ctx context.Context, request operations.EssentialcontactsProjectsContactsComputeRequest) (*operations.EssentialcontactsProjectsContactsComputeResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsCompute(ctx context.Context, request operations.EssentialcontactsProjectsContactsComputeRequest, security operations.EssentialcontactsProjectsContactsComputeSecurity) (*operations.EssentialcontactsProjectsContactsComputeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts:compute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts:compute", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) EssentialcontactsProjectsContactsCompute(ctx context.Context,
 }
 
 // EssentialcontactsProjectsContactsCreate - Adds a new contact for a resource.
-func (s *projects) EssentialcontactsProjectsContactsCreate(ctx context.Context, request operations.EssentialcontactsProjectsContactsCreateRequest) (*operations.EssentialcontactsProjectsContactsCreateResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsCreate(ctx context.Context, request operations.EssentialcontactsProjectsContactsCreateRequest, security operations.EssentialcontactsProjectsContactsCreateSecurity) (*operations.EssentialcontactsProjectsContactsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudEssentialcontactsV1ContactInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) EssentialcontactsProjectsContactsCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) EssentialcontactsProjectsContactsCreate(ctx context.Context, 
 }
 
 // EssentialcontactsProjectsContactsDelete - Deletes a contact.
-func (s *projects) EssentialcontactsProjectsContactsDelete(ctx context.Context, request operations.EssentialcontactsProjectsContactsDeleteRequest) (*operations.EssentialcontactsProjectsContactsDeleteResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsDelete(ctx context.Context, request operations.EssentialcontactsProjectsContactsDeleteRequest, security operations.EssentialcontactsProjectsContactsDeleteSecurity) (*operations.EssentialcontactsProjectsContactsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) EssentialcontactsProjectsContactsDelete(ctx context.Context, 
 }
 
 // EssentialcontactsProjectsContactsGet - Gets a single contact.
-func (s *projects) EssentialcontactsProjectsContactsGet(ctx context.Context, request operations.EssentialcontactsProjectsContactsGetRequest) (*operations.EssentialcontactsProjectsContactsGetResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsGet(ctx context.Context, request operations.EssentialcontactsProjectsContactsGetRequest, security operations.EssentialcontactsProjectsContactsGetSecurity) (*operations.EssentialcontactsProjectsContactsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *projects) EssentialcontactsProjectsContactsGet(ctx context.Context, req
 }
 
 // EssentialcontactsProjectsContactsList - Lists the contacts that have been set on a resource.
-func (s *projects) EssentialcontactsProjectsContactsList(ctx context.Context, request operations.EssentialcontactsProjectsContactsListRequest) (*operations.EssentialcontactsProjectsContactsListResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsList(ctx context.Context, request operations.EssentialcontactsProjectsContactsListRequest, security operations.EssentialcontactsProjectsContactsListSecurity) (*operations.EssentialcontactsProjectsContactsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,11 +279,11 @@ func (s *projects) EssentialcontactsProjectsContactsList(ctx context.Context, re
 }
 
 // EssentialcontactsProjectsContactsPatch - Updates a contact. Note: A contact's email address cannot be changed.
-func (s *projects) EssentialcontactsProjectsContactsPatch(ctx context.Context, request operations.EssentialcontactsProjectsContactsPatchRequest) (*operations.EssentialcontactsProjectsContactsPatchResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsPatch(ctx context.Context, request operations.EssentialcontactsProjectsContactsPatchRequest, security operations.EssentialcontactsProjectsContactsPatchSecurity) (*operations.EssentialcontactsProjectsContactsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudEssentialcontactsV1ContactInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,11 +295,11 @@ func (s *projects) EssentialcontactsProjectsContactsPatch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *projects) EssentialcontactsProjectsContactsPatch(ctx context.Context, r
 }
 
 // EssentialcontactsProjectsContactsSendTestMessage - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
-func (s *projects) EssentialcontactsProjectsContactsSendTestMessage(ctx context.Context, request operations.EssentialcontactsProjectsContactsSendTestMessageRequest) (*operations.EssentialcontactsProjectsContactsSendTestMessageResponse, error) {
+func (s *projects) EssentialcontactsProjectsContactsSendTestMessage(ctx context.Context, request operations.EssentialcontactsProjectsContactsSendTestMessageRequest, security operations.EssentialcontactsProjectsContactsSendTestMessageSecurity) (*operations.EssentialcontactsProjectsContactsSendTestMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}/contacts:sendTestMessage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}/contacts:sendTestMessage", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudEssentialcontactsV1SendTestMessageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *projects) EssentialcontactsProjectsContactsSendTestMessage(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

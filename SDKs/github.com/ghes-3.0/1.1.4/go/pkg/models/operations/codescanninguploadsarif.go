@@ -8,11 +8,6 @@ import (
 	"time"
 )
 
-type CodeScanningUploadSarifPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type CodeScanningUploadSarifRequestBody struct {
 	// The base directory used in the analysis, as it appears in the SARIF file.
 	// This property is used to convert file paths from absolute to relative, so that alerts can be mapped to their correct location in the repository.
@@ -31,8 +26,9 @@ type CodeScanningUploadSarifRequestBody struct {
 }
 
 type CodeScanningUploadSarifRequest struct {
-	PathParams CodeScanningUploadSarifPathParams
-	Request    CodeScanningUploadSarifRequestBody `request:"mediaType=application/json"`
+	RequestBody CodeScanningUploadSarifRequestBody `request:"mediaType=application/json"`
+	Owner       string                             `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                             `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // CodeScanningUploadSarif503ApplicationJSON - Service unavailable

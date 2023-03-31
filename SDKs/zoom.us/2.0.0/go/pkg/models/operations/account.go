@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type AccountPathParams struct {
+type AccountRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AccountRequest struct {
-	PathParams AccountPathParams
 }
 
 // Account200ApplicationXMLOptionsPayModeEnum - Payee:<br>`master` - master account holder pays.<br>`sub` - Sub account holder pays.

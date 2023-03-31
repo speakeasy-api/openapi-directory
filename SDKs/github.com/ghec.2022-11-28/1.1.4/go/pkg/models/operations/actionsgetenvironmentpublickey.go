@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetEnvironmentPublicKeyPathParams struct {
+type ActionsGetEnvironmentPublicKeyRequest struct {
 	// The name of the environment.
 	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
 	// The unique identifier of the repository.
 	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
-type ActionsGetEnvironmentPublicKeyRequest struct {
-	PathParams ActionsGetEnvironmentPublicKeyPathParams
 }
 
 type ActionsGetEnvironmentPublicKeyResponse struct {

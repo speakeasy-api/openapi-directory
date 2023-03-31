@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesMediaTypesFormatPathParams struct {
+type GetResourcesMediaTypesFormatRequest struct {
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GetResourcesMediaTypesFormatRequest struct {
-	PathParams GetResourcesMediaTypesFormatPathParams
 }
 
 type GetResourcesMediaTypesFormatResponse struct {

@@ -32,18 +32,18 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetCategory - Get category
 // Returns the category with this slug
-func (s *categories) GetCategory(ctx context.Context, request operations.GetCategoryRequest) (*operations.GetCategoryResponse, error) {
+func (s *categories) GetCategory(ctx context.Context, request operations.GetCategoryRequest, security operations.GetCategorySecurity) (*operations.GetCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,18 +72,18 @@ func (s *categories) GetCategory(ctx context.Context, request operations.GetCate
 
 // GetCategoryDocs - Get docs for category
 // Returns the docs and children docs within this category
-func (s *categories) GetCategoryDocs(ctx context.Context, request operations.GetCategoryDocsRequest) (*operations.GetCategoryDocsResponse, error) {
+func (s *categories) GetCategoryDocs(ctx context.Context, request operations.GetCategoryDocsRequest, security operations.GetCategoryDocsSecurity) (*operations.GetCategoryDocsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{slug}/docs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{slug}/docs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

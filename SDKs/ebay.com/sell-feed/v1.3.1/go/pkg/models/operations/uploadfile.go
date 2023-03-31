@@ -8,18 +8,13 @@ import (
 )
 
 type UploadFileSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UploadFilePathParams struct {
-	// The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created.
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadFileRequest struct {
-	PathParams UploadFilePathParams
-	Request    *shared.FormDataContentDisposition `request:"mediaType=multipart/form-data"`
-	Security   UploadFileSecurity
+	FormDataContentDisposition *shared.FormDataContentDisposition `request:"mediaType=multipart/form-data"`
+	// The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created.
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type UploadFileResponse struct {

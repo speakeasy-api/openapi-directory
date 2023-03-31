@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01TransferCallSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01TransferCallRequest struct {
-	// POST parameters
-	Request  *shared.TransferCallParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01TransferCallSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01TransferCallResponse struct {

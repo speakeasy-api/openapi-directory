@@ -21,10 +21,6 @@ type PostPortfolioSimulationRebalancingFixedWeightRequestBody struct {
 	Portfolios []PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioSimulationRebalancingFixedWeightRequest struct {
-	Request PostPortfolioSimulationRebalancingFixedWeightRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSONPortfolios struct {
 	// portfolioValues[t] is the value of the portfolio at the time t
 	PortfolioValues []float64 `json:"portfolioValues"`

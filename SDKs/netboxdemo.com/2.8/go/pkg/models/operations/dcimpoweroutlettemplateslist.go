@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerOutletTemplatesListQueryParams struct {
+type DcimPowerOutletTemplatesListRequest struct {
 	DevicetypeID  *string `queryParam:"style=form,explode=true,name=devicetype_id"`
 	DevicetypeIDN *string `queryParam:"style=form,explode=true,name=devicetype_id__n"`
 	FeedLeg       *string `queryParam:"style=form,explode=true,name=feed_leg"`
@@ -35,10 +35,6 @@ type DcimPowerOutletTemplatesListQueryParams struct {
 	Q      *string `queryParam:"style=form,explode=true,name=q"`
 	Type   *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN  *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimPowerOutletTemplatesListRequest struct {
-	QueryParams DcimPowerOutletTemplatesListQueryParams
 }
 
 type DcimPowerOutletTemplatesList200ApplicationJSON struct {

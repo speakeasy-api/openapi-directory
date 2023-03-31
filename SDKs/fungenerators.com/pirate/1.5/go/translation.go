@@ -34,7 +34,7 @@ func newTranslation(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // GetPirateTranslate - Translate from English to pirate.
-func (s *translation) GetPirateTranslate(ctx context.Context, request operations.GetPirateTranslateRequest) (*operations.GetPirateTranslateResponse, error) {
+func (s *translation) GetPirateTranslate(ctx context.Context, request operations.GetPirateTranslateRequest, security operations.GetPirateTranslateSecurity) (*operations.GetPirateTranslateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pirate/translate"
 
@@ -43,11 +43,11 @@ func (s *translation) GetPirateTranslate(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

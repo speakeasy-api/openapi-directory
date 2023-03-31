@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProjectFormPathParams struct {
+type UpdateProjectFormRequest struct {
+	// The updated project model
+	ProjectInput shared.ProjectInput `request:"mediaType=application/x-www-form-urlencoded"`
+	TrainingKey  string              `header:"style=simple,explode=false,name=Training-Key"`
 	// The id of the project to update
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateProjectFormHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateProjectFormRequest struct {
-	PathParams UpdateProjectFormPathParams
-	Headers    UpdateProjectFormHeaders
-	// The updated project model
-	Request shared.ProjectInput `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateProjectFormResponse struct {

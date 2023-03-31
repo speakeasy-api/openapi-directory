@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StatusScanPagePathParams struct {
+type StatusScanPageRequest struct {
 	// Numeric ID of the scan to get status
 	ScanID int64 `pathParam:"style=simple,explode=false,name=scanId"`
-}
-
-type StatusScanPageRequest struct {
-	PathParams StatusScanPagePathParams
 }
 
 type StatusScanPageResponse struct {

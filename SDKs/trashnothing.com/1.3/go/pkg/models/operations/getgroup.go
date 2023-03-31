@@ -8,19 +8,14 @@ import (
 )
 
 type GetGroupSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
-}
-
-type GetGroupPathParams struct {
-	// The ID of the group to retrieve.
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetGroupRequest struct {
-	PathParams GetGroupPathParams
-	Security   GetGroupSecurity
+	// The ID of the group to retrieve.
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type GetGroupResponse struct {

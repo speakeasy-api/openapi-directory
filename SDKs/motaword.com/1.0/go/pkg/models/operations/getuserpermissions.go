@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserPermissionsPathParams struct {
+type GetUserPermissionsRequest struct {
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetUserPermissionsRequest struct {
-	PathParams GetUserPermissionsPathParams
 }
 
 type GetUserPermissionsResponse struct {

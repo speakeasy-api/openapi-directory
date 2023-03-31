@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteUserEpisodesEpisodeIDPathParams struct {
-	EpisodeID int64 `pathParam:"style=simple,explode=false,name=episode_id"`
-}
-
 type DeleteUserEpisodesEpisodeIDRequest struct {
-	PathParams DeleteUserEpisodesEpisodeIDPathParams
+	EpisodeID int64 `pathParam:"style=simple,explode=false,name=episode_id"`
 }
 
 type DeleteUserEpisodesEpisodeIDResponse struct {

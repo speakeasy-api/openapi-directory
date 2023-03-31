@@ -7,25 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETTaxationItemsOfDebitMemoItemPathParams struct {
-	// The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e.
-	//
-	DebitMemoID string `pathParam:"style=simple,explode=false,name=debitMemoId"`
-	// The unique ID of a debit memo item. You can get the debit memo item ID from the response of [List debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).
-	//
-	Dmitemid string `pathParam:"style=simple,explode=false,name=dmitemid"`
-}
-
-type GETTaxationItemsOfDebitMemoItemQueryParams struct {
-	// Page number.
-	//
-	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-	// Number of rows returned per page.
-	//
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETTaxationItemsOfDebitMemoItemHeaders struct {
+type GETTaxationItemsOfDebitMemoItemRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -34,12 +16,18 @@ type GETTaxationItemsOfDebitMemoItemHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETTaxationItemsOfDebitMemoItemRequest struct {
-	PathParams  GETTaxationItemsOfDebitMemoItemPathParams
-	QueryParams GETTaxationItemsOfDebitMemoItemQueryParams
-	Headers     GETTaxationItemsOfDebitMemoItemHeaders
+	// The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e.
+	//
+	DebitMemoID string `pathParam:"style=simple,explode=false,name=debitMemoId"`
+	// The unique ID of a debit memo item. You can get the debit memo item ID from the response of [List debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).
+	//
+	Dmitemid string `pathParam:"style=simple,explode=false,name=dmitemid"`
+	// Page number.
+	//
+	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Number of rows returned per page.
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GETTaxationItemsOfDebitMemoItem200ApplicationJSON struct {

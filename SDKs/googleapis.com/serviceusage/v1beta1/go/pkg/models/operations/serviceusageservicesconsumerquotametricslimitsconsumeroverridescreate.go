@@ -10,23 +10,18 @@ import (
 )
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurity struct {
 	Option1 *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurityOption1 `security:"option"`
 	Option2 *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurityOption2 `security:"option"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreatePathParams struct {
-	// The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateForceOnlyEnum string
@@ -55,9 +50,10 @@ func (e *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateFo
 	}
 }
 
-type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryParams struct {
+type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	QuotaOverride *shared.QuotaOverride `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -74,6 +70,8 @@ type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryP
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -82,13 +80,6 @@ type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryP
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest struct {
-	PathParams  ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreatePathParams
-	QueryParams ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryParams
-	Request     *shared.QuotaOverride `request:"mediaType=application/json"`
-	Security    ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurity
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse struct {

@@ -14,81 +14,72 @@ func main() {
     s := sdk.New()
 
     req := operations.BinaryauthorizationProjectsAttestorsCreateRequest{
-        Security: operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.BinaryauthorizationProjectsAttestorsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BinaryauthorizationProjectsAttestorsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            AttestorID: "unde",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.AttestorInput{
-            Description: "iure",
-            Etag: "magnam",
-            Name: "debitis",
+        DollarXgafv: "2",
+        AttestorInput: &shared.AttestorInput{
+            Description: "provident",
+            Etag: "distinctio",
+            Name: "quibusdam",
             UserOwnedGrafeasNote: &shared.UserOwnedGrafeasNoteInput{
-                NoteReference: "ipsa",
+                NoteReference: "unde",
                 PublicKeys: []shared.AttestorPublicKey{
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "tempora",
-                        Comment: "suscipit",
-                        ID: "molestiae",
+                        ASCIIArmoredPgpPublicKey: "corrupti",
+                        Comment: "illum",
+                        ID: "vel",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "minus",
-                            SignatureAlgorithm: "ECDSA_P384_SHA384",
-                        },
-                    },
-                    shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "voluptatum",
-                        Comment: "iusto",
-                        ID: "excepturi",
-                        PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "nisi",
-                            SignatureAlgorithm: "ECDSA_P521_SHA512",
-                        },
-                    },
-                    shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "temporibus",
-                        Comment: "ab",
-                        ID: "quis",
-                        PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "veritatis",
+                            PublicKeyPem: "error",
                             SignatureAlgorithm: "RSA_SIGN_PKCS1_4096_SHA512",
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "perferendis",
-                        Comment: "ipsam",
-                        ID: "repellendus",
+                        ASCIIArmoredPgpPublicKey: "suscipit",
+                        Comment: "iure",
+                        ID: "magnam",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "sapiente",
-                            SignatureAlgorithm: "EC_SIGN_P256_SHA256",
+                            PublicKeyPem: "debitis",
+                            SignatureAlgorithm: "RSA_PSS_2048_SHA256",
+                        },
+                    },
+                    shared.AttestorPublicKey{
+                        ASCIIArmoredPgpPublicKey: "delectus",
+                        Comment: "tempora",
+                        ID: "suscipit",
+                        PkixPublicKey: &shared.PkixPublicKey{
+                            PublicKeyPem: "molestiae",
+                            SignatureAlgorithm: "ECDSA_P384_SHA384",
+                        },
+                    },
+                    shared.AttestorPublicKey{
+                        ASCIIArmoredPgpPublicKey: "placeat",
+                        Comment: "voluptatum",
+                        ID: "iusto",
+                        PkixPublicKey: &shared.PkixPublicKey{
+                            PublicKeyPem: "excepturi",
+                            SignatureAlgorithm: "RSA_PSS_4096_SHA512",
                         },
                     },
                 },
             },
         },
+        AccessToken: "recusandae",
+        Alt: "proto",
+        AttestorID: "ab",
+        Callback: "quis",
+        Fields: "veritatis",
+        Key: "deserunt",
+        OauthToken: "perferendis",
+        Parent: "ipsam",
+        PrettyPrint: false,
+        QuotaUser: "repellendus",
+        UploadType: "sapiente",
+        UploadProtocol: "quo",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.BinaryauthorizationProjectsAttestorsCreate(ctx, req)
+    res, err := s.Projects.BinaryauthorizationProjectsAttestorsCreate(ctx, req, operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

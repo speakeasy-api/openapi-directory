@@ -44,7 +44,7 @@ func (s *automationRuns) GetAutomationRuns(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *automationRuns) GetAutomationRuns(ctx context.Context, request operatio
 // Show Automation Run
 func (s *automationRuns) GetAutomationRunsID(ctx context.Context, request operations.GetAutomationRunsIDRequest) (*operations.GetAutomationRunsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation_runs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation_runs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

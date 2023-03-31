@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingAdsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingAdsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingAdsListCompatibilityEnum - Select default ads with the specified compatibility. Applicable when type is AD_SERVING_DEFAULT_AD. DISPLAY and DISPLAY_INTERSTITIAL refer to rendering either on desktop or on mobile devices for regular or interstitial ads, respectively. APP and APP_INTERSTITIAL are for rendering in mobile apps. IN_STREAM_VIDEO refers to rendering an in-stream video ads developed with the VAST standard.
@@ -135,7 +130,7 @@ func (e *DfareportingAdsListTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DfareportingAdsListQueryParams struct {
+type DfareportingAdsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -182,6 +177,8 @@ type DfareportingAdsListQueryParams struct {
 	PlacementIds []string `queryParam:"style=form,explode=true,name=placementIds"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Select only ads whose list targeting expression use these remarketing list IDs.
@@ -204,12 +201,6 @@ type DfareportingAdsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingAdsListRequest struct {
-	PathParams  DfareportingAdsListPathParams
-	QueryParams DfareportingAdsListQueryParams
-	Security    DfareportingAdsListSecurity
 }
 
 type DfareportingAdsListResponse struct {

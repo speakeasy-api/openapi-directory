@@ -12,18 +12,13 @@ var FetchConversationServerList = []string{
 }
 
 type FetchConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchConversationPathParams struct {
-	// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchConversationRequest struct {
-	PathParams FetchConversationPathParams
-	Security   FetchConversationSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchConversationResponse struct {

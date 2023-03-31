@@ -14,40 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.FirebasestorageProjectsBucketsAddFirebaseRequest{
-        Security: operations.FirebasestorageProjectsBucketsAddFirebaseSecurity{
-            Option1: &operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        RequestBody: map[string]interface{}{
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        PathParams: operations.FirebasestorageProjectsBucketsAddFirebasePathParams{
-            Bucket: "corrupti",
-        },
-        QueryParams: operations.FirebasestorageProjectsBucketsAddFirebaseQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: map[string]interface{}{
-            "iure": "magnam",
-            "debitis": "ipsa",
-        },
+        AccessToken: "vel",
+        Alt: "media",
+        Bucket: "deserunt",
+        Callback: "suscipit",
+        Fields: "iure",
+        Key: "magnam",
+        OauthToken: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.FirebasestorageProjectsBucketsAddFirebase(ctx, req)
+    res, err := s.Projects.FirebasestorageProjectsBucketsAddFirebase(ctx, req, operations.FirebasestorageProjectsBucketsAddFirebaseSecurity{
+        Option1: &operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

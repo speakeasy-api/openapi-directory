@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateCallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCallQueueApplicationJSONMembersUsers struct {
@@ -40,11 +39,6 @@ type CreateCallQueueApplicationJSON struct {
 	Name string `json:"name"`
 	// Unique identifier of the site. Required only if [multiple sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-Multiple-Sites) have been enabled. This can be retrieved from the [List Phone Sites](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites) API.
 	SiteID string `json:"site_id"`
-}
-
-type CreateCallQueueRequest struct {
-	Request  *CreateCallQueueApplicationJSON `request:"mediaType=application/json"`
-	Security CreateCallQueueSecurity
 }
 
 // CreateCallQueue201ApplicationXML - **HTTP Status Code:** `201` **Created**<br>

@@ -34,9 +34,9 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinessbusinessinformationLocationsAssociate - Associates a location to a place ID. Any previous association is overwritten. This operation is only valid if the location is unverified. The association must be valid, that is, it appears in the list of `SearchGoogleLocations`.
 func (s *locations) MybusinessbusinessinformationLocationsAssociate(ctx context.Context, request operations.MybusinessbusinessinformationLocationsAssociateRequest) (*operations.MybusinessbusinessinformationLocationsAssociateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:associate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:associate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssociateLocationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *locations) MybusinessbusinessinformationLocationsAssociate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *locations) MybusinessbusinessinformationLocationsAssociate(ctx context.
 // MybusinessbusinessinformationLocationsAttributesGetGoogleUpdated - Gets the Google-updated version of the specified location.
 func (s *locations) MybusinessbusinessinformationLocationsAttributesGetGoogleUpdated(ctx context.Context, request operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedRequest) (*operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getGoogleUpdated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getGoogleUpdated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,9 +137,9 @@ func (s *locations) MybusinessbusinessinformationLocationsAttributesGetGoogleUpd
 // MybusinessbusinessinformationLocationsClearLocationAssociation - Clears an association between a location and its place ID. This operation is only valid if the location is unverified.
 func (s *locations) MybusinessbusinessinformationLocationsClearLocationAssociation(ctx context.Context, request operations.MybusinessbusinessinformationLocationsClearLocationAssociationRequest) (*operations.MybusinessbusinessinformationLocationsClearLocationAssociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:clearLocationAssociation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:clearLocationAssociation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,7 +151,7 @@ func (s *locations) MybusinessbusinessinformationLocationsClearLocationAssociati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -192,14 +192,14 @@ func (s *locations) MybusinessbusinessinformationLocationsClearLocationAssociati
 // MybusinessbusinessinformationLocationsDelete - Deletes a location. If this location cannot be deleted using the API and it is marked so in the `google.mybusiness.businessinformation.v1.LocationState`, use the [Google Business Profile](https://business.google.com/manage/) website.
 func (s *locations) MybusinessbusinessinformationLocationsDelete(ctx context.Context, request operations.MybusinessbusinessinformationLocationsDeleteRequest) (*operations.MybusinessbusinessinformationLocationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,14 +240,14 @@ func (s *locations) MybusinessbusinessinformationLocationsDelete(ctx context.Con
 // MybusinessbusinessinformationLocationsGetAttributes - Looks up all the attributes set for a given location.
 func (s *locations) MybusinessbusinessinformationLocationsGetAttributes(ctx context.Context, request operations.MybusinessbusinessinformationLocationsGetAttributesRequest) (*operations.MybusinessbusinessinformationLocationsGetAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -288,9 +288,9 @@ func (s *locations) MybusinessbusinessinformationLocationsGetAttributes(ctx cont
 // MybusinessbusinessinformationLocationsUpdateAttributes - Update attributes for a given location.
 func (s *locations) MybusinessbusinessinformationLocationsUpdateAttributes(ctx context.Context, request operations.MybusinessbusinessinformationLocationsUpdateAttributesRequest) (*operations.MybusinessbusinessinformationLocationsUpdateAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AttributesInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,7 +302,7 @@ func (s *locations) MybusinessbusinessinformationLocationsUpdateAttributes(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

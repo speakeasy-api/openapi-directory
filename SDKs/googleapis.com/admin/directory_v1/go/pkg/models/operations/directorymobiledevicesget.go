@@ -10,31 +10,24 @@ import (
 )
 
 type DirectoryMobiledevicesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMobiledevicesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMobiledevicesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMobiledevicesGetSecurity struct {
 	Option1 *DirectoryMobiledevicesGetSecurityOption1 `security:"option"`
 	Option2 *DirectoryMobiledevicesGetSecurityOption2 `security:"option"`
 	Option3 *DirectoryMobiledevicesGetSecurityOption3 `security:"option"`
-}
-
-type DirectoryMobiledevicesGetPathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-	// The unique ID the API service uses to identify the mobile device.
-	ResourceID string `pathParam:"style=simple,explode=false,name=resourceId"`
 }
 
 // DirectoryMobiledevicesGetProjectionEnum - Restrict information returned to a set of selected fields.
@@ -61,7 +54,7 @@ func (e *DirectoryMobiledevicesGetProjectionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DirectoryMobiledevicesGetQueryParams struct {
+type DirectoryMobiledevicesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -70,6 +63,8 @@ type DirectoryMobiledevicesGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -82,16 +77,12 @@ type DirectoryMobiledevicesGetQueryParams struct {
 	Projection *DirectoryMobiledevicesGetProjectionEnum `queryParam:"style=form,explode=true,name=projection"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The unique ID the API service uses to identify the mobile device.
+	ResourceID string `pathParam:"style=simple,explode=false,name=resourceId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryMobiledevicesGetRequest struct {
-	PathParams  DirectoryMobiledevicesGetPathParams
-	QueryParams DirectoryMobiledevicesGetQueryParams
-	Security    DirectoryMobiledevicesGetSecurity
 }
 
 type DirectoryMobiledevicesGetResponse struct {

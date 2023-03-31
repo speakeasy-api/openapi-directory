@@ -10,41 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-// GetReportsEntityTypeEntityTypeEnum - Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac-party`, `house-senate`, or `ie-only`
-type GetReportsEntityTypeEntityTypeEnum string
-
-const (
-	GetReportsEntityTypeEntityTypeEnumPresidential GetReportsEntityTypeEntityTypeEnum = "presidential"
-	GetReportsEntityTypeEntityTypeEnumPacParty     GetReportsEntityTypeEntityTypeEnum = "pac-party"
-	GetReportsEntityTypeEntityTypeEnumHouseSenate  GetReportsEntityTypeEntityTypeEnum = "house-senate"
-	GetReportsEntityTypeEntityTypeEnumIeOnly       GetReportsEntityTypeEntityTypeEnum = "ie-only"
-)
-
-func (e *GetReportsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "presidential":
-		fallthrough
-	case "pac-party":
-		fallthrough
-	case "house-senate":
-		fallthrough
-	case "ie-only":
-		*e = GetReportsEntityTypeEntityTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetReportsEntityTypeEntityTypeEnum: %s", s)
-	}
-}
-
-type GetReportsEntityTypePathParams struct {
-	// Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac-party`, `house-senate`, or `ie-only`
-	EntityType GetReportsEntityTypeEntityTypeEnum `pathParam:"style=simple,explode=false,name=entity_type"`
-}
-
 type GetReportsEntityTypeAmendmentIndicatorEnum string
 
 const (
@@ -83,6 +48,36 @@ func (e *GetReportsEntityTypeAmendmentIndicatorEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
+// GetReportsEntityTypeEntityTypeEnum - Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac-party`, `house-senate`, or `ie-only`
+type GetReportsEntityTypeEntityTypeEnum string
+
+const (
+	GetReportsEntityTypeEntityTypeEnumPresidential GetReportsEntityTypeEntityTypeEnum = "presidential"
+	GetReportsEntityTypeEntityTypeEnumPacParty     GetReportsEntityTypeEntityTypeEnum = "pac-party"
+	GetReportsEntityTypeEntityTypeEnumHouseSenate  GetReportsEntityTypeEntityTypeEnum = "house-senate"
+	GetReportsEntityTypeEntityTypeEnumIeOnly       GetReportsEntityTypeEntityTypeEnum = "ie-only"
+)
+
+func (e *GetReportsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "presidential":
+		fallthrough
+	case "pac-party":
+		fallthrough
+	case "house-senate":
+		fallthrough
+	case "ie-only":
+		*e = GetReportsEntityTypeEntityTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetReportsEntityTypeEntityTypeEnum: %s", s)
+	}
+}
+
 // GetReportsEntityTypeFilerTypeEnum - The method used to file with the FEC, either electronic or on paper.
 type GetReportsEntityTypeFilerTypeEnum string
 
@@ -107,7 +102,7 @@ func (e *GetReportsEntityTypeFilerTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetReportsEntityTypeQueryParams struct {
+type GetReportsEntityTypeRequest struct {
 	// Amendent types:
 	//     -N   new
 	//     -A   amendment
@@ -157,6 +152,8 @@ type GetReportsEntityTypeQueryParams struct {
 	// for its ending, even year.
 	//
 	Cycle []int `queryParam:"style=form,explode=true,name=cycle"`
+	// Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac-party`, `house-senate`, or `ie-only`
+	EntityType GetReportsEntityTypeEntityTypeEnum `pathParam:"style=simple,explode=false,name=entity_type"`
 	// The method used to file with the FEC, either electronic or on paper.
 	FilerType *GetReportsEntityTypeFilerTypeEnum `queryParam:"style=form,explode=true,name=filer_type"`
 	// False indicates that a report is the most recent. True indicates that the report has been superseded by an amendment.
@@ -277,11 +274,6 @@ type GetReportsEntityTypeQueryParams struct {
 	//     year from the receipt date.
 	//
 	Year []int `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetReportsEntityTypeRequest struct {
-	PathParams  GetReportsEntityTypePathParams
-	QueryParams GetReportsEntityTypeQueryParams
 }
 
 type GetReportsEntityTypeResponse struct {

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkCameraQualityRetentionProfilePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum - Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
 type CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum string
 
@@ -782,8 +778,8 @@ type CreateNetworkCameraQualityRetentionProfileRequestBody struct {
 }
 
 type CreateNetworkCameraQualityRetentionProfileRequest struct {
-	PathParams CreateNetworkCameraQualityRetentionProfilePathParams
-	Request    CreateNetworkCameraQualityRetentionProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkCameraQualityRetentionProfileRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkCameraQualityRetentionProfileResponse struct {

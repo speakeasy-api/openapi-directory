@@ -33,13 +33,9 @@ func (e *UpcomingDfsSlateOwnershipProjectionsFormatEnum) UnmarshalJSON(data []by
 	}
 }
 
-type UpcomingDfsSlateOwnershipProjectionsPathParams struct {
+type UpcomingDfsSlateOwnershipProjectionsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format UpcomingDfsSlateOwnershipProjectionsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type UpcomingDfsSlateOwnershipProjectionsRequest struct {
-	PathParams UpcomingDfsSlateOwnershipProjectionsPathParams
 }
 
 type UpcomingDfsSlateOwnershipProjectionsResponse struct {

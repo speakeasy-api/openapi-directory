@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetRealmAuthenticationFlowsFlowAliasExecutionsPathParams struct {
+type GetRealmAuthenticationFlowsFlowAliasExecutionsRequest struct {
 	// Flow alias
 	FlowAlias string `pathParam:"style=simple,explode=false,name=flowAlias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAuthenticationFlowsFlowAliasExecutionsRequest struct {
-	PathParams GetRealmAuthenticationFlowsFlowAliasExecutionsPathParams
 }
 
 type GetRealmAuthenticationFlowsFlowAliasExecutionsResponse struct {

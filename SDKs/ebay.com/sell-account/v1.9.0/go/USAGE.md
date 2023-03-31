@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAdvertisingEligibilityRequest{
-        Security: operations.GetAdvertisingEligibilitySecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetAdvertisingEligibilityQueryParams{
-            ProgramTypes: "corrupti",
-        },
-        Headers: operations.GetAdvertisingEligibilityHeaders{
-            XEbayCMarketplaceID: "provident",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        ProgramTypes: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.AdvertisingEligibility.GetAdvertisingEligibility(ctx, req)
+    res, err := s.AdvertisingEligibility.GetAdvertisingEligibility(ctx, req, operations.GetAdvertisingEligibilitySecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

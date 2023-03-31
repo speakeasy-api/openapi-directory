@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateContactPathParams struct {
+type CreateContactRequest struct {
+	ContactCreateRequest shared.ContactCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type CreateContactRequest struct {
-	PathParams CreateContactPathParams
-	Request    shared.ContactCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateContactResponse struct {

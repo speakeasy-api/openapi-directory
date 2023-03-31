@@ -44,7 +44,7 @@ func (s *printouts) GetAlmawsV1TaskListsPrintouts(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,7 +98,7 @@ func (s *printouts) GetAlmawsV1TaskListsPrintouts(ctx context.Context, request o
 // This Web service returns a Printout given a Printout ID.
 func (s *printouts) GetAlmawsV1TaskListsPrintoutsPrintoutID(ctx context.Context, request operations.GetAlmawsV1TaskListsPrintoutsPrintoutIDRequest) (*operations.GetAlmawsV1TaskListsPrintoutsPrintoutIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +162,7 @@ func (s *printouts) PostAlmawsV1TaskListsPrintouts(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -216,14 +216,14 @@ func (s *printouts) PostAlmawsV1TaskListsPrintouts(ctx context.Context, request 
 // This API operates on an printout. given a Printout ID.
 func (s *printouts) PostAlmawsV1TaskListsPrintoutsPrintoutID(ctx context.Context, request operations.PostAlmawsV1TaskListsPrintoutsPrintoutIDRequest) (*operations.PostAlmawsV1TaskListsPrintoutsPrintoutIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

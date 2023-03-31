@@ -314,7 +314,6 @@ pkg/models/operations/postspacesspaceidpersonsidemployees.go
 pkg/models/operations/postspacesspaceidpersonsidguestinspace.go
 pkg/models/operations/postspacesspaceidpersonsidinvitation.go
 pkg/models/operations/postspacesspaceidpersonsidinvitationinvitationidsend.go
-pkg/models/shared/security.go
 pkg/models/shared/businessgroup.go
 pkg/models/shared/session.go
 pkg/models/shared/companyentity.go
@@ -356,4 +355,5 @@ pkg/models/shared/modifyinvitation.go
 pkg/models/shared/invitationperson.go
 pkg/models/shared/callfordocument.go
 pkg/models/shared/guestinspace.go
+pkg/models/shared/security.go
 USAGE.md

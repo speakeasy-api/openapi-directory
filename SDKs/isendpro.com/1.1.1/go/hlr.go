@@ -34,7 +34,7 @@ func newHlr(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 
 // GetHlr - Vérifier la validité d'un numéro
 // Réalise un lookup HLR sur les numéros
-func (s *hlr) GetHlr(ctx context.Context, request operations.GetHlrRequest) (*operations.GetHlrResponse, error) {
+func (s *hlr) GetHlr(ctx context.Context, request shared.HLRrequest) (*operations.GetHlrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hlr"
 

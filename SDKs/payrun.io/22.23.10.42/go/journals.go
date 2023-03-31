@@ -36,14 +36,14 @@ func newJournals(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete the specified Journal instruction
 func (s *journals) DeleteJournalInstruction(ctx context.Context, request operations.DeleteJournalInstructionRequest) (*operations.DeleteJournalInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *journals) DeleteJournalInstruction(ctx context.Context, request operati
 // Delete the specified Journal instruction template object
 func (s *journals) DeleteJournalInstructionTemplate(ctx context.Context, request operations.DeleteJournalInstructionTemplateRequest) (*operations.DeleteJournalInstructionTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/JournalInstruction/{JournalInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/JournalInstruction/{JournalInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,14 +144,14 @@ func (s *journals) DeleteJournalInstructionTemplate(ctx context.Context, request
 // Returns the specified journal instruction from employer
 func (s *journals) GetJournalInstructionFromEmployer(ctx context.Context, request operations.GetJournalInstructionFromEmployerRequest) (*operations.GetJournalInstructionFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -207,14 +207,14 @@ func (s *journals) GetJournalInstructionFromEmployer(ctx context.Context, reques
 // Retrurns the specified journal instruction from the application
 func (s *journals) GetJournalInstructionTemplate(ctx context.Context, request operations.GetJournalInstructionTemplateRequest) (*operations.GetJournalInstructionTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/JournalInstruction/{JournalInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/JournalInstruction/{JournalInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -277,7 +277,7 @@ func (s *journals) GetJournalInstructionTemplates(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -333,14 +333,14 @@ func (s *journals) GetJournalInstructionTemplates(ctx context.Context, request o
 // Get links to all journal instructions for the specified employer
 func (s *journals) GetJournalInstructionsFromEmployer(ctx context.Context, request operations.GetJournalInstructionsFromEmployerRequest) (*operations.GetJournalInstructionsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -396,14 +396,14 @@ func (s *journals) GetJournalInstructionsFromEmployer(ctx context.Context, reque
 // Returns the specified journal Line from employer
 func (s *journals) GetJournalLineFromEmployer(ctx context.Context, request operations.GetJournalLineFromEmployerRequest) (*operations.GetJournalLineFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -459,14 +459,14 @@ func (s *journals) GetJournalLineFromEmployer(ctx context.Context, request opera
 // Get links to all journal lines for the specified employee
 func (s *journals) GetJournalLinesFromEmployee(ctx context.Context, request operations.GetJournalLinesFromEmployeeRequest) (*operations.GetJournalLinesFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/JournalLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/JournalLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -522,14 +522,14 @@ func (s *journals) GetJournalLinesFromEmployee(ctx context.Context, request oper
 // Get links to all journal Lines for the specified employer
 func (s *journals) GetJournalLinesFromEmployer(ctx context.Context, request operations.GetJournalLinesFromEmployerRequest) (*operations.GetJournalLinesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -585,14 +585,14 @@ func (s *journals) GetJournalLinesFromEmployer(ctx context.Context, request oper
 // Get links to all journal lines for the specified pay run
 func (s *journals) GetJournalLinesFromPayRun(ctx context.Context, request operations.GetJournalLinesFromPayRunRequest) (*operations.GetJournalLinesFromPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/JournalLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/JournalLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -648,14 +648,14 @@ func (s *journals) GetJournalLinesFromPayRun(ctx context.Context, request operat
 // Get links to all journal lines for the specified sub contractor
 func (s *journals) GetJournalLinesFromSubContractor(ctx context.Context, request operations.GetJournalLinesFromSubContractorRequest) (*operations.GetJournalLinesFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/JournalLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/JournalLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -711,14 +711,14 @@ func (s *journals) GetJournalLinesFromSubContractor(ctx context.Context, request
 // Creates a new Journal instruction object
 func (s *journals) PostJournalInstruction(ctx context.Context, request operations.PostJournalInstructionRequest) (*operations.PostJournalInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -781,7 +781,7 @@ func (s *journals) PostJournalInstructionTemplate(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -837,14 +837,14 @@ func (s *journals) PostJournalInstructionTemplate(ctx context.Context, request o
 // Updates the existing specified Journal instruction object
 func (s *journals) PutJournalInstruction(ctx context.Context, request operations.PutJournalInstructionRequest) (*operations.PutJournalInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -900,14 +900,14 @@ func (s *journals) PutJournalInstruction(ctx context.Context, request operations
 // Updates the existing specified Journal instruction template object
 func (s *journals) PutJournalInstructionTemplate(ctx context.Context, request operations.PutJournalInstructionTemplateRequest) (*operations.PutJournalInstructionTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/JournalInstruction/{JournalInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/JournalInstruction/{JournalInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type SessionControllerResetPasswordPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type SessionControllerResetPasswordQueryParams struct {
+type SessionControllerResetPasswordRequest struct {
 	// The login Email Address.
 	Email string `queryParam:"style=form,explode=true,name=email"`
-}
-
-type SessionControllerResetPasswordRequest struct {
-	PathParams  SessionControllerResetPasswordPathParams
-	QueryParams SessionControllerResetPasswordQueryParams
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type SessionControllerResetPasswordResponse struct {

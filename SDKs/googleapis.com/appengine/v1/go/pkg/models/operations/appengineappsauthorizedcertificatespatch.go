@@ -8,24 +8,22 @@ import (
 )
 
 type AppengineAppsAuthorizedCertificatesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppengineAppsAuthorizedCertificatesPatchPathParams struct {
-	// Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	AuthorizedCertificatesID string `pathParam:"style=simple,explode=false,name=authorizedCertificatesId"`
-}
-
-type AppengineAppsAuthorizedCertificatesPatchQueryParams struct {
+type AppengineAppsAuthorizedCertificatesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AuthorizedCertificate *shared.AuthorizedCertificate `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
+	// Part of `name`. See documentation of `appsId`.
+	AuthorizedCertificatesID string `pathParam:"style=simple,explode=false,name=authorizedCertificatesId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -44,13 +42,6 @@ type AppengineAppsAuthorizedCertificatesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsAuthorizedCertificatesPatchRequest struct {
-	PathParams  AppengineAppsAuthorizedCertificatesPatchPathParams
-	QueryParams AppengineAppsAuthorizedCertificatesPatchQueryParams
-	Request     *shared.AuthorizedCertificate `request:"mediaType=application/json"`
-	Security    AppengineAppsAuthorizedCertificatesPatchSecurity
 }
 
 type AppengineAppsAuthorizedCertificatesPatchResponse struct {

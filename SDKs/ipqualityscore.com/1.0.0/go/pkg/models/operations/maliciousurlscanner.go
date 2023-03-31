@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type MaliciousURLScannerPathParams struct {
+type MaliciousURLScannerRequest struct {
 	// (Required) URL_HERE
 	URLHere string `pathParam:"style=simple,explode=false,name=URL_HERE"`
 	// (Required) YOUR_API_KEY_HERE
 	YourAPIKeyHere string `pathParam:"style=simple,explode=false,name=YOUR_API_KEY_HERE"`
-}
-
-type MaliciousURLScannerRequest struct {
-	PathParams MaliciousURLScannerPathParams
 }
 
 // MaliciousURLScanner500ApplicationJSON - Unexpected error

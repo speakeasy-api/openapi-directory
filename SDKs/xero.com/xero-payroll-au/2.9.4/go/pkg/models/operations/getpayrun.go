@@ -8,23 +8,14 @@ import (
 )
 
 type GetPayRunSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetPayRunPathParams struct {
-	// PayRun id for single object
-	PayRunID string `pathParam:"style=simple,explode=false,name=PayRunID"`
-}
-
-type GetPayRunHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPayRunRequest struct {
-	PathParams GetPayRunPathParams
-	Headers    GetPayRunHeaders
-	Security   GetPayRunSecurity
+	// PayRun id for single object
+	PayRunID string `pathParam:"style=simple,explode=false,name=PayRunID"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type GetPayRunResponse struct {

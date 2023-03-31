@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type ChangePasswordPathParams struct {
-	// user's internal identifier
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type ChangePasswordRequestBody struct {
 	// new password
 	NewPassword *string `form:"name=newPassword"`
@@ -19,8 +14,9 @@ type ChangePasswordRequestBody struct {
 }
 
 type ChangePasswordRequest struct {
-	PathParams ChangePasswordPathParams
-	Request    *ChangePasswordRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *ChangePasswordRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// user's internal identifier
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ChangePasswordResponse struct {

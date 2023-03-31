@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveCorporateUserGroupByIDPathParams struct {
+type SaveCorporateUserGroupByIDRequest struct {
+	UserGroup shared.UserGroup `request:"mediaType=application/json"`
 	// Corporate ID
 	CorporateID int64 `pathParam:"style=simple,explode=false,name=corporateId"`
-}
-
-type SaveCorporateUserGroupByIDRequest struct {
-	PathParams SaveCorporateUserGroupByIDPathParams
-	Request    shared.UserGroup `request:"mediaType=application/json"`
 }
 
 type SaveCorporateUserGroupByIDResponse struct {

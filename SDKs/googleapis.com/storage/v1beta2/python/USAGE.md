@@ -4,32 +4,24 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.StorageBucketAccessControlsDeleteRequest(
-    security=operations.StorageBucketAccessControlsDeleteSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.StorageBucketAccessControlsDeletePathParams(
-        bucket="reiciendis",
-        entity="nemo",
-    ),
-    query_params=operations.StorageBucketAccessControlsDeleteQueryParams(
-        alt="json",
-        fields="ratione",
-        key="veniam",
-        oauth_token="reiciendis",
-        pretty_print=False,
-        quota_user="temporibus",
-        user_ip="dolor",
-    ),
+    alt="json",
+    bucket="corrupti",
+    entity="provident",
+    fields_="distinctio",
+    key="quibusdam",
+    oauth_token="unde",
+    pretty_print=False,
+    quota_user="nulla",
+    user_ip="corrupti",
 )
     
-res = s.bucket_access_controls.storage_bucket_access_controls_delete(req)
+res = s.bucket_access_controls.storage_bucket_access_controls_delete(req, operations.StorageBucketAccessControlsDeleteSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

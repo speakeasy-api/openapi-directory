@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependabotGetOrgSecretPathParams struct {
+type DependabotGetOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type DependabotGetOrgSecretRequest struct {
-	PathParams DependabotGetOrgSecretPathParams
 }
 
 type DependabotGetOrgSecretResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2TasksJSONQueryParams struct {
+type GetV2TasksJSONRequest struct {
 	// Filters tasks by the account to which they are associated.
 	AccountID []int64 `queryParam:"style=form,explode=false,name=account_id"`
 	// Filters tasks by their current state. Valid current_states include: ['scheduled', 'completed'].
@@ -37,10 +37,6 @@ type GetV2TasksJSONQueryParams struct {
 	TimeIntervalFilter *string `queryParam:"style=form,explode=true,name=time_interval_filter"`
 	// Filters tasks by the user to which they are assigned.
 	UserID []int64 `queryParam:"style=form,explode=false,name=user_id"`
-}
-
-type GetV2TasksJSONRequest struct {
-	QueryParams GetV2TasksJSONQueryParams
 }
 
 type GetV2TasksJSONResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type RetrieveMerchantSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveMerchantPathParams struct {
-	// The ID of the merchant to retrieve. If the string "me" is supplied as the ID,
-	// then retrieve the merchant that is currently accessible to this call.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchant_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveMerchantRequest struct {
-	PathParams RetrieveMerchantPathParams
-	Security   RetrieveMerchantSecurity
+	// The ID of the merchant to retrieve. If the string "me" is supplied as the ID,
+	// then retrieve the merchant that is currently accessible to this call.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchant_id"`
 }
 
 type RetrieveMerchantResponse struct {

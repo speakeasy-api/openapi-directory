@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05LinksLinkOnConfirmRawHeaders struct {
+type PostV05LinksLinkOnConfirmRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostV05LinksLinkOnConfirmRawRequest struct {
-	Headers PostV05LinksLinkOnConfirmRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05LinksLinkOnConfirmRawResponse struct {

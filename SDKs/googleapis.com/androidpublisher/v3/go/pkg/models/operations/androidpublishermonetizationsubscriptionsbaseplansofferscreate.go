@@ -8,26 +8,20 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreatePathParams struct {
-	// Required. The parent base plan (ID) for which the offer should be created. Must be equal to the base_plan_id field on the SubscriptionOffer resource.
-	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
-	// Required. The parent app (package name) for which the offer should be created. Must be equal to the package_name field on the Subscription resource.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. The parent subscription (ID) for which the offer should be created. Must be equal to the product_id field on the SubscriptionOffer resource.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SubscriptionOfferInput *shared.SubscriptionOfferInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The parent base plan (ID) for which the offer should be created. Must be equal to the base_plan_id field on the SubscriptionOffer resource.
+	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -38,8 +32,12 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateQueryParams s
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Required. The ID to use for the offer. For the requirements on this format, see the documentation of the offer_id field on the SubscriptionOffer resource.
 	OfferID *string `queryParam:"style=form,explode=true,name=offerId"`
+	// Required. The parent app (package name) for which the offer should be created. Must be equal to the package_name field on the Subscription resource.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The parent subscription (ID) for which the offer should be created. Must be equal to the product_id field on the SubscriptionOffer resource.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Required. A string representing version of the available regions being used for the specified resource. The current version is 2022/02.
@@ -48,13 +46,6 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateQueryParams s
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreatePathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateQueryParams
-	Request     *shared.SubscriptionOfferInput `request:"mediaType=application/json"`
-	Security    AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse struct {

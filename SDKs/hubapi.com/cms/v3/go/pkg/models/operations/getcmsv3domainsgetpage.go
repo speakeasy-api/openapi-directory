@@ -9,18 +9,18 @@ import (
 )
 
 type GetCmsV3DomainsGetPageSecurity struct {
-	Hapikey            *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2             *shared.SchemeOauth2            `security:"scheme,type=oauth2"`
-	Oauth2Legacy       *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	Oauth2Legacy1      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	Oauth3             *shared.SchemeOauth2            `security:"scheme,type=oauth2"`
-	PrivateApps        *shared.SchemePrivateApps       `security:"scheme,type=apiKey,subtype=header"`
-	PrivateApps1       *shared.SchemePrivateApps       `security:"scheme,type=apiKey,subtype=header"`
-	PrivateAppsLegacy  *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-	PrivateAppsLegacy1 *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
+	Hapikey            *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2             *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Legacy       *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Legacy1      *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth3             *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateApps        *string `security:"scheme,type=apiKey,subtype=header,name=private-app"`
+	PrivateApps1       *string `security:"scheme,type=apiKey,subtype=header,name=private-app"`
+	PrivateAppsLegacy  *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
+	PrivateAppsLegacy1 *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
-type GetCmsV3DomainsGetPageQueryParams struct {
+type GetCmsV3DomainsGetPageRequest struct {
 	// The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// Whether to return only results that have been archived.
@@ -40,11 +40,6 @@ type GetCmsV3DomainsGetPageQueryParams struct {
 	UpdatedAt *time.Time `queryParam:"style=form,explode=true,name=updatedAt"`
 	// Only return domains updated before this date.
 	UpdatedBefore *time.Time `queryParam:"style=form,explode=true,name=updatedBefore"`
-}
-
-type GetCmsV3DomainsGetPageRequest struct {
-	QueryParams GetCmsV3DomainsGetPageQueryParams
-	Security    GetCmsV3DomainsGetPageSecurity
 }
 
 type GetCmsV3DomainsGetPageResponse struct {

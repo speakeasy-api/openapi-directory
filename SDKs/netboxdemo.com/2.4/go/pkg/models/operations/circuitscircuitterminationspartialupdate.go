@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitTerminationsPartialUpdatePathParams struct {
+type CircuitsCircuitTerminationsPartialUpdateRequest struct {
+	WritableCircuitTerminationInput shared.WritableCircuitTerminationInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this circuit termination.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsCircuitTerminationsPartialUpdateRequest struct {
-	PathParams CircuitsCircuitTerminationsPartialUpdatePathParams
-	Request    shared.WritableCircuitTerminationInput `request:"mediaType=application/json"`
 }
 
 type CircuitsCircuitTerminationsPartialUpdateResponse struct {

@@ -33,7 +33,7 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // YoutubeSearchList - Retrieves a list of search resources
-func (s *search) YoutubeSearchList(ctx context.Context, request operations.YoutubeSearchListRequest) (*operations.YoutubeSearchListResponse, error) {
+func (s *search) YoutubeSearchList(ctx context.Context, request operations.YoutubeSearchListRequest, security operations.YoutubeSearchListSecurity) (*operations.YoutubeSearchListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/search"
 
@@ -42,11 +42,11 @@ func (s *search) YoutubeSearchList(ctx context.Context, request operations.Youtu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

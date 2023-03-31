@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesCampaignsIDJSONPathParams struct {
+type GetResourcesCampaignsIDJSONRequest struct {
 	// The id of the record to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesCampaignsIDJSONRequest struct {
-	PathParams GetResourcesCampaignsIDJSONPathParams
 }
 
 type GetResourcesCampaignsIDJSONResponse struct {

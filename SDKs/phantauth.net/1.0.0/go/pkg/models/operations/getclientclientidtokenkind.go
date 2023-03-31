@@ -35,15 +35,11 @@ func (e *GetClientClientIDTokenKindKindEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetClientClientIDTokenKindPathParams struct {
+type GetClientClientIDTokenKindRequest struct {
 	// A client ID or email.
 	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 	// Token type
 	Kind GetClientClientIDTokenKindKindEnum `pathParam:"style=simple,explode=false,name=kind"`
-}
-
-type GetClientClientIDTokenKindRequest struct {
-	PathParams GetClientClientIDTokenKindPathParams
 }
 
 type GetClientClientIDTokenKindResponse struct {

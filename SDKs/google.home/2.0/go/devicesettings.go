@@ -41,7 +41,7 @@ func newDeviceSettings(defaultClient, securityClient HTTPClient, serverURL, lang
 // `led_brightness` and `volume` refer to the maximum LED Brightness and Volume that is set during night mode.
 // `demo_to_user` is always set to `true` so change in values will be visible in realtime (like brightness).
 // `windows`: A combination of `length_hours` and `start_hour` is used to define start and end times for night mode. In this example, night mode starts at 10 PM (22) and ends at 6 AM (8 hours later). `windows.days` is an array of days of week when night mode will be enabled. Example: 0->Sunday, 1-> Monday, ..., 6->Saturday.
-func (s *deviceSettings) NightModesettings(ctx context.Context, request operations.NightModesettingsRequest) (*operations.NightModesettingsResponse, error) {
+func (s *deviceSettings) NightModesettings(ctx context.Context, request shared.NightModesettingsRequest) (*operations.NightModesettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assistant/set_night_mode_params"
 
@@ -96,7 +96,7 @@ func (s *deviceSettings) NightModesettings(ctx context.Context, request operatio
 
 // RebootandFactoryReset - Reboot and Factory Reset
 // This can simply reboot the device (`params: "now"`) or factory reset the device (`params: "fdr"`).
-func (s *deviceSettings) RebootandFactoryReset(ctx context.Context, request operations.RebootandFactoryResetRequest) (*operations.RebootandFactoryResetResponse, error) {
+func (s *deviceSettings) RebootandFactoryReset(ctx context.Context, request shared.RebootandFactoryResetRequest) (*operations.RebootandFactoryResetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reboot"
 
@@ -158,7 +158,7 @@ func (s *deviceSettings) RebootandFactoryReset(ctx context.Context, request oper
 // TODO: List all modifiable fields.
 //
 // Sending non-existant fields will still return a 200 OK, but they are not saved.
-func (s *deviceSettings) SetEurekaInfo(ctx context.Context, request operations.SetEurekaInfoRequest) (*operations.SetEurekaInfoResponse, error) {
+func (s *deviceSettings) SetEurekaInfo(ctx context.Context, request shared.SetEurekaInfoRequest) (*operations.SetEurekaInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/set_eureka_info"
 

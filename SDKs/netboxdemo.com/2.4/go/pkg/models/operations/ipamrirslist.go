@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRirsListQueryParams struct {
+type IpamRirsListRequest struct {
 	// Multiple values may be separated by commas.
 	IDIn      *string `queryParam:"style=form,explode=true,name=id__in"`
 	IsPrivate *string `queryParam:"style=form,explode=true,name=is_private"`
@@ -17,10 +17,6 @@ type IpamRirsListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type IpamRirsListRequest struct {
-	QueryParams IpamRirsListQueryParams
 }
 
 type IpamRirsList200ApplicationJSON struct {

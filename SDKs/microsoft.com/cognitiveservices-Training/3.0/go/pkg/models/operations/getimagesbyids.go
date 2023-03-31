@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImagesByIdsPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetImagesByIdsQueryParams struct {
+type GetImagesByIdsRequest struct {
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The list of image ids to retrieve. Limited to 256.
 	ImageIds []string `queryParam:"style=form,explode=false,name=imageIds"`
 	// The iteration id. Defaults to workspace.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type GetImagesByIdsHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetImagesByIdsRequest struct {
-	PathParams  GetImagesByIdsPathParams
-	QueryParams GetImagesByIdsQueryParams
-	Headers     GetImagesByIdsHeaders
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetImagesByIdsResponse struct {

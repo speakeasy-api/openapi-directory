@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AquiferCodesProductivityListQueryParams struct {
+type AquiferCodesProductivityListRequest struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type AquiferCodesProductivityListRequest struct {
-	QueryParams AquiferCodesProductivityListQueryParams
 }
 
 type AquiferCodesProductivityList200ApplicationJSON struct {

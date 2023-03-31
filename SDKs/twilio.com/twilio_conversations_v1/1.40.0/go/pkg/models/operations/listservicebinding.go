@@ -12,17 +12,15 @@ var ListServiceBindingServerList = []string{
 }
 
 type ListServiceBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListServiceBindingPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Binding resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-}
-
-type ListServiceBindingQueryParams struct {
+type ListServiceBindingRequest struct {
 	// The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
 	BindingType []shared.ServiceBindingEnumBindingTypeEnum `queryParam:"style=form,explode=true,name=BindingType"`
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Binding resource is associated with.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// The identity of a [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource) this binding belongs to. See [access tokens](https://www.twilio.com/docs/conversations/create-tokens) for more details.
 	Identity []string `queryParam:"style=form,explode=true,name=Identity"`
 	// The page index. This value is simply for client state.
@@ -31,13 +29,6 @@ type ListServiceBindingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListServiceBindingRequest struct {
-	PathParams  ListServiceBindingPathParams
-	QueryParams ListServiceBindingQueryParams
-	Security    ListServiceBindingSecurity
-	ServerURL   *string
 }
 
 type ListServiceBindingListServiceBindingResponseMeta struct {

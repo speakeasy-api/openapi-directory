@@ -11,15 +11,6 @@ var FetchConfigurationWebhookServerList = []string{
 	"https://conversations.twilio.com",
 }
 
-type FetchConfigurationWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchConfigurationWebhookRequest struct {
-	Security  FetchConfigurationWebhookSecurity
-	ServerURL *string
-}
-
 type FetchConfigurationWebhookResponse struct {
 	ContentType string
 	StatusCode  int

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DependabotDeleteOrgSecretPathParams struct {
+type DependabotDeleteOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type DependabotDeleteOrgSecretRequest struct {
-	PathParams DependabotDeleteOrgSecretPathParams
 }
 
 type DependabotDeleteOrgSecretResponse struct {

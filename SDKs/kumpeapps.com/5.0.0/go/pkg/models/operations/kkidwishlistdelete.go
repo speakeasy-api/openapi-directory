@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidWishlistDeleteQueryParams struct {
+type KkidWishlistDeleteRequest struct {
 	// ID of wishlist item to delete
 	WishID int64 `queryParam:"style=form,explode=true,name=wishId"`
-}
-
-type KkidWishlistDeleteRequest struct {
-	QueryParams KkidWishlistDeleteQueryParams
 }
 
 type KkidWishlistDeleteResponse struct {

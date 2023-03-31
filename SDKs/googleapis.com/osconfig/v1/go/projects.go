@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // OsconfigProjectsLocationsInstancesInventoriesList - List inventory data for all VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesInventoriesListRequest) (*operations.OsconfigProjectsLocationsInstancesInventoriesListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesInventoriesListRequest, security operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity) (*operations.OsconfigProjectsLocationsInstancesInventoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/inventories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/inventories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context
 }
 
 // OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList - List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest) (*operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest, security operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListSecurity) (*operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/reports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsL
 }
 
 // OsconfigProjectsLocationsInstancesVulnerabilityReportsList - List vulnerability reports for all VM instances in the specified zone.
-func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest) (*operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest, security operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListSecurity) (*operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/vulnerabilityReports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/vulnerabilityReports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,11 +176,11 @@ func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ct
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsCreate - Create an OS policy assignment. This method also creates the first revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/osPolicyAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/osPolicyAssignments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OSPolicyAssignmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -192,11 +192,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx contex
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsList - List the OS policy assignments under the parent resource. For each OS policy assignment, the latest revision is returned.
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsListSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/osPolicyAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/osPolicyAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.
 }
 
 // OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions - List the OS policy assignment revisions for a given OS policy assignment.
-func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse, error) {
+func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:listRevisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:listRevisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,11 +327,11 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx
 }
 
 // OsconfigProjectsPatchDeploymentsCreate - Create an OS Config patch deployment.
-func (s *projects) OsconfigProjectsPatchDeploymentsCreate(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsCreateRequest) (*operations.OsconfigProjectsPatchDeploymentsCreateResponse, error) {
+func (s *projects) OsconfigProjectsPatchDeploymentsCreate(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsCreateRequest, security operations.OsconfigProjectsPatchDeploymentsCreateSecurity) (*operations.OsconfigProjectsPatchDeploymentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchDeployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchDeployments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchDeploymentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,11 +343,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsCreate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,20 +382,20 @@ func (s *projects) OsconfigProjectsPatchDeploymentsCreate(ctx context.Context, r
 }
 
 // OsconfigProjectsPatchDeploymentsDelete - Delete an OS Config patch deployment.
-func (s *projects) OsconfigProjectsPatchDeploymentsDelete(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsDeleteRequest) (*operations.OsconfigProjectsPatchDeploymentsDeleteResponse, error) {
+func (s *projects) OsconfigProjectsPatchDeploymentsDelete(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsDeleteRequest, security operations.OsconfigProjectsPatchDeploymentsDeleteSecurity) (*operations.OsconfigProjectsPatchDeploymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,20 +430,20 @@ func (s *projects) OsconfigProjectsPatchDeploymentsDelete(ctx context.Context, r
 }
 
 // OsconfigProjectsPatchDeploymentsList - Get a page of OS Config patch deployments.
-func (s *projects) OsconfigProjectsPatchDeploymentsList(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsListRequest) (*operations.OsconfigProjectsPatchDeploymentsListResponse, error) {
+func (s *projects) OsconfigProjectsPatchDeploymentsList(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsListRequest, security operations.OsconfigProjectsPatchDeploymentsListSecurity) (*operations.OsconfigProjectsPatchDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchDeployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchDeployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,11 +478,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsList(ctx context.Context, req
 }
 
 // OsconfigProjectsPatchDeploymentsPatch - Update an OS Config patch deployment.
-func (s *projects) OsconfigProjectsPatchDeploymentsPatch(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsPatchRequest) (*operations.OsconfigProjectsPatchDeploymentsPatchResponse, error) {
+func (s *projects) OsconfigProjectsPatchDeploymentsPatch(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsPatchRequest, security operations.OsconfigProjectsPatchDeploymentsPatchSecurity) (*operations.OsconfigProjectsPatchDeploymentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchDeploymentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -494,11 +494,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsPatch(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -533,11 +533,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsPatch(ctx context.Context, re
 }
 
 // OsconfigProjectsPatchDeploymentsPause - Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate patch jobs.
-func (s *projects) OsconfigProjectsPatchDeploymentsPause(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsPauseRequest) (*operations.OsconfigProjectsPatchDeploymentsPauseResponse, error) {
+func (s *projects) OsconfigProjectsPatchDeploymentsPause(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsPauseRequest, security operations.OsconfigProjectsPatchDeploymentsPauseSecurity) (*operations.OsconfigProjectsPatchDeploymentsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:pause", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -549,11 +549,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsPause(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,11 +588,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsPause(ctx context.Context, re
 }
 
 // OsconfigProjectsPatchDeploymentsResume - Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues to generate patch jobs.
-func (s *projects) OsconfigProjectsPatchDeploymentsResume(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsResumeRequest) (*operations.OsconfigProjectsPatchDeploymentsResumeResponse, error) {
+func (s *projects) OsconfigProjectsPatchDeploymentsResume(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsResumeRequest, security operations.OsconfigProjectsPatchDeploymentsResumeSecurity) (*operations.OsconfigProjectsPatchDeploymentsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -604,11 +604,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsResume(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -643,11 +643,11 @@ func (s *projects) OsconfigProjectsPatchDeploymentsResume(ctx context.Context, r
 }
 
 // OsconfigProjectsPatchJobsCancel - Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
-func (s *projects) OsconfigProjectsPatchJobsCancel(ctx context.Context, request operations.OsconfigProjectsPatchJobsCancelRequest) (*operations.OsconfigProjectsPatchJobsCancelResponse, error) {
+func (s *projects) OsconfigProjectsPatchJobsCancel(ctx context.Context, request operations.OsconfigProjectsPatchJobsCancelRequest, security operations.OsconfigProjectsPatchJobsCancelSecurity) (*operations.OsconfigProjectsPatchJobsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -659,11 +659,11 @@ func (s *projects) OsconfigProjectsPatchJobsCancel(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -698,11 +698,11 @@ func (s *projects) OsconfigProjectsPatchJobsCancel(ctx context.Context, request 
 }
 
 // OsconfigProjectsPatchJobsExecute - Patch VM instances by creating and running a patch job.
-func (s *projects) OsconfigProjectsPatchJobsExecute(ctx context.Context, request operations.OsconfigProjectsPatchJobsExecuteRequest) (*operations.OsconfigProjectsPatchJobsExecuteResponse, error) {
+func (s *projects) OsconfigProjectsPatchJobsExecute(ctx context.Context, request operations.OsconfigProjectsPatchJobsExecuteRequest, security operations.OsconfigProjectsPatchJobsExecuteSecurity) (*operations.OsconfigProjectsPatchJobsExecuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchJobs:execute", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchJobs:execute", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecutePatchJobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -714,11 +714,11 @@ func (s *projects) OsconfigProjectsPatchJobsExecute(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,20 +753,20 @@ func (s *projects) OsconfigProjectsPatchJobsExecute(ctx context.Context, request
 }
 
 // OsconfigProjectsPatchJobsGet - Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs.
-func (s *projects) OsconfigProjectsPatchJobsGet(ctx context.Context, request operations.OsconfigProjectsPatchJobsGetRequest) (*operations.OsconfigProjectsPatchJobsGetResponse, error) {
+func (s *projects) OsconfigProjectsPatchJobsGet(ctx context.Context, request operations.OsconfigProjectsPatchJobsGetRequest, security operations.OsconfigProjectsPatchJobsGetSecurity) (*operations.OsconfigProjectsPatchJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -801,20 +801,20 @@ func (s *projects) OsconfigProjectsPatchJobsGet(ctx context.Context, request ope
 }
 
 // OsconfigProjectsPatchJobsInstanceDetailsList - Get a list of instance details for a given patch job.
-func (s *projects) OsconfigProjectsPatchJobsInstanceDetailsList(ctx context.Context, request operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest) (*operations.OsconfigProjectsPatchJobsInstanceDetailsListResponse, error) {
+func (s *projects) OsconfigProjectsPatchJobsInstanceDetailsList(ctx context.Context, request operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest, security operations.OsconfigProjectsPatchJobsInstanceDetailsListSecurity) (*operations.OsconfigProjectsPatchJobsInstanceDetailsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instanceDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instanceDetails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -849,20 +849,20 @@ func (s *projects) OsconfigProjectsPatchJobsInstanceDetailsList(ctx context.Cont
 }
 
 // OsconfigProjectsPatchJobsList - Get a list of patch jobs.
-func (s *projects) OsconfigProjectsPatchJobsList(ctx context.Context, request operations.OsconfigProjectsPatchJobsListRequest) (*operations.OsconfigProjectsPatchJobsListResponse, error) {
+func (s *projects) OsconfigProjectsPatchJobsList(ctx context.Context, request operations.OsconfigProjectsPatchJobsListRequest, security operations.OsconfigProjectsPatchJobsListSecurity) (*operations.OsconfigProjectsPatchJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/patchJobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

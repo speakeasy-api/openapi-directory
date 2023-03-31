@@ -8,21 +8,16 @@ import (
 )
 
 type PrivateInstitutionAccountGroupRoleDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateInstitutionAccountGroupRoleDeletePathParams struct {
+type PrivateInstitutionAccountGroupRoleDeleteRequest struct {
 	// Account identifier for which to remove the role
 	AccountID int64 `pathParam:"style=simple,explode=false,name=account_id"`
 	// Group identifier for which to remove the role
 	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// Role identifier
 	RoleID int64 `pathParam:"style=simple,explode=false,name=role_id"`
-}
-
-type PrivateInstitutionAccountGroupRoleDeleteRequest struct {
-	PathParams PrivateInstitutionAccountGroupRoleDeletePathParams
-	Security   PrivateInstitutionAccountGroupRoleDeleteSecurity
 }
 
 type PrivateInstitutionAccountGroupRoleDeleteResponse struct {

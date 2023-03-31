@@ -17,10 +17,6 @@ type PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody struct {
 	DecayFactor *float64 `json:"decayFactor,omitempty"`
 }
 
-type PostAssetsCovarianceMatrixExponentiallyWeightedRequest struct {
-	Request PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSON - OK
 type PostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSON struct {
 	// assetsCovarianceMatrix[i][j] is the sample covariance between the asset i returns and the asset j returns

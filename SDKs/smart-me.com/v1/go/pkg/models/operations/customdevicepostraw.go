@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomDevicePostRawRequest struct {
-	// Device object with all the data
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type CustomDevicePostRawResponse struct {
 	Body        []byte
 	ContentType string

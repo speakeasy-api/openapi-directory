@@ -32,20 +32,20 @@ func newEventTags(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DfareportingEventTagsDelete - Deletes an existing event tag.
-func (s *eventTags) DfareportingEventTagsDelete(ctx context.Context, request operations.DfareportingEventTagsDeleteRequest) (*operations.DfareportingEventTagsDeleteResponse, error) {
+func (s *eventTags) DfareportingEventTagsDelete(ctx context.Context, request operations.DfareportingEventTagsDeleteRequest, security operations.DfareportingEventTagsDeleteSecurity) (*operations.DfareportingEventTagsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *eventTags) DfareportingEventTagsDelete(ctx context.Context, request ope
 }
 
 // DfareportingEventTagsGet - Gets one event tag by ID.
-func (s *eventTags) DfareportingEventTagsGet(ctx context.Context, request operations.DfareportingEventTagsGetRequest) (*operations.DfareportingEventTagsGetResponse, error) {
+func (s *eventTags) DfareportingEventTagsGet(ctx context.Context, request operations.DfareportingEventTagsGetRequest, security operations.DfareportingEventTagsGetSecurity) (*operations.DfareportingEventTagsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *eventTags) DfareportingEventTagsGet(ctx context.Context, request operat
 }
 
 // DfareportingEventTagsInsert - Inserts a new event tag.
-func (s *eventTags) DfareportingEventTagsInsert(ctx context.Context, request operations.DfareportingEventTagsInsertRequest) (*operations.DfareportingEventTagsInsertResponse, error) {
+func (s *eventTags) DfareportingEventTagsInsert(ctx context.Context, request operations.DfareportingEventTagsInsertRequest, security operations.DfareportingEventTagsInsertSecurity) (*operations.DfareportingEventTagsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EventTag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *eventTags) DfareportingEventTagsInsert(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *eventTags) DfareportingEventTagsInsert(ctx context.Context, request ope
 }
 
 // DfareportingEventTagsList - Retrieves a list of event tags, possibly filtered.
-func (s *eventTags) DfareportingEventTagsList(ctx context.Context, request operations.DfareportingEventTagsListRequest) (*operations.DfareportingEventTagsListResponse, error) {
+func (s *eventTags) DfareportingEventTagsList(ctx context.Context, request operations.DfareportingEventTagsListRequest, security operations.DfareportingEventTagsListSecurity) (*operations.DfareportingEventTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *eventTags) DfareportingEventTagsList(ctx context.Context, request opera
 }
 
 // DfareportingEventTagsPatch - Updates an existing event tag. This method supports patch semantics.
-func (s *eventTags) DfareportingEventTagsPatch(ctx context.Context, request operations.DfareportingEventTagsPatchRequest) (*operations.DfareportingEventTagsPatchResponse, error) {
+func (s *eventTags) DfareportingEventTagsPatch(ctx context.Context, request operations.DfareportingEventTagsPatchRequest, security operations.DfareportingEventTagsPatchSecurity) (*operations.DfareportingEventTagsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EventTag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *eventTags) DfareportingEventTagsPatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *eventTags) DfareportingEventTagsPatch(ctx context.Context, request oper
 }
 
 // DfareportingEventTagsUpdate - Updates an existing event tag.
-func (s *eventTags) DfareportingEventTagsUpdate(ctx context.Context, request operations.DfareportingEventTagsUpdateRequest) (*operations.DfareportingEventTagsUpdateResponse, error) {
+func (s *eventTags) DfareportingEventTagsUpdate(ctx context.Context, request operations.DfareportingEventTagsUpdateRequest, security operations.DfareportingEventTagsUpdateSecurity) (*operations.DfareportingEventTagsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/eventTags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EventTag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *eventTags) DfareportingEventTagsUpdate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

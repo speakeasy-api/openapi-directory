@@ -14,76 +14,68 @@ func main() {
     s := sdk.New()
 
     req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
-        Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ScanConfig{
+        DollarXgafv: "2",
+        ScanConfig: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "suscipit",
-                    Password: "iure",
-                    Username: "Eli96",
+                    LoginURL: "provident",
+                    Password: "distinctio",
+                    Username: "Rosalinda_Mitchell84",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "tempora",
-                    Username: "Geraldine_Kreiger52",
+                    Password: "vel",
+                    Username: "Linda.Oberbrunner",
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "iusto",
+                        TargetAudienceClientID: "magnam",
                     },
                 },
             },
             BlacklistPatterns: []string{
-                "nisi",
-                "recusandae",
-                "temporibus",
+                "ipsa",
+                "delectus",
+                "tempora",
+                "suscipit",
             },
-            DisplayName: "ab",
-            ExportToSecurityCommandCenter: "ENABLED",
+            DisplayName: "molestiae",
+            ExportToSecurityCommandCenter: "DISABLED",
             IgnoreHTTPStatusErrors: false,
             ManagedScan: false,
-            MaxQPS: 87129,
-            Name: "deserunt",
-            RiskLevel: "RISK_LEVEL_UNSPECIFIED",
+            MaxQPS: 812169,
+            Name: "voluptatum",
+            RiskLevel: "NORMAL",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 368241,
-                ScheduleTime: "repellendus",
+                IntervalDurationDays: 568045,
+                ScheduleTime: "nisi",
             },
             StartingUrls: []string{
-                "quo",
-                "odit",
-                "at",
-                "at",
+                "temporibus",
+                "ab",
+                "quis",
+                "veritatis",
             },
             StaticIPScan: false,
-            UserAgent: "SAFARI_IPHONE",
+            UserAgent: "CHROME_ANDROID",
         },
+        AccessToken: "perferendis",
+        Alt: "media",
+        Callback: "repellendus",
+        Fields: "sapiente",
+        Key: "quo",
+        OauthToken: "odit",
+        Parent: "at",
+        PrettyPrint: false,
+        QuotaUser: "at",
+        UploadType: "maiores",
+        UploadProtocol: "molestiae",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req)
+    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

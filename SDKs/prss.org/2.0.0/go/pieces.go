@@ -34,16 +34,16 @@ func newPieces(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // DeleteAPIV2PiecesID - Deletes the piece with the given ID.
-func (s *pieces) DeleteAPIV2PiecesID(ctx context.Context, request operations.DeleteAPIV2PiecesIDRequest) (*operations.DeleteAPIV2PiecesIDResponse, error) {
+func (s *pieces) DeleteAPIV2PiecesID(ctx context.Context, request operations.DeleteAPIV2PiecesIDRequest, security operations.DeleteAPIV2PiecesIDSecurity) (*operations.DeleteAPIV2PiecesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/pieces/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/pieces/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -73,7 +73,7 @@ func (s *pieces) DeleteAPIV2PiecesID(ctx context.Context, request operations.Del
 }
 
 // GetAPIV2Pieces - Returns the pieces matching the query parameters.
-func (s *pieces) GetAPIV2Pieces(ctx context.Context, request operations.GetAPIV2PiecesRequest) (*operations.GetAPIV2PiecesResponse, error) {
+func (s *pieces) GetAPIV2Pieces(ctx context.Context, request operations.GetAPIV2PiecesRequest, security operations.GetAPIV2PiecesSecurity) (*operations.GetAPIV2PiecesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/pieces"
 
@@ -82,11 +82,11 @@ func (s *pieces) GetAPIV2Pieces(ctx context.Context, request operations.GetAPIV2
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -124,16 +124,16 @@ func (s *pieces) GetAPIV2Pieces(ctx context.Context, request operations.GetAPIV2
 }
 
 // GetAPIV2PiecesID - Returns the piece matching the given ID.
-func (s *pieces) GetAPIV2PiecesID(ctx context.Context, request operations.GetAPIV2PiecesIDRequest) (*operations.GetAPIV2PiecesIDResponse, error) {
+func (s *pieces) GetAPIV2PiecesID(ctx context.Context, request operations.GetAPIV2PiecesIDRequest, security operations.GetAPIV2PiecesIDSecurity) (*operations.GetAPIV2PiecesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/pieces/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/pieces/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -179,7 +179,7 @@ func (s *pieces) GetAPIV2PiecesID(ctx context.Context, request operations.GetAPI
 }
 
 // PostAPIV2Pieces - Create a new piece.
-func (s *pieces) PostAPIV2Pieces(ctx context.Context, request operations.PostAPIV2PiecesRequest) (*operations.PostAPIV2PiecesResponse, error) {
+func (s *pieces) PostAPIV2Pieces(ctx context.Context, request shared.PieceInput, security operations.PostAPIV2PiecesSecurity) (*operations.PostAPIV2PiecesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/pieces"
 
@@ -195,7 +195,7 @@ func (s *pieces) PostAPIV2Pieces(ctx context.Context, request operations.PostAPI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

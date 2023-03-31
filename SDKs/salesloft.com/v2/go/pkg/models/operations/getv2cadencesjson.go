@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CadencesJSONQueryParams struct {
+type GetV2CadencesJSONRequest struct {
 	// Filters by whether the Cadences have been archived. Excluding this field will result in both archived and unarchived Cadences to return.
 	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
 	// Filters by group ids. Also supports group ids passed in as a JSON array string
@@ -41,10 +41,6 @@ type GetV2CadencesJSONQueryParams struct {
 	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
 	//
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
-}
-
-type GetV2CadencesJSONRequest struct {
-	QueryParams GetV2CadencesJSONQueryParams
 }
 
 type GetV2CadencesJSONResponse struct {

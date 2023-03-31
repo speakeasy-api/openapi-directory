@@ -45,7 +45,6 @@ pkg/models/shared/googleanalyticsadminv1betaaccountsummary.go
 pkg/models/shared/googleanalyticsadminv1betapropertysummary.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleanalyticsadminv1betalistaccountsresponse.go
 pkg/models/shared/googleanalyticsadminv1betaaccount.go
 pkg/models/shared/googleanalyticsadminv1betaprovisionaccountticketresponse.go

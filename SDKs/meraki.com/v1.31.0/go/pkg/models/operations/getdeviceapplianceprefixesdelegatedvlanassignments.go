@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceAppliancePrefixesDelegatedVlanAssignmentsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceAppliancePrefixesDelegatedVlanAssignmentsRequest struct {
-	PathParams GetDeviceAppliancePrefixesDelegatedVlanAssignmentsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceAppliancePrefixesDelegatedVlanAssignmentsResponse struct {

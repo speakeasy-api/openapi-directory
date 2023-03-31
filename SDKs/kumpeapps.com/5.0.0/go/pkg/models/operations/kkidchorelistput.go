@@ -10,7 +10,7 @@ import (
 )
 
 type KkidChorelistPutSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 // KkidChorelistPutWhereDayEnum - Where day equals...
@@ -58,7 +58,7 @@ func (e *KkidChorelistPutWhereDayEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type KkidChorelistPutQueryParams struct {
+type KkidChorelistPutRequest struct {
 	// GPS altitude of where the chore was marked
 	Altitude *int64 `queryParam:"style=form,explode=true,name=altitude"`
 	// id number of chore you wish to update
@@ -85,11 +85,6 @@ type KkidChorelistPutQueryParams struct {
 	WhereName *string `queryParam:"style=form,explode=true,name=whereName"`
 	// Where status equals...
 	WhereStatus *string `queryParam:"style=form,explode=true,name=whereStatus"`
-}
-
-type KkidChorelistPutRequest struct {
-	QueryParams KkidChorelistPutQueryParams
-	Security    KkidChorelistPutSecurity
 }
 
 type KkidChorelistPutResponse struct {

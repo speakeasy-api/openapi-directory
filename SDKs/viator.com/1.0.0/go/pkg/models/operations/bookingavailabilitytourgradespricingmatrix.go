@@ -6,12 +6,6 @@ import (
 	"net/http"
 )
 
-type BookingAvailabilityTourgradesPricingmatrixHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type BookingAvailabilityTourgradesPricingmatrixRequestBody struct {
 	// **currency code** for the currency in which to display pricing details
 	CurrencyCode *string `json:"currencyCode,omitempty"`
@@ -24,8 +18,10 @@ type BookingAvailabilityTourgradesPricingmatrixRequestBody struct {
 }
 
 type BookingAvailabilityTourgradesPricingmatrixRequest struct {
-	Headers BookingAvailabilityTourgradesPricingmatrixHeaders
-	Request *BookingAvailabilityTourgradesPricingmatrixRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                                                 `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *BookingAvailabilityTourgradesPricingmatrixRequestBody `request:"mediaType=application/json"`
 }
 
 type BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPricesPrices struct {

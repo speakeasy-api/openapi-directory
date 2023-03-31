@@ -8,17 +8,12 @@ import (
 )
 
 type CreateProductSlugSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type CreateProductSlugPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateProductSlugRequest struct {
-	PathParams CreateProductSlugPathParams
-	Request    shared.CreateSlugRequest `request:"mediaType=application/json"`
-	Security   CreateProductSlugSecurity
+	CreateSlugRequest shared.CreateSlugRequest `request:"mediaType=application/json"`
+	OrganizationUUID  string                   `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type CreateProductSlugResponse struct {

@@ -27,7 +27,6 @@ pkg/models/shared/apigatewayauditconfig.go
 pkg/models/shared/apigatewayauditlogconfig.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/apigatewaysetiampolicyrequest.go
 pkg/models/shared/apigatewaytestiampermissionsresponse.go
 pkg/models/shared/apigatewaytestiampermissionsrequest.go

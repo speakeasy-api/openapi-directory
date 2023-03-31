@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1TrendsQueryParams struct {
+type GetAPIV1TrendsRequest struct {
 	// Max number of results to return. Defaults to 10.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetAPIV1TrendsRequest struct {
-	QueryParams GetAPIV1TrendsQueryParams
 }
 
 type GetAPIV1TrendsResponse struct {

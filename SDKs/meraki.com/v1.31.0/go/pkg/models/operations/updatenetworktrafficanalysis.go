@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkTrafficAnalysisPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkTrafficAnalysisRequestBodyCustomPieChartItemsTypeEnum -     The signature type for the custom pie chart item. Can be one of 'host', 'port' or 'ipRange'.
 type UpdateNetworkTrafficAnalysisRequestBodyCustomPieChartItemsTypeEnum string
 
@@ -90,8 +86,8 @@ type UpdateNetworkTrafficAnalysisRequestBody struct {
 }
 
 type UpdateNetworkTrafficAnalysisRequest struct {
-	PathParams UpdateNetworkTrafficAnalysisPathParams
-	Request    *UpdateNetworkTrafficAnalysisRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkTrafficAnalysisRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                   `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkTrafficAnalysisResponse struct {

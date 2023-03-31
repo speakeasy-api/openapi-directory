@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type WebhookVerificationKeyGetRequest struct {
-	Request shared.WebhookVerificationKeyGetRequest `request:"mediaType=application/json"`
-}
 
 type WebhookVerificationKeyGetResponse struct {
 	ContentType string

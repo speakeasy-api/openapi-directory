@@ -10,7 +10,7 @@ import (
 )
 
 type GetScoreRevisionDataSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetScoreRevisionDataFormatEnum - The format of the file you will retrieve
@@ -55,18 +55,9 @@ func (e *GetScoreRevisionDataFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetScoreRevisionDataPathParams struct {
+type GetScoreRevisionDataRequest struct {
 	// The format of the file you will retrieve
 	Format GetScoreRevisionDataFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-	// Unique identifier of a score revision. You can use `last` to fetch the information related to the last version created.
-	//
-	Revision string `pathParam:"style=simple,explode=false,name=revision"`
-	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
-	//
-	Score string `pathParam:"style=simple,explode=false,name=score"`
-}
-
-type GetScoreRevisionDataQueryParams struct {
 	// Only return files already generated and cached in Flat's production
 	// cache. If the file is not availabe, a 404 will be returned
 	//
@@ -75,18 +66,18 @@ type GetScoreRevisionDataQueryParams struct {
 	// separated by commas. For example "59df645f-bb1c-f1b4-b573-d2afc4491f94,34ef645f-1aef-f3bc-1564-34cca4492b87".
 	//
 	Parts *string `queryParam:"style=form,explode=true,name=parts"`
+	// Unique identifier of a score revision. You can use `last` to fetch the information related to the last version created.
+	//
+	Revision string `pathParam:"style=simple,explode=false,name=revision"`
+	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+	//
+	Score string `pathParam:"style=simple,explode=false,name=score"`
 	// This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
 	//
 	SharingKey *string `queryParam:"style=form,explode=true,name=sharingKey"`
 	// Returns a json with the `url` in it instead of redirecting
 	//
 	URL *bool `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GetScoreRevisionDataRequest struct {
-	PathParams  GetScoreRevisionDataPathParams
-	QueryParams GetScoreRevisionDataQueryParams
-	Security    GetScoreRevisionDataSecurity
 }
 
 type GetScoreRevisionDataResponse struct {

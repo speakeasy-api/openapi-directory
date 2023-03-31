@@ -7,31 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListversionsPathParams struct {
-	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
-	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
-	// ID of the Document.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ListversionsQueryParams struct {
-	// If `load` is true, the response will return only these specific fields
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// If true, return all the fields in each version of the document
-	Load *bool `queryParam:"style=form,explode=true,name=load"`
-}
-
-type ListversionsHeaders struct {
+type ListversionsRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ListversionsRequest struct {
-	PathParams  ListversionsPathParams
-	QueryParams ListversionsQueryParams
-	Headers     ListversionsHeaders
+	// Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+	DataEntityName string `pathParam:"style=simple,explode=false,name=dataEntityName"`
+	// If `load` is true, the response will return only these specific fields
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// ID of the Document.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// If true, return all the fields in each version of the document
+	Load *bool `queryParam:"style=form,explode=true,name=load"`
 }
 
 type ListversionsResponse struct {

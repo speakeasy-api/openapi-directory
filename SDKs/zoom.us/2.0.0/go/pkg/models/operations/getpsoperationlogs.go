@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type GetPSOperationLogsQueryParams struct {
+type GetPSOperationLogsRequest struct {
 	// Filter the response by the category of the action performed. By default, the value of this field is "all" and thus, the response will include log of all operations for the defined period.<br><br>To only include response for a specific category type, provide a value for `category_type` from this [table](http://marketplace.zoom.us/docs/phone-operation-categories ).
 	CategoryType *string `queryParam:"style=form,explode=true,name=category_type"`
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report provides only one month worth of data per API request.
@@ -18,10 +18,6 @@ type GetPSOperationLogsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// End date in 'yyyy-mm-dd' format.
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetPSOperationLogsRequest struct {
-	QueryParams GetPSOperationLogsQueryParams
 }
 
 type GetPSOperationLogs200ApplicationXMLOperationLogs struct {

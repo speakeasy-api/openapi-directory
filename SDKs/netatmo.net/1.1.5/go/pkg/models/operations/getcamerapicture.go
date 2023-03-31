@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetcamerapictureSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetcamerapictureQueryParams struct {
+type GetcamerapictureRequest struct {
 	// id of the image (can be retrieved as 'id' in 'face' in Gethomedata, or as 'id' in 'snapshot' in Getnextevents, Getlasteventof and Geteventsuntil)
 	ImageID string `queryParam:"style=form,explode=true,name=image_id"`
 	// Security key to access snapshots.
 	Key string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetcamerapictureRequest struct {
-	QueryParams GetcamerapictureQueryParams
-	Security    GetcamerapictureSecurity
 }
 
 type GetcamerapictureResponse struct {

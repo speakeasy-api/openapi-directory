@@ -33,20 +33,20 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // CloudresourcemanagerOrganizationsGet - Fetches an Organization resource identified by the specified resource name.
-func (s *organizations) CloudresourcemanagerOrganizationsGet(ctx context.Context, request operations.CloudresourcemanagerOrganizationsGetRequest) (*operations.CloudresourcemanagerOrganizationsGetResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsGet(ctx context.Context, request operations.CloudresourcemanagerOrganizationsGetRequest, security operations.CloudresourcemanagerOrganizationsGetSecurity) (*operations.CloudresourcemanagerOrganizationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsGet(ctx context.Context
 }
 
 // CloudresourcemanagerOrganizationsGetIamPolicy - Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
-func (s *organizations) CloudresourcemanagerOrganizationsGetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerOrganizationsGetIamPolicyRequest) (*operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsGetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerOrganizationsGetIamPolicyRequest, security operations.CloudresourcemanagerOrganizationsGetIamPolicySecurity) (*operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsGetIamPolicy(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *organizations) CloudresourcemanagerOrganizationsGetIamPolicy(ctx contex
 }
 
 // CloudresourcemanagerOrganizationsList - Lists Organization resources that are visible to the user and satisfy the specified filter. This method returns Organizations in an unspecified order. New Organizations do not necessarily appear at the end of the list.
-func (s *organizations) CloudresourcemanagerOrganizationsList(ctx context.Context, request operations.CloudresourcemanagerOrganizationsListRequest) (*operations.CloudresourcemanagerOrganizationsListResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsList(ctx context.Context, request operations.CloudresourcemanagerOrganizationsListRequest, security operations.CloudresourcemanagerOrganizationsListSecurity) (*operations.CloudresourcemanagerOrganizationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/organizations"
 
@@ -145,11 +145,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsList(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsList(ctx context.Contex
 }
 
 // CloudresourcemanagerOrganizationsSetIamPolicy - Sets the access control policy on an Organization resource. Replaces any existing policy. The `resource` field should be the organization's resource name, e.g. "organizations/123".
-func (s *organizations) CloudresourcemanagerOrganizationsSetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerOrganizationsSetIamPolicyRequest) (*operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsSetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerOrganizationsSetIamPolicyRequest, security operations.CloudresourcemanagerOrganizationsSetIamPolicySecurity) (*operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsSetIamPolicy(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsSetIamPolicy(ctx contex
 }
 
 // CloudresourcemanagerOrganizationsTestIamPermissions - Returns permissions that a caller has on the specified Organization. The `resource` field should be the organization's resource name, e.g. "organizations/123".
-func (s *organizations) CloudresourcemanagerOrganizationsTestIamPermissions(ctx context.Context, request operations.CloudresourcemanagerOrganizationsTestIamPermissionsRequest) (*operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsTestIamPermissions(ctx context.Context, request operations.CloudresourcemanagerOrganizationsTestIamPermissionsRequest, security operations.CloudresourcemanagerOrganizationsTestIamPermissionsSecurity) (*operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsTestIamPermissions(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsTestIamPermissions(ctx 
 }
 
 // CloudresourcemanagerOrganizationsUpdate - Updates an Organization resource identified by the specified resource name.
-func (s *organizations) CloudresourcemanagerOrganizationsUpdate(ctx context.Context, request operations.CloudresourcemanagerOrganizationsUpdateRequest) (*operations.CloudresourcemanagerOrganizationsUpdateResponse, error) {
+func (s *organizations) CloudresourcemanagerOrganizationsUpdate(ctx context.Context, request operations.CloudresourcemanagerOrganizationsUpdateRequest, security operations.CloudresourcemanagerOrganizationsUpdateSecurity) (*operations.CloudresourcemanagerOrganizationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Organization", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,11 +310,11 @@ func (s *organizations) CloudresourcemanagerOrganizationsUpdate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

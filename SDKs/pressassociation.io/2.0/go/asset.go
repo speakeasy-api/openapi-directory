@@ -33,20 +33,20 @@ func newAsset(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // GetAsset - Asset Detail
 // Return the content of the selected asset.
-func (s *asset) GetAsset(ctx context.Context, request operations.GetAssetRequest) (*operations.GetAssetResponse, error) {
+func (s *asset) GetAsset(ctx context.Context, request operations.GetAssetRequest, security operations.GetAssetSecurity) (*operations.GetAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,20 +82,20 @@ func (s *asset) GetAsset(ctx context.Context, request operations.GetAssetRequest
 
 // GetAssetContributors - Asset Contributors
 // Return the contributors of the selected asset.
-func (s *asset) GetAssetContributors(ctx context.Context, request operations.GetAssetContributorsRequest) (*operations.GetAssetContributorsResponse, error) {
+func (s *asset) GetAssetContributors(ctx context.Context, request operations.GetAssetContributorsRequest, security operations.GetAssetContributorsSecurity) (*operations.GetAssetContributorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}/contributor", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}/contributor", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *asset) GetAssetContributors(ctx context.Context, request operations.Get
 
 // ListAssets - Asset Collection
 // Return a collection of Assets.
-func (s *asset) ListAssets(ctx context.Context, request operations.ListAssetsRequest) (*operations.ListAssetsResponse, error) {
+func (s *asset) ListAssets(ctx context.Context, request operations.ListAssetsRequest, security operations.ListAssetsSecurity) (*operations.ListAssetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/asset"
 
@@ -140,11 +140,11 @@ func (s *asset) ListAssets(ctx context.Context, request operations.ListAssetsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -10,13 +10,9 @@ import (
 	"net/http"
 )
 
-type GetAdminMappingsStubMappingIDPathParams struct {
+type GetAdminMappingsStubMappingIDRequest struct {
 	// The UUID of stub mapping
 	StubMappingID string `pathParam:"style=simple,explode=false,name=stubMappingId"`
-}
-
-type GetAdminMappingsStubMappingIDRequest struct {
-	PathParams GetAdminMappingsStubMappingIDPathParams
 }
 
 // GetAdminMappingsStubMappingID200ApplicationJSONRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against

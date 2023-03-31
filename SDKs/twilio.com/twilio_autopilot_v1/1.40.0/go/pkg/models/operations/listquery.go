@@ -12,15 +12,13 @@ var ListQueryServerList = []string{
 }
 
 type ListQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListQueryPathParams struct {
+type ListQueryRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to read.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-}
-
-type ListQueryQueryParams struct {
 	// The SID of the [Dialogue](https://www.twilio.com/docs/autopilot/api/dialogue).
 	DialogueSid *string `queryParam:"style=form,explode=true,name=DialogueSid"`
 	// The [ISO language-country](https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html) string that specifies the language used by the Query resources to read. For example: `en-US`.
@@ -35,13 +33,6 @@ type ListQueryQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The status of the resources to read. Can be: `pending-review`, `reviewed`, or `discarded`
 	Status *string `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListQueryRequest struct {
-	PathParams  ListQueryPathParams
-	QueryParams ListQueryQueryParams
-	Security    ListQuerySecurity
-	ServerURL   *string
 }
 
 type ListQueryListQueryResponseMeta struct {

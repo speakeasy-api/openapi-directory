@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAllContentTypesPathParams struct {
+type GetAllContentTypesRequest struct {
 	// Builder ID specified in the settings of the CMS app.
 	BuilderID string `pathParam:"style=simple,explode=false,name=builderId"`
-}
-
-type GetAllContentTypesRequest struct {
-	PathParams GetAllContentTypesPathParams
 }
 
 // GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchemaSets - Object with data about a specific Content Type tab.

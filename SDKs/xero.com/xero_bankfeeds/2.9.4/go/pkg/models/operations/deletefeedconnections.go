@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteFeedConnectionsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteFeedConnectionsHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteFeedConnectionsRequest struct {
-	Headers DeleteFeedConnectionsHeaders
 	// Feed Connections array object in the body
-	Request  shared.FeedConnections `request:"mediaType=application/json"`
-	Security DeleteFeedConnectionsSecurity
+	FeedConnections shared.FeedConnections `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type DeleteFeedConnectionsResponse struct {

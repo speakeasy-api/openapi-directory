@@ -84,10 +84,6 @@ type PostV2AccountUpsertsJSONRequestBody struct {
 	Website *string `form:"name=website"`
 }
 
-type PostV2AccountUpsertsJSONRequest struct {
-	Request *PostV2AccountUpsertsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2AccountUpsertsJSONResponse struct {
 	Body        []byte
 	ContentType string

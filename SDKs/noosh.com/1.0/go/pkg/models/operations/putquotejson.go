@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutQuoteJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	QuoteID     string `pathParam:"style=simple,explode=false,name=quote_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PutQuoteJSONRequest struct {
-	PathParams PutQuoteJSONPathParams
-	Request    *shared.QuotePutPersistVO `request:"mediaType=application/json"`
+	QuotePutPersistVO *shared.QuotePutPersistVO `request:"mediaType=application/json"`
+	ProjectID         string                    `pathParam:"style=simple,explode=false,name=project_id"`
+	QuoteID           string                    `pathParam:"style=simple,explode=false,name=quote_id"`
+	WorkgroupID       string                    `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PutQuoteJSONResponse struct {

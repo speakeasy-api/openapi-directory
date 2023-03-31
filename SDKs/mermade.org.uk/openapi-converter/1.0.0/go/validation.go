@@ -44,7 +44,7 @@ func (s *validation) GetBadge(ctx context.Context, request operations.GetBadgeRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -74,7 +74,7 @@ func (s *validation) GetBadge(ctx context.Context, request operations.GetBadgeRe
 }
 
 // Validate - Validate an OpenAPI 3.0.x definition supplied in the body of the request
-func (s *validation) Validate(ctx context.Context, request operations.ValidateRequest) (*operations.ValidateResponse, error) {
+func (s *validation) Validate(ctx context.Context, request operations.ValidateRequestBody) (*operations.ValidateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/validate"
 
@@ -158,7 +158,7 @@ func (s *validation) ValidateURL(ctx context.Context, request operations.Validat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

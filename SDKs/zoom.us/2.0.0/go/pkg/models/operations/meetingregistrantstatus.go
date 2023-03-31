@@ -6,23 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingRegistrantStatusSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingRegistrantStatusPathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type MeetingRegistrantStatusQueryParams struct {
-	// The meeting occurrence ID.
-	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingRegistrantStatusApplicationJSONActionEnum - Registrant Status:<br>`approve` - Approve registrant.<br>`cancel` - Cancel previously approved registrant's registration.<br>`deny` - Deny registrant.
@@ -65,10 +52,13 @@ type MeetingRegistrantStatusApplicationJSON struct {
 }
 
 type MeetingRegistrantStatusRequest struct {
-	PathParams  MeetingRegistrantStatusPathParams
-	QueryParams MeetingRegistrantStatusQueryParams
-	Request     MeetingRegistrantStatusApplicationJSON `request:"mediaType=application/json"`
-	Security    MeetingRegistrantStatusSecurity
+	RequestBody MeetingRegistrantStatusApplicationJSON `request:"mediaType=application/json"`
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
+	// The meeting occurrence ID.
+	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 }
 
 type MeetingRegistrantStatusResponse struct {

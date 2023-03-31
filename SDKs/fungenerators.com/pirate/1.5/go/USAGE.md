@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetPirateGenerateInsultRequest{
-        Security: operations.GetPirateGenerateInsultSecurity{
-            XFungeneratorsAPISecret: shared.SchemeXFungeneratorsAPISecret{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GetPirateGenerateInsultQueryParams{
-            Limit: 548814,
-        },
+        Limit: 548814,
     }
 
     ctx := context.Background()
-    res, err := s.Generation.GetPirateGenerateInsult(ctx, req)
+    res, err := s.Generation.GetPirateGenerateInsult(ctx, req, operations.GetPirateGenerateInsultSecurity{
+        XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

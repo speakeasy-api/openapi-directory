@@ -2,15 +2,7 @@
 
 package shared
 
-type SchemeAccessToken struct {
-	APIKey string `security:"name=access-token"`
-}
-
-type SchemeHTTPBearer struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	AccessToken *SchemeAccessToken `security:"scheme,type=apiKey,subtype=query"`
-	HTTPBearer  *SchemeHTTPBearer  `security:"scheme,type=http,subtype=bearer"`
+	AccessToken *string `security:"scheme,type=apiKey,subtype=query,name=access-token"`
+	HTTPBearer  *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }

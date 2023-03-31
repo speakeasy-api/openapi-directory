@@ -14,14 +14,8 @@ var CreateStreamServerList = []string{
 }
 
 type CreateStreamSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateStreamPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Stream resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Stream resource is associated with.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateStreamCreateStreamRequestStatusCallbackMethodEnum - The http method for the status_callback (one of GET, POST).
@@ -469,10 +463,11 @@ type CreateStreamCreateStreamRequest struct {
 }
 
 type CreateStreamRequest struct {
-	PathParams CreateStreamPathParams
-	Request    *CreateStreamCreateStreamRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateStreamSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Stream resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Stream resource is associated with.
+	CallSid     string                           `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *CreateStreamCreateStreamRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateStreamResponse struct {

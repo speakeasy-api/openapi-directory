@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCorporaHeaders struct {
+type ListCorporaRequest struct {
+	AdminListCorporaRequest shared.AdminListCorporaRequest `request:"mediaType=application/json"`
 	// The Customer ID to use for the request.
 	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
-}
-
-type ListCorporaRequest struct {
-	Headers ListCorporaHeaders
-	Request shared.AdminListCorporaRequest `request:"mediaType=application/json"`
 }
 
 type ListCorporaResponse struct {

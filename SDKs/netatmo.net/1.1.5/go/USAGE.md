@@ -14,20 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.DevicelistRequest{
-        Security: operations.DevicelistSecurity{
-            CodeOauth: &shared.SchemeCodeOauth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.DevicelistQueryParams{
-            AppType: "app_station",
-            DeviceID: "provident",
-            GetFavorites: false,
-        },
+        AppType: "app_station",
+        DeviceID: "provident",
+        GetFavorites: false,
     }
 
     ctx := context.Background()
-    res, err := s.Deprecated.Devicelist(ctx, req)
+    res, err := s.Deprecated.Devicelist(ctx, req, operations.DevicelistSecurity{
+        CodeOauth: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

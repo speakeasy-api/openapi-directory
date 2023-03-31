@@ -25,7 +25,6 @@ pkg/models/shared/userextension.go
 pkg/models/shared/did.go
 pkg/models/shared/contact.go
 pkg/models/shared/errorresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/validationerrorsresponse.go
 pkg/models/shared/detailedinvalidparam.go
 pkg/models/shared/usershalresponse.go

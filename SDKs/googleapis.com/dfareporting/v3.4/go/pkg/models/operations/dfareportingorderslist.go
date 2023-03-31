@@ -10,15 +10,8 @@ import (
 )
 
 type DfareportingOrdersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingOrdersListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Project ID for orders.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingOrdersListSortFieldEnum - Field by which to sort the list.
@@ -69,7 +62,7 @@ func (e *DfareportingOrdersListSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DfareportingOrdersListQueryParams struct {
+type DfareportingOrdersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -92,6 +85,10 @@ type DfareportingOrdersListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	// Project ID for orders.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for orders by name or ID. Wildcards (*) are allowed. For example, "order*2015" will return orders with names like "order June 2015", "order April 2015", or simply "order 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "order" will match orders with name "my order", "order 2015", or simply "order".
@@ -106,12 +103,6 @@ type DfareportingOrdersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingOrdersListRequest struct {
-	PathParams  DfareportingOrdersListPathParams
-	QueryParams DfareportingOrdersListQueryParams
-	Security    DfareportingOrdersListSecurity
 }
 
 type DfareportingOrdersListResponse struct {

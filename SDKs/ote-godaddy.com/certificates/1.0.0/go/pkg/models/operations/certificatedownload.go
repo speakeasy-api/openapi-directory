@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateDownloadPathParams struct {
+type CertificateDownloadRequest struct {
 	// Certificate id to download
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateDownloadRequest struct {
-	PathParams CertificateDownloadPathParams
 }
 
 type CertificateDownloadResponse struct {

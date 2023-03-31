@@ -8,10 +8,10 @@ import (
 )
 
 type GetAPIV1ScheduledStatusesSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1ScheduledStatusesQueryParams struct {
+type GetAPIV1ScheduledStatusesRequest struct {
 	// Max number of results to return. Defaults to 20.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Return results older than ID
@@ -20,11 +20,6 @@ type GetAPIV1ScheduledStatusesQueryParams struct {
 	MinID *string `queryParam:"style=form,explode=true,name=min_id"`
 	// Return results newer than ID
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1ScheduledStatusesRequest struct {
-	QueryParams GetAPIV1ScheduledStatusesQueryParams
-	Security    GetAPIV1ScheduledStatusesSecurity
 }
 
 type GetAPIV1ScheduledStatusesResponse struct {

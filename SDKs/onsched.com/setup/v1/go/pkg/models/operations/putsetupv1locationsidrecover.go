@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1LocationsIDRecoverPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutSetupV1LocationsIDRecoverRequest struct {
-	PathParams PutSetupV1LocationsIDRecoverPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutSetupV1LocationsIDRecoverResponse struct {

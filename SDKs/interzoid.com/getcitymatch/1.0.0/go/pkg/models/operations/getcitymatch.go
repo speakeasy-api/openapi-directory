@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcitymatchQueryParams struct {
+type GetcitymatchRequest struct {
 	// City name from which to generate similarity key
 	City string `queryParam:"style=form,explode=true,name=city"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetcitymatchRequest struct {
-	QueryParams GetcitymatchQueryParams
 }
 
 // Getcitymatch200ApplicationJSON - Generated similarity key for city name data

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceApplianceUplinksSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceApplianceUplinksSettingsRequestBodyInterfacesWan1PppoeAuthentication - Settings for PPPoE Authentication.
 type UpdateDeviceApplianceUplinksSettingsRequestBodyInterfacesWan1PppoeAuthentication struct {
 	// Whether PPPoE authentication is enabled.
@@ -286,8 +282,8 @@ type UpdateDeviceApplianceUplinksSettingsRequestBody struct {
 }
 
 type UpdateDeviceApplianceUplinksSettingsRequest struct {
-	PathParams UpdateDeviceApplianceUplinksSettingsPathParams
-	Request    UpdateDeviceApplianceUplinksSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateDeviceApplianceUplinksSettingsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                          `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // UpdateDeviceApplianceUplinksSettings200ApplicationJSONInterfacesWan1PppoeAuthentication - Settings for PPPoE Authentication.

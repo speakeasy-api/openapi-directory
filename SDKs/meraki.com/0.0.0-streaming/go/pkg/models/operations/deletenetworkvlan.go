@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkVlanPathParams struct {
+type DeleteNetworkVlanRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	VlanID    string `pathParam:"style=simple,explode=false,name=vlanId"`
-}
-
-type DeleteNetworkVlanRequest struct {
-	PathParams DeleteNetworkVlanPathParams
 }
 
 type DeleteNetworkVlanResponse struct {

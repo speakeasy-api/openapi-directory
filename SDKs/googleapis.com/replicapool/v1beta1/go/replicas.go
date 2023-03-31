@@ -32,11 +32,11 @@ func newReplicas(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ReplicapoolReplicasDelete - Deletes a replica from the pool.
-func (s *replicas) ReplicapoolReplicasDelete(ctx context.Context, request operations.ReplicapoolReplicasDeleteRequest) (*operations.ReplicapoolReplicasDeleteResponse, error) {
+func (s *replicas) ReplicapoolReplicasDelete(ctx context.Context, request operations.ReplicapoolReplicasDeleteRequest, security operations.ReplicapoolReplicasDeleteSecurity) (*operations.ReplicapoolReplicasDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplicasDeleteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *replicas) ReplicapoolReplicasDelete(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *replicas) ReplicapoolReplicasDelete(ctx context.Context, request operat
 }
 
 // ReplicapoolReplicasGet - Gets information about a specific replica.
-func (s *replicas) ReplicapoolReplicasGet(ctx context.Context, request operations.ReplicapoolReplicasGetRequest) (*operations.ReplicapoolReplicasGetResponse, error) {
+func (s *replicas) ReplicapoolReplicasGet(ctx context.Context, request operations.ReplicapoolReplicasGetRequest, security operations.ReplicapoolReplicasGetSecurity) (*operations.ReplicapoolReplicasGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *replicas) ReplicapoolReplicasGet(ctx context.Context, request operation
 }
 
 // ReplicapoolReplicasList - Lists all replicas in a pool.
-func (s *replicas) ReplicapoolReplicasList(ctx context.Context, request operations.ReplicapoolReplicasListRequest) (*operations.ReplicapoolReplicasListResponse, error) {
+func (s *replicas) ReplicapoolReplicasList(ctx context.Context, request operations.ReplicapoolReplicasListRequest, security operations.ReplicapoolReplicasListSecurity) (*operations.ReplicapoolReplicasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *replicas) ReplicapoolReplicasList(ctx context.Context, request operatio
 }
 
 // ReplicapoolReplicasRestart - Restarts a replica in a pool.
-func (s *replicas) ReplicapoolReplicasRestart(ctx context.Context, request operations.ReplicapoolReplicasRestartRequest) (*operations.ReplicapoolReplicasRestartResponse, error) {
+func (s *replicas) ReplicapoolReplicasRestart(ctx context.Context, request operations.ReplicapoolReplicasRestartRequest, security operations.ReplicapoolReplicasRestartSecurity) (*operations.ReplicapoolReplicasRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}/restart", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}/restart", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

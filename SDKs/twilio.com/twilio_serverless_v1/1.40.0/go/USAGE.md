@@ -14,22 +14,17 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAssetRequest{
-        Security: operations.CreateAssetSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+        RequestBody: &operations.CreateAssetCreateAssetRequest{
+            FriendlyName: "corrupti",
         },
-        PathParams: operations.CreateAssetPathParams{
-            ServiceSid: "corrupti",
-        },
-        Request: &operations.CreateAssetCreateAssetRequest{
-            FriendlyName: "provident",
-        },
+        ServiceSid: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.CreateAsset(ctx, req)
+    res, err := s.CreateAsset(ctx, req, operations.CreateAssetSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

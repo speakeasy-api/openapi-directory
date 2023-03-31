@@ -33,11 +33,11 @@ func newRelyingparty(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // IdentitytoolkitRelyingpartyCreateAuthURI - Creates the URI used by the IdP to authenticate the user.
-func (s *relyingparty) IdentitytoolkitRelyingpartyCreateAuthURI(ctx context.Context, request operations.IdentitytoolkitRelyingpartyCreateAuthURIRequest) (*operations.IdentitytoolkitRelyingpartyCreateAuthURIResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyCreateAuthURI(ctx context.Context, request operations.IdentitytoolkitRelyingpartyCreateAuthURIRequest, security operations.IdentitytoolkitRelyingpartyCreateAuthURISecurity) (*operations.IdentitytoolkitRelyingpartyCreateAuthURIResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createAuthUri"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyCreateAuthURIRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyCreateAuthURI(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyCreateAuthURI(ctx context.Cont
 }
 
 // IdentitytoolkitRelyingpartyDeleteAccount - Delete user account.
-func (s *relyingparty) IdentitytoolkitRelyingpartyDeleteAccount(ctx context.Context, request operations.IdentitytoolkitRelyingpartyDeleteAccountRequest) (*operations.IdentitytoolkitRelyingpartyDeleteAccountResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyDeleteAccount(ctx context.Context, request operations.IdentitytoolkitRelyingpartyDeleteAccountRequest, security operations.IdentitytoolkitRelyingpartyDeleteAccountSecurity) (*operations.IdentitytoolkitRelyingpartyDeleteAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyDeleteAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyDeleteAccount(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyDeleteAccount(ctx context.Cont
 }
 
 // IdentitytoolkitRelyingpartyDownloadAccount - Batch download user accounts.
-func (s *relyingparty) IdentitytoolkitRelyingpartyDownloadAccount(ctx context.Context, request operations.IdentitytoolkitRelyingpartyDownloadAccountRequest) (*operations.IdentitytoolkitRelyingpartyDownloadAccountResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyDownloadAccount(ctx context.Context, request operations.IdentitytoolkitRelyingpartyDownloadAccountRequest, security operations.IdentitytoolkitRelyingpartyDownloadAccountSecurity) (*operations.IdentitytoolkitRelyingpartyDownloadAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/downloadAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyDownloadAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyDownloadAccount(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +198,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyDownloadAccount(ctx context.Co
 }
 
 // IdentitytoolkitRelyingpartyEmailLinkSignin - Reset password for a user.
-func (s *relyingparty) IdentitytoolkitRelyingpartyEmailLinkSignin(ctx context.Context, request operations.IdentitytoolkitRelyingpartyEmailLinkSigninRequest) (*operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyEmailLinkSignin(ctx context.Context, request operations.IdentitytoolkitRelyingpartyEmailLinkSigninRequest, security operations.IdentitytoolkitRelyingpartyEmailLinkSigninSecurity) (*operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/emailLinkSignin"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyEmailLinkSigninRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,11 +214,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyEmailLinkSignin(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,11 +253,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyEmailLinkSignin(ctx context.Co
 }
 
 // IdentitytoolkitRelyingpartyGetAccountInfo - Returns the account info.
-func (s *relyingparty) IdentitytoolkitRelyingpartyGetAccountInfo(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetAccountInfoRequest) (*operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyGetAccountInfo(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetAccountInfoRequest, security operations.IdentitytoolkitRelyingpartyGetAccountInfoSecurity) (*operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getAccountInfo"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyGetAccountInfoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,11 +269,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetAccountInfo(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,11 +308,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetAccountInfo(ctx context.Con
 }
 
 // IdentitytoolkitRelyingpartyGetOobConfirmationCode - Get a code for user action confirmation.
-func (s *relyingparty) IdentitytoolkitRelyingpartyGetOobConfirmationCode(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeRequest) (*operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyGetOobConfirmationCode(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeRequest, security operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeSecurity) (*operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getOobConfirmationCode"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Relyingparty", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,11 +324,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetOobConfirmationCode(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -363,7 +363,7 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetOobConfirmationCode(ctx con
 }
 
 // IdentitytoolkitRelyingpartyGetProjectConfig - Get project configuration.
-func (s *relyingparty) IdentitytoolkitRelyingpartyGetProjectConfig(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetProjectConfigRequest) (*operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyGetProjectConfig(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetProjectConfigRequest, security operations.IdentitytoolkitRelyingpartyGetProjectConfigSecurity) (*operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getProjectConfig"
 
@@ -372,11 +372,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetProjectConfig(ctx context.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -411,7 +411,7 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetProjectConfig(ctx context.C
 }
 
 // IdentitytoolkitRelyingpartyGetPublicKeys - Get token signing public key.
-func (s *relyingparty) IdentitytoolkitRelyingpartyGetPublicKeys(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetPublicKeysRequest) (*operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyGetPublicKeys(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetPublicKeysRequest, security operations.IdentitytoolkitRelyingpartyGetPublicKeysSecurity) (*operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publicKeys"
 
@@ -420,11 +420,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetPublicKeys(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,7 +459,7 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetPublicKeys(ctx context.Cont
 }
 
 // IdentitytoolkitRelyingpartyGetRecaptchaParam - Get recaptcha secure param.
-func (s *relyingparty) IdentitytoolkitRelyingpartyGetRecaptchaParam(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetRecaptchaParamRequest) (*operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyGetRecaptchaParam(ctx context.Context, request operations.IdentitytoolkitRelyingpartyGetRecaptchaParamRequest, security operations.IdentitytoolkitRelyingpartyGetRecaptchaParamSecurity) (*operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getRecaptchaParam"
 
@@ -468,11 +468,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetRecaptchaParam(ctx context.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,11 +507,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyGetRecaptchaParam(ctx context.
 }
 
 // IdentitytoolkitRelyingpartyResetPassword - Reset password for a user.
-func (s *relyingparty) IdentitytoolkitRelyingpartyResetPassword(ctx context.Context, request operations.IdentitytoolkitRelyingpartyResetPasswordRequest) (*operations.IdentitytoolkitRelyingpartyResetPasswordResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyResetPassword(ctx context.Context, request operations.IdentitytoolkitRelyingpartyResetPasswordRequest, security operations.IdentitytoolkitRelyingpartyResetPasswordSecurity) (*operations.IdentitytoolkitRelyingpartyResetPasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resetPassword"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyResetPasswordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -523,11 +523,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyResetPassword(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,11 +562,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyResetPassword(ctx context.Cont
 }
 
 // IdentitytoolkitRelyingpartySendVerificationCode - Send SMS verification code.
-func (s *relyingparty) IdentitytoolkitRelyingpartySendVerificationCode(ctx context.Context, request operations.IdentitytoolkitRelyingpartySendVerificationCodeRequest) (*operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartySendVerificationCode(ctx context.Context, request operations.IdentitytoolkitRelyingpartySendVerificationCodeRequest, security operations.IdentitytoolkitRelyingpartySendVerificationCodeSecurity) (*operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sendVerificationCode"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartySendVerificationCodeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -578,11 +578,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySendVerificationCode(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -617,11 +617,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySendVerificationCode(ctx conte
 }
 
 // IdentitytoolkitRelyingpartySetAccountInfo - Set account info for a user.
-func (s *relyingparty) IdentitytoolkitRelyingpartySetAccountInfo(ctx context.Context, request operations.IdentitytoolkitRelyingpartySetAccountInfoRequest) (*operations.IdentitytoolkitRelyingpartySetAccountInfoResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartySetAccountInfo(ctx context.Context, request operations.IdentitytoolkitRelyingpartySetAccountInfoRequest, security operations.IdentitytoolkitRelyingpartySetAccountInfoSecurity) (*operations.IdentitytoolkitRelyingpartySetAccountInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setAccountInfo"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartySetAccountInfoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -633,11 +633,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySetAccountInfo(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -672,11 +672,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySetAccountInfo(ctx context.Con
 }
 
 // IdentitytoolkitRelyingpartySetProjectConfig - Set project configuration.
-func (s *relyingparty) IdentitytoolkitRelyingpartySetProjectConfig(ctx context.Context, request operations.IdentitytoolkitRelyingpartySetProjectConfigRequest) (*operations.IdentitytoolkitRelyingpartySetProjectConfigResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartySetProjectConfig(ctx context.Context, request operations.IdentitytoolkitRelyingpartySetProjectConfigRequest, security operations.IdentitytoolkitRelyingpartySetProjectConfigSecurity) (*operations.IdentitytoolkitRelyingpartySetProjectConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setProjectConfig"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartySetProjectConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -688,11 +688,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySetProjectConfig(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -727,11 +727,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySetProjectConfig(ctx context.C
 }
 
 // IdentitytoolkitRelyingpartySignOutUser - Sign out user.
-func (s *relyingparty) IdentitytoolkitRelyingpartySignOutUser(ctx context.Context, request operations.IdentitytoolkitRelyingpartySignOutUserRequest) (*operations.IdentitytoolkitRelyingpartySignOutUserResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartySignOutUser(ctx context.Context, request operations.IdentitytoolkitRelyingpartySignOutUserRequest, security operations.IdentitytoolkitRelyingpartySignOutUserSecurity) (*operations.IdentitytoolkitRelyingpartySignOutUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signOutUser"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartySignOutUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -743,11 +743,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySignOutUser(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -782,11 +782,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySignOutUser(ctx context.Contex
 }
 
 // IdentitytoolkitRelyingpartySignupNewUser - Signup new user.
-func (s *relyingparty) IdentitytoolkitRelyingpartySignupNewUser(ctx context.Context, request operations.IdentitytoolkitRelyingpartySignupNewUserRequest) (*operations.IdentitytoolkitRelyingpartySignupNewUserResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartySignupNewUser(ctx context.Context, request operations.IdentitytoolkitRelyingpartySignupNewUserRequest, security operations.IdentitytoolkitRelyingpartySignupNewUserSecurity) (*operations.IdentitytoolkitRelyingpartySignupNewUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signupNewUser"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartySignupNewUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -798,11 +798,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySignupNewUser(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -837,11 +837,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartySignupNewUser(ctx context.Cont
 }
 
 // IdentitytoolkitRelyingpartyUploadAccount - Batch upload existing user accounts.
-func (s *relyingparty) IdentitytoolkitRelyingpartyUploadAccount(ctx context.Context, request operations.IdentitytoolkitRelyingpartyUploadAccountRequest) (*operations.IdentitytoolkitRelyingpartyUploadAccountResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyUploadAccount(ctx context.Context, request operations.IdentitytoolkitRelyingpartyUploadAccountRequest, security operations.IdentitytoolkitRelyingpartyUploadAccountSecurity) (*operations.IdentitytoolkitRelyingpartyUploadAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploadAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyUploadAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -853,11 +853,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyUploadAccount(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -892,11 +892,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyUploadAccount(ctx context.Cont
 }
 
 // IdentitytoolkitRelyingpartyVerifyAssertion - Verifies the assertion returned by the IdP.
-func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyAssertion(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyAssertionRequest) (*operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyAssertion(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyAssertionRequest, security operations.IdentitytoolkitRelyingpartyVerifyAssertionSecurity) (*operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/verifyAssertion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyVerifyAssertionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -908,11 +908,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyAssertion(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -947,11 +947,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyAssertion(ctx context.Co
 }
 
 // IdentitytoolkitRelyingpartyVerifyCustomToken - Verifies the developer asserted ID token.
-func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyCustomToken(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyCustomTokenRequest) (*operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyCustomToken(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyCustomTokenRequest, security operations.IdentitytoolkitRelyingpartyVerifyCustomTokenSecurity) (*operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/verifyCustomToken"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyVerifyCustomTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -963,11 +963,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyCustomToken(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1002,11 +1002,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyCustomToken(ctx context.
 }
 
 // IdentitytoolkitRelyingpartyVerifyPassword - Verifies the user entered password.
-func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPassword(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyPasswordRequest) (*operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPassword(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyPasswordRequest, security operations.IdentitytoolkitRelyingpartyVerifyPasswordSecurity) (*operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/verifyPassword"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyVerifyPasswordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1018,11 +1018,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPassword(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1057,11 +1057,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPassword(ctx context.Con
 }
 
 // IdentitytoolkitRelyingpartyVerifyPhoneNumber - Verifies ownership of a phone number and creates/updates the user account accordingly.
-func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPhoneNumber(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest) (*operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse, error) {
+func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPhoneNumber(ctx context.Context, request operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest, security operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberSecurity) (*operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/verifyPhoneNumber"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1073,11 +1073,11 @@ func (s *relyingparty) IdentitytoolkitRelyingpartyVerifyPhoneNumber(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

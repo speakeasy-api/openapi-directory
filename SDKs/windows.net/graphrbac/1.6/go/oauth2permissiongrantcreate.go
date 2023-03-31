@@ -34,9 +34,9 @@ func newOAuth2PermissionGrantCreate(defaultClient, securityClient HTTPClient, se
 // OAuth2PermissionGrantCreate - Grants OAuth2 permissions for the relevant resource Ids of an app.
 func (s *oAuth2PermissionGrantCreate) OAuth2PermissionGrantCreate(ctx context.Context, request operations.OAuth2PermissionGrantCreateRequest) (*operations.OAuth2PermissionGrantCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/oauth2PermissionGrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/oauth2PermissionGrants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OAuth2PermissionGrant", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *oAuth2PermissionGrantCreate) OAuth2PermissionGrantCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationWebhooksAlertTypesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationWebhooksAlertTypesProductTypeEnum - Filter sample alerts to a specific product type
 type GetOrganizationWebhooksAlertTypesProductTypeEnum string
 
@@ -57,14 +53,10 @@ func (e *GetOrganizationWebhooksAlertTypesProductTypeEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetOrganizationWebhooksAlertTypesQueryParams struct {
+type GetOrganizationWebhooksAlertTypesRequest struct {
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// Filter sample alerts to a specific product type
 	ProductType *GetOrganizationWebhooksAlertTypesProductTypeEnum `queryParam:"style=form,explode=true,name=productType"`
-}
-
-type GetOrganizationWebhooksAlertTypesRequest struct {
-	PathParams  GetOrganizationWebhooksAlertTypesPathParams
-	QueryParams GetOrganizationWebhooksAlertTypesQueryParams
 }
 
 type GetOrganizationWebhooksAlertTypesResponse struct {

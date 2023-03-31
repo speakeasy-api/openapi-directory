@@ -12,7 +12,8 @@ var CreateSupportingDocumentServerList = []string{
 }
 
 type CreateSupportingDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSupportingDocumentCreateSupportingDocumentRequest struct {
@@ -22,12 +23,6 @@ type CreateSupportingDocumentCreateSupportingDocumentRequest struct {
 	FriendlyName string `form:"name=FriendlyName"`
 	// The type of the Supporting Document.
 	Type string `form:"name=Type"`
-}
-
-type CreateSupportingDocumentRequest struct {
-	Request   *CreateSupportingDocumentCreateSupportingDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSupportingDocumentSecurity
-	ServerURL *string
 }
 
 type CreateSupportingDocumentResponse struct {

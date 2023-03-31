@@ -13,46 +13,42 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.CreatePodcastRequest{
-        Request: &operations.CreatePodcastRequestBody{
-            FileLogo: operations.CreatePodcastRequestBodyFileLogo{
-                Content: []byte("corrupti"),
-                FileLogo: "provident",
+    req := operations.CreatePodcastRequestBody{
+        FileLogo: operations.CreatePodcastRequestBodyFileLogo{
+            Content: []byte("corrupti"),
+            FileLogo: "provident",
+        },
+        Podcast: shared.Podcast{
+            Author: "distinctio",
+            Block: false,
+            Categories: []string{
+                "unde",
+                "nulla",
+                "corrupti",
+                "illum",
             },
-            Podcast: shared.Podcast{
-                Author: "distinctio",
-                Block: false,
-                Categories: []string{
-                    "unde",
-                    "nulla",
-                    "corrupti",
-                    "illum",
-                },
-                Copyright: "vel",
-                Country: "Netherlands Antilles",
-                Description: "deserunt",
-                Explicit: false,
-                Image: "suscipit",
-                Key: "iure",
-                Keywords: []string{
-                    "debitis",
-                    "ipsa",
-                },
-                Language: "delectus",
-                Link: "tempora",
-                OwnerEmail: "suscipit",
-                OwnerName: "molestiae",
-                ShowType: "minus",
-                Subtitle: "placeat",
-                Summary: "voluptatum",
-                Title: "Ms.",
+            Copyright: "vel",
+            Country: "Netherlands Antilles",
+            Description: "deserunt",
+            Explicit: false,
+            Image: "suscipit",
+            Key: "iure",
+            Keywords: []string{
+                "debitis",
+                "ipsa",
             },
+            Language: "delectus",
+            Link: "tempora",
+            OwnerEmail: "suscipit",
+            OwnerName: "molestiae",
+            ShowType: "minus",
+            Subtitle: "placeat",
+            Summary: "voluptatum",
+            Title: "Ms.",
         },
     }
 

@@ -12,10 +12,11 @@ var ListIPCommandServerList = []string{
 }
 
 type ListIPCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListIPCommandQueryParams struct {
+type ListIPCommandRequest struct {
 	// The direction of the IP Command. Can be `to_sim` or `from_sim`. The value of `to_sim` is synonymous with the term `mobile terminated`, and `from_sim` is synonymous with the term `mobile originated`.
 	Direction *shared.IPCommandEnumDirectionEnum `queryParam:"style=form,explode=true,name=Direction"`
 	// The page index. This value is simply for client state.
@@ -30,12 +31,6 @@ type ListIPCommandQueryParams struct {
 	SimIccid *string `queryParam:"style=form,explode=true,name=SimIccid"`
 	// The status of the IP Command. Can be: `queued`, `sent`, `received` or `failed`. See the [IP Command Status Values](https://www.twilio.com/docs/wireless/api/ipcommand-resource#status-values) for a description of each.
 	Status *shared.IPCommandEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListIPCommandRequest struct {
-	QueryParams ListIPCommandQueryParams
-	Security    ListIPCommandSecurity
-	ServerURL   *string
 }
 
 type ListIPCommandListIPCommandResponseMeta struct {

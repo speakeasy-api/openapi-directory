@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.FindFormByFormNameRequest{
-        Security: operations.FindFormByFormNameSecurity{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.FindFormByFormNamePathParams{
-            FormName: "corrupti",
-        },
+        FormName: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Forms.FindFormByFormName(ctx, req)
+    res, err := s.Forms.FindFormByFormName(ctx, req, operations.FindFormByFormNameSecurity{
+        Apikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesTagsFormatPathParams struct {
+type GetResourcesTagsFormatRequest struct {
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GetResourcesTagsFormatQueryParams struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// Return tags associated with the supplied media id.
@@ -29,11 +26,6 @@ type GetResourcesTagsFormatQueryParams struct {
 	TypeID *int64 `queryParam:"style=form,explode=false,name=typeId"`
 	// Return tags belonging to the supplied tag type name.
 	TypeName *string `queryParam:"style=form,explode=false,name=typeName"`
-}
-
-type GetResourcesTagsFormatRequest struct {
-	PathParams  GetResourcesTagsFormatPathParams
-	QueryParams GetResourcesTagsFormatQueryParams
 }
 
 type GetResourcesTagsFormatResponse struct {

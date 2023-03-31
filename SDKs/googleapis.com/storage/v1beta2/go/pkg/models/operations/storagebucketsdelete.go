@@ -8,13 +8,13 @@ import (
 )
 
 type StorageBucketsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsDeleteSecurity struct {
@@ -22,14 +22,11 @@ type StorageBucketsDeleteSecurity struct {
 	Option2 *StorageBucketsDeleteSecurityOption2 `security:"option"`
 }
 
-type StorageBucketsDeletePathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-}
-
-type StorageBucketsDeleteQueryParams struct {
+type StorageBucketsDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the return of the bucket metadata conditional on whether the bucket's current metageneration matches the given value.
@@ -46,12 +43,6 @@ type StorageBucketsDeleteQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageBucketsDeleteRequest struct {
-	PathParams  StorageBucketsDeletePathParams
-	QueryParams StorageBucketsDeleteQueryParams
-	Security    StorageBucketsDeleteSecurity
 }
 
 type StorageBucketsDeleteResponse struct {

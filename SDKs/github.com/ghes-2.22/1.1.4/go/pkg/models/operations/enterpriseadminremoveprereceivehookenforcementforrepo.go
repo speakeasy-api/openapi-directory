@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoPathParams struct {
+type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// pre_receive_hook_id parameter
 	PreReceiveHookID int64  `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
 	Repo             string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest struct {
-	PathParams EnterpriseAdminRemovePreReceiveHookEnforcementForRepoPathParams
 }
 
 type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse struct {

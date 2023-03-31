@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminCreateImpersonationOAuthTokenPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminCreateImpersonationOAuthTokenRequestBody struct {
 	// A list of [scopes](https://docs.github.com/enterprise-server@3.8/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 	Scopes []string `json:"scopes"`
 }
 
 type EnterpriseAdminCreateImpersonationOAuthTokenRequest struct {
-	PathParams EnterpriseAdminCreateImpersonationOAuthTokenPathParams
-	Request    EnterpriseAdminCreateImpersonationOAuthTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminCreateImpersonationOAuthTokenRequestBody `request:"mediaType=application/json"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type EnterpriseAdminCreateImpersonationOAuthTokenResponse struct {

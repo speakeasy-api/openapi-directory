@@ -12,10 +12,6 @@ type EnterpriseAdminRemoveAuthorizedSSHKeyRequestBody struct {
 	AuthorizedKey string `form:"name=authorized_key"`
 }
 
-type EnterpriseAdminRemoveAuthorizedSSHKeyRequest struct {
-	Request EnterpriseAdminRemoveAuthorizedSSHKeyRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type EnterpriseAdminRemoveAuthorizedSSHKeyResponse struct {
 	ContentType string
 	StatusCode  int

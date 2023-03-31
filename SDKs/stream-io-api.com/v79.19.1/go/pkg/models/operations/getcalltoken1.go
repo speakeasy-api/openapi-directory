@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCallToken1Request struct {
-	Request shared.GetCallTokenRequest `request:"mediaType=application/json"`
-}
-
 type GetCallToken1Response struct {
 	// Bad request
 	APIError    *shared.APIError

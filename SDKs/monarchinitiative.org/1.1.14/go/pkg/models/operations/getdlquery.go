@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDlQueryPathParams struct {
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type GetDlQueryRequest struct {
-	PathParams GetDlQueryPathParams
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 }
 
 type GetDlQueryResponse struct {

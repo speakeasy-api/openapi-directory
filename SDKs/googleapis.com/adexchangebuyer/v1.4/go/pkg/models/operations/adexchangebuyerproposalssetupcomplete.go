@@ -8,16 +8,11 @@ import (
 )
 
 type AdexchangebuyerProposalsSetupcompleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdexchangebuyerProposalsSetupcompletePathParams struct {
-	// The proposal id for which the setup is complete
-	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
-}
-
-type AdexchangebuyerProposalsSetupcompleteQueryParams struct {
+type AdexchangebuyerProposalsSetupcompleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -28,16 +23,12 @@ type AdexchangebuyerProposalsSetupcompleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The proposal id for which the setup is complete
+	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerProposalsSetupcompleteRequest struct {
-	PathParams  AdexchangebuyerProposalsSetupcompletePathParams
-	QueryParams AdexchangebuyerProposalsSetupcompleteQueryParams
-	Security    AdexchangebuyerProposalsSetupcompleteSecurity
 }
 
 type AdexchangebuyerProposalsSetupcompleteResponse struct {

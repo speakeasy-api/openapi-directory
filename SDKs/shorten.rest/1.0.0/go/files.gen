@@ -26,7 +26,6 @@ pkg/models/shared/createaliasmodel.go
 pkg/models/shared/snippetmodel.go
 pkg/models/shared/metatagmodel.go
 pkg/models/shared/destinationmodel.go
-pkg/models/shared/security.go
 pkg/models/shared/aliasmodel.go
 pkg/models/shared/getaliasesmodel.go
 pkg/models/shared/getclicksmodel.go

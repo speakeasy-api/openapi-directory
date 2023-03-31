@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateTeamMemberSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateTeamMemberPathParams struct {
-	// The ID of the team member to update.
-	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateTeamMemberRequest struct {
-	PathParams UpdateTeamMemberPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateTeamMemberRequest `request:"mediaType=application/json"`
-	Security UpdateTeamMemberSecurity
+	UpdateTeamMemberRequest shared.UpdateTeamMemberRequest `request:"mediaType=application/json"`
+	// The ID of the team member to update.
+	TeamMemberID string `pathParam:"style=simple,explode=false,name=team_member_id"`
 }
 
 type UpdateTeamMemberResponse struct {

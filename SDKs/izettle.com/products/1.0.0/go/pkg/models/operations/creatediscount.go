@@ -8,17 +8,12 @@ import (
 )
 
 type CreateDiscountSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type CreateDiscountPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateDiscountRequest struct {
-	PathParams CreateDiscountPathParams
-	Request    *shared.DiscountRequest `request:"mediaType=application/json"`
-	Security   CreateDiscountSecurity
+	DiscountRequest  *shared.DiscountRequest `request:"mediaType=application/json"`
+	OrganizationUUID string                  `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type CreateDiscountResponse struct {

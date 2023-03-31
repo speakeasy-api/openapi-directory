@@ -39,9 +39,9 @@ func newSIPConnectedAudio(defaultClient, securityClient HTTPClient, serverURL, l
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) AddCalloutCountries(ctx context.Context, request operations.AddCalloutCountriesRequest) (*operations.AddCalloutCountriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/callout_countries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/callout_countries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,9 +104,9 @@ func (s *sipConnectedAudio) AddCalloutCountries(ctx context.Context, request ope
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) AddInternalNumbers(ctx context.Context, request operations.AddInternalNumbersRequest) (*operations.AddInternalNumbersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/internal_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/internal_numbers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -170,11 +170,11 @@ func (s *sipConnectedAudio) AddInternalNumbers(ctx context.Context, request oper
 // **Scopes:** `sip_trunk:master`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipConnectedAudio) AssignSIPConfig(ctx context.Context, request operations.AssignSIPConfigRequest) (*operations.AssignSIPConfigResponse, error) {
+func (s *sipConnectedAudio) AssignSIPConfig(ctx context.Context, request operations.AssignSIPConfigRequest, security operations.AssignSIPConfigSecurity) (*operations.AssignSIPConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -186,7 +186,7 @@ func (s *sipConnectedAudio) AssignSIPConfig(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,9 +236,9 @@ func (s *sipConnectedAudio) AssignSIPConfig(ctx context.Context, request operati
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) AssignSIPTrunks(ctx context.Context, request operations.AssignSIPTrunksRequest) (*operations.AssignSIPTrunksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/trunks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/trunks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *sipConnectedAudio) AssignSIPTrunks(ctx context.Context, request operati
 // **Scopes:** `sip_trunk:master`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipConnectedAudio) AssignSipTrunkNumbers(ctx context.Context, request operations.AssignSipTrunkNumbersRequest) (*operations.AssignSipTrunkNumbersResponse, error) {
+func (s *sipConnectedAudio) AssignSipTrunkNumbers(ctx context.Context, request operations.AssignSipTrunkNumbersRequest, security operations.AssignSipTrunkNumbersSecurity) (*operations.AssignSipTrunkNumbersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/numbers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -319,7 +319,7 @@ func (s *sipConnectedAudio) AssignSipTrunkNumbers(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,16 +372,16 @@ func (s *sipConnectedAudio) AssignSipTrunkNumbers(ctx context.Context, request o
 // **Scopes:** `sip_trunk:master`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipConnectedAudio) DeleteAllSipNumbers(ctx context.Context, request operations.DeleteAllSipNumbersRequest) (*operations.DeleteAllSipNumbersResponse, error) {
+func (s *sipConnectedAudio) DeleteAllSipNumbers(ctx context.Context, request operations.DeleteAllSipNumbersRequest, security operations.DeleteAllSipNumbersSecurity) (*operations.DeleteAllSipNumbersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/numbers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -432,7 +432,7 @@ func (s *sipConnectedAudio) DeleteAllSipNumbers(ctx context.Context, request ope
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) DeleteInternalCallOutCountry(ctx context.Context, request operations.DeleteInternalCallOutCountryRequest) (*operations.DeleteInternalCallOutCountryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/callout_countries/{countryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/callout_countries/{countryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -490,7 +490,7 @@ func (s *sipConnectedAudio) DeleteInternalCallOutCountry(ctx context.Context, re
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) DeleteInternalNumber(ctx context.Context, request operations.DeleteInternalNumberRequest) (*operations.DeleteInternalNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/internal_numbers/{numberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/internal_numbers/{numberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -548,7 +548,7 @@ func (s *sipConnectedAudio) DeleteInternalNumber(ctx context.Context, request op
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) DeleteSIPTrunk(ctx context.Context, request operations.DeleteSIPTrunkRequest) (*operations.DeleteSIPTrunkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/trunks/{trunkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/trunks/{trunkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -606,7 +606,7 @@ func (s *sipConnectedAudio) DeleteSIPTrunk(ctx context.Context, request operatio
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) ListInternalCalloutCountries(ctx context.Context, request operations.ListInternalCalloutCountriesRequest) (*operations.ListInternalCalloutCountriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/callout_countries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/callout_countries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -664,14 +664,14 @@ func (s *sipConnectedAudio) ListInternalCalloutCountries(ctx context.Context, re
 // **Scope:** `sip_trunk:master`
 func (s *sipConnectedAudio) ListInternalNumbers(ctx context.Context, request operations.ListInternalNumbersRequest) (*operations.ListInternalNumbersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/internal_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/internal_numbers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -726,7 +726,7 @@ func (s *sipConnectedAudio) ListInternalNumbers(ctx context.Context, request ope
 // * The account must either be a master account or a sub account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.
 func (s *sipConnectedAudio) ListSIPTrunks(ctx context.Context, request operations.ListSIPTrunksRequest) (*operations.ListSIPTrunksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/trunks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/sip_trunk/trunks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -786,7 +786,7 @@ func (s *sipConnectedAudio) ListSIPTrunks(ctx context.Context, request operation
 // **Scopes:** `sip_trunk:master`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *sipConnectedAudio) ListSipTrunkNumbers(ctx context.Context, request operations.ListSipTrunkNumbersRequest) (*operations.ListSipTrunkNumbersResponse, error) {
+func (s *sipConnectedAudio) ListSipTrunkNumbers(ctx context.Context) (*operations.ListSipTrunkNumbersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sip_trunk/numbers"
 
@@ -795,7 +795,7 @@ func (s *sipConnectedAudio) ListSipTrunkNumbers(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

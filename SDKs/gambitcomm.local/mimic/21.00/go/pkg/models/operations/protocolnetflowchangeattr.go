@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowChangeAttrPathParams struct {
+type ProtocolNetflowChangeAttrRequest struct {
 	// Agent to set the NETFLOW
 	AgentNum   int    `pathParam:"style=simple,explode=false,name=agentNum"`
 	Attr       string `pathParam:"style=simple,explode=false,name=attr"`
 	FieldNum   int    `pathParam:"style=simple,explode=false,name=field-num"`
 	FlowsetUID int    `pathParam:"style=simple,explode=false,name=flowset-uid"`
 	Value      string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolNetflowChangeAttrRequest struct {
-	PathParams ProtocolNetflowChangeAttrPathParams
 }
 
 type ProtocolNetflowChangeAttrResponse struct {

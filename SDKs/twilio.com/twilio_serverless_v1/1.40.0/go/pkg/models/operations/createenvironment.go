@@ -12,12 +12,8 @@ var CreateEnvironmentServerList = []string{
 }
 
 type CreateEnvironmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateEnvironmentPathParams struct {
-	// The SID of the Service to create the Environment resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateEnvironmentCreateEnvironmentRequest struct {
@@ -28,10 +24,9 @@ type CreateEnvironmentCreateEnvironmentRequest struct {
 }
 
 type CreateEnvironmentRequest struct {
-	PathParams CreateEnvironmentPathParams
-	Request    *CreateEnvironmentCreateEnvironmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateEnvironmentSecurity
-	ServerURL  *string
+	RequestBody *CreateEnvironmentCreateEnvironmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to create the Environment resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateEnvironmentResponse struct {

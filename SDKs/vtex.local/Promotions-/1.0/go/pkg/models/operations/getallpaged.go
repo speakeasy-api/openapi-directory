@@ -10,27 +10,14 @@ var GetallpagedServerList = []string{
 	"https://rnb.{environment}.com.br/api/pricing/pvt",
 }
 
-type GetallpagedPathParams struct {
-	Page     string `pathParam:"style=simple,explode=false,name=page"`
-	PageSize string `pathParam:"style=simple,explode=false,name=pageSize"`
-}
-
-type GetallpagedQueryParams struct {
-	An string `queryParam:"style=form,explode=true,name=an"`
-}
-
-type GetallpagedHeaders struct {
+type GetallpagedRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetallpagedRequest struct {
-	PathParams  GetallpagedPathParams
-	QueryParams GetallpagedQueryParams
-	Headers     GetallpagedHeaders
-	ServerURL   *string
+	An          string `queryParam:"style=form,explode=true,name=an"`
+	Page        string `pathParam:"style=simple,explode=false,name=page"`
+	PageSize    string `pathParam:"style=simple,explode=false,name=pageSize"`
 }
 
 type GetallpagedResponse struct {

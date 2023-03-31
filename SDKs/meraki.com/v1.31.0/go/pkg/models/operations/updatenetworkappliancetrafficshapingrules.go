@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceTrafficShapingRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum - The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
 type UpdateNetworkApplianceTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum string
 
@@ -107,8 +103,8 @@ type UpdateNetworkApplianceTrafficShapingRulesRequestBody struct {
 }
 
 type UpdateNetworkApplianceTrafficShapingRulesRequest struct {
-	PathParams UpdateNetworkApplianceTrafficShapingRulesPathParams
-	Request    *UpdateNetworkApplianceTrafficShapingRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceTrafficShapingRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceTrafficShapingRulesResponse struct {

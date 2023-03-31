@@ -12,22 +12,13 @@ var FetchSummaryServerList = []string{
 }
 
 type FetchSummarySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSummaryPathParams struct {
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-}
-
-type FetchSummaryQueryParams struct {
-	ProcessingState *shared.SummaryEnumProcessingStateEnum `queryParam:"style=form,explode=true,name=ProcessingState"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSummaryRequest struct {
-	PathParams  FetchSummaryPathParams
-	QueryParams FetchSummaryQueryParams
-	Security    FetchSummarySecurity
-	ServerURL   *string
+	CallSid         string                                 `pathParam:"style=simple,explode=false,name=CallSid"`
+	ProcessingState *shared.SummaryEnumProcessingStateEnum `queryParam:"style=form,explode=true,name=ProcessingState"`
 }
 
 type FetchSummaryResponse struct {

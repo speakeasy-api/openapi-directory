@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GlobalpageloadQueryParams struct {
+type GlobalpageloadRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Geographic location to perform the measurement from (Paris, Hong Kong, Seoul, Mumbai, Sao Paolo, London, etc. see API home page for full list)
 	Origin string `queryParam:"style=form,explode=true,name=origin"`
 	// specific URL to perform load test time
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GlobalpageloadRequest struct {
-	QueryParams GlobalpageloadQueryParams
 }
 
 // Globalpageload200ApplicationJSON - Page load performance measurement response

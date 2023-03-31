@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContinuousProjectProgressPathParams struct {
+type GetContinuousProjectProgressRequest struct {
+	FilterByLanguage *string `queryParam:"style=form,explode=true,name=filterByLanguage"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetContinuousProjectProgressQueryParams struct {
-	FilterByLanguage *string `queryParam:"style=form,explode=true,name=filterByLanguage"`
-}
-
-type GetContinuousProjectProgressRequest struct {
-	PathParams  GetContinuousProjectProgressPathParams
-	QueryParams GetContinuousProjectProgressQueryParams
 }
 
 type GetContinuousProjectProgressResponse struct {

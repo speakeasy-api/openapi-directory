@@ -10,15 +10,8 @@ import (
 )
 
 type DirectoryChromeosdevicesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DirectoryChromeosdevicesPatchPathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-	// The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DirectoryChromeosdevicesPatchProjectionEnum - Restrict information returned to a set of selected fields.
@@ -45,15 +38,20 @@ func (e *DirectoryChromeosdevicesPatchProjectionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DirectoryChromeosdevicesPatchQueryParams struct {
+type DirectoryChromeosdevicesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv    *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ChromeOsDevice *shared.ChromeOsDevice `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
+	// The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -70,13 +68,6 @@ type DirectoryChromeosdevicesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryChromeosdevicesPatchRequest struct {
-	PathParams  DirectoryChromeosdevicesPatchPathParams
-	QueryParams DirectoryChromeosdevicesPatchQueryParams
-	Request     *shared.ChromeOsDevice `request:"mediaType=application/json"`
-	Security    DirectoryChromeosdevicesPatchSecurity
 }
 
 type DirectoryChromeosdevicesPatchResponse struct {

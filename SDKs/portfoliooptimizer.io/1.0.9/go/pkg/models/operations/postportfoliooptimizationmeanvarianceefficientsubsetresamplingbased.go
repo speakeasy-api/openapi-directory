@@ -96,10 +96,6 @@ type PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestB
 	SubsetSize *int64 `json:"subsetSize,omitempty"`
 }
 
-type PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequest struct {
-	Request PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSON - OK
 type PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

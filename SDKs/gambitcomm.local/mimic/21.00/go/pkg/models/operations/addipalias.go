@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type AddIpaliasPathParams struct {
+type AddIpaliasRequest struct {
 	// IP address , IPv4 or IPv6
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to add the IP alias
@@ -17,10 +17,6 @@ type AddIpaliasPathParams struct {
 	Mask string `pathParam:"style=simple,explode=false,name=mask"`
 	// SNMP port , 0 or empty for default
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type AddIpaliasRequest struct {
-	PathParams AddIpaliasPathParams
 }
 
 type AddIpaliasResponse struct {

@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceTrafficShapingUplinkSelectionPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkApplianceTrafficShapingUplinkSelectionRequest struct {
-	PathParams GetNetworkApplianceTrafficShapingUplinkSelectionPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkApplianceTrafficShapingUplinkSelection200ApplicationJSONDefaultUplinkEnum - The default uplink. Must be one of: 'wan1' or 'wan2'

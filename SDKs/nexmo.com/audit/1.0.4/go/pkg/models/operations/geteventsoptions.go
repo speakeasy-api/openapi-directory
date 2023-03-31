@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEventsOptionsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetEventsOptionsRequest struct {
-	Security GetEventsOptionsSecurity
-}
-
 type GetEventsOptionsResponse struct {
 	// OK
 	AuditEventTypesResp *shared.AuditEventTypesResp

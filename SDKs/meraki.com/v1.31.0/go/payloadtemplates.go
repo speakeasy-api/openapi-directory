@@ -34,9 +34,9 @@ func newPayloadTemplates(defaultClient, securityClient HTTPClient, serverURL, la
 // Create a webhook payload template for a network
 func (s *payloadTemplates) CreateNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.CreateNetworkWebhooksPayloadTemplateRequest) (*operations.CreateNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *payloadTemplates) CreateNetworkWebhooksPayloadTemplate(ctx context.Cont
 // Destroy a webhook payload template for a network. Does not work for included templates ('wpt_00001', 'wpt_00002', 'wpt_00003', 'wpt_00004', 'wpt_00005' or 'wpt_00006')
 func (s *payloadTemplates) DeleteNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.DeleteNetworkWebhooksPayloadTemplateRequest) (*operations.DeleteNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *payloadTemplates) DeleteNetworkWebhooksPayloadTemplate(ctx context.Cont
 // Get the webhook payload template for a network
 func (s *payloadTemplates) GetNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.GetNetworkWebhooksPayloadTemplateRequest) (*operations.GetNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *payloadTemplates) GetNetworkWebhooksPayloadTemplate(ctx context.Context
 // List the webhook payload templates for a network
 func (s *payloadTemplates) GetNetworkWebhooksPayloadTemplates(ctx context.Context, request operations.GetNetworkWebhooksPayloadTemplatesRequest) (*operations.GetNetworkWebhooksPayloadTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *payloadTemplates) GetNetworkWebhooksPayloadTemplates(ctx context.Contex
 // Update a webhook payload template for a network
 func (s *payloadTemplates) UpdateNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.UpdateNetworkWebhooksPayloadTemplateRequest) (*operations.UpdateNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

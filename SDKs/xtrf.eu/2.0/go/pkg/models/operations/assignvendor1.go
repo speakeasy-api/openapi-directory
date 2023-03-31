@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssignVendor1PathParams struct {
+type AssignVendor1Request struct {
+	// Assigned vendor to a job in a project.
+	VendorPriceProfileDTO shared.VendorPriceProfileDTO `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type AssignVendor1Request struct {
-	PathParams AssignVendor1PathParams
-	// Assigned vendor to a job in a project.
-	Request shared.VendorPriceProfileDTO `request:"mediaType=application/json"`
 }
 
 type AssignVendor1Response struct {

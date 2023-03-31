@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutLoadBalancersIDPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutLoadBalancersIDRequestBody struct {
 	// User-defined labels (key-value pairs)
 	Labels map[string]interface{} `json:"labels,omitempty"`
@@ -21,8 +16,9 @@ type PutLoadBalancersIDRequestBody struct {
 }
 
 type PutLoadBalancersIDRequest struct {
-	PathParams PutLoadBalancersIDPathParams
-	Request    *PutLoadBalancersIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutLoadBalancersIDRequestBody `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum - Type of the algorithm

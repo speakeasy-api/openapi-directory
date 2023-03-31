@@ -13,25 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.AddImageWatermarkV1Request{
-        Request: operations.AddImageWatermarkV1RequestBody{
-            File: operations.AddImageWatermarkV1RequestBodyFile{
-                Content: []byte("corrupti"),
-                File: "provident",
-            },
-            Image: operations.AddImageWatermarkV1RequestBodyImage{
-                Content: []byte("distinctio"),
-                Image: "quibusdam",
-            },
-            Margin: 1,
-            Transparency: 50,
+    req := operations.AddImageWatermarkV1RequestBody{
+        File: operations.AddImageWatermarkV1RequestBodyFile{
+            Content: []byte("corrupti"),
+            File: "provident",
         },
+        Image: operations.AddImageWatermarkV1RequestBodyImage{
+            Content: []byte("distinctio"),
+            Image: "quibusdam",
+        },
+        Margin: 1,
+        Transparency: 50,
     }
 
     ctx := context.Background()

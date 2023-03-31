@@ -4,16 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateSwaggerSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSwaggerPathParams struct {
-	// ID of the Swagger file
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSwaggerRequestBodySwagger struct {
@@ -27,9 +22,9 @@ type UpdateSwaggerRequestBody struct {
 }
 
 type UpdateSwaggerRequest struct {
-	PathParams UpdateSwaggerPathParams
-	Request    UpdateSwaggerRequestBody `request:"mediaType=multipart/form-data"`
-	Security   UpdateSwaggerSecurity
+	RequestBody UpdateSwaggerRequestBody `request:"mediaType=multipart/form-data"`
+	// ID of the Swagger file
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateSwaggerResponse struct {

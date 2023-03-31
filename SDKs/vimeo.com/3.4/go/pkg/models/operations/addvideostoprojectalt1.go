@@ -8,23 +8,14 @@ import (
 )
 
 type AddVideosToProjectAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AddVideosToProjectAlt1PathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type AddVideosToProjectAlt1QueryParams struct {
-	// A comma-separated list of video URIs to add.
-	Uris string `queryParam:"style=form,explode=true,name=uris"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddVideosToProjectAlt1Request struct {
-	PathParams  AddVideosToProjectAlt1PathParams
-	QueryParams AddVideosToProjectAlt1QueryParams
-	Security    AddVideosToProjectAlt1Security
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
+	// A comma-separated list of video URIs to add.
+	Uris string `queryParam:"style=form,explode=true,name=uris"`
 }
 
 type AddVideosToProjectAlt1Response struct {

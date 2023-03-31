@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostFilesQueryParams struct {
-	// A comma separated list of hashes to return in order to verify file integrity.
-	Hash *string `queryParam:"style=form,explode=true,name=hash"`
-	// If true, this file will be protected as a private file and require the generation of a signed URL in order to download using the Download File API. The default is false.
-	IsPrivate *bool `queryParam:"style=form,explode=true,name=isPrivate"`
-}
-
 type PostFilesRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -24,8 +17,11 @@ type PostFilesRequestBody struct {
 }
 
 type PostFilesRequest struct {
-	QueryParams PostFilesQueryParams
-	Request     PostFilesRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostFilesRequestBody `request:"mediaType=multipart/form-data"`
+	// A comma separated list of hashes to return in order to verify file integrity.
+	Hash *string `queryParam:"style=form,explode=true,name=hash"`
+	// If true, this file will be protected as a private file and require the generation of a signed URL in order to download using the Download File API. The default is false.
+	IsPrivate *bool `queryParam:"style=form,explode=true,name=isPrivate"`
 }
 
 type PostFilesResponse struct {

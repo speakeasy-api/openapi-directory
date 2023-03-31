@@ -34,7 +34,7 @@ func newSnmp(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Return the SNMP settings for a network
 func (s *snmp) GetNetworkSnmp(ctx context.Context, request operations.GetNetworkSnmpRequest) (*operations.GetNetworkSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *snmp) GetNetworkSnmp(ctx context.Context, request operations.GetNetwork
 // Return the SNMP settings for an organization
 func (s *snmp) GetOrganizationSnmp(ctx context.Context, request operations.GetOrganizationSnmpRequest) (*operations.GetOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *snmp) GetOrganizationSnmp(ctx context.Context, request operations.GetOr
 // Update the SNMP settings for a network
 func (s *snmp) UpdateNetworkSnmp(ctx context.Context, request operations.UpdateNetworkSnmpRequest) (*operations.UpdateNetworkSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,9 +176,9 @@ func (s *snmp) UpdateNetworkSnmp(ctx context.Context, request operations.UpdateN
 // Update the SNMP settings for an organization
 func (s *snmp) UpdateOrganizationSnmp(ctx context.Context, request operations.UpdateOrganizationSnmpRequest) (*operations.UpdateOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

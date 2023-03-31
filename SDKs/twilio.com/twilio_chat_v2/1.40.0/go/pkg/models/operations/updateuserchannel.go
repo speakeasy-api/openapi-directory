@@ -13,16 +13,8 @@ var UpdateUserChannelServerList = []string{
 }
 
 type UpdateUserChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUserChannelPathParams struct {
-	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) with the User Channel resource to update. This value can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the User Channel resource in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) to update the User Channel resource from. This value can be either the `sid` or the `identity` of the User resource.
-	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUserChannelUpdateUserChannelRequest struct {
@@ -34,10 +26,13 @@ type UpdateUserChannelUpdateUserChannelRequest struct {
 }
 
 type UpdateUserChannelRequest struct {
-	PathParams UpdateUserChannelPathParams
-	Request    *UpdateUserChannelUpdateUserChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUserChannelSecurity
-	ServerURL  *string
+	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) with the User Channel resource to update. This value can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                                     `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateUserChannelUpdateUserChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the User Channel resource in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) to update the User Channel resource from. This value can be either the `sid` or the `identity` of the User resource.
+	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
 }
 
 type UpdateUserChannelResponse struct {

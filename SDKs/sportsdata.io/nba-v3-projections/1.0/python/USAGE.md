@@ -3,25 +3,20 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_header=shared.SchemeAPIKeyHeader(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.DfsSlatesByDateRequest(
-    path_params=operations.DfsSlatesByDatePathParams(
-        date_="aut",
-        format="XML",
+        api_key_header="YOUR_API_KEY_HERE",
     ),
 )
-    
-res = s.dfs_slates_by_date(req)
 
-if res.dfs_slates is not None:
+
+req = operations.DepthChartsRequest(
+    format="JSON",
+)
+    
+res = s.depth_charts(req)
+
+if res.team_depth_charts is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

@@ -8,22 +8,17 @@ import (
 )
 
 type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsPathParams struct {
-	// Required. The ID of the advertiser the insertion order belongs to.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the insertion order to list assigned targeting options for.
-	InsertionOrderID string `pathParam:"style=simple,explode=false,name=insertionOrderId"`
-}
-
-type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsQueryParams struct {
+type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser the insertion order belongs to.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -32,6 +27,8 @@ type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargeti
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500 characters.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Required. The ID of the insertion order to list assigned targeting options for.
+	InsertionOrderID string `pathParam:"style=simple,explode=false,name=insertionOrderId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -50,12 +47,6 @@ type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargeti
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsRequest struct {
-	PathParams  DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsPathParams
-	QueryParams DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsQueryParams
-	Security    DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsSecurity
 }
 
 type DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetQuickSearchQueryParams struct {
+type GetQuickSearchRequest struct {
 	// A full text query.
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Maximum amount of results to return. Defaults to 5.
 	Size *string `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetQuickSearchRequest struct {
-	QueryParams GetQuickSearchQueryParams
 }
 
 type GetQuickSearchResponse struct {

@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutOfferingsOfferingIDMetadataTopicPathParams struct {
-	// offering's id
-	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
 type PutOfferingsOfferingIDMetadataTopicRequestBody struct {
 	Topic *string `json:"topic,omitempty"`
 }
 
 type PutOfferingsOfferingIDMetadataTopicRequest struct {
-	PathParams PutOfferingsOfferingIDMetadataTopicPathParams
-	Request    PutOfferingsOfferingIDMetadataTopicRequestBody `request:"mediaType=application/json"`
+	RequestBody PutOfferingsOfferingIDMetadataTopicRequestBody `request:"mediaType=application/json"`
+	// offering's id
+	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
 }
 
 type PutOfferingsOfferingIDMetadataTopicResponse struct {

@@ -34,9 +34,9 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinessplaceactionsLocationsPlaceActionLinksCreate - Creates a place action link associated with the specified location, and returns it. The request is considered duplicate if the `parent`, `place_action_link.uri` and `place_action_link.place_action_type` are the same as a previous request.
 func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksCreate(ctx context.Context, request operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest) (*operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/placeActionLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/placeActionLinks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlaceActionLinkInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksCreate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksCreate(ctx co
 // MybusinessplaceactionsLocationsPlaceActionLinksDelete - Deletes a place action link from the specified location.
 func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksDelete(ctx context.Context, request operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteRequest) (*operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,14 +137,14 @@ func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksDelete(ctx co
 // MybusinessplaceactionsLocationsPlaceActionLinksGet - Gets the specified place action link.
 func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksGet(ctx context.Context, request operations.MybusinessplaceactionsLocationsPlaceActionLinksGetRequest) (*operations.MybusinessplaceactionsLocationsPlaceActionLinksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,14 +185,14 @@ func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksGet(ctx conte
 // MybusinessplaceactionsLocationsPlaceActionLinksList - Lists the place action links for the specified location.
 func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksList(ctx context.Context, request operations.MybusinessplaceactionsLocationsPlaceActionLinksListRequest) (*operations.MybusinessplaceactionsLocationsPlaceActionLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/placeActionLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/placeActionLinks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -233,9 +233,9 @@ func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksList(ctx cont
 // MybusinessplaceactionsLocationsPlaceActionLinksPatch - Updates the specified place action link and returns it.
 func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksPatch(ctx context.Context, request operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchRequest) (*operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlaceActionLinkInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *locations) MybusinessplaceactionsLocationsPlaceActionLinksPatch(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

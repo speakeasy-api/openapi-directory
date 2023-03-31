@@ -12,15 +12,13 @@ var ListOutgoingCallerIDServerList = []string{
 }
 
 type ListOutgoingCallerIDSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListOutgoingCallerIDPathParams struct {
+type ListOutgoingCallerIDRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListOutgoingCallerIDQueryParams struct {
 	// The string that identifies the OutgoingCallerId resources to read.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -31,13 +29,6 @@ type ListOutgoingCallerIDQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The phone number of the OutgoingCallerId resources to read.
 	PhoneNumber *string `queryParam:"style=form,explode=true,name=PhoneNumber"`
-}
-
-type ListOutgoingCallerIDRequest struct {
-	PathParams  ListOutgoingCallerIDPathParams
-	QueryParams ListOutgoingCallerIDQueryParams
-	Security    ListOutgoingCallerIDSecurity
-	ServerURL   *string
 }
 
 // ListOutgoingCallerIDListOutgoingCallerIDResponse - OK

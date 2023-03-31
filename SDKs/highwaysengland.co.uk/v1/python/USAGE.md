@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AreasGetRequest(
-    path_params=operations.AreasGetPathParams(
-        version="voluptas",
-    ),
+    version="corrupti",
 )
     
 res = s.areas.areas_get(req)

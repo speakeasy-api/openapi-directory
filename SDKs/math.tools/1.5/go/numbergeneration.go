@@ -33,7 +33,7 @@ func newNumberGeneration(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // GetNumbersRandom - Generate random number(s)
-func (s *numberGeneration) GetNumbersRandom(ctx context.Context, request operations.GetNumbersRandomRequest) (*operations.GetNumbersRandomResponse, error) {
+func (s *numberGeneration) GetNumbersRandom(ctx context.Context, request operations.GetNumbersRandomRequest, security operations.GetNumbersRandomSecurity) (*operations.GetNumbersRandomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/random"
 
@@ -42,11 +42,11 @@ func (s *numberGeneration) GetNumbersRandom(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

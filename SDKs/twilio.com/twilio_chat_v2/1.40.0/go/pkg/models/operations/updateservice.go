@@ -14,12 +14,8 @@ var UpdateServiceServerList = []string{
 }
 
 type UpdateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServicePathParams struct {
-	// The SID of the Service resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateServiceUpdateServiceRequestWebhookMethodEnum - The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.
@@ -124,10 +120,9 @@ type UpdateServiceUpdateServiceRequest struct {
 }
 
 type UpdateServiceRequest struct {
-	PathParams UpdateServicePathParams
-	Request    *UpdateServiceUpdateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceSecurity
-	ServerURL  *string
+	RequestBody *UpdateServiceUpdateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateServiceResponse struct {

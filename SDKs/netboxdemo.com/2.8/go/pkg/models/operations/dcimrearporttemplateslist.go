@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRearPortTemplatesListQueryParams struct {
+type DcimRearPortTemplatesListRequest struct {
 	DevicetypeID  *string `queryParam:"style=form,explode=true,name=devicetype_id"`
 	DevicetypeIDN *string `queryParam:"style=form,explode=true,name=devicetype_id__n"`
 	ID            *string `queryParam:"style=form,explode=true,name=id"`
@@ -39,10 +39,6 @@ type DcimRearPortTemplatesListQueryParams struct {
 	Q            *string `queryParam:"style=form,explode=true,name=q"`
 	Type         *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN        *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimRearPortTemplatesListRequest struct {
-	QueryParams DcimRearPortTemplatesListQueryParams
 }
 
 type DcimRearPortTemplatesList200ApplicationJSON struct {

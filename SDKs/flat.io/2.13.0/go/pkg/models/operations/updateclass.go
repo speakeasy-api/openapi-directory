@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateClassSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateClassPathParams struct {
-	// Unique identifier of the class
-	Class string `pathParam:"style=simple,explode=false,name=class"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateClassRequest struct {
-	PathParams UpdateClassPathParams
 	// Details of the Class
-	Request  *shared.ClassUpdate `request:"mediaType=application/json"`
-	Security UpdateClassSecurity
+	ClassUpdate *shared.ClassUpdate `request:"mediaType=application/json"`
+	// Unique identifier of the class
+	Class string `pathParam:"style=simple,explode=false,name=class"`
 }
 
 type UpdateClassResponse struct {

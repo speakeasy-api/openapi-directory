@@ -10,22 +10,13 @@ var AutoCompleteServerList = []string{
 	"http://example.com/.{environment}.com.br",
 }
 
-type AutoCompleteQueryParams struct {
-	// Part of the string that will be searched.
-	ProductNameContains string `queryParam:"style=form,explode=true,name=productNameContains"`
-}
-
-type AutoCompleteHeaders struct {
+type AutoCompleteRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type AutoCompleteRequest struct {
-	QueryParams AutoCompleteQueryParams
-	Headers     AutoCompleteHeaders
-	ServerURL   *string
+	// Part of the string that will be searched.
+	ProductNameContains string `queryParam:"style=form,explode=true,name=productNameContains"`
 }
 
 type AutoCompleteTheRootSchemaItemsReturned struct {

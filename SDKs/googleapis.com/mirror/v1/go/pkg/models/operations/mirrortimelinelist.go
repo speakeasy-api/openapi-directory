@@ -10,13 +10,13 @@ import (
 )
 
 type MirrorTimelineListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MirrorTimelineListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MirrorTimelineListSecurity struct {
@@ -48,7 +48,7 @@ func (e *MirrorTimelineListOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MirrorTimelineListQueryParams struct {
+type MirrorTimelineListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// If provided, only items with the given bundleId will be returned.
@@ -77,11 +77,6 @@ type MirrorTimelineListQueryParams struct {
 	SourceItemID *string `queryParam:"style=form,explode=true,name=sourceItemId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type MirrorTimelineListRequest struct {
-	QueryParams MirrorTimelineListQueryParams
-	Security    MirrorTimelineListSecurity
 }
 
 type MirrorTimelineListResponse struct {

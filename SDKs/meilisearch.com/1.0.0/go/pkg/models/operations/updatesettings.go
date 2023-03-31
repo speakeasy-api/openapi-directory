@@ -14,10 +14,6 @@ type UpdateSettingsRequestBody struct {
 	StopWords            []string `json:"stopWords,omitempty"`
 }
 
-type UpdateSettingsRequest struct {
-	Request *UpdateSettingsRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateSettingsResponse struct {
 	ContentType string
 	StatusCode  int

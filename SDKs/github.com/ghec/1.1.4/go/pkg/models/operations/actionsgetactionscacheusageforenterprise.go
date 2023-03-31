@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetActionsCacheUsageForEnterprisePathParams struct {
+type ActionsGetActionsCacheUsageForEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type ActionsGetActionsCacheUsageForEnterpriseRequest struct {
-	PathParams ActionsGetActionsCacheUsageForEnterprisePathParams
 }
 
 type ActionsGetActionsCacheUsageForEnterpriseResponse struct {

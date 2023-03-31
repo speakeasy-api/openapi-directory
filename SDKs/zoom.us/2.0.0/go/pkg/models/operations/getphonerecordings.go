@@ -6,15 +6,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetPhoneRecordingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPhoneRecordingsQueryParams struct {
+type GetPhoneRecordingsRequest struct {
 	// Start date and time in **yyyy-mm-dd** format or **yyyy-MM-dd’T’HH:mm:ss’Z’** format. The date range defined by the from and to parameters should only be one month as the report includes only one month worth of data at once.
 	//
 	From *string `queryParam:"style=form,explode=true,name=from"`
@@ -34,11 +33,6 @@ type GetPhoneRecordingsQueryParams struct {
 	//
 	//
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetPhoneRecordingsRequest struct {
-	QueryParams GetPhoneRecordingsQueryParams
-	Security    GetPhoneRecordingsSecurity
 }
 
 // GetPhoneRecordings200ApplicationXMLRecordingsCalleeNumberTypeEnum - Specifies the callee' number type.<br>

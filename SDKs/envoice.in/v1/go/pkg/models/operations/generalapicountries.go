@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GeneralAPICountriesHeaders struct {
+type GeneralAPICountriesRequest struct {
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type GeneralAPICountriesRequest struct {
-	Headers GeneralAPICountriesHeaders
 }
 
 type GeneralAPICountriesResponse struct {

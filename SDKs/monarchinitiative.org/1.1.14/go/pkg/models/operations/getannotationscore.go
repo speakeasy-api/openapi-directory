@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAnnotationScoreQueryParams struct {
+type GetAnnotationScoreRequest struct {
 	// absent phenotype (eg HP:0002828)
 	AbsentID []string `queryParam:"style=form,explode=true,name=absent_id"`
 	// Phenotype identifier (eg HP:0004935)
 	ID []string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetAnnotationScoreRequest struct {
-	QueryParams GetAnnotationScoreQueryParams
 }
 
 type GetAnnotationScoreResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInterfaceConnectionsUpdatePathParams struct {
+type DcimInterfaceConnectionsUpdateRequest struct {
+	WritableInterfaceConnectionInput shared.WritableInterfaceConnectionInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this interface connection.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInterfaceConnectionsUpdateRequest struct {
-	PathParams DcimInterfaceConnectionsUpdatePathParams
-	Request    shared.WritableInterfaceConnectionInput `request:"mediaType=application/json"`
 }
 
 type DcimInterfaceConnectionsUpdateResponse struct {

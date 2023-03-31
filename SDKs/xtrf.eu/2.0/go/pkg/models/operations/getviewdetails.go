@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetViewDetailsPathParams struct {
+type GetViewDetailsRequest struct {
 	// views' class name
 	ClassName string `pathParam:"style=simple,explode=false,name=className"`
-	ViewID    int64  `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type GetViewDetailsQueryParams struct {
 	// place name (denotes specific place in system with the table)
 	PlaceName *string `queryParam:"style=form,explode=true,name=placeName"`
-}
-
-type GetViewDetailsRequest struct {
-	PathParams  GetViewDetailsPathParams
-	QueryParams GetViewDetailsQueryParams
+	ViewID    int64   `pathParam:"style=simple,explode=false,name=viewId"`
 }
 
 type GetViewDetailsResponse struct {

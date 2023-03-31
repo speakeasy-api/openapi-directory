@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatepartialrecurrencePathParams struct {
-	RecurrenceID string `pathParam:"style=simple,explode=false,name=recurrenceId"`
-}
-
-type UpdatepartialrecurrenceHeaders struct {
+type UpdatepartialrecurrenceRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdatepartialrecurrenceRequest struct {
-	PathParams UpdatepartialrecurrencePathParams
-	Headers    UpdatepartialrecurrenceHeaders
-	Request    shared.UpdatepartialrecurrenceRequest `request:"mediaType=application/json"`
+	ContentType                    string                                `header:"style=simple,explode=false,name=Content-Type"`
+	UpdatepartialrecurrenceRequest shared.UpdatepartialrecurrenceRequest `request:"mediaType=application/json"`
+	RecurrenceID                   string                                `pathParam:"style=simple,explode=false,name=recurrenceId"`
 }
 
 type UpdatepartialrecurrenceResponse struct {

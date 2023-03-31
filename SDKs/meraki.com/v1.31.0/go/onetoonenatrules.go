@@ -34,7 +34,7 @@ func newOneToOneNatRules(defaultClient, securityClient HTTPClient, serverURL, la
 // Return the 1:1 NAT mapping rules for an MX network
 func (s *oneToOneNatRules) GetNetworkApplianceFirewallOneToOneNatRules(ctx context.Context, request operations.GetNetworkApplianceFirewallOneToOneNatRulesRequest) (*operations.GetNetworkApplianceFirewallOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *oneToOneNatRules) GetNetworkApplianceFirewallOneToOneNatRules(ctx conte
 // Set the 1:1 NAT mapping rules for an MX network
 func (s *oneToOneNatRules) UpdateNetworkApplianceFirewallOneToOneNatRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallOneToOneNatRulesRequest) (*operations.UpdateNetworkApplianceFirewallOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

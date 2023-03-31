@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWellKnownMercureSubscriptionsTopicPathParams struct {
-	Topic string `pathParam:"style=simple,explode=false,name=topic"`
-}
-
 type GetWellKnownMercureSubscriptionsTopicRequest struct {
-	PathParams GetWellKnownMercureSubscriptionsTopicPathParams
+	Topic string `pathParam:"style=simple,explode=false,name=topic"`
 }
 
 type GetWellKnownMercureSubscriptionsTopicResponse struct {

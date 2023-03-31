@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesDeleteCodespacesBillingUsersPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type CodespacesDeleteCodespacesBillingUsersRequestBody struct {
 	// The usernames of the organization members whose codespaces should not be billed to the organization.
 	SelectedUsernames []string `json:"selected_usernames"`
 }
 
 type CodespacesDeleteCodespacesBillingUsersRequest struct {
-	PathParams CodespacesDeleteCodespacesBillingUsersPathParams
-	Request    CodespacesDeleteCodespacesBillingUsersRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesDeleteCodespacesBillingUsersRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type CodespacesDeleteCodespacesBillingUsersResponse struct {

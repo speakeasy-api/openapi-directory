@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetFindInteractionsRequest(
-    query_params=operations.GetFindInteractionsQueryParams(
-        format="dump",
-        query="id",
-    ),
+    format="dump",
+    query="provident",
 )
     
 res = s.all_functions.get_find_interactions(req)

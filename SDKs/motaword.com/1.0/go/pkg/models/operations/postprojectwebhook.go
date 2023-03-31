@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProjectWebhookPathParams struct {
+type PostProjectWebhookRequest struct {
+	Webhook *shared.Webhook `request:"mediaType=application/json"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostProjectWebhookRequest struct {
-	PathParams PostProjectWebhookPathParams
-	Request    *shared.Webhook `request:"mediaType=application/json"`
 }
 
 type PostProjectWebhookResponse struct {

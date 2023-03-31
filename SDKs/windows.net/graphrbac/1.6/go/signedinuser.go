@@ -34,14 +34,14 @@ func newSignedInUser(defaultClient, securityClient HTTPClient, serverURL, langua
 // SignedInUserGet - Gets the details for the currently logged-in user.
 func (s *signedInUser) SignedInUserGet(ctx context.Context, request operations.SignedInUserGetRequest) (*operations.SignedInUserGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/me", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/me", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,14 +106,14 @@ func (s *signedInUser) SignedInUserGet(ctx context.Context, request operations.S
 // SignedInUserListOwnedObjects - Get the list of directory objects that are owned by the user.
 func (s *signedInUser) SignedInUserListOwnedObjects(ctx context.Context, request operations.SignedInUserListOwnedObjectsRequest) (*operations.SignedInUserListOwnedObjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/me/ownedObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/me/ownedObjects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

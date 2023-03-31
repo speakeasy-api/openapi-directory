@@ -34,7 +34,7 @@ func newTrafficShapingUplinkSettings(defaultClient, securityClient HTTPClient, s
 // Returns the uplink settings for your MX network.
 func (s *trafficShapingUplinkSettings) GetNetworkUplinkSettings(ctx context.Context, request operations.GetNetworkUplinkSettingsRequest) (*operations.GetNetworkUplinkSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/uplinkSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/uplinkSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *trafficShapingUplinkSettings) GetNetworkUplinkSettings(ctx context.Cont
 // Updates the uplink settings for your MX network.
 func (s *trafficShapingUplinkSettings) UpdateNetworkUplinkSettings(ctx context.Context, request operations.UpdateNetworkUplinkSettingsRequest) (*operations.UpdateNetworkUplinkSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/uplinkSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/uplinkSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

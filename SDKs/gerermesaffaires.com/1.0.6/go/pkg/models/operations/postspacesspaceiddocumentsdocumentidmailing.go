@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDDocumentsDocumentIDMailingSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDDocumentsDocumentIDMailingPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDDocumentsDocumentIDMailingRequestBodyAddress struct {
@@ -33,10 +25,12 @@ type PostSpacesSpaceIDDocumentsDocumentIDMailingRequestBody struct {
 }
 
 type PostSpacesSpaceIDDocumentsDocumentIDMailingRequest struct {
-	PathParams PostSpacesSpaceIDDocumentsDocumentIDMailingPathParams
 	// document to send by mail
-	Request  PostSpacesSpaceIDDocumentsDocumentIDMailingRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDDocumentsDocumentIDMailingSecurity
+	RequestBody PostSpacesSpaceIDDocumentsDocumentIDMailingRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDDocumentsDocumentIDMailing200ApplicationJSON - A list of documents of the folder

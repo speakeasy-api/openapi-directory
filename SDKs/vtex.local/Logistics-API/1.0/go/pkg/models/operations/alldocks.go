@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type AllDocksHeaders struct {
+type AllDocksRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type AllDocksRequest struct {
-	Headers AllDocksHeaders
 }
 
 type AllDocks200ApplicationJSONPickupStoreInfo1 struct {

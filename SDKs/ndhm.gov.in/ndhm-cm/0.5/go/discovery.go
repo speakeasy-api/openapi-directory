@@ -41,7 +41,7 @@ func (s *discovery) PostV05CareContextsOnDiscoverJSON(ctx context.Context, reque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/care-contexts/on-discover"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientDiscoveryResult", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *discovery) PostV05CareContextsOnDiscoverJSON(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -120,7 +120,7 @@ func (s *discovery) PostV05CareContextsOnDiscoverRaw(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/care-contexts/on-discover"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,7 +135,7 @@ func (s *discovery) PostV05CareContextsOnDiscoverRaw(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

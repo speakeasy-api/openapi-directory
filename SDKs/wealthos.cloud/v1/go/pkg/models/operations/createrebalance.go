@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateRebalanceSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateRebalanceHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // CreateRebalanceSwitchInstructionRequestTypeEnum - Rebalance request triggering type. This describe the types of elements included in the values field
@@ -56,9 +50,9 @@ type CreateRebalanceSwitchInstructionRequest struct {
 }
 
 type CreateRebalanceRequest struct {
-	Headers  CreateRebalanceHeaders
-	Request  *CreateRebalanceSwitchInstructionRequest `request:"mediaType=application/json"`
-	Security CreateRebalanceSecurity
+	RequestBody *CreateRebalanceSwitchInstructionRequest `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreateRebalance500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

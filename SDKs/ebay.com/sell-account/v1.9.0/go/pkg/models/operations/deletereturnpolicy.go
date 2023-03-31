@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteReturnPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteReturnPolicyPathParams struct {
-	// This path parameter specifies the ID of the return policy you want to delete.
-	ReturnPolicyID string `pathParam:"style=simple,explode=false,name=return_policy_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteReturnPolicyRequest struct {
-	PathParams DeleteReturnPolicyPathParams
-	Security   DeleteReturnPolicySecurity
+	// This path parameter specifies the ID of the return policy you want to delete.
+	ReturnPolicyID string `pathParam:"style=simple,explode=false,name=return_policy_id"`
 }
 
 type DeleteReturnPolicyResponse struct {

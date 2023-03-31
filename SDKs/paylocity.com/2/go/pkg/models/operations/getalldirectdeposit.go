@@ -8,19 +8,14 @@ import (
 )
 
 type GetAllDirectDepositSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllDirectDepositPathParams struct {
+type GetAllDirectDepositRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-}
-
-type GetAllDirectDepositRequest struct {
-	PathParams GetAllDirectDepositPathParams
-	Security   GetAllDirectDepositSecurity
 }
 
 type GetAllDirectDepositResponse struct {

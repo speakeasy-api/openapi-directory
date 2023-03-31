@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetIsosIDPathParams struct {
+type GetIsosIDRequest struct {
 	// ID of the ISO
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetIsosIDRequest struct {
-	PathParams GetIsosIDPathParams
 }
 
 // GetIsosID200ApplicationJSONIsoTypeEnum - Type of the ISO

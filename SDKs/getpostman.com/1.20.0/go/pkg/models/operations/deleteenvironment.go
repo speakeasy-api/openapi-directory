@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteEnvironmentPathParams struct {
-	EnvironmentUID string `pathParam:"style=simple,explode=false,name=environment_uid"`
-}
-
 type DeleteEnvironmentRequest struct {
-	PathParams DeleteEnvironmentPathParams
+	EnvironmentUID string `pathParam:"style=simple,explode=false,name=environment_uid"`
 }
 
 type DeleteEnvironment404ApplicationJSONError struct {

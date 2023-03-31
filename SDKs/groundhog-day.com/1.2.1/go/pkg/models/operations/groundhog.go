@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroundhogPathParams struct {
+type GroundhogRequest struct {
 	// Groundhog name in kebab-case: (eg, lucy-the-lobster)
 	Slug string `pathParam:"style=simple,explode=false,name=slug"`
-}
-
-type GroundhogRequest struct {
-	PathParams GroundhogPathParams
 }
 
 type Groundhog400ApplicationJSONError struct {

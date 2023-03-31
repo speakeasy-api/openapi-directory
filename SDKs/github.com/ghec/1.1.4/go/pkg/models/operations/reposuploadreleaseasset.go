@@ -11,25 +11,16 @@ var ReposUploadReleaseAssetServerList = []string{
 	"https://uploads.github.com",
 }
 
-type ReposUploadReleaseAssetPathParams struct {
+type ReposUploadReleaseAssetRequest struct {
+	RequestBody []byte  `request:"mediaType=application/octet-stream"`
+	Label       *string `queryParam:"style=form,explode=true,name=label"`
+	Name        string  `queryParam:"style=form,explode=true,name=name"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The unique identifier of the release.
 	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposUploadReleaseAssetQueryParams struct {
-	Label *string `queryParam:"style=form,explode=true,name=label"`
-	Name  string  `queryParam:"style=form,explode=true,name=name"`
-}
-
-type ReposUploadReleaseAssetRequest struct {
-	PathParams  ReposUploadReleaseAssetPathParams
-	QueryParams ReposUploadReleaseAssetQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
-	ServerURL   *string
 }
 
 type ReposUploadReleaseAssetResponse struct {

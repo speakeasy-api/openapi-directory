@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksListForRefPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// ref parameter
-	Ref string `pathParam:"style=simple,explode=false,name=ref"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ChecksListForRefFilterEnum - Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
 type ChecksListForRefFilterEnum string
 
@@ -42,23 +33,24 @@ func (e *ChecksListForRefFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ChecksListForRefQueryParams struct {
+type ChecksListForRefRequest struct {
 	AppID *int64 `queryParam:"style=form,explode=true,name=app_id"`
 	// Returns check runs with the specified `name`.
 	CheckName *string `queryParam:"style=form,explode=true,name=check_name"`
 	// Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
 	Filter *ChecksListForRefFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// ref parameter
+	Ref string `pathParam:"style=simple,explode=false,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Returns check runs with the specified `status`.
 	Status *shared.StatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ChecksListForRefRequest struct {
-	PathParams  ChecksListForRefPathParams
-	QueryParams ChecksListForRefQueryParams
 }
 
 // ChecksListForRef200ApplicationJSON - Response

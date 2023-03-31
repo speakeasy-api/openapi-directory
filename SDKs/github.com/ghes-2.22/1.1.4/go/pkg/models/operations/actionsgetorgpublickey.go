@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetOrgPublicKeyPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsGetOrgPublicKeyRequest struct {
-	PathParams ActionsGetOrgPublicKeyPathParams
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsGetOrgPublicKeyResponse struct {

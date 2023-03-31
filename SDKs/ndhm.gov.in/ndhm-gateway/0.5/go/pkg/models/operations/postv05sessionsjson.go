@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05SessionsJSONRequest struct {
-	Request shared.SessionRequest `request:"mediaType=application/json"`
-}
-
 type PostV05SessionsJSONResponse struct {
 	Body        []byte
 	ContentType string

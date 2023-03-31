@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteOrgSecretPathParams struct {
+type ActionsDeleteOrgSecretRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// secret_name parameter
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsDeleteOrgSecretRequest struct {
-	PathParams ActionsDeleteOrgSecretPathParams
 }
 
 type ActionsDeleteOrgSecretResponse struct {

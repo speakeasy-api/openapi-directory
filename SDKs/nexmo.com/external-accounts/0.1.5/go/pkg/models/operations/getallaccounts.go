@@ -10,8 +10,8 @@ import (
 )
 
 type GetAllAccountsSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetAllAccountsProviderEnum - Filter by provider
@@ -41,18 +41,13 @@ func (e *GetAllAccountsProviderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAllAccountsQueryParams struct {
+type GetAllAccountsRequest struct {
 	// Page number of the results
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page_number"`
 	// Page size of the results
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Filter by provider
 	Provider *GetAllAccountsProviderEnum `queryParam:"style=form,explode=true,name=provider"`
-}
-
-type GetAllAccountsRequest struct {
-	QueryParams GetAllAccountsQueryParams
-	Security    GetAllAccountsSecurity
 }
 
 type GetAllAccounts200ApplicationJSONLinksFirst struct {

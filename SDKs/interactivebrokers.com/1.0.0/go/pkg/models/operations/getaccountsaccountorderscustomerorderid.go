@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountsAccountOrdersCustomerOrderIDPathParams struct {
+type GetAccountsAccountOrdersCustomerOrderIDRequest struct {
 	// Customer Order ID
 	CustomerOrderID string `pathParam:"style=simple,explode=false,name=CustomerOrderId"`
 	// Account Number
 	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type GetAccountsAccountOrdersCustomerOrderIDRequest struct {
-	PathParams GetAccountsAccountOrdersCustomerOrderIDPathParams
 }
 
 type GetAccountsAccountOrdersCustomerOrderIDResponse struct {

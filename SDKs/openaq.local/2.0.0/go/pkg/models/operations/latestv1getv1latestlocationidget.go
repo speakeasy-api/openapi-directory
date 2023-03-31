@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LatestV1GetV1LatestLocationIDGetPathParams struct {
-	LocationID int64 `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
 // LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum - An enumeration.
 type LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum string
 
@@ -79,7 +75,7 @@ func (e *LatestV1GetV1LatestLocationIDGetSortSortEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type LatestV1GetV1LatestLocationIDGetQueryParams struct {
+type LatestV1GetV1LatestLocationIDGetRequest struct {
 	//         Limit results by a certain city or cities.
 	//         (ex. ?city=Chicago or ?city=Chicago&city=Boston)
 	//
@@ -102,8 +98,9 @@ type LatestV1GetV1LatestLocationIDGetQueryParams struct {
 	// Location is mobile
 	IsMobile *bool `queryParam:"style=form,explode=true,name=isMobile"`
 	// Change the number of results returned.
-	Limit    *int64        `queryParam:"style=form,explode=true,name=limit"`
-	Location []interface{} `queryParam:"style=form,explode=true,name=location"`
+	Limit      *int64        `queryParam:"style=form,explode=true,name=limit"`
+	Location   []interface{} `queryParam:"style=form,explode=true,name=location"`
+	LocationID int64         `pathParam:"style=simple,explode=false,name=location_id"`
 	// Manufacturer of Sensor
 	ManufacturerName []string `queryParam:"style=form,explode=true,name=manufacturerName"`
 	// Model Name of Sensor
@@ -123,11 +120,6 @@ type LatestV1GetV1LatestLocationIDGetQueryParams struct {
 	// Name of the data source
 	SourceName []string `queryParam:"style=form,explode=true,name=sourceName"`
 	Unit       []string `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type LatestV1GetV1LatestLocationIDGetRequest struct {
-	PathParams  LatestV1GetV1LatestLocationIDGetPathParams
-	QueryParams LatestV1GetV1LatestLocationIDGetQueryParams
 }
 
 type LatestV1GetV1LatestLocationIDGetResponse struct {

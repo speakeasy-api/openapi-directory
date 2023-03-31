@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SolveVRPRequest struct {
-	// The request that contains the vehicle routing problem to be solved.
-	Request shared.Request `request:"mediaType=application/json"`
-}
-
 type SolveVRPResponse struct {
 	// Error occurred when reading the request. Request is invalid.
 	BadRequest  *shared.BadRequest

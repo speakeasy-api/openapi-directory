@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetGTEXMappingUsingPOSTRequest struct {
-	// data
-	Request *shared.RGDIDListRequest `request:"mediaType=application/json"`
-}
 
 type GetGTEXMappingUsingPOSTResponse struct {
 	Body        []byte

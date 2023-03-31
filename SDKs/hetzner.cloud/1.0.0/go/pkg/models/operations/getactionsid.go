@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetActionsIDPathParams struct {
+type GetActionsIDRequest struct {
 	// ID of the Resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetActionsIDRequest struct {
-	PathParams GetActionsIDPathParams
 }
 
 // GetActionsIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

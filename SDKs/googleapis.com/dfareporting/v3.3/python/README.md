@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/dfareporting/v3.3/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,36 +15,28 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DfareportingAccountActiveAdSummariesGetRequest(
-    security=operations.DfareportingAccountActiveAdSummariesGetSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DfareportingAccountActiveAdSummariesGetPathParams(
-        profile_id="quod",
-        summary_account_id="velit",
-    ),
-    query_params=operations.DfareportingAccountActiveAdSummariesGetQueryParams(
-        dollar_xgafv="1",
-        access_token="consequatur",
-        alt="media",
-        callback="est",
-        fields="sunt",
-        key="molestias",
-        oauth_token="voluptas",
-        pretty_print=True,
-        quota_user="aspernatur",
-        upload_type="non",
-        upload_protocol="debitis",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    pretty_print=False,
+    profile_id="illum",
+    quota_user="vel",
+    summary_account_id="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.account_active_ad_summaries.dfareporting_account_active_ad_summaries_get(req)
+res = s.account_active_ad_summaries.dfareporting_account_active_ad_summaries_get(req, operations.DfareportingAccountActiveAdSummariesGetSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.account_active_ad_summary is not None:
     # handle response
@@ -52,23 +44,24 @@ if res.account_active_ad_summary is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### accountActiveAdSummaries
+
+### account_active_ad_summaries
 
 * `dfareporting_account_active_ad_summaries_get` - Gets the account's active ad summary by account ID.
 
-### accountPermissionGroups
+### account_permission_groups
 
 * `dfareporting_account_permission_groups_get` - Gets one account permission group by ID.
 * `dfareporting_account_permission_groups_list` - Retrieves the list of account permission groups.
 
-### accountPermissions
+### account_permissions
 
 * `dfareporting_account_permissions_get` - Gets one account permission by ID.
 * `dfareporting_account_permissions_list` - Retrieves the list of account permissions.
 
-### accountUserProfiles
+### account_user_profiles
 
 * `dfareporting_account_user_profiles_get` - Gets one account user profile by ID.
 * `dfareporting_account_user_profiles_insert` - Inserts a new account user profile.
@@ -91,7 +84,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_ads_patch` - Updates an existing ad. This method supports patch semantics.
 * `dfareporting_ads_update` - Updates an existing ad.
 
-### advertiserGroups
+### advertiser_groups
 
 * `dfareporting_advertiser_groups_delete` - Deletes an existing advertiser group.
 * `dfareporting_advertiser_groups_get` - Gets one advertiser group by ID.
@@ -100,7 +93,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_advertiser_groups_patch` - Updates an existing advertiser group. This method supports patch semantics.
 * `dfareporting_advertiser_groups_update` - Updates an existing advertiser group.
 
-### advertiserLandingPages
+### advertiser_landing_pages
 
 * `dfareporting_advertiser_landing_pages_get` - Gets one landing page by ID.
 * `dfareporting_advertiser_landing_pages_insert` - Inserts a new landing page.
@@ -120,7 +113,7 @@ if res.account_active_ad_summary is not None:
 
 * `dfareporting_browsers_list` - Retrieves a list of browsers.
 
-### campaignCreativeAssociations
+### campaign_creative_associations
 
 * `dfareporting_campaign_creative_associations_insert` - Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
 * `dfareporting_campaign_creative_associations_list` - Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
@@ -133,7 +126,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_campaigns_patch` - Updates an existing campaign. This method supports patch semantics.
 * `dfareporting_campaigns_update` - Updates an existing campaign.
 
-### changeLogs
+### change_logs
 
 * `dfareporting_change_logs_get` - Gets one change log by ID.
 * `dfareporting_change_logs_list` - Retrieves a list of change logs. This method supports paging.
@@ -142,12 +135,12 @@ if res.account_active_ad_summary is not None:
 
 * `dfareporting_cities_list` - Retrieves a list of cities, possibly filtered.
 
-### connectionTypes
+### connection_types
 
 * `dfareporting_connection_types_get` - Gets one connection type by ID.
 * `dfareporting_connection_types_list` - Retrieves a list of connection types.
 
-### contentCategories
+### content_categories
 
 * `dfareporting_content_categories_delete` - Deletes an existing content category.
 * `dfareporting_content_categories_get` - Gets one content category by ID.
@@ -166,11 +159,11 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_countries_get` - Gets one country by ID.
 * `dfareporting_countries_list` - Retrieves a list of countries.
 
-### creativeAssets
+### creative_assets
 
 * `dfareporting_creative_assets_insert` - Inserts a new creative asset.
 
-### creativeFieldValues
+### creative_field_values
 
 * `dfareporting_creative_field_values_delete` - Deletes an existing creative field value.
 * `dfareporting_creative_field_values_get` - Gets one creative field value by ID.
@@ -179,7 +172,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_creative_field_values_patch` - Updates an existing creative field value. This method supports patch semantics.
 * `dfareporting_creative_field_values_update` - Updates an existing creative field value.
 
-### creativeFields
+### creative_fields
 
 * `dfareporting_creative_fields_delete` - Deletes an existing creative field.
 * `dfareporting_creative_fields_get` - Gets one creative field by ID.
@@ -188,7 +181,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_creative_fields_patch` - Updates an existing creative field. This method supports patch semantics.
 * `dfareporting_creative_fields_update` - Updates an existing creative field.
 
-### creativeGroups
+### creative_groups
 
 * `dfareporting_creative_groups_get` - Gets one creative group by ID.
 * `dfareporting_creative_groups_insert` - Inserts a new creative group.
@@ -204,23 +197,23 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_creatives_patch` - Updates an existing creative. This method supports patch semantics.
 * `dfareporting_creatives_update` - Updates an existing creative.
 
-### dimensionValues
+### dimension_values
 
 * `dfareporting_dimension_values_query` - Retrieves list of report dimension values for a list of filters.
 
-### directorySites
+### directory_sites
 
 * `dfareporting_directory_sites_get` - Gets one directory site by ID.
 * `dfareporting_directory_sites_insert` - Inserts a new directory site.
 * `dfareporting_directory_sites_list` - Retrieves a list of directory sites, possibly filtered. This method supports paging.
 
-### dynamicTargetingKeys
+### dynamic_targeting_keys
 
 * `dfareporting_dynamic_targeting_keys_delete` - Deletes an existing dynamic targeting key.
 * `dfareporting_dynamic_targeting_keys_insert` - Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
 * `dfareporting_dynamic_targeting_keys_list` - Retrieves a list of dynamic targeting keys.
 
-### eventTags
+### event_tags
 
 * `dfareporting_event_tags_delete` - Deletes an existing event tag.
 * `dfareporting_event_tags_get` - Gets one event tag by ID.
@@ -234,7 +227,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_files_get` - Retrieves a report file by its report ID and file ID. This method supports media download.
 * `dfareporting_files_list` - Lists files for a user profile.
 
-### floodlightActivities
+### floodlight_activities
 
 * `dfareporting_floodlight_activities_delete` - Deletes an existing floodlight activity.
 * `dfareporting_floodlight_activities_generatetag` - Generates a tag for a floodlight activity.
@@ -244,7 +237,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_floodlight_activities_patch` - Updates an existing floodlight activity. This method supports patch semantics.
 * `dfareporting_floodlight_activities_update` - Updates an existing floodlight activity.
 
-### floodlightActivityGroups
+### floodlight_activity_groups
 
 * `dfareporting_floodlight_activity_groups_get` - Gets one floodlight activity group by ID.
 * `dfareporting_floodlight_activity_groups_insert` - Inserts a new floodlight activity group.
@@ -252,14 +245,14 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_floodlight_activity_groups_patch` - Updates an existing floodlight activity group. This method supports patch semantics.
 * `dfareporting_floodlight_activity_groups_update` - Updates an existing floodlight activity group.
 
-### floodlightConfigurations
+### floodlight_configurations
 
 * `dfareporting_floodlight_configurations_get` - Gets one floodlight configuration by ID.
 * `dfareporting_floodlight_configurations_list` - Retrieves a list of floodlight configurations, possibly filtered.
 * `dfareporting_floodlight_configurations_patch` - Updates an existing floodlight configuration. This method supports patch semantics.
 * `dfareporting_floodlight_configurations_update` - Updates an existing floodlight configuration.
 
-### inventoryItems
+### inventory_items
 
 * `dfareporting_inventory_items_get` - Gets one inventory item by ID.
 * `dfareporting_inventory_items_list` - Retrieves a list of inventory items, possibly filtered. This method supports paging.
@@ -272,27 +265,27 @@ if res.account_active_ad_summary is not None:
 
 * `dfareporting_metros_list` - Retrieves a list of metros.
 
-### mobileApps
+### mobile_apps
 
 * `dfareporting_mobile_apps_get` - Gets one mobile app by ID.
 * `dfareporting_mobile_apps_list` - Retrieves list of available mobile apps.
 
-### mobileCarriers
+### mobile_carriers
 
 * `dfareporting_mobile_carriers_get` - Gets one mobile carrier by ID.
 * `dfareporting_mobile_carriers_list` - Retrieves a list of mobile carriers.
 
-### operatingSystemVersions
+### operating_system_versions
 
 * `dfareporting_operating_system_versions_get` - Gets one operating system version by ID.
 * `dfareporting_operating_system_versions_list` - Retrieves a list of operating system versions.
 
-### operatingSystems
+### operating_systems
 
 * `dfareporting_operating_systems_get` - Gets one operating system by DART ID.
 * `dfareporting_operating_systems_list` - Retrieves a list of operating systems.
 
-### orderDocuments
+### order_documents
 
 * `dfareporting_order_documents_get` - Gets one order document by ID.
 * `dfareporting_order_documents_list` - Retrieves a list of order documents, possibly filtered. This method supports paging.
@@ -302,7 +295,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_orders_get` - Gets one order by ID.
 * `dfareporting_orders_list` - Retrieves a list of orders, possibly filtered. This method supports paging.
 
-### placementGroups
+### placement_groups
 
 * `dfareporting_placement_groups_get` - Gets one placement group by ID.
 * `dfareporting_placement_groups_insert` - Inserts a new placement group.
@@ -310,7 +303,7 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_placement_groups_patch` - Updates an existing placement group. This method supports patch semantics.
 * `dfareporting_placement_groups_update` - Updates an existing placement group.
 
-### placementStrategies
+### placement_strategies
 
 * `dfareporting_placement_strategies_delete` - Deletes an existing placement strategy.
 * `dfareporting_placement_strategies_get` - Gets one placement strategy by ID.
@@ -328,12 +321,12 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_placements_patch` - Updates an existing placement. This method supports patch semantics.
 * `dfareporting_placements_update` - Updates an existing placement.
 
-### platformTypes
+### platform_types
 
 * `dfareporting_platform_types_get` - Gets one platform type by ID.
 * `dfareporting_platform_types_list` - Retrieves a list of platform types.
 
-### postalCodes
+### postal_codes
 
 * `dfareporting_postal_codes_get` - Gets one postal code by ID.
 * `dfareporting_postal_codes_list` - Retrieves a list of postal codes.
@@ -347,13 +340,13 @@ if res.account_active_ad_summary is not None:
 
 * `dfareporting_regions_list` - Retrieves a list of regions.
 
-### remarketingListShares
+### remarketing_list_shares
 
 * `dfareporting_remarketing_list_shares_get` - Gets one remarketing list share by remarketing list ID.
 * `dfareporting_remarketing_list_shares_patch` - Updates an existing remarketing list share. This method supports patch semantics.
 * `dfareporting_remarketing_list_shares_update` - Updates an existing remarketing list share.
 
-### remarketingLists
+### remarketing_lists
 
 * `dfareporting_remarketing_lists_get` - Gets one remarketing list by ID.
 * `dfareporting_remarketing_lists_insert` - Inserts a new remarketing list.
@@ -396,12 +389,12 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_subaccounts_patch` - Updates an existing subaccount. This method supports patch semantics.
 * `dfareporting_subaccounts_update` - Updates an existing subaccount.
 
-### targetableRemarketingLists
+### targetable_remarketing_lists
 
 * `dfareporting_targetable_remarketing_lists_get` - Gets one remarketing list by ID.
 * `dfareporting_targetable_remarketing_lists_list` - Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
 
-### targetingTemplates
+### targeting_templates
 
 * `dfareporting_targeting_templates_get` - Gets one targeting template by ID.
 * `dfareporting_targeting_templates_insert` - Inserts a new targeting template.
@@ -409,22 +402,22 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_targeting_templates_patch` - Updates an existing targeting template. This method supports patch semantics.
 * `dfareporting_targeting_templates_update` - Updates an existing targeting template.
 
-### userProfiles
+### user_profiles
 
 * `dfareporting_user_profiles_get` - Gets one user profile by ID.
 * `dfareporting_user_profiles_list` - Retrieves list of user profiles for a user.
 
-### userRolePermissionGroups
+### user_role_permission_groups
 
 * `dfareporting_user_role_permission_groups_get` - Gets one user role permission group by ID.
 * `dfareporting_user_role_permission_groups_list` - Gets a list of all supported user role permission groups.
 
-### userRolePermissions
+### user_role_permissions
 
 * `dfareporting_user_role_permissions_get` - Gets one user role permission by ID.
 * `dfareporting_user_role_permissions_list` - Gets a list of user role permissions, possibly filtered.
 
-### userRoles
+### user_roles
 
 * `dfareporting_user_roles_delete` - Deletes an existing user role.
 * `dfareporting_user_roles_get` - Gets one user role by ID.
@@ -433,11 +426,21 @@ if res.account_active_ad_summary is not None:
 * `dfareporting_user_roles_patch` - Updates an existing user role. This method supports patch semantics.
 * `dfareporting_user_roles_update` - Updates an existing user role.
 
-### videoFormats
+### video_formats
 
 * `dfareporting_video_formats_get` - Gets one video format by ID.
 * `dfareporting_video_formats_list` - Lists available video formats.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

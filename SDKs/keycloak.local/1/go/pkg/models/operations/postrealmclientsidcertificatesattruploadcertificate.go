@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmClientsIDCertificatesAttrUploadCertificatePathParams struct {
+type PostRealmClientsIDCertificatesAttrUploadCertificateRequest struct {
 	Attr string `pathParam:"style=simple,explode=false,name=attr"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClientsIDCertificatesAttrUploadCertificateRequest struct {
-	PathParams PostRealmClientsIDCertificatesAttrUploadCertificatePathParams
 }
 
 type PostRealmClientsIDCertificatesAttrUploadCertificateResponse struct {

@@ -35,7 +35,7 @@ func newLoadBalancers(defaultClient, securityClient HTTPClient, serverURL, langu
 // Deletes a Load Balancer.
 func (s *loadBalancers) DeleteLoadBalancersID(ctx context.Context, request operations.DeleteLoadBalancersIDRequest) (*operations.DeleteLoadBalancersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -78,7 +78,7 @@ func (s *loadBalancers) GetLoadBalancers(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -120,7 +120,7 @@ func (s *loadBalancers) GetLoadBalancers(ctx context.Context, request operations
 // Gets a specific Load Balancer object.
 func (s *loadBalancers) GetLoadBalancersID(ctx context.Context, request operations.GetLoadBalancersIDRequest) (*operations.GetLoadBalancersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,14 +181,14 @@ func (s *loadBalancers) GetLoadBalancersID(ctx context.Context, request operatio
 // We limit the number of samples to a maximum of 500 and will adjust the step parameter accordingly.
 func (s *loadBalancers) GetLoadBalancersIDMetrics(ctx context.Context, request operations.GetLoadBalancersIDMetricsRequest) (*operations.GetLoadBalancersIDMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,7 +240,7 @@ func (s *loadBalancers) GetLoadBalancersIDMetrics(ctx context.Context, request o
 // | `server_not_attached_to_network`        | The server you are trying to add as a target is not attached to the same network as the Load Balancer |
 // | `source_port_already_used`              | The source port you are trying to add is already in use                                               |
 // | `target_already_defined`                | The Load Balancer target you are trying to define is already defined                                  |
-func (s *loadBalancers) PostLoadBalancers(ctx context.Context, request operations.PostLoadBalancersRequest) (*operations.PostLoadBalancersResponse, error) {
+func (s *loadBalancers) PostLoadBalancers(ctx context.Context, request operations.PostLoadBalancersCreateLoadBalancerRequest) (*operations.PostLoadBalancersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/load_balancers"
 
@@ -298,9 +298,9 @@ func (s *loadBalancers) PostLoadBalancers(ctx context.Context, request operation
 // Note: if the Load Balancer object changes during the request, the response will be a “conflict” error.
 func (s *loadBalancers) PutLoadBalancersID(ctx context.Context, request operations.PutLoadBalancersIDRequest) (*operations.PutLoadBalancersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetUserPathParams struct {
+type GetUserRequest struct {
 	// User ID
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUserRequest struct {
-	PathParams GetUserPathParams
 }
 
 // GetUser200ApplicationJSON - Retrieve a user

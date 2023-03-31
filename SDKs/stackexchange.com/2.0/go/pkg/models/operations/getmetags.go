@@ -59,7 +59,7 @@ func (e *GetMeTagsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMeTagsQueryParams struct {
+type GetMeTagsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -116,10 +116,6 @@ type GetMeTagsQueryParams struct {
 	Sort *GetMeTagsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetMeTagsRequest struct {
-	QueryParams GetMeTagsQueryParams
 }
 
 type GetMeTagsResponse struct {

@@ -10,23 +10,23 @@ import (
 )
 
 type DataflowProjectsJobsAggregatedSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsAggregatedSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsAggregatedSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsAggregatedSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsAggregatedSecurity struct {
@@ -34,11 +34,6 @@ type DataflowProjectsJobsAggregatedSecurity struct {
 	Option2 *DataflowProjectsJobsAggregatedSecurityOption2 `security:"option"`
 	Option3 *DataflowProjectsJobsAggregatedSecurityOption3 `security:"option"`
 	Option4 *DataflowProjectsJobsAggregatedSecurityOption4 `security:"option"`
-}
-
-type DataflowProjectsJobsAggregatedPathParams struct {
-	// The project which owns the jobs.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // DataflowProjectsJobsAggregatedFilterEnum - The kind of filter to use.
@@ -101,7 +96,7 @@ func (e *DataflowProjectsJobsAggregatedViewEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DataflowProjectsJobsAggregatedQueryParams struct {
+type DataflowProjectsJobsAggregatedRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -128,6 +123,8 @@ type DataflowProjectsJobsAggregatedQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project which owns the jobs.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
@@ -136,12 +133,6 @@ type DataflowProjectsJobsAggregatedQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews.
 	View *DataflowProjectsJobsAggregatedViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DataflowProjectsJobsAggregatedRequest struct {
-	PathParams  DataflowProjectsJobsAggregatedPathParams
-	QueryParams DataflowProjectsJobsAggregatedQueryParams
-	Security    DataflowProjectsJobsAggregatedSecurity
 }
 
 type DataflowProjectsJobsAggregatedResponse struct {

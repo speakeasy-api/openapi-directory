@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAutomationsQueryParams struct {
+type GetAutomationsRequest struct {
 	// DEPRECATED: Type of automation to filter by. Use `filter[automation]` instead.
 	Automation *string `queryParam:"style=form,explode=true,name=automation"`
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
@@ -30,10 +30,6 @@ type GetAutomationsQueryParams struct {
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 	// Set to true to include deleted automations in the results.
 	WithDeleted *bool `queryParam:"style=form,explode=true,name=with_deleted"`
-}
-
-type GetAutomationsRequest struct {
-	QueryParams GetAutomationsQueryParams
 }
 
 type GetAutomationsResponse struct {

@@ -8,12 +8,7 @@ import (
 )
 
 type ToolsShareFileRawSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type ToolsShareFileRawRequest struct {
-	Request  []byte `request:"mediaType=application/octet-stream"`
-	Security ToolsShareFileRawSecurity
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ToolsShareFileRawResponse struct {

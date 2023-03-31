@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTftpGetTracePathParams struct {
+type ProtocolTftpGetTraceRequest struct {
 	// Agent to show whether TFTP tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTftpGetTraceRequest struct {
-	PathParams ProtocolTftpGetTracePathParams
 }
 
 type ProtocolTftpGetTraceResponse struct {

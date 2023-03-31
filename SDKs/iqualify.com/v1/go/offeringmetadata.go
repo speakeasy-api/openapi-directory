@@ -35,9 +35,9 @@ func newOfferingMetadata(defaultClient, securityClient HTTPClient, serverURL, la
 // Updates the offering category metadata.
 func (s *offeringMetadata) PutOfferingsOfferingIDMetadataCategory(ctx context.Context, request operations.PutOfferingsOfferingIDMetadataCategoryRequest) (*operations.PutOfferingsOfferingIDMetadataCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/category", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/category", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,9 +106,9 @@ func (s *offeringMetadata) PutOfferingsOfferingIDMetadataCategory(ctx context.Co
 // Updates the offering level metadata.
 func (s *offeringMetadata) PutOfferingsOfferingIDMetadataLevel(ctx context.Context, request operations.PutOfferingsOfferingIDMetadataLevelRequest) (*operations.PutOfferingsOfferingIDMetadataLevelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/level", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/level", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -177,9 +177,9 @@ func (s *offeringMetadata) PutOfferingsOfferingIDMetadataLevel(ctx context.Conte
 // Updates the offering tags metadata.
 func (s *offeringMetadata) PutOfferingsOfferingIDMetadataTags(ctx context.Context, request operations.PutOfferingsOfferingIDMetadataTagsRequest) (*operations.PutOfferingsOfferingIDMetadataTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,9 +248,9 @@ func (s *offeringMetadata) PutOfferingsOfferingIDMetadataTags(ctx context.Contex
 // Updates the offering topic metadata.
 func (s *offeringMetadata) PutOfferingsOfferingIDMetadataTopic(ctx context.Context, request operations.PutOfferingsOfferingIDMetadataTopicRequest) (*operations.PutOfferingsOfferingIDMetadataTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/topic", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/metadata/topic", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

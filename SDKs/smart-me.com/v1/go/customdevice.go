@@ -106,7 +106,7 @@ func (s *customDevice) CustomDeviceGet(ctx context.Context) (*operations.CustomD
 //	Only use a custom device for all non meters.
 //	For a new device leave the ID empty. To create a device you have to set the DeviceEnergyType.
 //	To update values, add the ID of the device and the values you like to set.  (See the Data Type Model for more Information)
-func (s *customDevice) CustomDevicePostForm(ctx context.Context, request operations.CustomDevicePostFormRequest) (*operations.CustomDevicePostFormResponse, error) {
+func (s *customDevice) CustomDevicePostForm(ctx context.Context, request shared.CustomDeviceToPost) (*operations.CustomDevicePostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/CustomDevice"
 
@@ -188,7 +188,7 @@ func (s *customDevice) CustomDevicePostForm(ctx context.Context, request operati
 //	Only use a custom device for all non meters.
 //	For a new device leave the ID empty. To create a device you have to set the DeviceEnergyType.
 //	To update values, add the ID of the device and the values you like to set.  (See the Data Type Model for more Information)
-func (s *customDevice) CustomDevicePostJSON(ctx context.Context, request operations.CustomDevicePostJSONRequest) (*operations.CustomDevicePostJSONResponse, error) {
+func (s *customDevice) CustomDevicePostJSON(ctx context.Context, request shared.CustomDeviceToPost) (*operations.CustomDevicePostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/CustomDevice"
 
@@ -270,7 +270,7 @@ func (s *customDevice) CustomDevicePostJSON(ctx context.Context, request operati
 //	Only use a custom device for all non meters.
 //	For a new device leave the ID empty. To create a device you have to set the DeviceEnergyType.
 //	To update values, add the ID of the device and the values you like to set.  (See the Data Type Model for more Information)
-func (s *customDevice) CustomDevicePostRaw(ctx context.Context, request operations.CustomDevicePostRawRequest) (*operations.CustomDevicePostRawResponse, error) {
+func (s *customDevice) CustomDevicePostRaw(ctx context.Context, request []byte) (*operations.CustomDevicePostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/CustomDevice"
 
@@ -349,7 +349,7 @@ func (s *customDevice) CustomDevicePostRaw(ctx context.Context, request operatio
 // Gets a Device by it's ID
 func (s *customDevice) GetAPICustomDeviceID(ctx context.Context, request operations.GetAPICustomDeviceIDRequest) (*operations.GetAPICustomDeviceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/CustomDevice/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/CustomDevice/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

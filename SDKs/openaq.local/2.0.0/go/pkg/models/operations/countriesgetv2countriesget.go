@@ -66,7 +66,7 @@ func (e *CountriesGetV2CountriesGetSortSortEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type CountriesGetV2CountriesGetQueryParams struct {
+type CountriesGetV2CountriesGetRequest struct {
 	//         Limit results by a certain country using two letter country code.
 	//         (ex. ?country=US or ?country=US&country=MX)
 	//
@@ -83,10 +83,6 @@ type CountriesGetV2CountriesGetQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Define sort order.
 	Sort *CountriesGetV2CountriesGetSortSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type CountriesGetV2CountriesGetRequest struct {
-	QueryParams CountriesGetV2CountriesGetQueryParams
 }
 
 type CountriesGetV2CountriesGetResponse struct {

@@ -11,10 +11,6 @@ type PostV2LiveWebsiteTrackingParametersJSONRequestBody struct {
 	PersonID int64 `form:"name=person_id"`
 }
 
-type PostV2LiveWebsiteTrackingParametersJSONRequest struct {
-	Request PostV2LiveWebsiteTrackingParametersJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2LiveWebsiteTrackingParametersJSONResponse struct {
 	Body        []byte
 	ContentType string

@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ConfigConfigGetRequest(
-    headers=operations.ConfigConfigGetHeaders(
-        authorization="ut",
-    ),
+    authorization="corrupti",
 )
     
 res = s.config_config_get(req)

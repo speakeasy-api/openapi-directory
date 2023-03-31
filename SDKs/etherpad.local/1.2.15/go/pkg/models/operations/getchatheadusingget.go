@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GETChatHeadUsingGETQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type GETChatHeadUsingGETRequest struct {
-	QueryParams GETChatHeadUsingGETQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // GETChatHeadUsingGET500ApplicationJSON - internal api error (code 2)

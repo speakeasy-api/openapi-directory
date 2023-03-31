@@ -45,7 +45,7 @@ func (s *filter) GetAssociationFilter(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,7 +89,7 @@ func (s *filter) GetEvidenceFilter(ctx context.Context, request operations.GetEv
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -121,7 +121,7 @@ func (s *filter) GetEvidenceFilter(ctx context.Context, request operations.GetEv
 // PostAssociationFilter - Batch query available associations
 // Complex queries and filters for association objects can also be submitted using a JSON
 // object and the equivalent POST method.
-func (s *filter) PostAssociationFilter(ctx context.Context, request operations.PostAssociationFilterRequest) (*operations.PostAssociationFilterResponse, error) {
+func (s *filter) PostAssociationFilter(ctx context.Context, request string) (*operations.PostAssociationFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/public/association/filter"
 
@@ -168,7 +168,7 @@ func (s *filter) PostAssociationFilter(ctx context.Context, request operations.P
 // PostEvidenceFilter - Batch filter available evidence
 // POST version of [/public/evidence/filter](#!/public/get_public_evidence_filter).
 // Filters can be specified as part of a `json` object in the body, simplifying the submission of queries.
-func (s *filter) PostEvidenceFilter(ctx context.Context, request operations.PostEvidenceFilterRequest) (*operations.PostEvidenceFilterResponse, error) {
+func (s *filter) PostEvidenceFilter(ctx context.Context, request string) (*operations.PostEvidenceFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/public/evidence/filter"
 

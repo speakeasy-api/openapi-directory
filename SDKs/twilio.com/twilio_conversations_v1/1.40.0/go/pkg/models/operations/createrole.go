@@ -12,7 +12,8 @@ var CreateRoleServerList = []string{
 }
 
 type CreateRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateRoleCreateRoleRequest struct {
@@ -21,12 +22,6 @@ type CreateRoleCreateRoleRequest struct {
 	// A permission that you grant to the new role. Only one permission can be granted per parameter. To assign more than one permission, repeat this parameter for each permission value. The values for this parameter depend on the role's `type`.
 	Permission []string                    `form:"name=Permission"`
 	Type       shared.RoleEnumRoleTypeEnum `form:"name=Type"`
-}
-
-type CreateRoleRequest struct {
-	Request   *CreateRoleCreateRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateRoleSecurity
-	ServerURL *string
 }
 
 type CreateRoleResponse struct {

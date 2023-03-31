@@ -8,19 +8,14 @@ import (
 )
 
 type AddNewEmployeeToWebLinkSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
-}
-
-type AddNewEmployeeToWebLinkPathParams struct {
-	// Company Id
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddNewEmployeeToWebLinkRequest struct {
-	PathParams AddNewEmployeeToWebLinkPathParams
+	// Company Id
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// StagedEmployee Model
-	Request  shared.StagedEmployee `request:"mediaType=application/json"`
-	Security AddNewEmployeeToWebLinkSecurity
+	StagedEmployee shared.StagedEmployee `request:"mediaType=application/json"`
 }
 
 type AddNewEmployeeToWebLinkResponse struct {

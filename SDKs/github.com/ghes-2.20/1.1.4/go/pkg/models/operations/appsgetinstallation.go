@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetInstallationPathParams struct {
-	// installation_id parameter
-	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
-}
-
-type AppsGetInstallationHeaders struct {
+type AppsGetInstallationRequest struct {
 	// This API is under preview and subject to change.
 	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type AppsGetInstallationRequest struct {
-	PathParams AppsGetInstallationPathParams
-	Headers    AppsGetInstallationHeaders
+	// installation_id parameter
+	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
 }
 
 // AppsGetInstallation415ApplicationJSON - Preview header missing

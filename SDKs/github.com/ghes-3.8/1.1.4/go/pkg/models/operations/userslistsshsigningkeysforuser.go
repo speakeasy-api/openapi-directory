@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersListSSHSigningKeysForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersListSSHSigningKeysForUserQueryParams struct {
+type UsersListSSHSigningKeysForUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type UsersListSSHSigningKeysForUserRequest struct {
-	PathParams  UsersListSSHSigningKeysForUserPathParams
-	QueryParams UsersListSSHSigningKeysForUserQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UsersListSSHSigningKeysForUserResponse struct {

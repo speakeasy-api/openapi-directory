@@ -8,12 +8,8 @@ import (
 )
 
 type UpdateSnowMonkeySecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSnowMonkeyRequest struct {
-	Request  *shared.Group `request:"mediaType=application/json"`
-	Security UpdateSnowMonkeySecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSnowMonkeyResponse struct {

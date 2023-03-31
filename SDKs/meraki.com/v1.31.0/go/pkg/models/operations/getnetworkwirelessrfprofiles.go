@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessRfProfilesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkWirelessRfProfilesQueryParams struct {
-	// If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
-	IncludeTemplateProfiles *bool `queryParam:"style=form,explode=true,name=includeTemplateProfiles"`
-}
-
 type GetNetworkWirelessRfProfilesRequest struct {
-	PathParams  GetNetworkWirelessRfProfilesPathParams
-	QueryParams GetNetworkWirelessRfProfilesQueryParams
+	// If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
+	IncludeTemplateProfiles *bool  `queryParam:"style=form,explode=true,name=includeTemplateProfiles"`
+	NetworkID               string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkWirelessRfProfilesResponse struct {

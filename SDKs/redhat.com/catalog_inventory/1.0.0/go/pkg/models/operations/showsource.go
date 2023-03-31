@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShowSourcePathParams struct {
+type ShowSourceRequest struct {
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ShowSourceRequest struct {
-	PathParams ShowSourcePathParams
 }
 
 type ShowSourceResponse struct {

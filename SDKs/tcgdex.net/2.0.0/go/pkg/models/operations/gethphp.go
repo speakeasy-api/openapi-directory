@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHpHpPathParams struct {
-	Hp string `pathParam:"style=simple,explode=false,name=hp"`
-}
-
 type GetHpHpRequest struct {
-	PathParams GetHpHpPathParams
+	Hp string `pathParam:"style=simple,explode=false,name=hp"`
 }
 
 type GetHpHpResponse struct {

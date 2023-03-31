@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePaymentJSONRequest struct {
-	Request shared.PaymentWriteRequest `request:"mediaType=application/json"`
-}
-
 type CreatePaymentJSONResponse struct {
 	ContentType string
 	// Create payment

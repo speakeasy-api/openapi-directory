@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksCreateSuitePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ChecksCreateSuiteRequestBody struct {
 	// The sha of the head commit.
 	HeadSha string `json:"head_sha"`
 }
 
 type ChecksCreateSuiteRequest struct {
-	PathParams ChecksCreateSuitePathParams
-	Request    ChecksCreateSuiteRequestBody `request:"mediaType=application/json"`
+	RequestBody ChecksCreateSuiteRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ChecksCreateSuiteResponse struct {

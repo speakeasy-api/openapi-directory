@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateArticleConfidentialityDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleConfidentialityDeletePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleConfidentialityDeleteRequest struct {
-	PathParams PrivateArticleConfidentialityDeletePathParams
-	Security   PrivateArticleConfidentialityDeleteSecurity
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleConfidentialityDeleteResponse struct {

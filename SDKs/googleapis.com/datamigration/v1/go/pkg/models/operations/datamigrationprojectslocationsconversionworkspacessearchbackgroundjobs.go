@@ -8,16 +8,11 @@ import (
 )
 
 type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsPathParams struct {
-	// Required. Name of the conversion workspace resource whose jobs are listed, in the form of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
-	ConversionWorkspace string `pathParam:"style=simple,explode=false,name=conversionWorkspace"`
-}
-
-type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsQueryParams struct {
+type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,6 +23,8 @@ type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsQuery
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Optional. If provided, only returns jobs that completed until (not including) the given timestamp.
 	CompletedUntilTime *string `queryParam:"style=form,explode=true,name=completedUntilTime"`
+	// Required. Name of the conversion workspace resource whose jobs are listed, in the form of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+	ConversionWorkspace string `pathParam:"style=simple,explode=false,name=conversionWorkspace"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,12 +43,6 @@ type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsQuery
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest struct {
-	PathParams  DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsPathParams
-	QueryParams DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsQueryParams
-	Security    DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsSecurity
 }
 
 type DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse struct {

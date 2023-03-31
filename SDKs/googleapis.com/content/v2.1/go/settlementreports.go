@@ -32,20 +32,20 @@ func newSettlementreports(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // ContentSettlementreportsGet - Retrieves a settlement report from your Merchant Center account.
-func (s *settlementreports) ContentSettlementreportsGet(ctx context.Context, request operations.ContentSettlementreportsGetRequest) (*operations.ContentSettlementreportsGetResponse, error) {
+func (s *settlementreports) ContentSettlementreportsGet(ctx context.Context, request operations.ContentSettlementreportsGetRequest, security operations.ContentSettlementreportsGetSecurity) (*operations.ContentSettlementreportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports/{settlementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports/{settlementId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *settlementreports) ContentSettlementreportsGet(ctx context.Context, req
 }
 
 // ContentSettlementreportsList - Retrieves a list of settlement reports from your Merchant Center account.
-func (s *settlementreports) ContentSettlementreportsList(ctx context.Context, request operations.ContentSettlementreportsListRequest) (*operations.ContentSettlementreportsListResponse, error) {
+func (s *settlementreports) ContentSettlementreportsList(ctx context.Context, request operations.ContentSettlementreportsListRequest, security operations.ContentSettlementreportsListSecurity) (*operations.ContentSettlementreportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

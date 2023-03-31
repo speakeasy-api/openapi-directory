@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveautoapproveforaccountQueryParams struct {
-	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-}
-
-type SaveautoapproveforaccountHeaders struct {
+type SaveautoapproveforaccountRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SaveautoapproveforaccountRequest struct {
-	QueryParams SaveautoapproveforaccountQueryParams
-	Headers     SaveautoapproveforaccountHeaders
-	Request     shared.SaveautoapproveforaccountRequest `request:"mediaType=application/json"`
+	ContentType                      string                                  `header:"style=simple,explode=false,name=Content-Type"`
+	SaveautoapproveforaccountRequest shared.SaveautoapproveforaccountRequest `request:"mediaType=application/json"`
+	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 }
 
 // Saveautoapproveforaccount200ApplicationJSON - OK

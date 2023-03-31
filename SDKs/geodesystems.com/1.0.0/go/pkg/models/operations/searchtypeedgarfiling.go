@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypeEdgarFilingQueryParams struct {
+type SearchTypeEdgarFilingRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -54,10 +54,6 @@ type SearchTypeEdgarFilingQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypeEdgarFilingRequest struct {
-	QueryParams SearchTypeEdgarFilingQueryParams
 }
 
 type SearchTypeEdgarFilingResponse struct {

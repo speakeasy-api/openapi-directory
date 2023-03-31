@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsChangeDNSPtrPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostLoadBalancersIDActionsChangeDNSPtrChangeLoadbalancerDNSPtrRequest - Select the IP address for which to change the DNS entry by passing `ip`. It can be either IPv4 or IPv6. The target hostname is set by passing `dns_ptr`.
 type PostLoadBalancersIDActionsChangeDNSPtrChangeLoadbalancerDNSPtrRequest struct {
 	// Hostname to set as a reverse DNS PTR entry
@@ -22,9 +17,10 @@ type PostLoadBalancersIDActionsChangeDNSPtrChangeLoadbalancerDNSPtrRequest struc
 }
 
 type PostLoadBalancersIDActionsChangeDNSPtrRequest struct {
-	PathParams PostLoadBalancersIDActionsChangeDNSPtrPathParams
 	// Select the IP address for which to change the DNS entry by passing `ip`. It can be either IPv4 or IPv6. The target hostname is set by passing `dns_ptr`.
-	Request *PostLoadBalancersIDActionsChangeDNSPtrChangeLoadbalancerDNSPtrRequest `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsChangeDNSPtrChangeLoadbalancerDNSPtrRequest `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionError - Error message for the Action if error occurred, otherwise null

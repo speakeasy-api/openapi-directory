@@ -6,25 +6,6 @@ import (
 	"net/http"
 )
 
-type ItemsUpdatePathParams struct {
-	// ID of the `orderForm` corresponding to the cart whose items you want to update.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type ItemsUpdateQueryParams struct {
-	// In order to optimize performance, this parameter allows some information to not be updated when there are changes in the minicart. For instance, if a shopper adds another unit of a given SKU to the cart, it may not be necessary to recalculate payment information, which could impact performance.
-	//
-	// This array accepts strings and currently the only possible value is `”paymentData”`.
-	AllowedOutdatedData []interface{} `queryParam:"style=form,explode=true,name=allowedOutdatedData"`
-}
-
-type ItemsUpdateHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type ItemsUpdateRequestBodyOrderItems struct {
 	// The position of the item in the array.
 	Index int64 `json:"index"`
@@ -38,10 +19,17 @@ type ItemsUpdateRequestBody struct {
 }
 
 type ItemsUpdateRequest struct {
-	PathParams  ItemsUpdatePathParams
-	QueryParams ItemsUpdateQueryParams
-	Headers     ItemsUpdateHeaders
-	Request     ItemsUpdateRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                 `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody ItemsUpdateRequestBody `request:"mediaType=application/json"`
+	// In order to optimize performance, this parameter allows some information to not be updated when there are changes in the minicart. For instance, if a shopper adds another unit of a given SKU to the cart, it may not be necessary to recalculate payment information, which could impact performance.
+	//
+	// This array accepts strings and currently the only possible value is `”paymentData”`.
+	AllowedOutdatedData []interface{} `queryParam:"style=form,explode=true,name=allowedOutdatedData"`
+	// ID of the `orderForm` corresponding to the cart whose items you want to update.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type ItemsUpdate200ApplicationJSONAvailableAddresses struct {

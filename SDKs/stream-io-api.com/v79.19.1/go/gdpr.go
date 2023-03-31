@@ -34,7 +34,7 @@ func newGdpr(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // DeactivateUsers - Deactivate users
 // Deactivate users in batches
-func (s *gdpr) DeactivateUsers(ctx context.Context, request operations.DeactivateUsersRequest) (*operations.DeactivateUsersResponse, error) {
+func (s *gdpr) DeactivateUsers(ctx context.Context, request shared.DeactivateUsersRequest) (*operations.DeactivateUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/deactivate"
 
@@ -111,7 +111,7 @@ func (s *gdpr) DeactivateUsers(ctx context.Context, request operations.Deactivat
 
 // DeleteChannels - Deletes channels asynchronously
 // Allows to delete several channels at once asynchronously
-func (s *gdpr) DeleteChannels(ctx context.Context, request operations.DeleteChannelsRequest) (*operations.DeleteChannelsResponse, error) {
+func (s *gdpr) DeleteChannels(ctx context.Context, request shared.DeleteChannelsRequest) (*operations.DeleteChannelsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels/delete"
 
@@ -188,7 +188,7 @@ func (s *gdpr) DeleteChannels(ctx context.Context, request operations.DeleteChan
 
 // DeleteUsers - Delete Users
 // Deletes users and optionally all their belongings asynchronously.
-func (s *gdpr) DeleteUsers(ctx context.Context, request operations.DeleteUsersRequest) (*operations.DeleteUsersResponse, error) {
+func (s *gdpr) DeleteUsers(ctx context.Context, request shared.DeleteUsersRequest) (*operations.DeleteUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/delete"
 
@@ -265,7 +265,7 @@ func (s *gdpr) DeleteUsers(ctx context.Context, request operations.DeleteUsersRe
 
 // ReactivateUsers - Reactivate users
 // Reactivate users in batches
-func (s *gdpr) ReactivateUsers(ctx context.Context, request operations.ReactivateUsersRequest) (*operations.ReactivateUsersResponse, error) {
+func (s *gdpr) ReactivateUsers(ctx context.Context, request shared.ReactivateUsersRequest) (*operations.ReactivateUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/reactivate"
 

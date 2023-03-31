@@ -36,14 +36,14 @@ func newTemplates(defaultClient, securityClient HTTPClient, serverURL, language,
 // Returns a template instance of the specified data type
 func (s *templates) GetTemplateModel(ctx context.Context, request operations.GetTemplateModelRequest) (*operations.GetTemplateModelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Template/{DtoDataType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Template/{DtoDataType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -106,7 +106,7 @@ func (s *templates) GetTemplates(ctx context.Context, request operations.GetTemp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

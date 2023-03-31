@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetOrdersRequest{
-        QueryParams: operations.GetOrdersQueryParams{
-            Limit: "corrupti",
-            Offset: "provident",
-            OrderStatus: "Completed",
-        },
+        Limit: "corrupti",
+        Offset: "provident",
+        OrderStatus: "Completed",
     }
 
     ctx := context.Background()

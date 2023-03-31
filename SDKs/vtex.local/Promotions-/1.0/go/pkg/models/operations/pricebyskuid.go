@@ -10,26 +10,13 @@ var PricebyskuIDServerList = []string{
 	"https://rnb.{environment}.com.br/api/pricing/pvt",
 }
 
-type PricebyskuIDPathParams struct {
-	SkuID string `pathParam:"style=simple,explode=false,name=skuId"`
-}
-
-type PricebyskuIDQueryParams struct {
-	An string `queryParam:"style=form,explode=true,name=an"`
-}
-
-type PricebyskuIDHeaders struct {
+type PricebyskuIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PricebyskuIDRequest struct {
-	PathParams  PricebyskuIDPathParams
-	QueryParams PricebyskuIDQueryParams
-	Headers     PricebyskuIDHeaders
-	ServerURL   *string
+	An          string `queryParam:"style=form,explode=true,name=an"`
+	SkuID       string `pathParam:"style=simple,explode=false,name=skuId"`
 }
 
 type PricebyskuIDResponse struct {

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type CreateANewCartQueryParams struct {
-	// Use this query parameter to create a new empty shopping cart.
-	ForceNewCart *bool `queryParam:"style=form,explode=true,name=forceNewCart"`
-}
-
-type CreateANewCartHeaders struct {
+type CreateANewCartRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CreateANewCartRequest struct {
-	QueryParams CreateANewCartQueryParams
-	Headers     CreateANewCartHeaders
+	// Use this query parameter to create a new empty shopping cart.
+	ForceNewCart *bool `queryParam:"style=form,explode=true,name=forceNewCart"`
 }
 
 type CreateANewCartResponse struct {

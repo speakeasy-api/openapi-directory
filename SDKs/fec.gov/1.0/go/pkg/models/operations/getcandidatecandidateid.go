@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCandidateCandidateIDPathParams struct {
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office.
-	//
-	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
-}
-
 type GetCandidateCandidateIDCandidateStatusEnum string
 
 const (
@@ -106,10 +99,14 @@ func (e *GetCandidateCandidateIDOfficeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCandidateCandidateIDQueryParams struct {
+type GetCandidateCandidateIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each candidate registered with the FEC.
+	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	//
+	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
 	// One-letter code explaining if the candidate is:
 	//         - C present candidate
 	//         - F future candidate
@@ -159,11 +156,6 @@ type GetCandidateCandidateIDQueryParams struct {
 	State []string `queryParam:"style=form,explode=true,name=state"`
 	// Retrieve records pertaining to a particular election year. The list of election years is based on a candidate filing a statement of candidacy (F2) for that year.
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCandidateCandidateIDRequest struct {
-	PathParams  GetCandidateCandidateIDPathParams
-	QueryParams GetCandidateCandidateIDQueryParams
 }
 
 type GetCandidateCandidateIDResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityDeleteThreadSubscriptionPathParams struct {
+type ActivityDeleteThreadSubscriptionRequest struct {
 	// The unique identifier of the notification thread. This corresponds to the value returned in the `id` field when you retrieve notifications (for example with the [`GET /notifications` operation](https://docs.github.com/enterprise-server@3.8/rest/reference/activity#list-notifications-for-the-authenticated-user)).
 	ThreadID int64 `pathParam:"style=simple,explode=false,name=thread_id"`
-}
-
-type ActivityDeleteThreadSubscriptionRequest struct {
-	PathParams ActivityDeleteThreadSubscriptionPathParams
 }
 
 type ActivityDeleteThreadSubscriptionResponse struct {

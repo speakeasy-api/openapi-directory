@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDExtendPathParams struct {
+type GetSpacesSpaceIDExtendRequest struct {
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDExtendRequest struct {
-	PathParams GetSpacesSpaceIDExtendPathParams
 }
 
 type GetSpacesSpaceIDExtend200ApplicationJSONTypeEnum string

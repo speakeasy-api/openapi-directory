@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAPIV2PredictionsIDPathParams struct {
+type GetAPIV2PredictionsIDRequest struct {
 	// ID of match
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV2PredictionsIDRequest struct {
-	PathParams GetAPIV2PredictionsIDPathParams
 }
 
 // GetAPIV2PredictionsID404ApplicationJSON - Bad request, check response for detailed errors.

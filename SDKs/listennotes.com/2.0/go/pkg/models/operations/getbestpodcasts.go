@@ -43,7 +43,9 @@ func (e *GetBestPodcastsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBestPodcastsQueryParams struct {
+type GetBestPodcastsRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// You can get the id from `GET /genres`. If not specified, it'll be the overall best podcasts, which can be considered as a special genre.
 	GenreID *string `queryParam:"style=form,explode=true,name=genre_id"`
 	// Filter best podcasts by language.
@@ -75,16 +77,6 @@ type GetBestPodcastsQueryParams struct {
 	// If you'd like to sort by popularity, please use **listen_score**.
 	//
 	Sort *GetBestPodcastsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetBestPodcastsHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetBestPodcastsRequest struct {
-	QueryParams GetBestPodcastsQueryParams
-	Headers     GetBestPodcastsHeaders
 }
 
 type GetBestPodcastsResponse struct {

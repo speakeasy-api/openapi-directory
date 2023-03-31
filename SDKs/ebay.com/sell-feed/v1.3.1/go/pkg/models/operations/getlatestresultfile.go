@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetLatestResultFileSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetLatestResultFilePathParams struct {
-	// The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
-	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetLatestResultFileRequest struct {
-	PathParams GetLatestResultFilePathParams
-	Security   GetLatestResultFileSecurity
+	// The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
+	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 
 type GetLatestResultFileResponse struct {

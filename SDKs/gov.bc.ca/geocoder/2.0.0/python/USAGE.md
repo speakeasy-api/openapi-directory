@@ -3,52 +3,46 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        apikey="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetAddressesOutputFormatRequest(
-    path_params=operations.GetAddressesOutputFormatPathParams(
-        output_format="gml",
-    ),
-    query_params=operations.GetAddressesOutputFormatQueryParams(
-        address_string="quia",
-        auto_complete=True,
-        bbox="sapiente",
-        brief=False,
-        centre="voluptatem",
-        civic_number="quia",
-        civic_number_suffix="inventore",
-        echo=False,
-        extrapolate=True,
-        interpolation="none",
-        localities="officia",
-        locality_name="ut",
-        location_descriptor="routingPoint",
-        match_precision="officiis",
-        match_precision_not="qui",
-        max_distance=47.200001,
-        max_results=5879687173104419379,
-        min_score=3085065235994805466,
-        not_localities="aut",
-        output_srs=2188229587528031884,
-        parcel_point="autem",
-        province_code="suscipit",
-        set_back=6312999475177175595,
-        site_name="saepe",
-        street_direction="NO",
-        street_name="labore",
-        street_qualifier="possimus",
-        street_type="qui",
-        unit_designator="UNIT",
-        unit_number="repudiandae",
-        unit_number_suffix="alias",
-    ),
+    address_string="corrupti",
+    auto_complete=False,
+    bbox="provident",
+    brief=False,
+    centre="distinctio",
+    civic_number="quibusdam",
+    civic_number_suffix="unde",
+    echo=False,
+    extrapolate=False,
+    interpolation="none",
+    localities="corrupti",
+    locality_name="illum",
+    location_descriptor="frontDoorPoint",
+    match_precision="error",
+    match_precision_not="deserunt",
+    max_distance=3843.82,
+    max_results=437587,
+    min_score=297534,
+    not_localities="debitis",
+    output_format="json",
+    output_srs="26911",
+    parcel_point="tempora",
+    province_code="suscipit",
+    set_back=477665,
+    site_name="minus",
+    street_direction="SE",
+    street_name="voluptatum",
+    street_qualifier="iusto",
+    street_type="excepturi",
+    unit_designator="PAD",
+    unit_number="recusandae",
+    unit_number_suffix="temporibus",
 )
     
 res = s.intersections.get_addresses_output_format_(req)

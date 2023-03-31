@@ -8,10 +8,10 @@ import (
 )
 
 type GetMeFollowingsTracksSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type GetMeFollowingsTracksQueryParams struct {
+type GetMeFollowingsTracksRequest struct {
 	// Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
 	//
 	Access []shared.AccessEnum `queryParam:"style=form,explode=false,name=access"`
@@ -19,11 +19,6 @@ type GetMeFollowingsTracksQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetMeFollowingsTracksRequest struct {
-	QueryParams GetMeFollowingsTracksQueryParams
-	Security    GetMeFollowingsTracksSecurity
 }
 
 type GetMeFollowingsTracksResponse struct {

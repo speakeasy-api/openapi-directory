@@ -34,5 +34,4 @@ pkg/models/shared/auditrefs.go
 pkg/models/shared/lighthouseauditresultv5.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

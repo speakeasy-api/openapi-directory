@@ -34,11 +34,11 @@ func newVideos(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AddVideoCollectionItems - Add videos to collections
 // This endpoint adds one or more videos to a collection by video IDs.
-func (s *videos) AddVideoCollectionItems(ctx context.Context, request operations.AddVideoCollectionItemsRequest) (*operations.AddVideoCollectionItemsResponse, error) {
+func (s *videos) AddVideoCollectionItems(ctx context.Context, request operations.AddVideoCollectionItemsRequest, security operations.AddVideoCollectionItemsSecurity) (*operations.AddVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *videos) AddVideoCollectionItems(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *videos) AddVideoCollectionItems(ctx context.Context, request operations
 
 // CreateVideoCollection - Create video collections
 // This endpoint creates one or more collections (clipboxes). To add videos to collections, use `POST /v2/videos/collections/{id}/items`.
-func (s *videos) CreateVideoCollection(ctx context.Context, request operations.CreateVideoCollectionRequest) (*operations.CreateVideoCollectionResponse, error) {
+func (s *videos) CreateVideoCollection(ctx context.Context, request shared.CollectionCreateRequest, security operations.CreateVideoCollectionSecurity) (*operations.CreateVideoCollectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/collections"
 
@@ -107,7 +107,7 @@ func (s *videos) CreateVideoCollection(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,16 +148,16 @@ func (s *videos) CreateVideoCollection(ctx context.Context, request operations.C
 
 // DeleteVideoCollection - Delete video collections
 // This endpoint deletes a collection.
-func (s *videos) DeleteVideoCollection(ctx context.Context, request operations.DeleteVideoCollectionRequest) (*operations.DeleteVideoCollectionResponse, error) {
+func (s *videos) DeleteVideoCollection(ctx context.Context, request operations.DeleteVideoCollectionRequest, security operations.DeleteVideoCollectionSecurity) (*operations.DeleteVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,20 +192,20 @@ func (s *videos) DeleteVideoCollection(ctx context.Context, request operations.D
 
 // DeleteVideoCollectionItems - Remove videos from collections
 // This endpoint removes one or more videos from a collection.
-func (s *videos) DeleteVideoCollectionItems(ctx context.Context, request operations.DeleteVideoCollectionItemsRequest) (*operations.DeleteVideoCollectionItemsResponse, error) {
+func (s *videos) DeleteVideoCollectionItems(ctx context.Context, request operations.DeleteVideoCollectionItemsRequest, security operations.DeleteVideoCollectionItemsSecurity) (*operations.DeleteVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,11 +240,11 @@ func (s *videos) DeleteVideoCollectionItems(ctx context.Context, request operati
 
 // DownloadVideos - Download videos
 // This endpoint redownloads videos that you have already received a license for.
-func (s *videos) DownloadVideos(ctx context.Context, request operations.DownloadVideosRequest) (*operations.DownloadVideosResponse, error) {
+func (s *videos) DownloadVideos(ctx context.Context, request operations.DownloadVideosRequest, security operations.DownloadVideosSecurity) (*operations.DownloadVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/licenses/{id}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/licenses/{id}/downloads", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RedownloadVideo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -259,7 +259,7 @@ func (s *videos) DownloadVideos(ctx context.Context, request operations.Download
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,20 +300,20 @@ func (s *videos) DownloadVideos(ctx context.Context, request operations.Download
 
 // FindSimilarVideos - List similar videos
 // This endpoint searches for videos that are similar to a video that you specify.
-func (s *videos) FindSimilarVideos(ctx context.Context, request operations.FindSimilarVideosRequest) (*operations.FindSimilarVideosResponse, error) {
+func (s *videos) FindSimilarVideos(ctx context.Context, request operations.FindSimilarVideosRequest, security operations.FindSimilarVideosSecurity) (*operations.FindSimilarVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}/similar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}/similar", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -354,20 +354,20 @@ func (s *videos) FindSimilarVideos(ctx context.Context, request operations.FindS
 
 // GetFeaturedVideoCollection - Get the details of featured video collections
 // This endpoint gets more detailed information about a featured video collection, including its cover video and timestamps for its creation and most recent update. To get the videos, use `GET /v2/videos/collections/featured/{id}/items`.
-func (s *videos) GetFeaturedVideoCollection(ctx context.Context, request operations.GetFeaturedVideoCollectionRequest) (*operations.GetFeaturedVideoCollectionResponse, error) {
+func (s *videos) GetFeaturedVideoCollection(ctx context.Context, request operations.GetFeaturedVideoCollectionRequest, security operations.GetFeaturedVideoCollectionSecurity) (*operations.GetFeaturedVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,20 +410,20 @@ func (s *videos) GetFeaturedVideoCollection(ctx context.Context, request operati
 
 // GetFeaturedVideoCollectionItems - Get the contents of featured video collections
 // This endpoint lists the IDs of videos in a featured collection and the date that each was added.
-func (s *videos) GetFeaturedVideoCollectionItems(ctx context.Context, request operations.GetFeaturedVideoCollectionItemsRequest) (*operations.GetFeaturedVideoCollectionItemsResponse, error) {
+func (s *videos) GetFeaturedVideoCollectionItems(ctx context.Context, request operations.GetFeaturedVideoCollectionItemsRequest, security operations.GetFeaturedVideoCollectionItemsSecurity) (*operations.GetFeaturedVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -466,7 +466,7 @@ func (s *videos) GetFeaturedVideoCollectionItems(ctx context.Context, request op
 
 // GetFeaturedVideoCollectionList - List featured video collections
 // This endpoint lists featured video collections and a name and cover video for each collection.
-func (s *videos) GetFeaturedVideoCollectionList(ctx context.Context, request operations.GetFeaturedVideoCollectionListRequest) (*operations.GetFeaturedVideoCollectionListResponse, error) {
+func (s *videos) GetFeaturedVideoCollectionList(ctx context.Context, request operations.GetFeaturedVideoCollectionListRequest, security operations.GetFeaturedVideoCollectionListSecurity) (*operations.GetFeaturedVideoCollectionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/collections/featured"
 
@@ -475,11 +475,11 @@ func (s *videos) GetFeaturedVideoCollectionList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -520,7 +520,7 @@ func (s *videos) GetFeaturedVideoCollectionList(ctx context.Context, request ope
 
 // GetUpdatedVideos - List updated videos
 // This endpoint lists videos that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the `interval` parameter to show videos that were updated recently, but you can also use the `start_date` and `end_date` parameters to specify a range of no more than three days. Do not use the `interval` parameter with either `start_date` or `end_date`.
-func (s *videos) GetUpdatedVideos(ctx context.Context, request operations.GetUpdatedVideosRequest) (*operations.GetUpdatedVideosResponse, error) {
+func (s *videos) GetUpdatedVideos(ctx context.Context, request operations.GetUpdatedVideosRequest, security operations.GetUpdatedVideosSecurity) (*operations.GetUpdatedVideosResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/updated"
 
@@ -529,11 +529,11 @@ func (s *videos) GetUpdatedVideos(ctx context.Context, request operations.GetUpd
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -569,20 +569,20 @@ func (s *videos) GetUpdatedVideos(ctx context.Context, request operations.GetUpd
 
 // GetVideo - Get details about videos
 // This endpoint shows information about a video, including URLs to previews and the sizes that it is available in.
-func (s *videos) GetVideo(ctx context.Context, request operations.GetVideoRequest) (*operations.GetVideoResponse, error) {
+func (s *videos) GetVideo(ctx context.Context, request operations.GetVideoRequest, security operations.GetVideoSecurity) (*operations.GetVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -625,20 +625,20 @@ func (s *videos) GetVideo(ctx context.Context, request operations.GetVideoReques
 
 // GetVideoCollection - Get the details of video collections
 // This endpoint gets more detailed information about a collection, including the timestamp for its creation and the number of videos in it. To get the videos in collections, use GET /v2/videos/collections/{id}/items.
-func (s *videos) GetVideoCollection(ctx context.Context, request operations.GetVideoCollectionRequest) (*operations.GetVideoCollectionResponse, error) {
+func (s *videos) GetVideoCollection(ctx context.Context, request operations.GetVideoCollectionRequest, security operations.GetVideoCollectionSecurity) (*operations.GetVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -681,20 +681,20 @@ func (s *videos) GetVideoCollection(ctx context.Context, request operations.GetV
 
 // GetVideoCollectionItems - Get the contents of video collections
 // This endpoint lists the IDs of videos in a collection and the date that each was added.
-func (s *videos) GetVideoCollectionItems(ctx context.Context, request operations.GetVideoCollectionItemsRequest) (*operations.GetVideoCollectionItemsResponse, error) {
+func (s *videos) GetVideoCollectionItems(ctx context.Context, request operations.GetVideoCollectionItemsRequest, security operations.GetVideoCollectionItemsSecurity) (*operations.GetVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -737,7 +737,7 @@ func (s *videos) GetVideoCollectionItems(ctx context.Context, request operations
 
 // GetVideoCollectionList - List video collections
 // This endpoint lists your collections of videos and their basic attributes.
-func (s *videos) GetVideoCollectionList(ctx context.Context, request operations.GetVideoCollectionListRequest) (*operations.GetVideoCollectionListResponse, error) {
+func (s *videos) GetVideoCollectionList(ctx context.Context, request operations.GetVideoCollectionListRequest, security operations.GetVideoCollectionListSecurity) (*operations.GetVideoCollectionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/collections"
 
@@ -746,11 +746,11 @@ func (s *videos) GetVideoCollectionList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -791,7 +791,7 @@ func (s *videos) GetVideoCollectionList(ctx context.Context, request operations.
 
 // GetVideoLicenseList - List video licenses
 // This endpoint lists existing licenses.
-func (s *videos) GetVideoLicenseList(ctx context.Context, request operations.GetVideoLicenseListRequest) (*operations.GetVideoLicenseListResponse, error) {
+func (s *videos) GetVideoLicenseList(ctx context.Context, request operations.GetVideoLicenseListRequest, security operations.GetVideoLicenseListSecurity) (*operations.GetVideoLicenseListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/licenses"
 
@@ -800,11 +800,11 @@ func (s *videos) GetVideoLicenseList(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -845,7 +845,7 @@ func (s *videos) GetVideoLicenseList(ctx context.Context, request operations.Get
 
 // GetVideoList - List videos
 // This endpoint lists information about one or more videos, including the aspect ratio and URLs to previews.
-func (s *videos) GetVideoList(ctx context.Context, request operations.GetVideoListRequest) (*operations.GetVideoListResponse, error) {
+func (s *videos) GetVideoList(ctx context.Context, request operations.GetVideoListRequest, security operations.GetVideoListSecurity) (*operations.GetVideoListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos"
 
@@ -854,11 +854,11 @@ func (s *videos) GetVideoList(ctx context.Context, request operations.GetVideoLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -899,7 +899,7 @@ func (s *videos) GetVideoList(ctx context.Context, request operations.GetVideoLi
 
 // GetVideoSuggestions - Get suggestions for a search term
 // This endpoint provides autocomplete suggestions for partial search terms.
-func (s *videos) GetVideoSuggestions(ctx context.Context, request operations.GetVideoSuggestionsRequest) (*operations.GetVideoSuggestionsResponse, error) {
+func (s *videos) GetVideoSuggestions(ctx context.Context, request operations.GetVideoSuggestionsRequest, security operations.GetVideoSuggestionsSecurity) (*operations.GetVideoSuggestionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/search/suggestions"
 
@@ -908,11 +908,11 @@ func (s *videos) GetVideoSuggestions(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -953,11 +953,11 @@ func (s *videos) GetVideoSuggestions(ctx context.Context, request operations.Get
 
 // LicenseVideos - License videos
 // This endpoint gets licenses for one or more videos. You must specify the video IDs in the body parameter and the size and subscription ID either in the query parameter or with each video ID in the body parameter. Values in the body parameter override values in the query parameters. The download links in the response are valid for 8 hours.
-func (s *videos) LicenseVideos(ctx context.Context, request operations.LicenseVideosRequest) (*operations.LicenseVideosResponse, error) {
+func (s *videos) LicenseVideos(ctx context.Context, request operations.LicenseVideosRequest, security operations.LicenseVideosSecurity) (*operations.LicenseVideosResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/licenses"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseVideoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -972,11 +972,11 @@ func (s *videos) LicenseVideos(ctx context.Context, request operations.LicenseVi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1017,7 +1017,7 @@ func (s *videos) LicenseVideos(ctx context.Context, request operations.LicenseVi
 
 // ListVideoCategories - List video categories
 // This endpoint lists the categories (Shutterstock-assigned genres) that videos can belong to.
-func (s *videos) ListVideoCategories(ctx context.Context, request operations.ListVideoCategoriesRequest) (*operations.ListVideoCategoriesResponse, error) {
+func (s *videos) ListVideoCategories(ctx context.Context, request operations.ListVideoCategoriesRequest, security operations.ListVideoCategoriesSecurity) (*operations.ListVideoCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/categories"
 
@@ -1026,11 +1026,11 @@ func (s *videos) ListVideoCategories(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1071,11 +1071,11 @@ func (s *videos) ListVideoCategories(ctx context.Context, request operations.Lis
 
 // RenameVideoCollection - Rename video collections
 // This endpoint sets a new name for a collection.
-func (s *videos) RenameVideoCollection(ctx context.Context, request operations.RenameVideoCollectionRequest) (*operations.RenameVideoCollectionResponse, error) {
+func (s *videos) RenameVideoCollection(ctx context.Context, request operations.RenameVideoCollectionRequest, security operations.RenameVideoCollectionSecurity) (*operations.RenameVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1090,7 +1090,7 @@ func (s *videos) RenameVideoCollection(ctx context.Context, request operations.R
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1125,7 +1125,7 @@ func (s *videos) RenameVideoCollection(ctx context.Context, request operations.R
 
 // SearchVideos - Search for videos
 // This endpoint searches for videos. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
-func (s *videos) SearchVideos(ctx context.Context, request operations.SearchVideosRequest) (*operations.SearchVideosResponse, error) {
+func (s *videos) SearchVideos(ctx context.Context, request operations.SearchVideosRequest, security operations.SearchVideosSecurity) (*operations.SearchVideosResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/videos/search"
 
@@ -1134,11 +1134,11 @@ func (s *videos) SearchVideos(ctx context.Context, request operations.SearchVide
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

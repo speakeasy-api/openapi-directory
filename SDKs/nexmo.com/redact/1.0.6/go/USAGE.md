@@ -13,22 +13,17 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.RedactMessageRequest{
-        Security: operations.RedactMessageSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: shared.RedactTransaction{
-            ID: "209ab3c7536542b91e8b5aef032f6861",
-            Product: "sms",
-            Type: "outbound",
-        },
+    req := shared.RedactTransaction{
+        ID: "209ab3c7536542b91e8b5aef032f6861",
+        Product: "sms",
+        Type: "outbound",
     }
 
     ctx := context.Background()
-    res, err := s.RedactMessage(ctx, req)
+    res, err := s.RedactMessage(ctx, req, operations.RedactMessageSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

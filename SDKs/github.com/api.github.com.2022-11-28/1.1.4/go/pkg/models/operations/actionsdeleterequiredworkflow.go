@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteRequiredWorkflowPathParams struct {
+type ActionsDeleteRequiredWorkflowRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the required workflow.
 	RequiredWorkflowID int64 `pathParam:"style=simple,explode=false,name=required_workflow_id"`
-}
-
-type ActionsDeleteRequiredWorkflowRequest struct {
-	PathParams ActionsDeleteRequiredWorkflowPathParams
 }
 
 type ActionsDeleteRequiredWorkflowResponse struct {

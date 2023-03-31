@@ -10,31 +10,24 @@ import (
 )
 
 type StorageObjectsComposeSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsComposeSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsComposeSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsComposeSecurity struct {
 	Option1 *StorageObjectsComposeSecurityOption1 `security:"option"`
 	Option2 *StorageObjectsComposeSecurityOption2 `security:"option"`
 	Option3 *StorageObjectsComposeSecurityOption3 `security:"option"`
-}
-
-type StorageObjectsComposePathParams struct {
-	// Name of the bucket containing the source objects. The destination object is stored in this bucket.
-	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
-	// Name of the new object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
 }
 
 // StorageObjectsComposeDestinationPredefinedACLEnum - Apply a predefined set of access controls to the destination object.
@@ -73,9 +66,14 @@ func (e *StorageObjectsComposeDestinationPredefinedACLEnum) UnmarshalJSON(data [
 	}
 }
 
-type StorageObjectsComposeQueryParams struct {
+type StorageObjectsComposeRequest struct {
+	ComposeRequest *shared.ComposeRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket containing the source objects. The destination object is stored in this bucket.
+	DestinationBucket string `pathParam:"style=simple,explode=false,name=destinationBucket"`
+	// Name of the new object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	DestinationObject string `pathParam:"style=simple,explode=false,name=destinationObject"`
 	// Apply a predefined set of access controls to the destination object.
 	DestinationPredefinedACL *StorageObjectsComposeDestinationPredefinedACLEnum `queryParam:"style=form,explode=true,name=destinationPredefinedAcl"`
 	// Selector specifying which fields to include in a partial response.
@@ -100,13 +98,6 @@ type StorageObjectsComposeQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectsComposeRequest struct {
-	PathParams  StorageObjectsComposePathParams
-	QueryParams StorageObjectsComposeQueryParams
-	Request     *shared.ComposeRequest `request:"mediaType=application/json"`
-	Security    StorageObjectsComposeSecurity
 }
 
 type StorageObjectsComposeResponse struct {

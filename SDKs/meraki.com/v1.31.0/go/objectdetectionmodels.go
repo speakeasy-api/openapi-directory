@@ -34,7 +34,7 @@ func newObjectDetectionModels(defaultClient, securityClient HTTPClient, serverUR
 // Returns the MV Sense object detection model list for the given camera
 func (s *objectDetectionModels) GetDeviceCameraSenseObjectDetectionModels(ctx context.Context, request operations.GetDeviceCameraSenseObjectDetectionModelsRequest) (*operations.GetDeviceCameraSenseObjectDetectionModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

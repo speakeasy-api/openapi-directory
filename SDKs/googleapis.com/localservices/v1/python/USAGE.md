@@ -4,41 +4,35 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.LocalservicesAccountReportsSearchRequest(
-    security=operations.LocalservicesAccountReportsSearchSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.LocalservicesAccountReportsSearchQueryParams(
-        dollar_xgafv="2",
-        access_token="ut",
-        alt="proto",
-        callback="minus",
-        end_date_day=2174189967349636921,
-        end_date_month=2614976778224928657,
-        end_date_year=6409889644823244839,
-        fields="quibusdam",
-        key="earum",
-        oauth_token="doloribus",
-        page_size=8887480854894973121,
-        page_token="saepe",
-        pretty_print=True,
-        query="et",
-        quota_user="est",
-        start_date_day=262930248101285882,
-        start_date_month=3776309695126930956,
-        start_date_year=2941842075518753716,
-        upload_type="aliquam",
-        upload_protocol="sequi",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    end_date_day=602763,
+    end_date_month=857946,
+    end_date_year=544883,
+    fields_="illum",
+    key="vel",
+    oauth_token="error",
+    page_size=645894,
+    page_token="suscipit",
+    pretty_print=False,
+    query="iure",
+    quota_user="magnam",
+    start_date_day=891773,
+    start_date_month=56713,
+    start_date_year=963663,
+    upload_type="tempora",
+    upload_protocol="suscipit",
 )
     
-res = s.account_reports.localservices_account_reports_search(req)
+res = s.account_reports.localservices_account_reports_search(req, operations.LocalservicesAccountReportsSearchSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_ads_homeservices_localservices_v1_search_account_reports_response is not None:
     # handle response

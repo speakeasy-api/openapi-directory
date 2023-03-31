@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContinuousProjectFileStringsPathParams struct {
+type PostContinuousProjectFileStringsRequest struct {
+	ContinuousProjectDocumentStringsBody *shared.ContinuousProjectDocumentStringsBody `request:"mediaType=application/json"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PostContinuousProjectFileStringsRequest struct {
-	PathParams PostContinuousProjectFileStringsPathParams
-	Request    *shared.ContinuousProjectDocumentStringsBody `request:"mediaType=application/json"`
 }
 
 type PostContinuousProjectFileStringsResponse struct {

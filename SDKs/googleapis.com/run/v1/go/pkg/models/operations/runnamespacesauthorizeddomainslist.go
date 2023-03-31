@@ -8,16 +8,11 @@ import (
 )
 
 type RunNamespacesAuthorizeddomainsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunNamespacesAuthorizeddomainsListPathParams struct {
-	// Name of the parent Project resource. Example: `projects/myproject`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RunNamespacesAuthorizeddomainsListQueryParams struct {
+type RunNamespacesAuthorizeddomainsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RunNamespacesAuthorizeddomainsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Continuation token for fetching the next page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Name of the parent Project resource. Example: `projects/myproject`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type RunNamespacesAuthorizeddomainsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunNamespacesAuthorizeddomainsListRequest struct {
-	PathParams  RunNamespacesAuthorizeddomainsListPathParams
-	QueryParams RunNamespacesAuthorizeddomainsListQueryParams
-	Security    RunNamespacesAuthorizeddomainsListSecurity
 }
 
 type RunNamespacesAuthorizeddomainsListResponse struct {

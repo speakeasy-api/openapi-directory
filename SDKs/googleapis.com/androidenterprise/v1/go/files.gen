@@ -105,7 +105,6 @@ pkg/models/operations/androidenterprisewebappslist.go
 pkg/models/operations/androidenterprisewebappsupdate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/device.go
 pkg/models/shared/devicereport.go
 pkg/models/shared/appstate.go

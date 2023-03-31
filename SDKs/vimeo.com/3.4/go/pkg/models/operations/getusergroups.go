@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserGroupsPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetUserGroupsDirectionEnum - The sort direction of the results.
 type GetUserGroupsDirectionEnum string
 
@@ -89,7 +84,7 @@ func (e *GetUserGroupsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserGroupsQueryParams struct {
+type GetUserGroupsRequest struct {
 	// The sort direction of the results.
 	Direction *GetUserGroupsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -102,11 +97,8 @@ type GetUserGroupsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetUserGroupsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUserGroupsRequest struct {
-	PathParams  GetUserGroupsPathParams
-	QueryParams GetUserGroupsQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUserGroupsResponse struct {

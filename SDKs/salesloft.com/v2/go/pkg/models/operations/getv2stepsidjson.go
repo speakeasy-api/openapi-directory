@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2StepsIDJSONPathParams struct {
+type GetV2StepsIDJSONRequest struct {
 	// Step ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2StepsIDJSONRequest struct {
-	PathParams GetV2StepsIDJSONPathParams
 }
 
 type GetV2StepsIDJSONResponse struct {

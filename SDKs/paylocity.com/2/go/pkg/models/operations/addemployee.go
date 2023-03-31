@@ -8,19 +8,14 @@ import (
 )
 
 type AddEmployeeSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
-}
-
-type AddEmployeePathParams struct {
-	// Company Id
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddEmployeeRequest struct {
-	PathParams AddEmployeePathParams
+	// Company Id
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Model
-	Request  shared.Employee `request:"mediaType=application/json"`
-	Security AddEmployeeSecurity
+	Employee shared.Employee `request:"mediaType=application/json"`
 }
 
 type AddEmployeeResponse struct {

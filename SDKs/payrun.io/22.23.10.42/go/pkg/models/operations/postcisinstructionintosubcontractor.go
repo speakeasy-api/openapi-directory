@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCisInstructionIntoSubContractorPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The sub contractors' unique identifier. E.g SUB001
-	SubContractorID string `pathParam:"style=simple,explode=false,name=SubContractorId"`
-}
-
-type PostCisInstructionIntoSubContractorHeaders struct {
+type PostCisInstructionIntoSubContractorRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostCisInstructionIntoSubContractorRequest struct {
-	PathParams PostCisInstructionIntoSubContractorPathParams
-	Headers    PostCisInstructionIntoSubContractorHeaders
 	// The CIS instruction object.
-	Request shared.CisInstruction `request:"mediaType=application/json"`
+	CisInstruction shared.CisInstruction `request:"mediaType=application/json"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The sub contractors' unique identifier. E.g SUB001
+	SubContractorID string `pathParam:"style=simple,explode=false,name=SubContractorId"`
 }
 
 type PostCisInstructionIntoSubContractorResponse struct {

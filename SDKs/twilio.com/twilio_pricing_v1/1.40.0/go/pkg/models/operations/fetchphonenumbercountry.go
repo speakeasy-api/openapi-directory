@@ -12,18 +12,13 @@ var FetchPhoneNumberCountryServerList = []string{
 }
 
 type FetchPhoneNumberCountrySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchPhoneNumberCountryPathParams struct {
-	// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
-	IsoCountry string `pathParam:"style=simple,explode=false,name=IsoCountry"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchPhoneNumberCountryRequest struct {
-	PathParams FetchPhoneNumberCountryPathParams
-	Security   FetchPhoneNumberCountrySecurity
-	ServerURL  *string
+	// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
+	IsoCountry string `pathParam:"style=simple,explode=false,name=IsoCountry"`
 }
 
 type FetchPhoneNumberCountryResponse struct {

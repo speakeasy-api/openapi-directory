@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PUTSuspendSubscriptionPathParams struct {
-	// Subscription number or ID. Subscription status must be Active.
-	SubscriptionKey string `pathParam:"style=simple,explode=false,name=subscription-key"`
-}
-
-type PUTSuspendSubscriptionHeaders struct {
+type PUTSuspendSubscriptionRequest struct {
+	PUTSubscriptionSuspendType shared.PUTSubscriptionSuspendType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -21,6 +17,8 @@ type PUTSuspendSubscriptionHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
+	// Subscription number or ID. Subscription status must be Active.
+	SubscriptionKey string `pathParam:"style=simple,explode=false,name=subscription-key"`
 	// The minor version of the Zuora REST API.
 	//
 	// You only need to set this parameter if you use the following fields:
@@ -30,12 +28,6 @@ type PUTSuspendSubscriptionHeaders struct {
 	// * targetDate
 	//
 	ZuoraVersion *string `header:"style=simple,explode=false,name=zuora-version"`
-}
-
-type PUTSuspendSubscriptionRequest struct {
-	PathParams PUTSuspendSubscriptionPathParams
-	Headers    PUTSuspendSubscriptionHeaders
-	Request    shared.PUTSubscriptionSuspendType `request:"mediaType=application/json"`
 }
 
 type PUTSuspendSubscriptionResponse struct {

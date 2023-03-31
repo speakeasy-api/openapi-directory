@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteGroupsGroupIDMembershipsUserIDPathParams struct {
+type DeleteGroupsGroupIDMembershipsUserIDRequest struct {
 	// Group ID from which to remove user.
 	GroupID int `pathParam:"style=simple,explode=false,name=group_id"`
 	// User ID to remove from group.
 	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type DeleteGroupsGroupIDMembershipsUserIDRequest struct {
-	PathParams DeleteGroupsGroupIDMembershipsUserIDPathParams
 }
 
 type DeleteGroupsGroupIDMembershipsUserIDResponse struct {

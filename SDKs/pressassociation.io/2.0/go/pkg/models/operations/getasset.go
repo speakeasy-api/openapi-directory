@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAssetSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAssetPathParams struct {
-	// A asset ID filter for the schedule collection. This can be a reference to any type of asset i.e. movie, season, series or episode.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-}
-
-type GetAssetQueryParams struct {
-	// Flag to display Legacy and Provider Ids.
-	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetAssetRequest struct {
-	PathParams  GetAssetPathParams
-	QueryParams GetAssetQueryParams
-	Security    GetAssetSecurity
+	// Flag to display Legacy and Provider Ids.
+	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	// A asset ID filter for the schedule collection. This can be a reference to any type of asset i.e. movie, season, series or episode.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
 }
 
 type GetAssetResponse struct {

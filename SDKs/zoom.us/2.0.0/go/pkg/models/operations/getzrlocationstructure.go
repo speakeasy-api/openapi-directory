@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetZRLocationStructureSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetZRLocationStructureRequest struct {
-	Security GetZRLocationStructureSecurity
-}
 
 // GetZRLocationStructure200ApplicationXML - **HTTP Status Code:** `200` **OK**<br>
 // Zoom Rooms location structure returned successfully.<br>

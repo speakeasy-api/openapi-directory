@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteDataExporterConfigSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDataExporterConfigPathParams struct {
-	// The data exporter config id
-	DataExporterConfigID string `pathParam:"style=simple,explode=false,name=dataExporterConfigId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteDataExporterConfigRequest struct {
-	PathParams DeleteDataExporterConfigPathParams
-	Security   DeleteDataExporterConfigSecurity
+	// The data exporter config id
+	DataExporterConfigID string `pathParam:"style=simple,explode=false,name=dataExporterConfigId"`
 }
 
 type DeleteDataExporterConfigResponse struct {

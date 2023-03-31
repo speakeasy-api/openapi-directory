@@ -7,31 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetActionsCacheListPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsGetActionsCacheListQueryParams struct {
+type ActionsGetActionsCacheListRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// An explicit key or prefix for identifying the cache
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes.
 	Sort *shared.ActionsCacheListSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ActionsGetActionsCacheListRequest struct {
-	PathParams  ActionsGetActionsCacheListPathParams
-	QueryParams ActionsGetActionsCacheListQueryParams
 }
 
 type ActionsGetActionsCacheListResponse struct {

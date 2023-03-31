@@ -34,7 +34,7 @@ func newReport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GenerateQAReport - Generate a QA report for given filter
 // Generate a QA report for given filter
-func (s *report) GenerateQAReport(ctx context.Context, request operations.GenerateQAReportRequest) (*operations.GenerateQAReportResponse, error) {
+func (s *report) GenerateQAReport(ctx context.Context, request shared.QaFilter) (*operations.GenerateQAReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/qa"
 
@@ -95,7 +95,7 @@ func (s *report) GenerateQAReport(ctx context.Context, request operations.Genera
 }
 
 // GetFilterContents - Returns available options for selected timeframe.
-func (s *report) GetFilterContents(ctx context.Context, request operations.GetFilterContentsRequest) (*operations.GetFilterContentsResponse, error) {
+func (s *report) GetFilterContents(ctx context.Context, request shared.FilterDates) (*operations.GetFilterContentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/filter"
 
@@ -157,7 +157,7 @@ func (s *report) GetFilterContents(ctx context.Context, request operations.GetFi
 
 // GetLanguagePairsReport - Language pairs report
 // View translation reports for each language pair with translations under your account. You can view company-wide language pairs if you have the user permission.
-func (s *report) GetLanguagePairsReport(ctx context.Context, request operations.GetLanguagePairsReportRequest) (*operations.GetLanguagePairsReportResponse, error) {
+func (s *report) GetLanguagePairsReport(ctx context.Context, request shared.ReportFilter) (*operations.GetLanguagePairsReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/language-pairs"
 
@@ -219,7 +219,7 @@ func (s *report) GetLanguagePairsReport(ctx context.Context, request operations.
 
 // GetProjectsReport - Projects report
 // View projects under your account, with advanced filtering. You can view company-wide projects if you have the user permission.
-func (s *report) GetProjectsReport(ctx context.Context, request operations.GetProjectsReportRequest) (*operations.GetProjectsReportResponse, error) {
+func (s *report) GetProjectsReport(ctx context.Context, request shared.ReportFilter) (*operations.GetProjectsReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/projects"
 
@@ -281,7 +281,7 @@ func (s *report) GetProjectsReport(ctx context.Context, request operations.GetPr
 
 // GetUsersReport - Company users report
 // View translation reports for each user under your company account. You need the permission to view users in your company.
-func (s *report) GetUsersReport(ctx context.Context, request operations.GetUsersReportRequest) (*operations.GetUsersReportResponse, error) {
+func (s *report) GetUsersReport(ctx context.Context, request shared.ReportFilter) (*operations.GetUsersReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/users"
 

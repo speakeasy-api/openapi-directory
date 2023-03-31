@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type GetPhenotypeGeneByTaxonAssociationsPathParams struct {
-	// Pheno class CURIE identifier, e.g  MP:0001569 (abnormal circulating bilirubin level)
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
-	Taxid string `pathParam:"style=simple,explode=false,name=taxid"`
-}
-
-type GetPhenotypeGeneByTaxonAssociationsQueryParams struct {
+type GetPhenotypeGeneByTaxonAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
@@ -26,21 +19,20 @@ type GetPhenotypeGeneByTaxonAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// Pheno class CURIE identifier, e.g  MP:0001569 (abnormal circulating bilirubin level)
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// number of rows
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
 	Slim []string `queryParam:"style=form,explode=true,name=slim"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	// Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
+	Taxid string `pathParam:"style=simple,explode=false,name=taxid"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetPhenotypeGeneByTaxonAssociationsRequest struct {
-	PathParams  GetPhenotypeGeneByTaxonAssociationsPathParams
-	QueryParams GetPhenotypeGeneByTaxonAssociationsQueryParams
 }
 
 type GetPhenotypeGeneByTaxonAssociationsResponse struct {

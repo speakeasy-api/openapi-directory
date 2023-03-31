@@ -14,68 +14,66 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateItemDraftRequest{
-        Security: operations.CreateItemDraftSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateItemDraftHeaders{
-            ContentLanguage: "corrupti",
-            XEbayCMarketplaceID: "provident",
-        },
-        Request: &shared.ItemDraft{
-            CategoryID: "distinctio",
+        ContentLanguage: "corrupti",
+        ItemDraft: &shared.ItemDraft{
+            CategoryID: "provident",
             Charity: &shared.Charity{
-                CharityID: "quibusdam",
-                DonationPercentage: "unde",
+                CharityID: "distinctio",
+                DonationPercentage: "quibusdam",
             },
-            Condition: "nulla",
-            Format: "corrupti",
+            Condition: "unde",
+            Format: "nulla",
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "illum",
-                    Value: "vel",
+                    Currency: "corrupti",
+                    Value: "illum",
                 },
                 AuctionStartPrice: &shared.Amount{
-                    Currency: "error",
-                    Value: "deserunt",
+                    Currency: "vel",
+                    Value: "error",
                 },
                 Price: &shared.Amount{
-                    Currency: "suscipit",
-                    Value: "iure",
+                    Currency: "deserunt",
+                    Value: "suscipit",
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "debitis",
+                        Name: "magnam",
                         Values: []string{
+                            "ipsa",
                             "delectus",
+                            "tempora",
+                            "suscipit",
                         },
                     },
                     shared.Aspect{
-                        Name: "tempora",
+                        Name: "molestiae",
                         Values: []string{
-                            "molestiae",
-                            "minus",
+                            "placeat",
+                            "voluptatum",
+                            "iusto",
+                            "excepturi",
                         },
                     },
                 },
-                Brand: "placeat",
-                Description: "voluptatum",
-                Epid: "iusto",
+                Brand: "nisi",
+                Description: "recusandae",
+                Epid: "temporibus",
                 ImageUrls: []string{
-                    "nisi",
-                    "recusandae",
-                    "temporibus",
+                    "quis",
                 },
                 Title: "Mr.",
             },
         },
+        XEbayCMarketplaceID: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.ItemDraft.CreateItemDraft(ctx, req)
+    res, err := s.ItemDraft.CreateItemDraft(ctx, req, operations.CreateItemDraftSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

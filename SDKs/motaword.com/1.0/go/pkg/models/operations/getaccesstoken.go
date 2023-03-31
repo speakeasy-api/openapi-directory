@@ -8,12 +8,8 @@ import (
 )
 
 type GetAccessTokenSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAccessTokenRequest struct {
-	Request  *shared.TokenRequest `request:"mediaType=application/json"`
-	Security GetAccessTokenSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetAccessTokenResponse struct {

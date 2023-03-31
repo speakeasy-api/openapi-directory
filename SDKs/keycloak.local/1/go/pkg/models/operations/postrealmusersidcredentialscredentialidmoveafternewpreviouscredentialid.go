@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDPathParams struct {
+type PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDRequest struct {
 	// The credential to move
 	CredentialID string `pathParam:"style=simple,explode=false,name=credentialId"`
 	// User id
@@ -15,10 +15,6 @@ type PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDPath
 	NewPreviousCredentialID string `pathParam:"style=simple,explode=false,name=newPreviousCredentialId"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDRequest struct {
-	PathParams PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDPathParams
 }
 
 type PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDResponse struct {

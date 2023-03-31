@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetStripeGatewayUserUserIDCardsPathParams struct {
+type GetStripeGatewayUserUserIDCardsRequest struct {
 	// The id of the user requesting their credit cards
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetStripeGatewayUserUserIDCardsRequest struct {
-	PathParams GetStripeGatewayUserUserIDCardsPathParams
 }
 
 type GetStripeGatewayUserUserIDCardsResponse struct {

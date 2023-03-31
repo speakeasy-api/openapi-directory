@@ -8,18 +8,18 @@ import (
 )
 
 type ReplicapoolPoolsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsInsertSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsInsertSecurity struct {
@@ -28,14 +28,8 @@ type ReplicapoolPoolsInsertSecurity struct {
 	Option3 *ReplicapoolPoolsInsertSecurityOption3 `security:"option"`
 }
 
-type ReplicapoolPoolsInsertPathParams struct {
-	// The project ID for this replica pool.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The zone for this replica pool.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ReplicapoolPoolsInsertQueryParams struct {
+type ReplicapoolPoolsInsertRequest struct {
+	Pool *shared.Pool `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,17 +40,14 @@ type ReplicapoolPoolsInsertQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this replica pool.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type ReplicapoolPoolsInsertRequest struct {
-	PathParams  ReplicapoolPoolsInsertPathParams
-	QueryParams ReplicapoolPoolsInsertQueryParams
-	Request     *shared.Pool `request:"mediaType=application/json"`
-	Security    ReplicapoolPoolsInsertSecurity
+	// The zone for this replica pool.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ReplicapoolPoolsInsertResponse struct {

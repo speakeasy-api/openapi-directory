@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetScrabbleScorePathParams struct {
+type GetScrabbleScoreRequest struct {
 	// Word to get scrabble score for.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type GetScrabbleScoreRequest struct {
-	PathParams GetScrabbleScorePathParams
 }
 
 type GetScrabbleScoreResponse struct {

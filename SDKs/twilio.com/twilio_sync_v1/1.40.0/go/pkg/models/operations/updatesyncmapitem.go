@@ -12,21 +12,8 @@ var UpdateSyncMapItemServerList = []string{
 }
 
 type UpdateSyncMapItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncMapItemPathParams struct {
-	// The `key` value of the Sync Map Item resource to update.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
-	// The SID of the Sync Map with the Sync Map Item resource to update. Can be the Sync Map resource's `sid` or its `unique_name`.
-	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type UpdateSyncMapItemHeaders struct {
-	// If provided, applies this mutation if (and only if) the “revision” field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncMapItemUpdateSyncMapItemRequest struct {
@@ -41,11 +28,15 @@ type UpdateSyncMapItemUpdateSyncMapItemRequest struct {
 }
 
 type UpdateSyncMapItemRequest struct {
-	PathParams UpdateSyncMapItemPathParams
-	Headers    UpdateSyncMapItemHeaders
-	Request    *UpdateSyncMapItemUpdateSyncMapItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncMapItemSecurity
-	ServerURL  *string
+	// If provided, applies this mutation if (and only if) the “revision” field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	// The `key` value of the Sync Map Item resource to update.
+	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	// The SID of the Sync Map with the Sync Map Item resource to update. Can be the Sync Map resource's `sid` or its `unique_name`.
+	MapSid      string                                     `pathParam:"style=simple,explode=false,name=MapSid"`
+	RequestBody *UpdateSyncMapItemUpdateSyncMapItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncMapItemResponse struct {

@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetChangelogSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetChangelogPathParams struct {
-	// Slug of changelog
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetChangelogRequest struct {
-	PathParams GetChangelogPathParams
-	Security   GetChangelogSecurity
+	// Slug of changelog
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type GetChangelogResponse struct {

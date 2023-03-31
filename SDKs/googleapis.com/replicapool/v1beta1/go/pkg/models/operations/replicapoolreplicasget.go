@@ -8,33 +8,33 @@ import (
 )
 
 type ReplicapoolReplicasGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasGetSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolReplicasGetSecurity struct {
@@ -46,18 +46,7 @@ type ReplicapoolReplicasGetSecurity struct {
 	Option6 *ReplicapoolReplicasGetSecurityOption6 `security:"option"`
 }
 
-type ReplicapoolReplicasGetPathParams struct {
-	// The replica pool name for this request.
-	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
-	// The project ID for this request.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The name of the replica for this request.
-	ReplicaName string `pathParam:"style=simple,explode=false,name=replicaName"`
-	// The zone where the replica lives.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ReplicapoolReplicasGetQueryParams struct {
+type ReplicapoolReplicasGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -66,18 +55,20 @@ type ReplicapoolReplicasGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The replica pool name for this request.
+	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this request.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The name of the replica for this request.
+	ReplicaName string `pathParam:"style=simple,explode=false,name=replicaName"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type ReplicapoolReplicasGetRequest struct {
-	PathParams  ReplicapoolReplicasGetPathParams
-	QueryParams ReplicapoolReplicasGetQueryParams
-	Security    ReplicapoolReplicasGetSecurity
+	// The zone where the replica lives.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ReplicapoolReplicasGetResponse struct {

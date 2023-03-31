@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTask1PathParams struct {
+type CreateTask1Request struct {
+	// Updated custom fields of a given quote.
+	TaskDTO shared.TaskDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type CreateTask1Request struct {
-	PathParams CreateTask1PathParams
-	// Updated custom fields of a given quote.
-	Request shared.TaskDTO `request:"mediaType=application/json"`
 }
 
 type CreateTask1Response struct {

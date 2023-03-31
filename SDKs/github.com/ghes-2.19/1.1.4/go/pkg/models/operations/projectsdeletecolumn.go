@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsDeleteColumnPathParams struct {
+type ProjectsDeleteColumnRequest struct {
 	// column_id parameter
 	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
-}
-
-type ProjectsDeleteColumnRequest struct {
-	PathParams ProjectsDeleteColumnPathParams
 }
 
 type ProjectsDeleteColumnResponse struct {

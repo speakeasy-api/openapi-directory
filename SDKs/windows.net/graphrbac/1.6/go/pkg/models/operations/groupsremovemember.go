@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsRemoveMemberPathParams struct {
+type GroupsRemoveMemberRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the group from which to remove the member.
 	GroupObjectID string `pathParam:"style=simple,explode=false,name=groupObjectId"`
 	// Member object id
 	MemberObjectID string `pathParam:"style=simple,explode=false,name=memberObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type GroupsRemoveMemberQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type GroupsRemoveMemberRequest struct {
-	PathParams  GroupsRemoveMemberPathParams
-	QueryParams GroupsRemoveMemberQueryParams
 }
 
 type GroupsRemoveMemberResponse struct {

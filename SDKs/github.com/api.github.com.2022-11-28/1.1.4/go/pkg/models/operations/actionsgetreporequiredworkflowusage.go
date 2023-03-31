@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetRepoRequiredWorkflowUsagePathParams struct {
+type ActionsGetRepoRequiredWorkflowUsageRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The ID of the required workflow that has run at least once in a repository.
 	RequiredWorkflowIDForRepo int64 `pathParam:"style=simple,explode=false,name=required_workflow_id_for_repo"`
-}
-
-type ActionsGetRepoRequiredWorkflowUsageRequest struct {
-	PathParams ActionsGetRepoRequiredWorkflowUsagePathParams
 }
 
 type ActionsGetRepoRequiredWorkflowUsageResponse struct {

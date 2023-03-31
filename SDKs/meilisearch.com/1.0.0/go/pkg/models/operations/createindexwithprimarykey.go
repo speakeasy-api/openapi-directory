@@ -11,10 +11,6 @@ type CreateIndexWithPrimaryKeyRequestBody struct {
 	UID        *string `json:"uid,omitempty"`
 }
 
-type CreateIndexWithPrimaryKeyRequest struct {
-	Request *CreateIndexWithPrimaryKeyRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateIndexWithPrimaryKeyResponse struct {
 	ContentType string
 	StatusCode  int

@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetInfoQueryParams struct {
+type GetInfoRequest struct {
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
 	//
 	Site string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type GetInfoRequest struct {
-	QueryParams GetInfoQueryParams
 }
 
 type GetInfoResponse struct {

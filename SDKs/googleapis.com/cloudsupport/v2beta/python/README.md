@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/cloudsupport/v2beta/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,35 +15,29 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudsupportCaseClassificationsSearchRequest(
-    security=operations.CloudsupportCaseClassificationsSearchSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.CloudsupportCaseClassificationsSearchQueryParams(
-        dollar_xgafv="1",
-        access_token="tempore",
-        alt="json",
-        callback="et",
-        fields="et",
-        key="sed",
-        oauth_token="aut",
-        page_size=8094092916024648142,
-        page_token="aperiam",
-        pretty_print=False,
-        query="quaerat",
-        quota_user="dolor",
-        upload_type="tempore",
-        upload_protocol="et",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    query="error",
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.case_classifications.cloudsupport_case_classifications_search(req)
+res = s.case_classifications.cloudsupport_case_classifications_search(req, operations.CloudsupportCaseClassificationsSearchSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.search_case_classifications_response is not None:
     # handle response
@@ -51,23 +45,15 @@ if res.search_case_classifications_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### caseClassifications
+
+### case_classifications
 
 * `cloudsupport_case_classifications_search` - Retrieve valid classifications to be used when creating a support case. The classications are hierarchical, with each classification containing all levels of the hierarchy, separated by " > ". For example "Technical Issue > Compute > Compute Engine".
 
 ### cases
 
-* `cloudsupport_cases_attachments_list` - Retrieve all attachments associated with a support case.
-* `cloudsupport_cases_close` - Close the specified case.
-* `cloudsupport_cases_comments_create` - Add a new comment to the specified Case. The comment object must have the following fields set: body.
-* `cloudsupport_cases_comments_list` - Retrieve all Comments associated with the Case object.
-* `cloudsupport_cases_create` - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
-* `cloudsupport_cases_escalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
-* `cloudsupport_cases_get` - Retrieve the specified case.
-* `cloudsupport_cases_list` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
-* `cloudsupport_cases_patch` - Update the specified case. Only a subset of fields (display_name, description, time_zone, subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels) can be updated.
 * `cloudsupport_cases_search` - Search cases using the specified query.
 
 ### media
@@ -75,6 +61,28 @@ if res.search_case_classifications_response is not None:
 * `cloudsupport_media_download` - Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
 * `cloudsupport_media_upload` - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
 
+### projects
+
+* `cloudsupport_projects_cases_attachments_list` - Retrieve all attachments associated with a support case.
+* `cloudsupport_projects_cases_close` - Close the specified case.
+* `cloudsupport_projects_cases_comments_create` - Add a new comment to the specified Case. The comment object must have the following fields set: body.
+* `cloudsupport_projects_cases_comments_list` - Retrieve all Comments associated with the Case object.
+* `cloudsupport_projects_cases_create` - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
+* `cloudsupport_projects_cases_escalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
+* `cloudsupport_projects_cases_get` - Retrieve the specified case.
+* `cloudsupport_projects_cases_list` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
+* `cloudsupport_projects_update_cases` - Update the specified case. Only a subset of fields can be updated.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

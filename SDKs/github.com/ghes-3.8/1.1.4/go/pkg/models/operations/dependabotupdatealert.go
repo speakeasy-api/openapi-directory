@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependabotUpdateAlertPathParams struct {
-	// The number that identifies a Dependabot alert in its repository.
-	// You can find this at the end of the URL for a Dependabot alert within GitHub,
-	// or in `number` fields in the response from the
-	// `GET /repos/{owner}/{repo}/dependabot/alerts` operation.
-	AlertNumber int64 `pathParam:"style=simple,explode=false,name=alert_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // DependabotUpdateAlertRequestBodyDismissedReasonEnum - **Required when `state` is `dismissed`.** A reason for dismissing the alert.
 type DependabotUpdateAlertRequestBodyDismissedReasonEnum string
 
@@ -90,8 +78,16 @@ type DependabotUpdateAlertRequestBody struct {
 }
 
 type DependabotUpdateAlertRequest struct {
-	PathParams DependabotUpdateAlertPathParams
-	Request    DependabotUpdateAlertRequestBody `request:"mediaType=application/json"`
+	RequestBody DependabotUpdateAlertRequestBody `request:"mediaType=application/json"`
+	// The number that identifies a Dependabot alert in its repository.
+	// You can find this at the end of the URL for a Dependabot alert within GitHub,
+	// or in `number` fields in the response from the
+	// `GET /repos/{owner}/{repo}/dependabot/alerts` operation.
+	AlertNumber int64 `pathParam:"style=simple,explode=false,name=alert_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type DependabotUpdateAlertResponse struct {

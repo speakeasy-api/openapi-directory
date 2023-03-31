@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetFactFodRequest{
-        Security: operations.GetFactFodSecurity{
-            XFungeneratorsAPISecret: shared.SchemeXFungeneratorsAPISecret{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GetFactFodQueryParams{
-            Category: "corrupti",
-        },
+        Category: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.FactOfTheDay.GetFactFod(ctx, req)
+    res, err := s.FactOfTheDay.GetFactFod(ctx, req, operations.GetFactFodSecurity{
+        XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

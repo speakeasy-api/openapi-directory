@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostFormFieldSetsRequest struct {
-	Request shared.PostFormFieldSets `request:"mediaType=application/json"`
-}
-
 type PostFormFieldSetsResponse struct {
 	ContentType string
 	// The FormFieldSets object.

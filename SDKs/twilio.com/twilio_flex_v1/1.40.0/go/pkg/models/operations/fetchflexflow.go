@@ -12,18 +12,13 @@ var FetchFlexFlowServerList = []string{
 }
 
 type FetchFlexFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchFlexFlowPathParams struct {
-	// The SID of the Flex Flow resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchFlexFlowRequest struct {
-	PathParams FetchFlexFlowPathParams
-	Security   FetchFlexFlowSecurity
-	ServerURL  *string
+	// The SID of the Flex Flow resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchFlexFlowResponse struct {

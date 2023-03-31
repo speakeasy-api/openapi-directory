@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLabelRequest struct {
-	Request shared.CreateLabelRequestBodyInput `request:"mediaType=application/json"`
-}
-
 type CreateLabelResponse struct {
 	ContentType string
 	StatusCode  int

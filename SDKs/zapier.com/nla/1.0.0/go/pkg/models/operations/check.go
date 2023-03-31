@@ -4,19 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CheckSecurity struct {
-	AccessPointAPIKeyHeader *shared.SchemeAccessPointAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-	AccessPointAPIKeyQuery  *shared.SchemeAccessPointAPIKeyQuery  `security:"scheme,type=apiKey,subtype=query"`
-	AccessPointOAuth        *shared.SchemeAccessPointOAuth        `security:"scheme,type=oauth2"`
-	SessionAuth             *shared.SchemeSessionAuth             `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type CheckRequest struct {
-	Security CheckSecurity
-}
 
 type CheckResponse struct {
 	ContentType string

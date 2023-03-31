@@ -8,21 +8,16 @@ import (
 )
 
 type UpsertSnippetSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpsertSnippetPathParams struct {
-	// The ID of the site where you want to add or update the snippet.
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpsertSnippetRequest struct {
-	PathParams UpsertSnippetPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpsertSnippetRequest `request:"mediaType=application/json"`
-	Security UpsertSnippetSecurity
+	UpsertSnippetRequest shared.UpsertSnippetRequest `request:"mediaType=application/json"`
+	// The ID of the site where you want to add or update the snippet.
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type UpsertSnippetResponse struct {

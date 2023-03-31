@@ -33,7 +33,7 @@ func newPromotionReport(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // GetPromotionReports - This method generates a report that lists the seller's running, paused, and ended promotions for the specified eBay marketplace. The result set can be filtered by the promotion status and the number of results to return. You can also supply <i>keywords</i> to limit the report to promotions that contain the specified keywords. <br><br>Specify the eBay marketplace for which you want the report run using the <b>marketplace_id</b> query parameter. Supply additional query parameters to control the report as needed.
-func (s *promotionReport) GetPromotionReports(ctx context.Context, request operations.GetPromotionReportsRequest) (*operations.GetPromotionReportsResponse, error) {
+func (s *promotionReport) GetPromotionReports(ctx context.Context, request operations.GetPromotionReportsRequest, security operations.GetPromotionReportsSecurity) (*operations.GetPromotionReportsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/promotion_report"
 
@@ -42,11 +42,11 @@ func (s *promotionReport) GetPromotionReports(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

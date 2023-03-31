@@ -37,7 +37,6 @@ pkg/models/operations/gamesmanagementscoresresetmultipleforallplayers.go
 pkg/models/shared/achievementresetresponse.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/achievementresetallresponse.go
 pkg/models/shared/achievementresetmultipleforallrequest.go
 pkg/models/shared/hiddenplayerlist.go

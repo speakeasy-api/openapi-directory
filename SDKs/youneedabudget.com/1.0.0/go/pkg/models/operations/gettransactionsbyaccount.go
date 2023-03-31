@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTransactionsByAccountPathParams struct {
-	// The id of the account
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
-	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
-}
-
 // GetTransactionsByAccountTypeEnum - If specified, only transactions of the specified type will be included. "uncategorized" and "unapproved" are currently supported.
 type GetTransactionsByAccountTypeEnum string
 
@@ -41,18 +34,17 @@ func (e *GetTransactionsByAccountTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTransactionsByAccountQueryParams struct {
+type GetTransactionsByAccountRequest struct {
+	// The id of the account
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
+	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
 	LastKnowledgeOfServer *int64 `queryParam:"style=form,explode=true,name=last_knowledge_of_server"`
 	// If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
 	SinceDate *types.Date `queryParam:"style=form,explode=true,name=since_date"`
 	// If specified, only transactions of the specified type will be included. "uncategorized" and "unapproved" are currently supported.
 	Type *GetTransactionsByAccountTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetTransactionsByAccountRequest struct {
-	PathParams  GetTransactionsByAccountPathParams
-	QueryParams GetTransactionsByAccountQueryParams
 }
 
 type GetTransactionsByAccountResponse struct {

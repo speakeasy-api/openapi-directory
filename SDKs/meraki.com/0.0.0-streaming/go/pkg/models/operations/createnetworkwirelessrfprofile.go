@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkWirelessRfProfilePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum - Choice between 'dual', '2.4ghz' or '5ghz'. Defaults to dual.
 type CreateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum string
 
@@ -145,8 +141,8 @@ type CreateNetworkWirelessRfProfileRequestBody struct {
 }
 
 type CreateNetworkWirelessRfProfileRequest struct {
-	PathParams CreateNetworkWirelessRfProfilePathParams
-	Request    CreateNetworkWirelessRfProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkWirelessRfProfileRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkWirelessRfProfileResponse struct {

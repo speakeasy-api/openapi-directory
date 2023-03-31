@@ -12,20 +12,15 @@ var FetchRateLimitServerList = []string{
 }
 
 type FetchRateLimitSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRateLimitPathParams struct {
+type FetchRateLimitRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Rate Limit resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRateLimitRequest struct {
-	PathParams FetchRateLimitPathParams
-	Security   FetchRateLimitSecurity
-	ServerURL  *string
 }
 
 type FetchRateLimitResponse struct {

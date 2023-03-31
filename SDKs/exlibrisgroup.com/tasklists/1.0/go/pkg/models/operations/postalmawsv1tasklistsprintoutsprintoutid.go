@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAlmawsV1TaskListsPrintoutsPrintoutIDPathParams struct {
-	// The Printout ID
-	PrintoutID string `pathParam:"style=simple,explode=false,name=printout_id"`
-}
-
-type PostAlmawsV1TaskListsPrintoutsPrintoutIDQueryParams struct {
+type PostAlmawsV1TaskListsPrintoutsPrintoutIDRequest struct {
 	// The operation to perform on the printout. Currently, the options are 'mark_as_printed','mark_as_canceled'
 	Op string `queryParam:"style=form,explode=true,name=op"`
-}
-
-type PostAlmawsV1TaskListsPrintoutsPrintoutIDRequest struct {
-	PathParams  PostAlmawsV1TaskListsPrintoutsPrintoutIDPathParams
-	QueryParams PostAlmawsV1TaskListsPrintoutsPrintoutIDQueryParams
+	// The Printout ID
+	PrintoutID string `pathParam:"style=simple,explode=false,name=printout_id"`
 }
 
 type PostAlmawsV1TaskListsPrintoutsPrintoutIDResponse struct {

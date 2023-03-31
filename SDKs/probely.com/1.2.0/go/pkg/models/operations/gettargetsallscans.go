@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTargetsAllScansQueryParams struct {
+type GetTargetsAllScansRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -22,10 +22,6 @@ type GetTargetsAllScansQueryParams struct {
 	Started []types.Date `queryParam:"style=form,explode=true,name=started"`
 	// Filter by scan statuses
 	Status *shared.ScanStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetTargetsAllScansRequest struct {
-	QueryParams GetTargetsAllScansQueryParams
 }
 
 // GetTargetsAllScans401ApplicationJSON - Access token is missing or invalid

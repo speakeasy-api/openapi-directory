@@ -34,7 +34,7 @@ func newFundingManagerPrivate(defaultClient, securityClient HTTPClient, serverUR
 
 // CreateFundingAccountV2 - Create Funding Account
 // Create Funding Account
-func (s *fundingManagerPrivate) CreateFundingAccountV2(ctx context.Context, request operations.CreateFundingAccountV2Request) (*operations.CreateFundingAccountV2Response, error) {
+func (s *fundingManagerPrivate) CreateFundingAccountV2(ctx context.Context, request shared.CreateFundingAccountRequestV2) (*operations.CreateFundingAccountV2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/fundingAccounts"
 
@@ -111,7 +111,7 @@ func (s *fundingManagerPrivate) CreateFundingAccountV2(ctx context.Context, requ
 // Mark a source account as deleted by ID
 func (s *fundingManagerPrivate) DeleteSourceAccountV3(ctx context.Context, request operations.DeleteSourceAccountV3Request) (*operations.DeleteSourceAccountV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

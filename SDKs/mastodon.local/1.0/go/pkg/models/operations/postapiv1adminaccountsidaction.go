@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1AdminAccountsIDActionSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AdminAccountsIDActionPathParams struct {
-	// ID of the account
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum - Type of action to be taken. Enumerable oneOf: none disable silence suspend
@@ -62,9 +56,9 @@ type PostAPIV1AdminAccountsIDActionRequestBody struct {
 }
 
 type PostAPIV1AdminAccountsIDActionRequest struct {
-	PathParams PostAPIV1AdminAccountsIDActionPathParams
-	Request    *PostAPIV1AdminAccountsIDActionRequestBody `request:"mediaType=application/json"`
-	Security   PostAPIV1AdminAccountsIDActionSecurity
+	RequestBody *PostAPIV1AdminAccountsIDActionRequestBody `request:"mediaType=application/json"`
+	// ID of the account
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AdminAccountsIDActionResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPhysicalInteractionQueryParams struct {
+type GetPhysicalInteractionRequest struct {
 	// string to search for in contributor of model
 	Contributor *string `queryParam:"style=form,explode=true,name=contributor"`
 	// string to search for in title of model
 	Title *string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type GetPhysicalInteractionRequest struct {
-	QueryParams GetPhysicalInteractionQueryParams
 }
 
 type GetPhysicalInteractionResponse struct {

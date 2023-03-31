@@ -33,11 +33,11 @@ func newTopics(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // PubsubTopicsCreate - Creates the given topic with the given name.
-func (s *topics) PubsubTopicsCreate(ctx context.Context, request operations.PubsubTopicsCreateRequest) (*operations.PubsubTopicsCreateResponse, error) {
+func (s *topics) PubsubTopicsCreate(ctx context.Context, request operations.PubsubTopicsCreateRequest, security operations.PubsubTopicsCreateSecurity) (*operations.PubsubTopicsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/topics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Topic", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *topics) PubsubTopicsCreate(ctx context.Context, request operations.Pubs
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *topics) PubsubTopicsCreate(ctx context.Context, request operations.Pubs
 }
 
 // PubsubTopicsDelete - Deletes the topic with the given name. Returns NOT_FOUND if the topic does not exist. After a topic is deleted, a new topic may be created with the same name.
-func (s *topics) PubsubTopicsDelete(ctx context.Context, request operations.PubsubTopicsDeleteRequest) (*operations.PubsubTopicsDeleteResponse, error) {
+func (s *topics) PubsubTopicsDelete(ctx context.Context, request operations.PubsubTopicsDeleteRequest, security operations.PubsubTopicsDeleteSecurity) (*operations.PubsubTopicsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *topics) PubsubTopicsDelete(ctx context.Context, request operations.Pubs
 }
 
 // PubsubTopicsGet - Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
-func (s *topics) PubsubTopicsGet(ctx context.Context, request operations.PubsubTopicsGetRequest) (*operations.PubsubTopicsGetResponse, error) {
+func (s *topics) PubsubTopicsGet(ctx context.Context, request operations.PubsubTopicsGetRequest, security operations.PubsubTopicsGetSecurity) (*operations.PubsubTopicsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *topics) PubsubTopicsGet(ctx context.Context, request operations.PubsubT
 }
 
 // PubsubTopicsList - Lists matching topics.
-func (s *topics) PubsubTopicsList(ctx context.Context, request operations.PubsubTopicsListRequest) (*operations.PubsubTopicsListResponse, error) {
+func (s *topics) PubsubTopicsList(ctx context.Context, request operations.PubsubTopicsListRequest, security operations.PubsubTopicsListSecurity) (*operations.PubsubTopicsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/topics"
 
@@ -193,11 +193,11 @@ func (s *topics) PubsubTopicsList(ctx context.Context, request operations.Pubsub
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *topics) PubsubTopicsList(ctx context.Context, request operations.Pubsub
 }
 
 // PubsubTopicsPublish - Adds a message to the topic. Returns NOT_FOUND if the topic does not exist.
-func (s *topics) PubsubTopicsPublish(ctx context.Context, request operations.PubsubTopicsPublishRequest) (*operations.PubsubTopicsPublishResponse, error) {
+func (s *topics) PubsubTopicsPublish(ctx context.Context, request operations.PubsubTopicsPublishRequest, security operations.PubsubTopicsPublishSecurity) (*operations.PubsubTopicsPublishResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/topics/publish"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublishRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *topics) PubsubTopicsPublish(ctx context.Context, request operations.Pub
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *topics) PubsubTopicsPublish(ctx context.Context, request operations.Pub
 }
 
 // PubsubTopicsPublishBatch - Adds one or more messages to the topic. Returns NOT_FOUND if the topic does not exist.
-func (s *topics) PubsubTopicsPublishBatch(ctx context.Context, request operations.PubsubTopicsPublishBatchRequest) (*operations.PubsubTopicsPublishBatchResponse, error) {
+func (s *topics) PubsubTopicsPublishBatch(ctx context.Context, request operations.PubsubTopicsPublishBatchRequest, security operations.PubsubTopicsPublishBatchSecurity) (*operations.PubsubTopicsPublishBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1a/topics/publishBatch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublishBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *topics) PubsubTopicsPublishBatch(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

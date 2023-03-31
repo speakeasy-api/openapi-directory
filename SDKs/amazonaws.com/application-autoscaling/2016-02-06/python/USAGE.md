@@ -3,32 +3,28 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.DeleteScalingPolicyRequest(
-    headers=operations.DeleteScalingPolicyHeaders(
-        x_amz_algorithm="vitae",
-        x_amz_content_sha256="fugit",
-        x_amz_credential="non",
-        x_amz_date="aut",
-        x_amz_security_token="autem",
-        x_amz_signature="dolores",
-        x_amz_signed_headers="aperiam",
-        x_amz_target="AnyScaleFrontendService.DeleteScalingPolicy",
+    delete_scaling_policy_request=shared.DeleteScalingPolicyRequest(
+        policy_name="corrupti",
+        resource_id="provident",
+        scalable_dimension="cassandra:table:ReadCapacityUnits",
+        service_namespace="kafka",
     ),
-    request=shared.DeleteScalingPolicyRequest(
-        policy_name="culpa",
-        resource_id="quaerat",
-        scalable_dimension="rds:cluster:ReadReplicaCount",
-        service_namespace="custom-resource",
-    ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
+    x_amz_target="AnyScaleFrontendService.DeleteScalingPolicy",
 )
     
 res = s.delete_scaling_policy(req)

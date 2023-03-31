@@ -38,14 +38,14 @@ func newBillingPreviewRun(defaultClient, securityClient HTTPClient, serverURL, l
 // A billing preview run asynchronously generates a downloadable CSV file containing a preview of invoice item data and credit memo item data for a batch of customer accounts.
 func (s *billingPreviewRun) GETBillingPreviewRun(ctx context.Context, request operations.GETBillingPreviewRunRequest) (*operations.GETBillingPreviewRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/billing-preview-runs/{billingPreviewRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/billing-preview-runs/{billingPreviewRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,7 +91,7 @@ func (s *billingPreviewRun) POSTBillingPreviewRun(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/billing-preview-runs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostBillingPreviewRunParam", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *billingPreviewRun) POSTBillingPreviewRun(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

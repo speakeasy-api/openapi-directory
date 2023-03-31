@@ -34,7 +34,7 @@ func newDrivers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteDriver - Delete a driver
 func (s *drivers) DeleteDriver(ctx context.Context, request operations.DeleteDriverRequest) (*operations.DeleteDriverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,14 +69,14 @@ func (s *drivers) DeleteDriver(ctx context.Context, request operations.DeleteDri
 // GetDriver - Get a driver's data
 func (s *drivers) GetDriver(ctx context.Context, request operations.GetDriverRequest) (*operations.GetDriverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,7 +115,7 @@ func (s *drivers) GetDrivers(ctx context.Context, request operations.GetDriversR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -157,9 +157,9 @@ func (s *drivers) GetDrivers(ctx context.Context, request operations.GetDriversR
 // PatchDriver - Update a driver's data
 func (s *drivers) PatchDriver(ctx context.Context, request operations.PatchDriverRequest) (*operations.PatchDriverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -210,7 +210,7 @@ func (s *drivers) PatchDriver(ctx context.Context, request operations.PatchDrive
 }
 
 // PostDrivers - Create a new driver
-func (s *drivers) PostDrivers(ctx context.Context, request operations.PostDriversRequest) (*operations.PostDriversResponse, error) {
+func (s *drivers) PostDrivers(ctx context.Context, request operations.PostDriversRequestBody) (*operations.PostDriversResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/drivers"
 

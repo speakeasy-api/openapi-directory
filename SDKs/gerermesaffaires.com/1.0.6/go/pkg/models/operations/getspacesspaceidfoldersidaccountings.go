@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDAccountingsPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDAccountingsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDAccountingsRequest struct {
 	// accountedon of the accounting (boolean available)
 	AccountedOn *string `queryParam:"style=form,explode=true,name=AccountedOn"`
 	// class of the accounting
@@ -31,11 +24,10 @@ type GetSpacesSpaceIDFoldersIDAccountingsQueryParams struct {
 	WithFolders *string `queryParam:"style=form,explode=true,name=WithFolders"`
 	// workbook of the accounting
 	Workbook *string `queryParam:"style=form,explode=true,name=Workbook"`
-}
-
-type GetSpacesSpaceIDFoldersIDAccountingsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDAccountingsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDAccountingsQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDAccountingsResponse struct {

@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GamesConfigurationAchievementConfigurationsDeleteRequest(
-    security=operations.GamesConfigurationAchievementConfigurationsDeleteSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GamesConfigurationAchievementConfigurationsDeletePathParams(
-        achievement_id="earum",
-    ),
-    query_params=operations.GamesConfigurationAchievementConfigurationsDeleteQueryParams(
-        dollar_xgafv="1",
-        access_token="cum",
-        alt="json",
-        callback="dicta",
-        fields="consequatur",
-        key="et",
-        oauth_token="tempora",
-        pretty_print=True,
-        quota_user="aliquam",
-        upload_type="quaerat",
-        upload_protocol="voluptatem",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    achievement_id="distinctio",
+    alt="proto",
+    callback="unde",
+    fields_="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.achievement_configurations.games_configuration_achievement_configurations_delete(req)
+res = s.achievement_configurations.games_configuration_achievement_configurations_delete(req, operations.GamesConfigurationAchievementConfigurationsDeleteSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

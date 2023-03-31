@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceSecurityEventsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkApplianceSecurityEventsSortOrderEnum - Sorted order of security events based on event detection time. Order options are 'ascending' or 'descending'. Default is ascending order.
 type GetNetworkApplianceSecurityEventsSortOrderEnum string
 
@@ -36,9 +32,10 @@ func (e *GetNetworkApplianceSecurityEventsSortOrderEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetNetworkApplianceSecurityEventsQueryParams struct {
+type GetNetworkApplianceSecurityEventsRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// Sorted order of security events based on event detection time. Order options are 'ascending' or 'descending'. Default is ascending order.
@@ -51,11 +48,6 @@ type GetNetworkApplianceSecurityEventsQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkApplianceSecurityEventsRequest struct {
-	PathParams  GetNetworkApplianceSecurityEventsPathParams
-	QueryParams GetNetworkApplianceSecurityEventsQueryParams
 }
 
 type GetNetworkApplianceSecurityEventsResponse struct {

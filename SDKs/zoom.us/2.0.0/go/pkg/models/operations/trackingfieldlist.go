@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TrackingfieldListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type TrackingfieldListRequest struct {
-	Security TrackingfieldListSecurity
-}
 
 // TrackingfieldListTrackingFieldListTrackingField - Tracking Field
 type TrackingfieldListTrackingFieldListTrackingField struct {

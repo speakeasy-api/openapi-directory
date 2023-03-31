@@ -8,19 +8,14 @@ import (
 )
 
 type ListWorkweekConfigsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListWorkweekConfigsQueryParams struct {
+type ListWorkweekConfigsRequest struct {
 	// A pointer to the next page of `WorkweekConfig` results to fetch.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// The maximum number of `WorkweekConfigs` results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListWorkweekConfigsRequest struct {
-	QueryParams ListWorkweekConfigsQueryParams
-	Security    ListWorkweekConfigsSecurity
 }
 
 type ListWorkweekConfigsResponse struct {

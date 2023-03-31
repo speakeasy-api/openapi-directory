@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLikesPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetLikesFilterEnum - The attribute by which to filter the results.
 type GetLikesFilterEnum string
 
@@ -71,7 +66,7 @@ func (e *GetLikesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLikesQueryParams struct {
+type GetLikesRequest struct {
 	// The attribute by which to filter the results.
 	Filter *GetLikesFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
@@ -84,11 +79,8 @@ type GetLikesQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetLikesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetLikesRequest struct {
-	PathParams  GetLikesPathParams
-	QueryParams GetLikesQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetLikesResponse struct {

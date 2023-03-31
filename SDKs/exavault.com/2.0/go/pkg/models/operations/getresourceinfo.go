@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourceInfoQueryParams struct {
-	// Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerUser**.
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-	// Resource identifier of the file or folder to get metadata for.
-	Resource string `queryParam:"style=form,explode=true,name=resource"`
-}
-
-type GetResourceInfoHeaders struct {
+type GetResourceInfoRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetResourceInfoRequest struct {
-	QueryParams GetResourceInfoQueryParams
-	Headers     GetResourceInfoHeaders
+	// Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerUser**.
+	Include *string `queryParam:"style=form,explode=true,name=include"`
+	// Resource identifier of the file or folder to get metadata for.
+	Resource string `queryParam:"style=form,explode=true,name=resource"`
 }
 
 type GetResourceInfoResponse struct {

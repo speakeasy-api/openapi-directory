@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DetectObjectsRequest struct {
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
-}
-
 type DetectObjectsResponse struct {
 	// Error response.
 	ComputerVisionError *shared.ComputerVisionError

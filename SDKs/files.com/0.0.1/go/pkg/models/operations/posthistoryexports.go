@@ -55,10 +55,6 @@ type PostHistoryExportsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostHistoryExportsRequest struct {
-	Request *PostHistoryExportsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostHistoryExportsResponse struct {
 	ContentType string
 	// The HistoryExports object.

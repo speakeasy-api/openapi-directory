@@ -14,21 +14,8 @@ var UpdateTaskReservationServerList = []string{
 }
 
 type UpdateTaskReservationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTaskReservationPathParams struct {
-	// The SID of the TaskReservation resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the reserved Task resource with the TaskReservation resources to update.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-	// The SID of the Workspace with the TaskReservation resources to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type UpdateTaskReservationHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateTaskReservationUpdateTaskReservationRequestConferenceRecordingStatusCallbackMethodEnum - The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.
@@ -319,11 +306,15 @@ type UpdateTaskReservationUpdateTaskReservationRequest struct {
 }
 
 type UpdateTaskReservationRequest struct {
-	PathParams UpdateTaskReservationPathParams
-	Headers    UpdateTaskReservationHeaders
-	Request    *UpdateTaskReservationUpdateTaskReservationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTaskReservationSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch     *string                                            `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody *UpdateTaskReservationUpdateTaskReservationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the TaskReservation resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the reserved Task resource with the TaskReservation resources to update.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	// The SID of the Workspace with the TaskReservation resources to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateTaskReservationResponse struct {

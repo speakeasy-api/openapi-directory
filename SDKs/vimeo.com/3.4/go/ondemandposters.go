@@ -32,16 +32,16 @@ func newOnDemandPosters(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // AddVodPoster - Add a poster to an On Demand page
-func (s *onDemandPosters) AddVodPoster(ctx context.Context, request operations.AddVodPosterRequest) (*operations.AddVodPosterResponse, error) {
+func (s *onDemandPosters) AddVodPoster(ctx context.Context, request operations.AddVodPosterRequest, security operations.AddVodPosterSecurity) (*operations.AddVodPosterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,11 +86,11 @@ func (s *onDemandPosters) AddVodPoster(ctx context.Context, request operations.A
 }
 
 // EditVodPoster - Edit a poster of an On Demand page
-func (s *onDemandPosters) EditVodPoster(ctx context.Context, request operations.EditVodPosterRequest) (*operations.EditVodPosterResponse, error) {
+func (s *onDemandPosters) EditVodPoster(ctx context.Context, request operations.EditVodPosterRequest, security operations.EditVodPosterSecurity) (*operations.EditVodPosterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -102,7 +102,7 @@ func (s *onDemandPosters) EditVodPoster(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,7 +139,7 @@ func (s *onDemandPosters) EditVodPoster(ctx context.Context, request operations.
 // GetVodPoster - Get a specific poster of an On Demand page
 func (s *onDemandPosters) GetVodPoster(ctx context.Context, request operations.GetVodPosterRequest) (*operations.GetVodPosterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -183,14 +183,14 @@ func (s *onDemandPosters) GetVodPoster(ctx context.Context, request operations.G
 // GetVodPosters - Get all the posters of an On Demand page
 func (s *onDemandPosters) GetVodPosters(ctx context.Context, request operations.GetVodPostersRequest) (*operations.GetVodPostersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/pictures", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolWebGetStatisticsPathParams struct {
+type ProtocolWebGetStatisticsRequest struct {
 	// Agent to show WEB statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolWebGetStatisticsRequest struct {
-	PathParams ProtocolWebGetStatisticsPathParams
 }
 
 type ProtocolWebGetStatisticsResponse struct {

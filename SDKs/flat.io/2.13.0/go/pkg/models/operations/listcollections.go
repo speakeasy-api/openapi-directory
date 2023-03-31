@@ -10,7 +10,7 @@ import (
 )
 
 type ListCollectionsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListCollectionsDirectionEnum - Sort direction
@@ -61,7 +61,7 @@ func (e *ListCollectionsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCollectionsQueryParams struct {
+type ListCollectionsRequest struct {
 	// Sort direction
 	Direction *ListCollectionsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// This is the maximum number of objects that may be returned
@@ -82,11 +82,6 @@ type ListCollectionsQueryParams struct {
 	Previous *string `queryParam:"style=form,explode=true,name=previous"`
 	// Sort
 	Sort *ListCollectionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListCollectionsRequest struct {
-	QueryParams ListCollectionsQueryParams
-	Security    ListCollectionsSecurity
 }
 
 type ListCollectionsResponse struct {

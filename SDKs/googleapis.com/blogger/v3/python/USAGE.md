@@ -4,39 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BloggerBlogUserInfosGetRequest(
-    security=operations.BloggerBlogUserInfosGetSecurity(
-        option1=operations.BloggerBlogUserInfosGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.BloggerBlogUserInfosGetPathParams(
-        blog_id="ut",
-        user_id="et",
-    ),
-    query_params=operations.BloggerBlogUserInfosGetQueryParams(
-        dollar_xgafv="1",
-        access_token="ut",
-        alt="media",
-        callback="et",
-        fields="sint",
-        key="reiciendis",
-        max_posts=7414068409150291056,
-        oauth_token="nihil",
-        pretty_print=True,
-        quota_user="dolore",
-        upload_type="placeat",
-        upload_protocol="ut",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    blog_id="quibusdam",
+    callback="unde",
+    fields_="nulla",
+    key="corrupti",
+    max_posts=847252,
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
+    user_id="iure",
 )
     
-res = s.blog_user_infos.blogger_blog_user_infos_get(req)
+res = s.blog_user_infos.blogger_blog_user_infos_get(req, operations.BloggerBlogUserInfosGetSecurity(
+    option1=operations.BloggerBlogUserInfosGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.blog_user_info is not None:
     # handle response

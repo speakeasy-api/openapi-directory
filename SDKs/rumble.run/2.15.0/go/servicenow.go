@@ -34,7 +34,7 @@ func newServiceNow(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // SnowExportAssetsCSV - Export an asset inventory as CSV for ServiceNow integration
-func (s *serviceNow) SnowExportAssetsCSV(ctx context.Context, request operations.SnowExportAssetsCSVRequest) (*operations.SnowExportAssetsCSVResponse, error) {
+func (s *serviceNow) SnowExportAssetsCSV(ctx context.Context) (*operations.SnowExportAssetsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.servicenow.csv"
 
@@ -43,7 +43,7 @@ func (s *serviceNow) SnowExportAssetsCSV(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *serviceNow) SnowExportAssetsCSV(ctx context.Context, request operations
 }
 
 // SnowExportAssetsJSON - Exports the asset inventory as JSON
-func (s *serviceNow) SnowExportAssetsJSON(ctx context.Context, request operations.SnowExportAssetsJSONRequest) (*operations.SnowExportAssetsJSONResponse, error) {
+func (s *serviceNow) SnowExportAssetsJSON(ctx context.Context) (*operations.SnowExportAssetsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.servicenow.json"
 
@@ -88,7 +88,7 @@ func (s *serviceNow) SnowExportAssetsJSON(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *serviceNow) SnowExportAssetsJSON(ctx context.Context, request operation
 }
 
 // SnowExportServicesCSV - Export a service inventory as CSV for ServiceNow integration
-func (s *serviceNow) SnowExportServicesCSV(ctx context.Context, request operations.SnowExportServicesCSVRequest) (*operations.SnowExportServicesCSVResponse, error) {
+func (s *serviceNow) SnowExportServicesCSV(ctx context.Context) (*operations.SnowExportServicesCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/services.servicenow.csv"
 
@@ -133,7 +133,7 @@ func (s *serviceNow) SnowExportServicesCSV(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

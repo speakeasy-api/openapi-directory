@@ -47,7 +47,7 @@ func (s *partyCoordinatedExpenditures) GetSchedulesScheduleF(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,14 +93,14 @@ func (s *partyCoordinatedExpenditures) GetSchedulesScheduleF(ctx context.Context
 // these limits are detailed in Chapter 7 of the FEC Campaign Guide for Political Party Committees.
 func (s *partyCoordinatedExpenditures) GetSchedulesScheduleFSubID(ctx context.Context, request operations.GetSchedulesScheduleFSubIDRequest) (*operations.GetSchedulesScheduleFSubIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_f/{sub_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_f/{sub_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

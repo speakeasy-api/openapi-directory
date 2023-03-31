@@ -4,19 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type InviteChannelMembersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type InviteChannelMembersPathParams struct {
-	// Channel ID: Unique Identifier of the channel.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-	// Unique identifier of the user who is the owner of this channel.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type InviteChannelMembersApplicationJSONMembers struct {
@@ -30,9 +22,11 @@ type InviteChannelMembersApplicationJSON struct {
 }
 
 type InviteChannelMembersRequest struct {
-	PathParams InviteChannelMembersPathParams
-	Request    *InviteChannelMembersApplicationJSON `request:"mediaType=application/json"`
-	Security   InviteChannelMembersSecurity
+	RequestBody *InviteChannelMembersApplicationJSON `request:"mediaType=application/json"`
+	// Channel ID: Unique Identifier of the channel.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
+	// Unique identifier of the user who is the owner of this channel.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // InviteChannelMembers201ApplicationXML - **HTTP Status Code:** `201`<br>

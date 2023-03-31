@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSetupV1ServicesBlockIDPathParams struct {
+type DeleteSetupV1ServicesBlockIDRequest struct {
 	// id of serviceBlock object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1ServicesBlockIDRequest struct {
-	PathParams DeleteSetupV1ServicesBlockIDPathParams
 }
 
 type DeleteSetupV1ServicesBlockIDResponse struct {

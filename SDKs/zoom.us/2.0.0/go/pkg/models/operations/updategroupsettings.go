@@ -10,50 +10,6 @@ import (
 	"net/http"
 )
 
-type UpdateGroupSettingsPathParams struct {
-	// Id of the group.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-// UpdateGroupSettingsOptionEnum
-type UpdateGroupSettingsOptionEnum string
-
-const (
-	UpdateGroupSettingsOptionEnumMeetingAuthentication   UpdateGroupSettingsOptionEnum = "meeting_authentication"
-	UpdateGroupSettingsOptionEnumRecordingAuthentication UpdateGroupSettingsOptionEnum = "recording_authentication"
-	UpdateGroupSettingsOptionEnumMeetingSecurity         UpdateGroupSettingsOptionEnum = "meeting_security"
-)
-
-func (e *UpdateGroupSettingsOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "meeting_authentication":
-		fallthrough
-	case "recording_authentication":
-		fallthrough
-	case "meeting_security":
-		*e = UpdateGroupSettingsOptionEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UpdateGroupSettingsOptionEnum: %s", s)
-	}
-}
-
-type UpdateGroupSettingsQueryParams struct {
-	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
-	// {
-	//     "schedule_meeting": {
-	//         "host_video": false
-	//     }
-	// }
-	// <br>You can provide multiple values by separating them with commas(example: "host_video,participant_video”).
-	CustomQueryFields *string                        `queryParam:"style=form,explode=true,name=custom_query_fields"`
-	Option            *UpdateGroupSettingsOptionEnum `queryParam:"style=form,explode=true,name=option"`
-}
-
 // UpdateGroupSettingsApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
 // `enhanced_encryption`: Enhanced encryption. Encryption is stored in the cloud if you enable this option. <br>
 //
@@ -919,10 +875,46 @@ func (u UpdateGroupSettingsApplicationJSON) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
+// UpdateGroupSettingsOptionEnum
+type UpdateGroupSettingsOptionEnum string
+
+const (
+	UpdateGroupSettingsOptionEnumMeetingAuthentication   UpdateGroupSettingsOptionEnum = "meeting_authentication"
+	UpdateGroupSettingsOptionEnumRecordingAuthentication UpdateGroupSettingsOptionEnum = "recording_authentication"
+	UpdateGroupSettingsOptionEnumMeetingSecurity         UpdateGroupSettingsOptionEnum = "meeting_security"
+)
+
+func (e *UpdateGroupSettingsOptionEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "meeting_authentication":
+		fallthrough
+	case "recording_authentication":
+		fallthrough
+	case "meeting_security":
+		*e = UpdateGroupSettingsOptionEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateGroupSettingsOptionEnum: %s", s)
+	}
+}
+
 type UpdateGroupSettingsRequest struct {
-	PathParams  UpdateGroupSettingsPathParams
-	QueryParams UpdateGroupSettingsQueryParams
-	Request     *UpdateGroupSettingsApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *UpdateGroupSettingsApplicationJSON `request:"mediaType=application/json"`
+	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
+	// {
+	//     "schedule_meeting": {
+	//         "host_video": false
+	//     }
+	// }
+	// <br>You can provide multiple values by separating them with commas(example: "host_video,participant_video”).
+	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
+	// Id of the group.
+	GroupID string                         `pathParam:"style=simple,explode=false,name=groupId"`
+	Option  *UpdateGroupSettingsOptionEnum `queryParam:"style=form,explode=true,name=option"`
 }
 
 type UpdateGroupSettingsResponse struct {

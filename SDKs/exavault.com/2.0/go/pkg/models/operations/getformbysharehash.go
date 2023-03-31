@@ -30,23 +30,15 @@ func (e *GetFormByShareHashIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFormByShareHashQueryParams struct {
-	// Related record types to include in the response. Valid option is **share**
-	Include *GetFormByShareHashIncludeEnum `queryParam:"style=form,explode=true,name=include"`
-	// Share hash to retrieve the form for.
-	ShareHash string `queryParam:"style=form,explode=true,name=shareHash"`
-}
-
-type GetFormByShareHashHeaders struct {
+type GetFormByShareHashRequest struct {
 	// Access Token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetFormByShareHashRequest struct {
-	QueryParams GetFormByShareHashQueryParams
-	Headers     GetFormByShareHashHeaders
+	// Related record types to include in the response. Valid option is **share**
+	Include *GetFormByShareHashIncludeEnum `queryParam:"style=form,explode=true,name=include"`
+	// Share hash to retrieve the form for.
+	ShareHash string `queryParam:"style=form,explode=true,name=shareHash"`
 }
 
 type GetFormByShareHashResponse struct {

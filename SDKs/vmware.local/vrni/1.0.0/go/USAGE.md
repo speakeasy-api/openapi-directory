@@ -13,19 +13,14 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AddApplicationRequest{
-        Security: operations.AddApplicationSecurity{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: shared.ApplicationRequest{
-            Name: "corrupti",
-        },
+    req := shared.ApplicationRequest{
+        Name: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Applications.AddApplication(ctx, req)
+    res, err := s.Applications.AddApplication(ctx, req, operations.AddApplicationSecurity{
+        APIKeyAuth: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

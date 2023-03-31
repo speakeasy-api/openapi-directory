@@ -8,16 +8,11 @@ import (
 )
 
 type ChromemanagementCustomersReportsCountInstalledAppsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ChromemanagementCustomersReportsCountInstalledAppsPathParams struct {
-	// Required. Customer id or "my_customer" to use the customer associated to the account making the request.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-}
-
-type ChromemanagementCustomersReportsCountInstalledAppsQueryParams struct {
+type ChromemanagementCustomersReportsCountInstalledAppsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -26,6 +21,8 @@ type ChromemanagementCustomersReportsCountInstalledAppsQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. Customer id or "my_customer" to use the customer associated to the account making the request.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * app_name * app_type * install_type * number_of_permissions * total_install_count * latest_profile_active_date * permission_name * app_id
@@ -50,12 +47,6 @@ type ChromemanagementCustomersReportsCountInstalledAppsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ChromemanagementCustomersReportsCountInstalledAppsRequest struct {
-	PathParams  ChromemanagementCustomersReportsCountInstalledAppsPathParams
-	QueryParams ChromemanagementCustomersReportsCountInstalledAppsQueryParams
-	Security    ChromemanagementCustomersReportsCountInstalledAppsSecurity
 }
 
 type ChromemanagementCustomersReportsCountInstalledAppsResponse struct {

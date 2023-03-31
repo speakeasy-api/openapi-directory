@@ -33,7 +33,7 @@ func newAchievementDefinitions(defaultClient, securityClient HTTPClient, serverU
 }
 
 // GamesAchievementDefinitionsList - Lists all the achievement definitions for your application.
-func (s *achievementDefinitions) GamesAchievementDefinitionsList(ctx context.Context, request operations.GamesAchievementDefinitionsListRequest) (*operations.GamesAchievementDefinitionsListResponse, error) {
+func (s *achievementDefinitions) GamesAchievementDefinitionsList(ctx context.Context, request operations.GamesAchievementDefinitionsListRequest, security operations.GamesAchievementDefinitionsListSecurity) (*operations.GamesAchievementDefinitionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/achievements"
 
@@ -42,11 +42,11 @@ func (s *achievementDefinitions) GamesAchievementDefinitionsList(ctx context.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

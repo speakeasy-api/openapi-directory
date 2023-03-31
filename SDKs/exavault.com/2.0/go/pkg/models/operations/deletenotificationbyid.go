@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteNotificationByIDPathParams struct {
-	// ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteNotificationByIDHeaders struct {
+type DeleteNotificationByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteNotificationByIDRequest struct {
-	PathParams DeleteNotificationByIDPathParams
-	Headers    DeleteNotificationByIDHeaders
+	// ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteNotificationByIDResponse struct {

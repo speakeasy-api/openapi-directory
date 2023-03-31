@@ -36,16 +36,16 @@ func newUsage(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This REST API reference describes how to retrieve usage details for an account. Usage data is returned in reverse chronological order.
 func (s *usage) GETUsage(ctx context.Context, request operations.GETUsageRequest) (*operations.GETUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/usage/accounts/{account-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/usage/accounts/{account-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -88,14 +88,14 @@ func (s *usage) GETUsage(ctx context.Context, request operations.GETUsageRequest
 // ObjectDELETEUsage - CRUD: Delete a usage record
 func (s *usage) ObjectDELETEUsage(ctx context.Context, request operations.ObjectDELETEUsageRequest) (*operations.ObjectDELETEUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/usage/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/usage/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -148,16 +148,16 @@ func (s *usage) ObjectDELETEUsage(ctx context.Context, request operations.Object
 // ObjectGETUsage - CRUD: Retrieve a usage record
 func (s *usage) ObjectGETUsage(ctx context.Context, request operations.ObjectGETUsageRequest) (*operations.ObjectGETUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/usage/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/usage/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -226,7 +226,7 @@ func (s *usage) ObjectPOSTUsage(ctx context.Context, request operations.ObjectPO
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/usage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateUsage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -241,9 +241,9 @@ func (s *usage) ObjectPOSTUsage(ctx context.Context, request operations.ObjectPO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -310,9 +310,9 @@ func (s *usage) ObjectPOSTUsage(ctx context.Context, request operations.ObjectPO
 // ObjectPUTUsage - CRUD: Update a usage record
 func (s *usage) ObjectPUTUsage(ctx context.Context, request operations.ObjectPUTUsageRequest) (*operations.ObjectPUTUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/usage/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/usage/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyUsage", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -327,9 +327,9 @@ func (s *usage) ObjectPUTUsage(ctx context.Context, request operations.ObjectPUT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -412,7 +412,7 @@ func (s *usage) POSTUsage(ctx context.Context, request operations.POSTUsageReque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/usage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -427,7 +427,7 @@ func (s *usage) POSTUsage(ctx context.Context, request operations.POSTUsageReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

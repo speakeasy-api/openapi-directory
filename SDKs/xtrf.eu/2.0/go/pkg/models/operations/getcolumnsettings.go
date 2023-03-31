@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetColumnSettingsPathParams struct {
+type GetColumnSettingsRequest struct {
 	// column's name
 	ColumnName string `pathParam:"style=simple,explode=false,name=columnName"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type GetColumnSettingsRequest struct {
-	PathParams GetColumnSettingsPathParams
 }
 
 type GetColumnSettingsResponse struct {

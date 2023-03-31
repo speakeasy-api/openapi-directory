@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOauthV1AccessTokensTokenGetPathParams struct {
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
 type GetOauthV1AccessTokensTokenGetRequest struct {
-	PathParams GetOauthV1AccessTokensTokenGetPathParams
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type GetOauthV1AccessTokensTokenGetResponse struct {

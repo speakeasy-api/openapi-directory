@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteCredentialPublicKeyServerList = []string{
@@ -12,18 +11,13 @@ var DeleteCredentialPublicKeyServerList = []string{
 }
 
 type DeleteCredentialPublicKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteCredentialPublicKeyPathParams struct {
-	// The Twilio-provided string that uniquely identifies the PublicKey resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteCredentialPublicKeyRequest struct {
-	PathParams DeleteCredentialPublicKeyPathParams
-	Security   DeleteCredentialPublicKeySecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the PublicKey resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteCredentialPublicKeyResponse struct {

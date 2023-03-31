@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type IpamPrefixesDeletePathParams struct {
+type IpamPrefixesDeleteRequest struct {
 	// A unique integer value identifying this prefix.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamPrefixesDeleteRequest struct {
-	PathParams IpamPrefixesDeletePathParams
 }
 
 type IpamPrefixesDeleteResponse struct {

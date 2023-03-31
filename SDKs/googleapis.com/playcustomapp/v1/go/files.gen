@@ -17,5 +17,4 @@ pkg/models/shared/customapp.go
 pkg/models/shared/organization.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

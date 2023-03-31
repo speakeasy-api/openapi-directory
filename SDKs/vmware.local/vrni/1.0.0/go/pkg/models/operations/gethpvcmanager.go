@@ -8,17 +8,12 @@ import (
 )
 
 type GetHpvcManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetHpvcManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetHpvcManagerRequest struct {
-	PathParams GetHpvcManagerPathParams
-	Security   GetHpvcManagerSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetHpvcManagerResponse struct {

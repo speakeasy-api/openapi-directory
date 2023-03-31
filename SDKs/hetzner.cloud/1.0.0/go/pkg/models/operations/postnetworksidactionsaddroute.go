@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostNetworksIDActionsAddRoutePathParams struct {
-	// ID of the Network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostNetworksIDActionsAddRouteAddDeleteRouteRequest struct {
 	// Destination network or host of this route. Must not overlap with an existing ip_range in any subnets or with any destinations in other routes or with the first IP of the networks ip_range or with 172.31.1.1. Must be one of the private IPv4 ranges of RFC1918.
 	Destination string `json:"destination"`
@@ -21,8 +16,9 @@ type PostNetworksIDActionsAddRouteAddDeleteRouteRequest struct {
 }
 
 type PostNetworksIDActionsAddRouteRequest struct {
-	PathParams PostNetworksIDActionsAddRoutePathParams
-	Request    *PostNetworksIDActionsAddRouteAddDeleteRouteRequest `request:"mediaType=application/json"`
+	RequestBody *PostNetworksIDActionsAddRouteAddDeleteRouteRequest `request:"mediaType=application/json"`
+	// ID of the Network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostNetworksIDActionsAddRouteActionResponseActionError - Error message for the Action if error occurred, otherwise null

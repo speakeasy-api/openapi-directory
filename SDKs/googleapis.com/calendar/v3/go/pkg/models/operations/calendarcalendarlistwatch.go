@@ -10,13 +10,13 @@ import (
 )
 
 type CalendarCalendarListWatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarCalendarListWatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarCalendarListWatchSecurity struct {
@@ -54,7 +54,8 @@ func (e *CalendarCalendarListWatchMinAccessRoleEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type CalendarCalendarListWatchQueryParams struct {
+type CalendarCalendarListWatchRequest struct {
+	Channel *shared.Channel `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -85,12 +86,6 @@ type CalendarCalendarListWatchQueryParams struct {
 	SyncToken *string `queryParam:"style=form,explode=true,name=syncToken"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarCalendarListWatchRequest struct {
-	QueryParams CalendarCalendarListWatchQueryParams
-	Request     *shared.Channel `request:"mediaType=application/json"`
-	Security    CalendarCalendarListWatchSecurity
 }
 
 type CalendarCalendarListWatchResponse struct {

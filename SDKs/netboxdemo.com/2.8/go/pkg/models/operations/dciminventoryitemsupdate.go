@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInventoryItemsUpdatePathParams struct {
+type DcimInventoryItemsUpdateRequest struct {
+	WritableInventoryItemInput shared.WritableInventoryItemInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this inventory item.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInventoryItemsUpdateRequest struct {
-	PathParams DcimInventoryItemsUpdatePathParams
-	Request    shared.WritableInventoryItemInput `request:"mediaType=application/json"`
 }
 
 type DcimInventoryItemsUpdateResponse struct {

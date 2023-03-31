@@ -8,12 +8,7 @@ import (
 )
 
 type SetChannelPrivacyUsersSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SetChannelPrivacyUsersPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SetChannelPrivacyUsersRequestBody struct {
@@ -22,9 +17,9 @@ type SetChannelPrivacyUsersRequestBody struct {
 }
 
 type SetChannelPrivacyUsersRequest struct {
-	PathParams SetChannelPrivacyUsersPathParams
-	Request    SetChannelPrivacyUsersRequestBody `request:"mediaType=application/vnd.vimeo.user+json"`
-	Security   SetChannelPrivacyUsersSecurity
+	RequestBody SetChannelPrivacyUsersRequestBody `request:"mediaType=application/vnd.vimeo.user+json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type SetChannelPrivacyUsersResponse struct {

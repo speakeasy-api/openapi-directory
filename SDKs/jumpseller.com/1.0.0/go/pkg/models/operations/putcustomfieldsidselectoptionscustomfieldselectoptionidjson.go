@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONPathParams struct {
+type PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest struct {
+	// CustomFieldSelectOption parameters.
+	CustomFieldSelectOptionEdit shared.CustomFieldSelectOptionEdit `request:"mediaType=application/json"`
+	// API OAuth token.
+	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Id of the CustomFieldSelectOption
 	CustomFieldSelectOptionID int `pathParam:"style=simple,explode=false,name=custom_field_select_option_id"`
 	// Id of the CustomField
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONQueryParams struct {
-	// API OAuth token.
-	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest struct {
-	PathParams  PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONPathParams
-	QueryParams PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONQueryParams
-	// CustomFieldSelectOption parameters.
-	Request shared.CustomFieldSelectOptionEdit `request:"mediaType=application/json"`
 }
 
 type PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONResponse struct {

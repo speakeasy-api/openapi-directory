@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UnblockConversationPathParams struct {
+type UnblockConversationRequest struct {
 	// The ID of the conversation to unblock.
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type UnblockConversationRequest struct {
-	PathParams UnblockConversationPathParams
 }
 
 type UnblockConversationResponse struct {

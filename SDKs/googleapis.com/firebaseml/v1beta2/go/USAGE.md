@@ -14,42 +14,24 @@ func main() {
     s := sdk.New()
 
     req := operations.FirebasemlProjectsModelsCreateRequest{
-        Security: operations.FirebasemlProjectsModelsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.FirebasemlProjectsModelsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.FirebasemlProjectsModelsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ModelInput{
-            DisplayName: "suscipit",
-            Name: "iure",
+        DollarXgafv: "2",
+        ModelInput: &shared.ModelInput{
+            DisplayName: "provident",
+            Name: "distinctio",
             State: &shared.ModelState{
                 Published: false,
                 ValidationError: &shared.Status{
-                    Code: 297534,
+                    Code: 844266,
                     Details: []map[string]interface{}{
                         map[string]interface{}{
-                            "delectus": "tempora",
+                            "corrupti": "illum",
+                            "vel": "error",
+                            "deserunt": "suscipit",
+                            "iure": "magnam",
                         },
                         map[string]interface{}{
+                            "ipsa": "delectus",
+                            "tempora": "suscipit",
                             "molestiae": "minus",
                             "placeat": "voluptatum",
                         },
@@ -57,25 +39,37 @@ func main() {
                             "excepturi": "nisi",
                             "recusandae": "temporibus",
                         },
-                        map[string]interface{}{
-                            "quis": "veritatis",
-                        },
                     },
-                    Message: "deserunt",
+                    Message: "ab",
                 },
             },
             Tags: []string{
-                "ipsam",
+                "veritatis",
+                "deserunt",
             },
             TfliteModel: &shared.TfLiteModelInput{
-                AutomlModel: "repellendus",
-                GcsTfliteURI: "sapiente",
+                AutomlModel: "perferendis",
+                GcsTfliteURI: "ipsam",
             },
         },
+        AccessToken: "repellendus",
+        Alt: "proto",
+        Callback: "quo",
+        Fields: "odit",
+        Key: "at",
+        OauthToken: "at",
+        Parent: "maiores",
+        PrettyPrint: false,
+        QuotaUser: "molestiae",
+        UploadType: "quod",
+        UploadProtocol: "quod",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.FirebasemlProjectsModelsCreate(ctx, req)
+    res, err := s.Projects.FirebasemlProjectsModelsCreate(ctx, req, operations.FirebasemlProjectsModelsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

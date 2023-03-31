@@ -34,10 +34,6 @@ type AddUserToAccountRequestBody struct {
 	Users   []AddUserToAccountRequestBodyUsers `json:"users"`
 }
 
-type AddUserToAccountRequest struct {
-	Request AddUserToAccountRequestBody `request:"mediaType=application/json"`
-}
-
 type AddUserToAccount500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

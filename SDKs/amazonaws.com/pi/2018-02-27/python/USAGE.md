@@ -3,56 +3,61 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.DescribeDimensionKeysRequest(
-    headers=operations.DescribeDimensionKeysHeaders(
-        x_amz_algorithm="mollitia",
-        x_amz_content_sha256="distinctio",
-        x_amz_credential="ipsam",
-        x_amz_date="dolor",
-        x_amz_security_token="aut",
-        x_amz_signature="veniam",
-        x_amz_signed_headers="ullam",
-        x_amz_target="PerformanceInsightsv20180227.DescribeDimensionKeys",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.DescribeDimensionKeysRequest(
-        end_time="1986-12-15T18:29:59Z",
+)
+
+
+req = operations.DescribeDimensionKeysRequest(
+    describe_dimension_keys_request=shared.DescribeDimensionKeysRequest(
+        additional_metrics=[
+            "provident",
+            "distinctio",
+            "quibusdam",
+        ],
+        end_time="2021-04-14T16:47:33.722Z",
         filter={
-            "inventore": "est",
-            "nisi": "consequatur",
-            "fugiat": "tenetur",
+            "illum": "vel",
+            "error": "deserunt",
+            "suscipit": "iure",
         },
         group_by=shared.DimensionGroup(
             dimensions=[
-                "aliquam",
+                "debitis",
+                "ipsa",
             ],
-            group="aspernatur",
-            limit=4017103272747439088,
+            group="delectus",
+            limit=272656,
         ),
-        identifier="inventore",
-        max_results=3526406646607909592,
-        metric="saepe",
-        next_token="voluptas",
+        identifier="suscipit",
+        max_results=477665,
+        metric="minus",
+        next_token="placeat",
         partition_by=shared.DimensionGroup(
             dimensions=[
-                "optio",
-                "omnis",
+                "iusto",
+                "excepturi",
+                "nisi",
             ],
-            group="ut",
-            limit=8667532264838713382,
+            group="recusandae",
+            limit=836079,
         ),
-        period_in_seconds=8056810507064755208,
+        period_in_seconds=71036,
         service_type="RDS",
-        start_time="1976-11-04T06:14:44Z",
+        start_time="2022-05-09T10:00:51.349Z",
     ),
+    max_results="perferendis",
+    next_token="ipsam",
+    x_amz_algorithm="repellendus",
+    x_amz_content_sha256="sapiente",
+    x_amz_credential="quo",
+    x_amz_date="odit",
+    x_amz_security_token="at",
+    x_amz_signature="at",
+    x_amz_signed_headers="maiores",
+    x_amz_target="PerformanceInsightsv20180227.DescribeDimensionKeys",
 )
     
 res = s.describe_dimension_keys(req)

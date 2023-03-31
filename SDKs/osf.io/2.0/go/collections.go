@@ -43,9 +43,9 @@ func newCollections(defaultClient, securityClient HTTPClient, serverURL, languag
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsAddMetadata(ctx context.Context, request operations.CollectionsAddMetadataRequest) (*operations.CollectionsAddMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -99,7 +99,7 @@ func (s *collections) CollectionsAddMetadata(ctx context.Context, request operat
 // This request should never return an error, other then permissions errors.
 func (s *collections) CollectionsCollectedMetadata(ctx context.Context, request operations.CollectionsCollectedMetadataRequest) (*operations.CollectionsCollectedMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/subjects/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/subjects/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +143,7 @@ func (s *collections) CollectionsCollectedMetadata(ctx context.Context, request 
 // The `data` key contains an array of comment objects. Each resource in the array is a separate comment object.
 //
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-func (s *collections) CollectionsCreate(ctx context.Context, request operations.CollectionsCreateRequest) (*operations.CollectionsCreateResponse, error) {
+func (s *collections) CollectionsCreate(ctx context.Context, request map[string]interface{}) (*operations.CollectionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collections/"
 
@@ -195,7 +195,7 @@ func (s *collections) CollectionsCreate(ctx context.Context, request operations.
 // Nothing is returned in the body
 func (s *collections) CollectionsDelete(ctx context.Context, request operations.CollectionsDeleteRequest) (*operations.CollectionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -238,7 +238,7 @@ func (s *collections) CollectionsDelete(ctx context.Context, request operations.
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsDetail(ctx context.Context, request operations.CollectionsDetailRequest) (*operations.CollectionsDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *collections) CollectionsDetail(ctx context.Context, request operations.
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedNodesList(ctx context.Context, request operations.CollectionsLinkedNodesListRequest) (*operations.CollectionsLinkedNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -335,9 +335,9 @@ func (s *collections) CollectionsLinkedNodesList(ctx context.Context, request op
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedNodesRelationships(ctx context.Context, request operations.CollectionsLinkedNodesRelationshipsRequest) (*operations.CollectionsLinkedNodesRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes/relationships/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes/relationships/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,7 +388,7 @@ func (s *collections) CollectionsLinkedNodesRelationships(ctx context.Context, r
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedNodesRelationshipsCreate(ctx context.Context, request operations.CollectionsLinkedNodesRelationshipsCreateRequest) (*operations.CollectionsLinkedNodesRelationshipsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes/relationships/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes/relationships/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -429,9 +429,9 @@ func (s *collections) CollectionsLinkedNodesRelationshipsCreate(ctx context.Cont
 // Nothing in the response body.
 func (s *collections) CollectionsLinkedNodesRelationshipsDelete(ctx context.Context, request operations.CollectionsLinkedNodesRelationshipsDeleteRequest) (*operations.CollectionsLinkedNodesRelationshipsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes/relationships/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_nodes/relationships/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -483,7 +483,7 @@ func (s *collections) CollectionsLinkedNodesRelationshipsDelete(ctx context.Cont
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedPreprintsList(ctx context.Context, request operations.CollectionsLinkedPreprintsListRequest) (*operations.CollectionsLinkedPreprintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_preprints/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_preprints/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -527,7 +527,7 @@ func (s *collections) CollectionsLinkedPreprintsList(ctx context.Context, reques
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedRegistrationsList(ctx context.Context, request operations.CollectionsLinkedRegistrationsListRequest) (*operations.CollectionsLinkedRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -571,9 +571,9 @@ func (s *collections) CollectionsLinkedRegistrationsList(ctx context.Context, re
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedRegistrationsRelationships(ctx context.Context, request operations.CollectionsLinkedRegistrationsRelationshipsRequest) (*operations.CollectionsLinkedRegistrationsRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/relationships/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/relationships/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -624,7 +624,7 @@ func (s *collections) CollectionsLinkedRegistrationsRelationships(ctx context.Co
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsLinkedRegistrationsRelationshipsCreate(ctx context.Context, request operations.CollectionsLinkedRegistrationsRelationshipsCreateRequest) (*operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/relationships/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/relationships/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -665,9 +665,9 @@ func (s *collections) CollectionsLinkedRegistrationsRelationshipsCreate(ctx cont
 // Nothing in the response body.
 func (s *collections) CollectionsLinkedRegistrationsRelationshipsDelete(ctx context.Context, request operations.CollectionsLinkedRegistrationsRelationshipsDeleteRequest) (*operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/relationships/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/linked_registrations/relationships/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -770,7 +770,7 @@ func (s *collections) CollectionsList(ctx context.Context) (*operations.Collecti
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsMetadataDelete(ctx context.Context, request operations.CollectionsMetadataDeleteRequest) (*operations.CollectionsMetadataDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -813,9 +813,9 @@ func (s *collections) CollectionsMetadataDelete(ctx context.Context, request ope
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsMetadataDetail(ctx context.Context, request operations.CollectionsMetadataDetailRequest) (*operations.CollectionsMetadataDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -868,7 +868,7 @@ func (s *collections) CollectionsMetadataDetail(ctx context.Context, request ope
 // This request should never return an error.
 func (s *collections) CollectionsMetadataRegistrationsDetail(ctx context.Context, request operations.CollectionsMetadataRegistrationsDetailRequest) (*operations.CollectionsMetadataRegistrationsDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -913,7 +913,7 @@ func (s *collections) CollectionsMetadataRegistrationsDetail(ctx context.Context
 // This request should never return an error.
 func (s *collections) CollectionsMetadataRegistrationsList(ctx context.Context, request operations.CollectionsMetadataRegistrationsListRequest) (*operations.CollectionsMetadataRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -956,7 +956,7 @@ func (s *collections) CollectionsMetadataRegistrationsList(ctx context.Context, 
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsMetadataSubjectsRelationships(ctx context.Context, request operations.CollectionsMetadataSubjectsRelationshipsRequest) (*operations.CollectionsMetadataSubjectsRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1000,9 +1000,9 @@ func (s *collections) CollectionsMetadataSubjectsRelationships(ctx context.Conte
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *collections) CollectionsMetadataSubjectsRelationshipsUpdate(ctx context.Context, request operations.CollectionsMetadataSubjectsRelationshipsUpdateRequest) (*operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -30,7 +30,6 @@ pkg/models/shared/googlechromemanagementv1countchromeapprequestsresponse.go
 pkg/models/shared/googlechromemanagementv1chromeapprequest.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlechromemanagementv1countchromebrowsersneedingattentionresponse.go
 pkg/models/shared/googlechromemanagementv1countchromedevicesreachingautoexpirationdateresponse.go
 pkg/models/shared/googlechromemanagementv1deviceauecountreport.go

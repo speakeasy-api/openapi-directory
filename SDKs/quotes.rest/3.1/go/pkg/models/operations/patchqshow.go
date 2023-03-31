@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchQshowSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type PatchQshowQueryParams struct {
+type PatchQshowRequest struct {
 	// Qshow description
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// Qshow ID
@@ -20,11 +19,6 @@ type PatchQshowQueryParams struct {
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
 	// Qshow title
 	Title *string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type PatchQshowRequest struct {
-	QueryParams PatchQshowQueryParams
-	Security    PatchQshowSecurity
 }
 
 type PatchQshowResponse struct {

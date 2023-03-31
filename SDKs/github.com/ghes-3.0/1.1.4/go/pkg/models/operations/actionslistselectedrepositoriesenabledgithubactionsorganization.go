@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams struct {
+type ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest struct {
-	PathParams  ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams
-	QueryParams ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams
 }
 
 // ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON - Response

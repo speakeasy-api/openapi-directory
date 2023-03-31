@@ -8,18 +8,18 @@ import (
 )
 
 type ReplicapoolPoolsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsDeleteSecurity struct {
@@ -28,16 +28,8 @@ type ReplicapoolPoolsDeleteSecurity struct {
 	Option3 *ReplicapoolPoolsDeleteSecurityOption3 `security:"option"`
 }
 
-type ReplicapoolPoolsDeletePathParams struct {
-	// The name of the replica pool for this request.
-	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
-	// The project ID for this replica pool.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The zone for this replica pool.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ReplicapoolPoolsDeleteQueryParams struct {
+type ReplicapoolPoolsDeleteRequest struct {
+	PoolsDeleteRequest *shared.PoolsDeleteRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,19 +38,18 @@ type ReplicapoolPoolsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The name of the replica pool for this request.
+	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this replica pool.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type ReplicapoolPoolsDeleteRequest struct {
-	PathParams  ReplicapoolPoolsDeletePathParams
-	QueryParams ReplicapoolPoolsDeleteQueryParams
-	Request     *shared.PoolsDeleteRequest `request:"mediaType=application/json"`
-	Security    ReplicapoolPoolsDeleteSecurity
+	// The zone for this replica pool.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ReplicapoolPoolsDeleteResponse struct {

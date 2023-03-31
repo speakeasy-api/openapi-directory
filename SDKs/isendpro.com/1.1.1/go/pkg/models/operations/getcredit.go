@@ -33,15 +33,11 @@ func (e *GetCreditCreditEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCreditQueryParams struct {
+type GetCreditRequest struct {
 	// Type de reponse demandée, 1 pour euro, 2 pour euro + estimation quantité
 	Credit GetCreditCreditEnum `queryParam:"style=form,explode=true,name=credit"`
 	// Clé API
 	Keyid string `queryParam:"style=form,explode=true,name=keyid"`
-}
-
-type GetCreditRequest struct {
-	QueryParams GetCreditQueryParams
 }
 
 type GetCreditResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAppRequest struct {
-	Request shared.UpdateAppRequest `request:"mediaType=application/json"`
-}
-
 type UpdateAppResponse struct {
 	// Bad request
 	APIError    *shared.APIError

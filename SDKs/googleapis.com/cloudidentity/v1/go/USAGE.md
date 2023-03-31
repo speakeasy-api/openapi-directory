@@ -14,26 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudidentityCustomersUserinvitationsCancelRequest{
-        PathParams: operations.CloudidentityCustomersUserinvitationsCancelPathParams{
-            Name: "corrupti",
+        DollarXgafv: "2",
+        RequestBody: map[string]interface{}{
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        QueryParams: operations.CloudidentityCustomersUserinvitationsCancelQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: map[string]interface{}{
-            "iure": "magnam",
-            "debitis": "ipsa",
-        },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        Name: "magnam",
+        OauthToken: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()

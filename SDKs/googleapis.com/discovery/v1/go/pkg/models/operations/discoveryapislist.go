@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiscoveryApisListQueryParams struct {
+type DiscoveryApisListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -26,10 +26,6 @@ type DiscoveryApisListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DiscoveryApisListRequest struct {
-	QueryParams DiscoveryApisListQueryParams
 }
 
 type DiscoveryApisListResponse struct {

@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyDetailsPathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type KeyDetailsQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type KeyDetailsRequest struct {
-	PathParams  KeyDetailsPathParams
-	QueryParams KeyDetailsQueryParams
+	Key       string  `pathParam:"style=simple,explode=false,name=key"`
+	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type KeyDetailsResponse struct {

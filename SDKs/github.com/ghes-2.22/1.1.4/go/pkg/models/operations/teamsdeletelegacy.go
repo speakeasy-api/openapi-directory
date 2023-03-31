@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsDeleteLegacyPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsDeleteLegacyRequest struct {
-	PathParams TeamsDeleteLegacyPathParams
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsDeleteLegacyResponse struct {

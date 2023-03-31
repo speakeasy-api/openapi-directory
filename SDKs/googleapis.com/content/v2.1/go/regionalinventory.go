@@ -33,11 +33,11 @@ func newRegionalinventory(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // ContentRegionalinventoryCustombatch - Updates regional inventory for multiple products or regions in a single request.
-func (s *regionalinventory) ContentRegionalinventoryCustombatch(ctx context.Context, request operations.ContentRegionalinventoryCustombatchRequest) (*operations.ContentRegionalinventoryCustombatchResponse, error) {
+func (s *regionalinventory) ContentRegionalinventoryCustombatch(ctx context.Context, request operations.ContentRegionalinventoryCustombatchRequest, security operations.ContentRegionalinventoryCustombatchSecurity) (*operations.ContentRegionalinventoryCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/regionalinventory/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegionalinventoryCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *regionalinventory) ContentRegionalinventoryCustombatch(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *regionalinventory) ContentRegionalinventoryCustombatch(ctx context.Cont
 }
 
 // ContentRegionalinventoryInsert - Updates the regional inventory of a product in your Merchant Center account. If a regional inventory with the same region ID already exists, this method updates that entry.
-func (s *regionalinventory) ContentRegionalinventoryInsert(ctx context.Context, request operations.ContentRegionalinventoryInsertRequest) (*operations.ContentRegionalinventoryInsertResponse, error) {
+func (s *regionalinventory) ContentRegionalinventoryInsert(ctx context.Context, request operations.ContentRegionalinventoryInsertRequest, security operations.ContentRegionalinventoryInsertSecurity) (*operations.ContentRegionalinventoryInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/regionalinventory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/regionalinventory", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegionalInventory", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *regionalinventory) ContentRegionalinventoryInsert(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

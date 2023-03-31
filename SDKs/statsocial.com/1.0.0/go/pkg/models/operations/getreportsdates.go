@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportsDatesQueryParams struct {
+type GetReportsDatesRequest struct {
 	// Unique report hash
 	ReportHash string `queryParam:"style=form,explode=true,name=report_hash"`
-}
-
-type GetReportsDatesRequest struct {
-	QueryParams GetReportsDatesQueryParams
 }
 
 type GetReportsDatesResponse struct {

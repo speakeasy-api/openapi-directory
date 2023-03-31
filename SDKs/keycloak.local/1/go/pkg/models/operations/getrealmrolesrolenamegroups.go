@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmRolesRoleNameGroupsPathParams struct {
-	// realm name (not id!)
-	Realm    string `pathParam:"style=simple,explode=false,name=realm"`
-	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type GetRealmRolesRoleNameGroupsQueryParams struct {
+type GetRealmRolesRoleNameGroupsRequest struct {
 	// if false, return a full representation of the GroupRepresentation objects
 	BriefRepresentation *bool `queryParam:"style=form,explode=true,name=briefRepresentation"`
 	First               *int  `queryParam:"style=form,explode=true,name=first"`
 	Max                 *int  `queryParam:"style=form,explode=true,name=max"`
-}
-
-type GetRealmRolesRoleNameGroupsRequest struct {
-	PathParams  GetRealmRolesRoleNameGroupsPathParams
-	QueryParams GetRealmRolesRoleNameGroupsQueryParams
+	// realm name (not id!)
+	Realm    string `pathParam:"style=simple,explode=false,name=realm"`
+	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
 }
 
 type GetRealmRolesRoleNameGroupsResponse struct {

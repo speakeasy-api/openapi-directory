@@ -8,17 +8,12 @@ import (
 )
 
 type GetPaymentRefundSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetPaymentRefundPathParams struct {
-	// The unique ID for the desired `PaymentRefund`.
-	RefundID string `pathParam:"style=simple,explode=false,name=refund_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPaymentRefundRequest struct {
-	PathParams GetPaymentRefundPathParams
-	Security   GetPaymentRefundSecurity
+	// The unique ID for the desired `PaymentRefund`.
+	RefundID string `pathParam:"style=simple,explode=false,name=refund_id"`
 }
 
 type GetPaymentRefundResponse struct {

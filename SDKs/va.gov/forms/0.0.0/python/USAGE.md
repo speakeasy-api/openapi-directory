@@ -4,19 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FindFormByFormNameRequest(
-    security=operations.FindFormByFormNameSecurity(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    path_params=operations.FindFormByFormNamePathParams(
-        form_name="quis",
-    ),
+    form_name="corrupti",
 )
     
-res = s.forms.find_form_by_form_name(req)
+res = s.forms.find_form_by_form_name(req, operations.FindFormByFormNameSecurity(
+    apikey="YOUR_API_KEY_HERE",
+))
 
 if res.find_form_by_form_name_200_application_json_object is not None:
     # handle response

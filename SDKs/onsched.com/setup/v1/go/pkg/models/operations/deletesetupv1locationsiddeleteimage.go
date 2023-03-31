@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSetupV1LocationsIDDeleteimagePathParams struct {
+type DeleteSetupV1LocationsIDDeleteimageRequest struct {
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1LocationsIDDeleteimageRequest struct {
-	PathParams DeleteSetupV1LocationsIDDeleteimagePathParams
 }
 
 type DeleteSetupV1LocationsIDDeleteimageResponse struct {

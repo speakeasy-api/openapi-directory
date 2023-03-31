@@ -8,13 +8,7 @@ import (
 )
 
 type CreateFulfillmentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateFulfillmentPolicyRequest struct {
-	// Request to create a seller account fulfillment policy.
-	Request  shared.FulfillmentPolicyRequest `request:"mediaType=application/json"`
-	Security CreateFulfillmentPolicySecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateFulfillmentPolicyResponse struct {

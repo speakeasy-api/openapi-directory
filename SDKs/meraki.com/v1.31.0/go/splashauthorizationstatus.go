@@ -34,7 +34,7 @@ func newSplashAuthorizationStatus(defaultClient, securityClient HTTPClient, serv
 // Return the splash authorization for a client, for each SSID they've associated with through splash. Only enabled SSIDs with Click-through splash enabled will be included. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *splashAuthorizationStatus) GetNetworkClientSplashAuthorizationStatus(ctx context.Context, request operations.GetNetworkClientSplashAuthorizationStatusRequest) (*operations.GetNetworkClientSplashAuthorizationStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *splashAuthorizationStatus) GetNetworkClientSplashAuthorizationStatus(ct
 // Update a client's splash authorization. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *splashAuthorizationStatus) UpdateNetworkClientSplashAuthorizationStatus(ctx context.Context, request operations.UpdateNetworkClientSplashAuthorizationStatusRequest) (*operations.UpdateNetworkClientSplashAuthorizationStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

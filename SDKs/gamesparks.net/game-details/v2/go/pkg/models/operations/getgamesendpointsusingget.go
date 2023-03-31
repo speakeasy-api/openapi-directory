@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETGamesEndpointsUsingGETPathParams struct {
+type GETGamesEndpointsUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type GETGamesEndpointsUsingGETRequest struct {
-	PathParams GETGamesEndpointsUsingGETPathParams
 }
 
 type GETGamesEndpointsUsingGETResponse struct {

@@ -14,20 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest{
-        Security: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity{
-            Bearer: shared.SchemeBearer{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDPathParams{
-            ID: "corrupti",
-            MemberSlug: "provident",
-            WorkspaceSlug: "distinctio",
-        },
+        ID: "corrupti",
+        MemberSlug: "provident",
+        WorkspaceSlug: "distinctio",
     }
 
     ctx := context.Background()
-    res, err := s.Activities.DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx, req)
+    res, err := s.Activities.DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx, req, operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity{
+        Bearer: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

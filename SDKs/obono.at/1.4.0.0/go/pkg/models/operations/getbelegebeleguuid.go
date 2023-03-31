@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBelegeBelegUUIDPathParams struct {
+type GetBelegeBelegUUIDRequest struct {
 	// The `_uuid` of the `Beleg` to fetch.
 	BelegUUID string `pathParam:"style=simple,explode=false,name=belegUuid"`
-}
-
-type GetBelegeBelegUUIDRequest struct {
-	PathParams GetBelegeBelegUUIDPathParams
 }
 
 type GetBelegeBelegUUIDResponse struct {

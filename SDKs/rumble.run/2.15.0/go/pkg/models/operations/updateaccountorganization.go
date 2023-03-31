@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateAccountOrganizationSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateAccountOrganizationPathParams struct {
-	// UUID of the organization to retrieve
-	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateAccountOrganizationRequest struct {
-	PathParams UpdateAccountOrganizationPathParams
 	// organization options
-	Request  shared.OrgOptions `request:"mediaType=application/json"`
-	Security UpdateAccountOrganizationSecurity
+	OrgOptions shared.OrgOptions `request:"mediaType=application/json"`
+	// UUID of the organization to retrieve
+	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
 }
 
 type UpdateAccountOrganizationResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsGetServicePrincipalsIDByAppIDPathParams struct {
+type ApplicationsGetServicePrincipalsIDByAppIDRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The application ID.
 	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationID"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsGetServicePrincipalsIDByAppIDQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsGetServicePrincipalsIDByAppIDRequest struct {
-	PathParams  ApplicationsGetServicePrincipalsIDByAppIDPathParams
-	QueryParams ApplicationsGetServicePrincipalsIDByAppIDQueryParams
 }
 
 type ApplicationsGetServicePrincipalsIDByAppIDResponse struct {

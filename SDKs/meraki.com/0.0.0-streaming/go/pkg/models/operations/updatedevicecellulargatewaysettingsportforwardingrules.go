@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCellularGatewaySettingsPortForwardingRulesPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules struct {
 	// `any` or `restricted`. Specify the right to make inbound connections on the specified ports or port ranges. If `restricted`, a list of allowed IPs is mandatory.
 	Access string `json:"access"`
@@ -33,8 +29,8 @@ type UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody struct {
 }
 
 type UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest struct {
-	PathParams UpdateDeviceCellularGatewaySettingsPortForwardingRulesPathParams
-	Request    *UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody `request:"mediaType=application/json"`
+	Serial      string                                                             `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse struct {

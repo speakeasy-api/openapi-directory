@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type GetOrganizationInventoryDevicePathParams struct {
+type GetOrganizationInventoryDeviceRequest struct {
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	Serial         string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetOrganizationInventoryDeviceRequest struct {
-	PathParams GetOrganizationInventoryDevicePathParams
 }
 
 // GetOrganizationInventoryDevice200ApplicationJSON - Successful operation

@@ -8,16 +8,11 @@ import (
 )
 
 type GetAllOptionsSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetAllOptionsPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAllOptionsRequest struct {
-	PathParams GetAllOptionsPathParams
-	Security   GetAllOptionsSecurity
+	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type GetAllOptionsResponse struct {

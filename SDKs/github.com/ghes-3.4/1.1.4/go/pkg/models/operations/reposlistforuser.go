@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ReposListForUserDirectionEnum - The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
 type ReposListForUserDirectionEnum string
 
@@ -95,7 +90,7 @@ func (e *ReposListForUserTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReposListForUserQueryParams struct {
+type ReposListForUserRequest struct {
 	// The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
 	Direction *ReposListForUserDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -106,11 +101,8 @@ type ReposListForUserQueryParams struct {
 	Sort *ReposListForUserSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Limit results to repositories of the specified type.
 	Type *ReposListForUserTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ReposListForUserRequest struct {
-	PathParams  ReposListForUserPathParams
-	QueryParams ReposListForUserQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ReposListForUserResponse struct {

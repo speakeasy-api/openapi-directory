@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConsumerV1AppointmentsIDReschedulePathParams struct {
+type PutConsumerV1AppointmentsIDRescheduleRequest struct {
+	AppointmentRescheduleModel *shared.AppointmentRescheduleModel `request:"mediaType=application/json"`
 	// appointment id to reschedule
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1AppointmentsIDRescheduleRequest struct {
-	PathParams PutConsumerV1AppointmentsIDReschedulePathParams
-	Request    *shared.AppointmentRescheduleModel `request:"mediaType=application/json"`
 }
 
 type PutConsumerV1AppointmentsIDRescheduleResponse struct {

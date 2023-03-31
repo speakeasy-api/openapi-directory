@@ -33,15 +33,11 @@ func (e *BoxScoreByScoreidVFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BoxScoreByScoreidVPathParams struct {
+type BoxScoreByScoreidVRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BoxScoreByScoreidVFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The ScoreID of the game. Possible values include: <code>16247</code>, <code>16245</code>, etc.
 	Scoreid string `pathParam:"style=simple,explode=false,name=scoreid"`
-}
-
-type BoxScoreByScoreidVRequest struct {
-	PathParams BoxScoreByScoreidVPathParams
 }
 
 type BoxScoreByScoreidVResponse struct {

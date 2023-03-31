@@ -13,35 +13,31 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CalculatediscountsandtaxesBundlesRequest{
-        Headers: operations.CalculatediscountsandtaxesBundlesHeaders{
-            Accept: "corrupti",
-            ContentType: "provident",
-        },
-        Request: shared.CalculatediscountsandtaxesBundlesRequest{
+        Accept: "corrupti",
+        CalculatediscountsandtaxesBundlesRequest: shared.CalculatediscountsandtaxesBundlesRequest{
             IsShoppingCart: false,
             Items: []shared.Item{
                 shared.Item{
-                    ID: "quibusdam",
-                    Index: 602763,
+                    ID: "distinctio",
+                    Index: 844266,
                     IsGift: false,
                     LogisticsInfos: []string{
+                        "nulla",
                         "corrupti",
                         "illum",
-                        "vel",
-                        "error",
                     },
-                    MeasurementUnit: "deserunt",
+                    MeasurementUnit: "vel",
                     Params: []shared.Param{
+                        shared.Param{
+                            Name: "deserunt",
+                            Value: "suscipit",
+                        },
                         shared.Param{
                             Name: "iure",
                             Value: "magnam",
@@ -172,6 +168,7 @@ func main() {
             ProfileID: "enim",
             SalesChannel: "omnis",
         },
+        ContentType: "nemo",
     }
 
     ctx := context.Background()

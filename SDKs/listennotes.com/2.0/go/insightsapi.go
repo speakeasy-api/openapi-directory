@@ -36,14 +36,14 @@ func newInsightsAPI(defaultClient, securityClient HTTPClient, serverURL, languag
 // Fetch audience demographics for a podcast - 1) directly measured on the Listen Notes platform; 2) only supports audience breakdown by regions for now; 3) not every podcast has data.
 func (s *insightsAPI) GetPodcastAudience(ctx context.Context, request operations.GetPodcastAudienceRequest) (*operations.GetPodcastAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}/audience", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}/audience", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

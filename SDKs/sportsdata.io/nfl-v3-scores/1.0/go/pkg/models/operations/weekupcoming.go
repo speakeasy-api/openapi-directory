@@ -32,13 +32,9 @@ func (e *WeekUpcomingFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type WeekUpcomingPathParams struct {
+type WeekUpcomingRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format WeekUpcomingFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type WeekUpcomingRequest struct {
-	PathParams WeekUpcomingPathParams
 }
 
 type WeekUpcomingResponse struct {

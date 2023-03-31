@@ -18,5 +18,4 @@ pkg/models/shared/errorparameter.go
 pkg/models/shared/translateresponse.go
 pkg/models/shared/translation.go
 pkg/models/shared/translaterequest.go
-pkg/models/shared/security.go
 USAGE.md

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ResourcesIDUploadimagePathParams struct {
+type PostSetupV1ResourcesIDUploadimageRequest struct {
+	// Input model for image upload
+	ResourceImageInputModel *shared.ResourceImageInputModel `request:"mediaType=application/json"`
 	// id of resource object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1ResourcesIDUploadimageRequest struct {
-	PathParams PostSetupV1ResourcesIDUploadimagePathParams
-	// Input model for image upload
-	Request *shared.ResourceImageInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1ResourcesIDUploadimageResponse struct {

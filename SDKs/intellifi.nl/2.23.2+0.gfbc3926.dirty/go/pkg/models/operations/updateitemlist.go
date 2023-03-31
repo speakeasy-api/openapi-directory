@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateItemListPathParams struct {
+type UpdateItemListRequest struct {
+	// A JSON object containing item list information
+	ItemListInput shared.ItemListInput `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateItemListRequest struct {
-	PathParams UpdateItemListPathParams
-	// A JSON object containing item list information
-	Request shared.ItemListInput `request:"mediaType=application/json"`
 }
 
 type UpdateItemListResponse struct {

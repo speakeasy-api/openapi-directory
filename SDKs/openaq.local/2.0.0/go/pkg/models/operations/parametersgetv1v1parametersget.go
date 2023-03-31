@@ -33,7 +33,7 @@ func (e *ParametersGetv1V1ParametersGetSortSortEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ParametersGetv1V1ParametersGetQueryParams struct {
+type ParametersGetv1V1ParametersGetRequest struct {
 	// Change the number of results returned.
 	Limit   *int64      `queryParam:"style=form,explode=true,name=limit"`
 	Offset  *int64      `queryParam:"style=form,explode=true,name=offset"`
@@ -45,10 +45,6 @@ type ParametersGetv1V1ParametersGetQueryParams struct {
 	SourceID   []int64                                     `queryParam:"style=form,explode=true,name=sourceId"`
 	SourceName []string                                    `queryParam:"style=form,explode=true,name=sourceName"`
 	SourceSlug []string                                    `queryParam:"style=form,explode=true,name=sourceSlug"`
-}
-
-type ParametersGetv1V1ParametersGetRequest struct {
-	QueryParams ParametersGetv1V1ParametersGetQueryParams
 }
 
 type ParametersGetv1V1ParametersGetResponse struct {

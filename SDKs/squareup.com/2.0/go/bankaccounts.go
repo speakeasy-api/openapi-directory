@@ -35,16 +35,16 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetBankAccount - GetBankAccount
 // Returns details of a [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount)
 // linked to a Square account.
-func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest) (*operations.GetBankAccountResponse, error) {
+func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest, security operations.GetBankAccountSecurity) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/{bank_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/{bank_account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,16 +80,16 @@ func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.Ge
 
 // GetBankAccountByV1ID - GetBankAccountByV1Id
 // Returns details of a [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount) identified by V1 bank account ID.
-func (s *bankAccounts) GetBankAccountByV1ID(ctx context.Context, request operations.GetBankAccountByV1IDRequest) (*operations.GetBankAccountByV1IDResponse, error) {
+func (s *bankAccounts) GetBankAccountByV1ID(ctx context.Context, request operations.GetBankAccountByV1IDRequest, security operations.GetBankAccountByV1IDSecurity) (*operations.GetBankAccountByV1IDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *bankAccounts) GetBankAccountByV1ID(ctx context.Context, request operati
 
 // ListBankAccounts - ListBankAccounts
 // Returns a list of [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount) objects linked to a Square account.
-func (s *bankAccounts) ListBankAccounts(ctx context.Context, request operations.ListBankAccountsRequest) (*operations.ListBankAccountsResponse, error) {
+func (s *bankAccounts) ListBankAccounts(ctx context.Context, request operations.ListBankAccountsRequest, security operations.ListBankAccountsSecurity) (*operations.ListBankAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bank-accounts"
 
@@ -134,11 +134,11 @@ func (s *bankAccounts) ListBankAccounts(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

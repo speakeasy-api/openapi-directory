@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLocalSettingsPathParams struct {
+type UpdateLocalSettingsRequest struct {
+	// Updated view's local settings (for current user).
+	LocalSettingsDTO shared.LocalSettingsDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateLocalSettingsRequest struct {
-	PathParams UpdateLocalSettingsPathParams
-	// Updated view's local settings (for current user).
-	Request shared.LocalSettingsDTO `request:"mediaType=application/json"`
 }
 
 type UpdateLocalSettingsResponse struct {

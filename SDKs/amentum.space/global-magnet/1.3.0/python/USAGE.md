@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AppAPIWmmEndpointsWmmMagneticFieldRequest(
-    query_params=operations.AppAPIWmmEndpointsWmmMagneticFieldQueryParams(
-        altitude=59.099998,
-        latitude=93.099998,
-        longitude=75.099998,
-        year=54.200001,
-    ),
+
+
+req = operations.AppAPIWMMEndpointsWMMMagneticFieldRequest(
+    altitude=10,
+    latitude=80,
+    longitude=100,
+    year=2020.5,
 )
     
 res = s.app_api_wmm_endpoints_wmm_magnetic_field(req)

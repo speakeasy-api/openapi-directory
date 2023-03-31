@@ -8,22 +8,17 @@ import (
 )
 
 type GetlasteventofSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetlasteventofQueryParams struct {
+type GetlasteventofRequest struct {
 	// ID of the Home you're interested in
 	HomeID string `queryParam:"style=form,explode=true,name=home_id"`
 	// Number of events to retrieve. Default is 30.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Your request will retrieve all events of the given home until the most recent event of the given person
 	PersonID string `queryParam:"style=form,explode=true,name=person_id"`
-}
-
-type GetlasteventofRequest struct {
-	QueryParams GetlasteventofQueryParams
-	Security    GetlasteventofSecurity
 }
 
 type GetlasteventofResponse struct {

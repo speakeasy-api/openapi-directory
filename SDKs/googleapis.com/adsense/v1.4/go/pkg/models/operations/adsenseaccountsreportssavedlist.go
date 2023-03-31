@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsReportsSavedListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsSavedListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsSavedListSecurity struct {
@@ -22,12 +22,9 @@ type AdsenseAccountsReportsSavedListSecurity struct {
 	Option2 *AdsenseAccountsReportsSavedListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsReportsSavedListPathParams struct {
+type AdsenseAccountsReportsSavedListRequest struct {
 	// Account to which the saved reports belong.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AdsenseAccountsReportsSavedListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,12 +43,6 @@ type AdsenseAccountsReportsSavedListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsReportsSavedListRequest struct {
-	PathParams  AdsenseAccountsReportsSavedListPathParams
-	QueryParams AdsenseAccountsReportsSavedListQueryParams
-	Security    AdsenseAccountsReportsSavedListSecurity
 }
 
 type AdsenseAccountsReportsSavedListResponse struct {

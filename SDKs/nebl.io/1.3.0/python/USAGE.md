@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAddressRequest(
-    path_params=operations.GetAddressPathParams(
-        address="cupiditate",
-    ),
+    address="5786 Little Streets",
 )
     
 res = s.insight.get_address(req)

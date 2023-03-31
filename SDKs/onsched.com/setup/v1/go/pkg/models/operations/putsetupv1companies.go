@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1CompaniesRequest struct {
-	// Company Update Model
-	Request *shared.CompanyUpdateModel `request:"mediaType=application/json"`
-}
-
 type PutSetupV1CompaniesResponse struct {
 	// Success
 	CompanyViewModel *shared.CompanyViewModel

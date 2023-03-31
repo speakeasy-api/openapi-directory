@@ -8,18 +8,14 @@ import (
 )
 
 type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationPathParams struct {
-	// Name of the proposal. Format: `buyers/{accountId}/proposals/{proposalId}`
-	Proposal string `pathParam:"style=simple,explode=false,name=proposal"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationQueryParams struct {
+type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,19 +30,14 @@ type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationQueryParams stru
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Name of the proposal. Format: `buyers/{accountId}/proposals/{proposalId}`
+	Proposal string `pathParam:"style=simple,explode=false,name=proposal"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationRequest struct {
-	PathParams  AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationPathParams
-	QueryParams AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationSecurity
 }
 
 type AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse struct {

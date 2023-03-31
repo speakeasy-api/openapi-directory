@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            JwtAuth: shared.SchemeJwtAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            JwtAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
     req := operations.DeleteKeysIDRequest{
-        PathParams: operations.DeleteKeysIDPathParams{
-            ID: "jMXUw-BE_2vd",
-        },
+        ID: "jMXUw-BE_2vd",
     }
 
     ctx := context.Background()

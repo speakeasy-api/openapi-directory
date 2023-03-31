@@ -33,16 +33,16 @@ func newOnDemandRegions(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // AddVodRegion - Add a specific region to an On Demand page
-func (s *onDemandRegions) AddVodRegion(ctx context.Context, request operations.AddVodRegionRequest) (*operations.AddVodRegionResponse, error) {
+func (s *onDemandRegions) AddVodRegion(ctx context.Context, request operations.AddVodRegionRequest, security operations.AddVodRegionSecurity) (*operations.AddVodRegionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions/{country}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,16 +89,16 @@ func (s *onDemandRegions) AddVodRegion(ctx context.Context, request operations.A
 }
 
 // DeleteVodRegion - Remove a specific region from an On Demand page
-func (s *onDemandRegions) DeleteVodRegion(ctx context.Context, request operations.DeleteVodRegionRequest) (*operations.DeleteVodRegionResponse, error) {
+func (s *onDemandRegions) DeleteVodRegion(ctx context.Context, request operations.DeleteVodRegionRequest, security operations.DeleteVodRegionSecurity) (*operations.DeleteVodRegionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions/{country}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *onDemandRegions) DeleteVodRegion(ctx context.Context, request operation
 }
 
 // DeleteVodRegions - Remove a list of regions from an On Demand page
-func (s *onDemandRegions) DeleteVodRegions(ctx context.Context, request operations.DeleteVodRegionsRequest) (*operations.DeleteVodRegionsResponse, error) {
+func (s *onDemandRegions) DeleteVodRegions(ctx context.Context, request operations.DeleteVodRegionsRequest, security operations.DeleteVodRegionsSecurity) (*operations.DeleteVodRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,7 +152,7 @@ func (s *onDemandRegions) DeleteVodRegions(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,7 +201,7 @@ func (s *onDemandRegions) DeleteVodRegions(ctx context.Context, request operatio
 // GetRegion - Get a specific On Demand region
 func (s *onDemandRegions) GetRegion(ctx context.Context, request operations.GetRegionRequest) (*operations.GetRegionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/regions/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/regions/{country}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +300,7 @@ func (s *onDemandRegions) GetRegions(ctx context.Context) (*operations.GetRegion
 // Checks whether an On Demand page belongs to a region.
 func (s *onDemandRegions) GetVodRegion(ctx context.Context, request operations.GetVodRegionRequest) (*operations.GetVodRegionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions/{country}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -354,7 +354,7 @@ func (s *onDemandRegions) GetVodRegion(ctx context.Context, request operations.G
 // GetVodRegions - Get all the regions of an On Demand page
 func (s *onDemandRegions) GetVodRegions(ctx context.Context, request operations.GetVodRegionsRequest) (*operations.GetVodRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -406,11 +406,11 @@ func (s *onDemandRegions) GetVodRegions(ctx context.Context, request operations.
 }
 
 // SetVodRegions - Add a list of regions to an On Demand page
-func (s *onDemandRegions) SetVodRegions(ctx context.Context, request operations.SetVodRegionsRequest) (*operations.SetVodRegionsResponse, error) {
+func (s *onDemandRegions) SetVodRegions(ctx context.Context, request operations.SetVodRegionsRequest, security operations.SetVodRegionsSecurity) (*operations.SetVodRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/regions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -425,7 +425,7 @@ func (s *onDemandRegions) SetVodRegions(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

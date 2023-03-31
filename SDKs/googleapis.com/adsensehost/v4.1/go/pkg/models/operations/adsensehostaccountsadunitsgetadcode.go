@@ -8,20 +8,17 @@ import (
 )
 
 type AdsensehostAccountsAdunitsGetAdCodeSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostAccountsAdunitsGetAdCodePathParams struct {
+type AdsensehostAccountsAdunitsGetAdCodeRequest struct {
 	// Account which contains the ad client.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Ad client with contains the ad unit.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
 	// Ad unit to get the code for.
 	AdUnitID string `pathParam:"style=simple,explode=false,name=adUnitId"`
-}
-
-type AdsensehostAccountsAdunitsGetAdCodeQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -38,12 +35,6 @@ type AdsensehostAccountsAdunitsGetAdCodeQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostAccountsAdunitsGetAdCodeRequest struct {
-	PathParams  AdsensehostAccountsAdunitsGetAdCodePathParams
-	QueryParams AdsensehostAccountsAdunitsGetAdCodeQueryParams
-	Security    AdsensehostAccountsAdunitsGetAdCodeSecurity
 }
 
 type AdsensehostAccountsAdunitsGetAdCodeResponse struct {

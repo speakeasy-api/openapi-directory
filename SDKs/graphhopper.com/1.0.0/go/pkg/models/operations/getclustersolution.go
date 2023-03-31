@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClusterSolutionPathParams struct {
+type GetClusterSolutionRequest struct {
 	// Request solution with jobId
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetClusterSolutionRequest struct {
-	PathParams GetClusterSolutionPathParams
 }
 
 // GetClusterSolution404ApplicationJSON - Requested solution could not be found.

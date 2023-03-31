@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETGeneByRgdIDUsingGETPathParams struct {
+type GETGeneByRgdIDUsingGETRequest struct {
 	// The RGD ID of a Gene in RGD
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETGeneByRgdIDUsingGETRequest struct {
-	PathParams GETGeneByRgdIDUsingGETPathParams
 }
 
 type GETGeneByRgdIDUsingGETResponse struct {

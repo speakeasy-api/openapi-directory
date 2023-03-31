@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UserTSPCreatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UserTSPCreateTSPAccountsListDialInNumbersTypeEnum - Dial-in number types:<br>`toll` - Toll number.<br>`tollfree` -Toll free number.<br>
 // `media_link` - Media link.
 type UserTSPCreateTSPAccountsListDialInNumbersTypeEnum string
@@ -90,9 +85,10 @@ type UserTSPCreateTSPAccountsList struct {
 }
 
 type UserTSPCreateRequest struct {
-	PathParams UserTSPCreatePathParams
 	// TSP account.
-	Request UserTSPCreateTSPAccountsList `request:"mediaType=application/json"`
+	RequestBody UserTSPCreateTSPAccountsList `request:"mediaType=application/json"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserTSPCreateResponse struct {

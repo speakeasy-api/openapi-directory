@@ -8,13 +8,13 @@ import (
 )
 
 type ServiceusageServicesEnableSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesEnableSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesEnableSecurity struct {
@@ -22,14 +22,10 @@ type ServiceusageServicesEnableSecurity struct {
 	Option2 *ServiceusageServicesEnableSecurityOption2 `security:"option"`
 }
 
-type ServiceusageServicesEnablePathParams struct {
-	// Name of the consumer and service to enable the service on. The `EnableService` and `DisableService` methods currently only support projects. Enabling a service requires that the service is public or is shared with the user enabling the service. An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the project number.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServiceusageServicesEnableQueryParams struct {
+type ServiceusageServicesEnableRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type ServiceusageServicesEnableQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Name of the consumer and service to enable the service on. The `EnableService` and `DisableService` methods currently only support projects. Enabling a service requires that the service is public or is shared with the user enabling the service. An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the project number.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type ServiceusageServicesEnableQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageServicesEnableRequest struct {
-	PathParams  ServiceusageServicesEnablePathParams
-	QueryParams ServiceusageServicesEnableQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    ServiceusageServicesEnableSecurity
 }
 
 type ServiceusageServicesEnableResponse struct {

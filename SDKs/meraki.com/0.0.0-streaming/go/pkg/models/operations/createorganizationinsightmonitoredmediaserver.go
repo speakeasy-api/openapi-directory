@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationInsightMonitoredMediaServerPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationInsightMonitoredMediaServerRequestBody struct {
 	// The IP address (IPv4 only) or hostname of the media server to monitor
 	Address string `json:"address"`
@@ -18,8 +14,8 @@ type CreateOrganizationInsightMonitoredMediaServerRequestBody struct {
 }
 
 type CreateOrganizationInsightMonitoredMediaServerRequest struct {
-	PathParams CreateOrganizationInsightMonitoredMediaServerPathParams
-	Request    CreateOrganizationInsightMonitoredMediaServerRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationInsightMonitoredMediaServerRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                   `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationInsightMonitoredMediaServerResponse struct {

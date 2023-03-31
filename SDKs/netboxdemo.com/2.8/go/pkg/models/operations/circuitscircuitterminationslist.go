@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitTerminationsListQueryParams struct {
+type CircuitsCircuitTerminationsListRequest struct {
 	CircuitID  *string `queryParam:"style=form,explode=true,name=circuit_id"`
 	CircuitIDN *string `queryParam:"style=form,explode=true,name=circuit_id__n"`
 	// Number of results to return per page.
@@ -43,10 +43,6 @@ type CircuitsCircuitTerminationsListQueryParams struct {
 	XconnectIDNie    *string `queryParam:"style=form,explode=true,name=xconnect_id__nie"`
 	XconnectIDNiew   *string `queryParam:"style=form,explode=true,name=xconnect_id__niew"`
 	XconnectIDNisw   *string `queryParam:"style=form,explode=true,name=xconnect_id__nisw"`
-}
-
-type CircuitsCircuitTerminationsListRequest struct {
-	QueryParams CircuitsCircuitTerminationsListQueryParams
 }
 
 type CircuitsCircuitTerminationsList200ApplicationJSON struct {

@@ -191,7 +191,7 @@ func (e *GetDiscoveryV2EventsUnitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDiscoveryV2EventsQueryParams struct {
+type GetDiscoveryV2EventsRequest struct {
 	// Filter events by attraction id
 	AttractionID *string `queryParam:"style=form,explode=true,name=attractionId"`
 	// Filter events by city
@@ -264,10 +264,6 @@ type GetDiscoveryV2EventsQueryParams struct {
 	Unit *GetDiscoveryV2EventsUnitEnum `queryParam:"style=form,explode=true,name=unit"`
 	// Filter events by venue id
 	VenueID *string `queryParam:"style=form,explode=true,name=venueId"`
-}
-
-type GetDiscoveryV2EventsRequest struct {
-	QueryParams GetDiscoveryV2EventsQueryParams
 }
 
 type GetDiscoveryV2EventsResponse struct {

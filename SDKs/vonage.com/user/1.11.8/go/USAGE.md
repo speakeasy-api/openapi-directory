@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.UserCtrlGetUserByIDRequest{
-        Security: operations.UserCtrlGetUserByIDSecurity{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.UserCtrlGetUserByIDPathParams{
-            AccountID: "corrupti",
-            UserID: 5928.45,
-        },
+        AccountID: "corrupti",
+        UserID: 5928.45,
     }
 
     ctx := context.Background()
-    res, err := s.UserCtrlGetUserByID(ctx, req)
+    res, err := s.UserCtrlGetUserByID(ctx, req, operations.UserCtrlGetUserByIDSecurity{
+        BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

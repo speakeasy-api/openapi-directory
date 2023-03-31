@@ -12,15 +12,11 @@ var ListBindingServerList = []string{
 }
 
 type ListBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListBindingPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Binding resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListBindingQueryParams struct {
+type ListBindingRequest struct {
 	// The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
 	BindingType []shared.BindingEnumBindingTypeEnum `queryParam:"style=form,explode=true,name=BindingType"`
 	// The [User](https://www.twilio.com/docs/chat/rest/user-resource)'s `identity` value of the resources to read. See [access tokens](https://www.twilio.com/docs/chat/create-tokens) for more details.
@@ -31,13 +27,8 @@ type ListBindingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListBindingRequest struct {
-	PathParams  ListBindingPathParams
-	QueryParams ListBindingQueryParams
-	Security    ListBindingSecurity
-	ServerURL   *string
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Binding resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListBindingListBindingResponseMeta struct {

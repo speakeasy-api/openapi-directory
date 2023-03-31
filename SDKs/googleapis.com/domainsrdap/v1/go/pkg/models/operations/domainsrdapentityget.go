@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsrdapEntityGetPathParams struct {
-	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
-}
-
-type DomainsrdapEntityGetQueryParams struct {
+type DomainsrdapEntityGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -20,6 +16,7 @@ type DomainsrdapEntityGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	EntityID string  `pathParam:"style=simple,explode=false,name=entityId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -34,11 +31,6 @@ type DomainsrdapEntityGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DomainsrdapEntityGetRequest struct {
-	PathParams  DomainsrdapEntityGetPathParams
-	QueryParams DomainsrdapEntityGetQueryParams
 }
 
 type DomainsrdapEntityGetResponse struct {

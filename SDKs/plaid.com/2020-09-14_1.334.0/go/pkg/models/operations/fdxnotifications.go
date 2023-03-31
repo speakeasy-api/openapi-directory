@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type FdxNotificationsRequest struct {
-	Request shared.FDXNotification `request:"mediaType=application/json"`
-}
 
 type FdxNotificationsResponse struct {
 	ContentType string

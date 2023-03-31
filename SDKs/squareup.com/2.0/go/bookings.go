@@ -34,11 +34,11 @@ func newBookings(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CancelBooking - CancelBooking
 // Cancels an existing booking.
-func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelBookingRequest) (*operations.CancelBookingResponse, error) {
+func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelBookingRequest, security operations.CancelBookingSecurity) (*operations.CancelBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelBookingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelB
 
 // CreateBooking - CreateBooking
 // Creates a booking.
-func (s *bookings) CreateBooking(ctx context.Context, request operations.CreateBookingRequest) (*operations.CreateBookingResponse, error) {
+func (s *bookings) CreateBooking(ctx context.Context, request shared.CreateBookingRequest, security operations.CreateBookingSecurity) (*operations.CreateBookingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bookings"
 
@@ -108,7 +108,7 @@ func (s *bookings) CreateBooking(ctx context.Context, request operations.CreateB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *bookings) CreateBooking(ctx context.Context, request operations.CreateB
 
 // ListTeamMemberBookingProfiles - ListTeamMemberBookingProfiles
 // Lists booking profiles for team members.
-func (s *bookings) ListTeamMemberBookingProfiles(ctx context.Context, request operations.ListTeamMemberBookingProfilesRequest) (*operations.ListTeamMemberBookingProfilesResponse, error) {
+func (s *bookings) ListTeamMemberBookingProfiles(ctx context.Context, request operations.ListTeamMemberBookingProfilesRequest, security operations.ListTeamMemberBookingProfilesSecurity) (*operations.ListTeamMemberBookingProfilesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bookings/team-member-booking-profiles"
 
@@ -153,11 +153,11 @@ func (s *bookings) ListTeamMemberBookingProfiles(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -193,16 +193,16 @@ func (s *bookings) ListTeamMemberBookingProfiles(ctx context.Context, request op
 
 // RetrieveBooking - RetrieveBooking
 // Retrieves a booking.
-func (s *bookings) RetrieveBooking(ctx context.Context, request operations.RetrieveBookingRequest) (*operations.RetrieveBookingResponse, error) {
+func (s *bookings) RetrieveBooking(ctx context.Context, request operations.RetrieveBookingRequest, security operations.RetrieveBookingSecurity) (*operations.RetrieveBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,7 +238,7 @@ func (s *bookings) RetrieveBooking(ctx context.Context, request operations.Retri
 
 // RetrieveBusinessBookingProfile - RetrieveBusinessBookingProfile
 // Retrieves a seller's booking profile.
-func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context, request operations.RetrieveBusinessBookingProfileRequest) (*operations.RetrieveBusinessBookingProfileResponse, error) {
+func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context) (*operations.RetrieveBusinessBookingProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bookings/business-booking-profile"
 
@@ -247,7 +247,7 @@ func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -283,16 +283,16 @@ func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context, request o
 
 // RetrieveTeamMemberBookingProfile - RetrieveTeamMemberBookingProfile
 // Retrieves a team member's booking profile.
-func (s *bookings) RetrieveTeamMemberBookingProfile(ctx context.Context, request operations.RetrieveTeamMemberBookingProfileRequest) (*operations.RetrieveTeamMemberBookingProfileResponse, error) {
+func (s *bookings) RetrieveTeamMemberBookingProfile(ctx context.Context, request operations.RetrieveTeamMemberBookingProfileRequest, security operations.RetrieveTeamMemberBookingProfileSecurity) (*operations.RetrieveTeamMemberBookingProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/team-member-booking-profiles/{team_member_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/team-member-booking-profiles/{team_member_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -328,7 +328,7 @@ func (s *bookings) RetrieveTeamMemberBookingProfile(ctx context.Context, request
 
 // SearchAvailability - SearchAvailability
 // Searches for availabilities for booking.
-func (s *bookings) SearchAvailability(ctx context.Context, request operations.SearchAvailabilityRequest) (*operations.SearchAvailabilityResponse, error) {
+func (s *bookings) SearchAvailability(ctx context.Context, request shared.SearchAvailabilityRequest, security operations.SearchAvailabilitySecurity) (*operations.SearchAvailabilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bookings/availability/search"
 
@@ -347,7 +347,7 @@ func (s *bookings) SearchAvailability(ctx context.Context, request operations.Se
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -383,11 +383,11 @@ func (s *bookings) SearchAvailability(ctx context.Context, request operations.Se
 
 // UpdateBooking - UpdateBooking
 // Updates a booking.
-func (s *bookings) UpdateBooking(ctx context.Context, request operations.UpdateBookingRequest) (*operations.UpdateBookingResponse, error) {
+func (s *bookings) UpdateBooking(ctx context.Context, request operations.UpdateBookingRequest, security operations.UpdateBookingSecurity) (*operations.UpdateBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBookingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -402,7 +402,7 @@ func (s *bookings) UpdateBooking(ctx context.Context, request operations.UpdateB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

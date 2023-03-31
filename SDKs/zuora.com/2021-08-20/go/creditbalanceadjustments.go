@@ -35,16 +35,16 @@ func newCreditBalanceAdjustments(defaultClient, securityClient HTTPClient, serve
 // ObjectGETCreditBalanceAdjustment - CRUD: Retrieve a credit balance adjustment
 func (s *creditBalanceAdjustments) ObjectGETCreditBalanceAdjustment(ctx context.Context, request operations.ObjectGETCreditBalanceAdjustmentRequest) (*operations.ObjectGETCreditBalanceAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/credit-balance-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/credit-balance-adjustment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -113,7 +113,7 @@ func (s *creditBalanceAdjustments) ObjectPOSTCreditBalanceAdjustment(ctx context
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/credit-balance-adjustment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateCreditBalanceAdjustment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -128,9 +128,9 @@ func (s *creditBalanceAdjustments) ObjectPOSTCreditBalanceAdjustment(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -197,9 +197,9 @@ func (s *creditBalanceAdjustments) ObjectPOSTCreditBalanceAdjustment(ctx context
 // ObjectPUTCreditBalanceAdjustment - CRUD: Update a credit balance adjustment
 func (s *creditBalanceAdjustments) ObjectPUTCreditBalanceAdjustment(ctx context.Context, request operations.ObjectPUTCreditBalanceAdjustmentRequest) (*operations.ObjectPUTCreditBalanceAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/credit-balance-adjustment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/credit-balance-adjustment/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyCreditBalanceAdjustment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,9 +214,9 @@ func (s *creditBalanceAdjustments) ObjectPUTCreditBalanceAdjustment(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

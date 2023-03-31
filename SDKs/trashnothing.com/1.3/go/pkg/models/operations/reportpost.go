@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ReportPostPathParams struct {
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
 type ReportPostRequestBody struct {
 	// An explanation from the current user for why they are reporting this post.   This is useful for users to provide evidence or explain why there is a problem with the post. <br /><br /> NOTE: If reason is set to 'other', details are required.
 	//
@@ -20,8 +16,8 @@ type ReportPostRequestBody struct {
 }
 
 type ReportPostRequest struct {
-	PathParams ReportPostPathParams
-	Request    ReportPostRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ReportPostRequestBody `request:"mediaType=multipart/form-data"`
+	PostID      string                `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 type ReportPostResponse struct {

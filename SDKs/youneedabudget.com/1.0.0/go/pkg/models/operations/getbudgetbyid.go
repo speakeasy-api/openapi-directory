@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBudgetByIDPathParams struct {
+type GetBudgetByIDRequest struct {
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
-}
-
-type GetBudgetByIDQueryParams struct {
 	// The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
 	LastKnowledgeOfServer *int64 `queryParam:"style=form,explode=true,name=last_knowledge_of_server"`
-}
-
-type GetBudgetByIDRequest struct {
-	PathParams  GetBudgetByIDPathParams
-	QueryParams GetBudgetByIDQueryParams
 }
 
 type GetBudgetByIDResponse struct {

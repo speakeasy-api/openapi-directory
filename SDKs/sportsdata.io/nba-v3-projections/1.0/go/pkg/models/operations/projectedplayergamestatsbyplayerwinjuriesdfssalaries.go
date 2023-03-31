@@ -33,17 +33,13 @@ func (e *ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesFormatEnum) Unmarsh
 	}
 }
 
-type ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesPathParams struct {
+type ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesRequest struct {
 	// The date of the game(s).<br>Examples: <code>2015-JUL-31</code>, <code>2015-SEP-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID. Example:<code>20000571</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesRequest struct {
-	PathParams ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesPathParams
 }
 
 type ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse struct {

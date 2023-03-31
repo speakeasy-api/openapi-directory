@@ -71,7 +71,7 @@ func (s *show) GetShows(ctx context.Context, request operations.GetShowsRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -139,14 +139,14 @@ func (s *show) GetShows(ctx context.Context, request operations.GetShowsRequest)
 // Status 404 is returned if a show with {id} does not exist or if it does but all its scheduled occurences elapsed in the past.
 func (s *show) GetShowsID(ctx context.Context, request operations.GetShowsIDRequest) (*operations.GetShowsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shows/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shows/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

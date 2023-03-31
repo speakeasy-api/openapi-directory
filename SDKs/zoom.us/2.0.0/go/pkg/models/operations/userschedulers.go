@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UserSchedulersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UserSchedulersPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UserSchedulersRequest struct {
-	PathParams UserSchedulersPathParams
-	Security   UserSchedulersSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserSchedulersUserSchedulersListSchedulers struct {

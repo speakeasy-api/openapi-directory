@@ -8,17 +8,12 @@ import (
 )
 
 type MakeUserProofreaderSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type MakeUserProofreaderPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MakeUserProofreaderRequest struct {
-	PathParams MakeUserProofreaderPathParams
-	Security   MakeUserProofreaderSecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type MakeUserProofreaderResponse struct {

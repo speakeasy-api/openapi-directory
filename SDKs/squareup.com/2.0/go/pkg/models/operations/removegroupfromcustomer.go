@@ -8,19 +8,14 @@ import (
 )
 
 type RemoveGroupFromCustomerSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemoveGroupFromCustomerPathParams struct {
+type RemoveGroupFromCustomerRequest struct {
 	// The ID of the customer to remove from the group.
 	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
 	// The ID of the customer group to remove the customer from.
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type RemoveGroupFromCustomerRequest struct {
-	PathParams RemoveGroupFromCustomerPathParams
-	Security   RemoveGroupFromCustomerSecurity
 }
 
 type RemoveGroupFromCustomerResponse struct {

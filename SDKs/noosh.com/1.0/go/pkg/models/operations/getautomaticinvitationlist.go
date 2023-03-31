@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAutomaticInvitationListPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type GetAutomaticInvitationListRequest struct {
-	PathParams GetAutomaticInvitationListPathParams
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type GetAutomaticInvitationListResponse struct {

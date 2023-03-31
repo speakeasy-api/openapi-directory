@@ -37,7 +37,7 @@ func newRegisterForRealtimeAPI(defaultClient, securityClient HTTPClient, serverU
 // Deletes a realtime API registration.
 func (s *registerForRealtimeAPI) RegisterForRealtimeAPIDelete(ctx context.Context, request operations.RegisterForRealtimeAPIDeleteRequest) (*operations.RegisterForRealtimeAPIDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/RegisterForRealtimeApi/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/RegisterForRealtimeApi/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *registerForRealtimeAPI) RegisterForRealtimeAPIGet(ctx context.Context) 
 //	More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
 //
 // Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud. More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
-func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostForm(ctx context.Context, request operations.RegisterForRealtimeAPIPostFormRequest) (*operations.RegisterForRealtimeAPIPostFormResponse, error) {
+func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostForm(ctx context.Context, request shared.RegisterRealtimeAPIData) (*operations.RegisterForRealtimeAPIPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/RegisterForRealtimeApi"
 
@@ -189,7 +189,7 @@ func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostForm(ctx context.Cont
 //	More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
 //
 // Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud. More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
-func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostJSON(ctx context.Context, request operations.RegisterForRealtimeAPIPostJSONRequest) (*operations.RegisterForRealtimeAPIPostJSONResponse, error) {
+func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostJSON(ctx context.Context, request shared.RegisterRealtimeAPIData) (*operations.RegisterForRealtimeAPIPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/RegisterForRealtimeApi"
 
@@ -238,7 +238,7 @@ func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostJSON(ctx context.Cont
 //	More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
 //
 // Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud. More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
-func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostRaw(ctx context.Context, request operations.RegisterForRealtimeAPIPostRawRequest) (*operations.RegisterForRealtimeAPIPostRawResponse, error) {
+func (s *registerForRealtimeAPI) RegisterForRealtimeAPIPostRaw(ctx context.Context, request []byte) (*operations.RegisterForRealtimeAPIPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/RegisterForRealtimeApi"
 

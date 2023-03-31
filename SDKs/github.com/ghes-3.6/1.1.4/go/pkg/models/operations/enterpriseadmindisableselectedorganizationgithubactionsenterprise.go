@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterprisePathParams struct {
+type EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// The unique identifier of the organization.
 	OrgID int64 `pathParam:"style=simple,explode=false,name=org_id"`
-}
-
-type EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest struct {
-	PathParams EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterprisePathParams
 }
 
 type EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse struct {

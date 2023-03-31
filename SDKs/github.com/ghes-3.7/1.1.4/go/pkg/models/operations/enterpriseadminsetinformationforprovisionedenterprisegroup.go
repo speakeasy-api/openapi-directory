@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminSetInformationForProvisionedEnterpriseGroupPathParams struct {
+type EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest struct {
+	Group shared.Group `request:"mediaType=application/json"`
 	// A unique identifier of the SCIM group.
 	ScimGroupID string `pathParam:"style=simple,explode=false,name=scim_group_id"`
-}
-
-type EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest struct {
-	PathParams EnterpriseAdminSetInformationForProvisionedEnterpriseGroupPathParams
-	Request    shared.Group `request:"mediaType=application/json"`
 }
 
 type EnterpriseAdminSetInformationForProvisionedEnterpriseGroupResponse struct {

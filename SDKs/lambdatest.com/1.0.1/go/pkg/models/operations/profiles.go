@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProfilesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ProfilesRequest struct {
-	Security ProfilesSecurity
-}
-
 type ProfilesResponse struct {
 	// Access denied. Auth error.
 	AccessDenied *shared.AccessDenied

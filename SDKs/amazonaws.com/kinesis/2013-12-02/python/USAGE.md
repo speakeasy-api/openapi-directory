@@ -3,32 +3,31 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddTagsToStreamRequest(
-    headers=operations.AddTagsToStreamHeaders(
-        x_amz_algorithm="vel",
-        x_amz_content_sha256="magni",
-        x_amz_credential="architecto",
-        x_amz_date="est",
-        x_amz_security_token="consectetur",
-        x_amz_signature="dolores",
-        x_amz_signed_headers="in",
-        x_amz_target="Kinesis_20131202.AddTagsToStream",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddTagsToStreamInput(
-        stream_name="possimus",
+)
+
+
+req = operations.AddTagsToStreamRequest(
+    add_tags_to_stream_input=shared.AddTagsToStreamInput(
+        stream_arn="corrupti",
+        stream_name="provident",
         tags={
-            "animi": "nesciunt",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+            "illum": "vel",
         },
     ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
+    x_amz_target="Kinesis_20131202.AddTagsToStream",
 )
     
 res = s.add_tags_to_stream(req)

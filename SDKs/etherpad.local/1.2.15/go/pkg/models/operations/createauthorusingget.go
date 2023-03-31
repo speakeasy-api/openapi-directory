@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CreateAuthorUsingGETQueryParams struct {
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
 type CreateAuthorUsingGETRequest struct {
-	QueryParams CreateAuthorUsingGETQueryParams
+	Name *string `queryParam:"style=form,explode=true,name=name"`
 }
 
 // CreateAuthorUsingGET500ApplicationJSON - internal api error (code 2)

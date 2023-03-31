@@ -17,11 +17,6 @@ type LoadServiceRequestBody struct {
 	ServiceMoniker *string `json:"service_moniker,omitempty"`
 }
 
-type LoadServiceRequest struct {
-	// Service to register with OSDB
-	Request *LoadServiceRequestBody `request:"mediaType=application/json"`
-}
-
 type LoadService200ApplicationJSONStatusEnum string
 
 const (

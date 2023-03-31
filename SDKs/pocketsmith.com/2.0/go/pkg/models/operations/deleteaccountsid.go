@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAccountsIDPathParams struct {
+type DeleteAccountsIDRequest struct {
 	// The unique identifier of the account.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAccountsIDRequest struct {
-	PathParams DeleteAccountsIDPathParams
 }
 
 type DeleteAccountsIDResponse struct {

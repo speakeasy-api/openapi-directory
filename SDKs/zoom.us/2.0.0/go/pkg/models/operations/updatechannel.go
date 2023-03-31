@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateChannelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateChannelPathParams struct {
-	// Channel Id.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-	// Unique Identifier of the Zoom user who is the owner of the channel.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateChannelApplicationJSON struct {
@@ -24,9 +16,11 @@ type UpdateChannelApplicationJSON struct {
 }
 
 type UpdateChannelRequest struct {
-	PathParams UpdateChannelPathParams
-	Request    *UpdateChannelApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateChannelSecurity
+	RequestBody *UpdateChannelApplicationJSON `request:"mediaType=application/json"`
+	// Channel Id.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
+	// Unique Identifier of the Zoom user who is the owner of the channel.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UpdateChannelResponse struct {

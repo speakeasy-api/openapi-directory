@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContinuousProjectPathParams struct {
+type UpdateContinuousProjectRequest struct {
+	ContinuousProjectUpdateContent *shared.ContinuousProjectUpdateContent `request:"mediaType=application/json"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateContinuousProjectRequest struct {
-	PathParams UpdateContinuousProjectPathParams
-	Request    *shared.ContinuousProjectUpdateContent `request:"mediaType=application/json"`
 }
 
 type UpdateContinuousProjectResponse struct {

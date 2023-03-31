@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmployeeFromEmployerPathParams struct {
-	// The employees' unique identifier. E.g EE001
-	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type GetEmployeeFromEmployerHeaders struct {
+type GetEmployeeFromEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetEmployeeFromEmployerRequest struct {
-	PathParams GetEmployeeFromEmployerPathParams
-	Headers    GetEmployeeFromEmployerHeaders
+	// The employees' unique identifier. E.g EE001
+	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type GetEmployeeFromEmployerResponse struct {

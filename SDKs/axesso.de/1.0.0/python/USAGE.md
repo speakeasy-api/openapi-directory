@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.KeywordSearchRequest(
-    query_params=operations.KeywordSearchQueryParams(
-        domain_code="aut",
-        keyword="velit",
-        number_of_products=8628636448964422193,
-        sort_by="non",
-    ),
+    domain_code="corrupti",
+    keyword="provident",
+    number_of_products=715190,
+    sort_by="quibusdam",
 )
     
 res = s.amz.keyword_search(req)

@@ -36,7 +36,7 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 // PostV2ActivitiesJSON - Create an activity
 // Creates an activity. An activity will mark the associated action as completed. Currently,
 // only certain action types can have an activity explicitly created for them.
-func (s *activities) PostV2ActivitiesJSON(ctx context.Context, request operations.PostV2ActivitiesJSONRequest) (*operations.PostV2ActivitiesJSONResponse, error) {
+func (s *activities) PostV2ActivitiesJSON(ctx context.Context, request operations.PostV2ActivitiesJSONRequestBody) (*operations.PostV2ActivitiesJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/activities.json"
 

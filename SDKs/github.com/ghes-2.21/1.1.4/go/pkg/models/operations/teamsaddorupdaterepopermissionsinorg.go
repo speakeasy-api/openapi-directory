@@ -8,14 +8,6 @@ import (
 	"net/http"
 )
 
-type TeamsAddOrUpdateRepoPermissionsInOrgPathParams struct {
-	Org   string `pathParam:"style=simple,explode=false,name=org"`
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum - The permission to grant the team on this repository. Can be one of:
 // \* `pull` - team members can pull, but not push to or administer this repository.
 // \* `push` - team members can pull and push, but not administer this repository.
@@ -69,8 +61,12 @@ type TeamsAddOrUpdateRepoPermissionsInOrgRequestBody struct {
 }
 
 type TeamsAddOrUpdateRepoPermissionsInOrgRequest struct {
-	PathParams TeamsAddOrUpdateRepoPermissionsInOrgPathParams
-	Request    *TeamsAddOrUpdateRepoPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateRepoPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                           `pathParam:"style=simple,explode=false,name=org"`
+	Owner       string                                           `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                                           `pathParam:"style=simple,explode=false,name=repo"`
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsAddOrUpdateRepoPermissionsInOrgResponse struct {

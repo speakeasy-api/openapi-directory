@@ -8,16 +8,14 @@ import (
 )
 
 type AdsensehostUrlchannelsInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostUrlchannelsInsertPathParams struct {
+type AdsensehostUrlchannelsInsertRequest struct {
+	URLChannel *shared.URLChannel `request:"mediaType=application/json"`
 	// Ad client to which the new URL channel will be added.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-}
-
-type AdsensehostUrlchannelsInsertQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -32,13 +30,6 @@ type AdsensehostUrlchannelsInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostUrlchannelsInsertRequest struct {
-	PathParams  AdsensehostUrlchannelsInsertPathParams
-	QueryParams AdsensehostUrlchannelsInsertQueryParams
-	Request     *shared.URLChannel `request:"mediaType=application/json"`
-	Security    AdsensehostUrlchannelsInsertSecurity
 }
 
 type AdsensehostUrlchannelsInsertResponse struct {

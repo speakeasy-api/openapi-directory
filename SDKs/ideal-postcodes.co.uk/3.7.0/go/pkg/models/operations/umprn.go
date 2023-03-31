@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UMPRNPathParams struct {
-	// UMPRN to be retrieved
-	Umprn string `pathParam:"style=simple,explode=false,name=umprn"`
-}
-
-type UMPRNQueryParams struct {
+type UMPRNRequest struct {
 	APIKey *string `queryParam:"style=form,explode=false,name=api_key"`
 	Filter *string `queryParam:"style=form,explode=false,name=filter"`
-}
-
-type UMPRNRequest struct {
-	PathParams  UMPRNPathParams
-	QueryParams UMPRNQueryParams
+	// UMPRN to be retrieved
+	Umprn string `pathParam:"style=simple,explode=false,name=umprn"`
 }
 
 type UMPRNResponse struct {

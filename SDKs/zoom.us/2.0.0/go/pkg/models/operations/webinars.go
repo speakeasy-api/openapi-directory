@@ -4,32 +4,22 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type WebinarsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebinarsPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type WebinarsQueryParams struct {
+type WebinarsRequest struct {
 	// **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
 	//
 	// The page number of the current page in the returned records.
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page_number"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type WebinarsRequest struct {
-	PathParams  WebinarsPathParams
-	QueryParams WebinarsQueryParams
-	Security    WebinarsSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type WebinarsUserListWebinars struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSecurityIntrusionSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSecurityIntrusionSettingsRequest struct {
-	PathParams GetNetworkSecurityIntrusionSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSecurityIntrusionSettingsResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LandlordControllerGetAccountsPathParams struct {
+type LandlordControllerGetAccountsRequest struct {
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerGetAccountsQueryParams struct {
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type LandlordControllerGetAccountsRequest struct {
-	PathParams  LandlordControllerGetAccountsPathParams
-	QueryParams LandlordControllerGetAccountsQueryParams
 }
 
 type LandlordControllerGetAccountsResponse struct {

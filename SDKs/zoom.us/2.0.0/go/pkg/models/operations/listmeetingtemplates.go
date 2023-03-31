@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ListMeetingTemplatesPathParams struct {
+type ListMeetingTemplatesRequest struct {
 	// Unique identifier of the user. Retrieve the value of this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type ListMeetingTemplatesRequest struct {
-	PathParams ListMeetingTemplatesPathParams
 }
 
 type ListMeetingTemplates200ApplicationXMLTemplates struct {

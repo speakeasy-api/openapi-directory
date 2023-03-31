@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsMediaCreatePathParams struct {
-	// The resource name of the location where this media item will be created.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessAccountsLocationsMediaCreateQueryParams struct {
+type MybusinessAccountsLocationsMediaCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	MediaItem   *shared.MediaItem `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type MybusinessAccountsLocationsMediaCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The resource name of the location where this media item will be created.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -35,12 +33,6 @@ type MybusinessAccountsLocationsMediaCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsMediaCreateRequest struct {
-	PathParams  MybusinessAccountsLocationsMediaCreatePathParams
-	QueryParams MybusinessAccountsLocationsMediaCreateQueryParams
-	Request     *shared.MediaItem `request:"mediaType=application/json"`
 }
 
 type MybusinessAccountsLocationsMediaCreateResponse struct {

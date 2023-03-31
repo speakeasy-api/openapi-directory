@@ -66,7 +66,7 @@ func newPatient(defaultClient, securityClient HTTPClient, serverURL, language, s
 //	}
 //
 // ```
-func (s *patient) CreatePatient(ctx context.Context, request operations.CreatePatientRequest) (*operations.CreatePatientResponse, error) {
+func (s *patient) CreatePatient(ctx context.Context, request shared.CreatePatientRequestInput) (*operations.CreatePatientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/patient"
 
@@ -137,7 +137,7 @@ func (s *patient) CreatePatient(ctx context.Context, request operations.CreatePa
 // Gets a patient record by id.
 func (s *patient) FetchPatient(ctx context.Context, request operations.FetchPatientRequest) (*operations.FetchPatientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +194,7 @@ func (s *patient) FetchPatient(ctx context.Context, request operations.FetchPati
 // Get the list of coaches for a patient.
 func (s *patient) FetchPatientCoaches(ctx context.Context, request operations.FetchPatientCoachesRequest) (*operations.FetchPatientCoachesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}/coaches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}/coaches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *patient) FetchPatientCoaches(ctx context.Context, request operations.Fe
 // Get the list of groups for a patient.
 func (s *patient) FetchPatientGroups(ctx context.Context, request operations.FetchPatientGroupsRequest) (*operations.FetchPatientGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,7 +315,7 @@ func (s *patient) FetchPatients(ctx context.Context, request operations.FetchPat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -371,9 +371,9 @@ func (s *patient) FetchPatients(ctx context.Context, request operations.FetchPat
 // Update a patient record.
 func (s *patient) UpdatePatient(ctx context.Context, request operations.UpdatePatientRequest) (*operations.UpdatePatientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePatientRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -438,7 +438,7 @@ func (s *patient) UpdatePatient(ctx context.Context, request operations.UpdatePa
 
 // UpsertPatient - Upsert patient
 // Create a new patient or update an existing patient
-func (s *patient) UpsertPatient(ctx context.Context, request operations.UpsertPatientRequest) (*operations.UpsertPatientResponse, error) {
+func (s *patient) UpsertPatient(ctx context.Context, request shared.UpsertPatientRequestInput) (*operations.UpsertPatientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/patient"
 

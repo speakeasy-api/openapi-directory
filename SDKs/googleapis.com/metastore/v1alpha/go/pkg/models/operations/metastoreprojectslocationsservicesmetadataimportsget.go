@@ -8,16 +8,11 @@ import (
 )
 
 type MetastoreProjectsLocationsServicesMetadataImportsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MetastoreProjectsLocationsServicesMetadataImportsGetPathParams struct {
-	// Required. The relative resource name of the metadata import to retrieve, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MetastoreProjectsLocationsServicesMetadataImportsGetQueryParams struct {
+type MetastoreProjectsLocationsServicesMetadataImportsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +25,8 @@ type MetastoreProjectsLocationsServicesMetadataImportsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The relative resource name of the metadata import to retrieve, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,12 +37,6 @@ type MetastoreProjectsLocationsServicesMetadataImportsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MetastoreProjectsLocationsServicesMetadataImportsGetRequest struct {
-	PathParams  MetastoreProjectsLocationsServicesMetadataImportsGetPathParams
-	QueryParams MetastoreProjectsLocationsServicesMetadataImportsGetQueryParams
-	Security    MetastoreProjectsLocationsServicesMetadataImportsGetSecurity
 }
 
 type MetastoreProjectsLocationsServicesMetadataImportsGetResponse struct {

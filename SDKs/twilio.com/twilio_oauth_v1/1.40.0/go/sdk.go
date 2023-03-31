@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateDeviceCode - Issues a new Access token (optionally identity_token & refresh_token) in exchange of Oauth grant
-func (s *SDK) CreateDeviceCode(ctx context.Context, request operations.CreateDeviceCodeRequest) (*operations.CreateDeviceCodeResponse, error) {
+func (s *SDK) CreateDeviceCode(ctx context.Context, request operations.CreateDeviceCodeCreateDeviceCodeRequest, security operations.CreateDeviceCodeSecurity, opts ...operations.Option) (*operations.CreateDeviceCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateDeviceCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/device/code"
@@ -113,7 +123,7 @@ func (s *SDK) CreateDeviceCode(ctx context.Context, request operations.CreateDev
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,10 +158,20 @@ func (s *SDK) CreateDeviceCode(ctx context.Context, request operations.CreateDev
 }
 
 // CreateToken - Issues a new Access token (optionally identity_token & refresh_token) in exchange of Oauth grant
-func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenRequest) (*operations.CreateTokenResponse, error) {
+func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenCreateTokenRequest, security operations.CreateTokenSecurity, opts ...operations.Option) (*operations.CreateTokenResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateTokenServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/token"
@@ -168,7 +188,7 @@ func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,10 +223,20 @@ func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenReq
 }
 
 // FetchCerts - Fetches public JWKs
-func (s *SDK) FetchCerts(ctx context.Context, request operations.FetchCertsRequest) (*operations.FetchCertsResponse, error) {
+func (s *SDK) FetchCerts(ctx context.Context, opts ...operations.Option) (*operations.FetchCertsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchCertsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/certs"
@@ -216,7 +246,7 @@ func (s *SDK) FetchCerts(ctx context.Context, request operations.FetchCertsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,10 +281,20 @@ func (s *SDK) FetchCerts(ctx context.Context, request operations.FetchCertsReque
 }
 
 // FetchOpenidDiscovery - Fetch configuration details about the OpenID Connect Authorization Server
-func (s *SDK) FetchOpenidDiscovery(ctx context.Context, request operations.FetchOpenidDiscoveryRequest) (*operations.FetchOpenidDiscoveryResponse, error) {
+func (s *SDK) FetchOpenidDiscovery(ctx context.Context, opts ...operations.Option) (*operations.FetchOpenidDiscoveryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchOpenidDiscoveryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/.well-known/openid-configuration"
@@ -264,7 +304,7 @@ func (s *SDK) FetchOpenidDiscovery(ctx context.Context, request operations.Fetch
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -299,10 +339,20 @@ func (s *SDK) FetchOpenidDiscovery(ctx context.Context, request operations.Fetch
 }
 
 // FetchUserInfo - Retrieves the consented UserInfo and other claims about the logged-in subject (end-user).
-func (s *SDK) FetchUserInfo(ctx context.Context, request operations.FetchUserInfoRequest) (*operations.FetchUserInfoResponse, error) {
+func (s *SDK) FetchUserInfo(ctx context.Context, opts ...operations.Option) (*operations.FetchUserInfoResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchUserInfoServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/userinfo"
@@ -312,7 +362,7 @@ func (s *SDK) FetchUserInfo(ctx context.Context, request operations.FetchUserInf
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

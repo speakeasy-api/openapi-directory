@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RemoveNetworkDevicePathParams struct {
+type RemoveNetworkDeviceRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Serial    string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type RemoveNetworkDeviceRequest struct {
-	PathParams RemoveNetworkDevicePathParams
 }
 
 type RemoveNetworkDeviceResponse struct {

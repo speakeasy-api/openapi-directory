@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamServicesReadPathParams struct {
+type IpamServicesReadRequest struct {
 	// A unique integer value identifying this service.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamServicesReadRequest struct {
-	PathParams IpamServicesReadPathParams
 }
 
 type IpamServicesReadResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsTargetIDAssetsPathParams struct {
+type PostTargetsTargetIDAssetsRequest struct {
+	AssetInput shared.AssetInput `request:"mediaType=application/json"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PostTargetsTargetIDAssetsRequest struct {
-	PathParams PostTargetsTargetIDAssetsPathParams
-	Request    shared.AssetInput `request:"mediaType=application/json"`
 }
 
 // PostTargetsTargetIDAssets404ApplicationJSON - Not found

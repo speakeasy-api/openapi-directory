@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateWebhookQueryParams struct {
-	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
 type CreateWebhookRequestBodyWebhook struct {
 	Collection *string `json:"collection,omitempty"`
 	Name       *string `json:"name,omitempty"`
@@ -20,8 +16,8 @@ type CreateWebhookRequestBody struct {
 }
 
 type CreateWebhookRequest struct {
-	QueryParams CreateWebhookQueryParams
-	Request     *CreateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateWebhookRequestBody `request:"mediaType=application/json"`
+	Workspace   *string                   `queryParam:"style=form,explode=true,name=workspace"`
 }
 
 type CreateWebhookResponse struct {

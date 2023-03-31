@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type CreateNetworkFirmwareUpgradesRollbackPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkFirmwareUpgradesRollbackRequestBodyProductEnum - Product type to rollback (if the network is a combined network)
 type CreateNetworkFirmwareUpgradesRollbackRequestBodyProductEnum string
 
@@ -107,8 +103,8 @@ type CreateNetworkFirmwareUpgradesRollbackRequestBody struct {
 }
 
 type CreateNetworkFirmwareUpgradesRollbackRequest struct {
-	PathParams CreateNetworkFirmwareUpgradesRollbackPathParams
-	Request    CreateNetworkFirmwareUpgradesRollbackRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkFirmwareUpgradesRollbackRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                           `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkFirmwareUpgradesRollback200ApplicationJSONProductEnum - Product type to rollback (if the network is a combined network)

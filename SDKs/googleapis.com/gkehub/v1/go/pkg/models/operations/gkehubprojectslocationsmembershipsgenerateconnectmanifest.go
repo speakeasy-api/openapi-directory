@@ -8,16 +8,11 @@ import (
 )
 
 type GkehubProjectsLocationsMembershipsGenerateConnectManifestSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GkehubProjectsLocationsMembershipsGenerateConnectManifestPathParams struct {
-	// Required. The Membership resource name the Agent will associate with, in the format `projects/*/locations/*/memberships/*`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams struct {
+type GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams struct
 	IsUpgrade *bool `queryParam:"style=form,explode=true,name=isUpgrade"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The Membership resource name the Agent will associate with, in the format `projects/*/locations/*/memberships/*`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// Optional. Namespace for GKE Connect agent resources. Defaults to `gke-connect`. The Connect Agent is authorized automatically when run in the default namespace. Otherwise, explicit authorization must be granted with an additional IAM binding.
 	Namespace *string `queryParam:"style=form,explode=true,name=namespace"`
 	// OAuth 2.0 token for the current user.
@@ -52,12 +49,6 @@ type GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams struct
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. The Connect agent version to use. Defaults to the most current version.
 	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest struct {
-	PathParams  GkehubProjectsLocationsMembershipsGenerateConnectManifestPathParams
-	QueryParams GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams
-	Security    GkehubProjectsLocationsMembershipsGenerateConnectManifestSecurity
 }
 
 type GkehubProjectsLocationsMembershipsGenerateConnectManifestResponse struct {

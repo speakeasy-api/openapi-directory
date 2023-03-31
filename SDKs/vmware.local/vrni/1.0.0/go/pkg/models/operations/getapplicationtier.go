@@ -8,18 +8,13 @@ import (
 )
 
 type GetApplicationTierSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetApplicationTierPathParams struct {
-	// entity id
-	ID     string `pathParam:"style=simple,explode=false,name=id"`
-	TierID string `pathParam:"style=simple,explode=false,name=tier-id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetApplicationTierRequest struct {
-	PathParams GetApplicationTierPathParams
-	Security   GetApplicationTierSecurity
+	// entity id
+	ID     string `pathParam:"style=simple,explode=false,name=id"`
+	TierID string `pathParam:"style=simple,explode=false,name=tier-id"`
 }
 
 type GetApplicationTierResponse struct {

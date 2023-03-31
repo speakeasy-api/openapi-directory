@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PayeeDetailsUpdateV4PathParams struct {
+type PayeeDetailsUpdateV4Request struct {
+	// Request to update payee details
+	UpdatePayeeDetailsRequestV4Input shared.UpdatePayeeDetailsRequestV4Input `request:"mediaType=application/json"`
 	// The UUID of the payee.
 	PayeeID string `pathParam:"style=simple,explode=false,name=payeeId"`
-}
-
-type PayeeDetailsUpdateV4Request struct {
-	PathParams PayeeDetailsUpdateV4PathParams
-	// Request to update payee details
-	Request shared.UpdatePayeeDetailsRequestV4Input `request:"mediaType=application/json"`
 }
 
 type PayeeDetailsUpdateV4Response struct {

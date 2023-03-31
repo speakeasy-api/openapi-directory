@@ -40,7 +40,7 @@ func newRooms(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // **Scopes**: `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *rooms) AddARoom(ctx context.Context, request operations.AddARoomRequest) (*operations.AddARoomResponse, error) {
+func (s *rooms) AddARoom(ctx context.Context, request operations.AddARoomApplicationJSON, security operations.AddARoomSecurity) (*operations.AddARoomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms"
 
@@ -56,7 +56,7 @@ func (s *rooms) AddARoom(ctx context.Context, request operations.AddARoomRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,11 +108,11 @@ func (s *rooms) AddARoom(ctx context.Context, request operations.AddARoomRequest
 // **Scopes:** `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *rooms) ChangeZRLocation(ctx context.Context, request operations.ChangeZRLocationRequest) (*operations.ChangeZRLocationResponse, error) {
+func (s *rooms) ChangeZRLocation(ctx context.Context, request operations.ChangeZRLocationRequest, security operations.ChangeZRLocationSecurity) (*operations.ChangeZRLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/location", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/location", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,7 +124,7 @@ func (s *rooms) ChangeZRLocation(ctx context.Context, request operations.ChangeZ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,9 +178,9 @@ func (s *rooms) ChangeZRLocation(ctx context.Context, request operations.ChangeZ
 // **Scope:** `room:write:admin`
 func (s *rooms) CheckInRooms(ctx context.Context, request operations.CheckInRoomsRequest) (*operations.CheckInRoomsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{id}/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,16 +243,16 @@ func (s *rooms) CheckInRooms(ctx context.Context, request operations.CheckInRoom
 // **Scopes**: `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *rooms) DeleteAZoomRoom(ctx context.Context, request operations.DeleteAZoomRoomRequest) (*operations.DeleteAZoomRoomResponse, error) {
+func (s *rooms) DeleteAZoomRoom(ctx context.Context, request operations.DeleteAZoomRoomRequest, security operations.DeleteAZoomRoomSecurity) (*operations.DeleteAZoomRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -305,16 +305,16 @@ func (s *rooms) DeleteAZoomRoom(ctx context.Context, request operations.DeleteAZ
 // **Scopes**: `room:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *rooms) GetZRProfile(ctx context.Context, request operations.GetZRProfileRequest) (*operations.GetZRProfileResponse, error) {
+func (s *rooms) GetZRProfile(ctx context.Context, request operations.GetZRProfileRequest, security operations.GetZRProfileSecurity) (*operations.GetZRProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -366,20 +366,20 @@ func (s *rooms) GetZRProfile(ctx context.Context, request operations.GetZRProfil
 // **Scopes:** `room:read:admin`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *rooms) GetZRSettings(ctx context.Context, request operations.GetZRSettingsRequest) (*operations.GetZRSettingsResponse, error) {
+func (s *rooms) GetZRSettings(ctx context.Context, request operations.GetZRSettingsRequest, security operations.GetZRSettingsSecurity) (*operations.GetZRSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,7 +438,7 @@ func (s *rooms) ListDigitalSignageContent(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -493,16 +493,16 @@ func (s *rooms) ListDigitalSignageContent(ctx context.Context, request operation
 // **Scopes**: `room:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *rooms) ListZRDevices(ctx context.Context, request operations.ListZRDevicesRequest) (*operations.ListZRDevicesResponse, error) {
+func (s *rooms) ListZRDevices(ctx context.Context, request operations.ListZRDevicesRequest, security operations.ListZRDevicesSecurity) (*operations.ListZRDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -551,7 +551,7 @@ func (s *rooms) ListZRDevices(ctx context.Context, request operations.ListZRDevi
 // **Scopes**: `room:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *rooms) ListZoomRooms(ctx context.Context, request operations.ListZoomRoomsRequest) (*operations.ListZoomRoomsResponse, error) {
+func (s *rooms) ListZoomRooms(ctx context.Context, request operations.ListZoomRoomsRequest, security operations.ListZoomRoomsSecurity) (*operations.ListZoomRoomsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms"
 
@@ -560,11 +560,11 @@ func (s *rooms) ListZoomRooms(ctx context.Context, request operations.ListZoomRo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -613,7 +613,7 @@ func (s *rooms) ListZoomRooms(ctx context.Context, request operations.ListZoomRo
 // **Prerequisites:**<br>
 // * [Zoom Rooms](https://zoom.us/zoomrooms/software) 5.3.0 or higher
 // * Zoom Rooms digital signage must be [enabled](https://support.zoom.us/hc/en-us/articles/360000030683-Zoom-Rooms-Digital-Signage#h_767fbb33-82a8-45a8-8392-a1bfa9687edd)
-func (s *rooms) ManageE911signage(ctx context.Context, request operations.ManageE911signageRequest) (*operations.ManageE911signageResponse, error) {
+func (s *rooms) ManageE911signage(ctx context.Context, request operations.ManageE911signageApplicationJSON) (*operations.ManageE911signageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rooms/events"
 
@@ -679,11 +679,11 @@ func (s *rooms) ManageE911signage(ctx context.Context, request operations.Manage
 // **Scopes**: `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *rooms) UpdateRoomProfile(ctx context.Context, request operations.UpdateRoomProfileRequest) (*operations.UpdateRoomProfileResponse, error) {
+func (s *rooms) UpdateRoomProfile(ctx context.Context, request operations.UpdateRoomProfileRequest, security operations.UpdateRoomProfileSecurity) (*operations.UpdateRoomProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -695,7 +695,7 @@ func (s *rooms) UpdateRoomProfile(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -747,11 +747,11 @@ func (s *rooms) UpdateRoomProfile(ctx context.Context, request operations.Update
 // **Scopes:** `room:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *rooms) UpdateZRSettings(ctx context.Context, request operations.UpdateZRSettingsRequest) (*operations.UpdateZRSettingsResponse, error) {
+func (s *rooms) UpdateZRSettings(ctx context.Context, request operations.UpdateZRSettingsRequest, security operations.UpdateZRSettingsSecurity) (*operations.UpdateZRSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rooms/{roomId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -763,11 +763,11 @@ func (s *rooms) UpdateZRSettings(ctx context.Context, request operations.UpdateZ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type GetpagedbySellerIDPathParams struct {
-	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-}
-
-type GetpagedbySellerIDQueryParams struct {
-	// Page number.
-	Page string `queryParam:"style=form,explode=true,name=page"`
-	// Amount of results per page.
-	Size string `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetpagedbySellerIDHeaders struct {
+type GetpagedbySellerIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetpagedbySellerIDRequest struct {
-	PathParams  GetpagedbySellerIDPathParams
-	QueryParams GetpagedbySellerIDQueryParams
-	Headers     GetpagedbySellerIDHeaders
+	// Page number.
+	Page string `queryParam:"style=form,explode=true,name=page"`
+	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
+	// Amount of results per page.
+	Size string `queryParam:"style=form,explode=true,name=size"`
 }
 
 type GetpagedbySellerID200ApplicationJSON struct {

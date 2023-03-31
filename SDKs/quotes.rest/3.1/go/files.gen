@@ -63,7 +63,6 @@ pkg/models/operations/putquoteimage.go
 pkg/models/operations/getqod.go
 pkg/models/operations/getqodcategories.go
 pkg/models/operations/getqodlanguages.go
-pkg/models/shared/security.go
 pkg/models/shared/quoteresponse.go
 pkg/models/shared/quote.go
 USAGE.md

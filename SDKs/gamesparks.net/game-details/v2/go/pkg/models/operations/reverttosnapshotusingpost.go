@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RevertToSnapshotUsingPOSTPathParams struct {
+type RevertToSnapshotUsingPOSTRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// snapshotId
 	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
-}
-
-type RevertToSnapshotUsingPOSTRequest struct {
-	PathParams RevertToSnapshotUsingPOSTPathParams
 }
 
 type RevertToSnapshotUsingPOSTResponse struct {

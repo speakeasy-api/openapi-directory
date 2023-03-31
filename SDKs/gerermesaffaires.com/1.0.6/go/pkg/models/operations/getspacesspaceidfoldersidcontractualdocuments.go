@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDContractualDocumentsPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum - Type of the document
 type GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum string
 
@@ -55,7 +48,7 @@ func (e *GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum) UnmarshalJSON(da
 	}
 }
 
-type GetSpacesSpaceIDFoldersIDContractualDocumentsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDContractualDocumentsRequest struct {
 	// date range of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// date range of attachment
@@ -64,11 +57,10 @@ type GetSpacesSpaceIDFoldersIDContractualDocumentsQueryParams struct {
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
 	// Type of the document
 	Type *GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type GetSpacesSpaceIDFoldersIDContractualDocumentsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDContractualDocumentsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDContractualDocumentsQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDContractualDocumentsResponse struct {

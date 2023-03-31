@@ -36,9 +36,9 @@ func newTransactionFlow(defaultClient, securityClient HTTPClient, serverURL, lan
 // Cancel's transaction that was previously approved, but not settled.
 func (s *transactionFlow) Cancelthetransaction(ctx context.Context, request operations.CancelthetransactionRequest) (*operations.CancelthetransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/cancellation-request", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/cancellation-request", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelthetransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *transactionFlow) Cancelthetransaction(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -84,9 +84,9 @@ func (s *transactionFlow) Cancelthetransaction(ctx context.Context, request oper
 // Refunds transaction's value that was previously settled.
 func (s *transactionFlow) Refundthetransaction(ctx context.Context, request operations.RefundthetransactionRequest) (*operations.RefundthetransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/refunding-request", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/refunding-request", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RefundthetransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -101,7 +101,7 @@ func (s *transactionFlow) Refundthetransaction(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -132,9 +132,9 @@ func (s *transactionFlow) Refundthetransaction(ctx context.Context, request oper
 // Settles transaction's value.
 func (s *transactionFlow) Settlethetransaction(ctx context.Context, request operations.SettlethetransactionRequest) (*operations.SettlethetransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/settlement-request", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/settlement-request", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SettlethetransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -149,7 +149,7 @@ func (s *transactionFlow) Settlethetransaction(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

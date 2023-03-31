@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomFieldsPathParams struct {
+type UpdateCustomFieldsRequest struct {
+	// Updated custom fields of a given person.
+	RequestBody []shared.CustomFieldDTO `request:"mediaType=application/json"`
 	// person's internal identifier
 	PersonID int64 `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type UpdateCustomFieldsRequest struct {
-	PathParams UpdateCustomFieldsPathParams
-	// Updated custom fields of a given person.
-	Request []shared.CustomFieldDTO `request:"mediaType=application/json"`
 }
 
 type UpdateCustomFieldsResponse struct {

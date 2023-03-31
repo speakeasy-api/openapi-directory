@@ -12,12 +12,8 @@ var UpdateRatePlanServerList = []string{
 }
 
 type UpdateRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRatePlanPathParams struct {
-	// The SID of the RatePlan resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRatePlanUpdateRatePlanRequest struct {
@@ -28,10 +24,9 @@ type UpdateRatePlanUpdateRatePlanRequest struct {
 }
 
 type UpdateRatePlanRequest struct {
-	PathParams UpdateRatePlanPathParams
-	Request    *UpdateRatePlanUpdateRatePlanRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRatePlanSecurity
-	ServerURL  *string
+	RequestBody *UpdateRatePlanUpdateRatePlanRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the RatePlan resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateRatePlanResponse struct {

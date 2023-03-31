@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCourseMappingsExternalcourseExternalCourseIDPathParams struct {
+type GetCourseMappingsExternalcourseExternalCourseIDRequest struct {
 	// external course's id
 	ExternalCourseID string `pathParam:"style=simple,explode=false,name=externalCourseId"`
-}
-
-type GetCourseMappingsExternalcourseExternalCourseIDRequest struct {
-	PathParams GetCourseMappingsExternalcourseExternalCourseIDPathParams
 }
 
 type GetCourseMappingsExternalcourseExternalCourseIDResponse struct {

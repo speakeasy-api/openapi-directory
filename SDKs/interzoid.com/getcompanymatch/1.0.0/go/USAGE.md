@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetcompanymatchRequest{
-        QueryParams: operations.GetcompanymatchQueryParams{
-            Company: "Medhurst - Rau",
-            License: "quibusdam",
-        },
+        Company: "Medhurst - Rau",
+        License: "quibusdam",
     }
 
     ctx := context.Background()

@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegePathParams struct {
-	// The `_uuid` of the `Registrierkasse` to export.
-	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
-type GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeQueryParams struct {
+type GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeRequest struct {
 	// Only return results that were saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// Only return results that were saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
 	Before *string `queryParam:"style=form,explode=true,name=before"`
 	// Export `Posten` instead of `Belegdaten`.
 	Posten *bool `queryParam:"style=form,explode=true,name=posten"`
-}
-
-type GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeRequest struct {
-	PathParams  GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegePathParams
-	QueryParams GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeQueryParams
+	// The `_uuid` of the `Registrierkasse` to export.
+	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
 }
 
 type GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeResponse struct {

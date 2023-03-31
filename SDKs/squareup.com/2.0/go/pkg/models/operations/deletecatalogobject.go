@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteCatalogObjectSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteCatalogObjectPathParams struct {
+type DeleteCatalogObjectRequest struct {
 	// The ID of the catalog object to be deleted. When an object is deleted, other
 	// objects in the graph that depend on that object will be deleted as well (for example, deleting a
 	// catalog item will delete its catalog item variations).
 	ObjectID string `pathParam:"style=simple,explode=false,name=object_id"`
-}
-
-type DeleteCatalogObjectRequest struct {
-	PathParams DeleteCatalogObjectPathParams
-	Security   DeleteCatalogObjectSecurity
 }
 
 type DeleteCatalogObjectResponse struct {

@@ -27,7 +27,6 @@ pkg/models/shared/googlecloudrecommenderv1beta1insightstateinfo.go
 pkg/models/shared/googlecloudrecommenderv1beta1insightrecommendationreference.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudrecommenderv1beta1markinsightacceptedrequest.go
 pkg/models/shared/googlecloudrecommenderv1beta1recommendation.go
 pkg/models/shared/googlecloudrecommenderv1beta1recommendationstateinfo.go

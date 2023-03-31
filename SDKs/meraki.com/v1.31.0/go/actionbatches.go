@@ -34,9 +34,9 @@ func newActionBatches(defaultClient, securityClient HTTPClient, serverURL, langu
 // Create an action batch
 func (s *actionBatches) CreateOrganizationActionBatch(ctx context.Context, request operations.CreateOrganizationActionBatchRequest) (*operations.CreateOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *actionBatches) CreateOrganizationActionBatch(ctx context.Context, reque
 // Delete an action batch
 func (s *actionBatches) DeleteOrganizationActionBatch(ctx context.Context, request operations.DeleteOrganizationActionBatchRequest) (*operations.DeleteOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *actionBatches) DeleteOrganizationActionBatch(ctx context.Context, reque
 // Return an action batch
 func (s *actionBatches) GetOrganizationActionBatch(ctx context.Context, request operations.GetOrganizationActionBatchRequest) (*operations.GetOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,14 +170,14 @@ func (s *actionBatches) GetOrganizationActionBatch(ctx context.Context, request 
 // Return the list of action batches in the organization
 func (s *actionBatches) GetOrganizationActionBatches(ctx context.Context, request operations.GetOrganizationActionBatchesRequest) (*operations.GetOrganizationActionBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -219,9 +219,9 @@ func (s *actionBatches) GetOrganizationActionBatches(ctx context.Context, reques
 // Update an action batch
 func (s *actionBatches) UpdateOrganizationActionBatch(ctx context.Context, request operations.UpdateOrganizationActionBatchRequest) (*operations.UpdateOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

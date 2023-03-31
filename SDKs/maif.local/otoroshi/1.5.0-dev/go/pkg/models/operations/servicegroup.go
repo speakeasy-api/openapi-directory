@@ -8,17 +8,13 @@ import (
 )
 
 type ServiceGroupSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ServiceGroupPathParams struct {
-	// The service group id
-	ServiceGroupID string `pathParam:"style=simple,explode=false,name=serviceGroupId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ServiceGroupRequest struct {
-	PathParams ServiceGroupPathParams
-	Security   ServiceGroupSecurity
+	// The service group id
+	ServiceGroupID string `pathParam:"style=simple,explode=false,name=serviceGroupId"`
 }
 
 type ServiceGroupResponse struct {

@@ -22,3 +22,4 @@ pkg/models/operations/getvisualcrossingwebservicesrestservicestimelinelocationst
 pkg/models/operations/getvisualcrossingwebservicesrestservicestimelinelocationstartdate.go
 pkg/models/operations/getvisualcrossingwebservicesrestservicesweatherdataforecast.go
 USAGE.md
+pkg/models/operations/options.go

@@ -33,13 +33,9 @@ func (e *TeamsAllFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TeamsAllPathParams struct {
+type TeamsAllRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format TeamsAllFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type TeamsAllRequest struct {
-	PathParams TeamsAllPathParams
 }
 
 type TeamsAllResponse struct {

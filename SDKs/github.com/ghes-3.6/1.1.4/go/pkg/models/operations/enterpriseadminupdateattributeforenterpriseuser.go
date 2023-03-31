@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdateAttributeForEnterpriseUserPathParams struct {
+type EnterpriseAdminUpdateAttributeForEnterpriseUserRequest struct {
+	PatchSchema shared.PatchSchema `request:"mediaType=application/json"`
 	// The unique identifier of the SCIM user.
 	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
-type EnterpriseAdminUpdateAttributeForEnterpriseUserRequest struct {
-	PathParams EnterpriseAdminUpdateAttributeForEnterpriseUserPathParams
-	Request    shared.PatchSchema `request:"mediaType=application/json"`
 }
 
 type EnterpriseAdminUpdateAttributeForEnterpriseUserResponse struct {

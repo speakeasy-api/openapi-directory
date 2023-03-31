@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETGenesAnnotatedUsingGETPathParams struct {
+type GETGenesAnnotatedUsingGETRequest struct {
 	// Ontology term accession ID
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
 	// Species type key.  A list of species type keys can be found in the lookup service
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETGenesAnnotatedUsingGETRequest struct {
-	PathParams GETGenesAnnotatedUsingGETPathParams
 }
 
 type GETGenesAnnotatedUsingGETResponse struct {

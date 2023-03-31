@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetOneRecurringPaymentPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
-type GetOneRecurringPaymentHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type GetOneRecurringPaymentRequest struct {
-	PathParams GetOneRecurringPaymentPathParams
-	Headers    GetOneRecurringPaymentHeaders
-	Request    []byte `request:"mediaType=text/plain"`
+	RequestBody []byte  `request:"mediaType=text/plain"`
+	SubID       string  `pathParam:"style=simple,explode=false,name=sub_id"`
+	XAPIKey     *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetOneRecurringPayment404ApplicationJSON - 404

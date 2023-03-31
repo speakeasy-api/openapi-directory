@@ -3,47 +3,43 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchAcknowledgeAlarmRequest(
-    headers=operations.BatchAcknowledgeAlarmHeaders(
-        x_amz_algorithm="maxime",
-        x_amz_content_sha256="quibusdam",
-        x_amz_credential="asperiores",
-        x_amz_date="provident",
-        x_amz_security_token="doloribus",
-        x_amz_signature="architecto",
-        x_amz_signed_headers="est",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.BatchAcknowledgeAlarmRequestBody(
+)
+
+
+req = operations.BatchAcknowledgeAlarmRequest(
+    request_body=operations.BatchAcknowledgeAlarmRequestBody(
         acknowledge_action_requests=[
             shared.AcknowledgeAlarmActionRequest(
-                alarm_model_name="odio",
-                key_value="blanditiis",
-                note="voluptatem",
-                request_id="ea",
+                alarm_model_name="provident",
+                key_value="distinctio",
+                note="quibusdam",
+                request_id="unde",
             ),
             shared.AcknowledgeAlarmActionRequest(
-                alarm_model_name="eum",
-                key_value="at",
-                note="fugit",
-                request_id="dolore",
+                alarm_model_name="nulla",
+                key_value="corrupti",
+                note="illum",
+                request_id="vel",
             ),
             shared.AcknowledgeAlarmActionRequest(
-                alarm_model_name="voluptatem",
-                key_value="recusandae",
-                note="impedit",
-                request_id="odio",
+                alarm_model_name="error",
+                key_value="deserunt",
+                note="suscipit",
+                request_id="iure",
             ),
         ],
     ),
+    x_amz_algorithm="magnam",
+    x_amz_content_sha256="debitis",
+    x_amz_credential="ipsa",
+    x_amz_date="delectus",
+    x_amz_security_token="tempora",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="molestiae",
 )
     
 res = s.batch_acknowledge_alarm(req)

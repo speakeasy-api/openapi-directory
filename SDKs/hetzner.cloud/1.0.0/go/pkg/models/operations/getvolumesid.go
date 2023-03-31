@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetVolumesIDPathParams struct {
+type GetVolumesIDRequest struct {
 	// ID of the Volume
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVolumesIDRequest struct {
-	PathParams GetVolumesIDPathParams
 }
 
 // GetVolumesID200ApplicationJSONVolumeLocation - Location of the Volume. Volume can only be attached to Servers in the same Location.

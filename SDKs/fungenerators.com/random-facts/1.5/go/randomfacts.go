@@ -34,7 +34,7 @@ func newRandomFacts(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // GetFact - Get a Fact belonging to the id.
-func (s *randomFacts) GetFact(ctx context.Context, request operations.GetFactRequest) (*operations.GetFactResponse, error) {
+func (s *randomFacts) GetFact(ctx context.Context, request operations.GetFactRequest, security operations.GetFactSecurity) (*operations.GetFactResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact"
 
@@ -43,11 +43,11 @@ func (s *randomFacts) GetFact(ctx context.Context, request operations.GetFactReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *randomFacts) GetFact(ctx context.Context, request operations.GetFactReq
 }
 
 // GetFactCategories - Get a random Fact.
-func (s *randomFacts) GetFactCategories(ctx context.Context, request operations.GetFactCategoriesRequest) (*operations.GetFactCategoriesResponse, error) {
+func (s *randomFacts) GetFactCategories(ctx context.Context, request operations.GetFactCategoriesRequest, security operations.GetFactCategoriesSecurity) (*operations.GetFactCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/categories"
 
@@ -84,11 +84,11 @@ func (s *randomFacts) GetFactCategories(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *randomFacts) GetFactCategories(ctx context.Context, request operations.
 }
 
 // GetFactRandom - Get a random Fact for a given category(optional) and subcategory(optional).
-func (s *randomFacts) GetFactRandom(ctx context.Context, request operations.GetFactRandomRequest) (*operations.GetFactRandomResponse, error) {
+func (s *randomFacts) GetFactRandom(ctx context.Context, request operations.GetFactRandomRequest, security operations.GetFactRandomSecurity) (*operations.GetFactRandomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/random"
 
@@ -125,11 +125,11 @@ func (s *randomFacts) GetFactRandom(ctx context.Context, request operations.GetF
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,7 +157,7 @@ func (s *randomFacts) GetFactRandom(ctx context.Context, request operations.GetF
 }
 
 // GetFactSearch - Search for random Fact which has the text in the query, for a given category(optional) and subcategory(optional).
-func (s *randomFacts) GetFactSearch(ctx context.Context, request operations.GetFactSearchRequest) (*operations.GetFactSearchResponse, error) {
+func (s *randomFacts) GetFactSearch(ctx context.Context, request operations.GetFactSearchRequest, security operations.GetFactSearchSecurity) (*operations.GetFactSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/search"
 
@@ -166,11 +166,11 @@ func (s *randomFacts) GetFactSearch(ctx context.Context, request operations.GetF
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

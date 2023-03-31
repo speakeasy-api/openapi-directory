@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete11PathParams struct {
+type Delete11Request struct {
 	// report's internal identifier
 	ReportID int64 `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type Delete11Request struct {
-	PathParams Delete11PathParams
 }
 
 type Delete11Response struct {

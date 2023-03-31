@@ -33,7 +33,7 @@ func newReportTypes(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // YoutubereportingReportTypesList - Lists report types.
-func (s *reportTypes) YoutubereportingReportTypesList(ctx context.Context, request operations.YoutubereportingReportTypesListRequest) (*operations.YoutubereportingReportTypesListResponse, error) {
+func (s *reportTypes) YoutubereportingReportTypesList(ctx context.Context, request operations.YoutubereportingReportTypesListRequest, security operations.YoutubereportingReportTypesListSecurity) (*operations.YoutubereportingReportTypesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/reportTypes"
 
@@ -42,11 +42,11 @@ func (s *reportTypes) YoutubereportingReportTypesList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

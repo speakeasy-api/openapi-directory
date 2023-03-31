@@ -8,10 +8,10 @@ import (
 )
 
 type ListInvoicesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListInvoicesQueryParams struct {
+type ListInvoicesRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this cursor to retrieve the next set of results for your original query.
 	//
@@ -22,11 +22,6 @@ type ListInvoicesQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The ID of the location for which to list invoices.
 	LocationID string `queryParam:"style=form,explode=true,name=location_id"`
-}
-
-type ListInvoicesRequest struct {
-	QueryParams ListInvoicesQueryParams
-	Security    ListInvoicesSecurity
 }
 
 type ListInvoicesResponse struct {

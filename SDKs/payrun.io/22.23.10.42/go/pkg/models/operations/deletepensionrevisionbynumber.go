@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePensionRevisionByNumberPathParams struct {
+type DeletePensionRevisionByNumberRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The pensions' unique identifier. E.g PEN001
 	PensionID string `pathParam:"style=simple,explode=false,name=PensionId"`
 	// The revision number. E.g. 1
 	RevisionNumber string `pathParam:"style=simple,explode=false,name=RevisionNumber"`
-}
-
-type DeletePensionRevisionByNumberHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeletePensionRevisionByNumberRequest struct {
-	PathParams DeletePensionRevisionByNumberPathParams
-	Headers    DeletePensionRevisionByNumberHeaders
 }
 
 type DeletePensionRevisionByNumberResponse struct {

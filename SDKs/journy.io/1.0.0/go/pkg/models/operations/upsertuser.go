@@ -22,10 +22,6 @@ type UpsertUserRequestBody struct {
 	Properties map[string]interface{} `json:"properties,omitempty"`
 }
 
-type UpsertUserRequest struct {
-	Request UpsertUserRequestBody `request:"mediaType=application/json"`
-}
-
 type UpsertUser500ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`

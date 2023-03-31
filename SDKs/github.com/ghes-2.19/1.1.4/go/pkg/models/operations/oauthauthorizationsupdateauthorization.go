@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsUpdateAuthorizationPathParams struct {
-	// authorization_id parameter
-	AuthorizationID int64 `pathParam:"style=simple,explode=false,name=authorization_id"`
-}
-
 type OauthAuthorizationsUpdateAuthorizationRequestBody struct {
 	// A list of scopes to add to this authorization.
 	AddScopes []string `json:"add_scopes,omitempty"`
@@ -28,8 +23,9 @@ type OauthAuthorizationsUpdateAuthorizationRequestBody struct {
 }
 
 type OauthAuthorizationsUpdateAuthorizationRequest struct {
-	PathParams OauthAuthorizationsUpdateAuthorizationPathParams
-	Request    *OauthAuthorizationsUpdateAuthorizationRequestBody `request:"mediaType=application/json"`
+	RequestBody *OauthAuthorizationsUpdateAuthorizationRequestBody `request:"mediaType=application/json"`
+	// authorization_id parameter
+	AuthorizationID int64 `pathParam:"style=simple,explode=false,name=authorization_id"`
 }
 
 type OauthAuthorizationsUpdateAuthorizationResponse struct {

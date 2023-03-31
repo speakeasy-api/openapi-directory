@@ -6,20 +6,16 @@ import (
 	"net/http"
 )
 
-type ActionsSetSelfHostedRunnersInGroupForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
 type ActionsSetSelfHostedRunnersInGroupForOrgRequestBody struct {
 	// List of runner IDs to add to the runner group.
 	Runners []int64 `json:"runners"`
 }
 
 type ActionsSetSelfHostedRunnersInGroupForOrgRequest struct {
-	PathParams ActionsSetSelfHostedRunnersInGroupForOrgPathParams
-	Request    ActionsSetSelfHostedRunnersInGroupForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetSelfHostedRunnersInGroupForOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                              `pathParam:"style=simple,explode=false,name=org"`
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 type ActionsSetSelfHostedRunnersInGroupForOrgResponse struct {

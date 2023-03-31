@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetGithubActionsPermissionsOrganizationPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsGetGithubActionsPermissionsOrganizationRequest struct {
-	PathParams ActionsGetGithubActionsPermissionsOrganizationPathParams
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsGetGithubActionsPermissionsOrganizationResponse struct {

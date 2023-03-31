@@ -50,7 +50,7 @@ func (s *categories) GetCategories(ctx context.Context, request operations.GetCa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,7 +92,7 @@ func (s *categories) GetCategories(ctx context.Context, request operations.GetCa
 // Retrieve a specific category by providing its unique identifier.
 func (s *categories) GetCategoriesID(ctx context.Context, request operations.GetCategoriesIDRequest) (*operations.GetCategoriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -144,9 +144,9 @@ func (s *categories) GetCategoriesID(ctx context.Context, request operations.Get
 // `/transactions/{id}`.
 func (s *categories) PatchTransactionsTransactionIDRelationshipsCategory(ctx context.Context, request operations.PatchTransactionsTransactionIDRelationshipsCategoryRequest) (*operations.PatchTransactionsTransactionIDRelationshipsCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transactionId}/relationships/category", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transactionId}/relationships/category", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTransactionCategoryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

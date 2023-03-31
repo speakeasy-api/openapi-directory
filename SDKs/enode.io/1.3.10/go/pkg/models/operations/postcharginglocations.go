@@ -8,8 +8,8 @@ import (
 )
 
 type PostCharginglocationsSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostCharginglocationsRequestBodyInput struct {
@@ -19,11 +19,6 @@ type PostCharginglocationsRequestBodyInput struct {
 	Longitude *float64 `json:"longitude,omitempty"`
 	// User-supplied name for the Charging Location
 	Name *string `json:"name,omitempty"`
-}
-
-type PostCharginglocationsRequest struct {
-	Request  *PostCharginglocationsRequestBodyInput `request:"mediaType=application/json"`
-	Security PostCharginglocationsSecurity
 }
 
 type PostCharginglocationsResponse struct {

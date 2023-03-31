@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPlatformSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPlatformPathParams struct {
-	// The identifier for the selected platform.
-	PlatformID string `pathParam:"style=simple,explode=false,name=platformId"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetPlatformRequest struct {
-	PathParams GetPlatformPathParams
-	Security   GetPlatformSecurity
+	// The identifier for the selected platform.
+	PlatformID string `pathParam:"style=simple,explode=false,name=platformId"`
 }
 
 type GetPlatformResponse struct {

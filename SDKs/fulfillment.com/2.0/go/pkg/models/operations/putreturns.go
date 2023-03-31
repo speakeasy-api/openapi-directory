@@ -9,7 +9,7 @@ import (
 )
 
 type PutReturnsSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PutReturnsRmaRequestV2Items struct {
@@ -23,12 +23,6 @@ type PutReturnsRmaRequestV2 struct {
 	MerchantOrderID *string                                                                         `json:"merchantOrderId,omitempty"`
 	Recipient       shared.OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient `json:"recipient"`
 	RmaNumber       string                                                                          `json:"rmaNumber"`
-}
-
-type PutReturnsRequest struct {
-	// RMA
-	Request  PutReturnsRmaRequestV2 `request:"mediaType=application/json"`
-	Security PutReturnsSecurity
 }
 
 type PutReturnsRmaResponseV2Items struct {

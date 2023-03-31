@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EmailValidationQueryParams struct {
+type EmailValidationRequest struct {
 	APIKey string `queryParam:"style=form,explode=false,name=api_key"`
 	// Specifies the email address to validate
 	Query string `queryParam:"style=form,explode=false,name=query"`
-}
-
-type EmailValidationRequest struct {
-	QueryParams EmailValidationQueryParams
 }
 
 type EmailValidationResponse struct {

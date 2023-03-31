@@ -1,0 +1,92 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/twilio.com/twilio_proxy_v1/1.40.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.CreateMessageInteractionRequest(
+    participant_sid="corrupti",
+    request_body=operations.CreateMessageInteractionCreateMessageInteractionRequest(
+        body="provident",
+        media_url=[
+            "https://outstanding-strait.name",
+            "https://impressive-ox.name",
+            "http://innocent-effect.org",
+        ],
+    ),
+    service_sid="ipsa",
+    session_sid="delectus",
+)
+    
+res = s.create_message_interaction(req, operations.CreateMessageInteractionSecurity(
+    password="YOUR_PASSWORD_HERE",
+    username="YOUR_USERNAME_HERE",
+))
+
+if res.proxy_v1_service_session_participant_message_interaction is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `create_message_interaction` - Create a new message Interaction to send directly from your system to one [Participant](https://www.twilio.com/docs/proxy/api/participant).  The `inbound` properties for the Interaction will always be empty.
+* `create_participant` - Add a new Participant to the Session
+* `create_phone_number` - Add a Phone Number to a Service's Proxy Number Pool.
+* `create_service` - Create a new Service for Twilio Proxy
+* `create_session` - Create a new Session
+* `create_short_code` - Add a Short Code to the Proxy Number Pool for the Service.
+* `delete_interaction` - Delete a specific Interaction.
+* `delete_participant` - Delete a specific Participant. This is a soft-delete. The participant remains associated with the session and cannot be re-added. Participants are only permanently deleted when the [Session](https://www.twilio.com/docs/proxy/api/session) is deleted.
+* `delete_phone_number` - Delete a specific Phone Number from a Service.
+* `delete_service` - Delete a specific Service.
+* `delete_session` - Delete a specific Session.
+* `delete_short_code` - Delete a specific Short Code from a Service.
+* `fetch_interaction` - Retrieve a list of Interactions for a given [Session](https://www.twilio.com/docs/proxy/api/session).
+* `fetch_message_interaction`
+* `fetch_participant` - Fetch a specific Participant.
+* `fetch_phone_number` - Fetch a specific Phone Number.
+* `fetch_service` - Fetch a specific Service.
+* `fetch_session` - Fetch a specific Session.
+* `fetch_short_code` - Fetch a specific Short Code.
+* `list_interaction` - Retrieve a list of all Interactions for a Session. A maximum of 100 records will be returned per page.
+* `list_message_interaction`
+* `list_participant` - Retrieve a list of all Participants in a Session.
+* `list_phone_number` - Retrieve a list of all Phone Numbers in the Proxy Number Pool for a Service. A maximum of 100 records will be returned per page.
+* `list_service` - Retrieve a list of all Services for Twilio Proxy. A maximum of 100 records will be returned per page.
+* `list_session` - Retrieve a list of all Sessions for the Service. A maximum of 100 records will be returned per page.
+* `list_short_code` - Retrieve a list of all Short Codes in the Proxy Number Pool for the Service. A maximum of 100 records will be returned per page.
+* `update_phone_number` - Update a specific Proxy Number.
+* `update_service` - Update a specific Service.
+* `update_session` - Update a specific Session.
+* `update_short_code` - Update a specific Short Code.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

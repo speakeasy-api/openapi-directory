@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutServersIDPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutServersIDUpdateServerRequest struct {
 	// User-defined labels (key-value pairs)
 	Labels map[string]interface{} `json:"labels,omitempty"`
@@ -21,8 +16,9 @@ type PutServersIDUpdateServerRequest struct {
 }
 
 type PutServersIDRequest struct {
-	PathParams PutServersIDPathParams
-	Request    *PutServersIDUpdateServerRequest `request:"mediaType=application/json"`
+	RequestBody *PutServersIDUpdateServerRequest `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutServersID200ApplicationJSONServerDatacenterLocation struct {

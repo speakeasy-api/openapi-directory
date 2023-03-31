@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsPathParams struct {
-	// Output only. The resource name of the singleton.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsQueryParams struct {
+type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ReaderEntitlementsInput *shared.ReaderEntitlementsInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -25,6 +21,8 @@ type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsQueryP
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Output only. The resource name of the singleton.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -37,12 +35,6 @@ type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsQueryP
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsRequest struct {
-	PathParams  ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsPathParams
-	QueryParams ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsQueryParams
-	Request     *shared.ReaderEntitlementsInput `request:"mediaType=application/json"`
 }
 
 type ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse struct {

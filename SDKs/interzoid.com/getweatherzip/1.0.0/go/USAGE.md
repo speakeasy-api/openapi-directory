@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetweatherzipcodeRequest{
-        QueryParams: operations.GetweatherzipcodeQueryParams{
-            License: "corrupti",
-            Zip: "provident",
-        },
+        License: "corrupti",
+        Zip: "provident",
     }
 
     ctx := context.Background()

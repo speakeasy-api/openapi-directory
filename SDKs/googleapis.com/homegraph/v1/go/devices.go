@@ -33,11 +33,11 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // HomegraphDevicesQuery - Gets the current states in Home Graph for the given set of the third-party user's devices. The third-party user's identity is passed in via the `agent_user_id` (see QueryRequest). This request must be authorized using service account credentials from your Actions console project.
-func (s *devices) HomegraphDevicesQuery(ctx context.Context, request operations.HomegraphDevicesQueryRequest) (*operations.HomegraphDevicesQueryResponse, error) {
+func (s *devices) HomegraphDevicesQuery(ctx context.Context, request operations.HomegraphDevicesQueryRequest, security operations.HomegraphDevicesQuerySecurity) (*operations.HomegraphDevicesQueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/devices:query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *devices) HomegraphDevicesQuery(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *devices) HomegraphDevicesQuery(ctx context.Context, request operations.
 }
 
 // HomegraphDevicesReportStateAndNotification - Reports device state and optionally sends device notifications. Called by your smart home Action when the state of a third-party device changes or you need to send a notification about the device. See [Implement Report State](https://developers.home.google.com/cloud-to-cloud/integration/report-state) for more information. This method updates the device state according to its declared [traits](https://developers.home.google.com/cloud-to-cloud/primer/device-types-and-traits). Publishing a new state value outside of these traits will result in an `INVALID_ARGUMENT` error response. The third-party user's identity is passed in via the `agent_user_id` (see ReportStateAndNotificationRequest). This request must be authorized using service account credentials from your Actions console project.
-func (s *devices) HomegraphDevicesReportStateAndNotification(ctx context.Context, request operations.HomegraphDevicesReportStateAndNotificationRequest) (*operations.HomegraphDevicesReportStateAndNotificationResponse, error) {
+func (s *devices) HomegraphDevicesReportStateAndNotification(ctx context.Context, request operations.HomegraphDevicesReportStateAndNotificationRequest, security operations.HomegraphDevicesReportStateAndNotificationSecurity) (*operations.HomegraphDevicesReportStateAndNotificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/devices:reportStateAndNotification"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportStateAndNotificationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *devices) HomegraphDevicesReportStateAndNotification(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *devices) HomegraphDevicesReportStateAndNotification(ctx context.Context
 }
 
 // HomegraphDevicesRequestSync - Requests Google to send an `action.devices.SYNC` [intent](https://developers.home.google.com/cloud-to-cloud/intents/sync) to your smart home Action to update device metadata for the given user. The third-party user's identity is passed via the `agent_user_id` (see RequestSyncDevicesRequest). This request must be authorized using service account credentials from your Actions console project.
-func (s *devices) HomegraphDevicesRequestSync(ctx context.Context, request operations.HomegraphDevicesRequestSyncRequest) (*operations.HomegraphDevicesRequestSyncResponse, error) {
+func (s *devices) HomegraphDevicesRequestSync(ctx context.Context, request operations.HomegraphDevicesRequestSyncRequest, security operations.HomegraphDevicesRequestSyncSecurity) (*operations.HomegraphDevicesRequestSyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/devices:requestSync"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestSyncDevicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *devices) HomegraphDevicesRequestSync(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +198,11 @@ func (s *devices) HomegraphDevicesRequestSync(ctx context.Context, request opera
 }
 
 // HomegraphDevicesSync - Gets all the devices associated with the given third-party user. The third-party user's identity is passed in via the `agent_user_id` (see SyncRequest). This request must be authorized using service account credentials from your Actions console project.
-func (s *devices) HomegraphDevicesSync(ctx context.Context, request operations.HomegraphDevicesSyncRequest) (*operations.HomegraphDevicesSyncResponse, error) {
+func (s *devices) HomegraphDevicesSync(ctx context.Context, request operations.HomegraphDevicesSyncRequest, security operations.HomegraphDevicesSyncSecurity) (*operations.HomegraphDevicesSyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/devices:sync"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SyncRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,11 +214,11 @@ func (s *devices) HomegraphDevicesSync(ctx context.Context, request operations.H
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

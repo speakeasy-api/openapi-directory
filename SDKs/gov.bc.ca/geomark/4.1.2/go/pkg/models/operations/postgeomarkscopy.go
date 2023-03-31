@@ -134,7 +134,7 @@ func (e *PostGeomarksCopyResultFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostGeomarksCopyQueryParams struct {
+type PostGeomarksCopyRequest struct {
 	// Select this option to allow overlapping geometries
 	AllowOverlap *PostGeomarksCopyAllowOverlapEnum `queryParam:"style=form,explode=true,name=allowOverlap"`
 	// If bufferMetres is specified, The style of buffer to use at the ends of a buffered line.
@@ -157,10 +157,6 @@ type PostGeomarksCopyQueryParams struct {
 	RedirectURL *string `queryParam:"style=form,explode=true,name=redirectUrl"`
 	// The file format the geomark info resource should be returned using.
 	ResultFormat *PostGeomarksCopyResultFormatEnum `queryParam:"style=form,explode=true,name=resultFormat"`
-}
-
-type PostGeomarksCopyRequest struct {
-	QueryParams PostGeomarksCopyQueryParams
 }
 
 type PostGeomarksCopyResponse struct {

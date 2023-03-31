@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadProfilePictureMultipartRequest struct {
-	Request *shared.ProfilePictureUpload1 `request:"mediaType=multipart/form-data"`
-}
-
 type UploadProfilePictureMultipartResponse struct {
 	ContentType string
 	// Email already exists

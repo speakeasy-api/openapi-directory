@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImagesFromPredictionsRawPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImagesFromPredictionsRawHeaders struct {
+type CreateImagesFromPredictionsRawRequest struct {
+	// Image and tag ids. Limited to 64 images and 20 tags per batch.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateImagesFromPredictionsRawRequest struct {
-	PathParams CreateImagesFromPredictionsRawPathParams
-	Headers    CreateImagesFromPredictionsRawHeaders
-	// Image and tag ids. Limited to 64 images and 20 tags per batch.
-	Request []byte `request:"mediaType=text/xml"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type CreateImagesFromPredictionsRawResponse struct {

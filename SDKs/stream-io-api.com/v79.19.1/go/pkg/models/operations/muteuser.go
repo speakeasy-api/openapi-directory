@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MuteUserRequest struct {
-	Request shared.MuteUserRequest `request:"mediaType=application/json"`
-}
-
 type MuteUserResponse struct {
 	// Bad request
 	APIError    *shared.APIError

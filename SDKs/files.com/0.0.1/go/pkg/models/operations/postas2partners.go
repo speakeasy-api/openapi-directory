@@ -19,10 +19,6 @@ type PostAs2PartnersRequestBody struct {
 	URI string `multipartForm:"name=uri"`
 }
 
-type PostAs2PartnersRequest struct {
-	Request PostAs2PartnersRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAs2PartnersResponse struct {
 	// The As2Partners object.
 	As2PartnerEntity *shared.As2PartnerEntity

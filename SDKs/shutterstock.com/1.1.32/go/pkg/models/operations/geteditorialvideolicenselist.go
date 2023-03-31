@@ -11,7 +11,7 @@ import (
 )
 
 type GetEditorialVideoLicenseListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetEditorialVideoLicenseListDownloadAvailabilityEnum - Filter licenses by download availability
@@ -65,7 +65,7 @@ func (e *GetEditorialVideoLicenseListSortEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetEditorialVideoLicenseListQueryParams struct {
+type GetEditorialVideoLicenseListRequest struct {
 	// Filter licenses by download availability
 	DownloadAvailability *GetEditorialVideoLicenseListDownloadAvailabilityEnum `queryParam:"style=form,explode=true,name=download_availability"`
 	// Show licenses created before the specified date
@@ -86,11 +86,6 @@ type GetEditorialVideoLicenseListQueryParams struct {
 	Username *string `queryParam:"style=form,explode=true,name=username"`
 	// Show licenses for the specified editorial video ID
 	VideoID *string `queryParam:"style=form,explode=true,name=video_id"`
-}
-
-type GetEditorialVideoLicenseListRequest struct {
-	QueryParams GetEditorialVideoLicenseListQueryParams
-	Security    GetEditorialVideoLicenseListSecurity
 }
 
 type GetEditorialVideoLicenseListResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchRoutingInterfacePathParams struct {
+type GetDeviceSwitchRoutingInterfaceRequest struct {
 	InterfaceID string `pathParam:"style=simple,explode=false,name=interfaceId"`
 	Serial      string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetDeviceSwitchRoutingInterfaceRequest struct {
-	PathParams GetDeviceSwitchRoutingInterfacePathParams
 }
 
 // GetDeviceSwitchRoutingInterface200ApplicationJSONIpv6 - IPv6 addressing

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeleteBranchProtectionPathParams struct {
+type ReposDeleteBranchProtectionRequest struct {
 	// The name of the branch.
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteBranchProtectionRequest struct {
-	PathParams ReposDeleteBranchProtectionPathParams
 }
 
 type ReposDeleteBranchProtectionResponse struct {

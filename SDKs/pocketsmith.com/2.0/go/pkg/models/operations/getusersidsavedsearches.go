@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDSavedSearchesPathParams struct {
+type GetUsersIDSavedSearchesRequest struct {
 	// The unique identifier of the user.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDSavedSearchesRequest struct {
-	PathParams GetUsersIDSavedSearchesPathParams
 }
 
 type GetUsersIDSavedSearchesResponse struct {

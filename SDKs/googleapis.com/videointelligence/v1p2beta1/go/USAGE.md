@@ -14,55 +14,35 @@ func main() {
     s := sdk.New()
 
     req := operations.VideointelligenceVideosAnnotateRequest{
-        Security: operations.VideointelligenceVideosAnnotateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.VideointelligenceVideosAnnotateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest{
+        DollarXgafv: "2",
+        GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest: &shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest{
             Features: []shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum{
-                "EXPLICIT_CONTENT_DETECTION",
-                "FACE_DETECTION",
-                "SHOT_CHANGE_DETECTION",
+                "OBJECT_TRACKING",
+                "LOGO_RECOGNITION",
+                "TEXT_DETECTION",
             },
-            InputContent: "debitis",
-            InputURI: "ipsa",
-            LocationID: "delectus",
-            OutputURI: "tempora",
+            InputContent: "nulla",
+            InputURI: "corrupti",
+            LocationID: "illum",
+            OutputURI: "vel",
             VideoContext: &shared.GoogleCloudVideointelligenceV1p2beta1VideoContext{
                 ExplicitContentDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig{
-                    Model: "suscipit",
+                    Model: "error",
                 },
                 FaceDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig{
                     IncludeAttributes: false,
                     IncludeBoundingBoxes: false,
-                    Model: "molestiae",
+                    Model: "deserunt",
                 },
                 LabelDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig{
-                    FrameConfidenceThreshold: 7917.25,
-                    LabelDetectionMode: "SHOT_AND_FRAME_MODE",
-                    Model: "voluptatum",
+                    FrameConfidenceThreshold: 3843.82,
+                    LabelDetectionMode: "SHOT_MODE",
+                    Model: "magnam",
                     StationaryCamera: false,
-                    VideoConfidenceThreshold: 4799.77,
+                    VideoConfidenceThreshold: 8917.73,
                 },
                 ObjectTrackingConfig: &shared.GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig{
-                    Model: "excepturi",
+                    Model: "ipsa",
                 },
                 PersonDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig{
                     IncludeAttributes: false,
@@ -71,76 +51,99 @@ func main() {
                 },
                 Segments: []shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
                     shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
-                        EndTimeOffset: "recusandae",
-                        StartTimeOffset: "temporibus",
+                        EndTimeOffset: "tempora",
+                        StartTimeOffset: "suscipit",
                     },
                     shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
-                        EndTimeOffset: "ab",
-                        StartTimeOffset: "quis",
+                        EndTimeOffset: "molestiae",
+                        StartTimeOffset: "minus",
+                    },
+                    shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
+                        EndTimeOffset: "placeat",
+                        StartTimeOffset: "voluptatum",
+                    },
+                    shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
+                        EndTimeOffset: "iusto",
+                        StartTimeOffset: "excepturi",
                     },
                 },
                 ShotChangeDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig{
-                    Model: "veritatis",
+                    Model: "nisi",
                 },
                 SpeechTranscriptionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig{
                     AudioTracks: []int{
-                        20218,
-                        368241,
-                        832620,
+                        836079,
+                        71036,
+                        337396,
+                        87129,
                     },
-                    DiarizationSpeakerCount: 957156,
+                    DiarizationSpeakerCount: 648172,
                     EnableAutomaticPunctuation: false,
                     EnableSpeakerDiarization: false,
                     EnableWordConfidence: false,
                     FilterProfanity: false,
-                    LanguageCode: "quo",
-                    MaxAlternatives: 140350,
+                    LanguageCode: "perferendis",
+                    MaxAlternatives: 368241,
                     SpeechContexts: []shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
                         shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
                             Phrases: []string{
-                                "maiores",
+                                "quo",
+                                "odit",
+                                "at",
+                                "at",
+                            },
+                        },
+                        shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
+                            Phrases: []string{
                                 "molestiae",
                                 "quod",
                                 "quod",
+                                "esse",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
                             Phrases: []string{
-                                "totam",
                                 "porro",
-                            },
-                        },
-                        shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
-                            Phrases: []string{
+                                "dolorum",
                                 "dicta",
-                                "nam",
-                                "officia",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
                             Phrases: []string{
+                                "officia",
+                                "occaecati",
                                 "fugit",
-                                "deleniti",
-                                "hic",
                             },
                         },
                     },
                 },
                 TextDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1TextDetectionConfig{
                     LanguageHints: []string{
+                        "hic",
+                        "optio",
                         "totam",
-                        "beatae",
-                        "commodi",
-                        "molestiae",
                     },
-                    Model: "modi",
+                    Model: "beatae",
                 },
             },
         },
+        AccessToken: "commodi",
+        Alt: "media",
+        Callback: "modi",
+        Fields: "qui",
+        Key: "impedit",
+        OauthToken: "cum",
+        PrettyPrint: false,
+        QuotaUser: "esse",
+        UploadType: "ipsum",
+        UploadProtocol: "excepturi",
     }
 
     ctx := context.Background()
-    res, err := s.Videos.VideointelligenceVideosAnnotate(ctx, req)
+    res, err := s.Videos.VideointelligenceVideosAnnotate(ctx, req, operations.VideointelligenceVideosAnnotateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

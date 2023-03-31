@@ -40,15 +40,25 @@ func newConfiguration(defaultClient, securityClient HTTPClient, serverURL, langu
 //   - Callback URL for delivery receipts
 //
 // Note that the URLs you provide must be valid and active. Vonage will check that they return a 200 OK response before the setting is saved.
-func (s *configuration) ChangeAccountSettings(ctx context.Context, request operations.ChangeAccountSettingsRequest) (*operations.ChangeAccountSettingsResponse, error) {
+func (s *configuration) ChangeAccountSettings(ctx context.Context, request operations.ChangeAccountSettingsRequest, opts ...operations.Option) (*operations.ChangeAccountSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ChangeAccountSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/account/settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountSettingsRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -60,7 +70,7 @@ func (s *configuration) ChangeAccountSettings(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -108,15 +118,25 @@ func (s *configuration) ChangeAccountSettings(ctx context.Context, request opera
 
 // RegisterSender - Register an email sender
 // Register an email sender with an API Key for using email with Verify V2.
-func (s *configuration) RegisterSender(ctx context.Context, request operations.RegisterSenderRequest) (*operations.RegisterSenderResponse, error) {
+func (s *configuration) RegisterSender(ctx context.Context, request operations.RegisterSenderRequest, opts ...operations.Option) (*operations.RegisterSenderResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.RegisterSenderServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/account/register-sender"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegisterEmailRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +151,7 @@ func (s *configuration) RegisterSender(ctx context.Context, request operations.R
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

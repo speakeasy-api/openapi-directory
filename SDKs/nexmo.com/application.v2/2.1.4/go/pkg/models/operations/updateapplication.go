@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateApplicationPathParams struct {
-	// The ID of the application
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateApplicationRequestBodyKeys struct {
 	// Public key
 	PublicKey *string `json:"public_key,omitempty"`
@@ -34,8 +29,9 @@ type UpdateApplicationRequestBody struct {
 }
 
 type UpdateApplicationRequest struct {
-	PathParams UpdateApplicationPathParams
-	Request    UpdateApplicationRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateApplicationRequestBody `request:"mediaType=application/json"`
+	// The ID of the application
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // UpdateApplication415ApplicationJSON - Unsupported Content Type Header

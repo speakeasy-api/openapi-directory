@@ -8,12 +8,7 @@ import (
 )
 
 type SuggestVideoCategorySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SuggestVideoCategoryPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SuggestVideoCategoryRequestBody struct {
@@ -22,9 +17,9 @@ type SuggestVideoCategoryRequestBody struct {
 }
 
 type SuggestVideoCategoryRequest struct {
-	PathParams SuggestVideoCategoryPathParams
-	Request    SuggestVideoCategoryRequestBody `request:"mediaType=application/vnd.vimeo.category+json"`
-	Security   SuggestVideoCategorySecurity
+	RequestBody SuggestVideoCategoryRequestBody `request:"mediaType=application/vnd.vimeo.category+json"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type SuggestVideoCategoryResponse struct {

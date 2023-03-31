@@ -33,11 +33,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudresourcemanagerProjectsCreate - Request that a new project be created. The result is an `Operation` which can be used to track the creation process. This process usually takes a few seconds, but can sometimes take much longer. The tracking `Operation` is automatically deleted after a few hours, so there is no need to call `DeleteOperation`.
-func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, request operations.CloudresourcemanagerProjectsCreateRequest) (*operations.CloudresourcemanagerProjectsCreateResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, request operations.CloudresourcemanagerProjectsCreateRequest, security operations.CloudresourcemanagerProjectsCreateSecurity) (*operations.CloudresourcemanagerProjectsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/projects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *projects) CloudresourcemanagerProjectsCreate(ctx context.Context, reque
 }
 
 // CloudresourcemanagerProjectsList - Lists projects that are direct children of the specified folder or organization resource. `list()` provides a strongly consistent view of the projects underneath the specified parent resource. `list()` returns projects sorted based upon the (ascending) lexical ordering of their `display_name`. The caller must have `resourcemanager.projects.list` permission on the identified parent.
-func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request operations.CloudresourcemanagerProjectsListRequest) (*operations.CloudresourcemanagerProjectsListResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request operations.CloudresourcemanagerProjectsListRequest, security operations.CloudresourcemanagerProjectsListSecurity) (*operations.CloudresourcemanagerProjectsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/projects"
 
@@ -97,11 +97,11 @@ func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request
 }
 
 // CloudresourcemanagerProjectsMove - Move a project to another place in your resource hierarchy, under a new resource parent. Returns an operation which can be used to track the process of the project move workflow. Upon success, the `Operation.response` field will be populated with the moved project. The caller must have `resourcemanager.projects.move` permission on the project, on the project's current and proposed new parent. If project has no current parent, or it currently does not have an associated organization resource, you will also need the `resourcemanager.projects.setIamPolicy` permission in the project.
-func (s *projects) CloudresourcemanagerProjectsMove(ctx context.Context, request operations.CloudresourcemanagerProjectsMoveRequest) (*operations.CloudresourcemanagerProjectsMoveResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsMove(ctx context.Context, request operations.CloudresourcemanagerProjectsMoveRequest, security operations.CloudresourcemanagerProjectsMoveSecurity) (*operations.CloudresourcemanagerProjectsMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MoveProjectRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *projects) CloudresourcemanagerProjectsMove(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *projects) CloudresourcemanagerProjectsMove(ctx context.Context, request
 }
 
 // CloudresourcemanagerProjectsSearch - Search for projects that the caller has both `resourcemanager.projects.get` permission on, and also satisfy the specified query. This method returns projects in an unspecified order. This method is eventually consistent with project mutations; this means that a newly created project may not appear in the results or recent updates to an existing project may not be reflected in the results. To retrieve the latest state of a project, use the GetProject method.
-func (s *projects) CloudresourcemanagerProjectsSearch(ctx context.Context, request operations.CloudresourcemanagerProjectsSearchRequest) (*operations.CloudresourcemanagerProjectsSearchResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsSearch(ctx context.Context, request operations.CloudresourcemanagerProjectsSearchRequest, security operations.CloudresourcemanagerProjectsSearchSecurity) (*operations.CloudresourcemanagerProjectsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/projects:search"
 
@@ -200,11 +200,11 @@ func (s *projects) CloudresourcemanagerProjectsSearch(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *projects) CloudresourcemanagerProjectsSearch(ctx context.Context, reque
 }
 
 // CloudresourcemanagerProjectsUndelete - Restores the project identified by the specified `name` (for example, `projects/415104041262`). You can only use this method for a project that has a lifecycle state of DELETE_REQUESTED. After deletion starts, the project cannot be restored. The caller must have `resourcemanager.projects.undelete` permission for this project.
-func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, request operations.CloudresourcemanagerProjectsUndeleteRequest) (*operations.CloudresourcemanagerProjectsUndeleteResponse, error) {
+func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, request operations.CloudresourcemanagerProjectsUndeleteRequest, security operations.CloudresourcemanagerProjectsUndeleteSecurity) (*operations.CloudresourcemanagerProjectsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,12 +8,7 @@ import (
 )
 
 type TranslateSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type TranslateRequest struct {
-	Request  shared.TranslateRequest `request:"mediaType=application/json"`
-	Security TranslateSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // Translate500ApplicationJSON - Internal Server Error

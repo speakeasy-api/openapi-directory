@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetConsumedLicensesPathParams struct {
+type EnterpriseAdminGetConsumedLicensesRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminGetConsumedLicensesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type EnterpriseAdminGetConsumedLicensesRequest struct {
-	PathParams  EnterpriseAdminGetConsumedLicensesPathParams
-	QueryParams EnterpriseAdminGetConsumedLicensesQueryParams
 }
 
 type EnterpriseAdminGetConsumedLicensesResponse struct {

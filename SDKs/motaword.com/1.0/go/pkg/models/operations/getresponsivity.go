@@ -33,13 +33,9 @@ func (e *GetResponsivityPeriodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetResponsivityQueryParams struct {
+type GetResponsivityRequest struct {
 	// Time period to calculate your responsiveness
 	Period *GetResponsivityPeriodEnum `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetResponsivityRequest struct {
-	QueryParams GetResponsivityQueryParams
 }
 
 type GetResponsivityResponse struct {

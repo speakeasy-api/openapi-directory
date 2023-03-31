@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidUserlistPutQueryParams struct {
+type KkidUserlistPutRequest struct {
 	// email address of user to create
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// emoji character for user
@@ -34,10 +34,6 @@ type KkidUserlistPutQueryParams struct {
 	UserID int64 `queryParam:"style=form,explode=true,name=userID"`
 	// username of user to create
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type KkidUserlistPutRequest struct {
-	QueryParams KkidUserlistPutQueryParams
 }
 
 type KkidUserlistPutResponse struct {

@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CancelTaskExecutionRequest(
-    headers=operations.CancelTaskExecutionHeaders(
-        x_amz_algorithm="veniam",
-        x_amz_content_sha256="quidem",
-        x_amz_credential="et",
-        x_amz_date="nemo",
-        x_amz_security_token="cumque",
-        x_amz_signature="ipsam",
-        x_amz_signed_headers="consequatur",
-        x_amz_target="FmrsService.CancelTaskExecution",
+    cancel_task_execution_request=shared.CancelTaskExecutionRequest(
+        task_execution_arn="corrupti",
     ),
-    request=shared.CancelTaskExecutionRequest(
-        task_execution_arn="ullam",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="FmrsService.CancelTaskExecution",
 )
     
 res = s.cancel_task_execution(req)

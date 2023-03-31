@@ -36,7 +36,7 @@ func newPolicies(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get the latest details for a specific policy.
 func (s *policies) GetPoliciesPolicyID(ctx context.Context, request operations.GetPoliciesPolicyIDRequest) (*operations.GetPoliciesPolicyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policy_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *policies) GetPoliciesPolicyID(ctx context.Context, request operations.G
 // PostPolicies - /policies
 // ### Bind a policy
 // Take a quote and bind it.
-func (s *policies) PostPolicies(ctx context.Context, request operations.PostPoliciesRequest) (*operations.PostPoliciesResponse, error) {
+func (s *policies) PostPolicies(ctx context.Context, request operations.PostPoliciesRequestBody) (*operations.PostPoliciesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/policies"
 

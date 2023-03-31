@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutPrimaryIpsIDPathParams struct {
-	// ID of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutPrimaryIpsIDUpdatePrimaryIPRequest struct {
 	// Delete this Primary IP when the resource it is assigned to is deleted
 	AutoDelete *bool `json:"auto_delete,omitempty"`
@@ -23,8 +18,9 @@ type PutPrimaryIpsIDUpdatePrimaryIPRequest struct {
 }
 
 type PutPrimaryIpsIDRequest struct {
-	PathParams PutPrimaryIpsIDPathParams
-	Request    *PutPrimaryIpsIDUpdatePrimaryIPRequest `request:"mediaType=application/json"`
+	RequestBody *PutPrimaryIpsIDUpdatePrimaryIPRequest `request:"mediaType=application/json"`
+	// ID of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum - Resource type the Primary IP can be assigned to

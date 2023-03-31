@@ -18,10 +18,6 @@ type UpdateLocationRequestBody struct {
 	Radius float64 `multipartForm:"name=radius"`
 }
 
-type UpdateLocationRequest struct {
-	Request UpdateLocationRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type UpdateLocationResponse struct {
 	ContentType string
 	// The user with the updated location.

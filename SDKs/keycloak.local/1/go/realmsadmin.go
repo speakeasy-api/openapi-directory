@@ -35,7 +35,7 @@ func newRealmsAdmin(defaultClient, securityClient HTTPClient, serverURL, languag
 // DeleteRealm - Delete the realm
 func (s *realmsAdmin) DeleteRealm(ctx context.Context, request operations.DeleteRealmRequest) (*operations.DeleteRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -70,7 +70,7 @@ func (s *realmsAdmin) DeleteRealm(ctx context.Context, request operations.Delete
 // DeleteRealmAdminEvents - Delete all admin events
 func (s *realmsAdmin) DeleteRealmAdminEvents(ctx context.Context, request operations.DeleteRealmAdminEventsRequest) (*operations.DeleteRealmAdminEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/admin-events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/admin-events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -103,7 +103,7 @@ func (s *realmsAdmin) DeleteRealmAdminEvents(ctx context.Context, request operat
 }
 func (s *realmsAdmin) DeleteRealmDefaultDefaultClientScopesClientScopeID(ctx context.Context, request operations.DeleteRealmDefaultDefaultClientScopesClientScopeIDRequest) (*operations.DeleteRealmDefaultDefaultClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-default-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-default-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *realmsAdmin) DeleteRealmDefaultDefaultClientScopesClientScopeID(ctx con
 }
 func (s *realmsAdmin) DeleteRealmDefaultGroupsGroupID(ctx context.Context, request operations.DeleteRealmDefaultGroupsGroupIDRequest) (*operations.DeleteRealmDefaultGroupsGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -169,7 +169,7 @@ func (s *realmsAdmin) DeleteRealmDefaultGroupsGroupID(ctx context.Context, reque
 }
 func (s *realmsAdmin) DeleteRealmDefaultOptionalClientScopesClientScopeID(ctx context.Context, request operations.DeleteRealmDefaultOptionalClientScopesClientScopeIDRequest) (*operations.DeleteRealmDefaultOptionalClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-optional-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-optional-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -204,7 +204,7 @@ func (s *realmsAdmin) DeleteRealmDefaultOptionalClientScopesClientScopeID(ctx co
 // DeleteRealmEvents - Delete all events
 func (s *realmsAdmin) DeleteRealmEvents(ctx context.Context, request operations.DeleteRealmEventsRequest) (*operations.DeleteRealmEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -239,7 +239,7 @@ func (s *realmsAdmin) DeleteRealmEvents(ctx context.Context, request operations.
 // DeleteRealmSessionsSession - Remove a specific user session.
 func (s *realmsAdmin) DeleteRealmSessionsSession(ctx context.Context, request operations.DeleteRealmSessionsSessionRequest) (*operations.DeleteRealmSessionsSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/sessions/{session}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/sessions/{session}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -274,7 +274,7 @@ func (s *realmsAdmin) DeleteRealmSessionsSession(ctx context.Context, request op
 // GetRealm - Get the top-level representation of the realm   It will not include nested information like User and Client representations.
 func (s *realmsAdmin) GetRealm(ctx context.Context, request operations.GetRealmRequest) (*operations.GetRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,14 +318,14 @@ func (s *realmsAdmin) GetRealm(ctx context.Context, request operations.GetRealmR
 // GetRealmAdminEvents - Get admin events   Returns all admin events, or filters events based on URL query parameters listed here
 func (s *realmsAdmin) GetRealmAdminEvents(ctx context.Context, request operations.GetRealmAdminEventsRequest) (*operations.GetRealmAdminEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/admin-events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/admin-events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -366,7 +366,7 @@ func (s *realmsAdmin) GetRealmAdminEvents(ctx context.Context, request operation
 // GetRealmClientSessionStats - Get client session stats   Returns a JSON map.
 func (s *realmsAdmin) GetRealmClientSessionStats(ctx context.Context, request operations.GetRealmClientSessionStatsRequest) (*operations.GetRealmClientSessionStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-session-stats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-session-stats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +408,7 @@ func (s *realmsAdmin) GetRealmClientSessionStats(ctx context.Context, request op
 }
 func (s *realmsAdmin) GetRealmCredentialRegistrators(ctx context.Context, request operations.GetRealmCredentialRegistratorsRequest) (*operations.GetRealmCredentialRegistratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/credential-registrators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/credential-registrators", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -452,7 +452,7 @@ func (s *realmsAdmin) GetRealmCredentialRegistrators(ctx context.Context, reques
 // GetRealmDefaultDefaultClientScopes - Get realm default client scopes.
 func (s *realmsAdmin) GetRealmDefaultDefaultClientScopes(ctx context.Context, request operations.GetRealmDefaultDefaultClientScopesRequest) (*operations.GetRealmDefaultDefaultClientScopesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-default-client-scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-default-client-scopes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -496,7 +496,7 @@ func (s *realmsAdmin) GetRealmDefaultDefaultClientScopes(ctx context.Context, re
 // GetRealmDefaultGroups - Get group hierarchy.
 func (s *realmsAdmin) GetRealmDefaultGroups(ctx context.Context, request operations.GetRealmDefaultGroupsRequest) (*operations.GetRealmDefaultGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -540,7 +540,7 @@ func (s *realmsAdmin) GetRealmDefaultGroups(ctx context.Context, request operati
 // GetRealmDefaultOptionalClientScopes - Get realm optional client scopes.
 func (s *realmsAdmin) GetRealmDefaultOptionalClientScopes(ctx context.Context, request operations.GetRealmDefaultOptionalClientScopesRequest) (*operations.GetRealmDefaultOptionalClientScopesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-optional-client-scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-optional-client-scopes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -584,14 +584,14 @@ func (s *realmsAdmin) GetRealmDefaultOptionalClientScopes(ctx context.Context, r
 // GetRealmEvents - Get events   Returns all events, or filters them based on URL query parameters listed here
 func (s *realmsAdmin) GetRealmEvents(ctx context.Context, request operations.GetRealmEventsRequest) (*operations.GetRealmEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -632,7 +632,7 @@ func (s *realmsAdmin) GetRealmEvents(ctx context.Context, request operations.Get
 // GetRealmEventsConfig - Get the events provider configuration   Returns JSON object with events provider configuration
 func (s *realmsAdmin) GetRealmEventsConfig(ctx context.Context, request operations.GetRealmEventsConfigRequest) (*operations.GetRealmEventsConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -674,7 +674,7 @@ func (s *realmsAdmin) GetRealmEventsConfig(ctx context.Context, request operatio
 }
 func (s *realmsAdmin) GetRealmGroupByPathPath(ctx context.Context, request operations.GetRealmGroupByPathPathRequest) (*operations.GetRealmGroupByPathPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/group-by-path/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/group-by-path/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -716,7 +716,7 @@ func (s *realmsAdmin) GetRealmGroupByPathPath(ctx context.Context, request opera
 }
 func (s *realmsAdmin) GetRealmUsersManagementPermissions(ctx context.Context, request operations.GetRealmUsersManagementPermissionsRequest) (*operations.GetRealmUsersManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users-management-permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users-management-permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -758,7 +758,7 @@ func (s *realmsAdmin) GetRealmUsersManagementPermissions(ctx context.Context, re
 }
 
 // Post - Import a realm   Imports a realm from a full representation of that realm.
-func (s *realmsAdmin) Post(ctx context.Context, request operations.PostRequest) (*operations.PostResponse, error) {
+func (s *realmsAdmin) Post(ctx context.Context, request shared.RealmRepresentation) (*operations.PostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -805,7 +805,7 @@ func (s *realmsAdmin) Post(ctx context.Context, request operations.PostRequest) 
 // PostRealmClearKeysCache - Clear cache of external public keys (Public keys of clients or Identity providers)
 func (s *realmsAdmin) PostRealmClearKeysCache(ctx context.Context, request operations.PostRealmClearKeysCacheRequest) (*operations.PostRealmClearKeysCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clear-keys-cache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clear-keys-cache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -840,7 +840,7 @@ func (s *realmsAdmin) PostRealmClearKeysCache(ctx context.Context, request opera
 // PostRealmClearRealmCache - Clear realm cache
 func (s *realmsAdmin) PostRealmClearRealmCache(ctx context.Context, request operations.PostRealmClearRealmCacheRequest) (*operations.PostRealmClearRealmCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clear-realm-cache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clear-realm-cache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -875,7 +875,7 @@ func (s *realmsAdmin) PostRealmClearRealmCache(ctx context.Context, request oper
 // PostRealmClearUserCache - Clear user cache
 func (s *realmsAdmin) PostRealmClearUserCache(ctx context.Context, request operations.PostRealmClearUserCacheRequest) (*operations.PostRealmClearUserCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clear-user-cache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clear-user-cache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -910,9 +910,9 @@ func (s *realmsAdmin) PostRealmClearUserCache(ctx context.Context, request opera
 // PostRealmClientDescriptionConverter - Base path for importing clients under this realm.
 func (s *realmsAdmin) PostRealmClientDescriptionConverter(ctx context.Context, request operations.PostRealmClientDescriptionConverterRequest) (*operations.PostRealmClientDescriptionConverterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-description-converter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-description-converter", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -964,7 +964,7 @@ func (s *realmsAdmin) PostRealmClientDescriptionConverter(ctx context.Context, r
 // PostRealmLogoutAll - Removes all user sessions.
 func (s *realmsAdmin) PostRealmLogoutAll(ctx context.Context, request operations.PostRealmLogoutAllRequest) (*operations.PostRealmLogoutAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/logout-all", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/logout-all", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -999,14 +999,14 @@ func (s *realmsAdmin) PostRealmLogoutAll(ctx context.Context, request operations
 // PostRealmPartialExport - Partial export of existing realm into a JSON file.
 func (s *realmsAdmin) PostRealmPartialExport(ctx context.Context, request operations.PostRealmPartialExportRequest) (*operations.PostRealmPartialExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/partial-export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/partial-export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1047,9 +1047,9 @@ func (s *realmsAdmin) PostRealmPartialExport(ctx context.Context, request operat
 // PostRealmPartialImport - Partial import from a JSON file to an existing realm.
 func (s *realmsAdmin) PostRealmPartialImport(ctx context.Context, request operations.PostRealmPartialImportRequest) (*operations.PostRealmPartialImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/partialImport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/partialImport", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartialImportRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1092,7 +1092,7 @@ func (s *realmsAdmin) PostRealmPartialImport(ctx context.Context, request operat
 // PostRealmPushRevocation - Push the realm’s revocation policy to any client that has an admin url associated with it.
 func (s *realmsAdmin) PostRealmPushRevocation(ctx context.Context, request operations.PostRealmPushRevocationRequest) (*operations.PostRealmPushRevocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/push-revocation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/push-revocation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1127,9 +1127,9 @@ func (s *realmsAdmin) PostRealmPushRevocation(ctx context.Context, request opera
 // PostRealmTestLDAPConnection - Test LDAP connection
 func (s *realmsAdmin) PostRealmTestLDAPConnection(ctx context.Context, request operations.PostRealmTestLDAPConnectionRequest) (*operations.PostRealmTestLDAPConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/testLDAPConnection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/testLDAPConnection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestLdapConnectionRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1170,9 +1170,9 @@ func (s *realmsAdmin) PostRealmTestLDAPConnection(ctx context.Context, request o
 }
 func (s *realmsAdmin) PostRealmTestSMTPConnection(ctx context.Context, request operations.PostRealmTestSMTPConnectionRequest) (*operations.PostRealmTestSMTPConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/testSMTPConnection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/testSMTPConnection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1215,9 +1215,9 @@ func (s *realmsAdmin) PostRealmTestSMTPConnection(ctx context.Context, request o
 // PutRealm - Update the top-level information of the realm   Any user, roles or client information in the representation  will be ignored.
 func (s *realmsAdmin) PutRealm(ctx context.Context, request operations.PutRealmRequest) (*operations.PutRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RealmRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1258,7 +1258,7 @@ func (s *realmsAdmin) PutRealm(ctx context.Context, request operations.PutRealmR
 }
 func (s *realmsAdmin) PutRealmDefaultDefaultClientScopesClientScopeID(ctx context.Context, request operations.PutRealmDefaultDefaultClientScopesClientScopeIDRequest) (*operations.PutRealmDefaultDefaultClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-default-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-default-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1291,7 +1291,7 @@ func (s *realmsAdmin) PutRealmDefaultDefaultClientScopesClientScopeID(ctx contex
 }
 func (s *realmsAdmin) PutRealmDefaultGroupsGroupID(ctx context.Context, request operations.PutRealmDefaultGroupsGroupIDRequest) (*operations.PutRealmDefaultGroupsGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1324,7 +1324,7 @@ func (s *realmsAdmin) PutRealmDefaultGroupsGroupID(ctx context.Context, request 
 }
 func (s *realmsAdmin) PutRealmDefaultOptionalClientScopesClientScopeID(ctx context.Context, request operations.PutRealmDefaultOptionalClientScopesClientScopeIDRequest) (*operations.PutRealmDefaultOptionalClientScopesClientScopeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-optional-client-scopes/{clientScopeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/default-optional-client-scopes/{clientScopeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1359,9 +1359,9 @@ func (s *realmsAdmin) PutRealmDefaultOptionalClientScopesClientScopeID(ctx conte
 // PutRealmEventsConfig - Update the events provider   Change the events provider and/or its configuration
 func (s *realmsAdmin) PutRealmEventsConfig(ctx context.Context, request operations.PutRealmEventsConfigRequest) (*operations.PutRealmEventsConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/events/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RealmEventsConfigRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1402,9 +1402,9 @@ func (s *realmsAdmin) PutRealmEventsConfig(ctx context.Context, request operatio
 }
 func (s *realmsAdmin) PutRealmUsersManagementPermissions(ctx context.Context, request operations.PutRealmUsersManagementPermissionsRequest) (*operations.PutRealmUsersManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users-management-permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users-management-permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagementPermissionReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

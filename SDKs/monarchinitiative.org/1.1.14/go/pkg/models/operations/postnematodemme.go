@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostNematodeMmeRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type PostNematodeMmeResponse struct {
 	ContentType string
 	StatusCode  int

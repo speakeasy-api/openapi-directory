@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ValidatePatientManagementRequest struct {
-	// patientManagement
-	Request *shared.PatientManagement `request:"mediaType=application/json"`
-}
 
 type ValidatePatientManagementResponse struct {
 	ContentType string

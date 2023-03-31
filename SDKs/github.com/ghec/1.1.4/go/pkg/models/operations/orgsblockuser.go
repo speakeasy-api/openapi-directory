@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsBlockUserPathParams struct {
+type OrgsBlockUserRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type OrgsBlockUserRequest struct {
-	PathParams OrgsBlockUserPathParams
 }
 
 type OrgsBlockUserResponse struct {

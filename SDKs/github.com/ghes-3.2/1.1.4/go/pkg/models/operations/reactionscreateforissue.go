@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForIssuePathParams struct {
-	// The number that identifies the issue.
-	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForIssueRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.2/rest/reference/reactions#reaction-types) to add to the issue.
 type ReactionsCreateForIssueRequestBodyContentEnum string
 
@@ -66,8 +57,13 @@ type ReactionsCreateForIssueRequestBody struct {
 }
 
 type ReactionsCreateForIssueRequest struct {
-	PathParams ReactionsCreateForIssuePathParams
-	Request    ReactionsCreateForIssueRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForIssueRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the issue.
+	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsCreateForIssueResponse struct {

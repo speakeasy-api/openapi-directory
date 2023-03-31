@@ -8,17 +8,13 @@ import (
 )
 
 type GetTokenSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetTokenPathParams struct {
-	// Token number
-	TokenNumber string `pathParam:"style=simple,explode=false,name=tokenNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetTokenRequest struct {
-	PathParams GetTokenPathParams
-	Security   GetTokenSecurity
+	// Token number
+	TokenNumber string `pathParam:"style=simple,explode=false,name=tokenNumber"`
 }
 
 type GetTokenResponse struct {

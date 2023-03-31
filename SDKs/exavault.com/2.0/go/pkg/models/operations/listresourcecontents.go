@@ -7,12 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResourceContentsPathParams struct {
+type ListResourceContentsRequest struct {
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// ID of the parent resource to get a list of resources for.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ListResourceContentsQueryParams struct {
 	// Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerUser**.
 	Include *string `queryParam:"style=form,explode=true,name=include"`
 	// The number of files to limit the result. Cannot be set higher than 100. If you have more than one hundred files in your directory, make multiple calls, incrementing the `offset parameter, above.
@@ -23,19 +24,6 @@ type ListResourceContentsQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Limit types of resources returned to "file" or "dir" only.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListResourceContentsHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type ListResourceContentsRequest struct {
-	PathParams  ListResourceContentsPathParams
-	QueryParams ListResourceContentsQueryParams
-	Headers     ListResourceContentsHeaders
 }
 
 type ListResourceContentsResponse struct {

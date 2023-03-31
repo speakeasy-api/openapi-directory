@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteRealmUsersIDFederatedIdentityProviderPathParams struct {
+type DeleteRealmUsersIDFederatedIdentityProviderRequest struct {
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Social login provider id
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmUsersIDFederatedIdentityProviderRequest struct {
-	PathParams DeleteRealmUsersIDFederatedIdentityProviderPathParams
 }
 
 type DeleteRealmUsersIDFederatedIdentityProviderResponse struct {

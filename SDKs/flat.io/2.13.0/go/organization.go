@@ -34,7 +34,7 @@ func newOrganization(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CountOrgaUsers - Count the organization users using the provided filters
-func (s *organization) CountOrgaUsers(ctx context.Context, request operations.CountOrgaUsersRequest) (*operations.CountOrgaUsersResponse, error) {
+func (s *organization) CountOrgaUsers(ctx context.Context, request operations.CountOrgaUsersRequest, security operations.CountOrgaUsersSecurity) (*operations.CountOrgaUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/users/count"
 
@@ -43,11 +43,11 @@ func (s *organization) CountOrgaUsers(ctx context.Context, request operations.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *organization) CountOrgaUsers(ctx context.Context, request operations.Co
 
 // CreateLtiCredentials - Create a new couple of LTI 1.x credentials
 // Flat for Education is a Certified LTI Provider. You can use these API methods to automate the creation of LTI credentials. You can read more about our LTI implementation, supported components and LTI Endpoints in our [Developer Documentation](https://flat.io/developers/docs/lti/).
-func (s *organization) CreateLtiCredentials(ctx context.Context, request operations.CreateLtiCredentialsRequest) (*operations.CreateLtiCredentialsResponse, error) {
+func (s *organization) CreateLtiCredentials(ctx context.Context, request shared.LtiCredentialsCreation, security operations.CreateLtiCredentialsSecurity) (*operations.CreateLtiCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/lti/credentials"
 
@@ -112,7 +112,7 @@ func (s *organization) CreateLtiCredentials(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -164,7 +164,7 @@ func (s *organization) CreateLtiCredentials(ctx context.Context, request operati
 // Invitations can only be used by new Flat users or users who are not part of the organization yet.
 //
 // If the email of the user is already associated to a user of your organization, the API will simply update the role of the existing user and won't send an invitation. In this case, the property `usedBy` will be directly filled with the uniquer identifier of the corresponding user.
-func (s *organization) CreateOrganizationInvitation(ctx context.Context, request operations.CreateOrganizationInvitationRequest) (*operations.CreateOrganizationInvitationResponse, error) {
+func (s *organization) CreateOrganizationInvitation(ctx context.Context, request shared.OrganizationInvitationCreation, security operations.CreateOrganizationInvitationSecurity) (*operations.CreateOrganizationInvitationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/invitations"
 
@@ -180,7 +180,7 @@ func (s *organization) CreateOrganizationInvitation(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *organization) CreateOrganizationInvitation(ctx context.Context, request
 }
 
 // CreateOrganizationUser - Create a new user account
-func (s *organization) CreateOrganizationUser(ctx context.Context, request operations.CreateOrganizationUserRequest) (*operations.CreateOrganizationUserResponse, error) {
+func (s *organization) CreateOrganizationUser(ctx context.Context, request shared.UserCreation, security operations.CreateOrganizationUserSecurity) (*operations.CreateOrganizationUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/users"
 
@@ -241,7 +241,7 @@ func (s *organization) CreateOrganizationUser(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,7 +286,7 @@ func (s *organization) CreateOrganizationUser(ctx context.Context, request opera
 }
 
 // ListLtiCredentials - List LTI 1.x credentials
-func (s *organization) ListLtiCredentials(ctx context.Context, request operations.ListLtiCredentialsRequest) (*operations.ListLtiCredentialsResponse, error) {
+func (s *organization) ListLtiCredentials(ctx context.Context) (*operations.ListLtiCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/lti/credentials"
 
@@ -295,7 +295,7 @@ func (s *organization) ListLtiCredentials(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,7 +342,7 @@ func (s *organization) ListLtiCredentials(ctx context.Context, request operation
 }
 
 // ListOrganizationInvitations - List the organization invitations
-func (s *organization) ListOrganizationInvitations(ctx context.Context, request operations.ListOrganizationInvitationsRequest) (*operations.ListOrganizationInvitationsResponse, error) {
+func (s *organization) ListOrganizationInvitations(ctx context.Context, request operations.ListOrganizationInvitationsRequest, security operations.ListOrganizationInvitationsSecurity) (*operations.ListOrganizationInvitationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/invitations"
 
@@ -351,11 +351,11 @@ func (s *organization) ListOrganizationInvitations(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -400,7 +400,7 @@ func (s *organization) ListOrganizationInvitations(ctx context.Context, request 
 }
 
 // ListOrganizationUsers - List the organization users
-func (s *organization) ListOrganizationUsers(ctx context.Context, request operations.ListOrganizationUsersRequest) (*operations.ListOrganizationUsersResponse, error) {
+func (s *organization) ListOrganizationUsers(ctx context.Context, request operations.ListOrganizationUsersRequest, security operations.ListOrganizationUsersSecurity) (*operations.ListOrganizationUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/users"
 
@@ -409,11 +409,11 @@ func (s *organization) ListOrganizationUsers(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -458,16 +458,16 @@ func (s *organization) ListOrganizationUsers(ctx context.Context, request operat
 }
 
 // RemoveOrganizationInvitation - Remove an organization invitation
-func (s *organization) RemoveOrganizationInvitation(ctx context.Context, request operations.RemoveOrganizationInvitationRequest) (*operations.RemoveOrganizationInvitationResponse, error) {
+func (s *organization) RemoveOrganizationInvitation(ctx context.Context, request operations.RemoveOrganizationInvitationRequest, security operations.RemoveOrganizationInvitationSecurity) (*operations.RemoveOrganizationInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/invitations/{invitation}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/invitations/{invitation}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,20 +506,20 @@ func (s *organization) RemoveOrganizationInvitation(ctx context.Context, request
 // This operation removes an account from Flat and its data, including:
 // * The music scores created by this user (documents, history, comments, collaboration information)
 // * Education related data (assignments and classroom information)
-func (s *organization) RemoveOrganizationUser(ctx context.Context, request operations.RemoveOrganizationUserRequest) (*operations.RemoveOrganizationUserResponse, error) {
+func (s *organization) RemoveOrganizationUser(ctx context.Context, request operations.RemoveOrganizationUserRequest, security operations.RemoveOrganizationUserSecurity) (*operations.RemoveOrganizationUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -555,16 +555,16 @@ func (s *organization) RemoveOrganizationUser(ctx context.Context, request opera
 }
 
 // RevokeLtiCredentials - Revoke LTI 1.x credentials
-func (s *organization) RevokeLtiCredentials(ctx context.Context, request operations.RevokeLtiCredentialsRequest) (*operations.RevokeLtiCredentialsResponse, error) {
+func (s *organization) RevokeLtiCredentials(ctx context.Context, request operations.RevokeLtiCredentialsRequest, security operations.RevokeLtiCredentialsSecurity) (*operations.RevokeLtiCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/lti/credentials/{credentials}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/lti/credentials/{credentials}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -604,11 +604,11 @@ func (s *organization) RevokeLtiCredentials(ctx context.Context, request operati
 }
 
 // UpdateOrganizationUser - Update account information
-func (s *organization) UpdateOrganizationUser(ctx context.Context, request operations.UpdateOrganizationUserRequest) (*operations.UpdateOrganizationUserResponse, error) {
+func (s *organization) UpdateOrganizationUser(ctx context.Context, request operations.UpdateOrganizationUserRequest, security operations.UpdateOrganizationUserSecurity) (*operations.UpdateOrganizationUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAdminUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -623,7 +623,7 @@ func (s *organization) UpdateOrganizationUser(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

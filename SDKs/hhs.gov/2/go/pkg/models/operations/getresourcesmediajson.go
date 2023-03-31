@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetResourcesMediaJSONQueryParams struct {
+type GetResourcesMediaJSONRequest struct {
 	// Restrict filtering to media items in a specific collection.
 	CollectionID *int `queryParam:"style=form,explode=false,name=collectionId"`
 	// Find all media items authored before the provided day (RFC 3339, time ignored).
@@ -115,10 +115,6 @@ type GetResourcesMediaJSONQueryParams struct {
 	SyndicationVisibleSinceDate *types.Date `queryParam:"style=form,explode=false,name=syndicationVisibleSinceDate"`
 	// Find only media items tagged with the specified tag Ids.
 	TagIds *string `queryParam:"style=form,explode=false,name=tagIds"`
-}
-
-type GetResourcesMediaJSONRequest struct {
-	QueryParams GetResourcesMediaJSONQueryParams
 }
 
 type GetResourcesMediaJSONResponse struct {

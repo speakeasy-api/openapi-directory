@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type AgentStoreUnsetPathParams struct {
+type AgentStoreUnsetRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type AgentStoreUnsetRequest struct {
-	PathParams AgentStoreUnsetPathParams
 }
 
 type AgentStoreUnsetResponse struct {

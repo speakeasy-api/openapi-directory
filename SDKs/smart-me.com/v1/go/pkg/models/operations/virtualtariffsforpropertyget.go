@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualTariffsForPropertyGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type VirtualTariffsForPropertyGetRequest struct {
-	PathParams VirtualTariffsForPropertyGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type VirtualTariffsForPropertyGetResponse struct {

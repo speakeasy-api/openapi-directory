@@ -32,20 +32,20 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // OsloginUsersGetLoginProfile - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
-func (s *users) OsloginUsersGetLoginProfile(ctx context.Context, request operations.OsloginUsersGetLoginProfileRequest) (*operations.OsloginUsersGetLoginProfileResponse, error) {
+func (s *users) OsloginUsersGetLoginProfile(ctx context.Context, request operations.OsloginUsersGetLoginProfileRequest, security operations.OsloginUsersGetLoginProfileSecurity) (*operations.OsloginUsersGetLoginProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}/loginProfile", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}/loginProfile", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *users) OsloginUsersGetLoginProfile(ctx context.Context, request operati
 }
 
 // OsloginUsersImportSSHPublicKey - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
-func (s *users) OsloginUsersImportSSHPublicKey(ctx context.Context, request operations.OsloginUsersImportSSHPublicKeyRequest) (*operations.OsloginUsersImportSSHPublicKeyResponse, error) {
+func (s *users) OsloginUsersImportSSHPublicKey(ctx context.Context, request operations.OsloginUsersImportSSHPublicKeyRequest, security operations.OsloginUsersImportSSHPublicKeySecurity) (*operations.OsloginUsersImportSSHPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}:importSshPublicKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}:importSshPublicKey", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHPublicKeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *users) OsloginUsersImportSSHPublicKey(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *users) OsloginUsersImportSSHPublicKey(ctx context.Context, request oper
 }
 
 // OsloginUsersSSHPublicKeysCreate - Create an SSH public key
-func (s *users) OsloginUsersSSHPublicKeysCreate(ctx context.Context, request operations.OsloginUsersSSHPublicKeysCreateRequest) (*operations.OsloginUsersSSHPublicKeysCreateResponse, error) {
+func (s *users) OsloginUsersSSHPublicKeysCreate(ctx context.Context, request operations.OsloginUsersSSHPublicKeysCreateRequest, security operations.OsloginUsersSSHPublicKeysCreateSecurity) (*operations.OsloginUsersSSHPublicKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sshPublicKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sshPublicKeys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHPublicKeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *users) OsloginUsersSSHPublicKeysCreate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *users) OsloginUsersSSHPublicKeysCreate(ctx context.Context, request ope
 }
 
 // OsloginUsersSSHPublicKeysDelete - Deletes an SSH public key.
-func (s *users) OsloginUsersSSHPublicKeysDelete(ctx context.Context, request operations.OsloginUsersSSHPublicKeysDeleteRequest) (*operations.OsloginUsersSSHPublicKeysDeleteResponse, error) {
+func (s *users) OsloginUsersSSHPublicKeysDelete(ctx context.Context, request operations.OsloginUsersSSHPublicKeysDeleteRequest, security operations.OsloginUsersSSHPublicKeysDeleteSecurity) (*operations.OsloginUsersSSHPublicKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *users) OsloginUsersSSHPublicKeysDelete(ctx context.Context, request ope
 }
 
 // OsloginUsersSSHPublicKeysGet - Retrieves an SSH public key.
-func (s *users) OsloginUsersSSHPublicKeysGet(ctx context.Context, request operations.OsloginUsersSSHPublicKeysGetRequest) (*operations.OsloginUsersSSHPublicKeysGetResponse, error) {
+func (s *users) OsloginUsersSSHPublicKeysGet(ctx context.Context, request operations.OsloginUsersSSHPublicKeysGetRequest, security operations.OsloginUsersSSHPublicKeysGetSecurity) (*operations.OsloginUsersSSHPublicKeysGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *users) OsloginUsersSSHPublicKeysGet(ctx context.Context, request operat
 }
 
 // OsloginUsersSSHPublicKeysPatch - Updates an SSH public key and returns the profile information. This method supports patch semantics.
-func (s *users) OsloginUsersSSHPublicKeysPatch(ctx context.Context, request operations.OsloginUsersSSHPublicKeysPatchRequest) (*operations.OsloginUsersSSHPublicKeysPatchResponse, error) {
+func (s *users) OsloginUsersSSHPublicKeysPatch(ctx context.Context, request operations.OsloginUsersSSHPublicKeysPatchRequest, security operations.OsloginUsersSSHPublicKeysPatchSecurity) (*operations.OsloginUsersSSHPublicKeysPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHPublicKeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *users) OsloginUsersSSHPublicKeysPatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

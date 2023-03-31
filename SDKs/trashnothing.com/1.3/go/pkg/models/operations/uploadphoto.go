@@ -19,10 +19,6 @@ type UploadPhotoRequestBody struct {
 	Photo UploadPhotoRequestBodyPhoto `multipartForm:"file"`
 }
 
-type UploadPhotoRequest struct {
-	Request UploadPhotoRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type UploadPhotoResponse struct {
 	ContentType string
 	// Photo created.

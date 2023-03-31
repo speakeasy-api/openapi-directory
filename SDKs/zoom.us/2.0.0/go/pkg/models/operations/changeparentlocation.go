@@ -4,15 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ChangeParentLocationSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ChangeParentLocationPathParams struct {
-	LocationID string `pathParam:"style=simple,explode=false,name=locationId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChangeParentLocationApplicationJSON struct {
@@ -21,9 +16,8 @@ type ChangeParentLocationApplicationJSON struct {
 }
 
 type ChangeParentLocationRequest struct {
-	PathParams ChangeParentLocationPathParams
-	Request    *ChangeParentLocationApplicationJSON `request:"mediaType=application/json"`
-	Security   ChangeParentLocationSecurity
+	RequestBody *ChangeParentLocationApplicationJSON `request:"mediaType=application/json"`
+	LocationID  string                               `pathParam:"style=simple,explode=false,name=locationId"`
 }
 
 type ChangeParentLocationResponse struct {

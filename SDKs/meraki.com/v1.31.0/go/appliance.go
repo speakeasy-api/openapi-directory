@@ -34,7 +34,7 @@ func newAppliance(defaultClient, securityClient HTTPClient, serverURL, language,
 // Generate a new vMX authentication token
 func (s *appliance) CreateDeviceApplianceVmxAuthenticationToken(ctx context.Context, request operations.CreateDeviceApplianceVmxAuthenticationTokenRequest) (*operations.CreateDeviceApplianceVmxAuthenticationTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/vmx/authenticationToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/vmx/authenticationToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *appliance) CreateDeviceApplianceVmxAuthenticationToken(ctx context.Cont
 // Add a static delegated prefix from a network
 func (s *appliance) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.CreateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.CreateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -134,9 +134,9 @@ func (s *appliance) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Co
 // Add a static route for an MX or teleworker network
 func (s *appliance) CreateNetworkApplianceStaticRoute(ctx context.Context, request operations.CreateNetworkApplianceStaticRouteRequest) (*operations.CreateNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -189,9 +189,9 @@ func (s *appliance) CreateNetworkApplianceStaticRoute(ctx context.Context, reque
 // Add a custom performance class for an MX network
 func (s *appliance) CreateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -244,9 +244,9 @@ func (s *appliance) CreateNetworkApplianceTrafficShapingCustomPerformanceClass(c
 // Add a VLAN
 func (s *appliance) CreateNetworkApplianceVlan(ctx context.Context, request operations.CreateNetworkApplianceVlanRequest) (*operations.CreateNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -299,7 +299,7 @@ func (s *appliance) CreateNetworkApplianceVlan(ctx context.Context, request oper
 // Delete a static delegated prefix from a network
 func (s *appliance) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.DeleteNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.DeleteNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -335,7 +335,7 @@ func (s *appliance) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Co
 // Delete a static route from an MX or teleworker network
 func (s *appliance) DeleteNetworkApplianceStaticRoute(ctx context.Context, request operations.DeleteNetworkApplianceStaticRouteRequest) (*operations.DeleteNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -371,7 +371,7 @@ func (s *appliance) DeleteNetworkApplianceStaticRoute(ctx context.Context, reque
 // Delete a custom performance class from an MX network
 func (s *appliance) DeleteNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -407,7 +407,7 @@ func (s *appliance) DeleteNetworkApplianceTrafficShapingCustomPerformanceClass(c
 // Delete a VLAN from a network
 func (s *appliance) DeleteNetworkApplianceVlan(ctx context.Context, request operations.DeleteNetworkApplianceVlanRequest) (*operations.DeleteNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -443,7 +443,7 @@ func (s *appliance) DeleteNetworkApplianceVlan(ctx context.Context, request oper
 // Return the DHCP subnet information for an appliance
 func (s *appliance) GetDeviceApplianceDhcpSubnets(ctx context.Context, request operations.GetDeviceApplianceDhcpSubnetsRequest) (*operations.GetDeviceApplianceDhcpSubnetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/dhcp/subnets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/dhcp/subnets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -488,7 +488,7 @@ func (s *appliance) GetDeviceApplianceDhcpSubnets(ctx context.Context, request o
 // Return the performance score for a single MX. Only primary MX devices supported. If no data is available, a 204 error code is returned.
 func (s *appliance) GetDeviceAppliancePerformance(ctx context.Context, request operations.GetDeviceAppliancePerformanceRequest) (*operations.GetDeviceAppliancePerformanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/performance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/performance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -533,7 +533,7 @@ func (s *appliance) GetDeviceAppliancePerformance(ctx context.Context, request o
 // Return current delegated IPv6 prefixes on an appliance.
 func (s *appliance) GetDeviceAppliancePrefixesDelegated(ctx context.Context, request operations.GetDeviceAppliancePrefixesDelegatedRequest) (*operations.GetDeviceAppliancePrefixesDelegatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -578,7 +578,7 @@ func (s *appliance) GetDeviceAppliancePrefixesDelegated(ctx context.Context, req
 // Return prefixes assigned to all IPv6 enabled VLANs on an appliance.
 func (s *appliance) GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx context.Context, request operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsRequest) (*operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -623,7 +623,7 @@ func (s *appliance) GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx conte
 // Return the uplink settings for an MX appliance
 func (s *appliance) GetDeviceApplianceUplinksSettings(ctx context.Context, request operations.GetDeviceApplianceUplinksSettingsRequest) (*operations.GetDeviceApplianceUplinksSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -668,14 +668,14 @@ func (s *appliance) GetDeviceApplianceUplinksSettings(ctx context.Context, reque
 // List the security events for a client. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *appliance) GetNetworkApplianceClientSecurityEvents(ctx context.Context, request operations.GetNetworkApplianceClientSecurityEventsRequest) (*operations.GetNetworkApplianceClientSecurityEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/clients/{clientId}/security/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/clients/{clientId}/security/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -719,7 +719,7 @@ func (s *appliance) GetNetworkApplianceClientSecurityEvents(ctx context.Context,
 // Return the connectivity testing destinations for an MX network
 func (s *appliance) GetNetworkApplianceConnectivityMonitoringDestinations(ctx context.Context, request operations.GetNetworkApplianceConnectivityMonitoringDestinationsRequest) (*operations.GetNetworkApplianceConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -764,7 +764,7 @@ func (s *appliance) GetNetworkApplianceConnectivityMonitoringDestinations(ctx co
 // Return the content filtering settings for an MX network
 func (s *appliance) GetNetworkApplianceContentFiltering(ctx context.Context, request operations.GetNetworkApplianceContentFilteringRequest) (*operations.GetNetworkApplianceContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -809,7 +809,7 @@ func (s *appliance) GetNetworkApplianceContentFiltering(ctx context.Context, req
 // List all available content filtering categories for an MX network
 func (s *appliance) GetNetworkApplianceContentFilteringCategories(ctx context.Context, request operations.GetNetworkApplianceContentFilteringCategoriesRequest) (*operations.GetNetworkApplianceContentFilteringCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -854,7 +854,7 @@ func (s *appliance) GetNetworkApplianceContentFilteringCategories(ctx context.Co
 // Return the cellular firewall rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallCellularFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallCellularFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -899,7 +899,7 @@ func (s *appliance) GetNetworkApplianceFirewallCellularFirewallRules(ctx context
 // Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
 func (s *appliance) GetNetworkApplianceFirewallFirewalledService(ctx context.Context, request operations.GetNetworkApplianceFirewallFirewalledServiceRequest) (*operations.GetNetworkApplianceFirewallFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -944,7 +944,7 @@ func (s *appliance) GetNetworkApplianceFirewallFirewalledService(ctx context.Con
 // List the appliance services and their accessibility rules
 func (s *appliance) GetNetworkApplianceFirewallFirewalledServices(ctx context.Context, request operations.GetNetworkApplianceFirewallFirewalledServicesRequest) (*operations.GetNetworkApplianceFirewallFirewalledServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -989,7 +989,7 @@ func (s *appliance) GetNetworkApplianceFirewallFirewalledServices(ctx context.Co
 // Return the inbound cellular firewall rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1034,7 +1034,7 @@ func (s *appliance) GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx 
 // Return the inbound firewall rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallInboundFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallInboundFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallInboundFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1079,7 +1079,7 @@ func (s *appliance) GetNetworkApplianceFirewallInboundFirewallRules(ctx context.
 // Return the L3 firewall rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallL3FirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallL3FirewallRulesRequest) (*operations.GetNetworkApplianceFirewallL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1124,7 +1124,7 @@ func (s *appliance) GetNetworkApplianceFirewallL3FirewallRules(ctx context.Conte
 // List the MX L7 firewall rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallL7FirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallL7FirewallRulesRequest) (*operations.GetNetworkApplianceFirewallL7FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1169,7 +1169,7 @@ func (s *appliance) GetNetworkApplianceFirewallL7FirewallRules(ctx context.Conte
 // Return the L7 firewall application categories and their associated applications for an MX network
 func (s *appliance) GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx context.Context, request operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesRequest) (*operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1214,7 +1214,7 @@ func (s *appliance) GetNetworkApplianceFirewallL7FirewallRulesApplicationCategor
 // Return the 1:Many NAT mapping rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallOneToManyNatRules(ctx context.Context, request operations.GetNetworkApplianceFirewallOneToManyNatRulesRequest) (*operations.GetNetworkApplianceFirewallOneToManyNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1259,7 +1259,7 @@ func (s *appliance) GetNetworkApplianceFirewallOneToManyNatRules(ctx context.Con
 // Return the 1:1 NAT mapping rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallOneToOneNatRules(ctx context.Context, request operations.GetNetworkApplianceFirewallOneToOneNatRulesRequest) (*operations.GetNetworkApplianceFirewallOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1304,7 +1304,7 @@ func (s *appliance) GetNetworkApplianceFirewallOneToOneNatRules(ctx context.Cont
 // Return the port forwarding rules for an MX network
 func (s *appliance) GetNetworkApplianceFirewallPortForwardingRules(ctx context.Context, request operations.GetNetworkApplianceFirewallPortForwardingRulesRequest) (*operations.GetNetworkApplianceFirewallPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1349,7 +1349,7 @@ func (s *appliance) GetNetworkApplianceFirewallPortForwardingRules(ctx context.C
 // Return the firewall settings for this network
 func (s *appliance) GetNetworkApplianceFirewallSettings(ctx context.Context, request operations.GetNetworkApplianceFirewallSettingsRequest) (*operations.GetNetworkApplianceFirewallSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1394,7 +1394,7 @@ func (s *appliance) GetNetworkApplianceFirewallSettings(ctx context.Context, req
 // Return per-port VLAN settings for a single MX port.
 func (s *appliance) GetNetworkAppliancePort(ctx context.Context, request operations.GetNetworkAppliancePortRequest) (*operations.GetNetworkAppliancePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1439,7 +1439,7 @@ func (s *appliance) GetNetworkAppliancePort(ctx context.Context, request operati
 // List per-port VLAN settings for all ports of a MX.
 func (s *appliance) GetNetworkAppliancePorts(ctx context.Context, request operations.GetNetworkAppliancePortsRequest) (*operations.GetNetworkAppliancePortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1484,7 +1484,7 @@ func (s *appliance) GetNetworkAppliancePorts(ctx context.Context, request operat
 // Return a static delegated prefix from a network
 func (s *appliance) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1529,7 +1529,7 @@ func (s *appliance) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Conte
 // List static delegated prefixes for a network
 func (s *appliance) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticsRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1574,14 +1574,14 @@ func (s *appliance) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Cont
 // List the security events for a network
 func (s *appliance) GetNetworkApplianceSecurityEvents(ctx context.Context, request operations.GetNetworkApplianceSecurityEventsRequest) (*operations.GetNetworkApplianceSecurityEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1625,7 +1625,7 @@ func (s *appliance) GetNetworkApplianceSecurityEvents(ctx context.Context, reque
 // Returns all supported intrusion settings for an MX network
 func (s *appliance) GetNetworkApplianceSecurityIntrusion(ctx context.Context, request operations.GetNetworkApplianceSecurityIntrusionRequest) (*operations.GetNetworkApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1670,7 +1670,7 @@ func (s *appliance) GetNetworkApplianceSecurityIntrusion(ctx context.Context, re
 // Returns all supported malware settings for an MX network
 func (s *appliance) GetNetworkApplianceSecurityMalware(ctx context.Context, request operations.GetNetworkApplianceSecurityMalwareRequest) (*operations.GetNetworkApplianceSecurityMalwareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1715,7 +1715,7 @@ func (s *appliance) GetNetworkApplianceSecurityMalware(ctx context.Context, requ
 // Return the appliance settings for a network
 func (s *appliance) GetNetworkApplianceSettings(ctx context.Context, request operations.GetNetworkApplianceSettingsRequest) (*operations.GetNetworkApplianceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1760,7 +1760,7 @@ func (s *appliance) GetNetworkApplianceSettings(ctx context.Context, request ope
 // Return single LAN configuration
 func (s *appliance) GetNetworkApplianceSingleLan(ctx context.Context, request operations.GetNetworkApplianceSingleLanRequest) (*operations.GetNetworkApplianceSingleLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1805,7 +1805,7 @@ func (s *appliance) GetNetworkApplianceSingleLan(ctx context.Context, request op
 // Return a single MX SSID
 func (s *appliance) GetNetworkApplianceSsid(ctx context.Context, request operations.GetNetworkApplianceSsidRequest) (*operations.GetNetworkApplianceSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1850,7 +1850,7 @@ func (s *appliance) GetNetworkApplianceSsid(ctx context.Context, request operati
 // List the MX SSIDs in a network
 func (s *appliance) GetNetworkApplianceSsids(ctx context.Context, request operations.GetNetworkApplianceSsidsRequest) (*operations.GetNetworkApplianceSsidsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1895,7 +1895,7 @@ func (s *appliance) GetNetworkApplianceSsids(ctx context.Context, request operat
 // Return a static route for an MX or teleworker network
 func (s *appliance) GetNetworkApplianceStaticRoute(ctx context.Context, request operations.GetNetworkApplianceStaticRouteRequest) (*operations.GetNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1940,7 +1940,7 @@ func (s *appliance) GetNetworkApplianceStaticRoute(ctx context.Context, request 
 // List the static routes for an MX or teleworker network
 func (s *appliance) GetNetworkApplianceStaticRoutes(ctx context.Context, request operations.GetNetworkApplianceStaticRoutesRequest) (*operations.GetNetworkApplianceStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1985,7 +1985,7 @@ func (s *appliance) GetNetworkApplianceStaticRoutes(ctx context.Context, request
 // Display the traffic shaping settings for an MX network
 func (s *appliance) GetNetworkApplianceTrafficShaping(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingRequest) (*operations.GetNetworkApplianceTrafficShapingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2030,7 +2030,7 @@ func (s *appliance) GetNetworkApplianceTrafficShaping(ctx context.Context, reque
 // Return a custom performance class for an MX network
 func (s *appliance) GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2075,7 +2075,7 @@ func (s *appliance) GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx 
 // List all custom performance classes for an MX network
 func (s *appliance) GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest) (*operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2120,7 +2120,7 @@ func (s *appliance) GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ct
 // Display the traffic shaping settings rules for an MX network
 func (s *appliance) GetNetworkApplianceTrafficShapingRules(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingRulesRequest) (*operations.GetNetworkApplianceTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2165,7 +2165,7 @@ func (s *appliance) GetNetworkApplianceTrafficShapingRules(ctx context.Context, 
 // Returns the uplink bandwidth settings for your MX network.
 func (s *appliance) GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest) (*operations.GetNetworkApplianceTrafficShapingUplinkBandwidthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2210,7 +2210,7 @@ func (s *appliance) GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx context
 // Show uplink selection settings for an MX network
 func (s *appliance) GetNetworkApplianceTrafficShapingUplinkSelection(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingUplinkSelectionRequest) (*operations.GetNetworkApplianceTrafficShapingUplinkSelectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2255,14 +2255,14 @@ func (s *appliance) GetNetworkApplianceTrafficShapingUplinkSelection(ctx context
 // Get the sent and received bytes for each uplink of a network.
 func (s *appliance) GetNetworkApplianceUplinksUsageHistory(ctx context.Context, request operations.GetNetworkApplianceUplinksUsageHistoryRequest) (*operations.GetNetworkApplianceUplinksUsageHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/uplinks/usageHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/uplinks/usageHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2304,7 +2304,7 @@ func (s *appliance) GetNetworkApplianceUplinksUsageHistory(ctx context.Context, 
 // Return a VLAN
 func (s *appliance) GetNetworkApplianceVlan(ctx context.Context, request operations.GetNetworkApplianceVlanRequest) (*operations.GetNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2349,7 +2349,7 @@ func (s *appliance) GetNetworkApplianceVlan(ctx context.Context, request operati
 // List the VLANs for an MX network
 func (s *appliance) GetNetworkApplianceVlans(ctx context.Context, request operations.GetNetworkApplianceVlansRequest) (*operations.GetNetworkApplianceVlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2394,7 +2394,7 @@ func (s *appliance) GetNetworkApplianceVlans(ctx context.Context, request operat
 // Returns the enabled status of VLANs for the network
 func (s *appliance) GetNetworkApplianceVlansSettings(ctx context.Context, request operations.GetNetworkApplianceVlansSettingsRequest) (*operations.GetNetworkApplianceVlansSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2439,7 +2439,7 @@ func (s *appliance) GetNetworkApplianceVlansSettings(ctx context.Context, reques
 // Return a Hub BGP Configuration
 func (s *appliance) GetNetworkApplianceVpnBgp(ctx context.Context, request operations.GetNetworkApplianceVpnBgpRequest) (*operations.GetNetworkApplianceVpnBgpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2484,7 +2484,7 @@ func (s *appliance) GetNetworkApplianceVpnBgp(ctx context.Context, request opera
 // Return the site-to-site VPN settings of a network. Only valid for MX networks.
 func (s *appliance) GetNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request operations.GetNetworkApplianceVpnSiteToSiteVpnRequest) (*operations.GetNetworkApplianceVpnSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2529,7 +2529,7 @@ func (s *appliance) GetNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, req
 // Return MX warm spare settings
 func (s *appliance) GetNetworkApplianceWarmSpare(ctx context.Context, request operations.GetNetworkApplianceWarmSpareRequest) (*operations.GetNetworkApplianceWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2574,14 +2574,14 @@ func (s *appliance) GetNetworkApplianceWarmSpare(ctx context.Context, request op
 // List the security events for an organization
 func (s *appliance) GetOrganizationApplianceSecurityEvents(ctx context.Context, request operations.GetOrganizationApplianceSecurityEventsRequest) (*operations.GetOrganizationApplianceSecurityEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2625,7 +2625,7 @@ func (s *appliance) GetOrganizationApplianceSecurityEvents(ctx context.Context, 
 // Returns all supported intrusion settings for an organization
 func (s *appliance) GetOrganizationApplianceSecurityIntrusion(ctx context.Context, request operations.GetOrganizationApplianceSecurityIntrusionRequest) (*operations.GetOrganizationApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2670,14 +2670,14 @@ func (s *appliance) GetOrganizationApplianceSecurityIntrusion(ctx context.Contex
 // List the uplink status of every Meraki MX and Z series appliances in the organization
 func (s *appliance) GetOrganizationApplianceUplinkStatuses(ctx context.Context, request operations.GetOrganizationApplianceUplinkStatusesRequest) (*operations.GetOrganizationApplianceUplinkStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/uplink/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/uplink/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2721,14 +2721,14 @@ func (s *appliance) GetOrganizationApplianceUplinkStatuses(ctx context.Context, 
 // Show VPN history stat for networks in an organization
 func (s *appliance) GetOrganizationApplianceVpnStats(ctx context.Context, request operations.GetOrganizationApplianceVpnStatsRequest) (*operations.GetOrganizationApplianceVpnStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/stats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/stats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2772,14 +2772,14 @@ func (s *appliance) GetOrganizationApplianceVpnStats(ctx context.Context, reques
 // Show VPN status for networks in an organization
 func (s *appliance) GetOrganizationApplianceVpnStatuses(ctx context.Context, request operations.GetOrganizationApplianceVpnStatusesRequest) (*operations.GetOrganizationApplianceVpnStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2823,7 +2823,7 @@ func (s *appliance) GetOrganizationApplianceVpnStatuses(ctx context.Context, req
 // Return the third party VPN peers for an organization
 func (s *appliance) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.GetOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2868,7 +2868,7 @@ func (s *appliance) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Co
 // Return the firewall rules for an organization's site-to-site VPN
 func (s *appliance) GetOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, request operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest) (*operations.GetOrganizationApplianceVpnVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2913,7 +2913,7 @@ func (s *appliance) GetOrganizationApplianceVpnVpnFirewallRules(ctx context.Cont
 // Swap MX primary and warm spare appliances
 func (s *appliance) SwapNetworkApplianceWarmSpare(ctx context.Context, request operations.SwapNetworkApplianceWarmSpareRequest) (*operations.SwapNetworkApplianceWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare/swap", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare/swap", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2958,9 +2958,9 @@ func (s *appliance) SwapNetworkApplianceWarmSpare(ctx context.Context, request o
 // Update the uplink settings for an MX appliance
 func (s *appliance) UpdateDeviceApplianceUplinksSettings(ctx context.Context, request operations.UpdateDeviceApplianceUplinksSettingsRequest) (*operations.UpdateDeviceApplianceUplinksSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3013,9 +3013,9 @@ func (s *appliance) UpdateDeviceApplianceUplinksSettings(ctx context.Context, re
 // Update the connectivity testing destinations for an MX network
 func (s *appliance) UpdateNetworkApplianceConnectivityMonitoringDestinations(ctx context.Context, request operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsRequest) (*operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3065,9 +3065,9 @@ func (s *appliance) UpdateNetworkApplianceConnectivityMonitoringDestinations(ctx
 // Update the content filtering settings for an MX network
 func (s *appliance) UpdateNetworkApplianceContentFiltering(ctx context.Context, request operations.UpdateNetworkApplianceContentFilteringRequest) (*operations.UpdateNetworkApplianceContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3117,9 +3117,9 @@ func (s *appliance) UpdateNetworkApplianceContentFiltering(ctx context.Context, 
 // Update the cellular firewall rules of an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallCellularFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallCellularFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3169,9 +3169,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallCellularFirewallRules(ctx cont
 // Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
 func (s *appliance) UpdateNetworkApplianceFirewallFirewalledService(ctx context.Context, request operations.UpdateNetworkApplianceFirewallFirewalledServiceRequest) (*operations.UpdateNetworkApplianceFirewallFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3224,9 +3224,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallFirewalledService(ctx context.
 // Update the inbound cellular firewall rules of an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallInboundCellularFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3276,9 +3276,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallInboundCellularFirewallRules(c
 // Update the inbound firewall rules of an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallInboundFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallInboundFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallInboundFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3328,9 +3328,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallInboundFirewallRules(ctx conte
 // Update the L3 firewall rules of an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallL3FirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallL3FirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3380,9 +3380,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallL3FirewallRules(ctx context.Co
 // Update the MX L7 firewall rules for an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallL7FirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallL7FirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallL7FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3432,9 +3432,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallL7FirewallRules(ctx context.Co
 // Set the 1:Many NAT mapping rules for an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallOneToManyNatRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallOneToManyNatRulesRequest) (*operations.UpdateNetworkApplianceFirewallOneToManyNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3487,9 +3487,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallOneToManyNatRules(ctx context.
 // Set the 1:1 NAT mapping rules for an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallOneToOneNatRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallOneToOneNatRulesRequest) (*operations.UpdateNetworkApplianceFirewallOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3542,9 +3542,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallOneToOneNatRules(ctx context.C
 // Update the port forwarding rules for an MX network
 func (s *appliance) UpdateNetworkApplianceFirewallPortForwardingRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallPortForwardingRulesRequest) (*operations.UpdateNetworkApplianceFirewallPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3597,9 +3597,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallPortForwardingRules(ctx contex
 // Update the firewall settings for this network
 func (s *appliance) UpdateNetworkApplianceFirewallSettings(ctx context.Context, request operations.UpdateNetworkApplianceFirewallSettingsRequest) (*operations.UpdateNetworkApplianceFirewallSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3649,9 +3649,9 @@ func (s *appliance) UpdateNetworkApplianceFirewallSettings(ctx context.Context, 
 // Update the per-port VLAN settings for a single MX port.
 func (s *appliance) UpdateNetworkAppliancePort(ctx context.Context, request operations.UpdateNetworkAppliancePortRequest) (*operations.UpdateNetworkAppliancePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3701,9 +3701,9 @@ func (s *appliance) UpdateNetworkAppliancePort(ctx context.Context, request oper
 // Update a static delegated prefix from a network
 func (s *appliance) UpdateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.UpdateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.UpdateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3753,9 +3753,9 @@ func (s *appliance) UpdateNetworkAppliancePrefixesDelegatedStatic(ctx context.Co
 // Set the supported intrusion settings for an MX network
 func (s *appliance) UpdateNetworkApplianceSecurityIntrusion(ctx context.Context, request operations.UpdateNetworkApplianceSecurityIntrusionRequest) (*operations.UpdateNetworkApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3805,9 +3805,9 @@ func (s *appliance) UpdateNetworkApplianceSecurityIntrusion(ctx context.Context,
 // Set the supported malware settings for an MX network
 func (s *appliance) UpdateNetworkApplianceSecurityMalware(ctx context.Context, request operations.UpdateNetworkApplianceSecurityMalwareRequest) (*operations.UpdateNetworkApplianceSecurityMalwareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3860,9 +3860,9 @@ func (s *appliance) UpdateNetworkApplianceSecurityMalware(ctx context.Context, r
 // Update the appliance settings for a network
 func (s *appliance) UpdateNetworkApplianceSettings(ctx context.Context, request operations.UpdateNetworkApplianceSettingsRequest) (*operations.UpdateNetworkApplianceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3912,9 +3912,9 @@ func (s *appliance) UpdateNetworkApplianceSettings(ctx context.Context, request 
 // Update single LAN configuration
 func (s *appliance) UpdateNetworkApplianceSingleLan(ctx context.Context, request operations.UpdateNetworkApplianceSingleLanRequest) (*operations.UpdateNetworkApplianceSingleLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3964,9 +3964,9 @@ func (s *appliance) UpdateNetworkApplianceSingleLan(ctx context.Context, request
 // Update the attributes of an MX SSID
 func (s *appliance) UpdateNetworkApplianceSsid(ctx context.Context, request operations.UpdateNetworkApplianceSsidRequest) (*operations.UpdateNetworkApplianceSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4016,9 +4016,9 @@ func (s *appliance) UpdateNetworkApplianceSsid(ctx context.Context, request oper
 // Update a static route for an MX or teleworker network
 func (s *appliance) UpdateNetworkApplianceStaticRoute(ctx context.Context, request operations.UpdateNetworkApplianceStaticRouteRequest) (*operations.UpdateNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4068,9 +4068,9 @@ func (s *appliance) UpdateNetworkApplianceStaticRoute(ctx context.Context, reque
 // Update the traffic shaping settings for an MX network
 func (s *appliance) UpdateNetworkApplianceTrafficShaping(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingRequest) (*operations.UpdateNetworkApplianceTrafficShapingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4120,9 +4120,9 @@ func (s *appliance) UpdateNetworkApplianceTrafficShaping(ctx context.Context, re
 // Update a custom performance class for an MX network
 func (s *appliance) UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4172,9 +4172,9 @@ func (s *appliance) UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(c
 // Update the traffic shaping settings rules for an MX network
 func (s *appliance) UpdateNetworkApplianceTrafficShapingRules(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingRulesRequest) (*operations.UpdateNetworkApplianceTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4224,9 +4224,9 @@ func (s *appliance) UpdateNetworkApplianceTrafficShapingRules(ctx context.Contex
 // Updates the uplink bandwidth settings for your MX network.
 func (s *appliance) UpdateNetworkApplianceTrafficShapingUplinkBandwidth(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest) (*operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4276,9 +4276,9 @@ func (s *appliance) UpdateNetworkApplianceTrafficShapingUplinkBandwidth(ctx cont
 // Update uplink selection settings for an MX network
 func (s *appliance) UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest) (*operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4328,9 +4328,9 @@ func (s *appliance) UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx cont
 // Update a VLAN
 func (s *appliance) UpdateNetworkApplianceVlan(ctx context.Context, request operations.UpdateNetworkApplianceVlanRequest) (*operations.UpdateNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4380,9 +4380,9 @@ func (s *appliance) UpdateNetworkApplianceVlan(ctx context.Context, request oper
 // Enable/Disable VLANs for the given network
 func (s *appliance) UpdateNetworkApplianceVlansSettings(ctx context.Context, request operations.UpdateNetworkApplianceVlansSettingsRequest) (*operations.UpdateNetworkApplianceVlansSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4432,9 +4432,9 @@ func (s *appliance) UpdateNetworkApplianceVlansSettings(ctx context.Context, req
 // Update a Hub BGP Configuration
 func (s *appliance) UpdateNetworkApplianceVpnBgp(ctx context.Context, request operations.UpdateNetworkApplianceVpnBgpRequest) (*operations.UpdateNetworkApplianceVpnBgpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4487,9 +4487,9 @@ func (s *appliance) UpdateNetworkApplianceVpnBgp(ctx context.Context, request op
 // Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.
 func (s *appliance) UpdateNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest) (*operations.UpdateNetworkApplianceVpnSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4542,9 +4542,9 @@ func (s *appliance) UpdateNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, 
 // Update MX warm spare settings
 func (s *appliance) UpdateNetworkApplianceWarmSpare(ctx context.Context, request operations.UpdateNetworkApplianceWarmSpareRequest) (*operations.UpdateNetworkApplianceWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4597,9 +4597,9 @@ func (s *appliance) UpdateNetworkApplianceWarmSpare(ctx context.Context, request
 // Sets supported intrusion settings for an organization
 func (s *appliance) UpdateOrganizationApplianceSecurityIntrusion(ctx context.Context, request operations.UpdateOrganizationApplianceSecurityIntrusionRequest) (*operations.UpdateOrganizationApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4652,9 +4652,9 @@ func (s *appliance) UpdateOrganizationApplianceSecurityIntrusion(ctx context.Con
 // Update the third party VPN peers for an organization
 func (s *appliance) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4707,9 +4707,9 @@ func (s *appliance) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context
 // Update the firewall rules of an organization's site-to-site VPN
 func (s *appliance) UpdateOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, request operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest) (*operations.UpdateOrganizationApplianceVpnVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -34,7 +34,7 @@ func newHealth(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Return all global alerts on this network
 func (s *health) GetNetworkHealthAlerts(ctx context.Context, request operations.GetNetworkHealthAlertsRequest) (*operations.GetNetworkHealthAlertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/health/alerts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/health/alerts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

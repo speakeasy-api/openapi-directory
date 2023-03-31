@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnfreezeUserAccountPathParams struct {
+type UnfreezeUserAccountRequest struct {
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UnfreezeUserAccountRequest struct {
-	PathParams UnfreezeUserAccountPathParams
 }
 
 type UnfreezeUserAccountResponse struct {

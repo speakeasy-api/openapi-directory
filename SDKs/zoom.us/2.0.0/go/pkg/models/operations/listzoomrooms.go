@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListZoomRoomsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListZoomRoomsStatusEnum - The status of the Zoom Room.
@@ -70,7 +69,7 @@ func (e *ListZoomRoomsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListZoomRoomsQueryParams struct {
+type ListZoomRoomsRequest struct {
 	// Parent location ID of the Zoom Room.
 	LocationID *string `queryParam:"style=form,explode=true,name=location_id"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -83,11 +82,6 @@ type ListZoomRoomsQueryParams struct {
 	Type *ListZoomRoomsTypeEnum `queryParam:"style=form,explode=true,name=type"`
 	// Use this query parameter with a value of `true` if you would like to see Zoom Rooms in your account that have not been assigned to anyone yet.
 	UnassignedRooms *bool `queryParam:"style=form,explode=true,name=unassigned_rooms"`
-}
-
-type ListZoomRoomsRequest struct {
-	QueryParams ListZoomRoomsQueryParams
-	Security    ListZoomRoomsSecurity
 }
 
 // ListZoomRooms200ApplicationXMLRoomsStatusEnum - Status of the Zoom Room.

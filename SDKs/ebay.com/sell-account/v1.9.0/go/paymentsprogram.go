@@ -32,16 +32,16 @@ func newPaymentsProgram(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // GetPaymentsProgram - <span class="tablenote"><b>Note:</b> This method is no longer applicable, as all seller accounts globally have been enabled for the new eBay payment and checkout flow.</span><br/><br/>This method returns whether or not the user is opted-in to the specified payments program. Sellers opt-in to payments programs by marketplace and you use the <b>marketplace_id</b> path parameter to specify the marketplace of the status flag you want returned.
-func (s *paymentsProgram) GetPaymentsProgram(ctx context.Context, request operations.GetPaymentsProgramRequest) (*operations.GetPaymentsProgramResponse, error) {
+func (s *paymentsProgram) GetPaymentsProgram(ctx context.Context, request operations.GetPaymentsProgramRequest, security operations.GetPaymentsProgramSecurity) (*operations.GetPaymentsProgramResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments_program/{marketplace_id}/{payments_program_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payments_program/{marketplace_id}/{payments_program_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -32,20 +32,20 @@ func newPubsubnotificationsettings(defaultClient, securityClient HTTPClient, ser
 }
 
 // ContentPubsubnotificationsettingsGet - Retrieves a Merchant Center account's pubsub notification settings.
-func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsGet(ctx context.Context, request operations.ContentPubsubnotificationsettingsGetRequest) (*operations.ContentPubsubnotificationsettingsGetResponse, error) {
+func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsGet(ctx context.Context, request operations.ContentPubsubnotificationsettingsGetRequest, security operations.ContentPubsubnotificationsettingsGetSecurity) (*operations.ContentPubsubnotificationsettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsGet(ctx co
 }
 
 // ContentPubsubnotificationsettingsUpdate - Register a Merchant Center account for pubsub notifications. Note that cloud topic name shouldn't be provided as part of the request.
-func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsUpdate(ctx context.Context, request operations.ContentPubsubnotificationsettingsUpdateRequest) (*operations.ContentPubsubnotificationsettingsUpdateResponse, error) {
+func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsUpdate(ctx context.Context, request operations.ContentPubsubnotificationsettingsUpdateRequest, security operations.ContentPubsubnotificationsettingsUpdateSecurity) (*operations.ContentPubsubnotificationsettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PubsubNotificationSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsUpdate(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

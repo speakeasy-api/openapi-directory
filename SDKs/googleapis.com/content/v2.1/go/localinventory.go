@@ -33,11 +33,11 @@ func newLocalinventory(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // ContentLocalinventoryCustombatch - Updates local inventory for multiple products or stores in a single request.
-func (s *localinventory) ContentLocalinventoryCustombatch(ctx context.Context, request operations.ContentLocalinventoryCustombatchRequest) (*operations.ContentLocalinventoryCustombatchResponse, error) {
+func (s *localinventory) ContentLocalinventoryCustombatch(ctx context.Context, request operations.ContentLocalinventoryCustombatchRequest, security operations.ContentLocalinventoryCustombatchSecurity) (*operations.ContentLocalinventoryCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/localinventory/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocalinventoryCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *localinventory) ContentLocalinventoryCustombatch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *localinventory) ContentLocalinventoryCustombatch(ctx context.Context, r
 }
 
 // ContentLocalinventoryInsert - Updates the local inventory of a product in your Merchant Center account.
-func (s *localinventory) ContentLocalinventoryInsert(ctx context.Context, request operations.ContentLocalinventoryInsertRequest) (*operations.ContentLocalinventoryInsertResponse, error) {
+func (s *localinventory) ContentLocalinventoryInsert(ctx context.Context, request operations.ContentLocalinventoryInsertRequest, security operations.ContentLocalinventoryInsertSecurity) (*operations.ContentLocalinventoryInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/localinventory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/localinventory", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocalInventory", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *localinventory) ContentLocalinventoryInsert(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

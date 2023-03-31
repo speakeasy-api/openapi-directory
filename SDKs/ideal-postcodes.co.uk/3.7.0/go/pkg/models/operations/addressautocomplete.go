@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddressAutocompleteQueryParams struct {
+type AddressAutocompleteRequest struct {
 	APIKey      *string `queryParam:"style=form,explode=false,name=api_key"`
 	BiasCountry *string `queryParam:"style=form,explode=false,name=bias_country"`
 	// Biases search based on approximate geolocation of IP address.
@@ -36,10 +36,6 @@ type AddressAutocompleteQueryParams struct {
 	Query                   *string `queryParam:"style=form,explode=false,name=query"`
 	SuOrganisationIndicator *string `queryParam:"style=form,explode=false,name=su_organisation_indicator"`
 	Uprn                    *int64  `queryParam:"style=form,explode=false,name=uprn"`
-}
-
-type AddressAutocompleteRequest struct {
-	QueryParams AddressAutocompleteQueryParams
 }
 
 type AddressAutocompleteResponse struct {

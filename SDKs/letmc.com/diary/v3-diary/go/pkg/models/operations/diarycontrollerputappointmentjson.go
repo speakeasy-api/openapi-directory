@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiaryControllerPutAppointmentJSONPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerPutAppointmentJSONQueryParams struct {
+type DiaryControllerPutAppointmentJSONRequest struct {
 	// Sales or Lettings property?
 	AllowMarketingCorrespondence *bool `queryParam:"style=form,explode=true,name=AllowMarketingCorrespondence"`
+	// The appointment details model
+	DiaryAppointmentDetails shared.DiaryAppointmentDetails `request:"mediaType=application/json"`
 	// The unique appointment id
 	AppointmentID string `queryParam:"style=form,explode=true,name=appointmentID"`
 	// Sales or Lettings property?
 	Lettings *bool `queryParam:"style=form,explode=true,name=lettings"`
-}
-
-type DiaryControllerPutAppointmentJSONRequest struct {
-	PathParams  DiaryControllerPutAppointmentJSONPathParams
-	QueryParams DiaryControllerPutAppointmentJSONQueryParams
-	// The appointment details model
-	Request shared.DiaryAppointmentDetails `request:"mediaType=application/json"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerPutAppointmentJSONResponse struct {

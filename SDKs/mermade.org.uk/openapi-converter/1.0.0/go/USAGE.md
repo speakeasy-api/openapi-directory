@@ -13,12 +13,10 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.ConvertRequest{
-        Request: &operations.ConvertRequestBody{
-            Filename: "corrupti",
-            Source: "provident",
-            Validate: "on",
-        },
+    req := operations.ConvertRequestBody{
+        Filename: "corrupti",
+        Source: "provident",
+        Validate: "on",
     }
 
     ctx := context.Background()

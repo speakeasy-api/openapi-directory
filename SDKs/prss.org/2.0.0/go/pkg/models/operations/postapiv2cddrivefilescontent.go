@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV2CddriveFilesContentSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PostAPIV2CddriveFilesContentHeaders struct {
-	// If present, the MD5 will be compared against the file received as a message integrity check.
-	ContentMd5 *string `header:"style=simple,explode=false,name=Content-MD5"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostAPIV2CddriveFilesContentRequestBodyFile struct {
@@ -32,10 +27,10 @@ type PostAPIV2CddriveFilesContentRequestBody struct {
 }
 
 type PostAPIV2CddriveFilesContentRequest struct {
-	Headers PostAPIV2CddriveFilesContentHeaders
+	// If present, the MD5 will be compared against the file received as a message integrity check.
+	ContentMd5 *string `header:"style=simple,explode=false,name=Content-MD5"`
 	// Form data defining the file to create.
-	Request  *PostAPIV2CddriveFilesContentRequestBody `request:"mediaType=multipart/form-data"`
-	Security PostAPIV2CddriveFilesContentSecurity
+	RequestBody *PostAPIV2CddriveFilesContentRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 type PostAPIV2CddriveFilesContentResponse struct {

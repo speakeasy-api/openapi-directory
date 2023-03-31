@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchHealthProfilePathParams struct {
-	// Health profile identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // FetchHealthProfileIncludeEnum - List of related resources to include in the response
 type FetchHealthProfileIncludeEnum string
 
@@ -38,14 +33,11 @@ func (e *FetchHealthProfileIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FetchHealthProfileQueryParams struct {
+type FetchHealthProfileRequest struct {
+	// Health profile identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// List of related resources to include in the response
 	Include *FetchHealthProfileIncludeEnum `queryParam:"style=form,explode=true,name=include"`
-}
-
-type FetchHealthProfileRequest struct {
-	PathParams  FetchHealthProfilePathParams
-	QueryParams FetchHealthProfileQueryParams
 }
 
 type FetchHealthProfileResponse struct {

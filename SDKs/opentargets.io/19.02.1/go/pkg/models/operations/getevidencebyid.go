@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetEvidenceByIDQueryParams struct {
+type GetEvidenceByIDRequest struct {
 	// Internal unique ID of the evidence string to retrieve.
 	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetEvidenceByIDRequest struct {
-	QueryParams GetEvidenceByIDQueryParams
 }
 
 type GetEvidenceByIDResponse struct {

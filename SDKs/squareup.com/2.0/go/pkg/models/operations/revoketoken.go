@@ -8,15 +8,7 @@ import (
 )
 
 type RevokeTokenSecurity struct {
-	Oauth2ClientSecret shared.SchemeOauth2ClientSecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type RevokeTokenRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.RevokeTokenRequest `request:"mediaType=application/json"`
-	Security RevokeTokenSecurity
+	Oauth2ClientSecret string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type RevokeTokenResponse struct {

@@ -33,7 +33,7 @@ func newListingViolationSummary(defaultClient, securityClient HTTPClient, server
 }
 
 // GetListingViolationsSummary - This call returns listing violation counts for a seller. A user can pass in one or more compliance types through the compliance_type query parameter. See ComplianceTypeEnum for more information on the supported listing compliance types. Listing violations are returned for multiple marketplaces if the seller sells on multiple eBay marketplaces. Note: Only a canned response, with counts for all listing compliance types, is returned in the Sandbox environment. Due to this limitation, the compliance_type query parameter (if used) will not have an effect on the response.
-func (s *listingViolationSummary) GetListingViolationsSummary(ctx context.Context, request operations.GetListingViolationsSummaryRequest) (*operations.GetListingViolationsSummaryResponse, error) {
+func (s *listingViolationSummary) GetListingViolationsSummary(ctx context.Context, request operations.GetListingViolationsSummaryRequest, security operations.GetListingViolationsSummarySecurity) (*operations.GetListingViolationsSummaryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listing_violation_summary"
 
@@ -42,13 +42,13 @@ func (s *listingViolationSummary) GetListingViolationsSummary(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

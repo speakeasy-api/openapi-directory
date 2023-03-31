@@ -34,14 +34,14 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get application health by time
 func (s *applications) GetNetworkInsightApplicationHealthByTime(ctx context.Context, request operations.GetNetworkInsightApplicationHealthByTimeRequest) (*operations.GetNetworkInsightApplicationHealthByTimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/insight/applications/{applicationId}/healthByTime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/insight/applications/{applicationId}/healthByTime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *applications) GetNetworkInsightApplicationHealthByTime(ctx context.Cont
 // List all Insight tracked applications
 func (s *applications) GetOrganizationInsightApplications(ctx context.Context, request operations.GetOrganizationInsightApplicationsRequest) (*operations.GetOrganizationInsightApplicationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/applications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

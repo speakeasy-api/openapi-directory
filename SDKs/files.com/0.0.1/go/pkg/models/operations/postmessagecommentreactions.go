@@ -14,10 +14,6 @@ type PostMessageCommentReactionsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostMessageCommentReactionsRequest struct {
-	Request *PostMessageCommentReactionsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostMessageCommentReactionsResponse struct {
 	ContentType string
 	// The MessageCommentReactions object.

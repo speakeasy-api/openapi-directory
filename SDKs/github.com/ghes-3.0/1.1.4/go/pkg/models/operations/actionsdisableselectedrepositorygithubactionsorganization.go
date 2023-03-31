@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ActionsDisableSelectedRepositoryGithubActionsOrganizationPathParams struct {
+type ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest struct {
 	Org          string `pathParam:"style=simple,explode=false,name=org"`
 	RepositoryID int64  `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
-type ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest struct {
-	PathParams ActionsDisableSelectedRepositoryGithubActionsOrganizationPathParams
 }
 
 type ActionsDisableSelectedRepositoryGithubActionsOrganizationResponse struct {

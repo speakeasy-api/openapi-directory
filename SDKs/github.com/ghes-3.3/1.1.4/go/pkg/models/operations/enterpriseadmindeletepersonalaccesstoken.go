@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeletePersonalAccessTokenPathParams struct {
+type EnterpriseAdminDeletePersonalAccessTokenRequest struct {
 	// The unique identifier of the token.
 	TokenID int64 `pathParam:"style=simple,explode=false,name=token_id"`
-}
-
-type EnterpriseAdminDeletePersonalAccessTokenRequest struct {
-	PathParams EnterpriseAdminDeletePersonalAccessTokenPathParams
 }
 
 type EnterpriseAdminDeletePersonalAccessTokenResponse struct {

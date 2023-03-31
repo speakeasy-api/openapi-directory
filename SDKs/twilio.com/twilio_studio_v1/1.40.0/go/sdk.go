@@ -93,15 +93,25 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateEngagement - Triggers a new Engagement for the Flow
-func (s *SDK) CreateEngagement(ctx context.Context, request operations.CreateEngagementRequest) (*operations.CreateEngagementResponse, error) {
-	baseURL := operations.CreateEngagementServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateEngagement(ctx context.Context, request operations.CreateEngagementRequest, security operations.CreateEngagementSecurity, opts ...operations.Option) (*operations.CreateEngagementResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateEngagementServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -113,7 +123,7 @@ func (s *SDK) CreateEngagement(ctx context.Context, request operations.CreateEng
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,15 +158,25 @@ func (s *SDK) CreateEngagement(ctx context.Context, request operations.CreateEng
 }
 
 // CreateExecution - Triggers a new Execution for the Flow
-func (s *SDK) CreateExecution(ctx context.Context, request operations.CreateExecutionRequest) (*operations.CreateExecutionResponse, error) {
-	baseURL := operations.CreateExecutionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateExecution(ctx context.Context, request operations.CreateExecutionRequest, security operations.CreateExecutionSecurity, opts ...operations.Option) (*operations.CreateExecutionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateExecutionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +188,7 @@ func (s *SDK) CreateExecution(ctx context.Context, request operations.CreateExec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,20 +223,30 @@ func (s *SDK) CreateExecution(ctx context.Context, request operations.CreateExec
 }
 
 // DeleteEngagement - Delete this Engagement and all Steps relating to it.
-func (s *SDK) DeleteEngagement(ctx context.Context, request operations.DeleteEngagementRequest) (*operations.DeleteEngagementResponse, error) {
-	baseURL := operations.DeleteEngagementServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteEngagement(ctx context.Context, request operations.DeleteEngagementRequest, security operations.DeleteEngagementSecurity, opts ...operations.Option) (*operations.DeleteEngagementResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteEngagementServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,20 +272,30 @@ func (s *SDK) DeleteEngagement(ctx context.Context, request operations.DeleteEng
 }
 
 // DeleteExecution - Delete the Execution and all Steps relating to it.
-func (s *SDK) DeleteExecution(ctx context.Context, request operations.DeleteExecutionRequest) (*operations.DeleteExecutionResponse, error) {
-	baseURL := operations.DeleteExecutionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteExecution(ctx context.Context, request operations.DeleteExecutionRequest, security operations.DeleteExecutionSecurity, opts ...operations.Option) (*operations.DeleteExecutionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteExecutionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -281,20 +321,30 @@ func (s *SDK) DeleteExecution(ctx context.Context, request operations.DeleteExec
 }
 
 // DeleteFlow - Delete a specific Flow.
-func (s *SDK) DeleteFlow(ctx context.Context, request operations.DeleteFlowRequest) (*operations.DeleteFlowResponse, error) {
-	baseURL := operations.DeleteFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteFlow(ctx context.Context, request operations.DeleteFlowRequest, security operations.DeleteFlowSecurity, opts ...operations.Option) (*operations.DeleteFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteFlowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -320,20 +370,30 @@ func (s *SDK) DeleteFlow(ctx context.Context, request operations.DeleteFlowReque
 }
 
 // FetchEngagement - Retrieve an Engagement
-func (s *SDK) FetchEngagement(ctx context.Context, request operations.FetchEngagementRequest) (*operations.FetchEngagementResponse, error) {
-	baseURL := operations.FetchEngagementServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEngagement(ctx context.Context, request operations.FetchEngagementRequest, security operations.FetchEngagementSecurity, opts ...operations.Option) (*operations.FetchEngagementResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEngagementServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,20 +428,30 @@ func (s *SDK) FetchEngagement(ctx context.Context, request operations.FetchEngag
 }
 
 // FetchEngagementContext - Retrieve the most recent context for an Engagement.
-func (s *SDK) FetchEngagementContext(ctx context.Context, request operations.FetchEngagementContextRequest) (*operations.FetchEngagementContextResponse, error) {
-	baseURL := operations.FetchEngagementContextServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEngagementContext(ctx context.Context, request operations.FetchEngagementContextRequest, security operations.FetchEngagementContextSecurity, opts ...operations.Option) (*operations.FetchEngagementContextResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Context", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEngagementContextServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Context", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -416,20 +486,30 @@ func (s *SDK) FetchEngagementContext(ctx context.Context, request operations.Fet
 }
 
 // FetchExecution - Retrieve an Execution
-func (s *SDK) FetchExecution(ctx context.Context, request operations.FetchExecutionRequest) (*operations.FetchExecutionResponse, error) {
-	baseURL := operations.FetchExecutionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchExecution(ctx context.Context, request operations.FetchExecutionRequest, security operations.FetchExecutionSecurity, opts ...operations.Option) (*operations.FetchExecutionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchExecutionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -464,20 +544,30 @@ func (s *SDK) FetchExecution(ctx context.Context, request operations.FetchExecut
 }
 
 // FetchExecutionContext - Retrieve the most recent context for an Execution.
-func (s *SDK) FetchExecutionContext(ctx context.Context, request operations.FetchExecutionContextRequest) (*operations.FetchExecutionContextResponse, error) {
-	baseURL := operations.FetchExecutionContextServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchExecutionContext(ctx context.Context, request operations.FetchExecutionContextRequest, security operations.FetchExecutionContextSecurity, opts ...operations.Option) (*operations.FetchExecutionContextResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Context", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchExecutionContextServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Context", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -512,20 +602,30 @@ func (s *SDK) FetchExecutionContext(ctx context.Context, request operations.Fetc
 }
 
 // FetchExecutionStep - Retrieve a Step.
-func (s *SDK) FetchExecutionStep(ctx context.Context, request operations.FetchExecutionStepRequest) (*operations.FetchExecutionStepResponse, error) {
-	baseURL := operations.FetchExecutionStepServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchExecutionStep(ctx context.Context, request operations.FetchExecutionStepRequest, security operations.FetchExecutionStepSecurity, opts ...operations.Option) (*operations.FetchExecutionStepResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Steps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchExecutionStepServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Steps/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -560,20 +660,30 @@ func (s *SDK) FetchExecutionStep(ctx context.Context, request operations.FetchEx
 }
 
 // FetchExecutionStepContext - Retrieve the context for an Execution Step.
-func (s *SDK) FetchExecutionStepContext(ctx context.Context, request operations.FetchExecutionStepContextRequest) (*operations.FetchExecutionStepContextResponse, error) {
-	baseURL := operations.FetchExecutionStepContextServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchExecutionStepContext(ctx context.Context, request operations.FetchExecutionStepContextRequest, security operations.FetchExecutionStepContextSecurity, opts ...operations.Option) (*operations.FetchExecutionStepContextResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Steps/{StepSid}/Context", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchExecutionStepContextServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Steps/{StepSid}/Context", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,20 +718,30 @@ func (s *SDK) FetchExecutionStepContext(ctx context.Context, request operations.
 }
 
 // FetchFlow - Retrieve a specific Flow.
-func (s *SDK) FetchFlow(ctx context.Context, request operations.FetchFlowRequest) (*operations.FetchFlowResponse, error) {
-	baseURL := operations.FetchFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchFlow(ctx context.Context, request operations.FetchFlowRequest, security operations.FetchFlowSecurity, opts ...operations.Option) (*operations.FetchFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchFlowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -656,20 +776,30 @@ func (s *SDK) FetchFlow(ctx context.Context, request operations.FetchFlowRequest
 }
 
 // FetchStep - Retrieve a Step.
-func (s *SDK) FetchStep(ctx context.Context, request operations.FetchStepRequest) (*operations.FetchStepResponse, error) {
-	baseURL := operations.FetchStepServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchStep(ctx context.Context, request operations.FetchStepRequest, security operations.FetchStepSecurity, opts ...operations.Option) (*operations.FetchStepResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Steps/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchStepServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Steps/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -704,20 +834,30 @@ func (s *SDK) FetchStep(ctx context.Context, request operations.FetchStepRequest
 }
 
 // FetchStepContext - Retrieve the context for an Engagement Step.
-func (s *SDK) FetchStepContext(ctx context.Context, request operations.FetchStepContextRequest) (*operations.FetchStepContextResponse, error) {
-	baseURL := operations.FetchStepContextServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchStepContext(ctx context.Context, request operations.FetchStepContextRequest, security operations.FetchStepContextSecurity, opts ...operations.Option) (*operations.FetchStepContextResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Steps/{StepSid}/Context", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchStepContextServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Steps/{StepSid}/Context", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -752,24 +892,34 @@ func (s *SDK) FetchStepContext(ctx context.Context, request operations.FetchStep
 }
 
 // ListEngagement - Retrieve a list of all Engagements for the Flow.
-func (s *SDK) ListEngagement(ctx context.Context, request operations.ListEngagementRequest) (*operations.ListEngagementResponse, error) {
-	baseURL := operations.ListEngagementServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListEngagement(ctx context.Context, request operations.ListEngagementRequest, security operations.ListEngagementSecurity, opts ...operations.Option) (*operations.ListEngagementResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListEngagementServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -804,24 +954,34 @@ func (s *SDK) ListEngagement(ctx context.Context, request operations.ListEngagem
 }
 
 // ListExecution - Retrieve a list of all Executions for the Flow.
-func (s *SDK) ListExecution(ctx context.Context, request operations.ListExecutionRequest) (*operations.ListExecutionResponse, error) {
-	baseURL := operations.ListExecutionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListExecution(ctx context.Context, request operations.ListExecutionRequest, security operations.ListExecutionSecurity, opts ...operations.Option) (*operations.ListExecutionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListExecutionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -856,24 +1016,34 @@ func (s *SDK) ListExecution(ctx context.Context, request operations.ListExecutio
 }
 
 // ListExecutionStep - Retrieve a list of all Steps for an Execution.
-func (s *SDK) ListExecutionStep(ctx context.Context, request operations.ListExecutionStepRequest) (*operations.ListExecutionStepResponse, error) {
-	baseURL := operations.ListExecutionStepServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListExecutionStep(ctx context.Context, request operations.ListExecutionStepRequest, security operations.ListExecutionStepSecurity, opts ...operations.Option) (*operations.ListExecutionStepResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Steps", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListExecutionStepServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{ExecutionSid}/Steps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -908,10 +1078,20 @@ func (s *SDK) ListExecutionStep(ctx context.Context, request operations.ListExec
 }
 
 // ListFlow - Retrieve a list of all Flows.
-func (s *SDK) ListFlow(ctx context.Context, request operations.ListFlowRequest) (*operations.ListFlowResponse, error) {
+func (s *SDK) ListFlow(ctx context.Context, request operations.ListFlowRequest, security operations.ListFlowSecurity, opts ...operations.Option) (*operations.ListFlowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListFlowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Flows"
@@ -921,11 +1101,11 @@ func (s *SDK) ListFlow(ctx context.Context, request operations.ListFlowRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -960,24 +1140,34 @@ func (s *SDK) ListFlow(ctx context.Context, request operations.ListFlowRequest) 
 }
 
 // ListStep - Retrieve a list of all Steps for an Engagement.
-func (s *SDK) ListStep(ctx context.Context, request operations.ListStepRequest) (*operations.ListStepResponse, error) {
-	baseURL := operations.ListStepServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListStep(ctx context.Context, request operations.ListStepRequest, security operations.ListStepSecurity, opts ...operations.Option) (*operations.ListStepResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Steps", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListStepServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Engagements/{EngagementSid}/Steps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1012,15 +1202,25 @@ func (s *SDK) ListStep(ctx context.Context, request operations.ListStepRequest) 
 }
 
 // UpdateExecution - Update the status of an Execution to `ended`.
-func (s *SDK) UpdateExecution(ctx context.Context, request operations.UpdateExecutionRequest) (*operations.UpdateExecutionResponse, error) {
-	baseURL := operations.UpdateExecutionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateExecution(ctx context.Context, request operations.UpdateExecutionRequest, security operations.UpdateExecutionSecurity, opts ...operations.Option) (*operations.UpdateExecutionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateExecutionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Flows/{FlowSid}/Executions/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1032,7 +1232,7 @@ func (s *SDK) UpdateExecution(ctx context.Context, request operations.UpdateExec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

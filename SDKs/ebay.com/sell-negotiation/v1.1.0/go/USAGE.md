@@ -14,22 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.FindEligibleItemsRequest{
-        Security: operations.FindEligibleItemsSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.FindEligibleItemsQueryParams{
-            Limit: "corrupti",
-            Offset: "provident",
-        },
-        Headers: operations.FindEligibleItemsHeaders{
-            XEbayCMarketplaceID: "distinctio",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        Limit: "provident",
+        Offset: "distinctio",
     }
 
     ctx := context.Background()
-    res, err := s.Offer.FindEligibleItems(ctx, req)
+    res, err := s.Offer.FindEligibleItems(ctx, req, operations.FindEligibleItemsSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

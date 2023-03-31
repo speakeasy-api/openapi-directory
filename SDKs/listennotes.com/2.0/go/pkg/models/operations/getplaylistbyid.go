@@ -9,14 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlaylistByIDPathParams struct {
-	// Playlist id (always 11 characters, e.g., m1pe7z60bsw).
-	// You can get the podcast id from the url of a playlist, e.g.,
-	// m1pe7z60bsw is the playlist id of listennotes.com/listen/podcasts-about-podcasting-m1pe7z60bsw
-	//
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetPlaylistByIDSortEnum - How do you want to sort playlist items?
 type GetPlaylistByIDSortEnum string
 
@@ -71,7 +63,14 @@ func (e *GetPlaylistByIDTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPlaylistByIDQueryParams struct {
+type GetPlaylistByIDRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
+	// Playlist id (always 11 characters, e.g., m1pe7z60bsw).
+	// You can get the podcast id from the url of a playlist, e.g.,
+	// m1pe7z60bsw is the playlist id of listennotes.com/listen/podcasts-about-podcasting-m1pe7z60bsw
+	//
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// For playlist items pagination.
 	// It's the value of **last_timestamp_ms** from the response of last request.
 	// If it's 0 or not specified, just return the latest or the oldest 20 items,
@@ -84,17 +83,6 @@ type GetPlaylistByIDQueryParams struct {
 	// The type of this playlist, which should be either **episode_list** or **podcast_list**.
 	//
 	Type *GetPlaylistByIDTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetPlaylistByIDHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetPlaylistByIDRequest struct {
-	PathParams  GetPlaylistByIDPathParams
-	QueryParams GetPlaylistByIDQueryParams
-	Headers     GetPlaylistByIDHeaders
 }
 
 type GetPlaylistByIDResponse struct {

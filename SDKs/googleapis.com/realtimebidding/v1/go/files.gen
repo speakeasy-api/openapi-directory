@@ -44,7 +44,6 @@ pkg/models/operations/realtimebiddingbuyersuserlistsupdate.go
 pkg/models/shared/watchcreativesresponse.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listendpointsresponse.go
 pkg/models/shared/endpoint.go
 pkg/models/shared/listbiddersresponse.go

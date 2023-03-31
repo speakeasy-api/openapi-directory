@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamesCandidatesQueryParams struct {
+type GetNamesCandidatesRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Name (candidate or committee) to search for
 	Q []string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetNamesCandidatesRequest struct {
-	QueryParams GetNamesCandidatesQueryParams
 }
 
 type GetNamesCandidatesResponse struct {

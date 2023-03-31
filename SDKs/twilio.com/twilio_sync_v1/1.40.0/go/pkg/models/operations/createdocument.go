@@ -12,12 +12,8 @@ var CreateDocumentServerList = []string{
 }
 
 type CreateDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateDocumentPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Document resource in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDocumentCreateDocumentRequest struct {
@@ -30,10 +26,9 @@ type CreateDocumentCreateDocumentRequest struct {
 }
 
 type CreateDocumentRequest struct {
-	PathParams CreateDocumentPathParams
-	Request    *CreateDocumentCreateDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateDocumentSecurity
-	ServerURL  *string
+	RequestBody *CreateDocumentCreateDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Document resource in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateDocumentResponse struct {

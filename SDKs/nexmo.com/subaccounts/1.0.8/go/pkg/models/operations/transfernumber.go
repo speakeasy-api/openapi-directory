@@ -11,18 +11,14 @@ import (
 )
 
 type TransferNumberSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type TransferNumberPathParams struct {
-	// ID of the primary account.
-	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type TransferNumberRequest struct {
-	PathParams TransferNumberPathParams
-	Request    shared.TransferNumberRequest `request:"mediaType=application/json"`
-	Security   TransferNumberSecurity
+	TransferNumberRequest shared.TransferNumberRequest `request:"mediaType=application/json"`
+	// ID of the primary account.
+	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 }
 
 type TransferNumber422ApplicationJSONInvalidParameters struct {

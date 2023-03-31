@@ -10,50 +10,8 @@ import (
 )
 
 type GamesScoresGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-// GamesScoresGetTimeSpanEnum - The time span for the scores and ranks you're requesting.
-type GamesScoresGetTimeSpanEnum string
-
-const (
-	GamesScoresGetTimeSpanEnumScoreTimeSpanUnspecified GamesScoresGetTimeSpanEnum = "SCORE_TIME_SPAN_UNSPECIFIED"
-	GamesScoresGetTimeSpanEnumAll                      GamesScoresGetTimeSpanEnum = "ALL"
-	GamesScoresGetTimeSpanEnumAllTime                  GamesScoresGetTimeSpanEnum = "ALL_TIME"
-	GamesScoresGetTimeSpanEnumWeekly                   GamesScoresGetTimeSpanEnum = "WEEKLY"
-	GamesScoresGetTimeSpanEnumDaily                    GamesScoresGetTimeSpanEnum = "DAILY"
-)
-
-func (e *GamesScoresGetTimeSpanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "SCORE_TIME_SPAN_UNSPECIFIED":
-		fallthrough
-	case "ALL":
-		fallthrough
-	case "ALL_TIME":
-		fallthrough
-	case "WEEKLY":
-		fallthrough
-	case "DAILY":
-		*e = GamesScoresGetTimeSpanEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GamesScoresGetTimeSpanEnum: %s", s)
-	}
-}
-
-type GamesScoresGetPathParams struct {
-	// The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this application.
-	LeaderboardID string `pathParam:"style=simple,explode=false,name=leaderboardId"`
-	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
-	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
-	// The time span for the scores and ranks you're requesting.
-	TimeSpan GamesScoresGetTimeSpanEnum `pathParam:"style=simple,explode=false,name=timeSpan"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GamesScoresGetIncludeRankTypeEnum - The types of ranks to return. If the parameter is omitted, no ranks will be returned.
@@ -89,7 +47,40 @@ func (e *GamesScoresGetIncludeRankTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GamesScoresGetQueryParams struct {
+// GamesScoresGetTimeSpanEnum - The time span for the scores and ranks you're requesting.
+type GamesScoresGetTimeSpanEnum string
+
+const (
+	GamesScoresGetTimeSpanEnumScoreTimeSpanUnspecified GamesScoresGetTimeSpanEnum = "SCORE_TIME_SPAN_UNSPECIFIED"
+	GamesScoresGetTimeSpanEnumAll                      GamesScoresGetTimeSpanEnum = "ALL"
+	GamesScoresGetTimeSpanEnumAllTime                  GamesScoresGetTimeSpanEnum = "ALL_TIME"
+	GamesScoresGetTimeSpanEnumWeekly                   GamesScoresGetTimeSpanEnum = "WEEKLY"
+	GamesScoresGetTimeSpanEnumDaily                    GamesScoresGetTimeSpanEnum = "DAILY"
+)
+
+func (e *GamesScoresGetTimeSpanEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "SCORE_TIME_SPAN_UNSPECIFIED":
+		fallthrough
+	case "ALL":
+		fallthrough
+	case "ALL_TIME":
+		fallthrough
+	case "WEEKLY":
+		fallthrough
+	case "DAILY":
+		*e = GamesScoresGetTimeSpanEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GamesScoresGetTimeSpanEnum: %s", s)
+	}
+}
+
+type GamesScoresGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -106,26 +97,26 @@ type GamesScoresGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The preferred language to use for strings returned by this method.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
+	// The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this application.
+	LeaderboardID string `pathParam:"style=simple,explode=false,name=leaderboardId"`
 	// The maximum number of leaderboard scores to return in the response. For any response, the actual number of leaderboard scores returned may be less than the specified `maxResults`.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The token returned by the previous request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
+	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The time span for the scores and ranks you're requesting.
+	TimeSpan GamesScoresGetTimeSpanEnum `pathParam:"style=simple,explode=false,name=timeSpan"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesScoresGetRequest struct {
-	PathParams  GamesScoresGetPathParams
-	QueryParams GamesScoresGetQueryParams
-	Security    GamesScoresGetSecurity
 }
 
 type GamesScoresGetResponse struct {

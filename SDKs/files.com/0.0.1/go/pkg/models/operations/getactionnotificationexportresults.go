@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetActionNotificationExportResultsQueryParams struct {
+type GetActionNotificationExportResultsRequest struct {
 	// ID of the associated action notification export.
 	ActionNotificationExportID int `queryParam:"style=form,explode=true,name=action_notification_export_id"`
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
@@ -16,10 +16,6 @@ type GetActionNotificationExportResultsQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// User ID.  Provide a value of `0` to operate the current session's user.
 	UserID *int `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type GetActionNotificationExportResultsRequest struct {
-	QueryParams GetActionNotificationExportResultsQueryParams
 }
 
 type GetActionNotificationExportResultsResponse struct {

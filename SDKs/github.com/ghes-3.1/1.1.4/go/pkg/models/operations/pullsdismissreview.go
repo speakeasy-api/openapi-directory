@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsDismissReviewPathParams struct {
+type PullsDismissReviewRequestBody struct {
+	Event *string `json:"event,omitempty"`
+	// The message for the pull request review dismissal
+	Message string `json:"message"`
+}
+
+type PullsDismissReviewRequest struct {
+	RequestBody PullsDismissReviewRequestBody `request:"mediaType=application/json"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The number that identifies the pull request.
@@ -16,17 +23,6 @@ type PullsDismissReviewPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the review.
 	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
-type PullsDismissReviewRequestBody struct {
-	Event *string `json:"event,omitempty"`
-	// The message for the pull request review dismissal
-	Message string `json:"message"`
-}
-
-type PullsDismissReviewRequest struct {
-	PathParams PullsDismissReviewPathParams
-	Request    PullsDismissReviewRequestBody `request:"mediaType=application/json"`
 }
 
 type PullsDismissReviewResponse struct {

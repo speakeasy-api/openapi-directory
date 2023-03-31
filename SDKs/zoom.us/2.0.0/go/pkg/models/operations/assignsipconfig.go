@@ -6,15 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AssignSIPConfigSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AssignSIPConfigPathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AssignSIPConfigApplicationJSONShowZoomProvidedNumbersEnum - If the value of this option is set to `0`, the numbers provided by Zoom will be displayed in the account's list of available call-out and call-in numbers in the Zoom Web Portal and Zoom Client.
@@ -68,9 +63,8 @@ type AssignSIPConfigApplicationJSON struct {
 }
 
 type AssignSIPConfigRequest struct {
-	PathParams AssignSIPConfigPathParams
-	Request    *AssignSIPConfigApplicationJSON `request:"mediaType=application/json"`
-	Security   AssignSIPConfigSecurity
+	RequestBody *AssignSIPConfigApplicationJSON `request:"mediaType=application/json"`
+	AccountID   string                          `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AssignSIPConfigResponse struct {

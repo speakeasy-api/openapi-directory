@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrievePricingCountryPathParams struct {
-	// The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type RetrievePricingCountryQueryParams struct {
+type RetrievePricingCountryRequest struct {
 	// Your Nexmo API key.
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Your Nexmo API secret.
 	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
 	// A two letter [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). For example, `CA`.
 	Country string `queryParam:"style=form,explode=true,name=country"`
-}
-
-type RetrievePricingCountryRequest struct {
-	PathParams  RetrievePricingCountryPathParams
-	QueryParams RetrievePricingCountryQueryParams
+	// The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
+	Type string `pathParam:"style=simple,explode=false,name=type"`
 }
 
 // RetrievePricingCountry401ApplicationJSON - You did not provide valid credentials

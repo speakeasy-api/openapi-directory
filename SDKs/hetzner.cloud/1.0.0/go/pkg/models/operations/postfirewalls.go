@@ -136,10 +136,6 @@ type PostFirewallsCreateFirewallRequest struct {
 	Rules []PostFirewallsCreateFirewallRequestRule `json:"rules,omitempty"`
 }
 
-type PostFirewallsRequest struct {
-	Request *PostFirewallsCreateFirewallRequest `request:"mediaType=application/json"`
-}
-
 // PostFirewallsCreateFirewallResponseActionError - Error message for the Action if error occurred, otherwise null
 type PostFirewallsCreateFirewallResponseActionError struct {
 	// Fixed machine readable code

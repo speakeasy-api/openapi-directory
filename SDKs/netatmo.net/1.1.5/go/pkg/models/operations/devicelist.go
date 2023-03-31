@@ -10,8 +10,8 @@ import (
 )
 
 type DevicelistSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DevicelistAppTypeEnum - Defines which device type will be returned by devicelist. It could be app_thermostat or app_station (by default if not provided)
@@ -38,18 +38,13 @@ func (e *DevicelistAppTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DevicelistQueryParams struct {
+type DevicelistRequest struct {
 	// Defines which device type will be returned by devicelist. It could be app_thermostat or app_station (by default if not provided)
 	AppType *DevicelistAppTypeEnum `queryParam:"style=form,explode=true,name=app_type"`
 	// Specify a device_id if you want to retrieve only this device informations.
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// When set to "true", the favorite devices of the user are returned. This flag is available only if the devices requested are Weather Stations.
 	GetFavorites *bool `queryParam:"style=form,explode=true,name=get_favorites"`
-}
-
-type DevicelistRequest struct {
-	QueryParams DevicelistQueryParams
-	Security    DevicelistSecurity
 }
 
 type DevicelistResponse struct {

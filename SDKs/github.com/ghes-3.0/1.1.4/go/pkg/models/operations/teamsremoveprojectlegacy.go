@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsRemoveProjectLegacyPathParams struct {
+type TeamsRemoveProjectLegacyRequest struct {
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	TeamID    int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsRemoveProjectLegacyRequest struct {
-	PathParams TeamsRemoveProjectLegacyPathParams
 }
 
 // TeamsRemoveProjectLegacy415ApplicationJSON - Preview header missing

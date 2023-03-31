@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningGetSarifPathParams struct {
+type CodeScanningGetSarifRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The SARIF ID obtained after uploading.
 	SarifID string `pathParam:"style=simple,explode=false,name=sarif_id"`
-}
-
-type CodeScanningGetSarifRequest struct {
-	PathParams CodeScanningGetSarifPathParams
 }
 
 // CodeScanningGetSarif503ApplicationJSON - Service unavailable

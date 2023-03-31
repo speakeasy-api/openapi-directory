@@ -4,93 +4,85 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WalletobjectsEventticketclassAddmessageRequest(
-    security=operations.WalletobjectsEventticketclassAddmessageSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WalletobjectsEventticketclassAddmessagePathParams(
-        resource_id="necessitatibus",
-    ),
-    query_params=operations.WalletobjectsEventticketclassAddmessageQueryParams(
-        dollar_xgafv="2",
-        access_token="cum",
-        alt="json",
-        callback="voluptas",
-        fields="quis",
-        key="repellat",
-        oauth_token="quas",
-        pretty_print=False,
-        quota_user="occaecati",
-        upload_type="facere",
-        upload_protocol="fugit",
-    ),
-    request=shared.AddMessageRequest(
+    dollar_xgafv="2",
+    add_message_request=shared.AddMessageRequest(
         message=shared.Message(
-            body="aut",
+            body="provident",
             display_interval=shared.TimeInterval(
                 end=shared.DateTime(
-                    date_="iure",
+                    date_="distinctio",
                 ),
-                kind="voluptatibus",
+                kind="quibusdam",
                 start=shared.DateTime(
-                    date_="necessitatibus",
+                    date_="unde",
                 ),
             ),
-            header="ab",
-            id="magni",
-            kind="accusantium",
+            header="nulla",
+            id="corrupti",
+            kind="illum",
             localized_body=shared.LocalizedString(
                 default_value=shared.TranslatedString(
-                    kind="necessitatibus",
-                    language="excepturi",
-                    value="assumenda",
+                    kind="vel",
+                    language="error",
+                    value="deserunt",
                 ),
-                kind="in",
+                kind="suscipit",
                 translated_values=[
                     shared.TranslatedString(
-                        kind="laborum",
-                        language="corrupti",
-                        value="aut",
+                        kind="magnam",
+                        language="debitis",
+                        value="ipsa",
+                    ),
+                    shared.TranslatedString(
+                        kind="delectus",
+                        language="tempora",
+                        value="suscipit",
                     ),
                 ],
             ),
             localized_header=shared.LocalizedString(
                 default_value=shared.TranslatedString(
-                    kind="voluptatem",
-                    language="nemo",
-                    value="adipisci",
+                    kind="molestiae",
+                    language="minus",
+                    value="placeat",
                 ),
-                kind="voluptatem",
+                kind="voluptatum",
                 translated_values=[
                     shared.TranslatedString(
-                        kind="et",
-                        language="modi",
+                        kind="excepturi",
+                        language="nisi",
+                        value="recusandae",
+                    ),
+                    shared.TranslatedString(
+                        kind="temporibus",
+                        language="ab",
                         value="quis",
-                    ),
-                    shared.TranslatedString(
-                        kind="minus",
-                        language="rerum",
-                        value="animi",
-                    ),
-                    shared.TranslatedString(
-                        kind="at",
-                        language="consequatur",
-                        value="non",
                     ),
                 ],
             ),
-            message_type="text",
+            message_type="MESSAGE_TYPE_UNSPECIFIED",
         ),
     ),
+    access_token="deserunt",
+    alt="json",
+    callback="ipsam",
+    fields_="repellendus",
+    key="sapiente",
+    oauth_token="quo",
+    pretty_print=False,
+    quota_user="odit",
+    resource_id="at",
+    upload_type="at",
+    upload_protocol="maiores",
 )
     
-res = s.eventticketclass.walletobjects_eventticketclass_addmessage(req)
+res = s.eventticketclass.walletobjects_eventticketclass_addmessage(req, operations.WalletobjectsEventticketclassAddmessageSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.event_ticket_class_add_message_response is not None:
     # handle response

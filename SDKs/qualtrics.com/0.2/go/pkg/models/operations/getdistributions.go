@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDistributionsQueryParams struct {
+type GetDistributionsRequest struct {
 	// The survey for which to load the distributions
 	SurveyID string `queryParam:"style=form,explode=true,name=surveyId"`
-}
-
-type GetDistributionsRequest struct {
-	QueryParams GetDistributionsQueryParams
 }
 
 type GetDistributionsResponse struct {

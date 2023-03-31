@@ -13,5 +13,5 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/createwebchannel.go
 pkg/models/shared/flexv2webchannel.go
-pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

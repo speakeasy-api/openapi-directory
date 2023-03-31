@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAPendingTransactionPathParams struct {
-	PendingTransactionID string `pathParam:"style=simple,explode=false,name=pending_transaction_id"`
-}
-
 type RetrieveAPendingTransactionRequest struct {
-	PathParams RetrieveAPendingTransactionPathParams
+	PendingTransactionID string `pathParam:"style=simple,explode=false,name=pending_transaction_id"`
 }
 
 type RetrieveAPendingTransactionDefaultApplicationJSON13StatusEnum string

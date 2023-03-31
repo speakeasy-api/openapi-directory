@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
 type EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody struct {
 	// List of runner IDs to add to the runner group.
 	Runners []int64 `json:"runners"`
 }
 
 type EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest struct {
-	PathParams EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams
-	Request    EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 type EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse struct {

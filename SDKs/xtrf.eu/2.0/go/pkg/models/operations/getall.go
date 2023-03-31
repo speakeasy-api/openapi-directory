@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAllQueryParams struct {
+type GetAllRequest struct {
 	// only client invoices modified since this timestamp
 	UpdatedSince *int64 `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type GetAllRequest struct {
-	QueryParams GetAllQueryParams
 }
 
 type GetAllResponse struct {

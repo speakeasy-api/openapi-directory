@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SplitNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type SplitNetworkRequest struct {
-	PathParams SplitNetworkPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type SplitNetwork200ApplicationJSONResultingNetworks struct {

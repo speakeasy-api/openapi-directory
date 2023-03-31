@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetstateabbreviationQueryParams struct {
+type GetstateabbreviationRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// State (or province) name from which to retrieve the two letter abbreviation.
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetstateabbreviationRequest struct {
-	QueryParams GetstateabbreviationQueryParams
 }
 
 // Getstateabbreviation200ApplicationJSON - State (or province) standardized two-letter abbreviation

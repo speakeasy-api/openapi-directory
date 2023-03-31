@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsoleConnectionsListQueryParams struct {
+type DcimConsoleConnectionsListRequest struct {
 	ConnectionStatus *string `queryParam:"style=form,explode=true,name=connection_status"`
 	Device           *string `queryParam:"style=form,explode=true,name=device"`
 	// Number of results to return per page.
@@ -16,10 +16,6 @@ type DcimConsoleConnectionsListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Site   *string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type DcimConsoleConnectionsListRequest struct {
-	QueryParams DcimConsoleConnectionsListQueryParams
 }
 
 type DcimConsoleConnectionsList200ApplicationJSON struct {

@@ -14,12 +14,8 @@ var CreateValidationRequestServerList = []string{
 }
 
 type CreateValidationRequestSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateValidationRequestPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for the new caller ID resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateValidationRequestCreateValidationRequestRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST`, and the default is `POST`.
@@ -74,10 +70,9 @@ type CreateValidationRequestCreateValidationRequestRequest struct {
 }
 
 type CreateValidationRequestRequest struct {
-	PathParams CreateValidationRequestPathParams
-	Request    *CreateValidationRequestCreateValidationRequestRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateValidationRequestSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for the new caller ID resource.
+	AccountSid  string                                                 `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateValidationRequestCreateValidationRequestRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateValidationRequestResponse struct {

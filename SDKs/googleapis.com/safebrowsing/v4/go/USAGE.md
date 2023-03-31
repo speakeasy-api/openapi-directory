@@ -14,24 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.SafebrowsingEncodedFullHashesGetRequest{
-        PathParams: operations.SafebrowsingEncodedFullHashesGetPathParams{
-            EncodedRequest: "corrupti",
-        },
-        QueryParams: operations.SafebrowsingEncodedFullHashesGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ClientID: "nulla",
-            ClientVersion: "corrupti",
-            Fields: "illum",
-            Key: "vel",
-            OauthToken: "error",
-            PrettyPrint: false,
-            QuotaUser: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        ClientID: "unde",
+        ClientVersion: "nulla",
+        EncodedRequest: "corrupti",
+        Fields: "illum",
+        Key: "vel",
+        OauthToken: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()

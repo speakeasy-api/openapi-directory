@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCATToolProjectInfoPathParams struct {
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 type GetCATToolProjectInfoRequest struct {
-	PathParams GetCATToolProjectInfoPathParams
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetCATToolProjectInfoResponse struct {

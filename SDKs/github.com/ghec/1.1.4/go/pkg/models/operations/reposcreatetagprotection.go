@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateTagProtectionPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateTagProtectionRequestBody struct {
 	// An optional glob pattern to match against when enforcing tag protection.
 	Pattern string `json:"pattern"`
 }
 
 type ReposCreateTagProtectionRequest struct {
-	PathParams ReposCreateTagProtectionPathParams
-	Request    ReposCreateTagProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateTagProtectionRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateTagProtectionResponse struct {

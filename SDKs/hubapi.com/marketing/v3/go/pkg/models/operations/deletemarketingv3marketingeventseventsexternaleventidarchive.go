@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteMarketingV3MarketingEventsEventsExternalEventIDArchivePathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
-}
-
-type DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveQueryParams struct {
-	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveRequest struct {
-	PathParams  DeleteMarketingV3MarketingEventsEventsExternalEventIDArchivePathParams
-	QueryParams DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveQueryParams
-	Security    DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveSecurity
+	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	ExternalEventID   string `pathParam:"style=simple,explode=false,name=externalEventId"`
 }
 
 type DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveResponse struct {

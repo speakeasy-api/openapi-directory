@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CollectionsLinkedRegistrationsRelationshipsPathParams struct {
+type CollectionsLinkedRegistrationsRelationshipsRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsLinkedRegistrationsRelationshipsRequest struct {
-	PathParams CollectionsLinkedRegistrationsRelationshipsPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CollectionsLinkedRegistrationsRelationshipsResponse struct {

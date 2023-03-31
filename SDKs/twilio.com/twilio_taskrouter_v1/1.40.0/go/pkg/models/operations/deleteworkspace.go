@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteWorkspaceServerList = []string{
@@ -12,18 +11,13 @@ var DeleteWorkspaceServerList = []string{
 }
 
 type DeleteWorkspaceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteWorkspacePathParams struct {
-	// The SID of the Workspace resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteWorkspaceRequest struct {
-	PathParams DeleteWorkspacePathParams
-	Security   DeleteWorkspaceSecurity
-	ServerURL  *string
+	// The SID of the Workspace resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteWorkspaceResponse struct {

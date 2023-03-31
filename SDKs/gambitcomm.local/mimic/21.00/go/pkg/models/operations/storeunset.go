@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type StoreUnsetPathParams struct {
+type StoreUnsetRequest struct {
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type StoreUnsetRequest struct {
-	PathParams StoreUnsetPathParams
 }
 
 type StoreUnsetResponse struct {

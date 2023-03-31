@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetResourcesCampaignsJSONRequest(
-    query_params=operations.GetResourcesCampaignsJSONQueryParams(
-        max=2660338303249884092,
-        offset=6293786694293878591,
-        sort="qui",
-    ),
+    max=548814,
+    offset=592845,
+    sort="distinctio",
 )
     
 res = s.campaigns.get_resources_campaigns_json(req)

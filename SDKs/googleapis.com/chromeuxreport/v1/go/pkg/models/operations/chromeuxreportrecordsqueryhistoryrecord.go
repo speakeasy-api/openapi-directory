@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChromeuxreportRecordsQueryHistoryRecordQueryParams struct {
+type ChromeuxreportRecordsQueryHistoryRecordRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv         *shared.XgafvEnum           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	QueryHistoryRequest *shared.QueryHistoryRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,11 +31,6 @@ type ChromeuxreportRecordsQueryHistoryRecordQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ChromeuxreportRecordsQueryHistoryRecordRequest struct {
-	QueryParams ChromeuxreportRecordsQueryHistoryRecordQueryParams
-	Request     *shared.QueryHistoryRequest `request:"mediaType=application/json"`
 }
 
 type ChromeuxreportRecordsQueryHistoryRecordResponse struct {

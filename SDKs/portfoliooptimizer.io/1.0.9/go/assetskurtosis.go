@@ -36,7 +36,7 @@ func newAssetsKurtosis(defaultClient, securityClient HTTPClient, serverURL, lang
 //
 // References
 // * [Wikipedia, Kurtosis](https://en.wikipedia.org/wiki/Kurtosis)
-func (s *assetsKurtosis) PostAssetsKurtosis(ctx context.Context, request operations.PostAssetsKurtosisRequest) (*operations.PostAssetsKurtosisResponse, error) {
+func (s *assetsKurtosis) PostAssetsKurtosis(ctx context.Context, request operations.PostAssetsKurtosisRequestBody) (*operations.PostAssetsKurtosisResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/kurtosis"
 

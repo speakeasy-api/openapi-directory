@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type FilmographySearchReadPathParams struct {
-	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
-}
-
 type FilmographySearchReadRequest struct {
-	PathParams FilmographySearchReadPathParams
+	MovieTitle string `pathParam:"style=simple,explode=false,name=movie_title"`
 }
 
 type FilmographySearchReadResponse struct {

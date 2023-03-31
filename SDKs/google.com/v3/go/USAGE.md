@@ -14,36 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.TravelpartnerAccountsAccountLinksCreateRequest{
-        PathParams: operations.TravelpartnerAccountsAccountLinksCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.TravelpartnerAccountsAccountLinksCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AccountLink{
+        DollarXgafv: "2",
+        AccountLink: &shared.AccountLink{
             AccountLinkTarget: &shared.AccountLinkTarget{
                 AllHotels: false,
                 HotelList: &shared.HotelList{
                     PartnerHotelIds: []string{
-                        "iure",
-                        "magnam",
+                        "distinctio",
+                        "quibusdam",
+                        "unde",
                     },
                 },
             },
-            GoogleAdsCustomerName: "debitis",
-            Name: "ipsa",
+            GoogleAdsCustomerName: "nulla",
+            Name: "corrupti",
             Status: "APPROVED",
         },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        Parent: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()

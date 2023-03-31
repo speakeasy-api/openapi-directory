@@ -8,17 +8,13 @@ import (
 )
 
 type StopScreenshotsTestSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type StopScreenshotsTestPathParams struct {
-	// Test ID that details you want to stop
-	TestID string `pathParam:"style=simple,explode=false,name=test_id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type StopScreenshotsTestRequest struct {
-	PathParams StopScreenshotsTestPathParams
-	Security   StopScreenshotsTestSecurity
+	// Test ID that details you want to stop
+	TestID string `pathParam:"style=simple,explode=false,name=test_id"`
 }
 
 type StopScreenshotsTestResponse struct {

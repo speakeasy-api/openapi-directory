@@ -8,20 +8,15 @@ import (
 )
 
 type GetstationsdataSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetstationsdataQueryParams struct {
+type GetstationsdataRequest struct {
 	// Id of the device you want to retrieve information of
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// Whether to include the user's favorite Weather Stations in addition to the user's own Weather Stations
 	GetFavorites *bool `queryParam:"style=form,explode=true,name=get_favorites"`
-}
-
-type GetstationsdataRequest struct {
-	QueryParams GetstationsdataQueryParams
-	Security    GetstationsdataSecurity
 }
 
 type GetstationsdataResponse struct {

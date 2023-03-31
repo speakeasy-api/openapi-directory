@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionPackageShowQueryParams struct {
+type GetActionPackageShowRequest struct {
 	// The package name
 	ID *string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetActionPackageShowRequest struct {
-	QueryParams GetActionPackageShowQueryParams
 }
 
 type GetActionPackageShowResponse struct {

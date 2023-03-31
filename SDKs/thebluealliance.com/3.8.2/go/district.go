@@ -33,18 +33,18 @@ func newDistrict(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GetDistrictEvents - Gets a list of events in the given district.
-func (s *district) GetDistrictEvents(ctx context.Context, request operations.GetDistrictEventsRequest) (*operations.GetDistrictEventsResponse, error) {
+func (s *district) GetDistrictEvents(ctx context.Context, request operations.GetDistrictEventsRequest, security operations.GetDistrictEventsSecurity) (*operations.GetDistrictEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,18 +84,18 @@ func (s *district) GetDistrictEvents(ctx context.Context, request operations.Get
 }
 
 // GetDistrictEventsKeys - Gets a list of event keys for events in the given district.
-func (s *district) GetDistrictEventsKeys(ctx context.Context, request operations.GetDistrictEventsKeysRequest) (*operations.GetDistrictEventsKeysResponse, error) {
+func (s *district) GetDistrictEventsKeys(ctx context.Context, request operations.GetDistrictEventsKeysRequest, security operations.GetDistrictEventsKeysSecurity) (*operations.GetDistrictEventsKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,18 +135,18 @@ func (s *district) GetDistrictEventsKeys(ctx context.Context, request operations
 }
 
 // GetDistrictEventsSimple - Gets a short-form list of events in the given district.
-func (s *district) GetDistrictEventsSimple(ctx context.Context, request operations.GetDistrictEventsSimpleRequest) (*operations.GetDistrictEventsSimpleResponse, error) {
+func (s *district) GetDistrictEventsSimple(ctx context.Context, request operations.GetDistrictEventsSimpleRequest, security operations.GetDistrictEventsSimpleSecurity) (*operations.GetDistrictEventsSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/events/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,18 +186,18 @@ func (s *district) GetDistrictEventsSimple(ctx context.Context, request operatio
 }
 
 // GetDistrictRankings - Gets a list of team district rankings for the given district.
-func (s *district) GetDistrictRankings(ctx context.Context, request operations.GetDistrictRankingsRequest) (*operations.GetDistrictRankingsResponse, error) {
+func (s *district) GetDistrictRankings(ctx context.Context, request operations.GetDistrictRankingsRequest, security operations.GetDistrictRankingsSecurity) (*operations.GetDistrictRankingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/rankings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/rankings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,18 +237,18 @@ func (s *district) GetDistrictRankings(ctx context.Context, request operations.G
 }
 
 // GetDistrictTeams - Gets a list of `Team` objects that competed in events in the given district.
-func (s *district) GetDistrictTeams(ctx context.Context, request operations.GetDistrictTeamsRequest) (*operations.GetDistrictTeamsResponse, error) {
+func (s *district) GetDistrictTeams(ctx context.Context, request operations.GetDistrictTeamsRequest, security operations.GetDistrictTeamsSecurity) (*operations.GetDistrictTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -288,18 +288,18 @@ func (s *district) GetDistrictTeams(ctx context.Context, request operations.GetD
 }
 
 // GetDistrictTeamsKeys - Gets a list of `Team` objects that competed in events in the given district.
-func (s *district) GetDistrictTeamsKeys(ctx context.Context, request operations.GetDistrictTeamsKeysRequest) (*operations.GetDistrictTeamsKeysResponse, error) {
+func (s *district) GetDistrictTeamsKeys(ctx context.Context, request operations.GetDistrictTeamsKeysRequest, security operations.GetDistrictTeamsKeysSecurity) (*operations.GetDistrictTeamsKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -339,18 +339,18 @@ func (s *district) GetDistrictTeamsKeys(ctx context.Context, request operations.
 }
 
 // GetDistrictTeamsSimple - Gets a short-form list of `Team` objects that competed in events in the given district.
-func (s *district) GetDistrictTeamsSimple(ctx context.Context, request operations.GetDistrictTeamsSimpleRequest) (*operations.GetDistrictTeamsSimpleResponse, error) {
+func (s *district) GetDistrictTeamsSimple(ctx context.Context, request operations.GetDistrictTeamsSimpleRequest, security operations.GetDistrictTeamsSimpleSecurity) (*operations.GetDistrictTeamsSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/district/{district_key}/teams/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,18 +390,18 @@ func (s *district) GetDistrictTeamsSimple(ctx context.Context, request operation
 }
 
 // GetDistrictsByYear - Gets a list of districts and their corresponding district key, for the given year.
-func (s *district) GetDistrictsByYear(ctx context.Context, request operations.GetDistrictsByYearRequest) (*operations.GetDistrictsByYearResponse, error) {
+func (s *district) GetDistrictsByYear(ctx context.Context, request operations.GetDistrictsByYearRequest, security operations.GetDistrictsByYearSecurity) (*operations.GetDistrictsByYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{year}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{year}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -441,18 +441,18 @@ func (s *district) GetDistrictsByYear(ctx context.Context, request operations.Ge
 }
 
 // GetEventDistrictPoints - Gets a list of team rankings for the Event.
-func (s *district) GetEventDistrictPoints(ctx context.Context, request operations.GetEventDistrictPointsRequest) (*operations.GetEventDistrictPointsResponse, error) {
+func (s *district) GetEventDistrictPoints(ctx context.Context, request operations.GetEventDistrictPointsRequest, security operations.GetEventDistrictPointsSecurity) (*operations.GetEventDistrictPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/district_points", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/district_points", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,18 +492,18 @@ func (s *district) GetEventDistrictPoints(ctx context.Context, request operation
 }
 
 // GetTeamDistricts - Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
-func (s *district) GetTeamDistricts(ctx context.Context, request operations.GetTeamDistrictsRequest) (*operations.GetTeamDistrictsResponse, error) {
+func (s *district) GetTeamDistricts(ctx context.Context, request operations.GetTeamDistrictsRequest, security operations.GetTeamDistrictsSecurity) (*operations.GetTeamDistrictsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/districts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/districts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

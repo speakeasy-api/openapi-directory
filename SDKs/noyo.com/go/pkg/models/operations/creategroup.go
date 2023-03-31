@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGroupRequest struct {
-	Request shared.GroupCreateRequest `request:"mediaType=application/json"`
-}
-
 type CreateGroupResponse struct {
 	ContentType string
 	// Successful Response - Returns the new Group

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessbusinesscallsLocationsGetBusinesscallssettingsPathParams struct {
-	// Required. The BusinessCallsSettings to get. The `name` field is used to identify the business call settings to get. Format: locations/{location_id}/businesscallssettings.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessbusinesscallsLocationsGetBusinesscallssettingsQueryParams struct {
+type MybusinessbusinesscallsLocationsGetBusinesscallssettingsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -25,6 +20,8 @@ type MybusinessbusinesscallsLocationsGetBusinesscallssettingsQueryParams struct 
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The BusinessCallsSettings to get. The `name` field is used to identify the business call settings to get. Format: locations/{location_id}/businesscallssettings.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -35,11 +32,6 @@ type MybusinessbusinesscallsLocationsGetBusinesscallssettingsQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessbusinesscallsLocationsGetBusinesscallssettingsRequest struct {
-	PathParams  MybusinessbusinesscallsLocationsGetBusinesscallssettingsPathParams
-	QueryParams MybusinessbusinesscallsLocationsGetBusinesscallssettingsQueryParams
 }
 
 type MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse struct {

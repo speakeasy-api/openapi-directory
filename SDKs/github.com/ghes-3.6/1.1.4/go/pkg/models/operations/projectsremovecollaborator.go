@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsRemoveCollaboratorPathParams struct {
+type ProjectsRemoveCollaboratorRequest struct {
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ProjectsRemoveCollaboratorRequest struct {
-	PathParams ProjectsRemoveCollaboratorPathParams
 }
 
 type ProjectsRemoveCollaboratorResponse struct {

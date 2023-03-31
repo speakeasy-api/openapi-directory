@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSettingsChangesQueryParams struct {
+type GetSettingsChangesRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
@@ -26,10 +26,6 @@ type GetSettingsChangesQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[api_key_id]=desc`). Valid fields are `api_key_id`, `created_at` or `user_id`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
-}
-
-type GetSettingsChangesRequest struct {
-	QueryParams GetSettingsChangesQueryParams
 }
 
 type GetSettingsChangesResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutEventsIDPathParams struct {
-	// The unique identifier of the event.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PutEventsIDRequestBodyBehaviourEnum - Whether the update applies only to this event, to all events within the series from this event or to all events within the series.
 type PutEventsIDRequestBodyBehaviourEnum string
 
@@ -94,8 +89,9 @@ type PutEventsIDRequestBody struct {
 }
 
 type PutEventsIDRequest struct {
-	PathParams PutEventsIDPathParams
-	Request    *PutEventsIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutEventsIDRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the event.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutEventsIDResponse struct {

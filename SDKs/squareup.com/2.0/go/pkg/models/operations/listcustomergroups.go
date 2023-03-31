@@ -8,10 +8,10 @@ import (
 )
 
 type ListCustomerGroupsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCustomerGroupsQueryParams struct {
+type ListCustomerGroupsRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this cursor to retrieve the next set of results for your original query.
 	//
@@ -22,11 +22,6 @@ type ListCustomerGroupsQueryParams struct {
 	//
 	// For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListCustomerGroupsRequest struct {
-	QueryParams ListCustomerGroupsQueryParams
-	Security    ListCustomerGroupsSecurity
 }
 
 type ListCustomerGroupsResponse struct {

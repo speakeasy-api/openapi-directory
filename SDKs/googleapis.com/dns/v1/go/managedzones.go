@@ -32,11 +32,11 @@ func newManagedZones(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DNSManagedZonesCreate - Creates a new ManagedZone.
-func (s *managedZones) DNSManagedZonesCreate(ctx context.Context, request operations.DNSManagedZonesCreateRequest) (*operations.DNSManagedZonesCreateResponse, error) {
+func (s *managedZones) DNSManagedZonesCreate(ctx context.Context, request operations.DNSManagedZonesCreateRequest, security operations.DNSManagedZonesCreateSecurity) (*operations.DNSManagedZonesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedZone", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *managedZones) DNSManagedZonesCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *managedZones) DNSManagedZonesCreate(ctx context.Context, request operat
 }
 
 // DNSManagedZonesDelete - Deletes a previously created ManagedZone.
-func (s *managedZones) DNSManagedZonesDelete(ctx context.Context, request operations.DNSManagedZonesDeleteRequest) (*operations.DNSManagedZonesDeleteResponse, error) {
+func (s *managedZones) DNSManagedZonesDelete(ctx context.Context, request operations.DNSManagedZonesDeleteRequest, security operations.DNSManagedZonesDeleteSecurity) (*operations.DNSManagedZonesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *managedZones) DNSManagedZonesDelete(ctx context.Context, request operat
 }
 
 // DNSManagedZonesGet - Fetches the representation of an existing ManagedZone.
-func (s *managedZones) DNSManagedZonesGet(ctx context.Context, request operations.DNSManagedZonesGetRequest) (*operations.DNSManagedZonesGetResponse, error) {
+func (s *managedZones) DNSManagedZonesGet(ctx context.Context, request operations.DNSManagedZonesGetRequest, security operations.DNSManagedZonesGetSecurity) (*operations.DNSManagedZonesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *managedZones) DNSManagedZonesGet(ctx context.Context, request operation
 }
 
 // DNSManagedZonesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *managedZones) DNSManagedZonesGetIamPolicy(ctx context.Context, request operations.DNSManagedZonesGetIamPolicyRequest) (*operations.DNSManagedZonesGetIamPolicyResponse, error) {
+func (s *managedZones) DNSManagedZonesGetIamPolicy(ctx context.Context, request operations.DNSManagedZonesGetIamPolicyRequest, security operations.DNSManagedZonesGetIamPolicySecurity) (*operations.DNSManagedZonesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,11 +190,11 @@ func (s *managedZones) DNSManagedZonesGetIamPolicy(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,20 +229,20 @@ func (s *managedZones) DNSManagedZonesGetIamPolicy(ctx context.Context, request 
 }
 
 // DNSManagedZonesList - Enumerates ManagedZones that have been created but not yet deleted.
-func (s *managedZones) DNSManagedZonesList(ctx context.Context, request operations.DNSManagedZonesListRequest) (*operations.DNSManagedZonesListResponse, error) {
+func (s *managedZones) DNSManagedZonesList(ctx context.Context, request operations.DNSManagedZonesListRequest, security operations.DNSManagedZonesListSecurity) (*operations.DNSManagedZonesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *managedZones) DNSManagedZonesList(ctx context.Context, request operatio
 }
 
 // DNSManagedZonesPatch - Applies a partial update to an existing ManagedZone.
-func (s *managedZones) DNSManagedZonesPatch(ctx context.Context, request operations.DNSManagedZonesPatchRequest) (*operations.DNSManagedZonesPatchResponse, error) {
+func (s *managedZones) DNSManagedZonesPatch(ctx context.Context, request operations.DNSManagedZonesPatchRequest, security operations.DNSManagedZonesPatchSecurity) (*operations.DNSManagedZonesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedZone1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *managedZones) DNSManagedZonesPatch(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,11 +332,11 @@ func (s *managedZones) DNSManagedZonesPatch(ctx context.Context, request operati
 }
 
 // DNSManagedZonesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *managedZones) DNSManagedZonesSetIamPolicy(ctx context.Context, request operations.DNSManagedZonesSetIamPolicyRequest) (*operations.DNSManagedZonesSetIamPolicyResponse, error) {
+func (s *managedZones) DNSManagedZonesSetIamPolicy(ctx context.Context, request operations.DNSManagedZonesSetIamPolicyRequest, security operations.DNSManagedZonesSetIamPolicySecurity) (*operations.DNSManagedZonesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -348,11 +348,11 @@ func (s *managedZones) DNSManagedZonesSetIamPolicy(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -387,11 +387,11 @@ func (s *managedZones) DNSManagedZonesSetIamPolicy(ctx context.Context, request 
 }
 
 // DNSManagedZonesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this returns an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *managedZones) DNSManagedZonesTestIamPermissions(ctx context.Context, request operations.DNSManagedZonesTestIamPermissionsRequest) (*operations.DNSManagedZonesTestIamPermissionsResponse, error) {
+func (s *managedZones) DNSManagedZonesTestIamPermissions(ctx context.Context, request operations.DNSManagedZonesTestIamPermissionsRequest, security operations.DNSManagedZonesTestIamPermissionsSecurity) (*operations.DNSManagedZonesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -403,11 +403,11 @@ func (s *managedZones) DNSManagedZonesTestIamPermissions(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -442,11 +442,11 @@ func (s *managedZones) DNSManagedZonesTestIamPermissions(ctx context.Context, re
 }
 
 // DNSManagedZonesUpdate - Updates an existing ManagedZone.
-func (s *managedZones) DNSManagedZonesUpdate(ctx context.Context, request operations.DNSManagedZonesUpdateRequest) (*operations.DNSManagedZonesUpdateResponse, error) {
+func (s *managedZones) DNSManagedZonesUpdate(ctx context.Context, request operations.DNSManagedZonesUpdateRequest, security operations.DNSManagedZonesUpdateSecurity) (*operations.DNSManagedZonesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedZone1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -458,11 +458,11 @@ func (s *managedZones) DNSManagedZonesUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

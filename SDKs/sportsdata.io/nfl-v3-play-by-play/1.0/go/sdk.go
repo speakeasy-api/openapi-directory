@@ -106,7 +106,7 @@ func New(opts ...SDKOption) *SDK {
 // PlayByPlay - Play By Play
 func (s *SDK) PlayByPlay(ctx context.Context, request operations.PlayByPlayRequest) (*operations.PlayByPlayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlay/{season}/{week}/{hometeam}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlay/{season}/{week}/{hometeam}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *SDK) PlayByPlay(ctx context.Context, request operations.PlayByPlayReque
 // PlayByPlayDelta - Play By Play Delta
 func (s *SDK) PlayByPlayDelta(ctx context.Context, request operations.PlayByPlayDeltaRequest) (*operations.PlayByPlayDeltaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlayDelta/{season}/{week}/{minutes}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlayDelta/{season}/{week}/{minutes}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +195,7 @@ func (s *SDK) PlayByPlayDelta(ctx context.Context, request operations.PlayByPlay
 // Gets simulated live play-by-play of NFL games, covering the Conference Championship games on January 21, 2018.
 func (s *SDK) PlayByPlaySimulation(ctx context.Context, request operations.PlayByPlaySimulationRequest) (*operations.PlayByPlaySimulationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/SimulatedPlayByPlay/{numberofplays}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/SimulatedPlayByPlay/{numberofplays}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

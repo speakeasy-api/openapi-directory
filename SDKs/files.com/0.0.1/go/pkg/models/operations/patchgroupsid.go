@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchGroupsIDPathParams struct {
-	// Group ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchGroupsIDRequestBody struct {
 	// A list of group admin user ids. If sent as a string, should be comma-delimited.
 	AdminIds *string `multipartForm:"name=admin_ids"`
@@ -24,8 +19,9 @@ type PatchGroupsIDRequestBody struct {
 }
 
 type PatchGroupsIDRequest struct {
-	PathParams PatchGroupsIDPathParams
-	Request    *PatchGroupsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchGroupsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Group ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchGroupsIDResponse struct {

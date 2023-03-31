@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDPayrollsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDPayrollsMultipartPathParams struct {
-	// Id of the folder social
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDPayrollsMultipartFormDataAccountingWorkbookEnum string
@@ -93,10 +85,12 @@ type PostSpacesSpaceIDFoldersIDPayrollsMultipartFormData1 struct {
 }
 
 type PostSpacesSpaceIDFoldersIDPayrollsMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDPayrollsMultipartPathParams
 	// Payroll to add or to generate
-	Request  PostSpacesSpaceIDFoldersIDPayrollsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDPayrollsMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDPayrollsMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder social
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDPayrollsMultipart201ApplicationJSON - Id of document created

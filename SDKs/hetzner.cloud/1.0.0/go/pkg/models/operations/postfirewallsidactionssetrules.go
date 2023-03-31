@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostFirewallsIDActionsSetRulesPathParams struct {
-	// ID of the Firewall
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum - Select traffic direction on which rule should be applied. Use `source_ips` for direction `in` and `destination_ips` for direction `out`.
 type PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum string
 
@@ -91,8 +86,9 @@ type PostFirewallsIDActionsSetRulesSetRulesRequest struct {
 }
 
 type PostFirewallsIDActionsSetRulesRequest struct {
-	PathParams PostFirewallsIDActionsSetRulesPathParams
-	Request    *PostFirewallsIDActionsSetRulesSetRulesRequest `request:"mediaType=application/json"`
+	RequestBody *PostFirewallsIDActionsSetRulesSetRulesRequest `request:"mediaType=application/json"`
+	// ID of the Firewall
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostFirewallsIDActionsSetRulesActionsResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworksIDPathParams struct {
+type DeleteNetworksIDRequest struct {
 	// ID of the network
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteNetworksIDRequest struct {
-	PathParams DeleteNetworksIDPathParams
 }
 
 type DeleteNetworksIDResponse struct {

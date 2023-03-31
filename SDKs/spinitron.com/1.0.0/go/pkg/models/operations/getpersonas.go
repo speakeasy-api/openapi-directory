@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPersonasQueryParams struct {
+type GetPersonasRequest struct {
 	// Amount of items to return
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// Allows to select extra fields
@@ -18,10 +18,6 @@ type GetPersonasQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Offset, used together with count
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetPersonasRequest struct {
-	QueryParams GetPersonasQueryParams
 }
 
 type GetPersonas200ApplicationXMLLinks struct {

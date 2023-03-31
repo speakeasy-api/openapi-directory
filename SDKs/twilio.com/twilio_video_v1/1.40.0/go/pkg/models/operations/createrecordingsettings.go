@@ -12,7 +12,8 @@ var CreateRecordingSettingsServerList = []string{
 }
 
 type CreateRecordingSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateRecordingSettingsCreateRecordingSettingsRequest struct {
@@ -28,12 +29,6 @@ type CreateRecordingSettingsCreateRecordingSettingsRequest struct {
 	EncryptionKeySid *string `form:"name=EncryptionKeySid"`
 	// A descriptive string that you create to describe the resource and be shown to users in the console
 	FriendlyName string `form:"name=FriendlyName"`
-}
-
-type CreateRecordingSettingsRequest struct {
-	Request   *CreateRecordingSettingsCreateRecordingSettingsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateRecordingSettingsSecurity
-	ServerURL *string
 }
 
 type CreateRecordingSettingsResponse struct {

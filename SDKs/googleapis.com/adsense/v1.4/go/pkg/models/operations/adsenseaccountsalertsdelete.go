@@ -8,18 +8,15 @@ import (
 )
 
 type AdsenseAccountsAlertsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsenseAccountsAlertsDeletePathParams struct {
+type AdsenseAccountsAlertsDeleteRequest struct {
 	// Account which contains the ad unit.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Alert to delete.
 	AlertID string `pathParam:"style=simple,explode=false,name=alertId"`
-}
-
-type AdsenseAccountsAlertsDeleteQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,12 +31,6 @@ type AdsenseAccountsAlertsDeleteQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsAlertsDeleteRequest struct {
-	PathParams  AdsenseAccountsAlertsDeletePathParams
-	QueryParams AdsenseAccountsAlertsDeleteQueryParams
-	Security    AdsenseAccountsAlertsDeleteSecurity
 }
 
 type AdsenseAccountsAlertsDeleteResponse struct {

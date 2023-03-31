@@ -12,23 +12,21 @@ var ListAvailablePhoneNumberVoipServerList = []string{
 }
 
 type ListAvailablePhoneNumberVoipSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListAvailablePhoneNumberVoipPathParams struct {
+type ListAvailablePhoneNumberVoipRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country from which to read phone numbers.
-	CountryCode string `pathParam:"style=simple,explode=false,name=CountryCode"`
-}
-
-type ListAvailablePhoneNumberVoipQueryParams struct {
 	// The area code of the phone numbers to read. Applies to only phone numbers in the US and Canada.
 	AreaCode *int64 `queryParam:"style=form,explode=true,name=AreaCode"`
 	// Whether to read phone numbers that are new to the Twilio platform. Can be: `true` or `false` and the default is `true`.
 	Beta *bool `queryParam:"style=form,explode=true,name=Beta"`
 	// The pattern on which to match phone numbers. Valid characters are `*`, `0-9`, `a-z`, and `A-Z`. The `*` character matches any single digit. For examples, see [Example 2](https://www.twilio.com/docs/phone-numbers/api/availablephonenumber-resource#local-get-basic-example-2) and [Example 3](https://www.twilio.com/docs/phone-numbers/api/availablephonenumber-resource#local-get-basic-example-3). If specified, this value must have at least two characters.
 	Contains *string `queryParam:"style=form,explode=true,name=Contains"`
+	// The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country from which to read phone numbers.
+	CountryCode string `pathParam:"style=simple,explode=false,name=CountryCode"`
 	// The search radius, in miles, for a `near_` query.  Can be up to `500` and the default is `25`. Applies to only phone numbers in the US and Canada.
 	Distance *int64 `queryParam:"style=form,explode=true,name=Distance"`
 	// Whether to exclude phone numbers that require an [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.
@@ -65,13 +63,6 @@ type ListAvailablePhoneNumberVoipQueryParams struct {
 	SmsEnabled *bool `queryParam:"style=form,explode=true,name=SmsEnabled"`
 	// Whether the phone numbers can receive calls. Can be: `true` or `false`.
 	VoiceEnabled *bool `queryParam:"style=form,explode=true,name=VoiceEnabled"`
-}
-
-type ListAvailablePhoneNumberVoipRequest struct {
-	PathParams  ListAvailablePhoneNumberVoipPathParams
-	QueryParams ListAvailablePhoneNumberVoipQueryParams
-	Security    ListAvailablePhoneNumberVoipSecurity
-	ServerURL   *string
 }
 
 // ListAvailablePhoneNumberVoipListAvailablePhoneNumberVoipResponse - OK

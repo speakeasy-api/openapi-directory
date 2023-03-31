@@ -29,7 +29,6 @@ pkg/models/shared/operation.go
 pkg/models/shared/status.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listoperationsresponse.go
 pkg/models/shared/customclass.go
 pkg/models/shared/classitem.go

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/doubleclickbidmanager/v2/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,75 +15,69 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DoubleclickbidmanagerQueriesCreateRequest(
-    security=operations.DoubleclickbidmanagerQueriesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.DoubleclickbidmanagerQueriesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="autem",
-        alt="json",
-        callback="consequatur",
-        fields="quia",
-        key="aliquid",
-        oauth_token="quisquam",
-        pretty_print=False,
-        quota_user="perferendis",
-        upload_type="vero",
-        upload_protocol="est",
-    ),
-    request=shared.QueryInput(
+    dollar_xgafv="2",
+    query_input=shared.QueryInput(
         metadata=shared.QueryMetadata(
             data_range=shared.DataRange(
                 custom_end_date=shared.Date(
-                    day=6704016312163385261,
-                    month=8600371065106444358,
-                    year=2461961287460019287,
+                    day=592845,
+                    month=715190,
+                    year=844266,
                 ),
                 custom_start_date=shared.Date(
-                    day=4567510374201875481,
-                    month=6636597810052724420,
-                    year=6457918078793888582,
+                    day=602763,
+                    month=857946,
+                    year=544883,
                 ),
-                range="LAST_90_DAYS",
+                range="ALL_TIME",
             ),
-            format="FORMAT_UNSPECIFIED",
+            format="CSV",
             send_notification=False,
             share_email_address=[
-                "earum",
+                "deserunt",
+                "suscipit",
+                "iure",
             ],
-            title="ut",
+            title="Mrs.",
         ),
         params=shared.Parameters(
             filters=[
                 shared.FilterPair(
-                    type="architecto",
-                    value="ipsum",
+                    type="ipsa",
+                    value="delectus",
                 ),
                 shared.FilterPair(
-                    type="excepturi",
-                    value="sit",
+                    type="tempora",
+                    value="suscipit",
+                ),
+                shared.FilterPair(
+                    type="molestiae",
+                    value="minus",
+                ),
+                shared.FilterPair(
+                    type="placeat",
+                    value="voluptatum",
                 ),
             ],
             group_bys=[
-                "optio",
+                "excepturi",
+                "nisi",
             ],
             metrics=[
-                "occaecati",
+                "temporibus",
+                "ab",
                 "quis",
+                "veritatis",
             ],
             options=shared.Options(
-                include_only_targeted_user_lists=True,
+                include_only_targeted_user_lists=False,
                 path_query_options=shared.PathQueryOptions(
                     channel_grouping=shared.ChannelGrouping(
-                        fallback_name="quaerat",
-                        name="culpa",
+                        fallback_name="deserunt",
+                        name="perferendis",
                         rules=[
                             shared.Rule(
                                 disjunctive_match_statements=[
@@ -91,11 +85,44 @@ req = operations.DoubleclickbidmanagerQueriesCreateRequest(
                                         event_filters=[
                                             shared.EventFilter(
                                                 dimension_filter=shared.PathQueryOptionsFilter(
-                                                    filter="pariatur",
+                                                    filter="quo",
                                                     match="UNKNOWN",
                                                     values=[
-                                                        "itaque",
-                                                        "et",
+                                                        "at",
+                                                        "maiores",
+                                                        "molestiae",
+                                                        "quod",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="quod",
+                                                    match="PARTIAL",
+                                                    values=[
+                                                        "porro",
+                                                        "dolorum",
+                                                        "dicta",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="nam",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "fugit",
+                                                        "deleniti",
+                                                        "hic",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="optio",
+                                                    match="PARTIAL",
+                                                    values=[
+                                                        "commodi",
                                                     ],
                                                 ),
                                             ),
@@ -105,35 +132,212 @@ req = operations.DoubleclickbidmanagerQueriesCreateRequest(
                                         event_filters=[
                                             shared.EventFilter(
                                                 dimension_filter=shared.PathQueryOptionsFilter(
-                                                    filter="sint",
-                                                    match="WILDCARD_EXPRESSION",
+                                                    filter="modi",
+                                                    match="UNKNOWN",
                                                     values=[
-                                                        "ut",
+                                                        "cum",
+                                                        "esse",
+                                                        "ipsum",
+                                                        "excepturi",
                                                     ],
                                                 ),
                                             ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="aspernatur",
+                                                    match="UNKNOWN",
+                                                    values=[
+                                                        "natus",
+                                                        "sed",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="dolor",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "hic",
+                                                        "saepe",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="fuga",
+                                                    match="PARTIAL",
+                                                    values=[
+                                                        "iste",
+                                                        "iure",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="saepe",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "ipsa",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
                                             shared.EventFilter(
                                                 dimension_filter=shared.PathQueryOptionsFilter(
                                                     filter="est",
-                                                    match="EXACT",
+                                                    match="BEGINS_WITH",
                                                     values=[
-                                                        "tempora",
+                                                        "dolores",
+                                                        "dolorem",
+                                                        "corporis",
                                                     ],
                                                 ),
                                             ),
                                             shared.EventFilter(
                                                 dimension_filter=shared.PathQueryOptionsFilter(
-                                                    filter="hic",
-                                                    match="UNKNOWN",
+                                                    filter="explicabo",
+                                                    match="BEGINS_WITH",
                                                     values=[
-                                                        "fuga",
+                                                        "omnis",
+                                                        "nemo",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="minima",
+                                                    match="PARTIAL",
+                                                    values=[
+                                                        "iure",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="culpa",
+                                                    match="WILDCARD_EXPRESSION",
+                                                    values=[
+                                                        "architecto",
+                                                        "mollitia",
+                                                        "dolorem",
+                                                        "culpa",
                                                     ],
                                                 ),
                                             ),
                                         ],
                                     ),
                                 ],
-                                name="qui",
+                                name="consequuntur",
+                            ),
+                            shared.Rule(
+                                disjunctive_match_statements=[
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="occaecati",
+                                                    match="EXACT",
+                                                    values=[
+                                                        "quam",
+                                                        "molestiae",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="velit",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "quis",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="vitae",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "enim",
+                                                        "odit",
+                                                        "quo",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="tenetur",
+                                                    match="EXACT",
+                                                    values=[
+                                                        "possimus",
+                                                        "aut",
+                                                        "quasi",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="temporibus",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "reiciendis",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="voluptatibus",
+                                                    match="WILDCARD_EXPRESSION",
+                                                    values=[
+                                                        "praesentium",
+                                                        "voluptatibus",
+                                                    ],
+                                                ),
+                                            ),
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="ipsa",
+                                                    match="BEGINS_WITH",
+                                                    values=[
+                                                        "cum",
+                                                        "perferendis",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="reprehenderit",
+                                                    match="EXACT",
+                                                    values=[
+                                                        "dicta",
+                                                        "corporis",
+                                                        "dolore",
+                                                        "iusto",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                ],
+                                name="dicta",
                             ),
                         ],
                     ),
@@ -142,99 +346,105 @@ req = operations.DoubleclickbidmanagerQueriesCreateRequest(
                             event_filters=[
                                 shared.EventFilter(
                                     dimension_filter=shared.PathQueryOptionsFilter(
-                                        filter="eos",
-                                        match="EXACT",
+                                        filter="accusamus",
+                                        match="PARTIAL",
                                         values=[
+                                            "quae",
                                             "ipsum",
+                                            "quidem",
+                                            "molestias",
                                         ],
                                     ),
                                 ),
                                 shared.EventFilter(
                                     dimension_filter=shared.PathQueryOptionsFilter(
-                                        filter="tenetur",
+                                        filter="excepturi",
                                         match="WILDCARD_EXPRESSION",
                                         values=[
-                                            "blanditiis",
-                                            "ipsa",
+                                            "praesentium",
+                                            "rem",
+                                        ],
+                                    ),
+                                ),
+                            ],
+                            path_match_position="LAST",
+                        ),
+                        shared.PathFilter(
+                            event_filters=[
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="repudiandae",
+                                        match="PARTIAL",
+                                        values=[
+                                            "itaque",
+                                        ],
+                                    ),
+                                ),
+                            ],
+                            path_match_position="ANY",
+                        ),
+                        shared.PathFilter(
+                            event_filters=[
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="consequatur",
+                                        match="BEGINS_WITH",
+                                        values=[
+                                            "explicabo",
+                                            "deserunt",
+                                            "distinctio",
+                                            "quibusdam",
+                                        ],
+                                    ),
+                                ),
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="labore",
+                                        match="EXACT",
+                                        values=[
+                                            "aliquid",
                                         ],
                                     ),
                                 ),
                             ],
                             path_match_position="FIRST",
                         ),
-                        shared.PathFilter(
-                            event_filters=[
-                                shared.EventFilter(
-                                    dimension_filter=shared.PathQueryOptionsFilter(
-                                        filter="delectus",
-                                        match="PARTIAL",
-                                        values=[
-                                            "sint",
-                                            "aliquid",
-                                        ],
-                                    ),
-                                ),
-                                shared.EventFilter(
-                                    dimension_filter=shared.PathQueryOptionsFilter(
-                                        filter="quos",
-                                        match="WILDCARD_EXPRESSION",
-                                        values=[
-                                            "nihil",
-                                            "hic",
-                                        ],
-                                    ),
-                                ),
-                                shared.EventFilter(
-                                    dimension_filter=shared.PathQueryOptionsFilter(
-                                        filter="saepe",
-                                        match="BEGINS_WITH",
-                                        values=[
-                                            "aut",
-                                            "ut",
-                                            "unde",
-                                        ],
-                                    ),
-                                ),
-                            ],
-                            path_match_position="ANY",
-                        ),
-                        shared.PathFilter(
-                            event_filters=[
-                                shared.EventFilter(
-                                    dimension_filter=shared.PathQueryOptionsFilter(
-                                        filter="et",
-                                        match="WILDCARD_EXPRESSION",
-                                        values=[
-                                            "culpa",
-                                        ],
-                                    ),
-                                ),
-                            ],
-                            path_match_position="ANY",
-                        ),
                     ],
                 ),
             ),
-            type="REPORT_TYPE_UNSPECIFIED",
+            type="GRP",
         ),
         schedule=shared.QuerySchedule(
             end_date=shared.Date(
-                day=8367989002648934709,
-                month=5382645072164701766,
-                year=6059411360258213086,
+                day=20107,
+                month=164940,
+                year=828940,
             ),
-            frequency="QUARTERLY",
-            next_run_timezone_code="ut",
+            frequency="DAILY",
+            next_run_timezone_code="alias",
             start_date=shared.Date(
-                day=7350087388602518171,
-                month=2960915193202577470,
-                year=1333898400016087624,
+                day=146441,
+                month=677817,
+                year=569618,
             ),
         ),
     ),
+    access_token="tempora",
+    alt="proto",
+    callback="tempore",
+    fields_="labore",
+    key="delectus",
+    oauth_token="eum",
+    pretty_print=False,
+    quota_user="non",
+    upload_type="eligendi",
+    upload_protocol="sint",
 )
     
-res = s.queries.doubleclickbidmanager_queries_create(req)
+res = s.queries.doubleclickbidmanager_queries_create(req, operations.DoubleclickbidmanagerQueriesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.query is not None:
     # handle response
@@ -242,7 +452,8 @@ if res.query is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### queries
 
@@ -253,7 +464,17 @@ if res.query is not None:
 * `doubleclickbidmanager_queries_reports_get` - Retrieves a report.
 * `doubleclickbidmanager_queries_reports_list` - Lists reports associated with a query.
 * `doubleclickbidmanager_queries_run` - Runs a stored query to generate a report.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

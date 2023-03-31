@@ -13,17 +13,8 @@ var CreateChannelServerList = []string{
 }
 
 type CreateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateChannelPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the Channel resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type CreateChannelHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateChannelCreateChannelRequest struct {
@@ -43,11 +34,11 @@ type CreateChannelCreateChannelRequest struct {
 }
 
 type CreateChannelRequest struct {
-	PathParams CreateChannelPathParams
-	Headers    CreateChannelHeaders
-	Request    *CreateChannelCreateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateChannelSecurity
-	ServerURL  *string
+	RequestBody *CreateChannelCreateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the Channel resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateChannelResponse struct {

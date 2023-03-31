@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PurchaseTokenPathParams struct {
-	AuthorizationToken string `pathParam:"style=simple,explode=false,name=authorizationToken"`
-}
-
 type PurchaseTokenRequest struct {
-	PathParams PurchaseTokenPathParams
-	Request    *shared.CustomerTokenCreationRequest `request:"mediaType=application/json"`
+	AuthorizationToken           string                               `pathParam:"style=simple,explode=false,name=authorizationToken"`
+	CustomerTokenCreationRequest *shared.CustomerTokenCreationRequest `request:"mediaType=application/json"`
 }
 
 type PurchaseTokenResponse struct {

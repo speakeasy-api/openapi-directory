@@ -37,7 +37,7 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetServiceByID - Get service
 func (s *services) GetServiceByID(ctx context.Context, request operations.GetServiceByIDRequest) (*operations.GetServiceByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/services/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/services/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *services) GetServices(ctx context.Context, request operations.GetServic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -129,9 +129,9 @@ func (s *services) GetServices(ctx context.Context, request operations.GetServic
 // UpdateService - Update existing service
 func (s *services) UpdateService(ctx context.Context, request operations.UpdateServiceRequest) (*operations.UpdateServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/services/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/services/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

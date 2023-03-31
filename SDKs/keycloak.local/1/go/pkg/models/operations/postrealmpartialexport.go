@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmPartialExportPathParams struct {
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmPartialExportQueryParams struct {
+type PostRealmPartialExportRequest struct {
 	ExportClients        *bool `queryParam:"style=form,explode=true,name=exportClients"`
 	ExportGroupsAndRoles *bool `queryParam:"style=form,explode=true,name=exportGroupsAndRoles"`
-}
-
-type PostRealmPartialExportRequest struct {
-	PathParams  PostRealmPartialExportPathParams
-	QueryParams PostRealmPartialExportQueryParams
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 }
 
 type PostRealmPartialExportResponse struct {

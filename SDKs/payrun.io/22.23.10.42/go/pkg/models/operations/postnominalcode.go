@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostNominalCodePathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type PostNominalCodeHeaders struct {
+type PostNominalCodeRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostNominalCodeRequest struct {
-	PathParams PostNominalCodePathParams
-	Headers    PostNominalCodeHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The nominal code object.
-	Request shared.NominalCode `request:"mediaType=application/json"`
+	NominalCode shared.NominalCode `request:"mediaType=application/json"`
 }
 
 type PostNominalCodeResponse struct {

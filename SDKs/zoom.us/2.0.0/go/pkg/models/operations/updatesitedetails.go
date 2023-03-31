@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateSiteDetailsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateSiteDetailsPathParams struct {
-	// Unique Identifier of the Site.
-	SiteID string `pathParam:"style=simple,explode=false,name=siteId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateSiteDetailsApplicationJSON struct {
@@ -24,9 +18,9 @@ type UpdateSiteDetailsApplicationJSON struct {
 }
 
 type UpdateSiteDetailsRequest struct {
-	PathParams UpdateSiteDetailsPathParams
-	Request    *UpdateSiteDetailsApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateSiteDetailsSecurity
+	RequestBody *UpdateSiteDetailsApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Site.
+	SiteID string `pathParam:"style=simple,explode=false,name=siteId"`
 }
 
 type UpdateSiteDetailsResponse struct {

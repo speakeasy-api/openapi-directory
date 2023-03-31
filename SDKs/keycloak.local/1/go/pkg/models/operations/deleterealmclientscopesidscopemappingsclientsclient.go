@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRealmClientScopesIDScopeMappingsClientsClientPathParams struct {
-	Client string `pathParam:"style=simple,explode=false,name=client"`
+type DeleteRealmClientScopesIDScopeMappingsClientsClientRequest struct {
+	RequestBody []shared.RoleRepresentation `request:"mediaType=application/json"`
+	Client      string                      `pathParam:"style=simple,explode=false,name=client"`
 	// id of client scope (not name)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmClientScopesIDScopeMappingsClientsClientRequest struct {
-	PathParams DeleteRealmClientScopesIDScopeMappingsClientsClientPathParams
-	Request    []shared.RoleRepresentation `request:"mediaType=application/json"`
 }
 
 type DeleteRealmClientScopesIDScopeMappingsClientsClientResponse struct {

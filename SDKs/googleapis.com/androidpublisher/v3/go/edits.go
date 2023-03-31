@@ -32,11 +32,11 @@ func newEdits(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // AndroidpublisherEditsApksAddexternallyhosted - Creates a new APK without uploading the APK itself to Google Play, instead hosting the APK at a specified URL. This function is only available to organizations using Managed Play whose application is configured to restrict distribution to the organizations.
-func (s *edits) AndroidpublisherEditsApksAddexternallyhosted(ctx context.Context, request operations.AndroidpublisherEditsApksAddexternallyhostedRequest) (*operations.AndroidpublisherEditsApksAddexternallyhostedResponse, error) {
+func (s *edits) AndroidpublisherEditsApksAddexternallyhosted(ctx context.Context, request operations.AndroidpublisherEditsApksAddexternallyhostedRequest, security operations.AndroidpublisherEditsApksAddexternallyhostedSecurity) (*operations.AndroidpublisherEditsApksAddexternallyhostedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/externallyHosted", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/externallyHosted", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApksAddExternallyHostedRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *edits) AndroidpublisherEditsApksAddexternallyhosted(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *edits) AndroidpublisherEditsApksAddexternallyhosted(ctx context.Context
 }
 
 // AndroidpublisherEditsApksList - Lists all current APKs of the app and edit.
-func (s *edits) AndroidpublisherEditsApksList(ctx context.Context, request operations.AndroidpublisherEditsApksListRequest) (*operations.AndroidpublisherEditsApksListResponse, error) {
+func (s *edits) AndroidpublisherEditsApksList(ctx context.Context, request operations.AndroidpublisherEditsApksListRequest, security operations.AndroidpublisherEditsApksListSecurity) (*operations.AndroidpublisherEditsApksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *edits) AndroidpublisherEditsApksList(ctx context.Context, request opera
 }
 
 // AndroidpublisherEditsApksUpload - Uploads an APK and adds to the current edit.
-func (s *edits) AndroidpublisherEditsApksUpload(ctx context.Context, request operations.AndroidpublisherEditsApksUploadRequest) (*operations.AndroidpublisherEditsApksUploadResponse, error) {
+func (s *edits) AndroidpublisherEditsApksUpload(ctx context.Context, request operations.AndroidpublisherEditsApksUploadRequest, security operations.AndroidpublisherEditsApksUploadSecurity) (*operations.AndroidpublisherEditsApksUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *edits) AndroidpublisherEditsApksUpload(ctx context.Context, request ope
 }
 
 // AndroidpublisherEditsBundlesList - Lists all current Android App Bundles of the app and edit.
-func (s *edits) AndroidpublisherEditsBundlesList(ctx context.Context, request operations.AndroidpublisherEditsBundlesListRequest) (*operations.AndroidpublisherEditsBundlesListResponse, error) {
+func (s *edits) AndroidpublisherEditsBundlesList(ctx context.Context, request operations.AndroidpublisherEditsBundlesListRequest, security operations.AndroidpublisherEditsBundlesListSecurity) (*operations.AndroidpublisherEditsBundlesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/bundles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/bundles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *edits) AndroidpublisherEditsBundlesList(ctx context.Context, request op
 }
 
 // AndroidpublisherEditsBundlesUpload - Uploads a new Android App Bundle to this edit. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
-func (s *edits) AndroidpublisherEditsBundlesUpload(ctx context.Context, request operations.AndroidpublisherEditsBundlesUploadRequest) (*operations.AndroidpublisherEditsBundlesUploadResponse, error) {
+func (s *edits) AndroidpublisherEditsBundlesUpload(ctx context.Context, request operations.AndroidpublisherEditsBundlesUploadRequest, security operations.AndroidpublisherEditsBundlesUploadSecurity) (*operations.AndroidpublisherEditsBundlesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/bundles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/bundles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *edits) AndroidpublisherEditsBundlesUpload(ctx context.Context, request 
 }
 
 // AndroidpublisherEditsCommit - Commits an app edit.
-func (s *edits) AndroidpublisherEditsCommit(ctx context.Context, request operations.AndroidpublisherEditsCommitRequest) (*operations.AndroidpublisherEditsCommitResponse, error) {
+func (s *edits) AndroidpublisherEditsCommit(ctx context.Context, request operations.AndroidpublisherEditsCommitRequest, security operations.AndroidpublisherEditsCommitSecurity) (*operations.AndroidpublisherEditsCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}:commit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}:commit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,20 +327,20 @@ func (s *edits) AndroidpublisherEditsCommit(ctx context.Context, request operati
 }
 
 // AndroidpublisherEditsCountryavailabilityGet - Gets country availability.
-func (s *edits) AndroidpublisherEditsCountryavailabilityGet(ctx context.Context, request operations.AndroidpublisherEditsCountryavailabilityGetRequest) (*operations.AndroidpublisherEditsCountryavailabilityGetResponse, error) {
+func (s *edits) AndroidpublisherEditsCountryavailabilityGet(ctx context.Context, request operations.AndroidpublisherEditsCountryavailabilityGetRequest, security operations.AndroidpublisherEditsCountryavailabilityGetSecurity) (*operations.AndroidpublisherEditsCountryavailabilityGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/countryAvailability/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/countryAvailability/{track}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -375,20 +375,20 @@ func (s *edits) AndroidpublisherEditsCountryavailabilityGet(ctx context.Context,
 }
 
 // AndroidpublisherEditsDelete - Deletes an app edit.
-func (s *edits) AndroidpublisherEditsDelete(ctx context.Context, request operations.AndroidpublisherEditsDeleteRequest) (*operations.AndroidpublisherEditsDeleteResponse, error) {
+func (s *edits) AndroidpublisherEditsDelete(ctx context.Context, request operations.AndroidpublisherEditsDeleteRequest, security operations.AndroidpublisherEditsDeleteSecurity) (*operations.AndroidpublisherEditsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -414,20 +414,20 @@ func (s *edits) AndroidpublisherEditsDelete(ctx context.Context, request operati
 }
 
 // AndroidpublisherEditsDeobfuscationfilesUpload - Uploads a new deobfuscation file and attaches to the specified APK.
-func (s *edits) AndroidpublisherEditsDeobfuscationfilesUpload(ctx context.Context, request operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest) (*operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse, error) {
+func (s *edits) AndroidpublisherEditsDeobfuscationfilesUpload(ctx context.Context, request operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest, security operations.AndroidpublisherEditsDeobfuscationfilesUploadSecurity) (*operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -462,20 +462,20 @@ func (s *edits) AndroidpublisherEditsDeobfuscationfilesUpload(ctx context.Contex
 }
 
 // AndroidpublisherEditsDetailsGet - Gets details of an app.
-func (s *edits) AndroidpublisherEditsDetailsGet(ctx context.Context, request operations.AndroidpublisherEditsDetailsGetRequest) (*operations.AndroidpublisherEditsDetailsGetResponse, error) {
+func (s *edits) AndroidpublisherEditsDetailsGet(ctx context.Context, request operations.AndroidpublisherEditsDetailsGetRequest, security operations.AndroidpublisherEditsDetailsGetSecurity) (*operations.AndroidpublisherEditsDetailsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -510,11 +510,11 @@ func (s *edits) AndroidpublisherEditsDetailsGet(ctx context.Context, request ope
 }
 
 // AndroidpublisherEditsDetailsPatch - Patches details of an app.
-func (s *edits) AndroidpublisherEditsDetailsPatch(ctx context.Context, request operations.AndroidpublisherEditsDetailsPatchRequest) (*operations.AndroidpublisherEditsDetailsPatchResponse, error) {
+func (s *edits) AndroidpublisherEditsDetailsPatch(ctx context.Context, request operations.AndroidpublisherEditsDetailsPatchRequest, security operations.AndroidpublisherEditsDetailsPatchSecurity) (*operations.AndroidpublisherEditsDetailsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/details", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppDetails", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -526,11 +526,11 @@ func (s *edits) AndroidpublisherEditsDetailsPatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -565,11 +565,11 @@ func (s *edits) AndroidpublisherEditsDetailsPatch(ctx context.Context, request o
 }
 
 // AndroidpublisherEditsDetailsUpdate - Updates details of an app.
-func (s *edits) AndroidpublisherEditsDetailsUpdate(ctx context.Context, request operations.AndroidpublisherEditsDetailsUpdateRequest) (*operations.AndroidpublisherEditsDetailsUpdateResponse, error) {
+func (s *edits) AndroidpublisherEditsDetailsUpdate(ctx context.Context, request operations.AndroidpublisherEditsDetailsUpdateRequest, security operations.AndroidpublisherEditsDetailsUpdateSecurity) (*operations.AndroidpublisherEditsDetailsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/details", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppDetails", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -581,11 +581,11 @@ func (s *edits) AndroidpublisherEditsDetailsUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -620,20 +620,20 @@ func (s *edits) AndroidpublisherEditsDetailsUpdate(ctx context.Context, request 
 }
 
 // AndroidpublisherEditsExpansionfilesGet - Fetches the expansion file configuration for the specified APK.
-func (s *edits) AndroidpublisherEditsExpansionfilesGet(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesGetRequest) (*operations.AndroidpublisherEditsExpansionfilesGetResponse, error) {
+func (s *edits) AndroidpublisherEditsExpansionfilesGet(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesGetRequest, security operations.AndroidpublisherEditsExpansionfilesGetSecurity) (*operations.AndroidpublisherEditsExpansionfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -668,11 +668,11 @@ func (s *edits) AndroidpublisherEditsExpansionfilesGet(ctx context.Context, requ
 }
 
 // AndroidpublisherEditsExpansionfilesPatch - Patches the APK's expansion file configuration to reference another APK's expansion file. To add a new expansion file use the Upload method.
-func (s *edits) AndroidpublisherEditsExpansionfilesPatch(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesPatchRequest) (*operations.AndroidpublisherEditsExpansionfilesPatchResponse, error) {
+func (s *edits) AndroidpublisherEditsExpansionfilesPatch(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesPatchRequest, security operations.AndroidpublisherEditsExpansionfilesPatchSecurity) (*operations.AndroidpublisherEditsExpansionfilesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExpansionFile", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -684,11 +684,11 @@ func (s *edits) AndroidpublisherEditsExpansionfilesPatch(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -723,11 +723,11 @@ func (s *edits) AndroidpublisherEditsExpansionfilesPatch(ctx context.Context, re
 }
 
 // AndroidpublisherEditsExpansionfilesUpdate - Updates the APK's expansion file configuration to reference another APK's expansion file. To add a new expansion file use the Upload method.
-func (s *edits) AndroidpublisherEditsExpansionfilesUpdate(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesUpdateRequest) (*operations.AndroidpublisherEditsExpansionfilesUpdateResponse, error) {
+func (s *edits) AndroidpublisherEditsExpansionfilesUpdate(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesUpdateRequest, security operations.AndroidpublisherEditsExpansionfilesUpdateSecurity) (*operations.AndroidpublisherEditsExpansionfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExpansionFile", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -739,11 +739,11 @@ func (s *edits) AndroidpublisherEditsExpansionfilesUpdate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -778,20 +778,20 @@ func (s *edits) AndroidpublisherEditsExpansionfilesUpdate(ctx context.Context, r
 }
 
 // AndroidpublisherEditsExpansionfilesUpload - Uploads a new expansion file and attaches to the specified APK.
-func (s *edits) AndroidpublisherEditsExpansionfilesUpload(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesUploadRequest) (*operations.AndroidpublisherEditsExpansionfilesUploadResponse, error) {
+func (s *edits) AndroidpublisherEditsExpansionfilesUpload(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesUploadRequest, security operations.AndroidpublisherEditsExpansionfilesUploadSecurity) (*operations.AndroidpublisherEditsExpansionfilesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -826,20 +826,20 @@ func (s *edits) AndroidpublisherEditsExpansionfilesUpload(ctx context.Context, r
 }
 
 // AndroidpublisherEditsGet - Gets an app edit.
-func (s *edits) AndroidpublisherEditsGet(ctx context.Context, request operations.AndroidpublisherEditsGetRequest) (*operations.AndroidpublisherEditsGetResponse, error) {
+func (s *edits) AndroidpublisherEditsGet(ctx context.Context, request operations.AndroidpublisherEditsGetRequest, security operations.AndroidpublisherEditsGetSecurity) (*operations.AndroidpublisherEditsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -874,20 +874,20 @@ func (s *edits) AndroidpublisherEditsGet(ctx context.Context, request operations
 }
 
 // AndroidpublisherEditsImagesDelete - Deletes the image (specified by id) from the edit.
-func (s *edits) AndroidpublisherEditsImagesDelete(ctx context.Context, request operations.AndroidpublisherEditsImagesDeleteRequest) (*operations.AndroidpublisherEditsImagesDeleteResponse, error) {
+func (s *edits) AndroidpublisherEditsImagesDelete(ctx context.Context, request operations.AndroidpublisherEditsImagesDeleteRequest, security operations.AndroidpublisherEditsImagesDeleteSecurity) (*operations.AndroidpublisherEditsImagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -913,20 +913,20 @@ func (s *edits) AndroidpublisherEditsImagesDelete(ctx context.Context, request o
 }
 
 // AndroidpublisherEditsImagesDeleteall - Deletes all images for the specified language and image type. Returns an empty response if no images are found.
-func (s *edits) AndroidpublisherEditsImagesDeleteall(ctx context.Context, request operations.AndroidpublisherEditsImagesDeleteallRequest) (*operations.AndroidpublisherEditsImagesDeleteallResponse, error) {
+func (s *edits) AndroidpublisherEditsImagesDeleteall(ctx context.Context, request operations.AndroidpublisherEditsImagesDeleteallRequest, security operations.AndroidpublisherEditsImagesDeleteallSecurity) (*operations.AndroidpublisherEditsImagesDeleteallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -961,20 +961,20 @@ func (s *edits) AndroidpublisherEditsImagesDeleteall(ctx context.Context, reques
 }
 
 // AndroidpublisherEditsImagesList - Lists all images. The response may be empty.
-func (s *edits) AndroidpublisherEditsImagesList(ctx context.Context, request operations.AndroidpublisherEditsImagesListRequest) (*operations.AndroidpublisherEditsImagesListResponse, error) {
+func (s *edits) AndroidpublisherEditsImagesList(ctx context.Context, request operations.AndroidpublisherEditsImagesListRequest, security operations.AndroidpublisherEditsImagesListSecurity) (*operations.AndroidpublisherEditsImagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1009,20 +1009,20 @@ func (s *edits) AndroidpublisherEditsImagesList(ctx context.Context, request ope
 }
 
 // AndroidpublisherEditsImagesUpload - Uploads an image of the specified language and image type, and adds to the edit.
-func (s *edits) AndroidpublisherEditsImagesUpload(ctx context.Context, request operations.AndroidpublisherEditsImagesUploadRequest) (*operations.AndroidpublisherEditsImagesUploadResponse, error) {
+func (s *edits) AndroidpublisherEditsImagesUpload(ctx context.Context, request operations.AndroidpublisherEditsImagesUploadRequest, security operations.AndroidpublisherEditsImagesUploadSecurity) (*operations.AndroidpublisherEditsImagesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1057,20 +1057,20 @@ func (s *edits) AndroidpublisherEditsImagesUpload(ctx context.Context, request o
 }
 
 // AndroidpublisherEditsInsert - Creates a new edit for an app.
-func (s *edits) AndroidpublisherEditsInsert(ctx context.Context, request operations.AndroidpublisherEditsInsertRequest) (*operations.AndroidpublisherEditsInsertResponse, error) {
+func (s *edits) AndroidpublisherEditsInsert(ctx context.Context, request operations.AndroidpublisherEditsInsertRequest, security operations.AndroidpublisherEditsInsertSecurity) (*operations.AndroidpublisherEditsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1105,20 +1105,20 @@ func (s *edits) AndroidpublisherEditsInsert(ctx context.Context, request operati
 }
 
 // AndroidpublisherEditsListingsDelete - Deletes a localized store listing.
-func (s *edits) AndroidpublisherEditsListingsDelete(ctx context.Context, request operations.AndroidpublisherEditsListingsDeleteRequest) (*operations.AndroidpublisherEditsListingsDeleteResponse, error) {
+func (s *edits) AndroidpublisherEditsListingsDelete(ctx context.Context, request operations.AndroidpublisherEditsListingsDeleteRequest, security operations.AndroidpublisherEditsListingsDeleteSecurity) (*operations.AndroidpublisherEditsListingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1144,20 +1144,20 @@ func (s *edits) AndroidpublisherEditsListingsDelete(ctx context.Context, request
 }
 
 // AndroidpublisherEditsListingsDeleteall - Deletes all store listings.
-func (s *edits) AndroidpublisherEditsListingsDeleteall(ctx context.Context, request operations.AndroidpublisherEditsListingsDeleteallRequest) (*operations.AndroidpublisherEditsListingsDeleteallResponse, error) {
+func (s *edits) AndroidpublisherEditsListingsDeleteall(ctx context.Context, request operations.AndroidpublisherEditsListingsDeleteallRequest, security operations.AndroidpublisherEditsListingsDeleteallSecurity) (*operations.AndroidpublisherEditsListingsDeleteallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1183,20 +1183,20 @@ func (s *edits) AndroidpublisherEditsListingsDeleteall(ctx context.Context, requ
 }
 
 // AndroidpublisherEditsListingsGet - Gets a localized store listing.
-func (s *edits) AndroidpublisherEditsListingsGet(ctx context.Context, request operations.AndroidpublisherEditsListingsGetRequest) (*operations.AndroidpublisherEditsListingsGetResponse, error) {
+func (s *edits) AndroidpublisherEditsListingsGet(ctx context.Context, request operations.AndroidpublisherEditsListingsGetRequest, security operations.AndroidpublisherEditsListingsGetSecurity) (*operations.AndroidpublisherEditsListingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1231,20 +1231,20 @@ func (s *edits) AndroidpublisherEditsListingsGet(ctx context.Context, request op
 }
 
 // AndroidpublisherEditsListingsList - Lists all localized store listings.
-func (s *edits) AndroidpublisherEditsListingsList(ctx context.Context, request operations.AndroidpublisherEditsListingsListRequest) (*operations.AndroidpublisherEditsListingsListResponse, error) {
+func (s *edits) AndroidpublisherEditsListingsList(ctx context.Context, request operations.AndroidpublisherEditsListingsListRequest, security operations.AndroidpublisherEditsListingsListSecurity) (*operations.AndroidpublisherEditsListingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1279,11 +1279,11 @@ func (s *edits) AndroidpublisherEditsListingsList(ctx context.Context, request o
 }
 
 // AndroidpublisherEditsListingsPatch - Patches a localized store listing.
-func (s *edits) AndroidpublisherEditsListingsPatch(ctx context.Context, request operations.AndroidpublisherEditsListingsPatchRequest) (*operations.AndroidpublisherEditsListingsPatchResponse, error) {
+func (s *edits) AndroidpublisherEditsListingsPatch(ctx context.Context, request operations.AndroidpublisherEditsListingsPatchRequest, security operations.AndroidpublisherEditsListingsPatchSecurity) (*operations.AndroidpublisherEditsListingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Listing", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1295,11 +1295,11 @@ func (s *edits) AndroidpublisherEditsListingsPatch(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1334,11 +1334,11 @@ func (s *edits) AndroidpublisherEditsListingsPatch(ctx context.Context, request 
 }
 
 // AndroidpublisherEditsListingsUpdate - Creates or updates a localized store listing.
-func (s *edits) AndroidpublisherEditsListingsUpdate(ctx context.Context, request operations.AndroidpublisherEditsListingsUpdateRequest) (*operations.AndroidpublisherEditsListingsUpdateResponse, error) {
+func (s *edits) AndroidpublisherEditsListingsUpdate(ctx context.Context, request operations.AndroidpublisherEditsListingsUpdateRequest, security operations.AndroidpublisherEditsListingsUpdateSecurity) (*operations.AndroidpublisherEditsListingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Listing", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1350,11 +1350,11 @@ func (s *edits) AndroidpublisherEditsListingsUpdate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1389,20 +1389,20 @@ func (s *edits) AndroidpublisherEditsListingsUpdate(ctx context.Context, request
 }
 
 // AndroidpublisherEditsTestersGet - Gets testers. Note: Testers resource does not support email lists.
-func (s *edits) AndroidpublisherEditsTestersGet(ctx context.Context, request operations.AndroidpublisherEditsTestersGetRequest) (*operations.AndroidpublisherEditsTestersGetResponse, error) {
+func (s *edits) AndroidpublisherEditsTestersGet(ctx context.Context, request operations.AndroidpublisherEditsTestersGetRequest, security operations.AndroidpublisherEditsTestersGetSecurity) (*operations.AndroidpublisherEditsTestersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1437,11 +1437,11 @@ func (s *edits) AndroidpublisherEditsTestersGet(ctx context.Context, request ope
 }
 
 // AndroidpublisherEditsTestersPatch - Patches testers. Note: Testers resource does not support email lists.
-func (s *edits) AndroidpublisherEditsTestersPatch(ctx context.Context, request operations.AndroidpublisherEditsTestersPatchRequest) (*operations.AndroidpublisherEditsTestersPatchResponse, error) {
+func (s *edits) AndroidpublisherEditsTestersPatch(ctx context.Context, request operations.AndroidpublisherEditsTestersPatchRequest, security operations.AndroidpublisherEditsTestersPatchSecurity) (*operations.AndroidpublisherEditsTestersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Testers", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1453,11 +1453,11 @@ func (s *edits) AndroidpublisherEditsTestersPatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1492,11 +1492,11 @@ func (s *edits) AndroidpublisherEditsTestersPatch(ctx context.Context, request o
 }
 
 // AndroidpublisherEditsTestersUpdate - Updates testers. Note: Testers resource does not support email lists.
-func (s *edits) AndroidpublisherEditsTestersUpdate(ctx context.Context, request operations.AndroidpublisherEditsTestersUpdateRequest) (*operations.AndroidpublisherEditsTestersUpdateResponse, error) {
+func (s *edits) AndroidpublisherEditsTestersUpdate(ctx context.Context, request operations.AndroidpublisherEditsTestersUpdateRequest, security operations.AndroidpublisherEditsTestersUpdateSecurity) (*operations.AndroidpublisherEditsTestersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Testers", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1508,11 +1508,11 @@ func (s *edits) AndroidpublisherEditsTestersUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1547,20 +1547,20 @@ func (s *edits) AndroidpublisherEditsTestersUpdate(ctx context.Context, request 
 }
 
 // AndroidpublisherEditsTracksGet - Gets a track.
-func (s *edits) AndroidpublisherEditsTracksGet(ctx context.Context, request operations.AndroidpublisherEditsTracksGetRequest) (*operations.AndroidpublisherEditsTracksGetResponse, error) {
+func (s *edits) AndroidpublisherEditsTracksGet(ctx context.Context, request operations.AndroidpublisherEditsTracksGetRequest, security operations.AndroidpublisherEditsTracksGetSecurity) (*operations.AndroidpublisherEditsTracksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1595,20 +1595,20 @@ func (s *edits) AndroidpublisherEditsTracksGet(ctx context.Context, request oper
 }
 
 // AndroidpublisherEditsTracksList - Lists all tracks.
-func (s *edits) AndroidpublisherEditsTracksList(ctx context.Context, request operations.AndroidpublisherEditsTracksListRequest) (*operations.AndroidpublisherEditsTracksListResponse, error) {
+func (s *edits) AndroidpublisherEditsTracksList(ctx context.Context, request operations.AndroidpublisherEditsTracksListRequest, security operations.AndroidpublisherEditsTracksListSecurity) (*operations.AndroidpublisherEditsTracksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1643,11 +1643,11 @@ func (s *edits) AndroidpublisherEditsTracksList(ctx context.Context, request ope
 }
 
 // AndroidpublisherEditsTracksPatch - Patches a track.
-func (s *edits) AndroidpublisherEditsTracksPatch(ctx context.Context, request operations.AndroidpublisherEditsTracksPatchRequest) (*operations.AndroidpublisherEditsTracksPatchResponse, error) {
+func (s *edits) AndroidpublisherEditsTracksPatch(ctx context.Context, request operations.AndroidpublisherEditsTracksPatchRequest, security operations.AndroidpublisherEditsTracksPatchSecurity) (*operations.AndroidpublisherEditsTracksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Track1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1659,11 +1659,11 @@ func (s *edits) AndroidpublisherEditsTracksPatch(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1698,11 +1698,11 @@ func (s *edits) AndroidpublisherEditsTracksPatch(ctx context.Context, request op
 }
 
 // AndroidpublisherEditsTracksUpdate - Updates a track.
-func (s *edits) AndroidpublisherEditsTracksUpdate(ctx context.Context, request operations.AndroidpublisherEditsTracksUpdateRequest) (*operations.AndroidpublisherEditsTracksUpdateResponse, error) {
+func (s *edits) AndroidpublisherEditsTracksUpdate(ctx context.Context, request operations.AndroidpublisherEditsTracksUpdateRequest, security operations.AndroidpublisherEditsTracksUpdateSecurity) (*operations.AndroidpublisherEditsTracksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Track1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1714,11 +1714,11 @@ func (s *edits) AndroidpublisherEditsTracksUpdate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1753,20 +1753,20 @@ func (s *edits) AndroidpublisherEditsTracksUpdate(ctx context.Context, request o
 }
 
 // AndroidpublisherEditsValidate - Validates an app edit.
-func (s *edits) AndroidpublisherEditsValidate(ctx context.Context, request operations.AndroidpublisherEditsValidateRequest) (*operations.AndroidpublisherEditsValidateResponse, error) {
+func (s *edits) AndroidpublisherEditsValidate(ctx context.Context, request operations.AndroidpublisherEditsValidateRequest, security operations.AndroidpublisherEditsValidateSecurity) (*operations.AndroidpublisherEditsValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}:validate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/edits/{editId}:validate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

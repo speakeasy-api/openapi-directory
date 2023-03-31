@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferRepaymentReturnListRequest struct {
-	Request shared.TransferRepaymentReturnListRequest `request:"mediaType=application/json"`
-}
 
 type TransferRepaymentReturnListResponse struct {
 	ContentType string

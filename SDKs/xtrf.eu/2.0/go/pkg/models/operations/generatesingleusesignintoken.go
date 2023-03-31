@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateSingleUseSignInTokenRequest struct {
-	// Generated sign-in token.
-	Request shared.AccessTokenRequestDTO `request:"mediaType=application/json"`
-}
-
 type GenerateSingleUseSignInTokenResponse struct {
 	// Success
 	AccessTokenDTO *shared.AccessTokenDTO

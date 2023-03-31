@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteTranscriptionServerList = []string{
@@ -12,20 +11,15 @@ var DeleteTranscriptionServerList = []string{
 }
 
 type DeleteTranscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteTranscriptionPathParams struct {
+type DeleteTranscriptionRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the Transcription resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteTranscriptionRequest struct {
-	PathParams DeleteTranscriptionPathParams
-	Security   DeleteTranscriptionSecurity
-	ServerURL  *string
 }
 
 type DeleteTranscriptionResponse struct {

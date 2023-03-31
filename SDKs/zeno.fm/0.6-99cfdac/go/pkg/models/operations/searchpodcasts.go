@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SearchPodcastsRequest struct {
-	Request shared.PodcastSearchParams `request:"mediaType=application/json"`
-}
 
 type SearchPodcastsResponse struct {
 	Body        []byte

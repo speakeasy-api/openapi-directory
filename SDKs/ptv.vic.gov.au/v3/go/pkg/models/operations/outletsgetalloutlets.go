@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OutletsGetAllOutletsQueryParams struct {
+type OutletsGetAllOutletsRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Maximum number of results returned (default = 30)
@@ -16,10 +16,6 @@ type OutletsGetAllOutletsQueryParams struct {
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type OutletsGetAllOutletsRequest struct {
-	QueryParams OutletsGetAllOutletsQueryParams
 }
 
 type OutletsGetAllOutletsResponse struct {

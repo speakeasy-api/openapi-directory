@@ -7,17 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PUTUpdateNotificationDefinitionPathParams struct {
-	// The ID of the notification definition to be updated.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PUTUpdateNotificationDefinitionHeaders struct {
+type PUTUpdateNotificationDefinitionRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// The request body of the notification definition to be updated.
+	PUTPublicNotificationDefinitionRequest shared.PUTPublicNotificationDefinitionRequest `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -26,13 +23,8 @@ type PUTUpdateNotificationDefinitionHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type PUTUpdateNotificationDefinitionRequest struct {
-	PathParams PUTUpdateNotificationDefinitionPathParams
-	Headers    PUTUpdateNotificationDefinitionHeaders
-	// The request body of the notification definition to be updated.
-	Request shared.PUTPublicNotificationDefinitionRequest `request:"mediaType=application/json"`
+	// The ID of the notification definition to be updated.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PUTUpdateNotificationDefinitionResponse struct {

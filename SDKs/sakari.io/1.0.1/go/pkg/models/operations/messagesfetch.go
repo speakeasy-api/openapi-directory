@@ -8,19 +8,14 @@ import (
 )
 
 type MessagesFetchSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MessagesFetchPathParams struct {
+type MessagesFetchRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of message to return
 	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
-}
-
-type MessagesFetchRequest struct {
-	PathParams MessagesFetchPathParams
-	Security   MessagesFetchSecurity
 }
 
 type MessagesFetchResponse struct {

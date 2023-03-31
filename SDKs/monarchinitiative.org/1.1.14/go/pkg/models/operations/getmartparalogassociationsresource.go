@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetMartParalogAssociationsResourcePathParams struct {
+type GetMartParalogAssociationsResourceRequest struct {
 	// subject taxon, e.g. NCBITaxon:9606
 	Taxon1 string `pathParam:"style=simple,explode=false,name=taxon1"`
 	// object taxon, e.g. NCBITaxon:9606
 	Taxon2 string `pathParam:"style=simple,explode=false,name=taxon2"`
-}
-
-type GetMartParalogAssociationsResourceRequest struct {
-	PathParams GetMartParalogAssociationsResourcePathParams
 }
 
 type GetMartParalogAssociationsResourceResponse struct {

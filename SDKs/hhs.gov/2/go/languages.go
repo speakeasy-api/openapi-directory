@@ -44,7 +44,7 @@ func (s *languages) GetResourcesLanguagesJSON(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,7 +89,7 @@ func (s *languages) GetResourcesLanguagesJSON(ctx context.Context, request opera
 // Information about a specific language
 func (s *languages) GetResourcesLanguagesIDJSON(ctx context.Context, request operations.GetResourcesLanguagesIDJSONRequest) (*operations.GetResourcesLanguagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/languages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/languages/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

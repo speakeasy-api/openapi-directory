@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependabotListAlertsForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type DependabotListAlertsForOrgQueryParams struct {
+type DependabotListAlertsForOrgRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
@@ -31,6 +26,8 @@ type DependabotListAlertsForOrgQueryParams struct {
 	// This parameter must not be used in combination with `first`.
 	// Instead, use `per_page` in combination with `before` to fetch the last page of results.
 	Last *int64 `queryParam:"style=form,explode=true,name=last"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
 	Package *string `queryParam:"style=form,explode=true,name=package"`
 	// The number of results per page (max 100).
@@ -49,11 +46,6 @@ type DependabotListAlertsForOrgQueryParams struct {
 	//
 	// Can be: `dismissed`, `fixed`, `open`
 	State *string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type DependabotListAlertsForOrgRequest struct {
-	PathParams  DependabotListAlertsForOrgPathParams
-	QueryParams DependabotListAlertsForOrgQueryParams
 }
 
 type DependabotListAlertsForOrgResponse struct {

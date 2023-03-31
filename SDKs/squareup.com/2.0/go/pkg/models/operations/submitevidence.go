@@ -8,17 +8,12 @@ import (
 )
 
 type SubmitEvidenceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SubmitEvidencePathParams struct {
-	// The ID of the dispute that you want to submit evidence for.
-	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SubmitEvidenceRequest struct {
-	PathParams SubmitEvidencePathParams
-	Security   SubmitEvidenceSecurity
+	// The ID of the dispute that you want to submit evidence for.
+	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
 }
 
 type SubmitEvidenceResponse struct {

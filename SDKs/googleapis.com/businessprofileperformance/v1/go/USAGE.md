@@ -14,34 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest{
-        PathParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesPathParams{
-            Location: "corrupti",
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        DailyMetrics: []BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum{
+            "BUSINESS_FOOD_ORDERS",
+            "BUSINESS_DIRECTION_REQUESTS",
+            "BUSINESS_FOOD_ORDERS",
         },
-        QueryParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            DailyMetrics: []BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum{
-                "BUSINESS_DIRECTION_REQUESTS",
-                "BUSINESS_FOOD_ORDERS",
-                "BUSINESS_CONVERSATIONS",
-                "CALL_CLICKS",
-            },
-            DailyRangeEndDateDay: 645894,
-            DailyRangeEndDateMonth: 384382,
-            DailyRangeEndDateYear: 437587,
-            DailyRangeStartDateDay: 297534,
-            DailyRangeStartDateMonth: 891773,
-            DailyRangeStartDateYear: 56713,
-            Fields: "delectus",
-            Key: "tempora",
-            OauthToken: "suscipit",
-            PrettyPrint: false,
-            QuotaUser: "molestiae",
-            UploadType: "minus",
-            UploadProtocol: "placeat",
-        },
+        DailyRangeEndDateDay: 423655,
+        DailyRangeEndDateMonth: 623564,
+        DailyRangeEndDateYear: 645894,
+        DailyRangeStartDateDay: 384382,
+        DailyRangeStartDateMonth: 437587,
+        DailyRangeStartDateYear: 297534,
+        Fields: "debitis",
+        Key: "ipsa",
+        Location: "delectus",
+        OauthToken: "tempora",
+        PrettyPrint: false,
+        QuotaUser: "suscipit",
+        UploadType: "molestiae",
+        UploadProtocol: "minus",
     }
 
     ctx := context.Background()

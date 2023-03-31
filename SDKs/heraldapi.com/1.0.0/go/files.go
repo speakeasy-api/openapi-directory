@@ -37,7 +37,7 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Retrieve the metadata for an individual file.
 func (s *files) GetFilesFileID(ctx context.Context, request operations.GetFilesFileIDRequest) (*operations.GetFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -109,7 +109,7 @@ func (s *files) GetFilesFileID(ctx context.Context, request operations.GetFilesF
 // > Since these links are temporary, Herald encourages you to not display the URL on your front end.
 func (s *files) PostFilesFileIDGetTemporaryLink(ctx context.Context, request operations.PostFilesFileIDGetTemporaryLinkRequest) (*operations.PostFilesFileIDGetTemporaryLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/get_temporary_link", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/get_temporary_link", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

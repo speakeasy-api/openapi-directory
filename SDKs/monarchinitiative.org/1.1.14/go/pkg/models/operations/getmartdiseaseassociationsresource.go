@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetMartDiseaseAssociationsResourcePathParams struct {
+type GetMartDiseaseAssociationsResourceRequest struct {
 	// Category of entity at link Object (target), e.g. phenotype, disease
 	ObjectCategory string `pathParam:"style=simple,explode=false,name=object_category"`
-	// taxon of disease, must be of form NCBITaxon:9606
-	Taxon string `pathParam:"style=simple,explode=false,name=taxon"`
-}
-
-type GetMartDiseaseAssociationsResourceQueryParams struct {
 	// Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
 	Slim []string `queryParam:"style=form,explode=true,name=slim"`
-}
-
-type GetMartDiseaseAssociationsResourceRequest struct {
-	PathParams  GetMartDiseaseAssociationsResourcePathParams
-	QueryParams GetMartDiseaseAssociationsResourceQueryParams
+	// taxon of disease, must be of form NCBITaxon:9606
+	Taxon string `pathParam:"style=simple,explode=false,name=taxon"`
 }
 
 type GetMartDiseaseAssociationsResourceResponse struct {

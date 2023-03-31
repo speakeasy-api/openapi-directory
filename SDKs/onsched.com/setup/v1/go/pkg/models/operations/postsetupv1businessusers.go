@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1BusinessusersRequest struct {
-	Request *shared.BusinessUserInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1BusinessusersResponse struct {
 	// Success
 	BusinessUserViewModel *shared.BusinessUserViewModel

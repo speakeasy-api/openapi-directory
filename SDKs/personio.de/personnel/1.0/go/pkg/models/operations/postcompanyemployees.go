@@ -56,10 +56,6 @@ type PostCompanyEmployeesRequestBody struct {
 	EmployeeWeeklyHours *float64 `form:"name=employee[weekly_hours]"`
 }
 
-type PostCompanyEmployeesRequest struct {
-	Request PostCompanyEmployeesRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostCompanyEmployeesResponse struct {
 	ContentType string
 	// Successful creation of a employee

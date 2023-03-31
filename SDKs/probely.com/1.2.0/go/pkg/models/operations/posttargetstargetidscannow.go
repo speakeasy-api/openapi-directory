@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsTargetIDScanNowPathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
 // PostTargetsTargetIDScanNowRequestBodyScanProfileEnum - Override the target's `scan_profile`.
 type PostTargetsTargetIDScanNowRequestBodyScanProfileEnum string
 
@@ -51,8 +46,9 @@ type PostTargetsTargetIDScanNowRequestBody struct {
 }
 
 type PostTargetsTargetIDScanNowRequest struct {
-	PathParams PostTargetsTargetIDScanNowPathParams
-	Request    *PostTargetsTargetIDScanNowRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostTargetsTargetIDScanNowRequestBody `request:"mediaType=application/json"`
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // PostTargetsTargetIDScanNow404ApplicationJSON - Not found

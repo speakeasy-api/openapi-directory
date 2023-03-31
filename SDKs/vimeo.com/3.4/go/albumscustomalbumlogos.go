@@ -32,16 +32,16 @@ func newAlbumsCustomAlbumLogos(defaultClient, securityClient HTTPClient, serverU
 }
 
 // CreateAlbumLogo - Add a custom album logo
-func (s *albumsCustomAlbumLogos) CreateAlbumLogo(ctx context.Context, request operations.CreateAlbumLogoRequest) (*operations.CreateAlbumLogoResponse, error) {
+func (s *albumsCustomAlbumLogos) CreateAlbumLogo(ctx context.Context, request operations.CreateAlbumLogoRequest, security operations.CreateAlbumLogoSecurity) (*operations.CreateAlbumLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,16 +89,16 @@ func (s *albumsCustomAlbumLogos) CreateAlbumLogo(ctx context.Context, request op
 
 // DeleteAlbumLogo - Remove a custom album logo
 // This method removes a custom logo from the specified album.
-func (s *albumsCustomAlbumLogos) DeleteAlbumLogo(ctx context.Context, request operations.DeleteAlbumLogoRequest) (*operations.DeleteAlbumLogoResponse, error) {
+func (s *albumsCustomAlbumLogos) DeleteAlbumLogo(ctx context.Context, request operations.DeleteAlbumLogoRequest, security operations.DeleteAlbumLogoSecurity) (*operations.DeleteAlbumLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *albumsCustomAlbumLogos) DeleteAlbumLogo(ctx context.Context, request op
 // GetAlbumLogo - Get a specific custom album logo
 func (s *albumsCustomAlbumLogos) GetAlbumLogo(ctx context.Context, request operations.GetAlbumLogoRequest) (*operations.GetAlbumLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,14 +194,14 @@ func (s *albumsCustomAlbumLogos) GetAlbumLogo(ctx context.Context, request opera
 // GetAlbumLogos - Get all the custom logos of an album
 func (s *albumsCustomAlbumLogos) GetAlbumLogos(ctx context.Context, request operations.GetAlbumLogosRequest) (*operations.GetAlbumLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -250,11 +250,11 @@ func (s *albumsCustomAlbumLogos) GetAlbumLogos(ctx context.Context, request oper
 }
 
 // ReplaceAlbumLogo - Replace a custom album logo
-func (s *albumsCustomAlbumLogos) ReplaceAlbumLogo(ctx context.Context, request operations.ReplaceAlbumLogoRequest) (*operations.ReplaceAlbumLogoResponse, error) {
+func (s *albumsCustomAlbumLogos) ReplaceAlbumLogo(ctx context.Context, request operations.ReplaceAlbumLogoRequest, security operations.ReplaceAlbumLogoSecurity) (*operations.ReplaceAlbumLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -266,7 +266,7 @@ func (s *albumsCustomAlbumLogos) ReplaceAlbumLogo(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

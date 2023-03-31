@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type BankTransferCancelRequest struct {
-	Request shared.BankTransferCancelRequest `request:"mediaType=application/json"`
-}
 
 type BankTransferCancelResponse struct {
 	// OK

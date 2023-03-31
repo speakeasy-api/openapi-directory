@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypeDocumentXlsQueryParams struct {
+type SearchTypeDocumentXlsRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchTypeDocumentXlsQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypeDocumentXlsRequest struct {
-	QueryParams SearchTypeDocumentXlsQueryParams
 }
 
 type SearchTypeDocumentXlsResponse struct {

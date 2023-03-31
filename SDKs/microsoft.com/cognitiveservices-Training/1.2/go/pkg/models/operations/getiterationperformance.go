@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIterationPerformancePathParams struct {
+type GetIterationPerformanceRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The id of the trained iteration
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The project id
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetIterationPerformanceQueryParams struct {
 	// The 0 to 1 threshold to determine positive prediction
 	Threshold float32 `queryParam:"style=form,explode=true,name=threshold"`
-}
-
-type GetIterationPerformanceHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetIterationPerformanceRequest struct {
-	PathParams  GetIterationPerformancePathParams
-	QueryParams GetIterationPerformanceQueryParams
-	Headers     GetIterationPerformanceHeaders
 }
 
 type GetIterationPerformanceResponse struct {

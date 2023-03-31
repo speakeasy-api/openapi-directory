@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpecificClientWorkgroupPathParams struct {
+type GetSpecificClientWorkgroupRequest struct {
 	ClientWorkgroupID string `pathParam:"style=simple,explode=false,name=client_workgroup_id"`
 	WorkgroupID       string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetSpecificClientWorkgroupRequest struct {
-	PathParams GetSpecificClientWorkgroupPathParams
 }
 
 type GetSpecificClientWorkgroupResponse struct {

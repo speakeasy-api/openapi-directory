@@ -10,13 +10,8 @@ import (
 )
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreatePathParams struct {
-	// The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateForceOnlyEnum string
@@ -45,9 +40,10 @@ func (e *ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOver
 	}
 }
 
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateQueryParams struct {
+type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	V1Beta1QuotaOverride *shared.V1Beta1QuotaOverride `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -64,6 +60,8 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverride
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -72,13 +70,6 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverride
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest struct {
-	PathParams  ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreatePathParams
-	QueryParams ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateQueryParams
-	Request     *shared.V1Beta1QuotaOverride `request:"mediaType=application/json"`
-	Security    ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateSecurity
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateResponse struct {

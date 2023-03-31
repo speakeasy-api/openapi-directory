@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DevicesPutPathParams struct {
+type DevicesPutRequest struct {
 	// The ID of the device
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DevicesPutQueryParams struct {
 	// The number of the switch if there are multiple (1 for L1, 3 for L3)
 	SwitchNumber *int `queryParam:"style=form,explode=true,name=switchNumber"`
 	// The new state of the switch
 	SwitchState bool `queryParam:"style=form,explode=true,name=switchState"`
-}
-
-type DevicesPutRequest struct {
-	PathParams  DevicesPutPathParams
-	QueryParams DevicesPutQueryParams
 }
 
 type DevicesPutResponse struct {

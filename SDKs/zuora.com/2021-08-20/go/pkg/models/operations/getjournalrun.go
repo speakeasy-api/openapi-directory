@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETJournalRunPathParams struct {
-	// Journal run number. Must be a valid journal run number in the format `JR-00000001`.
-	//
-	JrNumber string `pathParam:"style=simple,explode=false,name=jr-number"`
-}
-
-type GETJournalRunHeaders struct {
+type GETJournalRunRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,11 +16,9 @@ type GETJournalRunHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETJournalRunRequest struct {
-	PathParams GETJournalRunPathParams
-	Headers    GETJournalRunHeaders
+	// Journal run number. Must be a valid journal run number in the format `JR-00000001`.
+	//
+	JrNumber string `pathParam:"style=simple,explode=false,name=jr-number"`
 }
 
 type GETJournalRunResponse struct {

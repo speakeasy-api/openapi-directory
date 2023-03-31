@@ -8,13 +8,8 @@ import (
 )
 
 type PutVehiclesVehicleidSmartchargingpolicySecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type PutVehiclesVehicleidSmartchargingpolicyPathParams struct {
-	// ID of the Vehicle
-	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PutVehiclesVehicleidSmartchargingpolicyRequestBody struct {
@@ -25,9 +20,9 @@ type PutVehiclesVehicleidSmartchargingpolicyRequestBody struct {
 }
 
 type PutVehiclesVehicleidSmartchargingpolicyRequest struct {
-	PathParams PutVehiclesVehicleidSmartchargingpolicyPathParams
-	Request    *PutVehiclesVehicleidSmartchargingpolicyRequestBody `request:"mediaType=application/json"`
-	Security   PutVehiclesVehicleidSmartchargingpolicySecurity
+	RequestBody *PutVehiclesVehicleidSmartchargingpolicyRequestBody `request:"mediaType=application/json"`
+	// ID of the Vehicle
+	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
 }
 
 type PutVehiclesVehicleidSmartchargingpolicyResponse struct {

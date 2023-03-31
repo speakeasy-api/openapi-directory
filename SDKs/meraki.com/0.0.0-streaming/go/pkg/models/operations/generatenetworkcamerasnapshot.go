@@ -7,11 +7,6 @@ import (
 	"time"
 )
 
-type GenerateNetworkCameraSnapshotPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Serial    string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GenerateNetworkCameraSnapshotRequestBody struct {
 	// [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
 	Fullframe *bool `json:"fullframe,omitempty"`
@@ -20,8 +15,9 @@ type GenerateNetworkCameraSnapshotRequestBody struct {
 }
 
 type GenerateNetworkCameraSnapshotRequest struct {
-	PathParams GenerateNetworkCameraSnapshotPathParams
-	Request    *GenerateNetworkCameraSnapshotRequestBody `request:"mediaType=application/json"`
+	RequestBody *GenerateNetworkCameraSnapshotRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
+	Serial      string                                    `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GenerateNetworkCameraSnapshotResponse struct {

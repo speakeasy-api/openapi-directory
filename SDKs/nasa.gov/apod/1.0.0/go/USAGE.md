@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetApodRequest{
-        Security: operations.GetApodSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GetApodQueryParams{
-            Date: "corrupti",
-            Hd: false,
-        },
+        Date: "corrupti",
+        Hd: false,
     }
 
     ctx := context.Background()
-    res, err := s.RequestTag.GetApod(ctx, req)
+    res, err := s.RequestTag.GetApod(ctx, req, operations.GetApodSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

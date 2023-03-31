@@ -12,12 +12,8 @@ var CreateIPAccessControlListServerList = []string{
 }
 
 type CreateIPAccessControlListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateIPAccessControlListPathParams struct {
-	// The SID of the Trunk to associate the IP Access Control List with.
-	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateIPAccessControlListCreateIPAccessControlListRequest struct {
@@ -26,10 +22,9 @@ type CreateIPAccessControlListCreateIPAccessControlListRequest struct {
 }
 
 type CreateIPAccessControlListRequest struct {
-	PathParams CreateIPAccessControlListPathParams
-	Request    *CreateIPAccessControlListCreateIPAccessControlListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateIPAccessControlListSecurity
-	ServerURL  *string
+	RequestBody *CreateIPAccessControlListCreateIPAccessControlListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Trunk to associate the IP Access Control List with.
+	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
 }
 
 type CreateIPAccessControlListResponse struct {

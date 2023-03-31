@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrievePrefixPricingPathParams struct {
-	// The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type RetrievePrefixPricingQueryParams struct {
+type RetrievePrefixPricingRequest struct {
 	// Your Nexmo API key.
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Your Nexmo API secret.
 	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
 	// The numerical dialing prefix to look up pricing for. Examples include 44, 1 and so on.
 	Prefix string `queryParam:"style=form,explode=true,name=prefix"`
-}
-
-type RetrievePrefixPricingRequest struct {
-	PathParams  RetrievePrefixPricingPathParams
-	QueryParams RetrievePrefixPricingQueryParams
+	// The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
+	Type string `pathParam:"style=simple,explode=false,name=type"`
 }
 
 // RetrievePrefixPricing401ApplicationJSON - You did not provide valid credentials

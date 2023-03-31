@@ -32,11 +32,11 @@ func newCustomEvents(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DfareportingCustomEventsBatchinsert - Inserts custom events.
-func (s *customEvents) DfareportingCustomEventsBatchinsert(ctx context.Context, request operations.DfareportingCustomEventsBatchinsertRequest) (*operations.DfareportingCustomEventsBatchinsertResponse, error) {
+func (s *customEvents) DfareportingCustomEventsBatchinsert(ctx context.Context, request operations.DfareportingCustomEventsBatchinsertRequest, security operations.DfareportingCustomEventsBatchinsertSecurity) (*operations.DfareportingCustomEventsBatchinsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/customEvents/batchinsert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/customEvents/batchinsert", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomEventsBatchInsertRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *customEvents) DfareportingCustomEventsBatchinsert(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -34,7 +34,7 @@ func newTools(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // ToolsShareFileMultipart - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
-func (s *tools) ToolsShareFileMultipart(ctx context.Context, request operations.ToolsShareFileMultipartRequest) (*operations.ToolsShareFileMultipartResponse, error) {
+func (s *tools) ToolsShareFileMultipart(ctx context.Context, request operations.ToolsShareFileMultipartFormData, security operations.ToolsShareFileMultipartSecurity) (*operations.ToolsShareFileMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/tools/sharefile"
 
@@ -53,7 +53,7 @@ func (s *tools) ToolsShareFileMultipart(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *tools) ToolsShareFileMultipart(ctx context.Context, request operations.
 }
 
 // ToolsShareFileRaw - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
-func (s *tools) ToolsShareFileRaw(ctx context.Context, request operations.ToolsShareFileRawRequest) (*operations.ToolsShareFileRawResponse, error) {
+func (s *tools) ToolsShareFileRaw(ctx context.Context, request []byte, security operations.ToolsShareFileRawSecurity) (*operations.ToolsShareFileRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/tools/sharefile"
 
@@ -119,7 +119,7 @@ func (s *tools) ToolsShareFileRaw(ctx context.Context, request operations.ToolsS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

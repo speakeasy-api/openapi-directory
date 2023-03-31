@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type GetSuggestionPathParams struct {
-	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-	// A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
-	SellerSkuID string `pathParam:"style=simple,explode=false,name=sellerSkuId"`
-}
-
-type GetSuggestionQueryParams struct {
-	// Name of the VTEX account. Used as part of the URL
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-}
-
-type GetSuggestionHeaders struct {
+type GetSuggestionRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetSuggestionRequest struct {
-	PathParams  GetSuggestionPathParams
-	QueryParams GetSuggestionQueryParams
-	Headers     GetSuggestionHeaders
+	// Name of the VTEX account. Used as part of the URL
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
+	// A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
+	// A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
+	SellerSkuID string `pathParam:"style=simple,explode=false,name=sellerSkuId"`
 }
 
 type GetSuggestionResponse struct {

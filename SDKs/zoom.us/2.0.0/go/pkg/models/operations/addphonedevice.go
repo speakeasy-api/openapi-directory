@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddPhoneDeviceSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddPhoneDeviceApplicationJSON struct {
@@ -23,11 +22,6 @@ type AddPhoneDeviceApplicationJSON struct {
 	Model *string `json:"model,omitempty"`
 	// Manufacturer (brand) name of the device.
 	Type *string `json:"type,omitempty"`
-}
-
-type AddPhoneDeviceRequest struct {
-	Request  *AddPhoneDeviceApplicationJSON `request:"mediaType=application/json"`
-	Security AddPhoneDeviceSecurity
 }
 
 type AddPhoneDeviceResponse struct {

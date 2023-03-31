@@ -8,19 +8,14 @@ import (
 )
 
 type LeaveGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type LeaveGroupPathParams struct {
+type LeaveGroupRequest struct {
 	// The ID of the group.
 	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type LeaveGroupRequest struct {
-	PathParams LeaveGroupPathParams
-	Security   LeaveGroupSecurity
 }
 
 type LeaveGroupResponse struct {

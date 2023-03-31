@@ -44,16 +44,16 @@ func newCommunicationProfiles(defaultClient, securityClient HTTPClient, serverUR
 // ObjectGETCommunicationProfile - CRUD: Retrieve a communication profile
 func (s *communicationProfiles) ObjectGETCommunicationProfile(ctx context.Context, request operations.ObjectGETCommunicationProfileRequest) (*operations.ObjectGETCommunicationProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/communication-profile/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/communication-profile/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

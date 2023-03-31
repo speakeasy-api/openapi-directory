@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CreatePadUsingPOSTQueryParams struct {
+type CreatePadUsingPOSTRequest struct {
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 	Text  *string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type CreatePadUsingPOSTRequest struct {
-	QueryParams CreatePadUsingPOSTQueryParams
 }
 
 // CreatePadUsingPOST500ApplicationJSON - internal api error (code 2)

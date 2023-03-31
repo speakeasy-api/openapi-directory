@@ -8,16 +8,11 @@ import (
 )
 
 type AndroidpublisherInappproductsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherInappproductsListPathParams struct {
-	// Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-}
-
-type AndroidpublisherInappproductsListQueryParams struct {
+type AndroidpublisherInappproductsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -27,6 +22,8 @@ type AndroidpublisherInappproductsListQueryParams struct {
 	MaxResults *int64  `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
@@ -35,12 +32,6 @@ type AndroidpublisherInappproductsListQueryParams struct {
 	Token      *string `queryParam:"style=form,explode=true,name=token"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherInappproductsListRequest struct {
-	PathParams  AndroidpublisherInappproductsListPathParams
-	QueryParams AndroidpublisherInappproductsListQueryParams
-	Security    AndroidpublisherInappproductsListSecurity
 }
 
 type AndroidpublisherInappproductsListResponse struct {

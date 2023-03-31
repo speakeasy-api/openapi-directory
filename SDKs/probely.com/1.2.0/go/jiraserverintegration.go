@@ -103,7 +103,7 @@ func (s *jiraServerIntegration) GetIntegrationsJiraServerProjects(ctx context.Co
 // GetIntegrationsJiraServerProjectsProjectIDIssueTypes - Retrieve project issue types
 func (s *jiraServerIntegration) GetIntegrationsJiraServerProjectsProjectIDIssueTypes(ctx context.Context, request operations.GetIntegrationsJiraServerProjectsProjectIDIssueTypesRequest) (*operations.GetIntegrationsJiraServerProjectsProjectIDIssueTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-server/projects/{project_id}/issue_types/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-server/projects/{project_id}/issue_types/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *jiraServerIntegration) GetIntegrationsJiraServerProjectsProjectIDIssueT
 // GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDPriorities - Retrieve issue priorities
 func (s *jiraServerIntegration) GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDPriorities(ctx context.Context, request operations.GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDPrioritiesRequest) (*operations.GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDPrioritiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +241,7 @@ func (s *jiraServerIntegration) GetIntegrationsJiraServerProjectsProjectIDIssueT
 // GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDStatus - Retrieve issue statuses
 func (s *jiraServerIntegration) GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDStatus(ctx context.Context, request operations.GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDStatusRequest) (*operations.GetIntegrationsJiraServerProjectsProjectIDIssueTypesIssueTypeIDStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/status/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/status/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,7 +315,7 @@ func (s *jiraServerIntegration) GetIntegrationsJiraServerProjectsProjectIDIssueT
 // GetTargetsTargetIDFindingsIDIntegrationsJiraServer - Retrieve Jira Server finding configuration
 func (s *jiraServerIntegration) GetTargetsTargetIDFindingsIDIntegrationsJiraServer(ctx context.Context, request operations.GetTargetsTargetIDFindingsIDIntegrationsJiraServerRequest) (*operations.GetTargetsTargetIDFindingsIDIntegrationsJiraServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -379,7 +379,7 @@ func (s *jiraServerIntegration) GetTargetsTargetIDFindingsIDIntegrationsJiraServ
 // GetTargetsTargetIDIntegrationsJiraServer - Retrieve Jira Server Target configuration
 func (s *jiraServerIntegration) GetTargetsTargetIDIntegrationsJiraServer(ctx context.Context, request operations.GetTargetsTargetIDIntegrationsJiraServerRequest) (*operations.GetTargetsTargetIDIntegrationsJiraServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-server/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-server/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -443,9 +443,9 @@ func (s *jiraServerIntegration) GetTargetsTargetIDIntegrationsJiraServer(ctx con
 // PatchTargetsTargetIDFindingsIDIntegrationsJiraServer - Update Jira Server finding configuration
 func (s *jiraServerIntegration) PatchTargetsTargetIDFindingsIDIntegrationsJiraServer(ctx context.Context, request operations.PatchTargetsTargetIDFindingsIDIntegrationsJiraServerRequest) (*operations.PatchTargetsTargetIDFindingsIDIntegrationsJiraServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraFinding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -527,9 +527,9 @@ func (s *jiraServerIntegration) PatchTargetsTargetIDFindingsIDIntegrationsJiraSe
 // PatchTargetsTargetIDIntegrationsJiraServer - Update Jira Server target configuration
 func (s *jiraServerIntegration) PatchTargetsTargetIDIntegrationsJiraServer(ctx context.Context, request operations.PatchTargetsTargetIDIntegrationsJiraServerRequest) (*operations.PatchTargetsTargetIDIntegrationsJiraServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-server/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-server/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraScope", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,9 +611,9 @@ func (s *jiraServerIntegration) PatchTargetsTargetIDIntegrationsJiraServer(ctx c
 // PutTargetsTargetIDFindingsIDIntegrationsJiraServer - Update Jira Server finding configuration
 func (s *jiraServerIntegration) PutTargetsTargetIDFindingsIDIntegrationsJiraServer(ctx context.Context, request operations.PutTargetsTargetIDFindingsIDIntegrationsJiraServerRequest) (*operations.PutTargetsTargetIDFindingsIDIntegrationsJiraServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraFinding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -695,9 +695,9 @@ func (s *jiraServerIntegration) PutTargetsTargetIDFindingsIDIntegrationsJiraServ
 // PutTargetsTargetIDIntegrationsJiraServer - Update Jira Server target configuration
 func (s *jiraServerIntegration) PutTargetsTargetIDIntegrationsJiraServer(ctx context.Context, request operations.PutTargetsTargetIDIntegrationsJiraServerRequest) (*operations.PutTargetsTargetIDIntegrationsJiraServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-server/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/jira-server/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JiraScope", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

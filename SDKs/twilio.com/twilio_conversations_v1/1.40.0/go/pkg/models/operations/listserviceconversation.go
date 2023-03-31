@@ -12,28 +12,19 @@ var ListServiceConversationServerList = []string{
 }
 
 type ListServiceConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListServiceConversationPathParams struct {
+type ListServiceConversationRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-}
-
-type ListServiceConversationQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListServiceConversationRequest struct {
-	PathParams  ListServiceConversationPathParams
-	QueryParams ListServiceConversationQueryParams
-	Security    ListServiceConversationSecurity
-	ServerURL   *string
 }
 
 type ListServiceConversationListServiceConversationResponseMeta struct {

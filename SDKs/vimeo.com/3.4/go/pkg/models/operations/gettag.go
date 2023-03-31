@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagPathParams struct {
+type GetTagRequest struct {
 	// The tag to return.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type GetTagRequest struct {
-	PathParams GetTagPathParams
 }
 
 type GetTagResponse struct {

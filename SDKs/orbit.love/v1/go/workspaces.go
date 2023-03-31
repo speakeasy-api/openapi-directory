@@ -32,7 +32,7 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetWorkspaces - Get all workspaces for the current user
-func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWorkspacesRequest) (*operations.GetWorkspacesResponse, error) {
+func (s *workspaces) GetWorkspaces(ctx context.Context) (*operations.GetWorkspacesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workspaces"
 
@@ -41,7 +41,7 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -67,20 +67,20 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 }
 
 // GetWorkspacesWorkspaceSlug - Get a workspace
-func (s *workspaces) GetWorkspacesWorkspaceSlug(ctx context.Context, request operations.GetWorkspacesWorkspaceSlugRequest) (*operations.GetWorkspacesWorkspaceSlugResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceSlug(ctx context.Context, request operations.GetWorkspacesWorkspaceSlugRequest, security operations.GetWorkspacesWorkspaceSlugSecurity) (*operations.GetWorkspacesWorkspaceSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2AccountTiersJSONQueryParams struct {
+type GetV2AccountTiersJSONRequest struct {
 	// IDs of Account Tiers to fetch. If a record can't be found, that record won't be returned and your request will be successful
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -23,10 +23,6 @@ type GetV2AccountTiersJSONQueryParams struct {
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2AccountTiersJSONRequest struct {
-	QueryParams GetV2AccountTiersJSONQueryParams
 }
 
 type GetV2AccountTiersJSONResponse struct {

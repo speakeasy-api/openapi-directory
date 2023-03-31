@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TemplatesRemoveSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TemplatesRemovePathParams struct {
+type TemplatesRemoveRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Template id to delete
 	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type TemplatesRemoveRequest struct {
-	PathParams TemplatesRemovePathParams
-	Security   TemplatesRemoveSecurity
 }
 
 // TemplatesRemove200ApplicationJSON - successful operation

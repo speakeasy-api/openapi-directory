@@ -12,18 +12,13 @@ var FetchChannelServerList = []string{
 }
 
 type FetchChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchChannelPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchChannelRequest struct {
-	PathParams FetchChannelPathParams
-	Security   FetchChannelSecurity
-	ServerURL  *string
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchChannelResponse struct {

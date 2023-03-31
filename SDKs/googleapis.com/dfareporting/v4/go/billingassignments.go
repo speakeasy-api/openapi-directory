@@ -32,11 +32,11 @@ func newBillingAssignments(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // DfareportingBillingAssignmentsInsert - Inserts a new billing assignment and returns the new assignment. Only one of advertiser_id or campaign_id is support per request. If the new assignment has no effect (assigning a campaign to the parent advertiser billing profile or assigning an advertiser to the account billing profile), no assignment will be returned.
-func (s *billingAssignments) DfareportingBillingAssignmentsInsert(ctx context.Context, request operations.DfareportingBillingAssignmentsInsertRequest) (*operations.DfareportingBillingAssignmentsInsertResponse, error) {
+func (s *billingAssignments) DfareportingBillingAssignmentsInsert(ctx context.Context, request operations.DfareportingBillingAssignmentsInsertRequest, security operations.DfareportingBillingAssignmentsInsertSecurity) (*operations.DfareportingBillingAssignmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillingAssignment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *billingAssignments) DfareportingBillingAssignmentsInsert(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *billingAssignments) DfareportingBillingAssignmentsInsert(ctx context.Co
 }
 
 // DfareportingBillingAssignmentsList - Retrieves a list of billing assignments.
-func (s *billingAssignments) DfareportingBillingAssignmentsList(ctx context.Context, request operations.DfareportingBillingAssignmentsListRequest) (*operations.DfareportingBillingAssignmentsListResponse, error) {
+func (s *billingAssignments) DfareportingBillingAssignmentsList(ctx context.Context, request operations.DfareportingBillingAssignmentsListRequest, security operations.DfareportingBillingAssignmentsListSecurity) (*operations.DfareportingBillingAssignmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

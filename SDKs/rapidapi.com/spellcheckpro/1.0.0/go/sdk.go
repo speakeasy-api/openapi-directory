@@ -96,7 +96,7 @@ func (s *SDK) CheckSpellingRussian(ctx context.Context, request operations.Check
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_spelling"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -108,7 +108,7 @@ func (s *SDK) CheckSpellingRussian(ctx context.Context, request operations.Check
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 

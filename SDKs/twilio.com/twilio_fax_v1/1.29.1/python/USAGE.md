@@ -4,20 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeleteFaxRequest(
-    security=operations.DeleteFaxSecurity(
-        account_sid_auth_token=shared.SchemeAccountSidAuthToken(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    path_params=operations.DeleteFaxPathParams(
-        sid="quae",
-    ),
+    sid="corrupti",
 )
     
-res = s.delete_fax(req)
+res = s.delete_fax(req, operations.DeleteFaxSecurity(
+    password="YOUR_PASSWORD_HERE",
+    username="YOUR_USERNAME_HERE",
+))
 
 if res.status_code == 200:
     # handle response

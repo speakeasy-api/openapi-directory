@@ -14,16 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.OptCapProgramInPriceRequest{
-        Headers: operations.OptCapProgramInPriceHeaders{
-            WmConsumerChannelType: "corrupti",
-            WmQosCorrelationID: "provident",
-            WmSecAccessToken: "distinctio",
-            WmSvcName: "quibusdam",
-        },
-        Request: operations.OptCapProgramInPriceRequestBody{
+        RequestBody: operations.OptCapProgramInPriceRequestBody{
             SubsidyEnrolled: false,
             SubsidyPreference: false,
         },
+        WmConsumerChannelType: "corrupti",
+        WmQosCorrelationID: "provident",
+        WmSecAccessToken: "distinctio",
+        WmSvcName: "quibusdam",
     }
 
     ctx := context.Background()

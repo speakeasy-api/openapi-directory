@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListPadsUsingPOSTQueryParams struct {
-	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
-}
-
 type ListPadsUsingPOSTRequest struct {
-	QueryParams ListPadsUsingPOSTQueryParams
+	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
 }
 
 // ListPadsUsingPOST500ApplicationJSON - internal api error (code 2)

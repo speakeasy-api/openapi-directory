@@ -34,20 +34,20 @@ func newTransfers(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // RetrieveBalanceTransfers - Retrieve list of balance transfers
 // Retrieve a list of balance transfers that have taken place for a primary account within a specified time period.
-func (s *transfers) RetrieveBalanceTransfers(ctx context.Context, request operations.RetrieveBalanceTransfersRequest) (*operations.RetrieveBalanceTransfersResponse, error) {
+func (s *transfers) RetrieveBalanceTransfers(ctx context.Context, request operations.RetrieveBalanceTransfersRequest, security operations.RetrieveBalanceTransfersSecurity) (*operations.RetrieveBalanceTransfersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/balance-transfers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/balance-transfers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -113,20 +113,20 @@ func (s *transfers) RetrieveBalanceTransfers(ctx context.Context, request operat
 
 // RetrieveCreditTransfers - Retrieve list of credit transfers
 // Retrieve a list of credit transfers that have taken place for a primary account within a specified time period.
-func (s *transfers) RetrieveCreditTransfers(ctx context.Context, request operations.RetrieveCreditTransfersRequest) (*operations.RetrieveCreditTransfersResponse, error) {
+func (s *transfers) RetrieveCreditTransfers(ctx context.Context, request operations.RetrieveCreditTransfersRequest, security operations.RetrieveCreditTransfersSecurity) (*operations.RetrieveCreditTransfersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/credit-transfers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/credit-transfers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,11 +192,11 @@ func (s *transfers) RetrieveCreditTransfers(ctx context.Context, request operati
 
 // TransferBalance - Transfer balance
 // Transfer balance between a primary account and one of its subaccounts. Note that balance_available_for_transfer = |account_balance - credit_limit| of the source account.
-func (s *transfers) TransferBalance(ctx context.Context, request operations.TransferBalanceRequest) (*operations.TransferBalanceResponse, error) {
+func (s *transfers) TransferBalance(ctx context.Context, request operations.TransferBalanceRequest, security operations.TransferBalanceSecurity) (*operations.TransferBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/balance-transfers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/balance-transfers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferBalanceOrCreditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,7 +211,7 @@ func (s *transfers) TransferBalance(ctx context.Context, request operations.Tran
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *transfers) TransferBalance(ctx context.Context, request operations.Tran
 
 // TransferCredit - Transfer credit
 // Transfer credit limit between a primary account and one of its subaccounts.
-func (s *transfers) TransferCredit(ctx context.Context, request operations.TransferCreditRequest) (*operations.TransferCreditResponse, error) {
+func (s *transfers) TransferCredit(ctx context.Context, request operations.TransferCreditRequest, security operations.TransferCreditSecurity) (*operations.TransferCreditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/credit-transfers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/credit-transfers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferBalanceOrCreditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -306,7 +306,7 @@ func (s *transfers) TransferCredit(ctx context.Context, request operations.Trans
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,11 +382,11 @@ func (s *transfers) TransferCredit(ctx context.Context, request operations.Trans
 
 // TransferNumber - Transfer number
 // Transfer number from one account to another.
-func (s *transfers) TransferNumber(ctx context.Context, request operations.TransferNumberRequest) (*operations.TransferNumberResponse, error) {
+func (s *transfers) TransferNumber(ctx context.Context, request operations.TransferNumberRequest, security operations.TransferNumberSecurity) (*operations.TransferNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/transfer-number", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/transfer-number", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferNumberRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -401,7 +401,7 @@ func (s *transfers) TransferNumber(ctx context.Context, request operations.Trans
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

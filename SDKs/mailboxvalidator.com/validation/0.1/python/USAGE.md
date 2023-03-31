@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetV1ValidationSingleRequest(
-    query_params=operations.GetV1ValidationSingleQueryParams(
-        email="ea",
-        format="xml",
-        key="aliquid",
-    ),
+    email="Larue_Rau85@yahoo.com",
+    format="xml",
+    key="illum",
 )
     
 res = s.get_v1_validation_single(req)

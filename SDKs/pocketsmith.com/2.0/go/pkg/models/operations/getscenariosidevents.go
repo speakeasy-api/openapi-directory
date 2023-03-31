@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetScenariosIDEventsPathParams struct {
-	// The unique identifier of the scenario.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetScenariosIDEventsQueryParams struct {
+type GetScenariosIDEventsRequest struct {
 	// Return the events until and including this date.
 	EndDate string `queryParam:"style=form,explode=true,name=end_date"`
+	// The unique identifier of the scenario.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Return the events from and including this date.
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type GetScenariosIDEventsRequest struct {
-	PathParams  GetScenariosIDEventsPathParams
-	QueryParams GetScenariosIDEventsQueryParams
 }
 
 type GetScenariosIDEventsResponse struct {

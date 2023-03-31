@@ -14,85 +14,69 @@ func main() {
     s := sdk.New()
 
     req := operations.ServicecontrolServicesCheckRequest{
-        Security: operations.ServicecontrolServicesCheckSecurity{
-            Option1: &operations.ServicecontrolServicesCheckSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.ServicecontrolServicesCheckPathParams{
-            ServiceName: "corrupti",
-        },
-        QueryParams: operations.ServicecontrolServicesCheckQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.CheckRequest{
+        DollarXgafv: "2",
+        CheckRequest: &shared.CheckRequest{
             Attributes: &shared.AttributeContext{
                 API: &shared.API{
-                    Operation: "suscipit",
-                    Protocol: "iure",
-                    Service: "magnam",
-                    Version: "debitis",
+                    Operation: "provident",
+                    Protocol: "distinctio",
+                    Service: "quibusdam",
+                    Version: "unde",
                 },
                 Destination: &shared.Peer{
-                    IP: "ipsa",
+                    IP: "nulla",
                     Labels: map[string]string{
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
-                        "iusto": "excepturi",
+                        "illum": "vel",
+                        "error": "deserunt",
+                        "suscipit": "iure",
                     },
-                    Port: "nisi",
-                    Principal: "recusandae",
-                    RegionCode: "temporibus",
+                    Port: "magnam",
+                    Principal: "debitis",
+                    RegionCode: "ipsa",
                 },
                 Extensions: []map[string]interface{}{
+                    map[string]interface{}{
+                        "suscipit": "molestiae",
+                        "minus": "placeat",
+                    },
+                    map[string]interface{}{
+                        "iusto": "excepturi",
+                        "nisi": "recusandae",
+                        "temporibus": "ab",
+                    },
                     map[string]interface{}{
                         "veritatis": "deserunt",
                         "perferendis": "ipsam",
                     },
+                    map[string]interface{}{
+                        "sapiente": "quo",
+                        "odit": "at",
+                        "at": "maiores",
+                        "molestiae": "quod",
+                    },
                 },
                 Origin: &shared.Peer{
-                    IP: "repellendus",
+                    IP: "quod",
                     Labels: map[string]string{
-                        "quo": "odit",
-                        "at": "at",
-                        "maiores": "molestiae",
-                        "quod": "quod",
+                        "totam": "porro",
+                        "dolorum": "dicta",
                     },
-                    Port: "esse",
-                    Principal: "totam",
-                    RegionCode: "porro",
+                    Port: "nam",
+                    Principal: "officia",
+                    RegionCode: "occaecati",
                 },
                 Request: &shared.Request{
                     Auth: &shared.Auth{
                         AccessLevels: []string{
-                            "dicta",
-                            "nam",
-                            "officia",
+                            "deleniti",
                         },
                         Audiences: []string{
-                            "fugit",
-                            "deleniti",
-                            "hic",
+                            "optio",
+                            "totam",
+                            "beatae",
+                            "commodi",
                         },
                         Claims: map[string]interface{}{
-                            "totam": "beatae",
-                            "commodi": "molestiae",
                             "modi": "qui",
                             "impedit": "cum",
                         },
@@ -179,10 +163,26 @@ func main() {
             },
             ServiceConfigID: "vero",
         },
+        AccessToken: "nihil",
+        Alt: "media",
+        Callback: "voluptatibus",
+        Fields: "ipsa",
+        Key: "omnis",
+        OauthToken: "voluptate",
+        PrettyPrint: false,
+        QuotaUser: "cum",
+        ServiceName: "perferendis",
+        UploadType: "doloremque",
+        UploadProtocol: "reprehenderit",
     }
 
     ctx := context.Background()
-    res, err := s.Services.ServicecontrolServicesCheck(ctx, req)
+    res, err := s.Services.ServicecontrolServicesCheck(ctx, req, operations.ServicecontrolServicesCheckSecurity{
+        Option1: &operations.ServicecontrolServicesCheckSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

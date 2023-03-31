@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetActionsRequest{
-        QueryParams: operations.GetActionsQueryParams{
-            ID: 548814,
-            Sort: "progress:asc",
-            Status: "error",
-        },
+        ID: 548814,
+        Sort: "progress:asc",
+        Status: "error",
     }
 
     ctx := context.Background()

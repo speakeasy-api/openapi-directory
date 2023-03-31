@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetRatesSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // GetRatesRateTypeEnum - Type of Rate
@@ -34,20 +33,11 @@ func (e *GetRatesRateTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRatesPathParams struct {
+type GetRatesRequest struct {
 	// Type of Rate
 	RateType GetRatesRateTypeEnum `pathParam:"style=simple,explode=false,name=rate_type"`
-}
-
-type GetRatesHeaders struct {
 	// ApiSecretKey
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetRatesRequest struct {
-	PathParams GetRatesPathParams
-	Headers    GetRatesHeaders
-	Security   GetRatesSecurity
 }
 
 // GetRates500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

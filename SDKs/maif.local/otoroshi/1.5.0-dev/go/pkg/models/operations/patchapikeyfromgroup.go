@@ -8,20 +8,16 @@ import (
 )
 
 type PatchAPIKeyFromGroupSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type PatchAPIKeyFromGroupPathParams struct {
+type PatchAPIKeyFromGroupRequest struct {
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
 	// the api key id
 	ClientID string `pathParam:"style=simple,explode=false,name=clientId"`
 	// The api key group id
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type PatchAPIKeyFromGroupRequest struct {
-	PathParams PatchAPIKeyFromGroupPathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchAPIKeyFromGroupSecurity
 }
 
 type PatchAPIKeyFromGroupResponse struct {

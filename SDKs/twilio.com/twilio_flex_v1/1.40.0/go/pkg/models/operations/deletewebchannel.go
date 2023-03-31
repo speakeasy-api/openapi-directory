@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteWebChannelServerList = []string{
@@ -12,18 +11,13 @@ var DeleteWebChannelServerList = []string{
 }
 
 type DeleteWebChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteWebChannelPathParams struct {
-	// The SID of the WebChannel resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteWebChannelRequest struct {
-	PathParams DeleteWebChannelPathParams
-	Security   DeleteWebChannelSecurity
-	ServerURL  *string
+	// The SID of the WebChannel resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteWebChannelResponse struct {

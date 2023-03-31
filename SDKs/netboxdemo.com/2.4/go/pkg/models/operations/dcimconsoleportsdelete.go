@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimConsolePortsDeletePathParams struct {
+type DcimConsolePortsDeleteRequest struct {
 	// A unique integer value identifying this console port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimConsolePortsDeleteRequest struct {
-	PathParams DcimConsolePortsDeletePathParams
 }
 
 type DcimConsolePortsDeleteResponse struct {

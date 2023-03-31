@@ -8,18 +8,13 @@ import (
 )
 
 type PredictRawSecurity struct {
-	HTTPBearer shared.SchemeHTTPBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PredictRawPathParams struct {
-	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
-	Namespace  string `pathParam:"style=simple,explode=false,name=namespace"`
+	HTTPBearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PredictRawRequest struct {
-	PathParams PredictRawPathParams
-	Request    []byte `request:"mediaType=application/octet-stream"`
-	Security   PredictRawSecurity
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
+	Deployment  string `pathParam:"style=simple,explode=false,name=deployment"`
+	Namespace   string `pathParam:"style=simple,explode=false,name=namespace"`
 }
 
 type PredictRawResponse struct {

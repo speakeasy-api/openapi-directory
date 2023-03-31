@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteSpacesIDStatusCodePathParams struct {
+type DeleteSpacesIDStatusCodeRequest struct {
 	// code of the status
 	Code string `pathParam:"style=simple,explode=false,name=code"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSpacesIDStatusCodeRequest struct {
-	PathParams DeleteSpacesIDStatusCodePathParams
 }
 
 type DeleteSpacesIDStatusCodeResponse struct {

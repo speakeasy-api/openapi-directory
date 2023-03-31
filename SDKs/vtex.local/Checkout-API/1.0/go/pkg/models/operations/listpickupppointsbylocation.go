@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type ListPickupPpointsByLocationQueryParams struct {
+type ListPickupPpointsByLocationRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Three letter country code refering to the `postalCode` field. Pass the country code only if you are searching pickup points by postal code.
 	CountryCode *string `queryParam:"style=form,explode=true,name=countryCode"`
 	// Geocoordinates (first longitude, then latitude) around which to search for pickup points. If you use this type of search, do not pass postal and country codes.
 	GeoCoordinates []float64 `queryParam:"style=form,explode=true,name=geoCoordinates"`
 	// Postal code around which to search for pickup points. If you use this type of search, make sure to pass a `countryCode` and do not pass `geoCoordinates`.
 	PostalCode *string `queryParam:"style=form,explode=true,name=postalCode"`
-}
-
-type ListPickupPpointsByLocationHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ListPickupPpointsByLocationRequest struct {
-	QueryParams ListPickupPpointsByLocationQueryParams
-	Headers     ListPickupPpointsByLocationHeaders
 }
 
 type ListPickupPpointsByLocationResponse struct {

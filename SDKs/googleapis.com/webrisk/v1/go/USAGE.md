@@ -14,37 +14,30 @@ func main() {
     s := sdk.New()
 
     req := operations.WebriskHashesSearchRequest{
-        Security: operations.WebriskHashesSearchSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        HashPrefix: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
+            "UNWANTED_SOFTWARE",
+            "MALWARE",
+            "SOCIAL_ENGINEERING",
         },
-        QueryParams: operations.WebriskHashesSearchQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            HashPrefix: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
-                "UNWANTED_SOFTWARE",
-                "MALWARE",
-                "SOCIAL_ENGINEERING",
-            },
-            UploadType: "magnam",
-            UploadProtocol: "debitis",
-        },
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Hashes.WebriskHashesSearch(ctx, req)
+    res, err := s.Hashes.WebriskHashesSearch(ctx, req, operations.WebriskHashesSearchSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -12,12 +12,7 @@ import (
 )
 
 type ContactsCreateJSONSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type ContactsCreateJSONPathParams struct {
-	// Account to apply operations to
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ContactsCreateJSONMergeStrategyEnum - Determines how existing contacts with matching mobile numbers are treated
@@ -47,16 +42,12 @@ func (e *ContactsCreateJSONMergeStrategyEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ContactsCreateJSONQueryParams struct {
+type ContactsCreateJSONRequest struct {
+	ContactRequest *shared.ContactRequest `request:"mediaType=application/json"`
+	// Account to apply operations to
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Determines how existing contacts with matching mobile numbers are treated
 	MergeStrategy *ContactsCreateJSONMergeStrategyEnum `queryParam:"style=form,explode=true,name=mergeStrategy"`
-}
-
-type ContactsCreateJSONRequest struct {
-	PathParams  ContactsCreateJSONPathParams
-	QueryParams ContactsCreateJSONQueryParams
-	Request     *shared.ContactRequest `request:"mediaType=application/json"`
-	Security    ContactsCreateJSONSecurity
 }
 
 type ContactsCreateJSON201ApplicationJSONType string

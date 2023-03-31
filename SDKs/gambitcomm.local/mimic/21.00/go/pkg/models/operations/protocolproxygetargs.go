@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolProxyGetArgsPathParams struct {
+type ProtocolProxyGetArgsRequest struct {
 	// Agent to show the PROXY argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolProxyGetArgsRequest struct {
-	PathParams ProtocolProxyGetArgsPathParams
 }
 
 type ProtocolProxyGetArgsResponse struct {

@@ -8,14 +8,7 @@ import (
 	"net/http"
 )
 
-type GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams struct {
-	// The number of items returned. Cannot be more than 50.
-	Limit *string `queryParam:"style=form,explode=true,name=limit"`
-	// String returned from initial API call to indicate pagination. Specify nextCursor value to retrieve the next 50 items.
-	NextCursor *string `queryParam:"style=form,explode=true,name=nextCursor"`
-}
-
-type GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders struct {
+type GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest struct {
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
 	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
@@ -24,11 +17,10 @@ type GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders struct {
 	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
 	// Walmart Service Name
 	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
-type GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest struct {
-	QueryParams GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams
-	Headers     GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders
+	// The number of items returned. Cannot be more than 50.
+	Limit *string `queryParam:"style=form,explode=true,name=limit"`
+	// String returned from initial API call to indicate pagination. Specify nextCursor value to retrieve the next 50 items.
+	NextCursor *string `queryParam:"style=form,explode=true,name=nextCursor"`
 }
 
 // GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQtyUnitEnum - The unit of measurement. Example: 'EACH'

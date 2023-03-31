@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteKeySecurity struct {
-	CookieSid shared.SchemeCookieSid `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type DeleteKeyPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CookieSid string `security:"scheme,type=apiKey,subtype=cookie,name=brain.sid"`
 }
 
 type DeleteKeyRequest struct {
-	PathParams DeleteKeyPathParams
-	Security   DeleteKeySecurity
+	// Unique identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteKeyResponse struct {

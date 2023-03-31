@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EmotionQueryParams struct {
-	All *bool `queryParam:"style=form,explode=true,name=all"`
-}
-
 type EmotionRequest struct {
-	QueryParams EmotionQueryParams
-	Request     []shared.Post `request:"mediaType=application/json"`
+	RequestBody []shared.Post `request:"mediaType=application/json"`
+	All         *bool         `queryParam:"style=form,explode=true,name=all"`
 }
 
 type EmotionResponse struct {

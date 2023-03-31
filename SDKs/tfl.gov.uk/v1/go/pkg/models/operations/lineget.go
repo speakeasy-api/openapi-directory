@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineGetPathParams struct {
+type LineGetRequest struct {
 	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
 	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type LineGetRequest struct {
-	PathParams LineGetPathParams
 }
 
 type LineGetResponse struct {

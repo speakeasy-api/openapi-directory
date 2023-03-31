@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEstimateListPathParams struct {
+type GetEstimateListRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetEstimateListRequest struct {
-	PathParams GetEstimateListPathParams
 }
 
 type GetEstimateListResponse struct {

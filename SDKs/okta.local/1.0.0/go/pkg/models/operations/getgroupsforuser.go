@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetGroupsForUserPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type GetGroupsForUserRequest struct {
-	PathParams GetGroupsForUserPathParams
-	Request    []byte `request:"mediaType=application/octet-stream"`
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetGroupsForUserResponse struct {

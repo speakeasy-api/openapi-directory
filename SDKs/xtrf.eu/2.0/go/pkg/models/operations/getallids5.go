@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAllIds5QueryParams struct {
+type GetAllIds5Request struct {
 	// only providers modified since this timestamp
 	UpdatedSince *int64 `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type GetAllIds5Request struct {
-	QueryParams GetAllIds5QueryParams
 }
 
 type GetAllIds5Response struct {

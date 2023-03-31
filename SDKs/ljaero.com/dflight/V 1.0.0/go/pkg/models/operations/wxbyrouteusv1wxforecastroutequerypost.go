@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WxByRouteUsV1WxForecastRouteQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type WxByRouteUsV1WxForecastRouteQueryPostRequest struct {
-	Headers WxByRouteUsV1WxForecastRouteQueryPostHeaders
-	Request shared.WxByRoute `request:"mediaType=application/json"`
+	WxByRoute shared.WxByRoute `request:"mediaType=application/json"`
+	XAPIKey   *string          `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type WxByRouteUsV1WxForecastRouteQueryPostResponse struct {

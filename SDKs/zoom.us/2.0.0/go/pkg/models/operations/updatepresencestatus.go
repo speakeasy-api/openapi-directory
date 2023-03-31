@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdatePresenceStatusPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UpdatePresenceStatusApplicationJSONStatusEnum - Presence status of the user. The value can be set to one of the following:<br>
 // * `Away`
 // * `Do_Not_Disturb`
@@ -75,8 +71,8 @@ type UpdatePresenceStatusApplicationJSON struct {
 }
 
 type UpdatePresenceStatusRequest struct {
-	PathParams UpdatePresenceStatusPathParams
-	Request    *UpdatePresenceStatusApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *UpdatePresenceStatusApplicationJSON `request:"mediaType=application/json"`
+	UserID      string                               `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UpdatePresenceStatusResponse struct {

@@ -33,11 +33,11 @@ func newFolders(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // CloudresourcemanagerFoldersCreate - Creates a folder in the resource hierarchy. Returns an `Operation` which can be used to track the progress of the folder creation workflow. Upon success, the `Operation.response` field will be populated with the created Folder. In order to succeed, the addition of this new folder must not violate the folder naming, height, or fanout constraints. + The folder's `display_name` must be distinct from all other folders that share its parent. + The addition of the folder must not cause the active folder hierarchy to exceed a height of 10. Note, the full active + deleted folder hierarchy is allowed to reach a height of 20; this provides additional headroom when moving folders that contain deleted folders. + The addition of the folder must not cause the total number of folders under its parent to exceed 300. If the operation fails due to a folder constraint violation, some errors may be returned by the `CreateFolder` request, with status code `FAILED_PRECONDITION` and an error description. Other folder constraint violations will be communicated in the `Operation`, with the specific `PreconditionFailure` returned in the details list in the `Operation.error` field. The caller must have `resourcemanager.folders.create` permission on the identified parent.
-func (s *folders) CloudresourcemanagerFoldersCreate(ctx context.Context, request operations.CloudresourcemanagerFoldersCreateRequest) (*operations.CloudresourcemanagerFoldersCreateResponse, error) {
+func (s *folders) CloudresourcemanagerFoldersCreate(ctx context.Context, request operations.CloudresourcemanagerFoldersCreateRequest, security operations.CloudresourcemanagerFoldersCreateSecurity) (*operations.CloudresourcemanagerFoldersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/folders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FolderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *folders) CloudresourcemanagerFoldersCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *folders) CloudresourcemanagerFoldersCreate(ctx context.Context, request
 }
 
 // CloudresourcemanagerFoldersList - Lists the folders that are direct descendants of supplied parent resource. `list()` provides a strongly consistent view of the folders underneath the specified parent resource. `list()` returns folders sorted based upon the (ascending) lexical ordering of their display_name. The caller must have `resourcemanager.folders.list` permission on the identified parent.
-func (s *folders) CloudresourcemanagerFoldersList(ctx context.Context, request operations.CloudresourcemanagerFoldersListRequest) (*operations.CloudresourcemanagerFoldersListResponse, error) {
+func (s *folders) CloudresourcemanagerFoldersList(ctx context.Context, request operations.CloudresourcemanagerFoldersListRequest, security operations.CloudresourcemanagerFoldersListSecurity) (*operations.CloudresourcemanagerFoldersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/folders"
 
@@ -97,11 +97,11 @@ func (s *folders) CloudresourcemanagerFoldersList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *folders) CloudresourcemanagerFoldersList(ctx context.Context, request o
 }
 
 // CloudresourcemanagerFoldersSearch - Search for folders that match specific filter criteria. `search()` provides an eventually consistent view of the folders a user has access to which meet the specified filter criteria. This will only return folders on which the caller has the permission `resourcemanager.folders.get`.
-func (s *folders) CloudresourcemanagerFoldersSearch(ctx context.Context, request operations.CloudresourcemanagerFoldersSearchRequest) (*operations.CloudresourcemanagerFoldersSearchResponse, error) {
+func (s *folders) CloudresourcemanagerFoldersSearch(ctx context.Context, request operations.CloudresourcemanagerFoldersSearchRequest, security operations.CloudresourcemanagerFoldersSearchSecurity) (*operations.CloudresourcemanagerFoldersSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/folders:search"
 
@@ -145,11 +145,11 @@ func (s *folders) CloudresourcemanagerFoldersSearch(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

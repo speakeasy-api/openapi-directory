@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: &shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.BookingAvailabilityRequest{
-        Headers: operations.BookingAvailabilityHeaders{
-            AcceptLanguage: "en-US",
-        },
-        Request: &operations.BookingAvailabilityRequestBody{
+        AcceptLanguage: "en-US",
+        RequestBody: &operations.BookingAvailabilityRequestBody{
             AgeBands: []BookingAvailabilityRequestBodyAgeBands{
                 operations.BookingAvailabilityRequestBodyAgeBands{
                     BandID: 592845,

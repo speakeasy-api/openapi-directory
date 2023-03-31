@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSourceAccountsV3QueryParams struct {
+type GetSourceAccountsV3Request struct {
 	// The funding account ID
 	FundingAccountID *string `queryParam:"style=form,explode=true,name=fundingAccountId"`
 	// A filter for retrieving both active accounts and user deleted ones
@@ -29,10 +29,6 @@ type GetSourceAccountsV3QueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type of source account.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetSourceAccountsV3Request struct {
-	QueryParams GetSourceAccountsV3QueryParams
 }
 
 type GetSourceAccountsV3Response struct {

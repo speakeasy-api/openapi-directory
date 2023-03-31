@@ -12,18 +12,13 @@ var FetchConferenceServerList = []string{
 }
 
 type FetchConferenceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchConferencePathParams struct {
-	// The unique SID identifier of the Conference.
-	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchConferenceRequest struct {
-	PathParams FetchConferencePathParams
-	Security   FetchConferenceSecurity
-	ServerURL  *string
+	// The unique SID identifier of the Conference.
+	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
 }
 
 type FetchConferenceResponse struct {

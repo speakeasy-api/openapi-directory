@@ -302,10 +302,6 @@ type PatchSiteRequestBody struct {
 	WindowsModeFtp *bool `multipartForm:"name=windows_mode_ftp"`
 }
 
-type PatchSiteRequest struct {
-	Request *PatchSiteRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PatchSiteResponse struct {
 	ContentType string
 	// The Site object.

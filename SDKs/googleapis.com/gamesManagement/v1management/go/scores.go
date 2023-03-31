@@ -33,20 +33,20 @@ func newScores(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GamesManagementScoresReset - Resets scores for the leaderboard with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
-func (s *scores) GamesManagementScoresReset(ctx context.Context, request operations.GamesManagementScoresResetRequest) (*operations.GamesManagementScoresResetResponse, error) {
+func (s *scores) GamesManagementScoresReset(ctx context.Context, request operations.GamesManagementScoresResetRequest, security operations.GamesManagementScoresResetSecurity) (*operations.GamesManagementScoresResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/reset", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/reset", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *scores) GamesManagementScoresReset(ctx context.Context, request operati
 }
 
 // GamesManagementScoresResetAll - Resets all scores for all leaderboards for the currently authenticated players. This method is only accessible to whitelisted tester accounts for your application.
-func (s *scores) GamesManagementScoresResetAll(ctx context.Context, request operations.GamesManagementScoresResetAllRequest) (*operations.GamesManagementScoresResetAllResponse, error) {
+func (s *scores) GamesManagementScoresResetAll(ctx context.Context, request operations.GamesManagementScoresResetAllRequest, security operations.GamesManagementScoresResetAllSecurity) (*operations.GamesManagementScoresResetAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/scores/reset"
 
@@ -90,11 +90,11 @@ func (s *scores) GamesManagementScoresResetAll(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *scores) GamesManagementScoresResetAll(ctx context.Context, request oper
 }
 
 // GamesManagementScoresResetAllForAllPlayers - Resets scores for all draft leaderboards for all players. This method is only available to user accounts for your developer console.
-func (s *scores) GamesManagementScoresResetAllForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetAllForAllPlayersRequest) (*operations.GamesManagementScoresResetAllForAllPlayersResponse, error) {
+func (s *scores) GamesManagementScoresResetAllForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetAllForAllPlayersRequest, security operations.GamesManagementScoresResetAllForAllPlayersSecurity) (*operations.GamesManagementScoresResetAllForAllPlayersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/scores/resetAllForAllPlayers"
 
@@ -138,11 +138,11 @@ func (s *scores) GamesManagementScoresResetAllForAllPlayers(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,20 +168,20 @@ func (s *scores) GamesManagementScoresResetAllForAllPlayers(ctx context.Context,
 }
 
 // GamesManagementScoresResetForAllPlayers - Resets scores for the leaderboard with the given ID for all players. This method is only available to user accounts for your developer console. Only draft leaderboards can be reset.
-func (s *scores) GamesManagementScoresResetForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetForAllPlayersRequest) (*operations.GamesManagementScoresResetForAllPlayersResponse, error) {
+func (s *scores) GamesManagementScoresResetForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetForAllPlayersRequest, security operations.GamesManagementScoresResetForAllPlayersSecurity) (*operations.GamesManagementScoresResetForAllPlayersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,11 +207,11 @@ func (s *scores) GamesManagementScoresResetForAllPlayers(ctx context.Context, re
 }
 
 // GamesManagementScoresResetMultipleForAllPlayers - Resets scores for the leaderboards with the given IDs for all players. This method is only available to user accounts for your developer console. Only draft leaderboards may be reset.
-func (s *scores) GamesManagementScoresResetMultipleForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetMultipleForAllPlayersRequest) (*operations.GamesManagementScoresResetMultipleForAllPlayersResponse, error) {
+func (s *scores) GamesManagementScoresResetMultipleForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetMultipleForAllPlayersRequest, security operations.GamesManagementScoresResetMultipleForAllPlayersSecurity) (*operations.GamesManagementScoresResetMultipleForAllPlayersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/scores/resetMultipleForAllPlayers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoresResetMultipleForAllRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,11 +223,11 @@ func (s *scores) GamesManagementScoresResetMultipleForAllPlayers(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

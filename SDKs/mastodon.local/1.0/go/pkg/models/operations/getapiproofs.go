@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIProofsQueryParams struct {
+type GetAPIProofsRequest struct {
 	// The identity provider to be looked up. Currently only supports keybase (case-sensitive)
 	Provider *string `queryParam:"style=form,explode=true,name=provider"`
 	// The username on the selected identity provider
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetAPIProofsRequest struct {
-	QueryParams GetAPIProofsQueryParams
 }
 
 type GetAPIProofsResponse struct {

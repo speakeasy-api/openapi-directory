@@ -10,13 +10,8 @@ import (
 )
 
 type AdvisorynotificationsOrganizationsLocationsNotificationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type AdvisorynotificationsOrganizationsLocationsNotificationsListPathParams struct {
-	// Required. The parent, which owns this collection of notifications. Must be of the form "organizations/{organization}/locations/{location}".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum - Specifies which parts of the notification resource should be returned in the response.
@@ -46,7 +41,7 @@ func (e *AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum) U
 	}
 }
 
-type AdvisorynotificationsOrganizationsLocationsNotificationsListQueryParams struct {
+type AdvisorynotificationsOrganizationsLocationsNotificationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,6 +62,8 @@ type AdvisorynotificationsOrganizationsLocationsNotificationsListQueryParams str
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token returned from a previous request. When paginating, all other parameters provided in the request must match the call that returned the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent, which owns this collection of notifications. Must be of the form "organizations/{organization}/locations/{location}".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -77,12 +74,6 @@ type AdvisorynotificationsOrganizationsLocationsNotificationsListQueryParams str
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which parts of the notification resource should be returned in the response.
 	View *AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type AdvisorynotificationsOrganizationsLocationsNotificationsListRequest struct {
-	PathParams  AdvisorynotificationsOrganizationsLocationsNotificationsListPathParams
-	QueryParams AdvisorynotificationsOrganizationsLocationsNotificationsListQueryParams
-	Security    AdvisorynotificationsOrganizationsLocationsNotificationsListSecurity
 }
 
 type AdvisorynotificationsOrganizationsLocationsNotificationsListResponse struct {

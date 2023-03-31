@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIPIpv4PathParams struct {
-	Ipv4 string `pathParam:"style=simple,explode=false,name=ipv4"`
-}
-
 type GetIPIpv4Request struct {
-	PathParams GetIPIpv4PathParams
+	Ipv4 string `pathParam:"style=simple,explode=false,name=ipv4"`
 }
 
 type GetIPIpv4Response struct {

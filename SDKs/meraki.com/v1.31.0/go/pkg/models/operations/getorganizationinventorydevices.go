@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type GetOrganizationInventoryDevicesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationInventoryDevicesProductTypesEnum string
 
 const (
@@ -99,7 +95,7 @@ func (e *GetOrganizationInventoryDevicesUsedStateEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetOrganizationInventoryDevicesQueryParams struct {
+type GetOrganizationInventoryDevicesRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// Search for devices in inventory based on mac addresses.
@@ -109,7 +105,8 @@ type GetOrganizationInventoryDevicesQueryParams struct {
 	// Search for devices in inventory based on network ids.
 	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
 	// Search for devices in inventory based on order numbers.
-	OrderNumbers []string `queryParam:"style=form,explode=false,name=orderNumbers"`
+	OrderNumbers   []string `queryParam:"style=form,explode=false,name=orderNumbers"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// Filter devices by product type. Accepted values are appliance, camera, cellularGateway, sensor, switch, systemsManager, and wireless.
@@ -126,11 +123,6 @@ type GetOrganizationInventoryDevicesQueryParams struct {
 	TagsFilterType *GetOrganizationInventoryDevicesTagsFilterTypeEnum `queryParam:"style=form,explode=true,name=tagsFilterType"`
 	// Filter results by used or unused inventory. Accepted values are 'used' or 'unused'.
 	UsedState *GetOrganizationInventoryDevicesUsedStateEnum `queryParam:"style=form,explode=true,name=usedState"`
-}
-
-type GetOrganizationInventoryDevicesRequest struct {
-	PathParams  GetOrganizationInventoryDevicesPathParams
-	QueryParams GetOrganizationInventoryDevicesQueryParams
 }
 
 type GetOrganizationInventoryDevices200ApplicationJSON struct {

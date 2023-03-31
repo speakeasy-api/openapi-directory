@@ -96,9 +96,9 @@ func New(opts ...SDKOption) *SDK {
 // Creates a contact in a given mailing list
 func (s *SDK) CreateContactInMailinglist(ctx context.Context, request operations.CreateContactInMailinglistRequest) (*operations.CreateContactInMailinglistResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/directories/{DirectoryId}/mailinglists/{MailingListId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/directories/{DirectoryId}/mailinglists/{MailingListId}/contacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContactInMailingList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -140,7 +140,7 @@ func (s *SDK) CreateContactInMailinglist(ctx context.Context, request operations
 
 // GenerateDistributionLinks - Generate distribution links
 // Geneates links for individual distribution
-func (s *SDK) GenerateDistributionLinks(ctx context.Context, request operations.GenerateDistributionLinksRequest) (*operations.GenerateDistributionLinksResponse, error) {
+func (s *SDK) GenerateDistributionLinks(ctx context.Context, request shared.CreateDistributionLinks) (*operations.GenerateDistributionLinksResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/distributions"
 
@@ -195,7 +195,7 @@ func (s *SDK) GetDistributions(ctx context.Context, request operations.GetDistri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -237,7 +237,7 @@ func (s *SDK) GetDistributions(ctx context.Context, request operations.GetDistri
 // Get event subscriptions
 func (s *SDK) GetEventSubscriptions(ctx context.Context, request operations.GetEventSubscriptionsRequest) (*operations.GetEventSubscriptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/eventsubscriptions/{SubscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/eventsubscriptions/{SubscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +282,7 @@ func (s *SDK) GetEventSubscriptions(ctx context.Context, request operations.GetE
 // Gets a single Qualtrics survey speficied by its ID
 func (s *SDK) GetSurvey(ctx context.Context, request operations.GetSurveyRequest) (*operations.GetSurveyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/survey-definitions/{SurveyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/survey-definitions/{SurveyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,14 +328,14 @@ func (s *SDK) GetSurvey(ctx context.Context, request operations.GetSurveyRequest
 // Retrieves all the individual links for a given distribution
 func (s *SDK) Retrievedistributionlinks(ctx context.Context, request operations.RetrievedistributionlinksRequest) (*operations.RetrievedistributionlinksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/distributions/{DistributionId}/links", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/distributions/{DistributionId}/links", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -375,7 +375,7 @@ func (s *SDK) Retrievedistributionlinks(ctx context.Context, request operations.
 
 // WebhookDelete - Remove subscription to response event
 // Remove event subscription
-func (s *SDK) WebhookDelete(ctx context.Context, request operations.WebhookDeleteRequest) (*operations.WebhookDeleteResponse, error) {
+func (s *SDK) WebhookDelete(ctx context.Context, request shared.SubscribeToEventBody) (*operations.WebhookDeleteResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/eventsubscriptions/"
 
@@ -430,7 +430,7 @@ func (s *SDK) WebhookDelete(ctx context.Context, request operations.WebhookDelet
 
 // WhenAResponseIsReceived - Triggers when a response is submitted to a qualtrics survey
 // Subscribe to response event
-func (s *SDK) WhenAResponseIsReceived(ctx context.Context, request operations.WhenAResponseIsReceivedRequest) (*operations.WhenAResponseIsReceivedResponse, error) {
+func (s *SDK) WhenAResponseIsReceived(ctx context.Context, request shared.SubscribeToEventBody) (*operations.WhenAResponseIsReceivedResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/eventsubscriptions/"
 

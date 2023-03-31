@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete13PathParams struct {
+type Delete13Request struct {
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type Delete13Request struct {
-	PathParams Delete13PathParams
 }
 
 type Delete13Response struct {

@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDCollectiveDecisionPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum - for space type 'company' enums allowed are  'EGM','CGM','OGM','ConstituentAssembly','SolePartner','OtherEvent','Office','ExecutiveCommittee','Consulting','Board','PartnersMeeting' and for space type 'association' enums allowed are 'EGM','CGM','OGM','Other','Office','ExecutiveCommittee'
 type PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum string
 
@@ -110,9 +103,12 @@ type PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDCollectiveDecisionPathParams
 	// Collective decision to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDCollectiveDecisionResponse struct {

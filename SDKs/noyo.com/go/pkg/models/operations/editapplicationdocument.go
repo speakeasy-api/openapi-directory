@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditApplicationDocumentPathParams struct {
+type EditApplicationDocumentRequest struct {
+	ApplicationDocumentEditRequest shared.ApplicationDocumentEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
 	// The unique identifier of the application document in Noyo
 	DocumentID string `pathParam:"style=simple,explode=false,name=document_id"`
 	// The current version identifier of the application document
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditApplicationDocumentRequest struct {
-	PathParams EditApplicationDocumentPathParams
-	Request    shared.ApplicationDocumentEditRequest `request:"mediaType=application/json"`
 }
 
 type EditApplicationDocumentResponse struct {

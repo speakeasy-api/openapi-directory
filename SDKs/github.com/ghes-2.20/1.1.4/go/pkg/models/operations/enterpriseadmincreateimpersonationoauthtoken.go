@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminCreateImpersonationOAuthTokenPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminCreateImpersonationOAuthTokenRequestBody struct {
 	// A list of [scopes](https://docs.github.com/enterprise-server@2.20/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 	Scopes []string `json:"scopes,omitempty"`
 }
 
 type EnterpriseAdminCreateImpersonationOAuthTokenRequest struct {
-	PathParams EnterpriseAdminCreateImpersonationOAuthTokenPathParams
-	Request    *EnterpriseAdminCreateImpersonationOAuthTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminCreateImpersonationOAuthTokenRequestBody `request:"mediaType=application/json"`
+	Username    string                                                   `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type EnterpriseAdminCreateImpersonationOAuthTokenResponse struct {

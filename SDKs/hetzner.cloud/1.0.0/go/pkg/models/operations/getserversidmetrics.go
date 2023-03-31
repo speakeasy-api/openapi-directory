@@ -10,11 +10,6 @@ import (
 	"net/http"
 )
 
-type GetServersIDMetricsPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetServersIDMetricsTypeEnum - Type of metrics to get
 type GetServersIDMetricsTypeEnum string
 
@@ -42,20 +37,17 @@ func (e *GetServersIDMetricsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetServersIDMetricsQueryParams struct {
+type GetServersIDMetricsRequest struct {
 	// End of period to get Metrics for (in ISO-8601 format)
 	End string `queryParam:"style=form,explode=true,name=end"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Start of period to get Metrics for (in ISO-8601 format)
 	Start string `queryParam:"style=form,explode=true,name=start"`
 	// Resolution of results in seconds
 	Step *string `queryParam:"style=form,explode=true,name=step"`
 	// Type of metrics to get
 	Type GetServersIDMetricsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetServersIDMetricsRequest struct {
-	PathParams  GetServersIDMetricsPathParams
-	QueryParams GetServersIDMetricsQueryParams
 }
 
 type GetServersIDMetrics200ApplicationJSONMetricsTimeSeriesValuesType string

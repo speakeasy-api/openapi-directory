@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCarrierByIDPathParams struct {
+type GetCarrierByIDRequest struct {
 	// Carrier ID
 	CarrierID string `pathParam:"style=simple,explode=false,name=carrier_id"`
-}
-
-type GetCarrierByIDRequest struct {
-	PathParams GetCarrierByIDPathParams
 }
 
 type GetCarrierByIDResponse struct {

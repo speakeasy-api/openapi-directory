@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetRealmAuthenticationUnregisteredRequiredActionsPathParams struct {
+type GetRealmAuthenticationUnregisteredRequiredActionsRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAuthenticationUnregisteredRequiredActionsRequest struct {
-	PathParams GetRealmAuthenticationUnregisteredRequiredActionsPathParams
 }
 
 type GetRealmAuthenticationUnregisteredRequiredActionsResponse struct {

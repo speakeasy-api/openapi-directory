@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsCreateImagePathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostServersIDActionsCreateImageCreateImageRequestLabels - User-defined labels (key-value pairs)
 type PostServersIDActionsCreateImageCreateImageRequestLabels struct {
 	// New label
@@ -53,8 +48,9 @@ type PostServersIDActionsCreateImageCreateImageRequest struct {
 }
 
 type PostServersIDActionsCreateImageRequest struct {
-	PathParams PostServersIDActionsCreateImagePathParams
-	Request    *PostServersIDActionsCreateImageCreateImageRequest `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsCreateImageCreateImageRequest `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsCreateImage201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null

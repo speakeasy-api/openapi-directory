@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2PendingEmailsIDJSONPathParams struct {
-	// Email ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2PendingEmailsIDJSONRequestBody struct {
 	// The error message indicating why the email failed to send
 	ErrorMessage *string `form:"name=error_message"`
@@ -23,8 +18,9 @@ type PutV2PendingEmailsIDJSONRequestBody struct {
 }
 
 type PutV2PendingEmailsIDJSONRequest struct {
-	PathParams PutV2PendingEmailsIDJSONPathParams
-	Request    PutV2PendingEmailsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody PutV2PendingEmailsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Email ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2PendingEmailsIDJSONResponse struct {

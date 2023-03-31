@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExtrasImageAttachmentsDeletePathParams struct {
+type ExtrasImageAttachmentsDeleteRequest struct {
 	// A unique integer value identifying this image attachment.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasImageAttachmentsDeleteRequest struct {
-	PathParams ExtrasImageAttachmentsDeletePathParams
 }
 
 type ExtrasImageAttachmentsDeleteResponse struct {

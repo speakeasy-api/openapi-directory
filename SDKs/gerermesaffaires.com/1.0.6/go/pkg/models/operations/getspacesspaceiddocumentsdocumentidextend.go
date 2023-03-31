@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDDocumentsDocumentIDExtendPathParams struct {
+type GetSpacesSpaceIDDocumentsDocumentIDExtendRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsDocumentIDExtendRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsDocumentIDExtendPathParams
 }
 
 type GetSpacesSpaceIDDocumentsDocumentIDExtend200ApplicationJSON struct {

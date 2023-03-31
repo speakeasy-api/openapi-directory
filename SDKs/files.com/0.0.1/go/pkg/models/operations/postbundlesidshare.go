@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostBundlesIDSharePathParams struct {
-	// Bundle ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostBundlesIDShareRequestBody struct {
 	// Note to include in email.
 	Note *string `multipartForm:"name=note"`
@@ -21,8 +16,9 @@ type PostBundlesIDShareRequestBody struct {
 }
 
 type PostBundlesIDShareRequest struct {
-	PathParams PostBundlesIDSharePathParams
-	Request    *PostBundlesIDShareRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostBundlesIDShareRequestBody `request:"mediaType=multipart/form-data"`
+	// Bundle ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostBundlesIDShareResponse struct {

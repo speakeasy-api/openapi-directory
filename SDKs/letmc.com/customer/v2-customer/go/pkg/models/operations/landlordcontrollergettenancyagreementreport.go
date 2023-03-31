@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type LandlordControllerGetTenancyAgreementReportPathParams struct {
+type LandlordControllerGetTenancyAgreementReportRequest struct {
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerGetTenancyAgreementReportQueryParams struct {
 	// The Tenancy ID
 	TenancyID string `queryParam:"style=form,explode=true,name=tenancyID"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type LandlordControllerGetTenancyAgreementReportRequest struct {
-	PathParams  LandlordControllerGetTenancyAgreementReportPathParams
-	QueryParams LandlordControllerGetTenancyAgreementReportQueryParams
 }
 
 type LandlordControllerGetTenancyAgreementReportResponse struct {

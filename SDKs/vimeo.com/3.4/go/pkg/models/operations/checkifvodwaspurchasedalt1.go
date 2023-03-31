@@ -8,17 +8,12 @@ import (
 )
 
 type CheckIfVodWasPurchasedAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CheckIfVodWasPurchasedAlt1PathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CheckIfVodWasPurchasedAlt1Request struct {
-	PathParams CheckIfVodWasPurchasedAlt1PathParams
-	Security   CheckIfVodWasPurchasedAlt1Security
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 }
 
 type CheckIfVodWasPurchasedAlt1Response struct {

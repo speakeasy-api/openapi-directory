@@ -32,20 +32,20 @@ func newGrouplicenses(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // AndroidenterpriseGrouplicensesGet - Retrieves details of an enterprise's group license for a product. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
-func (s *grouplicenses) AndroidenterpriseGrouplicensesGet(ctx context.Context, request operations.AndroidenterpriseGrouplicensesGetRequest) (*operations.AndroidenterpriseGrouplicensesGetResponse, error) {
+func (s *grouplicenses) AndroidenterpriseGrouplicensesGet(ctx context.Context, request operations.AndroidenterpriseGrouplicensesGetRequest, security operations.AndroidenterpriseGrouplicensesGetSecurity) (*operations.AndroidenterpriseGrouplicensesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *grouplicenses) AndroidenterpriseGrouplicensesGet(ctx context.Context, r
 }
 
 // AndroidenterpriseGrouplicensesList - Retrieves IDs of all products for which the enterprise has a group license. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
-func (s *grouplicenses) AndroidenterpriseGrouplicensesList(ctx context.Context, request operations.AndroidenterpriseGrouplicensesListRequest) (*operations.AndroidenterpriseGrouplicensesListResponse, error) {
+func (s *grouplicenses) AndroidenterpriseGrouplicensesList(ctx context.Context, request operations.AndroidenterpriseGrouplicensesListRequest, security operations.AndroidenterpriseGrouplicensesListSecurity) (*operations.AndroidenterpriseGrouplicensesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

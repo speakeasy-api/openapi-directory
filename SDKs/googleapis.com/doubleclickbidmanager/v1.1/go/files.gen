@@ -34,7 +34,6 @@ pkg/models/shared/filterpair.go
 pkg/models/shared/querymetadata.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listqueriesresponse.go
 pkg/models/shared/runqueryrequest.go
 pkg/models/shared/listreportsresponse.go

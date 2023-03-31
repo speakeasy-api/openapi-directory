@@ -14,10 +14,6 @@ type PostAssetsCorrelationMatrixBoundsRequestBody struct {
 	AssetsGroup []int64 `json:"assetsGroup"`
 }
 
-type PostAssetsCorrelationMatrixBoundsRequest struct {
-	Request PostAssetsCorrelationMatrixBoundsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixBounds200ApplicationJSON - OK
 type PostAssetsCorrelationMatrixBounds200ApplicationJSON struct {
 	// assetsCorrelationMatrixLowerBounds[i][j] is the lower bound of the correlation between the asset i and the asset j

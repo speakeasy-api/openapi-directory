@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteImagesPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteImagesQueryParams struct {
+type DeleteImagesRequest struct {
 	// Flag to specify delete all images, specify this flag or a list of images. Using this flag will return a 202 response to indicate the images are being deleted.
 	AllImages *bool `queryParam:"style=form,explode=true,name=allImages"`
 	// Removes these images from all iterations, not just the current workspace. Using this flag will return a 202 response to indicate the images are being deleted.
 	AllIterations *bool `queryParam:"style=form,explode=true,name=allIterations"`
 	// Ids of the images to be deleted. Limited to 256 images per batch.
 	ImageIds []string `queryParam:"style=form,explode=false,name=imageIds"`
-}
-
-type DeleteImagesRequest struct {
-	PathParams  DeleteImagesPathParams
-	QueryParams DeleteImagesQueryParams
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type DeleteImagesResponse struct {

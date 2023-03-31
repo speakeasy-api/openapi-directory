@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSalesActivitiesPathParams struct {
-	// Project ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSalesActivitiesQueryParams struct {
-	ExcludeOwner *string                       `queryParam:"style=form,explode=true,name=excludeOwner"`
-	Type         *shared.SalesActivityTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
 type GetSalesActivitiesRequest struct {
-	PathParams  GetSalesActivitiesPathParams
-	QueryParams GetSalesActivitiesQueryParams
+	ExcludeOwner *string `queryParam:"style=form,explode=true,name=excludeOwner"`
+	// Project ID
+	ID   int64                         `pathParam:"style=simple,explode=false,name=id"`
+	Type *shared.SalesActivityTypeEnum `queryParam:"style=form,explode=true,name=type"`
 }
 
 type GetSalesActivitiesResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayRunJobInfoPathParams struct {
-	// The job unique identifier.
-	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
-}
-
-type GetPayRunJobInfoHeaders struct {
+type GetPayRunJobInfoRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetPayRunJobInfoRequest struct {
-	PathParams GetPayRunJobInfoPathParams
-	Headers    GetPayRunJobInfoHeaders
+	// The job unique identifier.
+	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
 }
 
 type GetPayRunJobInfoResponse struct {

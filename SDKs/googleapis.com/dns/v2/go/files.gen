@@ -72,7 +72,6 @@ pkg/models/shared/rrsetroutingpolicygeopolicy.go
 pkg/models/shared/rrsetroutingpolicygeopolicygeopolicyitem.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/changeslistresponse.go
 pkg/models/shared/responseheader.go
 pkg/models/shared/dnskey.go

@@ -8,16 +8,11 @@ import (
 )
 
 type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListPathParams struct {
-	// Required. The resource name of the account's ChannelPartnerLink. Parent uses the format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel partners.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListQueryParams struct {
+type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListQu
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A token identifying a page of results beyond the first page. Obtained through ListChannelPartnerRepricingConfigsResponse.next_page_token of the previous CloudChannelService.ListChannelPartnerRepricingConfigs call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the account's ChannelPartnerLink. Parent uses the format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel partners.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListQu
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListRequest struct {
-	PathParams  CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListPathParams
-	QueryParams CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListQueryParams
-	Security    CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListSecurity
 }
 
 type CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse struct {

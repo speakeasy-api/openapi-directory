@@ -10,6 +10,35 @@ import (
 	"time"
 )
 
+type RunsForRunAndRouteTypeExpandEnum string
+
+const (
+	RunsForRunAndRouteTypeExpandEnumAll               RunsForRunAndRouteTypeExpandEnum = "All"
+	RunsForRunAndRouteTypeExpandEnumVehicleDescriptor RunsForRunAndRouteTypeExpandEnum = "VehicleDescriptor"
+	RunsForRunAndRouteTypeExpandEnumVehiclePosition   RunsForRunAndRouteTypeExpandEnum = "VehiclePosition"
+	RunsForRunAndRouteTypeExpandEnumNone              RunsForRunAndRouteTypeExpandEnum = "None"
+)
+
+func (e *RunsForRunAndRouteTypeExpandEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "All":
+		fallthrough
+	case "VehicleDescriptor":
+		fallthrough
+	case "VehiclePosition":
+		fallthrough
+	case "None":
+		*e = RunsForRunAndRouteTypeExpandEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for RunsForRunAndRouteTypeExpandEnum: %s", s)
+	}
+}
+
 // RunsForRunAndRouteTypeRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
 type RunsForRunAndRouteTypeRouteTypeEnum string
 
@@ -43,43 +72,7 @@ func (e *RunsForRunAndRouteTypeRouteTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RunsForRunAndRouteTypePathParams struct {
-	// Number identifying transport mode; values returned via RouteTypes API
-	RouteType RunsForRunAndRouteTypeRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-	// The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
-	RunRef string `pathParam:"style=simple,explode=false,name=run_ref"`
-}
-
-type RunsForRunAndRouteTypeExpandEnum string
-
-const (
-	RunsForRunAndRouteTypeExpandEnumAll               RunsForRunAndRouteTypeExpandEnum = "All"
-	RunsForRunAndRouteTypeExpandEnumVehicleDescriptor RunsForRunAndRouteTypeExpandEnum = "VehicleDescriptor"
-	RunsForRunAndRouteTypeExpandEnumVehiclePosition   RunsForRunAndRouteTypeExpandEnum = "VehiclePosition"
-	RunsForRunAndRouteTypeExpandEnumNone              RunsForRunAndRouteTypeExpandEnum = "None"
-)
-
-func (e *RunsForRunAndRouteTypeExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "All":
-		fallthrough
-	case "VehicleDescriptor":
-		fallthrough
-	case "VehiclePosition":
-		fallthrough
-	case "None":
-		*e = RunsForRunAndRouteTypeExpandEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RunsForRunAndRouteTypeExpandEnum: %s", s)
-	}
-}
-
-type RunsForRunAndRouteTypeQueryParams struct {
+type RunsForRunAndRouteTypeRequest struct {
 	// Date of the request. (optional - defaults to now)
 	DateUtc *time.Time `queryParam:"style=form,explode=true,name=date_utc"`
 	// Your developer id
@@ -88,15 +81,14 @@ type RunsForRunAndRouteTypeQueryParams struct {
 	Expand []RunsForRunAndRouteTypeExpandEnum `queryParam:"style=form,explode=true,name=expand"`
 	// Indicates if geopath data will be returned (default = false)
 	IncludeGeopath *bool `queryParam:"style=form,explode=true,name=include_geopath"`
+	// Number identifying transport mode; values returned via RouteTypes API
+	RouteType RunsForRunAndRouteTypeRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
+	// The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
+	RunRef string `pathParam:"style=simple,explode=false,name=run_ref"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RunsForRunAndRouteTypeRequest struct {
-	PathParams  RunsForRunAndRouteTypePathParams
-	QueryParams RunsForRunAndRouteTypeQueryParams
 }
 
 type RunsForRunAndRouteTypeResponse struct {

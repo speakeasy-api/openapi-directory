@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSourceAccountV3PathParams struct {
+type GetSourceAccountV3Request struct {
 	// Source account id
 	SourceAccountID string `pathParam:"style=simple,explode=false,name=sourceAccountId"`
-}
-
-type GetSourceAccountV3Request struct {
-	PathParams GetSourceAccountV3PathParams
 }
 
 type GetSourceAccountV3Response struct {

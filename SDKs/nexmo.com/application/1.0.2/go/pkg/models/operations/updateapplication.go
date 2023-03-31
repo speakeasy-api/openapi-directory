@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateApplicationPathParams struct {
-	// The ID allocated to your application by Nexmo.
-	AppID string `pathParam:"style=simple,explode=false,name=app_id"`
-}
-
 // UpdateApplicationRequestBodyTypeEnum - The Nexmo product or products that you access with this application. Currently `voice` and `messages` application types are supported. You  can't change the type of application.
 type UpdateApplicationRequestBodyTypeEnum string
 
@@ -58,8 +53,9 @@ type UpdateApplicationRequestBody struct {
 }
 
 type UpdateApplicationRequest struct {
-	PathParams UpdateApplicationPathParams
-	Request    *UpdateApplicationRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateApplicationRequestBody `request:"mediaType=application/json"`
+	// The ID allocated to your application by Nexmo.
+	AppID string `pathParam:"style=simple,explode=false,name=app_id"`
 }
 
 type UpdateApplicationResponse struct {

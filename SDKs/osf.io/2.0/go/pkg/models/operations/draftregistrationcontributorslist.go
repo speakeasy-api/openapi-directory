@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DraftRegistrationContributorsListPathParams struct {
+type DraftRegistrationContributorsListRequest struct {
 	// The unique identifier of the Draft Registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
-type DraftRegistrationContributorsListRequest struct {
-	PathParams DraftRegistrationContributorsListPathParams
 }
 
 type DraftRegistrationContributorsListResponse struct {

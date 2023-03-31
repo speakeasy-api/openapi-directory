@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetPortPathParams struct {
+type SetPortRequest struct {
 	// Agent to set the primary SNMP port
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Primary SNMP port of the agent
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type SetPortRequest struct {
-	PathParams SetPortPathParams
 }
 
 type SetPortResponse struct {

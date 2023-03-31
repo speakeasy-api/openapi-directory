@@ -8,18 +8,13 @@ import (
 )
 
 type PutMarketingV3MarketingEventsEventsExternalEventIDReplaceSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PutMarketingV3MarketingEventsEventsExternalEventIDReplacePathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PutMarketingV3MarketingEventsEventsExternalEventIDReplaceRequest struct {
-	PathParams PutMarketingV3MarketingEventsEventsExternalEventIDReplacePathParams
-	Request    shared.MarketingEventCreateRequestParams `request:"mediaType=application/json"`
-	Security   PutMarketingV3MarketingEventsEventsExternalEventIDReplaceSecurity
+	MarketingEventCreateRequestParams shared.MarketingEventCreateRequestParams `request:"mediaType=application/json"`
+	ExternalEventID                   string                                   `pathParam:"style=simple,explode=false,name=externalEventId"`
 }
 
 type PutMarketingV3MarketingEventsEventsExternalEventIDReplaceResponse struct {

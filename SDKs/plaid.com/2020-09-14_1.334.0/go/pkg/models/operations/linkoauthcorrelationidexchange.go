@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type LinkOauthCorrelationIDExchangeRequest struct {
-	Request shared.LinkOAuthCorrelationIDExchangeRequest `request:"mediaType=application/json"`
-}
 
 type LinkOauthCorrelationIDExchangeResponse struct {
 	ContentType string

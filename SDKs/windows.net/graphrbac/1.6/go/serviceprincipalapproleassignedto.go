@@ -34,14 +34,14 @@ func newServicePrincipalAppRoleAssignedTo(defaultClient, securityClient HTTPClie
 // ServicePrincipalsListAppRoleAssignedTo - Principals (users, groups, and service principals) that are assigned to this service principal.
 func (s *servicePrincipalAppRoleAssignedTo) ServicePrincipalsListAppRoleAssignedTo(ctx context.Context, request operations.ServicePrincipalsListAppRoleAssignedToRequest) (*operations.ServicePrincipalsListAppRoleAssignedToResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/appRoleAssignedTo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}/appRoleAssignedTo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

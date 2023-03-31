@@ -33,11 +33,11 @@ func newShippingQuote(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // CreateShippingQuote - The <b>createShippingQuote</b> method returns a <i>shipping quote </i> that contains a list of live "rates."  <br><br>Each rate represents an offer made by a shipping carrier for a specific service and each offer has a live quote for the base service cost. Rates have a time window in which they are "live," and rates expire when their purchase window ends. If offered by the carrier, rates can include shipping options (and their associated prices), and users can add any offered shipping option to the base service should they desire.  Also, depending on the services required, rates can also include pickup and delivery windows.  <br><br>Each rate is for a single package and is based on the following information: <ul><li>The shipping origin</li> <li>The shipping destination</li> <li>The package size (weight and dimensions)</li></ul>  Rates are identified by a unique eBay-assigned <b>rateId</b> and rates are based on price points, pickup and delivery time frames, and other user requirements. Because each rate offered must be compliant with the eBay shipping program, all rates reflect eBay-negotiated prices.  <br><br>The various rates returned in a shipping quote offer the user a choice from which they can choose a shipping service that best fits their needs. Select the rate for your shipment and using the associated <b>rateId</b>, call <b>createFromShippingQuote</b> to create a shipment and generate a shipping label that you can use to ship the package.
-func (s *shippingQuote) CreateShippingQuote(ctx context.Context, request operations.CreateShippingQuoteRequest) (*operations.CreateShippingQuoteResponse, error) {
+func (s *shippingQuote) CreateShippingQuote(ctx context.Context, request operations.CreateShippingQuoteRequest, security operations.CreateShippingQuoteSecurity) (*operations.CreateShippingQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shipping_quote"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingQuoteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *shippingQuote) CreateShippingQuote(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,16 +94,16 @@ func (s *shippingQuote) CreateShippingQuote(ctx context.Context, request operati
 }
 
 // GetShippingQuote - This method retrieves the complete details of the shipping quote associated with the specified <b>shippingQuoteId</b> value.  <br><br>A "shipping quote" pertains to a single specific package and contains a set of shipping "rates" that quote the cost to ship the package by different shipping carriers and services. The quotes are based on the package's origin, destination, and size.  <br><br>Call <b>createShippingQuote</b> to create a <b>shippingQuoteId</b>.
-func (s *shippingQuote) GetShippingQuote(ctx context.Context, request operations.GetShippingQuoteRequest) (*operations.GetShippingQuoteResponse, error) {
+func (s *shippingQuote) GetShippingQuote(ctx context.Context, request operations.GetShippingQuoteRequest, security operations.GetShippingQuoteSecurity) (*operations.GetShippingQuoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipping_quote/{shippingQuoteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shipping_quote/{shippingQuoteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

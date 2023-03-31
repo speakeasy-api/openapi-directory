@@ -41,7 +41,7 @@ func newTrackingField(defaultClient, securityClient HTTPClient, serverURL, langu
 //
 // **Prerequisites:**
 // * Business, Education, API or higher plan
-func (s *trackingField) TrackingfieldCreate(ctx context.Context, request operations.TrackingfieldCreateRequest) (*operations.TrackingfieldCreateResponse, error) {
+func (s *trackingField) TrackingfieldCreate(ctx context.Context, request operations.TrackingfieldCreateTrackingField, security operations.TrackingfieldCreateSecurity) (*operations.TrackingfieldCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tracking_fields"
 
@@ -60,7 +60,7 @@ func (s *trackingField) TrackingfieldCreate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,16 +111,16 @@ func (s *trackingField) TrackingfieldCreate(ctx context.Context, request operati
 //
 // **Prerequisites:**
 // * Business, Education, API or higher plan
-func (s *trackingField) TrackingfieldDelete(ctx context.Context, request operations.TrackingfieldDeleteRequest) (*operations.TrackingfieldDeleteResponse, error) {
+func (s *trackingField) TrackingfieldDelete(ctx context.Context, request operations.TrackingfieldDeleteRequest, security operations.TrackingfieldDeleteSecurity) (*operations.TrackingfieldDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracking_fields/{fieldId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracking_fields/{fieldId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,16 +155,16 @@ func (s *trackingField) TrackingfieldDelete(ctx context.Context, request operati
 //
 // **Prerequisites:**
 // * Business, Education, API or higher plan
-func (s *trackingField) TrackingfieldGet(ctx context.Context, request operations.TrackingfieldGetRequest) (*operations.TrackingfieldGetResponse, error) {
+func (s *trackingField) TrackingfieldGet(ctx context.Context, request operations.TrackingfieldGetRequest, security operations.TrackingfieldGetSecurity) (*operations.TrackingfieldGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracking_fields/{fieldId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracking_fields/{fieldId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *trackingField) TrackingfieldGet(ctx context.Context, request operations
 //
 // **Prerequisites:**
 // * Business, Education, API or higher plan
-func (s *trackingField) TrackingfieldList(ctx context.Context, request operations.TrackingfieldListRequest) (*operations.TrackingfieldListResponse, error) {
+func (s *trackingField) TrackingfieldList(ctx context.Context) (*operations.TrackingfieldListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tracking_fields"
 
@@ -223,7 +223,7 @@ func (s *trackingField) TrackingfieldList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -272,11 +272,11 @@ func (s *trackingField) TrackingfieldList(ctx context.Context, request operation
 //
 // **Prerequisites:**
 // * Business, Education, API or higher plan
-func (s *trackingField) TrackingfieldUpdate(ctx context.Context, request operations.TrackingfieldUpdateRequest) (*operations.TrackingfieldUpdateResponse, error) {
+func (s *trackingField) TrackingfieldUpdate(ctx context.Context, request operations.TrackingfieldUpdateRequest, security operations.TrackingfieldUpdateSecurity) (*operations.TrackingfieldUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracking_fields/{fieldId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tracking_fields/{fieldId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *trackingField) TrackingfieldUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

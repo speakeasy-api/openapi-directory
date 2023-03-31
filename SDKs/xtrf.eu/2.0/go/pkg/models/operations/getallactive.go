@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAllActiveQueryParams struct {
+type GetAllActiveRequest struct {
 	// exact name of entity
 	NameEquals *string `queryParam:"style=form,explode=true,name=nameEquals"`
-}
-
-type GetAllActiveRequest struct {
-	QueryParams GetAllActiveQueryParams
 }
 
 type GetAllActiveResponse struct {

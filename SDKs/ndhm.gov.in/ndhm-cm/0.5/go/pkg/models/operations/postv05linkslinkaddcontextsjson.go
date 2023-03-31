@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05LinksLinkAddContextsJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05LinksLinkAddContextsJSONRequest struct {
-	Headers PostV05LinksLinkAddContextsJSONHeaders
-	Request shared.PatientCareContextLinkRequest `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization                 string                               `header:"style=simple,explode=false,name=Authorization"`
+	PatientCareContextLinkRequest shared.PatientCareContextLinkRequest `request:"mediaType=application/json"`
 }
 
 type PostV05LinksLinkAddContextsJSONResponse struct {

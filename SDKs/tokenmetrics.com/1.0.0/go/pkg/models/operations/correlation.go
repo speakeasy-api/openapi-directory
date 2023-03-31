@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CorrelationQueryParams struct {
+type CorrelationRequest struct {
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Tokens *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type CorrelationRequest struct {
-	QueryParams CorrelationQueryParams
 }
 
 type CorrelationResponse struct {

@@ -36,7 +36,6 @@ pkg/models/shared/externaldata.go
 pkg/models/shared/contactinfo.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
 pkg/models/shared/command.go

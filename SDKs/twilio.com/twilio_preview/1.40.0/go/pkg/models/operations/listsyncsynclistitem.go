@@ -12,31 +12,22 @@ var ListSyncSyncListItemServerList = []string{
 }
 
 type ListSyncSyncListItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSyncSyncListItemPathParams struct {
-	ListSid    string `pathParam:"style=simple,explode=false,name=ListSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListSyncSyncListItemQueryParams struct {
-	Bounds *shared.SyncListItemEnumQueryFromBoundTypeEnum `queryParam:"style=form,explode=true,name=Bounds"`
-	From   *string                                        `queryParam:"style=form,explode=true,name=From"`
-	Order  *shared.SyncListItemEnumQueryResultOrderEnum   `queryParam:"style=form,explode=true,name=Order"`
+type ListSyncSyncListItemRequest struct {
+	Bounds  *shared.SyncListItemEnumQueryFromBoundTypeEnum `queryParam:"style=form,explode=true,name=Bounds"`
+	From    *string                                        `queryParam:"style=form,explode=true,name=From"`
+	ListSid string                                         `pathParam:"style=simple,explode=false,name=ListSid"`
+	Order   *shared.SyncListItemEnumQueryResultOrderEnum   `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListSyncSyncListItemRequest struct {
-	PathParams  ListSyncSyncListItemPathParams
-	QueryParams ListSyncSyncListItemQueryParams
-	Security    ListSyncSyncListItemSecurity
-	ServerURL   *string
+	PageToken  *string `queryParam:"style=form,explode=true,name=PageToken"`
+	ServiceSid string  `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListSyncSyncListItemListSyncSyncListItemResponseMeta struct {

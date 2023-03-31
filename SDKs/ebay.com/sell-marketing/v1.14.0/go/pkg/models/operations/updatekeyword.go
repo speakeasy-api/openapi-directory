@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateKeywordPathParams struct {
+type UpdateKeywordRequest struct {
+	// A type that defines the fields for the request to update a keyword.
+	UpdateKeywordRequest shared.UpdateKeywordRequest `request:"mediaType=application/json"`
 	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
 	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 	// A unique eBay-assigned ID that is generated when a keyword is created.
 	KeywordID string `pathParam:"style=simple,explode=false,name=keyword_id"`
-}
-
-type UpdateKeywordRequest struct {
-	PathParams UpdateKeywordPathParams
-	// A type that defines the fields for the request to update a keyword.
-	Request  shared.UpdateKeywordRequest `request:"mediaType=application/json"`
-	Security UpdateKeywordSecurity
 }
 
 type UpdateKeywordResponse struct {

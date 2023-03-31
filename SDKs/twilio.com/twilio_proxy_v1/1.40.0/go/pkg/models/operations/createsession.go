@@ -13,12 +13,8 @@ var CreateSessionServerList = []string{
 }
 
 type CreateSessionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSessionPathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSessionCreateSessionRequest struct {
@@ -35,10 +31,9 @@ type CreateSessionCreateSessionRequest struct {
 }
 
 type CreateSessionRequest struct {
-	PathParams CreateSessionPathParams
-	Request    *CreateSessionCreateSessionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSessionSecurity
-	ServerURL  *string
+	RequestBody *CreateSessionCreateSessionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSessionResponse struct {

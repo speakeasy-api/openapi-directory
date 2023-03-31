@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackagePathParams struct {
-	// Project ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PackageQueryParams struct {
+type PackageRequest struct {
 	// If you want to package and download the translation synchronously, mark this parameter as '0'. It will package the translation and then return the packaged file in the response, identical to /download call after an asynchronous /package call.
 	Async *int64 `queryParam:"style=form,explode=true,name=async"`
-}
-
-type PackageRequest struct {
-	PathParams  PackagePathParams
-	QueryParams PackageQueryParams
+	// Project ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PackageResponse struct {

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetTransactionsQueryParams struct {
+type GetTransactionsRequest struct {
 	// The category identifier for which to filter transactions.
 	// Both parent and child categories can be filtered through
 	// this parameter. Providing an invalid category identifier
@@ -38,10 +38,6 @@ type GetTransactionsQueryParams struct {
 	// The number of records to return in each page.
 	//
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type GetTransactionsRequest struct {
-	QueryParams GetTransactionsQueryParams
 }
 
 type GetTransactionsResponse struct {

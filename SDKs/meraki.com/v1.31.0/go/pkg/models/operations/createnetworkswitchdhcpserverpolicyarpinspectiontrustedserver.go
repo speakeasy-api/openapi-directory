@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBodyIpv4 - The IPv4 attributes of the trusted server being added
 type CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBodyIpv4 struct {
 	// The IPv4 address of the trusted server being added
@@ -26,8 +22,8 @@ type CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody st
 }
 
 type CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest struct {
-	PathParams CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams
-	Request    CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                                   `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer201ApplicationJSONIpv4 - IPv4 attributes of the trusted server.

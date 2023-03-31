@@ -41,7 +41,6 @@ pkg/models/operations/apigeeregistryprojectslocationsruntimetestiampermissions.g
 pkg/models/shared/api.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/apideployment.go
 pkg/models/shared/listapideploymentsresponse.go
 pkg/models/shared/listapisresponse.go

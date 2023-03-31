@@ -4,84 +4,60 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatafusionProjectsLocationsInstancesCreateRequest(
-    security=operations.DatafusionProjectsLocationsInstancesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatafusionProjectsLocationsInstancesCreatePathParams(
-        parent="voluptate",
-    ),
-    query_params=operations.DatafusionProjectsLocationsInstancesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="earum",
-        alt="media",
-        callback="velit",
-        fields="assumenda",
-        instance_id="nemo",
-        key="ipsam",
-        oauth_token="sed",
-        pretty_print=False,
-        quota_user="pariatur",
-        upload_type="qui",
-        upload_protocol="excepturi",
-    ),
-    request=shared.InstanceInput(
-        accelerators=[
-            shared.Accelerator(
-                accelerator_type="ACCELERATOR_TYPE_UNSPECIFIED",
-            ),
-        ],
-        available_version=[
-            shared.Version(
-                available_features=[
-                    "quasi",
-                    "minus",
-                    "optio",
-                ],
-                default_version=False,
-                type="TYPE_UNSPECIFIED",
-                version_number="et",
-            ),
-        ],
+    dollar_xgafv="2",
+    instance_input=shared.InstanceInput(
         crypto_key_config=shared.CryptoKeyConfig(
-            key_reference="recusandae",
+            key_reference="provident",
         ),
-        dataproc_service_account="pariatur",
-        description="pariatur",
-        display_name="earum",
-        enable_rbac=True,
-        enable_stackdriver_logging=True,
+        dataproc_service_account="distinctio",
+        description="quibusdam",
+        display_name="unde",
+        enable_rbac=False,
+        enable_stackdriver_logging=False,
         enable_stackdriver_monitoring=False,
+        enable_zone_separation=False,
         event_publish_config=shared.EventPublishConfig(
-            enabled=True,
-            topic="architecto",
+            enabled=False,
+            topic="nulla",
         ),
         labels={
-            "similique": "et",
-            "itaque": "voluptates",
+            "illum": "vel",
+            "error": "deserunt",
+            "suscipit": "iure",
         },
         network_config=shared.NetworkConfig(
-            ip_allocation="minima",
-            network="placeat",
+            ip_allocation="magnam",
+            network="debitis",
         ),
         options={
-            "illo": "odio",
-            "officia": "tenetur",
+            "delectus": "tempora",
         },
         private_instance=False,
         type="BASIC",
-        version="nostrum",
-        zone="est",
+        version="molestiae",
+        zone="minus",
     ),
+    access_token="placeat",
+    alt="media",
+    callback="iusto",
+    fields_="excepturi",
+    instance_id="nisi",
+    key="recusandae",
+    oauth_token="temporibus",
+    parent="ab",
+    pretty_print=False,
+    quota_user="quis",
+    upload_type="veritatis",
+    upload_protocol="deserunt",
 )
     
-res = s.projects.datafusion_projects_locations_instances_create(req)
+res = s.projects.datafusion_projects_locations_instances_create(req, operations.DatafusionProjectsLocationsInstancesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

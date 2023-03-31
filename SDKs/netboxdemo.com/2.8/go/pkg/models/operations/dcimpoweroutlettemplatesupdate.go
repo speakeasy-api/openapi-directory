@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerOutletTemplatesUpdatePathParams struct {
+type DcimPowerOutletTemplatesUpdateRequest struct {
+	WritablePowerOutletTemplateInput shared.WritablePowerOutletTemplateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this power outlet template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerOutletTemplatesUpdateRequest struct {
-	PathParams DcimPowerOutletTemplatesUpdatePathParams
-	Request    shared.WritablePowerOutletTemplateInput `request:"mediaType=application/json"`
 }
 
 type DcimPowerOutletTemplatesUpdateResponse struct {

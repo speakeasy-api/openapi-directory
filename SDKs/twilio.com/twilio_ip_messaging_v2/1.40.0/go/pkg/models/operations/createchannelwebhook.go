@@ -12,12 +12,8 @@ var CreateChannelWebhookServerList = []string{
 }
 
 type CreateChannelWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateChannelWebhookPathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateChannelWebhookCreateChannelWebhookRequest struct {
@@ -31,10 +27,9 @@ type CreateChannelWebhookCreateChannelWebhookRequest struct {
 }
 
 type CreateChannelWebhookRequest struct {
-	PathParams CreateChannelWebhookPathParams
-	Request    *CreateChannelWebhookCreateChannelWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateChannelWebhookSecurity
-	ServerURL  *string
+	ChannelSid  string                                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateChannelWebhookCreateChannelWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                                           `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateChannelWebhookResponse struct {

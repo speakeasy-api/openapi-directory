@@ -34,7 +34,7 @@ func newPrograms(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GetAPIV2ProgramsSearch - Optimized free-text search for programs using various filters.
-func (s *programs) GetAPIV2ProgramsSearch(ctx context.Context, request operations.GetAPIV2ProgramsSearchRequest) (*operations.GetAPIV2ProgramsSearchResponse, error) {
+func (s *programs) GetAPIV2ProgramsSearch(ctx context.Context, request operations.GetAPIV2ProgramsSearchRequest, security operations.GetAPIV2ProgramsSearchSecurity) (*operations.GetAPIV2ProgramsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/programs/search"
 
@@ -43,11 +43,11 @@ func (s *programs) GetAPIV2ProgramsSearch(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,16 +83,16 @@ func (s *programs) GetAPIV2ProgramsSearch(ctx context.Context, request operation
 }
 
 // GetAPIV2ProgramsID - Returns the program matching the given ID.
-func (s *programs) GetAPIV2ProgramsID(ctx context.Context, request operations.GetAPIV2ProgramsIDRequest) (*operations.GetAPIV2ProgramsIDResponse, error) {
+func (s *programs) GetAPIV2ProgramsID(ctx context.Context, request operations.GetAPIV2ProgramsIDRequest, security operations.GetAPIV2ProgramsIDSecurity) (*operations.GetAPIV2ProgramsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/programs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/programs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateAnAPIPathParams struct {
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
 type UpdateAnAPIRequestBodyAPI struct {
 	Description *string `json:"description,omitempty"`
 	Name        *string `json:"name,omitempty"`
@@ -20,8 +16,8 @@ type UpdateAnAPIRequestBody struct {
 }
 
 type UpdateAnAPIRequest struct {
-	PathParams UpdateAnAPIPathParams
-	Request    *UpdateAnAPIRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateAnAPIRequestBody `request:"mediaType=application/json"`
+	APIID       string                  `pathParam:"style=simple,explode=false,name=apiId"`
 }
 
 type UpdateAnAPI200ApplicationJSONAPI struct {

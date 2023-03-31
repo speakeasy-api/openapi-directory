@@ -155,7 +155,7 @@ func (s *apiKey) APIKeyFindCurrent(ctx context.Context) (*operations.APIKeyFindC
 
 // APIKeyUpdateCurrent - Update current API key.  (Requires current API connection to be using an API key.)
 // Update current API key.  (Requires current API connection to be using an API key.)
-func (s *apiKey) APIKeyUpdateCurrent(ctx context.Context, request operations.APIKeyUpdateCurrentRequest) (*operations.APIKeyUpdateCurrentResponse, error) {
+func (s *apiKey) APIKeyUpdateCurrent(ctx context.Context, request operations.APIKeyUpdateCurrentRequestBody) (*operations.APIKeyUpdateCurrentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api_key"
 

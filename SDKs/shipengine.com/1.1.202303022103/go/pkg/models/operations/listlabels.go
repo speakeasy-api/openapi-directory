@@ -63,7 +63,7 @@ func (e *ListLabelsSortDirSortDirEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLabelsQueryParams struct {
+type ListLabelsRequest struct {
 	// Only return labels that were created in a specific [batch](https://www.shipengine.com/docs/labels/bulk/)
 	BatchID *string `queryParam:"style=form,explode=true,name=batch_id"`
 	// Only return labels for a specific [carrier account](https://www.shipengine.com/docs/carriers/setup/)
@@ -93,10 +93,6 @@ type ListLabelsQueryParams struct {
 	TrackingNumber *string `queryParam:"style=form,explode=true,name=tracking_number"`
 	// Only return labels that originate from a specific [warehouse](https://www.shipengine.com/docs/shipping/ship-from-a-warehouse/)
 	WarehouseID *string `queryParam:"style=form,explode=true,name=warehouse_id"`
-}
-
-type ListLabelsRequest struct {
-	QueryParams ListLabelsQueryParams
 }
 
 type ListLabelsResponse struct {

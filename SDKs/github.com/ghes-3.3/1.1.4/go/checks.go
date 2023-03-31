@@ -41,9 +41,9 @@ func newChecks(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#create-a-check-run - API method documentation
 func (s *checks) ChecksCreate(ctx context.Context, request operations.ChecksCreateRequest) (*operations.ChecksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -99,9 +99,9 @@ func (s *checks) ChecksCreate(ctx context.Context, request operations.ChecksCrea
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#create-a-check-suite - API method documentation
 func (s *checks) ChecksCreateSuite(ctx context.Context, request operations.ChecksCreateSuiteRequest) (*operations.ChecksCreateSuiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,7 +159,7 @@ func (s *checks) ChecksCreateSuite(ctx context.Context, request operations.Check
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#get-a-check-run - API method documentation
 func (s *checks) ChecksGet(ctx context.Context, request operations.ChecksGetRequest) (*operations.ChecksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -207,7 +207,7 @@ func (s *checks) ChecksGet(ctx context.Context, request operations.ChecksGetRequ
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#get-a-check-suite - API method documentation
 func (s *checks) ChecksGetSuite(ctx context.Context, request operations.ChecksGetSuiteRequest) (*operations.ChecksGetSuiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/{check_suite_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/{check_suite_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -253,14 +253,14 @@ func (s *checks) ChecksGetSuite(ctx context.Context, request operations.ChecksGe
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#list-check-run-annotations - API method documentation
 func (s *checks) ChecksListAnnotations(ctx context.Context, request operations.ChecksListAnnotationsRequest) (*operations.ChecksListAnnotationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -307,14 +307,14 @@ func (s *checks) ChecksListAnnotations(ctx context.Context, request operations.C
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#list-check-runs-for-a-git-reference - API method documentation
 func (s *checks) ChecksListForRef(ctx context.Context, request operations.ChecksListForRefRequest) (*operations.ChecksListForRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/check-runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/check-runs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -361,14 +361,14 @@ func (s *checks) ChecksListForRef(ctx context.Context, request operations.Checks
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#list-check-runs-in-a-check-suite - API method documentation
 func (s *checks) ChecksListForSuite(ctx context.Context, request operations.ChecksListForSuiteRequest) (*operations.ChecksListForSuiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -415,14 +415,14 @@ func (s *checks) ChecksListForSuite(ctx context.Context, request operations.Chec
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#list-check-suites-for-a-git-reference - API method documentation
 func (s *checks) ChecksListSuitesForRef(ctx context.Context, request operations.ChecksListSuitesForRefRequest) (*operations.ChecksListSuitesForRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/check-suites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/check-suites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -469,7 +469,7 @@ func (s *checks) ChecksListSuitesForRef(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#rerequest-a-check-run - API method documentation
 func (s *checks) ChecksRerequestRun(ctx context.Context, request operations.ChecksRerequestRunRequest) (*operations.ChecksRerequestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -531,7 +531,7 @@ func (s *checks) ChecksRerequestRun(ctx context.Context, request operations.Chec
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#rerequest-a-check-suite - API method documentation
 func (s *checks) ChecksRerequestSuite(ctx context.Context, request operations.ChecksRerequestSuiteRequest) (*operations.ChecksRerequestSuiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -577,9 +577,9 @@ func (s *checks) ChecksRerequestSuite(ctx context.Context, request operations.Ch
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#update-repository-preferences-for-check-suites - API method documentation
 func (s *checks) ChecksSetSuitesPreferences(ctx context.Context, request operations.ChecksSetSuitesPreferencesRequest) (*operations.ChecksSetSuitesPreferencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/preferences", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-suites/preferences", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -635,9 +635,9 @@ func (s *checks) ChecksSetSuitesPreferences(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.3/rest/reference/checks#update-a-check-run - API method documentation
 func (s *checks) ChecksUpdate(ctx context.Context, request operations.ChecksUpdateRequest) (*operations.ChecksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

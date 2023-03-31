@@ -8,16 +8,11 @@ import (
 )
 
 type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams struct {
-	// Required. The parent DataStore resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams struct {
+type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams stru
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent DataStore resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams stru
 	URI *string `queryParam:"style=form,explode=true,name=uri"`
 	// Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
 	UserEvent *string `queryParam:"style=form,explode=true,name=userEvent"`
-}
-
-type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest struct {
-	PathParams  DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams
-	QueryParams DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams
-	Security    DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity
 }
 
 type DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse struct {

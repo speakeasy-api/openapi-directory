@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetImagesPathParams struct {
-	// ID of the event
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetImagesIncludeLicensedContentEnum - True if you want to display licensed content
 type GetImagesIncludeLicensedContentEnum string
 
@@ -37,16 +32,13 @@ func (e *GetImagesIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImagesQueryParams struct {
+type GetImagesRequest struct {
+	// ID of the event
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// True if you want to display licensed content
 	IncludeLicensedContent *GetImagesIncludeLicensedContentEnum `queryParam:"style=form,explode=true,name=includeLicensedContent"`
 	// The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*')
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type GetImagesRequest struct {
-	PathParams  GetImagesPathParams
-	QueryParams GetImagesQueryParams
 }
 
 type GetImagesResponse struct {

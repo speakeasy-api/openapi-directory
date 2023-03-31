@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AcmednsAcmeChallengeSetsGetPathParams struct {
-	// Required. SLD + TLD domain name to list challenges. For example, this would be "google.com" for any FQDN under "google.com". That includes challenges for "subdomain.google.com". This MAY be Unicode or Punycode.
-	RootDomain string `pathParam:"style=simple,explode=false,name=rootDomain"`
-}
-
-type AcmednsAcmeChallengeSetsGetQueryParams struct {
+type AcmednsAcmeChallengeSetsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,15 +26,12 @@ type AcmednsAcmeChallengeSetsGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. SLD + TLD domain name to list challenges. For example, this would be "google.com" for any FQDN under "google.com". That includes challenges for "subdomain.google.com". This MAY be Unicode or Punycode.
+	RootDomain string `pathParam:"style=simple,explode=false,name=rootDomain"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AcmednsAcmeChallengeSetsGetRequest struct {
-	PathParams  AcmednsAcmeChallengeSetsGetPathParams
-	QueryParams AcmednsAcmeChallengeSetsGetQueryParams
 }
 
 type AcmednsAcmeChallengeSetsGetResponse struct {

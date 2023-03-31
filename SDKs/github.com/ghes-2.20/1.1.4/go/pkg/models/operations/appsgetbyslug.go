@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetBySlugPathParams struct {
-	AppSlug string `pathParam:"style=simple,explode=false,name=app_slug"`
-}
-
 type AppsGetBySlugRequest struct {
-	PathParams AppsGetBySlugPathParams
+	AppSlug string `pathParam:"style=simple,explode=false,name=app_slug"`
 }
 
 // AppsGetBySlug415ApplicationJSON - Preview header missing

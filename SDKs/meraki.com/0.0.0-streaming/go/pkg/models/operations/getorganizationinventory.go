@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetOrganizationInventoryPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationInventoryQueryParams struct {
-	// When this parameter is true, each entity in the response will include the license expiration date of the device (if any). Only applies to organizations that are on the per-device licensing model. Defaults to false.
-	IncludeLicenseInfo *bool `queryParam:"style=form,explode=true,name=includeLicenseInfo"`
-}
-
 type GetOrganizationInventoryRequest struct {
-	PathParams  GetOrganizationInventoryPathParams
-	QueryParams GetOrganizationInventoryQueryParams
+	// When this parameter is true, each entity in the response will include the license expiration date of the device (if any). Only applies to organizations that are on the per-device licensing model. Defaults to false.
+	IncludeLicenseInfo *bool  `queryParam:"style=form,explode=true,name=includeLicenseInfo"`
+	OrganizationID     string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationInventoryResponse struct {

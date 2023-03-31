@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteConnectionPolicyServerList = []string{
@@ -12,18 +11,13 @@ var DeleteConnectionPolicyServerList = []string{
 }
 
 type DeleteConnectionPolicySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteConnectionPolicyPathParams struct {
-	// The unique string that we created to identify the Connection Policy resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteConnectionPolicyRequest struct {
-	PathParams DeleteConnectionPolicyPathParams
-	Security   DeleteConnectionPolicySecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Connection Policy resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteConnectionPolicyResponse struct {

@@ -36,7 +36,7 @@ func newPosts(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // BookmarkPost - Bookmark a post
 func (s *posts) BookmarkPost(ctx context.Context, request operations.BookmarkPostRequest) (*operations.BookmarkPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/bookmark", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/bookmark", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *posts) BookmarkPost(ctx context.Context, request operations.BookmarkPos
 // DeleteBookmark - Delete a post bookmark
 func (s *posts) DeleteBookmark(ctx context.Context, request operations.DeleteBookmarkRequest) (*operations.DeleteBookmarkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/bookmark", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/bookmark", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -113,7 +113,7 @@ func (s *posts) DeleteBookmark(ctx context.Context, request operations.DeleteBoo
 // Users can delete posts they have made that have been satisfied or withdrawn or that have expired. Deleting posts isn't intended to be a normal part of the posting process since it makes reposting and viewing old posts harder.
 func (s *posts) DeletePost(ctx context.Context, request operations.DeletePostRequest) (*operations.DeletePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +153,7 @@ func (s *posts) DeletePost(ctx context.Context, request operations.DeletePostReq
 
 // GetAllPosts - List all posts
 // This endpoint provides an easy way to get a feed of all the publicly published posts on trash nothing. It provides access to all publicly published offer and wanted posts from the last 30 days. The posts are sorted by date (newest first). <br /><br /> There are fewer options for filtering, sorting and searching posts with this endpoint but there is no 1,000 post limit and posts that are crossposted to multiple groups are not merged together in the response.  In most cases, crossposted posts are easy to detect because they have the same user_id, title and content.
-func (s *posts) GetAllPosts(ctx context.Context, request operations.GetAllPostsRequest) (*operations.GetAllPostsResponse, error) {
+func (s *posts) GetAllPosts(ctx context.Context, request operations.GetAllPostsRequest, security operations.GetAllPostsSecurity) (*operations.GetAllPostsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts/all"
 
@@ -162,11 +162,11 @@ func (s *posts) GetAllPosts(ctx context.Context, request operations.GetAllPostsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,7 +203,7 @@ func (s *posts) GetAllPosts(ctx context.Context, request operations.GetAllPostsR
 
 // GetAllPostsChanges - List all post changes
 // This endpoint provides an easy way to get a feed of all the changes that have been made to publicly published posts on trash nothing.  Similar to the /posts/all endpoint, only data from the last 30 days is available and the changes are sorted by date (newest first).  Every change includes the date of the change, the post_id of the post that was changed and the type of change. <br /><br /> The different types of changes that are returned are listed below. <br /><br /> - deleted<br /> - undeleted<br /> - satisfied<br /> - promised<br /> - unpromised<br /> - withdrawn<br /> - edited<br /> <br /> For edited changes, clients can use the retrieve post API endpoint to get the edits that have been made to the post.
-func (s *posts) GetAllPostsChanges(ctx context.Context, request operations.GetAllPostsChangesRequest) (*operations.GetAllPostsChangesResponse, error) {
+func (s *posts) GetAllPostsChanges(ctx context.Context, request operations.GetAllPostsChangesRequest, security operations.GetAllPostsChangesSecurity) (*operations.GetAllPostsChangesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts/all/changes"
 
@@ -212,11 +212,11 @@ func (s *posts) GetAllPostsChanges(ctx context.Context, request operations.GetAl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,16 +252,16 @@ func (s *posts) GetAllPostsChanges(ctx context.Context, request operations.GetAl
 }
 
 // GetPost - Retrieve a post
-func (s *posts) GetPost(ctx context.Context, request operations.GetPostRequest) (*operations.GetPostResponse, error) {
+func (s *posts) GetPost(ctx context.Context, request operations.GetPostRequest, security operations.GetPostSecurity) (*operations.GetPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,16 +300,16 @@ func (s *posts) GetPost(ctx context.Context, request operations.GetPostRequest) 
 
 // GetPostAndRelatedData - Retrieve post display data
 // Retrieve a post and other data related to the post that is useful for displaying the post such as data about the user who posted the post and the groups the post was posted on.
-func (s *posts) GetPostAndRelatedData(ctx context.Context, request operations.GetPostAndRelatedDataRequest) (*operations.GetPostAndRelatedDataResponse, error) {
+func (s *posts) GetPostAndRelatedData(ctx context.Context, request operations.GetPostAndRelatedDataRequest, security operations.GetPostAndRelatedDataSecurity) (*operations.GetPostAndRelatedDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/display", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/display", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,7 +349,7 @@ func (s *posts) GetPostAndRelatedData(ctx context.Context, request operations.Ge
 // GetPosts - List posts
 // NOTE: When paging through the posts returned by this endpoint, there will be at most 1,000 posts that can be returned (eg. 50 pages worth of posts with the default per_page value of 20).  In areas where there are more than 1,000 posts, clients can use more specific query parameters to adjust which posts are returned.
 // NOTE: Passing the latitude, longitude and radius parameters filters all posts by their location and so these parameters will temporarily override the current users' location preferences. When latitude, longitude and radius are not specified, public posts will be filtered by the current users' location preferences.
-func (s *posts) GetPosts(ctx context.Context, request operations.GetPostsRequest) (*operations.GetPostsResponse, error) {
+func (s *posts) GetPosts(ctx context.Context, request operations.GetPostsRequest, security operations.GetPostsSecurity) (*operations.GetPostsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts"
 
@@ -358,11 +358,11 @@ func (s *posts) GetPosts(ctx context.Context, request operations.GetPostsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *posts) GetPosts(ctx context.Context, request operations.GetPostsRequest
 }
 
 // GetPostsByIds - Retrieve multiple posts
-func (s *posts) GetPostsByIds(ctx context.Context, request operations.GetPostsByIdsRequest) (*operations.GetPostsByIdsResponse, error) {
+func (s *posts) GetPostsByIds(ctx context.Context, request operations.GetPostsByIdsRequest, security operations.GetPostsByIdsSecurity) (*operations.GetPostsByIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts/multiple"
 
@@ -407,11 +407,11 @@ func (s *posts) GetPostsByIds(ctx context.Context, request operations.GetPostsBy
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -449,7 +449,7 @@ func (s *posts) GetPostsByIds(ctx context.Context, request operations.GetPostsBy
 // Mark an offer by the current user as promised to someone. This helps people viewing the post know that the items being offered may soon be given away as long as the person who was promised the items picks them up.
 func (s *posts) PromisePost(ctx context.Context, request operations.PromisePostRequest) (*operations.PromisePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/promise", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/promise", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -499,9 +499,9 @@ func (s *posts) PromisePost(ctx context.Context, request operations.PromisePostR
 // Send a reply to a post from the current user to the post author.
 func (s *posts) ReplyToPost(ctx context.Context, request operations.ReplyToPostRequest) (*operations.ReplyToPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/reply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/reply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -551,9 +551,9 @@ func (s *posts) ReplyToPost(ctx context.Context, request operations.ReplyToPostR
 // Reports a post to be reviewed by the moderators.
 func (s *posts) ReportPost(ctx context.Context, request operations.ReportPostRequest) (*operations.ReportPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/report", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -601,7 +601,7 @@ func (s *posts) ReportPost(ctx context.Context, request operations.ReportPostReq
 // Mark an offer or wanted post by the current user as satisfied (eg. an offer has been taken or a wanted has been received).
 func (s *posts) SatisfyPost(ctx context.Context, request operations.SatisfyPostRequest) (*operations.SatisfyPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/satisfy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/satisfy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -650,7 +650,7 @@ func (s *posts) SatisfyPost(ctx context.Context, request operations.SatisfyPostR
 // SearchPosts - Search posts
 // Searching posts takes the same arguments as listing posts except for the addition of the search and sort_by parameters.
 // NOTE: When paging through the posts returned by this endpoint, there will be at most 1,000 posts that can be returned (eg. 50 pages worth of posts with the default per_page value of 20).  In areas where there are more than 1,000 posts, clients can use more specific query parameters to adjust which posts are returned.
-func (s *posts) SearchPosts(ctx context.Context, request operations.SearchPostsRequest) (*operations.SearchPostsResponse, error) {
+func (s *posts) SearchPosts(ctx context.Context, request operations.SearchPostsRequest, security operations.SearchPostsSecurity) (*operations.SearchPostsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts/search"
 
@@ -659,11 +659,11 @@ func (s *posts) SearchPosts(ctx context.Context, request operations.SearchPostsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -702,7 +702,7 @@ func (s *posts) SearchPosts(ctx context.Context, request operations.SearchPostsR
 // Forwards a copy of the post to the current user so that they can forward it to friends.
 func (s *posts) SharePost(ctx context.Context, request operations.SharePostRequest) (*operations.SharePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/share", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/share", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -740,7 +740,7 @@ func (s *posts) SharePost(ctx context.Context, request operations.SharePostReque
 
 // SubmitPost - Submit a post
 // Submits a new post.
-func (s *posts) SubmitPost(ctx context.Context, request operations.SubmitPostRequest) (*operations.SubmitPostResponse, error) {
+func (s *posts) SubmitPost(ctx context.Context, request operations.SubmitPostRequestBody) (*operations.SubmitPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts"
 
@@ -795,7 +795,7 @@ func (s *posts) SubmitPost(ctx context.Context, request operations.SubmitPostReq
 // Mark an offer by the current user as unpromised.
 func (s *posts) UnpromisePost(ctx context.Context, request operations.UnpromisePostRequest) (*operations.UnpromisePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/unpromise", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/unpromise", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -845,9 +845,9 @@ func (s *posts) UnpromisePost(ctx context.Context, request operations.UnpromiseP
 // Users can update posts to fix mistakes with their post, add photos, or add more details about the items. Updates should not be used to say that items in a post have been taken or received since the post satisfy endpoint is designed to do that.
 func (s *posts) UpdatePost(ctx context.Context, request operations.UpdatePostRequest) (*operations.UpdatePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -905,7 +905,7 @@ func (s *posts) UpdatePost(ctx context.Context, request operations.UpdatePostReq
 // Mark an offer or wanted post by the current user as withdrawn.
 func (s *posts) WithdrawPost(ctx context.Context, request operations.WithdrawPostRequest) (*operations.WithdrawPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/withdraw", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{post_id}/withdraw", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

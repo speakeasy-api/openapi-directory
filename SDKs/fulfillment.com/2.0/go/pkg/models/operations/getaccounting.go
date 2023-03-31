@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type GetAccountingSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAccountingHydrateEnum string
@@ -34,7 +33,7 @@ func (e *GetAccountingHydrateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAccountingQueryParams struct {
+type GetAccountingRequest struct {
 	// Orders invoice date. Date-time in ISO 8601 format for selecting orders after, or at, the specified time
 	FromDate string `queryParam:"style=form,explode=true,name=fromDate"`
 	// Adds additional information to the response, uses a CSV format for multiple values.
@@ -49,11 +48,6 @@ type GetAccountingQueryParams struct {
 	ToDate string `queryParam:"style=form,explode=true,name=toDate"`
 	// A CSV of warehouse id, '123' or '1,2,3'
 	WarehouseIds []int64 `queryParam:"style=form,explode=false,name=warehouseIds"`
-}
-
-type GetAccountingRequest struct {
-	QueryParams GetAccountingQueryParams
-	Security    GetAccountingSecurity
 }
 
 type GetAccountingAccountingArrayV2AccountingV2Fees struct {

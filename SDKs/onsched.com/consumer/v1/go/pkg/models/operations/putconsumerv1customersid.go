@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConsumerV1CustomersIDPathParams struct {
+type PutConsumerV1CustomersIDRequest struct {
+	CustomerUpdateModel *shared.CustomerUpdateModel `request:"mediaType=application/json"`
 	// id of customer object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1CustomersIDRequest struct {
-	PathParams PutConsumerV1CustomersIDPathParams
-	Request    *shared.CustomerUpdateModel `request:"mediaType=application/json"`
 }
 
 type PutConsumerV1CustomersIDResponse struct {

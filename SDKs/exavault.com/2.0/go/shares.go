@@ -67,7 +67,7 @@ func (s *shares) AddShare(ctx context.Context, request operations.AddShareReques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shares"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -79,7 +79,7 @@ func (s *shares) AddShare(ctx context.Context, request operations.AddShareReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -127,14 +127,14 @@ func (s *shares) AddShare(ctx context.Context, request operations.AddShareReques
 // 3. Use the [POST /shares/complete-send/{id}](#operation/completeDirectSend) endpoint to indicate that you have finished uploading files to your send. This will trigger the system to remove the **upload** permission from the share and send any invitation emails you set up in the first step of the process. **You must send YOUR access token in the `ev-access-token` header, not the temporary access token**
 func (s *shares) CompleteDirectSend(ctx context.Context, request operations.CompleteDirectSendRequest) (*operations.CompleteDirectSendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shares/complete-send/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shares/complete-send/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -179,14 +179,14 @@ func (s *shares) CompleteDirectSend(ctx context.Context, request operations.Comp
 // - You must have [admin-level access](/docs/account/04-users/01-admin-users), or you must be the owner of the specified share you wish to delete.
 func (s *shares) DeleteShareByID(ctx context.Context, request operations.DeleteShareByIDRequest) (*operations.DeleteShareByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shares/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shares/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -231,16 +231,16 @@ func (s *shares) DeleteShareByID(ctx context.Context, request operations.DeleteS
 // - To get share objects with type send, authenticated user's role must be admin or master.
 func (s *shares) GetShareByID(ctx context.Context, request operations.GetShareByIDRequest) (*operations.GetShareByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shares/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shares/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -294,9 +294,9 @@ func (s *shares) ListShares(ctx context.Context, request operations.ListSharesRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -356,9 +356,9 @@ func (s *shares) ListShares(ctx context.Context, request operations.ListSharesRe
 //   - Authenticated user should be the owner of the specified share.
 func (s *shares) UpdateShareByID(ctx context.Context, request operations.UpdateShareByIDRequest) (*operations.UpdateShareByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shares/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shares/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -373,7 +373,7 @@ func (s *shares) UpdateShareByID(ctx context.Context, request operations.UpdateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -33,11 +33,11 @@ func newNonPrimaryStateTax(defaultClient, securityClient HTTPClient, serverURL, 
 
 // AddOrUpdateNonPrimaryStateTax - Add/update non-primary state tax
 // Sends new or updated employee non-primary state tax information directly to Web Pay.
-func (s *nonPrimaryStateTax) AddOrUpdateNonPrimaryStateTax(ctx context.Context, request operations.AddOrUpdateNonPrimaryStateTaxRequest) (*operations.AddOrUpdateNonPrimaryStateTaxResponse, error) {
+func (s *nonPrimaryStateTax) AddOrUpdateNonPrimaryStateTax(ctx context.Context, request operations.AddOrUpdateNonPrimaryStateTaxRequest, security operations.AddOrUpdateNonPrimaryStateTaxSecurity) (*operations.AddOrUpdateNonPrimaryStateTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/nonprimaryStateTax", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/nonprimaryStateTax", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NonPrimaryStateTax", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *nonPrimaryStateTax) AddOrUpdateNonPrimaryStateTax(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

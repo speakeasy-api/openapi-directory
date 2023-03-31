@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListReposInOrgPathParams struct {
+type TeamsListReposInOrgRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsListReposInOrgQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListReposInOrgRequest struct {
-	PathParams  TeamsListReposInOrgPathParams
-	QueryParams TeamsListReposInOrgQueryParams
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsListReposInOrgResponse struct {

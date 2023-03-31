@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostImproveMultipartRequest struct {
-	Request shared.ImprovementProgramMultipart `request:"mediaType=multipart/form-data"`
-}
 
 type PostImproveMultipartResponse struct {
 	Body        []byte

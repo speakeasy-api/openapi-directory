@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForReleasePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The unique identifier of the release.
-	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForReleaseRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.8/rest/reference/reactions#reaction-types) to add to the release.
 type ReactionsCreateForReleaseRequestBodyContentEnum string
 
@@ -60,8 +51,13 @@ type ReactionsCreateForReleaseRequestBody struct {
 }
 
 type ReactionsCreateForReleaseRequest struct {
-	PathParams ReactionsCreateForReleasePathParams
-	Request    ReactionsCreateForReleaseRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForReleaseRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The unique identifier of the release.
+	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsCreateForReleaseResponse struct {

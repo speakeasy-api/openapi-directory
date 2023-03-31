@@ -34,7 +34,7 @@ func newNeighborhoodInAStreet(defaultClient, securityClient HTTPClient, serverUR
 // Returns all neighborhood in a specified street
 func (s *neighborhoodInAStreet) NeighborhoodInAStreet(ctx context.Context, request operations.NeighborhoodInAStreetRequest) (*operations.NeighborhoodInAStreetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}/{ward}/{street}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}/{ward}/{street}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

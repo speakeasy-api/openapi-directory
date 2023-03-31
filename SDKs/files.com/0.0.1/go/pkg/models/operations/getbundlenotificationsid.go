@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBundleNotificationsIDPathParams struct {
+type GetBundleNotificationsIDRequest struct {
 	// Bundle Notification ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBundleNotificationsIDRequest struct {
-	PathParams GetBundleNotificationsIDPathParams
 }
 
 type GetBundleNotificationsIDResponse struct {

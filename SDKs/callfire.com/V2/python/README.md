@@ -1,0 +1,243 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/callfire.com/V2/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.AddCallBroadcastBatchRequest(
+    batch_request=shared.BatchRequest(
+        contact_list_id=548814,
+        name="provident",
+        recipients=[
+            shared.Recipient(
+                attributes={
+                    "unde": "nulla",
+                    "corrupti": "illum",
+                    "vel": "error",
+                    "deserunt": "suscipit",
+                },
+                contact_id=437587,
+                from_number="magnam",
+                phone_number="debitis",
+            ),
+            shared.Recipient(
+                attributes={
+                    "delectus": "tempora",
+                },
+                contact_id=383441,
+                from_number="molestiae",
+                phone_number="minus",
+            ),
+            shared.Recipient(
+                attributes={
+                    "voluptatum": "iusto",
+                    "excepturi": "nisi",
+                    "recusandae": "temporibus",
+                    "ab": "quis",
+                },
+                contact_id=87129,
+                from_number="deserunt",
+                phone_number="perferendis",
+            ),
+        ],
+        scrub_duplicates=False,
+    ),
+    id=368241,
+    strict_validation=False,
+)
+    
+res = s.calls.add_call_broadcast_batch(req, operations.AddCallBroadcastBatchSecurity(
+    password="YOUR_PASSWORD_HERE",
+    username="YOUR_USERNAME_HERE",
+))
+
+if res.resource_id is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### calls
+
+* `add_call_broadcast_batch` - Add batches to a call broadcast
+* `add_call_broadcast_recipients` - Add recipients to a call broadcast
+* `archive_voice_broadcast` - Archive voice broadcast
+* `create_call_broadcast` - Create a call broadcast
+* `find_call_broadcasts` - Find call broadcasts
+* `find_calls` - Find calls
+* `get_call` - Find a specific call
+* `get_call_broadcast` - Find a specific call broadcast
+* `get_call_broadcast_batches` - Find batches in a call broadcast
+* `get_call_broadcast_calls` - Find calls in a call broadcast
+* `get_call_broadcast_stats` - Get statistics on call broadcast
+* `get_call_recording` - Get call recording by id
+* `get_call_recording_by_name` - Get call recording by name
+* `get_call_recording_mp3` - Get call recording in mp3 format
+* `get_call_recording_mp3_by_name` - Get call mp3 recording by name
+* `get_call_recordings` - Get call recordings for a call
+* `send_calls` - Send calls
+* `start_voice_broadcast` - Start voice broadcast
+* `stop_voice_broadcast` - Stop voice broadcast
+* `toggle_call_broadcast_recipients_status` - Disable/enable undialed recipients in broadcast
+* `update_call_broadcast` - Update a call broadcast
+
+### campaigns
+
+* `delete_campaign_sound` - Delete a specific sound
+* `find_campaign_sounds` - Find sounds
+* `get_campaign_batch` - Find a specific batch
+* `get_campaign_sound` - Find a specific sound
+* `get_campaign_sound_data_mp3` - Download a MP3 sound
+* `get_campaign_sound_data_wav` - Download a WAV sound
+* `post_call_campaign_sound` - Add sound via call
+* `post_file_campaign_sound` - Add sound via file
+* `post_tts_campaign_sound` - Add sound via text-to-speech
+* `update_campaign_batch` - Update a batch
+
+### contacts
+
+* `add_contact_list_items` - Add contacts to a contact list
+* `add_do_not_contacts` - Add do not contact (dnc) numbers
+* `create_contact_list` - Create contact lists
+* `create_contact_list_from_file` - Create contact list from file
+* `create_contacts` - Create contacts
+* `delete_contact` - Delete a contact
+* `delete_contact_list` - Delete a contact list
+* `delete_do_not_contact` - Delete do not contact (dnc) number. If number contains commas treat as list of numbers
+* `delete_do_not_contacts_by_source` - Delete do not contact (dnc) numbers contained in source.
+* `find_contact_lists` - Find contact lists
+* `find_contacts` - Find contacts
+* `find_do_not_contacts` - Find do not contact (dnc) items
+* `get_contact` - Find a specific contact
+* `get_contact_history` - Find a contact's history
+* `get_contact_list` - Find a specific contact list
+* `get_contact_list_items` - Find contacts in a contact list
+* `get_do_not_contact` - Get do not contact (dnc)
+* `get_universal_do_not_contacts` - Find universal do not contacts (udnc) associated with toNumber
+* `remove_contact_list_item` - Delete a contact from a contact list
+* `remove_contact_list_items` - Delete contacts from a contact list
+* `update_contact` - Update a contact
+* `update_contact_list` - Update a contact list
+* `update_do_not_contact` - Update an individual do not contact (dnc) number
+
+### keywords
+
+* `find_keyword_lease_configs` - Find keyword lease configs
+* `find_keyword_leases` - Find keyword leases
+* `find_keywords` - Find keywords
+* `get_keyword_lease` - Find a specific lease
+* `get_keyword_lease_by_id` - Find a keyword by id
+* `get_keyword_lease_config` - Find a specific keyword lease config
+* `is_keyword_available` - Check for a specific keyword
+* `update_keyword_lease` - Update a lease
+* `update_keyword_lease_config` - Update a keyword lease config
+
+### me
+
+* `create_api_credential` - Create api credentials
+* `delete_api_credential` - Delete api credentials
+* `disable_api_credentials` - Disable specified API credentials
+* `enable_api_credentials` - Enable specified API credentials
+* `find_api_credentials` - Find api credentials
+* `get_account` - Find account details
+* `get_api_credential` - Find a specific api credential
+* `get_billing_plan_usage` - Find plan usage
+* `get_caller_ids` - Find caller ids
+* `get_credit_usage` - Find credit usage
+* `send_verification_code_to_caller_id` - Create a caller id
+* `verify_caller_id` - Verify a caller id
+
+### media
+
+* `create_media` - Create media
+* `find_media` - Find media
+* `get_media` - Get a specific media
+* `get_media_data` - Download media by extension
+* `get_media_data_binary` - Download a MP3 media
+* `get_media_data_by_key` - Download media by extension
+
+### numbers
+
+* `find_number_lease_configs` - Find lease configs
+* `find_number_leases` - Find leases
+* `find_number_regions` - Find number regions
+* `find_numbers_local` - Find local numbers
+* `find_numbers_tollfree` - Find tollfree numbers
+* `get_number_lease` - Find a specific lease
+* `get_number_lease_config` - Find a specific lease config
+* `update_number_lease` - Update a lease
+* `update_number_lease_config` - Update a lease config
+
+### orders
+
+* `find_orders` - Find orders
+* `get_order` - Find a specific order
+* `order_keywords` - Purchase keywords
+* `order_numbers` - Purchase numbers
+
+### reports
+
+* `get_delivery_reports` - Get delivery reports by ad hoc criteria
+
+### texts
+
+* `add_text_broadcast_batch` - Add batches to a text broadcast
+* `add_text_broadcast_recipients` - Add recipients to a text broadcast
+* `archive_text_broadcast` - Archive text broadcast
+* `create_text_auto_reply` - Create an auto reply
+* `create_text_broadcast` - Create a text broadcast
+* `delete_text_auto_reply` - Delete an auto reply
+* `find_text_auto_replys` - Find auto replies
+* `find_text_broadcasts` - Find text broadcasts
+* `find_texts` - Find texts
+* `get_text` - Find a specific text
+* `get_text_auto_reply` - Find a specific auto reply
+* `get_text_broadcast` - Find a specific text broadcast
+* `get_text_broadcast_batches` - Find batches in a text broadcast
+* `get_text_broadcast_stats` - Get statistics on text broadcast
+* `get_text_broadcast_texts` - Find texts in a text broadcast
+* `send_texts` - Send texts
+* `start_text_broadcast` - Start text broadcast
+* `stop_text_broadcast` - Stop text broadcast
+* `toggle_text_broadcast_recipients_status` - Disable/enable undialed recipients in broadcast
+* `update_text_broadcast` - Update a text broadcast
+
+### webhooks
+
+* `create_webhook` - Create a webhook
+* `delete_webhook` - Delete a webhook
+* `find_webhook_resources` - Find webhook resources
+* `find_webhooks` - Find webhooks
+* `get_webhook` - Find a specific webhook
+* `get_webhook_resource` - Find specific webhook resource
+* `update_webhook` - Update a webhook
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -12,12 +12,8 @@ var UpdateRoomServerList = []string{
 }
 
 type UpdateRoomSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRoomPathParams struct {
-	// The SID of the Room resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRoomUpdateRoomRequest struct {
@@ -25,10 +21,9 @@ type UpdateRoomUpdateRoomRequest struct {
 }
 
 type UpdateRoomRequest struct {
-	PathParams UpdateRoomPathParams
-	Request    *UpdateRoomUpdateRoomRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRoomSecurity
-	ServerURL  *string
+	RequestBody *UpdateRoomUpdateRoomRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Room resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateRoomResponse struct {

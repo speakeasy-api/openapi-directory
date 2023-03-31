@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsRemoveRequestedReviewersPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsRemoveRequestedReviewersRequestBody struct {
 	// An array of user `login`s that will be removed.
 	Reviewers []string `json:"reviewers"`
@@ -24,8 +15,13 @@ type PullsRemoveRequestedReviewersRequestBody struct {
 }
 
 type PullsRemoveRequestedReviewersRequest struct {
-	PathParams PullsRemoveRequestedReviewersPathParams
-	Request    PullsRemoveRequestedReviewersRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsRemoveRequestedReviewersRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsRemoveRequestedReviewersResponse struct {

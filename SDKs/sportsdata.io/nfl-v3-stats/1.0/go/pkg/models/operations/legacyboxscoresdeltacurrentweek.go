@@ -33,17 +33,13 @@ func (e *LegacyBoxScoresDeltaCurrentWeekFormatEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type LegacyBoxScoresDeltaCurrentWeekPathParams struct {
+type LegacyBoxScoresDeltaCurrentWeekRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format LegacyBoxScoresDeltaCurrentWeekFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:<br>
 	//           <code>1</code> or <code>2</code>.
 	//
 	Minutes string `pathParam:"style=simple,explode=false,name=minutes"`
-}
-
-type LegacyBoxScoresDeltaCurrentWeekRequest struct {
-	PathParams LegacyBoxScoresDeltaCurrentWeekPathParams
 }
 
 type LegacyBoxScoresDeltaCurrentWeekResponse struct {

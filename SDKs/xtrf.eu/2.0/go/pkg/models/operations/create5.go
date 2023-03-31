@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Create5Request struct {
-	// Created a new Classic Project.
-	Request shared.ClassicProjectCreateDTO `request:"mediaType=application/json"`
-}
-
 type Create5Response struct {
 	ContentType string
 	// Success

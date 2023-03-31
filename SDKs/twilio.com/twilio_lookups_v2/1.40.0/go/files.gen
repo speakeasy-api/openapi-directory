@@ -14,5 +14,5 @@ pkg/utils/utils.go
 pkg/models/operations/fetchphonenumber.go
 pkg/models/shared/lookupsv2phonenumber.go
 pkg/models/shared/phonenumberenumvalidationerrorenum.go
-pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

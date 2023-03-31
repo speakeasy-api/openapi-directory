@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchStpPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSwitchStpRequestBodyStpBridgePriority struct {
 	// List of stack IDs
 	Stacks []string `json:"stacks,omitempty"`
@@ -29,8 +25,8 @@ type UpdateNetworkSwitchStpRequestBody struct {
 }
 
 type UpdateNetworkSwitchStpRequest struct {
-	PathParams UpdateNetworkSwitchStpPathParams
-	Request    *UpdateNetworkSwitchStpRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchStpRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchStpResponse struct {

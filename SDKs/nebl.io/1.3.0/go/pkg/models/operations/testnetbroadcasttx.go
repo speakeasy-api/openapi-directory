@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetBroadcastTxRequest struct {
-	// Object representing a transaction to broadcast
-	Request shared.BroadcastTxRequest `request:"mediaType=application/json"`
-}
-
 type TestnetBroadcastTxResponse struct {
 	ContentType string
 	// Unexpected error

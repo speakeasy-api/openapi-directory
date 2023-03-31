@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetCertificatesIDActionsPathParams struct {
-	// ID of the Resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetCertificatesIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetCertificatesIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetCertificatesIDActionsStatusParameterStatusEnum) UnmarshalJSON(data [
 	}
 }
 
-type GetCertificatesIDActionsQueryParams struct {
+type GetCertificatesIDActionsRequest struct {
+	// ID of the Resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetCertificatesIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetCertificatesIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetCertificatesIDActionsRequest struct {
-	PathParams  GetCertificatesIDActionsPathParams
-	QueryParams GetCertificatesIDActionsQueryParams
 }
 
 // GetCertificatesIDActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateArticleCategoryDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateArticleCategoryDeletePathParams struct {
+type PrivateArticleCategoryDeleteRequest struct {
 	// Article unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Category unique identifier
 	CategoryID int64 `pathParam:"style=simple,explode=false,name=category_id"`
-}
-
-type PrivateArticleCategoryDeleteRequest struct {
-	PathParams PrivateArticleCategoryDeletePathParams
-	Security   PrivateArticleCategoryDeleteSecurity
 }
 
 type PrivateArticleCategoryDeleteResponse struct {

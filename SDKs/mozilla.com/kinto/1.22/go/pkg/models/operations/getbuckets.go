@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type GetBucketsQueryParams struct {
+type GetBucketsRequest struct {
+	IfMatch      *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch  *string  `header:"style=simple,explode=false,name=If-None-Match"`
 	Before       *int64   `queryParam:"style=form,explode=true,name=_before"`
 	Fields       []string `queryParam:"style=form,explode=false,name=_fields"`
 	Limit        *int64   `queryParam:"style=form,explode=true,name=_limit"`
@@ -16,16 +18,6 @@ type GetBucketsQueryParams struct {
 	Token        *string  `queryParam:"style=form,explode=true,name=_token"`
 	ID           *string  `queryParam:"style=form,explode=true,name=id"`
 	LastModified *int64   `queryParam:"style=form,explode=true,name=last_modified"`
-}
-
-type GetBucketsHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetBucketsRequest struct {
-	QueryParams GetBucketsQueryParams
-	Headers     GetBucketsHeaders
 }
 
 // GetBucketsErrorSchema - The request is invalid.

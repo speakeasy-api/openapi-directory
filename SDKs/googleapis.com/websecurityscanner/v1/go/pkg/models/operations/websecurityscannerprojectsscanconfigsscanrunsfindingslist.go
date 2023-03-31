@@ -8,16 +8,11 @@ import (
 )
 
 type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListPathParams struct {
-	// Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListQueryParams struct {
+type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest struct {
-	PathParams  WebsecurityscannerProjectsScanConfigsScanRunsFindingsListPathParams
-	QueryParams WebsecurityscannerProjectsScanConfigsScanRunsFindingsListQueryParams
-	Security    WebsecurityscannerProjectsScanConfigsScanRunsFindingsListSecurity
 }
 
 type WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse struct {

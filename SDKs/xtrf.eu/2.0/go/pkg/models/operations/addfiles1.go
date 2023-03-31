@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddFiles1PathParams struct {
+type AddFiles1Request struct {
+	// Added files to the project as added by PM.
+	FileCategorizationsDto shared.FileCategorizationsDto `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type AddFiles1Request struct {
-	PathParams AddFiles1PathParams
-	// Added files to the project as added by PM.
-	Request shared.FileCategorizationsDto `request:"mediaType=application/json"`
 }
 
 type AddFiles1Response struct {

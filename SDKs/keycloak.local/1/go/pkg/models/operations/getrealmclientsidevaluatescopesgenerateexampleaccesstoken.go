@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenPathParams struct {
+type GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenRequest struct {
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenQueryParams struct {
+	Realm  string  `pathParam:"style=simple,explode=false,name=realm"`
 	Scope  *string `queryParam:"style=form,explode=true,name=scope"`
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenRequest struct {
-	PathParams  GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenPathParams
-	QueryParams GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenQueryParams
 }
 
 type GetRealmClientsIDEvaluateScopesGenerateExampleAccessTokenResponse struct {

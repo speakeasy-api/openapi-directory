@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAttributesComputedQueryParams struct {
+type GetAttributesComputedRequest struct {
 	// Can only be used by admins or managers to fetch all entities
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Standard users can use this only with _deviceId_s, they have access to
@@ -17,10 +17,6 @@ type GetAttributesComputedQueryParams struct {
 	Refresh *bool  `queryParam:"style=form,explode=true,name=refresh"`
 	// Standard users can use this only with their own _userId_
 	UserID *int64 `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetAttributesComputedRequest struct {
-	QueryParams GetAttributesComputedQueryParams
 }
 
 type GetAttributesComputedResponse struct {

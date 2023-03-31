@@ -8,16 +8,11 @@ import (
 )
 
 type ClassroomInvitationsAcceptSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClassroomInvitationsAcceptPathParams struct {
-	// Identifier of the invitation to accept.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClassroomInvitationsAcceptQueryParams struct {
+type ClassroomInvitationsAcceptRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,6 +23,8 @@ type ClassroomInvitationsAcceptQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifier of the invitation to accept.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -40,12 +37,6 @@ type ClassroomInvitationsAcceptQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomInvitationsAcceptRequest struct {
-	PathParams  ClassroomInvitationsAcceptPathParams
-	QueryParams ClassroomInvitationsAcceptQueryParams
-	Security    ClassroomInvitationsAcceptSecurity
 }
 
 type ClassroomInvitationsAcceptResponse struct {

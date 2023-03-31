@@ -32,20 +32,20 @@ func newAds(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // DfareportingAdsGet - Gets one ad by ID.
-func (s *ads) DfareportingAdsGet(ctx context.Context, request operations.DfareportingAdsGetRequest) (*operations.DfareportingAdsGetResponse, error) {
+func (s *ads) DfareportingAdsGet(ctx context.Context, request operations.DfareportingAdsGetRequest, security operations.DfareportingAdsGetSecurity) (*operations.DfareportingAdsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *ads) DfareportingAdsGet(ctx context.Context, request operations.Dfarepo
 }
 
 // DfareportingAdsInsert - Inserts a new ad.
-func (s *ads) DfareportingAdsInsert(ctx context.Context, request operations.DfareportingAdsInsertRequest) (*operations.DfareportingAdsInsertResponse, error) {
+func (s *ads) DfareportingAdsInsert(ctx context.Context, request operations.DfareportingAdsInsertRequest, security operations.DfareportingAdsInsertSecurity) (*operations.DfareportingAdsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Ad", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *ads) DfareportingAdsInsert(ctx context.Context, request operations.Dfar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *ads) DfareportingAdsInsert(ctx context.Context, request operations.Dfar
 }
 
 // DfareportingAdsList - Retrieves a list of ads, possibly filtered. This method supports paging.
-func (s *ads) DfareportingAdsList(ctx context.Context, request operations.DfareportingAdsListRequest) (*operations.DfareportingAdsListResponse, error) {
+func (s *ads) DfareportingAdsList(ctx context.Context, request operations.DfareportingAdsListRequest, security operations.DfareportingAdsListSecurity) (*operations.DfareportingAdsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *ads) DfareportingAdsList(ctx context.Context, request operations.Dfarep
 }
 
 // DfareportingAdsPatch - Updates an existing ad. This method supports patch semantics.
-func (s *ads) DfareportingAdsPatch(ctx context.Context, request operations.DfareportingAdsPatchRequest) (*operations.DfareportingAdsPatchResponse, error) {
+func (s *ads) DfareportingAdsPatch(ctx context.Context, request operations.DfareportingAdsPatchRequest, security operations.DfareportingAdsPatchSecurity) (*operations.DfareportingAdsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Ad", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *ads) DfareportingAdsPatch(ctx context.Context, request operations.Dfare
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *ads) DfareportingAdsPatch(ctx context.Context, request operations.Dfare
 }
 
 // DfareportingAdsUpdate - Updates an existing ad.
-func (s *ads) DfareportingAdsUpdate(ctx context.Context, request operations.DfareportingAdsUpdateRequest) (*operations.DfareportingAdsUpdateResponse, error) {
+func (s *ads) DfareportingAdsUpdate(ctx context.Context, request operations.DfareportingAdsUpdateRequest, security operations.DfareportingAdsUpdateSecurity) (*operations.DfareportingAdsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Ad", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *ads) DfareportingAdsUpdate(ctx context.Context, request operations.Dfar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

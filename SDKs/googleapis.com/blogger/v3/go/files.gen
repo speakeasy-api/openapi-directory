@@ -59,7 +59,6 @@ pkg/models/shared/post.go
 pkg/models/shared/comment.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/bloglist.go
 pkg/models/shared/commentlist.go
 pkg/models/shared/pageviews.go

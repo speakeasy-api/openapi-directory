@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ListManifestsQueryParams struct {
+type ListManifestsRequest struct {
 	// Carrier ID
 	CarrierID *string `queryParam:"style=form,explode=true,name=carrier_id"`
 	// Used to create a filter for when a resource was created, (ex. A shipment that was created before a certain time)
@@ -27,10 +27,6 @@ type ListManifestsQueryParams struct {
 	ShipDateStart *time.Time `queryParam:"style=form,explode=true,name=ship_date_start"`
 	// Warehouse ID
 	WarehouseID *string `queryParam:"style=form,explode=true,name=warehouse_id"`
-}
-
-type ListManifestsRequest struct {
-	QueryParams ListManifestsQueryParams
 }
 
 type ListManifestsResponse struct {

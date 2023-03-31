@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityGetRepoSubscriptionPathParams struct {
+type ActivityGetRepoSubscriptionRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActivityGetRepoSubscriptionRequest struct {
-	PathParams ActivityGetRepoSubscriptionPathParams
 }
 
 type ActivityGetRepoSubscriptionResponse struct {

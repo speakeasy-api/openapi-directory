@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditAgentPathParams struct {
+type EditAgentRequest struct {
+	AgentEditRequest shared.AgentEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the agent in Noyo
 	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
 	// The current version identifier of the agent
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditAgentRequest struct {
-	PathParams EditAgentPathParams
-	Request    shared.AgentEditRequest `request:"mediaType=application/json"`
 }
 
 type EditAgentResponse struct {

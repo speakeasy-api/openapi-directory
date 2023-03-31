@@ -32,16 +32,16 @@ func newOnDemandBackgrounds(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // CreateVodBackground - Add a background to an On Demand page
-func (s *onDemandBackgrounds) CreateVodBackground(ctx context.Context, request operations.CreateVodBackgroundRequest) (*operations.CreateVodBackgroundResponse, error) {
+func (s *onDemandBackgrounds) CreateVodBackground(ctx context.Context, request operations.CreateVodBackgroundRequest, security operations.CreateVodBackgroundSecurity) (*operations.CreateVodBackgroundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,16 +88,16 @@ func (s *onDemandBackgrounds) CreateVodBackground(ctx context.Context, request o
 }
 
 // DeleteVodBackground - Remove a background from an On Demand page
-func (s *onDemandBackgrounds) DeleteVodBackground(ctx context.Context, request operations.DeleteVodBackgroundRequest) (*operations.DeleteVodBackgroundResponse, error) {
+func (s *onDemandBackgrounds) DeleteVodBackground(ctx context.Context, request operations.DeleteVodBackgroundRequest, security operations.DeleteVodBackgroundSecurity) (*operations.DeleteVodBackgroundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,11 +144,11 @@ func (s *onDemandBackgrounds) DeleteVodBackground(ctx context.Context, request o
 }
 
 // EditVodBackground - Edit a background of an On Demand page
-func (s *onDemandBackgrounds) EditVodBackground(ctx context.Context, request operations.EditVodBackgroundRequest) (*operations.EditVodBackgroundResponse, error) {
+func (s *onDemandBackgrounds) EditVodBackground(ctx context.Context, request operations.EditVodBackgroundRequest, security operations.EditVodBackgroundSecurity) (*operations.EditVodBackgroundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -160,7 +160,7 @@ func (s *onDemandBackgrounds) EditVodBackground(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,7 +209,7 @@ func (s *onDemandBackgrounds) EditVodBackground(ctx context.Context, request ope
 // GetVodBackground - Get a specific background of an On Demand page
 func (s *onDemandBackgrounds) GetVodBackground(ctx context.Context, request operations.GetVodBackgroundRequest) (*operations.GetVodBackgroundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,14 +265,14 @@ func (s *onDemandBackgrounds) GetVodBackground(ctx context.Context, request oper
 // GetVodBackgrounds - Get all the backgrounds of an On Demand page
 func (s *onDemandBackgrounds) GetVodBackgrounds(ctx context.Context, request operations.GetVodBackgroundsRequest) (*operations.GetVodBackgroundsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/backgrounds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

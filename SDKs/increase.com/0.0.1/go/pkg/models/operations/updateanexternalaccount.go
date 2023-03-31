@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAnExternalAccountPathParams struct {
-	ExternalAccountID string `pathParam:"style=simple,explode=false,name=external_account_id"`
-}
-
 type UpdateAnExternalAccountRequest struct {
-	PathParams UpdateAnExternalAccountPathParams
-	Request    shared.UpdateAnExternalAccountParameters `request:"mediaType=application/json"`
+	ExternalAccountID                 string                                   `pathParam:"style=simple,explode=false,name=external_account_id"`
+	UpdateAnExternalAccountParameters shared.UpdateAnExternalAccountParameters `request:"mediaType=application/json"`
 }
 
 type UpdateAnExternalAccountDefaultApplicationJSON13StatusEnum string

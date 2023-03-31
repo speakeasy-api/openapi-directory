@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SpellcheckQueryParams struct {
+type SpellcheckRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
 	// Search term, e.g., person, place, topic...
 	//
 	Q string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type SpellcheckHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type SpellcheckRequest struct {
-	QueryParams SpellcheckQueryParams
-	Headers     SpellcheckHeaders
 }
 
 type SpellcheckResponse struct {

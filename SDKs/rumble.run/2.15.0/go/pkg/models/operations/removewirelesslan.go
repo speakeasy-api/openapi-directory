@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveWirelessLANSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveWirelessLANPathParams struct {
-	// UUID of the wireless LAN to remove
-	WirelessID string `pathParam:"style=simple,explode=false,name=wireless_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveWirelessLANRequest struct {
-	PathParams RemoveWirelessLANPathParams
-	Security   RemoveWirelessLANSecurity
+	// UUID of the wireless LAN to remove
+	WirelessID string `pathParam:"style=simple,explode=false,name=wireless_id"`
 }
 
 type RemoveWirelessLANResponse struct {

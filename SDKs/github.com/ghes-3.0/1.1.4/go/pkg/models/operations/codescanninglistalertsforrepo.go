@@ -7,29 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningListAlertsForRepoPathParams struct {
+type CodeScanningListAlertsForRepoRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodeScanningListAlertsForRepoQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
-	Ref *string `queryParam:"style=form,explode=true,name=ref"`
+	Ref  *string `queryParam:"style=form,explode=true,name=ref"`
+	Repo string  `pathParam:"style=simple,explode=false,name=repo"`
 	// Set to `open`, `fixed`, or `dismissed` to list code scanning alerts in a specific state.
 	State *shared.CodeScanningAlertStateEnum `queryParam:"style=form,explode=true,name=state"`
 	// The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
 	ToolGUID *string `queryParam:"style=form,explode=true,name=tool_guid"`
 	// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
 	ToolName *string `queryParam:"style=form,explode=true,name=tool_name"`
-}
-
-type CodeScanningListAlertsForRepoRequest struct {
-	PathParams  CodeScanningListAlertsForRepoPathParams
-	QueryParams CodeScanningListAlertsForRepoQueryParams
 }
 
 // CodeScanningListAlertsForRepo503ApplicationJSON - Service unavailable

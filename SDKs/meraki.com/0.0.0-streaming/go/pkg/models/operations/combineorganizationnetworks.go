@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CombineOrganizationNetworksPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CombineOrganizationNetworksRequestBody struct {
 	// A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by '-network_type'. If left empty, all exisitng enrollment strings will be deleted.
 	EnrollmentString *string `json:"enrollmentString,omitempty"`
@@ -20,8 +16,8 @@ type CombineOrganizationNetworksRequestBody struct {
 }
 
 type CombineOrganizationNetworksRequest struct {
-	PathParams CombineOrganizationNetworksPathParams
-	Request    CombineOrganizationNetworksRequestBody `request:"mediaType=application/json"`
+	RequestBody    CombineOrganizationNetworksRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                 `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CombineOrganizationNetworksResponse struct {

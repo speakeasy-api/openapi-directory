@@ -12,12 +12,8 @@ var UpdateWorkspaceServerList = []string{
 }
 
 type UpdateWorkspaceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWorkspacePathParams struct {
-	// The SID of the Workspace resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateWorkspaceUpdateWorkspaceRequest struct {
@@ -37,10 +33,9 @@ type UpdateWorkspaceUpdateWorkspaceRequest struct {
 }
 
 type UpdateWorkspaceRequest struct {
-	PathParams UpdateWorkspacePathParams
-	Request    *UpdateWorkspaceUpdateWorkspaceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateWorkspaceSecurity
-	ServerURL  *string
+	RequestBody *UpdateWorkspaceUpdateWorkspaceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateWorkspaceResponse struct {

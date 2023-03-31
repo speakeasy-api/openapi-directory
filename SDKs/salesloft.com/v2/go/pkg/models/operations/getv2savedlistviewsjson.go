@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2SavedListViewsJSONQueryParams struct {
+type GetV2SavedListViewsJSONRequest struct {
 	// IDs of saved list views to fetch. If a record can't be found, that record won't be returned and your request will be successful
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -23,10 +23,6 @@ type GetV2SavedListViewsJSONQueryParams struct {
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
 	// Type of saved list views to fetch.
 	View *string `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetV2SavedListViewsJSONRequest struct {
-	QueryParams GetV2SavedListViewsJSONQueryParams
 }
 
 type GetV2SavedListViewsJSONResponse struct {

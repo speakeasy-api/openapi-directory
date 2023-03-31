@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmAuthenticationRequiredActionsPathParams struct {
+type GetRealmAuthenticationRequiredActionsRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAuthenticationRequiredActionsRequest struct {
-	PathParams GetRealmAuthenticationRequiredActionsPathParams
 }
 
 type GetRealmAuthenticationRequiredActionsResponse struct {

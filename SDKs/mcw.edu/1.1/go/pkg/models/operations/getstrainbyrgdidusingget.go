@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETStrainByRgdIDUsingGETPathParams struct {
+type GETStrainByRgdIDUsingGETRequest struct {
 	// RGD ID of the strain
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETStrainByRgdIDUsingGETRequest struct {
-	PathParams GETStrainByRgdIDUsingGETPathParams
 }
 
 type GETStrainByRgdIDUsingGETResponse struct {

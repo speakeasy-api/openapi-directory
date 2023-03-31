@@ -8,18 +8,16 @@ import (
 )
 
 type AdsensehostAccountsAdunitsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostAccountsAdunitsPatchPathParams struct {
+type AdsensehostAccountsAdunitsPatchRequest struct {
+	AdUnit *shared.AdUnit `request:"mediaType=application/json"`
 	// Account which contains the ad client.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Ad client which contains the ad unit.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-}
-
-type AdsensehostAccountsAdunitsPatchQueryParams struct {
 	// Ad unit to get.
 	AdUnitID string `queryParam:"style=form,explode=true,name=adUnitId"`
 	// Data format for the response.
@@ -36,13 +34,6 @@ type AdsensehostAccountsAdunitsPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostAccountsAdunitsPatchRequest struct {
-	PathParams  AdsensehostAccountsAdunitsPatchPathParams
-	QueryParams AdsensehostAccountsAdunitsPatchQueryParams
-	Request     *shared.AdUnit `request:"mediaType=application/json"`
-	Security    AdsensehostAccountsAdunitsPatchSecurity
 }
 
 type AdsensehostAccountsAdunitsPatchResponse struct {

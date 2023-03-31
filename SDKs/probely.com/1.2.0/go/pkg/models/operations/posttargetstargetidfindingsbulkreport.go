@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsTargetIDFindingsBulkReportPathParams struct {
+type PostTargetsTargetIDFindingsBulkReportRequest struct {
+	FindingBulkIds shared.FindingBulkIds `request:"mediaType=application/json"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PostTargetsTargetIDFindingsBulkReportRequest struct {
-	PathParams PostTargetsTargetIDFindingsBulkReportPathParams
-	Request    shared.FindingBulkIds `request:"mediaType=application/json"`
 }
 
 // PostTargetsTargetIDFindingsBulkReport404ApplicationJSON - Not found

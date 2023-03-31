@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetActionPackageAutocompleteQueryParams struct {
+type GetActionPackageAutocompleteRequest struct {
 	// The maximum number of resource formats to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The string to query
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetActionPackageAutocompleteRequest struct {
-	QueryParams GetActionPackageAutocompleteQueryParams
 }
 
 type GetActionPackageAutocompleteResponse struct {

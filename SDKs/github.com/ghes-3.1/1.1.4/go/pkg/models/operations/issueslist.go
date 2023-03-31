@@ -100,7 +100,7 @@ func (e *IssuesListStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IssuesListQueryParams struct {
+type IssuesListRequest struct {
 	Collab *bool `queryParam:"style=form,explode=true,name=collab"`
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
@@ -121,10 +121,6 @@ type IssuesListQueryParams struct {
 	Sort *IssuesListSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`.
 	State *IssuesListStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type IssuesListRequest struct {
-	QueryParams IssuesListQueryParams
 }
 
 type IssuesListResponse struct {

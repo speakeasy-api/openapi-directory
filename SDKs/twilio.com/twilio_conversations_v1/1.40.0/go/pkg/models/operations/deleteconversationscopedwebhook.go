@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteConversationScopedWebhookServerList = []string{
@@ -12,20 +11,15 @@ var DeleteConversationScopedWebhookServerList = []string{
 }
 
 type DeleteConversationScopedWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteConversationScopedWebhookPathParams struct {
+type DeleteConversationScopedWebhookRequest struct {
 	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
 	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteConversationScopedWebhookRequest struct {
-	PathParams DeleteConversationScopedWebhookPathParams
-	Security   DeleteConversationScopedWebhookSecurity
-	ServerURL  *string
 }
 
 type DeleteConversationScopedWebhookResponse struct {

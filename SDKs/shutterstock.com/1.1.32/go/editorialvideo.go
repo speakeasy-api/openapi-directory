@@ -34,20 +34,20 @@ func newEditorialVideo(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetEditorialVideo - Get editorial video content details
 // This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
-func (s *editorialVideo) GetEditorialVideo(ctx context.Context, request operations.GetEditorialVideoRequest) (*operations.GetEditorialVideoResponse, error) {
+func (s *editorialVideo) GetEditorialVideo(ctx context.Context, request operations.GetEditorialVideoRequest, security operations.GetEditorialVideoSecurity) (*operations.GetEditorialVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/videos/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/videos/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *editorialVideo) GetEditorialVideo(ctx context.Context, request operatio
 
 // GetEditorialVideoLicenseList - List editorial video licenses
 // This endpoint lists existing editorial video licenses.
-func (s *editorialVideo) GetEditorialVideoLicenseList(ctx context.Context, request operations.GetEditorialVideoLicenseListRequest) (*operations.GetEditorialVideoLicenseListResponse, error) {
+func (s *editorialVideo) GetEditorialVideoLicenseList(ctx context.Context, request operations.GetEditorialVideoLicenseListRequest, security operations.GetEditorialVideoLicenseListSecurity) (*operations.GetEditorialVideoLicenseListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/videos/licenses"
 
@@ -99,11 +99,11 @@ func (s *editorialVideo) GetEditorialVideoLicenseList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *editorialVideo) GetEditorialVideoLicenseList(ctx context.Context, reque
 
 // LicenseEditorialVideo - License editorial video content
 // This endpoint gets licenses for one or more editorial videos. You must specify the country and one or more editorial videos to license. The download links in the response are valid for 8 hours.
-func (s *editorialVideo) LicenseEditorialVideo(ctx context.Context, request operations.LicenseEditorialVideoRequest) (*operations.LicenseEditorialVideoResponse, error) {
+func (s *editorialVideo) LicenseEditorialVideo(ctx context.Context, request shared.LicenseEditorialVideoContentRequest, security operations.LicenseEditorialVideoSecurity) (*operations.LicenseEditorialVideoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/videos/licenses"
 
@@ -163,7 +163,7 @@ func (s *editorialVideo) LicenseEditorialVideo(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -204,7 +204,7 @@ func (s *editorialVideo) LicenseEditorialVideo(ctx context.Context, request oper
 
 // ListEditorialVideoCategories - List editorial video categories
 // This endpoint lists the categories that editorial videos can belong to, which are separate from the categories that other types of assets can belong to.
-func (s *editorialVideo) ListEditorialVideoCategories(ctx context.Context, request operations.ListEditorialVideoCategoriesRequest) (*operations.ListEditorialVideoCategoriesResponse, error) {
+func (s *editorialVideo) ListEditorialVideoCategories(ctx context.Context) (*operations.ListEditorialVideoCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/videos/categories"
 
@@ -213,7 +213,7 @@ func (s *editorialVideo) ListEditorialVideoCategories(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,7 +254,7 @@ func (s *editorialVideo) ListEditorialVideoCategories(ctx context.Context, reque
 
 // SearchEditorialVideos - Search editorial video content
 // This endpoint searches for editorial videos. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to "Alone,Performing" and also specify a `query` parameter, the results include only videos that match the query and are in both the Alone and Performing categories.  You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
-func (s *editorialVideo) SearchEditorialVideos(ctx context.Context, request operations.SearchEditorialVideosRequest) (*operations.SearchEditorialVideosResponse, error) {
+func (s *editorialVideo) SearchEditorialVideos(ctx context.Context, request operations.SearchEditorialVideosRequest, security operations.SearchEditorialVideosSecurity) (*operations.SearchEditorialVideosResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/videos/search"
 
@@ -263,11 +263,11 @@ func (s *editorialVideo) SearchEditorialVideos(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInterfacesReadPathParams struct {
+type DcimInterfacesReadRequest struct {
 	// A unique integer value identifying this interface.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInterfacesReadRequest struct {
-	PathParams DcimInterfacesReadPathParams
 }
 
 type DcimInterfacesReadResponse struct {

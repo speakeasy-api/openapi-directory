@@ -19,10 +19,6 @@ type PostV2ActivitiesJSONRequestBody struct {
 	TaskID *int64 `form:"name=task_id"`
 }
 
-type PostV2ActivitiesJSONRequest struct {
-	Request *PostV2ActivitiesJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2ActivitiesJSONResponse struct {
 	Body        []byte
 	ContentType string

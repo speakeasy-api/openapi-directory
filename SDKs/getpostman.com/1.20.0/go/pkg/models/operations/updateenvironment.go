@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateEnvironmentPathParams struct {
-	EnvironmentUID string `pathParam:"style=simple,explode=false,name=environment_uid"`
-}
-
 type UpdateEnvironmentRequestBodyEnvironmentValues struct {
 	Key   *string `json:"key,omitempty"`
 	Value *string `json:"value,omitempty"`
@@ -25,8 +21,8 @@ type UpdateEnvironmentRequestBody struct {
 }
 
 type UpdateEnvironmentRequest struct {
-	PathParams UpdateEnvironmentPathParams
-	Request    *UpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	EnvironmentUID string                        `pathParam:"style=simple,explode=false,name=environment_uid"`
 }
 
 type UpdateEnvironment400ApplicationJSONError struct {

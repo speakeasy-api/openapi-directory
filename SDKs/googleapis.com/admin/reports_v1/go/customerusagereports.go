@@ -32,20 +32,20 @@ func newCustomerUsageReports(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // ReportsCustomerUsageReportsGet - Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides.
-func (s *customerUsageReports) ReportsCustomerUsageReportsGet(ctx context.Context, request operations.ReportsCustomerUsageReportsGetRequest) (*operations.ReportsCustomerUsageReportsGetResponse, error) {
+func (s *customerUsageReports) ReportsCustomerUsageReportsGet(ctx context.Context, request operations.ReportsCustomerUsageReportsGetRequest, security operations.ReportsCustomerUsageReportsGetSecurity) (*operations.ReportsCustomerUsageReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/dates/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/dates/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -9,12 +9,8 @@ import (
 	"time"
 )
 
-type GetNetworkFirmwareUpgradesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkFirmwareUpgradesRequest struct {
-	PathParams GetNetworkFirmwareUpgradesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkFirmwareUpgrades200ApplicationJSONProductsApplianceAvailableVersions struct {

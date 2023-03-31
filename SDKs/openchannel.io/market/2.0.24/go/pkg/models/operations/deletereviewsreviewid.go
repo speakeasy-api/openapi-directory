@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteReviewsReviewIDPathParams struct {
+type DeleteReviewsReviewIDRequest struct {
 	// The id of the Review to be updated
 	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
-}
-
-type DeleteReviewsReviewIDQueryParams struct {
 	// The id of the User account that is emoving this review
 	UserAccountID *string `queryParam:"style=form,explode=true,name=userAccountId"`
 	// The id of the User that is removing this review
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type DeleteReviewsReviewIDRequest struct {
-	PathParams  DeleteReviewsReviewIDPathParams
-	QueryParams DeleteReviewsReviewIDQueryParams
 }
 
 type DeleteReviewsReviewIDResponse struct {

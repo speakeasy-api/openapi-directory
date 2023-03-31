@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFrameworksIDPathParams struct {
+type GetFrameworksIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFrameworksIDRequest struct {
-	PathParams GetFrameworksIDPathParams
 }
 
 // GetFrameworksID404ApplicationJSON - Not found

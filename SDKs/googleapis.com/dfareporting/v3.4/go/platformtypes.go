@@ -32,20 +32,20 @@ func newPlatformTypes(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // DfareportingPlatformTypesGet - Gets one platform type by ID.
-func (s *platformTypes) DfareportingPlatformTypesGet(ctx context.Context, request operations.DfareportingPlatformTypesGetRequest) (*operations.DfareportingPlatformTypesGetResponse, error) {
+func (s *platformTypes) DfareportingPlatformTypesGet(ctx context.Context, request operations.DfareportingPlatformTypesGetRequest, security operations.DfareportingPlatformTypesGetSecurity) (*operations.DfareportingPlatformTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *platformTypes) DfareportingPlatformTypesGet(ctx context.Context, reques
 }
 
 // DfareportingPlatformTypesList - Retrieves a list of platform types.
-func (s *platformTypes) DfareportingPlatformTypesList(ctx context.Context, request operations.DfareportingPlatformTypesListRequest) (*operations.DfareportingPlatformTypesListResponse, error) {
+func (s *platformTypes) DfareportingPlatformTypesList(ctx context.Context, request operations.DfareportingPlatformTypesListRequest, security operations.DfareportingPlatformTypesListSecurity) (*operations.DfareportingPlatformTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

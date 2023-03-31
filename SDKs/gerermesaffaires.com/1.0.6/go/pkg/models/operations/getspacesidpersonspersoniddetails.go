@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDPersonsPersonIDDetailsPathParams struct {
+type GetSpacesIDPersonsPersonIDDetailsRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the person to get or memberId
 	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type GetSpacesIDPersonsPersonIDDetailsRequest struct {
-	PathParams GetSpacesIDPersonsPersonIDDetailsPathParams
 }
 
 type GetSpacesIDPersonsPersonIDDetails200ApplicationJSONAddress struct {

@@ -10,13 +10,8 @@ import (
 )
 
 type Adexchangebuyer2AccountsProposalsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type Adexchangebuyer2AccountsProposalsListPathParams struct {
-	// Account ID of the buyer.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum - Syntax the filter is written in. Current implementation defaults to PQL but in the future it will be LIST_FILTER.
@@ -46,11 +41,13 @@ func (e *Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum) UnmarshalJSON(da
 	}
 }
 
-type Adexchangebuyer2AccountsProposalsListQueryParams struct {
+type Adexchangebuyer2AccountsProposalsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Account ID of the buyer.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -77,12 +74,6 @@ type Adexchangebuyer2AccountsProposalsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsProposalsListRequest struct {
-	PathParams  Adexchangebuyer2AccountsProposalsListPathParams
-	QueryParams Adexchangebuyer2AccountsProposalsListQueryParams
-	Security    Adexchangebuyer2AccountsProposalsListSecurity
 }
 
 type Adexchangebuyer2AccountsProposalsListResponse struct {

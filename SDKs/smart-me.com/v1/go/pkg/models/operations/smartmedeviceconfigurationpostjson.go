@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SmartMeDeviceConfigurationPostJSONRequest struct {
-	Request shared.SmartMeDeviceConfigurationContainer `request:"mediaType=application/json"`
-}
 
 type SmartMeDeviceConfigurationPostJSONResponse struct {
 	ContentType string

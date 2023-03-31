@@ -8,12 +8,7 @@ import (
 )
 
 type AddHpovManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddHpovManagerRequest struct {
-	Request  *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security AddHpovManagerSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddHpovManagerResponse struct {

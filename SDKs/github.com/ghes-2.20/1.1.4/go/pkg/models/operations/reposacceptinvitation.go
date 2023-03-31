@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposAcceptInvitationPathParams struct {
+type ReposAcceptInvitationRequest struct {
 	// invitation_id parameter
 	InvitationID int64 `pathParam:"style=simple,explode=false,name=invitation_id"`
-}
-
-type ReposAcceptInvitationRequest struct {
-	PathParams ReposAcceptInvitationPathParams
 }
 
 type ReposAcceptInvitationResponse struct {

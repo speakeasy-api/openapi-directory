@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ListMeetingSatisfactionSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListMeetingSatisfactionQueryParams struct {
+type ListMeetingSatisfactionRequest struct {
 	// The start date for the query in “yyyy-mm-dd” format.
 	From *types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The end date for the query in “yyyy-mm-dd” format.
 	To *types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ListMeetingSatisfactionRequest struct {
-	QueryParams ListMeetingSatisfactionQueryParams
-	Security    ListMeetingSatisfactionSecurity
 }
 
 type ListMeetingSatisfaction200ApplicationXMLClientSatisfaction struct {

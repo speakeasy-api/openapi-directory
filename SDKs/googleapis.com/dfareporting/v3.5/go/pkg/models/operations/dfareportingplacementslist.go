@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingPlacementsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingPlacementsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DfareportingPlacementsListCompatibilitiesEnum string
@@ -161,7 +156,7 @@ func (e *DfareportingPlacementsListSortOrderEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DfareportingPlacementsListQueryParams struct {
+type DfareportingPlacementsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -212,6 +207,8 @@ type DfareportingPlacementsListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Select only placements with these pricing types.
 	PricingTypes []DfareportingPlacementsListPricingTypesEnum `queryParam:"style=form,explode=true,name=pricingTypes"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for placements by name or ID. Wildcards (*) are allowed. For example, "placement*2015" will return placements with names like "placement June 2015", "placement May 2015", or simply "placements 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "placement" will match placements with name "my placement", "placement 2015", or simply "placement" .
@@ -228,12 +225,6 @@ type DfareportingPlacementsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingPlacementsListRequest struct {
-	PathParams  DfareportingPlacementsListPathParams
-	QueryParams DfareportingPlacementsListQueryParams
-	Security    DfareportingPlacementsListSecurity
 }
 
 type DfareportingPlacementsListResponse struct {

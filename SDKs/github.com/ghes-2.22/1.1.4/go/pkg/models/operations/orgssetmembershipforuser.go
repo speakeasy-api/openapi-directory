@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsSetMembershipForUserPathParams struct {
-	Org      string `pathParam:"style=simple,explode=false,name=org"`
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // OrgsSetMembershipForUserRequestBodyRoleEnum - The role to give the user in the organization. Can be one of:
 // \* `admin` - The user will become an owner of the organization.
 // \* `member` - The user will become a non-owner member of the organization.
@@ -48,8 +43,9 @@ type OrgsSetMembershipForUserRequestBody struct {
 }
 
 type OrgsSetMembershipForUserRequest struct {
-	PathParams OrgsSetMembershipForUserPathParams
-	Request    *OrgsSetMembershipForUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *OrgsSetMembershipForUserRequestBody `request:"mediaType=application/json"`
+	Org         string                               `pathParam:"style=simple,explode=false,name=org"`
+	Username    string                               `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type OrgsSetMembershipForUserResponse struct {

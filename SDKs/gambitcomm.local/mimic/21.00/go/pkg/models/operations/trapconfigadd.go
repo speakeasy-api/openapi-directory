@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type TrapConfigAddPathParams struct {
+type TrapConfigAddRequest struct {
 	// IP of the destination
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to add the destination
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// port of the destination
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type TrapConfigAddRequest struct {
-	PathParams TrapConfigAddPathParams
 }
 
 type TrapConfigAddResponse struct {

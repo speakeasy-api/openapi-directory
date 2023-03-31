@@ -11,12 +11,8 @@ import (
 )
 
 type UpdateGlobalAuthModuleSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateGlobalAuthModulePathParams struct {
-	// The auth. config id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateGlobalAuthModuleRequestBodyType string
@@ -112,9 +108,9 @@ func (u UpdateGlobalAuthModuleRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type UpdateGlobalAuthModuleRequest struct {
-	PathParams UpdateGlobalAuthModulePathParams
-	Request    *UpdateGlobalAuthModuleRequestBody `request:"mediaType=application/json"`
-	Security   UpdateGlobalAuthModuleSecurity
+	RequestBody *UpdateGlobalAuthModuleRequestBody `request:"mediaType=application/json"`
+	// The auth. config id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateGlobalAuthModule200ApplicationJSONType string

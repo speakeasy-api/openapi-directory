@@ -35,7 +35,7 @@ func newCalls(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CallAnswer - Answer call (On supported devices)
 func (s *calls) CallAnswer(ctx context.Context, request operations.CallAnswerRequest) (*operations.CallAnswerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/answer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/answer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *calls) CallAnswer(ctx context.Context, request operations.CallAnswerReq
 // CallHold - Put call on hold
 func (s *calls) CallHold(ctx context.Context, request operations.CallHoldRequest) (*operations.CallHoldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/hold", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/hold", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -165,9 +165,9 @@ func (s *calls) CallHold(ctx context.Context, request operations.CallHoldRequest
 // CallTransfer - Transfer call
 func (s *calls) CallTransfer(ctx context.Context, request operations.CallTransferRequest) (*operations.CallTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/transfer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/transfer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallTransfer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -240,7 +240,7 @@ func (s *calls) CallTransfer(ctx context.Context, request operations.CallTransfe
 // CallUnold - Unhold
 func (s *calls) CallUnold(ctx context.Context, request operations.CallUnoldRequest) (*operations.CallUnoldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/hold", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/hold", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -305,7 +305,7 @@ func (s *calls) CallUnold(ctx context.Context, request operations.CallUnoldReque
 // CallVMTransfer - Send call to voicemail
 func (s *calls) CallVMTransfer(ctx context.Context, request operations.CallVMTransferRequest) (*operations.CallVMTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/vmtransfer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}/vmtransfer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -368,7 +368,7 @@ func (s *calls) CallVMTransfer(ctx context.Context, request operations.CallVMTra
 }
 
 // CreateCall - Place a call
-func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallRequest) (*operations.CreateCallResponse, error) {
+func (s *calls) CreateCall(ctx context.Context, request shared.CallCreate) (*operations.CreateCallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/self/calls"
 
@@ -445,7 +445,7 @@ func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallReq
 // DestroyCall - End a call
 func (s *calls) DestroyCall(ctx context.Context, request operations.DestroyCallRequest) (*operations.DestroyCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -517,7 +517,7 @@ func (s *calls) GetCallsCount(ctx context.Context, request operations.GetCallsCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -579,7 +579,7 @@ func (s *calls) GetCallsCount(ctx context.Context, request operations.GetCallsCo
 // GetRoles - Get a call
 func (s *calls) GetRoles(ctx context.Context, request operations.GetRolesRequest) (*operations.GetRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/calls/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +652,7 @@ func (s *calls) ListCalls(ctx context.Context, request operations.ListCallsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsTimeSeriesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsTimeSeriesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsTimeSeriesCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsTimeSeriesCreateSecurity struct {
@@ -28,14 +28,10 @@ type MonitoringProjectsTimeSeriesCreateSecurity struct {
 	Option3 *MonitoringProjectsTimeSeriesCreateSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsTimeSeriesCreatePathParams struct {
-	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsTimeSeriesCreateQueryParams struct {
+type MonitoringProjectsTimeSeriesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CreateTimeSeriesRequest *shared.CreateTimeSeriesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,6 +42,8 @@ type MonitoringProjectsTimeSeriesCreateQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -56,13 +54,6 @@ type MonitoringProjectsTimeSeriesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsTimeSeriesCreateRequest struct {
-	PathParams  MonitoringProjectsTimeSeriesCreatePathParams
-	QueryParams MonitoringProjectsTimeSeriesCreateQueryParams
-	Request     *shared.CreateTimeSeriesRequest `request:"mediaType=application/json"`
-	Security    MonitoringProjectsTimeSeriesCreateSecurity
 }
 
 type MonitoringProjectsTimeSeriesCreateResponse struct {

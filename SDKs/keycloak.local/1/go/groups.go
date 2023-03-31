@@ -33,7 +33,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 func (s *groups) DeleteRealmGroupsID(ctx context.Context, request operations.DeleteRealmGroupsIDRequest) (*operations.DeleteRealmGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -68,14 +68,14 @@ func (s *groups) DeleteRealmGroupsID(ctx context.Context, request operations.Del
 // GetRealmGroups - Get group hierarchy.
 func (s *groups) GetRealmGroups(ctx context.Context, request operations.GetRealmGroupsRequest) (*operations.GetRealmGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,14 +116,14 @@ func (s *groups) GetRealmGroups(ctx context.Context, request operations.GetRealm
 // GetRealmGroupsCount - Returns the groups counts.
 func (s *groups) GetRealmGroupsCount(ctx context.Context, request operations.GetRealmGroupsCountRequest) (*operations.GetRealmGroupsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -162,7 +162,7 @@ func (s *groups) GetRealmGroupsCount(ctx context.Context, request operations.Get
 }
 func (s *groups) GetRealmGroupsID(ctx context.Context, request operations.GetRealmGroupsIDRequest) (*operations.GetRealmGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -206,7 +206,7 @@ func (s *groups) GetRealmGroupsID(ctx context.Context, request operations.GetRea
 // GetRealmGroupsIDManagementPermissions - Return object stating whether client Authorization permissions have been initialized or not and a reference
 func (s *groups) GetRealmGroupsIDManagementPermissions(ctx context.Context, request operations.GetRealmGroupsIDManagementPermissionsRequest) (*operations.GetRealmGroupsIDManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/management/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -250,14 +250,14 @@ func (s *groups) GetRealmGroupsIDManagementPermissions(ctx context.Context, requ
 // GetRealmGroupsIDMembers - Get users   Returns a list of users, filtered according to query parameters
 func (s *groups) GetRealmGroupsIDMembers(ctx context.Context, request operations.GetRealmGroupsIDMembersRequest) (*operations.GetRealmGroupsIDMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -298,9 +298,9 @@ func (s *groups) GetRealmGroupsIDMembers(ctx context.Context, request operations
 // PostRealmGroups - create or add a top level realm groupSet or create child.
 func (s *groups) PostRealmGroups(ctx context.Context, request operations.PostRealmGroupsRequest) (*operations.PostRealmGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,9 +343,9 @@ func (s *groups) PostRealmGroups(ctx context.Context, request operations.PostRea
 // PostRealmGroupsIDChildren - Set or create child.
 func (s *groups) PostRealmGroupsIDChildren(ctx context.Context, request operations.PostRealmGroupsIDChildrenRequest) (*operations.PostRealmGroupsIDChildrenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/children", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/children", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,9 +388,9 @@ func (s *groups) PostRealmGroupsIDChildren(ctx context.Context, request operatio
 // PutRealmGroupsID - Update group, ignores subgroups.
 func (s *groups) PutRealmGroupsID(ctx context.Context, request operations.PutRealmGroupsIDRequest) (*operations.PutRealmGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -433,9 +433,9 @@ func (s *groups) PutRealmGroupsID(ctx context.Context, request operations.PutRea
 // PutRealmGroupsIDManagementPermissions - Return object stating whether client Authorization permissions have been initialized or not and a reference
 func (s *groups) PutRealmGroupsIDManagementPermissions(ctx context.Context, request operations.PutRealmGroupsIDManagementPermissionsRequest) (*operations.PutRealmGroupsIDManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/management/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagementPermissionReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

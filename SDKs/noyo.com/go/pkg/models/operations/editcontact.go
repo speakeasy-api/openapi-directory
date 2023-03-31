@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditContactPathParams struct {
+type EditContactRequest struct {
+	ContactEditRequest shared.ContactEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the contact in Noyo
 	ContactID string `pathParam:"style=simple,explode=false,name=contact_id"`
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 	// The current version identifier of the contact
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditContactRequest struct {
-	PathParams EditContactPathParams
-	Request    shared.ContactEditRequest `request:"mediaType=application/json"`
 }
 
 type EditContactResponse struct {

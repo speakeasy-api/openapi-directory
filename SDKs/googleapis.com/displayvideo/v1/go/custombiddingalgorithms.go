@@ -33,11 +33,11 @@ func newCustomBiddingAlgorithms(defaultClient, securityClient HTTPClient, server
 }
 
 // DisplayvideoCustomBiddingAlgorithmsCreate - Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if successful.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsCreate(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsCreateRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsCreate(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsCreateRequest, security operations.DisplayvideoCustomBiddingAlgorithmsCreateSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/customBiddingAlgorithms"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomBiddingAlgorithmInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsCreate(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsCreate(ctx 
 }
 
 // DisplayvideoCustomBiddingAlgorithmsGet - Gets a custom bidding algorithm.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsGet(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsGetRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsGetResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsGet(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsGetRequest, security operations.DisplayvideoCustomBiddingAlgorithmsGetSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsGet(ctx con
 }
 
 // DisplayvideoCustomBiddingAlgorithmsList - Lists custom bidding algorithms that are accessible to the current user and can be used in bidding stratgies. The order is defined by the order_by parameter.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsList(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsListRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsListResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsList(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsListRequest, security operations.DisplayvideoCustomBiddingAlgorithmsListSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/customBiddingAlgorithms"
 
@@ -145,11 +145,11 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsList(ctx co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsList(ctx co
 }
 
 // DisplayvideoCustomBiddingAlgorithmsPatch - Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if successful.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsPatch(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsPatch(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest, security operations.DisplayvideoCustomBiddingAlgorithmsPatchSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomBiddingAlgorithmInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsPatch(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsPatch(ctx c
 }
 
 // DisplayvideoCustomBiddingAlgorithmsScriptsCreate - Creates a new custom bidding script. Returns the newly created script if successful.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsCreate(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsCreate(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest, security operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomBiddingScriptInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsCrea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,20 +294,20 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsCrea
 }
 
 // DisplayvideoCustomBiddingAlgorithmsScriptsGet - Gets a custom bidding script.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsGet(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsGet(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest, security operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts/{customBiddingScriptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts/{customBiddingScriptId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,20 +342,20 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsGet(
 }
 
 // DisplayvideoCustomBiddingAlgorithmsScriptsList - Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsList(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsList(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest, security operations.DisplayvideoCustomBiddingAlgorithmsScriptsListSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,20 +390,20 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsList
 }
 
 // DisplayvideoCustomBiddingAlgorithmsUploadScript - Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
-func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsUploadScript(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest) (*operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse, error) {
+func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsUploadScript(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest, security operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}:uploadScript", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}:uploadScript", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

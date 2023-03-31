@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetSearchV1FieldsRequest(
-    query_params=operations.GetSearchV1FieldsQueryParams(
-        callback="officia",
-    ),
+    callback="corrupti",
 )
     
 res = s.get_search_v1_fields(req)

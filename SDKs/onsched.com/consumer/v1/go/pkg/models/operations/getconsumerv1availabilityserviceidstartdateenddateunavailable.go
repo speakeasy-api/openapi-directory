@@ -8,31 +8,23 @@ import (
 	"time"
 )
 
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailablePathParams struct {
-	// Format YYYY-MM-DD: End Date for unavailable time search
-	EndDate time.Time `pathParam:"style=simple,explode=false,name=endDate"`
-	// Service Id for availability search
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-	// Format YYYY-MM-DD: Start Date for unavailable time search
-	StartDate time.Time `pathParam:"style=simple,explode=false,name=startDate"`
-}
-
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableQueryParams struct {
+type GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableRequest struct {
 	// Duration of the service if different from default
 	Duration *int `queryParam:"style=form,explode=true,name=duration"`
+	// Format YYYY-MM-DD: End Date for unavailable time search
+	EndDate time.Time `pathParam:"style=simple,explode=false,name=endDate"`
 	// Id of business location, defaults to primary business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
 	// Resource Id to filter on
 	ResourceID *string `queryParam:"style=form,explode=true,name=resourceId"`
+	// Service Id for availability search
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 	// Set as true to remove Time Past (TP) blocks in the response
 	SkipTimePastUnavailability *bool `queryParam:"style=form,explode=true,name=skipTimePastUnavailability"`
+	// Format YYYY-MM-DD: Start Date for unavailable time search
+	StartDate time.Time `pathParam:"style=simple,explode=false,name=startDate"`
 	// Request timezone offset to view unavailable times
 	TzOffset *int `queryParam:"style=form,explode=true,name=tzOffset"`
-}
-
-type GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableRequest struct {
-	PathParams  GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailablePathParams
-	QueryParams GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableQueryParams
 }
 
 type GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableResponse struct {

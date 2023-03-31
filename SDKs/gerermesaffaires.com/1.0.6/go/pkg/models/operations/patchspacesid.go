@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchSpacesIDRequestBodyLogo struct {
 	Content64Encoded *string `json:"Content64Encoded,omitempty"`
 	Name             *string `json:"Name,omitempty"`
@@ -24,9 +19,10 @@ type PatchSpacesIDRequestBody struct {
 }
 
 type PatchSpacesIDRequest struct {
-	PathParams PatchSpacesIDPathParams
 	// Space to modify (except private)
-	Request PatchSpacesIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchSpacesIDResponse struct {

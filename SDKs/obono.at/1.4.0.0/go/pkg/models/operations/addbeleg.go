@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddBelegPathParams struct {
+type AddBelegRequest struct {
+	// An object that contains all data for a particular `Beleg` and is formatted according to RKSV "Signaturformat".
+	Belegdaten shared.Belegdaten `request:"mediaType=application/json"`
 	// The `_uuid` of the `Beleg` to store.
 	BelegUUID string `pathParam:"style=simple,explode=false,name=belegUuid"`
 	// The `_uuid` of the `Registrierkasse` to use for signing data.
 	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
-type AddBelegRequest struct {
-	PathParams AddBelegPathParams
-	// An object that contains all data for a particular `Beleg` and is formatted according to RKSV "Signaturformat".
-	Request shared.Belegdaten `request:"mediaType=application/json"`
 }
 
 type AddBelegResponse struct {

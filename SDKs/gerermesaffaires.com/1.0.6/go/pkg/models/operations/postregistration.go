@@ -4,23 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostRegistrationSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostRegistrationRequestBody - code and secret to accept the invitation
 type PostRegistrationRequestBody struct {
 	Code   *string `json:"Code,omitempty"`
 	Secret *string `json:"Secret,omitempty"`
-}
-
-type PostRegistrationRequest struct {
-	// code and secret to accept the invitation
-	Request  PostRegistrationRequestBody `request:"mediaType=application/json"`
-	Security PostRegistrationSecurity
 }
 
 type PostRegistration201ApplicationJSONPrivate struct {

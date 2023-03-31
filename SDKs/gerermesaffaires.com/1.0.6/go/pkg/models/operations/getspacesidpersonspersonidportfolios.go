@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDPersonsPersonIDPortfoliosPathParams struct {
+type GetSpacesIDPersonsPersonIDPortfoliosRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the person to get portfolios
 	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type GetSpacesIDPersonsPersonIDPortfoliosRequest struct {
-	PathParams GetSpacesIDPersonsPersonIDPortfoliosPathParams
 }
 
 type GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum string

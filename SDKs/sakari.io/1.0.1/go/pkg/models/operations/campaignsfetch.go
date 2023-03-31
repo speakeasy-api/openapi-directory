@@ -8,19 +8,14 @@ import (
 )
 
 type CampaignsFetchSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CampaignsFetchPathParams struct {
+type CampaignsFetchRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of campaign to return
 	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
-}
-
-type CampaignsFetchRequest struct {
-	PathParams CampaignsFetchPathParams
-	Security   CampaignsFetchSecurity
 }
 
 type CampaignsFetchResponse struct {

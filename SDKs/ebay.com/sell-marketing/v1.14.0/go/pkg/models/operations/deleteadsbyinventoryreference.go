@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteAdsByInventoryReferenceSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteAdsByInventoryReferencePathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAdsByInventoryReferenceRequest struct {
-	PathParams DeleteAdsByInventoryReferencePathParams
 	// This request object defines the fields for the <b>deleteAdsByInventoryReference</b> request.
-	Request  shared.DeleteAdsByInventoryReferenceRequest `request:"mediaType=application/json"`
-	Security DeleteAdsByInventoryReferenceSecurity
+	DeleteAdsByInventoryReferenceRequest shared.DeleteAdsByInventoryReferenceRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type DeleteAdsByInventoryReferenceResponse struct {

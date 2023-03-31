@@ -12,14 +12,8 @@ var UpdateFunctionServerList = []string{
 }
 
 type UpdateFunctionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateFunctionPathParams struct {
-	// The SID of the Service to update the Function resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Function resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateFunctionUpdateFunctionRequest struct {
@@ -28,10 +22,11 @@ type UpdateFunctionUpdateFunctionRequest struct {
 }
 
 type UpdateFunctionRequest struct {
-	PathParams UpdateFunctionPathParams
-	Request    *UpdateFunctionUpdateFunctionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateFunctionSecurity
-	ServerURL  *string
+	RequestBody *UpdateFunctionUpdateFunctionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to update the Function resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Function resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateFunctionResponse struct {

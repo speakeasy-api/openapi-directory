@@ -3,33 +3,31 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AcceptMatchRequest(
-    headers=operations.AcceptMatchHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ea",
-        x_amz_credential="quia",
-        x_amz_date="sed",
-        x_amz_security_token="dolorem",
-        x_amz_signature="accusamus",
-        x_amz_signed_headers="ut",
-        x_amz_target="GameLift.AcceptMatch",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AcceptMatchInput(
+)
+
+
+req = operations.AcceptMatchRequest(
+    accept_match_input=shared.AcceptMatchInput(
         acceptance_type="REJECT",
         player_ids=[
-            "accusamus",
+            "distinctio",
+            "quibusdam",
+            "unde",
         ],
-        ticket_id="quisquam",
+        ticket_id="nulla",
     ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
+    x_amz_target="GameLift.AcceptMatch",
 )
     
 res = s.accept_match(req)

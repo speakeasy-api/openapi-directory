@@ -8,25 +8,17 @@ import (
 	"time"
 )
 
-type ImChatMessagesPathParams struct {
-	// IM chat session ID.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type ImChatMessagesQueryParams struct {
+type ImChatMessagesRequest struct {
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
 	From types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
+	// IM chat session ID.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 	// End date.
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ImChatMessagesRequest struct {
-	PathParams  ImChatMessagesPathParams
-	QueryParams ImChatMessagesQueryParams
 }
 
 type ImChatMessages200ApplicationXMLMessages struct {

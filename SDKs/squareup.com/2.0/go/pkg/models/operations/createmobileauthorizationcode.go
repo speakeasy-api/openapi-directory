@@ -8,15 +8,7 @@ import (
 )
 
 type CreateMobileAuthorizationCodeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateMobileAuthorizationCodeRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateMobileAuthorizationCodeRequest `request:"mediaType=application/json"`
-	Security CreateMobileAuthorizationCodeSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateMobileAuthorizationCodeResponse struct {

@@ -11,13 +11,8 @@ import (
 )
 
 type PostTracksTrackIDCommentsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostTracksTrackIDCommentsPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type PostTracksTrackIDCommentsRequestBodyCommentTimestampType string
@@ -101,11 +96,11 @@ type PostTracksTrackIDCommentsRequestBody struct {
 }
 
 type PostTracksTrackIDCommentsRequest struct {
-	PathParams PostTracksTrackIDCommentsPathParams
 	// Body of a comment
 	//
-	Request  PostTracksTrackIDCommentsRequestBody `request:"mediaType=application/json"`
-	Security PostTracksTrackIDCommentsSecurity
+	RequestBody PostTracksTrackIDCommentsRequestBody `request:"mediaType=application/json"`
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type PostTracksTrackIDCommentsResponse struct {

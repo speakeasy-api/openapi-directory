@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTConnectionsHeaders struct {
+type POSTConnectionsRequest struct {
 	// Must be set to "application/json"
 	//
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
@@ -25,10 +25,6 @@ type POSTConnectionsHeaders struct {
 	// Account password
 	//
 	APISecretAccessKey string `header:"style=simple,explode=false,name=apiSecretAccessKey"`
-}
-
-type POSTConnectionsRequest struct {
-	Headers POSTConnectionsHeaders
 }
 
 type POSTConnectionsResponse struct {

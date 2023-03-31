@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BINLookupQueryParams struct {
+type BINLookupRequest struct {
 	// The BIN or IIN number. This is the first 6, 8 or 10 digits of a card number, use 8 (or more) digits for the highest level of accuracy
 	BinNumber string `queryParam:"style=form,explode=true,name=bin-number"`
 	// Pass in the customers IP address and we will return some extra information about them
 	CustomerIP *string `queryParam:"style=form,explode=true,name=customer-ip"`
-}
-
-type BINLookupRequest struct {
-	QueryParams BINLookupQueryParams
 }
 
 type BINLookupResponse struct {

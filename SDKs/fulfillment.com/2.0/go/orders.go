@@ -35,16 +35,16 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // DeleteOrdersID - Cancel an Order
 // Request an order is canceled to prevent shipment.
-func (s *orders) DeleteOrdersID(ctx context.Context, request operations.DeleteOrdersIDRequest) (*operations.DeleteOrdersIDResponse, error) {
+func (s *orders) DeleteOrdersID(ctx context.Context, request operations.DeleteOrdersIDRequest, security operations.DeleteOrdersIDSecurity) (*operations.DeleteOrdersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *orders) DeleteOrdersID(ctx context.Context, request operations.DeleteOr
 
 // GetOrders - List of Orders
 // Retrieve many orders at once
-func (s *orders) GetOrders(ctx context.Context, request operations.GetOrdersRequest) (*operations.GetOrdersResponse, error) {
+func (s *orders) GetOrders(ctx context.Context, request operations.GetOrdersRequest, security operations.GetOrdersSecurity) (*operations.GetOrdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders"
 
@@ -100,11 +100,11 @@ func (s *orders) GetOrders(ctx context.Context, request operations.GetOrdersRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,20 +150,20 @@ func (s *orders) GetOrders(ctx context.Context, request operations.GetOrdersRequ
 
 // GetOrder - Order Details
 // For the fastest results use the FDC provided `id` however you can use your `merchantOrderId` as the `id`.
-func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
+func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest, security operations.GetOrderSecurity) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,7 +201,7 @@ func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderReques
 // PostOrders - New Order
 // Error Notes&#58;
 // * When `409 Conflict` is a 'Duplicate Order' the `context` will include the FDC `id`, see samples.
-func (s *orders) PostOrders(ctx context.Context, request operations.PostOrdersRequest) (*operations.PostOrdersResponse, error) {
+func (s *orders) PostOrders(ctx context.Context, request operations.PostOrdersOrderRequestV2, security operations.PostOrdersSecurity) (*operations.PostOrdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders"
 
@@ -220,7 +220,7 @@ func (s *orders) PostOrders(ctx context.Context, request operations.PostOrdersRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

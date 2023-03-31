@@ -34,7 +34,7 @@ func newInvitation(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetInvitationVendors - Get vendor list for compiled invitation needs
 // Get vendor list for compiled invitation needs
-func (s *invitation) GetInvitationVendors(ctx context.Context, request operations.GetInvitationVendorsRequest) (*operations.GetInvitationVendorsResponse, error) {
+func (s *invitation) GetInvitationVendors(ctx context.Context, request []shared.FileNeedsVendor) (*operations.GetInvitationVendorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitation/vendors"
 

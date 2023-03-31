@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CalcSigmaUsdExchangePathParams struct {
-	Amount int64 `pathParam:"style=simple,explode=false,name=amount"`
-}
-
 type CalcSigmaUsdExchangeRequest struct {
-	PathParams CalcSigmaUsdExchangePathParams
+	Amount int64 `pathParam:"style=simple,explode=false,name=amount"`
 }
 
 type CalcSigmaUsdExchangeResponse struct {

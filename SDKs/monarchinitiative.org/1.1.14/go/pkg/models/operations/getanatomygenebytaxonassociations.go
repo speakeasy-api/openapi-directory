@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAnatomyGeneByTaxonAssociationsPathParams struct {
-	// CURIE identifier of anatomical entity, e.g. GO:0005634 (nucleus), UBERON:0002037 (cerebellum), CL:0000540 (neuron). Equivalent IDs can be used with same results
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
-	Taxid string `pathParam:"style=simple,explode=false,name=taxid"`
-}
-
-type GetAnatomyGeneByTaxonAssociationsQueryParams struct {
+type GetAnatomyGeneByTaxonAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Set true to exclude inferred taxa
@@ -28,6 +21,8 @@ type GetAnatomyGeneByTaxonAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of anatomical entity, e.g. GO:0005634 (nucleus), UBERON:0002037 (cerebellum), CL:0000540 (neuron). Equivalent IDs can be used with same results
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Query string to filter documents
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// A relation CURIE to filter associations
@@ -40,17 +35,14 @@ type GetAnatomyGeneByTaxonAssociationsQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	// Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
+	Taxid string `pathParam:"style=simple,explode=false,name=taxid"`
 	// One or more taxon CURIE to filter associations by subject taxon; includes inferred associations by default
 	Taxon []string `queryParam:"style=form,explode=true,name=taxon"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetAnatomyGeneByTaxonAssociationsRequest struct {
-	PathParams  GetAnatomyGeneByTaxonAssociationsPathParams
-	QueryParams GetAnatomyGeneByTaxonAssociationsQueryParams
 }
 
 type GetAnatomyGeneByTaxonAssociationsResponse struct {

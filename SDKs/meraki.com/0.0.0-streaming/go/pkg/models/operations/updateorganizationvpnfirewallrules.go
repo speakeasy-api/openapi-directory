@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationVpnFirewallRulesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum - 'allow' or 'deny' traffic specified by this rule
 type UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum string
 
@@ -96,8 +92,8 @@ type UpdateOrganizationVpnFirewallRulesRequestBody struct {
 }
 
 type UpdateOrganizationVpnFirewallRulesRequest struct {
-	PathParams UpdateOrganizationVpnFirewallRulesPathParams
-	Request    *UpdateOrganizationVpnFirewallRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationVpnFirewallRulesRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                         `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationVpnFirewallRulesResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WhenAResponseIsReceivedRequest struct {
-	// This is the request body of the webhook
-	Request shared.SubscribeToEventBody `request:"mediaType=application/json"`
-}
-
 type WhenAResponseIsReceivedResponse struct {
 	ContentType string
 	// OK - web hook registered

@@ -12,7 +12,8 @@ var CreateWebChannelServerList = []string{
 }
 
 type CreateWebChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWebChannelCreateWebChannelRequest struct {
@@ -28,12 +29,6 @@ type CreateWebChannelCreateWebChannelRequest struct {
 	Identity string `form:"name=Identity"`
 	// The pre-engagement data.
 	PreEngagementData *string `form:"name=PreEngagementData"`
-}
-
-type CreateWebChannelRequest struct {
-	Request   *CreateWebChannelCreateWebChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateWebChannelSecurity
-	ServerURL *string
 }
 
 type CreateWebChannelResponse struct {

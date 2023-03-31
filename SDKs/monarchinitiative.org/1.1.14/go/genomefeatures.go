@@ -35,7 +35,7 @@ func newGenomeFeatures(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetFeaturesWithinResource - Returns list of matches
 func (s *genomeFeatures) GetFeaturesWithinResource(ctx context.Context, request operations.GetFeaturesWithinResourceRequest) (*operations.GetFeaturesWithinResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genome/features/within/{build}/{reference}/{begin}/{end}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/genome/features/within/{build}/{reference}/{begin}/{end}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

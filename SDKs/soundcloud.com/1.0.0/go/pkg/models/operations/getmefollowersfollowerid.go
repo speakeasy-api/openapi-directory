@@ -8,17 +8,12 @@ import (
 )
 
 type GetMeFollowersFollowerIDSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMeFollowersFollowerIDPathParams struct {
-	// SoundCloud User id to denote a Follower
-	FollowerID int64 `pathParam:"style=simple,explode=false,name=follower_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetMeFollowersFollowerIDRequest struct {
-	PathParams GetMeFollowersFollowerIDPathParams
-	Security   GetMeFollowersFollowerIDSecurity
+	// SoundCloud User id to denote a Follower
+	FollowerID int64 `pathParam:"style=simple,explode=false,name=follower_id"`
 }
 
 type GetMeFollowersFollowerIDResponse struct {

@@ -8,11 +8,12 @@ import (
 )
 
 type DriveDrivesInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DriveDrivesInsertQueryParams struct {
+type DriveDrivesInsertRequest struct {
+	Drive *shared.Drive `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -29,12 +30,6 @@ type DriveDrivesInsertQueryParams struct {
 	RequestID string `queryParam:"style=form,explode=true,name=requestId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveDrivesInsertRequest struct {
-	QueryParams DriveDrivesInsertQueryParams
-	Request     *shared.Drive `request:"mediaType=application/json"`
-	Security    DriveDrivesInsertSecurity
 }
 
 type DriveDrivesInsertResponse struct {

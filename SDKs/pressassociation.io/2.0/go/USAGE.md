@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAssetRequest{
-        Security: operations.GetAssetSecurity{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.GetAssetPathParams{
-            AssetID: "corrupti",
-        },
-        QueryParams: operations.GetAssetQueryParams{
-            Aliases: false,
-        },
+        Aliases: false,
+        AssetID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Asset.GetAsset(ctx, req)
+    res, err := s.Asset.GetAsset(ctx, req, operations.GetAssetSecurity{
+        Apikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

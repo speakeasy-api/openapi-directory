@@ -8,12 +8,7 @@ import (
 )
 
 type EditProjectAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditProjectAlt1PathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditProjectAlt1RequestBody struct {
@@ -22,9 +17,9 @@ type EditProjectAlt1RequestBody struct {
 }
 
 type EditProjectAlt1Request struct {
-	PathParams EditProjectAlt1PathParams
-	Request    EditProjectAlt1RequestBody `request:"mediaType=application/json"`
-	Security   EditProjectAlt1Security
+	RequestBody EditProjectAlt1RequestBody `request:"mediaType=application/json"`
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type EditProjectAlt1Response struct {

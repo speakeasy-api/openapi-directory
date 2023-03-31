@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBillingDetailsPathParams struct {
+type GetBillingDetailsRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetBillingDetailsRequest struct {
-	PathParams GetBillingDetailsPathParams
 }
 
 type GetBillingDetailsResponse struct {

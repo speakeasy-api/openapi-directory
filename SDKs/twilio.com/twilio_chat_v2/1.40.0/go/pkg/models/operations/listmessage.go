@@ -12,17 +12,13 @@ var ListMessageServerList = []string{
 }
 
 type ListMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMessagePathParams struct {
+type ListMessageRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Message resource to read belongs to. This value can be the Channel resource's `sid` or `unique_name`.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Message resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListMessageQueryParams struct {
 	// The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending) with `asc` as the default.
 	Order *shared.MessageEnumOrderTypeEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -31,13 +27,8 @@ type ListMessageQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListMessageRequest struct {
-	PathParams  ListMessagePathParams
-	QueryParams ListMessageQueryParams
-	Security    ListMessageSecurity
-	ServerURL   *string
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Message resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListMessageListMessageResponseMeta struct {

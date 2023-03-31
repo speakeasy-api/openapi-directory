@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteLoadBalancersIDPathParams struct {
+type DeleteLoadBalancersIDRequest struct {
 	// ID of the Load Balancer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteLoadBalancersIDRequest struct {
-	PathParams DeleteLoadBalancersIDPathParams
 }
 
 type DeleteLoadBalancersIDResponse struct {

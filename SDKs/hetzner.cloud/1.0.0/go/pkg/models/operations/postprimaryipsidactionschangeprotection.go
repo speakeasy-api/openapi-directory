@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostPrimaryIpsIDActionsChangeProtectionPathParams struct {
-	// ID of the Primary IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostPrimaryIpsIDActionsChangeProtectionChangeProtectionRequest struct {
 	// If true, prevents the Primary IP from being deleted
 	Delete *bool `json:"delete,omitempty"`
 }
 
 type PostPrimaryIpsIDActionsChangeProtectionRequest struct {
-	PathParams PostPrimaryIpsIDActionsChangeProtectionPathParams
-	Request    *PostPrimaryIpsIDActionsChangeProtectionChangeProtectionRequest `request:"mediaType=application/json"`
+	RequestBody *PostPrimaryIpsIDActionsChangeProtectionChangeProtectionRequest `request:"mediaType=application/json"`
+	// ID of the Primary IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostPrimaryIpsIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

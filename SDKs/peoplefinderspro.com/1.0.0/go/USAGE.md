@@ -14,24 +14,22 @@ func main() {
     s := sdk.New()
 
     req := operations.SearchRequest{
-        Headers: operations.SearchHeaders{
-            GalaxyApName: "corrupti",
-            GalaxyApPassword: "provident",
-            GalaxySearchType: "distinctio",
-        },
-        Request: &operations.SearchRequestBody{
+        RequestBody: &operations.SearchRequestBody{
             Address: &operations.SearchRequestBodyAddress{
-                AddressLine1: "quibusdam",
-                AddressLine2: "unde",
+                AddressLine1: "corrupti",
+                AddressLine2: "provident",
             },
-            Age: 8579.46,
-            Dob: "corrupti",
-            Email: "Henry.Mueller@hotmail.com",
-            FirstName: "Hunter",
-            LastName: "Gulgowski",
-            MiddleName: "debitis",
-            PhoneNumber: "ipsa",
+            Age: 7151.9,
+            Dob: "quibusdam",
+            Email: "Ryan.Little62@yahoo.com",
+            FirstName: "Luna",
+            LastName: "Hoppe",
+            MiddleName: "iure",
+            PhoneNumber: "magnam",
         },
+        GalaxyApName: "debitis",
+        GalaxyApPassword: "ipsa",
+        GalaxySearchType: "delectus",
     }
 
     ctx := context.Background()

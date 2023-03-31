@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBuyOrderListPathParams struct {
+type GetBuyOrderListRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetBuyOrderListRequest struct {
-	PathParams GetBuyOrderListPathParams
 }
 
 type GetBuyOrderListResponse struct {

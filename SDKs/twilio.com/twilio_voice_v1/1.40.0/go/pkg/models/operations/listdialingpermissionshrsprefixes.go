@@ -12,28 +12,19 @@ var ListDialingPermissionsHrsPrefixesServerList = []string{
 }
 
 type ListDialingPermissionsHrsPrefixesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListDialingPermissionsHrsPrefixesPathParams struct {
+type ListDialingPermissionsHrsPrefixesRequest struct {
 	// The [ISO 3166-1 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) to identify the country permissions from which high-risk special service number prefixes are fetched
 	IsoCode string `pathParam:"style=simple,explode=false,name=IsoCode"`
-}
-
-type ListDialingPermissionsHrsPrefixesQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListDialingPermissionsHrsPrefixesRequest struct {
-	PathParams  ListDialingPermissionsHrsPrefixesPathParams
-	QueryParams ListDialingPermissionsHrsPrefixesQueryParams
-	Security    ListDialingPermissionsHrsPrefixesSecurity
-	ServerURL   *string
 }
 
 type ListDialingPermissionsHrsPrefixesListDialingPermissionsHrsPrefixesResponseMeta struct {

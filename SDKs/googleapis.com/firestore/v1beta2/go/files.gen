@@ -27,7 +27,6 @@ pkg/models/shared/googlefirestoreadminv1beta2index.go
 pkg/models/shared/googlefirestoreadminv1beta2indexfield.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/status.go
 pkg/models/shared/googlefirestoreadminv1beta2listindexesresponse.go

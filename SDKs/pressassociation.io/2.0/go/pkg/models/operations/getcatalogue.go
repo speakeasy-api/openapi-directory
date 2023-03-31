@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCatalogueSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetCataloguePathParams struct {
-	// The identifier for the selected catalogue.
-	CatalogueID string `pathParam:"style=simple,explode=false,name=catalogueId"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetCatalogueRequest struct {
-	PathParams GetCataloguePathParams
-	Security   GetCatalogueSecurity
+	// The identifier for the selected catalogue.
+	CatalogueID string `pathParam:"style=simple,explode=false,name=catalogueId"`
 }
 
 type GetCatalogueResponse struct {

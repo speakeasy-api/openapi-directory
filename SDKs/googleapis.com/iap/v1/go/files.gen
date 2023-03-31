@@ -31,7 +31,6 @@ pkg/models/operations/iapupdateiapsettings.go
 pkg/models/shared/brand.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/identityawareproxyclient.go
 pkg/models/shared/listidentityawareproxyclientsresponse.go
 pkg/models/shared/listbrandsresponse.go

@@ -8,10 +8,10 @@ import (
 )
 
 type CheckAvailabilityOfFundsSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type CheckAvailabilityOfFundsHeaders struct {
+type CheckAvailabilityOfFundsRequest struct {
 	// This field  might be used in case where a consent was agreed between ASPSP and PSU through an OAuth2 based protocol,
 	// facilitated by the TPP.
 	//
@@ -27,14 +27,9 @@ type CheckAvailabilityOfFundsHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type CheckAvailabilityOfFundsRequest struct {
-	Headers CheckAvailabilityOfFundsHeaders
 	// Request body for a confirmation of funds request.
 	//
-	Request  shared.ConfirmationOfFunds `request:"mediaType=application/json"`
-	Security CheckAvailabilityOfFundsSecurity
+	ConfirmationOfFunds shared.ConfirmationOfFunds `request:"mediaType=application/json"`
 }
 
 // CheckAvailabilityOfFunds200ApplicationJSON - Equals "true" if sufficient funds are available at the time of the request,

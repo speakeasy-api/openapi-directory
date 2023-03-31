@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePermissionTagPathParams struct {
-	// The permission unique identifier. E.g PERM001
-	PermissionID string `pathParam:"style=simple,explode=false,name=PermissionId"`
-	// The tag unique identifier. E.g. MyTag
-	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type DeletePermissionTagHeaders struct {
+type DeletePermissionTagRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeletePermissionTagRequest struct {
-	PathParams DeletePermissionTagPathParams
-	Headers    DeletePermissionTagHeaders
+	// The permission unique identifier. E.g PERM001
+	PermissionID string `pathParam:"style=simple,explode=false,name=PermissionId"`
+	// The tag unique identifier. E.g. MyTag
+	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
 }
 
 type DeletePermissionTagResponse struct {

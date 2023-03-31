@@ -33,7 +33,7 @@ func newConversation(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CreateConversation - Create a conversation
-func (s *conversation) CreateConversation(ctx context.Context, request operations.CreateConversationRequest) (*operations.CreateConversationResponse, error) {
+func (s *conversation) CreateConversation(ctx context.Context, request operations.CreateConversationRequestBody) (*operations.CreateConversationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversations"
 
@@ -86,7 +86,7 @@ func (s *conversation) CreateConversation(ctx context.Context, request operation
 // DeleteConversation - Delete a conversation
 func (s *conversation) DeleteConversation(ctx context.Context, request operations.DeleteConversationRequest) (*operations.DeleteConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *conversation) ListConversations(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -179,15 +179,25 @@ func (s *conversation) ListConversations(ctx context.Context, request operations
 }
 
 // RecordConversation - Record a conversation
-func (s *conversation) RecordConversation(ctx context.Context, request operations.RecordConversationRequest) (*operations.RecordConversationResponse, error) {
-	baseURL := operations.RecordConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *conversation) RecordConversation(ctx context.Context, request operations.RecordConversationRequest, opts ...operations.Option) (*operations.RecordConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/record", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.RecordConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/record", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -231,9 +241,9 @@ func (s *conversation) RecordConversation(ctx context.Context, request operation
 // ReplaceConversation - Update a conversation
 func (s *conversation) ReplaceConversation(ctx context.Context, request operations.ReplaceConversationRequest) (*operations.ReplaceConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -282,7 +292,7 @@ func (s *conversation) ReplaceConversation(ctx context.Context, request operatio
 // RetrieveConversation - Retrieve a conversation
 func (s *conversation) RetrieveConversation(ctx context.Context, request operations.RetrieveConversationRequest) (*operations.RetrieveConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

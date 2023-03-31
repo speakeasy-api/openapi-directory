@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type TransferIntentGetRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type TransferIntentGetResponse struct {
 	ContentType string
 	// Error response

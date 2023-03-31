@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetConnectorPathParams struct {
+type GetConnectorRequest struct {
 	// ID of connector that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetConnectorQueryParams struct {
 	// Populate evse
 	IncludeEvse *bool `queryParam:"style=form,explode=true,name=include_evse"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
 	// Populate rate
 	IncludeRate *bool `queryParam:"style=form,explode=true,name=include_rate"`
-}
-
-type GetConnectorRequest struct {
-	PathParams  GetConnectorPathParams
-	QueryParams GetConnectorQueryParams
 }
 
 type GetConnectorResponse struct {

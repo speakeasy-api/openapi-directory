@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetTokensQueryParams struct {
+type GetTokensRequest struct {
 	// Date as ISO String
 	CreatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=createdAt[$gte]"`
 	// Date as ISO String
@@ -31,10 +31,6 @@ type GetTokensQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetTokensRequest struct {
-	QueryParams GetTokensQueryParams
 }
 
 // GetTokens200ApplicationJSON - Returns an array of token objects

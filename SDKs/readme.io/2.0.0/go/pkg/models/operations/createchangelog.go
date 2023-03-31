@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateChangelogSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateChangelogRequest struct {
-	// Changelog object
-	Request  shared.Changelog `request:"mediaType=application/json"`
-	Security CreateChangelogSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateChangelogResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupsQueryParams struct {
+type GetGroupsRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `name`.
@@ -28,10 +28,6 @@ type GetGroupsQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[name]=desc`). Valid fields are `name`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
-}
-
-type GetGroupsRequest struct {
-	QueryParams GetGroupsQueryParams
 }
 
 type GetGroupsResponse struct {

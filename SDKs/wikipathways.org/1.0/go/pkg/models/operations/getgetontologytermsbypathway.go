@@ -44,14 +44,10 @@ func (e *GetGetOntologyTermsByPathwayFormatEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetGetOntologyTermsByPathwayQueryParams struct {
+type GetGetOntologyTermsByPathwayRequest struct {
 	Format *GetGetOntologyTermsByPathwayFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The pathway identifier
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
-}
-
-type GetGetOntologyTermsByPathwayRequest struct {
-	QueryParams GetGetOntologyTermsByPathwayQueryParams
 }
 
 type GetGetOntologyTermsByPathwayResponse struct {

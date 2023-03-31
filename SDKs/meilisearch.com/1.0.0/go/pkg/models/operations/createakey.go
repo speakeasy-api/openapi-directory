@@ -14,10 +14,6 @@ type CreateAKeyRequestBody struct {
 	Name        *string     `json:"name,omitempty"`
 }
 
-type CreateAKeyRequest struct {
-	Request *CreateAKeyRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateAKeyResponse struct {
 	ContentType string
 	StatusCode  int

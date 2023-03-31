@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateDiscussionInOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 type TeamsCreateDiscussionInOrgRequestBody struct {
 	// The discussion post's body text.
 	Body string `json:"body"`
@@ -23,8 +17,10 @@ type TeamsCreateDiscussionInOrgRequestBody struct {
 }
 
 type TeamsCreateDiscussionInOrgRequest struct {
-	PathParams TeamsCreateDiscussionInOrgPathParams
-	Request    TeamsCreateDiscussionInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateDiscussionInOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                `pathParam:"style=simple,explode=false,name=org"`
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsCreateDiscussionInOrgResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSyslogGetConfigPathParams struct {
+type ProtocolSyslogGetConfigRequest struct {
 	// Agent to show the SYSLOG configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSyslogGetConfigRequest struct {
-	PathParams ProtocolSyslogGetConfigPathParams
 }
 
 type ProtocolSyslogGetConfigResponse struct {

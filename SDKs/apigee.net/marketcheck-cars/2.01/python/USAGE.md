@@ -3,16 +3,18 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-    
+s = sdk.SDK(
+    security=shared.Security(
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
+)
+
+
 req = operations.CrmCheckRequest(
-    path_params=operations.CrmCheckPathParams(
-        vin="qui",
-    ),
-    query_params=operations.CrmCheckQueryParams(
-        api_key="aut",
-        sale_date="voluptatum",
-    ),
+    api_key="corrupti",
+    sale_date="provident",
+    vin="distinctio",
 )
     
 res = s.crm_cleanse_api.crm_check(req)

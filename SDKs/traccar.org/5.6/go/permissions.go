@@ -34,7 +34,7 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DeletePermissions - Unlink an Object from another Object
-func (s *permissions) DeletePermissions(ctx context.Context, request operations.DeletePermissionsRequest) (*operations.DeletePermissionsResponse, error) {
+func (s *permissions) DeletePermissions(ctx context.Context, request shared.Permission) (*operations.DeletePermissionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/permissions"
 
@@ -79,7 +79,7 @@ func (s *permissions) DeletePermissions(ctx context.Context, request operations.
 }
 
 // PostPermissions - Link an Object to another Object
-func (s *permissions) PostPermissions(ctx context.Context, request operations.PostPermissionsRequest) (*operations.PostPermissionsResponse, error) {
+func (s *permissions) PostPermissions(ctx context.Context, request shared.Permission) (*operations.PostPermissionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/permissions"
 

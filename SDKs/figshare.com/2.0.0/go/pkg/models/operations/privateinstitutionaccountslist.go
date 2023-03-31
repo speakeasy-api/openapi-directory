@@ -8,10 +8,10 @@ import (
 )
 
 type PrivateInstitutionAccountsListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateInstitutionAccountsListQueryParams struct {
+type PrivateInstitutionAccountsListRequest struct {
 	// Filter by email
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Retrieve accounts with an ID greater or equal to the specified value
@@ -30,11 +30,6 @@ type PrivateInstitutionAccountsListQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results included on a page. Used for pagination with page
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type PrivateInstitutionAccountsListRequest struct {
-	QueryParams PrivateInstitutionAccountsListQueryParams
-	Security    PrivateInstitutionAccountsListSecurity
 }
 
 type PrivateInstitutionAccountsListResponse struct {

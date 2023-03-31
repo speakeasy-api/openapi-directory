@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -35,7 +36,7 @@ func newCallbacks(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // PostAutomationV4ActionsCallbacksCompleteCompleteBatch - Complete a batch of callbacks
 // Completes the given action callbacks.
-func (s *callbacks) PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx context.Context, request operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest) (*operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse, error) {
+func (s *callbacks) PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx context.Context, request shared.BatchInputCallbackCompletionBatchRequest, security operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity) (*operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/automation/v4/actions/callbacks/complete"
 
@@ -54,7 +55,7 @@ func (s *callbacks) PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,11 +92,11 @@ func (s *callbacks) PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx co
 
 // PostAutomationV4ActionsCallbacksCallbackIDCompleteComplete - Complete a callback
 // Completes the given action callback.
-func (s *callbacks) PostAutomationV4ActionsCallbacksCallbackIDCompleteComplete(ctx context.Context, request operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteRequest) (*operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteResponse, error) {
+func (s *callbacks) PostAutomationV4ActionsCallbacksCallbackIDCompleteComplete(ctx context.Context, request operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteRequest, security operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteSecurity) (*operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/callbacks/{callbackId}/complete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/callbacks/{callbackId}/complete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallbackCompletionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -110,7 +111,7 @@ func (s *callbacks) PostAutomationV4ActionsCallbacksCallbackIDCompleteComplete(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

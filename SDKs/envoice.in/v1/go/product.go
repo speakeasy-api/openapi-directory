@@ -43,9 +43,9 @@ func (s *product) ProductAPIAll(ctx context.Context, request operations.ProductA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,7 +116,7 @@ func (s *product) ProductAPIDeleteForm(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductDeleteAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *product) ProductAPIDeleteForm(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -200,7 +200,7 @@ func (s *product) ProductAPIDeleteJSON(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductDeleteAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -215,7 +215,7 @@ func (s *product) ProductAPIDeleteJSON(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -284,7 +284,7 @@ func (s *product) ProductAPIDeleteRaw(ctx context.Context, request operations.Pr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -299,7 +299,7 @@ func (s *product) ProductAPIDeleteRaw(ctx context.Context, request operations.Pr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -373,9 +373,9 @@ func (s *product) ProductAPIDetails(ctx context.Context, request operations.Prod
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -446,7 +446,7 @@ func (s *product) ProductAPINewForm(ctx context.Context, request operations.Prod
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductCreateAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -461,7 +461,7 @@ func (s *product) ProductAPINewForm(ctx context.Context, request operations.Prod
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -530,7 +530,7 @@ func (s *product) ProductAPINewJSON(ctx context.Context, request operations.Prod
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductCreateAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -545,7 +545,7 @@ func (s *product) ProductAPINewJSON(ctx context.Context, request operations.Prod
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -614,7 +614,7 @@ func (s *product) ProductAPINewRaw(ctx context.Context, request operations.Produ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/new"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -629,7 +629,7 @@ func (s *product) ProductAPINewRaw(ctx context.Context, request operations.Produ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -698,7 +698,7 @@ func (s *product) ProductAPIUpdateForm(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductUpdateAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -713,7 +713,7 @@ func (s *product) ProductAPIUpdateForm(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -745,7 +745,7 @@ func (s *product) ProductAPIUpdateJSON(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductUpdateAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -760,7 +760,7 @@ func (s *product) ProductAPIUpdateJSON(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -792,7 +792,7 @@ func (s *product) ProductAPIUpdateRaw(ctx context.Context, request operations.Pr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/product/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -807,7 +807,7 @@ func (s *product) ProductAPIUpdateRaw(ctx context.Context, request operations.Pr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

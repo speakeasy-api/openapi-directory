@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSimPathParams struct {
+type GetSimRequest struct {
 	// Agent to return the first simulation name
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetSimRequest struct {
-	PathParams GetSimPathParams
 }
 
 type GetSimResponse struct {

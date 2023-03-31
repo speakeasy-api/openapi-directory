@@ -8,10 +8,10 @@ import (
 )
 
 type GetPromotionReportsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPromotionReportsQueryParams struct {
+type GetPromotionReportsRequest struct {
 	// Specifies the maximum number of promotions returned on a page from the result set.  <br><br><b>Default:</b> 200 <br><b>Maximum:</b> 200
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// The eBay marketplace ID of the site for which you want the promotions report.  <p><b>Valid values:</b>  </p><ul><li><code>EBAY_AU</code> = Australia</li> <li><code>EBAY_DE</code> = Germany</li> <li><code>EBAY_ES</code> = Spain</li> <li><code>EBAY_FR</code> = France</li> <li><code>EBAY_GB</code> = Great Britain</li> <li><code>EBAY_IT</code> = Italy</li> <li><code>EBAY_US</code> = United States</li></ul>
@@ -24,11 +24,6 @@ type GetPromotionReportsQueryParams struct {
 	PromotionType *string `queryParam:"style=form,explode=true,name=promotion_type"`
 	// A string consisting of one or more <i>keywords</i>. eBay filters the response by returning only the promotions that contain the supplied keywords in the promotion title.  <br><br><b>Example:</b> "iPhone" or "Harry Potter."  <br><br>Commas that separate keywords are ignored. For example, a keyword string of "iPhone, iPad" equals "iPhone iPad", and each results in a response that contains promotions with both "iPhone" and "iPad" in the title.
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetPromotionReportsRequest struct {
-	QueryParams GetPromotionReportsQueryParams
-	Security    GetPromotionReportsSecurity
 }
 
 type GetPromotionReportsResponse struct {

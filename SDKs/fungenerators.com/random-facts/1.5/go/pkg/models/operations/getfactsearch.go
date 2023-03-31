@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFactSearchSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetFactSearchQueryParams struct {
+type GetFactSearchRequest struct {
 	// Category to get the fact from
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Text to search for in the facts
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Sub Category to get the fact from
 	Subcategory *string `queryParam:"style=form,explode=true,name=subcategory"`
-}
-
-type GetFactSearchRequest struct {
-	QueryParams GetFactSearchQueryParams
-	Security    GetFactSearchSecurity
 }
 
 type GetFactSearchResponse struct {

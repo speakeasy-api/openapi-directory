@@ -12,12 +12,8 @@ var UpdateMediaProcessorServerList = []string{
 }
 
 type UpdateMediaProcessorSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMediaProcessorPathParams struct {
-	// The SID of the MediaProcessor resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMediaProcessorUpdateMediaProcessorRequest struct {
@@ -25,10 +21,9 @@ type UpdateMediaProcessorUpdateMediaProcessorRequest struct {
 }
 
 type UpdateMediaProcessorRequest struct {
-	PathParams UpdateMediaProcessorPathParams
-	Request    *UpdateMediaProcessorUpdateMediaProcessorRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMediaProcessorSecurity
-	ServerURL  *string
+	RequestBody *UpdateMediaProcessorUpdateMediaProcessorRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the MediaProcessor resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateMediaProcessorResponse struct {

@@ -32,11 +32,11 @@ func newChanges(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DNSChangesCreate - Atomically updates the ResourceRecordSet collection.
-func (s *changes) DNSChangesCreate(ctx context.Context, request operations.DNSChangesCreateRequest) (*operations.DNSChangesCreateResponse, error) {
+func (s *changes) DNSChangesCreate(ctx context.Context, request operations.DNSChangesCreateRequest, security operations.DNSChangesCreateSecurity) (*operations.DNSChangesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Change", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *changes) DNSChangesCreate(ctx context.Context, request operations.DNSCh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *changes) DNSChangesCreate(ctx context.Context, request operations.DNSCh
 }
 
 // DNSChangesGet - Fetches the representation of an existing Change.
-func (s *changes) DNSChangesGet(ctx context.Context, request operations.DNSChangesGetRequest) (*operations.DNSChangesGetResponse, error) {
+func (s *changes) DNSChangesGet(ctx context.Context, request operations.DNSChangesGetRequest, security operations.DNSChangesGetSecurity) (*operations.DNSChangesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes/{changeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes/{changeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *changes) DNSChangesGet(ctx context.Context, request operations.DNSChang
 }
 
 // DNSChangesList - Enumerates Changes to a ResourceRecordSet collection.
-func (s *changes) DNSChangesList(ctx context.Context, request operations.DNSChangesListRequest) (*operations.DNSChangesListResponse, error) {
+func (s *changes) DNSChangesList(ctx context.Context, request operations.DNSChangesListRequest, security operations.DNSChangesListSecurity) (*operations.DNSChangesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

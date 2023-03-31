@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetVehicleOdometerPathParams struct {
+type GetVehicleOdometerRequest struct {
 	// The vehicle id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVehicleOdometerRequest struct {
-	PathParams GetVehicleOdometerPathParams
 }
 
 type GetVehicleOdometerResponse struct {

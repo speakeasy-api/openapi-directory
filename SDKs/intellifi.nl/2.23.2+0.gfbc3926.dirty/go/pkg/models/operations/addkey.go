@@ -8,13 +8,7 @@ import (
 )
 
 type AddKeySecurity struct {
-	CookieSid shared.SchemeCookieSid `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type AddKeyRequest struct {
-	// A JSON object containing key information
-	Request  shared.KeyInput `request:"mediaType=application/json"`
-	Security AddKeySecurity
+	CookieSid string `security:"scheme,type=apiKey,subtype=cookie,name=brain.sid"`
 }
 
 type AddKeyResponse struct {

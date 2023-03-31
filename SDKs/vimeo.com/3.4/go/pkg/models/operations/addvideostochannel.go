@@ -8,12 +8,7 @@ import (
 )
 
 type AddVideosToChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AddVideosToChannelPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddVideosToChannelRequestBody struct {
@@ -22,9 +17,9 @@ type AddVideosToChannelRequestBody struct {
 }
 
 type AddVideosToChannelRequest struct {
-	PathParams AddVideosToChannelPathParams
-	Request    AddVideosToChannelRequestBody `request:"mediaType=application/json"`
-	Security   AddVideosToChannelSecurity
+	RequestBody AddVideosToChannelRequestBody `request:"mediaType=application/json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type AddVideosToChannelResponse struct {

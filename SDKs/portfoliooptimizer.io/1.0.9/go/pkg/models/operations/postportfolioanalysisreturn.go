@@ -99,10 +99,6 @@ func (u PostPortfolioAnalysisReturnRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostPortfolioAnalysisReturnRequest struct {
-	Request PostPortfolioAnalysisReturnRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisReturn200ApplicationJSONPortfolios struct {
 	// The arithmetic return of the portfolio
 	PortfolioReturn float64 `json:"portfolioReturn"`

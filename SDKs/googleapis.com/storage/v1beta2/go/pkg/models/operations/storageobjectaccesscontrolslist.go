@@ -8,20 +8,15 @@ import (
 )
 
 type StorageObjectAccessControlsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type StorageObjectAccessControlsListPathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// Name of the object.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type StorageObjectAccessControlsListQueryParams struct {
+type StorageObjectAccessControlsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, selects a specific revision of this object (as opposed to the latest version, the default).
@@ -30,18 +25,14 @@ type StorageObjectAccessControlsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageObjectAccessControlsListRequest struct {
-	PathParams  StorageObjectAccessControlsListPathParams
-	QueryParams StorageObjectAccessControlsListQueryParams
-	Security    StorageObjectAccessControlsListSecurity
 }
 
 type StorageObjectAccessControlsListResponse struct {

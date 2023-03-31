@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2CustomFieldsIDJSONPathParams struct {
+type GetV2CustomFieldsIDJSONRequest struct {
 	// Custom Field ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2CustomFieldsIDJSONRequest struct {
-	PathParams GetV2CustomFieldsIDJSONPathParams
 }
 
 type GetV2CustomFieldsIDJSONResponse struct {

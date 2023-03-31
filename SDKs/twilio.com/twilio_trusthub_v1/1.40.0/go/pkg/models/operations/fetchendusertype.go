@@ -12,18 +12,13 @@ var FetchEndUserTypeServerList = []string{
 }
 
 type FetchEndUserTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchEndUserTypePathParams struct {
-	// The unique string that identifies the End-User Type resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchEndUserTypeRequest struct {
-	PathParams FetchEndUserTypePathParams
-	Security   FetchEndUserTypeSecurity
-	ServerURL  *string
+	// The unique string that identifies the End-User Type resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchEndUserTypeResponse struct {

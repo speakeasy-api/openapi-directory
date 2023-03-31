@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinesslodgingLocationsUpdateLodgingPathParams struct {
-	// Required. Google identifier for this location in the form: `locations/{location_id}/lodging`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinesslodgingLocationsUpdateLodgingQueryParams struct {
+type MybusinesslodgingLocationsUpdateLodgingRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	LodgingInput *shared.LodgingInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -25,6 +21,8 @@ type MybusinesslodgingLocationsUpdateLodgingQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Google identifier for this location in the form: `locations/{location_id}/lodging`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -37,12 +35,6 @@ type MybusinesslodgingLocationsUpdateLodgingQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinesslodgingLocationsUpdateLodgingRequest struct {
-	PathParams  MybusinesslodgingLocationsUpdateLodgingPathParams
-	QueryParams MybusinesslodgingLocationsUpdateLodgingQueryParams
-	Request     *shared.LodgingInput `request:"mediaType=application/json"`
 }
 
 type MybusinesslodgingLocationsUpdateLodgingResponse struct {

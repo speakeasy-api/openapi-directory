@@ -13,14 +13,8 @@ var UpdateSessionServerList = []string{
 }
 
 type UpdateSessionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSessionPathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the Session resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSessionUpdateSessionRequest struct {
@@ -32,10 +26,11 @@ type UpdateSessionUpdateSessionRequest struct {
 }
 
 type UpdateSessionRequest struct {
-	PathParams UpdateSessionPathParams
-	Request    *UpdateSessionUpdateSessionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSessionSecurity
-	ServerURL  *string
+	RequestBody *UpdateSessionUpdateSessionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the Session resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSessionResponse struct {

@@ -95,7 +95,6 @@ pkg/models/operations/submituserfeedback.go
 pkg/models/operations/updatecurrentuser.go
 pkg/models/operations/updatelocation.go
 pkg/models/shared/group.go
-pkg/models/shared/security.go
 pkg/models/shared/message.go
 pkg/models/shared/post.go
 pkg/models/shared/photo.go
@@ -108,4 +107,5 @@ pkg/models/shared/story.go
 pkg/models/shared/alert.go
 pkg/models/shared/currentuser.go
 pkg/models/shared/groupnotice.go
+pkg/models/shared/security.go
 USAGE.md

@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDCompanyEntitiesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDCompanyEntitiesPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostSpacesIDCompanyEntitiesRequestBody - Company to add Name or LegalName are mandatory
@@ -30,10 +24,10 @@ type PostSpacesIDCompanyEntitiesRequestBody struct {
 }
 
 type PostSpacesIDCompanyEntitiesRequest struct {
-	PathParams PostSpacesIDCompanyEntitiesPathParams
 	// Company to add Name or LegalName are mandatory
-	Request  PostSpacesIDCompanyEntitiesRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDCompanyEntitiesSecurity
+	RequestBody PostSpacesIDCompanyEntitiesRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostSpacesIDCompanyEntities201ApplicationJSON - Id of company entity created

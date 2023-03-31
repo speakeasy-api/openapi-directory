@@ -8,27 +8,18 @@ import (
 )
 
 type GetAPIV1AccountsIDFollowersSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1AccountsIDFollowersPathParams struct {
+type GetAPIV1AccountsIDFollowersRequest struct {
 	// The id of the account in the database
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV1AccountsIDFollowersQueryParams struct {
 	// Maximum number of results to return. Defaults to 40.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Internal parameter. Use HTTP `Link` header for pagination.
 	MaxID *string `queryParam:"style=form,explode=true,name=max_id"`
 	// Internal parameter. Use HTTP `Link` header for pagination.
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1AccountsIDFollowersRequest struct {
-	PathParams  GetAPIV1AccountsIDFollowersPathParams
-	QueryParams GetAPIV1AccountsIDFollowersQueryParams
-	Security    GetAPIV1AccountsIDFollowersSecurity
 }
 
 type GetAPIV1AccountsIDFollowersResponse struct {

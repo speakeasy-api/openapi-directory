@@ -12,20 +12,15 @@ var FetchDayServerList = []string{
 }
 
 type FetchDaySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchDayPathParams struct {
+type FetchDayRequest struct {
 	// The ISO 8601 format date of the resources in the file, for a UTC day
 	Day string `pathParam:"style=simple,explode=false,name=Day"`
 	// The type of communication – Messages, Calls, Conferences, and Participants
 	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
-}
-
-type FetchDayRequest struct {
-	PathParams FetchDayPathParams
-	Security   FetchDaySecurity
-	ServerURL  *string
 }
 
 type FetchDayResponse struct {

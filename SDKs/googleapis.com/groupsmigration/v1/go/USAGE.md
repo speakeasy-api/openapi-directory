@@ -14,34 +14,25 @@ func main() {
     s := sdk.New()
 
     req := operations.GroupsmigrationArchiveInsertRequest{
-        Security: operations.GroupsmigrationArchiveInsertSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GroupsmigrationArchiveInsertPathParams{
-            GroupID: "corrupti",
-        },
-        QueryParams: operations.GroupsmigrationArchiveInsertQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        GroupID: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Archive.GroupsmigrationArchiveInsert(ctx, req)
+    res, err := s.Archive.GroupsmigrationArchiveInsert(ctx, req, operations.GroupsmigrationArchiveInsertSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

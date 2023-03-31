@@ -44,7 +44,7 @@ func (s *debts) GetSchedulesScheduleD(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,14 +87,14 @@ func (s *debts) GetSchedulesScheduleD(ctx context.Context, request operations.Ge
 // required to be disclosed.
 func (s *debts) GetSchedulesScheduleDSubID(ctx context.Context, request operations.GetSchedulesScheduleDSubIDRequest) (*operations.GetSchedulesScheduleDSubIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_d/{sub_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_d/{sub_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

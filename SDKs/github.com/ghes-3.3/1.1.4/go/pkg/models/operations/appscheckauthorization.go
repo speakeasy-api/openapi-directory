@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsCheckAuthorizationPathParams struct {
+type AppsCheckAuthorizationRequest struct {
 	AccessToken string `pathParam:"style=simple,explode=false,name=access_token"`
 	// The client ID of the GitHub app.
 	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type AppsCheckAuthorizationRequest struct {
-	PathParams AppsCheckAuthorizationPathParams
 }
 
 type AppsCheckAuthorizationResponse struct {

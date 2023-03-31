@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsMoveCardPathParams struct {
-	// The unique identifier of the card.
-	CardID int64 `pathParam:"style=simple,explode=false,name=card_id"`
-}
-
 type ProjectsMoveCardRequestBody struct {
 	// The unique identifier of the column the card should be moved to
 	ColumnID *int64 `json:"column_id,omitempty"`
@@ -20,8 +15,9 @@ type ProjectsMoveCardRequestBody struct {
 }
 
 type ProjectsMoveCardRequest struct {
-	PathParams ProjectsMoveCardPathParams
-	Request    ProjectsMoveCardRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsMoveCardRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the card.
+	CardID int64 `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
 type ProjectsMoveCard503ApplicationJSONErrors struct {

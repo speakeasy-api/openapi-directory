@@ -6,16 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeletebulkDataExporterConfigSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeletebulkDataExporterConfigRequest struct {
-	Request  []shared.Patch `request:"mediaType=application/ndjson"`
-	Security DeletebulkDataExporterConfigSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // DeletebulkDataExporterConfig200ApplicationJSONStatusEnum - Status

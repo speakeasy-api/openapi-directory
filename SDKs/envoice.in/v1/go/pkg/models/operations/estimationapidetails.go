@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EstimationAPIDetailsQueryParams struct {
-	ID int `queryParam:"style=form,explode=true,name=id"`
-}
-
-type EstimationAPIDetailsHeaders struct {
+type EstimationAPIDetailsRequest struct {
+	ID          int    `queryParam:"style=form,explode=true,name=id"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type EstimationAPIDetailsRequest struct {
-	QueryParams EstimationAPIDetailsQueryParams
-	Headers     EstimationAPIDetailsHeaders
 }
 
 type EstimationAPIDetailsResponse struct {

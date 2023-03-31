@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        QueryParams: operations.GetQueryParams{
-            Domain: "corrupti",
-            Format: "provident",
-            Key: "distinctio",
-        },
+        Domain: "corrupti",
+        Format: "provident",
+        Key: "distinctio",
     }
 
     ctx := context.Background()

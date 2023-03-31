@@ -34,9 +34,9 @@ func newCloudMonitoring(defaultClient, securityClient HTTPClient, serverURL, lan
 // Imports event logs related to the onboarding app into elastisearch
 func (s *cloudMonitoring) CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *cloudMonitoring) CreateOrganizationInventoryOnboardingCloudMonitoringEx
 // Commits the import operation to complete the onboarding of a device into Dashboard for monitoring.
 func (s *cloudMonitoring) CreateOrganizationInventoryOnboardingCloudMonitoringImport(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,14 +144,14 @@ func (s *cloudMonitoring) CreateOrganizationInventoryOnboardingCloudMonitoringIm
 // Check the status of a committed Import operation
 func (s *cloudMonitoring) GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -193,14 +193,14 @@ func (s *cloudMonitoring) GetOrganizationInventoryOnboardingCloudMonitoringImpor
 // Returns list of networks eligible for adding cloud monitored device
 func (s *cloudMonitoring) GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

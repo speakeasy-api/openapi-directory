@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.RetrieveNEOFeedTodayRequest{
-        QueryParams: operations.RetrieveNEOFeedTodayQueryParams{
-            Detailed: false,
-        },
+        Detailed: false,
     }
 
     ctx := context.Background()

@@ -12,28 +12,19 @@ var DeleteUserChannelServerList = []string{
 }
 
 type DeleteUserChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUserChannelPathParams struct {
+type DeleteUserChannelRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the resource belongs to.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to read the resources from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the [User](https://www.twilio.com/docs/api/chat/rest/users) to read the User Channel resources from.
 	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
-}
-
-type DeleteUserChannelHeaders struct {
 	// The X-Twilio-Webhook-Enabled HTTP request header
 	XTwilioWebhookEnabled *shared.UserChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
-}
-
-type DeleteUserChannelRequest struct {
-	PathParams DeleteUserChannelPathParams
-	Headers    DeleteUserChannelHeaders
-	Security   DeleteUserChannelSecurity
-	ServerURL  *string
 }
 
 type DeleteUserChannelResponse struct {

@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InsertAddressesbygroupIDPathParams struct {
-	// Group ID.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type InsertAddressesbygroupIDHeaders struct {
+type InsertAddressesbygroupIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type InsertAddressesbygroupIDRequest struct {
-	PathParams InsertAddressesbygroupIDPathParams
-	Headers    InsertAddressesbygroupIDHeaders
-	Request    shared.InsertAddressesbygroupIDRequest `request:"mediaType=application/json"`
+	ContentType                     string                                 `header:"style=simple,explode=false,name=Content-Type"`
+	InsertAddressesbygroupIDRequest shared.InsertAddressesbygroupIDRequest `request:"mediaType=application/json"`
+	// Group ID.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type InsertAddressesbygroupIDResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoCategoriesPathParams struct {
+type GetVideoCategoriesRequest struct {
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetVideoCategoriesRequest struct {
-	PathParams GetVideoCategoriesPathParams
 }
 
 type GetVideoCategoriesResponse struct {

@@ -43,7 +43,7 @@ func (s *serviceInventory) ListServiceInventories(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,14 +85,14 @@ func (s *serviceInventory) ListServiceInventories(ctx context.Context, request o
 // Returns an array of Tag objects
 func (s *serviceInventory) ListServiceInventoryTags(ctx context.Context, request operations.ListServiceInventoryTagsRequest) (*operations.ListServiceInventoryTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -144,7 +144,7 @@ func (s *serviceInventory) ListServiceInventoryTags(ctx context.Context, request
 // Returns a ServiceInventory object
 func (s *serviceInventory) ShowServiceInventory(ctx context.Context, request operations.ShowServiceInventoryRequest) (*operations.ShowServiceInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -199,9 +199,9 @@ func (s *serviceInventory) ShowServiceInventory(ctx context.Context, request ope
 // Tags a ServiceInventory object
 func (s *serviceInventory) TagServiceInventory(ctx context.Context, request operations.TagServiceInventoryRequest) (*operations.TagServiceInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tag", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,9 +255,9 @@ func (s *serviceInventory) TagServiceInventory(ctx context.Context, request oper
 // Untags a ServiceInventory object
 func (s *serviceInventory) UntagServiceInventory(ctx context.Context, request operations.UntagServiceInventoryRequest) (*operations.UntagServiceInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/untag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/untag", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

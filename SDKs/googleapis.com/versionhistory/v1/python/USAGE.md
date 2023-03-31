@@ -4,26 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VersionhistoryPlatformsChannelsListRequest(
-    path_params=operations.VersionhistoryPlatformsChannelsListPathParams(
-        parent="quod",
-    ),
-    query_params=operations.VersionhistoryPlatformsChannelsListQueryParams(
-        dollar_xgafv="1",
-        access_token="numquam",
-        alt="json",
-        callback="blanditiis",
-        fields="voluptatem",
-        key="voluptas",
-        oauth_token="ea",
-        page_size=3770087752288054082,
-        page_token="ea",
-        pretty_print=False,
-        quota_user="quod",
-        upload_type="est",
-        upload_protocol="quae",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    parent="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
 res = s.platforms.versionhistory_platforms_channels_list(req)

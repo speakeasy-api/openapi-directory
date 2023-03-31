@@ -12,11 +12,8 @@ var CreateDeployedDevicesCertificateServerList = []string{
 }
 
 type CreateDeployedDevicesCertificateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateDeployedDevicesCertificatePathParams struct {
-	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest struct {
@@ -29,10 +26,8 @@ type CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest str
 }
 
 type CreateDeployedDevicesCertificateRequest struct {
-	PathParams CreateDeployedDevicesCertificatePathParams
-	Request    *CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateDeployedDevicesCertificateSecurity
-	ServerURL  *string
+	FleetSid    string                                                                   `pathParam:"style=simple,explode=false,name=FleetSid"`
+	RequestBody *CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateDeployedDevicesCertificateResponse struct {

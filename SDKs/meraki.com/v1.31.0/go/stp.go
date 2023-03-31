@@ -34,7 +34,7 @@ func newStp(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Returns STP settings
 func (s *stp) GetNetworkSwitchStp(ctx context.Context, request operations.GetNetworkSwitchStpRequest) (*operations.GetNetworkSwitchStpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *stp) GetNetworkSwitchStp(ctx context.Context, request operations.GetNet
 // Updates STP settings
 func (s *stp) UpdateNetworkSwitchStp(ctx context.Context, request operations.UpdateNetworkSwitchStpRequest) (*operations.UpdateNetworkSwitchStpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

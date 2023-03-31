@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteAMemberSLGPathParams struct {
+type DeleteAMemberSLGRequest struct {
 	// Unique identifier of the member who is to be removed.
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
 	// Unique Identifier of the shared line group from which you would like to remove a member.
 	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
-type DeleteAMemberSLGRequest struct {
-	PathParams DeleteAMemberSLGPathParams
 }
 
 type DeleteAMemberSLGResponse struct {

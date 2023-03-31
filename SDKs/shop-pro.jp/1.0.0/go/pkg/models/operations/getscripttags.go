@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetScriptTagsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetScriptTagsRequest struct {
-	Security GetScriptTagsSecurity
-}
 
 // GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum - スクリプトを出力するページ。
 //

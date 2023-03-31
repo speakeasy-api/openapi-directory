@@ -34,7 +34,7 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // AddExpiryListingsJSON - Add expiry listings into GoDaddy Auction
-func (s *v1) AddExpiryListingsJSON(ctx context.Context, request operations.AddExpiryListingsJSONRequest) (*operations.AddExpiryListingsJSONResponse, error) {
+func (s *v1) AddExpiryListingsJSON(ctx context.Context, request []shared.AftermarketListingExpiryCreate) (*operations.AddExpiryListingsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/aftermarket/listings/expiry"
 
@@ -200,7 +200,7 @@ func (s *v1) AddExpiryListingsJSON(ctx context.Context, request operations.AddEx
 }
 
 // AddExpiryListingsRaw - Add expiry listings into GoDaddy Auction
-func (s *v1) AddExpiryListingsRaw(ctx context.Context, request operations.AddExpiryListingsRawRequest) (*operations.AddExpiryListingsRawResponse, error) {
+func (s *v1) AddExpiryListingsRaw(ctx context.Context, request []byte) (*operations.AddExpiryListingsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/aftermarket/listings/expiry"
 
@@ -375,7 +375,7 @@ func (s *v1) DeleteListings(ctx context.Context, request operations.DeleteListin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

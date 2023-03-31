@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceTrafficShapingCustomPerformanceClassPathParams struct {
+type GetNetworkApplianceTrafficShapingCustomPerformanceClassRequest struct {
 	CustomPerformanceClassID string `pathParam:"style=simple,explode=false,name=customPerformanceClassId"`
 	NetworkID                string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkApplianceTrafficShapingCustomPerformanceClassRequest struct {
-	PathParams GetNetworkApplianceTrafficShapingCustomPerformanceClassPathParams
 }
 
 type GetNetworkApplianceTrafficShapingCustomPerformanceClassResponse struct {

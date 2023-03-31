@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeletesystemSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeletesystemPathParams struct {
-	// Inventory ID
-	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 type DeletesystemRequest struct {
-	PathParams DeletesystemPathParams
-	Security   DeletesystemSecurity
+	// Inventory ID
+	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
 }
 
 type DeletesystemResponse struct {

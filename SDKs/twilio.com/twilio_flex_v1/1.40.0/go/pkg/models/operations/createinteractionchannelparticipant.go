@@ -12,14 +12,8 @@ var CreateInteractionChannelParticipantServerList = []string{
 }
 
 type CreateInteractionChannelParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateInteractionChannelParticipantPathParams struct {
-	// The Channel Sid for the new Channel Participant.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The Interaction Sid for the new Channel Participant.
-	InteractionSid string `pathParam:"style=simple,explode=false,name=InteractionSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest struct {
@@ -29,10 +23,11 @@ type CreateInteractionChannelParticipantCreateInteractionChannelParticipantReque
 }
 
 type CreateInteractionChannelParticipantRequest struct {
-	PathParams CreateInteractionChannelParticipantPathParams
-	Request    *CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateInteractionChannelParticipantSecurity
-	ServerURL  *string
+	// The Channel Sid for the new Channel Participant.
+	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	// The Interaction Sid for the new Channel Participant.
+	InteractionSid string                                                                         `pathParam:"style=simple,explode=false,name=InteractionSid"`
+	RequestBody    *CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateInteractionChannelParticipantResponse struct {

@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            MerakiAPIKey: shared.SchemeMerakiAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            MerakiAPIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetNetworkSwitchAccessControlListsRequest{
-        PathParams: operations.GetNetworkSwitchAccessControlListsPathParams{
-            NetworkID: "corrupti",
-        },
+        NetworkID: "corrupti",
     }
 
     ctx := context.Background()

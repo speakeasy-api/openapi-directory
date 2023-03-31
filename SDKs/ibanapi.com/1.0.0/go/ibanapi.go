@@ -35,7 +35,7 @@ func newIbanapi(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetBalance - Get Account Balance
 // Returns the account balance and expiry
-func (s *ibanapi) GetBalance(ctx context.Context, request operations.GetBalanceRequest) (*operations.GetBalanceResponse, error) {
+func (s *ibanapi) GetBalance(ctx context.Context) (*operations.GetBalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/balance"
 
@@ -44,7 +44,7 @@ func (s *ibanapi) GetBalance(ctx context.Context, request operations.GetBalanceR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,7 +120,7 @@ func (s *ibanapi) GetBalance(ctx context.Context, request operations.GetBalanceR
 
 // ValidateIBAN - Validate IBAN
 // Returns the validation results
-func (s *ibanapi) ValidateIBAN(ctx context.Context, request operations.ValidateIBANRequest) (*operations.ValidateIBANResponse, error) {
+func (s *ibanapi) ValidateIBAN(ctx context.Context, request operations.ValidateIBANRequest, security operations.ValidateIBANSecurity) (*operations.ValidateIBANResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/validate"
 
@@ -129,11 +129,11 @@ func (s *ibanapi) ValidateIBAN(ctx context.Context, request operations.ValidateI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,7 +209,7 @@ func (s *ibanapi) ValidateIBAN(ctx context.Context, request operations.ValidateI
 
 // ValidateIBANBasic - Validate IBAN Basic
 // Returns the basic validation results
-func (s *ibanapi) ValidateIBANBasic(ctx context.Context, request operations.ValidateIBANBasicRequest) (*operations.ValidateIBANBasicResponse, error) {
+func (s *ibanapi) ValidateIBANBasic(ctx context.Context, request operations.ValidateIBANBasicRequest, security operations.ValidateIBANBasicSecurity) (*operations.ValidateIBANBasicResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/validate-basic"
 
@@ -218,11 +218,11 @@ func (s *ibanapi) ValidateIBANBasic(ctx context.Context, request operations.Vali
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

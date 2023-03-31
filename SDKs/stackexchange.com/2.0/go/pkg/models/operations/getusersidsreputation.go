@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type GetUsersIdsReputationPathParams struct {
-	// Number list (semicolon delimited).
-	Ids string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type GetUsersIdsReputationQueryParams struct {
+type GetUsersIdsReputationRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -49,6 +44,8 @@ type GetUsersIdsReputationQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Unix date.
 	Fromdate *int64 `queryParam:"style=form,explode=true,name=fromdate"`
+	// Number list (semicolon delimited).
+	Ids      string `pathParam:"style=simple,explode=false,name=ids"`
 	Page     *int64 `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64 `queryParam:"style=form,explode=true,name=pagesize"`
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
@@ -56,11 +53,6 @@ type GetUsersIdsReputationQueryParams struct {
 	Site string `queryParam:"style=form,explode=true,name=site"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetUsersIdsReputationRequest struct {
-	PathParams  GetUsersIdsReputationPathParams
-	QueryParams GetUsersIdsReputationQueryParams
 }
 
 type GetUsersIdsReputationResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateReturnLabelPathParams struct {
+type CreateReturnLabelRequest struct {
+	CreateReturnLabelRequestBody shared.CreateReturnLabelRequestBody `request:"mediaType=application/json"`
 	// Label ID
 	LabelID string `pathParam:"style=simple,explode=false,name=label_id"`
-}
-
-type CreateReturnLabelRequest struct {
-	PathParams CreateReturnLabelPathParams
-	Request    shared.CreateReturnLabelRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateReturnLabelResponse struct {

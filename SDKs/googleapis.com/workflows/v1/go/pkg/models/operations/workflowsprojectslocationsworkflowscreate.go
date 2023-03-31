@@ -8,18 +8,14 @@ import (
 )
 
 type WorkflowsProjectsLocationsWorkflowsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WorkflowsProjectsLocationsWorkflowsCreatePathParams struct {
-	// Required. Project and location in which the workflow should be created. Format: projects/{project}/locations/{location}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type WorkflowsProjectsLocationsWorkflowsCreateQueryParams struct {
+type WorkflowsProjectsLocationsWorkflowsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WorkflowInput *shared.WorkflowInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type WorkflowsProjectsLocationsWorkflowsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Project and location in which the workflow should be created. Format: projects/{project}/locations/{location}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type WorkflowsProjectsLocationsWorkflowsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. The ID of the workflow to be created. It has to fulfill the following requirements: * Must contain only letters, numbers, underscores and hyphens. * Must start with a letter. * Must be between 1-64 characters. * Must end with a number or a letter. * Must be unique within the customer project and location.
 	WorkflowID *string `queryParam:"style=form,explode=true,name=workflowId"`
-}
-
-type WorkflowsProjectsLocationsWorkflowsCreateRequest struct {
-	PathParams  WorkflowsProjectsLocationsWorkflowsCreatePathParams
-	QueryParams WorkflowsProjectsLocationsWorkflowsCreateQueryParams
-	Request     *shared.WorkflowInput `request:"mediaType=application/json"`
-	Security    WorkflowsProjectsLocationsWorkflowsCreateSecurity
 }
 
 type WorkflowsProjectsLocationsWorkflowsCreateResponse struct {

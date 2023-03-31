@@ -3,19 +3,17 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetAccountsRequest(
-    query_params=operations.GetAccountsQueryParams(
-        page_size_=1954425912791713849,
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
+)
+
+
+req = operations.GetAccountsRequest(
+    filter_account_type="TRANSACTIONAL",
+    filter_ownership_type="JOINT",
+    page_size=715190,
 )
     
 res = s.accounts.get_accounts(req)

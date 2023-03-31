@@ -12,18 +12,13 @@ var FetchCredentialAwsServerList = []string{
 }
 
 type FetchCredentialAwsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCredentialAwsPathParams struct {
-	// The Twilio-provided string that uniquely identifies the AWS resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchCredentialAwsRequest struct {
-	PathParams FetchCredentialAwsPathParams
-	Security   FetchCredentialAwsSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the AWS resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchCredentialAwsResponse struct {

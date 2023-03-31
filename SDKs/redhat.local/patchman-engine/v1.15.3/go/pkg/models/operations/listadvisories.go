@@ -10,7 +10,7 @@ import (
 )
 
 type ListAdvisoriesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 // ListAdvisoriesSortEnum - Sort field
@@ -49,7 +49,7 @@ func (e *ListAdvisoriesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAdvisoriesQueryParams struct {
+type ListAdvisoriesRequest struct {
 	// Filter
 	FilterAdvisoryType *string `queryParam:"style=form,explode=true,name=filter[advisory_type]"`
 	// Filter
@@ -78,11 +78,6 @@ type ListAdvisoriesQueryParams struct {
 	Sort *ListAdvisoriesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ListAdvisoriesRequest struct {
-	QueryParams ListAdvisoriesQueryParams
-	Security    ListAdvisoriesSecurity
 }
 
 type ListAdvisoriesResponse struct {

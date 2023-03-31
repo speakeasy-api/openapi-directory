@@ -34,16 +34,16 @@ func newRatePlanCharges(defaultClient, securityClient HTTPClient, serverURL, lan
 // ObjectGETRatePlanCharge - CRUD: Retrieve a rate plan charge
 func (s *ratePlanCharges) ObjectGETRatePlanCharge(ctx context.Context, request operations.ObjectGETRatePlanChargeRequest) (*operations.ObjectGETRatePlanChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/rate-plan-charge/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/rate-plan-charge/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -110,9 +110,9 @@ func (s *ratePlanCharges) ObjectGETRatePlanCharge(ctx context.Context, request o
 // ObjectPUTRatePlanCharge - CRUD: Update a rate plan charge
 func (s *ratePlanCharges) ObjectPUTRatePlanCharge(ctx context.Context, request operations.ObjectPUTRatePlanChargeRequest) (*operations.ObjectPUTRatePlanChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/rate-plan-charge/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/rate-plan-charge/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyRatePlanCharge", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,9 +127,9 @@ func (s *ratePlanCharges) ObjectPUTRatePlanCharge(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

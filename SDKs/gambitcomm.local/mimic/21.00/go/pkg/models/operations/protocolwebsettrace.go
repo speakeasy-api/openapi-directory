@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolWebSetTracePathParams struct {
+type ProtocolWebSetTraceRequest struct {
 	// Agent to set the WEB tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the WEB tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolWebSetTraceRequest struct {
-	PathParams ProtocolWebSetTracePathParams
 }
 
 type ProtocolWebSetTraceResponse struct {

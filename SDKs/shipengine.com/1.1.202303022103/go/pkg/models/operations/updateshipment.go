@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateShipmentPathParams struct {
-	// Shipment ID
-	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
-}
-
 type UpdateShipmentRequest struct {
-	PathParams UpdateShipmentPathParams
-	Request    shared.UpdateShipmentRequestBodyInput `request:"mediaType=application/json"`
+	// Shipment ID
+	ShipmentID                     string                                `pathParam:"style=simple,explode=false,name=shipment_id"`
+	UpdateShipmentRequestBodyInput shared.UpdateShipmentRequestBodyInput `request:"mediaType=application/json"`
 }
 
 type UpdateShipmentResponse struct {

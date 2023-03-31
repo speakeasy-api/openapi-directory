@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type ListHypernymsQueryParams struct {
+type ListHypernymsRequest struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
 	// (Required) a numeric identifier of the family
 	Family *string `queryParam:"style=form,explode=true,name=family"`
 	// (Required) maximum distance from the family
 	MaxLevel *string `queryParam:"style=form,explode=true,name=maxLevel"`
-}
-
-type ListHypernymsHeaders struct {
-	// {{apiKeyDescription}}
-	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
-}
-
-type ListHypernymsRequest struct {
-	QueryParams ListHypernymsQueryParams
-	Headers     ListHypernymsHeaders
 }
 
 type ListHypernymsResponse struct {

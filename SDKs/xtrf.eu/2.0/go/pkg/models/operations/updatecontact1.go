@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContact1PathParams struct {
+type UpdateContact1Request struct {
+	// Updated contact of a given client.
+	ContactDTO shared.ContactDTO `request:"mediaType=application/json"`
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type UpdateContact1Request struct {
-	PathParams UpdateContact1PathParams
-	// Updated contact of a given client.
-	Request shared.ContactDTO `request:"mediaType=application/json"`
 }
 
 type UpdateContact1Response struct {

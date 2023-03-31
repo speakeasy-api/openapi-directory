@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type JourneyJourneyResultsPathParams struct {
-	// Origin of the journey. Can be WGS84 coordinates expressed as "lat,long", a UK postcode, a Naptan (StopPoint) id, an ICS StopId, or a free-text string (will cause disambiguation unless it exactly matches a point of interest name).
-	From string `pathParam:"style=simple,explode=false,name=from"`
-	// Destination of the journey. Can be WGS84 coordinates expressed as "lat,long", a UK postcode, a Naptan (StopPoint) id, an ICS StopId, or a free-text string (will cause disambiguation unless it exactly matches a point of interest name).
-	To string `pathParam:"style=simple,explode=false,name=to"`
-}
-
 type JourneyJourneyResultsAccessibilityPreferenceEnum string
 
 const (
@@ -188,7 +181,7 @@ func (e *JourneyJourneyResultsWalkingSpeedEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type JourneyJourneyResultsQueryParams struct {
+type JourneyJourneyResultsRequest struct {
 	// The accessibility preference must be a comma separated list eg. "noSolidStairs,noEscalators,noElevators,stepFreeToVehicle,stepFreeToPlatform"
 	AccessibilityPreference []JourneyJourneyResultsAccessibilityPreferenceEnum `queryParam:"style=form,explode=true,name=accessibilityPreference"`
 	// Time adjustment command. eg possible options: "TripFirst" | "TripLast"
@@ -207,6 +200,8 @@ type JourneyJourneyResultsQueryParams struct {
 	CyclePreference *JourneyJourneyResultsCyclePreferenceEnum `queryParam:"style=form,explode=true,name=cyclePreference"`
 	// The date must be in yyyyMMdd format
 	Date *string `queryParam:"style=form,explode=true,name=date"`
+	// Origin of the journey. Can be WGS84 coordinates expressed as "lat,long", a UK postcode, a Naptan (StopPoint) id, an ICS StopId, or a free-text string (will cause disambiguation unless it exactly matches a point of interest name).
+	From string `pathParam:"style=simple,explode=false,name=from"`
 	// An optional name to associate with the origin of the journey in the results.
 	FromName *string `queryParam:"style=form,explode=true,name=fromName"`
 	// The journey preference eg possible options: "leastinterchange" | "leasttime" | "leastwalking"
@@ -227,6 +222,8 @@ type JourneyJourneyResultsQueryParams struct {
 	Time *string `queryParam:"style=form,explode=true,name=time"`
 	// Does the time given relate to arrival or leaving time? Possible options: "departing" | "arriving"
 	TimeIs *JourneyJourneyResultsTimeIsEnum `queryParam:"style=form,explode=true,name=timeIs"`
+	// Destination of the journey. Can be WGS84 coordinates expressed as "lat,long", a UK postcode, a Naptan (StopPoint) id, an ICS StopId, or a free-text string (will cause disambiguation unless it exactly matches a point of interest name).
+	To string `pathParam:"style=simple,explode=false,name=to"`
 	// An optional name to associate with the destination of the journey in the results.
 	ToName *string `queryParam:"style=form,explode=true,name=toName"`
 	// A boolean to indicate whether or not to return 3 public transport journeys, a bus journey, a cycle hire journey, a personal cycle journey and a walking journey
@@ -241,11 +238,6 @@ type JourneyJourneyResultsQueryParams struct {
 	WalkingOptimization *bool `queryParam:"style=form,explode=true,name=walkingOptimization"`
 	// The walking speed. eg possible options: "slow" | "average" | "fast".
 	WalkingSpeed *JourneyJourneyResultsWalkingSpeedEnum `queryParam:"style=form,explode=true,name=walkingSpeed"`
-}
-
-type JourneyJourneyResultsRequest struct {
-	PathParams  JourneyJourneyResultsPathParams
-	QueryParams JourneyJourneyResultsQueryParams
 }
 
 type JourneyJourneyResultsResponse struct {

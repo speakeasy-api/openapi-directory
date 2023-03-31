@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUsersRequest struct {
-	Request shared.DeleteUsersRequest `request:"mediaType=application/json"`
-}
-
 type DeleteUsersResponse struct {
 	// Bad request
 	APIError    *shared.APIError

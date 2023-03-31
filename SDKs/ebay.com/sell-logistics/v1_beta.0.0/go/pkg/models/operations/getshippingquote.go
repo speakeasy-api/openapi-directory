@@ -8,17 +8,12 @@ import (
 )
 
 type GetShippingQuoteSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetShippingQuotePathParams struct {
-	// This path parameter specifies the unique eBay-assigned ID of the shipping quote you want to retrieve. The <b>shippingQuoteId</b> value is generated and returned by a call to <b>createShippingQuote</b>.
-	ShippingQuoteID string `pathParam:"style=simple,explode=false,name=shippingQuoteId"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetShippingQuoteRequest struct {
-	PathParams GetShippingQuotePathParams
-	Security   GetShippingQuoteSecurity
+	// This path parameter specifies the unique eBay-assigned ID of the shipping quote you want to retrieve. The <b>shippingQuoteId</b> value is generated and returned by a call to <b>createShippingQuote</b>.
+	ShippingQuoteID string `pathParam:"style=simple,explode=false,name=shippingQuoteId"`
 }
 
 type GetShippingQuoteResponse struct {

@@ -45,7 +45,7 @@ func newViewOnlyLinks(defaultClient, securityClient HTTPClient, serverURL, langu
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *viewOnlyLinks) ViewOnlyLinksNodeList(ctx context.Context, request operations.ViewOnlyLinksNodeListRequest) (*operations.ViewOnlyLinksNodeListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/view_only_links/{link_id}/nodes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/view_only_links/{link_id}/nodes/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -95,7 +95,7 @@ func (s *viewOnlyLinks) ViewOnlyLinksNodeList(ctx context.Context, request opera
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *viewOnlyLinks) ViewOnlyLinksRead(ctx context.Context, request operations.ViewOnlyLinksReadRequest) (*operations.ViewOnlyLinksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/view_only_links/{link_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/view_only_links/{link_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

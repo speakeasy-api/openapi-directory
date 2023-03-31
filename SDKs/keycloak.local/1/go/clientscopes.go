@@ -34,7 +34,7 @@ func newClientScopes(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteRealmClientScopesID - Delete the client scope
 func (s *clientScopes) DeleteRealmClientScopesID(ctx context.Context, request operations.DeleteRealmClientScopesIDRequest) (*operations.DeleteRealmClientScopesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *clientScopes) DeleteRealmClientScopesID(ctx context.Context, request op
 // GetRealmClientScopes - Get client scopes belonging to the realm   Returns a list of client scopes belonging to the realm
 func (s *clientScopes) GetRealmClientScopes(ctx context.Context, request operations.GetRealmClientScopesRequest) (*operations.GetRealmClientScopesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -113,7 +113,7 @@ func (s *clientScopes) GetRealmClientScopes(ctx context.Context, request operati
 // GetRealmClientScopesID - Get representation of the client scope
 func (s *clientScopes) GetRealmClientScopesID(ctx context.Context, request operations.GetRealmClientScopesIDRequest) (*operations.GetRealmClientScopesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,9 +157,9 @@ func (s *clientScopes) GetRealmClientScopesID(ctx context.Context, request opera
 // PostRealmClientScopes - Create a new client scope   Client Scope’s name must be unique!
 func (s *clientScopes) PostRealmClientScopes(ctx context.Context, request operations.PostRealmClientScopesRequest) (*operations.PostRealmClientScopesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientScopeRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,9 +202,9 @@ func (s *clientScopes) PostRealmClientScopes(ctx context.Context, request operat
 // PutRealmClientScopesID - Update the client scope
 func (s *clientScopes) PutRealmClientScopesID(ctx context.Context, request operations.PutRealmClientScopesIDRequest) (*operations.PutRealmClientScopesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientScopeRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

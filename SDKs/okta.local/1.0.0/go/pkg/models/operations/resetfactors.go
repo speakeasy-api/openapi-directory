@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ResetFactorsPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type ResetFactorsRequest struct {
-	PathParams ResetFactorsPathParams
-	Request    []byte `request:"mediaType=application/octet-stream"`
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
+	UserID      string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ResetFactorsResponse struct {

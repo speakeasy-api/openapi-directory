@@ -34,9 +34,9 @@ func newNetworks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Bind a network to a template.
 func (s *networks) BindNetwork(ctx context.Context, request operations.BindNetworkRequest) (*operations.BindNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bind", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bind", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -80,9 +80,9 @@ func (s *networks) BindNetwork(ctx context.Context, request operations.BindNetwo
 // Combine multiple networks into a single network
 func (s *networks) CombineOrganizationNetworks(ctx context.Context, request operations.CombineOrganizationNetworksRequest) (*operations.CombineOrganizationNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks/combine", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks/combine", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,9 +135,9 @@ func (s *networks) CombineOrganizationNetworks(ctx context.Context, request oper
 // Create a network
 func (s *networks) CreateOrganizationNetwork(ctx context.Context, request operations.CreateOrganizationNetworkRequest) (*operations.CreateOrganizationNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *networks) CreateOrganizationNetwork(ctx context.Context, request operat
 // Delete a network
 func (s *networks) DeleteNetwork(ctx context.Context, request operations.DeleteNetworkRequest) (*operations.DeleteNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *networks) DeleteNetwork(ctx context.Context, request operations.DeleteN
 // Return a network
 func (s *networks) GetNetwork(ctx context.Context, request operations.GetNetworkRequest) (*operations.GetNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,14 +271,14 @@ func (s *networks) GetNetwork(ctx context.Context, request operations.GetNetwork
 // List Air Marshal scan results from a network
 func (s *networks) GetNetworkAirMarshal(ctx context.Context, request operations.GetNetworkAirMarshalRequest) (*operations.GetNetworkAirMarshalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/airMarshal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/airMarshal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -320,7 +320,7 @@ func (s *networks) GetNetworkAirMarshal(ctx context.Context, request operations.
 // Return the site-to-site VPN settings of a network. Only valid for MX networks.
 func (s *networks) GetNetworkSiteToSiteVpn(ctx context.Context, request operations.GetNetworkSiteToSiteVpnRequest) (*operations.GetNetworkSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/siteToSiteVpn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -365,14 +365,14 @@ func (s *networks) GetNetworkSiteToSiteVpn(ctx context.Context, request operatio
 // Return the traffic analysis data for this network. Traffic analysis with hostname visibility must be enabled on the network.
 func (s *networks) GetNetworkTraffic(ctx context.Context, request operations.GetNetworkTrafficRequest) (*operations.GetNetworkTrafficResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/traffic", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/traffic", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -414,14 +414,14 @@ func (s *networks) GetNetworkTraffic(ctx context.Context, request operations.Get
 // List the networks in an organization
 func (s *networks) GetOrganizationNetworks(ctx context.Context, request operations.GetOrganizationNetworksRequest) (*operations.GetOrganizationNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -463,7 +463,7 @@ func (s *networks) GetOrganizationNetworks(ctx context.Context, request operatio
 // Split a combined network into individual networks for each type of device
 func (s *networks) SplitNetwork(ctx context.Context, request operations.SplitNetworkRequest) (*operations.SplitNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/split", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/split", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -508,7 +508,7 @@ func (s *networks) SplitNetwork(ctx context.Context, request operations.SplitNet
 // Unbind a network from a template.
 func (s *networks) UnbindNetwork(ctx context.Context, request operations.UnbindNetworkRequest) (*operations.UnbindNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/unbind", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/unbind", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -544,9 +544,9 @@ func (s *networks) UnbindNetwork(ctx context.Context, request operations.UnbindN
 // Update a network
 func (s *networks) UpdateNetwork(ctx context.Context, request operations.UpdateNetworkRequest) (*operations.UpdateNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -596,9 +596,9 @@ func (s *networks) UpdateNetwork(ctx context.Context, request operations.UpdateN
 // Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.
 func (s *networks) UpdateNetworkSiteToSiteVpn(ctx context.Context, request operations.UpdateNetworkSiteToSiteVpnRequest) (*operations.UpdateNetworkSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/siteToSiteVpn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -83,7 +83,7 @@ func (s *codesOfConduct) CodesOfConductGetAllCodesOfConduct(ctx context.Context)
 // https://docs.github.com/enterprise-server@2.20/rest/reference/codes-of-conduct#get-a-code-of-conduct - API method documentation
 func (s *codesOfConduct) CodesOfConductGetConductCode(ctx context.Context, request operations.CodesOfConductGetConductCodeRequest) (*operations.CodesOfConductGetConductCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/codes_of_conduct/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/codes_of_conduct/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

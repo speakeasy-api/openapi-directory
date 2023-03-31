@@ -8,19 +8,14 @@ import (
 )
 
 type GetMeConnectionsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type GetMeConnectionsQueryParams struct {
+type GetMeConnectionsRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetMeConnectionsRequest struct {
-	QueryParams GetMeConnectionsQueryParams
-	Security    GetMeConnectionsSecurity
 }
 
 type GetMeConnectionsResponse struct {

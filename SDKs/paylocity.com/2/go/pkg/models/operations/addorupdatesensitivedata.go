@@ -8,21 +8,16 @@ import (
 )
 
 type AddOrUpdateSensitiveDataSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddOrUpdateSensitiveDataPathParams struct {
+type AddOrUpdateSensitiveDataRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-}
-
-type AddOrUpdateSensitiveDataRequest struct {
-	PathParams AddOrUpdateSensitiveDataPathParams
 	// Sensitive Data Model
-	Request  shared.SensitiveData `request:"mediaType=application/json"`
-	Security AddOrUpdateSensitiveDataSecurity
+	SensitiveData shared.SensitiveData `request:"mediaType=application/json"`
 }
 
 type AddOrUpdateSensitiveDataResponse struct {

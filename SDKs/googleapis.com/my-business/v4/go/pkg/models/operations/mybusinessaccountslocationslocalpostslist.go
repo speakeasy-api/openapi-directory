@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsLocalPostsListPathParams struct {
-	// The name of the location whose local posts will be listed.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessAccountsLocationsLocalPostsListQueryParams struct {
+type MybusinessAccountsLocationsLocalPostsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type MybusinessAccountsLocationsLocalPostsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If specified, returns the next page of local posts.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The name of the location whose local posts will be listed.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type MybusinessAccountsLocationsLocalPostsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsLocalPostsListRequest struct {
-	PathParams  MybusinessAccountsLocationsLocalPostsListPathParams
-	QueryParams MybusinessAccountsLocationsLocalPostsListQueryParams
 }
 
 type MybusinessAccountsLocationsLocalPostsListResponse struct {

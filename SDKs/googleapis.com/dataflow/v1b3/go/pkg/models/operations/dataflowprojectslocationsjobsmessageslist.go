@@ -10,23 +10,23 @@ import (
 )
 
 type DataflowProjectsLocationsJobsMessagesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsMessagesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsMessagesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsMessagesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsMessagesListSecurity struct {
@@ -34,15 +34,6 @@ type DataflowProjectsLocationsJobsMessagesListSecurity struct {
 	Option2 *DataflowProjectsLocationsJobsMessagesListSecurityOption2 `security:"option"`
 	Option3 *DataflowProjectsLocationsJobsMessagesListSecurityOption3 `security:"option"`
 	Option4 *DataflowProjectsLocationsJobsMessagesListSecurityOption4 `security:"option"`
-}
-
-type DataflowProjectsLocationsJobsMessagesListPathParams struct {
-	// The job to get messages about.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains the job specified by job_id.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// A project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum - Filter to only get messages with importance >= level
@@ -81,7 +72,7 @@ func (e *DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum) Unmarsh
 	}
 }
 
-type DataflowProjectsLocationsJobsMessagesListQueryParams struct {
+type DataflowProjectsLocationsJobsMessagesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -94,8 +85,12 @@ type DataflowProjectsLocationsJobsMessagesListQueryParams struct {
 	EndTime *string `queryParam:"style=form,explode=true,name=endTime"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The job to get messages about.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains the job specified by job_id.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// Filter to only get messages with importance >= level
 	MinimumImportance *DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum `queryParam:"style=form,explode=true,name=minimumImportance"`
 	// OAuth 2.0 token for the current user.
@@ -106,6 +101,8 @@ type DataflowProjectsLocationsJobsMessagesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// A project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// If specified, return only messages with timestamps >= start_time. The default is the job creation time (i.e. beginning of messages).
@@ -114,12 +111,6 @@ type DataflowProjectsLocationsJobsMessagesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataflowProjectsLocationsJobsMessagesListRequest struct {
-	PathParams  DataflowProjectsLocationsJobsMessagesListPathParams
-	QueryParams DataflowProjectsLocationsJobsMessagesListQueryParams
-	Security    DataflowProjectsLocationsJobsMessagesListSecurity
 }
 
 type DataflowProjectsLocationsJobsMessagesListResponse struct {

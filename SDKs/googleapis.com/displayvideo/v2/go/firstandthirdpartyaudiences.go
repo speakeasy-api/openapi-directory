@@ -33,11 +33,11 @@ func newFirstAndThirdPartyAudiences(defaultClient, securityClient HTTPClient, se
 }
 
 // DisplayvideoFirstAndThirdPartyAudiencesCreate - Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
-func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesCreate(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesCreateRequest) (*operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse, error) {
+func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesCreate(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesCreateRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesCreateSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/firstAndThirdPartyAudiences"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FirstAndThirdPartyAudienceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesCre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesCre
 }
 
 // DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers - Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
-func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest) (*operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse, error) {
+func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}:editCustomerMatchMembers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}:editCustomerMatchMembers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditCustomerMatchMembersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesEdi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesEdi
 }
 
 // DisplayvideoFirstAndThirdPartyAudiencesGet - Gets a first and third party audience.
-func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesGet(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest) (*operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse, error) {
+func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesGet(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesGetSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesGet
 }
 
 // DisplayvideoFirstAndThirdPartyAudiencesList - Lists first and third party audiences. The order is defined by the order_by parameter.
-func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesList(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesListRequest) (*operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse, error) {
+func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesList(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesListRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesListSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/firstAndThirdPartyAudiences"
 
@@ -200,11 +200,11 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesLis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesLis
 }
 
 // DisplayvideoFirstAndThirdPartyAudiencesPatch - Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
-func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesPatch(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest) (*operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse, error) {
+func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesPatch(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesPatchSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FirstAndThirdPartyAudienceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,11 +255,11 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesPat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

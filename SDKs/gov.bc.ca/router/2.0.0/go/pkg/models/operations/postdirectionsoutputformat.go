@@ -9,38 +9,6 @@ import (
 	"time"
 )
 
-// PostDirectionsOutputFormatOutputFormatEnum - Format of representation
-type PostDirectionsOutputFormatOutputFormatEnum string
-
-const (
-	PostDirectionsOutputFormatOutputFormatEnumJSON PostDirectionsOutputFormatOutputFormatEnum = "json"
-	PostDirectionsOutputFormatOutputFormatEnumKml  PostDirectionsOutputFormatOutputFormatEnum = "kml"
-	PostDirectionsOutputFormatOutputFormatEnumHTML PostDirectionsOutputFormatOutputFormatEnum = "html"
-)
-
-func (e *PostDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "kml":
-		fallthrough
-	case "html":
-		*e = PostDirectionsOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PostDirectionsOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type PostDirectionsOutputFormatPathParams struct {
-	// Format of representation
-	OutputFormat PostDirectionsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // PostDirectionsOutputFormatCriteriaEnum - Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
 type PostDirectionsOutputFormatCriteriaEnum string
 
@@ -89,6 +57,33 @@ func (e *PostDirectionsOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
+// PostDirectionsOutputFormatOutputFormatEnum - Format of representation
+type PostDirectionsOutputFormatOutputFormatEnum string
+
+const (
+	PostDirectionsOutputFormatOutputFormatEnumJSON PostDirectionsOutputFormatOutputFormatEnum = "json"
+	PostDirectionsOutputFormatOutputFormatEnumKml  PostDirectionsOutputFormatOutputFormatEnum = "kml"
+	PostDirectionsOutputFormatOutputFormatEnumHTML PostDirectionsOutputFormatOutputFormatEnum = "html"
+)
+
+func (e *PostDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "kml":
+		fallthrough
+	case "html":
+		*e = PostDirectionsOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostDirectionsOutputFormatOutputFormatEnum: %s", s)
+	}
+}
+
 // PostDirectionsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type PostDirectionsOutputFormatOutputSrsEnum string
 
@@ -131,7 +126,7 @@ func (e *PostDirectionsOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type PostDirectionsOutputFormatQueryParams struct {
+type PostDirectionsOutputFormatRequest struct {
 	// If true, route starts and ends on same side of road as start/end point.Default is false.
 	CorrectSide *bool `queryParam:"style=form,explode=true,name=correctSide"`
 	// Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
@@ -142,6 +137,8 @@ type PostDirectionsOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *PostDirectionsOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
+	// Format of representation
+	OutputFormat PostDirectionsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *PostDirectionsOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'>points</a>
@@ -150,11 +147,6 @@ type PostDirectionsOutputFormatQueryParams struct {
 	RoundTrip *bool `queryParam:"style=form,explode=true,name=roundTrip"`
 	// Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
-}
-
-type PostDirectionsOutputFormatRequest struct {
-	PathParams  PostDirectionsOutputFormatPathParams
-	QueryParams PostDirectionsOutputFormatQueryParams
 }
 
 type PostDirectionsOutputFormatResponse struct {

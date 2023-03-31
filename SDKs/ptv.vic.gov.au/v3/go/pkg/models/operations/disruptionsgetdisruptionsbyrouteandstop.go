@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisruptionsGetDisruptionsByRouteAndStopPathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-	// Identifier of stop; values returned by Stops API - v3/stops
-	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
-}
-
 // DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum - Filter by status of disruption
 type DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum string
 
@@ -40,20 +33,19 @@ func (e *DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum) UnmarshalJ
 	}
 }
 
-type DisruptionsGetDisruptionsByRouteAndStopQueryParams struct {
+type DisruptionsGetDisruptionsByRouteAndStopRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter by status of disruption
 	DisruptionStatus *DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum `queryParam:"style=form,explode=true,name=disruption_status"`
+	// Identifier of route; values returned by Routes API - v3/routes
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
+	// Identifier of stop; values returned by Stops API - v3/stops
+	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DisruptionsGetDisruptionsByRouteAndStopRequest struct {
-	PathParams  DisruptionsGetDisruptionsByRouteAndStopPathParams
-	QueryParams DisruptionsGetDisruptionsByRouteAndStopQueryParams
 }
 
 type DisruptionsGetDisruptionsByRouteAndStopResponse struct {

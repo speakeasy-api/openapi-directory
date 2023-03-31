@@ -40,7 +40,6 @@ pkg/models/shared/googlecloudrecommendationenginev1beta1featuremapstringlist.go
 pkg/models/shared/googlecloudrecommendationenginev1beta1catalogitemcategoryhierarchy.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
 pkg/models/shared/googlecloudrecommendationenginev1beta1importcatalogitemsrequest.go

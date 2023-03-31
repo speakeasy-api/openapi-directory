@@ -44,7 +44,6 @@ pkg/models/operations/updatenetworkaccessprofile.go
 pkg/models/operations/updatesim.go
 pkg/models/shared/supersimv1esimprofile.go
 pkg/models/shared/esimprofileenumstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/supersimv1fleet.go
 pkg/models/shared/fleetenumdatameteringenum.go
 pkg/models/shared/supersimv1ipcommand.go
@@ -70,3 +69,4 @@ pkg/models/shared/usagerecordenumgroupenum.go
 pkg/models/shared/usagerecordenumgranularityenum.go
 pkg/models/shared/simenumstatusupdateenum.go
 USAGE.md
+pkg/models/operations/options.go

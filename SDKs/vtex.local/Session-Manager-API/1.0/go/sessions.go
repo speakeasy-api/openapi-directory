@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -35,7 +36,7 @@ func newSessions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // The response should contain a session cookie. Further `POST` or `PATCH` requests will edit the existing session rather than creating a new one. All parameters in the body that are not within the public namespace will be ignored. Query string items will automatically be added to the public namespace. Cookies relevant to the session manager execution are also recorded.
 //
 // > The sessions API uses the `vtex_session` cookie to store the data required to identify the user and the session. This cookie is stored in the user's browser when the session is created and sent automatically in every request to that domain. You will have to reproduce that in order for it to work outside of a browser environment.
-func (s *sessions) Createnewsession(ctx context.Context, request operations.CreatenewsessionRequest) (*operations.CreatenewsessionResponse, error) {
+func (s *sessions) Createnewsession(ctx context.Context, request shared.CreatenewsessionRequest) (*operations.CreatenewsessionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sessions"
 
@@ -85,7 +86,7 @@ func (s *sessions) Createnewsession(ctx context.Context, request operations.Crea
 // As with the `POST` method, only keys inside the public namespace on the body are considered, and query parameters are automatically added to the public namespace.
 //
 // > The sessions API uses the `vtex_session` cookie to store the data required to identify the user and the session. This cookie is stored in the user's browser when the session is created and sent automatically in every request to that domain. You will have to reproduce that in order for it to work outside of a browser environment.
-func (s *sessions) Editsession(ctx context.Context, request operations.EditsessionRequest) (*operations.EditsessionResponse, error) {
+func (s *sessions) Editsession(ctx context.Context, request shared.EditsessionRequest) (*operations.EditsessionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sessions"
 
@@ -144,7 +145,7 @@ func (s *sessions) GetSession(ctx context.Context, request operations.GetSession
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

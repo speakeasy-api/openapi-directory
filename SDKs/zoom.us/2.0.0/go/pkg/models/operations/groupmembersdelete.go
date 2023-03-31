@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupMembersDeleteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupMembersDeletePathParams struct {
+type GroupMembersDeleteRequest struct {
 	// The group ID.<br>
 	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// The member ID.
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-}
-
-type GroupMembersDeleteRequest struct {
-	PathParams GroupMembersDeletePathParams
-	Security   GroupMembersDeleteSecurity
 }
 
 type GroupMembersDeleteResponse struct {

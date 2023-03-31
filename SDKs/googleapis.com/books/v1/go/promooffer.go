@@ -33,7 +33,7 @@ func newPromooffer(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // BooksPromoofferAccept - Accepts the promo offer.
-func (s *promooffer) BooksPromoofferAccept(ctx context.Context, request operations.BooksPromoofferAcceptRequest) (*operations.BooksPromoofferAcceptResponse, error) {
+func (s *promooffer) BooksPromoofferAccept(ctx context.Context, request operations.BooksPromoofferAcceptRequest, security operations.BooksPromoofferAcceptSecurity) (*operations.BooksPromoofferAcceptResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/promooffer/accept"
 
@@ -42,11 +42,11 @@ func (s *promooffer) BooksPromoofferAccept(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *promooffer) BooksPromoofferAccept(ctx context.Context, request operatio
 }
 
 // BooksPromoofferDismiss - Marks the promo offer as dismissed.
-func (s *promooffer) BooksPromoofferDismiss(ctx context.Context, request operations.BooksPromoofferDismissRequest) (*operations.BooksPromoofferDismissResponse, error) {
+func (s *promooffer) BooksPromoofferDismiss(ctx context.Context, request operations.BooksPromoofferDismissRequest, security operations.BooksPromoofferDismissSecurity) (*operations.BooksPromoofferDismissResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/promooffer/dismiss"
 
@@ -90,11 +90,11 @@ func (s *promooffer) BooksPromoofferDismiss(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *promooffer) BooksPromoofferDismiss(ctx context.Context, request operati
 }
 
 // BooksPromoofferGet - Returns a list of promo offers available to the user
-func (s *promooffer) BooksPromoofferGet(ctx context.Context, request operations.BooksPromoofferGetRequest) (*operations.BooksPromoofferGetResponse, error) {
+func (s *promooffer) BooksPromoofferGet(ctx context.Context, request operations.BooksPromoofferGetRequest, security operations.BooksPromoofferGetSecurity) (*operations.BooksPromoofferGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/promooffer/get"
 
@@ -138,11 +138,11 @@ func (s *promooffer) BooksPromoofferGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

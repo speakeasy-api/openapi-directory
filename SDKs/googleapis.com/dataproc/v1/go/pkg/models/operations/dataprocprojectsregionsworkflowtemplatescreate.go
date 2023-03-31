@@ -8,18 +8,14 @@ import (
 )
 
 type DataprocProjectsRegionsWorkflowTemplatesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsRegionsWorkflowTemplatesCreatePathParams struct {
-	// Required. The resource name of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.create, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.workflowTemplates.create, the resource name of the location has the following format: projects/{project_id}/locations/{location}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataprocProjectsRegionsWorkflowTemplatesCreateQueryParams struct {
+type DataprocProjectsRegionsWorkflowTemplatesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WorkflowTemplateInput *shared.WorkflowTemplateInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type DataprocProjectsRegionsWorkflowTemplatesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The resource name of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.create, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.workflowTemplates.create, the resource name of the location has the following format: projects/{project_id}/locations/{location}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type DataprocProjectsRegionsWorkflowTemplatesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsRegionsWorkflowTemplatesCreateRequest struct {
-	PathParams  DataprocProjectsRegionsWorkflowTemplatesCreatePathParams
-	QueryParams DataprocProjectsRegionsWorkflowTemplatesCreateQueryParams
-	Request     *shared.WorkflowTemplateInput `request:"mediaType=application/json"`
-	Security    DataprocProjectsRegionsWorkflowTemplatesCreateSecurity
 }
 
 type DataprocProjectsRegionsWorkflowTemplatesCreateResponse struct {

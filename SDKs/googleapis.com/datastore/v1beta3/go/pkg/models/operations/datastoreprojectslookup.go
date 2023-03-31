@@ -8,13 +8,13 @@ import (
 )
 
 type DatastoreProjectsLookupSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DatastoreProjectsLookupSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DatastoreProjectsLookupSecurity struct {
@@ -22,14 +22,10 @@ type DatastoreProjectsLookupSecurity struct {
 	Option2 *DatastoreProjectsLookupSecurityOption2 `security:"option"`
 }
 
-type DatastoreProjectsLookupPathParams struct {
-	// Required. The ID of the project against which to make the request.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DatastoreProjectsLookupQueryParams struct {
+type DatastoreProjectsLookupRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	LookupRequest *shared.LookupRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -44,19 +40,14 @@ type DatastoreProjectsLookupQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the project against which to make the request.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatastoreProjectsLookupRequest struct {
-	PathParams  DatastoreProjectsLookupPathParams
-	QueryParams DatastoreProjectsLookupQueryParams
-	Request     *shared.LookupRequest `request:"mediaType=application/json"`
-	Security    DatastoreProjectsLookupSecurity
 }
 
 type DatastoreProjectsLookupResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1AdminReportsIDReopenSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AdminReportsIDReopenPathParams struct {
-	// ID of the report
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AdminReportsIDReopenRequest struct {
-	PathParams PostAPIV1AdminReportsIDReopenPathParams
-	Security   PostAPIV1AdminReportsIDReopenSecurity
+	// ID of the report
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AdminReportsIDReopenResponse struct {

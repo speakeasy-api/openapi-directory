@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateSIPPhoneSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateSIPPhoneApplicationJSONTransportProtocolEnum - Protocols supported by the SIP provider.<br> The value must be either `UDP`, `TCP`, `TLS`, `AUTO`.
@@ -136,11 +135,6 @@ type CreateSIPPhoneApplicationJSON struct {
 	UserName string `json:"user_name"`
 	// The number to dial for checking voicemail.
 	VoiceMail string `json:"voice_mail"`
-}
-
-type CreateSIPPhoneRequest struct {
-	Request  *CreateSIPPhoneApplicationJSON `request:"mediaType=application/json"`
-	Security CreateSIPPhoneSecurity
 }
 
 type CreateSIPPhoneResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type FirebaseProjectsAndroidAppsShaDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseProjectsAndroidAppsShaDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseProjectsAndroidAppsShaDeleteSecurity struct {
@@ -22,12 +22,7 @@ type FirebaseProjectsAndroidAppsShaDeleteSecurity struct {
 	Option2 *FirebaseProjectsAndroidAppsShaDeleteSecurityOption2 `security:"option"`
 }
 
-type FirebaseProjectsAndroidAppsShaDeletePathParams struct {
-	// The resource name of the ShaCertificate to remove from the parent AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID /sha/SHA_HASH Refer to the `ShaCertificate` [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for details about PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values. You can obtain the full resource name of the `ShaCertificate` from the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original [`CreateShaCertificate`](../projects.androidApps.sha/create).
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type FirebaseProjectsAndroidAppsShaDeleteQueryParams struct {
+type FirebaseProjectsAndroidAppsShaDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type FirebaseProjectsAndroidAppsShaDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the ShaCertificate to remove from the parent AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID /sha/SHA_HASH Refer to the `ShaCertificate` [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for details about PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values. You can obtain the full resource name of the `ShaCertificate` from the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original [`CreateShaCertificate`](../projects.androidApps.sha/create).
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type FirebaseProjectsAndroidAppsShaDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseProjectsAndroidAppsShaDeleteRequest struct {
-	PathParams  FirebaseProjectsAndroidAppsShaDeletePathParams
-	QueryParams FirebaseProjectsAndroidAppsShaDeleteQueryParams
-	Security    FirebaseProjectsAndroidAppsShaDeleteSecurity
 }
 
 type FirebaseProjectsAndroidAppsShaDeleteResponse struct {

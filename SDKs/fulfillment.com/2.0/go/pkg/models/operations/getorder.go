@@ -8,25 +8,16 @@ import (
 )
 
 type GetOrderSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
-}
-
-type GetOrderPathParams struct {
-	// The FDC order Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetOrderQueryParams struct {
-	// Adds additional information to the response, uses a CSV format for multiple values.'
-	Hydrate []shared.HydrateParamEnum `queryParam:"style=form,explode=false,name=hydrate"`
-	// Providing your `merchantId` indicates the `id` is your `merchantOrderId`. Although it is not necessary to provide this it will speed up your results when using your `merchantOrderId` however it will slow your results when using the FDC provided `id`
-	MerchantID *int64 `queryParam:"style=form,explode=true,name=merchantId"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetOrderRequest struct {
-	PathParams  GetOrderPathParams
-	QueryParams GetOrderQueryParams
-	Security    GetOrderSecurity
+	// Adds additional information to the response, uses a CSV format for multiple values.'
+	Hydrate []shared.HydrateParamEnum `queryParam:"style=form,explode=false,name=hydrate"`
+	// The FDC order Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Providing your `merchantId` indicates the `id` is your `merchantOrderId`. Although it is not necessary to provide this it will speed up your results when using your `merchantOrderId` however it will slow your results when using the FDC provided `id`
+	MerchantID *int64 `queryParam:"style=form,explode=true,name=merchantId"`
 }
 
 type GetOrderResponse struct {

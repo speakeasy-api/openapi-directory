@@ -7,7 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BookingMybookingsQueryParams struct {
+type BookingMybookingsRequest struct {
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
 	// **email address** of the booker for the booking
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// The booking reference number of the item
@@ -16,17 +19,6 @@ type BookingMybookingsQueryParams struct {
 	ItineraryOrItemID *string `queryParam:"style=form,explode=true,name=itineraryOrItemId"`
 	// **voucher key** for the booking
 	VoucherKey *string `queryParam:"style=form,explode=true,name=voucherKey"`
-}
-
-type BookingMybookingsHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type BookingMybookingsRequest struct {
-	QueryParams BookingMybookingsQueryParams
-	Headers     BookingMybookingsHeaders
 }
 
 type BookingMybookings200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate struct {

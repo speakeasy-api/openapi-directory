@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUserByIDV2PathParams struct {
+type DeleteUserByIDV2Request struct {
 	// The UUID of the User.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteUserByIDV2Request struct {
-	PathParams DeleteUserByIDV2PathParams
 }
 
 type DeleteUserByIDV2Response struct {

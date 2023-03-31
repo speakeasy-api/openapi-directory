@@ -10,15 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesSetLabelsPathParams struct {
-	// The number that identifies the issue.
-	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesSetLabelsRequestBody4 struct {
 	Name string `json:"name"`
 }
@@ -177,8 +168,13 @@ func (u IssuesSetLabelsRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type IssuesSetLabelsRequest struct {
-	PathParams IssuesSetLabelsPathParams
-	Request    *IssuesSetLabelsRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesSetLabelsRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the issue.
+	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesSetLabelsResponse struct {

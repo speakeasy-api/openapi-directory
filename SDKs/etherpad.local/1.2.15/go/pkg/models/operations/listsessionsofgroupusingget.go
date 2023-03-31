@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListSessionsOfGroupUsingGETQueryParams struct {
-	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
-}
-
 type ListSessionsOfGroupUsingGETRequest struct {
-	QueryParams ListSessionsOfGroupUsingGETQueryParams
+	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
 }
 
 // ListSessionsOfGroupUsingGET500ApplicationJSON - internal api error (code 2)

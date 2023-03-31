@@ -4,37 +4,38 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.KgsearchEntitiesSearchRequest(
-    query_params=operations.KgsearchEntitiesSearchQueryParams(
-        dollar_xgafv="1",
-        access_token="ut",
-        alt="json",
-        callback="dolore",
-        fields="nihil",
-        ids=[
-            "saepe",
-            "illum",
-        ],
-        indent=False,
-        key="atque",
-        languages=[
-            "ipsum",
-            "ut",
-            "et",
-        ],
-        limit=8686164055761658444,
-        oauth_token="assumenda",
-        prefix=True,
-        pretty_print=False,
-        query="sed",
-        quota_user="ducimus",
-        types=[
-            "id",
-        ],
-        upload_type="enim",
-        upload_protocol="quia",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    ids=[
+        "corrupti",
+        "illum",
+        "vel",
+        "error",
+    ],
+    indent=False,
+    key="deserunt",
+    languages=[
+        "iure",
+        "magnam",
+    ],
+    limit=891773,
+    oauth_token="ipsa",
+    prefix=False,
+    pretty_print=False,
+    query="delectus",
+    quota_user="tempora",
+    types=[
+        "molestiae",
+        "minus",
+    ],
+    upload_type="placeat",
+    upload_protocol="voluptatum",
 )
     
 res = s.entities.kgsearch_entities_search(req)

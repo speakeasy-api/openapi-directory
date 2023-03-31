@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetCityRequest(
-    query_params=operations.GetCityQueryParams(
-        format="json",
-        key="ex",
-        lat=12.200000,
-        lng=33.200001,
-    ),
+    format="xml",
+    key="provident",
+    lat=7151.9,
+    lng=8442.66,
 )
     
 res = s.get_city(req)

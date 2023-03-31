@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryPredictionsRawPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QueryPredictionsRawHeaders struct {
+type QueryPredictionsRawRequest struct {
+	// Parameters used to query the predictions. Limited to combining 2 tags.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type QueryPredictionsRawRequest struct {
-	PathParams QueryPredictionsRawPathParams
-	Headers    QueryPredictionsRawHeaders
-	// Parameters used to query the predictions. Limited to combining 2 tags.
-	Request []byte `request:"mediaType=text/xml"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type QueryPredictionsRawResponse struct {

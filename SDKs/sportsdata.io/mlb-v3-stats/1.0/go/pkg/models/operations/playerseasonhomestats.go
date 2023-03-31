@@ -33,16 +33,12 @@ func (e *PlayerSeasonHomeStatsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayerSeasonHomeStatsPathParams struct {
+type PlayerSeasonHomeStatsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerSeasonHomeStatsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
 	// <br>Examples: <code>2017</code>, <code>2018</code>.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type PlayerSeasonHomeStatsRequest struct {
-	PathParams PlayerSeasonHomeStatsPathParams
 }
 
 type PlayerSeasonHomeStatsResponse struct {

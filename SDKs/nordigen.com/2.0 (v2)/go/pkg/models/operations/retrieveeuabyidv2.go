@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveEUAByIDV2PathParams struct {
+type RetrieveEUAByIDV2Request struct {
 	// A UUID string identifying this end user agreement.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetrieveEUAByIDV2Request struct {
-	PathParams RetrieveEUAByIDV2PathParams
 }
 
 type RetrieveEUAByIDV2Response struct {

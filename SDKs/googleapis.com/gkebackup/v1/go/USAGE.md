@@ -14,74 +14,67 @@ func main() {
     s := sdk.New()
 
     req := operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest{
-        Security: operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            BackupID: "unde",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.BackupInput{
+        DollarXgafv: "2",
+        BackupInput: &shared.BackupInput{
             ClusterMetadata: &shared.ClusterMetadata{
-                AnthosVersion: "iure",
+                AnthosVersion: "provident",
                 BackupCrdVersions: map[string]string{
-                    "debitis": "ipsa",
-                    "delectus": "tempora",
+                    "quibusdam": "unde",
+                    "nulla": "corrupti",
+                    "illum": "vel",
                 },
-                Cluster: "suscipit",
-                GkeVersion: "molestiae",
-                K8sVersion: "minus",
+                Cluster: "error",
+                GkeVersion: "deserunt",
+                K8sVersion: "suscipit",
             },
-            DeleteLockDays: 812169,
-            Description: "voluptatum",
+            DeleteLockDays: 437587,
+            Description: "magnam",
             EncryptionKey: &shared.EncryptionKey{
-                GcpKmsEncryptionKey: "iusto",
+                GcpKmsEncryptionKey: "debitis",
             },
             Labels: map[string]string{
-                "nisi": "recusandae",
-                "temporibus": "ab",
-                "quis": "veritatis",
+                "delectus": "tempora",
             },
-            RetainDays: 648172,
+            RetainDays: 383441,
             SelectedApplications: &shared.NamespacedNames{
                 NamespacedNames: []shared.NamespacedName{
                     shared.NamespacedName{
-                        Name: "ipsam",
-                        Namespace: "repellendus",
+                        Name: "minus",
+                        Namespace: "placeat",
+                    },
+                    shared.NamespacedName{
+                        Name: "voluptatum",
+                        Namespace: "iusto",
                     },
                 },
             },
             SelectedNamespaces: &shared.Namespaces{
                 Namespaces: []string{
-                    "quo",
-                    "odit",
-                    "at",
-                    "at",
+                    "nisi",
+                    "recusandae",
+                    "temporibus",
                 },
             },
         },
+        AccessToken: "ab",
+        Alt: "media",
+        BackupID: "veritatis",
+        Callback: "deserunt",
+        Fields: "perferendis",
+        Key: "ipsam",
+        OauthToken: "repellendus",
+        Parent: "sapiente",
+        PrettyPrint: false,
+        QuotaUser: "quo",
+        UploadType: "odit",
+        UploadProtocol: "at",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.GkebackupProjectsLocationsBackupPlansBackupsCreate(ctx, req)
+    res, err := s.Projects.GkebackupProjectsLocationsBackupPlansBackupsCreate(ctx, req, operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

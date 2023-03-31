@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type HistoryListQueryParams struct {
+type HistoryListRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Display format. Leave blank or set to `full` or `parent`.
@@ -33,10 +33,6 @@ type HistoryListQueryParams struct {
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 	// Leave blank or set to a date/time to filter earlier entries.
 	StartAt *time.Time `queryParam:"style=form,explode=true,name=start_at"`
-}
-
-type HistoryListRequest struct {
-	QueryParams HistoryListQueryParams
 }
 
 type HistoryListResponse struct {

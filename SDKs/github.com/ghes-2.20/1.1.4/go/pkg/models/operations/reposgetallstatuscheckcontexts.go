@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetAllStatusCheckContextsPathParams struct {
+type ReposGetAllStatusCheckContextsRequest struct {
 	// The name of the branch.
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetAllStatusCheckContextsRequest struct {
-	PathParams ReposGetAllStatusCheckContextsPathParams
 }
 
 type ReposGetAllStatusCheckContextsResponse struct {

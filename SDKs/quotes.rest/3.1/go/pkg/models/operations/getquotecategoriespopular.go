@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteCategoriesPopularSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteCategoriesPopularQueryParams struct {
+type GetQuoteCategoriesPopularRequest struct {
 	// Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Response is paged. This parameter controls where response starts the listing at
 	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetQuoteCategoriesPopularRequest struct {
-	QueryParams GetQuoteCategoriesPopularQueryParams
-	Security    GetQuoteCategoriesPopularSecurity
 }
 
 type GetQuoteCategoriesPopularResponse struct {

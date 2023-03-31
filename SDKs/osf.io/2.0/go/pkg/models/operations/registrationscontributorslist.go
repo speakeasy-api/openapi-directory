@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type RegistrationsContributorsListPathParams struct {
+type RegistrationsContributorsListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsContributorsListRequest struct {
-	PathParams RegistrationsContributorsListPathParams
 }
 
 // RegistrationsContributorsListContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.

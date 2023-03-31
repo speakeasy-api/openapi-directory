@@ -38,9 +38,9 @@ func newMacros(defaultClient, securityClient HTTPClient, serverURL, language, sd
 //	<BR>Note: Macros that support parameters can be also run from GUI (Views in Home Portal),so they should also handle the empty parameters map (e.g. by defining default values when parameters are not provided).
 func (s *macros) Run(ctx context.Context, request operations.RunRequest) (*operations.RunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/macros/{macroId}/run", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/macros/{macroId}/run", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MacroRequestDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

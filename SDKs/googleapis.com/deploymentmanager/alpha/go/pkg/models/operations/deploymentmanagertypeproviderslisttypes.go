@@ -8,23 +8,23 @@ import (
 )
 
 type DeploymentmanagerTypeProvidersListTypesSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerTypeProvidersListTypesSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerTypeProvidersListTypesSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerTypeProvidersListTypesSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerTypeProvidersListTypesSecurity struct {
@@ -34,14 +34,7 @@ type DeploymentmanagerTypeProvidersListTypesSecurity struct {
 	Option4 *DeploymentmanagerTypeProvidersListTypesSecurityOption4 `security:"option"`
 }
 
-type DeploymentmanagerTypeProvidersListTypesPathParams struct {
-	// The project ID for this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// The name of the type provider for this request.
-	TypeProvider string `pathParam:"style=simple,explode=false,name=typeProvider"`
-}
-
-type DeploymentmanagerTypeProvidersListTypesQueryParams struct {
+type DeploymentmanagerTypeProvidersListTypesRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -66,18 +59,16 @@ type DeploymentmanagerTypeProvidersListTypesQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The name of the type provider for this request.
+	TypeProvider string `pathParam:"style=simple,explode=false,name=typeProvider"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DeploymentmanagerTypeProvidersListTypesRequest struct {
-	PathParams  DeploymentmanagerTypeProvidersListTypesPathParams
-	QueryParams DeploymentmanagerTypeProvidersListTypesQueryParams
-	Security    DeploymentmanagerTypeProvidersListTypesSecurity
 }
 
 type DeploymentmanagerTypeProvidersListTypesResponse struct {

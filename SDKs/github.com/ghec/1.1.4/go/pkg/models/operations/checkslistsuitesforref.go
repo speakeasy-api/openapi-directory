@@ -7,29 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksListSuitesForRefPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// ref parameter
-	Ref string `pathParam:"style=simple,explode=false,name=ref"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksListSuitesForRefQueryParams struct {
+type ChecksListSuitesForRefRequest struct {
 	// Filters check suites by GitHub App `id`.
 	AppID *int64 `queryParam:"style=form,explode=true,name=app_id"`
 	// Returns check runs with the specified `name`.
 	CheckName *string `queryParam:"style=form,explode=true,name=check_name"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ChecksListSuitesForRefRequest struct {
-	PathParams  ChecksListSuitesForRefPathParams
-	QueryParams ChecksListSuitesForRefQueryParams
+	// ref parameter
+	Ref string `pathParam:"style=simple,explode=false,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ChecksListSuitesForRef200ApplicationJSON - Response

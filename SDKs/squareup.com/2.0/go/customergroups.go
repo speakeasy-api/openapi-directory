@@ -36,7 +36,7 @@ func newCustomerGroups(defaultClient, securityClient HTTPClient, serverURL, lang
 // Creates a new customer group for a business.
 //
 // The request must include the `name` value of the group.
-func (s *customerGroups) CreateCustomerGroup(ctx context.Context, request operations.CreateCustomerGroupRequest) (*operations.CreateCustomerGroupResponse, error) {
+func (s *customerGroups) CreateCustomerGroup(ctx context.Context, request shared.CreateCustomerGroupRequest, security operations.CreateCustomerGroupSecurity) (*operations.CreateCustomerGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customers/groups"
 
@@ -55,7 +55,7 @@ func (s *customerGroups) CreateCustomerGroup(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,16 +91,16 @@ func (s *customerGroups) CreateCustomerGroup(ctx context.Context, request operat
 
 // DeleteCustomerGroup - DeleteCustomerGroup
 // Deletes a customer group as identified by the `group_id` value.
-func (s *customerGroups) DeleteCustomerGroup(ctx context.Context, request operations.DeleteCustomerGroupRequest) (*operations.DeleteCustomerGroupResponse, error) {
+func (s *customerGroups) DeleteCustomerGroup(ctx context.Context, request operations.DeleteCustomerGroupRequest, security operations.DeleteCustomerGroupSecurity) (*operations.DeleteCustomerGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *customerGroups) DeleteCustomerGroup(ctx context.Context, request operat
 
 // ListCustomerGroups - ListCustomerGroups
 // Retrieves the list of customer groups of a business.
-func (s *customerGroups) ListCustomerGroups(ctx context.Context, request operations.ListCustomerGroupsRequest) (*operations.ListCustomerGroupsResponse, error) {
+func (s *customerGroups) ListCustomerGroups(ctx context.Context, request operations.ListCustomerGroupsRequest, security operations.ListCustomerGroupsSecurity) (*operations.ListCustomerGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customers/groups"
 
@@ -145,11 +145,11 @@ func (s *customerGroups) ListCustomerGroups(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,16 +185,16 @@ func (s *customerGroups) ListCustomerGroups(ctx context.Context, request operati
 
 // RetrieveCustomerGroup - RetrieveCustomerGroup
 // Retrieves a specific customer group as identified by the `group_id` value.
-func (s *customerGroups) RetrieveCustomerGroup(ctx context.Context, request operations.RetrieveCustomerGroupRequest) (*operations.RetrieveCustomerGroupResponse, error) {
+func (s *customerGroups) RetrieveCustomerGroup(ctx context.Context, request operations.RetrieveCustomerGroupRequest, security operations.RetrieveCustomerGroupSecurity) (*operations.RetrieveCustomerGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,11 +230,11 @@ func (s *customerGroups) RetrieveCustomerGroup(ctx context.Context, request oper
 
 // UpdateCustomerGroup - UpdateCustomerGroup
 // Updates a customer group as identified by the `group_id` value.
-func (s *customerGroups) UpdateCustomerGroup(ctx context.Context, request operations.UpdateCustomerGroupRequest) (*operations.UpdateCustomerGroupResponse, error) {
+func (s *customerGroups) UpdateCustomerGroup(ctx context.Context, request operations.UpdateCustomerGroupRequest, security operations.UpdateCustomerGroupSecurity) (*operations.UpdateCustomerGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCustomerGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -249,7 +249,7 @@ func (s *customerGroups) UpdateCustomerGroup(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

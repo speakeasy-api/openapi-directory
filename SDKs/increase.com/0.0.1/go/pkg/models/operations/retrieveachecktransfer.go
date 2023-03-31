@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveACheckTransferPathParams struct {
-	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
-}
-
 type RetrieveACheckTransferRequest struct {
-	PathParams RetrieveACheckTransferPathParams
+	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
 type RetrieveACheckTransferDefaultApplicationJSON13StatusEnum string

@@ -8,20 +8,17 @@ import (
 )
 
 type Adexchangebuyer2AccountsCreativesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsCreativesListPathParams struct {
-	// The account to list the creatives from. Specify "-" to list all creatives the current user has access to.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type Adexchangebuyer2AccountsCreativesListQueryParams struct {
+type Adexchangebuyer2AccountsCreativesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The account to list the creatives from. Specify "-" to list all creatives the current user has access to.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -46,12 +43,6 @@ type Adexchangebuyer2AccountsCreativesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsCreativesListRequest struct {
-	PathParams  Adexchangebuyer2AccountsCreativesListPathParams
-	QueryParams Adexchangebuyer2AccountsCreativesListQueryParams
-	Security    Adexchangebuyer2AccountsCreativesListSecurity
 }
 
 type Adexchangebuyer2AccountsCreativesListResponse struct {

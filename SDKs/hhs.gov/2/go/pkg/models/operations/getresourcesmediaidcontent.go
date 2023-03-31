@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetResourcesMediaIDContentPathParams struct {
-	// The id of the media to show content for.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDContentQueryParams struct {
+type GetResourcesMediaIDContentRequest struct {
 	// The method that called this method
 	CalledByBuild *bool `queryParam:"style=form,explode=false,name=calledByBuild"`
-}
-
-type GetResourcesMediaIDContentRequest struct {
-	PathParams  GetResourcesMediaIDContentPathParams
-	QueryParams GetResourcesMediaIDContentQueryParams
+	// The id of the media to show content for.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetResourcesMediaIDContentResponse struct {

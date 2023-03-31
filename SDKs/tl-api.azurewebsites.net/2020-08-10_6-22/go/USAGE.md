@@ -13,29 +13,25 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Bearer: shared.SchemeBearer{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            Bearer: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
-    req := operations.ArticleAddMeasureUnitRequest{
-        Request: []shared.MeasureUnitDTO{
-            shared.MeasureUnitDTO{
-                ID: 592845,
-                Name: "distinctio",
-                Type: "quibusdam",
-            },
-            shared.MeasureUnitDTO{
-                ID: 602763,
-                Name: "nulla",
-                Type: "corrupti",
-            },
-            shared.MeasureUnitDTO{
-                ID: 847252,
-                Name: "vel",
-                Type: "error",
-            },
+    req := []shared.MeasureUnitDTO{
+        shared.MeasureUnitDTO{
+            ID: 592845,
+            Name: "distinctio",
+            Type: "quibusdam",
+        },
+        shared.MeasureUnitDTO{
+            ID: 602763,
+            Name: "nulla",
+            Type: "corrupti",
+        },
+        shared.MeasureUnitDTO{
+            ID: 847252,
+            Name: "vel",
+            Type: "error",
         },
     }
 

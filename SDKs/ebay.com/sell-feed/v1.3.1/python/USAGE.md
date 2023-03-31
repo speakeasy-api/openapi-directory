@@ -4,33 +4,33 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateCustomerServiceMetricTaskRequest(
-    security=operations.CreateCustomerServiceMetricTaskSecurity(
-        api_auth=shared.SchemeAPIAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    headers=operations.CreateCustomerServiceMetricTaskHeaders(
-        accept_language="voluptas",
-    ),
-    request=shared.CreateServiceMetricsTaskRequest(
-        feed_type="et",
+    create_service_metrics_task_request=shared.CreateServiceMetricsTaskRequest(
+        feed_type="corrupti",
         filter_criteria=shared.CustomerServiceMetricsFilterCriteria(
-            customer_service_metric_type="culpa",
-            evaluation_marketplace_id="odio",
+            customer_service_metric_type="provident",
+            evaluation_marketplace_id="distinctio",
             listing_categories=[
-                "voluptas",
+                "unde",
+                "nulla",
+                "corrupti",
+                "illum",
             ],
             shipping_regions=[
-                "corrupti",
+                "error",
+                "deserunt",
             ],
         ),
-        schema_version="qui",
+        schema_version="suscipit",
     ),
+    accept_language="iure",
 )
     
-res = s.customer_service_metric_task.create_customer_service_metric_task(req)
+res = s.customer_service_metric_task.create_customer_service_metric_task(req, operations.CreateCustomerServiceMetricTaskSecurity(
+    api_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.status_code == 200:
     # handle response

@@ -14,12 +14,8 @@ var UpdateTrunkServerList = []string{
 }
 
 type UpdateTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTrunkPathParams struct {
-	// The unique string that we created to identify the OriginationUrl resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateTrunkUpdateTrunkRequestDisasterRecoveryMethodEnum - The HTTP method we should use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.
@@ -76,10 +72,9 @@ type UpdateTrunkUpdateTrunkRequest struct {
 }
 
 type UpdateTrunkRequest struct {
-	PathParams UpdateTrunkPathParams
-	Request    *UpdateTrunkUpdateTrunkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTrunkSecurity
-	ServerURL  *string
+	RequestBody *UpdateTrunkUpdateTrunkRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the OriginationUrl resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateTrunkResponse struct {

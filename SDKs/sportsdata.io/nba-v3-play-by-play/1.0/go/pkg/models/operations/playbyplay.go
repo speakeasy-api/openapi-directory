@@ -33,15 +33,11 @@ func (e *PlayByPlayFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayByPlayPathParams struct {
+type PlayByPlayRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayByPlayFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The GameID of an NBA game.  GameIDs can be found in the Games API.  Valid entries are <code>14620</code>, <code>16905</code>, etc.
 	Gameid string `pathParam:"style=simple,explode=false,name=gameid"`
-}
-
-type PlayByPlayRequest struct {
-	PathParams PlayByPlayPathParams
 }
 
 type PlayByPlayResponse struct {

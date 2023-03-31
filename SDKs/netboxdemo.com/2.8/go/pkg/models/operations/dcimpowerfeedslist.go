@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerFeedsListQueryParams struct {
+type DcimPowerFeedsListRequest struct {
 	Amperage       *string `queryParam:"style=form,explode=true,name=amperage"`
 	AmperageGt     *string `queryParam:"style=form,explode=true,name=amperage__gt"`
 	AmperageGte    *string `queryParam:"style=form,explode=true,name=amperage__gte"`
@@ -75,10 +75,6 @@ type DcimPowerFeedsListQueryParams struct {
 	VoltageLt     *string `queryParam:"style=form,explode=true,name=voltage__lt"`
 	VoltageLte    *string `queryParam:"style=form,explode=true,name=voltage__lte"`
 	VoltageN      *string `queryParam:"style=form,explode=true,name=voltage__n"`
-}
-
-type DcimPowerFeedsListRequest struct {
-	QueryParams DcimPowerFeedsListQueryParams
 }
 
 type DcimPowerFeedsList200ApplicationJSON struct {

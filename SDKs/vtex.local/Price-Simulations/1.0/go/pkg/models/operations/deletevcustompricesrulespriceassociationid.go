@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteVCustomPricesRulesPriceAssociationIDPathParams struct {
-	// Price Association unique identifier
-	PriceAssociationID int64 `pathParam:"style=simple,explode=false,name=priceAssociationId"`
-}
-
-type DeleteVCustomPricesRulesPriceAssociationIDHeaders struct {
+type DeleteVCustomPricesRulesPriceAssociationIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeleteVCustomPricesRulesPriceAssociationIDRequest struct {
-	PathParams DeleteVCustomPricesRulesPriceAssociationIDPathParams
-	Headers    DeleteVCustomPricesRulesPriceAssociationIDHeaders
+	// Price Association unique identifier
+	PriceAssociationID int64 `pathParam:"style=simple,explode=false,name=priceAssociationId"`
 }
 
 type DeleteVCustomPricesRulesPriceAssociationIDResponse struct {

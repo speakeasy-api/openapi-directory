@@ -8,13 +8,13 @@ import (
 )
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity struct {
@@ -22,14 +22,10 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity struct {
 	Option2 *IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption2 `security:"option"`
 }
 
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchPathParams struct {
-	// The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchQueryParams struct {
+type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                     *shared.XgafvEnum                                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig *shared.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,13 +50,6 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest struct {
-	PathParams  IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchPathParams
-	QueryParams IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchQueryParams
-	Request     *shared.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig `request:"mediaType=application/json"`
-	Security    IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse struct {

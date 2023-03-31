@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryUsersPhotosGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersPhotosGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersPhotosGetSecurity struct {
@@ -22,12 +22,7 @@ type DirectoryUsersPhotosGetSecurity struct {
 	Option2 *DirectoryUsersPhotosGetSecurityOption2 `security:"option"`
 }
 
-type DirectoryUsersPhotosGetPathParams struct {
-	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type DirectoryUsersPhotosGetQueryParams struct {
+type DirectoryUsersPhotosGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,12 +45,8 @@ type DirectoryUsersPhotosGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryUsersPhotosGetRequest struct {
-	PathParams  DirectoryUsersPhotosGetPathParams
-	QueryParams DirectoryUsersPhotosGetQueryParams
-	Security    DirectoryUsersPhotosGetSecurity
+	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryUsersPhotosGetResponse struct {

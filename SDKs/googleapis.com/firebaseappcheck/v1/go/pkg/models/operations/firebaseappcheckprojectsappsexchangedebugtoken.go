@@ -8,13 +8,13 @@ import (
 )
 
 type FirebaseappcheckProjectsAppsExchangeDebugTokenSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsAppsExchangeDebugTokenSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsAppsExchangeDebugTokenSecurity struct {
@@ -22,18 +22,16 @@ type FirebaseappcheckProjectsAppsExchangeDebugTokenSecurity struct {
 	Option2 *FirebaseappcheckProjectsAppsExchangeDebugTokenSecurityOption2 `security:"option"`
 }
 
-type FirebaseappcheckProjectsAppsExchangeDebugTokenPathParams struct {
-	// Required. The relative resource name of the app, in the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be replaced with the project ID of the Firebase project. Learn more about using project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
-	App string `pathParam:"style=simple,explode=false,name=app"`
-}
-
-type FirebaseappcheckProjectsAppsExchangeDebugTokenQueryParams struct {
+type FirebaseappcheckProjectsAppsExchangeDebugTokenRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                       *shared.XgafvEnum                                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest *shared.GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The relative resource name of the app, in the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be replaced with the project ID of the Firebase project. Learn more about using project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+	App string `pathParam:"style=simple,explode=false,name=app"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -50,13 +48,6 @@ type FirebaseappcheckProjectsAppsExchangeDebugTokenQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappcheckProjectsAppsExchangeDebugTokenRequest struct {
-	PathParams  FirebaseappcheckProjectsAppsExchangeDebugTokenPathParams
-	QueryParams FirebaseappcheckProjectsAppsExchangeDebugTokenQueryParams
-	Request     *shared.GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest `request:"mediaType=application/json"`
-	Security    FirebaseappcheckProjectsAppsExchangeDebugTokenSecurity
 }
 
 type FirebaseappcheckProjectsAppsExchangeDebugTokenResponse struct {

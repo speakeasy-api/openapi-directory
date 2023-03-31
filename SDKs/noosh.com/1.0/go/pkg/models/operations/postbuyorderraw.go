@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBuyOrderRawPathParams struct {
+type PostBuyOrderRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type PostBuyOrderRawRequest struct {
-	PathParams PostBuyOrderRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type PostBuyOrderRawResponse struct {

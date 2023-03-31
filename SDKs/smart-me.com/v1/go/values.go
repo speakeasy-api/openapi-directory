@@ -34,7 +34,7 @@ func newValues(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ValuesGet - Gets all (last) values of a device
 func (s *values) ValuesGet(ctx context.Context, request operations.ValuesGetRequest) (*operations.ValuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Values/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/Values/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

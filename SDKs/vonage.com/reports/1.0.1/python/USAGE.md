@@ -4,32 +4,26 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetCallLogsRequest(
-    security=operations.GetCallLogsSecurity(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GetCallLogsPathParams(
-        account_id="nisi",
-    ),
-    query_params=operations.GetCallLogsQueryParams(
-        destination_user="vel",
-        direction="Outbound",
-        end_gte="harum",
-        end_lte="ad",
-        from_="aut",
-        page=97.099998,
-        page_size=8.100000,
-        source_user="qui",
-        start_gte="ipsum",
-        start_lte="dolorum",
-        to="error",
-    ),
+    account_id="corrupti",
+    destination_user="provident",
+    direction="Outbound",
+    end_gte="quibusdam",
+    end_lte="unde",
+    from_="nulla",
+    page=5448.83,
+    page_size=8472.52,
+    source_user="vel",
+    start_gte="error",
+    start_lte="deserunt",
+    to="suscipit",
 )
     
-res = s.get_call_logs(req)
+res = s.get_call_logs(req, operations.GetCallLogsSecurity(
+    bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+))
 
 if res.call_logs_hal_response is not None:
     # handle response

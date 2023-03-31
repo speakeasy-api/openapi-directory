@@ -12,12 +12,8 @@ import (
 	"time"
 )
 
-type GetTrackQueryParams struct {
-	TrackingNumber *string `queryParam:"style=form,explode=true,name=trackingNumber"`
-}
-
 type GetTrackRequest struct {
-	QueryParams GetTrackQueryParams
+	TrackingNumber *string `queryParam:"style=form,explode=true,name=trackingNumber"`
 }
 
 type GetTrackTrackingResponseFeatureGeometryCoordinatesType string

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetarchivedbycouponcodePathParams struct {
-	// Coupon Code
-	CouponCode string `pathParam:"style=simple,explode=false,name=couponCode"`
-}
-
-type GetarchivedbycouponcodeHeaders struct {
+type GetarchivedbycouponcodeRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetarchivedbycouponcodeRequest struct {
-	PathParams GetarchivedbycouponcodePathParams
-	Headers    GetarchivedbycouponcodeHeaders
+	// Coupon Code
+	CouponCode string `pathParam:"style=simple,explode=false,name=couponCode"`
 }
 
 // Getarchivedbycouponcode200ApplicationJSON - OK

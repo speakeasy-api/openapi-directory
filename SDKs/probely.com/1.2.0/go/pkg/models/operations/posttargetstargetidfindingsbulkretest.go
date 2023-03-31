@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsTargetIDFindingsBulkRetestPathParams struct {
+type PostTargetsTargetIDFindingsBulkRetestRequest struct {
+	FindingBulkRetest shared.FindingBulkRetest `request:"mediaType=application/json"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PostTargetsTargetIDFindingsBulkRetestRequest struct {
-	PathParams PostTargetsTargetIDFindingsBulkRetestPathParams
-	Request    shared.FindingBulkRetest `request:"mediaType=application/json"`
 }
 
 // PostTargetsTargetIDFindingsBulkRetest404ApplicationJSON - Not found

@@ -8,23 +8,23 @@ import (
 )
 
 type DriveFilesTrashSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesTrashSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesTrashSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesTrashSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesTrashSecurity struct {
@@ -34,16 +34,13 @@ type DriveFilesTrashSecurity struct {
 	Option4 *DriveFilesTrashSecurityOption4 `security:"option"`
 }
 
-type DriveFilesTrashPathParams struct {
-	// The ID of the file to trash.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DriveFilesTrashQueryParams struct {
+type DriveFilesTrashRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file to trash.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// A comma-separated list of IDs of labels to include in the labelInfo part of the response.
 	IncludeLabels *string `queryParam:"style=form,explode=true,name=includeLabels"`
 	// Specifies which additional view's permissions to include in the response. Only 'published' is supported.
@@ -62,12 +59,6 @@ type DriveFilesTrashQueryParams struct {
 	SupportsTeamDrives *bool `queryParam:"style=form,explode=true,name=supportsTeamDrives"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesTrashRequest struct {
-	PathParams  DriveFilesTrashPathParams
-	QueryParams DriveFilesTrashQueryParams
-	Security    DriveFilesTrashSecurity
 }
 
 type DriveFilesTrashResponse struct {

@@ -1,9 +1,0 @@
-import dataclasses
-from enum import Enum
-
-class VideoFormatsRequestEnum(str, Enum):
-    SD = "sd"
-    HD = "hd"
-    FOURK = "4k"
-    HD_WEB = "hd_web"
-

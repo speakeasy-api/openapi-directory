@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetPrimaryIpsIDPathParams struct {
+type GetPrimaryIpsIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPrimaryIpsIDRequest struct {
-	PathParams GetPrimaryIpsIDPathParams
 }
 
 // GetPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum - Resource type the Primary IP can be assigned to

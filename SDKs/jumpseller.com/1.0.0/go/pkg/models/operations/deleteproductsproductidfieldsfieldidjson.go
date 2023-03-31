@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteProductsProductIDFieldsFieldIDJSONPathParams struct {
-	// Id of the Custom Field Value.
-	FieldID int `pathParam:"style=simple,explode=false,name=field_id"`
-	// Id of the Product.
-	ProductID int `pathParam:"style=simple,explode=false,name=product_id"`
-}
-
-type DeleteProductsProductIDFieldsFieldIDJSONQueryParams struct {
+type DeleteProductsProductIDFieldsFieldIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Custom Field Value.
+	FieldID int `pathParam:"style=simple,explode=false,name=field_id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteProductsProductIDFieldsFieldIDJSONRequest struct {
-	PathParams  DeleteProductsProductIDFieldsFieldIDJSONPathParams
-	QueryParams DeleteProductsProductIDFieldsFieldIDJSONQueryParams
+	// Id of the Product.
+	ProductID int `pathParam:"style=simple,explode=false,name=product_id"`
 }
 
 type DeleteProductsProductIDFieldsFieldIDJSONResponse struct {

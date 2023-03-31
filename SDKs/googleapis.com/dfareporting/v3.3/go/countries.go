@@ -32,20 +32,20 @@ func newCountries(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DfareportingCountriesGet - Gets one country by ID.
-func (s *countries) DfareportingCountriesGet(ctx context.Context, request operations.DfareportingCountriesGetRequest) (*operations.DfareportingCountriesGetResponse, error) {
+func (s *countries) DfareportingCountriesGet(ctx context.Context, request operations.DfareportingCountriesGetRequest, security operations.DfareportingCountriesGetSecurity) (*operations.DfareportingCountriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries/{dartId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries/{dartId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *countries) DfareportingCountriesGet(ctx context.Context, request operat
 }
 
 // DfareportingCountriesList - Retrieves a list of countries.
-func (s *countries) DfareportingCountriesList(ctx context.Context, request operations.DfareportingCountriesListRequest) (*operations.DfareportingCountriesListResponse, error) {
+func (s *countries) DfareportingCountriesList(ctx context.Context, request operations.DfareportingCountriesListRequest, security operations.DfareportingCountriesListSecurity) (*operations.DfareportingCountriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

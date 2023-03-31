@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams struct {
+type GetNetworkWirelessSsidFirewallL3FirewallRulesRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidFirewallL3FirewallRulesRequest struct {
-	PathParams GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams
 }
 
 type GetNetworkWirelessSsidFirewallL3FirewallRulesResponse struct {

@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetVersionSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetVersionPathParams struct {
-	// Semver version indentifier
-	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetVersionRequest struct {
-	PathParams GetVersionPathParams
-	Security   GetVersionSecurity
+	// Semver version indentifier
+	VersionID string `pathParam:"style=simple,explode=false,name=versionId"`
 }
 
 type GetVersionResponse struct {

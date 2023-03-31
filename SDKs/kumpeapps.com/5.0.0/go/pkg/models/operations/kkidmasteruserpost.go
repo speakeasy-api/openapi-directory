@@ -8,10 +8,10 @@ import (
 )
 
 type KkidMasteruserPostSecurity struct {
-	AppKey shared.SchemeAppKey `security:"scheme,type=apiKey,subtype=header"`
+	AppKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
-type KkidMasteruserPostQueryParams struct {
+type KkidMasteruserPostRequest struct {
 	// email address of user to create
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// First Name of user to create
@@ -22,11 +22,6 @@ type KkidMasteruserPostQueryParams struct {
 	Password string `queryParam:"style=form,explode=true,name=password"`
 	// username of user to create
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type KkidMasteruserPostRequest struct {
-	QueryParams KkidMasteruserPostQueryParams
-	Security    KkidMasteruserPostSecurity
 }
 
 type KkidMasteruserPostResponse struct {

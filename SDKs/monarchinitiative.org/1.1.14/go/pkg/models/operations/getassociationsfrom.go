@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssociationsFromPathParams struct {
-	// Return associations emanating from this node, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357 (If ID is from an ontology then results would include inferred associations, by default)
-	Subject string `pathParam:"style=simple,explode=false,name=subject"`
-}
-
-type GetAssociationsFromQueryParams struct {
+type GetAssociationsFromRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
 	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
 	// If true, excludes associations that involve IEAs (ECO:0000501)
@@ -25,15 +20,12 @@ type GetAssociationsFromQueryParams struct {
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	// Return associations emanating from this node, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357 (If ID is from an ontology then results would include inferred associations, by default)
+	Subject string `pathParam:"style=simple,explode=false,name=subject"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetAssociationsFromRequest struct {
-	PathParams  GetAssociationsFromPathParams
-	QueryParams GetAssociationsFromQueryParams
 }
 
 type GetAssociationsFromResponse struct {

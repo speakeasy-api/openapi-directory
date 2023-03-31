@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileActionMovePathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type FileActionMoveRequestBody struct {
 	// Move destination path.
 	Destination string `multipartForm:"name=destination"`
 }
 
 type FileActionMoveRequest struct {
-	PathParams FileActionMovePathParams
-	Request    FileActionMoveRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody FileActionMoveRequestBody `request:"mediaType=multipart/form-data"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type FileActionMoveResponse struct {

@@ -36,22 +36,32 @@ func newPricesLegacyV1(defaultClient, securityClient HTTPClient, serverURL, lang
 // > If your account is using Pricing v2, you should avoid using these routes. Please refer directly to the [Pricing v2 API](https://documenter.getpostman.com/view/101975/vtex-pricing-api/6YsWxKT)
 //
 // > If you are still using Pricing v1, please [check if your store is able to migrate to take advantage of many more features](https://help.vtex.com/en/faq/how-to-migrate-a-store-to-pricing-v2)
-func (s *pricesLegacyV1) DeletebyskuID(ctx context.Context, request operations.DeletebyskuIDRequest) (*operations.DeletebyskuIDResponse, error) {
-	baseURL := operations.DeletebyskuIDServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *pricesLegacyV1) DeletebyskuID(ctx context.Context, request operations.DeletebyskuIDRequest, opts ...operations.Option) (*operations.DeletebyskuIDResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeletebyskuIDServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,22 +95,32 @@ func (s *pricesLegacyV1) DeletebyskuID(ctx context.Context, request operations.D
 // > If your account is using Pricing v2, you should avoid using these routes. Please refer directly to the [Pricing v2 API](https://documenter.getpostman.com/view/101975/vtex-pricing-api/6YsWxKT)
 //
 // > If you are still using Pricing v1, please [check if your store is able to migrate to take advantage of many more features](https://help.vtex.com/en/faq/how-to-migrate-a-store-to-pricing-v2)
-func (s *pricesLegacyV1) Getallpaged(ctx context.Context, request operations.GetallpagedRequest) (*operations.GetallpagedResponse, error) {
-	baseURL := operations.GetallpagedServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *pricesLegacyV1) Getallpaged(ctx context.Context, request operations.GetallpagedRequest, opts ...operations.Option) (*operations.GetallpagedResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/all/{page}/{pageSize}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.GetallpagedServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/all/{page}/{pageSize}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -134,15 +154,25 @@ func (s *pricesLegacyV1) Getallpaged(ctx context.Context, request operations.Get
 // > If your account is using Pricing v2, you should avoid using these routes. Please refer directly to the [Pricing v2 API](https://documenter.getpostman.com/view/101975/vtex-pricing-api/6YsWxKT)
 //
 // > If you are still using Pricing v1, please [check if your store is able to migrate to take advantage of many more features](https://help.vtex.com/en/faq/how-to-migrate-a-store-to-pricing-v2)
-func (s *pricesLegacyV1) Pricebycontext(ctx context.Context, request operations.PricebycontextRequest) (*operations.PricebycontextResponse, error) {
+func (s *pricesLegacyV1) Pricebycontext(ctx context.Context, request operations.PricebycontextRequest, opts ...operations.Option) (*operations.PricebycontextResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PricebycontextServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/price-sheet/context"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PricebycontextRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -157,9 +187,9 @@ func (s *pricesLegacyV1) Pricebycontext(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -191,22 +221,32 @@ func (s *pricesLegacyV1) Pricebycontext(ctx context.Context, request operations.
 // PricebyskuID - Get Price by SKU ID
 // Price by SKU ID
 // > If your account is using Pricing v2, you should avoid using these routes. Please refer directly to the [Pricing v2 API](https://developers.vtex.com/docs/api-reference/pricing-api)
-func (s *pricesLegacyV1) PricebyskuID(ctx context.Context, request operations.PricebyskuIDRequest) (*operations.PricebyskuIDResponse, error) {
-	baseURL := operations.PricebyskuIDServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *pricesLegacyV1) PricebyskuID(ctx context.Context, request operations.PricebyskuIDRequest, opts ...operations.Option) (*operations.PricebyskuIDResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.PricebyskuIDServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,22 +280,32 @@ func (s *pricesLegacyV1) PricebyskuID(ctx context.Context, request operations.Pr
 // > If your account is using Pricing v2, you should avoid using these routes. Please refer directly to the [Pricing v2 API](https://documenter.getpostman.com/view/101975/vtex-pricing-api/6YsWxKT)
 //
 // > If you are still using Pricing v1, please [check if your store is able to migrate to take advantage of many more features](https://help.vtex.com/en/faq/how-to-migrate-a-store-to-pricing-v2)
-func (s *pricesLegacyV1) PricebyskuIdandtradePolicy(ctx context.Context, request operations.PricebyskuIdandtradePolicyRequest) (*operations.PricebyskuIdandtradePolicyResponse, error) {
-	baseURL := operations.PricebyskuIdandtradePolicyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *pricesLegacyV1) PricebyskuIdandtradePolicy(ctx context.Context, request operations.PricebyskuIdandtradePolicyRequest, opts ...operations.Option) (*operations.PricebyskuIdandtradePolicyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}/{tradePolicy}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.PricebyskuIdandtradePolicyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}/{tradePolicy}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -289,15 +339,25 @@ func (s *pricesLegacyV1) PricebyskuIdandtradePolicy(ctx context.Context, request
 // > If your account is using Pricing v2, you should avoid using these routes. Please refer directly to the [Pricing v2 API](https://documenter.getpostman.com/view/101975/vtex-pricing-api/6YsWxKT)
 //
 // > If you are still using Pricing v1, please [check if your store is able to migrate to take advantage of many more features](https://help.vtex.com/en/faq/how-to-migrate-a-store-to-pricing-v2)
-func (s *pricesLegacyV1) Saveprice(ctx context.Context, request operations.SavepriceRequest) (*operations.SavepriceResponse, error) {
+func (s *pricesLegacyV1) Saveprice(ctx context.Context, request operations.SavepriceRequest, opts ...operations.Option) (*operations.SavepriceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.SavepriceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/price-sheet"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -312,9 +372,9 @@ func (s *pricesLegacyV1) Saveprice(ctx context.Context, request operations.Savep
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

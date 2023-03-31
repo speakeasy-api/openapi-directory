@@ -36,7 +36,7 @@ func newPersonUpsert(defaultClient, securityClient HTTPClient, serverURL, langua
 // PostV2PersonUpsertsJSON - Upsert a person
 // Upserts a person record. The upsert_key dictates how the upsert will be performed. The create and update behavior
 // is exactly the same as the individual create and update endpoints.
-func (s *personUpsert) PostV2PersonUpsertsJSON(ctx context.Context, request operations.PostV2PersonUpsertsJSONRequest) (*operations.PostV2PersonUpsertsJSONResponse, error) {
+func (s *personUpsert) PostV2PersonUpsertsJSON(ctx context.Context, request operations.PostV2PersonUpsertsJSONRequestBody) (*operations.PostV2PersonUpsertsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/person_upserts.json"
 

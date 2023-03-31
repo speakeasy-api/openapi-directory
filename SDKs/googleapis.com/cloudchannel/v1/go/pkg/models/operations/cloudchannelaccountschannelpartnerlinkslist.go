@@ -10,13 +10,8 @@ import (
 )
 
 type CloudchannelAccountsChannelPartnerLinksListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type CloudchannelAccountsChannelPartnerLinksListPathParams struct {
-	// Required. The resource name of the reseller account for listing channel partner links. Parent uses the format: accounts/{account_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CloudchannelAccountsChannelPartnerLinksListViewEnum - Optional. The level of granularity the ChannelPartnerLink will display.
@@ -46,7 +41,7 @@ func (e *CloudchannelAccountsChannelPartnerLinksListViewEnum) UnmarshalJSON(data
 	}
 }
 
-type CloudchannelAccountsChannelPartnerLinksListQueryParams struct {
+type CloudchannelAccountsChannelPartnerLinksListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -65,6 +60,8 @@ type CloudchannelAccountsChannelPartnerLinksListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A token for a page of results other than the first page. Obtained using ListChannelPartnerLinksResponse.next_page_token of the previous CloudChannelService.ListChannelPartnerLinks call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the reseller account for listing channel partner links. Parent uses the format: accounts/{account_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -75,12 +72,6 @@ type CloudchannelAccountsChannelPartnerLinksListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. The level of granularity the ChannelPartnerLink will display.
 	View *CloudchannelAccountsChannelPartnerLinksListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudchannelAccountsChannelPartnerLinksListRequest struct {
-	PathParams  CloudchannelAccountsChannelPartnerLinksListPathParams
-	QueryParams CloudchannelAccountsChannelPartnerLinksListQueryParams
-	Security    CloudchannelAccountsChannelPartnerLinksListSecurity
 }
 
 type CloudchannelAccountsChannelPartnerLinksListResponse struct {

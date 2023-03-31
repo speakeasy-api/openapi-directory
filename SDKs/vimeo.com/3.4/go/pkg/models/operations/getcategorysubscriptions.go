@@ -10,12 +10,7 @@ import (
 )
 
 type GetCategorySubscriptionsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetCategorySubscriptionsPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetCategorySubscriptionsDirectionEnum - The sort direction of the results.
@@ -69,7 +64,7 @@ func (e *GetCategorySubscriptionsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCategorySubscriptionsQueryParams struct {
+type GetCategorySubscriptionsRequest struct {
 	// The sort direction of the results.
 	Direction *GetCategorySubscriptionsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -78,12 +73,8 @@ type GetCategorySubscriptionsQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetCategorySubscriptionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCategorySubscriptionsRequest struct {
-	PathParams  GetCategorySubscriptionsPathParams
-	QueryParams GetCategorySubscriptionsQueryParams
-	Security    GetCategorySubscriptionsSecurity
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetCategorySubscriptionsResponse struct {

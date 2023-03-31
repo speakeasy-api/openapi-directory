@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryPredictionsJSONPathParams struct {
+type QueryPredictionsJSONRequest struct {
+	// Parameters used to query the predictions. Limited to combining 2 tags.
+	PredictionQueryToken shared.PredictionQueryToken `request:"mediaType=application/json"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QueryPredictionsJSONRequest struct {
-	PathParams QueryPredictionsJSONPathParams
-	// Parameters used to query the predictions. Limited to combining 2 tags.
-	Request shared.PredictionQueryToken `request:"mediaType=application/json"`
 }
 
 type QueryPredictionsJSONResponse struct {

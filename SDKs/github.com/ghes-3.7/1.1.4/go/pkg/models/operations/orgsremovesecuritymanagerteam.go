@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrgsRemoveSecurityManagerTeamPathParams struct {
+type OrgsRemoveSecurityManagerTeamRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type OrgsRemoveSecurityManagerTeamRequest struct {
-	PathParams OrgsRemoveSecurityManagerTeamPathParams
 }
 
 type OrgsRemoveSecurityManagerTeamResponse struct {

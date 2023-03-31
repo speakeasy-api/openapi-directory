@@ -4,27 +4,28 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest(
-    query_params=operations.AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams(
-        dollar_xgafv="1",
-        access_token="voluptatem",
-        alt="proto",
-        callback="dolores",
-        fields="quis",
-        key="facere",
-        oauth_token="doloremque",
-        pretty_print=True,
-        quota_user="aut",
-        upload_type="reiciendis",
-        upload_protocol="cum",
-    ),
-    request=shared.BatchGetAmpUrlsRequest(
+    dollar_xgafv="2",
+    batch_get_amp_urls_request=shared.BatchGetAmpUrlsRequest(
         lookup_strategy="IN_INDEX_DOC",
         urls=[
-            "sapiente",
+            "quibusdam",
+            "unde",
+            "nulla",
         ],
     ),
+    access_token="corrupti",
+    alt="proto",
+    callback="vel",
+    fields_="error",
+    key="deserunt",
+    oauth_token="suscipit",
+    pretty_print=False,
+    quota_user="iure",
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
 res = s.amp_urls.acceleratedmobilepageurl_amp_urls_batch_get(req)

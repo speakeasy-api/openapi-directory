@@ -34,9 +34,9 @@ func newRoleMapper(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteRealmGroupsIDRoleMappingsRealm - Delete realm-level role mappings
 func (s *roleMapper) DeleteRealmGroupsIDRoleMappingsRealm(ctx context.Context, request operations.DeleteRealmGroupsIDRoleMappingsRealmRequest) (*operations.DeleteRealmGroupsIDRoleMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -79,9 +79,9 @@ func (s *roleMapper) DeleteRealmGroupsIDRoleMappingsRealm(ctx context.Context, r
 // DeleteRealmUsersIDRoleMappingsRealm - Delete realm-level role mappings
 func (s *roleMapper) DeleteRealmUsersIDRoleMappingsRealm(ctx context.Context, request operations.DeleteRealmUsersIDRoleMappingsRealmRequest) (*operations.DeleteRealmUsersIDRoleMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,7 +124,7 @@ func (s *roleMapper) DeleteRealmUsersIDRoleMappingsRealm(ctx context.Context, re
 // GetRealmGroupsIDRoleMappings - Get role mappings
 func (s *roleMapper) GetRealmGroupsIDRoleMappings(ctx context.Context, request operations.GetRealmGroupsIDRoleMappingsRequest) (*operations.GetRealmGroupsIDRoleMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *roleMapper) GetRealmGroupsIDRoleMappings(ctx context.Context, request o
 // GetRealmGroupsIDRoleMappingsRealm - Get realm-level role mappings
 func (s *roleMapper) GetRealmGroupsIDRoleMappingsRealm(ctx context.Context, request operations.GetRealmGroupsIDRoleMappingsRealmRequest) (*operations.GetRealmGroupsIDRoleMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +212,7 @@ func (s *roleMapper) GetRealmGroupsIDRoleMappingsRealm(ctx context.Context, requ
 // GetRealmGroupsIDRoleMappingsRealmAvailable - Get realm-level roles that can be mapped
 func (s *roleMapper) GetRealmGroupsIDRoleMappingsRealmAvailable(ctx context.Context, request operations.GetRealmGroupsIDRoleMappingsRealmAvailableRequest) (*operations.GetRealmGroupsIDRoleMappingsRealmAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -256,7 +256,7 @@ func (s *roleMapper) GetRealmGroupsIDRoleMappingsRealmAvailable(ctx context.Cont
 // GetRealmGroupsIDRoleMappingsRealmComposite - Get effective realm-level role mappings   This will recurse all composite roles to get the result.
 func (s *roleMapper) GetRealmGroupsIDRoleMappingsRealmComposite(ctx context.Context, request operations.GetRealmGroupsIDRoleMappingsRealmCompositeRequest) (*operations.GetRealmGroupsIDRoleMappingsRealmCompositeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm/composite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm/composite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +300,7 @@ func (s *roleMapper) GetRealmGroupsIDRoleMappingsRealmComposite(ctx context.Cont
 // GetRealmUsersIDRoleMappings - Get role mappings
 func (s *roleMapper) GetRealmUsersIDRoleMappings(ctx context.Context, request operations.GetRealmUsersIDRoleMappingsRequest) (*operations.GetRealmUsersIDRoleMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +344,7 @@ func (s *roleMapper) GetRealmUsersIDRoleMappings(ctx context.Context, request op
 // GetRealmUsersIDRoleMappingsRealm - Get realm-level role mappings
 func (s *roleMapper) GetRealmUsersIDRoleMappingsRealm(ctx context.Context, request operations.GetRealmUsersIDRoleMappingsRealmRequest) (*operations.GetRealmUsersIDRoleMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -388,7 +388,7 @@ func (s *roleMapper) GetRealmUsersIDRoleMappingsRealm(ctx context.Context, reque
 // GetRealmUsersIDRoleMappingsRealmAvailable - Get realm-level roles that can be mapped
 func (s *roleMapper) GetRealmUsersIDRoleMappingsRealmAvailable(ctx context.Context, request operations.GetRealmUsersIDRoleMappingsRealmAvailableRequest) (*operations.GetRealmUsersIDRoleMappingsRealmAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +432,7 @@ func (s *roleMapper) GetRealmUsersIDRoleMappingsRealmAvailable(ctx context.Conte
 // GetRealmUsersIDRoleMappingsRealmComposite - Get effective realm-level role mappings   This will recurse all composite roles to get the result.
 func (s *roleMapper) GetRealmUsersIDRoleMappingsRealmComposite(ctx context.Context, request operations.GetRealmUsersIDRoleMappingsRealmCompositeRequest) (*operations.GetRealmUsersIDRoleMappingsRealmCompositeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm/composite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm/composite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -476,9 +476,9 @@ func (s *roleMapper) GetRealmUsersIDRoleMappingsRealmComposite(ctx context.Conte
 // PostRealmGroupsIDRoleMappingsRealm - Add realm-level role mappings to the user
 func (s *roleMapper) PostRealmGroupsIDRoleMappingsRealm(ctx context.Context, request operations.PostRealmGroupsIDRoleMappingsRealmRequest) (*operations.PostRealmGroupsIDRoleMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/groups/{id}/role-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -521,9 +521,9 @@ func (s *roleMapper) PostRealmGroupsIDRoleMappingsRealm(ctx context.Context, req
 // PostRealmUsersIDRoleMappingsRealm - Add realm-level role mappings to the user
 func (s *roleMapper) PostRealmUsersIDRoleMappingsRealm(ctx context.Context, request operations.PostRealmUsersIDRoleMappingsRealmRequest) (*operations.PostRealmUsersIDRoleMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/role-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

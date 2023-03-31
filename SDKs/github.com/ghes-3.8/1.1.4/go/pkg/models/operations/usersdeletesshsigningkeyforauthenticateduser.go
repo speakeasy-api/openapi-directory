@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersDeleteSSHSigningKeyForAuthenticatedUserPathParams struct {
+type UsersDeleteSSHSigningKeyForAuthenticatedUserRequest struct {
 	// The unique identifier of the SSH signing key.
 	SSHSigningKeyID int64 `pathParam:"style=simple,explode=false,name=ssh_signing_key_id"`
-}
-
-type UsersDeleteSSHSigningKeyForAuthenticatedUserRequest struct {
-	PathParams UsersDeleteSSHSigningKeyForAuthenticatedUserPathParams
 }
 
 type UsersDeleteSSHSigningKeyForAuthenticatedUserResponse struct {

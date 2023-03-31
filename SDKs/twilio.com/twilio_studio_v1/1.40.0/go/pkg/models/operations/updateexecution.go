@@ -12,14 +12,8 @@ var UpdateExecutionServerList = []string{
 }
 
 type UpdateExecutionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateExecutionPathParams struct {
-	// The SID of the Flow with the Execution resources to update.
-	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
-	// The SID of the Execution resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateExecutionUpdateExecutionRequest struct {
@@ -27,10 +21,11 @@ type UpdateExecutionUpdateExecutionRequest struct {
 }
 
 type UpdateExecutionRequest struct {
-	PathParams UpdateExecutionPathParams
-	Request    *UpdateExecutionUpdateExecutionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateExecutionSecurity
-	ServerURL  *string
+	// The SID of the Flow with the Execution resources to update.
+	FlowSid     string                                 `pathParam:"style=simple,explode=false,name=FlowSid"`
+	RequestBody *UpdateExecutionUpdateExecutionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Execution resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateExecutionResponse struct {

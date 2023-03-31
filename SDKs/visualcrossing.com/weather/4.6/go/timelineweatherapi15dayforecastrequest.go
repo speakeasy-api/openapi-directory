@@ -32,20 +32,30 @@ func newTimelineWeatherAPI15DayForecastRequest(defaultClient, securityClient HTT
 
 // GetVisualCrossingWebServicesRestServicesTimelineLocation - Historical and Forecast Weather API
 // Seamless access to daily and hourly historical and forecast weather data plus weather alerts, events and current conditions.
-func (s *timelineWeatherAPI15DayForecastRequest) GetVisualCrossingWebServicesRestServicesTimelineLocation(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesTimelineLocationRequest) (*operations.GetVisualCrossingWebServicesRestServicesTimelineLocationResponse, error) {
-	baseURL := operations.GetVisualCrossingWebServicesRestServicesTimelineLocationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *timelineWeatherAPI15DayForecastRequest) GetVisualCrossingWebServicesRestServicesTimelineLocation(ctx context.Context, request operations.GetVisualCrossingWebServicesRestServicesTimelineLocationRequest, opts ...operations.Option) (*operations.GetVisualCrossingWebServicesRestServicesTimelineLocationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/VisualCrossingWebServices/rest/services/timeline/{location}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.GetVisualCrossingWebServicesRestServicesTimelineLocationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/VisualCrossingWebServices/rest/services/timeline/{location}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

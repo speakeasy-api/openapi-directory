@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasImageAttachmentsListQueryParams struct {
+type ExtrasImageAttachmentsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ExtrasImageAttachmentsListRequest struct {
-	QueryParams ExtrasImageAttachmentsListQueryParams
 }
 
 type ExtrasImageAttachmentsList200ApplicationJSON struct {

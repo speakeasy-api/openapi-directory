@@ -8,13 +8,7 @@ import (
 )
 
 type SearchEntitiesSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SearchEntitiesRequest struct {
-	// Search Request
-	Request  *shared.SearchRequest `request:"mediaType=application/json"`
-	Security SearchEntitiesSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type SearchEntitiesResponse struct {

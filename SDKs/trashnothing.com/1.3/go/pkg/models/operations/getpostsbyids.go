@@ -8,20 +8,15 @@ import (
 )
 
 type GetPostsByIdsSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
-}
-
-type GetPostsByIdsQueryParams struct {
-	// A comma separated list of the post IDs. If more than 10 post IDs are passed, only the first 10 posts will be returned.
-	//
-	PostIds string `queryParam:"style=form,explode=true,name=post_ids"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPostsByIdsRequest struct {
-	QueryParams GetPostsByIdsQueryParams
-	Security    GetPostsByIdsSecurity
+	// A comma separated list of the post IDs. If more than 10 post IDs are passed, only the first 10 posts will be returned.
+	//
+	PostIds string `queryParam:"style=form,explode=true,name=post_ids"`
 }
 
 // GetPostsByIds200ApplicationJSON - The posts.

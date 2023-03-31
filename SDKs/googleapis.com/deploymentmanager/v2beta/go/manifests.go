@@ -32,20 +32,20 @@ func newManifests(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DeploymentmanagerManifestsGet - Gets information about a specific manifest.
-func (s *manifests) DeploymentmanagerManifestsGet(ctx context.Context, request operations.DeploymentmanagerManifestsGetRequest) (*operations.DeploymentmanagerManifestsGetResponse, error) {
+func (s *manifests) DeploymentmanagerManifestsGet(ctx context.Context, request operations.DeploymentmanagerManifestsGetRequest, security operations.DeploymentmanagerManifestsGetSecurity) (*operations.DeploymentmanagerManifestsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/manifests/{manifest}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/manifests/{manifest}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *manifests) DeploymentmanagerManifestsGet(ctx context.Context, request o
 }
 
 // DeploymentmanagerManifestsList - Lists all manifests for a given deployment.
-func (s *manifests) DeploymentmanagerManifestsList(ctx context.Context, request operations.DeploymentmanagerManifestsListRequest) (*operations.DeploymentmanagerManifestsListResponse, error) {
+func (s *manifests) DeploymentmanagerManifestsList(ctx context.Context, request operations.DeploymentmanagerManifestsListRequest, security operations.DeploymentmanagerManifestsListSecurity) (*operations.DeploymentmanagerManifestsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/manifests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/manifests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

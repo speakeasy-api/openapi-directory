@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPodcastAudiencePathParams struct {
-	// Podcast id.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPodcastAudienceHeaders struct {
+type GetPodcastAudienceRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetPodcastAudienceRequest struct {
-	PathParams GetPodcastAudiencePathParams
-	Headers    GetPodcastAudienceHeaders
+	// Podcast id.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPodcastAudienceResponse struct {

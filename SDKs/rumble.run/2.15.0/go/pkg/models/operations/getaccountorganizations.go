@@ -8,17 +8,12 @@ import (
 )
 
 type GetAccountOrganizationsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountOrganizationsQueryParams struct {
-	// an optional search string for filtering results
-	Search *string `queryParam:"style=form,explode=true,name=search"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAccountOrganizationsRequest struct {
-	QueryParams GetAccountOrganizationsQueryParams
-	Security    GetAccountOrganizationsSecurity
+	// an optional search string for filtering results
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type GetAccountOrganizationsResponse struct {

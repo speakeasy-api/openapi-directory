@@ -8,18 +8,13 @@ import (
 )
 
 type GetAPIV1AdminReportsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1AdminReportsQueryParams struct {
-	AccountID       *string `queryParam:"style=form,explode=true,name=account_id"`
-	Resolved        *bool   `queryParam:"style=form,explode=true,name=resolved"`
-	TargetAccountID *string `queryParam:"style=form,explode=true,name=target_account_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1AdminReportsRequest struct {
-	QueryParams GetAPIV1AdminReportsQueryParams
-	Security    GetAPIV1AdminReportsSecurity
+	AccountID       *string `queryParam:"style=form,explode=true,name=account_id"`
+	Resolved        *bool   `queryParam:"style=form,explode=true,name=resolved"`
+	TargetAccountID *string `queryParam:"style=form,explode=true,name=target_account_id"`
 }
 
 type GetAPIV1AdminReportsResponse struct {

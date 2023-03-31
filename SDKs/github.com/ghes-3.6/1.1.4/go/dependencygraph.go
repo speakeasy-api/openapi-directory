@@ -37,14 +37,14 @@ func newDependencyGraph(defaultClient, securityClient HTTPClient, serverURL, lan
 // https://docs.github.com/enterprise-server@3.6/rest/reference/dependency-graph#get-a-diff-of-the-dependencies-between-commits - API method documentation
 func (s *dependencyGraph) DependencyGraphDiffRange(ctx context.Context, request operations.DependencyGraphDiffRangeRequest) (*operations.DependencyGraphDiffRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependency-graph/compare/{basehead}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependency-graph/compare/{basehead}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

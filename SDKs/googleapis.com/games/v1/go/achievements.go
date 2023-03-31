@@ -33,20 +33,20 @@ func newAchievements(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GamesAchievementsIncrement - Increments the steps of the achievement with the given ID for the currently authenticated player.
-func (s *achievements) GamesAchievementsIncrement(ctx context.Context, request operations.GamesAchievementsIncrementRequest) (*operations.GamesAchievementsIncrementResponse, error) {
+func (s *achievements) GamesAchievementsIncrement(ctx context.Context, request operations.GamesAchievementsIncrementRequest, security operations.GamesAchievementsIncrementSecurity) (*operations.GamesAchievementsIncrementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/increment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/increment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *achievements) GamesAchievementsIncrement(ctx context.Context, request o
 }
 
 // GamesAchievementsList - Lists the progress for all your application's achievements for the currently authenticated player.
-func (s *achievements) GamesAchievementsList(ctx context.Context, request operations.GamesAchievementsListRequest) (*operations.GamesAchievementsListResponse, error) {
+func (s *achievements) GamesAchievementsList(ctx context.Context, request operations.GamesAchievementsListRequest, security operations.GamesAchievementsListSecurity) (*operations.GamesAchievementsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/achievements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/achievements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *achievements) GamesAchievementsList(ctx context.Context, request operat
 }
 
 // GamesAchievementsReveal - Sets the state of the achievement with the given ID to `REVEALED` for the currently authenticated player.
-func (s *achievements) GamesAchievementsReveal(ctx context.Context, request operations.GamesAchievementsRevealRequest) (*operations.GamesAchievementsRevealResponse, error) {
+func (s *achievements) GamesAchievementsReveal(ctx context.Context, request operations.GamesAchievementsRevealRequest, security operations.GamesAchievementsRevealSecurity) (*operations.GamesAchievementsRevealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/reveal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/reveal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,20 +177,20 @@ func (s *achievements) GamesAchievementsReveal(ctx context.Context, request oper
 }
 
 // GamesAchievementsSetStepsAtLeast - Sets the steps for the currently authenticated player towards unlocking an achievement. If the steps parameter is less than the current number of steps that the player already gained for the achievement, the achievement is not modified.
-func (s *achievements) GamesAchievementsSetStepsAtLeast(ctx context.Context, request operations.GamesAchievementsSetStepsAtLeastRequest) (*operations.GamesAchievementsSetStepsAtLeastResponse, error) {
+func (s *achievements) GamesAchievementsSetStepsAtLeast(ctx context.Context, request operations.GamesAchievementsSetStepsAtLeastRequest, security operations.GamesAchievementsSetStepsAtLeastSecurity) (*operations.GamesAchievementsSetStepsAtLeastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/setStepsAtLeast", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/setStepsAtLeast", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,20 +225,20 @@ func (s *achievements) GamesAchievementsSetStepsAtLeast(ctx context.Context, req
 }
 
 // GamesAchievementsUnlock - Unlocks this achievement for the currently authenticated player.
-func (s *achievements) GamesAchievementsUnlock(ctx context.Context, request operations.GamesAchievementsUnlockRequest) (*operations.GamesAchievementsUnlockResponse, error) {
+func (s *achievements) GamesAchievementsUnlock(ctx context.Context, request operations.GamesAchievementsUnlockRequest, security operations.GamesAchievementsUnlockSecurity) (*operations.GamesAchievementsUnlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/unlock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/unlock", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,11 +273,11 @@ func (s *achievements) GamesAchievementsUnlock(ctx context.Context, request oper
 }
 
 // GamesAchievementsUpdateMultiple - Updates multiple achievements for the currently authenticated player.
-func (s *achievements) GamesAchievementsUpdateMultiple(ctx context.Context, request operations.GamesAchievementsUpdateMultipleRequest) (*operations.GamesAchievementsUpdateMultipleResponse, error) {
+func (s *achievements) GamesAchievementsUpdateMultiple(ctx context.Context, request operations.GamesAchievementsUpdateMultipleRequest, security operations.GamesAchievementsUpdateMultipleSecurity) (*operations.GamesAchievementsUpdateMultipleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/achievements/updateMultiple"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AchievementUpdateMultipleRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -289,11 +289,11 @@ func (s *achievements) GamesAchievementsUpdateMultiple(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

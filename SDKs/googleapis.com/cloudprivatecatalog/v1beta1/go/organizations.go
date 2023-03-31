@@ -33,20 +33,20 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CloudprivatecatalogOrganizationsCatalogsSearch - Search Catalog resources that consumers have access to, within the
 // scope of the consumer cloud resource hierarchy context.
-func (s *organizations) CloudprivatecatalogOrganizationsCatalogsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest) (*operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse, error) {
+func (s *organizations) CloudprivatecatalogOrganizationsCatalogsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest, security operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity) (*operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/catalogs:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/catalogs:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,20 +82,20 @@ func (s *organizations) CloudprivatecatalogOrganizationsCatalogsSearch(ctx conte
 
 // CloudprivatecatalogOrganizationsProductsSearch - Search Product resources that consumers have access to, within the
 // scope of the consumer cloud resource hierarchy context.
-func (s *organizations) CloudprivatecatalogOrganizationsProductsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsProductsSearchRequest) (*operations.CloudprivatecatalogOrganizationsProductsSearchResponse, error) {
+func (s *organizations) CloudprivatecatalogOrganizationsProductsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsProductsSearchRequest, security operations.CloudprivatecatalogOrganizationsProductsSearchSecurity) (*operations.CloudprivatecatalogOrganizationsProductsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/products:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/products:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -131,20 +131,20 @@ func (s *organizations) CloudprivatecatalogOrganizationsProductsSearch(ctx conte
 
 // CloudprivatecatalogOrganizationsVersionsSearch - Search Version resources that consumers have access to, within the
 // scope of the consumer cloud resource hierarchy context.
-func (s *organizations) CloudprivatecatalogOrganizationsVersionsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsVersionsSearchRequest) (*operations.CloudprivatecatalogOrganizationsVersionsSearchResponse, error) {
+func (s *organizations) CloudprivatecatalogOrganizationsVersionsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsVersionsSearchRequest, security operations.CloudprivatecatalogOrganizationsVersionsSearchSecurity) (*operations.CloudprivatecatalogOrganizationsVersionsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/versions:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/versions:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

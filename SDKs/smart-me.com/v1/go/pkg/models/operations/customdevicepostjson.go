@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomDevicePostJSONRequest struct {
-	// Device object with all the data
-	Request shared.CustomDeviceToPost `request:"mediaType=application/json"`
-}
-
 type CustomDevicePostJSONResponse struct {
 	Body        []byte
 	ContentType string

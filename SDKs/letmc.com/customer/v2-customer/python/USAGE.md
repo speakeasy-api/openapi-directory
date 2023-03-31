@@ -4,15 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BranchControllerGetBranchesRequest(
-    path_params=operations.BranchControllerGetBranchesPathParams(
-        short_name="magni",
-    ),
-    query_params=operations.BranchControllerGetBranchesQueryParams(
-        count=6068504787947082871,
-        offset=8515991310693167825,
-    ),
+    count=548814,
+    offset=592845,
+    short_name="distinctio",
 )
     
 res = s.branch_controller.branch_controller_get_branches(req)

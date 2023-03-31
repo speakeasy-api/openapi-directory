@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarRegistrantsQuestionsGetSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarRegistrantsQuestionsGetPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebinarRegistrantsQuestionsGetRequest struct {
-	PathParams WebinarRegistrantsQuestionsGetPathParams
-	Security   WebinarRegistrantsQuestionsGetSecurity
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // WebinarRegistrantsQuestionsGetWebinarRegistrantQuestionsCustomQuestionsTypeEnum - The question-answer type.

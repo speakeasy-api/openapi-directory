@@ -31,20 +31,20 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // GetWorkspaceSlugOrganizations - List organizations in a workspace
-func (s *organizations) GetWorkspaceSlugOrganizations(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsRequest) (*operations.GetWorkspaceSlugOrganizationsResponse, error) {
+func (s *organizations) GetWorkspaceSlugOrganizations(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsRequest, security operations.GetWorkspaceSlugOrganizationsSecurity) (*operations.GetWorkspaceSlugOrganizationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -70,16 +70,16 @@ func (s *organizations) GetWorkspaceSlugOrganizations(ctx context.Context, reque
 }
 
 // GetWorkspaceSlugOrganizationsOrganizationID - Get an organization
-func (s *organizations) GetWorkspaceSlugOrganizationsOrganizationID(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDRequest) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDResponse, error) {
+func (s *organizations) GetWorkspaceSlugOrganizationsOrganizationID(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDRequest, security operations.GetWorkspaceSlugOrganizationsOrganizationIDSecurity) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,11 +105,11 @@ func (s *organizations) GetWorkspaceSlugOrganizationsOrganizationID(ctx context.
 }
 
 // PutWorkspaceSlugOrganizationsOrganizationID - Update an organization
-func (s *organizations) PutWorkspaceSlugOrganizationsOrganizationID(ctx context.Context, request operations.PutWorkspaceSlugOrganizationsOrganizationIDRequest) (*operations.PutWorkspaceSlugOrganizationsOrganizationIDResponse, error) {
+func (s *organizations) PutWorkspaceSlugOrganizationsOrganizationID(ctx context.Context, request operations.PutWorkspaceSlugOrganizationsOrganizationIDRequest, security operations.PutWorkspaceSlugOrganizationsOrganizationIDSecurity) (*operations.PutWorkspaceSlugOrganizationsOrganizationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Organization", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -121,7 +121,7 @@ func (s *organizations) PutWorkspaceSlugOrganizationsOrganizationID(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceWirelessBluetoothSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceWirelessBluetoothSettingsRequest struct {
-	PathParams GetDeviceWirelessBluetoothSettingsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // GetDeviceWirelessBluetoothSettings200ApplicationJSON - Successful operation

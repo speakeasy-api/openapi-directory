@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchTargetsTargetIDIntegrationsJiraCloudPathParams struct {
+type PatchTargetsTargetIDIntegrationsJiraCloudRequest struct {
+	JiraScope shared.JiraScope `request:"mediaType=application/json"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PatchTargetsTargetIDIntegrationsJiraCloudRequest struct {
-	PathParams PatchTargetsTargetIDIntegrationsJiraCloudPathParams
-	Request    shared.JiraScope `request:"mediaType=application/json"`
 }
 
 // PatchTargetsTargetIDIntegrationsJiraCloud404ApplicationJSON - Not found

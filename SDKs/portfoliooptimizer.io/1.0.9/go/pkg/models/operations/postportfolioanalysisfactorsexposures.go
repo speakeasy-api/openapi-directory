@@ -21,10 +21,6 @@ type PostPortfolioAnalysisFactorsExposuresRequestBody struct {
 	Portfolios []PostPortfolioAnalysisFactorsExposuresRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisFactorsExposuresRequest struct {
-	Request PostPortfolioAnalysisFactorsExposuresRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios struct {
 	// The portfolio alpha, which correponds to the portion of the portfolio returns that cannot be explained by the portfolio factor exposures
 	PortfolioAlpha float64 `json:"portfolioAlpha"`

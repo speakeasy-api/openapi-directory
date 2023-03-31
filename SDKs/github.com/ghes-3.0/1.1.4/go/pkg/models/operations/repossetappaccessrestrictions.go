@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposSetAppAccessRestrictionsPathParams struct {
-	// The name of the branch.
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposSetAppAccessRestrictionsRequestBody1 struct {
 	// apps parameter
 	Apps []string `json:"apps"`
@@ -91,8 +84,11 @@ func (u ReposSetAppAccessRestrictionsRequestBody) MarshalJSON() ([]byte, error) 
 }
 
 type ReposSetAppAccessRestrictionsRequest struct {
-	PathParams ReposSetAppAccessRestrictionsPathParams
-	Request    *ReposSetAppAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposSetAppAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch.
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposSetAppAccessRestrictionsResponse struct {

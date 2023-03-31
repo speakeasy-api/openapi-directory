@@ -8,12 +8,7 @@ import (
 )
 
 type PutOrdersIDStatusSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
-}
-
-type PutOrdersIDStatusPathParams struct {
-	// The FDC order Id
-	ID int `pathParam:"style=simple,explode=false,name=id"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PutOrdersIDStatusStatusTypeSimpleV2Status struct {
@@ -28,10 +23,10 @@ type PutOrdersIDStatusStatusTypeSimpleV2 struct {
 }
 
 type PutOrdersIDStatusRequest struct {
-	PathParams PutOrdersIDStatusPathParams
 	// New status event
-	Request  PutOrdersIDStatusStatusTypeSimpleV2 `request:"mediaType=application/json"`
-	Security PutOrdersIDStatusSecurity
+	RequestBody PutOrdersIDStatusStatusTypeSimpleV2 `request:"mediaType=application/json"`
+	// The FDC order Id
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutOrdersIDStatusResponse struct {

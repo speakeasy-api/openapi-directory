@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmDeviceCellularUsageHistoryPathParams struct {
+type GetNetworkSmDeviceCellularUsageHistoryRequest struct {
 	DeviceID  string `pathParam:"style=simple,explode=false,name=deviceId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmDeviceCellularUsageHistoryRequest struct {
-	PathParams GetNetworkSmDeviceCellularUsageHistoryPathParams
 }
 
 type GetNetworkSmDeviceCellularUsageHistory200ApplicationJSON struct {

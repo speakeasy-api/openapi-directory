@@ -11,27 +11,18 @@ import (
 )
 
 type GetTracksTrackIDCommentsSecurity struct {
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=query"`
+	ClientID string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetTracksTrackIDCommentsPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
-}
-
-type GetTracksTrackIDCommentsQueryParams struct {
+type GetTracksTrackIDCommentsRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetTracksTrackIDCommentsRequest struct {
-	PathParams  GetTracksTrackIDCommentsPathParams
-	QueryParams GetTracksTrackIDCommentsQueryParams
-	Security    GetTracksTrackIDCommentsSecurity
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type GetTracksTrackIDComments200ApplicationJSONType string

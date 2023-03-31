@@ -15,11 +15,6 @@ type EnterpriseAdminSetSettingsRequestBody struct {
 	Settings string `form:"name=settings"`
 }
 
-type EnterpriseAdminSetSettingsRequest struct {
-	Request   EnterpriseAdminSetSettingsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type EnterpriseAdminSetSettingsResponse struct {
 	ContentType string
 	StatusCode  int

@@ -8,13 +8,13 @@ import (
 )
 
 type FcmProjectsMessagesSendSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FcmProjectsMessagesSendSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FcmProjectsMessagesSendSecurity struct {
@@ -22,14 +22,10 @@ type FcmProjectsMessagesSendSecurity struct {
 	Option2 *FcmProjectsMessagesSendSecurityOption2 `security:"option"`
 }
 
-type FcmProjectsMessagesSendPathParams struct {
-	// Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase project), in the format of `projects/{project_id}`. For legacy support, the numeric project number with no padding is also supported in the format of `projects/{project_number}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FcmProjectsMessagesSendQueryParams struct {
+type FcmProjectsMessagesSendRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv        *shared.XgafvEnum          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SendMessageRequest *shared.SendMessageRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type FcmProjectsMessagesSendQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase project), in the format of `projects/{project_id}`. For legacy support, the numeric project number with no padding is also supported in the format of `projects/{project_number}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type FcmProjectsMessagesSendQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FcmProjectsMessagesSendRequest struct {
-	PathParams  FcmProjectsMessagesSendPathParams
-	QueryParams FcmProjectsMessagesSendQueryParams
-	Request     *shared.SendMessageRequest `request:"mediaType=application/json"`
-	Security    FcmProjectsMessagesSendSecurity
 }
 
 type FcmProjectsMessagesSendResponse struct {

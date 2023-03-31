@@ -10,23 +10,18 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurity struct {
 	Option1 *DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurityOption1 `security:"option"`
 	Option2 *DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurityOption2 `security:"option"`
-}
-
-type DialogflowProjectsLocationsAgentsTestCasesCalculateCoveragePathParams struct {
-	// Required. The agent to calculate coverage for. Format: `projects//locations//agents/`.
-	Agent string `pathParam:"style=simple,explode=false,name=agent"`
 }
 
 // DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum - Required. The type of coverage requested.
@@ -59,11 +54,13 @@ func (e *DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum) Un
 	}
 }
 
-type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageQueryParams struct {
+type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The agent to calculate coverage for. Format: `projects//locations//agents/`.
+	Agent string `pathParam:"style=simple,explode=false,name=agent"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -84,12 +81,6 @@ type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageQueryParams stru
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsTestCasesCalculateCoveragePathParams
-	QueryParams DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageQueryParams
-	Security    DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurity
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse struct {

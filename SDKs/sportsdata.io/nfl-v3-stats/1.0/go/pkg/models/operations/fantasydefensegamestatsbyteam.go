@@ -33,7 +33,7 @@ func (e *FantasyDefenseGameStatsByTeamFormatEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type FantasyDefenseGameStatsByTeamPathParams struct {
+type FantasyDefenseGameStatsByTeamRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format FantasyDefenseGameStatsByTeamFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -46,10 +46,6 @@ type FantasyDefenseGameStatsByTeamPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type FantasyDefenseGameStatsByTeamRequest struct {
-	PathParams FantasyDefenseGameStatsByTeamPathParams
 }
 
 type FantasyDefenseGameStatsByTeamResponse struct {

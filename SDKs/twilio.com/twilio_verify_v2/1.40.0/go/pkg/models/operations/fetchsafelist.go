@@ -12,18 +12,13 @@ var FetchSafelistServerList = []string{
 }
 
 type FetchSafelistSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSafelistPathParams struct {
-	// The phone number to be fetched from SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
-	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSafelistRequest struct {
-	PathParams FetchSafelistPathParams
-	Security   FetchSafelistSecurity
-	ServerURL  *string
+	// The phone number to be fetched from SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
+	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
 }
 
 type FetchSafelistResponse struct {

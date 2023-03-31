@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type StartPathParams struct {
+type StartRequest struct {
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type StartRequest struct {
-	PathParams StartPathParams
 }
 
 type StartResponse struct {

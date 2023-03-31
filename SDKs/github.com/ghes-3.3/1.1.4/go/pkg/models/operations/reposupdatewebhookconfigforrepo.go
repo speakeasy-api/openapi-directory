@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateWebhookConfigForRepoPathParams struct {
-	// The unique identifier of the hook.
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposUpdateWebhookConfigForRepoRequestBody struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
 	ContentType *string                          `json:"content_type,omitempty"`
@@ -27,8 +18,13 @@ type ReposUpdateWebhookConfigForRepoRequestBody struct {
 }
 
 type ReposUpdateWebhookConfigForRepoRequest struct {
-	PathParams ReposUpdateWebhookConfigForRepoPathParams
-	Request    *ReposUpdateWebhookConfigForRepoRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateWebhookConfigForRepoRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the hook.
+	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateWebhookConfigForRepoResponse struct {

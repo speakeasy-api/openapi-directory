@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BaggageTripAndContactSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
-}
-
-type BaggageTripAndContactPathParams struct {
-	// Bag tag number, PNR, boarding card or FQTV ID
-	SearchID string `pathParam:"style=simple,explode=false,name=searchID"`
-}
-
-type BaggageTripAndContactHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BaggageTripAndContactRequest struct {
-	PathParams BaggageTripAndContactPathParams
-	Headers    BaggageTripAndContactHeaders
-	Security   BaggageTripAndContactSecurity
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Bag tag number, PNR, boarding card or FQTV ID
+	SearchID string `pathParam:"style=simple,explode=false,name=searchID"`
 }
 
 type BaggageTripAndContactResponse struct {

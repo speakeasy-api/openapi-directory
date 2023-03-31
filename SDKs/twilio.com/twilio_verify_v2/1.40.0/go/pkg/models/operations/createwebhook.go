@@ -12,12 +12,8 @@ var CreateWebhookServerList = []string{
 }
 
 type CreateWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateWebhookPathParams struct {
-	// The unique SID identifier of the Service.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWebhookCreateWebhookRequest struct {
@@ -32,10 +28,9 @@ type CreateWebhookCreateWebhookRequest struct {
 }
 
 type CreateWebhookRequest struct {
-	PathParams CreateWebhookPathParams
-	Request    *CreateWebhookCreateWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateWebhookSecurity
-	ServerURL  *string
+	RequestBody *CreateWebhookCreateWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Service.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateWebhookResponse struct {

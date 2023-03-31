@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetRepoInstallationPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type AppsGetRepoInstallationHeaders struct {
+type AppsGetRepoInstallationRequest struct {
 	// This API is under preview and subject to change.
 	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type AppsGetRepoInstallationRequest struct {
-	PathParams AppsGetRepoInstallationPathParams
-	Headers    AppsGetRepoInstallationHeaders
+	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type AppsGetRepoInstallationResponse struct {

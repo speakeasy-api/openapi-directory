@@ -12,20 +12,15 @@ var FetchServiceBindingServerList = []string{
 }
 
 type FetchServiceBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchServiceBindingPathParams struct {
+type FetchServiceBindingRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Binding resource is associated with.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchServiceBindingRequest struct {
-	PathParams FetchServiceBindingPathParams
-	Security   FetchServiceBindingSecurity
-	ServerURL  *string
 }
 
 type FetchServiceBindingResponse struct {

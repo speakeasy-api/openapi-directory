@@ -4,15 +4,14 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetCountriesRequest(
-    query_params=operations.GetCountriesQueryParams(
-        market_id="quia",
-        order="ascending",
-        region_name="aut",
-        region_type_id=7557410711211766278,
-        sort="key",
-    ),
+    market_id="corrupti",
+    order="descending",
+    region_name="distinctio",
+    region_type_id=844266,
+    sort="label",
 )
     
 res = s.v1.get_countries(req)

@@ -38,7 +38,7 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // **Scopes:** `h323:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` <br>
-func (s *devices) DeviceCreate(ctx context.Context, request operations.DeviceCreateRequest) (*operations.DeviceCreateResponse, error) {
+func (s *devices) DeviceCreate(ctx context.Context, request operations.DeviceCreateTheH323SIPDeviceObject, security operations.DeviceCreateSecurity) (*operations.DeviceCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/h323/devices"
 
@@ -57,7 +57,7 @@ func (s *devices) DeviceCreate(ctx context.Context, request operations.DeviceCre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,7 +110,7 @@ func (s *devices) DeviceCreate(ctx context.Context, request operations.DeviceCre
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 func (s *devices) DeviceDelete(ctx context.Context, request operations.DeviceDeleteRequest) (*operations.DeviceDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/h323/devices/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/h323/devices/{deviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +153,7 @@ func (s *devices) DeviceDelete(ctx context.Context, request operations.DeviceDel
 // **Scopes:** `h323:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *devices) DeviceList(ctx context.Context, request operations.DeviceListRequest) (*operations.DeviceListResponse, error) {
+func (s *devices) DeviceList(ctx context.Context, request operations.DeviceListRequest, security operations.DeviceListSecurity) (*operations.DeviceListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/h323/devices"
 
@@ -162,11 +162,11 @@ func (s *devices) DeviceList(ctx context.Context, request operations.DeviceListR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *devices) DeviceList(ctx context.Context, request operations.DeviceListR
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *devices) DeviceUpdate(ctx context.Context, request operations.DeviceUpdateRequest) (*operations.DeviceUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/h323/devices/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/h323/devices/{deviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

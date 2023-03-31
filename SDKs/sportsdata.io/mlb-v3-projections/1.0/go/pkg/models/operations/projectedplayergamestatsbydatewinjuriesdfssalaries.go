@@ -33,16 +33,12 @@ func (e *ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesFormatEnum) Unmarshal
 	}
 }
 
-type ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesPathParams struct {
+type ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest struct {
 	// The date of the game(s).
 	// <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest struct {
-	PathParams ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesPathParams
 }
 
 type ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse struct {

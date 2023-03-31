@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesStopInOrganizationPathParams struct {
+type CodespacesStopInOrganizationRequest struct {
 	// The name of the codespace.
 	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type CodespacesStopInOrganizationRequest struct {
-	PathParams CodespacesStopInOrganizationPathParams
 }
 
 type CodespacesStopInOrganizationResponse struct {

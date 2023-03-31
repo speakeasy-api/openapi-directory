@@ -3,32 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        adv_security_token=shared.SchemeAdvSecurityToken(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        adv_security_token="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CompileRequest(
-    path_params=operations.CompilePathParams(
-        template_token="rerum",
-    ),
-    query_params=operations.CompileQueryParams(
-        doc_file_name="et",
-        doc_url_expires_in=815808886711016184,
-        latex_compiler="pdflatex",
-        latex_runs=8966549739029418275,
-        main_file_name="dolores",
-    ),
-    headers=operations.CompileHeaders(
-        content_type="dolorum",
-    ),
-    request={
-        "rerum": "dolor",
+    content_type="application/json",
+    request_body={
+        "provident": "distinctio",
+        "quibusdam": "unde",
+        "nulla": "corrupti",
     },
+    doc_file_name="brilliantDocument",
+    doc_url_expires_in=3600,
+    latex_compiler="lualatex",
+    latex_runs=423655,
+    main_file_name="inputFile.tex",
+    template_token="7a582350acb835ed",
 )
     
 res = s.pdf_generation.compile(req)

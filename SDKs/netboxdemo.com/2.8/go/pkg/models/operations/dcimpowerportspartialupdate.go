@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPortsPartialUpdatePathParams struct {
+type DcimPowerPortsPartialUpdateRequest struct {
+	WritablePowerPortInput shared.WritablePowerPortInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this power port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerPortsPartialUpdateRequest struct {
-	PathParams DcimPowerPortsPartialUpdatePathParams
-	Request    shared.WritablePowerPortInput `request:"mediaType=application/json"`
 }
 
 type DcimPowerPortsPartialUpdateResponse struct {

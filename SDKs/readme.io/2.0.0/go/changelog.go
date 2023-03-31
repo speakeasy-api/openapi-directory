@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newChangelog(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // CreateChangelog - Create changelog
 // Create a new changelog inside of this project
-func (s *changelog) CreateChangelog(ctx context.Context, request operations.CreateChangelogRequest) (*operations.CreateChangelogResponse, error) {
+func (s *changelog) CreateChangelog(ctx context.Context, request shared.Changelog, security operations.CreateChangelogSecurity) (*operations.CreateChangelogResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/changelogs"
 
@@ -52,7 +53,7 @@ func (s *changelog) CreateChangelog(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,16 +82,16 @@ func (s *changelog) CreateChangelog(ctx context.Context, request operations.Crea
 
 // DeleteChangelog - Delete changelog
 // Delete the changelog with this slug
-func (s *changelog) DeleteChangelog(ctx context.Context, request operations.DeleteChangelogRequest) (*operations.DeleteChangelogResponse, error) {
+func (s *changelog) DeleteChangelog(ctx context.Context, request operations.DeleteChangelogRequest, security operations.DeleteChangelogSecurity) (*operations.DeleteChangelogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,16 +120,16 @@ func (s *changelog) DeleteChangelog(ctx context.Context, request operations.Dele
 
 // GetChangelog - Get changelog
 // Returns the changelog with this slug
-func (s *changelog) GetChangelog(ctx context.Context, request operations.GetChangelogRequest) (*operations.GetChangelogResponse, error) {
+func (s *changelog) GetChangelog(ctx context.Context, request operations.GetChangelogRequest, security operations.GetChangelogSecurity) (*operations.GetChangelogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,7 +158,7 @@ func (s *changelog) GetChangelog(ctx context.Context, request operations.GetChan
 
 // GetChangelogs - Get changelogs
 // Returns a list of changelogs associated with the project API key
-func (s *changelog) GetChangelogs(ctx context.Context, request operations.GetChangelogsRequest) (*operations.GetChangelogsResponse, error) {
+func (s *changelog) GetChangelogs(ctx context.Context, request operations.GetChangelogsRequest, security operations.GetChangelogsSecurity) (*operations.GetChangelogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/changelogs"
 
@@ -166,11 +167,11 @@ func (s *changelog) GetChangelogs(ctx context.Context, request operations.GetCha
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +199,11 @@ func (s *changelog) GetChangelogs(ctx context.Context, request operations.GetCha
 
 // UpdateChangelog - Update changelog
 // Update a changelog with this slug
-func (s *changelog) UpdateChangelog(ctx context.Context, request operations.UpdateChangelogRequest) (*operations.UpdateChangelogResponse, error) {
+func (s *changelog) UpdateChangelog(ctx context.Context, request operations.UpdateChangelogRequest, security operations.UpdateChangelogSecurity) (*operations.UpdateChangelogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Changelog", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -217,7 +218,7 @@ func (s *changelog) UpdateChangelog(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

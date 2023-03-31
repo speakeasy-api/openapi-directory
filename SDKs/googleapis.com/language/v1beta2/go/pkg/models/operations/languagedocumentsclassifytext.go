@@ -8,13 +8,13 @@ import (
 )
 
 type LanguageDocumentsClassifyTextSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LanguageDocumentsClassifyTextSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LanguageDocumentsClassifyTextSecurity struct {
@@ -22,9 +22,10 @@ type LanguageDocumentsClassifyTextSecurity struct {
 	Option2 *LanguageDocumentsClassifyTextSecurityOption2 `security:"option"`
 }
 
-type LanguageDocumentsClassifyTextQueryParams struct {
+type LanguageDocumentsClassifyTextRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv         *shared.XgafvEnum           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ClassifyTextRequest *shared.ClassifyTextRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -45,12 +46,6 @@ type LanguageDocumentsClassifyTextQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type LanguageDocumentsClassifyTextRequest struct {
-	QueryParams LanguageDocumentsClassifyTextQueryParams
-	Request     *shared.ClassifyTextRequest `request:"mediaType=application/json"`
-	Security    LanguageDocumentsClassifyTextSecurity
 }
 
 type LanguageDocumentsClassifyTextResponse struct {

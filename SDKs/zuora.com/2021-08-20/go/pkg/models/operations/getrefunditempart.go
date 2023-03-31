@@ -7,7 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETRefundItemPartPathParams struct {
+type GETRefundItemPartRequest struct {
+	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+	//
+	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	//
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// The unique ID of a specific refund part item. You can get the refund part item ID from the response of [Get refund part items](https://www.zuora.com/developer/api-reference/#operation/GET_RefundItemParts).
 	//
 	Itempartid string `pathParam:"style=simple,explode=false,name=itempartid"`
@@ -17,22 +25,6 @@ type GETRefundItemPartPathParams struct {
 	// The unique ID of a specific refund part. You can get the refund part ID from the response of [List all parts of a refund](https://www.zuora.com/developer/api-reference/#operation/GET_RefundParts).
 	//
 	Refundpartid string `pathParam:"style=simple,explode=false,name=refundpartid"`
-}
-
-type GETRefundItemPartHeaders struct {
-	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
-	//
-	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
-	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETRefundItemPartRequest struct {
-	PathParams GETRefundItemPartPathParams
-	Headers    GETRefundItemPartHeaders
 }
 
 type GETRefundItemPartResponse struct {

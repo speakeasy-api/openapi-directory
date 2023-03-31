@@ -107,14 +107,14 @@ func newCodeScanning(defaultClient, securityClient HTTPClient, serverURL, langua
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#delete-a-code-scanning-analysis-from-a-repository - API method documentation
 func (s *codeScanning) CodeScanningDeleteAnalysis(ctx context.Context, request operations.CodeScanningDeleteAnalysisRequest) (*operations.CodeScanningDeleteAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -199,7 +199,7 @@ func (s *codeScanning) CodeScanningDeleteAnalysis(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#get-a-code-scanning-alert - API method documentation
 func (s *codeScanning) CodeScanningGetAlert(ctx context.Context, request operations.CodeScanningGetAlertRequest) (*operations.CodeScanningGetAlertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -287,7 +287,7 @@ func (s *codeScanning) CodeScanningGetAlert(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#get-a-code-scanning-analysis-for-a-repository - API method documentation
 func (s *codeScanning) CodeScanningGetAnalysis(ctx context.Context, request operations.CodeScanningGetAnalysisRequest) (*operations.CodeScanningGetAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *codeScanning) CodeScanningGetAnalysis(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#list-recent-code-scanning-analyses-for-a-repository - API method documentation
 func (s *codeScanning) CodeScanningGetSarif(ctx context.Context, request operations.CodeScanningGetSarifRequest) (*operations.CodeScanningGetSarifResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -429,14 +429,14 @@ func (s *codeScanning) CodeScanningGetSarif(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#list-instances-of-a-code-scanning-alert - API method documentation
 func (s *codeScanning) CodeScanningListAlertInstances(ctx context.Context, request operations.CodeScanningListAlertInstancesRequest) (*operations.CodeScanningListAlertInstancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -509,14 +509,14 @@ func (s *codeScanning) CodeScanningListAlertInstances(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#list-code-scanning-alerts-for-a-repository - API method documentation
 func (s *codeScanning) CodeScanningListAlertsForRepo(ctx context.Context, request operations.CodeScanningListAlertsForRepoRequest) (*operations.CodeScanningListAlertsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -596,14 +596,14 @@ func (s *codeScanning) CodeScanningListAlertsForRepo(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#list-code-scanning-analyses-for-a-repository - API method documentation
 func (s *codeScanning) CodeScanningListRecentAnalyses(ctx context.Context, request operations.CodeScanningListRecentAnalysesRequest) (*operations.CodeScanningListRecentAnalysesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/analyses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/analyses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -668,9 +668,9 @@ func (s *codeScanning) CodeScanningListRecentAnalyses(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#update-a-code-scanning-alert - API method documentation
 func (s *codeScanning) CodeScanningUpdateAlert(ctx context.Context, request operations.CodeScanningUpdateAlertRequest) (*operations.CodeScanningUpdateAlertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -762,9 +762,9 @@ func (s *codeScanning) CodeScanningUpdateAlert(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@3.2/rest/reference/code-scanning#upload-a-sarif-file - API method documentation
 func (s *codeScanning) CodeScanningUploadSarif(ctx context.Context, request operations.CodeScanningUploadSarifRequest) (*operations.CodeScanningUploadSarifResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/sarifs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/code-scanning/sarifs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

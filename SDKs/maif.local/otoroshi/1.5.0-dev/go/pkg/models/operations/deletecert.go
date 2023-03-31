@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteCertSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteCertPathParams struct {
-	// The certificate id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteCertRequest struct {
-	PathParams DeleteCertPathParams
-	Security   DeleteCertSecurity
+	// The certificate id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteCertResponse struct {

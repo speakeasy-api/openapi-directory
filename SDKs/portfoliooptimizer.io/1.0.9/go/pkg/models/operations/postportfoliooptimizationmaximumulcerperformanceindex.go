@@ -34,10 +34,6 @@ type PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody struct {
 	RiskFreeRate float64 `json:"riskFreeRate"`
 }
 
-type PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequest struct {
-	Request PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMaximumUlcerPerformanceIndex200ApplicationJSON - OK
 type PostPortfolioOptimizationMaximumUlcerPerformanceIndex200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

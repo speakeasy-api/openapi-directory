@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesTwitchReadPathParams struct {
+type GamesTwitchReadRequest struct {
 	// An ID or a slug identifying this Game.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GamesTwitchReadRequest struct {
-	PathParams GamesTwitchReadPathParams
 }
 
 type GamesTwitchReadResponse struct {

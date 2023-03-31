@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams struct {
-	// A unique identifier of the SCIM group.
-	ScimGroupID string `pathParam:"style=simple,explode=false,name=scim_group_id"`
-}
-
-type EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams struct {
+type EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest struct {
 	// Excludes the specified attribute from being returned in the results. Using this parameter can speed up response time.
 	ExcludedAttributes *string `queryParam:"style=form,explode=true,name=excludedAttributes"`
-}
-
-type EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest struct {
-	PathParams  EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams
-	QueryParams EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams
+	// A unique identifier of the SCIM group.
+	ScimGroupID string `pathParam:"style=simple,explode=false,name=scim_group_id"`
 }
 
 type EnterpriseAdminGetProvisioningInformationForEnterpriseGroupResponse struct {

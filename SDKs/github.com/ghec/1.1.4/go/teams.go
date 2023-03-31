@@ -48,7 +48,7 @@ func newTeams(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-team-member-legacy - API method documentation
 func (s *teams) TeamsAddMemberLegacy(ctx context.Context, request operations.TeamsAddMemberLegacyRequest) (*operations.TeamsAddMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -109,9 +109,9 @@ func (s *teams) TeamsAddMemberLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsAddOrUpdateMembershipForUserInOrg(ctx context.Context, request operations.TeamsAddOrUpdateMembershipForUserInOrgRequest) (*operations.TeamsAddOrUpdateMembershipForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,9 +175,9 @@ func (s *teams) TeamsAddOrUpdateMembershipForUserInOrg(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-membership-for-a-user-legacy - API method documentation
 func (s *teams) TeamsAddOrUpdateMembershipForUserLegacy(ctx context.Context, request operations.TeamsAddOrUpdateMembershipForUserLegacyRequest) (*operations.TeamsAddOrUpdateMembershipForUserLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,9 +243,9 @@ func (s *teams) TeamsAddOrUpdateMembershipForUserLegacy(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-project-permissions - API method documentation
 func (s *teams) TeamsAddOrUpdateProjectPermissionsInOrg(ctx context.Context, request operations.TeamsAddOrUpdateProjectPermissionsInOrgRequest) (*operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -299,9 +299,9 @@ func (s *teams) TeamsAddOrUpdateProjectPermissionsInOrg(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#add-or-update-team-project-permissions-legacy - API method documentation
 func (s *teams) TeamsAddOrUpdateProjectPermissionsLegacy(ctx context.Context, request operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest) (*operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -377,9 +377,9 @@ func (s *teams) TeamsAddOrUpdateProjectPermissionsLegacy(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#add-or-update-team-repository-permissions - API method documentation
 func (s *teams) TeamsAddOrUpdateRepoPermissionsInOrg(ctx context.Context, request operations.TeamsAddOrUpdateRepoPermissionsInOrgRequest) (*operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -425,9 +425,9 @@ func (s *teams) TeamsAddOrUpdateRepoPermissionsInOrg(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-repository-permissions-legacy - API method documentation
 func (s *teams) TeamsAddOrUpdateRepoPermissionsLegacy(ctx context.Context, request operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest) (*operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -491,7 +491,7 @@ func (s *teams) TeamsAddOrUpdateRepoPermissionsLegacy(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#check-team-permissions-for-a-project - API method documentation
 func (s *teams) TeamsCheckPermissionsForProjectInOrg(ctx context.Context, request operations.TeamsCheckPermissionsForProjectInOrgRequest) (*operations.TeamsCheckPermissionsForProjectInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -540,7 +540,7 @@ func (s *teams) TeamsCheckPermissionsForProjectInOrg(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#check-team-permissions-for-a-project-legacy - API method documentation
 func (s *teams) TeamsCheckPermissionsForProjectLegacy(ctx context.Context, request operations.TeamsCheckPermissionsForProjectLegacyRequest) (*operations.TeamsCheckPermissionsForProjectLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -593,7 +593,7 @@ func (s *teams) TeamsCheckPermissionsForProjectLegacy(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#check-team-permissions-for-a-repository - API method documentation
 func (s *teams) TeamsCheckPermissionsForRepoInOrg(ctx context.Context, request operations.TeamsCheckPermissionsForRepoInOrgRequest) (*operations.TeamsCheckPermissionsForRepoInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -646,7 +646,7 @@ func (s *teams) TeamsCheckPermissionsForRepoInOrg(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#check-team-permissions-for-a-repository-legacy - API method documentation
 func (s *teams) TeamsCheckPermissionsForRepoLegacy(ctx context.Context, request operations.TeamsCheckPermissionsForRepoLegacyRequest) (*operations.TeamsCheckPermissionsForRepoLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -697,9 +697,9 @@ func (s *teams) TeamsCheckPermissionsForRepoLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-team - API method documentation
 func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateRequest) (*operations.TeamsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -777,9 +777,9 @@ func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateR
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion-comment - API method documentation
 func (s *teams) TeamsCreateDiscussionCommentInOrg(ctx context.Context, request operations.TeamsCreateDiscussionCommentInOrgRequest) (*operations.TeamsCreateDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -837,9 +837,9 @@ func (s *teams) TeamsCreateDiscussionCommentInOrg(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion-comment-legacy - API method documentation
 func (s *teams) TeamsCreateDiscussionCommentLegacy(ctx context.Context, request operations.TeamsCreateDiscussionCommentLegacyRequest) (*operations.TeamsCreateDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -897,9 +897,9 @@ func (s *teams) TeamsCreateDiscussionCommentLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion - API method documentation
 func (s *teams) TeamsCreateDiscussionInOrg(ctx context.Context, request operations.TeamsCreateDiscussionInOrgRequest) (*operations.TeamsCreateDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -957,9 +957,9 @@ func (s *teams) TeamsCreateDiscussionInOrg(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion-legacy - API method documentation
 func (s *teams) TeamsCreateDiscussionLegacy(ctx context.Context, request operations.TeamsCreateDiscussionLegacyRequest) (*operations.TeamsCreateDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1017,9 +1017,9 @@ func (s *teams) TeamsCreateDiscussionLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-or-update-idp-group-connections - API method documentation
 func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsInOrg(ctx context.Context, request operations.TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequest) (*operations.TeamsCreateOrUpdateIdpGroupConnectionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1077,9 +1077,9 @@ func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsInOrg(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-or-update-idp-group-connections-legacy - API method documentation
 func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsLegacy(ctx context.Context, request operations.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest) (*operations.TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1155,7 +1155,7 @@ func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsLegacy(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion-comment - API method documentation
 func (s *teams) TeamsDeleteDiscussionCommentInOrg(ctx context.Context, request operations.TeamsDeleteDiscussionCommentInOrgRequest) (*operations.TeamsDeleteDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1194,7 +1194,7 @@ func (s *teams) TeamsDeleteDiscussionCommentInOrg(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion-comment-legacy - API method documentation
 func (s *teams) TeamsDeleteDiscussionCommentLegacy(ctx context.Context, request operations.TeamsDeleteDiscussionCommentLegacyRequest) (*operations.TeamsDeleteDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1233,7 +1233,7 @@ func (s *teams) TeamsDeleteDiscussionCommentLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion - API method documentation
 func (s *teams) TeamsDeleteDiscussionInOrg(ctx context.Context, request operations.TeamsDeleteDiscussionInOrgRequest) (*operations.TeamsDeleteDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1272,7 +1272,7 @@ func (s *teams) TeamsDeleteDiscussionInOrg(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion-legacy - API method documentation
 func (s *teams) TeamsDeleteDiscussionLegacy(ctx context.Context, request operations.TeamsDeleteDiscussionLegacyRequest) (*operations.TeamsDeleteDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1313,7 +1313,7 @@ func (s *teams) TeamsDeleteDiscussionLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-team - API method documentation
 func (s *teams) TeamsDeleteInOrg(ctx context.Context, request operations.TeamsDeleteInOrgRequest) (*operations.TeamsDeleteInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1354,7 +1354,7 @@ func (s *teams) TeamsDeleteInOrg(ctx context.Context, request operations.TeamsDe
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#delete-a-team-legacy - API method documentation
 func (s *teams) TeamsDeleteLegacy(ctx context.Context, request operations.TeamsDeleteLegacyRequest) (*operations.TeamsDeleteLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1413,7 +1413,7 @@ func (s *teams) TeamsDeleteLegacy(ctx context.Context, request operations.TeamsD
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#external-idp-group-info-for-an-organization - API method documentation
 func (s *teams) TeamsExternalIdpGroupInfoForOrg(ctx context.Context, request operations.TeamsExternalIdpGroupInfoForOrgRequest) (*operations.TeamsExternalIdpGroupInfoForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-group/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-group/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1461,7 +1461,7 @@ func (s *teams) TeamsExternalIdpGroupInfoForOrg(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-team-by-name - API method documentation
 func (s *teams) TeamsGetByName(ctx context.Context, request operations.TeamsGetByNameRequest) (*operations.TeamsGetByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1519,7 +1519,7 @@ func (s *teams) TeamsGetByName(ctx context.Context, request operations.TeamsGetB
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion-comment - API method documentation
 func (s *teams) TeamsGetDiscussionCommentInOrg(ctx context.Context, request operations.TeamsGetDiscussionCommentInOrgRequest) (*operations.TeamsGetDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1567,7 +1567,7 @@ func (s *teams) TeamsGetDiscussionCommentInOrg(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion-comment-legacy - API method documentation
 func (s *teams) TeamsGetDiscussionCommentLegacy(ctx context.Context, request operations.TeamsGetDiscussionCommentLegacyRequest) (*operations.TeamsGetDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1615,7 +1615,7 @@ func (s *teams) TeamsGetDiscussionCommentLegacy(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion - API method documentation
 func (s *teams) TeamsGetDiscussionInOrg(ctx context.Context, request operations.TeamsGetDiscussionInOrgRequest) (*operations.TeamsGetDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1663,7 +1663,7 @@ func (s *teams) TeamsGetDiscussionInOrg(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion-legacy - API method documentation
 func (s *teams) TeamsGetDiscussionLegacy(ctx context.Context, request operations.TeamsGetDiscussionLegacyRequest) (*operations.TeamsGetDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1709,7 +1709,7 @@ func (s *teams) TeamsGetDiscussionLegacy(ctx context.Context, request operations
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#get-a-team-legacy - API method documentation
 func (s *teams) TeamsGetLegacy(ctx context.Context, request operations.TeamsGetLegacyRequest) (*operations.TeamsGetLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1769,7 +1769,7 @@ func (s *teams) TeamsGetLegacy(ctx context.Context, request operations.TeamsGetL
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-team-member-legacy - API method documentation
 func (s *teams) TeamsGetMemberLegacy(ctx context.Context, request operations.TeamsGetMemberLegacyRequest) (*operations.TeamsGetMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1817,7 +1817,7 @@ func (s *teams) TeamsGetMemberLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsGetMembershipForUserInOrg(ctx context.Context, request operations.TeamsGetMembershipForUserInOrgRequest) (*operations.TeamsGetMembershipForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1873,7 +1873,7 @@ func (s *teams) TeamsGetMembershipForUserInOrg(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-team-membership-for-a-user-legacy - API method documentation
 func (s *teams) TeamsGetMembershipForUserLegacy(ctx context.Context, request operations.TeamsGetMembershipForUserLegacyRequest) (*operations.TeamsGetMembershipForUserLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1931,9 +1931,9 @@ func (s *teams) TeamsGetMembershipForUserLegacy(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#link-external-idp-group-team-connection - API method documentation
 func (s *teams) TeamsLinkExternalIdpGroupToTeamForOrg(ctx context.Context, request operations.TeamsLinkExternalIdpGroupToTeamForOrgRequest) (*operations.TeamsLinkExternalIdpGroupToTeamForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1987,14 +1987,14 @@ func (s *teams) TeamsLinkExternalIdpGroupToTeamForOrg(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-teams - API method documentation
 func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListRequest) (*operations.TeamsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2051,14 +2051,14 @@ func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListReque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-child-teams - API method documentation
 func (s *teams) TeamsListChildInOrg(ctx context.Context, request operations.TeamsListChildInOrgRequest) (*operations.TeamsListChildInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2103,14 +2103,14 @@ func (s *teams) TeamsListChildInOrg(ctx context.Context, request operations.Team
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#list-child-teams-legacy - API method documentation
 func (s *teams) TeamsListChildLegacy(ctx context.Context, request operations.TeamsListChildLegacyRequest) (*operations.TeamsListChildLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2179,14 +2179,14 @@ func (s *teams) TeamsListChildLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussion-comments - API method documentation
 func (s *teams) TeamsListDiscussionCommentsInOrg(ctx context.Context, request operations.TeamsListDiscussionCommentsInOrgRequest) (*operations.TeamsListDiscussionCommentsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2233,14 +2233,14 @@ func (s *teams) TeamsListDiscussionCommentsInOrg(ctx context.Context, request op
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussion-comments-legacy - API method documentation
 func (s *teams) TeamsListDiscussionCommentsLegacy(ctx context.Context, request operations.TeamsListDiscussionCommentsLegacyRequest) (*operations.TeamsListDiscussionCommentsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2287,14 +2287,14 @@ func (s *teams) TeamsListDiscussionCommentsLegacy(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussions - API method documentation
 func (s *teams) TeamsListDiscussionsInOrg(ctx context.Context, request operations.TeamsListDiscussionsInOrgRequest) (*operations.TeamsListDiscussionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2341,14 +2341,14 @@ func (s *teams) TeamsListDiscussionsInOrg(ctx context.Context, request operation
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussions-legacy - API method documentation
 func (s *teams) TeamsListDiscussionsLegacy(ctx context.Context, request operations.TeamsListDiscussionsLegacyRequest) (*operations.TeamsListDiscussionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2395,14 +2395,14 @@ func (s *teams) TeamsListDiscussionsLegacy(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-external-idp-groups-for-an-organization - API method documentation
 func (s *teams) TeamsListExternalIdpGroupsForOrg(ctx context.Context, request operations.TeamsListExternalIdpGroupsForOrgRequest) (*operations.TeamsListExternalIdpGroupsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2454,7 +2454,7 @@ func (s *teams) TeamsListForAuthenticatedUser(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2516,7 +2516,7 @@ func (s *teams) TeamsListForAuthenticatedUser(ctx context.Context, request opera
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-idp-groups-for-a-team-legacy - API method documentation
 func (s *teams) TeamsListIdpGroupsForLegacy(ctx context.Context, request operations.TeamsListIdpGroupsForLegacyRequest) (*operations.TeamsListIdpGroupsForLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2574,14 +2574,14 @@ func (s *teams) TeamsListIdpGroupsForLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-idp-groups-for-an-organization - API method documentation
 func (s *teams) TeamsListIdpGroupsForOrg(ctx context.Context, request operations.TeamsListIdpGroupsForOrgRequest) (*operations.TeamsListIdpGroupsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/team-sync/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/team-sync/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2630,7 +2630,7 @@ func (s *teams) TeamsListIdpGroupsForOrg(ctx context.Context, request operations
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-idp-groups-for-a-team - API method documentation
 func (s *teams) TeamsListIdpGroupsInOrg(ctx context.Context, request operations.TeamsListIdpGroupsInOrgRequest) (*operations.TeamsListIdpGroupsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2678,7 +2678,7 @@ func (s *teams) TeamsListIdpGroupsInOrg(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-external-idp-group-team-connection - API method documentation
 func (s *teams) TeamsListLinkedExternalIdpGroupsToTeamForOrg(ctx context.Context, request operations.TeamsListLinkedExternalIdpGroupsToTeamForOrgRequest) (*operations.TeamsListLinkedExternalIdpGroupsToTeamForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2726,14 +2726,14 @@ func (s *teams) TeamsListLinkedExternalIdpGroupsToTeamForOrg(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-members - API method documentation
 func (s *teams) TeamsListMembersInOrg(ctx context.Context, request operations.TeamsListMembersInOrgRequest) (*operations.TeamsListMembersInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2780,14 +2780,14 @@ func (s *teams) TeamsListMembersInOrg(ctx context.Context, request operations.Te
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-members-legacy - API method documentation
 func (s *teams) TeamsListMembersLegacy(ctx context.Context, request operations.TeamsListMembersLegacyRequest) (*operations.TeamsListMembersLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2844,14 +2844,14 @@ func (s *teams) TeamsListMembersLegacy(ctx context.Context, request operations.T
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-pending-team-invitations - API method documentation
 func (s *teams) TeamsListPendingInvitationsInOrg(ctx context.Context, request operations.TeamsListPendingInvitationsInOrgRequest) (*operations.TeamsListPendingInvitationsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/invitations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2898,14 +2898,14 @@ func (s *teams) TeamsListPendingInvitationsInOrg(ctx context.Context, request op
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-pending-team-invitations-legacy - API method documentation
 func (s *teams) TeamsListPendingInvitationsLegacy(ctx context.Context, request operations.TeamsListPendingInvitationsLegacyRequest) (*operations.TeamsListPendingInvitationsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/invitations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2952,14 +2952,14 @@ func (s *teams) TeamsListPendingInvitationsLegacy(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-projects - API method documentation
 func (s *teams) TeamsListProjectsInOrg(ctx context.Context, request operations.TeamsListProjectsInOrgRequest) (*operations.TeamsListProjectsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3006,14 +3006,14 @@ func (s *teams) TeamsListProjectsInOrg(ctx context.Context, request operations.T
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#list-team-projects-legacy - API method documentation
 func (s *teams) TeamsListProjectsLegacy(ctx context.Context, request operations.TeamsListProjectsLegacyRequest) (*operations.TeamsListProjectsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3070,14 +3070,14 @@ func (s *teams) TeamsListProjectsLegacy(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-repositories - API method documentation
 func (s *teams) TeamsListReposInOrg(ctx context.Context, request operations.TeamsListReposInOrgRequest) (*operations.TeamsListReposInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3122,14 +3122,14 @@ func (s *teams) TeamsListReposInOrg(ctx context.Context, request operations.Team
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#list-team-repositories-legacy - API method documentation
 func (s *teams) TeamsListReposLegacy(ctx context.Context, request operations.TeamsListReposLegacyRequest) (*operations.TeamsListReposLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3192,7 +3192,7 @@ func (s *teams) TeamsListReposLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-team-member-legacy - API method documentation
 func (s *teams) TeamsRemoveMemberLegacy(ctx context.Context, request operations.TeamsRemoveMemberLegacyRequest) (*operations.TeamsRemoveMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3237,7 +3237,7 @@ func (s *teams) TeamsRemoveMemberLegacy(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsRemoveMembershipForUserInOrg(ctx context.Context, request operations.TeamsRemoveMembershipForUserInOrgRequest) (*operations.TeamsRemoveMembershipForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3282,7 +3282,7 @@ func (s *teams) TeamsRemoveMembershipForUserInOrg(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-team-membership-for-a-user-legacy - API method documentation
 func (s *teams) TeamsRemoveMembershipForUserLegacy(ctx context.Context, request operations.TeamsRemoveMembershipForUserLegacyRequest) (*operations.TeamsRemoveMembershipForUserLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3323,7 +3323,7 @@ func (s *teams) TeamsRemoveMembershipForUserLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-a-project-from-a-team - API method documentation
 func (s *teams) TeamsRemoveProjectInOrg(ctx context.Context, request operations.TeamsRemoveProjectInOrgRequest) (*operations.TeamsRemoveProjectInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3362,7 +3362,7 @@ func (s *teams) TeamsRemoveProjectInOrg(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#remove-a-project-from-a-team-legacy - API method documentation
 func (s *teams) TeamsRemoveProjectLegacy(ctx context.Context, request operations.TeamsRemoveProjectLegacyRequest) (*operations.TeamsRemoveProjectLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3421,7 +3421,7 @@ func (s *teams) TeamsRemoveProjectLegacy(ctx context.Context, request operations
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#remove-a-repository-from-a-team - API method documentation
 func (s *teams) TeamsRemoveRepoInOrg(ctx context.Context, request operations.TeamsRemoveRepoInOrgRequest) (*operations.TeamsRemoveRepoInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3460,7 +3460,7 @@ func (s *teams) TeamsRemoveRepoInOrg(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#remove-a-repository-from-a-team-legacy - API method documentation
 func (s *teams) TeamsRemoveRepoLegacy(ctx context.Context, request operations.TeamsRemoveRepoLegacyRequest) (*operations.TeamsRemoveRepoLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3499,7 +3499,7 @@ func (s *teams) TeamsRemoveRepoLegacy(ctx context.Context, request operations.Te
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#unlink-external-idp-group-team-connection - API method documentation
 func (s *teams) TeamsUnlinkExternalIdpGroupFromTeamForOrg(ctx context.Context, request operations.TeamsUnlinkExternalIdpGroupFromTeamForOrgRequest) (*operations.TeamsUnlinkExternalIdpGroupFromTeamForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3538,9 +3538,9 @@ func (s *teams) TeamsUnlinkExternalIdpGroupFromTeamForOrg(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion-comment - API method documentation
 func (s *teams) TeamsUpdateDiscussionCommentInOrg(ctx context.Context, request operations.TeamsUpdateDiscussionCommentInOrgRequest) (*operations.TeamsUpdateDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3596,9 +3596,9 @@ func (s *teams) TeamsUpdateDiscussionCommentInOrg(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion-comment-legacy - API method documentation
 func (s *teams) TeamsUpdateDiscussionCommentLegacy(ctx context.Context, request operations.TeamsUpdateDiscussionCommentLegacyRequest) (*operations.TeamsUpdateDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3654,9 +3654,9 @@ func (s *teams) TeamsUpdateDiscussionCommentLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion - API method documentation
 func (s *teams) TeamsUpdateDiscussionInOrg(ctx context.Context, request operations.TeamsUpdateDiscussionInOrgRequest) (*operations.TeamsUpdateDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3709,9 +3709,9 @@ func (s *teams) TeamsUpdateDiscussionInOrg(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion-legacy - API method documentation
 func (s *teams) TeamsUpdateDiscussionLegacy(ctx context.Context, request operations.TeamsUpdateDiscussionLegacyRequest) (*operations.TeamsUpdateDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3764,9 +3764,9 @@ func (s *teams) TeamsUpdateDiscussionLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-team - API method documentation
 func (s *teams) TeamsUpdateInOrg(ctx context.Context, request operations.TeamsUpdateInOrgRequest) (*operations.TeamsUpdateInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3845,9 +3845,9 @@ func (s *teams) TeamsUpdateInOrg(ctx context.Context, request operations.TeamsUp
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#update-a-team-legacy - API method documentation
 func (s *teams) TeamsUpdateLegacy(ctx context.Context, request operations.TeamsUpdateLegacyRequest) (*operations.TeamsUpdateLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

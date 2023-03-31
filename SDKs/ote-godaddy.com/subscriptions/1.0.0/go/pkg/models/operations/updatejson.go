@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateJSONPathParams struct {
+type UpdateJSONRequest struct {
+	// Details of the Subscription to change
+	SubscriptionUpdate shared.SubscriptionUpdate `request:"mediaType=application/json"`
 	// Unique identifier of the Subscription to update
 	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type UpdateJSONRequest struct {
-	PathParams UpdateJSONPathParams
-	// Details of the Subscription to change
-	Request shared.SubscriptionUpdate `request:"mediaType=application/json"`
 }
 
 type UpdateJSONResponse struct {

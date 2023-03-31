@@ -10,22 +10,18 @@ import (
 )
 
 type BloggerPagesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerPagesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerPagesListSecurity struct {
 	Option1 *BloggerPagesListSecurityOption1 `security:"option"`
 	Option2 *BloggerPagesListSecurityOption2 `security:"option"`
-}
-
-type BloggerPagesListPathParams struct {
-	BlogID string `pathParam:"style=simple,explode=false,name=blogId"`
 }
 
 type BloggerPagesListStatusEnum string
@@ -84,13 +80,14 @@ func (e *BloggerPagesListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerPagesListQueryParams struct {
+type BloggerPagesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
 	Callback    *string `queryParam:"style=form,explode=true,name=callback"`
 	FetchBodies *bool   `queryParam:"style=form,explode=true,name=fetchBodies"`
@@ -112,12 +109,6 @@ type BloggerPagesListQueryParams struct {
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string                   `queryParam:"style=form,explode=true,name=upload_protocol"`
 	View           *BloggerPagesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BloggerPagesListRequest struct {
-	PathParams  BloggerPagesListPathParams
-	QueryParams BloggerPagesListQueryParams
-	Security    BloggerPagesListSecurity
 }
 
 type BloggerPagesListResponse struct {

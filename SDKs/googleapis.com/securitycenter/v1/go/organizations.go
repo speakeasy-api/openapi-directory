@@ -32,11 +32,11 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // SecuritycenterOrganizationsAssetsRunDiscovery - Runs asset discovery. The discovery is tracked with a long-running operation. This API can only be called with limited frequency for an organization. If it is called too frequently the caller will receive a TOO_MANY_REQUESTS error.
-func (s *organizations) SecuritycenterOrganizationsAssetsRunDiscovery(ctx context.Context, request operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest) (*operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsAssetsRunDiscovery(ctx context.Context, request operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest, security operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity) (*operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets:runDiscovery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets:runDiscovery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *organizations) SecuritycenterOrganizationsAssetsRunDiscovery(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *organizations) SecuritycenterOrganizationsAssetsRunDiscovery(ctx contex
 }
 
 // SecuritycenterOrganizationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *organizations) SecuritycenterOrganizationsOperationsCancel(ctx context.Context, request operations.SecuritycenterOrganizationsOperationsCancelRequest) (*operations.SecuritycenterOrganizationsOperationsCancelResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsOperationsCancel(ctx context.Context, request operations.SecuritycenterOrganizationsOperationsCancelRequest, security operations.SecuritycenterOrganizationsOperationsCancelSecurity) (*operations.SecuritycenterOrganizationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *organizations) SecuritycenterOrganizationsOperationsCancel(ctx context.
 }
 
 // SecuritycenterOrganizationsSourcesCreate - Creates a source.
-func (s *organizations) SecuritycenterOrganizationsSourcesCreate(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesCreateRequest) (*operations.SecuritycenterOrganizationsSourcesCreateResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsSourcesCreate(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesCreateRequest, security operations.SecuritycenterOrganizationsSourcesCreateSecurity) (*operations.SecuritycenterOrganizationsSourcesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Source", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesCreate(ctx context.Con
 }
 
 // SecuritycenterOrganizationsSourcesFindingsCreate - Creates a finding. The corresponding source must exist for finding creation to succeed.
-func (s *organizations) SecuritycenterOrganizationsSourcesFindingsCreate(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesFindingsCreateRequest) (*operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsSourcesFindingsCreate(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesFindingsCreateRequest, security operations.SecuritycenterOrganizationsSourcesFindingsCreateSecurity) (*operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindingInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesFindingsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesFindingsCreate(ctx con
 }
 
 // SecuritycenterOrganizationsSourcesGetIamPolicy - Gets the access control policy on the specified Source.
-func (s *organizations) SecuritycenterOrganizationsSourcesGetIamPolicy(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesGetIamPolicyRequest) (*operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsSourcesGetIamPolicy(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesGetIamPolicyRequest, security operations.SecuritycenterOrganizationsSourcesGetIamPolicySecurity) (*operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesGetIamPolicy(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesGetIamPolicy(ctx conte
 }
 
 // SecuritycenterOrganizationsSourcesSetIamPolicy - Sets the access control policy on the specified Source.
-func (s *organizations) SecuritycenterOrganizationsSourcesSetIamPolicy(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesSetIamPolicyRequest) (*operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsSourcesSetIamPolicy(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesSetIamPolicyRequest, security operations.SecuritycenterOrganizationsSourcesSetIamPolicySecurity) (*operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesSetIamPolicy(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,11 +355,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesSetIamPolicy(ctx conte
 }
 
 // SecuritycenterOrganizationsSourcesTestIamPermissions - Returns the permissions that a caller has on the specified source.
-func (s *organizations) SecuritycenterOrganizationsSourcesTestIamPermissions(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesTestIamPermissionsRequest) (*operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse, error) {
+func (s *organizations) SecuritycenterOrganizationsSourcesTestIamPermissions(ctx context.Context, request operations.SecuritycenterOrganizationsSourcesTestIamPermissionsRequest, security operations.SecuritycenterOrganizationsSourcesTestIamPermissionsSecurity) (*operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -371,11 +371,11 @@ func (s *organizations) SecuritycenterOrganizationsSourcesTestIamPermissions(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

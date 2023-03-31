@@ -7,20 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryPostFileQueryParams struct {
-	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
-	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
-}
-
 // StoryPostFileOpenOfficeXMLDocumentEGXlsxPptxFile - A pptx or xlsx object from which to start creation of a story
 type StoryPostFileOpenOfficeXMLDocumentEGXlsxPptxFile struct {
 	File [][]byte `multipartForm:"name=file,json"`
 }
 
 type StoryPostFileRequest struct {
-	QueryParams StoryPostFileQueryParams
 	// A pptx or xlsx file upload or story outline json object
-	Request StoryPostFileOpenOfficeXMLDocumentEGXlsxPptxFile `request:"mediaType=multipart/form-data"`
+	RequestBody StoryPostFileOpenOfficeXMLDocumentEGXlsxPptxFile `request:"mediaType=multipart/form-data"`
+	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
 }
 
 type StoryPostFileResponse struct {

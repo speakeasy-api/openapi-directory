@@ -12,12 +12,8 @@ var UpdateEndUserServerList = []string{
 }
 
 type UpdateEndUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateEndUserPathParams struct {
-	// The unique string created by Twilio to identify the End User resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateEndUserUpdateEndUserRequest struct {
@@ -28,10 +24,9 @@ type UpdateEndUserUpdateEndUserRequest struct {
 }
 
 type UpdateEndUserRequest struct {
-	PathParams UpdateEndUserPathParams
-	Request    *UpdateEndUserUpdateEndUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateEndUserSecurity
-	ServerURL  *string
+	RequestBody *UpdateEndUserUpdateEndUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string created by Twilio to identify the End User resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateEndUserResponse struct {

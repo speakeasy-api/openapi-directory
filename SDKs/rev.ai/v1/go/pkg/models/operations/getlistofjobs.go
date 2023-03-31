@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListOfJobsQueryParams struct {
+type GetListOfJobsRequest struct {
 	// Limits the number of jobs returned, default is 100, max is 1000
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// If specified, returns transcription jobs submitted before the job with this id, exclusive (job with this id is not included)
 	StartingAfter *string `queryParam:"style=form,explode=true,name=starting_after"`
-}
-
-type GetListOfJobsRequest struct {
-	QueryParams GetListOfJobsQueryParams
 }
 
 // GetListOfJobs401ApplicationProblemPlusJSON - Request Unauthorized

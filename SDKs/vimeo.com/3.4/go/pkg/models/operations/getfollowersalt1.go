@@ -57,7 +57,7 @@ func (e *GetFollowersAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFollowersAlt1QueryParams struct {
+type GetFollowersAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetFollowersAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -68,10 +68,6 @@ type GetFollowersAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetFollowersAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFollowersAlt1Request struct {
-	QueryParams GetFollowersAlt1QueryParams
 }
 
 type GetFollowersAlt1Response struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BinaryauthorizationProjectsAttestorsCreate - Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor already exists.
-func (s *projects) BinaryauthorizationProjectsAttestorsCreate(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsCreateRequest) (*operations.BinaryauthorizationProjectsAttestorsCreateResponse, error) {
+func (s *projects) BinaryauthorizationProjectsAttestorsCreate(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsCreateRequest, security operations.BinaryauthorizationProjectsAttestorsCreateSecurity) (*operations.BinaryauthorizationProjectsAttestorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attestors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attestors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AttestorInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) BinaryauthorizationProjectsAttestorsCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) BinaryauthorizationProjectsAttestorsCreate(ctx context.Contex
 }
 
 // BinaryauthorizationProjectsAttestorsDelete - Deletes an attestor. Returns NOT_FOUND if the attestor does not exist.
-func (s *projects) BinaryauthorizationProjectsAttestorsDelete(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsDeleteRequest) (*operations.BinaryauthorizationProjectsAttestorsDeleteResponse, error) {
+func (s *projects) BinaryauthorizationProjectsAttestorsDelete(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsDeleteRequest, security operations.BinaryauthorizationProjectsAttestorsDeleteSecurity) (*operations.BinaryauthorizationProjectsAttestorsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) BinaryauthorizationProjectsAttestorsDelete(ctx context.Contex
 }
 
 // BinaryauthorizationProjectsAttestorsList - Lists attestors. Returns INVALID_ARGUMENT if the project does not exist.
-func (s *projects) BinaryauthorizationProjectsAttestorsList(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsListRequest) (*operations.BinaryauthorizationProjectsAttestorsListResponse, error) {
+func (s *projects) BinaryauthorizationProjectsAttestorsList(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsListRequest, security operations.BinaryauthorizationProjectsAttestorsListSecurity) (*operations.BinaryauthorizationProjectsAttestorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attestors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attestors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) BinaryauthorizationProjectsAttestorsList(ctx context.Context,
 }
 
 // BinaryauthorizationProjectsAttestorsUpdate - Updates an attestor. Returns NOT_FOUND if the attestor does not exist.
-func (s *projects) BinaryauthorizationProjectsAttestorsUpdate(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsUpdateRequest) (*operations.BinaryauthorizationProjectsAttestorsUpdateResponse, error) {
+func (s *projects) BinaryauthorizationProjectsAttestorsUpdate(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsUpdateRequest, security operations.BinaryauthorizationProjectsAttestorsUpdateSecurity) (*operations.BinaryauthorizationProjectsAttestorsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AttestorInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) BinaryauthorizationProjectsAttestorsUpdate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) BinaryauthorizationProjectsAttestorsUpdate(ctx context.Contex
 }
 
 // BinaryauthorizationProjectsAttestorsValidateAttestationOccurrence - Returns whether the given Attestation for the given image URI was signed by the given Attestor
-func (s *projects) BinaryauthorizationProjectsAttestorsValidateAttestationOccurrence(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest) (*operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse, error) {
+func (s *projects) BinaryauthorizationProjectsAttestorsValidateAttestationOccurrence(ctx context.Context, request operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest, security operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceSecurity) (*operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{attestor}:validateAttestationOccurrence", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{attestor}:validateAttestationOccurrence", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValidateAttestationOccurrenceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) BinaryauthorizationProjectsAttestorsValidateAttestationOccurr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) BinaryauthorizationProjectsAttestorsValidateAttestationOccurr
 }
 
 // BinaryauthorizationProjectsPolicyGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) BinaryauthorizationProjectsPolicyGetIamPolicy(ctx context.Context, request operations.BinaryauthorizationProjectsPolicyGetIamPolicyRequest) (*operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse, error) {
+func (s *projects) BinaryauthorizationProjectsPolicyGetIamPolicy(ctx context.Context, request operations.BinaryauthorizationProjectsPolicyGetIamPolicyRequest, security operations.BinaryauthorizationProjectsPolicyGetIamPolicySecurity) (*operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) BinaryauthorizationProjectsPolicyGetIamPolicy(ctx context.Con
 }
 
 // BinaryauthorizationProjectsPolicySetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) BinaryauthorizationProjectsPolicySetIamPolicy(ctx context.Context, request operations.BinaryauthorizationProjectsPolicySetIamPolicyRequest) (*operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse, error) {
+func (s *projects) BinaryauthorizationProjectsPolicySetIamPolicy(ctx context.Context, request operations.BinaryauthorizationProjectsPolicySetIamPolicyRequest, security operations.BinaryauthorizationProjectsPolicySetIamPolicySecurity) (*operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) BinaryauthorizationProjectsPolicySetIamPolicy(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) BinaryauthorizationProjectsPolicySetIamPolicy(ctx context.Con
 }
 
 // BinaryauthorizationProjectsPolicyTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) BinaryauthorizationProjectsPolicyTestIamPermissions(ctx context.Context, request operations.BinaryauthorizationProjectsPolicyTestIamPermissionsRequest) (*operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse, error) {
+func (s *projects) BinaryauthorizationProjectsPolicyTestIamPermissions(ctx context.Context, request operations.BinaryauthorizationProjectsPolicyTestIamPermissionsRequest, security operations.BinaryauthorizationProjectsPolicyTestIamPermissionsSecurity) (*operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) BinaryauthorizationProjectsPolicyTestIamPermissions(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

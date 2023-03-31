@@ -13,20 +13,16 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
-    req := operations.CreateConversationRequest{
-        Request: &operations.CreateConversationRequestBody{
-            DisplayName: "Customer Chat",
-            ImageURL: "https://example.com/image.png",
-            Name: "customer_chat",
-            Properties: &shared.ConversationProperties{
-                TTL: 60,
-            },
+    req := operations.CreateConversationRequestBody{
+        DisplayName: "Customer Chat",
+        ImageURL: "https://example.com/image.png",
+        Name: "customer_chat",
+        Properties: &shared.ConversationProperties{
+            TTL: 60,
         },
     }
 

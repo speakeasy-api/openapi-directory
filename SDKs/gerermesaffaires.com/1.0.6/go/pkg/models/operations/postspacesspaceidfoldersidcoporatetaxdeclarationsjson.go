@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONPathParams struct {
-	// Id of the folder result and taxation
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum string
@@ -234,10 +226,12 @@ func (u PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON) Marsha
 }
 
 type PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONPathParams
 	// Corporate tax declaration to add (either (DeclarationDate,DocumentId) either (File,Name,Content64Encoded,Title,DeclarationDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder result and taxation
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSON201ApplicationJSON - Id of document created

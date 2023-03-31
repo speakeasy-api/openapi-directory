@@ -126,10 +126,6 @@ func (u CodespacesCreateForAuthenticatedUserRequestBody) MarshalJSON() ([]byte, 
 	return nil, nil
 }
 
-type CodespacesCreateForAuthenticatedUserRequest struct {
-	Request CodespacesCreateForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 // CodespacesCreateForAuthenticatedUser503ApplicationJSON - Service unavailable
 type CodespacesCreateForAuthenticatedUser503ApplicationJSON struct {
 	Code             *string `json:"code,omitempty"`

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetFilesByIDOrURLQueryParams struct {
+type GetFilesByIDOrURLRequest struct {
 	// The fileId or fileUrl of the file to be returned
 	FileIDOrURL string `queryParam:"style=form,explode=true,name=fileIdOrUrl"`
-}
-
-type GetFilesByIDOrURLRequest struct {
-	QueryParams GetFilesByIDOrURLQueryParams
 }
 
 type GetFilesByIDOrURLResponse struct {

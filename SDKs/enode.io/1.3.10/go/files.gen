@@ -47,7 +47,6 @@ pkg/models/operations/postvehiclesvehicleidwatch.go
 pkg/models/operations/putvehiclesvehicleidsmartchargingpolicy.go
 pkg/models/operations/postwebhooksfirehosetest.go
 pkg/models/operations/putwebhooksfirehose.go
-pkg/models/shared/security.go
 pkg/models/shared/onechargersgetparameters0enum.go
 pkg/models/shared/onechargers1percent7bchargeridpercent7dgetresponses200contentapplication1jsonschema.go
 pkg/models/shared/onecharginglocationspostrequestbodycontentapplication1jsonschema.go

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ConvertURLQueryParams struct {
+type ConvertURLRequest struct {
 	// The URL to retrieve the OpenAPI 2.0 definition from
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type ConvertURLRequest struct {
-	QueryParams ConvertURLQueryParams
 }
 
 type ConvertURLResponse struct {

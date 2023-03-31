@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoToChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoToChannelPathParams struct {
+type AddVideoToChannelRequest struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type AddVideoToChannelRequest struct {
-	PathParams AddVideoToChannelPathParams
-	Security   AddVideoToChannelSecurity
 }
 
 type AddVideoToChannelResponse struct {

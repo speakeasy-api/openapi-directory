@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FolderSettingsGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type FolderSettingsGetRequest struct {
-	PathParams FolderSettingsGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type FolderSettingsGetResponse struct {

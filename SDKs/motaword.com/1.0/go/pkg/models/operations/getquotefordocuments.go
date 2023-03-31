@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuoteForDocumentsPathParams struct {
+type GetQuoteForDocumentsRequest struct {
+	GetQuotesForDocumentsBody *shared.GetQuotesForDocumentsBody `request:"mediaType=application/json"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetQuoteForDocumentsRequest struct {
-	PathParams GetQuoteForDocumentsPathParams
-	Request    *shared.GetQuotesForDocumentsBody `request:"mediaType=application/json"`
 }
 
 type GetQuoteForDocumentsResponse struct {

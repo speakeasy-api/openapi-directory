@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchWebhooksIDPathParams struct {
+type PatchWebhooksIDRequest struct {
+	WebhookInput shared.WebhookInput `request:"mediaType=application/json"`
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatchWebhooksIDRequest struct {
-	PathParams PatchWebhooksIDPathParams
-	Request    shared.WebhookInput `request:"mediaType=application/json"`
 }
 
 // PatchWebhooksID404ApplicationJSON - Not found

@@ -24,10 +24,6 @@ type PostSpinsRequestBody struct {
 	Start   *time.Time `form:"name=start"`
 }
 
-type PostSpinsRequest struct {
-	Request *PostSpinsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostSpinsResponse struct {
 	Body        []byte
 	ContentType string

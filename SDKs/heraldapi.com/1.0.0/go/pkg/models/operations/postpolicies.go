@@ -11,10 +11,6 @@ type PostPoliciesRequestBody struct {
 	QuoteID *string `json:"quote_id,omitempty"`
 }
 
-type PostPoliciesRequest struct {
-	Request *PostPoliciesRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPolicies200ApplicationJSON - OK
 type PostPolicies200ApplicationJSON struct {
 	Policy *shared.Policy `json:"policy,omitempty"`

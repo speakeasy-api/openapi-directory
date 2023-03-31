@@ -33,15 +33,11 @@ func (e *MembershipsRecentlyChangedFormatEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type MembershipsRecentlyChangedPathParams struct {
+type MembershipsRecentlyChangedRequest struct {
 	// The number of days since memberships were updated. For example, if you pass <code>3</code>, you'll receive all memberships that have been updated in the past 3 days. Valid entries are: <code>1</code>, <code>2</code> ... <code>30</code>
 	Days string `pathParam:"style=simple,explode=false,name=days"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format MembershipsRecentlyChangedFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type MembershipsRecentlyChangedRequest struct {
-	PathParams MembershipsRecentlyChangedPathParams
 }
 
 type MembershipsRecentlyChangedResponse struct {

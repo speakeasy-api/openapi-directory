@@ -3,14 +3,12 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        bearer=shared.SchemeBearer(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        bearer="YOUR_API_KEY_HERE",
+    ),
 )
+
     
 res = s.circuits.circuits_choices_list()
 

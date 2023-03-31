@@ -34,14 +34,14 @@ func newAvailabilities(defaultClient, securityClient HTTPClient, serverURL, lang
 // List the availability information for devices in an organization. The data returned by this endpoint is updated every 5 minutes.
 func (s *availabilities) GetOrganizationDevicesAvailabilities(ctx context.Context, request operations.GetOrganizationDevicesAvailabilitiesRequest) (*operations.GetOrganizationDevicesAvailabilitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/availabilities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices/availabilities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

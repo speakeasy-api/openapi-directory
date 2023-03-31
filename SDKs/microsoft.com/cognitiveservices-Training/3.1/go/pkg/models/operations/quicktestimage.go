@@ -7,24 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QuickTestImagePathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QuickTestImageQueryParams struct {
-	// Optional. Specifies the id of a particular iteration to evaluate against.
-	//             The default iteration for the project will be used when not specified.
-	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-	// Optional. Specifies whether or not to store the result of this prediction. The default is true, to store.
-	Store *bool `queryParam:"style=form,explode=true,name=store"`
-}
-
-type QuickTestImageHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
 type QuickTestImageRequestBodyImageData struct {
 	Content   []byte `multipartForm:"content"`
 	ImageData string `multipartForm:"name=imageData"`
@@ -36,10 +18,16 @@ type QuickTestImageRequestBody struct {
 }
 
 type QuickTestImageRequest struct {
-	PathParams  QuickTestImagePathParams
-	QueryParams QuickTestImageQueryParams
-	Headers     QuickTestImageHeaders
-	Request     QuickTestImageRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody QuickTestImageRequestBody `request:"mediaType=multipart/form-data"`
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
+	// Optional. Specifies the id of a particular iteration to evaluate against.
+	//             The default iteration for the project will be used when not specified.
+	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+	// Optional. Specifies whether or not to store the result of this prediction. The default is true, to store.
+	Store *bool `queryParam:"style=form,explode=true,name=store"`
 }
 
 type QuickTestImageResponse struct {

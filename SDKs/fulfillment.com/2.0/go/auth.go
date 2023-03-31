@@ -36,7 +36,7 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // PostOauthAccessToken - Generate an Access Token
 // By default tokens are valid for 7 days while refresh tokens are valid for 30 days. If your `grant_type` is "password" include the `username` and `password`, if however your `grant_type` is "refresh_token" the username/password are not required, instead set the `refresh_token`
 // #section/Getting-Started/Perpetuating-Access - More Information on Refresh Tokens
-func (s *auth) PostOauthAccessToken(ctx context.Context, request operations.PostOauthAccessTokenRequest) (*operations.PostOauthAccessTokenResponse, error) {
+func (s *auth) PostOauthAccessToken(ctx context.Context, request operations.PostOauthAccessTokenAccessTokenRequestV2) (*operations.PostOauthAccessTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/access_token"
 

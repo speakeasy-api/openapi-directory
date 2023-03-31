@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetClientClientIDRequest{
-        PathParams: operations.GetClientClientIDPathParams{
-            ClientID: "corrupti",
-        },
+        ClientID: "corrupti",
     }
 
     ctx := context.Background()

@@ -8,18 +8,14 @@ import (
 )
 
 type FirebaseappdistributionProjectsAppsReleasesBatchDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FirebaseappdistributionProjectsAppsReleasesBatchDeletePathParams struct {
-	// Required. The name of the app resource, which is the parent of the release resources. Format: `projects/{project_number}/apps/{app_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseappdistributionProjectsAppsReleasesBatchDeleteQueryParams struct {
+type FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                         *shared.XgafvEnum                                           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest *shared.GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type FirebaseappdistributionProjectsAppsReleasesBatchDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The name of the app resource, which is the parent of the release resources. Format: `projects/{project_number}/apps/{app_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type FirebaseappdistributionProjectsAppsReleasesBatchDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest struct {
-	PathParams  FirebaseappdistributionProjectsAppsReleasesBatchDeletePathParams
-	QueryParams FirebaseappdistributionProjectsAppsReleasesBatchDeleteQueryParams
-	Request     *shared.GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest `request:"mediaType=application/json"`
-	Security    FirebaseappdistributionProjectsAppsReleasesBatchDeleteSecurity
 }
 
 type FirebaseappdistributionProjectsAppsReleasesBatchDeleteResponse struct {

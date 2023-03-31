@@ -32,7 +32,7 @@ func newSmartCharging(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // Deletechargingschedule - Delete a smart charging schedule
-func (s *smartCharging) Deletechargingschedule(ctx context.Context, request operations.DeletechargingscheduleRequest) (*operations.DeletechargingscheduleResponse, error) {
+func (s *smartCharging) Deletechargingschedule(ctx context.Context, request operations.DeletechargingscheduleRequestBody) (*operations.DeletechargingscheduleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/chargingschedule"
 
@@ -87,7 +87,7 @@ func (s *smartCharging) Deletechargingschedule(ctx context.Context, request oper
 }
 
 // Setchargingschedule - Set one of charging power or current of a specific chargestation connector
-func (s *smartCharging) Setchargingschedule(ctx context.Context, request operations.SetchargingscheduleRequest) (*operations.SetchargingscheduleResponse, error) {
+func (s *smartCharging) Setchargingschedule(ctx context.Context, request operations.SetchargingscheduleRequestBody) (*operations.SetchargingscheduleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/commands/chargingschedule"
 

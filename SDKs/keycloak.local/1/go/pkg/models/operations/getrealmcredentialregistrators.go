@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetRealmCredentialRegistratorsPathParams struct {
+type GetRealmCredentialRegistratorsRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmCredentialRegistratorsRequest struct {
-	PathParams GetRealmCredentialRegistratorsPathParams
 }
 
 type GetRealmCredentialRegistratorsResponse struct {

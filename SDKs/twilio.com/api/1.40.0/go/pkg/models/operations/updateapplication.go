@@ -14,14 +14,8 @@ var UpdateApplicationServerList = []string{
 }
 
 type UpdateApplicationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateApplicationPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The Twilio-provided string that uniquely identifies the Application resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateApplicationUpdateApplicationRequestSmsFallbackMethodEnum - The HTTP method we should use to call `sms_fallback_url`. Can be: `GET` or `POST`.
@@ -240,10 +234,11 @@ type UpdateApplicationUpdateApplicationRequest struct {
 }
 
 type UpdateApplicationRequest struct {
-	PathParams UpdateApplicationPathParams
-	Request    *UpdateApplicationUpdateApplicationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateApplicationSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to update.
+	AccountSid  string                                     `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateApplicationUpdateApplicationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Application resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateApplicationResponse struct {

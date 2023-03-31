@@ -8,16 +8,11 @@ import (
 )
 
 type AutomlProjectsLocationsModelsModelEvaluationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AutomlProjectsLocationsModelsModelEvaluationsListPathParams struct {
-	// Required. Resource name of the model to list the model evaluations for. If modelId is set as "-", this will list model evaluations from across all models of the parent location.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AutomlProjectsLocationsModelsModelEvaluationsListQueryParams struct {
+type AutomlProjectsLocationsModelsModelEvaluationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type AutomlProjectsLocationsModelsModelEvaluationsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results for the server to return. Typically obtained via ListModelEvaluationsResponse.next_page_token of the previous AutoMl.ListModelEvaluations call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name of the model to list the model evaluations for. If modelId is set as "-", this will list model evaluations from across all models of the parent location.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type AutomlProjectsLocationsModelsModelEvaluationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AutomlProjectsLocationsModelsModelEvaluationsListRequest struct {
-	PathParams  AutomlProjectsLocationsModelsModelEvaluationsListPathParams
-	QueryParams AutomlProjectsLocationsModelsModelEvaluationsListQueryParams
-	Security    AutomlProjectsLocationsModelsModelEvaluationsListSecurity
 }
 
 type AutomlProjectsLocationsModelsModelEvaluationsListResponse struct {

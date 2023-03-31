@@ -4,28 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FactchecktoolsClaimsSearchRequest(
-    query_params=operations.FactchecktoolsClaimsSearchQueryParams(
-        dollar_xgafv="2",
-        access_token="porro",
-        alt="json",
-        callback="eos",
-        fields="voluptatibus",
-        key="et",
-        language_code="voluptatum",
-        max_age_days=531498979884209372,
-        oauth_token="est",
-        offset=718631122271686376,
-        page_size=2768331678206913841,
-        page_token="quo",
-        pretty_print=False,
-        query="in",
-        quota_user="sint",
-        review_publisher_site_filter="et",
-        upload_type="sapiente",
-        upload_protocol="harum",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    language_code="corrupti",
+    max_age_days=847252,
+    oauth_token="vel",
+    offset=623564,
+    page_size=645894,
+    page_token="suscipit",
+    pretty_print=False,
+    query="iure",
+    quota_user="magnam",
+    review_publisher_site_filter="debitis",
+    upload_type="ipsa",
+    upload_protocol="delectus",
 )
     
 res = s.claims.factchecktools_claims_search(req)

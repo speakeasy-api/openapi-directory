@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2PeopleJSONQueryParams struct {
+type GetV2PeopleJSONRequest struct {
 	// For internal use only. This field does not comply with our backwards compatibility policies. This filter is for authenticated users of Salesloft only and will not work for OAuth Applications. Filters people by the string provided. Can search and filter by name, title, industry, email_address and linked account name.
 	Query *string `queryParam:"style=form,explode=true,name=_query"`
 	// Filters people by the account they are linked to. Multiple account ids can be applied
@@ -99,10 +99,6 @@ type GetV2PeopleJSONQueryParams struct {
 	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
 	//
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
-}
-
-type GetV2PeopleJSONRequest struct {
-	QueryParams GetV2PeopleJSONQueryParams
 }
 
 type GetV2PeopleJSONResponse struct {

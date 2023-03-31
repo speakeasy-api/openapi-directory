@@ -8,17 +8,12 @@ import (
 )
 
 type GetBusinessGroupsAllSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetBusinessGroupsAllQueryParams struct {
-	// Name of the group
-	Name *string `queryParam:"style=form,explode=true,name=Name"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetBusinessGroupsAllRequest struct {
-	QueryParams GetBusinessGroupsAllQueryParams
-	Security    GetBusinessGroupsAllSecurity
+	// Name of the group
+	Name *string `queryParam:"style=form,explode=true,name=Name"`
 }
 
 type GetBusinessGroupsAllResponse struct {

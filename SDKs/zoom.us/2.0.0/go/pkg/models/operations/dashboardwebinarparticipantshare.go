@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DashboardWebinarParticipantShareSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DashboardWebinarParticipantSharePathParams struct {
-	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardWebinarParticipantShareTypeEnum - The webinar type.
@@ -44,19 +36,17 @@ func (e *DashboardWebinarParticipantShareTypeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DashboardWebinarParticipantShareQueryParams struct {
+type DashboardWebinarParticipantShareRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The webinar type.
 	Type *DashboardWebinarParticipantShareTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardWebinarParticipantShareRequest struct {
-	PathParams  DashboardWebinarParticipantSharePathParams
-	QueryParams DashboardWebinarParticipantShareQueryParams
-	Security    DashboardWebinarParticipantShareSecurity
+	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type DashboardWebinarParticipantShare200ApplicationXMLParticipantsDetails struct {

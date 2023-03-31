@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDPersonsSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDPersonsPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesIDPersonsRequestBodyAddress struct {
@@ -68,10 +62,10 @@ type PostSpacesIDPersonsRequestBody struct {
 }
 
 type PostSpacesIDPersonsRequest struct {
-	PathParams PostSpacesIDPersonsPathParams
 	// Person to add
-	Request  PostSpacesIDPersonsRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDPersonsSecurity
+	RequestBody PostSpacesIDPersonsRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostSpacesIDPersons201ApplicationJSON - Id of person created

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type AddInternalNumbersPathParams struct {
-	// Unique identifier of the account.<br>To add internal numbers to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To add internal numbers to a master account, provide `me` as the value of the `accountId` path parameter.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AddInternalNumbersApplicationJSONInternalNumbersLanguagesEnum - Specify the language in which this phone number should be displayed. Currently, the only supported languages are `en-GB`, `en-US`, `de-DE`.
 type AddInternalNumbersApplicationJSONInternalNumbersLanguagesEnum string
 
@@ -102,8 +97,9 @@ type AddInternalNumbersApplicationJSON struct {
 }
 
 type AddInternalNumbersRequest struct {
-	PathParams AddInternalNumbersPathParams
-	Request    *AddInternalNumbersApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *AddInternalNumbersApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the account.<br>To add internal numbers to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To add internal numbers to a master account, provide `me` as the value of the `accountId` path parameter.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 // AddInternalNumbers201ApplicationXMLInternalNumbersLanguagesEnum - Specify the language in which this phone number should be displayed. Currently, the only supported languages are `en-GB`, `en-US`, `de-DE`.

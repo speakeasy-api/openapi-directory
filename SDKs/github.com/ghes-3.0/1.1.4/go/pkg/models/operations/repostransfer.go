@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposTransferPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposTransferRequestBody struct {
 	// The username or organization name the repository will be transferred to.
 	NewOwner string `json:"new_owner"`
@@ -20,8 +15,9 @@ type ReposTransferRequestBody struct {
 }
 
 type ReposTransferRequest struct {
-	PathParams ReposTransferPathParams
-	Request    ReposTransferRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposTransferRequestBody `request:"mediaType=application/json"`
+	Owner       string                   `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                   `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposTransferResponse struct {

@@ -31,20 +31,20 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetWorkspaceSlugMembersMemberSlugNotes - Get the member's notes
-func (s *notes) GetWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugNotesRequest) (*operations.GetWorkspaceSlugMembersMemberSlugNotesResponse, error) {
+func (s *notes) GetWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugNotesRequest, security operations.GetWorkspaceSlugMembersMemberSlugNotesSecurity) (*operations.GetWorkspaceSlugMembersMemberSlugNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -70,11 +70,11 @@ func (s *notes) GetWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, requ
 }
 
 // PostWorkspaceSlugMembersMemberSlugNotes - Create a note
-func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugNotesRequest) (*operations.PostWorkspaceSlugMembersMemberSlugNotesResponse, error) {
+func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugNotesRequest, security operations.PostWorkspaceSlugMembersMemberSlugNotesSecurity) (*operations.PostWorkspaceSlugMembersMemberSlugNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Note", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -86,7 +86,7 @@ func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -114,11 +114,11 @@ func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, req
 }
 
 // PutWorkspaceSlugMembersMemberSlugNotesID - Update a note
-func (s *notes) PutWorkspaceSlugMembersMemberSlugNotesID(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugNotesIDRequest) (*operations.PutWorkspaceSlugMembersMemberSlugNotesIDResponse, error) {
+func (s *notes) PutWorkspaceSlugMembersMemberSlugNotesID(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugNotesIDRequest, security operations.PutWorkspaceSlugMembersMemberSlugNotesIDSecurity) (*operations.PutWorkspaceSlugMembersMemberSlugNotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Note", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -130,7 +130,7 @@ func (s *notes) PutWorkspaceSlugMembersMemberSlugNotesID(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

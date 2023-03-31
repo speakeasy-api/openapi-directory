@@ -8,26 +8,17 @@ import (
 )
 
 type GetUsersUserIDCommentsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetUsersUserIDCommentsPathParams struct {
-	// SoundCloud User id
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUsersUserIDCommentsQueryParams struct {
+type GetUsersUserIDCommentsRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetUsersUserIDCommentsRequest struct {
-	PathParams  GetUsersUserIDCommentsPathParams
-	QueryParams GetUsersUserIDCommentsQueryParams
-	Security    GetUsersUserIDCommentsSecurity
+	// SoundCloud User id
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUsersUserIDCommentsResponse struct {

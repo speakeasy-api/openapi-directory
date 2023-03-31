@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GeocodeAddressQueryParams struct {
+type GeocodeAddressRequest struct {
 	// The full address, partial address or name of a place to try and locate. Comma separated address components are preferred.
 	Address *string `queryParam:"style=form,explode=true,name=address"`
 	// The city/town name to locate
@@ -28,10 +28,6 @@ type GeocodeAddressQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// The street/road name to locate
 	Street *string `queryParam:"style=form,explode=true,name=street"`
-}
-
-type GeocodeAddressRequest struct {
-	QueryParams GeocodeAddressQueryParams
 }
 
 type GeocodeAddressResponse struct {

@@ -34,14 +34,14 @@ func newProductFeatures(defaultClient, securityClient HTTPClient, serverURL, lan
 // ObjectDELETEProductFeature - CRUD: Delete a product feature
 func (s *productFeatures) ObjectDELETEProductFeature(ctx context.Context, request operations.ObjectDELETEProductFeatureRequest) (*operations.ObjectDELETEProductFeatureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-feature/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-feature/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -94,16 +94,16 @@ func (s *productFeatures) ObjectDELETEProductFeature(ctx context.Context, reques
 // ObjectGETProductFeature - CRUD: Retrieve a product feature
 func (s *productFeatures) ObjectGETProductFeature(ctx context.Context, request operations.ObjectGETProductFeatureRequest) (*operations.ObjectGETProductFeatureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-feature/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-feature/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

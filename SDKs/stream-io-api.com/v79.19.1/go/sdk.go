@@ -269,7 +269,7 @@ func New(opts ...SDKOption) *SDK {
 
 // GetCallToken1 - Get Call Token ()
 // Retrieves the token to join a call
-func (s *SDK) GetCallToken1(ctx context.Context, request operations.GetCallToken1Request) (*operations.GetCallToken1Response, error) {
+func (s *SDK) GetCallToken1(ctx context.Context, request shared.GetCallTokenRequest) (*operations.GetCallToken1Response, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calls/"
 

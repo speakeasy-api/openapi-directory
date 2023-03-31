@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteImageSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteImageQueryParams struct {
+type GetQuoteImageRequest struct {
 	// Should the response be a direct file download of the image or a base64 encoded image file wrapped in json?
 	Binary *bool `queryParam:"style=form,explode=true,name=binary"`
 	// Quote Image id
 	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetQuoteImageRequest struct {
-	QueryParams GetQuoteImageQueryParams
-	Security    GetQuoteImageSecurity
 }
 
 type GetQuoteImageResponse struct {

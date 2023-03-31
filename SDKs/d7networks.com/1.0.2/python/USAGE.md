@@ -3,15 +3,13 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        auth=shared.SchemeAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    )
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
 )
+
     
 res = s.balance_get()
 

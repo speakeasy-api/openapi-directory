@@ -400,7 +400,6 @@ pkg/models/operations/getwatchlaterqueue.go
 pkg/models/operations/getwatchlaterqueuealt1.go
 pkg/models/shared/endpoint.go
 pkg/models/shared/legacyerror.go
-pkg/models/shared/security.go
 pkg/models/shared/video.go
 pkg/models/shared/picture.go
 pkg/models/shared/tag.go
@@ -436,4 +435,5 @@ pkg/models/shared/texttrack.go
 pkg/models/shared/uploadattempt.go
 pkg/models/shared/videoversions.go
 pkg/models/shared/play.go
+pkg/models/shared/security.go
 USAGE.md

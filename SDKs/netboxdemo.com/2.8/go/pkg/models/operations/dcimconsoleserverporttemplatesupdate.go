@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsoleServerPortTemplatesUpdatePathParams struct {
+type DcimConsoleServerPortTemplatesUpdateRequest struct {
+	WritableConsoleServerPortTemplateInput shared.WritableConsoleServerPortTemplateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this console server port template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimConsoleServerPortTemplatesUpdateRequest struct {
-	PathParams DcimConsoleServerPortTemplatesUpdatePathParams
-	Request    shared.WritableConsoleServerPortTemplateInput `request:"mediaType=application/json"`
 }
 
 type DcimConsoleServerPortTemplatesUpdateResponse struct {

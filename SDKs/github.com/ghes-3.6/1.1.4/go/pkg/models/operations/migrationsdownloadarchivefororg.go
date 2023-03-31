@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsDownloadArchiveForOrgPathParams struct {
+type MigrationsDownloadArchiveForOrgRequest struct {
 	// The unique identifier of the migration.
 	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type MigrationsDownloadArchiveForOrgRequest struct {
-	PathParams MigrationsDownloadArchiveForOrgPathParams
 }
 
 type MigrationsDownloadArchiveForOrgResponse struct {

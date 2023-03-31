@@ -8,24 +8,22 @@ import (
 )
 
 type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingPathParams struct {
-	// Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to the request.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-}
-
-type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingQueryParams struct {
+type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                    *shared.XgafvEnum                                                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest *shared.GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to the request.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -40,13 +38,6 @@ type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingQueryParams s
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest struct {
-	PathParams  ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingPathParams
-	QueryParams ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingQueryParams
-	Request     *shared.GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest `request:"mediaType=application/json"`
-	Security    ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingSecurity
 }
 
 type ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse struct {

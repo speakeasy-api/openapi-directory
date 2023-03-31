@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeActionPathParams struct {
+type DescribeActionRequest struct {
 	// Action ID of the action to describe.
 	ActionID string `pathParam:"style=simple,explode=false,name=actionId"`
 	// Service ID of the service supporting the action.
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type DescribeActionRequest struct {
-	PathParams DescribeActionPathParams
 }
 
 type DescribeActionResponse struct {

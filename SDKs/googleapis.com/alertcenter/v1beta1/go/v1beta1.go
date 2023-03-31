@@ -33,7 +33,7 @@ func newV1beta1(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AlertcenterGetSettings - Returns customer-level settings.
-func (s *v1beta1) AlertcenterGetSettings(ctx context.Context, request operations.AlertcenterGetSettingsRequest) (*operations.AlertcenterGetSettingsResponse, error) {
+func (s *v1beta1) AlertcenterGetSettings(ctx context.Context, request operations.AlertcenterGetSettingsRequest, security operations.AlertcenterGetSettingsSecurity) (*operations.AlertcenterGetSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/settings"
 
@@ -42,11 +42,11 @@ func (s *v1beta1) AlertcenterGetSettings(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *v1beta1) AlertcenterGetSettings(ctx context.Context, request operations
 }
 
 // AlertcenterUpdateSettings - Updates the customer-level settings.
-func (s *v1beta1) AlertcenterUpdateSettings(ctx context.Context, request operations.AlertcenterUpdateSettingsRequest) (*operations.AlertcenterUpdateSettingsResponse, error) {
+func (s *v1beta1) AlertcenterUpdateSettings(ctx context.Context, request operations.AlertcenterUpdateSettingsRequest, security operations.AlertcenterUpdateSettingsSecurity) (*operations.AlertcenterUpdateSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Settings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *v1beta1) AlertcenterUpdateSettings(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

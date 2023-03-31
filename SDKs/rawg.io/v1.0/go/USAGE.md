@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CreatorRolesListRequest{
-        QueryParams: operations.CreatorRolesListQueryParams{
-            Page: 548814,
-            PageSize: 592845,
-        },
+        Page: 548814,
+        PageSize: 592845,
     }
 
     ctx := context.Background()

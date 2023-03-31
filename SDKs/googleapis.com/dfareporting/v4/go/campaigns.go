@@ -32,20 +32,20 @@ func newCampaigns(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DfareportingCampaignsGet - Gets one campaign by ID.
-func (s *campaigns) DfareportingCampaignsGet(ctx context.Context, request operations.DfareportingCampaignsGetRequest) (*operations.DfareportingCampaignsGetResponse, error) {
+func (s *campaigns) DfareportingCampaignsGet(ctx context.Context, request operations.DfareportingCampaignsGetRequest, security operations.DfareportingCampaignsGetSecurity) (*operations.DfareportingCampaignsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *campaigns) DfareportingCampaignsGet(ctx context.Context, request operat
 }
 
 // DfareportingCampaignsInsert - Inserts a new campaign.
-func (s *campaigns) DfareportingCampaignsInsert(ctx context.Context, request operations.DfareportingCampaignsInsertRequest) (*operations.DfareportingCampaignsInsertResponse, error) {
+func (s *campaigns) DfareportingCampaignsInsert(ctx context.Context, request operations.DfareportingCampaignsInsertRequest, security operations.DfareportingCampaignsInsertSecurity) (*operations.DfareportingCampaignsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Campaign", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *campaigns) DfareportingCampaignsInsert(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *campaigns) DfareportingCampaignsInsert(ctx context.Context, request ope
 }
 
 // DfareportingCampaignsList - Retrieves a list of campaigns, possibly filtered. This method supports paging.
-func (s *campaigns) DfareportingCampaignsList(ctx context.Context, request operations.DfareportingCampaignsListRequest) (*operations.DfareportingCampaignsListResponse, error) {
+func (s *campaigns) DfareportingCampaignsList(ctx context.Context, request operations.DfareportingCampaignsListRequest, security operations.DfareportingCampaignsListSecurity) (*operations.DfareportingCampaignsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *campaigns) DfareportingCampaignsList(ctx context.Context, request opera
 }
 
 // DfareportingCampaignsPatch - Updates an existing campaign. This method supports patch semantics.
-func (s *campaigns) DfareportingCampaignsPatch(ctx context.Context, request operations.DfareportingCampaignsPatchRequest) (*operations.DfareportingCampaignsPatchResponse, error) {
+func (s *campaigns) DfareportingCampaignsPatch(ctx context.Context, request operations.DfareportingCampaignsPatchRequest, security operations.DfareportingCampaignsPatchSecurity) (*operations.DfareportingCampaignsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Campaign", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *campaigns) DfareportingCampaignsPatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *campaigns) DfareportingCampaignsPatch(ctx context.Context, request oper
 }
 
 // DfareportingCampaignsUpdate - Updates an existing campaign.
-func (s *campaigns) DfareportingCampaignsUpdate(ctx context.Context, request operations.DfareportingCampaignsUpdateRequest) (*operations.DfareportingCampaignsUpdateResponse, error) {
+func (s *campaigns) DfareportingCampaignsUpdate(ctx context.Context, request operations.DfareportingCampaignsUpdateRequest, security operations.DfareportingCampaignsUpdateSecurity) (*operations.DfareportingCampaignsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Campaign", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *campaigns) DfareportingCampaignsUpdate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,7 +33,7 @@ func (e *GetReviewsSearchJSONCriticsPickEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetReviewsSearchJSONQueryParams struct {
+type GetReviewsSearchJSONRequest struct {
 	// Set this parameter to Y to limit the results to NYT Critics' Picks. To get only those movies that have not been highlighted by Times critics, specify critics-pick=N. (To get all reviews regardless of critics-pick status, simply omit this parameter.)
 	//
 	CriticsPick *GetReviewsSearchJSONCriticsPickEnum `queryParam:"style=form,explode=true,name=critics-pick"`
@@ -72,10 +72,6 @@ type GetReviewsSearchJSONQueryParams struct {
 	// Include this parameter to limit your results to reviews by a specific critic. Reviewer names should be formatted like this: Manohla Dargis.
 	//
 	Reviewer *string `queryParam:"style=form,explode=true,name=reviewer"`
-}
-
-type GetReviewsSearchJSONRequest struct {
-	QueryParams GetReviewsSearchJSONQueryParams
 }
 
 // GetReviewsSearchJSON200ApplicationJSON - An array of Movies

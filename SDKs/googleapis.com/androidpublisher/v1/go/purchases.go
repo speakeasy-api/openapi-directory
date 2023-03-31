@@ -32,20 +32,20 @@ func newPurchases(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AndroidpublisherPurchasesCancel - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-func (s *purchases) AndroidpublisherPurchasesCancel(ctx context.Context, request operations.AndroidpublisherPurchasesCancelRequest) (*operations.AndroidpublisherPurchasesCancelResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesCancel(ctx context.Context, request operations.AndroidpublisherPurchasesCancelRequest, security operations.AndroidpublisherPurchasesCancelSecurity) (*operations.AndroidpublisherPurchasesCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/subscriptions/{subscriptionId}/purchases/{token}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/subscriptions/{subscriptionId}/purchases/{token}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *purchases) AndroidpublisherPurchasesCancel(ctx context.Context, request
 }
 
 // AndroidpublisherPurchasesGet - Checks whether a user's subscription purchase is valid and returns its expiry time.
-func (s *purchases) AndroidpublisherPurchasesGet(ctx context.Context, request operations.AndroidpublisherPurchasesGetRequest) (*operations.AndroidpublisherPurchasesGetResponse, error) {
+func (s *purchases) AndroidpublisherPurchasesGet(ctx context.Context, request operations.AndroidpublisherPurchasesGetRequest, security operations.AndroidpublisherPurchasesGetSecurity) (*operations.AndroidpublisherPurchasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/subscriptions/{subscriptionId}/purchases/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/subscriptions/{subscriptionId}/purchases/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

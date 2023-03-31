@@ -22,7 +22,6 @@ pkg/models/shared/googleadssearchads360v0serviceslistcustomcolumnsresponse.go
 pkg/models/shared/googleadssearchads360v0resourcescustomcolumn.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleadssearchads360v0servicessearchsearchads360response.go
 pkg/models/shared/googleadssearchads360v0servicessearchads360row.go
 pkg/models/shared/googleadssearchads360v0commonsegments.go

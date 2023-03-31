@@ -34,14 +34,14 @@ func newSwitches(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Return metrics for organization's top 10 switches by energy usage over given time range. Default unit is joules.
 func (s *switches) GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx context.Context, request operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest) (*operations.GetOrganizationSummaryTopSwitchesByEnergyUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

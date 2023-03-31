@@ -33,17 +33,13 @@ func (e *ProjectedFantasyDefenseSeasonStatsWAdpFormatEnum) UnmarshalJSON(data []
 	}
 }
 
-type ProjectedFantasyDefenseSeasonStatsWAdpPathParams struct {
+type ProjectedFantasyDefenseSeasonStatsWAdpRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedFantasyDefenseSeasonStatsWAdpFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season and the season type. If no season type is provided, then the default is regular season.
 	//           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
 	//
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type ProjectedFantasyDefenseSeasonStatsWAdpRequest struct {
-	PathParams ProjectedFantasyDefenseSeasonStatsWAdpPathParams
 }
 
 type ProjectedFantasyDefenseSeasonStatsWAdpResponse struct {

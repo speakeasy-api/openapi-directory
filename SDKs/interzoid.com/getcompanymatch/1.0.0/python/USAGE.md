@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetcompanymatchRequest(
-    query_params=operations.GetcompanymatchQueryParams(
-        company="iure",
-        license="voluptatem",
-    ),
+    company="Medhurst - Rau",
+    license="quibusdam",
 )
     
 res = s.company_name_similarity_key.getcompanymatch(req)

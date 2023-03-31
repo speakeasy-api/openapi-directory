@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05UsersAuthConfirmJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05UsersAuthConfirmJSONRequest struct {
-	Headers PostV05UsersAuthConfirmJSONHeaders
-	Request shared.PatientAuthConfirmRequest `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization             string                           `header:"style=simple,explode=false,name=Authorization"`
+	PatientAuthConfirmRequest shared.PatientAuthConfirmRequest `request:"mediaType=application/json"`
 }
 
 type PostV05UsersAuthConfirmJSONResponse struct {

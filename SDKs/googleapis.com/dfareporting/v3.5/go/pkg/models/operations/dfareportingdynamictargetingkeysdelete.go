@@ -10,15 +10,8 @@ import (
 )
 
 type DfareportingDynamicTargetingKeysDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingDynamicTargetingKeysDeletePathParams struct {
-	// ID of the object of this dynamic targeting key. This is a required field.
-	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingDynamicTargetingKeysDeleteObjectTypeEnum - Type of the object of this dynamic targeting key. This is a required field.
@@ -51,7 +44,7 @@ func (e *DfareportingDynamicTargetingKeysDeleteObjectTypeEnum) UnmarshalJSON(dat
 	}
 }
 
-type DfareportingDynamicTargetingKeysDeleteQueryParams struct {
+type DfareportingDynamicTargetingKeysDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -68,22 +61,20 @@ type DfareportingDynamicTargetingKeysDeleteQueryParams struct {
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// ID of the object of this dynamic targeting key. This is a required field.
+	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// Type of the object of this dynamic targeting key. This is a required field.
 	ObjectType DfareportingDynamicTargetingKeysDeleteObjectTypeEnum `queryParam:"style=form,explode=true,name=objectType"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingDynamicTargetingKeysDeleteRequest struct {
-	PathParams  DfareportingDynamicTargetingKeysDeletePathParams
-	QueryParams DfareportingDynamicTargetingKeysDeleteQueryParams
-	Security    DfareportingDynamicTargetingKeysDeleteSecurity
 }
 
 type DfareportingDynamicTargetingKeysDeleteResponse struct {

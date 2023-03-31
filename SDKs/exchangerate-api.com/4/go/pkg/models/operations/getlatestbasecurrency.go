@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLatestBaseCurrencyPathParams struct {
+type GetLatestBaseCurrencyRequest struct {
 	// **Base Currency**. *Example: USD*. You an use any of the ISO 4217 currency codes we support. See https://www.exchangerate-api.com/docs/supported-currencies
 	BaseCurrency string `pathParam:"style=simple,explode=false,name=base_currency"`
-}
-
-type GetLatestBaseCurrencyRequest struct {
-	PathParams GetLatestBaseCurrencyPathParams
 }
 
 // GetLatestBaseCurrency404ApplicationJSON - Currency code not supported

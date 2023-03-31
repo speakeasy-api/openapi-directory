@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEDELETENotificationDefinitionPathParams struct {
-	// The ID of the notification definition to be deleted.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DELETEDELETENotificationDefinitionHeaders struct {
+type DELETEDELETENotificationDefinitionRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
@@ -26,11 +21,8 @@ type DELETEDELETENotificationDefinitionHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETEDELETENotificationDefinitionRequest struct {
-	PathParams DELETEDELETENotificationDefinitionPathParams
-	Headers    DELETEDELETENotificationDefinitionHeaders
+	// The ID of the notification definition to be deleted.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DELETEDELETENotificationDefinitionResponse struct {

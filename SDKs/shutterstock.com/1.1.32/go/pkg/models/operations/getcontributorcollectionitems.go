@@ -10,15 +10,8 @@ import (
 )
 
 type GetContributorCollectionItemsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetContributorCollectionItemsPathParams struct {
-	// Contributor ID
-	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
-	// Collection ID that belongs to the contributor
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetContributorCollectionItemsSortEnum - Sort order
@@ -45,19 +38,17 @@ func (e *GetContributorCollectionItemsSortEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetContributorCollectionItemsQueryParams struct {
+type GetContributorCollectionItemsRequest struct {
+	// Contributor ID
+	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
+	// Collection ID that belongs to the contributor
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Sort order
 	Sort *GetContributorCollectionItemsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetContributorCollectionItemsRequest struct {
-	PathParams  GetContributorCollectionItemsPathParams
-	QueryParams GetContributorCollectionItemsQueryParams
-	Security    GetContributorCollectionItemsSecurity
 }
 
 type GetContributorCollectionItemsResponse struct {

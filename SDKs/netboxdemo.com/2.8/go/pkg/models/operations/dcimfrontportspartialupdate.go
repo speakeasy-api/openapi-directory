@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimFrontPortsPartialUpdatePathParams struct {
+type DcimFrontPortsPartialUpdateRequest struct {
+	WritableFrontPortInput shared.WritableFrontPortInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this front port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimFrontPortsPartialUpdateRequest struct {
-	PathParams DcimFrontPortsPartialUpdatePathParams
-	Request    shared.WritableFrontPortInput `request:"mediaType=application/json"`
 }
 
 type DcimFrontPortsPartialUpdateResponse struct {

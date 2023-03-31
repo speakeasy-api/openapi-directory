@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3GroupClearPathParams struct {
+type ProtocolSnmpv3GroupClearRequest struct {
 	// Agent to add the SNMPv3 group
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmpv3GroupClearRequest struct {
-	PathParams ProtocolSnmpv3GroupClearPathParams
 }
 
 type ProtocolSnmpv3GroupClearResponse struct {

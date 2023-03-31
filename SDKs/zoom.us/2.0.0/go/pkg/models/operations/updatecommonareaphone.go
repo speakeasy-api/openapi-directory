@@ -4,15 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateCommonAreaPhoneSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateCommonAreaPhonePathParams struct {
-	CommonAreaPhoneID string `pathParam:"style=simple,explode=false,name=commonAreaPhoneId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateCommonAreaPhoneApplicationJSON struct {
@@ -27,9 +22,8 @@ type UpdateCommonAreaPhoneApplicationJSON struct {
 }
 
 type UpdateCommonAreaPhoneRequest struct {
-	PathParams UpdateCommonAreaPhonePathParams
-	Request    *UpdateCommonAreaPhoneApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateCommonAreaPhoneSecurity
+	RequestBody       *UpdateCommonAreaPhoneApplicationJSON `request:"mediaType=application/json"`
+	CommonAreaPhoneID string                                `pathParam:"style=simple,explode=false,name=commonAreaPhoneId"`
 }
 
 type UpdateCommonAreaPhoneResponse struct {

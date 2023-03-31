@@ -33,13 +33,9 @@ func (e *MembershipsHistoricalFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MembershipsHistoricalPathParams struct {
+type MembershipsHistoricalRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format MembershipsHistoricalFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type MembershipsHistoricalRequest struct {
-	PathParams MembershipsHistoricalPathParams
 }
 
 type MembershipsHistoricalResponse struct {

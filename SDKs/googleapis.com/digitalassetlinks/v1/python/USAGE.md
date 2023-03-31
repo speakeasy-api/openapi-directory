@@ -4,75 +4,99 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DigitalassetlinksAssetlinksBulkCheckRequest(
-    query_params=operations.DigitalassetlinksAssetlinksBulkCheckQueryParams(
-        dollar_xgafv="2",
-        access_token="ut",
-        alt="media",
-        callback="quisquam",
-        fields="quae",
-        key="eum",
-        oauth_token="qui",
-        pretty_print=True,
-        quota_user="vel",
-        upload_type="minima",
-        upload_protocol="qui",
-    ),
-    request=shared.BulkCheckRequest(
-        allow_google_internal_data_sources=True,
-        default_relation="dolor",
+    dollar_xgafv="2",
+    bulk_check_request=shared.BulkCheckRequest(
+        allow_google_internal_data_sources=False,
+        default_relation="provident",
         default_source=shared.Asset(
             android_app=shared.AndroidAppAsset(
                 certificate=shared.CertificateInfo(
-                    sha256_fingerprint="earum",
+                    sha256_fingerprint="distinctio",
                 ),
-                package_name="asperiores",
+                package_name="quibusdam",
             ),
             web=shared.WebAsset(
-                site="minima",
+                site="unde",
             ),
         ),
         default_target=shared.Asset(
             android_app=shared.AndroidAppAsset(
                 certificate=shared.CertificateInfo(
-                    sha256_fingerprint="dolores",
+                    sha256_fingerprint="nulla",
                 ),
-                package_name="vitae",
+                package_name="corrupti",
             ),
             web=shared.WebAsset(
-                site="et",
+                site="illum",
             ),
         ),
-        skip_cache_lookup=True,
+        skip_cache_lookup=False,
         statements=[
             shared.StatementTemplate(
-                relation="quo",
+                relation="error",
                 source=shared.Asset(
                     android_app=shared.AndroidAppAsset(
                         certificate=shared.CertificateInfo(
-                            sha256_fingerprint="dignissimos",
+                            sha256_fingerprint="deserunt",
                         ),
-                        package_name="quo",
+                        package_name="suscipit",
                     ),
                     web=shared.WebAsset(
-                        site="sint",
+                        site="iure",
                     ),
                 ),
                 target=shared.Asset(
                     android_app=shared.AndroidAppAsset(
                         certificate=shared.CertificateInfo(
-                            sha256_fingerprint="sit",
+                            sha256_fingerprint="magnam",
                         ),
-                        package_name="ducimus",
+                        package_name="debitis",
                     ),
                     web=shared.WebAsset(
-                        site="quo",
+                        site="ipsa",
+                    ),
+                ),
+            ),
+            shared.StatementTemplate(
+                relation="delectus",
+                source=shared.Asset(
+                    android_app=shared.AndroidAppAsset(
+                        certificate=shared.CertificateInfo(
+                            sha256_fingerprint="tempora",
+                        ),
+                        package_name="suscipit",
+                    ),
+                    web=shared.WebAsset(
+                        site="molestiae",
+                    ),
+                ),
+                target=shared.Asset(
+                    android_app=shared.AndroidAppAsset(
+                        certificate=shared.CertificateInfo(
+                            sha256_fingerprint="minus",
+                        ),
+                        package_name="placeat",
+                    ),
+                    web=shared.WebAsset(
+                        site="voluptatum",
                     ),
                 ),
             ),
         ],
     ),
+    access_token="iusto",
+    alt="media",
+    callback="nisi",
+    fields_="recusandae",
+    key="temporibus",
+    oauth_token="ab",
+    pretty_print=False,
+    quota_user="quis",
+    upload_type="veritatis",
+    upload_protocol="deserunt",
 )
     
 res = s.assetlinks.digitalassetlinks_assetlinks_bulk_check(req)

@@ -4,20 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeleteAPISpecificationRequest(
-    security=operations.DeleteAPISpecificationSecurity(
-        api_key=shared.SchemeAPIKey(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    path_params=operations.DeleteAPISpecificationPathParams(
-        id="earum",
-    ),
+    id="corrupti",
 )
     
-res = s.api_specification.delete_api_specification(req)
+res = s.api_specification.delete_api_specification(req, operations.DeleteAPISpecificationSecurity(
+    password="YOUR_PASSWORD_HERE",
+    username="YOUR_USERNAME_HERE",
+))
 
 if res.status_code == 200:
     # handle response

@@ -36,14 +36,14 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Deletes the user object from the application
 func (s *user) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *user) DeleteUser(ctx context.Context, request operations.DeleteUserRequ
 // Deletes a tag from the user
 func (s *user) DeleteUserTag(ctx context.Context, request operations.DeleteUserTagRequest) (*operations.DeleteUserTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -151,7 +151,7 @@ func (s *user) GetAllUserTags(ctx context.Context, request operations.GetAllUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -207,14 +207,14 @@ func (s *user) GetAllUserTags(ctx context.Context, request operations.GetAllUser
 // Gets the users with the specified tag
 func (s *user) GetAllUsersWithTag(ctx context.Context, request operations.GetAllUsersWithTagRequest) (*operations.GetAllUsersWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Users/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Users/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -270,14 +270,14 @@ func (s *user) GetAllUsersWithTag(ctx context.Context, request operations.GetAll
 // Gets a tag from the user
 func (s *user) GetTagFromUser(ctx context.Context, request operations.GetTagFromUserRequest) (*operations.GetTagFromUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -333,14 +333,14 @@ func (s *user) GetTagFromUser(ctx context.Context, request operations.GetTagFrom
 // Gets all tags from the user
 func (s *user) GetTagsFromUser(ctx context.Context, request operations.GetTagsFromUserRequest) (*operations.GetTagsFromUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -396,14 +396,14 @@ func (s *user) GetTagsFromUser(ctx context.Context, request operations.GetTagsFr
 // Gets the user object for application
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -459,14 +459,14 @@ func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (
 // Gets the user permission instances
 func (s *user) GetUserPermissions(ctx context.Context, request operations.GetUserPermissionsRequest) (*operations.GetUserPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -529,7 +529,7 @@ func (s *user) GetUsers(ctx context.Context, request operations.GetUsersRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -585,14 +585,14 @@ func (s *user) GetUsers(ctx context.Context, request operations.GetUsersRequest)
 // Patch the user object at the specified resource location
 func (s *user) PatchUser(ctx context.Context, request operations.PatchUserRequest) (*operations.PatchUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -655,7 +655,7 @@ func (s *user) PostUser(ctx context.Context, request operations.PostUserRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -711,14 +711,14 @@ func (s *user) PostUser(ctx context.Context, request operations.PostUserRequest)
 // Puts the user object into the specified resource location
 func (s *user) PutUser(ctx context.Context, request operations.PutUserRequest) (*operations.PutUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -774,14 +774,14 @@ func (s *user) PutUser(ctx context.Context, request operations.PutUserRequest) (
 // Inserts a tag on the user
 func (s *user) PutUserTag(ctx context.Context, request operations.PutUserTagRequest) (*operations.PutUserTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

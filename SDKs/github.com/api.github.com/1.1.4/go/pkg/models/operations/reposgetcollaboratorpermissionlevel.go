@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetCollaboratorPermissionLevelPathParams struct {
+type ReposGetCollaboratorPermissionLevelRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ReposGetCollaboratorPermissionLevelRequest struct {
-	PathParams ReposGetCollaboratorPermissionLevelPathParams
 }
 
 type ReposGetCollaboratorPermissionLevelResponse struct {

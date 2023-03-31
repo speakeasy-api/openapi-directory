@@ -8,58 +8,58 @@ import (
 )
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption10 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption11 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption7 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption8 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurityOption9 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchSecurity struct {
@@ -76,24 +76,20 @@ type FitnessUsersDataSourcesDatasetsPatchSecurity struct {
 	Option9  *FitnessUsersDataSourcesDatasetsPatchSecurityOption9  `security:"option"`
 }
 
-type FitnessUsersDataSourcesDatasetsPatchPathParams struct {
-	// The data stream ID of the data source that created the dataset.
-	DataSourceID string `pathParam:"style=simple,explode=false,name=dataSourceId"`
-	// This field is not used, and can be safely omitted.
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is supported at this time.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type FitnessUsersDataSourcesDatasetsPatchQueryParams struct {
+type FitnessUsersDataSourcesDatasetsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Dataset     *shared.Dataset   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The data stream ID of the data source that created the dataset.
+	DataSourceID string `pathParam:"style=simple,explode=false,name=dataSourceId"`
+	// This field is not used, and can be safely omitted.
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -108,13 +104,8 @@ type FitnessUsersDataSourcesDatasetsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FitnessUsersDataSourcesDatasetsPatchRequest struct {
-	PathParams  FitnessUsersDataSourcesDatasetsPatchPathParams
-	QueryParams FitnessUsersDataSourcesDatasetsPatchQueryParams
-	Request     *shared.Dataset `request:"mediaType=application/json"`
-	Security    FitnessUsersDataSourcesDatasetsPatchSecurity
+	// Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is supported at this time.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type FitnessUsersDataSourcesDatasetsPatchResponse struct {

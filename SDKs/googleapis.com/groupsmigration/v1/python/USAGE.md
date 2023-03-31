@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GroupsmigrationArchiveInsertRequest(
-    security=operations.GroupsmigrationArchiveInsertSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GroupsmigrationArchiveInsertPathParams(
-        group_id="quasi",
-    ),
-    query_params=operations.GroupsmigrationArchiveInsertQueryParams(
-        dollar_xgafv="1",
-        access_token="minima",
-        alt="proto",
-        callback="praesentium",
-        fields="dignissimos",
-        key="quo",
-        oauth_token="omnis",
-        pretty_print=True,
-        quota_user="quibusdam",
-        upload_type="corrupti",
-        upload_protocol="voluptates",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    group_id="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.archive.groupsmigration_archive_insert(req)
+res = s.archive.groupsmigration_archive_insert(req, operations.GroupsmigrationArchiveInsertSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.groups is not None:
     # handle response

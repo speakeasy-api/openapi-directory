@@ -35,14 +35,14 @@ func newPension(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete the specified ppension
 func (s *pension) DeletePension(ctx context.Context, request operations.DeletePensionRequest) (*operations.DeletePensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *pension) DeletePension(ctx context.Context, request operations.DeletePe
 // Deletes the specified pension revision for the matching revision date
 func (s *pension) DeletePensionRevision(ctx context.Context, request operations.DeletePensionRevisionRequest) (*operations.DeletePensionRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,14 +143,14 @@ func (s *pension) DeletePensionRevision(ctx context.Context, request operations.
 // Deletes the specified pension revision for the matching revision number
 func (s *pension) DeletePensionRevisionByNumber(ctx context.Context, request operations.DeletePensionRevisionByNumberRequest) (*operations.DeletePensionRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -197,14 +197,14 @@ func (s *pension) DeletePensionRevisionByNumber(ctx context.Context, request ope
 // Returns the penion's state at the specified effective date.
 func (s *pension) GetPensionByEffectiveDate(ctx context.Context, request operations.GetPensionByEffectiveDateRequest) (*operations.GetPensionByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -260,14 +260,14 @@ func (s *pension) GetPensionByEffectiveDate(ctx context.Context, request operati
 // Gets the specified pension from employer by pension code.
 func (s *pension) GetPensionFromEmployer(ctx context.Context, request operations.GetPensionFromEmployerRequest) (*operations.GetPensionFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -323,14 +323,14 @@ func (s *pension) GetPensionFromEmployer(ctx context.Context, request operations
 // Get the pension revision matching the specified revision number
 func (s *pension) GetPensionRevisionByNumber(ctx context.Context, request operations.GetPensionRevisionByNumberRequest) (*operations.GetPensionRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -386,14 +386,14 @@ func (s *pension) GetPensionRevisionByNumber(ctx context.Context, request operat
 // Returns links to all revisions of the pension
 func (s *pension) GetPensionRevisions(ctx context.Context, request operations.GetPensionRevisionsRequest) (*operations.GetPensionRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/Revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}/Revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -449,14 +449,14 @@ func (s *pension) GetPensionRevisions(ctx context.Context, request operations.Ge
 // Get links to all pensions for the employer on specified effective date.
 func (s *pension) GetPensionsByEffectiveDate(ctx context.Context, request operations.GetPensionsByEffectiveDateRequest) (*operations.GetPensionsByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pensions/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pensions/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -512,14 +512,14 @@ func (s *pension) GetPensionsByEffectiveDate(ctx context.Context, request operat
 // Get links to all pensions for the specified employer.
 func (s *pension) GetPensionsFromEmployer(ctx context.Context, request operations.GetPensionsFromEmployerRequest) (*operations.GetPensionsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pensions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pensions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -575,9 +575,9 @@ func (s *pension) GetPensionsFromEmployer(ctx context.Context, request operation
 // Patches the specified pension with the supplied values
 func (s *pension) PatchPension(ctx context.Context, request operations.PatchPensionRequest) (*operations.PatchPensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Pension", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -592,7 +592,7 @@ func (s *pension) PatchPension(ctx context.Context, request operations.PatchPens
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -648,9 +648,9 @@ func (s *pension) PatchPension(ctx context.Context, request operations.PatchPens
 // Create a new pension object
 func (s *pension) PostPensionIntoEmployer(ctx context.Context, request operations.PostPensionIntoEmployerRequest) (*operations.PostPensionIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pensions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pensions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Pension", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -665,7 +665,7 @@ func (s *pension) PostPensionIntoEmployer(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -721,9 +721,9 @@ func (s *pension) PostPensionIntoEmployer(ctx context.Context, request operation
 // Updates existing or inserts the specified pension object
 func (s *pension) PutPensionIntoEmployer(ctx context.Context, request operations.PutPensionIntoEmployerRequest) (*operations.PutPensionIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Pension/{PensionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Pension", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -738,7 +738,7 @@ func (s *pension) PutPensionIntoEmployer(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

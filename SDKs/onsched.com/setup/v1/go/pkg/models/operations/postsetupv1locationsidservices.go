@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1LocationsIDServicesPathParams struct {
+type PostSetupV1LocationsIDServicesRequest struct {
+	// array of valid service object id's
+	RequestBody []string `request:"mediaType=application/json"`
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1LocationsIDServicesRequest struct {
-	PathParams PostSetupV1LocationsIDServicesPathParams
-	// array of valid service object id's
-	Request []string `request:"mediaType=application/json"`
 }
 
 type PostSetupV1LocationsIDServicesResponse struct {

@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDProfessionalVehiclesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDProfessionalVehiclesPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesIDProfessionalVehiclesRequestBodyLevelEnum string
@@ -64,10 +58,10 @@ type PostSpacesIDProfessionalVehiclesRequestBody struct {
 }
 
 type PostSpacesIDProfessionalVehiclesRequest struct {
-	PathParams PostSpacesIDProfessionalVehiclesPathParams
 	// Professional vehicle to add
-	Request  PostSpacesIDProfessionalVehiclesRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDProfessionalVehiclesSecurity
+	RequestBody PostSpacesIDProfessionalVehiclesRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostSpacesIDProfessionalVehicles201ApplicationJSON - Id of the professional vehicle created

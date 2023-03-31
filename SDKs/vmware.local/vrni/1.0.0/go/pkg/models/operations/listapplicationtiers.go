@@ -8,17 +8,12 @@ import (
 )
 
 type ListApplicationTiersSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListApplicationTiersPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ListApplicationTiersRequest struct {
-	PathParams ListApplicationTiersPathParams
-	Security   ListApplicationTiersSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ListApplicationTiersResponse struct {

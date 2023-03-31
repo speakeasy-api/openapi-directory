@@ -116,7 +116,7 @@ func (e *GetDocumentsWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDocumentsQueryParams struct {
+type GetDocumentsRequest struct {
 	// searches in source language of documents, in source and target languages of document's quote
 	LanguageCode *string                   `queryParam:"style=form,explode=true,name=language_code"`
 	OrderBy      *GetDocumentsOrderByEnum  `queryParam:"style=form,explode=true,name=order_by"`
@@ -129,10 +129,6 @@ type GetDocumentsQueryParams struct {
 	TypeFilter *GetDocumentsTypeFilterEnum `queryParam:"style=form,explode=true,name=type_filter"`
 	// Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
 	With []GetDocumentsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
-}
-
-type GetDocumentsRequest struct {
-	QueryParams GetDocumentsQueryParams
 }
 
 type GetDocumentsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TanzaniaRegionsPathParams struct {
+type TanzaniaRegionsRequest struct {
 	// Country name in lowercase eg (Tanzania)
 	Country string `pathParam:"style=simple,explode=false,name=country"`
-}
-
-type TanzaniaRegionsRequest struct {
-	PathParams TanzaniaRegionsPathParams
 }
 
 type TanzaniaRegionsResponse struct {

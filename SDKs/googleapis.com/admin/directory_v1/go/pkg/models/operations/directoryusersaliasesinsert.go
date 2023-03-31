@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryUsersAliasesInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesInsertSecurity struct {
@@ -22,14 +22,10 @@ type DirectoryUsersAliasesInsertSecurity struct {
 	Option2 *DirectoryUsersAliasesInsertSecurityOption2 `security:"option"`
 }
 
-type DirectoryUsersAliasesInsertPathParams struct {
-	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type DirectoryUsersAliasesInsertQueryParams struct {
+type DirectoryUsersAliasesInsertRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Alias       *shared.Alias     `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -50,13 +46,8 @@ type DirectoryUsersAliasesInsertQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryUsersAliasesInsertRequest struct {
-	PathParams  DirectoryUsersAliasesInsertPathParams
-	QueryParams DirectoryUsersAliasesInsertQueryParams
-	Request     *shared.Alias `request:"mediaType=application/json"`
-	Security    DirectoryUsersAliasesInsertSecurity
+	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryUsersAliasesInsertResponse struct {

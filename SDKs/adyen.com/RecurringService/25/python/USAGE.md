@@ -4,18 +4,18 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostDisableRequest(
-    security=operations.PostDisableSecurity(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    request="quis",
+
+
+req = shared.DisableRequest(
+    contract="corrupti",
+    merchant_account="provident",
+    recurring_detail_reference="distinctio",
+    shopper_reference="quibusdam",
 )
     
-res = s.general.post_disable(req)
+res = s.general.post_disable(req, operations.PostDisableSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.disable_result is not None:
     # handle response

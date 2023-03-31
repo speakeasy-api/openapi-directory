@@ -13,15 +13,11 @@ var ListEventServerList = []string{
 }
 
 type ListEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListEventPathParams struct {
-	// The SID of the Workspace with the Events to read. Returns only the Events that pertain to the specified Workspace.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListEventQueryParams struct {
+type ListEventRequest struct {
 	// Only include Events that occurred on or before this date, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// The type of Events to read. Returns only Events of the type specified.
@@ -50,13 +46,8 @@ type ListEventQueryParams struct {
 	WorkerSid *string `queryParam:"style=form,explode=true,name=WorkerSid"`
 	// The SID of the Workflow with the Events to read. Returns only the Events that pertain to the specified Workflow.
 	WorkflowSid *string `queryParam:"style=form,explode=true,name=WorkflowSid"`
-}
-
-type ListEventRequest struct {
-	PathParams  ListEventPathParams
-	QueryParams ListEventQueryParams
-	Security    ListEventSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the Events to read. Returns only the Events that pertain to the specified Workspace.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListEventListEventResponseMeta struct {

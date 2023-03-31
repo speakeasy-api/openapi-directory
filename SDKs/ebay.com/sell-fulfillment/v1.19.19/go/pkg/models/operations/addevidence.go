@@ -12,19 +12,13 @@ var AddEvidenceServerList = []string{
 }
 
 type AddEvidenceSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type AddEvidencePathParams struct {
-	// This is the unique identifier of the payment dispute. This path parameter must be passed into the call URI to identify the payment dispute for which the user plans to add evidence for a contested payment dispute. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the <strong>paymentDisputeId</strong> field in the <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter is required, and the actual identifier value is passed in right after the <strong>payment_dispute</strong> resource. See the Resource URI above.
-	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddEvidenceRequest struct {
-	PathParams AddEvidencePathParams
-	Request    *shared.AddEvidencePaymentDisputeRequest `request:"mediaType=application/json"`
-	Security   AddEvidenceSecurity
-	ServerURL  *string
+	AddEvidencePaymentDisputeRequest *shared.AddEvidencePaymentDisputeRequest `request:"mediaType=application/json"`
+	// This is the unique identifier of the payment dispute. This path parameter must be passed into the call URI to identify the payment dispute for which the user plans to add evidence for a contested payment dispute. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the <strong>paymentDisputeId</strong> field in the <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter is required, and the actual identifier value is passed in right after the <strong>payment_dispute</strong> resource. See the Resource URI above.
+	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
 }
 
 type AddEvidenceResponse struct {

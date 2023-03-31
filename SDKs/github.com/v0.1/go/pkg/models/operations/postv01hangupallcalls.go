@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV01HangupAllCallsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01HangupAllCallsRequest struct {
-	Security PostV01HangupAllCallsSecurity
-}
-
 type PostV01HangupAllCallsResponse struct {
 	ContentType string
 	// Response

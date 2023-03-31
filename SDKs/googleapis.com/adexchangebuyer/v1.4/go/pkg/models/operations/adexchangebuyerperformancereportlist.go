@@ -8,11 +8,11 @@ import (
 )
 
 type AdexchangebuyerPerformanceReportListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdexchangebuyerPerformanceReportListQueryParams struct {
+type AdexchangebuyerPerformanceReportListRequest struct {
 	// The account id to get the reports.
 	AccountID string `queryParam:"style=form,explode=true,name=accountId"`
 	// Data format for the response.
@@ -37,11 +37,6 @@ type AdexchangebuyerPerformanceReportListQueryParams struct {
 	StartDateTime string `queryParam:"style=form,explode=true,name=startDateTime"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerPerformanceReportListRequest struct {
-	QueryParams AdexchangebuyerPerformanceReportListQueryParams
-	Security    AdexchangebuyerPerformanceReportListSecurity
 }
 
 type AdexchangebuyerPerformanceReportListResponse struct {

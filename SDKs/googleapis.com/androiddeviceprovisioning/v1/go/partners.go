@@ -34,9 +34,9 @@ func newPartners(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AndroiddeviceprovisioningPartnersCustomersCreate - Creates a customer for zero-touch enrollment. After the method returns successfully, admin and owner roles can manage devices and EMM configs by calling API methods or using their zero-touch enrollment portal. The customer receives an email that welcomes them to zero-touch enrollment and explains how to sign into the portal.
 func (s *partners) AndroiddeviceprovisioningPartnersCustomersCreate(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersCustomersCreateRequest) (*operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCustomerRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersCustomersCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *partners) AndroiddeviceprovisioningPartnersCustomersCreate(ctx context.
 // AndroiddeviceprovisioningPartnersCustomersList - Lists the customers that are enrolled to the reseller identified by the `partnerId` argument. This list includes customers that the reseller created and customers that enrolled themselves using the portal.
 func (s *partners) AndroiddeviceprovisioningPartnersCustomersList(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersCustomersListRequest) (*operations.AndroiddeviceprovisioningPartnersCustomersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/customers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/customers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,9 +137,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersCustomersList(ctx context.Co
 // AndroiddeviceprovisioningPartnersDevicesClaim - Claims a device for a customer and adds it to zero-touch enrollment. If the device is already claimed by another customer, the call returns an error.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesClaim(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesClaimRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClaimDeviceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,7 +151,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesClaim(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -192,9 +192,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesClaim(ctx context.Con
 // AndroiddeviceprovisioningPartnersDevicesClaimAsync - Claims a batch of devices for a customer asynchronously. Adds the devices to zero-touch enrollment. To learn more, read [Long‑running batch operations](/zero-touch/guides/how-it-works#operations).
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesClaimAsync(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:claimAsync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:claimAsync", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClaimDevicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,7 +206,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesClaimAsync(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -247,9 +247,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesClaimAsync(ctx contex
 // AndroiddeviceprovisioningPartnersDevicesFindByIdentifier - Finds devices by hardware identifiers, such as IMEI.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesFindByIdentifier(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:findByIdentifier", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:findByIdentifier", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindDevicesByDeviceIdentifierRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,7 +261,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesFindByIdentifier(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -302,9 +302,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesFindByIdentifier(ctx 
 // AndroiddeviceprovisioningPartnersDevicesFindByOwner - Finds devices claimed for customers. The results only contain devices registered to the reseller that's identified by the `partnerId` argument. The customer's devices purchased from other resellers don't appear in the results.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesFindByOwner(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:findByOwner", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:findByOwner", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindDevicesByOwnerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,7 +316,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesFindByOwner(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -357,14 +357,14 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesFindByOwner(ctx conte
 // AndroiddeviceprovisioningPartnersDevicesGet - Gets a device.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesGet(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesGetRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -405,9 +405,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesGet(ctx context.Conte
 // AndroiddeviceprovisioningPartnersDevicesMetadata - Updates reseller metadata associated with the device. Android devices only.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesMetadata(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesMetadataRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{metadataOwnerId}/devices/{deviceId}/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{metadataOwnerId}/devices/{deviceId}/metadata", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDeviceMetadataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,7 +419,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesMetadata(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -460,9 +460,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesMetadata(ctx context.
 // AndroiddeviceprovisioningPartnersDevicesUnclaim - Unclaims a device from a customer and removes it from zero-touch enrollment.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesUnclaim(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesUnclaimRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:unclaim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:unclaim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnclaimDeviceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,7 +474,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesUnclaim(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -515,9 +515,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesUnclaim(ctx context.C
 // AndroiddeviceprovisioningPartnersDevicesUnclaimAsync - Unclaims a batch of devices for a customer asynchronously. Removes the devices from zero-touch enrollment. To learn more, read [Long‑running batch operations](/zero-touch/guides/how-it-works#operations).
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesUnclaimAsync(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:unclaimAsync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:unclaimAsync", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnclaimDevicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -529,7 +529,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesUnclaimAsync(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -570,9 +570,9 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesUnclaimAsync(ctx cont
 // AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsync - Updates the reseller metadata attached to a batch of devices. This method updates devices asynchronously and returns an `Operation` that can be used to track progress. Read [Long‑running batch operations](/zero-touch/guides/how-it-works#operations). Android Devices only.
 func (s *partners) AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsync(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncRequest) (*operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:updateMetadataAsync", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/devices:updateMetadataAsync", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDeviceMetadataInBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -584,7 +584,7 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsync(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -625,14 +625,14 @@ func (s *partners) AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsync(c
 // AndroiddeviceprovisioningPartnersVendorsCustomersList - Lists the customers of the vendor.
 func (s *partners) AndroiddeviceprovisioningPartnersVendorsCustomersList(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersVendorsCustomersListRequest) (*operations.AndroiddeviceprovisioningPartnersVendorsCustomersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -673,14 +673,14 @@ func (s *partners) AndroiddeviceprovisioningPartnersVendorsCustomersList(ctx con
 // AndroiddeviceprovisioningPartnersVendorsList - Lists the vendors of the partner.
 func (s *partners) AndroiddeviceprovisioningPartnersVendorsList(ctx context.Context, request operations.AndroiddeviceprovisioningPartnersVendorsListRequest) (*operations.AndroiddeviceprovisioningPartnersVendorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/vendors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/vendors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

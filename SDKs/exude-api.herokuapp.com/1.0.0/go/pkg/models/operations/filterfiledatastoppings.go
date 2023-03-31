@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FilterFileDataStoppingsPathParams struct {
-	// provide the type of filtering required stopping/swear
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
 type FilterFileDataStoppingsRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -23,9 +18,10 @@ type FilterFileDataStoppingsRequestBody struct {
 }
 
 type FilterFileDataStoppingsRequest struct {
-	PathParams FilterFileDataStoppingsPathParams
 	// Filter the stopping words from the provided input file
-	Request FilterFileDataStoppingsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody FilterFileDataStoppingsRequestBody `request:"mediaType=multipart/form-data"`
+	// provide the type of filtering required stopping/swear
+	Type string `pathParam:"style=simple,explode=false,name=type"`
 }
 
 type FilterFileDataStoppingsResponse struct {

@@ -10,13 +10,8 @@ import (
 )
 
 type PeoplePeopleDeleteContactPhotoSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type PeoplePeopleDeleteContactPhotoPathParams struct {
-	// Required. The resource name of the contact whose photo will be deleted.
-	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PeoplePeopleDeleteContactPhotoSourcesEnum string
@@ -48,7 +43,7 @@ func (e *PeoplePeopleDeleteContactPhotoSourcesEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type PeoplePeopleDeleteContactPhotoQueryParams struct {
+type PeoplePeopleDeleteContactPhotoRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,18 +64,14 @@ type PeoplePeopleDeleteContactPhotoQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The resource name of the contact whose photo will be deleted.
+	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
 	// Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
 	Sources []PeoplePeopleDeleteContactPhotoSourcesEnum `queryParam:"style=form,explode=true,name=sources"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PeoplePeopleDeleteContactPhotoRequest struct {
-	PathParams  PeoplePeopleDeleteContactPhotoPathParams
-	QueryParams PeoplePeopleDeleteContactPhotoQueryParams
-	Security    PeoplePeopleDeleteContactPhotoSecurity
 }
 
 type PeoplePeopleDeleteContactPhotoResponse struct {

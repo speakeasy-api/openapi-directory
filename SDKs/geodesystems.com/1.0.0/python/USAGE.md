@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MediaTabularExtractsheetRequest(
-    query_params=operations.MediaTabularExtractsheetQueryParams(
-        arg1="numquam",
-        entryid="modi",
-        output="quia",
-    ),
+    arg1="corrupti",
+    entryid="provident",
+    output="distinctio",
 )
     
 res = s.service_media_tabular_extractsheet.media_tabular_extractsheet(req)

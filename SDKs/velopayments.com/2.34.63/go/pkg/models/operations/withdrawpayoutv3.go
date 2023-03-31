@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WithdrawPayoutV3PathParams struct {
+type WithdrawPayoutV3Request struct {
 	// Id of the payout
 	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
-type WithdrawPayoutV3Request struct {
-	PathParams WithdrawPayoutV3PathParams
 }
 
 type WithdrawPayoutV3Response struct {

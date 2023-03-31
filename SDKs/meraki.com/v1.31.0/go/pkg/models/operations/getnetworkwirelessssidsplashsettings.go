@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidSplashSettingsPathParams struct {
+type GetNetworkWirelessSsidSplashSettingsRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidSplashSettingsRequest struct {
-	PathParams GetNetworkWirelessSsidSplashSettingsPathParams
 }
 
 // GetNetworkWirelessSsidSplashSettings200ApplicationJSONBillingFreeAccess - Details associated with a free access plan with limits

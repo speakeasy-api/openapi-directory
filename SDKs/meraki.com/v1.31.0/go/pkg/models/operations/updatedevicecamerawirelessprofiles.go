@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCameraWirelessProfilesPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceCameraWirelessProfilesRequestBodyIds - The ids of the wireless profile to assign to the given camera
 type UpdateDeviceCameraWirelessProfilesRequestBodyIds struct {
 	// The id of the backup wireless profile
@@ -26,8 +22,8 @@ type UpdateDeviceCameraWirelessProfilesRequestBody struct {
 }
 
 type UpdateDeviceCameraWirelessProfilesRequest struct {
-	PathParams UpdateDeviceCameraWirelessProfilesPathParams
-	Request    UpdateDeviceCameraWirelessProfilesRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateDeviceCameraWirelessProfilesRequestBody `request:"mediaType=application/json"`
+	Serial      string                                        `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCameraWirelessProfilesResponse struct {

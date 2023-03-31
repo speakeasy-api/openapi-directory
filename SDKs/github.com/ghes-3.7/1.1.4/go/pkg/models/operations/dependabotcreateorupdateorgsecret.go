@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type DependabotCreateOrUpdateOrgSecretPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 // DependabotCreateOrUpdateOrgSecretRequestBodyVisibilityEnum - Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
 type DependabotCreateOrUpdateOrgSecretRequestBodyVisibilityEnum string
 
@@ -54,8 +47,11 @@ type DependabotCreateOrUpdateOrgSecretRequestBody struct {
 }
 
 type DependabotCreateOrUpdateOrgSecretRequest struct {
-	PathParams DependabotCreateOrUpdateOrgSecretPathParams
-	Request    DependabotCreateOrUpdateOrgSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody DependabotCreateOrUpdateOrgSecretRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type DependabotCreateOrUpdateOrgSecretResponse struct {

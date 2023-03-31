@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CallHoldPathParams struct {
+type CallHoldRequest struct {
 	// Unique identifier of the call
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CallHoldRequest struct {
-	PathParams CallHoldPathParams
 }
 
 type CallHoldResponse struct {

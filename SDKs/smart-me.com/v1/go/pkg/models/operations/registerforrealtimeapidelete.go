@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RegisterForRealtimeAPIDeletePathParams struct {
+type RegisterForRealtimeAPIDeleteRequest struct {
 	// The ID of the realtime API registration
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RegisterForRealtimeAPIDeleteRequest struct {
-	PathParams RegisterForRealtimeAPIDeletePathParams
 }
 
 type RegisterForRealtimeAPIDeleteResponse struct {

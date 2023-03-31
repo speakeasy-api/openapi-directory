@@ -45,7 +45,7 @@ func newKeys(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // - **idkfa** Availability will return as `false`
 func (s *keys) KeyAvailability(ctx context.Context, request operations.KeyAvailabilityRequest) (*operations.KeyAvailabilityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -100,14 +100,14 @@ func (s *keys) KeyAvailability(ctx context.Context, request operations.KeyAvaila
 // Returns private data on the key including remaining lookups, available datasets and usage limits.
 func (s *keys) KeyDetails(ctx context.Context, request operations.KeyDetailsRequest) (*operations.KeyDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,14 +181,14 @@ func (s *keys) KeyDetails(ctx context.Context, request operations.KeyDetailsRequ
 // You may prevent PII collection altogether by setting the interval to `0` days.
 func (s *keys) KeyLogs(ctx context.Context, request operations.KeyLogsRequest) (*operations.KeyLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/lookups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/lookups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -243,14 +243,14 @@ func (s *keys) KeyLogs(ctx context.Context, request operations.KeyLogsRequest) (
 // A maximum interval of 90 days can be provided for analysis. If no start or end date is provided, the last 21 days will be used as the default interval.
 func (s *keys) KeyUsage(ctx context.Context, request operations.KeyUsageRequest) (*operations.KeyUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/usage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keys/{key}/usage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -60,14 +60,14 @@ func newAccountingPeriods(defaultClient, securityClient HTTPClient, serverURL, l
 // * Must not be in the process of running a trial balance
 func (s *accountingPeriods) DELETEAccountingPeriod(ctx context.Context, request operations.DELETEAccountingPeriodRequest) (*operations.DELETEAccountingPeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -113,14 +113,14 @@ func (s *accountingPeriods) DELETEAccountingPeriod(ctx context.Context, request 
 // You must have Zuora Finance enabled on your tenant.
 func (s *accountingPeriods) GETAccountingPeriod(ctx context.Context, request operations.GETAccountingPeriodRequest) (*operations.GETAccountingPeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -169,9 +169,9 @@ func (s *accountingPeriods) GETAllAccountingPeriods(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,7 +227,7 @@ func (s *accountingPeriods) POSTAccountingPeriod(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accounting-periods"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTAccountingPeriodType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -242,7 +242,7 @@ func (s *accountingPeriods) POSTAccountingPeriod(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -299,14 +299,14 @@ func (s *accountingPeriods) POSTAccountingPeriod(ctx context.Context, request op
 // When you close an accounting period in Zuora, a trial balance is automatically run for that period. A successful response means only that the accounting period is now closed, but does not mean that the trial balance has successfully completed.
 func (s *accountingPeriods) PUTCloseAccountingPeriod(ctx context.Context, request operations.PUTCloseAccountingPeriodRequest) (*operations.PUTCloseAccountingPeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/close", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -368,14 +368,14 @@ func (s *accountingPeriods) PUTCloseAccountingPeriod(ctx context.Context, reques
 // When you set an accounting period to pending close in Zuora, a trial balance is automatically run for that period. A response of `{ "success": true }`  means only that the accounting period status is now pending close, but does not mean that the trial balance has successfully completed. You can use the Get Accounting Period REST API call to view details about the outcome of the trial balance.
 func (s *accountingPeriods) PUTPendingCloseAccountingPeriod(ctx context.Context, request operations.PUTPendingCloseAccountingPeriodRequest) (*operations.PUTPendingCloseAccountingPeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/pending-close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/pending-close", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -426,14 +426,14 @@ func (s *accountingPeriods) PUTPendingCloseAccountingPeriod(ctx context.Context,
 // * You can only re-open an accounting period that is immediately previous to an open period.
 func (s *accountingPeriods) PUTReopenAccountingPeriod(ctx context.Context, request operations.PUTReopenAccountingPeriodRequest) (*operations.PUTReopenAccountingPeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/reopen", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/reopen", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -493,14 +493,14 @@ func (s *accountingPeriods) PUTReopenAccountingPeriod(ctx context.Context, reque
 // The trial balance is run asynchronously. A response of `{ "success": true }` means only that the trial balance has started processing, but does not mean that the trial balance has successfully completed. You can use the [Get Accounting Period](https://www.zuora.com/developer/api-reference/#operation/GET_AccountingPeriod) REST API call to view details about the outcome of the trial balance.
 func (s *accountingPeriods) PUTRunTrialBalance(ctx context.Context, request operations.PUTRunTrialBalanceRequest) (*operations.PUTRunTrialBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/run-trial-balance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}/run-trial-balance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -565,9 +565,9 @@ func (s *accountingPeriods) PUTRunTrialBalance(ctx context.Context, request oper
 //   - The period has any active journal entries.
 func (s *accountingPeriods) PUTUpdateAccountingPeriod(ctx context.Context, request operations.PUTUpdateAccountingPeriodRequest) (*operations.PUTUpdateAccountingPeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounting-periods/{ap-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTAccountingPeriodType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -582,7 +582,7 @@ func (s *accountingPeriods) PUTUpdateAccountingPeriod(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

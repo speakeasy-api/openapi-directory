@@ -34,7 +34,7 @@ func newMembership(defaultClient, securityClient HTTPClient, serverURL, language
 
 // MembershipGet - Get all of the members details
 // This will return all properties related to member entity
-func (s *membership) MembershipGet(ctx context.Context, request operations.MembershipGetRequest) (*operations.MembershipGetResponse, error) {
+func (s *membership) MembershipGet(ctx context.Context) (*operations.MembershipGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Membership"
 
@@ -43,7 +43,7 @@ func (s *membership) MembershipGet(ctx context.Context, request operations.Membe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *membership) MembershipGet(ctx context.Context, request operations.Membe
 }
 
 // MembershipPost - Add new Member
-func (s *membership) MembershipPost(ctx context.Context, request operations.MembershipPostRequest) (*operations.MembershipPostResponse, error) {
+func (s *membership) MembershipPost(ctx context.Context, request shared.MemberDTO) (*operations.MembershipPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Membership"
 

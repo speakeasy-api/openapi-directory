@@ -129,10 +129,6 @@ type PostAutomationsRequestBody struct {
 	Value map[string]interface{} `multipartForm:"name=value,json"`
 }
 
-type PostAutomationsRequest struct {
-	Request *PostAutomationsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAutomationsResponse struct {
 	// The Automations object.
 	AutomationEntity *shared.AutomationEntity

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitListMatchingRefsPathParams struct {
+type GitListMatchingRefsRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// ref parameter
 	Ref string `pathParam:"style=simple,explode=false,name=ref"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type GitListMatchingRefsRequest struct {
-	PathParams GitListMatchingRefsPathParams
 }
 
 type GitListMatchingRefsResponse struct {

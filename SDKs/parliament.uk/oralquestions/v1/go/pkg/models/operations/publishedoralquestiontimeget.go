@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type PublishedOralQuestionTimeGetQueryParams struct {
+type PublishedOralQuestionTimeGetRequest struct {
 	// Which answering body is to respond. A list of answering bodies can be found <a target="_blank" href="http://data.parliament.uk/membersdataplatform/services/mnis/referencedata/AnsweringBodies/">here</a>.
 	ParametersAnsweringBodyIds []int `queryParam:"style=form,explode=true,name=parameters.answeringBodyIds"`
 	// Oral Questions Time where the answering date has been set on or before the date provided. Date format YYYY-MM-DD.
@@ -25,10 +25,6 @@ type PublishedOralQuestionTimeGetQueryParams struct {
 	ParametersSkip *int `queryParam:"style=form,explode=true,name=parameters.skip"`
 	// The number of records to return, default is 25, maximum is 100.
 	ParametersTake *int `queryParam:"style=form,explode=true,name=parameters.take"`
-}
-
-type PublishedOralQuestionTimeGetRequest struct {
-	QueryParams PublishedOralQuestionTimeGetQueryParams
 }
 
 type PublishedOralQuestionTimeGetResponse struct {

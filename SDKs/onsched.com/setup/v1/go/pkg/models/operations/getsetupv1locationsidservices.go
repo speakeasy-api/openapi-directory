@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1LocationsIDServicesPathParams struct {
+type GetSetupV1LocationsIDServicesRequest struct {
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1LocationsIDServicesQueryParams struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetSetupV1LocationsIDServicesRequest struct {
-	PathParams  GetSetupV1LocationsIDServicesPathParams
-	QueryParams GetSetupV1LocationsIDServicesQueryParams
 }
 
 type GetSetupV1LocationsIDServicesResponse struct {

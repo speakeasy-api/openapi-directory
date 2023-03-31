@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1StatusesIDUnpinSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1StatusesIDUnpinPathParams struct {
-	// Local ID of a status in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1StatusesIDUnpinRequest struct {
-	PathParams PostAPIV1StatusesIDUnpinPathParams
-	Security   PostAPIV1StatusesIDUnpinSecurity
+	// Local ID of a status in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1StatusesIDUnpinResponse struct {

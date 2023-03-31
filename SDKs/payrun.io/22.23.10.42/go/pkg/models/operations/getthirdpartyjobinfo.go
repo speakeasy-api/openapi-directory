@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetThirdPartyJobInfoPathParams struct {
-	// The job unique identifier.
-	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
-}
-
-type GetThirdPartyJobInfoHeaders struct {
+type GetThirdPartyJobInfoRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetThirdPartyJobInfoRequest struct {
-	PathParams GetThirdPartyJobInfoPathParams
-	Headers    GetThirdPartyJobInfoHeaders
+	// The job unique identifier.
+	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
 }
 
 type GetThirdPartyJobInfoResponse struct {

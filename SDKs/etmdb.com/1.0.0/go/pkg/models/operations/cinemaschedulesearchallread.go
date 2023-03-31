@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type CinemaScheduleSearchallReadPathParams struct {
-	Param string `pathParam:"style=simple,explode=false,name=param"`
-}
-
 type CinemaScheduleSearchallReadRequest struct {
-	PathParams CinemaScheduleSearchallReadPathParams
+	Param string `pathParam:"style=simple,explode=false,name=param"`
 }
 
 type CinemaScheduleSearchallReadResponse struct {

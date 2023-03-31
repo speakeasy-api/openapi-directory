@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteTaskServerList = []string{
@@ -12,26 +11,17 @@ var DeleteTaskServerList = []string{
 }
 
 type DeleteTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteTaskPathParams struct {
+type DeleteTaskRequest struct {
+	// If provided, deletes this Task if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header of the Task matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
 	// The SID of the Task resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the Task to delete.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type DeleteTaskHeaders struct {
-	// If provided, deletes this Task if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header of the Task matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
-}
-
-type DeleteTaskRequest struct {
-	PathParams DeleteTaskPathParams
-	Headers    DeleteTaskHeaders
-	Security   DeleteTaskSecurity
-	ServerURL  *string
 }
 
 type DeleteTaskResponse struct {

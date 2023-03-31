@@ -8,16 +8,11 @@ import (
 )
 
 type AndroidpublisherApplicationsDeviceTierConfigsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherApplicationsDeviceTierConfigsListPathParams struct {
-	// Package name of the app.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-}
-
-type AndroidpublisherApplicationsDeviceTierConfigsListQueryParams struct {
+type AndroidpublisherApplicationsDeviceTierConfigsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type AndroidpublisherApplicationsDeviceTierConfigsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Package name of the app.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// The maximum number of device tier configs to return. The service may return fewer than this value. If unspecified, at most 10 device tier configs will be returned. The maximum value for this field is 100; values above 100 will be coerced to 100. Device tier configs will be ordered by descending creation time.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListDeviceTierConfigs` call. Provide this to retrieve the subsequent page.
@@ -44,12 +41,6 @@ type AndroidpublisherApplicationsDeviceTierConfigsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherApplicationsDeviceTierConfigsListRequest struct {
-	PathParams  AndroidpublisherApplicationsDeviceTierConfigsListPathParams
-	QueryParams AndroidpublisherApplicationsDeviceTierConfigsListQueryParams
-	Security    AndroidpublisherApplicationsDeviceTierConfigsListSecurity
 }
 
 type AndroidpublisherApplicationsDeviceTierConfigsListResponse struct {

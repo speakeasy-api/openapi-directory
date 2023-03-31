@@ -8,23 +8,14 @@ import (
 )
 
 type GetPayrollCalendarSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetPayrollCalendarPathParams struct {
-	// Payroll Calendar id for single object
-	PayrollCalendarID string `pathParam:"style=simple,explode=false,name=PayrollCalendarID"`
-}
-
-type GetPayrollCalendarHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPayrollCalendarRequest struct {
-	PathParams GetPayrollCalendarPathParams
-	Headers    GetPayrollCalendarHeaders
-	Security   GetPayrollCalendarSecurity
+	// Payroll Calendar id for single object
+	PayrollCalendarID string `pathParam:"style=simple,explode=false,name=PayrollCalendarID"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type GetPayrollCalendarResponse struct {

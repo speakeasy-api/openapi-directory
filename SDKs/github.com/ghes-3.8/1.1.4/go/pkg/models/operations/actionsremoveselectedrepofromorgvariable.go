@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type ActionsRemoveSelectedRepoFromOrgVariablePathParams struct {
+type ActionsRemoveSelectedRepoFromOrgVariableRequest struct {
 	// The name of the variable.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The organization name. The name is not case sensitive.
 	Org          string `pathParam:"style=simple,explode=false,name=org"`
 	RepositoryID int64  `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
-type ActionsRemoveSelectedRepoFromOrgVariableRequest struct {
-	PathParams ActionsRemoveSelectedRepoFromOrgVariablePathParams
 }
 
 type ActionsRemoveSelectedRepoFromOrgVariableResponse struct {

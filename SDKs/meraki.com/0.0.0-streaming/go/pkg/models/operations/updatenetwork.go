@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkRequestBody struct {
 	// Disables the local device status pages (<a target='_blank' href='http://my.meraki.com/'>my.meraki.com, </a><a target='_blank' href='http://ap.meraki.com/'>ap.meraki.com, </a><a target='_blank' href='http://switch.meraki.com/'>switch.meraki.com, </a><a target='_blank' href='http://wired.meraki.com/'>wired.meraki.com</a>). Optional (defaults to false)
 	DisableMyMerakiCom *bool `json:"disableMyMerakiCom,omitempty"`
@@ -26,8 +22,8 @@ type UpdateNetworkRequestBody struct {
 }
 
 type UpdateNetworkRequest struct {
-	PathParams UpdateNetworkPathParams
-	Request    *UpdateNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkResponse struct {

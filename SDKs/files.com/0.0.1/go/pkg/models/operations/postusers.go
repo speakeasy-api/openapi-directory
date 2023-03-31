@@ -196,10 +196,6 @@ type PostUsersRequestBody struct {
 	Username *string `multipartForm:"name=username"`
 }
 
-type PostUsersRequest struct {
-	Request *PostUsersRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostUsersResponse struct {
 	ContentType string
 	StatusCode  int

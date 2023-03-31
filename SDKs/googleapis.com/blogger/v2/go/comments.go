@@ -32,20 +32,20 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BloggerCommentsGet - Gets a comment by blog id, post id and comment id.
-func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.BloggerCommentsGetRequest) (*operations.BloggerCommentsGetResponse, error) {
+func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.BloggerCommentsGetRequest, security operations.BloggerCommentsGetSecurity) (*operations.BloggerCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.Bl
 }
 
 // BloggerCommentsList - Lists comments.
-func (s *comments) BloggerCommentsList(ctx context.Context, request operations.BloggerCommentsListRequest) (*operations.BloggerCommentsListResponse, error) {
+func (s *comments) BloggerCommentsList(ctx context.Context, request operations.BloggerCommentsListRequest, security operations.BloggerCommentsListSecurity) (*operations.BloggerCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeletePostPathParams struct {
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
 type DeletePostRequest struct {
-	PathParams DeletePostPathParams
+	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 type DeletePostResponse struct {

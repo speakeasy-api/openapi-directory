@@ -33,16 +33,12 @@ func (e *SeasonTeamsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SeasonTeamsPathParams struct {
+type SeasonTeamsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format SeasonTeamsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Season ID. SeasonIDs can be found in the Competition Hierarchy (League Hierarchy).
 	// Examples: <code>1</code>, <code>2</code>, <code>3</code>, etc
 	Seasonid string `pathParam:"style=simple,explode=false,name=seasonid"`
-}
-
-type SeasonTeamsRequest struct {
-	PathParams SeasonTeamsPathParams
 }
 
 type SeasonTeamsResponse struct {

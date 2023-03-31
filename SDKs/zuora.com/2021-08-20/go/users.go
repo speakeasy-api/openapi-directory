@@ -40,14 +40,14 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // You can make the call as any entity user.
 func (s *users) GETEntitiesUserAccessible(ctx context.Context, request operations.GETEntitiesUserAccessibleRequest) (*operations.GETEntitiesUserAccessibleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/accessible-entities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/accessible-entities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -94,14 +94,14 @@ func (s *users) GETEntitiesUserAccessible(ctx context.Context, request operation
 // You must make the calls as an administrator of the entity that you want to accept the user access to.
 func (s *users) PUTAcceptUserAccess(ctx context.Context, request operations.PUTAcceptUserAccessRequest) (*operations.PUTAcceptUserAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/accept-access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/accept-access", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -148,14 +148,14 @@ func (s *users) PUTAcceptUserAccess(ctx context.Context, request operations.PUTA
 // You must make the calls as an administrator of the entity that you want to deny the user access to.
 func (s *users) PUTDenyUserAccess(ctx context.Context, request operations.PUTDenyUserAccessRequest) (*operations.PUTDenyUserAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/deny-access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/deny-access", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -202,9 +202,9 @@ func (s *users) PUTDenyUserAccess(ctx context.Context, request operations.PUTDen
 // You must make the call as an administrator of the entity, in which the request user is created. Also, this administrator must have the permission to access the entities that the request user wants to access.
 func (s *users) PUTSendUserAccessRequests(ctx context.Context, request operations.PUTSendUserAccessRequestsRequest) (*operations.PUTSendUserAccessRequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/request-access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/users/{username}/request-access", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSendUserAccessRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -219,7 +219,7 @@ func (s *users) PUTSendUserAccessRequests(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoriesQueryParams struct {
+type GetCategoriesRequest struct {
 	// The unique identifier of a parent category for which to
 	// return only its children. Providing an invalid category
 	// identifier results in a `404` response.
 	//
 	FilterParent *string `queryParam:"style=form,explode=true,name=filter[parent]"`
-}
-
-type GetCategoriesRequest struct {
-	QueryParams GetCategoriesQueryParams
 }
 
 type GetCategoriesResponse struct {

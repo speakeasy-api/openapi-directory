@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationAdaptivePolicyOverviewPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationAdaptivePolicyOverviewRequest struct {
-	PathParams GetOrganizationAdaptivePolicyOverviewPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationAdaptivePolicyOverview200ApplicationJSONCounts - The current amount of various adaptive policy objects.

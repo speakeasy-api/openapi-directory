@@ -38,7 +38,7 @@ func (e *GetTimestagsFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTimestagsQueryParams struct {
+type GetTimestagsRequest struct {
 	// If you do not specify a value for filter (see the Optional Parameters), your query will be matched to tags in all four Times dictionaries: subject, geographic location, organization and person. To use more than one, separate with commas.
 	//
 	Filter *GetTimestagsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
@@ -46,10 +46,6 @@ type GetTimestagsQueryParams struct {
 	Max *int64 `queryParam:"style=form,explode=true,name=max"`
 	// Your search query
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetTimestagsRequest struct {
-	QueryParams GetTimestagsQueryParams
 }
 
 type GetTimestagsResponse struct {

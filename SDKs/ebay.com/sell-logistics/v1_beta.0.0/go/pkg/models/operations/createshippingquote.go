@@ -8,19 +8,14 @@ import (
 )
 
 type CreateShippingQuoteSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateShippingQuoteHeaders struct {
-	// This header parameter specifies the eBay marketplace for the shipping quote that is being created. For a list of valid values, refer to the section <a href="/api-docs/static/rest-request-components.html#marketpl" target="_blank">Marketplace ID Values</a> in the <b>Using eBay RESTful APIs</b> guide.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateShippingQuoteRequest struct {
-	Headers CreateShippingQuoteHeaders
 	// The request object for <b>createShippingQuote</b>.
-	Request  shared.ShippingQuoteRequest `request:"mediaType=application/json"`
-	Security CreateShippingQuoteSecurity
+	ShippingQuoteRequest shared.ShippingQuoteRequest `request:"mediaType=application/json"`
+	// This header parameter specifies the eBay marketplace for the shipping quote that is being created. For a list of valid values, refer to the section <a href="/api-docs/static/rest-request-components.html#marketpl" target="_blank">Marketplace ID Values</a> in the <b>Using eBay RESTful APIs</b> guide.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type CreateShippingQuoteResponse struct {

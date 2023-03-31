@@ -12,18 +12,13 @@ var FetchSmsCommandServerList = []string{
 }
 
 type FetchSmsCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSmsCommandPathParams struct {
-	// The SID of the SMS Command resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSmsCommandRequest struct {
-	PathParams FetchSmsCommandPathParams
-	Security   FetchSmsCommandSecurity
-	ServerURL  *string
+	// The SID of the SMS Command resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSmsCommandResponse struct {

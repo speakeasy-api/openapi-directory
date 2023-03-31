@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypePointAmrcFreewaveQueryParams struct {
+type SearchTypePointAmrcFreewaveRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -50,10 +50,6 @@ type SearchTypePointAmrcFreewaveQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypePointAmrcFreewaveRequest struct {
-	QueryParams SearchTypePointAmrcFreewaveQueryParams
 }
 
 type SearchTypePointAmrcFreewaveResponse struct {

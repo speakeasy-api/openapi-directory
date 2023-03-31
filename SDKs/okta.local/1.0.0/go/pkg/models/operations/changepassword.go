@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ChangePasswordPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type ChangePasswordRequestBodyNewPassword struct {
 	Value *string `json:"value,omitempty"`
 }
@@ -24,8 +20,8 @@ type ChangePasswordRequestBody struct {
 }
 
 type ChangePasswordRequest struct {
-	PathParams ChangePasswordPathParams
-	Request    *ChangePasswordRequestBody `request:"mediaType=application/json"`
+	RequestBody *ChangePasswordRequestBody `request:"mediaType=application/json"`
+	UserID      string                     `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ChangePasswordResponse struct {

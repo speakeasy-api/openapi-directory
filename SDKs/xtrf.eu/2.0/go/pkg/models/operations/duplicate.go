@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DuplicatePathParams struct {
+type DuplicateRequest struct {
 	// client invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type DuplicateRequest struct {
-	PathParams DuplicatePathParams
 }
 
 type DuplicateResponse struct {

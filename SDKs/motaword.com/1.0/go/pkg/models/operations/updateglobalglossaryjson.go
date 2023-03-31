@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGlobalGlossaryJSONRequest struct {
-	Request *shared.AccountGlossaryUploadRequest `request:"mediaType=application/json"`
-}
-
 type UpdateGlobalGlossaryJSONResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall NoFileUploaded

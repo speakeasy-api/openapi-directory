@@ -21,10 +21,8 @@ func main() {
     )
 
     req := operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest{
-        PathParams: operations.DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams{
-            Account: 548814,
-            AnnouncementID: "provident",
-        },
+        Account: 548814,
+        AnnouncementID: "provident",
     }
 
     ctx := context.Background()

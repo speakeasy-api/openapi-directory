@@ -32,20 +32,20 @@ func newLeaderboardConfigurations(defaultClient, securityClient HTTPClient, serv
 }
 
 // GamesConfigurationLeaderboardConfigurationsDelete - Delete the leaderboard configuration with the given ID.
-func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsDelete(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest) (*operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse, error) {
+func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsDelete(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest, security operations.GamesConfigurationLeaderboardConfigurationsDeleteSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsD
 }
 
 // GamesConfigurationLeaderboardConfigurationsGet - Retrieves the metadata of the leaderboard configuration with the given ID.
-func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsGet(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsGetRequest) (*operations.GamesConfigurationLeaderboardConfigurationsGetResponse, error) {
+func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsGet(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsGetRequest, security operations.GamesConfigurationLeaderboardConfigurationsGetSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsG
 }
 
 // GamesConfigurationLeaderboardConfigurationsInsert - Insert a new leaderboard configuration in this application.
-func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsInsert(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsInsertRequest) (*operations.GamesConfigurationLeaderboardConfigurationsInsertResponse, error) {
+func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsInsert(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsInsertRequest, security operations.GamesConfigurationLeaderboardConfigurationsInsertSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeaderboardConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsI
 }
 
 // GamesConfigurationLeaderboardConfigurationsList - Returns a list of the leaderboard configurations in this application.
-func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsList(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsListRequest) (*operations.GamesConfigurationLeaderboardConfigurationsListResponse, error) {
+func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsList(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsListRequest, security operations.GamesConfigurationLeaderboardConfigurationsListSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsL
 }
 
 // GamesConfigurationLeaderboardConfigurationsUpdate - Update the metadata of the leaderboard configuration with the given ID.
-func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsUpdate(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest) (*operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse, error) {
+func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsUpdate(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest, security operations.GamesConfigurationLeaderboardConfigurationsUpdateSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeaderboardConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

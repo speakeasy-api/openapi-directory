@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasObjectChangesReadPathParams struct {
+type ExtrasObjectChangesReadRequest struct {
 	// A unique integer value identifying this object change.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasObjectChangesReadRequest struct {
-	PathParams ExtrasObjectChangesReadPathParams
 }
 
 type ExtrasObjectChangesReadResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEnergyTypesEnergyTypePathParams struct {
-	EnergyType string `pathParam:"style=simple,explode=false,name=energy-type"`
-}
-
 type GetEnergyTypesEnergyTypeRequest struct {
-	PathParams GetEnergyTypesEnergyTypePathParams
+	EnergyType string `pathParam:"style=simple,explode=false,name=energy-type"`
 }
 
 type GetEnergyTypesEnergyTypeResponse struct {

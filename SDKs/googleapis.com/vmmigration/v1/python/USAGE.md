@@ -4,38 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest(
-    security=operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
+    dollar_xgafv="2",
+    add_group_migration_request=shared.AddGroupMigrationRequest(
+        migrating_vm="provident",
     ),
-    path_params=operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams(
-        group="nobis",
-    ),
-    query_params=operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams(
-        dollar_xgafv="1",
-        access_token="quia",
-        alt="json",
-        callback="doloremque",
-        fields="dignissimos",
-        key="ut",
-        oauth_token="at",
-        pretty_print=False,
-        quota_user="aut",
-        upload_type="dolorum",
-        upload_protocol="aut",
-    ),
-    request=shared.AddGroupMigrationRequest(
-        migrating_vm="eos",
-    ),
+    access_token="distinctio",
+    alt="proto",
+    callback="unde",
+    fields_="nulla",
+    group="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.projects.vmmigration_projects_locations_groups_add_group_migration(req)
+res = s.projects.vmmigration_projects_locations_groups_add_group_migration(req, operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

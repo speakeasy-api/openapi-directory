@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type MeterFolderInformationPostJSONRequest struct {
-	Request shared.MeterFolderInformationToPost `request:"mediaType=application/json"`
-}
 
 type MeterFolderInformationPostJSONResponse struct {
 	ContentType string

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Update2PathParams struct {
+type Update2Request struct {
+	// Updated client
+	CustomerDTO shared.CustomerDTO `request:"mediaType=application/json"`
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type Update2Request struct {
-	PathParams Update2PathParams
-	// Updated client
-	Request shared.CustomerDTO `request:"mediaType=application/json"`
 }
 
 type Update2Response struct {

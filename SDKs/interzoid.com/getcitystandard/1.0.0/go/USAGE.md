@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetcitystandardRequest{
-        QueryParams: operations.GetcitystandardQueryParams{
-            City: "Laruecester",
-            License: "quibusdam",
-        },
+        City: "Laruecester",
+        License: "quibusdam",
     }
 
     ctx := context.Background()

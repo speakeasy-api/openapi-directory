@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetGithubActionsPermissionsRepositoryPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ActionsSetGithubActionsPermissionsRepositoryRequestBody struct {
 	// The permissions policy that controls the actions and reusable workflows that are allowed to run.
 	AllowedActions *shared.AllowedActionsEnum `json:"allowed_actions,omitempty"`
@@ -22,8 +15,11 @@ type ActionsSetGithubActionsPermissionsRepositoryRequestBody struct {
 }
 
 type ActionsSetGithubActionsPermissionsRepositoryRequest struct {
-	PathParams ActionsSetGithubActionsPermissionsRepositoryPathParams
-	Request    ActionsSetGithubActionsPermissionsRepositoryRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetGithubActionsPermissionsRepositoryRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ActionsSetGithubActionsPermissionsRepositoryResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsGetAuditLogPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsGetAuditLogQueryParams struct {
+type OrgsGetAuditLogRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor.
@@ -29,15 +24,12 @@ type OrgsGetAuditLogQueryParams struct {
 	//
 	// The default is `desc`.
 	Order *shared.AuditLogOrderEnum `queryParam:"style=form,explode=true,name=order"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// A search phrase. For more information, see [Searching the audit log](https://docs.github.com/enterprise-cloud@latest//github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization#searching-the-audit-log).
 	Phrase *string `queryParam:"style=form,explode=true,name=phrase"`
-}
-
-type OrgsGetAuditLogRequest struct {
-	PathParams  OrgsGetAuditLogPathParams
-	QueryParams OrgsGetAuditLogQueryParams
 }
 
 type OrgsGetAuditLogResponse struct {

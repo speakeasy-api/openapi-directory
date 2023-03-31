@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetLocationsQueryParams struct {
+type GetLocationsRequest struct {
 	// Date as ISO String
 	CreatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=createdAt[$gte]"`
 	// Date as ISO String
@@ -29,10 +29,6 @@ type GetLocationsQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetLocationsRequest struct {
-	QueryParams GetLocationsQueryParams
 }
 
 type GetLocationsResponse struct {

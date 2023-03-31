@@ -14,40 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.OsloginUsersGetLoginProfileRequest{
-        Security: operations.OsloginUsersGetLoginProfileSecurity{
-            Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.OsloginUsersGetLoginProfilePathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.OsloginUsersGetLoginProfileQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            OperatingSystemType: "LINUX",
-            PrettyPrint: false,
-            ProjectID: "error",
-            QuotaUser: "deserunt",
-            SystemID: "suscipit",
-            UploadType: "iure",
-            UploadProtocol: "magnam",
-            View: "SECURITY_KEY",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        Name: "corrupti",
+        OauthToken: "illum",
+        OperatingSystemType: "LINUX",
+        PrettyPrint: false,
+        ProjectID: "error",
+        QuotaUser: "deserunt",
+        SystemID: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
+        View: "SECURITY_KEY",
     }
 
     ctx := context.Background()
-    res, err := s.Users.OsloginUsersGetLoginProfile(ctx, req)
+    res, err := s.Users.OsloginUsersGetLoginProfile(ctx, req, operations.OsloginUsersGetLoginProfileSecurity{
+        Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetcountrymatchRequest{
-        QueryParams: operations.GetcountrymatchQueryParams{
-            Country: "Malta",
-            License: "provident",
-        },
+        Country: "Malta",
+        License: "provident",
     }
 
     ctx := context.Background()

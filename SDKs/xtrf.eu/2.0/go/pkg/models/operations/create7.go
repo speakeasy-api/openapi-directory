@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Create7Request struct {
-	// Project to create
-	Request *shared.QuoteCreateDTO `request:"mediaType=application/json"`
-}
-
 type Create7Response struct {
 	ContentType string
 	// Success

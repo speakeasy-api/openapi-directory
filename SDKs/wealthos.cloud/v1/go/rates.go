@@ -35,18 +35,18 @@ func newRates(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // GetRates - Get Configured Rates
 // Returns rate details of the requested rate type.
-func (s *rates) GetRates(ctx context.Context, request operations.GetRatesRequest) (*operations.GetRatesResponse, error) {
+func (s *rates) GetRates(ctx context.Context, request operations.GetRatesRequest, security operations.GetRatesSecurity) (*operations.GetRatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/rates/v1/{rate_type}/getAll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/rates/v1/{rate_type}/getAll", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

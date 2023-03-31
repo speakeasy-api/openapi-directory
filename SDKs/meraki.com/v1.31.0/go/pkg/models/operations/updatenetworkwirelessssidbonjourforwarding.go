@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidBonjourForwardingPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 type UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum string
 
 const (
@@ -80,8 +75,9 @@ type UpdateNetworkWirelessSsidBonjourForwardingRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidBonjourForwardingRequest struct {
-	PathParams UpdateNetworkWirelessSsidBonjourForwardingPathParams
-	Request    *UpdateNetworkWirelessSsidBonjourForwardingRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidBonjourForwardingRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                 `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                                 `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidBonjourForwardingResponse struct {

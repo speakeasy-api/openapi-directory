@@ -8,19 +8,14 @@ import (
 )
 
 type GetPaymentsProgramOnboardingSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPaymentsProgramOnboardingPathParams struct {
+type GetPaymentsProgramOnboardingRequest struct {
 	// The eBay marketplace ID associated with the onboarding status to retrieve.
 	MarketplaceID string `pathParam:"style=simple,explode=false,name=marketplace_id"`
 	// The type of payments program whose status is returned by the method.
 	PaymentsProgramType string `pathParam:"style=simple,explode=false,name=payments_program_type"`
-}
-
-type GetPaymentsProgramOnboardingRequest struct {
-	PathParams GetPaymentsProgramOnboardingPathParams
-	Security   GetPaymentsProgramOnboardingSecurity
 }
 
 type GetPaymentsProgramOnboardingResponse struct {

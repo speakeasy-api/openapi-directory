@@ -3,30 +3,34 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BookingAvailabilityRequest(
-    headers=operations.BookingAvailabilityHeaders(
-        accept_language="error",
+        api_key="YOUR_API_KEY_HERE",
     ),
-    request=operations.BookingAvailabilityRequestBody(
+)
+
+
+req = operations.BookingAvailabilityRequest(
+    accept_language="en-US",
+    request_body=operations.BookingAvailabilityRequestBody(
         age_bands=[
             operations.BookingAvailabilityRequestBodyAgeBands(
-                band_id=6802467659962633827,
-                count=8090787409856992088,
+                band_id=592845,
+                count=715190,
+            ),
+            operations.BookingAvailabilityRequestBodyAgeBands(
+                band_id=844266,
+                count=602763,
+            ),
+            operations.BookingAvailabilityRequestBodyAgeBands(
+                band_id=857946,
+                count=544883,
             ),
         ],
-        currency_code="nisi",
-        month="officia",
-        product_code="ut",
-        year="repellendus",
+        currency_code="illum",
+        month="vel",
+        product_code="error",
+        year="deserunt",
     ),
 )
     

@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypePointIcebridgeMccordsIrmcr3QueryParams struct {
+type SearchTypePointIcebridgeMccordsIrmcr3Request struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchTypePointIcebridgeMccordsIrmcr3QueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypePointIcebridgeMccordsIrmcr3Request struct {
-	QueryParams SearchTypePointIcebridgeMccordsIrmcr3QueryParams
 }
 
 type SearchTypePointIcebridgeMccordsIrmcr3Response struct {

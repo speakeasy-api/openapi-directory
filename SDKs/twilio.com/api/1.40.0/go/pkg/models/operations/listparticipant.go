@@ -12,19 +12,17 @@ var ListParticipantServerList = []string{
 }
 
 type ListParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListParticipantPathParams struct {
+type ListParticipantRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the conference with the participants to read.
-	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
-}
-
-type ListParticipantQueryParams struct {
 	// Whether to return only participants who are coaching another call. Can be: `true` or `false`.
 	Coaching *bool `queryParam:"style=form,explode=true,name=Coaching"`
+	// The SID of the conference with the participants to read.
+	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
 	// Whether to return only participants that are on hold. Can be: `true` or `false`.
 	Hold *bool `queryParam:"style=form,explode=true,name=Hold"`
 	// Whether to return only participants that are muted. Can be: `true` or `false`.
@@ -35,13 +33,6 @@ type ListParticipantQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListParticipantRequest struct {
-	PathParams  ListParticipantPathParams
-	QueryParams ListParticipantQueryParams
-	Security    ListParticipantSecurity
-	ServerURL   *string
 }
 
 // ListParticipantListParticipantResponse - OK

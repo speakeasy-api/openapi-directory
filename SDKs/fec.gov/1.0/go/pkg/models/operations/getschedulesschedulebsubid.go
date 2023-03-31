@@ -10,10 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetSchedulesScheduleBSubIDPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
 type GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum string
 
 const (
@@ -158,7 +154,7 @@ func (e *GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetSchedulesScheduleBSubIDQueryParams struct {
+type GetSchedulesScheduleBSubIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -246,6 +242,7 @@ type GetSchedulesScheduleBSubIDQueryParams struct {
 	//         - Z national party non-federal account
 	//
 	SpenderCommitteeType []GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum `queryParam:"style=form,explode=true,name=spender_committee_type"`
+	SubID                string                                               `pathParam:"style=simple,explode=false,name=sub_id"`
 	// This is a two-year period that is derived from the year a transaction took place in the
 	// Itemized Schedule A and Schedule B tables. In cases where we have the date of the transaction
 	// (contribution_receipt_date in schedules/schedule_a, disbursement_date in schedules/schedule_b)
@@ -255,11 +252,6 @@ type GetSchedulesScheduleBSubIDQueryParams struct {
 	// specified, the results default to the most current cycle.
 	//
 	TwoYearTransactionPeriod []int `queryParam:"style=form,explode=true,name=two_year_transaction_period"`
-}
-
-type GetSchedulesScheduleBSubIDRequest struct {
-	PathParams  GetSchedulesScheduleBSubIDPathParams
-	QueryParams GetSchedulesScheduleBSubIDQueryParams
 }
 
 type GetSchedulesScheduleBSubIDResponse struct {

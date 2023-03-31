@@ -13,10 +13,11 @@ var ListVideoRoomSummaryServerList = []string{
 }
 
 type ListVideoRoomSummarySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListVideoRoomSummaryQueryParams struct {
+type ListVideoRoomSummaryRequest struct {
 	// Codecs used by participants in the room. Can be `VP8`, `H264`, or `VP9`.
 	Codec []shared.VideoRoomSummaryEnumCodecEnum `queryParam:"style=form,explode=true,name=Codec"`
 	// Only read rooms that started on or after this ISO 8601 timestamp.
@@ -33,12 +34,6 @@ type ListVideoRoomSummaryQueryParams struct {
 	RoomName *string `queryParam:"style=form,explode=true,name=RoomName"`
 	// Type of room. Can be `go`, `peer_to_peer`, `group`, or `group_small`.
 	RoomType []shared.VideoRoomSummaryEnumRoomTypeEnum `queryParam:"style=form,explode=true,name=RoomType"`
-}
-
-type ListVideoRoomSummaryRequest struct {
-	QueryParams ListVideoRoomSummaryQueryParams
-	Security    ListVideoRoomSummarySecurity
-	ServerURL   *string
 }
 
 type ListVideoRoomSummaryListVideoRoomSummaryResponseMeta struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TenancyTenantGroupsUpdatePathParams struct {
+type TenancyTenantGroupsUpdateRequest struct {
+	TenantGroupInput shared.TenantGroupInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this tenant group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TenancyTenantGroupsUpdateRequest struct {
-	PathParams TenancyTenantGroupsUpdatePathParams
-	Request    shared.TenantGroupInput `request:"mediaType=application/json"`
 }
 
 type TenancyTenantGroupsUpdateResponse struct {

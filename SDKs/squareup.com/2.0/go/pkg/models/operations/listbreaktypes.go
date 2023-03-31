@@ -8,10 +8,10 @@ import (
 )
 
 type ListBreakTypesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListBreakTypesQueryParams struct {
+type ListBreakTypesRequest struct {
 	// A pointer to the next page of `BreakType` results to fetch.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// The maximum number of `BreakType` results to return per page. The number can range between 1
@@ -20,11 +20,6 @@ type ListBreakTypesQueryParams struct {
 	// Filter the returned `BreakType` results to only those that are associated with the
 	// specified location.
 	LocationID *string `queryParam:"style=form,explode=true,name=location_id"`
-}
-
-type ListBreakTypesRequest struct {
-	QueryParams ListBreakTypesQueryParams
-	Security    ListBreakTypesSecurity
 }
 
 type ListBreakTypesResponse struct {

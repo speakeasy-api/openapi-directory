@@ -8,17 +8,12 @@ import (
 )
 
 type UsRaceEthnicitySecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsRaceEthnicityPathParams struct {
-	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type UsRaceEthnicityRequest struct {
-	PathParams UsRaceEthnicityPathParams
-	Security   UsRaceEthnicitySecurity
+	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type UsRaceEthnicityResponse struct {

@@ -10,13 +10,8 @@ import (
 )
 
 type MigrationcenterProjectsLocationsImportJobsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type MigrationcenterProjectsLocationsImportJobsListPathParams struct {
-	// Required. Parent value for `ListImportJobsRequest`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MigrationcenterProjectsLocationsImportJobsListViewEnum - Optional. The level of details of each import job. Default value is BASIC.
@@ -46,7 +41,7 @@ func (e *MigrationcenterProjectsLocationsImportJobsListViewEnum) UnmarshalJSON(d
 	}
 }
 
-type MigrationcenterProjectsLocationsImportJobsListQueryParams struct {
+type MigrationcenterProjectsLocationsImportJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type MigrationcenterProjectsLocationsImportJobsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent value for `ListImportJobsRequest`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -79,12 +76,6 @@ type MigrationcenterProjectsLocationsImportJobsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. The level of details of each import job. Default value is BASIC.
 	View *MigrationcenterProjectsLocationsImportJobsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type MigrationcenterProjectsLocationsImportJobsListRequest struct {
-	PathParams  MigrationcenterProjectsLocationsImportJobsListPathParams
-	QueryParams MigrationcenterProjectsLocationsImportJobsListQueryParams
-	Security    MigrationcenterProjectsLocationsImportJobsListSecurity
 }
 
 type MigrationcenterProjectsLocationsImportJobsListResponse struct {

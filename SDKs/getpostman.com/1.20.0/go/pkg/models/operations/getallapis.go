@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAllApIsQueryParams struct {
+type GetAllApIsRequest struct {
 	// Only return APIs that have been created by the user ID represented by the given value.
 	CreatedBy *string `queryParam:"style=form,explode=true,name=createdBy"`
 	// Only return APIs whose description includes the given value. Matching is case insensitive.
@@ -29,10 +29,6 @@ type GetAllApIsQueryParams struct {
 	UpdatedBy *string `queryParam:"style=form,explode=true,name=updatedBy"`
 	// Only return APIs that are inside the given workspace.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetAllApIsRequest struct {
-	QueryParams GetAllApIsQueryParams
 }
 
 type GetAllApIsResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIOembedQueryParams struct {
+type GetAPIOembedRequest struct {
 	// height of the iframe. Defaults to null
 	Maxheight *int64 `queryParam:"style=form,explode=true,name=maxheight"`
 	// width of the iframe. Defaults to 400
 	Maxwidth *int64 `queryParam:"style=form,explode=true,name=maxwidth"`
 	// URL of a status
 	URL *string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GetAPIOembedRequest struct {
-	QueryParams GetAPIOembedQueryParams
 }
 
 type GetAPIOembedResponse struct {

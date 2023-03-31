@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2AccountTiersIDJSONPathParams struct {
+type GetV2AccountTiersIDJSONRequest struct {
 	// Account Tier ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2AccountTiersIDJSONRequest struct {
-	PathParams GetV2AccountTiersIDJSONPathParams
 }
 
 type GetV2AccountTiersIDJSONResponse struct {

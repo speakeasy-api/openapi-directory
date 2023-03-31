@@ -35,14 +35,14 @@ func newPricing(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Retrieves the pricing information based on the dialing prefix.
 func (s *pricing) RetrievePrefixPricing(ctx context.Context, request operations.RetrievePrefixPricingRequest) (*operations.RetrievePrefixPricingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-prefix-pricing/outbound/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-prefix-pricing/outbound/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -107,14 +107,14 @@ func (s *pricing) RetrievePrefixPricing(ctx context.Context, request operations.
 // Retrieves the pricing information for all countries.
 func (s *pricing) RetrievePricingAllCountries(ctx context.Context, request operations.RetrievePricingAllCountriesRequest) (*operations.RetrievePricingAllCountriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-full-pricing/outbound/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-full-pricing/outbound/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -179,14 +179,14 @@ func (s *pricing) RetrievePricingAllCountries(ctx context.Context, request opera
 // Retrieves the pricing information based on the specified country.
 func (s *pricing) RetrievePricingCountry(ctx context.Context, request operations.RetrievePricingCountryRequest) (*operations.RetrievePricingCountryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-pricing/outbound/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-pricing/outbound/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

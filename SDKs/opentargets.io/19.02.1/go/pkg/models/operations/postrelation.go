@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostRelationRequest struct {
-	// An Ensembl gene identifier.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostRelationResponse struct {
 	ContentType string
 	StatusCode  int

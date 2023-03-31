@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsListInstallationReposForAuthenticatedUserPathParams struct {
+type AppsListInstallationReposForAuthenticatedUserRequest struct {
 	// The unique identifier of the installation.
 	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
-}
-
-type AppsListInstallationReposForAuthenticatedUserQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type AppsListInstallationReposForAuthenticatedUserRequest struct {
-	PathParams  AppsListInstallationReposForAuthenticatedUserPathParams
-	QueryParams AppsListInstallationReposForAuthenticatedUserQueryParams
 }
 
 // AppsListInstallationReposForAuthenticatedUser200ApplicationJSON - The access the user has to each repository is included in the hash under the `permissions` key.

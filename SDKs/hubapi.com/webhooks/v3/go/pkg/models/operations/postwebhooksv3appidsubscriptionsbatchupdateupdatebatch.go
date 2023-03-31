@@ -8,17 +8,12 @@ import (
 )
 
 type PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchPathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchRequest struct {
-	PathParams PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchPathParams
-	Request    shared.BatchInputSubscriptionBatchUpdateRequest `request:"mediaType=application/json"`
-	Security   PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchSecurity
+	BatchInputSubscriptionBatchUpdateRequest shared.BatchInputSubscriptionBatchUpdateRequest `request:"mediaType=application/json"`
+	AppID                                    int                                             `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchResponse struct {

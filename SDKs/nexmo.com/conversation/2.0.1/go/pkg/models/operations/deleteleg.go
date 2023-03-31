@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteLegPathParams struct {
+type DeleteLegRequest struct {
 	// Leg ID
 	LegID string `pathParam:"style=simple,explode=false,name=leg_id"`
-}
-
-type DeleteLegRequest struct {
-	PathParams DeleteLegPathParams
 }
 
 type DeleteLegResponse struct {

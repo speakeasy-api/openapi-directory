@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type TradingIndicatorQueryParams struct {
+type TradingIndicatorRequest struct {
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Tokens *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type TradingIndicatorRequest struct {
-	QueryParams TradingIndicatorQueryParams
 }
 
 type TradingIndicatorResponse struct {

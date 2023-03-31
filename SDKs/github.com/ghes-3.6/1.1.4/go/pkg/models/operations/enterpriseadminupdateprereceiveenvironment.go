@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdatePreReceiveEnvironmentPathParams struct {
-	// The unique identifier of the pre-receive environment.
-	PreReceiveEnvironmentID int64 `pathParam:"style=simple,explode=false,name=pre_receive_environment_id"`
-}
-
 type EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody struct {
 	// URL from which to download a tarball of this environment.
 	ImageURL *string `json:"image_url,omitempty"`
@@ -20,8 +15,9 @@ type EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody struct {
 }
 
 type EnterpriseAdminUpdatePreReceiveEnvironmentRequest struct {
-	PathParams EnterpriseAdminUpdatePreReceiveEnvironmentPathParams
-	Request    *EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the pre-receive environment.
+	PreReceiveEnvironmentID int64 `pathParam:"style=simple,explode=false,name=pre_receive_environment_id"`
 }
 
 type EnterpriseAdminUpdatePreReceiveEnvironment422ApplicationJSONErrors struct {

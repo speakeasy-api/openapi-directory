@@ -8,22 +8,19 @@ import (
 )
 
 type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigPathParams struct {
-	// Required. BeyondCorp AppConnector name using the form: `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
-	AppConnector string `pathParam:"style=simple,explode=false,name=appConnector"`
-}
-
-type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigQueryParams struct {
+type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. BeyondCorp AppConnector name using the form: `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+	AppConnector string `pathParam:"style=simple,explode=false,name=appConnector"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,12 +37,6 @@ type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigQueryParams st
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRequest struct {
-	PathParams  BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigPathParams
-	QueryParams BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigQueryParams
-	Security    BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigSecurity
 }
 
 type BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse struct {

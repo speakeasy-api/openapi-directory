@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesSuggestedReadPathParams struct {
+type GamesSuggestedReadRequest struct {
 	// An ID or a slug identifying this Game.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GamesSuggestedReadRequest struct {
-	PathParams GamesSuggestedReadPathParams
 }
 
 type GamesSuggestedReadResponse struct {

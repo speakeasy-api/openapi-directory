@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileActionBeginUploadPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type FileActionBeginUploadRequestBody struct {
 	// Create parent directories if they do not exist?
 	MkdirParents *bool `multipartForm:"name=mkdir_parents"`
@@ -29,8 +24,9 @@ type FileActionBeginUploadRequestBody struct {
 }
 
 type FileActionBeginUploadRequest struct {
-	PathParams FileActionBeginUploadPathParams
-	Request    *FileActionBeginUploadRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *FileActionBeginUploadRequestBody `request:"mediaType=multipart/form-data"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type FileActionBeginUploadResponse struct {

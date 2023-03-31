@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTestHarnessScenarioUsingPOSTPathParams struct {
+type CreateTestHarnessScenarioUsingPOSTRequest struct {
+	// testHarnessScenarioDTO
+	TestHarnessScenarioModel shared.TestHarnessScenarioModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type CreateTestHarnessScenarioUsingPOSTRequest struct {
-	PathParams CreateTestHarnessScenarioUsingPOSTPathParams
-	// testHarnessScenarioDTO
-	Request shared.TestHarnessScenarioModel `request:"mediaType=application/json"`
 }
 
 type CreateTestHarnessScenarioUsingPOSTResponse struct {

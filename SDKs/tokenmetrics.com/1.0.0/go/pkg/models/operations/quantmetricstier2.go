@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type QuantmetricsTier2QueryParams struct {
+type QuantmetricsTier2Request struct {
 	Date   *string `queryParam:"style=form,explode=true,name=date"`
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Tokens *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type QuantmetricsTier2Request struct {
-	QueryParams QuantmetricsTier2QueryParams
 }
 
 type QuantmetricsTier2Response struct {

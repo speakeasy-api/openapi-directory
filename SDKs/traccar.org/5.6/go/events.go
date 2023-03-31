@@ -34,7 +34,7 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 func (s *events) GetEventsID(ctx context.Context, request operations.GetEventsIDRequest) (*operations.GetEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

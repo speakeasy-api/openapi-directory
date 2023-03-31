@@ -4,20 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.UserCtrlGetUserByIDRequest(
-    security=operations.UserCtrlGetUserByIDSecurity(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.UserCtrlGetUserByIDPathParams(
-        account_id="odit",
-        user_id=63.200001,
-    ),
+    account_id="corrupti",
+    user_id=5928.45,
 )
     
-res = s.user_ctrl_get_user_by_id(req)
+res = s.user_ctrl_get_user_by_id(req, operations.UserCtrlGetUserByIDSecurity(
+    bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+))
 
 if res.user_hal_response is not None:
     # handle response

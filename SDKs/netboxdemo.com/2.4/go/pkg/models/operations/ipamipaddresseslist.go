@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamIPAddressesListQueryParams struct {
+type IpamIPAddressesListRequest struct {
 	Address  *string  `queryParam:"style=form,explode=true,name=address"`
 	Device   *string  `queryParam:"style=form,explode=true,name=device"`
 	DeviceID *float64 `queryParam:"style=form,explode=true,name=device_id"`
@@ -31,10 +31,6 @@ type IpamIPAddressesListQueryParams struct {
 	VirtualMachineID *string `queryParam:"style=form,explode=true,name=virtual_machine_id"`
 	Vrf              *string `queryParam:"style=form,explode=true,name=vrf"`
 	VrfID            *string `queryParam:"style=form,explode=true,name=vrf_id"`
-}
-
-type IpamIPAddressesListRequest struct {
-	QueryParams IpamIPAddressesListQueryParams
 }
 
 type IpamIPAddressesList200ApplicationJSON struct {

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ReposDeleteInvitationPathParams struct {
+type ReposDeleteInvitationRequest struct {
 	// The unique identifier of the invitation.
 	InvitationID int64 `pathParam:"style=simple,explode=false,name=invitation_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteInvitationRequest struct {
-	PathParams ReposDeleteInvitationPathParams
 }
 
 type ReposDeleteInvitationResponse struct {

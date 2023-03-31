@@ -34,7 +34,7 @@ func newDscpTaggingOptions(defaultClient, securityClient HTTPClient, serverURL, 
 // Returns the available DSCP tagging options for your traffic shaping rules.
 func (s *dscpTaggingOptions) GetNetworkTrafficShapingDscpTaggingOptions(ctx context.Context, request operations.GetNetworkTrafficShapingDscpTaggingOptionsRequest) (*operations.GetNetworkTrafficShapingDscpTaggingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInvoicesPathParams struct {
+type GetInvoicesRequest struct {
 	OrderID     string `pathParam:"style=simple,explode=false,name=order_id"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetInvoicesRequest struct {
-	PathParams GetInvoicesPathParams
 }
 
 type GetInvoicesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PredictionsQueryParams struct {
+type PredictionsRequest struct {
 	// A calendar year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type PredictionsRequest struct {
-	QueryParams PredictionsQueryParams
 }
 
 type Predictions400ApplicationJSONError struct {

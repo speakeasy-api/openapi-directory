@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest struct {
-	Headers AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders
-	Request shared.AerodromesByDistance `request:"mediaType=application/json"`
+	AerodromesByDistance shared.AerodromesByDistance `request:"mediaType=application/json"`
+	XAPIKey              *string                     `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse struct {

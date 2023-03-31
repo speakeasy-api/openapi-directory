@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationInterfacesListQueryParams struct {
+type VirtualizationInterfacesListRequest struct {
 	Enabled *string `queryParam:"style=form,explode=true,name=enabled"`
 	ID      *string `queryParam:"style=form,explode=true,name=id"`
 	IDGt    *string `queryParam:"style=form,explode=true,name=id__gt"`
@@ -50,10 +50,6 @@ type VirtualizationInterfacesListQueryParams struct {
 	VirtualMachineN   *string `queryParam:"style=form,explode=true,name=virtual_machine__n"`
 	VirtualMachineID  *string `queryParam:"style=form,explode=true,name=virtual_machine_id"`
 	VirtualMachineIDN *string `queryParam:"style=form,explode=true,name=virtual_machine_id__n"`
-}
-
-type VirtualizationInterfacesListRequest struct {
-	QueryParams VirtualizationInterfacesListQueryParams
 }
 
 type VirtualizationInterfacesList200ApplicationJSON struct {

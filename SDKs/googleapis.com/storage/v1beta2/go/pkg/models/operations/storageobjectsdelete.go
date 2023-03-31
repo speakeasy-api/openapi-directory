@@ -8,13 +8,13 @@ import (
 )
 
 type StorageObjectsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsDeleteSecurity struct {
@@ -22,16 +22,11 @@ type StorageObjectsDeleteSecurity struct {
 	Option2 *StorageObjectsDeleteSecurityOption2 `security:"option"`
 }
 
-type StorageObjectsDeletePathParams struct {
-	// Name of the bucket in which the object resides.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// Name of the object.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type StorageObjectsDeleteQueryParams struct {
+type StorageObjectsDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which the object resides.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, permanently deletes a specific revision of this object (as opposed to the latest version, the default).
@@ -48,18 +43,14 @@ type StorageObjectsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageObjectsDeleteRequest struct {
-	PathParams  StorageObjectsDeletePathParams
-	QueryParams StorageObjectsDeleteQueryParams
-	Security    StorageObjectsDeleteSecurity
 }
 
 type StorageObjectsDeleteResponse struct {

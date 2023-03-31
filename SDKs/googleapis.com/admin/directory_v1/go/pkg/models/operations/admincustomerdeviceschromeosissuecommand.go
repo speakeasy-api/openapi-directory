@@ -8,26 +8,24 @@ import (
 )
 
 type AdminCustomerDevicesChromeosIssueCommandSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdminCustomerDevicesChromeosIssueCommandPathParams struct {
-	// Immutable. ID of the Google Workspace account.
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-	// Immutable. ID of Chrome OS Device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type AdminCustomerDevicesChromeosIssueCommandQueryParams struct {
+type AdminCustomerDevicesChromeosIssueCommandRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                 *shared.XgafvEnum                                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DirectoryChromeosdevicesIssueCommandRequest *shared.DirectoryChromeosdevicesIssueCommandRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Immutable. ID of the Google Workspace account.
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
+	// Immutable. ID of Chrome OS Device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,13 +40,6 @@ type AdminCustomerDevicesChromeosIssueCommandQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdminCustomerDevicesChromeosIssueCommandRequest struct {
-	PathParams  AdminCustomerDevicesChromeosIssueCommandPathParams
-	QueryParams AdminCustomerDevicesChromeosIssueCommandQueryParams
-	Request     *shared.DirectoryChromeosdevicesIssueCommandRequest `request:"mediaType=application/json"`
-	Security    AdminCustomerDevicesChromeosIssueCommandSecurity
 }
 
 type AdminCustomerDevicesChromeosIssueCommandResponse struct {

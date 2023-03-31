@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WorkTypeAPIDetailsQueryParams struct {
-	WorkTypeID int `queryParam:"style=form,explode=true,name=workTypeId"`
-}
-
-type WorkTypeAPIDetailsHeaders struct {
+type WorkTypeAPIDetailsRequest struct {
+	WorkTypeID  int    `queryParam:"style=form,explode=true,name=workTypeId"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type WorkTypeAPIDetailsRequest struct {
-	QueryParams WorkTypeAPIDetailsQueryParams
-	Headers     WorkTypeAPIDetailsHeaders
 }
 
 type WorkTypeAPIDetailsResponse struct {

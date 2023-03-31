@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimVirtualChassisPartialUpdatePathParams struct {
+type DcimVirtualChassisPartialUpdateRequest struct {
+	WritableVirtualChassisInput shared.WritableVirtualChassisInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this virtual chassis.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimVirtualChassisPartialUpdateRequest struct {
-	PathParams DcimVirtualChassisPartialUpdatePathParams
-	Request    shared.WritableVirtualChassisInput `request:"mediaType=application/json"`
 }
 
 type DcimVirtualChassisPartialUpdateResponse struct {

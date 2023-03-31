@@ -12,10 +12,11 @@ var ListMediaRecordingServerList = []string{
 }
 
 type ListMediaRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMediaRecordingQueryParams struct {
+type ListMediaRecordingRequest struct {
 	// The sort order of the list by `date_created`. Can be: `asc` (ascending) or `desc` (descending) with `desc` as the default.
 	Order *shared.MediaRecordingEnumOrderEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -30,12 +31,6 @@ type ListMediaRecordingQueryParams struct {
 	SourceSid *string `queryParam:"style=form,explode=true,name=SourceSid"`
 	// Status to filter by, with possible values `processing`, `completed`, `deleted`, or `failed`.
 	Status *shared.MediaRecordingEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListMediaRecordingRequest struct {
-	QueryParams ListMediaRecordingQueryParams
-	Security    ListMediaRecordingSecurity
-	ServerURL   *string
 }
 
 type ListMediaRecordingListMediaRecordingResponseMeta struct {

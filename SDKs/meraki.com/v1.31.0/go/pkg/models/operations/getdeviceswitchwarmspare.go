@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchWarmSparePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceSwitchWarmSpareRequest struct {
-	PathParams GetDeviceSwitchWarmSparePathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceSwitchWarmSpareResponse struct {

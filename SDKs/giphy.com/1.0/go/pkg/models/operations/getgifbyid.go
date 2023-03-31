@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGifByIDPathParams struct {
+type GetGifByIDRequest struct {
 	// Filters results by specified GIF ID.
 	GifID int `pathParam:"style=simple,explode=false,name=gifId"`
-}
-
-type GetGifByIDRequest struct {
-	PathParams GetGifByIDPathParams
 }
 
 type GetGifByID200ApplicationJSON struct {

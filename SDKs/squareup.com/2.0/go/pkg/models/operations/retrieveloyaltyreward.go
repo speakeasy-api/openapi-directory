@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveLoyaltyRewardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveLoyaltyRewardPathParams struct {
-	// The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to retrieve.
-	RewardID string `pathParam:"style=simple,explode=false,name=reward_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveLoyaltyRewardRequest struct {
-	PathParams RetrieveLoyaltyRewardPathParams
-	Security   RetrieveLoyaltyRewardSecurity
+	// The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to retrieve.
+	RewardID string `pathParam:"style=simple,explode=false,name=reward_id"`
 }
 
 type RetrieveLoyaltyRewardResponse struct {

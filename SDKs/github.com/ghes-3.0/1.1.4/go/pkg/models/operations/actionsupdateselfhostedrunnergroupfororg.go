@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsUpdateSelfHostedRunnerGroupForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
 // ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum - Visibility of a runner group. You can select all repositories, select individual repositories, or all private repositories. Can be one of: `all`, `selected`, or `private`.
 type ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum string
 
@@ -52,8 +46,10 @@ type ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody struct {
 }
 
 type ActionsUpdateSelfHostedRunnerGroupForOrgRequest struct {
-	PathParams ActionsUpdateSelfHostedRunnerGroupForOrgPathParams
-	Request    ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                              `pathParam:"style=simple,explode=false,name=org"`
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 type ActionsUpdateSelfHostedRunnerGroupForOrgResponse struct {

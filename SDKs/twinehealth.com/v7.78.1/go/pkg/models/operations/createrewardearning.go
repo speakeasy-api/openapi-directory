@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRewardEarningRequest struct {
-	Request shared.CreateRewardEarningRequestInput `request:"mediaType=application/vnd.api+json"`
-}
-
 type CreateRewardEarningResponse struct {
 	ContentType string
 	// Unauthorized

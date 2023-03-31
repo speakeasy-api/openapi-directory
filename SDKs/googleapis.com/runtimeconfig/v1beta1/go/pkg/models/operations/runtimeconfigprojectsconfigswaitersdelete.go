@@ -8,13 +8,13 @@ import (
 )
 
 type RuntimeconfigProjectsConfigsWaitersDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RuntimeconfigProjectsConfigsWaitersDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RuntimeconfigProjectsConfigsWaitersDeleteSecurity struct {
@@ -22,12 +22,7 @@ type RuntimeconfigProjectsConfigsWaitersDeleteSecurity struct {
 	Option2 *RuntimeconfigProjectsConfigsWaitersDeleteSecurityOption2 `security:"option"`
 }
 
-type RuntimeconfigProjectsConfigsWaitersDeletePathParams struct {
-	// The Waiter resource to delete, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RuntimeconfigProjectsConfigsWaitersDeleteQueryParams struct {
+type RuntimeconfigProjectsConfigsWaitersDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type RuntimeconfigProjectsConfigsWaitersDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The Waiter resource to delete, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,12 +49,6 @@ type RuntimeconfigProjectsConfigsWaitersDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RuntimeconfigProjectsConfigsWaitersDeleteRequest struct {
-	PathParams  RuntimeconfigProjectsConfigsWaitersDeletePathParams
-	QueryParams RuntimeconfigProjectsConfigsWaitersDeleteQueryParams
-	Security    RuntimeconfigProjectsConfigsWaitersDeleteSecurity
 }
 
 type RuntimeconfigProjectsConfigsWaitersDeleteResponse struct {

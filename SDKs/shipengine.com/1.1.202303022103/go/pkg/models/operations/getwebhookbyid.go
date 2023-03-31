@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWebhookByIDPathParams struct {
+type GetWebhookByIDRequest struct {
 	// Webhook ID
 	WebhookID string `pathParam:"style=simple,explode=false,name=webhook_id"`
-}
-
-type GetWebhookByIDRequest struct {
-	PathParams GetWebhookByIDPathParams
 }
 
 type GetWebhookByIDResponse struct {

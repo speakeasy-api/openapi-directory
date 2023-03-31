@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIllustratorsIllustratorPathParams struct {
-	Illustrator string `pathParam:"style=simple,explode=false,name=illustrator"`
-}
-
 type GetIllustratorsIllustratorRequest struct {
-	PathParams GetIllustratorsIllustratorPathParams
+	Illustrator string `pathParam:"style=simple,explode=false,name=illustrator"`
 }
 
 type GetIllustratorsIllustratorResponse struct {

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SetEurekaInfoRequest struct {
-	Request shared.SetEurekaInfoRequest `request:"mediaType=application/json"`
-}
 
 type SetEurekaInfoResponse struct {
 	ContentType                     string

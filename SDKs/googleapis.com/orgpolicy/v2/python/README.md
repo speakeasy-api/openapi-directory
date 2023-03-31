@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/orgpolicy/v2/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,50 +15,44 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest(
-    security=operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.OrgpolicyOrganizationsCustomConstraintsCreatePathParams(
-        parent="veritatis",
-    ),
-    query_params=operations.OrgpolicyOrganizationsCustomConstraintsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="dolor",
-        alt="json",
-        callback="mollitia",
-        fields="rerum",
-        key="rem",
-        oauth_token="recusandae",
-        pretty_print=False,
-        quota_user="reprehenderit",
-        upload_type="dolorem",
-        upload_protocol="omnis",
-    ),
-    request=shared.GoogleCloudOrgpolicyV2CustomConstraintInput(
-        action_type="DENY",
-        condition="omnis",
-        description="itaque",
-        display_name="consequuntur",
+    dollar_xgafv="2",
+    google_cloud_orgpolicy_v2_custom_constraint_input=shared.GoogleCloudOrgpolicyV2CustomConstraintInput(
+        action_type="ALLOW",
+        condition="distinctio",
+        description="quibusdam",
+        display_name="unde",
         method_types=[
             "UPDATE",
+            "DELETE",
             "CREATE",
             "UPDATE",
         ],
-        name="ab",
+        name="deserunt",
         resource_types=[
-            "voluptas",
+            "iure",
+            "magnam",
         ],
     ),
+    access_token="debitis",
+    alt="json",
+    callback="delectus",
+    fields_="tempora",
+    key="suscipit",
+    oauth_token="molestiae",
+    parent="minus",
+    pretty_print=False,
+    quota_user="placeat",
+    upload_type="voluptatum",
+    upload_protocol="iusto",
 )
     
-res = s.organizations.orgpolicy_organizations_custom_constraints_create(req)
+res = s.organizations.orgpolicy_organizations_custom_constraints_create(req, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_orgpolicy_v2_custom_constraint is not None:
     # handle response
@@ -66,23 +60,34 @@ if res.google_cloud_orgpolicy_v2_custom_constraint is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### organizations
 
-* `orgpolicy_organizations_custom_constraints_create` - Creates a CustomConstraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
-* `orgpolicy_organizations_custom_constraints_list` - Retrieves all of the `CustomConstraints` that exist on a particular organization resource.
+* `orgpolicy_organizations_custom_constraints_create` - Creates a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
+* `orgpolicy_organizations_custom_constraints_list` - Retrieves all of the custom constraints that exist on a particular organization resource.
 
 ### projects
 
-* `orgpolicy_projects_constraints_list` - Lists `Constraints` that could be applied on the specified resource.
-* `orgpolicy_projects_policies_create` - Creates a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the policy already exists on the given Cloud resource.
-* `orgpolicy_projects_policies_delete` - Deletes a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or Org Policy does not exist.
-* `orgpolicy_projects_policies_get` - Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
-* `orgpolicy_projects_policies_get_effective_policy` - Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource hierarchy and evaluating conditions. The returned `Policy` will not have an `etag` or `condition` set because it is a computed `Policy` across multiple resources. Subtrees of Resource Manager resource hierarchy with 'under:' prefix will not be expanded.
-* `orgpolicy_projects_policies_list` - Retrieves all of the `Policies` that exist on a particular resource.
-* `orgpolicy_projects_policies_patch` - Updates a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or the policy do not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the policy Note: the supplied policy will perform a full overwrite of all fields.
-
+* `orgpolicy_projects_constraints_list` - Lists constraints that could be applied on the specified resource.
+* `orgpolicy_projects_policies_create` - Creates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the policy already exists on the given Google Cloud resource.
+* `orgpolicy_projects_policies_delete` - Deletes a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or organization policy does not exist.
+* `orgpolicy_projects_policies_get` - Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+* `orgpolicy_projects_policies_get_effective_policy` - Gets the effective policy on a resource. This is the result of merging policies in the resource hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition` set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager resource hierarchy with 'under:' prefix will not be expanded.
+* `orgpolicy_projects_policies_list` - Retrieves all of the policies that exist on a particular resource.
+* `orgpolicy_projects_policies_patch` - Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or the policy do not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the policy Note: the supplied policy will perform a full overwrite of all fields.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

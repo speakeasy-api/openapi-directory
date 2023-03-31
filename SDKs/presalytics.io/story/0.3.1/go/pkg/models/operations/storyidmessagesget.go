@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDMessagesGetPathParams struct {
+type StoryIDMessagesGetRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDMessagesGetRequest struct {
-	PathParams StoryIDMessagesGetPathParams
 }
 
 type StoryIDMessagesGetResponse struct {

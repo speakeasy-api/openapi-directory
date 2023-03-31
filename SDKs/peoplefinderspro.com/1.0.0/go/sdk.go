@@ -150,7 +150,7 @@ func (s *SDK) Search(ctx context.Context, request operations.SearchRequest) (*op
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity/verify_id"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,7 +162,7 @@ func (s *SDK) Search(ctx context.Context, request operations.SearchRequest) (*op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -215,7 +215,7 @@ func (s *SDK) PostAddressAutocomplete(ctx context.Context, request operations.Po
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/address/autocomplete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) PostAddressAutocomplete(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -307,7 +307,7 @@ func (s *SDK) PostContactEnrich(ctx context.Context, request operations.PostCont
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contact/enrich"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -319,7 +319,7 @@ func (s *SDK) PostContactEnrich(ctx context.Context, request operations.PostCont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -372,7 +372,7 @@ func (s *SDK) PostEmailEnrich(ctx context.Context, request operations.PostEmailE
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/email/enrich"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -384,7 +384,7 @@ func (s *SDK) PostEmailEnrich(ctx context.Context, request operations.PostEmailE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -437,7 +437,7 @@ func (s *SDK) PostPhoneEnrich(ctx context.Context, request operations.PostPhoneE
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/enrich"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -449,7 +449,7 @@ func (s *SDK) PostPhoneEnrich(ctx context.Context, request operations.PostPhoneE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 

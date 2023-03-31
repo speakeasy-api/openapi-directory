@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFactOnthisdayBornSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetFactOnthisdayBornQueryParams struct {
+type GetFactOnthisdayBornRequest struct {
 	// Optional day of the month (1- 28/30/31 based on the month). Defaults to current day of the month.
 	Day *string `queryParam:"style=form,explode=true,name=day"`
 	// Optional month (1-12). Defaults to current month
 	Month *string `queryParam:"style=form,explode=true,name=month"`
-}
-
-type GetFactOnthisdayBornRequest struct {
-	QueryParams GetFactOnthisdayBornQueryParams
-	Security    GetFactOnthisdayBornSecurity
 }
 
 type GetFactOnthisdayBornResponse struct {

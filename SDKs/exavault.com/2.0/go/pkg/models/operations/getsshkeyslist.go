@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSSHKeysListQueryParams struct {
+type GetSSHKeysListRequest struct {
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	//  Limits the results by the given number. Cannot be set higher than 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	//  Determines which item to start on for pagination. Use zero (0) to start at the beginning of the list.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	//  Only return results for the given user ID. This is not the username, but the numeric ID of the user.
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetSSHKeysListHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetSSHKeysListRequest struct {
-	QueryParams GetSSHKeysListQueryParams
-	Headers     GetSSHKeysListHeaders
 }
 
 type GetSSHKeysListResponse struct {

@@ -12,32 +12,23 @@ var ListRecordingAddOnResultPayloadServerList = []string{
 }
 
 type ListRecordingAddOnResultPayloadSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRecordingAddOnResultPayloadPathParams struct {
+type ListRecordingAddOnResultPayloadRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the AddOnResult to which the payloads to read belongs.
 	AddOnResultSid string `pathParam:"style=simple,explode=false,name=AddOnResultSid"`
-	// The SID of the recording to which the AddOnResult resource that contains the payloads to read belongs.
-	ReferenceSid string `pathParam:"style=simple,explode=false,name=ReferenceSid"`
-}
-
-type ListRecordingAddOnResultPayloadQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListRecordingAddOnResultPayloadRequest struct {
-	PathParams  ListRecordingAddOnResultPayloadPathParams
-	QueryParams ListRecordingAddOnResultPayloadQueryParams
-	Security    ListRecordingAddOnResultPayloadSecurity
-	ServerURL   *string
+	// The SID of the recording to which the AddOnResult resource that contains the payloads to read belongs.
+	ReferenceSid string `pathParam:"style=simple,explode=false,name=ReferenceSid"`
 }
 
 // ListRecordingAddOnResultPayloadListRecordingAddOnResultPayloadResponse - OK

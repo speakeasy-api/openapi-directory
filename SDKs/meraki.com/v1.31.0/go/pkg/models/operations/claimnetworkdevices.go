@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type ClaimNetworkDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type ClaimNetworkDevicesRequestBody struct {
 	// A list of serials of devices to claim
 	Serials []string `json:"serials"`
 }
 
 type ClaimNetworkDevicesRequest struct {
-	PathParams ClaimNetworkDevicesPathParams
-	Request    ClaimNetworkDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody ClaimNetworkDevicesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                         `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type ClaimNetworkDevicesResponse struct {

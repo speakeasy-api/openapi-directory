@@ -13,11 +13,9 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AccessTokenPutFormRequest{
-        Request: shared.AccessTokenToPut{
-            CardID: 548814,
-            UserID: 592845,
-        },
+    req := shared.AccessTokenToPut{
+        CardID: 548814,
+        UserID: 592845,
     }
 
     ctx := context.Background()

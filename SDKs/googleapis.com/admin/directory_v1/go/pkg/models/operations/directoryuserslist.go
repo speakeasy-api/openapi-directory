@@ -10,18 +10,18 @@ import (
 )
 
 type DirectoryUsersListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersListSecurity struct {
@@ -165,7 +165,7 @@ func (e *DirectoryUsersListViewTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DirectoryUsersListQueryParams struct {
+type DirectoryUsersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -212,11 +212,6 @@ type DirectoryUsersListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Whether to fetch the administrator-only or domain-wide public view of the user. For more information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
 	ViewType *DirectoryUsersListViewTypeEnum `queryParam:"style=form,explode=true,name=viewType"`
-}
-
-type DirectoryUsersListRequest struct {
-	QueryParams DirectoryUsersListQueryParams
-	Security    DirectoryUsersListSecurity
 }
 
 type DirectoryUsersListResponse struct {

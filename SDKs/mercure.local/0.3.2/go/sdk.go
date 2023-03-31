@@ -115,9 +115,9 @@ func (s *SDK) GetWellKnownMercure(ctx context.Context, request operations.GetWel
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -200,7 +200,7 @@ func (s *SDK) GetWellKnownMercureSubscriptions(ctx context.Context) (*operations
 // https://mercure.rocks/spec#subscription-api - Subscription API
 func (s *SDK) GetWellKnownMercureSubscriptionsTopic(ctx context.Context, request operations.GetWellKnownMercureSubscriptionsTopicRequest) (*operations.GetWellKnownMercureSubscriptionsTopicResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +246,7 @@ func (s *SDK) GetWellKnownMercureSubscriptionsTopic(ctx context.Context, request
 // https://mercure.rocks/spec#active-subscriptions - Subscription API
 func (s *SDK) GetWellKnownMercureSubscriptionsTopicSubscriber(ctx context.Context, request operations.GetWellKnownMercureSubscriptionsTopicSubscriberRequest) (*operations.GetWellKnownMercureSubscriptionsTopicSubscriberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}/{subscriber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}/{subscriber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -290,7 +290,7 @@ func (s *SDK) GetWellKnownMercureSubscriptionsTopicSubscriber(ctx context.Contex
 
 // PostWellKnownMercure - Publish an update
 // https://mercure.rocks/spec#publication - Publishing specification
-func (s *SDK) PostWellKnownMercure(ctx context.Context, request operations.PostWellKnownMercureRequest) (*operations.PostWellKnownMercureResponse, error) {
+func (s *SDK) PostWellKnownMercure(ctx context.Context, request operations.PostWellKnownMercureRequestBody) (*operations.PostWellKnownMercureResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/.well-known/mercure"
 

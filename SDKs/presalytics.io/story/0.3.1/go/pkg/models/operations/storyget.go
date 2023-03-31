@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryGetQueryParams struct {
+type StoryGetRequest struct {
 	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
 	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
 	// Indicate whether the returned object should include child relationships
 	IncludeRelationships *bool `queryParam:"style=form,explode=true,name=include_relationships"`
-}
-
-type StoryGetRequest struct {
-	QueryParams StoryGetQueryParams
 }
 
 type StoryGetResponse struct {

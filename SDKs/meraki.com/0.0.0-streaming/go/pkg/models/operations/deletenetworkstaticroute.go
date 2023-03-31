@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkStaticRoutePathParams struct {
+type DeleteNetworkStaticRouteRequest struct {
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
-}
-
-type DeleteNetworkStaticRouteRequest struct {
-	PathParams DeleteNetworkStaticRoutePathParams
 }
 
 type DeleteNetworkStaticRouteResponse struct {

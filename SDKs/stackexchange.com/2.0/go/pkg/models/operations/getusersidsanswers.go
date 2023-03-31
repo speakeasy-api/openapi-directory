@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetUsersIdsAnswersPathParams struct {
-	// Number list (semicolon delimited).
-	Ids string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
 // GetUsersIdsAnswersOrderEnum
 type GetUsersIdsAnswersOrderEnum string
 
@@ -64,7 +59,7 @@ func (e *GetUsersIdsAnswersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersIdsAnswersQueryParams struct {
+type GetUsersIdsAnswersRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -102,6 +97,8 @@ type GetUsersIdsAnswersQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Unix date.
 	Fromdate *int64 `queryParam:"style=form,explode=true,name=fromdate"`
+	// Number list (semicolon delimited).
+	Ids string `pathParam:"style=simple,explode=false,name=ids"`
 	// sort = activity => date
 	// sort = creation => date
 	// sort = votes => number
@@ -121,11 +118,6 @@ type GetUsersIdsAnswersQueryParams struct {
 	Sort *GetUsersIdsAnswersSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetUsersIdsAnswersRequest struct {
-	PathParams  GetUsersIdsAnswersPathParams
-	QueryParams GetUsersIdsAnswersQueryParams
 }
 
 type GetUsersIdsAnswersResponse struct {

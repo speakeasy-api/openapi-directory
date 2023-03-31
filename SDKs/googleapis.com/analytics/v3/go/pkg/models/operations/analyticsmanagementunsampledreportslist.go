@@ -8,18 +8,18 @@ import (
 )
 
 type AnalyticsManagementUnsampledReportsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUnsampledReportsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUnsampledReportsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUnsampledReportsListSecurity struct {
@@ -28,16 +28,9 @@ type AnalyticsManagementUnsampledReportsListSecurity struct {
 	Option3 *AnalyticsManagementUnsampledReportsListSecurityOption3 `security:"option"`
 }
 
-type AnalyticsManagementUnsampledReportsListPathParams struct {
+type AnalyticsManagementUnsampledReportsListRequest struct {
 	// Account ID to retrieve unsampled reports for. Must be a specific account ID, ~all is not supported.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// View (Profile) ID to retrieve unsampled reports for. Must be a specific view (profile) ID, ~all is not supported.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property ID to retrieve unsampled reports for. Must be a specific web property ID, ~all is not supported.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementUnsampledReportsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -50,18 +43,16 @@ type AnalyticsManagementUnsampledReportsListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// View (Profile) ID to retrieve unsampled reports for. Must be a specific view (profile) ID, ~all is not supported.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// An index of the first unsampled report to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementUnsampledReportsListRequest struct {
-	PathParams  AnalyticsManagementUnsampledReportsListPathParams
-	QueryParams AnalyticsManagementUnsampledReportsListQueryParams
-	Security    AnalyticsManagementUnsampledReportsListSecurity
+	// Web property ID to retrieve unsampled reports for. Must be a specific web property ID, ~all is not supported.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementUnsampledReportsListResponse struct {

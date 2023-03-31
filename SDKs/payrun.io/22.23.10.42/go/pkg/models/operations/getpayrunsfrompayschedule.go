@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayRunsFromPaySchedulePathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The pay schedules' unique identifier. E.g SCH001
-	PayScheduleID string `pathParam:"style=simple,explode=false,name=PayScheduleId"`
-}
-
-type GetPayRunsFromPayScheduleHeaders struct {
+type GetPayRunsFromPayScheduleRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetPayRunsFromPayScheduleRequest struct {
-	PathParams GetPayRunsFromPaySchedulePathParams
-	Headers    GetPayRunsFromPayScheduleHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The pay schedules' unique identifier. E.g SCH001
+	PayScheduleID string `pathParam:"style=simple,explode=false,name=PayScheduleId"`
 }
 
 type GetPayRunsFromPayScheduleResponse struct {

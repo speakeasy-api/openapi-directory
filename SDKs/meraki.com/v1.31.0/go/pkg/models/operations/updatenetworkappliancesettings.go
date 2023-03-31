@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceSettingsRequestBodyClientTrackingMethodEnum - Client tracking method of a network
 type UpdateNetworkApplianceSettingsRequestBodyClientTrackingMethodEnum string
 
@@ -81,8 +77,8 @@ type UpdateNetworkApplianceSettingsRequestBody struct {
 }
 
 type UpdateNetworkApplianceSettingsRequest struct {
-	PathParams UpdateNetworkApplianceSettingsPathParams
-	Request    *UpdateNetworkApplianceSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkApplianceSettings200ApplicationJSONClientTrackingMethodEnum - Client tracking method of a network

@@ -33,16 +33,16 @@ func newForms(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // FindFormByFormName - Find form by form name
 // Returns a single form and the full revision history
-func (s *forms) FindFormByFormName(ctx context.Context, request operations.FindFormByFormNameRequest) (*operations.FindFormByFormNameResponse, error) {
+func (s *forms) FindFormByFormName(ctx context.Context, request operations.FindFormByFormNameRequest, security operations.FindFormByFormNameSecurity) (*operations.FindFormByFormNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{form_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/{form_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,7 +108,7 @@ func (s *forms) FindFormByFormName(ctx context.Context, request operations.FindF
 
 // FindForms - Returns all VA Forms and their last revision date
 // Returns an index of all available VA forms. Optionally, pass a query parameter to filter forms by form number or title.
-func (s *forms) FindForms(ctx context.Context, request operations.FindFormsRequest) (*operations.FindFormsResponse, error) {
+func (s *forms) FindForms(ctx context.Context, request operations.FindFormsRequest, security operations.FindFormsSecurity) (*operations.FindFormsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/forms"
 
@@ -117,11 +117,11 @@ func (s *forms) FindForms(ctx context.Context, request operations.FindFormsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

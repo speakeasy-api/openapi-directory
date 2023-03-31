@@ -8,17 +8,12 @@ import (
 )
 
 type GetScheduleTemplateSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetScheduleTemplatePathParams struct {
-	// The ID of the template to retrieve. If you do not know the <strong>schedule_template_id</strong>, refer to the documentation or use the <strong>getScheduleTemplates</strong> method to find the available schedule templates.
-	ScheduleTemplateID string `pathParam:"style=simple,explode=false,name=schedule_template_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetScheduleTemplateRequest struct {
-	PathParams GetScheduleTemplatePathParams
-	Security   GetScheduleTemplateSecurity
+	// The ID of the template to retrieve. If you do not know the <strong>schedule_template_id</strong>, refer to the documentation or use the <strong>getScheduleTemplates</strong> method to find the available schedule templates.
+	ScheduleTemplateID string `pathParam:"style=simple,explode=false,name=schedule_template_id"`
 }
 
 type GetScheduleTemplateResponse struct {

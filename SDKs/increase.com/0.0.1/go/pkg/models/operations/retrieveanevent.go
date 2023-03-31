@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnEventPathParams struct {
-	EventID string `pathParam:"style=simple,explode=false,name=event_id"`
-}
-
 type RetrieveAnEventRequest struct {
-	PathParams RetrieveAnEventPathParams
+	EventID string `pathParam:"style=simple,explode=false,name=event_id"`
 }
 
 type RetrieveAnEventDefaultApplicationJSON13StatusEnum string

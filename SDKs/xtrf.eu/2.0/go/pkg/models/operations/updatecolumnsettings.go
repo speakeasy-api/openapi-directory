@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdateColumnSettingsPathParams struct {
+type UpdateColumnSettingsRequest struct {
+	// Updated column's specific settings.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// column's name
 	ColumnName string `pathParam:"style=simple,explode=false,name=columnName"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateColumnSettingsRequest struct {
-	PathParams UpdateColumnSettingsPathParams
-	// Updated column's specific settings.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateColumnSettingsResponse struct {

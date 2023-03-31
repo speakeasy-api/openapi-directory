@@ -22,10 +22,6 @@ type PostOauthTokenRequestBody struct {
 	Scopes *string
 }
 
-type PostOauthTokenRequest struct {
-	Request []byte `request:"mediaType=application/form-data"`
-}
-
 // PostOauthToken200ApplicationJSON - Store this access_token for later use with auth-required methods. The token should be passed as an HTTP Authorization header when making API calls, with the value Bearer access_token
 type PostOauthToken200ApplicationJSON struct {
 	AccessToken *string `json:"access_token,omitempty"`

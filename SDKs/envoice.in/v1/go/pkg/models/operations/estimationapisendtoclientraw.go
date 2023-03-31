@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type EstimationAPISendToClientRawHeaders struct {
+type EstimationAPISendToClientRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type EstimationAPISendToClientRawRequest struct {
-	Headers EstimationAPISendToClientRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type EstimationAPISendToClientRawResponse struct {

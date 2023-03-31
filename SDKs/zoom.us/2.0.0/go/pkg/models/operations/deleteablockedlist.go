@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteABlockedListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteABlockedListPathParams struct {
-	// Unique Identifier of the blocked list. This can be retrieved from the List Blocked List API.
-	BlockedListID string `pathParam:"style=simple,explode=false,name=blockedListId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteABlockedListRequest struct {
-	PathParams DeleteABlockedListPathParams
-	Security   DeleteABlockedListSecurity
+	// Unique Identifier of the blocked list. This can be retrieved from the List Blocked List API.
+	BlockedListID string `pathParam:"style=simple,explode=false,name=blockedListId"`
 }
 
 type DeleteABlockedListResponse struct {

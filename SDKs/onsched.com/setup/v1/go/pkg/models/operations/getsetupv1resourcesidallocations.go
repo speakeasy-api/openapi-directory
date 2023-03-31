@@ -8,25 +8,17 @@ import (
 	"time"
 )
 
-type GetSetupV1ResourcesIDAllocationsPathParams struct {
-	// id of resource to list allocations for
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ResourcesIDAllocationsQueryParams struct {
+type GetSetupV1ResourcesIDAllocationsRequest struct {
 	// yyyy-mm-dd, filter on/before endDate
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// id of resource to list allocations for
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// yyyy-mm-dd, filter allocations on/after startDate
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type GetSetupV1ResourcesIDAllocationsRequest struct {
-	PathParams  GetSetupV1ResourcesIDAllocationsPathParams
-	QueryParams GetSetupV1ResourcesIDAllocationsQueryParams
 }
 
 type GetSetupV1ResourcesIDAllocationsResponse struct {

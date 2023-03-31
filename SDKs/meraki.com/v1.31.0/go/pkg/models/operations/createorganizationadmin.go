@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationAdminPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // CreateOrganizationAdminRequestBodyAuthenticationMethodEnum - The method of authentication the user will use to sign in to the Meraki dashboard. Can be one of 'Email' or 'Cisco SecureX Sign-On'. The default is Email authentication
 type CreateOrganizationAdminRequestBodyAuthenticationMethodEnum string
 
@@ -126,8 +122,8 @@ type CreateOrganizationAdminRequestBody struct {
 }
 
 type CreateOrganizationAdminRequest struct {
-	PathParams CreateOrganizationAdminPathParams
-	Request    CreateOrganizationAdminRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationAdminRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                             `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationAdminResponse struct {

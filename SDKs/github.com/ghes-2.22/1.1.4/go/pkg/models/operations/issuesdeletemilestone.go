@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesDeleteMilestonePathParams struct {
+type IssuesDeleteMilestoneRequest struct {
 	// milestone_number parameter
 	MilestoneNumber int64  `pathParam:"style=simple,explode=false,name=milestone_number"`
 	Owner           string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo            string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesDeleteMilestoneRequest struct {
-	PathParams IssuesDeleteMilestonePathParams
 }
 
 type IssuesDeleteMilestoneResponse struct {

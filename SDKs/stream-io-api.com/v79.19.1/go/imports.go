@@ -34,7 +34,7 @@ func newImports(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CreateImport - Create import
 // Creates a new import
-func (s *imports) CreateImport(ctx context.Context, request operations.CreateImportRequest) (*operations.CreateImportResponse, error) {
+func (s *imports) CreateImport(ctx context.Context, request shared.CreateImportRequest) (*operations.CreateImportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/imports"
 
@@ -111,7 +111,7 @@ func (s *imports) CreateImport(ctx context.Context, request operations.CreateImp
 
 // CreateImportURL - Create import URL
 // Creates a new import URL
-func (s *imports) CreateImportURL(ctx context.Context, request operations.CreateImportURLRequest) (*operations.CreateImportURLResponse, error) {
+func (s *imports) CreateImportURL(ctx context.Context, request shared.CreateImportURLRequest) (*operations.CreateImportURLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import_urls"
 

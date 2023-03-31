@@ -10,13 +10,8 @@ import (
 )
 
 type BooksMylibraryReadingpositionsSetPositionSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type BooksMylibraryReadingpositionsSetPositionPathParams struct {
-	// ID of volume for which to update the reading position.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksMylibraryReadingpositionsSetPositionActionEnum - Action that caused this reading position to be set.
@@ -58,7 +53,7 @@ func (e *BooksMylibraryReadingpositionsSetPositionActionEnum) UnmarshalJSON(data
 	}
 }
 
-type BooksMylibraryReadingpositionsSetPositionQueryParams struct {
+type BooksMylibraryReadingpositionsSetPositionRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -93,12 +88,8 @@ type BooksMylibraryReadingpositionsSetPositionQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BooksMylibraryReadingpositionsSetPositionRequest struct {
-	PathParams  BooksMylibraryReadingpositionsSetPositionPathParams
-	QueryParams BooksMylibraryReadingpositionsSetPositionQueryParams
-	Security    BooksMylibraryReadingpositionsSetPositionSecurity
+	// ID of volume for which to update the reading position.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 }
 
 type BooksMylibraryReadingpositionsSetPositionResponse struct {

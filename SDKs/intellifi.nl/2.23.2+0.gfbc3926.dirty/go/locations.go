@@ -36,7 +36,7 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AddLocation - Create location
-func (s *locations) AddLocation(ctx context.Context, request operations.AddLocationRequest) (*operations.AddLocationResponse, error) {
+func (s *locations) AddLocation(ctx context.Context, request shared.LocationInput) (*operations.AddLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locations"
 
@@ -92,7 +92,7 @@ func (s *locations) AddLocation(ctx context.Context, request operations.AddLocat
 // DeleteLocation - Delete location
 func (s *locations) DeleteLocation(ctx context.Context, request operations.DeleteLocationRequest) (*operations.DeleteLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *locations) DeleteLocation(ctx context.Context, request operations.Delet
 // GetLocationByID - Get location
 func (s *locations) GetLocationByID(ctx context.Context, request operations.GetLocationByIDRequest) (*operations.GetLocationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +187,7 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -228,9 +228,9 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 // UpdateLocation - Update existing location
 func (s *locations) UpdateLocation(ctx context.Context, request operations.UpdateLocationRequest) (*operations.UpdateLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

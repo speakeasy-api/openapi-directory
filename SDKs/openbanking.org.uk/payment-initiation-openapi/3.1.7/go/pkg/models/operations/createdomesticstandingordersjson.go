@@ -8,12 +8,14 @@ import (
 )
 
 type CreateDomesticStandingOrdersJSONSecurity struct {
-	PSUOAuth2Security shared.SchemePsuoAuth2Security `security:"scheme,type=oauth2"`
+	PSUOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateDomesticStandingOrdersJSONHeaders struct {
+type CreateDomesticStandingOrdersJSONRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// Default
+	OBWriteDomesticStandingOrder3 shared.OBWriteDomesticStandingOrder3 `request:"mediaType=application/json"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -30,13 +32,6 @@ type CreateDomesticStandingOrdersJSONHeaders struct {
 	XIdempotencyKey string `header:"style=simple,explode=false,name=x-idempotency-key"`
 	// A detached JWS signature of the body of the payload.
 	XJwsSignature string `header:"style=simple,explode=false,name=x-jws-signature"`
-}
-
-type CreateDomesticStandingOrdersJSONRequest struct {
-	Headers CreateDomesticStandingOrdersJSONHeaders
-	// Default
-	Request  shared.OBWriteDomesticStandingOrder3 `request:"mediaType=application/json"`
-	Security CreateDomesticStandingOrdersJSONSecurity
 }
 
 type CreateDomesticStandingOrdersJSONResponse struct {

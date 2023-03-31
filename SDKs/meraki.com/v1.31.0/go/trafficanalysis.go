@@ -34,7 +34,7 @@ func newTrafficAnalysis(defaultClient, securityClient HTTPClient, serverURL, lan
 // Return the traffic analysis settings for a network
 func (s *trafficAnalysis) GetNetworkTrafficAnalysis(ctx context.Context, request operations.GetNetworkTrafficAnalysisRequest) (*operations.GetNetworkTrafficAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *trafficAnalysis) GetNetworkTrafficAnalysis(ctx context.Context, request
 // Update the traffic analysis settings for a network
 func (s *trafficAnalysis) UpdateNetworkTrafficAnalysis(ctx context.Context, request operations.UpdateNetworkTrafficAnalysisRequest) (*operations.UpdateNetworkTrafficAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

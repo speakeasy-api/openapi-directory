@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PreprintsCitationListPathParams struct {
+type PreprintsCitationListRequest struct {
 	// The unique identifier of the preprint whose citation you wish to retrieve.
 	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
-}
-
-type PreprintsCitationListRequest struct {
-	PathParams PreprintsCitationListPathParams
 }
 
 // PreprintsCitationListCitationDetailAttributes - The properties of the citation entity.

@@ -8,16 +8,11 @@ import (
 )
 
 type GetAPIV2MetapubProgramInformationBatchBatchIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2MetapubProgramInformationBatchBatchIDPathParams struct {
-	BatchID int64 `pathParam:"style=simple,explode=false,name=batch-id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2MetapubProgramInformationBatchBatchIDRequest struct {
-	PathParams GetAPIV2MetapubProgramInformationBatchBatchIDPathParams
-	Security   GetAPIV2MetapubProgramInformationBatchBatchIDSecurity
+	BatchID int64 `pathParam:"style=simple,explode=false,name=batch-id"`
 }
 
 type GetAPIV2MetapubProgramInformationBatchBatchIDResponse struct {

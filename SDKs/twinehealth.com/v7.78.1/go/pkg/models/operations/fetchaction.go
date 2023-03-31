@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchActionPathParams struct {
+type FetchActionRequest struct {
 	// Action identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchActionRequest struct {
-	PathParams FetchActionPathParams
 }
 
 type FetchActionResponse struct {

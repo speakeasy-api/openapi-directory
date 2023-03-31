@@ -10,13 +10,8 @@ import (
 )
 
 type ConnectorsProjectsLocationsConnectionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ConnectorsProjectsLocationsConnectionsListPathParams struct {
-	// Required. Parent resource of the Connection, of the form: `projects/*/locations/*`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ConnectorsProjectsLocationsConnectionsListViewEnum - Specifies which fields of the Connection are returned in the response. Defaults to `BASIC` view.
@@ -46,7 +41,7 @@ func (e *ConnectorsProjectsLocationsConnectionsListViewEnum) UnmarshalJSON(data 
 	}
 }
 
-type ConnectorsProjectsLocationsConnectionsListQueryParams struct {
+type ConnectorsProjectsLocationsConnectionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type ConnectorsProjectsLocationsConnectionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent resource of the Connection, of the form: `projects/*/locations/*`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -79,12 +76,6 @@ type ConnectorsProjectsLocationsConnectionsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which fields of the Connection are returned in the response. Defaults to `BASIC` view.
 	View *ConnectorsProjectsLocationsConnectionsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ConnectorsProjectsLocationsConnectionsListRequest struct {
-	PathParams  ConnectorsProjectsLocationsConnectionsListPathParams
-	QueryParams ConnectorsProjectsLocationsConnectionsListQueryParams
-	Security    ConnectorsProjectsLocationsConnectionsListSecurity
 }
 
 type ConnectorsProjectsLocationsConnectionsListResponse struct {

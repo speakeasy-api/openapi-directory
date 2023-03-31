@@ -36,7 +36,7 @@ func newPhotos(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeletePhoto - Delete a photo
 func (s *photos) DeletePhoto(ctx context.Context, request operations.DeletePhotoRequest) (*operations.DeletePhotoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/photos/{photo_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/photos/{photo_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *photos) GetPhotosByIds(ctx context.Context, request operations.GetPhoto
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,14 +126,14 @@ func (s *photos) GetPhotosByIds(ctx context.Context, request operations.GetPhoto
 // RotatePhoto - Rotate a photo
 func (s *photos) RotatePhoto(ctx context.Context, request operations.RotatePhotoRequest) (*operations.RotatePhotoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/photos/{photo_id}/rotate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/photos/{photo_id}/rotate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -177,7 +177,7 @@ func (s *photos) RotatePhoto(ctx context.Context, request operations.RotatePhoto
 }
 
 // UploadPhoto - Create a photo
-func (s *photos) UploadPhoto(ctx context.Context, request operations.UploadPhotoRequest) (*operations.UploadPhotoResponse, error) {
+func (s *photos) UploadPhoto(ctx context.Context, request operations.UploadPhotoRequestBody) (*operations.UploadPhotoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/photos"
 

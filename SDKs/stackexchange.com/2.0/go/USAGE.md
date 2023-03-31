@@ -14,15 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAccessTokensAccessTokensRequest{
-        PathParams: operations.GetAccessTokensAccessTokensPathParams{
-            AccessTokens: "corrupti",
-        },
-        QueryParams: operations.GetAccessTokensAccessTokensQueryParams{
-            Callback: "provident",
-            Filter: "distinctio",
-            Page: 844266,
-            Pagesize: 602763,
-        },
+        AccessTokens: "corrupti",
+        Callback: "provident",
+        Filter: "distinctio",
+        Page: 844266,
+        Pagesize: 602763,
     }
 
     ctx := context.Background()

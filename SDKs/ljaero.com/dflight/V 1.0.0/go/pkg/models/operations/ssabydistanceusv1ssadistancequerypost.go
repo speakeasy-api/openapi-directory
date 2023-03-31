@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SsaByDistanceUsV1SsaDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type SsaByDistanceUsV1SsaDistanceQueryPostRequest struct {
-	Headers SsaByDistanceUsV1SsaDistanceQueryPostHeaders
-	Request shared.SSAByDistance `request:"mediaType=application/json"`
+	SSAByDistance shared.SSAByDistance `request:"mediaType=application/json"`
+	XAPIKey       *string              `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type SsaByDistanceUsV1SsaDistanceQueryPostResponse struct {

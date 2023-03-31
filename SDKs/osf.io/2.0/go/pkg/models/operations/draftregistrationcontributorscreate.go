@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type DraftRegistrationContributorsCreatePathParams struct {
-	// The unique identifier of the Draft Registration.
-	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
 // DraftRegistrationContributorsCreateContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.
 type DraftRegistrationContributorsCreateContributorAttributesPermissionEnum string
 
@@ -64,8 +59,9 @@ type DraftRegistrationContributorsCreateContributorInput struct {
 }
 
 type DraftRegistrationContributorsCreateRequest struct {
-	PathParams DraftRegistrationContributorsCreatePathParams
-	Request    DraftRegistrationContributorsCreateContributorInput `request:"mediaType=application/json"`
+	RequestBody DraftRegistrationContributorsCreateContributorInput `request:"mediaType=application/json"`
+	// The unique identifier of the Draft Registration.
+	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
 }
 
 type DraftRegistrationContributorsCreateResponse struct {

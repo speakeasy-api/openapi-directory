@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTileV2LocationsTilesZXYPbfGetPathParams struct {
-	X int64 `pathParam:"style=simple,explode=false,name=x"`
-	Y int64 `pathParam:"style=simple,explode=false,name=y"`
-	Z int64 `pathParam:"style=simple,explode=false,name=z"`
-}
-
-type GetTileV2LocationsTilesZXYPbfGetQueryParams struct {
+type GetTileV2LocationsTilesZXYPbfGetRequest struct {
 	IsAnalysis      *bool       `queryParam:"style=form,explode=true,name=isAnalysis"`
 	IsMobile        *bool       `queryParam:"style=form,explode=true,name=isMobile"`
 	LastUpdatedFrom interface{} `queryParam:"style=form,explode=true,name=lastUpdatedFrom"`
@@ -22,11 +16,9 @@ type GetTileV2LocationsTilesZXYPbfGetQueryParams struct {
 	Location  []int64     `queryParam:"style=form,explode=true,name=location"`
 	Parameter interface{} `queryParam:"style=form,explode=true,name=parameter"`
 	Project   *int64      `queryParam:"style=form,explode=true,name=project"`
-}
-
-type GetTileV2LocationsTilesZXYPbfGetRequest struct {
-	PathParams  GetTileV2LocationsTilesZXYPbfGetPathParams
-	QueryParams GetTileV2LocationsTilesZXYPbfGetQueryParams
+	X         int64       `pathParam:"style=simple,explode=false,name=x"`
+	Y         int64       `pathParam:"style=simple,explode=false,name=y"`
+	Z         int64       `pathParam:"style=simple,explode=false,name=z"`
 }
 
 type GetTileV2LocationsTilesZXYPbfGetResponse struct {

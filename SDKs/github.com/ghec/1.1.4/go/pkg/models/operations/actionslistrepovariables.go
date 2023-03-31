@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListRepoVariablesPathParams struct {
+type ActionsListRepoVariablesRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsListRepoVariablesQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 30).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListRepoVariablesRequest struct {
-	PathParams  ActionsListRepoVariablesPathParams
-	QueryParams ActionsListRepoVariablesQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ActionsListRepoVariables200ApplicationJSON - Response

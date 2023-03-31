@@ -25,212 +25,133 @@ func main() {
     s := sdk.New()
 
     req := operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest{
-        Security: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            DeliveryPipelineID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-            ValidateOnly: false,
-        },
-        Request: &shared.DeliveryPipelineInput{
+        DollarXgafv: "2",
+        DeliveryPipelineInput: &shared.DeliveryPipelineInput{
             Annotations: map[string]string{
-                "debitis": "ipsa",
-                "delectus": "tempora",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
             Condition: &shared.PipelineCondition{
                 PipelineReadyCondition: &shared.PipelineReadyCondition{
                     Status: false,
-                    UpdateTime: "suscipit",
+                    UpdateTime: "vel",
                 },
                 TargetsPresentCondition: &shared.TargetsPresentCondition{
                     MissingTargets: []string{
-                        "minus",
-                        "placeat",
+                        "deserunt",
+                        "suscipit",
+                        "iure",
                     },
                     Status: false,
-                    UpdateTime: "voluptatum",
+                    UpdateTime: "magnam",
                 },
                 TargetsTypeCondition: &shared.TargetsTypeCondition{
-                    ErrorDetails: "iusto",
+                    ErrorDetails: "debitis",
                     Status: false,
                 },
             },
-            Description: "excepturi",
-            Etag: "nisi",
+            Description: "ipsa",
+            Etag: "delectus",
             Labels: map[string]string{
-                "temporibus": "ab",
-                "quis": "veritatis",
-                "deserunt": "perferendis",
-                "ipsam": "repellendus",
+                "suscipit": "molestiae",
+                "minus": "placeat",
             },
-            Name: "sapiente",
+            Name: "voluptatum",
             SerialPipeline: &shared.SerialPipeline{
                 Stages: []shared.Stage{
                     shared.Stage{
                         Profiles: []string{
-                            "at",
+                            "nisi",
+                            "recusandae",
+                            "temporibus",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
                                 CanaryDeployment: &shared.CanaryDeployment{
                                     Percentages: []int{
-                                        978619,
-                                        473608,
-                                        799159,
-                                        800911,
+                                        337396,
                                     },
                                     Verify: false,
                                 },
                                 CustomCanaryDeployment: &shared.CustomCanaryDeployment{
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
-                                            Percentage: 520478,
-                                            PhaseID: "porro",
+                                            Percentage: 648172,
+                                            PhaseID: "perferendis",
                                             Profiles: []string{
-                                                "dicta",
-                                                "nam",
-                                                "officia",
+                                                "repellendus",
+                                                "sapiente",
                                             },
                                             Verify: false,
                                         },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: false,
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: "quo",
+                                            HTTPRoute: "odit",
+                                            Service: "at",
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: "at",
+                                            Service: "maiores",
+                                        },
+                                    },
+                                },
+                            },
+                            Standard: &shared.Standard{
+                                Verify: false,
+                            },
+                        },
+                        TargetID: "molestiae",
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "quod",
+                            "esse",
+                            "totam",
+                            "porro",
+                        },
+                        Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        118274,
+                                        720633,
+                                        639921,
+                                    },
+                                    Verify: false,
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
-                                            Percentage: 582020,
-                                            PhaseID: "fugit",
+                                            Percentage: 143353,
+                                            PhaseID: "deleniti",
                                             Profiles: []string{
-                                                "hic",
                                                 "optio",
                                                 "totam",
-                                            },
-                                            Verify: false,
-                                        },
-                                    },
-                                },
-                                RuntimeConfig: &shared.RuntimeConfig{
-                                    CloudRun: &shared.CloudRunConfig{
-                                        AutomaticTrafficControl: false,
-                                    },
-                                    Kubernetes: &shared.KubernetesConfig{
-                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "beatae",
-                                            HTTPRoute: "commodi",
-                                            Service: "molestiae",
-                                        },
-                                        ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "modi",
-                                            Service: "qui",
-                                        },
-                                    },
-                                },
-                            },
-                            Standard: &shared.Standard{
-                                Verify: false,
-                            },
-                        },
-                        TargetID: "impedit",
-                    },
-                    shared.Stage{
-                        Profiles: []string{
-                            "esse",
-                            "ipsum",
-                            "excepturi",
-                        },
-                        Strategy: &shared.Strategy{
-                            Canary: &shared.Canary{
-                                CanaryDeployment: &shared.CanaryDeployment{
-                                    Percentages: []int{
-                                        18789,
-                                    },
-                                    Verify: false,
-                                },
-                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
-                                    PhaseConfigs: []shared.PhaseConfig{
-                                        shared.PhaseConfig{
-                                            Percentage: 617636,
-                                            PhaseID: "sed",
-                                            Profiles: []string{
-                                                "dolor",
-                                                "natus",
-                                                "laboriosam",
+                                                "beatae",
+                                                "commodi",
                                             },
                                             Verify: false,
                                         },
                                         shared.PhaseConfig{
-                                            Percentage: 943749,
-                                            PhaseID: "saepe",
+                                            Percentage: 473600,
+                                            PhaseID: "modi",
                                             Profiles: []string{
-                                                "in",
-                                                "corporis",
-                                                "iste",
+                                                "impedit",
                                             },
                                             Verify: false,
                                         },
-                                    },
-                                },
-                                RuntimeConfig: &shared.RuntimeConfig{
-                                    CloudRun: &shared.CloudRunConfig{
-                                        AutomaticTrafficControl: false,
-                                    },
-                                    Kubernetes: &shared.KubernetesConfig{
-                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "iure",
-                                            HTTPRoute: "saepe",
-                                            Service: "quidem",
-                                        },
-                                        ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "architecto",
-                                            Service: "ipsa",
-                                        },
-                                    },
-                                },
-                            },
-                            Standard: &shared.Standard{
-                                Verify: false,
-                            },
-                        },
-                        TargetID: "reiciendis",
-                    },
-                    shared.Stage{
-                        Profiles: []string{
-                            "mollitia",
-                            "laborum",
-                            "dolores",
-                        },
-                        Strategy: &shared.Strategy{
-                            Canary: &shared.Canary{
-                                CanaryDeployment: &shared.CanaryDeployment{
-                                    Percentages: []int{
-                                        358152,
-                                    },
-                                    Verify: false,
-                                },
-                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
-                                    PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
-                                            Percentage: 750686,
-                                            PhaseID: "enim",
+                                            Percentage: 736918,
+                                            PhaseID: "esse",
                                             Profiles: []string{
-                                                "nemo",
-                                                "minima",
                                                 "excepturi",
                                             },
                                             Verify: false,
@@ -243,13 +164,13 @@ func main() {
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "accusantium",
-                                            HTTPRoute: "iure",
-                                            Service: "culpa",
+                                            Deployment: "aspernatur",
+                                            HTTPRoute: "perferendis",
+                                            Service: "ad",
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "doloribus",
-                                            Service: "sapiente",
+                                            Deployment: "natus",
+                                            Service: "sed",
                                         },
                                     },
                                 },
@@ -258,79 +179,33 @@ func main() {
                                 Verify: false,
                             },
                         },
-                        TargetID: "architecto",
-                    },
-                    shared.Stage{
-                        Profiles: []string{
-                            "dolorem",
-                            "culpa",
-                            "consequuntur",
-                        },
-                        Strategy: &shared.Strategy{
-                            Canary: &shared.Canary{
-                                CanaryDeployment: &shared.CanaryDeployment{
-                                    Percentages: []int{
-                                        653108,
-                                        581850,
-                                        253291,
-                                        414369,
-                                    },
-                                    Verify: false,
-                                },
-                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
-                                    PhaseConfigs: []shared.PhaseConfig{
-                                        shared.PhaseConfig{
-                                            Percentage: 474697,
-                                            PhaseID: "velit",
-                                            Profiles: []string{
-                                                "quia",
-                                                "quis",
-                                                "vitae",
-                                            },
-                                            Verify: false,
-                                        },
-                                        shared.PhaseConfig{
-                                            Percentage: 674752,
-                                            PhaseID: "animi",
-                                            Profiles: []string{
-                                                "odit",
-                                                "quo",
-                                            },
-                                            Verify: false,
-                                        },
-                                    },
-                                },
-                                RuntimeConfig: &shared.RuntimeConfig{
-                                    CloudRun: &shared.CloudRunConfig{
-                                        AutomaticTrafficControl: false,
-                                    },
-                                    Kubernetes: &shared.KubernetesConfig{
-                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "sequi",
-                                            HTTPRoute: "tenetur",
-                                            Service: "ipsam",
-                                        },
-                                        ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "id",
-                                            Service: "possimus",
-                                        },
-                                    },
-                                },
-                            },
-                            Standard: &shared.Standard{
-                                Verify: false,
-                            },
-                        },
-                        TargetID: "aut",
+                        TargetID: "iste",
                     },
                 },
             },
             Suspended: false,
         },
+        AccessToken: "dolor",
+        Alt: "media",
+        Callback: "laboriosam",
+        DeliveryPipelineID: "hic",
+        Fields: "saepe",
+        Key: "fuga",
+        OauthToken: "in",
+        Parent: "corporis",
+        PrettyPrint: false,
+        QuotaUser: "iste",
+        RequestID: "iure",
+        UploadType: "saepe",
+        UploadProtocol: "quidem",
+        ValidateOnly: false,
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx, req)
+    res, err := s.Projects.ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx, req, operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -343,7 +218,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -374,4 +249,15 @@ func main() {
 * `ClouddeployProjectsLocationsTargetsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteAttributesComputedIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteAttributesComputedIDRequest struct {
-	PathParams DeleteAttributesComputedIDPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAttributesComputedIDResponse struct {

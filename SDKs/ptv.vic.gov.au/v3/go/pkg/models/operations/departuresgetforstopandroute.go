@@ -10,48 +10,6 @@ import (
 	"time"
 )
 
-// DeparturesGetForStopAndRouteRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type DeparturesGetForStopAndRouteRouteTypeEnum string
-
-const (
-	DeparturesGetForStopAndRouteRouteTypeEnumZero  DeparturesGetForStopAndRouteRouteTypeEnum = "0"
-	DeparturesGetForStopAndRouteRouteTypeEnumOne   DeparturesGetForStopAndRouteRouteTypeEnum = "1"
-	DeparturesGetForStopAndRouteRouteTypeEnumTwo   DeparturesGetForStopAndRouteRouteTypeEnum = "2"
-	DeparturesGetForStopAndRouteRouteTypeEnumThree DeparturesGetForStopAndRouteRouteTypeEnum = "3"
-	DeparturesGetForStopAndRouteRouteTypeEnumFour  DeparturesGetForStopAndRouteRouteTypeEnum = "4"
-)
-
-func (e *DeparturesGetForStopAndRouteRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "0":
-		fallthrough
-	case "1":
-		fallthrough
-	case "2":
-		fallthrough
-	case "3":
-		fallthrough
-	case "4":
-		*e = DeparturesGetForStopAndRouteRouteTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for DeparturesGetForStopAndRouteRouteTypeEnum: %s", s)
-	}
-}
-
-type DeparturesGetForStopAndRoutePathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes
-	RouteID string `pathParam:"style=simple,explode=false,name=route_id"`
-	// Number identifying transport mode; values returned via RouteTypes API
-	RouteType DeparturesGetForStopAndRouteRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-	// Identifier of stop; values returned by Stops API
-	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
-}
-
 type DeparturesGetForStopAndRouteExpandEnum string
 
 const (
@@ -96,7 +54,40 @@ func (e *DeparturesGetForStopAndRouteExpandEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DeparturesGetForStopAndRouteQueryParams struct {
+// DeparturesGetForStopAndRouteRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
+type DeparturesGetForStopAndRouteRouteTypeEnum string
+
+const (
+	DeparturesGetForStopAndRouteRouteTypeEnumZero  DeparturesGetForStopAndRouteRouteTypeEnum = "0"
+	DeparturesGetForStopAndRouteRouteTypeEnumOne   DeparturesGetForStopAndRouteRouteTypeEnum = "1"
+	DeparturesGetForStopAndRouteRouteTypeEnumTwo   DeparturesGetForStopAndRouteRouteTypeEnum = "2"
+	DeparturesGetForStopAndRouteRouteTypeEnumThree DeparturesGetForStopAndRouteRouteTypeEnum = "3"
+	DeparturesGetForStopAndRouteRouteTypeEnumFour  DeparturesGetForStopAndRouteRouteTypeEnum = "4"
+)
+
+func (e *DeparturesGetForStopAndRouteRouteTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "0":
+		fallthrough
+	case "1":
+		fallthrough
+	case "2":
+		fallthrough
+	case "3":
+		fallthrough
+	case "4":
+		*e = DeparturesGetForStopAndRouteRouteTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for DeparturesGetForStopAndRouteRouteTypeEnum: %s", s)
+	}
+}
+
+type DeparturesGetForStopAndRouteRequest struct {
 	// Filter by the date and time of the request (ISO 8601 UTC format) (default = current date and time)
 	DateUtc *time.Time `queryParam:"style=form,explode=true,name=date_utc"`
 	// Your developer id
@@ -116,15 +107,16 @@ type DeparturesGetForStopAndRouteQueryParams struct {
 	LookBackwards *bool `queryParam:"style=form,explode=true,name=look_backwards"`
 	// Maximum number of results returned
 	MaxResults *int `queryParam:"style=form,explode=true,name=max_results"`
+	// Identifier of route; values returned by Routes API - v3/routes
+	RouteID string `pathParam:"style=simple,explode=false,name=route_id"`
+	// Number identifying transport mode; values returned via RouteTypes API
+	RouteType DeparturesGetForStopAndRouteRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
+	// Identifier of stop; values returned by Stops API
+	StopID int `pathParam:"style=simple,explode=false,name=stop_id"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DeparturesGetForStopAndRouteRequest struct {
-	PathParams  DeparturesGetForStopAndRoutePathParams
-	QueryParams DeparturesGetForStopAndRouteQueryParams
 }
 
 type DeparturesGetForStopAndRouteResponse struct {

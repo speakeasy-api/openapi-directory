@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1CompaniesEmailTemplatesMasterRequest struct {
-	Request *shared.MasterTemplateSettingsInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1CompaniesEmailTemplatesMasterResponse struct {
 	ContentType string
 	// Success

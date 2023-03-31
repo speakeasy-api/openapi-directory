@@ -252,7 +252,7 @@ func (s *SDK) GetDocumentation(ctx context.Context) (*operations.GetDocumentatio
 
 // PostGraphQL - Perform a GraphQL Query
 // Performs a GraphQL Query
-func (s *SDK) PostGraphQL(ctx context.Context, request operations.PostGraphQLRequest) (*operations.PostGraphQLResponse, error) {
+func (s *SDK) PostGraphQL(ctx context.Context, request shared.GraphQLRequest) (*operations.PostGraphQLResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/graphql"
 

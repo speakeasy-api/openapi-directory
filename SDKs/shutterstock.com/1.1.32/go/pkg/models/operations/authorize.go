@@ -53,7 +53,7 @@ func (e *AuthorizeResponseTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AuthorizeQueryParams struct {
+type AuthorizeRequest struct {
 	// Client ID (Consumer Key) of your application
 	ClientID string `queryParam:"style=form,explode=true,name=client_id"`
 	// User type to be authorized (usually 'customer')
@@ -66,10 +66,6 @@ type AuthorizeQueryParams struct {
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
 	// Unique value used by the calling app to verify the request
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type AuthorizeRequest struct {
-	QueryParams AuthorizeQueryParams
 }
 
 type AuthorizeResponse struct {

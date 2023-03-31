@@ -99,10 +99,6 @@ func (u PostPortfolioAnalysisVolatilityRequestBody) MarshalJSON() ([]byte, error
 	return nil, nil
 }
 
-type PostPortfolioAnalysisVolatilityRequest struct {
-	Request PostPortfolioAnalysisVolatilityRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisVolatility200ApplicationJSONPortfolios struct {
 	// The volatility of the portfolio
 	PortfolioVolatility float64 `json:"portfolioVolatility"`

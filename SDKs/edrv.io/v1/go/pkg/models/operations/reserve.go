@@ -14,10 +14,6 @@ type ReserveRequestBody struct {
 	Token         *string `json:"token,omitempty"`
 }
 
-type ReserveRequest struct {
-	Request ReserveRequestBody `request:"mediaType=application/json"`
-}
-
 // Reserve201ApplicationJSON - A successful response
 type Reserve201ApplicationJSON struct {
 	Command map[string]interface{} `json:"command,omitempty"`

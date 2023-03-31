@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV1ListsIDAccountsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1ListsIDAccountsPathParams struct {
-	// ID of the list in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1ListsIDAccountsRequestBody struct {
@@ -22,9 +17,9 @@ type PostAPIV1ListsIDAccountsRequestBody struct {
 }
 
 type PostAPIV1ListsIDAccountsRequest struct {
-	PathParams PostAPIV1ListsIDAccountsPathParams
-	Request    *PostAPIV1ListsIDAccountsRequestBody `request:"mediaType=application/json"`
-	Security   PostAPIV1ListsIDAccountsSecurity
+	RequestBody *PostAPIV1ListsIDAccountsRequestBody `request:"mediaType=application/json"`
+	// ID of the list in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1ListsIDAccountsResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1PushSubscriptionSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1PushSubscriptionRequestBody struct {
 	Data         string `json:"data"`
 	Subscription string `json:"subscription"`
-}
-
-type PostAPIV1PushSubscriptionRequest struct {
-	Request  *PostAPIV1PushSubscriptionRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV1PushSubscriptionSecurity
 }
 
 type PostAPIV1PushSubscriptionResponse struct {

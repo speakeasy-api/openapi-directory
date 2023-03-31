@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ReposDeleteAnEnvironmentPathParams struct {
+type ReposDeleteAnEnvironmentRequest struct {
 	// The name of the environment.
 	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteAnEnvironmentRequest struct {
-	PathParams ReposDeleteAnEnvironmentPathParams
 }
 
 type ReposDeleteAnEnvironmentResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListPathParams struct {
-	// Required. The location for which the time series should be fetched. Format: locations/{location_id} where location_id is an unobfuscated listing id.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListQueryParams struct {
+type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -43,6 +38,8 @@ type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListQuer
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A token indicating the next paginated result to be returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The location for which the time series should be fetched. Format: locations/{location_id} where location_id is an unobfuscated listing id.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -51,11 +48,6 @@ type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListQuer
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest struct {
-	PathParams  BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListPathParams
-	QueryParams BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListQueryParams
 }
 
 type BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse struct {

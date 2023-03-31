@@ -12,18 +12,13 @@ var FetchAccountConfigServerList = []string{
 }
 
 type FetchAccountConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAccountConfigPathParams struct {
-	// The config key; up to 100 characters.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAccountConfigRequest struct {
-	PathParams FetchAccountConfigPathParams
-	Security   FetchAccountConfigSecurity
-	ServerURL  *string
+	// The config key; up to 100 characters.
+	Key string `pathParam:"style=simple,explode=false,name=Key"`
 }
 
 type FetchAccountConfigResponse struct {

@@ -12,18 +12,13 @@ var FetchBrandRegistrationsServerList = []string{
 }
 
 type FetchBrandRegistrationsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchBrandRegistrationsPathParams struct {
-	// The SID of the Brand Registration resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchBrandRegistrationsRequest struct {
-	PathParams FetchBrandRegistrationsPathParams
-	Security   FetchBrandRegistrationsSecurity
-	ServerURL  *string
+	// The SID of the Brand Registration resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchBrandRegistrationsResponse struct {

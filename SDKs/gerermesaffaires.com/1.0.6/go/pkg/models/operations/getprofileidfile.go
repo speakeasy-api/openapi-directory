@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetProfileIDFileQueryParams struct {
+type GetProfileIDFileRequest struct {
 	// to get a contract (if not signed error 404 + html contract)
 	Contract *string `queryParam:"style=form,explode=true,name=Contract"`
-}
-
-type GetProfileIDFileRequest struct {
-	QueryParams GetProfileIDFileQueryParams
 }
 
 type GetProfileIDFile200MultipartFormDataBirth struct {

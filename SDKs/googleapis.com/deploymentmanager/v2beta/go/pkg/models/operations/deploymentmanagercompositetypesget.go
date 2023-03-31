@@ -8,23 +8,23 @@ import (
 )
 
 type DeploymentmanagerCompositeTypesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerCompositeTypesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerCompositeTypesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerCompositeTypesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerCompositeTypesGetSecurity struct {
@@ -34,14 +34,7 @@ type DeploymentmanagerCompositeTypesGetSecurity struct {
 	Option4 *DeploymentmanagerCompositeTypesGetSecurityOption4 `security:"option"`
 }
 
-type DeploymentmanagerCompositeTypesGetPathParams struct {
-	// The name of the composite type for this request.
-	CompositeType string `pathParam:"style=simple,explode=false,name=compositeType"`
-	// The project ID for this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DeploymentmanagerCompositeTypesGetQueryParams struct {
+type DeploymentmanagerCompositeTypesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,6 +43,8 @@ type DeploymentmanagerCompositeTypesGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The name of the composite type for this request.
+	CompositeType string `pathParam:"style=simple,explode=false,name=compositeType"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -58,18 +53,14 @@ type DeploymentmanagerCompositeTypesGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DeploymentmanagerCompositeTypesGetRequest struct {
-	PathParams  DeploymentmanagerCompositeTypesGetPathParams
-	QueryParams DeploymentmanagerCompositeTypesGetQueryParams
-	Security    DeploymentmanagerCompositeTypesGetSecurity
 }
 
 type DeploymentmanagerCompositeTypesGetResponse struct {

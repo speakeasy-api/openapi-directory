@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostMessageRequest struct {
-	Request *shared.PamMessage `request:"mediaType=application/json"`
-}
-
 type PostMessageResponse struct {
 	ContentType string
 	// Missing Parameter

@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveCardSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveCardPathParams struct {
-	// Unique ID for the desired Card.
-	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveCardRequest struct {
-	PathParams RetrieveCardPathParams
-	Security   RetrieveCardSecurity
+	// Unique ID for the desired Card.
+	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
 type RetrieveCardResponse struct {

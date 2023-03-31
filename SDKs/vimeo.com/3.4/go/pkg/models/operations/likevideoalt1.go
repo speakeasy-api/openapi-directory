@@ -8,17 +8,12 @@ import (
 )
 
 type LikeVideoAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type LikeVideoAlt1PathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LikeVideoAlt1Request struct {
-	PathParams LikeVideoAlt1PathParams
-	Security   LikeVideoAlt1Security
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type LikeVideoAlt1Response struct {

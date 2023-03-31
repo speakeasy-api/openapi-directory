@@ -4,50 +4,42 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.NotebooksProjectsLocationsEnvironmentsCreateRequest(
-    security=operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams(
-        parent="corrupti",
-    ),
-    query_params=operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="sit",
-        alt="json",
-        callback="possimus",
-        environment_id="illo",
-        fields="perferendis",
-        key="vitae",
-        oauth_token="aperiam",
-        pretty_print=False,
-        quota_user="sit",
-        upload_type="et",
-        upload_protocol="dolorum",
-    ),
-    request=shared.EnvironmentInput(
+    dollar_xgafv="2",
+    environment_input=shared.EnvironmentInput(
         container_image=shared.ContainerImage(
-            repository="et",
-            tag="velit",
+            repository="provident",
+            tag="distinctio",
         ),
-        description="cupiditate",
-        display_name="ex",
-        post_startup_script="sequi",
+        description="quibusdam",
+        display_name="unde",
+        post_startup_script="nulla",
         vm_image=shared.VMImage(
-            image_family="laborum",
-            image_name="reprehenderit",
-            project="modi",
+            image_family="corrupti",
+            image_name="illum",
+            project="vel",
         ),
     ),
+    access_token="error",
+    alt="media",
+    callback="suscipit",
+    environment_id="iure",
+    fields_="magnam",
+    key="debitis",
+    oauth_token="ipsa",
+    parent="delectus",
+    pretty_print=False,
+    quota_user="tempora",
+    upload_type="suscipit",
+    upload_protocol="molestiae",
 )
     
-res = s.projects.notebooks_projects_locations_environments_create(req)
+res = s.projects.notebooks_projects_locations_environments_create(req, operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

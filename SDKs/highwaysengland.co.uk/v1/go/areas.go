@@ -34,7 +34,7 @@ func newAreas(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AreasGet - Returns list of areas
 func (s *areas) AreasGet(ctx context.Context, request operations.AreasGetRequest) (*operations.AreasGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/areas", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v{version}/areas", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *areas) AreasGet(ctx context.Context, request operations.AreasGetRequest
 // GetVVersionAreasAreaIds - Returns details of selected area
 func (s *areas) GetVVersionAreasAreaIds(ctx context.Context, request operations.GetVVersionAreasAreaIdsRequest) (*operations.GetVVersionAreasAreaIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/areas/{area_Ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v{version}/areas/{area_Ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

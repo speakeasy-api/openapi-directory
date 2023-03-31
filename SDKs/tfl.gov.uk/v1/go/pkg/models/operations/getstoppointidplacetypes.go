@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStopPointIDPlaceTypesPathParams struct {
+type GetStopPointIDPlaceTypesRequest struct {
 	// A naptan id for a stop point (station naptan code e.g. 940GZZLUASL).
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetStopPointIDPlaceTypesQueryParams struct {
 	// A comcomma-separated value representing the place types.
 	PlaceTypes []string `queryParam:"style=form,explode=true,name=placeTypes"`
-}
-
-type GetStopPointIDPlaceTypesRequest struct {
-	PathParams  GetStopPointIDPlaceTypesPathParams
-	QueryParams GetStopPointIDPlaceTypesQueryParams
 }
 
 type GetStopPointIDPlaceTypesResponse struct {

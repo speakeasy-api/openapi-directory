@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTranslationCachePathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetTranslationCacheQueryParams struct {
+type GetTranslationCacheRequest struct {
 	// Flatten cache results and ignore document keys
 	Flatten *bool `queryParam:"style=form,explode=true,name=flatten"`
-}
-
-type GetTranslationCacheRequest struct {
-	PathParams  GetTranslationCachePathParams
-	QueryParams GetTranslationCacheQueryParams
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetTranslationCacheResponse struct {

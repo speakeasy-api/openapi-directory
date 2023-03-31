@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPickupByIDPathParams struct {
-	PickupID string `pathParam:"style=simple,explode=false,name=pickup_id"`
-}
-
 type GetPickupByIDRequest struct {
-	PathParams GetPickupByIDPathParams
+	PickupID string `pathParam:"style=simple,explode=false,name=pickup_id"`
 }
 
 type GetPickupByIDResponse struct {

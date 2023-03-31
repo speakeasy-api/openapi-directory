@@ -8,10 +8,10 @@ import (
 )
 
 type DeleteScoreFromCollectionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteScoreFromCollectionPathParams struct {
+type DeleteScoreFromCollectionRequest struct {
 	// Unique identifier of the collection.
 	// The following aliases are supported:
 	// - `root`: The root collection of the account
@@ -22,18 +22,9 @@ type DeleteScoreFromCollectionPathParams struct {
 	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
 	//
 	Score string `pathParam:"style=simple,explode=false,name=score"`
-}
-
-type DeleteScoreFromCollectionQueryParams struct {
 	// This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
 	//
 	SharingKey *string `queryParam:"style=form,explode=true,name=sharingKey"`
-}
-
-type DeleteScoreFromCollectionRequest struct {
-	PathParams  DeleteScoreFromCollectionPathParams
-	QueryParams DeleteScoreFromCollectionQueryParams
-	Security    DeleteScoreFromCollectionSecurity
 }
 
 type DeleteScoreFromCollectionResponse struct {

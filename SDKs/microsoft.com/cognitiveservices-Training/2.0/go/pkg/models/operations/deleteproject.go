@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type DeleteProjectPathParams struct {
+type DeleteProjectRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteProjectHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type DeleteProjectRequest struct {
-	PathParams DeleteProjectPathParams
-	Headers    DeleteProjectHeaders
 }
 
 type DeleteProjectResponse struct {

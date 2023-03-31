@@ -6,25 +6,13 @@ import (
 	"net/http"
 )
 
-type DeletePredictionPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeletePredictionQueryParams struct {
-	// The prediction ids. Limited to 64.
-	Ids []string `queryParam:"style=form,explode=false,name=ids"`
-}
-
-type DeletePredictionHeaders struct {
+type DeletePredictionRequest struct {
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type DeletePredictionRequest struct {
-	PathParams  DeletePredictionPathParams
-	QueryParams DeletePredictionQueryParams
-	Headers     DeletePredictionHeaders
+	// The prediction ids. Limited to 64.
+	Ids []string `queryParam:"style=form,explode=false,name=ids"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type DeletePredictionResponse struct {

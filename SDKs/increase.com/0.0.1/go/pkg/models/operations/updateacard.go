@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateACardPathParams struct {
-	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
-}
-
 type UpdateACardRequest struct {
-	PathParams UpdateACardPathParams
-	Request    shared.UpdateACardParameters `request:"mediaType=application/json"`
+	CardID                string                       `pathParam:"style=simple,explode=false,name=card_id"`
+	UpdateACardParameters shared.UpdateACardParameters `request:"mediaType=application/json"`
 }
 
 type UpdateACardDefaultApplicationJSON13StatusEnum string

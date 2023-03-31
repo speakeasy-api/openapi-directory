@@ -7,20 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETEventTriggersQueryParams struct {
-	// The status of the event trigger.
-	Active *string `queryParam:"style=form,explode=true,name=active"`
-	// The Zuora object that trigger condition is defined upon. Should be specified in the pattern: ^[A-Z][\\w\\-]*$
-	BaseObject *string `queryParam:"style=form,explode=true,name=baseObject"`
-	// The event type name. Should be specified in the pattern: ^[A-Za-z]{1,}[\w\-]*$
-	EventTypeName *string `queryParam:"style=form,explode=true,name=eventTypeName"`
-	// The maximum number of data records to be returned. Default to 10 if absent.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-	// The first index of the query result. Default to 0 if absent, and the minimum is 0.
-	Start *int64 `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GETEventTriggersHeaders struct {
+type GETEventTriggersRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -32,11 +19,16 @@ type GETEventTriggersHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETEventTriggersRequest struct {
-	QueryParams GETEventTriggersQueryParams
-	Headers     GETEventTriggersHeaders
+	// The status of the event trigger.
+	Active *string `queryParam:"style=form,explode=true,name=active"`
+	// The Zuora object that trigger condition is defined upon. Should be specified in the pattern: ^[A-Z][\\w\\-]*$
+	BaseObject *string `queryParam:"style=form,explode=true,name=baseObject"`
+	// The event type name. Should be specified in the pattern: ^[A-Za-z]{1,}[\w\-]*$
+	EventTypeName *string `queryParam:"style=form,explode=true,name=eventTypeName"`
+	// The maximum number of data records to be returned. Default to 10 if absent.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// The first index of the query result. Default to 0 if absent, and the minimum is 0.
+	Start *int64 `queryParam:"style=form,explode=true,name=start"`
 }
 
 // GETEventTriggers200ApplicationJSON - OK

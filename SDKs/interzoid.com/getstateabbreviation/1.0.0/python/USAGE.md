@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetstateabbreviationRequest(
-    query_params=operations.GetstateabbreviationQueryParams(
-        license="voluptas",
-        state="sed",
-    ),
+    license="corrupti",
+    state="provident",
 )
     
 res = s.state_data_standardization.getstateabbreviation(req)

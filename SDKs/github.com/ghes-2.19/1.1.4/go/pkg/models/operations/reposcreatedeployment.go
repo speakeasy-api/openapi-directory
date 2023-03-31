@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateDeploymentPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateDeploymentRequestBodyPayloadType string
 
 const (
@@ -106,8 +101,9 @@ type ReposCreateDeploymentRequestBody struct {
 }
 
 type ReposCreateDeploymentRequest struct {
-	PathParams ReposCreateDeploymentPathParams
-	Request    ReposCreateDeploymentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateDeploymentRequestBody `request:"mediaType=application/json"`
+	Owner       string                           `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                           `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposCreateDeployment202ApplicationJSON - Merged branch response

@@ -33,16 +33,16 @@ func newChannelsPrivateChannelMembers(defaultClient, securityClient HTTPClient, 
 
 // DeleteChannelPrivacyUser - Restrict a user from viewing a private channel
 // This method prevents a single user from being able to access the specified private channel.
-func (s *channelsPrivateChannelMembers) DeleteChannelPrivacyUser(ctx context.Context, request operations.DeleteChannelPrivacyUserRequest) (*operations.DeleteChannelPrivacyUserResponse, error) {
+func (s *channelsPrivateChannelMembers) DeleteChannelPrivacyUser(ctx context.Context, request operations.DeleteChannelPrivacyUserRequest, security operations.DeleteChannelPrivacyUserSecurity) (*operations.DeleteChannelPrivacyUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,14 +85,14 @@ func (s *channelsPrivateChannelMembers) DeleteChannelPrivacyUser(ctx context.Con
 // This method gets all the users who have access to the specified private channel.
 func (s *channelsPrivateChannelMembers) GetChannelPrivacyUsers(ctx context.Context, request operations.GetChannelPrivacyUsersRequest) (*operations.GetChannelPrivacyUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -146,16 +146,16 @@ func (s *channelsPrivateChannelMembers) GetChannelPrivacyUsers(ctx context.Conte
 
 // SetChannelPrivacyUser - Permit a specific user to view a private channel
 // This method gives a single user access to the specified private channel.
-func (s *channelsPrivateChannelMembers) SetChannelPrivacyUser(ctx context.Context, request operations.SetChannelPrivacyUserRequest) (*operations.SetChannelPrivacyUserResponse, error) {
+func (s *channelsPrivateChannelMembers) SetChannelPrivacyUser(ctx context.Context, request operations.SetChannelPrivacyUserRequest, security operations.SetChannelPrivacyUserSecurity) (*operations.SetChannelPrivacyUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -196,11 +196,11 @@ func (s *channelsPrivateChannelMembers) SetChannelPrivacyUser(ctx context.Contex
 
 // SetChannelPrivacyUsers - Permit a list of users to view a private channel
 // This method gives multiple users access to the specified private channel.
-func (s *channelsPrivateChannelMembers) SetChannelPrivacyUsers(ctx context.Context, request operations.SetChannelPrivacyUsersRequest) (*operations.SetChannelPrivacyUsersResponse, error) {
+func (s *channelsPrivateChannelMembers) SetChannelPrivacyUsers(ctx context.Context, request operations.SetChannelPrivacyUsersRequest, security operations.SetChannelPrivacyUsersSecurity) (*operations.SetChannelPrivacyUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/privacy/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -215,7 +215,7 @@ func (s *channelsPrivateChannelMembers) SetChannelPrivacyUsers(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

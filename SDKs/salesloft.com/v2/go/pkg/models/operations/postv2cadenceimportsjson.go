@@ -15,10 +15,6 @@ type PostV2CadenceImportsJSONRequestBody struct {
 	SharingSettings map[string]interface{} `form:"name=sharing_settings,json"`
 }
 
-type PostV2CadenceImportsJSONRequest struct {
-	Request *PostV2CadenceImportsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2CadenceImportsJSONResponse struct {
 	Body        []byte
 	ContentType string

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05SessionsRawRequest struct {
-	Request []byte `request:"mediaType=application/xml"`
-}
-
 type PostV05SessionsRawResponse struct {
 	Body        []byte
 	ContentType string

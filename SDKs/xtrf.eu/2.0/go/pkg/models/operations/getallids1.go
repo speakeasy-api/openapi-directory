@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAllIds1QueryParams struct {
+type GetAllIds1Request struct {
 	// only persons modified since this timestamp
 	UpdatedSince *int64 `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type GetAllIds1Request struct {
-	QueryParams GetAllIds1QueryParams
 }
 
 type GetAllIds1Response struct {

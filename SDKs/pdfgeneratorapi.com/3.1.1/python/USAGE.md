@@ -3,26 +3,22 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        json_web_token_auth=shared.SchemeJSONWebTokenAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
+        json_web_token_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
 )
-    
+
+
 req = operations.MergeTemplateRequest(
-    query_params=operations.MergeTemplateQueryParams(
-        format="zip",
-        name="neque",
-        output="base64",
-        template_id=8124352784887915603,
+    data=shared.Data(
+        id=12312,
+        name="Sample Data",
     ),
-    request=shared.Data(
-        id=7762150201625547768,
-        name="possimus",
-    ),
+    format="pdf",
+    name="My document",
+    output="base64",
+    template_id=19375,
 )
     
 res = s.documents.merge_template(req)

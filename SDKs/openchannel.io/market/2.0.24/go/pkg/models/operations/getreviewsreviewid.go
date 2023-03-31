@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetReviewsReviewIDPathParams struct {
+type GetReviewsReviewIDRequest struct {
 	// The id of the review to be located
 	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
-}
-
-type GetReviewsReviewIDRequest struct {
-	PathParams GetReviewsReviewIDPathParams
 }
 
 type GetReviewsReviewIDResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiaryControllerGetAppointmentTypesPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerGetAppointmentTypesQueryParams struct {
+type DiaryControllerGetAppointmentTypesRequest struct {
 	// The maximum number of items to return (up to 1000 per request)
 	Count int `queryParam:"style=form,explode=true,name=count"`
 	// The index of the first item to return
 	Offset int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type DiaryControllerGetAppointmentTypesRequest struct {
-	PathParams  DiaryControllerGetAppointmentTypesPathParams
-	QueryParams DiaryControllerGetAppointmentTypesQueryParams
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerGetAppointmentTypesResponse struct {

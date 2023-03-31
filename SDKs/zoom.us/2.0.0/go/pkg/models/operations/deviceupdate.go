@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type DeviceUpdatePathParams struct {
-	// The device ID.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
 // DeviceUpdateTheH323SIPDeviceObjectEncryptionEnum - Device encryption:<br>`auto` - auto.<br>`yes` - yes.<br>`no` - no.
 type DeviceUpdateTheH323SIPDeviceObjectEncryptionEnum string
 
@@ -77,8 +72,9 @@ type DeviceUpdateTheH323SIPDeviceObject struct {
 }
 
 type DeviceUpdateRequest struct {
-	PathParams DeviceUpdatePathParams
-	Request    DeviceUpdateTheH323SIPDeviceObject `request:"mediaType=application/json"`
+	RequestBody DeviceUpdateTheH323SIPDeviceObject `request:"mediaType=application/json"`
+	// The device ID.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type DeviceUpdateResponse struct {

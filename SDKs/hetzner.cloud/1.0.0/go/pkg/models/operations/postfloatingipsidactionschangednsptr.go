@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostFloatingIpsIDActionsChangeDNSPtrPathParams struct {
-	// ID of the Floating IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest - Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP.
 //
 // The target hostname is set by passing `dns_ptr`.
@@ -24,12 +19,13 @@ type PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest struct {
 }
 
 type PostFloatingIpsIDActionsChangeDNSPtrRequest struct {
-	PathParams PostFloatingIpsIDActionsChangeDNSPtrPathParams
 	// Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP.
 	//
 	// The target hostname is set by passing `dns_ptr`.
 	//
-	Request *PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest `request:"mediaType=application/json"`
+	RequestBody *PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest `request:"mediaType=application/json"`
+	// ID of the Floating IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionError - Error message for the Action if error occurred, otherwise null

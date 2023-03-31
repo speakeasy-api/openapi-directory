@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MailASandboxCheckTransferPathParams struct {
-	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
-}
-
 type MailASandboxCheckTransferRequest struct {
-	PathParams MailASandboxCheckTransferPathParams
+	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
 type MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum string

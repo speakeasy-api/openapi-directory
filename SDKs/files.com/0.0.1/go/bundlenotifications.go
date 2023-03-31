@@ -37,7 +37,7 @@ func newBundleNotifications(defaultClient, securityClient HTTPClient, serverURL,
 // Delete Bundle Notification
 func (s *bundleNotifications) DeleteBundleNotificationsID(ctx context.Context, request operations.DeleteBundleNotificationsIDRequest) (*operations.DeleteBundleNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *bundleNotifications) GetBundleNotifications(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *bundleNotifications) GetBundleNotifications(ctx context.Context, reques
 // Show Bundle Notification
 func (s *bundleNotifications) GetBundleNotificationsID(ctx context.Context, request operations.GetBundleNotificationsIDRequest) (*operations.GetBundleNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *bundleNotifications) GetBundleNotificationsID(ctx context.Context, requ
 // Update Bundle Notification
 func (s *bundleNotifications) PatchBundleNotificationsID(ctx context.Context, request operations.PatchBundleNotificationsIDRequest) (*operations.PatchBundleNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *bundleNotifications) PatchBundleNotificationsID(ctx context.Context, re
 
 // PostBundleNotifications - Create Bundle Notification
 // Create Bundle Notification
-func (s *bundleNotifications) PostBundleNotifications(ctx context.Context, request operations.PostBundleNotificationsRequest) (*operations.PostBundleNotificationsResponse, error) {
+func (s *bundleNotifications) PostBundleNotifications(ctx context.Context, request operations.PostBundleNotificationsRequestBody) (*operations.PostBundleNotificationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bundle_notifications"
 

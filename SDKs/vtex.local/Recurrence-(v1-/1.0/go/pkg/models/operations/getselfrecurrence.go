@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetselfrecurrenceHeaders struct {
+type GetselfrecurrenceRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetselfrecurrenceRequest struct {
-	Headers GetselfrecurrenceHeaders
 }
 
 type GetselfrecurrenceResponse struct {

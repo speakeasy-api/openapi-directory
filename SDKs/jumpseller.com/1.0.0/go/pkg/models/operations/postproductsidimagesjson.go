@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProductsIDImagesJSONPathParams struct {
-	// Id of the Product
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostProductsIDImagesJSONQueryParams struct {
+type PostProductsIDImagesJSONRequest struct {
+	// Product Image parameters.
+	ImageEdit shared.ImageEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Product
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostProductsIDImagesJSONRequest struct {
-	PathParams  PostProductsIDImagesJSONPathParams
-	QueryParams PostProductsIDImagesJSONQueryParams
-	// Product Image parameters.
-	Request shared.ImageEdit `request:"mediaType=application/json"`
 }
 
 type PostProductsIDImagesJSONResponse struct {

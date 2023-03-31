@@ -8,17 +8,13 @@ import (
 )
 
 type ServiceDeleteTargetSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ServiceDeleteTargetPathParams struct {
-	// The service id
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ServiceDeleteTargetRequest struct {
-	PathParams ServiceDeleteTargetPathParams
-	Security   ServiceDeleteTargetSecurity
+	// The service id
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type ServiceDeleteTargetResponse struct {

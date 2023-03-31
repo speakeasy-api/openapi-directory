@@ -8,11 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetZRAccountSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetZRAccountSettingsSettingTypeEnum - The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br>
@@ -41,16 +40,11 @@ func (e *GetZRAccountSettingsSettingTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetZRAccountSettingsQueryParams struct {
+type GetZRAccountSettingsRequest struct {
 	// The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br>
 	// `meeting`: Meeting settings of the Zoom Rooms Account. <br>
 	// `signage`: View digital signage settings of the Zoom Rooms Account.
 	SettingType GetZRAccountSettingsSettingTypeEnum `queryParam:"style=form,explode=true,name=setting_type"`
-}
-
-type GetZRAccountSettingsRequest struct {
-	QueryParams GetZRAccountSettingsQueryParams
-	Security    GetZRAccountSettingsSecurity
 }
 
 // GetZRAccountSettings200ApplicationXML2ClientAlert - The Client Alert Settings section includes alerts that display on the TV screen of the Zoom Room. Disable these settings if you have deliberately disconnected one or more peripheral devices or have never enabled them.

@@ -12,8 +12,8 @@ import (
 )
 
 type SendMessageSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // SendMessageRequestBodyViberFileChannelEnum - The channel to send to. You must provide `viber_service` in this field
@@ -2525,12 +2525,6 @@ func (u SendMessageRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type SendMessageRequest struct {
-	// Send a Message.
-	Request  SendMessageRequestBody `request:"mediaType=application/json"`
-	Security SendMessageSecurity
 }
 
 type SendMessage422ApplicationJSONType string

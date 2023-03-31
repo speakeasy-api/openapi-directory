@@ -70,11 +70,6 @@ type PostPrimaryIpsCreatePrimaryIPRequest struct {
 	Type PostPrimaryIpsCreatePrimaryIPRequestTypeEnum `json:"type"`
 }
 
-type PostPrimaryIpsRequest struct {
-	// The `type` argument is required while `datacenter` and `assignee_id` are mutually exclusive.
-	Request *PostPrimaryIpsCreatePrimaryIPRequest `request:"mediaType=application/json"`
-}
-
 // PostPrimaryIpsCreatePrimaryIPResponseActionError - Error message for the Action if error occurred, otherwise null
 type PostPrimaryIpsCreatePrimaryIPResponseActionError struct {
 	// Fixed machine readable code

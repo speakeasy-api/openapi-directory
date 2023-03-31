@@ -14,12 +14,8 @@ var CreateCallServerList = []string{
 }
 
 type CreateCallSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCallPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateCallCreateCallRequestAsyncAmdStatusCallbackMethodEnum - The HTTP method we should use when calling the `async_amd_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.
@@ -276,10 +272,9 @@ type CreateCallCreateCallRequest struct {
 }
 
 type CreateCallRequest struct {
-	PathParams CreateCallPathParams
-	Request    *CreateCallCreateCallRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateCallSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                       `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateCallCreateCallRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateCallResponse struct {

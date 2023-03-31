@@ -34,16 +34,16 @@ func newContinuous(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetContinuousCheck - Lists history associated with a Check. It can be paginated
-func (s *continuous) GetContinuousCheck(ctx context.Context, request operations.GetContinuousCheckRequest) (*operations.GetContinuousCheckResponse, error) {
+func (s *continuous) GetContinuousCheck(ctx context.Context, request operations.GetContinuousCheckRequest, security operations.GetContinuousCheckSecurity) (*operations.GetContinuousCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,11 +122,11 @@ func (s *continuous) ListContinuousChecks(ctx context.Context) (*operations.List
 }
 
 // UpdateContinuousCheck - Updates a continuous check
-func (s *continuous) UpdateContinuousCheck(ctx context.Context, request operations.UpdateContinuousCheckRequest) (*operations.UpdateContinuousCheckResponse, error) {
+func (s *continuous) UpdateContinuousCheck(ctx context.Context, request operations.UpdateContinuousCheckRequest, security operations.UpdateContinuousCheckSecurity) (*operations.UpdateContinuousCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateContinuousCheckInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -141,7 +141,7 @@ func (s *continuous) UpdateContinuousCheck(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *continuous) UpdateContinuousCheck(ctx context.Context, request operatio
 }
 
 // CreateContinuousCheck - Creates a continuous check that will run background checks recurrently according to the frequency provided.
-func (s *continuous) CreateContinuousCheck(ctx context.Context, request operations.CreateContinuousCheckRequest) (*operations.CreateContinuousCheckResponse, error) {
+func (s *continuous) CreateContinuousCheck(ctx context.Context, request shared.CreateContinuousCheckInput, security operations.CreateContinuousCheckSecurity) (*operations.CreateContinuousCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/continuous-checks"
 
@@ -195,7 +195,7 @@ func (s *continuous) CreateContinuousCheck(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *continuous) CreateContinuousCheck(ctx context.Context, request operatio
 }
 
 // GetV1ContinuousChecksContinuousCheckIDHistory - Lists background check logs. It can be paginated
-func (s *continuous) GetV1ContinuousChecksContinuousCheckIDHistory(ctx context.Context, request operations.GetV1ContinuousChecksContinuousCheckIDHistoryRequest) (*operations.GetV1ContinuousChecksContinuousCheckIDHistoryResponse, error) {
+func (s *continuous) GetV1ContinuousChecksContinuousCheckIDHistory(ctx context.Context, request operations.GetV1ContinuousChecksContinuousCheckIDHistoryRequest, security operations.GetV1ContinuousChecksContinuousCheckIDHistorySecurity) (*operations.GetV1ContinuousChecksContinuousCheckIDHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

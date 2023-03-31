@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetInfoPathParams struct {
+type GetInfoRequest struct {
 	// Agent to show the information of the object
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object
 	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GetInfoRequest struct {
-	PathParams GetInfoPathParams
 }
 
 type GetInfoResponse struct {

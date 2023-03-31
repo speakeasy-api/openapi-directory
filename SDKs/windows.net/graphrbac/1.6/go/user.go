@@ -34,9 +34,9 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // UsersCreate - Create a new user.
 func (s *user) UsersCreate(ctx context.Context, request operations.UsersCreateRequest) (*operations.UsersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *user) UsersCreate(ctx context.Context, request operations.UsersCreateRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,14 +116,14 @@ func (s *user) UsersCreate(ctx context.Context, request operations.UsersCreateRe
 // UsersDelete - Delete a user.
 func (s *user) UsersDelete(ctx context.Context, request operations.UsersDeleteRequest) (*operations.UsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{upnOrObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{upnOrObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,14 +172,14 @@ func (s *user) UsersDelete(ctx context.Context, request operations.UsersDeleteRe
 // UsersGet - Gets user information from the directory.
 func (s *user) UsersGet(ctx context.Context, request operations.UsersGetRequest) (*operations.UsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{upnOrObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{upnOrObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,9 +244,9 @@ func (s *user) UsersGet(ctx context.Context, request operations.UsersGetRequest)
 // UsersGetMemberGroups - Gets a collection that contains the object IDs of the groups of which the user is a member.
 func (s *user) UsersGetMemberGroups(ctx context.Context, request operations.UsersGetMemberGroupsRequest) (*operations.UsersGetMemberGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{objectId}/getMemberGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{objectId}/getMemberGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,7 +261,7 @@ func (s *user) UsersGetMemberGroups(ctx context.Context, request operations.User
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -326,14 +326,14 @@ func (s *user) UsersGetMemberGroups(ctx context.Context, request operations.User
 // UsersList - Gets list of users for the current tenant.
 func (s *user) UsersList(ctx context.Context, request operations.UsersListRequest) (*operations.UsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -398,9 +398,9 @@ func (s *user) UsersList(ctx context.Context, request operations.UsersListReques
 // UsersUpdate - Updates a user.
 func (s *user) UsersUpdate(ctx context.Context, request operations.UsersUpdateRequest) (*operations.UsersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{upnOrObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/users/{upnOrObjectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -415,7 +415,7 @@ func (s *user) UsersUpdate(ctx context.Context, request operations.UsersUpdateRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

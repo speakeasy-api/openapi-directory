@@ -8,21 +8,16 @@ import (
 )
 
 type GetAliasesSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
-type GetAliasesQueryParams struct {
+type GetAliasesRequest struct {
 	// An ID returned by a previous query to continue aliases retrieval (see lastId in response)
 	ContinueFrom *string `queryParam:"style=form,explode=true,name=continueFrom"`
 	// The domain name to get the aliases for (string without `http/https` or `/`)
 	DomainName *string `queryParam:"style=form,explode=true,name=domainName"`
 	// Number of results to return per request
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetAliasesRequest struct {
-	QueryParams GetAliasesQueryParams
-	Security    GetAliasesSecurity
 }
 
 type GetAliasesResponse struct {

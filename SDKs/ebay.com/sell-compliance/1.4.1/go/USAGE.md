@@ -14,25 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.GetListingViolationsRequest{
-        Security: operations.GetListingViolationsSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetListingViolationsQueryParams{
-            ComplianceType: "corrupti",
-            Filter: "provident",
-            Limit: "distinctio",
-            ListingID: "quibusdam",
-            Offset: "unde",
-        },
-        Headers: operations.GetListingViolationsHeaders{
-            XEbayCMarketplaceID: "nulla",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        ComplianceType: "provident",
+        Filter: "distinctio",
+        Limit: "quibusdam",
+        ListingID: "unde",
+        Offset: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.ListingViolation.GetListingViolations(ctx, req)
+    res, err := s.ListingViolation.GetListingViolations(ctx, req, operations.GetListingViolationsSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

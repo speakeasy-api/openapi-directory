@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPathParams struct {
-	// Shopper whose details are to be retrieved
-	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
-}
-
 type GetIncludesEnum string
 
 const (
@@ -34,14 +29,11 @@ func (e *GetIncludesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// Additional properties to be included in the response shopper object
 	Includes []GetIncludesEnum `queryParam:"style=form,explode=false,name=includes"`
-}
-
-type GetRequest struct {
-	PathParams  GetPathParams
-	QueryParams GetQueryParams
+	// Shopper whose details are to be retrieved
+	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
 }
 
 type GetResponse struct {

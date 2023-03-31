@@ -8,21 +8,16 @@ import (
 )
 
 type SuggestKeywordsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SuggestKeywordsPathParams struct {
+type SuggestKeywordsRequest struct {
+	// The required data to retrieve suggested keywords.
+	TargetedKeywordRequest *shared.TargetedKeywordRequest `request:"mediaType=application/json"`
 	// The ID of the ad group for which the keyword suggestions will be provided.
 	AdGroupID string `pathParam:"style=simple,explode=false,name=ad_group_id"`
 	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
 	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
-}
-
-type SuggestKeywordsRequest struct {
-	PathParams SuggestKeywordsPathParams
-	// The required data to retrieve suggested keywords.
-	Request  *shared.TargetedKeywordRequest `request:"mediaType=application/json"`
-	Security SuggestKeywordsSecurity
 }
 
 type SuggestKeywordsResponse struct {

@@ -8,10 +8,10 @@ import (
 )
 
 type ListVmsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ListVmsQueryParams struct {
+type ListVmsRequest struct {
 	// cursor from previous response
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// end time for query in epoch seconds
@@ -20,11 +20,6 @@ type ListVmsQueryParams struct {
 	Size *float64 `queryParam:"style=form,explode=true,name=size"`
 	// start time for query in epoch seconds
 	StartTime *float64 `queryParam:"style=form,explode=true,name=start_time"`
-}
-
-type ListVmsRequest struct {
-	QueryParams ListVmsQueryParams
-	Security    ListVmsSecurity
 }
 
 type ListVmsResponse struct {

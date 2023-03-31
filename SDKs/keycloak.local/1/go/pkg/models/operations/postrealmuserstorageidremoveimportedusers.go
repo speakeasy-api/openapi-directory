@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PostRealmUserStorageIDRemoveImportedUsersPathParams struct {
+type PostRealmUserStorageIDRemoveImportedUsersRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmUserStorageIDRemoveImportedUsersRequest struct {
-	PathParams PostRealmUserStorageIDRemoveImportedUsersPathParams
 }
 
 type PostRealmUserStorageIDRemoveImportedUsersResponse struct {

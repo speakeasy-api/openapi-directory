@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnpublishSnapshotUsingPOSTPathParams struct {
+type UnpublishSnapshotUsingPOSTRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// snapshotId
 	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
-}
-
-type UnpublishSnapshotUsingPOSTRequest struct {
-	PathParams UnpublishSnapshotUsingPOSTPathParams
 }
 
 type UnpublishSnapshotUsingPOSTResponse struct {

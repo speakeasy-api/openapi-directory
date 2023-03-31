@@ -12,22 +12,17 @@ var FetchMemberServerList = []string{
 }
 
 type FetchMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchMemberPathParams struct {
+type FetchMemberRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Member resource to fetch belongs to. This value can be the Channel resource's `sid` or `unique_name`.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the Member resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Member resource to fetch. This value can be either the Member's `sid` or its `identity` value.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchMemberRequest struct {
-	PathParams FetchMemberPathParams
-	Security   FetchMemberSecurity
-	ServerURL  *string
 }
 
 type FetchMemberResponse struct {

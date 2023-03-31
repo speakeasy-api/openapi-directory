@@ -10,7 +10,7 @@ import (
 )
 
 type SearchCatalogSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SearchCatalogAssetTypeEnum string
@@ -72,7 +72,7 @@ func (e *SearchCatalogSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchCatalogQueryParams struct {
+type SearchCatalogRequest struct {
 	// Filter by asset type
 	AssetType []SearchCatalogAssetTypeEnum `queryParam:"style=form,explode=true,name=asset_type"`
 	// Filter by collection id
@@ -85,11 +85,6 @@ type SearchCatalogQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Sort by
 	Sort *SearchCatalogSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchCatalogRequest struct {
-	QueryParams SearchCatalogQueryParams
-	Security    SearchCatalogSecurity
 }
 
 type SearchCatalogResponse struct {

@@ -1,0 +1,152 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/datastore/v1beta3/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.DatastoreProjectsAllocateIdsRequest(
+    dollar_xgafv="2",
+    allocate_ids_request=shared.AllocateIdsRequest(
+        keys=[
+            shared.Key(
+                partition_id=shared.PartitionID(
+                    namespace_id="distinctio",
+                    project_id="quibusdam",
+                ),
+                path=[
+                    shared.PathElement(
+                        id="nulla",
+                        kind="corrupti",
+                        name="illum",
+                    ),
+                    shared.PathElement(
+                        id="vel",
+                        kind="error",
+                        name="deserunt",
+                    ),
+                    shared.PathElement(
+                        id="suscipit",
+                        kind="iure",
+                        name="magnam",
+                    ),
+                ],
+            ),
+            shared.Key(
+                partition_id=shared.PartitionID(
+                    namespace_id="debitis",
+                    project_id="ipsa",
+                ),
+                path=[
+                    shared.PathElement(
+                        id="tempora",
+                        kind="suscipit",
+                        name="molestiae",
+                    ),
+                    shared.PathElement(
+                        id="minus",
+                        kind="placeat",
+                        name="voluptatum",
+                    ),
+                    shared.PathElement(
+                        id="iusto",
+                        kind="excepturi",
+                        name="nisi",
+                    ),
+                    shared.PathElement(
+                        id="recusandae",
+                        kind="temporibus",
+                        name="ab",
+                    ),
+                ],
+            ),
+            shared.Key(
+                partition_id=shared.PartitionID(
+                    namespace_id="quis",
+                    project_id="veritatis",
+                ),
+                path=[
+                    shared.PathElement(
+                        id="perferendis",
+                        kind="ipsam",
+                        name="repellendus",
+                    ),
+                    shared.PathElement(
+                        id="sapiente",
+                        kind="quo",
+                        name="odit",
+                    ),
+                    shared.PathElement(
+                        id="at",
+                        kind="at",
+                        name="maiores",
+                    ),
+                ],
+            ),
+        ],
+    ),
+    access_token="molestiae",
+    alt="proto",
+    callback="quod",
+    fields_="esse",
+    key="totam",
+    oauth_token="porro",
+    pretty_print=False,
+    project_id="dolorum",
+    quota_user="dicta",
+    upload_type="nam",
+    upload_protocol="officia",
+)
+    
+res = s.projects.datastore_projects_allocate_ids(req, operations.DatastoreProjectsAllocateIdsSecurity(
+    option1=operations.DatastoreProjectsAllocateIdsSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
+
+if res.allocate_ids_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### projects
+
+* `datastore_projects_allocate_ids` - Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted.
+* `datastore_projects_begin_transaction` - Begins a new transaction.
+* `datastore_projects_commit` - Commits a transaction, optionally creating, deleting or modifying some entities.
+* `datastore_projects_lookup` - Looks up entities by key.
+* `datastore_projects_reserve_ids` - Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
+* `datastore_projects_rollback` - Rolls back a transaction.
+* `datastore_projects_run_aggregation_query` - Runs an aggregation query.
+* `datastore_projects_run_query` - Queries for entities.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

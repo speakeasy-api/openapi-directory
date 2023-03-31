@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationOpenapiSpecPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationOpenapiSpecRequest struct {
-	PathParams GetOrganizationOpenapiSpecPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationOpenapiSpecResponse struct {

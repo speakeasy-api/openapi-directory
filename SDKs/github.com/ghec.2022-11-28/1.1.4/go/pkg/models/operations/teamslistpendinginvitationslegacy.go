@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListPendingInvitationsLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsListPendingInvitationsLegacyQueryParams struct {
+type TeamsListPendingInvitationsLegacyRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListPendingInvitationsLegacyRequest struct {
-	PathParams  TeamsListPendingInvitationsLegacyPathParams
-	QueryParams TeamsListPendingInvitationsLegacyQueryParams
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListPendingInvitationsLegacyResponse struct {

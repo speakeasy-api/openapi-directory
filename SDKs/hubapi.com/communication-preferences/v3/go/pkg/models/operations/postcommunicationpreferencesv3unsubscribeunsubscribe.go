@@ -8,16 +8,11 @@ import (
 )
 
 type PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity struct {
-	Hapikey            *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Legacy       *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	Oauth2Legacy1      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy  *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-	PrivateAppsLegacy1 *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostCommunicationPreferencesV3UnsubscribeUnsubscribeRequest struct {
-	Request  shared.PublicUpdateSubscriptionStatusRequest `request:"mediaType=application/json"`
-	Security PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity
+	Hapikey            *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2Legacy       *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Legacy1      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy  *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
+	PrivateAppsLegacy1 *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse struct {

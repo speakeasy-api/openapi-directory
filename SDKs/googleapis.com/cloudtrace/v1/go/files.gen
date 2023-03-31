@@ -15,11 +15,10 @@ pkg/utils/utils.go
 pkg/models/operations/cloudtraceprojectspatchtraces.go
 pkg/models/operations/cloudtraceprojectstracesget.go
 pkg/models/operations/cloudtraceprojectstraceslist.go
+pkg/models/shared/altenum.go
 pkg/models/shared/traces.go
 pkg/models/shared/trace.go
 pkg/models/shared/tracespan.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listtracesresponse.go
 USAGE.md

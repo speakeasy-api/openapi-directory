@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETEnsemblTranscriptMappingUsingGETPathParams struct {
+type GETEnsemblTranscriptMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETEnsemblTranscriptMappingUsingGETRequest struct {
-	PathParams GETEnsemblTranscriptMappingUsingGETPathParams
 }
 
 type GETEnsemblTranscriptMappingUsingGETResponse struct {

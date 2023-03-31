@@ -12,16 +12,8 @@ var UpdateSyncListPermissionServerList = []string{
 }
 
 type UpdateSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncListPermissionPathParams struct {
-	// The application-defined string that uniquely identifies the User's Sync List Permission resource to update.
-	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
-	// The SID of the Sync List with the Sync List Permission resource to update. Can be the Sync List resource's `sid` or its `unique_name`.
-	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncListPermissionUpdateSyncListPermissionRequest struct {
@@ -34,10 +26,13 @@ type UpdateSyncListPermissionUpdateSyncListPermissionRequest struct {
 }
 
 type UpdateSyncListPermissionRequest struct {
-	PathParams UpdateSyncListPermissionPathParams
-	Request    *UpdateSyncListPermissionUpdateSyncListPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncListPermissionSecurity
-	ServerURL  *string
+	// The application-defined string that uniquely identifies the User's Sync List Permission resource to update.
+	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
+	// The SID of the Sync List with the Sync List Permission resource to update. Can be the Sync List resource's `sid` or its `unique_name`.
+	ListSid     string                                                   `pathParam:"style=simple,explode=false,name=ListSid"`
+	RequestBody *UpdateSyncListPermissionUpdateSyncListPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncListPermissionResponse struct {

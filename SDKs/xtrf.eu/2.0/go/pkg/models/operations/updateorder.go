@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateOrderPathParams struct {
+type UpdateOrderRequest struct {
+	// Updated view's order settings.
+	OrderDTO shared.OrderDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateOrderRequest struct {
-	PathParams UpdateOrderPathParams
-	// Updated view's order settings.
-	Request shared.OrderDTO `request:"mediaType=application/json"`
 }
 
 type UpdateOrderResponse struct {

@@ -33,7 +33,7 @@ func newFeedback(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // PostSuggest - Submit a suggestion to improve a translation
-func (s *feedback) PostSuggest(ctx context.Context, request operations.PostSuggestRequest) (*operations.PostSuggestResponse, error) {
+func (s *feedback) PostSuggest(ctx context.Context, request string) (*operations.PostSuggestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/suggest"
 

@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type ActionsUpdateOrgVariablePathParams struct {
-	// The name of the variable.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ActionsUpdateOrgVariableRequestBodyVisibilityEnum - The type of repositories in the organization that can access the variable. `selected` means only the repositories specified by `selected_repository_ids` can access the variable.
 type ActionsUpdateOrgVariableRequestBodyVisibilityEnum string
 
@@ -54,8 +47,11 @@ type ActionsUpdateOrgVariableRequestBody struct {
 }
 
 type ActionsUpdateOrgVariableRequest struct {
-	PathParams ActionsUpdateOrgVariablePathParams
-	Request    ActionsUpdateOrgVariableRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsUpdateOrgVariableRequestBody `request:"mediaType=application/json"`
+	// The name of the variable.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsUpdateOrgVariableResponse struct {

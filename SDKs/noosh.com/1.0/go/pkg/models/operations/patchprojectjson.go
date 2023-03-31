@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchProjectJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PatchProjectJSONRequest struct {
-	PathParams PatchProjectJSONPathParams
-	Request    *shared.ProjectPatchPO `request:"mediaType=application/json"`
+	ProjectPatchPO *shared.ProjectPatchPO `request:"mediaType=application/json"`
+	ProjectID      string                 `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID    string                 `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PatchProjectJSONResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetMarketingV3MarketingEventsAppIDSettingsGetAllSecurity struct {
-	DeveloperHapikey *shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-	Hapikey          *shared.SchemeHapikey          `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetMarketingV3MarketingEventsAppIDSettingsGetAllPathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Hapikey          *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type GetMarketingV3MarketingEventsAppIDSettingsGetAllRequest struct {
-	PathParams GetMarketingV3MarketingEventsAppIDSettingsGetAllPathParams
-	Security   GetMarketingV3MarketingEventsAppIDSettingsGetAllSecurity
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type GetMarketingV3MarketingEventsAppIDSettingsGetAllResponse struct {

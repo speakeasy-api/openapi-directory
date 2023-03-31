@@ -8,15 +8,7 @@ import (
 )
 
 type BatchRetrieveOrdersSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type BatchRetrieveOrdersRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.BatchRetrieveOrdersRequest `request:"mediaType=application/json"`
-	Security BatchRetrieveOrdersSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BatchRetrieveOrdersResponse struct {

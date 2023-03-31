@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetStatusPathParams struct {
+type SetStatusRequest struct {
+	// Changed invoice status to given status.
+	StatusRequestDTO shared.StatusRequestDTO `request:"mediaType=application/json"`
 	// provider invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type SetStatusRequest struct {
-	PathParams SetStatusPathParams
-	// Changed invoice status to given status.
-	Request shared.StatusRequestDTO `request:"mediaType=application/json"`
 }
 
 type SetStatusResponse struct {

@@ -12,16 +12,8 @@ var UpdateUnderstandSampleServerList = []string{
 }
 
 type UpdateUnderstandSampleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandSamplePathParams struct {
-	// The unique ID of the Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The unique ID of the Task associated with this Sample.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandSampleUpdateUnderstandSampleRequest struct {
@@ -34,10 +26,13 @@ type UpdateUnderstandSampleUpdateUnderstandSampleRequest struct {
 }
 
 type UpdateUnderstandSampleRequest struct {
-	PathParams UpdateUnderstandSamplePathParams
-	Request    *UpdateUnderstandSampleUpdateUnderstandSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandSampleSecurity
-	ServerURL  *string
+	// The unique ID of the Assistant.
+	AssistantSid string                                               `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandSampleUpdateUnderstandSampleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The unique ID of the Task associated with this Sample.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type UpdateUnderstandSampleResponse struct {

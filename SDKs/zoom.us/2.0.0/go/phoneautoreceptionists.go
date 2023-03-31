@@ -40,7 +40,7 @@ func newPhoneAutoReceptionists(defaultClient, securityClient HTTPClient, serverU
 // **Scopes:** `phone:write:admin` <br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneAutoReceptionists) AddAutoReceptionist(ctx context.Context, request operations.AddAutoReceptionistRequest) (*operations.AddAutoReceptionistResponse, error) {
+func (s *phoneAutoReceptionists) AddAutoReceptionist(ctx context.Context, request operations.AddAutoReceptionistApplicationJSON) (*operations.AddAutoReceptionistResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/auto_receptionists"
 
@@ -107,11 +107,11 @@ func (s *phoneAutoReceptionists) AddAutoReceptionist(ctx context.Context, reques
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneAutoReceptionists) AssignPhoneNumbersAutoReceptionist(ctx context.Context, request operations.AssignPhoneNumbersAutoReceptionistRequest) (*operations.AssignPhoneNumbersAutoReceptionistResponse, error) {
+func (s *phoneAutoReceptionists) AssignPhoneNumbersAutoReceptionist(ctx context.Context, request operations.AssignPhoneNumbersAutoReceptionistRequest, security operations.AssignPhoneNumbersAutoReceptionistSecurity) (*operations.AssignPhoneNumbersAutoReceptionistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -123,7 +123,7 @@ func (s *phoneAutoReceptionists) AssignPhoneNumbersAutoReceptionist(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,16 +176,16 @@ func (s *phoneAutoReceptionists) AssignPhoneNumbersAutoReceptionist(ctx context.
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneAutoReceptionists) UnassignAPhoneNumAutoReceptionist(ctx context.Context, request operations.UnassignAPhoneNumAutoReceptionistRequest) (*operations.UnassignAPhoneNumAutoReceptionistResponse, error) {
+func (s *phoneAutoReceptionists) UnassignAPhoneNumAutoReceptionist(ctx context.Context, request operations.UnassignAPhoneNumAutoReceptionistRequest, security operations.UnassignAPhoneNumAutoReceptionistSecurity) (*operations.UnassignAPhoneNumAutoReceptionistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers/{phoneNumberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers/{phoneNumberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,16 +238,16 @@ func (s *phoneAutoReceptionists) UnassignAPhoneNumAutoReceptionist(ctx context.C
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneAutoReceptionists) UnassignAllPhoneNumsAutoReceptionist(ctx context.Context, request operations.UnassignAllPhoneNumsAutoReceptionistRequest) (*operations.UnassignAllPhoneNumsAutoReceptionistResponse, error) {
+func (s *phoneAutoReceptionists) UnassignAllPhoneNumsAutoReceptionist(ctx context.Context, request operations.UnassignAllPhoneNumsAutoReceptionistRequest, security operations.UnassignAllPhoneNumsAutoReceptionistSecurity) (*operations.UnassignAllPhoneNumsAutoReceptionistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -297,11 +297,11 @@ func (s *phoneAutoReceptionists) UnassignAllPhoneNumsAutoReceptionist(ctx contex
 // **Scopes:** `phone:write:admin` <br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneAutoReceptionists) UpdateAutoReceptionist(ctx context.Context, request operations.UpdateAutoReceptionistRequest) (*operations.UpdateAutoReceptionistResponse, error) {
+func (s *phoneAutoReceptionists) UpdateAutoReceptionist(ctx context.Context, request operations.UpdateAutoReceptionistRequest, security operations.UpdateAutoReceptionistSecurity) (*operations.UpdateAutoReceptionistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/auto_receptionists/{autoReceptionistId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -313,7 +313,7 @@ func (s *phoneAutoReceptionists) UpdateAutoReceptionist(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

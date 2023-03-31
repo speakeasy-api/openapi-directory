@@ -32,20 +32,20 @@ func newParents(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DriveParentsDelete - Removes a parent from a file.
-func (s *parents) DriveParentsDelete(ctx context.Context, request operations.DriveParentsDeleteRequest) (*operations.DriveParentsDeleteResponse, error) {
+func (s *parents) DriveParentsDelete(ctx context.Context, request operations.DriveParentsDeleteRequest, security operations.DriveParentsDeleteSecurity) (*operations.DriveParentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *parents) DriveParentsDelete(ctx context.Context, request operations.Dri
 }
 
 // DriveParentsGet - Gets a specific parent reference.
-func (s *parents) DriveParentsGet(ctx context.Context, request operations.DriveParentsGetRequest) (*operations.DriveParentsGetResponse, error) {
+func (s *parents) DriveParentsGet(ctx context.Context, request operations.DriveParentsGetRequest, security operations.DriveParentsGetSecurity) (*operations.DriveParentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *parents) DriveParentsGet(ctx context.Context, request operations.DriveP
 }
 
 // DriveParentsInsert - Adds a parent folder for a file.
-func (s *parents) DriveParentsInsert(ctx context.Context, request operations.DriveParentsInsertRequest) (*operations.DriveParentsInsertResponse, error) {
+func (s *parents) DriveParentsInsert(ctx context.Context, request operations.DriveParentsInsertRequest, security operations.DriveParentsInsertSecurity) (*operations.DriveParentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ParentReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *parents) DriveParentsInsert(ctx context.Context, request operations.Dri
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *parents) DriveParentsInsert(ctx context.Context, request operations.Dri
 }
 
 // DriveParentsList - Lists a file's parents.
-func (s *parents) DriveParentsList(ctx context.Context, request operations.DriveParentsListRequest) (*operations.DriveParentsListResponse, error) {
+func (s *parents) DriveParentsList(ctx context.Context, request operations.DriveParentsListRequest, security operations.DriveParentsListSecurity) (*operations.DriveParentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

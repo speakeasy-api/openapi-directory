@@ -36,7 +36,7 @@ func (e *GetEventsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEventsQueryParams struct {
+type GetEventsRequest struct {
 	// pass an optional company Id
 	Company *string `queryParam:"style=form,explode=true,name=company"`
 	// pass an optional deal Id
@@ -49,10 +49,6 @@ type GetEventsQueryParams struct {
 	Site *string `queryParam:"style=form,explode=true,name=site"`
 	// type of records to return
 	Type *GetEventsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetEventsRequest struct {
-	QueryParams GetEventsQueryParams
 }
 
 type GetEventsResponse struct {

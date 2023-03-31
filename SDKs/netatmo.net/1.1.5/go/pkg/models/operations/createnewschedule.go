@@ -8,22 +8,17 @@ import (
 )
 
 type CreatenewscheduleSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreatenewscheduleQueryParams struct {
+type CreatenewscheduleRequest struct {
+	// The thermostat program (zones and timetable)
+	RequestBody []byte `request:"mediaType=text/plain"`
 	// The relay id
 	DeviceID string `queryParam:"style=form,explode=true,name=device_id"`
 	// The thermostat id
 	ModuleID string `queryParam:"style=form,explode=true,name=module_id"`
-}
-
-type CreatenewscheduleRequest struct {
-	QueryParams CreatenewscheduleQueryParams
-	// The thermostat program (zones and timetable)
-	Request  []byte `request:"mediaType=text/plain"`
-	Security CreatenewscheduleSecurity
 }
 
 type CreatenewscheduleResponse struct {

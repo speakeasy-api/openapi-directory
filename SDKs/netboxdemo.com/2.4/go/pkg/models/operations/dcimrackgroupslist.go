@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackGroupsListQueryParams struct {
+type DcimRackGroupsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
@@ -17,10 +17,6 @@ type DcimRackGroupsListQueryParams struct {
 	Site   *string `queryParam:"style=form,explode=true,name=site"`
 	SiteID *string `queryParam:"style=form,explode=true,name=site_id"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type DcimRackGroupsListRequest struct {
-	QueryParams DcimRackGroupsListQueryParams
 }
 
 type DcimRackGroupsList200ApplicationJSON struct {

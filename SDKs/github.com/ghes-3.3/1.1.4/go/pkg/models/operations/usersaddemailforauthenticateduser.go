@@ -107,10 +107,6 @@ func (u UsersAddEmailForAuthenticatedUserRequestBody) MarshalJSON() ([]byte, err
 	return nil, nil
 }
 
-type UsersAddEmailForAuthenticatedUserRequest struct {
-	Request *UsersAddEmailForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersAddEmailForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

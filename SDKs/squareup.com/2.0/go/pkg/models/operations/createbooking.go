@@ -8,15 +8,7 @@ import (
 )
 
 type CreateBookingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateBookingRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateBookingRequest `request:"mediaType=application/json"`
-	Security CreateBookingSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateBookingResponse struct {

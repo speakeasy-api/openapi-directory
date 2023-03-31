@@ -8,22 +8,17 @@ import (
 )
 
 type Adexchangebuyer2AccountsProductsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsProductsGetPathParams struct {
-	// Account ID of the buyer.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The ID for the product to get the head revision for.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type Adexchangebuyer2AccountsProductsGetQueryParams struct {
+type Adexchangebuyer2AccountsProductsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Account ID of the buyer.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -36,18 +31,14 @@ type Adexchangebuyer2AccountsProductsGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The ID for the product to get the head revision for.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsProductsGetRequest struct {
-	PathParams  Adexchangebuyer2AccountsProductsGetPathParams
-	QueryParams Adexchangebuyer2AccountsProductsGetQueryParams
-	Security    Adexchangebuyer2AccountsProductsGetSecurity
 }
 
 type Adexchangebuyer2AccountsProductsGetResponse struct {

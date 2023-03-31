@@ -34,10 +34,9 @@ pkg/models/shared/allocateidsresponse.go
 pkg/models/shared/key.go
 pkg/models/shared/pathelement.go
 pkg/models/shared/partitionid.go
-pkg/models/shared/allocateidsrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/allocateidsrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/begintransactionresponse.go
 pkg/models/shared/begintransactionrequest.go
 pkg/models/shared/transactionoptions.go

@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type DependabotSetSelectedReposForOrgSecretPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type DependabotSetSelectedReposForOrgSecretRequestBody struct {
 	// An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Set selected repositories for an organization secret](https://docs.github.com/enterprise-server@3.7/rest/reference/dependabot#set-selected-repositories-for-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-server@3.7/rest/reference/dependabot#remove-selected-repository-from-an-organization-secret) endpoints.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type DependabotSetSelectedReposForOrgSecretRequest struct {
-	PathParams DependabotSetSelectedReposForOrgSecretPathParams
-	Request    DependabotSetSelectedReposForOrgSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody DependabotSetSelectedReposForOrgSecretRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type DependabotSetSelectedReposForOrgSecretResponse struct {

@@ -8,28 +8,24 @@ import (
 )
 
 type AndroidenterpriseEntitlementsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidenterpriseEntitlementsUpdatePathParams struct {
-	// The ID of the enterprise.
-	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
-	// The ID of the entitlement (a product ID), e.g. "app:com.google.android.gm".
-	EntitlementID string `pathParam:"style=simple,explode=false,name=entitlementId"`
-	// The ID of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type AndroidenterpriseEntitlementsUpdateQueryParams struct {
+type AndroidenterpriseEntitlementsUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Entitlement *shared.Entitlement `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The ID of the enterprise.
+	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
+	// The ID of the entitlement (a product ID), e.g. "app:com.google.android.gm".
+	EntitlementID string `pathParam:"style=simple,explode=false,name=entitlementId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Set to true to also install the product on all the user's devices where possible. Failure to install on one or more devices will not prevent this operation from returning successfully, as long as the entitlement was successfully assigned to the user.
@@ -46,13 +42,8 @@ type AndroidenterpriseEntitlementsUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseEntitlementsUpdateRequest struct {
-	PathParams  AndroidenterpriseEntitlementsUpdatePathParams
-	QueryParams AndroidenterpriseEntitlementsUpdateQueryParams
-	Request     *shared.Entitlement `request:"mediaType=application/json"`
-	Security    AndroidenterpriseEntitlementsUpdateSecurity
+	// The ID of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type AndroidenterpriseEntitlementsUpdateResponse struct {

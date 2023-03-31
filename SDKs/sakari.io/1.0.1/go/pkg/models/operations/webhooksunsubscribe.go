@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebhooksUnsubscribeSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebhooksUnsubscribePathParams struct {
+type WebhooksUnsubscribeRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Account to apply operations to
 	URL string `pathParam:"style=simple,explode=false,name=url"`
-}
-
-type WebhooksUnsubscribeRequest struct {
-	PathParams WebhooksUnsubscribePathParams
-	Security   WebhooksUnsubscribeSecurity
 }
 
 type WebhooksUnsubscribeResponse struct {

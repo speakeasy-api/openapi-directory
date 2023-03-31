@@ -18,5 +18,4 @@ pkg/models/shared/googlecloudpolicyanalyzerv1activity.go
 pkg/models/shared/googlecloudpolicyanalyzerv1observationperiod.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

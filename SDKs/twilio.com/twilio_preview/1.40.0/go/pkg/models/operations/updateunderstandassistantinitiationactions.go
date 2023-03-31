@@ -12,11 +12,8 @@ var UpdateUnderstandAssistantInitiationActionsServerList = []string{
 }
 
 type UpdateUnderstandAssistantInitiationActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandAssistantInitiationActionsPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest struct {
@@ -24,10 +21,8 @@ type UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiati
 }
 
 type UpdateUnderstandAssistantInitiationActionsRequest struct {
-	PathParams UpdateUnderstandAssistantInitiationActionsPathParams
-	Request    *UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandAssistantInitiationActionsSecurity
-	ServerURL  *string
+	AssistantSid string                                                                                       `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateUnderstandAssistantInitiationActionsResponse struct {

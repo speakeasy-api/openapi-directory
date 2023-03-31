@@ -36,7 +36,7 @@ func (e *EnterpriseAdminListPreReceiveHooksSortEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type EnterpriseAdminListPreReceiveHooksQueryParams struct {
+type EnterpriseAdminListPreReceiveHooksRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -45,10 +45,6 @@ type EnterpriseAdminListPreReceiveHooksQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// One of `created` (when the repository was starred) or `updated` (when it was last pushed to) or `name`.
 	Sort *EnterpriseAdminListPreReceiveHooksSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type EnterpriseAdminListPreReceiveHooksRequest struct {
-	QueryParams EnterpriseAdminListPreReceiveHooksQueryParams
 }
 
 type EnterpriseAdminListPreReceiveHooksResponse struct {

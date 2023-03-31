@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type PutAPILogisticsPvtShippingPoliciesIDPathParams struct {
-	// Shipping policy's ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutAPILogisticsPvtShippingPoliciesIDHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type PutAPILogisticsPvtShippingPoliciesIDRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity struct {
 	// Defines how the delivery capacity is measured for this reservation window, by maximum number of orders (`"ORDERS_QUANTITY"`) or SKUs (`"SKUS_QUANTITY"`).
 	CapacityType string `json:"capacityType"`
@@ -77,9 +65,13 @@ type PutAPILogisticsPvtShippingPoliciesIDRequestBody struct {
 }
 
 type PutAPILogisticsPvtShippingPoliciesIDRequest struct {
-	PathParams PutAPILogisticsPvtShippingPoliciesIDPathParams
-	Headers    PutAPILogisticsPvtShippingPoliciesIDHeaders
-	Request    *PutAPILogisticsPvtShippingPoliciesIDRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                                           `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PutAPILogisticsPvtShippingPoliciesIDRequestBody `request:"mediaType=application/json"`
+	// Shipping policy's ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutAPILogisticsPvtShippingPoliciesIDResponse struct {

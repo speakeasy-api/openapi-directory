@@ -14,7 +14,8 @@ var CreateSmsCommandServerList = []string{
 }
 
 type CreateSmsCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateSmsCommandCreateSmsCommandRequestCallbackMethodEnum - The HTTP method we should use to call `callback_url`. Can be: `GET` or `POST` and the default is POST.
@@ -62,12 +63,6 @@ type CreateSmsCommandCreateSmsCommandRequest struct {
 	Payload string `form:"name=Payload"`
 	// The `sid` or `unique_name` of the [SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) to send the SMS Command to.
 	Sim string `form:"name=Sim"`
-}
-
-type CreateSmsCommandRequest struct {
-	Request   *CreateSmsCommandCreateSmsCommandRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSmsCommandSecurity
-	ServerURL *string
 }
 
 type CreateSmsCommandResponse struct {

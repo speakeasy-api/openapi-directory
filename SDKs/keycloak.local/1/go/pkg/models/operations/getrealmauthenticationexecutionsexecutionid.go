@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetRealmAuthenticationExecutionsExecutionIDPathParams struct {
+type GetRealmAuthenticationExecutionsExecutionIDRequest struct {
 	// Execution id
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAuthenticationExecutionsExecutionIDRequest struct {
-	PathParams GetRealmAuthenticationExecutionsExecutionIDPathParams
 }
 
 type GetRealmAuthenticationExecutionsExecutionIDResponse struct {

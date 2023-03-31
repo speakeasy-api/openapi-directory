@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarPanelistsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarPanelistsPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebinarPanelistsRequest struct {
-	PathParams WebinarPanelistsPathParams
-	Security   WebinarPanelistsSecurity
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // WebinarPanelistsPanelistListPanelists - Panelist base object.

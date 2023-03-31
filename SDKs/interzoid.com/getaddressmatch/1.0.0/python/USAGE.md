@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetaddressmatchRequest(
-    query_params=operations.GetaddressmatchQueryParams(
-        address="qui",
-        license="blanditiis",
-    ),
+    address="5786 Little Streets",
+    license="vel",
 )
     
 res = s.street_address_similarity_key.getaddressmatch(req)

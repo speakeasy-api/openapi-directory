@@ -8,18 +8,14 @@ import (
 )
 
 type RunProjectsLocationsServicesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunProjectsLocationsServicesCreatePathParams struct {
-	// Required. The resource's parent. In Cloud Run, it may be one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` * `namespaces/{project_id_or_number}/services` * `projects/{project_id_or_number}/locations/{region}` * `projects/{project_id_or_number}/regions/{region}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RunProjectsLocationsServicesCreateQueryParams struct {
+type RunProjectsLocationsServicesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ServiceInput *shared.ServiceInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,6 +30,8 @@ type RunProjectsLocationsServicesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The resource's parent. In Cloud Run, it may be one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` * `namespaces/{project_id_or_number}/services` * `projects/{project_id_or_number}/locations/{region}` * `projects/{project_id_or_number}/regions/{region}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type RunProjectsLocationsServicesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunProjectsLocationsServicesCreateRequest struct {
-	PathParams  RunProjectsLocationsServicesCreatePathParams
-	QueryParams RunProjectsLocationsServicesCreateQueryParams
-	Request     *shared.ServiceInput `request:"mediaType=application/json"`
-	Security    RunProjectsLocationsServicesCreateSecurity
 }
 
 type RunProjectsLocationsServicesCreateResponse struct {

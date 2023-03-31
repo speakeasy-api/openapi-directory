@@ -10,7 +10,7 @@ import (
 )
 
 type KkidChorelistPostSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 // KkidChorelistPostDayEnum - day of week (Monday, Tuesday....) for the chore. For weekly chores put Weekly or leave blank
@@ -58,7 +58,7 @@ func (e *KkidChorelistPostDayEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type KkidChorelistPostQueryParams struct {
+type KkidChorelistPostRequest struct {
 	// Notes if AI Icons should be used (n for no, y for yes, e for yes- error)
 	AiIcon *string `queryParam:"style=form,explode=true,name=aiIcon"`
 	// block dash option on this chore
@@ -99,11 +99,6 @@ type KkidChorelistPostQueryParams struct {
 	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// true if chore updated via API from an Automation System
 	UpdatedByAutomation *bool `queryParam:"style=form,explode=true,name=updatedByAutomation"`
-}
-
-type KkidChorelistPostRequest struct {
-	QueryParams KkidChorelistPostQueryParams
-	Security    KkidChorelistPostSecurity
 }
 
 type KkidChorelistPostResponse struct {

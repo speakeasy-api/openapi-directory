@@ -13,15 +13,13 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateANewQuestionRequest{
-        Request: &operations.CreateANewQuestionRequestBody{
-            Choices: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-            Question: "unde",
+    req := operations.CreateANewQuestionRequestBody{
+        Choices: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
+        Question: "unde",
     }
 
     ctx := context.Background()

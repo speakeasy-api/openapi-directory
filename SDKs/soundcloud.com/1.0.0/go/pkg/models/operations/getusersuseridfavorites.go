@@ -11,26 +11,17 @@ import (
 )
 
 type GetUsersUserIDFavoritesSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetUsersUserIDFavoritesPathParams struct {
-	// SoundCloud User id
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUsersUserIDFavoritesQueryParams struct {
+type GetUsersUserIDFavoritesRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
-}
-
-type GetUsersUserIDFavoritesRequest struct {
-	PathParams  GetUsersUserIDFavoritesPathParams
-	QueryParams GetUsersUserIDFavoritesQueryParams
-	Security    GetUsersUserIDFavoritesSecurity
+	// SoundCloud User id
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUsersUserIDFavorites200ApplicationJSONType string

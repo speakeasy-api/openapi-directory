@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSearchVersionNumberGeometryFilterExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
 type PostSearchVersionNumberGeometryFilterExtRequestBodyGeometryList struct {
 	Position *string  `json:"position,omitempty"`
 	Radius   *int64   `json:"radius,omitempty"`
@@ -46,8 +39,11 @@ type PostSearchVersionNumberGeometryFilterExtRequestBody struct {
 }
 
 type PostSearchVersionNumberGeometryFilterExtRequest struct {
-	PathParams PostSearchVersionNumberGeometryFilterExtPathParams
-	Request    *PostSearchVersionNumberGeometryFilterExtRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostSearchVersionNumberGeometryFilterExtRequestBody `request:"mediaType=application/json"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type PostSearchVersionNumberGeometryFilterExtResponse struct {

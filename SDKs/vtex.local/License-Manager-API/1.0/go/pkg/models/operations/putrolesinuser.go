@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PutRolesinUserPathParams struct {
+type PutRolesinUserRequest struct {
+	// List of roles' IDs to add to the user or application key.
+	RequestBody []int `request:"mediaType=application/json"`
 	// ID corresponding to the user
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PutRolesinUserRequest struct {
-	PathParams PutRolesinUserPathParams
-	// List of roles' IDs to add to the user or application key.
-	Request []int `request:"mediaType=application/json"`
 }
 
 // PutRolesinUser500ApplicationJSON - Unexpected error - One possible reason is that the userId is not present on the database.

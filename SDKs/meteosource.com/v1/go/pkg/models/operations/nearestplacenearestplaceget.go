@@ -10,7 +10,7 @@ import (
 )
 
 type NearestPlaceNearestPlaceGetSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 // NearestPlaceNearestPlaceGetLanguageLanguageEnum - An enumeration.
@@ -52,7 +52,7 @@ func (e *NearestPlaceNearestPlaceGetLanguageLanguageEnum) UnmarshalJSON(data []b
 	}
 }
 
-type NearestPlaceNearestPlaceGetQueryParams struct {
+type NearestPlaceNearestPlaceGetRequest struct {
 	// Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The language of text summaries and place names (variable names are never translated). Available languages are:
@@ -70,11 +70,6 @@ type NearestPlaceNearestPlaceGetQueryParams struct {
 	Lat string `queryParam:"style=form,explode=true,name=lat"`
 	// Longitude in format 12E, 12.3E, 12.3, or 13W, 13.2W, -13.4
 	Lon string `queryParam:"style=form,explode=true,name=lon"`
-}
-
-type NearestPlaceNearestPlaceGetRequest struct {
-	QueryParams NearestPlaceNearestPlaceGetQueryParams
-	Security    NearestPlaceNearestPlaceGetSecurity
 }
 
 type NearestPlaceNearestPlaceGetResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type GetmeasureSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetmeasureScaleEnum - Defines the time interval between two measurements.
@@ -183,7 +183,7 @@ func (e *GetmeasureTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetmeasureQueryParams struct {
+type GetmeasureRequest struct {
 	// Starting timestamp (utc) of the requested measurements.
 	// Please note measurement retrieving is limited to 1024 measurements.
 	//
@@ -255,11 +255,6 @@ type GetmeasureQueryParams struct {
 	// max_temp, sum_boiler_on, sum_boiler_off
 	//
 	Type []GetmeasureTypeEnum `queryParam:"style=form,explode=false,name=type"`
-}
-
-type GetmeasureRequest struct {
-	QueryParams GetmeasureQueryParams
-	Security    GetmeasureSecurity
 }
 
 type GetmeasureResponse struct {

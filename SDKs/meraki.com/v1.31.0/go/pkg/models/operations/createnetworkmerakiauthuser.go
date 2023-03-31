@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type CreateNetworkMerakiAuthUserPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum - Authorization type for user. Can be 'Guest' or '802.1X' for wireless networks, or 'Client VPN' for wired networks. Defaults to '802.1X'.
 type CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum string
 
@@ -65,8 +61,8 @@ type CreateNetworkMerakiAuthUserRequestBody struct {
 }
 
 type CreateNetworkMerakiAuthUserRequest struct {
-	PathParams CreateNetworkMerakiAuthUserPathParams
-	Request    CreateNetworkMerakiAuthUserRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkMerakiAuthUserRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                 `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkMerakiAuthUser201ApplicationJSONAuthorizations struct {

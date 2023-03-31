@@ -12,17 +12,15 @@ var ListFieldValueServerList = []string{
 }
 
 type ListFieldValueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListFieldValuePathParams struct {
+type ListFieldValueRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resources to read.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The SID of the Field Type associated with the Field Value to read.
 	FieldTypeSid string `pathParam:"style=simple,explode=false,name=FieldTypeSid"`
-}
-
-type ListFieldValueQueryParams struct {
 	// The [ISO language-country](https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html) tag that specifies the language of the value. Currently supported tags: `en-US`
 	Language *string `queryParam:"style=form,explode=true,name=Language"`
 	// The page index. This value is simply for client state.
@@ -31,13 +29,6 @@ type ListFieldValueQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListFieldValueRequest struct {
-	PathParams  ListFieldValuePathParams
-	QueryParams ListFieldValueQueryParams
-	Security    ListFieldValueSecurity
-	ServerURL   *string
 }
 
 type ListFieldValueListFieldValueResponseMeta struct {

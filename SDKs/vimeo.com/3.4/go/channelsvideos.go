@@ -32,16 +32,16 @@ func newChannelsVideos(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // AddVideoToChannel - Add a specific video to a channel
-func (s *channelsVideos) AddVideoToChannel(ctx context.Context, request operations.AddVideoToChannelRequest) (*operations.AddVideoToChannelResponse, error) {
+func (s *channelsVideos) AddVideoToChannel(ctx context.Context, request operations.AddVideoToChannelRequest, security operations.AddVideoToChannelSecurity) (*operations.AddVideoToChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,11 +79,11 @@ func (s *channelsVideos) AddVideoToChannel(ctx context.Context, request operatio
 }
 
 // AddVideosToChannel - Add a list of videos to a channel
-func (s *channelsVideos) AddVideosToChannel(ctx context.Context, request operations.AddVideosToChannelRequest) (*operations.AddVideosToChannelResponse, error) {
+func (s *channelsVideos) AddVideosToChannel(ctx context.Context, request operations.AddVideosToChannelRequest, security operations.AddVideosToChannelSecurity) (*operations.AddVideosToChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -98,7 +98,7 @@ func (s *channelsVideos) AddVideosToChannel(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,16 +136,16 @@ func (s *channelsVideos) AddVideosToChannel(ctx context.Context, request operati
 }
 
 // DeleteVideoFromChannel - Remove a specific video from a channel
-func (s *channelsVideos) DeleteVideoFromChannel(ctx context.Context, request operations.DeleteVideoFromChannelRequest) (*operations.DeleteVideoFromChannelResponse, error) {
+func (s *channelsVideos) DeleteVideoFromChannel(ctx context.Context, request operations.DeleteVideoFromChannelRequest, security operations.DeleteVideoFromChannelSecurity) (*operations.DeleteVideoFromChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *channelsVideos) DeleteVideoFromChannel(ctx context.Context, request ope
 // GetAvailableVideoChannels - Get all the channels to which a user can add or remove a specific video
 func (s *channelsVideos) GetAvailableVideoChannels(ctx context.Context, request operations.GetAvailableVideoChannelsRequest) (*operations.GetAvailableVideoChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/available_channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/available_channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -242,7 +242,7 @@ func (s *channelsVideos) GetAvailableVideoChannels(ctx context.Context, request 
 // This method returns a specific video in a channel. You can use it to determine whether the video is in the channel.
 func (s *channelsVideos) GetChannelVideo(ctx context.Context, request operations.GetChannelVideoRequest) (*operations.GetChannelVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,14 +296,14 @@ func (s *channelsVideos) GetChannelVideo(ctx context.Context, request operations
 // GetChannelVideos - Get all the videos in a channel
 func (s *channelsVideos) GetChannelVideos(ctx context.Context, request operations.GetChannelVideosRequest) (*operations.GetChannelVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -355,11 +355,11 @@ func (s *channelsVideos) GetChannelVideos(ctx context.Context, request operation
 }
 
 // RemoveVideosFromChannel - Remove a list of videos from a channel
-func (s *channelsVideos) RemoveVideosFromChannel(ctx context.Context, request operations.RemoveVideosFromChannelRequest) (*operations.RemoveVideosFromChannelResponse, error) {
+func (s *channelsVideos) RemoveVideosFromChannel(ctx context.Context, request operations.RemoveVideosFromChannelRequest, security operations.RemoveVideosFromChannelSecurity) (*operations.RemoveVideosFromChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -374,7 +374,7 @@ func (s *channelsVideos) RemoveVideosFromChannel(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

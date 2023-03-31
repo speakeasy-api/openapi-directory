@@ -34,7 +34,7 @@ func newBroadcastServices(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // GetAPIV2Broadcastservices - Gets broadcast services matching the given criteria.
-func (s *broadcastServices) GetAPIV2Broadcastservices(ctx context.Context, request operations.GetAPIV2BroadcastservicesRequest) (*operations.GetAPIV2BroadcastservicesResponse, error) {
+func (s *broadcastServices) GetAPIV2Broadcastservices(ctx context.Context, request operations.GetAPIV2BroadcastservicesRequest, security operations.GetAPIV2BroadcastservicesSecurity) (*operations.GetAPIV2BroadcastservicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/broadcastservices"
 
@@ -43,11 +43,11 @@ func (s *broadcastServices) GetAPIV2Broadcastservices(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,16 +93,16 @@ func (s *broadcastServices) GetAPIV2Broadcastservices(ctx context.Context, reque
 }
 
 // GetAPIV2BroadcastservicesID - Returns the broadcast service matching the given ID.
-func (s *broadcastServices) GetAPIV2BroadcastservicesID(ctx context.Context, request operations.GetAPIV2BroadcastservicesIDRequest) (*operations.GetAPIV2BroadcastservicesIDResponse, error) {
+func (s *broadcastServices) GetAPIV2BroadcastservicesID(ctx context.Context, request operations.GetAPIV2BroadcastservicesIDRequest, security operations.GetAPIV2BroadcastservicesIDSecurity) (*operations.GetAPIV2BroadcastservicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/broadcastservices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/broadcastservices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

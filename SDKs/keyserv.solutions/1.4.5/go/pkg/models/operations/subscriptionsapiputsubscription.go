@@ -54,10 +54,6 @@ func (u SubscriptionsAPIPutSubscriptionRequestBody) MarshalJSON() ([]byte, error
 	return nil, nil
 }
 
-type SubscriptionsAPIPutSubscriptionRequest struct {
-	Request SubscriptionsAPIPutSubscriptionRequestBody `request:"mediaType=application/json"`
-}
-
 type SubscriptionsAPIPutSubscriptionResponse struct {
 	ContentType string
 	StatusCode  int

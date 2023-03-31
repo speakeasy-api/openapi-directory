@@ -95,7 +95,7 @@ func New(opts ...SDKOption) *SDK {
 // DeleteBinID - Delete a json bin
 func (s *SDK) DeleteBinID(ctx context.Context, request operations.DeleteBinIDRequest) (*operations.DeleteBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +153,7 @@ func (s *SDK) DeleteBinID(ctx context.Context, request operations.DeleteBinIDReq
 // GetBinID - Return a json bin
 func (s *SDK) GetBinID(ctx context.Context, request operations.GetBinIDRequest) (*operations.GetBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +209,7 @@ func (s *SDK) GetBinID(ctx context.Context, request operations.GetBinIDRequest) 
 // PatchBinID - Partially update a json bin with JSON Merge Patch
 func (s *SDK) PatchBinID(ctx context.Context, request operations.PatchBinIDRequest) (*operations.PatchBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -325,7 +325,7 @@ func (s *SDK) PostBin(ctx context.Context) (*operations.PostBinResponse, error) 
 // PutBinID - Update a json bin
 func (s *SDK) PutBinID(ctx context.Context, request operations.PutBinIDRequest) (*operations.PutBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

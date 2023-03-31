@@ -33,11 +33,11 @@ func newDocuments(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // LanguageDocumentsAnalyzeEntities - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
-func (s *documents) LanguageDocumentsAnalyzeEntities(ctx context.Context, request operations.LanguageDocumentsAnalyzeEntitiesRequest) (*operations.LanguageDocumentsAnalyzeEntitiesResponse, error) {
+func (s *documents) LanguageDocumentsAnalyzeEntities(ctx context.Context, request operations.LanguageDocumentsAnalyzeEntitiesRequest, security operations.LanguageDocumentsAnalyzeEntitiesSecurity) (*operations.LanguageDocumentsAnalyzeEntitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta2/documents:analyzeEntities"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzeEntitiesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *documents) LanguageDocumentsAnalyzeEntities(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *documents) LanguageDocumentsAnalyzeEntities(ctx context.Context, reques
 }
 
 // LanguageDocumentsAnalyzeEntitySentiment - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
-func (s *documents) LanguageDocumentsAnalyzeEntitySentiment(ctx context.Context, request operations.LanguageDocumentsAnalyzeEntitySentimentRequest) (*operations.LanguageDocumentsAnalyzeEntitySentimentResponse, error) {
+func (s *documents) LanguageDocumentsAnalyzeEntitySentiment(ctx context.Context, request operations.LanguageDocumentsAnalyzeEntitySentimentRequest, security operations.LanguageDocumentsAnalyzeEntitySentimentSecurity) (*operations.LanguageDocumentsAnalyzeEntitySentimentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta2/documents:analyzeEntitySentiment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzeEntitySentimentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *documents) LanguageDocumentsAnalyzeEntitySentiment(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *documents) LanguageDocumentsAnalyzeEntitySentiment(ctx context.Context,
 }
 
 // LanguageDocumentsAnalyzeSentiment - Analyzes the sentiment of the provided text.
-func (s *documents) LanguageDocumentsAnalyzeSentiment(ctx context.Context, request operations.LanguageDocumentsAnalyzeSentimentRequest) (*operations.LanguageDocumentsAnalyzeSentimentResponse, error) {
+func (s *documents) LanguageDocumentsAnalyzeSentiment(ctx context.Context, request operations.LanguageDocumentsAnalyzeSentimentRequest, security operations.LanguageDocumentsAnalyzeSentimentSecurity) (*operations.LanguageDocumentsAnalyzeSentimentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta2/documents:analyzeSentiment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzeSentimentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *documents) LanguageDocumentsAnalyzeSentiment(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +198,11 @@ func (s *documents) LanguageDocumentsAnalyzeSentiment(ctx context.Context, reque
 }
 
 // LanguageDocumentsAnalyzeSyntax - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
-func (s *documents) LanguageDocumentsAnalyzeSyntax(ctx context.Context, request operations.LanguageDocumentsAnalyzeSyntaxRequest) (*operations.LanguageDocumentsAnalyzeSyntaxResponse, error) {
+func (s *documents) LanguageDocumentsAnalyzeSyntax(ctx context.Context, request operations.LanguageDocumentsAnalyzeSyntaxRequest, security operations.LanguageDocumentsAnalyzeSyntaxSecurity) (*operations.LanguageDocumentsAnalyzeSyntaxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta2/documents:analyzeSyntax"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzeSyntaxRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,11 +214,11 @@ func (s *documents) LanguageDocumentsAnalyzeSyntax(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,11 +253,11 @@ func (s *documents) LanguageDocumentsAnalyzeSyntax(ctx context.Context, request 
 }
 
 // LanguageDocumentsAnnotateText - A convenience method that provides all syntax, sentiment, entity, and classification features in one call.
-func (s *documents) LanguageDocumentsAnnotateText(ctx context.Context, request operations.LanguageDocumentsAnnotateTextRequest) (*operations.LanguageDocumentsAnnotateTextResponse, error) {
+func (s *documents) LanguageDocumentsAnnotateText(ctx context.Context, request operations.LanguageDocumentsAnnotateTextRequest, security operations.LanguageDocumentsAnnotateTextSecurity) (*operations.LanguageDocumentsAnnotateTextResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta2/documents:annotateText"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnnotateTextRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,11 +269,11 @@ func (s *documents) LanguageDocumentsAnnotateText(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,11 +308,11 @@ func (s *documents) LanguageDocumentsAnnotateText(ctx context.Context, request o
 }
 
 // LanguageDocumentsClassifyText - Classifies a document into categories.
-func (s *documents) LanguageDocumentsClassifyText(ctx context.Context, request operations.LanguageDocumentsClassifyTextRequest) (*operations.LanguageDocumentsClassifyTextResponse, error) {
+func (s *documents) LanguageDocumentsClassifyText(ctx context.Context, request operations.LanguageDocumentsClassifyTextRequest, security operations.LanguageDocumentsClassifyTextSecurity) (*operations.LanguageDocumentsClassifyTextResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta2/documents:classifyText"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClassifyTextRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,11 +324,11 @@ func (s *documents) LanguageDocumentsClassifyText(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

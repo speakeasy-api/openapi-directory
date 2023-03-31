@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListBYOCSIPTrunkSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListBYOCSIPTrunkQueryParams struct {
+type ListBYOCSIPTrunkRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ListBYOCSIPTrunkRequest struct {
-	QueryParams ListBYOCSIPTrunkQueryParams
-	Security    ListBYOCSIPTrunkSecurity
 }
 
 type ListBYOCSIPTrunk200ApplicationXMLByocSipTrunk struct {

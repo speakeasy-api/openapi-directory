@@ -33,11 +33,11 @@ func newProductsOnline(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // CreateProductSlug - Create a product identifier
 // Creates a unique slug (identifier) for a product. The slug is used to create a product URL
-func (s *productsOnline) CreateProductSlug(ctx context.Context, request operations.CreateProductSlugRequest) (*operations.CreateProductSlugResponse, error) {
+func (s *productsOnline) CreateProductSlug(ctx context.Context, request operations.CreateProductSlugRequest, security operations.CreateProductSlugSecurity) (*operations.CreateProductSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/online/slug", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/online/slug", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSlugRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *productsOnline) CreateProductSlug(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

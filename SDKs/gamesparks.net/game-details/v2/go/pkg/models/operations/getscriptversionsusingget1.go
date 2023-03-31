@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GETScriptVersionsUsingGET1PathParams struct {
+type GETScriptVersionsUsingGET1Request struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type GETScriptVersionsUsingGET1QueryParams struct {
 	// pageSize
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETScriptVersionsUsingGET1Request struct {
-	PathParams  GETScriptVersionsUsingGET1PathParams
-	QueryParams GETScriptVersionsUsingGET1QueryParams
 }
 
 type GETScriptVersionsUsingGET1Response struct {

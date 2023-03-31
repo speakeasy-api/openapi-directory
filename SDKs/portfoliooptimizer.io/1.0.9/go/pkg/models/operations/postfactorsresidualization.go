@@ -17,10 +17,6 @@ type PostFactorsResidualizationRequestBody struct {
 	ResidualizedFactor int64 `json:"residualizedFactor"`
 }
 
-type PostFactorsResidualizationRequest struct {
-	Request PostFactorsResidualizationRequestBody `request:"mediaType=application/json"`
-}
-
 // PostFactorsResidualization200ApplicationJSON - OK
 type PostFactorsResidualization200ApplicationJSON struct {
 	// residualizedFactorReturns[t] is the return of the residualized factor at the time t

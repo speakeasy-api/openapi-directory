@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkgroupListQueryParams struct {
+type GetWorkgroupListRequest struct {
 	// Workgroup Name
 	WorkgroupName *string `queryParam:"style=form,explode=true,name=workgroup_name"`
 	// 1000001 for Buyer, 1000002 for supplier, 1000003 for agent, 1000004 for Broker/Outsourcer and 1000005 for Partner
 	WorkgroupTypes []string `queryParam:"style=form,explode=false,name=workgroup_types"`
-}
-
-type GetWorkgroupListRequest struct {
-	QueryParams GetWorkgroupListQueryParams
 }
 
 type GetWorkgroupListResponse struct {

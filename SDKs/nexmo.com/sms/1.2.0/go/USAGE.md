@@ -14,10 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.SendAnSmsRequest{
-        PathParams: operations.SendAnSmsPathParams{
-            Format: "json",
-        },
-        Request: shared.NewMessage{
+        NewMessage: shared.NewMessage{
             AccountRef: "customer1234",
             APIKey: "abcd1234",
             APISecret: "abcdef0123456789",
@@ -37,6 +34,7 @@ func main() {
             Type: "text",
             Udh: "06050415811581",
         },
+        Format: "json",
     }
 
     ctx := context.Background()

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetClientProfileByEmailQueryParams struct {
-	// Client's email address to be searched.
-	Email string `queryParam:"style=form,explode=true,name=email"`
-}
-
-type GetClientProfileByEmailHeaders struct {
+type GetClientProfileByEmailRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetClientProfileByEmailRequest struct {
-	QueryParams GetClientProfileByEmailQueryParams
-	Headers     GetClientProfileByEmailHeaders
+	// Client's email address to be searched.
+	Email string `queryParam:"style=form,explode=true,name=email"`
 }
 
 type GetClientProfileByEmail200ApplicationJSONAvailableAddresses struct {

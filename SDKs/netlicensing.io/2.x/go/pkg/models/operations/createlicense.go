@@ -9,7 +9,8 @@ import (
 )
 
 type CreateLicenseSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateLicenseRequestBody struct {
@@ -37,11 +38,6 @@ type CreateLicenseRequestBody struct {
 	TimeVolumePeriod *string `form:"name=timeVolumePeriod"`
 	// Mandatory for 'Pay-per-Use' License Model.
 	UsedQuantity *string `form:"name=usedQuantity"`
-}
-
-type CreateLicenseRequest struct {
-	Request  CreateLicenseRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateLicenseSecurity
 }
 
 type CreateLicenseResponse struct {

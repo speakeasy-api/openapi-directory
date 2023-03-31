@@ -13,23 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Bearer: shared.SchemeBearer{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Bearer: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAccountRequest{
-        PathParams: operations.CreateAccountPathParams{
-            BudgetID: "corrupti",
-        },
-        Request: shared.PostAccountWrapper{
+        PostAccountWrapper: shared.PostAccountWrapper{
             Account: shared.SaveAccount{
-                Balance: 592845,
-                Name: "distinctio",
-                Type: "personalLoan",
+                Balance: 548814,
+                Name: "provident",
+                Type: "studentLoan",
             },
         },
+        BudgetID: "quibusdam",
     }
 
     ctx := context.Background()

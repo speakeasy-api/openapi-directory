@@ -10,13 +10,8 @@ import (
 )
 
 type BooksMylibraryBookshelvesAddVolumeSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type BooksMylibraryBookshelvesAddVolumePathParams struct {
-	// ID of bookshelf to which to add a volume.
-	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // BooksMylibraryBookshelvesAddVolumeReasonEnum - The reason for which the book is added to the library.
@@ -49,7 +44,7 @@ func (e *BooksMylibraryBookshelvesAddVolumeReasonEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type BooksMylibraryBookshelvesAddVolumeQueryParams struct {
+type BooksMylibraryBookshelvesAddVolumeRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -70,6 +65,8 @@ type BooksMylibraryBookshelvesAddVolumeQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// The reason for which the book is added to the library.
 	Reason *BooksMylibraryBookshelvesAddVolumeReasonEnum `queryParam:"style=form,explode=true,name=reason"`
+	// ID of bookshelf to which to add a volume.
+	Shelf string `pathParam:"style=simple,explode=false,name=shelf"`
 	// String to identify the originator of this request.
 	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
@@ -78,12 +75,6 @@ type BooksMylibraryBookshelvesAddVolumeQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// ID of volume to add.
 	VolumeID string `queryParam:"style=form,explode=true,name=volumeId"`
-}
-
-type BooksMylibraryBookshelvesAddVolumeRequest struct {
-	PathParams  BooksMylibraryBookshelvesAddVolumePathParams
-	QueryParams BooksMylibraryBookshelvesAddVolumeQueryParams
-	Security    BooksMylibraryBookshelvesAddVolumeSecurity
 }
 
 type BooksMylibraryBookshelvesAddVolumeResponse struct {

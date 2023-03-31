@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectDocumentsPathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 type GetProjectDocumentsWithEnum string
 
 const (
@@ -37,14 +32,11 @@ func (e *GetProjectDocumentsWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectDocumentsQueryParams struct {
+type GetProjectDocumentsRequest struct {
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 	// Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
 	With []GetProjectDocumentsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
-}
-
-type GetProjectDocumentsRequest struct {
-	PathParams  GetProjectDocumentsPathParams
-	QueryParams GetProjectDocumentsQueryParams
 }
 
 type GetProjectDocumentsResponse struct {

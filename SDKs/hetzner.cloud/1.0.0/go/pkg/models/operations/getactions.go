@@ -107,17 +107,13 @@ func (e *GetActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetActionsQueryParams struct {
+type GetActionsRequest struct {
 	// Can be used multiple times, the response will contain only Actions with specified IDs
 	ID *int64 `queryParam:"style=form,explode=true,name=id"`
 	// Can be used multiple times.
 	Sort *GetActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetActionsRequest struct {
-	QueryParams GetActionsQueryParams
 }
 
 // GetActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

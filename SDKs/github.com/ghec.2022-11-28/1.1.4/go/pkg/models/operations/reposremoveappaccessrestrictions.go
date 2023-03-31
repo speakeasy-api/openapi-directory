@@ -10,15 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposRemoveAppAccessRestrictionsPathParams struct {
-	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-cloud@latest//graphql).
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposRemoveAppAccessRestrictionsRequestBody1 struct {
 	// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
 	Apps []string `json:"apps"`
@@ -93,8 +84,13 @@ func (u ReposRemoveAppAccessRestrictionsRequestBody) MarshalJSON() ([]byte, erro
 }
 
 type ReposRemoveAppAccessRestrictionsRequest struct {
-	PathParams ReposRemoveAppAccessRestrictionsPathParams
-	Request    *ReposRemoveAppAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposRemoveAppAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-cloud@latest//graphql).
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposRemoveAppAccessRestrictionsResponse struct {

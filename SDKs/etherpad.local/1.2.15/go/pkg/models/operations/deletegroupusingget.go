@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteGroupUsingGETQueryParams struct {
-	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
-}
-
 type DeleteGroupUsingGETRequest struct {
-	QueryParams DeleteGroupUsingGETQueryParams
+	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
 }
 
 // DeleteGroupUsingGET500ApplicationJSON - internal api error (code 2)

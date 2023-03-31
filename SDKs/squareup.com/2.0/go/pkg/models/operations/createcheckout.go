@@ -8,21 +8,16 @@ import (
 )
 
 type CreateCheckoutSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateCheckoutPathParams struct {
-	// The ID of the business location to associate the checkout with.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCheckoutRequest struct {
-	PathParams CreateCheckoutPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.CreateCheckoutRequest `request:"mediaType=application/json"`
-	Security CreateCheckoutSecurity
+	CreateCheckoutRequest shared.CreateCheckoutRequest `request:"mediaType=application/json"`
+	// The ID of the business location to associate the checkout with.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 }
 
 type CreateCheckoutResponse struct {

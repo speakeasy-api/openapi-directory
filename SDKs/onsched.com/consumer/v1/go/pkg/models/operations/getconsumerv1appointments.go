@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetConsumerV1AppointmentsQueryParams struct {
+type GetConsumerV1AppointmentsRequest struct {
 	// Filter by the email of who booked
 	BookedBy *string `queryParam:"style=form,explode=true,name=bookedBy"`
 	// Filter by calendar
@@ -39,10 +39,6 @@ type GetConsumerV1AppointmentsQueryParams struct {
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
 	// Filter by status: IN, BK, CN, RE, RS
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetConsumerV1AppointmentsRequest struct {
-	QueryParams GetConsumerV1AppointmentsQueryParams
 }
 
 type GetConsumerV1AppointmentsResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PostRealmAuthenticationRegisterRequiredActionPathParams struct {
+type PostRealmAuthenticationRegisterRequiredActionRequest struct {
+	// JSON containing 'providerId', and 'name' attributes.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmAuthenticationRegisterRequiredActionRequest struct {
-	PathParams PostRealmAuthenticationRegisterRequiredActionPathParams
-	// JSON containing 'providerId', and 'name' attributes.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostRealmAuthenticationRegisterRequiredActionResponse struct {

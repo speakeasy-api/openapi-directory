@@ -35,7 +35,7 @@ func newRewardEarningFulfillment(defaultClient, securityClient HTTPClient, serve
 
 // CreateRewardEarningFulfillment - Create a reward earning fulfillment
 // Create a reward earning fulfillment for a reward earning. There can only be one fulfillment for each earning.
-func (s *rewardEarningFulfillment) CreateRewardEarningFulfillment(ctx context.Context, request operations.CreateRewardEarningFulfillmentRequest) (*operations.CreateRewardEarningFulfillmentResponse, error) {
+func (s *rewardEarningFulfillment) CreateRewardEarningFulfillment(ctx context.Context, request shared.CreateRewardEarningFulfillmentRequestInput) (*operations.CreateRewardEarningFulfillmentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reward_earning_fulfillment"
 
@@ -106,7 +106,7 @@ func (s *rewardEarningFulfillment) CreateRewardEarningFulfillment(ctx context.Co
 // Get a reward earning fulfillment record by id.
 func (s *rewardEarningFulfillment) FetchRewardEarningFulfillment(ctx context.Context, request operations.FetchRewardEarningFulfillmentRequest) (*operations.FetchRewardEarningFulfillmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_earning_fulfillment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reward_earning_fulfillment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *rewardEarningFulfillment) FetchRewardEarningFulfillments(ctx context.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

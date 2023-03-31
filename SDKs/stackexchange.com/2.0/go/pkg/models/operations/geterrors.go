@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetErrorsQueryParams struct {
+type GetErrorsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -44,10 +44,6 @@ type GetErrorsQueryParams struct {
 	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
 	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetErrorsRequest struct {
-	QueryParams GetErrorsQueryParams
 }
 
 type GetErrorsResponse struct {

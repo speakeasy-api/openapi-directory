@@ -8,17 +8,12 @@ import (
 )
 
 type CaptureTransactionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CaptureTransactionPathParams struct {
-	LocationID    string `pathParam:"style=simple,explode=false,name=location_id"`
-	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CaptureTransactionRequest struct {
-	PathParams CaptureTransactionPathParams
-	Security   CaptureTransactionSecurity
+	LocationID    string `pathParam:"style=simple,explode=false,name=location_id"`
+	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
 }
 
 type CaptureTransactionResponse struct {

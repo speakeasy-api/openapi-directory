@@ -8,18 +8,13 @@ import (
 )
 
 type CreateScanSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateScanPathParams struct {
-	// UUID or name of the site to scan
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateScanRequest struct {
-	PathParams CreateScanPathParams
-	Request    *shared.ScanOptions `request:"mediaType=text/json"`
-	Security   CreateScanSecurity
+	ScanOptions *shared.ScanOptions `request:"mediaType=text/json"`
+	// UUID or name of the site to scan
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type CreateScanResponse struct {

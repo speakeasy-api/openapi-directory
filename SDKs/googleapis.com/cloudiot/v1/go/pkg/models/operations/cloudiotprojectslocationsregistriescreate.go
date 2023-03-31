@@ -8,13 +8,13 @@ import (
 )
 
 type CloudiotProjectsLocationsRegistriesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesCreateSecurity struct {
@@ -22,14 +22,10 @@ type CloudiotProjectsLocationsRegistriesCreateSecurity struct {
 	Option2 *CloudiotProjectsLocationsRegistriesCreateSecurityOption2 `security:"option"`
 }
 
-type CloudiotProjectsLocationsRegistriesCreatePathParams struct {
-	// Required. The project and cloud region where this device registry must be created. For example, `projects/example-project/locations/us-central1`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudiotProjectsLocationsRegistriesCreateQueryParams struct {
+type CloudiotProjectsLocationsRegistriesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv    *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DeviceRegistry *shared.DeviceRegistry `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type CloudiotProjectsLocationsRegistriesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The project and cloud region where this device registry must be created. For example, `projects/example-project/locations/us-central1`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type CloudiotProjectsLocationsRegistriesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudiotProjectsLocationsRegistriesCreateRequest struct {
-	PathParams  CloudiotProjectsLocationsRegistriesCreatePathParams
-	QueryParams CloudiotProjectsLocationsRegistriesCreateQueryParams
-	Request     *shared.DeviceRegistry `request:"mediaType=application/json"`
-	Security    CloudiotProjectsLocationsRegistriesCreateSecurity
 }
 
 type CloudiotProjectsLocationsRegistriesCreateResponse struct {

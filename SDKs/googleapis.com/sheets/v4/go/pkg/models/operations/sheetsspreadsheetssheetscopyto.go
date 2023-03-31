@@ -8,18 +8,18 @@ import (
 )
 
 type SheetsSpreadsheetsSheetsCopyToSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsSheetsCopyToSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsSheetsCopyToSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsSheetsCopyToSecurity struct {
@@ -28,16 +28,10 @@ type SheetsSpreadsheetsSheetsCopyToSecurity struct {
 	Option3 *SheetsSpreadsheetsSheetsCopyToSecurityOption3 `security:"option"`
 }
 
-type SheetsSpreadsheetsSheetsCopyToPathParams struct {
-	// The ID of the sheet to copy.
-	SheetID int64 `pathParam:"style=simple,explode=false,name=sheetId"`
-	// The ID of the spreadsheet containing the sheet to copy.
-	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
-}
-
-type SheetsSpreadsheetsSheetsCopyToQueryParams struct {
+type SheetsSpreadsheetsSheetsCopyToRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                          *shared.XgafvEnum                            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CopySheetToAnotherSpreadsheetRequest *shared.CopySheetToAnotherSpreadsheetRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -54,17 +48,14 @@ type SheetsSpreadsheetsSheetsCopyToQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the sheet to copy.
+	SheetID int64 `pathParam:"style=simple,explode=false,name=sheetId"`
+	// The ID of the spreadsheet containing the sheet to copy.
+	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SheetsSpreadsheetsSheetsCopyToRequest struct {
-	PathParams  SheetsSpreadsheetsSheetsCopyToPathParams
-	QueryParams SheetsSpreadsheetsSheetsCopyToQueryParams
-	Request     *shared.CopySheetToAnotherSpreadsheetRequest `request:"mediaType=application/json"`
-	Security    SheetsSpreadsheetsSheetsCopyToSecurity
 }
 
 type SheetsSpreadsheetsSheetsCopyToResponse struct {

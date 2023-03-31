@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDocumentationRelationsPathParams struct {
+type GetDocumentationRelationsRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetDocumentationRelationsRequest struct {
-	PathParams GetDocumentationRelationsPathParams
 }
 
 type GetDocumentationRelations200ApplicationJSONDocumentation struct {

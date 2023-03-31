@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CircuitsProvidersDeletePathParams struct {
+type CircuitsProvidersDeleteRequest struct {
 	// A unique integer value identifying this provider.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsProvidersDeleteRequest struct {
-	PathParams CircuitsProvidersDeletePathParams
 }
 
 type CircuitsProvidersDeleteResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadStyleGuidePathParams struct {
+type DownloadStyleGuideRequest struct {
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 	// Style Guide ID
 	StyleGuideID int64 `pathParam:"style=simple,explode=false,name=styleGuideId"`
-}
-
-type DownloadStyleGuideRequest struct {
-	PathParams DownloadStyleGuidePathParams
 }
 
 type DownloadStyleGuideResponse struct {

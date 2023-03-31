@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSentencesQueryParams struct {
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
 type GetSentencesRequest struct {
-	QueryParams GetSentencesQueryParams
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetSentences200ApplicationJSON struct {

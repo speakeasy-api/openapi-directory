@@ -8,18 +8,14 @@ import (
 )
 
 type GkehubProjectsLocationsGlobalMembershipsInitializeHubSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GkehubProjectsLocationsGlobalMembershipsInitializeHubPathParams struct {
-	// Required. The Hub to initialize, in the format `projects/*/locations/*/memberships/*`.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type GkehubProjectsLocationsGlobalMembershipsInitializeHubQueryParams struct {
+type GkehubProjectsLocationsGlobalMembershipsInitializeHubRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,19 +30,14 @@ type GkehubProjectsLocationsGlobalMembershipsInitializeHubQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The Hub to initialize, in the format `projects/*/locations/*/memberships/*`.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GkehubProjectsLocationsGlobalMembershipsInitializeHubRequest struct {
-	PathParams  GkehubProjectsLocationsGlobalMembershipsInitializeHubPathParams
-	QueryParams GkehubProjectsLocationsGlobalMembershipsInitializeHubQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    GkehubProjectsLocationsGlobalMembershipsInitializeHubSecurity
 }
 
 type GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse struct {

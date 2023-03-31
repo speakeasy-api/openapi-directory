@@ -33,15 +33,25 @@ func newBundles(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CalculatediscountsandtaxesBundles - Calculate discounts and taxes (Bundles)
 // Calculate discounts and taxes
-func (s *bundles) CalculatediscountsandtaxesBundles(ctx context.Context, request operations.CalculatediscountsandtaxesBundlesRequest) (*operations.CalculatediscountsandtaxesBundlesResponse, error) {
+func (s *bundles) CalculatediscountsandtaxesBundles(ctx context.Context, request operations.CalculatediscountsandtaxesBundlesRequest, opts ...operations.Option) (*operations.CalculatediscountsandtaxesBundlesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CalculatediscountsandtaxesBundlesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/pub/bundles"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalculatediscountsandtaxesBundlesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +66,7 @@ func (s *bundles) CalculatediscountsandtaxesBundles(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

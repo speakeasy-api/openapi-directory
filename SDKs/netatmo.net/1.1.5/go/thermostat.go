@@ -34,11 +34,11 @@ func newThermostat(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // Createnewschedule - The method createnewschedule creates a new schedule stored in the backup list.
-func (s *thermostat) Createnewschedule(ctx context.Context, request operations.CreatenewscheduleRequest) (*operations.CreatenewscheduleResponse, error) {
+func (s *thermostat) Createnewschedule(ctx context.Context, request operations.CreatenewscheduleRequest, security operations.CreatenewscheduleSecurity) (*operations.CreatenewscheduleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createnewschedule"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,11 +53,11 @@ func (s *thermostat) Createnewschedule(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *thermostat) Createnewschedule(ctx context.Context, request operations.C
 }
 
 // Getmeasure - The method getmeasure returns the measurements of a device or a module.
-func (s *thermostat) Getmeasure(ctx context.Context, request operations.GetmeasureRequest) (*operations.GetmeasureResponse, error) {
+func (s *thermostat) Getmeasure(ctx context.Context, request operations.GetmeasureRequest, security operations.GetmeasureSecurity) (*operations.GetmeasureResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getmeasure"
 
@@ -101,11 +101,11 @@ func (s *thermostat) Getmeasure(ctx context.Context, request operations.Getmeasu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *thermostat) Getmeasure(ctx context.Context, request operations.Getmeasu
 }
 
 // Getthermostatsdata - The method getthermostatsdata returns information about user's thermostats such as their last measurements.
-func (s *thermostat) Getthermostatsdata(ctx context.Context, request operations.GetthermostatsdataRequest) (*operations.GetthermostatsdataResponse, error) {
+func (s *thermostat) Getthermostatsdata(ctx context.Context, request operations.GetthermostatsdataRequest, security operations.GetthermostatsdataSecurity) (*operations.GetthermostatsdataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getthermostatsdata"
 
@@ -149,11 +149,11 @@ func (s *thermostat) Getthermostatsdata(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -188,7 +188,7 @@ func (s *thermostat) Getthermostatsdata(ctx context.Context, request operations.
 }
 
 // Setthermpoint - The method setthermpoint changes the Thermostat manual temperature setpoint.
-func (s *thermostat) Setthermpoint(ctx context.Context, request operations.SetthermpointRequest) (*operations.SetthermpointResponse, error) {
+func (s *thermostat) Setthermpoint(ctx context.Context, request operations.SetthermpointRequest, security operations.SetthermpointSecurity) (*operations.SetthermpointResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setthermpoint"
 
@@ -197,11 +197,11 @@ func (s *thermostat) Setthermpoint(ctx context.Context, request operations.Setth
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *thermostat) Setthermpoint(ctx context.Context, request operations.Setth
 }
 
 // Switchschedule - The method switchschedule switches the Thermostat's schedule to another existing schedule.
-func (s *thermostat) Switchschedule(ctx context.Context, request operations.SwitchscheduleRequest) (*operations.SwitchscheduleResponse, error) {
+func (s *thermostat) Switchschedule(ctx context.Context, request operations.SwitchscheduleRequest, security operations.SwitchscheduleSecurity) (*operations.SwitchscheduleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/switchschedule"
 
@@ -245,11 +245,11 @@ func (s *thermostat) Switchschedule(ctx context.Context, request operations.Swit
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,11 +284,11 @@ func (s *thermostat) Switchschedule(ctx context.Context, request operations.Swit
 }
 
 // Syncschedule - The method syncschedule changes the Thermostat weekly schedule.
-func (s *thermostat) Syncschedule(ctx context.Context, request operations.SyncscheduleRequest) (*operations.SyncscheduleResponse, error) {
+func (s *thermostat) Syncschedule(ctx context.Context, request operations.SyncscheduleRequest, security operations.SyncscheduleSecurity) (*operations.SyncscheduleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/syncschedule"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *thermostat) Syncschedule(ctx context.Context, request operations.Syncsc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

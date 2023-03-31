@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetDeploymentPathParams struct {
+type ReposGetDeploymentRequest struct {
 	// deployment_id parameter
 	DeploymentID int64 `pathParam:"style=simple,explode=false,name=deployment_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetDeploymentRequest struct {
-	PathParams ReposGetDeploymentPathParams
 }
 
 type ReposGetDeploymentResponse struct {

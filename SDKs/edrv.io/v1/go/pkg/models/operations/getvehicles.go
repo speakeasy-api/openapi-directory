@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetVehiclesQueryParams struct {
+type GetVehiclesRequest struct {
 	// Get a list of active vehicles
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Date as ISO String
@@ -35,10 +35,6 @@ type GetVehiclesQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetVehiclesRequest struct {
-	QueryParams GetVehiclesQueryParams
 }
 
 // GetVehicles200ApplicationJSON - Returns a list of vehicle objects

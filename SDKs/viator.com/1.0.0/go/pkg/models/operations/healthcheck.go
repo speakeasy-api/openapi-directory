@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type HealthCheckHeaders struct {
+type HealthCheckRequest struct {
 	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
 	//
 	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type HealthCheckRequest struct {
-	Headers HealthCheckHeaders
 }
 
 // HealthCheck200ApplicationJSON - Success

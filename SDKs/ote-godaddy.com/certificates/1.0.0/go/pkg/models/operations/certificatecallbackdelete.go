@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateCallbackDeletePathParams struct {
+type CertificateCallbackDeleteRequest struct {
 	// Certificate id to unregister callback
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateCallbackDeleteRequest struct {
-	PathParams CertificateCallbackDeletePathParams
 }
 
 type CertificateCallbackDeleteResponse struct {

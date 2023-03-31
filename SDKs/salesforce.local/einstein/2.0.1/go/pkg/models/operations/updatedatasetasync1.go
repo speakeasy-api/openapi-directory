@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateDatasetAsync1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateDatasetAsync1RequestBody struct {
@@ -16,11 +16,6 @@ type UpdateDatasetAsync1RequestBody struct {
 	Data *string `multipartForm:"name=data"`
 	// ID of the model that misclassified the images. The feedback examples are added to the dataset associated with this model.
 	ModelID *string `multipartForm:"name=modelId"`
-}
-
-type UpdateDatasetAsync1Request struct {
-	Request  *UpdateDatasetAsync1RequestBody `request:"mediaType=multipart/form-data"`
-	Security UpdateDatasetAsync1Security
 }
 
 type UpdateDatasetAsync1Response struct {

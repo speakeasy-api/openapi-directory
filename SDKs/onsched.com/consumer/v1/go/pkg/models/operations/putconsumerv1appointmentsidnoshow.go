@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PutConsumerV1AppointmentsIDNoshowPathParams struct {
+type PutConsumerV1AppointmentsIDNoshowRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// appointment id to mark as NoShow
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1AppointmentsIDNoshowRequest struct {
-	PathParams PutConsumerV1AppointmentsIDNoshowPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PutConsumerV1AppointmentsIDNoshowResponse struct {

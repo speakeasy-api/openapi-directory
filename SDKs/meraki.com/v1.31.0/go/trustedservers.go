@@ -34,9 +34,9 @@ func newTrustedServers(defaultClient, securityClient HTTPClient, serverURL, lang
 // Add a server to be trusted by Dynamic ARP Inspection on this network
 func (s *trustedServers) CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *trustedServers) CreateNetworkSwitchDhcpServerPolicyArpInspectionTrusted
 // Remove a server from being trusted by Dynamic ARP Inspection on this network
 func (s *trustedServers) DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,14 +125,14 @@ func (s *trustedServers) DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrusted
 // Return the list of servers trusted by Dynamic ARP Inspection on this network. These are also known as whitelisted snoop entries
 func (s *trustedServers) GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersRequest) (*operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,9 +176,9 @@ func (s *trustedServers) GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedSer
 // Update a server that is trusted by Dynamic ARP Inspection on this network
 func (s *trustedServers) UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

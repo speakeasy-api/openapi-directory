@@ -8,17 +8,12 @@ import (
 )
 
 type GetMePlaylistsPlaylistIDSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMePlaylistsPlaylistIDPathParams struct {
-	// SoundCloud playlist id
-	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetMePlaylistsPlaylistIDRequest struct {
-	PathParams GetMePlaylistsPlaylistIDPathParams
-	Security   GetMePlaylistsPlaylistIDSecurity
+	// SoundCloud playlist id
+	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
 }
 
 type GetMePlaylistsPlaylistIDResponse struct {

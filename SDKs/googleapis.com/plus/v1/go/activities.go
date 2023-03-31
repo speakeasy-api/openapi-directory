@@ -33,20 +33,20 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // PlusActivitiesGet - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-func (s *activities) PlusActivitiesGet(ctx context.Context, request operations.PlusActivitiesGetRequest) (*operations.PlusActivitiesGetResponse, error) {
+func (s *activities) PlusActivitiesGet(ctx context.Context, request operations.PlusActivitiesGetRequest, security operations.PlusActivitiesGetSecurity) (*operations.PlusActivitiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *activities) PlusActivitiesGet(ctx context.Context, request operations.P
 }
 
 // PlusActivitiesList - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-func (s *activities) PlusActivitiesList(ctx context.Context, request operations.PlusActivitiesListRequest) (*operations.PlusActivitiesListResponse, error) {
+func (s *activities) PlusActivitiesList(ctx context.Context, request operations.PlusActivitiesListRequest, security operations.PlusActivitiesListSecurity) (*operations.PlusActivitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/people/{userId}/activities/{collection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/people/{userId}/activities/{collection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *activities) PlusActivitiesList(ctx context.Context, request operations.
 }
 
 // PlusActivitiesSearch - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-func (s *activities) PlusActivitiesSearch(ctx context.Context, request operations.PlusActivitiesSearchRequest) (*operations.PlusActivitiesSearchResponse, error) {
+func (s *activities) PlusActivitiesSearch(ctx context.Context, request operations.PlusActivitiesSearchRequest, security operations.PlusActivitiesSearchSecurity) (*operations.PlusActivitiesSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/activities"
 
@@ -138,11 +138,11 @@ func (s *activities) PlusActivitiesSearch(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

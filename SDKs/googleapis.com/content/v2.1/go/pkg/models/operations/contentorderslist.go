@@ -10,13 +10,8 @@ import (
 )
 
 type ContentOrdersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ContentOrdersListPathParams struct {
-	// The ID of the account that manages the order. This cannot be a multi-client account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ContentOrdersListStatusesEnum string
@@ -69,7 +64,7 @@ func (e *ContentOrdersListStatusesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ContentOrdersListQueryParams struct {
+type ContentOrdersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -86,6 +81,8 @@ type ContentOrdersListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The maximum number of orders to return in the response, used for paging. The default value is 25 orders per page, and the maximum allowed value is 250 orders per page.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The ID of the account that manages the order. This cannot be a multi-client account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Order results by placement date in descending or ascending order. Acceptable values are: - placedDateAsc - placedDateDesc
@@ -106,12 +103,6 @@ type ContentOrdersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentOrdersListRequest struct {
-	PathParams  ContentOrdersListPathParams
-	QueryParams ContentOrdersListQueryParams
-	Security    ContentOrdersListSecurity
 }
 
 type ContentOrdersListResponse struct {

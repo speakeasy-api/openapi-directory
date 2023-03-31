@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UserTokenSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UserTokenPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UserTokenTypeEnum - User token types:<br>`token` - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.<br>`zak` - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days.
@@ -42,17 +36,13 @@ func (e *UserTokenTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UserTokenQueryParams struct {
+type UserTokenRequest struct {
 	// Use this field in conjunction with the `type` field where the value of `type` field is `zak`. The value of this field denotes the expiry time of the `zak` token in seconds. For example, if you would like the zak token to be expired after one hour of the token generation, the value of this field should be `3600`.
 	TTL *int64 `queryParam:"style=form,explode=true,name=ttl"`
 	// User token types:<br>`token` - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.<br>`zak` - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days.
 	Type *UserTokenTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type UserTokenRequest struct {
-	PathParams  UserTokenPathParams
-	QueryParams UserTokenQueryParams
-	Security    UserTokenSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // UserToken200ApplicationXML - **HTTP Status Code:** `200`<br>

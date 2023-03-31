@@ -34,16 +34,16 @@ func newAuthors(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PrivateAuthorDetails - Author details
 // View author details
-func (s *authors) PrivateAuthorDetails(ctx context.Context, request operations.PrivateAuthorDetailsRequest) (*operations.PrivateAuthorDetailsResponse, error) {
+func (s *authors) PrivateAuthorDetails(ctx context.Context, request operations.PrivateAuthorDetailsRequest, security operations.PrivateAuthorDetailsSecurity) (*operations.PrivateAuthorDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/authors/{author_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/authors/{author_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *authors) PrivateAuthorDetails(ctx context.Context, request operations.P
 
 // PrivateAuthorsSearch - Search Authors
 // Search for authors
-func (s *authors) PrivateAuthorsSearch(ctx context.Context, request operations.PrivateAuthorsSearchRequest) (*operations.PrivateAuthorsSearchResponse, error) {
+func (s *authors) PrivateAuthorsSearch(ctx context.Context, request shared.PrivateAuthorsSearch, security operations.PrivateAuthorsSearchSecurity) (*operations.PrivateAuthorsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/authors/search"
 
@@ -110,7 +110,7 @@ func (s *authors) PrivateAuthorsSearch(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

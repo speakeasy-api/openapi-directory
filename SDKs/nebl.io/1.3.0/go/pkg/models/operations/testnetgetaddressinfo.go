@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetAddressInfoPathParams struct {
+type TestnetGetAddressInfoRequest struct {
 	// Neblio Address to get information on.
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type TestnetGetAddressInfoRequest struct {
-	PathParams TestnetGetAddressInfoPathParams
 }
 
 type TestnetGetAddressInfoResponse struct {

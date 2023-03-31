@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostVehiclesVehicleidChargingSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type PostVehiclesVehicleidChargingPathParams struct {
-	// ID of the Vehicle
-	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostVehiclesVehicleidChargingRequest struct {
-	PathParams PostVehiclesVehicleidChargingPathParams
-	Security   PostVehiclesVehicleidChargingSecurity
+	// ID of the Vehicle
+	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
 }
 
 type PostVehiclesVehicleidChargingResponse struct {

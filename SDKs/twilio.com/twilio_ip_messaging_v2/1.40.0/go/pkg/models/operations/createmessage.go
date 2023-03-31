@@ -13,17 +13,8 @@ var CreateMessageServerList = []string{
 }
 
 type CreateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMessagePathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type CreateMessageHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.MessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMessageCreateMessageRequest struct {
@@ -37,11 +28,11 @@ type CreateMessageCreateMessageRequest struct {
 }
 
 type CreateMessageRequest struct {
-	PathParams CreateMessagePathParams
-	Headers    CreateMessageHeaders
-	Request    *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMessageSecurity
-	ServerURL  *string
+	ChannelSid  string                             `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                             `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.MessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateMessageResponse struct {

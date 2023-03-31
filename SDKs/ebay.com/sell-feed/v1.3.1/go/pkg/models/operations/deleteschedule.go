@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteScheduleSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteSchedulePathParams struct {
-	// The <strong>schedule_id</strong> of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the <strong>getSchedules</strong> method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
-	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteScheduleRequest struct {
-	PathParams DeleteSchedulePathParams
-	Security   DeleteScheduleSecurity
+	// The <strong>schedule_id</strong> of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the <strong>getSchedules</strong> method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
+	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 
 type DeleteScheduleResponse struct {

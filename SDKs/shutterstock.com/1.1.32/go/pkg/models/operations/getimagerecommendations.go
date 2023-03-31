@@ -8,22 +8,17 @@ import (
 )
 
 type GetImageRecommendationsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetImageRecommendationsQueryParams struct {
+type GetImageRecommendationsRequest struct {
 	// Image IDs
 	ID []string `queryParam:"style=form,explode=true,name=id"`
 	// Maximum number of results returned in the response
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=max_items"`
 	// Restrict results to safe images
 	Safe *bool `queryParam:"style=form,explode=true,name=safe"`
-}
-
-type GetImageRecommendationsRequest struct {
-	QueryParams GetImageRecommendationsQueryParams
-	Security    GetImageRecommendationsSecurity
 }
 
 type GetImageRecommendationsResponse struct {

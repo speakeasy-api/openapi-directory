@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteAPIV1DomainBlocksSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1DomainBlocksQueryParams struct {
-	// Domain to unblock.
-	Domain string `queryParam:"style=form,explode=true,name=domain"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAPIV1DomainBlocksRequest struct {
-	QueryParams DeleteAPIV1DomainBlocksQueryParams
-	Security    DeleteAPIV1DomainBlocksSecurity
+	// Domain to unblock.
+	Domain string `queryParam:"style=form,explode=true,name=domain"`
 }
 
 type DeleteAPIV1DomainBlocksResponse struct {

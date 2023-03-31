@@ -3,40 +3,40 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AssociateNodeRequest(
-    headers=operations.AssociateNodeHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="rem",
-        x_amz_credential="quas",
-        x_amz_date="animi",
-        x_amz_security_token="saepe",
-        x_amz_signature="harum",
-        x_amz_signed_headers="animi",
-        x_amz_target="OpsWorksCM_V2016_11_01.AssociateNode",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AssociateNodeRequest(
+)
+
+
+req = operations.AssociateNodeRequest(
+    associate_node_request=shared.AssociateNodeRequest(
         engine_attributes=[
             shared.EngineAttribute(
-                name="optio",
-                value="amet",
+                name="provident",
+                value="distinctio",
             ),
             shared.EngineAttribute(
-                name="eaque",
-                value="qui",
+                name="quibusdam",
+                value="unde",
+            ),
+            shared.EngineAttribute(
+                name="nulla",
+                value="corrupti",
             ),
         ],
-        node_name="et",
-        server_name="ex",
+        node_name="illum",
+        server_name="vel",
     ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
+    x_amz_target="OpsWorksCM_V2016_11_01.AssociateNode",
 )
     
 res = s.associate_node(req)

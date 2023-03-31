@@ -3,53 +3,59 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateEncryptionConfigRequest(
-    path_params=operations.AssociateEncryptionConfigPathParams(
-        name="sint",
-    ),
-    headers=operations.AssociateEncryptionConfigHeaders(
-        x_amz_algorithm="ratione",
-        x_amz_content_sha256="sed",
-        x_amz_credential="placeat",
-        x_amz_date="ut",
-        x_amz_security_token="ipsam",
-        x_amz_signature="aut",
-        x_amz_signed_headers="cum",
-    ),
-    request=operations.AssociateEncryptionConfigRequestBody(
-        client_request_token="aut",
+    request_body=operations.AssociateEncryptionConfigRequestBody(
+        client_request_token="corrupti",
         encryption_config=[
             shared.EncryptionConfig(
                 provider=shared.Provider(
-                    key_arn="dolore",
+                    key_arn="distinctio",
                 ),
                 resources=[
-                    "quis",
-                    "in",
-                    "velit",
+                    "unde",
+                    "nulla",
+                    "corrupti",
+                    "illum",
                 ],
             ),
             shared.EncryptionConfig(
                 provider=shared.Provider(
-                    key_arn="eligendi",
+                    key_arn="vel",
                 ),
                 resources=[
-                    "quaerat",
-                    "dolorem",
                     "deserunt",
+                    "suscipit",
+                    "iure",
+                ],
+            ),
+            shared.EncryptionConfig(
+                provider=shared.Provider(
+                    key_arn="magnam",
+                ),
+                resources=[
+                    "ipsa",
+                    "delectus",
+                    "tempora",
+                    "suscipit",
                 ],
             ),
         ],
     ),
+    x_amz_algorithm="molestiae",
+    x_amz_content_sha256="minus",
+    x_amz_credential="placeat",
+    x_amz_date="voluptatum",
+    x_amz_security_token="iusto",
+    x_amz_signature="excepturi",
+    x_amz_signed_headers="nisi",
+    name="recusandae",
 )
     
 res = s.associate_encryption_config(req)

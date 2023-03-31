@@ -4,26 +4,29 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FindRequest(
-    query_params=operations.FindQueryParams(
-        classification_id=[
-            "harum",
-        ],
-        classification_name=[
-            "et",
-        ],
-        id="blanditiis",
-        include_licensed_content="yes",
-        include_spellcheck=" no",
-        include_test=" only",
-        keyword="quos",
-        locale="voluptate",
-        page="labore",
-        size="quasi",
-        sort="voluptatum",
-        source=" universe",
-    ),
+    classification_id=[
+        "provident",
+        "distinctio",
+        "quibusdam",
+    ],
+    classification_name=[
+        "nulla",
+        "corrupti",
+        "illum",
+    ],
+    id="vel",
+    include_licensed_content=" no",
+    include_spellcheck=" no",
+    include_test=" no",
+    keyword="iure",
+    locale="magnam",
+    page="debitis",
+    size="ipsa",
+    sort="delectus",
+    source=" universe",
 )
     
 res = s.find(req)

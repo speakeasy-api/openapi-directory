@@ -8,17 +8,13 @@ import (
 )
 
 type GetEventSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetEventPathParams struct {
-	// The UUID of the audit event to retrieve
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetEventRequest struct {
-	PathParams GetEventPathParams
-	Security   GetEventSecurity
+	// The UUID of the audit event to retrieve
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetEventResponse struct {

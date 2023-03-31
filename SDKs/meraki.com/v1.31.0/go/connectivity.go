@@ -34,14 +34,14 @@ func newConnectivity(defaultClient, securityClient HTTPClient, serverURL, langua
 // Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
 func (s *connectivity) GetNetworkSmDeviceConnectivity(ctx context.Context, request operations.GetNetworkSmDeviceConnectivityRequest) (*operations.GetNetworkSmDeviceConnectivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/connectivity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/connectivity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

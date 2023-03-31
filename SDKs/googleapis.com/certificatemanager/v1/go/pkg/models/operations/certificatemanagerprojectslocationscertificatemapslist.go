@@ -8,16 +8,11 @@ import (
 )
 
 type CertificatemanagerProjectsLocationsCertificateMapsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CertificatemanagerProjectsLocationsCertificateMapsListPathParams struct {
-	// Required. The project and location from which the certificate maps should be listed, specified in the format `projects/*/locations/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CertificatemanagerProjectsLocationsCertificateMapsListQueryParams struct {
+type CertificatemanagerProjectsLocationsCertificateMapsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type CertificatemanagerProjectsLocationsCertificateMapsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last `ListCertificateMapsResponse`. Indicates that this is a continuation of a prior `ListCertificateMaps` call, and that the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project and location from which the certificate maps should be listed, specified in the format `projects/*/locations/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type CertificatemanagerProjectsLocationsCertificateMapsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CertificatemanagerProjectsLocationsCertificateMapsListRequest struct {
-	PathParams  CertificatemanagerProjectsLocationsCertificateMapsListPathParams
-	QueryParams CertificatemanagerProjectsLocationsCertificateMapsListQueryParams
-	Security    CertificatemanagerProjectsLocationsCertificateMapsListSecurity
 }
 
 type CertificatemanagerProjectsLocationsCertificateMapsListResponse struct {

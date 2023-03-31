@@ -13,14 +13,12 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GenerateTokenV2Request{
-        Request: &operations.GenerateTokenV2RequestBody{
-            Assertion: "SOME_ASSERTION_STRING",
-            GrantType: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-            RefreshToken: "SomeRefreshToken",
-            Scope: "offline",
-            ValidFor: 120,
-        },
+    req := operations.GenerateTokenV2RequestBody{
+        Assertion: "SOME_ASSERTION_STRING",
+        GrantType: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+        RefreshToken: "SomeRefreshToken",
+        Scope: "offline",
+        ValidFor: 120,
     }
 
     ctx := context.Background()

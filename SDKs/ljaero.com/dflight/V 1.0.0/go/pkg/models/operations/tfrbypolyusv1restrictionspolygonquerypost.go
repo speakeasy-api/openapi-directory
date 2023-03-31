@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TfrByPolyUsV1RestrictionsPolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type TfrByPolyUsV1RestrictionsPolygonQueryPostRequest struct {
-	Headers TfrByPolyUsV1RestrictionsPolygonQueryPostHeaders
-	Request shared.NOTAMsByPolygon `request:"mediaType=application/json"`
+	NOTAMsByPolygon shared.NOTAMsByPolygon `request:"mediaType=application/json"`
+	XAPIKey         *string                `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type TfrByPolyUsV1RestrictionsPolygonQueryPostResponse struct {

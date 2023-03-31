@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // MetastoreProjectsLocationsFederationsCreate - Creates a metastore federation in a project and location.
-func (s *projects) MetastoreProjectsLocationsFederationsCreate(ctx context.Context, request operations.MetastoreProjectsLocationsFederationsCreateRequest) (*operations.MetastoreProjectsLocationsFederationsCreateResponse, error) {
+func (s *projects) MetastoreProjectsLocationsFederationsCreate(ctx context.Context, request operations.MetastoreProjectsLocationsFederationsCreateRequest, security operations.MetastoreProjectsLocationsFederationsCreateSecurity) (*operations.MetastoreProjectsLocationsFederationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/federations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/federations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FederationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) MetastoreProjectsLocationsFederationsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) MetastoreProjectsLocationsFederationsCreate(ctx context.Conte
 }
 
 // MetastoreProjectsLocationsFederationsList - Lists federations in a project and location.
-func (s *projects) MetastoreProjectsLocationsFederationsList(ctx context.Context, request operations.MetastoreProjectsLocationsFederationsListRequest) (*operations.MetastoreProjectsLocationsFederationsListResponse, error) {
+func (s *projects) MetastoreProjectsLocationsFederationsList(ctx context.Context, request operations.MetastoreProjectsLocationsFederationsListRequest, security operations.MetastoreProjectsLocationsFederationsListSecurity) (*operations.MetastoreProjectsLocationsFederationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/federations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/federations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) MetastoreProjectsLocationsFederationsList(ctx context.Context
 }
 
 // MetastoreProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) MetastoreProjectsLocationsList(ctx context.Context, request operations.MetastoreProjectsLocationsListRequest) (*operations.MetastoreProjectsLocationsListResponse, error) {
+func (s *projects) MetastoreProjectsLocationsList(ctx context.Context, request operations.MetastoreProjectsLocationsListRequest, security operations.MetastoreProjectsLocationsListSecurity) (*operations.MetastoreProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) MetastoreProjectsLocationsList(ctx context.Context, request o
 }
 
 // MetastoreProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
-func (s *projects) MetastoreProjectsLocationsOperationsCancel(ctx context.Context, request operations.MetastoreProjectsLocationsOperationsCancelRequest) (*operations.MetastoreProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) MetastoreProjectsLocationsOperationsCancel(ctx context.Context, request operations.MetastoreProjectsLocationsOperationsCancelRequest, security operations.MetastoreProjectsLocationsOperationsCancelSecurity) (*operations.MetastoreProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) MetastoreProjectsLocationsOperationsCancel(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) MetastoreProjectsLocationsOperationsCancel(ctx context.Contex
 }
 
 // MetastoreProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
-func (s *projects) MetastoreProjectsLocationsOperationsList(ctx context.Context, request operations.MetastoreProjectsLocationsOperationsListRequest) (*operations.MetastoreProjectsLocationsOperationsListResponse, error) {
+func (s *projects) MetastoreProjectsLocationsOperationsList(ctx context.Context, request operations.MetastoreProjectsLocationsOperationsListRequest, security operations.MetastoreProjectsLocationsOperationsListSecurity) (*operations.MetastoreProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) MetastoreProjectsLocationsOperationsList(ctx context.Context,
 }
 
 // MetastoreProjectsLocationsServicesAlterLocation - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
-func (s *projects) MetastoreProjectsLocationsServicesAlterLocation(ctx context.Context, request operations.MetastoreProjectsLocationsServicesAlterLocationRequest) (*operations.MetastoreProjectsLocationsServicesAlterLocationResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesAlterLocation(ctx context.Context, request operations.MetastoreProjectsLocationsServicesAlterLocationRequest, security operations.MetastoreProjectsLocationsServicesAlterLocationSecurity) (*operations.MetastoreProjectsLocationsServicesAlterLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:alterLocation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:alterLocation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AlterMetadataResourceLocationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) MetastoreProjectsLocationsServicesAlterLocation(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) MetastoreProjectsLocationsServicesAlterLocation(ctx context.C
 }
 
 // MetastoreProjectsLocationsServicesBackupsCreate - Creates a new backup in a given project and location.
-func (s *projects) MetastoreProjectsLocationsServicesBackupsCreate(ctx context.Context, request operations.MetastoreProjectsLocationsServicesBackupsCreateRequest) (*operations.MetastoreProjectsLocationsServicesBackupsCreateResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesBackupsCreate(ctx context.Context, request operations.MetastoreProjectsLocationsServicesBackupsCreateRequest, security operations.MetastoreProjectsLocationsServicesBackupsCreateSecurity) (*operations.MetastoreProjectsLocationsServicesBackupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/backups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) MetastoreProjectsLocationsServicesBackupsCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) MetastoreProjectsLocationsServicesBackupsCreate(ctx context.C
 }
 
 // MetastoreProjectsLocationsServicesBackupsDelete - Deletes a single backup.
-func (s *projects) MetastoreProjectsLocationsServicesBackupsDelete(ctx context.Context, request operations.MetastoreProjectsLocationsServicesBackupsDeleteRequest) (*operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesBackupsDelete(ctx context.Context, request operations.MetastoreProjectsLocationsServicesBackupsDeleteRequest, security operations.MetastoreProjectsLocationsServicesBackupsDeleteSecurity) (*operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) MetastoreProjectsLocationsServicesBackupsDelete(ctx context.C
 }
 
 // MetastoreProjectsLocationsServicesBackupsList - Lists backups in a service.
-func (s *projects) MetastoreProjectsLocationsServicesBackupsList(ctx context.Context, request operations.MetastoreProjectsLocationsServicesBackupsListRequest) (*operations.MetastoreProjectsLocationsServicesBackupsListResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesBackupsList(ctx context.Context, request operations.MetastoreProjectsLocationsServicesBackupsListRequest, security operations.MetastoreProjectsLocationsServicesBackupsListSecurity) (*operations.MetastoreProjectsLocationsServicesBackupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/backups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,11 +492,11 @@ func (s *projects) MetastoreProjectsLocationsServicesBackupsList(ctx context.Con
 }
 
 // MetastoreProjectsLocationsServicesCreate - Creates a metastore service in a project and location.
-func (s *projects) MetastoreProjectsLocationsServicesCreate(ctx context.Context, request operations.MetastoreProjectsLocationsServicesCreateRequest) (*operations.MetastoreProjectsLocationsServicesCreateResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesCreate(ctx context.Context, request operations.MetastoreProjectsLocationsServicesCreateRequest, security operations.MetastoreProjectsLocationsServicesCreateSecurity) (*operations.MetastoreProjectsLocationsServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/services", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,11 +508,11 @@ func (s *projects) MetastoreProjectsLocationsServicesCreate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,20 +547,20 @@ func (s *projects) MetastoreProjectsLocationsServicesCreate(ctx context.Context,
 }
 
 // MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicy(ctx context.Context, request operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyRequest) (*operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicy(ctx context.Context, request operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyRequest, security operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicySecurity) (*operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicy
 }
 
 // MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
-func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy(ctx context.Context, request operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyRequest) (*operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy(ctx context.Context, request operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyRequest, security operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicySecurity) (*operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy
 }
 
 // MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissions(ctx context.Context, request operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsRequest) (*operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissions(ctx context.Context, request operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsRequest, security operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsSecurity) (*operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,11 +705,11 @@ func (s *projects) MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermi
 }
 
 // MetastoreProjectsLocationsServicesExportMetadata - Exports metadata from a service.
-func (s *projects) MetastoreProjectsLocationsServicesExportMetadata(ctx context.Context, request operations.MetastoreProjectsLocationsServicesExportMetadataRequest) (*operations.MetastoreProjectsLocationsServicesExportMetadataResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesExportMetadata(ctx context.Context, request operations.MetastoreProjectsLocationsServicesExportMetadataRequest, security operations.MetastoreProjectsLocationsServicesExportMetadataSecurity) (*operations.MetastoreProjectsLocationsServicesExportMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:exportMetadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:exportMetadata", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportMetadataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -721,11 +721,11 @@ func (s *projects) MetastoreProjectsLocationsServicesExportMetadata(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,20 +760,20 @@ func (s *projects) MetastoreProjectsLocationsServicesExportMetadata(ctx context.
 }
 
 // MetastoreProjectsLocationsServicesList - Lists services in a project and location.
-func (s *projects) MetastoreProjectsLocationsServicesList(ctx context.Context, request operations.MetastoreProjectsLocationsServicesListRequest) (*operations.MetastoreProjectsLocationsServicesListResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesList(ctx context.Context, request operations.MetastoreProjectsLocationsServicesListRequest, security operations.MetastoreProjectsLocationsServicesListSecurity) (*operations.MetastoreProjectsLocationsServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,11 +808,11 @@ func (s *projects) MetastoreProjectsLocationsServicesList(ctx context.Context, r
 }
 
 // MetastoreProjectsLocationsServicesMetadataImportsCreate - Creates a new MetadataImport in a given project and location.
-func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsCreate(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsCreateRequest) (*operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsCreate(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsCreateRequest, security operations.MetastoreProjectsLocationsServicesMetadataImportsCreateSecurity) (*operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/metadataImports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/metadataImports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MetadataImportInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -824,11 +824,11 @@ func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsCreate(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,20 +863,20 @@ func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsCreate(ctx c
 }
 
 // MetastoreProjectsLocationsServicesMetadataImportsGet - Gets details of a single import.
-func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsGet(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsGetRequest) (*operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsGet(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsGetRequest, security operations.MetastoreProjectsLocationsServicesMetadataImportsGetSecurity) (*operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -911,20 +911,20 @@ func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsGet(ctx cont
 }
 
 // MetastoreProjectsLocationsServicesMetadataImportsList - Lists imports in a service.
-func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsList(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsListRequest) (*operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsList(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsListRequest, security operations.MetastoreProjectsLocationsServicesMetadataImportsListSecurity) (*operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/metadataImports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/metadataImports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -959,11 +959,11 @@ func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsList(ctx con
 }
 
 // MetastoreProjectsLocationsServicesMetadataImportsPatch - Updates a single import. Only the description field of MetadataImport is supported to be updated.
-func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsPatch(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest) (*operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsPatch(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest, security operations.MetastoreProjectsLocationsServicesMetadataImportsPatchSecurity) (*operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MetadataImportInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -975,11 +975,11 @@ func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsPatch(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1014,11 +1014,11 @@ func (s *projects) MetastoreProjectsLocationsServicesMetadataImportsPatch(ctx co
 }
 
 // MetastoreProjectsLocationsServicesMoveTableToDatabase - Move a table to another database.
-func (s *projects) MetastoreProjectsLocationsServicesMoveTableToDatabase(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest) (*operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesMoveTableToDatabase(ctx context.Context, request operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest, security operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity) (*operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:moveTableToDatabase", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:moveTableToDatabase", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MoveTableToDatabaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1030,11 +1030,11 @@ func (s *projects) MetastoreProjectsLocationsServicesMoveTableToDatabase(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1069,11 +1069,11 @@ func (s *projects) MetastoreProjectsLocationsServicesMoveTableToDatabase(ctx con
 }
 
 // MetastoreProjectsLocationsServicesQueryMetadata - Query DPMS metadata.
-func (s *projects) MetastoreProjectsLocationsServicesQueryMetadata(ctx context.Context, request operations.MetastoreProjectsLocationsServicesQueryMetadataRequest) (*operations.MetastoreProjectsLocationsServicesQueryMetadataResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesQueryMetadata(ctx context.Context, request operations.MetastoreProjectsLocationsServicesQueryMetadataRequest, security operations.MetastoreProjectsLocationsServicesQueryMetadataSecurity) (*operations.MetastoreProjectsLocationsServicesQueryMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:queryMetadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:queryMetadata", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryMetadataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1085,11 +1085,11 @@ func (s *projects) MetastoreProjectsLocationsServicesQueryMetadata(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1124,11 +1124,11 @@ func (s *projects) MetastoreProjectsLocationsServicesQueryMetadata(ctx context.C
 }
 
 // MetastoreProjectsLocationsServicesRemoveIamPolicy - Removes the attached IAM policies for a resource
-func (s *projects) MetastoreProjectsLocationsServicesRemoveIamPolicy(ctx context.Context, request operations.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest) (*operations.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesRemoveIamPolicy(ctx context.Context, request operations.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest, security operations.MetastoreProjectsLocationsServicesRemoveIamPolicySecurity) (*operations.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:removeIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{resource}:removeIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1140,11 +1140,11 @@ func (s *projects) MetastoreProjectsLocationsServicesRemoveIamPolicy(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1179,11 +1179,11 @@ func (s *projects) MetastoreProjectsLocationsServicesRemoveIamPolicy(ctx context
 }
 
 // MetastoreProjectsLocationsServicesRestore - Restores a service from a backup.
-func (s *projects) MetastoreProjectsLocationsServicesRestore(ctx context.Context, request operations.MetastoreProjectsLocationsServicesRestoreRequest) (*operations.MetastoreProjectsLocationsServicesRestoreResponse, error) {
+func (s *projects) MetastoreProjectsLocationsServicesRestore(ctx context.Context, request operations.MetastoreProjectsLocationsServicesRestoreRequest, security operations.MetastoreProjectsLocationsServicesRestoreSecurity) (*operations.MetastoreProjectsLocationsServicesRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{service}:restore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1195,11 +1195,11 @@ func (s *projects) MetastoreProjectsLocationsServicesRestore(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

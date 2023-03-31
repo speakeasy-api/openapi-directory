@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePayment1PathParams struct {
+type CreatePayment1Request struct {
+	// New payment.
+	PaymentDTO shared.PaymentDTO `request:"mediaType=application/json"`
 	// vendor invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type CreatePayment1Request struct {
-	PathParams CreatePayment1PathParams
-	// New payment.
-	Request shared.PaymentDTO `request:"mediaType=application/json"`
 }
 
 type CreatePayment1Response struct {

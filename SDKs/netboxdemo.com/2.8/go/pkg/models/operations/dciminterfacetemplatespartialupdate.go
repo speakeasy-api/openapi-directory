@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInterfaceTemplatesPartialUpdatePathParams struct {
+type DcimInterfaceTemplatesPartialUpdateRequest struct {
+	WritableInterfaceTemplateInput shared.WritableInterfaceTemplateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this interface template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimInterfaceTemplatesPartialUpdateRequest struct {
-	PathParams DcimInterfaceTemplatesPartialUpdatePathParams
-	Request    shared.WritableInterfaceTemplateInput `request:"mediaType=application/json"`
 }
 
 type DcimInterfaceTemplatesPartialUpdateResponse struct {

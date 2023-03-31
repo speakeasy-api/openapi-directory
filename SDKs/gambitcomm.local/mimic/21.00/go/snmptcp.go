@@ -37,7 +37,7 @@ func newSnmptcp(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Agent's SNMPTCP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *snmptcp) ProtocolSnmptcpGetArgs(ctx context.Context, request operations.ProtocolSnmptcpGetArgsRequest) (*operations.ProtocolSnmptcpGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/args", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/args", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *snmptcp) ProtocolSnmptcpGetArgs(ctx context.Context, request operations
 // Agent's SNMPTCP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *snmptcp) ProtocolSnmptcpGetConfig(ctx context.Context, request operations.ProtocolSnmptcpGetConfigRequest) (*operations.ProtocolSnmptcpGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *snmptcp) ProtocolSnmptcpGetConfig(ctx context.Context, request operatio
 // Statistics of fields indicated in the headers
 func (s *snmptcp) ProtocolSnmptcpGetStatistics(ctx context.Context, request operations.ProtocolSnmptcpGetStatisticsRequest) (*operations.ProtocolSnmptcpGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *snmptcp) ProtocolSnmptcpGetStatsHdr(ctx context.Context) (*operations.P
 // Trace 1 means enabled, 0 means not
 func (s *snmptcp) ProtocolSnmptcpGetTrace(ctx context.Context, request operations.ProtocolSnmptcpGetTraceRequest) (*operations.ProtocolSnmptcpGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/trace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/trace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *snmptcp) ProtocolSnmptcpGetTrace(ctx context.Context, request operation
 // By default, the MIMIC SNMPTCP server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *snmptcp) ProtocolSnmptcpIpaliasDisable(ctx context.Context, request operations.ProtocolSnmptcpIpaliasDisableRequest) (*operations.ProtocolSnmptcpIpaliasDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/disable/{ipaddress}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/disable/{ipaddress}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -314,7 +314,7 @@ func (s *snmptcp) ProtocolSnmptcpIpaliasDisable(ctx context.Context, request ope
 // By default, the MIMIC SNMPTCP server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *snmptcp) ProtocolSnmptcpIpaliasEnable(ctx context.Context, request operations.ProtocolSnmptcpIpaliasEnableRequest) (*operations.ProtocolSnmptcpIpaliasEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/enable/{ipaddress}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/enable/{ipaddress}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -361,7 +361,7 @@ func (s *snmptcp) ProtocolSnmptcpIpaliasEnable(ctx context.Context, request oper
 // By default, the MIMIC SNMPTCP server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *snmptcp) ProtocolSnmptcpIpaliasIsenabled(ctx context.Context, request operations.ProtocolSnmptcpIpaliasIsenabledRequest) (*operations.ProtocolSnmptcpIpaliasIsenabledResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/isenabled/{ipaddress}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/isenabled/{ipaddress}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +408,7 @@ func (s *snmptcp) ProtocolSnmptcpIpaliasIsenabled(ctx context.Context, request o
 // By default, the MIMIC SNMPTCP server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *snmptcp) ProtocolSnmptcpIpaliasList(ctx context.Context, request operations.ProtocolSnmptcpIpaliasListRequest) (*operations.ProtocolSnmptcpIpaliasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -454,7 +454,7 @@ func (s *snmptcp) ProtocolSnmptcpIpaliasList(ctx context.Context, request operat
 // Agent's SNMPTCP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *snmptcp) ProtocolSnmptcpSetConfig(ctx context.Context, request operations.ProtocolSnmptcpSetConfigRequest) (*operations.ProtocolSnmptcpSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/config/{argument}/{value}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/config/{argument}/{value}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -501,7 +501,7 @@ func (s *snmptcp) ProtocolSnmptcpSetConfig(ctx context.Context, request operatio
 // 1 to enable, 0 to disable
 func (s *snmptcp) ProtocolSnmptcpSetTrace(ctx context.Context, request operations.ProtocolSnmptcpSetTraceRequest) (*operations.ProtocolSnmptcpSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/trace/{enableOrNot}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/trace/{enableOrNot}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersDeleteGpgKeyForAuthenticatedPathParams struct {
+type UsersDeleteGpgKeyForAuthenticatedRequest struct {
 	// gpg_key_id parameter
 	GpgKeyID int64 `pathParam:"style=simple,explode=false,name=gpg_key_id"`
-}
-
-type UsersDeleteGpgKeyForAuthenticatedRequest struct {
-	PathParams UsersDeleteGpgKeyForAuthenticatedPathParams
 }
 
 type UsersDeleteGpgKeyForAuthenticatedResponse struct {

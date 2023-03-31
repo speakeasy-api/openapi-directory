@@ -3,42 +3,42 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetPersonalizedRankingRequest(
-    headers=operations.GetPersonalizedRankingHeaders(
-        x_amz_algorithm="sapiente",
-        x_amz_content_sha256="molestiae",
-        x_amz_credential="aut",
-        x_amz_date="illo",
-        x_amz_security_token="sapiente",
-        x_amz_signature="quisquam",
-        x_amz_signed_headers="ad",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.GetPersonalizedRankingRequestBody(
-        campaign_arn="incidunt",
+)
+
+
+req = operations.GetPersonalizedRankingRequest(
+    request_body=operations.GetPersonalizedRankingRequestBody(
+        campaign_arn="corrupti",
         context={
-            "suscipit": "officiis",
-            "cum": "totam",
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
-        filter_arn="mollitia",
+        filter_arn="vel",
         filter_values={
-            "quos": "beatae",
+            "deserunt": "suscipit",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
         input_list=[
-            "dolor",
-            "veritatis",
-            "dicta",
+            "tempora",
+            "suscipit",
+            "molestiae",
+            "minus",
         ],
-        user_id="consequatur",
+        user_id="placeat",
     ),
+    x_amz_algorithm="voluptatum",
+    x_amz_content_sha256="iusto",
+    x_amz_credential="excepturi",
+    x_amz_date="nisi",
+    x_amz_security_token="recusandae",
+    x_amz_signature="temporibus",
+    x_amz_signed_headers="ab",
 )
     
 res = s.get_personalized_ranking(req)

@@ -13,23 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AutoCompleteRequest{
-        QueryParams: operations.AutoCompleteQueryParams{
-            ProductNameContains: "jeans",
-        },
-        Headers: operations.AutoCompleteHeaders{
-            Accept: "application/json",
-            ContentType: "application/json",
-        },
+        Accept: "application/json",
+        ContentType: "application/json",
+        ProductNameContains: "jeans",
     }
 
     ctx := context.Background()

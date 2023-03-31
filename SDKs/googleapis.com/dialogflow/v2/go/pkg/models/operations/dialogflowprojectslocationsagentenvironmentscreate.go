@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentEnvironmentsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentEnvironmentsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentEnvironmentsCreateSecurity struct {
@@ -22,14 +22,10 @@ type DialogflowProjectsLocationsAgentEnvironmentsCreateSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentEnvironmentsCreateSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentEnvironmentsCreatePathParams struct {
-	// Required. The agent to create an environment for. Supported formats: - `projects//agent` - `projects//locations//agent`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsAgentEnvironmentsCreateQueryParams struct {
+type DialogflowProjectsLocationsAgentEnvironmentsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                             *shared.XgafvEnum                               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDialogflowV2EnvironmentInput *shared.GoogleCloudDialogflowV2EnvironmentInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -44,6 +40,8 @@ type DialogflowProjectsLocationsAgentEnvironmentsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The agent to create an environment for. Supported formats: - `projects//agent` - `projects//locations//agent`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type DialogflowProjectsLocationsAgentEnvironmentsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentEnvironmentsCreateRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentEnvironmentsCreatePathParams
-	QueryParams DialogflowProjectsLocationsAgentEnvironmentsCreateQueryParams
-	Request     *shared.GoogleCloudDialogflowV2EnvironmentInput `request:"mediaType=application/json"`
-	Security    DialogflowProjectsLocationsAgentEnvironmentsCreateSecurity
 }
 
 type DialogflowProjectsLocationsAgentEnvironmentsCreateResponse struct {

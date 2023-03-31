@@ -13,21 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetSearchVersionNumberAdditionalDataExtRequest{
-        PathParams: operations.GetSearchVersionNumberAdditionalDataExtPathParams{
-            Ext: "json",
-            VersionNumber: "2",
-        },
-        QueryParams: operations.GetSearchVersionNumberAdditionalDataExtQueryParams{
-            Geometries: "corrupti",
-            GeometriesZoom: "13",
-        },
+        Ext: "json",
+        Geometries: "corrupti",
+        GeometriesZoom: "13",
+        VersionNumber: "2",
     }
 
     ctx := context.Background()

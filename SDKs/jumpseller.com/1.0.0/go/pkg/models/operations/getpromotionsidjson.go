@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPromotionsIDJSONPathParams struct {
-	// Id of the Promotion
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPromotionsIDJSONQueryParams struct {
+type GetPromotionsIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Promotion
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetPromotionsIDJSONRequest struct {
-	PathParams  GetPromotionsIDJSONPathParams
-	QueryParams GetPromotionsIDJSONQueryParams
 }
 
 type GetPromotionsIDJSONResponse struct {

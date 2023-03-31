@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type FolderSettingsDeletePathParams struct {
+type FolderSettingsDeleteRequest struct {
 	// The ID of the folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FolderSettingsDeleteRequest struct {
-	PathParams FolderSettingsDeletePathParams
 }
 
 type FolderSettingsDeleteResponse struct {

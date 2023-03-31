@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type ClientAPICanDeleteQueryParams struct {
-	ID int `queryParam:"style=form,explode=true,name=id"`
-}
-
-type ClientAPICanDeleteHeaders struct {
+type ClientAPICanDeleteRequest struct {
+	ID          int    `queryParam:"style=form,explode=true,name=id"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type ClientAPICanDeleteRequest struct {
-	QueryParams ClientAPICanDeleteQueryParams
-	Headers     ClientAPICanDeleteHeaders
 }
 
 type ClientAPICanDeleteResponse struct {

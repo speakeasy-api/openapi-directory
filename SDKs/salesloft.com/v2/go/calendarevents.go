@@ -44,7 +44,7 @@ func (s *calendarEvents) GetV2CalendarEvents(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *calendarEvents) GetV2CalendarEvents(ctx context.Context, request operat
 //	This endpoint is used for bulk operations, see https://developers.salesloft.com/bulk.html for integration instructions.
 //	Use `calendar/events/upsert` as an event type, and this spec as a data spec.
 //	This endpoint should be used directly for the time sensitive calendar event updates.
-func (s *calendarEvents) PostV2CalendarEventsUpsert(ctx context.Context, request operations.PostV2CalendarEventsUpsertRequest) (*operations.PostV2CalendarEventsUpsertResponse, error) {
+func (s *calendarEvents) PostV2CalendarEventsUpsert(ctx context.Context, request operations.PostV2CalendarEventsUpsertRequestBody) (*operations.PostV2CalendarEventsUpsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/calendar/events/upsert"
 

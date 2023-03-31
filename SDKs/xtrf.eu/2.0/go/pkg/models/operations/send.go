@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SendPathParams struct {
+type SendRequest struct {
 	// provider invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type SendRequest struct {
-	PathParams SendPathParams
 }
 
 type SendResponse struct {

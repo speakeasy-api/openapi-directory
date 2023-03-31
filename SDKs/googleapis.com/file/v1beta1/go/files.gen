@@ -30,10 +30,9 @@ pkg/models/operations/fileprojectslocationsoperationsget.go
 pkg/models/operations/fileprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
-pkg/models/shared/backup.go
 pkg/models/shared/altenum.go
+pkg/models/shared/backup.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listbackupsresponse.go
 pkg/models/shared/instance.go
 pkg/models/shared/networkconfig.go

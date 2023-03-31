@@ -8,12 +8,14 @@ import (
 )
 
 type CreateInternationalPaymentConsentsJSONSecurity struct {
-	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateInternationalPaymentConsentsJSONHeaders struct {
+type CreateInternationalPaymentConsentsJSONRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// Default
+	OBWriteInternationalConsent5 shared.OBWriteInternationalConsent5 `request:"mediaType=application/json"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -30,13 +32,6 @@ type CreateInternationalPaymentConsentsJSONHeaders struct {
 	XIdempotencyKey string `header:"style=simple,explode=false,name=x-idempotency-key"`
 	// A detached JWS signature of the body of the payload.
 	XJwsSignature string `header:"style=simple,explode=false,name=x-jws-signature"`
-}
-
-type CreateInternationalPaymentConsentsJSONRequest struct {
-	Headers CreateInternationalPaymentConsentsJSONHeaders
-	// Default
-	Request  shared.OBWriteInternationalConsent5 `request:"mediaType=application/json"`
-	Security CreateInternationalPaymentConsentsJSONSecurity
 }
 
 type CreateInternationalPaymentConsentsJSONResponse struct {

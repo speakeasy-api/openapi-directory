@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddUserHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 // AddUserAddUserRequestBodyPermissions - An object containing name/value pairs for each permission. Any permission that is not passed will be set to `false` by default. Note that users will be unable to see any files in the account unless you include `list` permission.
 // When creating a user with the `role` **admin**, you should set all of the permissions to `true`
 type AddUserAddUserRequestBodyPermissions struct {
@@ -91,8 +84,11 @@ type AddUserAddUserRequestBody struct {
 }
 
 type AddUserRequest struct {
-	Headers AddUserHeaders
-	Request *AddUserAddUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddUserAddUserRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddUserResponse struct {

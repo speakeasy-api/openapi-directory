@@ -7,18 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningListAlertsForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type SecretScanningListAlertsForOrgQueryParams struct {
+type SecretScanningListAlertsForOrgRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
 	Before *string `queryParam:"style=form,explode=true,name=before"`
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
@@ -33,11 +30,6 @@ type SecretScanningListAlertsForOrgQueryParams struct {
 	Sort *shared.SecretScanningAlertSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
 	State *shared.SecretScanningAlertStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type SecretScanningListAlertsForOrgRequest struct {
-	PathParams  SecretScanningListAlertsForOrgPathParams
-	QueryParams SecretScanningListAlertsForOrgQueryParams
 }
 
 // SecretScanningListAlertsForOrg503ApplicationJSON - Service unavailable

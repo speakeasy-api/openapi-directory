@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWebhookV1Request struct {
-	Request *shared.CreateWebhookRequest `request:"mediaType=application/json"`
-}
-
 type CreateWebhookV1Response struct {
 	ContentType string
 	Headers     map[string][]string

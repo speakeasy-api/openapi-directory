@@ -8,17 +8,13 @@ import (
 )
 
 type FindClientValidatorByIDSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindClientValidatorByIDPathParams struct {
-	// The auth. config id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindClientValidatorByIDRequest struct {
-	PathParams FindClientValidatorByIDPathParams
-	Security   FindClientValidatorByIDSecurity
+	// The auth. config id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type FindClientValidatorByIDResponse struct {

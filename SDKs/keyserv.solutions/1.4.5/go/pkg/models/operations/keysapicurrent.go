@@ -10,12 +10,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeysAPICurrentPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type KeysAPICurrentRequest struct {
-	PathParams KeysAPICurrentPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type KeysAPICurrent200ApplicationJSONType string

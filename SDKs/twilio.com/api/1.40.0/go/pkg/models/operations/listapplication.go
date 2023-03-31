@@ -12,15 +12,13 @@ var ListApplicationServerList = []string{
 }
 
 type ListApplicationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListApplicationPathParams struct {
+type ListApplicationRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListApplicationQueryParams struct {
 	// The string that identifies the Application resources to read.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -29,13 +27,6 @@ type ListApplicationQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListApplicationRequest struct {
-	PathParams  ListApplicationPathParams
-	QueryParams ListApplicationQueryParams
-	Security    ListApplicationSecurity
-	ServerURL   *string
 }
 
 // ListApplicationListApplicationResponse - OK

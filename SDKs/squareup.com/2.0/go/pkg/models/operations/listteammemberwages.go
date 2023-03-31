@@ -8,10 +8,10 @@ import (
 )
 
 type ListTeamMemberWagesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListTeamMemberWagesQueryParams struct {
+type ListTeamMemberWagesRequest struct {
 	// A pointer to the next page of `EmployeeWage` results to fetch.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// The maximum number of `TeamMemberWage` results to return per page. The number can range between
@@ -20,11 +20,6 @@ type ListTeamMemberWagesQueryParams struct {
 	// Filter the returned wages to only those that are associated with the
 	// specified team member.
 	TeamMemberID *string `queryParam:"style=form,explode=true,name=team_member_id"`
-}
-
-type ListTeamMemberWagesRequest struct {
-	QueryParams ListTeamMemberWagesQueryParams
-	Security    ListTeamMemberWagesSecurity
 }
 
 type ListTeamMemberWagesResponse struct {

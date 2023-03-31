@@ -33,20 +33,20 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // ResellerSubscriptionsActivate - Activates a subscription previously suspended by the reseller. If you did not suspend the customer subscription and it is suspended for any other reason, such as for abuse or a pending ToS acceptance, this call will not reactivate the customer subscription.
-func (s *subscriptions) ResellerSubscriptionsActivate(ctx context.Context, request operations.ResellerSubscriptionsActivateRequest) (*operations.ResellerSubscriptionsActivateResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsActivate(ctx context.Context, request operations.ResellerSubscriptionsActivateRequest, security operations.ResellerSubscriptionsActivateSecurity) (*operations.ResellerSubscriptionsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/activate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *subscriptions) ResellerSubscriptionsActivate(ctx context.Context, reque
 }
 
 // ResellerSubscriptionsChangePlan - Updates a subscription plan. Use this method to update a plan for a 30-day trial or a flexible plan subscription to an annual commitment plan with monthly or yearly payments. How a plan is updated differs depending on the plan and the products. For more information, see the description in [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_subscription_plan).
-func (s *subscriptions) ResellerSubscriptionsChangePlan(ctx context.Context, request operations.ResellerSubscriptionsChangePlanRequest) (*operations.ResellerSubscriptionsChangePlanResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsChangePlan(ctx context.Context, request operations.ResellerSubscriptionsChangePlanRequest, security operations.ResellerSubscriptionsChangePlanSecurity) (*operations.ResellerSubscriptionsChangePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changePlan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changePlan", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangePlanRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *subscriptions) ResellerSubscriptionsChangePlan(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *subscriptions) ResellerSubscriptionsChangePlan(ctx context.Context, req
 }
 
 // ResellerSubscriptionsChangeRenewalSettings - Updates a user license's renewal settings. This is applicable for accounts with annual commitment plans only. For more information, see the description in [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
-func (s *subscriptions) ResellerSubscriptionsChangeRenewalSettings(ctx context.Context, request operations.ResellerSubscriptionsChangeRenewalSettingsRequest) (*operations.ResellerSubscriptionsChangeRenewalSettingsResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsChangeRenewalSettings(ctx context.Context, request operations.ResellerSubscriptionsChangeRenewalSettingsRequest, security operations.ResellerSubscriptionsChangeRenewalSettingsSecurity) (*operations.ResellerSubscriptionsChangeRenewalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeRenewalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeRenewalSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RenewalSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *subscriptions) ResellerSubscriptionsChangeRenewalSettings(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,11 +191,11 @@ func (s *subscriptions) ResellerSubscriptionsChangeRenewalSettings(ctx context.C
 }
 
 // ResellerSubscriptionsChangeSeats - Updates a subscription's user license settings. For more information about updating an annual commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_subscription_seat).
-func (s *subscriptions) ResellerSubscriptionsChangeSeats(ctx context.Context, request operations.ResellerSubscriptionsChangeSeatsRequest) (*operations.ResellerSubscriptionsChangeSeatsResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsChangeSeats(ctx context.Context, request operations.ResellerSubscriptionsChangeSeatsRequest, security operations.ResellerSubscriptionsChangeSeatsSecurity) (*operations.ResellerSubscriptionsChangeSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Seats", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,11 +207,11 @@ func (s *subscriptions) ResellerSubscriptionsChangeSeats(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,20 +246,20 @@ func (s *subscriptions) ResellerSubscriptionsChangeSeats(ctx context.Context, re
 }
 
 // ResellerSubscriptionsDelete - Cancels, suspends, or transfers a subscription to direct.
-func (s *subscriptions) ResellerSubscriptionsDelete(ctx context.Context, request operations.ResellerSubscriptionsDeleteRequest) (*operations.ResellerSubscriptionsDeleteResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsDelete(ctx context.Context, request operations.ResellerSubscriptionsDeleteRequest, security operations.ResellerSubscriptionsDeleteSecurity) (*operations.ResellerSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,20 +285,20 @@ func (s *subscriptions) ResellerSubscriptionsDelete(ctx context.Context, request
 }
 
 // ResellerSubscriptionsGet - Gets a specific subscription. The `subscriptionId` can be found using the [Retrieve all reseller subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions) method. For more information about retrieving a specific subscription, see the information descrived in [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_subscription).
-func (s *subscriptions) ResellerSubscriptionsGet(ctx context.Context, request operations.ResellerSubscriptionsGetRequest) (*operations.ResellerSubscriptionsGetResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsGet(ctx context.Context, request operations.ResellerSubscriptionsGetRequest, security operations.ResellerSubscriptionsGetSecurity) (*operations.ResellerSubscriptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -333,11 +333,11 @@ func (s *subscriptions) ResellerSubscriptionsGet(ctx context.Context, request op
 }
 
 // ResellerSubscriptionsInsert - Creates or transfer a subscription. Create a subscription for a customer's account that you ordered using the [Order a new customer account](/admin-sdk/reseller/v1/reference/customers/insert.html) method. For more information about creating a subscription for different payment plans, see [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#create_subscription).\ If you did not order the customer's account using the customer insert method, use the customer's `customerAuthToken` when creating a subscription for that customer. If transferring a G Suite subscription with an associated Google Drive or Google Vault subscription, use the [batch operation](/admin-sdk/reseller/v1/how-tos/batch.html) to transfer all of these subscriptions. For more information, see how to [transfer subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
-func (s *subscriptions) ResellerSubscriptionsInsert(ctx context.Context, request operations.ResellerSubscriptionsInsertRequest) (*operations.ResellerSubscriptionsInsertResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsInsert(ctx context.Context, request operations.ResellerSubscriptionsInsertRequest, security operations.ResellerSubscriptionsInsertSecurity) (*operations.ResellerSubscriptionsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,11 +349,11 @@ func (s *subscriptions) ResellerSubscriptionsInsert(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,7 +388,7 @@ func (s *subscriptions) ResellerSubscriptionsInsert(ctx context.Context, request
 }
 
 // ResellerSubscriptionsList - Lists of subscriptions managed by the reseller. The list can be all subscriptions, all of a customer's subscriptions, or all of a customer's transferable subscriptions. Optionally, this method can filter the response by a `customerNamePrefix`. For more information, see [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions).
-func (s *subscriptions) ResellerSubscriptionsList(ctx context.Context, request operations.ResellerSubscriptionsListRequest) (*operations.ResellerSubscriptionsListResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsList(ctx context.Context, request operations.ResellerSubscriptionsListRequest, security operations.ResellerSubscriptionsListSecurity) (*operations.ResellerSubscriptionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/reseller/v1/subscriptions"
 
@@ -397,11 +397,11 @@ func (s *subscriptions) ResellerSubscriptionsList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -436,20 +436,20 @@ func (s *subscriptions) ResellerSubscriptionsList(ctx context.Context, request o
 }
 
 // ResellerSubscriptionsStartPaidService - Immediately move a 30-day free trial subscription to a paid service subscription. This method is only applicable if a payment plan has already been set up for the 30-day trial subscription. For more information, see [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#paid_service).
-func (s *subscriptions) ResellerSubscriptionsStartPaidService(ctx context.Context, request operations.ResellerSubscriptionsStartPaidServiceRequest) (*operations.ResellerSubscriptionsStartPaidServiceResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsStartPaidService(ctx context.Context, request operations.ResellerSubscriptionsStartPaidServiceRequest, security operations.ResellerSubscriptionsStartPaidServiceSecurity) (*operations.ResellerSubscriptionsStartPaidServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/startPaidService", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/startPaidService", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -484,20 +484,20 @@ func (s *subscriptions) ResellerSubscriptionsStartPaidService(ctx context.Contex
 }
 
 // ResellerSubscriptionsSuspend - Suspends an active subscription. You can use this method to suspend a paid subscription that is currently in the `ACTIVE` state. * For `FLEXIBLE` subscriptions, billing is paused. * For `ANNUAL_MONTHLY_PAY` or `ANNUAL_YEARLY_PAY` subscriptions: * Suspending the subscription does not change the renewal date that was originally committed to. * A suspended subscription does not renew. If you activate the subscription after the original renewal date, a new annual subscription will be created, starting on the day of activation. We strongly encourage you to suspend subscriptions only for short periods of time as suspensions over 60 days may result in the subscription being cancelled.
-func (s *subscriptions) ResellerSubscriptionsSuspend(ctx context.Context, request operations.ResellerSubscriptionsSuspendRequest) (*operations.ResellerSubscriptionsSuspendResponse, error) {
+func (s *subscriptions) ResellerSubscriptionsSuspend(ctx context.Context, request operations.ResellerSubscriptionsSuspendRequest, security operations.ResellerSubscriptionsSuspendSecurity) (*operations.ResellerSubscriptionsSuspendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/suspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/suspend", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

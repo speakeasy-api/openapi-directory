@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceBaysListQueryParams struct {
+type DcimDeviceBaysListRequest struct {
 	Device   *string `queryParam:"style=form,explode=true,name=device"`
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// Number of results to return per page.
@@ -16,10 +16,6 @@ type DcimDeviceBaysListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type DcimDeviceBaysListRequest struct {
-	QueryParams DcimDeviceBaysListQueryParams
 }
 
 type DcimDeviceBaysList200ApplicationJSON struct {

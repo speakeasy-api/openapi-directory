@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsCreateRemoveTokenForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsCreateRemoveTokenForOrgRequest struct {
-	PathParams ActionsCreateRemoveTokenForOrgPathParams
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsCreateRemoveTokenForOrgResponse struct {

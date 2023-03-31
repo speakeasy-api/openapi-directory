@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEventSubscriptionsPathParams struct {
+type GetEventSubscriptionsRequest struct {
 	// ID of event subscription - can be obtained from web hook response
 	SubscriptionID string `pathParam:"style=simple,explode=false,name=SubscriptionId"`
-}
-
-type GetEventSubscriptionsRequest struct {
-	PathParams GetEventSubscriptionsPathParams
 }
 
 type GetEventSubscriptionsResponse struct {

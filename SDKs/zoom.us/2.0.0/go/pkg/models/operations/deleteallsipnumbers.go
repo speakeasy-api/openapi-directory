@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAllSipNumbersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteAllSipNumbersPathParams struct {
-	// Account ID of the sub account from which the numbers are to be deleted. This can be retrieved from [List sub accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAllSipNumbersRequest struct {
-	PathParams DeleteAllSipNumbersPathParams
-	Security   DeleteAllSipNumbersSecurity
+	// Account ID of the sub account from which the numbers are to be deleted. This can be retrieved from [List sub accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type DeleteAllSipNumbersResponse struct {

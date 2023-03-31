@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostOwnershipInstallQueryParams struct {
+type PostOwnershipInstallRequest struct {
 	// The id of the App being owned
 	AppID string `queryParam:"style=form,explode=true,name=appId"`
 	// A custom JSON object to attach to this ownership record
@@ -17,10 +17,6 @@ type PostOwnershipInstallQueryParams struct {
 	ModelID *string `queryParam:"style=form,explode=true,name=modelId"`
 	// The id of the User requesting to own the App
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type PostOwnershipInstallRequest struct {
-	QueryParams PostOwnershipInstallQueryParams
 }
 
 type PostOwnershipInstallResponse struct {

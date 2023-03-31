@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GkehubProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request operations.GkehubProjectsLocationsListRequest) (*operations.GkehubProjectsLocationsListResponse, error) {
+func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request operations.GkehubProjectsLocationsListRequest, security operations.GkehubProjectsLocationsListSecurity) (*operations.GkehubProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request oper
 }
 
 // GkehubProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkehubProjectsLocationsOperationsCancelRequest) (*operations.GkehubProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkehubProjectsLocationsOperationsCancelRequest, security operations.GkehubProjectsLocationsOperationsCancelSecurity) (*operations.GkehubProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, 
 }
 
 // GkehubProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) GkehubProjectsLocationsOperationsGet(ctx context.Context, request operations.GkehubProjectsLocationsOperationsGetRequest) (*operations.GkehubProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) GkehubProjectsLocationsOperationsGet(ctx context.Context, request operations.GkehubProjectsLocationsOperationsGetRequest, security operations.GkehubProjectsLocationsOperationsGetSecurity) (*operations.GkehubProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) GkehubProjectsLocationsOperationsGet(ctx context.Context, req
 }
 
 // GkehubProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, request operations.GkehubProjectsLocationsOperationsListRequest) (*operations.GkehubProjectsLocationsOperationsListResponse, error) {
+func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, request operations.GkehubProjectsLocationsOperationsListRequest, security operations.GkehubProjectsLocationsOperationsListSecurity) (*operations.GkehubProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

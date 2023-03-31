@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newLogin(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // PostAuthObtain - Authenticate user
 // The received token should be used for authenticated requests by including in the Authorization header as `Authorization: JWT <token>`.
-func (s *login) PostAuthObtain(ctx context.Context, request operations.PostAuthObtainRequest) (*operations.PostAuthObtainResponse, error) {
+func (s *login) PostAuthObtain(ctx context.Context, request shared.Login) (*operations.PostAuthObtainResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/obtain/"
 
@@ -108,7 +109,7 @@ func (s *login) PostAuthObtain(ctx context.Context, request operations.PostAuthO
 }
 
 // PostAuthRefresh - Replace token with a new one
-func (s *login) PostAuthRefresh(ctx context.Context, request operations.PostAuthRefreshRequest) (*operations.PostAuthRefreshResponse, error) {
+func (s *login) PostAuthRefresh(ctx context.Context, request operations.PostAuthRefreshRequestBody) (*operations.PostAuthRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/refresh/"
 
@@ -182,7 +183,7 @@ func (s *login) PostAuthRefresh(ctx context.Context, request operations.PostAuth
 }
 
 // PostAuthRevoke - Revoke a token
-func (s *login) PostAuthRevoke(ctx context.Context, request operations.PostAuthRevokeRequest) (*operations.PostAuthRevokeResponse, error) {
+func (s *login) PostAuthRevoke(ctx context.Context, request operations.PostAuthRevokeRequestBody) (*operations.PostAuthRevokeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/revoke/"
 
@@ -257,7 +258,7 @@ func (s *login) PostAuthRevoke(ctx context.Context, request operations.PostAuthR
 
 // PostAuthVerify - Verify a token
 // Check for the validity of a user token.
-func (s *login) PostAuthVerify(ctx context.Context, request operations.PostAuthVerifyRequest) (*operations.PostAuthVerifyResponse, error) {
+func (s *login) PostAuthVerify(ctx context.Context, request operations.PostAuthVerifyRequestBody) (*operations.PostAuthVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/verify/"
 
@@ -332,7 +333,7 @@ func (s *login) PostAuthVerify(ctx context.Context, request operations.PostAuthV
 
 // PostEnterpriseAuthObtain - Enterprise user authentication
 // The received token should be used for authenticated requests by including in the Authorization header as `Authorization: JWT <token>`.
-func (s *login) PostEnterpriseAuthObtain(ctx context.Context, request operations.PostEnterpriseAuthObtainRequest) (*operations.PostEnterpriseAuthObtainResponse, error) {
+func (s *login) PostEnterpriseAuthObtain(ctx context.Context, request shared.Login) (*operations.PostEnterpriseAuthObtainResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enterprise/auth/obtain/"
 
@@ -406,7 +407,7 @@ func (s *login) PostEnterpriseAuthObtain(ctx context.Context, request operations
 }
 
 // PostEnterpriseAuthRefresh - Enterprise token refresh
-func (s *login) PostEnterpriseAuthRefresh(ctx context.Context, request operations.PostEnterpriseAuthRefreshRequest) (*operations.PostEnterpriseAuthRefreshResponse, error) {
+func (s *login) PostEnterpriseAuthRefresh(ctx context.Context, request operations.PostEnterpriseAuthRefreshRequestBody) (*operations.PostEnterpriseAuthRefreshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enterprise/auth/refresh/"
 
@@ -480,7 +481,7 @@ func (s *login) PostEnterpriseAuthRefresh(ctx context.Context, request operation
 }
 
 // PostEnterpriseAuthRevoke - Enterprise token revokation
-func (s *login) PostEnterpriseAuthRevoke(ctx context.Context, request operations.PostEnterpriseAuthRevokeRequest) (*operations.PostEnterpriseAuthRevokeResponse, error) {
+func (s *login) PostEnterpriseAuthRevoke(ctx context.Context, request operations.PostEnterpriseAuthRevokeRequestBody) (*operations.PostEnterpriseAuthRevokeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enterprise/auth/revoke/"
 
@@ -555,7 +556,7 @@ func (s *login) PostEnterpriseAuthRevoke(ctx context.Context, request operations
 
 // PostEnterpriseAuthVerify - Enterprise token verification
 // Check for the validity of a user token.
-func (s *login) PostEnterpriseAuthVerify(ctx context.Context, request operations.PostEnterpriseAuthVerifyRequest) (*operations.PostEnterpriseAuthVerifyResponse, error) {
+func (s *login) PostEnterpriseAuthVerify(ctx context.Context, request operations.PostEnterpriseAuthVerifyRequestBody) (*operations.PostEnterpriseAuthVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enterprise/auth/verify/"
 

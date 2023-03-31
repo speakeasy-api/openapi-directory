@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUserBindingServerList = []string{
@@ -12,22 +11,17 @@ var DeleteUserBindingServerList = []string{
 }
 
 type DeleteUserBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUserBindingPathParams struct {
+type DeleteUserBindingRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the User Binding resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the User Binding resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) with the User Binding resources to delete.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
 	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
-}
-
-type DeleteUserBindingRequest struct {
-	PathParams DeleteUserBindingPathParams
-	Security   DeleteUserBindingSecurity
-	ServerURL  *string
 }
 
 type DeleteUserBindingResponse struct {

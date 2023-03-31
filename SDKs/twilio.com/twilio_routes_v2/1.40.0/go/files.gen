@@ -18,7 +18,7 @@ pkg/models/operations/updatephonenumber.go
 pkg/models/operations/updatesipdomain.go
 pkg/models/operations/updatetrunks.go
 pkg/models/shared/routesv2phonenumber.go
-pkg/models/shared/security.go
 pkg/models/shared/routesv2sipdomain.go
 pkg/models/shared/routesv2trunks.go
 USAGE.md
+pkg/models/operations/options.go

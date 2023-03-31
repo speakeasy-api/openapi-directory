@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type PutRealmUsersIDGroupsGroupIDPathParams struct {
+type PutRealmUsersIDGroupsGroupIDRequest struct {
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmUsersIDGroupsGroupIDRequest struct {
-	PathParams PutRealmUsersIDGroupsGroupIDPathParams
 }
 
 type PutRealmUsersIDGroupsGroupIDResponse struct {

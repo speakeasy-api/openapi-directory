@@ -32,11 +32,11 @@ func newCampaignCreativeAssociations(defaultClient, securityClient HTTPClient, s
 }
 
 // DfareportingCampaignCreativeAssociationsInsert - Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
-func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsInsert(ctx context.Context, request operations.DfareportingCampaignCreativeAssociationsInsertRequest) (*operations.DfareportingCampaignCreativeAssociationsInsertResponse, error) {
+func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsInsert(ctx context.Context, request operations.DfareportingCampaignCreativeAssociationsInsertRequest, security operations.DfareportingCampaignCreativeAssociationsInsertSecurity) (*operations.DfareportingCampaignCreativeAssociationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CampaignCreativeAssociation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsI
 }
 
 // DfareportingCampaignCreativeAssociationsList - Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
-func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsList(ctx context.Context, request operations.DfareportingCampaignCreativeAssociationsListRequest) (*operations.DfareportingCampaignCreativeAssociationsListResponse, error) {
+func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsList(ctx context.Context, request operations.DfareportingCampaignCreativeAssociationsListRequest, security operations.DfareportingCampaignCreativeAssociationsListSecurity) (*operations.DfareportingCampaignCreativeAssociationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

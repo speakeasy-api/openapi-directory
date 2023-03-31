@@ -33,13 +33,9 @@ func (e *SeriesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SeriesPathParams struct {
+type SeriesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format SeriesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type SeriesRequest struct {
-	PathParams SeriesPathParams
 }
 
 type SeriesResponse struct {

@@ -12,10 +12,11 @@ var ListInsightsAssessmentsCommentServerList = []string{
 }
 
 type ListInsightsAssessmentsCommentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListInsightsAssessmentsCommentQueryParams struct {
+type ListInsightsAssessmentsCommentRequest struct {
 	// The id of the agent.
 	AgentID *string `queryParam:"style=form,explode=true,name=AgentId"`
 	// The page index. This value is simply for client state.
@@ -26,18 +27,8 @@ type ListInsightsAssessmentsCommentQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The id of the segment.
 	SegmentID *string `queryParam:"style=form,explode=true,name=SegmentId"`
-}
-
-type ListInsightsAssessmentsCommentHeaders struct {
 	// The Token HTTP request header
 	Token *string `header:"style=simple,explode=false,name=Token"`
-}
-
-type ListInsightsAssessmentsCommentRequest struct {
-	QueryParams ListInsightsAssessmentsCommentQueryParams
-	Headers     ListInsightsAssessmentsCommentHeaders
-	Security    ListInsightsAssessmentsCommentSecurity
-	ServerURL   *string
 }
 
 type ListInsightsAssessmentsCommentListInsightsAssessmentsCommentResponseMeta struct {

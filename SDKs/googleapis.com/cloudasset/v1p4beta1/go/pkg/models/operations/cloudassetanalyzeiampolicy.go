@@ -8,16 +8,11 @@ import (
 )
 
 type CloudassetAnalyzeIamPolicySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudassetAnalyzeIamPolicyPathParams struct {
-	// Required. The relative name of the root asset. Only resources and IAM policies within the parent will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudassetAnalyzeIamPolicyQueryParams struct {
+type CloudassetAnalyzeIamPolicyRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -54,6 +49,8 @@ type CloudassetAnalyzeIamPolicyQueryParams struct {
 	OptionsOutputGroupEdges *bool `queryParam:"style=form,explode=true,name=options.outputGroupEdges"`
 	// Optional. If true, the result will output resource edges, starting from the policy attached resource, to any expanded resources. Default is false.
 	OptionsOutputResourceEdges *bool `queryParam:"style=form,explode=true,name=options.outputResourceEdges"`
+	// Required. The relative name of the root asset. Only resources and IAM policies within the parent will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -62,12 +59,6 @@ type CloudassetAnalyzeIamPolicyQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudassetAnalyzeIamPolicyRequest struct {
-	PathParams  CloudassetAnalyzeIamPolicyPathParams
-	QueryParams CloudassetAnalyzeIamPolicyQueryParams
-	Security    CloudassetAnalyzeIamPolicySecurity
 }
 
 type CloudassetAnalyzeIamPolicyResponse struct {

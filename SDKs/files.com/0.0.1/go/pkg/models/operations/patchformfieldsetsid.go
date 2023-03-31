@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchFormFieldSetsIDPathParams struct {
-	// Form Field Set ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchFormFieldSetsIDRequest struct {
-	PathParams PatchFormFieldSetsIDPathParams
-	Request    shared.PatchFormFieldSets `request:"mediaType=application/json"`
+	// Form Field Set ID.
+	ID                 int                       `pathParam:"style=simple,explode=false,name=id"`
+	PatchFormFieldSets shared.PatchFormFieldSets `request:"mediaType=application/json"`
 }
 
 type PatchFormFieldSetsIDResponse struct {

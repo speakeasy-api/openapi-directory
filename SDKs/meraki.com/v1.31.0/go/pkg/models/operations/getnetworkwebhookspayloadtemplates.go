@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkWebhooksPayloadTemplatesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkWebhooksPayloadTemplatesRequest struct {
-	PathParams GetNetworkWebhooksPayloadTemplatesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkWebhooksPayloadTemplates200ApplicationJSONHeaders struct {

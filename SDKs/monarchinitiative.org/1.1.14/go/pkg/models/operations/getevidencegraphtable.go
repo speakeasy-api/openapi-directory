@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEvidenceGraphTablePathParams struct {
+type GetEvidenceGraphTableRequest struct {
 	// association id, e.g. 68e686f6-d05b-46b8-ab1f-1da2fff97ada
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEvidenceGraphTableQueryParams struct {
 	// If true, considers dc:source as edge
 	IsPublication *bool `queryParam:"style=form,explode=true,name=is_publication"`
-}
-
-type GetEvidenceGraphTableRequest struct {
-	PathParams  GetEvidenceGraphTablePathParams
-	QueryParams GetEvidenceGraphTableQueryParams
 }
 
 type GetEvidenceGraphTableResponse struct {

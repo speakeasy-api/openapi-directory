@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetOrgVariablePathParams struct {
+type ActionsGetOrgVariableRequest struct {
 	// The name of the variable.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsGetOrgVariableRequest struct {
-	PathParams ActionsGetOrgVariablePathParams
 }
 
 type ActionsGetOrgVariableResponse struct {

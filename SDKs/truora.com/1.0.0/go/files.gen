@@ -47,7 +47,6 @@ pkg/models/shared/error.go
 pkg/models/shared/behaviouroutput.go
 pkg/models/shared/behavior.go
 pkg/models/shared/createbehaviorinput.go
-pkg/models/shared/security.go
 pkg/models/shared/database.go
 pkg/models/shared/checkoutput.go
 pkg/models/shared/check.go
@@ -85,4 +84,5 @@ pkg/models/shared/report.go
 pkg/models/shared/batchuploadinput.go
 pkg/models/shared/createreportinput.go
 pkg/models/shared/reportsoutput.go
+pkg/models/shared/security.go
 USAGE.md

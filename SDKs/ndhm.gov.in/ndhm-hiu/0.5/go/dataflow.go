@@ -38,15 +38,25 @@ func newDataFlow(defaultClient, securityClient HTTPClient, serverURL, language, 
 //  1. **Invalid consent artefact id**
 //  2. **Consent has expired**
 //  3. **Date ranges are invalid**
-func (s *dataFlow) PostV05HealthInformationHiuOnRequestJSON(ctx context.Context, request operations.PostV05HealthInformationHiuOnRequestJSONRequest) (*operations.PostV05HealthInformationHiuOnRequestJSONResponse, error) {
+func (s *dataFlow) PostV05HealthInformationHiuOnRequestJSON(ctx context.Context, request operations.PostV05HealthInformationHiuOnRequestJSONRequest, opts ...operations.Option) (*operations.PostV05HealthInformationHiuOnRequestJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationHiuOnRequestJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hiu/on-request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HIUHealthInformationRequestResponse", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -61,7 +71,7 @@ func (s *dataFlow) PostV05HealthInformationHiuOnRequestJSON(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -114,15 +124,25 @@ func (s *dataFlow) PostV05HealthInformationHiuOnRequestJSON(ctx context.Context,
 //  1. **Invalid consent artefact id**
 //  2. **Consent has expired**
 //  3. **Date ranges are invalid**
-func (s *dataFlow) PostV05HealthInformationHiuOnRequestRaw(ctx context.Context, request operations.PostV05HealthInformationHiuOnRequestRawRequest) (*operations.PostV05HealthInformationHiuOnRequestRawResponse, error) {
+func (s *dataFlow) PostV05HealthInformationHiuOnRequestRaw(ctx context.Context, request operations.PostV05HealthInformationHiuOnRequestRawRequest, opts ...operations.Option) (*operations.PostV05HealthInformationHiuOnRequestRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationHiuOnRequestRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/hiu/on-request"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +157,7 @@ func (s *dataFlow) PostV05HealthInformationHiuOnRequestRaw(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -193,15 +213,25 @@ func (s *dataFlow) PostV05HealthInformationHiuOnRequestRaw(ctx context.Context, 
 //  4. Media contains the mimetype of content, and for v1, it is "application/fhir+json"
 //  5. checksum is Md5 checksum of the data conent, before encryption
 //  6. Please refer to the NDHM Sandbox documentation for the format of FHIR bundle that is passed through content
-func (s *dataFlow) PostV05HealthInformationTransferJSON(ctx context.Context, request operations.PostV05HealthInformationTransferJSONRequest) (*operations.PostV05HealthInformationTransferJSONResponse, error) {
+func (s *dataFlow) PostV05HealthInformationTransferJSON(ctx context.Context, request operations.PostV05HealthInformationTransferJSONRequest, opts ...operations.Option) (*operations.PostV05HealthInformationTransferJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationTransferJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/transfer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DataNotification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -216,7 +246,7 @@ func (s *dataFlow) PostV05HealthInformationTransferJSON(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -270,15 +300,25 @@ func (s *dataFlow) PostV05HealthInformationTransferJSON(ctx context.Context, req
 //  4. Media contains the mimetype of content, and for v1, it is "application/fhir+json"
 //  5. checksum is Md5 checksum of the data conent, before encryption
 //  6. Please refer to the NDHM Sandbox documentation for the format of FHIR bundle that is passed through content
-func (s *dataFlow) PostV05HealthInformationTransferRaw(ctx context.Context, request operations.PostV05HealthInformationTransferRawRequest) (*operations.PostV05HealthInformationTransferRawResponse, error) {
+func (s *dataFlow) PostV05HealthInformationTransferRaw(ctx context.Context, request operations.PostV05HealthInformationTransferRawRequest, opts ...operations.Option) (*operations.PostV05HealthInformationTransferRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05HealthInformationTransferRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/health-information/transfer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,7 +333,7 @@ func (s *dataFlow) PostV05HealthInformationTransferRaw(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

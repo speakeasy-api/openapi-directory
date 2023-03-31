@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // Svgconvert - converts pptx file to svg image
-func (s *SDK) Svgconvert(ctx context.Context, request operations.SvgconvertRequest) (*operations.SvgconvertResponse, error) {
+func (s *SDK) Svgconvert(ctx context.Context, request operations.SvgconvertFileToConvert) (*operations.SvgconvertResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/svgconvert"
 

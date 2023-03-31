@@ -12,7 +12,8 @@ var CreateEndUserServerList = []string{
 }
 
 type CreateEndUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateEndUserCreateEndUserRequest struct {
@@ -21,12 +22,6 @@ type CreateEndUserCreateEndUserRequest struct {
 	// The string that you assigned to describe the resource.
 	FriendlyName string                     `form:"name=FriendlyName"`
 	Type         shared.EndUserEnumTypeEnum `form:"name=Type"`
-}
-
-type CreateEndUserRequest struct {
-	Request   *CreateEndUserCreateEndUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateEndUserSecurity
-	ServerURL *string
 }
 
 type CreateEndUserResponse struct {

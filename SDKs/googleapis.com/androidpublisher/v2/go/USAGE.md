@@ -14,33 +14,24 @@ func main() {
     s := sdk.New()
 
     req := operations.AndroidpublisherEditsApklistingsDeleteRequest{
-        Security: operations.AndroidpublisherEditsApklistingsDeleteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AndroidpublisherEditsApklistingsDeletePathParams{
-            ApkVersionCode: 548814,
-            EditID: "provident",
-            Language: "distinctio",
-            PackageName: "quibusdam",
-        },
-        QueryParams: operations.AndroidpublisherEditsApklistingsDeleteQueryParams{
-            Alt: "json",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UserIP: "vel",
-        },
+        Alt: "json",
+        ApkVersionCode: 548814,
+        EditID: "provident",
+        Fields: "distinctio",
+        Key: "quibusdam",
+        Language: "unde",
+        OauthToken: "nulla",
+        PackageName: "corrupti",
+        PrettyPrint: false,
+        QuotaUser: "illum",
+        UserIP: "vel",
     }
 
     ctx := context.Background()
-    res, err := s.Edits.AndroidpublisherEditsApklistingsDelete(ctx, req)
+    res, err := s.Edits.AndroidpublisherEditsApklistingsDelete(ctx, req, operations.AndroidpublisherEditsApklistingsDeleteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

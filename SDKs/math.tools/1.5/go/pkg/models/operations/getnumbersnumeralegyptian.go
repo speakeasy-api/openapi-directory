@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersNumeralEgyptianSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNumbersNumeralEgyptianQueryParams struct {
-	// Number to convert
-	Number *int64 `queryParam:"style=form,explode=true,name=number"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
 type GetNumbersNumeralEgyptianRequest struct {
-	QueryParams GetNumbersNumeralEgyptianQueryParams
-	Security    GetNumbersNumeralEgyptianSecurity
+	// Number to convert
+	Number *int64 `queryParam:"style=form,explode=true,name=number"`
 }
 
 type GetNumbersNumeralEgyptianResponse struct {

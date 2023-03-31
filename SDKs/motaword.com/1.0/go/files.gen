@@ -290,7 +290,6 @@ pkg/models/shared/comment1.go
 pkg/models/shared/tokenerror.go
 pkg/models/shared/token.go
 pkg/models/shared/tokenrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/blogarticlelist.go
 pkg/models/shared/blogarticle.go
 pkg/models/shared/blogarticlelinks.go
@@ -463,4 +462,5 @@ pkg/models/shared/updatepaymentinfo.go
 pkg/models/shared/profilepictureupload.go
 pkg/models/shared/profilepictureupload1.go
 pkg/models/shared/availablevendorsfilter.go
+pkg/models/shared/security.go
 USAGE.md

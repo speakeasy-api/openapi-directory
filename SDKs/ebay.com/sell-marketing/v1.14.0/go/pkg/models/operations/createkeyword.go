@@ -8,19 +8,14 @@ import (
 )
 
 type CreateKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateKeywordPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateKeywordRequest struct {
-	PathParams CreateKeywordPathParams
 	// A type that defines the fields for the request to create a keyword.
-	Request  shared.CreateKeywordRequest `request:"mediaType=application/json"`
-	Security CreateKeywordSecurity
+	CreateKeywordRequest shared.CreateKeywordRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type CreateKeywordResponse struct {

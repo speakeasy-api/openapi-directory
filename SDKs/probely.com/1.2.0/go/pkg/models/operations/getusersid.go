@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDPathParams struct {
+type GetUsersIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDRequest struct {
-	PathParams GetUsersIDPathParams
 }
 
 // GetUsersID404ApplicationJSON - Not found

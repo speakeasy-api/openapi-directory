@@ -8,23 +8,23 @@ import (
 )
 
 type DeploymentmanagerResourcesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerResourcesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerResourcesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerResourcesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerResourcesGetSecurity struct {
@@ -34,16 +34,7 @@ type DeploymentmanagerResourcesGetSecurity struct {
 	Option4 *DeploymentmanagerResourcesGetSecurityOption4 `security:"option"`
 }
 
-type DeploymentmanagerResourcesGetPathParams struct {
-	// The name of the deployment for this request.
-	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
-	// The project ID for this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// The name of the resource for this request.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type DeploymentmanagerResourcesGetQueryParams struct {
+type DeploymentmanagerResourcesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +43,8 @@ type DeploymentmanagerResourcesGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The name of the deployment for this request.
+	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -60,18 +53,16 @@ type DeploymentmanagerResourcesGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The name of the resource for this request.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DeploymentmanagerResourcesGetRequest struct {
-	PathParams  DeploymentmanagerResourcesGetPathParams
-	QueryParams DeploymentmanagerResourcesGetQueryParams
-	Security    DeploymentmanagerResourcesGetSecurity
 }
 
 type DeploymentmanagerResourcesGetResponse struct {

@@ -4,14 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetDomainRequest(
-    path_params=operations.GetDomainPathParams(
-        domain_id="et",
-    ),
-    headers=operations.GetDomainHeaders(
-        training_key="sequi",
-    ),
+    training_key="corrupti",
+    domain_id="9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
 )
     
 res = s.domains_api.get_domain(req)

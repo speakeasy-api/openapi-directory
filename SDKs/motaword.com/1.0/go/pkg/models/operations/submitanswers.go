@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitAnswersPathParams struct {
+type SubmitAnswersRequest struct {
+	SurveyAnswers *shared.SurveyAnswers `request:"mediaType=application/json"`
 	// Scope
 	Scope string `pathParam:"style=simple,explode=false,name=scope"`
 	// Type
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type SubmitAnswersRequest struct {
-	PathParams SubmitAnswersPathParams
-	Request    *shared.SurveyAnswers `request:"mediaType=application/json"`
 }
 
 type SubmitAnswersResponse struct {

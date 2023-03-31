@@ -34,11 +34,11 @@ func newDomesticStandingOrders(defaultClient, securityClient HTTPClient, serverU
 }
 
 // CreateDomesticStandingOrderConsentsJSON - Create Domestic Standing Order Consents
-func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsJSON(ctx context.Context, request operations.CreateDomesticStandingOrderConsentsJSONRequest) (*operations.CreateDomesticStandingOrderConsentsJSONResponse, error) {
+func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsJSON(ctx context.Context, request operations.CreateDomesticStandingOrderConsentsJSONRequest, security operations.CreateDomesticStandingOrderConsentsJSONSecurity) (*operations.CreateDomesticStandingOrderConsentsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-standing-order-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteDomesticStandingOrderConsent5", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsJSON(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsJSON(ctx con
 }
 
 // CreateDomesticStandingOrderConsentsRaw - Create Domestic Standing Order Consents
-func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsRaw(ctx context.Context, request operations.CreateDomesticStandingOrderConsentsRawRequest) (*operations.CreateDomesticStandingOrderConsentsRawResponse, error) {
+func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsRaw(ctx context.Context, request operations.CreateDomesticStandingOrderConsentsRawRequest, security operations.CreateDomesticStandingOrderConsentsRawSecurity) (*operations.CreateDomesticStandingOrderConsentsRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-standing-order-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,9 +162,9 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsRaw(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrderConsentsRaw(ctx cont
 }
 
 // CreateDomesticStandingOrdersJSON - Create Domestic Standing Orders
-func (s *domesticStandingOrders) CreateDomesticStandingOrdersJSON(ctx context.Context, request operations.CreateDomesticStandingOrdersJSONRequest) (*operations.CreateDomesticStandingOrdersJSONResponse, error) {
+func (s *domesticStandingOrders) CreateDomesticStandingOrdersJSON(ctx context.Context, request operations.CreateDomesticStandingOrdersJSONRequest, security operations.CreateDomesticStandingOrdersJSONSecurity) (*operations.CreateDomesticStandingOrdersJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-standing-orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBWriteDomesticStandingOrder3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -271,9 +271,9 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrdersJSON(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,11 +361,11 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrdersJSON(ctx context.Co
 }
 
 // CreateDomesticStandingOrdersRaw - Create Domestic Standing Orders
-func (s *domesticStandingOrders) CreateDomesticStandingOrdersRaw(ctx context.Context, request operations.CreateDomesticStandingOrdersRawRequest) (*operations.CreateDomesticStandingOrdersRawResponse, error) {
+func (s *domesticStandingOrders) CreateDomesticStandingOrdersRaw(ctx context.Context, request operations.CreateDomesticStandingOrdersRawRequest, security operations.CreateDomesticStandingOrdersRawSecurity) (*operations.CreateDomesticStandingOrdersRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domestic-standing-orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -380,9 +380,9 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrdersRaw(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -470,18 +470,18 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrdersRaw(ctx context.Con
 }
 
 // GetDomesticStandingOrderConsentsConsentID - Get Domestic Standing Order Consents
-func (s *domesticStandingOrders) GetDomesticStandingOrderConsentsConsentID(ctx context.Context, request operations.GetDomesticStandingOrderConsentsConsentIDRequest) (*operations.GetDomesticStandingOrderConsentsConsentIDResponse, error) {
+func (s *domesticStandingOrders) GetDomesticStandingOrderConsentsConsentID(ctx context.Context, request operations.GetDomesticStandingOrderConsentsConsentIDRequest, security operations.GetDomesticStandingOrderConsentsConsentIDSecurity) (*operations.GetDomesticStandingOrderConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-order-consents/{ConsentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-order-consents/{ConsentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -567,18 +567,18 @@ func (s *domesticStandingOrders) GetDomesticStandingOrderConsentsConsentID(ctx c
 }
 
 // GetDomesticStandingOrdersDomesticStandingOrderID - Get Domestic Standing Orders
-func (s *domesticStandingOrders) GetDomesticStandingOrdersDomesticStandingOrderID(ctx context.Context, request operations.GetDomesticStandingOrdersDomesticStandingOrderIDRequest) (*operations.GetDomesticStandingOrdersDomesticStandingOrderIDResponse, error) {
+func (s *domesticStandingOrders) GetDomesticStandingOrdersDomesticStandingOrderID(ctx context.Context, request operations.GetDomesticStandingOrdersDomesticStandingOrderIDRequest, security operations.GetDomesticStandingOrdersDomesticStandingOrderIDSecurity) (*operations.GetDomesticStandingOrdersDomesticStandingOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-orders/{DomesticStandingOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-orders/{DomesticStandingOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

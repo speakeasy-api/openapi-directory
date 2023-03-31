@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SecretsSecretsDeletePathParams struct {
+type SecretsSecretsDeleteRequest struct {
 	// A unique integer value identifying this secret.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SecretsSecretsDeleteRequest struct {
-	PathParams SecretsSecretsDeletePathParams
 }
 
 type SecretsSecretsDeleteResponse struct {

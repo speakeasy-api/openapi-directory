@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDDocumentsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum string
 
 const (
@@ -76,9 +69,12 @@ type PatchSpacesSpaceIDDocumentsDocumentIDRequestBody struct {
 }
 
 type PatchSpacesSpaceIDDocumentsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDDocumentsDocumentIDPathParams
 	// document to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDDocumentsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDDocumentsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDDocumentsDocumentIDResponse struct {

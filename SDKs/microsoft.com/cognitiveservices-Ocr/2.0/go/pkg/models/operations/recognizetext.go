@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RecognizeTextQueryParams struct {
+type RecognizeTextRequest struct {
+	// A JSON document with a URL pointing to the image that is to be analyzed.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
 	// Type of text to recognize.
 	Mode shared.TextRecognitionModeEnum `queryParam:"style=form,explode=true,name=mode"`
-}
-
-type RecognizeTextRequest struct {
-	QueryParams RecognizeTextQueryParams
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
 }
 
 type RecognizeTextResponse struct {

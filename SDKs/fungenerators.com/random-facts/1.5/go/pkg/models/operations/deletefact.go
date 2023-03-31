@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteFactSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteFactQueryParams struct {
-	// Fact ID
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type DeleteFactRequest struct {
-	QueryParams DeleteFactQueryParams
-	Security    DeleteFactSecurity
+	// Fact ID
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type DeleteFactResponse struct {

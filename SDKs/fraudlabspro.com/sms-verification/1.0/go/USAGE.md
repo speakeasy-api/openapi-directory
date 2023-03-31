@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.GetV1VerificationResultRequest{
-        QueryParams: operations.GetV1VerificationResultQueryParams{
-            Format: "xml",
-            Key: "provident",
-            Otp: "distinctio",
-            TranID: "quibusdam",
-        },
+        Format: "xml",
+        Key: "provident",
+        Otp: "distinctio",
+        TranID: "quibusdam",
     }
 
     ctx := context.Background()

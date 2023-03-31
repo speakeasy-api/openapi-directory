@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolProxyGetTracePathParams struct {
+type ProtocolProxyGetTraceRequest struct {
 	// Agent to show whether PROXY tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolProxyGetTraceRequest struct {
-	PathParams ProtocolProxyGetTracePathParams
 }
 
 type ProtocolProxyGetTraceResponse struct {

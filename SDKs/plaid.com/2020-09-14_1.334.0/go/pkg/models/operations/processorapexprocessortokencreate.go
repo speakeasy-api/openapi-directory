@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ProcessorApexProcessorTokenCreateRequest struct {
-	Request shared.ProcessorApexProcessorTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type ProcessorApexProcessorTokenCreateResponse struct {
 	ContentType string

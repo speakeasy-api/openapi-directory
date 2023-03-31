@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OauthAuthorizationsResetAuthorizationPathParams struct {
+type OauthAuthorizationsResetAuthorizationRequest struct {
 	AccessToken string `pathParam:"style=simple,explode=false,name=access_token"`
 	// The client ID of your GitHub app.
 	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type OauthAuthorizationsResetAuthorizationRequest struct {
-	PathParams OauthAuthorizationsResetAuthorizationPathParams
 }
 
 type OauthAuthorizationsResetAuthorizationResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type NodesCitationReadPathParams struct {
+type NodesCitationReadRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 	// The unique identifier of the citation style.
 	StyleID string `pathParam:"style=simple,explode=false,name=style_id"`
-}
-
-type NodesCitationReadRequest struct {
-	PathParams NodesCitationReadPathParams
 }
 
 // NodesCitationReadStyledCitationAttributes - The properties of the citation style entity.

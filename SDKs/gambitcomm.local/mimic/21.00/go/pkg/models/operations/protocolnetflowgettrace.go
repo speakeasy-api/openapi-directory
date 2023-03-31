@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolNetflowGetTracePathParams struct {
+type ProtocolNetflowGetTraceRequest struct {
 	// Agent to show whether NETFLOW tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolNetflowGetTraceRequest struct {
-	PathParams ProtocolNetflowGetTracePathParams
 }
 
 type ProtocolNetflowGetTraceResponse struct {

@@ -32,20 +32,20 @@ func newVideoFormats(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DfareportingVideoFormatsGet - Gets one video format by ID.
-func (s *videoFormats) DfareportingVideoFormatsGet(ctx context.Context, request operations.DfareportingVideoFormatsGetRequest) (*operations.DfareportingVideoFormatsGetResponse, error) {
+func (s *videoFormats) DfareportingVideoFormatsGet(ctx context.Context, request operations.DfareportingVideoFormatsGetRequest, security operations.DfareportingVideoFormatsGetSecurity) (*operations.DfareportingVideoFormatsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *videoFormats) DfareportingVideoFormatsGet(ctx context.Context, request 
 }
 
 // DfareportingVideoFormatsList - Lists available video formats.
-func (s *videoFormats) DfareportingVideoFormatsList(ctx context.Context, request operations.DfareportingVideoFormatsListRequest) (*operations.DfareportingVideoFormatsListResponse, error) {
+func (s *videoFormats) DfareportingVideoFormatsList(ctx context.Context, request operations.DfareportingVideoFormatsListRequest, security operations.DfareportingVideoFormatsListSecurity) (*operations.DfareportingVideoFormatsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

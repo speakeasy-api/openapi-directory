@@ -33,16 +33,16 @@ func newWatchLaterQueueEssentials(defaultClient, securityClient HTTPClient, serv
 }
 
 // AddVideoToWatchLater - Add a video to a user's Watch Later queue
-func (s *watchLaterQueueEssentials) AddVideoToWatchLater(ctx context.Context, request operations.AddVideoToWatchLaterRequest) (*operations.AddVideoToWatchLaterResponse, error) {
+func (s *watchLaterQueueEssentials) AddVideoToWatchLater(ctx context.Context, request operations.AddVideoToWatchLaterRequest, security operations.AddVideoToWatchLaterSecurity) (*operations.AddVideoToWatchLaterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -68,16 +68,16 @@ func (s *watchLaterQueueEssentials) AddVideoToWatchLater(ctx context.Context, re
 }
 
 // AddVideoToWatchLaterAlt1 - Add a video to a user's Watch Later queue
-func (s *watchLaterQueueEssentials) AddVideoToWatchLaterAlt1(ctx context.Context, request operations.AddVideoToWatchLaterAlt1Request) (*operations.AddVideoToWatchLaterAlt1Response, error) {
+func (s *watchLaterQueueEssentials) AddVideoToWatchLaterAlt1(ctx context.Context, request operations.AddVideoToWatchLaterAlt1Request, security operations.AddVideoToWatchLaterAlt1Security) (*operations.AddVideoToWatchLaterAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/watchlater/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/watchlater/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,16 +103,16 @@ func (s *watchLaterQueueEssentials) AddVideoToWatchLaterAlt1(ctx context.Context
 }
 
 // CheckWatchLaterQueue - Check if a user has added a specific video to their Watch Later queue
-func (s *watchLaterQueueEssentials) CheckWatchLaterQueue(ctx context.Context, request operations.CheckWatchLaterQueueRequest) (*operations.CheckWatchLaterQueueResponse, error) {
+func (s *watchLaterQueueEssentials) CheckWatchLaterQueue(ctx context.Context, request operations.CheckWatchLaterQueueRequest, security operations.CheckWatchLaterQueueSecurity) (*operations.CheckWatchLaterQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,16 +157,16 @@ func (s *watchLaterQueueEssentials) CheckWatchLaterQueue(ctx context.Context, re
 }
 
 // CheckWatchLaterQueueAlt1 - Check if a user has added a specific video to their Watch Later queue
-func (s *watchLaterQueueEssentials) CheckWatchLaterQueueAlt1(ctx context.Context, request operations.CheckWatchLaterQueueAlt1Request) (*operations.CheckWatchLaterQueueAlt1Response, error) {
+func (s *watchLaterQueueEssentials) CheckWatchLaterQueueAlt1(ctx context.Context, request operations.CheckWatchLaterQueueAlt1Request, security operations.CheckWatchLaterQueueAlt1Security) (*operations.CheckWatchLaterQueueAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/watchlater/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/watchlater/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,16 +211,16 @@ func (s *watchLaterQueueEssentials) CheckWatchLaterQueueAlt1(ctx context.Context
 }
 
 // DeleteVideoFromWatchLater - Remove a video from a user's Watch Later queue
-func (s *watchLaterQueueEssentials) DeleteVideoFromWatchLater(ctx context.Context, request operations.DeleteVideoFromWatchLaterRequest) (*operations.DeleteVideoFromWatchLaterResponse, error) {
+func (s *watchLaterQueueEssentials) DeleteVideoFromWatchLater(ctx context.Context, request operations.DeleteVideoFromWatchLaterRequest, security operations.DeleteVideoFromWatchLaterSecurity) (*operations.DeleteVideoFromWatchLaterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,16 +246,16 @@ func (s *watchLaterQueueEssentials) DeleteVideoFromWatchLater(ctx context.Contex
 }
 
 // DeleteVideoFromWatchLaterAlt1 - Remove a video from a user's Watch Later queue
-func (s *watchLaterQueueEssentials) DeleteVideoFromWatchLaterAlt1(ctx context.Context, request operations.DeleteVideoFromWatchLaterAlt1Request) (*operations.DeleteVideoFromWatchLaterAlt1Response, error) {
+func (s *watchLaterQueueEssentials) DeleteVideoFromWatchLaterAlt1(ctx context.Context, request operations.DeleteVideoFromWatchLaterAlt1Request, security operations.DeleteVideoFromWatchLaterAlt1Security) (*operations.DeleteVideoFromWatchLaterAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/watchlater/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/watchlater/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -281,20 +281,20 @@ func (s *watchLaterQueueEssentials) DeleteVideoFromWatchLaterAlt1(ctx context.Co
 }
 
 // GetWatchLaterQueue - Get all the videos in a user's Watch Later queue
-func (s *watchLaterQueueEssentials) GetWatchLaterQueue(ctx context.Context, request operations.GetWatchLaterQueueRequest) (*operations.GetWatchLaterQueueResponse, error) {
+func (s *watchLaterQueueEssentials) GetWatchLaterQueue(ctx context.Context, request operations.GetWatchLaterQueueRequest, security operations.GetWatchLaterQueueSecurity) (*operations.GetWatchLaterQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/watchlater", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -330,7 +330,7 @@ func (s *watchLaterQueueEssentials) GetWatchLaterQueue(ctx context.Context, requ
 }
 
 // GetWatchLaterQueueAlt1 - Get all the videos in a user's Watch Later queue
-func (s *watchLaterQueueEssentials) GetWatchLaterQueueAlt1(ctx context.Context, request operations.GetWatchLaterQueueAlt1Request) (*operations.GetWatchLaterQueueAlt1Response, error) {
+func (s *watchLaterQueueEssentials) GetWatchLaterQueueAlt1(ctx context.Context, request operations.GetWatchLaterQueueAlt1Request, security operations.GetWatchLaterQueueAlt1Security) (*operations.GetWatchLaterQueueAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/watchlater"
 
@@ -339,11 +339,11 @@ func (s *watchLaterQueueEssentials) GetWatchLaterQueueAlt1(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,17 +8,11 @@ import (
 )
 
 type CloudprivatecatalogproducerCatalogsAssociationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudprivatecatalogproducerCatalogsAssociationsListPathParams struct {
-	// The resource name of the `Catalog` whose `Associations` are
-	// being retrieved. In the format `catalogs/<catalog>`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudprivatecatalogproducerCatalogsAssociationsListQueryParams struct {
+type CloudprivatecatalogproducerCatalogsAssociationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +32,9 @@ type CloudprivatecatalogproducerCatalogsAssociationsListQueryParams struct {
 	// A pagination token returned from the previous call to
 	// `ListAssociations`.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The resource name of the `Catalog` whose `Associations` are
+	// being retrieved. In the format `catalogs/<catalog>`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type CloudprivatecatalogproducerCatalogsAssociationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudprivatecatalogproducerCatalogsAssociationsListRequest struct {
-	PathParams  CloudprivatecatalogproducerCatalogsAssociationsListPathParams
-	QueryParams CloudprivatecatalogproducerCatalogsAssociationsListQueryParams
-	Security    CloudprivatecatalogproducerCatalogsAssociationsListSecurity
 }
 
 type CloudprivatecatalogproducerCatalogsAssociationsListResponse struct {

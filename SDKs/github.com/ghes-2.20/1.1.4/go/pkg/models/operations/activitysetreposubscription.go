@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivitySetRepoSubscriptionPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ActivitySetRepoSubscriptionRequestBody struct {
 	// Determines if all notifications should be blocked from this repository.
 	Ignored *bool `json:"ignored,omitempty"`
@@ -20,8 +15,9 @@ type ActivitySetRepoSubscriptionRequestBody struct {
 }
 
 type ActivitySetRepoSubscriptionRequest struct {
-	PathParams ActivitySetRepoSubscriptionPathParams
-	Request    *ActivitySetRepoSubscriptionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ActivitySetRepoSubscriptionRequestBody `request:"mediaType=application/json"`
+	Owner       string                                  `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                                  `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ActivitySetRepoSubscriptionResponse struct {

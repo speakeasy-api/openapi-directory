@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type LookupFormatQueryParams struct {
+type LookupFormatRequest struct {
 	// The phone number to look up.
 	Number []string `queryParam:"style=form,explode=false,name=number"`
-}
-
-type LookupFormatRequest struct {
-	QueryParams LookupFormatQueryParams
 }
 
 type LookupFormatResponse struct {

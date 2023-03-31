@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetContentJSONRequest(
-    query_params=operations.GetContentJSONQueryParams(
-        url="consequatur",
+        apikey="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetContentJSONRequest(
+    url="corrupti",
 )
     
 res = s.get_content_json(req)

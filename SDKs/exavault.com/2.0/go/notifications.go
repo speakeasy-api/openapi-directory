@@ -45,7 +45,7 @@ func (s *notifications) AddNotification(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -57,7 +57,7 @@ func (s *notifications) AddNotification(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -102,14 +102,14 @@ func (s *notifications) AddNotification(ctx context.Context, request operations.
 // - You can only delete notifications owned by your user account.
 func (s *notifications) DeleteNotificationByID(ctx context.Context, request operations.DeleteNotificationByIDRequest) (*operations.DeleteNotificationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -154,16 +154,16 @@ func (s *notifications) DeleteNotificationByID(ctx context.Context, request oper
 // - You can only retrieve notifications owned by your user account.
 func (s *notifications) GetNotificationByID(ctx context.Context, request operations.GetNotificationByIDRequest) (*operations.GetNotificationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -215,9 +215,9 @@ func (s *notifications) ListNotifications(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -266,9 +266,9 @@ func (s *notifications) ListNotifications(ctx context.Context, request operation
 // - You can only change notifications owned by your user account.
 func (s *notifications) UpdateNotificationByID(ctx context.Context, request operations.UpdateNotificationByIDRequest) (*operations.UpdateNotificationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -280,7 +280,7 @@ func (s *notifications) UpdateNotificationByID(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

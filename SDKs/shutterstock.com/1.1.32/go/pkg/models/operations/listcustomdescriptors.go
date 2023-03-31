@@ -8,11 +8,11 @@ import (
 )
 
 type ListCustomDescriptorsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCustomDescriptorsQueryParams struct {
+type ListCustomDescriptorsRequest struct {
 	// Show descriptors that contain the specified band (case-sentsitive)
 	BandID *string `queryParam:"style=form,explode=true,name=band_id"`
 	// Show descriptors with the specified band name (case-sensitive)
@@ -39,11 +39,6 @@ type ListCustomDescriptorsQueryParams struct {
 	TempoFrom *float64 `queryParam:"style=form,explode=true,name=tempo_from"`
 	// Show descriptors with a tempo that is less than or equal to the specified number
 	TempoTo *float64 `queryParam:"style=form,explode=true,name=tempo_to"`
-}
-
-type ListCustomDescriptorsRequest struct {
-	QueryParams ListCustomDescriptorsQueryParams
-	Security    ListCustomDescriptorsSecurity
 }
 
 type ListCustomDescriptorsResponse struct {

@@ -38,7 +38,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CreateWebhook - Create a Webhook
 // Create a webook for specific events in the environment.
-func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateWebhookRequest) (*operations.CreateWebhookResponse, error) {
+func (s *webhooks) CreateWebhook(ctx context.Context, request shared.CreateWebhookRequestBody) (*operations.CreateWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/environment/webhooks"
 
@@ -109,7 +109,7 @@ func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateW
 // Delete a webhook
 func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteWebhookRequest) (*operations.DeleteWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environment/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environment/webhooks/{webhook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteW
 // Retrieve individual webhook by an ID
 func (s *webhooks) GetWebhookByID(ctx context.Context, request operations.GetWebhookByIDRequest) (*operations.GetWebhookByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environment/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environment/webhooks/{webhook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -293,9 +293,9 @@ func (s *webhooks) ListWebhooks(ctx context.Context) (*operations.ListWebhooksRe
 // Update the webhook url property
 func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environment/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environment/webhooks/{webhook_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWebhookRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

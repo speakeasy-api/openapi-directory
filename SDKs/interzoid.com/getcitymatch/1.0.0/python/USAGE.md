@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetcitymatchRequest(
-    query_params=operations.GetcitymatchQueryParams(
-        city="perspiciatis",
-        license="et",
-    ),
+    city="Laruecester",
+    license="quibusdam",
 )
     
 res = s.city_name_similarity_key.getcitymatch(req)

@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesConnectionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesConnectionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesConnectionsListSecurity struct {
@@ -22,12 +22,7 @@ type ServicenetworkingServicesConnectionsListSecurity struct {
 	Option2 *ServicenetworkingServicesConnectionsListSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesConnectionsListPathParams struct {
-	// The service that is managing peering connectivity for a service producer's organization. For Google services that support this functionality, this value is `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter value, all configured peering services are listed.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicenetworkingServicesConnectionsListQueryParams struct {
+type ServicenetworkingServicesConnectionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,6 +39,8 @@ type ServicenetworkingServicesConnectionsListQueryParams struct {
 	Network *string `queryParam:"style=form,explode=true,name=network"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The service that is managing peering connectivity for a service producer's organization. For Google services that support this functionality, this value is `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter value, all configured peering services are listed.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type ServicenetworkingServicesConnectionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesConnectionsListRequest struct {
-	PathParams  ServicenetworkingServicesConnectionsListPathParams
-	QueryParams ServicenetworkingServicesConnectionsListQueryParams
-	Security    ServicenetworkingServicesConnectionsListSecurity
 }
 
 type ServicenetworkingServicesConnectionsListResponse struct {

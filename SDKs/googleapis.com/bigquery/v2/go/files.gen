@@ -56,7 +56,6 @@ pkg/models/operations/bigquerytablessetiampolicy.go
 pkg/models/operations/bigquerytablestestiampermissions.go
 pkg/models/operations/bigquerytablesupdate.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/dataset.go
 pkg/models/shared/encryptionconfiguration.go
 pkg/models/shared/datasetreference.go

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ResourcesQueryParams struct {
+type GetSetupV1ResourcesRequest struct {
 	// Show by deleted status, default is false
 	Deleted *bool `queryParam:"style=form,explode=true,name=deleted"`
 	// Filter by email address
@@ -26,10 +26,6 @@ type GetSetupV1ResourcesQueryParams struct {
 	OutlookAuthReturnURL *string `queryParam:"style=form,explode=true,name=outlookAuthReturnUrl"`
 	// Filter by group Id
 	ResourceGroupID *string `queryParam:"style=form,explode=true,name=resourceGroupId"`
-}
-
-type GetSetupV1ResourcesRequest struct {
-	QueryParams GetSetupV1ResourcesQueryParams
 }
 
 type GetSetupV1ResourcesResponse struct {

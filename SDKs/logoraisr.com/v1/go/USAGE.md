@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Token: shared.SchemeToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Token: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.PreviewsReadRequest{
-        PathParams: operations.PreviewsReadPathParams{
-            FileID: "corrupti",
-        },
+        FileID: "corrupti",
     }
 
     ctx := context.Background()

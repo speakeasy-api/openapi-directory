@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETDataCountUsingGETPathParams struct {
-	// apiKey
-	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
 // GETDataCountUsingGETQueryNameEnum - queryName
 type GETDataCountUsingGETQueryNameEnum string
 
@@ -74,16 +69,13 @@ func (e *GETDataCountUsingGETStageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDataCountUsingGETQueryParams struct {
+type GETDataCountUsingGETRequest struct {
+	// apiKey
+	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// queryName
 	QueryName GETDataCountUsingGETQueryNameEnum `queryParam:"style=form,explode=true,name=queryName"`
 	// stage
 	Stage GETDataCountUsingGETStageEnum `queryParam:"style=form,explode=true,name=stage"`
-}
-
-type GETDataCountUsingGETRequest struct {
-	PathParams  GETDataCountUsingGETPathParams
-	QueryParams GETDataCountUsingGETQueryParams
 }
 
 type GETDataCountUsingGETResponse struct {

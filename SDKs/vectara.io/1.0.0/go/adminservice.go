@@ -38,7 +38,7 @@ func (s *adminService) CreateCorpus(ctx context.Context, request operations.Crea
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/create-corpus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdminCreateCorpusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *adminService) CreateCorpus(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -104,7 +104,7 @@ func (s *adminService) DeleteCorpus(ctx context.Context, request operations.Dele
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/delete-corpus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdminDeleteCorpusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -119,7 +119,7 @@ func (s *adminService) DeleteCorpus(ctx context.Context, request operations.Dele
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -170,7 +170,7 @@ func (s *adminService) ListCorpora(ctx context.Context, request operations.ListC
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/list-corpora"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdminListCorporaRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -185,7 +185,7 @@ func (s *adminService) ListCorpora(ctx context.Context, request operations.ListC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -236,7 +236,7 @@ func (s *adminService) ResetCorpus(ctx context.Context, request operations.Reset
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/reset-corpus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdminResetCorpusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -251,7 +251,7 @@ func (s *adminService) ResetCorpus(ctx context.Context, request operations.Reset
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

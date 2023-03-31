@@ -39,10 +39,10 @@ pkg/models/shared/celebritiesmodel.go
 pkg/models/shared/detectedbrand.go
 pkg/models/shared/adultinfo.go
 pkg/models/shared/computervisionerror.go
-pkg/models/shared/imageurl.go
 pkg/models/shared/visualfeaturesenum.go
 pkg/models/shared/servicelanguageenum.go
 pkg/models/shared/descriptionexcludeenum.go
+pkg/models/shared/imageurl.go
 pkg/models/shared/domainmodelresults.go
 pkg/models/shared/imagedescription.go
 pkg/models/shared/detectresult.go

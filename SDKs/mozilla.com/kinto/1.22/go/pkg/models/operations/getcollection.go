@@ -6,24 +6,12 @@ import (
 	"net/http"
 )
 
-type GetCollectionPathParams struct {
-	BucketID string `pathParam:"style=simple,explode=false,name=bucket_id"`
-	ID       string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCollectionQueryParams struct {
-	Fields []string `queryParam:"style=form,explode=false,name=_fields"`
-}
-
-type GetCollectionHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
 type GetCollectionRequest struct {
-	PathParams  GetCollectionPathParams
-	QueryParams GetCollectionQueryParams
-	Headers     GetCollectionHeaders
+	IfMatch     *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch *string  `header:"style=simple,explode=false,name=If-None-Match"`
+	Fields      []string `queryParam:"style=form,explode=false,name=_fields"`
+	BucketID    string   `pathParam:"style=simple,explode=false,name=bucket_id"`
+	ID          string   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetCollectionErrorSchema - The request is invalid.

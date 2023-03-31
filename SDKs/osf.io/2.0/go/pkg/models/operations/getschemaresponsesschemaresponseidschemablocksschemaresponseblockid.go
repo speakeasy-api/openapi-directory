@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDPathParams struct {
+type GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRequest struct {
 	// The unique identifier of the Schema Response Block example `61b79f9eadbb5701424a2d5e`.
 	SchemaResponseBlockID string `pathParam:"style=simple,explode=false,name=schema_response_block_id"`
 	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
 	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
-type GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRequest struct {
-	PathParams GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDPathParams
 }
 
 // GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum - A string that represents the type of input that the schema will take and the UI element that appears to the user on the frontend.

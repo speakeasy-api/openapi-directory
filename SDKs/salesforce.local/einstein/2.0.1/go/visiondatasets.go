@@ -35,7 +35,7 @@ func newVisionDatasets(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // CreateDataset - Create a Dataset
 // Creates a dataset and labels, if they're specified.
-func (s *visionDatasets) CreateDataset(ctx context.Context, request operations.CreateDatasetRequest) (*operations.CreateDatasetResponse, error) {
+func (s *visionDatasets) CreateDataset(ctx context.Context, request operations.CreateDatasetRequestBody, security operations.CreateDatasetSecurity) (*operations.CreateDatasetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/datasets"
 
@@ -51,7 +51,7 @@ func (s *visionDatasets) CreateDataset(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,16 +87,16 @@ func (s *visionDatasets) CreateDataset(ctx context.Context, request operations.C
 
 // DeleteDataset1 - Delete a Dataset
 // Deletes the specified dataset and associated labels and examples.
-func (s *visionDatasets) DeleteDataset1(ctx context.Context, request operations.DeleteDataset1Request) (*operations.DeleteDataset1Response, error) {
+func (s *visionDatasets) DeleteDataset1(ctx context.Context, request operations.DeleteDataset1Request, security operations.DeleteDataset1Security) (*operations.DeleteDataset1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -132,16 +132,16 @@ func (s *visionDatasets) DeleteDataset1(ctx context.Context, request operations.
 
 // GetDataset1 - Get a Dataset
 // Returns a single dataset.
-func (s *visionDatasets) GetDataset1(ctx context.Context, request operations.GetDataset1Request) (*operations.GetDataset1Response, error) {
+func (s *visionDatasets) GetDataset1(ctx context.Context, request operations.GetDataset1Request, security operations.GetDataset1Security) (*operations.GetDataset1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,16 +177,16 @@ func (s *visionDatasets) GetDataset1(ctx context.Context, request operations.Get
 
 // Get1 - Get Deletion Status
 // Returns the status of an image dataset or model deletion. When you delete a dataset or model, the deletion may not occur immediately. Use this call to find out when the deletion is complete.
-func (s *visionDatasets) Get1(ctx context.Context, request operations.Get1Request) (*operations.Get1Response, error) {
+func (s *visionDatasets) Get1(ctx context.Context, request operations.Get1Request, security operations.Get1Security) (*operations.Get1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/deletion/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/deletion/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,7 +222,7 @@ func (s *visionDatasets) Get1(ctx context.Context, request operations.Get1Reques
 
 // ListDatasets1 - Get All Datasets
 // Returns a list of datasets and their labels that were created by the current user. The response is sorted by dataset ID.
-func (s *visionDatasets) ListDatasets1(ctx context.Context, request operations.ListDatasets1Request) (*operations.ListDatasets1Response, error) {
+func (s *visionDatasets) ListDatasets1(ctx context.Context, request operations.ListDatasets1Request, security operations.ListDatasets1Security) (*operations.ListDatasets1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/datasets"
 
@@ -231,11 +231,11 @@ func (s *visionDatasets) ListDatasets1(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *visionDatasets) ListDatasets1(ctx context.Context, request operations.L
 
 // UploadDatasetAsync1 - Create a Dataset From a Zip File Asynchronously
 // Creates a dataset, labels, and examples from the specified .zip file. The call returns immediately and continues to upload the images in the background.
-func (s *visionDatasets) UploadDatasetAsync1(ctx context.Context, request operations.UploadDatasetAsync1Request) (*operations.UploadDatasetAsync1Response, error) {
+func (s *visionDatasets) UploadDatasetAsync1(ctx context.Context, request operations.UploadDatasetAsync1RequestBody, security operations.UploadDatasetAsync1Security) (*operations.UploadDatasetAsync1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/datasets/upload"
 
@@ -287,7 +287,7 @@ func (s *visionDatasets) UploadDatasetAsync1(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -323,7 +323,7 @@ func (s *visionDatasets) UploadDatasetAsync1(ctx context.Context, request operat
 
 // UploadDatasetSync1 - Create a Dataset From a Zip File Synchronously
 // Creates a dataset, labels, and examples from the specified .zip file. The call returns after the dataset is created and all of the images are uploaded.
-func (s *visionDatasets) UploadDatasetSync1(ctx context.Context, request operations.UploadDatasetSync1Request) (*operations.UploadDatasetSync1Response, error) {
+func (s *visionDatasets) UploadDatasetSync1(ctx context.Context, request operations.UploadDatasetSync1RequestBody, security operations.UploadDatasetSync1Security) (*operations.UploadDatasetSync1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/datasets/upload/sync"
 
@@ -339,7 +339,7 @@ func (s *visionDatasets) UploadDatasetSync1(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

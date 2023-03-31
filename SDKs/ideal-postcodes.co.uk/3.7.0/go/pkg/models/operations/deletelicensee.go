@@ -9,18 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteLicenseePathParams struct {
-	Key      string `pathParam:"style=simple,explode=false,name=key"`
-	Licensee string `pathParam:"style=simple,explode=false,name=licensee"`
-}
-
-type DeleteLicenseeQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type DeleteLicenseeRequest struct {
-	PathParams  DeleteLicenseePathParams
-	QueryParams DeleteLicenseeQueryParams
+	Key       string  `pathParam:"style=simple,explode=false,name=key"`
+	Licensee  string  `pathParam:"style=simple,explode=false,name=licensee"`
+	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type DeleteLicenseeLicenseeDeleteResponseCodeEnum string

@@ -10,8 +10,8 @@ import (
 )
 
 type UnliWithoutApplicationnkApplicationSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // UnliWithoutApplicationnkApplicationProviderEnum - Provider of the account you want to unlink an application from
@@ -41,18 +41,13 @@ func (e *UnliWithoutApplicationnkApplicationProviderEnum) UnmarshalJSON(data []b
 	}
 }
 
-type UnliWithoutApplicationnkApplicationPathParams struct {
+type UnliWithoutApplicationnkApplicationRequest struct {
 	// Id of the application you want to unlink
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
 	// External id of the account you want to unlink an application from
 	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 	// Provider of the account you want to unlink an application from
 	Provider UnliWithoutApplicationnkApplicationProviderEnum `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type UnliWithoutApplicationnkApplicationRequest struct {
-	PathParams UnliWithoutApplicationnkApplicationPathParams
-	Security   UnliWithoutApplicationnkApplicationSecurity
 }
 
 // UnliWithoutApplicationnkApplication409ApplicationJSON - Conflict.

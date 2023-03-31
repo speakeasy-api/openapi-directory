@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GymGetPathParams struct {
+type GymGetRequest struct {
 	// indentity number (primary key) for gym object
 	GymID int `pathParam:"style=simple,explode=false,name=gymID"`
-}
-
-type GymGetRequest struct {
-	PathParams GymGetPathParams
 }
 
 type GymGetResponse struct {

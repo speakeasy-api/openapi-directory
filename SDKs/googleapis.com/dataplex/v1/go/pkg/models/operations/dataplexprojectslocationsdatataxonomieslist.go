@@ -8,16 +8,11 @@ import (
 )
 
 type DataplexProjectsLocationsDataTaxonomiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataplexProjectsLocationsDataTaxonomiesListPathParams struct {
-	// Required. The resource name of the DataTaxonomy location, of the form: projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataplexProjectsLocationsDataTaxonomiesListQueryParams struct {
+type DataplexProjectsLocationsDataTaxonomiesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type DataplexProjectsLocationsDataTaxonomiesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Page token received from a previous ListDataTaxonomies call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListDataTaxonomies must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the DataTaxonomy location, of the form: projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type DataplexProjectsLocationsDataTaxonomiesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataplexProjectsLocationsDataTaxonomiesListRequest struct {
-	PathParams  DataplexProjectsLocationsDataTaxonomiesListPathParams
-	QueryParams DataplexProjectsLocationsDataTaxonomiesListQueryParams
-	Security    DataplexProjectsLocationsDataTaxonomiesListSecurity
 }
 
 type DataplexProjectsLocationsDataTaxonomiesListResponse struct {

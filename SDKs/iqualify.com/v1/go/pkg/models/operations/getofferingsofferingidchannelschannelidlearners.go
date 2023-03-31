@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferingsOfferingIDChannelsChannelIDLearnersPathParams struct {
+type GetOfferingsOfferingIDChannelsChannelIDLearnersRequest struct {
 	// channel's id
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type GetOfferingsOfferingIDChannelsChannelIDLearnersRequest struct {
-	PathParams GetOfferingsOfferingIDChannelsChannelIDLearnersPathParams
 }
 
 type GetOfferingsOfferingIDChannelsChannelIDLearnersResponse struct {

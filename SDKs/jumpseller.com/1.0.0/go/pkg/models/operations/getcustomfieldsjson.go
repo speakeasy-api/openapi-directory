@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFieldsJSONQueryParams struct {
+type GetCustomFieldsJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCustomFieldsJSONRequest struct {
-	QueryParams GetCustomFieldsJSONQueryParams
 }
 
 type GetCustomFieldsJSONResponse struct {

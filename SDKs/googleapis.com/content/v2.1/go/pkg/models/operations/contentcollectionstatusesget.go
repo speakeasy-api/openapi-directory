@@ -8,18 +8,11 @@ import (
 )
 
 type ContentCollectionstatusesGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentCollectionstatusesGetPathParams struct {
-	// Required. The collectionId of the collection. CollectionId is the same as the REST ID of the collection.
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
-	// Required. The ID of the account that contains the collection. This account cannot be a multi-client account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentCollectionstatusesGetQueryParams struct {
+type ContentCollectionstatusesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,10 +21,14 @@ type ContentCollectionstatusesGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The collectionId of the collection. CollectionId is the same as the REST ID of the collection.
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The ID of the account that contains the collection. This account cannot be a multi-client account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,12 +39,6 @@ type ContentCollectionstatusesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentCollectionstatusesGetRequest struct {
-	PathParams  ContentCollectionstatusesGetPathParams
-	QueryParams ContentCollectionstatusesGetQueryParams
-	Security    ContentCollectionstatusesGetSecurity
 }
 
 type ContentCollectionstatusesGetResponse struct {

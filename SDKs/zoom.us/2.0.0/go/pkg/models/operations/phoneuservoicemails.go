@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type PhoneUserVoiceMailsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type PhoneUserVoiceMailsPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PhoneUserVoiceMailsStatusEnum - Status of the voice mail
@@ -46,7 +40,7 @@ func (e *PhoneUserVoiceMailsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PhoneUserVoiceMailsQueryParams struct {
+type PhoneUserVoiceMailsRequest struct {
 	// Start date for the query in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the response includes only one month worth of voicemail data. The month defined should fall within the last six months.
 	From *types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -57,12 +51,8 @@ type PhoneUserVoiceMailsQueryParams struct {
 	Status *PhoneUserVoiceMailsStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// End date.
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type PhoneUserVoiceMailsRequest struct {
-	PathParams  PhoneUserVoiceMailsPathParams
-	QueryParams PhoneUserVoiceMailsQueryParams
-	Security    PhoneUserVoiceMailsSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // PhoneUserVoiceMails200ApplicationXMLVoiceMailsStatusEnum - Status of the voice mail. Can be either 'read' or 'unread'

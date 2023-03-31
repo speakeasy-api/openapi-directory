@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSpecProductTypeListOfWorkgroupJSONPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostSpecProductTypeListOfWorkgroupJSONRequest struct {
-	PathParams PostSpecProductTypeListOfWorkgroupJSONPathParams
-	Request    *shared.WgSpecPrdTypeRegPersistVO `request:"mediaType=application/json"`
+	WgSpecPrdTypeRegPersistVO *shared.WgSpecPrdTypeRegPersistVO `request:"mediaType=application/json"`
+	WorkgroupID               string                            `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostSpecProductTypeListOfWorkgroupJSONResponse struct {

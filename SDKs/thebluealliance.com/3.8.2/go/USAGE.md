@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetStatusRequest{
-        Security: operations.GetStatusSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Headers: operations.GetStatusHeaders{
-            IfNoneMatch: "corrupti",
-        },
+        IfNoneMatch: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Tba.GetStatus(ctx, req)
+    res, err := s.Tba.GetStatus(ctx, req, operations.GetStatusSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

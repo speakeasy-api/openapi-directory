@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsAddServicePathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostLoadBalancersIDActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHTTP - Additional configuration for protocol http
 type PostLoadBalancersIDActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHTTP struct {
 	// Host header to send in the HTTP request. May not contain spaces, percent or backslash symbols. Can be null, in that case no host header is sent.
@@ -124,8 +119,9 @@ type PostLoadBalancersIDActionsAddServiceLoadBalancerService struct {
 }
 
 type PostLoadBalancersIDActionsAddServiceRequest struct {
-	PathParams PostLoadBalancersIDActionsAddServicePathParams
-	Request    *PostLoadBalancersIDActionsAddServiceLoadBalancerService `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsAddServiceLoadBalancerService `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsAddServiceActionResponseActionError - Error message for the Action if error occurred, otherwise null

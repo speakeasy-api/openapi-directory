@@ -4,37 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetPathParams struct {
+type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Departure airport. 3-letter IATA airport code (e.g. 'HAM')
 	AirportCode string `pathParam:"style=simple,explode=false,name=airportCode"`
 	// Start of time range in local time of departure airport (YYYY-MM-DDTHH:mm)
 	FromDateTime string `pathParam:"style=simple,explode=false,name=fromDateTime"`
-}
-
-type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetQueryParams struct {
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest struct {
-	PathParams  OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetPathParams
-	QueryParams OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetQueryParams
-	Headers     OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetHeaders
-	Security    OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetSecurity
 }
 
 type OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse struct {

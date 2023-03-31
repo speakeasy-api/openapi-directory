@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportsCustomCreateQueryParams struct {
+type GetReportsCustomCreateRequest struct {
 	// Filtering options to be used when creating a filtered report. The options must be in JSON form, example: {'gender':['male'],'ages':['18-24'],'countries':['usa']}
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Upload hash to be used for inserting handles
 	UploadHash string `queryParam:"style=form,explode=true,name=upload_hash"`
-}
-
-type GetReportsCustomCreateRequest struct {
-	QueryParams GetReportsCustomCreateQueryParams
 }
 
 type GetReportsCustomCreateResponse struct {

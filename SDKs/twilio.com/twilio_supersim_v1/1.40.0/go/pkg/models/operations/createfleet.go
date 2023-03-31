@@ -14,7 +14,8 @@ var CreateFleetServerList = []string{
 }
 
 type CreateFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateFleetCreateFleetRequestIPCommandsMethodEnum - A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.
@@ -108,12 +109,6 @@ type CreateFleetCreateFleetRequest struct {
 	SmsCommandsURL *string `form:"name=SmsCommandsUrl"`
 	// An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.
 	UniqueName *string `form:"name=UniqueName"`
-}
-
-type CreateFleetRequest struct {
-	Request   *CreateFleetCreateFleetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateFleetSecurity
-	ServerURL *string
 }
 
 type CreateFleetResponse struct {

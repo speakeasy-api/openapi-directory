@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MeterFolderInformationGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type MeterFolderInformationGetRequest struct {
-	PathParams MeterFolderInformationGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type MeterFolderInformationGetResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetReadmePathParams struct {
+type ReposGetReadmeRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetReadmeQueryParams struct {
 	// The name of the commit/branch/tag. Default: the repository’s default branch (usually `master`)
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type ReposGetReadmeRequest struct {
-	PathParams  ReposGetReadmePathParams
-	QueryParams ReposGetReadmeQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposGetReadmeResponse struct {

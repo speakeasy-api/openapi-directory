@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QuerySuggestedImagesRawPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QuerySuggestedImagesRawQueryParams struct {
-	// IterationId to use for the suggested tags and regions.
-	IterationID string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type QuerySuggestedImagesRawHeaders struct {
+type QuerySuggestedImagesRawRequest struct {
+	// Contains properties we need to query suggested images.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type QuerySuggestedImagesRawRequest struct {
-	PathParams  QuerySuggestedImagesRawPathParams
-	QueryParams QuerySuggestedImagesRawQueryParams
-	Headers     QuerySuggestedImagesRawHeaders
-	// Contains properties we need to query suggested images.
-	Request []byte `request:"mediaType=text/xml"`
+	// IterationId to use for the suggested tags and regions.
+	IterationID string `queryParam:"style=form,explode=true,name=iterationId"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type QuerySuggestedImagesRawResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AssignPhoneNumbersSLGPathParams struct {
-	// Unique Identifier of the Shared Line Group.
-	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
 type AssignPhoneNumbersSLGApplicationJSONPhoneNumbers struct {
 	// Unique Identifier of the phone number.
 	ID *string `json:"id,omitempty"`
@@ -24,8 +19,9 @@ type AssignPhoneNumbersSLGApplicationJSON struct {
 }
 
 type AssignPhoneNumbersSLGRequest struct {
-	PathParams AssignPhoneNumbersSLGPathParams
-	Request    *AssignPhoneNumbersSLGApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *AssignPhoneNumbersSLGApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Shared Line Group.
+	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
 }
 
 type AssignPhoneNumbersSLGResponse struct {

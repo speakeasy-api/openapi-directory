@@ -33,7 +33,7 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // ServiceusageOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *operationsT) ServiceusageOperationsList(ctx context.Context, request operations.ServiceusageOperationsListRequest) (*operations.ServiceusageOperationsListResponse, error) {
+func (s *operationsT) ServiceusageOperationsList(ctx context.Context, request operations.ServiceusageOperationsListRequest, security operations.ServiceusageOperationsListSecurity) (*operations.ServiceusageOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/operations"
 
@@ -42,11 +42,11 @@ func (s *operationsT) ServiceusageOperationsList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

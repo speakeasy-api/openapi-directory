@@ -8,16 +8,11 @@ import (
 )
 
 type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams struct {
-	// Required. The Workload name. Format `organizations/{org_id}/locations/{location}/workloads/{workload}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams struct {
+type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams st
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Page token returned from previous request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The Workload name. Format `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,12 +47,6 @@ type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams st
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest struct {
-	PathParams  AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams
-	QueryParams AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams
-	Security    AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity
 }
 
 type AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse struct {

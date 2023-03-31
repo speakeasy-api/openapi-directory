@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MarkChannelsReadRequest struct {
-	Request shared.MarkChannelsReadRequest `request:"mediaType=application/json"`
-}
-
 type MarkChannelsReadResponse struct {
 	// Bad request
 	APIError    *shared.APIError

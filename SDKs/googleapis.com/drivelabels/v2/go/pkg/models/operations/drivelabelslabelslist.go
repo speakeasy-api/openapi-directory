@@ -66,7 +66,7 @@ func (e *DrivelabelsLabelsListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DrivelabelsLabelsListQueryParams struct {
+type DrivelabelsLabelsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -105,10 +105,6 @@ type DrivelabelsLabelsListQueryParams struct {
 	UseAdminAccess *bool `queryParam:"style=form,explode=true,name=useAdminAccess"`
 	// When specified, only certain fields belonging to the indicated view are returned.
 	View *DrivelabelsLabelsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DrivelabelsLabelsListRequest struct {
-	QueryParams DrivelabelsLabelsListQueryParams
 }
 
 type DrivelabelsLabelsListResponse struct {

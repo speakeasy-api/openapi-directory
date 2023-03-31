@@ -48,11 +48,10 @@ pkg/models/operations/datacatalogprojectslocationstaxonomiespolicytagstestiamper
 pkg/models/operations/datacatalogprojectslocationstaxonomiesreplace.go
 pkg/models/shared/googleclouddatacatalogv1searchcatalogresponse.go
 pkg/models/shared/googleclouddatacatalogv1searchcatalogresult.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googleclouddatacatalogv1searchcatalogrequest.go
 pkg/models/shared/googleclouddatacatalogv1searchcatalogrequestscope.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleclouddatacatalogv1entry.go
 pkg/models/shared/googleclouddatacatalogv1usagesignal.go
 pkg/models/shared/googleclouddatacatalogv1usagestats.go

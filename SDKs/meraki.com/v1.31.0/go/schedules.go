@@ -34,7 +34,7 @@ func newSchedules(defaultClient, securityClient HTTPClient, serverURL, language,
 // Returns a list of all camera recording schedules.
 func (s *schedules) GetNetworkCameraSchedules(ctx context.Context, request operations.GetNetworkCameraSchedulesRequest) (*operations.GetNetworkCameraSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *schedules) GetNetworkCameraSchedules(ctx context.Context, request opera
 // List the outage schedule for the SSID
 func (s *schedules) GetNetworkWirelessSsidSchedules(ctx context.Context, request operations.GetNetworkWirelessSsidSchedulesRequest) (*operations.GetNetworkWirelessSsidSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *schedules) GetNetworkWirelessSsidSchedules(ctx context.Context, request
 // Update the outage schedule for the SSID
 func (s *schedules) UpdateNetworkWirelessSsidSchedules(ctx context.Context, request operations.UpdateNetworkWirelessSsidSchedulesRequest) (*operations.UpdateNetworkWirelessSsidSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

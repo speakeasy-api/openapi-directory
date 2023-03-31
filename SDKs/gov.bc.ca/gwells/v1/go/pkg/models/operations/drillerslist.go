@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrillersListQueryParams struct {
+type DrillersListRequest struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
@@ -16,10 +16,6 @@ type DrillersListQueryParams struct {
 	Ordering *string `queryParam:"style=form,explode=true,name=ordering"`
 	// A search term.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type DrillersListRequest struct {
-	QueryParams DrillersListQueryParams
 }
 
 type DrillersListResponse struct {

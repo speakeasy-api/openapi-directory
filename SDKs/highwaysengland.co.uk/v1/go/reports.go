@@ -34,14 +34,14 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Get's the report.
 func (s *reports) ReportsIndex(ctx context.Context, request operations.ReportsIndexRequest) (*operations.ReportsIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/reports/{report_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v{version}/reports/{report_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,14 +86,14 @@ func (s *reports) ReportsIndex(ctx context.Context, request operations.ReportsIn
 // Get's the report.
 func (s *reports) GetVVersionReportsStartDateToEndDateReportType(ctx context.Context, request operations.GetVVersionReportsStartDateToEndDateReportTypeRequest) (*operations.GetVVersionReportsStartDateToEndDateReportTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/reports/{start_date}/to/{end_date}/{report_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v{version}/reports/{start_date}/to/{end_date}/{report_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

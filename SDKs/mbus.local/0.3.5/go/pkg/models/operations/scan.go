@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScanPathParams struct {
+type ScanRequest struct {
 	// Baudrate to communicate with M-Bus devices
 	Baudrate shared.BaudrateEnum `pathParam:"style=simple,explode=false,name=baudrate"`
 	// The serial device to scan - /dev/ is pre-pended to {device} by M-Bus HTTPD before scanning
 	Device string `pathParam:"style=simple,explode=false,name=device"`
-}
-
-type ScanRequest struct {
-	PathParams ScanPathParams
 }
 
 type ScanResponse struct {

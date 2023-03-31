@@ -4,15 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRequest(
-    path_params=operations.GetPathParams(
-        order_id="eius",
-    ),
-    headers=operations.GetHeaders(
-        x_market_id="aut",
-        x_shopper_id="nam",
-    ),
+    x_market_id="corrupti",
+    x_shopper_id="provident",
+    order_id="distinctio",
 )
     
 res = s.v1.get(req)

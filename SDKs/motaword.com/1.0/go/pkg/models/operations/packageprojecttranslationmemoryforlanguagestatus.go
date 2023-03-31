@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageProjectTranslationMemoryForLanguageStatusPathParams struct {
+type PackageProjectTranslationMemoryForLanguageStatusRequest struct {
+	// Async operation key
+	AsyncRequestKey string `queryParam:"style=form,explode=true,name=async_request_key"`
 	// Language Code
 	LanguageCode string `pathParam:"style=simple,explode=false,name=languageCode"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PackageProjectTranslationMemoryForLanguageStatusQueryParams struct {
-	// Async operation key
-	AsyncRequestKey string `queryParam:"style=form,explode=true,name=async_request_key"`
-}
-
-type PackageProjectTranslationMemoryForLanguageStatusRequest struct {
-	PathParams  PackageProjectTranslationMemoryForLanguageStatusPathParams
-	QueryParams PackageProjectTranslationMemoryForLanguageStatusQueryParams
 }
 
 type PackageProjectTranslationMemoryForLanguageStatusResponse struct {

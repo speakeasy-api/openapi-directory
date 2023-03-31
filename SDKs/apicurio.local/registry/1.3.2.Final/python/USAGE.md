@@ -4,15 +4,14 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateArtifactRuleRequest(
-    path_params=operations.CreateArtifactRulePathParams(
-        artifact_id="et",
-    ),
-    request=shared.Rule(
-        config="explicabo",
+    rule=shared.Rule(
+        config="corrupti",
         type="VALIDITY",
     ),
+    artifact_id="provident",
 )
     
 res = s.artifact_rules.create_artifact_rule(req)

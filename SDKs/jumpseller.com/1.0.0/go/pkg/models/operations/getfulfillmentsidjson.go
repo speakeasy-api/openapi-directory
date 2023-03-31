@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFulfillmentsIDJSONPathParams struct {
-	// Id of the Fulfillment
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFulfillmentsIDJSONQueryParams struct {
+type GetFulfillmentsIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Fulfillment
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetFulfillmentsIDJSONRequest struct {
-	PathParams  GetFulfillmentsIDJSONPathParams
-	QueryParams GetFulfillmentsIDJSONQueryParams
 }
 
 type GetFulfillmentsIDJSONResponse struct {

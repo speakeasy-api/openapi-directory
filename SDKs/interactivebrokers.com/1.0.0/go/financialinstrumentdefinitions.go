@@ -36,7 +36,7 @@ func newFinancialInstrumentDefinitions(defaultClient, securityClient HTTPClient,
 // (1) type and symbol and currency, or
 // (2) type, symbol, exchange, and currency, or
 // (3) conid
-func (s *financialInstrumentDefinitions) GetSecdef(ctx context.Context, request operations.GetSecdefRequest) (*operations.GetSecdefResponse, error) {
+func (s *financialInstrumentDefinitions) GetSecdef(ctx context.Context, request operations.GetSecdefRequestBody) (*operations.GetSecdefResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/secdef"
 

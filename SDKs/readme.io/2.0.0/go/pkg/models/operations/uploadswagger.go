@@ -4,11 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UploadSwaggerSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UploadSwaggerRequestBodySwagger struct {
@@ -19,11 +19,6 @@ type UploadSwaggerRequestBodySwagger struct {
 type UploadSwaggerRequestBody struct {
 	// Swagger file
 	Swagger *UploadSwaggerRequestBodySwagger `multipartForm:"file"`
-}
-
-type UploadSwaggerRequest struct {
-	Request  UploadSwaggerRequestBody `request:"mediaType=multipart/form-data"`
-	Security UploadSwaggerSecurity
 }
 
 type UploadSwaggerResponse struct {

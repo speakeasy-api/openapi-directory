@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ModifyNetworkSmDevicesTagsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type ModifyNetworkSmDevicesTagsRequestBody struct {
 	// The ids of the devices to be modified.
 	Ids []string `json:"ids,omitempty"`
@@ -26,8 +22,8 @@ type ModifyNetworkSmDevicesTagsRequestBody struct {
 }
 
 type ModifyNetworkSmDevicesTagsRequest struct {
-	PathParams ModifyNetworkSmDevicesTagsPathParams
-	Request    ModifyNetworkSmDevicesTagsRequestBody `request:"mediaType=application/json"`
+	RequestBody ModifyNetworkSmDevicesTagsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type ModifyNetworkSmDevicesTags200ApplicationJSON struct {

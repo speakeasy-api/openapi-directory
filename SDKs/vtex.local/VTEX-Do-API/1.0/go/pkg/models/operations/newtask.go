@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewTaskHeaders struct {
+type NewTaskRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type NewTaskRequest struct {
-	Headers NewTaskHeaders
-	Request shared.NewTaskRequest `request:"mediaType=application/json"`
+	ContentType    string                `header:"style=simple,explode=false,name=Content-Type"`
+	NewTaskRequest shared.NewTaskRequest `request:"mediaType=application/json"`
 }
 
 type NewTaskResponse struct {

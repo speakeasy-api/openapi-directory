@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteResourceByIDPathParams struct {
-	// ID number of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteResourceByIDHeaders struct {
+type DeleteResourceByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteResourceByIDRequest struct {
-	PathParams DeleteResourceByIDPathParams
-	Headers    DeleteResourceByIDHeaders
+	// ID number of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteResourceByIDResponse struct {

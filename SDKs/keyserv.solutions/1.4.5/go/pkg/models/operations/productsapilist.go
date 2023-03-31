@@ -10,10 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductsAPIListQueryParams struct {
-	Page *int `queryParam:"style=form,explode=true,name=page"`
-}
-
 type ProductsAPIListRequestBodyType string
 
 const (
@@ -59,8 +55,8 @@ func (u ProductsAPIListRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type ProductsAPIListRequest struct {
-	QueryParams ProductsAPIListQueryParams
-	Request     ProductsAPIListRequestBody `request:"mediaType=application/json"`
+	RequestBody ProductsAPIListRequestBody `request:"mediaType=application/json"`
+	Page        *int                       `queryParam:"style=form,explode=true,name=page"`
 }
 
 type ProductsAPIListResponse struct {

@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugActivityTypesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugActivityTypesPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWorkspaceSlugActivityTypesRequest struct {
-	PathParams GetWorkspaceSlugActivityTypesPathParams
-	Security   GetWorkspaceSlugActivityTypesSecurity
+	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugActivityTypesResponse struct {

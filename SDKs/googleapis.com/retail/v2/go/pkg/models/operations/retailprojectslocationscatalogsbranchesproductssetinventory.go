@@ -8,18 +8,14 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsBranchesProductsSetInventorySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryPathParams struct {
-	// Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryQueryParams struct {
+type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                 *shared.XgafvEnum                                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudRetailV2SetInventoryRequestInput *shared.GoogleCloudRetailV2SetInventoryRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryQueryParams stru
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryQueryParams stru
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsBranchesProductsSetInventoryPathParams
-	QueryParams RetailProjectsLocationsCatalogsBranchesProductsSetInventoryQueryParams
-	Request     *shared.GoogleCloudRetailV2SetInventoryRequestInput `request:"mediaType=application/json"`
-	Security    RetailProjectsLocationsCatalogsBranchesProductsSetInventorySecurity
 }
 
 type RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse struct {

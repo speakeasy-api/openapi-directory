@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateTaskSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateTaskPathParams struct {
-	// UUID of the task to update
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateTaskRequest struct {
-	PathParams UpdateTaskPathParams
 	// task object
-	Request  shared.Task `request:"mediaType=application/json"`
-	Security UpdateTaskSecurity
+	Task shared.Task `request:"mediaType=application/json"`
+	// UUID of the task to update
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type UpdateTaskResponse struct {

@@ -8,23 +8,14 @@ import (
 )
 
 type RetrieveCashDrawerShiftSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveCashDrawerShiftPathParams struct {
-	// The shift ID.
-	ShiftID string `pathParam:"style=simple,explode=false,name=shift_id"`
-}
-
-type RetrieveCashDrawerShiftQueryParams struct {
-	// The ID of the location to retrieve cash drawer shifts from.
-	LocationID string `queryParam:"style=form,explode=true,name=location_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveCashDrawerShiftRequest struct {
-	PathParams  RetrieveCashDrawerShiftPathParams
-	QueryParams RetrieveCashDrawerShiftQueryParams
-	Security    RetrieveCashDrawerShiftSecurity
+	// The ID of the location to retrieve cash drawer shifts from.
+	LocationID string `queryParam:"style=form,explode=true,name=location_id"`
+	// The shift ID.
+	ShiftID string `pathParam:"style=simple,explode=false,name=shift_id"`
 }
 
 type RetrieveCashDrawerShiftResponse struct {

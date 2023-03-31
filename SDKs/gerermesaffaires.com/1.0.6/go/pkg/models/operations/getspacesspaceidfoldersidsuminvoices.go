@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDSumInvoicesPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDSumInvoicesQueryParams struct {
+type GetSpacesSpaceIDFoldersIDSumInvoicesRequest struct {
 	// amount before VAT
 	BeforeVAT *float64 `queryParam:"style=form,explode=true,name=BeforeVAT"`
 	// range date due payment
@@ -26,11 +19,10 @@ type GetSpacesSpaceIDFoldersIDSumInvoicesQueryParams struct {
 	Number *string `queryParam:"style=form,explode=true,name=Number"`
 	// range date of payment
 	PaymentDate *string `queryParam:"style=form,explode=true,name=PaymentDate"`
-}
-
-type GetSpacesSpaceIDFoldersIDSumInvoicesRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDSumInvoicesPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDSumInvoicesQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // GetSpacesSpaceIDFoldersIDSumInvoices200ApplicationJSON - Sum of the invoices of the folder

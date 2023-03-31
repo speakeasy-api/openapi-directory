@@ -33,20 +33,20 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GerUserLikes - List liked scores
-func (s *user) GerUserLikes(ctx context.Context, request operations.GerUserLikesRequest) (*operations.GerUserLikesResponse, error) {
+func (s *user) GerUserLikes(ctx context.Context, request operations.GerUserLikesRequest, security operations.GerUserLikesSecurity) (*operations.GerUserLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,16 +92,16 @@ func (s *user) GerUserLikes(ctx context.Context, request operations.GerUserLikes
 
 // GetUser - Get a public user profile
 // Get a public profile of a Flat User.
-func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
+func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest, security operations.GetUserSecurity) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -151,20 +151,20 @@ func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (
 // **DEPRECATED**: Please note that the current behavior will be deprecrated on **2019-01-01**.
 // This method will no longer list private and shared scores, but only public scores of a Flat account.
 // If you want to access to private scores, please use the [Collections API](#tag/Collection) instead.
-func (s *user) GetUserScores(ctx context.Context, request operations.GetUserScoresRequest) (*operations.GetUserScoresResponse, error) {
+func (s *user) GetUserScores(ctx context.Context, request operations.GetUserScoresRequest, security operations.GetUserScoresSecurity) (*operations.GetUserScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/scores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/scores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

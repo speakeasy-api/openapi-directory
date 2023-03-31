@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveSentryRiskDataQueryParams struct {
+type RetrieveSentryRiskDataRequest struct {
 	// show current list of Sentry objects, or show removed Sentry objects
 	IsActive *bool `queryParam:"style=form,explode=true,name=is_active"`
 	// page
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// size
 	Size *int `queryParam:"style=form,explode=true,name=size"`
-}
-
-type RetrieveSentryRiskDataRequest struct {
-	QueryParams RetrieveSentryRiskDataQueryParams
 }
 
 type RetrieveSentryRiskDataResponse struct {

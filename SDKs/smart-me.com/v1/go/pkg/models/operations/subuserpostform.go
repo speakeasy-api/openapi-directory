@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SubUserPostFormRequest struct {
-	Request shared.SubUserData `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type SubUserPostFormResponse struct {
 	ContentType string

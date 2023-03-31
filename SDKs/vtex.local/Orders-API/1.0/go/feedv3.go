@@ -39,7 +39,7 @@ func (s *feedV3) Commititemfeedorderstatus(ctx context.Context, request operatio
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/orders/feed"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommititemfeedorderstatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *feedV3) Commititemfeedorderstatus(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -99,7 +99,7 @@ func (s *feedV3) FeedConfiguration(ctx context.Context, request operations.FeedC
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/orders/feed/config"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeedConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,7 +114,7 @@ func (s *feedV3) FeedConfiguration(ctx context.Context, request operations.FeedC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -158,7 +158,7 @@ func (s *feedV3) FeedConfigurationDelete(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -208,7 +208,7 @@ func (s *feedV3) GetFeedConfiguration(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -259,9 +259,9 @@ func (s *feedV3) Getfeedorderstatus1(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,7 +309,7 @@ func (s *feedV3) TestJSONataExpression(ctx context.Context, request operations.T
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/orders/expressions/jsonata"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestJSONataExpression", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -321,7 +321,7 @@ func (s *feedV3) TestJSONataExpression(ctx context.Context, request operations.T
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -8,13 +8,7 @@ import (
 )
 
 type CreatePayorLinksSecurity struct {
-	OAuthVeloBackOffice shared.SchemeOAuthVeloBackOffice `security:"scheme,type=oauth2"`
-}
-
-type CreatePayorLinksRequest struct {
-	// Request to create a payor link
-	Request  shared.CreatePayorLinkRequest `request:"mediaType=application/json"`
-	Security CreatePayorLinksSecurity
+	OAuthVeloBackOffice string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreatePayorLinksResponse struct {

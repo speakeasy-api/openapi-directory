@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveCustomerGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveCustomerGroupPathParams struct {
-	// The ID of the customer group to retrieve.
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveCustomerGroupRequest struct {
-	PathParams RetrieveCustomerGroupPathParams
-	Security   RetrieveCustomerGroupSecurity
+	// The ID of the customer group to retrieve.
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type RetrieveCustomerGroupResponse struct {

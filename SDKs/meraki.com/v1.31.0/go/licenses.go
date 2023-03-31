@@ -34,9 +34,9 @@ func newLicenses(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Assign SM seats to a network. This will increase the managed SM device limit of the network
 func (s *licenses) AssignOrganizationLicensesSeats(ctx context.Context, request operations.AssignOrganizationLicensesSeatsRequest) (*operations.AssignOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/assignSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/assignSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *licenses) AssignOrganizationLicensesSeats(ctx context.Context, request 
 // Display a license
 func (s *licenses) GetOrganizationLicense(ctx context.Context, request operations.GetOrganizationLicenseRequest) (*operations.GetOrganizationLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,14 +134,14 @@ func (s *licenses) GetOrganizationLicense(ctx context.Context, request operation
 // List the licenses for an organization
 func (s *licenses) GetOrganizationLicenses(ctx context.Context, request operations.GetOrganizationLicensesRequest) (*operations.GetOrganizationLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,7 +185,7 @@ func (s *licenses) GetOrganizationLicenses(ctx context.Context, request operatio
 // Return an overview of the license state for an organization
 func (s *licenses) GetOrganizationLicensesOverview(ctx context.Context, request operations.GetOrganizationLicensesOverviewRequest) (*operations.GetOrganizationLicensesOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/overview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/overview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -230,14 +230,14 @@ func (s *licenses) GetOrganizationLicensesOverview(ctx context.Context, request 
 // List the licenses in a coterm organization
 func (s *licenses) GetOrganizationLicensingCotermLicenses(ctx context.Context, request operations.GetOrganizationLicensingCotermLicensesRequest) (*operations.GetOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -281,9 +281,9 @@ func (s *licenses) GetOrganizationLicensingCotermLicenses(ctx context.Context, r
 // Move licenses to another organization. This will also move any devices that the licenses are assigned to
 func (s *licenses) MoveOrganizationLicenses(ctx context.Context, request operations.MoveOrganizationLicensesRequest) (*operations.MoveOrganizationLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -336,9 +336,9 @@ func (s *licenses) MoveOrganizationLicenses(ctx context.Context, request operati
 // Move SM seats to another organization
 func (s *licenses) MoveOrganizationLicensesSeats(ctx context.Context, request operations.MoveOrganizationLicensesSeatsRequest) (*operations.MoveOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/moveSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/moveSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -391,9 +391,9 @@ func (s *licenses) MoveOrganizationLicensesSeats(ctx context.Context, request op
 // Moves a license to a different organization (coterm only)
 func (s *licenses) MoveOrganizationLicensingCotermLicenses(ctx context.Context, request operations.MoveOrganizationLicensingCotermLicensesRequest) (*operations.MoveOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -446,9 +446,9 @@ func (s *licenses) MoveOrganizationLicensingCotermLicenses(ctx context.Context, 
 // Renew SM seats of a license. This will extend the license expiration date of managed SM devices covered by this license
 func (s *licenses) RenewOrganizationLicensesSeats(ctx context.Context, request operations.RenewOrganizationLicensesSeatsRequest) (*operations.RenewOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/renewSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/renewSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -501,9 +501,9 @@ func (s *licenses) RenewOrganizationLicensesSeats(ctx context.Context, request o
 // Update a license
 func (s *licenses) UpdateOrganizationLicense(ctx context.Context, request operations.UpdateOrganizationLicenseRequest) (*operations.UpdateOrganizationLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

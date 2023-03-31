@@ -1,0 +1,265 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/plaid.com/2020-09-14_1.334.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        client_id="YOUR_API_KEY_HERE",
+        plaid_version="YOUR_API_KEY_HERE",
+        secret="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = shared.AccountsBalanceGetRequest(
+    access_token="corrupti",
+    client_id="provident",
+    options=shared.AccountsBalanceGetRequestOptions(
+        account_ids=[
+            "quibusdam",
+            "unde",
+            "nulla",
+        ],
+        min_last_updated_datetime="2021-04-22T12:08:58.275Z",
+    ),
+    secret="vel",
+)
+    
+res = s.plaid.accounts_balance_get(req)
+
+if res.accounts_get_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### plaid
+
+* `accounts_balance_get` - Retrieve real-time balance data
+* `accounts_get` - Retrieve accounts
+* `application_get` - Retrieve information about a Plaid application
+* `asset_report_audit_copy_create` - Create Asset Report Audit Copy
+* `asset_report_audit_copy_get` - Retrieve an Asset Report Audit Copy
+* `asset_report_audit_copy_remove` - Remove Asset Report Audit Copy
+* `asset_report_create` - Create an Asset Report
+* `asset_report_filter` - Filter Asset Report
+* `asset_report_get` - Retrieve an Asset Report
+* `asset_report_pdf_get` - Retrieve a PDF Asset Report
+* `asset_report_refresh` - Refresh an Asset Report
+* `asset_report_remove` - Delete an Asset Report
+* `auth_get` - Retrieve auth data
+* `bank_transfer_balance_get` - Get balance of your Bank Transfer account
+* `bank_transfer_cancel` - Cancel a bank transfer
+* `bank_transfer_create` - Create a bank transfer
+* `bank_transfer_event_list` - List bank transfer events
+* `bank_transfer_event_sync` - Sync bank transfer events
+* `bank_transfer_get` - Retrieve a bank transfer
+* `bank_transfer_list` - List bank transfers
+* `bank_transfer_migrate_account` - Migrate account into Bank Transfers
+* `bank_transfer_sweep_get` - Retrieve a sweep
+* `bank_transfer_sweep_list` - List sweeps
+* `categories_get` - Get Categories
+* `create_payment_token` - Create payment token
+* `credit_asset_report_freddie_mac_get` - Retrieve an Asset Report with Freddie Mac format. Only Freddie Mac can use this endpoint.
+* `credit_audit_copy_token_create` - Create Asset or Income Report Audit Copy Token
+* `credit_audit_copy_token_update` - Update an Audit Copy Token
+* `credit_bank_employment_get` - Retrieve information from the bank accounts used for employment verification
+* `credit_bank_income_get` - Retrieve information from the bank accounts used for income verification
+* `credit_bank_income_pdf_get` - Retrieve information from the bank accounts used for income verification in PDF format
+* `credit_bank_income_refresh` - Refresh a user's bank income information
+* `credit_employment_get` - Retrieve a summary of an individual's employment information
+* `credit_freddie_mac_reports_get` - Retrieve an Asset Report with Freddie Mac format (aka VOA - Verification Of Assets), and a Verification Of Employment (VOE) report if this one is available. Only Freddie Mac can use this endpoint.
+* `credit_payroll_income_get` - Retrieve a user's payroll information
+* `credit_payroll_income_precheck` - Check income verification eligibility and optimize conversion
+* `credit_payroll_income_refresh` - Refresh a digital payroll income verification
+* `credit_relay_create` - Create a relay token to share an Asset Report with a partner client (beta)
+* `credit_relay_get` - Retrieve the reports associated with a relay token that was shared with you (beta)
+* `credit_relay_refresh` - Refresh a report of a relay token (beta)
+* `credit_relay_remove` - Remove relay token (beta)
+* `credit_report_audit_copy_remove` - Remove an Audit Copy token
+* `credit_sessions_get` - Retrieve Link sessions for your user
+* `dashboard_user_get` - Retrieve a dashboard user
+* `dashboard_user_list` - List dashboard users
+* `deposit_switch_alt_create` - Create a deposit switch without using Plaid Exchange
+* `deposit_switch_create` - Create a deposit switch
+* `deposit_switch_get` - Retrieve a deposit switch
+* `deposit_switch_token_create` - Create a deposit switch token
+* `employers_search` - Search employer database
+* `employment_verification_get` - (Deprecated) Retrieve a summary of an individual's employment information
+* `fdx_notifications` - Webhook receiver for fdx notifications
+* `identity_get` - Retrieve identity data
+* `identity_match` - Retrieve identity match score
+* `identity_verification_create` - Create a new identity verification
+* `identity_verification_get` - Retrieve Identity Verification
+* `identity_verification_list` - List Identity Verifications
+* `identity_verification_retry` - Retry an Identity Verification
+* `income_verification_create` - (Deprecated) Create an income verification instance
+* `income_verification_documents_download` - (Deprecated) Download the original documents used for income verification
+* `income_verification_paystubs_get` - (Deprecated) Retrieve information from the paystubs used for income verification
+* `income_verification_precheck` - (Deprecated) Check digital income verification eligibility and optimize conversion
+* `income_verification_taxforms_get` - (Deprecated) Retrieve information from the tax documents used for income verification
+* `institutions_get` - Get details of all supported institutions
+* `institutions_get_by_id` - Get details of an institution
+* `institutions_search` - Search institutions
+* `investments_holdings_get` - Get Investment holdings
+* `investments_transactions_get` - Get investment transactions
+* `item_access_token_invalidate` - Invalidate access_token
+* `item_activity_list` - List a historical log of user consent events
+* `item_application_list` - List a user’s connected applications
+* `item_application_scopes_update` - Update the scopes of access for a particular application
+* `item_create_public_token` - Create public token
+* `item_get` - Retrieve an Item
+* `item_import` - Import Item
+* `item_public_token_exchange` - Exchange public token for an access token
+* `item_remove` - Remove an Item
+* `item_webhook_update` - Update Webhook URL
+* `liabilities_get` - Retrieve Liabilities data
+* `link_delivery_create` - Create Link Delivery session
+* `link_delivery_get` - Get Link Delivery session
+* `link_oauth_correlation_id_exchange` - Exchange the Link Correlation Id for a Link Token
+* `link_token_create` - Create Link Token
+* `link_token_get` - Get Link Token
+* `partner_customer_create` - Creates a new end customer for a Plaid reseller.
+* `partner_customer_enable` - Enables a Plaid reseller's end customer in the Production environment.
+* `partner_customer_get` - Returns a Plaid reseller's end customer.
+* `partner_customer_oauth_institutions_get` - Returns OAuth-institution registration information for a given end customer.
+* `partner_customer_remove` - Removes a Plaid reseller's end customer.
+* `payment_initiation_consent_create` - Create payment consent
+* `payment_initiation_consent_get` - Get payment consent
+* `payment_initiation_consent_payment_execute` - Execute a single payment using consent
+* `payment_initiation_consent_revoke` - Revoke payment consent
+* `payment_initiation_payment_create` - Create a payment
+* `payment_initiation_payment_get` - Get payment details
+* `payment_initiation_payment_list` - List payments
+* `payment_initiation_payment_reverse` - Reverse an existing payment
+* `payment_initiation_recipient_create` - Create payment recipient
+* `payment_initiation_recipient_get` - Get payment recipient
+* `payment_initiation_recipient_list` - List payment recipients
+* `payment_profile_create` - Create payment profile
+* `payment_profile_get` - Get payment profile
+* `payment_profile_remove` - Remove payment profile
+* `processor_apex_processor_token_create` - Create Apex bank account token
+* `processor_auth_get` - Retrieve Auth data
+* `processor_balance_get` - Retrieve Balance data
+* `processor_bank_transfer_create` - Create a bank transfer as a processor
+* `processor_identity_get` - Retrieve Identity data
+* `processor_signal_decision_report` - Report whether you initiated an ACH transaction
+* `processor_signal_evaluate` - Evaluate a planned ACH transaction
+* `processor_signal_return_report` - Report a return for an ACH transaction
+* `processor_stripe_bank_account_token_create` - Create Stripe bank account token
+* `processor_token_create` - Create processor token
+* `sandbox_bank_transfer_fire_webhook` - Manually fire a Bank Transfer webhook
+* `sandbox_bank_transfer_simulate` - Simulate a bank transfer event in Sandbox
+* `sandbox_income_fire_webhook` - Manually fire an Income webhook
+* `sandbox_item_fire_webhook` - Fire a test webhook
+* `sandbox_item_reset_login` - Force a Sandbox Item into an error state
+* `sandbox_item_set_verification_status` - Set verification status for Sandbox account
+* `sandbox_oauth_select_accounts` - Save the selected accounts when connecting to the Platypus Oauth institution
+* `sandbox_payment_profile_reset_login` - Reset the login of a Payment Profile
+* `sandbox_processor_token_create` - Create a test Item and processor token
+* `sandbox_public_token_create` - Create a test Item
+* `sandbox_transfer_fire_webhook` - Manually fire a Transfer webhook
+* `sandbox_transfer_repayment_simulate` - Trigger the creation of a repayment
+* `sandbox_transfer_simulate` - Simulate a transfer event in Sandbox
+* `sandbox_transfer_sweep_simulate` - Simulate creating a sweep
+* `sandbox_transfer_test_clock_advance` - Advance a test clock
+* `sandbox_transfer_test_clock_create` - Create a test clock
+* `sandbox_transfer_test_clock_get` - Get a test clock
+* `sandbox_transfer_test_clock_list` - List test clocks
+* `signal_decision_report` - Report whether you initiated an ACH transaction
+* `signal_evaluate` - Evaluate a planned ACH transaction
+* `signal_prepare` - Opt-in an Item to Signal
+* `signal_return_report` - Report a return for an ACH transaction
+* `transactions_enhance` - enhance locally-held transaction data
+* `transactions_enrich` - Enrich locally-held transaction data
+* `transactions_get` - Get transaction data
+* `transactions_recurring_get` - Fetch recurring transaction streams
+* `transactions_refresh` - Refresh transaction data
+* `transactions_rules_create` - Create transaction category rule
+* `transactions_rules_list` - Return a list of rules created for the Item associated with the access token.
+* `transactions_rules_remove` - Remove transaction rule
+* `transactions_sync` - Get incremental transaction updates on an Item
+* `transfer_authorization_create` - Create a transfer authorization
+* `transfer_cancel` - Cancel a transfer
+* `transfer_capabilities_get` - Get RTP eligibility information of a transfer
+* `transfer_create` - Create a transfer
+* `transfer_event_list` - List transfer events
+* `transfer_event_sync` - Sync transfer events
+* `transfer_get` - Retrieve a transfer
+* `transfer_intent_create` - Create a transfer intent object to invoke the Transfer UI
+* `transfer_intent_get` - Retrieve more information about a transfer intent
+* `transfer_list` - List transfers
+* `transfer_migrate_account` - Migrate account into Transfers
+* `transfer_originator_create` - Create a new originator
+* `transfer_originator_get_json` - Get status of an originator's onboarding
+* `transfer_originator_get_raw` - Get status of an originator's onboarding
+* `transfer_originator_list` - Get status of all originators' onboarding
+* `transfer_questionnaire_create` - Generate a Plaid-hosted onboarding UI URL.
+* `transfer_recurring_cancel` - Cancel a recurring transfer.
+* `transfer_recurring_create` - Create a recurring transfer
+* `transfer_recurring_get` - Retrieve a recurring transfer
+* `transfer_recurring_list` - List recurring transfers
+* `transfer_refund_cancel` - Cancel a refund
+* `transfer_refund_create` - Create a refund
+* `transfer_refund_get` - Retrieve a refund
+* `transfer_repayment_list` - Lists historical repayments
+* `transfer_repayment_return_list` - List the returns included in a repayment
+* `transfer_sweep_get` - Retrieve a sweep
+* `transfer_sweep_list` - List sweeps
+* `user_create` - Create user
+* `wallet_create` - Create an e-wallet
+* `wallet_get` - Fetch an e-wallet
+* `wallet_list` - Fetch a list of e-wallets
+* `wallet_transaction_execute` - Execute a transaction using an e-wallet
+* `wallet_transaction_get` - Fetch an e-wallet transaction
+* `wallet_transaction_list` - List e-wallet transactions
+* `watchlist_screening_entity_create` - Create a watchlist screening for an entity
+* `watchlist_screening_entity_get` - Get an entity screening
+* `watchlist_screening_entity_history_list` - List history for entity watchlist screenings
+* `watchlist_screening_entity_hit_list` - List hits for entity watchlist screenings
+* `watchlist_screening_entity_list` - List entity watchlist screenings
+* `watchlist_screening_entity_program_get` - Get entity watchlist screening program
+* `watchlist_screening_entity_program_list` - List entity watchlist screening programs
+* `watchlist_screening_entity_review_create` - Create a review for an entity watchlist screening
+* `watchlist_screening_entity_review_list` - List reviews for entity watchlist screenings
+* `watchlist_screening_entity_update` - Update an entity screening
+* `watchlist_screening_individual_create` - Create a watchlist screening for a person
+* `watchlist_screening_individual_get` - Retrieve an individual watchlist screening
+* `watchlist_screening_individual_history_list` - List history for individual watchlist screenings
+* `watchlist_screening_individual_hit_list` - List hits for individual watchlist screening
+* `watchlist_screening_individual_list` - List Individual Watchlist Screenings
+* `watchlist_screening_individual_program_get` - Get individual watchlist screening program
+* `watchlist_screening_individual_program_list` - List individual watchlist screening programs
+* `watchlist_screening_individual_review_create` - Create a review for an individual watchlist screening
+* `watchlist_screening_individual_review_list` - List reviews for individual watchlist screenings
+* `watchlist_screening_individual_update` - Update individual watchlist screening
+* `webhook_verification_key_get` - Get webhook verification key
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

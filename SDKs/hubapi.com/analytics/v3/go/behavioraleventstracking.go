@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newBehavioralEventsTracking(defaultClient, securityClient HTTPClient, serve
 
 // PostEventsV3Send - Sends Custom Behavioral Event
 // Endpoint to send an instance of a behavioral event
-func (s *behavioralEventsTracking) PostEventsV3Send(ctx context.Context, request operations.PostEventsV3SendRequest) (*operations.PostEventsV3SendResponse, error) {
+func (s *behavioralEventsTracking) PostEventsV3Send(ctx context.Context, request shared.BehavioralEventHTTPCompletionRequest, security operations.PostEventsV3SendSecurity) (*operations.PostEventsV3SendResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events/v3/send"
 
@@ -53,7 +54,7 @@ func (s *behavioralEventsTracking) PostEventsV3Send(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

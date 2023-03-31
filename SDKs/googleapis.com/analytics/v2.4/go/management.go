@@ -32,7 +32,7 @@ func newManagement(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AnalyticsManagementAccountsList - Lists all accounts to which the user has access.
-func (s *management) AnalyticsManagementAccountsList(ctx context.Context, request operations.AnalyticsManagementAccountsListRequest) (*operations.AnalyticsManagementAccountsListResponse, error) {
+func (s *management) AnalyticsManagementAccountsList(ctx context.Context, request operations.AnalyticsManagementAccountsListRequest, security operations.AnalyticsManagementAccountsListSecurity) (*operations.AnalyticsManagementAccountsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/management/accounts"
 
@@ -41,11 +41,11 @@ func (s *management) AnalyticsManagementAccountsList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *management) AnalyticsManagementAccountsList(ctx context.Context, reques
 }
 
 // AnalyticsManagementGoalsList - Lists goals to which the user has access.
-func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request operations.AnalyticsManagementGoalsListRequest) (*operations.AnalyticsManagementGoalsListResponse, error) {
+func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request operations.AnalyticsManagementGoalsListRequest, security operations.AnalyticsManagementGoalsListSecurity) (*operations.AnalyticsManagementGoalsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,20 +110,20 @@ func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request o
 }
 
 // AnalyticsManagementProfilesList - Lists views (profiles) to which the user has access.
-func (s *management) AnalyticsManagementProfilesList(ctx context.Context, request operations.AnalyticsManagementProfilesListRequest) (*operations.AnalyticsManagementProfilesListResponse, error) {
+func (s *management) AnalyticsManagementProfilesList(ctx context.Context, request operations.AnalyticsManagementProfilesListRequest, security operations.AnalyticsManagementProfilesListSecurity) (*operations.AnalyticsManagementProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *management) AnalyticsManagementProfilesList(ctx context.Context, reques
 }
 
 // AnalyticsManagementSegmentsList - Lists advanced segments to which the user has access.
-func (s *management) AnalyticsManagementSegmentsList(ctx context.Context, request operations.AnalyticsManagementSegmentsListRequest) (*operations.AnalyticsManagementSegmentsListResponse, error) {
+func (s *management) AnalyticsManagementSegmentsList(ctx context.Context, request operations.AnalyticsManagementSegmentsListRequest, security operations.AnalyticsManagementSegmentsListSecurity) (*operations.AnalyticsManagementSegmentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/management/segments"
 
@@ -158,11 +158,11 @@ func (s *management) AnalyticsManagementSegmentsList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -188,20 +188,20 @@ func (s *management) AnalyticsManagementSegmentsList(ctx context.Context, reques
 }
 
 // AnalyticsManagementWebpropertiesList - Lists web properties to which the user has access.
-func (s *management) AnalyticsManagementWebpropertiesList(ctx context.Context, request operations.AnalyticsManagementWebpropertiesListRequest) (*operations.AnalyticsManagementWebpropertiesListResponse, error) {
+func (s *management) AnalyticsManagementWebpropertiesList(ctx context.Context, request operations.AnalyticsManagementWebpropertiesListRequest, security operations.AnalyticsManagementWebpropertiesListSecurity) (*operations.AnalyticsManagementWebpropertiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

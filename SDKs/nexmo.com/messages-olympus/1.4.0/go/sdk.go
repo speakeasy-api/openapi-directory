@@ -94,7 +94,7 @@ func New(opts ...SDKOption) *SDK {
 
 // SendMessage - Send a message to the given channel.
 // Send a Message
-func (s *SDK) SendMessage(ctx context.Context, request operations.SendMessageRequest) (*operations.SendMessageResponse, error) {
+func (s *SDK) SendMessage(ctx context.Context, request operations.SendMessageRequestBody, security operations.SendMessageSecurity) (*operations.SendMessageResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -113,7 +113,7 @@ func (s *SDK) SendMessage(ctx context.Context, request operations.SendMessageReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

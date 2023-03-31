@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForCommitCommentPathParams struct {
-	// comment_id parameter
-	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
-	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForCommitCommentRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types) to add to the commit comment.
 type ReactionsCreateForCommitCommentRequestBodyContentEnum string
 
@@ -64,8 +57,11 @@ type ReactionsCreateForCommitCommentRequestBody struct {
 }
 
 type ReactionsCreateForCommitCommentRequest struct {
-	PathParams ReactionsCreateForCommitCommentPathParams
-	Request    ReactionsCreateForCommitCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForCommitCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
+	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReactionsCreateForCommitComment415ApplicationJSON - Preview header missing

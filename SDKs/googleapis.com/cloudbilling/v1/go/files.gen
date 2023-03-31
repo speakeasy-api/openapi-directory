@@ -29,7 +29,6 @@ pkg/models/operations/cloudbillingservicesskuslist.go
 pkg/models/shared/billingaccount.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/policy.go
 pkg/models/shared/binding.go
 pkg/models/shared/expr.go

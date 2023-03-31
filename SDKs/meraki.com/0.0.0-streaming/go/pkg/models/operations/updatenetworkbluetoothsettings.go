@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkBluetoothSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum - The way major and minor number should be assigned to nodes in the network. ('Unique', 'Non-unique')
 type UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum string
 
@@ -52,8 +48,8 @@ type UpdateNetworkBluetoothSettingsRequestBody struct {
 }
 
 type UpdateNetworkBluetoothSettingsRequest struct {
-	PathParams UpdateNetworkBluetoothSettingsPathParams
-	Request    *UpdateNetworkBluetoothSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkBluetoothSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                     `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkBluetoothSettings200ApplicationJSON - Successful operation

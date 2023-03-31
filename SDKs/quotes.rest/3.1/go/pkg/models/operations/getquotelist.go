@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteListSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteListQueryParams struct {
+type GetQuoteListRequest struct {
 	// Response is paged. This parameter controls how many is returned in the result.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Response is paged. This parameter controls where response starts the listing at
 	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetQuoteListRequest struct {
-	QueryParams GetQuoteListQueryParams
-	Security    GetQuoteListSecurity
 }
 
 type GetQuoteListResponse struct {

@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteTagPathParams struct {
+type DeleteTagRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Id of the tag to be deleted
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type DeleteTagHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type DeleteTagRequest struct {
-	PathParams DeleteTagPathParams
-	Headers    DeleteTagHeaders
 }
 
 type DeleteTagResponse struct {

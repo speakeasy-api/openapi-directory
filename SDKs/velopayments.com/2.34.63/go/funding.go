@@ -37,9 +37,9 @@ func newFunding(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Instruct a funding request to transfer funds from the payor’s funding bank to the payor’s balance held within Velo  (202 - accepted, 400 - invalid request body, 404 - source account not found).
 func (s *funding) CreateFundingRequestV2(ctx context.Context, request operations.CreateFundingRequestV2Request) (*operations.CreateFundingRequestV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sourceAccounts/{sourceAccountId}/fundingRequest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sourceAccounts/{sourceAccountId}/fundingRequest", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FundingRequestV2", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -123,9 +123,9 @@ func (s *funding) CreateFundingRequestV2(ctx context.Context, request operations
 // <p>Instruct a funding request to transfer funds from the payor’s funding bank to the payor’s balance held within Velo</p>
 func (s *funding) CreateFundingRequestV3(ctx context.Context, request operations.CreateFundingRequestV3Request) (*operations.CreateFundingRequestV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}/fundingRequest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}/fundingRequest", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FundingRequestV3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,14 +211,14 @@ func (s *funding) CreateFundingRequestV3(ctx context.Context, request operations
 // Get Funding Account by ID
 func (s *funding) GetFundingAccountV2(ctx context.Context, request operations.GetFundingAccountV2Request) (*operations.GetFundingAccountV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/fundingAccounts/{fundingAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/fundingAccounts/{fundingAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -298,7 +298,7 @@ func (s *funding) GetFundingAccountsV2(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -360,7 +360,7 @@ func (s *funding) GetFundingAccountsV2(ctx context.Context, request operations.G
 // Get Funding by Id
 func (s *funding) GetFundingByIDV1(ctx context.Context, request operations.GetFundingByIDV1Request) (*operations.GetFundingByIDV1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/fundings/{fundingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/fundings/{fundingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -452,7 +452,7 @@ func (s *funding) ListFundingAuditDeltas(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

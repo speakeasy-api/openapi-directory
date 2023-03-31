@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsReviewsUpdateReplyPathParams struct {
-	// The name of the review to respond to.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessAccountsLocationsReviewsUpdateReplyQueryParams struct {
+type MybusinessAccountsLocationsReviewsUpdateReplyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ReviewReply *shared.ReviewReply `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -25,6 +21,8 @@ type MybusinessAccountsLocationsReviewsUpdateReplyQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the review to respond to.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -35,12 +33,6 @@ type MybusinessAccountsLocationsReviewsUpdateReplyQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsReviewsUpdateReplyRequest struct {
-	PathParams  MybusinessAccountsLocationsReviewsUpdateReplyPathParams
-	QueryParams MybusinessAccountsLocationsReviewsUpdateReplyQueryParams
-	Request     *shared.ReviewReply `request:"mediaType=application/json"`
 }
 
 type MybusinessAccountsLocationsReviewsUpdateReplyResponse struct {

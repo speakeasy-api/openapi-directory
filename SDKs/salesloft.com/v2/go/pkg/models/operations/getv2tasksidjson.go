@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2TasksIDJSONPathParams struct {
+type GetV2TasksIDJSONRequest struct {
 	// Task ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2TasksIDJSONRequest struct {
-	PathParams GetV2TasksIDJSONPathParams
 }
 
 type GetV2TasksIDJSONResponse struct {

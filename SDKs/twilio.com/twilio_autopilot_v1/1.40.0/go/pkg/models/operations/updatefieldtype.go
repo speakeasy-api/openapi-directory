@@ -12,14 +12,8 @@ var UpdateFieldTypeServerList = []string{
 }
 
 type UpdateFieldTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateFieldTypePathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The Twilio-provided string that uniquely identifies the FieldType resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateFieldTypeUpdateFieldTypeRequest struct {
@@ -30,10 +24,11 @@ type UpdateFieldTypeUpdateFieldTypeRequest struct {
 }
 
 type UpdateFieldTypeRequest struct {
-	PathParams UpdateFieldTypePathParams
-	Request    *UpdateFieldTypeUpdateFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateFieldTypeSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the to update.
+	AssistantSid string                                 `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateFieldTypeUpdateFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the FieldType resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateFieldTypeResponse struct {

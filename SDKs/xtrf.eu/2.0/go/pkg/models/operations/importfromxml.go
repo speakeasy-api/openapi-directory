@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportFromXMLRequest struct {
-	// Imported reports definition from XML.
-	Request shared.ImportRequestDTO `request:"mediaType=application/json"`
-}
-
 type ImportFromXMLResponse struct {
 	ContentType string
 	// Success

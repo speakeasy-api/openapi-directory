@@ -12,20 +12,15 @@ var FetchCallFeedbackServerList = []string{
 }
 
 type FetchCallFeedbackSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchCallFeedbackPathParams struct {
+type FetchCallFeedbackRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The call sid that uniquely identifies the call
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-}
-
-type FetchCallFeedbackRequest struct {
-	PathParams FetchCallFeedbackPathParams
-	Security   FetchCallFeedbackSecurity
-	ServerURL  *string
 }
 
 type FetchCallFeedbackResponse struct {

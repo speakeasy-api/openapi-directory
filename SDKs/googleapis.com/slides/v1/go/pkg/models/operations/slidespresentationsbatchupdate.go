@@ -8,33 +8,33 @@ import (
 )
 
 type SlidesPresentationsBatchUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsBatchUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsBatchUpdateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsBatchUpdateSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsBatchUpdateSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsBatchUpdateSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SlidesPresentationsBatchUpdateSecurity struct {
@@ -46,14 +46,10 @@ type SlidesPresentationsBatchUpdateSecurity struct {
 	Option6 *SlidesPresentationsBatchUpdateSecurityOption6 `security:"option"`
 }
 
-type SlidesPresentationsBatchUpdatePathParams struct {
-	// The presentation to apply the updates to.
-	PresentationID string `pathParam:"style=simple,explode=false,name=presentationId"`
-}
-
-type SlidesPresentationsBatchUpdateQueryParams struct {
+type SlidesPresentationsBatchUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                    *shared.XgafvEnum                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BatchUpdatePresentationRequest *shared.BatchUpdatePresentationRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -66,6 +62,8 @@ type SlidesPresentationsBatchUpdateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The presentation to apply the updates to.
+	PresentationID string `pathParam:"style=simple,explode=false,name=presentationId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -74,13 +72,6 @@ type SlidesPresentationsBatchUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SlidesPresentationsBatchUpdateRequest struct {
-	PathParams  SlidesPresentationsBatchUpdatePathParams
-	QueryParams SlidesPresentationsBatchUpdateQueryParams
-	Request     *shared.BatchUpdatePresentationRequest `request:"mediaType=application/json"`
-	Security    SlidesPresentationsBatchUpdateSecurity
 }
 
 type SlidesPresentationsBatchUpdateResponse struct {

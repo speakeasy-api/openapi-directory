@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutQuoteRawPathParams struct {
+type PutQuoteRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	QuoteID     string `pathParam:"style=simple,explode=false,name=quote_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type PutQuoteRawRequest struct {
-	PathParams PutQuoteRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type PutQuoteRawResponse struct {

@@ -11,18 +11,14 @@ import (
 )
 
 type PatchGlobalAuthModuleSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchGlobalAuthModulePathParams struct {
-	// The auth. config id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PatchGlobalAuthModuleRequest struct {
-	PathParams PatchGlobalAuthModulePathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchGlobalAuthModuleSecurity
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
+	// The auth. config id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchGlobalAuthModule200ApplicationJSONType string

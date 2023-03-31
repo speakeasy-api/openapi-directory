@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateStatusCheckProtectionPathParams struct {
-	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.6/graphql).
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposUpdateStatusCheckProtectionRequestBodyChecks struct {
 	// The ID of the GitHub App that must provide this check. Omit this field to automatically select the GitHub App that has recently provided this check, or any app if it was not set by a GitHub App. Pass -1 to explicitly allow any app to set the status.
 	AppID *int64 `json:"app_id,omitempty"`
@@ -34,8 +25,13 @@ type ReposUpdateStatusCheckProtectionRequestBody struct {
 }
 
 type ReposUpdateStatusCheckProtectionRequest struct {
-	PathParams ReposUpdateStatusCheckProtectionPathParams
-	Request    *ReposUpdateStatusCheckProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateStatusCheckProtectionRequestBody `request:"mediaType=application/json"`
+	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.6/graphql).
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateStatusCheckProtectionResponse struct {

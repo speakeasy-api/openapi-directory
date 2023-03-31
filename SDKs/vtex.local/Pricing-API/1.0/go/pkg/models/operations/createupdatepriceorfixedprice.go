@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUpdatePriceOrFixedPricePathParams struct {
-	// SKU unique identifier number.
-	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type CreateUpdatePriceOrFixedPriceHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange - Period of time when the fixed price will be applied to the SKU.
 type CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange struct {
 	// Start date of the price.
@@ -53,9 +41,13 @@ type CreateUpdatePriceOrFixedPriceRequestBody struct {
 }
 
 type CreateUpdatePriceOrFixedPriceRequest struct {
-	PathParams CreateUpdatePriceOrFixedPricePathParams
-	Headers    CreateUpdatePriceOrFixedPriceHeaders
-	Request    *CreateUpdatePriceOrFixedPriceRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                                    `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *CreateUpdatePriceOrFixedPriceRequestBody `request:"mediaType=application/json"`
+	// SKU unique identifier number.
+	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
 }
 
 type CreateUpdatePriceOrFixedPriceResponse struct {

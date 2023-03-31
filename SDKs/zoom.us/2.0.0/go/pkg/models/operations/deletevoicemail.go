@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteVoicemailPathParams struct {
+type DeleteVoicemailRequest struct {
 	// Unique identifier of the voicemail. Retrieve the value for this field by calling the [Get voicemails](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone/phoneuservoicemails) API.
 	VoicemailID string `pathParam:"style=simple,explode=false,name=voicemailId"`
-}
-
-type DeleteVoicemailRequest struct {
-	PathParams DeleteVoicemailPathParams
 }
 
 type DeleteVoicemailResponse struct {

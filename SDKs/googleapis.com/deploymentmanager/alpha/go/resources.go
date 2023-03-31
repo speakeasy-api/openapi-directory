@@ -32,20 +32,20 @@ func newResources(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DeploymentmanagerResourcesGet - Gets information about a single resource.
-func (s *resources) DeploymentmanagerResourcesGet(ctx context.Context, request operations.DeploymentmanagerResourcesGetRequest) (*operations.DeploymentmanagerResourcesGetResponse, error) {
+func (s *resources) DeploymentmanagerResourcesGet(ctx context.Context, request operations.DeploymentmanagerResourcesGetRequest, security operations.DeploymentmanagerResourcesGetSecurity) (*operations.DeploymentmanagerResourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/resources/{resource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/resources/{resource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *resources) DeploymentmanagerResourcesGet(ctx context.Context, request o
 }
 
 // DeploymentmanagerResourcesList - Lists all resources in a given deployment.
-func (s *resources) DeploymentmanagerResourcesList(ctx context.Context, request operations.DeploymentmanagerResourcesListRequest) (*operations.DeploymentmanagerResourcesListResponse, error) {
+func (s *resources) DeploymentmanagerResourcesList(ctx context.Context, request operations.DeploymentmanagerResourcesListRequest, security operations.DeploymentmanagerResourcesListSecurity) (*operations.DeploymentmanagerResourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/resources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/resources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

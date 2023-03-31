@@ -3,49 +3,45 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateDevicePoolRequest(
-    headers=operations.CreateDevicePoolHeaders(
-        x_amz_algorithm="aperiam",
-        x_amz_content_sha256="est",
-        x_amz_credential="ab",
-        x_amz_date="molestias",
-        x_amz_security_token="molestias",
-        x_amz_signature="voluptas",
-        x_amz_signed_headers="animi",
-        x_amz_target="DeviceFarm_20150623.CreateDevicePool",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateDevicePoolRequest(
-        description="nihil",
-        max_devices=5987901294680041728,
-        name="hic",
-        project_arn="vitae",
+)
+
+
+req = operations.CreateDevicePoolRequest(
+    create_device_pool_request=shared.CreateDevicePoolRequest(
+        description="corrupti",
+        max_devices=592845,
+        name="distinctio",
+        project_arn="quibusdam",
         rules=[
             shared.Rule(
-                attribute="FLEET_TYPE",
-                operator="EQUALS",
-                value="pariatur",
-            ),
-            shared.Rule(
-                attribute="INSTANCE_ARN",
+                attribute="MODEL",
                 operator="GREATER_THAN_OR_EQUALS",
-                value="architecto",
+                value="illum",
             ),
             shared.Rule(
-                attribute="INSTANCE_LABELS",
-                operator="LESS_THAN",
-                value="rem",
+                attribute="REMOTE_DEBUG_ENABLED",
+                operator="GREATER_THAN_OR_EQUALS",
+                value="deserunt",
+            ),
+            shared.Rule(
+                attribute="REMOTE_ACCESS_ENABLED",
+                operator="GREATER_THAN",
+                value="magnam",
             ),
         ],
     ),
+    x_amz_algorithm="debitis",
+    x_amz_content_sha256="ipsa",
+    x_amz_credential="delectus",
+    x_amz_date="tempora",
+    x_amz_security_token="suscipit",
+    x_amz_signature="molestiae",
+    x_amz_signed_headers="minus",
+    x_amz_target="DeviceFarm_20150623.CreateDevicePool",
 )
     
 res = s.create_device_pool(req)

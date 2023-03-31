@@ -13,29 +13,27 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AddExpiryListingsJSONRequest{
-        Request: []shared.AftermarketListingExpiryCreate{
-            shared.AftermarketListingExpiryCreate{
-                Domain: "provident",
-                ExpiresAt: "distinctio",
-                LosingRegistrarID: 844266,
-                PageViewsMonthly: 602763,
-                RevenueMonthly: 857946,
-            },
-            shared.AftermarketListingExpiryCreate{
-                Domain: "corrupti",
-                ExpiresAt: "illum",
-                LosingRegistrarID: 423655,
-                PageViewsMonthly: 623564,
-                RevenueMonthly: 645894,
-            },
-            shared.AftermarketListingExpiryCreate{
-                Domain: "suscipit",
-                ExpiresAt: "iure",
-                LosingRegistrarID: 297534,
-                PageViewsMonthly: 891773,
-                RevenueMonthly: 56713,
-            },
+    req := []shared.AftermarketListingExpiryCreate{
+        shared.AftermarketListingExpiryCreate{
+            Domain: "provident",
+            ExpiresAt: "distinctio",
+            LosingRegistrarID: 844266,
+            PageViewsMonthly: 602763,
+            RevenueMonthly: 857946,
+        },
+        shared.AftermarketListingExpiryCreate{
+            Domain: "corrupti",
+            ExpiresAt: "illum",
+            LosingRegistrarID: 423655,
+            PageViewsMonthly: 623564,
+            RevenueMonthly: 645894,
+        },
+        shared.AftermarketListingExpiryCreate{
+            Domain: "suscipit",
+            ExpiresAt: "iure",
+            LosingRegistrarID: 297534,
+            PageViewsMonthly: 891773,
+            RevenueMonthly: 56713,
         },
     }
 

@@ -8,17 +8,14 @@ import (
 	"net/http"
 )
 
-type GetOrganizationSensorReadingsHistoryPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationSensorReadingsHistoryQueryParams struct {
+type GetOrganizationSensorReadingsHistoryRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// Types of sensor readings to retrieve. If no metrics are supplied, all available types of readings will be retrieved. Allowed values are battery, button, door, humidity, indoorAirQuality, noise, pm25, temperature, tvoc, and water.
 	Metrics []string `queryParam:"style=form,explode=false,name=metrics"`
 	// Optional parameter to filter readings by network.
-	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
+	NetworkIds     []string `queryParam:"style=form,explode=false,name=networkIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// Optional parameter to filter readings by sensor.
@@ -31,11 +28,6 @@ type GetOrganizationSensorReadingsHistoryQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetOrganizationSensorReadingsHistoryRequest struct {
-	PathParams  GetOrganizationSensorReadingsHistoryPathParams
-	QueryParams GetOrganizationSensorReadingsHistoryQueryParams
 }
 
 // GetOrganizationSensorReadingsHistory200ApplicationJSONBattery - Reading for the 'battery' metric. This will only be present if the 'metric' property equals 'battery'.

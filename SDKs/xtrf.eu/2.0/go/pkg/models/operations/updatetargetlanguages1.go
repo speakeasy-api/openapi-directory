@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTargetLanguages1PathParams struct {
+type UpdateTargetLanguages1Request struct {
+	// Updated target languages for a quote.
+	TargetLanguagesDTO shared.TargetLanguagesDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateTargetLanguages1Request struct {
-	PathParams UpdateTargetLanguages1PathParams
-	// Updated target languages for a quote.
-	Request shared.TargetLanguagesDTO `request:"mediaType=application/json"`
 }
 
 type UpdateTargetLanguages1Response struct {

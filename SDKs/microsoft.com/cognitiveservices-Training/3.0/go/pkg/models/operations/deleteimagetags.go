@@ -6,27 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteImageTagsPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteImageTagsQueryParams struct {
-	// Image ids. Limited to 64 images.
-	ImageIds []string `queryParam:"style=form,explode=false,name=imageIds"`
-	// Tags to be deleted from the specified images. Limited to 20 tags.
-	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
-}
-
-type DeleteImageTagsHeaders struct {
+type DeleteImageTagsRequest struct {
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type DeleteImageTagsRequest struct {
-	PathParams  DeleteImageTagsPathParams
-	QueryParams DeleteImageTagsQueryParams
-	Headers     DeleteImageTagsHeaders
+	// Image ids. Limited to 64 images.
+	ImageIds []string `queryParam:"style=form,explode=false,name=imageIds"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+	// Tags to be deleted from the specified images. Limited to 20 tags.
+	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
 }
 
 type DeleteImageTagsResponse struct {

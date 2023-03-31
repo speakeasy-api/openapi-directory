@@ -6,27 +6,15 @@ import (
 	"net/http"
 )
 
-type GetUnmaskedProspectPathParams struct {
-	// ID of the prospect as returned by the Create prospect endpoint's response, in the `id` field.
-	ProspectID string `pathParam:"style=simple,explode=false,name=prospectId"`
-}
-
-type GetUnmaskedProspectQueryParams struct {
-	// Reason for requesting unmasked data.
-	Reason string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type GetUnmaskedProspectHeaders struct {
+type GetUnmaskedProspectRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetUnmaskedProspectRequest struct {
-	PathParams  GetUnmaskedProspectPathParams
-	QueryParams GetUnmaskedProspectQueryParams
-	Headers     GetUnmaskedProspectHeaders
+	// ID of the prospect as returned by the Create prospect endpoint's response, in the `id` field.
+	ProspectID string `pathParam:"style=simple,explode=false,name=prospectId"`
+	// Reason for requesting unmasked data.
+	Reason string `queryParam:"style=form,explode=true,name=reason"`
 }
 
 type GetUnmaskedProspectResponse struct {

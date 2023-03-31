@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserEpisodesEpisodeIDPathParams struct {
-	EpisodeID int64 `pathParam:"style=simple,explode=false,name=episode_id"`
-}
-
 type GetUserEpisodesEpisodeIDRequest struct {
-	PathParams GetUserEpisodesEpisodeIDPathParams
+	EpisodeID int64 `pathParam:"style=simple,explode=false,name=episode_id"`
 }
 
 type GetUserEpisodesEpisodeIDResponse struct {

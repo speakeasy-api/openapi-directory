@@ -20,10 +20,6 @@ type RemovePagesV1RequestBody struct {
 	LastPage *int `multipartForm:"name=last_page"`
 }
 
-type RemovePagesV1Request struct {
-	Request RemovePagesV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // RemovePagesV14XXApplicationProblemPlusJSON - Error
 type RemovePagesV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

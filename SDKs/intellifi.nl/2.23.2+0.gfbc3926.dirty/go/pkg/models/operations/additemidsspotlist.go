@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddItemIdsSpotListPathParams struct {
+type AddItemIdsSpotListRequest struct {
+	// A JSON array containing spot ids
+	RequestBody []string `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AddItemIdsSpotListRequest struct {
-	PathParams AddItemIdsSpotListPathParams
-	// A JSON array containing spot ids
-	Request []string `request:"mediaType=application/json"`
 }
 
 type AddItemIdsSpotListResponse struct {

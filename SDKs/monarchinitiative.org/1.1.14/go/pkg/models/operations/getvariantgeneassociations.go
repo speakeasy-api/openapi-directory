@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVariantGeneAssociationsPathParams struct {
-	// CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVariantGeneAssociationsQueryParams struct {
+type GetVariantGeneAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Set true to exclude inferred taxa
@@ -27,6 +22,8 @@ type GetVariantGeneAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Query string to filter documents
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// A relation CURIE to filter associations
@@ -45,11 +42,6 @@ type GetVariantGeneAssociationsQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetVariantGeneAssociationsRequest struct {
-	PathParams  GetVariantGeneAssociationsPathParams
-	QueryParams GetVariantGeneAssociationsQueryParams
 }
 
 type GetVariantGeneAssociationsResponse struct {

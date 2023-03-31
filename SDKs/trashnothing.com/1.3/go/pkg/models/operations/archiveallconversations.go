@@ -11,10 +11,6 @@ type ArchiveAllConversationsRequestBody struct {
 	MessageID string `multipartForm:"name=message_id"`
 }
 
-type ArchiveAllConversationsRequest struct {
-	Request ArchiveAllConversationsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type ArchiveAllConversationsResponse struct {
 	ContentType string
 	StatusCode  int

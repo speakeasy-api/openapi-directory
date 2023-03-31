@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteWorkspacePathParams struct {
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
-}
-
 type DeleteWorkspaceRequest struct {
-	PathParams DeleteWorkspacePathParams
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
 
 type DeleteWorkspace200ApplicationJSONWorkspace struct {

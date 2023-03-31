@@ -45,15 +45,11 @@ func (e *GetVariantSetsCollectionPerPageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVariantSetsCollectionQueryParams struct {
+type GetVariantSetsCollectionRequest struct {
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page {error_msg}
 	PerPage *GetVariantSetsCollectionPerPageEnum `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVariantSetsCollectionRequest struct {
-	QueryParams GetVariantSetsCollectionQueryParams
 }
 
 type GetVariantSetsCollectionResponse struct {

@@ -13,9 +13,7 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 

@@ -32,16 +32,16 @@ func newAPISpecification(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // DeleteAPISpecification - Delete an API specification in ReadMe
-func (s *apiSpecification) DeleteAPISpecification(ctx context.Context, request operations.DeleteAPISpecificationRequest) (*operations.DeleteAPISpecificationResponse, error) {
+func (s *apiSpecification) DeleteAPISpecification(ctx context.Context, request operations.DeleteAPISpecificationRequest, security operations.DeleteAPISpecificationSecurity) (*operations.DeleteAPISpecificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *apiSpecification) DeleteAPISpecification(ctx context.Context, request o
 }
 
 // GetAPISpecification - Get API specification metadata
-func (s *apiSpecification) GetAPISpecification(ctx context.Context, request operations.GetAPISpecificationRequest) (*operations.GetAPISpecificationResponse, error) {
+func (s *apiSpecification) GetAPISpecification(ctx context.Context, request operations.GetAPISpecificationRequest, security operations.GetAPISpecificationSecurity) (*operations.GetAPISpecificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api-specification"
 
@@ -78,13 +78,13 @@ func (s *apiSpecification) GetAPISpecification(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,11 +111,11 @@ func (s *apiSpecification) GetAPISpecification(ctx context.Context, request oper
 }
 
 // UpdateAPISpecification - Update an API specification in ReadMe
-func (s *apiSpecification) UpdateAPISpecification(ctx context.Context, request operations.UpdateAPISpecificationRequest) (*operations.UpdateAPISpecificationResponse, error) {
+func (s *apiSpecification) UpdateAPISpecification(ctx context.Context, request operations.UpdateAPISpecificationRequest, security operations.UpdateAPISpecificationSecurity) (*operations.UpdateAPISpecificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -130,7 +130,7 @@ func (s *apiSpecification) UpdateAPISpecification(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,11 +160,11 @@ func (s *apiSpecification) UpdateAPISpecification(ctx context.Context, request o
 }
 
 // UploadAPISpecification - Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
-func (s *apiSpecification) UploadAPISpecification(ctx context.Context, request operations.UploadAPISpecificationRequest) (*operations.UploadAPISpecificationResponse, error) {
+func (s *apiSpecification) UploadAPISpecification(ctx context.Context, request operations.UploadAPISpecificationRequest, security operations.UploadAPISpecificationSecurity) (*operations.UploadAPISpecificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api-specification"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -179,9 +179,9 @@ func (s *apiSpecification) UploadAPISpecification(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

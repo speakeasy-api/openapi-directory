@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExecuteActionPathParams struct {
+type ExecuteActionRequest struct {
+	// Any parameters required by the action are supplied as a JSON object in the request body. The properties of this object depend on the service action being invoked.
+	ExecBody *shared.ExecBody `request:"mediaType=application/json"`
 	// Action ID of the action to execute.
 	ActionID string `pathParam:"style=simple,explode=false,name=actionId"`
 	// Service ID of the service supporting the action.
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type ExecuteActionRequest struct {
-	PathParams ExecuteActionPathParams
-	// Any parameters required by the action are supplied as a JSON object in the request body. The properties of this object depend on the service action being invoked.
-	Request *shared.ExecBody `request:"mediaType=application/json"`
 }
 
 type ExecuteActionResponse struct {

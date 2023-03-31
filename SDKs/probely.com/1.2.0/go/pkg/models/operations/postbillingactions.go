@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBillingActionsRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 type PostBillingActionsResponse struct {
 	// Required action to enable targets
 	Action      *shared.Action

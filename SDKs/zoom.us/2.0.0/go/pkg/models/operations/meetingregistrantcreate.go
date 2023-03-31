@@ -4,23 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingRegistrantCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingRegistrantCreatePathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type MeetingRegistrantCreateQueryParams struct {
-	// Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma.
-	OccurrenceIds *string `queryParam:"style=form,explode=true,name=occurrence_ids"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingRegistrantCreateApplicationJSONCustomQuestions - Custom Question.
@@ -74,10 +61,13 @@ type MeetingRegistrantCreateApplicationJSON struct {
 }
 
 type MeetingRegistrantCreateRequest struct {
-	PathParams  MeetingRegistrantCreatePathParams
-	QueryParams MeetingRegistrantCreateQueryParams
-	Request     MeetingRegistrantCreateApplicationJSON `request:"mediaType=application/json"`
-	Security    MeetingRegistrantCreateSecurity
+	RequestBody MeetingRegistrantCreateApplicationJSON `request:"mediaType=application/json"`
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
+	// Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma.
+	OccurrenceIds *string `queryParam:"style=form,explode=true,name=occurrence_ids"`
 }
 
 // MeetingRegistrantCreate201ApplicationXML - **HTTP Status Code:** `201`<br>

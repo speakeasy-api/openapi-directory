@@ -8,17 +8,12 @@ import (
 )
 
 type GetPaymentPoliciesSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPaymentPoliciesQueryParams struct {
-	// This query parameter specifies the eBay marketplace of the policies you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
-	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPaymentPoliciesRequest struct {
-	QueryParams GetPaymentPoliciesQueryParams
-	Security    GetPaymentPoliciesSecurity
+	// This query parameter specifies the eBay marketplace of the policies you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
+	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
 }
 
 type GetPaymentPoliciesResponse struct {

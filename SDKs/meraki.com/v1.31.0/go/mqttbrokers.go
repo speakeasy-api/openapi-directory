@@ -34,9 +34,9 @@ func newMqttBrokers(defaultClient, securityClient HTTPClient, serverURL, languag
 // Add an MQTT broker
 func (s *mqttBrokers) CreateNetworkMqttBroker(ctx context.Context, request operations.CreateNetworkMqttBrokerRequest) (*operations.CreateNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *mqttBrokers) CreateNetworkMqttBroker(ctx context.Context, request opera
 // Delete an MQTT broker
 func (s *mqttBrokers) DeleteNetworkMqttBroker(ctx context.Context, request operations.DeleteNetworkMqttBrokerRequest) (*operations.DeleteNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *mqttBrokers) DeleteNetworkMqttBroker(ctx context.Context, request opera
 // Return an MQTT broker
 func (s *mqttBrokers) GetNetworkMqttBroker(ctx context.Context, request operations.GetNetworkMqttBrokerRequest) (*operations.GetNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *mqttBrokers) GetNetworkMqttBroker(ctx context.Context, request operatio
 // List the MQTT brokers for this network
 func (s *mqttBrokers) GetNetworkMqttBrokers(ctx context.Context, request operations.GetNetworkMqttBrokersRequest) (*operations.GetNetworkMqttBrokersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *mqttBrokers) GetNetworkMqttBrokers(ctx context.Context, request operati
 // Update an MQTT broker
 func (s *mqttBrokers) UpdateNetworkMqttBroker(ctx context.Context, request operations.UpdateNetworkMqttBrokerRequest) (*operations.UpdateNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -8,16 +8,11 @@ import (
 )
 
 type DirectoryVerificationCodesGenerateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DirectoryVerificationCodesGeneratePathParams struct {
-	// Email or immutable ID of the user
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type DirectoryVerificationCodesGenerateQueryParams struct {
+type DirectoryVerificationCodesGenerateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,12 +35,8 @@ type DirectoryVerificationCodesGenerateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryVerificationCodesGenerateRequest struct {
-	PathParams  DirectoryVerificationCodesGeneratePathParams
-	QueryParams DirectoryVerificationCodesGenerateQueryParams
-	Security    DirectoryVerificationCodesGenerateSecurity
+	// Email or immutable ID of the user
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryVerificationCodesGenerateResponse struct {

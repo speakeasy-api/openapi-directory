@@ -8,26 +8,17 @@ import (
 )
 
 type GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
-type GetBusinessUnitsV3BusinessUnitsUserUserIDPathParams struct {
-	// Identifier of user to retrieve.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetBusinessUnitsV3BusinessUnitsUserUserIDQueryParams struct {
+type GetBusinessUnitsV3BusinessUnitsUserUserIDRequest struct {
 	// The names of Business Units to retrieve. If empty or not provided, then all associated Business Units will be returned.
 	Name []string `queryParam:"style=form,explode=true,name=name"`
 	// The names of properties to optionally include in the response body. The only valid value is `logoMetadata`.
 	Properties []string `queryParam:"style=form,explode=true,name=properties"`
-}
-
-type GetBusinessUnitsV3BusinessUnitsUserUserIDRequest struct {
-	PathParams  GetBusinessUnitsV3BusinessUnitsUserUserIDPathParams
-	QueryParams GetBusinessUnitsV3BusinessUnitsUserUserIDQueryParams
-	Security    GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity
+	// Identifier of user to retrieve.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetBusinessUnitsV3BusinessUnitsUserUserIDResponse struct {

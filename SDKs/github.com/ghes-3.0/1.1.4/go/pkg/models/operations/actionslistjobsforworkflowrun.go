@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListJobsForWorkflowRunPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-	// The id of the workflow run.
-	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
 // ActionsListJobsForWorkflowRunFilterEnum - Filters jobs by their `completed_at` timestamp. Can be one of:
 // \* `latest`: Returns jobs from the most recent execution of the workflow run.
 // \* `all`: Returns all jobs for a workflow run, including from old executions of the workflow run.
@@ -42,20 +35,19 @@ func (e *ActionsListJobsForWorkflowRunFilterEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ActionsListJobsForWorkflowRunQueryParams struct {
+type ActionsListJobsForWorkflowRunRequest struct {
 	// Filters jobs by their `completed_at` timestamp. Can be one of:
 	// \* `latest`: Returns jobs from the most recent execution of the workflow run.
 	// \* `all`: Returns all jobs for a workflow run, including from old executions of the workflow run.
 	Filter *ActionsListJobsForWorkflowRunFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	Owner  string                                   `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListJobsForWorkflowRunRequest struct {
-	PathParams  ActionsListJobsForWorkflowRunPathParams
-	QueryParams ActionsListJobsForWorkflowRunQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
+	// The id of the workflow run.
+	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
 }
 
 // ActionsListJobsForWorkflowRun200ApplicationJSON - Response

@@ -4,42 +4,38 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PagespeedonlinePagespeedapiRunpagespeedRequest(
-    security=operations.PagespeedonlinePagespeedapiRunpagespeedSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams(
-        dollar_xgafv="2",
-        access_token="dolore",
-        alt="json",
-        callback="corporis",
-        captcha_token="quis",
-        category=[
-            "BEST_PRACTICES",
-            "PWA",
-        ],
-        fields="et",
-        key="ut",
-        locale="ducimus",
-        oauth_token="porro",
-        pretty_print=True,
-        quota_user="fugiat",
-        strategy="STRATEGY_UNSPECIFIED",
-        upload_type="vero",
-        upload_protocol="accusantium",
-        url="pariatur",
-        utm_campaign="itaque",
-        utm_source="ipsum",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    captcha_token="unde",
+    category=[
+        "PERFORMANCE",
+        "SEO",
+        "BEST_PRACTICES",
+        "PERFORMANCE",
+    ],
+    fields_="deserunt",
+    key="suscipit",
+    locale="iure",
+    oauth_token="magnam",
+    pretty_print=False,
+    quota_user="debitis",
+    strategy="STRATEGY_UNSPECIFIED",
+    upload_type="delectus",
+    upload_protocol="tempora",
+    url="suscipit",
+    utm_campaign="molestiae",
+    utm_source="minus",
 )
     
-res = s.pagespeedapi.pagespeedonline_pagespeedapi_runpagespeed(req)
+res = s.pagespeedapi.pagespeedonline_pagespeedapi_runpagespeed(req, operations.PagespeedonlinePagespeedapiRunpagespeedSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.pagespeed_api_pagespeed_response_v5 is not None:
     # handle response

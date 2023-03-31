@@ -9,14 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateCommitStatusPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	Sha  string `pathParam:"style=simple,explode=false,name=sha"`
-}
-
 // ReposCreateCommitStatusRequestBodyStateEnum - The state of the status.
 type ReposCreateCommitStatusRequestBodyStateEnum string
 
@@ -61,8 +53,12 @@ type ReposCreateCommitStatusRequestBody struct {
 }
 
 type ReposCreateCommitStatusRequest struct {
-	PathParams ReposCreateCommitStatusPathParams
-	Request    ReposCreateCommitStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateCommitStatusRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	Sha  string `pathParam:"style=simple,explode=false,name=sha"`
 }
 
 type ReposCreateCommitStatusResponse struct {

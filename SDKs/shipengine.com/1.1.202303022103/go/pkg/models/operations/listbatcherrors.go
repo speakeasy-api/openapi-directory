@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBatchErrorsPathParams struct {
+type ListBatchErrorsRequest struct {
 	// Batch ID
 	BatchID string `pathParam:"style=simple,explode=false,name=batch_id"`
-}
-
-type ListBatchErrorsQueryParams struct {
 	// Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
 	//
 	Page     *int `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type ListBatchErrorsRequest struct {
-	PathParams  ListBatchErrorsPathParams
-	QueryParams ListBatchErrorsQueryParams
 }
 
 type ListBatchErrorsResponse struct {

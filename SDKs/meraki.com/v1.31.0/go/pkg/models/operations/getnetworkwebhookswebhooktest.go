@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWebhooksWebhookTestPathParams struct {
+type GetNetworkWebhooksWebhookTestRequest struct {
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	WebhookTestID string `pathParam:"style=simple,explode=false,name=webhookTestId"`
-}
-
-type GetNetworkWebhooksWebhookTestRequest struct {
-	PathParams GetNetworkWebhooksWebhookTestPathParams
 }
 
 // GetNetworkWebhooksWebhookTest200ApplicationJSONStatusEnum - Current status of the webhook delivery

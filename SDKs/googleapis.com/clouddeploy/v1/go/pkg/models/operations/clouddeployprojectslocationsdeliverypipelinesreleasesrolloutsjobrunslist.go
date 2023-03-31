@@ -8,16 +8,11 @@ import (
 )
 
 type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListPathParams struct {
-	// Required. The `Rollout` which owns this collection of `JobRun` objects.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListQueryParams struct {
+type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListQue
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListJobRuns` call. Provide this to retrieve the subsequent page. When paginating, all other provided parameters match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The `Rollout` which owns this collection of `JobRun` objects.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListQue
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest struct {
-	PathParams  ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListPathParams
-	QueryParams ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListQueryParams
-	Security    ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListSecurity
 }
 
 type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlanGroupsListQueryParams struct {
+type IpamVlanGroupsListRequest struct {
 	Description     *string `queryParam:"style=form,explode=true,name=description"`
 	DescriptionIc   *string `queryParam:"style=form,explode=true,name=description__ic"`
 	DescriptionIe   *string `queryParam:"style=form,explode=true,name=description__ie"`
@@ -57,10 +57,6 @@ type IpamVlanGroupsListQueryParams struct {
 	SlugNie   *string `queryParam:"style=form,explode=true,name=slug__nie"`
 	SlugNiew  *string `queryParam:"style=form,explode=true,name=slug__niew"`
 	SlugNisw  *string `queryParam:"style=form,explode=true,name=slug__nisw"`
-}
-
-type IpamVlanGroupsListRequest struct {
-	QueryParams IpamVlanGroupsListQueryParams
 }
 
 type IpamVlanGroupsList200ApplicationJSON struct {

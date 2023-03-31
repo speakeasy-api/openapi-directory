@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingPlacementGroupsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingPlacementGroupsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingPlacementGroupsListPlacementGroupTypeEnum - Select only placement groups belonging with this group type. A package is a simple group of placements that acts as a single pricing point for a group of tags. A roadblock is a group of placements that not only acts as a single pricing point but also assumes that all the tags in it will be served at the same time. A roadblock requires one of its assigned placements to be marked as primary for reporting.
@@ -126,7 +121,7 @@ func (e *DfareportingPlacementGroupsListSortOrderEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DfareportingPlacementGroupsListQueryParams struct {
+type DfareportingPlacementGroupsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -173,6 +168,8 @@ type DfareportingPlacementGroupsListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Select only placement groups with these pricing types.
 	PricingTypes []DfareportingPlacementGroupsListPricingTypesEnum `queryParam:"style=form,explode=true,name=pricingTypes"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for placement groups by name or ID. Wildcards (*) are allowed. For example, "placement*2015" will return placement groups with names like "placement group June 2015", "placement group May 2015", or simply "placements 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "placementgroup" will match placement groups with name "my placementgroup", "placementgroup 2015", or simply "placementgroup".
@@ -187,12 +184,6 @@ type DfareportingPlacementGroupsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingPlacementGroupsListRequest struct {
-	PathParams  DfareportingPlacementGroupsListPathParams
-	QueryParams DfareportingPlacementGroupsListQueryParams
-	Security    DfareportingPlacementGroupsListSecurity
 }
 
 type DfareportingPlacementGroupsListResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetFloatingIpsIDPathParams struct {
+type GetFloatingIpsIDRequest struct {
 	// ID of the Floating IP
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFloatingIpsIDRequest struct {
-	PathParams GetFloatingIpsIDPathParams
 }
 
 type GetFloatingIpsID200ApplicationJSONFloatingIPDNSPtr struct {

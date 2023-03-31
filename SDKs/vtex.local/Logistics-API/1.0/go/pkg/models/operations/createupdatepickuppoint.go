@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUpdatePickupPointPathParams struct {
-	// Pickup Point ID. Cannot contain spaces.
-	PickupPointID string `pathParam:"style=simple,explode=false,name=pickupPointId"`
-}
-
-type CreateUpdatePickupPointHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CreateUpdatePickupPointRequestBodyAddressCountry struct {
 	// Three letter ISO code of the address country.
 	Acronym string `json:"acronym"`
@@ -78,9 +66,13 @@ type CreateUpdatePickupPointRequestBody struct {
 }
 
 type CreateUpdatePickupPointRequest struct {
-	PathParams CreateUpdatePickupPointPathParams
-	Headers    CreateUpdatePickupPointHeaders
-	Request    CreateUpdatePickupPointRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                             `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody CreateUpdatePickupPointRequestBody `request:"mediaType=application/json"`
+	// Pickup Point ID. Cannot contain spaces.
+	PickupPointID string `pathParam:"style=simple,explode=false,name=pickupPointId"`
 }
 
 type CreateUpdatePickupPointCreateUpdateAddress2Country struct {

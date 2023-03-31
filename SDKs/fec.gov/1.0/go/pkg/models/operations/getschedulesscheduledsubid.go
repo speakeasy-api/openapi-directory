@@ -8,11 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetSchedulesScheduleDSubIDPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
-type GetSchedulesScheduleDSubIDQueryParams struct {
+type GetSchedulesScheduleDSubIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -28,12 +24,8 @@ type GetSchedulesScheduleDSubIDQueryParams struct {
 	// Toggle that filters out all rows having sort column that is non-null
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
-	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetSchedulesScheduleDSubIDRequest struct {
-	PathParams  GetSchedulesScheduleDSubIDPathParams
-	QueryParams GetSchedulesScheduleDSubIDQueryParams
+	SortNullsLast *bool  `queryParam:"style=form,explode=true,name=sort_nulls_last"`
+	SubID         string `pathParam:"style=simple,explode=false,name=sub_id"`
 }
 
 type GetSchedulesScheduleDSubIDDefaultApplicationJSONResults struct {

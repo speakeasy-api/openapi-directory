@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContinuousProjectDocumentsPathParams struct {
+type GetContinuousProjectDocumentsRequest struct {
+	FilterByLanguage *string `queryParam:"style=form,explode=true,name=filterByLanguage"`
 	// Continuous Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetContinuousProjectDocumentsQueryParams struct {
-	FilterByLanguage *string `queryParam:"style=form,explode=true,name=filterByLanguage"`
-}
-
-type GetContinuousProjectDocumentsRequest struct {
-	PathParams  GetContinuousProjectDocumentsPathParams
-	QueryParams GetContinuousProjectDocumentsQueryParams
 }
 
 type GetContinuousProjectDocumentsResponse struct {

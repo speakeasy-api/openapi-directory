@@ -8,10 +8,10 @@ import (
 )
 
 type GetV2PaymentsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV2PaymentsQueryParams struct {
+type GetV2PaymentsRequest struct {
 	// The timestamp for the beginning of the reporting period, in RFC 3339 format.
 	// Inclusive. Default: The current time minus one year.
 	BeginTime *string `queryParam:"style=form,explode=true,name=begin_time"`
@@ -45,11 +45,6 @@ type GetV2PaymentsQueryParams struct {
 	SortOrder *string `queryParam:"style=form,explode=true,name=sort_order"`
 	// The exact amount in the `total_money` for a payment.
 	Total *int64 `queryParam:"style=form,explode=true,name=total"`
-}
-
-type GetV2PaymentsRequest struct {
-	QueryParams GetV2PaymentsQueryParams
-	Security    GetV2PaymentsSecurity
 }
 
 type GetV2PaymentsResponse struct {

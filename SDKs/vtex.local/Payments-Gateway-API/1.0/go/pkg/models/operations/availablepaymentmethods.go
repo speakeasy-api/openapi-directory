@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AvailablePaymentMethodsHeaders struct {
+type AvailablePaymentMethodsRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
@@ -16,10 +16,6 @@ type AvailablePaymentMethodsHeaders struct {
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type AvailablePaymentMethodsRequest struct {
-	Headers AvailablePaymentMethodsHeaders
 }
 
 type AvailablePaymentMethodsResponse struct {

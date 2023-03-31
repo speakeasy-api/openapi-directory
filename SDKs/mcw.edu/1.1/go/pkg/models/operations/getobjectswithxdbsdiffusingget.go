@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GETObjectsWithXDBsDiffUsingGETPathParams struct {
+type GETObjectsWithXDBsDiffUsingGETRequest struct {
 	// dateFromYYYYMMDD
 	DateFromYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateFromYYYYMMDD"`
 	// dateToYYYYMMDD
@@ -15,10 +15,6 @@ type GETObjectsWithXDBsDiffUsingGETPathParams struct {
 	ObjectKey int `pathParam:"style=simple,explode=false,name=objectKey"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETObjectsWithXDBsDiffUsingGETRequest struct {
-	PathParams GETObjectsWithXDBsDiffUsingGETPathParams
 }
 
 type GETObjectsWithXDBsDiffUsingGETResponse struct {

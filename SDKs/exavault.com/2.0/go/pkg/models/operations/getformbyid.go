@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFormByIDPathParams struct {
-	// Form unique ID number.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFormByIDQueryParams struct {
-	// Enter "**share**" to get information about associated receive folder.
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetFormByIDHeaders struct {
+type GetFormByIDRequest struct {
 	// Access Token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetFormByIDRequest struct {
-	PathParams  GetFormByIDPathParams
-	QueryParams GetFormByIDQueryParams
-	Headers     GetFormByIDHeaders
+	// Form unique ID number.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
+	// Enter "**share**" to get information about associated receive folder.
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetFormByIDResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchRewardProgramActivationPathParams struct {
+type FetchRewardProgramActivationRequest struct {
 	// Reward program activation identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchRewardProgramActivationRequest struct {
-	PathParams FetchRewardProgramActivationPathParams
 }
 
 type FetchRewardProgramActivationResponse struct {

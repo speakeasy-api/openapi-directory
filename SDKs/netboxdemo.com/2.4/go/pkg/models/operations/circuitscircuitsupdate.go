@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitsUpdatePathParams struct {
+type CircuitsCircuitsUpdateRequest struct {
+	WritableCircuitInput shared.WritableCircuitInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this circuit.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsCircuitsUpdateRequest struct {
-	PathParams CircuitsCircuitsUpdatePathParams
-	Request    shared.WritableCircuitInput `request:"mediaType=application/json"`
 }
 
 type CircuitsCircuitsUpdateResponse struct {

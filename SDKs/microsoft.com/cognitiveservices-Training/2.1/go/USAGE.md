@@ -14,12 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetDomainRequest{
-        PathParams: operations.GetDomainPathParams{
-            DomainID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
-        Headers: operations.GetDomainHeaders{
-            TrainingKey: "deserunt",
-        },
+        TrainingKey: "corrupti",
+        DomainID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
     }
 
     ctx := context.Background()

@@ -33,11 +33,11 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdsenseAccountsAdclientsAdunitsCreate - Creates an ad unit. This method can only be used by projects enabled for the [AdSense for Platforms](https://developers.google.com/adsense/platforms/) product. Note that ad units can only be created for ad clients with an "AFC" product code. For more info see the [AdClient resource](/adsense/management/reference/rest/v2/accounts.adclients). For now, this method can only be used to create `DISPLAY` ad units. See: https://support.google.com/adsense/answer/9183566
-func (s *accounts) AdsenseAccountsAdclientsAdunitsCreate(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsCreateRequest) (*operations.AdsenseAccountsAdclientsAdunitsCreateResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsAdunitsCreate(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsCreateRequest, security operations.AdsenseAccountsAdclientsAdunitsCreateSecurity) (*operations.AdsenseAccountsAdclientsAdunitsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/adunits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/adunits", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdUnitInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *accounts) AdsenseAccountsAdclientsAdunitsCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *accounts) AdsenseAccountsAdclientsAdunitsCreate(ctx context.Context, re
 }
 
 // AdsenseAccountsAdclientsAdunitsGetAdcode - Gets the ad unit code for a given ad unit. For more information, see [About the AdSense code](https://support.google.com/adsense/answer/9274634) and [Where to place the ad code in your HTML](https://support.google.com/adsense/answer/9190028).
-func (s *accounts) AdsenseAccountsAdclientsAdunitsGetAdcode(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsGetAdcodeRequest) (*operations.AdsenseAccountsAdclientsAdunitsGetAdcodeResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsAdunitsGetAdcode(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsGetAdcodeRequest, security operations.AdsenseAccountsAdclientsAdunitsGetAdcodeSecurity) (*operations.AdsenseAccountsAdclientsAdunitsGetAdcodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/adcode", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/adcode", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *accounts) AdsenseAccountsAdclientsAdunitsGetAdcode(ctx context.Context,
 }
 
 // AdsenseAccountsAdclientsAdunitsList - Lists all ad units under a specified account and ad client.
-func (s *accounts) AdsenseAccountsAdclientsAdunitsList(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsListRequest) (*operations.AdsenseAccountsAdclientsAdunitsListResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsAdunitsList(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsListRequest, security operations.AdsenseAccountsAdclientsAdunitsListSecurity) (*operations.AdsenseAccountsAdclientsAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/adunits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/adunits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *accounts) AdsenseAccountsAdclientsAdunitsList(ctx context.Context, requ
 }
 
 // AdsenseAccountsAdclientsAdunitsListLinkedCustomChannels - Lists all the custom channels available for an ad unit.
-func (s *accounts) AdsenseAccountsAdclientsAdunitsListLinkedCustomChannels(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsRequest) (*operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsAdunitsListLinkedCustomChannels(ctx context.Context, request operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsRequest, security operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsSecurity) (*operations.AdsenseAccountsAdclientsAdunitsListLinkedCustomChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}:listLinkedCustomChannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}:listLinkedCustomChannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *accounts) AdsenseAccountsAdclientsAdunitsListLinkedCustomChannels(ctx c
 }
 
 // AdsenseAccountsAdclientsCustomchannelsCreate - Creates a custom channel. This method can only be used by projects enabled for the [AdSense for Platforms](https://developers.google.com/adsense/platforms/) product.
-func (s *accounts) AdsenseAccountsAdclientsCustomchannelsCreate(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsCreateRequest) (*operations.AdsenseAccountsAdclientsCustomchannelsCreateResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsCustomchannelsCreate(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsCreateRequest, security operations.AdsenseAccountsAdclientsCustomchannelsCreateSecurity) (*operations.AdsenseAccountsAdclientsCustomchannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customchannels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomChannelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,20 +287,20 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsCreate(ctx context.Cont
 }
 
 // AdsenseAccountsAdclientsCustomchannelsDelete - Deletes a custom channel. This method can only be used by projects enabled for the [AdSense for Platforms](https://developers.google.com/adsense/platforms/) product.
-func (s *accounts) AdsenseAccountsAdclientsCustomchannelsDelete(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsDeleteRequest) (*operations.AdsenseAccountsAdclientsCustomchannelsDeleteResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsCustomchannelsDelete(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsDeleteRequest, security operations.AdsenseAccountsAdclientsCustomchannelsDeleteSecurity) (*operations.AdsenseAccountsAdclientsCustomchannelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,20 +335,20 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsDelete(ctx context.Cont
 }
 
 // AdsenseAccountsAdclientsCustomchannelsList - Lists all the custom channels available in an ad client.
-func (s *accounts) AdsenseAccountsAdclientsCustomchannelsList(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsListRequest) (*operations.AdsenseAccountsAdclientsCustomchannelsListResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsCustomchannelsList(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsListRequest, security operations.AdsenseAccountsAdclientsCustomchannelsListSecurity) (*operations.AdsenseAccountsAdclientsCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customchannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -383,20 +383,20 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsList(ctx context.Contex
 }
 
 // AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnits - Lists all the ad units available for a custom channel.
-func (s *accounts) AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnits(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsRequest) (*operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnits(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsRequest, security operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsSecurity) (*operations.AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}:listLinkedAdUnits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}:listLinkedAdUnits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -431,11 +431,11 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnits(ctx c
 }
 
 // AdsenseAccountsAdclientsCustomchannelsPatch - Updates a custom channel. This method can only be used by projects enabled for the [AdSense for Platforms](https://developers.google.com/adsense/platforms/) product.
-func (s *accounts) AdsenseAccountsAdclientsCustomchannelsPatch(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsPatchRequest) (*operations.AdsenseAccountsAdclientsCustomchannelsPatchResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsCustomchannelsPatch(ctx context.Context, request operations.AdsenseAccountsAdclientsCustomchannelsPatchRequest, security operations.AdsenseAccountsAdclientsCustomchannelsPatchSecurity) (*operations.AdsenseAccountsAdclientsCustomchannelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomChannelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -447,11 +447,11 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsPatch(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -486,20 +486,20 @@ func (s *accounts) AdsenseAccountsAdclientsCustomchannelsPatch(ctx context.Conte
 }
 
 // AdsenseAccountsAdclientsList - Lists all the ad clients available in an account.
-func (s *accounts) AdsenseAccountsAdclientsList(ctx context.Context, request operations.AdsenseAccountsAdclientsListRequest) (*operations.AdsenseAccountsAdclientsListResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsList(ctx context.Context, request operations.AdsenseAccountsAdclientsListRequest, security operations.AdsenseAccountsAdclientsListSecurity) (*operations.AdsenseAccountsAdclientsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/adclients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/adclients", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,20 +534,20 @@ func (s *accounts) AdsenseAccountsAdclientsList(ctx context.Context, request ope
 }
 
 // AdsenseAccountsAdclientsUrlchannelsList - Lists active url channels.
-func (s *accounts) AdsenseAccountsAdclientsUrlchannelsList(ctx context.Context, request operations.AdsenseAccountsAdclientsUrlchannelsListRequest) (*operations.AdsenseAccountsAdclientsUrlchannelsListResponse, error) {
+func (s *accounts) AdsenseAccountsAdclientsUrlchannelsList(ctx context.Context, request operations.AdsenseAccountsAdclientsUrlchannelsListRequest, security operations.AdsenseAccountsAdclientsUrlchannelsListSecurity) (*operations.AdsenseAccountsAdclientsUrlchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/urlchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/urlchannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -582,20 +582,20 @@ func (s *accounts) AdsenseAccountsAdclientsUrlchannelsList(ctx context.Context, 
 }
 
 // AdsenseAccountsAlertsList - Lists all the alerts available in an account.
-func (s *accounts) AdsenseAccountsAlertsList(ctx context.Context, request operations.AdsenseAccountsAlertsListRequest) (*operations.AdsenseAccountsAlertsListResponse, error) {
+func (s *accounts) AdsenseAccountsAlertsList(ctx context.Context, request operations.AdsenseAccountsAlertsListRequest, security operations.AdsenseAccountsAlertsListSecurity) (*operations.AdsenseAccountsAlertsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/alerts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/alerts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -630,20 +630,20 @@ func (s *accounts) AdsenseAccountsAlertsList(ctx context.Context, request operat
 }
 
 // AdsenseAccountsGetAdBlockingRecoveryTag - Gets the ad blocking recovery tag of an account.
-func (s *accounts) AdsenseAccountsGetAdBlockingRecoveryTag(ctx context.Context, request operations.AdsenseAccountsGetAdBlockingRecoveryTagRequest) (*operations.AdsenseAccountsGetAdBlockingRecoveryTagResponse, error) {
+func (s *accounts) AdsenseAccountsGetAdBlockingRecoveryTag(ctx context.Context, request operations.AdsenseAccountsGetAdBlockingRecoveryTagRequest, security operations.AdsenseAccountsGetAdBlockingRecoveryTagSecurity) (*operations.AdsenseAccountsGetAdBlockingRecoveryTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/adBlockingRecoveryTag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/adBlockingRecoveryTag", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -678,7 +678,7 @@ func (s *accounts) AdsenseAccountsGetAdBlockingRecoveryTag(ctx context.Context, 
 }
 
 // AdsenseAccountsList - Lists all accounts available to this user.
-func (s *accounts) AdsenseAccountsList(ctx context.Context, request operations.AdsenseAccountsListRequest) (*operations.AdsenseAccountsListResponse, error) {
+func (s *accounts) AdsenseAccountsList(ctx context.Context, request operations.AdsenseAccountsListRequest, security operations.AdsenseAccountsListSecurity) (*operations.AdsenseAccountsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts"
 
@@ -687,11 +687,11 @@ func (s *accounts) AdsenseAccountsList(ctx context.Context, request operations.A
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -726,20 +726,20 @@ func (s *accounts) AdsenseAccountsList(ctx context.Context, request operations.A
 }
 
 // AdsenseAccountsListChildAccounts - Lists all accounts directly managed by the given AdSense account.
-func (s *accounts) AdsenseAccountsListChildAccounts(ctx context.Context, request operations.AdsenseAccountsListChildAccountsRequest) (*operations.AdsenseAccountsListChildAccountsResponse, error) {
+func (s *accounts) AdsenseAccountsListChildAccounts(ctx context.Context, request operations.AdsenseAccountsListChildAccountsRequest, security operations.AdsenseAccountsListChildAccountsSecurity) (*operations.AdsenseAccountsListChildAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}:listChildAccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}:listChildAccounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,20 +774,20 @@ func (s *accounts) AdsenseAccountsListChildAccounts(ctx context.Context, request
 }
 
 // AdsenseAccountsPaymentsList - Lists all the payments available for an account.
-func (s *accounts) AdsenseAccountsPaymentsList(ctx context.Context, request operations.AdsenseAccountsPaymentsListRequest) (*operations.AdsenseAccountsPaymentsListResponse, error) {
+func (s *accounts) AdsenseAccountsPaymentsList(ctx context.Context, request operations.AdsenseAccountsPaymentsListRequest, security operations.AdsenseAccountsPaymentsListSecurity) (*operations.AdsenseAccountsPaymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -822,20 +822,20 @@ func (s *accounts) AdsenseAccountsPaymentsList(ctx context.Context, request oper
 }
 
 // AdsenseAccountsReportsGenerate - Generates an ad hoc report.
-func (s *accounts) AdsenseAccountsReportsGenerate(ctx context.Context, request operations.AdsenseAccountsReportsGenerateRequest) (*operations.AdsenseAccountsReportsGenerateResponse, error) {
+func (s *accounts) AdsenseAccountsReportsGenerate(ctx context.Context, request operations.AdsenseAccountsReportsGenerateRequest, security operations.AdsenseAccountsReportsGenerateSecurity) (*operations.AdsenseAccountsReportsGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{account}/reports:generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{account}/reports:generate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -870,20 +870,20 @@ func (s *accounts) AdsenseAccountsReportsGenerate(ctx context.Context, request o
 }
 
 // AdsenseAccountsReportsGenerateCsv - Generates a csv formatted ad hoc report.
-func (s *accounts) AdsenseAccountsReportsGenerateCsv(ctx context.Context, request operations.AdsenseAccountsReportsGenerateCsvRequest) (*operations.AdsenseAccountsReportsGenerateCsvResponse, error) {
+func (s *accounts) AdsenseAccountsReportsGenerateCsv(ctx context.Context, request operations.AdsenseAccountsReportsGenerateCsvRequest, security operations.AdsenseAccountsReportsGenerateCsvSecurity) (*operations.AdsenseAccountsReportsGenerateCsvResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{account}/reports:generateCsv", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{account}/reports:generateCsv", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,20 +918,20 @@ func (s *accounts) AdsenseAccountsReportsGenerateCsv(ctx context.Context, reques
 }
 
 // AdsenseAccountsReportsGetSaved - Gets the saved report from the given resource name.
-func (s *accounts) AdsenseAccountsReportsGetSaved(ctx context.Context, request operations.AdsenseAccountsReportsGetSavedRequest) (*operations.AdsenseAccountsReportsGetSavedResponse, error) {
+func (s *accounts) AdsenseAccountsReportsGetSaved(ctx context.Context, request operations.AdsenseAccountsReportsGetSavedRequest, security operations.AdsenseAccountsReportsGetSavedSecurity) (*operations.AdsenseAccountsReportsGetSavedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/saved", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/saved", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -966,20 +966,20 @@ func (s *accounts) AdsenseAccountsReportsGetSaved(ctx context.Context, request o
 }
 
 // AdsenseAccountsReportsSavedGenerate - Generates a saved report.
-func (s *accounts) AdsenseAccountsReportsSavedGenerate(ctx context.Context, request operations.AdsenseAccountsReportsSavedGenerateRequest) (*operations.AdsenseAccountsReportsSavedGenerateResponse, error) {
+func (s *accounts) AdsenseAccountsReportsSavedGenerate(ctx context.Context, request operations.AdsenseAccountsReportsSavedGenerateRequest, security operations.AdsenseAccountsReportsSavedGenerateSecurity) (*operations.AdsenseAccountsReportsSavedGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/saved:generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/saved:generate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1014,20 +1014,20 @@ func (s *accounts) AdsenseAccountsReportsSavedGenerate(ctx context.Context, requ
 }
 
 // AdsenseAccountsReportsSavedGenerateCsv - Generates a csv formatted saved report.
-func (s *accounts) AdsenseAccountsReportsSavedGenerateCsv(ctx context.Context, request operations.AdsenseAccountsReportsSavedGenerateCsvRequest) (*operations.AdsenseAccountsReportsSavedGenerateCsvResponse, error) {
+func (s *accounts) AdsenseAccountsReportsSavedGenerateCsv(ctx context.Context, request operations.AdsenseAccountsReportsSavedGenerateCsvRequest, security operations.AdsenseAccountsReportsSavedGenerateCsvSecurity) (*operations.AdsenseAccountsReportsSavedGenerateCsvResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/saved:generateCsv", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/saved:generateCsv", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1062,20 +1062,20 @@ func (s *accounts) AdsenseAccountsReportsSavedGenerateCsv(ctx context.Context, r
 }
 
 // AdsenseAccountsReportsSavedList - Lists saved reports.
-func (s *accounts) AdsenseAccountsReportsSavedList(ctx context.Context, request operations.AdsenseAccountsReportsSavedListRequest) (*operations.AdsenseAccountsReportsSavedListResponse, error) {
+func (s *accounts) AdsenseAccountsReportsSavedList(ctx context.Context, request operations.AdsenseAccountsReportsSavedListRequest, security operations.AdsenseAccountsReportsSavedListSecurity) (*operations.AdsenseAccountsReportsSavedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/reports/saved", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/reports/saved", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1110,20 +1110,20 @@ func (s *accounts) AdsenseAccountsReportsSavedList(ctx context.Context, request 
 }
 
 // AdsenseAccountsSitesGet - Gets information about the selected site.
-func (s *accounts) AdsenseAccountsSitesGet(ctx context.Context, request operations.AdsenseAccountsSitesGetRequest) (*operations.AdsenseAccountsSitesGetResponse, error) {
+func (s *accounts) AdsenseAccountsSitesGet(ctx context.Context, request operations.AdsenseAccountsSitesGetRequest, security operations.AdsenseAccountsSitesGetSecurity) (*operations.AdsenseAccountsSitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1158,20 +1158,20 @@ func (s *accounts) AdsenseAccountsSitesGet(ctx context.Context, request operatio
 }
 
 // AdsenseAccountsSitesList - Lists all the sites available in an account.
-func (s *accounts) AdsenseAccountsSitesList(ctx context.Context, request operations.AdsenseAccountsSitesListRequest) (*operations.AdsenseAccountsSitesListResponse, error) {
+func (s *accounts) AdsenseAccountsSitesList(ctx context.Context, request operations.AdsenseAccountsSitesListRequest, security operations.AdsenseAccountsSitesListSecurity) (*operations.AdsenseAccountsSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/sites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/sites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

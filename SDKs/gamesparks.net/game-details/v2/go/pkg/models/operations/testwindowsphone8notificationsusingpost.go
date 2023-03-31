@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestWindowsPhone8NotificationsUsingPOSTPathParams struct {
+type TestWindowsPhone8NotificationsUsingPOSTRequest struct {
+	// messageDetails
+	PushNotificationTestModel shared.PushNotificationTestModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type TestWindowsPhone8NotificationsUsingPOSTRequest struct {
-	PathParams TestWindowsPhone8NotificationsUsingPOSTPathParams
-	// messageDetails
-	Request shared.PushNotificationTestModel `request:"mediaType=application/json"`
 }
 
 type TestWindowsPhone8NotificationsUsingPOSTResponse struct {

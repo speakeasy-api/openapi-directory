@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05SubscriptionsHiuOnNotifyHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05SubscriptionsHiuOnNotifyRequest struct {
-	Headers PostV05SubscriptionsHiuOnNotifyHeaders
-	Request shared.HIUSubscriptionNotificationAcknowledgment `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization                             string                                           `header:"style=simple,explode=false,name=Authorization"`
+	HIUSubscriptionNotificationAcknowledgment shared.HIUSubscriptionNotificationAcknowledgment `request:"mediaType=application/json"`
 }
 
 type PostV05SubscriptionsHiuOnNotifyResponse struct {

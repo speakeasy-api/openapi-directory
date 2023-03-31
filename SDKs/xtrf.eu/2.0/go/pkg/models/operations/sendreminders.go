@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendRemindersRequest struct {
-	// Number of sent e-mails.
-	Request shared.SendRemindersRequestDTO `request:"mediaType=application/json"`
-}
-
 type SendRemindersResponse struct {
 	ContentType string
 	// Success

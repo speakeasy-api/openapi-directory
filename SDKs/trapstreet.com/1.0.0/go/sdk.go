@@ -92,7 +92,7 @@ func New(opts ...SDKOption) *SDK {
 
 func (s *SDK) GetAddress(ctx context.Context, request operations.GetAddressRequest) (*operations.GetAddressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

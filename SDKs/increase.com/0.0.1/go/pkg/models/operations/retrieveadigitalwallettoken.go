@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveADigitalWalletTokenPathParams struct {
-	DigitalWalletTokenID string `pathParam:"style=simple,explode=false,name=digital_wallet_token_id"`
-}
-
 type RetrieveADigitalWalletTokenRequest struct {
-	PathParams RetrieveADigitalWalletTokenPathParams
+	DigitalWalletTokenID string `pathParam:"style=simple,explode=false,name=digital_wallet_token_id"`
 }
 
 type RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum string

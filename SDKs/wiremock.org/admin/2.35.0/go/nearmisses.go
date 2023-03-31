@@ -79,7 +79,7 @@ func (s *nearMisses) GetAdminRequestsUnmatchedNearMisses(ctx context.Context) (*
 
 // PostAdminNearMissesRequest - Find near misses matching specific request
 // Find at most 3 near misses for closest stub mappings to the specified request
-func (s *nearMisses) PostAdminNearMissesRequest(ctx context.Context, request operations.PostAdminNearMissesRequestRequest) (*operations.PostAdminNearMissesRequestResponse, error) {
+func (s *nearMisses) PostAdminNearMissesRequest(ctx context.Context, request operations.PostAdminNearMissesRequestRequestBody) (*operations.PostAdminNearMissesRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/near-misses/request"
 
@@ -134,7 +134,7 @@ func (s *nearMisses) PostAdminNearMissesRequest(ctx context.Context, request ope
 
 // PostAdminNearMissesRequestPattern - Find near misses matching request pattern
 // Find at most 3 near misses for closest logged requests to the specified request pattern
-func (s *nearMisses) PostAdminNearMissesRequestPattern(ctx context.Context, request operations.PostAdminNearMissesRequestPatternRequest) (*operations.PostAdminNearMissesRequestPatternResponse, error) {
+func (s *nearMisses) PostAdminNearMissesRequestPattern(ctx context.Context, request operations.PostAdminNearMissesRequestPatternRequestBody) (*operations.PostAdminNearMissesRequestPatternResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/near-misses/request-pattern"
 

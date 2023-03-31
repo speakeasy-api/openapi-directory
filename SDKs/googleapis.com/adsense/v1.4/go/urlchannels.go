@@ -32,20 +32,20 @@ func newUrlchannels(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // AdsenseUrlchannelsList - List all URL channels in the specified ad client for this AdSense account.
-func (s *urlchannels) AdsenseUrlchannelsList(ctx context.Context, request operations.AdsenseUrlchannelsListRequest) (*operations.AdsenseUrlchannelsListResponse, error) {
+func (s *urlchannels) AdsenseUrlchannelsList(ctx context.Context, request operations.AdsenseUrlchannelsListRequest, security operations.AdsenseUrlchannelsListSecurity) (*operations.AdsenseUrlchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

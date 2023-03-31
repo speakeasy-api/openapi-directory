@@ -14,47 +14,39 @@ func main() {
     s := sdk.New()
 
     req := operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
-        Security: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AttachTrustRequestInput{
+        DollarXgafv: "2",
+        AttachTrustRequestInput: &shared.AttachTrustRequestInput{
             Trust: &shared.TrustInput{
                 SelectiveAuthentication: false,
                 TargetDNSIPAddresses: []string{
-                    "iure",
-                    "magnam",
+                    "distinctio",
+                    "quibusdam",
+                    "unde",
                 },
-                TargetDomainName: "debitis",
-                TrustDirection: "TRUST_DIRECTION_UNSPECIFIED",
-                TrustHandshakeSecret: "delectus",
-                TrustType: "TRUST_TYPE_UNSPECIFIED",
+                TargetDomainName: "nulla",
+                TrustDirection: "OUTBOUND",
+                TrustHandshakeSecret: "illum",
+                TrustType: "FOREST",
             },
         },
+        AccessToken: "error",
+        Alt: "media",
+        Callback: "suscipit",
+        Fields: "iure",
+        Key: "magnam",
+        Name: "debitis",
+        OauthToken: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        UploadType: "tempora",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req)
+    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

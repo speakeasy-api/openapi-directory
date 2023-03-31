@@ -39,7 +39,7 @@ func (e *SearchReposSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchReposQueryParams struct {
+type SearchReposRequest struct {
 	// Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// Page number of the results to fetch.
@@ -50,10 +50,6 @@ type SearchReposQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Sorts the results of your query by number of `stars`, `forks`, or `help-wanted-issues` or how recently the items were `updated`. Default: [best match](https://docs.github.com/enterprise-server@3.3/rest/reference/search#ranking-search-results)
 	Sort *SearchReposSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchReposRequest struct {
-	QueryParams SearchReposQueryParams
 }
 
 // SearchRepos503ApplicationJSON - Service unavailable

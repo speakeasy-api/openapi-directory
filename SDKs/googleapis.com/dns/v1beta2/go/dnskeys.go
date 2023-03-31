@@ -32,20 +32,20 @@ func newDNSKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DNSDNSKeysGet - Fetches the representation of an existing DnsKey.
-func (s *dnsKeys) DNSDNSKeysGet(ctx context.Context, request operations.DNSDNSKeysGetRequest) (*operations.DNSDNSKeysGetResponse, error) {
+func (s *dnsKeys) DNSDNSKeysGet(ctx context.Context, request operations.DNSDNSKeysGetRequest, security operations.DNSDNSKeysGetSecurity) (*operations.DNSDNSKeysGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *dnsKeys) DNSDNSKeysGet(ctx context.Context, request operations.DNSDNSKe
 }
 
 // DNSDNSKeysList - Enumerates DnsKeys to a ResourceRecordSet collection.
-func (s *dnsKeys) DNSDNSKeysList(ctx context.Context, request operations.DNSDNSKeysListRequest) (*operations.DNSDNSKeysListResponse, error) {
+func (s *dnsKeys) DNSDNSKeysList(ctx context.Context, request operations.DNSDNSKeysListRequest, security operations.DNSDNSKeysListSecurity) (*operations.DNSDNSKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/dnsKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/dnsKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

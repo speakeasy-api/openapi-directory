@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1ListsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1ListsRequest struct {
-	Security GetAPIV1ListsSecurity
-}
-
 type GetAPIV1ListsResponse struct {
 	ContentType string
 	// Invalid or missing Authorization header

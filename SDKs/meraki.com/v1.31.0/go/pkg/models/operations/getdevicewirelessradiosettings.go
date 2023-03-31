@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceWirelessRadioSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceWirelessRadioSettingsRequest struct {
-	PathParams GetDeviceWirelessRadioSettingsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceWirelessRadioSettingsResponse struct {

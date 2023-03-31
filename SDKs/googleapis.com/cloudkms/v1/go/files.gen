@@ -45,7 +45,6 @@ pkg/models/shared/serviceresolver.go
 pkg/models/shared/certificate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listekmconnectionsresponse.go
 pkg/models/shared/generaterandombytesresponse.go
 pkg/models/shared/generaterandombytesrequest.go

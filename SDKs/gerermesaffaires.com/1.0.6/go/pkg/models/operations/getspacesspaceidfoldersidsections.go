@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDSectionsPathParams struct {
+type GetSpacesSpaceIDFoldersIDSectionsRequest struct {
 	// Id of the folder
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDSectionsRequest struct {
-	PathParams GetSpacesSpaceIDFoldersIDSectionsPathParams
 }
 
 type GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum string

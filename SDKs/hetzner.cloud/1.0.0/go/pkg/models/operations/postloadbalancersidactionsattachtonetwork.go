@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsAttachToNetworkPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostLoadBalancersIDActionsAttachToNetworkRequestBody struct {
 	// IP to request to be assigned to this Load Balancer; if you do not provide this then you will be auto assigned an IP address
 	IP *string `json:"ip,omitempty"`
@@ -21,8 +16,9 @@ type PostLoadBalancersIDActionsAttachToNetworkRequestBody struct {
 }
 
 type PostLoadBalancersIDActionsAttachToNetworkRequest struct {
-	PathParams PostLoadBalancersIDActionsAttachToNetworkPathParams
-	Request    *PostLoadBalancersIDActionsAttachToNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsAttachToNetworkRequestBody `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsAttachToNetworkActionResponseActionError - Error message for the Action if error occurred, otherwise null

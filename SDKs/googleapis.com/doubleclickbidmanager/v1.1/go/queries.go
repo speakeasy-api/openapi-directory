@@ -33,11 +33,11 @@ func newQueries(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DoubleclickbidmanagerQueriesCreatequery - Creates a query.
-func (s *queries) DoubleclickbidmanagerQueriesCreatequery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesCreatequeryRequest) (*operations.DoubleclickbidmanagerQueriesCreatequeryResponse, error) {
+func (s *queries) DoubleclickbidmanagerQueriesCreatequery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesCreatequeryRequest, security operations.DoubleclickbidmanagerQueriesCreatequerySecurity) (*operations.DoubleclickbidmanagerQueriesCreatequeryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Query", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *queries) DoubleclickbidmanagerQueriesCreatequery(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *queries) DoubleclickbidmanagerQueriesCreatequery(ctx context.Context, r
 }
 
 // DoubleclickbidmanagerQueriesDeletequery - Deletes a stored query as well as the associated stored reports.
-func (s *queries) DoubleclickbidmanagerQueriesDeletequery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesDeletequeryRequest) (*operations.DoubleclickbidmanagerQueriesDeletequeryResponse, error) {
+func (s *queries) DoubleclickbidmanagerQueriesDeletequery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesDeletequeryRequest, security operations.DoubleclickbidmanagerQueriesDeletequerySecurity) (*operations.DoubleclickbidmanagerQueriesDeletequeryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,20 +127,20 @@ func (s *queries) DoubleclickbidmanagerQueriesDeletequery(ctx context.Context, r
 }
 
 // DoubleclickbidmanagerQueriesGetquery - Retrieves a stored query.
-func (s *queries) DoubleclickbidmanagerQueriesGetquery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesGetqueryRequest) (*operations.DoubleclickbidmanagerQueriesGetqueryResponse, error) {
+func (s *queries) DoubleclickbidmanagerQueriesGetquery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesGetqueryRequest, security operations.DoubleclickbidmanagerQueriesGetquerySecurity) (*operations.DoubleclickbidmanagerQueriesGetqueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *queries) DoubleclickbidmanagerQueriesGetquery(ctx context.Context, requ
 }
 
 // DoubleclickbidmanagerQueriesListqueries - Retrieves stored queries.
-func (s *queries) DoubleclickbidmanagerQueriesListqueries(ctx context.Context, request operations.DoubleclickbidmanagerQueriesListqueriesRequest) (*operations.DoubleclickbidmanagerQueriesListqueriesResponse, error) {
+func (s *queries) DoubleclickbidmanagerQueriesListqueries(ctx context.Context, request operations.DoubleclickbidmanagerQueriesListqueriesRequest, security operations.DoubleclickbidmanagerQueriesListqueriesSecurity) (*operations.DoubleclickbidmanagerQueriesListqueriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/queries"
 
@@ -184,11 +184,11 @@ func (s *queries) DoubleclickbidmanagerQueriesListqueries(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *queries) DoubleclickbidmanagerQueriesListqueries(ctx context.Context, r
 }
 
 // DoubleclickbidmanagerQueriesRunquery - Runs a stored query to generate a report.
-func (s *queries) DoubleclickbidmanagerQueriesRunquery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesRunqueryRequest) (*operations.DoubleclickbidmanagerQueriesRunqueryResponse, error) {
+func (s *queries) DoubleclickbidmanagerQueriesRunquery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesRunqueryRequest, security operations.DoubleclickbidmanagerQueriesRunquerySecurity) (*operations.DoubleclickbidmanagerQueriesRunqueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *queries) DoubleclickbidmanagerQueriesRunquery(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

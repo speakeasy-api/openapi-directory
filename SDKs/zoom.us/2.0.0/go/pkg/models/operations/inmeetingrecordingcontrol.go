@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type InMeetingRecordingControlPathParams struct {
-	// Unique identifier of the live meeting.
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
 type InMeetingRecordingControlApplicationJSON struct {
 	// The method that you would like to control. The value of this field can be one of the following:
 	// * `recording.start`: Provide this value if you would like to start the recording.<br><br>
@@ -25,8 +20,9 @@ type InMeetingRecordingControlApplicationJSON struct {
 }
 
 type InMeetingRecordingControlRequest struct {
-	PathParams InMeetingRecordingControlPathParams
-	Request    *InMeetingRecordingControlApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *InMeetingRecordingControlApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the live meeting.
+	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
 }
 
 type InMeetingRecordingControlResponse struct {

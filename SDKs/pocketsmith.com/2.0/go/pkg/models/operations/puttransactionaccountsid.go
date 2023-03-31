@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutTransactionAccountsIDPathParams struct {
-	// The unique identifier of the transaction account.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutTransactionAccountsIDRequestBody struct {
 	// The unique identifier of a new institution for the transaction account.
 	InstitutionID *int64 `json:"institution_id,omitempty"`
@@ -22,8 +17,9 @@ type PutTransactionAccountsIDRequestBody struct {
 }
 
 type PutTransactionAccountsIDRequest struct {
-	PathParams PutTransactionAccountsIDPathParams
-	Request    *PutTransactionAccountsIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutTransactionAccountsIDRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the transaction account.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutTransactionAccountsIDResponse struct {

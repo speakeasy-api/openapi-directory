@@ -23,7 +23,6 @@ pkg/models/shared/callbackurl.go
 pkg/models/shared/contextnumberlinking.go
 pkg/models/shared/contextnumberupdate.go
 pkg/models/shared/eventlink.go
-pkg/models/shared/security.go
 pkg/models/shared/errorforbidden.go
 pkg/models/shared/auditresp.go
 pkg/models/shared/paginationdata.go

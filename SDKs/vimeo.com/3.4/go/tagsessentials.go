@@ -34,7 +34,7 @@ func newTagsEssentials(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetTag - Get a specific tag
 func (s *tagsEssentials) GetTag(ctx context.Context, request operations.GetTagRequest) (*operations.GetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

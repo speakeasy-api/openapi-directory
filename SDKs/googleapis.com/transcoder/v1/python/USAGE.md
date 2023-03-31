@@ -4,530 +4,605 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TranscoderProjectsLocationsJobTemplatesCreateRequest(
-    security=operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.TranscoderProjectsLocationsJobTemplatesCreatePathParams(
-        parent="maiores",
-    ),
-    query_params=operations.TranscoderProjectsLocationsJobTemplatesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="ut",
-        alt="proto",
-        callback="et",
-        fields="hic",
-        job_template_id="consequatur",
-        key="qui",
-        oauth_token="ut",
-        pretty_print=True,
-        quota_user="repellat",
-        upload_type="vitae",
-        upload_protocol="veritatis",
-    ),
-    request=shared.JobTemplate(
+    dollar_xgafv="2",
+    job_template=shared.JobTemplate(
         config=shared.JobConfig(
             ad_breaks=[
                 shared.AdBreak(
-                    start_time_offset="dolore",
+                    start_time_offset="distinctio",
                 ),
                 shared.AdBreak(
-                    start_time_offset="omnis",
+                    start_time_offset="quibusdam",
+                ),
+                shared.AdBreak(
+                    start_time_offset="unde",
                 ),
             ],
             edit_list=[
                 shared.EditAtom(
-                    end_time_offset="est",
+                    end_time_offset="corrupti",
                     inputs=[
-                        "expedita",
+                        "vel",
+                        "error",
+                        "deserunt",
+                        "suscipit",
                     ],
-                    key="voluptates",
-                    start_time_offset="aperiam",
+                    key="iure",
+                    start_time_offset="magnam",
                 ),
                 shared.EditAtom(
-                    end_time_offset="id",
+                    end_time_offset="debitis",
                     inputs=[
-                        "vitae",
+                        "delectus",
                     ],
-                    key="molestiae",
-                    start_time_offset="sed",
+                    key="tempora",
+                    start_time_offset="suscipit",
+                ),
+                shared.EditAtom(
+                    end_time_offset="molestiae",
+                    inputs=[
+                        "placeat",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
+                    ],
+                    key="nisi",
+                    start_time_offset="recusandae",
+                ),
+                shared.EditAtom(
+                    end_time_offset="temporibus",
+                    inputs=[
+                        "quis",
+                    ],
+                    key="veritatis",
+                    start_time_offset="deserunt",
                 ),
             ],
             elementary_streams=[
                 shared.ElementaryStream(
                     audio_stream=shared.AudioStream(
-                        bitrate_bps=2486254503504335637,
-                        channel_count=1327590010125728031,
+                        bitrate_bps=368241,
+                        channel_count=832620,
                         channel_layout=[
-                            "corporis",
+                            "quo",
+                            "odit",
+                            "at",
+                            "at",
                         ],
-                        codec="nemo",
+                        codec="maiores",
+                        display_name="molestiae",
+                        language_code="quod",
                         mapping=[
                             shared.AudioMapping(
-                                atom_key="aut",
-                                gain_db=56.099998,
-                                input_channel=1857508589283645104,
-                                input_key="consectetur",
-                                input_track=7353581824819058431,
-                                output_channel=8089940404465677720,
+                                atom_key="esse",
+                                gain_db=5204.78,
+                                input_channel=780529,
+                                input_key="dolorum",
+                                input_track=118274,
+                                output_channel=720633,
                             ),
                             shared.AudioMapping(
-                                atom_key="magni",
-                                gain_db=40.200001,
-                                input_channel=7911523287298070298,
-                                input_key="inventore",
-                                input_track=8030447454894538442,
-                                output_channel=1791388125543355420,
+                                atom_key="officia",
+                                gain_db=5820.2,
+                                input_channel=143353,
+                                input_key="deleniti",
+                                input_track=944669,
+                                output_channel=758616,
                             ),
                             shared.AudioMapping(
-                                atom_key="quas",
-                                gain_db=97.099998,
-                                input_channel=4938937113744242844,
-                                input_key="sunt",
-                                input_track=4109628284538931285,
-                                output_channel=7834509985500921950,
+                                atom_key="totam",
+                                gain_db=1059.07,
+                                input_channel=414662,
+                                input_key="molestiae",
+                                input_track=264555,
+                                output_channel=186332,
+                            ),
+                            shared.AudioMapping(
+                                atom_key="impedit",
+                                gain_db=7369.18,
+                                input_channel=456150,
+                                input_key="ipsum",
+                                input_track=568434,
+                                output_channel=135218,
                             ),
                         ],
-                        sample_rate_hertz=5744900134772753844,
+                        sample_rate_hertz=18789,
                     ),
-                    key="non",
+                    key="ad",
                     text_stream=shared.TextStream(
-                        codec="omnis",
+                        codec="natus",
+                        display_name="sed",
+                        language_code="iste",
                         mapping=[
                             shared.TextMapping(
-                                atom_key="dolor",
-                                input_key="rerum",
-                                input_track=4040908037904174339,
-                            ),
-                            shared.TextMapping(
-                                atom_key="non",
-                                input_key="soluta",
-                                input_track=215257887230853729,
+                                atom_key="natus",
+                                input_key="laboriosam",
+                                input_track=943749,
                             ),
                         ],
                     ),
                     video_stream=shared.VideoStream(
                         h264=shared.H264CodecSettings(
-                            allow_open_gop=True,
-                            aq_strength=99.099998,
-                            b_frame_count=2391036045929995330,
+                            allow_open_gop=False,
+                            aq_strength=9025.99,
+                            b_frame_count=681820,
                             b_pyramid=False,
-                            bitrate_bps=2480423464958630602,
-                            crf_level=5885551327982754724,
-                            enable_two_pass=True,
-                            entropy_coder="soluta",
-                            frame_rate=41.099998,
-                            gop_duration="soluta",
-                            gop_frame_count=6385659819997428011,
-                            height_pixels=8609035101093092038,
-                            pixel_format="nostrum",
-                            preset="ex",
-                            profile="tempore",
-                            rate_control_mode="et",
-                            tune="sed",
-                            vbv_fullness_bits=2816059037918821884,
-                            vbv_size_bits=1173153493415182005,
-                            width_pixels=7173519952768853537,
+                            bitrate_bps=449950,
+                            crf_level=359508,
+                            enable_two_pass=False,
+                            entropy_coder="iste",
+                            frame_rate=4370.32,
+                            gop_duration="saepe",
+                            gop_frame_count=697631,
+                            height_pixels=99280,
+                            pixel_format="ipsa",
+                            preset="reiciendis",
+                            profile="est",
+                            rate_control_mode="mollitia",
+                            tune="laborum",
+                            vbv_fullness_bits=170909,
+                            vbv_size_bits=210382,
+                            width_pixels=358152,
                         ),
                         h265=shared.H265CodecSettings(
                             allow_open_gop=False,
-                            aq_strength=23.100000,
-                            b_frame_count=390937637953858651,
-                            b_pyramid=True,
-                            bitrate_bps=6122118647002868960,
-                            crf_level=3126229729747386194,
+                            aq_strength=1289.26,
+                            b_frame_count=750686,
+                            b_pyramid=False,
+                            bitrate_bps=315428,
+                            crf_level=607831,
                             enable_two_pass=False,
-                            frame_rate=89.199997,
-                            gop_duration="tempora",
-                            gop_frame_count=3429171250998373511,
-                            height_pixels=6901833358534565043,
-                            pixel_format="voluptatem",
-                            preset="fuga",
-                            profile="incidunt",
-                            rate_control_mode="quia",
-                            tune="iure",
-                            vbv_fullness_bits=7735915230001379743,
-                            vbv_size_bits=399771734835322312,
-                            width_pixels=4176102116855013289,
+                            frame_rate=3637.11,
+                            gop_duration="minima",
+                            gop_frame_count=570197,
+                            height_pixels=38425,
+                            pixel_format="iure",
+                            preset="culpa",
+                            profile="doloribus",
+                            rate_control_mode="sapiente",
+                            tune="architecto",
+                            vbv_fullness_bits=652790,
+                            vbv_size_bits=208876,
+                            width_pixels=635059,
                         ),
                         vp9=shared.Vp9CodecSettings(
-                            bitrate_bps=8022954540817835706,
-                            crf_level=2265993790355168423,
-                            frame_rate=72.199997,
-                            gop_duration="facere",
-                            gop_frame_count=8764984772842298950,
-                            height_pixels=1713235290354671766,
-                            pixel_format="consectetur",
-                            profile="voluptatem",
-                            rate_control_mode="quis",
-                            width_pixels=2015936184478320819,
-                        ),
-                    ),
-                ),
-                shared.ElementaryStream(
-                    audio_stream=shared.AudioStream(
-                        bitrate_bps=1010001708344682038,
-                        channel_count=8922813550406397629,
-                        channel_layout=[
-                            "qui",
-                        ],
-                        codec="sequi",
-                        mapping=[
-                            shared.AudioMapping(
-                                atom_key="atque",
-                                gain_db=25.200001,
-                                input_channel=9043363411818517441,
-                                input_key="reprehenderit",
-                                input_track=3025759118941071560,
-                                output_channel=7311456320750063564,
-                            ),
-                        ],
-                        sample_rate_hertz=2626138207850247013,
-                    ),
-                    key="enim",
-                    text_stream=shared.TextStream(
-                        codec="culpa",
-                        mapping=[
-                            shared.TextMapping(
-                                atom_key="adipisci",
-                                input_key="omnis",
-                                input_track=2764701326181603116,
-                            ),
-                        ],
-                    ),
-                    video_stream=shared.VideoStream(
-                        h264=shared.H264CodecSettings(
-                            allow_open_gop=True,
-                            aq_strength=82.099998,
-                            b_frame_count=8694015465892439035,
-                            b_pyramid=False,
-                            bitrate_bps=6955777946613518777,
-                            crf_level=6683747813176890318,
-                            enable_two_pass=False,
-                            entropy_coder="voluptates",
-                            frame_rate=26.100000,
-                            gop_duration="magni",
-                            gop_frame_count=5919908621062203443,
-                            height_pixels=1223118018736133583,
-                            pixel_format="architecto",
-                            preset="inventore",
-                            profile="ut",
-                            rate_control_mode="cupiditate",
-                            tune="in",
-                            vbv_fullness_bits=4496664425541628269,
-                            vbv_size_bits=717303605087228940,
-                            width_pixels=8799876897742566916,
-                        ),
-                        h265=shared.H265CodecSettings(
-                            allow_open_gop=True,
-                            aq_strength=86.099998,
-                            b_frame_count=5221735761267031323,
-                            b_pyramid=False,
-                            bitrate_bps=208592009785711552,
-                            crf_level=3417911158247711799,
-                            enable_two_pass=False,
-                            frame_rate=23.100000,
-                            gop_duration="exercitationem",
-                            gop_frame_count=7183801876620200303,
-                            height_pixels=6600825179953293974,
-                            pixel_format="dolorem",
-                            preset="maxime",
-                            profile="illo",
+                            bitrate_bps=161309,
+                            crf_level=995300,
+                            frame_rate=6531.08,
+                            gop_duration="occaecati",
+                            gop_frame_count=253291,
+                            height_pixels=414369,
+                            pixel_format="quam",
+                            profile="molestiae",
                             rate_control_mode="velit",
-                            tune="modi",
-                            vbv_fullness_bits=6212914163444078021,
-                            vbv_size_bits=2032600684748689995,
-                            width_pixels=3240505202659425150,
-                        ),
-                        vp9=shared.Vp9CodecSettings(
-                            bitrate_bps=8458717037456504964,
-                            crf_level=5109170713077538425,
-                            frame_rate=60.200001,
-                            gop_duration="neque",
-                            gop_frame_count=478713195984186844,
-                            height_pixels=1245778378213089751,
-                            pixel_format="nihil",
-                            profile="dicta",
-                            rate_control_mode="ratione",
-                            width_pixels=1407148767265176406,
+                            width_pixels=623510,
                         ),
                     ),
                 ),
             ],
             inputs=[
                 shared.Input(
-                    key="rerum",
+                    key="quis",
                     preprocessing_config=shared.PreprocessingConfig(
                         audio=shared.Audio(
                             high_boost=False,
                             low_boost=False,
-                            lufs=61.200001,
+                            lufs=1103.75,
                         ),
                         color=shared.Color(
-                            brightness=27.100000,
-                            contrast=47.099998,
-                            saturation=84.099998,
+                            brightness=6747.52,
+                            contrast=6563.3,
+                            saturation=3172.02,
                         ),
                         crop=shared.Crop(
-                            bottom_pixels=3735720738608608890,
-                            left_pixels=6701662263405581664,
-                            right_pixels=7228013150280111400,
-                            top_pixels=4287449961909311149,
+                            bottom_pixels=138183,
+                            left_pixels=778346,
+                            right_pixels=196582,
+                            top_pixels=949572,
                         ),
                         deblock=shared.Deblock(
                             enabled=False,
-                            strength=64.199997,
+                            strength=3687.25,
                         ),
                         deinterlace=shared.Deinterlace(
                             bwdif=shared.BwdifConfig(
-                                deinterlace_all_frames=True,
-                                mode="sequi",
-                                parity="molestiae",
+                                deinterlace_all_frames=False,
+                                mode="id",
+                                parity="possimus",
                             ),
                             yadif=shared.YadifConfig(
-                                deinterlace_all_frames=True,
+                                deinterlace_all_frames=False,
                                 disable_spatial_interlacing=False,
-                                mode="dicta",
-                                parity="culpa",
+                                mode="aut",
+                                parity="quasi",
                             ),
                         ),
                         denoise=shared.Denoise(
-                            strength=86.199997,
-                            tune="veritatis",
+                            strength=6228.46,
+                            tune="temporibus",
                         ),
                         pad=shared.Pad(
-                            bottom_pixels=491321338406121329,
-                            left_pixels=8262153506971021336,
-                            right_pixels=7627964282123116830,
-                            top_pixels=2441665080944105611,
+                            bottom_pixels=673660,
+                            left_pixels=96098,
+                            right_pixels=971945,
+                            top_pixels=976460,
                         ),
                     ),
-                    uri="omnis",
-                ),
-                shared.Input(
-                    key="aperiam",
-                    preprocessing_config=shared.PreprocessingConfig(
-                        audio=shared.Audio(
-                            high_boost=True,
-                            low_boost=True,
-                            lufs=15.200000,
-                        ),
-                        color=shared.Color(
-                            brightness=24.200001,
-                            contrast=92.099998,
-                            saturation=71.199997,
-                        ),
-                        crop=shared.Crop(
-                            bottom_pixels=8831994486805097443,
-                            left_pixels=2932022947290446590,
-                            right_pixels=972747749731930633,
-                            top_pixels=8989858287671588145,
-                        ),
-                        deblock=shared.Deblock(
-                            enabled=False,
-                            strength=32.200001,
-                        ),
-                        deinterlace=shared.Deinterlace(
-                            bwdif=shared.BwdifConfig(
-                                deinterlace_all_frames=False,
-                                mode="non",
-                                parity="nam",
-                            ),
-                            yadif=shared.YadifConfig(
-                                deinterlace_all_frames=False,
-                                disable_spatial_interlacing=True,
-                                mode="ut",
-                                parity="quis",
-                            ),
-                        ),
-                        denoise=shared.Denoise(
-                            strength=57.099998,
-                            tune="rerum",
-                        ),
-                        pad=shared.Pad(
-                            bottom_pixels=5873718723483420351,
-                            left_pixels=6518958772942461468,
-                            right_pixels=1427975912651779027,
-                            top_pixels=2133339267623027293,
-                        ),
-                    ),
-                    uri="natus",
+                    uri="https://klutzy-level.org",
                 ),
             ],
             manifests=[
                 shared.Manifest(
-                    file_name="fuga",
+                    file_name="omnis",
                     mux_streams=[
-                        "est",
-                        "ut",
-                    ],
-                    type="MANIFEST_TYPE_UNSPECIFIED",
-                ),
-                shared.Manifest(
-                    file_name="eum",
-                    mux_streams=[
-                        "harum",
+                        "cum",
+                        "perferendis",
                     ],
                     type="MANIFEST_TYPE_UNSPECIFIED",
                 ),
             ],
             mux_streams=[
                 shared.MuxStream(
-                    container="vel",
+                    container="ut",
                     elementary_streams=[
-                        "iste",
-                    ],
-                    file_name="perspiciatis",
-                    key="est",
-                    segment_settings=shared.SegmentSettings(
-                        individual_segments=True,
-                        segment_duration="esse",
-                    ),
-                ),
-                shared.MuxStream(
-                    container="dolor",
-                    elementary_streams=[
-                        "fuga",
-                        "consequatur",
-                        "eveniet",
-                    ],
-                    file_name="sit",
-                    key="deleniti",
-                    segment_settings=shared.SegmentSettings(
-                        individual_segments=True,
-                        segment_duration="quod",
-                    ),
-                ),
-                shared.MuxStream(
-                    container="rerum",
-                    elementary_streams=[
+                        "dicta",
                         "corporis",
-                        "quo",
-                        "assumenda",
+                        "dolore",
+                        "iusto",
                     ],
-                    file_name="sunt",
-                    key="delectus",
+                    file_name="dicta",
+                    key="harum",
                     segment_settings=shared.SegmentSettings(
-                        individual_segments=True,
-                        segment_duration="perspiciatis",
+                        individual_segments=False,
+                        segment_duration="enim",
+                    ),
+                ),
+                shared.MuxStream(
+                    container="accusamus",
+                    elementary_streams=[
+                        "repudiandae",
+                        "quae",
+                    ],
+                    file_name="ipsum",
+                    key="quidem",
+                    segment_settings=shared.SegmentSettings(
+                        individual_segments=False,
+                        segment_duration="molestias",
                     ),
                 ),
             ],
             output=shared.Output(
-                uri="inventore",
+                uri="https://treasured-dirt.name",
             ),
             overlays=[
                 shared.Overlay(
                     animations=[
                         shared.Animation(
                             animation_end=shared.AnimationEnd(
-                                start_time_offset="ut",
+                                start_time_offset="quasi",
                             ),
                             animation_fade=shared.AnimationFade(
-                                end_time_offset="ea",
+                                end_time_offset="repudiandae",
                                 fade_type="FADE_IN",
-                                start_time_offset="amet",
+                                start_time_offset="veritatis",
                                 xy=shared.NormalizedCoordinate(
-                                    x=5.200000,
-                                    y=40.200001,
+                                    x=9292.97,
+                                    y=2777.18,
                                 ),
                             ),
                             animation_static=shared.AnimationStatic(
-                                start_time_offset="delectus",
+                                start_time_offset="enim",
                                 xy=shared.NormalizedCoordinate(
-                                    x=21.200001,
-                                    y=94.099998,
+                                    x=93.56,
+                                    y=6674.11,
                                 ),
                             ),
                         ),
                         shared.Animation(
                             animation_end=shared.AnimationEnd(
-                                start_time_offset="dolorem",
+                                start_time_offset="quibusdam",
                             ),
                             animation_fade=shared.AnimationFade(
-                                end_time_offset="vel",
-                                fade_type="FADE_OUT",
-                                start_time_offset="commodi",
-                                xy=shared.NormalizedCoordinate(
-                                    x=32.200001,
-                                    y=18.100000,
-                                ),
-                            ),
-                            animation_static=shared.AnimationStatic(
-                                start_time_offset="asperiores",
-                                xy=shared.NormalizedCoordinate(
-                                    x=30.200001,
-                                    y=87.199997,
-                                ),
-                            ),
-                        ),
-                        shared.Animation(
-                            animation_end=shared.AnimationEnd(
-                                start_time_offset="sint",
-                            ),
-                            animation_fade=shared.AnimationFade(
-                                end_time_offset="non",
-                                fade_type="FADE_OUT",
+                                end_time_offset="explicabo",
+                                fade_type="FADE_IN",
                                 start_time_offset="distinctio",
                                 xy=shared.NormalizedCoordinate(
-                                    x=24.200001,
-                                    y=78.199997,
+                                    x=8413.86,
+                                    y=2894.06,
                                 ),
                             ),
                             animation_static=shared.AnimationStatic(
-                                start_time_offset="repellat",
+                                start_time_offset="modi",
                                 xy=shared.NormalizedCoordinate(
-                                    x=21.100000,
-                                    y=61.200001,
+                                    x=1831.91,
+                                    y=3978.21,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="cupiditate",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="quos",
+                                fade_type="FADE_TYPE_UNSPECIFIED",
+                                start_time_offset="magni",
+                                xy=shared.NormalizedCoordinate(
+                                    x=8289.4,
+                                    y=3698.08,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="alias",
+                                xy=shared.NormalizedCoordinate(
+                                    x=1464.41,
+                                    y=6778.17,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="excepturi",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="tempora",
+                                fade_type="FADE_OUT",
+                                start_time_offset="tempore",
+                                xy=shared.NormalizedCoordinate(
+                                    x=2884.76,
+                                    y=9621.89,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="eum",
+                                xy=shared.NormalizedCoordinate(
+                                    x=2487.53,
+                                    y=7561.07,
                                 ),
                             ),
                         ),
                     ],
                     image=shared.Image(
-                        alpha=50.099998,
+                        alpha=5761.57,
                         resolution=shared.NormalizedCoordinate(
-                            x=71.099998,
-                            y=94.099998,
+                            x=3960.98,
+                            y=5920.42,
                         ),
-                        uri="enim",
+                        uri="https://nonstop-pate.biz",
+                    ),
+                ),
+                shared.Overlay(
+                    animations=[
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="a",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="dolorum",
+                                fade_type="FADE_IN",
+                                start_time_offset="in",
+                                xy=shared.NormalizedCoordinate(
+                                    x=8464.09,
+                                    y=9785.71,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="rerum",
+                                xy=shared.NormalizedCoordinate(
+                                    x=1162.02,
+                                    y=2974.37,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="cumque",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="facere",
+                                fade_type="FADE_IN",
+                                start_time_offset="aliquid",
+                                xy=shared.NormalizedCoordinate(
+                                    x=6754.39,
+                                    y=8811.04,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="non",
+                                xy=shared.NormalizedCoordinate(
+                                    x=5812.73,
+                                    y=3132.18,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="accusamus",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="delectus",
+                                fade_type="FADE_OUT",
+                                start_time_offset="provident",
+                                xy=shared.NormalizedCoordinate(
+                                    x=7252.55,
+                                    y=6596.69,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="blanditiis",
+                                xy=shared.NormalizedCoordinate(
+                                    x=5332.06,
+                                    y=9560.84,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="amet",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="deserunt",
+                                fade_type="FADE_IN",
+                                start_time_offset="vel",
+                                xy=shared.NormalizedCoordinate(
+                                    x=6188.09,
+                                    y=6063.93,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="molestiae",
+                                xy=shared.NormalizedCoordinate(
+                                    x=191.93,
+                                    y=4701.32,
+                                ),
+                            ),
+                        ),
+                    ],
+                    image=shared.Image(
+                        alpha=3015.75,
+                        resolution=shared.NormalizedCoordinate(
+                            x=7160.75,
+                            y=6601.74,
+                        ),
+                        uri="http://flawed-gherkin.name",
+                    ),
+                ),
+                shared.Overlay(
+                    animations=[
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="eum",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="vero",
+                                fade_type="FADE_TYPE_UNSPECIFIED",
+                                start_time_offset="architecto",
+                                xy=shared.NormalizedCoordinate(
+                                    x=2982.82,
+                                    y=923.73,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="excepturi",
+                                xy=shared.NormalizedCoordinate(
+                                    x=3540.47,
+                                    y=5908.73,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="quos",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="sint",
+                                fade_type="FADE_TYPE_UNSPECIFIED",
+                                start_time_offset="mollitia",
+                                xy=shared.NormalizedCoordinate(
+                                    x=9689.62,
+                                    y=6521.03,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="ad",
+                                xy=shared.NormalizedCoordinate(
+                                    x=4314.18,
+                                    y=2212.62,
+                                ),
+                            ),
+                        ),
+                        shared.Animation(
+                            animation_end=shared.AnimationEnd(
+                                start_time_offset="necessitatibus",
+                            ),
+                            animation_fade=shared.AnimationFade(
+                                end_time_offset="odit",
+                                fade_type="FADE_IN",
+                                start_time_offset="quasi",
+                                xy=shared.NormalizedCoordinate(
+                                    x=4358.65,
+                                    y=9840.43,
+                                ),
+                            ),
+                            animation_static=shared.AnimationStatic(
+                                start_time_offset="debitis",
+                                xy=shared.NormalizedCoordinate(
+                                    x=2603.41,
+                                    y=8061.94,
+                                ),
+                            ),
+                        ),
+                    ],
+                    image=shared.Image(
+                        alpha=5370.23,
+                        resolution=shared.NormalizedCoordinate(
+                            x=7038.89,
+                            y=4479.26,
+                        ),
+                        uri="http://burly-trachoma.info",
                     ),
                 ),
             ],
             pubsub_destination=shared.PubsubDestination(
-                topic="perspiciatis",
+                topic="expedita",
             ),
             sprite_sheets=[
                 shared.SpriteSheet(
-                    column_count=5046076591311312388,
-                    end_time_offset="blanditiis",
-                    file_prefix="reiciendis",
-                    format="sit",
-                    interval="fugiat",
-                    quality=565903323269569607,
-                    row_count=2970700411787524209,
-                    sprite_height_pixels=2657773069328556553,
-                    sprite_width_pixels=6543714679893911619,
-                    start_time_offset="vel",
-                    total_count=2141990745511989474,
+                    column_count=998848,
+                    end_time_offset="quibusdam",
+                    file_prefix="sed",
+                    format="saepe",
+                    interval="pariatur",
+                    quality=37559,
+                    row_count=162493,
+                    sprite_height_pixels=508315,
+                    sprite_width_pixels=615560,
+                    start_time_offset="magni",
+                    total_count=123820,
+                ),
+                shared.SpriteSheet(
+                    column_count=779051,
+                    end_time_offset="illum",
+                    file_prefix="pariatur",
+                    format="maxime",
+                    interval="ea",
+                    quality=569101,
+                    row_count=139972,
+                    sprite_height_pixels=407183,
+                    sprite_width_pixels=33222,
+                    start_time_offset="ab",
+                    total_count=982575,
                 ),
             ],
         ),
         labels={
-            "facere": "id",
-            "non": "eveniet",
-            "sit": "facere",
+            "ipsam": "voluptate",
+            "autem": "nam",
+            "eaque": "pariatur",
         },
-        name="porro",
+        name="nemo",
     ),
+    access_token="voluptatibus",
+    alt="json",
+    callback="fugiat",
+    fields_="amet",
+    job_template_id="aut",
+    key="cumque",
+    oauth_token="corporis",
+    parent="hic",
+    pretty_print=False,
+    quota_user="libero",
+    upload_type="nobis",
+    upload_protocol="dolores",
 )
     
-res = s.projects.transcoder_projects_locations_job_templates_create(req)
+res = s.projects.transcoder_projects_locations_job_templates_create(req, operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.job_template is not None:
     # handle response

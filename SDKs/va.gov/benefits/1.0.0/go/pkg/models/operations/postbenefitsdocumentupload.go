@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBenefitsDocumentUploadSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostBenefitsDocumentUploadRequest struct {
-	Security PostBenefitsDocumentUploadSecurity
-}
-
 // PostBenefitsDocumentUpload500ApplicationJSON - Internal server error
 type PostBenefitsDocumentUpload500ApplicationJSON struct {
 	// Unambiguous status code. Only present if status = "error"

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitPayoutV3JSONRequest struct {
-	// Post amount to transfer using stored funding account details.
-	Request shared.CreatePayoutRequestV3 `request:"mediaType=application/json"`
-}
-
 type SubmitPayoutV3JSONResponse struct {
 	ContentType string
 	Headers     map[string][]string

@@ -10,23 +10,18 @@ import (
 )
 
 type AdsenseAccountsReportsSavedGenerateCsvSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsSavedGenerateCsvSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsSavedGenerateCsvSecurity struct {
 	Option1 *AdsenseAccountsReportsSavedGenerateCsvSecurityOption1 `security:"option"`
 	Option2 *AdsenseAccountsReportsSavedGenerateCsvSecurityOption2 `security:"option"`
-}
-
-type AdsenseAccountsReportsSavedGenerateCsvPathParams struct {
-	// Required. Name of the saved report. Format: accounts/{account}/reports/{report}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // AdsenseAccountsReportsSavedGenerateCsvDateRangeEnum - Date range of the report, if unset the range will be considered CUSTOM.
@@ -98,7 +93,7 @@ func (e *AdsenseAccountsReportsSavedGenerateCsvReportingTimeZoneEnum) UnmarshalJ
 	}
 }
 
-type AdsenseAccountsReportsSavedGenerateCsvQueryParams struct {
+type AdsenseAccountsReportsSavedGenerateCsvRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -123,6 +118,8 @@ type AdsenseAccountsReportsSavedGenerateCsvQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The language to use for translating report output. If unspecified, this defaults to English ("en"). If the given language is not supported, report output will be returned in English. The language is specified as an [IETF BCP-47 language code](https://en.wikipedia.org/wiki/IETF_language_tag).
 	LanguageCode *string `queryParam:"style=form,explode=true,name=languageCode"`
+	// Required. Name of the saved report. Format: accounts/{account}/reports/{report}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -141,12 +138,6 @@ type AdsenseAccountsReportsSavedGenerateCsvQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdsenseAccountsReportsSavedGenerateCsvRequest struct {
-	PathParams  AdsenseAccountsReportsSavedGenerateCsvPathParams
-	QueryParams AdsenseAccountsReportsSavedGenerateCsvQueryParams
-	Security    AdsenseAccountsReportsSavedGenerateCsvSecurity
 }
 
 type AdsenseAccountsReportsSavedGenerateCsvResponse struct {

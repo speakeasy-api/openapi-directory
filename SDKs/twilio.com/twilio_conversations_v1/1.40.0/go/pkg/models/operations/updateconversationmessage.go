@@ -13,19 +13,8 @@ var UpdateConversationMessageServerList = []string{
 }
 
 type UpdateConversationMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateConversationMessagePathParams struct {
-	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateConversationMessageHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ConversationMessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateConversationMessageUpdateConversationMessageRequest struct {
@@ -42,11 +31,13 @@ type UpdateConversationMessageUpdateConversationMessageRequest struct {
 }
 
 type UpdateConversationMessageRequest struct {
-	PathParams UpdateConversationMessagePathParams
-	Headers    UpdateConversationMessageHeaders
-	Request    *UpdateConversationMessageUpdateConversationMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateConversationMessageSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
+	ConversationSid string                                                     `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *UpdateConversationMessageUpdateConversationMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ConversationMessageEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type UpdateConversationMessageResponse struct {

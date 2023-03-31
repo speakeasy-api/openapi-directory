@@ -10,11 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesCreatePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesCreateRequestBodyLabels2 struct {
 	Color       *string `json:"color,omitempty"`
 	Description *string `json:"description,omitempty"`
@@ -241,8 +236,9 @@ type IssuesCreateRequestBody struct {
 }
 
 type IssuesCreateRequest struct {
-	PathParams IssuesCreatePathParams
-	Request    IssuesCreateRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesCreateRequestBody `request:"mediaType=application/json"`
+	Owner       string                  `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                  `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // IssuesCreate503ApplicationJSON - Service unavailable

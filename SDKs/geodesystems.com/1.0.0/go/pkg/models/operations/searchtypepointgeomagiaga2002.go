@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchTypePointGeomagIaga2002QueryParams struct {
+type SearchTypePointGeomagIaga2002Request struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -54,10 +54,6 @@ type SearchTypePointGeomagIaga2002QueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchTypePointGeomagIaga2002Request struct {
-	QueryParams SearchTypePointGeomagIaga2002QueryParams
 }
 
 type SearchTypePointGeomagIaga2002Response struct {

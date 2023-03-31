@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchPathParams struct {
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type SearchRequest struct {
-	PathParams SearchPathParams
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 }
 
 type Search200ApplicationJSONResults struct {

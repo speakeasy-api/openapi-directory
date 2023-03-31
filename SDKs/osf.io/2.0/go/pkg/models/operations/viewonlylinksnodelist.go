@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type ViewOnlyLinksNodeListPathParams struct {
+type ViewOnlyLinksNodeListRequest struct {
 	// The unique identifier of the view only link.
 	LinkID string `pathParam:"style=simple,explode=false,name=link_id"`
-}
-
-type ViewOnlyLinksNodeListRequest struct {
-	PathParams ViewOnlyLinksNodeListPathParams
 }
 
 // ViewOnlyLinksNodeListNodeAttributesCategoryEnum - The category of the node, as selected by project contributors.

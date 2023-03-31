@@ -8,16 +8,11 @@ import (
 )
 
 type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListPathParams struct {
-	// Required. The buyer to list the finalized deals for, in the format: `buyers/{accountId}`. When used to list finalized deals for a bidder, its buyers and clients, in the format `bidders/{accountId}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListQueryParams struct {
+type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The page token as returned from ListFinalizedDealsResponse.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The buyer to list the finalized deals for, in the format: `buyers/{accountId}`. When used to list finalized deals for a bidder, its buyers and clients, in the format `bidders/{accountId}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListRequest struct {
-	PathParams  AuthorizedbuyersmarketplaceBuyersFinalizedDealsListPathParams
-	QueryParams AuthorizedbuyersmarketplaceBuyersFinalizedDealsListQueryParams
-	Security    AuthorizedbuyersmarketplaceBuyersFinalizedDealsListSecurity
 }
 
 type AuthorizedbuyersmarketplaceBuyersFinalizedDealsListResponse struct {

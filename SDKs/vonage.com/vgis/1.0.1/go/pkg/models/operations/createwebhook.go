@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWebhookRequest struct {
-	// Webhook create parameters
-	Request shared.WebhookCreate `request:"mediaType=application/json"`
-}
-
 type CreateWebhookResponse struct {
 	ContentType string
 	// Bad Request: The client should not repeat the request without modifications

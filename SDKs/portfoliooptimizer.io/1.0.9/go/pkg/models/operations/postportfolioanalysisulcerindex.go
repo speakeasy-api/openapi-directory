@@ -17,10 +17,6 @@ type PostPortfolioAnalysisUlcerIndexRequestBody struct {
 	RiskFreeRate float64 `json:"riskFreeRate"`
 }
 
-type PostPortfolioAnalysisUlcerIndexRequest struct {
-	Request PostPortfolioAnalysisUlcerIndexRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisUlcerIndex200ApplicationJSONPortfolios struct {
 	// The Ulcer Index of the portfolio
 	PortfolioUlcerIndex float64 `json:"portfolioUlcerIndex"`

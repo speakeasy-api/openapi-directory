@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmDevicesQueryParams struct {
+type GetNetworkSmDevicesRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// Additional fields that will be displayed for each device.
@@ -22,7 +18,8 @@ type GetNetworkSmDevicesQueryParams struct {
 	//     hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, and url.
 	Fields []string `queryParam:"style=form,explode=false,name=fields"`
 	// Filter devices by id(s).
-	Ids []string `queryParam:"style=form,explode=false,name=ids"`
+	Ids       []string `queryParam:"style=form,explode=false,name=ids"`
+	NetworkID string   `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags.
@@ -33,11 +30,6 @@ type GetNetworkSmDevicesQueryParams struct {
 	StartingAfter *string `queryParam:"style=form,explode=true,name=startingAfter"`
 	// Filter devices by wifi mac(s).
 	WifiMacs []string `queryParam:"style=form,explode=false,name=wifiMacs"`
-}
-
-type GetNetworkSmDevicesRequest struct {
-	PathParams  GetNetworkSmDevicesPathParams
-	QueryParams GetNetworkSmDevicesQueryParams
 }
 
 type GetNetworkSmDevices200ApplicationJSON struct {

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetCurrentUserPostsQueryParams struct {
+type GetCurrentUserPostsRequest struct {
 	// Only posts older than this UTC date and time will be returned.
 	DateMax *time.Time `queryParam:"style=form,explode=true,name=date_max"`
 	// Only posts newer than or equal to this UTC date and time will be returned.
@@ -51,10 +51,6 @@ type GetCurrentUserPostsQueryParams struct {
 	// If user_state is set, only posts matching the state specified will be returned.  Only one state may be passed and it must be one of the following: viewed, replied, bookmarked <br><br> NOTE: This option will only work with oauth requests.
 	//
 	UserState *string `queryParam:"style=form,explode=true,name=user_state"`
-}
-
-type GetCurrentUserPostsRequest struct {
-	QueryParams GetCurrentUserPostsQueryParams
 }
 
 // GetCurrentUserPosts200ApplicationJSON - The posts and paging data.

@@ -12,18 +12,13 @@ var FetchTrunksServerList = []string{
 }
 
 type FetchTrunksSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchTrunksPathParams struct {
-	// The absolute URL of the SIP Trunk
-	SipTrunkDomain string `pathParam:"style=simple,explode=false,name=SipTrunkDomain"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchTrunksRequest struct {
-	PathParams FetchTrunksPathParams
-	Security   FetchTrunksSecurity
-	ServerURL  *string
+	// The absolute URL of the SIP Trunk
+	SipTrunkDomain string `pathParam:"style=simple,explode=false,name=SipTrunkDomain"`
 }
 
 type FetchTrunksResponse struct {

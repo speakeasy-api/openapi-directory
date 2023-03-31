@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgressPathParams struct {
+type GetProgressRequest struct {
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetProgressQueryParams struct {
 	// This will return a more raw progress information for translation and proofreading. For instance, when completed, we will return 100% for both tasks by default, whereas their actual progress may be lower than 100%.
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type GetProgressRequest struct {
-	PathParams  GetProgressPathParams
-	QueryParams GetProgressQueryParams
 }
 
 type GetProgressResponse struct {

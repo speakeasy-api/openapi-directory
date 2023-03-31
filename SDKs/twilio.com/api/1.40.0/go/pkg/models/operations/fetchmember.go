@@ -12,22 +12,17 @@ var FetchMemberServerList = []string{
 }
 
 type FetchMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchMemberPathParams struct {
+type FetchMemberRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource(s) to fetch.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 	// The SID of the Queue in which to find the members to fetch.
 	QueueSid string `pathParam:"style=simple,explode=false,name=QueueSid"`
-}
-
-type FetchMemberRequest struct {
-	PathParams FetchMemberPathParams
-	Security   FetchMemberSecurity
-	ServerURL  *string
 }
 
 type FetchMemberResponse struct {

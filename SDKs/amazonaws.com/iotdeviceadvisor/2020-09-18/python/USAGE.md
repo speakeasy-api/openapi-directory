@@ -3,42 +3,49 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateSuiteDefinitionRequest(
-    headers=operations.CreateSuiteDefinitionHeaders(
-        x_amz_algorithm="quia",
-        x_amz_content_sha256="cupiditate",
-        x_amz_credential="sed",
-        x_amz_date="maxime",
-        x_amz_security_token="expedita",
-        x_amz_signature="consequatur",
-        x_amz_signed_headers="excepturi",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateSuiteDefinitionRequestBody(
+)
+
+
+req = operations.CreateSuiteDefinitionRequest(
+    request_body=operations.CreateSuiteDefinitionRequestBody(
         suite_definition_configuration=operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration(
-            device_permission_role_arn="ut",
+            device_permission_role_arn="corrupti",
             devices=[
                 shared.DeviceUnderTest(
-                    certificate_arn="sit",
-                    thing_arn="aliquid",
+                    certificate_arn="distinctio",
+                    thing_arn="quibusdam",
+                ),
+                shared.DeviceUnderTest(
+                    certificate_arn="unde",
+                    thing_arn="nulla",
+                ),
+                shared.DeviceUnderTest(
+                    certificate_arn="corrupti",
+                    thing_arn="illum",
                 ),
             ],
             intended_for_qualification=False,
-            root_group="itaque",
-            suite_definition_name="fuga",
+            is_long_duration_test=False,
+            protocol="MqttV3_1_1",
+            root_group="error",
+            suite_definition_name="deserunt",
         ),
         tags={
-            "accusantium": "vel",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
     ),
+    x_amz_algorithm="delectus",
+    x_amz_content_sha256="tempora",
+    x_amz_credential="suscipit",
+    x_amz_date="molestiae",
+    x_amz_security_token="minus",
+    x_amz_signature="placeat",
+    x_amz_signed_headers="voluptatum",
 )
     
 res = s.create_suite_definition(req)

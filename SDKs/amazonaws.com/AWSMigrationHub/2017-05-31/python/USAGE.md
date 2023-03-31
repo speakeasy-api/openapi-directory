@@ -3,35 +3,31 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateCreatedArtifactRequest(
-    headers=operations.AssociateCreatedArtifactHeaders(
-        x_amz_algorithm="vel",
-        x_amz_content_sha256="vel",
-        x_amz_credential="placeat",
-        x_amz_date="qui",
-        x_amz_security_token="nisi",
-        x_amz_signature="quis",
-        x_amz_signed_headers="adipisci",
-        x_amz_target="AWSMigrationHub.AssociateCreatedArtifact",
-    ),
-    request=shared.AssociateCreatedArtifactRequest(
+    associate_created_artifact_request=shared.AssociateCreatedArtifactRequest(
         created_artifact=shared.CreatedArtifact(
-            description="rerum",
-            name="et",
+            description="corrupti",
+            name="provident",
         ),
-        dry_run=True,
-        migration_task_name="numquam",
-        progress_update_stream="laborum",
+        dry_run=False,
+        migration_task_name="distinctio",
+        progress_update_stream="quibusdam",
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
+    x_amz_target="AWSMigrationHub.AssociateCreatedArtifact",
 )
     
 res = s.associate_created_artifact(req)

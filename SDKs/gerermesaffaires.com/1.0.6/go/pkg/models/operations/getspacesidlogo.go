@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesIDLogoPathParams struct {
+type GetSpacesIDLogoRequest struct {
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDLogoRequest struct {
-	PathParams GetSpacesIDLogoPathParams
 }
 
 type GetSpacesIDLogoResponse struct {

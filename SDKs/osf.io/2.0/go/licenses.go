@@ -96,7 +96,7 @@ func (s *licenses) LicenseList(ctx context.Context) (*operations.LicenseListResp
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *licenses) LicensesRead(ctx context.Context, request operations.LicensesReadRequest) (*operations.LicensesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/license/{license_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/license/{license_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

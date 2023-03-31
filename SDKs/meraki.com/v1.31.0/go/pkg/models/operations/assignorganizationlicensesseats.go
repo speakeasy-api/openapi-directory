@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type AssignOrganizationLicensesSeatsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type AssignOrganizationLicensesSeatsRequestBody struct {
 	// The ID of the SM license to assign seats from
 	LicenseID string `json:"licenseId"`
@@ -22,8 +18,8 @@ type AssignOrganizationLicensesSeatsRequestBody struct {
 }
 
 type AssignOrganizationLicensesSeatsRequest struct {
-	PathParams AssignOrganizationLicensesSeatsPathParams
-	Request    AssignOrganizationLicensesSeatsRequestBody `request:"mediaType=application/json"`
+	RequestBody    AssignOrganizationLicensesSeatsRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                     `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type AssignOrganizationLicensesSeats200ApplicationJSONResultingLicensesPermanentlyQueuedLicenses struct {

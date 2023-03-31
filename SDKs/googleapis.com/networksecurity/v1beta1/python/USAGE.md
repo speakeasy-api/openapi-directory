@@ -4,99 +4,35 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest(
-    security=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams(
-        parent="at",
-    ),
-    query_params=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="voluptas",
-        alt="proto",
-        authorization_policy_id="quod",
-        callback="aperiam",
-        fields="dolorem",
-        key="id",
-        oauth_token="rerum",
-        pretty_print=False,
-        quota_user="eum",
-        upload_type="iusto",
-        upload_protocol="repudiandae",
-    ),
-    request=shared.AuthorizationPolicyInput(
-        action="ACTION_UNSPECIFIED",
-        description="aut",
-        labels={
-            "sunt": "sunt",
-            "corrupti": "minus",
-        },
-        name="consectetur",
-        rules=[
-            shared.Rule(
-                destinations=[
-                    shared.Destination(
-                        hosts=[
-                            "nulla",
-                            "harum",
-                            "aliquid",
-                        ],
-                        http_header_match=shared.HTTPHeaderMatch(
-                            header_name="est",
-                            regex_match="ut",
-                        ),
-                        methods=[
-                            "aperiam",
-                            "voluptates",
-                        ],
-                        ports=[
-                            5608578254048966378,
-                        ],
-                    ),
-                    shared.Destination(
-                        hosts=[
-                            "quo",
-                            "dolor",
-                            "nisi",
-                        ],
-                        http_header_match=shared.HTTPHeaderMatch(
-                            header_name="provident",
-                            regex_match="inventore",
-                        ),
-                        methods=[
-                            "magni",
-                            "error",
-                        ],
-                        ports=[
-                            3121704883122059694,
-                            8783722961125201754,
-                        ],
-                    ),
-                ],
-                sources=[
-                    shared.Source(
-                        ip_blocks=[
-                            "tempore",
-                            "qui",
-                        ],
-                        principals=[
-                            "voluptate",
-                        ],
-                    ),
-                ],
-            ),
+
+
+req = operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest(
+    dollar_xgafv="2",
+    add_address_group_items_request=shared.AddAddressGroupItemsRequest(
+        items=[
+            "distinctio",
+            "quibusdam",
+            "unde",
         ],
+        request_id="nulla",
     ),
+    access_token="corrupti",
+    address_group="illum",
+    alt="media",
+    callback="error",
+    fields_="deserunt",
+    key="suscipit",
+    oauth_token="iure",
+    pretty_print=False,
+    quota_user="magnam",
+    upload_type="debitis",
+    upload_protocol="ipsa",
 )
     
-res = s.projects.networksecurity_projects_locations_authorization_policies_create(req)
+res = s.projects.networksecurity_projects_locations_address_groups_add_items(req, operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

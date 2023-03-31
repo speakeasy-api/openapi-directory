@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteParticipantServerList = []string{
@@ -12,22 +11,17 @@ var DeleteParticipantServerList = []string{
 }
 
 type DeleteParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteParticipantPathParams struct {
+type DeleteParticipantRequest struct {
 	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) of the resource to delete.
 	SessionSid string `pathParam:"style=simple,explode=false,name=SessionSid"`
 	// The Twilio-provided string that uniquely identifies the Participant resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteParticipantRequest struct {
-	PathParams DeleteParticipantPathParams
-	Security   DeleteParticipantSecurity
-	ServerURL  *string
 }
 
 type DeleteParticipantResponse struct {

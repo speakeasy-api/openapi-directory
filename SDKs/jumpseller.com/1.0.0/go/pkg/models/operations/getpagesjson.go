@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPagesJSONQueryParams struct {
+type GetPagesJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// List restriction
@@ -16,10 +16,6 @@ type GetPagesJSONQueryParams struct {
 	Login string `queryParam:"style=form,explode=true,name=login"`
 	// List page
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetPagesJSONRequest struct {
-	QueryParams GetPagesJSONQueryParams
 }
 
 type GetPagesJSONResponse struct {

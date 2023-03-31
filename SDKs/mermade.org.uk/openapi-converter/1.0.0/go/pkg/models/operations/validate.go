@@ -14,10 +14,6 @@ type ValidateRequestBody struct {
 	Source *string `multipartForm:"name=source"`
 }
 
-type ValidateRequest struct {
-	Request *ValidateRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type ValidateResponse struct {
 	Body        []byte
 	ContentType string

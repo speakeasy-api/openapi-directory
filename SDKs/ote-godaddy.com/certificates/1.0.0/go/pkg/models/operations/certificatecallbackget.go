@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateCallbackGetPathParams struct {
+type CertificateCallbackGetRequest struct {
 	// Certificate id to register for stateful action callback
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateCallbackGetRequest struct {
-	PathParams CertificateCallbackGetPathParams
 }
 
 type CertificateCallbackGetResponse struct {

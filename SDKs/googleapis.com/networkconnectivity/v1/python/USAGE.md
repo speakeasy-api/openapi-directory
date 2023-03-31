@@ -4,49 +4,49 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest(
-    security=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams(
-        parent="non",
-    ),
-    query_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="in",
-        alt="media",
-        callback="magni",
-        fields="est",
-        hub_id="doloremque",
-        key="libero",
-        oauth_token="dolor",
-        pretty_print=False,
-        quota_user="minus",
-        request_id="numquam",
-        upload_type="neque",
-        upload_protocol="sint",
-    ),
-    request=shared.HubInput(
-        description="et",
+    dollar_xgafv="2",
+    hub_input=shared.HubInput(
+        description="provident",
         labels={
-            "pariatur": "perspiciatis",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+            "illum": "vel",
         },
-        name="laboriosam",
+        name="error",
         routing_vpcs=[
-            shared.RoutingVpcInput(
-                uri="est",
+            shared.RoutingVPCInput(
+                uri="http://innocent-effect.org",
+            ),
+            shared.RoutingVPCInput(
+                uri="http://whirlwind-diver.info",
+            ),
+            shared.RoutingVPCInput(
+                uri="http://spotted-skyline.name",
             ),
         ],
     ),
+    access_token="iusto",
+    alt="media",
+    callback="nisi",
+    fields_="recusandae",
+    hub_id="temporibus",
+    key="ab",
+    oauth_token="quis",
+    parent="veritatis",
+    pretty_print=False,
+    quota_user="deserunt",
+    request_id="perferendis",
+    upload_type="ipsam",
+    upload_protocol="repellendus",
 )
     
-res = s.projects.networkconnectivity_projects_locations_global_hubs_create(req)
+res = s.projects.networkconnectivity_projects_locations_global_hubs_create(req, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_longrunning_operation is not None:
     # handle response

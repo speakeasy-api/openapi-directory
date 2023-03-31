@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkCameraQualityRetentionProfilesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkCameraQualityRetentionProfilesRequest struct {
-	PathParams GetNetworkCameraQualityRetentionProfilesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkCameraQualityRetentionProfilesResponse struct {

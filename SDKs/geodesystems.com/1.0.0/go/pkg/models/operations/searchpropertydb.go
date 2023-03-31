@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchPropertydbQueryParams struct {
+type SearchPropertydbRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -66,10 +66,6 @@ type SearchPropertydbQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchPropertydbRequest struct {
-	QueryParams SearchPropertydbQueryParams
 }
 
 type SearchPropertydbResponse struct {

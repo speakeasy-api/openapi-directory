@@ -34,9 +34,9 @@ func newStaticRoutes(defaultClient, securityClient HTTPClient, serverURL, langua
 // Create a layer 3 static route for a switch
 func (s *staticRoutes) CreateDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.CreateDeviceSwitchRoutingStaticRouteRequest) (*operations.CreateDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *staticRoutes) CreateDeviceSwitchRoutingStaticRoute(ctx context.Context,
 // Add a static route for an MX or teleworker network
 func (s *staticRoutes) CreateNetworkApplianceStaticRoute(ctx context.Context, request operations.CreateNetworkApplianceStaticRouteRequest) (*operations.CreateNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,9 +144,9 @@ func (s *staticRoutes) CreateNetworkApplianceStaticRoute(ctx context.Context, re
 // Create a layer 3 static route for a switch stack
 func (s *staticRoutes) CreateNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.CreateNetworkSwitchStackRoutingStaticRouteRequest) (*operations.CreateNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *staticRoutes) CreateNetworkSwitchStackRoutingStaticRoute(ctx context.Co
 // Delete a layer 3 static route for a switch
 func (s *staticRoutes) DeleteDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.DeleteDeviceSwitchRoutingStaticRouteRequest) (*operations.DeleteDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *staticRoutes) DeleteDeviceSwitchRoutingStaticRoute(ctx context.Context,
 // Delete a static route from an MX or teleworker network
 func (s *staticRoutes) DeleteNetworkApplianceStaticRoute(ctx context.Context, request operations.DeleteNetworkApplianceStaticRouteRequest) (*operations.DeleteNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *staticRoutes) DeleteNetworkApplianceStaticRoute(ctx context.Context, re
 // Delete a layer 3 static route for a switch stack
 func (s *staticRoutes) DeleteNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.DeleteNetworkSwitchStackRoutingStaticRouteRequest) (*operations.DeleteNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -307,7 +307,7 @@ func (s *staticRoutes) DeleteNetworkSwitchStackRoutingStaticRoute(ctx context.Co
 // Return a layer 3 static route for a switch
 func (s *staticRoutes) GetDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.GetDeviceSwitchRoutingStaticRouteRequest) (*operations.GetDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -352,7 +352,7 @@ func (s *staticRoutes) GetDeviceSwitchRoutingStaticRoute(ctx context.Context, re
 // List layer 3 static routes for a switch
 func (s *staticRoutes) GetDeviceSwitchRoutingStaticRoutes(ctx context.Context, request operations.GetDeviceSwitchRoutingStaticRoutesRequest) (*operations.GetDeviceSwitchRoutingStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -397,7 +397,7 @@ func (s *staticRoutes) GetDeviceSwitchRoutingStaticRoutes(ctx context.Context, r
 // Return a static route for an MX or teleworker network
 func (s *staticRoutes) GetNetworkApplianceStaticRoute(ctx context.Context, request operations.GetNetworkApplianceStaticRouteRequest) (*operations.GetNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -442,7 +442,7 @@ func (s *staticRoutes) GetNetworkApplianceStaticRoute(ctx context.Context, reque
 // List the static routes for an MX or teleworker network
 func (s *staticRoutes) GetNetworkApplianceStaticRoutes(ctx context.Context, request operations.GetNetworkApplianceStaticRoutesRequest) (*operations.GetNetworkApplianceStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -487,7 +487,7 @@ func (s *staticRoutes) GetNetworkApplianceStaticRoutes(ctx context.Context, requ
 // Return a layer 3 static route for a switch stack
 func (s *staticRoutes) GetNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.GetNetworkSwitchStackRoutingStaticRouteRequest) (*operations.GetNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -532,7 +532,7 @@ func (s *staticRoutes) GetNetworkSwitchStackRoutingStaticRoute(ctx context.Conte
 // List layer 3 static routes for a switch stack
 func (s *staticRoutes) GetNetworkSwitchStackRoutingStaticRoutes(ctx context.Context, request operations.GetNetworkSwitchStackRoutingStaticRoutesRequest) (*operations.GetNetworkSwitchStackRoutingStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -577,9 +577,9 @@ func (s *staticRoutes) GetNetworkSwitchStackRoutingStaticRoutes(ctx context.Cont
 // Update a layer 3 static route for a switch
 func (s *staticRoutes) UpdateDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.UpdateDeviceSwitchRoutingStaticRouteRequest) (*operations.UpdateDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -629,9 +629,9 @@ func (s *staticRoutes) UpdateDeviceSwitchRoutingStaticRoute(ctx context.Context,
 // Update a static route for an MX or teleworker network
 func (s *staticRoutes) UpdateNetworkApplianceStaticRoute(ctx context.Context, request operations.UpdateNetworkApplianceStaticRouteRequest) (*operations.UpdateNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -681,9 +681,9 @@ func (s *staticRoutes) UpdateNetworkApplianceStaticRoute(ctx context.Context, re
 // Update a layer 3 static route for a switch stack
 func (s *staticRoutes) UpdateNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingStaticRouteRequest) (*operations.UpdateNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

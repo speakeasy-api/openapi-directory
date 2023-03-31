@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type DeleteDocumentsRequest struct {
-	Request []float64 `request:"mediaType=application/json"`
-}
-
 type DeleteDocumentsResponse struct {
 	ContentType string
 	StatusCode  int

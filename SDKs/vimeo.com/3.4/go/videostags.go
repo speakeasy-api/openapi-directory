@@ -32,16 +32,16 @@ func newVideosTags(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AddVideoTag - Add a specific tag to a video
-func (s *videosTags) AddVideoTag(ctx context.Context, request operations.AddVideoTagRequest) (*operations.AddVideoTagResponse, error) {
+func (s *videosTags) AddVideoTag(ctx context.Context, request operations.AddVideoTagRequest, security operations.AddVideoTagSecurity) (*operations.AddVideoTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *videosTags) AddVideoTag(ctx context.Context, request operations.AddVide
 }
 
 // AddVideoTags - Add a list of tags to a video
-func (s *videosTags) AddVideoTags(ctx context.Context, request operations.AddVideoTagsRequest) (*operations.AddVideoTagsResponse, error) {
+func (s *videosTags) AddVideoTags(ctx context.Context, request operations.AddVideoTagsRequest, security operations.AddVideoTagsSecurity) (*operations.AddVideoTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,7 +107,7 @@ func (s *videosTags) AddVideoTags(ctx context.Context, request operations.AddVid
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *videosTags) AddVideoTags(ctx context.Context, request operations.AddVid
 // CheckVideoForTag - Check if a tag has been added to a video
 func (s *videosTags) CheckVideoForTag(ctx context.Context, request operations.CheckVideoForTagRequest) (*operations.CheckVideoForTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,16 +210,16 @@ func (s *videosTags) CheckVideoForTag(ctx context.Context, request operations.Ch
 }
 
 // DeleteVideoTag - Remove a tag from a video
-func (s *videosTags) DeleteVideoTag(ctx context.Context, request operations.DeleteVideoTagRequest) (*operations.DeleteVideoTagResponse, error) {
+func (s *videosTags) DeleteVideoTag(ctx context.Context, request operations.DeleteVideoTagRequest, security operations.DeleteVideoTagSecurity) (*operations.DeleteVideoTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -257,7 +257,7 @@ func (s *videosTags) DeleteVideoTag(ctx context.Context, request operations.Dele
 // GetVideoTags - Get all the tags of a video
 func (s *videosTags) GetVideoTags(ctx context.Context, request operations.GetVideoTagsRequest) (*operations.GetVideoTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -301,14 +301,14 @@ func (s *videosTags) GetVideoTags(ctx context.Context, request operations.GetVid
 // GetVideosWithTag - Get all the videos with a specific tag
 func (s *videosTags) GetVideosWithTag(ctx context.Context, request operations.GetVideosWithTagRequest) (*operations.GetVideosWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{word}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{word}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

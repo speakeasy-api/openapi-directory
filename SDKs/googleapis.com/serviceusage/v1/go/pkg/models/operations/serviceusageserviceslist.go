@@ -8,13 +8,13 @@ import (
 )
 
 type ServiceusageServicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesListSecurity struct {
@@ -22,12 +22,7 @@ type ServiceusageServicesListSecurity struct {
 	Option2 *ServiceusageServicesListSecurityOption2 `security:"option"`
 }
 
-type ServiceusageServicesListPathParams struct {
-	// Parent to search for services on. An example name would be: `projects/123` where `123` is the project number.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServiceusageServicesListQueryParams struct {
+type ServiceusageServicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type ServiceusageServicesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token identifying which result to start with, which is returned by a previous list call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Parent to search for services on. An example name would be: `projects/123` where `123` is the project number.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -56,12 +53,6 @@ type ServiceusageServicesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServiceusageServicesListRequest struct {
-	PathParams  ServiceusageServicesListPathParams
-	QueryParams ServiceusageServicesListQueryParams
-	Security    ServiceusageServicesListSecurity
 }
 
 type ServiceusageServicesListResponse struct {

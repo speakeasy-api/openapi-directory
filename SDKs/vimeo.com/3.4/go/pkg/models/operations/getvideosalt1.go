@@ -108,7 +108,7 @@ func (e *GetVideosAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideosAlt1QueryParams struct {
+type GetVideosAlt1Request struct {
 	// The page that contains the video URI. Only available when not paired with `query`.
 	ContainingURI *string `queryParam:"style=form,explode=true,name=containing_uri"`
 	// The sort direction of the results.
@@ -127,10 +127,6 @@ type GetVideosAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetVideosAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVideosAlt1Request struct {
-	QueryParams GetVideosAlt1QueryParams
 }
 
 type GetVideosAlt1Response struct {

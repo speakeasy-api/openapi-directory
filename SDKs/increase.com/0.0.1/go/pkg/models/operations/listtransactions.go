@@ -141,7 +141,7 @@ func (e *ListTransactionsCategoryInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTransactionsQueryParams struct {
+type ListTransactionsRequest struct {
 	AccountID           *string                          `queryParam:"style=form,explode=true,name=account_id"`
 	CategoryIn          []ListTransactionsCategoryInEnum `queryParam:"style=form,explode=true,name=category.in"`
 	CreatedAtAfter      *time.Time                       `queryParam:"style=form,explode=true,name=created_at.after"`
@@ -151,10 +151,6 @@ type ListTransactionsQueryParams struct {
 	Cursor              *string                          `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64                           `queryParam:"style=form,explode=true,name=limit"`
 	RouteID             *string                          `queryParam:"style=form,explode=true,name=route_id"`
-}
-
-type ListTransactionsRequest struct {
-	QueryParams ListTransactionsQueryParams
 }
 
 type ListTransactionsDefaultApplicationJSON13StatusEnum string

@@ -57,20 +57,30 @@ func newPriceTables(defaultClient, securityClient HTTPClient, serverURL, languag
 //	}
 //
 // ```
-func (s *priceTables) Getrulesforapricetable(ctx context.Context, request operations.GetrulesforapricetableRequest) (*operations.GetrulesforapricetableResponse, error) {
-	baseURL := operations.GetrulesforapricetableServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *priceTables) Getrulesforapricetable(ctx context.Context, request operations.GetrulesforapricetableRequest, opts ...operations.Option) (*operations.GetrulesforapricetableResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.GetrulesforapricetableServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -128,10 +138,20 @@ func (s *priceTables) Getrulesforapricetable(ctx context.Context, request operat
 //
 // ]
 // ```
-func (s *priceTables) Listpricetables(ctx context.Context, request operations.ListpricetablesRequest) (*operations.ListpricetablesResponse, error) {
+func (s *priceTables) Listpricetables(ctx context.Context, request operations.ListpricetablesRequest, opts ...operations.Option) (*operations.ListpricetablesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListpricetablesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/pricing/tables"
@@ -141,7 +161,7 @@ func (s *priceTables) Listpricetables(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -224,10 +244,20 @@ func (s *priceTables) Listpricetables(ctx context.Context, request operations.Li
 //
 // ]
 // ```
-func (s *priceTables) Getallpricetablesandrules(ctx context.Context, request operations.GetallpricetablesandrulesRequest) (*operations.GetallpricetablesandrulesResponse, error) {
+func (s *priceTables) Getallpricetablesandrules(ctx context.Context, request operations.GetallpricetablesandrulesRequest, opts ...operations.Option) (*operations.GetallpricetablesandrulesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetallpricetablesandrulesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/pricing/pipeline/catalog"
@@ -237,7 +267,7 @@ func (s *priceTables) Getallpricetablesandrules(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -310,9 +340,9 @@ func (s *priceTables) Getallpricetablesandrules(ctx context.Context, request ope
 // ```
 func (s *priceTables) PutPricingPipelineCatalogPriceTableID(ctx context.Context, request operations.PutPricingPipelineCatalogPriceTableIDRequest) (*operations.PutPricingPipelineCatalogPriceTableIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,7 +354,7 @@ func (s *priceTables) PutPricingPipelineCatalogPriceTableID(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

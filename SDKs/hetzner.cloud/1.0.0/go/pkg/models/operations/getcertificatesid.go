@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetCertificatesIDPathParams struct {
+type GetCertificatesIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCertificatesIDRequest struct {
-	PathParams GetCertificatesIDPathParams
 }
 
 // GetCertificatesIDCertificateResponseCertificateStatusError - If issuance or renewal reports `failed`, this property contains information about what happened

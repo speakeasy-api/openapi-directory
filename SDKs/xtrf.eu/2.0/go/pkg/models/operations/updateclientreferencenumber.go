@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateClientReferenceNumberPathParams struct {
+type UpdateClientReferenceNumberRequest struct {
+	// Updated Client Reference Number for a project.
+	StringDTO shared.StringDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateClientReferenceNumberRequest struct {
-	PathParams UpdateClientReferenceNumberPathParams
-	// Updated Client Reference Number for a project.
-	Request shared.StringDTO `request:"mediaType=application/json"`
 }
 
 type UpdateClientReferenceNumberResponse struct {

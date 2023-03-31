@@ -4,38 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest(
-    security=operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RecommenderProjectsLocationsInsightTypesInsightsListPathParams(
-        parent="et",
-    ),
-    query_params=operations.RecommenderProjectsLocationsInsightTypesInsightsListQueryParams(
-        dollar_xgafv="1",
-        access_token="odit",
-        alt="proto",
-        callback="omnis",
-        fields="est",
-        filter="iusto",
-        key="voluptatibus",
-        oauth_token="autem",
-        page_size=5523822080997069527,
-        page_token="similique",
-        pretty_print=False,
-        quota_user="commodi",
-        upload_type="libero",
-        upload_protocol="rem",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    page_size=423655,
+    page_token="error",
+    parent="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.projects.recommender_projects_locations_insight_types_insights_list(req)
+res = s.projects.recommender_projects_locations_insight_types_insights_list(req, operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_recommender_v1beta1_list_insights_response is not None:
     # handle response

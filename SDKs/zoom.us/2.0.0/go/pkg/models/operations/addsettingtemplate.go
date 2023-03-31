@@ -52,10 +52,6 @@ type AddSettingTemplateApplicationJSON struct {
 	Type AddSettingTemplateApplicationJSONTypeEnum `json:"type"`
 }
 
-type AddSettingTemplateRequest struct {
-	Request *AddSettingTemplateApplicationJSON `request:"mediaType=application/json"`
-}
-
 // AddSettingTemplate201ApplicationXML - **HTTP Status Code:** `201`<br>
 // Created Successfully.
 type AddSettingTemplate201ApplicationXML struct {

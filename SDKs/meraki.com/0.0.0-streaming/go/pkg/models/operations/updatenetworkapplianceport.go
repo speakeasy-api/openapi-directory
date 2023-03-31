@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkAppliancePortPathParams struct {
-	AppliancePortID string `pathParam:"style=simple,explode=false,name=appliancePortId"`
-	NetworkID       string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkAppliancePortRequestBody struct {
 	// The name of the policy. Only applicable to Access ports. Valid values are: 'open', '8021x-radius', 'mac-radius', 'hybris-radius' for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, 'open' is the only valid value and 'open' is the default value if the field is missing.
 	AccessPolicy *string `json:"accessPolicy,omitempty"`
@@ -27,8 +22,9 @@ type UpdateNetworkAppliancePortRequestBody struct {
 }
 
 type UpdateNetworkAppliancePortRequest struct {
-	PathParams UpdateNetworkAppliancePortPathParams
-	Request    *UpdateNetworkAppliancePortRequestBody `request:"mediaType=application/json"`
+	RequestBody     *UpdateNetworkAppliancePortRequestBody `request:"mediaType=application/json"`
+	AppliancePortID string                                 `pathParam:"style=simple,explode=false,name=appliancePortId"`
+	NetworkID       string                                 `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkAppliancePortResponse struct {

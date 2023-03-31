@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type RolesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type RolesRequest struct {
-	Security RolesSecurity
-}
 
 type RolesRoleListRoles struct {
 	// Role Description

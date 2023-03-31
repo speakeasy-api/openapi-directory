@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmployeePathParams struct {
+type GetEmployeeRequest struct {
 	// The unique identifier of the employee in Noyo
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employee_id"`
-}
-
-type GetEmployeeRequest struct {
-	PathParams GetEmployeePathParams
 }
 
 type GetEmployeeResponse struct {

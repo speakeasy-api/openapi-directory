@@ -8,18 +8,18 @@ import (
 )
 
 type DriveCommentsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsGetSecurity struct {
@@ -28,18 +28,15 @@ type DriveCommentsGetSecurity struct {
 	Option3 *DriveCommentsGetSecurityOption3 `security:"option"`
 }
 
-type DriveCommentsGetPathParams struct {
-	// The ID of the comment.
-	CommentID string `pathParam:"style=simple,explode=false,name=commentId"`
-	// The ID of the file.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DriveCommentsGetQueryParams struct {
+type DriveCommentsGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the comment.
+	CommentID string `pathParam:"style=simple,explode=false,name=commentId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// If set, this will succeed when retrieving a deleted comment, and will include any deleted replies.
 	IncludeDeleted *bool `queryParam:"style=form,explode=true,name=includeDeleted"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -52,12 +49,6 @@ type DriveCommentsGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveCommentsGetRequest struct {
-	PathParams  DriveCommentsGetPathParams
-	QueryParams DriveCommentsGetQueryParams
-	Security    DriveCommentsGetSecurity
 }
 
 type DriveCommentsGetResponse struct {

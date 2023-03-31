@@ -8,10 +8,10 @@ import (
 )
 
 type ListGiftCardsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListGiftCardsQueryParams struct {
+type ListGiftCardsRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this cursor to retrieve the next set of results for the original query.
 	// If a cursor is not provided, it returns the first page of the results.
@@ -30,11 +30,6 @@ type ListGiftCardsQueryParams struct {
 	// (see [GiftCardType](https://developer.squareup.com/reference/square_2021-08-18/enums/GiftCardType)).
 	// If no type is provided, it returns gift cards of all types.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListGiftCardsRequest struct {
-	QueryParams ListGiftCardsQueryParams
-	Security    ListGiftCardsSecurity
 }
 
 type ListGiftCardsResponse struct {

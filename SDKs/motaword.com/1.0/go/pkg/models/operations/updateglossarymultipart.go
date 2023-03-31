@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGlossaryMultipartPathParams struct {
+type UpdateGlossaryMultipartRequest struct {
+	GlossaryUploadRequest1 *shared.GlossaryUploadRequest1 `request:"mediaType=multipart/form-data"`
 	// Glossary ID
 	GlossaryID int64 `pathParam:"style=simple,explode=false,name=glossaryId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateGlossaryMultipartRequest struct {
-	PathParams UpdateGlossaryMultipartPathParams
-	Request    *shared.GlossaryUploadRequest1 `request:"mediaType=multipart/form-data"`
 }
 
 type UpdateGlossaryMultipartResponse struct {

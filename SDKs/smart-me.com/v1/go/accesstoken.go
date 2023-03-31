@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newAccessToken(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // AccessTokenPutForm - Creates a Access Token to write on a Card (e.g. NFC)
 // Creates a Access Token to write on a Card (e.g. NFC)
-func (s *accessToken) AccessTokenPutForm(ctx context.Context, request operations.AccessTokenPutFormRequest) (*operations.AccessTokenPutFormResponse, error) {
+func (s *accessToken) AccessTokenPutForm(ctx context.Context, request shared.AccessTokenToPut) (*operations.AccessTokenPutFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/AccessToken"
 
@@ -114,7 +115,7 @@ func (s *accessToken) AccessTokenPutForm(ctx context.Context, request operations
 
 // AccessTokenPutJSON - Creates a Access Token to write on a Card (e.g. NFC)
 // Creates a Access Token to write on a Card (e.g. NFC)
-func (s *accessToken) AccessTokenPutJSON(ctx context.Context, request operations.AccessTokenPutJSONRequest) (*operations.AccessTokenPutJSONResponse, error) {
+func (s *accessToken) AccessTokenPutJSON(ctx context.Context, request shared.AccessTokenToPut) (*operations.AccessTokenPutJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/AccessToken"
 
@@ -194,7 +195,7 @@ func (s *accessToken) AccessTokenPutJSON(ctx context.Context, request operations
 
 // AccessTokenPutRaw - Creates a Access Token to write on a Card (e.g. NFC)
 // Creates a Access Token to write on a Card (e.g. NFC)
-func (s *accessToken) AccessTokenPutRaw(ctx context.Context, request operations.AccessTokenPutRawRequest) (*operations.AccessTokenPutRawResponse, error) {
+func (s *accessToken) AccessTokenPutRaw(ctx context.Context, request []byte) (*operations.AccessTokenPutRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/AccessToken"
 

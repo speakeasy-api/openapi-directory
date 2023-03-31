@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimFrontPortTemplatesReadPathParams struct {
+type DcimFrontPortTemplatesReadRequest struct {
 	// A unique integer value identifying this front port template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimFrontPortTemplatesReadRequest struct {
-	PathParams DcimFrontPortTemplatesReadPathParams
 }
 
 type DcimFrontPortTemplatesReadResponse struct {

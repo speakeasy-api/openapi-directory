@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementCustomDimensionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomDimensionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomDimensionsListSecurity struct {
@@ -22,14 +22,9 @@ type AnalyticsManagementCustomDimensionsListSecurity struct {
 	Option2 *AnalyticsManagementCustomDimensionsListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementCustomDimensionsListPathParams struct {
+type AnalyticsManagementCustomDimensionsListRequest struct {
 	// Account ID for the custom dimensions to retrieve.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property ID for the custom dimensions to retrieve.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementCustomDimensionsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -48,12 +43,8 @@ type AnalyticsManagementCustomDimensionsListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementCustomDimensionsListRequest struct {
-	PathParams  AnalyticsManagementCustomDimensionsListPathParams
-	QueryParams AnalyticsManagementCustomDimensionsListQueryParams
-	Security    AnalyticsManagementCustomDimensionsListSecurity
+	// Web property ID for the custom dimensions to retrieve.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementCustomDimensionsListResponse struct {

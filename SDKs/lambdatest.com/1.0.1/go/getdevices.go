@@ -34,7 +34,7 @@ func newGetDevices(defaultClient, securityClient HTTPClient, serverURL, language
 
 // Devices - Fetch all available device combinations.
 // Fetch all os devices combinations available on lambdatest platform.
-func (s *getDevices) Devices(ctx context.Context, request operations.DevicesRequest) (*operations.DevicesResponse, error) {
+func (s *getDevices) Devices(ctx context.Context, request operations.DevicesRequest, security operations.DevicesSecurity) (*operations.DevicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/devices"
 
@@ -43,11 +43,11 @@ func (s *getDevices) Devices(ctx context.Context, request operations.DevicesRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ConvertcurrencyQueryParams struct {
+type ConvertcurrencyRequest struct {
 	// The amount of currency to be converted
 	Amount string `queryParam:"style=form,explode=true,name=amount"`
 	// Currency symbol for the converted from amount
@@ -15,10 +15,6 @@ type ConvertcurrencyQueryParams struct {
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Currency symbol for the converted to amount
 	To string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ConvertcurrencyRequest struct {
-	QueryParams ConvertcurrencyQueryParams
 }
 
 // Convertcurrency200ApplicationJSON - Currency rate data to one US DOllar

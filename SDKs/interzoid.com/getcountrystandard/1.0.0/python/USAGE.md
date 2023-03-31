@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetcountrystandardRequest(
-    query_params=operations.GetcountrystandardQueryParams(
-        country="sunt",
-        license="aut",
-    ),
+    country="Malta",
+    license="provident",
 )
     
 res = s.country_name_standardization.getcountrystandard(req)

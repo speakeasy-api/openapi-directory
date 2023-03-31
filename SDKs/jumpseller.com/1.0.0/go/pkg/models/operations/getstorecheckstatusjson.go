@@ -10,7 +10,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStoreCheckStatusJSONQueryParams struct {
+type GetStoreCheckStatusJSONRequest struct {
 	// Partner authentication token.
 	AuthToken string `queryParam:"style=form,explode=true,name=auth_token"`
 	// ISO 3166-2 code of the language used in the response messages.
@@ -19,10 +19,6 @@ type GetStoreCheckStatusJSONQueryParams struct {
 	PartnerCode string `queryParam:"style=form,explode=true,name=partner_code"`
 	// Store Code
 	StoreCode string `queryParam:"style=form,explode=true,name=store_code"`
-}
-
-type GetStoreCheckStatusJSONRequest struct {
-	QueryParams GetStoreCheckStatusJSONQueryParams
 }
 
 type GetStoreCheckStatusJSON200ApplicationJSONType string

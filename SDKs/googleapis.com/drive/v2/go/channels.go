@@ -32,11 +32,11 @@ func newChannels(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DriveChannelsStop - Stop watching resources through this channel
-func (s *channels) DriveChannelsStop(ctx context.Context, request operations.DriveChannelsStopRequest) (*operations.DriveChannelsStopResponse, error) {
+func (s *channels) DriveChannelsStop(ctx context.Context, request operations.DriveChannelsStopRequest, security operations.DriveChannelsStopSecurity) (*operations.DriveChannelsStopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels/stop"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *channels) DriveChannelsStop(ctx context.Context, request operations.Dri
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

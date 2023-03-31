@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetFirewallsIDPathParams struct {
+type GetFirewallsIDRequest struct {
 	// ID of the resource
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFirewallsIDRequest struct {
-	PathParams GetFirewallsIDPathParams
 }
 
 type GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesServer struct {

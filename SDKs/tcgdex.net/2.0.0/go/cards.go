@@ -82,7 +82,7 @@ func (s *cards) Cards(ctx context.Context) (*operations.CardsResponse, error) {
 // Find a defined card thatusing its global id
 func (s *cards) FindPetsByTags(ctx context.Context, request operations.FindPetsByTagsRequest) (*operations.FindPetsByTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{cardId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cards/{cardId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *cards) FindPetsByTags(ctx context.Context, request operations.FindPetsB
 }
 func (s *cards) GetSetsSetCardLocalID(ctx context.Context, request operations.GetSetsSetCardLocalIDRequest) (*operations.GetSetsSetCardLocalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/{set}/{cardLocalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sets/{set}/{cardLocalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

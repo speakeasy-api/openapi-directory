@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/servicecontrol/v2/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,182 +15,177 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ServicecontrolServicesCheckRequest(
-    security=operations.ServicecontrolServicesCheckSecurity(
-        option1=operations.ServicecontrolServicesCheckSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.ServicecontrolServicesCheckPathParams(
-        service_name="repellendus",
-    ),
-    query_params=operations.ServicecontrolServicesCheckQueryParams(
-        dollar_xgafv="2",
-        access_token="corrupti",
-        alt="media",
-        callback="et",
-        fields="sint",
-        key="ullam",
-        oauth_token="ea",
-        pretty_print=True,
-        quota_user="ratione",
-        upload_type="qui",
-        upload_protocol="totam",
-    ),
-    request=shared.CheckRequest(
+    dollar_xgafv="2",
+    check_request=shared.CheckRequest(
         attributes=shared.AttributeContext(
             api=shared.API(
-                operation="ut",
-                protocol="iste",
-                service="consequatur",
-                version="est",
+                operation="provident",
+                protocol="distinctio",
+                service="quibusdam",
+                version="unde",
             ),
             destination=shared.Peer(
-                ip="quia",
+                ip="nulla",
                 labels={
-                    "vero": "at",
-                    "accusantium": "beatae",
+                    "illum": "vel",
+                    "error": "deserunt",
+                    "suscipit": "iure",
                 },
-                port="aut",
-                principal="dolorem",
+                port="magnam",
+                principal="debitis",
                 region_code="ipsa",
             ),
             extensions=[
                 {
-                    "ea": "voluptas",
+                    "suscipit": "molestiae",
+                    "minus": "placeat",
                 },
                 {
-                    "placeat": "enim",
-                    "enim": "dignissimos",
+                    "iusto": "excepturi",
+                    "nisi": "recusandae",
+                    "temporibus": "ab",
                 },
                 {
-                    "quisquam": "est",
-                    "aliquam": "dolores",
-                    "ea": "iusto",
+                    "veritatis": "deserunt",
+                    "perferendis": "ipsam",
+                },
+                {
+                    "sapiente": "quo",
+                    "odit": "at",
+                    "at": "maiores",
+                    "molestiae": "quod",
                 },
             ],
             origin=shared.Peer(
-                ip="reprehenderit",
+                ip="quod",
                 labels={
-                    "dolorum": "incidunt",
-                    "qui": "quis",
+                    "totam": "porro",
+                    "dolorum": "dicta",
                 },
-                port="qui",
-                principal="temporibus",
-                region_code="natus",
+                port="nam",
+                principal="officia",
+                region_code="occaecati",
             ),
             request=shared.Request(
                 auth=shared.Auth(
                     access_levels=[
-                        "quod",
-                        "facere",
-                        "in",
+                        "deleniti",
                     ],
                     audiences=[
-                        "dolores",
-                        "voluptatem",
+                        "optio",
+                        "totam",
+                        "beatae",
+                        "commodi",
                     ],
                     claims={
-                        "eos": "tenetur",
-                        "libero": "aut",
-                        "at": "voluptates",
+                        "modi": "qui",
+                        "impedit": "cum",
                     },
-                    presenter="earum",
-                    principal="omnis",
+                    presenter="esse",
+                    principal="ipsum",
                 ),
                 headers={
-                    "eligendi": "alias",
-                    "itaque": "sint",
-                    "et": "sit",
+                    "aspernatur": "perferendis",
+                    "ad": "natus",
+                    "sed": "iste",
                 },
-                host="quia",
-                id="repudiandae",
-                method="similique",
-                path="necessitatibus",
-                protocol="doloremque",
-                query="officiis",
-                reason="expedita",
-                scheme="repellendus",
-                size="harum",
-                time="ratione",
+                host="dolor",
+                id="natus",
+                method="laboriosam",
+                path="hic",
+                protocol="saepe",
+                query="fuga",
+                reason="in",
+                scheme="corporis",
+                size="iste",
+                time="iure",
             ),
             resource=shared.Resource(
                 annotations={
-                    "et": "ad",
-                    "ullam": "placeat",
-                    "repellat": "eius",
+                    "quidem": "architecto",
+                    "ipsa": "reiciendis",
+                    "est": "mollitia",
+                    "laborum": "dolores",
                 },
-                create_time="ducimus",
-                delete_time="quia",
-                display_name="sit",
-                etag="laudantium",
+                create_time="dolorem",
+                delete_time="corporis",
+                display_name="explicabo",
+                etag="nobis",
                 labels={
-                    "odio": "placeat",
+                    "omnis": "nemo",
+                    "minima": "excepturi",
                 },
-                location="aut",
-                name="dolorem",
-                service="at",
-                type="quis",
-                uid="vel",
-                update_time="corrupti",
+                location="accusantium",
+                name="iure",
+                service="culpa",
+                type="doloribus",
+                uid="sapiente",
+                update_time="architecto",
             ),
             response=shared.Response(
-                backend_latency="dolorem",
-                code="deleniti",
+                backend_latency="mollitia",
+                code="dolorem",
                 headers={
-                    "praesentium": "adipisci",
-                    "suscipit": "sed",
+                    "consequuntur": "repellat",
+                    "mollitia": "occaecati",
+                    "numquam": "commodi",
                 },
-                size="aut",
-                time="quis",
+                size="quam",
+                time="molestiae",
             ),
             source=shared.Peer(
-                ip="est",
+                ip="velit",
                 labels={
-                    "natus": "consequatur",
-                    "aut": "enim",
-                    "voluptas": "molestiae",
+                    "quia": "quis",
+                    "vitae": "laborum",
+                    "animi": "enim",
                 },
-                port="cum",
-                principal="sunt",
-                region_code="officiis",
+                port="odit",
+                principal="quo",
+                region_code="sequi",
             ),
         ),
-        flags="doloremque",
+        flags="tenetur",
         resources=[
             shared.ResourceInfo(
-                container="a",
-                location="consequatur",
-                name="rerum",
-                permission="omnis",
-                type="dolores",
+                container="id",
+                location="possimus",
+                name="aut",
+                permission="quasi",
+                type="error",
             ),
             shared.ResourceInfo(
-                container="ut",
-                location="quasi",
-                name="ullam",
-                permission="placeat",
-                type="exercitationem",
-            ),
-            shared.ResourceInfo(
-                container="explicabo",
-                location="porro",
-                name="qui",
-                permission="aut",
-                type="enim",
+                container="temporibus",
+                location="laborum",
+                name="quasi",
+                permission="reiciendis",
+                type="voluptatibus",
             ),
         ],
-        service_config_id="minima",
+        service_config_id="vero",
     ),
+    access_token="nihil",
+    alt="media",
+    callback="voluptatibus",
+    fields_="ipsa",
+    key="omnis",
+    oauth_token="voluptate",
+    pretty_print=False,
+    quota_user="cum",
+    service_name="perferendis",
+    upload_type="doloremque",
+    upload_protocol="reprehenderit",
 )
     
-res = s.services.servicecontrol_services_check(req)
+res = s.services.servicecontrol_services_check(req, operations.ServicecontrolServicesCheckSecurity(
+    option1=operations.ServicecontrolServicesCheckSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.check_response is not None:
     # handle response
@@ -198,13 +193,24 @@ if res.check_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### services
 
 * `servicecontrol_services_check` - Private Preview. This feature is only available for approved services. This method provides admission control for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It checks whether an operation should be allowed based on the service configuration and relevant policies. It must be called before the operation is executed. For more information, see [Admission Control](https://cloud.google.com/service-infrastructure/docs/admission-control). NOTE: The admission control has an expected policy propagation delay of 60s. The caller **must** not depend on the most recent policy changes. NOTE: The admission control has a hard limit of 1 referenced resources per call. If an operation refers to more than 1 resources, the caller must call the Check method multiple times. This method requires the `servicemanagement.services.check` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
 * `servicecontrol_services_report` - Private Preview. This feature is only available for approved services. This method provides telemetry reporting for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It reports a list of operations that have occurred on a service. It must be called after the operations have been executed. For more information, see [Telemetry Reporting](https://cloud.google.com/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100 operations per call. This method requires the `servicemanagement.services.report` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

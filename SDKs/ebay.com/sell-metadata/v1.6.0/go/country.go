@@ -32,16 +32,16 @@ func newCountry(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GetSalesTaxJurisdictions - This method retrieves all the sales tax jurisdictions for the country that you specify in the <b>countryCode</b> path parameter. Countries with valid sales tax jurisdictions are Canada and the US.  <br/><br/>The response from this call tells you the jurisdictions for which a seller can configure tax tables. Although setting up tax tables is optional, you can use the <b>createOrReplaceSalesTax</b> in the <b>Account API</b> call to configure the tax tables for the jurisdictions you sell to.
-func (s *country) GetSalesTaxJurisdictions(ctx context.Context, request operations.GetSalesTaxJurisdictionsRequest) (*operations.GetSalesTaxJurisdictionsResponse, error) {
+func (s *country) GetSalesTaxJurisdictions(ctx context.Context, request operations.GetSalesTaxJurisdictionsRequest, security operations.GetSalesTaxJurisdictionsSecurity) (*operations.GetSalesTaxJurisdictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/country/{countryCode}/sales_tax_jurisdiction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/country/{countryCode}/sales_tax_jurisdiction", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

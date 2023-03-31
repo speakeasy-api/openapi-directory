@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type VirtualizationChoicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type VirtualizationChoicesReadRequest struct {
-	PathParams VirtualizationChoicesReadPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type VirtualizationChoicesReadResponse struct {

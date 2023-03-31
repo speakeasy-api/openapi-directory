@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidSchedulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 type UpdateNetworkWirelessSsidSchedulesRequestBodyRanges struct {
 	// Day of when the outage ends. Can be either full day name, or three letter abbreviation
 	EndDay string `json:"endDay"`
@@ -39,8 +34,9 @@ type UpdateNetworkWirelessSsidSchedulesRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidSchedulesRequest struct {
-	PathParams UpdateNetworkWirelessSsidSchedulesPathParams
-	Request    *UpdateNetworkWirelessSsidSchedulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidSchedulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                         `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                         `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidSchedulesResponse struct {

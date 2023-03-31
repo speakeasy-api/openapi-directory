@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SandboxItemSetVerificationStatusRequest struct {
-	Request shared.SandboxItemSetVerificationStatusRequest `request:"mediaType=application/json"`
-}
 
 type SandboxItemSetVerificationStatusResponse struct {
 	ContentType string

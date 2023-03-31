@@ -14,45 +14,39 @@ func main() {
     s := sdk.New()
 
     req := operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest{
-        Security: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            HubID: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.HubInput{
-            CreateTime: "magnam",
-            Description: "debitis",
+        DollarXgafv: "2",
+        HubInput: &shared.HubInput{
+            CreateTime: "provident",
+            Description: "distinctio",
             Labels: map[string]string{
-                "delectus": "tempora",
+                "unde": "nulla",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
             },
-            Name: "suscipit",
-            UpdateTime: "molestiae",
+            Name: "iure",
+            UpdateTime: "magnam",
         },
+        AccessToken: "debitis",
+        Alt: "json",
+        Callback: "delectus",
+        Fields: "tempora",
+        HubID: "suscipit",
+        Key: "molestiae",
+        OauthToken: "minus",
+        Parent: "placeat",
+        PrettyPrint: false,
+        QuotaUser: "voluptatum",
+        RequestID: "iusto",
+        UploadType: "excepturi",
+        UploadProtocol: "nisi",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req)
+    res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

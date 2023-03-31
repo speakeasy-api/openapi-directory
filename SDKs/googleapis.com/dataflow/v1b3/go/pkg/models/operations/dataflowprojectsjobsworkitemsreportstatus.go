@@ -8,23 +8,23 @@ import (
 )
 
 type DataflowProjectsJobsWorkItemsReportStatusSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsWorkItemsReportStatusSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsWorkItemsReportStatusSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsWorkItemsReportStatusSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsWorkItemsReportStatusSecurity struct {
@@ -34,16 +34,10 @@ type DataflowProjectsJobsWorkItemsReportStatusSecurity struct {
 	Option4 *DataflowProjectsJobsWorkItemsReportStatusSecurityOption4 `security:"option"`
 }
 
-type DataflowProjectsJobsWorkItemsReportStatusPathParams struct {
-	// The job which the WorkItem is part of.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The project which owns the WorkItem's job.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DataflowProjectsJobsWorkItemsReportStatusQueryParams struct {
+type DataflowProjectsJobsWorkItemsReportStatusRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                 *shared.XgafvEnum                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ReportWorkItemStatusRequest *shared.ReportWorkItemStatusRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -52,25 +46,22 @@ type DataflowProjectsJobsWorkItemsReportStatusQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The job which the WorkItem is part of.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project which owns the WorkItem's job.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataflowProjectsJobsWorkItemsReportStatusRequest struct {
-	PathParams  DataflowProjectsJobsWorkItemsReportStatusPathParams
-	QueryParams DataflowProjectsJobsWorkItemsReportStatusQueryParams
-	Request     *shared.ReportWorkItemStatusRequest `request:"mediaType=application/json"`
-	Security    DataflowProjectsJobsWorkItemsReportStatusSecurity
 }
 
 type DataflowProjectsJobsWorkItemsReportStatusResponse struct {

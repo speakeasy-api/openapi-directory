@@ -47,9 +47,9 @@ func (s *catalog) GETCatalog(ctx context.Context, request operations.GETCatalogR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,14 +93,14 @@ func (s *catalog) GETCatalog(ctx context.Context, request operations.GETCatalogR
 // Retrieves detailed information about a specific product, including information about its product rate plans and charges.
 func (s *catalog) GETProduct(ctx context.Context, request operations.GETProductRequest) (*operations.GETProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/catalog/product/{product-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/catalog/product/{product-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,9 +152,9 @@ func (s *catalog) GETProduct(ctx context.Context, request operations.GETProductR
 // - Currently, you can only share a product with one entity at a time. An error occurs if you try to share a product to more than one entity.
 func (s *catalog) POSTCatalog(ctx context.Context, request operations.POSTCatalogRequest) (*operations.POSTCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/catalog/products/{product-id}/share", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/catalog/products/{product-id}/share", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTCatalogType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -169,7 +169,7 @@ func (s *catalog) POSTCatalog(ctx context.Context, request operations.POSTCatalo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

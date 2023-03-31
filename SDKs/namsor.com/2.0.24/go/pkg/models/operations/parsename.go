@@ -8,16 +8,11 @@ import (
 )
 
 type ParseNameSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ParseNamePathParams struct {
-	NameFull string `pathParam:"style=simple,explode=false,name=nameFull"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ParseNameRequest struct {
-	PathParams ParseNamePathParams
-	Security   ParseNameSecurity
+	NameFull string `pathParam:"style=simple,explode=false,name=nameFull"`
 }
 
 type ParseNameResponse struct {

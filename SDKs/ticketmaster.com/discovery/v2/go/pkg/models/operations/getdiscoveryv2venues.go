@@ -137,7 +137,7 @@ func (e *GetDiscoveryV2VenuesUnitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDiscoveryV2VenuesQueryParams struct {
+type GetDiscoveryV2VenuesRequest struct {
 	// Filter venues by country code
 	CountryCode *string `queryParam:"style=form,explode=true,name=countryCode"`
 	// filter events by geoHash
@@ -170,10 +170,6 @@ type GetDiscoveryV2VenuesQueryParams struct {
 	StateCode *string `queryParam:"style=form,explode=true,name=stateCode"`
 	// Unit of the radius
 	Unit *GetDiscoveryV2VenuesUnitEnum `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type GetDiscoveryV2VenuesRequest struct {
-	QueryParams GetDiscoveryV2VenuesQueryParams
 }
 
 type GetDiscoveryV2VenuesResponse struct {

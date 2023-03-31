@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OccupancyGetBikePointsOccupanciesPathParams struct {
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
 type OccupancyGetBikePointsOccupanciesRequest struct {
-	PathParams OccupancyGetBikePointsOccupanciesPathParams
+	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
 }
 
 type OccupancyGetBikePointsOccupanciesResponse struct {

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/gkebackup/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,74 +15,69 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest(
-    security=operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams(
-        parent="explicabo",
-    ),
-    query_params=operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="corporis",
-        alt="media",
-        backup_id="laboriosam",
-        callback="sed",
-        fields="blanditiis",
-        key="et",
-        oauth_token="voluptatum",
-        pretty_print=True,
-        quota_user="inventore",
-        upload_type="dolores",
-        upload_protocol="ut",
-    ),
-    request=shared.BackupInput(
+    dollar_xgafv="2",
+    backup_input=shared.BackupInput(
         cluster_metadata=shared.ClusterMetadata(
-            anthos_version="inventore",
+            anthos_version="provident",
             backup_crd_versions={
-                "ipsum": "consequatur",
-                "ut": "quibusdam",
-                "repellat": "odio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+                "illum": "vel",
             },
-            cluster="et",
-            gke_version="nobis",
-            k8s_version="quia",
+            cluster="error",
+            gke_version="deserunt",
+            k8s_version="suscipit",
         ),
-        delete_lock_days=3054520383972741130,
-        description="ipsa",
+        delete_lock_days=437587,
+        description="magnam",
         encryption_key=shared.EncryptionKey(
-            gcp_kms_encryption_key="enim",
+            gcp_kms_encryption_key="debitis",
         ),
         labels={
-            "quibusdam": "qui",
-            "omnis": "quae",
-            "voluptatem": "nesciunt",
+            "delectus": "tempora",
         },
-        retain_days=8947363127042062471,
+        retain_days=383441,
         selected_applications=shared.NamespacedNames(
             namespaced_names=[
                 shared.NamespacedName(
-                    name="qui",
-                    namespace="dolores",
+                    name="minus",
+                    namespace="placeat",
+                ),
+                shared.NamespacedName(
+                    name="voluptatum",
+                    namespace="iusto",
                 ),
             ],
         ),
         selected_namespaces=shared.Namespaces(
             namespaces=[
-                "quod",
-                "quia",
+                "nisi",
+                "recusandae",
+                "temporibus",
             ],
         ),
     ),
+    access_token="ab",
+    alt="media",
+    backup_id="veritatis",
+    callback="deserunt",
+    fields_="perferendis",
+    key="ipsam",
+    oauth_token="repellendus",
+    parent="sapiente",
+    pretty_print=False,
+    quota_user="quo",
+    upload_type="odit",
+    upload_protocol="at",
 )
     
-res = s.projects.gkebackup_projects_locations_backup_plans_backups_create(req)
+res = s.projects.gkebackup_projects_locations_backup_plans_backups_create(req, operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_longrunning_operation is not None:
     # handle response
@@ -90,7 +85,8 @@ if res.google_longrunning_operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -102,7 +98,7 @@ if res.google_longrunning_operation is not None:
 * `gkebackup_projects_locations_delete_operations` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `gkebackup_projects_locations_list` - Lists information about the supported locations for this service.
 * `gkebackup_projects_locations_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `gkebackup_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `gkebackup_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `gkebackup_projects_locations_restore_plans_create` - Creates a new RestorePlan in a given location.
 * `gkebackup_projects_locations_restore_plans_list` - Lists RestorePlans in a given location.
 * `gkebackup_projects_locations_restore_plans_restores_create` - Creates a new Restore for the given RestorePlan.
@@ -114,7 +110,17 @@ if res.google_longrunning_operation is not None:
 * `gkebackup_projects_locations_restore_plans_restores_volume_restores_list` - Lists the VolumeRestores for a given Restore.
 * `gkebackup_projects_locations_restore_plans_restores_volume_restores_set_iam_policy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `gkebackup_projects_locations_restore_plans_restores_volume_restores_test_iam_permissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

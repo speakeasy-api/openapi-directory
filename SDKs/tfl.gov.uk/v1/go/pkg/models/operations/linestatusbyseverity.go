@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineStatusBySeverityPathParams struct {
+type LineStatusBySeverityRequest struct {
 	// The level of severity (eg: a number from 0 to 14)
 	Severity int `pathParam:"style=simple,explode=false,name=severity"`
-}
-
-type LineStatusBySeverityRequest struct {
-	PathParams LineStatusBySeverityPathParams
 }
 
 type LineStatusBySeverityResponse struct {

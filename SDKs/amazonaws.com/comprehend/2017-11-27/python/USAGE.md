@@ -3,31 +3,29 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchDetectDominantLanguageRequest(
-    headers=operations.BatchDetectDominantLanguageHeaders(
-        x_amz_algorithm="id",
-        x_amz_content_sha256="reprehenderit",
-        x_amz_credential="sit",
-        x_amz_date="at",
-        x_amz_security_token="ex",
-        x_amz_signature="doloribus",
-        x_amz_signed_headers="qui",
-        x_amz_target="Comprehend_20171127.BatchDetectDominantLanguage",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.BatchDetectDominantLanguageRequest(
+)
+
+
+req = operations.BatchDetectDominantLanguageRequest(
+    batch_detect_dominant_language_request=shared.BatchDetectDominantLanguageRequest(
         text_list=[
-            "ea",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
     ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
+    x_amz_target="Comprehend_20171127.BatchDetectDominantLanguage",
 )
     
 res = s.batch_detect_dominant_language(req)

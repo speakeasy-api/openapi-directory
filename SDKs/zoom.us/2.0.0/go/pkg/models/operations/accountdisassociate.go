@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccountDisassociatePathParams struct {
+type AccountDisassociateRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AccountDisassociateRequest struct {
-	PathParams AccountDisassociatePathParams
 }
 
 type AccountDisassociateResponse struct {

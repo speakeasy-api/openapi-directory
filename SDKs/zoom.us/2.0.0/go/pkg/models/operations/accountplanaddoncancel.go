@@ -6,15 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AccountPlanAddonCancelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AccountPlanAddonCancelPathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AccountPlanAddonCancelApplicationJSONActionEnum - The action that needs to be taken for this sub account. Value must be set to "cancel".
@@ -87,9 +82,8 @@ type AccountPlanAddonCancelApplicationJSON struct {
 }
 
 type AccountPlanAddonCancelRequest struct {
-	PathParams AccountPlanAddonCancelPathParams
-	Request    *AccountPlanAddonCancelApplicationJSON `request:"mediaType=application/json"`
-	Security   AccountPlanAddonCancelSecurity
+	RequestBody *AccountPlanAddonCancelApplicationJSON `request:"mediaType=application/json"`
+	AccountID   string                                 `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountPlanAddonCancelResponse struct {

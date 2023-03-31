@@ -14,40 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.DialogflowProjectsConversationsParticipantsSuggestionsCompileRequest{
-        Security: operations.DialogflowProjectsConversationsParticipantsSuggestionsCompileSecurity{
-            Option1: &operations.DialogflowProjectsConversationsParticipantsSuggestionsCompileSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
+        DollarXgafv: "2",
+        GoogleCloudDialogflowV2beta1CompileSuggestionRequest: &shared.GoogleCloudDialogflowV2beta1CompileSuggestionRequest{
+            ContextSize: 592845,
+            LatestMessage: "distinctio",
         },
-        PathParams: operations.DialogflowProjectsConversationsParticipantsSuggestionsCompilePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DialogflowProjectsConversationsParticipantsSuggestionsCompileQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudDialogflowV2beta1CompileSuggestionRequest{
-            ContextSize: 384382,
-            LatestMessage: "iure",
-        },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        Parent: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DialogflowProjectsConversationsParticipantsSuggestionsCompile(ctx, req)
+    res, err := s.Projects.DialogflowProjectsConversationsParticipantsSuggestionsCompile(ctx, req, operations.DialogflowProjectsConversationsParticipantsSuggestionsCompileSecurity{
+        Option1: &operations.DialogflowProjectsConversationsParticipantsSuggestionsCompileSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

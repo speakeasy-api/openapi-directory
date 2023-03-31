@@ -35,14 +35,14 @@ func newPaymentTransactionLogs(defaultClient, securityClient HTTPClient, serverU
 // Retrieves information about a specific payment transaction log.
 func (s *paymentTransactionLogs) ObjectGETPaymentTransactionLog(ctx context.Context, request operations.ObjectGETPaymentTransactionLogRequest) (*operations.ObjectGETPaymentTransactionLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-transaction-log/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/payment-transaction-log/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

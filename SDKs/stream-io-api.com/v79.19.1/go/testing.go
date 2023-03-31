@@ -34,7 +34,7 @@ func newTesting(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CheckPush - Check push
 // Sends a test message via push, this is a test endpoint to verify your push settings
-func (s *testing) CheckPush(ctx context.Context, request operations.CheckPushRequest) (*operations.CheckPushResponse, error) {
+func (s *testing) CheckPush(ctx context.Context, request shared.CheckPushRequest) (*operations.CheckPushResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_push"
 
@@ -111,7 +111,7 @@ func (s *testing) CheckPush(ctx context.Context, request operations.CheckPushReq
 
 // CheckSQS - Check SQS
 // Validates Amazon SQS credentials
-func (s *testing) CheckSQS(ctx context.Context, request operations.CheckSQSRequest) (*operations.CheckSQSResponse, error) {
+func (s *testing) CheckSQS(ctx context.Context, request shared.CheckSQSRequest) (*operations.CheckSQSResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_sqs"
 

@@ -34,7 +34,7 @@ func newRelationships(defaultClient, securityClient HTTPClient, serverURL, langu
 // List the sensor roles for a given sensor or camera device.
 func (s *relationships) GetDeviceSensorRelationships(ctx context.Context, request operations.GetDeviceSensorRelationshipsRequest) (*operations.GetDeviceSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *relationships) GetDeviceSensorRelationships(ctx context.Context, reques
 // List the sensor roles for devices in a given network
 func (s *relationships) GetNetworkSensorRelationships(ctx context.Context, request operations.GetNetworkSensorRelationshipsRequest) (*operations.GetNetworkSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/relationships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *relationships) GetNetworkSensorRelationships(ctx context.Context, reque
 // Assign one or more sensor roles to a given sensor or camera device.
 func (s *relationships) UpdateDeviceSensorRelationships(ctx context.Context, request operations.UpdateDeviceSensorRelationshipsRequest) (*operations.UpdateDeviceSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

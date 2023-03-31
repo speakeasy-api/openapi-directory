@@ -8,27 +8,18 @@ import (
 )
 
 type GetAllEmployeesSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllEmployeesPathParams struct {
+type GetAllEmployeesRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetAllEmployeesQueryParams struct {
 	// Whether to include the total record count in the header's X-Pcty-Total-Count property. Default value is true.
 	Includetotalcount *bool `queryParam:"style=form,explode=true,name=includetotalcount"`
 	// Page number to retrieve; page numbers are 0-based (so to get the first page of results, pass pagenumber=0). Default value is 0.
 	Pagenumber *int64 `queryParam:"style=form,explode=true,name=pagenumber"`
 	// Number of records per page. Default value is 25.
 	Pagesize *int64 `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetAllEmployeesRequest struct {
-	PathParams  GetAllEmployeesPathParams
-	QueryParams GetAllEmployeesQueryParams
-	Security    GetAllEmployeesSecurity
 }
 
 type GetAllEmployeesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFields8PathParams struct {
+type GetCustomFields8Request struct {
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetCustomFields8Request struct {
-	PathParams GetCustomFields8PathParams
 }
 
 type GetCustomFields8Response struct {

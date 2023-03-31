@@ -44,7 +44,7 @@ func (e *GetSSHKeysSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSSHKeysQueryParams struct {
+type GetSSHKeysRequest struct {
 	// Can be used to filter SSH keys by their fingerprint. The response will only contain the SSH key matching the specified fingerprint.
 	Fingerprint *string `queryParam:"style=form,explode=true,name=fingerprint"`
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
@@ -53,10 +53,6 @@ type GetSSHKeysQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Can be used multiple times.
 	Sort *GetSSHKeysSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetSSHKeysRequest struct {
-	QueryParams GetSSHKeysQueryParams
 }
 
 type GetSSHKeys200ApplicationJSONMetaPagination struct {

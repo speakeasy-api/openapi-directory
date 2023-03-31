@@ -38,9 +38,9 @@ func newBatches(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Add a Shipment or Rate to a Batch
 func (s *batches) AddToBatch(ctx context.Context, request operations.AddToBatchRequest) (*operations.AddToBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddToBatchRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,7 +114,7 @@ func (s *batches) AddToBatch(ctx context.Context, request operations.AddToBatchR
 
 // CreateBatch - Create A Batch
 // Create a Batch
-func (s *batches) CreateBatch(ctx context.Context, request operations.CreateBatchRequest) (*operations.CreateBatchResponse, error) {
+func (s *batches) CreateBatch(ctx context.Context, request shared.CreateBatchRequestBody) (*operations.CreateBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/batches"
 
@@ -183,7 +183,7 @@ func (s *batches) CreateBatch(ctx context.Context, request operations.CreateBatc
 // Delete Batch By Id
 func (s *batches) DeleteBatch(ctx context.Context, request operations.DeleteBatchRequest) (*operations.DeleteBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *batches) DeleteBatch(ctx context.Context, request operations.DeleteBatc
 // Get Batch By External ID
 func (s *batches) GetBatchByExternalID(ctx context.Context, request operations.GetBatchByExternalIDRequest) (*operations.GetBatchByExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/external_batch_id/{external_batch_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/external_batch_id/{external_batch_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -310,7 +310,7 @@ func (s *batches) GetBatchByExternalID(ctx context.Context, request operations.G
 // Get Batch By ID
 func (s *batches) GetBatchByID(ctx context.Context, request operations.GetBatchByIDRequest) (*operations.GetBatchByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -370,14 +370,14 @@ func (s *batches) GetBatchByID(ctx context.Context, request operations.GetBatchB
 // You must retrieve the status of your batch by [getting a batch](https://www.shipengine.com/docs/reference/get-batch-by-id/) and getting an overview of the statuses or you can list errors directly here below to get detailed information about the errors.
 func (s *batches) ListBatchErrors(ctx context.Context, request operations.ListBatchErrorsRequest) (*operations.ListBatchErrorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/errors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/errors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -440,7 +440,7 @@ func (s *batches) ListBatches(ctx context.Context, request operations.ListBatche
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -494,9 +494,9 @@ func (s *batches) ListBatches(ctx context.Context, request operations.ListBatche
 // Process Batch ID Labels
 func (s *batches) ProcessBatch(ctx context.Context, request operations.ProcessBatchRequest) (*operations.ProcessBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/process/labels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/process/labels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProcessBatchRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -572,9 +572,9 @@ func (s *batches) ProcessBatch(ctx context.Context, request operations.ProcessBa
 // Remove a shipment or rate from a batch
 func (s *batches) RemoveFromBatch(ctx context.Context, request operations.RemoveFromBatchRequest) (*operations.RemoveFromBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveFromBatchRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -650,7 +650,7 @@ func (s *batches) RemoveFromBatch(ctx context.Context, request operations.Remove
 // Update Batch By Id
 func (s *batches) UpdateBatch(ctx context.Context, request operations.UpdateBatchRequest) (*operations.UpdateBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/batches/{batch_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

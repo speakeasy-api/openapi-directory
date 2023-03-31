@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsRemoveRequestedReviewersPathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsRemoveRequestedReviewersRequestBody struct {
 	// An array of user `login`s that will be removed.
 	Reviewers []string `json:"reviewers"`
@@ -21,8 +15,10 @@ type PullsRemoveRequestedReviewersRequestBody struct {
 }
 
 type PullsRemoveRequestedReviewersRequest struct {
-	PathParams PullsRemoveRequestedReviewersPathParams
-	Request    PullsRemoveRequestedReviewersRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsRemoveRequestedReviewersRequestBody `request:"mediaType=application/json"`
+	Owner       string                                   `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64                                    `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string                                   `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsRemoveRequestedReviewersResponse struct {

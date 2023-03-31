@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidWishlistPostQueryParams struct {
+type KkidWishlistPostRequest struct {
 	// Item Description
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// userID of the kid
@@ -18,10 +18,6 @@ type KkidWishlistPostQueryParams struct {
 	Priority *int64 `queryParam:"style=form,explode=true,name=priority"`
 	// Item title
 	Title string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type KkidWishlistPostRequest struct {
-	QueryParams KkidWishlistPostQueryParams
 }
 
 type KkidWishlistPostResponse struct {

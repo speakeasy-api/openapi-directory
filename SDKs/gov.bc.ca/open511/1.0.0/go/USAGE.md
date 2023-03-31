@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAreasRequest{
-        QueryParams: operations.GetAreasQueryParams{
-            Format: "xml",
-        },
+        Format: "xml",
     }
 
     ctx := context.Background()

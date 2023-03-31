@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecurity struct {
@@ -22,12 +22,7 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecuri
 	Option2 *ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeletePathParams struct {
-	// Required. The name of the peered DNS domain to delete in the format: `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`. {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is the number of the project that contains the service consumer's VPC network e.g. `12345`. {network} is the name of the service consumer's VPC network. {name} is the name of the peered DNS domain.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteQueryParams struct {
+type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteQueryP
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the peered DNS domain to delete in the format: `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`. {service} is the peering service that is managing connectivity for the service producer's organization. For Google services that support this functionality, this value is `servicenetworking.googleapis.com`. {project} is the number of the project that contains the service consumer's VPC network e.g. `12345`. {network} is the name of the service consumer's VPC network. {name} is the name of the peered DNS domain.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteQueryP
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteRequest struct {
-	PathParams  ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeletePathParams
-	QueryParams ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteQueryParams
-	Security    ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecurity
 }
 
 type ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteResponse struct {

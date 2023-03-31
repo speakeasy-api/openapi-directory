@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceSingleLanPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkApplianceSingleLanRequest struct {
-	PathParams GetNetworkApplianceSingleLanPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkApplianceSingleLan200ApplicationJSONIpv6PrefixAssignmentsOriginTypeEnum - Type of the origin

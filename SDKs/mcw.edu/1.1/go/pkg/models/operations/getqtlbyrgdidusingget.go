@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETQTLByRgdIDUsingGETPathParams struct {
+type GETQTLByRgdIDUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETQTLByRgdIDUsingGETRequest struct {
-	PathParams GETQTLByRgdIDUsingGETPathParams
 }
 
 type GETQTLByRgdIDUsingGETResponse struct {

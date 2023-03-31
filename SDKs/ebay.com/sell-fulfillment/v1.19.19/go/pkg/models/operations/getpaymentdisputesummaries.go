@@ -12,10 +12,10 @@ var GetPaymentDisputeSummariesServerList = []string{
 }
 
 type GetPaymentDisputeSummariesSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPaymentDisputeSummariesQueryParams struct {
+type GetPaymentDisputeSummariesRequest struct {
 	// This filter is used if the seller wishes to retrieve one or more payment disputes opened by a specific seller. The string that is passed in to this query parameter is the eBay user ID of the buyer.
 	BuyerUsername *string `queryParam:"style=form,explode=true,name=buyer_username"`
 	// The value passed in this query parameter sets the maximum number of payment disputes to return per page of data. The value passed in this field should be an integer from 1 to 200. If this query parameter is not set, up to 200 records will be returned on each page of results.<br><br><b>Min</b>: 1; <b>Max</b>: 200; <b>Default</b>: 200
@@ -30,12 +30,6 @@ type GetPaymentDisputeSummariesQueryParams struct {
 	OrderID *string `queryParam:"style=form,explode=true,name=order_id"`
 	// This filter is used if the seller wishes to only retrieve payment disputes in a specific state. More than one value can be specified. If no <b>payment_dispute_status</b> filter is used, payment disputes in all states are returned in the response. See <strong>DisputeStateEnum</strong> type for supported values.
 	PaymentDisputeStatus *string `queryParam:"style=form,explode=true,name=payment_dispute_status"`
-}
-
-type GetPaymentDisputeSummariesRequest struct {
-	QueryParams GetPaymentDisputeSummariesQueryParams
-	Security    GetPaymentDisputeSummariesSecurity
-	ServerURL   *string
 }
 
 type GetPaymentDisputeSummariesResponse struct {

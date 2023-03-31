@@ -8,19 +8,14 @@ import (
 )
 
 type ConversationsFetchSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ConversationsFetchPathParams struct {
+type ConversationsFetchRequest struct {
 	// Account to apply operations to
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// ID of template to return
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversationId"`
-}
-
-type ConversationsFetchRequest struct {
-	PathParams ConversationsFetchPathParams
-	Security   ConversationsFetchSecurity
 }
 
 type ConversationsFetchResponse struct {

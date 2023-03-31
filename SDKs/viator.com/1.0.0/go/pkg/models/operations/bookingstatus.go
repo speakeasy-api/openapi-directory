@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BookingStatusHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 // BookingStatusRequestBody - **note**: all items are optional, but at least one needs to be included
 type BookingStatusRequestBody struct {
 	// **earliest date** for *this* booking (must be in the future)
@@ -37,8 +31,10 @@ type BookingStatusRequestBody struct {
 }
 
 type BookingStatusRequest struct {
-	Headers BookingStatusHeaders
-	Request *BookingStatusRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                    `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *BookingStatusRequestBody `request:"mediaType=application/json"`
 }
 
 type BookingStatus200ApplicationJSONDataItemSummaries struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteIPAccessControlListServerList = []string{
@@ -12,20 +11,15 @@ var DeleteIPAccessControlListServerList = []string{
 }
 
 type DeleteIPAccessControlListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteIPAccessControlListPathParams struct {
+type DeleteIPAccessControlListRequest struct {
 	// The unique string that we created to identify the IpAccessControlList resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Trunk from which to delete the IP Access Control List.
 	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
-}
-
-type DeleteIPAccessControlListRequest struct {
-	PathParams DeleteIPAccessControlListPathParams
-	Security   DeleteIPAccessControlListSecurity
-	ServerURL  *string
 }
 
 type DeleteIPAccessControlListResponse struct {

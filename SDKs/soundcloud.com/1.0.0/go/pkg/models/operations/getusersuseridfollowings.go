@@ -11,24 +11,15 @@ import (
 )
 
 type GetUsersUserIDFollowingsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetUsersUserIDFollowingsPathParams struct {
-	// SoundCloud User id
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUsersUserIDFollowingsQueryParams struct {
-	// Number of results to return in the collection.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type GetUsersUserIDFollowingsRequest struct {
-	PathParams  GetUsersUserIDFollowingsPathParams
-	QueryParams GetUsersUserIDFollowingsQueryParams
-	Security    GetUsersUserIDFollowingsSecurity
+	// Number of results to return in the collection.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// SoundCloud User id
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUsersUserIDFollowings200ApplicationJSONType string

@@ -10,13 +10,8 @@ import (
 )
 
 type GetTrackSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetTrackPathParams struct {
-	// Audio track ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetTrackViewEnum - Amount of detail to render in the response
@@ -43,17 +38,13 @@ func (e *GetTrackViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTrackQueryParams struct {
+type GetTrackRequest struct {
+	// Audio track ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// The ID of the search that is related to this request
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 	// Amount of detail to render in the response
 	View *GetTrackViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetTrackRequest struct {
-	PathParams  GetTrackPathParams
-	QueryParams GetTrackQueryParams
-	Security    GetTrackSecurity
 }
 
 type GetTrackResponse struct {

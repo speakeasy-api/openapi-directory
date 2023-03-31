@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadVideoPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 type UploadVideoRequestBodyEmbedButtons struct {
 	// Show or hide the Embed button.
 	Embed *bool `json:"embed,omitempty"`
@@ -559,8 +554,9 @@ type UploadVideoRequestBody struct {
 }
 
 type UploadVideoRequest struct {
-	PathParams UploadVideoPathParams
-	Request    UploadVideoRequestBody `request:"mediaType=application/vnd.vimeo.video+json"`
+	RequestBody UploadVideoRequestBody `request:"mediaType=application/vnd.vimeo.video+json"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type UploadVideoResponse struct {

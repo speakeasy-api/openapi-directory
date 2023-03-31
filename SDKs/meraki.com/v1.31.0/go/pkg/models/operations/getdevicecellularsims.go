@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceCellularSimsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceCellularSimsRequest struct {
-	PathParams GetDeviceCellularSimsPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceCellularSimsResponse struct {

@@ -26,7 +26,6 @@ pkg/models/shared/stacktraceelement.go
 pkg/models/shared/position.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listexecutionsresponse.go
 pkg/models/shared/triggerpubsubexecutionrequest.go
 pkg/models/shared/pubsubmessage.go

@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type GetChangessQueryParams struct {
+type GetChangessRequest struct {
+	IfMatch      *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch  *string  `header:"style=simple,explode=false,name=If-None-Match"`
 	Before       *int64   `queryParam:"style=form,explode=true,name=_before"`
 	Fields       []string `queryParam:"style=form,explode=false,name=_fields"`
 	Limit        *int64   `queryParam:"style=form,explode=true,name=_limit"`
@@ -16,16 +18,6 @@ type GetChangessQueryParams struct {
 	Token        *string  `queryParam:"style=form,explode=true,name=_token"`
 	ID           *string  `queryParam:"style=form,explode=true,name=id"`
 	LastModified *int64   `queryParam:"style=form,explode=true,name=last_modified"`
-}
-
-type GetChangessHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetChangessRequest struct {
-	QueryParams GetChangessQueryParams
-	Headers     GetChangessHeaders
 }
 
 // GetChangessErrorSchema - The request is invalid.

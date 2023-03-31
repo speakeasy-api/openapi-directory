@@ -17,10 +17,6 @@ type PostPortfolioSimulationRebalancingRandomWeightRequestBody struct {
 	Portfolios *int64 `json:"portfolios,omitempty"`
 }
 
-type PostPortfolioSimulationRebalancingRandomWeightRequest struct {
-	Request PostPortfolioSimulationRebalancingRandomWeightRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONPortfolios struct {
 	// portfolioValues[t] is the value of the portfolio at the time t
 	PortfolioValues []float64 `json:"portfolioValues"`

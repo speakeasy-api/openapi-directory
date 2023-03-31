@@ -35,14 +35,14 @@ func newPayInstruction(defaultClient, securityClient HTTPClient, serverURL, lang
 // Delete the specified pay instruction
 func (s *payInstruction) DeletePayInstruction(ctx context.Context, request operations.DeletePayInstructionRequest) (*operations.DeletePayInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *payInstruction) DeletePayInstruction(ctx context.Context, request opera
 // Gets all the pay instruction tags
 func (s *payInstruction) GetAllPayInstructionTags(ctx context.Context, request operations.GetAllPayInstructionTagsRequest) (*operations.GetAllPayInstructionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *payInstruction) GetAllPayInstructionTags(ctx context.Context, request o
 // Returns the specified pay instruction from employee
 func (s *payInstruction) GetPayInstructionFromEmployee(ctx context.Context, request operations.GetPayInstructionFromEmployeeRequest) (*operations.GetPayInstructionFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *payInstruction) GetPayInstructionFromEmployee(ctx context.Context, requ
 // Get links to all pay instructions for the specified employee
 func (s *payInstruction) GetPayInstructionsFromEmployee(ctx context.Context, request operations.GetPayInstructionsFromEmployeeRequest) (*operations.GetPayInstructionsFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,14 +278,14 @@ func (s *payInstruction) GetPayInstructionsFromEmployee(ctx context.Context, req
 // Gets the pay instructions with the tag
 func (s *payInstruction) GetPayInstructionsWithTag(ctx context.Context, request operations.GetPayInstructionsWithTagRequest) (*operations.GetPayInstructionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -341,9 +341,9 @@ func (s *payInstruction) GetPayInstructionsWithTag(ctx context.Context, request 
 // Patches the specified pay instruction with the supplied values
 func (s *payInstruction) PatchPayInstruction(ctx context.Context, request operations.PatchPayInstructionRequest) (*operations.PatchPayInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -358,7 +358,7 @@ func (s *payInstruction) PatchPayInstruction(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -414,9 +414,9 @@ func (s *payInstruction) PatchPayInstruction(ctx context.Context, request operat
 // Creates a new pay instruction object
 func (s *payInstruction) PostPayInstruction(ctx context.Context, request operations.PostPayInstructionRequest) (*operations.PostPayInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -431,7 +431,7 @@ func (s *payInstruction) PostPayInstruction(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -487,9 +487,9 @@ func (s *payInstruction) PostPayInstruction(ctx context.Context, request operati
 // Updates the existing specified pay instruction object
 func (s *payInstruction) PutPayInstruction(ctx context.Context, request operations.PutPayInstructionRequest) (*operations.PutPayInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -504,7 +504,7 @@ func (s *payInstruction) PutPayInstruction(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

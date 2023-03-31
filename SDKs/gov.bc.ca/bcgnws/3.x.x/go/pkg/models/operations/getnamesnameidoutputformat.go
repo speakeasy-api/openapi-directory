@@ -41,15 +41,11 @@ func (e *GetNamesNameIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetNamesNameIDOutputFormatPathParams struct {
+type GetNamesNameIDOutputFormatRequest struct {
 	// The unique identifier for a name
 	NameID int64 `pathParam:"style=simple,explode=false,name=nameId"`
 	// The format of the output.
 	OutputFormat GetNamesNameIDOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
-type GetNamesNameIDOutputFormatRequest struct {
-	PathParams GetNamesNameIDOutputFormatPathParams
 }
 
 type GetNamesNameIDOutputFormatResponse struct {

@@ -33,20 +33,20 @@ func newTimeline(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // MirrorTimelineAttachmentsDelete - Deletes an attachment from a timeline item.
-func (s *timeline) MirrorTimelineAttachmentsDelete(ctx context.Context, request operations.MirrorTimelineAttachmentsDeleteRequest) (*operations.MirrorTimelineAttachmentsDeleteResponse, error) {
+func (s *timeline) MirrorTimelineAttachmentsDelete(ctx context.Context, request operations.MirrorTimelineAttachmentsDeleteRequest, security operations.MirrorTimelineAttachmentsDeleteSecurity) (*operations.MirrorTimelineAttachmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *timeline) MirrorTimelineAttachmentsDelete(ctx context.Context, request 
 }
 
 // MirrorTimelineAttachmentsGet - Retrieves an attachment on a timeline item by item ID and attachment ID.
-func (s *timeline) MirrorTimelineAttachmentsGet(ctx context.Context, request operations.MirrorTimelineAttachmentsGetRequest) (*operations.MirrorTimelineAttachmentsGetResponse, error) {
+func (s *timeline) MirrorTimelineAttachmentsGet(ctx context.Context, request operations.MirrorTimelineAttachmentsGetRequest, security operations.MirrorTimelineAttachmentsGetSecurity) (*operations.MirrorTimelineAttachmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,20 +120,20 @@ func (s *timeline) MirrorTimelineAttachmentsGet(ctx context.Context, request ope
 }
 
 // MirrorTimelineAttachmentsInsert - Adds a new attachment to a timeline item.
-func (s *timeline) MirrorTimelineAttachmentsInsert(ctx context.Context, request operations.MirrorTimelineAttachmentsInsertRequest) (*operations.MirrorTimelineAttachmentsInsertResponse, error) {
+func (s *timeline) MirrorTimelineAttachmentsInsert(ctx context.Context, request operations.MirrorTimelineAttachmentsInsertRequest, security operations.MirrorTimelineAttachmentsInsertSecurity) (*operations.MirrorTimelineAttachmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,20 +168,20 @@ func (s *timeline) MirrorTimelineAttachmentsInsert(ctx context.Context, request 
 }
 
 // MirrorTimelineAttachmentsList - Returns a list of attachments for a timeline item.
-func (s *timeline) MirrorTimelineAttachmentsList(ctx context.Context, request operations.MirrorTimelineAttachmentsListRequest) (*operations.MirrorTimelineAttachmentsListResponse, error) {
+func (s *timeline) MirrorTimelineAttachmentsList(ctx context.Context, request operations.MirrorTimelineAttachmentsListRequest, security operations.MirrorTimelineAttachmentsListSecurity) (*operations.MirrorTimelineAttachmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -216,20 +216,20 @@ func (s *timeline) MirrorTimelineAttachmentsList(ctx context.Context, request op
 }
 
 // MirrorTimelineDelete - Deletes a timeline item.
-func (s *timeline) MirrorTimelineDelete(ctx context.Context, request operations.MirrorTimelineDeleteRequest) (*operations.MirrorTimelineDeleteResponse, error) {
+func (s *timeline) MirrorTimelineDelete(ctx context.Context, request operations.MirrorTimelineDeleteRequest, security operations.MirrorTimelineDeleteSecurity) (*operations.MirrorTimelineDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -255,20 +255,20 @@ func (s *timeline) MirrorTimelineDelete(ctx context.Context, request operations.
 }
 
 // MirrorTimelineGet - Gets a single timeline item by ID.
-func (s *timeline) MirrorTimelineGet(ctx context.Context, request operations.MirrorTimelineGetRequest) (*operations.MirrorTimelineGetResponse, error) {
+func (s *timeline) MirrorTimelineGet(ctx context.Context, request operations.MirrorTimelineGetRequest, security operations.MirrorTimelineGetSecurity) (*operations.MirrorTimelineGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -303,11 +303,11 @@ func (s *timeline) MirrorTimelineGet(ctx context.Context, request operations.Mir
 }
 
 // MirrorTimelineInsert - Inserts a new item into the timeline.
-func (s *timeline) MirrorTimelineInsert(ctx context.Context, request operations.MirrorTimelineInsertRequest) (*operations.MirrorTimelineInsertResponse, error) {
+func (s *timeline) MirrorTimelineInsert(ctx context.Context, request operations.MirrorTimelineInsertRequest, security operations.MirrorTimelineInsertSecurity) (*operations.MirrorTimelineInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/timeline"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -319,11 +319,11 @@ func (s *timeline) MirrorTimelineInsert(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -358,7 +358,7 @@ func (s *timeline) MirrorTimelineInsert(ctx context.Context, request operations.
 }
 
 // MirrorTimelineList - Retrieves a list of timeline items for the authenticated user.
-func (s *timeline) MirrorTimelineList(ctx context.Context, request operations.MirrorTimelineListRequest) (*operations.MirrorTimelineListResponse, error) {
+func (s *timeline) MirrorTimelineList(ctx context.Context, request operations.MirrorTimelineListRequest, security operations.MirrorTimelineListSecurity) (*operations.MirrorTimelineListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/timeline"
 
@@ -367,11 +367,11 @@ func (s *timeline) MirrorTimelineList(ctx context.Context, request operations.Mi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,11 +406,11 @@ func (s *timeline) MirrorTimelineList(ctx context.Context, request operations.Mi
 }
 
 // MirrorTimelinePatch - Updates a timeline item in place. This method supports patch semantics.
-func (s *timeline) MirrorTimelinePatch(ctx context.Context, request operations.MirrorTimelinePatchRequest) (*operations.MirrorTimelinePatchResponse, error) {
+func (s *timeline) MirrorTimelinePatch(ctx context.Context, request operations.MirrorTimelinePatchRequest, security operations.MirrorTimelinePatchSecurity) (*operations.MirrorTimelinePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimelineItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -422,11 +422,11 @@ func (s *timeline) MirrorTimelinePatch(ctx context.Context, request operations.M
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -461,11 +461,11 @@ func (s *timeline) MirrorTimelinePatch(ctx context.Context, request operations.M
 }
 
 // MirrorTimelineUpdate - Updates a timeline item in place.
-func (s *timeline) MirrorTimelineUpdate(ctx context.Context, request operations.MirrorTimelineUpdateRequest) (*operations.MirrorTimelineUpdateResponse, error) {
+func (s *timeline) MirrorTimelineUpdate(ctx context.Context, request operations.MirrorTimelineUpdateRequest, security operations.MirrorTimelineUpdateSecurity) (*operations.MirrorTimelineUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -477,11 +477,11 @@ func (s *timeline) MirrorTimelineUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

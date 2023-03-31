@@ -6,34 +6,24 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type RecordingGetSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RecordingGetPathParams struct {
+type RecordingGetRequest struct {
+	// Get the `download_access_token` field for downloading meeting recordings.
+	IncludeFields *string `queryParam:"style=form,explode=true,name=include_fields"`
 	// To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.
 	//
 	// To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.
 	//
 	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request.
 	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type RecordingGetQueryParams struct {
-	// Get the `download_access_token` field for downloading meeting recordings.
-	IncludeFields *string `queryParam:"style=form,explode=true,name=include_fields"`
 	// Time to live (TTL) of the `download_access_token`. This is only valid if the `include_fields` query parameter contains `download_access_token`. The range is between 0-604800.
 	TTL *int64 `queryParam:"style=form,explode=true,name=ttl"`
-}
-
-type RecordingGetRequest struct {
-	PathParams  RecordingGetPathParams
-	QueryParams RecordingGetQueryParams
-	Security    RecordingGetSecurity
 }
 
 // RecordingGetRecordingFileListRecordingFilesStatusEnum - The recording status.

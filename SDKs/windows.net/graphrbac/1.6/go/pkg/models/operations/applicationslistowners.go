@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsListOwnersPathParams struct {
+type ApplicationsListOwnersRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the application for which to get owners.
 	ApplicationObjectID string `pathParam:"style=simple,explode=false,name=applicationObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsListOwnersQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsListOwnersRequest struct {
-	PathParams  ApplicationsListOwnersPathParams
-	QueryParams ApplicationsListOwnersQueryParams
 }
 
 type ApplicationsListOwnersResponse struct {

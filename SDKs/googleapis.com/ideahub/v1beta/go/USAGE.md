@@ -14,34 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
-        PathParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
+        DollarXgafv: "2",
+        GoogleSearchIdeahubV1betaIdeaActivity: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
-                "iure",
-                "magnam",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            Name: "debitis",
+            Name: "nulla",
             Topics: []string{
-                "delectus",
+                "illum",
+                "vel",
+                "error",
             },
-            Type: "POST_DRAFTED",
-            URI: "http://lasting-sex.net",
+            Type: "POST_DELETED",
+            URI: "http://innocent-effect.org",
         },
+        AccessToken: "ipsa",
+        Alt: "proto",
+        Callback: "tempora",
+        Fields: "suscipit",
+        Key: "molestiae",
+        OauthToken: "minus",
+        Parent: "placeat",
+        PrettyPrint: false,
+        QuotaUser: "voluptatum",
+        UploadType: "iusto",
+        UploadProtocol: "excepturi",
     }
 
     ctx := context.Background()

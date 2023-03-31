@@ -36,9 +36,9 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ContactModerators - Contact group moderators
 func (s *groups) ContactModerators(ctx context.Context, request operations.ContactModeratorsRequest) (*operations.ContactModeratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/contact", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/contact", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -83,16 +83,16 @@ func (s *groups) ContactModerators(ctx context.Context, request operations.Conta
 }
 
 // GetGroup - Retrieve a group
-func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupRequest) (*operations.GetGroupResponse, error) {
+func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupRequest, security operations.GetGroupSecurity) (*operations.GetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,7 +128,7 @@ func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupReques
 }
 
 // GetGroupsByIds - Retrieve multiple groups
-func (s *groups) GetGroupsByIds(ctx context.Context, request operations.GetGroupsByIdsRequest) (*operations.GetGroupsByIdsResponse, error) {
+func (s *groups) GetGroupsByIds(ctx context.Context, request operations.GetGroupsByIdsRequest, security operations.GetGroupsByIdsSecurity) (*operations.GetGroupsByIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups/multiple"
 
@@ -137,11 +137,11 @@ func (s *groups) GetGroupsByIds(ctx context.Context, request operations.GetGroup
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,7 +178,7 @@ func (s *groups) GetGroupsByIds(ctx context.Context, request operations.GetGroup
 
 // JoinGroups - Join groups
 // Request membership to one or more groups. <br /><br /> NOTE: Any group with a has_questions field set to true will also require answers to the groups' new member questionnaire to be submitted.  Groups waiting for answers will have their membership field set to 'pending-questions'.  And the questionnaire that needs to be answered can be found in the membership.questionnaire field of the group after a subscribe request is made to that group.
-func (s *groups) JoinGroups(ctx context.Context, request operations.JoinGroupsRequest) (*operations.JoinGroupsResponse, error) {
+func (s *groups) JoinGroups(ctx context.Context, request operations.JoinGroupsRequestBody) (*operations.JoinGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups/subscribe"
 
@@ -237,7 +237,7 @@ func (s *groups) JoinGroups(ctx context.Context, request operations.JoinGroupsRe
 // LeaveGroup - Leave a group
 func (s *groups) LeaveGroup(ctx context.Context, request operations.LeaveGroupRequest) (*operations.LeaveGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/unsubscribe", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/unsubscribe", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -282,7 +282,7 @@ func (s *groups) LeaveGroup(ctx context.Context, request operations.LeaveGroupRe
 }
 
 // SearchGroups - Search groups
-func (s *groups) SearchGroups(ctx context.Context, request operations.SearchGroupsRequest) (*operations.SearchGroupsResponse, error) {
+func (s *groups) SearchGroups(ctx context.Context, request operations.SearchGroupsRequest, security operations.SearchGroupsSecurity) (*operations.SearchGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups"
 
@@ -291,11 +291,11 @@ func (s *groups) SearchGroups(ctx context.Context, request operations.SearchGrou
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,9 +334,9 @@ func (s *groups) SearchGroups(ctx context.Context, request operations.SearchGrou
 // Submits answers to a groups' membership questionnaire. <br /><br /> The request body should be a JSON object mapping each question from the group membership.questionnaire.questions field to an answer (eg. {"Where do you live?": "New York City"} ). All questions are required so no null or empty string answers are allowed.
 func (s *groups) SubmitAnswers(ctx context.Context, request operations.SubmitAnswersRequest) (*operations.SubmitAnswersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/answers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

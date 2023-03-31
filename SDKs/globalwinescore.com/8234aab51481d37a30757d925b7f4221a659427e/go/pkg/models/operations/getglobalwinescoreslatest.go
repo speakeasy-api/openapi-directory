@@ -65,7 +65,8 @@ func (e *GetGlobalwinescoresLatestOrderingEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetGlobalwinescoresLatestQueryParams struct {
+type GetGlobalwinescoresLatestRequest struct {
+	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
 	// The lowercase color of the wine.
 	Color *GetGlobalwinescoresLatestColorEnum `queryParam:"style=form,explode=true,name=color"`
 	// Only show the <a href="See https://en.wikipedia.org/wiki/En_primeur">en primeur</a> GlobalWineScores
@@ -88,15 +89,6 @@ type GetGlobalwinescoresLatestQueryParams struct {
 	// The exact `id` of the wine. Can be used multiple times (e.g `?wine_id=114959&wine_id=114952`) <br/> If you need to find the `wine_id` for your wines, use our <a href="https://api.globalwinescore.com/search/" target="_blank">search page</a>
 	//
 	WineID []int64 `queryParam:"style=form,explode=true,name=wine_id"`
-}
-
-type GetGlobalwinescoresLatestHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetGlobalwinescoresLatestRequest struct {
-	QueryParams GetGlobalwinescoresLatestQueryParams
-	Headers     GetGlobalwinescoresLatestHeaders
 }
 
 type GetGlobalwinescoresLatestResponse struct {

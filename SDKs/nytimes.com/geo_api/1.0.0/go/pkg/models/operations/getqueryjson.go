@@ -33,7 +33,7 @@ func (e *GetQueryJSONFacetsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryJSONQueryParams struct {
+type GetQueryJSONRequest struct {
 	// Start date to end date in the following format- YYYY-MM-DD:YYYY-MM-DD
 	DateRange *string `queryParam:"style=form,explode=true,name=date_range"`
 	// The elevation of the specified place, in meters.
@@ -62,10 +62,6 @@ type GetQueryJSONQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Along with ne, forms a bounded box using the longitude and latitude coordinates specified as the southwest corner. The search results are limited to the resulting box. Two float values, separated by a comma `latitude,longitude` <br/> The ne parameter is required to use this parameter.
 	Sw *string `queryParam:"style=form,explode=true,name=sw"`
-}
-
-type GetQueryJSONRequest struct {
-	QueryParams GetQueryJSONQueryParams
 }
 
 // GetQueryJSON200ApplicationJSON - An array of events

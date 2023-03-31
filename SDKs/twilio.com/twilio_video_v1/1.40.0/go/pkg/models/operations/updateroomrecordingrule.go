@@ -12,12 +12,8 @@ var UpdateRoomRecordingRuleServerList = []string{
 }
 
 type UpdateRoomRecordingRuleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRoomRecordingRulePathParams struct {
-	// The SID of the Room resource where the recording rules to update apply.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest struct {
@@ -26,10 +22,9 @@ type UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest struct {
 }
 
 type UpdateRoomRecordingRuleRequest struct {
-	PathParams UpdateRoomRecordingRulePathParams
-	Request    *UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRoomRecordingRuleSecurity
-	ServerURL  *string
+	RequestBody *UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Room resource where the recording rules to update apply.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 }
 
 type UpdateRoomRecordingRuleResponse struct {

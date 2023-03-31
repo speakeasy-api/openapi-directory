@@ -38,7 +38,7 @@ func newItems(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // AddItem - Create item
-func (s *items) AddItem(ctx context.Context, request operations.AddItemRequest) (*operations.AddItemResponse, error) {
+func (s *items) AddItem(ctx context.Context, request shared.Item) (*operations.AddItemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/items"
 
@@ -94,7 +94,7 @@ func (s *items) AddItem(ctx context.Context, request operations.AddItemRequest) 
 // DeleteItem - Delete item
 func (s *items) DeleteItem(ctx context.Context, request operations.DeleteItemRequest) (*operations.DeleteItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *items) DeleteItem(ctx context.Context, request operations.DeleteItemReq
 // GetItemByID - Get item
 func (s *items) GetItemByID(ctx context.Context, request operations.GetItemByIDRequest) (*operations.GetItemByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +189,7 @@ func (s *items) GetItems(ctx context.Context, request operations.GetItemsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -230,9 +230,9 @@ func (s *items) GetItems(ctx context.Context, request operations.GetItemsRequest
 // UpdateItem - Update existing item
 func (s *items) UpdateItem(ctx context.Context, request operations.UpdateItemRequest) (*operations.UpdateItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItemUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

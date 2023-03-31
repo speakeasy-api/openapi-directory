@@ -12,20 +12,15 @@ var FetchCredentialListServerList = []string{
 }
 
 type FetchCredentialListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchCredentialListPathParams struct {
+type FetchCredentialListRequest struct {
 	// The unique string that we created to identify the CredentialList resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Trunk from which to fetch the credential list.
 	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
-}
-
-type FetchCredentialListRequest struct {
-	PathParams FetchCredentialListPathParams
-	Security   FetchCredentialListSecurity
-	ServerURL  *string
 }
 
 type FetchCredentialListResponse struct {

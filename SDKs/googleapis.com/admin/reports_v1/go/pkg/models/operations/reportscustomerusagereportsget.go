@@ -8,16 +8,11 @@ import (
 )
 
 type ReportsCustomerUsageReportsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReportsCustomerUsageReportsGetPathParams struct {
-	// Represents the date the usage occurred, based on PST time zone. The timestamp is in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
-	Date string `pathParam:"style=simple,explode=false,name=date"`
-}
-
-type ReportsCustomerUsageReportsGetQueryParams struct {
+type ReportsCustomerUsageReportsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,6 +23,8 @@ type ReportsCustomerUsageReportsGetQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// The unique ID of the customer to retrieve data for.
 	CustomerID *string `queryParam:"style=form,explode=true,name=customerId"`
+	// Represents the date the usage occurred, based on PST time zone. The timestamp is in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
+	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,12 +43,6 @@ type ReportsCustomerUsageReportsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ReportsCustomerUsageReportsGetRequest struct {
-	PathParams  ReportsCustomerUsageReportsGetPathParams
-	QueryParams ReportsCustomerUsageReportsGetQueryParams
-	Security    ReportsCustomerUsageReportsGetSecurity
 }
 
 type ReportsCustomerUsageReportsGetResponse struct {

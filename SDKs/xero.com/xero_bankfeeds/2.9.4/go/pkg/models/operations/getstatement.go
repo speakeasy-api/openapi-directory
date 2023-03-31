@@ -8,28 +8,15 @@ import (
 )
 
 type GetStatementSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetStatementPathParams struct {
-	StatementID string `pathParam:"style=simple,explode=false,name=statementID"`
-}
-
-type GetStatementQueryParams struct {
-	// statement id for single object
-	StatementID string `queryParam:"style=form,explode=true,name=statementId"`
-}
-
-type GetStatementHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetStatementRequest struct {
-	PathParams  GetStatementPathParams
-	QueryParams GetStatementQueryParams
-	Headers     GetStatementHeaders
-	Security    GetStatementSecurity
+	// Xero identifier for Tenant
+	XeroTenantID             string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	StatementIDPathParameter string `pathParam:"style=simple,explode=false,name=statementID"`
+	// statement id for single object
+	StatementIDQueryParameter string `queryParam:"style=form,explode=true,name=statementId"`
 }
 
 type GetStatementResponse struct {

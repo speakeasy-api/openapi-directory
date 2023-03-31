@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectPathParams struct {
-	// The id of the project to get.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetProjectHeaders struct {
+type GetProjectRequest struct {
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetProjectRequest struct {
-	PathParams GetProjectPathParams
-	Headers    GetProjectHeaders
+	// The id of the project to get.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetProjectResponse struct {

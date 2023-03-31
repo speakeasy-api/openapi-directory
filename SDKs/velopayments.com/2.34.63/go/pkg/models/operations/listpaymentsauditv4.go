@@ -170,7 +170,7 @@ func (e *ListPaymentsAuditV4TransmissionTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ListPaymentsAuditV4QueryParams struct {
+type ListPaymentsAuditV4Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -236,10 +236,6 @@ type ListPaymentsAuditV4QueryParams struct {
 	// * GACHO
 	//
 	TransmissionType *ListPaymentsAuditV4TransmissionTypeEnum `queryParam:"style=form,explode=true,name=transmissionType"`
-}
-
-type ListPaymentsAuditV4Request struct {
-	QueryParams ListPaymentsAuditV4QueryParams
 }
 
 type ListPaymentsAuditV4Response struct {

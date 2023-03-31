@@ -8,13 +8,7 @@ import (
 )
 
 type ViewSystemsAdvisoriesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ViewSystemsAdvisoriesRequest struct {
-	// Request body
-	Request  shared.ControllersSystemsAdvisoriesRequest `request:"mediaType=application/json"`
-	Security ViewSystemsAdvisoriesSecurity
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 type ViewSystemsAdvisoriesResponse struct {

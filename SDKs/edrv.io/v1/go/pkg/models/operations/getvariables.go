@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetVariablesPathParams struct {
+type GetVariablesRequest struct {
 	// The chargestation id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVariablesRequest struct {
-	PathParams GetVariablesPathParams
 }
 
 type GetVariablesResponse struct {

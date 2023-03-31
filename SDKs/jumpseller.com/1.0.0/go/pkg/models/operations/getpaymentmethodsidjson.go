@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPaymentMethodsIDJSONPathParams struct {
-	// Id of the Payment Method
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPaymentMethodsIDJSONQueryParams struct {
+type GetPaymentMethodsIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Payment Method
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetPaymentMethodsIDJSONRequest struct {
-	PathParams  GetPaymentMethodsIDJSONPathParams
-	QueryParams GetPaymentMethodsIDJSONQueryParams
 }
 
 type GetPaymentMethodsIDJSONResponse struct {

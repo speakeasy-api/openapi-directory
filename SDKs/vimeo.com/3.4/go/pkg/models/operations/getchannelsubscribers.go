@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelSubscribersPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
 // GetChannelSubscribersDirectionEnum - The sort direction of the results.
 type GetChannelSubscribersDirectionEnum string
 
@@ -83,7 +78,9 @@ func (e *GetChannelSubscribersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelSubscribersQueryParams struct {
+type GetChannelSubscribersRequest struct {
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The sort direction of the results.
 	Direction *GetChannelSubscribersDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -96,11 +93,6 @@ type GetChannelSubscribersQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetChannelSubscribersSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetChannelSubscribersRequest struct {
-	PathParams  GetChannelSubscribersPathParams
-	QueryParams GetChannelSubscribersQueryParams
 }
 
 type GetChannelSubscribersResponse struct {

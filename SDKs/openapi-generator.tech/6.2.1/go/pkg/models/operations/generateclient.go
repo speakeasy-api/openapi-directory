@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateClientPathParams struct {
+type GenerateClientRequest struct {
+	// Configuration for building the client library
+	GeneratorInput shared.GeneratorInput `request:"mediaType=application/json"`
 	// The target language for the client library
 	Language string `pathParam:"style=simple,explode=false,name=language"`
-}
-
-type GenerateClientRequest struct {
-	PathParams GenerateClientPathParams
-	// Configuration for building the client library
-	Request shared.GeneratorInput `request:"mediaType=application/json"`
 }
 
 type GenerateClientResponse struct {

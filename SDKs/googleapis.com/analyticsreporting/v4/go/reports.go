@@ -33,11 +33,11 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AnalyticsreportingReportsBatchGet - Returns the Analytics data.
-func (s *reports) AnalyticsreportingReportsBatchGet(ctx context.Context, request operations.AnalyticsreportingReportsBatchGetRequest) (*operations.AnalyticsreportingReportsBatchGetResponse, error) {
+func (s *reports) AnalyticsreportingReportsBatchGet(ctx context.Context, request operations.AnalyticsreportingReportsBatchGetRequest, security operations.AnalyticsreportingReportsBatchGetSecurity) (*operations.AnalyticsreportingReportsBatchGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/reports:batchGet"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetReportsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *reports) AnalyticsreportingReportsBatchGet(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

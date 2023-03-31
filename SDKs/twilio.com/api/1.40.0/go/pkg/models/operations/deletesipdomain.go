@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSipDomainServerList = []string{
@@ -12,20 +11,15 @@ var DeleteSipDomainServerList = []string{
 }
 
 type DeleteSipDomainSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSipDomainPathParams struct {
+type DeleteSipDomainRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the SipDomain resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSipDomainRequest struct {
-	PathParams DeleteSipDomainPathParams
-	Security   DeleteSipDomainSecurity
-	ServerURL  *string
 }
 
 type DeleteSipDomainResponse struct {

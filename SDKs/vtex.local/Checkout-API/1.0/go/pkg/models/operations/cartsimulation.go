@@ -6,22 +6,6 @@ import (
 	"net/http"
 )
 
-type CartSimulationQueryParams struct {
-	// This parameter defines which promotions apply to the simulation. Use `0` for simulations at cart stage, which means all promotions apply. In case of window simulation use `1`, which indicates promotions that apply nominal discounts over the total purchase value shouldn't be considered on the simulation.
-	//
-	// Note that if this not sent, the parameter is `1`.
-	RnbBehavior *int64 `queryParam:"style=form,explode=true,name=RnbBehavior"`
-	// Trade Policy (Sales Channel) identification.
-	Sc *int64 `queryParam:"style=form,explode=true,name=sc"`
-}
-
-type CartSimulationHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CartSimulationRequestBodyItems struct {
 	// The SKU ID.
 	ID *string `json:"id,omitempty"`
@@ -43,9 +27,17 @@ type CartSimulationRequestBody struct {
 }
 
 type CartSimulationRequest struct {
-	QueryParams CartSimulationQueryParams
-	Headers     CartSimulationHeaders
-	Request     *CartSimulationRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                     `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *CartSimulationRequestBody `request:"mediaType=application/json"`
+	// This parameter defines which promotions apply to the simulation. Use `0` for simulations at cart stage, which means all promotions apply. In case of window simulation use `1`, which indicates promotions that apply nominal discounts over the total purchase value shouldn't be considered on the simulation.
+	//
+	// Note that if this not sent, the parameter is `1`.
+	RnbBehavior *int64 `queryParam:"style=form,explode=true,name=RnbBehavior"`
+	// Trade Policy (Sales Channel) identification.
+	Sc *int64 `queryParam:"style=form,explode=true,name=sc"`
 }
 
 type CartSimulation200ApplicationJSONItemsPriceDefinitionSellingPrices struct {

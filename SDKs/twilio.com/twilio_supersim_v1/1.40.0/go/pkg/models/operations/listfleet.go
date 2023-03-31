@@ -12,10 +12,11 @@ var ListFleetServerList = []string{
 }
 
 type ListFleetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListFleetQueryParams struct {
+type ListFleetRequest struct {
 	// The SID or unique name of the Network Access Profile that controls which cellular networks the Fleet's SIMs can connect to.
 	NetworkAccessProfile *string `queryParam:"style=form,explode=true,name=NetworkAccessProfile"`
 	// The page index. This value is simply for client state.
@@ -24,12 +25,6 @@ type ListFleetQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListFleetRequest struct {
-	QueryParams ListFleetQueryParams
-	Security    ListFleetSecurity
-	ServerURL   *string
 }
 
 type ListFleetListFleetResponseMeta struct {

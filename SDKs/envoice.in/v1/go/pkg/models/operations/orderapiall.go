@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIAllQueryParams struct {
-	QueryOptionsPage     *int `queryParam:"style=form,explode=true,name=queryOptions.page"`
-	QueryOptionsPageSize *int `queryParam:"style=form,explode=true,name=queryOptions.pageSize"`
-}
-
-type OrderAPIAllHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type OrderAPIAllRequest struct {
-	QueryParams OrderAPIAllQueryParams
-	Headers     OrderAPIAllHeaders
+	QueryOptionsPage     *int   `queryParam:"style=form,explode=true,name=queryOptions.page"`
+	QueryOptionsPageSize *int   `queryParam:"style=form,explode=true,name=queryOptions.pageSize"`
+	XAuthKey             string `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret          string `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type OrderAPIAllResponse struct {

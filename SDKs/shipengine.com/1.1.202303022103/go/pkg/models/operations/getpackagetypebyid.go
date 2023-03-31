@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPackageTypeByIDPathParams struct {
+type GetPackageTypeByIDRequest struct {
 	// Package ID
 	PackageID string `pathParam:"style=simple,explode=false,name=package_id"`
-}
-
-type GetPackageTypeByIDRequest struct {
-	PathParams GetPackageTypeByIDPathParams
 }
 
 type GetPackageTypeByIDResponse struct {

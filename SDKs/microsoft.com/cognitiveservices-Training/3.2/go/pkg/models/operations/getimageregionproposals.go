@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImageRegionProposalsPathParams struct {
+type GetImageRegionProposalsRequest struct {
 	// The image id.
 	ImageID string `pathParam:"style=simple,explode=false,name=imageId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetImageRegionProposalsRequest struct {
-	PathParams GetImageRegionProposalsPathParams
 }
 
 type GetImageRegionProposalsResponse struct {

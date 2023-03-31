@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidSplashSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess - Details associated with a free access plan with limits.
 type UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess struct {
 	// How long a device can use a network for free.
@@ -278,8 +273,9 @@ type UpdateNetworkWirelessSsidSplashSettingsRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidSplashSettingsRequest struct {
-	PathParams UpdateNetworkWirelessSsidSplashSettingsPathParams
-	Request    *UpdateNetworkWirelessSsidSplashSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidSplashSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                              `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                              `pathParam:"style=simple,explode=false,name=number"`
 }
 
 // UpdateNetworkWirelessSsidSplashSettings200ApplicationJSONBillingFreeAccess - Details associated with a free access plan with limits

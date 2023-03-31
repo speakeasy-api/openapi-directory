@@ -8,23 +8,23 @@ import (
 )
 
 type StorageProjectsHmacKeysGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysGetSecurity struct {
@@ -34,14 +34,9 @@ type StorageProjectsHmacKeysGetSecurity struct {
 	Option4 *StorageProjectsHmacKeysGetSecurityOption4 `security:"option"`
 }
 
-type StorageProjectsHmacKeysGetPathParams struct {
+type StorageProjectsHmacKeysGetRequest struct {
 	// Name of the HMAC key.
 	AccessID string `pathParam:"style=simple,explode=false,name=accessId"`
-	// Project ID owning the service account of the requested key.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type StorageProjectsHmacKeysGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -52,6 +47,8 @@ type StorageProjectsHmacKeysGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID owning the service account of the requested key.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Upload protocol for media (e.g. "media", "multipart", "resumable").
@@ -60,12 +57,6 @@ type StorageProjectsHmacKeysGetQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageProjectsHmacKeysGetRequest struct {
-	PathParams  StorageProjectsHmacKeysGetPathParams
-	QueryParams StorageProjectsHmacKeysGetQueryParams
-	Security    StorageProjectsHmacKeysGetSecurity
 }
 
 type StorageProjectsHmacKeysGetResponse struct {

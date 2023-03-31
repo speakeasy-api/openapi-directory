@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsCreatePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsCreateRequestBody struct {
 	// The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
 	Base string `json:"base"`
@@ -34,8 +27,11 @@ type PullsCreateRequestBody struct {
 }
 
 type PullsCreateRequest struct {
-	PathParams PullsCreatePathParams
-	Request    PullsCreateRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsCreateRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsCreateResponse struct {

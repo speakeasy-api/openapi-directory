@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDefaultTaskStatusListPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type GetDefaultTaskStatusListRequest struct {
-	PathParams GetDefaultTaskStatusListPathParams
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type GetDefaultTaskStatusListResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AspByDistanceUsV1AirspaceDistanceQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type AspByDistanceUsV1AirspaceDistanceQueryPostRequest struct {
-	Headers AspByDistanceUsV1AirspaceDistanceQueryPostHeaders
-	Request shared.AirspaceByDistance `request:"mediaType=application/json"`
+	AirspaceByDistance shared.AirspaceByDistance `request:"mediaType=application/json"`
+	XAPIKey            *string                   `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type AspByDistanceUsV1AirspaceDistanceQueryPostResponse struct {

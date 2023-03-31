@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type Delete14PathParams struct {
-	// task's internal identifier
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type Delete14QueryParams struct {
+type Delete14Request struct {
 	// force jobs removal (ie. started or ready)
 	ForceJobsRemoval *bool `queryParam:"style=form,explode=true,name=forceJobsRemoval"`
 	// remove external projects (ie. from CAT Tool)
 	RemoveExternalProjects *bool `queryParam:"style=form,explode=true,name=removeExternalProjects"`
 	// remove files from disc
 	RemoveFilesFromDisc *bool `queryParam:"style=form,explode=true,name=removeFilesFromDisc"`
-}
-
-type Delete14Request struct {
-	PathParams  Delete14PathParams
-	QueryParams Delete14QueryParams
+	// task's internal identifier
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type Delete14Response struct {

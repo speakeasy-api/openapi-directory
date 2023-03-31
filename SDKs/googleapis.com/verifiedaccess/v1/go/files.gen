@@ -18,7 +18,6 @@ pkg/models/shared/challenge.go
 pkg/models/shared/signeddata.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/verifychallengeresponseresult.go
 pkg/models/shared/verifychallengeresponserequest.go
 USAGE.md

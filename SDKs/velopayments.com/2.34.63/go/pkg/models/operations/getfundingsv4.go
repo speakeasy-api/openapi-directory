@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFundingsV4QueryParams struct {
+type GetFundingsV4Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -20,10 +20,6 @@ type GetFundingsV4QueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The source account name
 	SourceAccountName *string `queryParam:"style=form,explode=true,name=sourceAccountName"`
-}
-
-type GetFundingsV4Request struct {
-	QueryParams GetFundingsV4QueryParams
 }
 
 type GetFundingsV4Response struct {

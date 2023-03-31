@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ClearUserSessionsRequest(
-    path_params=operations.ClearUserSessionsPathParams(
-        user_id="unde",
-    ),
-    request="nihil".encode(),
+    request_body="corrupti".encode(),
+    user_id="provident",
 )
     
 res = s.clear_user_sessions(req)

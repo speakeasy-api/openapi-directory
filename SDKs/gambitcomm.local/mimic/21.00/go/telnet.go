@@ -37,7 +37,7 @@ func newTelnet(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Logon change allows (hidden) commands for a different access mode to run.
 func (s *telnet) ProtocolTelnetConnectionLogon(ctx context.Context, request operations.ProtocolTelnetConnectionLogonRequest) (*operations.ProtocolTelnetConnectionLogonResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/logon/{connectionID}/{user}/{password}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/logon/{connectionID}/{user}/{password}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *telnet) ProtocolTelnetConnectionLogon(ctx context.Context, request oper
 // Equivalent of the command typed in by the user.
 func (s *telnet) ProtocolTelnetConnectionRequest(ctx context.Context, request operations.ProtocolTelnetConnectionRequestRequest) (*operations.ProtocolTelnetConnectionRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/request/{connectionID}/{command}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/request/{connectionID}/{command}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *telnet) ProtocolTelnetConnectionRequest(ctx context.Context, request op
 // Signal name is either connect or idle
 func (s *telnet) ProtocolTelnetConnectionSignal(ctx context.Context, request operations.ProtocolTelnetConnectionSignalRequest) (*operations.ProtocolTelnetConnectionSignalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/signal/{connectionID}/{signalName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/signal/{connectionID}/{signalName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *telnet) ProtocolTelnetConnectionSignal(ctx context.Context, request ope
 // Agent's TELNET configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *telnet) ProtocolTelnetGetArgs(ctx context.Context, request operations.ProtocolTelnetGetArgsRequest) (*operations.ProtocolTelnetGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/args", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/args", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *telnet) ProtocolTelnetGetArgs(ctx context.Context, request operations.P
 // Agent's TELNET configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *telnet) ProtocolTelnetGetConfig(ctx context.Context, request operations.ProtocolTelnetGetConfigRequest) (*operations.ProtocolTelnetGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *telnet) ProtocolTelnetGetConfig(ctx context.Context, request operations
 // Statistics of fields indicated in the headers
 func (s *telnet) ProtocolTelnetGetStatistics(ctx context.Context, request operations.ProtocolTelnetGetStatisticsRequest) (*operations.ProtocolTelnetGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -359,7 +359,7 @@ func (s *telnet) ProtocolTelnetGetStatsHdr(ctx context.Context) (*operations.Pro
 // Trace 1 means enabled, 0 means not
 func (s *telnet) ProtocolTelnetGetTrace(ctx context.Context, request operations.ProtocolTelnetGetTraceRequest) (*operations.ProtocolTelnetGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/trace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/trace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,7 +405,7 @@ func (s *telnet) ProtocolTelnetGetTrace(ctx context.Context, request operations.
 // By default, the MIMIC TELNET server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *telnet) ProtocolTelnetIpaliasDisable(ctx context.Context, request operations.ProtocolTelnetIpaliasDisableRequest) (*operations.ProtocolTelnetIpaliasDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/disable/{ipaddress}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/disable/{ipaddress}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -452,7 +452,7 @@ func (s *telnet) ProtocolTelnetIpaliasDisable(ctx context.Context, request opera
 // By default, the MIMIC TELNET server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *telnet) ProtocolTelnetIpaliasEnable(ctx context.Context, request operations.ProtocolTelnetIpaliasEnableRequest) (*operations.ProtocolTelnetIpaliasEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/enable/{ipaddress}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/enable/{ipaddress}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -499,7 +499,7 @@ func (s *telnet) ProtocolTelnetIpaliasEnable(ctx context.Context, request operat
 // By default, the MIMIC TELNET server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *telnet) ProtocolTelnetIpaliasIsenabled(ctx context.Context, request operations.ProtocolTelnetIpaliasIsenabledRequest) (*operations.ProtocolTelnetIpaliasIsenabledResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/isenabled/{ipaddress}/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/isenabled/{ipaddress}/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -546,7 +546,7 @@ func (s *telnet) ProtocolTelnetIpaliasIsenabled(ctx context.Context, request ope
 // By default, the MIMIC TELNET server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *telnet) ProtocolTelnetIpaliasList(ctx context.Context, request operations.ProtocolTelnetIpaliasListRequest) (*operations.ProtocolTelnetIpaliasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +592,7 @@ func (s *telnet) ProtocolTelnetIpaliasList(ctx context.Context, request operatio
 // IDs of all connected connections
 func (s *telnet) ProtocolTelnetServerGetConnections(ctx context.Context, request operations.ProtocolTelnetServerGetConnectionsRequest) (*operations.ProtocolTelnetServerGetConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -638,7 +638,7 @@ func (s *telnet) ProtocolTelnetServerGetConnections(ctx context.Context, request
 // Keymap file name
 func (s *telnet) ProtocolTelnetServerGetKeymap(ctx context.Context, request operations.ProtocolTelnetServerGetKeymapRequest) (*operations.ProtocolTelnetServerGetKeymapResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/keymap", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/keymap", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -684,7 +684,7 @@ func (s *telnet) ProtocolTelnetServerGetKeymap(ctx context.Context, request oper
 // Rules db file name
 func (s *telnet) ProtocolTelnetServerGetRulesdb(ctx context.Context, request operations.ProtocolTelnetServerGetRulesdbRequest) (*operations.ProtocolTelnetServerGetRulesdbResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/rulesdb", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/rulesdb", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -730,7 +730,7 @@ func (s *telnet) ProtocolTelnetServerGetRulesdb(ctx context.Context, request ope
 // Return 1 means accepting connections, 0 not
 func (s *telnet) ProtocolTelnetServerGetState(ctx context.Context, request operations.ProtocolTelnetServerGetStateRequest) (*operations.ProtocolTelnetServerGetStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/state", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -776,7 +776,7 @@ func (s *telnet) ProtocolTelnetServerGetState(ctx context.Context, request opera
 // User db file name
 func (s *telnet) ProtocolTelnetServerGetUserdb(ctx context.Context, request operations.ProtocolTelnetServerGetUserdbRequest) (*operations.ProtocolTelnetServerGetUserdbResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/userdb", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/userdb", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -822,7 +822,7 @@ func (s *telnet) ProtocolTelnetServerGetUserdb(ctx context.Context, request oper
 // List of users
 func (s *telnet) ProtocolTelnetServerGetUsers(ctx context.Context, request operations.ProtocolTelnetServerGetUsersRequest) (*operations.ProtocolTelnetServerGetUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -868,7 +868,7 @@ func (s *telnet) ProtocolTelnetServerGetUsers(ctx context.Context, request opera
 // Agent's TELNET configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *telnet) ProtocolTelnetSetConfig(ctx context.Context, request operations.ProtocolTelnetSetConfigRequest) (*operations.ProtocolTelnetSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/config/{argument}/{value}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/config/{argument}/{value}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -915,7 +915,7 @@ func (s *telnet) ProtocolTelnetSetConfig(ctx context.Context, request operations
 // 1 to enable, 0 to disable
 func (s *telnet) ProtocolTelnetSetTrace(ctx context.Context, request operations.ProtocolTelnetSetTraceRequest) (*operations.ProtocolTelnetSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/trace/{enableOrNot}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/trace/{enableOrNot}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

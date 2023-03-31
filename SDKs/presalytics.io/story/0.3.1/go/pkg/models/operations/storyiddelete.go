@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDDeletePathParams struct {
+type StoryIDDeleteRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDDeleteRequest struct {
-	PathParams StoryIDDeletePathParams
 }
 
 type StoryIDDeleteResponse struct {

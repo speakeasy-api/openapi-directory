@@ -11,10 +11,6 @@ type PostAuthRevokeRequestBody struct {
 	Token *string `json:"token,omitempty"`
 }
 
-type PostAuthRevokeRequest struct {
-	Request PostAuthRevokeRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAuthRevoke500ApplicationJSON - Internal server error
 type PostAuthRevoke500ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

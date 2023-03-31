@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPotHoldingsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPotHoldingsPathParams struct {
-	// Pot Id
-	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
-}
-
-type GetPotHoldingsHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetPotHoldingsRequest struct {
-	PathParams GetPotHoldingsPathParams
-	Headers    GetPotHoldingsHeaders
-	Security   GetPotHoldingsSecurity
+	// Pot Id
+	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetPotHoldings500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

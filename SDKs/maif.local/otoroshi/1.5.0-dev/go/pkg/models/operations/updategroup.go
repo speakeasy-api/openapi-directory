@@ -8,18 +8,14 @@ import (
 )
 
 type UpdateGroupSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateGroupPathParams struct {
-	// The service group id
-	ServiceGroupID string `pathParam:"style=simple,explode=false,name=serviceGroupId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateGroupRequest struct {
-	PathParams UpdateGroupPathParams
-	Request    *shared.Group `request:"mediaType=application/json"`
-	Security   UpdateGroupSecurity
+	Group *shared.Group `request:"mediaType=application/json"`
+	// The service group id
+	ServiceGroupID string `pathParam:"style=simple,explode=false,name=serviceGroupId"`
 }
 
 type UpdateGroupResponse struct {

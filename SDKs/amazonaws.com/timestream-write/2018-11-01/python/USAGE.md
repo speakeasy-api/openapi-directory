@@ -3,49 +3,166 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateDatabaseRequest(
-    headers=operations.CreateDatabaseHeaders(
-        x_amz_algorithm="omnis",
-        x_amz_content_sha256="accusantium",
-        x_amz_credential="architecto",
-        x_amz_date="omnis",
-        x_amz_security_token="porro",
-        x_amz_signature="ut",
-        x_amz_signed_headers="eius",
-        x_amz_target="Timestream_20181101.CreateDatabase",
-    ),
-    request=shared.CreateDatabaseRequest(
-        database_name="beatae",
-        kms_key_id="quia",
-        tags=[
-            shared.Tag(
-                key="id",
-                value="dolorem",
-            ),
-            shared.Tag(
-                key="et",
-                value="quibusdam",
-            ),
-            shared.Tag(
-                key="cupiditate",
-                value="eaque",
-            ),
-        ],
+        hmac="YOUR_API_KEY_HERE",
     ),
 )
-    
-res = s.create_database(req)
 
-if res.create_database_response is not None:
+
+req = operations.CreateBatchLoadTaskRequest(
+    create_batch_load_task_request=shared.CreateBatchLoadTaskRequest(
+        client_token="corrupti",
+        data_model_configuration=shared.DataModelConfiguration(
+            data_model=shared.DataModel(
+                dimension_mappings=[
+                    shared.DimensionMapping(
+                        destination_column="distinctio",
+                        source_column="quibusdam",
+                    ),
+                    shared.DimensionMapping(
+                        destination_column="unde",
+                        source_column="nulla",
+                    ),
+                    shared.DimensionMapping(
+                        destination_column="corrupti",
+                        source_column="illum",
+                    ),
+                ],
+                measure_name_column="vel",
+                mixed_measure_mappings=[
+                    shared.MixedMeasureMapping(
+                        measure_name="deserunt",
+                        measure_value_type="VARCHAR",
+                        multi_measure_attribute_mappings=[
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="BIGINT",
+                                source_column="debitis",
+                                target_multi_measure_attribute_name="ipsa",
+                            ),
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="TIMESTAMP",
+                                source_column="tempora",
+                                target_multi_measure_attribute_name="suscipit",
+                            ),
+                        ],
+                        source_column="molestiae",
+                        target_measure_name="minus",
+                    ),
+                    shared.MixedMeasureMapping(
+                        measure_name="placeat",
+                        measure_value_type="BOOLEAN",
+                        multi_measure_attribute_mappings=[
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="BOOLEAN",
+                                source_column="nisi",
+                                target_multi_measure_attribute_name="recusandae",
+                            ),
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="TIMESTAMP",
+                                source_column="ab",
+                                target_multi_measure_attribute_name="quis",
+                            ),
+                        ],
+                        source_column="veritatis",
+                        target_measure_name="deserunt",
+                    ),
+                    shared.MixedMeasureMapping(
+                        measure_name="perferendis",
+                        measure_value_type="VARCHAR",
+                        multi_measure_attribute_mappings=[
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="TIMESTAMP",
+                                source_column="quo",
+                                target_multi_measure_attribute_name="odit",
+                            ),
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="TIMESTAMP",
+                                source_column="at",
+                                target_multi_measure_attribute_name="maiores",
+                            ),
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="BOOLEAN",
+                                source_column="quod",
+                                target_multi_measure_attribute_name="quod",
+                            ),
+                            shared.MultiMeasureAttributeMapping(
+                                measure_value_type="BOOLEAN",
+                                source_column="totam",
+                                target_multi_measure_attribute_name="porro",
+                            ),
+                        ],
+                        source_column="dolorum",
+                        target_measure_name="dicta",
+                    ),
+                ],
+                multi_measure_mappings=shared.MultiMeasureMappings(
+                    multi_measure_attribute_mappings=[
+                        shared.MultiMeasureAttributeMapping(
+                            measure_value_type="VARCHAR",
+                            source_column="occaecati",
+                            target_multi_measure_attribute_name="fugit",
+                        ),
+                        shared.MultiMeasureAttributeMapping(
+                            measure_value_type="BOOLEAN",
+                            source_column="hic",
+                            target_multi_measure_attribute_name="optio",
+                        ),
+                        shared.MultiMeasureAttributeMapping(
+                            measure_value_type="BOOLEAN",
+                            source_column="beatae",
+                            target_multi_measure_attribute_name="commodi",
+                        ),
+                    ],
+                    target_multi_measure_name="molestiae",
+                ),
+                time_column="modi",
+                time_unit="MILLISECONDS",
+            ),
+            data_model_s3_configuration=shared.DataModelS3Configuration(
+                bucket_name="impedit",
+                object_key="cum",
+            ),
+        ),
+        data_source_configuration=shared.DataSourceConfiguration(
+            csv_configuration=shared.CsvConfiguration(
+                column_separator="esse",
+                escape_char="ipsum",
+                null_value="excepturi",
+                quote_char="aspernatur",
+                trim_white_space=False,
+            ),
+            data_format="CSV",
+            data_source_s3_configuration=shared.DataSourceS3Configuration(
+                bucket_name="perferendis",
+                object_key_prefix="ad",
+            ),
+        ),
+        record_version=617636,
+        report_configuration=shared.ReportConfiguration(
+            report_s3_configuration=shared.ReportS3Configuration(
+                bucket_name="sed",
+                encryption_option="SSE_KMS",
+                kms_key_id="dolor",
+                object_key_prefix="natus",
+            ),
+        ),
+        target_database_name="laboriosam",
+        target_table_name="hic",
+    ),
+    x_amz_algorithm="saepe",
+    x_amz_content_sha256="fuga",
+    x_amz_credential="in",
+    x_amz_date="corporis",
+    x_amz_security_token="iste",
+    x_amz_signature="iure",
+    x_amz_signed_headers="saepe",
+    x_amz_target="Timestream_20181101.CreateBatchLoadTask",
+)
+    
+res = s.create_batch_load_task(req)
+
+if res.create_batch_load_task_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

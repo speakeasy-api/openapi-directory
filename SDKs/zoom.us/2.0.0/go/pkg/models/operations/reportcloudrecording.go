@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 	"time"
 )
 
 type ReportCloudRecordingSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReportCloudRecordingQueryParams struct {
+type ReportCloudRecordingRequest struct {
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
 	From types.Date `queryParam:"style=form,explode=true,name=from"`
 	// End date.
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ReportCloudRecordingRequest struct {
-	QueryParams ReportCloudRecordingQueryParams
-	Security    ReportCloudRecordingSecurity
 }
 
 type ReportCloudRecording200ApplicationXMLCloudRecordingStorage struct {

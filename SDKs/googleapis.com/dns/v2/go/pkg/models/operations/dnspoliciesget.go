@@ -8,23 +8,23 @@ import (
 )
 
 type DNSPoliciesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSPoliciesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSPoliciesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSPoliciesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSPoliciesGetSecurity struct {
@@ -34,16 +34,7 @@ type DNSPoliciesGetSecurity struct {
 	Option4 *DNSPoliciesGetSecurityOption4 `security:"option"`
 }
 
-type DNSPoliciesGetPathParams struct {
-	// Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// User given friendly name of the policy addressed by this request.
-	Policy string `pathParam:"style=simple,explode=false,name=policy"`
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DNSPoliciesGetQueryParams struct {
+type DNSPoliciesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,22 +49,22 @@ type DNSPoliciesGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// User given friendly name of the policy addressed by this request.
+	Policy string `pathParam:"style=simple,explode=false,name=policy"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSPoliciesGetRequest struct {
-	PathParams  DNSPoliciesGetPathParams
-	QueryParams DNSPoliciesGetQueryParams
-	Security    DNSPoliciesGetSecurity
 }
 
 type DNSPoliciesGetResponse struct {

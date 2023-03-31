@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateVcenterSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateVcenterPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateVcenterRequest struct {
-	PathParams UpdateVcenterPathParams
-	Request    *shared.VCenterDataSource `request:"mediaType=application/json"`
-	Security   UpdateVcenterSecurity
+	VCenterDataSource *shared.VCenterDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateVcenterResponse struct {

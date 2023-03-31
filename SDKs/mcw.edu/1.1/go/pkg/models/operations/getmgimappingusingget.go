@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETMGIMappingUsingGETPathParams struct {
+type GETMGIMappingUsingGETRequest struct {
 	// RGD ID
 	RgdID int `pathParam:"style=simple,explode=false,name=rgdId"`
-}
-
-type GETMGIMappingUsingGETRequest struct {
-	PathParams GETMGIMappingUsingGETPathParams
 }
 
 type GETMGIMappingUsingGETResponse struct {

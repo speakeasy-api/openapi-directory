@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SyncRelationsWithSchemaPathParams struct {
+type SyncRelationsWithSchemaRequest struct {
 	// Id of the API
 	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
 	// Id of the API version
@@ -15,10 +15,6 @@ type SyncRelationsWithSchemaPathParams struct {
 	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
 	// Relation type (e.g documentation, contracttest, integrationtest, testsuite, mock, monitor)
 	EntityType string `pathParam:"style=simple,explode=false,name=entityType"`
-}
-
-type SyncRelationsWithSchemaRequest struct {
-	PathParams SyncRelationsWithSchemaPathParams
 }
 
 type SyncRelationsWithSchema400ApplicationJSONError struct {

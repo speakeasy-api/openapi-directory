@@ -9,38 +9,6 @@ import (
 	"time"
 )
 
-// GetOptimalDirectionsOutputFormatOutputFormatEnum - Format of representation
-type GetOptimalDirectionsOutputFormatOutputFormatEnum string
-
-const (
-	GetOptimalDirectionsOutputFormatOutputFormatEnumJSON GetOptimalDirectionsOutputFormatOutputFormatEnum = "json"
-	GetOptimalDirectionsOutputFormatOutputFormatEnumKml  GetOptimalDirectionsOutputFormatOutputFormatEnum = "kml"
-	GetOptimalDirectionsOutputFormatOutputFormatEnumHTML GetOptimalDirectionsOutputFormatOutputFormatEnum = "html"
-)
-
-func (e *GetOptimalDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "kml":
-		fallthrough
-	case "html":
-		*e = GetOptimalDirectionsOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetOptimalDirectionsOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetOptimalDirectionsOutputFormatPathParams struct {
-	// Format of representation
-	OutputFormat GetOptimalDirectionsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetOptimalDirectionsOutputFormatCriteriaEnum - Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
 type GetOptimalDirectionsOutputFormatCriteriaEnum string
 
@@ -89,6 +57,33 @@ func (e *GetOptimalDirectionsOutputFormatDistanceUnitEnum) UnmarshalJSON(data []
 	}
 }
 
+// GetOptimalDirectionsOutputFormatOutputFormatEnum - Format of representation
+type GetOptimalDirectionsOutputFormatOutputFormatEnum string
+
+const (
+	GetOptimalDirectionsOutputFormatOutputFormatEnumJSON GetOptimalDirectionsOutputFormatOutputFormatEnum = "json"
+	GetOptimalDirectionsOutputFormatOutputFormatEnumKml  GetOptimalDirectionsOutputFormatOutputFormatEnum = "kml"
+	GetOptimalDirectionsOutputFormatOutputFormatEnumHTML GetOptimalDirectionsOutputFormatOutputFormatEnum = "html"
+)
+
+func (e *GetOptimalDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "kml":
+		fallthrough
+	case "html":
+		*e = GetOptimalDirectionsOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetOptimalDirectionsOutputFormatOutputFormatEnum: %s", s)
+	}
+}
+
 // GetOptimalDirectionsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetOptimalDirectionsOutputFormatOutputSrsEnum string
 
@@ -131,7 +126,7 @@ func (e *GetOptimalDirectionsOutputFormatOutputSrsEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetOptimalDirectionsOutputFormatQueryParams struct {
+type GetOptimalDirectionsOutputFormatRequest struct {
 	// If true, route starts and ends on same side of road as start and end points.Default is false.
 	CorrectSide *bool `queryParam:"style=form,explode=true,name=correctSide"`
 	// Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
@@ -142,6 +137,8 @@ type GetOptimalDirectionsOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *GetOptimalDirectionsOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
+	// Format of representation
+	OutputFormat GetOptimalDirectionsOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetOptimalDirectionsOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'>points</a>
@@ -150,11 +147,6 @@ type GetOptimalDirectionsOutputFormatQueryParams struct {
 	RoundTrip *bool `queryParam:"style=form,explode=true,name=roundTrip"`
 	// Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
-}
-
-type GetOptimalDirectionsOutputFormatRequest struct {
-	PathParams  GetOptimalDirectionsOutputFormatPathParams
-	QueryParams GetOptimalDirectionsOutputFormatQueryParams
 }
 
 type GetOptimalDirectionsOutputFormatResponse struct {

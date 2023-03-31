@@ -14,40 +14,35 @@ func main() {
     s := sdk.New()
 
     req := operations.BulkCreateAdsByInventoryReferenceRequest{
-        Security: operations.BulkCreateAdsByInventoryReferenceSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.BulkCreateAdsByInventoryReferencePathParams{
-            CampaignID: "corrupti",
-        },
-        Request: shared.BulkCreateAdsByInventoryReferenceRequest{
+        BulkCreateAdsByInventoryReferenceRequest: shared.BulkCreateAdsByInventoryReferenceRequest{
             Requests: []shared.CreateAdsByInventoryReferenceRequest{
                 shared.CreateAdsByInventoryReferenceRequest{
-                    AdGroupID: "distinctio",
-                    BidPercentage: "quibusdam",
-                    InventoryReferenceID: "unde",
-                    InventoryReferenceType: "nulla",
+                    AdGroupID: "provident",
+                    BidPercentage: "distinctio",
+                    InventoryReferenceID: "quibusdam",
+                    InventoryReferenceType: "unde",
                 },
                 shared.CreateAdsByInventoryReferenceRequest{
-                    AdGroupID: "corrupti",
-                    BidPercentage: "illum",
-                    InventoryReferenceID: "vel",
-                    InventoryReferenceType: "error",
+                    AdGroupID: "nulla",
+                    BidPercentage: "corrupti",
+                    InventoryReferenceID: "illum",
+                    InventoryReferenceType: "vel",
                 },
                 shared.CreateAdsByInventoryReferenceRequest{
-                    AdGroupID: "deserunt",
-                    BidPercentage: "suscipit",
-                    InventoryReferenceID: "iure",
-                    InventoryReferenceType: "magnam",
+                    AdGroupID: "error",
+                    BidPercentage: "deserunt",
+                    InventoryReferenceID: "suscipit",
+                    InventoryReferenceType: "iure",
                 },
             },
         },
+        CampaignID: "magnam",
     }
 
     ctx := context.Background()
-    res, err := s.Ad.BulkCreateAdsByInventoryReference(ctx, req)
+    res, err := s.Ad.BulkCreateAdsByInventoryReference(ctx, req, operations.BulkCreateAdsByInventoryReferenceSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

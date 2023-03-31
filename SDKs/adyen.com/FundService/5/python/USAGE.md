@@ -4,18 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostAccountHolderBalanceRequest(
-    security=operations.PostAccountHolderBalanceSecurity(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    ),
-    request="totam",
+
+
+req = shared.AccountHolderBalanceRequest(
+    account_holder_code="corrupti",
 )
     
-res = s.general.post_account_holder_balance(req)
+res = s.general.post_account_holder_balance(req, operations.PostAccountHolderBalanceSecurity(
+    api_key_auth="YOUR_API_KEY_HERE",
+))
 
 if res.account_holder_balance_response is not None:
     # handle response

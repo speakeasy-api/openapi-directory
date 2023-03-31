@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.AccountCtrlGetAccountServicesByAccountIDRequest{
-        Security: operations.AccountCtrlGetAccountServicesByAccountIDSecurity{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AccountCtrlGetAccountServicesByAccountIDPathParams{
-            AccountID: 5488.14,
-        },
+        AccountID: 5488.14,
     }
 
     ctx := context.Background()
-    res, err := s.AccountCtrlGetAccountServicesByAccountID(ctx, req)
+    res, err := s.AccountCtrlGetAccountServicesByAccountID(ctx, req, operations.AccountCtrlGetAccountServicesByAccountIDSecurity{
+        BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

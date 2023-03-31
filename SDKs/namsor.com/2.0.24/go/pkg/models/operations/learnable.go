@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LearnablePathParams struct {
+type LearnableRequest struct {
 	Learnable bool `pathParam:"style=simple,explode=false,name=learnable"`
 	// The API Key to set as learnable/non learnable.
 	Source string `pathParam:"style=simple,explode=false,name=source"`
 	Token  string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type LearnableRequest struct {
-	PathParams LearnablePathParams
 }
 
 type LearnableResponse struct {

@@ -541,7 +541,7 @@ func New(opts ...SDKOption) *SDK {
 
 // Check - Check
 // Test that the API and auth are working.
-func (s *SDK) Check(ctx context.Context, request operations.CheckRequest) (*operations.CheckResponse, error) {
+func (s *SDK) Check(ctx context.Context) (*operations.CheckResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/check/"
 
@@ -550,7 +550,7 @@ func (s *SDK) Check(ctx context.Context, request operations.CheckRequest) (*oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -579,11 +579,11 @@ func (s *SDK) Check(ctx context.Context, request operations.CheckRequest) (*oper
 // Give us a plain english description of exact action you want to do.
 // There should be dynamically generated documentation for this endpoint
 // for each action that is exposed.
-func (s *SDK) ExecuteAppActionEndpoint(ctx context.Context, request operations.ExecuteAppActionEndpointRequest) (*operations.ExecuteAppActionEndpointResponse, error) {
+func (s *SDK) ExecuteAppActionEndpoint(ctx context.Context, request operations.ExecuteAppActionEndpointRequest, security operations.ExecuteAppActionEndpointSecurity) (*operations.ExecuteAppActionEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/exposed/{exposed_app_action_id}/execute/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/exposed/{exposed_app_action_id}/execute/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecuteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -598,7 +598,7 @@ func (s *SDK) ExecuteAppActionEndpoint(ctx context.Context, request operations.E
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -645,7 +645,7 @@ func (s *SDK) ExecuteAppActionEndpoint(ctx context.Context, request operations.E
 // GetConfigurationLink - Get Configuration Link
 // If the user wants to execute actions that are not exposed, they can
 // go here to configure and expose more.
-func (s *SDK) GetConfigurationLink(ctx context.Context, request operations.GetConfigurationLinkRequest) (*operations.GetConfigurationLinkResponse, error) {
+func (s *SDK) GetConfigurationLink(ctx context.Context) (*operations.GetConfigurationLinkResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/configuration-link/"
 
@@ -654,7 +654,7 @@ func (s *SDK) GetConfigurationLink(ctx context.Context, request operations.GetCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -681,7 +681,7 @@ func (s *SDK) GetConfigurationLink(ctx context.Context, request operations.GetCo
 
 // ListExposedActions - List Exposed Actions
 // List all the currently exposed actions for the given account.
-func (s *SDK) ListExposedActions(ctx context.Context, request operations.ListExposedActionsRequest) (*operations.ListExposedActionsResponse, error) {
+func (s *SDK) ListExposedActions(ctx context.Context) (*operations.ListExposedActionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/exposed/"
 
@@ -690,7 +690,7 @@ func (s *SDK) ListExposedActions(ctx context.Context, request operations.ListExp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

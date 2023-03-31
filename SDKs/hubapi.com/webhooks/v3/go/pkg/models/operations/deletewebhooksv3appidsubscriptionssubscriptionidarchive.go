@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchivePathParams struct {
-	AppID          int `pathParam:"style=simple,explode=false,name=appId"`
-	SubscriptionID int `pathParam:"style=simple,explode=false,name=subscriptionId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveRequest struct {
-	PathParams DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchivePathParams
-	Security   DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveSecurity
+	AppID          int `pathParam:"style=simple,explode=false,name=appId"`
+	SubscriptionID int `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveResponse struct {

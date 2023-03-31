@@ -8,18 +8,13 @@ import (
 )
 
 type GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParams struct {
-	// The id of the marketing event in the external event application
-	Q string `queryParam:"style=form,explode=true,name=q"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type GetMarketingV3MarketingEventsEventsSearchDoSearchRequest struct {
-	QueryParams GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParams
-	Security    GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity
+	// The id of the marketing event in the external event application
+	Q string `queryParam:"style=form,explode=true,name=q"`
 }
 
 type GetMarketingV3MarketingEventsEventsSearchDoSearchResponse struct {

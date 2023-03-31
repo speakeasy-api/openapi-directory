@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type LiabilitiesGetRequest struct {
-	Request shared.LiabilitiesGetRequest `request:"mediaType=application/json"`
-}
 
 type LiabilitiesGetResponse struct {
 	ContentType string

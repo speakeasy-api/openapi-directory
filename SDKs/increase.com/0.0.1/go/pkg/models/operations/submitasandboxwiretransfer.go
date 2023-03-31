@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitASandboxWireTransferPathParams struct {
-	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
-}
-
 type SubmitASandboxWireTransferRequest struct {
-	PathParams SubmitASandboxWireTransferPathParams
+	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
 type SubmitASandboxWireTransferDefaultApplicationJSON13StatusEnum string

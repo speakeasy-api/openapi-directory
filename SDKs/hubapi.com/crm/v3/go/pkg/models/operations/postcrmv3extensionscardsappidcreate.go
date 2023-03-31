@@ -8,19 +8,14 @@ import (
 )
 
 type PostCrmV3ExtensionsCardsAppIDCreateSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostCrmV3ExtensionsCardsAppIDCreatePathParams struct {
-	// The ID of the target app.
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PostCrmV3ExtensionsCardsAppIDCreateRequest struct {
-	PathParams PostCrmV3ExtensionsCardsAppIDCreatePathParams
 	// The new card definition.
-	Request  shared.CardCreateRequest `request:"mediaType=application/json"`
-	Security PostCrmV3ExtensionsCardsAppIDCreateSecurity
+	CardCreateRequest shared.CardCreateRequest `request:"mediaType=application/json"`
+	// The ID of the target app.
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type PostCrmV3ExtensionsCardsAppIDCreateResponse struct {

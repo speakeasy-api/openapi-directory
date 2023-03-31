@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QualityGetOverallDataQualityForSitesPathParams struct {
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type QualityGetOverallDataQualityForSitesQueryParams struct {
+type QualityGetOverallDataQualityForSitesRequest struct {
 	// The end date of the report in the format ddmmyyyy (i.e 31012016)
 	EndDate string `queryParam:"style=form,explode=true,name=end_date"`
 	// Get site quality by site id delimited by ,
 	Sites string `queryParam:"style=form,explode=true,name=sites"`
 	// The start date of the report in the format ddmmyyyy (i.e 31012016)
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type QualityGetOverallDataQualityForSitesRequest struct {
-	PathParams  QualityGetOverallDataQualityForSitesPathParams
-	QueryParams QualityGetOverallDataQualityForSitesQueryParams
+	Version   string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type QualityGetOverallDataQualityForSitesResponse struct {

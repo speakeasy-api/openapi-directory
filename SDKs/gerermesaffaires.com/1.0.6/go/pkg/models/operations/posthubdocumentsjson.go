@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostHubDocumentsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostHubDocumentsApplicationJSONAccountingWorkbookEnum string
@@ -77,12 +76,6 @@ type PostHubDocumentsApplicationJSON struct {
 	Date               *string                                    `json:"Date,omitempty"`
 	File               PostHubDocumentsApplicationJSONFile        `json:"File"`
 	Title              string                                     `json:"Title"`
-}
-
-type PostHubDocumentsJSONRequest struct {
-	// Document to add
-	Request  PostHubDocumentsApplicationJSON `request:"mediaType=application/json"`
-	Security PostHubDocumentsJSONSecurity
 }
 
 // PostHubDocumentsJSON201ApplicationJSON - Id of documents created

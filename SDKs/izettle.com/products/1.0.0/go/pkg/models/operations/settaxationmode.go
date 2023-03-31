@@ -8,12 +8,7 @@ import (
 )
 
 type SetTaxationModeSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type SetTaxationModeRequest struct {
-	Request  shared.TaxSettingsUpdateRequest `request:"mediaType=application/json"`
-	Security SetTaxationModeSecurity
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SetTaxationModeResponse struct {

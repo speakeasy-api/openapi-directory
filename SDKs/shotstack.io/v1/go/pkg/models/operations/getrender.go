@@ -8,17 +8,12 @@ import (
 )
 
 type GetRenderSecurity struct {
-	DeveloperKey shared.SchemeDeveloperKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetRenderPathParams struct {
-	// The id of the timeline render task in UUID format
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	DeveloperKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetRenderRequest struct {
-	PathParams GetRenderPathParams
-	Security   GetRenderSecurity
+	// The id of the timeline render task in UUID format
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetRenderResponse struct {

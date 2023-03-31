@@ -12,28 +12,19 @@ var ListDeviceConfigServerList = []string{
 }
 
 type ListDeviceConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListDeviceConfigPathParams struct {
+type ListDeviceConfigRequest struct {
 	// A 34-character string that uniquely identifies the Device.
 	DeviceSid string `pathParam:"style=simple,explode=false,name=DeviceSid"`
-}
-
-type ListDeviceConfigQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListDeviceConfigRequest struct {
-	PathParams  ListDeviceConfigPathParams
-	QueryParams ListDeviceConfigQueryParams
-	Security    ListDeviceConfigSecurity
-	ServerURL   *string
 }
 
 type ListDeviceConfigListDeviceConfigResponseMeta struct {

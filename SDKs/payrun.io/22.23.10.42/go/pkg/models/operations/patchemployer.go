@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchEmployerPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type PatchEmployerHeaders struct {
+type PatchEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PatchEmployerRequest struct {
-	PathParams PatchEmployerPathParams
-	Headers    PatchEmployerHeaders
 	// The employer object.
-	Request shared.Employer `request:"mediaType=application/json"`
+	Employer shared.Employer `request:"mediaType=application/json"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type PatchEmployerResponse struct {

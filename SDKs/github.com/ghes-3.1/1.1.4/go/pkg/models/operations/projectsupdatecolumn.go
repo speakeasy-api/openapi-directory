@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsUpdateColumnPathParams struct {
-	// The unique identifier of the column.
-	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
-}
-
 type ProjectsUpdateColumnRequestBody struct {
 	// Name of the project column
 	Name string `json:"name"`
 }
 
 type ProjectsUpdateColumnRequest struct {
-	PathParams ProjectsUpdateColumnPathParams
-	Request    ProjectsUpdateColumnRequestBody `request:"mediaType=application/json"`
+	RequestBody ProjectsUpdateColumnRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the column.
+	ColumnID int64 `pathParam:"style=simple,explode=false,name=column_id"`
 }
 
 type ProjectsUpdateColumnResponse struct {

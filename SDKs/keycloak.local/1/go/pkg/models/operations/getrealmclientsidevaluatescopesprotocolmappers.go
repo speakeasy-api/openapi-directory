@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsIDEvaluateScopesProtocolMappersPathParams struct {
+type GetRealmClientsIDEvaluateScopesProtocolMappersRequest struct {
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsIDEvaluateScopesProtocolMappersQueryParams struct {
+	Realm string  `pathParam:"style=simple,explode=false,name=realm"`
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
-}
-
-type GetRealmClientsIDEvaluateScopesProtocolMappersRequest struct {
-	PathParams  GetRealmClientsIDEvaluateScopesProtocolMappersPathParams
-	QueryParams GetRealmClientsIDEvaluateScopesProtocolMappersQueryParams
 }
 
 type GetRealmClientsIDEvaluateScopesProtocolMappersResponse struct {

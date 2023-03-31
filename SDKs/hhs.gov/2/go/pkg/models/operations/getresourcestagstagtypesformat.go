@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesTagsTagTypesFormatPathParams struct {
+type GetResourcesTagsTagTypesFormatRequest struct {
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GetResourcesTagsTagTypesFormatRequest struct {
-	PathParams GetResourcesTagsTagTypesFormatPathParams
 }
 
 type GetResourcesTagsTagTypesFormatResponse struct {

@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type PatchUserAccountsUserAccountIDPathParams struct {
-	// The id of the user account to be updated
-	UserAccountID string `pathParam:"style=simple,explode=false,name=userAccountId"`
-}
-
-type PatchUserAccountsUserAccountIDQueryParams struct {
+type PatchUserAccountsUserAccountIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
 	// The contact email address
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// The user account name
 	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// The id of the user account to be updated
+	UserAccountID string `pathParam:"style=simple,explode=false,name=userAccountId"`
 	// The Id of the user that this account belongs to
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type PatchUserAccountsUserAccountIDRequest struct {
-	PathParams  PatchUserAccountsUserAccountIDPathParams
-	QueryParams PatchUserAccountsUserAccountIDQueryParams
 }
 
 type PatchUserAccountsUserAccountIDResponse struct {

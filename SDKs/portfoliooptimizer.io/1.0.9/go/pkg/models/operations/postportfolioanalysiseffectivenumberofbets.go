@@ -50,10 +50,6 @@ type PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody struct {
 	Portfolios              []PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios                 `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisEffectiveNumberOfBetsRequest struct {
-	Request PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONPortfolios struct {
 	// The effective number of bets of the portfolio
 	PortfolioEffectiveNumberOfBets float64 `json:"portfolioEffectiveNumberOfBets"`

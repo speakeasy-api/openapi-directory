@@ -10,7 +10,7 @@ import (
 )
 
 type GetImageCollectionListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetImageCollectionListEmbedEnum string
@@ -36,18 +36,13 @@ func (e *GetImageCollectionListEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImageCollectionListQueryParams struct {
+type GetImageCollectionListRequest struct {
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed []GetImageCollectionListEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetImageCollectionListRequest struct {
-	QueryParams GetImageCollectionListQueryParams
-	Security    GetImageCollectionListSecurity
 }
 
 type GetImageCollectionListResponse struct {

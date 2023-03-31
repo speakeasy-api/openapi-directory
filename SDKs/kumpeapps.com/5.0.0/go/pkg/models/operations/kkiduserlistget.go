@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidUserlistGetQueryParams struct {
+type KkidUserlistGetRequest struct {
 	// Email address of user to search
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Filter Search by enableAllowance flag
@@ -24,10 +24,6 @@ type KkidUserlistGetQueryParams struct {
 	UserID *int64 `queryParam:"style=form,explode=true,name=userID"`
 	// Username of user to search
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type KkidUserlistGetRequest struct {
-	QueryParams KkidUserlistGetQueryParams
 }
 
 type KkidUserlistGetResponse struct {

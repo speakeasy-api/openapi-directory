@@ -33,7 +33,7 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GetAPIV1AppsVerifyCredentials - Confirm that the app's OAuth2 credentials work.
-func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context, request operations.GetAPIV1AppsVerifyCredentialsRequest) (*operations.GetAPIV1AppsVerifyCredentialsResponse, error) {
+func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context) (*operations.GetAPIV1AppsVerifyCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/apps/verify_credentials"
 
@@ -42,7 +42,7 @@ func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context, request operat
 }
 
 // PostAPIV1Apps - Create a new application to obtain OAuth2 credentials.
-func (s *apps) PostAPIV1Apps(ctx context.Context, request operations.PostAPIV1AppsRequest) (*operations.PostAPIV1AppsResponse, error) {
+func (s *apps) PostAPIV1Apps(ctx context.Context, request []byte) (*operations.PostAPIV1AppsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/apps"
 

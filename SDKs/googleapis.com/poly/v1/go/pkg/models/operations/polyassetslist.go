@@ -39,7 +39,7 @@ func (e *PolyAssetsListMaxComplexityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PolyAssetsListQueryParams struct {
+type PolyAssetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -78,10 +78,6 @@ type PolyAssetsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PolyAssetsListRequest struct {
-	QueryParams PolyAssetsListQueryParams
 }
 
 type PolyAssetsListResponse struct {

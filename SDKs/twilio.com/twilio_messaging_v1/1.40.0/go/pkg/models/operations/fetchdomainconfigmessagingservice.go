@@ -12,18 +12,13 @@ var FetchDomainConfigMessagingServiceServerList = []string{
 }
 
 type FetchDomainConfigMessagingServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDomainConfigMessagingServicePathParams struct {
-	// Unique string used to identify the Messaging service that this domain should be associated with.
-	MessagingServiceSid string `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDomainConfigMessagingServiceRequest struct {
-	PathParams FetchDomainConfigMessagingServicePathParams
-	Security   FetchDomainConfigMessagingServiceSecurity
-	ServerURL  *string
+	// Unique string used to identify the Messaging service that this domain should be associated with.
+	MessagingServiceSid string `pathParam:"style=simple,explode=false,name=MessagingServiceSid"`
 }
 
 type FetchDomainConfigMessagingServiceResponse struct {

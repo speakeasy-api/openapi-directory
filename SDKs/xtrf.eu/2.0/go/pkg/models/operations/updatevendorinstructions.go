@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateVendorInstructionsPathParams struct {
+type UpdateVendorInstructionsRequest struct {
+	// Updated instructions for all vendors performing the jobs in a project.
+	StringDTO shared.StringDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateVendorInstructionsRequest struct {
-	PathParams UpdateVendorInstructionsPathParams
-	// Updated instructions for all vendors performing the jobs in a project.
-	Request shared.StringDTO `request:"mediaType=application/json"`
 }
 
 type UpdateVendorInstructionsResponse struct {

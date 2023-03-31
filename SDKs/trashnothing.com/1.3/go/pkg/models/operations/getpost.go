@@ -8,19 +8,14 @@ import (
 )
 
 type GetPostSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
-}
-
-type GetPostPathParams struct {
-	// The ID of the post to retrieve.
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPostRequest struct {
-	PathParams GetPostPathParams
-	Security   GetPostSecurity
+	// The ID of the post to retrieve.
+	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 type GetPostResponse struct {

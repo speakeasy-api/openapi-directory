@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CallDataRecordsJSONQueryParams struct {
+type GetV2CallDataRecordsJSONRequest struct {
 	// Equality filters that are applied to the created_at field. A single filter can be used by itself or combined with other filters to create a range.
 	//
 	// ---CUSTOM---
@@ -39,10 +39,6 @@ type GetV2CallDataRecordsJSONQueryParams struct {
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
 	// Filters list to only include guids
 	UserGUID []string `queryParam:"style=form,explode=false,name=user_guid"`
-}
-
-type GetV2CallDataRecordsJSONRequest struct {
-	QueryParams GetV2CallDataRecordsJSONQueryParams
 }
 
 type GetV2CallDataRecordsJSONResponse struct {

@@ -10,12 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetCommitteeCommitteeIDFilingsPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
 type GetCommitteeCommitteeIDFilingsAmendmentIndicatorEnum string
 
 const (
@@ -107,7 +101,7 @@ func (e *GetCommitteeCommitteeIDFilingsOfficeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetCommitteeCommitteeIDFilingsQueryParams struct {
+type GetCommitteeCommitteeIDFilingsRequest struct {
 	// Amendent types:
 	//     -N   new
 	//     -A   amendment
@@ -126,6 +120,9 @@ type GetCommitteeCommitteeIDFilingsQueryParams struct {
 	// PDF URLs to the original document.
 	//
 	BeginningImageNumber []string `queryParam:"style=form,explode=true,name=beginning_image_number"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// The one-letter type code of the organization:
 	//         - C communication cost
 	//         - D delegate
@@ -316,11 +313,6 @@ type GetCommitteeCommitteeIDFilingsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// US state or territory where a candidate runs for office
 	State []string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetCommitteeCommitteeIDFilingsRequest struct {
-	PathParams  GetCommitteeCommitteeIDFilingsPathParams
-	QueryParams GetCommitteeCommitteeIDFilingsQueryParams
 }
 
 type GetCommitteeCommitteeIDFilingsResponse struct {

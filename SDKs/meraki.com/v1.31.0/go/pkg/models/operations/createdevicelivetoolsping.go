@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateDeviceLiveToolsPingPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type CreateDeviceLiveToolsPingRequestBody struct {
 	// Count parameter to pass to ping. [1..5], default 5
 	Count *int64 `json:"count,omitempty"`
@@ -18,8 +14,8 @@ type CreateDeviceLiveToolsPingRequestBody struct {
 }
 
 type CreateDeviceLiveToolsPingRequest struct {
-	PathParams CreateDeviceLiveToolsPingPathParams
-	Request    CreateDeviceLiveToolsPingRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateDeviceLiveToolsPingRequestBody `request:"mediaType=application/json"`
+	Serial      string                               `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 // CreateDeviceLiveToolsPing201ApplicationJSONRequest - Ping request parameters

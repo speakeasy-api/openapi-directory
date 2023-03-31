@@ -12,15 +12,11 @@ var ListWorkflowServerList = []string{
 }
 
 type ListWorkflowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListWorkflowPathParams struct {
-	// The SID of the Workspace with the Workflow to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListWorkflowQueryParams struct {
+type ListWorkflowRequest struct {
 	// The `friendly_name` of the Workflow resources to read.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -29,13 +25,8 @@ type ListWorkflowQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListWorkflowRequest struct {
-	PathParams  ListWorkflowPathParams
-	QueryParams ListWorkflowQueryParams
-	Security    ListWorkflowSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the Workflow to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListWorkflowListWorkflowResponseMeta struct {

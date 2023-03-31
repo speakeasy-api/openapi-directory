@@ -34,11 +34,11 @@ func newStreamAudio(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // StartStream - Play an audio file into a call
 // Play an audio file into a call
-func (s *streamAudio) StartStream(ctx context.Context, request operations.StartStreamRequest) (*operations.StartStreamResponse, error) {
+func (s *streamAudio) StartStream(ctx context.Context, request operations.StartStreamRequest, security operations.StartStreamSecurity) (*operations.StartStreamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartStreamRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *streamAudio) StartStream(ctx context.Context, request operations.StartS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,16 +89,16 @@ func (s *streamAudio) StartStream(ctx context.Context, request operations.StartS
 
 // StopStream - Stop playing an audio file into a call
 // Stop playing an audio file into a call
-func (s *streamAudio) StopStream(ctx context.Context, request operations.StopStreamRequest) (*operations.StopStreamResponse, error) {
+func (s *streamAudio) StopStream(ctx context.Context, request operations.StopStreamRequest, security operations.StopStreamSecurity) (*operations.StopStreamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

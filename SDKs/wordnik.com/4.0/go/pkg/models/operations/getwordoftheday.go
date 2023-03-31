@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetWordOfTheDayQueryParams struct {
+type GetWordOfTheDayRequest struct {
 	// Fetches by date in yyyy-MM-dd
 	Date *string `queryParam:"style=form,explode=true,name=date"`
-}
-
-type GetWordOfTheDayRequest struct {
-	QueryParams GetWordOfTheDayQueryParams
 }
 
 type GetWordOfTheDayResponse struct {

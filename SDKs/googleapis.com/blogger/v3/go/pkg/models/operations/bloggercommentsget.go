@@ -10,24 +10,18 @@ import (
 )
 
 type BloggerCommentsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerCommentsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BloggerCommentsGetSecurity struct {
 	Option1 *BloggerCommentsGetSecurityOption1 `security:"option"`
 	Option2 *BloggerCommentsGetSecurityOption2 `security:"option"`
-}
-
-type BloggerCommentsGetPathParams struct {
-	BlogID    string `pathParam:"style=simple,explode=false,name=blogId"`
-	CommentID string `pathParam:"style=simple,explode=false,name=commentId"`
-	PostID    string `pathParam:"style=simple,explode=false,name=postId"`
 }
 
 // BloggerCommentsGetViewEnum
@@ -60,21 +54,24 @@ func (e *BloggerCommentsGetViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BloggerCommentsGetQueryParams struct {
+type BloggerCommentsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	Alt    *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	BlogID string          `pathParam:"style=simple,explode=false,name=blogId"`
 	// JSONP
-	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	Callback  *string `queryParam:"style=form,explode=true,name=callback"`
+	CommentID string  `pathParam:"style=simple,explode=false,name=commentId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	PostID     string  `pathParam:"style=simple,explode=false,name=postId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -84,12 +81,6 @@ type BloggerCommentsGetQueryParams struct {
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string                     `queryParam:"style=form,explode=true,name=upload_protocol"`
 	View           *BloggerCommentsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BloggerCommentsGetRequest struct {
-	PathParams  BloggerCommentsGetPathParams
-	QueryParams BloggerCommentsGetQueryParams
-	Security    BloggerCommentsGetSecurity
 }
 
 type BloggerCommentsGetResponse struct {

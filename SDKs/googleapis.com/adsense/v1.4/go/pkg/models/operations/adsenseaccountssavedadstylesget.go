@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsSavedadstylesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsSavedadstylesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsSavedadstylesGetSecurity struct {
@@ -22,14 +22,9 @@ type AdsenseAccountsSavedadstylesGetSecurity struct {
 	Option2 *AdsenseAccountsSavedadstylesGetSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsSavedadstylesGetPathParams struct {
+type AdsenseAccountsSavedadstylesGetRequest struct {
 	// Account for which to get the saved ad style.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Saved ad style to retrieve.
-	SavedAdStyleID string `pathParam:"style=simple,explode=false,name=savedAdStyleId"`
-}
-
-type AdsenseAccountsSavedadstylesGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -42,14 +37,10 @@ type AdsenseAccountsSavedadstylesGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Saved ad style to retrieve.
+	SavedAdStyleID string `pathParam:"style=simple,explode=false,name=savedAdStyleId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsSavedadstylesGetRequest struct {
-	PathParams  AdsenseAccountsSavedadstylesGetPathParams
-	QueryParams AdsenseAccountsSavedadstylesGetQueryParams
-	Security    AdsenseAccountsSavedadstylesGetSecurity
 }
 
 type AdsenseAccountsSavedadstylesGetResponse struct {

@@ -17,5 +17,4 @@ pkg/models/operations/getpirategenerateinsult.go
 pkg/models/operations/getpirategenerateloremipsum.go
 pkg/models/operations/getpirategeneratename.go
 pkg/models/operations/getpiratetranslate.go
-pkg/models/shared/security.go
 USAGE.md

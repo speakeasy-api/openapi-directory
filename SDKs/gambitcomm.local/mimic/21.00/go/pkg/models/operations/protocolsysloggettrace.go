@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSyslogGetTracePathParams struct {
+type ProtocolSyslogGetTraceRequest struct {
 	// Agent to show whether SYSLOG tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSyslogGetTraceRequest struct {
-	PathParams ProtocolSyslogGetTracePathParams
 }
 
 type ProtocolSyslogGetTraceResponse struct {

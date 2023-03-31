@@ -54,12 +54,11 @@ pkg/models/operations/notebooksprojectslocationsscheduleslist.go
 pkg/models/operations/notebooksprojectslocationsschedulestrigger.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/environment.go
 pkg/models/shared/vmimage.go
 pkg/models/shared/containerimage.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listenvironmentsresponse.go
 pkg/models/shared/execution.go
 pkg/models/shared/executiontemplate.go

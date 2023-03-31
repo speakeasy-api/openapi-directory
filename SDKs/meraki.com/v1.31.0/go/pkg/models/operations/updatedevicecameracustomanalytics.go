@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCameraCustomAnalyticsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceCameraCustomAnalyticsRequestBodyParameters struct {
 	// Name of the parameter
 	Name string `json:"name"`
@@ -27,8 +23,8 @@ type UpdateDeviceCameraCustomAnalyticsRequestBody struct {
 }
 
 type UpdateDeviceCameraCustomAnalyticsRequest struct {
-	PathParams UpdateDeviceCameraCustomAnalyticsPathParams
-	Request    *UpdateDeviceCameraCustomAnalyticsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCameraCustomAnalyticsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                        `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCameraCustomAnalyticsResponse struct {

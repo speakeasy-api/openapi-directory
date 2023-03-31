@@ -36,14 +36,14 @@ func newAmendments(defaultClient, securityClient HTTPClient, serverURL, language
 // Retrieves detailed information about the specified subscription amendment.
 func (s *amendments) GETAmendmentsByKey(ctx context.Context, request operations.GETAmendmentsByKeyRequest) (*operations.GETAmendmentsByKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/amendments/{amendment-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/amendments/{amendment-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -85,14 +85,14 @@ func (s *amendments) GETAmendmentsByKey(ctx context.Context, request operations.
 // Retrieves detailed information about the amendment with the specified subscription.
 func (s *amendments) GETAmendmentsBySubscriptionID(ctx context.Context, request operations.GETAmendmentsBySubscriptionIDRequest) (*operations.GETAmendmentsBySubscriptionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/amendments/subscriptions/{subscription-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/amendments/subscriptions/{subscription-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -135,14 +135,14 @@ func (s *amendments) GETAmendmentsBySubscriptionID(ctx context.Context, request 
 // Invoiced amendments cannot usually be deleted. One exception to this rule is auto-renew amendments. You can delete the last auto-renew amendment even if an invoice has been generated.
 func (s *amendments) ObjectDELETEAmendment(ctx context.Context, request operations.ObjectDELETEAmendmentRequest) (*operations.ObjectDELETEAmendmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/amendment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/amendment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -195,16 +195,16 @@ func (s *amendments) ObjectDELETEAmendment(ctx context.Context, request operatio
 // ObjectGETAmendment - CRUD: Retrieve an amendment
 func (s *amendments) ObjectGETAmendment(ctx context.Context, request operations.ObjectGETAmendmentRequest) (*operations.ObjectGETAmendmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/amendment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/amendment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -271,9 +271,9 @@ func (s *amendments) ObjectGETAmendment(ctx context.Context, request operations.
 // ObjectPUTAmendment - CRUD: Update an amendment
 func (s *amendments) ObjectPUTAmendment(ctx context.Context, request operations.ObjectPUTAmendmentRequest) (*operations.ObjectPUTAmendmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/amendment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/amendment/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyAmendment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -288,9 +288,9 @@ func (s *amendments) ObjectPUTAmendment(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

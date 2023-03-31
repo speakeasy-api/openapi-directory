@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteOauthV1RefreshTokensTokenArchivePathParams struct {
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
 type DeleteOauthV1RefreshTokensTokenArchiveRequest struct {
-	PathParams DeleteOauthV1RefreshTokensTokenArchivePathParams
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type DeleteOauthV1RefreshTokensTokenArchiveResponse struct {

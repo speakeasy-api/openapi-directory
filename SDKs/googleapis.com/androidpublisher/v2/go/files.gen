@@ -75,7 +75,6 @@ pkg/models/operations/androidpublisherreviewsget.go
 pkg/models/operations/androidpublisherreviewslist.go
 pkg/models/operations/androidpublisherreviewsreply.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/apklisting.go
 pkg/models/shared/apklistingslistresponse.go
 pkg/models/shared/apksaddexternallyhostedresponse.go

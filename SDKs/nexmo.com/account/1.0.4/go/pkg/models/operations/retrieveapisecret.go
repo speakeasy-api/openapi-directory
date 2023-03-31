@@ -11,19 +11,15 @@ import (
 )
 
 type RetrieveAPISecretSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type RetrieveAPISecretPathParams struct {
+type RetrieveAPISecretRequest struct {
 	// The API key to manage secrets for
 	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 	// ID of the API Secret
 	SecretID string `pathParam:"style=simple,explode=false,name=secret_id"`
-}
-
-type RetrieveAPISecretRequest struct {
-	PathParams RetrieveAPISecretPathParams
-	Security   RetrieveAPISecretSecurity
 }
 
 type RetrieveAPISecret404ApplicationJSONType string

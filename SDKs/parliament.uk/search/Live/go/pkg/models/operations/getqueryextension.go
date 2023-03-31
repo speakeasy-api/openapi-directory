@@ -38,22 +38,14 @@ func (e *GetQueryExtensionExtensionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryExtensionPathParams struct {
-	// extension
-	Extension GetQueryExtensionExtensionEnum `pathParam:"style=simple,explode=false,name=extension"`
-}
-
-type GetQueryExtensionQueryParams struct {
-	Count         *float64 `queryParam:"style=form,explode=true,name=count"`
-	InURLPrefixes *string  `queryParam:"style=form,explode=true,name=inUrlPrefixes"`
-	Q             string   `queryParam:"style=form,explode=true,name=q"`
-	Start         *float64 `queryParam:"style=form,explode=true,name=start"`
-	Subdomains    *string  `queryParam:"style=form,explode=true,name=subdomains"`
-}
-
 type GetQueryExtensionRequest struct {
-	PathParams  GetQueryExtensionPathParams
-	QueryParams GetQueryExtensionQueryParams
+	Count *float64 `queryParam:"style=form,explode=true,name=count"`
+	// extension
+	Extension     GetQueryExtensionExtensionEnum `pathParam:"style=simple,explode=false,name=extension"`
+	InURLPrefixes *string                        `queryParam:"style=form,explode=true,name=inUrlPrefixes"`
+	Q             string                         `queryParam:"style=form,explode=true,name=q"`
+	Start         *float64                       `queryParam:"style=form,explode=true,name=start"`
+	Subdomains    *string                        `queryParam:"style=form,explode=true,name=subdomains"`
 }
 
 type GetQueryExtensionResponse struct {

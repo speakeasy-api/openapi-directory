@@ -57,7 +57,7 @@ func (e *GetCategoriesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCategoriesQueryParams struct {
+type GetCategoriesRequest struct {
 	// The sort direction of the results.
 	Direction *GetCategoriesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -66,10 +66,6 @@ type GetCategoriesQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetCategoriesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCategoriesRequest struct {
-	QueryParams GetCategoriesQueryParams
 }
 
 type GetCategoriesResponse struct {

@@ -39,7 +39,6 @@ pkg/models/operations/updatedevice.go
 pkg/models/operations/updatedeviceconfig.go
 pkg/models/operations/updatedevicesecret.go
 pkg/models/shared/microvisorv1accountconfig.go
-pkg/models/shared/security.go
 pkg/models/shared/microvisorv1accountsecret.go
 pkg/models/shared/microvisorv1devicedeviceconfig.go
 pkg/models/shared/microvisorv1devicedevicesecret.go
@@ -47,3 +46,4 @@ pkg/models/shared/microvisorv1app.go
 pkg/models/shared/microvisorv1appappmanifest.go
 pkg/models/shared/microvisorv1device.go
 USAGE.md
+pkg/models/operations/options.go

@@ -7,7 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BookingPastbookingQueryParams struct {
+type BookingPastbookingRequest struct {
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
 	// **email address** by which to search for past bookings
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Search for a booking with this **unique booking-reference number**. See [Booking references](#section/Key-concepts/Booking-references) for more information.
@@ -15,17 +18,6 @@ type BookingPastbookingQueryParams struct {
 	ItemID *string `queryParam:"style=form,explode=true,name=itemId"`
 	// **specifier** of past booking type (use *one* of: `itemId` (booking reference) *and* `'voucherKey'` *or* `'email'`)
 	VoucherKey *string `queryParam:"style=form,explode=true,name=voucherKey"`
-}
-
-type BookingPastbookingHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type BookingPastbookingRequest struct {
-	QueryParams BookingPastbookingQueryParams
-	Headers     BookingPastbookingHeaders
 }
 
 type BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate struct {

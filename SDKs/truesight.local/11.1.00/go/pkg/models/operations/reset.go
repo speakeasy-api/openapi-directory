@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type ResetPathParams struct {
+type ResetRequest struct {
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type ResetQueryParams struct {
 	// The Monitor Class of the device.
 	MonitorClass string `queryParam:"style=form,explode=true,name=monitorClass"`
 	// The Monitor SID of the device.
 	MonitorSid string `queryParam:"style=form,explode=true,name=monitorSid"`
-}
-
-type ResetRequest struct {
-	PathParams  ResetPathParams
-	QueryParams ResetQueryParams
 }
 
 type ResetResponse struct {

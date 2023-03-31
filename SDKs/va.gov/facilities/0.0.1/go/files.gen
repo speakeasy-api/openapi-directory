@@ -40,7 +40,6 @@ pkg/models/shared/geometry.go
 pkg/models/shared/genericerror.go
 pkg/models/shared/apierror.go
 pkg/models/shared/errormessage.go
-pkg/models/shared/security.go
 pkg/models/shared/facilitiesresponse.go
 pkg/models/shared/facilitiesmetadata.go
 pkg/models/shared/pagination.go

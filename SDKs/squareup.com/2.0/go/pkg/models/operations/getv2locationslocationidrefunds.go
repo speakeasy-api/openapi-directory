@@ -8,15 +8,10 @@ import (
 )
 
 type GetV2LocationsLocationIDRefundsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV2LocationsLocationIDRefundsPathParams struct {
-	// The ID of the location to list refunds for.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
-type GetV2LocationsLocationIDRefundsQueryParams struct {
+type GetV2LocationsLocationIDRefundsRequest struct {
 	// The beginning of the requested reporting period, in RFC 3339 format.
 	//
 	// See [Date ranges](https://developer.squareup.com/docs/build-basics/working-with-dates) for details on date inclusivity/exclusivity.
@@ -34,17 +29,13 @@ type GetV2LocationsLocationIDRefundsQueryParams struct {
 	//
 	// Default value: The current time.
 	EndTime *string `queryParam:"style=form,explode=true,name=end_time"`
+	// The ID of the location to list refunds for.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The order in which results are listed in the response (`ASC` for
 	// oldest first, `DESC` for newest first).
 	//
 	// Default value: `DESC`
 	SortOrder *string `queryParam:"style=form,explode=true,name=sort_order"`
-}
-
-type GetV2LocationsLocationIDRefundsRequest struct {
-	PathParams  GetV2LocationsLocationIDRefundsPathParams
-	QueryParams GetV2LocationsLocationIDRefundsQueryParams
-	Security    GetV2LocationsLocationIDRefundsSecurity
 }
 
 type GetV2LocationsLocationIDRefundsResponse struct {

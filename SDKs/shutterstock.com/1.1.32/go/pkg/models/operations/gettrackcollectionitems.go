@@ -10,12 +10,7 @@ import (
 )
 
 type GetTrackCollectionItemsSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetTrackCollectionItemsPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetTrackCollectionItemsSortEnum - Sort order
@@ -42,7 +37,9 @@ func (e *GetTrackCollectionItemsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTrackCollectionItemsQueryParams struct {
+type GetTrackCollectionItemsRequest struct {
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
@@ -51,12 +48,6 @@ type GetTrackCollectionItemsQueryParams struct {
 	ShareCode *string `queryParam:"style=form,explode=true,name=share_code"`
 	// Sort order
 	Sort *GetTrackCollectionItemsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetTrackCollectionItemsRequest struct {
-	PathParams  GetTrackCollectionItemsPathParams
-	QueryParams GetTrackCollectionItemsQueryParams
-	Security    GetTrackCollectionItemsSecurity
 }
 
 type GetTrackCollectionItemsResponse struct {

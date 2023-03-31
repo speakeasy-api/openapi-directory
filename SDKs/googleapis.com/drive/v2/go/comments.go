@@ -32,20 +32,20 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DriveCommentsDelete - Deletes a comment.
-func (s *comments) DriveCommentsDelete(ctx context.Context, request operations.DriveCommentsDeleteRequest) (*operations.DriveCommentsDeleteResponse, error) {
+func (s *comments) DriveCommentsDelete(ctx context.Context, request operations.DriveCommentsDeleteRequest, security operations.DriveCommentsDeleteSecurity) (*operations.DriveCommentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *comments) DriveCommentsDelete(ctx context.Context, request operations.D
 }
 
 // DriveCommentsGet - Gets a comment by ID.
-func (s *comments) DriveCommentsGet(ctx context.Context, request operations.DriveCommentsGetRequest) (*operations.DriveCommentsGetResponse, error) {
+func (s *comments) DriveCommentsGet(ctx context.Context, request operations.DriveCommentsGetRequest, security operations.DriveCommentsGetSecurity) (*operations.DriveCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *comments) DriveCommentsGet(ctx context.Context, request operations.Driv
 }
 
 // DriveCommentsInsert - Creates a new comment on the given file.
-func (s *comments) DriveCommentsInsert(ctx context.Context, request operations.DriveCommentsInsertRequest) (*operations.DriveCommentsInsertResponse, error) {
+func (s *comments) DriveCommentsInsert(ctx context.Context, request operations.DriveCommentsInsertRequest, security operations.DriveCommentsInsertSecurity) (*operations.DriveCommentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *comments) DriveCommentsInsert(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *comments) DriveCommentsInsert(ctx context.Context, request operations.D
 }
 
 // DriveCommentsList - Lists a file's comments.
-func (s *comments) DriveCommentsList(ctx context.Context, request operations.DriveCommentsListRequest) (*operations.DriveCommentsListResponse, error) {
+func (s *comments) DriveCommentsList(ctx context.Context, request operations.DriveCommentsListRequest, security operations.DriveCommentsListSecurity) (*operations.DriveCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *comments) DriveCommentsList(ctx context.Context, request operations.Dri
 }
 
 // DriveCommentsPatch - Updates an existing comment.
-func (s *comments) DriveCommentsPatch(ctx context.Context, request operations.DriveCommentsPatchRequest) (*operations.DriveCommentsPatchResponse, error) {
+func (s *comments) DriveCommentsPatch(ctx context.Context, request operations.DriveCommentsPatchRequest, security operations.DriveCommentsPatchSecurity) (*operations.DriveCommentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *comments) DriveCommentsPatch(ctx context.Context, request operations.Dr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *comments) DriveCommentsPatch(ctx context.Context, request operations.Dr
 }
 
 // DriveCommentsUpdate - Updates an existing comment.
-func (s *comments) DriveCommentsUpdate(ctx context.Context, request operations.DriveCommentsUpdateRequest) (*operations.DriveCommentsUpdateResponse, error) {
+func (s *comments) DriveCommentsUpdate(ctx context.Context, request operations.DriveCommentsUpdateRequest, security operations.DriveCommentsUpdateSecurity) (*operations.DriveCommentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *comments) DriveCommentsUpdate(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

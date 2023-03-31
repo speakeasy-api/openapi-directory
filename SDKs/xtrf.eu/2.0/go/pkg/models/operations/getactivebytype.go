@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetActiveByTypePathParams struct {
-	// dictionary type
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetActiveByTypeQueryParams struct {
+type GetActiveByTypeRequest struct {
 	// exact name of entity
 	NameEquals *string `queryParam:"style=form,explode=true,name=nameEquals"`
-}
-
-type GetActiveByTypeRequest struct {
-	PathParams  GetActiveByTypePathParams
-	QueryParams GetActiveByTypeQueryParams
+	// dictionary type
+	Type string `pathParam:"style=simple,explode=false,name=type"`
 }
 
 type GetActiveByTypeResponse struct {

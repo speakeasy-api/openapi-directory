@@ -247,7 +247,7 @@ func (e *GetPackageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// Extra information in addition to the above selected package.
 	Addon []GetAddonEnum `queryParam:"style=form,explode=false,name=addon"`
 	// Format of the response message.
@@ -260,10 +260,6 @@ type GetQueryParams struct {
 	Lang *GetLangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// Web service package of different granularity of return information.
 	Package *GetPackageEnum `queryParam:"style=form,explode=true,name=package"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 type GetResponse struct {

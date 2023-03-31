@@ -87,10 +87,6 @@ type SchemaResponsePpostSchemaResponsesInput struct {
 	Type string `json:"type"`
 }
 
-type SchemaResponsePpostRequest struct {
-	Request SchemaResponsePpostSchemaResponsesInput `request:"mediaType=application/json"`
-}
-
 // SchemaResponsePpostSchemaResponsesAttributes - The properties of the Schema Response.
 type SchemaResponsePpostSchemaResponsesAttributes struct {
 	// The date the Schema Response was created

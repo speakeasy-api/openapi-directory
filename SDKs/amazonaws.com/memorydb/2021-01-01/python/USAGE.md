@@ -3,36 +3,32 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchUpdateClusterRequest(
-    headers=operations.BatchUpdateClusterHeaders(
-        x_amz_algorithm="dicta",
-        x_amz_content_sha256="inventore",
-        x_amz_credential="perspiciatis",
-        x_amz_date="ut",
-        x_amz_security_token="esse",
-        x_amz_signature="facere",
-        x_amz_signed_headers="commodi",
-        x_amz_target="AmazonMemoryDB.BatchUpdateCluster",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.BatchUpdateClusterRequest(
+)
+
+
+req = operations.BatchUpdateClusterRequest(
+    batch_update_cluster_request=shared.BatchUpdateClusterRequest(
         cluster_names=[
-            "asperiores",
-            "amet",
-            "cupiditate",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
         service_update=shared.ServiceUpdateRequest(
-            service_update_name_to_apply="nisi",
+            service_update_name_to_apply="unde",
         ),
     ),
+    x_amz_algorithm="nulla",
+    x_amz_content_sha256="corrupti",
+    x_amz_credential="illum",
+    x_amz_date="vel",
+    x_amz_security_token="error",
+    x_amz_signature="deserunt",
+    x_amz_signed_headers="suscipit",
+    x_amz_target="AmazonMemoryDB.BatchUpdateCluster",
 )
     
 res = s.batch_update_cluster(req)

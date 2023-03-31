@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetNotificationsRequestPathParams struct {
+type SetNotificationsRequestRequest struct {
+	// Body to included minimum balance to set
+	SetNotificationsRequest shared.SetNotificationsRequest `request:"mediaType=application/json"`
 	// Source account id
 	SourceAccountID string `pathParam:"style=simple,explode=false,name=sourceAccountId"`
-}
-
-type SetNotificationsRequestRequest struct {
-	PathParams SetNotificationsRequestPathParams
-	// Body to included minimum balance to set
-	Request shared.SetNotificationsRequest `request:"mediaType=application/json"`
 }
 
 type SetNotificationsRequestResponse struct {

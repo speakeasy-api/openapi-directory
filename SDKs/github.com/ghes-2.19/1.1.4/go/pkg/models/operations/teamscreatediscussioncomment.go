@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateDiscussionCommentPathParams struct {
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsCreateDiscussionCommentRequestBody struct {
 	// The discussion comment's body text.
 	Body string `json:"body"`
 }
 
 type TeamsCreateDiscussionCommentRequest struct {
-	PathParams TeamsCreateDiscussionCommentPathParams
-	Request    TeamsCreateDiscussionCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody      TeamsCreateDiscussionCommentRequestBody `request:"mediaType=application/json"`
+	DiscussionNumber int64                                   `pathParam:"style=simple,explode=false,name=discussion_number"`
+	TeamID           int64                                   `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsCreateDiscussionCommentResponse struct {

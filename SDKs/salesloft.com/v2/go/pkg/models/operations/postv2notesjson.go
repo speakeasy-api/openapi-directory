@@ -23,10 +23,6 @@ type PostV2NotesJSONRequestBody struct {
 	UserGUID *string `form:"name=user_guid"`
 }
 
-type PostV2NotesJSONRequest struct {
-	Request PostV2NotesJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2NotesJSONResponse struct {
 	Body        []byte
 	ContentType string

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageRequest struct {
-	Request shared.CreateImageRequest `request:"mediaType=application/json"`
-}
-
 type CreateImageResponse struct {
 	ContentType string
 	// OK

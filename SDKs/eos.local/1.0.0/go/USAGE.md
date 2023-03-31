@@ -13,10 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.ConnectRequest{
-        Request: &operations.ConnectRequestBody{
-            Endpoint: "corrupti",
-        },
+    req := operations.ConnectRequestBody{
+        Endpoint: "corrupti",
     }
 
     ctx := context.Background()

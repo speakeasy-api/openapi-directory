@@ -10,14 +10,9 @@ import (
 )
 
 type PostVehiclesVehicleidWatchSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken2 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type PostVehiclesVehicleidWatchPathParams struct {
-	// ID of the Vehicle
-	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken2 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostVehiclesVehicleidWatchRequestBodyPropertiesEnum - Array of vehicle properties to watch
@@ -62,9 +57,9 @@ type PostVehiclesVehicleidWatchRequestBody struct {
 }
 
 type PostVehiclesVehicleidWatchRequest struct {
-	PathParams PostVehiclesVehicleidWatchPathParams
-	Request    *PostVehiclesVehicleidWatchRequestBody `request:"mediaType=application/json"`
-	Security   PostVehiclesVehicleidWatchSecurity
+	RequestBody *PostVehiclesVehicleidWatchRequestBody `request:"mediaType=application/json"`
+	// ID of the Vehicle
+	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
 }
 
 type PostVehiclesVehicleidWatchResponse struct {

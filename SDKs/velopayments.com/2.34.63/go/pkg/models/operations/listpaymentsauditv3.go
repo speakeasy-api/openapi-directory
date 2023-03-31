@@ -61,7 +61,7 @@ func (e *ListPaymentsAuditV3StatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPaymentsAuditV3QueryParams struct {
+type ListPaymentsAuditV3Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -105,10 +105,6 @@ type ListPaymentsAuditV3QueryParams struct {
 	SubmittedDateFrom *types.Date `queryParam:"style=form,explode=true,name=submittedDateFrom"`
 	// The submitted date to range filter. Format is yyyy-MM-dd.
 	SubmittedDateTo *types.Date `queryParam:"style=form,explode=true,name=submittedDateTo"`
-}
-
-type ListPaymentsAuditV3Request struct {
-	QueryParams ListPaymentsAuditV3QueryParams
 }
 
 type ListPaymentsAuditV3Response struct {

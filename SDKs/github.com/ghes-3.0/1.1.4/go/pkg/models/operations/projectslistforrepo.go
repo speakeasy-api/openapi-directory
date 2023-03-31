@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListForRepoPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ProjectsListForRepoStateEnum - Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
 type ProjectsListForRepoStateEnum string
 
@@ -41,18 +36,15 @@ func (e *ProjectsListForRepoStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListForRepoQueryParams struct {
+type ProjectsListForRepoRequest struct {
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
 	State *ProjectsListForRepoStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ProjectsListForRepoRequest struct {
-	PathParams  ProjectsListForRepoPathParams
-	QueryParams ProjectsListForRepoQueryParams
 }
 
 type ProjectsListForRepoResponse struct {

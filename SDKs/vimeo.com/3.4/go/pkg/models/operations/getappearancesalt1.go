@@ -90,7 +90,7 @@ func (e *GetAppearancesAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAppearancesAlt1QueryParams struct {
+type GetAppearancesAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetAppearancesAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -105,10 +105,6 @@ type GetAppearancesAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetAppearancesAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAppearancesAlt1Request struct {
-	QueryParams GetAppearancesAlt1QueryParams
 }
 
 type GetAppearancesAlt1Response struct {

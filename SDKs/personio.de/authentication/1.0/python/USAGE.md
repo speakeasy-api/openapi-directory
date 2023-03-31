@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PostAuthRequest(
-    query_params=operations.PostAuthQueryParams(
-        client_id="qui",
-        client_secret="sapiente",
-    ),
+    client_id="corrupti",
+    client_secret="provident",
 )
     
 res = s.post_auth(req)

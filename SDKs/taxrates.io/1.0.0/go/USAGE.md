@@ -14,15 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.TaxRatesByCountryCodeRequest{
-        QueryParams: operations.TaxRatesByCountryCodeQueryParams{
-            CountryCode: "US",
-            Date: "2020-09-02",
-            Domain: "api.taxrates.io",
-            Filter: "corrupti",
-            ProductCodes: "C010",
-            Province: "provident",
-            Zip: "71642",
-        },
+        CountryCode: "US",
+        Date: "2020-09-02",
+        Domain: "api.taxrates.io",
+        Filter: "corrupti",
+        ProductCodes: "C010",
+        Province: "provident",
+        Zip: "71642",
     }
 
     ctx := context.Background()

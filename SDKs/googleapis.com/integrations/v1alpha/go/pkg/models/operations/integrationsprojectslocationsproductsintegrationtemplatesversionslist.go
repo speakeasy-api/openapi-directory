@@ -8,16 +8,11 @@ import (
 )
 
 type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListPathParams struct {
-	// Required. Format: projects/{project}/location/{location}/product/{product}/integrationtemplates/{integrationtemplate}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListQueryParams struct {
+type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListQueryP
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListIntegrationTemplateVersions` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListIntegrationTemplateVersions` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Format: projects/{project}/location/{location}/product/{product}/integrationtemplates/{integrationtemplate}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListQueryP
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListRequest struct {
-	PathParams  IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListPathParams
-	QueryParams IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListQueryParams
-	Security    IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListSecurity
 }
 
 type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse struct {

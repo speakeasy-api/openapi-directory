@@ -17,10 +17,6 @@ type UploadsCreateRequestBody struct {
 	File UploadsCreateRequestBodyFile `multipartForm:"file"`
 }
 
-type UploadsCreateRequest struct {
-	Request UploadsCreateRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type UploadsCreateResponse struct {
 	ContentType  string
 	FileResponse *shared.FileResponse

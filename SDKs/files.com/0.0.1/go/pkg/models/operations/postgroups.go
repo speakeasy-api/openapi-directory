@@ -18,10 +18,6 @@ type PostGroupsRequestBody struct {
 	UserIds *string `multipartForm:"name=user_ids"`
 }
 
-type PostGroupsRequest struct {
-	Request *PostGroupsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostGroupsResponse struct {
 	ContentType string
 	// The Groups object.

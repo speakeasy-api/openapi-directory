@@ -8,21 +8,16 @@ import (
 )
 
 type PatchCrmV3ExtensionsCardsAppIDCardIDUpdateSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
-type PatchCrmV3ExtensionsCardsAppIDCardIDUpdatePathParams struct {
+type PatchCrmV3ExtensionsCardsAppIDCardIDUpdateRequest struct {
+	// Card definition fields to be updated.
+	CardPatchRequest shared.CardPatchRequest `request:"mediaType=application/json"`
 	// The ID of the target app.
 	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the card to update.
 	CardID string `pathParam:"style=simple,explode=false,name=cardId"`
-}
-
-type PatchCrmV3ExtensionsCardsAppIDCardIDUpdateRequest struct {
-	PathParams PatchCrmV3ExtensionsCardsAppIDCardIDUpdatePathParams
-	// Card definition fields to be updated.
-	Request  shared.CardPatchRequest `request:"mediaType=application/json"`
-	Security PatchCrmV3ExtensionsCardsAppIDCardIDUpdateSecurity
 }
 
 type PatchCrmV3ExtensionsCardsAppIDCardIDUpdateResponse struct {

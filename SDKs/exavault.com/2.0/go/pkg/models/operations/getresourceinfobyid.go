@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourceInfoByIDPathParams struct {
-	// ID number of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourceInfoByIDQueryParams struct {
-	// Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerAccount**.
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
-type GetResourceInfoByIDHeaders struct {
+type GetResourceInfoByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetResourceInfoByIDRequest struct {
-	PathParams  GetResourceInfoByIDPathParams
-	QueryParams GetResourceInfoByIDQueryParams
-	Headers     GetResourceInfoByIDHeaders
+	// ID number of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerAccount**.
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetResourceInfoByIDResponse struct {

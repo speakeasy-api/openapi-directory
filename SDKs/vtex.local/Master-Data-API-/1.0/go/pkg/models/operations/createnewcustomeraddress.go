@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateNewCustomerAddressQueryParams struct {
-	// Name of the schema the document to be created needs to be compliant with.
-	Schema *string `queryParam:"style=form,explode=true,name=_schema"`
-}
-
-type CreateNewCustomerAddressHeaders struct {
+type CreateNewCustomerAddressRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CreateNewCustomerAddressRequest struct {
-	QueryParams CreateNewCustomerAddressQueryParams
-	Headers     CreateNewCustomerAddressHeaders
-	Request     shared.CreateUpdateAddressRequests `request:"mediaType=application/json"`
+	// Name of the schema the document to be created needs to be compliant with.
+	Schema                      *string                            `queryParam:"style=form,explode=true,name=_schema"`
+	CreateUpdateAddressRequests shared.CreateUpdateAddressRequests `request:"mediaType=application/json"`
 }
 
 type CreateNewCustomerAddressResponse struct {

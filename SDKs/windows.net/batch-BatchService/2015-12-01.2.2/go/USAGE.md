@@ -14,18 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.ApplicationGetRequest{
-        PathParams: operations.ApplicationGetPathParams{
-            ApplicationID: "corrupti",
-        },
-        QueryParams: operations.ApplicationGetQueryParams{
-            APIVersion: "provident",
-            Timeout: 715190,
-        },
-        Headers: operations.ApplicationGetHeaders{
-            ClientRequestID: "quibusdam",
-            OcpDate: "unde",
-            ReturnClientRequestID: false,
-        },
+        APIVersion: "corrupti",
+        ApplicationID: "provident",
+        ClientRequestID: "distinctio",
+        OcpDate: "quibusdam",
+        ReturnClientRequestID: false,
+        Timeout: 602763,
     }
 
     ctx := context.Background()

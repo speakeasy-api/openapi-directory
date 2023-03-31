@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUntaggedImagesPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // GetUntaggedImagesOrderByEnum - The ordering. Defaults to newest.
 type GetUntaggedImagesOrderByEnum string
 
@@ -38,25 +33,18 @@ func (e *GetUntaggedImagesOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUntaggedImagesQueryParams struct {
+type GetUntaggedImagesRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The iteration id. Defaults to workspace.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
 	// The ordering. Defaults to newest.
 	OrderBy *GetUntaggedImagesOrderByEnum `queryParam:"style=form,explode=true,name=orderBy"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Number of images to skip before beginning the image batch. Defaults to 0.
 	Skip *int `queryParam:"style=form,explode=true,name=skip"`
 	// Maximum number of images to return. Defaults to 50, limited to 256.
 	Take *int `queryParam:"style=form,explode=true,name=take"`
-}
-
-type GetUntaggedImagesHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetUntaggedImagesRequest struct {
-	PathParams  GetUntaggedImagesPathParams
-	QueryParams GetUntaggedImagesQueryParams
-	Headers     GetUntaggedImagesHeaders
 }
 
 type GetUntaggedImagesResponse struct {

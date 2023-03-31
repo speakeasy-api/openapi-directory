@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteAPIV1FeaturedTagsIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1FeaturedTagsIDPathParams struct {
-	// The id of the FeaturedTag to be unfeatured.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAPIV1FeaturedTagsIDRequest struct {
-	PathParams DeleteAPIV1FeaturedTagsIDPathParams
-	Security   DeleteAPIV1FeaturedTagsIDSecurity
+	// The id of the FeaturedTag to be unfeatured.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV1FeaturedTagsIDResponse struct {

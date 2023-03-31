@@ -4,19 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.LatestPackageRequest(
-    security=operations.LatestPackageSecurity(
-        rh_identity=shared.SchemeRhIdentity(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    path_params=operations.LatestPackagePathParams(
-        package_name="fuga",
-    ),
+    package_name="corrupti",
 )
     
-res = s.latest_package(req)
+res = s.latest_package(req, operations.LatestPackageSecurity(
+    rh_identity="YOUR_API_KEY_HERE",
+))
 
 if res.controllers_package_detail_response is not None:
     # handle response

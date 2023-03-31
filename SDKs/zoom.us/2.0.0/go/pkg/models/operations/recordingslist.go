@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 	"time"
 )
 
 type RecordingsListSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RecordingsListPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type RecordingsListQueryParams struct {
+type RecordingsListRequest struct {
 	// The start date in 'yyyy-mm-dd' UTC format for the date range for which you would like to retrieve recordings. The maximum range can be a month. If no value is provided for this field, the default will be current date. For example, if you make the API request on June 30, 2020, without providing the “from” and “to” parameters, by default the value of 'from' field will be “2020-06-30” and the value of the 'to' field will be “2020-07-01”.
 	//
 	// **Note**: The "trash" files cannot be filtered by date range and thus, the "from" and "to" fields should not be used for trash files.
@@ -40,12 +34,8 @@ type RecordingsListQueryParams struct {
 	//     `meeting_recordings`: List all meeting recordings from the trash.<br>
 	//     `recording_file`: List all individual recording files from the trash.
 	TrashType *string `queryParam:"style=form,explode=true,name=trash_type"`
-}
-
-type RecordingsListRequest struct {
-	PathParams  RecordingsListPathParams
-	QueryParams RecordingsListQueryParams
-	Security    RecordingsListSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // RecordingsListRecordingListRecordingFileListRecordingFilesStatusEnum - The recording status.

@@ -33,16 +33,16 @@ func newOnDemandPurchasesAndRentals(defaultClient, securityClient HTTPClient, se
 }
 
 // CheckIfVodWasPurchased - Check if a user has made a purchase or rental from an On Demand page
-func (s *onDemandPurchasesAndRentals) CheckIfVodWasPurchased(ctx context.Context, request operations.CheckIfVodWasPurchasedRequest) (*operations.CheckIfVodWasPurchasedResponse, error) {
+func (s *onDemandPurchasesAndRentals) CheckIfVodWasPurchased(ctx context.Context, request operations.CheckIfVodWasPurchasedRequest, security operations.CheckIfVodWasPurchasedSecurity) (*operations.CheckIfVodWasPurchasedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/ondemand/purchases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/ondemand/purchases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,16 +89,16 @@ func (s *onDemandPurchasesAndRentals) CheckIfVodWasPurchased(ctx context.Context
 }
 
 // CheckIfVodWasPurchasedAlt1 - Check if a user has made a purchase or rental from an On Demand page
-func (s *onDemandPurchasesAndRentals) CheckIfVodWasPurchasedAlt1(ctx context.Context, request operations.CheckIfVodWasPurchasedAlt1Request) (*operations.CheckIfVodWasPurchasedAlt1Response, error) {
+func (s *onDemandPurchasesAndRentals) CheckIfVodWasPurchasedAlt1(ctx context.Context, request operations.CheckIfVodWasPurchasedAlt1Request, security operations.CheckIfVodWasPurchasedAlt1Security) (*operations.CheckIfVodWasPurchasedAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/ondemand/purchases/{ondemand_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/ondemand/purchases/{ondemand_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,7 +145,7 @@ func (s *onDemandPurchasesAndRentals) CheckIfVodWasPurchasedAlt1(ctx context.Con
 }
 
 // GetVodPurchases - Get all the On Demand purchases and rentals that a user has made
-func (s *onDemandPurchasesAndRentals) GetVodPurchases(ctx context.Context, request operations.GetVodPurchasesRequest) (*operations.GetVodPurchasesResponse, error) {
+func (s *onDemandPurchasesAndRentals) GetVodPurchases(ctx context.Context, request operations.GetVodPurchasesRequest, security operations.GetVodPurchasesSecurity) (*operations.GetVodPurchasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/ondemand/purchases"
 
@@ -154,11 +154,11 @@ func (s *onDemandPurchasesAndRentals) GetVodPurchases(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

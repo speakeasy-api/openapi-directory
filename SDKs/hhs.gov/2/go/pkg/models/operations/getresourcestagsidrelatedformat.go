@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesTagsIDRelatedFormatPathParams struct {
+type GetResourcesTagsIDRelatedFormatRequest struct {
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// The id of the tag to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesTagsIDRelatedFormatQueryParams struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// Return records starting at the offset index.
 	Offset *int `queryParam:"style=form,explode=false,name=offset"`
 	// The name of the property to which sorting will be applied
 	Sort *string `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetResourcesTagsIDRelatedFormatRequest struct {
-	PathParams  GetResourcesTagsIDRelatedFormatPathParams
-	QueryParams GetResourcesTagsIDRelatedFormatQueryParams
 }
 
 type GetResourcesTagsIDRelatedFormatResponse struct {

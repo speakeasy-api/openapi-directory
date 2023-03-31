@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchLabelsIDPathParams struct {
+type PatchLabelsIDRequest struct {
+	LabelInput shared.LabelInput `request:"mediaType=application/json"`
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatchLabelsIDRequest struct {
-	PathParams PatchLabelsIDPathParams
-	Request    shared.LabelInput `request:"mediaType=application/json"`
 }
 
 // PatchLabelsID404ApplicationJSON - Not found

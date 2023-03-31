@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurity struct {
@@ -28,14 +28,7 @@ type MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurity struct {
 	Option3 *MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsLocationPrometheusAPIV1MetadataListPathParams struct {
-	// Location of the resource information. Has to be "global" for now.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Required. The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsLocationPrometheusAPIV1MetadataListQueryParams struct {
+type MonitoringProjectsLocationPrometheusAPIV1MetadataListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,8 +43,12 @@ type MonitoringProjectsLocationPrometheusAPIV1MetadataListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Maximum number of metrics to return.
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
+	// Location of the resource information. Has to be "global" for now.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The metric name for which to query metadata. If unset, all metric metadata is returned.
 	Metric *string `queryParam:"style=form,explode=true,name=metric"`
+	// Required. The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -62,12 +59,6 @@ type MonitoringProjectsLocationPrometheusAPIV1MetadataListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsLocationPrometheusAPIV1MetadataListRequest struct {
-	PathParams  MonitoringProjectsLocationPrometheusAPIV1MetadataListPathParams
-	QueryParams MonitoringProjectsLocationPrometheusAPIV1MetadataListQueryParams
-	Security    MonitoringProjectsLocationPrometheusAPIV1MetadataListSecurity
 }
 
 type MonitoringProjectsLocationPrometheusAPIV1MetadataListResponse struct {

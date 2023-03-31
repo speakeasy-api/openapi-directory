@@ -14,42 +14,34 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudassetProjectsBatchGetAssetsHistoryRequest{
-        Security: operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        AssetNames: []string{
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
         },
-        PathParams: operations.CloudassetProjectsBatchGetAssetsHistoryPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudassetProjectsBatchGetAssetsHistoryQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            AssetNames: []string{
-                "nulla",
-                "corrupti",
-                "illum",
-            },
-            Callback: "vel",
-            ContentType: "RESOURCE",
-            Fields: "deserunt",
-            Key: "suscipit",
-            OauthToken: "iure",
-            PrettyPrint: false,
-            QuotaUser: "magnam",
-            ReadTimeWindowEndTime: "debitis",
-            ReadTimeWindowStartTime: "ipsa",
-            UploadType: "delectus",
-            UploadProtocol: "tempora",
-        },
+        Callback: "vel",
+        ContentType: "RESOURCE",
+        Fields: "deserunt",
+        Key: "suscipit",
+        OauthToken: "iure",
+        Parent: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        ReadTimeWindowEndTime: "ipsa",
+        ReadTimeWindowStartTime: "delectus",
+        UploadType: "tempora",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, req)
+    res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, req, operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

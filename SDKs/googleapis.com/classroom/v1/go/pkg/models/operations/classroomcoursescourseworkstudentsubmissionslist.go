@@ -10,33 +10,33 @@ import (
 )
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListSecurity struct {
@@ -46,13 +46,6 @@ type ClassroomCoursesCourseWorkStudentSubmissionsListSecurity struct {
 	Option4 *ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption4 `security:"option"`
 	Option5 *ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption5 `security:"option"`
 	Option6 *ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption6 `security:"option"`
-}
-
-type ClassroomCoursesCourseWorkStudentSubmissionsListPathParams struct {
-	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
-	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
-	// Identifier of the student work to request. This may be set to the string literal `"-"` to request student work for all course work in the specified course.
-	CourseWorkID string `pathParam:"style=simple,explode=false,name=courseWorkId"`
 }
 
 // ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum - Requested lateness value. If specified, returned student submissions are restricted by the requested value. If unspecified, submissions are returned regardless of `late` value.
@@ -117,7 +110,7 @@ func (e *ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum) UnmarshalJS
 	}
 }
 
-type ClassroomCoursesCourseWorkStudentSubmissionsListQueryParams struct {
+type ClassroomCoursesCourseWorkStudentSubmissionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -126,6 +119,10 @@ type ClassroomCoursesCourseWorkStudentSubmissionsListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
+	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
+	// Identifier of the student work to request. This may be set to the string literal `"-"` to request student work for all course work in the specified course.
+	CourseWorkID string `pathParam:"style=simple,explode=false,name=courseWorkId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -150,12 +147,6 @@ type ClassroomCoursesCourseWorkStudentSubmissionsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional argument to restrict returned student work to those owned by the student with the specified identifier. The identifier can be one of the following: * the numeric identifier for the user * the email address of the user * the string literal `"me"`, indicating the requesting user
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type ClassroomCoursesCourseWorkStudentSubmissionsListRequest struct {
-	PathParams  ClassroomCoursesCourseWorkStudentSubmissionsListPathParams
-	QueryParams ClassroomCoursesCourseWorkStudentSubmissionsListQueryParams
-	Security    ClassroomCoursesCourseWorkStudentSubmissionsListSecurity
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsListResponse struct {

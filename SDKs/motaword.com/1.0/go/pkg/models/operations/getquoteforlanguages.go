@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuoteForLanguagesPathParams struct {
+type GetQuoteForLanguagesRequest struct {
+	GetQuotesForLanguagesBody *shared.GetQuotesForLanguagesBody `request:"mediaType=application/json"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetQuoteForLanguagesRequest struct {
-	PathParams GetQuoteForLanguagesPathParams
-	Request    *shared.GetQuotesForLanguagesBody `request:"mediaType=application/json"`
 }
 
 type GetQuoteForLanguagesResponse struct {

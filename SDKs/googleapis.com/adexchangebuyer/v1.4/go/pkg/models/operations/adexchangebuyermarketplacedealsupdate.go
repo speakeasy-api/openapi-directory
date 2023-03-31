@@ -8,16 +8,12 @@ import (
 )
 
 type AdexchangebuyerMarketplacedealsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdexchangebuyerMarketplacedealsUpdatePathParams struct {
-	// The proposalId to edit deals on.
-	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
-}
-
-type AdexchangebuyerMarketplacedealsUpdateQueryParams struct {
+type AdexchangebuyerMarketplacedealsUpdateRequest struct {
+	EditAllOrderDealsRequest *shared.EditAllOrderDealsRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -28,17 +24,12 @@ type AdexchangebuyerMarketplacedealsUpdateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The proposalId to edit deals on.
+	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerMarketplacedealsUpdateRequest struct {
-	PathParams  AdexchangebuyerMarketplacedealsUpdatePathParams
-	QueryParams AdexchangebuyerMarketplacedealsUpdateQueryParams
-	Request     *shared.EditAllOrderDealsRequest `request:"mediaType=application/json"`
-	Security    AdexchangebuyerMarketplacedealsUpdateSecurity
 }
 
 type AdexchangebuyerMarketplacedealsUpdateResponse struct {

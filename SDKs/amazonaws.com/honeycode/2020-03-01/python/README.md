@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/honeycode/2020-03-01/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,62 +14,113 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.BatchCreateTableRowsRequest(
-    path_params=operations.BatchCreateTableRowsPathParams(
-        table_id="praesentium",
-        workbook_id="et",
-    ),
-    headers=operations.BatchCreateTableRowsHeaders(
-        x_amz_algorithm="ratione",
-        x_amz_content_sha256="est",
-        x_amz_credential="in",
-        x_amz_date="corporis",
-        x_amz_security_token="dolores",
-        x_amz_signature="perferendis",
-        x_amz_signed_headers="laboriosam",
-    ),
-    request=operations.BatchCreateTableRowsRequestBody(
-        client_request_token="numquam",
+    request_body=operations.BatchCreateTableRowsRequestBody(
+        client_request_token="corrupti",
         rows_to_create=[
             shared.CreateRowData(
-                batch_item_id="aperiam",
+                batch_item_id="distinctio",
                 cells_to_create={
-                    "velit": shared.CellInput(
-                        fact="possimus",
+                    "unde": shared.CellInput(
+                        fact="nulla",
+                        facts=[
+                            "illum",
+                            "vel",
+                            "error",
+                        ],
                     ),
-                    "hic": shared.CellInput(
-                        fact="quis",
+                    "deserunt": shared.CellInput(
+                        fact="suscipit",
+                        facts=[
+                            "magnam",
+                            "debitis",
+                        ],
                     ),
-                    "sunt": shared.CellInput(
-                        fact="quo",
+                    "ipsa": shared.CellInput(
+                        fact="delectus",
+                        facts=[
+                            "suscipit",
+                            "molestiae",
+                        ],
+                    ),
+                    "minus": shared.CellInput(
+                        fact="placeat",
+                        facts=[
+                            "iusto",
+                            "excepturi",
+                            "nisi",
+                        ],
                     ),
                 },
             ),
             shared.CreateRowData(
-                batch_item_id="eveniet",
+                batch_item_id="recusandae",
                 cells_to_create={
-                    "reiciendis": shared.CellInput(
-                        fact="non",
+                    "ab": shared.CellInput(
+                        fact="quis",
+                        facts=[
+                            "deserunt",
+                        ],
                     ),
-                    "dolor": shared.CellInput(
+                    "perferendis": shared.CellInput(
+                        fact="ipsam",
+                        facts=[
+                            "sapiente",
+                            "quo",
+                            "odit",
+                            "at",
+                        ],
+                    ),
+                    "at": shared.CellInput(
                         fact="maiores",
+                        facts=[
+                            "quod",
+                            "quod",
+                        ],
                     ),
-                    "itaque": shared.CellInput(
-                        fact="pariatur",
+                    "esse": shared.CellInput(
+                        fact="totam",
+                        facts=[
+                            "dolorum",
+                            "dicta",
+                            "nam",
+                            "officia",
+                        ],
+                    ),
+                },
+            ),
+            shared.CreateRowData(
+                batch_item_id="occaecati",
+                cells_to_create={
+                    "deleniti": shared.CellInput(
+                        fact="hic",
+                        facts=[
+                            "totam",
+                            "beatae",
+                            "commodi",
+                            "molestiae",
+                        ],
                     ),
                 },
             ),
         ],
     ),
+    x_amz_algorithm="modi",
+    x_amz_content_sha256="qui",
+    x_amz_credential="impedit",
+    x_amz_date="cum",
+    x_amz_security_token="esse",
+    x_amz_signature="ipsum",
+    x_amz_signed_headers="excepturi",
+    table_id="aspernatur",
+    workbook_id="perferendis",
 )
     
 res = s.batch_create_table_rows(req)
@@ -80,7 +131,7 @@ if res.batch_create_table_rows_result is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -94,9 +145,22 @@ if res.batch_create_table_rows_result is not None:
 * `list_table_columns` -  The ListTableColumns API allows you to retrieve a list of all the columns in a table in a workbook. 
 * `list_table_rows` -  The ListTableRows API allows you to retrieve a list of all the rows in a table in a workbook. 
 * `list_tables` -  The ListTables API allows you to retrieve a list of all the tables in a workbook. 
+* `list_tags_for_resource` -  The ListTagsForResource API allows you to return a resource's tags. 
 * `query_table_rows` -  The QueryTableRows API allows you to use a filter formula to query for specific rows in a table. 
 * `start_table_data_import_job` -  The StartTableDataImportJob API allows you to start an import job on a table. This API will only return the id of the job that was started. To find out the status of the import request, you need to call the DescribeTableDataImportJob API. 
-
+* `tag_resource` -  The TagResource API allows you to add tags to an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
+* `untag_resource` -  The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

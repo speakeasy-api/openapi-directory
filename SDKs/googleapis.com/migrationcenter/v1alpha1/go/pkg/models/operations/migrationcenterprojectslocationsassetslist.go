@@ -10,13 +10,8 @@ import (
 )
 
 type MigrationcenterProjectsLocationsAssetsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type MigrationcenterProjectsLocationsAssetsListPathParams struct {
-	// Required. Parent value for `ListAssetsRequest`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MigrationcenterProjectsLocationsAssetsListViewEnum - View of the assets. Defaults to BASIC.
@@ -49,7 +44,7 @@ func (e *MigrationcenterProjectsLocationsAssetsListViewEnum) UnmarshalJSON(data 
 	}
 }
 
-type MigrationcenterProjectsLocationsAssetsListQueryParams struct {
+type MigrationcenterProjectsLocationsAssetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -72,6 +67,8 @@ type MigrationcenterProjectsLocationsAssetsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent value for `ListAssetsRequest`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -82,12 +79,6 @@ type MigrationcenterProjectsLocationsAssetsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// View of the assets. Defaults to BASIC.
 	View *MigrationcenterProjectsLocationsAssetsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type MigrationcenterProjectsLocationsAssetsListRequest struct {
-	PathParams  MigrationcenterProjectsLocationsAssetsListPathParams
-	QueryParams MigrationcenterProjectsLocationsAssetsListQueryParams
-	Security    MigrationcenterProjectsLocationsAssetsListSecurity
 }
 
 type MigrationcenterProjectsLocationsAssetsListResponse struct {

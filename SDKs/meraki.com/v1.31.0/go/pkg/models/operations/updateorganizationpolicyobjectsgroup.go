@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationPolicyObjectsGroupPathParams struct {
-	OrganizationID      string `pathParam:"style=simple,explode=false,name=organizationId"`
-	PolicyObjectGroupID string `pathParam:"style=simple,explode=false,name=policyObjectGroupId"`
-}
-
 type UpdateOrganizationPolicyObjectsGroupRequestBody struct {
 	// A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only)
 	Name *string `json:"name,omitempty"`
@@ -19,8 +14,9 @@ type UpdateOrganizationPolicyObjectsGroupRequestBody struct {
 }
 
 type UpdateOrganizationPolicyObjectsGroupRequest struct {
-	PathParams UpdateOrganizationPolicyObjectsGroupPathParams
-	Request    *UpdateOrganizationPolicyObjectsGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody         *UpdateOrganizationPolicyObjectsGroupRequestBody `request:"mediaType=application/json"`
+	OrganizationID      string                                           `pathParam:"style=simple,explode=false,name=organizationId"`
+	PolicyObjectGroupID string                                           `pathParam:"style=simple,explode=false,name=policyObjectGroupId"`
 }
 
 type UpdateOrganizationPolicyObjectsGroupResponse struct {

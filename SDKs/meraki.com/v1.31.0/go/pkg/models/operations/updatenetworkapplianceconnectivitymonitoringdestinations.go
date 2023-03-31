@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceConnectivityMonitoringDestinationsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBodyDestinations struct {
 	// Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
 	Default *bool `json:"default,omitempty"`
@@ -25,8 +21,8 @@ type UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBody struct 
 }
 
 type UpdateNetworkApplianceConnectivityMonitoringDestinationsRequest struct {
-	PathParams UpdateNetworkApplianceConnectivityMonitoringDestinationsPathParams
-	Request    *UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                               `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse struct {

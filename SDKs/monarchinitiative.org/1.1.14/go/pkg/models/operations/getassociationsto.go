@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssociationsToPathParams struct {
-	// Return associations pointing to this node, e.g. specifying MP:0013765 will return all genes, variants, strains, etc. annotated with this term. Can also be a biological entity such as a gene
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GetAssociationsToQueryParams struct {
+type GetAssociationsToRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
 	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
 	// If true, excludes associations that involve IEAs (ECO:0000501)
 	ExcludeAutomaticAssertions *bool `queryParam:"style=form,explode=true,name=exclude_automatic_assertions"`
+	// Return associations pointing to this node, e.g. specifying MP:0013765 will return all genes, variants, strains, etc. annotated with this term. Can also be a biological entity such as a gene
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// number of rows
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// beginning row
@@ -25,11 +22,6 @@ type GetAssociationsToQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetAssociationsToRequest struct {
-	PathParams  GetAssociationsToPathParams
-	QueryParams GetAssociationsToQueryParams
 }
 
 type GetAssociationsToResponse struct {

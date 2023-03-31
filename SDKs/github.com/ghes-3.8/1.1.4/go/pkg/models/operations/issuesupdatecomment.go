@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesUpdateCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesUpdateCommentRequestBody struct {
 	// The contents of the comment.
 	Body string `json:"body"`
 }
 
 type IssuesUpdateCommentRequest struct {
-	PathParams IssuesUpdateCommentPathParams
-	Request    IssuesUpdateCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesUpdateCommentRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesUpdateCommentResponse struct {

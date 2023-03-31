@@ -8,26 +8,22 @@ import (
 )
 
 type AnalyticsManagementWebpropertyUserLinksUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementWebpropertyUserLinksUpdatePathParams struct {
+type AnalyticsManagementWebpropertyUserLinksUpdateRequest struct {
+	EntityUserLinkInput *shared.EntityUserLinkInput `request:"mediaType=application/json"`
 	// Account ID to update the account-user link for.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Link ID to update the account-user link for.
-	LinkID string `pathParam:"style=simple,explode=false,name=linkId"`
-	// Web property ID to update the account-user link for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementWebpropertyUserLinksUpdateQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Link ID to update the account-user link for.
+	LinkID string `pathParam:"style=simple,explode=false,name=linkId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -36,13 +32,8 @@ type AnalyticsManagementWebpropertyUserLinksUpdateQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementWebpropertyUserLinksUpdateRequest struct {
-	PathParams  AnalyticsManagementWebpropertyUserLinksUpdatePathParams
-	QueryParams AnalyticsManagementWebpropertyUserLinksUpdateQueryParams
-	Request     *shared.EntityUserLinkInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementWebpropertyUserLinksUpdateSecurity
+	// Web property ID to update the account-user link for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementWebpropertyUserLinksUpdateResponse struct {

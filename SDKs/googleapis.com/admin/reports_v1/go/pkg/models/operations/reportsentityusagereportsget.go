@@ -10,8 +10,8 @@ import (
 )
 
 type ReportsEntityUsageReportsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportsEntityUsageReportsGetEntityTypeEnum - Represents the type of entity for the report.
@@ -35,16 +35,7 @@ func (e *ReportsEntityUsageReportsGetEntityTypeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ReportsEntityUsageReportsGetPathParams struct {
-	// Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We recommend you use your account's time zone for this.
-	Date string `pathParam:"style=simple,explode=false,name=date"`
-	// Represents the key of the object to filter the data with. It is a string which can take the value `all` to get activity events for all users, or any other value for an app-specific entity. For details on how to obtain the `entityKey` for a particular `entityType`, see the Entities Usage parameters reference guides.
-	EntityKey string `pathParam:"style=simple,explode=false,name=entityKey"`
-	// Represents the type of entity for the report.
-	EntityType ReportsEntityUsageReportsGetEntityTypeEnum `pathParam:"style=simple,explode=false,name=entityType"`
-}
-
-type ReportsEntityUsageReportsGetQueryParams struct {
+type ReportsEntityUsageReportsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -55,6 +46,12 @@ type ReportsEntityUsageReportsGetQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// The unique ID of the customer to retrieve data for.
 	CustomerID *string `queryParam:"style=form,explode=true,name=customerId"`
+	// Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We recommend you use your account's time zone for this.
+	Date string `pathParam:"style=simple,explode=false,name=date"`
+	// Represents the key of the object to filter the data with. It is a string which can take the value `all` to get activity events for all users, or any other value for an app-specific entity. For details on how to obtain the `entityKey` for a particular `entityType`, see the Entities Usage parameters reference guides.
+	EntityKey string `pathParam:"style=simple,explode=false,name=entityKey"`
+	// Represents the type of entity for the report.
+	EntityType ReportsEntityUsageReportsGetEntityTypeEnum `pathParam:"style=simple,explode=false,name=entityType"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// The `filters` query string is a comma-separated list of an application's event parameters where the parameter's value is manipulated by a relational operator. The `filters` query string includes the name of the application whose usage is returned in the report. The application values for the Entities usage report include `accounts`, `docs`, and `gmail`. Filters are in the form `[application name]:parameter name[parameter value],...`. In this example, the `<>` 'not equal to' operator is URL-encoded in the request's query string (%3C%3E): GET https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01 ?parameters=gplus:community_name,gplus:num_total_members &filters=gplus:num_total_members%3C%3E0 The relational operators include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` - 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal to'. It is URL-encoded (%3E=). Filters can only be applied to numeric parameters.
@@ -77,12 +74,6 @@ type ReportsEntityUsageReportsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ReportsEntityUsageReportsGetRequest struct {
-	PathParams  ReportsEntityUsageReportsGetPathParams
-	QueryParams ReportsEntityUsageReportsGetQueryParams
-	Security    ReportsEntityUsageReportsGetSecurity
 }
 
 type ReportsEntityUsageReportsGetResponse struct {

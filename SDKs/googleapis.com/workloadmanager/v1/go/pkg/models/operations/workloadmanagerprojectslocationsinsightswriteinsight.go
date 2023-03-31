@@ -8,18 +8,14 @@ import (
 )
 
 type WorkloadmanagerProjectsLocationsInsightsWriteInsightSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WorkloadmanagerProjectsLocationsInsightsWriteInsightPathParams struct {
-	// Required. The GCP location. The format is: projects/{project}/locations/{location}.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-}
-
-type WorkloadmanagerProjectsLocationsInsightsWriteInsightQueryParams struct {
+type WorkloadmanagerProjectsLocationsInsightsWriteInsightRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv              *shared.XgafvEnum                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WriteInsightRequestInput *shared.WriteInsightRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type WorkloadmanagerProjectsLocationsInsightsWriteInsightQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The GCP location. The format is: projects/{project}/locations/{location}.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type WorkloadmanagerProjectsLocationsInsightsWriteInsightQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type WorkloadmanagerProjectsLocationsInsightsWriteInsightRequest struct {
-	PathParams  WorkloadmanagerProjectsLocationsInsightsWriteInsightPathParams
-	QueryParams WorkloadmanagerProjectsLocationsInsightsWriteInsightQueryParams
-	Request     *shared.WriteInsightRequestInput `request:"mediaType=application/json"`
-	Security    WorkloadmanagerProjectsLocationsInsightsWriteInsightSecurity
 }
 
 type WorkloadmanagerProjectsLocationsInsightsWriteInsightResponse struct {

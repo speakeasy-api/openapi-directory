@@ -37,7 +37,7 @@ func newHistoryExports(defaultClient, securityClient HTTPClient, serverURL, lang
 // Show History Export
 func (s *historyExports) GetHistoryExportsID(ctx context.Context, request operations.GetHistoryExportsIDRequest) (*operations.GetHistoryExportsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history_exports/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/history_exports/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *historyExports) GetHistoryExportsID(ctx context.Context, request operat
 
 // PostHistoryExports - Create History Export
 // Create History Export
-func (s *historyExports) PostHistoryExports(ctx context.Context, request operations.PostHistoryExportsRequest) (*operations.PostHistoryExportsResponse, error) {
+func (s *historyExports) PostHistoryExports(ctx context.Context, request operations.PostHistoryExportsRequestBody) (*operations.PostHistoryExportsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/history_exports"
 

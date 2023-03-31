@@ -49,11 +49,11 @@ func newScore(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // - To invite an external user to the resource, specify its email in the `userEmail` property.
 // - To add a Flat group to the resource, specify its unique identifier in the `group` property.
 // - To update an existing collaborator, process the same request with different rights.
-func (s *score) AddScoreCollaborator(ctx context.Context, request operations.AddScoreCollaboratorRequest) (*operations.AddScoreCollaboratorResponse, error) {
+func (s *score) AddScoreCollaborator(ctx context.Context, request operations.AddScoreCollaboratorRequest, security operations.AddScoreCollaboratorSecurity) (*operations.AddScoreCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceCollaboratorCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,7 +68,7 @@ func (s *score) AddScoreCollaborator(ctx context.Context, request operations.Add
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -121,11 +121,11 @@ func (s *score) AddScoreCollaborator(ctx context.Context, request operations.Add
 // AddScoreTrack - Add a new video or audio track to the score
 // Use this method to add new track to the score. This track can then be played on flat.io or in an embedded score.
 // This API method support medias hosted on SoundCloud, YouTube and Vimeo.
-func (s *score) AddScoreTrack(ctx context.Context, request operations.AddScoreTrackRequest) (*operations.AddScoreTrackResponse, error) {
+func (s *score) AddScoreTrack(ctx context.Context, request operations.AddScoreTrackRequest, security operations.AddScoreTrackSecurity) (*operations.AddScoreTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreTrackCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -140,7 +140,7 @@ func (s *score) AddScoreTrack(ctx context.Context, request operations.AddScoreTr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *score) AddScoreTrack(ctx context.Context, request operations.AddScoreTr
 // If no `collection` is specified, the API will create the score in the most appropriate collection. This can be the `root` collection or a different collection based on the user's settings or API authentication method.
 // If a `collection` is specified and this one has more public privacy settings than the score (e.g. `public` vs `private` for the score), the privacy settings of the created score will be adjusted to the collection ones.
 // You can check the adjusted privacy settings in the returned score `privacy`, and optionally adjust these settings if needed using `PUT /scores/{score}`.
-func (s *score) CreateScore(ctx context.Context, request operations.CreateScoreRequest) (*operations.CreateScoreResponse, error) {
+func (s *score) CreateScore(ctx context.Context, request shared.ScoreCreation, security operations.CreateScoreSecurity) (*operations.CreateScoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/scores"
 
@@ -217,7 +217,7 @@ func (s *score) CreateScore(ctx context.Context, request operations.CreateScoreR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,11 +267,11 @@ func (s *score) CreateScore(ctx context.Context, request operations.CreateScoreR
 
 // CreateScoreRevision - Create a new revision
 // Update a score by uploading a new revision for this one.
-func (s *score) CreateScoreRevision(ctx context.Context, request operations.CreateScoreRevisionRequest) (*operations.CreateScoreRevisionResponse, error) {
+func (s *score) CreateScoreRevision(ctx context.Context, request operations.CreateScoreRevisionRequest, security operations.CreateScoreRevisionSecurity) (*operations.CreateScoreRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreRevisionCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,7 +286,7 @@ func (s *score) CreateScoreRevision(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,20 +343,20 @@ func (s *score) CreateScoreRevision(ctx context.Context, request operations.Crea
 // The score won't be accessible anymore after calling this method and the user's quota will directly be updated.
 //
 // When called by a regular collaborator (`aclRead` / `aclWrite`), the score will be unshared (i.e. removed from the account & own collections).
-func (s *score) DeleteScore(ctx context.Context, request operations.DeleteScoreRequest) (*operations.DeleteScoreResponse, error) {
+func (s *score) DeleteScore(ctx context.Context, request operations.DeleteScoreRequest, security operations.DeleteScoreSecurity) (*operations.DeleteScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *score) DeleteScore(ctx context.Context, request operations.DeleteScoreR
 }
 
 // DeleteScoreComment - Delete a comment
-func (s *score) DeleteScoreComment(ctx context.Context, request operations.DeleteScoreCommentRequest) (*operations.DeleteScoreCommentResponse, error) {
+func (s *score) DeleteScoreComment(ctx context.Context, request operations.DeleteScoreCommentRequest, security operations.DeleteScoreCommentSecurity) (*operations.DeleteScoreCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -449,16 +449,16 @@ func (s *score) DeleteScoreComment(ctx context.Context, request operations.Delet
 }
 
 // DeleteScoreTrack - Remove an audio or video track linked to the score
-func (s *score) DeleteScoreTrack(ctx context.Context, request operations.DeleteScoreTrackRequest) (*operations.DeleteScoreTrackResponse, error) {
+func (s *score) DeleteScoreTrack(ctx context.Context, request operations.DeleteScoreTrackRequest, security operations.DeleteScoreTrackSecurity) (*operations.DeleteScoreTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks/{track}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -504,11 +504,11 @@ func (s *score) DeleteScoreTrack(ctx context.Context, request operations.DeleteS
 //
 // When editing the `title`, `subtitle`, `composer`, `lyricist`, `arranger` or `licenseText`, the metadatas will be instantly be updated, and a real-time action will be pushed to update the document lazily.
 // This pending document modification will be automatically be saved as a new version by either a connected client or our internal versioning service.
-func (s *score) EditScore(ctx context.Context, request operations.EditScoreRequest) (*operations.EditScoreResponse, error) {
+func (s *score) EditScore(ctx context.Context, request operations.EditScoreRequest, security operations.EditScoreSecurity) (*operations.EditScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreModification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -520,7 +520,7 @@ func (s *score) EditScore(ctx context.Context, request operations.EditScoreReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -574,11 +574,11 @@ func (s *score) EditScore(ctx context.Context, request operations.EditScoreReque
 // This API call will make a copy of the last revision of the specified score and create a new score. The copy of the score will have a privacy set to `private`.
 //
 // When using a [Flat for Education](https://flat.io/edu) account, the inline and contextualized comments will be accessible in the child document.
-func (s *score) ForkScore(ctx context.Context, request operations.ForkScoreRequest) (*operations.ForkScoreResponse, error) {
+func (s *score) ForkScore(ctx context.Context, request operations.ForkScoreRequest, security operations.ForkScoreSecurity) (*operations.ForkScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/fork", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/fork", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreFork", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -593,11 +593,11 @@ func (s *score) ForkScore(ctx context.Context, request operations.ForkScoreReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -648,20 +648,20 @@ func (s *score) ForkScore(ctx context.Context, request operations.ForkScoreReque
 }
 
 // GerUserLikes - List liked scores
-func (s *score) GerUserLikes(ctx context.Context, request operations.GerUserLikesRequest) (*operations.GerUserLikesResponse, error) {
+func (s *score) GerUserLikes(ctx context.Context, request operations.GerUserLikesRequest, security operations.GerUserLikesSecurity) (*operations.GerUserLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -707,20 +707,20 @@ func (s *score) GerUserLikes(ctx context.Context, request operations.GerUserLike
 
 // GetGroupScores - List group's scores
 // Get the list of scores shared with a group.
-func (s *score) GetGroupScores(ctx context.Context, request operations.GetGroupScoresRequest) (*operations.GetGroupScoresResponse, error) {
+func (s *score) GetGroupScores(ctx context.Context, request operations.GetGroupScoresRequest, security operations.GetGroupScoresSecurity) (*operations.GetGroupScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/scores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/scores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,20 +767,20 @@ func (s *score) GetGroupScores(ctx context.Context, request operations.GetGroupS
 // GetScore - Get a score's metadata
 // Get the details of a score identified by the `score` parameter in the URL.
 // The currently authenticated user must have at least a read access to the document to use this API call.
-func (s *score) GetScore(ctx context.Context, request operations.GetScoreRequest) (*operations.GetScoreResponse, error) {
+func (s *score) GetScore(ctx context.Context, request operations.GetScoreRequest, security operations.GetScoreSecurity) (*operations.GetScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -832,20 +832,20 @@ func (s *score) GetScore(ctx context.Context, request operations.GetScoreRequest
 
 // GetScoreCollaborator - Get a collaborator
 // Get the information about a collaborator (User or Group).
-func (s *score) GetScoreCollaborator(ctx context.Context, request operations.GetScoreCollaboratorRequest) (*operations.GetScoreCollaboratorResponse, error) {
+func (s *score) GetScoreCollaborator(ctx context.Context, request operations.GetScoreCollaboratorRequest, security operations.GetScoreCollaboratorSecurity) (*operations.GetScoreCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators/{collaborator}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators/{collaborator}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -899,20 +899,20 @@ func (s *score) GetScoreCollaborator(ctx context.Context, request operations.Get
 // This API call will list the different collaborators of a score and their rights on the document. The returned list will at least contain the owner of the document.
 //
 // Collaborators can be a single user (the object `user` will be populated) or a group (the object `group` will be populated).
-func (s *score) GetScoreCollaborators(ctx context.Context, request operations.GetScoreCollaboratorsRequest) (*operations.GetScoreCollaboratorsResponse, error) {
+func (s *score) GetScoreCollaborators(ctx context.Context, request operations.GetScoreCollaboratorsRequest, security operations.GetScoreCollaboratorsSecurity) (*operations.GetScoreCollaboratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -964,20 +964,20 @@ func (s *score) GetScoreCollaborators(ctx context.Context, request operations.Ge
 
 // GetScoreComments - List comments
 // This method lists the different comments added on a music score (documents and inline) sorted by their post dates.
-func (s *score) GetScoreComments(ctx context.Context, request operations.GetScoreCommentsRequest) (*operations.GetScoreCommentsResponse, error) {
+func (s *score) GetScoreComments(ctx context.Context, request operations.GetScoreCommentsRequest, security operations.GetScoreCommentsSecurity) (*operations.GetScoreCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1030,20 +1030,20 @@ func (s *score) GetScoreComments(ctx context.Context, request operations.GetScor
 // GetScoreRevision - Get a score revision
 // When creating a score or saving a new version of a score, a revision is created in our storage. This method allows you to get a specific
 // revision metadata.
-func (s *score) GetScoreRevision(ctx context.Context, request operations.GetScoreRevisionRequest) (*operations.GetScoreRevisionResponse, error) {
+func (s *score) GetScoreRevision(ctx context.Context, request operations.GetScoreRevisionRequest, security operations.GetScoreRevisionSecurity) (*operations.GetScoreRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions/{revision}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions/{revision}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1096,20 +1096,20 @@ func (s *score) GetScoreRevision(ctx context.Context, request operations.GetScor
 // GetScoreRevisionData - Get a score revision data
 // Retrieve the file corresponding to a score revision (the following formats are available): Flat JSON/Adagio JSON `json`, MusicXML
 // `mxl`/`xml`, MP3 `mp3`, WAV `wav`, MIDI `midi`, a tumbnail of the first page `thumbnail.png` or auto sync points `synchronizationPoints`.
-func (s *score) GetScoreRevisionData(ctx context.Context, request operations.GetScoreRevisionDataRequest) (*operations.GetScoreRevisionDataResponse, error) {
+func (s *score) GetScoreRevisionData(ctx context.Context, request operations.GetScoreRevisionDataRequest, security operations.GetScoreRevisionDataSecurity) (*operations.GetScoreRevisionDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions/{revision}/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions/{revision}/{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1205,20 +1205,20 @@ func (s *score) GetScoreRevisionData(ctx context.Context, request operations.Get
 // When creating a score or saving a new version of a score, a revision is created in our storage. This method allows you to list all of them, sorted by last modification.
 //
 // Depending the plan of the account, this list can be trunked to the few last revisions.
-func (s *score) GetScoreRevisions(ctx context.Context, request operations.GetScoreRevisionsRequest) (*operations.GetScoreRevisionsResponse, error) {
+func (s *score) GetScoreRevisions(ctx context.Context, request operations.GetScoreRevisionsRequest, security operations.GetScoreRevisionsSecurity) (*operations.GetScoreRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1270,16 +1270,16 @@ func (s *score) GetScoreRevisions(ctx context.Context, request operations.GetSco
 
 // GetScoreSubmissions - List submissions related to the score
 // This API call will list the different assignments submissions where the score is attached. This method can be used by anyone that are part of the organization and have at least read access to the document.
-func (s *score) GetScoreSubmissions(ctx context.Context, request operations.GetScoreSubmissionsRequest) (*operations.GetScoreSubmissionsResponse, error) {
+func (s *score) GetScoreSubmissions(ctx context.Context, request operations.GetScoreSubmissionsRequest, security operations.GetScoreSubmissionsSecurity) (*operations.GetScoreSubmissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/submissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/submissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1324,20 +1324,20 @@ func (s *score) GetScoreSubmissions(ctx context.Context, request operations.GetS
 }
 
 // GetScoreTrack - Retrieve the details of an audio or video track linked to a score
-func (s *score) GetScoreTrack(ctx context.Context, request operations.GetScoreTrackRequest) (*operations.GetScoreTrackResponse, error) {
+func (s *score) GetScoreTrack(ctx context.Context, request operations.GetScoreTrackRequest, security operations.GetScoreTrackSecurity) (*operations.GetScoreTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks/{track}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1391,20 +1391,20 @@ func (s *score) GetScoreTrack(ctx context.Context, request operations.GetScoreTr
 // **DEPRECATED**: Please note that the current behavior will be deprecrated on **2019-01-01**.
 // This method will no longer list private and shared scores, but only public scores of a Flat account.
 // If you want to access to private scores, please use the [Collections API](#tag/Collection) instead.
-func (s *score) GetUserScores(ctx context.Context, request operations.GetUserScoresRequest) (*operations.GetUserScoresResponse, error) {
+func (s *score) GetUserScores(ctx context.Context, request operations.GetUserScoresRequest, security operations.GetUserScoresSecurity) (*operations.GetUserScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/scores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/scores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1449,20 +1449,20 @@ func (s *score) GetUserScores(ctx context.Context, request operations.GetUserSco
 }
 
 // ListScoreTracks - List the audio or video tracks linked to a score
-func (s *score) ListScoreTracks(ctx context.Context, request operations.ListScoreTracksRequest) (*operations.ListScoreTracksResponse, error) {
+func (s *score) ListScoreTracks(ctx context.Context, request operations.ListScoreTracksRequest, security operations.ListScoreTracksSecurity) (*operations.ListScoreTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1511,20 +1511,20 @@ func (s *score) ListScoreTracks(ctx context.Context, request operations.ListScor
 }
 
 // MarkScoreCommentResolved - Mark the comment as resolved
-func (s *score) MarkScoreCommentResolved(ctx context.Context, request operations.MarkScoreCommentResolvedRequest) (*operations.MarkScoreCommentResolvedResponse, error) {
+func (s *score) MarkScoreCommentResolved(ctx context.Context, request operations.MarkScoreCommentResolvedRequest, security operations.MarkScoreCommentResolvedSecurity) (*operations.MarkScoreCommentResolvedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}/resolved", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}/resolved", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1564,20 +1564,20 @@ func (s *score) MarkScoreCommentResolved(ctx context.Context, request operations
 }
 
 // MarkScoreCommentUnresolved - Mark the comment as unresolved
-func (s *score) MarkScoreCommentUnresolved(ctx context.Context, request operations.MarkScoreCommentUnresolvedRequest) (*operations.MarkScoreCommentUnresolvedResponse, error) {
+func (s *score) MarkScoreCommentUnresolved(ctx context.Context, request operations.MarkScoreCommentUnresolvedRequest, security operations.MarkScoreCommentUnresolvedSecurity) (*operations.MarkScoreCommentUnresolvedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}/resolved", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}/resolved", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1620,11 +1620,11 @@ func (s *score) MarkScoreCommentUnresolved(ctx context.Context, request operatio
 // Post a document or a contextualized comment on a document.
 //
 // Please note that this method includes an anti-spam system for public scores. We don't guarantee that your comments will be accepted and displayed to end-user. Comments are be blocked by returning a `403` HTTP error and hidden from other users when the `spam` property is `true`.
-func (s *score) PostScoreComment(ctx context.Context, request operations.PostScoreCommentRequest) (*operations.PostScoreCommentResponse, error) {
+func (s *score) PostScoreComment(ctx context.Context, request operations.PostScoreCommentRequest, security operations.PostScoreCommentSecurity) (*operations.PostScoreCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreCommentCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1639,11 +1639,11 @@ func (s *score) PostScoreComment(ctx context.Context, request operations.PostSco
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1695,16 +1695,16 @@ func (s *score) PostScoreComment(ctx context.Context, request operations.PostSco
 
 // RemoveScoreCollaborator - Delete a collaborator
 // Remove the specified collaborator from the score
-func (s *score) RemoveScoreCollaborator(ctx context.Context, request operations.RemoveScoreCollaboratorRequest) (*operations.RemoveScoreCollaboratorResponse, error) {
+func (s *score) RemoveScoreCollaborator(ctx context.Context, request operations.RemoveScoreCollaboratorRequest, security operations.RemoveScoreCollaboratorSecurity) (*operations.RemoveScoreCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators/{collaborator}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/collaborators/{collaborator}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1745,16 +1745,16 @@ func (s *score) RemoveScoreCollaborator(ctx context.Context, request operations.
 
 // UntrashScore - Untrash a score
 // This method will remove the score from the `trash` collection and from the deletion queue, and add it back to the original collections.
-func (s *score) UntrashScore(ctx context.Context, request operations.UntrashScoreRequest) (*operations.UntrashScoreResponse, error) {
+func (s *score) UntrashScore(ctx context.Context, request operations.UntrashScoreRequest, security operations.UntrashScoreSecurity) (*operations.UntrashScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/untrash", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/untrash", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1794,11 +1794,11 @@ func (s *score) UntrashScore(ctx context.Context, request operations.UntrashScor
 }
 
 // UpdateScoreComment - Update an existing comment
-func (s *score) UpdateScoreComment(ctx context.Context, request operations.UpdateScoreCommentRequest) (*operations.UpdateScoreCommentResponse, error) {
+func (s *score) UpdateScoreComment(ctx context.Context, request operations.UpdateScoreCommentRequest, security operations.UpdateScoreCommentSecurity) (*operations.UpdateScoreCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/comments/{comment}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreCommentUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1813,11 +1813,11 @@ func (s *score) UpdateScoreComment(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1868,11 +1868,11 @@ func (s *score) UpdateScoreComment(ctx context.Context, request operations.Updat
 }
 
 // UpdateScoreTrack - Update an audio or video track linked to a score
-func (s *score) UpdateScoreTrack(ctx context.Context, request operations.UpdateScoreTrackRequest) (*operations.UpdateScoreTrackResponse, error) {
+func (s *score) UpdateScoreTrack(ctx context.Context, request operations.UpdateScoreTrackRequest, security operations.UpdateScoreTrackSecurity) (*operations.UpdateScoreTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks/{track}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/tracks/{track}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreTrackUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1887,7 +1887,7 @@ func (s *score) UpdateScoreTrack(ctx context.Context, request operations.UpdateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

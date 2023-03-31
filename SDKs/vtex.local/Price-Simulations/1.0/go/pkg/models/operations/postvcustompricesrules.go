@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostVCustomPricesRulesHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type PostVCustomPricesRulesRequestBody struct {
 	// User's email
 	Email interface{} `json:"email,omitempty"`
@@ -25,8 +18,11 @@ type PostVCustomPricesRulesRequestBody struct {
 }
 
 type PostVCustomPricesRulesRequest struct {
-	Headers PostVCustomPricesRulesHeaders
-	Request *PostVCustomPricesRulesRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent
+	ContentType string                             `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PostVCustomPricesRulesRequestBody `request:"mediaType=application/json"`
 }
 
 // PostVCustomPricesRules200ApplicationJSON - OK

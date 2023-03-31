@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetACallQueueSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetACallQueuePathParams struct {
-	// Unique Identifier of the Call Queue. This can be retrieved from [List Call Queues API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-call-queues/listcallqueues).
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetACallQueueRequest struct {
-	PathParams GetACallQueuePathParams
-	Security   GetACallQueueSecurity
+	// Unique Identifier of the Call Queue. This can be retrieved from [List Call Queues API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-call-queues/listcallqueues).
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type GetACallQueue200ApplicationXMLMembersCommonAreaPhones struct {

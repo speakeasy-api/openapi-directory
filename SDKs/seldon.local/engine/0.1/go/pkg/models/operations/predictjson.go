@@ -8,18 +8,13 @@ import (
 )
 
 type PredictJSONSecurity struct {
-	HTTPBearer shared.SchemeHTTPBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PredictJSONPathParams struct {
-	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
-	Namespace  string `pathParam:"style=simple,explode=false,name=namespace"`
+	HTTPBearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PredictJSONRequest struct {
-	PathParams PredictJSONPathParams
-	Request    shared.SeldonMessage `request:"mediaType=application/json"`
-	Security   PredictJSONSecurity
+	SeldonMessage shared.SeldonMessage `request:"mediaType=application/json"`
+	Deployment    string               `pathParam:"style=simple,explode=false,name=deployment"`
+	Namespace     string               `pathParam:"style=simple,explode=false,name=namespace"`
 }
 
 type PredictJSONResponse struct {

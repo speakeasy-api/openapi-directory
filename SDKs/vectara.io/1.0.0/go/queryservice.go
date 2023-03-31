@@ -34,11 +34,11 @@ func newQueryService(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // Query - Query
-func (s *queryService) Query(ctx context.Context, request operations.QueryRequest) (*operations.QueryResponse, error) {
+func (s *queryService) Query(ctx context.Context, request operations.QueryRequest, security operations.QuerySecurity) (*operations.QueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServingBatchQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *queryService) Query(ctx context.Context, request operations.QueryReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,11 +100,11 @@ func (s *queryService) Query(ctx context.Context, request operations.QueryReques
 }
 
 // StreamQuery - Stream Query
-func (s *queryService) StreamQuery(ctx context.Context, request operations.StreamQueryRequest) (*operations.StreamQueryResponse, error) {
+func (s *queryService) StreamQuery(ctx context.Context, request operations.StreamQueryRequest, security operations.StreamQuerySecurity) (*operations.StreamQueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/stream-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServingBatchQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -119,9 +119,9 @@ func (s *queryService) StreamQuery(ctx context.Context, request operations.Strea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

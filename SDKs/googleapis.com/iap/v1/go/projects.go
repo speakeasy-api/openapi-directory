@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // IapProjectsBrandsCreate - Constructs a new OAuth brand for the project if one does not exist. The created brand is "internal only", meaning that OAuth clients created under it only accept requests from users who belong to the same Google Workspace organization as the project. The brand is created in an un-reviewed status. NOTE: The "internal only" status can be manually changed in the Google Cloud Console. Requires that a brand does not already exist for the project, and that the specified support email is owned by the caller.
-func (s *projects) IapProjectsBrandsCreate(ctx context.Context, request operations.IapProjectsBrandsCreateRequest) (*operations.IapProjectsBrandsCreateResponse, error) {
+func (s *projects) IapProjectsBrandsCreate(ctx context.Context, request operations.IapProjectsBrandsCreateRequest, security operations.IapProjectsBrandsCreateSecurity) (*operations.IapProjectsBrandsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/brands", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/brands", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BrandInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) IapProjectsBrandsCreate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) IapProjectsBrandsCreate(ctx context.Context, request operatio
 }
 
 // IapProjectsBrandsIdentityAwareProxyClientsCreate - Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by IAP. Requires that the brand for the project exists and that it is set for internal-only use.
-func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsCreate(ctx context.Context, request operations.IapProjectsBrandsIdentityAwareProxyClientsCreateRequest) (*operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse, error) {
+func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsCreate(ctx context.Context, request operations.IapProjectsBrandsIdentityAwareProxyClientsCreateRequest, security operations.IapProjectsBrandsIdentityAwareProxyClientsCreateSecurity) (*operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/identityAwareProxyClients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/identityAwareProxyClients", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentityAwareProxyClientInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsCreate(ctx context.
 }
 
 // IapProjectsBrandsIdentityAwareProxyClientsList - Lists the existing clients for the brand.
-func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsList(ctx context.Context, request operations.IapProjectsBrandsIdentityAwareProxyClientsListRequest) (*operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse, error) {
+func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsList(ctx context.Context, request operations.IapProjectsBrandsIdentityAwareProxyClientsListRequest, security operations.IapProjectsBrandsIdentityAwareProxyClientsListSecurity) (*operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/identityAwareProxyClients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/identityAwareProxyClients", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsList(ctx context.Co
 }
 
 // IapProjectsBrandsIdentityAwareProxyClientsResetSecret - Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful if the secret was compromised. Requires that the client is owned by IAP.
-func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsResetSecret(ctx context.Context, request operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest) (*operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse, error) {
+func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsResetSecret(ctx context.Context, request operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest, security operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretSecurity) (*operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resetSecret", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resetSecret", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsResetSecret(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) IapProjectsBrandsIdentityAwareProxyClientsResetSecret(ctx con
 }
 
 // IapProjectsBrandsList - Lists the existing brands for the project.
-func (s *projects) IapProjectsBrandsList(ctx context.Context, request operations.IapProjectsBrandsListRequest) (*operations.IapProjectsBrandsListResponse, error) {
+func (s *projects) IapProjectsBrandsList(ctx context.Context, request operations.IapProjectsBrandsListRequest, security operations.IapProjectsBrandsListSecurity) (*operations.IapProjectsBrandsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/brands", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/brands", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) IapProjectsBrandsList(ctx context.Context, request operations
 }
 
 // IapProjectsIapTunnelLocationsDestGroupsCreate - Creates a new TunnelDestGroup.
-func (s *projects) IapProjectsIapTunnelLocationsDestGroupsCreate(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsCreateRequest) (*operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse, error) {
+func (s *projects) IapProjectsIapTunnelLocationsDestGroupsCreate(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsCreateRequest, security operations.IapProjectsIapTunnelLocationsDestGroupsCreateSecurity) (*operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/destGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/destGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TunnelDestGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) IapProjectsIapTunnelLocationsDestGroupsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) IapProjectsIapTunnelLocationsDestGroupsCreate(ctx context.Con
 }
 
 // IapProjectsIapTunnelLocationsDestGroupsDelete - Deletes a TunnelDestGroup.
-func (s *projects) IapProjectsIapTunnelLocationsDestGroupsDelete(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsDeleteRequest) (*operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse, error) {
+func (s *projects) IapProjectsIapTunnelLocationsDestGroupsDelete(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsDeleteRequest, security operations.IapProjectsIapTunnelLocationsDestGroupsDeleteSecurity) (*operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) IapProjectsIapTunnelLocationsDestGroupsDelete(ctx context.Con
 }
 
 // IapProjectsIapTunnelLocationsDestGroupsGet - Retrieves an existing TunnelDestGroup.
-func (s *projects) IapProjectsIapTunnelLocationsDestGroupsGet(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsGetRequest) (*operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse, error) {
+func (s *projects) IapProjectsIapTunnelLocationsDestGroupsGet(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsGetRequest, security operations.IapProjectsIapTunnelLocationsDestGroupsGetSecurity) (*operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) IapProjectsIapTunnelLocationsDestGroupsGet(ctx context.Contex
 }
 
 // IapProjectsIapTunnelLocationsDestGroupsList - Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location ID. For example: `/v1/projects/123/iap_tunnel/locations/-/destGroups`
-func (s *projects) IapProjectsIapTunnelLocationsDestGroupsList(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsListRequest) (*operations.IapProjectsIapTunnelLocationsDestGroupsListResponse, error) {
+func (s *projects) IapProjectsIapTunnelLocationsDestGroupsList(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsListRequest, security operations.IapProjectsIapTunnelLocationsDestGroupsListSecurity) (*operations.IapProjectsIapTunnelLocationsDestGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/destGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/destGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,11 +492,11 @@ func (s *projects) IapProjectsIapTunnelLocationsDestGroupsList(ctx context.Conte
 }
 
 // IapProjectsIapTunnelLocationsDestGroupsPatch - Updates a TunnelDestGroup.
-func (s *projects) IapProjectsIapTunnelLocationsDestGroupsPatch(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsPatchRequest) (*operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse, error) {
+func (s *projects) IapProjectsIapTunnelLocationsDestGroupsPatch(ctx context.Context, request operations.IapProjectsIapTunnelLocationsDestGroupsPatchRequest, security operations.IapProjectsIapTunnelLocationsDestGroupsPatchSecurity) (*operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TunnelDestGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,11 +508,11 @@ func (s *projects) IapProjectsIapTunnelLocationsDestGroupsPatch(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

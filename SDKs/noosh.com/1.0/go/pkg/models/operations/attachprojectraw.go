@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AttachProjectRawPathParams struct {
+type AttachProjectRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type AttachProjectRawRequest struct {
-	PathParams AttachProjectRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type AttachProjectRawResponse struct {

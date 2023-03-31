@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetAppsBySafeNameSafeNamePathParams struct {
+type GetAppsBySafeNameSafeNameRequest struct {
 	// The safeName of the App to be located
 	SafeName string `pathParam:"style=simple,explode=false,name=safeName"`
-}
-
-type GetAppsBySafeNameSafeNameQueryParams struct {
 	// Whether this call should be tracked as a 'view' for this app. Default is false.
 	TrackViews *bool `queryParam:"style=form,explode=true,name=trackViews"`
 	// The unique id of the user that is requesting this resource
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetAppsBySafeNameSafeNameRequest struct {
-	PathParams  GetAppsBySafeNameSafeNamePathParams
-	QueryParams GetAppsBySafeNameSafeNameQueryParams
 }
 
 type GetAppsBySafeNameSafeNameResponse struct {

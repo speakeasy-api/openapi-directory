@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListSecurityManagerTeamsPathParams struct {
+type OrgsListSecurityManagerTeamsRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsListSecurityManagerTeamsRequest struct {
-	PathParams OrgsListSecurityManagerTeamsPathParams
 }
 
 type OrgsListSecurityManagerTeamsResponse struct {

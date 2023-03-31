@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams struct {
-	// The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
-	ContentType shared.ContentTypeEnum `pathParam:"style=simple,explode=false,name=contentType"`
-	// Point from which the range calculation should start.
-	Origin string `pathParam:"style=simple,explode=false,name=origin"`
-	// Service version number. The current value is 1.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
 // GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum - Engine type of the vehicle.
 type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum string
 
@@ -42,7 +33,7 @@ func (e *GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleE
 	}
 }
 
-type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams struct {
+type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest struct {
 	// Specifies the efficiency of converting chemical energy stored in fuel to kinetic energy when the vehicle accelerates (i.e. KineticEnergyGained/ChemicalEnergyConsumed).
 	AccelerationEfficiency *float32 `queryParam:"style=form,explode=true,name=accelerationEfficiency"`
 	// The date and time of arrival at the destination point. It must be specified as a dateTime.
@@ -63,6 +54,8 @@ type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams 
 	ConstantSpeedConsumptionInLitersPerHundredkm *string `queryParam:"style=form,explode=true,name=constantSpeedConsumptionInLitersPerHundredkm"`
 	// Specifies the speed-dependent component of consumption. Provided as an unordered list of speed/consumption-rate pairs.
 	ConstantSpeedConsumptionInkWhPerHundredkm *string `queryParam:"style=form,explode=true,name=constantSpeedConsumptionInkWhPerHundredkm"`
+	// The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
+	ContentType shared.ContentTypeEnum `pathParam:"style=simple,explode=false,name=contentType"`
 	// Specifies the current supply of fuel in liters.
 	CurrentFuelInLiters *float32 `queryParam:"style=form,explode=true,name=currentFuelInLiters"`
 	// Specifies the efficiency of converting kinetic energy to saved (not consumed) fuel when the vehicle decelerates (i.e. ChemicalEnergySaved/KineticEnergyLost).
@@ -79,6 +72,8 @@ type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams 
 	FuelEnergyDensityInMJoulesPerLiter *float32 `queryParam:"style=form,explode=true,name=fuelEnergyDensityInMJoulesPerLiter"`
 	// Degree of hilliness for calculating a thrilling route.
 	Hilliness *shared.HillinessEnum `queryParam:"style=form,explode=true,name=hilliness"`
+	// Point from which the range calculation should start.
+	Origin string `pathParam:"style=simple,explode=false,name=origin"`
 	// Specifies which data should be reported for diagnosis purposes.
 	Report *shared.ReportEnum `queryParam:"style=form,explode=true,name=report"`
 	// The type of route requested.
@@ -128,13 +123,10 @@ type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams 
 	VehicleWeight *int64 `queryParam:"style=form,explode=true,name=vehicleWeight"`
 	// Width of the vehicle in meters.
 	VehicleWidth *float32 `queryParam:"style=form,explode=true,name=vehicleWidth"`
+	// Service version number. The current value is 1.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Amount that a thrilling route should wind.
 	Windingness *shared.WindingnessEnum `queryParam:"style=form,explode=true,name=windingness"`
-}
-
-type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest struct {
-	PathParams  GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams
-	QueryParams GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams
 }
 
 type GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse struct {

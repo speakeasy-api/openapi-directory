@@ -8,14 +8,8 @@ import (
 )
 
 type PostSandboxSecurity struct {
-	AuthorizationCodeToken shared.SchemeAuthorizationCodeToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostSandboxRequest struct {
-	// SandboxRequest
-	Request  *shared.SandboxRequest `request:"mediaType=application/json"`
-	Security PostSandboxSecurity
+	AuthorizationCodeToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
 type PostSandboxResponse struct {

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type FolderMenuPostFormRequest struct {
-	Request shared.FolderMenuConfiguration `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type FolderMenuPostFormResponse struct {
 	ContentType string

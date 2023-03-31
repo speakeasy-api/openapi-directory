@@ -36,14 +36,14 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DeleteJsappsCodeJSON - Delete an existing JSApp.
 func (s *apps) DeleteJsappsCodeJSON(ctx context.Context, request operations.DeleteJsappsCodeJSONRequest) (*operations.DeleteJsappsCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *apps) GetJsappsJSON(ctx context.Context, request operations.GetJsappsJS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *apps) GetJsappsJSON(ctx context.Context, request operations.GetJsappsJS
 // GetJsappsCodeJSON - Retrieve a JSApp.
 func (s *apps) GetJsappsCodeJSON(ctx context.Context, request operations.GetJsappsCodeJSONRequest) (*operations.GetJsappsCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -193,7 +193,7 @@ func (s *apps) PostJsappsJSON(ctx context.Context, request operations.PostJsapps
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jsapps.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JSAppEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -208,7 +208,7 @@ func (s *apps) PostJsappsJSON(ctx context.Context, request operations.PostJsapps
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

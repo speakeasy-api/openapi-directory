@@ -44,7 +44,7 @@ func (e *GetUpdatePathwayFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUpdatePathwayQueryParams struct {
+type GetUpdatePathwayRequest struct {
 	// The authentication key
 	Auth string `queryParam:"style=form,explode=true,name=auth"`
 	// A description of the modifications
@@ -58,10 +58,6 @@ type GetUpdatePathwayQueryParams struct {
 	Revision int64 `queryParam:"style=form,explode=true,name=revision"`
 	// The username
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetUpdatePathwayRequest struct {
-	QueryParams GetUpdatePathwayQueryParams
 }
 
 type GetUpdatePathwayResponse struct {

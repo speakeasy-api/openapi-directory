@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPackageGETPathParams struct {
+type AppPackageGETRequest struct {
 	// Identifier of an individual application package resource
 	AppPkgID string `pathParam:"style=simple,explode=false,name=appPkgId"`
-}
-
-type AppPackageGETRequest struct {
-	PathParams AppPackageGETPathParams
 }
 
 type AppPackageGETResponse struct {

@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationApplianceVPNThirdPartyVPNPeersPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationApplianceVPNThirdPartyVPNPeersRequest struct {
-	PathParams GetOrganizationApplianceVPNThirdPartyVPNPeersPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONPeersIkeVersionEnum - [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.

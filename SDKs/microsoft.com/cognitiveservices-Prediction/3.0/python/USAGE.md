@@ -3,29 +3,23 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apim_key=shared.SchemeApimKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        apim_key="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.ClassifyImageRequest(
-    path_params=operations.ClassifyImagePathParams(
-        project_id="temporibus",
-        published_name="est",
-    ),
-    query_params=operations.ClassifyImageQueryParams(
-        application="ut",
-    ),
-    request=operations.ClassifyImageRequestBody(
+    request_body=operations.ClassifyImageRequestBody(
         image_data=operations.ClassifyImageRequestBodyImageData(
-            content="quisquam".encode(),
-            image_data="quas",
+            content="corrupti".encode(),
+            image_data="provident",
         ),
     ),
+    application="distinctio",
+    project_id="d9d8d69a-674e-40f4-a7cc-8796ed151a05",
+    published_name="repellendus",
 )
     
 res = s.image_prediction_api.classify_image(req)

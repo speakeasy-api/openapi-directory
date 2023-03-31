@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type RegistrationsLogsListPathParams struct {
+type RegistrationsLogsListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsLogsListRequest struct {
-	PathParams RegistrationsLogsListPathParams
 }
 
 // RegistrationsLogsListLogAttributesLogParams - The type of action performed on the OSF. See description for full list of possible actions.

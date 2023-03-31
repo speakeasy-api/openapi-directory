@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetTracePathParams struct {
+type SetTraceRequest struct {
 	// Agent to set trace setting
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Trace setting for the agent
 	Trace int `pathParam:"style=simple,explode=false,name=trace"`
-}
-
-type SetTraceRequest struct {
-	PathParams SetTracePathParams
 }
 
 type SetTraceResponse struct {

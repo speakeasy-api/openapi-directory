@@ -33,7 +33,7 @@ func (e *ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum) UnmarshalJSON(data []
 	}
 }
 
-type ProjectedPlayerSeasonStatsByPlayerWAdpPathParams struct {
+type ProjectedPlayerSeasonStatsByPlayerWAdpRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Each NFL player has a unique ID assigned by FantasyData. Player IDs can be determined by pulling player related data. Example:<code>14257</code>.
@@ -42,10 +42,6 @@ type ProjectedPlayerSeasonStatsByPlayerWAdpPathParams struct {
 	//           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
 	//
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type ProjectedPlayerSeasonStatsByPlayerWAdpRequest struct {
-	PathParams ProjectedPlayerSeasonStatsByPlayerWAdpPathParams
 }
 
 type ProjectedPlayerSeasonStatsByPlayerWAdpResponse struct {

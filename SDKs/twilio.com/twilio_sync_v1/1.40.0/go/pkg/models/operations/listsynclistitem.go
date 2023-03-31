@@ -12,21 +12,17 @@ var ListSyncListItemServerList = []string{
 }
 
 type ListSyncListItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSyncListItemPathParams struct {
-	// The SID of the Sync List with the List Items to read. Can be the Sync List resource's `sid` or its `unique_name`.
-	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the List Item resources to read.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListSyncListItemQueryParams struct {
+type ListSyncListItemRequest struct {
 	// Whether to include the List Item referenced by the `from` parameter. Can be: `inclusive` to include the List Item referenced by the `from` parameter or `exclusive` to start with the next List Item. The default value is `inclusive`.
 	Bounds *shared.SyncListItemEnumQueryFromBoundTypeEnum `queryParam:"style=form,explode=true,name=Bounds"`
 	// The `index` of the first Sync List Item resource to read. See also `bounds`.
 	From *string `queryParam:"style=form,explode=true,name=From"`
+	// The SID of the Sync List with the List Items to read. Can be the Sync List resource's `sid` or its `unique_name`.
+	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
 	// How to order the List Items returned by their `index` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending.
 	Order *shared.SyncListItemEnumQueryResultOrderEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -35,13 +31,8 @@ type ListSyncListItemQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListSyncListItemRequest struct {
-	PathParams  ListSyncListItemPathParams
-	QueryParams ListSyncListItemQueryParams
-	Security    ListSyncListItemSecurity
-	ServerURL   *string
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the List Item resources to read.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListSyncListItemListSyncListItemResponseMeta struct {

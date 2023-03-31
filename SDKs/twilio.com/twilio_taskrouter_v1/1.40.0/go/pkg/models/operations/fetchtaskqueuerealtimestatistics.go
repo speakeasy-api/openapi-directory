@@ -12,26 +12,17 @@ var FetchTaskQueueRealTimeStatisticsServerList = []string{
 }
 
 type FetchTaskQueueRealTimeStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTaskQueueRealTimeStatisticsPathParams struct {
+type FetchTaskQueueRealTimeStatisticsRequest struct {
+	// The TaskChannel for which to fetch statistics. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
 	// The SID of the TaskQueue for which to fetch statistics.
 	TaskQueueSid string `pathParam:"style=simple,explode=false,name=TaskQueueSid"`
 	// The SID of the Workspace with the TaskQueue to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchTaskQueueRealTimeStatisticsQueryParams struct {
-	// The TaskChannel for which to fetch statistics. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
-}
-
-type FetchTaskQueueRealTimeStatisticsRequest struct {
-	PathParams  FetchTaskQueueRealTimeStatisticsPathParams
-	QueryParams FetchTaskQueueRealTimeStatisticsQueryParams
-	Security    FetchTaskQueueRealTimeStatisticsSecurity
-	ServerURL   *string
 }
 
 type FetchTaskQueueRealTimeStatisticsResponse struct {

@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateOrUpdateEnvironmentPathParams struct {
-	// The name of the environment.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateOrUpdateEnvironmentRequestBodyReviewers struct {
 	// The id of the user or team who can review the deployment
 	ID *int64 `json:"id,omitempty"`
@@ -33,8 +24,13 @@ type ReposCreateOrUpdateEnvironmentRequestBody struct {
 }
 
 type ReposCreateOrUpdateEnvironmentRequest struct {
-	PathParams ReposCreateOrUpdateEnvironmentPathParams
-	Request    *ReposCreateOrUpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposCreateOrUpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	// The name of the environment.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateOrUpdateEnvironmentResponse struct {

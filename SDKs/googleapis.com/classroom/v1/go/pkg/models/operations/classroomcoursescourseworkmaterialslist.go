@@ -10,23 +10,18 @@ import (
 )
 
 type ClassroomCoursesCourseWorkMaterialsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkMaterialsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkMaterialsListSecurity struct {
 	Option1 *ClassroomCoursesCourseWorkMaterialsListSecurityOption1 `security:"option"`
 	Option2 *ClassroomCoursesCourseWorkMaterialsListSecurityOption2 `security:"option"`
-}
-
-type ClassroomCoursesCourseWorkMaterialsListPathParams struct {
-	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
-	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
 }
 
 type ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum string
@@ -58,7 +53,7 @@ func (e *ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum) Un
 	}
 }
 
-type ClassroomCoursesCourseWorkMaterialsListQueryParams struct {
+type ClassroomCoursesCourseWorkMaterialsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,6 +62,8 @@ type ClassroomCoursesCourseWorkMaterialsListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
+	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
 	// Restriction on the work status to return. Only course work material that matches is returned. If unspecified, items with a work status of `PUBLISHED` is returned.
 	CourseWorkMaterialStates []ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum `queryParam:"style=form,explode=true,name=courseWorkMaterialStates"`
 	// Selector specifying which fields to include in a partial response.
@@ -93,12 +90,6 @@ type ClassroomCoursesCourseWorkMaterialsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesCourseWorkMaterialsListRequest struct {
-	PathParams  ClassroomCoursesCourseWorkMaterialsListPathParams
-	QueryParams ClassroomCoursesCourseWorkMaterialsListQueryParams
-	Security    ClassroomCoursesCourseWorkMaterialsListSecurity
 }
 
 type ClassroomCoursesCourseWorkMaterialsListResponse struct {

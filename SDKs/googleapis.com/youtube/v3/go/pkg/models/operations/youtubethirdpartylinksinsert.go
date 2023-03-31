@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type YoutubeThirdPartyLinksInsertQueryParams struct {
+type YoutubeThirdPartyLinksInsertRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv    *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ThirdPartyLink *shared.ThirdPartyLink `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,11 +35,6 @@ type YoutubeThirdPartyLinksInsertQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubeThirdPartyLinksInsertRequest struct {
-	QueryParams YoutubeThirdPartyLinksInsertQueryParams
-	Request     *shared.ThirdPartyLink `request:"mediaType=application/json"`
 }
 
 type YoutubeThirdPartyLinksInsertResponse struct {

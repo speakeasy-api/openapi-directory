@@ -145,7 +145,6 @@ pkg/models/operations/renamevideocollection.go
 pkg/models/operations/searchvideos.go
 pkg/models/shared/collectionitemrequest.go
 pkg/models/shared/collectionitem.go
-pkg/models/shared/security.go
 pkg/models/shared/collectioncreateresponse.go
 pkg/models/shared/collectioncreaterequest.go
 pkg/models/shared/audiourl.go
@@ -157,6 +156,7 @@ pkg/models/shared/audioassets.go
 pkg/models/shared/audioassetdetails.go
 pkg/models/shared/shortsloopsstems.go
 pkg/models/shared/album.go
+pkg/models/shared/security.go
 pkg/models/shared/collection.go
 pkg/models/shared/collectionitemdatalist.go
 pkg/models/shared/error.go

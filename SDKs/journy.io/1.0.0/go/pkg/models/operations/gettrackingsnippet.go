@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTrackingSnippetQueryParams struct {
+type GetTrackingSnippetRequest struct {
 	// The domain you want to receive a snippet for
 	Domain string `queryParam:"style=form,explode=true,name=domain"`
-}
-
-type GetTrackingSnippetRequest struct {
-	QueryParams GetTrackingSnippetQueryParams
 }
 
 type GetTrackingSnippet500ApplicationJSONMeta struct {

@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type RemovesinglecustomfieldvaluePathParams struct {
+type RemovesinglecustomfieldvalueRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Name of the app's field created through the Update orderForm Configuration endpoint and which will be deleted.
 	AppFieldName string `pathParam:"style=simple,explode=false,name=appFieldName"`
 	// ID of the app created through the Update orderForm Configuration endpoint.
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the orderForm from which you want to remove the custom field value.
 	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type RemovesinglecustomfieldvalueHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RemovesinglecustomfieldvalueRequest struct {
-	PathParams RemovesinglecustomfieldvaluePathParams
-	Headers    RemovesinglecustomfieldvalueHeaders
 }
 
 type RemovesinglecustomfieldvalueResponse struct {

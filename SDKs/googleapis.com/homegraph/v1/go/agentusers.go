@@ -31,20 +31,20 @@ func newAgentUsers(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // HomegraphAgentUsersDelete - Unlinks the given third-party user from your smart home Action. All data related to this user will be deleted. For more details on how users link their accounts, see [fulfillment and authentication](https://developers.home.google.com/cloud-to-cloud/primer/fulfillment). The third-party user's identity is passed in via the `agent_user_id` (see DeleteAgentUserRequest). This request must be authorized using service account credentials from your Actions console project.
-func (s *agentUsers) HomegraphAgentUsersDelete(ctx context.Context, request operations.HomegraphAgentUsersDeleteRequest) (*operations.HomegraphAgentUsersDeleteResponse, error) {
+func (s *agentUsers) HomegraphAgentUsersDelete(ctx context.Context, request operations.HomegraphAgentUsersDeleteRequest, security operations.HomegraphAgentUsersDeleteSecurity) (*operations.HomegraphAgentUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{agentUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{agentUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

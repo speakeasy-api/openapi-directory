@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetPublicHistoryRequest{
-        QueryParams: operations.GetPublicHistoryQueryParams{
-            From: "corrupti",
-            Q: "provident",
-            To: "distinctio",
-        },
+        From: "corrupti",
+        Q: "provident",
+        To: "distinctio",
     }
 
     ctx := context.Background()

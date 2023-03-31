@@ -8,26 +8,17 @@ import (
 )
 
 type GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPagePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
-	// The ID of the custom workflow action
-	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageQueryParams struct {
-	// The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
-	After *string `queryParam:"style=form,explode=true,name=after"`
-	// Maximum number of results per page.
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageRequest struct {
-	PathParams  GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPagePathParams
-	QueryParams GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageQueryParams
-	Security    GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageSecurity
+	// The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `queryParam:"style=form,explode=true,name=after"`
+	AppID int     `pathParam:"style=simple,explode=false,name=appId"`
+	// The ID of the custom workflow action
+	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
+	// Maximum number of results per page.
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageResponse struct {

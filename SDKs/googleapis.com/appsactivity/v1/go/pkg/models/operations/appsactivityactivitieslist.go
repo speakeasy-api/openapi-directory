@@ -10,8 +10,8 @@ import (
 )
 
 type AppsactivityActivitiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AppsactivityActivitiesListGroupingStrategyEnum - Indicates the strategy to use when grouping singleEvents items in the associated combinedEvent object.
@@ -38,7 +38,7 @@ func (e *AppsactivityActivitiesListGroupingStrategyEnum) UnmarshalJSON(data []by
 	}
 }
 
-type AppsactivityActivitiesListQueryParams struct {
+type AppsactivityActivitiesListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Identifies the Drive folder containing the items for which to return activities.
@@ -68,11 +68,6 @@ type AppsactivityActivitiesListQueryParams struct {
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AppsactivityActivitiesListRequest struct {
-	QueryParams AppsactivityActivitiesListQueryParams
-	Security    AppsactivityActivitiesListSecurity
 }
 
 type AppsactivityActivitiesListResponse struct {

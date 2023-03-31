@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBlobPathParams struct {
+type DeleteBlobRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteBlobRequest struct {
-	PathParams DeleteBlobPathParams
 }
 
 type DeleteBlobResponse struct {

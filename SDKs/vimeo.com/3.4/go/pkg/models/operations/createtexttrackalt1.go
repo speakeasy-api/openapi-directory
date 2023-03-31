@@ -10,14 +10,7 @@ import (
 )
 
 type CreateTextTrackAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateTextTrackAlt1PathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateTextTrackAlt1RequestBodyTypeEnum - The type of the text track.
@@ -65,9 +58,11 @@ type CreateTextTrackAlt1RequestBody struct {
 }
 
 type CreateTextTrackAlt1Request struct {
-	PathParams CreateTextTrackAlt1PathParams
-	Request    CreateTextTrackAlt1RequestBody `request:"mediaType=application/vnd.vimeo.video.texttrack+json"`
-	Security   CreateTextTrackAlt1Security
+	RequestBody CreateTextTrackAlt1RequestBody `request:"mediaType=application/vnd.vimeo.video.texttrack+json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type CreateTextTrackAlt1Response struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type ContainerProjectsLocationsOperationsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContainerProjectsLocationsOperationsGetPathParams struct {
-	// The name (project, location, operation id) of the operation to get. Specified in the format `projects/*/locations/*/operations/*`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ContainerProjectsLocationsOperationsGetQueryParams struct {
+type ContainerProjectsLocationsOperationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +25,8 @@ type ContainerProjectsLocationsOperationsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name (project, location, operation id) of the operation to get. Specified in the format `projects/*/locations/*/operations/*`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced by the name field.
@@ -46,12 +43,6 @@ type ContainerProjectsLocationsOperationsGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the name field.
 	Zone *string `queryParam:"style=form,explode=true,name=zone"`
-}
-
-type ContainerProjectsLocationsOperationsGetRequest struct {
-	PathParams  ContainerProjectsLocationsOperationsGetPathParams
-	QueryParams ContainerProjectsLocationsOperationsGetQueryParams
-	Security    ContainerProjectsLocationsOperationsGetSecurity
 }
 
 type ContainerProjectsLocationsOperationsGetResponse struct {

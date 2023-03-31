@@ -44,11 +44,11 @@ func newV1Transactions(defaultClient, securityClient HTTPClient, serverURL, lang
 // Issuing a refund for a card payment is not reversible. For development
 // purposes, you can create fake cash payments in Square Point of Sale and
 // refund them.
-func (s *v1Transactions) CreateRefund(ctx context.Context, request operations.CreateRefundRequest) (*operations.CreateRefundResponse, error) {
+func (s *v1Transactions) CreateRefund(ctx context.Context, request operations.CreateRefundRequest, security operations.CreateRefundSecurity) (*operations.CreateRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/refunds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/refunds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1CreateRefundRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -63,7 +63,7 @@ func (s *v1Transactions) CreateRefund(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,20 +99,20 @@ func (s *v1Transactions) CreateRefund(ctx context.Context, request operations.Cr
 
 // ListOrders - ListOrders
 // Provides summary information for a merchant's online store orders.
-func (s *v1Transactions) ListOrders(ctx context.Context, request operations.ListOrdersRequest) (*operations.ListOrdersResponse, error) {
+func (s *v1Transactions) ListOrders(ctx context.Context, request operations.ListOrdersRequest, security operations.ListOrdersSecurity) (*operations.ListOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -158,20 +158,20 @@ func (s *v1Transactions) ListOrders(ctx context.Context, request operations.List
 // transmitted to Square. Consequently, the ListPayments endpoint might
 // list an offline payment chronologically between online payments that
 // were seen in a previous request.
-func (s *v1Transactions) ListPayments(ctx context.Context, request operations.ListPaymentsRequest) (*operations.ListPaymentsResponse, error) {
+func (s *v1Transactions) ListPayments(ctx context.Context, request operations.ListPaymentsRequest, security operations.ListPaymentsSecurity) (*operations.ListPaymentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,20 +207,20 @@ func (s *v1Transactions) ListPayments(ctx context.Context, request operations.Li
 
 // ListRefunds - ListRefunds
 // Provides the details for all refunds initiated by a merchant or any of the merchant's mobile staff during a date range. Date ranges cannot exceed one year in length.
-func (s *v1Transactions) ListRefunds(ctx context.Context, request operations.ListRefundsRequest) (*operations.ListRefundsResponse, error) {
+func (s *v1Transactions) ListRefunds(ctx context.Context, request operations.ListRefundsRequest, security operations.ListRefundsSecurity) (*operations.ListRefundsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/refunds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/refunds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -261,20 +261,20 @@ func (s *v1Transactions) ListRefunds(ctx context.Context, request operations.Lis
 //
 // *Note**: the ListSettlements endpoint does not provide entry
 // information.
-func (s *v1Transactions) ListSettlements(ctx context.Context, request operations.ListSettlementsRequest) (*operations.ListSettlementsResponse, error) {
+func (s *v1Transactions) ListSettlements(ctx context.Context, request operations.ListSettlementsRequest, security operations.ListSettlementsSecurity) (*operations.ListSettlementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/settlements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/settlements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -310,16 +310,16 @@ func (s *v1Transactions) ListSettlements(ctx context.Context, request operations
 
 // RetrieveOrder - RetrieveOrder
 // Provides comprehensive information for a single online store order, including the order's history.
-func (s *v1Transactions) RetrieveOrder(ctx context.Context, request operations.RetrieveOrderRequest) (*operations.RetrieveOrderResponse, error) {
+func (s *v1Transactions) RetrieveOrder(ctx context.Context, request operations.RetrieveOrderRequest, security operations.RetrieveOrderSecurity) (*operations.RetrieveOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders/{order_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders/{order_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,16 +355,16 @@ func (s *v1Transactions) RetrieveOrder(ctx context.Context, request operations.R
 
 // RetrievePayment - RetrievePayment
 // Provides comprehensive information for a single payment.
-func (s *v1Transactions) RetrievePayment(ctx context.Context, request operations.RetrievePaymentRequest) (*operations.RetrievePaymentResponse, error) {
+func (s *v1Transactions) RetrievePayment(ctx context.Context, request operations.RetrievePaymentRequest, security operations.RetrievePaymentSecurity) (*operations.RetrievePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/payments/{payment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/payments/{payment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -416,16 +416,16 @@ func (s *v1Transactions) RetrievePayment(ctx context.Context, request operations
 // whether it has failed. A completed settlement is typically reflected in
 // a bank account within 3 business days, but in exceptional cases it may
 // take longer.
-func (s *v1Transactions) RetrieveSettlement(ctx context.Context, request operations.RetrieveSettlementRequest) (*operations.RetrieveSettlementResponse, error) {
+func (s *v1Transactions) RetrieveSettlement(ctx context.Context, request operations.RetrieveSettlementRequest, security operations.RetrieveSettlementSecurity) (*operations.RetrieveSettlementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/settlements/{settlement_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/settlements/{settlement_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -461,11 +461,11 @@ func (s *v1Transactions) RetrieveSettlement(ctx context.Context, request operati
 
 // UpdateOrder - UpdateOrder
 // Updates the details of an online store order. Every update you perform on an order corresponds to one of three actions:
-func (s *v1Transactions) UpdateOrder(ctx context.Context, request operations.UpdateOrderRequest) (*operations.UpdateOrderResponse, error) {
+func (s *v1Transactions) UpdateOrder(ctx context.Context, request operations.UpdateOrderRequest, security operations.UpdateOrderSecurity) (*operations.UpdateOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders/{order_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders/{order_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1UpdateOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -480,7 +480,7 @@ func (s *v1Transactions) UpdateOrder(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

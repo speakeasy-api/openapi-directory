@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsIDOfflineSessionsPathParams struct {
-	// id of client (not client-id)
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsIDOfflineSessionsQueryParams struct {
+type GetRealmClientsIDOfflineSessionsRequest struct {
 	// Paging offset
 	First *int `queryParam:"style=form,explode=true,name=first"`
+	// id of client (not client-id)
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Maximum results size (defaults to 100)
 	Max *int `queryParam:"style=form,explode=true,name=max"`
-}
-
-type GetRealmClientsIDOfflineSessionsRequest struct {
-	PathParams  GetRealmClientsIDOfflineSessionsPathParams
-	QueryParams GetRealmClientsIDOfflineSessionsQueryParams
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 }
 
 type GetRealmClientsIDOfflineSessionsResponse struct {

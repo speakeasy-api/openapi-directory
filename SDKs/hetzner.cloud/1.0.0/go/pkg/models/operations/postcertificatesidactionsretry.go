@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostCertificatesIDActionsRetryPathParams struct {
+type PostCertificatesIDActionsRetryRequest struct {
 	// ID of the Certificate
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostCertificatesIDActionsRetryRequest struct {
-	PathParams PostCertificatesIDActionsRetryPathParams
 }
 
 // PostCertificatesIDActionsRetryActionResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -33,16 +33,16 @@ func newLikes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DeleteLikesPlaylistsPlaylistID - Unlikes a playlist.
-func (s *likes) DeleteLikesPlaylistsPlaylistID(ctx context.Context, request operations.DeleteLikesPlaylistsPlaylistIDRequest) (*operations.DeleteLikesPlaylistsPlaylistIDResponse, error) {
+func (s *likes) DeleteLikesPlaylistsPlaylistID(ctx context.Context, request operations.DeleteLikesPlaylistsPlaylistIDRequest, security operations.DeleteLikesPlaylistsPlaylistIDSecurity) (*operations.DeleteLikesPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/likes/playlists/{playlist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/likes/playlists/{playlist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,16 +88,16 @@ func (s *likes) DeleteLikesPlaylistsPlaylistID(ctx context.Context, request oper
 }
 
 // DeleteLikesTracksTrackID - Unlikes a track.
-func (s *likes) DeleteLikesTracksTrackID(ctx context.Context, request operations.DeleteLikesTracksTrackIDRequest) (*operations.DeleteLikesTracksTrackIDResponse, error) {
+func (s *likes) DeleteLikesTracksTrackID(ctx context.Context, request operations.DeleteLikesTracksTrackIDRequest, security operations.DeleteLikesTracksTrackIDSecurity) (*operations.DeleteLikesTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/likes/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/likes/tracks/{track_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,16 +143,16 @@ func (s *likes) DeleteLikesTracksTrackID(ctx context.Context, request operations
 }
 
 // PostLikesPlaylistsPlaylistID - Likes a playlist.
-func (s *likes) PostLikesPlaylistsPlaylistID(ctx context.Context, request operations.PostLikesPlaylistsPlaylistIDRequest) (*operations.PostLikesPlaylistsPlaylistIDResponse, error) {
+func (s *likes) PostLikesPlaylistsPlaylistID(ctx context.Context, request operations.PostLikesPlaylistsPlaylistIDRequest, security operations.PostLikesPlaylistsPlaylistIDSecurity) (*operations.PostLikesPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/likes/playlists/{playlist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/likes/playlists/{playlist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,16 +212,16 @@ func (s *likes) PostLikesPlaylistsPlaylistID(ctx context.Context, request operat
 }
 
 // PostLikesTracksTrackID - Likes a track.
-func (s *likes) PostLikesTracksTrackID(ctx context.Context, request operations.PostLikesTracksTrackIDRequest) (*operations.PostLikesTracksTrackIDResponse, error) {
+func (s *likes) PostLikesTracksTrackID(ctx context.Context, request operations.PostLikesTracksTrackIDRequest, security operations.PostLikesTracksTrackIDSecurity) (*operations.PostLikesTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/likes/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/likes/tracks/{track_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

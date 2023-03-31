@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWebhooksHTTPServerPathParams struct {
-	HTTPServerID string `pathParam:"style=simple,explode=false,name=httpServerId"`
-	NetworkID    string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkWebhooksHTTPServerRequestBodyPayloadTemplate - The payload template to use when posting data to the HTTP server.
 type UpdateNetworkWebhooksHTTPServerRequestBodyPayloadTemplate struct {
 	// The ID of the payload template. Defaults to 'wpt_00001' for the Meraki template. For Meraki-included templates: for the Webex (included) template use 'wpt_00002'; for the Slack (included) template use 'wpt_00003'; for the Microsoft Teams (included) template use 'wpt_00004'; for the ServiceNow (included) template use 'wpt_00006'
@@ -27,8 +22,9 @@ type UpdateNetworkWebhooksHTTPServerRequestBody struct {
 }
 
 type UpdateNetworkWebhooksHTTPServerRequest struct {
-	PathParams UpdateNetworkWebhooksHTTPServerPathParams
-	Request    *UpdateNetworkWebhooksHTTPServerRequestBody `request:"mediaType=application/json"`
+	RequestBody  *UpdateNetworkWebhooksHTTPServerRequestBody `request:"mediaType=application/json"`
+	HTTPServerID string                                      `pathParam:"style=simple,explode=false,name=httpServerId"`
+	NetworkID    string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkWebhooksHTTPServer200ApplicationJSONPayloadTemplate - The payload template to use when posting data to the HTTP server.

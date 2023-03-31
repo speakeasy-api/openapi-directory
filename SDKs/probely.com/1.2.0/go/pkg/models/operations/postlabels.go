@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostLabelsRequest struct {
-	Request shared.LabelInput `request:"mediaType=application/json"`
-}
-
 // PostLabels401ApplicationJSON - Access token is missing or invalid
 type PostLabels401ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

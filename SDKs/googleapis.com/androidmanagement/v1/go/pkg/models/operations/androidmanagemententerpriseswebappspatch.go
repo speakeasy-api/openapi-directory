@@ -8,18 +8,14 @@ import (
 )
 
 type AndroidmanagementEnterprisesWebAppsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidmanagementEnterprisesWebAppsPatchPathParams struct {
-	// The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type AndroidmanagementEnterprisesWebAppsPatchQueryParams struct {
+type AndroidmanagementEnterprisesWebAppsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WebApp      *shared.WebApp    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type AndroidmanagementEnterprisesWebAppsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type AndroidmanagementEnterprisesWebAppsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidmanagementEnterprisesWebAppsPatchRequest struct {
-	PathParams  AndroidmanagementEnterprisesWebAppsPatchPathParams
-	QueryParams AndroidmanagementEnterprisesWebAppsPatchQueryParams
-	Request     *shared.WebApp `request:"mediaType=application/json"`
-	Security    AndroidmanagementEnterprisesWebAppsPatchSecurity
 }
 
 type AndroidmanagementEnterprisesWebAppsPatchResponse struct {

@@ -9,7 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MergeTemplateQueryParams struct {
+type MergeTemplateRequest struct {
+	// Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
+	Data shared.Data `request:"mediaType=application/json"`
 	// Document format. The zip option will return a ZIP file with PDF files.
 	Format *shared.FormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// Document name, returned in the meta data.
@@ -18,12 +20,6 @@ type MergeTemplateQueryParams struct {
 	Output *shared.OutputEnum `queryParam:"style=form,explode=true,name=output"`
 	// Template unique identifier
 	TemplateID int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type MergeTemplateRequest struct {
-	QueryParams MergeTemplateQueryParams
-	// Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
-	Request shared.Data `request:"mediaType=application/json"`
 }
 
 // MergeTemplate500ApplicationJSON - Internal Server Error

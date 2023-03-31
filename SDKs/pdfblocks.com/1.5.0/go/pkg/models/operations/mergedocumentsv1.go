@@ -11,10 +11,6 @@ type MergeDocumentsV1RequestBody struct {
 	File [][]byte `multipartForm:"name=file,json"`
 }
 
-type MergeDocumentsV1Request struct {
-	Request MergeDocumentsV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // MergeDocumentsV14XXApplicationProblemPlusJSON - Error
 type MergeDocumentsV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

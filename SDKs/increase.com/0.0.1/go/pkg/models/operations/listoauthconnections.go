@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOauthConnectionsQueryParams struct {
+type ListOauthConnectionsRequest struct {
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit  *int64  `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListOauthConnectionsRequest struct {
-	QueryParams ListOauthConnectionsQueryParams
 }
 
 type ListOauthConnectionsDefaultApplicationJSON13StatusEnum string

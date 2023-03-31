@@ -33,11 +33,11 @@ func newEmployee(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // AddEmployee - Add new employee
 // New Employee API sends new employee data directly to Web Pay. Companies who use the New Hire Template in Web Pay may require additional fields when hiring employees. New Employee API Requests will honor these required fields.
-func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmployeeRequest) (*operations.AddEmployeeResponse, error) {
+func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmployeeRequest, security operations.AddEmployeeSecurity) (*operations.AddEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmploy
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,20 +105,20 @@ func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmploy
 
 // GetAllEmployees - Get all employees
 // Get All Employees API will return employee data currently available in Web Pay.
-func (s *employee) GetAllEmployees(ctx context.Context, request operations.GetAllEmployeesRequest) (*operations.GetAllEmployeesResponse, error) {
+func (s *employee) GetAllEmployees(ctx context.Context, request operations.GetAllEmployeesRequest, security operations.GetAllEmployeesSecurity) (*operations.GetAllEmployeesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,16 +171,16 @@ func (s *employee) GetAllEmployees(ctx context.Context, request operations.GetAl
 
 // GetEmployee - Get employee
 // Get Employee API will return employee data currently available in Web Pay.
-func (s *employee) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest) (*operations.GetEmployeeResponse, error) {
+func (s *employee) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest, security operations.GetEmployeeSecurity) (*operations.GetEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,11 +233,11 @@ func (s *employee) GetEmployee(ctx context.Context, request operations.GetEmploy
 
 // UpdateEmployee - Update employee
 // Update Employee API will update existing employee data in WebPay.
-func (s *employee) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest) (*operations.UpdateEmployeeResponse, error) {
+func (s *employee) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest, security operations.UpdateEmployeeSecurity) (*operations.UpdateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -252,7 +252,7 @@ func (s *employee) UpdateEmployee(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

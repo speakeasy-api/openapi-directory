@@ -41,7 +41,7 @@ func newGenreType(defaultClient, securityClient HTTPClient, serverURL, language,
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *genreType) GenreTypeSearchRead(ctx context.Context, request operations.GenreTypeSearchReadRequest) (*operations.GenreTypeSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/genre-type/search/{genre_description}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/genre-type/search/{genre_description}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

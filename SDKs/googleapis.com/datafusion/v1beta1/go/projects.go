@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DatafusionProjectsLocationsInstancesCreate - Creates a new Data Fusion instance in the specified project and location.
-func (s *projects) DatafusionProjectsLocationsInstancesCreate(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesCreateRequest) (*operations.DatafusionProjectsLocationsInstancesCreateResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesCreate(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesCreateRequest, security operations.DatafusionProjectsLocationsInstancesCreateSecurity) (*operations.DatafusionProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesCreate(ctx context.Contex
 }
 
 // DatafusionProjectsLocationsInstancesDNSPeeringsCreate - Creates DNS peering on the given resource.
-func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsCreate(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateRequest) (*operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsCreate(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateRequest, security operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateSecurity) (*operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/dnsPeerings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/dnsPeerings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSPeering", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsCreate(ctx con
 }
 
 // DatafusionProjectsLocationsInstancesDNSPeeringsList - Lists DNS peerings for a given resource.
-func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesDNSPeeringsListRequest) (*operations.DatafusionProjectsLocationsInstancesDNSPeeringsListResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesDNSPeeringsListRequest, security operations.DatafusionProjectsLocationsInstancesDNSPeeringsListSecurity) (*operations.DatafusionProjectsLocationsInstancesDNSPeeringsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/dnsPeerings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/dnsPeerings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsList(ctx conte
 }
 
 // DatafusionProjectsLocationsInstancesList - Lists Data Fusion instances in the specified project and location.
-func (s *projects) DatafusionProjectsLocationsInstancesList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesListRequest) (*operations.DatafusionProjectsLocationsInstancesListResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesListRequest, security operations.DatafusionProjectsLocationsInstancesListSecurity) (*operations.DatafusionProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) DatafusionProjectsLocationsInstancesList(ctx context.Context,
 }
 
 // DatafusionProjectsLocationsInstancesNamespacesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) DatafusionProjectsLocationsInstancesNamespacesGetIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesGetIamPolicyRequest) (*operations.DatafusionProjectsLocationsInstancesNamespacesGetIamPolicyResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesNamespacesGetIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesGetIamPolicyRequest, security operations.DatafusionProjectsLocationsInstancesNamespacesGetIamPolicySecurity) (*operations.DatafusionProjectsLocationsInstancesNamespacesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) DatafusionProjectsLocationsInstancesNamespacesGetIamPolicy(ct
 }
 
 // DatafusionProjectsLocationsInstancesNamespacesList - List namespaces in a given instance
-func (s *projects) DatafusionProjectsLocationsInstancesNamespacesList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesListRequest) (*operations.DatafusionProjectsLocationsInstancesNamespacesListResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesNamespacesList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesListRequest, security operations.DatafusionProjectsLocationsInstancesNamespacesListSecurity) (*operations.DatafusionProjectsLocationsInstancesNamespacesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/namespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/namespaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,11 +334,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesNamespacesList(ctx contex
 }
 
 // DatafusionProjectsLocationsInstancesNamespacesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) DatafusionProjectsLocationsInstancesNamespacesSetIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesSetIamPolicyRequest) (*operations.DatafusionProjectsLocationsInstancesNamespacesSetIamPolicyResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesNamespacesSetIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesSetIamPolicyRequest, security operations.DatafusionProjectsLocationsInstancesNamespacesSetIamPolicySecurity) (*operations.DatafusionProjectsLocationsInstancesNamespacesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -350,11 +350,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesNamespacesSetIamPolicy(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesNamespacesSetIamPolicy(ct
 }
 
 // DatafusionProjectsLocationsInstancesNamespacesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) DatafusionProjectsLocationsInstancesNamespacesTestIamPermissions(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesTestIamPermissionsRequest) (*operations.DatafusionProjectsLocationsInstancesNamespacesTestIamPermissionsResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesNamespacesTestIamPermissions(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesNamespacesTestIamPermissionsRequest, security operations.DatafusionProjectsLocationsInstancesNamespacesTestIamPermissionsSecurity) (*operations.DatafusionProjectsLocationsInstancesNamespacesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesNamespacesTestIamPermissi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesNamespacesTestIamPermissi
 }
 
 // DatafusionProjectsLocationsInstancesPatch - Updates a single Data Fusion instance.
-func (s *projects) DatafusionProjectsLocationsInstancesPatch(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesPatchRequest) (*operations.DatafusionProjectsLocationsInstancesPatchResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesPatch(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesPatchRequest, security operations.DatafusionProjectsLocationsInstancesPatchSecurity) (*operations.DatafusionProjectsLocationsInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesPatch(ctx context.Context
 }
 
 // DatafusionProjectsLocationsInstancesRestart - Restart a single Data Fusion instance. At the end of an operation instance is fully restarted.
-func (s *projects) DatafusionProjectsLocationsInstancesRestart(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesRestartRequest) (*operations.DatafusionProjectsLocationsInstancesRestartResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesRestart(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesRestartRequest, security operations.DatafusionProjectsLocationsInstancesRestartSecurity) (*operations.DatafusionProjectsLocationsInstancesRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:restart", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:restart", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesRestart(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,11 +554,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesRestart(ctx context.Conte
 }
 
 // DatafusionProjectsLocationsInstancesUpgrade - Upgrade a single Data Fusion instance. At the end of an operation instance is fully upgraded.
-func (s *projects) DatafusionProjectsLocationsInstancesUpgrade(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesUpgradeRequest) (*operations.DatafusionProjectsLocationsInstancesUpgradeResponse, error) {
+func (s *projects) DatafusionProjectsLocationsInstancesUpgrade(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesUpgradeRequest, security operations.DatafusionProjectsLocationsInstancesUpgradeSecurity) (*operations.DatafusionProjectsLocationsInstancesUpgradeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:upgrade", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:upgrade", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,11 +570,11 @@ func (s *projects) DatafusionProjectsLocationsInstancesUpgrade(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,20 +609,20 @@ func (s *projects) DatafusionProjectsLocationsInstancesUpgrade(ctx context.Conte
 }
 
 // DatafusionProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) DatafusionProjectsLocationsList(ctx context.Context, request operations.DatafusionProjectsLocationsListRequest) (*operations.DatafusionProjectsLocationsListResponse, error) {
+func (s *projects) DatafusionProjectsLocationsList(ctx context.Context, request operations.DatafusionProjectsLocationsListRequest, security operations.DatafusionProjectsLocationsListSecurity) (*operations.DatafusionProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *projects) DatafusionProjectsLocationsList(ctx context.Context, request 
 }
 
 // DatafusionProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) DatafusionProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsCancelRequest) (*operations.DatafusionProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) DatafusionProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsCancelRequest, security operations.DatafusionProjectsLocationsOperationsCancelSecurity) (*operations.DatafusionProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *projects) DatafusionProjectsLocationsOperationsCancel(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,20 +712,20 @@ func (s *projects) DatafusionProjectsLocationsOperationsCancel(ctx context.Conte
 }
 
 // DatafusionProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) DatafusionProjectsLocationsOperationsDelete(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsDeleteRequest) (*operations.DatafusionProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) DatafusionProjectsLocationsOperationsDelete(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsDeleteRequest, security operations.DatafusionProjectsLocationsOperationsDeleteSecurity) (*operations.DatafusionProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,20 +760,20 @@ func (s *projects) DatafusionProjectsLocationsOperationsDelete(ctx context.Conte
 }
 
 // DatafusionProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) DatafusionProjectsLocationsOperationsGet(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsGetRequest) (*operations.DatafusionProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) DatafusionProjectsLocationsOperationsGet(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsGetRequest, security operations.DatafusionProjectsLocationsOperationsGetSecurity) (*operations.DatafusionProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,20 +808,20 @@ func (s *projects) DatafusionProjectsLocationsOperationsGet(ctx context.Context,
 }
 
 // DatafusionProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) DatafusionProjectsLocationsOperationsList(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsListRequest) (*operations.DatafusionProjectsLocationsOperationsListResponse, error) {
+func (s *projects) DatafusionProjectsLocationsOperationsList(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsListRequest, security operations.DatafusionProjectsLocationsOperationsListSecurity) (*operations.DatafusionProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -856,11 +856,11 @@ func (s *projects) DatafusionProjectsLocationsOperationsList(ctx context.Context
 }
 
 // DatafusionProjectsLocationsRemoveIamPolicy - Remove IAM policy that is currently set on the given resource.
-func (s *projects) DatafusionProjectsLocationsRemoveIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsRemoveIamPolicyRequest) (*operations.DatafusionProjectsLocationsRemoveIamPolicyResponse, error) {
+func (s *projects) DatafusionProjectsLocationsRemoveIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsRemoveIamPolicyRequest, security operations.DatafusionProjectsLocationsRemoveIamPolicySecurity) (*operations.DatafusionProjectsLocationsRemoveIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:removeIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:removeIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -872,11 +872,11 @@ func (s *projects) DatafusionProjectsLocationsRemoveIamPolicy(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -911,20 +911,20 @@ func (s *projects) DatafusionProjectsLocationsRemoveIamPolicy(ctx context.Contex
 }
 
 // DatafusionProjectsLocationsVersionsList - Lists possible versions for Data Fusion instances in the specified project and location.
-func (s *projects) DatafusionProjectsLocationsVersionsList(ctx context.Context, request operations.DatafusionProjectsLocationsVersionsListRequest) (*operations.DatafusionProjectsLocationsVersionsListResponse, error) {
+func (s *projects) DatafusionProjectsLocationsVersionsList(ctx context.Context, request operations.DatafusionProjectsLocationsVersionsListRequest, security operations.DatafusionProjectsLocationsVersionsListSecurity) (*operations.DatafusionProjectsLocationsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

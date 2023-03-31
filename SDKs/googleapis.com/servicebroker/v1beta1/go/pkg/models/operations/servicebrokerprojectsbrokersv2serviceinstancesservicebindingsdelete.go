@@ -8,21 +8,11 @@ import (
 )
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeletePathParams struct {
-	// Name must match
-	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/`
-	// `v2/service_instances/[INSTANCE_ID]/service_bindings/[BINDING_ID]`
-	// or
-	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/`
-	// `/instances/[INSTANCE_ID]/bindings/[BINDING_ID]`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteQueryParams struct {
+type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// See CreateServiceInstanceRequest for details.
@@ -37,6 +27,13 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteQueryPar
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Name must match
+	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/`
+	// `v2/service_instances/[INSTANCE_ID]/service_bindings/[BINDING_ID]`
+	// or
+	// `projects/[PROJECT_ID]/brokers/[BROKER_ID]/`
+	// `/instances/[INSTANCE_ID]/bindings/[BINDING_ID]`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The plan id of the service instance.
@@ -52,12 +49,6 @@ type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteQueryPar
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest struct {
-	PathParams  ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeletePathParams
-	QueryParams ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteQueryParams
-	Security    ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteSecurity
 }
 
 type ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse struct {

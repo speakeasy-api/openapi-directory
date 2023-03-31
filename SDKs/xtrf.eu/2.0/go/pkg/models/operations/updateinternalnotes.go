@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateInternalNotesPathParams struct {
+type UpdateInternalNotesRequest struct {
+	// Updated Internal Notes for a project.
+	StringDTO shared.StringDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateInternalNotesRequest struct {
-	PathParams UpdateInternalNotesPathParams
-	// Updated Internal Notes for a project.
-	Request shared.StringDTO `request:"mediaType=application/json"`
 }
 
 type UpdateInternalNotesResponse struct {

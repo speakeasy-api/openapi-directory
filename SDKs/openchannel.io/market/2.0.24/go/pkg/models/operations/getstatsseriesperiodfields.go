@@ -32,25 +32,17 @@ func (e *GetStatsSeriesPeriodFieldsPeriodEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetStatsSeriesPeriodFieldsPathParams struct {
+type GetStatsSeriesPeriodFieldsRequest struct {
+	// The end date for this series (in millis)
+	End *int64 `queryParam:"style=form,explode=true,name=end"`
 	// The field to be graphed. This also be a comma separated list of fields and the result will be a single timeseries containing the sum of all fields.
 	Fields string `pathParam:"style=simple,explode=false,name=fields"`
 	// The period for the series (day or month)
 	Period GetStatsSeriesPeriodFieldsPeriodEnum `pathParam:"style=simple,explode=false,name=period"`
-}
-
-type GetStatsSeriesPeriodFieldsQueryParams struct {
-	// The end date for this series (in millis)
-	End *int64 `queryParam:"style=form,explode=true,name=end"`
 	// A query document. Example: {'developerId': '112'} matches all the apps that have the developer with id 112
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The start date for this series (in millis)
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetStatsSeriesPeriodFieldsRequest struct {
-	PathParams  GetStatsSeriesPeriodFieldsPathParams
-	QueryParams GetStatsSeriesPeriodFieldsQueryParams
 }
 
 type GetStatsSeriesPeriodFieldsResponse struct {

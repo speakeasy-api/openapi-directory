@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnloadServicePathParams struct {
+type UnloadServiceRequest struct {
 	// Service ID of the service to be unloaded
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type UnloadServiceRequest struct {
-	PathParams UnloadServicePathParams
 }
 
 type UnloadService200ApplicationJSONStatusEnum string

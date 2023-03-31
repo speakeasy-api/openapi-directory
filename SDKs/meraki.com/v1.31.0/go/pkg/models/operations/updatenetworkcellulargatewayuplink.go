@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkCellularGatewayUplinkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkCellularGatewayUplinkRequestBodyBandwidthLimits - The bandwidth settings for the 'cellular' uplink
 type UpdateNetworkCellularGatewayUplinkRequestBodyBandwidthLimits struct {
 	// The maximum download limit (integer, in Kbps). null indicates no limit
@@ -24,8 +20,8 @@ type UpdateNetworkCellularGatewayUplinkRequestBody struct {
 }
 
 type UpdateNetworkCellularGatewayUplinkRequest struct {
-	PathParams UpdateNetworkCellularGatewayUplinkPathParams
-	Request    *UpdateNetworkCellularGatewayUplinkRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkCellularGatewayUplinkRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                         `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkCellularGatewayUplinkResponse struct {

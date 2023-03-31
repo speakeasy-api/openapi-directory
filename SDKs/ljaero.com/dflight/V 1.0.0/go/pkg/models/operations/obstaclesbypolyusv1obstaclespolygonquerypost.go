@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ObstaclesByPolyUsV1ObstaclesPolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type ObstaclesByPolyUsV1ObstaclesPolygonQueryPostRequest struct {
-	Headers ObstaclesByPolyUsV1ObstaclesPolygonQueryPostHeaders
-	Request shared.ObstaclesByPolygon `request:"mediaType=application/json"`
+	ObstaclesByPolygon shared.ObstaclesByPolygon `request:"mediaType=application/json"`
+	XAPIKey            *string                   `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type ObstaclesByPolyUsV1ObstaclesPolygonQueryPostResponse struct {

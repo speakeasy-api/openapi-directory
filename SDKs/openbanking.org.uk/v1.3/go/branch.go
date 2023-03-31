@@ -42,7 +42,7 @@ func (s *branch) GetBranches(ctx context.Context, request operations.GetBranches
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -162,7 +162,7 @@ func (s *branch) HeadBranches(ctx context.Context, request operations.HeadBranch
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

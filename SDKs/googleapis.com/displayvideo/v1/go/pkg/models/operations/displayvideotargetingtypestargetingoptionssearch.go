@@ -10,8 +10,8 @@ import (
 )
 
 type DisplayvideoTargetingTypesTargetingOptionsSearchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum - Required. The type of targeting options to retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
@@ -170,14 +170,10 @@ func (e *DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum) Unma
 	}
 }
 
-type DisplayvideoTargetingTypesTargetingOptionsSearchPathParams struct {
-	// Required. The type of targeting options to retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
-	TargetingType DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum `pathParam:"style=simple,explode=false,name=targetingType"`
-}
-
-type DisplayvideoTargetingTypesTargetingOptionsSearchQueryParams struct {
+type DisplayvideoTargetingTypesTargetingOptionsSearchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                   *shared.XgafvEnum                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SearchTargetingOptionsRequest *shared.SearchTargetingOptionsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -194,17 +190,12 @@ type DisplayvideoTargetingTypesTargetingOptionsSearchQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The type of targeting options to retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+	TargetingType DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum `pathParam:"style=simple,explode=false,name=targetingType"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoTargetingTypesTargetingOptionsSearchRequest struct {
-	PathParams  DisplayvideoTargetingTypesTargetingOptionsSearchPathParams
-	QueryParams DisplayvideoTargetingTypesTargetingOptionsSearchQueryParams
-	Request     *shared.SearchTargetingOptionsRequest `request:"mediaType=application/json"`
-	Security    DisplayvideoTargetingTypesTargetingOptionsSearchSecurity
 }
 
 type DisplayvideoTargetingTypesTargetingOptionsSearchResponse struct {

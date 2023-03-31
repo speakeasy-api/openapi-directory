@@ -12,16 +12,8 @@ var UpdateChannelWebhookServerList = []string{
 }
 
 type UpdateChannelWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateChannelWebhookPathParams struct {
-	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Channel Webhook resource to update belongs to. This value can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel that has the Webhook resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Channel Webhook resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateChannelWebhookUpdateChannelWebhookRequest struct {
@@ -39,10 +31,13 @@ type UpdateChannelWebhookUpdateChannelWebhookRequest struct {
 }
 
 type UpdateChannelWebhookRequest struct {
-	PathParams UpdateChannelWebhookPathParams
-	Request    *UpdateChannelWebhookUpdateChannelWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateChannelWebhookSecurity
-	ServerURL  *string
+	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Channel Webhook resource to update belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateChannelWebhookUpdateChannelWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel that has the Webhook resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Channel Webhook resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateChannelWebhookResponse struct {

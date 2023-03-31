@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesPreFlightWithRepoForAuthenticatedUserPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodespacesPreFlightWithRepoForAuthenticatedUserQueryParams struct {
+type CodespacesPreFlightWithRepoForAuthenticatedUserRequest struct {
 	// An alternative IP for default location auto-detection, such as when proxying a request.
 	ClientIP *string `queryParam:"style=form,explode=true,name=client_ip"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The branch or commit to check for a default devcontainer path. If not specified, the default branch will be checked.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type CodespacesPreFlightWithRepoForAuthenticatedUserRequest struct {
-	PathParams  CodespacesPreFlightWithRepoForAuthenticatedUserPathParams
-	QueryParams CodespacesPreFlightWithRepoForAuthenticatedUserQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type CodespacesPreFlightWithRepoForAuthenticatedUser200ApplicationJSONDefaults struct {

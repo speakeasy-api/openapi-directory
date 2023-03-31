@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimRacksDeletePathParams struct {
+type DcimRacksDeleteRequest struct {
 	// A unique integer value identifying this rack.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRacksDeleteRequest struct {
-	PathParams DcimRacksDeletePathParams
 }
 
 type DcimRacksDeleteResponse struct {

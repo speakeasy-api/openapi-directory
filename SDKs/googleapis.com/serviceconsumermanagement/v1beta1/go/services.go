@@ -32,11 +32,11 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides - Create or update multiple producer overrides atomically, all on the same consumer, but on many different metrics or limits. The name field in the quota override message should not be set.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics:importProducerOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics:importProducerOverrides", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1Beta1ImportProducerOverridesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsImportPr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsImportPr
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGet - Retrieves a summary of quota information for a specific quota limit.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGet(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGet(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGe
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreate - Creates a producer override. A producer override is applied by the owner or administrator of a service to increase or decrease the amount of quota a consumer of the service is allowed to use. To create multiple overrides at once, use ImportProducerOverrides instead. If an override with the specified dimensions already exists, this call will fail. To overwrite an existing override if one is already present ("upsert" semantics), use ImportProducerOverrides instead.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreate(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreate(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/producerOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/producerOverrides", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1Beta1QuotaOverride", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsPr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsPr
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDelete - Deletes a producer override.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDelete(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDelete(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsPr
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesList - Lists all producer overrides on this limit.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesList(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesList(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/producerOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/producerOverrides", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsPr
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatch - Updates a producer override.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatch(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatchRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatchResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatch(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatchRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatchSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1Beta1QuotaOverride", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsPr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsPr
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsList - Retrieves a summary of all quota information about this consumer that is visible to the service producer, for each quota metric defined by the service. Each metric includes information about all of its defined limits. Each limit includes the limit configuration (quota unit, preciseness, default value), the current effective limit value, and all of the overrides applied to the limit.
-func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsList(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsListRequest) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsListResponse, error) {
+func (s *services) ServiceconsumermanagementServicesConsumerQuotaMetricsList(ctx context.Context, request operations.ServiceconsumermanagementServicesConsumerQuotaMetricsListRequest, security operations.ServiceconsumermanagementServicesConsumerQuotaMetricsListSecurity) (*operations.ServiceconsumermanagementServicesConsumerQuotaMetricsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

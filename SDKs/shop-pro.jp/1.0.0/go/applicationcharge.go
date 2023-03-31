@@ -34,11 +34,11 @@ func newApplicationCharge(defaultClient, securityClient HTTPClient, serverURL, l
 // CreateUsageCharge - 従量課金データの作成
 // アプリ内で基本機能が利用された頻度に伴って毎月の請求が変動するようなアプリの場合は「従量課金」を使って利用者に変動分の請求を行うことができます。
 // ※無料お試し期間中のショップに対しては従量課金データを作成できません。
-func (s *applicationCharge) CreateUsageCharge(ctx context.Context, request operations.CreateUsageChargeRequest) (*operations.CreateUsageChargeResponse, error) {
+func (s *applicationCharge) CreateUsageCharge(ctx context.Context, request operations.CreateUsageChargeRequest, security operations.CreateUsageChargeSecurity) (*operations.CreateUsageChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/recurring_application_charges/{recurringApplicationChargeId}/usage_charges.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/recurring_application_charges/{recurringApplicationChargeId}/usage_charges.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *applicationCharge) CreateUsageCharge(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -95,7 +95,7 @@ func (s *applicationCharge) CreateUsageCharge(ctx context.Context, request opera
 // この課金はプラン課金の情報に紐付かないため、リクエストされたタイミングで課金データが作成されます。また、同一のアプリ内課金IDで同じ利用者へ複数回請求を行うことも可能です。
 //
 // ただし、アプリの基本機能として提供しているサービスを利用した量やその頻度などに伴って毎月異なった額の請求を行うような課金については、プラン課金の「従量による課金」の機能を使って請求を行う必要があります。
-func (s *applicationCharge) PostApplicationCharge(ctx context.Context, request operations.PostApplicationChargeRequest) (*operations.PostApplicationChargeResponse, error) {
+func (s *applicationCharge) PostApplicationCharge(ctx context.Context, request operations.PostApplicationChargeRequestBody, security operations.PostApplicationChargeSecurity) (*operations.PostApplicationChargeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appstore/v1/application_charges.json"
 
@@ -114,7 +114,7 @@ func (s *applicationCharge) PostApplicationCharge(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

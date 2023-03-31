@@ -8,17 +8,12 @@ import (
 )
 
 type StopTalkSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type StopTalkPathParams struct {
-	// UUID of the Call Leg
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type StopTalkRequest struct {
-	PathParams StopTalkPathParams
-	Security   StopTalkSecurity
+	// UUID of the Call Leg
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type StopTalkResponse struct {

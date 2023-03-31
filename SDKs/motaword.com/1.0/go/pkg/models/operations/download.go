@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadPathParams struct {
+type DownloadRequest struct {
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DownloadRequest struct {
-	PathParams DownloadPathParams
 }
 
 type DownloadResponse struct {

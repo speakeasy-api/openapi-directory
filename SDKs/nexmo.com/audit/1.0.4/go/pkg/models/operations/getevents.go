@@ -8,10 +8,11 @@ import (
 )
 
 type GetEventsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetEventsQueryParams struct {
+type GetEventsRequest struct {
 	// Start of time range for audit events. DateTime in ISO-8601 format.
 	DateFrom *string `queryParam:"style=form,explode=true,name=date_from"`
 	// End of time range for audit events. DateTime in ISO-8601 format.
@@ -24,11 +25,6 @@ type GetEventsQueryParams struct {
 	SearchText *string `queryParam:"style=form,explode=true,name=search_text"`
 	// Number of elements per page.
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetEventsRequest struct {
-	QueryParams GetEventsQueryParams
-	Security    GetEventsSecurity
 }
 
 type GetEventsResponse struct {

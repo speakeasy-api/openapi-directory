@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspacesWorkspaceSlugSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspacesWorkspaceSlugPathParams struct {
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
-}
-
-type GetWorkspacesWorkspaceSlugQueryParams struct {
-	// Include the number of members by Orbit Level in the attributes
-	IncludeOrbitLevelCounts *bool `queryParam:"style=form,explode=true,name=include_orbit_level_counts"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWorkspacesWorkspaceSlugRequest struct {
-	PathParams  GetWorkspacesWorkspaceSlugPathParams
-	QueryParams GetWorkspacesWorkspaceSlugQueryParams
-	Security    GetWorkspacesWorkspaceSlugSecurity
+	// Include the number of members by Orbit Level in the attributes
+	IncludeOrbitLevelCounts *bool  `queryParam:"style=form,explode=true,name=include_orbit_level_counts"`
+	WorkspaceSlug           string `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspacesWorkspaceSlugResponse struct {

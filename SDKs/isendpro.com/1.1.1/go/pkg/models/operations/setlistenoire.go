@@ -30,17 +30,13 @@ func (e *SetListeNoireSetlisteNoireEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SetListeNoireQueryParams struct {
+type SetListeNoireRequest struct {
 	// Clé API
 	Keyid string `queryParam:"style=form,explode=true,name=keyid"`
 	// numéro de mobile à insérer en liste noire
 	Num string `queryParam:"style=form,explode=true,name=num"`
 	// Doit valoir "1"
 	SetlisteNoire SetListeNoireSetlisteNoireEnum `queryParam:"style=form,explode=true,name=setlisteNoire"`
-}
-
-type SetListeNoireRequest struct {
-	QueryParams SetListeNoireQueryParams
 }
 
 type SetListeNoireResponse struct {

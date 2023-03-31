@@ -14,11 +14,8 @@ var UpdateWirelessSimServerList = []string{
 }
 
 type UpdateWirelessSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWirelessSimPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateWirelessSimUpdateWirelessSimRequestCommandsCallbackMethodEnum string
@@ -216,10 +213,8 @@ type UpdateWirelessSimUpdateWirelessSimRequest struct {
 }
 
 type UpdateWirelessSimRequest struct {
-	PathParams UpdateWirelessSimPathParams
-	Request    *UpdateWirelessSimUpdateWirelessSimRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateWirelessSimSecurity
-	ServerURL  *string
+	RequestBody *UpdateWirelessSimUpdateWirelessSimRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid         string                                     `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateWirelessSimResponse struct {

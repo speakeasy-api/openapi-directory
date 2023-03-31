@@ -36,7 +36,7 @@ func newGiftCards(defaultClient, securityClient HTTPClient, serverURL, language,
 // Creates a digital gift card or registers a physical (plastic) gift card. You must activate the gift card before
 // it can be used for payment. For more information, see
 // [Selling gift cards](https://developer.squareup.com/docs/gift-cards/using-gift-cards-api#selling-square-gift-cards).
-func (s *giftCards) CreateGiftCard(ctx context.Context, request operations.CreateGiftCardRequest) (*operations.CreateGiftCardResponse, error) {
+func (s *giftCards) CreateGiftCard(ctx context.Context, request shared.CreateGiftCardRequest, security operations.CreateGiftCardSecurity) (*operations.CreateGiftCardResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/gift-cards"
 
@@ -55,7 +55,7 @@ func (s *giftCards) CreateGiftCard(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,11 +91,11 @@ func (s *giftCards) CreateGiftCard(ctx context.Context, request operations.Creat
 
 // LinkCustomerToGiftCard - LinkCustomerToGiftCard
 // Links a customer to a gift card
-func (s *giftCards) LinkCustomerToGiftCard(ctx context.Context, request operations.LinkCustomerToGiftCardRequest) (*operations.LinkCustomerToGiftCardResponse, error) {
+func (s *giftCards) LinkCustomerToGiftCard(ctx context.Context, request operations.LinkCustomerToGiftCardRequest, security operations.LinkCustomerToGiftCardSecurity) (*operations.LinkCustomerToGiftCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/link-customer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/link-customer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LinkCustomerToGiftCardRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -110,7 +110,7 @@ func (s *giftCards) LinkCustomerToGiftCard(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,7 +147,7 @@ func (s *giftCards) LinkCustomerToGiftCard(ctx context.Context, request operatio
 // ListGiftCards - ListGiftCards
 // Lists all gift cards. You can specify optional filters to retrieve
 // a subset of the gift cards.
-func (s *giftCards) ListGiftCards(ctx context.Context, request operations.ListGiftCardsRequest) (*operations.ListGiftCardsResponse, error) {
+func (s *giftCards) ListGiftCards(ctx context.Context, request operations.ListGiftCardsRequest, security operations.ListGiftCardsSecurity) (*operations.ListGiftCardsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/gift-cards"
 
@@ -156,11 +156,11 @@ func (s *giftCards) ListGiftCards(ctx context.Context, request operations.ListGi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -196,16 +196,16 @@ func (s *giftCards) ListGiftCards(ctx context.Context, request operations.ListGi
 
 // RetrieveGiftCard - RetrieveGiftCard
 // Retrieves a gift card using its ID.
-func (s *giftCards) RetrieveGiftCard(ctx context.Context, request operations.RetrieveGiftCardRequest) (*operations.RetrieveGiftCardResponse, error) {
+func (s *giftCards) RetrieveGiftCard(ctx context.Context, request operations.RetrieveGiftCardRequest, security operations.RetrieveGiftCardSecurity) (*operations.RetrieveGiftCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -241,7 +241,7 @@ func (s *giftCards) RetrieveGiftCard(ctx context.Context, request operations.Ret
 
 // RetrieveGiftCardFromGAN - RetrieveGiftCardFromGAN
 // Retrieves a gift card using the gift card account number (GAN).
-func (s *giftCards) RetrieveGiftCardFromGAN(ctx context.Context, request operations.RetrieveGiftCardFromGANRequest) (*operations.RetrieveGiftCardFromGANResponse, error) {
+func (s *giftCards) RetrieveGiftCardFromGAN(ctx context.Context, request shared.RetrieveGiftCardFromGANRequest, security operations.RetrieveGiftCardFromGANSecurity) (*operations.RetrieveGiftCardFromGANResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/gift-cards/from-gan"
 
@@ -260,7 +260,7 @@ func (s *giftCards) RetrieveGiftCardFromGAN(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -296,7 +296,7 @@ func (s *giftCards) RetrieveGiftCardFromGAN(ctx context.Context, request operati
 
 // RetrieveGiftCardFromNonce - RetrieveGiftCardFromNonce
 // Retrieves a gift card using a nonce (a secure token) that represents the gift card.
-func (s *giftCards) RetrieveGiftCardFromNonce(ctx context.Context, request operations.RetrieveGiftCardFromNonceRequest) (*operations.RetrieveGiftCardFromNonceResponse, error) {
+func (s *giftCards) RetrieveGiftCardFromNonce(ctx context.Context, request shared.RetrieveGiftCardFromNonceRequest, security operations.RetrieveGiftCardFromNonceSecurity) (*operations.RetrieveGiftCardFromNonceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/gift-cards/from-nonce"
 
@@ -315,7 +315,7 @@ func (s *giftCards) RetrieveGiftCardFromNonce(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -351,11 +351,11 @@ func (s *giftCards) RetrieveGiftCardFromNonce(ctx context.Context, request opera
 
 // UnlinkCustomerFromGiftCard - UnlinkCustomerFromGiftCard
 // Unlinks a customer from a gift card
-func (s *giftCards) UnlinkCustomerFromGiftCard(ctx context.Context, request operations.UnlinkCustomerFromGiftCardRequest) (*operations.UnlinkCustomerFromGiftCardResponse, error) {
+func (s *giftCards) UnlinkCustomerFromGiftCard(ctx context.Context, request operations.UnlinkCustomerFromGiftCardRequest, security operations.UnlinkCustomerFromGiftCardSecurity) (*operations.UnlinkCustomerFromGiftCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/unlink-customer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/unlink-customer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnlinkCustomerFromGiftCardRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -370,7 +370,7 @@ func (s *giftCards) UnlinkCustomerFromGiftCard(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

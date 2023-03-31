@@ -10,12 +10,8 @@ import (
 )
 
 type UpdateProductSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateProductPathParams struct {
-	// Unique number that identifies the Product.
-	ProductNumber string `pathParam:"style=simple,explode=false,name=productNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateProductRequestBodyVatModeEnum - Vat mode for Product. Supported types: GROSS, NET
@@ -62,9 +58,9 @@ type UpdateProductRequestBody struct {
 }
 
 type UpdateProductRequest struct {
-	PathParams UpdateProductPathParams
-	Request    *UpdateProductRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateProductSecurity
+	RequestBody *UpdateProductRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Unique number that identifies the Product.
+	ProductNumber string `pathParam:"style=simple,explode=false,name=productNumber"`
 }
 
 type UpdateProductResponse struct {

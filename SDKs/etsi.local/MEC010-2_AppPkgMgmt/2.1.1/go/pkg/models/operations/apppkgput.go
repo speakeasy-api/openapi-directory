@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPkgPUTPathParams struct {
+type AppPkgPUTRequest struct {
+	RequestBody []byte `request:"mediaType=application/zip"`
 	// Identifier of an on-boarded individual application package
 	AppPkgID string `pathParam:"style=simple,explode=false,name=appPkgId"`
-}
-
-type AppPkgPUTRequest struct {
-	PathParams AppPkgPUTPathParams
-	Request    []byte `request:"mediaType=application/zip"`
 }
 
 type AppPkgPUTResponse struct {

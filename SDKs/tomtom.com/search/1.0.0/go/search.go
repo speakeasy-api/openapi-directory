@@ -33,14 +33,14 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetSearchVersionNumberCSCategoryExt - Low Bandwith Category Search
 func (s *search) GetSearchVersionNumberCSCategoryExt(ctx context.Context, request operations.GetSearchVersionNumberCSCategoryExtRequest) (*operations.GetSearchVersionNumberCSCategoryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/cS/{category}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/cS/{category}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *search) GetSearchVersionNumberCSCategoryExt(ctx context.Context, reques
 // GetSearchVersionNumberCategorySearchQueryExt - Category Search
 func (s *search) GetSearchVersionNumberCategorySearchQueryExt(ctx context.Context, request operations.GetSearchVersionNumberCategorySearchQueryExtRequest) (*operations.GetSearchVersionNumberCategorySearchQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/categorySearch/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/categorySearch/{query}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,14 +131,14 @@ func (s *search) GetSearchVersionNumberCategorySearchQueryExt(ctx context.Contex
 // GetSearchVersionNumberGeometrySearchQueryExt - Geometry Search
 func (s *search) GetSearchVersionNumberGeometrySearchQueryExt(ctx context.Context, request operations.GetSearchVersionNumberGeometrySearchQueryExtRequest) (*operations.GetSearchVersionNumberGeometrySearchQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,14 +180,14 @@ func (s *search) GetSearchVersionNumberGeometrySearchQueryExt(ctx context.Contex
 // GetSearchVersionNumberNearbySearchExt - Nearby Search
 func (s *search) GetSearchVersionNumberNearbySearchExt(ctx context.Context, request operations.GetSearchVersionNumberNearbySearchExtRequest) (*operations.GetSearchVersionNumberNearbySearchExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/nearbySearch/.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/nearbySearch/.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -229,14 +229,14 @@ func (s *search) GetSearchVersionNumberNearbySearchExt(ctx context.Context, requ
 // GetSearchVersionNumberPoiSearchQueryExt - Points of Interest Search
 func (s *search) GetSearchVersionNumberPoiSearchQueryExt(ctx context.Context, request operations.GetSearchVersionNumberPoiSearchQueryExtRequest) (*operations.GetSearchVersionNumberPoiSearchQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/poiSearch/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/poiSearch/{query}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -278,14 +278,14 @@ func (s *search) GetSearchVersionNumberPoiSearchQueryExt(ctx context.Context, re
 // GetSearchVersionNumberRoutedSearchQueryPositionHeadingExt - Routed Search
 func (s *search) GetSearchVersionNumberRoutedSearchQueryPositionHeadingExt(ctx context.Context, request operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest) (*operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedSearch/{query}/{position}/{heading}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedSearch/{query}/{position}/{heading}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -327,14 +327,14 @@ func (s *search) GetSearchVersionNumberRoutedSearchQueryPositionHeadingExt(ctx c
 // GetSearchVersionNumberSQueryExt - Low bandwith Search
 func (s *search) GetSearchVersionNumberSQueryExt(ctx context.Context, request operations.GetSearchVersionNumberSQueryExtRequest) (*operations.GetSearchVersionNumberSQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/s/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/s/{query}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -376,14 +376,14 @@ func (s *search) GetSearchVersionNumberSQueryExt(ctx context.Context, request op
 // GetSearchVersionNumberSearchQueryExt - Fuzzy Search
 func (s *search) GetSearchVersionNumberSearchQueryExt(ctx context.Context, request operations.GetSearchVersionNumberSearchQueryExtRequest) (*operations.GetSearchVersionNumberSearchQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/search/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/search/{query}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -425,9 +425,9 @@ func (s *search) GetSearchVersionNumberSearchQueryExt(ctx context.Context, reque
 // PostSearchVersionNumberGeometrySearchQueryExt - Geometry Search
 func (s *search) PostSearchVersionNumberGeometrySearchQueryExt(ctx context.Context, request operations.PostSearchVersionNumberGeometrySearchQueryExtRequest) (*operations.PostSearchVersionNumberGeometrySearchQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,7 +439,7 @@ func (s *search) PostSearchVersionNumberGeometrySearchQueryExt(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -481,9 +481,9 @@ func (s *search) PostSearchVersionNumberGeometrySearchQueryExt(ctx context.Conte
 // PostSearchVersionNumberSearchAlongRouteQueryExt - Along Route Search
 func (s *search) PostSearchVersionNumberSearchAlongRouteQueryExt(ctx context.Context, request operations.PostSearchVersionNumberSearchAlongRouteQueryExtRequest) (*operations.PostSearchVersionNumberSearchAlongRouteQueryExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/searchAlongRoute/{query}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/searchAlongRoute/{query}.{ext}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -495,7 +495,7 @@ func (s *search) PostSearchVersionNumberSearchAlongRouteQueryExt(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

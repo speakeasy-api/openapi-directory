@@ -14,36 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.AndroidenterpriseDevicesForceReportUploadRequest{
-        Security: operations.AndroidenterpriseDevicesForceReportUploadSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AndroidenterpriseDevicesForceReportUploadPathParams{
-            DeviceID: "corrupti",
-            EnterpriseID: "provident",
-            UserID: "distinctio",
-        },
-        QueryParams: operations.AndroidenterpriseDevicesForceReportUploadQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "unde",
-            Alt: "proto",
-            Callback: "corrupti",
-            Fields: "illum",
-            Key: "vel",
-            OauthToken: "error",
-            PrettyPrint: false,
-            QuotaUser: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        DeviceID: "unde",
+        EnterpriseID: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
+        UserID: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Devices.AndroidenterpriseDevicesForceReportUpload(ctx, req)
+    res, err := s.Devices.AndroidenterpriseDevicesForceReportUpload(ctx, req, operations.AndroidenterpriseDevicesForceReportUploadSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

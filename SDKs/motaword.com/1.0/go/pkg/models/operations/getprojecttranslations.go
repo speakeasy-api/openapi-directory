@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectTranslationsPathParams struct {
+type GetProjectTranslationsRequest struct {
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetProjectTranslationsRequest struct {
-	PathParams GetProjectTranslationsPathParams
 }
 
 type GetProjectTranslationsResponse struct {

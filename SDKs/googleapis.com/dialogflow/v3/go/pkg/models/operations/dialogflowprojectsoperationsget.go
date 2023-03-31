@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsOperationsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsOperationsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsOperationsGetSecurity struct {
@@ -22,12 +22,7 @@ type DialogflowProjectsOperationsGetSecurity struct {
 	Option2 *DialogflowProjectsOperationsGetSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsOperationsGetPathParams struct {
-	// The name of the operation resource.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DialogflowProjectsOperationsGetQueryParams struct {
+type DialogflowProjectsOperationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type DialogflowProjectsOperationsGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The language to retrieve the intent for. The following fields are language dependent: * `Intent.training_phrases.parts.text` If not specified, the agent's default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
 	LanguageCode *string `queryParam:"style=form,explode=true,name=languageCode"`
+	// The name of the operation resource.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,12 +49,6 @@ type DialogflowProjectsOperationsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsOperationsGetRequest struct {
-	PathParams  DialogflowProjectsOperationsGetPathParams
-	QueryParams DialogflowProjectsOperationsGetQueryParams
-	Security    DialogflowProjectsOperationsGetSecurity
 }
 
 type DialogflowProjectsOperationsGetResponse struct {

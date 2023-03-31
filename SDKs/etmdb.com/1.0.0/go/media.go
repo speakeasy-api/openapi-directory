@@ -42,7 +42,7 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *media) MediaSearchRead(ctx context.Context, request operations.MediaSearchReadRequest) (*operations.MediaSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/media/search/{movie_title}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/media/search/{movie_title}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *media) MediaSearchRead(ctx context.Context, request operations.MediaSea
 // [ref]: https://etmdb.com/en/cast-list/-updated_date
 func (s *media) MediaSearchallRead(ctx context.Context, request operations.MediaSearchallReadRequest) (*operations.MediaSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/media/searchall/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/media/searchall/{user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

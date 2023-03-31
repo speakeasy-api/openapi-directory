@@ -9,15 +9,11 @@ import (
 	"time"
 )
 
-type GetUnsecuredSmeLoansHeaders struct {
+type GetUnsecuredSmeLoansRequest struct {
 	// Used for conditional request, to retrieve data only if modified since a given date
 	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
 	// Used for conditional request, to retrieve data only if the given Etag value does not match
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetUnsecuredSmeLoansRequest struct {
-	Headers GetUnsecuredSmeLoansHeaders
 }
 
 // GetUnsecuredSmeLoansErrorObject - A standard error response.

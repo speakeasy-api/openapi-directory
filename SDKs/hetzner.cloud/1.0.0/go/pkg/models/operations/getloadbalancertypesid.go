@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetLoadBalancerTypesIDPathParams struct {
+type GetLoadBalancerTypesIDRequest struct {
 	// ID of Load Balancer type
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetLoadBalancerTypesIDRequest struct {
-	PathParams GetLoadBalancerTypesIDPathParams
 }
 
 // GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceHourly - Hourly costs for a Resource in this Location

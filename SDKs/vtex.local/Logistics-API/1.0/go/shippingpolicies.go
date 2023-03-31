@@ -35,14 +35,14 @@ func newShippingPolicies(defaultClient, securityClient HTTPClient, serverURL, la
 // This endpoint deletes existing shipping policies from carriers in your store, searching by their IDs.
 func (s *shippingPolicies) DeleteAPILogisticsPvtShippingPoliciesID(ctx context.Context, request operations.DeleteAPILogisticsPvtShippingPoliciesIDRequest) (*operations.DeleteAPILogisticsPvtShippingPoliciesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/shipping-policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/shipping-policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -82,9 +82,9 @@ func (s *shippingPolicies) GetAPILogisticsPvtShippingPolicies(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -119,14 +119,14 @@ func (s *shippingPolicies) GetAPILogisticsPvtShippingPolicies(ctx context.Contex
 // > Note that, while most of our API endpoints return time fields in UTC, this endpoint returns **Scheduled Delivery** related time fields adjusted to the configured time zone of the account.
 func (s *shippingPolicies) GetAPILogisticsPvtShippingPoliciesID(ctx context.Context, request operations.GetAPILogisticsPvtShippingPoliciesIDRequest) (*operations.GetAPILogisticsPvtShippingPoliciesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/shipping-policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/shipping-policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -161,7 +161,7 @@ func (s *shippingPolicies) PostAPILogisticsPvtShippingPolicies(ctx context.Conte
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/logistics/pvt/shipping-policies"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -173,7 +173,7 @@ func (s *shippingPolicies) PostAPILogisticsPvtShippingPolicies(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -206,9 +206,9 @@ func (s *shippingPolicies) PostAPILogisticsPvtShippingPolicies(ctx context.Conte
 // > Note that, while most of our API endpoints return time fields in UTC, this endpoint returns **Scheduled Delivery** related time fields adjusted to the configured time zone of the account.
 func (s *shippingPolicies) PutAPILogisticsPvtShippingPoliciesID(ctx context.Context, request operations.PutAPILogisticsPvtShippingPoliciesIDRequest) (*operations.PutAPILogisticsPvtShippingPoliciesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/shipping-policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/shipping-policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -220,7 +220,7 @@ func (s *shippingPolicies) PutAPILogisticsPvtShippingPoliciesID(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchGetQueryParams struct {
+type SearchGetRequest struct {
 	// The search query
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type SearchGetRequest struct {
-	QueryParams SearchGetQueryParams
 }
 
 type SearchGetResponse struct {

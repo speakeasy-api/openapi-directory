@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateMembershipForUserInOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum - The role that this user should have in the team. Can be one of:
 // \* `member` - a normal member of the team.
 // \* `maintainer` - a team maintainer. Able to add/remove other team members, promote other team members to team maintainer, and edit the team's name and description.
@@ -50,8 +43,11 @@ type TeamsAddOrUpdateMembershipForUserInOrgRequestBody struct {
 }
 
 type TeamsAddOrUpdateMembershipForUserInOrgRequest struct {
-	PathParams TeamsAddOrUpdateMembershipForUserInOrgPathParams
-	Request    *TeamsAddOrUpdateMembershipForUserInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateMembershipForUserInOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                             `pathParam:"style=simple,explode=false,name=org"`
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type TeamsAddOrUpdateMembershipForUserInOrgResponse struct {

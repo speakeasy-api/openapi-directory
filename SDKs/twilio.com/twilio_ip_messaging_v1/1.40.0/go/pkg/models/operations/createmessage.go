@@ -12,12 +12,8 @@ var CreateMessageServerList = []string{
 }
 
 type CreateMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMessagePathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMessageCreateMessageRequest struct {
@@ -27,10 +23,9 @@ type CreateMessageCreateMessageRequest struct {
 }
 
 type CreateMessageRequest struct {
-	PathParams CreateMessagePathParams
-	Request    *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMessageSecurity
-	ServerURL  *string
+	ChannelSid  string                             `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateMessageCreateMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                             `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateMessageResponse struct {

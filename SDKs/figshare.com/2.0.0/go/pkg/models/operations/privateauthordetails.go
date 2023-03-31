@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateAuthorDetailsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateAuthorDetailsPathParams struct {
-	// Author unique identifier
-	AuthorID int64 `pathParam:"style=simple,explode=false,name=author_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateAuthorDetailsRequest struct {
-	PathParams PrivateAuthorDetailsPathParams
-	Security   PrivateAuthorDetailsSecurity
+	// Author unique identifier
+	AuthorID int64 `pathParam:"style=simple,explode=false,name=author_id"`
 }
 
 type PrivateAuthorDetailsResponse struct {

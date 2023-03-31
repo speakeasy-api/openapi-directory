@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTRSforDebitMemoItemManualDistributionPathParams struct {
-	// The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).
-	//
-	DmiID string `pathParam:"style=simple,explode=false,name=dmi-id"`
-}
-
-type POSTRSforDebitMemoItemManualDistributionHeaders struct {
+type POSTRSforDebitMemoItemManualDistributionRequest struct {
+	POSTRevenueScheduleByTransactionType shared.POSTRevenueScheduleByTransactionType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,12 +17,9 @@ type POSTRSforDebitMemoItemManualDistributionHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type POSTRSforDebitMemoItemManualDistributionRequest struct {
-	PathParams POSTRSforDebitMemoItemManualDistributionPathParams
-	Headers    POSTRSforDebitMemoItemManualDistributionHeaders
-	Request    shared.POSTRevenueScheduleByTransactionType `request:"mediaType=application/json"`
+	// The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).
+	//
+	DmiID string `pathParam:"style=simple,explode=false,name=dmi-id"`
 }
 
 type POSTRSforDebitMemoItemManualDistributionResponse struct {

@@ -34,7 +34,7 @@ func newSwitchProfiles(defaultClient, securityClient HTTPClient, serverURL, lang
 // List the switch profiles for your switch template configuration
 func (s *switchProfiles) GetOrganizationConfigTemplateSwitchProfiles(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilesRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switchProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switchProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

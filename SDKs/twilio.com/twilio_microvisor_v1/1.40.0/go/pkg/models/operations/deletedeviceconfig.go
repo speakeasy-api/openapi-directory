@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteDeviceConfigServerList = []string{
@@ -12,20 +11,15 @@ var DeleteDeviceConfigServerList = []string{
 }
 
 type DeleteDeviceConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteDeviceConfigPathParams struct {
+type DeleteDeviceConfigRequest struct {
 	// A 34-character string that uniquely identifies the Device.
 	DeviceSid string `pathParam:"style=simple,explode=false,name=DeviceSid"`
 	// The config key; up to 100 characters.
 	Key string `pathParam:"style=simple,explode=false,name=Key"`
-}
-
-type DeleteDeviceConfigRequest struct {
-	PathParams DeleteDeviceConfigPathParams
-	Security   DeleteDeviceConfigSecurity
-	ServerURL  *string
 }
 
 type DeleteDeviceConfigResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcurrencyrateQueryParams struct {
+type GetcurrencyrateRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Currency symbol to retrieve current rate for
 	Symbol string `queryParam:"style=form,explode=true,name=symbol"`
-}
-
-type GetcurrencyrateRequest struct {
-	QueryParams GetcurrencyrateQueryParams
 }
 
 // Getcurrencyrate200ApplicationJSON - Currency rate data to one US Dollar

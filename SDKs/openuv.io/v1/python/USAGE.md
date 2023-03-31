@@ -4,18 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetForecastRequest(
-    query_params=operations.GetForecastQueryParams(
-        alt=20.200001,
-        dt="1985-12-02T13:43:44Z",
-        lat=17.100000,
-        lng=31.100000,
-        ozone=10.200000,
-    ),
-    headers=operations.GetForecastHeaders(
-        x_access_token="delectus",
-    ),
+    alt=1050,
+    dt="2018-02-04T04:39:06.467Z",
+    lat=78.67,
+    lng=115.67,
+    ozone=304.5,
+    x_access_token="corrupti",
 )
     
 res = s.get_forecast(req)

@@ -33,11 +33,11 @@ func newUserDeletion(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // AnalyticsUserDeletionUserDeletionRequestUpsert - Insert or update a user deletion requests.
-func (s *userDeletion) AnalyticsUserDeletionUserDeletionRequestUpsert(ctx context.Context, request operations.AnalyticsUserDeletionUserDeletionRequestUpsertRequest) (*operations.AnalyticsUserDeletionUserDeletionRequestUpsertResponse, error) {
+func (s *userDeletion) AnalyticsUserDeletionUserDeletionRequestUpsert(ctx context.Context, request operations.AnalyticsUserDeletionUserDeletionRequestUpsertRequest, security operations.AnalyticsUserDeletionUserDeletionRequestUpsertSecurity) (*operations.AnalyticsUserDeletionUserDeletionRequestUpsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/userDeletion/userDeletionRequests:upsert"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserDeletionRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *userDeletion) AnalyticsUserDeletionUserDeletionRequestUpsert(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

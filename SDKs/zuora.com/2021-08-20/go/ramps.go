@@ -37,14 +37,14 @@ func newRamps(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Retrieves the latest definition of a specified ramp.
 func (s *ramps) GETRampByRampNumber(ctx context.Context, request operations.GETRampByRampNumberRequest) (*operations.GETRampByRampNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ramps/{rampNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ramps/{rampNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -95,14 +95,14 @@ func (s *ramps) GETRampByRampNumber(ctx context.Context, request operations.GETR
 // See [Key metrics for Ramps](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Ramps_and_Ramp_Metrics/F_Key_metrics_for_Ramps) for more information.
 func (s *ramps) GETRampMetricsByOrderNumber(ctx context.Context, request operations.GETRampMetricsByOrderNumberRequest) (*operations.GETRampMetricsByOrderNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/ramp-metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/ramp-metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -153,14 +153,14 @@ func (s *ramps) GETRampMetricsByOrderNumber(ctx context.Context, request operati
 // See [Key metrics for Ramps](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Ramps_and_Ramp_Metrics/F_Key_metrics_for_Ramps) for more information.
 func (s *ramps) GETRampMetricsByRampNumber(ctx context.Context, request operations.GETRampMetricsByRampNumberRequest) (*operations.GETRampMetricsByRampNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ramps/{rampNumber}/ramp-metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ramps/{rampNumber}/ramp-metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -211,14 +211,14 @@ func (s *ramps) GETRampMetricsByRampNumber(ctx context.Context, request operatio
 // See [Key metrics for Ramps](https://knowledgecenter.zuora.com/Billing/Subscriptions/Orders/Ramps_and_Ramp_Metrics/F_Key_metrics_for_Ramps) for more information.
 func (s *ramps) GETRampMetricsBySubscriptionKey(ctx context.Context, request operations.GETRampMetricsBySubscriptionKeyRequest) (*operations.GETRampMetricsBySubscriptionKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionKey}/ramp-metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionKey}/ramp-metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -262,14 +262,14 @@ func (s *ramps) GETRampMetricsBySubscriptionKey(ctx context.Context, request ope
 //	Retrieves the definition of the ramp associated with a specified subscription.
 func (s *ramps) GETRampsBySubscriptionKey(ctx context.Context, request operations.GETRampsBySubscriptionKeyRequest) (*operations.GETRampsBySubscriptionKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionKey}/ramps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionKey}/ramps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PostRealmAuthenticationRequiredActionsAliasLowerPriorityPathParams struct {
+type PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest struct {
 	// Alias of required action
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest struct {
-	PathParams PostRealmAuthenticationRequiredActionsAliasLowerPriorityPathParams
 }
 
 type PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse struct {

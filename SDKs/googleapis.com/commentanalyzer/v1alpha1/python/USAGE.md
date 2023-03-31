@@ -4,76 +4,88 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CommentanalyzerCommentsAnalyzeRequest(
-    security=operations.CommentanalyzerCommentsAnalyzeSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.CommentanalyzerCommentsAnalyzeQueryParams(
-        dollar_xgafv="2",
-        access_token="cupiditate",
-        alt="json",
-        callback="aliquid",
-        fields="et",
-        key="adipisci",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="itaque",
-        upload_type="illum",
-        upload_protocol="voluptas",
-    ),
-    request=shared.AnalyzeCommentRequest(
-        client_token="a",
+    dollar_xgafv="2",
+    analyze_comment_request=shared.AnalyzeCommentRequest(
+        client_token="provident",
         comment=shared.TextEntry(
-            text="debitis",
-            type="PLAIN_TEXT",
+            text="distinctio",
+            type="HTML",
         ),
-        community_id="molestiae",
+        community_id="unde",
         context=shared.Context(
             article_and_parent_comment=shared.ArticleAndParentComment(
                 article=shared.TextEntry(
-                    text="labore",
+                    text="nulla",
                     type="PLAIN_TEXT",
                 ),
                 parent_comment=shared.TextEntry(
-                    text="consectetur",
-                    type="TEXT_TYPE_UNSPECIFIED",
+                    text="illum",
+                    type="PLAIN_TEXT",
                 ),
             ),
             entries=[
                 shared.TextEntry(
-                    text="ipsam",
-                    type="HTML",
+                    text="deserunt",
+                    type="PLAIN_TEXT",
                 ),
                 shared.TextEntry(
-                    text="cum",
-                    type="PLAIN_TEXT",
+                    text="iure",
+                    type="TEXT_TYPE_UNSPECIFIED",
+                ),
+                shared.TextEntry(
+                    text="debitis",
+                    type="TEXT_TYPE_UNSPECIFIED",
                 ),
             ],
         ),
-        do_not_store=True,
+        do_not_store=False,
+        drop_unsupported_attributes=False,
         languages=[
-            "repellat",
-            "excepturi",
-            "voluptatem",
+            "tempora",
+            "suscipit",
+            "molestiae",
+            "minus",
         ],
         requested_attributes={
-            "id": shared.AttributeParameters(
-                score_threshold=28.200001,
+            "voluptatum": shared.AttributeParameters(
+                score_threshold=4799.77,
+                score_type="STD_DEV_SCORE",
+            ),
+            "nisi": shared.AttributeParameters(
+                score_threshold=9255.97,
                 score_type="RAW",
             ),
+            "ab": shared.AttributeParameters(
+                score_threshold=3373.96,
+                score_type="SCORE_TYPE_UNSPECIFIED",
+            ),
+            "deserunt": shared.AttributeParameters(
+                score_threshold=202.18,
+                score_type="PROBABILITY",
+            ),
         },
-        session_id="consectetur",
+        session_id="repellendus",
         span_annotations=False,
     ),
+    access_token="sapiente",
+    alt="proto",
+    callback="odit",
+    fields_="at",
+    key="at",
+    oauth_token="maiores",
+    pretty_print=False,
+    quota_user="molestiae",
+    upload_type="quod",
+    upload_protocol="quod",
 )
     
-res = s.comments.commentanalyzer_comments_analyze(req)
+res = s.comments.commentanalyzer_comments_analyze(req, operations.CommentanalyzerCommentsAnalyzeSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.analyze_comment_response is not None:
     # handle response

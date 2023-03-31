@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageTagsRawPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImageTagsRawHeaders struct {
+type CreateImageTagsRawRequest struct {
+	// Batch of image tags. Limited to 128 tags per batch.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// API key.
 	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateImageTagsRawRequest struct {
-	PathParams CreateImageTagsRawPathParams
-	Headers    CreateImageTagsRawHeaders
-	// Batch of image tags. Limited to 128 tags per batch.
-	Request []byte `request:"mediaType=text/xml"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type CreateImageTagsRawResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsCreatePathParams struct {
-	// The name of the account in which to create this location.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessAccountsLocationsCreateQueryParams struct {
+type MybusinessAccountsLocationsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	LocationInput *shared.LocationInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type MybusinessAccountsLocationsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The name of the account in which to create this location.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,12 +37,6 @@ type MybusinessAccountsLocationsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// If true, the request is validated without actually creating the location.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type MybusinessAccountsLocationsCreateRequest struct {
-	PathParams  MybusinessAccountsLocationsCreatePathParams
-	QueryParams MybusinessAccountsLocationsCreateQueryParams
-	Request     *shared.LocationInput `request:"mediaType=application/json"`
 }
 
 type MybusinessAccountsLocationsCreateResponse struct {

@@ -12,18 +12,13 @@ var FetchConnectionPolicyServerList = []string{
 }
 
 type FetchConnectionPolicySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchConnectionPolicyPathParams struct {
-	// The unique string that we created to identify the Connection Policy resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchConnectionPolicyRequest struct {
-	PathParams FetchConnectionPolicyPathParams
-	Security   FetchConnectionPolicySecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Connection Policy resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchConnectionPolicyResponse struct {

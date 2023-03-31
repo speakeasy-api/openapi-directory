@@ -8,25 +8,16 @@ import (
 )
 
 type DeleteProjectSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteProjectPathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type DeleteProjectQueryParams struct {
-	// Whether to delete all the videos in the project along with the project itself.
-	ShouldDeleteClips *bool `queryParam:"style=form,explode=true,name=should_delete_clips"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteProjectRequest struct {
-	PathParams  DeleteProjectPathParams
-	QueryParams DeleteProjectQueryParams
-	Security    DeleteProjectSecurity
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
+	// Whether to delete all the videos in the project along with the project itself.
+	ShouldDeleteClips *bool `queryParam:"style=form,explode=true,name=should_delete_clips"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type DeleteProjectResponse struct {

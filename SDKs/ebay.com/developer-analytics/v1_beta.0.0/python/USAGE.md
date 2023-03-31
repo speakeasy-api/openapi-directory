@@ -4,20 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRateLimitsRequest(
-    security=operations.GetRateLimitsSecurity(
-        api_auth=shared.SchemeAPIAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.GetRateLimitsQueryParams(
-        api_context="placeat",
-        api_name="doloremque",
-    ),
+    api_context="corrupti",
+    api_name="provident",
 )
     
-res = s.rate_limit.get_rate_limits(req)
+res = s.rate_limit.get_rate_limits(req, operations.GetRateLimitsSecurity(
+    api_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.rate_limits_response is not None:
     # handle response

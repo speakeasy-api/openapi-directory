@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteReceivable1PathParams struct {
+type DeleteReceivable1Request struct {
 	// quoteId's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
 	// receivable's internal identifier
 	ReceivableID int64 `pathParam:"style=simple,explode=false,name=receivableId"`
-}
-
-type DeleteReceivable1Request struct {
-	PathParams DeleteReceivable1PathParams
 }
 
 type DeleteReceivable1Response struct {

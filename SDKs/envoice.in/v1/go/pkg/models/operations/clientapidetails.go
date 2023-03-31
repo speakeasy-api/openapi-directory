@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClientAPIDetailsQueryParams struct {
-	ID int `queryParam:"style=form,explode=true,name=id"`
-}
-
-type ClientAPIDetailsHeaders struct {
+type ClientAPIDetailsRequest struct {
+	ID          int    `queryParam:"style=form,explode=true,name=id"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type ClientAPIDetailsRequest struct {
-	QueryParams ClientAPIDetailsQueryParams
-	Headers     ClientAPIDetailsHeaders
 }
 
 type ClientAPIDetailsResponse struct {

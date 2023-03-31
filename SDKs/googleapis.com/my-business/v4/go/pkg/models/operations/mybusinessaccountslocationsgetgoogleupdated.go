@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsGetGoogleUpdatedPathParams struct {
-	// The name of the location to fetch.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessAccountsLocationsGetGoogleUpdatedQueryParams struct {
+type MybusinessAccountsLocationsGetGoogleUpdatedRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -25,6 +20,8 @@ type MybusinessAccountsLocationsGetGoogleUpdatedQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the location to fetch.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -35,11 +32,6 @@ type MybusinessAccountsLocationsGetGoogleUpdatedQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsGetGoogleUpdatedRequest struct {
-	PathParams  MybusinessAccountsLocationsGetGoogleUpdatedPathParams
-	QueryParams MybusinessAccountsLocationsGetGoogleUpdatedQueryParams
 }
 
 type MybusinessAccountsLocationsGetGoogleUpdatedResponse struct {

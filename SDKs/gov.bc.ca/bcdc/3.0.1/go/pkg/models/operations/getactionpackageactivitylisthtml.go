@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetActionPackageActivityListHTMLQueryParams struct {
+type GetActionPackageActivityListHTMLRequest struct {
 	// The id or name of the package
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// The maximum number of activities to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start getting activity items from
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetActionPackageActivityListHTMLRequest struct {
-	QueryParams GetActionPackageActivityListHTMLQueryParams
 }
 
 type GetActionPackageActivityListHTMLResponse struct {

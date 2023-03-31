@@ -198,7 +198,7 @@ func (e *GetCommitteesOrganizationTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCommitteesQueryParams struct {
+type GetCommitteesRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -300,10 +300,6 @@ type GetCommitteesQueryParams struct {
 	TreasurerName []string `queryParam:"style=form,explode=true,name=treasurer_name"`
 	// A year that the committee was active— (after original registration date     or filing but before expiration date)
 	Year []int `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCommitteesRequest struct {
-	QueryParams GetCommitteesQueryParams
 }
 
 type GetCommitteesResponse struct {

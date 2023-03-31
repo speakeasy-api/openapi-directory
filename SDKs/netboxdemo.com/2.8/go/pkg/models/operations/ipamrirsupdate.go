@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRirsUpdatePathParams struct {
+type IpamRirsUpdateRequest struct {
+	RIRInput shared.RIRInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this RIR.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamRirsUpdateRequest struct {
-	PathParams IpamRirsUpdatePathParams
-	Request    shared.RIRInput `request:"mediaType=application/json"`
 }
 
 type IpamRirsUpdateResponse struct {

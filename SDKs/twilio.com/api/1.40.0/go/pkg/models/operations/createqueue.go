@@ -12,12 +12,8 @@ var CreateQueueServerList = []string{
 }
 
 type CreateQueueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateQueuePathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateQueueCreateQueueRequest struct {
@@ -28,10 +24,9 @@ type CreateQueueCreateQueueRequest struct {
 }
 
 type CreateQueueRequest struct {
-	PathParams CreateQueuePathParams
-	Request    *CreateQueueCreateQueueRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateQueueSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                         `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateQueueCreateQueueRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateQueueResponse struct {

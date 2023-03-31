@@ -8,12 +8,7 @@ import (
 )
 
 type AddDellSwitchSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddDellSwitchRequest struct {
-	Request  *shared.DellSwitchDataSourceRequest `request:"mediaType=application/json"`
-	Security AddDellSwitchSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddDellSwitchResponse struct {

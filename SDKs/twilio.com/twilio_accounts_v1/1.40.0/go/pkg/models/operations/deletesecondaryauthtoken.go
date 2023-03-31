@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSecondaryAuthTokenServerList = []string{
 	"https://accounts.twilio.com",
-}
-
-type DeleteSecondaryAuthTokenSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteSecondaryAuthTokenRequest struct {
-	Security  DeleteSecondaryAuthTokenSecurity
-	ServerURL *string
 }
 
 type DeleteSecondaryAuthTokenResponse struct {

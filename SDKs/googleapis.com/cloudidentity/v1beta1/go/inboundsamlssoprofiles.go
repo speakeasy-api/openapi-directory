@@ -33,11 +33,11 @@ func newInboundSamlSsoProfiles(defaultClient, securityClient HTTPClient, serverU
 }
 
 // CloudidentityInboundSamlSsoProfilesCreate - Creates an InboundSamlSsoProfile for a customer.
-func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesCreate(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesCreateRequest) (*operations.CloudidentityInboundSamlSsoProfilesCreateResponse, error) {
+func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesCreate(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesCreateRequest, security operations.CloudidentityInboundSamlSsoProfilesCreateSecurity) (*operations.CloudidentityInboundSamlSsoProfilesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/inboundSamlSsoProfiles"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InboundSamlSsoProfileInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesCreate(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesCreate(ctx c
 }
 
 // CloudidentityInboundSamlSsoProfilesIdpCredentialsAdd - Adds an IdpCredential. Up to 2 credentials are allowed.
-func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentialsAdd(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest) (*operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse, error) {
+func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentialsAdd(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest, security operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddSecurity) (*operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/idpCredentials:add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/idpCredentials:add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddIdpCredentialRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentia
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentia
 }
 
 // CloudidentityInboundSamlSsoProfilesIdpCredentialsList - Returns a list of IdpCredentials in an InboundSamlSsoProfile.
-func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentialsList(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest) (*operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse, error) {
+func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentialsList(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest, security operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListSecurity) (*operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/idpCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/idpCredentials", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentia
 }
 
 // CloudidentityInboundSamlSsoProfilesList - Lists InboundSamlSsoProfiles for a customer.
-func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesList(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesListRequest) (*operations.CloudidentityInboundSamlSsoProfilesListResponse, error) {
+func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesList(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesListRequest, security operations.CloudidentityInboundSamlSsoProfilesListSecurity) (*operations.CloudidentityInboundSamlSsoProfilesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/inboundSamlSsoProfiles"
 
@@ -200,11 +200,11 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesList(ctx con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

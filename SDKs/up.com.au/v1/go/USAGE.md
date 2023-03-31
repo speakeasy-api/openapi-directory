@@ -13,18 +13,14 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
     req := operations.GetAccountsRequest{
-        QueryParams: operations.GetAccountsQueryParams{
-            FilterAccountType: "TRANSACTIONAL",
-            FilterOwnershipType: "JOINT",
-            PageSize: 715190,
-        },
+        FilterAccountType: "TRANSACTIONAL",
+        FilterOwnershipType: "JOINT",
+        PageSize: 715190,
     }
 
     ctx := context.Background()

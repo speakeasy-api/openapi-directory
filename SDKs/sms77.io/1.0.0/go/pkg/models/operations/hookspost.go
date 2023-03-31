@@ -89,7 +89,7 @@ func (e *HooksPOSTRequestMethodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HooksPOSTQueryParams struct {
+type HooksPOSTRequest struct {
 	// Determines the action to execute.
 	Action HooksPOSTActionEnum `queryParam:"style=form,explode=true,name=action"`
 	// Type of event for which you would like to receive a webhook.
@@ -100,10 +100,6 @@ type HooksPOSTQueryParams struct {
 	RequestMethod *HooksPOSTRequestMethodEnum `queryParam:"style=form,explode=true,name=request_method"`
 	// Target URL of your Webhook.
 	TargetURL *string `queryParam:"style=form,explode=true,name=target_url"`
-}
-
-type HooksPOSTRequest struct {
-	QueryParams HooksPOSTQueryParams
 }
 
 // HooksPOST200ApplicationJSON - Hook subscribed

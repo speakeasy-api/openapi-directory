@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetsSetPathParams struct {
+type GetSetsSetRequest struct {
 	// the set ID or the set name
 	Set string `pathParam:"style=simple,explode=false,name=set"`
-}
-
-type GetSetsSetRequest struct {
-	PathParams GetSetsSetPathParams
 }
 
 type GetSetsSetResponse struct {

@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetAllPortfolioTemplatesSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAllPortfolioTemplatesHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetAllPortfolioTemplatesRequest struct {
-	Headers  GetAllPortfolioTemplatesHeaders
-	Security GetAllPortfolioTemplatesSecurity
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetAllPortfolioTemplates500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

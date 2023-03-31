@@ -10,8 +10,8 @@ import (
 )
 
 type GetFeaturedVideoCollectionListSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetFeaturedVideoCollectionListEmbedEnum - What information to include in the response, such as a URL to the collection
@@ -35,14 +35,9 @@ func (e *GetFeaturedVideoCollectionListEmbedEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetFeaturedVideoCollectionListQueryParams struct {
+type GetFeaturedVideoCollectionListRequest struct {
 	// What information to include in the response, such as a URL to the collection
 	Embed *GetFeaturedVideoCollectionListEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetFeaturedVideoCollectionListRequest struct {
-	QueryParams GetFeaturedVideoCollectionListQueryParams
-	Security    GetFeaturedVideoCollectionListSecurity
 }
 
 type GetFeaturedVideoCollectionListResponse struct {

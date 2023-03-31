@@ -37,7 +37,7 @@ func newPackagePickups(defaultClient, securityClient HTTPClient, serverURL, lang
 // Delete a previously-scheduled pickup by ID
 func (s *packagePickups) DeleteScheduledPickup(ctx context.Context, request operations.DeleteScheduledPickupRequest) (*operations.DeleteScheduledPickupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/pickups/{pickup_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/pickups/{pickup_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *packagePickups) DeleteScheduledPickup(ctx context.Context, request oper
 // Get Pickup By ID
 func (s *packagePickups) GetPickupByID(ctx context.Context, request operations.GetPickupByIDRequest) (*operations.GetPickupByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/pickups/{pickup_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/pickups/{pickup_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +162,7 @@ func (s *packagePickups) ListScheduledPickups(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -216,7 +216,7 @@ func (s *packagePickups) ListScheduledPickups(ctx context.Context, request opera
 
 // SchedulePickup - Schedule a Pickup
 // Schedule a package pickup with a carrier
-func (s *packagePickups) SchedulePickup(ctx context.Context, request operations.SchedulePickupRequest) (*operations.SchedulePickupResponse, error) {
+func (s *packagePickups) SchedulePickup(ctx context.Context, request shared.SchedulePickupRequestBodyInput) (*operations.SchedulePickupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/pickups"
 

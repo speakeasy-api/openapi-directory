@@ -33,13 +33,9 @@ func (e *GetErrorCodesLangEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetErrorCodesQueryParams struct {
+type GetErrorCodesRequest struct {
 	// Idioma de la respuesta
 	Lang *GetErrorCodesLangEnum `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetErrorCodesRequest struct {
-	QueryParams GetErrorCodesQueryParams
 }
 
 type GetErrorCodesResponse struct {

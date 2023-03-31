@@ -35,7 +35,7 @@ func newScripts(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CompileScript - Compile a script
 // Compile a script
-func (s *scripts) CompileScript(ctx context.Context, request operations.CompileScriptRequest) (*operations.CompileScriptResponse, error) {
+func (s *scripts) CompileScript(ctx context.Context, request shared.Script, security operations.CompileScriptSecurity) (*operations.CompileScriptResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/scripts/_compile"
 
@@ -51,7 +51,7 @@ func (s *scripts) CompileScript(ctx context.Context, request operations.CompileS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *scripts) CompileScript(ctx context.Context, request operations.CompileS
 
 // CreateScript - Create a new script
 // Create a new script
-func (s *scripts) CreateScript(ctx context.Context, request operations.CreateScriptRequest) (*operations.CreateScriptResponse, error) {
+func (s *scripts) CreateScript(ctx context.Context, request shared.Script, security operations.CreateScriptSecurity) (*operations.CreateScriptResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/scripts"
 
@@ -108,7 +108,7 @@ func (s *scripts) CreateScript(ctx context.Context, request operations.CreateScr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -149,16 +149,16 @@ func (s *scripts) CreateScript(ctx context.Context, request operations.CreateScr
 
 // DeleteScript - Delete a script
 // Delete a script
-func (s *scripts) DeleteScript(ctx context.Context, request operations.DeleteScriptRequest) (*operations.DeleteScriptResponse, error) {
+func (s *scripts) DeleteScript(ctx context.Context, request operations.DeleteScriptRequest, security operations.DeleteScriptSecurity) (*operations.DeleteScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -199,7 +199,7 @@ func (s *scripts) DeleteScript(ctx context.Context, request operations.DeleteScr
 
 // FindAllScripts - Get all scripts
 // Get all scripts
-func (s *scripts) FindAllScripts(ctx context.Context, request operations.FindAllScriptsRequest) (*operations.FindAllScriptsResponse, error) {
+func (s *scripts) FindAllScripts(ctx context.Context) (*operations.FindAllScriptsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/scripts"
 
@@ -208,7 +208,7 @@ func (s *scripts) FindAllScripts(ctx context.Context, request operations.FindAll
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,16 +249,16 @@ func (s *scripts) FindAllScripts(ctx context.Context, request operations.FindAll
 
 // FindScriptByID - Get a script
 // Get a script
-func (s *scripts) FindScriptByID(ctx context.Context, request operations.FindScriptByIDRequest) (*operations.FindScriptByIDResponse, error) {
+func (s *scripts) FindScriptByID(ctx context.Context, request operations.FindScriptByIDRequest, security operations.FindScriptByIDSecurity) (*operations.FindScriptByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -299,11 +299,11 @@ func (s *scripts) FindScriptByID(ctx context.Context, request operations.FindScr
 
 // PatchScript - Update a script with a diff
 // Update a script with a diff
-func (s *scripts) PatchScript(ctx context.Context, request operations.PatchScriptRequest) (*operations.PatchScriptResponse, error) {
+func (s *scripts) PatchScript(ctx context.Context, request operations.PatchScriptRequest, security operations.PatchScriptSecurity) (*operations.PatchScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -315,7 +315,7 @@ func (s *scripts) PatchScript(ctx context.Context, request operations.PatchScrip
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -356,11 +356,11 @@ func (s *scripts) PatchScript(ctx context.Context, request operations.PatchScrip
 
 // UpdateScript - Update a script
 // Update a script
-func (s *scripts) UpdateScript(ctx context.Context, request operations.UpdateScriptRequest) (*operations.UpdateScriptResponse, error) {
+func (s *scripts) UpdateScript(ctx context.Context, request operations.UpdateScriptRequest, security operations.UpdateScriptSecurity) (*operations.UpdateScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Script", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -372,7 +372,7 @@ func (s *scripts) UpdateScript(ctx context.Context, request operations.UpdateScr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

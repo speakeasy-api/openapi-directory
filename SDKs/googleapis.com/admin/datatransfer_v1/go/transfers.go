@@ -33,20 +33,20 @@ func newTransfers(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DatatransferTransfersGet - Retrieves a data transfer request by its resource ID.
-func (s *transfers) DatatransferTransfersGet(ctx context.Context, request operations.DatatransferTransfersGetRequest) (*operations.DatatransferTransfersGetResponse, error) {
+func (s *transfers) DatatransferTransfersGet(ctx context.Context, request operations.DatatransferTransfersGetRequest, security operations.DatatransferTransfersGetSecurity) (*operations.DatatransferTransfersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/datatransfer/v1/transfers/{dataTransferId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/datatransfer/v1/transfers/{dataTransferId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *transfers) DatatransferTransfersGet(ctx context.Context, request operat
 }
 
 // DatatransferTransfersInsert - Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-transfer/v1/parameters) reference for specific application requirements.
-func (s *transfers) DatatransferTransfersInsert(ctx context.Context, request operations.DatatransferTransfersInsertRequest) (*operations.DatatransferTransfersInsertResponse, error) {
+func (s *transfers) DatatransferTransfersInsert(ctx context.Context, request operations.DatatransferTransfersInsertRequest, security operations.DatatransferTransfersInsertSecurity) (*operations.DatatransferTransfersInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/datatransfer/v1/transfers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DataTransfer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *transfers) DatatransferTransfersInsert(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *transfers) DatatransferTransfersInsert(ctx context.Context, request ope
 }
 
 // DatatransferTransfersList - Lists the transfers for a customer by source user, destination user, or status.
-func (s *transfers) DatatransferTransfersList(ctx context.Context, request operations.DatatransferTransfersListRequest) (*operations.DatatransferTransfersListResponse, error) {
+func (s *transfers) DatatransferTransfersList(ctx context.Context, request operations.DatatransferTransfersListRequest, security operations.DatatransferTransfersListSecurity) (*operations.DatatransferTransfersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/datatransfer/v1/transfers"
 
@@ -145,11 +145,11 @@ func (s *transfers) DatatransferTransfersList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

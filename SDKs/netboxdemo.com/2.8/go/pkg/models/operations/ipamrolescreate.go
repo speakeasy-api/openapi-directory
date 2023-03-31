@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRolesCreateRequest struct {
-	Request shared.RoleInput `request:"mediaType=application/json"`
-}
-
 type IpamRolesCreateResponse struct {
 	ContentType string
 	Role        *shared.Role

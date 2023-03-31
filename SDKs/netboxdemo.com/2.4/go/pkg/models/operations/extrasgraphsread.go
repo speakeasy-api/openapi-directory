@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasGraphsReadPathParams struct {
+type ExtrasGraphsReadRequest struct {
 	// A unique integer value identifying this graph.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasGraphsReadRequest struct {
-	PathParams ExtrasGraphsReadPathParams
 }
 
 type ExtrasGraphsReadResponse struct {

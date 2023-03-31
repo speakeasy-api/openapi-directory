@@ -8,13 +8,14 @@ import (
 )
 
 type FactchecktoolsPagesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FactchecktoolsPagesCreateQueryParams struct {
+type FactchecktoolsPagesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                   *shared.XgafvEnum                                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage *shared.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -35,12 +36,6 @@ type FactchecktoolsPagesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FactchecktoolsPagesCreateRequest struct {
-	QueryParams FactchecktoolsPagesCreateQueryParams
-	Request     *shared.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage `request:"mediaType=application/json"`
-	Security    FactchecktoolsPagesCreateSecurity
 }
 
 type FactchecktoolsPagesCreateResponse struct {

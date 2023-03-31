@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersBlockPathParams struct {
+type UsersBlockRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersBlockRequest struct {
-	PathParams UsersBlockPathParams
 }
 
 type UsersBlockResponse struct {

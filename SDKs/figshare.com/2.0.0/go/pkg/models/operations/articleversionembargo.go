@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleVersionEmbargoPathParams struct {
+type ArticleVersionEmbargoRequest struct {
 	// Article Unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Version Number
 	VNumber int64 `pathParam:"style=simple,explode=false,name=v_number"`
-}
-
-type ArticleVersionEmbargoRequest struct {
-	PathParams ArticleVersionEmbargoPathParams
 }
 
 type ArticleVersionEmbargoResponse struct {

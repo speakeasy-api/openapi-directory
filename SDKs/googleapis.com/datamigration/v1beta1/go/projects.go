@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DatamigrationProjectsLocationsConnectionProfilesCreate - Creates a new connection profile in a given project and location.
-func (s *projects) DatamigrationProjectsLocationsConnectionProfilesCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest) (*operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsConnectionProfilesCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest, security operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity) (*operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connectionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connectionProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionProfileInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) DatamigrationProjectsLocationsConnectionProfilesCreate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) DatamigrationProjectsLocationsConnectionProfilesCreate(ctx co
 }
 
 // DatamigrationProjectsLocationsConnectionProfilesList - Retrieve a list of all connection profiles in a given project and location.
-func (s *projects) DatamigrationProjectsLocationsConnectionProfilesList(ctx context.Context, request operations.DatamigrationProjectsLocationsConnectionProfilesListRequest) (*operations.DatamigrationProjectsLocationsConnectionProfilesListResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsConnectionProfilesList(ctx context.Context, request operations.DatamigrationProjectsLocationsConnectionProfilesListRequest, security operations.DatamigrationProjectsLocationsConnectionProfilesListSecurity) (*operations.DatamigrationProjectsLocationsConnectionProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connectionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/connectionProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) DatamigrationProjectsLocationsConnectionProfilesList(ctx cont
 }
 
 // DatamigrationProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) DatamigrationProjectsLocationsList(ctx context.Context, request operations.DatamigrationProjectsLocationsListRequest) (*operations.DatamigrationProjectsLocationsListResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsList(ctx context.Context, request operations.DatamigrationProjectsLocationsListRequest, security operations.DatamigrationProjectsLocationsListSecurity) (*operations.DatamigrationProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) DatamigrationProjectsLocationsList(ctx context.Context, reque
 }
 
 // DatamigrationProjectsLocationsMigrationJobsCreate - Creates a new migration job in a given project and location.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest, security operations.DatamigrationProjectsLocationsMigrationJobsCreateSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/migrationJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/migrationJobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigrationJobInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsCreate(ctx context
 }
 
 // DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript - Generate a SSH configuration script to configure the reverse SSH connectivity.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptRequest, security operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{migrationJob}:generateSshScript", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{migrationJob}:generateSshScript", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateSSHScriptRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript(
 }
 
 // DatamigrationProjectsLocationsMigrationJobsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsGetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsGetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest, security operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicySecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsGetIamPolicy(ctx c
 }
 
 // DatamigrationProjectsLocationsMigrationJobsList - Lists migration jobs in a given project and location.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsList(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsListRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsListResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsList(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsListRequest, security operations.DatamigrationProjectsLocationsMigrationJobsListSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/migrationJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/migrationJobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsList(ctx context.C
 }
 
 // DatamigrationProjectsLocationsMigrationJobsPatch - Updates the parameters of a single migration job.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsPatch(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsPatch(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest, security operations.DatamigrationProjectsLocationsMigrationJobsPatchSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigrationJobInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsPatch(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsPatch(ctx context.
 }
 
 // DatamigrationProjectsLocationsMigrationJobsPromote - Promote a migration job, stopping replication to the destination and promoting the destination to be a standalone database.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsPromote(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsPromote(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest, security operations.DatamigrationProjectsLocationsMigrationJobsPromoteSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:promote", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:promote", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsPromote(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsPromote(ctx contex
 }
 
 // DatamigrationProjectsLocationsMigrationJobsRestart - Restart a stopped or failed migration job, resetting the destination instance to its original state and starting the migration process from scratch.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsRestart(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsRestart(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest, security operations.DatamigrationProjectsLocationsMigrationJobsRestartSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:restart", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:restart", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsRestart(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,11 +554,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsRestart(ctx contex
 }
 
 // DatamigrationProjectsLocationsMigrationJobsResume - Resume a migration job that is currently stopped and is resumable (was stopped during CDC phase).
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsResume(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsResume(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest, security operations.DatamigrationProjectsLocationsMigrationJobsResumeSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:resume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,11 +570,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsResume(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,11 +609,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsResume(ctx context
 }
 
 // DatamigrationProjectsLocationsMigrationJobsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsSetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsSetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest, security operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicySecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -625,11 +625,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsSetIamPolicy(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,11 +664,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsSetIamPolicy(ctx c
 }
 
 // DatamigrationProjectsLocationsMigrationJobsStart - Start an already created migration job.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsStart(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsStartRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsStartResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsStart(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsStartRequest, security operations.DatamigrationProjectsLocationsMigrationJobsStartSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -680,11 +680,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsStart(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,11 +719,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsStart(ctx context.
 }
 
 // DatamigrationProjectsLocationsMigrationJobsStop - Stops a running migration job.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsStop(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsStopRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsStopResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsStop(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsStopRequest, security operations.DatamigrationProjectsLocationsMigrationJobsStopSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:stop", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -735,11 +735,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsStop(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,11 +774,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsStop(ctx context.C
 }
 
 // DatamigrationProjectsLocationsMigrationJobsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsTestIamPermissions(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsTestIamPermissions(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest, security operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -790,11 +790,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsTestIamPermissions
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,11 +829,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsTestIamPermissions
 }
 
 // DatamigrationProjectsLocationsMigrationJobsVerify - Verify a migration job, making sure the destination can reach the source and that all configuration and prerequisites are met.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsVerify(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest) (*operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsMigrationJobsVerify(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest, security operations.DatamigrationProjectsLocationsMigrationJobsVerifySecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:verify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:verify", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -845,11 +845,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsVerify(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -884,11 +884,11 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsVerify(ctx context
 }
 
 // DatamigrationProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) DatamigrationProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsCancelRequest) (*operations.DatamigrationProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsCancelRequest, security operations.DatamigrationProjectsLocationsOperationsCancelSecurity) (*operations.DatamigrationProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -900,11 +900,11 @@ func (s *projects) DatamigrationProjectsLocationsOperationsCancel(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -939,20 +939,20 @@ func (s *projects) DatamigrationProjectsLocationsOperationsCancel(ctx context.Co
 }
 
 // DatamigrationProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) DatamigrationProjectsLocationsOperationsDelete(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsDeleteRequest) (*operations.DatamigrationProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsOperationsDelete(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsDeleteRequest, security operations.DatamigrationProjectsLocationsOperationsDeleteSecurity) (*operations.DatamigrationProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -987,20 +987,20 @@ func (s *projects) DatamigrationProjectsLocationsOperationsDelete(ctx context.Co
 }
 
 // DatamigrationProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) DatamigrationProjectsLocationsOperationsGet(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsGetRequest) (*operations.DatamigrationProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsOperationsGet(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsGetRequest, security operations.DatamigrationProjectsLocationsOperationsGetSecurity) (*operations.DatamigrationProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1035,20 +1035,20 @@ func (s *projects) DatamigrationProjectsLocationsOperationsGet(ctx context.Conte
 }
 
 // DatamigrationProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) DatamigrationProjectsLocationsOperationsList(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsListRequest) (*operations.DatamigrationProjectsLocationsOperationsListResponse, error) {
+func (s *projects) DatamigrationProjectsLocationsOperationsList(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsListRequest, security operations.DatamigrationProjectsLocationsOperationsListSecurity) (*operations.DatamigrationProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

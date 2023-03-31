@@ -105,10 +105,6 @@ func (u PostPortfolioAnalysisSharpeRatioRequestBody) MarshalJSON() ([]byte, erro
 	return nil, nil
 }
 
-type PostPortfolioAnalysisSharpeRatioRequest struct {
-	Request PostPortfolioAnalysisSharpeRatioRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisSharpeRatio200ApplicationJSONPortfolios struct {
 	// The Sharpe ratio of the portfolio
 	PortfolioSharpeRatio float64 `json:"portfolioSharpeRatio"`

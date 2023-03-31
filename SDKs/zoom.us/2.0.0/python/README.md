@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/zoom.us/2.0.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,19 +14,15 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        o_auth=shared.SchemeOAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.AccountRequest(
-    path_params=operations.AccountPathParams(
-        account_id="deleniti",
+        o_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.AccountRequest(
+    account_id="corrupti",
 )
     
 res = s.accounts.account(req)
@@ -37,9 +33,10 @@ if res.account_200_application_json_object is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Accounts
+
+### accounts
 
 * `account` - Get sub account details
 * `account_create` - Create a sub account
@@ -56,7 +53,7 @@ if res.account_200_application_json_object is not None:
 * `update_account_owner` - Update the account owner
 * `upload_vb` - Upload virtual background files
 
-### Billing
+### billing
 
 * `account_billing` - Get billing information
 * `account_billing_invoices` - List billing invoices
@@ -72,7 +69,7 @@ if res.account_200_application_json_object is not None:
 * `get_account_billing_invoice` - Get invoice details
 * `get_plan_usage` - Get plan usage
 
-### Chat Channels
+### chat_channels
 
 * `create_channel` - Create a channel
 * `delete_user_level_channel` - Delete a channel
@@ -83,7 +80,7 @@ if res.account_200_application_json_object is not None:
 * `remove_a_user_level_channel_member` - Remove a member
 * `update_user_level_channel` - Update a channel
 
-### Chat Channels (Account-level)
+### chat_channels_account_level
 
 * `delete_channel` - Delete a channel
 * `get_channel` - Get a channel
@@ -92,20 +89,20 @@ if res.account_200_application_json_object is not None:
 * `remove_a_channel_member` - Remove a member
 * `update_channel` - Update a channel
 
-### Chat Messages
+### chat_messages
 
 * `delete_chat_message` - Delete a message
 * `edit_message` - Update a message
 * `get_chat_messages` - List user's chat messages
 * `senda_chat_message` - Send a chat message
 
-### Chatbot Messages
+### chatbot_messages
 
 * `delete_a_chatbot_message` - Delete a chatbot message
 * `edit_chatbot_message` - Edit a chatbot message
 * `sendchatbot` - Send chatbot messages
 
-### Cloud Recording
+### cloud_recording
 
 * `get_account_cloud_recording` - List recordings of an account
 * `list_archived_files` - List archived files
@@ -123,7 +120,7 @@ if res.account_200_application_json_object is not None:
 * `recording_status_update_one` - Recover a single recording
 * `recordings_list` - List all recordings
 
-### Common Area Phones
+### common_area_phones
 
 * `add_common_area_phone` - Add a common area phone
 * `delete_common_area_phone` - Delete a common area phone
@@ -131,13 +128,13 @@ if res.account_200_application_json_object is not None:
 * `list_common_area_phones` - List common area phones
 * `update_common_area_phone` - Update common area phone
 
-### Contacts
+### contacts
 
 * `get_user_contact` - Get user's contact details
 * `get_user_contacts` - List user's contacts
 * `search_company_contacts` - Search company contacts
 
-### Dashboards
+### dashboards
 
 * `dashboard_crc` - Get CRC port usage
 * `dashboard_client_feedback` - List Zoom meetings client feedback
@@ -167,19 +164,19 @@ if res.account_200_application_json_object is not None:
 * `participant_feedback` - Get post meeting feedback
 * `participant_webinar_feedback` - Get post webinar feedback
 
-### Deprecated API Endpoints
+### deprecated_api_endpoints
 
 * `list_past_meeting_files` - List past meeting's files
 * `list_past_webinar_files` - List past webinar files
 
-### Devices
+### devices
 
 * `device_create` - Create a H.323/SIP device
 * `device_delete` - Delete a H.323/SIP device
 * `device_list` - List H.323/SIP devices
 * `device_update` - Update a H.323/SIP device
 
-### Groups
+### groups
 
 * `del_group_vb` - Delete virtual background files
 * `get_group_lock_settings` - Get locked settings
@@ -197,14 +194,14 @@ if res.account_200_application_json_object is not None:
 * `update_group_settings` - Update a group's settings
 * `upload_group_vb` - Upload virtual background files
 
-### IM Chat
+### im_chat
 
 * `im_chat_messages` - Get IM chat messages
 * `im_chat_sessions` - Get IM chat sessions
 * `listimmessages` - Get user’s IM messages
 * `sendimmessages` - Send IM messages
 
-### IM Groups
+### im_groups
 
 * `im_group` - Retrieve an IM directory group
 * `im_group_create` - Create an IM directory group
@@ -215,7 +212,7 @@ if res.account_200_application_json_object is not None:
 * `im_group_update` - Update an IM directory group
 * `im_groups` - List IM directory groups
 
-### Meetings
+### meetings
 
 * `create_batch_polls` - Perform batch poll creation
 * `get_live_stream_details` - Get live stream details
@@ -239,18 +236,19 @@ if res.account_200_application_json_object is not None:
 * `meeting_registrants` - List meeting registrants
 * `meeting_registrants_questions_get` - List registration questions 
 * `meeting_status` - Update meeting status
-* `meeting_update` - Update a meeting
+* `meeting_update_json` - Update a meeting
+* `meeting_update_multipart` - Update a meeting
 * `meetingregistrantdelete` - Delete a meeting registrant
 * `meetings` - List meetings
 * `past_meeting_details` - Get past meeting details
 * `past_meeting_participants` - Get past meeting participants
 * `past_meetings` - List ended meeting instances
 
-### PAC
+### pac
 
 * `user_pa_cs` - List a user's PAC accounts
 
-### Phone
+### phone
 
 * `unassign_phone_number` - Unassign phone number
 * `account_call_logs` - Get account's call logs
@@ -286,7 +284,7 @@ if res.account_200_application_json_object is not None:
 * `update_user_profile` - Update user's profile
 * `update_user_setting` - Update shared access
 
-### Phone Auto Receptionists
+### phone_auto_receptionists
 
 * `add_auto_receptionist` - Add an auto receptionist
 * `assign_phone_numbers_auto_receptionist` - Assign phone numbers
@@ -294,7 +292,7 @@ if res.account_200_application_json_object is not None:
 * `unassign_all_phone_nums_auto_receptionist` - Unassign all phone numbers
 * `update_auto_receptionist` - Update auto receptionist details
 
-### Phone Blocked List
+### phone_blocked_list
 
 * `add_anumber_to_blocked_list` - Create a blocked list
 * `delete_a_blocked_list` - Delete a blocked list
@@ -302,7 +300,7 @@ if res.account_200_application_json_object is not None:
 * `list_blocked_list` - List blocked lists
 * `update_blocked_list` - Update a blocked list
 
-### Phone Call Queues
+### phone_call_queues
 
 * `add_members_to_call_queue` - Add members to a call queue
 * `assign_phone_to_call_queue` - Assign numbers to a call queue
@@ -318,7 +316,7 @@ if res.account_200_application_json_object is not None:
 * `unassign_member_from_call_queue` - Unassign a member
 * `update_call_queue` - Update call queue details
 
-### Phone Devices
+### phone_devices
 
 * `add_phone_device` - Add a device
 * `delete_a_device` - Delete a device
@@ -326,11 +324,11 @@ if res.account_200_application_json_object is not None:
 * `list_phone_devices` - List devices
 * `update_a_device` - Update a device
 
-### Phone Reports
+### phone_reports
 
 * `get_ps_operation_logs` - Get operation logs report
 
-### Phone Shared Line Groups
+### phone_shared_line_groups
 
 * `add_members_to_shared_line_group` - Add members to a shared line group
 * `assign_phone_numbers_slg` - Assign phone numbers
@@ -343,7 +341,7 @@ if res.account_200_application_json_object is not None:
 * `list_shared_line_groups` - List shared line groups
 * `update_a_shared_line_group` - Update a shared line group
 
-### Phone Site
+### phone_site
 
 * `create_phone_site` - Create a phone site
 * `delete_phone_site` - Delete a phone site
@@ -351,7 +349,7 @@ if res.account_200_application_json_object is not None:
 * `list_phone_sites` - List phone sites
 * `update_site_details` - Update phone site details
 
-### Reports
+### reports
 
 * `report_cloud_recording` - Get cloud recording usage report
 * `report_daily` - Get daily usage report
@@ -368,7 +366,7 @@ if res.account_200_application_json_object is not None:
 * `report_webinar_polls` - Get webinar poll reports
 * `report_webinar_qa` - Get webinar Q&A report
 
-### Roles
+### roles
 
 * `add_role_members` - Assign a role
 * `create_role` - Create a role
@@ -379,7 +377,7 @@ if res.account_200_application_json_object is not None:
 * `roles` - List roles
 * `update_role` - Update role information
 
-### Rooms
+### rooms
 
 * `add_a_room` - Add a Zoom Room
 * `change_zr_location` - Change a Zoom Room's location
@@ -394,18 +392,18 @@ if res.account_200_application_json_object is not None:
 * `update_room_profile` - Update a Zoom Room profile
 * `update_zr_settings` - Update Zoom Room settings
 
-### Rooms Account
+### rooms_account
 
 * `get_zr_account_profile` - Get Zoom Room account profile
 * `get_zr_account_settings` - Get Zoom Room account settings
 * `update_zr_acc_profile` - Update Zoom Room account profile
 * `update_zoom_room_acc_settings` - Update Zoom Room account settings
 
-### Rooms Devices
+### rooms_devices
 
 * `change_zoom_rooms_app_version` - Change Zoom Rooms' app version
 
-### Rooms Location
+### rooms_location
 
 * `add_azr_location` - Add a location
 * `change_parent_location` - Change the assigned parent location
@@ -417,7 +415,7 @@ if res.account_200_application_json_object is not None:
 * `update_zr_location_settings` - Update location settings
 * `update_zoom_rooms_location_structure` - Update Zoom Rooms location structure
 
-### SIP Connected Audio
+### sip_connected_audio
 
 * `add_callout_countries` - Add internal call-out countries
 * `add_internal_numbers` - Add internal numbers
@@ -433,14 +431,14 @@ if res.account_200_application_json_object is not None:
 * `list_sip_trunks` - List SIP trunks
 * `list_sip_trunk_numbers` - List SIP trunk numbers
 
-### SIP Phone
+### sip_phone
 
 * `create_sip_phone` - Enable SIP phone
 * `delete_sip_phone` - Delete SIP phone
 * `list_sip_phones` - List SIP phones
 * `update_sip_phone` - Update SIP phone
 
-### TSP
+### tsp
 
 * `tsp` - Get account's TSP information
 * `tsp_update` - Update account's TSP information
@@ -451,7 +449,7 @@ if res.account_200_application_json_object is not None:
 * `user_tsp_update` - Update a TSP account
 * `user_ts_ps` - List user's TSP accounts
 
-### TrackingField
+### tracking_field
 
 * `trackingfield_create` - Create a tracking field
 * `trackingfield_delete` - Delete a tracking field
@@ -459,7 +457,7 @@ if res.account_200_application_json_object is not None:
 * `trackingfield_list` - List tracking fields
 * `trackingfield_update` - Update a tracking field
 
-### Users
+### users
 
 * `del_user_vb` - Delete virtual background files
 * `switch_user_account` - Switch a user's account
@@ -490,7 +488,7 @@ if res.account_200_application_json_object is not None:
 * `user_zak` - Get user's ZAK
 * `users` - List users
 
-### Webinars
+### webinars
 
 * `add_batch_webinar_registrants` - Perform batch registration
 * `delete_webinar_registrant` - Delete a webinar registrant
@@ -520,9 +518,20 @@ if res.account_200_application_json_object is not None:
 * `webinar_registrants` - List webinar registrants
 * `webinar_registrants_questions_get` - List registration questions
 * `webinar_status` - Update webinar status
-* `webinar_update` - Update a webinar
+* `webinar_update_json` - Update a webinar
+* `webinar_update_multipart` - Update a webinar
 * `webinars` - List webinars
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

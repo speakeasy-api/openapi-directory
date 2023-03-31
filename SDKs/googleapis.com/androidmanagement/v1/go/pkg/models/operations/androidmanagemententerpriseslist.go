@@ -10,8 +10,8 @@ import (
 )
 
 type AndroidmanagementEnterprisesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AndroidmanagementEnterprisesListViewEnum - Specifies which Enterprise fields to return. This method only supports BASIC.
@@ -38,7 +38,7 @@ func (e *AndroidmanagementEnterprisesListViewEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type AndroidmanagementEnterprisesListQueryParams struct {
+type AndroidmanagementEnterprisesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,11 +69,6 @@ type AndroidmanagementEnterprisesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which Enterprise fields to return. This method only supports BASIC.
 	View *AndroidmanagementEnterprisesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type AndroidmanagementEnterprisesListRequest struct {
-	QueryParams AndroidmanagementEnterprisesListQueryParams
-	Security    AndroidmanagementEnterprisesListSecurity
 }
 
 type AndroidmanagementEnterprisesListResponse struct {

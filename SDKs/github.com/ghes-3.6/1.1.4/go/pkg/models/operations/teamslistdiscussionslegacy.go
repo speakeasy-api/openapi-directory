@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListDiscussionsLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsListDiscussionsLegacyQueryParams struct {
+type TeamsListDiscussionsLegacyRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListDiscussionsLegacyRequest struct {
-	PathParams  TeamsListDiscussionsLegacyPathParams
-	QueryParams TeamsListDiscussionsLegacyQueryParams
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsListDiscussionsLegacyResponse struct {

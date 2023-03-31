@@ -36,7 +36,6 @@ pkg/models/shared/primaryadmin.go
 pkg/models/shared/address.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/resellernotifygetwatchdetailsresponse.go
 pkg/models/shared/resellernotifyresource.go
 pkg/models/shared/subscription.go

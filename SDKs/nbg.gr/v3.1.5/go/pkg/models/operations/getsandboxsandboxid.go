@@ -8,18 +8,13 @@ import (
 )
 
 type GetSandboxSandboxIDSecurity struct {
-	AuthorizationCodeToken shared.SchemeAuthorizationCodeToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetSandboxSandboxIDPathParams struct {
-	// Sandbox Id
-	SandboxID string `pathParam:"style=simple,explode=false,name=sandboxId"`
+	AuthorizationCodeToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
 type GetSandboxSandboxIDRequest struct {
-	PathParams GetSandboxSandboxIDPathParams
-	Security   GetSandboxSandboxIDSecurity
+	// Sandbox Id
+	SandboxID string `pathParam:"style=simple,explode=false,name=sandboxId"`
 }
 
 type GetSandboxSandboxIDResponse struct {

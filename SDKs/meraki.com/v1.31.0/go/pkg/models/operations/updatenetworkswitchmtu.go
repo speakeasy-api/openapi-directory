@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchMtuPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSwitchMtuRequestBodyOverrides struct {
 	// MTU size for the switches or switch profiles.
 	MtuSize int64 `json:"mtuSize"`
@@ -27,8 +23,8 @@ type UpdateNetworkSwitchMtuRequestBody struct {
 }
 
 type UpdateNetworkSwitchMtuRequest struct {
-	PathParams UpdateNetworkSwitchMtuPathParams
-	Request    *UpdateNetworkSwitchMtuRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchMtuRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchMtuResponse struct {

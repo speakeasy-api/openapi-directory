@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetareacodefromnumberQueryParams struct {
+type GetareacodefromnumberRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Telephone number to retrieve area code information
 	Number string `queryParam:"style=form,explode=true,name=number"`
-}
-
-type GetareacodefromnumberRequest struct {
-	QueryParams GetareacodefromnumberQueryParams
 }
 
 // Getareacodefromnumber200ApplicationJSON - Telephone number area code information

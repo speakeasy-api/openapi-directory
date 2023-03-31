@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSchedulesScheduleAByStateTotalsQueryParams struct {
+type GetSchedulesScheduleAByStateTotalsRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -53,10 +53,6 @@ type GetSchedulesScheduleAByStateTotalsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// US state or territory
 	State []string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetSchedulesScheduleAByStateTotalsRequest struct {
-	QueryParams GetSchedulesScheduleAByStateTotalsQueryParams
 }
 
 type GetSchedulesScheduleAByStateTotalsResponse struct {

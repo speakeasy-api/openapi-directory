@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuoteForDocumentPathParams struct {
+type GetQuoteForDocumentRequest struct {
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetQuoteForDocumentRequest struct {
-	PathParams GetQuoteForDocumentPathParams
 }
 
 type GetQuoteForDocumentResponse struct {

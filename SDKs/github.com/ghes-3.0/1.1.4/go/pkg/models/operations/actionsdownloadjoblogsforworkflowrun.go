@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDownloadJobLogsForWorkflowRunPathParams struct {
+type ActionsDownloadJobLogsForWorkflowRunRequest struct {
 	// job_id parameter
 	JobID int64  `pathParam:"style=simple,explode=false,name=job_id"`
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsDownloadJobLogsForWorkflowRunRequest struct {
-	PathParams ActionsDownloadJobLogsForWorkflowRunPathParams
 }
 
 type ActionsDownloadJobLogsForWorkflowRunResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type SetthermpointSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SetthermpointSetpointModeEnum - Chosen setpoint_mode
@@ -50,7 +50,7 @@ func (e *SetthermpointSetpointModeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SetthermpointQueryParams struct {
+type SetthermpointRequest struct {
 	// The relay id
 	DeviceID string `queryParam:"style=form,explode=true,name=device_id"`
 	// The thermostat id
@@ -61,11 +61,6 @@ type SetthermpointQueryParams struct {
 	SetpointMode SetthermpointSetpointModeEnum `queryParam:"style=form,explode=true,name=setpoint_mode"`
 	// When using the manual setpoint_mode, this parameter defines the temperature setpoint (in Celcius) to use.
 	SetpointTemp *float32 `queryParam:"style=form,explode=true,name=setpoint_temp"`
-}
-
-type SetthermpointRequest struct {
-	QueryParams SetthermpointQueryParams
-	Security    SetthermpointSecurity
 }
 
 type SetthermpointResponse struct {

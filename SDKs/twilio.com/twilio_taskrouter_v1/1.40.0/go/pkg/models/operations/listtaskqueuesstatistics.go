@@ -13,15 +13,11 @@ var ListTaskQueuesStatisticsServerList = []string{
 }
 
 type ListTaskQueuesStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTaskQueuesStatisticsPathParams struct {
-	// The SID of the Workspace with the TaskQueues to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListTaskQueuesStatisticsQueryParams struct {
+type ListTaskQueuesStatisticsRequest struct {
 	// Only calculate statistics from this date and time and earlier, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// The `friendly_name` of the TaskQueue statistics to read.
@@ -40,13 +36,8 @@ type ListTaskQueuesStatisticsQueryParams struct {
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
 	// Only calculate statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
 	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
-}
-
-type ListTaskQueuesStatisticsRequest struct {
-	PathParams  ListTaskQueuesStatisticsPathParams
-	QueryParams ListTaskQueuesStatisticsQueryParams
-	Security    ListTaskQueuesStatisticsSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the TaskQueues to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListTaskQueuesStatisticsListTaskQueuesStatisticsResponseMeta struct {

@@ -3,34 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CompleteAttachmentUploadRequest(
-    headers=operations.CompleteAttachmentUploadHeaders(
-        x_amz_algorithm="earum",
-        x_amz_bearer="quas",
-        x_amz_content_sha256="repellendus",
-        x_amz_credential="ut",
-        x_amz_date="voluptas",
-        x_amz_security_token="quisquam",
-        x_amz_signature="qui",
-        x_amz_signed_headers="voluptas",
-    ),
-    request=operations.CompleteAttachmentUploadRequestBody(
+    request_body=operations.CompleteAttachmentUploadRequestBody(
         attachment_ids=[
-            "deleniti",
-            "totam",
-            "nemo",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
-        client_token="eligendi",
+        client_token="unde",
     ),
+    x_amz_algorithm="nulla",
+    x_amz_bearer="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
 )
     
 res = s.complete_attachment_upload(req)

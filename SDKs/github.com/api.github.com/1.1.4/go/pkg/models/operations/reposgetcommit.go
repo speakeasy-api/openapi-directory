@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetCommitPathParams struct {
+type ReposGetCommitRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// ref parameter
-	Ref string `pathParam:"style=simple,explode=false,name=ref"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetCommitQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposGetCommitRequest struct {
-	PathParams  ReposGetCommitPathParams
-	QueryParams ReposGetCommitQueryParams
+	// ref parameter
+	Ref string `pathParam:"style=simple,explode=false,name=ref"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposGetCommit503ApplicationJSON - Service unavailable

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeletePaymentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type DeletePaymentPolicyPathParams struct {
-	// This path parameter specifies the ID of the payment policy you want to delete.
-	PaymentPolicyID string `pathParam:"style=simple,explode=false,name=payment_policy_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeletePaymentPolicyRequest struct {
-	PathParams DeletePaymentPolicyPathParams
-	Security   DeletePaymentPolicySecurity
+	// This path parameter specifies the ID of the payment policy you want to delete.
+	PaymentPolicyID string `pathParam:"style=simple,explode=false,name=payment_policy_id"`
 }
 
 type DeletePaymentPolicyResponse struct {

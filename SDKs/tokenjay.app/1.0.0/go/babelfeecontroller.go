@@ -120,7 +120,7 @@ func (s *babelFeeController) CheckForNotifications(ctx context.Context) (*operat
 }
 func (s *babelFeeController) ErgoPayCreateBabelBox1(ctx context.Context, request operations.ErgoPayCreateBabelBox1Request) (*operations.ErgoPayCreateBabelBox1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cancelbabel/{boxId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cancelbabel/{boxId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

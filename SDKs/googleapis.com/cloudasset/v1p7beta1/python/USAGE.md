@@ -4,35 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudassetOperationsGetRequest(
-    security=operations.CloudassetOperationsGetSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.CloudassetOperationsGetPathParams(
-        name="aut",
-    ),
-    query_params=operations.CloudassetOperationsGetQueryParams(
-        dollar_xgafv="2",
-        access_token="qui",
-        alt="proto",
-        callback="sed",
-        fields="aut",
-        key="ea",
-        oauth_token="non",
-        pretty_print=False,
-        quota_user="et",
-        upload_type="et",
-        upload_protocol="quod",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.operations.cloudasset_operations_get(req)
+res = s.operations.cloudasset_operations_get(req, operations.CloudassetOperationsGetSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

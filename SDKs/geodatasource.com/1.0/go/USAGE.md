@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.GetCityRequest{
-        QueryParams: operations.GetCityQueryParams{
-            Format: "xml",
-            Key: "provident",
-            Lat: 7151.9,
-            Lng: 8442.66,
-        },
+        Format: "xml",
+        Key: "provident",
+        Lat: 7151.9,
+        Lng: 8442.66,
     }
 
     ctx := context.Background()

@@ -10,13 +10,8 @@ import (
 )
 
 type OsconfigProjectsLocationsInstancesInventoriesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type OsconfigProjectsLocationsInstancesInventoriesListPathParams struct {
-	// Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-` For `{project}`, either `project-number` or `project-id` can be provided.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // OsconfigProjectsLocationsInstancesInventoriesListViewEnum - Inventory view indicating what information should be included in the inventory resource. If unspecified, the default view is BASIC.
@@ -46,7 +41,7 @@ func (e *OsconfigProjectsLocationsInstancesInventoriesListViewEnum) UnmarshalJSO
 	}
 }
 
-type OsconfigProjectsLocationsInstancesInventoriesListQueryParams struct {
+type OsconfigProjectsLocationsInstancesInventoriesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,6 +62,8 @@ type OsconfigProjectsLocationsInstancesInventoriesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A pagination token returned from a previous call to `ListInventories` that indicates where this listing should continue from.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-` For `{project}`, either `project-number` or `project-id` can be provided.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -77,12 +74,6 @@ type OsconfigProjectsLocationsInstancesInventoriesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Inventory view indicating what information should be included in the inventory resource. If unspecified, the default view is BASIC.
 	View *OsconfigProjectsLocationsInstancesInventoriesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type OsconfigProjectsLocationsInstancesInventoriesListRequest struct {
-	PathParams  OsconfigProjectsLocationsInstancesInventoriesListPathParams
-	QueryParams OsconfigProjectsLocationsInstancesInventoriesListQueryParams
-	Security    OsconfigProjectsLocationsInstancesInventoriesListSecurity
 }
 
 type OsconfigProjectsLocationsInstancesInventoriesListResponse struct {

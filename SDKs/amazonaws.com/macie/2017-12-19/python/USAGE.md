@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateMemberAccountRequest(
-    headers=operations.AssociateMemberAccountHeaders(
-        x_amz_algorithm="qui",
-        x_amz_content_sha256="harum",
-        x_amz_credential="fuga",
-        x_amz_date="facilis",
-        x_amz_security_token="blanditiis",
-        x_amz_signature="dicta",
-        x_amz_signed_headers="ea",
-        x_amz_target="MacieService.AssociateMemberAccount",
+    associate_member_account_request=shared.AssociateMemberAccountRequest(
+        member_account_id="corrupti",
     ),
-    request=shared.AssociateMemberAccountRequest(
-        member_account_id="non",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="MacieService.AssociateMemberAccount",
 )
     
 res = s.associate_member_account(req)

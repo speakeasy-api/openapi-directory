@@ -8,13 +8,13 @@ import (
 )
 
 type CloudidentityGroupsMembershipsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsCreateSecurity struct {
@@ -22,14 +22,10 @@ type CloudidentityGroupsMembershipsCreateSecurity struct {
 	Option2 *CloudidentityGroupsMembershipsCreateSecurityOption2 `security:"option"`
 }
 
-type CloudidentityGroupsMembershipsCreatePathParams struct {
-	// Required. The parent `Group` resource under which to create the `Membership`. Must be of the form `groups/{group}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityGroupsMembershipsCreateQueryParams struct {
+type CloudidentityGroupsMembershipsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv     *shared.XgafvEnum       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	MembershipInput *shared.MembershipInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type CloudidentityGroupsMembershipsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent `Group` resource under which to create the `Membership`. Must be of the form `groups/{group}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type CloudidentityGroupsMembershipsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityGroupsMembershipsCreateRequest struct {
-	PathParams  CloudidentityGroupsMembershipsCreatePathParams
-	QueryParams CloudidentityGroupsMembershipsCreateQueryParams
-	Request     *shared.MembershipInput `request:"mediaType=application/json"`
-	Security    CloudidentityGroupsMembershipsCreateSecurity
 }
 
 type CloudidentityGroupsMembershipsCreateResponse struct {

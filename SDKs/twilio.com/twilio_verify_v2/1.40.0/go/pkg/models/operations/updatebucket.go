@@ -12,16 +12,8 @@ var UpdateBucketServerList = []string{
 }
 
 type UpdateBucketSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateBucketPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Rate Limit resource.
-	RateLimitSid string `pathParam:"style=simple,explode=false,name=RateLimitSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// A 34 character string that uniquely identifies this Bucket.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateBucketUpdateBucketRequest struct {
@@ -32,10 +24,13 @@ type UpdateBucketUpdateBucketRequest struct {
 }
 
 type UpdateBucketRequest struct {
-	PathParams UpdateBucketPathParams
-	Request    *UpdateBucketUpdateBucketRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateBucketSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the Rate Limit resource.
+	RateLimitSid string                           `pathParam:"style=simple,explode=false,name=RateLimitSid"`
+	RequestBody  *UpdateBucketUpdateBucketRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// A 34 character string that uniquely identifies this Bucket.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateBucketResponse struct {

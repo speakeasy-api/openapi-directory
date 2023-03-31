@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IndividualSubscriptionGETPathParams struct {
+type IndividualSubscriptionGETRequest struct {
 	// Identifier of an individual subscription to notifications about application package changes
 	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type IndividualSubscriptionGETRequest struct {
-	PathParams IndividualSubscriptionGETPathParams
 }
 
 type IndividualSubscriptionGETResponse struct {

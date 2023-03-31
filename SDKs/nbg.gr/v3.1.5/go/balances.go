@@ -33,18 +33,18 @@ func newBalances(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetAccountsAccountIDBalances - Get Balances
 // Get Balances by Account ID
-func (s *balances) GetAccountsAccountIDBalances(ctx context.Context, request operations.GetAccountsAccountIDBalancesRequest) (*operations.GetAccountsAccountIDBalancesResponse, error) {
+func (s *balances) GetAccountsAccountIDBalances(ctx context.Context, request operations.GetAccountsAccountIDBalancesRequest, security operations.GetAccountsAccountIDBalancesSecurity) (*operations.GetAccountsAccountIDBalancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/balances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/balances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

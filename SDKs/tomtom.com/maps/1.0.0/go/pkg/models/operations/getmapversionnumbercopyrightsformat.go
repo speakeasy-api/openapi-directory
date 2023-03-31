@@ -56,21 +56,13 @@ func (e *GetMapVersionNumberCopyrightsFormatVersionNumberEnum) UnmarshalJSON(dat
 	}
 }
 
-type GetMapVersionNumberCopyrightsFormatPathParams struct {
+type GetMapVersionNumberCopyrightsFormatRequest struct {
+	// Specifies the jsonp callback method. Only used when format is jsonp
+	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Format of the response
 	Format GetMapVersionNumberCopyrightsFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Version of the service to call. The current version is 1
 	VersionNumber GetMapVersionNumberCopyrightsFormatVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetMapVersionNumberCopyrightsFormatQueryParams struct {
-	// Specifies the jsonp callback method. Only used when format is jsonp
-	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-}
-
-type GetMapVersionNumberCopyrightsFormatRequest struct {
-	PathParams  GetMapVersionNumberCopyrightsFormatPathParams
-	QueryParams GetMapVersionNumberCopyrightsFormatQueryParams
 }
 
 type GetMapVersionNumberCopyrightsFormatResponse struct {

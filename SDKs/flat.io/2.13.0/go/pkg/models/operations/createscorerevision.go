@@ -8,19 +8,14 @@ import (
 )
 
 type CreateScoreRevisionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateScoreRevisionPathParams struct {
-	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
-	//
-	Score string `pathParam:"style=simple,explode=false,name=score"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateScoreRevisionRequest struct {
-	PathParams CreateScoreRevisionPathParams
-	Request    shared.ScoreRevisionCreation `request:"mediaType=application/json"`
-	Security   CreateScoreRevisionSecurity
+	ScoreRevisionCreation shared.ScoreRevisionCreation `request:"mediaType=application/json"`
+	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+	//
+	Score string `pathParam:"style=simple,explode=false,name=score"`
 }
 
 type CreateScoreRevisionResponse struct {

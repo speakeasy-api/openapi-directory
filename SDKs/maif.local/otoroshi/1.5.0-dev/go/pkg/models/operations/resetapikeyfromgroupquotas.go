@@ -8,19 +8,15 @@ import (
 )
 
 type ResetAPIKeyFromGroupQuotasSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ResetAPIKeyFromGroupQuotasPathParams struct {
+type ResetAPIKeyFromGroupQuotasRequest struct {
 	// the api key id
 	ClientID string `pathParam:"style=simple,explode=false,name=clientId"`
 	// The api key group id
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type ResetAPIKeyFromGroupQuotasRequest struct {
-	PathParams ResetAPIKeyFromGroupQuotasPathParams
-	Security   ResetAPIKeyFromGroupQuotasSecurity
 }
 
 type ResetAPIKeyFromGroupQuotasResponse struct {

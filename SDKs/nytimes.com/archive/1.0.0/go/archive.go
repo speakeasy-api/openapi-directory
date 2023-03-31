@@ -34,7 +34,7 @@ func newArchive(defaultClient, securityClient HTTPClient, serverURL, language, s
 // The Archive API provides lists of NYT articles by month going back to 1851.  Simply pass in the year and month you want and it returns a JSON object with all articles for that month.
 func (s *archive) GetYearMonthJSON(ctx context.Context, request operations.GetYearMonthJSONRequest) (*operations.GetYearMonthJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{year}/{month}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{year}/{month}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

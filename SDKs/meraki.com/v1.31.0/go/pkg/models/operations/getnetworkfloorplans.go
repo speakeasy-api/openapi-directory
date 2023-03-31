@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkFloorPlansPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkFloorPlansRequest struct {
-	PathParams GetNetworkFloorPlansPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkFloorPlansResponse struct {

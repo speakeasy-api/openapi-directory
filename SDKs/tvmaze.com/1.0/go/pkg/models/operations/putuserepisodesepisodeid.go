@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUserEpisodesEpisodeIDPathParams struct {
-	EpisodeID int64 `pathParam:"style=simple,explode=false,name=episode_id"`
-}
-
 type PutUserEpisodesEpisodeIDRequest struct {
-	PathParams PutUserEpisodesEpisodeIDPathParams
-	Request    *shared.MarkedEpisodeInput `request:"mediaType=application/json"`
+	MarkedEpisodeInput *shared.MarkedEpisodeInput `request:"mediaType=application/json"`
+	EpisodeID          int64                      `pathParam:"style=simple,explode=false,name=episode_id"`
 }
 
 type PutUserEpisodesEpisodeIDResponse struct {

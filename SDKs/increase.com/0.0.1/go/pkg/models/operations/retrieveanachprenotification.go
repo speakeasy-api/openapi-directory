@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnAchPrenotificationPathParams struct {
-	AchPrenotificationID string `pathParam:"style=simple,explode=false,name=ach_prenotification_id"`
-}
-
 type RetrieveAnAchPrenotificationRequest struct {
-	PathParams RetrieveAnAchPrenotificationPathParams
+	AchPrenotificationID string `pathParam:"style=simple,explode=false,name=ach_prenotification_id"`
 }
 
 type RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum string

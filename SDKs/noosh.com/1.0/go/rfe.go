@@ -36,7 +36,7 @@ func newRfe(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Get a specific Rfe
 func (s *rfe) GetRfe(ctx context.Context, request operations.GetRfeRequest) (*operations.GetRfeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes/{rfe_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes/{rfe_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *rfe) GetRfe(ctx context.Context, request operations.GetRfeRequest) (*op
 // List the RFES
 func (s *rfe) GetRfeList(ctx context.Context, request operations.GetRfeListRequest) (*operations.GetRfeListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,9 +346,9 @@ func (s *rfe) GetRfeList(ctx context.Context, request operations.GetRfeListReque
 // Create a RFE
 func (s *rfe) PostRfeJSON(ctx context.Context, request operations.PostRfeJSONRequest) (*operations.PostRfeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RfePO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,9 +508,9 @@ func (s *rfe) PostRfeJSON(ctx context.Context, request operations.PostRfeJSONReq
 // Create a RFE
 func (s *rfe) PostRfeRaw(ctx context.Context, request operations.PostRfeRawRequest) (*operations.PostRfeRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

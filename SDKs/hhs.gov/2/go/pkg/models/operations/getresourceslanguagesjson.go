@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesLanguagesJSONQueryParams struct {
+type GetResourcesLanguagesJSONRequest struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// Return records starting at the offset index.
 	Offset *int `queryParam:"style=form,explode=false,name=offset"`
 	// The name of the property to which sorting will be applied
 	Sort *string `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetResourcesLanguagesJSONRequest struct {
-	QueryParams GetResourcesLanguagesJSONQueryParams
 }
 
 type GetResourcesLanguagesJSONResponse struct {

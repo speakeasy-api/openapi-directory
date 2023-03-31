@@ -44,7 +44,7 @@ func (s *browser) BrowseCSV(ctx context.Context, request operations.BrowseCSVReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,7 +93,7 @@ func (s *browser) BrowseJSON(ctx context.Context, request operations.BrowseJSONR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -135,9 +135,9 @@ func (s *browser) BrowseJSON(ctx context.Context, request operations.BrowseJSONR
 // Creates view for given class.
 func (s *browser) Create(ctx context.Context, request operations.CreateRequest) (*operations.CreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/for/{className}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/for/{className}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ViewDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *browser) Create(ctx context.Context, request operations.CreateRequest) 
 // Removes a view. No content is returned upon success (204).
 func (s *browser) Delete(ctx context.Context, request operations.DeleteRequest) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *browser) Delete(ctx context.Context, request operations.DeleteRequest) 
 // Deletes a single column from view.
 func (s *browser) DeleteColumn(ctx context.Context, request operations.DeleteColumnRequest) (*operations.DeleteColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns/{columnName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns/{columnName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *browser) DeleteColumn(ctx context.Context, request operations.DeleteCol
 // Returns all view's information (ie. name, columns, filters, etc).
 func (s *browser) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +316,7 @@ func (s *browser) Get(ctx context.Context, request operations.GetRequest) (*oper
 // Returns column's specific settings. For example when column describes money amount we can decide whether it should display currency or not.
 func (s *browser) GetColumnSettings(ctx context.Context, request operations.GetColumnSettingsRequest) (*operations.GetColumnSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns/{columnName}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns/{columnName}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -361,7 +361,7 @@ func (s *browser) GetColumnSettings(ctx context.Context, request operations.GetC
 // Returns columns defined in view.
 func (s *browser) GetColumns(ctx context.Context, request operations.GetColumnsRequest) (*operations.GetColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -406,14 +406,14 @@ func (s *browser) GetColumns(ctx context.Context, request operations.GetColumnsR
 // Returns current view's detailed information, suitable for browser.
 func (s *browser) GetCurrentViewDetails(ctx context.Context, request operations.GetCurrentViewDetailsRequest) (*operations.GetCurrentViewDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/details/for/{className}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/details/for/{className}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -455,7 +455,7 @@ func (s *browser) GetCurrentViewDetails(ctx context.Context, request operations.
 // Returns view's filter.
 func (s *browser) GetFilter(ctx context.Context, request operations.GetFilterRequest) (*operations.GetFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/filter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/filter", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -500,7 +500,7 @@ func (s *browser) GetFilter(ctx context.Context, request operations.GetFilterReq
 // Returns view's local settings (for current user).
 func (s *browser) GetLocalSettings(ctx context.Context, request operations.GetLocalSettingsRequest) (*operations.GetLocalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings/local", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings/local", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -545,7 +545,7 @@ func (s *browser) GetLocalSettings(ctx context.Context, request operations.GetLo
 // Returns view's order settings.
 func (s *browser) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/order", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +590,7 @@ func (s *browser) GetOrder(ctx context.Context, request operations.GetOrderReque
 // Returns view's permissions.
 func (s *browser) GetPermissions(ctx context.Context, request operations.GetPermissionsRequest) (*operations.GetPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -635,7 +635,7 @@ func (s *browser) GetPermissions(ctx context.Context, request operations.GetPerm
 // Returns view's settings (ie. name).
 func (s *browser) GetSettings(ctx context.Context, request operations.GetSettingsRequest) (*operations.GetSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -680,14 +680,14 @@ func (s *browser) GetSettings(ctx context.Context, request operations.GetSetting
 // Returns view's detailed information, suitable for browser.
 func (s *browser) GetViewDetails(ctx context.Context, request operations.GetViewDetailsRequest) (*operations.GetViewDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/details/for/{className}/{viewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/details/for/{className}/{viewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -729,14 +729,14 @@ func (s *browser) GetViewDetails(ctx context.Context, request operations.GetView
 // Returns views' brief.
 func (s *browser) GetViewsBrief(ctx context.Context, request operations.GetViewsBriefRequest) (*operations.GetViewsBriefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/for/{className}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/for/{className}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -778,14 +778,14 @@ func (s *browser) GetViewsBrief(ctx context.Context, request operations.GetViews
 // Selects given view as current and returns its detailed information, suitable for browser.
 func (s *browser) SelectViewAndGetItsDetails(ctx context.Context, request operations.SelectViewAndGetItsDetailsRequest) (*operations.SelectViewAndGetItsDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/details/for/{className}/{viewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/details/for/{className}/{viewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -827,9 +827,9 @@ func (s *browser) SelectViewAndGetItsDetails(ctx context.Context, request operat
 // Updates all view's information (ie. name, columns, filters, etc).
 func (s *browser) Update(ctx context.Context, request operations.UpdateRequest) (*operations.UpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ViewDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -882,9 +882,9 @@ func (s *browser) Update(ctx context.Context, request operations.UpdateRequest) 
 // Updates column's specific settings. For example when column describes money amount we can decide whether it should display currency or not.
 func (s *browser) UpdateColumnSettings(ctx context.Context, request operations.UpdateColumnSettingsRequest) (*operations.UpdateColumnSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns/{columnName}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns/{columnName}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -937,9 +937,9 @@ func (s *browser) UpdateColumnSettings(ctx context.Context, request operations.U
 // Updates columns in view.
 func (s *browser) UpdateColumns(ctx context.Context, request operations.UpdateColumnsRequest) (*operations.UpdateColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/columns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -992,9 +992,9 @@ func (s *browser) UpdateColumns(ctx context.Context, request operations.UpdateCo
 // Updates view's filter.
 func (s *browser) UpdateFilter(ctx context.Context, request operations.UpdateFilterRequest) (*operations.UpdateFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/filter", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/filter", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1047,9 +1047,9 @@ func (s *browser) UpdateFilter(ctx context.Context, request operations.UpdateFil
 // Updates view's filter property.
 func (s *browser) UpdateFilterProperty(ctx context.Context, request operations.UpdateFilterPropertyRequest) (*operations.UpdateFilterPropertyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/filter/{filterProperty}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/filter/{filterProperty}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilterPropertyDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1102,9 +1102,9 @@ func (s *browser) UpdateFilterProperty(ctx context.Context, request operations.U
 // Updates view's local settings (for current user).
 func (s *browser) UpdateLocalSettings(ctx context.Context, request operations.UpdateLocalSettingsRequest) (*operations.UpdateLocalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings/local", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings/local", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocalSettingsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1157,9 +1157,9 @@ func (s *browser) UpdateLocalSettings(ctx context.Context, request operations.Up
 // Updates view's order settings.
 func (s *browser) UpdateOrder(ctx context.Context, request operations.UpdateOrderRequest) (*operations.UpdateOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/order", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1212,9 +1212,9 @@ func (s *browser) UpdateOrder(ctx context.Context, request operations.UpdateOrde
 // Updates view's permissions.
 func (s *browser) UpdatePermissions(ctx context.Context, request operations.UpdatePermissionsRequest) (*operations.UpdatePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PermissionsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1267,9 +1267,9 @@ func (s *browser) UpdatePermissions(ctx context.Context, request operations.Upda
 // Updates view's settings.
 func (s *browser) UpdateSettings(ctx context.Context, request operations.UpdateSettingsRequest) (*operations.UpdateSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/browser/views/{viewId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SettingsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

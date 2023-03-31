@@ -1,0 +1,98 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/twilio.com/twilio_ip_messaging_v1/1.40.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.CreateChannelRequest(
+    request_body=operations.CreateChannelCreateChannelRequest(
+        attributes="corrupti",
+        friendly_name="provident",
+        type="private",
+        unique_name="quibusdam",
+    ),
+    service_sid="unde",
+)
+    
+res = s.create_channel(req, operations.CreateChannelSecurity(
+    password="YOUR_PASSWORD_HERE",
+    username="YOUR_USERNAME_HERE",
+))
+
+if res.ip_messaging_v1_service_channel is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `create_channel`
+* `create_credential`
+* `create_invite`
+* `create_member`
+* `create_message`
+* `create_role`
+* `create_service`
+* `create_user`
+* `delete_channel`
+* `delete_credential`
+* `delete_invite`
+* `delete_member`
+* `delete_message`
+* `delete_role`
+* `delete_service`
+* `delete_user`
+* `fetch_channel`
+* `fetch_credential`
+* `fetch_invite`
+* `fetch_member`
+* `fetch_message`
+* `fetch_role`
+* `fetch_service`
+* `fetch_user`
+* `list_channel`
+* `list_credential`
+* `list_invite`
+* `list_member`
+* `list_message`
+* `list_role`
+* `list_service`
+* `list_user`
+* `list_user_channel`
+* `update_channel`
+* `update_credential`
+* `update_member`
+* `update_message`
+* `update_role`
+* `update_service`
+* `update_user`
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

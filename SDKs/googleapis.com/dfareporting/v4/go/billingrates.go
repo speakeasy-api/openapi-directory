@@ -32,20 +32,20 @@ func newBillingRates(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DfareportingBillingRatesList - Retrieves a list of billing rates. This method supports paging.
-func (s *billingRates) DfareportingBillingRatesList(ctx context.Context, request operations.DfareportingBillingRatesListRequest) (*operations.DfareportingBillingRatesListResponse, error) {
+func (s *billingRates) DfareportingBillingRatesList(ctx context.Context, request operations.DfareportingBillingRatesListRequest, security operations.DfareportingBillingRatesListSecurity) (*operations.DfareportingBillingRatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCustomerPathParams struct {
+type GetCustomerRequest struct {
 	// Account ID of customer
 	Account int64 `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type GetCustomerRequest struct {
-	PathParams GetCustomerPathParams
 }
 
 // GetCustomer200ApplicationJSON - Found

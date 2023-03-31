@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsPaymentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsPaymentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsPaymentsListSecurity struct {
@@ -22,12 +22,9 @@ type AdsenseAccountsPaymentsListSecurity struct {
 	Option2 *AdsenseAccountsPaymentsListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsPaymentsListPathParams struct {
+type AdsenseAccountsPaymentsListRequest struct {
 	// Account for which to retrieve the payments.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AdsenseAccountsPaymentsListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -42,12 +39,6 @@ type AdsenseAccountsPaymentsListQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsPaymentsListRequest struct {
-	PathParams  AdsenseAccountsPaymentsListPathParams
-	QueryParams AdsenseAccountsPaymentsListQueryParams
-	Security    AdsenseAccountsPaymentsListSecurity
 }
 
 type AdsenseAccountsPaymentsListResponse struct {

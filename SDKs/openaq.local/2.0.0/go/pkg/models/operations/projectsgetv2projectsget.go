@@ -66,7 +66,7 @@ func (e *ProjectsGetV2ProjectsGetSortSortEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ProjectsGetV2ProjectsGetQueryParams struct {
+type ProjectsGetV2ProjectsGetRequest struct {
 	//         Limit results by a certain country using two letter country code.
 	//         (ex. ?country=US or ?country=US&country=MX)
 	//
@@ -94,10 +94,6 @@ type ProjectsGetV2ProjectsGetQueryParams struct {
 	Sort       *ProjectsGetV2ProjectsGetSortSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	SourceName []string                              `queryParam:"style=form,explode=true,name=sourceName"`
 	Unit       []string                              `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type ProjectsGetV2ProjectsGetRequest struct {
-	QueryParams ProjectsGetV2ProjectsGetQueryParams
 }
 
 type ProjectsGetV2ProjectsGetResponse struct {

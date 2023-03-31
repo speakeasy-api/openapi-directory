@@ -78,7 +78,6 @@ pkg/models/operations/booksvolumesuseruploadedlist.go
 pkg/models/shared/bookshelf.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/bookshelves.go
 pkg/models/shared/volumes.go
 pkg/models/shared/volume.go

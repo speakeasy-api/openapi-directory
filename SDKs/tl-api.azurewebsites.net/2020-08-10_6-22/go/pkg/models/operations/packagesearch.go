@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageSearchQueryParams struct {
+type PackageSearchRequest struct {
 	// active status active : 1, inactive : 2, all 3, deafult : 1
 	ActiveStatus *int `queryParam:"style=form,explode=true,name=activeStatus"`
 	// Packge Category Id
@@ -30,10 +30,6 @@ type PackageSearchQueryParams struct {
 	StartpPrice *float64 `queryParam:"style=form,explode=true,name=startpPrice"`
 	// filter package type.!-- default is 'all'
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type PackageSearchRequest struct {
-	QueryParams PackageSearchQueryParams
 }
 
 type PackageSearchResponse struct {

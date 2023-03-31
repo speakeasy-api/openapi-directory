@@ -11,10 +11,6 @@ var GetV05HeartbeatServerList = []string{
 	"https://dev.ndhm.gov.in/hiu",
 }
 
-type GetV05HeartbeatRequest struct {
-	ServerURL *string
-}
-
 type GetV05HeartbeatResponse struct {
 	Body        []byte
 	ContentType string

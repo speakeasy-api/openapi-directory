@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRequest(
-    query_params=operations.GetQueryParams(
-        format="xml",
-        ip="fuga",
-        key="repudiandae",
-        package="quisquam",
-    ),
+    format="xml",
+    ip="provident",
+    key="distinctio",
+    package="quibusdam",
 )
     
 res = s.get_(req)

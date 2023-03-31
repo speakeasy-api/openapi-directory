@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostConsumerV1AppointmentsQueryParams struct {
+type PostConsumerV1AppointmentsRequest struct {
+	AppointmentInitialModel *shared.AppointmentInitialModel `request:"mediaType=application/json"`
 	// Options are "BK", "RS" or "IN"
 	CompleteBooking *string `queryParam:"style=form,explode=true,name=completeBooking"`
-}
-
-type PostConsumerV1AppointmentsRequest struct {
-	QueryParams PostConsumerV1AppointmentsQueryParams
-	Request     *shared.AppointmentInitialModel `request:"mediaType=application/json"`
 }
 
 type PostConsumerV1AppointmentsResponse struct {

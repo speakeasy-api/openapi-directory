@@ -10,23 +10,18 @@ import (
 )
 
 type StorageBucketsUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsUpdateSecurity struct {
 	Option1 *StorageBucketsUpdateSecurityOption1 `security:"option"`
 	Option2 *StorageBucketsUpdateSecurityOption2 `security:"option"`
-}
-
-type StorageBucketsUpdatePathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 }
 
 // StorageBucketsUpdateProjectionEnum - Set of properties to return. Defaults to full.
@@ -53,9 +48,12 @@ func (e *StorageBucketsUpdateProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageBucketsUpdateQueryParams struct {
+type StorageBucketsUpdateRequest struct {
+	Bucket1 *shared.Bucket `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	BucketPathParameter string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the return of the bucket metadata conditional on whether the bucket's current metageneration matches the given value.
@@ -74,13 +72,6 @@ type StorageBucketsUpdateQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageBucketsUpdateRequest struct {
-	PathParams  StorageBucketsUpdatePathParams
-	QueryParams StorageBucketsUpdateQueryParams
-	Request     *shared.Bucket `request:"mediaType=application/json"`
-	Security    StorageBucketsUpdateSecurity
 }
 
 type StorageBucketsUpdateResponse struct {

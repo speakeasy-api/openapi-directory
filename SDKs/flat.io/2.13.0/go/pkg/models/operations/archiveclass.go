@@ -8,17 +8,12 @@ import (
 )
 
 type ArchiveClassSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type ArchiveClassPathParams struct {
-	// Unique identifier of the class
-	Class string `pathParam:"style=simple,explode=false,name=class"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ArchiveClassRequest struct {
-	PathParams ArchiveClassPathParams
-	Security   ArchiveClassSecurity
+	// Unique identifier of the class
+	Class string `pathParam:"style=simple,explode=false,name=class"`
 }
 
 type ArchiveClassResponse struct {

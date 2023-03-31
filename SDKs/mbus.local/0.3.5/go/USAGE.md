@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        PathParams: operations.GetPathParams{
-            Address: "48",
-            Baudrate: "2400",
-            Device: "ttyAMA0",
-        },
+        Address: "48",
+        Baudrate: "2400",
+        Device: "ttyAMA0",
     }
 
     ctx := context.Background()

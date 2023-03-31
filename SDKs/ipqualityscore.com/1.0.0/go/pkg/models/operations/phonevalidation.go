@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type PhoneValidationPathParams struct {
+type PhoneValidationRequest struct {
 	// (Required) USER_PHONE_HERE
 	UserPhoneHere string `pathParam:"style=simple,explode=false,name=USER_PHONE_HERE"`
 	// (Required) YOUR_API_KEY_HERE
 	YourAPIKeyHere string `pathParam:"style=simple,explode=false,name=YOUR_API_KEY_HERE"`
-}
-
-type PhoneValidationQueryParams struct {
 	// country
 	Country *string `queryParam:"style=form,explode=true,name=country"`
-}
-
-type PhoneValidationRequest struct {
-	PathParams  PhoneValidationPathParams
-	QueryParams PhoneValidationQueryParams
 }
 
 // PhoneValidation500ApplicationJSON - Unexpected error

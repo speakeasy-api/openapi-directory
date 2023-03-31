@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetIPLookupQueryParams struct {
+type GetIPLookupRequest struct {
 	// Sets the format of the API response. JSON is the default format.
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// The IP Address you want to lookup.
@@ -17,10 +17,6 @@ type GetIPLookupQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The modules you want to use of the request. It's a CSV (Comma Separated Values)
 	Params *string `queryParam:"style=form,explode=true,name=params"`
-}
-
-type GetIPLookupRequest struct {
-	QueryParams GetIPLookupQueryParams
 }
 
 type GetIPLookupResponse struct {

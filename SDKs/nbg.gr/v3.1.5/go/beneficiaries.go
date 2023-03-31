@@ -33,18 +33,18 @@ func newBeneficiaries(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GetAccountsAccountIDBeneficiaries - Get Beneficiaries
 // Get Beneficiaries by Account ID
-func (s *beneficiaries) GetAccountsAccountIDBeneficiaries(ctx context.Context, request operations.GetAccountsAccountIDBeneficiariesRequest) (*operations.GetAccountsAccountIDBeneficiariesResponse, error) {
+func (s *beneficiaries) GetAccountsAccountIDBeneficiaries(ctx context.Context, request operations.GetAccountsAccountIDBeneficiariesRequest, security operations.GetAccountsAccountIDBeneficiariesSecurity) (*operations.GetAccountsAccountIDBeneficiariesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/beneficiaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/beneficiaries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

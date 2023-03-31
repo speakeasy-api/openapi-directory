@@ -12,7 +12,8 @@ var CreateCompositionSettingsServerList = []string{
 }
 
 type CreateCompositionSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCompositionSettingsCreateCompositionSettingsRequest struct {
@@ -28,12 +29,6 @@ type CreateCompositionSettingsCreateCompositionSettingsRequest struct {
 	EncryptionKeySid *string `form:"name=EncryptionKeySid"`
 	// A descriptive string that you create to describe the resource and show to the user in the console
 	FriendlyName string `form:"name=FriendlyName"`
-}
-
-type CreateCompositionSettingsRequest struct {
-	Request   *CreateCompositionSettingsCreateCompositionSettingsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCompositionSettingsSecurity
-	ServerURL *string
 }
 
 type CreateCompositionSettingsResponse struct {

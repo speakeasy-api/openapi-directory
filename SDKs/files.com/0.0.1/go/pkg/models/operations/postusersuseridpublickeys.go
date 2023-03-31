@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersUserIDPublicKeysPathParams struct {
-	// User ID.  Provide a value of `0` to operate the current session's user.
-	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 type PostUsersUserIDPublicKeysRequestBody struct {
 	// Actual contents of SSH key.
 	PublicKey string `multipartForm:"name=public_key"`
@@ -20,8 +15,9 @@ type PostUsersUserIDPublicKeysRequestBody struct {
 }
 
 type PostUsersUserIDPublicKeysRequest struct {
-	PathParams PostUsersUserIDPublicKeysPathParams
-	Request    PostUsersUserIDPublicKeysRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostUsersUserIDPublicKeysRequestBody `request:"mediaType=multipart/form-data"`
+	// User ID.  Provide a value of `0` to operate the current session's user.
+	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type PostUsersUserIDPublicKeysResponse struct {

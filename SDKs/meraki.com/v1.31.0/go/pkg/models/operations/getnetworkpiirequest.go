@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkPiiRequestPathParams struct {
+type GetNetworkPiiRequestRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
-}
-
-type GetNetworkPiiRequestRequest struct {
-	PathParams GetNetworkPiiRequestPathParams
 }
 
 type GetNetworkPiiRequestResponse struct {

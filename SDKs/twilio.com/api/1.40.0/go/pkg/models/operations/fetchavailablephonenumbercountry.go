@@ -12,20 +12,15 @@ var FetchAvailablePhoneNumberCountryServerList = []string{
 }
 
 type FetchAvailablePhoneNumberCountrySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchAvailablePhoneNumberCountryPathParams struct {
+type FetchAvailablePhoneNumberCountryRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the available phone number Country resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country to fetch available phone number information about.
 	CountryCode string `pathParam:"style=simple,explode=false,name=CountryCode"`
-}
-
-type FetchAvailablePhoneNumberCountryRequest struct {
-	PathParams FetchAvailablePhoneNumberCountryPathParams
-	Security   FetchAvailablePhoneNumberCountrySecurity
-	ServerURL  *string
 }
 
 type FetchAvailablePhoneNumberCountryResponse struct {

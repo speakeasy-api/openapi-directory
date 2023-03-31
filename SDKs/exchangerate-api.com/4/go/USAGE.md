@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetLatestBaseCurrencyRequest{
-        PathParams: operations.GetLatestBaseCurrencyPathParams{
-            BaseCurrency: "corrupti",
-        },
+        BaseCurrency: "corrupti",
     }
 
     ctx := context.Background()

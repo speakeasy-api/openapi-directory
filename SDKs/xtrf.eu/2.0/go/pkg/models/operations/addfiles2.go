@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddFiles2PathParams struct {
+type AddFiles2Request struct {
+	// Added files to the quote as added by PM.
+	TimeDTO shared.TimeDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type AddFiles2Request struct {
-	PathParams AddFiles2PathParams
-	// Added files to the quote as added by PM.
-	Request shared.TimeDTO `request:"mediaType=application/json"`
 }
 
 type AddFiles2Response struct {

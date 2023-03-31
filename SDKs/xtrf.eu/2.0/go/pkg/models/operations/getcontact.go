@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContactPathParams struct {
+type GetContactRequest struct {
 	// person's internal identifier
 	PersonID int64 `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type GetContactRequest struct {
-	PathParams GetContactPathParams
 }
 
 type GetContactResponse struct {

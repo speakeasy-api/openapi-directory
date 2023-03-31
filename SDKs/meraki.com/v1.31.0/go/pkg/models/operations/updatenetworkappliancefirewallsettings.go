@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceFirewallSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceFirewallSettingsRequestBodySpoofingProtectionIPSourceGuardModeEnum - Mode of protection
 type UpdateNetworkApplianceFirewallSettingsRequestBodySpoofingProtectionIPSourceGuardModeEnum string
 
@@ -54,8 +50,8 @@ type UpdateNetworkApplianceFirewallSettingsRequestBody struct {
 }
 
 type UpdateNetworkApplianceFirewallSettingsRequest struct {
-	PathParams UpdateNetworkApplianceFirewallSettingsPathParams
-	Request    *UpdateNetworkApplianceFirewallSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceFirewallSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceFirewallSettingsResponse struct {

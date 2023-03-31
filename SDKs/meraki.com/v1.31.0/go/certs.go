@@ -34,7 +34,7 @@ func newCerts(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // List the certs on a device
 func (s *certs) GetNetworkSmDeviceCerts(ctx context.Context, request operations.GetNetworkSmDeviceCertsRequest) (*operations.GetNetworkSmDeviceCertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/certs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/certs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

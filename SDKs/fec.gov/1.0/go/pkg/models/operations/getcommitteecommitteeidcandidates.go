@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDCandidatesPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
 type GetCommitteeCommitteeIDCandidatesCandidateStatusEnum string
 
 const (
@@ -105,7 +99,7 @@ func (e *GetCommitteeCommitteeIDCandidatesOfficeEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetCommitteeCommitteeIDCandidatesQueryParams struct {
+type GetCommitteeCommitteeIDCandidatesRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -116,6 +110,9 @@ type GetCommitteeCommitteeIDCandidatesQueryParams struct {
 	//         - P prior candidate
 	//
 	CandidateStatus []GetCommitteeCommitteeIDCandidatesCandidateStatusEnum `queryParam:"style=form,explode=true,name=candidate_status"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// Two-year election cycle in which a candidate runs for office.
 	// Calculated from Form 2. The cycle begins with
 	// an odd year and is named for its ending, even year. This cycle follows
@@ -158,11 +155,6 @@ type GetCommitteeCommitteeIDCandidatesQueryParams struct {
 	State []string `queryParam:"style=form,explode=true,name=state"`
 	// Retrieve records pertaining to a particular election year. The list of election years is based on a candidate filing a statement of candidacy (F2) for that year.
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCommitteeCommitteeIDCandidatesRequest struct {
-	PathParams  GetCommitteeCommitteeIDCandidatesPathParams
-	QueryParams GetCommitteeCommitteeIDCandidatesQueryParams
 }
 
 type GetCommitteeCommitteeIDCandidatesResponse struct {

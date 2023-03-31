@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type ActivateUserPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type ActivateUserQueryParams struct {
-	SendEmail *string `queryParam:"style=form,explode=true,name=sendEmail"`
-}
-
 type ActivateUserRequest struct {
-	PathParams  ActivateUserPathParams
-	QueryParams ActivateUserQueryParams
-	Request     []byte `request:"mediaType=text/plain"`
+	RequestBody []byte  `request:"mediaType=text/plain"`
+	SendEmail   *string `queryParam:"style=form,explode=true,name=sendEmail"`
+	UserID      string  `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ActivateUserResponse struct {

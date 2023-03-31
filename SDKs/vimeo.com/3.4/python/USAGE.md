@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetEndpointsRequest(
-    query_params=operations.GetEndpointsQueryParams(
-        openapi=True,
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.GetEndpointsRequest(
+    openapi=True,
 )
     
 res = s.api_information.get_endpoints(req)

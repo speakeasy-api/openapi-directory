@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetRecordsPathParams struct {
-	BucketID     string `pathParam:"style=simple,explode=false,name=bucket_id"`
-	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type GetRecordsQueryParams struct {
+type GetRecordsRequest struct {
+	IfMatch      *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch  *string  `header:"style=simple,explode=false,name=If-None-Match"`
 	Before       *int64   `queryParam:"style=form,explode=true,name=_before"`
 	Fields       []string `queryParam:"style=form,explode=false,name=_fields"`
 	Limit        *int64   `queryParam:"style=form,explode=true,name=_limit"`
@@ -19,19 +16,10 @@ type GetRecordsQueryParams struct {
 	Sort         []string `queryParam:"style=form,explode=false,name=_sort"`
 	To           *int64   `queryParam:"style=form,explode=true,name=_to"`
 	Token        *string  `queryParam:"style=form,explode=true,name=_token"`
+	BucketID     string   `pathParam:"style=simple,explode=false,name=bucket_id"`
+	CollectionID string   `pathParam:"style=simple,explode=false,name=collection_id"`
 	ID           *string  `queryParam:"style=form,explode=true,name=id"`
 	LastModified *int64   `queryParam:"style=form,explode=true,name=last_modified"`
-}
-
-type GetRecordsHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetRecordsRequest struct {
-	PathParams  GetRecordsPathParams
-	QueryParams GetRecordsQueryParams
-	Headers     GetRecordsHeaders
 }
 
 // GetRecordsErrorSchema - The request is invalid.

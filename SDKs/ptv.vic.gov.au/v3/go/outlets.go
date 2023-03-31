@@ -43,7 +43,7 @@ func (s *outlets) OutletsGetAllOutlets(ctx context.Context, request operations.O
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,14 +124,14 @@ func (s *outlets) OutletsGetAllOutlets(ctx context.Context, request operations.O
 // OutletsGetOutletsByGeolocation - List ticket outlets near a specific location
 func (s *outlets) OutletsGetOutletsByGeolocation(ctx context.Context, request operations.OutletsGetOutletsByGeolocationRequest) (*operations.OutletsGetOutletsByGeolocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/outlets/location/{latitude},{longitude}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/outlets/location/{latitude},{longitude}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

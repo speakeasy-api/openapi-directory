@@ -6,7 +6,13 @@ import (
 	"net/http"
 )
 
-type TeamsAddOrUpdateRepoPermissionsInOrgPathParams struct {
+type TeamsAddOrUpdateRepoPermissionsInOrgRequestBody struct {
+	// The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
+	Permission *string `json:"permission,omitempty"`
+}
+
+type TeamsAddOrUpdateRepoPermissionsInOrgRequest struct {
+	RequestBody *TeamsAddOrUpdateRepoPermissionsInOrgRequestBody `request:"mediaType=application/json"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -15,16 +21,6 @@ type TeamsAddOrUpdateRepoPermissionsInOrgPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsAddOrUpdateRepoPermissionsInOrgRequestBody struct {
-	// The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
-	Permission *string `json:"permission,omitempty"`
-}
-
-type TeamsAddOrUpdateRepoPermissionsInOrgRequest struct {
-	PathParams TeamsAddOrUpdateRepoPermissionsInOrgPathParams
-	Request    *TeamsAddOrUpdateRepoPermissionsInOrgRequestBody `request:"mediaType=application/json"`
 }
 
 type TeamsAddOrUpdateRepoPermissionsInOrgResponse struct {

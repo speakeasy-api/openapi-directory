@@ -8,7 +8,8 @@ import (
 )
 
 type CreateLicenseeSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateLicenseeRequestBody struct {
@@ -21,11 +22,6 @@ type CreateLicenseeRequestBody struct {
 	Number *string `form:"name=number"`
 	// 'productNumber' to assign new Licensee object
 	ProductNumber string `form:"name=productNumber"`
-}
-
-type CreateLicenseeRequest struct {
-	Request  *CreateLicenseeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateLicenseeSecurity
 }
 
 type CreateLicenseeResponse struct {

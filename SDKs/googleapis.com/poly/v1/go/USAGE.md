@@ -14,22 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.PolyAssetsGetRequest{
-        PathParams: operations.PolyAssetsGetPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.PolyAssetsGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        Name: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()

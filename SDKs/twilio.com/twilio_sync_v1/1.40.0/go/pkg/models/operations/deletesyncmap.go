@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncMapServerList = []string{
@@ -12,20 +11,15 @@ var DeleteSyncMapServerList = []string{
 }
 
 type DeleteSyncMapSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSyncMapPathParams struct {
+type DeleteSyncMapRequest struct {
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Sync Map resource to delete. Can be the Sync Map's `sid` or its `unique_name`.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSyncMapRequest struct {
-	PathParams DeleteSyncMapPathParams
-	Security   DeleteSyncMapSecurity
-	ServerURL  *string
 }
 
 type DeleteSyncMapResponse struct {

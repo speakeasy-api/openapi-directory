@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2MeetingsJSONQueryParams struct {
+type GetV2MeetingsJSONRequest struct {
 	// Filters meetings by account_id. Multiple account ids can be applied
 	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
 	// Filters meetings by event IDs
@@ -47,10 +47,6 @@ type GetV2MeetingsJSONQueryParams struct {
 	TaskIds []int64 `queryParam:"style=form,explode=false,name=task_ids"`
 	// Filters meetings by user_guid. Multiple user guids can be applied
 	UserGuids []string `queryParam:"style=form,explode=false,name=user_guids"`
-}
-
-type GetV2MeetingsJSONRequest struct {
-	QueryParams GetV2MeetingsJSONQueryParams
 }
 
 type GetV2MeetingsJSONResponse struct {

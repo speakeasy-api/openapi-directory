@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagFromJournalLinePathParams struct {
+type GetTagFromJournalLineRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The journal line unique identifier. E.g JL001
 	JournalLineID string `pathParam:"style=simple,explode=false,name=JournalLineId"`
 	// The tag unique identifier. E.g. MyTag
 	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type GetTagFromJournalLineHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagFromJournalLineRequest struct {
-	PathParams GetTagFromJournalLinePathParams
-	Headers    GetTagFromJournalLineHeaders
 }
 
 type GetTagFromJournalLineResponse struct {

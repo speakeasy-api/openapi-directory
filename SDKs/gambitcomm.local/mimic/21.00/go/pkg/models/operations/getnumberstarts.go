@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNumberStartsPathParams struct {
+type GetNumberStartsRequest struct {
 	// Agent to return the count
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetNumberStartsRequest struct {
-	PathParams GetNumberStartsPathParams
 }
 
 type GetNumberStartsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowReloadPathParams struct {
+type ProtocolNetflowReloadRequest struct {
 	// Agent to set the NETFLOW
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolNetflowReloadRequest struct {
-	PathParams ProtocolNetflowReloadPathParams
 }
 
 type ProtocolNetflowReloadResponse struct {

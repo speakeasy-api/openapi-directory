@@ -33,7 +33,7 @@ func newSpell(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetNumbersCardinal - Get the cardinal of the given number
-func (s *spell) GetNumbersCardinal(ctx context.Context, request operations.GetNumbersCardinalRequest) (*operations.GetNumbersCardinalResponse, error) {
+func (s *spell) GetNumbersCardinal(ctx context.Context, request operations.GetNumbersCardinalRequest, security operations.GetNumbersCardinalSecurity) (*operations.GetNumbersCardinalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/cardinal"
 
@@ -42,11 +42,11 @@ func (s *spell) GetNumbersCardinal(ctx context.Context, request operations.GetNu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -74,7 +74,7 @@ func (s *spell) GetNumbersCardinal(ctx context.Context, request operations.GetNu
 }
 
 // GetNumbersCurrency - Spells out the number as a currency
-func (s *spell) GetNumbersCurrency(ctx context.Context, request operations.GetNumbersCurrencyRequest) (*operations.GetNumbersCurrencyResponse, error) {
+func (s *spell) GetNumbersCurrency(ctx context.Context, request operations.GetNumbersCurrencyRequest, security operations.GetNumbersCurrencySecurity) (*operations.GetNumbersCurrencyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/currency"
 
@@ -83,11 +83,11 @@ func (s *spell) GetNumbersCurrency(ctx context.Context, request operations.GetNu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *spell) GetNumbersCurrency(ctx context.Context, request operations.GetNu
 }
 
 // GetNumbersOrdinal - Get the ordinal of the given number
-func (s *spell) GetNumbersOrdinal(ctx context.Context, request operations.GetNumbersOrdinalRequest) (*operations.GetNumbersOrdinalResponse, error) {
+func (s *spell) GetNumbersOrdinal(ctx context.Context, request operations.GetNumbersOrdinalRequest, security operations.GetNumbersOrdinalSecurity) (*operations.GetNumbersOrdinalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/ordinal"
 
@@ -124,11 +124,11 @@ func (s *spell) GetNumbersOrdinal(ctx context.Context, request operations.GetNum
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkApplianceTrafficShapingUplinkBandwidthRequest struct {
-	PathParams GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkApplianceTrafficShapingUplinkBandwidth200ApplicationJSONBandwidthLimitsCellular - uplink cellular configued limits [optional]

@@ -8,19 +8,14 @@ import (
 )
 
 type KkidAllowanceGetSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
-type KkidAllowanceGetQueryParams struct {
+type KkidAllowanceGetRequest struct {
 	// userID of the kid
 	KidUserID int64 `queryParam:"style=form,explode=true,name=kidUserId"`
 	// number of days you wish to search allowance transactions (default is 90 days)
 	TransactionDays *int64 `queryParam:"style=form,explode=true,name=transactionDays"`
-}
-
-type KkidAllowanceGetRequest struct {
-	QueryParams KkidAllowanceGetQueryParams
-	Security    KkidAllowanceGetSecurity
 }
 
 type KkidAllowanceGetResponse struct {

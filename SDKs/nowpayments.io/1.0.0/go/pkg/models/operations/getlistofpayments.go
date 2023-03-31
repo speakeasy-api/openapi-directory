@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type GetListOfPaymentsQueryParams struct {
+type GetListOfPaymentsRequest struct {
 	DateFrom *string `queryParam:"style=form,explode=true,name=dateFrom"`
 	DateTo   *string `queryParam:"style=form,explode=true,name=dateTo"`
 	Limit    *string `queryParam:"style=form,explode=true,name=limit"`
 	OrderBy  *string `queryParam:"style=form,explode=true,name=orderBy"`
 	Page     *string `queryParam:"style=form,explode=true,name=page"`
 	SortBy   *string `queryParam:"style=form,explode=true,name=sortBy"`
-}
-
-type GetListOfPaymentsHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetListOfPaymentsRequest struct {
-	QueryParams GetListOfPaymentsQueryParams
-	Headers     GetListOfPaymentsHeaders
+	XAPIKey  *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type GetListOfPayments200ApplicationJSONData struct {

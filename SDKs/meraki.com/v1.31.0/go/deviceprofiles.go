@@ -34,7 +34,7 @@ func newDeviceProfiles(defaultClient, securityClient HTTPClient, serverURL, lang
 // Get the installed profiles associated with a device
 func (s *deviceProfiles) GetNetworkSmDeviceDeviceProfiles(ctx context.Context, request operations.GetNetworkSmDeviceDeviceProfilesRequest) (*operations.GetNetworkSmDeviceDeviceProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/deviceProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/deviceProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *deviceProfiles) GetNetworkSmDeviceDeviceProfiles(ctx context.Context, r
 // Get the profiles associated with a user
 func (s *deviceProfiles) GetNetworkSmUserDeviceProfiles(ctx context.Context, request operations.GetNetworkSmUserDeviceProfilesRequest) (*operations.GetNetworkSmUserDeviceProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

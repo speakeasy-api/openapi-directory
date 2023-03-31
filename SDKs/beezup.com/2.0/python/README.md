@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/beezup.com/2.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,6 +15,7 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
+
     
 res = s.analytics_global.analytics_index()
 
@@ -24,14 +25,15 @@ if res.analytics_index is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Analytics - Global
+
+### analytics_global
 
 * `analytics_index` - Get the Analytics API operation index
 * `analytics_store_index` - Get the Analytics API operation index for one store
 
-### Analytics - Optimisations
+### analytics_optimisations
 
 * `copy_optimisation` - Copy product optimisations between 2 channels
 * `optimise` - Optimise products by page
@@ -40,14 +42,14 @@ if res.analytics_index is not None:
 * `optimise_by_channel` - Optimise products by channel
 * `optimise_by_product` - Optimise product
 
-### Analytics - Reports
+### analytics_reports
 
 * `delete_report_filter` - Delete the report filter
 * `get_report_filter` - Get the report filter description
 * `get_report_filters` - Get report filter list for the given store
 * `save_report_filter` - Save the report filter
 
-### Analytics - Rules
+### analytics_rules
 
 * `create_rule` - Rule creation
 * `delete_rule` - Delete Rule
@@ -62,7 +64,7 @@ if res.analytics_index is not None:
 * `run_rules` - Run all rules for this store
 * `update_rule` - Update Rule
 
-### Analytics - Statistics
+### analytics_statistics
 
 * `get_store_report_by_category` - Get the report by category
 * `get_store_report_by_channel` - Get the report by channel
@@ -70,7 +72,7 @@ if res.analytics_index is not None:
 * `get_store_report_by_day_per_store` - Get the report by day for a StoreId
 * `get_store_report_by_product` - Get the report by product
 
-### Analytics - Tracking
+### analytics_tracking
 
 * `get_store_tracked_clicks` - Get the latest tracked clicks
 * `get_store_tracked_external_orders` - Get the latest tracked external orders
@@ -78,7 +80,7 @@ if res.analytics_index is not None:
 * `get_store_tracking_status` - Get the synchronization status of clicks and orders of a store
 * `get_tracking_status` - Get the global synchronization status of clicks and orders
 
-### Catalogs - Auto
+### catalogs_auto
 
 * `auto_configure_auto_import_interval` - Configure Auto Import Interval
 * `auto_delete_auto_import` - Delete Auto Import
@@ -89,7 +91,7 @@ if res.analytics_index is not None:
 * `auto_start_auto_import` - Start Auto Import Manually
 * `importation_activate_auto_import` - Activate the auto importation of the last successful manual catalog importation.
 
-### Catalogs - Catalog
+### catalogs_catalog
 
 * `catalog_store_index` - Get the index of the catalog API for this store
 * `catalog_change_catalog_column_user_name` - Change Catalog Column User Name
@@ -108,12 +110,12 @@ if res.analytics_index is not None:
 * `catalog_save_custom_column` - Create or replace a custom column
 * `importation_get_manual_update_last_input_config` - Get the last input configuration
 
-### Catalogs - Global
+### catalogs_global
 
 * `catalog_index` - Get the index of the catalog API
 * `catalog_get_beez_up_columns` - Get the BeezUP columns
 
-### Catalogs - Importation Catalog Info
+### catalogs_importation_catalog_info
 
 * `importation_configure_catalog_column` - Configure catalog column
 * `importation_delete_custom_column` - Delete Custom Column
@@ -130,7 +132,7 @@ if res.analytics_index is not None:
 * `importation_unmap_catalog_column` - Unmap catalog column
 * `importation_unmap_custom_column` - Unmap custom column
 
-### Catalogs - Importation Process
+### catalogs_importation_process
 
 * `importation_cancel` - Cancel importation
 * `importation_commit` - Commit Importation
@@ -144,29 +146,29 @@ if res.analytics_index is not None:
 * `importation_start_manual_update` - Start Manual Import
 * `importation_technical_progression` - Get technical progression
 
-### Channel Catalogs - Categories
+### channel_catalogs_categories
 
 * `configure_channel_catalog_category` - Configure channel catalog category
 * `disable_channel_catalog_category_mapping` - Disable a channel catalog category mapping
 * `get_channel_catalog_categories` - Get channel catalog categories
 * `reenable_channel_catalog_category_mapping` - Reenable a channel catalog category mapping
 
-### Channel Catalogs - Column Mappings
+### channel_catalogs_column_mappings
 
 * `configure_channel_catalog_column_mappings` - Configure channel catalog column mappings
 
-### Channel Catalogs - Exclusion Filters
+### channel_catalogs_exclusion_filters
 
 * `configure_channel_catalog_exclusion_filters` - Configure channel catalog exclusion filters
 * `get_channel_catalog_exclusion_filters` - Get channel catalog exclusion filters
 
-### Channel Catalogs - Exportations
+### channel_catalogs_exportations
 
 * `clear_channel_catalog_exportation_cache` - Clear the exportation cache
 * `get_channel_catalog_exportation_cache_info` - Get the exportation cache information
 * `get_channel_catalog_exportation_history` - Get the exportation history
 
-### Channel Catalogs - Global
+### channel_catalogs_global
 
 * `add_channel_catalog` - Add a new channel catalog
 * `delete_channel_catalog` - Delete the channel catalog
@@ -174,13 +176,13 @@ if res.analytics_index is not None:
 * `get_channel_catalog_filter_operators` - Get channel catalog filter operators
 * `get_channel_catalogs` - List all your current channel catalogs
 
-### Channel Catalogs - Legacy Tracking - Global
+### channel_catalogs_legacy_tracking_global
 
 * `get_legacy_tracking_channel_catalog` - Get the channel catalog configured to use legacy tracking format information
 * `get_legacy_tracking_channel_catalogs` - List all your current channel catalogs configured to use legacy tracking format
 * `migrate_legacy_tracking_channel_catalog` - Migrate a channel catalog to current tracking format
 
-### Channel Catalogs - Products
+### channel_catalogs_products
 
 * `export_channel_catalog_product_info_list` - Export channel catalog product information list
 * `get_channel_catalog_product_by_channel_catalog` - Get channel catalog products related to these channel catalogs
@@ -188,33 +190,33 @@ if res.analytics_index is not None:
 * `get_channel_catalog_product_info_list` - Get channel catalog product information list
 * `get_channel_catalog_products_counters` - Get channel catalog products' counters
 
-### Channel Catalogs - Products Optimisation
+### channel_catalogs_products_optimisation
 
 * `disable_channel_catalog_product` - Disable channel catalog product
 * `reenable_channel_catalog_product` - Reenable channel catalog product
 
-### Channel Catalogs - Products Overrides
+### channel_catalogs_products_overrides
 
 * `configure_channel_catalog_product_value_override_copy` - Copy channel catalog product value override
 * `delete_channel_catalog_product_value_override` - Delete a specific channel catalog product value override
 * `get_channel_catalog_product_value_override_copy` - Get channel catalog product value override compatibilities status
 * `override_channel_catalog_product_values` - Override channel catalog product values
 
-### Channel Catalogs - Settings
+### channel_catalogs_settings
 
 * `configure_channel_catalog_cost_settings` - Configure channel catalog cost settings
 * `configure_channel_catalog_general_settings` - Configure channel catalog general settings
 * `disable_channel_catalog` - Disable a channel catalog
 * `enable_channel_catalog` - Enable a channel catalog
 
-### Channels - Channels Global
+### channels_channels_global
 
 * `get_available_channels` - List all available channel for this store
 * `get_channel_categories` - Get channel categories
 * `get_channel_columns` - Get channel columns
 * `get_channel_info` - Get channel information
 
-### Customer - Account
+### customer_account
 
 * `activate_user_account` - Activate the user account
 * `change_email` - Change user email
@@ -228,12 +230,12 @@ if res.analytics_index is not None:
 * `save_personal_info` - Save user personal information
 * `save_profile_picture_info` - Change user picture information
 
-### Customer - Alerts
+### customer_alerts
 
 * `get_store_alerts` - Get store's alerts
 * `save_store_alerts` - Save store alerts
 
-### Customer - Contracts
+### customer_contracts
 
 * `create_contract` - Create a new contract
 * `delete_next_contract` - Delete your next contract
@@ -244,34 +246,34 @@ if res.analytics_index is not None:
 * `reactivate_current_contract` - Reactivate your terminated contract.
 * `terminate_current_contract` - Schedule termination of your current contract at the end of the commitment.
 
-### Customer - Friends
+### customer_friends
 
 * `get_friend_info` - Get friend information
 
-### Customer - Global
+### customer_global
 
 * `get_customer_index` - The index of all operations and LOV
 
-### Customer - Invoices
+### customer_invoices
 
 * `get_invoices` - Get all your invoices
 
-### Customer - Rights
+### customer_rights
 
 * `get_rights` - Get store's rights
 
-### Customer - Security
+### customer_security
 
 * `logout` - Log out the current user from go2
 * `zendesk_token` - Zendesk token
 
-### Customer - Shares
+### customer_shares
 
 * `delete_store_share` - Delete a share of a store to another user
 * `get_store_shares` - Get shares related to this store
 * `share_store` - Share a store to another user
 
-### Customer - Stores
+### customer_stores
 
 * `create_store` - Create a new store
 * `delete_store` - Delete a store
@@ -279,49 +281,49 @@ if res.analytics_index is not None:
 * `get_stores` - Get store list
 * `update_store` - Update some store's information.
 
-### Marketplaces - Channel catalogs - Global
+### marketplaces_channel_catalogs_global
 
 * `get_marketplace_channel_catalogs` - Get your marketplace channel catalog list
 
-### Marketplaces - Channel catalogs - Publications
+### marketplaces_channel_catalogs_publications
 
 * `get_publications` - Fetch the publication history for an account, sorted by descending start date
 * `publish_catalog_to_marketplace` - [PREVIEW] Launch a publication of the catalog to the marketplace
 
-### Marketplaces - Channel catalogs - Settings
+### marketplaces_channel_catalogs_settings
 
 * `get_channel_catalog_marketplace_properties` - Get the marketplace properties for a channel catalog
 * `get_channel_catalog_marketplace_settings` - Get the marketplace settings for a channel catalog
 * `set_channel_catalog_marketplace_settings` - Save new marketplace settings for a channel catalog
 
-### Marketplaces - Orders - AutoTransitions
+### marketplaces_orders_auto_transitions
 
 * `configure_automatic_transitions` - Configure new or existing automatic Order status transition
 * `get_automatic_transitions` - Get list of configured automatic Order status transitions
 
-### Marketplaces - Orders - Batches
+### marketplaces_orders_batches
 
 * `change_order_list` - [DEPRECATED] Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 * `clear_merchant_order_info_list` - [DEPRECATED] Send a batch of operations to clear an Order's merchant information (max 100 items per call)
 * `set_merchant_order_info_list` - [DEPRECATED] Send a batch of operations to set an Order's merchant information  (max 100 items per call)
 
-### Marketplaces - Orders - Exports
+### marketplaces_orders_exports
 
 * `export_orders` - Request a new Order report exportation to be generated
 * `get_order_exportations` - Get a paginated list of Order report exportations
 
-### Marketplaces - Orders - Global
+### marketplaces_orders_global
 
 * `get_marketplace_accounts_synchronization` - [DEPRECATED] Get current synchronization status between your marketplaces and BeezUP accounts
 * `get_order_index` - [DEPRECATED] Get all actions you can do on the order API
 * `harvest_all` - [DEPRECATED] Send harvest request to all your marketplaces
 
-### Marketplaces - Orders - List
+### marketplaces_orders_list
 
 * `get_order_list_full` - [DEPRECATED] Get a paginated list of all Orders with all Order and Order Item(s) properties
 * `get_order_list_light` - [DEPRECATED] Get a paginated list of all Orders without details
 
-### Marketplaces - Orders - Order
+### marketplaces_orders_order
 
 * `change_order` - [DEPRECATED] Change your marketplace Order Information (accept, ship, etc.)
 * `clear_merchant_order_info` - [DEPRECATED] Clear an Order's merchant information
@@ -331,7 +333,7 @@ if res.analytics_index is not None:
 * `head_order` - [DEPRECATED] DEPRECATED - Get the meta information about the order (ETag, Last-Modified)
 * `set_merchant_order_info` - [DEPRECATED] Set an Order's merchant information
 
-### Marketplaces - Orders - Subscriptions - Subscriptions
+### marketplaces_orders_subscriptions_subscriptions
 
 * `activate_subscription` - Activate a subscription to the orders
 * `create_subscription` - Creates a subscription to the orders
@@ -342,25 +344,25 @@ if res.analytics_index is not None:
 * `get_subscription_push_reporting` - Get the push reporting related to this subscription
 * `retry_push_orders` - Force retry push orders immediatly
 
-### Marketplaces - Orders V3 - Batches
+### marketplaces_orders_v3_batches
 
 * `change_order_list_v2` - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 * `change_order_list_v3` - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 * `clear_merchant_order_info_list_v3` - Send a batch of operations to clear an Order's merchant information (max 100 items per call)
 * `set_merchant_order_info_list_v3` - Send a batch of operations to set an Order's merchant information  (max 100 items per call)
 
-### Marketplaces - Orders V3 - Global
+### marketplaces_orders_v3_global
 
 * `get_marketplace_accounts_synchronization_v3` - Get current synchronization status between your marketplaces and BeezUP accounts
 * `get_order_management_ready_marketplace_business_code` - Get the list of MarketplaceBusinessCode ready for Order Management
 * `harvest_all_v3` - Send harvest request to all your marketplaces
 
-### Marketplaces - Orders V3 - List
+### marketplaces_orders_v3_list
 
 * `get_order_list_full_v3` - Get a paginated list of all Orders with all Order and Order Item(s) properties
 * `get_order_list_light_v3` - Get a paginated list of all Orders without details
 
-### Marketplaces - Orders V3 - Order
+### marketplaces_orders_v3_order
 
 * `change_order_v3` - Change your marketplace Order Information (accept, ship, etc.)
 * `clear_merchant_order_info_v3` - Clear an Order's merchant information
@@ -372,13 +374,14 @@ if res.analytics_index is not None:
 * `head_order_v3` - Get the meta information about the order (ETag, Last-Modified)
 * `set_merchant_order_info_v3` - Set an Order's merchant information
 
-### OM Invoice - API - Generation
+### om_invoice_api_generation
 
+* `generate_batch_order_invoice` - Generate an Order Invoice batch
 * `generate_order_invoice` - Generate an Order Invoice
 * `get_order_invoice_pdf` - Returns the PDF version of the invoice
 * `get_order_invoice_preview` - View a preview an Order Invoice
 
-### OM Invoice - API - Settings
+### om_invoice_api_settings
 
 * `get_order_invoice_design_settings` - Get Order Invoice design settings
 * `get_order_invoice_design_settings_preview` - View a preview an Order Invoice using custom design settings
@@ -386,27 +389,37 @@ if res.analytics_index is not None:
 * `save_order_invoice_design_settings` - Save Order Invoice design settings
 * `save_order_invoice_general_settings` - Save Order Invoice general settings
 
-### Public - Channels - Public Channels
+### public_channels_public_channels
 
 * `get_channels` - The channel list for one country
 * `get_channels_index` - Get public channel index
 
-### Public - List of Values - LOV
+### public_list_of_values_lov
 
 * `get_public_list_of_values` - Get the list of values related to this list name
 * `get_public_lov_index` - Get all list names
 
-### Public - Security - Security
+### public_security_security
 
 * `login` - Login
 * `lost_password` - Lost password
 * `register` - User Registration
 
-### User - List of Values - LOV
+### user_list_of_values_lov
 
 * `get_user_list_of_values` - Get the list of values related to this list name
 * `get_user_lov_index` - Get all list names
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

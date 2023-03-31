@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetFiltersCreateQueryParams struct {
+type GetFiltersCreateRequest struct {
 	Base *string `queryParam:"style=form,explode=true,name=base"`
 	// String list (semicolon delimited).
 	Exclude *string `queryParam:"style=form,explode=true,name=exclude"`
 	// String list (semicolon delimited).
 	Include *string `queryParam:"style=form,explode=true,name=include"`
 	Unsafe  *bool   `queryParam:"style=form,explode=true,name=unsafe"`
-}
-
-type GetFiltersCreateRequest struct {
-	QueryParams GetFiltersCreateQueryParams
 }
 
 type GetFiltersCreateResponse struct {

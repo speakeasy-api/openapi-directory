@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPortsReadPathParams struct {
+type DcimPowerPortsReadRequest struct {
 	// A unique integer value identifying this power port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerPortsReadRequest struct {
-	PathParams DcimPowerPortsReadPathParams
 }
 
 type DcimPowerPortsReadResponse struct {

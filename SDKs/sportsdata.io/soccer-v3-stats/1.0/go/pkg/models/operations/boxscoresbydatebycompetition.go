@@ -33,7 +33,7 @@ func (e *BoxScoresByDateByCompetitionFormatEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type BoxScoresByDateByCompetitionPathParams struct {
+type BoxScoresByDateByCompetitionRequest struct {
 	// An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: <code>EPL</code>, <code>1</code>, <code>MLS</code>, <code>8</code>, etc.
 	Competition string `pathParam:"style=simple,explode=false,name=competition"`
 	// The date of the game(s).
@@ -41,10 +41,6 @@ type BoxScoresByDateByCompetitionPathParams struct {
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format BoxScoresByDateByCompetitionFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type BoxScoresByDateByCompetitionRequest struct {
-	PathParams BoxScoresByDateByCompetitionPathParams
 }
 
 type BoxScoresByDateByCompetitionResponse struct {

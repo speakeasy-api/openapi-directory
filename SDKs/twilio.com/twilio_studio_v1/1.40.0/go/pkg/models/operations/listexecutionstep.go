@@ -12,30 +12,21 @@ var ListExecutionStepServerList = []string{
 }
 
 type ListExecutionStepSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListExecutionStepPathParams struct {
+type ListExecutionStepRequest struct {
 	// The SID of the Execution with the Steps to read.
 	ExecutionSid string `pathParam:"style=simple,explode=false,name=ExecutionSid"`
 	// The SID of the Flow with the Steps to read.
 	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
-}
-
-type ListExecutionStepQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListExecutionStepRequest struct {
-	PathParams  ListExecutionStepPathParams
-	QueryParams ListExecutionStepQueryParams
-	Security    ListExecutionStepSecurity
-	ServerURL   *string
 }
 
 type ListExecutionStepListExecutionStepResponseMeta struct {

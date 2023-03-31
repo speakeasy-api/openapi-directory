@@ -8,13 +8,7 @@ import (
 )
 
 type AddClientSecretSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
-}
-
-type AddClientSecretRequest struct {
-	// Add Client Secret Model
-	Request  shared.AddClientSecret `request:"mediaType=application/json"`
-	Security AddClientSecretSecurity
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddClientSecretResponse struct {

@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationEarlyAccessFeaturesOptInPathParams struct {
-	OptInID        string `pathParam:"style=simple,explode=false,name=optInId"`
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationEarlyAccessFeaturesOptInRequestBody struct {
 	// A list of network IDs to apply the opt-in to
 	LimitScopeToNetworks []string `json:"limitScopeToNetworks,omitempty"`
 }
 
 type UpdateOrganizationEarlyAccessFeaturesOptInRequest struct {
-	PathParams UpdateOrganizationEarlyAccessFeaturesOptInPathParams
-	Request    *UpdateOrganizationEarlyAccessFeaturesOptInRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationEarlyAccessFeaturesOptInRequestBody `request:"mediaType=application/json"`
+	OptInID        string                                                 `pathParam:"style=simple,explode=false,name=optInId"`
+	OrganizationID string                                                 `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationEarlyAccessFeaturesOptInResponse struct {

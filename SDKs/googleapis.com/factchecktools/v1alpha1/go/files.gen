@@ -30,6 +30,5 @@ pkg/models/shared/googlefactcheckingfactchecktoolsv1alpha1claimreviewmarkup.go
 pkg/models/shared/googlefactcheckingfactchecktoolsv1alpha1claimrating.go
 pkg/models/shared/googlefactcheckingfactchecktoolsv1alpha1claimauthor.go
 pkg/models/shared/googlefactcheckingfactchecktoolsv1alpha1claimreviewauthor.go
-pkg/models/shared/security.go
 pkg/models/shared/googlefactcheckingfactchecktoolsv1alpha1listclaimreviewmarkuppagesresponse.go
 USAGE.md

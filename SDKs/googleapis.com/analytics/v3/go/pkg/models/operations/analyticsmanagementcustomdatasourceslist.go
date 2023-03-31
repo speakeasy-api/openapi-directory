@@ -8,18 +8,18 @@ import (
 )
 
 type AnalyticsManagementCustomDataSourcesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomDataSourcesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomDataSourcesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomDataSourcesListSecurity struct {
@@ -28,14 +28,9 @@ type AnalyticsManagementCustomDataSourcesListSecurity struct {
 	Option3 *AnalyticsManagementCustomDataSourcesListSecurityOption3 `security:"option"`
 }
 
-type AnalyticsManagementCustomDataSourcesListPathParams struct {
+type AnalyticsManagementCustomDataSourcesListRequest struct {
 	// Account Id for the custom data sources to retrieve.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property Id for the custom data sources to retrieve.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementCustomDataSourcesListQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -54,12 +49,8 @@ type AnalyticsManagementCustomDataSourcesListQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=start-index"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementCustomDataSourcesListRequest struct {
-	PathParams  AnalyticsManagementCustomDataSourcesListPathParams
-	QueryParams AnalyticsManagementCustomDataSourcesListQueryParams
-	Security    AnalyticsManagementCustomDataSourcesListSecurity
+	// Web property Id for the custom data sources to retrieve.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementCustomDataSourcesListResponse struct {

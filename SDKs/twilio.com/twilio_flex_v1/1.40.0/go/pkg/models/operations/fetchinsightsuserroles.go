@@ -12,18 +12,13 @@ var FetchInsightsUserRolesServerList = []string{
 }
 
 type FetchInsightsUserRolesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchInsightsUserRolesHeaders struct {
-	// The Authorization HTTP request header
-	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchInsightsUserRolesRequest struct {
-	Headers   FetchInsightsUserRolesHeaders
-	Security  FetchInsightsUserRolesSecurity
-	ServerURL *string
+	// The Authorization HTTP request header
+	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
 }
 
 type FetchInsightsUserRolesResponse struct {

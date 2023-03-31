@@ -33,11 +33,11 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // KeepNotesCreate - Creates a new note.
-func (s *notes) KeepNotesCreate(ctx context.Context, request operations.KeepNotesCreateRequest) (*operations.KeepNotesCreateResponse, error) {
+func (s *notes) KeepNotesCreate(ctx context.Context, request operations.KeepNotesCreateRequest, security operations.KeepNotesCreateSecurity) (*operations.KeepNotesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/notes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NoteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *notes) KeepNotesCreate(ctx context.Context, request operations.KeepNote
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *notes) KeepNotesCreate(ctx context.Context, request operations.KeepNote
 }
 
 // KeepNotesDelete - Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
-func (s *notes) KeepNotesDelete(ctx context.Context, request operations.KeepNotesDeleteRequest) (*operations.KeepNotesDeleteResponse, error) {
+func (s *notes) KeepNotesDelete(ctx context.Context, request operations.KeepNotesDeleteRequest, security operations.KeepNotesDeleteSecurity) (*operations.KeepNotesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *notes) KeepNotesDelete(ctx context.Context, request operations.KeepNote
 }
 
 // KeepNotesGet - Gets a note.
-func (s *notes) KeepNotesGet(ctx context.Context, request operations.KeepNotesGetRequest) (*operations.KeepNotesGetResponse, error) {
+func (s *notes) KeepNotesGet(ctx context.Context, request operations.KeepNotesGetRequest, security operations.KeepNotesGetSecurity) (*operations.KeepNotesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *notes) KeepNotesGet(ctx context.Context, request operations.KeepNotesGe
 }
 
 // KeepNotesList - Lists notes. Every list call returns a page of results with `page_size` as the upper bound of returned items. A `page_size` of zero allows the server to choose the upper bound. The ListNotesResponse contains at most `page_size` entries. If there are more things left to list, it provides a `next_page_token` value. (Page tokens are opaque values.) To get the next page of results, copy the result's `next_page_token` into the next request's `page_token`. Repeat until the `next_page_token` returned with a page of results is empty. ListNotes return consistent results in the face of concurrent changes, or signals that it cannot with an ABORTED error.
-func (s *notes) KeepNotesList(ctx context.Context, request operations.KeepNotesListRequest) (*operations.KeepNotesListResponse, error) {
+func (s *notes) KeepNotesList(ctx context.Context, request operations.KeepNotesListRequest, security operations.KeepNotesListSecurity) (*operations.KeepNotesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/notes"
 
@@ -193,11 +193,11 @@ func (s *notes) KeepNotesList(ctx context.Context, request operations.KeepNotesL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *notes) KeepNotesList(ctx context.Context, request operations.KeepNotesL
 }
 
 // KeepNotesPermissionsBatchCreate - Creates one or more permissions on the note. Only permissions with the `WRITER` role may be created. If adding any permission fails, then the entire request fails and no changes are made.
-func (s *notes) KeepNotesPermissionsBatchCreate(ctx context.Context, request operations.KeepNotesPermissionsBatchCreateRequest) (*operations.KeepNotesPermissionsBatchCreateResponse, error) {
+func (s *notes) KeepNotesPermissionsBatchCreate(ctx context.Context, request operations.KeepNotesPermissionsBatchCreateRequest, security operations.KeepNotesPermissionsBatchCreateSecurity) (*operations.KeepNotesPermissionsBatchCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchCreate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchCreate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreatePermissionsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *notes) KeepNotesPermissionsBatchCreate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *notes) KeepNotesPermissionsBatchCreate(ctx context.Context, request ope
 }
 
 // KeepNotesPermissionsBatchDelete - Deletes one or more permissions on the note. The specified entities will immediately lose access. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
-func (s *notes) KeepNotesPermissionsBatchDelete(ctx context.Context, request operations.KeepNotesPermissionsBatchDeleteRequest) (*operations.KeepNotesPermissionsBatchDeleteResponse, error) {
+func (s *notes) KeepNotesPermissionsBatchDelete(ctx context.Context, request operations.KeepNotesPermissionsBatchDeleteRequest, security operations.KeepNotesPermissionsBatchDeleteSecurity) (*operations.KeepNotesPermissionsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchDelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchDelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeletePermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *notes) KeepNotesPermissionsBatchDelete(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

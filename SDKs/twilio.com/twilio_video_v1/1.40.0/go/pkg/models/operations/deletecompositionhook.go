@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteCompositionHookServerList = []string{
@@ -12,18 +11,13 @@ var DeleteCompositionHookServerList = []string{
 }
 
 type DeleteCompositionHookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteCompositionHookPathParams struct {
-	// The SID of the CompositionHook resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteCompositionHookRequest struct {
-	PathParams DeleteCompositionHookPathParams
-	Security   DeleteCompositionHookSecurity
-	ServerURL  *string
+	// The SID of the CompositionHook resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteCompositionHookResponse struct {

@@ -8,10 +8,10 @@ import (
 )
 
 type AirQualityAirQualityGetSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
-type AirQualityAirQualityGetQueryParams struct {
+type AirQualityAirQualityGetRequest struct {
 	// Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Latitude in format 12N, 12.3N, 12.3, or 13S, 13.2S, -13.4
@@ -26,11 +26,6 @@ type AirQualityAirQualityGetQueryParams struct {
 	// The full list of valid timezone strings can be found [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List).
 	//
 	Timezone *string `queryParam:"style=form,explode=true,name=timezone"`
-}
-
-type AirQualityAirQualityGetRequest struct {
-	QueryParams AirQualityAirQualityGetQueryParams
-	Security    AirQualityAirQualityGetSecurity
 }
 
 type AirQualityAirQualityGetResponse struct {

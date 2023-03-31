@@ -8,17 +8,12 @@ import (
 )
 
 type CompletePaymentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CompletePaymentPathParams struct {
-	// The unique ID identifying the payment to be completed.
-	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CompletePaymentRequest struct {
-	PathParams CompletePaymentPathParams
-	Security   CompletePaymentSecurity
+	// The unique ID identifying the payment to be completed.
+	PaymentID string `pathParam:"style=simple,explode=false,name=payment_id"`
 }
 
 type CompletePaymentResponse struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel - Cancels an execution of the given name.
-func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse, error) {
+func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(
 }
 
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate - Creates a new execution using the latest revision of the given workflow.
-func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateRequest) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateResponse, error) {
+func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/executions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecutionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate(
 }
 
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet - Returns an execution of the given name.
-func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetResponse, error) {
+func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet(ctx
 }
 
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsList - Returns a list of executions which belong to the workflow with the given name. The method returns executions of all workflow revisions. Returned executions are ordered by their start time (newest first).
-func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsList(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListRequest) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListResponse, error) {
+func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsList(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/executions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

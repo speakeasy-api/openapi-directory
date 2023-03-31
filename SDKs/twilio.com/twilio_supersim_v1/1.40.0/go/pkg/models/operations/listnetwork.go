@@ -12,10 +12,11 @@ var ListNetworkServerList = []string{
 }
 
 type ListNetworkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListNetworkQueryParams struct {
+type ListNetworkRequest struct {
 	// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Network resources to read.
 	IsoCountry *string `queryParam:"style=form,explode=true,name=IsoCountry"`
 	// The 'mobile country code' of a country. Network resources with this `mcc` in their `identifiers` will be read.
@@ -28,12 +29,6 @@ type ListNetworkQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListNetworkRequest struct {
-	QueryParams ListNetworkQueryParams
-	Security    ListNetworkSecurity
-	ServerURL   *string
 }
 
 type ListNetworkListNetworkResponseMeta struct {

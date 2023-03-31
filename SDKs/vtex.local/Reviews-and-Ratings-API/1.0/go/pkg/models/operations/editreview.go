@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type EditReviewPathParams struct {
-	// Review ID.
-	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
-}
-
-type EditReviewHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type EditReviewRequestBody struct {
 	// Review's locale.
 	Locale *string `json:"locale,omitempty"`
@@ -38,9 +26,13 @@ type EditReviewRequestBody struct {
 }
 
 type EditReviewRequest struct {
-	PathParams EditReviewPathParams
-	Headers    EditReviewHeaders
-	Request    EditReviewRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody EditReviewRequestBody `request:"mediaType=application/json"`
+	// Review ID.
+	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
 }
 
 // EditReview200ApplicationJSON - OK

@@ -16,10 +16,6 @@ type EnterpriseAdminCreateUserRequestBody struct {
 	Login string `json:"login"`
 }
 
-type EnterpriseAdminCreateUserRequest struct {
-	Request EnterpriseAdminCreateUserRequestBody `request:"mediaType=application/json"`
-}
-
 type EnterpriseAdminCreateUserResponse struct {
 	ContentType string
 	StatusCode  int

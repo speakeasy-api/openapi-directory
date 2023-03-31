@@ -1,0 +1,88 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/privatenetworks/2021-12-03/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        hmac="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.AcknowledgeOrderReceiptRequest(
+    request_body=operations.AcknowledgeOrderReceiptRequestBody(
+        order_arn="corrupti",
+    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+)
+    
+res = s.acknowledge_order_receipt(req)
+
+if res.acknowledge_order_receipt_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `acknowledge_order_receipt` - Acknowledges that the specified network order was received.
+* `activate_device_identifier` - Activates the specified device identifier.
+* `activate_network_site` - Activates the specified network site.
+* `configure_access_point` - <p>Configures the specified network resource. </p> <p> Use this action to specify the geographic position of the hardware. You must provide Certified Professional Installer (CPI) credentials in the request so that we can obtain spectrum grants. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/userguide/radio-units.html">Radio units</a> in the <i>Amazon Web Services Private 5G User Guide</i>. </p>
+* `create_network` - Creates a network.
+* `create_network_site` - Creates a network site.
+* `deactivate_device_identifier` - Deactivates the specified device identifier.
+* `delete_network` - Deletes the specified network. You must delete network sites before you delete the network. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/APIReference/API_DeleteNetworkSite.html">DeleteNetworkSite</a> in the <i>API Reference for Amazon Web Services Private 5G</i>.
+* `delete_network_site` - Deletes the specified network site. Return the hardware after you delete the network site. You are responsible for minimum charges. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/userguide/hardware-maintenance.html">Hardware returns</a> in the <i>Amazon Web Services Private 5G User Guide</i>. 
+* `get_device_identifier` - Gets the specified device identifier.
+* `get_network` - Gets the specified network.
+* `get_network_resource` - Gets the specified network resource.
+* `get_network_site` - Gets the specified network site.
+* `get_order` - Gets the specified order.
+* `list_device_identifiers` - <p>Lists device identifiers. Add filters to your request to return a more specific list of results. Use filters to match the Amazon Resource Name (ARN) of an order, the status of device identifiers, or the ARN of the traffic group.</p> <p>If you specify multiple filters, filters are joined with an OR, and the request returns results that match all of the specified filters.</p>
+* `list_network_resources` - <p>Lists network resources. Add filters to your request to return a more specific list of results. Use filters to match the Amazon Resource Name (ARN) of an order or the status of network resources.</p> <p>If you specify multiple filters, filters are joined with an OR, and the request returns results that match all of the specified filters.</p>
+* `list_network_sites` - Lists network sites. Add filters to your request to return a more specific list of results. Use filters to match the status of the network site.
+* `list_networks` - Lists networks. Add filters to your request to return a more specific list of results. Use filters to match the status of the network.
+* `list_orders` - <p>Lists orders. Add filters to your request to return a more specific list of results. Use filters to match the Amazon Resource Name (ARN) of the network site or the status of the order.</p> <p>If you specify multiple filters, filters are joined with an OR, and the request returns results that match all of the specified filters.</p>
+* `list_tags_for_resource` - Lists the tags for the specified resource.
+* `ping` - Checks the health of the service.
+* `start_network_resource_update` - <p>Starts an update of the specified network resource.</p> <p>After you submit a request to replace or return a network resource, the status of the network resource is <code>CREATING_SHIPPING_LABEL</code>. The shipping label is available when the status of the network resource is <code>PENDING_RETURN</code>. After the network resource is successfully returned, its status is <code>DELETED</code>. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/userguide/radio-units.html#return-radio-unit">Return a radio unit</a>.</p>
+* `tag_resource` -  Adds tags to the specified resource. 
+* `untag_resource` - Removes tags from the specified resource.
+* `update_network_site` - Updates the specified network site.
+* `update_network_site_plan` - Updates the specified network site plan.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -24,10 +24,6 @@ type BrowserBotRequestBody struct {
 	UserAgent *string `form:"name=user-agent"`
 }
 
-type BrowserBotRequest struct {
-	Request BrowserBotRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type BrowserBotResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError           *shared.APIError

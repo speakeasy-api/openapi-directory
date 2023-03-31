@@ -8,12 +8,7 @@ import (
 )
 
 type AddUcsManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddUcsManagerRequest struct {
-	Request  *shared.SwitchDataSource `request:"mediaType=application/json"`
-	Security AddUcsManagerSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddUcsManagerResponse struct {

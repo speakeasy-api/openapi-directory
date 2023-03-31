@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsRemoveSelectedRepoFromOrgSecretPathParams struct {
+type ActionsRemoveSelectedRepoFromOrgSecretRequest struct {
 	Org          string `pathParam:"style=simple,explode=false,name=org"`
 	RepositoryID int64  `pathParam:"style=simple,explode=false,name=repository_id"`
 	// secret_name parameter
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsRemoveSelectedRepoFromOrgSecretRequest struct {
-	PathParams ActionsRemoveSelectedRepoFromOrgSecretPathParams
 }
 
 type ActionsRemoveSelectedRepoFromOrgSecretResponse struct {

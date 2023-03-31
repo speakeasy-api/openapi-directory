@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type TeamsDeleteDiscussionCommentLegacyPathParams struct {
+type TeamsDeleteDiscussionCommentLegacyRequest struct {
 	// The number that identifies the comment.
 	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// The number that identifies the discussion.
 	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsDeleteDiscussionCommentLegacyRequest struct {
-	PathParams TeamsDeleteDiscussionCommentLegacyPathParams
 }
 
 type TeamsDeleteDiscussionCommentLegacyResponse struct {

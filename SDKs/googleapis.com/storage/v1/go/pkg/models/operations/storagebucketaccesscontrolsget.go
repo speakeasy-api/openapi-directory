@@ -8,13 +8,13 @@ import (
 )
 
 type StorageBucketAccessControlsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketAccessControlsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketAccessControlsGetSecurity struct {
@@ -22,16 +22,13 @@ type StorageBucketAccessControlsGetSecurity struct {
 	Option2 *StorageBucketAccessControlsGetSecurityOption2 `security:"option"`
 }
 
-type StorageBucketAccessControlsGetPathParams struct {
+type StorageBucketAccessControlsGetRequest struct {
+	// Data format for the response.
+	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Name of a bucket.
 	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-emailAddress, allUsers, or allAuthenticatedUsers.
 	Entity string `pathParam:"style=simple,explode=false,name=entity"`
-}
-
-type StorageBucketAccessControlsGetQueryParams struct {
-	// Data format for the response.
-	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -48,12 +45,6 @@ type StorageBucketAccessControlsGetQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageBucketAccessControlsGetRequest struct {
-	PathParams  StorageBucketAccessControlsGetPathParams
-	QueryParams StorageBucketAccessControlsGetQueryParams
-	Security    StorageBucketAccessControlsGetSecurity
 }
 
 type StorageBucketAccessControlsGetResponse struct {

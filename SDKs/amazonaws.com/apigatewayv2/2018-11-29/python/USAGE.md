@@ -3,69 +3,66 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateAPIRequest(
-    headers=operations.CreateAPIHeaders(
-        x_amz_algorithm="ex",
-        x_amz_content_sha256="iure",
-        x_amz_credential="et",
-        x_amz_date="quos",
-        x_amz_security_token="et",
-        x_amz_signature="explicabo",
-        x_amz_signed_headers="necessitatibus",
-    ),
-    request=operations.CreateAPIRequestBody(
-        api_key_selection_expression="veniam",
+    request_body=operations.CreateAPIRequestBody(
+        api_key_selection_expression="corrupti",
         cors_configuration=operations.CreateAPIRequestBodyCorsConfiguration(
-            allow_credentials={
-                "in": "odit",
-            },
-            allow_headers={
-                "corporis": "tenetur",
-                "esse": "similique",
-                "mollitia": "id",
-            },
-            allow_methods={
-                "quam": "maiores",
-                "totam": "iusto",
-                "aperiam": "repellendus",
-            },
-            allow_origins={
-                "eum": "earum",
-                "et": "officia",
-            },
-            expose_headers={
-                "dolor": "quia",
-            },
-            max_age={
-                "ea": "et",
-                "expedita": "recusandae",
-            },
+            allow_credentials=False,
+            allow_headers=[
+                "distinctio",
+                "quibusdam",
+                "unde",
+            ],
+            allow_methods=[
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
+            ],
+            allow_origins=[
+                "suscipit",
+                "iure",
+                "magnam",
+            ],
+            expose_headers=[
+                "ipsa",
+                "delectus",
+                "tempora",
+                "suscipit",
+            ],
+            max_age=477665,
         ),
-        credentials_arn="qui",
-        description="qui",
+        credentials_arn="minus",
+        description="placeat",
         disable_execute_api_endpoint=False,
-        disable_schema_validation=True,
-        name="cupiditate",
+        disable_schema_validation=False,
+        name="voluptatum",
         protocol_type="WEBSOCKET",
-        route_key="saepe",
-        route_selection_expression="sed",
+        route_key="excepturi",
+        route_selection_expression="nisi",
         tags={
-            "vel": "fugiat",
-            "nesciunt": "et",
-            "qui": "quis",
+            "temporibus": "ab",
+            "quis": "veritatis",
+            "deserunt": "perferendis",
+            "ipsam": "repellendus",
         },
-        target="eligendi",
-        version="velit",
+        target="sapiente",
+        version="quo",
     ),
+    x_amz_algorithm="odit",
+    x_amz_content_sha256="at",
+    x_amz_credential="at",
+    x_amz_date="maiores",
+    x_amz_security_token="molestiae",
+    x_amz_signature="quod",
+    x_amz_signed_headers="quod",
 )
     
 res = s.create_api(req)

@@ -8,23 +8,23 @@ import (
 )
 
 type DNSChangesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesGetSecurity struct {
@@ -34,16 +34,7 @@ type DNSChangesGetSecurity struct {
 	Option4 *DNSChangesGetSecurityOption4 `security:"option"`
 }
 
-type DNSChangesGetPathParams struct {
-	// The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
-	ChangeID string `pathParam:"style=simple,explode=false,name=changeId"`
-	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
-	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DNSChangesGetQueryParams struct {
+type DNSChangesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,28 +43,28 @@ type DNSChangesGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
+	ChangeID string `pathParam:"style=simple,explode=false,name=changeId"`
 	// For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
 	ClientOperationID *string `queryParam:"style=form,explode=true,name=clientOperationId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSChangesGetRequest struct {
-	PathParams  DNSChangesGetPathParams
-	QueryParams DNSChangesGetQueryParams
-	Security    DNSChangesGetSecurity
 }
 
 type DNSChangesGetResponse struct {

@@ -34,14 +34,14 @@ func newNetworkHealth(defaultClient, securityClient HTTPClient, serverURL, langu
 // Get the channel utilization over each radio for all APs in a network.
 func (s *networkHealth) GetNetworkNetworkHealthChannelUtilization(ctx context.Context, request operations.GetNetworkNetworkHealthChannelUtilizationRequest) (*operations.GetNetworkNetworkHealthChannelUtilizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/networkHealth/channelUtilization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/networkHealth/channelUtilization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

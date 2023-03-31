@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDAccountsPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostUsersIDAccountsRequestBodyTypeEnum - The type of the account.
 type PostUsersIDAccountsRequestBodyTypeEnum string
 
@@ -77,8 +72,9 @@ type PostUsersIDAccountsRequestBody struct {
 }
 
 type PostUsersIDAccountsRequest struct {
-	PathParams PostUsersIDAccountsPathParams
-	Request    *PostUsersIDAccountsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostUsersIDAccountsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostUsersIDAccountsResponse struct {

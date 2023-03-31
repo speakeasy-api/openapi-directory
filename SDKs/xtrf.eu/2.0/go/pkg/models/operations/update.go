@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePathParams struct {
+type UpdateRequest struct {
+	// Updated all view's information.
+	ViewDTO shared.ViewDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateRequest struct {
-	PathParams UpdatePathParams
-	// Updated all view's information.
-	Request shared.ViewDTO `request:"mediaType=application/json"`
 }
 
 type UpdateResponse struct {

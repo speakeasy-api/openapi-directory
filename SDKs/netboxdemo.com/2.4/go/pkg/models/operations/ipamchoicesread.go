@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type IpamChoicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type IpamChoicesReadRequest struct {
-	PathParams IpamChoicesReadPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type IpamChoicesReadResponse struct {

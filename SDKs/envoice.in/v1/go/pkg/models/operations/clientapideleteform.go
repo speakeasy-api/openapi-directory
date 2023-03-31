@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClientAPIDeleteFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type ClientAPIDeleteFormRequest struct {
-	Headers ClientAPIDeleteFormHeaders
-	Request shared.ClientDeleteAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	ClientDeleteAPIModel shared.ClientDeleteAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	XAuthKey             string                      `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret          string                      `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type ClientAPIDeleteFormResponse struct {

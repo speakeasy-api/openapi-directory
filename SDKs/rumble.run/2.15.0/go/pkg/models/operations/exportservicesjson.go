@@ -8,19 +8,14 @@ import (
 )
 
 type ExportServicesJSONSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type ExportServicesJSONQueryParams struct {
+type ExportServicesJSONRequest struct {
 	// an optional list of fields to export, comma-separated
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// an optional search string for filtering results
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type ExportServicesJSONRequest struct {
-	QueryParams ExportServicesJSONQueryParams
-	Security    ExportServicesJSONSecurity
 }
 
 type ExportServicesJSONResponse struct {

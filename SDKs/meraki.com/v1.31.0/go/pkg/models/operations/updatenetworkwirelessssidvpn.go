@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidVpnPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkWirelessSsidVpnRequestBodyConcentrator - The VPN concentrator settings for this SSID.
 type UpdateNetworkWirelessSsidVpnRequestBodyConcentrator struct {
 	// The NAT ID of the concentrator that should be set.
@@ -89,8 +84,9 @@ type UpdateNetworkWirelessSsidVpnRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidVpnRequest struct {
-	PathParams UpdateNetworkWirelessSsidVpnPathParams
-	Request    *UpdateNetworkWirelessSsidVpnRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidVpnRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                   `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                   `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidVpnResponse struct {

@@ -45,7 +45,7 @@ func (s *accountTiers) GetV2AccountTiersJSON(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *accountTiers) GetV2AccountTiersJSON(ctx context.Context, request operat
 // Fetches an account tier, by ID only.
 func (s *accountTiers) GetV2AccountTiersIDJSON(ctx context.Context, request operations.GetV2AccountTiersIDJSONRequest) (*operations.GetV2AccountTiersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/account_tiers/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/account_tiers/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

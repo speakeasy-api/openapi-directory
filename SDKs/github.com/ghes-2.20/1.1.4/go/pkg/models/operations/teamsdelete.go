@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type TeamsDeletePathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type TeamsDeleteRequest struct {
-	PathParams TeamsDeletePathParams
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsDeleteResponse struct {

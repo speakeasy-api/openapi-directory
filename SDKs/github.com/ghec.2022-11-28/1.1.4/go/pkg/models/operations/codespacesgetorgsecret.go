@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesGetOrgSecretPathParams struct {
+type CodespacesGetOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type CodespacesGetOrgSecretRequest struct {
-	PathParams CodespacesGetOrgSecretPathParams
 }
 
 type CodespacesGetOrgSecretResponse struct {

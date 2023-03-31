@@ -4,46 +4,44 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.IdsProjectsLocationsEndpointsCreateRequest(
-    security=operations.IdsProjectsLocationsEndpointsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.IdsProjectsLocationsEndpointsCreatePathParams(
-        parent="pariatur",
-    ),
-    query_params=operations.IdsProjectsLocationsEndpointsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="itaque",
-        alt="json",
-        callback="assumenda",
-        endpoint_id="architecto",
-        fields="id",
-        key="et",
-        oauth_token="voluptate",
-        pretty_print=False,
-        quota_user="quo",
-        request_id="sint",
-        upload_type="magnam",
-        upload_protocol="quis",
-    ),
-    request=shared.EndpointInput(
-        description="doloremque",
+    dollar_xgafv="2",
+    endpoint_input=shared.EndpointInput(
+        description="provident",
         labels={
-            "ratione": "sequi",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+            "illum": "vel",
         },
-        network="distinctio",
-        severity="HIGH",
+        network="error",
+        severity="MEDIUM",
+        threat_exceptions=[
+            "iure",
+            "magnam",
+        ],
         traffic_logs=False,
     ),
+    access_token="debitis",
+    alt="json",
+    callback="delectus",
+    endpoint_id="tempora",
+    fields_="suscipit",
+    key="molestiae",
+    oauth_token="minus",
+    parent="placeat",
+    pretty_print=False,
+    quota_user="voluptatum",
+    request_id="iusto",
+    upload_type="excepturi",
+    upload_protocol="nisi",
 )
     
-res = s.projects.ids_projects_locations_endpoints_create(req)
+res = s.projects.ids_projects_locations_endpoints_create(req, operations.IdsProjectsLocationsEndpointsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

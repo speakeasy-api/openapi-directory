@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateRepoPermissionsLegacyPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum - The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
 type TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum string
 
@@ -51,8 +42,13 @@ type TeamsAddOrUpdateRepoPermissionsLegacyRequestBody struct {
 }
 
 type TeamsAddOrUpdateRepoPermissionsLegacyRequest struct {
-	PathParams TeamsAddOrUpdateRepoPermissionsLegacyPathParams
-	Request    *TeamsAddOrUpdateRepoPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateRepoPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsAddOrUpdateRepoPermissionsLegacyResponse struct {

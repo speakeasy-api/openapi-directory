@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateDeploymentStatusPathParams struct {
-	// deployment_id parameter
-	DeploymentID int64 `pathParam:"style=simple,explode=false,name=deployment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreateDeploymentStatusRequestBodyEnvironmentEnum - Name for the target deployment environment, which can be changed when setting a deploy status. For example, `production`, `staging`, or `qa`.
 type ReposCreateDeploymentStatusRequestBodyEnvironmentEnum string
 
@@ -105,8 +96,13 @@ type ReposCreateDeploymentStatusRequestBody struct {
 }
 
 type ReposCreateDeploymentStatusRequest struct {
-	PathParams ReposCreateDeploymentStatusPathParams
-	Request    ReposCreateDeploymentStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateDeploymentStatusRequestBody `request:"mediaType=application/json"`
+	// deployment_id parameter
+	DeploymentID int64 `pathParam:"style=simple,explode=false,name=deployment_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateDeploymentStatusResponse struct {

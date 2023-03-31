@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05UsersAuthConfirmRawHeaders struct {
+type PostV05UsersAuthConfirmRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05UsersAuthConfirmRawRequest struct {
-	Headers PostV05UsersAuthConfirmRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05UsersAuthConfirmRawResponse struct {

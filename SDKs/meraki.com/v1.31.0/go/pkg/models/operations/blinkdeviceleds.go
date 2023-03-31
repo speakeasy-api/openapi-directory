@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type BlinkDeviceLedsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type BlinkDeviceLedsRequestBody struct {
 	// The duration in seconds. Must be between 5 and 120. Default is 20 seconds
 	Duration *int64 `json:"duration,omitempty"`
@@ -20,8 +16,8 @@ type BlinkDeviceLedsRequestBody struct {
 }
 
 type BlinkDeviceLedsRequest struct {
-	PathParams BlinkDeviceLedsPathParams
-	Request    *BlinkDeviceLedsRequestBody `request:"mediaType=application/json"`
+	RequestBody *BlinkDeviceLedsRequestBody `request:"mediaType=application/json"`
+	Serial      string                      `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type BlinkDeviceLedsResponse struct {

@@ -44,7 +44,7 @@ func (s *emailHistory) FetchEmailHistories(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -100,7 +100,7 @@ func (s *emailHistory) FetchEmailHistories(ctx context.Context, request operatio
 // Get an email history by id
 func (s *emailHistory) FetchEmailHistory(ctx context.Context, request operations.FetchEmailHistoryRequest) (*operations.FetchEmailHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email_history/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/email_history/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -8,18 +8,13 @@ import (
 )
 
 type CreateFolderSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateFolderHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateFolderRequest struct {
-	Headers  CreateFolderHeaders
-	Request  *shared.Folder `request:"mediaType=application/json"`
-	Security CreateFolderSecurity
+	Folder *shared.Folder `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type CreateFolderResponse struct {

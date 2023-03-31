@@ -3,65 +3,73 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.SendCommandRequest(
-    headers=operations.SendCommandHeaders(
-        x_amz_algorithm="cum",
-        x_amz_content_sha256="repellat",
-        x_amz_credential="quaerat",
-        x_amz_date="velit",
-        x_amz_security_token="magni",
-        x_amz_signature="delectus",
-        x_amz_signed_headers="vel",
-        x_amz_target="QLDBSession.SendCommand",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.SendCommandRequest(
+)
+
+
+req = operations.SendCommandRequest(
+    send_command_request=shared.SendCommandRequest(
         abort_transaction={
-            "nihil": "laudantium",
-            "magni": "vel",
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
         },
         commit_transaction=shared.CommitTransactionRequest(
-            commit_digest="eaque",
-            transaction_id="incidunt",
+            commit_digest="illum",
+            transaction_id="vel",
         ),
         end_session={
-            "magnam": "accusamus",
-            "occaecati": "rerum",
+            "deserunt": "suscipit",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
         execute_statement=shared.ExecuteStatementRequest(
             parameters=[
                 shared.ValueHolder(
-                    ion_binary="ut",
-                    ion_text="consequatur",
+                    ion_binary="tempora",
+                    ion_text="suscipit",
                 ),
                 shared.ValueHolder(
-                    ion_binary="sequi",
-                    ion_text="omnis",
+                    ion_binary="molestiae",
+                    ion_text="minus",
+                ),
+                shared.ValueHolder(
+                    ion_binary="placeat",
+                    ion_text="voluptatum",
+                ),
+                shared.ValueHolder(
+                    ion_binary="iusto",
+                    ion_text="excepturi",
                 ),
             ],
-            statement="quis",
-            transaction_id="labore",
+            statement="nisi",
+            transaction_id="recusandae",
         ),
         fetch_page=shared.FetchPageRequest(
-            next_page_token="sapiente",
-            transaction_id="accusamus",
+            next_page_token="temporibus",
+            transaction_id="ab",
         ),
-        session_token="velit",
+        session_token="quis",
         start_session=shared.StartSessionRequest(
-            ledger_name="amet",
+            ledger_name="veritatis",
         ),
         start_transaction={
-            "sunt": "molestias",
+            "perferendis": "ipsam",
+            "repellendus": "sapiente",
+            "quo": "odit",
         },
     ),
+    x_amz_algorithm="at",
+    x_amz_content_sha256="at",
+    x_amz_credential="maiores",
+    x_amz_date="molestiae",
+    x_amz_security_token="quod",
+    x_amz_signature="quod",
+    x_amz_signed_headers="esse",
+    x_amz_target="QLDBSession.SendCommand",
 )
     
 res = s.send_command(req)

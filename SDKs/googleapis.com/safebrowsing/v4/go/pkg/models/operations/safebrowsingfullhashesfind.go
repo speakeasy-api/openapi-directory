@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SafebrowsingFullHashesFindQueryParams struct {
+type SafebrowsingFullHashesFindRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                       *shared.XgafvEnum                                         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleSecuritySafebrowsingV4FindFullHashesRequest *shared.GoogleSecuritySafebrowsingV4FindFullHashesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,11 +31,6 @@ type SafebrowsingFullHashesFindQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SafebrowsingFullHashesFindRequest struct {
-	QueryParams SafebrowsingFullHashesFindQueryParams
-	Request     *shared.GoogleSecuritySafebrowsingV4FindFullHashesRequest `request:"mediaType=application/json"`
 }
 
 type SafebrowsingFullHashesFindResponse struct {

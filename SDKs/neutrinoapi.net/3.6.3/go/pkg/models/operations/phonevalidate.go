@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PhoneValidateQueryParams struct {
+type PhoneValidateRequest struct {
 	// ISO 2-letter country code, assume numbers are based in this country. If not set numbers are assumed to be in international format (with or without the leading + sign)
 	CountryCode *string `queryParam:"style=form,explode=true,name=country-code"`
 	// Pass in a users IP address and we will assume numbers are based in the country of the IP address
 	IP *string `queryParam:"style=form,explode=true,name=ip"`
 	// A phone number. This can be in international format (E.164) or local format. If passing local format you must also set either the 'country-code' OR 'ip' options as well
 	Number string `queryParam:"style=form,explode=true,name=number"`
-}
-
-type PhoneValidateRequest struct {
-	QueryParams PhoneValidateQueryParams
 }
 
 type PhoneValidateResponse struct {

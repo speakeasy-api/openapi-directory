@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuoteIDFromInternalIDPathParams struct {
+type GetQuoteIDFromInternalIDRequest struct {
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetQuoteIDFromInternalIDRequest struct {
-	PathParams GetQuoteIDFromInternalIDPathParams
 }
 
 type GetQuoteIDFromInternalIDResponse struct {

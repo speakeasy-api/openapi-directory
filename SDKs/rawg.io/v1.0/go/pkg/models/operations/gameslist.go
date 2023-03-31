@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesListQueryParams struct {
+type GamesListRequest struct {
 	// Filter by creators, for example: `78,28` or `cris-velasco,mike-morasky`.
 	Creators *string `queryParam:"style=form,explode=true,name=creators"`
 	// Filter by a release date, for example: `2010-01-01,2018-12-31.1960-01-01,1969-12-31`.
@@ -54,10 +54,6 @@ type GamesListQueryParams struct {
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
 	// Filter by an update date, for example: `2020-12-01,2020-12-31`.
 	Updated *string `queryParam:"style=form,explode=true,name=updated"`
-}
-
-type GamesListRequest struct {
-	QueryParams GamesListQueryParams
 }
 
 type GamesList200ApplicationJSON struct {

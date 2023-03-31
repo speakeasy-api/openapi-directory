@@ -14,10 +14,6 @@ type PostSftpHostKeysRequestBody struct {
 	PrivateKey *string `multipartForm:"name=private_key"`
 }
 
-type PostSftpHostKeysRequest struct {
-	Request *PostSftpHostKeysRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostSftpHostKeysResponse struct {
 	ContentType string
 	// The SftpHostKeys object.

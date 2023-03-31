@@ -32,11 +32,11 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DfareportingReportsCompatibleFieldsQuery - Returns the fields that are compatible to be selected in the respective sections of a report criteria, given the fields already selected in the input report and user permissions.
-func (s *reports) DfareportingReportsCompatibleFieldsQuery(ctx context.Context, request operations.DfareportingReportsCompatibleFieldsQueryRequest) (*operations.DfareportingReportsCompatibleFieldsQueryResponse, error) {
+func (s *reports) DfareportingReportsCompatibleFieldsQuery(ctx context.Context, request operations.DfareportingReportsCompatibleFieldsQueryRequest, security operations.DfareportingReportsCompatibleFieldsQuerySecurity) (*operations.DfareportingReportsCompatibleFieldsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/compatiblefields/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/compatiblefields/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Report", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *reports) DfareportingReportsCompatibleFieldsQuery(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *reports) DfareportingReportsCompatibleFieldsQuery(ctx context.Context, 
 }
 
 // DfareportingReportsDelete - Deletes a report by its ID.
-func (s *reports) DfareportingReportsDelete(ctx context.Context, request operations.DfareportingReportsDeleteRequest) (*operations.DfareportingReportsDeleteResponse, error) {
+func (s *reports) DfareportingReportsDelete(ctx context.Context, request operations.DfareportingReportsDeleteRequest, security operations.DfareportingReportsDeleteSecurity) (*operations.DfareportingReportsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *reports) DfareportingReportsDelete(ctx context.Context, request operati
 }
 
 // DfareportingReportsFilesGet - Retrieves a report file by its report ID and file ID. This method supports media download.
-func (s *reports) DfareportingReportsFilesGet(ctx context.Context, request operations.DfareportingReportsFilesGetRequest) (*operations.DfareportingReportsFilesGetResponse, error) {
+func (s *reports) DfareportingReportsFilesGet(ctx context.Context, request operations.DfareportingReportsFilesGetRequest, security operations.DfareportingReportsFilesGetSecurity) (*operations.DfareportingReportsFilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *reports) DfareportingReportsFilesGet(ctx context.Context, request opera
 }
 
 // DfareportingReportsFilesList - Lists files for a report.
-func (s *reports) DfareportingReportsFilesList(ctx context.Context, request operations.DfareportingReportsFilesListRequest) (*operations.DfareportingReportsFilesListResponse, error) {
+func (s *reports) DfareportingReportsFilesList(ctx context.Context, request operations.DfareportingReportsFilesListRequest, security operations.DfareportingReportsFilesListSecurity) (*operations.DfareportingReportsFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,20 +222,20 @@ func (s *reports) DfareportingReportsFilesList(ctx context.Context, request oper
 }
 
 // DfareportingReportsGet - Retrieves a report by its ID.
-func (s *reports) DfareportingReportsGet(ctx context.Context, request operations.DfareportingReportsGetRequest) (*operations.DfareportingReportsGetResponse, error) {
+func (s *reports) DfareportingReportsGet(ctx context.Context, request operations.DfareportingReportsGetRequest, security operations.DfareportingReportsGetSecurity) (*operations.DfareportingReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,11 +270,11 @@ func (s *reports) DfareportingReportsGet(ctx context.Context, request operations
 }
 
 // DfareportingReportsInsert - Creates a report.
-func (s *reports) DfareportingReportsInsert(ctx context.Context, request operations.DfareportingReportsInsertRequest) (*operations.DfareportingReportsInsertResponse, error) {
+func (s *reports) DfareportingReportsInsert(ctx context.Context, request operations.DfareportingReportsInsertRequest, security operations.DfareportingReportsInsertSecurity) (*operations.DfareportingReportsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Report", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,11 +286,11 @@ func (s *reports) DfareportingReportsInsert(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -325,20 +325,20 @@ func (s *reports) DfareportingReportsInsert(ctx context.Context, request operati
 }
 
 // DfareportingReportsList - Retrieves list of reports.
-func (s *reports) DfareportingReportsList(ctx context.Context, request operations.DfareportingReportsListRequest) (*operations.DfareportingReportsListResponse, error) {
+func (s *reports) DfareportingReportsList(ctx context.Context, request operations.DfareportingReportsListRequest, security operations.DfareportingReportsListSecurity) (*operations.DfareportingReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -373,11 +373,11 @@ func (s *reports) DfareportingReportsList(ctx context.Context, request operation
 }
 
 // DfareportingReportsPatch - Updates an existing report. This method supports patch semantics.
-func (s *reports) DfareportingReportsPatch(ctx context.Context, request operations.DfareportingReportsPatchRequest) (*operations.DfareportingReportsPatchResponse, error) {
+func (s *reports) DfareportingReportsPatch(ctx context.Context, request operations.DfareportingReportsPatchRequest, security operations.DfareportingReportsPatchSecurity) (*operations.DfareportingReportsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Report", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,11 +389,11 @@ func (s *reports) DfareportingReportsPatch(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -428,20 +428,20 @@ func (s *reports) DfareportingReportsPatch(ctx context.Context, request operatio
 }
 
 // DfareportingReportsRun - Runs a report.
-func (s *reports) DfareportingReportsRun(ctx context.Context, request operations.DfareportingReportsRunRequest) (*operations.DfareportingReportsRunResponse, error) {
+func (s *reports) DfareportingReportsRun(ctx context.Context, request operations.DfareportingReportsRunRequest, security operations.DfareportingReportsRunSecurity) (*operations.DfareportingReportsRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}/run", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}/run", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -476,11 +476,11 @@ func (s *reports) DfareportingReportsRun(ctx context.Context, request operations
 }
 
 // DfareportingReportsUpdate - Updates a report.
-func (s *reports) DfareportingReportsUpdate(ctx context.Context, request operations.DfareportingReportsUpdateRequest) (*operations.DfareportingReportsUpdateResponse, error) {
+func (s *reports) DfareportingReportsUpdate(ctx context.Context, request operations.DfareportingReportsUpdateRequest, security operations.DfareportingReportsUpdateSecurity) (*operations.DfareportingReportsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/reports/{reportId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Report", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -492,11 +492,11 @@ func (s *reports) DfareportingReportsUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

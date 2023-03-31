@@ -8,23 +8,23 @@ import (
 )
 
 type DeploymentmanagerManifestsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerManifestsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerManifestsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerManifestsGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerManifestsGetSecurity struct {
@@ -34,16 +34,7 @@ type DeploymentmanagerManifestsGetSecurity struct {
 	Option4 *DeploymentmanagerManifestsGetSecurityOption4 `security:"option"`
 }
 
-type DeploymentmanagerManifestsGetPathParams struct {
-	// The name of the deployment for this request.
-	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
-	// The name of the manifest for this request.
-	Manifest string `pathParam:"style=simple,explode=false,name=manifest"`
-	// The project ID for this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DeploymentmanagerManifestsGetQueryParams struct {
+type DeploymentmanagerManifestsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,26 +43,26 @@ type DeploymentmanagerManifestsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The name of the deployment for this request.
+	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the manifest for this request.
+	Manifest string `pathParam:"style=simple,explode=false,name=manifest"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DeploymentmanagerManifestsGetRequest struct {
-	PathParams  DeploymentmanagerManifestsGetPathParams
-	QueryParams DeploymentmanagerManifestsGetQueryParams
-	Security    DeploymentmanagerManifestsGetSecurity
 }
 
 type DeploymentmanagerManifestsGetResponse struct {

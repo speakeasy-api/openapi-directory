@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMeRequest struct {
-	Request *shared.UserUpdateContent `request:"mediaType=application/json"`
-}
-
 type UpdateMeResponse struct {
 	ContentType string
 	// UserNotFound

@@ -9,19 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePolicyModulePathParams struct {
+type DeletePolicyModuleRequest struct {
 	// The name of a policy module
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletePolicyModuleQueryParams struct {
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type DeletePolicyModuleRequest struct {
-	PathParams  DeletePolicyModulePathParams
-	QueryParams DeletePolicyModuleQueryParams
 }
 
 type DeletePolicyModule200ApplicationJSONExplanationLocalsKey struct {

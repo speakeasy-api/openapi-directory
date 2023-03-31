@@ -8,18 +8,14 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsServingConfigsSearchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsServingConfigsSearchPathParams struct {
-	// Required. The resource name of the Retail Search serving config, such as `projects/*/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the name of the legacy placement resource, such as `projects/*/locations/global/catalogs/default_catalog/placements/default_search`. This field is used to identify the serving config name and the set of models that will be used to make the search.
-	Placement string `pathParam:"style=simple,explode=false,name=placement"`
-}
-
-type RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams struct {
+type RetailProjectsLocationsCatalogsServingConfigsSearchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                           *shared.XgafvEnum                             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudRetailV2alphaSearchRequest *shared.GoogleCloudRetailV2alphaSearchRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The resource name of the Retail Search serving config, such as `projects/*/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the name of the legacy placement resource, such as `projects/*/locations/global/catalogs/default_catalog/placements/default_search`. This field is used to identify the serving config name and the set of models that will be used to make the search.
+	Placement string `pathParam:"style=simple,explode=false,name=placement"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RetailProjectsLocationsCatalogsServingConfigsSearchRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsServingConfigsSearchPathParams
-	QueryParams RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams
-	Request     *shared.GoogleCloudRetailV2alphaSearchRequest `request:"mediaType=application/json"`
-	Security    RetailProjectsLocationsCatalogsServingConfigsSearchSecurity
 }
 
 type RetailProjectsLocationsCatalogsServingConfigsSearchResponse struct {

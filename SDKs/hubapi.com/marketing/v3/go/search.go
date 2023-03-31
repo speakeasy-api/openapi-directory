@@ -36,7 +36,7 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GetMarketingV3MarketingEventsEventsSearchDoSearch - Search for marketing events
 // Search for marketing events that have an event id that starts with the query string
-func (s *search) GetMarketingV3MarketingEventsEventsSearchDoSearch(ctx context.Context, request operations.GetMarketingV3MarketingEventsEventsSearchDoSearchRequest) (*operations.GetMarketingV3MarketingEventsEventsSearchDoSearchResponse, error) {
+func (s *search) GetMarketingV3MarketingEventsEventsSearchDoSearch(ctx context.Context, request operations.GetMarketingV3MarketingEventsEventsSearchDoSearchRequest, security operations.GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity) (*operations.GetMarketingV3MarketingEventsEventsSearchDoSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/marketing/v3/marketing-events/events/search"
 
@@ -45,11 +45,11 @@ func (s *search) GetMarketingV3MarketingEventsEventsSearchDoSearch(ctx context.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

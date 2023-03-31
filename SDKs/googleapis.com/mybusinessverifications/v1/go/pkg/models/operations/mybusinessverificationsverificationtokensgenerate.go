@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessverificationsVerificationTokensGenerateQueryParams struct {
+type MybusinessverificationsVerificationTokensGenerateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                      *shared.XgafvEnum                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GenerateVerificationTokenRequest *shared.GenerateVerificationTokenRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,11 +31,6 @@ type MybusinessverificationsVerificationTokensGenerateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessverificationsVerificationTokensGenerateRequest struct {
-	QueryParams MybusinessverificationsVerificationTokensGenerateQueryParams
-	Request     *shared.GenerateVerificationTokenRequest `request:"mediaType=application/json"`
 }
 
 type MybusinessverificationsVerificationTokensGenerateResponse struct {

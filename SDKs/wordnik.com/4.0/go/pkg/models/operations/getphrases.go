@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetPhrasesPathParams struct {
-	// Word to fetch phrases for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetPhrasesUseCanonicalEnum - If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 type GetPhrasesUseCanonicalEnum string
 
@@ -37,18 +32,15 @@ func (e *GetPhrasesUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPhrasesQueryParams struct {
+type GetPhrasesRequest struct {
 	// Maximum number of results to return
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetPhrasesUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
 	// Minimum WLMI for the phrase
 	Wlmi *int `queryParam:"style=form,explode=true,name=wlmi"`
-}
-
-type GetPhrasesRequest struct {
-	PathParams  GetPhrasesPathParams
-	QueryParams GetPhrasesQueryParams
+	// Word to fetch phrases for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetPhrasesResponse struct {

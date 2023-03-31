@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETMapsUsingGET1PathParams struct {
+type GETMapsUsingGET1Request struct {
 	// RGD term acc
 	AccID string `pathParam:"style=simple,explode=false,name=accId"`
-}
-
-type GETMapsUsingGET1Request struct {
-	PathParams GETMapsUsingGET1PathParams
 }
 
 type GETMapsUsingGET1Response struct {

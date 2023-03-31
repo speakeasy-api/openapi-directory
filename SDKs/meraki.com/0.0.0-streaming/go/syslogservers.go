@@ -34,7 +34,7 @@ func newSyslogServers(defaultClient, securityClient HTTPClient, serverURL, langu
 // List the syslog servers for a network
 func (s *syslogServers) GetNetworkSyslogServers(ctx context.Context, request operations.GetNetworkSyslogServersRequest) (*operations.GetNetworkSyslogServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *syslogServers) GetNetworkSyslogServers(ctx context.Context, request ope
 // Update the syslog servers for a network
 func (s *syslogServers) UpdateNetworkSyslogServers(ctx context.Context, request operations.UpdateNetworkSyslogServersRequest) (*operations.UpdateNetworkSyslogServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

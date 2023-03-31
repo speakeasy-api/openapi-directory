@@ -43,7 +43,6 @@ pkg/models/shared/listauctionpackagesresponse.go
 pkg/models/shared/auctionpackage.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/subscribeclientsrequest.go
 pkg/models/shared/unsubscribeclientsrequest.go
 pkg/models/shared/client.go

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSellOrderRawPathParams struct {
+type PutSellOrderRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	OrderID     string `pathParam:"style=simple,explode=false,name=order_id"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type PutSellOrderRawRequest struct {
-	PathParams PutSellOrderRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type PutSellOrderRawResponse struct {

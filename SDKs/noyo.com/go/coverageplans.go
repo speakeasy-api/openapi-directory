@@ -35,9 +35,9 @@ func newCoveragePlans(defaultClient, securityClient HTTPClient, serverURL, langu
 // Here you can associate a plan with a line of coverage and then pass information about the plan like the name, network, waiting periods, and other details.
 func (s *coveragePlans) CreateCoveragePlan(ctx context.Context, request operations.CreateCoveragePlanRequest) (*operations.CreateCoveragePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CoveragePlanCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *coveragePlans) CreateCoveragePlan(ctx context.Context, request operatio
 // Edit a coverage plan based on the ID provided. The version parameter must match the latest coverage plan version.
 func (s *coveragePlans) EditCoveragePlan(ctx context.Context, request operations.EditCoveragePlanRequest) (*operations.EditCoveragePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CoveragePlanEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *coveragePlans) EditCoveragePlan(ctx context.Context, request operations
 // Returns the latest version of a single coverage plan based on the ID provided.
 func (s *coveragePlans) GetCoveragePlan(ctx context.Context, request operations.GetCoveragePlanRequest) (*operations.GetCoveragePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +190,7 @@ func (s *coveragePlans) GetCoveragePlan(ctx context.Context, request operations.
 // Returns a list of all coverage plans for a given group coverage
 func (s *coveragePlans) GetGroupCoveragePlans(ctx context.Context, request operations.GetGroupCoveragePlansRequest) (*operations.GetGroupCoveragePlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

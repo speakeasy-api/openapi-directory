@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UserDeletePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UserDeleteActionEnum - Delete action options:<br>`disassociate` - Disassociate a user.<br>`delete`-  Permanently delete a user.<br>Note: To delete pending user in the account, use `disassociate`
 type UserDeleteActionEnum string
 
@@ -37,7 +32,7 @@ func (e *UserDeleteActionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UserDeleteQueryParams struct {
+type UserDeleteRequest struct {
 	// Delete action options:<br>`disassociate` - Disassociate a user.<br>`delete`-  Permanently delete a user.<br>Note: To delete pending user in the account, use `disassociate`
 	Action *UserDeleteActionEnum `queryParam:"style=form,explode=true,name=action"`
 	// Transfer email.
@@ -48,11 +43,8 @@ type UserDeleteQueryParams struct {
 	TransferRecording *bool `queryParam:"style=form,explode=true,name=transfer_recording"`
 	// Transfer webinar.
 	TransferWebinar *bool `queryParam:"style=form,explode=true,name=transfer_webinar"`
-}
-
-type UserDeleteRequest struct {
-	PathParams  UserDeletePathParams
-	QueryParams UserDeleteQueryParams
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserDeleteResponse struct {

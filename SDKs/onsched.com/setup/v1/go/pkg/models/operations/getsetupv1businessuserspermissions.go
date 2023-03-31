@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1BusinessusersPermissionsQueryParams struct {
+type GetSetupV1BusinessusersPermissionsRequest struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Filter permissions by role
 	Role *string `queryParam:"style=form,explode=true,name=role"`
-}
-
-type GetSetupV1BusinessusersPermissionsRequest struct {
-	QueryParams GetSetupV1BusinessusersPermissionsQueryParams
 }
 
 type GetSetupV1BusinessusersPermissionsResponse struct {

@@ -3,30 +3,24 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
-req = operations.GetDeleteListenerRequest(
-    query_params=operations.GetDeleteListenerQueryParams(
-        action="DeleteListener",
-        listener_arn="voluptate",
-        version="2015-12-01",
-    ),
-    headers=operations.GetDeleteListenerHeaders(
-        x_amz_algorithm="autem",
-        x_amz_content_sha256="sed",
-        x_amz_credential="voluptas",
-        x_amz_date="adipisci",
-        x_amz_security_token="exercitationem",
-        x_amz_signature="deserunt",
-        x_amz_signed_headers="ex",
-    ),
+
+
+req = operations.GETDeleteListenerRequest(
+    action="DeleteListener",
+    listener_arn="corrupti",
+    version="2015-12-01",
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
 )
     
 res = s.get_delete_listener(req)

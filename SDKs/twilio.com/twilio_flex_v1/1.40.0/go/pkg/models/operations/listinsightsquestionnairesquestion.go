@@ -12,10 +12,11 @@ var ListInsightsQuestionnairesQuestionServerList = []string{
 }
 
 type ListInsightsQuestionnairesQuestionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListInsightsQuestionnairesQuestionQueryParams struct {
+type ListInsightsQuestionnairesQuestionRequest struct {
 	// The list of category IDs
 	CategoryID []string `queryParam:"style=form,explode=true,name=CategoryId"`
 	// The page index. This value is simply for client state.
@@ -24,18 +25,8 @@ type ListInsightsQuestionnairesQuestionQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListInsightsQuestionnairesQuestionHeaders struct {
 	// The Token HTTP request header
 	Token *string `header:"style=simple,explode=false,name=Token"`
-}
-
-type ListInsightsQuestionnairesQuestionRequest struct {
-	QueryParams ListInsightsQuestionnairesQuestionQueryParams
-	Headers     ListInsightsQuestionnairesQuestionHeaders
-	Security    ListInsightsQuestionnairesQuestionSecurity
-	ServerURL   *string
 }
 
 type ListInsightsQuestionnairesQuestionListInsightsQuestionnairesQuestionResponseMeta struct {

@@ -12,20 +12,15 @@ var FetchEngagementContextServerList = []string{
 }
 
 type FetchEngagementContextSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchEngagementContextPathParams struct {
+type FetchEngagementContextRequest struct {
 	// The SID of the Engagement.
 	EngagementSid string `pathParam:"style=simple,explode=false,name=EngagementSid"`
 	// The SID of the Flow.
 	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
-}
-
-type FetchEngagementContextRequest struct {
-	PathParams FetchEngagementContextPathParams
-	Security   FetchEngagementContextSecurity
-	ServerURL  *string
 }
 
 type FetchEngagementContextResponse struct {

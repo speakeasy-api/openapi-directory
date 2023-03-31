@@ -104,7 +104,7 @@ func (s *SDK) GetOrders(ctx context.Context, request operations.GetOrdersRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -146,7 +146,7 @@ func (s *SDK) GetOrders(ctx context.Context, request operations.GetOrdersRequest
 // Gets the details of a specific `order`, including a paginated list of all its lines.
 func (s *SDK) GetOrdersOrderID(ctx context.Context, request operations.GetOrdersOrderIDRequest) (*operations.GetOrdersOrderIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{orderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

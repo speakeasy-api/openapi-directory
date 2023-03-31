@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostQuoteDislikeSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostQuoteDislikeQueryParams struct {
-	// Quote ID
-	QuoteID string `queryParam:"style=form,explode=true,name=quote_id"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type PostQuoteDislikeRequest struct {
-	QueryParams PostQuoteDislikeQueryParams
-	Security    PostQuoteDislikeSecurity
+	// Quote ID
+	QuoteID string `queryParam:"style=form,explode=true,name=quote_id"`
 }
 
 type PostQuoteDislikeResponse struct {

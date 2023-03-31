@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteWarehousePathParams struct {
+type DeleteWarehouseRequest struct {
 	// Warehouse ID
 	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouse_id"`
-}
-
-type DeleteWarehouseRequest struct {
-	PathParams DeleteWarehousePathParams
 }
 
 type DeleteWarehouseResponse struct {

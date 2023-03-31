@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerFeedsReadPathParams struct {
+type DcimPowerFeedsReadRequest struct {
 	// A unique integer value identifying this power feed.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerFeedsReadRequest struct {
-	PathParams DcimPowerFeedsReadPathParams
 }
 
 type DcimPowerFeedsReadResponse struct {

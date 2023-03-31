@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSyncLdapMappingForUserPathParams struct {
+type EnterpriseAdminSyncLdapMappingForUserRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type EnterpriseAdminSyncLdapMappingForUserRequest struct {
-	PathParams EnterpriseAdminSyncLdapMappingForUserPathParams
 }
 
 // EnterpriseAdminSyncLdapMappingForUser201ApplicationJSON - Response

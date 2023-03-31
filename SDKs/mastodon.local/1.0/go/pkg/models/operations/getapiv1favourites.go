@@ -8,18 +8,13 @@ import (
 )
 
 type GetAPIV1FavouritesSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1FavouritesQueryParams struct {
-	Limit *string `queryParam:"style=form,explode=true,name=limit"`
-	MaxID *string `queryParam:"style=form,explode=true,name=max_id"`
-	MinID *string `queryParam:"style=form,explode=true,name=min_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1FavouritesRequest struct {
-	QueryParams GetAPIV1FavouritesQueryParams
-	Security    GetAPIV1FavouritesSecurity
+	Limit *string `queryParam:"style=form,explode=true,name=limit"`
+	MaxID *string `queryParam:"style=form,explode=true,name=max_id"`
+	MinID *string `queryParam:"style=form,explode=true,name=min_id"`
 }
 
 type GetAPIV1FavouritesResponse struct {

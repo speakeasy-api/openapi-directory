@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type RegistrationsCitationReadPathParams struct {
+type RegistrationsCitationReadRequest struct {
 	// The unique identifier of the citation.
 	CitationID string `pathParam:"style=simple,explode=false,name=citation_id"`
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsCitationReadRequest struct {
-	PathParams RegistrationsCitationReadPathParams
 }
 
 // RegistrationsCitationReadCitationDetailAttributes - The properties of the citation entity.

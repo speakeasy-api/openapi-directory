@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeletePadUsingGETQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type DeletePadUsingGETRequest struct {
-	QueryParams DeletePadUsingGETQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // DeletePadUsingGET500ApplicationJSON - internal api error (code 2)

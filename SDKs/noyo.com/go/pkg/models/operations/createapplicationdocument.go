@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateApplicationDocumentPathParams struct {
+type CreateApplicationDocumentRequest struct {
+	ApplicationDocumentCreateRequest shared.ApplicationDocumentCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type CreateApplicationDocumentRequest struct {
-	PathParams CreateApplicationDocumentPathParams
-	Request    shared.ApplicationDocumentCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateApplicationDocumentResponse struct {

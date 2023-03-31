@@ -10,10 +10,6 @@ type UpdatePaginationRequestBody struct {
 	MaxTotalHits *float64 `json:"maxTotalHits,omitempty"`
 }
 
-type UpdatePaginationRequest struct {
-	Request *UpdatePaginationRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdatePaginationResponse struct {
 	ContentType string
 	StatusCode  int

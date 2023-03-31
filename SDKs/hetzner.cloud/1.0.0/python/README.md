@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/hetzner.cloud/1.0.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,13 +15,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetActionsRequest(
-    query_params=operations.GetActionsQueryParams(
-        id=7105271836128858469,
-        sort="status:asc",
-        status="running",
-    ),
+    id=548814,
+    sort="progress:asc",
+    status="error",
 )
     
 res = s.actions.get_actions(req)
@@ -32,20 +31,21 @@ if res.actions_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Actions
+
+### actions
 
 * `get_actions` - Get all Actions
 * `get_actions_id_` - Get an Action
 
-### Certificate Actions
+### certificate_actions
 
 * `get_certificates_id_actions` - Get all Actions for a Certificate
 * `get_certificates_id_actions_action_id_` - Get an Action for a Certificate
 * `post_certificates_id_actions_retry` - Retry Issuance or Renewal
 
-### Certificates
+### certificates
 
 * `delete_certificates_id_` - Delete a Certificate
 * `get_certificates` - Get all Certificates
@@ -53,12 +53,12 @@ if res.actions_response is not None:
 * `post_certificates` - Create a Certificate
 * `put_certificates_id_` - Update a Certificate
 
-### Datacenters
+### datacenters
 
 * `get_datacenters` - Get all Datacenters
 * `get_datacenters_id_` - Get a Datacenter
 
-### Firewall Actions
+### firewall_actions
 
 * `get_firewalls_id_actions` - Get all Actions for a Firewall
 * `get_firewalls_id_actions_action_id_` - Get an Action for a Firewall
@@ -66,7 +66,7 @@ if res.actions_response is not None:
 * `post_firewalls_id_actions_remove_from_resources` - Remove from Resources
 * `post_firewalls_id_actions_set_rules` - Set Rules
 
-### Firewalls
+### firewalls
 
 * `delete_firewalls_id_` - Delete a Firewall
 * `get_firewalls` - Get all Firewalls
@@ -74,7 +74,7 @@ if res.actions_response is not None:
 * `post_firewalls` - Create a Firewall
 * `put_firewalls_id_` - Update a Firewall
 
-### Floating IP Actions
+### floating_ip_actions
 
 * `get_floating_ips_id_actions` - Get all Actions for a Floating IP
 * `get_floating_ips_id_actions_action_id_` - Get an Action for a Floating IP
@@ -83,7 +83,7 @@ if res.actions_response is not None:
 * `post_floating_ips_id_actions_change_protection` - Change Floating IP Protection
 * `post_floating_ips_id_actions_unassign` - Unassign a Floating IP
 
-### Floating IPs
+### floating_i_ps
 
 * `delete_floating_ips_id_` - Delete a Floating IP
 * `get_floating_ips` - Get all Floating IPs
@@ -91,25 +91,25 @@ if res.actions_response is not None:
 * `post_floating_ips` - Create a Floating IP
 * `put_floating_ips_id_` - Update a Floating IP
 
-### ISOs
+### is_os
 
 * `get_isos` - Get all ISOs
 * `get_isos_id_` - Get an ISO
 
-### Image Actions
+### image_actions
 
 * `get_images_id_actions` - Get all Actions for an Image
 * `get_images_id_actions_action_id_` - Get an Action for an Image
 * `post_images_id_actions_change_protection` - Change Image Protection
 
-### Images
+### images
 
 * `delete_images_id_` - Delete an Image
 * `get_images` - Get all Images
 * `get_images_id_` - Get an Image
 * `put_images_id_` - Update an Image
 
-### Load Balancer Actions
+### load_balancer_actions
 
 * `get_load_balancers_id_actions` - Get all Actions for a Load Balancer
 * `get_load_balancers_id_actions_action_id_` - Get an Action for a Load Balancer
@@ -127,12 +127,12 @@ if res.actions_response is not None:
 * `post_load_balancers_id_actions_remove_target` - Remove Target
 * `post_load_balancers_id_actions_update_service` - Update Service
 
-### Load Balancer Types
+### load_balancer_types
 
 * `get_load_balancer_types` - Get all Load Balancer Types
 * `get_load_balancer_types_id_` - Get a Load Balancer Type
 
-### Load Balancers
+### load_balancers
 
 * `delete_load_balancers_id_` - Delete a Load Balancer
 * `get_load_balancers` - Get all Load Balancers
@@ -141,12 +141,12 @@ if res.actions_response is not None:
 * `post_load_balancers` - Create a Load Balancer
 * `put_load_balancers_id_` - Update a Load Balancer
 
-### Locations
+### locations
 
 * `get_locations` - Get all Locations
 * `get_locations_id_` - Get a Location
 
-### Network Actions
+### network_actions
 
 * `get_networks_id_actions` - Get all Actions for a Network
 * `get_networks_id_actions_action_id_` - Get an Action for a Network
@@ -157,7 +157,7 @@ if res.actions_response is not None:
 * `post_networks_id_actions_delete_route` - Delete a route from a Network
 * `post_networks_id_actions_delete_subnet` - Delete a subnet from a Network
 
-### Networks
+### networks
 
 * `delete_networks_id_` - Delete a Network
 * `get_networks` - Get all Networks
@@ -165,7 +165,7 @@ if res.actions_response is not None:
 * `post_networks` - Create a Network
 * `put_networks_id_` - Update a Network
 
-### Placement Groups
+### placement_groups
 
 * `delete_placement_groups_id_` - Delete a PlacementGroup
 * `get_placement_groups` - Get all PlacementGroups
@@ -173,11 +173,26 @@ if res.actions_response is not None:
 * `post_placement_groups` - Create a PlacementGroup
 * `put_placement_groups_id_` - Update a PlacementGroup
 
-### Pricing
+### pricing
 
 * `get_pricing` - Get all prices
 
-### SSH Keys
+### primary_ip_actions
+
+* `post_primary_ips_id_actions_assign` - Assign a Primary IP to a resource
+* `post_primary_ips_id_actions_change_dns_ptr` - Change reverse DNS entry for a Primary IP
+* `post_primary_ips_id_actions_change_protection` - Change Primary IP Protection
+* `post_primary_ips_id_actions_unassign` - Unassign a Primary IP from a resource
+
+### primary_i_ps
+
+* `delete_primary_ips_id_` - Delete a Primary IP
+* `get_primary_ips` - Get all Primary IPs
+* `get_primary_ips_id_` - Get a Primary IP
+* `post_primary_ips` - Create a Primary IP
+* `put_primary_ips_id_` - Update a Primary IP
+
+### ssh_keys
 
 * `delete_ssh_keys_id_` - Delete an SSH key
 * `get_ssh_keys` - Get all SSH keys
@@ -185,7 +200,7 @@ if res.actions_response is not None:
 * `post_ssh_keys` - Create an SSH key
 * `put_ssh_keys_id_` - Update an SSH key
 
-### Server Actions
+### server_actions
 
 * `get_servers_id_actions` - Get all Actions for a Server
 * `get_servers_id_actions_action_id_` - Get an Action for a Server
@@ -213,12 +228,12 @@ if res.actions_response is not None:
 * `post_servers_id_actions_reset_password` - Reset root Password of a Server
 * `post_servers_id_actions_shutdown` - Shutdown a Server
 
-### Server Types
+### server_types
 
 * `get_server_types` - Get all Server Types
 * `get_server_types_id_` - Get a Server Type
 
-### Servers
+### servers
 
 * `delete_servers_id_` - Delete a Server
 * `get_servers` - Get all Servers
@@ -227,7 +242,7 @@ if res.actions_response is not None:
 * `post_servers` - Create a Server
 * `put_servers_id_` - Update a Server
 
-### Volume Actions
+### volume_actions
 
 * `get_volumes_id_actions` - Get all Actions for a Volume
 * `get_volumes_id_actions_action_id_` - Get an Action for a Volume
@@ -236,14 +251,24 @@ if res.actions_response is not None:
 * `post_volumes_id_actions_detach` - Detach Volume
 * `post_volumes_id_actions_resize` - Resize Volume
 
-### Volumes
+### volumes
 
 * `delete_volumes_id_` - Delete a Volume
 * `get_volumes` - Get all Volumes
 * `get_volumes_id_` - Get a Volume
 * `post_volumes` - Create a Volume
 * `put_volumes_id_` - Update a Volume
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

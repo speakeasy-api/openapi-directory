@@ -10,45 +10,6 @@ import (
 	"net/http"
 )
 
-type AccountSettingsUpdatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-// AccountSettingsUpdateOptionEnum
-type AccountSettingsUpdateOptionEnum string
-
-const (
-	AccountSettingsUpdateOptionEnumMeetingAuthentication   AccountSettingsUpdateOptionEnum = "meeting_authentication"
-	AccountSettingsUpdateOptionEnumRecordingAuthentication AccountSettingsUpdateOptionEnum = "recording_authentication"
-	AccountSettingsUpdateOptionEnumSecurity                AccountSettingsUpdateOptionEnum = "security"
-	AccountSettingsUpdateOptionEnumMeetingSecurity         AccountSettingsUpdateOptionEnum = "meeting_security"
-)
-
-func (e *AccountSettingsUpdateOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "meeting_authentication":
-		fallthrough
-	case "recording_authentication":
-		fallthrough
-	case "security":
-		fallthrough
-	case "meeting_security":
-		*e = AccountSettingsUpdateOptionEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountSettingsUpdateOptionEnum: %s", s)
-	}
-}
-
-type AccountSettingsUpdateQueryParams struct {
-	Option *AccountSettingsUpdateOptionEnum `queryParam:"style=form,explode=true,name=option"`
-}
-
 // AccountSettingsUpdateApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
 // `enhanced_encryption`: Enhanced encryption. Encryption is stored in the cloud if you enable this option. <br>
 //
@@ -1358,10 +1319,41 @@ func (u AccountSettingsUpdateApplicationJSON) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
+// AccountSettingsUpdateOptionEnum
+type AccountSettingsUpdateOptionEnum string
+
+const (
+	AccountSettingsUpdateOptionEnumMeetingAuthentication   AccountSettingsUpdateOptionEnum = "meeting_authentication"
+	AccountSettingsUpdateOptionEnumRecordingAuthentication AccountSettingsUpdateOptionEnum = "recording_authentication"
+	AccountSettingsUpdateOptionEnumSecurity                AccountSettingsUpdateOptionEnum = "security"
+	AccountSettingsUpdateOptionEnumMeetingSecurity         AccountSettingsUpdateOptionEnum = "meeting_security"
+)
+
+func (e *AccountSettingsUpdateOptionEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "meeting_authentication":
+		fallthrough
+	case "recording_authentication":
+		fallthrough
+	case "security":
+		fallthrough
+	case "meeting_security":
+		*e = AccountSettingsUpdateOptionEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AccountSettingsUpdateOptionEnum: %s", s)
+	}
+}
+
 type AccountSettingsUpdateRequest struct {
-	PathParams  AccountSettingsUpdatePathParams
-	QueryParams AccountSettingsUpdateQueryParams
-	Request     AccountSettingsUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody AccountSettingsUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string                           `pathParam:"style=simple,explode=false,name=accountId"`
+	Option    *AccountSettingsUpdateOptionEnum `queryParam:"style=form,explode=true,name=option"`
 }
 
 type AccountSettingsUpdateResponse struct {

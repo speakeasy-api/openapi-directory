@@ -1,0 +1,103 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/gamesparks/2021-08-17/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        hmac="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.CreateGameRequest(
+    request_body=operations.CreateGameRequestBody(
+        client_token="corrupti",
+        description="provident",
+        game_name="distinctio",
+        tags={
+            "unde": "nulla",
+            "corrupti": "illum",
+            "vel": "error",
+            "deserunt": "suscipit",
+        },
+    ),
+    x_amz_algorithm="iure",
+    x_amz_content_sha256="magnam",
+    x_amz_credential="debitis",
+    x_amz_date="ipsa",
+    x_amz_security_token="delectus",
+    x_amz_signature="tempora",
+    x_amz_signed_headers="suscipit",
+)
+    
+res = s.create_game(req)
+
+if res.create_game_result is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `create_game` -  Creates a new game with an empty configuration. After creating your game, you can update the configuration using <code>UpdateGameConfiguration</code> or <code>ImportGameConfiguration</code>. 
+* `create_snapshot` - Creates a snapshot of the game configuration.
+* `create_stage` - Creates a new stage for stage-by-stage game development and deployment.
+* `delete_game` - Deletes a game.
+* `delete_stage` - Deletes a stage from a game, along with the associated game runtime.
+* `disconnect_player` - <p>Disconnects a player from the game runtime.</p> <p> If a player has multiple connections, this operation attempts to close all of them. </p>
+* `export_snapshot` - Exports a game configuration snapshot.
+* `get_extension` - Gets details about a specified extension.
+* `get_extension_version` - Gets details about a specified extension version.
+* `get_game` - Gets details about a game.
+* `get_game_configuration` - Gets the configuration of the game.
+* `get_generated_code_job` - Gets details about a job that is generating code for a snapshot.
+* `get_player_connection_status` - <p>Gets the status of a player's connection to the game runtime.</p> <p> It's possible for a single player to have multiple connections to the game runtime. If a player is not connected, this operation returns an empty list. </p>
+* `get_snapshot` - Gets a copy of the game configuration in a snapshot.
+* `get_stage` - Gets information about a stage.
+* `get_stage_deployment` - Gets information about a stage deployment.
+* `import_game_configuration` - <p>Imports a game configuration.</p> <p> This operation replaces the current configuration of the game with the provided input. This is not a reversible operation. If you want to preserve the previous configuration, use <code>CreateSnapshot</code> to make a new snapshot before importing. </p>
+* `list_extension_versions` - <p>Gets a paginated list of available versions for the extension.</p> <p> Each time an API change is made to an extension, the version is incremented. The list retrieved by this operation shows the versions that are currently available. </p>
+* `list_extensions` - <p>Gets a paginated list of available extensions.</p> <p> Extensions provide features that games can use from scripts. </p>
+* `list_games` - Gets a paginated list of games.
+* `list_generated_code_jobs` - Gets a paginated list of code generation jobs for a snapshot.
+* `list_snapshots` - Gets a paginated list of snapshot summaries from the game.
+* `list_stage_deployments` - Gets a paginated list of stage deployment summaries from the game.
+* `list_stages` - Gets a paginated list of stage summaries from the game.
+* `list_tags_for_resource` - Lists the tags associated with a GameSparks resource.
+* `start_generated_code_job` -  Starts an asynchronous process that generates client code for system-defined and custom messages. The resulting code is collected as a .zip file and uploaded to a pre-signed Amazon S3 URL. 
+* `start_stage_deployment` - <p>Deploys a snapshot to the stage and creates a new game runtime.</p> <p> After you call this operation, you can check the deployment status by using <code>GetStageDeployment</code>. </p> <p> If there are any players connected to the previous game runtime, then both runtimes persist. Existing connections to the previous runtime are maintained. When players disconnect and reconnect, they connect to the new runtime. After there are no connections to the previous game runtime, it is deleted. </p>
+* `tag_resource` - Adds tags to a GameSparks resource.
+* `untag_resource` - Removes tags from a GameSparks resource.
+* `update_game` - Updates details of the game.
+* `update_game_configuration` - Updates one or more sections of the game configuration.
+* `update_snapshot` - Updates the metadata of a GameSparks snapshot.
+* `update_stage` - Updates the metadata of a stage.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

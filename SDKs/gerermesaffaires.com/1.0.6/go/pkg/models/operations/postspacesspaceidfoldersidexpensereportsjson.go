@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDExpenseReportsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDExpenseReportsJSONPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDExpenseReportsApplicationJSON2AccountingWorkbookEnum string
@@ -171,10 +163,12 @@ func (u PostSpacesSpaceIDFoldersIDExpenseReportsApplicationJSON) MarshalJSON() (
 }
 
 type PostSpacesSpaceIDFoldersIDExpenseReportsJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDExpenseReportsJSONPathParams
 	// expense proof to add (either DocumentId, ExpenseDate either (File,Name,Content64Encoded,Title,ExpenseDate) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDExpenseReportsApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDExpenseReportsJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDExpenseReportsApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDExpenseReportsJSON201ApplicationJSON - Id of expense report created

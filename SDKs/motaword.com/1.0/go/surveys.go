@@ -35,14 +35,14 @@ func newSurveys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Get survey questions in given scope and type
 func (s *surveys) GetQuestions(ctx context.Context, request operations.GetQuestionsRequest) (*operations.GetQuestionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -94,9 +94,9 @@ func (s *surveys) GetQuestions(ctx context.Context, request operations.GetQuesti
 // Post survey answers for scope and type
 func (s *surveys) SubmitAnswers(ctx context.Context, request operations.SubmitAnswersRequest) (*operations.SubmitAnswersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SurveyAnswers", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

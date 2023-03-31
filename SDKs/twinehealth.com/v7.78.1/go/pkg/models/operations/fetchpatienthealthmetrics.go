@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchPatientHealthMetricsQueryParams struct {
+type FetchPatientHealthMetricsRequest struct {
 	// Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
 	//
 	FilterGroups *string `queryParam:"style=form,explode=true,name=filter[groups]"`
@@ -25,10 +25,6 @@ type FetchPatientHealthMetricsQueryParams struct {
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page[number]"`
 	// Page size
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type FetchPatientHealthMetricsRequest struct {
-	QueryParams FetchPatientHealthMetricsQueryParams
 }
 
 type FetchPatientHealthMetricsResponse struct {

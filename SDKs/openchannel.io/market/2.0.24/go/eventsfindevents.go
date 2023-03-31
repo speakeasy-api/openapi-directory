@@ -35,7 +35,7 @@ func newEventsFindEvents(defaultClient, securityClient HTTPClient, serverURL, la
 // - Results are returned for the market provided within the basic authentication credentials
 func (s *eventsFindEvents) GetEventsEventID(ctx context.Context, request operations.GetEventsEventIDRequest) (*operations.GetEventsEventIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{eventId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{eventId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

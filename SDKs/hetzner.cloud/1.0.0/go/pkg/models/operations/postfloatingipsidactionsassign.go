@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostFloatingIpsIDActionsAssignPathParams struct {
-	// ID of the Floating IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostFloatingIpsIDActionsAssignAssignFloatingIPRequest - #### Call specific error codes
 //
 // | Code                          | Description                                                   |
@@ -24,8 +19,9 @@ type PostFloatingIpsIDActionsAssignAssignFloatingIPRequest struct {
 }
 
 type PostFloatingIpsIDActionsAssignRequest struct {
-	PathParams PostFloatingIpsIDActionsAssignPathParams
-	Request    *PostFloatingIpsIDActionsAssignAssignFloatingIPRequest `request:"mediaType=application/json"`
+	RequestBody *PostFloatingIpsIDActionsAssignAssignFloatingIPRequest `request:"mediaType=application/json"`
+	// ID of the Floating IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostFloatingIpsIDActionsAssignActionResponseActionError - Error message for the Action if error occurred, otherwise null

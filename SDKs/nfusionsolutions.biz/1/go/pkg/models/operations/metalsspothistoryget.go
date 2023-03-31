@@ -84,7 +84,7 @@ func (e *MetalsSpotHistoryGETUnitofmeasureEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type MetalsSpotHistoryGETQueryParams struct {
+type MetalsSpotHistoryGETRequest struct {
 	// comma separated list of conversion currencies, defaults to USD
 	Currency *string `queryParam:"style=form,explode=true,name=currency"`
 	// end date of time period. format is <i>yyyy-mm-dd</i>. Default is current date.
@@ -120,10 +120,6 @@ type MetalsSpotHistoryGETQueryParams struct {
 	// ct=carat
 	// dwt=pennyweight
 	Unitofmeasure *MetalsSpotHistoryGETUnitofmeasureEnum `queryParam:"style=form,explode=true,name=unitofmeasure"`
-}
-
-type MetalsSpotHistoryGETRequest struct {
-	QueryParams MetalsSpotHistoryGETQueryParams
 }
 
 type MetalsSpotHistoryGETResponse struct {

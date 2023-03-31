@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDOtherTaxesJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDOtherTaxesJSONPathParams struct {
-	// Id of the folder tax contract
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDOtherTaxesApplicationJSON2AccountingWorkbookEnum string
@@ -166,10 +158,12 @@ func (u PostSpacesSpaceIDFoldersIDOtherTaxesApplicationJSON) MarshalJSON() ([]by
 }
 
 type PostSpacesSpaceIDFoldersIDOtherTaxesJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDOtherTaxesJSONPathParams
 	// Other tax declaration to add (either (Reference,DocumentId) either (File,Name,Content64Encoded,Title,Reference) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDOtherTaxesApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDOtherTaxesJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDOtherTaxesApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder tax contract
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDOtherTaxesJSON201ApplicationJSON - Id of document created

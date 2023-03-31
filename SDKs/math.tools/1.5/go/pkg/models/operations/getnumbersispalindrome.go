@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersIsPalindromeSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNumbersIsPalindromeQueryParams struct {
-	// Number to check
-	Number *int64 `queryParam:"style=form,explode=true,name=number"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
 type GetNumbersIsPalindromeRequest struct {
-	QueryParams GetNumbersIsPalindromeQueryParams
-	Security    GetNumbersIsPalindromeSecurity
+	// Number to check
+	Number *int64 `queryParam:"style=form,explode=true,name=number"`
 }
 
 type GetNumbersIsPalindromeResponse struct {

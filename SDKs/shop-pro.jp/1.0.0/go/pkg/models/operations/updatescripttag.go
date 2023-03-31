@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateScriptTagPathParams struct {
-	// スクリプトタグID
-	ScriptTagID int64 `pathParam:"style=simple,explode=false,name=scriptTagId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateScriptTagRequestBodyScriptTagDisplayScopeEnum - スクリプトを出力するページ。
@@ -72,10 +66,10 @@ type UpdateScriptTagRequestBody struct {
 }
 
 type UpdateScriptTagRequest struct {
-	PathParams UpdateScriptTagPathParams
 	// 作成するスクリプトタグの情報
-	Request  *UpdateScriptTagRequestBody `request:"mediaType=application/json"`
-	Security UpdateScriptTagSecurity
+	RequestBody *UpdateScriptTagRequestBody `request:"mediaType=application/json"`
+	// スクリプトタグID
+	ScriptTagID int64 `pathParam:"style=simple,explode=false,name=scriptTagId"`
 }
 
 // UpdateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum - スクリプトを出力するページ。

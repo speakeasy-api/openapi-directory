@@ -4,33 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AutoCheckInSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
-}
-
-type AutoCheckInPathParams struct {
-	// Ticket number
-	Ticketnumber string `pathParam:"style=simple,explode=false,name=ticketnumber"`
-}
-
-type AutoCheckInQueryParams struct {
-	// Email address
-	EmailAddress string `queryParam:"style=form,explode=true,name=emailAddress"`
-}
-
-type AutoCheckInHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AutoCheckInRequest struct {
-	PathParams  AutoCheckInPathParams
-	QueryParams AutoCheckInQueryParams
-	Headers     AutoCheckInHeaders
-	Security    AutoCheckInSecurity
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Email address
+	EmailAddress string `queryParam:"style=form,explode=true,name=emailAddress"`
+	// Ticket number
+	Ticketnumber string `pathParam:"style=simple,explode=false,name=ticketnumber"`
 }
 
 type AutoCheckInResponse struct {

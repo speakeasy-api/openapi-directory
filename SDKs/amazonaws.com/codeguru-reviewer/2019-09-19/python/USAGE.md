@@ -3,54 +3,51 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AssociateRepositoryRequest(
-    headers=operations.AssociateRepositoryHeaders(
-        x_amz_algorithm="voluptas",
-        x_amz_content_sha256="nulla",
-        x_amz_credential="numquam",
-        x_amz_date="et",
-        x_amz_security_token="officiis",
-        x_amz_signature="sequi",
-        x_amz_signed_headers="vel",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.AssociateRepositoryRequestBody(
-        client_request_token="et",
-        kms_key_details=operations.AssociateRepositoryRequestBodyKmsKeyDetails(
-            encryption_option="AWS_OWNED_CMK",
-            kms_key_id="aliquid",
+)
+
+
+req = operations.AssociateRepositoryRequest(
+    request_body=operations.AssociateRepositoryRequestBody(
+        client_request_token="corrupti",
+        kms_key_details=operations.AssociateRepositoryRequestBodyKMSKeyDetails(
+            encryption_option="CUSTOMER_MANAGED_CMK",
+            kms_key_id="distinctio",
         ),
         repository=operations.AssociateRepositoryRequestBodyRepository(
             bitbucket=shared.ThirdPartySourceRepository(
-                connection_arn="autem",
-                name="asperiores",
-                owner="tempora",
+                connection_arn="quibusdam",
+                name="unde",
+                owner="nulla",
             ),
             code_commit=shared.CodeCommitRepository(
-                name="voluptate",
+                name="corrupti",
             ),
             git_hub_enterprise_server=shared.ThirdPartySourceRepository(
-                connection_arn="est",
-                name="nostrum",
-                owner="mollitia",
+                connection_arn="illum",
+                name="vel",
+                owner="error",
             ),
             s3_bucket=shared.S3Repository(
-                bucket_name="aut",
-                name="recusandae",
+                bucket_name="deserunt",
+                name="suscipit",
             ),
         ),
         tags={
-            "quas": "repellendus",
+            "magnam": "debitis",
+            "ipsa": "delectus",
         },
     ),
+    x_amz_algorithm="tempora",
+    x_amz_content_sha256="suscipit",
+    x_amz_credential="molestiae",
+    x_amz_date="minus",
+    x_amz_security_token="placeat",
+    x_amz_signature="voluptatum",
+    x_amz_signed_headers="iusto",
 )
     
 res = s.associate_repository(req)

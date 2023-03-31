@@ -8,17 +8,13 @@ import (
 )
 
 type FindDataExporterConfigByIDSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindDataExporterConfigByIDPathParams struct {
-	// The data exporter config id
-	DataExporterConfigID string `pathParam:"style=simple,explode=false,name=dataExporterConfigId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindDataExporterConfigByIDRequest struct {
-	PathParams FindDataExporterConfigByIDPathParams
-	Security   FindDataExporterConfigByIDSecurity
+	// The data exporter config id
+	DataExporterConfigID string `pathParam:"style=simple,explode=false,name=dataExporterConfigId"`
 }
 
 type FindDataExporterConfigByIDResponse struct {

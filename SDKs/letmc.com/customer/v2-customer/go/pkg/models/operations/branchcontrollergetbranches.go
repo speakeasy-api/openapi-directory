@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BranchControllerGetBranchesPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type BranchControllerGetBranchesQueryParams struct {
+type BranchControllerGetBranchesRequest struct {
 	// The maximum number of items to return (up to 1000 per request)
 	Count int `queryParam:"style=form,explode=true,name=count"`
 	// The index of the first item to return
 	Offset int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type BranchControllerGetBranchesRequest struct {
-	PathParams  BranchControllerGetBranchesPathParams
-	QueryParams BranchControllerGetBranchesQueryParams
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type BranchControllerGetBranchesResponse struct {

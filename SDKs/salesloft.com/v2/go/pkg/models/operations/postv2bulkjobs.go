@@ -13,10 +13,6 @@ type PostV2BulkJobsRequestBody struct {
 	Type string `form:"name=type"`
 }
 
-type PostV2BulkJobsRequest struct {
-	Request *PostV2BulkJobsRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2BulkJobsResponse struct {
 	Body        []byte
 	ContentType string

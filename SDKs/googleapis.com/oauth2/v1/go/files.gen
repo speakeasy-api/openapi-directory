@@ -17,6 +17,5 @@ pkg/models/operations/oauth2userinfov2meget.go
 pkg/models/operations/oauth2tokeninfo.go
 pkg/models/shared/userinfo.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/tokeninfo.go
 USAGE.md

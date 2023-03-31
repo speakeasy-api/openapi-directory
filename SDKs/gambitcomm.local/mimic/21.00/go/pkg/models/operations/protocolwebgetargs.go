@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolWebGetArgsPathParams struct {
+type ProtocolWebGetArgsRequest struct {
 	// Agent to show the WEB argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolWebGetArgsRequest struct {
-	PathParams ProtocolWebGetArgsPathParams
 }
 
 type ProtocolWebGetArgsResponse struct {

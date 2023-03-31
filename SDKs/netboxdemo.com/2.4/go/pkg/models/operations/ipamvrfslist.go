@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVrfsListQueryParams struct {
+type IpamVrfsListRequest struct {
 	EnforceUnique *string `queryParam:"style=form,explode=true,name=enforce_unique"`
 	// Multiple values may be separated by commas.
 	IDIn *string `queryParam:"style=form,explode=true,name=id__in"`
@@ -21,10 +21,6 @@ type IpamVrfsListQueryParams struct {
 	Tag      *string `queryParam:"style=form,explode=true,name=tag"`
 	Tenant   *string `queryParam:"style=form,explode=true,name=tenant"`
 	TenantID *string `queryParam:"style=form,explode=true,name=tenant_id"`
-}
-
-type IpamVrfsListRequest struct {
-	QueryParams IpamVrfsListQueryParams
 }
 
 type IpamVrfsList200ApplicationJSON struct {

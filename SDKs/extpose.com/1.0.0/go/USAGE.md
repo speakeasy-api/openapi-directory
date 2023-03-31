@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetUserExtensionsRequest{
-        Security: operations.GetUserExtensionsSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.User.GetUserExtensions(ctx, req)
+    res, err := s.User.GetUserExtensions(ctx)
     if err != nil {
         log.Fatal(err)
     }

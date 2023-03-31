@@ -8,23 +8,14 @@ import (
 )
 
 type PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PatchMarketingV3MarketingEventsEventsExternalEventIDUpdatePathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
-}
-
-type PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateQueryParams struct {
-	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateRequest struct {
-	PathParams  PatchMarketingV3MarketingEventsEventsExternalEventIDUpdatePathParams
-	QueryParams PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateQueryParams
-	Request     shared.MarketingEventUpdateRequestParams `request:"mediaType=application/json"`
-	Security    PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateSecurity
+	MarketingEventUpdateRequestParams shared.MarketingEventUpdateRequestParams `request:"mediaType=application/json"`
+	ExternalAccountID                 string                                   `queryParam:"style=form,explode=true,name=externalAccountId"`
+	ExternalEventID                   string                                   `pathParam:"style=simple,explode=false,name=externalEventId"`
 }
 
 type PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateResponse struct {

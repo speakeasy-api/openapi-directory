@@ -9,38 +9,6 @@ import (
 	"time"
 )
 
-// GetTruckDistanceOutputFormatOutputFormatEnum - Format of representation
-type GetTruckDistanceOutputFormatOutputFormatEnum string
-
-const (
-	GetTruckDistanceOutputFormatOutputFormatEnumJSON GetTruckDistanceOutputFormatOutputFormatEnum = "json"
-	GetTruckDistanceOutputFormatOutputFormatEnumKml  GetTruckDistanceOutputFormatOutputFormatEnum = "kml"
-	GetTruckDistanceOutputFormatOutputFormatEnumHTML GetTruckDistanceOutputFormatOutputFormatEnum = "html"
-)
-
-func (e *GetTruckDistanceOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "kml":
-		fallthrough
-	case "html":
-		*e = GetTruckDistanceOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetTruckDistanceOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetTruckDistanceOutputFormatPathParams struct {
-	// Format of representation
-	OutputFormat GetTruckDistanceOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetTruckDistanceOutputFormatCriteriaEnum - Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
 type GetTruckDistanceOutputFormatCriteriaEnum string
 
@@ -89,6 +57,33 @@ func (e *GetTruckDistanceOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte
 	}
 }
 
+// GetTruckDistanceOutputFormatOutputFormatEnum - Format of representation
+type GetTruckDistanceOutputFormatOutputFormatEnum string
+
+const (
+	GetTruckDistanceOutputFormatOutputFormatEnumJSON GetTruckDistanceOutputFormatOutputFormatEnum = "json"
+	GetTruckDistanceOutputFormatOutputFormatEnumKml  GetTruckDistanceOutputFormatOutputFormatEnum = "kml"
+	GetTruckDistanceOutputFormatOutputFormatEnumHTML GetTruckDistanceOutputFormatOutputFormatEnum = "html"
+)
+
+func (e *GetTruckDistanceOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "kml":
+		fallthrough
+	case "html":
+		*e = GetTruckDistanceOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTruckDistanceOutputFormatOutputFormatEnum: %s", s)
+	}
+}
+
 // GetTruckDistanceOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetTruckDistanceOutputFormatOutputSrsEnum string
 
@@ -131,7 +126,7 @@ func (e *GetTruckDistanceOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetTruckDistanceOutputFormatQueryParams struct {
+type GetTruckDistanceOutputFormatRequest struct {
 	// If true, route starts and ends on same side of road as start and end points.Default is false.
 	CorrectSide *bool `queryParam:"style=form,explode=true,name=correctSide"`
 	// Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
@@ -142,6 +137,8 @@ type GetTruckDistanceOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *GetTruckDistanceOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
+	// Format of representation
+	OutputFormat GetTruckDistanceOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetTruckDistanceOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'>points</a>
@@ -152,11 +149,6 @@ type GetTruckDistanceOutputFormatQueryParams struct {
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
 	// The truck route multiplier value is used to multiply the cost of using roads that are not truck routes.
 	TruckRouteMultiplier *int64 `queryParam:"style=form,explode=true,name=truckRouteMultiplier"`
-}
-
-type GetTruckDistanceOutputFormatRequest struct {
-	PathParams  GetTruckDistanceOutputFormatPathParams
-	QueryParams GetTruckDistanceOutputFormatQueryParams
 }
 
 type GetTruckDistanceOutputFormatResponse struct {

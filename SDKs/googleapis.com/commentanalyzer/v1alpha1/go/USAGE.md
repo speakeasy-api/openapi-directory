@@ -14,87 +14,86 @@ func main() {
     s := sdk.New()
 
     req := operations.CommentanalyzerCommentsAnalyzeRequest{
-        Security: operations.CommentanalyzerCommentsAnalyzeSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.CommentanalyzerCommentsAnalyzeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.AnalyzeCommentRequest{
-            ClientToken: "deserunt",
+        DollarXgafv: "2",
+        AnalyzeCommentRequest: &shared.AnalyzeCommentRequest{
+            ClientToken: "provident",
             Comment: &shared.TextEntry{
-                Text: "suscipit",
-                Type: "PLAIN_TEXT",
+                Text: "distinctio",
+                Type: "HTML",
             },
-            CommunityID: "magnam",
+            CommunityID: "unde",
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "debitis",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: "nulla",
+                        Type: "PLAIN_TEXT",
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "delectus",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: "illum",
+                        Type: "PLAIN_TEXT",
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "molestiae",
-                        Type: "HTML",
+                        Text: "deserunt",
+                        Type: "PLAIN_TEXT",
                     },
                     shared.TextEntry{
-                        Text: "placeat",
-                        Type: "PLAIN_TEXT",
+                        Text: "iure",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
+                    },
+                    shared.TextEntry{
+                        Text: "debitis",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                 },
             },
             DoNotStore: false,
             DropUnsupportedAttributes: false,
             Languages: []string{
-                "excepturi",
-                "nisi",
+                "tempora",
+                "suscipit",
+                "molestiae",
+                "minus",
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
-                "temporibus": shared.AttributeParameters{
-                    ScoreThreshold: 710.36,
-                    ScoreType: "PROBABILITY",
+                "voluptatum": shared.AttributeParameters{
+                    ScoreThreshold: 4799.77,
+                    ScoreType: "STD_DEV_SCORE",
                 },
-                "veritatis": shared.AttributeParameters{
-                    ScoreThreshold: 6481.72,
+                "nisi": shared.AttributeParameters{
+                    ScoreThreshold: 9255.97,
+                    ScoreType: "RAW",
+                },
+                "ab": shared.AttributeParameters{
+                    ScoreThreshold: 3373.96,
                     ScoreType: "SCORE_TYPE_UNSPECIFIED",
                 },
-                "ipsam": shared.AttributeParameters{
-                    ScoreThreshold: 8326.2,
-                    ScoreType: "RAW",
-                },
-                "quo": shared.AttributeParameters{
-                    ScoreThreshold: 1403.5,
-                    ScoreType: "RAW",
+                "deserunt": shared.AttributeParameters{
+                    ScoreThreshold: 202.18,
+                    ScoreType: "PROBABILITY",
                 },
             },
-            SessionID: "at",
+            SessionID: "repellendus",
             SpanAnnotations: false,
         },
+        AccessToken: "sapiente",
+        Alt: "proto",
+        Callback: "odit",
+        Fields: "at",
+        Key: "at",
+        OauthToken: "maiores",
+        PrettyPrint: false,
+        QuotaUser: "molestiae",
+        UploadType: "quod",
+        UploadProtocol: "quod",
     }
 
     ctx := context.Background()
-    res, err := s.Comments.CommentanalyzerCommentsAnalyze(ctx, req)
+    res, err := s.Comments.CommentanalyzerCommentsAnalyze(ctx, req, operations.CommentanalyzerCommentsAnalyzeSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

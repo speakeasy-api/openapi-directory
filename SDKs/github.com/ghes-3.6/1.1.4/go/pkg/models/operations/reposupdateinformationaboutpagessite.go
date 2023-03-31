@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateInformationAboutPagesSitePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum - The process by which the GitHub Pages site will be built. `workflow` means that the site is built by a custom GitHub Actions workflow. `legacy` means that the site is built by GitHub when changes are pushed to a specific branch.
 type ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum string
 
@@ -482,8 +475,11 @@ type ReposUpdateInformationAboutPagesSiteRequestBody1 struct {
 }
 
 type ReposUpdateInformationAboutPagesSiteRequest struct {
-	PathParams ReposUpdateInformationAboutPagesSitePathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateInformationAboutPagesSiteResponse struct {

@@ -8,15 +8,7 @@ import (
 )
 
 type CreateOrderSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateOrderRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateOrderRequest `request:"mediaType=application/json"`
-	Security CreateOrderSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateOrderResponse struct {

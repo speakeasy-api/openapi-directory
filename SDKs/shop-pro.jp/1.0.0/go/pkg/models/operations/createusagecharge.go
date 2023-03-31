@@ -4,24 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateUsageChargeSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateUsageChargePathParams struct {
-	// 課金契約ID
-	RecurringApplicationChargeID string `pathParam:"style=simple,explode=false,name=recurringApplicationChargeId"`
-}
-
-type CreateUsageChargeHeaders struct {
-	// アンインストール後の従量課金の精算をする際に、 `Authorization` ヘッダへアクセストークンを指定する代わりにこのヘッダを指定することで、このAPIを実行することができます。
-	// インストール中は指定不要で、アンインストール後のみ必須となります。
-	// アンインストールフックで通知される `usage_charge.api_token` の値を指定してください。
-	// このヘッダは、アンインストールフックで通知される `usage_charge.closing_on` まで有効です。この期間を過ぎると従量課金を精算できなくなりますのでご注意ください。詳しくは [アプリのアンインストール](#section/API/アプリのアンインストール) をご確認ください。
-	XAppstoreUsageChargeToken *string `header:"style=simple,explode=false,name=X-Appstore-Usage-Charge-Token"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateUsageChargeRequestBodyUsageCharge struct {
@@ -37,11 +23,15 @@ type CreateUsageChargeRequestBody struct {
 }
 
 type CreateUsageChargeRequest struct {
-	PathParams CreateUsageChargePathParams
-	Headers    CreateUsageChargeHeaders
 	// 従量課金データ
-	Request  CreateUsageChargeRequestBody `request:"mediaType=application/json"`
-	Security CreateUsageChargeSecurity
+	RequestBody CreateUsageChargeRequestBody `request:"mediaType=application/json"`
+	// アンインストール後の従量課金の精算をする際に、 `Authorization` ヘッダへアクセストークンを指定する代わりにこのヘッダを指定することで、このAPIを実行することができます。
+	// インストール中は指定不要で、アンインストール後のみ必須となります。
+	// アンインストールフックで通知される `usage_charge.api_token` の値を指定してください。
+	// このヘッダは、アンインストールフックで通知される `usage_charge.closing_on` まで有効です。この期間を過ぎると従量課金を精算できなくなりますのでご注意ください。詳しくは [アプリのアンインストール](#section/API/アプリのアンインストール) をご確認ください。
+	XAppstoreUsageChargeToken *string `header:"style=simple,explode=false,name=X-Appstore-Usage-Charge-Token"`
+	// 課金契約ID
+	RecurringApplicationChargeID string `pathParam:"style=simple,explode=false,name=recurringApplicationChargeId"`
 }
 
 type CreateUsageCharge201ApplicationJSONUsageCharge struct {

@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRequest(
-    path_params=operations.GetPathParams(
-        address="sed",
-        baudrate=4461333086959994164,
-        device="tenetur",
-    ),
+    address="48",
+    baudrate="2400",
+    device="ttyAMA0",
 )
     
 res = s.get(req)

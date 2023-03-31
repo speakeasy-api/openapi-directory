@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditCoveragePlanPathParams struct {
+type EditCoveragePlanRequest struct {
+	CoveragePlanEditRequest shared.CoveragePlanEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the coverage plan in Noyo
 	PlanID string `pathParam:"style=simple,explode=false,name=plan_id"`
 	// The current version identifier of the coverage plan
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditCoveragePlanRequest struct {
-	PathParams EditCoveragePlanPathParams
-	Request    shared.CoveragePlanEditRequest `request:"mediaType=application/json"`
 }
 
 type EditCoveragePlanResponse struct {

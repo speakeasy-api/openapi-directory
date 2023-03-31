@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGifsByIDQueryParams struct {
+type GetGifsByIDRequest struct {
 	// Filters results by specified GIF IDs, separated by commas.
 	Ids *string `queryParam:"style=form,explode=true,name=ids"`
-}
-
-type GetGifsByIDRequest struct {
-	QueryParams GetGifsByIDQueryParams
 }
 
 type GetGifsByID200ApplicationJSON struct {

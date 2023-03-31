@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type GetObservationsByCodesPathParams struct {
-	// userId
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetObservationsByCodesQueryParams struct {
+type GetObservationsByCodesRequest struct {
 	// code
 	Code []string `queryParam:"style=form,explode=true,name=code"`
 	// limit
@@ -20,11 +15,8 @@ type GetObservationsByCodesQueryParams struct {
 	Offset int64 `queryParam:"style=form,explode=true,name=offset"`
 	// orderDirection
 	OrderDirection string `queryParam:"style=form,explode=true,name=orderDirection"`
-}
-
-type GetObservationsByCodesRequest struct {
-	PathParams  GetObservationsByCodesPathParams
-	QueryParams GetObservationsByCodesQueryParams
+	// userId
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetObservationsByCodesResponse struct {

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAddressRequest{
-        PathParams: operations.GetAddressPathParams{
-            Address: "5786 Little Streets",
-        },
+        Address: "5786 Little Streets",
     }
 
     ctx := context.Background()

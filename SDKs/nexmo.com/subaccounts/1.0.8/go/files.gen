@@ -25,7 +25,6 @@ pkg/models/operations/transfernumber.go
 pkg/models/shared/unprovisionederrorresponse.go
 pkg/models/shared/subaccountcreateresponse.go
 pkg/models/shared/newsubaccountrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/subaccountresponse.go
 pkg/models/shared/modifysubaccountrequest.go
 pkg/models/shared/subaccountsallresponse.go

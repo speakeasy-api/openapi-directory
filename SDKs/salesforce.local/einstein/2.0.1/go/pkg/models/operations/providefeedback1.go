@@ -8,7 +8,7 @@ import (
 )
 
 type ProvideFeedback1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ProvideFeedback1RequestBody struct {
@@ -20,11 +20,6 @@ type ProvideFeedback1RequestBody struct {
 	ModelID *string `multipartForm:"name=modelId"`
 	// Name of the example. Optional. Maximum length is 180 characters.
 	Name *string `multipartForm:"name=name"`
-}
-
-type ProvideFeedback1Request struct {
-	Request  *ProvideFeedback1RequestBody `request:"mediaType=multipart/form-data"`
-	Security ProvideFeedback1Security
 }
 
 type ProvideFeedback1Response struct {

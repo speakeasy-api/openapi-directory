@@ -38,7 +38,7 @@ func (e *ListBatchesSortDirSortDirEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListBatchesQueryParams struct {
+type ListBatchesRequest struct {
 	// Batch Number
 	BatchNumber *string `queryParam:"style=form,explode=true,name=batch_number"`
 	// Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
@@ -52,10 +52,6 @@ type ListBatchesQueryParams struct {
 	SortDir *ListBatchesSortDirSortDirEnum `queryParam:"style=form,explode=true,name=sort_dir"`
 	// The possible batch status values
 	Status *shared.BatchStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListBatchesRequest struct {
-	QueryParams ListBatchesQueryParams
 }
 
 type ListBatchesResponse struct {

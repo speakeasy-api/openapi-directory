@@ -8,27 +8,18 @@ import (
 )
 
 type RemoveVideosFromProjectSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemoveVideosFromProjectPathParams struct {
+type RemoveVideosFromProjectRequest struct {
 	// The ID of the project.
 	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RemoveVideosFromProjectQueryParams struct {
 	// Whether to delete the videos when removing them from the project.
 	ShouldDeleteClips *bool `queryParam:"style=form,explode=true,name=should_delete_clips"`
 	// A comma-separated list of the video URIs to remove.
 	Uris string `queryParam:"style=form,explode=true,name=uris"`
-}
-
-type RemoveVideosFromProjectRequest struct {
-	PathParams  RemoveVideosFromProjectPathParams
-	QueryParams RemoveVideosFromProjectQueryParams
-	Security    RemoveVideosFromProjectSecurity
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type RemoveVideosFromProjectResponse struct {

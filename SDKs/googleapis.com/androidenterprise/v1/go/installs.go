@@ -32,20 +32,20 @@ func newInstalls(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AndroidenterpriseInstallsDelete - Requests to remove an app from a device. A call to get or list will still show the app as installed on the device until it is actually removed.
-func (s *installs) AndroidenterpriseInstallsDelete(ctx context.Context, request operations.AndroidenterpriseInstallsDeleteRequest) (*operations.AndroidenterpriseInstallsDeleteResponse, error) {
+func (s *installs) AndroidenterpriseInstallsDelete(ctx context.Context, request operations.AndroidenterpriseInstallsDeleteRequest, security operations.AndroidenterpriseInstallsDeleteSecurity) (*operations.AndroidenterpriseInstallsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *installs) AndroidenterpriseInstallsDelete(ctx context.Context, request 
 }
 
 // AndroidenterpriseInstallsGet - Retrieves details of an installation of an app on a device.
-func (s *installs) AndroidenterpriseInstallsGet(ctx context.Context, request operations.AndroidenterpriseInstallsGetRequest) (*operations.AndroidenterpriseInstallsGetResponse, error) {
+func (s *installs) AndroidenterpriseInstallsGet(ctx context.Context, request operations.AndroidenterpriseInstallsGetRequest, security operations.AndroidenterpriseInstallsGetSecurity) (*operations.AndroidenterpriseInstallsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *installs) AndroidenterpriseInstallsGet(ctx context.Context, request ope
 }
 
 // AndroidenterpriseInstallsList - Retrieves the details of all apps installed on the specified device.
-func (s *installs) AndroidenterpriseInstallsList(ctx context.Context, request operations.AndroidenterpriseInstallsListRequest) (*operations.AndroidenterpriseInstallsListResponse, error) {
+func (s *installs) AndroidenterpriseInstallsList(ctx context.Context, request operations.AndroidenterpriseInstallsListRequest, security operations.AndroidenterpriseInstallsListSecurity) (*operations.AndroidenterpriseInstallsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,11 +167,11 @@ func (s *installs) AndroidenterpriseInstallsList(ctx context.Context, request op
 }
 
 // AndroidenterpriseInstallsUpdate - Requests to install the latest version of an app to a device. If the app is already installed, then it is updated to the latest version if necessary.
-func (s *installs) AndroidenterpriseInstallsUpdate(ctx context.Context, request operations.AndroidenterpriseInstallsUpdateRequest) (*operations.AndroidenterpriseInstallsUpdateResponse, error) {
+func (s *installs) AndroidenterpriseInstallsUpdate(ctx context.Context, request operations.AndroidenterpriseInstallsUpdateRequest, security operations.AndroidenterpriseInstallsUpdateSecurity) (*operations.AndroidenterpriseInstallsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Install", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,11 +183,11 @@ func (s *installs) AndroidenterpriseInstallsUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

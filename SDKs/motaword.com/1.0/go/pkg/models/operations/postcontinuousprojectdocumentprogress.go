@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContinuousProjectDocumentProgressPathParams struct {
+type PostContinuousProjectDocumentProgressRequest struct {
+	ContinuousProjectDocumentProgressBody *shared.ContinuousProjectDocumentProgressBody `request:"mediaType=application/json"`
 	// Continuous project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PostContinuousProjectDocumentProgressRequest struct {
-	PathParams PostContinuousProjectDocumentProgressPathParams
-	Request    *shared.ContinuousProjectDocumentProgressBody `request:"mediaType=application/json"`
 }
 
 type PostContinuousProjectDocumentProgressResponse struct {

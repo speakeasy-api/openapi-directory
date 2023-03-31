@@ -36,7 +36,7 @@ func newObservationHeadingController(defaultClient, securityClient HTTPClient, s
 // Given a User ID retrieve a list of available observation types for that user (where they have observation data).
 func (s *observationHeadingController) GetAvailableObservationHeadings(ctx context.Context, request operations.GetAvailableObservationHeadingsRequest) (*operations.GetAvailableObservationHeadingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/availableobservationheadings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/availableobservationheadings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *observationHeadingController) GetAvailableObservationHeadings(ctx conte
 // Given a User ID retrieve a list of available observation types for that user (where they have patient entered observation data).
 func (s *observationHeadingController) GetPatientEnteredObservationHeadings(ctx context.Context, request operations.GetPatientEnteredObservationHeadingsRequest) (*operations.GetPatientEnteredObservationHeadingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/patiententeredobservationheadings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/patiententeredobservationheadings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

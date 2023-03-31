@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/vimeo.com/3.4/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,19 +14,15 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.GetEndpointsRequest(
-    query_params=operations.GetEndpointsQueryParams(
-        openapi=True,
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.GetEndpointsRequest(
+    openapi=True,
 )
     
 res = s.api_information.get_endpoints(req)
@@ -37,13 +33,14 @@ if res.endpoint is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### API Information
+
+### api_information
 
 * `get_endpoints` - Get an API specification
 
-### Albums\Album videos
+### albums_album_videos
 
 * `add_video_to_album` - Add a specific video to an album
 * `add_video_to_album_alt1` - Add a specific video to an album
@@ -58,7 +55,7 @@ if res.endpoint is not None:
 * `set_video_as_album_thumbnail` - Set a video as the album thumbnail
 * `set_video_as_album_thumbnail_alt1` - Set a video as the album thumbnail
 
-### Albums\Custom album logos
+### albums_custom_album_logos
 
 * `create_album_logo` - Add a custom album logo
 * `delete_album_logo` - Remove a custom album logo
@@ -66,7 +63,7 @@ if res.endpoint is not None:
 * `get_album_logos` - Get all the custom logos of an album
 * `replace_album_logo` - Replace a custom album logo
 
-### Albums\Custom album thumbnails
+### albums_custom_album_thumbnails
 
 * `create_album_custom_thumb` - Add a custom uploaded thumbnail
 * `delete_album_custom_thumbnail` - Remove a custom uploaded album thumbnail
@@ -74,7 +71,7 @@ if res.endpoint is not None:
 * `get_album_custom_thumbs` - Get all the custom upload thumbnails of an album
 * `replace_album_custom_thumb` - Replace a custom uploaded album thumbnail
 
-### Albums\Essentials
+### albums_essentials
 
 * `create_album` - Create an album
 * `create_album_alt1` - Create an album
@@ -87,7 +84,7 @@ if res.endpoint is not None:
 * `get_albums` - Get all the albums that belong to a user
 * `get_albums_alt1` - Get all the albums that belong to a user
 
-### Authentication Extras\Essentials
+### authentication_extras_essentials
 
 * `client_auth` - Authorize a client with OAuth
 * `convert_access_token` - Convert OAuth 1 access tokens to OAuth 2 access tokens
@@ -95,20 +92,20 @@ if res.endpoint is not None:
 * `exchange_auth_code` - Exchange an authorization code for an access token
 * `verify_token` - Verify an OAuth 2 token
 
-### Categories\Channels
+### categories_channels
 
 * `get_category_channels` - Get all the channels in a category
 
-### Categories\Essentials
+### categories_essentials
 
 * `get_categories` - Get all categories
 * `get_category` - Get a specific category
 
-### Categories\Groups
+### categories_groups
 
 * `get_category_groups` - Get all the groups in a category
 
-### Categories\Subscriptions
+### categories_subscriptions
 
 * `check_if_user_subscribed_to_category` - Check if a user follows a category
 * `check_if_user_subscribed_to_category_alt1` - Check if a user follows a category
@@ -119,21 +116,21 @@ if res.endpoint is not None:
 * `unsubscribe_from_category` - Unsubscribe a user from a category
 * `unsubscribe_from_category_alt1` - Unsubscribe a user from a category
 
-### Categories\Videos
+### categories_videos
 
 * `check_category_for_video` - Check for a video in a category
 * `get_category_videos` - Get all the videos in a category
 * `get_video_categories` - Get all the categories to which a video belongs
 * `suggest_video_category` - Suggest categories for a video
 
-### Channels\Categories
+### channels_categories
 
 * `add_channel_categories` - Add a list of categories to a channel
 * `categorize_channel` - Categorize a channel
 * `delete_channel_category` - Remove a category from a channel
 * `get_channel_categories` - Get all the categories in a channel
 
-### Channels\Essentials
+### channels_essentials
 
 * `create_channel` - Create a channel
 * `delete_channel` - Delete a channel
@@ -143,7 +140,7 @@ if res.endpoint is not None:
 * `get_channel_subscriptions_alt1` - Get all the channels to which a user subscribes
 * `get_channels` - Get all channels
 
-### Channels\Moderators
+### channels_moderators
 
 * `add_channel_moderator` - Add a specific channel moderator
 * `add_channel_moderators` - Add a list of channel moderators
@@ -153,14 +150,14 @@ if res.endpoint is not None:
 * `remove_channel_moderators` - Remove a list of channel moderators
 * `replace_channel_moderators` - Replace the moderators of a channel
 
-### Channels\Private channel members
+### channels_private_channel_members
 
 * `delete_channel_privacy_user` - Restrict a user from viewing a private channel
 * `get_channel_privacy_users` - Get all the users who can view a private channel
 * `set_channel_privacy_user` - Permit a specific user to view a private channel
 * `set_channel_privacy_users` - Permit a list of users to view a private channel
 
-### Channels\Subscriptions and subscribers
+### channels_subscriptions_and_subscribers
 
 * `check_if_user_subscribed_to_channel` - Check if a user follows a channel
 * `check_if_user_subscribed_to_channel_alt1` - Check if a user follows a channel
@@ -170,7 +167,7 @@ if res.endpoint is not None:
 * `unsubscribe_from_channel` - Unsubscribe a user from a specific channel
 * `unsubscribe_from_channel_alt1` - Unsubscribe a user from a specific channel
 
-### Channels\Tags
+### channels_tags
 
 * `add_channel_tag` - Add a specific tag to a channel
 * `add_tags_to_channel` - Add a list of tags to a channel
@@ -178,7 +175,7 @@ if res.endpoint is not None:
 * `delete_tag_from_channel` - Remove a tag from a channel
 * `get_channel_tags` - Get all the tags that have been added to a channel
 
-### Channels\Videos
+### channels_videos
 
 * `add_video_to_channel` - Add a specific video to a channel
 * `add_videos_to_channel` - Add a list of videos to a channel
@@ -188,7 +185,7 @@ if res.endpoint is not None:
 * `get_channel_videos` - Get all the videos in a channel
 * `remove_videos_from_channel` - Remove a list of videos from a channel
 
-### Embed Presets\Custom Logos
+### embed_presets_custom_logos
 
 * `create_custom_logo` - Add a custom logo
 * `create_custom_logo_alt1` - Add a custom logo
@@ -197,7 +194,7 @@ if res.endpoint is not None:
 * `get_custom_logos` - Get all the custom logos that belong to a user
 * `get_custom_logos_alt1` - Get all the custom logos that belong to a user
 
-### Embed Presets\Essentials
+### embed_presets_essentials
 
 * `edit_embed_preset` - Edit an embed preset
 * `edit_embed_preset_alt1` - Edit an embed preset
@@ -206,7 +203,7 @@ if res.endpoint is not None:
 * `get_embed_presets` - Get all the embed presets that a user has created
 * `get_embed_presets_alt1` - Get all the embed presets that a user has created
 
-### Embed Presets\Videos
+### embed_presets_videos
 
 * `add_video_embed_preset` - Add an embed preset to a video
 * `create_video_custom_logo` - Add a new custom logo to a video
@@ -216,21 +213,21 @@ if res.endpoint is not None:
 * `get_video_custom_logo` - Get a custom video logo
 * `get_video_embed_preset` - Check if an embed preset has been added to a video
 
-### Groups\Essentials
+### groups_essentials
 
 * `create_group` - Create a group
 * `delete_group` - Delete a group
 * `get_group` - Get a specific group
 * `get_groups` - Get all groups
 
-### Groups\Subscription
+### groups_subscription
 
 * `join_group` - Add a user to a group
 * `join_group_alt1` - Add a user to a group
 * `leave_group` - Remove a user from a group
 * `leave_group_alt1` - Remove a user from a group
 
-### Groups\Users
+### groups_users
 
 * `check_if_user_joined_group` - Check if a user has joined a group
 * `check_if_user_joined_group_alt1` - Check if a user has joined a group
@@ -238,14 +235,14 @@ if res.endpoint is not None:
 * `get_user_groups` - Get all the groups that a user has joined
 * `get_user_groups_alt1` - Get all the groups that a user has joined
 
-### Groups\Videos
+### groups_videos
 
 * `add_video_to_group` - Add a video to a group
 * `delete_video_from_group` - Remove a video from a group
 * `get_group_video` - Get a specific video in a group
 * `get_group_videos` - Get all the videos in a group
 
-### Likes\Essentials
+### likes_essentials
 
 * `check_if_user_liked_video` - Check if a user has liked a video
 * `check_if_user_liked_video_alt1` - Check if a user has liked a video
@@ -259,7 +256,7 @@ if res.endpoint is not None:
 * `unlike_video` - Cause a user to unlike a video
 * `unlike_video_alt1` - Cause a user to unlike a video
 
-### On Demand\Backgrounds
+### on_demand_backgrounds
 
 * `create_vod_background` - Add a background to an On Demand page
 * `delete_vod_background` - Remove a background from an On Demand page
@@ -267,7 +264,7 @@ if res.endpoint is not None:
 * `get_vod_background` - Get a specific background of an On Demand page
 * `get_vod_backgrounds` - Get all the backgrounds of an On Demand page
 
-### On Demand\Essentials
+### on_demand_essentials
 
 * `create_vod` - Create an On Demand page
 * `create_vod_alt1` - Create an On Demand page
@@ -277,7 +274,7 @@ if res.endpoint is not None:
 * `get_user_vods_alt1` - Get all the On Demand pages of a user
 * `get_vod` - Get a specific On Demand page
 
-### On Demand\Genres
+### on_demand_genres
 
 * `add_vod_genre` - Add a genre to an On Demand page
 * `delete_vod_genre` - Remove a genre from an On Demand page
@@ -288,14 +285,14 @@ if res.endpoint is not None:
 * `get_vod_genres` - Get all On Demand genres
 * `get_vod_genres_by_ondemand_id` - Get all the genres of an On Demand page
 
-### On Demand\Posters
+### on_demand_posters
 
 * `add_vod_poster` - Add a poster to an On Demand page
 * `edit_vod_poster` - Edit a poster of an On Demand page
 * `get_vod_poster` - Get a specific poster of an On Demand page
 * `get_vod_posters` - Get all the posters of an On Demand page
 
-### On Demand\Promotions
+### on_demand_promotions
 
 * `create_vod_promotion` - Add a promotion to an On Demand page
 * `delete_vod_promotion` - Remove a promotion from an On Demand page
@@ -303,13 +300,13 @@ if res.endpoint is not None:
 * `get_vod_promotion_codes` - Get all the codes of a promotion on an On Demand page
 * `get_vod_promotions` - Get all the promotions on an On Demand page
 
-### On Demand\Purchases and Rentals
+### on_demand_purchases_and_rentals
 
 * `check_if_vod_was_purchased` - Check if a user has made a purchase or rental from an On Demand page
 * `check_if_vod_was_purchased_alt1` - Check if a user has made a purchase or rental from an On Demand page
 * `get_vod_purchases` - Get all the On Demand purchases and rentals that a user has made
 
-### On Demand\Regions
+### on_demand_regions
 
 * `add_vod_region` - Add a specific region to an On Demand page
 * `delete_vod_region` - Remove a specific region from an On Demand page
@@ -320,27 +317,27 @@ if res.endpoint is not None:
 * `get_vod_regions` - Get all the regions of an On Demand page
 * `set_vod_regions` - Add a list of regions to an On Demand page
 
-### On Demand\Seasons
+### on_demand_seasons
 
 * `get_vod_season` - Get a specific season on an On Demand page
 * `get_vod_season_videos` - Get all the videos in a season on an On Demand page
 * `get_vod_seasons` - Get all the seasons on an On Demand page
 
-### On Demand\Videos
+### on_demand_videos
 
 * `add_video_to_vod` - Add a video to an On Demand page
 * `delete_video_from_vod` - Remove a video from an On Demand page
 * `get_vod_video` - Get a specific video on an On Demand page
 * `get_vod_videos` - Get all the videos on an On Demand page
 
-### Portfolios\Essentials
+### portfolios_essentials
 
 * `get_portfolio` - Get a specific portfolio
 * `get_portfolio_alt1` - Get a specific portfolio
 * `get_portfolios` - Get all the portfolios that belong to a user
 * `get_portfolios_alt1` - Get all the portfolios that belong to a user
 
-### Portfolios\Videos
+### portfolios_videos
 
 * `add_video_to_portfolio` - Add a video to a portfolio
 * `add_video_to_portfolio_alt1` - Add a video to a portfolio
@@ -351,7 +348,7 @@ if res.endpoint is not None:
 * `get_portfolio_videos` - Get all the videos in a portfolio
 * `get_portfolio_videos_alt1` - Get all the videos in a portfolio
 
-### Projects\Essentials
+### projects_essentials
 
 * `create_project` - Create a project
 * `create_project_alt1` - Create a project
@@ -364,7 +361,7 @@ if res.endpoint is not None:
 * `get_projects` - Get all the projects that belong to a user
 * `get_projects_alt1` - Get all the projects that belong to a user
 
-### Projects\Videos
+### projects_videos
 
 * `add_video_to_project` - Add a specific video to a project
 * `add_video_to_project_alt1` - Add a specific video to a project
@@ -377,23 +374,23 @@ if res.endpoint is not None:
 * `remove_videos_from_project` - Remove a list of videos from a project
 * `remove_videos_from_project_alt1` - Remove a list of videos from a project
 
-### Tags\Essentials
+### tags_essentials
 
 * `get_tag` - Get a specific tag
 
-### Users\Essentials
+### users_essentials
 
 * `edit_user` - Edit a user
 * `edit_user_alt1` - Edit a user
 * `get_user` - Get a user
 * `get_user_alt1` - Get a user
 
-### Users\Feed
+### users_feed
 
 * `get_feed` - Get all videos in a user's feed
 * `get_feed_alt1` - Get all videos in a user's feed
 
-### Users\Follows
+### users_follows
 
 * `check_if_user_is_following` - Check if a user is following another user
 * `check_if_user_is_following_alt1` - Check if a user is following another user
@@ -408,11 +405,11 @@ if res.endpoint is not None:
 * `unfollow_user` - Unfollow a user
 * `unfollow_user_alt1` - Unfollow a user
 
-### Users\Internal
+### users_internal
 
 * `search_users` - Search for users
 
-### Users\Pictures
+### users_pictures
 
 * `create_picture` - Add a user picture
 * `create_picture_alt1` - Add a user picture
@@ -425,13 +422,13 @@ if res.endpoint is not None:
 * `get_pictures` - Get all the pictures that belong to a user
 * `get_pictures_alt1` - Get all the pictures that belong to a user
 
-### Users\Watch History
+### users_watch_history
 
 * `delete_from_watch_history` - Delete a specific video from a user's watch history
 * `delete_watch_history` - Delete a user's watch history
 * `get_watch_history` - Get all the videos that a user has watched
 
-### Videos\Comments
+### videos_comments
 
 * `create_comment` - Add a comment to a video
 * `create_comment_alt1` - Add a comment to a video
@@ -443,15 +440,15 @@ if res.endpoint is not None:
 * `get_comments` - Get all the comments on a video
 * `get_comments_alt1` - Get all the comments on a video
 
-### Videos\Content Ratings
+### videos_content_ratings
 
 * `get_content_ratings` - Get all content ratings
 
-### Videos\Creative Commons
+### videos_creative_commons
 
 * `get_cc_licenses` - Get all Creative Commons licenses
 
-### Videos\Credits
+### videos_credits
 
 * `add_video_credit` - Credit a user in a video
 * `add_video_credit_alt1` - Credit a user in a video
@@ -461,13 +458,13 @@ if res.endpoint is not None:
 * `get_video_credits` - Get all the credited users in a video
 * `get_video_credits_alt1` - Get all the credited users in a video
 
-### Videos\Embed Privacy
+### videos_embed_privacy
 
 * `add_video_privacy_domain` - Permit a video to be embedded on a domain
 * `delete_video_privacy_domain` - Restrict a video from being embedded on a domain
 * `get_video_privacy_domains` - Get all the domains on which a video can be embedded
 
-### Videos\Essentials
+### videos_essentials
 
 * `check_if_user_owns_video` - Check if a user owns a video
 * `check_if_user_owns_video_alt1` - Check if a user owns a video
@@ -480,15 +477,15 @@ if res.endpoint is not None:
 * `get_videos_alt1` - Get all the videos that a user has uploaded
 * `search_videos` - Search for videos
 
-### Videos\Languages
+### videos_languages
 
 * `get_languages` - Get all languages
 
-### Videos\Recommendations
+### videos_recommendations
 
 * `get_related_videos` - Get all the related videos of a video
 
-### Videos\Tags
+### videos_tags
 
 * `add_video_tag` - Add a specific tag to a video
 * `add_video_tags` - Add a list of tags to a video
@@ -497,7 +494,7 @@ if res.endpoint is not None:
 * `get_video_tags` - Get all the tags of a video
 * `get_videos_with_tag` - Get all the videos with a specific tag
 
-### Videos\Text Tracks
+### videos_text_tracks
 
 * `create_text_track` - Add a text track to a video
 * `create_text_track_alt1` - Add a text track to a video
@@ -507,7 +504,7 @@ if res.endpoint is not None:
 * `get_text_tracks` - Get all the text tracks of a video
 * `get_text_tracks_alt1` - Get all the text tracks of a video
 
-### Videos\Thumbnails
+### videos_thumbnails
 
 * `create_video_thumbnail` - Add a video thumbnail
 * `create_video_thumbnail_alt1` - Add a video thumbnail
@@ -517,18 +514,18 @@ if res.endpoint is not None:
 * `get_video_thumbnails` - Get all the thumbnails of a video
 * `get_video_thumbnails_alt1` - Get all the thumbnails of a video
 
-### Videos\Upload
+### videos_upload
 
 * `complete_streaming_upload` - Complete a user's streaming upload
 * `get_upload_attempt` - Get a user's upload attempt
 * `upload_video` - Upload a video
 * `upload_video_alt1` - Upload a video
 
-### Videos\Versions
+### videos_versions
 
 * `create_video_version` - Add a version to a video
 
-### Videos\Viewing Privacy
+### videos_viewing_privacy
 
 * `add_video_privacy_user` - Permit a specific user to view a private video
 * `add_video_privacy_users` - Permit a list of users to view a private video
@@ -537,7 +534,7 @@ if res.endpoint is not None:
 * `get_video_privacy_users` - Get all the users who can view a user's private videos by default
 * `get_video_privacy_users_alt1` - Get all the users who can view a user's private videos by default
 
-### Watch Later Queue\Essentials
+### watch_later_queue_essentials
 
 * `add_video_to_watch_later` - Add a video to a user's Watch Later queue
 * `add_video_to_watch_later_alt1` - Add a video to a user's Watch Later queue
@@ -547,7 +544,17 @@ if res.endpoint is not None:
 * `delete_video_from_watch_later_alt1` - Remove a video from a user's Watch Later queue
 * `get_watch_later_queue` - Get all the videos in a user's Watch Later queue
 * `get_watch_later_queue_alt1` - Get all the videos in a user's Watch Later queue
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

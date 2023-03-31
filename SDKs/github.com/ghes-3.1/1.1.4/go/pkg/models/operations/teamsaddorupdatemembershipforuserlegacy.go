@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateMembershipForUserLegacyPathParams struct {
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum - The role that this user should have in the team.
 type TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum string
 
@@ -46,8 +39,11 @@ type TeamsAddOrUpdateMembershipForUserLegacyRequestBody struct {
 }
 
 type TeamsAddOrUpdateMembershipForUserLegacyRequest struct {
-	PathParams TeamsAddOrUpdateMembershipForUserLegacyPathParams
-	Request    *TeamsAddOrUpdateMembershipForUserLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateMembershipForUserLegacyRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type TeamsAddOrUpdateMembershipForUserLegacyResponse struct {

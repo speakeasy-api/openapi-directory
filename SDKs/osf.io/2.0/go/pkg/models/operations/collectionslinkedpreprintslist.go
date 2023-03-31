@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CollectionsLinkedPreprintsListPathParams struct {
+type CollectionsLinkedPreprintsListRequest struct {
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsLinkedPreprintsListRequest struct {
-	PathParams CollectionsLinkedPreprintsListPathParams
 }
 
 type CollectionsLinkedPreprintsListResponse struct {

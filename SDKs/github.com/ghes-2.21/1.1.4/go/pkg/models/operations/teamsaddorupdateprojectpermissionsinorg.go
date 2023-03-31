@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type TeamsAddOrUpdateProjectPermissionsInOrgPathParams struct {
-	Org       string `pathParam:"style=simple,explode=false,name=org"`
-	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum - The permission to grant to the team for this project. Can be one of:
 // \* `read` - team members can read, but not write to or administer this project.
 // \* `write` - team members can read and write, but not administer this project.
@@ -56,8 +49,11 @@ type TeamsAddOrUpdateProjectPermissionsInOrgRequestBody struct {
 }
 
 type TeamsAddOrUpdateProjectPermissionsInOrgRequest struct {
-	PathParams TeamsAddOrUpdateProjectPermissionsInOrgPathParams
-	Request    *TeamsAddOrUpdateProjectPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateProjectPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	Org         string                                              `pathParam:"style=simple,explode=false,name=org"`
+	ProjectID   int64                                               `pathParam:"style=simple,explode=false,name=project_id"`
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 // TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON - Forbidden if the project is not owned by the organization

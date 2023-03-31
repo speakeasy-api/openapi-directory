@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSuspendUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type EnterpriseAdminSuspendUserRequestBody struct {
 	// The reason the user is being suspended. This message will be logged in the [audit log](https://help.github.com/enterprise/admin/articles/audit-logging/). If you don't provide a `reason`, it will default to "Suspended via API by _SITE\_ADMINISTRATOR_", where _SITE\_ADMINISTRATOR_ is the person who performed the action.
 	Reason *string `json:"reason,omitempty"`
 }
 
 type EnterpriseAdminSuspendUserRequest struct {
-	PathParams EnterpriseAdminSuspendUserPathParams
-	Request    *EnterpriseAdminSuspendUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminSuspendUserRequestBody `request:"mediaType=application/json"`
+	Username    string                                 `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type EnterpriseAdminSuspendUserResponse struct {

@@ -8,16 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateAccountLockSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateAccountLockSettingsPathParams struct {
-	// Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. <br> To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateAccountLockSettingsApplicationJSONMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>
@@ -436,9 +430,9 @@ func (u UpdateAccountLockSettingsApplicationJSON) MarshalJSON() ([]byte, error) 
 }
 
 type UpdateAccountLockSettingsRequest struct {
-	PathParams UpdateAccountLockSettingsPathParams
-	Request    *UpdateAccountLockSettingsApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateAccountLockSettingsSecurity
+	RequestBody *UpdateAccountLockSettingsApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. <br> To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type UpdateAccountLockSettingsResponse struct {

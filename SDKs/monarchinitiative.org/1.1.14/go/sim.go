@@ -43,7 +43,7 @@ func (s *sim) GetAnnotationScore(ctx context.Context, request operations.GetAnno
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,7 +91,7 @@ func (s *sim) GetSimCompare(ctx context.Context, request operations.GetSimCompar
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -139,7 +139,7 @@ func (s *sim) GetSimSearch(ctx context.Context, request operations.GetSimSearchR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -178,7 +178,7 @@ func (s *sim) GetSimSearch(ctx context.Context, request operations.GetSimSearchR
 }
 
 // PostAnnotationScore - Get annotation score
-func (s *sim) PostAnnotationScore(ctx context.Context, request operations.PostAnnotationScoreRequest) (*operations.PostAnnotationScoreResponse, error) {
+func (s *sim) PostAnnotationScore(ctx context.Context, request shared.SufficiencyPostInput) (*operations.PostAnnotationScoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sim/score"
 
@@ -232,7 +232,7 @@ func (s *sim) PostAnnotationScore(ctx context.Context, request operations.PostAn
 }
 
 // PostSimCompare - Compare a reference profile vs one or more profiles
-func (s *sim) PostSimCompare(ctx context.Context, request operations.PostSimCompareRequest) (*operations.PostSimCompareResponse, error) {
+func (s *sim) PostSimCompare(ctx context.Context, request shared.CompareInput) (*operations.PostSimCompareResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sim/compare"
 

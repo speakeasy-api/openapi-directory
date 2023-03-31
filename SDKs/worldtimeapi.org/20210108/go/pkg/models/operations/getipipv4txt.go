@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetIPIpv4TxtPathParams struct {
-	Ipv4 string `pathParam:"style=simple,explode=false,name=ipv4"`
-}
-
 type GetIPIpv4TxtRequest struct {
-	PathParams GetIPIpv4TxtPathParams
+	Ipv4 string `pathParam:"style=simple,explode=false,name=ipv4"`
 }
 
 type GetIPIpv4TxtResponse struct {

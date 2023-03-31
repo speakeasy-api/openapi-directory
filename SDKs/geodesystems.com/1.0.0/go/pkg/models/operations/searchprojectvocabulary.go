@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchProjectVocabularyQueryParams struct {
+type SearchProjectVocabularyRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchProjectVocabularyQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchProjectVocabularyRequest struct {
-	QueryParams SearchProjectVocabularyQueryParams
 }
 
 type SearchProjectVocabularyResponse struct {

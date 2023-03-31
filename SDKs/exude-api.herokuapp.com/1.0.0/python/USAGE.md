@@ -4,17 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FilterFileDataStoppingsRequest(
-    path_params=operations.FilterFileDataStoppingsPathParams(
-        type="quae",
-    ),
-    request=operations.FilterFileDataStoppingsRequestBody(
+    request_body=operations.FilterFileDataStoppingsRequestBody(
         file=operations.FilterFileDataStoppingsRequestBodyFile(
-            content="minima".encode(),
-            file="eaque",
+            content="corrupti".encode(),
+            file="provident",
         ),
     ),
+    type="distinctio",
 )
     
 res = s.exude.filter_file_data_stoppings(req)

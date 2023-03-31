@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsListCommentsPathParams struct {
+type GistsListCommentsRequest struct {
 	// The unique identifier of the gist.
 	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
-type GistsListCommentsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GistsListCommentsRequest struct {
-	PathParams  GistsListCommentsPathParams
-	QueryParams GistsListCommentsQueryParams
 }
 
 type GistsListCommentsResponse struct {

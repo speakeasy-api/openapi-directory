@@ -112,7 +112,7 @@ func (s *SDK) AnalyzeImage(ctx context.Context, request operations.AnalyzeImageR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/analyze"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,7 +127,7 @@ func (s *SDK) AnalyzeImage(ctx context.Context, request operations.AnalyzeImageR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,9 +181,9 @@ func (s *SDK) AnalyzeImage(ctx context.Context, request operations.AnalyzeImageR
 // If the request failed, the response will contain an error code and a message to help understand what went wrong.
 func (s *SDK) AnalyzeImageByDomain(ctx context.Context, request operations.AnalyzeImageByDomainRequest) (*operations.AnalyzeImageByDomainResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/models/{model}/analyze", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/models/{model}/analyze", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -198,7 +198,7 @@ func (s *SDK) AnalyzeImageByDomain(ctx context.Context, request operations.Analy
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -253,7 +253,7 @@ func (s *SDK) DescribeImage(ctx context.Context, request operations.DescribeImag
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,7 +268,7 @@ func (s *SDK) DescribeImage(ctx context.Context, request operations.DescribeImag
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -319,7 +319,7 @@ func (s *SDK) DescribeImage(ctx context.Context, request operations.DescribeImag
 // DetectObjects - Performs object detection on the specified image.
 // Two input methods are supported -- (1) Uploading an image or (2) specifying an image URL.
 // A successful response will be returned in JSON. If the request failed, the response will contain an error code and a message to help understand what went wrong.
-func (s *SDK) DetectObjects(ctx context.Context, request operations.DetectObjectsRequest) (*operations.DetectObjectsResponse, error) {
+func (s *SDK) DetectObjects(ctx context.Context, request shared.ImageURL) (*operations.DetectObjectsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/detect"
 
@@ -389,7 +389,7 @@ func (s *SDK) GenerateThumbnail(ctx context.Context, request operations.Generate
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/generateThumbnail"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -404,7 +404,7 @@ func (s *SDK) GenerateThumbnail(ctx context.Context, request operations.Generate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -455,7 +455,7 @@ func (s *SDK) GenerateThumbnail(ctx context.Context, request operations.Generate
 // GetAreaOfInterest - This operation returns a bounding box around the most important area of the image.
 // A successful response will be returned in JSON. If the request failed, the response contains an error code and a message to help determine what went wrong.
 // Upon failure, the error code and an error message are returned. The error code could be one of InvalidImageUrl, InvalidImageFormat, InvalidImageSize, NotSupportedImage, FailedToProcess, Timeout, or InternalServerError.
-func (s *SDK) GetAreaOfInterest(ctx context.Context, request operations.GetAreaOfInterestRequest) (*operations.GetAreaOfInterestResponse, error) {
+func (s *SDK) GetAreaOfInterest(ctx context.Context, request shared.ImageURL) (*operations.GetAreaOfInterestResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/areaOfInterest"
 
@@ -580,7 +580,7 @@ func (s *SDK) RecognizePrintedText(ctx context.Context, request operations.Recog
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -595,7 +595,7 @@ func (s *SDK) RecognizePrintedText(ctx context.Context, request operations.Recog
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -650,7 +650,7 @@ func (s *SDK) TagImage(ctx context.Context, request operations.TagImageRequest) 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tag"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -665,7 +665,7 @@ func (s *SDK) TagImage(ctx context.Context, request operations.TagImageRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

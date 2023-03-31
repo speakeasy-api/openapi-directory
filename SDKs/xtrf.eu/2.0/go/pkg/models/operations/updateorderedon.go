@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateOrderedOnPathParams struct {
+type UpdateOrderedOnRequest struct {
+	// Updated Order Date for a project.
+	TimeDTO shared.TimeDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateOrderedOnRequest struct {
-	PathParams UpdateOrderedOnPathParams
-	// Updated Order Date for a project.
-	Request shared.TimeDTO `request:"mediaType=application/json"`
 }
 
 type UpdateOrderedOnResponse struct {

@@ -34,14 +34,14 @@ func newIntersections(defaultClient, securityClient HTTPClient, serverURL, langu
 // Represents the set of geocoded and standardized sites and intersections whose address best matches a given query address.
 func (s *intersections) GetAddressesOutputFormat(ctx context.Context, request operations.GetAddressesOutputFormatRequest) (*operations.GetAddressesOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addresses.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addresses.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -74,14 +74,14 @@ func (s *intersections) GetAddressesOutputFormat(ctx context.Context, request op
 // Represents intersections near a given point
 func (s *intersections) GetIntersectionsNearOutputFormat(ctx context.Context, request operations.GetIntersectionsNearOutputFormatRequest) (*operations.GetIntersectionsNearOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/intersections/near.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/intersections/near.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -114,14 +114,14 @@ func (s *intersections) GetIntersectionsNearOutputFormat(ctx context.Context, re
 // Represents the closest intersection to a given point
 func (s *intersections) GetIntersectionsNearestOutputFormat(ctx context.Context, request operations.GetIntersectionsNearestOutputFormatRequest) (*operations.GetIntersectionsNearestOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/intersections/nearest.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/intersections/nearest.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *intersections) GetIntersectionsNearestOutputFormat(ctx context.Context,
 // Represents all intersections within a given area
 func (s *intersections) GetIntersectionsWithinOutputFormat(ctx context.Context, request operations.GetIntersectionsWithinOutputFormatRequest) (*operations.GetIntersectionsWithinOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/intersections/within.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/intersections/within.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,14 +194,14 @@ func (s *intersections) GetIntersectionsWithinOutputFormat(ctx context.Context, 
 // Represents a individual intersection
 func (s *intersections) GetIntersectionsIntersectionIDOutputFormat(ctx context.Context, request operations.GetIntersectionsIntersectionIDOutputFormatRequest) (*operations.GetIntersectionsIntersectionIDOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/intersections/{intersectionID}.{outputFormat}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/intersections/{intersectionID}.{outputFormat}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

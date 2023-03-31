@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPresenceByIDPathParams struct {
+type GetPresenceByIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPresenceByIDRequest struct {
-	PathParams GetPresenceByIDPathParams
 }
 
 type GetPresenceByIDResponse struct {

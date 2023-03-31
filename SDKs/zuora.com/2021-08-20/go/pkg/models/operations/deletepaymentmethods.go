@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEPaymentMethodsPathParams struct {
-	// Unique identifier of a payment method. (Since this ID is unique, and linked to a customer account in the system, no customer identifier is needed.)
-	PaymentMethodID string `pathParam:"style=simple,explode=false,name=payment-method-id"`
-}
-
-type DELETEPaymentMethodsHeaders struct {
+type DELETEPaymentMethodsRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -21,11 +16,8 @@ type DELETEPaymentMethodsHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETEPaymentMethodsRequest struct {
-	PathParams DELETEPaymentMethodsPathParams
-	Headers    DELETEPaymentMethodsHeaders
+	// Unique identifier of a payment method. (Since this ID is unique, and linked to a customer account in the system, no customer identifier is needed.)
+	PaymentMethodID string `pathParam:"style=simple,explode=false,name=payment-method-id"`
 }
 
 type DELETEPaymentMethodsResponse struct {

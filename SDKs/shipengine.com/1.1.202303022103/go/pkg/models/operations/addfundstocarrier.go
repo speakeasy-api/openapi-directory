@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddFundsToCarrierPathParams struct {
+type AddFundsToCarrierRequest struct {
+	AddFundsToCarrierRequestBody shared.AddFundsToCarrierRequestBody `request:"mediaType=application/json"`
 	// Carrier ID
 	CarrierID string `pathParam:"style=simple,explode=false,name=carrier_id"`
-}
-
-type AddFundsToCarrierRequest struct {
-	PathParams AddFundsToCarrierPathParams
-	Request    shared.AddFundsToCarrierRequestBody `request:"mediaType=application/json"`
 }
 
 type AddFundsToCarrierResponse struct {

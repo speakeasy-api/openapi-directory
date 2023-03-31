@@ -33,18 +33,18 @@ func newStandingOrders(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetAccountsAccountIDStandingOrders - Get Standing Orders
 // Get Standing Orders by Account ID
-func (s *standingOrders) GetAccountsAccountIDStandingOrders(ctx context.Context, request operations.GetAccountsAccountIDStandingOrdersRequest) (*operations.GetAccountsAccountIDStandingOrdersResponse, error) {
+func (s *standingOrders) GetAccountsAccountIDStandingOrders(ctx context.Context, request operations.GetAccountsAccountIDStandingOrdersRequest, security operations.GetAccountsAccountIDStandingOrdersSecurity) (*operations.GetAccountsAccountIDStandingOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/standing-orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/standing-orders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

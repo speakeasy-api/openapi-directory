@@ -11,22 +11,13 @@ var SavepriceServerList = []string{
 	"https://rnb.{environment}.com.br/api/pricing/pvt",
 }
 
-type SavepriceQueryParams struct {
-	An string `queryParam:"style=form,explode=true,name=an"`
-}
-
-type SavepriceHeaders struct {
+type SavepriceRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SavepriceRequest struct {
-	QueryParams SavepriceQueryParams
-	Headers     SavepriceHeaders
-	Request     []shared.SavepriceRequest `request:"mediaType=application/json"`
-	ServerURL   *string
+	ContentType string                    `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []shared.SavepriceRequest `request:"mediaType=application/json"`
+	An          string                    `queryParam:"style=form,explode=true,name=an"`
 }
 
 type SavepriceResponse struct {

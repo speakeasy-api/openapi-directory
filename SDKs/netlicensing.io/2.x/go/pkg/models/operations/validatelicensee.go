@@ -10,12 +10,8 @@ import (
 )
 
 type ValidateLicenseeSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ValidateLicenseePathParams struct {
-	// Licensee number with a maximum length of 1000 characters
-	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // ValidateLicenseeRequestBodyActionEnum - 'Floating' licensing model: check-out or check-in session action, to allocate or return it from/to the pool of available sessions
@@ -58,9 +54,9 @@ type ValidateLicenseeRequestBody struct {
 }
 
 type ValidateLicenseeRequest struct {
-	PathParams ValidateLicenseePathParams
-	Request    *ValidateLicenseeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   ValidateLicenseeSecurity
+	RequestBody *ValidateLicenseeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Licensee number with a maximum length of 1000 characters
+	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
 }
 
 type ValidateLicenseeResponse struct {

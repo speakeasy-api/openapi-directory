@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateSiteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateSitePathParams struct {
-	// UUID or name of the site to update
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateSiteRequest struct {
-	PathParams UpdateSitePathParams
 	// site object
-	Request  shared.SiteOptions `request:"mediaType=application/json"`
-	Security UpdateSiteSecurity
+	SiteOptions shared.SiteOptions `request:"mediaType=application/json"`
+	// UUID or name of the site to update
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type UpdateSiteResponse struct {

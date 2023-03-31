@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetBenefitsDocumentUploadDownloadSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBenefitsDocumentUploadDownloadPathParams struct {
-	// ID as returned by a previous create upload request
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetBenefitsDocumentUploadDownloadRequest struct {
-	PathParams GetBenefitsDocumentUploadDownloadPathParams
-	Security   GetBenefitsDocumentUploadDownloadSecurity
+	// ID as returned by a previous create upload request
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetBenefitsDocumentUploadDownload500ApplicationJSON - Internal server error

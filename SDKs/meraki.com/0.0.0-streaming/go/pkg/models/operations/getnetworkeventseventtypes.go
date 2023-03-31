@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkEventsEventTypesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkEventsEventTypesRequest struct {
-	PathParams GetNetworkEventsEventTypesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkEventsEventTypesResponse struct {

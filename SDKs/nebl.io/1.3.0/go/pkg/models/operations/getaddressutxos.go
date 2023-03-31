@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAddressUtxosPathParams struct {
+type GetAddressUtxosRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type GetAddressUtxosRequest struct {
-	PathParams GetAddressUtxosPathParams
 }
 
 type GetAddressUtxosResponse struct {

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type DashboardUserListRequest struct {
-	Request shared.DashboardUserListRequest `request:"mediaType=application/json"`
-}
 
 type DashboardUserListResponse struct {
 	ContentType string

@@ -33,7 +33,7 @@ func (e *ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum) Un
 	}
 }
 
-type ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams struct {
+type ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -46,10 +46,6 @@ type ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams struct 
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest struct {
-	PathParams ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams
 }
 
 type ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse struct {

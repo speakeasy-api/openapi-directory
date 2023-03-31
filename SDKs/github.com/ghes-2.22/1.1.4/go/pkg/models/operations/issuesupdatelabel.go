@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesUpdateLabelPathParams struct {
-	Name  string `pathParam:"style=simple,explode=false,name=name"`
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesUpdateLabelRequestBody struct {
 	// The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
 	Color *string `json:"color,omitempty"`
@@ -23,8 +17,10 @@ type IssuesUpdateLabelRequestBody struct {
 }
 
 type IssuesUpdateLabelRequest struct {
-	PathParams IssuesUpdateLabelPathParams
-	Request    *IssuesUpdateLabelRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesUpdateLabelRequestBody `request:"mediaType=application/json"`
+	Name        string                        `pathParam:"style=simple,explode=false,name=name"`
+	Owner       string                        `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                        `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesUpdateLabelResponse struct {

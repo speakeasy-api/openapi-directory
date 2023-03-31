@@ -8,17 +8,13 @@ import (
 )
 
 type DataExporterTemplateSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DataExporterTemplateQueryParams struct {
-	// The data exporter config type
-	Type *string `queryParam:"style=form,explode=true,name=type"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DataExporterTemplateRequest struct {
-	QueryParams DataExporterTemplateQueryParams
-	Security    DataExporterTemplateSecurity
+	// The data exporter config type
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 }
 
 type DataExporterTemplateResponse struct {

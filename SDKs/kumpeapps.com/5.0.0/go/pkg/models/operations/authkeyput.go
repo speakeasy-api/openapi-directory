@@ -8,17 +8,12 @@ import (
 )
 
 type AuthkeyPutSecurity struct {
-	AppKey shared.SchemeAppKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AuthkeyPutQueryParams struct {
-	// auth key to logout
-	AuthKey string `queryParam:"style=form,explode=true,name=auth_key"`
+	AppKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 type AuthkeyPutRequest struct {
-	QueryParams AuthkeyPutQueryParams
-	Security    AuthkeyPutSecurity
+	// auth key to logout
+	AuthKey string `queryParam:"style=form,explode=true,name=auth_key"`
 }
 
 type AuthkeyPutResponse struct {

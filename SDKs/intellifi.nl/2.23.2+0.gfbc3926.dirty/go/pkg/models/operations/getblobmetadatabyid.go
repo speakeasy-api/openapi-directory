@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBlobMetadataByIDPathParams struct {
+type GetBlobMetadataByIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBlobMetadataByIDRequest struct {
-	PathParams GetBlobMetadataByIDPathParams
 }
 
 type GetBlobMetadataByIDResponse struct {

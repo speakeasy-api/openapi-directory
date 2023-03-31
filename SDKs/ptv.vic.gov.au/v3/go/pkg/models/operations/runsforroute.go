@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type RunsForRoutePathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes.
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-}
-
 type RunsForRouteExpandEnum string
 
 const (
@@ -44,22 +39,19 @@ func (e *RunsForRouteExpandEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RunsForRouteQueryParams struct {
+type RunsForRouteRequest struct {
 	// Date of the request. (optional - defaults to now)
 	DateUtc *time.Time `queryParam:"style=form,explode=true,name=date_utc"`
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// List of objects to be returned in full (i.e. expanded) - options include: All, VehiclePosition, VehicleDescriptor, or None. Default is None.
 	Expand []RunsForRouteExpandEnum `queryParam:"style=form,explode=true,name=expand"`
+	// Identifier of route; values returned by Routes API - v3/routes.
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RunsForRouteRequest struct {
-	PathParams  RunsForRoutePathParams
-	QueryParams RunsForRouteQueryParams
 }
 
 type RunsForRouteResponse struct {

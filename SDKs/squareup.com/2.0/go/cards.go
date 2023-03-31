@@ -34,7 +34,7 @@ func newCards(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateCard - CreateCard
 // Adds a card on file to an existing merchant.
-func (s *cards) CreateCard(ctx context.Context, request operations.CreateCardRequest) (*operations.CreateCardResponse, error) {
+func (s *cards) CreateCard(ctx context.Context, request shared.CreateCardRequest, security operations.CreateCardSecurity) (*operations.CreateCardResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cards"
 
@@ -53,7 +53,7 @@ func (s *cards) CreateCard(ctx context.Context, request operations.CreateCardReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,16 +90,16 @@ func (s *cards) CreateCard(ctx context.Context, request operations.CreateCardReq
 // DisableCard - DisableCard
 // Disables the card, preventing any further updates or charges.
 // Disabling an already disabled card is allowed but has no effect.
-func (s *cards) DisableCard(ctx context.Context, request operations.DisableCardRequest) (*operations.DisableCardResponse, error) {
+func (s *cards) DisableCard(ctx context.Context, request operations.DisableCardRequest, security operations.DisableCardSecurity) (*operations.DisableCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *cards) DisableCard(ctx context.Context, request operations.DisableCardR
 // ListCards - ListCards
 // Retrieves a list of cards owned by the account making the request.
 // A max of 25 cards will be returned.
-func (s *cards) ListCards(ctx context.Context, request operations.ListCardsRequest) (*operations.ListCardsResponse, error) {
+func (s *cards) ListCards(ctx context.Context, request operations.ListCardsRequest, security operations.ListCardsSecurity) (*operations.ListCardsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cards"
 
@@ -145,11 +145,11 @@ func (s *cards) ListCards(ctx context.Context, request operations.ListCardsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,16 +185,16 @@ func (s *cards) ListCards(ctx context.Context, request operations.ListCardsReque
 
 // RetrieveCard - RetrieveCard
 // Retrieves details for a specific Card.
-func (s *cards) RetrieveCard(ctx context.Context, request operations.RetrieveCardRequest) (*operations.RetrieveCardResponse, error) {
+func (s *cards) RetrieveCard(ctx context.Context, request operations.RetrieveCardRequest, security operations.RetrieveCardSecurity) (*operations.RetrieveCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

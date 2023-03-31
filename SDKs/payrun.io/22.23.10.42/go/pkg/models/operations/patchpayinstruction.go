@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchPayInstructionPathParams struct {
-	// The employees' unique identifier. E.g EE001
-	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The pay instruction unique identifier. E.g. SAL001
-	PayInstructionID string `pathParam:"style=simple,explode=false,name=PayInstructionId"`
-}
-
-type PatchPayInstructionHeaders struct {
+type PatchPayInstructionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PatchPayInstructionRequest struct {
-	PathParams PatchPayInstructionPathParams
-	Headers    PatchPayInstructionHeaders
+	// The employees' unique identifier. E.g EE001
+	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The pay instruction object.
-	Request shared.PayInstruction `request:"mediaType=application/json"`
+	PayInstruction shared.PayInstruction `request:"mediaType=application/json"`
+	// The pay instruction unique identifier. E.g. SAL001
+	PayInstructionID string `pathParam:"style=simple,explode=false,name=PayInstructionId"`
 }
 
 type PatchPayInstructionResponse struct {

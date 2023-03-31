@@ -12,18 +12,13 @@ var FetchPhoneNumberServerList = []string{
 }
 
 type FetchPhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchPhoneNumberPathParams struct {
-	// The phone number in E.164 format
-	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchPhoneNumberRequest struct {
-	PathParams FetchPhoneNumberPathParams
-	Security   FetchPhoneNumberSecurity
-	ServerURL  *string
+	// The phone number in E.164 format
+	PhoneNumber string `pathParam:"style=simple,explode=false,name=PhoneNumber"`
 }
 
 type FetchPhoneNumberResponse struct {

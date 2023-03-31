@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowSetFileNamePathParams struct {
+type ProtocolNetflowSetFileNameRequest struct {
 	// Agent to set the NETFLOW
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// file name to load config
 	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
-}
-
-type ProtocolNetflowSetFileNameRequest struct {
-	PathParams ProtocolNetflowSetFileNamePathParams
 }
 
 type ProtocolNetflowSetFileNameResponse struct {

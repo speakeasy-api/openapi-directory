@@ -8,18 +8,14 @@ import (
 	"net/http"
 )
 
-type CloneOrganizationPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CloneOrganizationRequestBody struct {
 	// The name of the new organization
 	Name string `json:"name"`
 }
 
 type CloneOrganizationRequest struct {
-	PathParams CloneOrganizationPathParams
-	Request    CloneOrganizationRequestBody `request:"mediaType=application/json"`
+	RequestBody    CloneOrganizationRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                       `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // CloneOrganization201ApplicationJSONAPI - API related settings

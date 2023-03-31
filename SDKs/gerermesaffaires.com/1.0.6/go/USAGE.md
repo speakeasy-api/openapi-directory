@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteBusinessGroupsIDSpacesSpaceIDRequest{
-        Security: operations.DeleteBusinessGroupsIDSpacesSpaceIDSecurity{
-            GmaAuth: shared.SchemeGmaAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DeleteBusinessGroupsIDSpacesSpaceIDPathParams{
-            ID: "P18784",
-            SpaceID: "P18784",
-        },
+        ID: "P18784",
+        SpaceID: "P18784",
     }
 
     ctx := context.Background()
-    res, err := s.DeleteBusinessGroupsIDSpacesSpaceID(ctx, req)
+    res, err := s.DeleteBusinessGroupsIDSpacesSpaceID(ctx, req, operations.DeleteBusinessGroupsIDSpacesSpaceIDSecurity{
+        GmaAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

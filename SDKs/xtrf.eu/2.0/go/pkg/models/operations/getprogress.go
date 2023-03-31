@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgressPathParams struct {
+type GetProgressRequest struct {
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type GetProgressRequest struct {
-	PathParams GetProgressPathParams
 }
 
 type GetProgressResponse struct {

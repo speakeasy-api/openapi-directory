@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SingleWorkspacePathParams struct {
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
-}
-
 type SingleWorkspaceRequest struct {
-	PathParams SingleWorkspacePathParams
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
 
 type SingleWorkspace404ApplicationJSONError struct {

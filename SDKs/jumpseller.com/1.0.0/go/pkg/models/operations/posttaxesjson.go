@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTaxesJSONQueryParams struct {
+type PostTaxesJSONRequest struct {
+	// Tax parameters.
+	TaxEdit shared.TaxEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostTaxesJSONRequest struct {
-	QueryParams PostTaxesJSONQueryParams
-	// Tax parameters.
-	Request shared.TaxEdit `request:"mediaType=application/json"`
 }
 
 type PostTaxesJSONResponse struct {

@@ -34,16 +34,16 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // WebhooksFetchAll - Fetch active webhooks
 // When messages are acknowledge by carriers, a notification is sent to the specified URL
-func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.WebhooksFetchAllRequest) (*operations.WebhooksFetchAllResponse, error) {
+func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.WebhooksFetchAllRequest, security operations.WebhooksFetchAllSecurity) (*operations.WebhooksFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,11 +79,11 @@ func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.Webh
 
 // WebhooksSubscribe - Subscribe to message events
 // When messages are acknowledge by carriers, a notification is sent to the specified URL
-func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.WebhooksSubscribeRequest) (*operations.WebhooksSubscribeResponse, error) {
+func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.WebhooksSubscribeRequest, security operations.WebhooksSubscribeSecurity) (*operations.WebhooksSubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -98,7 +98,7 @@ func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.Web
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -134,16 +134,16 @@ func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.Web
 
 // WebhooksUnsubscribe - Unsubscribe to message events
 // Delete subscription for receiving notifications
-func (s *webhooks) WebhooksUnsubscribe(ctx context.Context, request operations.WebhooksUnsubscribeRequest) (*operations.WebhooksUnsubscribeResponse, error) {
+func (s *webhooks) WebhooksUnsubscribe(ctx context.Context, request operations.WebhooksUnsubscribeRequest, security operations.WebhooksUnsubscribeSecurity) (*operations.WebhooksUnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks/{url}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks/{url}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

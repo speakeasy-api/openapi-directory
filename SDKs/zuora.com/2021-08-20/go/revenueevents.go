@@ -35,14 +35,14 @@ func newRevenueEvents(defaultClient, securityClient HTTPClient, serverURL, langu
 // This REST API reference describes how to get revenue event details by specifying the revenue event number. Request and response field descriptions and sample code are provided.
 func (s *revenueEvents) GETRevenueEventDetails(ctx context.Context, request operations.GETRevenueEventDetailsRequest) (*operations.GETRevenueEventDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-events/{event-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-events/{event-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -85,16 +85,16 @@ func (s *revenueEvents) GETRevenueEventDetails(ctx context.Context, request oper
 // This REST API reference describes how to get all revenue events in a revenue schedule by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
 func (s *revenueEvents) GETRevenueEventForRevenueSchedule(ctx context.Context, request operations.GETRevenueEventForRevenueScheduleRequest) (*operations.GETRevenueEventForRevenueScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-events/revenue-schedules/{rs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-events/revenue-schedules/{rs-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -15,10 +15,10 @@ pkg/utils/utils.go
 pkg/models/operations/playablelocationslogimpressions.go
 pkg/models/operations/playablelocationslogplayerreports.go
 pkg/models/operations/playablelocationssampleplayablelocations.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlemapsplayablelocationsv3logimpressionsrequest.go
 pkg/models/shared/googlemapsplayablelocationsv3impression.go
 pkg/models/shared/googlemapsunityclientinfo.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/googlemapsplayablelocationsv3logplayerreportsrequest.go
 pkg/models/shared/googlemapsplayablelocationsv3playerreport.go

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSyslogSendPathParams struct {
+type ProtocolSyslogSendRequest struct {
+	SyslogMsg shared.SyslogMsg `request:"mediaType=application/json"`
 	// Agent to set the SYSLOG tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Message Priority
 	Pri int `pathParam:"style=simple,explode=false,name=pri"`
-}
-
-type ProtocolSyslogSendRequest struct {
-	PathParams ProtocolSyslogSendPathParams
-	Request    shared.SyslogMsg `request:"mediaType=application/json"`
 }
 
 type ProtocolSyslogSendResponse struct {

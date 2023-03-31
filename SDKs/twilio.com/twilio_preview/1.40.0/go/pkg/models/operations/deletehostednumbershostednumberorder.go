@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteHostedNumbersHostedNumberOrderServerList = []string{
@@ -12,18 +11,13 @@ var DeleteHostedNumbersHostedNumberOrderServerList = []string{
 }
 
 type DeleteHostedNumbersHostedNumberOrderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteHostedNumbersHostedNumberOrderPathParams struct {
-	// A 34 character string that uniquely identifies this HostedNumberOrder.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteHostedNumbersHostedNumberOrderRequest struct {
-	PathParams DeleteHostedNumbersHostedNumberOrderPathParams
-	Security   DeleteHostedNumbersHostedNumberOrderSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this HostedNumberOrder.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteHostedNumbersHostedNumberOrderResponse struct {

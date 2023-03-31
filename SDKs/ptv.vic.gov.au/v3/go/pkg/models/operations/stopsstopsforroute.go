@@ -43,14 +43,7 @@ func (e *StopsStopsForRouteRouteTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StopsStopsForRoutePathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-	// Number identifying transport mode; values returned via RouteTypes API
-	RouteType StopsStopsForRouteRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-}
-
-type StopsStopsForRouteQueryParams struct {
+type StopsStopsForRouteRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// An optional direction; values returned by Directions API. When this is set, stop sequence information is returned in the response.
@@ -59,17 +52,16 @@ type StopsStopsForRouteQueryParams struct {
 	GeopathUtc *time.Time `queryParam:"style=form,explode=true,name=geopath_utc"`
 	// Indicates if geopath data will be returned (default = false)
 	IncludeGeopath *bool `queryParam:"style=form,explode=true,name=include_geopath"`
+	// Identifier of route; values returned by Routes API - v3/routes
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
+	// Number identifying transport mode; values returned via RouteTypes API
+	RouteType StopsStopsForRouteRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Indicates if stop disruption information will be returned (default = false)
 	StopDisruptions *bool `queryParam:"style=form,explode=true,name=stop_disruptions"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type StopsStopsForRouteRequest struct {
-	PathParams  StopsStopsForRoutePathParams
-	QueryParams StopsStopsForRouteQueryParams
 }
 
 type StopsStopsForRouteResponse struct {

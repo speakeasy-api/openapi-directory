@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumVideoAlt1PathParams struct {
+type GetAlbumVideoAlt1Request struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetAlbumVideoAlt1QueryParams struct {
 	// The password of the album.
 	Password *string `queryParam:"style=form,explode=true,name=password"`
-}
-
-type GetAlbumVideoAlt1Request struct {
-	PathParams  GetAlbumVideoAlt1PathParams
-	QueryParams GetAlbumVideoAlt1QueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetAlbumVideoAlt1Response struct {

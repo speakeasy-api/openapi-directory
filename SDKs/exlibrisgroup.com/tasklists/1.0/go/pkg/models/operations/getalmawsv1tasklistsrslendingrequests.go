@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type GetAlmawsV1TaskListsRsLendingRequestsQueryParams struct {
+type GetAlmawsV1TaskListsRsLendingRequestsRequest struct {
 	// The resource sharing library for which lending requests should be retrieved. Mandatory. List of possible libraries can be retrieved using the [GET /almaws/v1/conf/libraries API](https://developers.exlibrisgroup.com/alma/apis/conf/GET/gwPcGly021p29HpB7XTI4Dp4I8TKv6CAxBlD4LyRaVE=/37088dc9-c685-4641-bc7f-60b5ca7cabed).
 	Library *string `queryParam:"style=form,explode=true,name=library"`
 	// The partner value. Only lending requests from this partner should be retrieved. Optional. List of possible partners can be retrieved using the [GET almaws/v1/partners API](https://developers.exlibrisgroup.com/alma/apis/partners/GET/gwPcGly021piAVNPLaef7suP1zfa6Lui/8883ef41-c3b8-4792-9ff8-cb6b729d6e07).
@@ -24,10 +24,6 @@ type GetAlmawsV1TaskListsRsLendingRequestsQueryParams struct {
 	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// Supplied Format of the resource. Optional. List of possible formats can be retrieved using the [GET almaws/v1/conf/code-tables/RequestFormats API](https://developers.exlibrisgroup.com/alma/apis/conf/GET/gwPcGly021p29HpB7XTI4K7cQ0vuYHLS4NSgDGmcRpRYqx5hIMRTng9SIKO5Vof+/37088dc9-c685-4641-bc7f-60b5ca7cabed).
 	SuppliedFormat *string `queryParam:"style=form,explode=true,name=supplied_format"`
-}
-
-type GetAlmawsV1TaskListsRsLendingRequestsRequest struct {
-	QueryParams GetAlmawsV1TaskListsRsLendingRequestsQueryParams
 }
 
 // GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestCitationType - Type of the requested resource. For example, book or article. Mandatory for borrowing requests. Mandatory when creating a lending request unless mms_id is supplied. For borrowing requests, possible codes are listed in 'PhysicalReadingListCitationTypes' [code table](https://developers.exlibrisgroup.com/blog/Working-with-the-code-tables-API): BK / CR. For lending requests, possible codes are listed in PR_CitationType [code table](https://developers.exlibrisgroup.com/blog/Working-with-the-code-tables-API): BOOK / JOURNAL.

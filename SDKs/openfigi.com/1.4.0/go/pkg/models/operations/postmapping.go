@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostMappingRequest struct {
-	// A list of third-party identifiers and extra filters.
-	Request []shared.MappingJob `request:"mediaType=application/json"`
-}
-
 type PostMappingResponse struct {
 	// A list of FIGIs and their metadata.
 	BulkMappingJobResult []shared.MappingJobResult

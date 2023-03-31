@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetUUIDRequest{
-        Security: operations.GetUUIDSecurity{
-            XFungeneratorsAPISecret: shared.SchemeXFungeneratorsAPISecret{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GetUUIDQueryParams{
-            Count: 548814,
-        },
+        Count: 548814,
     }
 
     ctx := context.Background()
-    res, err := s.UUIDGeneration.GetUUID(ctx, req)
+    res, err := s.UUIDGeneration.GetUUID(ctx, req, operations.GetUUIDSecurity{
+        XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStagesStagePathParams struct {
-	Stage string `pathParam:"style=simple,explode=false,name=stage"`
-}
-
 type GetStagesStageRequest struct {
-	PathParams GetStagesStagePathParams
+	Stage string `pathParam:"style=simple,explode=false,name=stage"`
 }
 
 type GetStagesStageResponse struct {

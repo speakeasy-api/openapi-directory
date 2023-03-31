@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAssetSecurity struct {
-	DeveloperKey shared.SchemeDeveloperKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteAssetPathParams struct {
-	// The id of the asset in UUID format
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	DeveloperKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type DeleteAssetRequest struct {
-	PathParams DeleteAssetPathParams
-	Security   DeleteAssetSecurity
+	// The id of the asset in UUID format
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAssetResponse struct {

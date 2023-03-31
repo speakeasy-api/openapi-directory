@@ -10,23 +10,18 @@ import (
 )
 
 type StorageObjectsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsInsertSecurity struct {
 	Option1 *StorageObjectsInsertSecurityOption1 `security:"option"`
 	Option2 *StorageObjectsInsertSecurityOption2 `security:"option"`
-}
-
-type StorageObjectsInsertPathParams struct {
-	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 }
 
 // StorageObjectsInsertProjectionEnum - Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
@@ -53,9 +48,12 @@ func (e *StorageObjectsInsertProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageObjectsInsertQueryParams struct {
+type StorageObjectsInsertRequest struct {
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the operation conditional on whether the object's current generation matches the given value.
@@ -80,13 +78,6 @@ type StorageObjectsInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageObjectsInsertRequest struct {
-	PathParams  StorageObjectsInsertPathParams
-	QueryParams StorageObjectsInsertQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
-	Security    StorageObjectsInsertSecurity
 }
 
 type StorageObjectsInsertResponse struct {

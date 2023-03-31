@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationClusterGroupsReadPathParams struct {
+type VirtualizationClusterGroupsReadRequest struct {
 	// A unique integer value identifying this cluster group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationClusterGroupsReadRequest struct {
-	PathParams VirtualizationClusterGroupsReadPathParams
 }
 
 type VirtualizationClusterGroupsReadResponse struct {

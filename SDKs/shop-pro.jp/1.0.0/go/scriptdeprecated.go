@@ -33,7 +33,7 @@ func newScriptDeprecated(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // CreateScriptTag - スクリプトタグの作成
-func (s *scriptDeprecated) CreateScriptTag(ctx context.Context, request operations.CreateScriptTagRequest) (*operations.CreateScriptTagResponse, error) {
+func (s *scriptDeprecated) CreateScriptTag(ctx context.Context, request operations.CreateScriptTagRequestBody, security operations.CreateScriptTagSecurity) (*operations.CreateScriptTagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/script_tags.json"
 
@@ -49,7 +49,7 @@ func (s *scriptDeprecated) CreateScriptTag(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,16 +84,16 @@ func (s *scriptDeprecated) CreateScriptTag(ctx context.Context, request operatio
 }
 
 // DeleteV1ScriptTagsScriptTagIDJSON - スクリプトタグの削除
-func (s *scriptDeprecated) DeleteV1ScriptTagsScriptTagIDJSON(ctx context.Context, request operations.DeleteV1ScriptTagsScriptTagIDJSONRequest) (*operations.DeleteV1ScriptTagsScriptTagIDJSONResponse, error) {
+func (s *scriptDeprecated) DeleteV1ScriptTagsScriptTagIDJSON(ctx context.Context, request operations.DeleteV1ScriptTagsScriptTagIDJSONRequest, security operations.DeleteV1ScriptTagsScriptTagIDJSONSecurity) (*operations.DeleteV1ScriptTagsScriptTagIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,16 +119,16 @@ func (s *scriptDeprecated) DeleteV1ScriptTagsScriptTagIDJSON(ctx context.Context
 }
 
 // GetScriptTag - スクリプトタグの取得
-func (s *scriptDeprecated) GetScriptTag(ctx context.Context, request operations.GetScriptTagRequest) (*operations.GetScriptTagResponse, error) {
+func (s *scriptDeprecated) GetScriptTag(ctx context.Context, request operations.GetScriptTagRequest, security operations.GetScriptTagSecurity) (*operations.GetScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *scriptDeprecated) GetScriptTag(ctx context.Context, request operations.
 }
 
 // GetScriptTags - スクリプトタグの取得
-func (s *scriptDeprecated) GetScriptTags(ctx context.Context, request operations.GetScriptTagsRequest) (*operations.GetScriptTagsResponse, error) {
+func (s *scriptDeprecated) GetScriptTags(ctx context.Context) (*operations.GetScriptTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/script_tags.json"
 
@@ -172,7 +172,7 @@ func (s *scriptDeprecated) GetScriptTags(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,11 +207,11 @@ func (s *scriptDeprecated) GetScriptTags(ctx context.Context, request operations
 }
 
 // UpdateScriptTag - スクリプトタグの更新
-func (s *scriptDeprecated) UpdateScriptTag(ctx context.Context, request operations.UpdateScriptTagRequest) (*operations.UpdateScriptTagResponse, error) {
+func (s *scriptDeprecated) UpdateScriptTag(ctx context.Context, request operations.UpdateScriptTagRequest, security operations.UpdateScriptTagSecurity) (*operations.UpdateScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/script_tags/{scriptTagId}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +223,7 @@ func (s *scriptDeprecated) UpdateScriptTag(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

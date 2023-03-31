@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetGithubActionsDefaultWorkflowPermissionsEnterprisePathParams struct {
+type ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest struct {
+	ActionsSetDefaultWorkflowPermissions shared.ActionsSetDefaultWorkflowPermissions `request:"mediaType=application/json"`
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest struct {
-	PathParams ActionsSetGithubActionsDefaultWorkflowPermissionsEnterprisePathParams
-	Request    shared.ActionsSetDefaultWorkflowPermissions `request:"mediaType=application/json"`
 }
 
 type ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse struct {

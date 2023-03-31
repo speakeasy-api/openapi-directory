@@ -12,18 +12,13 @@ var FetchTrustProductServerList = []string{
 }
 
 type FetchTrustProductSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchTrustProductPathParams struct {
-	// The unique string that we created to identify the Customer-Profile resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchTrustProductRequest struct {
-	PathParams FetchTrustProductPathParams
-	Security   FetchTrustProductSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Customer-Profile resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchTrustProductResponse struct {

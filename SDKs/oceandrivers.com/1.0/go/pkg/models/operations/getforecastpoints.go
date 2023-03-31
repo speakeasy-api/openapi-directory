@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetForecastPointsPathParams struct {
+type GetForecastPointsRequest struct {
 	Language string `pathParam:"style=simple,explode=false,name=language"`
 	// base URL for the the
 	Yatchclubid string `pathParam:"style=simple,explode=false,name=yatchclubid"`
-}
-
-type GetForecastPointsRequest struct {
-	PathParams GetForecastPointsPathParams
 }
 
 type GetForecastPointsResponse struct {

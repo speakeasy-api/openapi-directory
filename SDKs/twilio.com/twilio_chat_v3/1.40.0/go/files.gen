@@ -15,5 +15,5 @@ pkg/models/operations/updatechannel.go
 pkg/models/shared/chatv3channel.go
 pkg/models/shared/channelenumchanneltypeenum.go
 pkg/models/shared/channelenumwebhookenabledtypeenum.go
-pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

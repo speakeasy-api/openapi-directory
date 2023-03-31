@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AerodromesByPolyUsV1AerodromesPolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type AerodromesByPolyUsV1AerodromesPolygonQueryPostRequest struct {
-	Headers AerodromesByPolyUsV1AerodromesPolygonQueryPostHeaders
-	Request shared.AerodromesByPolygon `request:"mediaType=application/json"`
+	AerodromesByPolygon shared.AerodromesByPolygon `request:"mediaType=application/json"`
+	XAPIKey             *string                    `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse struct {

@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeletePredictionPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeletePredictionQueryParams struct {
+type DeletePredictionRequest struct {
 	// The prediction ids. Limited to 64.
 	Ids []string `queryParam:"style=form,explode=false,name=ids"`
-}
-
-type DeletePredictionRequest struct {
-	PathParams  DeletePredictionPathParams
-	QueryParams DeletePredictionQueryParams
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type DeletePredictionResponse struct {

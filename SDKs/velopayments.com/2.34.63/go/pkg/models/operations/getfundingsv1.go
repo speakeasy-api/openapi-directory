@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFundingsV1QueryParams struct {
+type GetFundingsV1Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return in a page
@@ -18,10 +18,6 @@ type GetFundingsV1QueryParams struct {
 	// Default is no sort. The supported sort fields are: dateTime and amount.
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFundingsV1Request struct {
-	QueryParams GetFundingsV1QueryParams
 }
 
 type GetFundingsV1Response struct {

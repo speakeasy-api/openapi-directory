@@ -33,7 +33,7 @@ func newPaymentPolicy(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // CreatePaymentPolicy - This method creates a new payment policy where the policy encapsulates seller's terms for order payments.  <br/><br/>Each policy targets a specific eBay marketplace and category group, and you can create multiple policies for each combination.  <br/><br/>A successful request returns the <b>getPaymentPolicy</b> URI to the new policy in the <b>Location</b> response header and the ID for the new policy is returned in the response payload.  <p class="tablenote"><b>Tip:</b> For details on creating and using the business policies supported by the Account API, see <a href="/api-docs/sell/static/seller-accounts/business-policies.html">eBay business policies</a>.</p>
-func (s *paymentPolicy) CreatePaymentPolicy(ctx context.Context, request operations.CreatePaymentPolicyRequest) (*operations.CreatePaymentPolicyResponse, error) {
+func (s *paymentPolicy) CreatePaymentPolicy(ctx context.Context, request shared.PaymentPolicyRequest, security operations.CreatePaymentPolicySecurity) (*operations.CreatePaymentPolicyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_policy"
 
@@ -52,7 +52,7 @@ func (s *paymentPolicy) CreatePaymentPolicy(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,16 +92,16 @@ func (s *paymentPolicy) CreatePaymentPolicy(ctx context.Context, request operati
 }
 
 // DeletePaymentPolicy - This method deletes a payment policy. Supply the ID of the policy you want to delete in the <b>paymentPolicyId</b> path parameter.
-func (s *paymentPolicy) DeletePaymentPolicy(ctx context.Context, request operations.DeletePaymentPolicyRequest) (*operations.DeletePaymentPolicyResponse, error) {
+func (s *paymentPolicy) DeletePaymentPolicy(ctx context.Context, request operations.DeletePaymentPolicyRequest, security operations.DeletePaymentPolicySecurity) (*operations.DeletePaymentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *paymentPolicy) DeletePaymentPolicy(ctx context.Context, request operati
 }
 
 // GetPaymentPolicies - This method retrieves all the payment policies configured for the marketplace you specify using the <code>marketplace_id</code> query parameter.  <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policies for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get the policies for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank">HTTP request headers</a>.
-func (s *paymentPolicy) GetPaymentPolicies(ctx context.Context, request operations.GetPaymentPoliciesRequest) (*operations.GetPaymentPoliciesResponse, error) {
+func (s *paymentPolicy) GetPaymentPolicies(ctx context.Context, request operations.GetPaymentPoliciesRequest, security operations.GetPaymentPoliciesSecurity) (*operations.GetPaymentPoliciesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_policy"
 
@@ -144,11 +144,11 @@ func (s *paymentPolicy) GetPaymentPolicies(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,16 +186,16 @@ func (s *paymentPolicy) GetPaymentPolicies(ctx context.Context, request operatio
 }
 
 // GetPaymentPolicy - This method retrieves the complete details of a payment policy. Supply the ID of the policy you want to retrieve using the <b>paymentPolicyId</b> path parameter.
-func (s *paymentPolicy) GetPaymentPolicy(ctx context.Context, request operations.GetPaymentPolicyRequest) (*operations.GetPaymentPolicyResponse, error) {
+func (s *paymentPolicy) GetPaymentPolicy(ctx context.Context, request operations.GetPaymentPolicyRequest, security operations.GetPaymentPolicySecurity) (*operations.GetPaymentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *paymentPolicy) GetPaymentPolicy(ctx context.Context, request operations
 }
 
 // GetPaymentPolicyByName - This method retrieves the details of a specific payment policy. Supply both the policy <code>name</code> and its associated <code>marketplace_id</code> in the request query parameters.   <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policy for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get a policy for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href="/api-docs/static/rest-request-components.html#HTTP">HTTP request headers</a>.
-func (s *paymentPolicy) GetPaymentPolicyByName(ctx context.Context, request operations.GetPaymentPolicyByNameRequest) (*operations.GetPaymentPolicyByNameResponse, error) {
+func (s *paymentPolicy) GetPaymentPolicyByName(ctx context.Context, request operations.GetPaymentPolicyByNameRequest, security operations.GetPaymentPolicyByNameSecurity) (*operations.GetPaymentPolicyByNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment_policy/get_by_policy_name"
 
@@ -244,11 +244,11 @@ func (s *paymentPolicy) GetPaymentPolicyByName(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *paymentPolicy) GetPaymentPolicyByName(ctx context.Context, request oper
 }
 
 // UpdatePaymentPolicy - This method updates an existing payment policy. Specify the policy you want to update using the <b>payment_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
-func (s *paymentPolicy) UpdatePaymentPolicy(ctx context.Context, request operations.UpdatePaymentPolicyRequest) (*operations.UpdatePaymentPolicyResponse, error) {
+func (s *paymentPolicy) UpdatePaymentPolicy(ctx context.Context, request operations.UpdatePaymentPolicyRequest, security operations.UpdatePaymentPolicySecurity) (*operations.UpdatePaymentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *paymentPolicy) UpdatePaymentPolicy(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

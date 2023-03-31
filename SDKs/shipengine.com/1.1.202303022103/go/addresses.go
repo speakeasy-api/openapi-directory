@@ -43,7 +43,7 @@ func newAddresses(defaultClient, securityClient HTTPClient, serverURL, language,
 // Data often enters your system as unstructured text (for example: emails, SMS messages, support tickets, or other documents). ShipEngine's address-recognition API helps you extract meaningful, structured data from this unstructured text. The parsed address data is returned in the same structure that's used for other ShipEngine APIs, such as address validation, rate quotes, and shipping labels.
 //
 // > **Note:** Address recognition is currently supported for the United States, Canada, Australia, New Zealand, the United Kingdom, and Ireland.
-func (s *addresses) ParseAddress(ctx context.Context, request operations.ParseAddressRequest) (*operations.ParseAddressResponse, error) {
+func (s *addresses) ParseAddress(ctx context.Context, request shared.ParseAddressRequestBody) (*operations.ParseAddressResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/addresses/recognize"
 
@@ -111,7 +111,7 @@ func (s *addresses) ParseAddress(ctx context.Context, request operations.ParseAd
 // ValidateAddress - Validate An Address
 // Address validation ensures accurate addresses and can lead to reduced shipping costs by preventing address correction surcharges.
 // ShipEngine cross references multiple databases to validate addresses and identify potential deliverability issues.
-func (s *addresses) ValidateAddress(ctx context.Context, request operations.ValidateAddressRequest) (*operations.ValidateAddressResponse, error) {
+func (s *addresses) ValidateAddress(ctx context.Context, request []shared.AddressToValidate) (*operations.ValidateAddressResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/addresses/validate"
 

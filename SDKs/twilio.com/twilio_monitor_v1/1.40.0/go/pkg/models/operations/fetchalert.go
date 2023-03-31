@@ -12,18 +12,13 @@ var FetchAlertServerList = []string{
 }
 
 type FetchAlertSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAlertPathParams struct {
-	// The SID of the Alert resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAlertRequest struct {
-	PathParams FetchAlertPathParams
-	Security   FetchAlertSecurity
-	ServerURL  *string
+	// The SID of the Alert resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchAlertResponse struct {

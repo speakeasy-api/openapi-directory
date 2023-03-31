@@ -8,16 +8,11 @@ import (
 )
 
 type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersPathParams struct {
-	// Required. The location. Must be in the format `projects/*/locations/*`.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-}
-
-type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersQueryParams struct {
+type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersQueryParams 
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The location. Must be in the format `projects/*/locations/*`.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,12 +39,6 @@ type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest struct {
-	PathParams  DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersPathParams
-	QueryParams DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersQueryParams
-	Security    DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersSecurity
 }
 
 type DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersResponse struct {

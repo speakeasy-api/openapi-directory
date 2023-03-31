@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersGetPathParams struct {
+type UsersGetRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 	// The object ID or principal name of the user for which to get information.
 	UpnOrObjectID string `pathParam:"style=simple,explode=false,name=upnOrObjectId"`
-}
-
-type UsersGetQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type UsersGetRequest struct {
-	PathParams  UsersGetPathParams
-	QueryParams UsersGetQueryParams
 }
 
 type UsersGetResponse struct {

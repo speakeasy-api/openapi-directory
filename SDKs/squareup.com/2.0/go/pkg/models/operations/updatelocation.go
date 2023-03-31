@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateLocationSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateLocationPathParams struct {
-	// The ID of the location to update.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateLocationRequest struct {
-	PathParams UpdateLocationPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateLocationRequest `request:"mediaType=application/json"`
-	Security UpdateLocationSecurity
+	UpdateLocationRequest shared.UpdateLocationRequest `request:"mediaType=application/json"`
+	// The ID of the location to update.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 }
 
 type UpdateLocationResponse struct {

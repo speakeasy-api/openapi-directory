@@ -15,10 +15,6 @@ type CreateAlertRequestBody struct {
 	Types string `multipartForm:"name=types"`
 }
 
-type CreateAlertRequest struct {
-	Request CreateAlertRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type CreateAlertResponse struct {
 	// The new alert.
 	Alert       *shared.Alert

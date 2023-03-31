@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        bearer=shared.SchemeBearer(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CircuitsCircuitTerminationsCreateRequest(
-    request=shared.WritableCircuitTerminationInput(
-        cable=shared.NestedCableInput(
-            label="nemo",
-        ),
-        circuit=7890651243899766706,
-        connection_status=True,
-        description="hic",
-        port_speed=4398235907993438713,
-        pp_info="cupiditate",
-        site=8328236888456191330,
-        term_side="A",
-        upstream_speed=8250179090128807741,
-        xconnect_id="quis",
+        bearer="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = shared.WritableCircuitTerminationInput(
+    cable=shared.NestedCableInput(
+        label="corrupti",
+    ),
+    circuit=592845,
+    connection_status="true",
+    description="quibusdam",
+    port_speed=602763,
+    pp_info="nulla",
+    site=544883,
+    term_side="Z",
+    upstream_speed=423655,
+    xconnect_id="error",
 )
     
 res = s.circuits.circuits_circuit_terminations_create(req)

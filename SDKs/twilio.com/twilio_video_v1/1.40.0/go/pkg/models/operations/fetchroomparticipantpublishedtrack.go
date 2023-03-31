@@ -12,22 +12,17 @@ var FetchRoomParticipantPublishedTrackServerList = []string{
 }
 
 type FetchRoomParticipantPublishedTrackSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRoomParticipantPublishedTrackPathParams struct {
+type FetchRoomParticipantPublishedTrackRequest struct {
 	// The SID of the Participant resource with the published track to fetch.
 	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
 	// The SID of the Room resource where the Track resource to fetch is published.
 	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// The SID of the RoomParticipantPublishedTrack resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRoomParticipantPublishedTrackRequest struct {
-	PathParams FetchRoomParticipantPublishedTrackPathParams
-	Security   FetchRoomParticipantPublishedTrackSecurity
-	ServerURL  *string
 }
 
 type FetchRoomParticipantPublishedTrackResponse struct {

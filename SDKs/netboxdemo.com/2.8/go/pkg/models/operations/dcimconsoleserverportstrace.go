@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsoleServerPortsTracePathParams struct {
+type DcimConsoleServerPortsTraceRequest struct {
 	// A unique integer value identifying this console server port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimConsoleServerPortsTraceRequest struct {
-	PathParams DcimConsoleServerPortsTracePathParams
 }
 
 type DcimConsoleServerPortsTraceResponse struct {

@@ -8,18 +8,14 @@ import (
 )
 
 type CloudidentityDevicesDeviceUsersApproveSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudidentityDevicesDeviceUsersApprovePathParams struct {
-	// Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudidentityDevicesDeviceUsersApproveQueryParams struct {
+type CloudidentityDevicesDeviceUsersApproveRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                              *shared.XgafvEnum                                                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest *shared.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type CloudidentityDevicesDeviceUsersApproveQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type CloudidentityDevicesDeviceUsersApproveQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityDevicesDeviceUsersApproveRequest struct {
-	PathParams  CloudidentityDevicesDeviceUsersApprovePathParams
-	QueryParams CloudidentityDevicesDeviceUsersApproveQueryParams
-	Request     *shared.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest `request:"mediaType=application/json"`
-	Security    CloudidentityDevicesDeviceUsersApproveSecurity
 }
 
 type CloudidentityDevicesDeviceUsersApproveResponse struct {

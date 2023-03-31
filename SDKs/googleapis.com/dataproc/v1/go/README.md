@@ -25,164 +25,152 @@ func main() {
     s := sdk.New()
 
     req := operations.DataprocProjectsLocationsBatchesCreateRequest{
-        Security: operations.DataprocProjectsLocationsBatchesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DataprocProjectsLocationsBatchesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DataprocProjectsLocationsBatchesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            BatchID: "unde",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.BatchInput{
+        DollarXgafv: "2",
+        BatchInput: &shared.BatchInput{
             EnvironmentConfig: &shared.EnvironmentConfig{
                 ExecutionConfig: &shared.ExecutionConfig{
-                    IdleTTL: "magnam",
-                    KmsKey: "debitis",
+                    IdleTTL: "provident",
+                    KmsKey: "distinctio",
                     NetworkTags: []string{
-                        "delectus",
+                        "unde",
+                        "nulla",
+                        "corrupti",
+                        "illum",
                     },
-                    NetworkURI: "tempora",
-                    ServiceAccount: "suscipit",
-                    StagingBucket: "molestiae",
-                    SubnetworkURI: "minus",
-                    TTL: "placeat",
+                    NetworkURI: "vel",
+                    ServiceAccount: "error",
+                    StagingBucket: "deserunt",
+                    SubnetworkURI: "suscipit",
+                    TTL: "iure",
                 },
                 PeripheralsConfig: &shared.PeripheralsConfig{
-                    MetastoreService: "voluptatum",
+                    MetastoreService: "magnam",
                     SparkHistoryServerConfig: &shared.SparkHistoryServerConfig{
-                        DataprocCluster: "iusto",
+                        DataprocCluster: "debitis",
                     },
                 },
             },
             Labels: map[string]string{
-                "nisi": "recusandae",
-                "temporibus": "ab",
-                "quis": "veritatis",
+                "delectus": "tempora",
             },
             PysparkBatch: &shared.PySparkBatch{
                 ArchiveUris: []string{
+                    "molestiae",
+                    "minus",
+                },
+                Args: []string{
+                    "voluptatum",
+                    "iusto",
+                    "excepturi",
+                    "nisi",
+                },
+                FileUris: []string{
+                    "temporibus",
+                    "ab",
+                    "quis",
+                    "veritatis",
+                },
+                JarFileUris: []string{
                     "perferendis",
                     "ipsam",
                     "repellendus",
                 },
-                Args: []string{
-                    "quo",
+                MainPythonFileURI: "sapiente",
+                PythonFileUris: []string{
                     "odit",
                     "at",
                     "at",
-                },
-                FileUris: []string{
-                    "molestiae",
-                    "quod",
-                    "quod",
-                    "esse",
-                },
-                JarFileUris: []string{
-                    "porro",
-                    "dolorum",
-                    "dicta",
-                },
-                MainPythonFileURI: "nam",
-                PythonFileUris: []string{
-                    "occaecati",
-                    "fugit",
-                    "deleniti",
+                    "maiores",
                 },
             },
             RuntimeConfig: &shared.RuntimeConfig{
-                ContainerImage: "hic",
+                ContainerImage: "molestiae",
                 Properties: map[string]string{
-                    "totam": "beatae",
-                    "commodi": "molestiae",
-                    "modi": "qui",
-                    "impedit": "cum",
+                    "quod": "esse",
+                    "totam": "porro",
+                    "dolorum": "dicta",
+                    "nam": "officia",
                 },
-                Version: "esse",
+                Version: "occaecati",
             },
             RuntimeInfo: &shared.RuntimeInfoInput{
                 ApproximateUsage: &shared.UsageMetrics{
-                    MilliDcuSeconds: "ipsum",
-                    ShuffleStorageGbSeconds: "excepturi",
+                    MilliDcuSeconds: "fugit",
+                    ShuffleStorageGbSeconds: "deleniti",
                 },
                 CurrentUsage: &shared.UsageSnapshot{
-                    MilliDcu: "aspernatur",
-                    ShuffleStorageGb: "perferendis",
-                    SnapshotTime: "ad",
+                    MilliDcu: "hic",
+                    ShuffleStorageGb: "optio",
+                    SnapshotTime: "totam",
                 },
             },
             SparkBatch: &shared.SparkBatch{
                 ArchiveUris: []string{
-                    "sed",
-                    "iste",
-                    "dolor",
+                    "commodi",
                 },
                 Args: []string{
-                    "laboriosam",
-                    "hic",
-                    "saepe",
+                    "modi",
+                    "qui",
                 },
                 FileUris: []string{
-                    "in",
-                    "corporis",
-                    "iste",
+                    "cum",
+                    "esse",
+                    "ipsum",
+                    "excepturi",
                 },
                 JarFileUris: []string{
-                    "saepe",
-                    "quidem",
+                    "perferendis",
                 },
-                MainClass: "architecto",
-                MainJarFileURI: "ipsa",
+                MainClass: "ad",
+                MainJarFileURI: "natus",
             },
             SparkRBatch: &shared.SparkRBatch{
                 ArchiveUris: []string{
-                    "est",
-                    "mollitia",
-                    "laborum",
-                    "dolores",
+                    "iste",
                 },
                 Args: []string{
-                    "corporis",
+                    "natus",
                 },
                 FileUris: []string{
-                    "nobis",
+                    "hic",
+                    "saepe",
                 },
-                MainRFileURI: "enim",
+                MainRFileURI: "fuga",
             },
             SparkSQLBatch: &shared.SparkSQLBatch{
                 JarFileUris: []string{
-                    "nemo",
-                    "minima",
-                    "excepturi",
+                    "corporis",
+                    "iste",
                 },
-                QueryFileURI: "accusantium",
+                QueryFileURI: "iure",
                 QueryVariables: map[string]string{
-                    "culpa": "doloribus",
-                    "sapiente": "architecto",
+                    "quidem": "architecto",
+                    "ipsa": "reiciendis",
+                    "est": "mollitia",
+                    "laborum": "dolores",
                 },
             },
         },
+        AccessToken: "dolorem",
+        Alt: "media",
+        BatchID: "explicabo",
+        Callback: "nobis",
+        Fields: "enim",
+        Key: "omnis",
+        OauthToken: "nemo",
+        Parent: "minima",
+        PrettyPrint: false,
+        QuotaUser: "excepturi",
+        RequestID: "accusantium",
+        UploadType: "iure",
+        UploadProtocol: "culpa",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DataprocProjectsLocationsBatchesCreate(ctx, req)
+    res, err := s.Projects.DataprocProjectsLocationsBatchesCreate(ctx, req, operations.DataprocProjectsLocationsBatchesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -195,7 +183,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -236,4 +224,15 @@ func main() {
 * `DataprocProjectsRegionsWorkflowTemplatesUpdate` - Updates (replaces) workflow template. The updated template must contain version that matches the current server version.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

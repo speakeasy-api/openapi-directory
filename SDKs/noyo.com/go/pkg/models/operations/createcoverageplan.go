@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCoveragePlanPathParams struct {
+type CreateCoveragePlanRequest struct {
+	CoveragePlanCreateRequest shared.CoveragePlanCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the group coverage in Noyo
 	GroupCoverageID string `pathParam:"style=simple,explode=false,name=group_coverage_id"`
-}
-
-type CreateCoveragePlanRequest struct {
-	PathParams CreateCoveragePlanPathParams
-	Request    shared.CoveragePlanCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateCoveragePlanResponse struct {

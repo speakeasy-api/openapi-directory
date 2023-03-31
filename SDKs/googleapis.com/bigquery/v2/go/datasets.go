@@ -32,20 +32,20 @@ func newDatasets(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BigqueryDatasetsDelete - Deletes the dataset specified by the datasetId value. Before you can delete a dataset, you must delete all its tables, either manually or by specifying deleteContents. Immediately after deletion, you can create another dataset with the same name.
-func (s *datasets) BigqueryDatasetsDelete(ctx context.Context, request operations.BigqueryDatasetsDeleteRequest) (*operations.BigqueryDatasetsDeleteResponse, error) {
+func (s *datasets) BigqueryDatasetsDelete(ctx context.Context, request operations.BigqueryDatasetsDeleteRequest, security operations.BigqueryDatasetsDeleteSecurity) (*operations.BigqueryDatasetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *datasets) BigqueryDatasetsDelete(ctx context.Context, request operation
 }
 
 // BigqueryDatasetsGet - Returns the dataset specified by datasetID.
-func (s *datasets) BigqueryDatasetsGet(ctx context.Context, request operations.BigqueryDatasetsGetRequest) (*operations.BigqueryDatasetsGetResponse, error) {
+func (s *datasets) BigqueryDatasetsGet(ctx context.Context, request operations.BigqueryDatasetsGetRequest, security operations.BigqueryDatasetsGetSecurity) (*operations.BigqueryDatasetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *datasets) BigqueryDatasetsGet(ctx context.Context, request operations.B
 }
 
 // BigqueryDatasetsInsert - Creates a new empty dataset.
-func (s *datasets) BigqueryDatasetsInsert(ctx context.Context, request operations.BigqueryDatasetsInsertRequest) (*operations.BigqueryDatasetsInsertResponse, error) {
+func (s *datasets) BigqueryDatasetsInsert(ctx context.Context, request operations.BigqueryDatasetsInsertRequest, security operations.BigqueryDatasetsInsertSecurity) (*operations.BigqueryDatasetsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Dataset", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *datasets) BigqueryDatasetsInsert(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *datasets) BigqueryDatasetsInsert(ctx context.Context, request operation
 }
 
 // BigqueryDatasetsList - Lists all datasets in the specified project to which you have been granted the READER dataset role.
-func (s *datasets) BigqueryDatasetsList(ctx context.Context, request operations.BigqueryDatasetsListRequest) (*operations.BigqueryDatasetsListResponse, error) {
+func (s *datasets) BigqueryDatasetsList(ctx context.Context, request operations.BigqueryDatasetsListRequest, security operations.BigqueryDatasetsListSecurity) (*operations.BigqueryDatasetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *datasets) BigqueryDatasetsList(ctx context.Context, request operations.
 }
 
 // BigqueryDatasetsPatch - Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource. This method supports patch semantics.
-func (s *datasets) BigqueryDatasetsPatch(ctx context.Context, request operations.BigqueryDatasetsPatchRequest) (*operations.BigqueryDatasetsPatchResponse, error) {
+func (s *datasets) BigqueryDatasetsPatch(ctx context.Context, request operations.BigqueryDatasetsPatchRequest, security operations.BigqueryDatasetsPatchSecurity) (*operations.BigqueryDatasetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Dataset", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *datasets) BigqueryDatasetsPatch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *datasets) BigqueryDatasetsPatch(ctx context.Context, request operations
 }
 
 // BigqueryDatasetsUpdate - Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource.
-func (s *datasets) BigqueryDatasetsUpdate(ctx context.Context, request operations.BigqueryDatasetsUpdateRequest) (*operations.BigqueryDatasetsUpdateResponse, error) {
+func (s *datasets) BigqueryDatasetsUpdate(ctx context.Context, request operations.BigqueryDatasetsUpdateRequest, security operations.BigqueryDatasetsUpdateSecurity) (*operations.BigqueryDatasetsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Dataset", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *datasets) BigqueryDatasetsUpdate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

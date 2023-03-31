@@ -3,26 +3,22 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        bearer=shared.SchemeBearer(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        bearer="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateAccountRequest(
-    path_params=operations.CreateAccountPathParams(
-        budget_id="quo",
-    ),
-    request=shared.SaveAccountWrapper(
+    post_account_wrapper=shared.PostAccountWrapper(
         account=shared.SaveAccount(
-            balance=1779878049279090778,
-            name="quos",
-            type="otherAsset",
+            balance=548814,
+            name="provident",
+            type="studentLoan",
         ),
     ),
+    budget_id="quibusdam",
 )
     
 res = s.accounts.create_account(req)

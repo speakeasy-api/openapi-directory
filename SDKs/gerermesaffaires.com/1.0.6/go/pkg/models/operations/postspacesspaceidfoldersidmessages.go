@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDMessagesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDMessagesPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum string
@@ -83,10 +75,12 @@ type PostSpacesSpaceIDFoldersIDMessagesRequestBody struct {
 }
 
 type PostSpacesSpaceIDFoldersIDMessagesRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDMessagesPathParams
 	// Message to write (except Author and ModificationAuthor). Text must be Html, tags  'audio','button','input','script','select','textarea','video' are deleted
-	Request  PostSpacesSpaceIDFoldersIDMessagesRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDMessagesSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDMessagesRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PostSpacesSpaceIDFoldersIDMessagesResponse struct {

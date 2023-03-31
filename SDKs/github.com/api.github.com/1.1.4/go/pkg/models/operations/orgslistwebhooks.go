@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListWebhooksPathParams struct {
+type OrgsListWebhooksRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsListWebhooksQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type OrgsListWebhooksRequest struct {
-	PathParams  OrgsListWebhooksPathParams
-	QueryParams OrgsListWebhooksQueryParams
 }
 
 type OrgsListWebhooksResponse struct {

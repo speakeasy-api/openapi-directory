@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type CollectionsDetailPathParams struct {
+type CollectionsDetailRequest struct {
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsDetailRequest struct {
-	PathParams CollectionsDetailPathParams
 }
 
 // CollectionsDetailCollectionAttributes - The properties of the collection.

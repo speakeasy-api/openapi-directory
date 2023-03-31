@@ -10,12 +10,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersGetByUsernamePathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type UsersGetByUsernameRequest struct {
-	PathParams UsersGetByUsernamePathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UsersGetByUsername200ApplicationJSONType string

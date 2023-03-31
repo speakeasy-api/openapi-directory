@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDocumentPathParams struct {
-	// A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type PutDocumentHeaders struct {
+type PutDocumentRequest struct {
 	// The server will respect the If-None-Match header if it is set to * (in other words, it will not overwrite an existing document located at the specified `path`).
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type PutDocumentRequest struct {
-	PathParams PutDocumentPathParams
-	Headers    PutDocumentHeaders
 	// The JSON document to write to the specified path.
-	Request interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	// A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PutDocumentResponse struct {

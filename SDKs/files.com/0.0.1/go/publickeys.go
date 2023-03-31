@@ -37,7 +37,7 @@ func newPublicKeys(defaultClient, securityClient HTTPClient, serverURL, language
 // Delete Public Key
 func (s *publicKeys) DeletePublicKeysID(ctx context.Context, request operations.DeletePublicKeysIDRequest) (*operations.DeletePublicKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/public_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/public_keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *publicKeys) GetPublicKeys(ctx context.Context, request operations.GetPu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *publicKeys) GetPublicKeys(ctx context.Context, request operations.GetPu
 // Show Public Key
 func (s *publicKeys) GetPublicKeysID(ctx context.Context, request operations.GetPublicKeysIDRequest) (*operations.GetPublicKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/public_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/public_keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *publicKeys) GetPublicKeysID(ctx context.Context, request operations.Get
 // Update Public Key
 func (s *publicKeys) PatchPublicKeysID(ctx context.Context, request operations.PatchPublicKeysIDRequest) (*operations.PatchPublicKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/public_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/public_keys/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -297,7 +297,7 @@ func (s *publicKeys) PatchPublicKeysID(ctx context.Context, request operations.P
 
 // PostPublicKeys - Create Public Key
 // Create Public Key
-func (s *publicKeys) PostPublicKeys(ctx context.Context, request operations.PostPublicKeysRequest) (*operations.PostPublicKeysResponse, error) {
+func (s *publicKeys) PostPublicKeys(ctx context.Context, request operations.PostPublicKeysRequestBody) (*operations.PostPublicKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/public_keys"
 

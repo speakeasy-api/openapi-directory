@@ -48,6 +48,7 @@ pkg/models/operations/datamigrationprojectslocationsprivateconnectionsget.go
 pkg/models/operations/datamigrationprojectslocationsprivateconnectionslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/connectionprofile.go
 pkg/models/shared/postgresqlconnectionprofile.go
 pkg/models/shared/sslconfig.go
@@ -65,9 +66,7 @@ pkg/models/shared/alloydbsettings.go
 pkg/models/shared/primaryinstancesettings.go
 pkg/models/shared/machineconfig.go
 pkg/models/shared/userpassword.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listconnectionprofilesresponse.go
 pkg/models/shared/applyconversionworkspacerequest.go
 pkg/models/shared/commitconversionworkspacerequest.go

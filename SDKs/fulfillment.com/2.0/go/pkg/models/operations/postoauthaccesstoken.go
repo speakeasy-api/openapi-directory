@@ -148,11 +148,6 @@ func (u PostOauthAccessTokenAccessTokenRequestV2) MarshalJSON() ([]byte, error) 
 	return nil, nil
 }
 
-type PostOauthAccessTokenRequest struct {
-	// Get an access token
-	Request PostOauthAccessTokenAccessTokenRequestV2 `request:"mediaType=application/json"`
-}
-
 // PostOauthAccessTokenAccessTokenResponseV2 - Authorized
 type PostOauthAccessTokenAccessTokenResponseV2 struct {
 	AccessToken  *string `json:"access_token,omitempty"`

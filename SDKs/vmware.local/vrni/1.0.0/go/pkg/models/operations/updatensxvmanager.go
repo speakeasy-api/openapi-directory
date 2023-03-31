@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateNsxvManagerSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateNsxvManagerPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateNsxvManagerRequest struct {
-	PathParams UpdateNsxvManagerPathParams
-	Request    *shared.NSXVManagerDataSource `request:"mediaType=application/json"`
-	Security   UpdateNsxvManagerSecurity
+	NSXVManagerDataSource *shared.NSXVManagerDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateNsxvManagerResponse struct {

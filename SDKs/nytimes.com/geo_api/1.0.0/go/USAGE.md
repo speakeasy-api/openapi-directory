@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetQueryJSONRequest{
-        QueryParams: operations.GetQueryJSONQueryParams{
-            DateRange: "corrupti",
-            Elevation: 592845,
-            Facets: "1",
-            Filter: "quibusdam",
-            Latitude: "unde",
-            Limit: 857946,
-            Longitude: "corrupti",
-            Name: "illum",
-            Offset: 423655,
-            Query: "error",
-            Sort: "deserunt",
-            Sw: "suscipit",
-        },
+        DateRange: "corrupti",
+        Elevation: 592845,
+        Facets: "1",
+        Filter: "quibusdam",
+        Latitude: "unde",
+        Limit: 857946,
+        Longitude: "corrupti",
+        Name: "illum",
+        Offset: 423655,
+        Query: "error",
+        Sort: "deserunt",
+        Sw: "suscipit",
     }
 
     ctx := context.Background()

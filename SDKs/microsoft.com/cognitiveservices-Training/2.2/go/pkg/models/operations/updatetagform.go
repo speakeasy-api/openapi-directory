@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTagFormPathParams struct {
+type UpdateTagFormRequest struct {
+	// The updated tag model.
+	TagInput    shared.TagInput `request:"mediaType=application/x-www-form-urlencoded"`
+	TrainingKey string          `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The id of the target tag.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type UpdateTagFormHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateTagFormRequest struct {
-	PathParams UpdateTagFormPathParams
-	Headers    UpdateTagFormHeaders
-	// The updated tag model.
-	Request shared.TagInput `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateTagFormResponse struct {

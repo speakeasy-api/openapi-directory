@@ -8,14 +8,7 @@ import (
 )
 
 type CreateCommentAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateCommentAlt1PathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCommentAlt1RequestBody struct {
@@ -24,9 +17,11 @@ type CreateCommentAlt1RequestBody struct {
 }
 
 type CreateCommentAlt1Request struct {
-	PathParams CreateCommentAlt1PathParams
-	Request    CreateCommentAlt1RequestBody `request:"mediaType=application/vnd.vimeo.comment+json"`
-	Security   CreateCommentAlt1Security
+	RequestBody CreateCommentAlt1RequestBody `request:"mediaType=application/vnd.vimeo.comment+json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type CreateCommentAlt1Response struct {

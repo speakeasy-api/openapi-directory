@@ -35,14 +35,14 @@ func newReportLine(defaultClient, securityClient HTTPClient, serverURL, language
 // Returns the specified pay line from employee
 func (s *reportLine) GetReportLineFromEmployer(ctx context.Context, request operations.GetReportLineFromEmployerRequest) (*operations.GetReportLineFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportLine/{ReportLineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportLine/{ReportLineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -98,14 +98,14 @@ func (s *reportLine) GetReportLineFromEmployer(ctx context.Context, request oper
 // Get links to all report lines for the specified employee
 func (s *reportLine) GetReportLinesFromEmployer(ctx context.Context, request operations.GetReportLinesFromEmployerRequest) (*operations.GetReportLinesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ReportLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -161,14 +161,14 @@ func (s *reportLine) GetReportLinesFromEmployer(ctx context.Context, request ope
 // Returns all report lines associated with the specified pay run
 func (s *reportLine) GetReportLinesFromPayRun(ctx context.Context, request operations.GetReportLinesFromPayRunRequest) (*operations.GetReportLinesFromPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/ReportLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/ReportLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -4,35 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReferencesAirportsNearestByLatitudeAndLongitudeGetPathParams struct {
+type ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// 2 letter ISO 3166-1 language code
+	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// Latitude in decimal format to at most 3 decimal places
 	Latitude int `pathParam:"style=simple,explode=false,name=latitude"`
 	// Longitude in decimal format to at most 3 decimal places
 	Longitude int `pathParam:"style=simple,explode=false,name=longitude"`
-}
-
-type ReferencesAirportsNearestByLatitudeAndLongitudeGetQueryParams struct {
-	// 2 letter ISO 3166-1 language code
-	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ReferencesAirportsNearestByLatitudeAndLongitudeGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest struct {
-	PathParams  ReferencesAirportsNearestByLatitudeAndLongitudeGetPathParams
-	QueryParams ReferencesAirportsNearestByLatitudeAndLongitudeGetQueryParams
-	Headers     ReferencesAirportsNearestByLatitudeAndLongitudeGetHeaders
-	Security    ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity
 }
 
 type ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse struct {

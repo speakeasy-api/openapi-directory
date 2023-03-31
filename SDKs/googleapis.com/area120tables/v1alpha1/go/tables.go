@@ -33,7 +33,7 @@ func newTables(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // Area120tablesTablesList - Lists tables for the user.
-func (s *tables) Area120tablesTablesList(ctx context.Context, request operations.Area120tablesTablesListRequest) (*operations.Area120tablesTablesListResponse, error) {
+func (s *tables) Area120tablesTablesList(ctx context.Context, request operations.Area120tablesTablesListRequest, security operations.Area120tablesTablesListSecurity) (*operations.Area120tablesTablesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/tables"
 
@@ -42,11 +42,11 @@ func (s *tables) Area120tablesTablesList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *tables) Area120tablesTablesList(ctx context.Context, request operations
 }
 
 // Area120tablesTablesRowsBatchCreate - Creates multiple rows.
-func (s *tables) Area120tablesTablesRowsBatchCreate(ctx context.Context, request operations.Area120tablesTablesRowsBatchCreateRequest) (*operations.Area120tablesTablesRowsBatchCreateResponse, error) {
+func (s *tables) Area120tablesTablesRowsBatchCreate(ctx context.Context, request operations.Area120tablesTablesRowsBatchCreateRequest, security operations.Area120tablesTablesRowsBatchCreateSecurity) (*operations.Area120tablesTablesRowsBatchCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchCreate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchCreate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreateRowsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *tables) Area120tablesTablesRowsBatchCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *tables) Area120tablesTablesRowsBatchCreate(ctx context.Context, request
 }
 
 // Area120tablesTablesRowsBatchDelete - Deletes multiple rows.
-func (s *tables) Area120tablesTablesRowsBatchDelete(ctx context.Context, request operations.Area120tablesTablesRowsBatchDeleteRequest) (*operations.Area120tablesTablesRowsBatchDeleteResponse, error) {
+func (s *tables) Area120tablesTablesRowsBatchDelete(ctx context.Context, request operations.Area120tablesTablesRowsBatchDeleteRequest, security operations.Area120tablesTablesRowsBatchDeleteSecurity) (*operations.Area120tablesTablesRowsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchDelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchDelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeleteRowsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *tables) Area120tablesTablesRowsBatchDelete(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,11 +191,11 @@ func (s *tables) Area120tablesTablesRowsBatchDelete(ctx context.Context, request
 }
 
 // Area120tablesTablesRowsBatchUpdate - Updates multiple rows.
-func (s *tables) Area120tablesTablesRowsBatchUpdate(ctx context.Context, request operations.Area120tablesTablesRowsBatchUpdateRequest) (*operations.Area120tablesTablesRowsBatchUpdateResponse, error) {
+func (s *tables) Area120tablesTablesRowsBatchUpdate(ctx context.Context, request operations.Area120tablesTablesRowsBatchUpdateRequest, security operations.Area120tablesTablesRowsBatchUpdateSecurity) (*operations.Area120tablesTablesRowsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateRowsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,11 +207,11 @@ func (s *tables) Area120tablesTablesRowsBatchUpdate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,11 +246,11 @@ func (s *tables) Area120tablesTablesRowsBatchUpdate(ctx context.Context, request
 }
 
 // Area120tablesTablesRowsCreate - Creates a row.
-func (s *tables) Area120tablesTablesRowsCreate(ctx context.Context, request operations.Area120tablesTablesRowsCreateRequest) (*operations.Area120tablesTablesRowsCreateResponse, error) {
+func (s *tables) Area120tablesTablesRowsCreate(ctx context.Context, request operations.Area120tablesTablesRowsCreateRequest, security operations.Area120tablesTablesRowsCreateSecurity) (*operations.Area120tablesTablesRowsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Row", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -262,11 +262,11 @@ func (s *tables) Area120tablesTablesRowsCreate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,20 +301,20 @@ func (s *tables) Area120tablesTablesRowsCreate(ctx context.Context, request oper
 }
 
 // Area120tablesTablesRowsDelete - Deletes a row.
-func (s *tables) Area120tablesTablesRowsDelete(ctx context.Context, request operations.Area120tablesTablesRowsDeleteRequest) (*operations.Area120tablesTablesRowsDeleteResponse, error) {
+func (s *tables) Area120tablesTablesRowsDelete(ctx context.Context, request operations.Area120tablesTablesRowsDeleteRequest, security operations.Area120tablesTablesRowsDeleteSecurity) (*operations.Area120tablesTablesRowsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,20 +349,20 @@ func (s *tables) Area120tablesTablesRowsDelete(ctx context.Context, request oper
 }
 
 // Area120tablesTablesRowsList - Lists rows in a table. Returns NOT_FOUND if the table does not exist.
-func (s *tables) Area120tablesTablesRowsList(ctx context.Context, request operations.Area120tablesTablesRowsListRequest) (*operations.Area120tablesTablesRowsListResponse, error) {
+func (s *tables) Area120tablesTablesRowsList(ctx context.Context, request operations.Area120tablesTablesRowsListRequest, security operations.Area120tablesTablesRowsListSecurity) (*operations.Area120tablesTablesRowsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -397,11 +397,11 @@ func (s *tables) Area120tablesTablesRowsList(ctx context.Context, request operat
 }
 
 // Area120tablesTablesRowsPatch - Updates a row.
-func (s *tables) Area120tablesTablesRowsPatch(ctx context.Context, request operations.Area120tablesTablesRowsPatchRequest) (*operations.Area120tablesTablesRowsPatchResponse, error) {
+func (s *tables) Area120tablesTablesRowsPatch(ctx context.Context, request operations.Area120tablesTablesRowsPatchRequest, security operations.Area120tablesTablesRowsPatchSecurity) (*operations.Area120tablesTablesRowsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Row", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,11 +413,11 @@ func (s *tables) Area120tablesTablesRowsPatch(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

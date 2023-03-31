@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type GetTagsTagsWikisPathParams struct {
-	// String list (semicolon delimited).
-	Tags string `pathParam:"style=simple,explode=false,name=tags"`
-}
-
-type GetTagsTagsWikisQueryParams struct {
+type GetTagsTagsWikisRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -52,11 +47,8 @@ type GetTagsTagsWikisQueryParams struct {
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
 	//
 	Site string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type GetTagsTagsWikisRequest struct {
-	PathParams  GetTagsTagsWikisPathParams
-	QueryParams GetTagsTagsWikisQueryParams
+	// String list (semicolon delimited).
+	Tags string `pathParam:"style=simple,explode=false,name=tags"`
 }
 
 type GetTagsTagsWikisResponse struct {

@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetResourcesCampaignsJSONRequest{
-        QueryParams: operations.GetResourcesCampaignsJSONQueryParams{
-            Max: 548814,
-            Offset: 592845,
-            Sort: "distinctio",
-        },
+        Max: 548814,
+        Offset: 592845,
+        Sort: "distinctio",
     }
 
     ctx := context.Background()

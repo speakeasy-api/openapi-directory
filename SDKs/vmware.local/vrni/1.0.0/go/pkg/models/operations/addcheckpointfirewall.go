@@ -8,13 +8,7 @@ import (
 )
 
 type AddCheckpointFirewallSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddCheckpointFirewallRequest struct {
-	// Add a vSec Checkpoint firewall as data source
-	Request  *shared.SwitchDataSourceRequest `request:"mediaType=application/json"`
-	Security AddCheckpointFirewallSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddCheckpointFirewallResponse struct {

@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // OrgpolicyProjectsConstraintsList - Lists constraints that could be applied on the specified resource.
-func (s *projects) OrgpolicyProjectsConstraintsList(ctx context.Context, request operations.OrgpolicyProjectsConstraintsListRequest) (*operations.OrgpolicyProjectsConstraintsListResponse, error) {
+func (s *projects) OrgpolicyProjectsConstraintsList(ctx context.Context, request operations.OrgpolicyProjectsConstraintsListRequest, security operations.OrgpolicyProjectsConstraintsListSecurity) (*operations.OrgpolicyProjectsConstraintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/constraints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/constraints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) OrgpolicyProjectsConstraintsList(ctx context.Context, request
 }
 
 // OrgpolicyProjectsPoliciesCreate - Creates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the policy already exists on the given Google Cloud resource.
-func (s *projects) OrgpolicyProjectsPoliciesCreate(ctx context.Context, request operations.OrgpolicyProjectsPoliciesCreateRequest) (*operations.OrgpolicyProjectsPoliciesCreateResponse, error) {
+func (s *projects) OrgpolicyProjectsPoliciesCreate(ctx context.Context, request operations.OrgpolicyProjectsPoliciesCreateRequest, security operations.OrgpolicyProjectsPoliciesCreateSecurity) (*operations.OrgpolicyProjectsPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudOrgpolicyV2PolicyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) OrgpolicyProjectsPoliciesCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) OrgpolicyProjectsPoliciesCreate(ctx context.Context, request 
 }
 
 // OrgpolicyProjectsPoliciesDelete - Deletes a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or organization policy does not exist.
-func (s *projects) OrgpolicyProjectsPoliciesDelete(ctx context.Context, request operations.OrgpolicyProjectsPoliciesDeleteRequest) (*operations.OrgpolicyProjectsPoliciesDeleteResponse, error) {
+func (s *projects) OrgpolicyProjectsPoliciesDelete(ctx context.Context, request operations.OrgpolicyProjectsPoliciesDeleteRequest, security operations.OrgpolicyProjectsPoliciesDeleteSecurity) (*operations.OrgpolicyProjectsPoliciesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) OrgpolicyProjectsPoliciesDelete(ctx context.Context, request 
 }
 
 // OrgpolicyProjectsPoliciesGet - Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
-func (s *projects) OrgpolicyProjectsPoliciesGet(ctx context.Context, request operations.OrgpolicyProjectsPoliciesGetRequest) (*operations.OrgpolicyProjectsPoliciesGetResponse, error) {
+func (s *projects) OrgpolicyProjectsPoliciesGet(ctx context.Context, request operations.OrgpolicyProjectsPoliciesGetRequest, security operations.OrgpolicyProjectsPoliciesGetSecurity) (*operations.OrgpolicyProjectsPoliciesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *projects) OrgpolicyProjectsPoliciesGet(ctx context.Context, request ope
 }
 
 // OrgpolicyProjectsPoliciesGetEffectivePolicy - Gets the effective policy on a resource. This is the result of merging policies in the resource hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition` set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager resource hierarchy with 'under:' prefix will not be expanded.
-func (s *projects) OrgpolicyProjectsPoliciesGetEffectivePolicy(ctx context.Context, request operations.OrgpolicyProjectsPoliciesGetEffectivePolicyRequest) (*operations.OrgpolicyProjectsPoliciesGetEffectivePolicyResponse, error) {
+func (s *projects) OrgpolicyProjectsPoliciesGetEffectivePolicy(ctx context.Context, request operations.OrgpolicyProjectsPoliciesGetEffectivePolicyRequest, security operations.OrgpolicyProjectsPoliciesGetEffectivePolicySecurity) (*operations.OrgpolicyProjectsPoliciesGetEffectivePolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:getEffectivePolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:getEffectivePolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *projects) OrgpolicyProjectsPoliciesGetEffectivePolicy(ctx context.Conte
 }
 
 // OrgpolicyProjectsPoliciesList - Retrieves all of the policies that exist on a particular resource.
-func (s *projects) OrgpolicyProjectsPoliciesList(ctx context.Context, request operations.OrgpolicyProjectsPoliciesListRequest) (*operations.OrgpolicyProjectsPoliciesListResponse, error) {
+func (s *projects) OrgpolicyProjectsPoliciesList(ctx context.Context, request operations.OrgpolicyProjectsPoliciesListRequest, security operations.OrgpolicyProjectsPoliciesListSecurity) (*operations.OrgpolicyProjectsPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,11 +327,11 @@ func (s *projects) OrgpolicyProjectsPoliciesList(ctx context.Context, request op
 }
 
 // OrgpolicyProjectsPoliciesPatch - Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or the policy do not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the policy Note: the supplied policy will perform a full overwrite of all fields.
-func (s *projects) OrgpolicyProjectsPoliciesPatch(ctx context.Context, request operations.OrgpolicyProjectsPoliciesPatchRequest) (*operations.OrgpolicyProjectsPoliciesPatchResponse, error) {
+func (s *projects) OrgpolicyProjectsPoliciesPatch(ctx context.Context, request operations.OrgpolicyProjectsPoliciesPatchRequest, security operations.OrgpolicyProjectsPoliciesPatchSecurity) (*operations.OrgpolicyProjectsPoliciesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudOrgpolicyV2PolicyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,11 +343,11 @@ func (s *projects) OrgpolicyProjectsPoliciesPatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

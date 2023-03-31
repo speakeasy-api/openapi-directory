@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCompanyEmployeesEmployeeIDPathParams struct {
+type GetCompanyEmployeesEmployeeIDRequest struct {
 	// Numeric `id` of the employee
 	EmployeeID int `pathParam:"style=simple,explode=false,name=employee_id"`
-}
-
-type GetCompanyEmployeesEmployeeIDRequest struct {
-	PathParams GetCompanyEmployeesEmployeeIDPathParams
 }
 
 type GetCompanyEmployeesEmployeeIDResponse struct {

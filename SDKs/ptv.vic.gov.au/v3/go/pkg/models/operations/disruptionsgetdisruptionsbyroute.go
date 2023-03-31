@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisruptionsGetDisruptionsByRoutePathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-}
-
 // DisruptionsGetDisruptionsByRouteDisruptionStatusEnum - Filter by status of disruption
 type DisruptionsGetDisruptionsByRouteDisruptionStatusEnum string
 
@@ -38,20 +33,17 @@ func (e *DisruptionsGetDisruptionsByRouteDisruptionStatusEnum) UnmarshalJSON(dat
 	}
 }
 
-type DisruptionsGetDisruptionsByRouteQueryParams struct {
+type DisruptionsGetDisruptionsByRouteRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Filter by status of disruption
 	DisruptionStatus *DisruptionsGetDisruptionsByRouteDisruptionStatusEnum `queryParam:"style=form,explode=true,name=disruption_status"`
+	// Identifier of route; values returned by Routes API - v3/routes
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DisruptionsGetDisruptionsByRouteRequest struct {
-	PathParams  DisruptionsGetDisruptionsByRoutePathParams
-	QueryParams DisruptionsGetDisruptionsByRouteQueryParams
 }
 
 type DisruptionsGetDisruptionsByRouteResponse struct {

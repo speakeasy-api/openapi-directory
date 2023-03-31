@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RecacheTranslationsPathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type RecacheTranslationsQueryParams struct {
+type RecacheTranslationsRequest struct {
 	// Continuous Project File ID
 	FileID *int64 `queryParam:"style=form,explode=true,name=file_id"`
 	// Locale
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type RecacheTranslationsRequest struct {
-	PathParams  RecacheTranslationsPathParams
-	QueryParams RecacheTranslationsQueryParams
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type RecacheTranslationsResponse struct {

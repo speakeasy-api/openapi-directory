@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishersReadPathParams struct {
+type PublishersReadRequest struct {
 	// A unique integer value identifying this Publisher.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PublishersReadRequest struct {
-	PathParams PublishersReadPathParams
 }
 
 type PublishersReadResponse struct {

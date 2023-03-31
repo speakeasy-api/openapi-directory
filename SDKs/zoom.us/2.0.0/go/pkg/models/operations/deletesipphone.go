@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSIPPhoneSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteSIPPhonePathParams struct {
-	// Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API.
-	PhoneID string `pathParam:"style=simple,explode=false,name=phoneId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteSIPPhoneRequest struct {
-	PathParams DeleteSIPPhonePathParams
-	Security   DeleteSIPPhoneSecurity
+	// Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API.
+	PhoneID string `pathParam:"style=simple,explode=false,name=phoneId"`
 }
 
 type DeleteSIPPhoneResponse struct {

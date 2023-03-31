@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugMembersMemberSlugActivitiesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugMembersMemberSlugActivitiesPathParams struct {
-	MemberSlug    string `pathParam:"style=simple,explode=false,name=member_slug"`
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum
@@ -93,20 +87,16 @@ func (e *GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum) UnmarshalJSON(data
 	}
 }
 
-type GetWorkspaceSlugMembersMemberSlugActivitiesQueryParams struct {
+type GetWorkspaceSlugMembersMemberSlugActivitiesRequest struct {
 	ActivityType *string                                                   `queryParam:"style=form,explode=true,name=activity_type"`
 	Direction    *GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	Items        *GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum     `queryParam:"style=form,explode=true,name=items"`
+	MemberSlug   string                                                    `pathParam:"style=simple,explode=false,name=member_slug"`
 	Page         *string                                                   `queryParam:"style=form,explode=true,name=page"`
 	Sort         *GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum      `queryParam:"style=form,explode=true,name=sort"`
 	// Deprecated in favor of the activity_type parameter.
-	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetWorkspaceSlugMembersMemberSlugActivitiesRequest struct {
-	PathParams  GetWorkspaceSlugMembersMemberSlugActivitiesPathParams
-	QueryParams GetWorkspaceSlugMembersMemberSlugActivitiesQueryParams
-	Security    GetWorkspaceSlugMembersMemberSlugActivitiesSecurity
+	Type          *string `queryParam:"style=form,explode=true,name=type"`
+	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugMembersMemberSlugActivitiesResponse struct {

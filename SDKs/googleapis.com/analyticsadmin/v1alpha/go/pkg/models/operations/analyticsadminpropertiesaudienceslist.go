@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsadminPropertiesAudiencesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsadminPropertiesAudiencesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsadminPropertiesAudiencesListSecurity struct {
@@ -22,12 +22,7 @@ type AnalyticsadminPropertiesAudiencesListSecurity struct {
 	Option2 *AnalyticsadminPropertiesAudiencesListSecurityOption2 `security:"option"`
 }
 
-type AnalyticsadminPropertiesAudiencesListPathParams struct {
-	// Required. Example format: properties/1234
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AnalyticsadminPropertiesAudiencesListQueryParams struct {
+type AnalyticsadminPropertiesAudiencesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type AnalyticsadminPropertiesAudiencesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListAudiences` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListAudiences` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Example format: properties/1234
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type AnalyticsadminPropertiesAudiencesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AnalyticsadminPropertiesAudiencesListRequest struct {
-	PathParams  AnalyticsadminPropertiesAudiencesListPathParams
-	QueryParams AnalyticsadminPropertiesAudiencesListQueryParams
-	Security    AnalyticsadminPropertiesAudiencesListSecurity
 }
 
 type AnalyticsadminPropertiesAudiencesListResponse struct {

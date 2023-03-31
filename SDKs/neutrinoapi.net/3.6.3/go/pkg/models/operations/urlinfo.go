@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type URLInfoQueryParams struct {
+type URLInfoRequest struct {
 	// If this URL responds with html, text, json or xml then return the response. This option is useful if you want to perform further processing on the URL content (e.g. with the HTML Extract or HTML Clean APIs)
 	FetchContent *bool `queryParam:"style=form,explode=true,name=fetch-content"`
 	// Ignore any TLS/SSL certificate errors and load the URL anyway
@@ -18,10 +18,6 @@ type URLInfoQueryParams struct {
 	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 	// The URL to probe
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type URLInfoRequest struct {
-	QueryParams URLInfoQueryParams
 }
 
 type URLInfoResponse struct {

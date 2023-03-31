@@ -34,7 +34,7 @@ func newRestricted(defaultClient, securityClient HTTPClient, serverURL, language
 
 // CollaboratorsPost - Collborators: Bulk Update (Admin Only)
 // Allows for bulk updates on collaborator metadata.  Restricted to internal admins
-func (s *restricted) CollaboratorsPost(ctx context.Context, request operations.CollaboratorsPostRequest) (*operations.CollaboratorsPostResponse, error) {
+func (s *restricted) CollaboratorsPost(ctx context.Context, request shared.CollaboratorBulkUpdateRequest) (*operations.CollaboratorsPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/collaborators"
 

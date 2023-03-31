@@ -8,12 +8,7 @@ import (
 	"time"
 )
 
-type DiaryControllerGetAppointmentsBetweenDatesPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerGetAppointmentsBetweenDatesQueryParams struct {
+type DiaryControllerGetAppointmentsBetweenDatesRequest struct {
 	// The appointment IDs to search for
 	AppointmentTypesToSearch []string `queryParam:"style=form,explode=true,name=appointmentTypesToSearch"`
 	// The unique ID of the Branch
@@ -24,13 +19,10 @@ type DiaryControllerGetAppointmentsBetweenDatesQueryParams struct {
 	EndDate time.Time `queryParam:"style=form,explode=true,name=endDate"`
 	// The index of the first item to return
 	Offset int `queryParam:"style=form,explode=true,name=offset"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The search from date
 	StartDate time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type DiaryControllerGetAppointmentsBetweenDatesRequest struct {
-	PathParams  DiaryControllerGetAppointmentsBetweenDatesPathParams
-	QueryParams DiaryControllerGetAppointmentsBetweenDatesQueryParams
 }
 
 type DiaryControllerGetAppointmentsBetweenDatesResponse struct {

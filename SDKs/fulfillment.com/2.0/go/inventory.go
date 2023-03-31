@@ -34,7 +34,7 @@ func newInventory(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // GetInventory - List of Item Inventories
 // Retrieve inventory for one or more items. This API requires elevated permissions, please speak to your success manager.
-func (s *inventory) GetInventory(ctx context.Context, request operations.GetInventoryRequest) (*operations.GetInventoryResponse, error) {
+func (s *inventory) GetInventory(ctx context.Context, request operations.GetInventoryRequest, security operations.GetInventorySecurity) (*operations.GetInventoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/inventory"
 
@@ -43,11 +43,11 @@ func (s *inventory) GetInventory(ctx context.Context, request operations.GetInve
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

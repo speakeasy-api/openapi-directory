@@ -14,34 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAliasRequest{
-        Security: operations.CreateAliasSecurity{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.CreateAliasQueryParams{
-            AliasName: "corrupti",
-            DomainName: "provident",
-        },
-        Request: shared.CreateAliasModel{
+        CreateAliasModel: shared.CreateAliasModel{
             Destinations: []shared.DestinationModel{
                 shared.DestinationModel{
+                    Country: "Montenegro",
+                    Os: "distinctio",
+                    URL: "quibusdam",
+                },
+                shared.DestinationModel{
+                    Country: "Mozambique",
+                    Os: "nulla",
+                    URL: "corrupti",
+                },
+                shared.DestinationModel{
                     Country: "Suriname",
-                    Os: "unde",
-                    URL: "nulla",
-                },
-                shared.DestinationModel{
-                    Country: "Mali",
-                    Os: "illum",
-                    URL: "vel",
-                },
-                shared.DestinationModel{
-                    Country: "Netherlands Antilles",
-                    Os: "deserunt",
-                    URL: "suscipit",
+                    Os: "vel",
+                    URL: "error",
                 },
             },
             Metatags: []shared.MetaTagModel{
+                shared.MetaTagModel{
+                    Content: "suscipit",
+                    Name: "iure",
+                },
                 shared.MetaTagModel{
                     Content: "magnam",
                     Name: "debitis",
@@ -68,10 +63,14 @@ func main() {
                 },
             },
         },
+        AliasName: "veritatis",
+        DomainName: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Alias.CreateAlias(ctx, req)
+    res, err := s.Alias.CreateAlias(ctx, req, operations.CreateAliasSecurity{
+        APIKeyAuth: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

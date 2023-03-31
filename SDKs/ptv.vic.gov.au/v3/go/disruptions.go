@@ -43,7 +43,7 @@ func (s *disruptions) DisruptionsGetAllDisruptions(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,14 +124,14 @@ func (s *disruptions) DisruptionsGetAllDisruptions(ctx context.Context, request 
 // DisruptionsGetDisruptionByID - View a specific disruption
 func (s *disruptions) DisruptionsGetDisruptionByID(ctx context.Context, request operations.DisruptionsGetDisruptionByIDRequest) (*operations.DisruptionsGetDisruptionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/{disruption_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/{disruption_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -219,7 +219,7 @@ func (s *disruptions) DisruptionsGetDisruptionModes(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -300,14 +300,14 @@ func (s *disruptions) DisruptionsGetDisruptionModes(ctx context.Context, request
 // DisruptionsGetDisruptionsByRoute - View all disruptions for a particular route
 func (s *disruptions) DisruptionsGetDisruptionsByRoute(ctx context.Context, request operations.DisruptionsGetDisruptionsByRouteRequest) (*operations.DisruptionsGetDisruptionsByRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/route/{route_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/route/{route_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -388,14 +388,14 @@ func (s *disruptions) DisruptionsGetDisruptionsByRoute(ctx context.Context, requ
 // DisruptionsGetDisruptionsByRouteAndStop - View all disruptions for a particular route and stop
 func (s *disruptions) DisruptionsGetDisruptionsByRouteAndStop(ctx context.Context, request operations.DisruptionsGetDisruptionsByRouteAndStopRequest) (*operations.DisruptionsGetDisruptionsByRouteAndStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/route/{route_id}/stop/{stop_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/route/{route_id}/stop/{stop_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -476,14 +476,14 @@ func (s *disruptions) DisruptionsGetDisruptionsByRouteAndStop(ctx context.Contex
 // DisruptionsGetDisruptionsByStop - View all disruptions for a particular stop
 func (s *disruptions) DisruptionsGetDisruptionsByStop(ctx context.Context, request operations.DisruptionsGetDisruptionsByStopRequest) (*operations.DisruptionsGetDisruptionsByStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/stop/{stop_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/disruptions/stop/{stop_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -90,7 +90,7 @@ func (e *GetGroupsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGroupsQueryParams struct {
+type GetGroupsRequest struct {
 	// The sort direction of the results.
 	Direction *GetGroupsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -107,10 +107,6 @@ type GetGroupsQueryParams struct {
 	//  * `relevant` - Relevant sorting is available only for search queries.
 	//
 	Sort *GetGroupsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetGroupsRequest struct {
-	QueryParams GetGroupsQueryParams
 }
 
 type GetGroupsResponse struct {

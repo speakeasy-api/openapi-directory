@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudschedulerProjectsLocationsJobsCreate - Creates a job.
-func (s *projects) CloudschedulerProjectsLocationsJobsCreate(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsCreateRequest) (*operations.CloudschedulerProjectsLocationsJobsCreateResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsCreate(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsCreateRequest, security operations.CloudschedulerProjectsLocationsJobsCreateSecurity) (*operations.CloudschedulerProjectsLocationsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Job", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) CloudschedulerProjectsLocationsJobsCreate(ctx context.Context
 }
 
 // CloudschedulerProjectsLocationsJobsDelete - Deletes a job.
-func (s *projects) CloudschedulerProjectsLocationsJobsDelete(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsDeleteRequest) (*operations.CloudschedulerProjectsLocationsJobsDeleteResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsDelete(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsDeleteRequest, security operations.CloudschedulerProjectsLocationsJobsDeleteSecurity) (*operations.CloudschedulerProjectsLocationsJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) CloudschedulerProjectsLocationsJobsDelete(ctx context.Context
 }
 
 // CloudschedulerProjectsLocationsJobsGet - Gets a job.
-func (s *projects) CloudschedulerProjectsLocationsJobsGet(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsGetRequest) (*operations.CloudschedulerProjectsLocationsJobsGetResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsGet(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsGetRequest, security operations.CloudschedulerProjectsLocationsJobsGetSecurity) (*operations.CloudschedulerProjectsLocationsJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) CloudschedulerProjectsLocationsJobsGet(ctx context.Context, r
 }
 
 // CloudschedulerProjectsLocationsJobsList - Lists jobs.
-func (s *projects) CloudschedulerProjectsLocationsJobsList(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsListRequest) (*operations.CloudschedulerProjectsLocationsJobsListResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsList(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsListRequest, security operations.CloudschedulerProjectsLocationsJobsListSecurity) (*operations.CloudschedulerProjectsLocationsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsList(ctx context.Context, 
 }
 
 // CloudschedulerProjectsLocationsJobsPatch - Updates a job. If successful, the updated Job is returned. If the job does not exist, `NOT_FOUND` is returned. If UpdateJob does not successfully return, it is possible for the job to be in an Job.State.UPDATE_FAILED state. A job in this state may not be executed. If this happens, retry the UpdateJob request until a successful response is received.
-func (s *projects) CloudschedulerProjectsLocationsJobsPatch(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsPatchRequest) (*operations.CloudschedulerProjectsLocationsJobsPatchResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsPatch(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsPatchRequest, security operations.CloudschedulerProjectsLocationsJobsPatchSecurity) (*operations.CloudschedulerProjectsLocationsJobsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Job", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsPatch(ctx context.Context,
 }
 
 // CloudschedulerProjectsLocationsJobsPause - Pauses a job. If a job is paused then the system will stop executing the job until it is re-enabled via ResumeJob. The state of the job is stored in state; if paused it will be set to Job.State.PAUSED. A job must be in Job.State.ENABLED to be paused.
-func (s *projects) CloudschedulerProjectsLocationsJobsPause(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsPauseRequest) (*operations.CloudschedulerProjectsLocationsJobsPauseResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsPause(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsPauseRequest, security operations.CloudschedulerProjectsLocationsJobsPauseSecurity) (*operations.CloudschedulerProjectsLocationsJobsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:pause", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsPause(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsPause(ctx context.Context,
 }
 
 // CloudschedulerProjectsLocationsJobsResume - Resume a job. This method reenables a job after it has been Job.State.PAUSED. The state of a job is stored in Job.state; after calling this method it will be set to Job.State.ENABLED. A job must be in Job.State.PAUSED to be resumed.
-func (s *projects) CloudschedulerProjectsLocationsJobsResume(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsResumeRequest) (*operations.CloudschedulerProjectsLocationsJobsResumeResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsResume(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsResumeRequest, security operations.CloudschedulerProjectsLocationsJobsResumeSecurity) (*operations.CloudschedulerProjectsLocationsJobsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsResume(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsResume(ctx context.Context
 }
 
 // CloudschedulerProjectsLocationsJobsRun - Forces a job to run now. When this method is called, Cloud Scheduler will dispatch the job, even if the job is already running.
-func (s *projects) CloudschedulerProjectsLocationsJobsRun(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsRunRequest) (*operations.CloudschedulerProjectsLocationsJobsRunResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsJobsRun(ctx context.Context, request operations.CloudschedulerProjectsLocationsJobsRunRequest, security operations.CloudschedulerProjectsLocationsJobsRunSecurity) (*operations.CloudschedulerProjectsLocationsJobsRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:run", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:run", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) CloudschedulerProjectsLocationsJobsRun(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *projects) CloudschedulerProjectsLocationsJobsRun(ctx context.Context, r
 }
 
 // CloudschedulerProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) CloudschedulerProjectsLocationsList(ctx context.Context, request operations.CloudschedulerProjectsLocationsListRequest) (*operations.CloudschedulerProjectsLocationsListResponse, error) {
+func (s *projects) CloudschedulerProjectsLocationsList(ctx context.Context, request operations.CloudschedulerProjectsLocationsListRequest, security operations.CloudschedulerProjectsLocationsListSecurity) (*operations.CloudschedulerProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

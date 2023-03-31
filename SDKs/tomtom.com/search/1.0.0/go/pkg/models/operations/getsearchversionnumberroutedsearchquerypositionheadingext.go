@@ -7,20 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtPathParams struct {
+type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest struct {
 	// Expected response format.
 	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
-	Heading float32 `pathParam:"style=simple,explode=false,name=heading"`
-	// This is specified as a comma separated string composed of lat., lon.
-	Position string `pathParam:"style=simple,explode=false,name=position"`
-	// Query string. Must be properly URL encoded.
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams struct {
 	// Indexes for which extended postal codes should be included in the results. Available indexes are:
 	//   - <b>Addr</b> = Address ranges
 	//   - <b>Geo</b> = Geographies
@@ -29,6 +18,8 @@ type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams struct
 	//   - <b>Str</b> = Streets
 	//   - <b>XStr</b> = Cross Streets (intersections)
 	ExtendedPostalCodesFor *string `queryParam:"style=form,explode=true,name=extendedPostalCodesFor"`
+	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
+	Heading float32 `pathParam:"style=simple,explode=false,name=heading"`
 	// A comma separated list of indexes which should be utilized for the search. Item order does not matter. Available indexes are:
 	//   - <b>Addr</b> = Address range interpolation (when there is no PAD)
 	//   - <b>Geo</b> = Geographies
@@ -43,15 +34,16 @@ type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams struct
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Multiplies the limit by N to gather more candidate POIs, which will then be sorted by drive distance, returning only the top candidates according to the limit.
 	Multiplier *int64 `queryParam:"style=form,explode=true,name=multiplier"`
+	// This is specified as a comma separated string composed of lat., lon.
+	Position string `pathParam:"style=simple,explode=false,name=position"`
+	// Query string. Must be properly URL encoded.
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 	// Only return results that arrive from routing engine within this time limit.
 	RoutingTimeout *int64 `queryParam:"style=form,explode=true,name=routingTimeout"`
 	// If the "typeahead" flag is set, the query will be interpreted as a partial input and the search will enter <b>predictive</b> mode.
 	Typeahead *bool `queryParam:"style=form,explode=true,name=typeahead"`
-}
-
-type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest struct {
-	PathParams  GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtPathParams
-	QueryParams GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse struct {

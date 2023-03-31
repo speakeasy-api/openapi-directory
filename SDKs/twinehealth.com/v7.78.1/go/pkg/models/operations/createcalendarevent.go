@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCalendarEventRequest struct {
-	Request shared.CreateCalendarEventRequest `request:"mediaType=application/vnd.api+json"`
-}
-
 type CreateCalendarEventResponse struct {
 	ContentType string
 	// OK

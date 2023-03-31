@@ -34,7 +34,7 @@ func newAddSubaccount(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // SubaccountAdd - Ajoute un sous compte
 // Ajoute un sous compte
-func (s *addSubaccount) SubaccountAdd(ctx context.Context, request operations.SubaccountAddRequest) (*operations.SubaccountAddResponse, error) {
+func (s *addSubaccount) SubaccountAdd(ctx context.Context, request shared.SubaccountAddRequest) (*operations.SubaccountAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subaccount"
 

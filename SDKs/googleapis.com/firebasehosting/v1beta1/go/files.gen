@@ -33,7 +33,6 @@ pkg/models/operations/firebasehostingsitesversionspopulatefiles.go
 pkg/models/shared/site.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listsitesresponse.go
 pkg/models/shared/channel.go
 pkg/models/shared/release.go

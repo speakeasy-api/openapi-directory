@@ -8,13 +8,7 @@ import (
 )
 
 type GetStatisticsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetStatisticsRequest struct {
-	// Filter
-	Request  shared.ClicksFilterModel `request:"mediaType=application/json"`
-	Security GetStatisticsSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetStatisticsResponse struct {

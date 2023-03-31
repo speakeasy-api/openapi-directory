@@ -91,7 +91,7 @@ func (s *sessions) DeleteSessions(ctx context.Context) (*operations.DeleteSessio
 
 // PostSessions - Create user session (log in)
 // Create user session (log in)
-func (s *sessions) PostSessions(ctx context.Context, request operations.PostSessionsRequest) (*operations.PostSessionsResponse, error) {
+func (s *sessions) PostSessions(ctx context.Context, request operations.PostSessionsRequestBody) (*operations.PostSessionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sessions"
 

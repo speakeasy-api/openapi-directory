@@ -8,6 +8,42 @@ import (
 	"net/http"
 )
 
+// GetSitesWithinOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+type GetSitesWithinOutputFormatLocationDescriptorEnum string
+
+const (
+	GetSitesWithinOutputFormatLocationDescriptorEnumAny            GetSitesWithinOutputFormatLocationDescriptorEnum = "any"
+	GetSitesWithinOutputFormatLocationDescriptorEnumAccessPoint    GetSitesWithinOutputFormatLocationDescriptorEnum = "accessPoint"
+	GetSitesWithinOutputFormatLocationDescriptorEnumFrontDoorPoint GetSitesWithinOutputFormatLocationDescriptorEnum = "frontDoorPoint"
+	GetSitesWithinOutputFormatLocationDescriptorEnumParcelPoint    GetSitesWithinOutputFormatLocationDescriptorEnum = "parcelPoint"
+	GetSitesWithinOutputFormatLocationDescriptorEnumRooftopPoint   GetSitesWithinOutputFormatLocationDescriptorEnum = "rooftopPoint"
+	GetSitesWithinOutputFormatLocationDescriptorEnumRoutingPoint   GetSitesWithinOutputFormatLocationDescriptorEnum = "routingPoint"
+)
+
+func (e *GetSitesWithinOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "any":
+		fallthrough
+	case "accessPoint":
+		fallthrough
+	case "frontDoorPoint":
+		fallthrough
+	case "parcelPoint":
+		fallthrough
+	case "rooftopPoint":
+		fallthrough
+	case "routingPoint":
+		*e = GetSitesWithinOutputFormatLocationDescriptorEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetSitesWithinOutputFormatLocationDescriptorEnum: %s", s)
+	}
+}
+
 // GetSitesWithinOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
 //
 // Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
@@ -46,49 +82,6 @@ func (e *GetSitesWithinOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) 
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetSitesWithinOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetSitesWithinOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetSitesWithinOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
-// GetSitesWithinOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
-type GetSitesWithinOutputFormatLocationDescriptorEnum string
-
-const (
-	GetSitesWithinOutputFormatLocationDescriptorEnumAny            GetSitesWithinOutputFormatLocationDescriptorEnum = "any"
-	GetSitesWithinOutputFormatLocationDescriptorEnumAccessPoint    GetSitesWithinOutputFormatLocationDescriptorEnum = "accessPoint"
-	GetSitesWithinOutputFormatLocationDescriptorEnumFrontDoorPoint GetSitesWithinOutputFormatLocationDescriptorEnum = "frontDoorPoint"
-	GetSitesWithinOutputFormatLocationDescriptorEnumParcelPoint    GetSitesWithinOutputFormatLocationDescriptorEnum = "parcelPoint"
-	GetSitesWithinOutputFormatLocationDescriptorEnumRooftopPoint   GetSitesWithinOutputFormatLocationDescriptorEnum = "rooftopPoint"
-	GetSitesWithinOutputFormatLocationDescriptorEnumRoutingPoint   GetSitesWithinOutputFormatLocationDescriptorEnum = "routingPoint"
-)
-
-func (e *GetSitesWithinOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "any":
-		fallthrough
-	case "accessPoint":
-		fallthrough
-	case "frontDoorPoint":
-		fallthrough
-	case "parcelPoint":
-		fallthrough
-	case "rooftopPoint":
-		fallthrough
-	case "routingPoint":
-		*e = GetSitesWithinOutputFormatLocationDescriptorEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetSitesWithinOutputFormatLocationDescriptorEnum: %s", s)
 	}
 }
 
@@ -134,7 +127,7 @@ func (e *GetSitesWithinOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetSitesWithinOutputFormatQueryParams struct {
+type GetSitesWithinOutputFormatRequest struct {
 	// A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank">bbox</a>
 	Bbox string `queryParam:"style=form,explode=true,name=bbox"`
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
@@ -147,15 +140,14 @@ type GetSitesWithinOutputFormatQueryParams struct {
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// If true, excludes sites without a civic address
 	OnlyCivic *bool `queryParam:"style=form,explode=true,name=onlyCivic"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetSitesWithinOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetSitesWithinOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`
-}
-
-type GetSitesWithinOutputFormatRequest struct {
-	PathParams  GetSitesWithinOutputFormatPathParams
-	QueryParams GetSitesWithinOutputFormatQueryParams
 }
 
 type GetSitesWithinOutputFormatResponse struct {

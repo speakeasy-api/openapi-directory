@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningListAlertsForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
 // CodeScanningListAlertsForEnterpriseSortEnum - The property by which to sort the results.
 type CodeScanningListAlertsForEnterpriseSortEnum string
 
@@ -38,13 +33,15 @@ func (e *CodeScanningListAlertsForEnterpriseSortEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type CodeScanningListAlertsForEnterpriseQueryParams struct {
+type CodeScanningListAlertsForEnterpriseRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.8/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.8/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
 	Before *string `queryParam:"style=form,explode=true,name=before"`
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
@@ -57,11 +54,6 @@ type CodeScanningListAlertsForEnterpriseQueryParams struct {
 	ToolGUID *string `queryParam:"style=form,explode=true,name=tool_guid"`
 	// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
 	ToolName *string `queryParam:"style=form,explode=true,name=tool_name"`
-}
-
-type CodeScanningListAlertsForEnterpriseRequest struct {
-	PathParams  CodeScanningListAlertsForEnterprisePathParams
-	QueryParams CodeScanningListAlertsForEnterpriseQueryParams
 }
 
 // CodeScanningListAlertsForEnterprise503ApplicationJSON - Service unavailable

@@ -12,11 +12,8 @@ var UpdateSyncServiceServerList = []string{
 }
 
 type UpdateSyncServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncServicePathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncServiceUpdateSyncServiceRequest struct {
@@ -27,10 +24,8 @@ type UpdateSyncServiceUpdateSyncServiceRequest struct {
 }
 
 type UpdateSyncServiceRequest struct {
-	PathParams UpdateSyncServicePathParams
-	Request    *UpdateSyncServiceUpdateSyncServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncServiceSecurity
-	ServerURL  *string
+	RequestBody *UpdateSyncServiceUpdateSyncServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid         string                                     `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSyncServiceResponse struct {

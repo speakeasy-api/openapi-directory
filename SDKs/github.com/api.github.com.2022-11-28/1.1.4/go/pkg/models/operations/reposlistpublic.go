@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListPublicQueryParams struct {
+type ReposListPublicRequest struct {
 	// A repository ID. Only return repositories with an ID greater than this ID.
 	Since *int64 `queryParam:"style=form,explode=true,name=since"`
-}
-
-type ReposListPublicRequest struct {
-	QueryParams ReposListPublicQueryParams
 }
 
 type ReposListPublicResponse struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirebasedatabaseProjectsLocationsInstancesCreate - Requests that a new DatabaseInstance be created. The state of a successfully created DatabaseInstance is ACTIVE. Only available for projects on the Blaze plan. Projects can be upgraded using the Cloud Billing API https://cloud.google.com/billing/reference/rest/v1/projects/updateBillingInfo. Note that it might take a few minutes for billing enablement state to propagate to Firebase systems.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesCreate(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesCreate(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest, security operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/instances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatabaseInstanceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesCreate(ctx context.
 }
 
 // FirebasedatabaseProjectsLocationsInstancesDelete - Marks a DatabaseInstance to be deleted. The DatabaseInstance will be set to the DELETED state for 20 days, and will be purged within 30 days. The default database cannot be deleted. IDs for deleted database instances may never be recovered or re-used. The Database may only be deleted if it is already in a DISABLED state.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesDelete(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesDeleteRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesDelete(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesDeleteRequest, security operations.FirebasedatabaseProjectsLocationsInstancesDeleteSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesDelete(ctx context.
 }
 
 // FirebasedatabaseProjectsLocationsInstancesDisable - Disables a DatabaseInstance. The database can be re-enabled later using ReenableDatabaseInstance. When a database is disabled, all reads and writes are denied, including view access in the Firebase console.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesDisable(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesDisableRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesDisable(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesDisableRequest, security operations.FirebasedatabaseProjectsLocationsInstancesDisableSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:disable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesDisable(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesDisable(ctx context
 }
 
 // FirebasedatabaseProjectsLocationsInstancesGet - Gets the DatabaseInstance identified by the specified resource name.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesGet(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesGetRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesGetResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesGet(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesGetRequest, security operations.FirebasedatabaseProjectsLocationsInstancesGetSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesGet(ctx context.Con
 }
 
 // FirebasedatabaseProjectsLocationsInstancesList - Lists each DatabaseInstance associated with the specified parent project. The list items are returned in no particular order, but will be a consistent view of the database instances when additional requests are made with a `pageToken`. The resulting list contains instances in any STATE. The list results may be stale by a few seconds. Use GetDatabaseInstance for consistent reads.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesList(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesListRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesListResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesList(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesListRequest, security operations.FirebasedatabaseProjectsLocationsInstancesListSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesList(ctx context.Co
 }
 
 // FirebasedatabaseProjectsLocationsInstancesReenable - Enables a DatabaseInstance. The database must have been disabled previously using DisableDatabaseInstance. The state of a successfully reenabled DatabaseInstance is ACTIVE.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesReenable(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesReenableRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesReenable(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesReenableRequest, security operations.FirebasedatabaseProjectsLocationsInstancesReenableSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:reenable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:reenable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesReenable(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesReenable(ctx contex
 }
 
 // FirebasedatabaseProjectsLocationsInstancesUndelete - Restores a DatabaseInstance that was previously marked to be deleted. After the delete method is used, DatabaseInstances are set to the DELETED state for 20 days, and will be purged within 30 days. Databases in the DELETED state can be undeleted without losing any data. This method may only be used on a DatabaseInstance in the DELETED state. Purged DatabaseInstances may not be recovered.
-func (s *projects) FirebasedatabaseProjectsLocationsInstancesUndelete(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesUndeleteRequest) (*operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse, error) {
+func (s *projects) FirebasedatabaseProjectsLocationsInstancesUndelete(ctx context.Context, request operations.FirebasedatabaseProjectsLocationsInstancesUndeleteRequest, security operations.FirebasedatabaseProjectsLocationsInstancesUndeleteSecurity) (*operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) FirebasedatabaseProjectsLocationsInstancesUndelete(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

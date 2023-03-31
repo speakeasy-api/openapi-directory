@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPicturePathParams struct {
+type GetPictureRequest struct {
 	// The ID of the picture.
 	PortraitsetID float64 `pathParam:"style=simple,explode=false,name=portraitset_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetPictureRequest struct {
-	PathParams GetPicturePathParams
 }
 
 type GetPictureResponse struct {

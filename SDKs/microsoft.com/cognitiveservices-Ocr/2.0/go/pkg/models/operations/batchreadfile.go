@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchReadFileRequest struct {
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
-}
-
 type BatchReadFileResponse struct {
 	// Error response.
 	ComputerVisionError *shared.ComputerVisionError

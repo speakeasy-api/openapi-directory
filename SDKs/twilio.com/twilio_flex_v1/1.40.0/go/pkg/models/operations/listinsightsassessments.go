@@ -12,10 +12,11 @@ var ListInsightsAssessmentsServerList = []string{
 }
 
 type ListInsightsAssessmentsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListInsightsAssessmentsQueryParams struct {
+type ListInsightsAssessmentsRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -24,18 +25,8 @@ type ListInsightsAssessmentsQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The id of the segment.
 	SegmentID *string `queryParam:"style=form,explode=true,name=SegmentId"`
-}
-
-type ListInsightsAssessmentsHeaders struct {
 	// The Token HTTP request header
 	Token *string `header:"style=simple,explode=false,name=Token"`
-}
-
-type ListInsightsAssessmentsRequest struct {
-	QueryParams ListInsightsAssessmentsQueryParams
-	Headers     ListInsightsAssessmentsHeaders
-	Security    ListInsightsAssessmentsSecurity
-	ServerURL   *string
 }
 
 type ListInsightsAssessmentsListInsightsAssessmentsResponseMeta struct {

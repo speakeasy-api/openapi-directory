@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutPagesIDJSONPathParams struct {
-	// Id of the Page
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutPagesIDJSONQueryParams struct {
+type PutPagesIDJSONRequest struct {
+	// Page parameters.
+	PageModify shared.PageModify `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Page
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutPagesIDJSONRequest struct {
-	PathParams  PutPagesIDJSONPathParams
-	QueryParams PutPagesIDJSONQueryParams
-	// Page parameters.
-	Request shared.PageModify `request:"mediaType=application/json"`
 }
 
 type PutPagesIDJSONResponse struct {

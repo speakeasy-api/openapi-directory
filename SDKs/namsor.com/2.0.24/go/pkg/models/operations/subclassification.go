@@ -8,18 +8,13 @@ import (
 )
 
 type SubclassificationSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SubclassificationPathParams struct {
-	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
-	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type SubclassificationRequest struct {
-	PathParams SubclassificationPathParams
-	Security   SubclassificationSecurity
+	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
+	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type SubclassificationResponse struct {

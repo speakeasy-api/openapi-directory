@@ -34,11 +34,11 @@ func newSubaccountManagement(defaultClient, securityClient HTTPClient, serverURL
 
 // CreateSubAccount - Create subaccount
 // Create a subaccount for a given primary account.
-func (s *subaccountManagement) CreateSubAccount(ctx context.Context, request operations.CreateSubAccountRequest) (*operations.CreateSubAccountResponse, error) {
+func (s *subaccountManagement) CreateSubAccount(ctx context.Context, request operations.CreateSubAccountRequest, security operations.CreateSubAccountSecurity) (*operations.CreateSubAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NewSubaccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *subaccountManagement) CreateSubAccount(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *subaccountManagement) CreateSubAccount(ctx context.Context, request ope
 
 // ModifySubaccount - Modify a subaccount
 // Change one or more properties of a subaccount.
-func (s *subaccountManagement) ModifySubaccount(ctx context.Context, request operations.ModifySubaccountRequest) (*operations.ModifySubaccountResponse, error) {
+func (s *subaccountManagement) ModifySubaccount(ctx context.Context, request operations.ModifySubaccountRequest, security operations.ModifySubaccountSecurity) (*operations.ModifySubaccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts/{subaccount_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts/{subaccount_key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifySubaccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -148,7 +148,7 @@ func (s *subaccountManagement) ModifySubaccount(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,16 +224,16 @@ func (s *subaccountManagement) ModifySubaccount(ctx context.Context, request ope
 
 // RetrieveSubaccount - Retrieve a subaccount
 // Get the information of a subaccount specified with its API key.
-func (s *subaccountManagement) RetrieveSubaccount(ctx context.Context, request operations.RetrieveSubaccountRequest) (*operations.RetrieveSubaccountResponse, error) {
+func (s *subaccountManagement) RetrieveSubaccount(ctx context.Context, request operations.RetrieveSubaccountRequest, security operations.RetrieveSubaccountSecurity) (*operations.RetrieveSubaccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts/{subaccount_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts/{subaccount_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -299,16 +299,16 @@ func (s *subaccountManagement) RetrieveSubaccount(ctx context.Context, request o
 
 // RetrieveSubaccountsList - Retrieve list of subaccounts
 // Get the information of all the subaccounts owned by the primary account.
-func (s *subaccountManagement) RetrieveSubaccountsList(ctx context.Context, request operations.RetrieveSubaccountsListRequest) (*operations.RetrieveSubaccountsListResponse, error) {
+func (s *subaccountManagement) RetrieveSubaccountsList(ctx context.Context, request operations.RetrieveSubaccountsListRequest, security operations.RetrieveSubaccountsListSecurity) (*operations.RetrieveSubaccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{api_key}/subaccounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

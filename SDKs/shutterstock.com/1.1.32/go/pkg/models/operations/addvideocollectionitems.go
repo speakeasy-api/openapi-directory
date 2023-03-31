@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoCollectionItemsSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type AddVideoCollectionItemsPathParams struct {
-	// The ID of the collection to which items should be added
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddVideoCollectionItemsRequest struct {
-	PathParams AddVideoCollectionItemsPathParams
 	// Array of video IDs to add to the collection
-	Request  shared.CollectionItemRequest `request:"mediaType=application/json"`
-	Security AddVideoCollectionItemsSecurity
+	CollectionItemRequest shared.CollectionItemRequest `request:"mediaType=application/json"`
+	// The ID of the collection to which items should be added
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AddVideoCollectionItemsResponse struct {

@@ -8,15 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetGroupSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetGroupSettingsPathParams struct {
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetGroupSettingsOptionEnum - `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the group.<br>`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the group.<br>
@@ -44,7 +39,7 @@ func (e *GetGroupSettingsOptionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGroupSettingsQueryParams struct {
+type GetGroupSettingsRequest struct {
 	// Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:<br>
 	// {
 	//     "schedule_meeting": {
@@ -53,15 +48,10 @@ type GetGroupSettingsQueryParams struct {
 	// }
 	// <br>You can provide multiple values by separating them with commas(example: "host_video,participant_video”).
 	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
+	GroupID           string  `pathParam:"style=simple,explode=false,name=groupId"`
 	// `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the group.<br>`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the group.<br>
 	// `meeting_security`: Use this query parameter to view meeting security settings applied on the group.<br>
 	Option *GetGroupSettingsOptionEnum `queryParam:"style=form,explode=true,name=option"`
-}
-
-type GetGroupSettingsRequest struct {
-	PathParams  GetGroupSettingsPathParams
-	QueryParams GetGroupSettingsQueryParams
-	Security    GetGroupSettingsSecurity
 }
 
 // GetGroupSettings200ApplicationXMLMeetingWebinarSecuritySettingsMeetingSecurityEncryptionTypeEnum - Choose between enhanced encryption and [end-to-end encryption](https://support.zoom.us/hc/en-us/articles/360048660871) when starting or a meeting. When using end-to-end encryption, several features (e.g. cloud recording, phone/SIP/H.323 dial-in) will be **automatically disabled**. <br><br>The value of this field can be one of the following:<br>

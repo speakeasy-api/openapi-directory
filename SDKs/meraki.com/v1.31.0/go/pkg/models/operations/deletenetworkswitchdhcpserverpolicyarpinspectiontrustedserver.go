@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams struct {
+type DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest struct {
 	NetworkID       string `pathParam:"style=simple,explode=false,name=networkId"`
 	TrustedServerID string `pathParam:"style=simple,explode=false,name=trustedServerId"`
-}
-
-type DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest struct {
-	PathParams DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams
 }
 
 type DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse struct {

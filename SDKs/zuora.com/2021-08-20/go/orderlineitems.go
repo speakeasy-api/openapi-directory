@@ -40,14 +40,14 @@ func newOrderLineItems(defaultClient, securityClient HTTPClient, serverURL, lang
 // Retrieves the detailed information about a specified order line item.
 func (s *orderLineItems) GETOrderLineItem(ctx context.Context, request operations.GETOrderLineItemRequest) (*operations.GETOrderLineItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/order-line-items/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/order-line-items/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -93,9 +93,9 @@ func (s *orderLineItems) GETOrderLineItem(ctx context.Context, request operation
 // Updates a specified order line item.
 func (s *orderLineItems) PUTOrderLineItem(ctx context.Context, request operations.PUTOrderLineItemRequest) (*operations.PUTOrderLineItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/order-line-items/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/order-line-items/{itemId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderLineItemCommon", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -110,7 +110,7 @@ func (s *orderLineItems) PUTOrderLineItem(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -160,7 +160,7 @@ func (s *orderLineItems) PostOrderLineItems(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/order-line-items/bulk"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostOrderLineItemsRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,7 +175,7 @@ func (s *orderLineItems) PostOrderLineItems(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

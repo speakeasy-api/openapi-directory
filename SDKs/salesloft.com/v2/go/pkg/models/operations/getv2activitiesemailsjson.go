@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2ActivitiesEmailsJSONQueryParams struct {
+type GetV2ActivitiesEmailsJSONRequest struct {
 	// Filters emails by action_id. Multiple action ids can be applied
 	ActionID []int64 `queryParam:"style=form,explode=false,name=action_id"`
 	// Filters emails by whether they have bounced or not
@@ -57,10 +57,6 @@ type GetV2ActivitiesEmailsJSONQueryParams struct {
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
 	// Filters emails by user_id. Multiple User ids can be applied
 	UserID []int64 `queryParam:"style=form,explode=false,name=user_id"`
-}
-
-type GetV2ActivitiesEmailsJSONRequest struct {
-	QueryParams GetV2ActivitiesEmailsJSONQueryParams
 }
 
 type GetV2ActivitiesEmailsJSONResponse struct {

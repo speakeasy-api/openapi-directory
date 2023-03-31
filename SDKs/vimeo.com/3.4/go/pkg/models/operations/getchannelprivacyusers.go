@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelPrivacyUsersPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
 // GetChannelPrivacyUsersDirectionEnum - The sort direction of the results.
 type GetChannelPrivacyUsersDirectionEnum string
 
@@ -38,18 +33,15 @@ func (e *GetChannelPrivacyUsersDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelPrivacyUsersQueryParams struct {
+type GetChannelPrivacyUsersRequest struct {
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The sort direction of the results.
 	Direction *GetChannelPrivacyUsersDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetChannelPrivacyUsersRequest struct {
-	PathParams  GetChannelPrivacyUsersPathParams
-	QueryParams GetChannelPrivacyUsersQueryParams
 }
 
 type GetChannelPrivacyUsersResponse struct {

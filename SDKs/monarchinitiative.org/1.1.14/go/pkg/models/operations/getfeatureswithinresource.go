@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFeaturesWithinResourcePathParams struct {
+type GetFeaturesWithinResourceRequest struct {
 	Begin     string `pathParam:"style=simple,explode=false,name=begin"`
 	Build     string `pathParam:"style=simple,explode=false,name=build"`
 	End       string `pathParam:"style=simple,explode=false,name=end"`
 	Reference string `pathParam:"style=simple,explode=false,name=reference"`
-}
-
-type GetFeaturesWithinResourceRequest struct {
-	PathParams GetFeaturesWithinResourcePathParams
 }
 
 type GetFeaturesWithinResourceResponse struct {

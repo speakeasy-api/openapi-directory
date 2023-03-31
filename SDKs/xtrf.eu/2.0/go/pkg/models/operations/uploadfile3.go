@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFile3PathParams struct {
+type UploadFile3Request struct {
+	// Uploaded file to the quote as a file uploaded by PM.
+	FileToUploadDto shared.FileToUploadDto `request:"mediaType=multipart/form-data"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UploadFile3Request struct {
-	PathParams UploadFile3PathParams
-	// Uploaded file to the quote as a file uploaded by PM.
-	Request shared.FileToUploadDto `request:"mediaType=multipart/form-data"`
 }
 
 type UploadFile3Response struct {

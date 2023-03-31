@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetInputFileSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetInputFilePathParams struct {
-	// The task ID associated with the file to be downloaded.
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetInputFileRequest struct {
-	PathParams GetInputFilePathParams
-	Security   GetInputFileSecurity
+	// The task ID associated with the file to be downloaded.
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetInputFileResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostFilesFileIDGetTemporaryLinkPathParams struct {
+type PostFilesFileIDGetTemporaryLinkRequest struct {
 	// `id` for a specific file
 	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type PostFilesFileIDGetTemporaryLinkRequest struct {
-	PathParams PostFilesFileIDGetTemporaryLinkPathParams
 }
 
 // PostFilesFileIDGetTemporaryLink404ApplicationJSON - #### Not Found

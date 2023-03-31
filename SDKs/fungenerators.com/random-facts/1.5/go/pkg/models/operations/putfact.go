@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PutFactSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type PutFactQueryParams struct {
+type PutFactRequest struct {
 	// Category of the fact
 	Category string `queryParam:"style=form,explode=true,name=category"`
 	// Fact Text
@@ -20,11 +19,6 @@ type PutFactQueryParams struct {
 	Subcategory string `queryParam:"style=form,explode=true,name=subcategory"`
 	// Tags
 	Tags string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type PutFactRequest struct {
-	QueryParams PutFactQueryParams
-	Security    PutFactSecurity
 }
 
 type PutFactResponse struct {

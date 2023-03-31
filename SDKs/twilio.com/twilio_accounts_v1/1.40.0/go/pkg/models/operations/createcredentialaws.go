@@ -12,7 +12,8 @@ var CreateCredentialAwsServerList = []string{
 }
 
 type CreateCredentialAwsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCredentialAwsCreateCredentialAwsRequest struct {
@@ -22,12 +23,6 @@ type CreateCredentialAwsCreateCredentialAwsRequest struct {
 	Credentials string `form:"name=Credentials"`
 	// A descriptive string that you create to describe the resource. It can be up to 64 characters long.
 	FriendlyName *string `form:"name=FriendlyName"`
-}
-
-type CreateCredentialAwsRequest struct {
-	Request   *CreateCredentialAwsCreateCredentialAwsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCredentialAwsSecurity
-	ServerURL *string
 }
 
 type CreateCredentialAwsResponse struct {

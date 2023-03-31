@@ -32,13 +32,9 @@ func (e *CurrenciesSupportedCurrenciesHistoryGETFormatEnum) UnmarshalJSON(data [
 	}
 }
 
-type CurrenciesSupportedCurrenciesHistoryGETQueryParams struct {
+type CurrenciesSupportedCurrenciesHistoryGETRequest struct {
 	// to override content negotiation specify a value of json or xml
 	Format *CurrenciesSupportedCurrenciesHistoryGETFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type CurrenciesSupportedCurrenciesHistoryGETRequest struct {
-	QueryParams CurrenciesSupportedCurrenciesHistoryGETQueryParams
 }
 
 type CurrenciesSupportedCurrenciesHistoryGETResponse struct {

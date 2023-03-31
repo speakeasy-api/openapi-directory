@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateALimitPathParams struct {
-	LimitID string `pathParam:"style=simple,explode=false,name=limit_id"`
-}
-
 type UpdateALimitRequest struct {
-	PathParams UpdateALimitPathParams
-	Request    shared.UpdateALimitParameters `request:"mediaType=application/json"`
+	LimitID                string                        `pathParam:"style=simple,explode=false,name=limit_id"`
+	UpdateALimitParameters shared.UpdateALimitParameters `request:"mediaType=application/json"`
 }
 
 type UpdateALimitDefaultApplicationJSON13StatusEnum string

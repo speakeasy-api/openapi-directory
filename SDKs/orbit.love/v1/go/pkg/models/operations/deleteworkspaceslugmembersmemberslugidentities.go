@@ -8,18 +8,13 @@ import (
 )
 
 type DeleteWorkspaceSlugMembersMemberSlugIdentitiesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteWorkspaceSlugMembersMemberSlugIdentitiesPathParams struct {
-	MemberSlug    string `pathParam:"style=simple,explode=false,name=member_slug"`
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest struct {
-	PathParams DeleteWorkspaceSlugMembersMemberSlugIdentitiesPathParams
-	Request    *shared.Identity `request:"mediaType=application/json"`
-	Security   DeleteWorkspaceSlugMembersMemberSlugIdentitiesSecurity
+	Identity      *shared.Identity `request:"mediaType=application/json"`
+	MemberSlug    string           `pathParam:"style=simple,explode=false,name=member_slug"`
+	WorkspaceSlug string           `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse struct {

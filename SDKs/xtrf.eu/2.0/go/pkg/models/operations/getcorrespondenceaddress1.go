@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCorrespondenceAddress1PathParams struct {
+type GetCorrespondenceAddress1Request struct {
 	// provider's internal identifier
 	ProviderID int64 `pathParam:"style=simple,explode=false,name=providerId"`
-}
-
-type GetCorrespondenceAddress1Request struct {
-	PathParams GetCorrespondenceAddress1PathParams
 }
 
 type GetCorrespondenceAddress1Response struct {

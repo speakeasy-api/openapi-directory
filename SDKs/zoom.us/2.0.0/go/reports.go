@@ -40,7 +40,7 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // **Scopes:** `report:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *reports) ReportCloudRecording(ctx context.Context, request operations.ReportCloudRecordingRequest) (*operations.ReportCloudRecordingResponse, error) {
+func (s *reports) ReportCloudRecording(ctx context.Context, request operations.ReportCloudRecordingRequest, security operations.ReportCloudRecordingSecurity) (*operations.ReportCloudRecordingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/report/cloud_recording"
 
@@ -49,11 +49,11 @@ func (s *reports) ReportCloudRecording(ctx context.Context, request operations.R
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *reports) ReportCloudRecording(ctx context.Context, request operations.R
 // **Scopes:** `report:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *reports) ReportDaily(ctx context.Context, request operations.ReportDailyRequest) (*operations.ReportDailyResponse, error) {
+func (s *reports) ReportDaily(ctx context.Context, request operations.ReportDailyRequest, security operations.ReportDailySecurity) (*operations.ReportDailyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/report/daily"
 
@@ -111,11 +111,11 @@ func (s *reports) ReportDaily(ctx context.Context, request operations.ReportDail
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,16 +166,16 @@ func (s *reports) ReportDaily(ctx context.Context, request operations.ReportDail
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan.<br>
-func (s *reports) ReportMeetingDetails(ctx context.Context, request operations.ReportMeetingDetailsRequest) (*operations.ReportMeetingDetailsResponse, error) {
+func (s *reports) ReportMeetingDetails(ctx context.Context, request operations.ReportMeetingDetailsRequest, security operations.ReportMeetingDetailsSecurity) (*operations.ReportMeetingDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/meetings/{meetingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/meetings/{meetingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,20 +230,20 @@ func (s *reports) ReportMeetingDetails(ctx context.Context, request operations.R
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan.<br>
-func (s *reports) ReportMeetingParticipants(ctx context.Context, request operations.ReportMeetingParticipantsRequest) (*operations.ReportMeetingParticipantsResponse, error) {
+func (s *reports) ReportMeetingParticipants(ctx context.Context, request operations.ReportMeetingParticipantsRequest, security operations.ReportMeetingParticipantsSecurity) (*operations.ReportMeetingParticipantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/meetings/{meetingId}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/meetings/{meetingId}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -296,16 +296,16 @@ func (s *reports) ReportMeetingParticipants(ctx context.Context, request operati
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 // **Prerequisites:**<br>
 // * Pro or a higher plan.<br>
-func (s *reports) ReportMeetingPolls(ctx context.Context, request operations.ReportMeetingPollsRequest) (*operations.ReportMeetingPollsResponse, error) {
+func (s *reports) ReportMeetingPolls(ctx context.Context, request operations.ReportMeetingPollsRequest, security operations.ReportMeetingPollsSecurity) (*operations.ReportMeetingPollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/meetings/{meetingId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/meetings/{meetingId}/polls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,14 +359,14 @@ func (s *reports) ReportMeetingPolls(ctx context.Context, request operations.Rep
 // * Pro or higher plan.
 func (s *reports) ReportMeetings(ctx context.Context, request operations.ReportMeetingsRequest) (*operations.ReportMeetingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/users/{userId}/meetings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/users/{userId}/meetings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -423,7 +423,7 @@ func (s *reports) ReportMeetings(ctx context.Context, request operations.ReportM
 //
 // **Prerequisites:**<br>
 // * Pro or higher plan.
-func (s *reports) ReportOperationLogs(ctx context.Context, request operations.ReportOperationLogsRequest) (*operations.ReportOperationLogsResponse, error) {
+func (s *reports) ReportOperationLogs(ctx context.Context, request operations.ReportOperationLogsRequest, security operations.ReportOperationLogsSecurity) (*operations.ReportOperationLogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/report/operationlogs"
 
@@ -432,11 +432,11 @@ func (s *reports) ReportOperationLogs(ctx context.Context, request operations.Re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,7 +485,7 @@ func (s *reports) ReportOperationLogs(ctx context.Context, request operations.Re
 // **Scopes:** `report:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *reports) ReportSignInSignOutActivities(ctx context.Context, request operations.ReportSignInSignOutActivitiesRequest) (*operations.ReportSignInSignOutActivitiesResponse, error) {
+func (s *reports) ReportSignInSignOutActivities(ctx context.Context, request operations.ReportSignInSignOutActivitiesRequest, security operations.ReportSignInSignOutActivitiesSecurity) (*operations.ReportSignInSignOutActivitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/report/activities"
 
@@ -494,11 +494,11 @@ func (s *reports) ReportSignInSignOutActivities(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,7 +547,7 @@ func (s *reports) ReportSignInSignOutActivities(ctx context.Context, request ope
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>**Prerequisites:**<br>
 //
 // * Pro or higher plan.
-func (s *reports) ReportTelephone(ctx context.Context, request operations.ReportTelephoneRequest) (*operations.ReportTelephoneResponse, error) {
+func (s *reports) ReportTelephone(ctx context.Context, request operations.ReportTelephoneRequest, security operations.ReportTelephoneSecurity) (*operations.ReportTelephoneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/report/telephone"
 
@@ -556,11 +556,11 @@ func (s *reports) ReportTelephone(ctx context.Context, request operations.Report
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -610,7 +610,7 @@ func (s *reports) ReportTelephone(ctx context.Context, request operations.Report
 //
 // **Prerequisites:**<br>
 // * Pro or higher plan.
-func (s *reports) ReportUsers(ctx context.Context, request operations.ReportUsersRequest) (*operations.ReportUsersResponse, error) {
+func (s *reports) ReportUsers(ctx context.Context, request operations.ReportUsersRequest, security operations.ReportUsersSecurity) (*operations.ReportUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/report/users"
 
@@ -619,11 +619,11 @@ func (s *reports) ReportUsers(ctx context.Context, request operations.ReportUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -672,16 +672,16 @@ func (s *reports) ReportUsers(ctx context.Context, request operations.ReportUser
 //
 // **Prerequisites:**<br>
 // * Pro or higher plan with Webinar add-on.
-func (s *reports) ReportWebinarDetails(ctx context.Context, request operations.ReportWebinarDetailsRequest) (*operations.ReportWebinarDetailsResponse, error) {
+func (s *reports) ReportWebinarDetails(ctx context.Context, request operations.ReportWebinarDetailsRequest, security operations.ReportWebinarDetailsSecurity) (*operations.ReportWebinarDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -735,20 +735,20 @@ func (s *reports) ReportWebinarDetails(ctx context.Context, request operations.R
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan with Webinar add-on enabled.
-func (s *reports) ReportWebinarParticipants(ctx context.Context, request operations.ReportWebinarParticipantsRequest) (*operations.ReportWebinarParticipantsResponse, error) {
+func (s *reports) ReportWebinarParticipants(ctx context.Context, request operations.ReportWebinarParticipantsRequest, security operations.ReportWebinarParticipantsSecurity) (*operations.ReportWebinarParticipantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -802,16 +802,16 @@ func (s *reports) ReportWebinarParticipants(ctx context.Context, request operati
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan with Webinar add-on enabled.
-func (s *reports) ReportWebinarPolls(ctx context.Context, request operations.ReportWebinarPollsRequest) (*operations.ReportWebinarPollsResponse, error) {
+func (s *reports) ReportWebinarPolls(ctx context.Context, request operations.ReportWebinarPollsRequest, security operations.ReportWebinarPollsSecurity) (*operations.ReportWebinarPollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}/polls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -865,16 +865,16 @@ func (s *reports) ReportWebinarPolls(ctx context.Context, request operations.Rep
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan with Webinar add-on enabled.
-func (s *reports) ReportWebinarQA(ctx context.Context, request operations.ReportWebinarQARequest) (*operations.ReportWebinarQAResponse, error) {
+func (s *reports) ReportWebinarQA(ctx context.Context, request operations.ReportWebinarQARequest, security operations.ReportWebinarQASecurity) (*operations.ReportWebinarQAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}/qa", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/report/webinars/{webinarId}/qa", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

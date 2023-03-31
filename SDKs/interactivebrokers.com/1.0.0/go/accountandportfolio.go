@@ -42,7 +42,7 @@ func (s *accountAndPortfolio) GetAccounts(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,7 +93,7 @@ func (s *accountAndPortfolio) GetAccounts(ctx context.Context, request operation
 // Returns a list of positions for the indicated account.
 func (s *accountAndPortfolio) GetAccountsAccountPositions(ctx context.Context, request operations.GetAccountsAccountPositionsRequest) (*operations.GetAccountsAccountPositionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/positions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/positions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *accountAndPortfolio) GetAccountsAccountPositions(ctx context.Context, r
 // Returns a list of account and margin balances associated with the account passed in the URL
 func (s *accountAndPortfolio) GetAccountsAccountSummary(ctx context.Context, request operations.GetAccountsAccountSummaryRequest) (*operations.GetAccountsAccountSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AppengineProjectsLocationsGet - Gets information about a location.
-func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request operations.AppengineProjectsLocationsGetRequest) (*operations.AppengineProjectsLocationsGetResponse, error) {
+func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request operations.AppengineProjectsLocationsGetRequest, security operations.AppengineProjectsLocationsGetSecurity) (*operations.AppengineProjectsLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request op
 }
 
 // AppengineProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request operations.AppengineProjectsLocationsListRequest) (*operations.AppengineProjectsLocationsListResponse, error) {
+func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request operations.AppengineProjectsLocationsListRequest, security operations.AppengineProjectsLocationsListSecurity) (*operations.AppengineProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request o
 }
 
 // AppengineProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, request operations.AppengineProjectsLocationsOperationsGetRequest) (*operations.AppengineProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, request operations.AppengineProjectsLocationsOperationsGetRequest, security operations.AppengineProjectsLocationsOperationsGetSecurity) (*operations.AppengineProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,20 +176,20 @@ func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, 
 }
 
 // AppengineProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
-func (s *projects) AppengineProjectsLocationsOperationsList(ctx context.Context, request operations.AppengineProjectsLocationsOperationsListRequest) (*operations.AppengineProjectsLocationsOperationsListResponse, error) {
+func (s *projects) AppengineProjectsLocationsOperationsList(ctx context.Context, request operations.AppengineProjectsLocationsOperationsListRequest, security operations.AppengineProjectsLocationsOperationsListSecurity) (*operations.AppengineProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

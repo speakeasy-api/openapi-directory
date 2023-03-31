@@ -4,67 +4,68 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CreateItemDraftRequest(
-    security=operations.CreateItemDraftSecurity(
-        api_auth=shared.SchemeAPIAuth(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    headers=operations.CreateItemDraftHeaders(
-        content_language="sit",
-        x_ebay_c_marketplace_id="voluptas",
-    ),
-    request=shared.ItemDraft(
-        category_id="sint",
+    content_language="corrupti",
+    item_draft=shared.ItemDraft(
+        category_id="provident",
         charity=shared.Charity(
-            charity_id="voluptate",
-            donation_percentage="aperiam",
+            charity_id="distinctio",
+            donation_percentage="quibusdam",
         ),
-        condition="aut",
-        format="unde",
+        condition="unde",
+        format="nulla",
         pricing_summary=shared.PricingSummary(
             auction_reserve_price=shared.Amount(
-                currency="dolorem",
-                value="aspernatur",
+                currency="corrupti",
+                value="illum",
             ),
             auction_start_price=shared.Amount(
-                currency="quia",
-                value="autem",
+                currency="vel",
+                value="error",
             ),
             price=shared.Amount(
-                currency="facere",
-                value="at",
+                currency="deserunt",
+                value="suscipit",
             ),
         ),
         product=shared.Product(
             aspects=[
                 shared.Aspect(
-                    name="qui",
+                    name="magnam",
                     values=[
-                        "modi",
+                        "ipsa",
+                        "delectus",
+                        "tempora",
+                        "suscipit",
                     ],
                 ),
                 shared.Aspect(
-                    name="debitis",
+                    name="molestiae",
                     values=[
-                        "fugiat",
-                        "perferendis",
+                        "placeat",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
                     ],
                 ),
             ],
-            brand="soluta",
-            description="aut",
-            epid="nihil",
+            brand="nisi",
+            description="recusandae",
+            epid="temporibus",
             image_urls=[
-                "voluptates",
+                "quis",
             ],
-            title="quasi",
+            title="Mr.",
         ),
     ),
+    x_ebay_c_marketplace_id="deserunt",
 )
     
-res = s.item_draft.create_item_draft(req)
+res = s.item_draft.create_item_draft(req, operations.CreateItemDraftSecurity(
+    api_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.item_draft_response is not None:
     # handle response

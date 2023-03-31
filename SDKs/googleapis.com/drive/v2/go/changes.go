@@ -33,20 +33,20 @@ func newChanges(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DriveChangesGet - Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
-func (s *changes) DriveChangesGet(ctx context.Context, request operations.DriveChangesGetRequest) (*operations.DriveChangesGetResponse, error) {
+func (s *changes) DriveChangesGet(ctx context.Context, request operations.DriveChangesGetRequest, security operations.DriveChangesGetSecurity) (*operations.DriveChangesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changes/{changeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/changes/{changeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *changes) DriveChangesGet(ctx context.Context, request operations.DriveC
 }
 
 // DriveChangesGetStartPageToken - Gets the starting pageToken for listing future changes.
-func (s *changes) DriveChangesGetStartPageToken(ctx context.Context, request operations.DriveChangesGetStartPageTokenRequest) (*operations.DriveChangesGetStartPageTokenResponse, error) {
+func (s *changes) DriveChangesGetStartPageToken(ctx context.Context, request operations.DriveChangesGetStartPageTokenRequest, security operations.DriveChangesGetStartPageTokenSecurity) (*operations.DriveChangesGetStartPageTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/changes/startPageToken"
 
@@ -90,11 +90,11 @@ func (s *changes) DriveChangesGetStartPageToken(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *changes) DriveChangesGetStartPageToken(ctx context.Context, request ope
 }
 
 // DriveChangesList - Lists the changes for a user or shared drive.
-func (s *changes) DriveChangesList(ctx context.Context, request operations.DriveChangesListRequest) (*operations.DriveChangesListResponse, error) {
+func (s *changes) DriveChangesList(ctx context.Context, request operations.DriveChangesListRequest, security operations.DriveChangesListSecurity) (*operations.DriveChangesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/changes"
 
@@ -138,11 +138,11 @@ func (s *changes) DriveChangesList(ctx context.Context, request operations.Drive
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,11 +177,11 @@ func (s *changes) DriveChangesList(ctx context.Context, request operations.Drive
 }
 
 // DriveChangesWatch - Subscribe to changes for a user.
-func (s *changes) DriveChangesWatch(ctx context.Context, request operations.DriveChangesWatchRequest) (*operations.DriveChangesWatchResponse, error) {
+func (s *changes) DriveChangesWatch(ctx context.Context, request operations.DriveChangesWatchRequest, security operations.DriveChangesWatchSecurity) (*operations.DriveChangesWatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/changes/watch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -193,11 +193,11 @@ func (s *changes) DriveChangesWatch(ctx context.Context, request operations.Driv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

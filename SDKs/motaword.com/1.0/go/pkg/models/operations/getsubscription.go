@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionPathParams struct {
+type GetSubscriptionRequest struct {
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSubscriptionRequest struct {
-	PathParams GetSubscriptionPathParams
 }
 
 type GetSubscriptionResponse struct {

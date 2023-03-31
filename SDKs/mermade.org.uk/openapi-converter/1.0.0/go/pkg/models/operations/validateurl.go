@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidateURLQueryParams struct {
+type ValidateURLRequest struct {
 	// The URL to retrieve the OpenAPI 3.0.x definition from
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type ValidateURLRequest struct {
-	QueryParams ValidateURLQueryParams
 }
 
 type ValidateURLResponse struct {

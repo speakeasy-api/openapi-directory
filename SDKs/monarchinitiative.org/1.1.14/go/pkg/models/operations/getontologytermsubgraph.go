@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type GetOntologyTermSubgraphPathParams struct {
-	// CURIE identifier of a GO term, e.g. GO:0007275
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetOntologyTermSubgraphQueryParams struct {
+type GetOntologyTermSubgraphRequest struct {
 	// Additional classes
 	Cnode []string `queryParam:"style=form,explode=true,name=cnode"`
+	// CURIE identifier of a GO term, e.g. GO:0007275
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Include Ancestors
 	IncludeAncestors *bool `queryParam:"style=form,explode=true,name=include_ancestors"`
 	// Include Descendants
@@ -22,11 +19,6 @@ type GetOntologyTermSubgraphQueryParams struct {
 	IncludeMeta *bool `queryParam:"style=form,explode=true,name=include_meta"`
 	// Additional classes
 	Relation []string `queryParam:"style=form,explode=true,name=relation"`
-}
-
-type GetOntologyTermSubgraphRequest struct {
-	PathParams  GetOntologyTermSubgraphPathParams
-	QueryParams GetOntologyTermSubgraphQueryParams
 }
 
 type GetOntologyTermSubgraphResponse struct {

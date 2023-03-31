@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostTargetByENSGIDRequest struct {
-	// An Ensembl gene identifier.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostTargetByENSGIDResponse struct {
 	ContentType string
 	StatusCode  int

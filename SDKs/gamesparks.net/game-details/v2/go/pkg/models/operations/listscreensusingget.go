@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListScreensUsingGETPathParams struct {
+type ListScreensUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type ListScreensUsingGETRequest struct {
-	PathParams ListScreensUsingGETPathParams
 }
 
 type ListScreensUsingGETResponse struct {

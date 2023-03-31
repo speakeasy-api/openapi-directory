@@ -8,19 +8,14 @@ import (
 )
 
 type GetAPIV1BookmarksSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1BookmarksQueryParams struct {
+type GetAPIV1BookmarksRequest struct {
 	Limit   *int64  `queryParam:"style=form,explode=true,name=limit"`
 	MaxID   *string `queryParam:"style=form,explode=true,name=max_id"`
 	MinID   *string `queryParam:"style=form,explode=true,name=min_id"`
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1BookmarksRequest struct {
-	QueryParams GetAPIV1BookmarksQueryParams
-	Security    GetAPIV1BookmarksSecurity
 }
 
 type GetAPIV1BookmarksResponse struct {

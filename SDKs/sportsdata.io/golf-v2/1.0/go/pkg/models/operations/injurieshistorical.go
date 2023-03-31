@@ -33,13 +33,9 @@ func (e *InjuriesHistoricalFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type InjuriesHistoricalPathParams struct {
+type InjuriesHistoricalRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format InjuriesHistoricalFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type InjuriesHistoricalRequest struct {
-	PathParams InjuriesHistoricalPathParams
 }
 
 type InjuriesHistoricalResponse struct {

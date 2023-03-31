@@ -12,20 +12,15 @@ var FetchTaskStatisticsServerList = []string{
 }
 
 type FetchTaskStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTaskStatisticsPathParams struct {
+type FetchTaskStatisticsRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) that is associated with the resource to fetch.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type FetchTaskStatisticsRequest struct {
-	PathParams FetchTaskStatisticsPathParams
-	Security   FetchTaskStatisticsSecurity
-	ServerURL  *string
 }
 
 type FetchTaskStatisticsResponse struct {

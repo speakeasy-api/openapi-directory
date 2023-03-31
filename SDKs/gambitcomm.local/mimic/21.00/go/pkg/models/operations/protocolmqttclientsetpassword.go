@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetPasswordPathParams struct {
+type ProtocolMqttClientSetPasswordRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Password
 	Password string `pathParam:"style=simple,explode=false,name=password"`
-}
-
-type ProtocolMqttClientSetPasswordRequest struct {
-	PathParams ProtocolMqttClientSetPasswordPathParams
 }
 
 type ProtocolMqttClientSetPasswordResponse struct {

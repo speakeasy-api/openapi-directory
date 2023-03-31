@@ -36,16 +36,16 @@ func newInfrastructure(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetNode - Show node details
 // Get details of infrastructure nodes. Only admin users can get this information. The proxy id is
 // required for adding a data source for selecting appropriate proxy node to add the data source.
-func (s *infrastructure) GetNode(ctx context.Context, request operations.GetNodeRequest) (*operations.GetNodeResponse, error) {
+func (s *infrastructure) GetNode(ctx context.Context, request operations.GetNodeRequest, security operations.GetNodeSecurity) (*operations.GetNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/infra/nodes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/infra/nodes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *infrastructure) GetNode(ctx context.Context, request operations.GetNode
 
 // ListNodes - List nodes
 // Get list of infrastructure nodes. Only admin users can retrieve this information.
-func (s *infrastructure) ListNodes(ctx context.Context, request operations.ListNodesRequest) (*operations.ListNodesResponse, error) {
+func (s *infrastructure) ListNodes(ctx context.Context) (*operations.ListNodesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/infra/nodes"
 
@@ -97,7 +97,7 @@ func (s *infrastructure) ListNodes(ctx context.Context, request operations.ListN
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

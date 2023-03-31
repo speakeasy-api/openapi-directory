@@ -8,13 +8,13 @@ import (
 )
 
 type PubsubTopicsPublishBatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PubsubTopicsPublishBatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PubsubTopicsPublishBatchSecurity struct {
@@ -22,9 +22,10 @@ type PubsubTopicsPublishBatchSecurity struct {
 	Option2 *PubsubTopicsPublishBatchSecurityOption2 `security:"option"`
 }
 
-type PubsubTopicsPublishBatchQueryParams struct {
+type PubsubTopicsPublishBatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv         *shared.XgafvEnum           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	PublishBatchRequest *shared.PublishBatchRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -45,12 +46,6 @@ type PubsubTopicsPublishBatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PubsubTopicsPublishBatchRequest struct {
-	QueryParams PubsubTopicsPublishBatchQueryParams
-	Request     *shared.PublishBatchRequest `request:"mediaType=application/json"`
-	Security    PubsubTopicsPublishBatchSecurity
 }
 
 type PubsubTopicsPublishBatchResponse struct {

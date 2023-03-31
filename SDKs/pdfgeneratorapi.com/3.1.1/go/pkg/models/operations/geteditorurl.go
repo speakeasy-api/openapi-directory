@@ -41,17 +41,13 @@ func (e *GetEditorURLLanguageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEditorURLQueryParams struct {
+type GetEditorURLRequest struct {
+	// Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Specify the editor UI language. Defaults to organization editor language.
 	Language *GetEditorURLLanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// Template unique identifier
 	TemplateID int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type GetEditorURLRequest struct {
-	QueryParams GetEditorURLQueryParams
-	// Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 // GetEditorURL500ApplicationJSON - Internal Server Error

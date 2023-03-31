@@ -33,7 +33,7 @@ func newFamilysharing(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // BooksFamilysharingGetFamilyInfo - Gets information regarding the family that the user is part of.
-func (s *familysharing) BooksFamilysharingGetFamilyInfo(ctx context.Context, request operations.BooksFamilysharingGetFamilyInfoRequest) (*operations.BooksFamilysharingGetFamilyInfoResponse, error) {
+func (s *familysharing) BooksFamilysharingGetFamilyInfo(ctx context.Context, request operations.BooksFamilysharingGetFamilyInfoRequest, security operations.BooksFamilysharingGetFamilyInfoSecurity) (*operations.BooksFamilysharingGetFamilyInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/familysharing/getFamilyInfo"
 
@@ -42,11 +42,11 @@ func (s *familysharing) BooksFamilysharingGetFamilyInfo(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *familysharing) BooksFamilysharingGetFamilyInfo(ctx context.Context, req
 }
 
 // BooksFamilysharingShare - Initiates sharing of the content with the user's family. Empty response indicates success.
-func (s *familysharing) BooksFamilysharingShare(ctx context.Context, request operations.BooksFamilysharingShareRequest) (*operations.BooksFamilysharingShareResponse, error) {
+func (s *familysharing) BooksFamilysharingShare(ctx context.Context, request operations.BooksFamilysharingShareRequest, security operations.BooksFamilysharingShareSecurity) (*operations.BooksFamilysharingShareResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/familysharing/share"
 
@@ -90,11 +90,11 @@ func (s *familysharing) BooksFamilysharingShare(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *familysharing) BooksFamilysharingShare(ctx context.Context, request ope
 }
 
 // BooksFamilysharingUnshare - Initiates revoking content that has already been shared with the user's family. Empty response indicates success.
-func (s *familysharing) BooksFamilysharingUnshare(ctx context.Context, request operations.BooksFamilysharingUnshareRequest) (*operations.BooksFamilysharingUnshareResponse, error) {
+func (s *familysharing) BooksFamilysharingUnshare(ctx context.Context, request operations.BooksFamilysharingUnshareRequest, security operations.BooksFamilysharingUnshareSecurity) (*operations.BooksFamilysharingUnshareResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/familysharing/unshare"
 
@@ -138,11 +138,11 @@ func (s *familysharing) BooksFamilysharingUnshare(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

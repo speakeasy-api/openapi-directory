@@ -10,7 +10,7 @@ import (
 )
 
 type GetAssetsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetAssetsOrderByEnum - Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice.
@@ -76,7 +76,7 @@ func (e *GetAssetsSortDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAssetsQueryParams struct {
+type GetAssetsRequest struct {
 	// A string that can be used to filter the list to only return assets containing the text. Checks it against the AssetName, AssetNumber, Description and AssetTypeName fields.
 	FilterBy *string `queryParam:"style=form,explode=true,name=filterBy"`
 	// Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice.
@@ -89,17 +89,8 @@ type GetAssetsQueryParams struct {
 	SortDirection *GetAssetsSortDirectionEnum `queryParam:"style=form,explode=true,name=sortDirection"`
 	// Required when retrieving a collection of assets. See Asset Status Codes
 	Status shared.AssetStatusQueryParamEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetAssetsHeaders struct {
 	// Xero identifier for Tenant
 	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
-}
-
-type GetAssetsRequest struct {
-	QueryParams GetAssetsQueryParams
-	Headers     GetAssetsHeaders
-	Security    GetAssetsSecurity
 }
 
 type GetAssetsResponse struct {

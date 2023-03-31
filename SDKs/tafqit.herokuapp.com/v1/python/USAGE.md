@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.ConvertRequest(
-    request=operations.ConvertRequestBody(
-        hundreds_form="aut",
-        the_number="laudantium",
-        unit="est",
-    ),
+
+
+req = operations.ConvertRequestBody(
+    hundreds_form="مائة",
+    the_number="2519.50",
+    unit=" ريال سعودي",
 )
     
 res = s.convert(req)

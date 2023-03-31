@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTelnetConnectionRequestPathParams struct {
+type ProtocolTelnetConnectionRequestRequest struct {
 	// Agent to manipulate TELNET connection
 	AgentNum     int    `pathParam:"style=simple,explode=false,name=agentNum"`
 	Command      string `pathParam:"style=simple,explode=false,name=command"`
 	ConnectionID int    `pathParam:"style=simple,explode=false,name=connectionID"`
-}
-
-type ProtocolTelnetConnectionRequestRequest struct {
-	PathParams ProtocolTelnetConnectionRequestPathParams
 }
 
 type ProtocolTelnetConnectionRequestResponse struct {

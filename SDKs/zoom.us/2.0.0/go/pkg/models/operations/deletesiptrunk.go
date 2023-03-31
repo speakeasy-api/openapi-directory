@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteSIPTrunkPathParams struct {
+type DeleteSIPTrunkRequest struct {
 	// Unique identifier of the sub account.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Unique identifier of the SIP Trunk that was previously assigned to a sub account. To retrieve the value of this field, use the List SIP Trunks API.
 	TrunkID string `pathParam:"style=simple,explode=false,name=trunkId"`
-}
-
-type DeleteSIPTrunkRequest struct {
-	PathParams DeleteSIPTrunkPathParams
 }
 
 type DeleteSIPTrunkResponse struct {

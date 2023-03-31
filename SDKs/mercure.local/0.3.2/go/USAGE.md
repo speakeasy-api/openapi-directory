@@ -13,23 +13,17 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Bearer: &shared.SchemeBearer{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            Bearer: sdk.String("Bearer YOUR_BEARER_TOKEN_HERE"),
         }),
     )
 
     req := operations.GetWellKnownMercureRequest{
-        QueryParams: operations.GetWellKnownMercureQueryParams{
-            LastEventID: "corrupti",
-            Topic: []string{
-                "distinctio",
-                "quibusdam",
-                "unde",
-            },
-        },
-        Headers: operations.GetWellKnownMercureHeaders{
-            LastEventID: "nulla",
+        LastEventID: "corrupti",
+        LastEventIDQueryParameter: "provident",
+        Topic: []string{
+            "quibusdam",
+            "unde",
+            "nulla",
         },
     }
 

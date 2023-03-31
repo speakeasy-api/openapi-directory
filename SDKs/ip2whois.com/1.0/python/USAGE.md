@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRequest(
-    query_params=operations.GetQueryParams(
-        domain="corporis",
-        format="et",
-        key="quis",
-    ),
+    domain="corrupti",
+    format="provident",
+    key="distinctio",
 )
     
 res = s.get_(req)

@@ -35,7 +35,7 @@ func newSnowmonkey(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetSnowMonkeyConfig - Get current Snow Monkey config
 // Get current Snow Monkey config
-func (s *snowmonkey) GetSnowMonkeyConfig(ctx context.Context, request operations.GetSnowMonkeyConfigRequest) (*operations.GetSnowMonkeyConfigResponse, error) {
+func (s *snowmonkey) GetSnowMonkeyConfig(ctx context.Context) (*operations.GetSnowMonkeyConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/config"
 
@@ -44,7 +44,7 @@ func (s *snowmonkey) GetSnowMonkeyConfig(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *snowmonkey) GetSnowMonkeyConfig(ctx context.Context, request operations
 
 // GetSnowMonkeyOutages - Get all current Snow Monkey ourages
 // Get all current Snow Monkey ourages
-func (s *snowmonkey) GetSnowMonkeyOutages(ctx context.Context, request operations.GetSnowMonkeyOutagesRequest) (*operations.GetSnowMonkeyOutagesResponse, error) {
+func (s *snowmonkey) GetSnowMonkeyOutages(ctx context.Context) (*operations.GetSnowMonkeyOutagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/outages"
 
@@ -94,7 +94,7 @@ func (s *snowmonkey) GetSnowMonkeyOutages(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *snowmonkey) GetSnowMonkeyOutages(ctx context.Context, request operation
 
 // PatchSnowMonkey - Update current Snow Monkey config
 // Update current Snow Monkey config
-func (s *snowmonkey) PatchSnowMonkey(ctx context.Context, request operations.PatchSnowMonkeyRequest) (*operations.PatchSnowMonkeyResponse, error) {
+func (s *snowmonkey) PatchSnowMonkey(ctx context.Context, request shared.Group, security operations.PatchSnowMonkeySecurity) (*operations.PatchSnowMonkeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/config"
 
@@ -151,7 +151,7 @@ func (s *snowmonkey) PatchSnowMonkey(ctx context.Context, request operations.Pat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *snowmonkey) PatchSnowMonkey(ctx context.Context, request operations.Pat
 
 // ResetSnowMonkey - Reset Snow Monkey Outages for the day
 // Reset Snow Monkey Outages for the day
-func (s *snowmonkey) ResetSnowMonkey(ctx context.Context, request operations.ResetSnowMonkeyRequest) (*operations.ResetSnowMonkeyResponse, error) {
+func (s *snowmonkey) ResetSnowMonkey(ctx context.Context) (*operations.ResetSnowMonkeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/outages"
 
@@ -201,7 +201,7 @@ func (s *snowmonkey) ResetSnowMonkey(ctx context.Context, request operations.Res
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,7 +242,7 @@ func (s *snowmonkey) ResetSnowMonkey(ctx context.Context, request operations.Res
 
 // StartSnowMonkey - Start the Snow Monkey
 // Start the Snow Monkey
-func (s *snowmonkey) StartSnowMonkey(ctx context.Context, request operations.StartSnowMonkeyRequest) (*operations.StartSnowMonkeyResponse, error) {
+func (s *snowmonkey) StartSnowMonkey(ctx context.Context) (*operations.StartSnowMonkeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/_start"
 
@@ -251,7 +251,7 @@ func (s *snowmonkey) StartSnowMonkey(ctx context.Context, request operations.Sta
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,7 +292,7 @@ func (s *snowmonkey) StartSnowMonkey(ctx context.Context, request operations.Sta
 
 // StopSnowMonkey - Stop the Snow Monkey
 // Stop the Snow Monkey
-func (s *snowmonkey) StopSnowMonkey(ctx context.Context, request operations.StopSnowMonkeyRequest) (*operations.StopSnowMonkeyResponse, error) {
+func (s *snowmonkey) StopSnowMonkey(ctx context.Context) (*operations.StopSnowMonkeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/_stop"
 
@@ -301,7 +301,7 @@ func (s *snowmonkey) StopSnowMonkey(ctx context.Context, request operations.Stop
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,7 +342,7 @@ func (s *snowmonkey) StopSnowMonkey(ctx context.Context, request operations.Stop
 
 // UpdateSnowMonkey - Update current Snow Monkey config
 // Update current Snow Monkey config
-func (s *snowmonkey) UpdateSnowMonkey(ctx context.Context, request operations.UpdateSnowMonkeyRequest) (*operations.UpdateSnowMonkeyResponse, error) {
+func (s *snowmonkey) UpdateSnowMonkey(ctx context.Context, request shared.Group, security operations.UpdateSnowMonkeySecurity) (*operations.UpdateSnowMonkeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/snowmonkey/config"
 
@@ -358,7 +358,7 @@ func (s *snowmonkey) UpdateSnowMonkey(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

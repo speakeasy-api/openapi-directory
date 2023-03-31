@@ -8,18 +8,14 @@ import (
 )
 
 type ResourcesettingsProjectsSettingsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ResourcesettingsProjectsSettingsPatchPathParams struct {
-	// The resource name of the setting. Must be in one of the following forms: * `projects/{project_number}/settings/{setting_name}` * `folders/{folder_id}/settings/{setting_name}` * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings/gcp-enableMyFeature"
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ResourcesettingsProjectsSettingsPatchQueryParams struct {
+type ResourcesettingsProjectsSettingsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                          *shared.XgafvEnum                            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudResourcesettingsV1Setting *shared.GoogleCloudResourcesettingsV1Setting `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type ResourcesettingsProjectsSettingsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the setting. Must be in one of the following forms: * `projects/{project_number}/settings/{setting_name}` * `folders/{folder_id}/settings/{setting_name}` * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings/gcp-enableMyFeature"
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type ResourcesettingsProjectsSettingsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ResourcesettingsProjectsSettingsPatchRequest struct {
-	PathParams  ResourcesettingsProjectsSettingsPatchPathParams
-	QueryParams ResourcesettingsProjectsSettingsPatchQueryParams
-	Request     *shared.GoogleCloudResourcesettingsV1Setting `request:"mediaType=application/json"`
-	Security    ResourcesettingsProjectsSettingsPatchSecurity
 }
 
 type ResourcesettingsProjectsSettingsPatchResponse struct {

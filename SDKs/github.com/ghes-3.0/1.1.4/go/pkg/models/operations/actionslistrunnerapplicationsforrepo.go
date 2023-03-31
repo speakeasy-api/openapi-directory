@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListRunnerApplicationsForRepoPathParams struct {
+type ActionsListRunnerApplicationsForRepoRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsListRunnerApplicationsForRepoRequest struct {
-	PathParams ActionsListRunnerApplicationsForRepoPathParams
 }
 
 type ActionsListRunnerApplicationsForRepoResponse struct {

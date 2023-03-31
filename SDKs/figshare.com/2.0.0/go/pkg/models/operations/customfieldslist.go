@@ -8,17 +8,12 @@ import (
 )
 
 type CustomFieldsListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CustomFieldsListQueryParams struct {
-	// Group_id
-	GroupID *int64 `queryParam:"style=form,explode=true,name=group_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CustomFieldsListRequest struct {
-	QueryParams CustomFieldsListQueryParams
-	Security    CustomFieldsListSecurity
+	// Group_id
+	GroupID *int64 `queryParam:"style=form,explode=true,name=group_id"`
 }
 
 type CustomFieldsListResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteByocTrunkServerList = []string{
@@ -12,18 +11,13 @@ var DeleteByocTrunkServerList = []string{
 }
 
 type DeleteByocTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteByocTrunkPathParams struct {
-	// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteByocTrunkRequest struct {
-	PathParams DeleteByocTrunkPathParams
-	Security   DeleteByocTrunkSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteByocTrunkResponse struct {

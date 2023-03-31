@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePrincipalsListPasswordCredentialsPathParams struct {
+type ServicePrincipalsListPasswordCredentialsRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the service principal.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ServicePrincipalsListPasswordCredentialsQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ServicePrincipalsListPasswordCredentialsRequest struct {
-	PathParams  ServicePrincipalsListPasswordCredentialsPathParams
-	QueryParams ServicePrincipalsListPasswordCredentialsQueryParams
 }
 
 type ServicePrincipalsListPasswordCredentialsResponse struct {

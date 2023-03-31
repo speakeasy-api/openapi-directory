@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCallLogMetricsDetailsPathParams struct {
+type GetCallLogMetricsDetailsRequest struct {
 	// Unique identifier of the phone call. The value of this field can be retrieved from [List Call Logs]() API.
 	CallID string `pathParam:"style=simple,explode=false,name=call_id"`
-}
-
-type GetCallLogMetricsDetailsRequest struct {
-	PathParams GetCallLogMetricsDetailsPathParams
 }
 
 // GetCallLogMetricsDetails200ApplicationXMLCallee - Callee object contains information of the calee.

@@ -8,19 +8,14 @@ import (
 )
 
 type GetQodSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQodQueryParams struct {
+type GetQodRequest struct {
 	// QOD Category
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Language of the QOD. The language must be supported in our QOD system.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
-}
-
-type GetQodRequest struct {
-	QueryParams GetQodQueryParams
-	Security    GetQodSecurity
 }
 
 type GetQodResponse struct {

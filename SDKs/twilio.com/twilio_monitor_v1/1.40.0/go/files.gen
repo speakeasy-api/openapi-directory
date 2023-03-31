@@ -16,7 +16,7 @@ pkg/models/operations/fetchevent.go
 pkg/models/operations/listalert.go
 pkg/models/operations/listevent.go
 pkg/models/shared/monitorv1alertinstance.go
-pkg/models/shared/security.go
 pkg/models/shared/monitorv1event.go
 pkg/models/shared/monitorv1alert.go
 USAGE.md
+pkg/models/operations/options.go

@@ -4,18 +4,19 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.ThreeGetEstimatedPriceRequest(
-    query_params=operations.ThreeGetEstimatedPriceQueryParams(
-        amount="deserunt",
-        currency_from="et",
-        currency_to="fugit",
-    ),
+
+
+req = operations.GetAllTransfersRequest(
+    id="111",
+    limit="10",
+    offset="0",
+    order="ASC",
+    status="CREATED",
 )
     
-res = s.three_get_estimated_price(req)
+res = s.billing_sub_partner_api.get_all_transfers(req)
 
-if res.three_get_estimated_price_200_application_json_object is not None:
+if res.get_all_transfers_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

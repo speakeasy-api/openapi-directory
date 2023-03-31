@@ -8,24 +8,15 @@ import (
 )
 
 type GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDGetByIDPathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
-	// The ID of the custom workflow action.
-	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDGetByIDQueryParams struct {
-	// Whether to include archived custom actions.
-	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDGetByIDRequest struct {
-	PathParams  GetAutomationV4ActionsAppIDDefinitionIDGetByIDPathParams
-	QueryParams GetAutomationV4ActionsAppIDDefinitionIDGetByIDQueryParams
-	Security    GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	// Whether to include archived custom actions.
+	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
+	// The ID of the custom workflow action.
+	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDGetByIDResponse struct {

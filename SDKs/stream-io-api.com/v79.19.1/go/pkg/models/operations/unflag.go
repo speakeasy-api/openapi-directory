@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnflagRequest struct {
-	Request shared.FlagRequest `request:"mediaType=application/json"`
-}
-
 type UnflagResponse struct {
 	// Bad request
 	APIError    *shared.APIError

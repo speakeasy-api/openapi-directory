@@ -4,39 +4,25 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OperationsFlightstatusRouteDateByOriginAndDestinationGetPathParams struct {
+type OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Departure date (YYYY-MM-DD) in local time of departure airport
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// 3-letter IATA airport code (e.g. 'JFK')
 	Destination string `pathParam:"style=simple,explode=false,name=destination"`
-	// 3-letter IATA airport (e.g. 'FRA')
-	Origin string `pathParam:"style=simple,explode=false,name=origin"`
-}
-
-type OperationsFlightstatusRouteDateByOriginAndDestinationGetQueryParams struct {
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type OperationsFlightstatusRouteDateByOriginAndDestinationGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest struct {
-	PathParams  OperationsFlightstatusRouteDateByOriginAndDestinationGetPathParams
-	QueryParams OperationsFlightstatusRouteDateByOriginAndDestinationGetQueryParams
-	Headers     OperationsFlightstatusRouteDateByOriginAndDestinationGetHeaders
-	Security    OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity
+	// 3-letter IATA airport (e.g. 'FRA')
+	Origin string `pathParam:"style=simple,explode=false,name=origin"`
 }
 
 type OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse struct {

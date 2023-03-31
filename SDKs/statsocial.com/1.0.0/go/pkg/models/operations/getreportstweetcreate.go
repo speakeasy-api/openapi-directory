@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportsTweetCreateQueryParams struct {
+type GetReportsTweetCreateRequest struct {
 	// A unix timestamp. end_date will be set to the next midnight.
 	EndDate int64 `queryParam:"style=form,explode=true,name=end_date"`
 	// Filtering options to be used when creating a filtered report. The options must be in JSON form, example: {'gender':['male'],'ages':['18-24'],'countries':['usa']}
@@ -18,10 +18,6 @@ type GetReportsTweetCreateQueryParams struct {
 	StartDate int64 `queryParam:"style=form,explode=true,name=start_date"`
 	// If you are tracking a single term, then the keyword itself is suffice otherwise, tracking multiple terms must be in JSON form, example '[{"operator":"","word":"http://google.com"},{"operator":"or","word":"#test"},{"operator":"and","word":"test2"}]' Which results in filtering tweets containing 'http://google.com' OR '#test' AND 'test2'. (NOTE) Make sure to URL encode the terms value for multiple terms.
 	Terms string `queryParam:"style=form,explode=true,name=terms"`
-}
-
-type GetReportsTweetCreateRequest struct {
-	QueryParams GetReportsTweetCreateQueryParams
 }
 
 type GetReportsTweetCreateResponse struct {

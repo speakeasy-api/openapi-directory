@@ -35,9 +35,9 @@ func newScore(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Allows you to remove a key from a specific field.
 func (s *score) Deletescorebyfield(ctx context.Context, request operations.DeletescorebyfieldRequest) (*operations.DeletescorebyfieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/score/{field-name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/score/{field-name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeletescorebyfieldRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *score) Deletescorebyfield(ctx context.Context, request operations.Delet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -83,9 +83,9 @@ func (s *score) Deletescorebyfield(ctx context.Context, request operations.Delet
 // It allows to punctuate in a specific field.
 func (s *score) Putscorebyfield(ctx context.Context, request operations.PutscorebyfieldRequest) (*operations.PutscorebyfieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/score/{field-name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/score/{field-name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutscorebyfieldRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -100,7 +100,7 @@ func (s *score) Putscorebyfield(ctx context.Context, request operations.Putscore
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -131,9 +131,9 @@ func (s *score) Putscorebyfield(ctx context.Context, request operations.Putscore
 // It allows punctuate in more than one field and more than one key.
 func (s *score) Putscores(ctx context.Context, request operations.PutscoresRequest) (*operations.PutscoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/score", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/score", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -148,7 +148,7 @@ func (s *score) Putscores(ctx context.Context, request operations.PutscoresReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

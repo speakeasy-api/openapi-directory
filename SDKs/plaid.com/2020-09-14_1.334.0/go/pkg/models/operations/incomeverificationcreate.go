@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type IncomeVerificationCreateRequest struct {
-	Request shared.IncomeVerificationCreateRequest `request:"mediaType=application/json"`
-}
 
 type IncomeVerificationCreateResponse struct {
 	ContentType string

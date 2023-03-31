@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportWirelessCSVSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ExportWirelessCSVQueryParams struct {
-	// an optional search string for filtering results
-	Search *string `queryParam:"style=form,explode=true,name=search"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ExportWirelessCSVRequest struct {
-	QueryParams ExportWirelessCSVQueryParams
-	Security    ExportWirelessCSVSecurity
+	// an optional search string for filtering results
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type ExportWirelessCSVResponse struct {

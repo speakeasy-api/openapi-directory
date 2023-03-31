@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoCreditsPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 // GetVideoCreditsDirectionEnum - The sort direction of the results.
 type GetVideoCreditsDirectionEnum string
 
@@ -62,7 +57,7 @@ func (e *GetVideoCreditsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideoCreditsQueryParams struct {
+type GetVideoCreditsRequest struct {
 	// The sort direction of the results.
 	Direction *GetVideoCreditsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -73,11 +68,8 @@ type GetVideoCreditsQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetVideoCreditsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVideoCreditsRequest struct {
-	PathParams  GetVideoCreditsPathParams
-	QueryParams GetVideoCreditsQueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetVideoCreditsResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteAPIV1SuggestionsIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteAPIV1SuggestionsIDPathParams struct {
-	// id of the account in the database to be removed from suggestions
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteAPIV1SuggestionsIDRequest struct {
-	PathParams DeleteAPIV1SuggestionsIDPathParams
-	Security   DeleteAPIV1SuggestionsIDSecurity
+	// id of the account in the database to be removed from suggestions
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV1SuggestionsIDResponse struct {

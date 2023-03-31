@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsListAccountsForPlanStubbedPathParams struct {
-	// The unique identifier of the plan.
-	PlanID int64 `pathParam:"style=simple,explode=false,name=plan_id"`
-}
-
 // AppsListAccountsForPlanStubbedDirectionEnum - To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
 type AppsListAccountsForPlanStubbedDirectionEnum string
 
@@ -38,20 +33,17 @@ func (e *AppsListAccountsForPlanStubbedDirectionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type AppsListAccountsForPlanStubbedQueryParams struct {
+type AppsListAccountsForPlanStubbedRequest struct {
 	// To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
 	Direction *AppsListAccountsForPlanStubbedDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The unique identifier of the plan.
+	PlanID int64 `pathParam:"style=simple,explode=false,name=plan_id"`
 	// The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
 	Sort *shared.SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type AppsListAccountsForPlanStubbedRequest struct {
-	PathParams  AppsListAccountsForPlanStubbedPathParams
-	QueryParams AppsListAccountsForPlanStubbedQueryParams
 }
 
 type AppsListAccountsForPlanStubbedResponse struct {

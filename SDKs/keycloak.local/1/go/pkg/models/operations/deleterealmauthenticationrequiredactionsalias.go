@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteRealmAuthenticationRequiredActionsAliasPathParams struct {
+type DeleteRealmAuthenticationRequiredActionsAliasRequest struct {
 	// Alias of required action
 	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmAuthenticationRequiredActionsAliasRequest struct {
-	PathParams DeleteRealmAuthenticationRequiredActionsAliasPathParams
 }
 
 type DeleteRealmAuthenticationRequiredActionsAliasResponse struct {

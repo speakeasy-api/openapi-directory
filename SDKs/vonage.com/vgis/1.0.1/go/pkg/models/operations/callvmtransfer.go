@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CallVMTransferPathParams struct {
+type CallVMTransferRequest struct {
 	// Unique identifier of the call
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CallVMTransferRequest struct {
-	PathParams CallVMTransferPathParams
 }
 
 type CallVMTransferResponse struct {

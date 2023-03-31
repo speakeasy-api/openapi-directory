@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSetConfigPathParams struct {
+type ProtocolTftpSetConfigRequest struct {
 	// Agent to set the TFTP configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the TFTP configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the TFTP configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolTftpSetConfigRequest struct {
-	PathParams ProtocolTftpSetConfigPathParams
 }
 
 type ProtocolTftpSetConfigResponse struct {

@@ -8,18 +8,14 @@ import (
 )
 
 type CloudresourcemanagerProjectsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudresourcemanagerProjectsUpdatePathParams struct {
-	// The project ID (for example, `my-project-123`).
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CloudresourcemanagerProjectsUpdateQueryParams struct {
+type CloudresourcemanagerProjectsUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Project     *shared.Project   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,19 +30,14 @@ type CloudresourcemanagerProjectsUpdateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID (for example, `my-project-123`).
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudresourcemanagerProjectsUpdateRequest struct {
-	PathParams  CloudresourcemanagerProjectsUpdatePathParams
-	QueryParams CloudresourcemanagerProjectsUpdateQueryParams
-	Request     *shared.Project `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerProjectsUpdateSecurity
 }
 
 type CloudresourcemanagerProjectsUpdateResponse struct {

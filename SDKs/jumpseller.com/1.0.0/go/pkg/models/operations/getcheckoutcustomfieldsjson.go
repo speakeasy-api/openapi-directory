@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCheckoutCustomFieldsJSONQueryParams struct {
+type GetCheckoutCustomFieldsJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// List restriction
@@ -16,10 +16,6 @@ type GetCheckoutCustomFieldsJSONQueryParams struct {
 	Login string `queryParam:"style=form,explode=true,name=login"`
 	// List page
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetCheckoutCustomFieldsJSONRequest struct {
-	QueryParams GetCheckoutCustomFieldsJSONQueryParams
 }
 
 type GetCheckoutCustomFieldsJSONResponse struct {

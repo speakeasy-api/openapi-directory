@@ -8,17 +8,12 @@ import (
 )
 
 type GetAccountCredentialSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountCredentialPathParams struct {
-	// UUID of the credential to retrieve
-	CredentialID string `pathParam:"style=simple,explode=false,name=credential_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAccountCredentialRequest struct {
-	PathParams GetAccountCredentialPathParams
-	Security   GetAccountCredentialSecurity
+	// UUID of the credential to retrieve
+	CredentialID string `pathParam:"style=simple,explode=false,name=credential_id"`
 }
 
 type GetAccountCredentialResponse struct {

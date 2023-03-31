@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMyTimeCardPathParams struct {
+type GetMyTimeCardRequest struct {
 	TimeCardID  string `pathParam:"style=simple,explode=false,name=timeCard_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetMyTimeCardRequest struct {
-	PathParams GetMyTimeCardPathParams
 }
 
 type GetMyTimeCardResponse struct {

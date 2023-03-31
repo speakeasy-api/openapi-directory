@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDGetPathParams struct {
-	// the id from the story object
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDGetQueryParams struct {
+type StoryIDGetRequest struct {
 	// Pull a story object with associated collaborator user, permission, and session data(faster if cached from prior api call)
 	Full *bool `queryParam:"style=form,explode=true,name=full"`
+	// the id from the story object
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
 	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
 	// Indicate whether the returned object should include child relationships
 	IncludeRelationships *bool `queryParam:"style=form,explode=true,name=include_relationships"`
 	// Force the api reload the `Story full` object
 	RefreshCache *bool `queryParam:"style=form,explode=true,name=refresh_cache"`
-}
-
-type StoryIDGetRequest struct {
-	PathParams  StoryIDGetPathParams
-	QueryParams StoryIDGetQueryParams
 }
 
 type StoryIDGetResponse struct {

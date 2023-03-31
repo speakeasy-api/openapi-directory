@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetPublicHistoryQueryParams struct {
+type GetPublicHistoryRequest struct {
 	// Startdatum der Abfrage im Format (JJJJ-MM-DD)
 	From *string `queryParam:"style=form,explode=true,name=from"`
 	// Ortssuche mit Freitext
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Enddatum der Abfrage im Format (JJJJ-MM-DD)
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetPublicHistoryRequest struct {
-	QueryParams GetPublicHistoryQueryParams
 }
 
 type GetPublicHistoryResponse struct {

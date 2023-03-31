@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type GetCMSpagePathParams struct {
+type GetCMSpageRequest struct {
 	// Builder ID specified in the settings of the CMS app.
 	BuilderID string `pathParam:"style=simple,explode=false,name=builderId"`
 	// Content Type ID defined in the FastStore project.
 	ContentType string `pathParam:"style=simple,explode=false,name=content-type"`
 	// Document ID presented in the URL path of a CMS preview.
 	DocumentID string `pathParam:"style=simple,explode=false,name=document-id"`
-}
-
-type GetCMSpageQueryParams struct {
 	// Release ID presented in the URL path of a CMS preview.
 	ReleaseID *string `queryParam:"style=form,explode=true,name=releaseId"`
 	// Version ID presented in the URL path of a CMS preview.
 	VersionID *string `queryParam:"style=form,explode=true,name=versionId"`
-}
-
-type GetCMSpageRequest struct {
-	PathParams  GetCMSpagePathParams
-	QueryParams GetCMSpageQueryParams
 }
 
 // GetCMSpage200ApplicationJSONSections - Object with data about a specific section.

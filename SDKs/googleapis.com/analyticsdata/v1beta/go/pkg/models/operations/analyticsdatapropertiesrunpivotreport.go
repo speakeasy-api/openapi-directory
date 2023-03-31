@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsdataPropertiesRunPivotReportSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsdataPropertiesRunPivotReportSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsdataPropertiesRunPivotReportSecurity struct {
@@ -22,14 +22,10 @@ type AnalyticsdataPropertiesRunPivotReportSecurity struct {
 	Option2 *AnalyticsdataPropertiesRunPivotReportSecurityOption2 `security:"option"`
 }
 
-type AnalyticsdataPropertiesRunPivotReportPathParams struct {
-	// A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and not the body. To learn more, see [where to find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a batch request, this property should either be unspecified or consistent with the batch-level property. Example: properties/1234
-	Property string `pathParam:"style=simple,explode=false,name=property"`
-}
-
-type AnalyticsdataPropertiesRunPivotReportQueryParams struct {
+type AnalyticsdataPropertiesRunPivotReportRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RunPivotReportRequest *shared.RunPivotReportRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -44,19 +40,14 @@ type AnalyticsdataPropertiesRunPivotReportQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and not the body. To learn more, see [where to find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a batch request, this property should either be unspecified or consistent with the batch-level property. Example: properties/1234
+	Property string `pathParam:"style=simple,explode=false,name=property"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AnalyticsdataPropertiesRunPivotReportRequest struct {
-	PathParams  AnalyticsdataPropertiesRunPivotReportPathParams
-	QueryParams AnalyticsdataPropertiesRunPivotReportQueryParams
-	Request     *shared.RunPivotReportRequest `request:"mediaType=application/json"`
-	Security    AnalyticsdataPropertiesRunPivotReportSecurity
 }
 
 type AnalyticsdataPropertiesRunPivotReportResponse struct {

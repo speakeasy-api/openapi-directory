@@ -40,14 +40,14 @@ func newCreditMemos(defaultClient, securityClient HTTPClient, serverURL, languag
 // You can delete a credit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *creditMemos) DELETECreditMemo(ctx context.Context, request operations.DELETECreditMemoRequest) (*operations.DELETECreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -93,14 +93,14 @@ func (s *creditMemos) DELETECreditMemo(ctx context.Context, request operations.D
 // For a use case of this operation, see [Get credit memo](https://www.zuora.com/developer/api-guides/#Get-credit-memo).
 func (s *creditMemos) GETCreditMemo(ctx context.Context, request operations.GETCreditMemoRequest) (*operations.GETCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,14 +144,14 @@ func (s *creditMemos) GETCreditMemo(ctx context.Context, request operations.GETC
 // Retrieves the information about a specific item of a credit memo. A credit memo item is a single line item in a credit memo.
 func (s *creditMemos) GETCreditMemoItem(ctx context.Context, request operations.GETCreditMemoItemRequest) (*operations.GETCreditMemoItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/items/{cmitemid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/items/{cmitemid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -195,14 +195,14 @@ func (s *creditMemos) GETCreditMemoItem(ctx context.Context, request operations.
 // Retrieves the information about a specific credit memo part item.  A credit memo part item is a single line item in a credit memo part. A credit memo part can consist of several different types of items.
 func (s *creditMemos) GETCreditMemoItemPart(ctx context.Context, request operations.GETCreditMemoItemPartRequest) (*operations.GETCreditMemoItemPartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts/{itempartid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts/{itempartid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -246,16 +246,16 @@ func (s *creditMemos) GETCreditMemoItemPart(ctx context.Context, request operati
 // Retrieves the information about all items of a credit memo part. A credit memo part item is a single line item in a credit memo part. A credit memo part can consist of several different types of items.
 func (s *creditMemos) GETCreditMemoItemParts(ctx context.Context, request operations.GETCreditMemoItemPartsRequest) (*operations.GETCreditMemoItemPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -313,16 +313,16 @@ func (s *creditMemos) GETCreditMemoItemParts(ctx context.Context, request operat
 //   - /v1/creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100&sort=createdDate
 func (s *creditMemos) GETCreditMemoItems(ctx context.Context, request operations.GETCreditMemoItemsRequest) (*operations.GETCreditMemoItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -368,14 +368,14 @@ func (s *creditMemos) GETCreditMemoItems(ctx context.Context, request operations
 // Retrieves the information about a specific credit memo part. A credit memo can consist of an unapplied part, and several parts applied to invoices and debit memos.
 func (s *creditMemos) GETCreditMemoPart(ctx context.Context, request operations.GETCreditMemoPartRequest) (*operations.GETCreditMemoPartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts/{partid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts/{partid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -419,16 +419,16 @@ func (s *creditMemos) GETCreditMemoPart(ctx context.Context, request operations.
 // Retrieves the information about all parts of a credit memo. A credit memo can consist of an unapplied part, and several parts applied to invoices and debit memos. You can use this operation to get all the applied and unapplied portions of a credit memo.
 func (s *creditMemos) GETCreditMemoParts(ctx context.Context, request operations.GETCreditMemoPartsRequest) (*operations.GETCreditMemoPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/parts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -497,9 +497,9 @@ func (s *creditMemos) GETCreditMemos(ctx context.Context, request operations.GET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -545,16 +545,16 @@ func (s *creditMemos) GETCreditMemos(ctx context.Context, request operations.GET
 // Retrieves information about the taxation items of a specific credit memo item.
 func (s *creditMemos) GETTaxationItemsOfCreditMemoItem(ctx context.Context, request operations.GETTaxationItemsOfCreditMemoItemRequest) (*operations.GETTaxationItemsOfCreditMemoItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/items/{cmitemid}/taxation-items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/items/{cmitemid}/taxation-items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -600,9 +600,9 @@ func (s *creditMemos) GETTaxationItemsOfCreditMemoItem(ctx context.Context, requ
 // Creates taxation items for a credit memo.
 func (s *creditMemos) POSTCMTaxationItems(ctx context.Context, request operations.POSTCMTaxationItemsRequest) (*operations.POSTCMTaxationItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/taxationitems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/taxationitems", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTTaxationItemListForCMType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -617,7 +617,7 @@ func (s *creditMemos) POSTCMTaxationItems(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -669,7 +669,7 @@ func (s *creditMemos) POSTCreditMemoFromPrpc(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/creditmemos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreditMemoFromChargeType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -684,7 +684,7 @@ func (s *creditMemos) POSTCreditMemoFromPrpc(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -730,14 +730,14 @@ func (s *creditMemos) POSTCreditMemoFromPrpc(ctx context.Context, request operat
 // This REST API operation can be used only if you have the billing document file generation feature and the Billing user permission "Regenerate PDF" enabled.
 func (s *creditMemos) POSTCreditMemoPDF(ctx context.Context, request operations.POSTCreditMemoPDFRequest) (*operations.POSTCreditMemoPDFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/pdfs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/pdfs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -793,9 +793,9 @@ func (s *creditMemos) POSTCreditMemoPDF(ctx context.Context, request operations.
 //   - The email addresses are not specified in the `emailAddresses` field.
 func (s *creditMemos) POSTEmailCreditMemo(ctx context.Context, request operations.POSTEmailCreditMemoRequest) (*operations.POSTEmailCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/emails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/emails", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostCreditMemoEmailRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -810,7 +810,7 @@ func (s *creditMemos) POSTEmailCreditMemo(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -860,9 +860,9 @@ func (s *creditMemos) POSTEmailCreditMemo(ctx context.Context, request operation
 // For a use case of this operation, see [Refund processing](https://www.zuora.com/developer/api-guides/#Refund-processing).
 func (s *creditMemos) POSTRefundCreditMemo(ctx context.Context, request operations.POSTRefundCreditMemoRequest) (*operations.POSTRefundCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditmemoId}/refunds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditmemoId}/refunds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostNonRefRefundType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -877,7 +877,7 @@ func (s *creditMemos) POSTRefundCreditMemo(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -928,9 +928,9 @@ func (s *creditMemos) POSTRefundCreditMemo(ctx context.Context, request operatio
 // - A maximum of 50 PDF files can be uploaded for one credit memo.
 func (s *creditMemos) POSTUploadFileForCreditMemo(ctx context.Context, request operations.POSTUploadFileForCreditMemoRequest) (*operations.POSTUploadFileForCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/files", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -942,7 +942,7 @@ func (s *creditMemos) POSTUploadFileForCreditMemo(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1002,9 +1002,9 @@ func (s *creditMemos) POSTUploadFileForCreditMemo(ctx context.Context, request o
 // Otherwise, the First In First Out rule will be used instead of the Proration rule.
 func (s *creditMemos) PUTApplyCreditMemo(ctx context.Context, request operations.PUTApplyCreditMemoRequest) (*operations.PUTApplyCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/apply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/apply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplyCreditMemoType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1019,7 +1019,7 @@ func (s *creditMemos) PUTApplyCreditMemo(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1065,14 +1065,14 @@ func (s *creditMemos) PUTApplyCreditMemo(ctx context.Context, request operations
 // You can cancel a credit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *creditMemos) PUTCancelCreditMemo(ctx context.Context, request operations.PUTCancelCreditMemoRequest) (*operations.PUTCancelCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1116,14 +1116,14 @@ func (s *creditMemos) PUTCancelCreditMemo(ctx context.Context, request operation
 // Posts a credit memo to activate it. You can post credit memos only if you have the [Billing permissions](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles#Billing_Permissions).
 func (s *creditMemos) PUTPostCreditMemo(ctx context.Context, request operations.PUTPostCreditMemoRequest) (*operations.PUTPostCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/post", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/post", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1184,9 +1184,9 @@ func (s *creditMemos) PUTPostCreditMemo(ctx context.Context, request operations.
 // Otherwise, the First In First Out rule will be used instead of the Proration rule.
 func (s *creditMemos) PUTUnapplyCreditMemo(ctx context.Context, request operations.PUTUnapplyCreditMemoRequest) (*operations.PUTUnapplyCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/unapply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/unapply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnapplyCreditMemoType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1201,7 +1201,7 @@ func (s *creditMemos) PUTUnapplyCreditMemo(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1247,14 +1247,14 @@ func (s *creditMemos) PUTUnapplyCreditMemo(ctx context.Context, request operatio
 // You can unpost credit memos only if you have the [Billing permissions](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles#Billing_Permissions).
 func (s *creditMemos) PUTUnpostCreditMemo(ctx context.Context, request operations.PUTUnpostCreditMemoRequest) (*operations.PUTUnpostCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/unpost", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}/unpost", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1304,9 +1304,9 @@ func (s *creditMemos) PUTUnpostCreditMemo(ctx context.Context, request operation
 // You can update a credit memo only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *creditMemos) PUTUpdateCreditMemo(ctx context.Context, request operations.PUTUpdateCreditMemoRequest) (*operations.PUTUpdateCreditMemoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/creditmemos/{creditMemoId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTCreditMemoType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1321,7 +1321,7 @@ func (s *creditMemos) PUTUpdateCreditMemo(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

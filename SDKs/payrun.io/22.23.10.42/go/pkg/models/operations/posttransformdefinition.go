@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTransformDefinitionHeaders struct {
+type PostTransformDefinitionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostTransformDefinitionRequest struct {
-	Headers PostTransformDefinitionHeaders
 	// The transform definition object to be executed against the report data.
-	Request shared.TransformDefinition `request:"mediaType=application/json"`
+	TransformDefinition shared.TransformDefinition `request:"mediaType=application/json"`
 }
 
 type PostTransformDefinitionResponse struct {

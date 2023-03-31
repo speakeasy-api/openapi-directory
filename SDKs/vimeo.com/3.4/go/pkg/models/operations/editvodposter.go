@@ -8,14 +8,7 @@ import (
 )
 
 type EditVodPosterSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditVodPosterPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-	// The ID of the picture.
-	PosterID float64 `pathParam:"style=simple,explode=false,name=poster_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditVodPosterRequestBody struct {
@@ -24,9 +17,11 @@ type EditVodPosterRequestBody struct {
 }
 
 type EditVodPosterRequest struct {
-	PathParams EditVodPosterPathParams
-	Request    *EditVodPosterRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
-	Security   EditVodPosterSecurity
+	RequestBody *EditVodPosterRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	// The ID of the picture.
+	PosterID float64 `pathParam:"style=simple,explode=false,name=poster_id"`
 }
 
 type EditVodPosterResponse struct {

@@ -14,17 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GETAnalyticsDataUsingGETRequest{
-        PathParams: operations.GETAnalyticsDataUsingGETPathParams{
-            APIKey: "corrupti",
-        },
-        QueryParams: operations.GETAnalyticsDataUsingGETQueryParams{
-            DataType: "sessionAnalytic",
-            EndDate: "2021-04-24",
-            Keys: "unde",
-            Precision: "MONTHLY",
-            Stage: "PREVIEW",
-            StartDate: "2021-09-24",
-        },
+        APIKey: "corrupti",
+        DataType: "sessionAnalytic",
+        EndDate: "2021-04-24",
+        Keys: "unde",
+        Precision: "MONTHLY",
+        Stage: "PREVIEW",
+        StartDate: "2021-09-24",
     }
 
     ctx := context.Background()

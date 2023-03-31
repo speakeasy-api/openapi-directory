@@ -73,7 +73,7 @@ func newMetric(defaultClient, securityClient HTTPClient, serverURL, language, sd
 //	}
 //
 // ```
-func (s *metric) CreatePatientHealthMetric(ctx context.Context, request operations.CreatePatientHealthMetricRequest) (*operations.CreatePatientHealthMetricResponse, error) {
+func (s *metric) CreatePatientHealthMetric(ctx context.Context, request shared.CreatePatientHealthMetricRequest) (*operations.CreatePatientHealthMetricResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/patient_health_metric"
 
@@ -144,7 +144,7 @@ func (s *metric) CreatePatientHealthMetric(ctx context.Context, request operatio
 // Get the plan summary for a patient.
 func (s *metric) FetchPatientHealthMetric(ctx context.Context, request operations.FetchPatientHealthMetricRequest) (*operations.FetchPatientHealthMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient_health_metric/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patient_health_metric/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +208,7 @@ func (s *metric) FetchPatientHealthMetrics(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

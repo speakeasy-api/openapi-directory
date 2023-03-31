@@ -10,15 +10,11 @@ import (
 	"net/http"
 )
 
-type GetAdminMappingsQueryParams struct {
+type GetAdminMappingsRequest struct {
 	// The maximum number of results to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The start index of the results to return
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetAdminMappingsRequest struct {
-	QueryParams GetAdminMappingsQueryParams
 }
 
 // GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchTopicsQueryParams struct {
+type SearchTopicsRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub Enterprise Cloud. The REST API supports the same qualifiers as the web interface for GitHub Enterprise Cloud. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/enterprise-cloud@latest//rest/reference/search#constructing-a-search-query).
 	Q string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type SearchTopicsRequest struct {
-	QueryParams SearchTopicsQueryParams
 }
 
 // SearchTopics200ApplicationJSON - Response

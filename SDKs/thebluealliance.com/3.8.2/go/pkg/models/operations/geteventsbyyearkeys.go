@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetEventsByYearKeysSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetEventsByYearKeysPathParams struct {
-	// Competition Year (or Season). Must be 4 digits.
-	Year int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetEventsByYearKeysHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetEventsByYearKeysRequest struct {
-	PathParams GetEventsByYearKeysPathParams
-	Headers    GetEventsByYearKeysHeaders
-	Security   GetEventsByYearKeysSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// Competition Year (or Season). Must be 4 digits.
+	Year int64 `pathParam:"style=simple,explode=false,name=year"`
 }
 
 type GetEventsByYearKeysResponse struct {

@@ -7,15 +7,11 @@ import (
 	"time"
 )
 
-type RoadDisruptedStreetsQueryParams struct {
+type RoadDisruptedStreetsRequest struct {
 	// Optional, The end time to filter on.
 	EndDate time.Time `queryParam:"style=form,explode=true,name=endDate"`
 	// Optional, the start time to filter on.
 	StartDate time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type RoadDisruptedStreetsRequest struct {
-	QueryParams RoadDisruptedStreetsQueryParams
 }
 
 type RoadDisruptedStreetsResponse struct {

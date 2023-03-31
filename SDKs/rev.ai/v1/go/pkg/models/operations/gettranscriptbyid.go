@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTranscriptByIDPathParams struct {
-	// Rev.ai API Job Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTranscriptByIDHeaders struct {
+type GetTranscriptByIDRequest struct {
 	// MIME type specifying the transcription output format
 	Accept *shared.AcceptTranscriptEnum `header:"style=simple,explode=false,name=Accept"`
-}
-
-type GetTranscriptByIDRequest struct {
-	PathParams GetTranscriptByIDPathParams
-	Headers    GetTranscriptByIDHeaders
+	// Rev.ai API Job Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetTranscriptByID409ApplicationProblemPlusJSON - Problem details object returned on errors

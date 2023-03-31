@@ -37,7 +37,7 @@ func newAppointments(defaultClient, securityClient HTTPClient, serverURL, langua
 // <p>For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a></p>
 func (s *appointments) DeleteConsumerV1AppointmentsID(ctx context.Context, request operations.DeleteConsumerV1AppointmentsIDRequest) (*operations.DeleteConsumerV1AppointmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *appointments) GetConsumerV1Appointments(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -138,7 +138,7 @@ func (s *appointments) GetConsumerV1AppointmentsBookingfields(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -187,7 +187,7 @@ func (s *appointments) GetConsumerV1AppointmentsCustomfields(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -229,7 +229,7 @@ func (s *appointments) GetConsumerV1AppointmentsCustomfields(ctx context.Context
 // <p>Use this endpoint to return an <b>Appointment</b> object. A valid <b>appointment id</b> is required. For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointments Overview</a></p>
 func (s *appointments) GetConsumerV1AppointmentsID(ctx context.Context, request operations.GetConsumerV1AppointmentsIDRequest) (*operations.GetConsumerV1AppointmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -311,7 +311,7 @@ func (s *appointments) PostConsumerV1Appointments(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/consumer/v1/appointments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppointmentInitialModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *appointments) PostConsumerV1Appointments(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -366,9 +366,9 @@ func (s *appointments) PostConsumerV1Appointments(ctx context.Context, request o
 // <p>For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointments Overview</a></p>
 func (s *appointments) PutConsumerV1AppointmentsIDBook(ctx context.Context, request operations.PutConsumerV1AppointmentsIDBookRequest) (*operations.PutConsumerV1AppointmentsIDBookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/book", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/book", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppointmentBookModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -418,7 +418,7 @@ func (s *appointments) PutConsumerV1AppointmentsIDBook(ctx context.Context, requ
 // <p>Use this endpoint to <b>Cancel</b> an appointment booking or reservation. Only appointments with a "BK", booked or "RS", reserved status can be cancelled. Past dated appointments cannot be cancelled. A valid <b>appointment id</b> is required. For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a></p>
 func (s *appointments) PutConsumerV1AppointmentsIDCancel(ctx context.Context, request operations.PutConsumerV1AppointmentsIDCancelRequest) (*operations.PutConsumerV1AppointmentsIDCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -464,14 +464,14 @@ func (s *appointments) PutConsumerV1AppointmentsIDCancel(ctx context.Context, re
 // <p>For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a></p>
 func (s *appointments) PutConsumerV1AppointmentsIDConfirm(ctx context.Context, request operations.PutConsumerV1AppointmentsIDConfirmRequest) (*operations.PutConsumerV1AppointmentsIDConfirmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/confirm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/confirm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -505,9 +505,9 @@ func (s *appointments) PutConsumerV1AppointmentsIDConfirm(ctx context.Context, r
 // <p>For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a></p>
 func (s *appointments) PutConsumerV1AppointmentsIDNoshow(ctx context.Context, request operations.PutConsumerV1AppointmentsIDNoshowRequest) (*operations.PutConsumerV1AppointmentsIDNoshowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/noshow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/noshow", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,9 +556,9 @@ func (s *appointments) PutConsumerV1AppointmentsIDNoshow(ctx context.Context, re
 // <p>For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a></p>
 func (s *appointments) PutConsumerV1AppointmentsIDReschedule(ctx context.Context, request operations.PutConsumerV1AppointmentsIDRescheduleRequest) (*operations.PutConsumerV1AppointmentsIDRescheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/reschedule", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/reschedule", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppointmentRescheduleModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -619,9 +619,9 @@ func (s *appointments) PutConsumerV1AppointmentsIDReschedule(ctx context.Context
 // <p>For more information: <a href="https://onsched.readme.io/docs/appointments-overview">Appointments Overview</a></p>
 func (s *appointments) PutConsumerV1AppointmentsIDReserve(ctx context.Context, request operations.PutConsumerV1AppointmentsIDReserveRequest) (*operations.PutConsumerV1AppointmentsIDReserveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/reserve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/appointments/{id}/reserve", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppointmentReserveModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -633,7 +633,7 @@ func (s *appointments) PutConsumerV1AppointmentsIDReserve(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

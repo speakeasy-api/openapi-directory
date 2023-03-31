@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateInlineScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateInlineScriptTagPathParams struct {
-	// インラインスクリプトタグID
-	InlineScriptTagID int64 `pathParam:"style=simple,explode=false,name=inlineScriptTagId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum - インラインスクリプトを出力するページ。
@@ -95,10 +89,10 @@ type UpdateInlineScriptTagRequestBody struct {
 }
 
 type UpdateInlineScriptTagRequest struct {
-	PathParams UpdateInlineScriptTagPathParams
 	// 更新するスクリプトタグの情報
-	Request  *UpdateInlineScriptTagRequestBody `request:"mediaType=application/json"`
-	Security UpdateInlineScriptTagSecurity
+	RequestBody *UpdateInlineScriptTagRequestBody `request:"mediaType=application/json"`
+	// インラインスクリプトタグID
+	InlineScriptTagID int64 `pathParam:"style=simple,explode=false,name=inlineScriptTagId"`
 }
 
 // UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum - インラインスクリプトを出力するページ。

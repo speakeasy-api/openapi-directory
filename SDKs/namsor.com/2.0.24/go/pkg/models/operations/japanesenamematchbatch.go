@@ -8,13 +8,7 @@ import (
 )
 
 type JapaneseNameMatchBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type JapaneseNameMatchBatchRequest struct {
-	// A list of personal Japanese names in LATIN, firstName = japaneseGivenName; lastName=japaneseSurname
-	Request  *shared.BatchMatchPersonalFirstLastNameIn `request:"mediaType=application/json"`
-	Security JapaneseNameMatchBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type JapaneseNameMatchBatchResponse struct {

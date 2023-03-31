@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsShutdownPathParams struct {
+type PostServersIDActionsShutdownRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsShutdownRequest struct {
-	PathParams PostServersIDActionsShutdownPathParams
 }
 
 // PostServersIDActionsShutdownActionResponseActionError - Error message for the Action if error occurred, otherwise null

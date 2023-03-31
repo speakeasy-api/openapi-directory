@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTracePathParams struct {
+type GetTraceRequest struct {
 	// Agent to return the indicator
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetTraceRequest struct {
-	PathParams GetTracePathParams
 }
 
 type GetTraceResponse struct {

@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.EmailValidationRequest{
-        PathParams: operations.EmailValidationPathParams{
-            UserEmailHere: "example@example.com",
-            YourAPIKeyHere: "asd24#sdfs322#",
-        },
+        UserEmailHere: "example@example.com",
+        YourAPIKeyHere: "asd24#sdfs322#",
     }
 
     ctx := context.Background()

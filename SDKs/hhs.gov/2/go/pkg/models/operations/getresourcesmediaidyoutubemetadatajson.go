@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesMediaIDYoutubeMetaDataJSONPathParams struct {
+type GetResourcesMediaIDYoutubeMetaDataJSONRequest struct {
 	// The id of the video to show meta data for.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDYoutubeMetaDataJSONRequest struct {
-	PathParams GetResourcesMediaIDYoutubeMetaDataJSONPathParams
 }
 
 // GetResourcesMediaIDYoutubeMetaDataJSON200ApplicationJSON - Returns the Youtube metadata, where applicable, for the MediaItem identified by the 'id'.

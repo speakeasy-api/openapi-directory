@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRfqListPathParams struct {
+type GetRfqListRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetRfqListRequest struct {
-	PathParams GetRfqListPathParams
 }
 
 type GetRfqListResponse struct {

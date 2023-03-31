@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDefinitionsPathParams struct {
-	// Word to return definitions for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetDefinitionsIncludeTagsEnum - Return a closed set of XML tags in response
 type GetDefinitionsIncludeTagsEnum string
 
@@ -196,7 +191,7 @@ func (e *GetDefinitionsUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDefinitionsQueryParams struct {
+type GetDefinitionsRequest struct {
 	// Return related words with definitions
 	IncludeRelated *string `queryParam:"style=form,explode=true,name=includeRelated"`
 	// Return a closed set of XML tags in response
@@ -209,11 +204,8 @@ type GetDefinitionsQueryParams struct {
 	SourceDictionaries *GetDefinitionsSourceDictionariesEnum `queryParam:"style=form,explode=false,name=sourceDictionaries"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetDefinitionsUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetDefinitionsRequest struct {
-	PathParams  GetDefinitionsPathParams
-	QueryParams GetDefinitionsQueryParams
+	// Word to return definitions for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetDefinitionsResponse struct {

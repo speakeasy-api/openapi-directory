@@ -8,18 +8,13 @@ import (
 )
 
 type GetVSMAccountSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetVSMAccountPathParams struct {
-	// External id of the account you want to retrieve. In this case it will be your Viber Service Message ID.
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetVSMAccountRequest struct {
-	PathParams GetVSMAccountPathParams
-	Security   GetVSMAccountSecurity
+	// External id of the account you want to retrieve. In this case it will be your Viber Service Message ID.
+	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 }
 
 type GetVSMAccountResponse struct {

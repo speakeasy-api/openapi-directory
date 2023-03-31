@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Create2Request struct {
-	// Brand new person.
-	Request shared.CustomerPersonDTO `request:"mediaType=application/json"`
-}
-
 type Create2Response struct {
 	ContentType string
 	// Success

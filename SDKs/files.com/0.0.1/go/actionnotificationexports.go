@@ -37,7 +37,7 @@ func newActionNotificationExports(defaultClient, securityClient HTTPClient, serv
 // Show Action Notification Export
 func (s *actionNotificationExports) GetActionNotificationExportsID(ctx context.Context, request operations.GetActionNotificationExportsIDRequest) (*operations.GetActionNotificationExportsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/action_notification_exports/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/action_notification_exports/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *actionNotificationExports) GetActionNotificationExportsID(ctx context.C
 
 // PostActionNotificationExports - Create Action Notification Export
 // Create Action Notification Export
-func (s *actionNotificationExports) PostActionNotificationExports(ctx context.Context, request operations.PostActionNotificationExportsRequest) (*operations.PostActionNotificationExportsResponse, error) {
+func (s *actionNotificationExports) PostActionNotificationExports(ctx context.Context, request operations.PostActionNotificationExportsRequestBody) (*operations.PostActionNotificationExportsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/action_notification_exports"
 

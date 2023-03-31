@@ -49,13 +49,6 @@ func (e *GetIntersectionsNearestOutputFormatOutputFormatEnum) UnmarshalJSON(data
 	}
 }
 
-type GetIntersectionsNearestOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetIntersectionsNearestOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetIntersectionsNearestOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetIntersectionsNearestOutputFormatOutputSrsEnum string
 
@@ -98,22 +91,21 @@ func (e *GetIntersectionsNearestOutputFormatOutputSrsEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetIntersectionsNearestOutputFormatQueryParams struct {
+type GetIntersectionsNearestOutputFormatRequest struct {
 	// The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.
 	MaxDegree *int64 `queryParam:"style=form,explode=true,name=maxDegree"`
 	// The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
 	MaxDistance *int64 `queryParam:"style=form,explode=true,name=maxDistance"`
 	// The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
 	MinDegree *int64 `queryParam:"style=form,explode=true,name=minDegree"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetIntersectionsNearestOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetIntersectionsNearestOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// Example: -122.377,50.121  The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
 	Point string `queryParam:"style=form,explode=true,name=point"`
-}
-
-type GetIntersectionsNearestOutputFormatRequest struct {
-	PathParams  GetIntersectionsNearestOutputFormatPathParams
-	QueryParams GetIntersectionsNearestOutputFormatQueryParams
 }
 
 type GetIntersectionsNearestOutputFormatResponse struct {

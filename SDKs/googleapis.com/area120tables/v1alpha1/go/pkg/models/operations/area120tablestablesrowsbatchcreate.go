@@ -8,23 +8,23 @@ import (
 )
 
 type Area120tablesTablesRowsBatchCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchCreateSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsBatchCreateSecurity struct {
@@ -34,14 +34,10 @@ type Area120tablesTablesRowsBatchCreateSecurity struct {
 	Option4 *Area120tablesTablesRowsBatchCreateSecurityOption4 `security:"option"`
 }
 
-type Area120tablesTablesRowsBatchCreatePathParams struct {
-	// Required. The parent table where the rows will be created. Format: tables/{table}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type Area120tablesTablesRowsBatchCreateQueryParams struct {
+type Area120tablesTablesRowsBatchCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BatchCreateRowsRequest *shared.BatchCreateRowsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -54,6 +50,8 @@ type Area120tablesTablesRowsBatchCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent table where the rows will be created. Format: tables/{table}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -62,13 +60,6 @@ type Area120tablesTablesRowsBatchCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Area120tablesTablesRowsBatchCreateRequest struct {
-	PathParams  Area120tablesTablesRowsBatchCreatePathParams
-	QueryParams Area120tablesTablesRowsBatchCreateQueryParams
-	Request     *shared.BatchCreateRowsRequest `request:"mediaType=application/json"`
-	Security    Area120tablesTablesRowsBatchCreateSecurity
 }
 
 type Area120tablesTablesRowsBatchCreateResponse struct {

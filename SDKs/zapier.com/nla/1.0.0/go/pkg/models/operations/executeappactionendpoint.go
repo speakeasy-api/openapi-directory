@@ -8,20 +8,15 @@ import (
 )
 
 type ExecuteAppActionEndpointSecurity struct {
-	AccessPointAPIKeyHeader *shared.SchemeAccessPointAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-	AccessPointAPIKeyQuery  *shared.SchemeAccessPointAPIKeyQuery  `security:"scheme,type=apiKey,subtype=query"`
-	AccessPointOAuth        *shared.SchemeAccessPointOAuth        `security:"scheme,type=oauth2"`
-	SessionAuth             *shared.SchemeSessionAuth             `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type ExecuteAppActionEndpointPathParams struct {
-	ExposedAppActionID string `pathParam:"style=simple,explode=false,name=exposed_app_action_id"`
+	AccessPointAPIKeyHeader *string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	AccessPointAPIKeyQuery  *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	AccessPointOAuth        *string `security:"scheme,type=oauth2,name=Authorization"`
+	SessionAuth             *string `security:"scheme,type=apiKey,subtype=cookie,name=sessionid"`
 }
 
 type ExecuteAppActionEndpointRequest struct {
-	PathParams ExecuteAppActionEndpointPathParams
-	Request    shared.ExecuteRequest `request:"mediaType=application/json"`
-	Security   ExecuteAppActionEndpointSecurity
+	ExecuteRequest     shared.ExecuteRequest `request:"mediaType=application/json"`
+	ExposedAppActionID string                `pathParam:"style=simple,explode=false,name=exposed_app_action_id"`
 }
 
 type ExecuteAppActionEndpointResponse struct {

@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDDocumentsPathParams struct {
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsQueryParams struct {
+type GetSpacesSpaceIDDocumentsRequest struct {
 	// class of the document to find
 	Class *string `queryParam:"style=form,explode=true,name=Class"`
 	// Text to find
 	FullText *string `queryParam:"style=form,explode=true,name=FullText"`
 	// index range of the results
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesSpaceIDDocumentsRequest struct {
-	PathParams  GetSpacesSpaceIDDocumentsPathParams
-	QueryParams GetSpacesSpaceIDDocumentsQueryParams
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDDocuments200ApplicationJSONFolders struct {

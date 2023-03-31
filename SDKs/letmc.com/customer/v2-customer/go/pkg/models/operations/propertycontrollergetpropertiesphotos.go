@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PropertyControllerGetPropertiesPhotosPathParams struct {
-	// The unique ID of the Property
-	PropertyID string `pathParam:"style=simple,explode=false,name=propertyID"`
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type PropertyControllerGetPropertiesPhotosQueryParams struct {
+type PropertyControllerGetPropertiesPhotosRequest struct {
 	// The maximum number of items to return (up to 1000 per request)
 	Count int `queryParam:"style=form,explode=true,name=count"`
 	// The index of the first item to return
 	Offset int `queryParam:"style=form,explode=true,name=offset"`
+	// The unique ID of the Property
+	PropertyID string `pathParam:"style=simple,explode=false,name=propertyID"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type PropertyControllerGetPropertiesPhotosRequest struct {
-	PathParams  PropertyControllerGetPropertiesPhotosPathParams
-	QueryParams PropertyControllerGetPropertiesPhotosQueryParams
 }
 
 type PropertyControllerGetPropertiesPhotosResponse struct {

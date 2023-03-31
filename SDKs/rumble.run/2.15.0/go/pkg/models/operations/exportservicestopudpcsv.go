@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ExportServicesTopUDPCSVSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ExportServicesTopUDPCSVRequest struct {
-	Security ExportServicesTopUDPCSVSecurity
-}
 
 type ExportServicesTopUDPCSVResponse struct {
 	ContentType string

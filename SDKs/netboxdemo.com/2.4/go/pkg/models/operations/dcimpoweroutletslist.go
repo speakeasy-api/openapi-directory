@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerOutletsListQueryParams struct {
+type DcimPowerOutletsListRequest struct {
 	Device   *string `queryParam:"style=form,explode=true,name=device"`
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// Number of results to return per page.
@@ -16,10 +16,6 @@ type DcimPowerOutletsListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type DcimPowerOutletsListRequest struct {
-	QueryParams DcimPowerOutletsListQueryParams
 }
 
 type DcimPowerOutletsList200ApplicationJSON struct {

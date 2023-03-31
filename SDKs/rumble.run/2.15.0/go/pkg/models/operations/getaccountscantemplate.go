@@ -8,17 +8,12 @@ import (
 )
 
 type GetAccountScanTemplateSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountScanTemplatePathParams struct {
-	// UUID of the scan template to retrieve
-	ScanTemplateID string `pathParam:"style=simple,explode=false,name=scan_template_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAccountScanTemplateRequest struct {
-	PathParams GetAccountScanTemplatePathParams
-	Security   GetAccountScanTemplateSecurity
+	// UUID of the scan template to retrieve
+	ScanTemplateID string `pathParam:"style=simple,explode=false,name=scan_template_id"`
 }
 
 type GetAccountScanTemplateResponse struct {

@@ -10,33 +10,33 @@ import (
 )
 
 type Area120tablesWorkspacesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesWorkspacesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesWorkspacesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesWorkspacesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesWorkspacesGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesWorkspacesGetSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesWorkspacesGetSecurity struct {
@@ -46,11 +46,6 @@ type Area120tablesWorkspacesGetSecurity struct {
 	Option4 *Area120tablesWorkspacesGetSecurityOption4 `security:"option"`
 	Option5 *Area120tablesWorkspacesGetSecurityOption5 `security:"option"`
 	Option6 *Area120tablesWorkspacesGetSecurityOption6 `security:"option"`
-}
-
-type Area120tablesWorkspacesGetPathParams struct {
-	// Required. The name of the workspace to retrieve. Format: workspaces/{workspace}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // Area120tablesWorkspacesGetViewEnum - Optional. Column key to use for values in the row. Defaults to user entered name.
@@ -77,7 +72,7 @@ func (e *Area120tablesWorkspacesGetViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type Area120tablesWorkspacesGetQueryParams struct {
+type Area120tablesWorkspacesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -90,6 +85,8 @@ type Area120tablesWorkspacesGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the workspace to retrieve. Format: workspaces/{workspace}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -102,12 +99,6 @@ type Area120tablesWorkspacesGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Column key to use for values in the row. Defaults to user entered name.
 	View *Area120tablesWorkspacesGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type Area120tablesWorkspacesGetRequest struct {
-	PathParams  Area120tablesWorkspacesGetPathParams
-	QueryParams Area120tablesWorkspacesGetQueryParams
-	Security    Area120tablesWorkspacesGetSecurity
 }
 
 type Area120tablesWorkspacesGetResponse struct {

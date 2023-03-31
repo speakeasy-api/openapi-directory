@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TenancyTenantGroupsCreateRequest struct {
-	Request shared.TenantGroupInput `request:"mediaType=application/json"`
-}
-
 type TenancyTenantGroupsCreateResponse struct {
 	ContentType string
 	StatusCode  int

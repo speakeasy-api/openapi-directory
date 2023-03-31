@@ -8,16 +8,11 @@ import (
 )
 
 type RealtimebiddingBiddersPublisherConnectionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RealtimebiddingBiddersPublisherConnectionsListPathParams struct {
-	// Required. Name of the bidder for which publishers have initiated connections. The pattern for this resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the bidder.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RealtimebiddingBiddersPublisherConnectionsListQueryParams struct {
+type RealtimebiddingBiddersPublisherConnectionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type RealtimebiddingBiddersPublisherConnectionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server should return. Typically, this is the value of ListPublisherConnectionsResponse.nextPageToken returned from the previous call to the 'ListPublisherConnections' method.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Name of the bidder for which publishers have initiated connections. The pattern for this resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the bidder.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type RealtimebiddingBiddersPublisherConnectionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RealtimebiddingBiddersPublisherConnectionsListRequest struct {
-	PathParams  RealtimebiddingBiddersPublisherConnectionsListPathParams
-	QueryParams RealtimebiddingBiddersPublisherConnectionsListQueryParams
-	Security    RealtimebiddingBiddersPublisherConnectionsListSecurity
 }
 
 type RealtimebiddingBiddersPublisherConnectionsListResponse struct {

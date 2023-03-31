@@ -14,75 +14,69 @@ func main() {
     s := sdk.New()
 
     req := operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest{
-        Security: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            EndpointPolicyID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.EndpointPolicyInput{
-            AuthorizationPolicy: "iure",
-            ClientTLSPolicy: "magnam",
-            Description: "debitis",
+        DollarXgafv: "2",
+        EndpointPolicyInput: &shared.EndpointPolicyInput{
+            AuthorizationPolicy: "provident",
+            ClientTLSPolicy: "distinctio",
+            Description: "quibusdam",
             EndpointMatcher: &shared.EndpointMatcher{
                 MetadataLabelMatcher: &shared.EndpointMatcherMetadataLabelMatcher{
-                    MetadataLabelMatchCriteria: "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED",
+                    MetadataLabelMatchCriteria: "MATCH_ANY",
                     MetadataLabels: []shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "tempora",
+                            LabelName: "corrupti",
+                            LabelValue: "illum",
+                        },
+                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
+                            LabelName: "vel",
+                            LabelValue: "error",
+                        },
+                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
+                            LabelName: "deserunt",
                             LabelValue: "suscipit",
                         },
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "molestiae",
-                            LabelValue: "minus",
-                        },
-                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "placeat",
-                            LabelValue: "voluptatum",
-                        },
-                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "iusto",
-                            LabelValue: "excepturi",
+                            LabelName: "iure",
+                            LabelValue: "magnam",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "recusandae": "temporibus",
-                "ab": "quis",
+                "ipsa": "delectus",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
-            Name: "veritatis",
-            ServerTLSPolicy: "deserunt",
+            Name: "iusto",
+            ServerTLSPolicy: "excepturi",
             TrafficPortSelector: &shared.TrafficPortSelector{
                 Ports: []string{
-                    "ipsam",
+                    "recusandae",
+                    "temporibus",
                 },
             },
-            Type: "GRPC_SERVER",
+            Type: "ENDPOINT_POLICY_TYPE_UNSPECIFIED",
         },
+        AccessToken: "quis",
+        Alt: "json",
+        Callback: "deserunt",
+        EndpointPolicyID: "perferendis",
+        Fields: "ipsam",
+        Key: "repellendus",
+        OauthToken: "sapiente",
+        Parent: "quo",
+        PrettyPrint: false,
+        QuotaUser: "odit",
+        UploadType: "at",
+        UploadProtocol: "at",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NetworkservicesProjectsLocationsEndpointPoliciesCreate(ctx, req)
+    res, err := s.Projects.NetworkservicesProjectsLocationsEndpointPoliciesCreate(ctx, req, operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

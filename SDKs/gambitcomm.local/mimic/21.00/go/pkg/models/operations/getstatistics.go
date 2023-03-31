@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetStatisticsPathParams struct {
+type GetStatisticsRequest struct {
 	// Agent to return the statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetStatisticsRequest struct {
-	PathParams GetStatisticsPathParams
 }
 
 type GetStatisticsResponse struct {

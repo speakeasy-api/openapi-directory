@@ -41,7 +41,6 @@ pkg/models/operations/gettasks.go
 pkg/models/operations/uploadfile.go
 pkg/models/shared/createservicemetricstaskrequest.go
 pkg/models/shared/customerservicemetricsfiltercriteria.go
-pkg/models/shared/security.go
 pkg/models/shared/servicemetricstask.go
 pkg/models/shared/customerservicemetrictaskcollection.go
 pkg/models/shared/createinventorytaskrequest.go

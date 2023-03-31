@@ -34,14 +34,14 @@ func newCategoriesChannels(defaultClient, securityClient HTTPClient, serverURL, 
 // GetCategoryChannels - Get all the channels in a category
 func (s *categoriesChannels) GetCategoryChannels(ctx context.Context, request operations.GetCategoryChannelsRequest) (*operations.GetCategoryChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

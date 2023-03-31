@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetEnrichmentDataUsingPOST1Request struct {
-	// enrichmentRequest
-	Request shared.EnrichmentRequest `request:"mediaType=application/json"`
-}
 
 type GetEnrichmentDataUsingPOST1Response struct {
 	Body        []byte

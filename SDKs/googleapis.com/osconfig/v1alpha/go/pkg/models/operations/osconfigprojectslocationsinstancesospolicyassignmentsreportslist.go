@@ -8,16 +8,11 @@ import (
 )
 
 type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListPathParams struct {
-	// Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports` For `{project}`, either `project-number` or `project-id` can be provided. For `{instance}`, either `instance-name`, `instance-id`, or `-` can be provided. If '-' is provided, the response will include OSPolicyAssignmentReports for all instances in the project/location. For `{assignment}`, either `assignment-id` or `-` can be provided. If '-' is provided, the response will include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location. Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports` returns all the reports for the given assignment across all instances. `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports` returns all the reports for all assignments across all instances.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListQueryParams struct {
+type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListQueryParams
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A pagination token returned from a previous call to the `ListOSPolicyAssignmentReports` method that indicates where this listing should continue from.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports` For `{project}`, either `project-number` or `project-id` can be provided. For `{instance}`, either `instance-name`, `instance-id`, or `-` can be provided. If '-' is provided, the response will include OSPolicyAssignmentReports for all instances in the project/location. For `{assignment}`, either `assignment-id` or `-` can be provided. If '-' is provided, the response will include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location. Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports` returns all the reports for the given assignment across all instances. `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports` returns all the reports for all assignments across all instances.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListQueryParams
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest struct {
-	PathParams  OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListPathParams
-	QueryParams OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListQueryParams
-	Security    OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListSecurity
 }
 
 type OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse struct {

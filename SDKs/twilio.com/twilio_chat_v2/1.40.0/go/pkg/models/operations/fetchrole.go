@@ -12,20 +12,15 @@ var FetchRoleServerList = []string{
 }
 
 type FetchRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRolePathParams struct {
+type FetchRoleRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the Role resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Role resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRoleRequest struct {
-	PathParams FetchRolePathParams
-	Security   FetchRoleSecurity
-	ServerURL  *string
 }
 
 type FetchRoleResponse struct {

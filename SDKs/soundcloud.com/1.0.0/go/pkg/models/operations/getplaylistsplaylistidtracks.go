@@ -11,29 +11,20 @@ import (
 )
 
 type GetPlaylistsPlaylistIDTracksSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetPlaylistsPlaylistIDTracksPathParams struct {
-	// SoundCloud playlist id
-	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
-}
-
-type GetPlaylistsPlaylistIDTracksQueryParams struct {
+type GetPlaylistsPlaylistIDTracksRequest struct {
 	// Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
 	//
 	Access []shared.AccessEnum `queryParam:"style=form,explode=false,name=access"`
 	// Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
+	// SoundCloud playlist id
+	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
 	// A secret token to fetch private playlists/tracks
 	SecretToken *string `queryParam:"style=form,explode=true,name=secret_token"`
-}
-
-type GetPlaylistsPlaylistIDTracksRequest struct {
-	PathParams  GetPlaylistsPlaylistIDTracksPathParams
-	QueryParams GetPlaylistsPlaylistIDTracksQueryParams
-	Security    GetPlaylistsPlaylistIDTracksSecurity
 }
 
 type GetPlaylistsPlaylistIDTracks200ApplicationJSONType string

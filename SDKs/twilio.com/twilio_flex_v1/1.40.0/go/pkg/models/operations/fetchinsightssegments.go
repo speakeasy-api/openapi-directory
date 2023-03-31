@@ -12,24 +12,15 @@ var FetchInsightsSegmentsServerList = []string{
 }
 
 type FetchInsightsSegmentsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchInsightsSegmentsPathParams struct {
-	// To unique id of the segment
-	SegmentID string `pathParam:"style=simple,explode=false,name=SegmentId"`
-}
-
-type FetchInsightsSegmentsHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchInsightsSegmentsRequest struct {
-	PathParams FetchInsightsSegmentsPathParams
-	Headers    FetchInsightsSegmentsHeaders
-	Security   FetchInsightsSegmentsSecurity
-	ServerURL  *string
+	// To unique id of the segment
+	SegmentID string `pathParam:"style=simple,explode=false,name=SegmentId"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type FetchInsightsSegmentsResponse struct {

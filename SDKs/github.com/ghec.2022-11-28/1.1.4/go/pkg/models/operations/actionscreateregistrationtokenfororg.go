@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsCreateRegistrationTokenForOrgPathParams struct {
+type ActionsCreateRegistrationTokenForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsCreateRegistrationTokenForOrgRequest struct {
-	PathParams ActionsCreateRegistrationTokenForOrgPathParams
 }
 
 type ActionsCreateRegistrationTokenForOrgResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimRearPortsDeletePathParams struct {
+type DcimRearPortsDeleteRequest struct {
 	// A unique integer value identifying this rear port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRearPortsDeleteRequest struct {
-	PathParams DcimRearPortsDeletePathParams
 }
 
 type DcimRearPortsDeleteResponse struct {

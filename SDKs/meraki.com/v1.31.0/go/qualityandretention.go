@@ -34,7 +34,7 @@ func newQualityAndRetention(defaultClient, securityClient HTTPClient, serverURL,
 // Returns quality and retention settings for the given camera
 func (s *qualityAndRetention) GetDeviceCameraQualityAndRetention(ctx context.Context, request operations.GetDeviceCameraQualityAndRetentionRequest) (*operations.GetDeviceCameraQualityAndRetentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *qualityAndRetention) GetDeviceCameraQualityAndRetention(ctx context.Con
 // Update quality and retention settings for the given camera
 func (s *qualityAndRetention) UpdateDeviceCameraQualityAndRetention(ctx context.Context, request operations.UpdateDeviceCameraQualityAndRetentionRequest) (*operations.UpdateDeviceCameraQualityAndRetentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

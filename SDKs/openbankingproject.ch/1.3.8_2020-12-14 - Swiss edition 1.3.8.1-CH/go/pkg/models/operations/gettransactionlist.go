@@ -9,69 +9,10 @@ import (
 )
 
 type GetTransactionListSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetTransactionListPathParams struct {
-	// This identification is denoting the addressed (card) account.
-	// The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call.
-	// The account-id is the "resourceId" attribute of the account structure.
-	// Its value is constant at least throughout the lifecycle of a given consent.
-	//
-	AccountID string `pathParam:"style=simple,explode=false,name=account-id"`
-}
-
-type GetTransactionListQueryParams struct {
-	// Permitted codes are
-	//   * "information",
-	//   * "booked",
-	//   * "pending", and
-	//   * "both"
-	// "booked" shall be supported by the ASPSP.
-	// To support the "pending" and "both" feature is optional for the ASPSP,
-	// Error code if not supported in the online banking frontend
-	//
-	BookingStatus shared.BookingStatusEnum `queryParam:"style=form,explode=true,name=bookingStatus"`
-	// Conditional: Starting date (inclusive the date dateFrom) of the transaction list, mandated if no delta access is required
-	// and if bookingStatus does not equal "information".
-	//
-	// For booked transactions, the relevant date is the booking date.
-	//
-	// For pending transactions, the relevant date is the entry date, which may not be transparent
-	// neither in this API nor other channels of the ASPSP.
-	//
-	DateFrom *types.Date `queryParam:"style=form,explode=true,name=dateFrom"`
-	// End date (inclusive the data dateTo) of the transaction list, default is "now" if not given.
-	//
-	// Might be ignored if a delta function is used.
-	//
-	// For booked transactions, the relevant date is the booking date.
-	//
-	// For pending transactions, the relevant date is the entry date, which may not be transparent
-	// neither in this API nor other channels of the ASPSP.
-	//
-	DateTo *types.Date `queryParam:"style=form,explode=true,name=dateTo"`
-	// This data attribute is indicating that the AISP is in favour to get all transactions after the last report access for this PSU on the addressed account. This is another implementation of a delta access-report.
-	// This delta indicator might be rejected by the ASPSP if this function is not supported.
-	// Optional if supported by API provider
-	DeltaList *bool `queryParam:"style=form,explode=true,name=deltaList"`
-	// This data attribute is indicating that the AISP is in favour to get all transactions after
-	// the transaction with identification entryReferenceFrom alternatively to the above defined period.
-	// This is a implementation of a delta access.
-	// If this data element is contained, the entries "dateFrom" and "dateTo" might be ignored by the ASPSP
-	// if a delta report is supported.
-	//
-	// Optional if supported by API provider.
-	//
-	EntryReferenceFrom *string `queryParam:"style=form,explode=true,name=entryReferenceFrom"`
-	// If contained, this function reads the list of accessible payment accounts including the booking balance,
-	// if granted by the PSU in the related consent and available by the ASPSP.
-	// This parameter might be ignored by the ASPSP.
-	//
-	WithBalance *bool `queryParam:"style=form,explode=true,name=withBalance"`
-}
-
-type GetTransactionListHeaders struct {
+type GetTransactionListRequest struct {
 	// This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
 	//
 	ConsentID string `header:"style=simple,explode=false,name=Consent-ID"`
@@ -126,13 +67,59 @@ type GetTransactionListHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetTransactionListRequest struct {
-	PathParams  GetTransactionListPathParams
-	QueryParams GetTransactionListQueryParams
-	Headers     GetTransactionListHeaders
-	Security    GetTransactionListSecurity
+	// This identification is denoting the addressed (card) account.
+	// The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call.
+	// The account-id is the "resourceId" attribute of the account structure.
+	// Its value is constant at least throughout the lifecycle of a given consent.
+	//
+	AccountID string `pathParam:"style=simple,explode=false,name=account-id"`
+	// Permitted codes are
+	//   * "information",
+	//   * "booked",
+	//   * "pending", and
+	//   * "both"
+	// "booked" shall be supported by the ASPSP.
+	// To support the "pending" and "both" feature is optional for the ASPSP,
+	// Error code if not supported in the online banking frontend
+	//
+	BookingStatus shared.BookingStatusEnum `queryParam:"style=form,explode=true,name=bookingStatus"`
+	// Conditional: Starting date (inclusive the date dateFrom) of the transaction list, mandated if no delta access is required
+	// and if bookingStatus does not equal "information".
+	//
+	// For booked transactions, the relevant date is the booking date.
+	//
+	// For pending transactions, the relevant date is the entry date, which may not be transparent
+	// neither in this API nor other channels of the ASPSP.
+	//
+	DateFrom *types.Date `queryParam:"style=form,explode=true,name=dateFrom"`
+	// End date (inclusive the data dateTo) of the transaction list, default is "now" if not given.
+	//
+	// Might be ignored if a delta function is used.
+	//
+	// For booked transactions, the relevant date is the booking date.
+	//
+	// For pending transactions, the relevant date is the entry date, which may not be transparent
+	// neither in this API nor other channels of the ASPSP.
+	//
+	DateTo *types.Date `queryParam:"style=form,explode=true,name=dateTo"`
+	// This data attribute is indicating that the AISP is in favour to get all transactions after the last report access for this PSU on the addressed account. This is another implementation of a delta access-report.
+	// This delta indicator might be rejected by the ASPSP if this function is not supported.
+	// Optional if supported by API provider
+	DeltaList *bool `queryParam:"style=form,explode=true,name=deltaList"`
+	// This data attribute is indicating that the AISP is in favour to get all transactions after
+	// the transaction with identification entryReferenceFrom alternatively to the above defined period.
+	// This is a implementation of a delta access.
+	// If this data element is contained, the entries "dateFrom" and "dateTo" might be ignored by the ASPSP
+	// if a delta report is supported.
+	//
+	// Optional if supported by API provider.
+	//
+	EntryReferenceFrom *string `queryParam:"style=form,explode=true,name=entryReferenceFrom"`
+	// If contained, this function reads the list of accessible payment accounts including the booking balance,
+	// if granted by the PSU in the related consent and available by the ASPSP.
+	// This parameter might be ignored by the ASPSP.
+	//
+	WithBalance *bool `queryParam:"style=form,explode=true,name=withBalance"`
 }
 
 type GetTransactionListResponse struct {

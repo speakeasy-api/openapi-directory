@@ -32,7 +32,7 @@ func (e *PostV1VerificationSendFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostV1VerificationSendQueryParams struct {
+type PostV1VerificationSendRequest struct {
 	// ISO 3166 country code for the recipient mobile phone number. If parameter is supplied, then some basic telephone number validation is done.
 	CountryCode *string `queryParam:"style=form,explode=true,name=country_code"`
 	// Returns the API response in json (default) or xml format.
@@ -43,10 +43,6 @@ type PostV1VerificationSendQueryParams struct {
 	Mesg *string `queryParam:"style=form,explode=true,name=mesg"`
 	// The recipient mobile phone number in E164 format which is a plus followed by just numbers with no spaces or parentheses.
 	Tel string `queryParam:"style=form,explode=true,name=tel"`
-}
-
-type PostV1VerificationSendRequest struct {
-	QueryParams PostV1VerificationSendQueryParams
 }
 
 type PostV1VerificationSendResponse struct {

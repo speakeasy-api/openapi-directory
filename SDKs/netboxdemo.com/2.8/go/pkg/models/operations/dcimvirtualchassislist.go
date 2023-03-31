@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimVirtualChassisListQueryParams struct {
+type DcimVirtualChassisListRequest struct {
 	Domain     *string `queryParam:"style=form,explode=true,name=domain"`
 	DomainIc   *string `queryParam:"style=form,explode=true,name=domain__ic"`
 	DomainIe   *string `queryParam:"style=form,explode=true,name=domain__ie"`
@@ -43,10 +43,6 @@ type DcimVirtualChassisListQueryParams struct {
 	TenantN   *string `queryParam:"style=form,explode=true,name=tenant__n"`
 	TenantID  *string `queryParam:"style=form,explode=true,name=tenant_id"`
 	TenantIDN *string `queryParam:"style=form,explode=true,name=tenant_id__n"`
-}
-
-type DcimVirtualChassisListRequest struct {
-	QueryParams DcimVirtualChassisListQueryParams
 }
 
 type DcimVirtualChassisList200ApplicationJSON struct {

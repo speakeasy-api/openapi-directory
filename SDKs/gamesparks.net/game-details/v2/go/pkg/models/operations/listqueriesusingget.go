@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListQueriesUsingGETPathParams struct {
+type ListQueriesUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type ListQueriesUsingGETRequest struct {
-	PathParams ListQueriesUsingGETPathParams
 }
 
 type ListQueriesUsingGETResponse struct {

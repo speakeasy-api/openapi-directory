@@ -33,16 +33,16 @@ func newConversations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // ConversationsClose - Closes a conversation
-func (s *conversations) ConversationsClose(ctx context.Context, request operations.ConversationsCloseRequest) (*operations.ConversationsCloseResponse, error) {
+func (s *conversations) ConversationsClose(ctx context.Context, request operations.ConversationsCloseRequest, security operations.ConversationsCloseSecurity) (*operations.ConversationsCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,16 +77,16 @@ func (s *conversations) ConversationsClose(ctx context.Context, request operatio
 }
 
 // ConversationsFetch - Fetch conversation by ID
-func (s *conversations) ConversationsFetch(ctx context.Context, request operations.ConversationsFetchRequest) (*operations.ConversationsFetchResponse, error) {
+func (s *conversations) ConversationsFetch(ctx context.Context, request operations.ConversationsFetchRequest, security operations.ConversationsFetchSecurity) (*operations.ConversationsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -121,20 +121,20 @@ func (s *conversations) ConversationsFetch(ctx context.Context, request operatio
 }
 
 // ConversationsFetchAll - Fetch conversations
-func (s *conversations) ConversationsFetchAll(ctx context.Context, request operations.ConversationsFetchAllRequest) (*operations.ConversationsFetchAllResponse, error) {
+func (s *conversations) ConversationsFetchAll(ctx context.Context, request operations.ConversationsFetchAllRequest, security operations.ConversationsFetchAllSecurity) (*operations.ConversationsFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

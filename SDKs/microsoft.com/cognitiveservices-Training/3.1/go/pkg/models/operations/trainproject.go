@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrainProjectPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // TrainProjectTrainingTypeEnum - The type of training to use to train the project (default: Regular).
 type TrainProjectTrainingTypeEnum string
 
@@ -38,26 +33,19 @@ func (e *TrainProjectTrainingTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TrainProjectQueryParams struct {
+type TrainProjectRequest struct {
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// Whether to force train even if dataset and configuration does not change (default: false).
 	ForceTrain *bool `queryParam:"style=form,explode=true,name=forceTrain"`
 	// The email address to send notification to when training finishes (default: null).
 	NotificationEmailAddress *string `queryParam:"style=form,explode=true,name=notificationEmailAddress"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The number of hours reserved as budget for training (if applicable).
 	ReservedBudgetInHours *int `queryParam:"style=form,explode=true,name=reservedBudgetInHours"`
 	// The type of training to use to train the project (default: Regular).
 	TrainingType *TrainProjectTrainingTypeEnum `queryParam:"style=form,explode=true,name=trainingType"`
-}
-
-type TrainProjectHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type TrainProjectRequest struct {
-	PathParams  TrainProjectPathParams
-	QueryParams TrainProjectQueryParams
-	Headers     TrainProjectHeaders
 }
 
 type TrainProjectResponse struct {

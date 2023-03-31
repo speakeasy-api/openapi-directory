@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetDeviceSwitchPortStatusesPacketsPathParams struct {
+type GetDeviceSwitchPortStatusesPacketsRequest struct {
 	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetDeviceSwitchPortStatusesPacketsQueryParams struct {
 	// The beginning of the timespan for the data. The maximum lookback period is 1 day from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetDeviceSwitchPortStatusesPacketsRequest struct {
-	PathParams  GetDeviceSwitchPortStatusesPacketsPathParams
-	QueryParams GetDeviceSwitchPortStatusesPacketsQueryParams
 }
 
 type GetDeviceSwitchPortStatusesPacketsResponse struct {

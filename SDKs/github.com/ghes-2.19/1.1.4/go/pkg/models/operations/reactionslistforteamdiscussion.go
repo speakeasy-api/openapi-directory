@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionPathParams struct {
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsListForTeamDiscussionContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
 type ReactionsListForTeamDiscussionContentEnum string
 
@@ -56,24 +51,17 @@ func (e *ReactionsListForTeamDiscussionContentEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ReactionsListForTeamDiscussionQueryParams struct {
+type ReactionsListForTeamDiscussionRequest struct {
+	// This API is under preview and subject to change.
+	Accept string `header:"style=simple,explode=false,name=accept"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
-	Content *ReactionsListForTeamDiscussionContentEnum `queryParam:"style=form,explode=true,name=content"`
+	Content          *ReactionsListForTeamDiscussionContentEnum `queryParam:"style=form,explode=true,name=content"`
+	DiscussionNumber int64                                      `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type ReactionsListForTeamDiscussionRequest struct {
-	PathParams  ReactionsListForTeamDiscussionPathParams
-	QueryParams ReactionsListForTeamDiscussionQueryParams
-	Headers     ReactionsListForTeamDiscussionHeaders
+	TeamID  int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsListForTeamDiscussionResponse struct {

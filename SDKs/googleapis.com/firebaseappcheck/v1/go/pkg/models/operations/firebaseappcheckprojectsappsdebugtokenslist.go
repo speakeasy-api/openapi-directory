@@ -8,13 +8,13 @@ import (
 )
 
 type FirebaseappcheckProjectsAppsDebugTokensListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsAppsDebugTokensListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsAppsDebugTokensListSecurity struct {
@@ -22,12 +22,7 @@ type FirebaseappcheckProjectsAppsDebugTokensListSecurity struct {
 	Option2 *FirebaseappcheckProjectsAppsDebugTokensListSecurityOption2 `security:"option"`
 }
 
-type FirebaseappcheckProjectsAppsDebugTokensListPathParams struct {
-	// Required. The relative resource name of the parent app for which to list each associated DebugToken, in the format: ``` projects/{project_number}/apps/{app_id} ```
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseappcheckProjectsAppsDebugTokensListQueryParams struct {
+type FirebaseappcheckProjectsAppsDebugTokensListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type FirebaseappcheckProjectsAppsDebugTokensListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token returned from a previous call to ListDebugTokens indicating where in the set of DebugTokens to resume listing. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListDebugTokens must match the call that provided the page token; if they do not match, the result is undefined.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The relative resource name of the parent app for which to list each associated DebugToken, in the format: ``` projects/{project_number}/apps/{app_id} ```
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type FirebaseappcheckProjectsAppsDebugTokensListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappcheckProjectsAppsDebugTokensListRequest struct {
-	PathParams  FirebaseappcheckProjectsAppsDebugTokensListPathParams
-	QueryParams FirebaseappcheckProjectsAppsDebugTokensListQueryParams
-	Security    FirebaseappcheckProjectsAppsDebugTokensListSecurity
 }
 
 type FirebaseappcheckProjectsAppsDebugTokensListResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOwnerPathParams struct {
+type GetOwnerRequest struct {
 	// Agent to return the owner
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetOwnerRequest struct {
-	PathParams GetOwnerPathParams
 }
 
 type GetOwnerResponse struct {

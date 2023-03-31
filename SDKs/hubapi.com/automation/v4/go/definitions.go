@@ -35,16 +35,16 @@ func newDefinitions(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // DeleteAutomationV4ActionsAppIDDefinitionIDArchive - Archive a custom action
 // Archives a single custom workflow action with the specified ID. Workflows that currently use this custom action will stop attempting to execute the action, and all future executions will be marked as a failure.
-func (s *definitions) DeleteAutomationV4ActionsAppIDDefinitionIDArchive(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveRequest) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveResponse, error) {
+func (s *definitions) DeleteAutomationV4ActionsAppIDDefinitionIDArchive(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveRequest, security operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveSecurity) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *definitions) DeleteAutomationV4ActionsAppIDDefinitionIDArchive(ctx cont
 
 // GetAutomationV4ActionsAppIDDefinitionIDGetByID - Get a custom action
 // Returns a single custom workflow action with the specified ID.
-func (s *definitions) GetAutomationV4ActionsAppIDDefinitionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDRequest) (*operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDResponse, error) {
+func (s *definitions) GetAutomationV4ActionsAppIDDefinitionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,20 +140,20 @@ func (s *definitions) GetAutomationV4ActionsAppIDDefinitionIDGetByID(ctx context
 
 // GetAutomationV4ActionsAppIDGetPage - Get all custom actions
 // Returns a list of all custom workflow actions.
-func (s *definitions) GetAutomationV4ActionsAppIDGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDGetPageRequest) (*operations.GetAutomationV4ActionsAppIDGetPageResponse, error) {
+func (s *definitions) GetAutomationV4ActionsAppIDGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDGetPageRequest, security operations.GetAutomationV4ActionsAppIDGetPageSecurity) (*operations.GetAutomationV4ActionsAppIDGetPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -199,11 +199,11 @@ func (s *definitions) GetAutomationV4ActionsAppIDGetPage(ctx context.Context, re
 
 // PatchAutomationV4ActionsAppIDDefinitionIDUpdate - Update a custom action
 // Updates a custom workflow action with new values for the specified fields.
-func (s *definitions) PatchAutomationV4ActionsAppIDDefinitionIDUpdate(ctx context.Context, request operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateRequest) (*operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateResponse, error) {
+func (s *definitions) PatchAutomationV4ActionsAppIDDefinitionIDUpdate(ctx context.Context, request operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateRequest, security operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateSecurity) (*operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExtensionActionDefinitionPatch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +218,7 @@ func (s *definitions) PatchAutomationV4ActionsAppIDDefinitionIDUpdate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -264,11 +264,11 @@ func (s *definitions) PatchAutomationV4ActionsAppIDDefinitionIDUpdate(ctx contex
 
 // PostAutomationV4ActionsAppIDCreate - Create new custom action
 // Creates a new custom workflow action.
-func (s *definitions) PostAutomationV4ActionsAppIDCreate(ctx context.Context, request operations.PostAutomationV4ActionsAppIDCreateRequest) (*operations.PostAutomationV4ActionsAppIDCreateResponse, error) {
+func (s *definitions) PostAutomationV4ActionsAppIDCreate(ctx context.Context, request operations.PostAutomationV4ActionsAppIDCreateRequest, security operations.PostAutomationV4ActionsAppIDCreateSecurity) (*operations.PostAutomationV4ActionsAppIDCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExtensionActionDefinitionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *definitions) PostAutomationV4ActionsAppIDCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

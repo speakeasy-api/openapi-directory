@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesSetLabelsPathParams struct {
-	// issue_number parameter
-	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesSetLabelsRequestBody4 struct {
 	Name string `json:"name"`
 }
@@ -175,8 +168,11 @@ func (u IssuesSetLabelsRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type IssuesSetLabelsRequest struct {
-	PathParams IssuesSetLabelsPathParams
-	Request    *IssuesSetLabelsRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesSetLabelsRequestBody `request:"mediaType=application/json"`
+	// issue_number parameter
+	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesSetLabelsResponse struct {

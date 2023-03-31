@@ -8,20 +8,17 @@ import (
 )
 
 type AlertcenterAlertsFeedbackListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AlertcenterAlertsFeedbackListPathParams struct {
-	// Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
-	AlertID string `pathParam:"style=simple,explode=false,name=alertId"`
-}
-
-type AlertcenterAlertsFeedbackListQueryParams struct {
+type AlertcenterAlertsFeedbackListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
+	AlertID string `pathParam:"style=simple,explode=false,name=alertId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -44,12 +41,6 @@ type AlertcenterAlertsFeedbackListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AlertcenterAlertsFeedbackListRequest struct {
-	PathParams  AlertcenterAlertsFeedbackListPathParams
-	QueryParams AlertcenterAlertsFeedbackListQueryParams
-	Security    AlertcenterAlertsFeedbackListSecurity
 }
 
 type AlertcenterAlertsFeedbackListResponse struct {

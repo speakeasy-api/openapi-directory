@@ -25,159 +25,152 @@ func main() {
     s := sdk.New()
 
     req := operations.SlidesPresentationsBatchUpdateRequest{
-        Security: operations.SlidesPresentationsBatchUpdateSecurity{
-            Option1: &operations.SlidesPresentationsBatchUpdateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.SlidesPresentationsBatchUpdatePathParams{
-            PresentationID: "corrupti",
-        },
-        QueryParams: operations.SlidesPresentationsBatchUpdateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.BatchUpdatePresentationRequest{
+        DollarXgafv: "2",
+        BatchUpdatePresentationRequest: &shared.BatchUpdatePresentationRequest{
             Requests: []shared.Request{
                 shared.Request{
                     CreateImage: &shared.CreateImageRequest{
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "iure",
+                            PageObjectID: "distinctio",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 2975.34,
-                                    Unit: "PT",
+                                    Magnitude: 8442.66,
+                                    Unit: "EMU",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 567.13,
-                                    Unit: "PT",
+                                    Magnitude: 8579.46,
+                                    Unit: "EMU",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 2726.56,
-                                ScaleY: 3834.41,
-                                ShearX: 4776.65,
-                                ShearY: 7917.25,
-                                TranslateX: 8121.69,
-                                TranslateY: 5288.95,
-                                Unit: "EMU",
+                                ScaleX: 8472.52,
+                                ScaleY: 4236.55,
+                                ShearX: 6235.64,
+                                ShearY: 6458.94,
+                                TranslateX: 3843.82,
+                                TranslateY: 4375.87,
+                                Unit: "UNIT_UNSPECIFIED",
                             },
                         },
-                        ObjectID: "excepturi",
-                        URL: "nisi",
+                        ObjectID: "debitis",
+                        URL: "ipsa",
                     },
                     CreateLine: &shared.CreateLineRequest{
                         Category: "CURVED",
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "temporibus",
+                            PageObjectID: "tempora",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 710.36,
+                                    Magnitude: 3834.41,
                                     Unit: "EMU",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 871.29,
-                                    Unit: "EMU",
+                                    Magnitude: 7917.25,
+                                    Unit: "PT",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 202.18,
-                                ScaleY: 3682.41,
-                                ShearX: 8326.2,
-                                ShearY: 9571.56,
-                                TranslateX: 7781.57,
-                                TranslateY: 1403.5,
-                                Unit: "PT",
+                                ScaleX: 5288.95,
+                                ScaleY: 4799.77,
+                                ShearX: 5680.45,
+                                ShearY: 3927.85,
+                                TranslateX: 9255.97,
+                                TranslateY: 8360.79,
+                                Unit: "UNIT_UNSPECIFIED",
                             },
                         },
-                        LineCategory: "CURVED",
-                        ObjectID: "maiores",
+                        LineCategory: "BENT",
+                        ObjectID: "veritatis",
                     },
                     CreateParagraphBullets: &shared.CreateParagraphBulletsRequest{
-                        BulletPreset: "BULLET_DIAMONDX_HOLLOWDIAMOND_SQUARE",
+                        BulletPreset: "NUMBERED_DIGIT_ALPHA_ROMAN",
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 799159,
-                            RowIndex: 800911,
+                            ColumnIndex: 20218,
+                            RowIndex: 368241,
                         },
-                        ObjectID: "esse",
+                        ObjectID: "repellendus",
                         TextRange: &shared.Range{
-                            EndIndex: 520478,
-                            StartIndex: 780529,
-                            Type: "FROM_START_INDEX",
+                            EndIndex: 957156,
+                            StartIndex: 778157,
+                            Type: "RANGE_TYPE_UNSPECIFIED",
                         },
                     },
                     CreateShape: &shared.CreateShapeRequest{
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "dicta",
+                            PageObjectID: "at",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 7206.33,
-                                    Unit: "EMU",
+                                    Magnitude: 8700.88,
+                                    Unit: "PT",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 5820.2,
-                                    Unit: "UNIT_UNSPECIFIED",
+                                    Magnitude: 4736.08,
+                                    Unit: "PT",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 5373.73,
-                                ScaleY: 9446.69,
-                                ShearX: 7586.16,
-                                ShearY: 5218.48,
-                                TranslateX: 1059.07,
-                                TranslateY: 4146.62,
-                                Unit: "EMU",
+                                ScaleX: 8009.11,
+                                ScaleY: 4614.79,
+                                ShearX: 5204.78,
+                                ShearY: 7805.29,
+                                TranslateX: 6788.8,
+                                TranslateY: 1182.74,
+                                Unit: "PT",
                             },
                         },
-                        ObjectID: "modi",
-                        ShapeType: "DONUT",
+                        ObjectID: "officia",
+                        ShapeType: "STAR_16",
                     },
                     CreateSheetsChart: &shared.CreateSheetsChartRequest{
-                        ChartID: 774234,
+                        ChartID: 143353,
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "cum",
+                            PageObjectID: "deleniti",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 4561.5,
-                                    Unit: "UNIT_UNSPECIFIED",
+                                    Magnitude: 9446.69,
+                                    Unit: "PT",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 5684.34,
+                                    Magnitude: 5218.48,
                                     Unit: "UNIT_UNSPECIFIED",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 187.89,
-                                ScaleY: 3241.41,
-                                ShearX: 6176.36,
-                                ShearY: 1496.75,
-                                TranslateX: 6120.96,
-                                TranslateY: 2223.21,
+                                ScaleX: 4146.62,
+                                ScaleY: 4736,
+                                ShearX: 2645.55,
+                                ShearY: 1863.32,
+                                TranslateX: 7742.34,
+                                TranslateY: 7369.18,
                                 Unit: "EMU",
                             },
                         },
                         LinkingMode: "NOT_LINKED_IMAGE",
-                        ObjectID: "hic",
-                        SpreadsheetID: "saepe",
+                        ObjectID: "excepturi",
+                        SpreadsheetID: "aspernatur",
                     },
                     CreateSlide: &shared.CreateSlideRequest{
-                        InsertionIndex: 681820,
-                        ObjectID: "in",
+                        InsertionIndex: 18789,
+                        ObjectID: "ad",
                         PlaceholderIDMappings: []shared.LayoutPlaceholderIDMapping{
+                            shared.LayoutPlaceholderIDMapping{
+                                LayoutPlaceholder: &shared.Placeholder{
+                                    Index: 149675,
+                                    ParentObjectID: "iste",
+                                    Type: "CLIP_ART",
+                                },
+                                LayoutPlaceholderObjectID: "natus",
+                                ObjectID: "laboriosam",
+                            },
+                            shared.LayoutPlaceholderIDMapping{
+                                LayoutPlaceholder: &shared.Placeholder{
+                                    Index: 943749,
+                                    ParentObjectID: "saepe",
+                                    Type: "PICTURE",
+                                },
+                                LayoutPlaceholderObjectID: "in",
+                                ObjectID: "corporis",
+                            },
                             shared.LayoutPlaceholderIDMapping{
                                 LayoutPlaceholder: &shared.Placeholder{
                                     Index: 613064,
@@ -187,264 +180,257 @@ func main() {
                                 LayoutPlaceholderObjectID: "quidem",
                                 ObjectID: "architecto",
                             },
-                            shared.LayoutPlaceholderIDMapping{
-                                LayoutPlaceholder: &shared.Placeholder{
-                                    Index: 60225,
-                                    ParentObjectID: "reiciendis",
-                                    Type: "PICTURE",
-                                },
-                                LayoutPlaceholderObjectID: "mollitia",
-                                ObjectID: "laborum",
-                            },
                         },
                         SlideLayoutReference: &shared.LayoutReference{
-                            LayoutID: "dolores",
-                            PredefinedLayout: "CAPTION_ONLY",
+                            LayoutID: "ipsa",
+                            PredefinedLayout: "BIG_NUMBER",
                         },
                     },
                     CreateTable: &shared.CreateTableRequest{
-                        Columns: 358152,
+                        Columns: 666767,
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "explicabo",
+                            PageObjectID: "mollitia",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 7506.86,
+                                    Magnitude: 6706.38,
                                     Unit: "UNIT_UNSPECIFIED",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 6078.31,
+                                    Magnitude: 2103.82,
                                     Unit: "EMU",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 3250.47,
-                                ScaleY: 5701.97,
-                                ShearX: 384.25,
-                                ShearY: 4386.01,
-                                TranslateX: 6342.74,
-                                TranslateY: 9883.74,
-                                Unit: "PT",
-                            },
-                        },
-                        ObjectID: "architecto",
-                        Rows: 652790,
-                    },
-                    CreateVideo: &shared.CreateVideoRequest{
-                        ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "dolorem",
-                            Size: &shared.Size{
-                                Height: &shared.Dimension{
-                                    Magnitude: 6350.59,
-                                    Unit: "UNIT_UNSPECIFIED",
-                                },
-                                Width: &shared.Dimension{
-                                    Magnitude: 9953,
-                                    Unit: "EMU",
-                                },
-                            },
-                            Transform: &shared.AffineTransform{
-                                ScaleX: 5818.5,
-                                ScaleY: 2532.91,
-                                ShearX: 4143.69,
-                                ShearY: 4663.11,
-                                TranslateX: 4746.97,
-                                TranslateY: 2444.25,
+                                ScaleX: 1289.26,
+                                ScaleY: 7506.86,
+                                ShearX: 3154.28,
+                                ShearY: 6078.31,
+                                TranslateX: 3637.11,
+                                TranslateY: 3250.47,
                                 Unit: "EMU",
                             },
                         },
-                        ID: "quia",
-                        ObjectID: "quis",
-                        Source: "SOURCE_UNSPECIFIED",
+                        ObjectID: "accusantium",
+                        Rows: 438601,
+                    },
+                    CreateVideo: &shared.CreateVideoRequest{
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "culpa",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 9883.74,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 1020.44,
+                                    Unit: "EMU",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 2088.76,
+                                ScaleY: 6350.59,
+                                ShearX: 1613.09,
+                                ShearY: 9953,
+                                TranslateX: 6531.08,
+                                TranslateY: 5818.5,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                        },
+                        ID: "commodi",
+                        ObjectID: "quam",
+                        Source: "YOUTUBE",
                     },
                     DeleteObject: &shared.DeleteObjectRequest{
-                        ObjectID: "laborum",
+                        ObjectID: "velit",
                     },
                     DeleteParagraphBullets: &shared.DeleteParagraphBulletsRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 656330,
-                            RowIndex: 317202,
+                            ColumnIndex: 623510,
+                            RowIndex: 158969,
                         },
-                        ObjectID: "odit",
+                        ObjectID: "quis",
                         TextRange: &shared.Range{
-                            EndIndex: 778346,
-                            StartIndex: 196582,
-                            Type: "ALL",
+                            EndIndex: 110375,
+                            StartIndex: 674752,
+                            Type: "FROM_START_INDEX",
                         },
                     },
                     DeleteTableColumn: &shared.DeleteTableColumnRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 368725,
-                            RowIndex: 662527,
+                            ColumnIndex: 317202,
+                            RowIndex: 138183,
                         },
-                        TableObjectID: "possimus",
+                        TableObjectID: "quo",
                     },
                     DeleteTableRow: &shared.DeleteTableRowRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 13571,
-                            RowIndex: 97101,
+                            ColumnIndex: 196582,
+                            RowIndex: 949572,
                         },
-                        TableObjectID: "error",
+                        TableObjectID: "ipsam",
                     },
                     DeleteText: &shared.DeleteTextRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 837945,
-                            RowIndex: 673660,
+                            ColumnIndex: 662527,
+                            RowIndex: 820994,
                         },
-                        ObjectID: "quasi",
+                        ObjectID: "aut",
                         TextRange: &shared.Range{
-                            EndIndex: 971945,
-                            StartIndex: 976460,
+                            EndIndex: 97101,
+                            StartIndex: 622846,
                             Type: "ALL",
                         },
                     },
                     DuplicateObject: &shared.DuplicateObjectRequest{
-                        ObjectID: "nihil",
+                        ObjectID: "laborum",
                         ObjectIds: map[string]string{
-                            "voluptatibus": "ipsa",
-                            "omnis": "voluptate",
-                            "cum": "perferendis",
+                            "reiciendis": "voluptatibus",
                         },
                     },
                     GroupObjects: &shared.GroupObjectsRequest{
                         ChildrenObjectIds: []string{
-                            "reprehenderit",
+                            "nihil",
+                            "praesentium",
+                            "voluptatibus",
+                            "ipsa",
                         },
-                        GroupObjectID: "ut",
+                        GroupObjectID: "omnis",
                     },
                     InsertTableColumns: &shared.InsertTableColumnsRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 979587,
-                            RowIndex: 120196,
+                            ColumnIndex: 451159,
+                            RowIndex: 739264,
                         },
                         InsertRight: false,
-                        Number: 359444,
-                        TableObjectID: "dolore",
+                        Number: 19987,
+                        TableObjectID: "doloremque",
                     },
                     InsertTableRows: &shared.InsertTableRowsRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 480894,
-                            RowIndex: 118727,
+                            ColumnIndex: 441711,
+                            RowIndex: 282807,
                         },
                         InsertBelow: false,
-                        Number: 688661,
-                        TableObjectID: "enim",
+                        Number: 979587,
+                        TableObjectID: "dicta",
                     },
                     InsertText: &shared.InsertTextRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 880476,
-                            RowIndex: 414263,
+                            ColumnIndex: 359444,
+                            RowIndex: 296140,
                         },
-                        InsertionIndex: 918236,
-                        ObjectID: "quae",
-                        Text: "ipsum",
+                        InsertionIndex: 480894,
+                        ObjectID: "dicta",
+                        Text: "harum",
                     },
                     MergeTableCells: &shared.MergeTableCellsRequest{
-                        ObjectID: "quidem",
+                        ObjectID: "enim",
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 565189,
+                            ColumnSpan: 880476,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 566602,
-                                RowIndex: 865103,
+                                ColumnIndex: 414263,
+                                RowIndex: 918236,
                             },
-                            RowSpan: 265389,
+                            RowSpan: 64147,
                         },
                     },
                     RefreshSheetsChart: &shared.RefreshSheetsChartRequest{
-                        ObjectID: "praesentium",
+                        ObjectID: "ipsum",
                     },
                     ReplaceAllShapesWithImage: &shared.ReplaceAllShapesWithImageRequest{
                         ContainsText: &shared.SubstringMatchCriteria{
                             MatchCase: false,
-                            Text: "rem",
+                            Text: "quidem",
                         },
-                        ImageReplaceMethod: "CENTER_CROP",
-                        ImageURL: "quasi",
+                        ImageReplaceMethod: "CENTER_INSIDE",
+                        ImageURL: "excepturi",
                         PageObjectIds: []string{
-                            "sint",
-                            "veritatis",
-                            "itaque",
-                            "incidunt",
+                            "modi",
+                            "praesentium",
+                            "rem",
+                            "voluptates",
                         },
                         ReplaceMethod: "CENTER_INSIDE",
                     },
                     ReplaceAllShapesWithSheetsChart: &shared.ReplaceAllShapesWithSheetsChartRequest{
-                        ChartID: 9356,
+                        ChartID: 921158,
                         ContainsText: &shared.SubstringMatchCriteria{
                             MatchCase: false,
-                            Text: "est",
+                            Text: "sint",
                         },
-                        LinkingMode: "LINKED",
+                        LinkingMode: "NOT_LINKED_IMAGE",
                         PageObjectIds: []string{
-                            "deserunt",
+                            "incidunt",
+                            "enim",
+                            "consequatur",
+                            "est",
                         },
-                        SpreadsheetID: "distinctio",
+                        SpreadsheetID: "quibusdam",
                     },
                     ReplaceAllText: &shared.ReplaceAllTextRequest{
                         ContainsText: &shared.SubstringMatchCriteria{
                             MatchCase: false,
-                            Text: "quibusdam",
+                            Text: "explicabo",
                         },
                         PageObjectIds: []string{
-                            "modi",
-                            "qui",
+                            "distinctio",
+                            "quibusdam",
+                            "labore",
                         },
-                        ReplaceText: "aliquid",
+                        ReplaceText: "modi",
                     },
                     ReplaceImage: &shared.ReplaceImageRequest{
-                        ImageObjectID: "cupiditate",
+                        ImageObjectID: "qui",
                         ImageReplaceMethod: "CENTER_INSIDE",
-                        URL: "perferendis",
+                        URL: "cupiditate",
                     },
                     RerouteLine: &shared.RerouteLineRequest{
-                        ObjectID: "magni",
+                        ObjectID: "quos",
                     },
                     UngroupObjects: &shared.UngroupObjectsRequest{
                         ObjectIds: []string{
-                            "ipsam",
-                            "alias",
-                            "fugit",
-                            "dolorum",
+                            "magni",
                         },
                     },
                     UnmergeTableCells: &shared.UnmergeTableCellsRequest{
-                        ObjectID: "excepturi",
+                        ObjectID: "assumenda",
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 270008,
+                            ColumnSpan: 369808,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 703737,
-                                RowIndex: 735194,
+                                ColumnIndex: 4695,
+                                RowIndex: 146441,
                             },
-                            RowSpan: 288476,
+                            RowSpan: 677817,
                         },
                     },
                     UpdateImageProperties: &shared.UpdateImagePropertiesRequest{
-                        Fields: "delectus",
+                        Fields: "excepturi",
                         ImageProperties: &shared.ImageProperties{
-                            Brightness: 4332.88,
-                            Contrast: 2487.53,
+                            Brightness: 2700.08,
+                            Contrast: 7037.37,
                             CropProperties: &shared.CropProperties{
-                                Angle: 7561.07,
-                                BottomOffset: 5761.57,
-                                LeftOffset: 3960.98,
-                                RightOffset: 5920.42,
-                                TopOffset: 8960.39,
+                                Angle: 7351.94,
+                                BottomOffset: 2884.76,
+                                LeftOffset: 9621.89,
+                                RightOffset: 4332.88,
+                                TopOffset: 2487.53,
                             },
                             Link: &shared.Link{
-                                PageObjectID: "sint",
-                                RelativeLink: "FIRST_SLIDE",
-                                SlideIndex: 223081,
-                                URL: "debitis",
+                                PageObjectID: "eligendi",
+                                RelativeLink: "PREVIOUS_SLIDE",
+                                SlideIndex: 396098,
+                                URL: "provident",
                             },
                             Outline: &shared.Outline{
                                 DashStyle: "LONG_DASH_DOT",
                                 OutlineFill: &shared.OutlineFill{
                                     SolidFill: &shared.SolidFill{
-                                        Alpha: 6800.56,
+                                        Alpha: 5722.52,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 4471.25,
-                                                Green: 4491.98,
-                                                Red: 8464.09,
+                                                Blue: 6389.21,
+                                                Green: 2230.81,
+                                                Red: 8915.55,
                                             },
                                             ThemeColor: "BACKGROUND2",
                                         },
@@ -452,226 +438,229 @@ func main() {
                                 },
                                 PropertyState: "INHERIT",
                                 Weight: &shared.Dimension{
-                                    Magnitude: 1162.02,
-                                    Unit: "UNIT_UNSPECIFIED",
+                                    Magnitude: 4471.25,
+                                    Unit: "EMU",
                                 },
                             },
                             Recolor: &shared.Recolor{
-                                Name: "DARK9",
+                                Name: "GRAYSCALE",
                                 RecolorStops: []shared.ColorStop{
                                     shared.ColorStop{
-                                        Alpha: 4118.2,
+                                        Alpha: 6994.79,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 3965.06,
-                                                Green: 6754.39,
-                                                Red: 8811.04,
+                                                Blue: 1162.02,
+                                                Green: 2974.37,
+                                                Red: 7670.24,
                                             },
-                                            ThemeColor: "LIGHT2",
+                                            ThemeColor: "TEXT1",
                                         },
-                                        Position: 5812.73,
+                                        Position: 4118.2,
                                     },
                                     shared.ColorStop{
-                                        Alpha: 3132.18,
+                                        Alpha: 3965.06,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 8817.36,
-                                                Green: 9654.17,
-                                                Red: 6925.32,
+                                                Blue: 6754.39,
+                                                Green: 8811.04,
+                                                Red: 2497.96,
+                                            },
+                                            ThemeColor: "ACCENT5",
+                                        },
+                                        Position: 3132.18,
+                                    },
+                                    shared.ColorStop{
+                                        Alpha: 8817.36,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 9654.17,
+                                                Green: 6925.32,
+                                                Red: 5884.65,
+                                            },
+                                            ThemeColor: "FOLLOWED_HYPERLINK",
+                                        },
+                                        Position: 6596.69,
+                                    },
+                                    shared.ColorStop{
+                                        Alpha: 5013.24,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 5332.06,
+                                                Green: 9560.84,
+                                                Red: 2305.33,
                                             },
                                             ThemeColor: "ACCENT6",
                                         },
-                                        Position: 7252.55,
-                                    },
-                                    shared.ColorStop{
-                                        Alpha: 6596.69,
-                                        Color: &shared.OpaqueColor{
-                                            RgbColor: &shared.RgbColor{
-                                                Blue: 5013.24,
-                                                Green: 5332.06,
-                                                Red: 9560.84,
-                                            },
-                                            ThemeColor: "DARK2",
-                                        },
-                                        Position: 6439.9,
-                                    },
-                                    shared.ColorStop{
-                                        Alpha: 3948.69,
-                                        Color: &shared.OpaqueColor{
-                                            RgbColor: &shared.RgbColor{
-                                                Blue: 4238.55,
-                                                Green: 6188.09,
-                                                Red: 6063.93,
-                                            },
-                                            ThemeColor: "ACCENT4",
-                                        },
-                                        Position: 191.93,
+                                        Position: 3948.69,
                                     },
                                 },
                             },
                             Shadow: &shared.Shadow{
                                 Alignment: "LEFT_CENTER",
-                                Alpha: 3015.75,
+                                Alpha: 6188.09,
                                 BlurRadius: &shared.Dimension{
-                                    Magnitude: 7160.75,
+                                    Magnitude: 6063.93,
                                     Unit: "EMU",
                                 },
                                 Color: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 2879.91,
-                                        Green: 2900.77,
-                                        Red: 3834.62,
+                                        Blue: 191.93,
+                                        Green: 4701.32,
+                                        Red: 3015.75,
                                     },
-                                    ThemeColor: "ACCENT6",
+                                    ThemeColor: "FOLLOWED_HYPERLINK",
                                 },
-                                PropertyState: "INHERIT",
+                                PropertyState: "NOT_RENDERED",
                                 RotateWithShape: false,
                                 Transform: &shared.AffineTransform{
-                                    ScaleX: 4287.69,
-                                    ScaleY: 8784.53,
-                                    ShearX: 1354.74,
-                                    ShearY: 1028.63,
-                                    TranslateX: 2982.82,
-                                    TranslateY: 923.73,
-                                    Unit: "EMU",
+                                    ScaleX: 2879.91,
+                                    ScaleY: 2900.77,
+                                    ShearX: 3834.62,
+                                    ShearY: 6180.16,
+                                    TranslateX: 7491.7,
+                                    TranslateY: 4287.69,
+                                    Unit: "PT",
                                 },
                                 Type: "SHADOW_TYPE_UNSPECIFIED",
                             },
-                            Transparency: 5908.73,
+                            Transparency: 1028.63,
                         },
-                        ObjectID: "quos",
+                        ObjectID: "magnam",
                     },
                     UpdateLineCategory: &shared.UpdateLineCategoryRequest{
-                        LineCategory: "BENT",
-                        ObjectID: "accusantium",
+                        LineCategory: "LINE_CATEGORY_UNSPECIFIED",
+                        ObjectID: "excepturi",
                     },
                     UpdateLineProperties: &shared.UpdateLinePropertiesRequest{
-                        Fields: "mollitia",
+                        Fields: "ullam",
                         LineProperties: &shared.LineProperties{
-                            DashStyle: "LONG_DASH_DOT",
-                            EndArrow: "OPEN_ARROW",
+                            DashStyle: "DASH_DOT",
+                            EndArrow: "FILL_DIAMOND",
                             EndConnection: &shared.LineConnection{
-                                ConnectedObjectID: "ad",
-                                ConnectionSiteIndex: 431418,
+                                ConnectedObjectID: "sint",
+                                ConnectionSiteIndex: 33625,
                             },
                             LineFill: &shared.LineFill{
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 2212.62,
+                                    Alpha: 6532.01,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 8965.47,
-                                            Green: 1412.64,
-                                            Red: 3675.62,
+                                            Blue: 9689.62,
+                                            Green: 6521.03,
+                                            Red: 3209.97,
                                         },
-                                        ThemeColor: "DARK1",
+                                        ThemeColor: "ACCENT3",
                                     },
                                 },
                             },
                             Link: &shared.Link{
-                                PageObjectID: "iure",
+                                PageObjectID: "dolor",
                                 RelativeLink: "LAST_SLIDE",
-                                SlideIndex: 891924,
-                                URL: "eius",
+                                SlideIndex: 141264,
+                                URL: "nemo",
                             },
-                            StartArrow: "OPEN_CIRCLE",
+                            StartArrow: "NONE",
                             StartConnection: &shared.LineConnection{
-                                ConnectedObjectID: "deleniti",
-                                ConnectionSiteIndex: 703889,
+                                ConnectedObjectID: "iure",
+                                ConnectionSiteIndex: 984043,
                             },
                             Weight: &shared.Dimension{
-                                Magnitude: 4479.26,
+                                Magnitude: 8919.24,
                                 Unit: "UNIT_UNSPECIFIED",
                             },
                         },
-                        ObjectID: "architecto",
+                        ObjectID: "maxime",
                     },
                     UpdatePageElementAltText: &shared.UpdatePageElementAltTextRequest{
-                        Description: "repudiandae",
-                        ObjectID: "ullam",
-                        Title: "Miss",
+                        Description: "deleniti",
+                        ObjectID: "facilis",
+                        Title: "Ms.",
                     },
                     UpdatePageElementTransform: &shared.UpdatePageElementTransformRequest{
-                        ApplyMode: "RELATIVE",
-                        ObjectID: "repellat",
+                        ApplyMode: "APPLY_MODE_UNSPECIFIED",
+                        ObjectID: "architecto",
                         Transform: &shared.AffineTransform{
-                            ScaleX: 8411.4,
-                            ScaleY: 1494.48,
-                            ShearX: 9046.48,
-                            ShearY: 8681.26,
-                            TranslateX: 375.59,
-                            TranslateY: 1624.93,
-                            Unit: "EMU",
+                            ScaleX: 9194.83,
+                            ScaleY: 3523.12,
+                            ShearX: 7142.42,
+                            ShearY: 4692.49,
+                            TranslateX: 9988.48,
+                            TranslateY: 8411.4,
+                            Unit: "UNIT_UNSPECIFIED",
                         },
                     },
                     UpdatePageElementsZOrder: &shared.UpdatePageElementsZOrderRequest{
-                        Operation: "SEND_BACKWARD",
+                        Operation: "SEND_TO_BACK",
                         PageElementObjectIds: []string{
-                            "sunt",
+                            "accusantium",
+                            "consequuntur",
+                            "praesentium",
+                            "natus",
                         },
                     },
                     UpdatePageProperties: &shared.UpdatePagePropertiesRequest{
-                        Fields: "quo",
-                        ObjectID: "illum",
+                        Fields: "magni",
+                        ObjectID: "sunt",
                         PageProperties: &shared.PageProperties{
                             ColorScheme: &shared.ColorScheme{
                                 Colors: []shared.ThemeColorPair{
                                     shared.ThemeColorPair{
                                         Color: &shared.RgbColor{
-                                            Blue: 8073.19,
-                                            Green: 4113.97,
-                                            Red: 5691.01,
-                                        },
-                                        Type: "LIGHT1",
-                                    },
-                                    shared.ThemeColorPair{
-                                        Color: &shared.RgbColor{
-                                            Blue: 4071.83,
-                                            Green: 332.22,
-                                            Red: 691.67,
-                                        },
-                                        Type: "BACKGROUND2",
-                                    },
-                                    shared.ThemeColorPair{
-                                        Color: &shared.RgbColor{
-                                            Blue: 6974.29,
-                                            Green: 3732.91,
-                                            Red: 4535.43,
-                                        },
-                                        Type: "ACCENT3",
-                                    },
-                                    shared.ThemeColorPair{
-                                        Color: &shared.RgbColor{
-                                            Blue: 7220.56,
-                                            Green: 505.88,
-                                            Red: 8663.83,
+                                            Blue: 8480.09,
+                                            Green: 8649.34,
+                                            Red: 8073.19,
                                         },
                                         Type: "ACCENT2",
+                                    },
+                                    shared.ThemeColorPair{
+                                        Color: &shared.RgbColor{
+                                            Blue: 5691.01,
+                                            Green: 1399.72,
+                                            Red: 4071.83,
+                                        },
+                                        Type: "THEME_COLOR_TYPE_UNSPECIFIED",
+                                    },
+                                    shared.ThemeColorPair{
+                                        Color: &shared.RgbColor{
+                                            Blue: 691.67,
+                                            Green: 9825.75,
+                                            Red: 6974.29,
+                                        },
+                                        Type: "ACCENT2",
+                                    },
+                                    shared.ThemeColorPair{
+                                        Color: &shared.RgbColor{
+                                            Blue: 4535.43,
+                                            Green: 4200.75,
+                                            Red: 7220.56,
+                                        },
+                                        Type: "THEME_COLOR_TYPE_UNSPECIFIED",
                                     },
                                 },
                             },
                             PageBackgroundFill: &shared.PageBackgroundFill{
                                 PropertyState: "INHERIT",
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 166.27,
+                                    Alpha: 3654.96,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 8558.04,
-                                            Green: 2307.42,
-                                            Red: 117.14,
+                                            Blue: 9755.22,
+                                            Green: 166.27,
+                                            Red: 8558.04,
                                         },
-                                        ThemeColor: "TEXT1",
+                                        ThemeColor: "DARK2",
                                     },
                                 },
                                 StretchedPictureFill: &shared.StretchedPictureFill{
-                                    ContentURL: "corporis",
+                                    ContentURL: "aut",
                                     Size: &shared.Size{
                                         Height: &shared.Dimension{
-                                            Magnitude: 9441.24,
-                                            Unit: "PT",
+                                            Magnitude: 7649.12,
+                                            Unit: "EMU",
                                         },
                                         Width: &shared.Dimension{
-                                            Magnitude: 7499.99,
-                                            Unit: "UNIT_UNSPECIFIED",
+                                            Magnitude: 9441.24,
+                                            Unit: "PT",
                                         },
                                     },
                                 },
@@ -680,547 +669,555 @@ func main() {
                     },
                     UpdateParagraphStyle: &shared.UpdateParagraphStyleRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 339404,
-                            RowIndex: 521037,
+                            ColumnIndex: 749999,
+                            RowIndex: 171629,
                         },
-                        Fields: "dignissimos",
-                        ObjectID: "eaque",
+                        Fields: "quis",
+                        ObjectID: "totam",
                         Style: &shared.ParagraphStyle{
-                            Alignment: "START",
+                            Alignment: "CENTER",
                             Direction: "TEXT_DIRECTION_UNSPECIFIED",
                             IndentEnd: &shared.Dimension{
-                                Magnitude: 1794.9,
+                                Magnitude: 3389.85,
                                 Unit: "UNIT_UNSPECIFIED",
                             },
                             IndentFirstLine: &shared.Dimension{
+                                Magnitude: 1794.9,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                            IndentStart: &shared.Dimension{
                                 Magnitude: 1709.86,
                                 Unit: "PT",
                             },
-                            IndentStart: &shared.Dimension{
-                                Magnitude: 4634.51,
-                                Unit: "UNIT_UNSPECIFIED",
-                            },
-                            LineSpacing: 8745.73,
+                            LineSpacing: 4634.51,
                             SpaceAbove: &shared.Dimension{
-                                Magnitude: 3453.52,
+                                Magnitude: 2239.24,
                                 Unit: "PT",
                             },
                             SpaceBelow: &shared.Dimension{
-                                Magnitude: 9280.82,
-                                Unit: "EMU",
+                                Magnitude: 3453.52,
+                                Unit: "PT",
                             },
                             SpacingMode: "COLLAPSE_LISTS",
                         },
                         TextRange: &shared.Range{
-                            EndIndex: 596656,
-                            StartIndex: 31838,
-                            Type: "ALL",
+                            EndIndex: 608253,
+                            StartIndex: 704415,
+                            Type: "FROM_START_INDEX",
                         },
                     },
                     UpdateShapeProperties: &shared.UpdateShapePropertiesRequest{
-                        Fields: "consequuntur",
-                        ObjectID: "blanditiis",
+                        Fields: "voluptatem",
+                        ObjectID: "porro",
                         ShapeProperties: &shared.ShapeProperties{
                             Autofit: &shared.Autofit{
-                                AutofitType: "TEXT_AUTOFIT",
-                                FontScale: 503.7,
-                                LineSpacingReduction: 5772.29,
+                                AutofitType: "AUTOFIT_TYPE_UNSPECIFIED",
+                                FontScale: 5000.26,
+                                LineSpacingReduction: 6214.79,
                             },
-                            ContentAlignment: "MIDDLE",
+                            ContentAlignment: "CONTENT_ALIGNMENT_UNSPECIFIED",
                             Link: &shared.Link{
-                                PageObjectID: "adipisci",
-                                RelativeLink: "LAST_SLIDE",
-                                SlideIndex: 934214,
-                                URL: "modi",
+                                PageObjectID: "occaecati",
+                                RelativeLink: "FIRST_SLIDE",
+                                SlideIndex: 237893,
+                                URL: "asperiores",
                             },
                             Outline: &shared.Outline{
-                                DashStyle: "DASH_DOT",
+                                DashStyle: "LONG_DASH_DOT",
                                 OutlineFill: &shared.OutlineFill{
                                     SolidFill: &shared.SolidFill{
-                                        Alpha: 6790.91,
+                                        Alpha: 2672.62,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 5356.33,
-                                                Green: 8642.82,
-                                                Red: 5899.1,
+                                                Blue: 6139.66,
+                                                Green: 6790.91,
+                                                Red: 5356.33,
                                             },
-                                            ThemeColor: "FOLLOWED_HYPERLINK",
+                                            ThemeColor: "BACKGROUND1",
                                         },
                                     },
                                 },
-                                PropertyState: "INHERIT",
+                                PropertyState: "NOT_RENDERED",
                                 Weight: &shared.Dimension{
-                                    Magnitude: 9644.9,
-                                    Unit: "UNIT_UNSPECIFIED",
+                                    Magnitude: 7508.44,
+                                    Unit: "PT",
                                 },
                             },
                             Shadow: &shared.Shadow{
-                                Alignment: "CENTER",
-                                Alpha: 3982.21,
+                                Alignment: "BOTTOM_RIGHT",
+                                Alpha: 3119.45,
                                 BlurRadius: &shared.Dimension{
-                                    Magnitude: 2123.9,
-                                    Unit: "UNIT_UNSPECIFIED",
+                                    Magnitude: 5542.42,
+                                    Unit: "EMU",
                                 },
                                 Color: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 2224.43,
-                                        Green: 1861.93,
-                                        Red: 2187.49,
+                                        Blue: 2123.9,
+                                        Green: 2098.43,
+                                        Red: 2224.43,
                                     },
-                                    ThemeColor: "BACKGROUND2",
+                                    ThemeColor: "DARK2",
                                 },
-                                PropertyState: "NOT_RENDERED",
+                                PropertyState: "RENDERED",
                                 RotateWithShape: false,
                                 Transform: &shared.AffineTransform{
-                                    ScaleX: 7395.51,
-                                    ScaleY: 4521.09,
-                                    ShearX: 4904.59,
-                                    ShearY: 9702.37,
-                                    TranslateX: 2274.14,
-                                    TranslateY: 6805.45,
+                                    ScaleX: 9443.73,
+                                    ScaleY: 5695.74,
+                                    ShearX: 7395.51,
+                                    ShearY: 4521.09,
+                                    TranslateX: 4904.59,
+                                    TranslateY: 9702.37,
                                     Unit: "UNIT_UNSPECIFIED",
                                 },
-                                Type: "SHADOW_TYPE_UNSPECIFIED",
+                                Type: "OUTER",
                             },
                             ShapeBackgroundFill: &shared.ShapeBackgroundFill{
                                 PropertyState: "RENDERED",
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 564.18,
+                                    Alpha: 852.95,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 4344.17,
-                                            Green: 4878.38,
-                                            Red: 3117.96,
+                                            Blue: 580.29,
+                                            Green: 564.18,
+                                            Red: 4344.17,
                                         },
-                                        ThemeColor: "BACKGROUND1",
+                                        ThemeColor: "ACCENT4",
                                     },
                                 },
                             },
                         },
                     },
                     UpdateSlideProperties: &shared.UpdateSlidePropertiesRequest{
-                        Fields: "quidem",
-                        ObjectID: "voluptatibus",
+                        Fields: "quaerat",
+                        ObjectID: "accusamus",
                         SlideProperties: &shared.SlideProperties{
                             IsSkipped: false,
-                            LayoutObjectID: "voluptas",
-                            MasterObjectID: "natus",
+                            LayoutObjectID: "quidem",
+                            MasterObjectID: "voluptatibus",
                             NotesPage: &shared.Page{},
                         },
                     },
                     UpdateSlidesPosition: &shared.UpdateSlidesPositionRequest{
-                        InsertionIndex: 179603,
+                        InsertionIndex: 377752,
                         SlideObjectIds: []string{
+                            "eos",
+                            "atque",
                             "sit",
-                            "fugiat",
-                            "ab",
                         },
                     },
                     UpdateTableBorderProperties: &shared.UpdateTableBorderPropertiesRequest{
-                        BorderPosition: "OUTER",
-                        Fields: "dolorum",
-                        ObjectID: "iusto",
+                        BorderPosition: "RIGHT",
+                        Fields: "ab",
+                        ObjectID: "soluta",
                         TableBorderProperties: &shared.TableBorderProperties{
-                            DashStyle: "DASH",
+                            DashStyle: "DASH_DOT",
                             TableBorderFill: &shared.TableBorderFill{
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 6770.82,
+                                    Alpha: 4785.96,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 5365.79,
-                                            Green: 6070.45,
-                                            Red: 8966.72,
+                                            Blue: 4536.97,
+                                            Green: 6770.82,
+                                            Red: 5365.79,
                                         },
-                                        ThemeColor: "FOLLOWED_HYPERLINK",
+                                        ThemeColor: "ACCENT6",
                                     },
                                 },
                             },
                             Weight: &shared.Dimension{
-                                Magnitude: 9903.39,
-                                Unit: "EMU",
+                                Magnitude: 8966.72,
+                                Unit: "PT",
                             },
                         },
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 216897,
+                            ColumnSpan: 990339,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 456015,
-                                RowIndex: 663078,
+                                ColumnIndex: 469497,
+                                RowIndex: 216897,
                             },
-                            RowSpan: 906418,
+                            RowSpan: 456015,
                         },
                     },
                     UpdateTableCellProperties: &shared.UpdateTableCellPropertiesRequest{
-                        Fields: "eius",
-                        ObjectID: "aspernatur",
+                        Fields: "id",
+                        ObjectID: "saepe",
                         TableCellProperties: &shared.TableCellProperties{
-                            ContentAlignment: "CONTENT_ALIGNMENT_UNSPECIFIED",
+                            ContentAlignment: "CONTENT_ALIGNMENT_UNSUPPORTED",
                             TableCellBackgroundFill: &shared.TableCellBackgroundFill{
                                 PropertyState: "RENDERED",
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 7583.79,
+                                    Alpha: 206.51,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 8815.86,
-                                            Green: 3200.17,
-                                            Red: 9044.25,
+                                            Blue: 2292.19,
+                                            Green: 7583.79,
+                                            Red: 8815.86,
                                         },
-                                        ThemeColor: "ACCENT2",
+                                        ThemeColor: "ACCENT1",
                                     },
                                 },
                             },
                         },
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 645785,
+                            ColumnSpan: 904425,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 588317,
-                                RowIndex: 324683,
+                                ColumnIndex: 383464,
+                                RowIndex: 645785,
                             },
-                            RowSpan: 831049,
+                            RowSpan: 588317,
                         },
                     },
                     UpdateTableColumnProperties: &shared.UpdateTableColumnPropertiesRequest{
                         ColumnIndices: []int{
-                            628982,
-                            55,
-                            872651,
+                            831049,
+                            519711,
                         },
-                        Fields: "quaerat",
-                        ObjectID: "tempora",
+                        Fields: "similique",
+                        ObjectID: "alias",
                         TableColumnProperties: &shared.TableColumnProperties{
                             ColumnWidth: &shared.Dimension{
-                                Magnitude: 4254.51,
-                                Unit: "PT",
+                                Magnitude: 8726.51,
+                                Unit: "UNIT_UNSPECIFIED",
                             },
                         },
                     },
                     UpdateTableRowProperties: &shared.UpdateTableRowPropertiesRequest{
-                        Fields: "officiis",
-                        ObjectID: "qui",
+                        Fields: "tempora",
+                        ObjectID: "vel",
                         RowIndices: []int{
+                            885338,
+                            185636,
+                            679880,
                             952792,
-                            456130,
-                            687488,
                         },
                         TableRowProperties: &shared.TableRowProperties{
                             MinRowHeight: &shared.Dimension{
-                                Magnitude: 4834.09,
-                                Unit: "UNIT_UNSPECIFIED",
+                                Magnitude: 4561.3,
+                                Unit: "PT",
                             },
                         },
                     },
                     UpdateTextStyle: &shared.UpdateTextStyleRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 788740,
-                            RowIndex: 947371,
+                            ColumnIndex: 483409,
+                            RowIndex: 215507,
                         },
-                        Fields: "amet",
-                        ObjectID: "tempore",
+                        Fields: "quisquam",
+                        ObjectID: "tenetur",
                         Style: &shared.TextStyle{
                             BackgroundColor: &shared.OptionalColor{
                                 OpaqueColor: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 8802.98,
-                                        Green: 2539.41,
-                                        Red: 3136.92,
+                                        Blue: 2294.42,
+                                        Green: 7308.56,
+                                        Red: 8802.98,
                                     },
-                                    ThemeColor: "DARK2",
+                                    ThemeColor: "LIGHT2",
                                 },
                             },
-                            BaselineOffset: "SUBSCRIPT",
+                            BaselineOffset: "NONE",
                             Bold: false,
-                            FontFamily: "totam",
+                            FontFamily: "dolorem",
                             FontSize: &shared.Dimension{
-                                Magnitude: 4717.52,
-                                Unit: "UNIT_UNSPECIFIED",
+                                Magnitude: 9574.51,
+                                Unit: "EMU",
                             },
                             ForegroundColor: &shared.OptionalColor{
                                 OpaqueColor: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 7115.84,
-                                        Green: 2074.7,
-                                        Red: 1536.94,
+                                        Blue: 4717.52,
+                                        Green: 256.62,
+                                        Red: 7115.84,
                                     },
-                                    ThemeColor: "ACCENT3",
+                                    ThemeColor: "DARK2",
                                 },
                             },
                             Italic: false,
                             Link: &shared.Link{
-                                PageObjectID: "libero",
-                                RelativeLink: "NEXT_SLIDE",
-                                SlideIndex: 646265,
-                                URL: "quam",
+                                PageObjectID: "sed",
+                                RelativeLink: "PREVIOUS_SLIDE",
+                                SlideIndex: 730442,
+                                URL: "voluptas",
                             },
                             SmallCaps: false,
                             Strikethrough: false,
                             Underline: false,
                             WeightedFontFamily: &shared.WeightedFontFamily{
-                                FontFamily: "ipsum",
-                                Weight: 277628,
+                                FontFamily: "deserunt",
+                                Weight: 463575,
                             },
                         },
                         TextRange: &shared.Range{
-                            EndIndex: 186458,
-                            StartIndex: 586784,
-                            Type: "ALL",
+                            EndIndex: 214880,
+                            StartIndex: 277628,
+                            Type: "RANGE_TYPE_UNSPECIFIED",
                         },
                     },
                     UpdateVideoProperties: &shared.UpdateVideoPropertiesRequest{
-                        Fields: "pariatur",
-                        ObjectID: "soluta",
+                        Fields: "cupiditate",
+                        ObjectID: "maxime",
                         VideoProperties: &shared.VideoProperties{
                             AutoPlay: false,
-                            End: 117531,
+                            End: 863856,
                             Mute: false,
                             Outline: &shared.Outline{
-                                DashStyle: "DASH_DOT",
+                                DashStyle: "LONG_DASH",
                                 OutlineFill: &shared.OutlineFill{
                                     SolidFill: &shared.SolidFill{
-                                        Alpha: 5173.79,
+                                        Alpha: 1175.31,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 2768.94,
-                                                Green: 1320.68,
-                                                Red: 1749.09,
+                                                Blue: 6748.48,
+                                                Green: 5173.79,
+                                                Red: 2768.94,
                                             },
-                                            ThemeColor: "FOLLOWED_HYPERLINK",
+                                            ThemeColor: "LIGHT1",
                                         },
                                     },
                                 },
-                                PropertyState: "INHERIT",
+                                PropertyState: "RENDERED",
                                 Weight: &shared.Dimension{
-                                    Magnitude: 3960.6,
-                                    Unit: "EMU",
+                                    Magnitude: 7168.6,
+                                    Unit: "PT",
                                 },
                             },
-                            Start: 565421,
+                            Start: 396060,
                         },
                     },
                 },
                 shared.Request{
                     CreateImage: &shared.CreateImageRequest{
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "temporibus",
+                            PageObjectID: "quam",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
+                                    Magnitude: 5654.21,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
                                     Magnitude: 1832.8,
                                     Unit: "UNIT_UNSPECIFIED",
                                 },
-                                Width: &shared.Dimension{
-                                    Magnitude: 1448.47,
-                                    Unit: "UNIT_UNSPECIFIED",
-                                },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 4880.56,
-                                ScaleY: 1248.33,
-                                ShearX: 3556.13,
-                                ShearY: 7220.81,
-                                TranslateX: 9404.32,
-                                TranslateY: 304.52,
+                                ScaleX: 1448.47,
+                                ScaleY: 1649.59,
+                                ShearX: 4880.56,
+                                ShearY: 1248.33,
+                                TranslateX: 3556.13,
+                                TranslateY: 7220.81,
                                 Unit: "PT",
                             },
                         },
-                        ObjectID: "soluta",
-                        URL: "nobis",
+                        ObjectID: "voluptatem",
+                        URL: "cumque",
                     },
                     CreateLine: &shared.CreateLineRequest{
-                        Category: "LINE_CATEGORY_UNSPECIFIED",
+                        Category: "BENT",
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "saepe",
+                            PageObjectID: "nobis",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
+                                    Magnitude: 925.96,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
                                     Magnitude: 2174.5,
                                     Unit: "UNIT_UNSPECIFIED",
                                 },
-                                Width: &shared.Dimension{
-                                    Magnitude: 7492.55,
-                                    Unit: "EMU",
-                                },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 7316.94,
-                                ScaleY: 5844.76,
-                                ShearX: 456.14,
-                                ShearY: 9619.37,
-                                TranslateX: 2091.57,
-                                TranslateY: 2921.47,
+                                ScaleX: 7492.55,
+                                ScaleY: 5521.93,
+                                ShearX: 7316.94,
+                                ShearY: 5844.76,
+                                TranslateX: 456.14,
+                                TranslateY: 9619.37,
                                 Unit: "UNIT_UNSPECIFIED",
                             },
                         },
                         LineCategory: "STRAIGHT",
-                        ObjectID: "dolorum",
+                        ObjectID: "labore",
                     },
                     CreateParagraphBullets: &shared.CreateParagraphBulletsRequest{
-                        BulletPreset: "BULLET_DIAMONDX_ARROW3D_SQUARE",
+                        BulletPreset: "BULLET_ARROW_DIAMOND_DISC",
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 63038,
-                            RowIndex: 16429,
+                            ColumnIndex: 677263,
+                            RowIndex: 100294,
                         },
-                        ObjectID: "quas",
+                        ObjectID: "quae",
                         TextRange: &shared.Range{
-                            EndIndex: 929530,
-                            StartIndex: 9240,
-                            Type: "FROM_START_INDEX",
+                            EndIndex: 16429,
+                            StartIndex: 555649,
+                            Type: "ALL",
                         },
                     },
                     CreateShape: &shared.CreateShapeRequest{
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "repellendus",
+                            PageObjectID: "consequatur",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
+                                    Magnitude: 6699.17,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
                                     Magnitude: 7851.53,
                                     Unit: "PT",
                                 },
-                                Width: &shared.Dimension{
-                                    Magnitude: 2817.3,
-                                    Unit: "PT",
-                                },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 5864.1,
-                                ScaleY: 1816.31,
-                                ShearX: 639.55,
-                                ShearY: 5123.93,
-                                TranslateX: 4856.28,
-                                TranslateY: 5804.47,
-                                Unit: "PT",
-                            },
-                        },
-                        ObjectID: "quisquam",
-                        ShapeType: "FLOW_CHART_PREDEFINED_PROCESS",
-                    },
-                    CreateSheetsChart: &shared.CreateSheetsChartRequest{
-                        ChartID: 606476,
-                        ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "quis",
-                            Size: &shared.Size{
-                                Height: &shared.Dimension{
-                                    Magnitude: 2184.03,
-                                    Unit: "PT",
-                                },
-                                Width: &shared.Dimension{
-                                    Magnitude: 4551.69,
-                                    Unit: "UNIT_UNSPECIFIED",
-                                },
-                            },
-                            Transform: &shared.AffineTransform{
-                                ScaleX: 8788.7,
-                                ScaleY: 9493.19,
-                                ShearX: 4922.68,
-                                ShearY: 9413.78,
-                                TranslateX: 7155.61,
-                                TranslateY: 7992.03,
+                                ScaleX: 2817.3,
+                                ScaleY: 7034.95,
+                                ShearX: 5864.1,
+                                ShearY: 1816.31,
+                                TranslateX: 639.55,
+                                TranslateY: 5123.93,
                                 Unit: "EMU",
                             },
                         },
-                        LinkingMode: "LINKED",
-                        ObjectID: "facilis",
-                        SpreadsheetID: "vero",
+                        ObjectID: "occaecati",
+                        ShapeType: "ELLIPSE_RIBBON",
                     },
-                    CreateSlide: &shared.CreateSlideRequest{
-                        InsertionIndex: 498140,
-                        ObjectID: "dolore",
-                        PlaceholderIDMappings: []shared.LayoutPlaceholderIDMapping{
-                            shared.LayoutPlaceholderIDMapping{
-                                LayoutPlaceholder: &shared.Placeholder{
-                                    Index: 848944,
-                                    ParentObjectID: "sequi",
-                                    Type: "OBJECT",
-                                },
-                                LayoutPlaceholderObjectID: "impedit",
-                                ObjectID: "aut",
-                            },
-                            shared.LayoutPlaceholderIDMapping{
-                                LayoutPlaceholder: &shared.Placeholder{
-                                    Index: 974259,
-                                    ParentObjectID: "exercitationem",
-                                    Type: "TABLE",
-                                },
-                                LayoutPlaceholderObjectID: "fugit",
-                                ObjectID: "porro",
-                            },
-                            shared.LayoutPlaceholderIDMapping{
-                                LayoutPlaceholder: &shared.Placeholder{
-                                    Index: 981830,
-                                    ParentObjectID: "doloribus",
-                                    Type: "HEADER",
-                                },
-                                LayoutPlaceholderObjectID: "eligendi",
-                                ObjectID: "ducimus",
-                            },
-                            shared.LayoutPlaceholderIDMapping{
-                                LayoutPlaceholder: &shared.Placeholder{
-                                    Index: 4048,
-                                    ParentObjectID: "officia",
-                                    Type: "CENTERED_TITLE",
-                                },
-                                LayoutPlaceholderObjectID: "ipsam",
-                                ObjectID: "ea",
-                            },
-                        },
-                        SlideLayoutReference: &shared.LayoutReference{
-                            LayoutID: "aspernatur",
-                            PredefinedLayout: "TITLE_AND_TWO_COLUMNS",
-                        },
-                    },
-                    CreateTable: &shared.CreateTableRequest{
-                        Columns: 822118,
+                    CreateSheetsChart: &shared.CreateSheetsChartRequest{
+                        ChartID: 787542,
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "magnam",
+                            PageObjectID: "vero",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 1898.48,
+                                    Magnitude: 6064.76,
                                     Unit: "EMU",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 5113.19,
+                                    Magnitude: 2184.03,
+                                    Unit: "PT",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 4551.69,
+                                ScaleY: 2317.01,
+                                ShearX: 8788.7,
+                                ShearY: 9493.19,
+                                TranslateX: 4922.68,
+                                TranslateY: 9413.78,
+                                Unit: "PT",
+                            },
+                        },
+                        LinkingMode: "LINKED",
+                        ObjectID: "odio",
+                        SpreadsheetID: "similique",
+                    },
+                    CreateSlide: &shared.CreateSlideRequest{
+                        InsertionIndex: 708548,
+                        ObjectID: "vero",
+                        PlaceholderIDMappings: []shared.LayoutPlaceholderIDMapping{
+                            shared.LayoutPlaceholderIDMapping{
+                                LayoutPlaceholder: &shared.Placeholder{
+                                    Index: 293020,
+                                    ParentObjectID: "quibusdam",
+                                    Type: "TABLE",
+                                },
+                                LayoutPlaceholderObjectID: "sequi",
+                                ObjectID: "natus",
+                            },
+                            shared.LayoutPlaceholderIDMapping{
+                                LayoutPlaceholder: &shared.Placeholder{
+                                    Index: 773326,
+                                    ParentObjectID: "aut",
+                                    Type: "SLIDE_IMAGE",
+                                },
+                                LayoutPlaceholderObjectID: "exercitationem",
+                                ObjectID: "nulla",
+                            },
+                        },
+                        SlideLayoutReference: &shared.LayoutReference{
+                            LayoutID: "fugit",
+                            PredefinedLayout: "ONE_COLUMN_TEXT",
+                        },
+                    },
+                    CreateTable: &shared.CreateTableRequest{
+                        Columns: 981830,
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "doloribus",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 4783.7,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 4973.91,
                                     Unit: "UNIT_UNSPECIFIED",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 2243.17,
-                                ScaleY: 9807,
-                                ShearX: 978.44,
-                                ShearY: 4061.2,
-                                TranslateX: 8621.92,
-                                TranslateY: 5692.11,
+                                ScaleX: 6394.73,
+                                ScaleY: 2694.79,
+                                ShearX: 3685.84,
+                                ShearY: 4104.92,
+                                TranslateX: 1369,
+                                TranslateY: 4282.24,
                                 Unit: "PT",
                             },
                         },
-                        ObjectID: "nostrum",
-                        Rows: 960835,
+                        ObjectID: "magnam",
+                        Rows: 189848,
                     },
                     CreateVideo: &shared.CreateVideoRequest{
                         ElementProperties: &shared.PageElementProperties{
-                            PageObjectID: "quisquam",
+                            PageObjectID: "ex",
                             Size: &shared.Size{
                                 Height: &shared.Dimension{
-                                    Magnitude: 9065.56,
-                                    Unit: "EMU",
+                                    Magnitude: 5113.19,
+                                    Unit: "UNIT_UNSPECIFIED",
                                 },
                                 Width: &shared.Dimension{
-                                    Magnitude: 7740.48,
-                                    Unit: "EMU",
+                                    Magnitude: 2243.17,
+                                    Unit: "PT",
                                 },
                             },
                             Transform: &shared.AffineTransform{
-                                ScaleX: 3331.45,
-                                ScaleY: 3994.99,
-                                ShearX: 811.01,
-                                ShearY: 3018.31,
-                                TranslateX: 4072.41,
-                                TranslateY: 7752.2,
-                                Unit: "UNIT_UNSPECIFIED",
+                                ScaleX: 978.44,
+                                ScaleY: 4061.2,
+                                ShearX: 8621.92,
+                                ShearY: 5692.11,
+                                TranslateX: 9729.2,
+                                TranslateY: 3436.05,
+                                Unit: "PT",
                             },
                         },
-                        ID: "recusandae",
-                        ObjectID: "aspernatur",
-                        Source: "SOURCE_UNSPECIFIED",
+                        ID: "quisquam",
+                        ObjectID: "saepe",
+                        Source: "YOUTUBE",
                     },
                     DeleteObject: &shared.DeleteObjectRequest{
-                        ObjectID: "eaque",
+                        ObjectID: "impedit",
                     },
                     DeleteParagraphBullets: &shared.DeleteParagraphBulletsRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 359271,
+                            RowIndex: 333145,
+                        },
+                        ObjectID: "aliquid",
+                        TextRange: &shared.Range{
+                            EndIndex: 81101,
+                            StartIndex: 301831,
+                            Type: "FIXED_RANGE",
+                        },
+                    },
+                    DeleteTableColumn: &shared.DeleteTableColumnRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 775220,
+                            RowIndex: 232234,
+                        },
+                        TableObjectID: "recusandae",
+                    },
+                    DeleteTableRow: &shared.DeleteTableRowRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 132487,
+                            RowIndex: 325310,
+                        },
+                        TableObjectID: "eaque",
+                    },
+                    DeleteText: &shared.DeleteTextRequest{
                         CellLocation: &shared.TableCellLocation{
                             ColumnIndex: 952871,
                             RowIndex: 725595,
@@ -1232,169 +1229,168 @@ func main() {
                             Type: "ALL",
                         },
                     },
-                    DeleteTableColumn: &shared.DeleteTableColumnRequest{
-                        CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 304582,
-                            RowIndex: 146946,
-                        },
-                        TableObjectID: "accusamus",
-                    },
-                    DeleteTableRow: &shared.DeleteTableRowRequest{
-                        CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 79522,
-                            RowIndex: 250622,
-                        },
-                        TableObjectID: "et",
-                    },
-                    DeleteText: &shared.DeleteTextRequest{
-                        CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 677412,
-                            RowIndex: 672048,
-                        },
-                        ObjectID: "placeat",
-                        TextRange: &shared.Range{
-                            EndIndex: 245367,
-                            StartIndex: 432148,
-                            Type: "FIXED_RANGE",
-                        },
-                    },
                     DuplicateObject: &shared.DuplicateObjectRequest{
-                        ObjectID: "nobis",
+                        ObjectID: "aliquam",
                         ObjectIds: map[string]string{
-                            "assumenda": "nulla",
-                            "voluptas": "libero",
-                            "quasi": "tempora",
+                            "accusamus": "inventore",
                         },
                     },
                     GroupObjects: &shared.GroupObjectsRequest{
                         ChildrenObjectIds: []string{
-                            "explicabo",
-                            "provident",
+                            "et",
+                            "dolorum",
                         },
-                        GroupObjectID: "ipsa",
+                        GroupObjectID: "laborum",
                     },
                     InsertTableColumns: &shared.InsertTableColumnsRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 476477,
-                            RowIndex: 301598,
+                            ColumnIndex: 810424,
+                            RowIndex: 245367,
                         },
                         InsertRight: false,
-                        Number: 487935,
-                        TableObjectID: "eius",
+                        Number: 432148,
+                        TableObjectID: "autem",
                     },
                     InsertTableRows: &shared.InsertTableRowsRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 458515,
-                            RowIndex: 456141,
+                            ColumnIndex: 752135,
+                            RowIndex: 557369,
                         },
                         InsertBelow: false,
-                        Number: 524593,
-                        TableObjectID: "fuga",
+                        Number: 829603,
+                        TableObjectID: "nulla",
                     },
                     InsertText: &shared.InsertTextRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 442015,
-                            RowIndex: 695626,
+                            ColumnIndex: 379034,
+                            RowIndex: 727044,
                         },
-                        InsertionIndex: 852635,
-                        ObjectID: "ut",
-                        Text: "eum",
+                        InsertionIndex: 96549,
+                        ObjectID: "tempora",
+                        Text: "numquam",
                     },
                     MergeTableCells: &shared.MergeTableCellsRequest{
-                        ObjectID: "suscipit",
+                        ObjectID: "explicabo",
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 826871,
+                            ColumnSpan: 591935,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 181151,
-                                RowIndex: 509342,
+                                ColumnIndex: 55374,
+                                RowIndex: 476477,
                             },
-                            RowSpan: 788546,
+                            RowSpan: 301598,
                         },
                     },
                     RefreshSheetsChart: &shared.RefreshSheetsChartRequest{
-                        ObjectID: "veritatis",
+                        ObjectID: "odio",
                     },
                     ReplaceAllShapesWithImage: &shared.ReplaceAllShapesWithImageRequest{
                         ContainsText: &shared.SubstringMatchCriteria{
                             MatchCase: false,
-                            Text: "ipsa",
+                            Text: "eius",
                         },
                         ImageReplaceMethod: "CENTER_INSIDE",
-                        ImageURL: "quidem",
+                        ImageURL: "esse",
                         PageObjectIds: []string{
-                            "quo",
+                            "fuga",
+                            "reprehenderit",
+                            "quidem",
                         },
                         ReplaceMethod: "CENTER_CROP",
                     },
                     ReplaceAllShapesWithSheetsChart: &shared.ReplaceAllShapesWithSheetsChartRequest{
-                        ChartID: 777408,
+                        ChartID: 283519,
                         ContainsText: &shared.SubstringMatchCriteria{
                             MatchCase: false,
-                            Text: "fuga",
+                            Text: "eum",
                         },
                         LinkingMode: "NOT_LINKED_IMAGE",
                         PageObjectIds: []string{
-                            "voluptas",
+                            "eos",
+                            "praesentium",
+                            "quisquam",
+                            "veritatis",
                         },
-                        SpreadsheetID: "ab",
+                        SpreadsheetID: "ipsa",
                     },
                     ReplaceAllText: &shared.ReplaceAllTextRequest{
                         ContainsText: &shared.SubstringMatchCriteria{
                             MatchCase: false,
-                            Text: "cupiditate",
+                            Text: "id",
                         },
                         PageObjectIds: []string{
-                            "tempora",
+                            "neque",
+                            "quo",
+                            "illum",
                         },
-                        ReplaceText: "debitis",
+                        ReplaceText: "quo",
                     },
                     ReplaceImage: &shared.ReplaceImageRequest{
-                        ImageObjectID: "ipsam",
+                        ImageObjectID: "fuga",
                         ImageReplaceMethod: "IMAGE_REPLACE_METHOD_UNSPECIFIED",
-                        URL: "sequi",
+                        URL: "eos",
                     },
                     RerouteLine: &shared.RerouteLineRequest{
-                        ObjectID: "quo",
+                        ObjectID: "voluptas",
                     },
                     UngroupObjects: &shared.UngroupObjectsRequest{
                         ObjectIds: []string{
-                            "recusandae",
-                            "aperiam",
+                            "cupiditate",
                         },
                     },
                     UnmergeTableCells: &shared.UnmergeTableCellsRequest{
-                        ObjectID: "distinctio",
+                        ObjectID: "consequatur",
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 799796,
+                            ColumnSpan: 272822,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 490819,
-                                RowIndex: 76956,
+                                ColumnIndex: 892050,
+                                RowIndex: 370853,
                             },
-                            RowSpan: 469498,
+                            RowSpan: 133465,
                         },
                     },
                     UpdateImageProperties: &shared.UpdateImagePropertiesRequest{
-                        Fields: "totam",
+                        Fields: "sequi",
                         ImageProperties: &shared.ImageProperties{
-                            Brightness: 8827.1,
-                            Contrast: 3068.1,
+                            Brightness: 7791.92,
+                            Contrast: 4598.56,
                             CropProperties: &shared.CropProperties{
-                                Angle: 4884.1,
-                                BottomOffset: 5775.43,
-                                LeftOffset: 4145.67,
-                                RightOffset: 9594.34,
-                                TopOffset: 1741.12,
+                                Angle: 9251.64,
+                                BottomOffset: 446.12,
+                                LeftOffset: 7151.79,
+                                RightOffset: 7997.96,
+                                TopOffset: 4908.19,
                             },
                             Link: &shared.Link{
-                                PageObjectID: "deserunt",
+                                PageObjectID: "inventore",
                                 RelativeLink: "PREVIOUS_SLIDE",
-                                SlideIndex: 35362,
-                                URL: "porro",
+                                SlideIndex: 518835,
+                                URL: "accusamus",
                             },
                             Outline: &shared.Outline{
-                                DashStyle: "DASH",
+                                DashStyle: "DOT",
                                 OutlineFill: &shared.OutlineFill{
                                     SolidFill: &shared.SolidFill{
+                                        Alpha: 4884.1,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 5775.43,
+                                                Green: 4145.67,
+                                                Red: 9594.34,
+                                            },
+                                            ThemeColor: "LIGHT1",
+                                        },
+                                    },
+                                },
+                                PropertyState: "NOT_RENDERED",
+                                Weight: &shared.Dimension{
+                                    Magnitude: 4752.89,
+                                    Unit: "UNIT_UNSPECIFIED",
+                                },
+                            },
+                            Recolor: &shared.Recolor{
+                                Name: "DARK9",
+                                RecolorStops: []shared.ColorStop{
+                                    shared.ColorStop{
                                         Alpha: 5564.29,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
@@ -1404,193 +1400,1087 @@ func main() {
                                             },
                                             ThemeColor: "LIGHT1",
                                         },
+                                        Position: 6813.93,
                                     },
-                                },
-                                PropertyState: "INHERIT",
-                                Weight: &shared.Dimension{
-                                    Magnitude: 6494.63,
-                                    Unit: "UNIT_UNSPECIFIED",
-                                },
-                            },
-                            Recolor: &shared.Recolor{
-                                Name: "DARK3",
-                                RecolorStops: []shared.ColorStop{
                                     shared.ColorStop{
-                                        Alpha: 3256.85,
+                                        Alpha: 6494.63,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 3926.76,
-                                                Green: 1470.14,
-                                                Red: 9564.06,
+                                                Blue: 2775.96,
+                                                Green: 5392.24,
+                                                Red: 1288.6,
                                             },
-                                            ThemeColor: "LIGHT1",
+                                            ThemeColor: "ACCENT1",
                                         },
-                                        Position: 1871.31,
+                                        Position: 3926.76,
                                     },
                                 },
                             },
                             Shadow: &shared.Shadow{
                                 Alignment: "TOP_LEFT",
-                                Alpha: 9039.84,
+                                Alpha: 9564.06,
                                 BlurRadius: &shared.Dimension{
-                                    Magnitude: 5789.22,
-                                    Unit: "EMU",
+                                    Magnitude: 1598.7,
+                                    Unit: "UNIT_UNSPECIFIED",
                                 },
                                 Color: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 922.6,
-                                        Green: 4569.11,
-                                        Red: 9105.45,
+                                        Blue: 1294.12,
+                                        Green: 9039.84,
+                                        Red: 5789.22,
                                     },
-                                    ThemeColor: "BACKGROUND1",
+                                    ThemeColor: "ACCENT5",
                                 },
                                 PropertyState: "RENDERED",
                                 RotateWithShape: false,
                                 Transform: &shared.AffineTransform{
-                                    ScaleX: 4586.04,
-                                    ScaleY: 8003.79,
-                                    ShearX: 7241.68,
-                                    ShearY: 8771.31,
-                                    TranslateX: 3990.25,
-                                    TranslateY: 934.59,
+                                    ScaleX: 4569.11,
+                                    ScaleY: 9105.45,
+                                    ShearX: 8820.42,
+                                    ShearY: 829.71,
+                                    TranslateX: 4586.04,
+                                    TranslateY: 8003.79,
                                     Unit: "PT",
                                 },
-                                Type: "SHADOW_TYPE_UNSPECIFIED",
+                                Type: "OUTER",
                             },
-                            Transparency: 6900.25,
+                            Transparency: 3990.25,
                         },
-                        ObjectID: "molestiae",
+                        ObjectID: "quasi",
                     },
                     UpdateLineCategory: &shared.UpdateLineCategoryRequest{
-                        LineCategory: "BENT",
-                        ObjectID: "occaecati",
+                        LineCategory: "CURVED",
+                        ObjectID: "vel",
                     },
                     UpdateLineProperties: &shared.UpdateLinePropertiesRequest{
-                        Fields: "minima",
+                        Fields: "harum",
                         LineProperties: &shared.LineProperties{
-                            DashStyle: "LONG_DASH",
-                            EndArrow: "OPEN_CIRCLE",
+                            DashStyle: "DASH",
+                            EndArrow: "OPEN_ARROW",
                             EndConnection: &shared.LineConnection{
-                                ConnectedObjectID: "sit",
-                                ConnectionSiteIndex: 636061,
+                                ConnectedObjectID: "occaecati",
+                                ConnectionSiteIndex: 327720,
                             },
                             LineFill: &shared.LineFill{
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 7313.98,
+                                    Alpha: 7162.44,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 2400.2,
-                                            Green: 7669.64,
-                                            Red: 1605.38,
+                                            Blue: 7567.79,
+                                            Green: 270.69,
+                                            Red: 6360.61,
                                         },
-                                        ThemeColor: "THEME_COLOR_TYPE_UNSPECIFIED",
+                                        ThemeColor: "FOLLOWED_HYPERLINK",
                                     },
                                 },
                             },
                             Link: &shared.Link{
-                                PageObjectID: "minus",
-                                RelativeLink: "NEXT_SLIDE",
-                                SlideIndex: 959167,
-                                URL: "consectetur",
+                                PageObjectID: "adipisci",
+                                RelativeLink: "FIRST_SLIDE",
+                                SlideIndex: 160538,
+                                URL: "consequatur",
                             },
-                            StartArrow: "FILL_SQUARE",
+                            StartArrow: "OPEN_CIRCLE",
                             StartConnection: &shared.LineConnection{
-                                ConnectedObjectID: "blanditiis",
-                                ConnectionSiteIndex: 590984,
+                                ConnectedObjectID: "quaerat",
+                                ConnectionSiteIndex: 959167,
                             },
                             Weight: &shared.Dimension{
-                                Magnitude: 9537.22,
-                                Unit: "PT",
+                                Magnitude: 2328.65,
+                                Unit: "EMU",
                             },
                         },
-                        ObjectID: "quas",
+                        ObjectID: "blanditiis",
                     },
                     UpdatePageElementAltText: &shared.UpdatePageElementAltTextRequest{
-                        Description: "esse",
-                        ObjectID: "quasi",
+                        Description: "provident",
+                        ObjectID: "a",
                         Title: "Dr.",
                     },
                     UpdatePageElementTransform: &shared.UpdatePageElementTransformRequest{
                         ApplyMode: "RELATIVE",
-                        ObjectID: "sint",
+                        ObjectID: "esse",
                         Transform: &shared.AffineTransform{
-                            ScaleX: 8630.23,
-                            ScaleY: 8207.67,
-                            ShearX: 1576.32,
-                            ShearY: 9088.44,
-                            TranslateX: 9924.3,
-                            TranslateY: 8155.24,
+                            ScaleX: 974.68,
+                            ScaleY: 9518.75,
+                            ShearX: 6216.79,
+                            ShearY: 5757.51,
+                            TranslateX: 8630.23,
+                            TranslateY: 8207.67,
                             Unit: "UNIT_UNSPECIFIED",
                         },
                     },
                     UpdatePageElementsZOrder: &shared.UpdatePageElementsZOrderRequest{
-                        Operation: "Z_ORDER_OPERATION_UNSPECIFIED",
+                        Operation: "SEND_TO_BACK",
                         PageElementObjectIds: []string{
-                            "similique",
+                            "facere",
+                            "veritatis",
+                            "consequuntur",
+                            "quasi",
                         },
                     },
                     UpdatePageProperties: &shared.UpdatePagePropertiesRequest{
-                        Fields: "culpa",
-                        ObjectID: "aliquid",
+                        Fields: "similique",
+                        ObjectID: "culpa",
                         PageProperties: &shared.PageProperties{
                             ColorScheme: &shared.ColorScheme{
                                 Colors: []shared.ThemeColorPair{
                                     shared.ThemeColorPair{
                                         Color: &shared.RgbColor{
-                                            Blue: 627.13,
-                                            Green: 9367.47,
-                                            Red: 4240.32,
+                                            Blue: 9492.98,
+                                            Green: 627.13,
+                                            Red: 9367.47,
                                         },
                                         Type: "ACCENT3",
                                     },
                                     shared.ThemeColorPair{
                                         Color: &shared.RgbColor{
-                                            Blue: 2586.84,
-                                            Green: 7276.97,
-                                            Red: 8490.39,
+                                            Blue: 4473.78,
+                                            Green: 2586.84,
+                                            Red: 7276.97,
                                         },
-                                        Type: "FOLLOWED_HYPERLINK",
+                                        Type: "BACKGROUND1",
+                                    },
+                                },
+                            },
+                            PageBackgroundFill: &shared.PageBackgroundFill{
+                                PropertyState: "INHERIT",
+                                SolidFill: &shared.SolidFill{
+                                    Alpha: 333.04,
+                                    Color: &shared.OpaqueColor{
+                                        RgbColor: &shared.RgbColor{
+                                            Blue: 3069.86,
+                                            Green: 9589.83,
+                                            Red: 1197.71,
+                                        },
+                                        ThemeColor: "ACCENT2",
+                                    },
+                                },
+                                StretchedPictureFill: &shared.StretchedPictureFill{
+                                    ContentURL: "reprehenderit",
+                                    Size: &shared.Size{
+                                        Height: &shared.Dimension{
+                                            Magnitude: 3567.07,
+                                            Unit: "EMU",
+                                        },
+                                        Width: &shared.Dimension{
+                                            Magnitude: 163.28,
+                                            Unit: "EMU",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    UpdateParagraphStyle: &shared.UpdateParagraphStyleRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 185232,
+                            RowIndex: 845358,
+                        },
+                        Fields: "ex",
+                        ObjectID: "deleniti",
+                        Style: &shared.ParagraphStyle{
+                            Alignment: "JUSTIFIED",
+                            Direction: "RIGHT_TO_LEFT",
+                            IndentEnd: &shared.Dimension{
+                                Magnitude: 996.15,
+                                Unit: "EMU",
+                            },
+                            IndentFirstLine: &shared.Dimension{
+                                Magnitude: 9453.02,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                            IndentStart: &shared.Dimension{
+                                Magnitude: 8694.89,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                            LineSpacing: 4541.62,
+                            SpaceAbove: &shared.Dimension{
+                                Magnitude: 559.65,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                            SpaceBelow: &shared.Dimension{
+                                Magnitude: 865.32,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                            SpacingMode: "SPACING_MODE_UNSPECIFIED",
+                        },
+                        TextRange: &shared.Range{
+                            EndIndex: 614465,
+                            StartIndex: 839513,
+                            Type: "RANGE_TYPE_UNSPECIFIED",
+                        },
+                    },
+                    UpdateShapeProperties: &shared.UpdateShapePropertiesRequest{
+                        Fields: "rem",
+                        ObjectID: "aut",
+                        ShapeProperties: &shared.ShapeProperties{
+                            Autofit: &shared.Autofit{
+                                AutofitType: "TEXT_AUTOFIT",
+                                FontScale: 4287.96,
+                                LineSpacingReduction: 6498.32,
+                            },
+                            ContentAlignment: "CONTENT_ALIGNMENT_UNSPECIFIED",
+                            Link: &shared.Link{
+                                PageObjectID: "corrupti",
+                                RelativeLink: "NEXT_SLIDE",
+                                SlideIndex: 32465,
+                                URL: "dolor",
+                            },
+                            Outline: &shared.Outline{
+                                DashStyle: "DASH_DOT",
+                                OutlineFill: &shared.OutlineFill{
+                                    SolidFill: &shared.SolidFill{
+                                        Alpha: 2531.91,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 7710.89,
+                                                Green: 1310.55,
+                                                Red: 3762.26,
+                                            },
+                                            ThemeColor: "THEME_COLOR_TYPE_UNSPECIFIED",
+                                        },
+                                    },
+                                },
+                                PropertyState: "NOT_RENDERED",
+                                Weight: &shared.Dimension{
+                                    Magnitude: 1154.84,
+                                    Unit: "PT",
+                                },
+                            },
+                            Shadow: &shared.Shadow{
+                                Alignment: "RIGHT_CENTER",
+                                Alpha: 2446.51,
+                                BlurRadius: &shared.Dimension{
+                                    Magnitude: 9742.57,
+                                    Unit: "EMU",
+                                },
+                                Color: &shared.OpaqueColor{
+                                    RgbColor: &shared.RgbColor{
+                                        Blue: 9903.45,
+                                        Green: 456.59,
+                                        Red: 4090.54,
+                                    },
+                                    ThemeColor: "ACCENT1",
+                                },
+                                PropertyState: "RENDERED",
+                                RotateWithShape: false,
+                                Transform: &shared.AffineTransform{
+                                    ScaleX: 8315.2,
+                                    ScaleY: 6387.62,
+                                    ShearX: 8070.23,
+                                    ShearY: 4903.05,
+                                    TranslateX: 6400.24,
+                                    TranslateY: 9894.1,
+                                    Unit: "EMU",
+                                },
+                                Type: "SHADOW_TYPE_UNSPECIFIED",
+                            },
+                            ShapeBackgroundFill: &shared.ShapeBackgroundFill{
+                                PropertyState: "RENDERED",
+                                SolidFill: &shared.SolidFill{
+                                    Alpha: 7832.35,
+                                    Color: &shared.OpaqueColor{
+                                        RgbColor: &shared.RgbColor{
+                                            Blue: 8018.36,
+                                            Green: 2883.98,
+                                            Red: 704.47,
+                                        },
+                                        ThemeColor: "LIGHT2",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    UpdateSlideProperties: &shared.UpdateSlidePropertiesRequest{
+                        Fields: "fuga",
+                        ObjectID: "id",
+                        SlideProperties: &shared.SlideProperties{
+                            IsSkipped: false,
+                            LayoutObjectID: "suscipit",
+                            MasterObjectID: "velit",
+                            NotesPage: &shared.Page{},
+                        },
+                    },
+                    UpdateSlidesPosition: &shared.UpdateSlidesPositionRequest{
+                        InsertionIndex: 633931,
+                        SlideObjectIds: []string{
+                            "recusandae",
+                            "totam",
+                            "fugiat",
+                        },
+                    },
+                    UpdateTableBorderProperties: &shared.UpdateTableBorderPropertiesRequest{
+                        BorderPosition: "INNER_HORIZONTAL",
+                        Fields: "ducimus",
+                        ObjectID: "quos",
+                        TableBorderProperties: &shared.TableBorderProperties{
+                            DashStyle: "DOT",
+                            TableBorderFill: &shared.TableBorderFill{
+                                SolidFill: &shared.SolidFill{
+                                    Alpha: 2870.51,
+                                    Color: &shared.OpaqueColor{
+                                        RgbColor: &shared.RgbColor{
+                                            Blue: 8225.6,
+                                            Green: 7065.75,
+                                            Red: 7382.27,
+                                        },
+                                        ThemeColor: "ACCENT3",
+                                    },
+                                },
+                            },
+                            Weight: &shared.Dimension{
+                                Magnitude: 4471.44,
+                                Unit: "EMU",
+                            },
+                        },
+                        TableRange: &shared.TableRange{
+                            ColumnSpan: 968904,
+                            Location: &shared.TableCellLocation{
+                                ColumnIndex: 828657,
+                                RowIndex: 363161,
+                            },
+                            RowSpan: 924967,
+                        },
+                    },
+                    UpdateTableCellProperties: &shared.UpdateTableCellPropertiesRequest{
+                        Fields: "aliquid",
+                        ObjectID: "aperiam",
+                        TableCellProperties: &shared.TableCellProperties{
+                            ContentAlignment: "MIDDLE",
+                            TableCellBackgroundFill: &shared.TableCellBackgroundFill{
+                                PropertyState: "RENDERED",
+                                SolidFill: &shared.SolidFill{
+                                    Alpha: 4490.83,
+                                    Color: &shared.OpaqueColor{
+                                        RgbColor: &shared.RgbColor{
+                                            Blue: 3485.19,
+                                            Green: 9372.85,
+                                            Red: 8149.67,
+                                        },
+                                        ThemeColor: "LIGHT2",
+                                    },
+                                },
+                            },
+                        },
+                        TableRange: &shared.TableRange{
+                            ColumnSpan: 985492,
+                            Location: &shared.TableCellLocation{
+                                ColumnIndex: 381760,
+                                RowIndex: 968972,
+                            },
+                            RowSpan: 697142,
+                        },
+                    },
+                    UpdateTableColumnProperties: &shared.UpdateTableColumnPropertiesRequest{
+                        ColumnIndices: []int{
+                            897071,
+                            296556,
+                            121059,
+                            992012,
+                        },
+                        Fields: "adipisci",
+                        ObjectID: "non",
+                        TableColumnProperties: &shared.TableColumnProperties{
+                            ColumnWidth: &shared.Dimension{
+                                Magnitude: 2282.63,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                        },
+                    },
+                    UpdateTableRowProperties: &shared.UpdateTableRowPropertiesRequest{
+                        Fields: "dignissimos",
+                        ObjectID: "a",
+                        RowIndices: []int{
+                            233420,
+                            358107,
+                            689768,
+                            385237,
+                        },
+                        TableRowProperties: &shared.TableRowProperties{
+                            MinRowHeight: &shared.Dimension{
+                                Magnitude: 583.56,
+                                Unit: "PT",
+                            },
+                        },
+                    },
+                    UpdateTextStyle: &shared.UpdateTextStyleRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 730709,
+                            RowIndex: 113816,
+                        },
+                        Fields: "accusamus",
+                        ObjectID: "similique",
+                        Style: &shared.TextStyle{
+                            BackgroundColor: &shared.OptionalColor{
+                                OpaqueColor: &shared.OpaqueColor{
+                                    RgbColor: &shared.RgbColor{
+                                        Blue: 2724.37,
+                                        Green: 1328.15,
+                                        Red: 3790.57,
+                                    },
+                                    ThemeColor: "ACCENT2",
+                                },
+                            },
+                            BaselineOffset: "NONE",
+                            Bold: false,
+                            FontFamily: "minima",
+                            FontSize: &shared.Dimension{
+                                Magnitude: 7487.89,
+                                Unit: "PT",
+                            },
+                            ForegroundColor: &shared.OptionalColor{
+                                OpaqueColor: &shared.OpaqueColor{
+                                    RgbColor: &shared.RgbColor{
+                                        Blue: 2378.07,
+                                        Green: 7955.35,
+                                        Red: 1718.53,
+                                    },
+                                    ThemeColor: "ACCENT4",
+                                },
+                            },
+                            Italic: false,
+                            Link: &shared.Link{
+                                PageObjectID: "in",
+                                RelativeLink: "NEXT_SLIDE",
+                                SlideIndex: 304468,
+                                URL: "officiis",
+                            },
+                            SmallCaps: false,
+                            Strikethrough: false,
+                            Underline: false,
+                            WeightedFontFamily: &shared.WeightedFontFamily{
+                                FontFamily: "temporibus",
+                                Weight: 351870,
+                            },
+                        },
+                        TextRange: &shared.Range{
+                            EndIndex: 237742,
+                            StartIndex: 738391,
+                            Type: "FROM_START_INDEX",
+                        },
+                    },
+                    UpdateVideoProperties: &shared.UpdateVideoPropertiesRequest{
+                        Fields: "quas",
+                        ObjectID: "hic",
+                        VideoProperties: &shared.VideoProperties{
+                            AutoPlay: false,
+                            End: 201517,
+                            Mute: false,
+                            Outline: &shared.Outline{
+                                DashStyle: "DASH_DOT",
+                                OutlineFill: &shared.OutlineFill{
+                                    SolidFill: &shared.SolidFill{
+                                        Alpha: 5485.19,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 8672.9,
+                                                Green: 5196.43,
+                                                Red: 9402.1,
+                                            },
+                                            ThemeColor: "ACCENT1",
+                                        },
+                                    },
+                                },
+                                PropertyState: "INHERIT",
+                                Weight: &shared.Dimension{
+                                    Magnitude: 246.19,
+                                    Unit: "PT",
+                                },
+                            },
+                            Start: 148829,
+                        },
+                    },
+                },
+                shared.Request{
+                    CreateImage: &shared.CreateImageRequest{
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "reiciendis",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 1318.52,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 7079.18,
+                                    Unit: "EMU",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 7090.72,
+                                ScaleY: 708.69,
+                                ShearX: 6117.49,
+                                ShearY: 2927.94,
+                                TranslateX: 6719.07,
+                                TranslateY: 1523.54,
+                                Unit: "EMU",
+                            },
+                        },
+                        ObjectID: "commodi",
+                        URL: "quidem",
+                    },
+                    CreateLine: &shared.CreateLineRequest{
+                        Category: "LINE_CATEGORY_UNSPECIFIED",
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "voluptas",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 6041.18,
+                                    Unit: "UNIT_UNSPECIFIED",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 3828.08,
+                                    Unit: "PT",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 8953.86,
+                                ScaleY: 724.34,
+                                ShearX: 9677.95,
+                                ShearY: 193,
+                                TranslateX: 5468.85,
+                                TranslateY: 9795.74,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                        },
+                        LineCategory: "STRAIGHT",
+                        ObjectID: "provident",
+                    },
+                    CreateParagraphBullets: &shared.CreateParagraphBulletsRequest{
+                        BulletPreset: "BULLET_ARROW_DIAMOND_DISC",
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 896762,
+                            RowIndex: 215529,
+                        },
+                        ObjectID: "ea",
+                        TextRange: &shared.Range{
+                            EndIndex: 579912,
+                            StartIndex: 552078,
+                            Type: "ALL",
+                        },
+                    },
+                    CreateShape: &shared.CreateShapeRequest{
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "tempora",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 2730.09,
+                                    Unit: "EMU",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 9700.76,
+                                    Unit: "EMU",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 254.97,
+                                ScaleY: 2484.13,
+                                ShearX: 8880.44,
+                                ShearY: 5058.66,
+                                TranslateX: 7086.09,
+                                TranslateY: 3103.81,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                        },
+                        ObjectID: "ipsam",
+                        ShapeType: "FLOW_CHART_PROCESS",
+                    },
+                    CreateSheetsChart: &shared.CreateSheetsChartRequest{
+                        ChartID: 524970,
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "sit",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 7505.95,
+                                    Unit: "EMU",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 3335.07,
+                                    Unit: "UNIT_UNSPECIFIED",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 9241.59,
+                                ScaleY: 9671.22,
+                                ShearX: 8623.19,
+                                ShearY: 1685.76,
+                                TranslateX: 486.9,
+                                TranslateY: 9014.83,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                        },
+                        LinkingMode: "NOT_LINKED_IMAGE",
+                        ObjectID: "in",
+                        SpreadsheetID: "officiis",
+                    },
+                    CreateSlide: &shared.CreateSlideRequest{
+                        InsertionIndex: 104627,
+                        ObjectID: "laudantium",
+                        PlaceholderIDMappings: []shared.LayoutPlaceholderIDMapping{
+                            shared.LayoutPlaceholderIDMapping{
+                                LayoutPlaceholder: &shared.Placeholder{
+                                    Index: 510629,
+                                    ParentObjectID: "cum",
+                                    Type: "DATE_AND_TIME",
+                                },
+                                LayoutPlaceholderObjectID: "dolorum",
+                                ObjectID: "voluptatum",
+                            },
+                            shared.LayoutPlaceholderIDMapping{
+                                LayoutPlaceholder: &shared.Placeholder{
+                                    Index: 622385,
+                                    ParentObjectID: "hic",
+                                    Type: "SLIDE_NUMBER",
+                                },
+                                LayoutPlaceholderObjectID: "debitis",
+                                ObjectID: "neque",
+                            },
+                        },
+                        SlideLayoutReference: &shared.LayoutReference{
+                            LayoutID: "dolorum",
+                            PredefinedLayout: "TITLE_AND_BODY",
+                        },
+                    },
+                    CreateTable: &shared.CreateTableRequest{
+                        Columns: 639028,
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "dolorum",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 5483.61,
+                                    Unit: "PT",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 2726.83,
+                                    Unit: "EMU",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 1482.68,
+                                ScaleY: 2826.99,
+                                ShearX: 8563.03,
+                                ShearY: 302.35,
+                                TranslateX: 6350.57,
+                                TranslateY: 7103.37,
+                                Unit: "UNIT_UNSPECIFIED",
+                            },
+                        },
+                        ObjectID: "consequatur",
+                        Rows: 460220,
+                    },
+                    CreateVideo: &shared.CreateVideoRequest{
+                        ElementProperties: &shared.PageElementProperties{
+                            PageObjectID: "ipsam",
+                            Size: &shared.Size{
+                                Height: &shared.Dimension{
+                                    Magnitude: 245.27,
+                                    Unit: "EMU",
+                                },
+                                Width: &shared.Dimension{
+                                    Magnitude: 5580.65,
+                                    Unit: "PT",
+                                },
+                            },
+                            Transform: &shared.AffineTransform{
+                                ScaleX: 3611.51,
+                                ScaleY: 894.94,
+                                ShearX: 5027.1,
+                                ShearY: 4059.42,
+                                TranslateX: 1536.27,
+                                TranslateY: 243.13,
+                                Unit: "EMU",
+                            },
+                        },
+                        ID: "nostrum",
+                        ObjectID: "saepe",
+                        Source: "YOUTUBE",
+                    },
+                    DeleteObject: &shared.DeleteObjectRequest{
+                        ObjectID: "consequatur",
+                    },
+                    DeleteParagraphBullets: &shared.DeleteParagraphBulletsRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 279068,
+                            RowIndex: 968865,
+                        },
+                        ObjectID: "dolorem",
+                        TextRange: &shared.Range{
+                            EndIndex: 690894,
+                            StartIndex: 115703,
+                            Type: "RANGE_TYPE_UNSPECIFIED",
+                        },
+                    },
+                    DeleteTableColumn: &shared.DeleteTableColumnRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 577140,
+                            RowIndex: 289776,
+                        },
+                        TableObjectID: "quidem",
+                    },
+                    DeleteTableRow: &shared.DeleteTableRowRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 539074,
+                            RowIndex: 671957,
+                        },
+                        TableObjectID: "nam",
+                    },
+                    DeleteText: &shared.DeleteTextRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 948861,
+                            RowIndex: 388867,
+                        },
+                        ObjectID: "alias",
+                        TextRange: &shared.Range{
+                            EndIndex: 227084,
+                            StartIndex: 647197,
+                            Type: "FIXED_RANGE",
+                        },
+                    },
+                    DuplicateObject: &shared.DuplicateObjectRequest{
+                        ObjectID: "unde",
+                        ObjectIds: map[string]string{
+                            "provident": "repellendus",
+                            "delectus": "voluptates",
+                            "perferendis": "est",
+                            "quidem": "reprehenderit",
+                        },
+                    },
+                    GroupObjects: &shared.GroupObjectsRequest{
+                        ChildrenObjectIds: []string{
+                            "fuga",
+                            "praesentium",
+                            "mollitia",
+                            "veniam",
+                        },
+                        GroupObjectID: "voluptatem",
+                    },
+                    InsertTableColumns: &shared.InsertTableColumnsRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 790840,
+                            RowIndex: 919532,
+                        },
+                        InsertRight: false,
+                        Number: 97243,
+                        TableObjectID: "atque",
+                    },
+                    InsertTableRows: &shared.InsertTableRowsRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 442036,
+                            RowIndex: 991142,
+                        },
+                        InsertBelow: false,
+                        Number: 519952,
+                        TableObjectID: "suscipit",
+                    },
+                    InsertText: &shared.InsertTextRequest{
+                        CellLocation: &shared.TableCellLocation{
+                            ColumnIndex: 693957,
+                            RowIndex: 806670,
+                        },
+                        InsertionIndex: 90885,
+                        ObjectID: "esse",
+                        Text: "amet",
+                    },
+                    MergeTableCells: &shared.MergeTableCellsRequest{
+                        ObjectID: "assumenda",
+                        TableRange: &shared.TableRange{
+                            ColumnSpan: 410301,
+                            Location: &shared.TableCellLocation{
+                                ColumnIndex: 539118,
+                                RowIndex: 623295,
+                            },
+                            RowSpan: 887265,
+                        },
+                    },
+                    RefreshSheetsChart: &shared.RefreshSheetsChartRequest{
+                        ObjectID: "officiis",
+                    },
+                    ReplaceAllShapesWithImage: &shared.ReplaceAllShapesWithImageRequest{
+                        ContainsText: &shared.SubstringMatchCriteria{
+                            MatchCase: false,
+                            Text: "accusamus",
+                        },
+                        ImageReplaceMethod: "CENTER_INSIDE",
+                        ImageURL: "minima",
+                        PageObjectIds: []string{
+                            "ex",
+                        },
+                        ReplaceMethod: "CENTER_CROP",
+                    },
+                    ReplaceAllShapesWithSheetsChart: &shared.ReplaceAllShapesWithSheetsChartRequest{
+                        ChartID: 544647,
+                        ContainsText: &shared.SubstringMatchCriteria{
+                            MatchCase: false,
+                            Text: "at",
+                        },
+                        LinkingMode: "LINKED",
+                        PageObjectIds: []string{
+                            "suscipit",
+                            "repudiandae",
+                            "atque",
+                        },
+                        SpreadsheetID: "atque",
+                    },
+                    ReplaceAllText: &shared.ReplaceAllTextRequest{
+                        ContainsText: &shared.SubstringMatchCriteria{
+                            MatchCase: false,
+                            Text: "sunt",
+                        },
+                        PageObjectIds: []string{
+                            "dolorum",
+                            "repellendus",
+                            "labore",
+                            "reiciendis",
+                        },
+                        ReplaceText: "doloremque",
+                    },
+                    ReplaceImage: &shared.ReplaceImageRequest{
+                        ImageObjectID: "repudiandae",
+                        ImageReplaceMethod: "IMAGE_REPLACE_METHOD_UNSPECIFIED",
+                        URL: "accusantium",
+                    },
+                    RerouteLine: &shared.RerouteLineRequest{
+                        ObjectID: "beatae",
+                    },
+                    UngroupObjects: &shared.UngroupObjectsRequest{
+                        ObjectIds: []string{
+                            "enim",
+                        },
+                    },
+                    UnmergeTableCells: &shared.UnmergeTableCellsRequest{
+                        ObjectID: "laboriosam",
+                        TableRange: &shared.TableRange{
+                            ColumnSpan: 246535,
+                            Location: &shared.TableCellLocation{
+                                ColumnIndex: 952143,
+                                RowIndex: 562783,
+                            },
+                            RowSpan: 300029,
+                        },
+                    },
+                    UpdateImageProperties: &shared.UpdateImagePropertiesRequest{
+                        Fields: "saepe",
+                        ImageProperties: &shared.ImageProperties{
+                            Brightness: 1604.67,
+                            Contrast: 5801.07,
+                            CropProperties: &shared.CropProperties{
+                                Angle: 8863.05,
+                                BottomOffset: 5979.37,
+                                LeftOffset: 4463.94,
+                                RightOffset: 2380.43,
+                                TopOffset: 9078.76,
+                            },
+                            Link: &shared.Link{
+                                PageObjectID: "occaecati",
+                                RelativeLink: "RELATIVE_SLIDE_LINK_UNSPECIFIED",
+                                SlideIndex: 145870,
+                                URL: "id",
+                            },
+                            Outline: &shared.Outline{
+                                DashStyle: "DOT",
+                                OutlineFill: &shared.OutlineFill{
+                                    SolidFill: &shared.SolidFill{
+                                        Alpha: 4402.64,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 6255.28,
+                                                Green: 764.86,
+                                                Red: 3613.06,
+                                            },
+                                            ThemeColor: "HYPERLINK",
+                                        },
+                                    },
+                                },
+                                PropertyState: "INHERIT",
+                                Weight: &shared.Dimension{
+                                    Magnitude: 2473.99,
+                                    Unit: "PT",
+                                },
+                            },
+                            Recolor: &shared.Recolor{
+                                Name: "NONE",
+                                RecolorStops: []shared.ColorStop{
+                                    shared.ColorStop{
+                                        Alpha: 599.44,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 5176.12,
+                                                Green: 610.78,
+                                                Red: 4746.68,
+                                            },
+                                            ThemeColor: "TEXT2",
+                                        },
+                                        Position: 1843.62,
+                                    },
+                                    shared.ColorStop{
+                                        Alpha: 7398.84,
+                                        Color: &shared.OpaqueColor{
+                                            RgbColor: &shared.RgbColor{
+                                                Blue: 4347.61,
+                                                Green: 8980.63,
+                                                Red: 1875.52,
+                                            },
+                                            ThemeColor: "HYPERLINK",
+                                        },
+                                        Position: 7152.08,
+                                    },
+                                },
+                            },
+                            Shadow: &shared.Shadow{
+                                Alignment: "CENTER",
+                                Alpha: 5230.06,
+                                BlurRadius: &shared.Dimension{
+                                    Magnitude: 3044.46,
+                                    Unit: "UNIT_UNSPECIFIED",
+                                },
+                                Color: &shared.OpaqueColor{
+                                    RgbColor: &shared.RgbColor{
+                                        Blue: 9979.63,
+                                        Green: 30.99,
+                                        Red: 3621.89,
+                                    },
+                                    ThemeColor: "ACCENT6",
+                                },
+                                PropertyState: "NOT_RENDERED",
+                                RotateWithShape: false,
+                                Transform: &shared.AffineTransform{
+                                    ScaleX: 6490.78,
+                                    ScaleY: 3782.45,
+                                    ShearX: 51.89,
+                                    ShearY: 9795.27,
+                                    TranslateX: 9702.22,
+                                    TranslateY: 1746.58,
+                                    Unit: "EMU",
+                                },
+                                Type: "SHADOW_TYPE_UNSPECIFIED",
+                            },
+                            Transparency: 2931.44,
+                        },
+                        ObjectID: "dolorum",
+                    },
+                    UpdateLineCategory: &shared.UpdateLineCategoryRequest{
+                        LineCategory: "LINE_CATEGORY_UNSPECIFIED",
+                        ObjectID: "quae",
+                    },
+                    UpdateLineProperties: &shared.UpdateLinePropertiesRequest{
+                        Fields: "recusandae",
+                        LineProperties: &shared.LineProperties{
+                            DashStyle: "DASH_DOT",
+                            EndArrow: "FILL_ARROW",
+                            EndConnection: &shared.LineConnection{
+                                ConnectedObjectID: "molestiae",
+                                ConnectionSiteIndex: 403218,
+                            },
+                            LineFill: &shared.LineFill{
+                                SolidFill: &shared.SolidFill{
+                                    Alpha: 2840,
+                                    Color: &shared.OpaqueColor{
+                                        RgbColor: &shared.RgbColor{
+                                            Blue: 6330.62,
+                                            Green: 2384.13,
+                                            Red: 8906.53,
+                                        },
+                                        ThemeColor: "ACCENT4",
+                                    },
+                                },
+                            },
+                            Link: &shared.Link{
+                                PageObjectID: "eum",
+                                RelativeLink: "NEXT_SLIDE",
+                                SlideIndex: 928219,
+                                URL: "esse",
+                            },
+                            StartArrow: "FILL_DIAMOND",
+                            StartConnection: &shared.LineConnection{
+                                ConnectedObjectID: "quis",
+                                ConnectionSiteIndex: 431785,
+                            },
+                            Weight: &shared.Dimension{
+                                Magnitude: 9704.94,
+                                Unit: "EMU",
+                            },
+                        },
+                        ObjectID: "aspernatur",
+                    },
+                    UpdatePageElementAltText: &shared.UpdatePageElementAltTextRequest{
+                        Description: "ullam",
+                        ObjectID: "quasi",
+                        Title: "Miss",
+                    },
+                    UpdatePageElementTransform: &shared.UpdatePageElementTransformRequest{
+                        ApplyMode: "RELATIVE",
+                        ObjectID: "mollitia",
+                        Transform: &shared.AffineTransform{
+                            ScaleX: 5910.27,
+                            ScaleY: 8217.19,
+                            ShearX: 6591.77,
+                            ShearY: 4027.67,
+                            TranslateX: 3972.57,
+                            TranslateY: 375.65,
+                            Unit: "PT",
+                        },
+                    },
+                    UpdatePageElementsZOrder: &shared.UpdatePageElementsZOrderRequest{
+                        Operation: "SEND_TO_BACK",
+                        PageElementObjectIds: []string{
+                            "in",
+                            "nam",
+                        },
+                    },
+                    UpdatePageProperties: &shared.UpdatePagePropertiesRequest{
+                        Fields: "earum",
+                        ObjectID: "officia",
+                        PageProperties: &shared.PageProperties{
+                            ColorScheme: &shared.ColorScheme{
+                                Colors: []shared.ThemeColorPair{
+                                    shared.ThemeColorPair{
+                                        Color: &shared.RgbColor{
+                                            Blue: 8130.54,
+                                            Green: 2666.97,
+                                            Red: 9762.26,
+                                        },
+                                        Type: "ACCENT5",
                                     },
                                     shared.ThemeColorPair{
                                         Color: &shared.RgbColor{
-                                            Blue: 333.04,
-                                            Green: 3069.86,
-                                            Red: 9589.83,
+                                            Blue: 8897.94,
+                                            Green: 9569.33,
+                                            Red: 7645.62,
                                         },
-                                        Type: "LIGHT1",
+                                        Type: "DARK1",
                                     },
                                     shared.ThemeColorPair{
                                         Color: &shared.RgbColor{
-                                            Blue: 3553.69,
-                                            Green: 4438.79,
-                                            Red: 3567.07,
+                                            Blue: 6982.49,
+                                            Green: 2722.29,
+                                            Red: 3354.98,
                                         },
-                                        Type: "ACCENT2",
+                                        Type: "DARK1",
                                     },
                                 },
                             },
                             PageBackgroundFill: &shared.PageBackgroundFill{
                                 PropertyState: "RENDERED",
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 5318.49,
+                                    Alpha: 7652.71,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 1852.32,
-                                            Green: 8453.58,
-                                            Red: 4012.59,
+                                            Blue: 626.36,
+                                            Green: 216.88,
+                                            Red: 2419.01,
                                         },
-                                        ThemeColor: "ACCENT5",
+                                        ThemeColor: "LIGHT1",
                                     },
                                 },
                                 StretchedPictureFill: &shared.StretchedPictureFill{
-                                    ContentURL: "itaque",
+                                    ContentURL: "eum",
                                     Size: &shared.Size{
                                         Height: &shared.Dimension{
-                                            Magnitude: 6802.7,
-                                            Unit: "UNIT_UNSPECIFIED",
+                                            Magnitude: 2606.28,
+                                            Unit: "EMU",
                                         },
                                         Width: &shared.Dimension{
-                                            Magnitude: 6091.78,
+                                            Magnitude: 8710.83,
                                             Unit: "PT",
                                         },
                                     },
@@ -1600,333 +2490,345 @@ func main() {
                     },
                     UpdateParagraphStyle: &shared.UpdateParagraphStyleRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 98478,
-                            RowIndex: 869489,
+                            ColumnIndex: 179410,
+                            RowIndex: 958741,
                         },
-                        Fields: "et",
-                        ObjectID: "voluptate",
+                        Fields: "eum",
+                        ObjectID: "dicta",
                         Style: &shared.ParagraphStyle{
-                            Alignment: "ALIGNMENT_UNSPECIFIED",
+                            Alignment: "START",
                             Direction: "TEXT_DIRECTION_UNSPECIFIED",
                             IndentEnd: &shared.Dimension{
-                                Magnitude: 865.32,
-                                Unit: "UNIT_UNSPECIFIED",
-                            },
-                            IndentFirstLine: &shared.Dimension{
-                                Magnitude: 2371.73,
+                                Magnitude: 5834.04,
                                 Unit: "EMU",
                             },
-                            IndentStart: &shared.Dimension{
-                                Magnitude: 8395.13,
-                                Unit: "UNIT_UNSPECIFIED",
+                            IndentFirstLine: &shared.Dimension{
+                                Magnitude: 9364.69,
+                                Unit: "PT",
                             },
-                            LineSpacing: 5223.71,
+                            IndentStart: &shared.Dimension{
+                                Magnitude: 9407.82,
+                                Unit: "PT",
+                            },
+                            LineSpacing: 525.08,
                             SpaceAbove: &shared.Dimension{
-                                Magnitude: 156.06,
+                                Magnitude: 9358.33,
                                 Unit: "EMU",
                             },
                             SpaceBelow: &shared.Dimension{
-                                Magnitude: 4287.96,
-                                Unit: "EMU",
+                                Magnitude: 9834.27,
+                                Unit: "PT",
                             },
-                            SpacingMode: "SPACING_MODE_UNSPECIFIED",
+                            SpacingMode: "NEVER_COLLAPSE",
                         },
                         TextRange: &shared.Range{
-                            EndIndex: 544591,
-                            StartIndex: 251941,
+                            EndIndex: 780931,
+                            StartIndex: 380335,
                             Type: "RANGE_TYPE_UNSPECIFIED",
                         },
                     },
                     UpdateShapeProperties: &shared.UpdateShapePropertiesRequest{
-                        Fields: "dolor",
-                        ObjectID: "occaecati",
+                        Fields: "fugit",
+                        ObjectID: "cumque",
                         ShapeProperties: &shared.ShapeProperties{
                             Autofit: &shared.Autofit{
-                                AutofitType: "NONE",
-                                FontScale: 7710.89,
-                                LineSpacingReduction: 1310.55,
+                                AutofitType: "TEXT_AUTOFIT",
+                                FontScale: 1890.62,
+                                LineSpacingReduction: 6567.62,
                             },
-                            ContentAlignment: "CONTENT_ALIGNMENT_UNSUPPORTED",
+                            ContentAlignment: "BOTTOM",
                             Link: &shared.Link{
-                                PageObjectID: "aut",
-                                RelativeLink: "PREVIOUS_SLIDE",
-                                SlideIndex: 115484,
-                                URL: "maiores",
+                                PageObjectID: "nulla",
+                                RelativeLink: "RELATIVE_SLIDE_LINK_UNSPECIFIED",
+                                SlideIndex: 97258,
+                                URL: "et",
                             },
                             Outline: &shared.Outline{
-                                DashStyle: "DASH_DOT",
+                                DashStyle: "DASH",
                                 OutlineFill: &shared.OutlineFill{
                                     SolidFill: &shared.SolidFill{
-                                        Alpha: 2446.51,
+                                        Alpha: 6191.83,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 9742.57,
-                                                Green: 3743.23,
-                                                Red: 9903.45,
+                                                Blue: 5810.82,
+                                                Green: 3824.4,
+                                                Red: 2415.57,
                                             },
-                                            ThemeColor: "THEME_COLOR_TYPE_UNSPECIFIED",
+                                            ThemeColor: "DARK1",
                                         },
                                     },
                                 },
-                                PropertyState: "NOT_RENDERED",
+                                PropertyState: "RENDERED",
                                 Weight: &shared.Dimension{
-                                    Magnitude: 3100.67,
-                                    Unit: "UNIT_UNSPECIFIED",
+                                    Magnitude: 9849.34,
+                                    Unit: "PT",
                                 },
                             },
                             Shadow: &shared.Shadow{
                                 Alignment: "BOTTOM_CENTER",
-                                Alpha: 6387.62,
+                                Alpha: 585.34,
                                 BlurRadius: &shared.Dimension{
-                                    Magnitude: 8070.23,
+                                    Magnitude: 2711.13,
                                     Unit: "EMU",
                                 },
                                 Color: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 6400.24,
-                                        Green: 9894.1,
-                                        Red: 3681.02,
+                                        Blue: 4731.9,
+                                        Green: 1158.34,
+                                        Red: 4797.54,
                                     },
-                                    ThemeColor: "DARK1",
+                                    ThemeColor: "ACCENT3",
                                 },
-                                PropertyState: "RENDERED",
+                                PropertyState: "NOT_RENDERED",
                                 RotateWithShape: false,
                                 Transform: &shared.AffineTransform{
-                                    ScaleX: 7832.35,
-                                    ScaleY: 8018.36,
-                                    ShearX: 2883.98,
-                                    ShearY: 704.47,
-                                    TranslateX: 2414.18,
-                                    TranslateY: 6835.73,
-                                    Unit: "EMU",
+                                    ScaleX: 9799.63,
+                                    ScaleY: 9672.6,
+                                    ShearX: 4237.06,
+                                    ShearY: 999.58,
+                                    TranslateX: 8571.25,
+                                    TranslateY: 396.5,
+                                    Unit: "UNIT_UNSPECIFIED",
                                 },
                                 Type: "SHADOW_TYPE_UNSPECIFIED",
                             },
                             ShapeBackgroundFill: &shared.ShapeBackgroundFill{
                                 PropertyState: "RENDERED",
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 6339.31,
+                                    Alpha: 4582.59,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 6658.59,
-                                            Green: 9268.8,
-                                            Red: 5173.09,
+                                            Blue: 4037.93,
+                                            Green: 2352.63,
+                                            Red: 3998.12,
                                         },
-                                        ThemeColor: "BACKGROUND1",
+                                        ThemeColor: "DARK1",
                                     },
                                 },
                             },
                         },
                     },
                     UpdateSlideProperties: &shared.UpdateSlidePropertiesRequest{
-                        Fields: "vel",
-                        ObjectID: "ducimus",
+                        Fields: "laborum",
+                        ObjectID: "sunt",
                         SlideProperties: &shared.SlideProperties{
                             IsSkipped: false,
-                            LayoutObjectID: "quos",
-                            MasterObjectID: "vel",
+                            LayoutObjectID: "nostrum",
+                            MasterObjectID: "fugiat",
                             NotesPage: &shared.Page{},
                         },
                     },
                     UpdateSlidesPosition: &shared.UpdateSlidesPositionRequest{
-                        InsertionIndex: 287051,
+                        InsertionIndex: 713767,
                         SlideObjectIds: []string{
-                            "facilis",
-                            "cum",
-                            "commodi",
-                            "in",
+                            "officia",
+                            "suscipit",
                         },
                     },
                     UpdateTableBorderProperties: &shared.UpdateTableBorderPropertiesRequest{
                         BorderPosition: "INNER_HORIZONTAL",
-                        Fields: "reiciendis",
-                        ObjectID: "assumenda",
+                        Fields: "perferendis",
+                        ObjectID: "eum",
                         TableBorderProperties: &shared.TableBorderProperties{
                             DashStyle: "DOT",
                             TableBorderFill: &shared.TableBorderFill{
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 9249.67,
+                                    Alpha: 6145.28,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 3975.33,
-                                            Green: 460.07,
-                                            Red: 7386.83,
+                                            Blue: 6616.07,
+                                            Green: 700.42,
+                                            Red: 6253.58,
                                         },
-                                        ThemeColor: "DARK2",
+                                        ThemeColor: "TEXT1",
                                     },
                                 },
                             },
                             Weight: &shared.Dimension{
-                                Magnitude: 4490.83,
+                                Magnitude: 9139.92,
                                 Unit: "EMU",
                             },
                         },
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 937285,
+                            ColumnSpan: 671794,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 814967,
-                                RowIndex: 257233,
+                                ColumnIndex: 726343,
+                                RowIndex: 324083,
                             },
-                            RowSpan: 985492,
+                            RowSpan: 536923,
                         },
                     },
                     UpdateTableCellProperties: &shared.UpdateTableCellPropertiesRequest{
-                        Fields: "suscipit",
-                        ObjectID: "reiciendis",
+                        Fields: "enim",
+                        ObjectID: "vitae",
                         TableCellProperties: &shared.TableCellProperties{
-                            ContentAlignment: "MIDDLE",
+                            ContentAlignment: "BOTTOM",
                             TableCellBackgroundFill: &shared.TableCellBackgroundFill{
-                                PropertyState: "INHERIT",
+                                PropertyState: "NOT_RENDERED",
                                 SolidFill: &shared.SolidFill{
-                                    Alpha: 8970.71,
+                                    Alpha: 7758.03,
                                     Color: &shared.OpaqueColor{
                                         RgbColor: &shared.RgbColor{
-                                            Blue: 2965.56,
-                                            Green: 1210.59,
-                                            Red: 9920.12,
+                                            Blue: 4053.73,
+                                            Green: 2811.53,
+                                            Red: 3210.43,
                                         },
-                                        ThemeColor: "LIGHT2",
+                                        ThemeColor: "FOLLOWED_HYPERLINK",
                                     },
                                 },
                             },
                         },
                         TableRange: &shared.TableRange{
-                            ColumnSpan: 249420,
+                            ColumnSpan: 29950,
                             Location: &shared.TableCellLocation{
-                                ColumnIndex: 228263,
-                                RowIndex: 105906,
+                                ColumnIndex: 561577,
+                                RowIndex: 737254,
                             },
-                            RowSpan: 489509,
+                            RowSpan: 399660,
                         },
                     },
                     UpdateTableColumnProperties: &shared.UpdateTableColumnPropertiesRequest{
                         ColumnIndices: []int{
-                            891523,
-                            233420,
-                            358107,
-                            689768,
+                            530860,
                         },
-                        Fields: "laboriosam",
-                        ObjectID: "ipsa",
+                        Fields: "omnis",
+                        ObjectID: "veritatis",
                         TableColumnProperties: &shared.TableColumnProperties{
                             ColumnWidth: &shared.Dimension{
-                                Magnitude: 9167.27,
-                                Unit: "PT",
+                                Magnitude: 7032.18,
+                                Unit: "EMU",
                             },
                         },
                     },
                     UpdateTableRowProperties: &shared.UpdateTableRowPropertiesRequest{
-                        Fields: "vitae",
-                        ObjectID: "accusamus",
+                        Fields: "culpa",
+                        ObjectID: "voluptatem",
                         RowIndices: []int{
-                            272437,
-                            132815,
-                            379057,
+                            889288,
+                            103298,
+                            682119,
+                            867168,
                         },
                         TableRowProperties: &shared.TableRowProperties{
                             MinRowHeight: &shared.Dimension{
-                                Magnitude: 3742.44,
-                                Unit: "EMU",
+                                Magnitude: 8913.15,
+                                Unit: "UNIT_UNSPECIFIED",
                             },
                         },
                     },
                     UpdateTextStyle: &shared.UpdateTextStyleRequest{
                         CellLocation: &shared.TableCellLocation{
-                            ColumnIndex: 324405,
-                            RowIndex: 748789,
+                            ColumnIndex: 1207,
+                            RowIndex: 534917,
                         },
-                        Fields: "dolorum",
-                        ObjectID: "adipisci",
+                        Fields: "earum",
+                        ObjectID: "ex",
                         Style: &shared.TextStyle{
                             BackgroundColor: &shared.OptionalColor{
                                 OpaqueColor: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 7955.35,
-                                        Green: 1718.53,
-                                        Red: 5039.34,
+                                        Blue: 9583.08,
+                                        Green: 5241.84,
+                                        Red: 7963.2,
                                     },
-                                    ThemeColor: "ACCENT3",
+                                    ThemeColor: "ACCENT2",
                                 },
                             },
-                            BaselineOffset: "NONE",
+                            BaselineOffset: "SUBSCRIPT",
                             Bold: false,
-                            FontFamily: "aliquam",
+                            FontFamily: "ratione",
                             FontSize: &shared.Dimension{
-                                Magnitude: 8859.63,
-                                Unit: "PT",
+                                Magnitude: 3552.25,
+                                Unit: "UNIT_UNSPECIFIED",
                             },
                             ForegroundColor: &shared.OptionalColor{
                                 OpaqueColor: &shared.OpaqueColor{
                                     RgbColor: &shared.RgbColor{
-                                        Blue: 3518.7,
-                                        Green: 2377.42,
-                                        Red: 7383.91,
+                                        Blue: 8483.41,
+                                        Green: 5181.5,
+                                        Red: 7706.75,
                                     },
-                                    ThemeColor: "ACCENT4",
+                                    ThemeColor: "BACKGROUND1",
                                 },
                             },
                             Italic: false,
                             Link: &shared.Link{
-                                PageObjectID: "quas",
-                                RelativeLink: "LAST_SLIDE",
-                                SlideIndex: 201517,
-                                URL: "culpa",
+                                PageObjectID: "nam",
+                                RelativeLink: "NEXT_SLIDE",
+                                SlideIndex: 633415,
+                                URL: "dolor",
                             },
                             SmallCaps: false,
                             Strikethrough: false,
                             Underline: false,
                             WeightedFontFamily: &shared.WeightedFontFamily{
-                                FontFamily: "corrupti",
-                                Weight: 867290,
+                                FontFamily: "aliquam",
+                                Weight: 80532,
                             },
                         },
                         TextRange: &shared.Range{
-                            EndIndex: 519643,
-                            StartIndex: 940210,
+                            EndIndex: 537279,
+                            StartIndex: 85311,
                             Type: "FIXED_RANGE",
                         },
                     },
                     UpdateVideoProperties: &shared.UpdateVideoPropertiesRequest{
-                        Fields: "nobis",
-                        ObjectID: "sit",
+                        Fields: "dolor",
+                        ObjectID: "consequatur",
                         VideoProperties: &shared.VideoProperties{
                             AutoPlay: false,
-                            End: 699575,
+                            End: 100014,
                             Mute: false,
                             Outline: &shared.Outline{
-                                DashStyle: "SOLID",
+                                DashStyle: "DASH_STYLE_UNSPECIFIED",
                                 OutlineFill: &shared.OutlineFill{
                                     SolidFill: &shared.SolidFill{
-                                        Alpha: 9679.66,
+                                        Alpha: 2650.39,
                                         Color: &shared.OpaqueColor{
                                             RgbColor: &shared.RgbColor{
-                                                Blue: 1318.52,
-                                                Green: 9944.01,
-                                                Red: 7079.18,
+                                                Blue: 1442.86,
+                                                Green: 661.49,
+                                                Red: 5137.6,
                                             },
-                                            ThemeColor: "ACCENT3",
+                                            ThemeColor: "DARK1",
                                         },
                                     },
                                 },
-                                PropertyState: "INHERIT",
+                                PropertyState: "RENDERED",
                                 Weight: &shared.Dimension{
-                                    Magnitude: 708.69,
+                                    Magnitude: 8562.77,
                                     Unit: "EMU",
                                 },
                             },
-                            Start: 292794,
+                            Start: 162120,
                         },
                     },
                 },
             },
             WriteControl: &shared.WriteControl{
-                RequiredRevisionID: "laborum",
+                RequiredRevisionID: "ipsa",
             },
         },
+        AccessToken: "quas",
+        Alt: "proto",
+        Callback: "impedit",
+        Fields: "officiis",
+        Key: "esse",
+        OauthToken: "necessitatibus",
+        PresentationID: "sed",
+        PrettyPrint: false,
+        QuotaUser: "veniam",
+        UploadType: "nesciunt",
+        UploadProtocol: "expedita",
     }
 
     ctx := context.Background()
-    res, err := s.Presentations.SlidesPresentationsBatchUpdate(ctx, req)
+    res, err := s.Presentations.SlidesPresentationsBatchUpdate(ctx, req, operations.SlidesPresentationsBatchUpdateSecurity{
+        Option1: &operations.SlidesPresentationsBatchUpdateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1939,7 +2841,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Presentations
@@ -1951,4 +2853,15 @@ func main() {
 * `SlidesPresentationsPagesGetThumbnail` - Generates a thumbnail of the latest version of the specified page in the presentation and returns a URL to the thumbnail image. This request counts as an [expensive read request](/slides/limits) for quota purposes.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

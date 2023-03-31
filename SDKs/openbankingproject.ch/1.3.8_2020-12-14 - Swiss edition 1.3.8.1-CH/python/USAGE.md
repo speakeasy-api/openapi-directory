@@ -4,126 +4,163 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-s.config_security(
-    security=shared.Security(
-        bearer_auth_o_auth=shared.SchemeBearerAuthOAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
+
+
 req = operations.CreateConsentRequest(
-    security=operations.CreateConsentSecurity(
-        bearer_auth_o_auth=shared.SchemeBearerAuthOAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    ),
-    headers=operations.CreateConsentHeaders(
-        digest="autem",
-        psu_accept="dolorum",
-        psu_accept_charset="exercitationem",
-        psu_accept_encoding="facilis",
-        psu_accept_language="possimus",
-        psu_corporate_id="et",
-        psu_corporate_id_type="nisi",
-        psu_device_id="sed",
-        psu_geo_location="esse",
-        psu_http_method="GET",
-        psu_id="quo",
-        psu_id_type="aspernatur",
-        psu_ip_address="est",
-        psu_ip_port="sapiente",
-        psu_user_agent="ea",
-        signature="blanditiis",
-        tpp_brand_logging_information="facere",
-        tpp_explicit_authorisation_preferred=True,
-        tpp_nok_redirect_uri="quasi",
-        tpp_notification_content_preferred="voluptas",
-        tpp_notification_uri="qui",
-        tpp_redirect_preferred=False,
-        tpp_redirect_uri="enim",
-        tpp_signature_certificate="quis",
-        x_request_id="iure",
-    ),
-    request=shared.Consents(
+    digest="corrupti",
+    psu_accept="provident",
+    psu_accept_charset="distinctio",
+    psu_accept_encoding="quibusdam",
+    psu_accept_language="unde",
+    psu_corporate_id="nulla",
+    psu_corporate_id_type="corrupti",
+    psu_device_id="illum",
+    psu_geo_location="vel",
+    psu_http_method="PATCH",
+    psu_id="deserunt",
+    psu_id_type="suscipit",
+    psu_ip_address="112.76.228.14",
+    psu_ip_port="delectus",
+    psu_user_agent="tempora",
+    signature="suscipit",
+    tpp_brand_logging_information="molestiae",
+    tpp_explicit_authorisation_preferred=False,
+    tpp_nok_redirect_uri="https://studious-lynx.info",
+    tpp_notification_content_preferred="excepturi",
+    tpp_notification_uri="nisi",
+    tpp_redirect_preferred=False,
+    tpp_redirect_uri="https://tangible-bathroom.info",
+    tpp_signature_certificate="veritatis",
+    x_request_id="deserunt",
+    consents=shared.Consents(
         access=shared.AccountAccess(
             accounts=[
-                shared.AccountReference16Ch(
-                    cash_account_type="labore",
-                    currency="incidunt",
-                    iban="rerum",
-                    other_account_identification="praesentium",
+                shared.AccountReference16CH(
+                    cash_account_type="ipsam",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
                 ),
             ],
             additional_information=shared.AdditionalInformationAccess(
                 owner_name=[
-                    shared.AccountReference16Ch(
-                        cash_account_type="excepturi",
-                        currency="quaerat",
-                        iban="commodi",
-                        other_account_identification="quae",
+                    shared.AccountReference16CH(
+                        cash_account_type="sapiente",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
                     ),
-                    shared.AccountReference16Ch(
-                        cash_account_type="esse",
-                        currency="enim",
-                        iban="et",
-                        other_account_identification="et",
+                    shared.AccountReference16CH(
+                        cash_account_type="quo",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
                     ),
-                    shared.AccountReference16Ch(
-                        cash_account_type="tempore",
-                        currency="occaecati",
-                        iban="tempore",
-                        other_account_identification="maxime",
+                    shared.AccountReference16CH(
+                        cash_account_type="odit",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
+                    ),
+                    shared.AccountReference16CH(
+                        cash_account_type="at",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
                     ),
                 ],
                 trusted_beneficiaries=[
-                    shared.AccountReference16Ch(
-                        cash_account_type="explicabo",
-                        currency="pariatur",
-                        iban="modi",
-                        other_account_identification="id",
+                    shared.AccountReference16CH(
+                        cash_account_type="maiores",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
+                    ),
+                    shared.AccountReference16CH(
+                        cash_account_type="molestiae",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
+                    ),
+                    shared.AccountReference16CH(
+                        cash_account_type="quod",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
+                    ),
+                    shared.AccountReference16CH(
+                        cash_account_type="quod",
+                        currency="EUR",
+                        iban="FR7612345987650123456789014",
+                        other_account_identification="90-100100-0",
                     ),
                 ],
             ),
-            all_psd2="allAccountsWithOwnerName",
-            available_accounts="allAccounts",
-            available_accounts_with_balance="allAccounts",
+            all_psd2="allAccounts",
+            available_accounts="allAccountsWithOwnerName",
+            available_accounts_with_balance="allAccountsWithOwnerName",
             balances=[
-                shared.AccountReference16Ch(
-                    cash_account_type="aut",
-                    currency="earum",
-                    iban="omnis",
-                    other_account_identification="minima",
+                shared.AccountReference16CH(
+                    cash_account_type="dicta",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
+                ),
+                shared.AccountReference16CH(
+                    cash_account_type="nam",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
+                ),
+                shared.AccountReference16CH(
+                    cash_account_type="officia",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
                 ),
             ],
             restricted_to=[
-                "impedit",
-                "et",
-                "rerum",
+                "fugit",
+                "deleniti",
+                "hic",
             ],
             transactions=[
-                shared.AccountReference16Ch(
-                    cash_account_type="in",
-                    currency="porro",
-                    iban="aut",
-                    other_account_identification="reprehenderit",
+                shared.AccountReference16CH(
+                    cash_account_type="totam",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
                 ),
-                shared.AccountReference16Ch(
-                    cash_account_type="et",
-                    currency="ad",
-                    iban="sed",
-                    other_account_identification="dignissimos",
+                shared.AccountReference16CH(
+                    cash_account_type="beatae",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
+                ),
+                shared.AccountReference16CH(
+                    cash_account_type="commodi",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
+                ),
+                shared.AccountReference16CH(
+                    cash_account_type="molestiae",
+                    currency="EUR",
+                    iban="FR7612345987650123456789014",
+                    other_account_identification="90-100100-0",
                 ),
             ],
         ),
-        combined_service_indicator=True,
-        frequency_per_day=3737105922776060954,
+        combined_service_indicator=False,
+        frequency_per_day=4,
         recurring_indicator=False,
-        valid_until="1984-07-29",
+        valid_until="2020-12-31",
     ),
 )
     
-res = s.account_information_service_ais_.create_consent(req)
+res = s.account_information_service_ais.create_consent(req, operations.CreateConsentSecurity(
+    bearer_auth_o_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+))
 
 if res.consents_response_201 is not None:
     # handle response

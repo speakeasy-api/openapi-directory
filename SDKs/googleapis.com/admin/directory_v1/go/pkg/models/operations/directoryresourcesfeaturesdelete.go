@@ -8,18 +8,11 @@ import (
 )
 
 type DirectoryResourcesFeaturesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DirectoryResourcesFeaturesDeletePathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's customer ID.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-	// The unique ID of the feature to delete.
-	FeatureKey string `pathParam:"style=simple,explode=false,name=featureKey"`
-}
-
-type DirectoryResourcesFeaturesDeleteQueryParams struct {
+type DirectoryResourcesFeaturesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,6 +21,10 @@ type DirectoryResourcesFeaturesDeleteQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's customer ID.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
+	// The unique ID of the feature to delete.
+	FeatureKey string `pathParam:"style=simple,explode=false,name=featureKey"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,12 +39,6 @@ type DirectoryResourcesFeaturesDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryResourcesFeaturesDeleteRequest struct {
-	PathParams  DirectoryResourcesFeaturesDeletePathParams
-	QueryParams DirectoryResourcesFeaturesDeleteQueryParams
-	Security    DirectoryResourcesFeaturesDeleteSecurity
 }
 
 type DirectoryResourcesFeaturesDeleteResponse struct {

@@ -35,20 +35,20 @@ func newBusinessUnit(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // GetBusinessUnitsV3BusinessUnitsUserUserID - Get Business Units for a user
 // Get Business Units identified by `userId`. The `userId` refers to the user’s ID.
-func (s *businessUnit) GetBusinessUnitsV3BusinessUnitsUserUserID(ctx context.Context, request operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest) (*operations.GetBusinessUnitsV3BusinessUnitsUserUserIDResponse, error) {
+func (s *businessUnit) GetBusinessUnitsV3BusinessUnitsUserUserID(ctx context.Context, request operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest, security operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity) (*operations.GetBusinessUnitsV3BusinessUnitsUserUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-units/v3/business-units/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/business-units/v3/business-units/user/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

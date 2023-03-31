@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETAnnotsByRefrerenceUsingGETPathParams struct {
+type GETAnnotsByRefrerenceUsingGETRequest struct {
 	// Reference RGD ID
 	RefRgdID int `pathParam:"style=simple,explode=false,name=refRgdId"`
-}
-
-type GETAnnotsByRefrerenceUsingGETRequest struct {
-	PathParams GETAnnotsByRefrerenceUsingGETPathParams
 }
 
 type GETAnnotsByRefrerenceUsingGETResponse struct {

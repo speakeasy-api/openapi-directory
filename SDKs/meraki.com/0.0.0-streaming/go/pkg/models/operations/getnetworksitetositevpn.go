@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSiteToSiteVpnPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSiteToSiteVpnRequest struct {
-	PathParams GetNetworkSiteToSiteVpnPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSiteToSiteVpnResponse struct {

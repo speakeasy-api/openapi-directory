@@ -8,13 +8,7 @@ import (
 )
 
 type ListRecommendedRulesSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListRecommendedRulesRequest struct {
-	// Recommended Rules Request
-	Request  *shared.RecommendedRulesRequest `request:"mediaType=application/json"`
-	Security ListRecommendedRulesSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ListRecommendedRulesResponse struct {

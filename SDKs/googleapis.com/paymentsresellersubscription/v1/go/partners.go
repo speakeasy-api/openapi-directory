@@ -34,14 +34,14 @@ func newPartners(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PaymentsresellersubscriptionPartnersProductsList - To retrieve the products that can be resold by the partner. It should be autenticated with a service account.
 func (s *partners) PaymentsresellersubscriptionPartnersProductsList(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersProductsListRequest) (*operations.PaymentsresellersubscriptionPartnersProductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/products", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,9 +82,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersProductsList(ctx context.
 // PaymentsresellersubscriptionPartnersPromotionsFindEligible - To find eligible promotions for the current user. The API requires user authorization via OAuth. The user is inferred from the authenticated OAuth credential.
 func (s *partners) PaymentsresellersubscriptionPartnersPromotionsFindEligible(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleRequest) (*operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/promotions:findEligible", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/promotions:findEligible", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersPromotionsFindEligible(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,14 +137,14 @@ func (s *partners) PaymentsresellersubscriptionPartnersPromotionsFindEligible(ct
 // PaymentsresellersubscriptionPartnersPromotionsList - To retrieve the promotions, such as free trial, that can be used by the partner. It should be autenticated with a service account.
 func (s *partners) PaymentsresellersubscriptionPartnersPromotionsList(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersPromotionsListRequest) (*operations.PaymentsresellersubscriptionPartnersPromotionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/promotions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/promotions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,9 +185,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersPromotionsList(ctx contex
 // PaymentsresellersubscriptionPartnersSubscriptionsCancel - Used by partners to cancel a subscription service either immediately or by the end of the current billing cycle for their customers. It should be called directly by the partner using service accounts.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsCancel(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsCancel(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,9 +240,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsCancel(ctx c
 // PaymentsresellersubscriptionPartnersSubscriptionsCreate - Used by partners to create a subscription for their customers. The created subscription is associated with the end user inferred from the end user credentials. This API must be authorized by the end user using OAuth.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsCreate(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/subscriptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,7 +254,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsCreate(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -295,9 +295,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsCreate(ctx c
 // PaymentsresellersubscriptionPartnersSubscriptionsEntitle - Used by partners to entitle a previously provisioned subscription to the current end user. The end user identity is inferred from the authorized credential of the request. This API must be authorized by the end user using OAuth.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsEntitle(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:entitle", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:entitle", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,7 +309,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsEntitle(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -350,9 +350,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsEntitle(ctx 
 // PaymentsresellersubscriptionPartnersSubscriptionsExtend - [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsExtend(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:extend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:extend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,7 +364,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsExtend(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -405,14 +405,14 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsExtend(ctx c
 // PaymentsresellersubscriptionPartnersSubscriptionsGet - Used by partners to get a subscription by id. It should be called directly by the partner using service accounts.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsGet(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsGetRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -453,9 +453,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsGet(ctx cont
 // PaymentsresellersubscriptionPartnersSubscriptionsProvision - Used by partners to provision a subscription for their customers. This creates a subscription without associating it with the end user account. EntitleSubscription must be called separately using OAuth in order for the end user account to be associated with the subscription. It should be called directly by the partner using service accounts.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsProvision(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/subscriptions:provision", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/subscriptions:provision", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,7 +467,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsProvision(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -508,9 +508,9 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsProvision(ct
 // PaymentsresellersubscriptionPartnersSubscriptionsUndoCancel - Used by partners to revoke the pending cancellation of a subscription, which is currently in `STATE_CANCEL_AT_END_OF_CYCLE` state. If the subscription is already cancelled, the request will fail. It should be called directly by the partner using service accounts.
 func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsUndoCancel(ctx context.Context, request operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelRequest) (*operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:undoCancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:undoCancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -522,7 +522,7 @@ func (s *partners) PaymentsresellersubscriptionPartnersSubscriptionsUndoCancel(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

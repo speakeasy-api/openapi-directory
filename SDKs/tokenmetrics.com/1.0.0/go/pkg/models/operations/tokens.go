@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type TokensQueryParams struct {
+type TokensRequest struct {
 	TokenIds     *string `queryParam:"style=form,explode=true,name=token_ids"`
 	TokenNames   *string `queryParam:"style=form,explode=true,name=token_names"`
 	TokenSymbols *string `queryParam:"style=form,explode=true,name=token_symbols"`
-}
-
-type TokensRequest struct {
-	QueryParams TokensQueryParams
 }
 
 type TokensResponse struct {

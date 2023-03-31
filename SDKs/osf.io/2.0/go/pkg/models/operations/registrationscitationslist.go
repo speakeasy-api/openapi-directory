@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type RegistrationsCitationsListPathParams struct {
+type RegistrationsCitationsListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsCitationsListRequest struct {
-	PathParams RegistrationsCitationsListPathParams
 }
 
 // RegistrationsCitationsListCitationStyleAttributes - The properties of the citation style entity.

@@ -100,7 +100,7 @@ func (s *integrations) GetIntegrations(ctx context.Context) (*operations.GetInte
 // GetTargetsTargetIDIntegrations - Integrations available and installed for the target
 func (s *integrations) GetTargetsTargetIDIntegrations(ctx context.Context, request operations.GetTargetsTargetIDIntegrationsRequest) (*operations.GetTargetsTargetIDIntegrationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/targets/{target_id}/integrations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

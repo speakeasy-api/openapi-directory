@@ -37,7 +37,7 @@ func newProxy(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Agent's PROXY configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *proxy) ProtocolProxyGetArgs(ctx context.Context, request operations.ProtocolProxyGetArgsRequest) (*operations.ProtocolProxyGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/args", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/args", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *proxy) ProtocolProxyGetArgs(ctx context.Context, request operations.Pro
 // Agent's PROXY configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *proxy) ProtocolProxyGetConfig(ctx context.Context, request operations.ProtocolProxyGetConfigRequest) (*operations.ProtocolProxyGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *proxy) ProtocolProxyGetConfig(ctx context.Context, request operations.P
 // Statistics of fields indicated in the headers
 func (s *proxy) ProtocolProxyGetStatistics(ctx context.Context, request operations.ProtocolProxyGetStatisticsRequest) (*operations.ProtocolProxyGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *proxy) ProtocolProxyGetStatsHdr(ctx context.Context) (*operations.Proto
 // Trace 1 means enabled, 0 means not
 func (s *proxy) ProtocolProxyGetTrace(ctx context.Context, request operations.ProtocolProxyGetTraceRequest) (*operations.ProtocolProxyGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/trace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/trace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *proxy) ProtocolProxyGetTrace(ctx context.Context, request operations.Pr
 // Additional proxy target
 func (s *proxy) ProtocolProxyPortAdd(ctx context.Context, request operations.ProtocolProxyPortAddRequest) (*operations.ProtocolProxyPortAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/add/{port}/{target}/{targetPort}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/add/{port}/{target}/{targetPort}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -314,7 +314,7 @@ func (s *proxy) ProtocolProxyPortAdd(ctx context.Context, request operations.Pro
 // Check individual target
 func (s *proxy) ProtocolProxyPortIsstarted(ctx context.Context, request operations.ProtocolProxyPortIsstartedRequest) (*operations.ProtocolProxyPortIsstartedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/isStarted/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/isStarted/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -360,7 +360,7 @@ func (s *proxy) ProtocolProxyPortIsstarted(ctx context.Context, request operatio
 // ProtocolProxyPortList - List all proxy targets
 func (s *proxy) ProtocolProxyPortList(ctx context.Context, request operations.ProtocolProxyPortListRequest) (*operations.ProtocolProxyPortListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -406,7 +406,7 @@ func (s *proxy) ProtocolProxyPortList(ctx context.Context, request operations.Pr
 // Remove proxy target
 func (s *proxy) ProtocolProxyPortRemove(ctx context.Context, request operations.ProtocolProxyPortRemoveRequest) (*operations.ProtocolProxyPortRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/remove/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/remove/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -453,7 +453,7 @@ func (s *proxy) ProtocolProxyPortRemove(ctx context.Context, request operations.
 // Start additional target
 func (s *proxy) ProtocolProxyPortStart(ctx context.Context, request operations.ProtocolProxyPortStartRequest) (*operations.ProtocolProxyPortStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/start/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/start/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -500,7 +500,7 @@ func (s *proxy) ProtocolProxyPortStart(ctx context.Context, request operations.P
 // Stop additional target
 func (s *proxy) ProtocolProxyPortStop(ctx context.Context, request operations.ProtocolProxyPortStopRequest) (*operations.ProtocolProxyPortStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/stop/{port}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/stop/{port}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -547,7 +547,7 @@ func (s *proxy) ProtocolProxyPortStop(ctx context.Context, request operations.Pr
 // Agent's PROXY configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *proxy) ProtocolProxySetConfig(ctx context.Context, request operations.ProtocolProxySetConfigRequest) (*operations.ProtocolProxySetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/config/{argument}/{value}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/config/{argument}/{value}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -594,7 +594,7 @@ func (s *proxy) ProtocolProxySetConfig(ctx context.Context, request operations.P
 // 1 to enable, 0 to disable
 func (s *proxy) ProtocolProxySetTrace(ctx context.Context, request operations.ProtocolProxySetTraceRequest) (*operations.ProtocolProxySetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/trace/{enableOrNot}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/trace/{enableOrNot}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

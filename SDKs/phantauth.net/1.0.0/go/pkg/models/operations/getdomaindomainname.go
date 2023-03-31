@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDomainDomainnamePathParams struct {
+type GetDomainDomainnameRequest struct {
 	// The domain ID integrated in the `sub` property.
 	Domainname string `pathParam:"style=simple,explode=false,name=domainname"`
-}
-
-type GetDomainDomainnameRequest struct {
-	PathParams GetDomainDomainnamePathParams
 }
 
 // GetDomainDomainname200ApplicationJSON - OK

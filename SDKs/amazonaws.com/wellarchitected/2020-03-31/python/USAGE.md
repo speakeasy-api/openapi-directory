@@ -3,34 +3,29 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateLensesRequest(
-    path_params=operations.AssociateLensesPathParams(
-        workload_id="unde",
-    ),
-    headers=operations.AssociateLensesHeaders(
-        x_amz_algorithm="ipsam",
-        x_amz_content_sha256="ad",
-        x_amz_credential="sint",
-        x_amz_date="dolores",
-        x_amz_security_token="illum",
-        x_amz_signature="error",
-        x_amz_signed_headers="cupiditate",
-    ),
-    request=operations.AssociateLensesRequestBody(
+    request_body=operations.AssociateLensesRequestBody(
         lens_aliases=[
-            "sapiente",
-            "et",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
     ),
+    workload_id="unde",
+    x_amz_algorithm="nulla",
+    x_amz_content_sha256="corrupti",
+    x_amz_credential="illum",
+    x_amz_date="vel",
+    x_amz_security_token="error",
+    x_amz_signature="deserunt",
+    x_amz_signed_headers="suscipit",
 )
     
 res = s.associate_lenses(req)

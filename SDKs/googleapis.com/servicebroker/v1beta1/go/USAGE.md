@@ -14,40 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.ServicebrokerProjectsBrokersCreateRequest{
-        Security: operations.ServicebrokerProjectsBrokersCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        GoogleCloudServicebrokerV1beta1Broker: &shared.GoogleCloudServicebrokerV1beta1Broker{
+            CreateTime: "provident",
+            Name: "distinctio",
+            Title: "Dr.",
+            URL: "unde",
         },
-        PathParams: operations.ServicebrokerProjectsBrokersCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.ServicebrokerProjectsBrokersCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudServicebrokerV1beta1Broker{
-            CreateTime: "suscipit",
-            Name: "iure",
-            Title: "Mrs.",
-            URL: "debitis",
-        },
+        AccessToken: "nulla",
+        Alt: "media",
+        Callback: "illum",
+        Fields: "vel",
+        Key: "error",
+        OauthToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ServicebrokerProjectsBrokersCreate(ctx, req)
+    res, err := s.Projects.ServicebrokerProjectsBrokersCreate(ctx, req, operations.ServicebrokerProjectsBrokersCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

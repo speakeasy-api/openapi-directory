@@ -8,20 +8,17 @@ import (
 )
 
 type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsPathParams struct {
-	// Required. The ID of the advertiser the line items belongs to.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-}
-
-type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsQueryParams struct {
+type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser the line items belongs to.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -50,12 +47,6 @@ type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptio
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. The IDs of the youtube ad groups to list assigned targeting options for.
 	YoutubeAdGroupIds []string `queryParam:"style=form,explode=true,name=youtubeAdGroupIds"`
-}
-
-type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest struct {
-	PathParams  DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsPathParams
-	QueryParams DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsQueryParams
-	Security    DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsSecurity
 }
 
 type DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // IamcredentialsProjectsServiceAccountsGenerateAccessToken - Generates an OAuth 2.0 access token for a service account.
-func (s *projects) IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest) (*operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse, error) {
+func (s *projects) IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest, security operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity) (*operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateAccessToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateAccessToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateAccessTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx 
 }
 
 // IamcredentialsProjectsServiceAccountsGenerateIDToken - Generates an OpenID Connect ID token for a service account.
-func (s *projects) IamcredentialsProjectsServiceAccountsGenerateIDToken(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenRequest) (*operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenResponse, error) {
+func (s *projects) IamcredentialsProjectsServiceAccountsGenerateIDToken(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenRequest, security operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenSecurity) (*operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateIdToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateIdToken", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateIDTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsGenerateIDToken(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsGenerateIDToken(ctx cont
 }
 
 // IamcredentialsProjectsServiceAccountsSignBlob - Signs a blob using a service account's system-managed private key.
-func (s *projects) IamcredentialsProjectsServiceAccountsSignBlob(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsSignBlobRequest) (*operations.IamcredentialsProjectsServiceAccountsSignBlobResponse, error) {
+func (s *projects) IamcredentialsProjectsServiceAccountsSignBlob(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsSignBlobRequest, security operations.IamcredentialsProjectsServiceAccountsSignBlobSecurity) (*operations.IamcredentialsProjectsServiceAccountsSignBlobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signBlob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signBlob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SignBlobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsSignBlob(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsSignBlob(ctx context.Con
 }
 
 // IamcredentialsProjectsServiceAccountsSignJwt - Signs a JWT using a service account's system-managed private key.
-func (s *projects) IamcredentialsProjectsServiceAccountsSignJwt(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsSignJwtRequest) (*operations.IamcredentialsProjectsServiceAccountsSignJwtResponse, error) {
+func (s *projects) IamcredentialsProjectsServiceAccountsSignJwt(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsSignJwtRequest, security operations.IamcredentialsProjectsServiceAccountsSignJwtSecurity) (*operations.IamcredentialsProjectsServiceAccountsSignJwtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signJwt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signJwt", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SignJwtRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *projects) IamcredentialsProjectsServiceAccountsSignJwt(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

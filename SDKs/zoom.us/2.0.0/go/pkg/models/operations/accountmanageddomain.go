@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AccountManagedDomainSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AccountManagedDomainPathParams struct {
-	// Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. <br> To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AccountManagedDomainRequest struct {
-	PathParams AccountManagedDomainPathParams
-	Security   AccountManagedDomainSecurity
+	// Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. <br> To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountManagedDomain200ApplicationXMLDomains struct {

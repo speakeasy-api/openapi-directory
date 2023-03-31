@@ -8,10 +8,10 @@ import (
 )
 
 type ListOrganizationUsersSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListOrganizationUsersQueryParams struct {
+type ListOrganizationUsersRequest struct {
 	// Sort direction
 	Direction *shared.SortDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Filter users by group
@@ -38,11 +38,6 @@ type ListOrganizationUsersQueryParams struct {
 	Role []shared.RoleEnum `queryParam:"style=form,explode=true,name=role"`
 	// The order to sort the user list
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListOrganizationUsersRequest struct {
-	QueryParams ListOrganizationUsersQueryParams
-	Security    ListOrganizationUsersSecurity
 }
 
 type ListOrganizationUsersResponse struct {

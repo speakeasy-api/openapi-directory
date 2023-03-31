@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEstimatePathParams struct {
+type GetEstimateRequest struct {
 	EstimateID  string `pathParam:"style=simple,explode=false,name=estimate_id"`
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetEstimateRequest struct {
-	PathParams GetEstimatePathParams
 }
 
 type GetEstimateResponse struct {

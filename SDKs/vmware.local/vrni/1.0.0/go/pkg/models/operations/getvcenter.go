@@ -8,17 +8,12 @@ import (
 )
 
 type GetVcenterSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetVcenterPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetVcenterRequest struct {
-	PathParams GetVcenterPathParams
-	Security   GetVcenterSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetVcenterResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetActionOrganizationListQueryParams struct {
+type GetActionOrganizationListRequest struct {
 	// The number of organizations to be returned per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The offset (index) of the first organizations to return
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetActionOrganizationListRequest struct {
-	QueryParams GetActionOrganizationListQueryParams
 }
 
 type GetActionOrganizationListResponse struct {

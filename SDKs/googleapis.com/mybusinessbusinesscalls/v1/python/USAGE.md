@@ -4,27 +4,24 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest(
-    path_params=operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams(
-        parent="alias",
-    ),
-    query_params=operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams(
-        dollar_xgafv="2",
-        access_token="ratione",
-        alt="media",
-        callback="non",
-        fields="corrupti",
-        filter="rerum",
-        key="assumenda",
-        oauth_token="veritatis",
-        page_size=464811253189919483,
-        page_token="recusandae",
-        pretty_print=True,
-        quota_user="odit",
-        upload_type="voluptatum",
-        upload_protocol="neque",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    page_size=423655,
+    page_token="error",
+    parent="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
 res = s.locations.mybusinessbusinesscalls_locations_businesscallsinsights_list(req)

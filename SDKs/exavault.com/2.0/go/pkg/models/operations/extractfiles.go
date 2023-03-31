@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtractFilesHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type ExtractFilesExtractFilesRequestBody struct {
 	// Resource identifier for folder files should be extracted to.
 	ParentResource string `json:"parentResource"`
@@ -22,8 +15,11 @@ type ExtractFilesExtractFilesRequestBody struct {
 }
 
 type ExtractFilesRequest struct {
-	Headers ExtractFilesHeaders
-	Request *ExtractFilesExtractFilesRequestBody `request:"mediaType=application/json"`
+	RequestBody *ExtractFilesExtractFilesRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type ExtractFilesResponse struct {

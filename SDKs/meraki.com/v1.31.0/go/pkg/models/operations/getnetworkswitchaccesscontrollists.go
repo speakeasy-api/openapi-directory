@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchAccessControlListsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSwitchAccessControlListsRequest struct {
-	PathParams GetNetworkSwitchAccessControlListsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkSwitchAccessControlLists200ApplicationJSONRulesIPVersionEnum - IP address version

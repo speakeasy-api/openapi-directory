@@ -8,13 +8,7 @@ import (
 )
 
 type BulkUpdateNegativeKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type BulkUpdateNegativeKeywordRequest struct {
-	// A type that defines the fields for the bulk request to update negative keyword statuses.
-	Request  shared.BulkUpdateNegativeKeywordRequest `request:"mediaType=application/json"`
-	Security BulkUpdateNegativeKeywordSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkUpdateNegativeKeywordResponse struct {

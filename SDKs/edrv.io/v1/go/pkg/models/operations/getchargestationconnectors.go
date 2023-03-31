@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetChargeStationConnectorsPathParams struct {
+type GetChargeStationConnectorsRequest struct {
 	// chargeStation id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetChargeStationConnectorsQueryParams struct {
 	// Populate evse
 	IncludeEvse *bool `queryParam:"style=form,explode=true,name=include_evse"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
-}
-
-type GetChargeStationConnectorsRequest struct {
-	PathParams  GetChargeStationConnectorsPathParams
-	QueryParams GetChargeStationConnectorsQueryParams
 }
 
 type GetChargeStationConnectorsResponse struct {

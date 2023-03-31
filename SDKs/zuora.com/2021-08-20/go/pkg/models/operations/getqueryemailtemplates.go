@@ -7,18 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETQueryEmailTemplatesQueryParams struct {
-	// The name of the event.
-	EventTypeName *string `queryParam:"style=form,explode=true,name=eventTypeName"`
-	// The maximum number of results the query should return.
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// The name of the email template.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-	// The first index of the query result.
-	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GETQueryEmailTemplatesHeaders struct {
+type GETQueryEmailTemplatesRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
@@ -32,11 +21,14 @@ type GETQueryEmailTemplatesHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETQueryEmailTemplatesRequest struct {
-	QueryParams GETQueryEmailTemplatesQueryParams
-	Headers     GETQueryEmailTemplatesHeaders
+	// The name of the event.
+	EventTypeName *string `queryParam:"style=form,explode=true,name=eventTypeName"`
+	// The maximum number of results the query should return.
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// The name of the email template.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// The first index of the query result.
+	Start *int `queryParam:"style=form,explode=true,name=start"`
 }
 
 // GETQueryEmailTemplates200ApplicationJSON - OK

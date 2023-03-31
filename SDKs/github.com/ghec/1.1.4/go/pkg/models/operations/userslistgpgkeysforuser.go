@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersListGpgKeysForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersListGpgKeysForUserQueryParams struct {
+type UsersListGpgKeysForUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type UsersListGpgKeysForUserRequest struct {
-	PathParams  UsersListGpgKeysForUserPathParams
-	QueryParams UsersListGpgKeysForUserQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UsersListGpgKeysForUserResponse struct {

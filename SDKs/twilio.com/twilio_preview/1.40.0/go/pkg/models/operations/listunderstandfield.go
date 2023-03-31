@@ -12,30 +12,21 @@ var ListUnderstandFieldServerList = []string{
 }
 
 type ListUnderstandFieldSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUnderstandFieldPathParams struct {
+type ListUnderstandFieldRequest struct {
 	// The unique ID of the Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The unique ID of the Task associated with this Field.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type ListUnderstandFieldQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListUnderstandFieldRequest struct {
-	PathParams  ListUnderstandFieldPathParams
-	QueryParams ListUnderstandFieldQueryParams
-	Security    ListUnderstandFieldSecurity
-	ServerURL   *string
+	// The unique ID of the Task associated with this Field.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type ListUnderstandFieldListUnderstandFieldResponseMeta struct {

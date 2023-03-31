@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInvitationVendorsRequest struct {
-	Request []shared.FileNeedsVendor `request:"mediaType=application/json"`
-}
-
 type GetInvitationVendorsResponse struct {
 	ContentType string
 	// FileTooLarge FileTooSmall NoFileUploaded

@@ -33,7 +33,7 @@ func newEntries(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DatacatalogEntriesLookup - Gets an entry by its target resource name. The resource name comes from the source Google Cloud Platform service.
-func (s *entries) DatacatalogEntriesLookup(ctx context.Context, request operations.DatacatalogEntriesLookupRequest) (*operations.DatacatalogEntriesLookupResponse, error) {
+func (s *entries) DatacatalogEntriesLookup(ctx context.Context, request operations.DatacatalogEntriesLookupRequest, security operations.DatacatalogEntriesLookupSecurity) (*operations.DatacatalogEntriesLookupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/entries:lookup"
 
@@ -42,11 +42,11 @@ func (s *entries) DatacatalogEntriesLookup(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

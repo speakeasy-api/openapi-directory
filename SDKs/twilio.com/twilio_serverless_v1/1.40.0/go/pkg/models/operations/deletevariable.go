@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteVariableServerList = []string{
@@ -12,22 +11,17 @@ var DeleteVariableServerList = []string{
 }
 
 type DeleteVariableSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteVariablePathParams struct {
+type DeleteVariableRequest struct {
 	// The SID of the Environment with the Variables to delete.
 	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
 	// The SID of the Service to delete the Variable resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Variable resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteVariableRequest struct {
-	PathParams DeleteVariablePathParams
-	Security   DeleteVariableSecurity
-	ServerURL  *string
 }
 
 type DeleteVariableResponse struct {

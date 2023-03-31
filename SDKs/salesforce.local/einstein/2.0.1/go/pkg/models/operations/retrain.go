@@ -8,7 +8,7 @@ import (
 )
 
 type RetrainSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RetrainRequestBody struct {
@@ -22,11 +22,6 @@ type RetrainRequestBody struct {
 	ModelID *string `multipartForm:"name=modelId"`
 	// JSON that contains parameters that specify how the model is created
 	TrainParams *shared.V2LanguageTrainParams `multipartForm:"name=trainParams,json"`
-}
-
-type RetrainRequest struct {
-	Request  *RetrainRequestBody `request:"mediaType=multipart/form-data"`
-	Security RetrainSecurity
 }
 
 type RetrainResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationConfigTemplateSwitchProfilesPathParams struct {
+type GetOrganizationConfigTemplateSwitchProfilesRequest struct {
 	ConfigTemplateID string `pathParam:"style=simple,explode=false,name=configTemplateId"`
 	OrganizationID   string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationConfigTemplateSwitchProfilesRequest struct {
-	PathParams GetOrganizationConfigTemplateSwitchProfilesPathParams
 }
 
 // GetOrganizationConfigTemplateSwitchProfiles200ApplicationJSON - Successful operation

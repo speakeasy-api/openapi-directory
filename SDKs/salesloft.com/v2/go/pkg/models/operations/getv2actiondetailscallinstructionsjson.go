@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2ActionDetailsCallInstructionsJSONQueryParams struct {
+type GetV2ActionDetailsCallInstructionsJSONRequest struct {
 	// IDs of call instructions to fetch.
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -21,10 +21,6 @@ type GetV2ActionDetailsCallInstructionsJSONQueryParams struct {
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2ActionDetailsCallInstructionsJSONRequest struct {
-	QueryParams GetV2ActionDetailsCallInstructionsJSONQueryParams
 }
 
 type GetV2ActionDetailsCallInstructionsJSONResponse struct {

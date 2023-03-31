@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateInstructions3PathParams struct {
+type UpdateInstructions3Request struct {
+	// Updated instructions of a given task.
+	InstructionsDTO shared.InstructionsDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type UpdateInstructions3Request struct {
-	PathParams UpdateInstructions3PathParams
-	// Updated instructions of a given task.
-	Request shared.InstructionsDTO `request:"mediaType=application/json"`
 }
 
 type UpdateInstructions3Response struct {

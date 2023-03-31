@@ -8,10 +8,10 @@ import (
 )
 
 type ListBankAccountsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListBankAccountsQueryParams struct {
+type ListBankAccountsRequest struct {
 	// The pagination cursor returned by a previous call to this endpoint.
 	// Use it in the next `ListBankAccounts` request to retrieve the next set
 	// of results.
@@ -25,11 +25,6 @@ type ListBankAccountsQueryParams struct {
 	// Location ID. You can specify this optional filter
 	// to retrieve only the linked bank accounts belonging to a specific location.
 	LocationID *string `queryParam:"style=form,explode=true,name=location_id"`
-}
-
-type ListBankAccountsRequest struct {
-	QueryParams ListBankAccountsQueryParams
-	Security    ListBankAccountsSecurity
 }
 
 type ListBankAccountsResponse struct {

@@ -27,11 +27,10 @@ pkg/models/shared/exemplar.go
 pkg/models/shared/allocateinfo.go
 pkg/models/shared/quotaerror.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/allocatequotarequest.go
 pkg/models/shared/quotaoperation.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/checkresponse.go
 pkg/models/shared/quotainfo.go
 pkg/models/shared/checkinfo.go

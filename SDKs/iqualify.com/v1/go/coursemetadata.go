@@ -35,9 +35,9 @@ func newCourseMetadata(defaultClient, securityClient HTTPClient, serverURL, lang
 // Add or update course category in the metadata of a course.
 func (s *courseMetadata) PutCoursesContentIDMetadataCategory(ctx context.Context, request operations.PutCoursesContentIDMetadataCategoryRequest) (*operations.PutCoursesContentIDMetadataCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/category", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/category", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,9 +106,9 @@ func (s *courseMetadata) PutCoursesContentIDMetadataCategory(ctx context.Context
 // Add or update the course level in the metadata of a course.
 func (s *courseMetadata) PutCoursesContentIDMetadataLevel(ctx context.Context, request operations.PutCoursesContentIDMetadataLevelRequest) (*operations.PutCoursesContentIDMetadataLevelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/level", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/level", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -177,9 +177,9 @@ func (s *courseMetadata) PutCoursesContentIDMetadataLevel(ctx context.Context, r
 // Add or update course tags in the metadata of a course.
 func (s *courseMetadata) PutCoursesContentIDMetadataTags(ctx context.Context, request operations.PutCoursesContentIDMetadataTagsRequest) (*operations.PutCoursesContentIDMetadataTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,9 +248,9 @@ func (s *courseMetadata) PutCoursesContentIDMetadataTags(ctx context.Context, re
 // Add or update the course topic in the metadata of a course.
 func (s *courseMetadata) PutCoursesContentIDMetadataTopic(ctx context.Context, request operations.PutCoursesContentIDMetadataTopicRequest) (*operations.PutCoursesContentIDMetadataTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/topic", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/metadata/topic", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

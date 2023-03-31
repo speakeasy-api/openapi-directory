@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutGroupsIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutGroupsIDRequest struct {
-	PathParams PutGroupsIDPathParams
-	Request    shared.Group `request:"mediaType=application/json"`
+	Group shared.Group `request:"mediaType=application/json"`
+	ID    int64        `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutGroupsIDResponse struct {

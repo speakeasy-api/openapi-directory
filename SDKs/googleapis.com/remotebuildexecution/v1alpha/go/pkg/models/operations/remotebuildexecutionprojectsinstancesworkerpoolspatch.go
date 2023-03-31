@@ -8,18 +8,14 @@ import (
 )
 
 type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchPathParams struct {
-	// WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams struct {
+type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                           *shared.XgafvEnum                                                             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest *shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging for this instance.
 	LoggingEnabled *bool `queryParam:"style=form,explode=true,name=loggingEnabled"`
+	// WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// Deprecated, use instance.Name instead. Name of the instance to update. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
 	Name1 *string `queryParam:"style=form,explode=true,name=name1"`
 	// OAuth 2.0 token for the current user.
@@ -46,13 +44,6 @@ type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest struct {
-	PathParams  RemotebuildexecutionProjectsInstancesWorkerpoolsPatchPathParams
-	QueryParams RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams
-	Request     *shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest `request:"mediaType=application/json"`
-	Security    RemotebuildexecutionProjectsInstancesWorkerpoolsPatchSecurity
 }
 
 type RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse struct {

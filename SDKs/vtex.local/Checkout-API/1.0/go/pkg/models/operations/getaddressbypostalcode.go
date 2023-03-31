@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetAddressByPostalCodePathParams struct {
-	// Three letter country code refering to the `postalCode` field.
-	CountryCode string `pathParam:"style=simple,explode=false,name=countryCode"`
-	// Postal code.
-	PostalCode string `pathParam:"style=simple,explode=false,name=postalCode"`
-}
-
-type GetAddressByPostalCodeHeaders struct {
+type GetAddressByPostalCodeRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAddressByPostalCodeRequest struct {
-	PathParams GetAddressByPostalCodePathParams
-	Headers    GetAddressByPostalCodeHeaders
+	// Three letter country code refering to the `postalCode` field.
+	CountryCode string `pathParam:"style=simple,explode=false,name=countryCode"`
+	// Postal code.
+	PostalCode string `pathParam:"style=simple,explode=false,name=postalCode"`
 }
 
 type GetAddressByPostalCodeResponse struct {

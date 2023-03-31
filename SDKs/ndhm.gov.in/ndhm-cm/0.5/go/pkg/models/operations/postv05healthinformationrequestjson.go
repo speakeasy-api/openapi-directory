@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05HealthInformationRequestJSONHeaders struct {
-	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type PostV05HealthInformationRequestJSONRequest struct {
-	Headers PostV05HealthInformationRequestJSONHeaders
-	Request shared.HIRequest `request:"mediaType=application/json"`
+	// Access token which was issued after successful login with gateway auth server.
+	Authorization string           `header:"style=simple,explode=false,name=Authorization"`
+	HIRequest     shared.HIRequest `request:"mediaType=application/json"`
 }
 
 type PostV05HealthInformationRequestJSONResponse struct {

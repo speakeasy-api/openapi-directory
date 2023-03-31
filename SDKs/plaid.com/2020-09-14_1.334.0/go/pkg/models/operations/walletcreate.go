@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type WalletCreateRequest struct {
-	Request shared.WalletCreateRequest `request:"mediaType=application/json"`
-}
 
 type WalletCreateResponse struct {
 	ContentType string

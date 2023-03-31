@@ -10,23 +10,18 @@ import (
 )
 
 type DeploymentmanagerDeploymentsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerDeploymentsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeploymentmanagerDeploymentsInsertSecurity struct {
 	Option1 *DeploymentmanagerDeploymentsInsertSecurityOption1 `security:"option"`
 	Option2 *DeploymentmanagerDeploymentsInsertSecurityOption2 `security:"option"`
-}
-
-type DeploymentmanagerDeploymentsInsertPathParams struct {
-	// The project ID for this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 // DeploymentmanagerDeploymentsInsertCreatePolicyEnum - Sets the policy to use for creating new resources.
@@ -53,9 +48,10 @@ func (e *DeploymentmanagerDeploymentsInsertCreatePolicyEnum) UnmarshalJSON(data 
 	}
 }
 
-type DeploymentmanagerDeploymentsInsertQueryParams struct {
+type DeploymentmanagerDeploymentsInsertRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Deployment  *shared.Deployment `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -74,19 +70,14 @@ type DeploymentmanagerDeploymentsInsertQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// If set to true, creates a deployment and creates "shell" resources but does not actually instantiate these resources. This allows you to preview what your deployment looks like. After previewing a deployment, you can deploy your resources by making a request with the `update()` method or you can use the `cancelPreview()` method to cancel the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
 	Preview *bool `queryParam:"style=form,explode=true,name=preview"`
+	// The project ID for this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DeploymentmanagerDeploymentsInsertRequest struct {
-	PathParams  DeploymentmanagerDeploymentsInsertPathParams
-	QueryParams DeploymentmanagerDeploymentsInsertQueryParams
-	Request     *shared.Deployment `request:"mediaType=application/json"`
-	Security    DeploymentmanagerDeploymentsInsertSecurity
 }
 
 type DeploymentmanagerDeploymentsInsertResponse struct {

@@ -34,7 +34,7 @@ func newCategoriesVideos(defaultClient, securityClient HTTPClient, serverURL, la
 // CheckCategoryForVideo - Check for a video in a category
 func (s *categoriesVideos) CheckCategoryForVideo(ctx context.Context, request operations.CheckCategoryForVideoRequest) (*operations.CheckCategoryForVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -88,14 +88,14 @@ func (s *categoriesVideos) CheckCategoryForVideo(ctx context.Context, request op
 // GetCategoryVideos - Get all the videos in a category
 func (s *categoriesVideos) GetCategoryVideos(ctx context.Context, request operations.GetCategoryVideosRequest) (*operations.GetCategoryVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -146,7 +146,7 @@ func (s *categoriesVideos) GetCategoryVideos(ctx context.Context, request operat
 // GetVideoCategories - Get all the categories to which a video belongs
 func (s *categoriesVideos) GetVideoCategories(ctx context.Context, request operations.GetVideoCategoriesRequest) (*operations.GetVideoCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -200,11 +200,11 @@ func (s *categoriesVideos) GetVideoCategories(ctx context.Context, request opera
 // SuggestVideoCategory - Suggest categories for a video
 // With this method, you can suggest up to two categories and one subcategory for a video. Vimeo makes the final determination about whether the video
 // belongs in these categories.
-func (s *categoriesVideos) SuggestVideoCategory(ctx context.Context, request operations.SuggestVideoCategoryRequest) (*operations.SuggestVideoCategoryResponse, error) {
+func (s *categoriesVideos) SuggestVideoCategory(ctx context.Context, request operations.SuggestVideoCategoryRequest, security operations.SuggestVideoCategorySecurity) (*operations.SuggestVideoCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/categories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -219,7 +219,7 @@ func (s *categoriesVideos) SuggestVideoCategory(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,14 +8,7 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDAccountingsJournalPathParams struct {
-	// Id of the customer folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDAccountingsJournalQueryParams struct {
+type GetSpacesSpaceIDFoldersIDAccountingsJournalRequest struct {
 	// accounting dates of the document
 	AccountingDate *string `queryParam:"style=form,explode=true,name=AccountingDate"`
 	// class of the document
@@ -32,11 +25,10 @@ type GetSpacesSpaceIDFoldersIDAccountingsJournalQueryParams struct {
 	Workbook *string `queryParam:"style=form,explode=true,name=Workbook"`
 	// yearmonth of the document
 	YearMonth *string `queryParam:"style=form,explode=true,name=YearMonth"`
-}
-
-type GetSpacesSpaceIDFoldersIDAccountingsJournalRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDAccountingsJournalPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDAccountingsJournalQueryParams
+	// Id of the customer folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONTargetFolder struct {

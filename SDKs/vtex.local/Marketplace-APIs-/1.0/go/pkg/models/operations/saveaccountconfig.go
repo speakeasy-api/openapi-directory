@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveaccountconfigQueryParams struct {
-	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
-	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
-}
-
-type SaveaccountconfigHeaders struct {
+type SaveaccountconfigRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SaveaccountconfigRequest struct {
-	QueryParams SaveaccountconfigQueryParams
-	Headers     SaveaccountconfigHeaders
-	Request     shared.SaveaccountconfigRequest `request:"mediaType=application/json"`
+	ContentType              string                          `header:"style=simple,explode=false,name=Content-Type"`
+	SaveaccountconfigRequest shared.SaveaccountconfigRequest `request:"mediaType=application/json"`
+	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 }
 
 // Saveaccountconfig200ApplicationJSONRules - Items and products that belong to sellers.

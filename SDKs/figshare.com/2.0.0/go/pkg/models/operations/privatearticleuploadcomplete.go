@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateArticleUploadCompleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateArticleUploadCompletePathParams struct {
+type PrivateArticleUploadCompleteRequest struct {
 	// Article unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// File unique identifier
 	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type PrivateArticleUploadCompleteRequest struct {
-	PathParams PrivateArticleUploadCompletePathParams
-	Security   PrivateArticleUploadCompleteSecurity
 }
 
 type PrivateArticleUploadCompleteResponse struct {

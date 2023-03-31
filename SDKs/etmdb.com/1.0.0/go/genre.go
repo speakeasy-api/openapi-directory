@@ -42,7 +42,7 @@ func newGenre(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *genre) GenreSearchRead(ctx context.Context, request operations.GenreSearchReadRequest) (*operations.GenreSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/genre/search/{movie_title}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/genre/search/{movie_title}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *genre) GenreSearchRead(ctx context.Context, request operations.GenreSea
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *genre) GenreSearchallRead(ctx context.Context, request operations.GenreSearchallReadRequest) (*operations.GenreSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/genre/searchall/{movie_genre_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/genre/searchall/{movie_genre_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

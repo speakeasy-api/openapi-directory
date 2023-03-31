@@ -35,16 +35,16 @@ func newFunctions(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchive - Delete a custom action function
 // Delete a function for a custom workflow action. This will remove the function itself as well as removing the association between the function and the custom action. This can't be undone.
-func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchive(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveRequest) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveResponse, error) {
+func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchive(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveRequest, security operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveSecurity) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,16 +81,16 @@ func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionT
 
 // DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionType - Delete a custom action function
 // Delete a function for a custom workflow action. This will remove the function itself as well as removing the association between the function and the custom action. This can't be undone.
-func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionType(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeRequest) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeResponse, error) {
+func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionType(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeRequest, security operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeSecurity) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,16 +127,16 @@ func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionT
 
 // GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByID - Get a custom action function
 // Returns the given function for a custom workflow action.
-func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDRequest) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDResponse, error) {
+func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,16 +182,16 @@ func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 
 // GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionType - Get a custom action function
 // Returns the given function for a custom workflow action.
-func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionType(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeRequest) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeResponse, error) {
+func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionType(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,16 +237,16 @@ func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 
 // GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPage - Get all custom action functions
 // Returns a list of all functions that are associated with the given custom workflow action.
-func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageRequest) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageResponse, error) {
+func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,11 +292,11 @@ func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPage(ctx 
 
 // PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplace - Create or replace a custom action function
 // Creates or replaces a function for a custom workflow action.
-func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplace(ctx context.Context, request operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceRequest) (*operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceResponse, error) {
+func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplace(ctx context.Context, request operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceRequest, security operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceSecurity) (*operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -311,7 +311,7 @@ func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,11 +357,11 @@ func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 
 // PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionType - Create or replace a custom action function
 // Creates or replaces a function for a custom workflow action.
-func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionType(ctx context.Context, request operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest) (*operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse, error) {
+func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionType(ctx context.Context, request operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest, security operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeSecurity) (*operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -376,7 +376,7 @@ func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

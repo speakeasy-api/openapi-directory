@@ -8,11 +8,15 @@ import (
 	"time"
 )
 
-type GetWebhookLogsQueryParams struct {
+type GetWebhookLogsRequest struct {
 	// Latest date of entries to include in list
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
 	// Webhook listener endpoint
 	EndpointURL *string `queryParam:"style=form,explode=true,name=endpointUrl"`
+	// Access Token
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// Type of activity that triggered the webhook attempt
 	Event *string `queryParam:"style=form,explode=true,name=event"`
 	// Limit of the records list
@@ -29,18 +33,6 @@ type GetWebhookLogsQueryParams struct {
 	StatusCode *int64 `queryParam:"style=form,explode=true,name=statusCode"`
 	// Filter by triggering username.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetWebhookLogsHeaders struct {
-	// Access Token
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetWebhookLogsRequest struct {
-	QueryParams GetWebhookLogsQueryParams
-	Headers     GetWebhookLogsHeaders
 }
 
 type GetWebhookLogsResponse struct {

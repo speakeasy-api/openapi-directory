@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteQueryServerList = []string{
@@ -12,20 +11,15 @@ var DeleteQueryServerList = []string{
 }
 
 type DeleteQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteQueryPathParams struct {
+type DeleteQueryRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to delete.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The Twilio-provided string that uniquely identifies the Query resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteQueryRequest struct {
-	PathParams DeleteQueryPathParams
-	Security   DeleteQuerySecurity
-	ServerURL  *string
 }
 
 type DeleteQueryResponse struct {

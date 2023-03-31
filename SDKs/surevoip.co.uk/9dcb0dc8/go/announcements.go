@@ -37,7 +37,7 @@ func newAnnouncements(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteCustomersAccountAnnouncementsAnnouncementID - Delete an announcement audio file
 func (s *announcements) DeleteCustomersAccountAnnouncementsAnnouncementID(ctx context.Context, request operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest) (*operations.DeleteCustomersAccountAnnouncementsAnnouncementIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -134,7 +134,7 @@ func (s *announcements) GetAnnouncements(ctx context.Context) (*operations.GetAn
 // GetCustomersAccountAnnouncements - List of announcement audio files
 func (s *announcements) GetCustomersAccountAnnouncements(ctx context.Context, request operations.GetCustomersAccountAnnouncementsRequest) (*operations.GetCustomersAccountAnnouncementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +188,7 @@ func (s *announcements) GetCustomersAccountAnnouncements(ctx context.Context, re
 // GetCustomersAccountAnnouncementsAnnouncementID - Represents an announcement audio file
 func (s *announcements) GetCustomersAccountAnnouncementsAnnouncementID(ctx context.Context, request operations.GetCustomersAccountAnnouncementsAnnouncementIDRequest) (*operations.GetCustomersAccountAnnouncementsAnnouncementIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +240,7 @@ func (s *announcements) GetCustomersAccountAnnouncementsAnnouncementID(ctx conte
 }
 
 // PostAnnouncements - Add a new announcement audio file
-func (s *announcements) PostAnnouncements(ctx context.Context, request operations.PostAnnouncementsRequest) (*operations.PostAnnouncementsResponse, error) {
+func (s *announcements) PostAnnouncements(ctx context.Context, request operations.PostAnnouncementsRequestBody) (*operations.PostAnnouncementsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/announcements"
 

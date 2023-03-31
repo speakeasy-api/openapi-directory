@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateNegativeKeywordSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateNegativeKeywordRequest struct {
-	// A type that defines the fields for the request to create a negative keyword.
-	Request  shared.CreateNegativeKeywordRequest `request:"mediaType=application/json"`
-	Security CreateNegativeKeywordSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateNegativeKeywordResponse struct {

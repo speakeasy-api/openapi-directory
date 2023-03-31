@@ -41,7 +41,7 @@ func newLocationEndpoints(defaultClient, securityClient HTTPClient, serverURL, l
 // Unlike the `/find_place_prefix` endpoint, complete words are required here. You can search for cities,
 // mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance.
 // You can then identify the one you want by coordinates, country, or the administrative area.
-func (s *locationEndpoints) FindPlacesFindPlacesGet(ctx context.Context, request operations.FindPlacesFindPlacesGetRequest) (*operations.FindPlacesFindPlacesGetResponse, error) {
+func (s *locationEndpoints) FindPlacesFindPlacesGet(ctx context.Context, request operations.FindPlacesFindPlacesGetRequest, security operations.FindPlacesFindPlacesGetSecurity) (*operations.FindPlacesFindPlacesGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/find_places"
 
@@ -50,11 +50,11 @@ func (s *locationEndpoints) FindPlacesFindPlacesGet(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,7 +120,7 @@ func (s *locationEndpoints) FindPlacesFindPlacesGet(ctx context.Context, request
 // You can use this endpoint to obtain `place_id` of the location you want, to be used in `point` endpoint. The response also contains detailed information about the location, such as coordinates, timezone and the country the place belongs to.
 //
 // Unlike the `/find_places` endpoint, you should only specify the prefix of the place you are looking for. This is particularly useful for autocomplete forms. You can search for cities, mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance. You can then identify the one you want by coordinates, country, or the administrative area.
-func (s *locationEndpoints) FindPlacesPrefixFindPlacesPrefixGet(ctx context.Context, request operations.FindPlacesPrefixFindPlacesPrefixGetRequest) (*operations.FindPlacesPrefixFindPlacesPrefixGetResponse, error) {
+func (s *locationEndpoints) FindPlacesPrefixFindPlacesPrefixGet(ctx context.Context, request operations.FindPlacesPrefixFindPlacesPrefixGetRequest, security operations.FindPlacesPrefixFindPlacesPrefixGetSecurity) (*operations.FindPlacesPrefixFindPlacesPrefixGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/find_places_prefix"
 
@@ -129,11 +129,11 @@ func (s *locationEndpoints) FindPlacesPrefixFindPlacesPrefixGet(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -199,7 +199,7 @@ func (s *locationEndpoints) FindPlacesPrefixFindPlacesPrefixGet(ctx context.Cont
 // You can use this endpoint to find the nearest place from given coordinates.
 //
 // *Note: If you specify coordinates of a secluded place (e.g. middle of the ocean), the nearest point can be very far from the coordinates.*
-func (s *locationEndpoints) NearestPlaceNearestPlaceGet(ctx context.Context, request operations.NearestPlaceNearestPlaceGetRequest) (*operations.NearestPlaceNearestPlaceGetResponse, error) {
+func (s *locationEndpoints) NearestPlaceNearestPlaceGet(ctx context.Context, request operations.NearestPlaceNearestPlaceGetRequest, security operations.NearestPlaceNearestPlaceGetSecurity) (*operations.NearestPlaceNearestPlaceGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nearest_place"
 
@@ -208,11 +208,11 @@ func (s *locationEndpoints) NearestPlaceNearestPlaceGet(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

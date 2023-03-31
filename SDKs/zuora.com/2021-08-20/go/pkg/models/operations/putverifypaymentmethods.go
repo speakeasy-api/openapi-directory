@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PUTVerifyPaymentMethodsPathParams struct {
-	// The ID of the payment method to be verified.
-	//
-	PaymentMethodID string `pathParam:"style=simple,explode=false,name=payment-method-id"`
-}
-
-type PUTVerifyPaymentMethodsHeaders struct {
+type PUTVerifyPaymentMethodsRequest struct {
+	PUTVerifyPaymentMethodType shared.PUTVerifyPaymentMethodType `request:"mediaType=application/json"`
 	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
 	//
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type PUTVerifyPaymentMethodsRequest struct {
-	PathParams PUTVerifyPaymentMethodsPathParams
-	Headers    PUTVerifyPaymentMethodsHeaders
-	Request    shared.PUTVerifyPaymentMethodType `request:"mediaType=application/json"`
+	// The ID of the payment method to be verified.
+	//
+	PaymentMethodID string `pathParam:"style=simple,explode=false,name=payment-method-id"`
 }
 
 type PUTVerifyPaymentMethodsResponse struct {

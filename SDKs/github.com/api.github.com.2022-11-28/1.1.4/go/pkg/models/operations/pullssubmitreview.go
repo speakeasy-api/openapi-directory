@@ -9,17 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsSubmitReviewPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The unique identifier of the review.
-	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
 // PullsSubmitReviewRequestBodyEventEnum - The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
 type PullsSubmitReviewRequestBodyEventEnum string
 
@@ -55,8 +44,15 @@ type PullsSubmitReviewRequestBody struct {
 }
 
 type PullsSubmitReviewRequest struct {
-	PathParams PullsSubmitReviewPathParams
-	Request    PullsSubmitReviewRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsSubmitReviewRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The unique identifier of the review.
+	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
 }
 
 type PullsSubmitReviewResponse struct {

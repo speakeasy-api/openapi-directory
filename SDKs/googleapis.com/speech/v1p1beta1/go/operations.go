@@ -33,20 +33,20 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // SpeechOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *operationsT) SpeechOperationsGet(ctx context.Context, request operations.SpeechOperationsGetRequest) (*operations.SpeechOperationsGetResponse, error) {
+func (s *operationsT) SpeechOperationsGet(ctx context.Context, request operations.SpeechOperationsGetRequest, security operations.SpeechOperationsGetSecurity) (*operations.SpeechOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/operations/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/operations/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *operationsT) SpeechOperationsGet(ctx context.Context, request operation
 }
 
 // SpeechOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *operationsT) SpeechOperationsList(ctx context.Context, request operations.SpeechOperationsListRequest) (*operations.SpeechOperationsListResponse, error) {
+func (s *operationsT) SpeechOperationsList(ctx context.Context, request operations.SpeechOperationsListRequest, security operations.SpeechOperationsListSecurity) (*operations.SpeechOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1p1beta1/operations"
 
@@ -90,11 +90,11 @@ func (s *operationsT) SpeechOperationsList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

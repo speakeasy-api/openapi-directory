@@ -8,20 +8,17 @@ import (
 )
 
 type ContentAccountsReturncarrierListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentAccountsReturncarrierListPathParams struct {
-	// Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type ContentAccountsReturncarrierListQueryParams struct {
+type ContentAccountsReturncarrierListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,12 +37,6 @@ type ContentAccountsReturncarrierListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentAccountsReturncarrierListRequest struct {
-	PathParams  ContentAccountsReturncarrierListPathParams
-	QueryParams ContentAccountsReturncarrierListQueryParams
-	Security    ContentAccountsReturncarrierListSecurity
 }
 
 type ContentAccountsReturncarrierListResponse struct {

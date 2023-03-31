@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewPathParams struct {
+type NewRequest struct {
 	// Primary IP
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
+	// Created agent object
+	RequestBody []shared.Triplet `request:"mediaType=application/json"`
 	// Agent to return the primary IP
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type NewRequest struct {
-	PathParams NewPathParams
-	// Created agent object
-	Request []shared.Triplet `request:"mediaType=application/json"`
 }
 
 type NewResponse struct {

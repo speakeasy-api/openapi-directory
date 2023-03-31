@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNextPayPeriodDatesReportOutputQueryParams struct {
-	// The employer unique key. E.g. ER001
-	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
-	// The pay schedule unique key. E.g. SCH001
-	PayScheduleKey string `queryParam:"style=form,explode=true,name=PayScheduleKey"`
-}
-
-type GetNextPayPeriodDatesReportOutputHeaders struct {
+type GetNextPayPeriodDatesReportOutputRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetNextPayPeriodDatesReportOutputRequest struct {
-	QueryParams GetNextPayPeriodDatesReportOutputQueryParams
-	Headers     GetNextPayPeriodDatesReportOutputHeaders
+	// The employer unique key. E.g. ER001
+	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
+	// The pay schedule unique key. E.g. SCH001
+	PayScheduleKey string `queryParam:"style=form,explode=true,name=PayScheduleKey"`
 }
 
 type GetNextPayPeriodDatesReportOutputResponse struct {

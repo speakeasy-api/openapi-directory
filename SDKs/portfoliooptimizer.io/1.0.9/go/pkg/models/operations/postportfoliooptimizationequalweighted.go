@@ -11,10 +11,6 @@ type PostPortfolioOptimizationEqualWeightedRequestBody struct {
 	Assets int64 `json:"assets"`
 }
 
-type PostPortfolioOptimizationEqualWeightedRequest struct {
-	Request PostPortfolioOptimizationEqualWeightedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationEqualWeighted200ApplicationJSON - OK
 type PostPortfolioOptimizationEqualWeighted200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

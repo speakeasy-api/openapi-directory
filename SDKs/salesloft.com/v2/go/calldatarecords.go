@@ -48,7 +48,7 @@ func (s *callDataRecords) GetV2CallDataRecordsJSON(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *callDataRecords) GetV2CallDataRecordsJSON(ctx context.Context, request 
 // Fetches a call data record, by ID only.
 func (s *callDataRecords) GetV2CallDataRecordsIDJSON(ctx context.Context, request operations.GetV2CallDataRecordsIDJSONRequest) (*operations.GetV2CallDataRecordsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/call_data_records/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/call_data_records/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

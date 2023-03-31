@@ -14,23 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.MybusinesslodgingLocationsGetLodgingRequest{
-        PathParams: operations.MybusinesslodgingLocationsGetLodgingPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.MybusinesslodgingLocationsGetLodgingQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            ReadMask: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        Name: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        ReadMask: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteWebhooksIDPathParams struct {
+type DeleteWebhooksIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteWebhooksIDRequest struct {
-	PathParams DeleteWebhooksIDPathParams
 }
 
 // DeleteWebhooksID404ApplicationJSON - Not found

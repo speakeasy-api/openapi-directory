@@ -35,14 +35,14 @@ func newEmployee(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete the specified employee
 func (s *employee) DeleteEmployee(ctx context.Context, request operations.DeleteEmployeeRequest) (*operations.DeleteEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *employee) DeleteEmployee(ctx context.Context, request operations.Delete
 // Deletes the specified employee revision for the matching revision date
 func (s *employee) DeleteEmployeeRevision(ctx context.Context, request operations.DeleteEmployeeRevisionRequest) (*operations.DeleteEmployeeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,14 +143,14 @@ func (s *employee) DeleteEmployeeRevision(ctx context.Context, request operation
 // Deletes the specified employee revision for the matching revision number
 func (s *employee) DeleteEmployeeRevisionByNumber(ctx context.Context, request operations.DeleteEmployeeRevisionByNumberRequest) (*operations.DeleteEmployeeRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -197,14 +197,14 @@ func (s *employee) DeleteEmployeeRevisionByNumber(ctx context.Context, request o
 // Deletes an employee secret from the given resource location
 func (s *employee) DeleteEmployeeSecret(ctx context.Context, request operations.DeleteEmployeeSecretRequest) (*operations.DeleteEmployeeSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -251,14 +251,14 @@ func (s *employee) DeleteEmployeeSecret(ctx context.Context, request operations.
 // Gets the auto enrolment assessment from the specified employee
 func (s *employee) GetAEAssessmentFromEmployee(ctx context.Context, request operations.GetAEAssessmentFromEmployeeRequest) (*operations.GetAEAssessmentFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -314,14 +314,14 @@ func (s *employee) GetAEAssessmentFromEmployee(ctx context.Context, request oper
 // Gets all auto enrolment assessments from the specified employee
 func (s *employee) GetAEAssessmentsFromEmployee(ctx context.Context, request operations.GetAEAssessmentsFromEmployeeRequest) (*operations.GetAEAssessmentsFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -377,14 +377,14 @@ func (s *employee) GetAEAssessmentsFromEmployee(ctx context.Context, request ope
 // Gets all the employee tags
 func (s *employee) GetAllEmployeeTags(ctx context.Context, request operations.GetAllEmployeeTagsRequest) (*operations.GetAllEmployeeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -440,14 +440,14 @@ func (s *employee) GetAllEmployeeTags(ctx context.Context, request operations.Ge
 // Get links to all commentaries for the specified employee.
 func (s *employee) GetCommentariesFromEmployee(ctx context.Context, request operations.GetCommentariesFromEmployeeRequest) (*operations.GetCommentariesFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Commentaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Commentaries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -503,14 +503,14 @@ func (s *employee) GetCommentariesFromEmployee(ctx context.Context, request oper
 // Gets the specified commentary report from the employee
 func (s *employee) GetCommentaryFromEmployee(ctx context.Context, request operations.GetCommentaryFromEmployeeRequest) (*operations.GetCommentaryFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Commentary/{CommentaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Commentary/{CommentaryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -566,14 +566,14 @@ func (s *employee) GetCommentaryFromEmployee(ctx context.Context, request operat
 // Get commentary from payrun by specified employee.
 func (s *employee) GetCommentaryFromPayRunByEmployee(ctx context.Context, request operations.GetCommentaryFromPayRunByEmployeeRequest) (*operations.GetCommentaryFromPayRunByEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Employee/{EmployeeId}/Commentary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Employee/{EmployeeId}/Commentary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -629,14 +629,14 @@ func (s *employee) GetCommentaryFromPayRunByEmployee(ctx context.Context, reques
 // Returns the employee's state at the specified effective date.
 func (s *employee) GetEmployeeByEffectiveDate(ctx context.Context, request operations.GetEmployeeByEffectiveDateRequest) (*operations.GetEmployeeByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -692,14 +692,14 @@ func (s *employee) GetEmployeeByEffectiveDate(ctx context.Context, request opera
 // Gets the specified employee from employer by employee code.
 func (s *employee) GetEmployeeFromEmployer(ctx context.Context, request operations.GetEmployeeFromEmployerRequest) (*operations.GetEmployeeFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -755,14 +755,14 @@ func (s *employee) GetEmployeeFromEmployer(ctx context.Context, request operatio
 // Get the employee revision matching the specified revision number
 func (s *employee) GetEmployeeRevisionByNumber(ctx context.Context, request operations.GetEmployeeRevisionByNumberRequest) (*operations.GetEmployeeRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -818,14 +818,14 @@ func (s *employee) GetEmployeeRevisionByNumber(ctx context.Context, request oper
 // Gets links to all employee revision summaries
 func (s *employee) GetEmployeeRevisionSummaries(ctx context.Context, request operations.GetEmployeeRevisionSummariesRequest) (*operations.GetEmployeeRevisionSummariesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revisions/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revisions/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -881,14 +881,14 @@ func (s *employee) GetEmployeeRevisionSummaries(ctx context.Context, request ope
 // Get the employee revision summary matching the specified revision number
 func (s *employee) GetEmployeeRevisionSummaryByNumber(ctx context.Context, request operations.GetEmployeeRevisionSummaryByNumberRequest) (*operations.GetEmployeeRevisionSummaryByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revision/{RevisionNumber}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revision/{RevisionNumber}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -944,14 +944,14 @@ func (s *employee) GetEmployeeRevisionSummaryByNumber(ctx context.Context, reque
 // Gets links to all employee revisions
 func (s *employee) GetEmployeeRevisions(ctx context.Context, request operations.GetEmployeeRevisionsRequest) (*operations.GetEmployeeRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1007,14 +1007,14 @@ func (s *employee) GetEmployeeRevisions(ctx context.Context, request operations.
 // Get the public visible employee secret object
 func (s *employee) GetEmployeeSecret(ctx context.Context, request operations.GetEmployeeSecretRequest) (*operations.GetEmployeeSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1070,14 +1070,14 @@ func (s *employee) GetEmployeeSecret(ctx context.Context, request operations.Get
 // Get all the employee secret links
 func (s *employee) GetEmployeeSecrets(ctx context.Context, request operations.GetEmployeeSecretsRequest) (*operations.GetEmployeeSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secrets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secrets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1133,14 +1133,14 @@ func (s *employee) GetEmployeeSecrets(ctx context.Context, request operations.Ge
 // Get links to all employee summaries for the employer on specified effective date.
 func (s *employee) GetEmployeeSummariesByEffectiveDate(ctx context.Context, request operations.GetEmployeeSummariesByEffectiveDateRequest) (*operations.GetEmployeeSummariesByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/{EffectiveDate}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/{EffectiveDate}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1196,14 +1196,14 @@ func (s *employee) GetEmployeeSummariesByEffectiveDate(ctx context.Context, requ
 // Get links to all employee summaries for the specified employer.
 func (s *employee) GetEmployeeSummariesFromEmployer(ctx context.Context, request operations.GetEmployeeSummariesFromEmployerRequest) (*operations.GetEmployeeSummariesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1259,14 +1259,14 @@ func (s *employee) GetEmployeeSummariesFromEmployer(ctx context.Context, request
 // Gets the employee summary for the specified effective date.
 func (s *employee) GetEmployeeSummaryByEffectiveDate(ctx context.Context, request operations.GetEmployeeSummaryByEffectiveDateRequest) (*operations.GetEmployeeSummaryByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/{EffectiveDate}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/{EffectiveDate}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1322,14 +1322,14 @@ func (s *employee) GetEmployeeSummaryByEffectiveDate(ctx context.Context, reques
 // Gets the specified employee summary data from employer by employee code.
 func (s *employee) GetEmployeeSummaryFromEmployer(ctx context.Context, request operations.GetEmployeeSummaryFromEmployerRequest) (*operations.GetEmployeeSummaryFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Summary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1385,14 +1385,14 @@ func (s *employee) GetEmployeeSummaryFromEmployer(ctx context.Context, request o
 // Get links to all employees for the employer on specified effective date.
 func (s *employee) GetEmployeesByEffectiveDate(ctx context.Context, request operations.GetEmployeesByEffectiveDateRequest) (*operations.GetEmployeesByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1448,14 +1448,14 @@ func (s *employee) GetEmployeesByEffectiveDate(ctx context.Context, request oper
 // Get links to all employees for the specified employer.
 func (s *employee) GetEmployeesFromEmployer(ctx context.Context, request operations.GetEmployeesFromEmployerRequest) (*operations.GetEmployeesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1511,14 +1511,14 @@ func (s *employee) GetEmployeesFromEmployer(ctx context.Context, request operati
 // Gets links to all employees included in the specified pay run.
 func (s *employee) GetEmployeesFromPayRun(ctx context.Context, request operations.GetEmployeesFromPayRunRequest) (*operations.GetEmployeesFromPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Employees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1574,14 +1574,14 @@ func (s *employee) GetEmployeesFromPayRun(ctx context.Context, request operation
 // Gets links to all employee revisions that have ever existed in the specified pay schedule.
 func (s *employee) GetEmployeesFromPaySchedule(ctx context.Context, request operations.GetEmployeesFromPayScheduleRequest) (*operations.GetEmployeesFromPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1637,14 +1637,14 @@ func (s *employee) GetEmployeesFromPaySchedule(ctx context.Context, request oper
 // Gets links to all employee revisions in the specified pay schedule for the given effective date.
 func (s *employee) GetEmployeesFromPayScheduleOnEffectiveDate(ctx context.Context, request operations.GetEmployeesFromPayScheduleOnEffectiveDateRequest) (*operations.GetEmployeesFromPayScheduleOnEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Employees/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1700,14 +1700,14 @@ func (s *employee) GetEmployeesFromPayScheduleOnEffectiveDate(ctx context.Contex
 // Gets the employees with the tag
 func (s *employee) GetEmployeesWithTag(ctx context.Context, request operations.GetEmployeesWithTagRequest) (*operations.GetEmployeesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1763,14 +1763,14 @@ func (s *employee) GetEmployeesWithTag(ctx context.Context, request operations.G
 // Get links to all pay runs for the specified employee.
 func (s *employee) GetPayRunsFromEmployee(ctx context.Context, request operations.GetPayRunsFromEmployeeRequest) (*operations.GetPayRunsFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayRuns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1826,9 +1826,9 @@ func (s *employee) GetPayRunsFromEmployee(ctx context.Context, request operation
 // Patches the specified employee with the supplied values
 func (s *employee) PatchEmployee(ctx context.Context, request operations.PatchEmployeeRequest) (*operations.PatchEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1843,7 +1843,7 @@ func (s *employee) PatchEmployee(ctx context.Context, request operations.PatchEm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1899,9 +1899,9 @@ func (s *employee) PatchEmployee(ctx context.Context, request operations.PatchEm
 // Create a new employee object
 func (s *employee) PostEmployeeIntoEmployer(ctx context.Context, request operations.PostEmployeeIntoEmployerRequest) (*operations.PostEmployeeIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1916,7 +1916,7 @@ func (s *employee) PostEmployeeIntoEmployer(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1972,14 +1972,14 @@ func (s *employee) PostEmployeeIntoEmployer(ctx context.Context, request operati
 // Create new employee secret using auto generated resource location key
 func (s *employee) PostEmployeeSecret(ctx context.Context, request operations.PostEmployeeSecretRequest) (*operations.PostEmployeeSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secrets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secrets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2035,9 +2035,9 @@ func (s *employee) PostEmployeeSecret(ctx context.Context, request operations.Po
 // Updates the existing specified employee object
 func (s *employee) PutEmployeeIntoEmployer(ctx context.Context, request operations.PutEmployeeIntoEmployerRequest) (*operations.PutEmployeeIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2052,7 +2052,7 @@ func (s *employee) PutEmployeeIntoEmployer(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2108,14 +2108,14 @@ func (s *employee) PutEmployeeIntoEmployer(ctx context.Context, request operatio
 // Create / update an employee secret at the given resource location
 func (s *employee) PutEmployeeSecret(ctx context.Context, request operations.PutEmployeeSecretRequest) (*operations.PutEmployeeSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secret/{SecretId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Secret/{SecretId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

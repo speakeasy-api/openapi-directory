@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamAggregatesListQueryParams struct {
+type IpamAggregatesListRequest struct {
 	DateAdded *string `queryParam:"style=form,explode=true,name=date_added"`
 	Family    *string `queryParam:"style=form,explode=true,name=family"`
 	// Multiple values may be separated by commas.
@@ -20,10 +20,6 @@ type IpamAggregatesListQueryParams struct {
 	Rir    *string `queryParam:"style=form,explode=true,name=rir"`
 	RirID  *string `queryParam:"style=form,explode=true,name=rir_id"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type IpamAggregatesListRequest struct {
-	QueryParams IpamAggregatesListQueryParams
 }
 
 type IpamAggregatesList200ApplicationJSON struct {

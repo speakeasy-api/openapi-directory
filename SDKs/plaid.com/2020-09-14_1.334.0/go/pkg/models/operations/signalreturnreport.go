@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SignalReturnReportRequest struct {
-	Request shared.SignalReturnReportRequest `request:"mediaType=application/json"`
-}
 
 type SignalReturnReportResponse struct {
 	ContentType string

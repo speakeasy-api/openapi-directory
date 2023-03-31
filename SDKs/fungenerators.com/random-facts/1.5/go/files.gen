@@ -28,5 +28,4 @@ pkg/models/operations/putfact.go
 pkg/models/operations/getfactcategories.go
 pkg/models/operations/getfactrandom.go
 pkg/models/operations/getfactsearch.go
-pkg/models/shared/security.go
 USAGE.md

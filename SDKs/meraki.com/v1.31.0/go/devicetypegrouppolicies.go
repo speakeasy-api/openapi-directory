@@ -34,7 +34,7 @@ func newDeviceTypeGroupPolicies(defaultClient, securityClient HTTPClient, server
 // List the device type group policies for the SSID
 func (s *deviceTypeGroupPolicies) GetNetworkWirelessSsidDeviceTypeGroupPolicies(ctx context.Context, request operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest) (*operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *deviceTypeGroupPolicies) GetNetworkWirelessSsidDeviceTypeGroupPolicies(
 // Update the device type group policies for the SSID
 func (s *deviceTypeGroupPolicies) UpdateNetworkWirelessSsidDeviceTypeGroupPolicies(ctx context.Context, request operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest) (*operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

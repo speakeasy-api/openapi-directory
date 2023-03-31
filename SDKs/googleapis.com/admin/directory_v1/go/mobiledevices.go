@@ -32,11 +32,11 @@ func newMobiledevices(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // DirectoryMobiledevicesAction - Takes an action that affects a mobile device. For example, remotely wiping a device.
-func (s *mobiledevices) DirectoryMobiledevicesAction(ctx context.Context, request operations.DirectoryMobiledevicesActionRequest) (*operations.DirectoryMobiledevicesActionResponse, error) {
+func (s *mobiledevices) DirectoryMobiledevicesAction(ctx context.Context, request operations.DirectoryMobiledevicesActionRequest, security operations.DirectoryMobiledevicesActionSecurity) (*operations.DirectoryMobiledevicesActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}/action", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}/action", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MobileDeviceAction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *mobiledevices) DirectoryMobiledevicesAction(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *mobiledevices) DirectoryMobiledevicesAction(ctx context.Context, reques
 }
 
 // DirectoryMobiledevicesDelete - Removes a mobile device.
-func (s *mobiledevices) DirectoryMobiledevicesDelete(ctx context.Context, request operations.DirectoryMobiledevicesDeleteRequest) (*operations.DirectoryMobiledevicesDeleteResponse, error) {
+func (s *mobiledevices) DirectoryMobiledevicesDelete(ctx context.Context, request operations.DirectoryMobiledevicesDeleteRequest, security operations.DirectoryMobiledevicesDeleteSecurity) (*operations.DirectoryMobiledevicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -117,20 +117,20 @@ func (s *mobiledevices) DirectoryMobiledevicesDelete(ctx context.Context, reques
 }
 
 // DirectoryMobiledevicesGet - Retrieves a mobile device's properties.
-func (s *mobiledevices) DirectoryMobiledevicesGet(ctx context.Context, request operations.DirectoryMobiledevicesGetRequest) (*operations.DirectoryMobiledevicesGetResponse, error) {
+func (s *mobiledevices) DirectoryMobiledevicesGet(ctx context.Context, request operations.DirectoryMobiledevicesGetRequest, security operations.DirectoryMobiledevicesGetSecurity) (*operations.DirectoryMobiledevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,20 +165,20 @@ func (s *mobiledevices) DirectoryMobiledevicesGet(ctx context.Context, request o
 }
 
 // DirectoryMobiledevicesList - Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list that includes company-owned devices, use the Cloud Identity [Devices API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
-func (s *mobiledevices) DirectoryMobiledevicesList(ctx context.Context, request operations.DirectoryMobiledevicesListRequest) (*operations.DirectoryMobiledevicesListResponse, error) {
+func (s *mobiledevices) DirectoryMobiledevicesList(ctx context.Context, request operations.DirectoryMobiledevicesListRequest, security operations.DirectoryMobiledevicesListSecurity) (*operations.DirectoryMobiledevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

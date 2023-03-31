@@ -12,20 +12,15 @@ var FetchUserServerList = []string{
 }
 
 type FetchUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchUserPathParams struct {
+type FetchUserRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the User resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the User resource to fetch. This value can be either the `sid` or the `identity` of the User resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchUserRequest struct {
-	PathParams FetchUserPathParams
-	Security   FetchUserSecurity
-	ServerURL  *string
 }
 
 type FetchUserResponse struct {

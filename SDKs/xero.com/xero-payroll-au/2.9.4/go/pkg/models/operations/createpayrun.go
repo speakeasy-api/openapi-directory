@@ -8,18 +8,13 @@ import (
 )
 
 type CreatePayRunSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreatePayRunHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreatePayRunRequest struct {
-	Headers  CreatePayRunHeaders
-	Request  []shared.PayRunInput `request:"mediaType=application/json"`
-	Security CreatePayRunSecurity
+	RequestBody []shared.PayRunInput `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type CreatePayRunResponse struct {

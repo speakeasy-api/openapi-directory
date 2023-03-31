@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type NodesProvidersListPathParams struct {
+type NodesProvidersListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesProvidersListRequest struct {
-	PathParams NodesProvidersListPathParams
 }
 
 // NodesProvidersListFileAttributes - The properties of the file entity.

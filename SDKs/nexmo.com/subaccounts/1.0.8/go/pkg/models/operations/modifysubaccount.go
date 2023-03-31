@@ -8,20 +8,16 @@ import (
 )
 
 type ModifySubaccountSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ModifySubaccountPathParams struct {
+type ModifySubaccountRequest struct {
+	ModifySubaccountRequest shared.ModifySubaccountRequest `request:"mediaType=application/json"`
 	// ID of the primary account
 	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 	// ID of the subaccount
 	SubaccountKey string `pathParam:"style=simple,explode=false,name=subaccount_key"`
-}
-
-type ModifySubaccountRequest struct {
-	PathParams ModifySubaccountPathParams
-	Request    shared.ModifySubaccountRequest `request:"mediaType=application/json"`
-	Security   ModifySubaccountSecurity
 }
 
 type ModifySubaccount422ApplicationJSONInvalidParameters struct {

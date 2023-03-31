@@ -32,20 +32,20 @@ func newCustomer(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdminCustomerDevicesChromeosCommandsGet - Gets command data a specific command issued to the device.
-func (s *customer) AdminCustomerDevicesChromeosCommandsGet(ctx context.Context, request operations.AdminCustomerDevicesChromeosCommandsGetRequest) (*operations.AdminCustomerDevicesChromeosCommandsGetResponse, error) {
+func (s *customer) AdminCustomerDevicesChromeosCommandsGet(ctx context.Context, request operations.AdminCustomerDevicesChromeosCommandsGetRequest, security operations.AdminCustomerDevicesChromeosCommandsGetSecurity) (*operations.AdminCustomerDevicesChromeosCommandsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}/commands/{commandId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}/commands/{commandId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *customer) AdminCustomerDevicesChromeosCommandsGet(ctx context.Context, 
 }
 
 // AdminCustomerDevicesChromeosIssueCommand - Issues a command for the device to execute.
-func (s *customer) AdminCustomerDevicesChromeosIssueCommand(ctx context.Context, request operations.AdminCustomerDevicesChromeosIssueCommandRequest) (*operations.AdminCustomerDevicesChromeosIssueCommandResponse, error) {
+func (s *customer) AdminCustomerDevicesChromeosIssueCommand(ctx context.Context, request operations.AdminCustomerDevicesChromeosIssueCommandRequest, security operations.AdminCustomerDevicesChromeosIssueCommandSecurity) (*operations.AdminCustomerDevicesChromeosIssueCommandResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DirectoryChromeosdevicesIssueCommandRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *customer) AdminCustomerDevicesChromeosIssueCommand(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

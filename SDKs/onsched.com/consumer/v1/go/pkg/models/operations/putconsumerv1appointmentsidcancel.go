@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConsumerV1AppointmentsIDCancelPathParams struct {
+type PutConsumerV1AppointmentsIDCancelRequest struct {
 	// appointment id to cancel
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutConsumerV1AppointmentsIDCancelRequest struct {
-	PathParams PutConsumerV1AppointmentsIDCancelPathParams
 }
 
 type PutConsumerV1AppointmentsIDCancelResponse struct {

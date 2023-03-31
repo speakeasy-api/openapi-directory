@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteTasksQueryParams struct {
+type DeleteTasksRequest struct {
 	AfterEnqueuedAt  *string `queryParam:"style=form,explode=true,name=afterEnqueuedAt"`
 	AfterFinishedAt  *string `queryParam:"style=form,explode=true,name=afterFinishedAt"`
 	AfterStartedAt   *string `queryParam:"style=form,explode=true,name=afterStartedAt"`
@@ -20,10 +20,6 @@ type DeleteTasksQueryParams struct {
 	Statuses         *string `queryParam:"style=form,explode=true,name=statuses"`
 	Types            *string `queryParam:"style=form,explode=true,name=types"`
 	Uids             *string `queryParam:"style=form,explode=true,name=uids"`
-}
-
-type DeleteTasksRequest struct {
-	QueryParams DeleteTasksQueryParams
 }
 
 type DeleteTasksResponse struct {

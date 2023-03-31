@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsUnsuspendInstallationPathParams struct {
+type AppsUnsuspendInstallationRequest struct {
 	// The unique identifier of the installation.
 	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
-}
-
-type AppsUnsuspendInstallationRequest struct {
-	PathParams AppsUnsuspendInstallationPathParams
 }
 
 type AppsUnsuspendInstallationResponse struct {

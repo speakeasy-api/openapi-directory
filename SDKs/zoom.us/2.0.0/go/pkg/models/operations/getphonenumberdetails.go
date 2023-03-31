@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPhoneNumberDetailsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPhoneNumberDetailsPathParams struct {
-	// Unique Identifier of the Phone Number. This can be retrieved from the List Phone Numbers API.
-	NumberID string `pathParam:"style=simple,explode=false,name=numberId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPhoneNumberDetailsRequest struct {
-	PathParams GetPhoneNumberDetailsPathParams
-	Security   GetPhoneNumberDetailsSecurity
+	// Unique Identifier of the Phone Number. This can be retrieved from the List Phone Numbers API.
+	NumberID string `pathParam:"style=simple,explode=false,name=numberId"`
 }
 
 // GetPhoneNumberDetails200ApplicationXMLAssigneeTypeEnum - Indicates who the phone number belongs to.<br>

@@ -19,11 +19,6 @@ type SubmitTranscriptionJobMultipartFormData struct {
 	Options interface{}                                   `multipartForm:"name=options,json"`
 }
 
-type SubmitTranscriptionJobMultipartRequest struct {
-	// Transcription Job Options
-	Request SubmitTranscriptionJobMultipartFormData `request:"mediaType=multipart/form-data"`
-}
-
 // SubmitTranscriptionJobMultipart413ApplicationProblemPlusJSON - Payload Too Large
 // ***
 // Only returned when job is submitted using a local file as part of `multipart/form-data`. Use a `media_url`

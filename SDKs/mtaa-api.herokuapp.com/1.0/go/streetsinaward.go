@@ -34,7 +34,7 @@ func newStreetsInAWard(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns all streets in a specified ward and ward postcode
 func (s *streetsInAWard) StreetsInAWard(ctx context.Context, request operations.StreetsInAWardRequest) (*operations.StreetsInAWardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}/{ward}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}/{ward}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

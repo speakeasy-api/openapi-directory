@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CircuitsCircuitsDeletePathParams struct {
+type CircuitsCircuitsDeleteRequest struct {
 	// A unique integer value identifying this circuit.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsCircuitsDeleteRequest struct {
-	PathParams CircuitsCircuitsDeletePathParams
 }
 
 type CircuitsCircuitsDeleteResponse struct {

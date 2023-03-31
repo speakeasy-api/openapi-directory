@@ -24,7 +24,6 @@ pkg/models/operations/chatspacesmessagesupdate.go
 pkg/models/shared/media.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listspacesresponse.go
 pkg/models/shared/space.go
 pkg/models/shared/spacedetails.go

@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type PostV2BulkJobsBulkJobsIDJobDataPathParams struct {
-	// The id for the bulk job to which the job data relates
-	BulkJobsID int64 `pathParam:"style=simple,explode=false,name=bulk_jobs_id"`
-}
-
 type PostV2BulkJobsBulkJobsIDJobDataRequestBody struct {
 	// Array of objects containing parameters to be used to execute an instance of each. Array must be 5,000 records or less.
 	Data []string `form:"name=data"`
 }
 
 type PostV2BulkJobsBulkJobsIDJobDataRequest struct {
-	PathParams PostV2BulkJobsBulkJobsIDJobDataPathParams
-	Request    PostV2BulkJobsBulkJobsIDJobDataRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody PostV2BulkJobsBulkJobsIDJobDataRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// The id for the bulk job to which the job data relates
+	BulkJobsID int64 `pathParam:"style=simple,explode=false,name=bulk_jobs_id"`
 }
 
 type PostV2BulkJobsBulkJobsIDJobDataResponse struct {

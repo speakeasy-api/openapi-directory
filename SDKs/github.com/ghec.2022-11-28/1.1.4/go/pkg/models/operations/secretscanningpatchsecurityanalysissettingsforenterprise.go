@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningPatchSecurityAnalysisSettingsForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
 type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody struct {
 	// Whether GitHub Advanced Security is automatically enabled for new repositories. For more information, see "[About GitHub Advanced Security](https://docs.github.com/enterprise-cloud@latest//get-started/learning-about-github/about-github-advanced-security)."
 	AdvancedSecurityEnabledForNewRepositories *bool `json:"advanced_security_enabled_for_new_repositories,omitempty"`
@@ -27,8 +22,9 @@ type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody struct 
 }
 
 type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest struct {
-	PathParams SecretScanningPatchSecurityAnalysisSettingsForEnterprisePathParams
-	Request    *SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody *SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 }
 
 type SecretScanningPatchSecurityAnalysisSettingsForEnterpriseResponse struct {

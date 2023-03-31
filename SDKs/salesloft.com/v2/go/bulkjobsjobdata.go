@@ -36,14 +36,14 @@ func newBulkJobsJobData(defaultClient, securityClient HTTPClient, serverURL, lan
 // Fetches multiple job data records for a given bulk job. Pagination is not supported, but cursor based polling is via use of the `id[gt]` filter. Pass the last id seen (i.e. `id[gt]=1234`) in order to get the next batch of records.
 func (s *bulkJobsJobData) GetV2BulkJobsBulkJobsIDJobData(ctx context.Context, request operations.GetV2BulkJobsBulkJobsIDJobDataRequest) (*operations.GetV2BulkJobsBulkJobsIDJobDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{bulk_jobs_id}/job_data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{bulk_jobs_id}/job_data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,9 +87,9 @@ func (s *bulkJobsJobData) GetV2BulkJobsBulkJobsIDJobData(ctx context.Context, re
 // For additional information on creating bulk jobs, the types of supported bulk jobs, and examples of the bulk job flow, visit the <a href="/bulk.html" target="_blank" rel="noopener noreferrer">bulk job details page</a>.
 func (s *bulkJobsJobData) PostV2BulkJobsBulkJobsIDJobData(ctx context.Context, request operations.PostV2BulkJobsBulkJobsIDJobDataRequest) (*operations.PostV2BulkJobsBulkJobsIDJobDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{bulk_jobs_id}/job_data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{bulk_jobs_id}/job_data", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -36,7 +36,7 @@ func (e *ListCardDisputesStatusInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCardDisputesQueryParams struct {
+type ListCardDisputesRequest struct {
 	CreatedAtAfter      *time.Time                     `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time                     `queryParam:"style=form,explode=true,name=created_at.before"`
 	CreatedAtOnOrAfter  *time.Time                     `queryParam:"style=form,explode=true,name=created_at.on_or_after"`
@@ -44,10 +44,6 @@ type ListCardDisputesQueryParams struct {
 	Cursor              *string                        `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64                         `queryParam:"style=form,explode=true,name=limit"`
 	StatusIn            []ListCardDisputesStatusInEnum `queryParam:"style=form,explode=true,name=status.in"`
-}
-
-type ListCardDisputesRequest struct {
-	QueryParams ListCardDisputesQueryParams
 }
 
 type ListCardDisputesDefaultApplicationJSON13StatusEnum string

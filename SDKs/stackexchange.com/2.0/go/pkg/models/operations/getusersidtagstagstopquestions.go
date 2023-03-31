@@ -8,12 +8,6 @@ import (
 	"net/http"
 )
 
-type GetUsersIDTagsTagsTopQuestionsPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-	// String list (semicolon delimited).
-	Tags string `pathParam:"style=simple,explode=false,name=tags"`
-}
-
 // GetUsersIDTagsTagsTopQuestionsOrderEnum
 type GetUsersIDTagsTagsTopQuestionsOrderEnum string
 
@@ -65,7 +59,7 @@ func (e *GetUsersIDTagsTagsTopQuestionsSortEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetUsersIDTagsTagsTopQuestionsQueryParams struct {
+type GetUsersIDTagsTagsTopQuestionsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -103,6 +97,7 @@ type GetUsersIDTagsTagsTopQuestionsQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Unix date.
 	Fromdate *int64 `queryParam:"style=form,explode=true,name=fromdate"`
+	ID       int64  `pathParam:"style=simple,explode=false,name=id"`
 	// sort = activity => date
 	// sort = creation => date
 	// sort = votes => number
@@ -120,13 +115,10 @@ type GetUsersIDTagsTagsTopQuestionsQueryParams struct {
 	//
 	Site string                                  `queryParam:"style=form,explode=true,name=site"`
 	Sort *GetUsersIDTagsTagsTopQuestionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	// String list (semicolon delimited).
+	Tags string `pathParam:"style=simple,explode=false,name=tags"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetUsersIDTagsTagsTopQuestionsRequest struct {
-	PathParams  GetUsersIDTagsTagsTopQuestionsPathParams
-	QueryParams GetUsersIDTagsTagsTopQuestionsQueryParams
 }
 
 type GetUsersIDTagsTagsTopQuestionsResponse struct {

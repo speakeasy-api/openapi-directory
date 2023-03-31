@@ -32,20 +32,20 @@ func newMobileCarriers(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DfareportingMobileCarriersGet - Gets one mobile carrier by ID.
-func (s *mobileCarriers) DfareportingMobileCarriersGet(ctx context.Context, request operations.DfareportingMobileCarriersGetRequest) (*operations.DfareportingMobileCarriersGetResponse, error) {
+func (s *mobileCarriers) DfareportingMobileCarriersGet(ctx context.Context, request operations.DfareportingMobileCarriersGetRequest, security operations.DfareportingMobileCarriersGetSecurity) (*operations.DfareportingMobileCarriersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *mobileCarriers) DfareportingMobileCarriersGet(ctx context.Context, requ
 }
 
 // DfareportingMobileCarriersList - Retrieves a list of mobile carriers.
-func (s *mobileCarriers) DfareportingMobileCarriersList(ctx context.Context, request operations.DfareportingMobileCarriersListRequest) (*operations.DfareportingMobileCarriersListResponse, error) {
+func (s *mobileCarriers) DfareportingMobileCarriersList(ctx context.Context, request operations.DfareportingMobileCarriersListRequest, security operations.DfareportingMobileCarriersListSecurity) (*operations.DfareportingMobileCarriersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

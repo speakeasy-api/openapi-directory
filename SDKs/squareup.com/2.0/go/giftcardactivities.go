@@ -36,7 +36,7 @@ func newGiftCardActivities(defaultClient, securityClient HTTPClient, serverURL, 
 // Creates a gift card activity. For more information, see
 // [GiftCardActivity](https://developer.squareup.com/docs/gift-cards/using-gift-cards-api#giftcardactivity) and
 // [Using activated gift cards](https://developer.squareup.com/docs/gift-cards/using-gift-cards-api#using-activated-gift-cards).
-func (s *giftCardActivities) CreateGiftCardActivity(ctx context.Context, request operations.CreateGiftCardActivityRequest) (*operations.CreateGiftCardActivityResponse, error) {
+func (s *giftCardActivities) CreateGiftCardActivity(ctx context.Context, request shared.CreateGiftCardActivityRequest, security operations.CreateGiftCardActivitySecurity) (*operations.CreateGiftCardActivityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/gift-cards/activities"
 
@@ -55,7 +55,7 @@ func (s *giftCardActivities) CreateGiftCardActivity(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *giftCardActivities) CreateGiftCardActivity(ctx context.Context, request
 // gift cards in the seller's account. You can optionally specify query parameters to
 // filter the list. For example, you can get a list of gift card activities for a gift card,
 // for all gift cards in a specific region, or for activities within a time window.
-func (s *giftCardActivities) ListGiftCardActivities(ctx context.Context, request operations.ListGiftCardActivitiesRequest) (*operations.ListGiftCardActivitiesResponse, error) {
+func (s *giftCardActivities) ListGiftCardActivities(ctx context.Context, request operations.ListGiftCardActivitiesRequest, security operations.ListGiftCardActivitiesSecurity) (*operations.ListGiftCardActivitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/gift-cards/activities"
 
@@ -103,11 +103,11 @@ func (s *giftCardActivities) ListGiftCardActivities(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

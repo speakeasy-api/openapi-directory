@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWebhooksPayloadTemplatePathParams struct {
-	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
-	PayloadTemplateID string `pathParam:"style=simple,explode=false,name=payloadTemplateId"`
-}
-
 type UpdateNetworkWebhooksPayloadTemplateRequestBodyHeaders struct {
 	// The name of the header template
 	Name *string `json:"name,omitempty"`
@@ -32,8 +27,9 @@ type UpdateNetworkWebhooksPayloadTemplateRequestBody struct {
 }
 
 type UpdateNetworkWebhooksPayloadTemplateRequest struct {
-	PathParams UpdateNetworkWebhooksPayloadTemplatePathParams
-	Request    *UpdateNetworkWebhooksPayloadTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       *UpdateNetworkWebhooksPayloadTemplateRequestBody `request:"mediaType=application/json"`
+	NetworkID         string                                           `pathParam:"style=simple,explode=false,name=networkId"`
+	PayloadTemplateID string                                           `pathParam:"style=simple,explode=false,name=payloadTemplateId"`
 }
 
 type UpdateNetworkWebhooksPayloadTemplate200ApplicationJSONHeaders struct {

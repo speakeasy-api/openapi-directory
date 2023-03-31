@@ -14,7 +14,8 @@ var CreateTrunkServerList = []string{
 }
 
 type CreateTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateTrunkCreateTrunkRequestDisasterRecoveryMethodEnum - The HTTP method we should use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.
@@ -68,12 +69,6 @@ type CreateTrunkCreateTrunkRequest struct {
 	Secure           *bool                                 `form:"name=Secure"`
 	TransferCallerID *shared.TrunkEnumTransferCallerIDEnum `form:"name=TransferCallerId"`
 	TransferMode     *shared.TrunkEnumTransferSettingEnum  `form:"name=TransferMode"`
-}
-
-type CreateTrunkRequest struct {
-	Request   *CreateTrunkCreateTrunkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateTrunkSecurity
-	ServerURL *string
 }
 
 type CreateTrunkResponse struct {

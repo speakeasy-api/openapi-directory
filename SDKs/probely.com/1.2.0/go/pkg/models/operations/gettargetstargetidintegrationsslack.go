@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDIntegrationsSlackPathParams struct {
+type GetTargetsTargetIDIntegrationsSlackRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDIntegrationsSlackRequest struct {
-	PathParams GetTargetsTargetIDIntegrationsSlackPathParams
 }
 
 // GetTargetsTargetIDIntegrationsSlack403ApplicationJSON - Not allowed to perform operation

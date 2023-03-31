@@ -8,18 +8,16 @@ import (
 )
 
 type StorageBucketAccessControlsInsertSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type StorageBucketAccessControlsInsertPathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-}
-
-type StorageBucketAccessControlsInsertQueryParams struct {
+type StorageBucketAccessControlsInsertRequest struct {
+	BucketAccessControl *shared.BucketAccessControl `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -32,13 +30,6 @@ type StorageBucketAccessControlsInsertQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type StorageBucketAccessControlsInsertRequest struct {
-	PathParams  StorageBucketAccessControlsInsertPathParams
-	QueryParams StorageBucketAccessControlsInsertQueryParams
-	Request     *shared.BucketAccessControl `request:"mediaType=application/json"`
-	Security    StorageBucketAccessControlsInsertSecurity
 }
 
 type StorageBucketAccessControlsInsertResponse struct {

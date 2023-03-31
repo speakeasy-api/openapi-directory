@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIterationRawPathParams struct {
+type UpdateIterationRawRequest struct {
+	// The updated iteration model.
+	RequestBody []byte `request:"mediaType=text/xml"`
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// Iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// Project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateIterationRawHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateIterationRawRequest struct {
-	PathParams UpdateIterationRawPathParams
-	Headers    UpdateIterationRawHeaders
-	// The updated iteration model.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type UpdateIterationRawResponse struct {

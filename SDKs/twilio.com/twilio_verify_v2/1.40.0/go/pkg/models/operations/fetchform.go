@@ -12,18 +12,13 @@ var FetchFormServerList = []string{
 }
 
 type FetchFormSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchFormPathParams struct {
-	// The Type of this Form. Currently only `form-push` is supported.
-	FormType shared.FormEnumFormTypesEnum `pathParam:"style=simple,explode=false,name=FormType"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchFormRequest struct {
-	PathParams FetchFormPathParams
-	Security   FetchFormSecurity
-	ServerURL  *string
+	// The Type of this Form. Currently only `form-push` is supported.
+	FormType shared.FormEnumFormTypesEnum `pathParam:"style=simple,explode=false,name=FormType"`
 }
 
 type FetchFormResponse struct {

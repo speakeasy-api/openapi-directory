@@ -8,12 +8,7 @@ import (
 )
 
 type DetectDeviceSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DetectDeviceRequest struct {
-	Request  shared.DeviceFeatures `request:"mediaType=application/json"`
-	Security DetectDeviceSecurity
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type DetectDeviceResponse struct {

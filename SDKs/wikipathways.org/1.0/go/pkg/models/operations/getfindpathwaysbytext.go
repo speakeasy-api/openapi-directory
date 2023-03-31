@@ -44,16 +44,12 @@ func (e *GetFindPathwaysByTextFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFindPathwaysByTextQueryParams struct {
+type GetFindPathwaysByTextRequest struct {
 	Format *GetFindPathwaysByTextFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The query, e.g. 'apoptosis'
 	Query string `queryParam:"style=form,explode=true,name=query"`
 	// Optional, limit the query by species. Leave
 	Species *string `queryParam:"style=form,explode=true,name=species"`
-}
-
-type GetFindPathwaysByTextRequest struct {
-	QueryParams GetFindPathwaysByTextQueryParams
 }
 
 type GetFindPathwaysByTextResponse struct {

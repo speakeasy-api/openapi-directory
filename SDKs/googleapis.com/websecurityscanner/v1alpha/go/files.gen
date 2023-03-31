@@ -31,7 +31,6 @@ pkg/models/shared/googleaccount.go
 pkg/models/shared/customaccount.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listscanconfigsresponse.go
 pkg/models/shared/listcrawledurlsresponse.go
 pkg/models/shared/crawledurl.go

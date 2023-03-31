@@ -8,11 +8,11 @@ import (
 )
 
 type AdsensehostReportsGenerateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostReportsGenerateQueryParams struct {
+type AdsensehostReportsGenerateRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Dimensions to base the report on.
@@ -45,11 +45,6 @@ type AdsensehostReportsGenerateQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostReportsGenerateRequest struct {
-	QueryParams AdsensehostReportsGenerateQueryParams
-	Security    AdsensehostReportsGenerateSecurity
 }
 
 type AdsensehostReportsGenerateResponse struct {

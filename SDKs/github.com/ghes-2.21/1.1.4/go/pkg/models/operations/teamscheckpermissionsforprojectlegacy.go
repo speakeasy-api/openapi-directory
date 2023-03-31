@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCheckPermissionsForProjectLegacyPathParams struct {
+type TeamsCheckPermissionsForProjectLegacyRequest struct {
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	TeamID    int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsCheckPermissionsForProjectLegacyRequest struct {
-	PathParams TeamsCheckPermissionsForProjectLegacyPathParams
 }
 
 // TeamsCheckPermissionsForProjectLegacy415ApplicationJSON - Preview header missing

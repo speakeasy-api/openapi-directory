@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImportRequest struct {
-	Request shared.CreateImportRequest `request:"mediaType=application/json"`
-}
-
 type CreateImportResponse struct {
 	// Bad request
 	APIError    *shared.APIError

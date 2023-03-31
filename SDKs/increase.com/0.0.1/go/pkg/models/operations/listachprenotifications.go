@@ -10,17 +10,13 @@ import (
 	"time"
 )
 
-type ListAchPrenotificationsQueryParams struct {
+type ListAchPrenotificationsRequest struct {
 	CreatedAtAfter      *time.Time `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time `queryParam:"style=form,explode=true,name=created_at.before"`
 	CreatedAtOnOrAfter  *time.Time `queryParam:"style=form,explode=true,name=created_at.on_or_after"`
 	CreatedAtOnOrBefore *time.Time `queryParam:"style=form,explode=true,name=created_at.on_or_before"`
 	Cursor              *string    `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64     `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListAchPrenotificationsRequest struct {
-	QueryParams ListAchPrenotificationsQueryParams
 }
 
 type ListAchPrenotificationsDefaultApplicationJSON13StatusEnum string

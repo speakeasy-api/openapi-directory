@@ -8,23 +8,14 @@ import (
 )
 
 type GetLayer2NetworkSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetLayer2NetworkPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetLayer2NetworkQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetLayer2NetworkRequest struct {
-	PathParams  GetLayer2NetworkPathParams
-	QueryParams GetLayer2NetworkQueryParams
-	Security    GetLayer2NetworkSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetLayer2NetworkResponse struct {

@@ -25,8 +25,7 @@ pkg/models/shared/androidnotification.go
 pkg/models/shared/lightsettings.go
 pkg/models/shared/color.go
 pkg/models/shared/androidfcmoptions.go
-pkg/models/shared/sendmessagerequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/sendmessagerequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

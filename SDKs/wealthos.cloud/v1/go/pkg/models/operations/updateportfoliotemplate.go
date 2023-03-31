@@ -6,22 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type UpdatePortfolioTemplateSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdatePortfolioTemplatePathParams struct {
-	// Portfolio ID
-	PortfolioTemplateID string `pathParam:"style=simple,explode=false,name=portfolio_template_id"`
-}
-
-type UpdatePortfolioTemplateHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type UpdatePortfolioTemplateRequestBodyRatios struct {
@@ -40,10 +29,11 @@ type UpdatePortfolioTemplateRequestBody struct {
 }
 
 type UpdatePortfolioTemplateRequest struct {
-	PathParams UpdatePortfolioTemplatePathParams
-	Headers    UpdatePortfolioTemplateHeaders
-	Request    UpdatePortfolioTemplateRequestBody `request:"mediaType=application/json"`
-	Security   UpdatePortfolioTemplateSecurity
+	RequestBody UpdatePortfolioTemplateRequestBody `request:"mediaType=application/json"`
+	// Portfolio ID
+	PortfolioTemplateID string `pathParam:"style=simple,explode=false,name=portfolio_template_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // UpdatePortfolioTemplate500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

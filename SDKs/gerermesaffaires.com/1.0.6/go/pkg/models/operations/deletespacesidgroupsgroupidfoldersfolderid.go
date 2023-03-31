@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteSpacesIDGroupsGroupIDFoldersFolderIDPathParams struct {
+type DeleteSpacesIDGroupsGroupIDFoldersFolderIDRequest struct {
 	// Id of the folder
 	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
 	// Id of the group to modify
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSpacesIDGroupsGroupIDFoldersFolderIDRequest struct {
-	PathParams DeleteSpacesIDGroupsGroupIDFoldersFolderIDPathParams
 }
 
 type DeleteSpacesIDGroupsGroupIDFoldersFolderIDResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsRequestConsolePathParams struct {
+type PostServersIDActionsRequestConsoleRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsRequestConsoleRequest struct {
-	PathParams PostServersIDActionsRequestConsolePathParams
 }
 
 // PostServersIDActionsRequestConsole201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null

@@ -8,24 +8,15 @@ import (
 )
 
 type CreateFileAssociationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateFileAssociationPathParams struct {
-	// File id for single object
-	FileID string `pathParam:"style=simple,explode=false,name=FileId"`
-}
-
-type CreateFileAssociationHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateFileAssociationRequest struct {
-	PathParams CreateFileAssociationPathParams
-	Headers    CreateFileAssociationHeaders
-	Request    *shared.Association `request:"mediaType=application/json"`
-	Security   CreateFileAssociationSecurity
+	Association *shared.Association `request:"mediaType=application/json"`
+	// File id for single object
+	FileID string `pathParam:"style=simple,explode=false,name=FileId"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type CreateFileAssociationResponse struct {

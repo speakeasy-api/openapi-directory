@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDiscoveryV2VenuesIDPathParams struct {
-	// ID of the venue
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetDiscoveryV2VenuesIDIncludeLicensedContentEnum - True if you want to display licensed content
 type GetDiscoveryV2VenuesIDIncludeLicensedContentEnum string
 
@@ -37,16 +32,13 @@ func (e *GetDiscoveryV2VenuesIDIncludeLicensedContentEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetDiscoveryV2VenuesIDQueryParams struct {
+type GetDiscoveryV2VenuesIDRequest struct {
+	// ID of the venue
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// True if you want to display licensed content
 	IncludeLicensedContent *GetDiscoveryV2VenuesIDIncludeLicensedContentEnum `queryParam:"style=form,explode=true,name=includeLicensedContent"`
 	// The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*')
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type GetDiscoveryV2VenuesIDRequest struct {
-	PathParams  GetDiscoveryV2VenuesIDPathParams
-	QueryParams GetDiscoveryV2VenuesIDQueryParams
 }
 
 type GetDiscoveryV2VenuesIDResponse struct {

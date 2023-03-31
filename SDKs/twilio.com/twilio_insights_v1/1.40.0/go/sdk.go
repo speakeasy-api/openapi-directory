@@ -92,10 +92,20 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) FetchAccountSettings(ctx context.Context, request operations.FetchAccountSettingsRequest) (*operations.FetchAccountSettingsResponse, error) {
+func (s *SDK) FetchAccountSettings(ctx context.Context, request operations.FetchAccountSettingsRequest, security operations.FetchAccountSettingsSecurity, opts ...operations.Option) (*operations.FetchAccountSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchAccountSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Voice/Settings"
@@ -105,11 +115,11 @@ func (s *SDK) FetchAccountSettings(ctx context.Context, request operations.Fetch
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,20 +154,30 @@ func (s *SDK) FetchAccountSettings(ctx context.Context, request operations.Fetch
 }
 
 // FetchAnnotation - Fetch a specific Annotation.
-func (s *SDK) FetchAnnotation(ctx context.Context, request operations.FetchAnnotationRequest) (*operations.FetchAnnotationResponse, error) {
-	baseURL := operations.FetchAnnotationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAnnotation(ctx context.Context, request operations.FetchAnnotationRequest, security operations.FetchAnnotationSecurity, opts ...operations.Option) (*operations.FetchAnnotationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Annotation", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAnnotationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Annotation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +210,30 @@ func (s *SDK) FetchAnnotation(ctx context.Context, request operations.FetchAnnot
 
 	return res, nil
 }
-func (s *SDK) FetchCall(ctx context.Context, request operations.FetchCallRequest) (*operations.FetchCallResponse, error) {
-	baseURL := operations.FetchCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCall(ctx context.Context, request operations.FetchCallRequest, security operations.FetchCallSecurity, opts ...operations.Option) (*operations.FetchCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +268,30 @@ func (s *SDK) FetchCall(ctx context.Context, request operations.FetchCallRequest
 }
 
 // FetchConference - Fetch a specific Conference.
-func (s *SDK) FetchConference(ctx context.Context, request operations.FetchConferenceRequest) (*operations.FetchConferenceResponse, error) {
-	baseURL := operations.FetchConferenceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConference(ctx context.Context, request operations.FetchConferenceRequest, security operations.FetchConferenceSecurity, opts ...operations.Option) (*operations.FetchConferenceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conferences/{ConferenceSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConferenceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conferences/{ConferenceSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,24 +326,34 @@ func (s *SDK) FetchConference(ctx context.Context, request operations.FetchConfe
 }
 
 // FetchConferenceParticipant - Fetch a specific Conference Participant Summary.
-func (s *SDK) FetchConferenceParticipant(ctx context.Context, request operations.FetchConferenceParticipantRequest) (*operations.FetchConferenceParticipantResponse, error) {
-	baseURL := operations.FetchConferenceParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConferenceParticipant(ctx context.Context, request operations.FetchConferenceParticipantRequest, security operations.FetchConferenceParticipantSecurity, opts ...operations.Option) (*operations.FetchConferenceParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conferences/{ConferenceSid}/Participants/{ParticipantSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConferenceParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conferences/{ConferenceSid}/Participants/{ParticipantSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -336,24 +386,34 @@ func (s *SDK) FetchConferenceParticipant(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *SDK) FetchSummary(ctx context.Context, request operations.FetchSummaryRequest) (*operations.FetchSummaryResponse, error) {
-	baseURL := operations.FetchSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSummary(ctx context.Context, request operations.FetchSummaryRequest, security operations.FetchSummarySecurity, opts ...operations.Option) (*operations.FetchSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Summary", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Summary", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,20 +448,30 @@ func (s *SDK) FetchSummary(ctx context.Context, request operations.FetchSummaryR
 }
 
 // FetchVideoParticipantSummary - Get Video Log Analyzer data for a Room Participant.
-func (s *SDK) FetchVideoParticipantSummary(ctx context.Context, request operations.FetchVideoParticipantSummaryRequest) (*operations.FetchVideoParticipantSummaryResponse, error) {
-	baseURL := operations.FetchVideoParticipantSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchVideoParticipantSummary(ctx context.Context, request operations.FetchVideoParticipantSummaryRequest, security operations.FetchVideoParticipantSummarySecurity, opts ...operations.Option) (*operations.FetchVideoParticipantSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Video/Rooms/{RoomSid}/Participants/{ParticipantSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchVideoParticipantSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Video/Rooms/{RoomSid}/Participants/{ParticipantSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -436,20 +506,30 @@ func (s *SDK) FetchVideoParticipantSummary(ctx context.Context, request operatio
 }
 
 // FetchVideoRoomSummary - Get Video Log Analyzer data for a Room.
-func (s *SDK) FetchVideoRoomSummary(ctx context.Context, request operations.FetchVideoRoomSummaryRequest) (*operations.FetchVideoRoomSummaryResponse, error) {
-	baseURL := operations.FetchVideoRoomSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchVideoRoomSummary(ctx context.Context, request operations.FetchVideoRoomSummaryRequest, security operations.FetchVideoRoomSummarySecurity, opts ...operations.Option) (*operations.FetchVideoRoomSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Video/Rooms/{RoomSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchVideoRoomSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Video/Rooms/{RoomSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -482,10 +562,20 @@ func (s *SDK) FetchVideoRoomSummary(ctx context.Context, request operations.Fetc
 
 	return res, nil
 }
-func (s *SDK) ListCallSummaries(ctx context.Context, request operations.ListCallSummariesRequest) (*operations.ListCallSummariesResponse, error) {
+func (s *SDK) ListCallSummaries(ctx context.Context, request operations.ListCallSummariesRequest, security operations.ListCallSummariesSecurity, opts ...operations.Option) (*operations.ListCallSummariesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCallSummariesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Voice/Summaries"
@@ -495,11 +585,11 @@ func (s *SDK) ListCallSummaries(ctx context.Context, request operations.ListCall
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,10 +624,20 @@ func (s *SDK) ListCallSummaries(ctx context.Context, request operations.ListCall
 }
 
 // ListConference - Retrieve a list of Conferences.
-func (s *SDK) ListConference(ctx context.Context, request operations.ListConferenceRequest) (*operations.ListConferenceResponse, error) {
+func (s *SDK) ListConference(ctx context.Context, request operations.ListConferenceRequest, security operations.ListConferenceSecurity, opts ...operations.Option) (*operations.ListConferenceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListConferenceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Conferences"
@@ -547,11 +647,11 @@ func (s *SDK) ListConference(ctx context.Context, request operations.ListConfere
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -586,24 +686,34 @@ func (s *SDK) ListConference(ctx context.Context, request operations.ListConfere
 }
 
 // ListConferenceParticipant - List Conference Participants.
-func (s *SDK) ListConferenceParticipant(ctx context.Context, request operations.ListConferenceParticipantRequest) (*operations.ListConferenceParticipantResponse, error) {
-	baseURL := operations.ListConferenceParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConferenceParticipant(ctx context.Context, request operations.ListConferenceParticipantRequest, security operations.ListConferenceParticipantSecurity, opts ...operations.Option) (*operations.ListConferenceParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conferences/{ConferenceSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConferenceParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conferences/{ConferenceSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -636,24 +746,34 @@ func (s *SDK) ListConferenceParticipant(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *SDK) ListEvent(ctx context.Context, request operations.ListEventRequest) (*operations.ListEventResponse, error) {
-	baseURL := operations.ListEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListEvent(ctx context.Context, request operations.ListEventRequest, security operations.ListEventSecurity, opts ...operations.Option) (*operations.ListEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Events", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -686,24 +806,34 @@ func (s *SDK) ListEvent(ctx context.Context, request operations.ListEventRequest
 
 	return res, nil
 }
-func (s *SDK) ListMetric(ctx context.Context, request operations.ListMetricRequest) (*operations.ListMetricResponse, error) {
-	baseURL := operations.ListMetricServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListMetric(ctx context.Context, request operations.ListMetricRequest, security operations.ListMetricSecurity, opts ...operations.Option) (*operations.ListMetricResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Metrics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListMetricServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -738,24 +868,34 @@ func (s *SDK) ListMetric(ctx context.Context, request operations.ListMetricReque
 }
 
 // ListVideoParticipantSummary - Get a list of room participants.
-func (s *SDK) ListVideoParticipantSummary(ctx context.Context, request operations.ListVideoParticipantSummaryRequest) (*operations.ListVideoParticipantSummaryResponse, error) {
-	baseURL := operations.ListVideoParticipantSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListVideoParticipantSummary(ctx context.Context, request operations.ListVideoParticipantSummaryRequest, security operations.ListVideoParticipantSummarySecurity, opts ...operations.Option) (*operations.ListVideoParticipantSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Video/Rooms/{RoomSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListVideoParticipantSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Video/Rooms/{RoomSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -790,10 +930,20 @@ func (s *SDK) ListVideoParticipantSummary(ctx context.Context, request operation
 }
 
 // ListVideoRoomSummary - Get a list of Programmable Video Rooms.
-func (s *SDK) ListVideoRoomSummary(ctx context.Context, request operations.ListVideoRoomSummaryRequest) (*operations.ListVideoRoomSummaryResponse, error) {
+func (s *SDK) ListVideoRoomSummary(ctx context.Context, request operations.ListVideoRoomSummaryRequest, security operations.ListVideoRoomSummarySecurity, opts ...operations.Option) (*operations.ListVideoRoomSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListVideoRoomSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Video/Rooms"
@@ -803,11 +953,11 @@ func (s *SDK) ListVideoRoomSummary(ctx context.Context, request operations.ListV
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -840,10 +990,20 @@ func (s *SDK) ListVideoRoomSummary(ctx context.Context, request operations.ListV
 
 	return res, nil
 }
-func (s *SDK) UpdateAccountSettings(ctx context.Context, request operations.UpdateAccountSettingsRequest) (*operations.UpdateAccountSettingsResponse, error) {
+func (s *SDK) UpdateAccountSettings(ctx context.Context, request operations.UpdateAccountSettingsUpdateAccountSettingsRequest, security operations.UpdateAccountSettingsSecurity, opts ...operations.Option) (*operations.UpdateAccountSettingsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UpdateAccountSettingsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Voice/Settings"
@@ -860,7 +1020,7 @@ func (s *SDK) UpdateAccountSettings(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -895,15 +1055,25 @@ func (s *SDK) UpdateAccountSettings(ctx context.Context, request operations.Upda
 }
 
 // UpdateAnnotation - Create/Update the annotation for the call
-func (s *SDK) UpdateAnnotation(ctx context.Context, request operations.UpdateAnnotationRequest) (*operations.UpdateAnnotationResponse, error) {
-	baseURL := operations.UpdateAnnotationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateAnnotation(ctx context.Context, request operations.UpdateAnnotationRequest, security operations.UpdateAnnotationSecurity, opts ...operations.Option) (*operations.UpdateAnnotationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Annotation", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateAnnotationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Voice/{CallSid}/Annotation", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -915,7 +1085,7 @@ func (s *SDK) UpdateAnnotation(ctx context.Context, request operations.UpdateAnn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

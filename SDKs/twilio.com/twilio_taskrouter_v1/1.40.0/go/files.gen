@@ -72,7 +72,6 @@ pkg/models/operations/updateworkerreservation.go
 pkg/models/operations/updateworkflow.go
 pkg/models/operations/updateworkspace.go
 pkg/models/shared/taskrouterv1workspaceactivity.go
-pkg/models/shared/security.go
 pkg/models/shared/taskrouterv1workspacetask.go
 pkg/models/shared/taskenumstatusenum.go
 pkg/models/shared/taskrouterv1workspacetaskchannel.go
@@ -108,3 +107,4 @@ pkg/models/shared/taskreservationenumconferenceeventenum.go
 pkg/models/shared/workerreservationenumcallstatusenum.go
 pkg/models/shared/workerreservationenumconferenceeventenum.go
 USAGE.md
+pkg/models/operations/options.go

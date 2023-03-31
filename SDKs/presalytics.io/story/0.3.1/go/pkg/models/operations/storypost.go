@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryPostQueryParams struct {
+type StoryPostRequest struct {
 	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
 	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
-}
-
-type StoryPostRequest struct {
-	QueryParams StoryPostQueryParams
 	// A story outline json object
-	Request shared.Outline `request:"mediaType=application/json"`
+	Outline shared.Outline `request:"mediaType=application/json"`
 }
 
 type StoryPostResponse struct {

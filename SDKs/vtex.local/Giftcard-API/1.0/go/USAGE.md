@@ -13,23 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateGiftCardRequest{
-        Headers: operations.CreateGiftCardHeaders{
-            Accept: "corrupti",
-            ContentType: "provident",
-            XVTEXAPIAppKey: "distinctio",
-            XVTEXAPIAppToken: "quibusdam",
-        },
-        Request: shared.CreateGiftCardRequest{
+        Accept: "corrupti",
+        ContentType: "provident",
+        CreateGiftCardRequest: shared.CreateGiftCardRequest{
             Caption: "rewards program",
             ExpiringDate: "2020-09-01T13:15:30Z",
             MultipleCredits: false,
@@ -38,6 +30,8 @@ func main() {
             RelationName: "insert example here",
             RestrictedToOwner: false,
         },
+        XVTEXAPIAppKey: "distinctio",
+        XVTEXAPIAppToken: "quibusdam",
     }
 
     ctx := context.Background()

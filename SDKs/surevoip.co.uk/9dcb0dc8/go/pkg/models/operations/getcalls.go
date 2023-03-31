@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCallsQueryParams struct {
+type GetCallsRequest struct {
 	// Validate a phone number by calling it for one ring. Note; not 100% proof the number is in service.
 	Validate *int64 `queryParam:"style=form,explode=true,name=validate"`
-}
-
-type GetCallsRequest struct {
-	QueryParams GetCallsQueryParams
 }
 
 type GetCallsResponse struct {

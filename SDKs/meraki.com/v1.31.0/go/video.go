@@ -34,7 +34,7 @@ func newVideo(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Returns video settings for the given camera
 func (s *video) GetDeviceCameraVideoSettings(ctx context.Context, request operations.GetDeviceCameraVideoSettingsRequest) (*operations.GetDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *video) GetDeviceCameraVideoSettings(ctx context.Context, request operat
 // Update video settings for the given camera
 func (s *video) UpdateDeviceCameraVideoSettings(ctx context.Context, request operations.UpdateDeviceCameraVideoSettingsRequest) (*operations.UpdateDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

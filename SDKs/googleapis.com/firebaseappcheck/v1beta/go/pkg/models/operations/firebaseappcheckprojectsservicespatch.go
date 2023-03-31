@@ -8,13 +8,13 @@ import (
 )
 
 type FirebaseappcheckProjectsServicesPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsServicesPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsServicesPatchSecurity struct {
@@ -22,14 +22,10 @@ type FirebaseappcheckProjectsServicesPatchSecurity struct {
 	Option2 *FirebaseappcheckProjectsServicesPatchSecurityOption2 `security:"option"`
 }
 
-type FirebaseappcheckProjectsServicesPatchPathParams struct {
-	// Required. The relative resource name of the service configuration object, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a supported service ID. Currently, the following service IDs are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type FirebaseappcheckProjectsServicesPatchQueryParams struct {
+type FirebaseappcheckProjectsServicesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                         *shared.XgafvEnum                           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleFirebaseAppcheckV1betaService *shared.GoogleFirebaseAppcheckV1betaService `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type FirebaseappcheckProjectsServicesPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The relative resource name of the service configuration object, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a supported service ID. Currently, the following service IDs are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,13 +50,6 @@ type FirebaseappcheckProjectsServicesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappcheckProjectsServicesPatchRequest struct {
-	PathParams  FirebaseappcheckProjectsServicesPatchPathParams
-	QueryParams FirebaseappcheckProjectsServicesPatchQueryParams
-	Request     *shared.GoogleFirebaseAppcheckV1betaService `request:"mediaType=application/json"`
-	Security    FirebaseappcheckProjectsServicesPatchSecurity
 }
 
 type FirebaseappcheckProjectsServicesPatchResponse struct {

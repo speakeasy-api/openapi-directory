@@ -15,10 +15,6 @@ type PostAssetsKurtosisRequestBody struct {
 	Assets []PostAssetsKurtosisRequestBodyAssets `json:"assets"`
 }
 
-type PostAssetsKurtosisRequest struct {
-	Request PostAssetsKurtosisRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsKurtosis200ApplicationJSONAssets struct {
 	// The kurtosis of the asset
 	AssetKurtosis float64 `json:"assetKurtosis"`

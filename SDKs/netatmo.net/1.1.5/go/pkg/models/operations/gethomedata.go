@@ -8,20 +8,15 @@ import (
 )
 
 type GethomedataSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GethomedataQueryParams struct {
+type GethomedataRequest struct {
 	// Specify if you're looking for the events of a specific Home.
 	HomeID *string `queryParam:"style=form,explode=true,name=home_id"`
 	// Number of events to retrieve. Default is `30`.
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GethomedataRequest struct {
-	QueryParams GethomedataQueryParams
-	Security    GethomedataSecurity
 }
 
 type GethomedataResponse struct {

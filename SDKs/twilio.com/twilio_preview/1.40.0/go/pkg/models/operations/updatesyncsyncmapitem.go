@@ -12,18 +12,8 @@ var UpdateSyncSyncMapItemServerList = []string{
 }
 
 type UpdateSyncSyncMapItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncSyncMapItemPathParams struct {
-	Key        string `pathParam:"style=simple,explode=false,name=Key"`
-	MapSid     string `pathParam:"style=simple,explode=false,name=MapSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type UpdateSyncSyncMapItemHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncSyncMapItemUpdateSyncSyncMapItemRequest struct {
@@ -31,11 +21,12 @@ type UpdateSyncSyncMapItemUpdateSyncSyncMapItemRequest struct {
 }
 
 type UpdateSyncSyncMapItemRequest struct {
-	PathParams UpdateSyncSyncMapItemPathParams
-	Headers    UpdateSyncSyncMapItemHeaders
-	Request    *UpdateSyncSyncMapItemUpdateSyncSyncMapItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncSyncMapItemSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch     *string                                            `header:"style=simple,explode=false,name=If-Match"`
+	Key         string                                             `pathParam:"style=simple,explode=false,name=Key"`
+	MapSid      string                                             `pathParam:"style=simple,explode=false,name=MapSid"`
+	RequestBody *UpdateSyncSyncMapItemUpdateSyncSyncMapItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                                             `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncSyncMapItemResponse struct {

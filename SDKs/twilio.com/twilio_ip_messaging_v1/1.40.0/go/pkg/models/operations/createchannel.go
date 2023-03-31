@@ -12,11 +12,8 @@ var CreateChannelServerList = []string{
 }
 
 type CreateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateChannelPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateChannelCreateChannelRequest struct {
@@ -27,10 +24,8 @@ type CreateChannelCreateChannelRequest struct {
 }
 
 type CreateChannelRequest struct {
-	PathParams CreateChannelPathParams
-	Request    *CreateChannelCreateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateChannelSecurity
-	ServerURL  *string
+	RequestBody *CreateChannelCreateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                             `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateChannelResponse struct {

@@ -12,11 +12,8 @@ var UpdateHostedNumbersAuthorizationDocumentServerList = []string{
 }
 
 type UpdateHostedNumbersAuthorizationDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateHostedNumbersAuthorizationDocumentPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest struct {
@@ -36,10 +33,8 @@ type UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDoc
 }
 
 type UpdateHostedNumbersAuthorizationDocumentRequest struct {
-	PathParams UpdateHostedNumbersAuthorizationDocumentPathParams
-	Request    *UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateHostedNumbersAuthorizationDocumentSecurity
-	ServerURL  *string
+	RequestBody *UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid         string                                                                                   `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateHostedNumbersAuthorizationDocumentResponse struct {

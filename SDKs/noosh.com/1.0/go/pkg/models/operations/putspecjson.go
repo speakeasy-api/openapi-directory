@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSpecJSONPathParams struct {
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	SpecID      string `pathParam:"style=simple,explode=false,name=spec_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PutSpecJSONRequest struct {
-	PathParams PutSpecJSONPathParams
-	Request    *shared.V1X1SpecUpdatingPO `request:"mediaType=application/json"`
+	V1X1SpecUpdatingPO *shared.V1X1SpecUpdatingPO `request:"mediaType=application/json"`
+	ProjectID          string                     `pathParam:"style=simple,explode=false,name=project_id"`
+	SpecID             string                     `pathParam:"style=simple,explode=false,name=spec_id"`
+	WorkgroupID        string                     `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PutSpecJSONResponse struct {

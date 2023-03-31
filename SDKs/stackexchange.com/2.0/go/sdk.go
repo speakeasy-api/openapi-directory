@@ -101,14 +101,14 @@ func New(opts ...SDKOption) *SDK {
 // This method returns a list of access_tokens.
 func (s *SDK) GetAccessTokensAccessTokens(ctx context.Context, request operations.GetAccessTokensAccessTokensRequest) (*operations.GetAccessTokensAccessTokensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/access-tokens/{accessTokens}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/access-tokens/{accessTokens}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,14 +172,14 @@ func (s *SDK) GetAccessTokensAccessTokens(ctx context.Context, request operation
 // This method returns a list of access_tokens.
 func (s *SDK) GetAccessTokensAccessTokensInvalidate(ctx context.Context, request operations.GetAccessTokensAccessTokensInvalidateRequest) (*operations.GetAccessTokensAccessTokensInvalidateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/access-tokens/{accessTokens}/invalidate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/access-tokens/{accessTokens}/invalidate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -259,7 +259,7 @@ func (s *SDK) GetAnswers(ctx context.Context, request operations.GetAnswersReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -336,14 +336,14 @@ func (s *SDK) GetAnswers(ctx context.Context, request operations.GetAnswersReque
 // This method returns a list of answers.
 func (s *SDK) GetAnswersIds(ctx context.Context, request operations.GetAnswersIdsRequest) (*operations.GetAnswersIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/answers/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/answers/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -418,14 +418,14 @@ func (s *SDK) GetAnswersIds(ctx context.Context, request operations.GetAnswersId
 // This method returns a list of comments.
 func (s *SDK) GetAnswersIdsComments(ctx context.Context, request operations.GetAnswersIdsCommentsRequest) (*operations.GetAnswersIdsCommentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/answers/{ids}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/answers/{ids}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -493,14 +493,14 @@ func (s *SDK) GetAnswersIdsComments(ctx context.Context, request operations.GetA
 // This method returns a list of access_tokens.
 func (s *SDK) GetAppsAccessTokensDeAuthenticate(ctx context.Context, request operations.GetAppsAccessTokensDeAuthenticateRequest) (*operations.GetAppsAccessTokensDeAuthenticateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{accessTokens}/de-authenticate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/{accessTokens}/de-authenticate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -577,7 +577,7 @@ func (s *SDK) GetBadges(ctx context.Context, request operations.GetBadgesRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -652,7 +652,7 @@ func (s *SDK) GetBadgesName(ctx context.Context, request operations.GetBadgesNam
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -723,7 +723,7 @@ func (s *SDK) GetBadgesRecipients(ctx context.Context, request operations.GetBad
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -796,7 +796,7 @@ func (s *SDK) GetBadgesTags(ctx context.Context, request operations.GetBadgesTag
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -870,14 +870,14 @@ func (s *SDK) GetBadgesTags(ctx context.Context, request operations.GetBadgesTag
 // This method returns a list of badges.
 func (s *SDK) GetBadgesIds(ctx context.Context, request operations.GetBadgesIdsRequest) (*operations.GetBadgesIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -943,14 +943,14 @@ func (s *SDK) GetBadgesIds(ctx context.Context, request operations.GetBadgesIdsR
 // This method returns a list of badges.
 func (s *SDK) GetBadgesIdsRecipients(ctx context.Context, request operations.GetBadgesIdsRecipientsRequest) (*operations.GetBadgesIdsRecipientsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}/recipients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/badges/{ids}/recipients", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1032,7 +1032,7 @@ func (s *SDK) GetComments(ctx context.Context, request operations.GetCommentsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1107,14 +1107,14 @@ func (s *SDK) GetComments(ctx context.Context, request operations.GetCommentsReq
 // This method returns a list of comments.
 func (s *SDK) GetCommentsIds(ctx context.Context, request operations.GetCommentsIdsRequest) (*operations.GetCommentsIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/comments/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1187,7 +1187,7 @@ func (s *SDK) GetErrors(ctx context.Context, request operations.GetErrorsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1251,7 +1251,7 @@ func (s *SDK) GetErrors(ctx context.Context, request operations.GetErrorsRequest
 // This method results in an error, which will be expressed with a 400 HTTP status code and setting the error* properties on the wrapper object.
 func (s *SDK) GetErrorsID(ctx context.Context, request operations.GetErrorsIDRequest) (*operations.GetErrorsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/errors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/errors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1334,7 +1334,7 @@ func (s *SDK) GetEvents(ctx context.Context, request operations.GetEventsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1411,7 +1411,7 @@ func (s *SDK) GetFiltersCreate(ctx context.Context, request operations.GetFilter
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1477,7 +1477,7 @@ func (s *SDK) GetFiltersCreate(ctx context.Context, request operations.GetFilter
 // This method returns a list of filters.
 func (s *SDK) GetFiltersFilters(ctx context.Context, request operations.GetFiltersFiltersRequest) (*operations.GetFiltersFiltersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/filters/{filters}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/filters/{filters}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1551,7 +1551,7 @@ func (s *SDK) GetInbox(ctx context.Context, request operations.GetInboxRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1622,7 +1622,7 @@ func (s *SDK) GetInboxUnread(ctx context.Context, request operations.GetInboxUnr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1695,7 +1695,7 @@ func (s *SDK) GetInfo(ctx context.Context, request operations.GetInfoRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1764,7 +1764,7 @@ func (s *SDK) GetMe(ctx context.Context, request operations.GetMeRequest) (*oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1833,7 +1833,7 @@ func (s *SDK) GetMeAnswers(ctx context.Context, request operations.GetMeAnswersR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1902,7 +1902,7 @@ func (s *SDK) GetMeAssociated(ctx context.Context, request operations.GetMeAssoc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1971,7 +1971,7 @@ func (s *SDK) GetMeBadges(ctx context.Context, request operations.GetMeBadgesReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2040,7 +2040,7 @@ func (s *SDK) GetMeComments(ctx context.Context, request operations.GetMeComment
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2102,14 +2102,14 @@ func (s *SDK) GetMeComments(ctx context.Context, request operations.GetMeComment
 // This method returns a list of comments.
 func (s *SDK) GetMeCommentsToID(ctx context.Context, request operations.GetMeCommentsToIDRequest) (*operations.GetMeCommentsToIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/comments/{toId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/comments/{toId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2178,7 +2178,7 @@ func (s *SDK) GetMeFavorites(ctx context.Context, request operations.GetMeFavori
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2249,7 +2249,7 @@ func (s *SDK) GetMeInbox(ctx context.Context, request operations.GetMeInboxReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2320,7 +2320,7 @@ func (s *SDK) GetMeInboxUnread(ctx context.Context, request operations.GetMeInbo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2389,7 +2389,7 @@ func (s *SDK) GetMeMentioned(ctx context.Context, request operations.GetMeMentio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2466,7 +2466,7 @@ func (s *SDK) GetMeMerges(ctx context.Context, request operations.GetMeMergesReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2537,7 +2537,7 @@ func (s *SDK) GetMeNotifications(ctx context.Context, request operations.GetMeNo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2608,7 +2608,7 @@ func (s *SDK) GetMeNotificationsUnread(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2677,7 +2677,7 @@ func (s *SDK) GetMePrivileges(ctx context.Context, request operations.GetMePrivi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2746,7 +2746,7 @@ func (s *SDK) GetMeQuestions(ctx context.Context, request operations.GetMeQuesti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2815,7 +2815,7 @@ func (s *SDK) GetMeQuestionsFeatured(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2884,7 +2884,7 @@ func (s *SDK) GetMeQuestionsNoAnswers(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2953,7 +2953,7 @@ func (s *SDK) GetMeQuestionsUnaccepted(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3022,7 +3022,7 @@ func (s *SDK) GetMeQuestionsUnanswered(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3091,7 +3091,7 @@ func (s *SDK) GetMeReputation(ctx context.Context, request operations.GetMeReput
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3160,7 +3160,7 @@ func (s *SDK) GetMeReputationHistory(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3231,7 +3231,7 @@ func (s *SDK) GetMeReputationHistoryFull(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3300,7 +3300,7 @@ func (s *SDK) GetMeSuggestedEdits(ctx context.Context, request operations.GetMeS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3369,7 +3369,7 @@ func (s *SDK) GetMeTags(ctx context.Context, request operations.GetMeTagsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3431,14 +3431,14 @@ func (s *SDK) GetMeTags(ctx context.Context, request operations.GetMeTagsRequest
 // This method returns a list of answers.
 func (s *SDK) GetMeTagsTagsTopAnswers(ctx context.Context, request operations.GetMeTagsTagsTopAnswersRequest) (*operations.GetMeTagsTagsTopAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/tags/{tags}/top-answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/tags/{tags}/top-answers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3500,14 +3500,14 @@ func (s *SDK) GetMeTagsTagsTopAnswers(ctx context.Context, request operations.Ge
 // This method returns a list of questions.
 func (s *SDK) GetMeTagsTagsTopQuestions(ctx context.Context, request operations.GetMeTagsTagsTopQuestionsRequest) (*operations.GetMeTagsTagsTopQuestionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/tags/{tags}/top-questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/tags/{tags}/top-questions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3576,7 +3576,7 @@ func (s *SDK) GetMeTimeline(ctx context.Context, request operations.GetMeTimelin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3645,7 +3645,7 @@ func (s *SDK) GetMeTopAnswerTags(ctx context.Context, request operations.GetMeTo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3714,7 +3714,7 @@ func (s *SDK) GetMeTopQuestionTags(ctx context.Context, request operations.GetMe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3787,7 +3787,7 @@ func (s *SDK) GetMeWritePermissions(ctx context.Context, request operations.GetM
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3858,7 +3858,7 @@ func (s *SDK) GetNotifications(ctx context.Context, request operations.GetNotifi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3929,7 +3929,7 @@ func (s *SDK) GetNotificationsUnread(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4013,7 +4013,7 @@ func (s *SDK) GetPosts(ctx context.Context, request operations.GetPostsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4090,14 +4090,14 @@ func (s *SDK) GetPosts(ctx context.Context, request operations.GetPostsRequest) 
 // This method returns a list of posts.
 func (s *SDK) GetPostsIds(ctx context.Context, request operations.GetPostsIdsRequest) (*operations.GetPostsIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4172,14 +4172,14 @@ func (s *SDK) GetPostsIds(ctx context.Context, request operations.GetPostsIdsReq
 // This method returns a list of comments.
 func (s *SDK) GetPostsIdsComments(ctx context.Context, request operations.GetPostsIdsCommentsRequest) (*operations.GetPostsIdsCommentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4243,14 +4243,14 @@ func (s *SDK) GetPostsIdsComments(ctx context.Context, request operations.GetPos
 // This method returns a list of revisions.
 func (s *SDK) GetPostsIdsRevisions(ctx context.Context, request operations.GetPostsIdsRevisionsRequest) (*operations.GetPostsIdsRevisionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}/revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}/revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4321,14 +4321,14 @@ func (s *SDK) GetPostsIdsRevisions(ctx context.Context, request operations.GetPo
 // This method returns a list of suggested-edits.
 func (s *SDK) GetPostsIdsSuggestedEdits(ctx context.Context, request operations.GetPostsIdsSuggestedEditsRequest) (*operations.GetPostsIdsSuggestedEditsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}/suggested-edits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{ids}/suggested-edits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4401,7 +4401,7 @@ func (s *SDK) GetPrivileges(ctx context.Context, request operations.GetPrivilege
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4491,7 +4491,7 @@ func (s *SDK) GetQuestions(ctx context.Context, request operations.GetQuestionsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4571,7 +4571,7 @@ func (s *SDK) GetQuestionsFeatured(ctx context.Context, request operations.GetQu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4657,7 +4657,7 @@ func (s *SDK) GetQuestionsNoAnswers(ctx context.Context, request operations.GetQ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4745,7 +4745,7 @@ func (s *SDK) GetQuestionsUnanswered(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4822,14 +4822,14 @@ func (s *SDK) GetQuestionsUnanswered(ctx context.Context, request operations.Get
 // This method returns a list of questions.
 func (s *SDK) GetQuestionsIds(ctx context.Context, request operations.GetQuestionsIdsRequest) (*operations.GetQuestionsIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4906,14 +4906,14 @@ func (s *SDK) GetQuestionsIds(ctx context.Context, request operations.GetQuestio
 // This method returns a list of answers.
 func (s *SDK) GetQuestionsIdsAnswers(ctx context.Context, request operations.GetQuestionsIdsAnswersRequest) (*operations.GetQuestionsIdsAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/answers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4988,14 +4988,14 @@ func (s *SDK) GetQuestionsIdsAnswers(ctx context.Context, request operations.Get
 // This method returns a list of comments.
 func (s *SDK) GetQuestionsIdsComments(ctx context.Context, request operations.GetQuestionsIdsCommentsRequest) (*operations.GetQuestionsIdsCommentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5076,14 +5076,14 @@ func (s *SDK) GetQuestionsIdsComments(ctx context.Context, request operations.Ge
 // This method returns a list of questions.
 func (s *SDK) GetQuestionsIdsLinked(ctx context.Context, request operations.GetQuestionsIdsLinkedRequest) (*operations.GetQuestionsIdsLinkedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/linked", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/linked", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5162,14 +5162,14 @@ func (s *SDK) GetQuestionsIdsLinked(ctx context.Context, request operations.GetQ
 // This method returns a list of questions.
 func (s *SDK) GetQuestionsIdsRelated(ctx context.Context, request operations.GetQuestionsIdsRelatedRequest) (*operations.GetQuestionsIdsRelatedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/related", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/related", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5237,14 +5237,14 @@ func (s *SDK) GetQuestionsIdsRelated(ctx context.Context, request operations.Get
 // This method returns a list of question timeline events.
 func (s *SDK) GetQuestionsIdsTimeline(ctx context.Context, request operations.GetQuestionsIdsTimelineRequest) (*operations.GetQuestionsIdsTimelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/timeline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/questions/{ids}/timeline", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5308,14 +5308,14 @@ func (s *SDK) GetQuestionsIdsTimeline(ctx context.Context, request operations.Ge
 // This method returns a list of revisions.
 func (s *SDK) GetRevisionsIds(ctx context.Context, request operations.GetRevisionsIdsRequest) (*operations.GetRevisionsIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/revisions/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/revisions/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5403,7 +5403,7 @@ func (s *SDK) GetSearch(ctx context.Context, request operations.GetSearchRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5503,7 +5503,7 @@ func (s *SDK) GetSearchAdvanced(ctx context.Context, request operations.GetSearc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5593,7 +5593,7 @@ func (s *SDK) GetSimilar(ctx context.Context, request operations.GetSimilarReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5666,7 +5666,7 @@ func (s *SDK) GetSites(ctx context.Context, request operations.GetSitesRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5746,7 +5746,7 @@ func (s *SDK) GetSuggestedEdits(ctx context.Context, request operations.GetSugge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5821,14 +5821,14 @@ func (s *SDK) GetSuggestedEdits(ctx context.Context, request operations.GetSugge
 // This method returns a list of suggested-edits.
 func (s *SDK) GetSuggestedEditsIds(ctx context.Context, request operations.GetSuggestedEditsIdsRequest) (*operations.GetSuggestedEditsIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggested-edits/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggested-edits/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5910,7 +5910,7 @@ func (s *SDK) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5992,7 +5992,7 @@ func (s *SDK) GetTagsModeratorOnly(ctx context.Context, request operations.GetTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6074,7 +6074,7 @@ func (s *SDK) GetTagsRequired(ctx context.Context, request operations.GetTagsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6156,7 +6156,7 @@ func (s *SDK) GetTagsSynonyms(ctx context.Context, request operations.GetTagsSyn
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6222,14 +6222,14 @@ func (s *SDK) GetTagsSynonyms(ctx context.Context, request operations.GetTagsSyn
 // This method returns a list of questions.
 func (s *SDK) GetTagsTagsFaq(ctx context.Context, request operations.GetTagsTagsFaqRequest) (*operations.GetTagsTagsFaqResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/faq", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/faq", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6304,14 +6304,14 @@ func (s *SDK) GetTagsTagsFaq(ctx context.Context, request operations.GetTagsTags
 //     It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 func (s *SDK) GetTagsTagsInfo(ctx context.Context, request operations.GetTagsTagsInfoRequest) (*operations.GetTagsTagsInfoResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/info", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/info", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6379,14 +6379,14 @@ func (s *SDK) GetTagsTagsInfo(ctx context.Context, request operations.GetTagsTag
 // This method returns a list of tags.
 func (s *SDK) GetTagsTagsRelated(ctx context.Context, request operations.GetTagsTagsRelatedRequest) (*operations.GetTagsTagsRelatedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/related", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/related", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6461,14 +6461,14 @@ func (s *SDK) GetTagsTagsRelated(ctx context.Context, request operations.GetTags
 // This method returns a list of tag synonyms.
 func (s *SDK) GetTagsTagsSynonyms(ctx context.Context, request operations.GetTagsTagsSynonymsRequest) (*operations.GetTagsTagsSynonymsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/synonyms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/synonyms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6534,14 +6534,14 @@ func (s *SDK) GetTagsTagsSynonyms(ctx context.Context, request operations.GetTag
 // This method returns a list of tag wikis.
 func (s *SDK) GetTagsTagsWikis(ctx context.Context, request operations.GetTagsTagsWikisRequest) (*operations.GetTagsTagsWikisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/wikis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tags}/wikis", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6605,14 +6605,14 @@ func (s *SDK) GetTagsTagsWikis(ctx context.Context, request operations.GetTagsTa
 // This method returns a list of tag score objects.
 func (s *SDK) GetTagsTagTopAnswerersPeriod(ctx context.Context, request operations.GetTagsTagTopAnswerersPeriodRequest) (*operations.GetTagsTagTopAnswerersPeriodResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-answerers/{period}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-answerers/{period}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6676,14 +6676,14 @@ func (s *SDK) GetTagsTagTopAnswerersPeriod(ctx context.Context, request operatio
 // This method returns a list of tag score objects.
 func (s *SDK) GetTagsTagTopAskersPeriod(ctx context.Context, request operations.GetTagsTagTopAskersPeriodRequest) (*operations.GetTagsTagTopAskersPeriodResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-askers/{period}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag}/top-askers/{period}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6767,7 +6767,7 @@ func (s *SDK) GetUsers(ctx context.Context, request operations.GetUsersRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6851,7 +6851,7 @@ func (s *SDK) GetUsersModerators(ctx context.Context, request operations.GetUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6935,7 +6935,7 @@ func (s *SDK) GetUsersModeratorsElected(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7014,14 +7014,14 @@ func (s *SDK) GetUsersModeratorsElected(ctx context.Context, request operations.
 // This method returns a list of users.
 func (s *SDK) GetUsersIds(ctx context.Context, request operations.GetUsersIdsRequest) (*operations.GetUsersIdsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7096,14 +7096,14 @@ func (s *SDK) GetUsersIds(ctx context.Context, request operations.GetUsersIdsReq
 // This method returns a list of answers.
 func (s *SDK) GetUsersIdsAnswers(ctx context.Context, request operations.GetUsersIdsAnswersRequest) (*operations.GetUsersIdsAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/answers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7167,14 +7167,14 @@ func (s *SDK) GetUsersIdsAnswers(ctx context.Context, request operations.GetUser
 // This method returns a list of network_users.
 func (s *SDK) GetUsersIdsAssociated(ctx context.Context, request operations.GetUsersIdsAssociatedRequest) (*operations.GetUsersIdsAssociatedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/associated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/associated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7246,14 +7246,14 @@ func (s *SDK) GetUsersIdsAssociated(ctx context.Context, request operations.GetU
 // This method returns a list of badges.
 func (s *SDK) GetUsersIdsBadges(ctx context.Context, request operations.GetUsersIdsBadgesRequest) (*operations.GetUsersIdsBadgesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/badges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/badges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7326,14 +7326,14 @@ func (s *SDK) GetUsersIdsBadges(ctx context.Context, request operations.GetUsers
 // This method returns a list of comments.
 func (s *SDK) GetUsersIdsComments(ctx context.Context, request operations.GetUsersIdsCommentsRequest) (*operations.GetUsersIdsCommentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7408,14 +7408,14 @@ func (s *SDK) GetUsersIdsComments(ctx context.Context, request operations.GetUse
 // This method returns a list of comments.
 func (s *SDK) GetUsersIdsCommentsToid(ctx context.Context, request operations.GetUsersIdsCommentsToidRequest) (*operations.GetUsersIdsCommentsToidResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/comments/{toid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/comments/{toid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7494,14 +7494,14 @@ func (s *SDK) GetUsersIdsCommentsToid(ctx context.Context, request operations.Ge
 // This method returns a list of questions.
 func (s *SDK) GetUsersIdsFavorites(ctx context.Context, request operations.GetUsersIdsFavoritesRequest) (*operations.GetUsersIdsFavoritesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/favorites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/favorites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7572,14 +7572,14 @@ func (s *SDK) GetUsersIdsFavorites(ctx context.Context, request operations.GetUs
 // This method returns a list of comments.
 func (s *SDK) GetUsersIdsMentioned(ctx context.Context, request operations.GetUsersIdsMentionedRequest) (*operations.GetUsersIdsMentionedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/mentioned", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/mentioned", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7649,14 +7649,14 @@ func (s *SDK) GetUsersIdsMentioned(ctx context.Context, request operations.GetUs
 // This method returns a list of account_merge.
 func (s *SDK) GetUsersIdsMerges(ctx context.Context, request operations.GetUsersIdsMergesRequest) (*operations.GetUsersIdsMergesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/merges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/merges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7731,14 +7731,14 @@ func (s *SDK) GetUsersIdsMerges(ctx context.Context, request operations.GetUsers
 // This method returns a list of questions.
 func (s *SDK) GetUsersIdsQuestions(ctx context.Context, request operations.GetUsersIdsQuestionsRequest) (*operations.GetUsersIdsQuestionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7813,14 +7813,14 @@ func (s *SDK) GetUsersIdsQuestions(ctx context.Context, request operations.GetUs
 // This method returns a list of questions.
 func (s *SDK) GetUsersIdsQuestionsFeatured(ctx context.Context, request operations.GetUsersIdsQuestionsFeaturedRequest) (*operations.GetUsersIdsQuestionsFeaturedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/featured", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/featured", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7897,14 +7897,14 @@ func (s *SDK) GetUsersIdsQuestionsFeatured(ctx context.Context, request operatio
 // This method returns a list of questions.
 func (s *SDK) GetUsersIdsQuestionsNoAnswers(ctx context.Context, request operations.GetUsersIdsQuestionsNoAnswersRequest) (*operations.GetUsersIdsQuestionsNoAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/no-answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/no-answers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7981,14 +7981,14 @@ func (s *SDK) GetUsersIdsQuestionsNoAnswers(ctx context.Context, request operati
 // This method returns a list of questions.
 func (s *SDK) GetUsersIdsQuestionsUnaccepted(ctx context.Context, request operations.GetUsersIdsQuestionsUnacceptedRequest) (*operations.GetUsersIdsQuestionsUnacceptedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/unaccepted", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/unaccepted", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8067,14 +8067,14 @@ func (s *SDK) GetUsersIdsQuestionsUnaccepted(ctx context.Context, request operat
 // This method returns a list of questions.
 func (s *SDK) GetUsersIdsQuestionsUnanswered(ctx context.Context, request operations.GetUsersIdsQuestionsUnansweredRequest) (*operations.GetUsersIdsQuestionsUnansweredResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/unanswered", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/questions/unanswered", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8140,14 +8140,14 @@ func (s *SDK) GetUsersIdsQuestionsUnanswered(ctx context.Context, request operat
 // This method returns a list of reputation objects.
 func (s *SDK) GetUsersIdsReputation(ctx context.Context, request operations.GetUsersIdsReputationRequest) (*operations.GetUsersIdsReputationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/reputation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/reputation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8209,14 +8209,14 @@ func (s *SDK) GetUsersIdsReputation(ctx context.Context, request operations.GetU
 // This method returns a list of reputation_history.
 func (s *SDK) GetUsersIdsReputationHistory(ctx context.Context, request operations.GetUsersIdsReputationHistoryRequest) (*operations.GetUsersIdsReputationHistoryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/reputation-history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/reputation-history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8291,14 +8291,14 @@ func (s *SDK) GetUsersIdsReputationHistory(ctx context.Context, request operatio
 // This method returns a list of suggested-edits.
 func (s *SDK) GetUsersIdsSuggestedEdits(ctx context.Context, request operations.GetUsersIdsSuggestedEditsRequest) (*operations.GetUsersIdsSuggestedEditsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/suggested-edits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/suggested-edits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8375,14 +8375,14 @@ func (s *SDK) GetUsersIdsSuggestedEdits(ctx context.Context, request operations.
 // This method returns a list of tags.
 func (s *SDK) GetUsersIdsTags(ctx context.Context, request operations.GetUsersIdsTagsRequest) (*operations.GetUsersIdsTagsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8448,14 +8448,14 @@ func (s *SDK) GetUsersIdsTags(ctx context.Context, request operations.GetUsersId
 // This method returns a list of user timeline objects.
 func (s *SDK) GetUsersIdsTimeline(ctx context.Context, request operations.GetUsersIdsTimelineRequest) (*operations.GetUsersIdsTimelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/timeline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{ids}/timeline", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8523,14 +8523,14 @@ func (s *SDK) GetUsersIdsTimeline(ctx context.Context, request operations.GetUse
 // This method returns a list of inbox items.
 func (s *SDK) GetUsersIDInbox(ctx context.Context, request operations.GetUsersIDInboxRequest) (*operations.GetUsersIDInboxResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8598,14 +8598,14 @@ func (s *SDK) GetUsersIDInbox(ctx context.Context, request operations.GetUsersID
 // This method returns a list of inbox items.
 func (s *SDK) GetUsersIDInboxUnread(ctx context.Context, request operations.GetUsersIDInboxUnreadRequest) (*operations.GetUsersIDInboxUnreadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox/unread", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/inbox/unread", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8669,14 +8669,14 @@ func (s *SDK) GetUsersIDInboxUnread(ctx context.Context, request operations.GetU
 // This method returns a list of notifications.
 func (s *SDK) GetUsersIDNotifications(ctx context.Context, request operations.GetUsersIDNotificationsRequest) (*operations.GetUsersIDNotificationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8740,14 +8740,14 @@ func (s *SDK) GetUsersIDNotifications(ctx context.Context, request operations.Ge
 // This method returns a list of notifications.
 func (s *SDK) GetUsersIDNotificationsUnread(ctx context.Context, request operations.GetUsersIDNotificationsUnreadRequest) (*operations.GetUsersIDNotificationsUnreadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications/unread", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/notifications/unread", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8813,14 +8813,14 @@ func (s *SDK) GetUsersIDNotificationsUnread(ctx context.Context, request operati
 // This method returns a list of privileges.
 func (s *SDK) GetUsersIDPrivileges(ctx context.Context, request operations.GetUsersIDPrivilegesRequest) (*operations.GetUsersIDPrivilegesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/privileges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/privileges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8884,14 +8884,14 @@ func (s *SDK) GetUsersIDPrivileges(ctx context.Context, request operations.GetUs
 // This method returns a list of reputation_history.
 func (s *SDK) GetUsersIDReputationHistoryFull(ctx context.Context, request operations.GetUsersIDReputationHistoryFullRequest) (*operations.GetUsersIDReputationHistoryFullResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/reputation-history/full", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/reputation-history/full", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8966,14 +8966,14 @@ func (s *SDK) GetUsersIDReputationHistoryFull(ctx context.Context, request opera
 // This method returns a list of answers.
 func (s *SDK) GetUsersIDTagsTagsTopAnswers(ctx context.Context, request operations.GetUsersIDTagsTagsTopAnswersRequest) (*operations.GetUsersIDTagsTagsTopAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-answers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9048,14 +9048,14 @@ func (s *SDK) GetUsersIDTagsTagsTopAnswers(ctx context.Context, request operatio
 // This method returns a list of questions.
 func (s *SDK) GetUsersIDTagsTagsTopQuestions(ctx context.Context, request operations.GetUsersIDTagsTagsTopQuestionsRequest) (*operations.GetUsersIDTagsTagsTopQuestionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/tags/{tags}/top-questions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9121,14 +9121,14 @@ func (s *SDK) GetUsersIDTagsTagsTopQuestions(ctx context.Context, request operat
 // This method returns a list of top_tag objects.
 func (s *SDK) GetUsersIDTopAnswerTags(ctx context.Context, request operations.GetUsersIDTopAnswerTagsRequest) (*operations.GetUsersIDTopAnswerTagsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-answer-tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-answer-tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9194,14 +9194,14 @@ func (s *SDK) GetUsersIDTopAnswerTags(ctx context.Context, request operations.Ge
 // This method returns a list of top_tag objects.
 func (s *SDK) GetUsersIDTopQuestionTags(ctx context.Context, request operations.GetUsersIDTopQuestionTagsRequest) (*operations.GetUsersIDTopQuestionTagsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-question-tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/top-question-tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9267,14 +9267,14 @@ func (s *SDK) GetUsersIDTopQuestionTags(ctx context.Context, request operations.
 // This method returns a list of write_permissions.
 func (s *SDK) GetUsersIDWritePermissions(ctx context.Context, request operations.GetUsersIDWritePermissionsRequest) (*operations.GetUsersIDWritePermissionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/write-permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/write-permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9338,14 +9338,14 @@ func (s *SDK) GetUsersIDWritePermissions(ctx context.Context, request operations
 // In practice, this method will never return an object.
 func (s *SDK) PostCommentsIDDelete(ctx context.Context, request operations.PostCommentsIDDeleteRequest) (*operations.PostCommentsIDDeleteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{id}/delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/comments/{id}/delete", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9401,14 +9401,14 @@ func (s *SDK) PostCommentsIDDelete(ctx context.Context, request operations.PostC
 // This method return the created comment.
 func (s *SDK) PostCommentsIDEdit(ctx context.Context, request operations.PostCommentsIDEditRequest) (*operations.PostCommentsIDEditResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{id}/edit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/comments/{id}/edit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9472,14 +9472,14 @@ func (s *SDK) PostCommentsIDEdit(ctx context.Context, request operations.PostCom
 // This method returns the created comment.
 func (s *SDK) PostPostsIDCommentsAdd(ctx context.Context, request operations.PostPostsIDCommentsAddRequest) (*operations.PostPostsIDCommentsAddResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/comments/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/comments/add", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

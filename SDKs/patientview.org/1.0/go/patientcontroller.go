@@ -36,7 +36,7 @@ func newPatientController(defaultClient, securityClient HTTPClient, serverURL, l
 // Given a User ID, get basic patient information for a user from clinical data stored in FHIR
 func (s *patientController) GetBasicPatientDetails(ctx context.Context, request operations.GetBasicPatientDetailsRequest) (*operations.GetBasicPatientDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{userId}/basic", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patient/{userId}/basic", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

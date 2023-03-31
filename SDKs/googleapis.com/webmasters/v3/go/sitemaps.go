@@ -32,20 +32,20 @@ func newSitemaps(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // WebmastersSitemapsDelete - Deletes a sitemap from this site.
-func (s *sitemaps) WebmastersSitemapsDelete(ctx context.Context, request operations.WebmastersSitemapsDeleteRequest) (*operations.WebmastersSitemapsDeleteResponse, error) {
+func (s *sitemaps) WebmastersSitemapsDelete(ctx context.Context, request operations.WebmastersSitemapsDeleteRequest, security operations.WebmastersSitemapsDeleteSecurity) (*operations.WebmastersSitemapsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps/{feedpath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *sitemaps) WebmastersSitemapsDelete(ctx context.Context, request operati
 }
 
 // WebmastersSitemapsGet - Retrieves information about a specific sitemap.
-func (s *sitemaps) WebmastersSitemapsGet(ctx context.Context, request operations.WebmastersSitemapsGetRequest) (*operations.WebmastersSitemapsGetResponse, error) {
+func (s *sitemaps) WebmastersSitemapsGet(ctx context.Context, request operations.WebmastersSitemapsGetRequest, security operations.WebmastersSitemapsGetSecurity) (*operations.WebmastersSitemapsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps/{feedpath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *sitemaps) WebmastersSitemapsGet(ctx context.Context, request operations
 }
 
 // WebmastersSitemapsList - Lists the sitemaps-entries submitted for this site, or included in the sitemap index file (if sitemapIndex is specified in the request).
-func (s *sitemaps) WebmastersSitemapsList(ctx context.Context, request operations.WebmastersSitemapsListRequest) (*operations.WebmastersSitemapsListResponse, error) {
+func (s *sitemaps) WebmastersSitemapsList(ctx context.Context, request operations.WebmastersSitemapsListRequest, security operations.WebmastersSitemapsListSecurity) (*operations.WebmastersSitemapsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,20 +167,20 @@ func (s *sitemaps) WebmastersSitemapsList(ctx context.Context, request operation
 }
 
 // WebmastersSitemapsSubmit - Submits a sitemap for a site.
-func (s *sitemaps) WebmastersSitemapsSubmit(ctx context.Context, request operations.WebmastersSitemapsSubmitRequest) (*operations.WebmastersSitemapsSubmitResponse, error) {
+func (s *sitemaps) WebmastersSitemapsSubmit(ctx context.Context, request operations.WebmastersSitemapsSubmitRequest, security operations.WebmastersSitemapsSubmitSecurity) (*operations.WebmastersSitemapsSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps/{feedpath}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

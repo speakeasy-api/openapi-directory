@@ -8,13 +8,13 @@ import (
 )
 
 type CalendarEventsImportSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsImportSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsImportSecurity struct {
@@ -22,14 +22,12 @@ type CalendarEventsImportSecurity struct {
 	Option2 *CalendarEventsImportSecurityOption2 `security:"option"`
 }
 
-type CalendarEventsImportPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-}
-
-type CalendarEventsImportQueryParams struct {
+type CalendarEventsImportRequest struct {
+	Event *shared.Event `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0.
 	ConferenceDataVersion *int64 `queryParam:"style=form,explode=true,name=conferenceDataVersion"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,13 +44,6 @@ type CalendarEventsImportQueryParams struct {
 	SupportsAttachments *bool `queryParam:"style=form,explode=true,name=supportsAttachments"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsImportRequest struct {
-	PathParams  CalendarEventsImportPathParams
-	QueryParams CalendarEventsImportQueryParams
-	Request     *shared.Event `request:"mediaType=application/json"`
-	Security    CalendarEventsImportSecurity
 }
 
 type CalendarEventsImportResponse struct {

@@ -12,12 +12,8 @@ var CreateWorkflowServerList = []string{
 }
 
 type CreateWorkflowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateWorkflowPathParams struct {
-	// The SID of the Workspace that the new Workflow to create belongs to.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWorkflowCreateWorkflowRequest struct {
@@ -34,10 +30,9 @@ type CreateWorkflowCreateWorkflowRequest struct {
 }
 
 type CreateWorkflowRequest struct {
-	PathParams CreateWorkflowPathParams
-	Request    *CreateWorkflowCreateWorkflowRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateWorkflowSecurity
-	ServerURL  *string
+	RequestBody *CreateWorkflowCreateWorkflowRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace that the new Workflow to create belongs to.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type CreateWorkflowResponse struct {

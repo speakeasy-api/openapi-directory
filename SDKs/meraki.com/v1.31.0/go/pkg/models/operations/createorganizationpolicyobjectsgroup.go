@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationPolicyObjectsGroupPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationPolicyObjectsGroupRequestBody struct {
 	// Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
 	Category *string `json:"category,omitempty"`
@@ -20,8 +16,8 @@ type CreateOrganizationPolicyObjectsGroupRequestBody struct {
 }
 
 type CreateOrganizationPolicyObjectsGroupRequest struct {
-	PathParams CreateOrganizationPolicyObjectsGroupPathParams
-	Request    CreateOrganizationPolicyObjectsGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationPolicyObjectsGroupRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                          `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationPolicyObjectsGroupResponse struct {

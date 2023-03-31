@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsEnableRescuePathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostServersIDActionsEnableRescueRequestBodyTypeEnum - Type of rescue system to boot (default: `linux64`)
 type PostServersIDActionsEnableRescueRequestBodyTypeEnum string
 
@@ -45,8 +40,9 @@ type PostServersIDActionsEnableRescueRequestBody struct {
 }
 
 type PostServersIDActionsEnableRescueRequest struct {
-	PathParams PostServersIDActionsEnableRescuePathParams
-	Request    *PostServersIDActionsEnableRescueRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsEnableRescueRequestBody `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsEnableRescue201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null

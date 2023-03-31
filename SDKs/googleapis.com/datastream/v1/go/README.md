@@ -25,98 +25,91 @@ func main() {
     s := sdk.New()
 
     req := operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest{
-        Security: operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ConnectionProfileID: "nulla",
-            Fields: "corrupti",
-            Force: false,
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            RequestID: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-            ValidateOnly: false,
-        },
-        Request: &shared.ConnectionProfileInput{
+        DollarXgafv: "2",
+        ConnectionProfileInput: &shared.ConnectionProfileInput{
             BigqueryProfile: map[string]interface{}{
-                "debitis": "ipsa",
-                "delectus": "tempora",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
-            DisplayName: "suscipit",
+            DisplayName: "vel",
             ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                Hostname: "lasting-sex.net",
-                Password: "voluptatum",
-                Port: 479977,
-                PrivateKey: "excepturi",
-                Username: "Glen.Walsh33",
+                Hostname: "physical-pegboard.info",
+                Password: "iure",
+                Port: 297534,
+                PrivateKey: "debitis",
+                Username: "Anahi38",
             },
             GcsProfile: &shared.GcsProfile{
-                Bucket: "veritatis",
-                RootPath: "deserunt",
+                Bucket: "molestiae",
+                RootPath: "minus",
             },
             Labels: map[string]string{
-                "ipsam": "repellendus",
+                "voluptatum": "iusto",
+                "excepturi": "nisi",
+                "recusandae": "temporibus",
+                "ab": "quis",
             },
             MysqlProfile: &shared.MysqlProfileInput{
-                Hostname: "well-informed-screamer.com",
-                Password: "at",
-                Port: 870088,
+                Hostname: "bountiful-pension.com",
+                Password: "ipsam",
+                Port: 832620,
                 SslConfig: &shared.MysqlSslConfigInput{
-                    CaCertificate: "maiores",
-                    ClientCertificate: "molestiae",
-                    ClientKey: "quod",
+                    CaCertificate: "sapiente",
+                    ClientCertificate: "quo",
+                    ClientKey: "odit",
                 },
-                Username: "Presley_Koepp",
+                Username: "Sarah.Strosin79",
             },
             OracleProfile: &shared.OracleProfile{
                 ConnectionAttributes: map[string]string{
+                    "esse": "totam",
+                    "porro": "dolorum",
                     "dicta": "nam",
                     "officia": "occaecati",
-                    "fugit": "deleniti",
                 },
-                DatabaseService: "hic",
-                Hostname: "sizzling-locust.com",
-                Password: "commodi",
-                Port: 473600,
-                Username: "Diego_Dibbert45",
+                DatabaseService: "fugit",
+                Hostname: "miserly-usage.net",
+                Password: "totam",
+                Port: 105907,
+                Username: "Haskell18",
             },
             PostgresqlProfile: &shared.PostgresqlProfile{
-                Database: "ipsum",
-                Hostname: "nifty-case.com",
-                Password: "ad",
-                Port: 617636,
-                Username: "Camden61",
+                Database: "impedit",
+                Hostname: "several-increase.biz",
+                Password: "excepturi",
+                Port: 135218,
+                Username: "Aiden.Hane",
             },
             PrivateConnectivity: &shared.PrivateConnectivity{
-                PrivateConnection: "laboriosam",
+                PrivateConnection: "iste",
             },
             StaticServiceIPConnectivity: map[string]interface{}{
-                "saepe": "fuga",
-                "in": "corporis",
-                "iste": "iure",
-                "saepe": "quidem",
+                "natus": "laboriosam",
             },
         },
+        AccessToken: "hic",
+        Alt: "proto",
+        Callback: "fuga",
+        ConnectionProfileID: "in",
+        Fields: "corporis",
+        Force: false,
+        Key: "iste",
+        OauthToken: "iure",
+        Parent: "saepe",
+        PrettyPrint: false,
+        QuotaUser: "quidem",
+        RequestID: "architecto",
+        UploadType: "ipsa",
+        UploadProtocol: "reiciendis",
+        ValidateOnly: false,
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req)
+    res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -129,7 +122,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -156,4 +149,15 @@ func main() {
 * `DatastreamProjectsLocationsStreamsPatch` - Use this method to update the configuration of a stream.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

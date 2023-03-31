@@ -12,13 +12,8 @@ var UpdateDeployedDevicesDeviceServerList = []string{
 }
 
 type UpdateDeployedDevicesDeviceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDeployedDevicesDevicePathParams struct {
-	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
-	// Provides a 34 character string that uniquely identifies the requested Device resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest struct {
@@ -32,10 +27,10 @@ type UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest struct {
 }
 
 type UpdateDeployedDevicesDeviceRequest struct {
-	PathParams UpdateDeployedDevicesDevicePathParams
-	Request    *UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDeployedDevicesDeviceSecurity
-	ServerURL  *string
+	FleetSid    string                                                         `pathParam:"style=simple,explode=false,name=FleetSid"`
+	RequestBody *UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// Provides a 34 character string that uniquely identifies the requested Device resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateDeployedDevicesDeviceResponse struct {

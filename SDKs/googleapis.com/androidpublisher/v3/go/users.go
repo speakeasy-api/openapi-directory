@@ -32,11 +32,11 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // AndroidpublisherUsersCreate - Grant access for a user to the given developer account.
-func (s *users) AndroidpublisherUsersCreate(ctx context.Context, request operations.AndroidpublisherUsersCreateRequest) (*operations.AndroidpublisherUsersCreateResponse, error) {
+func (s *users) AndroidpublisherUsersCreate(ctx context.Context, request operations.AndroidpublisherUsersCreateRequest, security operations.AndroidpublisherUsersCreateSecurity) (*operations.AndroidpublisherUsersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *users) AndroidpublisherUsersCreate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *users) AndroidpublisherUsersCreate(ctx context.Context, request operati
 }
 
 // AndroidpublisherUsersDelete - Removes all access for the user to the given developer account.
-func (s *users) AndroidpublisherUsersDelete(ctx context.Context, request operations.AndroidpublisherUsersDeleteRequest) (*operations.AndroidpublisherUsersDeleteResponse, error) {
+func (s *users) AndroidpublisherUsersDelete(ctx context.Context, request operations.AndroidpublisherUsersDeleteRequest, security operations.AndroidpublisherUsersDeleteSecurity) (*operations.AndroidpublisherUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *users) AndroidpublisherUsersDelete(ctx context.Context, request operati
 }
 
 // AndroidpublisherUsersList - Lists all users with access to a developer account.
-func (s *users) AndroidpublisherUsersList(ctx context.Context, request operations.AndroidpublisherUsersListRequest) (*operations.AndroidpublisherUsersListResponse, error) {
+func (s *users) AndroidpublisherUsersList(ctx context.Context, request operations.AndroidpublisherUsersListRequest, security operations.AndroidpublisherUsersListSecurity) (*operations.AndroidpublisherUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *users) AndroidpublisherUsersList(ctx context.Context, request operation
 }
 
 // AndroidpublisherUsersPatch - Updates access for the user to the developer account.
-func (s *users) AndroidpublisherUsersPatch(ctx context.Context, request operations.AndroidpublisherUsersPatchRequest) (*operations.AndroidpublisherUsersPatchResponse, error) {
+func (s *users) AndroidpublisherUsersPatch(ctx context.Context, request operations.AndroidpublisherUsersPatchRequest, security operations.AndroidpublisherUsersPatchSecurity) (*operations.AndroidpublisherUsersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,11 +190,11 @@ func (s *users) AndroidpublisherUsersPatch(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -90,7 +90,7 @@ func (e *GetChannelsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelsQueryParams struct {
+type GetChannelsRequest struct {
 	// The sort direction of the results.
 	Direction *GetChannelsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -107,10 +107,6 @@ type GetChannelsQueryParams struct {
 	//  * `relevant` - Relevant sorting is available only for search queries.
 	//
 	Sort *GetChannelsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetChannelsRequest struct {
-	QueryParams GetChannelsQueryParams
 }
 
 type GetChannelsResponse struct {

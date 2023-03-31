@@ -12,12 +12,8 @@ var CreateAddressServerList = []string{
 }
 
 type CreateAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateAddressPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Address resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAddressCreateAddressRequest struct {
@@ -44,10 +40,9 @@ type CreateAddressCreateAddressRequest struct {
 }
 
 type CreateAddressRequest struct {
-	PathParams CreateAddressPathParams
-	Request    *CreateAddressCreateAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateAddressSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Address resource.
+	AccountSid  string                             `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateAddressCreateAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateAddressResponse struct {

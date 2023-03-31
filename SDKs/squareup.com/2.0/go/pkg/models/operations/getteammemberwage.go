@@ -8,17 +8,12 @@ import (
 )
 
 type GetTeamMemberWageSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetTeamMemberWagePathParams struct {
-	// The UUID for the `TeamMemberWage` being retrieved.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTeamMemberWageRequest struct {
-	PathParams GetTeamMemberWagePathParams
-	Security   GetTeamMemberWageSecurity
+	// The UUID for the `TeamMemberWage` being retrieved.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetTeamMemberWageResponse struct {

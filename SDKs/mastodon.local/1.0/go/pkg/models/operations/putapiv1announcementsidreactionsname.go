@@ -8,19 +8,14 @@ import (
 )
 
 type PutAPIV1AnnouncementsIDReactionsNameSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type PutAPIV1AnnouncementsIDReactionsNamePathParams struct {
+type PutAPIV1AnnouncementsIDReactionsNameRequest struct {
 	// Local ID of an announcement in the database.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Unicode emoji, or shortcode of custom emoji
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type PutAPIV1AnnouncementsIDReactionsNameRequest struct {
-	PathParams PutAPIV1AnnouncementsIDReactionsNamePathParams
-	Security   PutAPIV1AnnouncementsIDReactionsNameSecurity
 }
 
 type PutAPIV1AnnouncementsIDReactionsNameResponse struct {

@@ -32,11 +32,11 @@ func newOnDemandPromotions(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // CreateVodPromotion - Add a promotion to an On Demand page
-func (s *onDemandPromotions) CreateVodPromotion(ctx context.Context, request operations.CreateVodPromotionRequest) (*operations.CreateVodPromotionResponse, error) {
+func (s *onDemandPromotions) CreateVodPromotion(ctx context.Context, request operations.CreateVodPromotionRequest, security operations.CreateVodPromotionSecurity) (*operations.CreateVodPromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *onDemandPromotions) CreateVodPromotion(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,16 +100,16 @@ func (s *onDemandPromotions) CreateVodPromotion(ctx context.Context, request ope
 }
 
 // DeleteVodPromotion - Remove a promotion from an On Demand page
-func (s *onDemandPromotions) DeleteVodPromotion(ctx context.Context, request operations.DeleteVodPromotionRequest) (*operations.DeleteVodPromotionResponse, error) {
+func (s *onDemandPromotions) DeleteVodPromotion(ctx context.Context, request operations.DeleteVodPromotionRequest, security operations.DeleteVodPromotionSecurity) (*operations.DeleteVodPromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,16 +147,16 @@ func (s *onDemandPromotions) DeleteVodPromotion(ctx context.Context, request ope
 }
 
 // GetVodPromotion - Get a specific promotion on an On Demand page
-func (s *onDemandPromotions) GetVodPromotion(ctx context.Context, request operations.GetVodPromotionRequest) (*operations.GetVodPromotionResponse, error) {
+func (s *onDemandPromotions) GetVodPromotion(ctx context.Context, request operations.GetVodPromotionRequest, security operations.GetVodPromotionSecurity) (*operations.GetVodPromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,20 +203,20 @@ func (s *onDemandPromotions) GetVodPromotion(ctx context.Context, request operat
 }
 
 // GetVodPromotionCodes - Get all the codes of a promotion on an On Demand page
-func (s *onDemandPromotions) GetVodPromotionCodes(ctx context.Context, request operations.GetVodPromotionCodesRequest) (*operations.GetVodPromotionCodesResponse, error) {
+func (s *onDemandPromotions) GetVodPromotionCodes(ctx context.Context, request operations.GetVodPromotionCodesRequest, security operations.GetVodPromotionCodesSecurity) (*operations.GetVodPromotionCodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -263,20 +263,20 @@ func (s *onDemandPromotions) GetVodPromotionCodes(ctx context.Context, request o
 }
 
 // GetVodPromotions - Get all the promotions on an On Demand page
-func (s *onDemandPromotions) GetVodPromotions(ctx context.Context, request operations.GetVodPromotionsRequest) (*operations.GetVodPromotionsResponse, error) {
+func (s *onDemandPromotions) GetVodPromotions(ctx context.Context, request operations.GetVodPromotionsRequest, security operations.GetVodPromotionsSecurity) (*operations.GetVodPromotionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ondemand/pages/{ondemand_id}/promotions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

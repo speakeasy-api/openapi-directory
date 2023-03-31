@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AccountPlanBaseUpdatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountPlanBaseUpdateApplicationJSON - Account base plan object.
 type AccountPlanBaseUpdateApplicationJSON struct {
 	// Account base plan number of hosts. For a Pro Plan please select a value between 1 and 9. For a Business Plan please select a value between 10 and 49. For a Education Plan please select a value between 20 and 149. For a Free Trial Plan please select a value between 1 and 9999.
@@ -20,8 +15,9 @@ type AccountPlanBaseUpdateApplicationJSON struct {
 }
 
 type AccountPlanBaseUpdateRequest struct {
-	PathParams AccountPlanBaseUpdatePathParams
-	Request    AccountPlanBaseUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody AccountPlanBaseUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountPlanBaseUpdateResponse struct {

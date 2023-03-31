@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchRoutingMulticastRendezvousPointPathParams struct {
+type GetNetworkSwitchRoutingMulticastRendezvousPointRequest struct {
 	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
 	RendezvousPointID string `pathParam:"style=simple,explode=false,name=rendezvousPointId"`
-}
-
-type GetNetworkSwitchRoutingMulticastRendezvousPointRequest struct {
-	PathParams GetNetworkSwitchRoutingMulticastRendezvousPointPathParams
 }
 
 type GetNetworkSwitchRoutingMulticastRendezvousPointResponse struct {

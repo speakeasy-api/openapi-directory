@@ -7,33 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateCancelDeletionPathParams struct {
-	// The thumbprint of the certificate being deleted.
-	Thumbprint string `pathParam:"style=simple,explode=false,name=thumbprint"`
-	// The algorithm used to derive the thumbprint parameter. This must be sha1.
-	ThumbprintAlgorithm string `pathParam:"style=simple,explode=false,name=thumbprintAlgorithm"`
-}
-
-type CertificateCancelDeletionQueryParams struct {
+type CertificateCancelDeletionRequest struct {
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type CertificateCancelDeletionHeaders struct {
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type CertificateCancelDeletionRequest struct {
-	PathParams  CertificateCancelDeletionPathParams
-	QueryParams CertificateCancelDeletionQueryParams
-	Headers     CertificateCancelDeletionHeaders
+	// The thumbprint of the certificate being deleted.
+	Thumbprint string `pathParam:"style=simple,explode=false,name=thumbprint"`
+	// The algorithm used to derive the thumbprint parameter. This must be sha1.
+	ThumbprintAlgorithm string `pathParam:"style=simple,explode=false,name=thumbprintAlgorithm"`
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type CertificateCancelDeletionResponse struct {

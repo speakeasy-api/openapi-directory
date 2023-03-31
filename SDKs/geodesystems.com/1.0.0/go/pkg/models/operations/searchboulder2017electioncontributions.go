@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchBoulder2017ElectionContributionsQueryParams struct {
+type SearchBoulder2017ElectionContributionsRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -70,10 +70,6 @@ type SearchBoulder2017ElectionContributionsQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchBoulder2017ElectionContributionsRequest struct {
-	QueryParams SearchBoulder2017ElectionContributionsQueryParams
 }
 
 type SearchBoulder2017ElectionContributionsResponse struct {

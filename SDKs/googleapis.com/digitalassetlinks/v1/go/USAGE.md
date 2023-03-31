@@ -14,98 +14,96 @@ func main() {
     s := sdk.New()
 
     req := operations.DigitalassetlinksAssetlinksBulkCheckRequest{
-        QueryParams: operations.DigitalassetlinksAssetlinksBulkCheckQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.BulkCheckRequest{
+        DollarXgafv: "2",
+        BulkCheckRequest: &shared.BulkCheckRequest{
             AllowGoogleInternalDataSources: false,
-            DefaultRelation: "deserunt",
+            DefaultRelation: "provident",
             DefaultSource: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "suscipit",
+                        Sha256Fingerprint: "distinctio",
                     },
-                    PackageName: "iure",
+                    PackageName: "quibusdam",
                 },
                 Web: &shared.WebAsset{
-                    Site: "magnam",
+                    Site: "unde",
                 },
             },
             DefaultTarget: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "debitis",
+                        Sha256Fingerprint: "nulla",
                     },
-                    PackageName: "ipsa",
+                    PackageName: "corrupti",
                 },
                 Web: &shared.WebAsset{
-                    Site: "delectus",
+                    Site: "illum",
                 },
             },
             SkipCacheLookup: false,
             Statements: []shared.StatementTemplate{
                 shared.StatementTemplate{
-                    Relation: "suscipit",
+                    Relation: "error",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "molestiae",
+                                Sha256Fingerprint: "deserunt",
                             },
-                            PackageName: "minus",
+                            PackageName: "suscipit",
                         },
                         Web: &shared.WebAsset{
-                            Site: "placeat",
+                            Site: "iure",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "voluptatum",
+                                Sha256Fingerprint: "magnam",
                             },
-                            PackageName: "iusto",
+                            PackageName: "debitis",
                         },
                         Web: &shared.WebAsset{
-                            Site: "excepturi",
+                            Site: "ipsa",
                         },
                     },
                 },
                 shared.StatementTemplate{
-                    Relation: "nisi",
+                    Relation: "delectus",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "recusandae",
+                                Sha256Fingerprint: "tempora",
                             },
-                            PackageName: "temporibus",
+                            PackageName: "suscipit",
                         },
                         Web: &shared.WebAsset{
-                            Site: "ab",
+                            Site: "molestiae",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "quis",
+                                Sha256Fingerprint: "minus",
                             },
-                            PackageName: "veritatis",
+                            PackageName: "placeat",
                         },
                         Web: &shared.WebAsset{
-                            Site: "deserunt",
+                            Site: "voluptatum",
                         },
                     },
                 },
             },
         },
+        AccessToken: "iusto",
+        Alt: "media",
+        Callback: "nisi",
+        Fields: "recusandae",
+        Key: "temporibus",
+        OauthToken: "ab",
+        PrettyPrint: false,
+        QuotaUser: "quis",
+        UploadType: "veritatis",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()

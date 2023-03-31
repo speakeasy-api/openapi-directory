@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDFilePostPathParams struct {
-	// the id from the story object
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDFilePostQueryParams struct {
-	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
-	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
-	// A primary key pointing to an obsolete item in the story. Item type is context-dependent
-	ObsoleteID *string `queryParam:"style=form,explode=true,name=obsolete_id"`
-	// Indicates whether a put or post method would replace the existing contents
-	ReplaceExisting *bool `queryParam:"style=form,explode=true,name=replace_existing"`
-}
-
 // StoryIDFilePostOpenOfficeXMLDocumentEGXlsxPptxFile - A pptx or xlsx object from which to start creation of a story
 type StoryIDFilePostOpenOfficeXMLDocumentEGXlsxPptxFile struct {
 	File [][]byte `multipartForm:"name=file,json"`
 }
 
 type StoryIDFilePostRequest struct {
-	PathParams  StoryIDFilePostPathParams
-	QueryParams StoryIDFilePostQueryParams
 	// A pptx or xlsx file upload or story outline json object
-	Request StoryIDFilePostOpenOfficeXMLDocumentEGXlsxPptxFile `request:"mediaType=multipart/form-data"`
+	RequestBody StoryIDFilePostOpenOfficeXMLDocumentEGXlsxPptxFile `request:"mediaType=multipart/form-data"`
+	// the id from the story object
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
+	// A primary key pointing to an obsolete item in the story. Item type is context-dependent
+	ObsoleteID *string `queryParam:"style=form,explode=true,name=obsolete_id"`
+	// Indicates whether a put or post method would replace the existing contents
+	ReplaceExisting *bool `queryParam:"style=form,explode=true,name=replace_existing"`
 }
 
 type StoryIDFilePostResponse struct {

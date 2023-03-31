@@ -63,7 +63,7 @@ func (e *GetAlbumsAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAlbumsAlt1QueryParams struct {
+type GetAlbumsAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetAlbumsAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -74,10 +74,6 @@ type GetAlbumsAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetAlbumsAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAlbumsAlt1Request struct {
-	QueryParams GetAlbumsAlt1QueryParams
 }
 
 type GetAlbumsAlt1Response struct {

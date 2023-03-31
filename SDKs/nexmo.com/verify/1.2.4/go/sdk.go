@@ -128,9 +128,9 @@ func New(opts ...SDKOption) *SDK {
 // *Note that this endpoint is available by `GET` request as well as `POST`.*
 func (s *SDK) VerifyCheck(ctx context.Context, request operations.VerifyCheckRequest) (*operations.VerifyCheckResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check/{format}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -196,9 +196,9 @@ func (s *SDK) VerifyCheck(ctx context.Context, request operations.VerifyCheckReq
 // *Note that this endpoint is available by `GET` request as well as `POST`.*
 func (s *SDK) VerifyControl(ctx context.Context, request operations.VerifyControlRequest) (*operations.VerifyControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/control/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/control/{format}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ControlRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -262,9 +262,9 @@ func (s *SDK) VerifyControl(ctx context.Context, request operations.VerifyContro
 // (Please note that XML format is not supported for the Payment Services Directive endpoint at this time.)
 func (s *SDK) VerifyRequestWithPsd2(ctx context.Context, request operations.VerifyRequestWithPsd2Request) (*operations.VerifyRequestWithPsd2Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/psd2/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/psd2/{format}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Psd2Request", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -322,14 +322,14 @@ func (s *SDK) VerifyRequestWithPsd2(ctx context.Context, request operations.Veri
 // *Note that this endpoint is available by `POST` request as well as `GET`.*
 func (s *SDK) VerifySearch(ctx context.Context, request operations.VerifySearchRequest) (*operations.VerifySearchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

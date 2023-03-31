@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForTeamDiscussionPathParams struct {
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type ReactionsCreateForTeamDiscussionHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
 // ReactionsCreateForTeamDiscussionRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types) to add to the team discussion.
 type ReactionsCreateForTeamDiscussionRequestBodyContentEnum string
 
@@ -67,9 +57,11 @@ type ReactionsCreateForTeamDiscussionRequestBody struct {
 }
 
 type ReactionsCreateForTeamDiscussionRequest struct {
-	PathParams ReactionsCreateForTeamDiscussionPathParams
-	Headers    ReactionsCreateForTeamDiscussionHeaders
-	Request    ReactionsCreateForTeamDiscussionRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForTeamDiscussionRequestBody `request:"mediaType=application/json"`
+	// This API is under preview and subject to change.
+	Accept           string `header:"style=simple,explode=false,name=accept"`
+	DiscussionNumber int64  `pathParam:"style=simple,explode=false,name=discussion_number"`
+	TeamID           int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsCreateForTeamDiscussionResponse struct {

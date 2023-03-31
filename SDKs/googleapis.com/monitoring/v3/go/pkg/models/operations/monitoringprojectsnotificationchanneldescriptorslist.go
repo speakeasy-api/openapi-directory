@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsNotificationChannelDescriptorsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsNotificationChannelDescriptorsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsNotificationChannelDescriptorsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsNotificationChannelDescriptorsListSecurity struct {
@@ -28,12 +28,7 @@ type MonitoringProjectsNotificationChannelDescriptorsListSecurity struct {
 	Option3 *MonitoringProjectsNotificationChannelDescriptorsListSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsNotificationChannelDescriptorsListPathParams struct {
-	// Required. The REST resource name of the parent from which to retrieve the notification channel descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names (https://cloud.google.com/monitoring/api/v3#project_name) the parent container in which to look for the descriptors; to retrieve a single descriptor by name, use the GetNotificationChannelDescriptor operation, instead.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringProjectsNotificationChannelDescriptorsListQueryParams struct {
+type MonitoringProjectsNotificationChannelDescriptorsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type MonitoringProjectsNotificationChannelDescriptorsListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The REST resource name of the parent from which to retrieve the notification channel descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names (https://cloud.google.com/monitoring/api/v3#project_name) the parent container in which to look for the descriptors; to retrieve a single descriptor by name, use the GetNotificationChannelDescriptor operation, instead.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of results to return in a single response. If not set to a positive number, a reasonable value will be chosen by the service.
@@ -60,12 +57,6 @@ type MonitoringProjectsNotificationChannelDescriptorsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsNotificationChannelDescriptorsListRequest struct {
-	PathParams  MonitoringProjectsNotificationChannelDescriptorsListPathParams
-	QueryParams MonitoringProjectsNotificationChannelDescriptorsListQueryParams
-	Security    MonitoringProjectsNotificationChannelDescriptorsListSecurity
 }
 
 type MonitoringProjectsNotificationChannelDescriptorsListResponse struct {

@@ -185,7 +185,6 @@ pkg/models/shared/entitytypeenum.go
 pkg/models/shared/apierror.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/applicationrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/tier.go
 pkg/models/shared/groupmembershipcriteria.go
 pkg/models/shared/searchmembershipcriteria.go

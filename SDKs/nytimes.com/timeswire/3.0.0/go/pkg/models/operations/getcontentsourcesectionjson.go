@@ -40,7 +40,11 @@ func (e *GetContentSourceSectionJSONSourceEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetContentSourceSectionJSONPathParams struct {
+type GetContentSourceSectionJSONRequest struct {
+	// Limits the number of results, between 1 and 20
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// Sets the starting point of the result set
+	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Limits the set of items by one or more sections
 	// all | One or more section names, separated by semicolons
 	//
@@ -55,18 +59,6 @@ type GetContentSourceSectionJSONPathParams struct {
 	// iht = International New York Times items only
 	//
 	Source GetContentSourceSectionJSONSourceEnum `pathParam:"style=simple,explode=false,name=source"`
-}
-
-type GetContentSourceSectionJSONQueryParams struct {
-	// Limits the number of results, between 1 and 20
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-	// Sets the starting point of the result set
-	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetContentSourceSectionJSONRequest struct {
-	PathParams  GetContentSourceSectionJSONPathParams
-	QueryParams GetContentSourceSectionJSONQueryParams
 }
 
 // GetContentSourceSectionJSON200ApplicationJSON - An array of Articles

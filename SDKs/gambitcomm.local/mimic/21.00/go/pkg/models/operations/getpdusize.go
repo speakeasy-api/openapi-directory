@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPdusizePathParams struct {
+type GetPdusizeRequest struct {
 	// Agent to return the PDU size
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetPdusizeRequest struct {
-	PathParams GetPdusizePathParams
 }
 
 type GetPdusizeResponse struct {

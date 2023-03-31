@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AutomlProjectsLocationsDatasetsCreate - Creates a dataset.
-func (s *projects) AutomlProjectsLocationsDatasetsCreate(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsCreateRequest) (*operations.AutomlProjectsLocationsDatasetsCreateResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsCreate(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsCreateRequest, security operations.AutomlProjectsLocationsDatasetsCreateSecurity) (*operations.AutomlProjectsLocationsDatasetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Dataset", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsCreate(ctx context.Context, re
 }
 
 // AutomlProjectsLocationsDatasetsExportData - Exports dataset's data to the provided output location. Returns an empty response in the response field when it completes.
-func (s *projects) AutomlProjectsLocationsDatasetsExportData(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsExportDataRequest) (*operations.AutomlProjectsLocationsDatasetsExportDataResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsExportData(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsExportDataRequest, security operations.AutomlProjectsLocationsDatasetsExportDataSecurity) (*operations.AutomlProjectsLocationsDatasetsExportDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportDataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsExportData(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsExportData(ctx context.Context
 }
 
 // AutomlProjectsLocationsDatasetsImportData - Imports data into a dataset. For Tables this method can only be called on an empty Dataset. For Tables: * A schema_inference_version parameter must be explicitly set. Returns an empty response in the response field when it completes.
-func (s *projects) AutomlProjectsLocationsDatasetsImportData(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsImportDataRequest) (*operations.AutomlProjectsLocationsDatasetsImportDataResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsImportData(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsImportDataRequest, security operations.AutomlProjectsLocationsDatasetsImportDataSecurity) (*operations.AutomlProjectsLocationsDatasetsImportDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportDataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsImportData(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *projects) AutomlProjectsLocationsDatasetsImportData(ctx context.Context
 }
 
 // AutomlProjectsLocationsDatasetsList - Lists datasets in a project.
-func (s *projects) AutomlProjectsLocationsDatasetsList(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsListRequest) (*operations.AutomlProjectsLocationsDatasetsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsList(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsListRequest, security operations.AutomlProjectsLocationsDatasetsListSecurity) (*operations.AutomlProjectsLocationsDatasetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/datasets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) AutomlProjectsLocationsDatasetsList(ctx context.Context, requ
 }
 
 // AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsList - Lists column specs in a table spec.
-func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsList(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListRequest) (*operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsList(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListRequest, security operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListSecurity) (*operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/columnSpecs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/columnSpecs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsList(ctx 
 }
 
 // AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatch - Updates a column spec.
-func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatch(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchRequest) (*operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatch(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchRequest, security operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchSecurity) (*operations.AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ColumnSpec", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatch(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsColumnSpecsPatch(ctx
 }
 
 // AutomlProjectsLocationsDatasetsTableSpecsList - Lists table specs in a dataset.
-func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsList(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsTableSpecsListRequest) (*operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsList(ctx context.Context, request operations.AutomlProjectsLocationsDatasetsTableSpecsListRequest, security operations.AutomlProjectsLocationsDatasetsTableSpecsListSecurity) (*operations.AutomlProjectsLocationsDatasetsTableSpecsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tableSpecs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tableSpecs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) AutomlProjectsLocationsDatasetsTableSpecsList(ctx context.Con
 }
 
 // AutomlProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) AutomlProjectsLocationsList(ctx context.Context, request operations.AutomlProjectsLocationsListRequest) (*operations.AutomlProjectsLocationsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsList(ctx context.Context, request operations.AutomlProjectsLocationsListRequest, security operations.AutomlProjectsLocationsListSecurity) (*operations.AutomlProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) AutomlProjectsLocationsList(ctx context.Context, request oper
 }
 
 // AutomlProjectsLocationsModelsBatchPredict - Perform a batch prediction. Unlike the online Predict, batch prediction result won't be immediately available in the response. Instead, a long running operation object is returned. User can poll the operation result via GetOperation method. Once the operation is done, BatchPredictResult is returned in the response field. Available for following ML problems: * Image Classification * Image Object Detection * Video Classification * Video Object Tracking * Text Extraction * Tables
-func (s *projects) AutomlProjectsLocationsModelsBatchPredict(ctx context.Context, request operations.AutomlProjectsLocationsModelsBatchPredictRequest) (*operations.AutomlProjectsLocationsModelsBatchPredictResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsBatchPredict(ctx context.Context, request operations.AutomlProjectsLocationsModelsBatchPredictRequest, security operations.AutomlProjectsLocationsModelsBatchPredictSecurity) (*operations.AutomlProjectsLocationsModelsBatchPredictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:batchPredict", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:batchPredict", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchPredictRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) AutomlProjectsLocationsModelsBatchPredict(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) AutomlProjectsLocationsModelsBatchPredict(ctx context.Context
 }
 
 // AutomlProjectsLocationsModelsCreate - Creates a model. Returns a Model in the response field when it completes. When you create a model, several model evaluations are created for it: a global evaluation, and one evaluation for each annotation spec.
-func (s *projects) AutomlProjectsLocationsModelsCreate(ctx context.Context, request operations.AutomlProjectsLocationsModelsCreateRequest) (*operations.AutomlProjectsLocationsModelsCreateResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsCreate(ctx context.Context, request operations.AutomlProjectsLocationsModelsCreateRequest, security operations.AutomlProjectsLocationsModelsCreateSecurity) (*operations.AutomlProjectsLocationsModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/models", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) AutomlProjectsLocationsModelsCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,11 +554,11 @@ func (s *projects) AutomlProjectsLocationsModelsCreate(ctx context.Context, requ
 }
 
 // AutomlProjectsLocationsModelsDeploy - Deploys a model. If a model is already deployed, deploying it with the same parameters has no effect. Deploying with different parametrs (as e.g. changing node_number) will reset the deployment state without pausing the model's availability. Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage deployment automatically. Returns an empty response in the response field when it completes.
-func (s *projects) AutomlProjectsLocationsModelsDeploy(ctx context.Context, request operations.AutomlProjectsLocationsModelsDeployRequest) (*operations.AutomlProjectsLocationsModelsDeployResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsDeploy(ctx context.Context, request operations.AutomlProjectsLocationsModelsDeployRequest, security operations.AutomlProjectsLocationsModelsDeploySecurity) (*operations.AutomlProjectsLocationsModelsDeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:deploy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:deploy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeployModelRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,11 +570,11 @@ func (s *projects) AutomlProjectsLocationsModelsDeploy(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,11 +609,11 @@ func (s *projects) AutomlProjectsLocationsModelsDeploy(ctx context.Context, requ
 }
 
 // AutomlProjectsLocationsModelsExport - Exports a trained, "export-able", model to a user specified Google Cloud Storage location. A model is considered export-able if and only if it has an export format defined for it in ModelExportOutputConfig. Returns an empty response in the response field when it completes.
-func (s *projects) AutomlProjectsLocationsModelsExport(ctx context.Context, request operations.AutomlProjectsLocationsModelsExportRequest) (*operations.AutomlProjectsLocationsModelsExportResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsExport(ctx context.Context, request operations.AutomlProjectsLocationsModelsExportRequest, security operations.AutomlProjectsLocationsModelsExportSecurity) (*operations.AutomlProjectsLocationsModelsExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportModelRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -625,11 +625,11 @@ func (s *projects) AutomlProjectsLocationsModelsExport(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,11 +664,11 @@ func (s *projects) AutomlProjectsLocationsModelsExport(ctx context.Context, requ
 }
 
 // AutomlProjectsLocationsModelsExportEvaluatedExamples - Exports examples on which the model was evaluated (i.e. which were in the TEST set of the dataset the model was created from), together with their ground truth annotations and the annotations created (predicted) by the model. The examples, ground truth and predictions are exported in the state they were at the moment the model was evaluated. This export is available only for 30 days since the model evaluation is created. Currently only available for Tables. Returns an empty response in the response field when it completes.
-func (s *projects) AutomlProjectsLocationsModelsExportEvaluatedExamples(ctx context.Context, request operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesRequest) (*operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsExportEvaluatedExamples(ctx context.Context, request operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesRequest, security operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesSecurity) (*operations.AutomlProjectsLocationsModelsExportEvaluatedExamplesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportEvaluatedExamples", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportEvaluatedExamples", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportEvaluatedExamplesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -680,11 +680,11 @@ func (s *projects) AutomlProjectsLocationsModelsExportEvaluatedExamples(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,20 +719,20 @@ func (s *projects) AutomlProjectsLocationsModelsExportEvaluatedExamples(ctx cont
 }
 
 // AutomlProjectsLocationsModelsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) AutomlProjectsLocationsModelsGetIamPolicy(ctx context.Context, request operations.AutomlProjectsLocationsModelsGetIamPolicyRequest) (*operations.AutomlProjectsLocationsModelsGetIamPolicyResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsGetIamPolicy(ctx context.Context, request operations.AutomlProjectsLocationsModelsGetIamPolicyRequest, security operations.AutomlProjectsLocationsModelsGetIamPolicySecurity) (*operations.AutomlProjectsLocationsModelsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,20 +767,20 @@ func (s *projects) AutomlProjectsLocationsModelsGetIamPolicy(ctx context.Context
 }
 
 // AutomlProjectsLocationsModelsList - Lists models.
-func (s *projects) AutomlProjectsLocationsModelsList(ctx context.Context, request operations.AutomlProjectsLocationsModelsListRequest) (*operations.AutomlProjectsLocationsModelsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsList(ctx context.Context, request operations.AutomlProjectsLocationsModelsListRequest, security operations.AutomlProjectsLocationsModelsListSecurity) (*operations.AutomlProjectsLocationsModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,20 +815,20 @@ func (s *projects) AutomlProjectsLocationsModelsList(ctx context.Context, reques
 }
 
 // AutomlProjectsLocationsModelsModelEvaluationsList - Lists model evaluations.
-func (s *projects) AutomlProjectsLocationsModelsModelEvaluationsList(ctx context.Context, request operations.AutomlProjectsLocationsModelsModelEvaluationsListRequest) (*operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsModelEvaluationsList(ctx context.Context, request operations.AutomlProjectsLocationsModelsModelEvaluationsListRequest, security operations.AutomlProjectsLocationsModelsModelEvaluationsListSecurity) (*operations.AutomlProjectsLocationsModelsModelEvaluationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/modelEvaluations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/modelEvaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -863,11 +863,11 @@ func (s *projects) AutomlProjectsLocationsModelsModelEvaluationsList(ctx context
 }
 
 // AutomlProjectsLocationsModelsPredict - Perform an online prediction. The prediction result will be directly returned in the response. Available for following ML problems, and their expected request payloads: * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB. * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB. * Text Classification - TextSnippet, content up to 60,000 characters, UTF-8 encoded. * Text Extraction - TextSnippet, content up to 30,000 characters, UTF-8 NFC encoded. * Translation - TextSnippet, content up to 25,000 characters, UTF-8 encoded. * Tables - Row, with column values matching the columns of the model, up to 5MB. Not available for FORECASTING prediction_type. * Text Sentiment - TextSnippet, content up 500 characters, UTF-8 encoded.
-func (s *projects) AutomlProjectsLocationsModelsPredict(ctx context.Context, request operations.AutomlProjectsLocationsModelsPredictRequest) (*operations.AutomlProjectsLocationsModelsPredictResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsPredict(ctx context.Context, request operations.AutomlProjectsLocationsModelsPredictRequest, security operations.AutomlProjectsLocationsModelsPredictSecurity) (*operations.AutomlProjectsLocationsModelsPredictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:predict", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:predict", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PredictRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,11 +879,11 @@ func (s *projects) AutomlProjectsLocationsModelsPredict(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,11 +918,11 @@ func (s *projects) AutomlProjectsLocationsModelsPredict(ctx context.Context, req
 }
 
 // AutomlProjectsLocationsModelsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) AutomlProjectsLocationsModelsSetIamPolicy(ctx context.Context, request operations.AutomlProjectsLocationsModelsSetIamPolicyRequest) (*operations.AutomlProjectsLocationsModelsSetIamPolicyResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsSetIamPolicy(ctx context.Context, request operations.AutomlProjectsLocationsModelsSetIamPolicyRequest, security operations.AutomlProjectsLocationsModelsSetIamPolicySecurity) (*operations.AutomlProjectsLocationsModelsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -934,11 +934,11 @@ func (s *projects) AutomlProjectsLocationsModelsSetIamPolicy(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -973,11 +973,11 @@ func (s *projects) AutomlProjectsLocationsModelsSetIamPolicy(ctx context.Context
 }
 
 // AutomlProjectsLocationsModelsUndeploy - Undeploys a model. If the model is not deployed this method has no effect. Only applicable for Text Classification, Image Object Detection and Tables; all other domains manage deployment automatically. Returns an empty response in the response field when it completes.
-func (s *projects) AutomlProjectsLocationsModelsUndeploy(ctx context.Context, request operations.AutomlProjectsLocationsModelsUndeployRequest) (*operations.AutomlProjectsLocationsModelsUndeployResponse, error) {
+func (s *projects) AutomlProjectsLocationsModelsUndeploy(ctx context.Context, request operations.AutomlProjectsLocationsModelsUndeployRequest, security operations.AutomlProjectsLocationsModelsUndeploySecurity) (*operations.AutomlProjectsLocationsModelsUndeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:undeploy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:undeploy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -989,11 +989,11 @@ func (s *projects) AutomlProjectsLocationsModelsUndeploy(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1028,11 +1028,11 @@ func (s *projects) AutomlProjectsLocationsModelsUndeploy(ctx context.Context, re
 }
 
 // AutomlProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) AutomlProjectsLocationsOperationsCancel(ctx context.Context, request operations.AutomlProjectsLocationsOperationsCancelRequest) (*operations.AutomlProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) AutomlProjectsLocationsOperationsCancel(ctx context.Context, request operations.AutomlProjectsLocationsOperationsCancelRequest, security operations.AutomlProjectsLocationsOperationsCancelSecurity) (*operations.AutomlProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1044,11 +1044,11 @@ func (s *projects) AutomlProjectsLocationsOperationsCancel(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1083,20 +1083,20 @@ func (s *projects) AutomlProjectsLocationsOperationsCancel(ctx context.Context, 
 }
 
 // AutomlProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) AutomlProjectsLocationsOperationsDelete(ctx context.Context, request operations.AutomlProjectsLocationsOperationsDeleteRequest) (*operations.AutomlProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) AutomlProjectsLocationsOperationsDelete(ctx context.Context, request operations.AutomlProjectsLocationsOperationsDeleteRequest, security operations.AutomlProjectsLocationsOperationsDeleteSecurity) (*operations.AutomlProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1131,20 +1131,20 @@ func (s *projects) AutomlProjectsLocationsOperationsDelete(ctx context.Context, 
 }
 
 // AutomlProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) AutomlProjectsLocationsOperationsGet(ctx context.Context, request operations.AutomlProjectsLocationsOperationsGetRequest) (*operations.AutomlProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) AutomlProjectsLocationsOperationsGet(ctx context.Context, request operations.AutomlProjectsLocationsOperationsGetRequest, security operations.AutomlProjectsLocationsOperationsGetSecurity) (*operations.AutomlProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1179,20 +1179,20 @@ func (s *projects) AutomlProjectsLocationsOperationsGet(ctx context.Context, req
 }
 
 // AutomlProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) AutomlProjectsLocationsOperationsList(ctx context.Context, request operations.AutomlProjectsLocationsOperationsListRequest) (*operations.AutomlProjectsLocationsOperationsListResponse, error) {
+func (s *projects) AutomlProjectsLocationsOperationsList(ctx context.Context, request operations.AutomlProjectsLocationsOperationsListRequest, security operations.AutomlProjectsLocationsOperationsListSecurity) (*operations.AutomlProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1227,11 +1227,11 @@ func (s *projects) AutomlProjectsLocationsOperationsList(ctx context.Context, re
 }
 
 // AutomlProjectsLocationsOperationsWait - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
-func (s *projects) AutomlProjectsLocationsOperationsWait(ctx context.Context, request operations.AutomlProjectsLocationsOperationsWaitRequest) (*operations.AutomlProjectsLocationsOperationsWaitResponse, error) {
+func (s *projects) AutomlProjectsLocationsOperationsWait(ctx context.Context, request operations.AutomlProjectsLocationsOperationsWaitRequest, security operations.AutomlProjectsLocationsOperationsWaitSecurity) (*operations.AutomlProjectsLocationsOperationsWaitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:wait", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:wait", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WaitOperationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1243,11 +1243,11 @@ func (s *projects) AutomlProjectsLocationsOperationsWait(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1282,11 +1282,11 @@ func (s *projects) AutomlProjectsLocationsOperationsWait(ctx context.Context, re
 }
 
 // AutomlProjectsLocationsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) AutomlProjectsLocationsTestIamPermissions(ctx context.Context, request operations.AutomlProjectsLocationsTestIamPermissionsRequest) (*operations.AutomlProjectsLocationsTestIamPermissionsResponse, error) {
+func (s *projects) AutomlProjectsLocationsTestIamPermissions(ctx context.Context, request operations.AutomlProjectsLocationsTestIamPermissionsRequest, security operations.AutomlProjectsLocationsTestIamPermissionsSecurity) (*operations.AutomlProjectsLocationsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1298,11 +1298,11 @@ func (s *projects) AutomlProjectsLocationsTestIamPermissions(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

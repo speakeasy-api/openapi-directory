@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type SetTempPasswordPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type SetTempPasswordQueryParams struct {
-	TempPassword *string `queryParam:"style=form,explode=true,name=tempPassword"`
-}
-
 type SetTempPasswordRequest struct {
-	PathParams  SetTempPasswordPathParams
-	QueryParams SetTempPasswordQueryParams
-	Request     []byte `request:"mediaType=text/plain"`
+	RequestBody  []byte  `request:"mediaType=text/plain"`
+	TempPassword *string `queryParam:"style=form,explode=true,name=tempPassword"`
+	UserID       string  `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SetTempPasswordResponse struct {

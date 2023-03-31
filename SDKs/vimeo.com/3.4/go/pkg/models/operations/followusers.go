@@ -8,12 +8,7 @@ import (
 )
 
 type FollowUsersSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type FollowUsersPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FollowUsersRequestBody struct {
@@ -22,9 +17,9 @@ type FollowUsersRequestBody struct {
 }
 
 type FollowUsersRequest struct {
-	PathParams FollowUsersPathParams
-	Request    FollowUsersRequestBody `request:"mediaType=application/json"`
-	Security   FollowUsersSecurity
+	RequestBody FollowUsersRequestBody `request:"mediaType=application/json"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type FollowUsersResponse struct {

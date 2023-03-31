@@ -8,24 +8,15 @@ import (
 )
 
 type UpdateTimesheetSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateTimesheetPathParams struct {
-	// Timesheet id for single object
-	TimesheetID string `pathParam:"style=simple,explode=false,name=TimesheetID"`
-}
-
-type UpdateTimesheetHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateTimesheetRequest struct {
-	PathParams UpdateTimesheetPathParams
-	Headers    UpdateTimesheetHeaders
-	Request    []shared.TimesheetInput `request:"mediaType=application/json"`
-	Security   UpdateTimesheetSecurity
+	RequestBody []shared.TimesheetInput `request:"mediaType=application/json"`
+	// Timesheet id for single object
+	TimesheetID string `pathParam:"style=simple,explode=false,name=TimesheetID"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type UpdateTimesheetResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type AddOrUpdateNonPrimaryStateTaxSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddOrUpdateNonPrimaryStateTaxPathParams struct {
+type AddOrUpdateNonPrimaryStateTaxRequest struct {
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Employee Id
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
-}
-
-type AddOrUpdateNonPrimaryStateTaxRequest struct {
-	PathParams AddOrUpdateNonPrimaryStateTaxPathParams
 	// Non-Primary State Tax Model
-	Request  shared.NonPrimaryStateTax `request:"mediaType=application/json"`
-	Security AddOrUpdateNonPrimaryStateTaxSecurity
+	NonPrimaryStateTax shared.NonPrimaryStateTax `request:"mediaType=application/json"`
 }
 
 type AddOrUpdateNonPrimaryStateTaxResponse struct {

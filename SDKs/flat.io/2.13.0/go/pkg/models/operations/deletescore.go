@@ -8,24 +8,15 @@ import (
 )
 
 type DeleteScoreSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteScorePathParams struct {
-	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
-	//
-	Score string `pathParam:"style=simple,explode=false,name=score"`
-}
-
-type DeleteScoreQueryParams struct {
-	// If `true`, the score deletion will be scheduled to be done ASAP
-	Now *bool `queryParam:"style=form,explode=true,name=now"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteScoreRequest struct {
-	PathParams  DeleteScorePathParams
-	QueryParams DeleteScoreQueryParams
-	Security    DeleteScoreSecurity
+	// If `true`, the score deletion will be scheduled to be done ASAP
+	Now *bool `queryParam:"style=form,explode=true,name=now"`
+	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+	//
+	Score string `pathParam:"style=simple,explode=false,name=score"`
 }
 
 type DeleteScoreResponse struct {

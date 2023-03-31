@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteRealmAdminEventsPathParams struct {
+type DeleteRealmAdminEventsRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type DeleteRealmAdminEventsRequest struct {
-	PathParams DeleteRealmAdminEventsPathParams
 }
 
 type DeleteRealmAdminEventsResponse struct {

@@ -160,7 +160,6 @@ pkg/models/shared/fetchpatienthealthmetricresponse.go
 pkg/models/shared/createtokenresponse.go
 pkg/models/shared/tokenresource.go
 pkg/models/shared/createtokenrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/fetchorganizationresponse.go
 pkg/models/shared/organizationresource.go
 pkg/models/shared/createpatientresponse.go

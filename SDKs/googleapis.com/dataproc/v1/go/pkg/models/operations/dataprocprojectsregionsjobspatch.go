@@ -8,22 +8,14 @@ import (
 )
 
 type DataprocProjectsRegionsJobsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsRegionsJobsPatchPathParams struct {
-	// Required. The job ID.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// Required. The ID of the Google Cloud Platform project that the job belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Required. The Dataproc region in which to handle the request.
-	Region string `pathParam:"style=simple,explode=false,name=region"`
-}
-
-type DataprocProjectsRegionsJobsPatchQueryParams struct {
+type DataprocProjectsRegionsJobsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	JobInput    *shared.JobInput  `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,27 +24,26 @@ type DataprocProjectsRegionsJobsPatchQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The job ID.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the Google Cloud Platform project that the job belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The Dataproc region in which to handle the request.
+	Region string `pathParam:"style=simple,explode=false,name=region"`
 	// Required. Specifies the path, relative to Job, of the field to update. For example, to update the labels of a Job the update_mask parameter would be specified as labels, and the PATCH request body would specify the new value. *Note:* Currently, labels is the only field that can be updated.
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsRegionsJobsPatchRequest struct {
-	PathParams  DataprocProjectsRegionsJobsPatchPathParams
-	QueryParams DataprocProjectsRegionsJobsPatchQueryParams
-	Request     *shared.JobInput `request:"mediaType=application/json"`
-	Security    DataprocProjectsRegionsJobsPatchSecurity
 }
 
 type DataprocProjectsRegionsJobsPatchResponse struct {

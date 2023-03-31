@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersUserEmailSuspendPathParams struct {
+type PutUsersUserEmailSuspendRequest struct {
+	SuspendedRequest shared.SuspendedRequest `request:"mediaType=application/json"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PutUsersUserEmailSuspendRequest struct {
-	PathParams PutUsersUserEmailSuspendPathParams
-	Request    shared.SuspendedRequest `request:"mediaType=application/json"`
 }
 
 type PutUsersUserEmailSuspendResponse struct {

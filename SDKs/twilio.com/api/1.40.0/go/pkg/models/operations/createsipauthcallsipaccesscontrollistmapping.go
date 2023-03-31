@@ -12,14 +12,8 @@ var CreateSipAuthCallsIPAccessControlListMappingServerList = []string{
 }
 
 type CreateSipAuthCallsIPAccessControlListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipAuthCallsIPAccessControlListMappingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the SIP domain that will contain the new resource.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipAuthCallsIPAccessControlListMappingCreateSipAuthCallsIPAccessControlListMappingRequest struct {
@@ -28,10 +22,11 @@ type CreateSipAuthCallsIPAccessControlListMappingCreateSipAuthCallsIPAccessContr
 }
 
 type CreateSipAuthCallsIPAccessControlListMappingRequest struct {
-	PathParams CreateSipAuthCallsIPAccessControlListMappingPathParams
-	Request    *CreateSipAuthCallsIPAccessControlListMappingCreateSipAuthCallsIPAccessControlListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipAuthCallsIPAccessControlListMappingSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the SIP domain that will contain the new resource.
+	DomainSid   string                                                                                           `pathParam:"style=simple,explode=false,name=DomainSid"`
+	RequestBody *CreateSipAuthCallsIPAccessControlListMappingCreateSipAuthCallsIPAccessControlListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipAuthCallsIPAccessControlListMappingResponse struct {

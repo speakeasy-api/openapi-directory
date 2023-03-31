@@ -12,14 +12,8 @@ var UpdateModelBuildServerList = []string{
 }
 
 type UpdateModelBuildSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateModelBuildPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The Twilio-provided string that uniquely identifies the ModelBuild resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateModelBuildUpdateModelBuildRequest struct {
@@ -28,10 +22,11 @@ type UpdateModelBuildUpdateModelBuildRequest struct {
 }
 
 type UpdateModelBuildRequest struct {
-	PathParams UpdateModelBuildPathParams
-	Request    *UpdateModelBuildUpdateModelBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateModelBuildSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+	AssistantSid string                                   `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateModelBuildUpdateModelBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the ModelBuild resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateModelBuildResponse struct {

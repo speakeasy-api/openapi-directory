@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateReceivable2PathParams struct {
+type UpdateReceivable2Request struct {
+	ReceivableDTO shared.ReceivableDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// receivable's internal identifier
 	ReceivableID int64 `pathParam:"style=simple,explode=false,name=receivableId"`
-}
-
-type UpdateReceivable2Request struct {
-	PathParams UpdateReceivable2PathParams
-	Request    shared.ReceivableDTO `request:"mediaType=application/json"`
 }
 
 type UpdateReceivable2Response struct {

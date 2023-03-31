@@ -60,7 +60,6 @@ type CreateCalendarEventResponseRequestData struct {
 	Type          TypeEnum1                                           `json:"type"`
 }
 
-// CreateCalendarEventResponseRequest - OK
 type CreateCalendarEventResponseRequest struct {
 	Data CreateCalendarEventResponseRequestData `json:"data"`
 }

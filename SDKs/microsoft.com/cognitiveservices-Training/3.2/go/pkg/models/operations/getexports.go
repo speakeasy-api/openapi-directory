@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExportsPathParams struct {
+type GetExportsRequest struct {
 	// The iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetExportsRequest struct {
-	PathParams GetExportsPathParams
 }
 
 type GetExportsResponse struct {

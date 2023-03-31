@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTelnetGetTracePathParams struct {
+type ProtocolTelnetGetTraceRequest struct {
 	// Agent to show whether TELNET tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTelnetGetTraceRequest struct {
-	PathParams ProtocolTelnetGetTracePathParams
 }
 
 type ProtocolTelnetGetTraceResponse struct {

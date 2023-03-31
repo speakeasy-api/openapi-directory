@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProjectQueryParams struct {
+type CreateProjectRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The description of the project
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// The id of the domain to use for this project. Defaults to General
 	DomainID *string `queryParam:"style=form,explode=true,name=domainId"`
 	// Name of the project
 	Name string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type CreateProjectHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateProjectRequest struct {
-	QueryParams CreateProjectQueryParams
-	Headers     CreateProjectHeaders
 }
 
 type CreateProjectResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateProjectPermissionsLegacyPathParams struct {
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-	TeamID    int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsAddOrUpdateProjectPermissionsLegacyRequestBodyPermissionEnum - The permission to grant to the team for this project. Can be one of:
 // \* `read` - team members can read, but not write to or administer this project.
 // \* `write` - team members can read and write, but not administer this project.
@@ -55,8 +50,9 @@ type TeamsAddOrUpdateProjectPermissionsLegacyRequestBody struct {
 }
 
 type TeamsAddOrUpdateProjectPermissionsLegacyRequest struct {
-	PathParams TeamsAddOrUpdateProjectPermissionsLegacyPathParams
-	Request    *TeamsAddOrUpdateProjectPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateProjectPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	ProjectID   int64                                                `pathParam:"style=simple,explode=false,name=project_id"`
+	TeamID      int64                                                `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 // TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSON - Forbidden if the project is not owned by the organization

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetIssueTokenRequest struct {
-	// Object representing the token to be created
-	Request shared.IssueTokenRequest `request:"mediaType=application/json"`
-}
-
 type TestnetIssueTokenResponse struct {
 	ContentType string
 	// Unexpected error

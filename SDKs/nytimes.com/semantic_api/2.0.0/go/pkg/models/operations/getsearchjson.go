@@ -69,7 +69,7 @@ func (e *GetSearchJSONFieldsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSearchJSONQueryParams struct {
+type GetSearchJSONRequest struct {
 	// "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
 	//
 	// Optional fields are returned in result_set. They are briefly explained here:
@@ -89,10 +89,6 @@ type GetSearchJSONQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Precedes the search term string. Used in a Search Query. Except for &lt;specific_concept_name&gt;, Search Query will take the required parameters listed above (&lt;concept_type&gt;, &lt;concept_uri&gt;, &lt;article_uri&gt;) as an optional_parameter in addition to the query=&lt;query_term&gt;.
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetSearchJSONRequest struct {
-	QueryParams GetSearchJSONQueryParams
 }
 
 // GetSearchJSON200ApplicationJSON - An array of Concepts

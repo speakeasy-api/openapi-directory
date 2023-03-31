@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetAppsAppIDVersionsVersionPathParams struct {
+type GetAppsAppIDVersionsVersionRequest struct {
 	// The id of the App to be located
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The version number of the app
-	Version int64 `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetAppsAppIDVersionsVersionQueryParams struct {
 	// The unique id of the developer that is requesting this resource
 	DeveloperID *string `queryParam:"style=form,explode=true,name=developerId"`
-}
-
-type GetAppsAppIDVersionsVersionRequest struct {
-	PathParams  GetAppsAppIDVersionsVersionPathParams
-	QueryParams GetAppsAppIDVersionsVersionQueryParams
+	// The version number of the app
+	Version int64 `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type GetAppsAppIDVersionsVersionResponse struct {

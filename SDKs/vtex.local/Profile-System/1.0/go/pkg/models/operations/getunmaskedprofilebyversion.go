@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type GetUnmaskedProfileByVersionPathParams struct {
-	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// ID of the version of the client's profile as returned by endpoints that create or update profile information in the `version` field.
-	ProfileVersionID string `pathParam:"style=simple,explode=false,name=profileVersionId"`
-}
-
-type GetUnmaskedProfileByVersionQueryParams struct {
-	// Reason for requesting unmasked data.
-	Reason string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type GetUnmaskedProfileByVersionHeaders struct {
+type GetUnmaskedProfileByVersionRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetUnmaskedProfileByVersionRequest struct {
-	PathParams  GetUnmaskedProfileByVersionPathParams
-	QueryParams GetUnmaskedProfileByVersionQueryParams
-	Headers     GetUnmaskedProfileByVersionHeaders
+	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	// ID of the version of the client's profile as returned by endpoints that create or update profile information in the `version` field.
+	ProfileVersionID string `pathParam:"style=simple,explode=false,name=profileVersionId"`
+	// Reason for requesting unmasked data.
+	Reason string `queryParam:"style=form,explode=true,name=reason"`
 }
 
 type GetUnmaskedProfileByVersionResponse struct {

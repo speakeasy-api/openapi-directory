@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitAnswersPathParams struct {
-	// The group ID of the group that the user is submitting answers for.
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 type SubmitAnswersRequest struct {
-	PathParams SubmitAnswersPathParams
 	// A JSON object mapping each question from the group membership.questionnaire.questions field to an answer (eg. {"Where do you live?": "New York City"} ). All questions are required so no null or empty string answers are allowed.
 	//
-	Request map[string]string `request:"mediaType=application/json"`
+	RequestBody map[string]string `request:"mediaType=application/json"`
+	// The group ID of the group that the user is submitting answers for.
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type SubmitAnswersResponse struct {

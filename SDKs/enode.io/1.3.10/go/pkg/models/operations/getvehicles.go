@@ -8,24 +8,19 @@ import (
 )
 
 type GetVehiclesSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken2 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken3 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken4 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken5 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken2 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken3 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken4 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken5 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetVehiclesQueryParams struct {
+type GetVehiclesRequest struct {
 	// An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&field[]=location`
 	//
 	// By default, no fields are included and only the Vehicle ID will be returned. Response time may be impacted by which fields you request.
 	Field []interface{} `queryParam:"style=form,explode=true,name=field[]"`
-}
-
-type GetVehiclesRequest struct {
-	QueryParams GetVehiclesQueryParams
-	Security    GetVehiclesSecurity
 }
 
 type GetVehiclesResponse struct {

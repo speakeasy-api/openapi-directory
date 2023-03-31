@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type GetNotesbyorderIDQueryParams struct {
+type GetNotesbyorderIDRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Number of the page to be retrieved.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of notes per page. Maximum: 30.
@@ -15,18 +19,6 @@ type GetNotesbyorderIDQueryParams struct {
 	Reason *string `queryParam:"style=form,explode=true,name=reason"`
 	// ID of the order.
 	TargetID string `queryParam:"style=form,explode=true,name=target.id"`
-}
-
-type GetNotesbyorderIDHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetNotesbyorderIDRequest struct {
-	QueryParams GetNotesbyorderIDQueryParams
-	Headers     GetNotesbyorderIDHeaders
 }
 
 type GetNotesbyorderIDResponse struct {

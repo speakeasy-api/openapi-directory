@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingStatusSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingStatusPathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingStatusApplicationJSONActionEnum - `end` - End a meeting.<br>
@@ -53,9 +45,11 @@ type MeetingStatusApplicationJSON struct {
 }
 
 type MeetingStatusRequest struct {
-	PathParams MeetingStatusPathParams
-	Request    MeetingStatusApplicationJSON `request:"mediaType=application/json"`
-	Security   MeetingStatusSecurity
+	RequestBody MeetingStatusApplicationJSON `request:"mediaType=application/json"`
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
 }
 
 type MeetingStatusResponse struct {

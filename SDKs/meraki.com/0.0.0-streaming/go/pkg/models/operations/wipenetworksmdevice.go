@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type WipeNetworkSmDevicePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type WipeNetworkSmDeviceRequestBody struct {
 	// The id of the device to be wiped.
 	ID *string `json:"id,omitempty"`
@@ -22,8 +18,8 @@ type WipeNetworkSmDeviceRequestBody struct {
 }
 
 type WipeNetworkSmDeviceRequest struct {
-	PathParams WipeNetworkSmDevicePathParams
-	Request    *WipeNetworkSmDeviceRequestBody `request:"mediaType=application/json"`
+	RequestBody *WipeNetworkSmDeviceRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type WipeNetworkSmDeviceResponse struct {

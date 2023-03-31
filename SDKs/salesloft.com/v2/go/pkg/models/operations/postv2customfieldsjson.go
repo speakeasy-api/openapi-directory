@@ -13,10 +13,6 @@ type PostV2CustomFieldsJSONRequestBody struct {
 	Name string `form:"name=name"`
 }
 
-type PostV2CustomFieldsJSONRequest struct {
-	Request PostV2CustomFieldsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2CustomFieldsJSONResponse struct {
 	Body        []byte
 	ContentType string

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateCancelPathParams struct {
+type CertificateCancelRequest struct {
 	// Certificate id to cancel
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateCancelRequest struct {
-	PathParams CertificateCancelPathParams
 }
 
 type CertificateCancelResponse struct {

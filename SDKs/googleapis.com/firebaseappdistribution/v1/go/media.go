@@ -32,11 +32,11 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // FirebaseappdistributionMediaUpload - Uploads a binary. Uploading a binary can result in a new release being created, an update to an existing release, or a no-op if a release with the same binary already exists.
-func (s *media) FirebaseappdistributionMediaUpload(ctx context.Context, request operations.FirebaseappdistributionMediaUploadRequest) (*operations.FirebaseappdistributionMediaUploadResponse, error) {
+func (s *media) FirebaseappdistributionMediaUpload(ctx context.Context, request operations.FirebaseappdistributionMediaUploadRequest, security operations.FirebaseappdistributionMediaUploadSecurity) (*operations.FirebaseappdistributionMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}/releases:upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}/releases:upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *media) FirebaseappdistributionMediaUpload(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -15,10 +15,6 @@ type PostAssetsReturnsRequestBody struct {
 	Assets []PostAssetsReturnsRequestBodyAssets `json:"assets"`
 }
 
-type PostAssetsReturnsRequest struct {
-	Request PostAssetsReturnsRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsReturns200ApplicationJSONAssets struct {
 	// assetReturns[t] is the arithmetic return of the asset from the time t-1 to the time t, in percentage
 	AssetReturns []float64 `json:"assetReturns"`

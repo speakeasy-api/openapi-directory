@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UserPasswordPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UserPasswordApplicationJSON - User password.
 type UserPasswordApplicationJSON struct {
 	// User password. Should be less than 32 characters.
@@ -20,9 +15,10 @@ type UserPasswordApplicationJSON struct {
 }
 
 type UserPasswordRequest struct {
-	PathParams UserPasswordPathParams
 	// User password.
-	Request UserPasswordApplicationJSON `request:"mediaType=application/json"`
+	RequestBody UserPasswordApplicationJSON `request:"mediaType=application/json"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserPasswordResponse struct {

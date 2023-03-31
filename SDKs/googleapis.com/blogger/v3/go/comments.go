@@ -32,20 +32,20 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BloggerCommentsApprove - Marks a comment as not spam by blog id, post id and comment id.
-func (s *comments) BloggerCommentsApprove(ctx context.Context, request operations.BloggerCommentsApproveRequest) (*operations.BloggerCommentsApproveResponse, error) {
+func (s *comments) BloggerCommentsApprove(ctx context.Context, request operations.BloggerCommentsApproveRequest, security operations.BloggerCommentsApproveSecurity) (*operations.BloggerCommentsApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *comments) BloggerCommentsApprove(ctx context.Context, request operation
 }
 
 // BloggerCommentsDelete - Deletes a comment by blog id, post id and comment id.
-func (s *comments) BloggerCommentsDelete(ctx context.Context, request operations.BloggerCommentsDeleteRequest) (*operations.BloggerCommentsDeleteResponse, error) {
+func (s *comments) BloggerCommentsDelete(ctx context.Context, request operations.BloggerCommentsDeleteRequest, security operations.BloggerCommentsDeleteSecurity) (*operations.BloggerCommentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *comments) BloggerCommentsDelete(ctx context.Context, request operations
 }
 
 // BloggerCommentsGet - Gets a comment by id.
-func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.BloggerCommentsGetRequest) (*operations.BloggerCommentsGetResponse, error) {
+func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.BloggerCommentsGetRequest, security operations.BloggerCommentsGetSecurity) (*operations.BloggerCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,20 +167,20 @@ func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.Bl
 }
 
 // BloggerCommentsList - Lists comments.
-func (s *comments) BloggerCommentsList(ctx context.Context, request operations.BloggerCommentsListRequest) (*operations.BloggerCommentsListResponse, error) {
+func (s *comments) BloggerCommentsList(ctx context.Context, request operations.BloggerCommentsListRequest, security operations.BloggerCommentsListSecurity) (*operations.BloggerCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,20 +215,20 @@ func (s *comments) BloggerCommentsList(ctx context.Context, request operations.B
 }
 
 // BloggerCommentsListByBlog - Lists comments by blog.
-func (s *comments) BloggerCommentsListByBlog(ctx context.Context, request operations.BloggerCommentsListByBlogRequest) (*operations.BloggerCommentsListByBlogResponse, error) {
+func (s *comments) BloggerCommentsListByBlog(ctx context.Context, request operations.BloggerCommentsListByBlogRequest, security operations.BloggerCommentsListByBlogSecurity) (*operations.BloggerCommentsListByBlogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -263,20 +263,20 @@ func (s *comments) BloggerCommentsListByBlog(ctx context.Context, request operat
 }
 
 // BloggerCommentsMarkAsSpam - Marks a comment as spam by blog id, post id and comment id.
-func (s *comments) BloggerCommentsMarkAsSpam(ctx context.Context, request operations.BloggerCommentsMarkAsSpamRequest) (*operations.BloggerCommentsMarkAsSpamResponse, error) {
+func (s *comments) BloggerCommentsMarkAsSpam(ctx context.Context, request operations.BloggerCommentsMarkAsSpamRequest, security operations.BloggerCommentsMarkAsSpamSecurity) (*operations.BloggerCommentsMarkAsSpamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/spam", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/spam", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -311,20 +311,20 @@ func (s *comments) BloggerCommentsMarkAsSpam(ctx context.Context, request operat
 }
 
 // BloggerCommentsRemoveContent - Removes the content of a comment by blog id, post id and comment id.
-func (s *comments) BloggerCommentsRemoveContent(ctx context.Context, request operations.BloggerCommentsRemoveContentRequest) (*operations.BloggerCommentsRemoveContentResponse, error) {
+func (s *comments) BloggerCommentsRemoveContent(ctx context.Context, request operations.BloggerCommentsRemoveContentRequest, security operations.BloggerCommentsRemoveContentSecurity) (*operations.BloggerCommentsRemoveContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

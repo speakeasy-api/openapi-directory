@@ -42,7 +42,7 @@ func newBackgroundRemoval(defaultClient, securityClient HTTPClient, serverURL, l
 // * Output resolutions available: Preview (up to 0.25 megapixels), Full (up to 25 megapixels)
 //
 // Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
-func (s *backgroundRemoval) PostRemovebgForm(ctx context.Context, request operations.PostRemovebgFormRequest) (*operations.PostRemovebgFormResponse, error) {
+func (s *backgroundRemoval) PostRemovebgForm(ctx context.Context, request shared.RemoveBgJSON) (*operations.PostRemovebgFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/removebg"
 
@@ -129,7 +129,7 @@ func (s *backgroundRemoval) PostRemovebgForm(ctx context.Context, request operat
 // * Output resolutions available: Preview (up to 0.25 megapixels), Full (up to 25 megapixels)
 //
 // Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
-func (s *backgroundRemoval) PostRemovebgJSON(ctx context.Context, request operations.PostRemovebgJSONRequest) (*operations.PostRemovebgJSONResponse, error) {
+func (s *backgroundRemoval) PostRemovebgJSON(ctx context.Context, request shared.RemoveBgJSON) (*operations.PostRemovebgJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/removebg"
 
@@ -216,7 +216,7 @@ func (s *backgroundRemoval) PostRemovebgJSON(ctx context.Context, request operat
 // * Output resolutions available: Preview (up to 0.25 megapixels), Full (up to 25 megapixels)
 //
 // Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
-func (s *backgroundRemoval) PostRemovebgMultipart(ctx context.Context, request operations.PostRemovebgMultipartRequest) (*operations.PostRemovebgMultipartResponse, error) {
+func (s *backgroundRemoval) PostRemovebgMultipart(ctx context.Context, request shared.RemoveBgMultipart) (*operations.PostRemovebgMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/removebg"
 

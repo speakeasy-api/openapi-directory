@@ -12,12 +12,8 @@ var UpdateCredentialPublicKeyServerList = []string{
 }
 
 type UpdateCredentialPublicKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCredentialPublicKeyPathParams struct {
-	// The Twilio-provided string that uniquely identifies the PublicKey resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest struct {
@@ -26,10 +22,9 @@ type UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest struct {
 }
 
 type UpdateCredentialPublicKeyRequest struct {
-	PathParams UpdateCredentialPublicKeyPathParams
-	Request    *UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCredentialPublicKeySecurity
-	ServerURL  *string
+	RequestBody *UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the PublicKey resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCredentialPublicKeyResponse struct {

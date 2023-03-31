@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateCollectionResourceSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateCollectionResourcePathParams struct {
-	// Collection unique identifier
-	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateCollectionResourceRequest struct {
-	PathParams PrivateCollectionResourcePathParams
 	// Resource data
-	Request  shared.Resource `request:"mediaType=application/json"`
-	Security PrivateCollectionResourceSecurity
+	Resource shared.Resource `request:"mediaType=application/json"`
+	// Collection unique identifier
+	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type PrivateCollectionResourceResponse struct {

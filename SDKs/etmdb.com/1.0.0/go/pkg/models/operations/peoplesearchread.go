@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PeopleSearchReadPathParams struct {
-	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
 type PeopleSearchReadRequest struct {
-	PathParams PeopleSearchReadPathParams
+	User string `pathParam:"style=simple,explode=false,name=user"`
 }
 
 type PeopleSearchReadResponse struct {

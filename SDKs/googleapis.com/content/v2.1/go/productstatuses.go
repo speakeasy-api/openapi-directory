@@ -33,11 +33,11 @@ func newProductstatuses(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // ContentProductstatusesCustombatch - Gets the statuses of multiple products in a single request.
-func (s *productstatuses) ContentProductstatusesCustombatch(ctx context.Context, request operations.ContentProductstatusesCustombatchRequest) (*operations.ContentProductstatusesCustombatchResponse, error) {
+func (s *productstatuses) ContentProductstatusesCustombatch(ctx context.Context, request operations.ContentProductstatusesCustombatchRequest, security operations.ContentProductstatusesCustombatchSecurity) (*operations.ContentProductstatusesCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/productstatuses/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductstatusesCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *productstatuses) ContentProductstatusesCustombatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *productstatuses) ContentProductstatusesCustombatch(ctx context.Context,
 }
 
 // ContentProductstatusesGet - Gets the status of a product from your Merchant Center account.
-func (s *productstatuses) ContentProductstatusesGet(ctx context.Context, request operations.ContentProductstatusesGetRequest) (*operations.ContentProductstatusesGetResponse, error) {
+func (s *productstatuses) ContentProductstatusesGet(ctx context.Context, request operations.ContentProductstatusesGetRequest, security operations.ContentProductstatusesGetSecurity) (*operations.ContentProductstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *productstatuses) ContentProductstatusesGet(ctx context.Context, request
 }
 
 // ContentProductstatusesList - Lists the statuses of the products in your Merchant Center account.
-func (s *productstatuses) ContentProductstatusesList(ctx context.Context, request operations.ContentProductstatusesListRequest) (*operations.ContentProductstatusesListResponse, error) {
+func (s *productstatuses) ContentProductstatusesList(ctx context.Context, request operations.ContentProductstatusesListRequest, security operations.ContentProductstatusesListSecurity) (*operations.ContentProductstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,20 +184,20 @@ func (s *productstatuses) ContentProductstatusesList(ctx context.Context, reques
 }
 
 // ContentProductstatusesRepricingreportsList - Lists the metrics report for a given Repricing product.
-func (s *productstatuses) ContentProductstatusesRepricingreportsList(ctx context.Context, request operations.ContentProductstatusesRepricingreportsListRequest) (*operations.ContentProductstatusesRepricingreportsListResponse, error) {
+func (s *productstatuses) ContentProductstatusesRepricingreportsList(ctx context.Context, request operations.ContentProductstatusesRepricingreportsListRequest, security operations.ContentProductstatusesRepricingreportsListSecurity) (*operations.ContentProductstatusesRepricingreportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses/{productId}/repricingreports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses/{productId}/repricingreports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

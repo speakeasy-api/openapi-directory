@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsConvertMemberToOutsideCollaboratorPathParams struct {
+type OrgsConvertMemberToOutsideCollaboratorRequest struct {
 	Org      string `pathParam:"style=simple,explode=false,name=org"`
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type OrgsConvertMemberToOutsideCollaboratorRequest struct {
-	PathParams OrgsConvertMemberToOutsideCollaboratorPathParams
 }
 
 type OrgsConvertMemberToOutsideCollaboratorResponse struct {

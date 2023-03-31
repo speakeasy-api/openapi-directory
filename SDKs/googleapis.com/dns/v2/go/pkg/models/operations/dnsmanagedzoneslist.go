@@ -8,23 +8,23 @@ import (
 )
 
 type DNSManagedZonesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSManagedZonesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSManagedZonesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSManagedZonesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSManagedZonesListSecurity struct {
@@ -34,14 +34,7 @@ type DNSManagedZonesListSecurity struct {
 	Option4 *DNSManagedZonesListSecurityOption4 `security:"option"`
 }
 
-type DNSManagedZonesListPathParams struct {
-	// Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DNSManagedZonesListQueryParams struct {
+type DNSManagedZonesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -56,6 +49,8 @@ type DNSManagedZonesListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.
@@ -64,18 +59,14 @@ type DNSManagedZonesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSManagedZonesListRequest struct {
-	PathParams  DNSManagedZonesListPathParams
-	QueryParams DNSManagedZonesListQueryParams
-	Security    DNSManagedZonesListSecurity
 }
 
 type DNSManagedZonesListResponse struct {

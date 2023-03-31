@@ -8,14 +8,8 @@ import (
 )
 
 type GetImageKeywordSuggestionsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetImageKeywordSuggestionsRequest struct {
-	// Plain text to extract keywords from
-	Request  shared.SearchEntitiesRequest `request:"mediaType=application/json"`
-	Security GetImageKeywordSuggestionsSecurity
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetImageKeywordSuggestionsResponse struct {

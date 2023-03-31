@@ -63,11 +63,10 @@ pkg/models/operations/cloudsearchstatssessionsearchapplicationsget.go
 pkg/models/operations/cloudsearchstatsusersearchapplicationsget.go
 pkg/models/operations/cloudsearchinitializecustomer.go
 pkg/models/shared/checkaccessresponse.go
+pkg/models/shared/altenum.go
 pkg/models/shared/principal.go
 pkg/models/shared/gsuiteprincipal.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/searchitemsbyviewurlresponse.go
 pkg/models/shared/item.go
 pkg/models/shared/itemstructureddata.go

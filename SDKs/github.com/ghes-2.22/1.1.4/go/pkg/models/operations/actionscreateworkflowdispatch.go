@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsCreateWorkflowDispatchPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-	// The ID of the workflow. You can also pass the workflow file name as a string.
-	WorkflowID shared.WorkflowID `pathParam:"style=simple,explode=false,name=workflow_id"`
-}
-
 type ActionsCreateWorkflowDispatchRequestBody struct {
 	// Input keys and values configured in the workflow file. The maximum number of properties is 10. Any default properties configured in the workflow file will be used when `inputs` are omitted.
 	Inputs map[string]string `json:"inputs,omitempty"`
@@ -22,8 +15,11 @@ type ActionsCreateWorkflowDispatchRequestBody struct {
 }
 
 type ActionsCreateWorkflowDispatchRequest struct {
-	PathParams ActionsCreateWorkflowDispatchPathParams
-	Request    ActionsCreateWorkflowDispatchRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateWorkflowDispatchRequestBody `request:"mediaType=application/json"`
+	Owner       string                                   `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                                   `pathParam:"style=simple,explode=false,name=repo"`
+	// The ID of the workflow. You can also pass the workflow file name as a string.
+	WorkflowID shared.WorkflowID `pathParam:"style=simple,explode=false,name=workflow_id"`
 }
 
 type ActionsCreateWorkflowDispatchResponse struct {

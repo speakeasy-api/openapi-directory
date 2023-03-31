@@ -36,14 +36,14 @@ func newVersions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Returns the version of a document.
 func (s *versions) Getversion(ctx context.Context, request operations.GetversionRequest) (*operations.GetversionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/versions/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/versions/{versionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -83,16 +83,16 @@ func (s *versions) Getversion(ctx context.Context, request operations.Getversion
 // Allows to list the versions of a document.
 func (s *versions) Listversions(ctx context.Context, request operations.ListversionsRequest) (*operations.ListversionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -134,14 +134,14 @@ func (s *versions) Listversions(ctx context.Context, request operations.Listvers
 // Updates document with version values.
 func (s *versions) Putversion(ctx context.Context, request operations.PutversionRequest) (*operations.PutversionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/versions/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}/versions/{versionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

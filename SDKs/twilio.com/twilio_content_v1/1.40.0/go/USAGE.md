@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteContentRequest{
-        Security: operations.DeleteContentSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.DeleteContentPathParams{
-            Sid: "corrupti",
-        },
+        Sid: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.DeleteContent(ctx, req)
+    res, err := s.DeleteContent(ctx, req, operations.DeleteContentSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

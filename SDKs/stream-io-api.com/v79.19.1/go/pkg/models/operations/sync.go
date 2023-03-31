@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SyncQueryParams struct {
-	ClientID             *string `queryParam:"serialization=json,name=client_id"`
-	ConnectionID         *string `queryParam:"serialization=json,name=connection_id"`
-	Watch                *bool   `queryParam:"serialization=json,name=watch"`
-	WithInaccessibleCids *bool   `queryParam:"serialization=json,name=with_inaccessible_cids"`
-}
-
 type SyncRequest struct {
-	QueryParams SyncQueryParams
-	Request     shared.SyncRequest `request:"mediaType=application/json"`
+	SyncRequest          shared.SyncRequest `request:"mediaType=application/json"`
+	ClientID             *string            `queryParam:"serialization=json,name=client_id"`
+	ConnectionID         *string            `queryParam:"serialization=json,name=connection_id"`
+	Watch                *bool              `queryParam:"serialization=json,name=watch"`
+	WithInaccessibleCids *bool              `queryParam:"serialization=json,name=with_inaccessible_cids"`
 }
 
 type SyncResponse struct {

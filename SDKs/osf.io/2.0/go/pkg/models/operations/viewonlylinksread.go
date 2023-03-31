@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type ViewOnlyLinksReadPathParams struct {
+type ViewOnlyLinksReadRequest struct {
 	// The unique identifier of the view only link.
 	LinkID string `pathParam:"style=simple,explode=false,name=link_id"`
-}
-
-type ViewOnlyLinksReadRequest struct {
-	PathParams ViewOnlyLinksReadPathParams
 }
 
 // ViewOnlyLinksReadViewOnlyLinksAttributes - The properties of the view only link entity.

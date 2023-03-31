@@ -12,18 +12,13 @@ var FetchFlowServerList = []string{
 }
 
 type FetchFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchFlowPathParams struct {
-	// The SID of the Flow resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchFlowRequest struct {
-	PathParams FetchFlowPathParams
-	Security   FetchFlowSecurity
-	ServerURL  *string
+	// The SID of the Flow resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchFlowResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelFineTunePathParams struct {
+type CancelFineTuneRequest struct {
 	// The ID of the fine-tune job to cancel
 	//
 	FineTuneID string `pathParam:"style=simple,explode=false,name=fine_tune_id"`
-}
-
-type CancelFineTuneRequest struct {
-	PathParams CancelFineTunePathParams
 }
 
 type CancelFineTuneResponse struct {

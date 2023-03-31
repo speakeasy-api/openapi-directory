@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV1AccountsIDMuteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AccountsIDMutePathParams struct {
-	// The id of the account in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AccountsIDMuteRequestBody struct {
@@ -24,9 +19,9 @@ type PostAPIV1AccountsIDMuteRequestBody struct {
 }
 
 type PostAPIV1AccountsIDMuteRequest struct {
-	PathParams PostAPIV1AccountsIDMutePathParams
-	Request    []byte `request:"mediaType=application/form-data"`
-	Security   PostAPIV1AccountsIDMuteSecurity
+	RequestBody []byte `request:"mediaType=application/form-data"`
+	// The id of the account in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AccountsIDMuteResponse struct {

@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFileQueryParams struct {
-	// True if a file with the same name is found in the designated path, should be overwritten. False if different file names should be generated.
-	AllowOverwrite *bool `queryParam:"style=form,explode=true,name=allowOverwrite"`
-	// File size, in bits, of the file being uploaded.
-	FileSize int64 `queryParam:"style=form,explode=true,name=fileSize"`
-	// Destination path for the file being uploaded, including the file name.
-	Path string `queryParam:"style=form,explode=true,name=path"`
-	// True if upload resume is supported, false if it isn't.
-	//
-	Resume *bool `queryParam:"style=form,explode=true,name=resume"`
-}
-
-type UploadFileHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-	// Allows a file upload to resume at a certain number of bytes.
-	OffsetBytes *int64 `header:"style=simple,explode=false,name=offsetBytes"`
-}
-
 type UploadFileRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -38,9 +17,22 @@ type UploadFileRequestBody struct {
 }
 
 type UploadFileRequest struct {
-	QueryParams UploadFileQueryParams
-	Headers     UploadFileHeaders
-	Request     *UploadFileRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UploadFileRequestBody `request:"mediaType=multipart/form-data"`
+	// True if a file with the same name is found in the designated path, should be overwritten. False if different file names should be generated.
+	AllowOverwrite *bool `queryParam:"style=form,explode=true,name=allowOverwrite"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// File size, in bits, of the file being uploaded.
+	FileSize int64 `queryParam:"style=form,explode=true,name=fileSize"`
+	// Allows a file upload to resume at a certain number of bytes.
+	OffsetBytes *int64 `header:"style=simple,explode=false,name=offsetBytes"`
+	// Destination path for the file being uploaded, including the file name.
+	Path string `queryParam:"style=form,explode=true,name=path"`
+	// True if upload resume is supported, false if it isn't.
+	//
+	Resume *bool `queryParam:"style=form,explode=true,name=resume"`
 }
 
 type UploadFileResponse struct {

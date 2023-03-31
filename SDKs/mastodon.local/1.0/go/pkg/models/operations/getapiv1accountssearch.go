@@ -8,10 +8,10 @@ import (
 )
 
 type GetAPIV1AccountsSearchSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1AccountsSearchQueryParams struct {
+type GetAPIV1AccountsSearchRequest struct {
 	// Only who the user is following. Defaults to false.
 	Following *bool `queryParam:"style=form,explode=true,name=following"`
 	// Maximum number of results. Defaults to 40.
@@ -20,11 +20,6 @@ type GetAPIV1AccountsSearchQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Attempt WebFinger lookup. Defaults to false. Use this when `q` is an exact address.
 	Resolve *string `queryParam:"style=form,explode=true,name=resolve"`
-}
-
-type GetAPIV1AccountsSearchRequest struct {
-	QueryParams GetAPIV1AccountsSearchQueryParams
-	Security    GetAPIV1AccountsSearchSecurity
 }
 
 type GetAPIV1AccountsSearchResponse struct {

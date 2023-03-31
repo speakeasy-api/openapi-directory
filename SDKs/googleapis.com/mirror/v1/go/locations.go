@@ -33,20 +33,20 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // MirrorLocationsGet - Gets a single location by ID.
-func (s *locations) MirrorLocationsGet(ctx context.Context, request operations.MirrorLocationsGetRequest) (*operations.MirrorLocationsGetResponse, error) {
+func (s *locations) MirrorLocationsGet(ctx context.Context, request operations.MirrorLocationsGetRequest, security operations.MirrorLocationsGetSecurity) (*operations.MirrorLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *locations) MirrorLocationsGet(ctx context.Context, request operations.M
 }
 
 // MirrorLocationsList - Retrieves a list of locations for the user.
-func (s *locations) MirrorLocationsList(ctx context.Context, request operations.MirrorLocationsListRequest) (*operations.MirrorLocationsListResponse, error) {
+func (s *locations) MirrorLocationsList(ctx context.Context, request operations.MirrorLocationsListRequest, security operations.MirrorLocationsListSecurity) (*operations.MirrorLocationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locations"
 
@@ -90,11 +90,11 @@ func (s *locations) MirrorLocationsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type PicoLoadmanagementSetDynamicCurrentPostPathParams struct {
-	// The serial number can be any pico serial in the group (e.g. 700001)
-	Serial int64 `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type PicoLoadmanagementSetDynamicCurrentPostQueryParams struct {
+type PicoLoadmanagementSetDynamicCurrentPostRequest struct {
 	// The dynamic current of the group (in mA)
 	Current int `queryParam:"style=form,explode=true,name=current"`
-}
-
-type PicoLoadmanagementSetDynamicCurrentPostRequest struct {
-	PathParams  PicoLoadmanagementSetDynamicCurrentPostPathParams
-	QueryParams PicoLoadmanagementSetDynamicCurrentPostQueryParams
+	// The serial number can be any pico serial in the group (e.g. 700001)
+	Serial int64 `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type PicoLoadmanagementSetDynamicCurrentPostResponse struct {

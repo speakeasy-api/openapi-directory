@@ -4,22 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostBusinessGroupsSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostBusinessGroupsRequestBody - BusinessGroup to add
 type PostBusinessGroupsRequestBody struct {
 	Name string `json:"Name"`
-}
-
-type PostBusinessGroupsRequest struct {
-	// BusinessGroup to add
-	Request  PostBusinessGroupsRequestBody `request:"mediaType=application/json"`
-	Security PostBusinessGroupsSecurity
 }
 
 // PostBusinessGroups201ApplicationJSON - Id of group created

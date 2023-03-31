@@ -12,17 +12,8 @@ var UpdateInsightsQuestionnairesCategoryServerList = []string{
 }
 
 type UpdateInsightsQuestionnairesCategorySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateInsightsQuestionnairesCategoryPathParams struct {
-	// The ID of the category to be update
-	CategoryID string `pathParam:"style=simple,explode=false,name=CategoryId"`
-}
-
-type UpdateInsightsQuestionnairesCategoryHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest struct {
@@ -31,11 +22,11 @@ type UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryReq
 }
 
 type UpdateInsightsQuestionnairesCategoryRequest struct {
-	PathParams UpdateInsightsQuestionnairesCategoryPathParams
-	Headers    UpdateInsightsQuestionnairesCategoryHeaders
-	Request    *UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateInsightsQuestionnairesCategorySecurity
-	ServerURL  *string
+	// The ID of the category to be update
+	CategoryID  string                                                                           `pathParam:"style=simple,explode=false,name=CategoryId"`
+	RequestBody *UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type UpdateInsightsQuestionnairesCategoryResponse struct {

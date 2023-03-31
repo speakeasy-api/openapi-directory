@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PostRealmTestSMTPConnectionPathParams struct {
+type PostRealmTestSMTPConnectionRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmTestSMTPConnectionRequest struct {
-	PathParams PostRealmTestSMTPConnectionPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostRealmTestSMTPConnectionResponse struct {

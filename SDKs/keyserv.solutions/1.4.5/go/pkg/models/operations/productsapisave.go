@@ -54,10 +54,6 @@ func (u ProductsAPISaveRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type ProductsAPISaveRequest struct {
-	Request ProductsAPISaveRequestBody `request:"mediaType=application/json"`
-}
-
 type ProductsAPISave201ApplicationJSONType string
 
 const (

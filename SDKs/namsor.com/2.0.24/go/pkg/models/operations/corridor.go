@@ -8,21 +8,16 @@ import (
 )
 
 type CorridorSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
-type CorridorPathParams struct {
+type CorridorRequest struct {
 	CountryIso2From string `pathParam:"style=simple,explode=false,name=countryIso2From"`
 	CountryIso2To   string `pathParam:"style=simple,explode=false,name=countryIso2To"`
 	FirstNameFrom   string `pathParam:"style=simple,explode=false,name=firstNameFrom"`
 	FirstNameTo     string `pathParam:"style=simple,explode=false,name=firstNameTo"`
 	LastNameFrom    string `pathParam:"style=simple,explode=false,name=lastNameFrom"`
 	LastNameTo      string `pathParam:"style=simple,explode=false,name=lastNameTo"`
-}
-
-type CorridorRequest struct {
-	PathParams CorridorPathParams
-	Security   CorridorSecurity
 }
 
 type CorridorResponse struct {

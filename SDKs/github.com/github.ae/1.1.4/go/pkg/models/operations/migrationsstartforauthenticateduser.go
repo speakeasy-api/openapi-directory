@@ -50,10 +50,6 @@ type MigrationsStartForAuthenticatedUserRequestBody struct {
 	Repositories    []string `json:"repositories"`
 }
 
-type MigrationsStartForAuthenticatedUserRequest struct {
-	Request MigrationsStartForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type MigrationsStartForAuthenticatedUserResponse struct {
 	ContentType string
 	StatusCode  int

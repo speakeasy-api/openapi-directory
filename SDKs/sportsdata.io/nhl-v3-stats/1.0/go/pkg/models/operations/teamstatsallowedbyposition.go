@@ -33,17 +33,13 @@ func (e *TeamStatsAllowedByPositionFormatEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type TeamStatsAllowedByPositionPathParams struct {
+type TeamStatsAllowedByPositionRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format TeamStatsAllowedByPositionFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
 	//  <br>Examples: <code>2016</code>, <code>2017</code>.
 	//
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type TeamStatsAllowedByPositionRequest struct {
-	PathParams TeamStatsAllowedByPositionPathParams
 }
 
 type TeamStatsAllowedByPositionResponse struct {

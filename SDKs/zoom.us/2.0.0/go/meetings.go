@@ -45,9 +45,9 @@ func newMeetings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
 func (s *meetings) CreateBatchPolls(ctx context.Context, request operations.CreateBatchPollsRequest) (*operations.CreateBatchPollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/batch_polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/batch_polls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +111,7 @@ func (s *meetings) CreateBatchPolls(ctx context.Context, request operations.Crea
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *meetings) GetLiveStreamDetails(ctx context.Context, request operations.GetLiveStreamDetailsRequest) (*operations.GetLiveStreamDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/livestream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/livestream", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,9 +173,9 @@ func (s *meetings) GetLiveStreamDetails(ctx context.Context, request operations.
 // **Scopes:** `meeting:write`, `meeting:write:admin`, `meeting:master`
 func (s *meetings) InMeetingRecordingControl(ctx context.Context, request operations.InMeetingRecordingControlRequest) (*operations.InMeetingRecordingControlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/live_meetings/{meetingId}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/live_meetings/{meetingId}/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,7 +239,7 @@ func (s *meetings) InMeetingRecordingControl(ctx context.Context, request operat
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *meetings) ListMeetingTemplates(ctx context.Context, request operations.ListMeetingTemplatesRequest) (*operations.ListMeetingTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/meeting_templates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/meeting_templates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -298,16 +298,16 @@ func (s *meetings) ListMeetingTemplates(ctx context.Context, request operations.
 // **Prerequisites**:<br>
 // * Host user type must be **Pro**.
 // * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
-func (s *meetings) ListPastMeetingPolls(ctx context.Context, request operations.ListPastMeetingPollsRequest) (*operations.ListPastMeetingPollsResponse, error) {
+func (s *meetings) ListPastMeetingPolls(ctx context.Context, request operations.ListPastMeetingPollsRequest, security operations.ListPastMeetingPollsSecurity) (*operations.ListPastMeetingPollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingId}/polls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -353,20 +353,20 @@ func (s *meetings) ListPastMeetingPolls(ctx context.Context, request operations.
 // **Scopes:** `meeting:read:admin` `meeting:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) Meeting(ctx context.Context, request operations.MeetingRequest) (*operations.MeetingResponse, error) {
+func (s *meetings) Meeting(ctx context.Context, request operations.MeetingRequest, security operations.MeetingSecurity) (*operations.MeetingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,9 +423,9 @@ func (s *meetings) Meeting(ctx context.Context, request operations.MeetingReques
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *meetings) MeetingCreate(ctx context.Context, request operations.MeetingCreateRequest) (*operations.MeetingCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/meetings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/meetings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -491,20 +491,20 @@ func (s *meetings) MeetingCreate(ctx context.Context, request operations.Meeting
 // **Scopes:** `meeting:write:admin` `meeting:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingDelete(ctx context.Context, request operations.MeetingDeleteRequest) (*operations.MeetingDeleteResponse, error) {
+func (s *meetings) MeetingDelete(ctx context.Context, request operations.MeetingDeleteRequest, security operations.MeetingDeleteSecurity) (*operations.MeetingDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -538,16 +538,16 @@ func (s *meetings) MeetingDelete(ctx context.Context, request operations.Meeting
 // **Scopes:** `meeting:read:admin` `meeting:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingInvitation(ctx context.Context, request operations.MeetingInvitationRequest) (*operations.MeetingInvitationResponse, error) {
+func (s *meetings) MeetingInvitation(ctx context.Context, request operations.MeetingInvitationRequest, security operations.MeetingInvitationSecurity) (*operations.MeetingInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/invitation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/invitation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *meetings) MeetingInvitation(ctx context.Context, request operations.Mee
 // **Scopes:** `meeting:write:admin` `meeting:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingLiveStreamStatusUpdate(ctx context.Context, request operations.MeetingLiveStreamStatusUpdateRequest) (*operations.MeetingLiveStreamStatusUpdateResponse, error) {
+func (s *meetings) MeetingLiveStreamStatusUpdate(ctx context.Context, request operations.MeetingLiveStreamStatusUpdateRequest, security operations.MeetingLiveStreamStatusUpdateSecurity) (*operations.MeetingLiveStreamStatusUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/livestream/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/livestream/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -614,7 +614,7 @@ func (s *meetings) MeetingLiveStreamStatusUpdate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -654,11 +654,11 @@ func (s *meetings) MeetingLiveStreamStatusUpdate(ctx context.Context, request op
 // **Scopes:** `meeting:write:admin` `meeting:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingLiveStreamUpdate(ctx context.Context, request operations.MeetingLiveStreamUpdateRequest) (*operations.MeetingLiveStreamUpdateResponse, error) {
+func (s *meetings) MeetingLiveStreamUpdate(ctx context.Context, request operations.MeetingLiveStreamUpdateRequest, security operations.MeetingLiveStreamUpdateSecurity) (*operations.MeetingLiveStreamUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/livestream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/livestream", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,7 +673,7 @@ func (s *meetings) MeetingLiveStreamUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -715,11 +715,11 @@ func (s *meetings) MeetingLiveStreamUpdate(ctx context.Context, request operatio
 // * Host user type must be **Pro** or higher plan.
 // * Polling feature must be enabled in the host's account.
 // * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
-func (s *meetings) MeetingPollCreate(ctx context.Context, request operations.MeetingPollCreateRequest) (*operations.MeetingPollCreateResponse, error) {
+func (s *meetings) MeetingPollCreate(ctx context.Context, request operations.MeetingPollCreateRequest, security operations.MeetingPollCreateSecurity) (*operations.MeetingPollCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -734,7 +734,7 @@ func (s *meetings) MeetingPollCreate(ctx context.Context, request operations.Mee
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -788,16 +788,16 @@ func (s *meetings) MeetingPollCreate(ctx context.Context, request operations.Mee
 // * Host user type must be **Pro**.
 // * Polling feature should be enabled in the host's account.
 // * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
-func (s *meetings) MeetingPollDelete(ctx context.Context, request operations.MeetingPollDeleteRequest) (*operations.MeetingPollDeleteResponse, error) {
+func (s *meetings) MeetingPollDelete(ctx context.Context, request operations.MeetingPollDeleteRequest, security operations.MeetingPollDeleteSecurity) (*operations.MeetingPollDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls/{pollId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls/{pollId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,16 +829,16 @@ func (s *meetings) MeetingPollDelete(ctx context.Context, request operations.Mee
 // **Scopes**: `meeting:read:admin` `meeting:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingPollGet(ctx context.Context, request operations.MeetingPollGetRequest) (*operations.MeetingPollGetResponse, error) {
+func (s *meetings) MeetingPollGet(ctx context.Context, request operations.MeetingPollGetRequest, security operations.MeetingPollGetSecurity) (*operations.MeetingPollGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls/{pollId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls/{pollId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -885,11 +885,11 @@ func (s *meetings) MeetingPollGet(ctx context.Context, request operations.Meetin
 // **Scopes**: `meeting:write:admin` `meeting:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingPollUpdate(ctx context.Context, request operations.MeetingPollUpdateRequest) (*operations.MeetingPollUpdateResponse, error) {
+func (s *meetings) MeetingPollUpdate(ctx context.Context, request operations.MeetingPollUpdateRequest, security operations.MeetingPollUpdateSecurity) (*operations.MeetingPollUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls/{pollId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls/{pollId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -904,7 +904,7 @@ func (s *meetings) MeetingPollUpdate(ctx context.Context, request operations.Mee
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -941,16 +941,16 @@ func (s *meetings) MeetingPollUpdate(ctx context.Context, request operations.Mee
 // **Prerequisites**:<br>
 // * Host user type must be **Pro** or higher plan.
 // * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
-func (s *meetings) MeetingPolls(ctx context.Context, request operations.MeetingPollsRequest) (*operations.MeetingPollsResponse, error) {
+func (s *meetings) MeetingPolls(ctx context.Context, request operations.MeetingPollsRequest, security operations.MeetingPollsSecurity) (*operations.MeetingPollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/polls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1001,11 +1001,11 @@ func (s *meetings) MeetingPolls(ctx context.Context, request operations.MeetingP
 // **Scopes:** `meeting:write:admin` `meeting:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingRegistrantCreate(ctx context.Context, request operations.MeetingRegistrantCreateRequest) (*operations.MeetingRegistrantCreateResponse, error) {
+func (s *meetings) MeetingRegistrantCreate(ctx context.Context, request operations.MeetingRegistrantCreateRequest, security operations.MeetingRegistrantCreateSecurity) (*operations.MeetingRegistrantCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1020,11 +1020,11 @@ func (s *meetings) MeetingRegistrantCreate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1075,11 +1075,11 @@ func (s *meetings) MeetingRegistrantCreate(ctx context.Context, request operatio
 // **Scopes:** `meeting:write`, `meeting:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingRegistrantQuestionUpdate(ctx context.Context, request operations.MeetingRegistrantQuestionUpdateRequest) (*operations.MeetingRegistrantQuestionUpdateResponse, error) {
+func (s *meetings) MeetingRegistrantQuestionUpdate(ctx context.Context, request operations.MeetingRegistrantQuestionUpdateRequest, security operations.MeetingRegistrantQuestionUpdateSecurity) (*operations.MeetingRegistrantQuestionUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/questions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1094,7 +1094,7 @@ func (s *meetings) MeetingRegistrantQuestionUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1126,11 +1126,11 @@ func (s *meetings) MeetingRegistrantQuestionUpdate(ctx context.Context, request 
 // **Scopes:** `meeting:write:admin` `meeting:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *meetings) MeetingRegistrantStatus(ctx context.Context, request operations.MeetingRegistrantStatusRequest) (*operations.MeetingRegistrantStatusResponse, error) {
+func (s *meetings) MeetingRegistrantStatus(ctx context.Context, request operations.MeetingRegistrantStatusRequest, security operations.MeetingRegistrantStatusSecurity) (*operations.MeetingRegistrantStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1145,11 +1145,11 @@ func (s *meetings) MeetingRegistrantStatus(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1185,20 +1185,20 @@ func (s *meetings) MeetingRegistrantStatus(ctx context.Context, request operatio
 // **Scopes**: `meeting:read:admin` `meeting:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *meetings) MeetingRegistrants(ctx context.Context, request operations.MeetingRegistrantsRequest) (*operations.MeetingRegistrantsResponse, error) {
+func (s *meetings) MeetingRegistrants(ctx context.Context, request operations.MeetingRegistrantsRequest, security operations.MeetingRegistrantsSecurity) (*operations.MeetingRegistrantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1250,16 +1250,16 @@ func (s *meetings) MeetingRegistrants(ctx context.Context, request operations.Me
 // **Scopes:** `meeting:read`, `meeting:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingRegistrantsQuestionsGet(ctx context.Context, request operations.MeetingRegistrantsQuestionsGetRequest) (*operations.MeetingRegistrantsQuestionsGetResponse, error) {
+func (s *meetings) MeetingRegistrantsQuestionsGet(ctx context.Context, request operations.MeetingRegistrantsQuestionsGetRequest, security operations.MeetingRegistrantsQuestionsGetSecurity) (*operations.MeetingRegistrantsQuestionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/questions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1306,11 +1306,11 @@ func (s *meetings) MeetingRegistrantsQuestionsGet(ctx context.Context, request o
 // **Scopes:** `meeting:write:admin` `meeting:write`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingStatus(ctx context.Context, request operations.MeetingStatusRequest) (*operations.MeetingStatusResponse, error) {
+func (s *meetings) MeetingStatus(ctx context.Context, request operations.MeetingStatusRequest, security operations.MeetingStatusSecurity) (*operations.MeetingStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1325,7 +1325,7 @@ func (s *meetings) MeetingStatus(ctx context.Context, request operations.Meeting
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1359,11 +1359,11 @@ func (s *meetings) MeetingStatus(ctx context.Context, request operations.Meeting
 // **Scopes:** `meeting:write:admin` `meeting:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingUpdateJSON(ctx context.Context, request operations.MeetingUpdateJSONRequest) (*operations.MeetingUpdateJSONResponse, error) {
+func (s *meetings) MeetingUpdateJSON(ctx context.Context, request operations.MeetingUpdateJSONRequest, security operations.MeetingUpdateJSONSecurity) (*operations.MeetingUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1378,11 +1378,11 @@ func (s *meetings) MeetingUpdateJSON(ctx context.Context, request operations.Mee
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1418,11 +1418,11 @@ func (s *meetings) MeetingUpdateJSON(ctx context.Context, request operations.Mee
 // **Scopes:** `meeting:write:admin` `meeting:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *meetings) MeetingUpdateMultipart(ctx context.Context, request operations.MeetingUpdateMultipartRequest) (*operations.MeetingUpdateMultipartResponse, error) {
+func (s *meetings) MeetingUpdateMultipart(ctx context.Context, request operations.MeetingUpdateMultipartRequest, security operations.MeetingUpdateMultipartSecurity) (*operations.MeetingUpdateMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1437,11 +1437,11 @@ func (s *meetings) MeetingUpdateMultipart(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1480,14 +1480,14 @@ func (s *meetings) MeetingUpdateMultipart(ctx context.Context, request operation
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *meetings) Meetingregistrantdelete(ctx context.Context, request operations.MeetingregistrantdeleteRequest) (*operations.MeetingregistrantdeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/{registrantId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/registrants/{registrantId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1523,20 +1523,20 @@ func (s *meetings) Meetingregistrantdelete(ctx context.Context, request operatio
 // **Scopes:** `meeting:read:admin` `meeting:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *meetings) Meetings(ctx context.Context, request operations.MeetingsRequest) (*operations.MeetingsResponse, error) {
+func (s *meetings) Meetings(ctx context.Context, request operations.MeetingsRequest, security operations.MeetingsSecurity) (*operations.MeetingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/meetings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/meetings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1585,16 +1585,16 @@ func (s *meetings) Meetings(ctx context.Context, request operations.MeetingsRequ
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 //
 // > **Note**: Please double encode your UUID when using this API if the UUID begins with a '/'or contains '//' in it.
-func (s *meetings) PastMeetingDetails(ctx context.Context, request operations.PastMeetingDetailsRequest) (*operations.PastMeetingDetailsResponse, error) {
+func (s *meetings) PastMeetingDetails(ctx context.Context, request operations.PastMeetingDetailsRequest, security operations.PastMeetingDetailsSecurity) (*operations.PastMeetingDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingUUID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingUUID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1648,20 +1648,20 @@ func (s *meetings) PastMeetingDetails(ctx context.Context, request operations.Pa
 // * Paid account on a Pro or higher plan.
 //
 // <br> <br>  **Note**: Please double encode your UUID when using this API if the UUID begins with a '/'or contains '//' in it.
-func (s *meetings) PastMeetingParticipants(ctx context.Context, request operations.PastMeetingParticipantsRequest) (*operations.PastMeetingParticipantsResponse, error) {
+func (s *meetings) PastMeetingParticipants(ctx context.Context, request operations.PastMeetingParticipantsRequest, security operations.PastMeetingParticipantsSecurity) (*operations.PastMeetingParticipantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingUUID}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingUUID}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1710,16 +1710,16 @@ func (s *meetings) PastMeetingParticipants(ctx context.Context, request operatio
 // **Scopes:** `meeting:read:admin` `meeting:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *meetings) PastMeetings(ctx context.Context, request operations.PastMeetingsRequest) (*operations.PastMeetingsResponse, error) {
+func (s *meetings) PastMeetings(ctx context.Context, request operations.PastMeetingsRequest, security operations.PastMeetingsSecurity) (*operations.PastMeetingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingId}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_meetings/{meetingId}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

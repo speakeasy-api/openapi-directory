@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListFeaturesSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
-type ListFeaturesQueryParams struct {
+type ListFeaturesRequest struct {
 	// Date of the collection of feature items.
 	Date *string `queryParam:"style=form,explode=true,name=date"`
 	// End date for a range of features.
@@ -20,11 +19,6 @@ type ListFeaturesQueryParams struct {
 	Start *string `queryParam:"style=form,explode=true,name=start"`
 	// The namespace of the feature type.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListFeaturesRequest struct {
-	QueryParams ListFeaturesQueryParams
-	Security    ListFeaturesSecurity
 }
 
 type ListFeaturesResponse struct {

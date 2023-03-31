@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDDocumentsDownloadSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDDocumentsDownloadPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostSpacesIDDocumentsDownloadRequestBody - Documents to archive
@@ -22,10 +16,10 @@ type PostSpacesIDDocumentsDownloadRequestBody struct {
 }
 
 type PostSpacesIDDocumentsDownloadRequest struct {
-	PathParams PostSpacesIDDocumentsDownloadPathParams
 	// Documents to archive
-	Request  PostSpacesIDDocumentsDownloadRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDDocumentsDownloadSecurity
+	RequestBody PostSpacesIDDocumentsDownloadRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostSpacesIDDocumentsDownload201MultipartFormData - Zip file base64 encoded

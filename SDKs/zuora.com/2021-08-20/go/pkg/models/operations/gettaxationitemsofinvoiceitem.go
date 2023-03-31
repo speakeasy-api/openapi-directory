@@ -7,25 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETTaxationItemsOfInvoiceItemPathParams struct {
-	// The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.
-	//
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
-	// The unique ID of an invoice item. For example, 2c86c8955bd63cc1015bd7c151af02ef.
-	//
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type GETTaxationItemsOfInvoiceItemQueryParams struct {
-	// Page number.
-	//
-	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-	// Number of rows returned per page.
-	//
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETTaxationItemsOfInvoiceItemHeaders struct {
+type GETTaxationItemsOfInvoiceItemRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -34,12 +16,18 @@ type GETTaxationItemsOfInvoiceItemHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETTaxationItemsOfInvoiceItemRequest struct {
-	PathParams  GETTaxationItemsOfInvoiceItemPathParams
-	QueryParams GETTaxationItemsOfInvoiceItemQueryParams
-	Headers     GETTaxationItemsOfInvoiceItemHeaders
+	// The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.
+	//
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
+	// The unique ID of an invoice item. For example, 2c86c8955bd63cc1015bd7c151af02ef.
+	//
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
+	// Page number.
+	//
+	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Number of rows returned per page.
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GETTaxationItemsOfInvoiceItemResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchUsersUserEmailPathParams struct {
+type PatchUsersUserEmailRequest struct {
+	User *shared.User `request:"mediaType=application/json"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PatchUsersUserEmailRequest struct {
-	PathParams PatchUsersUserEmailPathParams
-	Request    *shared.User `request:"mediaType=application/json"`
 }
 
 type PatchUsersUserEmailResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type DownloadTracksSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type DownloadTracksPathParams struct {
-	// License ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DownloadTracksRequest struct {
-	PathParams DownloadTracksPathParams
-	Security   DownloadTracksSecurity
+	// License ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DownloadTracksResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPathParams struct {
+type GetRequest struct {
 	// The slave device to get data from
 	Address string `pathParam:"style=simple,explode=false,name=address"`
 	// Baudrate to communicate with M-Bus devices
 	Baudrate shared.BaudrateEnum `pathParam:"style=simple,explode=false,name=baudrate"`
 	// The serial device to scan - /dev/ is pre-pended to {device} by M-Bus HTTPD before scanning
 	Device string `pathParam:"style=simple,explode=false,name=device"`
-}
-
-type GetRequest struct {
-	PathParams GetPathParams
 }
 
 type GetResponse struct {

@@ -3,42 +3,46 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateSignalingChannelRequest(
-    headers=operations.CreateSignalingChannelHeaders(
-        x_amz_algorithm="error",
-        x_amz_content_sha256="voluptate",
-        x_amz_credential="odit",
-        x_amz_date="exercitationem",
-        x_amz_security_token="hic",
-        x_amz_signature="perferendis",
-        x_amz_signed_headers="cupiditate",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateSignalingChannelRequestBody(
-        channel_name="sed",
-        channel_type="SINGLE_MASTER",
+)
+
+
+req = operations.CreateSignalingChannelRequest(
+    request_body=operations.CreateSignalingChannelRequestBody(
+        channel_name="corrupti",
+        channel_type="FULL_MESH",
         single_master_configuration=operations.CreateSignalingChannelRequestBodySingleMasterConfiguration(
-            message_ttl_seconds=7341080715805291804,
+            message_ttl_seconds=715190,
         ),
         tags=[
             shared.Tag(
-                key="qui",
-                value="eius",
+                key="unde",
+                value="nulla",
             ),
             shared.Tag(
-                key="voluptas",
-                value="dicta",
+                key="corrupti",
+                value="illum",
+            ),
+            shared.Tag(
+                key="vel",
+                value="error",
+            ),
+            shared.Tag(
+                key="deserunt",
+                value="suscipit",
             ),
         ],
     ),
+    x_amz_algorithm="iure",
+    x_amz_content_sha256="magnam",
+    x_amz_credential="debitis",
+    x_amz_date="ipsa",
+    x_amz_security_token="delectus",
+    x_amz_signature="tempora",
+    x_amz_signed_headers="suscipit",
 )
     
 res = s.create_signaling_channel(req)

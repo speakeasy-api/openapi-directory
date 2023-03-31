@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type WikiReadPathParams struct {
+type WikiReadRequest struct {
 	// The unique identifier of the wiki.
 	WikiID string `pathParam:"style=simple,explode=false,name=wiki_id"`
-}
-
-type WikiReadRequest struct {
-	PathParams WikiReadPathParams
 }
 
 // WikiReadWikiAttributes - The properties of the wiki.

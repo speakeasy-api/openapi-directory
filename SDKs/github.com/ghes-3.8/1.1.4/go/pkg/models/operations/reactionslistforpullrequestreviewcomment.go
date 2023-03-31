@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForPullRequestReviewCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsListForPullRequestReviewCommentContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.8/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a pull request review comment.
 type ReactionsListForPullRequestReviewCommentContentEnum string
 
@@ -60,18 +51,19 @@ func (e *ReactionsListForPullRequestReviewCommentContentEnum) UnmarshalJSON(data
 	}
 }
 
-type ReactionsListForPullRequestReviewCommentQueryParams struct {
+type ReactionsListForPullRequestReviewCommentRequest struct {
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.8/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a pull request review comment.
 	Content *ReactionsListForPullRequestReviewCommentContentEnum `queryParam:"style=form,explode=true,name=content"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForPullRequestReviewCommentRequest struct {
-	PathParams  ReactionsListForPullRequestReviewCommentPathParams
-	QueryParams ReactionsListForPullRequestReviewCommentQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsListForPullRequestReviewCommentResponse struct {

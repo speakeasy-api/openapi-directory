@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetActionPackageListQueryParams struct {
+type GetActionPackageListRequest struct {
 	// The number of packages to be returned per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The offset (index) of the first package to return
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetActionPackageListRequest struct {
-	QueryParams GetActionPackageListQueryParams
 }
 
 type GetActionPackageListResponse struct {

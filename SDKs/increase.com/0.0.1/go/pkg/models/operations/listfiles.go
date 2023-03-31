@@ -60,7 +60,7 @@ func (e *ListFilesPurposeInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListFilesQueryParams struct {
+type ListFilesRequest struct {
 	CreatedAtAfter      *time.Time               `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time               `queryParam:"style=form,explode=true,name=created_at.before"`
 	CreatedAtOnOrAfter  *time.Time               `queryParam:"style=form,explode=true,name=created_at.on_or_after"`
@@ -68,10 +68,6 @@ type ListFilesQueryParams struct {
 	Cursor              *string                  `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64                   `queryParam:"style=form,explode=true,name=limit"`
 	PurposeIn           []ListFilesPurposeInEnum `queryParam:"style=form,explode=true,name=purpose.in"`
-}
-
-type ListFilesRequest struct {
-	QueryParams ListFilesQueryParams
 }
 
 type ListFilesDefaultApplicationJSON13StatusEnum string

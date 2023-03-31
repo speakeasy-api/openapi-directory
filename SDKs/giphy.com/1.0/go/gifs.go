@@ -35,7 +35,7 @@ func newGifs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Returns a GIF given that GIF's unique ID
 func (s *gifs) GetGifByID(ctx context.Context, request operations.GetGifByIDRequest) (*operations.GetGifByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gifs/{gifId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gifs/{gifId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *gifs) GetGifsByID(ctx context.Context, request operations.GetGifsByIDRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,7 +150,7 @@ func (s *gifs) RandomGif(ctx context.Context, request operations.RandomGifReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -206,7 +206,7 @@ func (s *gifs) SearchGifs(ctx context.Context, request operations.SearchGifsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -262,7 +262,7 @@ func (s *gifs) TranslateGif(ctx context.Context, request operations.TranslateGif
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -318,7 +318,7 @@ func (s *gifs) TrendingGifs(ctx context.Context, request operations.TrendingGifs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

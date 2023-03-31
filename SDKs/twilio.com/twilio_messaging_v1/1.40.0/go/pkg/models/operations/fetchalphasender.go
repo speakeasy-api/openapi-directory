@@ -12,20 +12,15 @@ var FetchAlphaSenderServerList = []string{
 }
 
 type FetchAlphaSenderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchAlphaSenderPathParams struct {
+type FetchAlphaSenderRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the AlphaSender resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchAlphaSenderRequest struct {
-	PathParams FetchAlphaSenderPathParams
-	Security   FetchAlphaSenderSecurity
-	ServerURL  *string
 }
 
 type FetchAlphaSenderResponse struct {

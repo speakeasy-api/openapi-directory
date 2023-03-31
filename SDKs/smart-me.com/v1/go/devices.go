@@ -104,7 +104,7 @@ func (s *devices) DevicesGet(ctx context.Context) (*operations.DevicesGetRespons
 //
 //	For a new device leave the ID empty. To create a device you have to set the DeviceEnergyType.
 //	To update values, add the ID of the device and the values you like to set.  (See the Data Type Model for more Information)
-func (s *devices) DevicesPostForm(ctx context.Context, request operations.DevicesPostFormRequest) (*operations.DevicesPostFormResponse, error) {
+func (s *devices) DevicesPostForm(ctx context.Context, request shared.DeviceToPost) (*operations.DevicesPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Devices"
 
@@ -184,7 +184,7 @@ func (s *devices) DevicesPostForm(ctx context.Context, request operations.Device
 //
 //	For a new device leave the ID empty. To create a device you have to set the DeviceEnergyType.
 //	To update values, add the ID of the device and the values you like to set.  (See the Data Type Model for more Information)
-func (s *devices) DevicesPostJSON(ctx context.Context, request operations.DevicesPostJSONRequest) (*operations.DevicesPostJSONResponse, error) {
+func (s *devices) DevicesPostJSON(ctx context.Context, request shared.DeviceToPost) (*operations.DevicesPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Devices"
 
@@ -264,7 +264,7 @@ func (s *devices) DevicesPostJSON(ctx context.Context, request operations.Device
 //
 //	For a new device leave the ID empty. To create a device you have to set the DeviceEnergyType.
 //	To update values, add the ID of the device and the values you like to set.  (See the Data Type Model for more Information)
-func (s *devices) DevicesPostRaw(ctx context.Context, request operations.DevicesPostRawRequest) (*operations.DevicesPostRawResponse, error) {
+func (s *devices) DevicesPostRaw(ctx context.Context, request []byte) (*operations.DevicesPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Devices"
 
@@ -348,14 +348,14 @@ func (s *devices) DevicesPostRaw(ctx context.Context, request operations.Devices
 //	For new implementations please use the "actions" command
 func (s *devices) DevicesPut(ctx context.Context, request operations.DevicesPutRequest) (*operations.DevicesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -421,7 +421,7 @@ func (s *devices) DevicesPut(ctx context.Context, request operations.DevicesPutR
 // Gets a Device by it's ID
 func (s *devices) GetAPIDevicesID(ctx context.Context, request operations.GetAPIDevicesIDRequest) (*operations.GetAPIDevicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

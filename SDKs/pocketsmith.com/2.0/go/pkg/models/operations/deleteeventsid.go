@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteEventsIDPathParams struct {
-	// The unique identifier of the event.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // DeleteEventsIDBehaviourEnum - Whether the delete applies only to this event, to all events within the series from this event or to all events within the series.
 type DeleteEventsIDBehaviourEnum string
 
@@ -41,14 +36,11 @@ func (e *DeleteEventsIDBehaviourEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteEventsIDQueryParams struct {
+type DeleteEventsIDRequest struct {
 	// Whether the delete applies only to this event, to all events within the series from this event or to all events within the series.
 	Behaviour DeleteEventsIDBehaviourEnum `queryParam:"style=form,explode=true,name=behaviour"`
-}
-
-type DeleteEventsIDRequest struct {
-	PathParams  DeleteEventsIDPathParams
-	QueryParams DeleteEventsIDQueryParams
+	// The unique identifier of the event.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteEventsIDResponse struct {

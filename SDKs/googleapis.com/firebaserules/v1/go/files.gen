@@ -24,7 +24,6 @@ pkg/models/operations/firebaserulesprojectstest.go
 pkg/models/shared/release.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/getreleaseexecutableresponse.go
 pkg/models/shared/listreleasesresponse.go
 pkg/models/shared/updatereleaserequest.go

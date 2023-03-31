@@ -62,7 +62,6 @@ pkg/models/operations/getsalestaxes.go
 pkg/models/operations/getsubscription.go
 pkg/models/shared/sellereligibilitymultiprogramresponse.go
 pkg/models/shared/sellereligibilityresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/custompolicycreaterequest.go
 pkg/models/shared/custompolicyresponse.go
 pkg/models/shared/compactcustompolicyresponse.go

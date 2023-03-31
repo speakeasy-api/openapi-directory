@@ -33,20 +33,20 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DatatransferApplicationsGet - Retrieves information about an application for the given application ID.
-func (s *applications) DatatransferApplicationsGet(ctx context.Context, request operations.DatatransferApplicationsGetRequest) (*operations.DatatransferApplicationsGetResponse, error) {
+func (s *applications) DatatransferApplicationsGet(ctx context.Context, request operations.DatatransferApplicationsGetRequest, security operations.DatatransferApplicationsGetSecurity) (*operations.DatatransferApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/datatransfer/v1/applications/{applicationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/datatransfer/v1/applications/{applicationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *applications) DatatransferApplicationsGet(ctx context.Context, request 
 }
 
 // DatatransferApplicationsList - Lists the applications available for data transfer for a customer.
-func (s *applications) DatatransferApplicationsList(ctx context.Context, request operations.DatatransferApplicationsListRequest) (*operations.DatatransferApplicationsListResponse, error) {
+func (s *applications) DatatransferApplicationsList(ctx context.Context, request operations.DatatransferApplicationsListRequest, security operations.DatatransferApplicationsListSecurity) (*operations.DatatransferApplicationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/datatransfer/v1/applications"
 
@@ -90,11 +90,11 @@ func (s *applications) DatatransferApplicationsList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

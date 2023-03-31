@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
-	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -33,7 +32,7 @@ func newNumberOfTheDay(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // GetNumbersNod - Get the number of the day for current day
-func (s *numberOfTheDay) GetNumbersNod(ctx context.Context, request operations.GetNumbersNodRequest) (*operations.GetNumbersNodResponse, error) {
+func (s *numberOfTheDay) GetNumbersNod(ctx context.Context) (*operations.GetNumbersNodResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/nod"
 
@@ -42,7 +41,7 @@ func (s *numberOfTheDay) GetNumbersNod(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetFamilyDetailsQueryParams struct {
-	// (Required) a numeric identifier of the family
-	ID *string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetFamilyDetailsHeaders struct {
+type GetFamilyDetailsRequest struct {
 	// {{apiKeyDescription}}
 	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
-}
-
-type GetFamilyDetailsRequest struct {
-	QueryParams GetFamilyDetailsQueryParams
-	Headers     GetFamilyDetailsHeaders
+	// (Required) a numeric identifier of the family
+	ID *string `queryParam:"style=form,explode=true,name=id"`
 }
 
 // GetFamilyDetails200ApplicationJSON - Details of the family for 'plot twist'

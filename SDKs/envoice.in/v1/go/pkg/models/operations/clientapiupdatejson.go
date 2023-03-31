@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClientAPIUpdateJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type ClientAPIUpdateJSONRequest struct {
-	Headers ClientAPIUpdateJSONHeaders
-	Request shared.ClientUpdateAPIModel `request:"mediaType=application/json"`
+	ClientUpdateAPIModel shared.ClientUpdateAPIModel `request:"mediaType=application/json"`
+	XAuthKey             string                      `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret          string                      `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type ClientAPIUpdateJSONResponse struct {

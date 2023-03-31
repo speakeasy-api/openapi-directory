@@ -37,14 +37,14 @@ func newGroupUsers(defaultClient, securityClient HTTPClient, serverURL, language
 // Delete Group User
 func (s *groupUsers) DeleteGroupUsersID(ctx context.Context, request operations.DeleteGroupUsersIDRequest) (*operations.DeleteGroupUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/group_users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/group_users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -104,7 +104,7 @@ func (s *groupUsers) GetGroupUsers(ctx context.Context, request operations.GetGr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -165,9 +165,9 @@ func (s *groupUsers) GetGroupUsers(ctx context.Context, request operations.GetGr
 // Update Group User
 func (s *groupUsers) PatchGroupUsersID(ctx context.Context, request operations.PatchGroupUsersIDRequest) (*operations.PatchGroupUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/group_users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/group_users/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -237,7 +237,7 @@ func (s *groupUsers) PatchGroupUsersID(ctx context.Context, request operations.P
 
 // PostGroupUsers - Create Group User
 // Create Group User
-func (s *groupUsers) PostGroupUsers(ctx context.Context, request operations.PostGroupUsersRequest) (*operations.PostGroupUsersResponse, error) {
+func (s *groupUsers) PostGroupUsers(ctx context.Context, request operations.PostGroupUsersRequestBody) (*operations.PostGroupUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/group_users"
 

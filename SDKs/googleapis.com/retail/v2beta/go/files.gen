@@ -53,10 +53,9 @@ pkg/models/operations/retailprojectsoperationsget.go
 pkg/models/operations/retailprojectsoperationslist.go
 pkg/models/shared/googlecloudretailv2betaattributesconfig.go
 pkg/models/shared/googlecloudretailv2betacatalogattribute.go
-pkg/models/shared/googlecloudretailv2betaaddcatalogattributerequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googlecloudretailv2betaaddcatalogattributerequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudretailv2betabatchremovecatalogattributesresponse.go
 pkg/models/shared/googlecloudretailv2betabatchremovecatalogattributesrequest.go
 pkg/models/shared/googlecloudretailv2betaremovecatalogattributerequest.go

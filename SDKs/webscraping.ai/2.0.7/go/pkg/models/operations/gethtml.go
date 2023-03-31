@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHTMLQueryParams struct {
+type GetHTMLRequest struct {
 	// Country of the proxy to use (US by default). Only available on Startup and Custom plans.
 	Country *shared.CountryEnum `queryParam:"style=form,explode=true,name=country"`
 	// Type of device emulation.
@@ -28,10 +28,6 @@ type GetHTMLQueryParams struct {
 	Timeout *int64 `queryParam:"style=form,explode=true,name=timeout"`
 	// URL of the target page
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GetHTMLRequest struct {
-	QueryParams GetHTMLQueryParams
 }
 
 type GetHTMLResponse struct {

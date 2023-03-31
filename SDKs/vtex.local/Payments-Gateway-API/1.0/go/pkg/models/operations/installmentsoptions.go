@@ -7,15 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InstallmentsoptionsQueryParams struct {
-	RequestPaymentDetails0Bin   *int `queryParam:"style=form,explode=true,name=request.paymentDetails[0].bin"`
-	RequestPaymentDetails0ID    *int `queryParam:"style=form,explode=true,name=request.paymentDetails[0].id"`
-	RequestPaymentDetails0Value *int `queryParam:"style=form,explode=true,name=request.paymentDetails[0].value"`
-	RequestSalesChannel         *int `queryParam:"style=form,explode=true,name=request.salesChannel"`
-	RequestValue                int  `queryParam:"style=form,explode=true,name=request.value"`
-}
-
-type InstallmentsoptionsHeaders struct {
+type InstallmentsoptionsRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
@@ -23,12 +15,12 @@ type InstallmentsoptionsHeaders struct {
 	// The AppKey configured by the merchant (optional configuration)
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
-	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type InstallmentsoptionsRequest struct {
-	QueryParams InstallmentsoptionsQueryParams
-	Headers     InstallmentsoptionsHeaders
+	XPROVIDERAPIAppToken        string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
+	RequestPaymentDetails0Bin   *int   `queryParam:"style=form,explode=true,name=request.paymentDetails[0].bin"`
+	RequestPaymentDetails0ID    *int   `queryParam:"style=form,explode=true,name=request.paymentDetails[0].id"`
+	RequestPaymentDetails0Value *int   `queryParam:"style=form,explode=true,name=request.paymentDetails[0].value"`
+	RequestSalesChannel         *int   `queryParam:"style=form,explode=true,name=request.salesChannel"`
+	RequestValue                int    `queryParam:"style=form,explode=true,name=request.value"`
 }
 
 type InstallmentsoptionsResponse struct {

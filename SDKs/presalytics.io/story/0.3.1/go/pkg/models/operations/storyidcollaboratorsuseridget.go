@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDCollaboratorsUseridGetPathParams struct {
+type StoryIDCollaboratorsUseridGetRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The presalytics userid (NOT the Id of the story_collaborator object)
 	StoryCollaboratorUserid string `pathParam:"style=simple,explode=false,name=story_collaborator_userid"`
-}
-
-type StoryIDCollaboratorsUseridGetRequest struct {
-	PathParams StoryIDCollaboratorsUseridGetPathParams
 }
 
 type StoryIDCollaboratorsUseridGetResponse struct {

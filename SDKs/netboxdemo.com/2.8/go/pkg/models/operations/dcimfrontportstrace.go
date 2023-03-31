@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimFrontPortsTracePathParams struct {
+type DcimFrontPortsTraceRequest struct {
 	// A unique integer value identifying this front port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimFrontPortsTraceRequest struct {
-	PathParams DcimFrontPortsTracePathParams
 }
 
 type DcimFrontPortsTraceResponse struct {

@@ -32,20 +32,20 @@ func newSchemas(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DirectorySchemasDelete - Deletes a schema.
-func (s *schemas) DirectorySchemasDelete(ctx context.Context, request operations.DirectorySchemasDeleteRequest) (*operations.DirectorySchemasDeleteResponse, error) {
+func (s *schemas) DirectorySchemasDelete(ctx context.Context, request operations.DirectorySchemasDeleteRequest, security operations.DirectorySchemasDeleteSecurity) (*operations.DirectorySchemasDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *schemas) DirectorySchemasDelete(ctx context.Context, request operations
 }
 
 // DirectorySchemasGet - Retrieves a schema.
-func (s *schemas) DirectorySchemasGet(ctx context.Context, request operations.DirectorySchemasGetRequest) (*operations.DirectorySchemasGetResponse, error) {
+func (s *schemas) DirectorySchemasGet(ctx context.Context, request operations.DirectorySchemasGetRequest, security operations.DirectorySchemasGetSecurity) (*operations.DirectorySchemasGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *schemas) DirectorySchemasGet(ctx context.Context, request operations.Di
 }
 
 // DirectorySchemasInsert - Creates a schema.
-func (s *schemas) DirectorySchemasInsert(ctx context.Context, request operations.DirectorySchemasInsertRequest) (*operations.DirectorySchemasInsertResponse, error) {
+func (s *schemas) DirectorySchemasInsert(ctx context.Context, request operations.DirectorySchemasInsertRequest, security operations.DirectorySchemasInsertSecurity) (*operations.DirectorySchemasInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *schemas) DirectorySchemasInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *schemas) DirectorySchemasInsert(ctx context.Context, request operations
 }
 
 // DirectorySchemasList - Retrieves all schemas for a customer.
-func (s *schemas) DirectorySchemasList(ctx context.Context, request operations.DirectorySchemasListRequest) (*operations.DirectorySchemasListResponse, error) {
+func (s *schemas) DirectorySchemasList(ctx context.Context, request operations.DirectorySchemasListRequest, security operations.DirectorySchemasListSecurity) (*operations.DirectorySchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *schemas) DirectorySchemasList(ctx context.Context, request operations.D
 }
 
 // DirectorySchemasPatch - Patches a schema.
-func (s *schemas) DirectorySchemasPatch(ctx context.Context, request operations.DirectorySchemasPatchRequest) (*operations.DirectorySchemasPatchResponse, error) {
+func (s *schemas) DirectorySchemasPatch(ctx context.Context, request operations.DirectorySchemasPatchRequest, security operations.DirectorySchemasPatchSecurity) (*operations.DirectorySchemasPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *schemas) DirectorySchemasPatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *schemas) DirectorySchemasPatch(ctx context.Context, request operations.
 }
 
 // DirectorySchemasUpdate - Updates a schema.
-func (s *schemas) DirectorySchemasUpdate(ctx context.Context, request operations.DirectorySchemasUpdateRequest) (*operations.DirectorySchemasUpdateResponse, error) {
+func (s *schemas) DirectorySchemasUpdate(ctx context.Context, request operations.DirectorySchemasUpdateRequest, security operations.DirectorySchemasUpdateSecurity) (*operations.DirectorySchemasUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *schemas) DirectorySchemasUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

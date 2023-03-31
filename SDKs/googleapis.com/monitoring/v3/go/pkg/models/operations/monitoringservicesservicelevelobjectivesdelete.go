@@ -8,13 +8,13 @@ import (
 )
 
 type MonitoringServicesServiceLevelObjectivesDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesDeleteSecurity struct {
@@ -22,12 +22,7 @@ type MonitoringServicesServiceLevelObjectivesDeleteSecurity struct {
 	Option2 *MonitoringServicesServiceLevelObjectivesDeleteSecurityOption2 `security:"option"`
 }
 
-type MonitoringServicesServiceLevelObjectivesDeletePathParams struct {
-	// Required. Resource name of the ServiceLevelObjective to delete. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MonitoringServicesServiceLevelObjectivesDeleteQueryParams struct {
+type MonitoringServicesServiceLevelObjectivesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type MonitoringServicesServiceLevelObjectivesDeleteQueryParams struct {
 	Force *bool `queryParam:"style=form,explode=true,name=force"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Resource name of the ServiceLevelObjective to delete. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,12 +49,6 @@ type MonitoringServicesServiceLevelObjectivesDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringServicesServiceLevelObjectivesDeleteRequest struct {
-	PathParams  MonitoringServicesServiceLevelObjectivesDeletePathParams
-	QueryParams MonitoringServicesServiceLevelObjectivesDeleteQueryParams
-	Security    MonitoringServicesServiceLevelObjectivesDeleteSecurity
 }
 
 type MonitoringServicesServiceLevelObjectivesDeleteResponse struct {

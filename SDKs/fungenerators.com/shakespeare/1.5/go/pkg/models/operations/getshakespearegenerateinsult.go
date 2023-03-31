@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetShakespeareGenerateInsultSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetShakespeareGenerateInsultQueryParams struct {
-	// No of insults to generate
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type GetShakespeareGenerateInsultRequest struct {
-	QueryParams GetShakespeareGenerateInsultQueryParams
-	Security    GetShakespeareGenerateInsultSecurity
+	// No of insults to generate
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetShakespeareGenerateInsultResponse struct {

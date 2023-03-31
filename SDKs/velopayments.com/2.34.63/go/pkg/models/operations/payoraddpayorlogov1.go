@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PayorAddPayorLogoV1PathParams struct {
+type PayorAddPayorLogoV1Request struct {
+	// Image file to upload
+	PayorLogoRequest shared.PayorLogoRequest `request:"mediaType=multipart/form-data"`
 	// The Payor Id
 	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
-}
-
-type PayorAddPayorLogoV1Request struct {
-	PathParams PayorAddPayorLogoV1PathParams
-	// Image file to upload
-	Request shared.PayorLogoRequest `request:"mediaType=multipart/form-data"`
 }
 
 type PayorAddPayorLogoV1Response struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateAristaSwitchSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateAristaSwitchSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateAristaSwitchSnmpConfigRequest struct {
-	PathParams UpdateAristaSwitchSnmpConfigPathParams
-	Request    *shared.SNMPConfig `request:"mediaType=application/json"`
-	Security   UpdateAristaSwitchSnmpConfigSecurity
+	SNMPConfig *shared.SNMPConfig `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateAristaSwitchSnmpConfigResponse struct {

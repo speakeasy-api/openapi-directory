@@ -51,7 +51,7 @@ func (s *retrieve) GetAssociationByID(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -100,7 +100,7 @@ func (s *retrieve) GetEvidenceByID(ctx context.Context, request operations.GetEv
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,7 +132,7 @@ func (s *retrieve) GetEvidenceByID(ctx context.Context, request operations.GetEv
 // PostEvidenceByID - Get evidence for a list of IDs
 // This is the POST version of [/public/evidence](#!/public/get_public_evidence).
 // It allows to query for a list of evidence strings encoded in a `json` object to be passed in the body.
-func (s *retrieve) PostEvidenceByID(ctx context.Context, request operations.PostEvidenceByIDRequest) (*operations.PostEvidenceByIDResponse, error) {
+func (s *retrieve) PostEvidenceByID(ctx context.Context, request string) (*operations.PostEvidenceByIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform/public/evidence"
 

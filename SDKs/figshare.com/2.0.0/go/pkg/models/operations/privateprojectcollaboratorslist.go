@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateProjectCollaboratorsListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateProjectCollaboratorsListPathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateProjectCollaboratorsListRequest struct {
-	PathParams PrivateProjectCollaboratorsListPathParams
-	Security   PrivateProjectCollaboratorsListSecurity
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectCollaboratorsListResponse struct {

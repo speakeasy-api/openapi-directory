@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileDownloadPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type FileDownloadQueryParams struct {
+type FileDownloadRequest struct {
 	// Can be blank, `redirect` or `stat`.  If set to `stat`, we will return file information but without a download URL, and without logging a download.  If set to `redirect` we will serve a 302 redirect directly to the file.  This is used for integrations with Zapier, and is not recommended for most integrations.
 	Action *string `queryParam:"style=form,explode=true,name=action"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// Request a preview size.  Can be `small` (default), `large`, `xlarge`, or `pdf`.
 	PreviewSize *string `queryParam:"style=form,explode=true,name=preview_size"`
 	// Include file preview information?
 	WithPreviews *bool `queryParam:"style=form,explode=true,name=with_previews"`
 	// Include file priority color information?
 	WithPriorityColor *bool `queryParam:"style=form,explode=true,name=with_priority_color"`
-}
-
-type FileDownloadRequest struct {
-	PathParams  FileDownloadPathParams
-	QueryParams FileDownloadQueryParams
 }
 
 type FileDownloadResponse struct {

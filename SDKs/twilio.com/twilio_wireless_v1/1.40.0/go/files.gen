@@ -32,7 +32,6 @@ pkg/models/shared/commandenumtransportenum.go
 pkg/models/shared/commandenumstatusenum.go
 pkg/models/shared/commandenumdirectionenum.go
 pkg/models/shared/commandenumcommandmodeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/wirelessv1rateplan.go
 pkg/models/shared/wirelessv1sim.go
 pkg/models/shared/simenumstatusenum.go
@@ -43,3 +42,4 @@ pkg/models/shared/wirelessv1simdatasession.go
 pkg/models/shared/wirelessv1simusagerecord.go
 pkg/models/shared/usagerecordenumgranularityenum.go
 USAGE.md
+pkg/models/operations/options.go

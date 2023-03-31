@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type IpamRirsDeletePathParams struct {
+type IpamRirsDeleteRequest struct {
 	// A unique integer value identifying this RIR.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamRirsDeleteRequest struct {
-	PathParams IpamRirsDeletePathParams
 }
 
 type IpamRirsDeleteResponse struct {

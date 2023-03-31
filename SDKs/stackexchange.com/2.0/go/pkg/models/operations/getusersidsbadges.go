@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetUsersIdsBadgesPathParams struct {
-	// Number list (semicolon delimited).
-	Ids string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
 // GetUsersIdsBadgesOrderEnum
 type GetUsersIdsBadgesOrderEnum string
 
@@ -67,7 +62,7 @@ func (e *GetUsersIdsBadgesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersIdsBadgesQueryParams struct {
+type GetUsersIdsBadgesRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -105,6 +100,8 @@ type GetUsersIdsBadgesQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Unix date.
 	Fromdate *int64 `queryParam:"style=form,explode=true,name=fromdate"`
+	// Number list (semicolon delimited).
+	Ids string `pathParam:"style=simple,explode=false,name=ids"`
 	// sort = rank => string
 	// sort = name => string
 	// sort = type => string
@@ -126,11 +123,6 @@ type GetUsersIdsBadgesQueryParams struct {
 	Sort *GetUsersIdsBadgesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetUsersIdsBadgesRequest struct {
-	PathParams  GetUsersIdsBadgesPathParams
-	QueryParams GetUsersIdsBadgesQueryParams
 }
 
 type GetUsersIdsBadgesResponse struct {

@@ -65,14 +65,14 @@ func newAvailability(defaultClient, securityClient HTTPClient, serverURL, langua
 // <p>Availability can be complex. For further troubleshooting refer to the: <i><b>GET /consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable</b></i> endpoint. This endpoint will show you all unavailable times for a given date range. Available times are created from any unblocked time periods. For more information: <a href="https://onsched.readme.io/docs/availability-overview">Availability Overview</a></p>
 func (s *availability) GetConsumerV1AvailabilityServiceIDStartDateEndDate(ctx context.Context, request operations.GetConsumerV1AvailabilityServiceIDStartDateEndDateRequest) (*operations.GetConsumerV1AvailabilityServiceIDStartDateEndDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -119,14 +119,14 @@ func (s *availability) GetConsumerV1AvailabilityServiceIDStartDateEndDate(ctx co
 // <p>The <b>tzOffset</b> parameter should be used if the appointment requester, the end user, is in a different timezone than the location or resource.</p>
 func (s *availability) GetConsumerV1AvailabilityServiceIDStartDateEndDateDays(ctx context.Context, request operations.GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysRequest) (*operations.GetConsumerV1AvailabilityServiceIDStartDateEndDateDaysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/days", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/days", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -170,14 +170,14 @@ func (s *availability) GetConsumerV1AvailabilityServiceIDStartDateEndDateDays(ct
 // <p>Location hours, holidays, services, resources, blocks, allocations, and appointments are just some of variables that may cause time slots to become unavailable. Use this endpoint to understand why you don't see availability.</p>
 func (s *availability) GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailable(ctx context.Context, request operations.GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableRequest) (*operations.GetConsumerV1AvailabilityServiceIDStartDateEndDateUnavailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

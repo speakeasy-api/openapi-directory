@@ -35,9 +35,9 @@ func newApplicationDocuments(defaultClient, securityClient HTTPClient, serverURL
 // Create a new document submission attached to an application. This endpoint provisions a new document upload and creates a new application document to be attached to the application. Use this endpoint to submit any files not already requested by the application.
 func (s *applicationDocuments) CreateApplicationDocument(ctx context.Context, request operations.CreateApplicationDocumentRequest) (*operations.CreateApplicationDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationDocumentCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *applicationDocuments) CreateApplicationDocument(ctx context.Context, re
 // Edit an application document based on the ID provided. The version parameter must match the latest application document version. When the `group_file_id` is not present, this method will update properties and metadata about an existing application document.
 func (s *applicationDocuments) EditApplicationDocument(ctx context.Context, request operations.EditApplicationDocumentRequest) (*operations.EditApplicationDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationDocumentEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *applicationDocuments) EditApplicationDocument(ctx context.Context, requ
 // Returns the latest version of a single application document based on the ID provided.
 func (s *applicationDocuments) GetApplicationDocument(ctx context.Context, request operations.GetApplicationDocumentRequest) (*operations.GetApplicationDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents/{document_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents/{document_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,14 +190,14 @@ func (s *applicationDocuments) GetApplicationDocument(ctx context.Context, reque
 // Get a list of all documents associated with a carrier application.
 func (s *applicationDocuments) GetApplicationDocuments(ctx context.Context, request operations.GetApplicationDocumentsRequest) (*operations.GetApplicationDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -239,9 +239,9 @@ func (s *applicationDocuments) GetApplicationDocuments(ctx context.Context, requ
 // Each group application will ask for a list of optional or required application documents. This endpoint provisions a new file upload and associates the uploaded file with the existing application document with the given ID. This endpoint can be used to replace a file that you uploaded earlier with a newer version.
 func (s *applicationDocuments) SubmitApplicationDocument(ctx context.Context, request operations.SubmitApplicationDocumentRequest) (*operations.SubmitApplicationDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationDocumentEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

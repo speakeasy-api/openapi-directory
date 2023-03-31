@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTranslationRequest struct {
-	Request shared.CreateTranslationRequest `request:"mediaType=multipart/form-data"`
-}
-
 type CreateTranslationResponse struct {
 	ContentType string
 	// OK

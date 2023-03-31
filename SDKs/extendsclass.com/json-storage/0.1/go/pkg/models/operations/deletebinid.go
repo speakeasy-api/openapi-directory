@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBinIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteBinIDRequest struct {
-	PathParams DeleteBinIDPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteBinIDResponse struct {

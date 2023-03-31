@@ -37,14 +37,14 @@ func newPayment(defaultClient, securityClient HTTPClient, serverURL, language, s
 // In scenarios of [order changes](https://developers.vtex.com/vtex-rest-api/reference/registerchange), it is possible to insert a [Partial invoice](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe). The total value of the order will be updated after the insertion of the invoice, even when there is a [Partial invoice](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) scenario. The updated value is settled by VTEX's Payment Gateway. The reimbursement for the shopper is automatic.
 func (s *payment) GetPaymenttransaction(ctx context.Context, request operations.GetPaymenttransactionRequest) (*operations.GetPaymenttransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/payment-transaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/payment-transaction", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -86,14 +86,14 @@ func (s *payment) GetPaymenttransaction(ctx context.Context, request operations.
 // > The `Notify payment` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *payment) SendPaymentNotification(ctx context.Context, request operations.SendPaymentNotificationRequest) (*operations.SendPaymentNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

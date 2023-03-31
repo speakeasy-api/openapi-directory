@@ -14,32 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.AndroidpublisherInapppurchasesGetRequest{
-        Security: operations.AndroidpublisherInapppurchasesGetSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AndroidpublisherInapppurchasesGetPathParams{
-            PackageName: "corrupti",
-            ProductID: "provident",
-            Token: "distinctio",
-        },
-        QueryParams: operations.AndroidpublisherInapppurchasesGetQueryParams{
-            Alt: "json",
-            Fields: "quibusdam",
-            Key: "unde",
-            OauthToken: "nulla",
-            PrettyPrint: false,
-            QuotaUser: "corrupti",
-            UserIP: "illum",
-        },
+        Alt: "json",
+        Fields: "corrupti",
+        Key: "provident",
+        OauthToken: "distinctio",
+        PackageName: "quibusdam",
+        PrettyPrint: false,
+        ProductID: "unde",
+        QuotaUser: "nulla",
+        Token: "corrupti",
+        UserIP: "illum",
     }
 
     ctx := context.Background()
-    res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, req)
+    res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, req, operations.AndroidpublisherInapppurchasesGetSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

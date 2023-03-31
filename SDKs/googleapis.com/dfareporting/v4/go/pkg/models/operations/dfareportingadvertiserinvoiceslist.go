@@ -8,22 +8,17 @@ import (
 )
 
 type DfareportingAdvertiserInvoicesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DfareportingAdvertiserInvoicesListPathParams struct {
-	// Advertiser ID of this invoice.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type DfareportingAdvertiserInvoicesListQueryParams struct {
+type DfareportingAdvertiserInvoicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Advertiser ID of this invoice.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -42,18 +37,14 @@ type DfareportingAdvertiserInvoicesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingAdvertiserInvoicesListRequest struct {
-	PathParams  DfareportingAdvertiserInvoicesListPathParams
-	QueryParams DfareportingAdvertiserInvoicesListQueryParams
-	Security    DfareportingAdvertiserInvoicesListSecurity
 }
 
 type DfareportingAdvertiserInvoicesListResponse struct {

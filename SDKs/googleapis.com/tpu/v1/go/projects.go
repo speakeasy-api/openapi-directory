@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // TpuProjectsLocationsAcceleratorTypesList - Lists accelerator types supported by this API.
-func (s *projects) TpuProjectsLocationsAcceleratorTypesList(ctx context.Context, request operations.TpuProjectsLocationsAcceleratorTypesListRequest) (*operations.TpuProjectsLocationsAcceleratorTypesListResponse, error) {
+func (s *projects) TpuProjectsLocationsAcceleratorTypesList(ctx context.Context, request operations.TpuProjectsLocationsAcceleratorTypesListRequest, security operations.TpuProjectsLocationsAcceleratorTypesListSecurity) (*operations.TpuProjectsLocationsAcceleratorTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/acceleratorTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/acceleratorTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *projects) TpuProjectsLocationsAcceleratorTypesList(ctx context.Context,
 }
 
 // TpuProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) TpuProjectsLocationsList(ctx context.Context, request operations.TpuProjectsLocationsListRequest) (*operations.TpuProjectsLocationsListResponse, error) {
+func (s *projects) TpuProjectsLocationsList(ctx context.Context, request operations.TpuProjectsLocationsListRequest, security operations.TpuProjectsLocationsListSecurity) (*operations.TpuProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *projects) TpuProjectsLocationsList(ctx context.Context, request operati
 }
 
 // TpuProjectsLocationsNodesCreate - Creates a node.
-func (s *projects) TpuProjectsLocationsNodesCreate(ctx context.Context, request operations.TpuProjectsLocationsNodesCreateRequest) (*operations.TpuProjectsLocationsNodesCreateResponse, error) {
+func (s *projects) TpuProjectsLocationsNodesCreate(ctx context.Context, request operations.TpuProjectsLocationsNodesCreateRequest, security operations.TpuProjectsLocationsNodesCreateSecurity) (*operations.TpuProjectsLocationsNodesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *projects) TpuProjectsLocationsNodesCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) TpuProjectsLocationsNodesCreate(ctx context.Context, request 
 }
 
 // TpuProjectsLocationsNodesList - Lists nodes.
-func (s *projects) TpuProjectsLocationsNodesList(ctx context.Context, request operations.TpuProjectsLocationsNodesListRequest) (*operations.TpuProjectsLocationsNodesListResponse, error) {
+func (s *projects) TpuProjectsLocationsNodesList(ctx context.Context, request operations.TpuProjectsLocationsNodesListRequest, security operations.TpuProjectsLocationsNodesListSecurity) (*operations.TpuProjectsLocationsNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) TpuProjectsLocationsNodesList(ctx context.Context, request op
 }
 
 // TpuProjectsLocationsNodesReimage - Reimages a node's OS.
-func (s *projects) TpuProjectsLocationsNodesReimage(ctx context.Context, request operations.TpuProjectsLocationsNodesReimageRequest) (*operations.TpuProjectsLocationsNodesReimageResponse, error) {
+func (s *projects) TpuProjectsLocationsNodesReimage(ctx context.Context, request operations.TpuProjectsLocationsNodesReimageRequest, security operations.TpuProjectsLocationsNodesReimageSecurity) (*operations.TpuProjectsLocationsNodesReimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reimage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reimage", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReimageNodeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) TpuProjectsLocationsNodesReimage(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *projects) TpuProjectsLocationsNodesReimage(ctx context.Context, request
 }
 
 // TpuProjectsLocationsNodesStart - Starts a node.
-func (s *projects) TpuProjectsLocationsNodesStart(ctx context.Context, request operations.TpuProjectsLocationsNodesStartRequest) (*operations.TpuProjectsLocationsNodesStartResponse, error) {
+func (s *projects) TpuProjectsLocationsNodesStart(ctx context.Context, request operations.TpuProjectsLocationsNodesStartRequest, security operations.TpuProjectsLocationsNodesStartSecurity) (*operations.TpuProjectsLocationsNodesStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *projects) TpuProjectsLocationsNodesStart(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) TpuProjectsLocationsNodesStart(ctx context.Context, request o
 }
 
 // TpuProjectsLocationsNodesStop - Stops a node, this operation is only available with single TPU nodes.
-func (s *projects) TpuProjectsLocationsNodesStop(ctx context.Context, request operations.TpuProjectsLocationsNodesStopRequest) (*operations.TpuProjectsLocationsNodesStopResponse, error) {
+func (s *projects) TpuProjectsLocationsNodesStop(ctx context.Context, request operations.TpuProjectsLocationsNodesStopRequest, security operations.TpuProjectsLocationsNodesStopSecurity) (*operations.TpuProjectsLocationsNodesStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) TpuProjectsLocationsNodesStop(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) TpuProjectsLocationsNodesStop(ctx context.Context, request op
 }
 
 // TpuProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) TpuProjectsLocationsOperationsCancel(ctx context.Context, request operations.TpuProjectsLocationsOperationsCancelRequest) (*operations.TpuProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) TpuProjectsLocationsOperationsCancel(ctx context.Context, request operations.TpuProjectsLocationsOperationsCancelRequest, security operations.TpuProjectsLocationsOperationsCancelSecurity) (*operations.TpuProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *projects) TpuProjectsLocationsOperationsCancel(ctx context.Context, req
 }
 
 // TpuProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) TpuProjectsLocationsOperationsDelete(ctx context.Context, request operations.TpuProjectsLocationsOperationsDeleteRequest) (*operations.TpuProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) TpuProjectsLocationsOperationsDelete(ctx context.Context, request operations.TpuProjectsLocationsOperationsDeleteRequest, security operations.TpuProjectsLocationsOperationsDeleteSecurity) (*operations.TpuProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,20 +492,20 @@ func (s *projects) TpuProjectsLocationsOperationsDelete(ctx context.Context, req
 }
 
 // TpuProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) TpuProjectsLocationsOperationsList(ctx context.Context, request operations.TpuProjectsLocationsOperationsListRequest) (*operations.TpuProjectsLocationsOperationsListResponse, error) {
+func (s *projects) TpuProjectsLocationsOperationsList(ctx context.Context, request operations.TpuProjectsLocationsOperationsListRequest, security operations.TpuProjectsLocationsOperationsListSecurity) (*operations.TpuProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,20 +540,20 @@ func (s *projects) TpuProjectsLocationsOperationsList(ctx context.Context, reque
 }
 
 // TpuProjectsLocationsTensorflowVersionsGet - Gets TensorFlow Version.
-func (s *projects) TpuProjectsLocationsTensorflowVersionsGet(ctx context.Context, request operations.TpuProjectsLocationsTensorflowVersionsGetRequest) (*operations.TpuProjectsLocationsTensorflowVersionsGetResponse, error) {
+func (s *projects) TpuProjectsLocationsTensorflowVersionsGet(ctx context.Context, request operations.TpuProjectsLocationsTensorflowVersionsGetRequest, security operations.TpuProjectsLocationsTensorflowVersionsGetSecurity) (*operations.TpuProjectsLocationsTensorflowVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,20 +588,20 @@ func (s *projects) TpuProjectsLocationsTensorflowVersionsGet(ctx context.Context
 }
 
 // TpuProjectsLocationsTensorflowVersionsList - List TensorFlow versions supported by this API.
-func (s *projects) TpuProjectsLocationsTensorflowVersionsList(ctx context.Context, request operations.TpuProjectsLocationsTensorflowVersionsListRequest) (*operations.TpuProjectsLocationsTensorflowVersionsListResponse, error) {
+func (s *projects) TpuProjectsLocationsTensorflowVersionsList(ctx context.Context, request operations.TpuProjectsLocationsTensorflowVersionsListRequest, security operations.TpuProjectsLocationsTensorflowVersionsListSecurity) (*operations.TpuProjectsLocationsTensorflowVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tensorflowVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tensorflowVersions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

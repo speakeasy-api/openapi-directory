@@ -7,9 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListUsersQueryParams struct {
+type ListUsersRequest struct {
 	// Email to search for. Ignored if `username` is provided. Supports wildcard searches
 	Email *string `queryParam:"style=form,explode=true,name=email"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// Resource identifier for user's home directory. Does not support wildcard searches.
 	HomeResource *string `queryParam:"style=form,explode=true,name=homeResource"`
 	// Comma separated list of relationships to include in response. Valid options are **homeResource** and **ownerAccount**.
@@ -32,18 +36,6 @@ type ListUsersQueryParams struct {
 	Status *int64 `queryParam:"style=form,explode=true,name=status"`
 	// The username of the user you are looking for. Only entries with the same username as this will be in the list of results. Does not support wildcard searches.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type ListUsersHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type ListUsersRequest struct {
-	QueryParams ListUsersQueryParams
-	Headers     ListUsersHeaders
 }
 
 type ListUsersResponse struct {

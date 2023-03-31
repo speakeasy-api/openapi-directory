@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSetTracePathParams struct {
+type ProtocolTftpSetTraceRequest struct {
 	// Agent to set the TFTP tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the TFTP tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolTftpSetTraceRequest struct {
-	PathParams ProtocolTftpSetTracePathParams
 }
 
 type ProtocolTftpSetTraceResponse struct {

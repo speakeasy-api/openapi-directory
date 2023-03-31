@@ -10,29 +10,24 @@ import (
 )
 
 type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurity struct {
 	Option1 *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurityOption1 `security:"option"`
 	Option2 *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurityOption2 `security:"option"`
 	Option3 *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurityOption3 `security:"option"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListPathParams struct {
-	// Required. Transfer run name in the form: `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum string
@@ -64,7 +59,7 @@ func (e *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageT
 	}
 }
 
-type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams struct {
+type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -85,6 +80,8 @@ type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams 
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Pagination token, which can be used to request a specific page of `ListTransferLogsRequest` list results. For multiple-page results, `ListTransferLogsResponse` outputs a `next_page` token, which can be used as the `page_token` value to request the next page of list results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Transfer run name in the form: `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -93,12 +90,6 @@ type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest struct {
-	PathParams  BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListPathParams
-	QueryParams BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams
-	Security    BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurity
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListResponse struct {

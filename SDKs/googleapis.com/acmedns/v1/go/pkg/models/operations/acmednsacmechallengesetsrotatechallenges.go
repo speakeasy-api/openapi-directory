@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AcmednsAcmeChallengeSetsRotateChallengesPathParams struct {
-	// Required. SLD + TLD domain name to update records for. For example, this would be "google.com" for any FQDN under "google.com". That includes challenges for "subdomain.google.com". This MAY be Unicode or Punycode.
-	RootDomain string `pathParam:"style=simple,explode=false,name=rootDomain"`
-}
-
-type AcmednsAcmeChallengeSetsRotateChallengesQueryParams struct {
+type AcmednsAcmeChallengeSetsRotateChallengesRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                  *shared.XgafvEnum                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RotateChallengesRequestInput *shared.RotateChallengesRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -31,16 +27,12 @@ type AcmednsAcmeChallengeSetsRotateChallengesQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. SLD + TLD domain name to update records for. For example, this would be "google.com" for any FQDN under "google.com". That includes challenges for "subdomain.google.com". This MAY be Unicode or Punycode.
+	RootDomain string `pathParam:"style=simple,explode=false,name=rootDomain"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AcmednsAcmeChallengeSetsRotateChallengesRequest struct {
-	PathParams  AcmednsAcmeChallengeSetsRotateChallengesPathParams
-	QueryParams AcmednsAcmeChallengeSetsRotateChallengesQueryParams
-	Request     *shared.RotateChallengesRequestInput `request:"mediaType=application/json"`
 }
 
 type AcmednsAcmeChallengeSetsRotateChallengesResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditUserPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // EditUserRequestBodyVideosPrivacyCommentsEnum - Who can comment on the video. This value becomes the default comment setting for all future videos that this user uploads.
 type EditUserRequestBodyVideosPrivacyCommentsEnum string
 
@@ -141,8 +136,9 @@ type EditUserRequestBody struct {
 }
 
 type EditUserRequest struct {
-	PathParams EditUserPathParams
-	Request    *EditUserRequestBody `request:"mediaType=application/vnd.vimeo.user+json"`
+	RequestBody *EditUserRequestBody `request:"mediaType=application/vnd.vimeo.user+json"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type EditUserResponse struct {

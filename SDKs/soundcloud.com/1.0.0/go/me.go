@@ -34,16 +34,16 @@ func newMe(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // DeleteMeFollowingsUserID - Deletes a user who is followed by the authenticated user.
-func (s *me) DeleteMeFollowingsUserID(ctx context.Context, request operations.DeleteMeFollowingsUserIDRequest) (*operations.DeleteMeFollowingsUserIDResponse, error) {
+func (s *me) DeleteMeFollowingsUserID(ctx context.Context, request operations.DeleteMeFollowingsUserIDRequest, security operations.DeleteMeFollowingsUserIDSecurity) (*operations.DeleteMeFollowingsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *me) DeleteMeFollowingsUserID(ctx context.Context, request operations.De
 }
 
 // GetMe - Returns the authenticated user’s information.
-func (s *me) GetMe(ctx context.Context, request operations.GetMeRequest) (*operations.GetMeResponse, error) {
+func (s *me) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -100,7 +100,7 @@ func (s *me) GetMe(ctx context.Context, request operations.GetMeRequest) (*opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,7 +145,7 @@ func (s *me) GetMe(ctx context.Context, request operations.GetMeRequest) (*opera
 }
 
 // GetMeActivities - Returns the authenticated user's activities.
-func (s *me) GetMeActivities(ctx context.Context, request operations.GetMeActivitiesRequest) (*operations.GetMeActivitiesResponse, error) {
+func (s *me) GetMeActivities(ctx context.Context, request operations.GetMeActivitiesRequest, security operations.GetMeActivitiesSecurity) (*operations.GetMeActivitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/activities"
 
@@ -154,11 +154,11 @@ func (s *me) GetMeActivities(ctx context.Context, request operations.GetMeActivi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,7 +203,7 @@ func (s *me) GetMeActivities(ctx context.Context, request operations.GetMeActivi
 }
 
 // GetMeActivitiesAllOwn - Recent the authenticated user's activities.
-func (s *me) GetMeActivitiesAllOwn(ctx context.Context, request operations.GetMeActivitiesAllOwnRequest) (*operations.GetMeActivitiesAllOwnResponse, error) {
+func (s *me) GetMeActivitiesAllOwn(ctx context.Context, request operations.GetMeActivitiesAllOwnRequest, security operations.GetMeActivitiesAllOwnSecurity) (*operations.GetMeActivitiesAllOwnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/activities/all/own"
 
@@ -212,11 +212,11 @@ func (s *me) GetMeActivitiesAllOwn(ctx context.Context, request operations.GetMe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *me) GetMeActivitiesAllOwn(ctx context.Context, request operations.GetMe
 }
 
 // GetMeActivitiesTracks - Returns the authenticated user's recent track related activities.
-func (s *me) GetMeActivitiesTracks(ctx context.Context, request operations.GetMeActivitiesTracksRequest) (*operations.GetMeActivitiesTracksResponse, error) {
+func (s *me) GetMeActivitiesTracks(ctx context.Context, request operations.GetMeActivitiesTracksRequest, security operations.GetMeActivitiesTracksSecurity) (*operations.GetMeActivitiesTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/activities/tracks"
 
@@ -270,11 +270,11 @@ func (s *me) GetMeActivitiesTracks(ctx context.Context, request operations.GetMe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -319,7 +319,7 @@ func (s *me) GetMeActivitiesTracks(ctx context.Context, request operations.GetMe
 }
 
 // GetMeConnections - Returns a list of the authenticated user's connected social accounts.
-func (s *me) GetMeConnections(ctx context.Context, request operations.GetMeConnectionsRequest) (*operations.GetMeConnectionsResponse, error) {
+func (s *me) GetMeConnections(ctx context.Context, request operations.GetMeConnectionsRequest, security operations.GetMeConnectionsSecurity) (*operations.GetMeConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/connections"
 
@@ -328,11 +328,11 @@ func (s *me) GetMeConnections(ctx context.Context, request operations.GetMeConne
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,16 +377,16 @@ func (s *me) GetMeConnections(ctx context.Context, request operations.GetMeConne
 }
 
 // GetMeConnectionsConnectionID - Returns the authenticated user's connected social account.
-func (s *me) GetMeConnectionsConnectionID(ctx context.Context, request operations.GetMeConnectionsConnectionIDRequest) (*operations.GetMeConnectionsConnectionIDResponse, error) {
+func (s *me) GetMeConnectionsConnectionID(ctx context.Context, request operations.GetMeConnectionsConnectionIDRequest, security operations.GetMeConnectionsConnectionIDSecurity) (*operations.GetMeConnectionsConnectionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/connections/{connection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/connections/{connection_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -441,7 +441,7 @@ func (s *me) GetMeConnectionsConnectionID(ctx context.Context, request operation
 }
 
 // GetMeFavoritesIds - Returns user’s favorites ids. (use /me/likes/tracks instead to fetch the authenticated user's likes)
-func (s *me) GetMeFavoritesIds(ctx context.Context, request operations.GetMeFavoritesIdsRequest) (*operations.GetMeFavoritesIdsResponse, error) {
+func (s *me) GetMeFavoritesIds(ctx context.Context, request operations.GetMeFavoritesIdsRequest, security operations.GetMeFavoritesIdsSecurity) (*operations.GetMeFavoritesIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/favorites/ids"
 
@@ -450,11 +450,11 @@ func (s *me) GetMeFavoritesIds(ctx context.Context, request operations.GetMeFavo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -482,7 +482,7 @@ func (s *me) GetMeFavoritesIds(ctx context.Context, request operations.GetMeFavo
 }
 
 // GetMeFollowers - Returns a list of users who are following the authenticated user.
-func (s *me) GetMeFollowers(ctx context.Context, request operations.GetMeFollowersRequest) (*operations.GetMeFollowersResponse, error) {
+func (s *me) GetMeFollowers(ctx context.Context, request operations.GetMeFollowersRequest, security operations.GetMeFollowersSecurity) (*operations.GetMeFollowersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/followers"
 
@@ -491,11 +491,11 @@ func (s *me) GetMeFollowers(ctx context.Context, request operations.GetMeFollowe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,16 +540,16 @@ func (s *me) GetMeFollowers(ctx context.Context, request operations.GetMeFollowe
 }
 
 // GetMeFollowersFollowerID - Returns a user who is following the authenticated user. (use /users/{user_id} instead, to fetch the user details)
-func (s *me) GetMeFollowersFollowerID(ctx context.Context, request operations.GetMeFollowersFollowerIDRequest) (*operations.GetMeFollowersFollowerIDResponse, error) {
+func (s *me) GetMeFollowersFollowerID(ctx context.Context, request operations.GetMeFollowersFollowerIDRequest, security operations.GetMeFollowersFollowerIDSecurity) (*operations.GetMeFollowersFollowerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followers/{follower_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/followers/{follower_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -594,7 +594,7 @@ func (s *me) GetMeFollowersFollowerID(ctx context.Context, request operations.Ge
 }
 
 // GetMeFollowings - Returns a list of users who are followed by the authenticated user.
-func (s *me) GetMeFollowings(ctx context.Context, request operations.GetMeFollowingsRequest) (*operations.GetMeFollowingsResponse, error) {
+func (s *me) GetMeFollowings(ctx context.Context, request operations.GetMeFollowingsRequest, security operations.GetMeFollowingsSecurity) (*operations.GetMeFollowingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/followings"
 
@@ -603,11 +603,11 @@ func (s *me) GetMeFollowings(ctx context.Context, request operations.GetMeFollow
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -652,7 +652,7 @@ func (s *me) GetMeFollowings(ctx context.Context, request operations.GetMeFollow
 }
 
 // GetMeFollowingsTracks - Returns a list of recent tracks from users followed by the authenticated user.
-func (s *me) GetMeFollowingsTracks(ctx context.Context, request operations.GetMeFollowingsTracksRequest) (*operations.GetMeFollowingsTracksResponse, error) {
+func (s *me) GetMeFollowingsTracks(ctx context.Context, request operations.GetMeFollowingsTracksRequest, security operations.GetMeFollowingsTracksSecurity) (*operations.GetMeFollowingsTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/followings/tracks"
 
@@ -661,11 +661,11 @@ func (s *me) GetMeFollowingsTracks(ctx context.Context, request operations.GetMe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -710,16 +710,16 @@ func (s *me) GetMeFollowingsTracks(ctx context.Context, request operations.GetMe
 }
 
 // GetMeFollowingsUserID - Returns a user who is followed by the authenticated user. (use /users/{user_id} instead, to fetch the user details)
-func (s *me) GetMeFollowingsUserID(ctx context.Context, request operations.GetMeFollowingsUserIDRequest) (*operations.GetMeFollowingsUserIDResponse, error) {
+func (s *me) GetMeFollowingsUserID(ctx context.Context, request operations.GetMeFollowingsUserIDRequest, security operations.GetMeFollowingsUserIDSecurity) (*operations.GetMeFollowingsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,7 +774,7 @@ func (s *me) GetMeFollowingsUserID(ctx context.Context, request operations.GetMe
 }
 
 // GetMeLikesTracks - Returns a list of favorited or liked tracks of the authenticated user.
-func (s *me) GetMeLikesTracks(ctx context.Context, request operations.GetMeLikesTracksRequest) (*operations.GetMeLikesTracksResponse, error) {
+func (s *me) GetMeLikesTracks(ctx context.Context, request operations.GetMeLikesTracksRequest, security operations.GetMeLikesTracksSecurity) (*operations.GetMeLikesTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/likes/tracks"
 
@@ -783,11 +783,11 @@ func (s *me) GetMeLikesTracks(ctx context.Context, request operations.GetMeLikes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -833,7 +833,7 @@ func (s *me) GetMeLikesTracks(ctx context.Context, request operations.GetMeLikes
 
 // GetMePlaylists - Returns user’s playlists (sets).
 // Returns playlist info, playlist tracks and tracks owner info.
-func (s *me) GetMePlaylists(ctx context.Context, request operations.GetMePlaylistsRequest) (*operations.GetMePlaylistsResponse, error) {
+func (s *me) GetMePlaylists(ctx context.Context, request operations.GetMePlaylistsRequest, security operations.GetMePlaylistsSecurity) (*operations.GetMePlaylistsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/playlists"
 
@@ -842,11 +842,11 @@ func (s *me) GetMePlaylists(ctx context.Context, request operations.GetMePlaylis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -901,16 +901,16 @@ func (s *me) GetMePlaylists(ctx context.Context, request operations.GetMePlaylis
 }
 
 // GetMePlaylistsPlaylistID - Returns playlist. (use /playlists/{playlist_id} instead, to fetch the playlist details)
-func (s *me) GetMePlaylistsPlaylistID(ctx context.Context, request operations.GetMePlaylistsPlaylistIDRequest) (*operations.GetMePlaylistsPlaylistIDResponse, error) {
+func (s *me) GetMePlaylistsPlaylistID(ctx context.Context, request operations.GetMePlaylistsPlaylistIDRequest, security operations.GetMePlaylistsPlaylistIDSecurity) (*operations.GetMePlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/playlists/{playlist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/playlists/{playlist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -945,7 +945,7 @@ func (s *me) GetMePlaylistsPlaylistID(ctx context.Context, request operations.Ge
 }
 
 // GetMeTracks - Returns a list of user's tracks.
-func (s *me) GetMeTracks(ctx context.Context, request operations.GetMeTracksRequest) (*operations.GetMeTracksResponse, error) {
+func (s *me) GetMeTracks(ctx context.Context, request operations.GetMeTracksRequest, security operations.GetMeTracksSecurity) (*operations.GetMeTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/tracks"
 
@@ -954,11 +954,11 @@ func (s *me) GetMeTracks(ctx context.Context, request operations.GetMeTracksRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1003,16 +1003,16 @@ func (s *me) GetMeTracks(ctx context.Context, request operations.GetMeTracksRequ
 }
 
 // GetMeTracksTrackID - Returns a specified track. (use /tracks/{track_id} instead, to fetch the track details)
-func (s *me) GetMeTracksTrackID(ctx context.Context, request operations.GetMeTracksTrackIDRequest) (*operations.GetMeTracksTrackIDResponse, error) {
+func (s *me) GetMeTracksTrackID(ctx context.Context, request operations.GetMeTracksTrackIDRequest, security operations.GetMeTracksTrackIDSecurity) (*operations.GetMeTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/tracks/{track_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/tracks/{track_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1047,16 +1047,16 @@ func (s *me) GetMeTracksTrackID(ctx context.Context, request operations.GetMeTra
 }
 
 // PutMeFollowingsUserID - Follows a user.
-func (s *me) PutMeFollowingsUserID(ctx context.Context, request operations.PutMeFollowingsUserIDRequest) (*operations.PutMeFollowingsUserIDResponse, error) {
+func (s *me) PutMeFollowingsUserID(ctx context.Context, request operations.PutMeFollowingsUserIDRequest, security operations.PutMeFollowingsUserIDSecurity) (*operations.PutMeFollowingsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

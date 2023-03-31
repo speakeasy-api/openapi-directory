@@ -10,23 +10,23 @@ import (
 )
 
 type DataflowProjectsJobsMessagesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsMessagesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsMessagesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsMessagesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsJobsMessagesListSecurity struct {
@@ -34,13 +34,6 @@ type DataflowProjectsJobsMessagesListSecurity struct {
 	Option2 *DataflowProjectsJobsMessagesListSecurityOption2 `security:"option"`
 	Option3 *DataflowProjectsJobsMessagesListSecurityOption3 `security:"option"`
 	Option4 *DataflowProjectsJobsMessagesListSecurityOption4 `security:"option"`
-}
-
-type DataflowProjectsJobsMessagesListPathParams struct {
-	// The job to get messages about.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// A project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // DataflowProjectsJobsMessagesListMinimumImportanceEnum - Filter to only get messages with importance >= level
@@ -79,7 +72,7 @@ func (e *DataflowProjectsJobsMessagesListMinimumImportanceEnum) UnmarshalJSON(da
 	}
 }
 
-type DataflowProjectsJobsMessagesListQueryParams struct {
+type DataflowProjectsJobsMessagesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -92,6 +85,8 @@ type DataflowProjectsJobsMessagesListQueryParams struct {
 	EndTime *string `queryParam:"style=form,explode=true,name=endTime"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The job to get messages about.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains the job specified by job_id.
@@ -106,6 +101,8 @@ type DataflowProjectsJobsMessagesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// A project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// If specified, return only messages with timestamps >= start_time. The default is the job creation time (i.e. beginning of messages).
@@ -114,12 +111,6 @@ type DataflowProjectsJobsMessagesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataflowProjectsJobsMessagesListRequest struct {
-	PathParams  DataflowProjectsJobsMessagesListPathParams
-	QueryParams DataflowProjectsJobsMessagesListQueryParams
-	Security    DataflowProjectsJobsMessagesListSecurity
 }
 
 type DataflowProjectsJobsMessagesListResponse struct {

@@ -14,7 +14,8 @@ var CreateCompositionHookServerList = []string{
 }
 
 type CreateCompositionHookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateCompositionHookCreateCompositionHookRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.
@@ -87,12 +88,6 @@ type CreateCompositionHookCreateCompositionHookRequest struct {
 	Trim *bool `form:"name=Trim"`
 	// An object that describes the video layout of the composition hook in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.
 	VideoLayout interface{} `form:"name=VideoLayout"`
-}
-
-type CreateCompositionHookRequest struct {
-	Request   *CreateCompositionHookCreateCompositionHookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCompositionHookSecurity
-	ServerURL *string
 }
 
 type CreateCompositionHookResponse struct {

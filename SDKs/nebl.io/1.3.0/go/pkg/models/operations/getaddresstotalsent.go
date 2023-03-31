@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAddressTotalSentPathParams struct {
+type GetAddressTotalSentRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type GetAddressTotalSentRequest struct {
-	PathParams GetAddressTotalSentPathParams
 }
 
 type GetAddressTotalSentResponse struct {

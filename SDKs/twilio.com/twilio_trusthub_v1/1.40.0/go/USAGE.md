@@ -13,23 +13,18 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCustomerProfileRequest{
-        Security: operations.CreateCustomerProfileSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: &operations.CreateCustomerProfileCreateCustomerProfileRequest{
-            Email: "Larue_Rau85@yahoo.com",
-            FriendlyName: "corrupti",
-            PolicySid: "illum",
-            StatusCallback: "http://physical-pegboard.info",
-        },
+    req := operations.CreateCustomerProfileCreateCustomerProfileRequest{
+        Email: "Larue_Rau85@yahoo.com",
+        FriendlyName: "corrupti",
+        PolicySid: "illum",
+        StatusCallback: "http://physical-pegboard.info",
     }
 
     ctx := context.Background()
-    res, err := s.CreateCustomerProfile(ctx, req)
+    res, err := s.CreateCustomerProfile(ctx, req, operations.CreateCustomerProfileSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

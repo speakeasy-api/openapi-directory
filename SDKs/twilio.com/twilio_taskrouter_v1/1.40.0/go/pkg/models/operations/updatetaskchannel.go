@@ -12,14 +12,8 @@ var UpdateTaskChannelServerList = []string{
 }
 
 type UpdateTaskChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTaskChannelPathParams struct {
-	// The SID of the Task Channel resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the Workspace with the Task Channel to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTaskChannelUpdateTaskChannelRequest struct {
@@ -30,10 +24,11 @@ type UpdateTaskChannelUpdateTaskChannelRequest struct {
 }
 
 type UpdateTaskChannelRequest struct {
-	PathParams UpdateTaskChannelPathParams
-	Request    *UpdateTaskChannelUpdateTaskChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTaskChannelSecurity
-	ServerURL  *string
+	RequestBody *UpdateTaskChannelUpdateTaskChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Task Channel resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the Workspace with the Task Channel to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateTaskChannelResponse struct {

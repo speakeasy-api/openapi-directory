@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostUsersIDResendWelcomeEmailPathParams struct {
+type PostUsersIDResendWelcomeEmailRequest struct {
 	// User ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostUsersIDResendWelcomeEmailRequest struct {
-	PathParams PostUsersIDResendWelcomeEmailPathParams
 }
 
 type PostUsersIDResendWelcomeEmailResponse struct {

@@ -12,20 +12,15 @@ var FetchFaxMediaServerList = []string{
 }
 
 type FetchFaxMediaSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchFaxMediaPathParams struct {
+type FetchFaxMediaRequest struct {
 	// The SID of the fax with the FaxMedia resource to fetch.
 	FaxSid string `pathParam:"style=simple,explode=false,name=FaxSid"`
 	// The Twilio-provided string that uniquely identifies the FaxMedia resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchFaxMediaRequest struct {
-	PathParams FetchFaxMediaPathParams
-	Security   FetchFaxMediaSecurity
-	ServerURL  *string
 }
 
 type FetchFaxMediaResponse struct {

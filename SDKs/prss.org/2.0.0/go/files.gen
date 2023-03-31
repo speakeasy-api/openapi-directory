@@ -59,7 +59,6 @@ pkg/models/operations/getapiv2spotsid.go
 pkg/models/operations/postapiv2spots.go
 pkg/models/shared/error.go
 pkg/models/shared/episode.go
-pkg/models/shared/security.go
 pkg/models/shared/broadcastservice.go
 pkg/models/shared/cddrivefile.go
 pkg/models/shared/cddrivefolder.go
@@ -71,3 +70,4 @@ pkg/models/shared/segment.go
 pkg/models/shared/spotinsertion.go
 pkg/models/shared/spot.go
 USAGE.md
+pkg/models/operations/options.go

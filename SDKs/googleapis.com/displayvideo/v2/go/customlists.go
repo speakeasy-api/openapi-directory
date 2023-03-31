@@ -33,20 +33,20 @@ func newCustomLists(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DisplayvideoCustomListsGet - Gets a custom list.
-func (s *customLists) DisplayvideoCustomListsGet(ctx context.Context, request operations.DisplayvideoCustomListsGetRequest) (*operations.DisplayvideoCustomListsGetResponse, error) {
+func (s *customLists) DisplayvideoCustomListsGet(ctx context.Context, request operations.DisplayvideoCustomListsGetRequest, security operations.DisplayvideoCustomListsGetSecurity) (*operations.DisplayvideoCustomListsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customLists/{customListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customLists/{customListId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *customLists) DisplayvideoCustomListsGet(ctx context.Context, request op
 }
 
 // DisplayvideoCustomListsList - Lists custom lists. The order is defined by the order_by parameter.
-func (s *customLists) DisplayvideoCustomListsList(ctx context.Context, request operations.DisplayvideoCustomListsListRequest) (*operations.DisplayvideoCustomListsListResponse, error) {
+func (s *customLists) DisplayvideoCustomListsList(ctx context.Context, request operations.DisplayvideoCustomListsListRequest, security operations.DisplayvideoCustomListsListSecurity) (*operations.DisplayvideoCustomListsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customLists"
 
@@ -90,11 +90,11 @@ func (s *customLists) DisplayvideoCustomListsList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

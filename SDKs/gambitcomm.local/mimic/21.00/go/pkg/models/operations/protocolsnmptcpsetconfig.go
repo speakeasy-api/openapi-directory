@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmptcpSetConfigPathParams struct {
+type ProtocolSnmptcpSetConfigRequest struct {
 	// Agent to set the SNMPTCP configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the SNMPTCP configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the SNMPTCP configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolSnmptcpSetConfigRequest struct {
-	PathParams ProtocolSnmptcpSetConfigPathParams
 }
 
 type ProtocolSnmptcpSetConfigResponse struct {

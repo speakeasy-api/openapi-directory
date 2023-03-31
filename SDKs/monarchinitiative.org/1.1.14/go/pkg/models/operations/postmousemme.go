@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostMouseMmeRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type PostMouseMmeResponse struct {
 	ContentType string
 	StatusCode  int

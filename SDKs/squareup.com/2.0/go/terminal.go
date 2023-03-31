@@ -34,16 +34,16 @@ func newTerminal(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CancelTerminalCheckout - CancelTerminalCheckout
 // Cancels a Terminal checkout request if the status of the request permits it.
-func (s *terminal) CancelTerminalCheckout(ctx context.Context, request operations.CancelTerminalCheckoutRequest) (*operations.CancelTerminalCheckoutResponse, error) {
+func (s *terminal) CancelTerminalCheckout(ctx context.Context, request operations.CancelTerminalCheckoutRequest, security operations.CancelTerminalCheckoutSecurity) (*operations.CancelTerminalCheckoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,16 +79,16 @@ func (s *terminal) CancelTerminalCheckout(ctx context.Context, request operation
 
 // CancelTerminalRefund - CancelTerminalRefund
 // Cancels an Interac Terminal refund request by refund request ID if the status of the request permits it.
-func (s *terminal) CancelTerminalRefund(ctx context.Context, request operations.CancelTerminalRefundRequest) (*operations.CancelTerminalRefundResponse, error) {
+func (s *terminal) CancelTerminalRefund(ctx context.Context, request operations.CancelTerminalRefundRequest, security operations.CancelTerminalRefundSecurity) (*operations.CancelTerminalRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *terminal) CancelTerminalRefund(ctx context.Context, request operations.
 // CreateTerminalCheckout - CreateTerminalCheckout
 // Creates a Terminal checkout request and sends it to the specified device to take a payment
 // for the requested amount.
-func (s *terminal) CreateTerminalCheckout(ctx context.Context, request operations.CreateTerminalCheckoutRequest) (*operations.CreateTerminalCheckoutResponse, error) {
+func (s *terminal) CreateTerminalCheckout(ctx context.Context, request shared.CreateTerminalCheckoutRequest, security operations.CreateTerminalCheckoutSecurity) (*operations.CreateTerminalCheckoutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/terminals/checkouts"
 
@@ -144,7 +144,7 @@ func (s *terminal) CreateTerminalCheckout(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *terminal) CreateTerminalCheckout(ctx context.Context, request operation
 
 // CreateTerminalRefund - CreateTerminalRefund
 // Creates a request to refund an Interac payment completed on a Square Terminal.
-func (s *terminal) CreateTerminalRefund(ctx context.Context, request operations.CreateTerminalRefundRequest) (*operations.CreateTerminalRefundResponse, error) {
+func (s *terminal) CreateTerminalRefund(ctx context.Context, request shared.CreateTerminalRefundRequest, security operations.CreateTerminalRefundSecurity) (*operations.CreateTerminalRefundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/terminals/refunds"
 
@@ -199,7 +199,7 @@ func (s *terminal) CreateTerminalRefund(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,16 +235,16 @@ func (s *terminal) CreateTerminalRefund(ctx context.Context, request operations.
 
 // GetTerminalCheckout - GetTerminalCheckout
 // Retrieves a Terminal checkout request by `checkout_id`.
-func (s *terminal) GetTerminalCheckout(ctx context.Context, request operations.GetTerminalCheckoutRequest) (*operations.GetTerminalCheckoutResponse, error) {
+func (s *terminal) GetTerminalCheckout(ctx context.Context, request operations.GetTerminalCheckoutRequest, security operations.GetTerminalCheckoutSecurity) (*operations.GetTerminalCheckoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,16 +280,16 @@ func (s *terminal) GetTerminalCheckout(ctx context.Context, request operations.G
 
 // GetTerminalRefund - GetTerminalRefund
 // Retrieves an Interac Terminal refund object by ID.
-func (s *terminal) GetTerminalRefund(ctx context.Context, request operations.GetTerminalRefundRequest) (*operations.GetTerminalRefundResponse, error) {
+func (s *terminal) GetTerminalRefund(ctx context.Context, request operations.GetTerminalRefundRequest, security operations.GetTerminalRefundSecurity) (*operations.GetTerminalRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -325,7 +325,7 @@ func (s *terminal) GetTerminalRefund(ctx context.Context, request operations.Get
 
 // SearchTerminalCheckouts - SearchTerminalCheckouts
 // Retrieves a filtered list of Terminal checkout requests created by the account making the request.
-func (s *terminal) SearchTerminalCheckouts(ctx context.Context, request operations.SearchTerminalCheckoutsRequest) (*operations.SearchTerminalCheckoutsResponse, error) {
+func (s *terminal) SearchTerminalCheckouts(ctx context.Context, request shared.SearchTerminalCheckoutsRequest, security operations.SearchTerminalCheckoutsSecurity) (*operations.SearchTerminalCheckoutsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/terminals/checkouts/search"
 
@@ -344,7 +344,7 @@ func (s *terminal) SearchTerminalCheckouts(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -380,7 +380,7 @@ func (s *terminal) SearchTerminalCheckouts(ctx context.Context, request operatio
 
 // SearchTerminalRefunds - SearchTerminalRefunds
 // Retrieves a filtered list of Interac Terminal refund requests created by the seller making the request.
-func (s *terminal) SearchTerminalRefunds(ctx context.Context, request operations.SearchTerminalRefundsRequest) (*operations.SearchTerminalRefundsResponse, error) {
+func (s *terminal) SearchTerminalRefunds(ctx context.Context, request shared.SearchTerminalRefundsRequest, security operations.SearchTerminalRefundsSecurity) (*operations.SearchTerminalRefundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/terminals/refunds/search"
 
@@ -399,7 +399,7 @@ func (s *terminal) SearchTerminalRefunds(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

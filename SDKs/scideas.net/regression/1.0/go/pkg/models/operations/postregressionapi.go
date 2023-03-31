@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRegressionAPIRequest struct {
-	Request shared.RegressionAPIBody `request:"mediaType=application/json"`
-}
-
 type PostRegressionAPIResponse struct {
 	ContentType string
 	StatusCode  int

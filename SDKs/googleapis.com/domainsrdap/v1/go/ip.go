@@ -34,14 +34,14 @@ func newIP(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // DomainsrdapIPGet - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 func (s *ip) DomainsrdapIPGet(ctx context.Context, request operations.DomainsrdapIPGetRequest) (*operations.DomainsrdapIPGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ip/{ipId}/{ipId1}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ip/{ipId}/{ipId1}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

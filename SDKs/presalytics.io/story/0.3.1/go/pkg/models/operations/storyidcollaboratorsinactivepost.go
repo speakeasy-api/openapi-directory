@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDCollaboratorsInactivePostPathParams struct {
+type StoryIDCollaboratorsInactivePostRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDCollaboratorsInactivePostRequest struct {
-	PathParams StoryIDCollaboratorsInactivePostPathParams
 	// Collaborator user id and permission type
-	Request shared.ModifyInactiveCollaborator `request:"mediaType=application/json"`
+	ModifyInactiveCollaborator shared.ModifyInactiveCollaborator `request:"mediaType=application/json"`
 }
 
 type StoryIDCollaboratorsInactivePostResponse struct {

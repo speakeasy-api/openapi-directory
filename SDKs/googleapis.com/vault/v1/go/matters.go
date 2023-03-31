@@ -33,11 +33,11 @@ func newMatters(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // VaultMattersAddPermissions - Adds an account as a matter collaborator.
-func (s *matters) VaultMattersAddPermissions(ctx context.Context, request operations.VaultMattersAddPermissionsRequest) (*operations.VaultMattersAddPermissionsResponse, error) {
+func (s *matters) VaultMattersAddPermissions(ctx context.Context, request operations.VaultMattersAddPermissionsRequest, security operations.VaultMattersAddPermissionsSecurity) (*operations.VaultMattersAddPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:addPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:addPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddMatterPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *matters) VaultMattersAddPermissions(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *matters) VaultMattersAddPermissions(ctx context.Context, request operat
 }
 
 // VaultMattersClose - Closes the specified matter. Returns the matter with updated state.
-func (s *matters) VaultMattersClose(ctx context.Context, request operations.VaultMattersCloseRequest) (*operations.VaultMattersCloseResponse, error) {
+func (s *matters) VaultMattersClose(ctx context.Context, request operations.VaultMattersCloseRequest, security operations.VaultMattersCloseSecurity) (*operations.VaultMattersCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:close", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *matters) VaultMattersClose(ctx context.Context, request operations.Vaul
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *matters) VaultMattersClose(ctx context.Context, request operations.Vaul
 }
 
 // VaultMattersCount - Counts the accounts processed by the specified query.
-func (s *matters) VaultMattersCount(ctx context.Context, request operations.VaultMattersCountRequest) (*operations.VaultMattersCountResponse, error) {
+func (s *matters) VaultMattersCount(ctx context.Context, request operations.VaultMattersCountRequest, security operations.VaultMattersCountSecurity) (*operations.VaultMattersCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:count", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CountArtifactsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *matters) VaultMattersCount(ctx context.Context, request operations.Vaul
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +198,11 @@ func (s *matters) VaultMattersCount(ctx context.Context, request operations.Vaul
 }
 
 // VaultMattersCreate - Creates a matter with the given name and description. The initial state is open, and the owner is the method caller. Returns the created matter with default view.
-func (s *matters) VaultMattersCreate(ctx context.Context, request operations.VaultMattersCreateRequest) (*operations.VaultMattersCreateResponse, error) {
+func (s *matters) VaultMattersCreate(ctx context.Context, request operations.VaultMattersCreateRequest, security operations.VaultMattersCreateSecurity) (*operations.VaultMattersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/matters"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Matter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,11 +214,11 @@ func (s *matters) VaultMattersCreate(ctx context.Context, request operations.Vau
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,20 +253,20 @@ func (s *matters) VaultMattersCreate(ctx context.Context, request operations.Vau
 }
 
 // VaultMattersDelete - Deletes the specified matter. Returns the matter with updated state.
-func (s *matters) VaultMattersDelete(ctx context.Context, request operations.VaultMattersDeleteRequest) (*operations.VaultMattersDeleteResponse, error) {
+func (s *matters) VaultMattersDelete(ctx context.Context, request operations.VaultMattersDeleteRequest, security operations.VaultMattersDeleteSecurity) (*operations.VaultMattersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,11 +301,11 @@ func (s *matters) VaultMattersDelete(ctx context.Context, request operations.Vau
 }
 
 // VaultMattersExportsCreate - Creates an export.
-func (s *matters) VaultMattersExportsCreate(ctx context.Context, request operations.VaultMattersExportsCreateRequest) (*operations.VaultMattersExportsCreateResponse, error) {
+func (s *matters) VaultMattersExportsCreate(ctx context.Context, request operations.VaultMattersExportsCreateRequest, security operations.VaultMattersExportsCreateSecurity) (*operations.VaultMattersExportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Export", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -317,11 +317,11 @@ func (s *matters) VaultMattersExportsCreate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -356,20 +356,20 @@ func (s *matters) VaultMattersExportsCreate(ctx context.Context, request operati
 }
 
 // VaultMattersExportsDelete - Deletes an export.
-func (s *matters) VaultMattersExportsDelete(ctx context.Context, request operations.VaultMattersExportsDeleteRequest) (*operations.VaultMattersExportsDeleteResponse, error) {
+func (s *matters) VaultMattersExportsDelete(ctx context.Context, request operations.VaultMattersExportsDeleteRequest, security operations.VaultMattersExportsDeleteSecurity) (*operations.VaultMattersExportsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,20 +404,20 @@ func (s *matters) VaultMattersExportsDelete(ctx context.Context, request operati
 }
 
 // VaultMattersExportsGet - Gets an export.
-func (s *matters) VaultMattersExportsGet(ctx context.Context, request operations.VaultMattersExportsGetRequest) (*operations.VaultMattersExportsGetResponse, error) {
+func (s *matters) VaultMattersExportsGet(ctx context.Context, request operations.VaultMattersExportsGetRequest, security operations.VaultMattersExportsGetSecurity) (*operations.VaultMattersExportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -452,20 +452,20 @@ func (s *matters) VaultMattersExportsGet(ctx context.Context, request operations
 }
 
 // VaultMattersExportsList - Lists details about the exports in the specified matter.
-func (s *matters) VaultMattersExportsList(ctx context.Context, request operations.VaultMattersExportsListRequest) (*operations.VaultMattersExportsListResponse, error) {
+func (s *matters) VaultMattersExportsList(ctx context.Context, request operations.VaultMattersExportsListRequest, security operations.VaultMattersExportsListSecurity) (*operations.VaultMattersExportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -500,20 +500,20 @@ func (s *matters) VaultMattersExportsList(ctx context.Context, request operation
 }
 
 // VaultMattersGet - Gets the specified matter.
-func (s *matters) VaultMattersGet(ctx context.Context, request operations.VaultMattersGetRequest) (*operations.VaultMattersGetResponse, error) {
+func (s *matters) VaultMattersGet(ctx context.Context, request operations.VaultMattersGetRequest, security operations.VaultMattersGetSecurity) (*operations.VaultMattersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -548,11 +548,11 @@ func (s *matters) VaultMattersGet(ctx context.Context, request operations.VaultM
 }
 
 // VaultMattersHoldsAccountsCreate - Adds an account to a hold. Accounts can be added only to a hold that does not have an organizational unit set. If you try to add an account to an organizational unit-based hold, an error is returned.
-func (s *matters) VaultMattersHoldsAccountsCreate(ctx context.Context, request operations.VaultMattersHoldsAccountsCreateRequest) (*operations.VaultMattersHoldsAccountsCreateResponse, error) {
+func (s *matters) VaultMattersHoldsAccountsCreate(ctx context.Context, request operations.VaultMattersHoldsAccountsCreateRequest, security operations.VaultMattersHoldsAccountsCreateSecurity) (*operations.VaultMattersHoldsAccountsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HeldAccount", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -564,11 +564,11 @@ func (s *matters) VaultMattersHoldsAccountsCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -603,20 +603,20 @@ func (s *matters) VaultMattersHoldsAccountsCreate(ctx context.Context, request o
 }
 
 // VaultMattersHoldsAccountsDelete - Removes an account from a hold.
-func (s *matters) VaultMattersHoldsAccountsDelete(ctx context.Context, request operations.VaultMattersHoldsAccountsDeleteRequest) (*operations.VaultMattersHoldsAccountsDeleteResponse, error) {
+func (s *matters) VaultMattersHoldsAccountsDelete(ctx context.Context, request operations.VaultMattersHoldsAccountsDeleteRequest, security operations.VaultMattersHoldsAccountsDeleteSecurity) (*operations.VaultMattersHoldsAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -651,20 +651,20 @@ func (s *matters) VaultMattersHoldsAccountsDelete(ctx context.Context, request o
 }
 
 // VaultMattersHoldsAccountsList - Lists the accounts covered by a hold. This can list only individually-specified accounts covered by the hold. If the hold covers an organizational unit, use the [Admin SDK](https://developers.google.com/admin-sdk/). to list the members of the organizational unit on hold.
-func (s *matters) VaultMattersHoldsAccountsList(ctx context.Context, request operations.VaultMattersHoldsAccountsListRequest) (*operations.VaultMattersHoldsAccountsListResponse, error) {
+func (s *matters) VaultMattersHoldsAccountsList(ctx context.Context, request operations.VaultMattersHoldsAccountsListRequest, security operations.VaultMattersHoldsAccountsListSecurity) (*operations.VaultMattersHoldsAccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -699,11 +699,11 @@ func (s *matters) VaultMattersHoldsAccountsList(ctx context.Context, request ope
 }
 
 // VaultMattersHoldsAddHeldAccounts - Adds accounts to a hold. Returns a list of accounts that have been successfully added. Accounts can be added only to an existing account-based hold.
-func (s *matters) VaultMattersHoldsAddHeldAccounts(ctx context.Context, request operations.VaultMattersHoldsAddHeldAccountsRequest) (*operations.VaultMattersHoldsAddHeldAccountsResponse, error) {
+func (s *matters) VaultMattersHoldsAddHeldAccounts(ctx context.Context, request operations.VaultMattersHoldsAddHeldAccountsRequest, security operations.VaultMattersHoldsAddHeldAccountsSecurity) (*operations.VaultMattersHoldsAddHeldAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:addHeldAccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:addHeldAccounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddHeldAccountsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -715,11 +715,11 @@ func (s *matters) VaultMattersHoldsAddHeldAccounts(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -754,11 +754,11 @@ func (s *matters) VaultMattersHoldsAddHeldAccounts(ctx context.Context, request 
 }
 
 // VaultMattersHoldsCreate - Creates a hold in the specified matter.
-func (s *matters) VaultMattersHoldsCreate(ctx context.Context, request operations.VaultMattersHoldsCreateRequest) (*operations.VaultMattersHoldsCreateResponse, error) {
+func (s *matters) VaultMattersHoldsCreate(ctx context.Context, request operations.VaultMattersHoldsCreateRequest, security operations.VaultMattersHoldsCreateSecurity) (*operations.VaultMattersHoldsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Hold", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -770,11 +770,11 @@ func (s *matters) VaultMattersHoldsCreate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -809,20 +809,20 @@ func (s *matters) VaultMattersHoldsCreate(ctx context.Context, request operation
 }
 
 // VaultMattersHoldsDelete - Removes the specified hold and releases the accounts or organizational unit covered by the hold. If the data is not preserved by another hold or retention rule, it might be purged.
-func (s *matters) VaultMattersHoldsDelete(ctx context.Context, request operations.VaultMattersHoldsDeleteRequest) (*operations.VaultMattersHoldsDeleteResponse, error) {
+func (s *matters) VaultMattersHoldsDelete(ctx context.Context, request operations.VaultMattersHoldsDeleteRequest, security operations.VaultMattersHoldsDeleteSecurity) (*operations.VaultMattersHoldsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -857,20 +857,20 @@ func (s *matters) VaultMattersHoldsDelete(ctx context.Context, request operation
 }
 
 // VaultMattersHoldsGet - Gets the specified hold.
-func (s *matters) VaultMattersHoldsGet(ctx context.Context, request operations.VaultMattersHoldsGetRequest) (*operations.VaultMattersHoldsGetResponse, error) {
+func (s *matters) VaultMattersHoldsGet(ctx context.Context, request operations.VaultMattersHoldsGetRequest, security operations.VaultMattersHoldsGetSecurity) (*operations.VaultMattersHoldsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -905,20 +905,20 @@ func (s *matters) VaultMattersHoldsGet(ctx context.Context, request operations.V
 }
 
 // VaultMattersHoldsList - Lists the holds in a matter.
-func (s *matters) VaultMattersHoldsList(ctx context.Context, request operations.VaultMattersHoldsListRequest) (*operations.VaultMattersHoldsListResponse, error) {
+func (s *matters) VaultMattersHoldsList(ctx context.Context, request operations.VaultMattersHoldsListRequest, security operations.VaultMattersHoldsListSecurity) (*operations.VaultMattersHoldsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -953,11 +953,11 @@ func (s *matters) VaultMattersHoldsList(ctx context.Context, request operations.
 }
 
 // VaultMattersHoldsRemoveHeldAccounts - Removes the specified accounts from a hold. Returns a list of statuses in the same order as the request.
-func (s *matters) VaultMattersHoldsRemoveHeldAccounts(ctx context.Context, request operations.VaultMattersHoldsRemoveHeldAccountsRequest) (*operations.VaultMattersHoldsRemoveHeldAccountsResponse, error) {
+func (s *matters) VaultMattersHoldsRemoveHeldAccounts(ctx context.Context, request operations.VaultMattersHoldsRemoveHeldAccountsRequest, security operations.VaultMattersHoldsRemoveHeldAccountsSecurity) (*operations.VaultMattersHoldsRemoveHeldAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:removeHeldAccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:removeHeldAccounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveHeldAccountsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -969,11 +969,11 @@ func (s *matters) VaultMattersHoldsRemoveHeldAccounts(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1008,11 +1008,11 @@ func (s *matters) VaultMattersHoldsRemoveHeldAccounts(ctx context.Context, reque
 }
 
 // VaultMattersHoldsUpdate - Updates the scope (organizational unit or accounts) and query parameters of a hold. You cannot add accounts to a hold that covers an organizational unit, nor can you add organizational units to a hold that covers individual accounts. If you try, the unsupported values are ignored.
-func (s *matters) VaultMattersHoldsUpdate(ctx context.Context, request operations.VaultMattersHoldsUpdateRequest) (*operations.VaultMattersHoldsUpdateResponse, error) {
+func (s *matters) VaultMattersHoldsUpdate(ctx context.Context, request operations.VaultMattersHoldsUpdateRequest, security operations.VaultMattersHoldsUpdateSecurity) (*operations.VaultMattersHoldsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Hold", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1024,11 +1024,11 @@ func (s *matters) VaultMattersHoldsUpdate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1063,7 +1063,7 @@ func (s *matters) VaultMattersHoldsUpdate(ctx context.Context, request operation
 }
 
 // VaultMattersList - Lists matters the requestor has access to.
-func (s *matters) VaultMattersList(ctx context.Context, request operations.VaultMattersListRequest) (*operations.VaultMattersListResponse, error) {
+func (s *matters) VaultMattersList(ctx context.Context, request operations.VaultMattersListRequest, security operations.VaultMattersListSecurity) (*operations.VaultMattersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/matters"
 
@@ -1072,11 +1072,11 @@ func (s *matters) VaultMattersList(ctx context.Context, request operations.Vault
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1111,11 +1111,11 @@ func (s *matters) VaultMattersList(ctx context.Context, request operations.Vault
 }
 
 // VaultMattersRemovePermissions - Removes an account as a matter collaborator.
-func (s *matters) VaultMattersRemovePermissions(ctx context.Context, request operations.VaultMattersRemovePermissionsRequest) (*operations.VaultMattersRemovePermissionsResponse, error) {
+func (s *matters) VaultMattersRemovePermissions(ctx context.Context, request operations.VaultMattersRemovePermissionsRequest, security operations.VaultMattersRemovePermissionsSecurity) (*operations.VaultMattersRemovePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:removePermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:removePermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveMatterPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1127,11 +1127,11 @@ func (s *matters) VaultMattersRemovePermissions(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1166,11 +1166,11 @@ func (s *matters) VaultMattersRemovePermissions(ctx context.Context, request ope
 }
 
 // VaultMattersReopen - Reopens the specified matter. Returns the matter with updated state.
-func (s *matters) VaultMattersReopen(ctx context.Context, request operations.VaultMattersReopenRequest) (*operations.VaultMattersReopenResponse, error) {
+func (s *matters) VaultMattersReopen(ctx context.Context, request operations.VaultMattersReopenRequest, security operations.VaultMattersReopenSecurity) (*operations.VaultMattersReopenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:reopen", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:reopen", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1182,11 +1182,11 @@ func (s *matters) VaultMattersReopen(ctx context.Context, request operations.Vau
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1221,11 +1221,11 @@ func (s *matters) VaultMattersReopen(ctx context.Context, request operations.Vau
 }
 
 // VaultMattersSavedQueriesCreate - Creates a saved query.
-func (s *matters) VaultMattersSavedQueriesCreate(ctx context.Context, request operations.VaultMattersSavedQueriesCreateRequest) (*operations.VaultMattersSavedQueriesCreateResponse, error) {
+func (s *matters) VaultMattersSavedQueriesCreate(ctx context.Context, request operations.VaultMattersSavedQueriesCreateRequest, security operations.VaultMattersSavedQueriesCreateSecurity) (*operations.VaultMattersSavedQueriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SavedQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1237,11 +1237,11 @@ func (s *matters) VaultMattersSavedQueriesCreate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1276,20 +1276,20 @@ func (s *matters) VaultMattersSavedQueriesCreate(ctx context.Context, request op
 }
 
 // VaultMattersSavedQueriesDelete - Deletes the specified saved query.
-func (s *matters) VaultMattersSavedQueriesDelete(ctx context.Context, request operations.VaultMattersSavedQueriesDeleteRequest) (*operations.VaultMattersSavedQueriesDeleteResponse, error) {
+func (s *matters) VaultMattersSavedQueriesDelete(ctx context.Context, request operations.VaultMattersSavedQueriesDeleteRequest, security operations.VaultMattersSavedQueriesDeleteSecurity) (*operations.VaultMattersSavedQueriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1324,20 +1324,20 @@ func (s *matters) VaultMattersSavedQueriesDelete(ctx context.Context, request op
 }
 
 // VaultMattersSavedQueriesGet - Retrieves the specified saved query.
-func (s *matters) VaultMattersSavedQueriesGet(ctx context.Context, request operations.VaultMattersSavedQueriesGetRequest) (*operations.VaultMattersSavedQueriesGetResponse, error) {
+func (s *matters) VaultMattersSavedQueriesGet(ctx context.Context, request operations.VaultMattersSavedQueriesGetRequest, security operations.VaultMattersSavedQueriesGetSecurity) (*operations.VaultMattersSavedQueriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1372,20 +1372,20 @@ func (s *matters) VaultMattersSavedQueriesGet(ctx context.Context, request opera
 }
 
 // VaultMattersSavedQueriesList - Lists the saved queries in a matter.
-func (s *matters) VaultMattersSavedQueriesList(ctx context.Context, request operations.VaultMattersSavedQueriesListRequest) (*operations.VaultMattersSavedQueriesListResponse, error) {
+func (s *matters) VaultMattersSavedQueriesList(ctx context.Context, request operations.VaultMattersSavedQueriesListRequest, security operations.VaultMattersSavedQueriesListSecurity) (*operations.VaultMattersSavedQueriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1420,11 +1420,11 @@ func (s *matters) VaultMattersSavedQueriesList(ctx context.Context, request oper
 }
 
 // VaultMattersUndelete - Undeletes the specified matter. Returns the matter with updated state.
-func (s *matters) VaultMattersUndelete(ctx context.Context, request operations.VaultMattersUndeleteRequest) (*operations.VaultMattersUndeleteResponse, error) {
+func (s *matters) VaultMattersUndelete(ctx context.Context, request operations.VaultMattersUndeleteRequest, security operations.VaultMattersUndeleteSecurity) (*operations.VaultMattersUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1436,11 +1436,11 @@ func (s *matters) VaultMattersUndelete(ctx context.Context, request operations.V
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1475,11 +1475,11 @@ func (s *matters) VaultMattersUndelete(ctx context.Context, request operations.V
 }
 
 // VaultMattersUpdate - Updates the specified matter. This updates only the name and description of the matter, identified by matter ID. Changes to any other fields are ignored. Returns the default view of the matter.
-func (s *matters) VaultMattersUpdate(ctx context.Context, request operations.VaultMattersUpdateRequest) (*operations.VaultMattersUpdateResponse, error) {
+func (s *matters) VaultMattersUpdate(ctx context.Context, request operations.VaultMattersUpdateRequest, security operations.VaultMattersUpdateSecurity) (*operations.VaultMattersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Matter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1491,11 +1491,11 @@ func (s *matters) VaultMattersUpdate(ctx context.Context, request operations.Vau
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

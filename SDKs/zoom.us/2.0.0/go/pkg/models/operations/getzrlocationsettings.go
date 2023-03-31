@@ -8,29 +8,19 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetZRLocationSettingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetZRLocationSettingsPathParams struct {
+type GetZRLocationSettingsRequest struct {
 	// Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response).
 	LocationID string `pathParam:"style=simple,explode=false,name=locationId"`
-}
-
-type GetZRLocationSettingsQueryParams struct {
 	// The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br>
 	// `meeting`: Meeting settings of the Zoom Rooms Account.<br>
 	// `signage`: Digital signage settings of the Zoom Rooms Account.
 	SettingType string `queryParam:"style=form,explode=true,name=setting_type"`
-}
-
-type GetZRLocationSettingsRequest struct {
-	PathParams  GetZRLocationSettingsPathParams
-	QueryParams GetZRLocationSettingsQueryParams
-	Security    GetZRLocationSettingsSecurity
 }
 
 // GetZRLocationSettings200ApplicationXML2ClientAlert - The Client Alert Settings section includes alerts that display on the TV screen of the Zoom Room. Disable these settings if you have deliberately disconnected one or more peripheral devices or have never enabled them.

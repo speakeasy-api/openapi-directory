@@ -8,16 +8,11 @@ import (
 )
 
 type DataprocProjectsRegionsWorkflowTemplatesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsRegionsWorkflowTemplatesListPathParams struct {
-	// Required. The resource name of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,list, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.workflowTemplates.list, the resource name of the location has the following format: projects/{project_id}/locations/{location}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataprocProjectsRegionsWorkflowTemplatesListQueryParams struct {
+type DataprocProjectsRegionsWorkflowTemplatesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DataprocProjectsRegionsWorkflowTemplatesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The page token, returned by a previous call, to request the next page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,list, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.workflowTemplates.list, the resource name of the location has the following format: projects/{project_id}/locations/{location}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type DataprocProjectsRegionsWorkflowTemplatesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsRegionsWorkflowTemplatesListRequest struct {
-	PathParams  DataprocProjectsRegionsWorkflowTemplatesListPathParams
-	QueryParams DataprocProjectsRegionsWorkflowTemplatesListQueryParams
-	Security    DataprocProjectsRegionsWorkflowTemplatesListSecurity
 }
 
 type DataprocProjectsRegionsWorkflowTemplatesListResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOrganizationEarlyAccessFeaturesOptInPathParams struct {
+type GetOrganizationEarlyAccessFeaturesOptInRequest struct {
 	OptInID        string `pathParam:"style=simple,explode=false,name=optInId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationEarlyAccessFeaturesOptInRequest struct {
-	PathParams GetOrganizationEarlyAccessFeaturesOptInPathParams
 }
 
 type GetOrganizationEarlyAccessFeaturesOptInResponse struct {

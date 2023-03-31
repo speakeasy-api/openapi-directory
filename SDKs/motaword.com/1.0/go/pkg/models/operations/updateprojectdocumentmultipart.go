@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProjectDocumentMultipartPathParams struct {
+type UpdateProjectDocumentMultipartRequest struct {
+	DocumentUploadRequest1 *shared.DocumentUploadRequest1 `request:"mediaType=multipart/form-data"`
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateProjectDocumentMultipartRequest struct {
-	PathParams UpdateProjectDocumentMultipartPathParams
-	Request    *shared.DocumentUploadRequest1 `request:"mediaType=multipart/form-data"`
 }
 
 type UpdateProjectDocumentMultipartResponse struct {

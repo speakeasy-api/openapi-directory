@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PutV2MeetingsIDJSONPathParams struct {
-	// Meeting ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2MeetingsIDJSONRequestBody struct {
 	// Meeting ID from the calendar provider
 	EventID *string `form:"name=event_id"`
@@ -23,8 +18,9 @@ type PutV2MeetingsIDJSONRequestBody struct {
 }
 
 type PutV2MeetingsIDJSONRequest struct {
-	PathParams PutV2MeetingsIDJSONPathParams
-	Request    *PutV2MeetingsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody *PutV2MeetingsIDJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Meeting ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutV2MeetingsIDJSONResponse struct {

@@ -12,7 +12,8 @@ var CreateServiceServerList = []string{
 }
 
 type CreateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceCreateServiceRequest struct {
@@ -24,12 +25,6 @@ type CreateServiceCreateServiceRequest struct {
 	UIEditable *bool `form:"name=UiEditable"`
 	// A user-defined string that uniquely identifies the Service resource. It can be used as an alternative to the `sid` in the URL path to address the Service resource. This value must be 50 characters or less in length and be unique.
 	UniqueName string `form:"name=UniqueName"`
-}
-
-type CreateServiceRequest struct {
-	Request   *CreateServiceCreateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateServiceSecurity
-	ServerURL *string
 }
 
 type CreateServiceResponse struct {

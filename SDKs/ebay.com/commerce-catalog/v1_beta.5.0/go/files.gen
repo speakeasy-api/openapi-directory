@@ -18,7 +18,6 @@ pkg/models/operations/search.go
 pkg/models/shared/product.go
 pkg/models/shared/image.go
 pkg/models/shared/aspect.go
-pkg/models/shared/security.go
 pkg/models/shared/productsearchresponse.go
 pkg/models/shared/refinement.go
 pkg/models/shared/aspectdistribution.go

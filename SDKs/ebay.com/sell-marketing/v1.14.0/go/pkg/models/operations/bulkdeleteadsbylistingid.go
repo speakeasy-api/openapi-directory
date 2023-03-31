@@ -8,19 +8,14 @@ import (
 )
 
 type BulkDeleteAdsByListingIDSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type BulkDeleteAdsByListingIDPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a>.
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BulkDeleteAdsByListingIDRequest struct {
-	PathParams BulkDeleteAdsByListingIDPathParams
 	// This request object defines the fields for the <b>bulkDeleteAdsByListingId</b> request.
-	Request  shared.BulkDeleteAdRequest `request:"mediaType=application/json"`
-	Security BulkDeleteAdsByListingIDSecurity
+	BulkDeleteAdRequest shared.BulkDeleteAdRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a>.
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type BulkDeleteAdsByListingIDResponse struct {

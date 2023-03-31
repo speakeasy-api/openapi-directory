@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetNumbersPiSecurity struct {
-	XMathtoolsAPISecret shared.SchemeXMathtoolsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
 }
 
-type GetNumbersPiQueryParams struct {
+type GetNumbersPiRequest struct {
 	// Optional start position
 	From *int64 `queryParam:"style=form,explode=true,name=from"`
 	// Optional start position
 	To *int64 `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetNumbersPiRequest struct {
-	QueryParams GetNumbersPiQueryParams
-	Security    GetNumbersPiSecurity
 }
 
 type GetNumbersPiResponse struct {

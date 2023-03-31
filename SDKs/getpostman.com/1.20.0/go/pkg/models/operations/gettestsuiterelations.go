@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTestSuiteRelationsPathParams struct {
+type GetTestSuiteRelationsRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetTestSuiteRelationsRequest struct {
-	PathParams GetTestSuiteRelationsPathParams
 }
 
 type GetTestSuiteRelations200ApplicationJSONTestsuite struct {

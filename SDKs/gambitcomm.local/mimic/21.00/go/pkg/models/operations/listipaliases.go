@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListIpaliasesPathParams struct {
+type ListIpaliasesRequest struct {
 	// Agent to show the IP alias list
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ListIpaliasesRequest struct {
-	PathParams ListIpaliasesPathParams
 }
 
 type ListIpaliasesResponse struct {

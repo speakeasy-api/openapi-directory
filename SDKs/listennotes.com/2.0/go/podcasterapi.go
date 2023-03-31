@@ -37,16 +37,16 @@ func newPodcasterAPI(defaultClient, securityClient HTTPClient, serverURL, langua
 // Podcast hosting services can use this endpoint to streamline the process of podcast deletion on behave of their users (podcasters). We will review the deletion request within 12 hours. If the podcast is already deleted, the "status" field in the response will be "deleted". Otherwise, the status field will be "in review". If you want to get a notification once the podcast is deleted, you can configure a webhook url in the dashboard: listennotes.com/api/dashboard/#webhooks
 func (s *podcasterAPI) DeletePodcastByID(ctx context.Context, request operations.DeletePodcastByIDRequest) (*operations.DeletePodcastByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -99,7 +99,7 @@ func (s *podcasterAPI) SubmitPodcast(ctx context.Context, request operations.Sub
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/podcasts/submit"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitPodcastForm", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,7 +114,7 @@ func (s *podcasterAPI) SubmitPodcast(ctx context.Context, request operations.Sub
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

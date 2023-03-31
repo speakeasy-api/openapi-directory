@@ -46,10 +46,6 @@ type GenerateTokenV2RequestBody struct {
 	ValidFor *int `form:"name=valid_for"`
 }
 
-type GenerateTokenV2Request struct {
-	Request *GenerateTokenV2RequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type GenerateTokenV2Response struct {
 	ContentType string
 	// access token result

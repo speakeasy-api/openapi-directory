@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAutocompleteSuggestionsRequest{
-        QueryParams: operations.GetAutocompleteSuggestionsQueryParams{
-            Locale: "corrupti",
-            Query: "provident",
-        },
+        Locale: "corrupti",
+        Query: "provident",
     }
 
     ctx := context.Background()

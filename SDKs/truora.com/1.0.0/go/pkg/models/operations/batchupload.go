@@ -8,19 +8,14 @@ import (
 )
 
 type BatchUploadSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BatchUploadPathParams struct {
-	// The ID of the Report
-	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type BatchUploadRequest struct {
-	PathParams BatchUploadPathParams
 	// The params required to batch upload
-	Request  shared.BatchUploadInput `request:"mediaType=multipart/form-data"`
-	Security BatchUploadSecurity
+	BatchUploadInput shared.BatchUploadInput `request:"mediaType=multipart/form-data"`
+	// The ID of the Report
+	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
 }
 
 type BatchUploadResponse struct {

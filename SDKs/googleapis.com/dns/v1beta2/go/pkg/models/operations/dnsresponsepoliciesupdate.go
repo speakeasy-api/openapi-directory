@@ -8,13 +8,13 @@ import (
 )
 
 type DNSResponsePoliciesUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSResponsePoliciesUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSResponsePoliciesUpdateSecurity struct {
@@ -22,16 +22,10 @@ type DNSResponsePoliciesUpdateSecurity struct {
 	Option2 *DNSResponsePoliciesUpdateSecurityOption2 `security:"option"`
 }
 
-type DNSResponsePoliciesUpdatePathParams struct {
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// User assigned name of the Response Policy addressed by this request.
-	ResponsePolicy string `pathParam:"style=simple,explode=false,name=responsePolicy"`
-}
-
-type DNSResponsePoliciesUpdateQueryParams struct {
+type DNSResponsePoliciesUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv     *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ResponsePolicy1 *shared.ResponsePolicy `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -48,19 +42,16 @@ type DNSResponsePoliciesUpdateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// User assigned name of the Response Policy addressed by this request.
+	ResponsePolicyPathParameter string `pathParam:"style=simple,explode=false,name=responsePolicy"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSResponsePoliciesUpdateRequest struct {
-	PathParams  DNSResponsePoliciesUpdatePathParams
-	QueryParams DNSResponsePoliciesUpdateQueryParams
-	Request     *shared.ResponsePolicy `request:"mediaType=application/json"`
-	Security    DNSResponsePoliciesUpdateSecurity
 }
 
 type DNSResponsePoliciesUpdateResponse struct {

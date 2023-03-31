@@ -36,14 +36,14 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Delete file/folder
 func (s *files) DeleteFilesPath(ctx context.Context, request operations.DeleteFilesPathRequest) (*operations.DeleteFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -96,14 +96,14 @@ func (s *files) DeleteFilesPath(ctx context.Context, request operations.DeleteFi
 // Download file
 func (s *files) FileDownload(ctx context.Context, request operations.FileDownloadRequest) (*operations.FileDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -164,9 +164,9 @@ func (s *files) FileDownload(ctx context.Context, request operations.FileDownloa
 // Update file/folder metadata
 func (s *files) PatchFilesPath(ctx context.Context, request operations.PatchFilesPathRequest) (*operations.PatchFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -235,9 +235,9 @@ func (s *files) PatchFilesPath(ctx context.Context, request operations.PatchFile
 // Upload file
 func (s *files) PostFilesPath(ctx context.Context, request operations.PostFilesPathRequest) (*operations.PostFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

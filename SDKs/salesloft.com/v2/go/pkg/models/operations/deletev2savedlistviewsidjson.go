@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteV2SavedListViewsIDJSONPathParams struct {
+type DeleteV2SavedListViewsIDJSONRequest struct {
 	// Saved List View ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteV2SavedListViewsIDJSONRequest struct {
-	PathParams DeleteV2SavedListViewsIDJSONPathParams
 }
 
 type DeleteV2SavedListViewsIDJSONResponse struct {

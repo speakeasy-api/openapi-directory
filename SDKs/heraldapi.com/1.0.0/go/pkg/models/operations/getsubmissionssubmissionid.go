@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubmissionsSubmissionIDPathParams struct {
+type GetSubmissionsSubmissionIDRequest struct {
 	// `id` for a specific submission
 	SubmissionID string `pathParam:"style=simple,explode=false,name=submission_id"`
-}
-
-type GetSubmissionsSubmissionIDRequest struct {
-	PathParams GetSubmissionsSubmissionIDPathParams
 }
 
 // GetSubmissionsSubmissionID200ApplicationJSON - OK

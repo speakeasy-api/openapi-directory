@@ -8,20 +8,14 @@ import (
 	"openapi/pkg/types"
 )
 
-type PUTCustomObjectRecordPathParams struct {
-	// Id identifier in uuid form
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Specifies the custom object's API name as object. It is case-sensitive.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type PUTCustomObjectRecordHeaders struct {
+type PUTCustomObjectRecordRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The expected ETag of the resource. You can use this header to perform a conditional request. Zuora responds with 412 Precondition Failed if the ETag of the resource does not match the value of this header.
 	//
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	IfMatch     *string                `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -32,12 +26,10 @@ type PUTCustomObjectRecordHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type PUTCustomObjectRecordRequest struct {
-	PathParams PUTCustomObjectRecordPathParams
-	Headers    PUTCustomObjectRecordHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
+	// Id identifier in uuid form
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Specifies the custom object's API name as object. It is case-sensitive.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
 
 type PUTCustomObjectRecordResponse struct {

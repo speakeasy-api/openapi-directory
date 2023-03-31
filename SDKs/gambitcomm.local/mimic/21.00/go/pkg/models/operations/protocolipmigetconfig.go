@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolIpmiGetConfigPathParams struct {
+type ProtocolIpmiGetConfigRequest struct {
 	// Agent to show the IPMI configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolIpmiGetConfigRequest struct {
-	PathParams ProtocolIpmiGetConfigPathParams
 }
 
 type ProtocolIpmiGetConfigResponse struct {

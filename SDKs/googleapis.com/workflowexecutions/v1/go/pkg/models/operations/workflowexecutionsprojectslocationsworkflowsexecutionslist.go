@@ -10,13 +10,8 @@ import (
 )
 
 type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListPathParams struct {
-	// Required. Name of the workflow for which the executions should be listed. Format: projects/{project}/locations/{location}/workflows/{workflow}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListViewEnum - Optional. A view defining which fields should be filled in the returned executions. The API will default to the BASIC view.
@@ -46,7 +41,7 @@ func (e *WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListViewEnum) Unm
 	}
 }
 
-type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListQueryParams struct {
+type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListQueryParams struc
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListExecutions` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListExecutions` must match the call that provided the page token. Note that pagination is applied to dynamic data. The list of executions returned can change between page requests.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Name of the workflow for which the executions should be listed. Format: projects/{project}/locations/{location}/workflows/{workflow}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -79,12 +76,6 @@ type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListQueryParams struc
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. A view defining which fields should be filled in the returned executions. The API will default to the BASIC view.
 	View *WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListRequest struct {
-	PathParams  WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListPathParams
-	QueryParams WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListQueryParams
-	Security    WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListSecurity
 }
 
 type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListResponse struct {

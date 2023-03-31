@@ -36,14 +36,14 @@ func newMassUpdater(defaultClient, securityClient HTTPClient, serverURL, languag
 // Describes how to get information about the result of a mass action through the REST API.
 func (s *massUpdater) GETMassUpdater(ctx context.Context, request operations.GETMassUpdaterRequest) (*operations.GETMassUpdaterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bulk/{bulk-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/bulk/{bulk-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,7 +91,7 @@ func (s *massUpdater) POSTMassUpdater(ctx context.Context, request operations.PO
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/bulk"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *massUpdater) POSTMassUpdater(ctx context.Context, request operations.PO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -154,14 +154,14 @@ func (s *massUpdater) POSTMassUpdater(ctx context.Context, request operations.PO
 // Records that have already been processed when a mass action is stopped are not rolled back.
 func (s *massUpdater) PUTMassUpdater(ctx context.Context, request operations.PUTMassUpdaterRequest) (*operations.PUTMassUpdaterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bulk/{bulk-key}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/bulk/{bulk-key}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

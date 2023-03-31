@@ -50,16 +50,12 @@ func (e *GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum
 	}
 }
 
-type GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLPathParams struct {
+type GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLRequest struct {
 	// Your API key for calling this service.
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// Version of the service to call. The current version is 1
 	VersionNumber GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	WmtsVersion   GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum   `pathParam:"style=simple,explode=false,name=wmtsVersion"`
-}
-
-type GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLRequest struct {
-	PathParams GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLPathParams
 }
 
 type GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLResponse struct {

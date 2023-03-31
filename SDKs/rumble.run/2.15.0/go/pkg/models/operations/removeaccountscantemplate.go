@@ -8,17 +8,12 @@ import (
 )
 
 type RemoveAccountScanTemplateSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveAccountScanTemplatePathParams struct {
-	// UUID of the scan template to remove
-	ScanTemplateID string `pathParam:"style=simple,explode=false,name=scan_template_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveAccountScanTemplateRequest struct {
-	PathParams RemoveAccountScanTemplatePathParams
-	Security   RemoveAccountScanTemplateSecurity
+	// UUID of the scan template to remove
+	ScanTemplateID string `pathParam:"style=simple,explode=false,name=scan_template_id"`
 }
 
 type RemoveAccountScanTemplateResponse struct {

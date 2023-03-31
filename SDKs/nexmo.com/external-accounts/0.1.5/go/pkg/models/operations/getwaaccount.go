@@ -8,18 +8,13 @@ import (
 )
 
 type GetWAAccountSecurity struct {
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWAAccountPathParams struct {
-	// External id of the account you want to retrieve. In this case it will be the WhatsApp number.
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string                 `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWAAccountRequest struct {
-	PathParams GetWAAccountPathParams
-	Security   GetWAAccountSecurity
+	// External id of the account you want to retrieve. In this case it will be the WhatsApp number.
+	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 }
 
 type GetWAAccountResponse struct {

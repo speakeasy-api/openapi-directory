@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // VpcaccessProjectsLocationsConnectorsCreate - Creates a Serverless VPC Access connector, returns an operation.
-func (s *projects) VpcaccessProjectsLocationsConnectorsCreate(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsCreateRequest) (*operations.VpcaccessProjectsLocationsConnectorsCreateResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsConnectorsCreate(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsCreateRequest, security operations.VpcaccessProjectsLocationsConnectorsCreateSecurity) (*operations.VpcaccessProjectsLocationsConnectorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectorInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsCreate(ctx context.Contex
 }
 
 // VpcaccessProjectsLocationsConnectorsDelete - Deletes a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
-func (s *projects) VpcaccessProjectsLocationsConnectorsDelete(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsDeleteRequest) (*operations.VpcaccessProjectsLocationsConnectorsDeleteResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsConnectorsDelete(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsDeleteRequest, security operations.VpcaccessProjectsLocationsConnectorsDeleteSecurity) (*operations.VpcaccessProjectsLocationsConnectorsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsDelete(ctx context.Contex
 }
 
 // VpcaccessProjectsLocationsConnectorsList - Lists Serverless VPC Access connectors.
-func (s *projects) VpcaccessProjectsLocationsConnectorsList(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsListRequest) (*operations.VpcaccessProjectsLocationsConnectorsListResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsConnectorsList(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsListRequest, security operations.VpcaccessProjectsLocationsConnectorsListSecurity) (*operations.VpcaccessProjectsLocationsConnectorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsList(ctx context.Context,
 }
 
 // VpcaccessProjectsLocationsConnectorsPatch - Updates a Serverless VPC Access connector, returns an operation.
-func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsPatchRequest) (*operations.VpcaccessProjectsLocationsConnectorsPatchResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsPatchRequest, security operations.VpcaccessProjectsLocationsConnectorsPatchSecurity) (*operations.VpcaccessProjectsLocationsConnectorsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectorInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +238,20 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context
 }
 
 // VpcaccessProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) VpcaccessProjectsLocationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsListRequest) (*operations.VpcaccessProjectsLocationsListResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsListRequest, security operations.VpcaccessProjectsLocationsListSecurity) (*operations.VpcaccessProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,20 +286,20 @@ func (s *projects) VpcaccessProjectsLocationsList(ctx context.Context, request o
 }
 
 // VpcaccessProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) VpcaccessProjectsLocationsOperationsGet(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsGetRequest) (*operations.VpcaccessProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsOperationsGet(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsGetRequest, security operations.VpcaccessProjectsLocationsOperationsGetSecurity) (*operations.VpcaccessProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,20 +334,20 @@ func (s *projects) VpcaccessProjectsLocationsOperationsGet(ctx context.Context, 
 }
 
 // VpcaccessProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) VpcaccessProjectsLocationsOperationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsListRequest) (*operations.VpcaccessProjectsLocationsOperationsListResponse, error) {
+func (s *projects) VpcaccessProjectsLocationsOperationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsListRequest, security operations.VpcaccessProjectsLocationsOperationsListSecurity) (*operations.VpcaccessProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

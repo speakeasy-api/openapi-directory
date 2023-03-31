@@ -12,14 +12,8 @@ var CreateDeploymentServerList = []string{
 }
 
 type CreateDeploymentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateDeploymentPathParams struct {
-	// The SID of the Environment for the Deployment.
-	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
-	// The SID of the Service to create the Deployment resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateDeploymentCreateDeploymentRequest struct {
@@ -28,10 +22,11 @@ type CreateDeploymentCreateDeploymentRequest struct {
 }
 
 type CreateDeploymentRequest struct {
-	PathParams CreateDeploymentPathParams
-	Request    *CreateDeploymentCreateDeploymentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateDeploymentSecurity
-	ServerURL  *string
+	// The SID of the Environment for the Deployment.
+	EnvironmentSid string                                   `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
+	RequestBody    *CreateDeploymentCreateDeploymentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to create the Deployment resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateDeploymentResponse struct {

@@ -34,7 +34,7 @@ func newStages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Order of Staged Upgrade Groups in a network
 func (s *stages) GetNetworkFirmwareUpgradesStagedStages(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedStagesRequest) (*operations.GetNetworkFirmwareUpgradesStagedStagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *stages) GetNetworkFirmwareUpgradesStagedStages(ctx context.Context, req
 // Assign Staged Upgrade Group order in the sequence.
 func (s *stages) UpdateNetworkFirmwareUpgradesStagedStages(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedStagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

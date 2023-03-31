@@ -34,7 +34,7 @@ func newCustomerSegments(defaultClient, securityClient HTTPClient, serverURL, la
 
 // ListCustomerSegments - ListCustomerSegments
 // Retrieves the list of customer segments of a business.
-func (s *customerSegments) ListCustomerSegments(ctx context.Context, request operations.ListCustomerSegmentsRequest) (*operations.ListCustomerSegmentsResponse, error) {
+func (s *customerSegments) ListCustomerSegments(ctx context.Context, request operations.ListCustomerSegmentsRequest, security operations.ListCustomerSegmentsSecurity) (*operations.ListCustomerSegmentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customers/segments"
 
@@ -43,11 +43,11 @@ func (s *customerSegments) ListCustomerSegments(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,16 +83,16 @@ func (s *customerSegments) ListCustomerSegments(ctx context.Context, request ope
 
 // RetrieveCustomerSegment - RetrieveCustomerSegment
 // Retrieves a specific customer segment as identified by the `segment_id` value.
-func (s *customerSegments) RetrieveCustomerSegment(ctx context.Context, request operations.RetrieveCustomerSegmentRequest) (*operations.RetrieveCustomerSegmentResponse, error) {
+func (s *customerSegments) RetrieveCustomerSegment(ctx context.Context, request operations.RetrieveCustomerSegmentRequest, security operations.RetrieveCustomerSegmentSecurity) (*operations.RetrieveCustomerSegmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/segments/{segment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/segments/{segment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

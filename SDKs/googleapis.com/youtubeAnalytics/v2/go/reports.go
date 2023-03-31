@@ -33,7 +33,7 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // YoutubeAnalyticsReportsQuery - Retrieve your YouTube Analytics reports.
-func (s *reports) YoutubeAnalyticsReportsQuery(ctx context.Context, request operations.YoutubeAnalyticsReportsQueryRequest) (*operations.YoutubeAnalyticsReportsQueryResponse, error) {
+func (s *reports) YoutubeAnalyticsReportsQuery(ctx context.Context, request operations.YoutubeAnalyticsReportsQueryRequest, security operations.YoutubeAnalyticsReportsQuerySecurity) (*operations.YoutubeAnalyticsReportsQueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/reports"
 
@@ -42,11 +42,11 @@ func (s *reports) YoutubeAnalyticsReportsQuery(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

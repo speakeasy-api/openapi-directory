@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_header=shared.SchemeAPIKeyHeader(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.RotoballerArticlesRequest(
-    path_params=operations.RotoballerArticlesPathParams(
-        format="xml",
+        api_key_header="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.RotoballerArticlesRequest(
+    format="json",
 )
     
 res = s.rotoballer_articles(req)

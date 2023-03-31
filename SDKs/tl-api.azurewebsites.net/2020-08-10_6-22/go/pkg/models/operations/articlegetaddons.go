@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetAddonsQueryParams struct {
+type ArticleGetAddonsRequest struct {
 	// Comma separated gymIds deafult "-1" for all gyms
 	GymIds *string `queryParam:"style=form,explode=true,name=gymIds"`
 	Limit  *int    `queryParam:"style=form,explode=true,name=limit"`
@@ -15,10 +15,6 @@ type ArticleGetAddonsQueryParams struct {
 	// Search text - will be search by the name
 	SearchText *string `queryParam:"style=form,explode=true,name=searchText"`
 	Type       *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ArticleGetAddonsRequest struct {
-	QueryParams ArticleGetAddonsQueryParams
 }
 
 type ArticleGetAddonsResponse struct {

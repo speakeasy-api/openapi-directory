@@ -4,24 +4,21 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AdexperiencereportSitesGetRequest(
-    path_params=operations.AdexperiencereportSitesGetPathParams(
-        name="in",
-    ),
-    query_params=operations.AdexperiencereportSitesGetQueryParams(
-        dollar_xgafv="2",
-        access_token="illum",
-        alt="media",
-        callback="earum",
-        fields="temporibus",
-        key="earum",
-        oauth_token="esse",
-        pretty_print=False,
-        quota_user="doloremque",
-        upload_type="deserunt",
-        upload_protocol="maiores",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
 res = s.sites.adexperiencereport_sites_get(req)

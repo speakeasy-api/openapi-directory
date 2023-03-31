@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DelIpaliasPathParams struct {
+type DelIpaliasRequest struct {
 	// IP address , IPv4 or IPv6
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to delete the IP alias
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMP port , 0 or empty for default
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type DelIpaliasRequest struct {
-	PathParams DelIpaliasPathParams
 }
 
 type DelIpaliasResponse struct {

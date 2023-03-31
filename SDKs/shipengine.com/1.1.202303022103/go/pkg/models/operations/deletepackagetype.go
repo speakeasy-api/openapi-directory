@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePackageTypePathParams struct {
+type DeletePackageTypeRequest struct {
 	// Package ID
 	PackageID string `pathParam:"style=simple,explode=false,name=package_id"`
-}
-
-type DeletePackageTypeRequest struct {
-	PathParams DeletePackageTypePathParams
 }
 
 type DeletePackageTypeResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetzipcodeinfoQueryParams struct {
+type GetzipcodeinfoRequest struct {
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
 	// Zip code to retrieve detailed information
 	Zip string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetzipcodeinfoRequest struct {
-	QueryParams GetzipcodeinfoQueryParams
 }
 
 // Getzipcodeinfo200ApplicationJSON - Zip code detailed code information

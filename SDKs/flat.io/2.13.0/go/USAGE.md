@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAuthenticatedUserRequest{
-        Security: operations.GetAuthenticatedUserSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetAuthenticatedUserQueryParams{
-            OnlyID: false,
-        },
+        OnlyID: false,
     }
 
     ctx := context.Background()
-    res, err := s.Account.GetAuthenticatedUser(ctx, req)
+    res, err := s.Account.GetAuthenticatedUser(ctx, req, operations.GetAuthenticatedUserSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

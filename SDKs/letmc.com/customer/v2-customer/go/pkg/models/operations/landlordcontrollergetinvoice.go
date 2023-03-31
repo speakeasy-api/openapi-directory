@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type LandlordControllerGetInvoicePathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerGetInvoiceQueryParams struct {
+type LandlordControllerGetInvoiceRequest struct {
 	// The invoice ID to load.
 	InvoiceID string `queryParam:"style=form,explode=true,name=invoiceID"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type LandlordControllerGetInvoiceRequest struct {
-	PathParams  LandlordControllerGetInvoicePathParams
-	QueryParams LandlordControllerGetInvoiceQueryParams
 }
 
 type LandlordControllerGetInvoiceResponse struct {

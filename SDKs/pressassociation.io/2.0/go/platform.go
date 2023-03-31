@@ -33,16 +33,16 @@ func newPlatform(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetPlatform - Platform Detail
 // Return the content of the selected platform.
-func (s *platform) GetPlatform(ctx context.Context, request operations.GetPlatformRequest) (*operations.GetPlatformResponse, error) {
+func (s *platform) GetPlatform(ctx context.Context, request operations.GetPlatformRequest, security operations.GetPlatformSecurity) (*operations.GetPlatformResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *platform) GetPlatform(ctx context.Context, request operations.GetPlatfo
 
 // ListPlatformRegions - Platform Region Collection
 // Return a list of regions for a platform.
-func (s *platform) ListPlatformRegions(ctx context.Context, request operations.ListPlatformRegionsRequest) (*operations.ListPlatformRegionsResponse, error) {
+func (s *platform) ListPlatformRegions(ctx context.Context, request operations.ListPlatformRegionsRequest, security operations.ListPlatformRegionsSecurity) (*operations.ListPlatformRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}/region", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}/region", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *platform) ListPlatformRegions(ctx context.Context, request operations.L
 
 // ListPlatforms - Platform Collection
 // Return a list of available platforms.
-func (s *platform) ListPlatforms(ctx context.Context, request operations.ListPlatformsRequest) (*operations.ListPlatformsResponse, error) {
+func (s *platform) ListPlatforms(ctx context.Context, request operations.ListPlatformsRequest, security operations.ListPlatformsSecurity) (*operations.ListPlatformsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/platform"
 
@@ -136,11 +136,11 @@ func (s *platform) ListPlatforms(ctx context.Context, request operations.ListPla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

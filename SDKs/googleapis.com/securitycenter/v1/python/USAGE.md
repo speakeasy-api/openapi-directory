@@ -4,40 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest(
-    security=operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.SecuritycenterOrganizationsAssetsRunDiscoveryPathParams(
-        parent="officiis",
-    ),
-    query_params=operations.SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams(
-        dollar_xgafv="1",
-        access_token="omnis",
-        alt="media",
-        callback="ullam",
-        fields="molestiae",
-        key="facere",
-        oauth_token="non",
-        pretty_print=True,
-        quota_user="quis",
-        upload_type="iure",
-        upload_protocol="neque",
-    ),
-    request={
-        "aspernatur": "sed",
-        "temporibus": "culpa",
-        "soluta": "dolor",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    parent="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.organizations.securitycenter_organizations_assets_run_discovery(req)
+res = s.organizations.securitycenter_organizations_assets_run_discovery(req, operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWarehouseByIDPathParams struct {
+type GetWarehouseByIDRequest struct {
 	// Warehouse ID
 	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouse_id"`
-}
-
-type GetWarehouseByIDRequest struct {
-	PathParams GetWarehouseByIDPathParams
 }
 
 type GetWarehouseByIDResponse struct {

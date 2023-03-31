@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPlatformsReadPathParams struct {
+type DcimPlatformsReadRequest struct {
 	// A unique integer value identifying this platform.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPlatformsReadRequest struct {
-	PathParams DcimPlatformsReadPathParams
 }
 
 type DcimPlatformsReadResponse struct {

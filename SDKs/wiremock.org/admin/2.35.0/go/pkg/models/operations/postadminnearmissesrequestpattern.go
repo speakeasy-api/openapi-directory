@@ -35,10 +35,6 @@ type PostAdminNearMissesRequestPatternRequestBody struct {
 	URLPattern *string `json:"urlPattern,omitempty"`
 }
 
-type PostAdminNearMissesRequestPatternRequest struct {
-	Request PostAdminNearMissesRequestPatternRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAdminNearMissesRequestPattern200ApplicationJSONNearMisses struct {
 	// The full URL to match against
 	AbsoluteURL *string `json:"absoluteUrl,omitempty"`

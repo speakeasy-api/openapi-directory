@@ -34,6 +34,7 @@ pkg/models/operations/datastreamprojectslocationsstreamsobjectsstopbackfilljob.g
 pkg/models/operations/datastreamprojectslocationsstreamspatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/connectionprofile.go
 pkg/models/shared/privateconnectivity.go
 pkg/models/shared/postgresqlprofile.go
@@ -42,9 +43,7 @@ pkg/models/shared/mysqlprofile.go
 pkg/models/shared/mysqlsslconfig.go
 pkg/models/shared/gcsprofile.go
 pkg/models/shared/forwardsshtunnelconnectivity.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/discoverconnectionprofileresponse.go
 pkg/models/shared/postgresqlrdbms.go
 pkg/models/shared/postgresqlschema.go

@@ -12,7 +12,8 @@ var CreateServiceServerList = []string{
 }
 
 type CreateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceCreateServiceRequest struct {
@@ -50,12 +51,6 @@ type CreateServiceCreateServiceRequest struct {
 	TotpTimeStep *int64 `form:"name=Totp.TimeStep"`
 	// The name of an alternative text-to-speech service to use in phone calls. Applies only to TTS languages.
 	TtsName *string `form:"name=TtsName"`
-}
-
-type CreateServiceRequest struct {
-	Request   *CreateServiceCreateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateServiceSecurity
-	ServerURL *string
 }
 
 type CreateServiceResponse struct {

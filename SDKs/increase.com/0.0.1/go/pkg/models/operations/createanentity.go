@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnEntityRequest struct {
-	Request shared.CreateAnEntityParameters `request:"mediaType=application/json"`
-}
-
 type CreateAnEntityDefaultApplicationJSON13StatusEnum string
 
 const (

@@ -33,11 +33,11 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DoubleclicksearchReportsGenerate - Generates and returns a report immediately.
-func (s *reports) DoubleclicksearchReportsGenerate(ctx context.Context, request operations.DoubleclicksearchReportsGenerateRequest) (*operations.DoubleclicksearchReportsGenerateResponse, error) {
+func (s *reports) DoubleclicksearchReportsGenerate(ctx context.Context, request operations.DoubleclicksearchReportsGenerateRequest, security operations.DoubleclicksearchReportsGenerateSecurity) (*operations.DoubleclicksearchReportsGenerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/doubleclicksearch/v2/reports/generate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *reports) DoubleclicksearchReportsGenerate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *reports) DoubleclicksearchReportsGenerate(ctx context.Context, request 
 }
 
 // DoubleclicksearchReportsGet - Polls for the status of a report request.
-func (s *reports) DoubleclicksearchReportsGet(ctx context.Context, request operations.DoubleclicksearchReportsGetRequest) (*operations.DoubleclicksearchReportsGetResponse, error) {
+func (s *reports) DoubleclicksearchReportsGet(ctx context.Context, request operations.DoubleclicksearchReportsGetRequest, security operations.DoubleclicksearchReportsGetSecurity) (*operations.DoubleclicksearchReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *reports) DoubleclicksearchReportsGet(ctx context.Context, request opera
 }
 
 // DoubleclicksearchReportsGetFile - Downloads a report file encoded in UTF-8.
-func (s *reports) DoubleclicksearchReportsGetFile(ctx context.Context, request operations.DoubleclicksearchReportsGetFileRequest) (*operations.DoubleclicksearchReportsGetFileResponse, error) {
+func (s *reports) DoubleclicksearchReportsGetFile(ctx context.Context, request operations.DoubleclicksearchReportsGetFileRequest, security operations.DoubleclicksearchReportsGetFileSecurity) (*operations.DoubleclicksearchReportsGetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,20 +175,20 @@ func (s *reports) DoubleclicksearchReportsGetFile(ctx context.Context, request o
 }
 
 // DoubleclicksearchReportsGetIDMappingFile - Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new SA360. The file includes all children entities of the given advertiser(e.g. engine accounts, campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
-func (s *reports) DoubleclicksearchReportsGetIDMappingFile(ctx context.Context, request operations.DoubleclicksearchReportsGetIDMappingFileRequest) (*operations.DoubleclicksearchReportsGetIDMappingFileResponse, error) {
+func (s *reports) DoubleclicksearchReportsGetIDMappingFile(ctx context.Context, request operations.DoubleclicksearchReportsGetIDMappingFileRequest, security operations.DoubleclicksearchReportsGetIDMappingFileSecurity) (*operations.DoubleclicksearchReportsGetIDMappingFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *reports) DoubleclicksearchReportsGetIDMappingFile(ctx context.Context, 
 }
 
 // DoubleclicksearchReportsRequest - Inserts a report request into the reporting system.
-func (s *reports) DoubleclicksearchReportsRequest(ctx context.Context, request operations.DoubleclicksearchReportsRequestRequest) (*operations.DoubleclicksearchReportsRequestResponse, error) {
+func (s *reports) DoubleclicksearchReportsRequest(ctx context.Context, request operations.DoubleclicksearchReportsRequestRequest, security operations.DoubleclicksearchReportsRequestSecurity) (*operations.DoubleclicksearchReportsRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/doubleclicksearch/v2/reports"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *reports) DoubleclicksearchReportsRequest(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

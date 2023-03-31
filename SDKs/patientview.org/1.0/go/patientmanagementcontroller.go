@@ -37,7 +37,7 @@ func newPatientManagementController(defaultClient, securityClient HTTPClient, se
 // getPatientManagement
 func (s *patientManagementController) GetPatientManagement(ctx context.Context, request operations.GetPatientManagementRequest) (*operations.GetPatientManagementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,9 +187,9 @@ func (s *patientManagementController) GetPatientManagementLookupTypes(ctx contex
 // savePatientManagement
 func (s *patientManagementController) SavePatientManagement(ctx context.Context, request operations.SavePatientManagementRequest) (*operations.SavePatientManagementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientManagement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,9 +238,9 @@ func (s *patientManagementController) SavePatientManagement(ctx context.Context,
 // savePatientManagementSurgeries
 func (s *patientManagementController) SavePatientManagementSurgeries(ctx context.Context, request operations.SavePatientManagementSurgeriesRequest) (*operations.SavePatientManagementSurgeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}/surgeries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}/surgeries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientManagement", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -287,7 +287,7 @@ func (s *patientManagementController) SavePatientManagementSurgeries(ctx context
 
 // ValidatePatientManagement - validatePatientManagement
 // validatePatientManagement
-func (s *patientManagementController) ValidatePatientManagement(ctx context.Context, request operations.ValidatePatientManagementRequest) (*operations.ValidatePatientManagementResponse, error) {
+func (s *patientManagementController) ValidatePatientManagement(ctx context.Context, request shared.PatientManagement) (*operations.ValidatePatientManagementResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/patientmanagement/validate"
 

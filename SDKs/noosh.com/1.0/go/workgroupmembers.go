@@ -36,7 +36,7 @@ func newWorkgroupMembers(defaultClient, securityClient HTTPClient, serverURL, la
 // Workgroup Member Info
 func (s *workgroupMembers) GetWorkgroupMemberInfo(ctx context.Context, request operations.GetWorkgroupMemberInfoRequest) (*operations.GetWorkgroupMemberInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/workgroupMembers/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/workgroupMembers/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *workgroupMembers) GetWorkgroupMemberInfo(ctx context.Context, request o
 // List the workgroup members
 func (s *workgroupMembers) GetWorkgroupMemberList(ctx context.Context, request operations.GetWorkgroupMemberListRequest) (*operations.GetWorkgroupMemberListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/workgroupMembers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/workgroupMembers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

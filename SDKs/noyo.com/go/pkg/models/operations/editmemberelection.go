@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditMemberElectionPathParams struct {
+type EditMemberElectionRequest struct {
+	MemberElectionEditRequest shared.MemberElectionEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the member election in Noyo
 	MemberElectionID string `pathParam:"style=simple,explode=false,name=member_election_id"`
 	// The current version identifier of the member election
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditMemberElectionRequest struct {
-	PathParams EditMemberElectionPathParams
-	Request    shared.MemberElectionEditRequest `request:"mediaType=application/json"`
 }
 
 type EditMemberElectionResponse struct {

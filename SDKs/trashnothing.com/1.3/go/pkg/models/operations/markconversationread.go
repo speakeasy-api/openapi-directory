@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type MarkConversationReadPathParams struct {
-	// The ID of the conversation to mark as read.
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 type MarkConversationReadRequestBody struct {
 	// The ID of the newest message in the conversation that the current user has read.
 	MessageID string `multipartForm:"name=message_id"`
 }
 
 type MarkConversationReadRequest struct {
-	PathParams MarkConversationReadPathParams
-	Request    MarkConversationReadRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody MarkConversationReadRequestBody `request:"mediaType=multipart/form-data"`
+	// The ID of the conversation to mark as read.
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 type MarkConversationReadResponse struct {

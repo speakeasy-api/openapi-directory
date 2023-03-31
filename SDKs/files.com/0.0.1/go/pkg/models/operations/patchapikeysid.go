@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type PatchAPIKeysIDPathParams struct {
-	// Api Key ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchAPIKeysIDRequestBodyPermissionSetEnum - Permissions for this API Key.  Keys with the `desktop_app` permission set only have the ability to do the functions provided in our Desktop App (File and Share Link operations).  Additional permission sets may become available in the future, such as for a Site Admin to give a key with no administrator privileges.  If you have ideas for permission sets, please let us know.
 type PatchAPIKeysIDRequestBodyPermissionSetEnum string
 
@@ -63,8 +58,9 @@ type PatchAPIKeysIDRequestBody struct {
 }
 
 type PatchAPIKeysIDRequest struct {
-	PathParams PatchAPIKeysIDPathParams
-	Request    *PatchAPIKeysIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchAPIKeysIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Api Key ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchAPIKeysIDResponse struct {

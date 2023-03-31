@@ -33,7 +33,7 @@ func newCiscoSNTC(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ExportAssetsCiscoCSV - Cisco serial number and model name export for Cisco Smart Net Total Care Service.
-func (s *ciscoSNTC) ExportAssetsCiscoCSV(ctx context.Context, request operations.ExportAssetsCiscoCSVRequest) (*operations.ExportAssetsCiscoCSVResponse, error) {
+func (s *ciscoSNTC) ExportAssetsCiscoCSV(ctx context.Context, request operations.ExportAssetsCiscoCSVRequest, security operations.ExportAssetsCiscoCSVSecurity) (*operations.ExportAssetsCiscoCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/assets.cisco.csv"
 
@@ -42,11 +42,11 @@ func (s *ciscoSNTC) ExportAssetsCiscoCSV(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

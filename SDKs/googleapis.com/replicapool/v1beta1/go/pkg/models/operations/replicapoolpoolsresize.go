@@ -8,18 +8,18 @@ import (
 )
 
 type ReplicapoolPoolsResizeSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsResizeSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsResizeSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplicapoolPoolsResizeSecurity struct {
@@ -28,16 +28,7 @@ type ReplicapoolPoolsResizeSecurity struct {
 	Option3 *ReplicapoolPoolsResizeSecurityOption3 `security:"option"`
 }
 
-type ReplicapoolPoolsResizePathParams struct {
-	// The name of the replica pool for this request.
-	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
-	// The project ID for this replica pool.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The zone for this replica pool.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ReplicapoolPoolsResizeQueryParams struct {
+type ReplicapoolPoolsResizeRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -48,18 +39,18 @@ type ReplicapoolPoolsResizeQueryParams struct {
 	NumReplicas *int64 `queryParam:"style=form,explode=true,name=numReplicas"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The name of the replica pool for this request.
+	PoolName string `pathParam:"style=simple,explode=false,name=poolName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The project ID for this replica pool.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type ReplicapoolPoolsResizeRequest struct {
-	PathParams  ReplicapoolPoolsResizePathParams
-	QueryParams ReplicapoolPoolsResizeQueryParams
-	Security    ReplicapoolPoolsResizeSecurity
+	// The zone for this replica pool.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ReplicapoolPoolsResizeResponse struct {

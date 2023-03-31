@@ -8,13 +8,8 @@ import (
 )
 
 type PostTracksSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostTracksRequest struct {
-	Request  *shared.TrackDataRequest `request:"mediaType=multipart/form-data"`
-	Security PostTracksSecurity
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type PostTracksResponse struct {

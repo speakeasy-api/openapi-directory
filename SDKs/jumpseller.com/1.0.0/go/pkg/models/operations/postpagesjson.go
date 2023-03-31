@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostPagesJSONQueryParams struct {
+type PostPagesJSONRequest struct {
+	// Page parameters.
+	PageModify shared.PageModify `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostPagesJSONRequest struct {
-	QueryParams PostPagesJSONQueryParams
-	// Page parameters.
-	Request shared.PageModify `request:"mediaType=application/json"`
 }
 
 type PostPagesJSONResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDependentPathParams struct {
+type CreateDependentRequest struct {
+	DependentCreateRequest shared.DependentCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the employee in Noyo
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employee_id"`
-}
-
-type CreateDependentRequest struct {
-	PathParams CreateDependentPathParams
-	Request    shared.DependentCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateDependentResponse struct {

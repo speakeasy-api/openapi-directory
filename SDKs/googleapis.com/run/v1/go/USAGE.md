@@ -14,36 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.RunNamespacesAuthorizeddomainsListRequest{
-        Security: operations.RunNamespacesAuthorizeddomainsListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.RunNamespacesAuthorizeddomainsListPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.RunNamespacesAuthorizeddomainsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PageSize: 423655,
-            PageToken: "error",
-            PrettyPrint: false,
-            QuotaUser: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PageSize: 847252,
+        PageToken: "vel",
+        Parent: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Namespaces.RunNamespacesAuthorizeddomainsList(ctx, req)
+    res, err := s.Namespaces.RunNamespacesAuthorizeddomainsList(ctx, req, operations.RunNamespacesAuthorizeddomainsListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

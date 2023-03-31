@@ -9,7 +9,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQueryQueryParams struct {
+type GetQueryRequest struct {
 	// If set to *full*, response will include query explanations in addition to the result.
 	Explain *string `queryParam:"style=form,explode=true,name=explain"`
 	// If true, compiler performance metrics will be returned in the response.
@@ -18,10 +18,6 @@ type GetQueryQueryParams struct {
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
 	// The [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.ASP) ad-hoc query to execute.
 	Q string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetQueryRequest struct {
-	QueryParams GetQueryQueryParams
 }
 
 type GetQuery200ApplicationJSONExplanationLocalsKey struct {

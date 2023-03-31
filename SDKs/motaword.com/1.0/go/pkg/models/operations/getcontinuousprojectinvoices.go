@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContinuousProjectInvoicesPathParams struct {
+type GetContinuousProjectInvoicesRequest struct {
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetContinuousProjectInvoicesRequest struct {
-	PathParams GetContinuousProjectInvoicesPathParams
 }
 
 type GetContinuousProjectInvoicesResponse struct {

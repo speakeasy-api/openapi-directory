@@ -14,19 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.PolicyCreateOrUpdateRequest{
-        PathParams: operations.PolicyCreateOrUpdatePathParams{
-            ID: "corrupti",
-        },
-        Headers: operations.PolicyCreateOrUpdateHeaders{
-            Accept: "provident",
-            ContentType: "distinctio",
-        },
-        Request: &shared.PolicySaveRequest{
-            Description: "quibusdam",
-            Name: "unde",
+        Accept: "corrupti",
+        ContentType: "provident",
+        PolicySaveRequest: &shared.PolicySaveRequest{
+            Description: "distinctio",
+            Name: "quibusdam",
             Statements: []shared.StatementGetResponse{
                 shared.StatementGetResponse{
                     Actions: []interface{}{
+                        "corrupti",
                         "illum",
                         "vel",
                         "error",
@@ -179,33 +175,9 @@ func main() {
                     Operation: "doloribus",
                     Resource: "sapiente",
                 },
-                shared.StatementGetResponse{
-                    Actions: []interface{}{
-                        "mollitia",
-                    },
-                    Condition: &shared.StatementGetResponseCondition{
-                        Conditions: []shared.StatementGetResponseConditionConditions{
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "consequuntur",
-                                    "repellat",
-                                    "mollitia",
-                                },
-                                Key: "occaecati",
-                                Operation: "numquam",
-                                Values: []string{
-                                    "quam",
-                                    "molestiae",
-                                },
-                            },
-                        },
-                    },
-                    Effect: "velit",
-                    Operation: "error",
-                    Resource: "quia",
-                },
             },
         },
+        ID: "architecto",
     }
 
     ctx := context.Background()

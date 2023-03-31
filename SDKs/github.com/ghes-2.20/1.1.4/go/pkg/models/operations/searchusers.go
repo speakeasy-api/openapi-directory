@@ -36,7 +36,7 @@ func (e *SearchUsersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchUsersQueryParams struct {
+type SearchUsersRequest struct {
 	// Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// Page number of the results to fetch.
@@ -47,10 +47,6 @@ type SearchUsersQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Sorts the results of your query by number of `followers` or `repositories`, or when the person `joined` GitHub Enterprise Server. Default: [best match](https://docs.github.com/enterprise-server@2.20/rest/reference/search#ranking-search-results)
 	Sort *SearchUsersSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchUsersRequest struct {
-	QueryParams SearchUsersQueryParams
 }
 
 // SearchUsers503ApplicationJSON - Service unavailable

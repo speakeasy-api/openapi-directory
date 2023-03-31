@@ -8,13 +8,13 @@ import (
 )
 
 type TagmanagerAccountsContainersSnippetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersSnippetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TagmanagerAccountsContainersSnippetSecurity struct {
@@ -22,12 +22,7 @@ type TagmanagerAccountsContainersSnippetSecurity struct {
 	Option2 *TagmanagerAccountsContainersSnippetSecurityOption2 `security:"option"`
 }
 
-type TagmanagerAccountsContainersSnippetPathParams struct {
-	// Container snippet's API relative path. Example: accounts/{account_id}/containers/{container_id}:snippet
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type TagmanagerAccountsContainersSnippetQueryParams struct {
+type TagmanagerAccountsContainersSnippetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type TagmanagerAccountsContainersSnippetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Container snippet's API relative path. Example: accounts/{account_id}/containers/{container_id}:snippet
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,12 +47,6 @@ type TagmanagerAccountsContainersSnippetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersSnippetRequest struct {
-	PathParams  TagmanagerAccountsContainersSnippetPathParams
-	QueryParams TagmanagerAccountsContainersSnippetQueryParams
-	Security    TagmanagerAccountsContainersSnippetSecurity
 }
 
 type TagmanagerAccountsContainersSnippetResponse struct {

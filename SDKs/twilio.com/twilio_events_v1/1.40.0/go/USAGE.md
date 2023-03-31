@@ -13,22 +13,17 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateSinkRequest{
-        Security: operations.CreateSinkSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: &operations.CreateSinkCreateSinkRequest{
-            Description: "corrupti",
-            SinkConfiguration: "provident",
-            SinkType: "segment",
-        },
+    req := operations.CreateSinkCreateSinkRequest{
+        Description: "corrupti",
+        SinkConfiguration: "provident",
+        SinkType: "segment",
     }
 
     ctx := context.Background()
-    res, err := s.CreateSink(ctx, req)
+    res, err := s.CreateSink(ctx, req, operations.CreateSinkSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

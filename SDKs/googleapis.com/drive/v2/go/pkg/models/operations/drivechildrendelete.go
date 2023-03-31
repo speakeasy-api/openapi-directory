@@ -8,13 +8,13 @@ import (
 )
 
 type DriveChildrenDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveChildrenDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveChildrenDeleteSecurity struct {
@@ -22,20 +22,17 @@ type DriveChildrenDeleteSecurity struct {
 	Option2 *DriveChildrenDeleteSecurityOption2 `security:"option"`
 }
 
-type DriveChildrenDeletePathParams struct {
-	// The ID of the child.
-	ChildID string `pathParam:"style=simple,explode=false,name=childId"`
-	// The ID of the folder.
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-}
-
-type DriveChildrenDeleteQueryParams struct {
+type DriveChildrenDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the child.
+	ChildID string `pathParam:"style=simple,explode=false,name=childId"`
 	// Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the folder.
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -46,12 +43,6 @@ type DriveChildrenDeleteQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveChildrenDeleteRequest struct {
-	PathParams  DriveChildrenDeletePathParams
-	QueryParams DriveChildrenDeleteQueryParams
-	Security    DriveChildrenDeleteSecurity
 }
 
 type DriveChildrenDeleteResponse struct {

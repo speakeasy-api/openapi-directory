@@ -14,22 +14,17 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAlphaSenderRequest{
-        Security: operations.CreateAlphaSenderSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+        RequestBody: &operations.CreateAlphaSenderCreateAlphaSenderRequest{
+            AlphaSender: "corrupti",
         },
-        PathParams: operations.CreateAlphaSenderPathParams{
-            ServiceSid: "corrupti",
-        },
-        Request: &operations.CreateAlphaSenderCreateAlphaSenderRequest{
-            AlphaSender: "provident",
-        },
+        ServiceSid: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.CreateAlphaSender(ctx, req)
+    res, err := s.CreateAlphaSender(ctx, req, operations.CreateAlphaSenderSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

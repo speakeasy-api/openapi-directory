@@ -8,22 +8,18 @@ import (
 )
 
 type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditPathParams struct {
-	// Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the parent negative keyword list to which the negative keywords belong.
-	NegativeKeywordListID string `pathParam:"style=simple,explode=false,name=negativeKeywordListId"`
-}
-
-type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditQueryParams struct {
+type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                          *shared.XgafvEnum                            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BulkEditNegativeKeywordsRequestInput *shared.BulkEditNegativeKeywordsRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -32,6 +28,8 @@ type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditQueryPar
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The ID of the parent negative keyword list to which the negative keywords belong.
+	NegativeKeywordListID string `pathParam:"style=simple,explode=false,name=negativeKeywordListId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditQueryPar
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest struct {
-	PathParams  DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditPathParams
-	QueryParams DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditQueryParams
-	Request     *shared.BulkEditNegativeKeywordsRequestInput `request:"mediaType=application/json"`
-	Security    DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditSecurity
 }
 
 type DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse struct {

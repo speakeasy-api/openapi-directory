@@ -43,7 +43,7 @@ func (s *payment) PaymentAPISupported(ctx context.Context, request operations.Pa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

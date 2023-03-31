@@ -8,17 +8,12 @@ import (
 )
 
 type GetSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetPathParams struct {
-	// Deletion Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetRequest struct {
-	PathParams GetPathParams
-	Security   GetSecurity
+	// Deletion Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetResponse struct {

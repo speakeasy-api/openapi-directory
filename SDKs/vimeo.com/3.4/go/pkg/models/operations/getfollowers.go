@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFollowersPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetFollowersDirectionEnum - The sort direction of the results.
 type GetFollowersDirectionEnum string
 
@@ -62,7 +57,7 @@ func (e *GetFollowersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFollowersQueryParams struct {
+type GetFollowersRequest struct {
 	// The sort direction of the results.
 	Direction *GetFollowersDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -73,11 +68,8 @@ type GetFollowersQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetFollowersSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFollowersRequest struct {
-	PathParams  GetFollowersPathParams
-	QueryParams GetFollowersQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetFollowersResponse struct {

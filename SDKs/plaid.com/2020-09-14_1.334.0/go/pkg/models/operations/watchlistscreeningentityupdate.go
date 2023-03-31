@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type WatchlistScreeningEntityUpdateRequest struct {
-	// The entity screening was successfully updated.
-	Request shared.WatchlistScreeningEntityUpdateRequest `request:"mediaType=application/json"`
-}
 
 type WatchlistScreeningEntityUpdateResponse struct {
 	ContentType string

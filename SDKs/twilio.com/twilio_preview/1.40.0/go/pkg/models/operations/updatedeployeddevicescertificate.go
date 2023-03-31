@@ -12,13 +12,8 @@ var UpdateDeployedDevicesCertificateServerList = []string{
 }
 
 type UpdateDeployedDevicesCertificateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDeployedDevicesCertificatePathParams struct {
-	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
-	// Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest struct {
@@ -29,10 +24,10 @@ type UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest str
 }
 
 type UpdateDeployedDevicesCertificateRequest struct {
-	PathParams UpdateDeployedDevicesCertificatePathParams
-	Request    *UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDeployedDevicesCertificateSecurity
-	ServerURL  *string
+	FleetSid    string                                                                   `pathParam:"style=simple,explode=false,name=FleetSid"`
+	RequestBody *UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateDeployedDevicesCertificateResponse struct {

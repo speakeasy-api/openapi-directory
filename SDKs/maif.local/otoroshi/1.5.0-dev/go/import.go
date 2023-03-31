@@ -35,7 +35,7 @@ func newImport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // FullExport - Export the full state of Otoroshi
 // Export the full state of Otoroshi
-func (s *importT) FullExport(ctx context.Context, request operations.FullExportRequest) (*operations.FullExportResponse, error) {
+func (s *importT) FullExport(ctx context.Context) (*operations.FullExportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/otoroshi.json"
 
@@ -44,7 +44,7 @@ func (s *importT) FullExport(ctx context.Context, request operations.FullExportR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *importT) FullExport(ctx context.Context, request operations.FullExportR
 
 // FullImport - Import the full state of Otoroshi
 // Import the full state of Otoroshi
-func (s *importT) FullImport(ctx context.Context, request operations.FullImportRequest) (*operations.FullImportResponse, error) {
+func (s *importT) FullImport(ctx context.Context, request shared.ImportExport, security operations.FullImportSecurity) (*operations.FullImportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/otoroshi.json"
 
@@ -101,7 +101,7 @@ func (s *importT) FullImport(ctx context.Context, request operations.FullImportR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,7 +142,7 @@ func (s *importT) FullImport(ctx context.Context, request operations.FullImportR
 
 // FullImportFromFile - Import the full state of Otoroshi as a file
 // Import the full state of Otoroshi as a file
-func (s *importT) FullImportFromFile(ctx context.Context, request operations.FullImportFromFileRequest) (*operations.FullImportFromFileResponse, error) {
+func (s *importT) FullImportFromFile(ctx context.Context, request shared.ImportExport, security operations.FullImportFromFileSecurity) (*operations.FullImportFromFileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/import"
 
@@ -158,7 +158,7 @@ func (s *importT) FullImportFromFile(ctx context.Context, request operations.Ful
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -32,20 +32,20 @@ func newAsps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // DirectoryAspsDelete - Deletes an ASP issued by a user.
-func (s *asps) DirectoryAspsDelete(ctx context.Context, request operations.DirectoryAspsDeleteRequest) (*operations.DirectoryAspsDeleteResponse, error) {
+func (s *asps) DirectoryAspsDelete(ctx context.Context, request operations.DirectoryAspsDeleteRequest, security operations.DirectoryAspsDeleteSecurity) (*operations.DirectoryAspsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *asps) DirectoryAspsDelete(ctx context.Context, request operations.Direc
 }
 
 // DirectoryAspsGet - Gets information about an ASP issued by a user.
-func (s *asps) DirectoryAspsGet(ctx context.Context, request operations.DirectoryAspsGetRequest) (*operations.DirectoryAspsGetResponse, error) {
+func (s *asps) DirectoryAspsGet(ctx context.Context, request operations.DirectoryAspsGetRequest, security operations.DirectoryAspsGetSecurity) (*operations.DirectoryAspsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *asps) DirectoryAspsGet(ctx context.Context, request operations.Director
 }
 
 // DirectoryAspsList - Lists the ASPs issued by a user.
-func (s *asps) DirectoryAspsList(ctx context.Context, request operations.DirectoryAspsListRequest) (*operations.DirectoryAspsListResponse, error) {
+func (s *asps) DirectoryAspsList(ctx context.Context, request operations.DirectoryAspsListRequest, security operations.DirectoryAspsListSecurity) (*operations.DirectoryAspsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

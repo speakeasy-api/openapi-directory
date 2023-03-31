@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTransactionsPathParams struct {
+type UpdateTransactionsRequest struct {
+	// The transactions to update. Each transaction must have either an `id` or `import_id` specified. If `id` is specified as null an `import_id` value can be provided which will allow transaction(s) to be updated by their `import_id`. If an `id` is specified, it will always be used for lookup.
+	PatchTransactionsWrapper shared.PatchTransactionsWrapper `request:"mediaType=application/json"`
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
-}
-
-type UpdateTransactionsRequest struct {
-	PathParams UpdateTransactionsPathParams
-	// The transactions to update. Each transaction must have either an `id` or `import_id` specified. If `id` is specified as null an `import_id` value can be provided which will allow transaction(s) to be updated by their `import_id`. If an `id` is specified, it will always be used for lookup.
-	Request shared.PatchTransactionsWrapper `request:"mediaType=application/json"`
 }
 
 type UpdateTransactionsResponse struct {

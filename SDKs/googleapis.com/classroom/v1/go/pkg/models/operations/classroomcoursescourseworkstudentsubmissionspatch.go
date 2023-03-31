@@ -8,13 +8,13 @@ import (
 )
 
 type ClassroomCoursesCourseWorkStudentSubmissionsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsPatchSecurity struct {
@@ -22,26 +22,24 @@ type ClassroomCoursesCourseWorkStudentSubmissionsPatchSecurity struct {
 	Option2 *ClassroomCoursesCourseWorkStudentSubmissionsPatchSecurityOption2 `security:"option"`
 }
 
-type ClassroomCoursesCourseWorkStudentSubmissionsPatchPathParams struct {
-	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
-	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
-	// Identifier of the course work.
-	CourseWorkID string `pathParam:"style=simple,explode=false,name=courseWorkId"`
-	// Identifier of the student submission.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClassroomCoursesCourseWorkStudentSubmissionsPatchQueryParams struct {
+type ClassroomCoursesCourseWorkStudentSubmissionsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv       *shared.XgafvEnum         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	StudentSubmission *shared.StudentSubmission `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
+	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
+	// Identifier of the course work.
+	CourseWorkID string `pathParam:"style=simple,explode=false,name=courseWorkId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifier of the student submission.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -56,13 +54,6 @@ type ClassroomCoursesCourseWorkStudentSubmissionsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesCourseWorkStudentSubmissionsPatchRequest struct {
-	PathParams  ClassroomCoursesCourseWorkStudentSubmissionsPatchPathParams
-	QueryParams ClassroomCoursesCourseWorkStudentSubmissionsPatchQueryParams
-	Request     *shared.StudentSubmission `request:"mediaType=application/json"`
-	Security    ClassroomCoursesCourseWorkStudentSubmissionsPatchSecurity
 }
 
 type ClassroomCoursesCourseWorkStudentSubmissionsPatchResponse struct {

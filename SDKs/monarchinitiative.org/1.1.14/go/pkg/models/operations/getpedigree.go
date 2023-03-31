@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPedigreePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetPedigreeRequest struct {
-	PathParams GetPedigreePathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPedigreeResponse struct {

@@ -36,7 +36,7 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteNotificationsID - Delete a Notification
 func (s *notifications) DeleteNotificationsID(ctx context.Context, request operations.DeleteNotificationsIDRequest) (*operations.DeleteNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *notifications) GetNotifications(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -162,7 +162,7 @@ func (s *notifications) GetNotificationsTypes(ctx context.Context) (*operations.
 }
 
 // PostNotifications - Create a Notification
-func (s *notifications) PostNotifications(ctx context.Context, request operations.PostNotificationsRequest) (*operations.PostNotificationsResponse, error) {
+func (s *notifications) PostNotifications(ctx context.Context, request shared.Notification) (*operations.PostNotificationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications"
 
@@ -255,9 +255,9 @@ func (s *notifications) PostNotificationsTest(ctx context.Context) (*operations.
 // PutNotificationsID - Update a Notification
 func (s *notifications) PutNotificationsID(ctx context.Context, request operations.PutNotificationsIDRequest) (*operations.PutNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Notification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

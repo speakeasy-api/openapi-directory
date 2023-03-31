@@ -3,40 +3,48 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AssociateFirewallRuleGroupRequest(
-    headers=operations.AssociateFirewallRuleGroupHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="non",
-        x_amz_credential="nulla",
-        x_amz_date="numquam",
-        x_amz_security_token="quia",
-        x_amz_signature="fugiat",
-        x_amz_signed_headers="laboriosam",
-        x_amz_target="Route53Resolver.AssociateFirewallRuleGroup",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AssociateFirewallRuleGroupRequest(
-        creator_request_id="nam",
-        firewall_rule_group_id="delectus",
-        mutation_protection="ENABLED",
-        name="incidunt",
-        priority=7383927136453695366,
+)
+
+
+req = operations.AssociateFirewallRuleGroupRequest(
+    associate_firewall_rule_group_request=shared.AssociateFirewallRuleGroupRequest(
+        creator_request_id="corrupti",
+        firewall_rule_group_id="provident",
+        mutation_protection="DISABLED",
+        name="quibusdam",
+        priority=602763,
         tags=[
             shared.Tag(
-                key="iste",
-                value="fuga",
+                key="corrupti",
+                value="illum",
+            ),
+            shared.Tag(
+                key="vel",
+                value="error",
+            ),
+            shared.Tag(
+                key="deserunt",
+                value="suscipit",
+            ),
+            shared.Tag(
+                key="iure",
+                value="magnam",
             ),
         ],
-        vpc_id="at",
+        vpc_id="debitis",
     ),
+    x_amz_algorithm="ipsa",
+    x_amz_content_sha256="delectus",
+    x_amz_credential="tempora",
+    x_amz_date="suscipit",
+    x_amz_security_token="molestiae",
+    x_amz_signature="minus",
+    x_amz_signed_headers="placeat",
+    x_amz_target="Route53Resolver.AssociateFirewallRuleGroup",
 )
     
 res = s.associate_firewall_rule_group(req)

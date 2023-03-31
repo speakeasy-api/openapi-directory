@@ -98,7 +98,7 @@ func (e *GetServersStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetServersQueryParams struct {
+type GetServersRequest struct {
 	// Can be used to filter resources by labels. The response will only contain resources matching the label selector.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter resources by their name. The response will only contain the resources matching the specified name
@@ -107,10 +107,6 @@ type GetServersQueryParams struct {
 	Sort *GetServersSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times. The response will only contain Server matching the status
 	Status *GetServersStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetServersRequest struct {
-	QueryParams GetServersQueryParams
 }
 
 type GetServers200ApplicationJSONMetaPagination struct {

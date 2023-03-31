@@ -10,13 +10,8 @@ import (
 )
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsListPathParams struct {
-	// Parent of the quotas resource. An example parent would be: `services/serviceconsumermanagement.googleapis.com/projects/123`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsListViewEnum - Specifies the level of detail for quota information in the response.
@@ -46,7 +41,7 @@ func (e *ServiceconsumermanagementServicesConsumerQuotaMetricsListViewEnum) Unma
 	}
 }
 
-type ServiceconsumermanagementServicesConsumerQuotaMetricsListQueryParams struct {
+type ServiceconsumermanagementServicesConsumerQuotaMetricsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -65,6 +60,8 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsListQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token identifying which result to start with; returned by a previous list call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Parent of the quotas resource. An example parent would be: `services/serviceconsumermanagement.googleapis.com/projects/123`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -75,12 +72,6 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsListQueryParams struct
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies the level of detail for quota information in the response.
 	View *ServiceconsumermanagementServicesConsumerQuotaMetricsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsListRequest struct {
-	PathParams  ServiceconsumermanagementServicesConsumerQuotaMetricsListPathParams
-	QueryParams ServiceconsumermanagementServicesConsumerQuotaMetricsListQueryParams
-	Security    ServiceconsumermanagementServicesConsumerQuotaMetricsListSecurity
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsListResponse struct {

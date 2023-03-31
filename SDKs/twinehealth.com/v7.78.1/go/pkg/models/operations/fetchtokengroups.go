@@ -8,17 +8,12 @@ import (
 )
 
 type FetchTokenGroupsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type FetchTokenGroupsPathParams struct {
-	// Token identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchTokenGroupsRequest struct {
-	PathParams FetchTokenGroupsPathParams
-	Security   FetchTokenGroupsSecurity
+	// Token identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type FetchTokenGroupsResponse struct {

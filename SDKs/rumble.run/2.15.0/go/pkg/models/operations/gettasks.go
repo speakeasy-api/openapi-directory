@@ -8,19 +8,14 @@ import (
 )
 
 type GetTasksSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetTasksQueryParams struct {
+type GetTasksRequest struct {
 	// an optional search string for filtering results
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// an optional status string for filtering results
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetTasksRequest struct {
-	QueryParams GetTasksQueryParams
-	Security    GetTasksSecurity
 }
 
 type GetTasksResponse struct {

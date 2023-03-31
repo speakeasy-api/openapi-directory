@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFields5PathParams struct {
+type GetCustomFields5Request struct {
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetCustomFields5Request struct {
-	PathParams GetCustomFields5PathParams
 }
 
 type GetCustomFields5Response struct {

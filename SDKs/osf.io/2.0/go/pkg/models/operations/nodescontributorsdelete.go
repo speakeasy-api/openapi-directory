@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type NodesContributorsDeletePathParams struct {
+type NodesContributorsDeleteRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type NodesContributorsDeleteRequest struct {
-	PathParams NodesContributorsDeletePathParams
 }
 
 type NodesContributorsDeleteResponse struct {

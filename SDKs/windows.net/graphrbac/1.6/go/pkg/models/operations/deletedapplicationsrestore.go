@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletedApplicationsRestorePathParams struct {
+type DeletedApplicationsRestoreRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Application object ID.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type DeletedApplicationsRestoreQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type DeletedApplicationsRestoreRequest struct {
-	PathParams  DeletedApplicationsRestorePathParams
-	QueryParams DeletedApplicationsRestoreQueryParams
 }
 
 type DeletedApplicationsRestoreResponse struct {

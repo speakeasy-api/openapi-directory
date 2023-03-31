@@ -12,11 +12,8 @@ var CreateSyncSyncListServerList = []string{
 }
 
 type CreateSyncSyncListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSyncSyncListPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncSyncListCreateSyncSyncListRequest struct {
@@ -24,10 +21,8 @@ type CreateSyncSyncListCreateSyncSyncListRequest struct {
 }
 
 type CreateSyncSyncListRequest struct {
-	PathParams CreateSyncSyncListPathParams
-	Request    *CreateSyncSyncListCreateSyncSyncListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSyncSyncListSecurity
-	ServerURL  *string
+	RequestBody *CreateSyncSyncListCreateSyncSyncListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                                       `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSyncSyncListResponse struct {

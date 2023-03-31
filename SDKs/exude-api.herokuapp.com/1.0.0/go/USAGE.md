@@ -14,15 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.FilterFileDataStoppingsRequest{
-        PathParams: operations.FilterFileDataStoppingsPathParams{
-            Type: "corrupti",
-        },
-        Request: operations.FilterFileDataStoppingsRequestBody{
+        RequestBody: operations.FilterFileDataStoppingsRequestBody{
             File: &operations.FilterFileDataStoppingsRequestBodyFile{
-                Content: []byte("provident"),
-                File: "distinctio",
+                Content: []byte("corrupti"),
+                File: "provident",
             },
         },
+        Type: "distinctio",
     }
 
     ctx := context.Background()

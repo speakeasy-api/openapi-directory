@@ -4,15 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.DeleteAccountingCodeRequest(
-    path_params=operations.DeleteAccountingCodePathParams(
-        ac_id="distinctio",
-    ),
-    headers=operations.DeleteAccountingCodeHeaders(
-        zuora_entity_ids="voluptas",
-        zuora_track_id="quos",
-    ),
+
+
+req = operations.DELETEAccountingCodeRequest(
+    zuora_entity_ids="corrupti",
+    zuora_track_id="provident",
+    ac_id="distinctio",
 )
     
 res = s.accounting_codes.delete_accounting_code(req)

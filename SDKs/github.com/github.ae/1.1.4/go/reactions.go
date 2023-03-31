@@ -37,9 +37,9 @@ func newReactions(defaultClient, securityClient HTTPClient, serverURL, language,
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#create-reaction-for-a-commit-comment - API method documentation
 func (s *reactions) ReactionsCreateForCommitComment(ctx context.Context, request operations.ReactionsCreateForCommitCommentRequest) (*operations.ReactionsCreateForCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -115,9 +115,9 @@ func (s *reactions) ReactionsCreateForCommitComment(ctx context.Context, request
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#create-reaction-for-an-issue - API method documentation
 func (s *reactions) ReactionsCreateForIssue(ctx context.Context, request operations.ReactionsCreateForIssueRequest) (*operations.ReactionsCreateForIssueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,9 +183,9 @@ func (s *reactions) ReactionsCreateForIssue(ctx context.Context, request operati
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#create-reaction-for-an-issue-comment - API method documentation
 func (s *reactions) ReactionsCreateForIssueComment(ctx context.Context, request operations.ReactionsCreateForIssueCommentRequest) (*operations.ReactionsCreateForIssueCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -251,9 +251,9 @@ func (s *reactions) ReactionsCreateForIssueComment(ctx context.Context, request 
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#create-reaction-for-a-pull-request-review-comment - API method documentation
 func (s *reactions) ReactionsCreateForPullRequestReviewComment(ctx context.Context, request operations.ReactionsCreateForPullRequestReviewCommentRequest) (*operations.ReactionsCreateForPullRequestReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -319,9 +319,9 @@ func (s *reactions) ReactionsCreateForPullRequestReviewComment(ctx context.Conte
 // https://docs.github.com/github-ae@latest/rest/reference/reactions/#create-reaction-for-a-release - API method documentation
 func (s *reactions) ReactionsCreateForRelease(ctx context.Context, request operations.ReactionsCreateForReleaseRequest) (*operations.ReactionsCreateForReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,9 +389,9 @@ func (s *reactions) ReactionsCreateForRelease(ctx context.Context, request opera
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#create-reaction-for-a-team-discussion-comment - API method documentation
 func (s *reactions) ReactionsCreateForTeamDiscussionCommentInOrg(ctx context.Context, request operations.ReactionsCreateForTeamDiscussionCommentInOrgRequest) (*operations.ReactionsCreateForTeamDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -449,9 +449,9 @@ func (s *reactions) ReactionsCreateForTeamDiscussionCommentInOrg(ctx context.Con
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#create-reaction-for-a-team-discussion - API method documentation
 func (s *reactions) ReactionsCreateForTeamDiscussionInOrg(ctx context.Context, request operations.ReactionsCreateForTeamDiscussionInOrgRequest) (*operations.ReactionsCreateForTeamDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,7 +509,7 @@ func (s *reactions) ReactionsCreateForTeamDiscussionInOrg(ctx context.Context, r
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#delete-a-commit-comment-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForCommitComment(ctx context.Context, request operations.ReactionsDeleteForCommitCommentRequest) (*operations.ReactionsDeleteForCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -548,7 +548,7 @@ func (s *reactions) ReactionsDeleteForCommitComment(ctx context.Context, request
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#delete-an-issue-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForIssue(ctx context.Context, request operations.ReactionsDeleteForIssueRequest) (*operations.ReactionsDeleteForIssueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -587,7 +587,7 @@ func (s *reactions) ReactionsDeleteForIssue(ctx context.Context, request operati
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#delete-an-issue-comment-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForIssueComment(ctx context.Context, request operations.ReactionsDeleteForIssueCommentRequest) (*operations.ReactionsDeleteForIssueCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -626,7 +626,7 @@ func (s *reactions) ReactionsDeleteForIssueComment(ctx context.Context, request 
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#delete-a-pull-request-comment-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForPullRequestComment(ctx context.Context, request operations.ReactionsDeleteForPullRequestCommentRequest) (*operations.ReactionsDeleteForPullRequestCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -665,7 +665,7 @@ func (s *reactions) ReactionsDeleteForPullRequestComment(ctx context.Context, re
 // https://docs.github.com/github-ae@latest/rest/reference/reactions/#delete-a-release-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForRelease(ctx context.Context, request operations.ReactionsDeleteForReleaseRequest) (*operations.ReactionsDeleteForReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -704,7 +704,7 @@ func (s *reactions) ReactionsDeleteForRelease(ctx context.Context, request opera
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#delete-team-discussion-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForTeamDiscussion(ctx context.Context, request operations.ReactionsDeleteForTeamDiscussionRequest) (*operations.ReactionsDeleteForTeamDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -743,7 +743,7 @@ func (s *reactions) ReactionsDeleteForTeamDiscussion(ctx context.Context, reques
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#delete-team-discussion-comment-reaction - API method documentation
 func (s *reactions) ReactionsDeleteForTeamDiscussionComment(ctx context.Context, request operations.ReactionsDeleteForTeamDiscussionCommentRequest) (*operations.ReactionsDeleteForTeamDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -780,14 +780,14 @@ func (s *reactions) ReactionsDeleteForTeamDiscussionComment(ctx context.Context,
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#list-reactions-for-a-commit-comment - API method documentation
 func (s *reactions) ReactionsListForCommitComment(ctx context.Context, request operations.ReactionsListForCommitCommentRequest) (*operations.ReactionsListForCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -842,14 +842,14 @@ func (s *reactions) ReactionsListForCommitComment(ctx context.Context, request o
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#list-reactions-for-an-issue - API method documentation
 func (s *reactions) ReactionsListForIssue(ctx context.Context, request operations.ReactionsListForIssueRequest) (*operations.ReactionsListForIssueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -906,14 +906,14 @@ func (s *reactions) ReactionsListForIssue(ctx context.Context, request operation
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#list-reactions-for-an-issue-comment - API method documentation
 func (s *reactions) ReactionsListForIssueComment(ctx context.Context, request operations.ReactionsListForIssueCommentRequest) (*operations.ReactionsListForIssueCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -968,14 +968,14 @@ func (s *reactions) ReactionsListForIssueComment(ctx context.Context, request op
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#list-reactions-for-a-pull-request-review-comment - API method documentation
 func (s *reactions) ReactionsListForPullRequestReviewComment(ctx context.Context, request operations.ReactionsListForPullRequestReviewCommentRequest) (*operations.ReactionsListForPullRequestReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1030,14 +1030,14 @@ func (s *reactions) ReactionsListForPullRequestReviewComment(ctx context.Context
 // https://docs.github.com/github-ae@latest/rest/reference/reactions/#list-reactions-for-a-release - API method documentation
 func (s *reactions) ReactionsListForRelease(ctx context.Context, request operations.ReactionsListForReleaseRequest) (*operations.ReactionsListForReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1104,14 +1104,14 @@ func (s *reactions) ReactionsListForRelease(ctx context.Context, request operati
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#list-reactions-for-a-team-discussion-comment - API method documentation
 func (s *reactions) ReactionsListForTeamDiscussionCommentInOrg(ctx context.Context, request operations.ReactionsListForTeamDiscussionCommentInOrgRequest) (*operations.ReactionsListForTeamDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1158,14 +1158,14 @@ func (s *reactions) ReactionsListForTeamDiscussionCommentInOrg(ctx context.Conte
 // https://docs.github.com/github-ae@latest/rest/reference/reactions#list-reactions-for-a-team-discussion - API method documentation
 func (s *reactions) ReactionsListForTeamDiscussionInOrg(ctx context.Context, request operations.ReactionsListForTeamDiscussionInOrgRequest) (*operations.ReactionsListForTeamDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

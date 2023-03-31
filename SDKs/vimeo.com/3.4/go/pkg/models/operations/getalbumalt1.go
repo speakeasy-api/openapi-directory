@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumAlt1PathParams struct {
+type GetAlbumAlt1Request struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
-}
-
-type GetAlbumAlt1Request struct {
-	PathParams GetAlbumAlt1PathParams
 }
 
 type GetAlbumAlt1Response struct {

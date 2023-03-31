@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DistrictsInARegionRequest(
-    path_params=operations.DistrictsInARegionPathParams(
-        country="qui",
-        region="sit",
-    ),
+    country="Malta",
+    region="provident",
 )
     
 res = s.districts_in_region.districts_in_a_region(req)

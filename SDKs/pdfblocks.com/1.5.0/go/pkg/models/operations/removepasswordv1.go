@@ -18,10 +18,6 @@ type RemovePasswordV1RequestBody struct {
 	Password string `multipartForm:"name=password"`
 }
 
-type RemovePasswordV1Request struct {
-	Request RemovePasswordV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // RemovePasswordV14XXApplicationProblemPlusJSON - Error
 type RemovePasswordV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

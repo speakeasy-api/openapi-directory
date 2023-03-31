@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasExportTemplatesListQueryParams struct {
+type ExtrasExportTemplatesListRequest struct {
 	ContentType *string `queryParam:"style=form,explode=true,name=content_type"`
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ExtrasExportTemplatesListRequest struct {
-	QueryParams ExtrasExportTemplatesListQueryParams
 }
 
 type ExtrasExportTemplatesList200ApplicationJSON struct {

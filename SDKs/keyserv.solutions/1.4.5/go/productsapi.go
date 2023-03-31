@@ -32,7 +32,7 @@ func newProductsAPI(defaultClient, securityClient HTTPClient, serverURL, languag
 	}
 }
 
-func (s *productsAPI) ProductsAPICount(ctx context.Context, request operations.ProductsAPICountRequest) (*operations.ProductsAPICountResponse, error) {
+func (s *productsAPI) ProductsAPICount(ctx context.Context, request operations.ProductsAPICountRequestBody) (*operations.ProductsAPICountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/Count"
 
@@ -86,14 +86,14 @@ func (s *productsAPI) ProductsAPICount(ctx context.Context, request operations.P
 }
 func (s *productsAPI) ProductsAPIDeleteProduct(ctx context.Context, request operations.ProductsAPIDeleteProductRequest) (*operations.ProductsAPIDeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -121,14 +121,14 @@ func (s *productsAPI) ProductsAPIDeleteProduct(ctx context.Context, request oper
 }
 func (s *productsAPI) ProductsAPIDeleteProduct2(ctx context.Context, request operations.ProductsAPIDeleteProduct2Request) (*operations.ProductsAPIDeleteProduct2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -158,7 +158,7 @@ func (s *productsAPI) ProductsAPIFind(ctx context.Context, request operations.Pr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/Find"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -173,7 +173,7 @@ func (s *productsAPI) ProductsAPIFind(ctx context.Context, request operations.Pr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -214,7 +214,7 @@ func (s *productsAPI) ProductsAPIList(ctx context.Context, request operations.Pr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/List"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -229,7 +229,7 @@ func (s *productsAPI) ProductsAPIList(ctx context.Context, request operations.Pr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -266,7 +266,7 @@ func (s *productsAPI) ProductsAPIList(ctx context.Context, request operations.Pr
 
 	return res, nil
 }
-func (s *productsAPI) ProductsAPIPatchProduct(ctx context.Context, request operations.ProductsAPIPatchProductRequest) (*operations.ProductsAPIPatchProductResponse, error) {
+func (s *productsAPI) ProductsAPIPatchProduct(ctx context.Context, request operations.ProductsAPIPatchProductRequestBody) (*operations.ProductsAPIPatchProductResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi"
 
@@ -309,7 +309,7 @@ func (s *productsAPI) ProductsAPIPatchProduct(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *productsAPI) ProductsAPIPatchProduct2(ctx context.Context, request operations.ProductsAPIPatchProduct2Request) (*operations.ProductsAPIPatchProduct2Response, error) {
+func (s *productsAPI) ProductsAPIPatchProduct2(ctx context.Context, request operations.ProductsAPIPatchProduct2RequestBody) (*operations.ProductsAPIPatchProduct2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi"
 
@@ -352,7 +352,7 @@ func (s *productsAPI) ProductsAPIPatchProduct2(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *productsAPI) ProductsAPISave(ctx context.Context, request operations.ProductsAPISaveRequest) (*operations.ProductsAPISaveResponse, error) {
+func (s *productsAPI) ProductsAPISave(ctx context.Context, request operations.ProductsAPISaveRequestBody) (*operations.ProductsAPISaveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/Save"
 

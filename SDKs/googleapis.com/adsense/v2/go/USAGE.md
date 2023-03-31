@@ -14,42 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.AdsenseAccountsAdclientsAdunitsCreateRequest{
-        Security: operations.AdsenseAccountsAdclientsAdunitsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AdsenseAccountsAdclientsAdunitsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.AdsenseAccountsAdclientsAdunitsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AdUnitInput{
+        DollarXgafv: "2",
+        AdUnitInput: &shared.AdUnitInput{
             ContentAdsSettings: &shared.ContentAdsSettings{
-                Size: "suscipit",
-                Type: "FEED",
+                Size: "provident",
+                Type: "MATCHED_CONTENT",
             },
-            DisplayName: "magnam",
-            State: "ARCHIVED",
+            DisplayName: "quibusdam",
+            State: "ACTIVE",
         },
+        AccessToken: "nulla",
+        Alt: "media",
+        Callback: "illum",
+        Fields: "vel",
+        Key: "error",
+        OauthToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.AdsenseAccountsAdclientsAdunitsCreate(ctx, req)
+    res, err := s.Accounts.AdsenseAccountsAdclientsAdunitsCreate(ctx, req, operations.AdsenseAccountsAdclientsAdunitsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

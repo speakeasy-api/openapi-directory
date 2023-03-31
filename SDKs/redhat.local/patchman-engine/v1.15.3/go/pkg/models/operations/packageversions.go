@@ -8,25 +8,16 @@ import (
 )
 
 type PackageVersionsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type PackageVersionsPathParams struct {
-	// Package name
-	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
-}
-
-type PackageVersionsQueryParams struct {
+type PackageVersionsRequest struct {
 	// Limit for paging, set -1 to return all
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset for paging
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type PackageVersionsRequest struct {
-	PathParams  PackageVersionsPathParams
-	QueryParams PackageVersionsQueryParams
-	Security    PackageVersionsSecurity
+	// Package name
+	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
 }
 
 type PackageVersionsResponse struct {

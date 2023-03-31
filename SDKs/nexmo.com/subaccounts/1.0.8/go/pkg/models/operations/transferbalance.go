@@ -8,18 +8,14 @@ import (
 )
 
 type TransferBalanceSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type TransferBalancePathParams struct {
-	// ID of the primary account
-	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type TransferBalanceRequest struct {
-	PathParams TransferBalancePathParams
-	Request    shared.TransferBalanceOrCreditRequest `request:"mediaType=application/json"`
-	Security   TransferBalanceSecurity
+	TransferBalanceOrCreditRequest shared.TransferBalanceOrCreditRequest `request:"mediaType=application/json"`
+	// ID of the primary account
+	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 }
 
 type TransferBalance422ApplicationJSONInvalidParameters struct {

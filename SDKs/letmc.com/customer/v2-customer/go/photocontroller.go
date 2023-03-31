@@ -34,14 +34,14 @@ func newPhotoController(defaultClient, securityClient HTTPClient, serverURL, lan
 // PhotoControllerGetPhotoDownload - Downloads the photo of a property given the photo ID.
 func (s *photoController) PhotoControllerGetPhotoDownload(ctx context.Context, request operations.PhotoControllerGetPhotoDownloadRequest) (*operations.PhotoControllerGetPhotoDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/photo/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/photo/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

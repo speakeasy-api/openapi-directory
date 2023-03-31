@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListWebinarTemplatesPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type ListWebinarTemplatesRequest struct {
-	PathParams ListWebinarTemplatesPathParams
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ListWebinarTemplates200ApplicationXMLTemplates struct {

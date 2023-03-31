@@ -14,47 +14,43 @@ func main() {
     s := sdk.New()
 
     req := operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest{
-        PathParams: operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams{
-            Location: "corrupti",
-        },
-        QueryParams: operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.FetchVerificationOptionsRequest{
+        DollarXgafv: "2",
+        FetchVerificationOptionsRequest: &shared.FetchVerificationOptionsRequest{
             Context: &shared.ServiceBusinessContext{
                 Address: &shared.PostalAddress{
                     AddressLines: []string{
-                        "iure",
-                        "magnam",
+                        "distinctio",
+                        "quibusdam",
+                        "unde",
                     },
-                    AdministrativeArea: "debitis",
-                    LanguageCode: "ipsa",
-                    Locality: "delectus",
-                    Organization: "tempora",
-                    PostalCode: "47854",
+                    AdministrativeArea: "nulla",
+                    LanguageCode: "corrupti",
+                    Locality: "illum",
+                    Organization: "vel",
+                    PostalCode: "63428-0923",
                     Recipients: []string{
-                        "nisi",
-                        "recusandae",
-                        "temporibus",
+                        "minus",
+                        "placeat",
                     },
-                    RegionCode: "ab",
-                    Revision: 337396,
-                    SortingCode: "veritatis",
-                    Sublocality: "deserunt",
+                    RegionCode: "voluptatum",
+                    Revision: 479977,
+                    SortingCode: "excepturi",
+                    Sublocality: "nisi",
                 },
             },
-            LanguageCode: "perferendis",
+            LanguageCode: "recusandae",
         },
+        AccessToken: "temporibus",
+        Alt: "json",
+        Callback: "quis",
+        Fields: "veritatis",
+        Key: "deserunt",
+        Location: "perferendis",
+        OauthToken: "ipsam",
+        PrettyPrint: false,
+        QuotaUser: "repellendus",
+        UploadType: "sapiente",
+        UploadProtocol: "quo",
     }
 
     ctx := context.Background()

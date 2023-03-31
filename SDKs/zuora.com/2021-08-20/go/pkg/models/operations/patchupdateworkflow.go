@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PATCHUpdateWorkflowPathParams struct {
-	// The unique ID of a workflow. For example, 19080.
-	//
-	WorkflowID string `pathParam:"style=simple,explode=false,name=workflow_id"`
-}
-
-type PATCHUpdateWorkflowHeaders struct {
-	// `Bearer {token}` for a valid OAuth token.
-	//
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
-	//
-	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
-}
-
 type PATCHUpdateWorkflowRequestBody struct {
 	// If true, the workflow will run upon an API callout. This field must be `true` for integrating with the Configurable Payment Retry feature or the Collections Window feature in Collect.
 	//
@@ -53,9 +38,16 @@ type PATCHUpdateWorkflowRequestBody struct {
 }
 
 type PATCHUpdateWorkflowRequest struct {
-	PathParams PATCHUpdateWorkflowPathParams
-	Headers    PATCHUpdateWorkflowHeaders
-	Request    *PATCHUpdateWorkflowRequestBody `request:"mediaType=application/json"`
+	// `Bearer {token}` for a valid OAuth token.
+	//
+	Authorization string                          `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   *PATCHUpdateWorkflowRequestBody `request:"mediaType=application/json"`
+	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+	//
+	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
+	// The unique ID of a workflow. For example, 19080.
+	//
+	WorkflowID string `pathParam:"style=simple,explode=false,name=workflow_id"`
 }
 
 type PATCHUpdateWorkflowResponse struct {

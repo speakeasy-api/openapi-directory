@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
 type GetCommitteeCommitteeIDCommitteeTypeEnum string
 
 const (
@@ -203,10 +197,13 @@ func (e *GetCommitteeCommitteeIDOrganizationTypeEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetCommitteeCommitteeIDQueryParams struct {
+type GetCommitteeCommitteeIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// The one-letter type code of the organization:
 	//         - C communication cost
 	//         - D delegate
@@ -274,11 +271,6 @@ type GetCommitteeCommitteeIDQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// A year that the committee was active— (after original registration date     or filing but before expiration date)
 	Year []int `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCommitteeCommitteeIDRequest struct {
-	PathParams  GetCommitteeCommitteeIDPathParams
-	QueryParams GetCommitteeCommitteeIDQueryParams
 }
 
 type GetCommitteeCommitteeIDResponse struct {

@@ -10,12 +10,7 @@ import (
 )
 
 type GetProjectVideosAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetProjectVideosAlt1PathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetProjectVideosAlt1DirectionEnum - The sort direction of the results.
@@ -75,21 +70,17 @@ func (e *GetProjectVideosAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectVideosAlt1QueryParams struct {
+type GetProjectVideosAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetProjectVideosAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The way to sort the results.
 	Sort *GetProjectVideosAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetProjectVideosAlt1Request struct {
-	PathParams  GetProjectVideosAlt1PathParams
-	QueryParams GetProjectVideosAlt1QueryParams
-	Security    GetProjectVideosAlt1Security
 }
 
 type GetProjectVideosAlt1Response struct {

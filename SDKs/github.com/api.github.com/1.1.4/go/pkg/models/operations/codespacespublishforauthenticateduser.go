@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesPublishForAuthenticatedUserPathParams struct {
-	// The name of the codespace.
-	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
-}
-
 type CodespacesPublishForAuthenticatedUserRequestBody struct {
 	// A name for the new repository.
 	Name *string `json:"name,omitempty"`
@@ -20,8 +15,9 @@ type CodespacesPublishForAuthenticatedUserRequestBody struct {
 }
 
 type CodespacesPublishForAuthenticatedUserRequest struct {
-	PathParams CodespacesPublishForAuthenticatedUserPathParams
-	Request    CodespacesPublishForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesPublishForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	// The name of the codespace.
+	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
 }
 
 type CodespacesPublishForAuthenticatedUserResponse struct {

@@ -36,10 +36,6 @@ type PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody struct {
 	Constraints   *PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBodyConstraints `json:"constraints,omitempty"`
 }
 
-type PostPortfolioOptimizationMinimumVarianceDiversifiedRequest struct {
-	Request PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMinimumVarianceDiversified200ApplicationJSON - OK
 type PostPortfolioOptimizationMinimumVarianceDiversified200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

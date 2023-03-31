@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type TaxAPINewRawHeaders struct {
+type TaxAPINewRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type TaxAPINewRawRequest struct {
-	Headers TaxAPINewRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type TaxAPINewRawResponse struct {

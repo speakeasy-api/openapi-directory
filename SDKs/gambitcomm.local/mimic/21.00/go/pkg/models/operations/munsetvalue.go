@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type MunsetValuePathParams struct {
+type MunsetValueRequest struct {
+	// objInsVarArray
+	RequestBody [][]string `request:"mediaType=application/json"`
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type MunsetValueRequest struct {
-	PathParams MunsetValuePathParams
-	// objInsVarArray
-	Request [][]string `request:"mediaType=application/json"`
 }
 
 type MunsetValueResponse struct {

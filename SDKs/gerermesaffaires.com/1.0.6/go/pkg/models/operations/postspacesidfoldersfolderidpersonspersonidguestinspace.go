@@ -8,23 +8,18 @@ import (
 )
 
 type PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpacePathParams struct {
+type PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceRequest struct {
+	// PersonId (if exist)of the person in the customer space
+	InvitationPerson shared.InvitationPerson `request:"mediaType=application/json"`
 	// Id of the folder customer
 	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the person to invite to his space
 	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceRequest struct {
-	PathParams PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpacePathParams
-	// PersonId (if exist)of the person in the customer space
-	Request  shared.InvitationPerson `request:"mediaType=application/json"`
-	Security PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceSecurity
 }
 
 type PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type PrivatecaProjectsLocationsCaPoolsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivatecaProjectsLocationsCaPoolsListPathParams struct {
-	// Required. The resource name of the location associated with the CaPools, in the format `projects/*/locations/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type PrivatecaProjectsLocationsCaPoolsListQueryParams struct {
+type PrivatecaProjectsLocationsCaPoolsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type PrivatecaProjectsLocationsCaPoolsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Pagination token, returned earlier via ListCaPoolsResponse.next_page_token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the location associated with the CaPools, in the format `projects/*/locations/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type PrivatecaProjectsLocationsCaPoolsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PrivatecaProjectsLocationsCaPoolsListRequest struct {
-	PathParams  PrivatecaProjectsLocationsCaPoolsListPathParams
-	QueryParams PrivatecaProjectsLocationsCaPoolsListQueryParams
-	Security    PrivatecaProjectsLocationsCaPoolsListSecurity
 }
 
 type PrivatecaProjectsLocationsCaPoolsListResponse struct {

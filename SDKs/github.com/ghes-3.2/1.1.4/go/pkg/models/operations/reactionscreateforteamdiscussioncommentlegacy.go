@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForTeamDiscussionCommentLegacyPathParams struct {
-	// The number that identifies the comment.
-	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The unique identifier of the team.
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.2/rest/reference/reactions#reaction-types) to add to the team discussion comment.
 type ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum string
 
@@ -66,8 +57,13 @@ type ReactionsCreateForTeamDiscussionCommentLegacyRequestBody struct {
 }
 
 type ReactionsCreateForTeamDiscussionCommentLegacyRequest struct {
-	PathParams ReactionsCreateForTeamDiscussionCommentLegacyPathParams
-	Request    ReactionsCreateForTeamDiscussionCommentLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForTeamDiscussionCommentLegacyRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the comment.
+	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	// The unique identifier of the team.
+	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsCreateForTeamDiscussionCommentLegacyResponse struct {

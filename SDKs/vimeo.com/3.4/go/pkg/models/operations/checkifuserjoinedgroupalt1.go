@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckIfUserJoinedGroupAlt1PathParams struct {
+type CheckIfUserJoinedGroupAlt1Request struct {
 	// The ID of the group.
 	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type CheckIfUserJoinedGroupAlt1Request struct {
-	PathParams CheckIfUserJoinedGroupAlt1PathParams
 }
 
 type CheckIfUserJoinedGroupAlt1Response struct {

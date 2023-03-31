@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesTagsIDFormatPathParams struct {
+type GetResourcesTagsIDFormatRequest struct {
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// The id of the record to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesTagsIDFormatRequest struct {
-	PathParams GetResourcesTagsIDFormatPathParams
 }
 
 type GetResourcesTagsIDFormatResponse struct {

@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type EditMessageSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type EditMessagePathParams struct {
-	// Message ID: Unique Identifier of the message.
-	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
-	UserID    string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditMessageApplicationJSON struct {
@@ -29,9 +22,10 @@ type EditMessageApplicationJSON struct {
 }
 
 type EditMessageRequest struct {
-	PathParams EditMessagePathParams
-	Request    *EditMessageApplicationJSON `request:"mediaType=application/json"`
-	Security   EditMessageSecurity
+	RequestBody *EditMessageApplicationJSON `request:"mediaType=application/json"`
+	// Message ID: Unique Identifier of the message.
+	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
+	UserID    string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type EditMessageResponse struct {

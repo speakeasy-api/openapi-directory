@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FirebasehostingOperationsListPathParams struct {
-	// The name of the operation's parent resource.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type FirebasehostingOperationsListQueryParams struct {
+type FirebasehostingOperationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -27,6 +22,8 @@ type FirebasehostingOperationsListQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the operation's parent resource.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The standard list page size.
@@ -41,11 +38,6 @@ type FirebasehostingOperationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebasehostingOperationsListRequest struct {
-	PathParams  FirebasehostingOperationsListPathParams
-	QueryParams FirebasehostingOperationsListQueryParams
 }
 
 type FirebasehostingOperationsListResponse struct {

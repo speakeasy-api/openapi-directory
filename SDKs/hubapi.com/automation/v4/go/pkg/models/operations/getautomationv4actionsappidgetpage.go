@@ -8,26 +8,17 @@ import (
 )
 
 type GetAutomationV4ActionsAppIDGetPageSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
-type GetAutomationV4ActionsAppIDGetPagePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type GetAutomationV4ActionsAppIDGetPageQueryParams struct {
+type GetAutomationV4ActionsAppIDGetPageRequest struct {
 	// The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
 	After *string `queryParam:"style=form,explode=true,name=after"`
+	AppID int     `pathParam:"style=simple,explode=false,name=appId"`
 	// Whether to include archived custom actions.
 	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
 	// Maximum number of results per page.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetAutomationV4ActionsAppIDGetPageRequest struct {
-	PathParams  GetAutomationV4ActionsAppIDGetPagePathParams
-	QueryParams GetAutomationV4ActionsAppIDGetPageQueryParams
-	Security    GetAutomationV4ActionsAppIDGetPageSecurity
 }
 
 type GetAutomationV4ActionsAppIDGetPageResponse struct {

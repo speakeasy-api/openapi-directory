@@ -8,13 +8,13 @@ import (
 )
 
 type CloudtraceProjectsTraceSinksDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudtraceProjectsTraceSinksDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudtraceProjectsTraceSinksDeleteSecurity struct {
@@ -22,12 +22,7 @@ type CloudtraceProjectsTraceSinksDeleteSecurity struct {
 	Option2 *CloudtraceProjectsTraceSinksDeleteSecurityOption2 `security:"option"`
 }
 
-type CloudtraceProjectsTraceSinksDeletePathParams struct {
-	// Required. The full resource name of the sink to delete, including the parent resource and the sink identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example: `"projects/12345/traceSinks/my-sink-id"`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudtraceProjectsTraceSinksDeleteQueryParams struct {
+type CloudtraceProjectsTraceSinksDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type CloudtraceProjectsTraceSinksDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The full resource name of the sink to delete, including the parent resource and the sink identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example: `"projects/12345/traceSinks/my-sink-id"`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type CloudtraceProjectsTraceSinksDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudtraceProjectsTraceSinksDeleteRequest struct {
-	PathParams  CloudtraceProjectsTraceSinksDeletePathParams
-	QueryParams CloudtraceProjectsTraceSinksDeleteQueryParams
-	Security    CloudtraceProjectsTraceSinksDeleteSecurity
 }
 
 type CloudtraceProjectsTraceSinksDeleteResponse struct {

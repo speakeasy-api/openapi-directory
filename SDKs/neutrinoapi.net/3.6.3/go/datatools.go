@@ -34,7 +34,7 @@ func newDataTools(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // BadWordFilter - Bad Word Filter
 // Detect bad words, swear words and profanity in a given text
-func (s *dataTools) BadWordFilter(ctx context.Context, request operations.BadWordFilterRequest) (*operations.BadWordFilterResponse, error) {
+func (s *dataTools) BadWordFilter(ctx context.Context, request operations.BadWordFilterRequestBody) (*operations.BadWordFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bad-word-filter"
 
@@ -114,7 +114,7 @@ func (s *dataTools) EmailValidate(ctx context.Context, request operations.EmailV
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -179,7 +179,7 @@ func (s *dataTools) PhoneValidate(ctx context.Context, request operations.PhoneV
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,7 +244,7 @@ func (s *dataTools) UALookup(ctx context.Context, request operations.UALookupReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CompanyLogoQueryParams struct {
+type CompanyLogoRequest struct {
 	// URL of the company
 	Domain string `queryParam:"style=form,explode=true,name=domain"`
-}
-
-type CompanyLogoRequest struct {
-	QueryParams CompanyLogoQueryParams
 }
 
 type CompanyLogoResponse struct {

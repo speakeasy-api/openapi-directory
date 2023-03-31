@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CollaboratorsPostRequest struct {
-	// parameters to identify an update a collaborator across multiple stories
-	Request shared.CollaboratorBulkUpdateRequest `request:"mediaType=application/json"`
-}
-
 type CollaboratorsPostResponse struct {
 	ContentType string
 	StatusCode  int

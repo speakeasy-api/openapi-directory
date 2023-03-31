@@ -8,18 +8,18 @@ import (
 )
 
 type AppengineAppsServicesVersionsInstancesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsServicesVersionsInstancesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsServicesVersionsInstancesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsServicesVersionsInstancesGetSecurity struct {
@@ -28,28 +28,21 @@ type AppengineAppsServicesVersionsInstancesGetSecurity struct {
 	Option3 *AppengineAppsServicesVersionsInstancesGetSecurityOption3 `security:"option"`
 }
 
-type AppengineAppsServicesVersionsInstancesGetPathParams struct {
-	// Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1/instances/instance-1.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	InstancesID string `pathParam:"style=simple,explode=false,name=instancesId"`
-	// Part of `name`. See documentation of `appsId`.
-	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
-	// Part of `name`. See documentation of `appsId`.
-	VersionsID string `pathParam:"style=simple,explode=false,name=versionsId"`
-}
-
-type AppengineAppsServicesVersionsInstancesGetQueryParams struct {
+type AppengineAppsServicesVersionsInstancesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1/instances/instance-1.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Part of `name`. See documentation of `appsId`.
+	InstancesID string `pathParam:"style=simple,explode=false,name=instancesId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -58,16 +51,14 @@ type AppengineAppsServicesVersionsInstancesGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Part of `name`. See documentation of `appsId`.
+	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsServicesVersionsInstancesGetRequest struct {
-	PathParams  AppengineAppsServicesVersionsInstancesGetPathParams
-	QueryParams AppengineAppsServicesVersionsInstancesGetQueryParams
-	Security    AppengineAppsServicesVersionsInstancesGetSecurity
+	// Part of `name`. See documentation of `appsId`.
+	VersionsID string `pathParam:"style=simple,explode=false,name=versionsId"`
 }
 
 type AppengineAppsServicesVersionsInstancesGetResponse struct {

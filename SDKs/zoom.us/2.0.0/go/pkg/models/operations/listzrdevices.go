@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListZRDevicesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ListZRDevicesPathParams struct {
-	// Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ListZRDevicesRequest struct {
-	PathParams ListZRDevicesPathParams
-	Security   ListZRDevicesSecurity
+	// Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
 }
 
 // ListZRDevices200ApplicationXMLDevicesDeviceTypeEnum - Type of the device. The value of this field can be one of the following:<br>`Zoom Rooms Computer`,<br> `Controller`, `Scheduling Display`, `Zoom Rooms Control System`, `Companion Whiteboard`

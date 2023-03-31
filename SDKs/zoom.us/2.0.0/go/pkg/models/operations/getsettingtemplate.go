@@ -6,27 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetSettingTemplateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSettingTemplatePathParams struct {
-	// Unique identifier of the template.
-	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type GetSettingTemplateQueryParams struct {
-	// Provide the name of the field to use to filter the response. For example, if you provide "description" as the value of the field, you will get a response similar to the following: {“description”: “template description”}.
-	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSettingTemplateRequest struct {
-	PathParams  GetSettingTemplatePathParams
-	QueryParams GetSettingTemplateQueryParams
-	Security    GetSettingTemplateSecurity
+	// Provide the name of the field to use to filter the response. For example, if you provide "description" as the value of the field, you will get a response similar to the following: {“description”: “template description”}.
+	CustomQueryFields *string `queryParam:"style=form,explode=true,name=custom_query_fields"`
+	// Unique identifier of the template.
+	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
 }
 
 type GetSettingTemplate200ApplicationXMLPolicyAdHocCallRecording struct {

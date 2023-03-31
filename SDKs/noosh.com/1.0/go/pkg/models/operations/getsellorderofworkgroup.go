@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSellOrderOfWorkgroupPathParams struct {
+type GetSellOrderOfWorkgroupRequest struct {
 	OrderID     string `pathParam:"style=simple,explode=false,name=order_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetSellOrderOfWorkgroupRequest struct {
-	PathParams GetSellOrderOfWorkgroupPathParams
 }
 
 type GetSellOrderOfWorkgroupResponse struct {

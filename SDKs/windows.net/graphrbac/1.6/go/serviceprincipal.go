@@ -34,9 +34,9 @@ func newServicePrincipal(defaultClient, securityClient HTTPClient, serverURL, la
 // ServicePrincipalsCreate - Creates a service principal in the directory.
 func (s *servicePrincipal) ServicePrincipalsCreate(ctx context.Context, request operations.ServicePrincipalsCreateRequest) (*operations.ServicePrincipalsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServicePrincipalCreateParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *servicePrincipal) ServicePrincipalsCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,14 +116,14 @@ func (s *servicePrincipal) ServicePrincipalsCreate(ctx context.Context, request 
 // ServicePrincipalsDelete - Deletes a service principal from the directory.
 func (s *servicePrincipal) ServicePrincipalsDelete(ctx context.Context, request operations.ServicePrincipalsDeleteRequest) (*operations.ServicePrincipalsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,14 +172,14 @@ func (s *servicePrincipal) ServicePrincipalsDelete(ctx context.Context, request 
 // ServicePrincipalsGet - Gets service principal information from the directory. Query by objectId or pass a filter to query by appId
 func (s *servicePrincipal) ServicePrincipalsGet(ctx context.Context, request operations.ServicePrincipalsGetRequest) (*operations.ServicePrincipalsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,14 +244,14 @@ func (s *servicePrincipal) ServicePrincipalsGet(ctx context.Context, request ope
 // ServicePrincipalsList - Gets a list of service principals from the current tenant.
 func (s *servicePrincipal) ServicePrincipalsList(ctx context.Context, request operations.ServicePrincipalsListRequest) (*operations.ServicePrincipalsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -316,9 +316,9 @@ func (s *servicePrincipal) ServicePrincipalsList(ctx context.Context, request op
 // ServicePrincipalsUpdate - Updates a service principal in the directory.
 func (s *servicePrincipal) ServicePrincipalsUpdate(ctx context.Context, request operations.ServicePrincipalsUpdateRequest) (*operations.ServicePrincipalsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipals/{objectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServicePrincipalUpdateParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +333,7 @@ func (s *servicePrincipal) ServicePrincipalsUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

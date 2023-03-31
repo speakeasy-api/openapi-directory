@@ -8,13 +8,13 @@ import (
 )
 
 type DriveTeamdrivesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveTeamdrivesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveTeamdrivesGetSecurity struct {
@@ -22,12 +22,7 @@ type DriveTeamdrivesGetSecurity struct {
 	Option2 *DriveTeamdrivesGetSecurityOption2 `security:"option"`
 }
 
-type DriveTeamdrivesGetPathParams struct {
-	// The ID of the Team Drive
-	TeamDriveID string `pathParam:"style=simple,explode=false,name=teamDriveId"`
-}
-
-type DriveTeamdrivesGetQueryParams struct {
+type DriveTeamdrivesGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,16 +35,12 @@ type DriveTeamdrivesGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the Team Drive
+	TeamDriveID string `pathParam:"style=simple,explode=false,name=teamDriveId"`
 	// Issue the request as a domain administrator; if set to true, then the requester will be granted access if they are an administrator of the domain to which the Team Drive belongs.
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveTeamdrivesGetRequest struct {
-	PathParams  DriveTeamdrivesGetPathParams
-	QueryParams DriveTeamdrivesGetQueryParams
-	Security    DriveTeamdrivesGetSecurity
 }
 
 type DriveTeamdrivesGetResponse struct {

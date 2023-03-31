@@ -8,10 +8,10 @@ import (
 )
 
 type AuthAuthkeyGetSecurity struct {
-	AppKey shared.SchemeAppKey `security:"scheme,type=apiKey,subtype=header"`
+	AppKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
-type AuthAuthkeyGetQueryParams struct {
+type AuthAuthkeyGetRequest struct {
 	// User's device name
 	DeviceName *string `queryParam:"style=form,explode=true,name=deviceName"`
 	// identifierForVendor for User's Device (if app is iOS)
@@ -22,11 +22,6 @@ type AuthAuthkeyGetQueryParams struct {
 	Password string `queryParam:"style=form,explode=true,name=password"`
 	// Authenticated username
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type AuthAuthkeyGetRequest struct {
-	QueryParams AuthAuthkeyGetQueryParams
-	Security    AuthAuthkeyGetSecurity
 }
 
 type AuthAuthkeyGetResponse struct {

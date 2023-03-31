@@ -8,16 +8,11 @@ import (
 )
 
 type DataprocProjectsRegionsWorkflowTemplatesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsRegionsWorkflowTemplatesDeletePathParams struct {
-	// Required. The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.delete, the resource name of the template has the following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For projects.locations.workflowTemplates.instantiate, the resource name of the template has the following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DataprocProjectsRegionsWorkflowTemplatesDeleteQueryParams struct {
+type DataprocProjectsRegionsWorkflowTemplatesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +25,8 @@ type DataprocProjectsRegionsWorkflowTemplatesDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.delete, the resource name of the template has the following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For projects.locations.workflowTemplates.instantiate, the resource name of the template has the following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,12 +39,6 @@ type DataprocProjectsRegionsWorkflowTemplatesDeleteQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. The version of workflow template to delete. If specified, will only delete the template if the current server version matches specified version.
 	Version *int64 `queryParam:"style=form,explode=true,name=version"`
-}
-
-type DataprocProjectsRegionsWorkflowTemplatesDeleteRequest struct {
-	PathParams  DataprocProjectsRegionsWorkflowTemplatesDeletePathParams
-	QueryParams DataprocProjectsRegionsWorkflowTemplatesDeleteQueryParams
-	Security    DataprocProjectsRegionsWorkflowTemplatesDeleteSecurity
 }
 
 type DataprocProjectsRegionsWorkflowTemplatesDeleteResponse struct {

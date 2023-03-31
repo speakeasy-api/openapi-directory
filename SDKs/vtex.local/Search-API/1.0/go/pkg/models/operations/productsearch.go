@@ -10,22 +10,13 @@ var ProductSearchServerList = []string{
 	"http://example.com/.{environment}.com.br",
 }
 
-type ProductSearchPathParams struct {
-	// Term used to search products
-	Search string `pathParam:"style=simple,explode=false,name=search"`
-}
-
-type ProductSearchHeaders struct {
+type ProductSearchRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ProductSearchRequest struct {
-	PathParams ProductSearchPathParams
-	Headers    ProductSearchHeaders
-	ServerURL  *string
+	// Term used to search products
+	Search string `pathParam:"style=simple,explode=false,name=search"`
 }
 
 type ProductSearch200ApplicationJSONItemsImages struct {

@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListPastWebinarFilesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ListPastWebinarFilesPathParams struct {
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ListPastWebinarFilesRequest struct {
-	PathParams ListPastWebinarFilesPathParams
-	Security   ListPastWebinarFilesSecurity
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type ListPastWebinarFiles200ApplicationXMLInMeetingFiles struct {

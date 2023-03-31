@@ -54,11 +54,11 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CreateSinglePaymentIntent - Create Single Payment Intent
 // Create a new Single Payment Intent for the given `amount` and `currency`. If successful, a new Payment Intent will be created with `pending_confirmation` status and the API will return the `client_secret` and `publishable_key` as response.
-func (s *payments) CreateSinglePaymentIntent(ctx context.Context, request operations.CreateSinglePaymentIntentRequest) (*operations.CreateSinglePaymentIntentResponse, error) {
+func (s *payments) CreateSinglePaymentIntent(ctx context.Context, request operations.CreateSinglePaymentIntentRequest, security operations.CreateSinglePaymentIntentSecurity) (*operations.CreateSinglePaymentIntentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/payments/v1/single-payment-intent"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -73,9 +73,9 @@ func (s *payments) CreateSinglePaymentIntent(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *payments) CreateSinglePaymentIntent(ctx context.Context, request operat
 
 // GetAllPayments - Get All Payments
 // Returns all the Payments setup for the tenant in an array
-func (s *payments) GetAllPayments(ctx context.Context, request operations.GetAllPaymentsRequest) (*operations.GetAllPaymentsResponse, error) {
+func (s *payments) GetAllPayments(ctx context.Context, request operations.GetAllPaymentsRequest, security operations.GetAllPaymentsSecurity) (*operations.GetAllPaymentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/payments/v1/"
 
@@ -180,13 +180,13 @@ func (s *payments) GetAllPayments(ctx context.Context, request operations.GetAll
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -282,18 +282,18 @@ func (s *payments) GetAllPayments(ctx context.Context, request operations.GetAll
 
 // GetPayment - Get Payment by Transaction Id
 // Get Payment by transaction ID
-func (s *payments) GetPayment(ctx context.Context, request operations.GetPaymentRequest) (*operations.GetPaymentResponse, error) {
+func (s *payments) GetPayment(ctx context.Context, request operations.GetPaymentRequest, security operations.GetPaymentSecurity) (*operations.GetPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/{transaction_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/{transaction_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,22 +390,22 @@ func (s *payments) GetPayment(ctx context.Context, request operations.GetPayment
 // GetPotPayments - Get Payments by Pot Id
 //
 //	Only last 1000 records will be recieved if the result contain more that 1000 payments. In that case, the pagination should be used.
-func (s *payments) GetPotPayments(ctx context.Context, request operations.GetPotPaymentsRequest) (*operations.GetPotPaymentsResponse, error) {
+func (s *payments) GetPotPayments(ctx context.Context, request operations.GetPotPaymentsRequest, security operations.GetPotPaymentsSecurity) (*operations.GetPotPaymentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/getPotPayments/{pot_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/getPotPayments/{pot_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

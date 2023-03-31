@@ -43,7 +43,7 @@ func (s *uasOperatingAreas) UoaByDistanceUsV1UoaDistanceQueryPost(ctx context.Co
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/uoa/distance-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UOAsByDistance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *uasOperatingAreas) UoaByDistanceUsV1UoaDistanceQueryPost(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -111,7 +111,7 @@ func (s *uasOperatingAreas) UoaByPolyUsV1UoaPolygonQueryPost(ctx context.Context
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/uoa/polygon-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UOAsByPolygon", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -126,7 +126,7 @@ func (s *uasOperatingAreas) UoaByPolyUsV1UoaPolygonQueryPost(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -179,7 +179,7 @@ func (s *uasOperatingAreas) UoaByRouteUsV1UoaRouteQueryPost(ctx context.Context,
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/uoa/route-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UOAsByRoute", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -194,7 +194,7 @@ func (s *uasOperatingAreas) UoaByRouteUsV1UoaRouteQueryPost(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

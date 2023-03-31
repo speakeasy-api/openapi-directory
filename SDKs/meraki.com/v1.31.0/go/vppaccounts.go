@@ -34,7 +34,7 @@ func newVppAccounts(defaultClient, securityClient HTTPClient, serverURL, languag
 // Get a hash containing the unparsed token of the VPP account with the given ID
 func (s *vppAccounts) GetOrganizationSmVppAccount(ctx context.Context, request operations.GetOrganizationSmVppAccountRequest) (*operations.GetOrganizationSmVppAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts/{vppAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts/{vppAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *vppAccounts) GetOrganizationSmVppAccount(ctx context.Context, request o
 // List the VPP accounts in the organization
 func (s *vppAccounts) GetOrganizationSmVppAccounts(ctx context.Context, request operations.GetOrganizationSmVppAccountsRequest) (*operations.GetOrganizationSmVppAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

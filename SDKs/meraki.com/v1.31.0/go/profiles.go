@@ -34,9 +34,9 @@ func newProfiles(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Creates a sensor alert profile for a network.
 func (s *profiles) CreateNetworkSensorAlertsProfile(ctx context.Context, request operations.CreateNetworkSensorAlertsProfileRequest) (*operations.CreateNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *profiles) CreateNetworkSensorAlertsProfile(ctx context.Context, request
 // Create an organization-wide alert configuration
 func (s *profiles) CreateOrganizationAlertsProfile(ctx context.Context, request operations.CreateOrganizationAlertsProfileRequest) (*operations.CreateOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *profiles) CreateOrganizationAlertsProfile(ctx context.Context, request 
 // Deletes a sensor alert profile from a network.
 func (s *profiles) DeleteNetworkSensorAlertsProfile(ctx context.Context, request operations.DeleteNetworkSensorAlertsProfileRequest) (*operations.DeleteNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *profiles) DeleteNetworkSensorAlertsProfile(ctx context.Context, request
 // Removes an organization-wide alert config
 func (s *profiles) DeleteOrganizationAlertsProfile(ctx context.Context, request operations.DeleteOrganizationAlertsProfileRequest) (*operations.DeleteOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -216,7 +216,7 @@ func (s *profiles) DeleteOrganizationAlertsProfile(ctx context.Context, request 
 // Show details of a sensor alert profile for a network.
 func (s *profiles) GetNetworkSensorAlertsProfile(ctx context.Context, request operations.GetNetworkSensorAlertsProfileRequest) (*operations.GetNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *profiles) GetNetworkSensorAlertsProfile(ctx context.Context, request op
 // Lists all sensor alert profiles for a network.
 func (s *profiles) GetNetworkSensorAlertsProfiles(ctx context.Context, request operations.GetNetworkSensorAlertsProfilesRequest) (*operations.GetNetworkSensorAlertsProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *profiles) GetNetworkSensorAlertsProfiles(ctx context.Context, request o
 // List all profiles in a network
 func (s *profiles) GetNetworkSmProfiles(ctx context.Context, request operations.GetNetworkSmProfilesRequest) (*operations.GetNetworkSmProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +351,7 @@ func (s *profiles) GetNetworkSmProfiles(ctx context.Context, request operations.
 // List all organization-wide alert configurations
 func (s *profiles) GetOrganizationAlertsProfiles(ctx context.Context, request operations.GetOrganizationAlertsProfilesRequest) (*operations.GetOrganizationAlertsProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -396,7 +396,7 @@ func (s *profiles) GetOrganizationAlertsProfiles(ctx context.Context, request op
 // Return a switch profile port
 func (s *profiles) GetOrganizationConfigTemplateSwitchProfilePort(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilePortRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -441,7 +441,7 @@ func (s *profiles) GetOrganizationConfigTemplateSwitchProfilePort(ctx context.Co
 // Return all the ports of a switch profile
 func (s *profiles) GetOrganizationConfigTemplateSwitchProfilePorts(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilePortsRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilePortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -486,7 +486,7 @@ func (s *profiles) GetOrganizationConfigTemplateSwitchProfilePorts(ctx context.C
 // List the switch profiles for your switch template configuration
 func (s *profiles) GetOrganizationConfigTemplateSwitchProfiles(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilesRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -531,9 +531,9 @@ func (s *profiles) GetOrganizationConfigTemplateSwitchProfiles(ctx context.Conte
 // Updates a sensor alert profile for a network.
 func (s *profiles) UpdateNetworkSensorAlertsProfile(ctx context.Context, request operations.UpdateNetworkSensorAlertsProfileRequest) (*operations.UpdateNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -583,9 +583,9 @@ func (s *profiles) UpdateNetworkSensorAlertsProfile(ctx context.Context, request
 // Update an organization-wide alert config
 func (s *profiles) UpdateOrganizationAlertsProfile(ctx context.Context, request operations.UpdateOrganizationAlertsProfileRequest) (*operations.UpdateOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -635,9 +635,9 @@ func (s *profiles) UpdateOrganizationAlertsProfile(ctx context.Context, request 
 // Update a switch profile port
 func (s *profiles) UpdateOrganizationConfigTemplateSwitchProfilePort(ctx context.Context, request operations.UpdateOrganizationConfigTemplateSwitchProfilePortRequest) (*operations.UpdateOrganizationConfigTemplateSwitchProfilePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

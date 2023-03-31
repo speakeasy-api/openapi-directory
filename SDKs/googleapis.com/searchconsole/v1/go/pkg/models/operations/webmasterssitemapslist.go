@@ -8,13 +8,13 @@ import (
 )
 
 type WebmastersSitemapsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebmastersSitemapsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebmastersSitemapsListSecurity struct {
@@ -22,12 +22,7 @@ type WebmastersSitemapsListSecurity struct {
 	Option2 *WebmastersSitemapsListSecurityOption2 `security:"option"`
 }
 
-type WebmastersSitemapsListPathParams struct {
-	// The site's URL, including protocol. For example: `http://www.example.com/`.
-	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
-}
-
-type WebmastersSitemapsListQueryParams struct {
+type WebmastersSitemapsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,18 +41,14 @@ type WebmastersSitemapsListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The site's URL, including protocol. For example: `http://www.example.com/`.
+	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
 	//  A URL of a site's sitemap index. For example: `http://www.example.com/sitemapindex.xml`.
 	SitemapIndex *string `queryParam:"style=form,explode=true,name=sitemapIndex"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type WebmastersSitemapsListRequest struct {
-	PathParams  WebmastersSitemapsListPathParams
-	QueryParams WebmastersSitemapsListQueryParams
-	Security    WebmastersSitemapsListSecurity
 }
 
 type WebmastersSitemapsListResponse struct {

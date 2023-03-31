@@ -10,7 +10,7 @@ import (
 )
 
 type CreateTokenSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateTokenIncludeEnum - List of related resources to include in the response
@@ -37,15 +37,10 @@ func (e *CreateTokenIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateTokenQueryParams struct {
+type CreateTokenRequest struct {
+	CreateTokenRequest shared.CreateTokenRequest `request:"mediaType=application/json"`
 	// List of related resources to include in the response
 	Include *CreateTokenIncludeEnum `queryParam:"style=form,explode=true,name=include"`
-}
-
-type CreateTokenRequest struct {
-	QueryParams CreateTokenQueryParams
-	Request     shared.CreateTokenRequest `request:"mediaType=application/json"`
-	Security    CreateTokenSecurity
 }
 
 type CreateTokenResponse struct {

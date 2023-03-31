@@ -8,13 +8,13 @@ import (
 )
 
 type ServicenetworkingServicesAddSubnetworkSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesAddSubnetworkSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicenetworkingServicesAddSubnetworkSecurity struct {
@@ -22,14 +22,10 @@ type ServicenetworkingServicesAddSubnetworkSecurity struct {
 	Option2 *ServicenetworkingServicesAddSubnetworkSecurityOption2 `security:"option"`
 }
 
-type ServicenetworkingServicesAddSubnetworkPathParams struct {
-	// Required. A tenant project in the service producer organization, in the following format: services/{service}/{collection-id}/{resource-id}. {collection-id} is the cloud resource collection type that represents the tenant project. Only `projects` are supported. {resource-id} is the tenant project numeric id, such as `123456`. {service} the name of the peering service, such as `service-peering.example.com`. This service must already be enabled in the service consumer's project.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ServicenetworkingServicesAddSubnetworkQueryParams struct {
+type ServicenetworkingServicesAddSubnetworkRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AddSubnetworkRequest *shared.AddSubnetworkRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type ServicenetworkingServicesAddSubnetworkQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. A tenant project in the service producer organization, in the following format: services/{service}/{collection-id}/{resource-id}. {collection-id} is the cloud resource collection type that represents the tenant project. Only `projects` are supported. {resource-id} is the tenant project numeric id, such as `123456`. {service} the name of the peering service, such as `service-peering.example.com`. This service must already be enabled in the service consumer's project.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type ServicenetworkingServicesAddSubnetworkQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ServicenetworkingServicesAddSubnetworkRequest struct {
-	PathParams  ServicenetworkingServicesAddSubnetworkPathParams
-	QueryParams ServicenetworkingServicesAddSubnetworkQueryParams
-	Request     *shared.AddSubnetworkRequest `request:"mediaType=application/json"`
-	Security    ServicenetworkingServicesAddSubnetworkSecurity
 }
 
 type ServicenetworkingServicesAddSubnetworkResponse struct {

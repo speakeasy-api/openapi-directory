@@ -4,39 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BaremetalsolutionOperationsCancelRequest(
-    security=operations.BaremetalsolutionOperationsCancelSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.BaremetalsolutionOperationsCancelPathParams(
-        name="nulla",
-    ),
-    query_params=operations.BaremetalsolutionOperationsCancelQueryParams(
-        dollar_xgafv="1",
-        access_token="eligendi",
-        alt="json",
-        callback="rerum",
-        fields="atque",
-        key="voluptatem",
-        oauth_token="dolor",
-        pretty_print=True,
-        quota_user="magni",
-        upload_type="exercitationem",
-        upload_protocol="provident",
-    ),
-    request={
-        "similique": "ipsam",
-        "quia": "voluptatum",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.operations.baremetalsolution_operations_cancel(req)
+res = s.operations.baremetalsolution_operations_cancel(req, operations.BaremetalsolutionOperationsCancelSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.empty is not None:
     # handle response

@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteDatasetSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteDatasetPathParams struct {
-	// Dataset Id
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteDatasetRequest struct {
-	PathParams DeleteDatasetPathParams
-	Security   DeleteDatasetSecurity
+	// Dataset Id
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 }
 
 type DeleteDatasetResponse struct {

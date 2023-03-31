@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretsSecretRolesUpdatePathParams struct {
+type SecretsSecretRolesUpdateRequest struct {
+	SecretRoleInput shared.SecretRoleInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this secret role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SecretsSecretRolesUpdateRequest struct {
-	PathParams SecretsSecretRolesUpdatePathParams
-	Request    shared.SecretRoleInput `request:"mediaType=application/json"`
 }
 
 type SecretsSecretRolesUpdateResponse struct {

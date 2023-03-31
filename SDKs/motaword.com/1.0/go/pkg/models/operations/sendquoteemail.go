@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendQuoteEmailPathParams struct {
+type SendQuoteEmailRequest struct {
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SendQuoteEmailRequest struct {
-	PathParams SendQuoteEmailPathParams
 }
 
 type SendQuoteEmailResponse struct {

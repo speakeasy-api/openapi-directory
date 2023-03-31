@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CopyPadWithoutHistoryUsingPOSTQueryParams struct {
+type CopyPadWithoutHistoryUsingPOSTRequest struct {
 	DestinationID *string `queryParam:"style=form,explode=true,name=destinationID"`
 	Force         *string `queryParam:"style=form,explode=true,name=force"`
 	SourceID      *string `queryParam:"style=form,explode=true,name=sourceID"`
-}
-
-type CopyPadWithoutHistoryUsingPOSTRequest struct {
-	QueryParams CopyPadWithoutHistoryUsingPOSTQueryParams
 }
 
 // CopyPadWithoutHistoryUsingPOST500ApplicationJSON - internal api error (code 2)

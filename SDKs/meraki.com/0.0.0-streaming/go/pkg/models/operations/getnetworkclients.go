@@ -8,13 +8,10 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkClientsQueryParams struct {
+type GetNetworkClientsRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -23,11 +20,6 @@ type GetNetworkClientsQueryParams struct {
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkClientsRequest struct {
-	PathParams  GetNetworkClientsPathParams
-	QueryParams GetNetworkClientsQueryParams
 }
 
 // GetNetworkClients200ApplicationJSONStatusEnum - The connection status of the client

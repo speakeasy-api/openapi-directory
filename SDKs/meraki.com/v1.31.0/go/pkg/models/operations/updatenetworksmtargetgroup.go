@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSmTargetGroupPathParams struct {
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	TargetGroupID string `pathParam:"style=simple,explode=false,name=targetGroupId"`
-}
-
 type UpdateNetworkSmTargetGroupRequestBody struct {
 	// The name of this target group
 	Name *string `json:"name,omitempty"`
@@ -19,8 +14,9 @@ type UpdateNetworkSmTargetGroupRequestBody struct {
 }
 
 type UpdateNetworkSmTargetGroupRequest struct {
-	PathParams UpdateNetworkSmTargetGroupPathParams
-	Request    *UpdateNetworkSmTargetGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateNetworkSmTargetGroupRequestBody `request:"mediaType=application/json"`
+	NetworkID     string                                 `pathParam:"style=simple,explode=false,name=networkId"`
+	TargetGroupID string                                 `pathParam:"style=simple,explode=false,name=targetGroupId"`
 }
 
 type UpdateNetworkSmTargetGroupResponse struct {

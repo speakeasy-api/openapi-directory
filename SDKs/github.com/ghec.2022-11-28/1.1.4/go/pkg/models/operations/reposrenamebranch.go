@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposRenameBranchPathParams struct {
-	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-cloud@latest//graphql).
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposRenameBranchRequestBody struct {
 	// The new name of the branch.
 	NewName string `json:"new_name"`
 }
 
 type ReposRenameBranchRequest struct {
-	PathParams ReposRenameBranchPathParams
-	Request    ReposRenameBranchRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposRenameBranchRequestBody `request:"mediaType=application/json"`
+	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-cloud@latest//graphql).
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposRenameBranchResponse struct {

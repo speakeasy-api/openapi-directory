@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type ReplyToPostPathParams struct {
-	// The ID of the post to reply to.
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
 type ReplyToPostRequestBody struct {
 	// The message to send to the post author.
 	Message string `multipartForm:"name=message"`
@@ -19,8 +14,9 @@ type ReplyToPostRequestBody struct {
 }
 
 type ReplyToPostRequest struct {
-	PathParams ReplyToPostPathParams
-	Request    ReplyToPostRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ReplyToPostRequestBody `request:"mediaType=multipart/form-data"`
+	// The ID of the post to reply to.
+	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 type ReplyToPostResponse struct {

@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationLicensePathParams struct {
-	LicenseID      string `pathParam:"style=simple,explode=false,name=licenseId"`
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationLicenseRequestBody struct {
 	// The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license.
 	DeviceSerial *string `json:"deviceSerial,omitempty"`
 }
 
 type UpdateOrganizationLicenseRequest struct {
-	PathParams UpdateOrganizationLicensePathParams
-	Request    *UpdateOrganizationLicenseRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationLicenseRequestBody `request:"mediaType=application/json"`
+	LicenseID      string                                `pathParam:"style=simple,explode=false,name=licenseId"`
+	OrganizationID string                                `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationLicense200ApplicationJSONPermanentlyQueuedLicenses struct {

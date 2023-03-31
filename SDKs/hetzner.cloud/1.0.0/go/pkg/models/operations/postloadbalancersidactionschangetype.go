@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsChangeTypePathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostLoadBalancersIDActionsChangeTypeChangeTypeRequest struct {
 	// ID or name of Load Balancer type the Load Balancer should migrate to
 	LoadBalancerType string `json:"load_balancer_type"`
 }
 
 type PostLoadBalancersIDActionsChangeTypeRequest struct {
-	PathParams PostLoadBalancersIDActionsChangeTypePathParams
-	Request    *PostLoadBalancersIDActionsChangeTypeChangeTypeRequest `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsChangeTypeChangeTypeRequest `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsChangeTypeActionResponseActionError - Error message for the Action if error occurred, otherwise null

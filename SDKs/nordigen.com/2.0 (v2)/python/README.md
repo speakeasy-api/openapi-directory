@@ -1,0 +1,114 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/nordigen.com/2.0 (v2)/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        jwt_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.AccountsBalancesRetrieveRequest(
+    id="89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+)
+    
+res = s.accounts.accounts_balances_retrieve(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### accounts
+
+* `accounts_balances_retrieve` - Access account balances.
+
+Balances will be returned in Berlin Group PSD2 format.
+* `accounts_details_retrieve` - Access account details.
+
+Account details will be returned in Berlin Group PSD2 format.
+* `accounts_transactions_retrieve` - Access account transactions.
+
+Transactions will be returned in Berlin Group PSD2 format.
+* `retrieve_account_metadata` - Access account metadata.
+
+Information about the account record, such as the processing status and IBAN.
+
+Account status is recalculated based on the error count in the latest req.
+
+### agreements
+
+* `accept_eua` - Accept an end-user agreement via the API
+* `create_eua_v2` - Create an end user agreement
+* `delete_eua_by_id_v2` - Delete an end user agreement
+* `retrieve_eua_by_id_v2` - Retrieve end user agreement by ID
+* `retrieve_all_eu_as_for_an_end_user_v2` - Retrieve all end user agreements belonging to the company
+
+### institutions
+
+* `retrieve_all_supported_institutions_in_a_given_country` - List all available institutions
+* `retrieve_institution` - Get details about a specific Institution
+
+### payments
+
+* `create_payment_form` - Create payment
+* `create_payment_json` - Create payment
+* `create_payment_multipart` - Create payment
+* `delete_periodic_payment` - Delete periodic payment
+* `list_minimum_required_fields_for_institution` - List minimum required fields for institution
+* `list_payments` - Retrieve all payments belonging to the company
+* `payments_creditors_create_form` - API endpoints related to creditor accounts.
+* `payments_creditors_create_json` - API endpoints related to creditor accounts.
+* `payments_creditors_create_multipart` - API endpoints related to creditor accounts.
+* `payments_creditors_destroy` - API endpoints related to creditor accounts.
+* `payments_creditors_list` - API endpoints related to creditor accounts.
+* `payments_creditors_retrieve` - API endpoints related to creditor accounts.
+* `retrieve_all_payment_creditor_accounts` - Retrieve all payment creditor accounts
+* `retrieve_payment` - Retrieve payment
+
+### premium
+
+* `retrieve_account_transactions_v2` - Access account premium transactions.
+
+### requisitions
+
+* `delete_requisition_by_id_v2` - Delete requisition and its end user agreement
+* `requisition_by_id` - Retrieve a requisition by ID
+* `requisition_created` - Create a new requisition
+* `retrieve_all_requisitions` - Retrieve all requisitions belonging to the company
+
+### token
+
+* `jwt_obtain` - Obtain JWT pair
+* `jwt_refresh` - Refresh access token
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

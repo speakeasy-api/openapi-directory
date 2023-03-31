@@ -7,11 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FourDoauthorizationPathParams struct {
-	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type FourDoauthorizationHeaders struct {
+type FourDoauthorizationRequest struct {
+	FourDoauthorizationRequest shared.FourDoauthorizationRequest `request:"mediaType=application/json"`
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
@@ -20,12 +17,7 @@ type FourDoauthorizationHeaders struct {
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type FourDoauthorizationRequest struct {
-	PathParams FourDoauthorizationPathParams
-	Headers    FourDoauthorizationHeaders
-	Request    shared.FourDoauthorizationRequest `request:"mediaType=application/json"`
+	TransactionID        string `pathParam:"style=simple,explode=false,name=transactionId"`
 }
 
 type FourDoauthorizationResponse struct {

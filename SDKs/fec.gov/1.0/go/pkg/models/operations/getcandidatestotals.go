@@ -38,7 +38,7 @@ func (e *GetCandidatesTotalsOfficeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCandidatesTotalsQueryParams struct {
+type GetCandidatesTotalsRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -107,10 +107,6 @@ type GetCandidatesTotalsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// State of candidate
 	State []string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetCandidatesTotalsRequest struct {
-	QueryParams GetCandidatesTotalsQueryParams
 }
 
 type GetCandidatesTotalsResponse struct {

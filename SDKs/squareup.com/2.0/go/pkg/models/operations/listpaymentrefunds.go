@@ -8,10 +8,10 @@ import (
 )
 
 type ListPaymentRefundsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListPaymentRefundsQueryParams struct {
+type ListPaymentRefundsRequest struct {
 	// The timestamp for the beginning of the requested reporting period, in RFC 3339 format.
 	//
 	// Default: The current time minus one year.
@@ -51,11 +51,6 @@ type ListPaymentRefundsQueryParams struct {
 	//
 	// Default: If omitted, refunds are returned regardless of their status.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListPaymentRefundsRequest struct {
-	QueryParams ListPaymentRefundsQueryParams
-	Security    ListPaymentRefundsSecurity
 }
 
 type ListPaymentRefundsResponse struct {

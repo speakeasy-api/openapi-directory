@@ -12,10 +12,11 @@ var ListWorkspaceServerList = []string{
 }
 
 type ListWorkspaceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListWorkspaceQueryParams struct {
+type ListWorkspaceRequest struct {
 	// The `friendly_name` of the Workspace resources to read. For example `Customer Support` or `2014 Election Campaign`.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -24,12 +25,6 @@ type ListWorkspaceQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListWorkspaceRequest struct {
-	QueryParams ListWorkspaceQueryParams
-	Security    ListWorkspaceSecurity
-	ServerURL   *string
 }
 
 type ListWorkspaceListWorkspaceResponseMeta struct {

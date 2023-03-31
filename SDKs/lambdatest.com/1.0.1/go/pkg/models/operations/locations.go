@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LocationsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type LocationsRequest struct {
-	Security LocationsSecurity
-}
-
 type LocationsResponse struct {
 	// Access denied. Auth error.
 	AccessDenied *shared.AccessDenied

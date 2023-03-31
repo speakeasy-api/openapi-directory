@@ -34,14 +34,14 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetTransaction - Get a specific transaction
 func (s *transactions) GetTransaction(ctx context.Context, request operations.GetTransactionRequest) (*operations.GetTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -75,7 +75,7 @@ func (s *transactions) GetTransaction(ctx context.Context, request operations.Ge
 // GetTransactionCost - Get a specific transaction's cost
 func (s *transactions) GetTransactionCost(ctx context.Context, request operations.GetTransactionCostRequest) (*operations.GetTransactionCostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}/cost", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}/cost", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -119,7 +119,7 @@ func (s *transactions) GetTransactions(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

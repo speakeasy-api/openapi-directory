@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_auth=shared.SchemeAPIKeyAuth(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetMappingValuesKeyRequest(
-    path_params=operations.GetMappingValuesKeyPathParams(
-        key="micCode",
+        api_key_auth="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetMappingValuesKeyRequest(
+    key="currency",
 )
     
 res = s.get_mapping_values_key_(req)

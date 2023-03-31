@@ -43,7 +43,7 @@ func newNodes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesAddonRead(ctx context.Context, request operations.NodesAddonReadRequest) (*operations.NodesAddonReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/{provider}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/{provider}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -97,7 +97,7 @@ func (s *nodes) NodesAddonRead(ctx context.Context, request operations.NodesAddo
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *nodes) NodesAddonsFoldersList(ctx context.Context, request operations.NodesAddonsFoldersListRequest) (*operations.NodesAddonsFoldersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/{provider}/folders/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/{provider}/folders/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *nodes) NodesAddonsFoldersList(ctx context.Context, request operations.N
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *nodes) NodesAddonsList(ctx context.Context, request operations.NodesAddonsListRequest) (*operations.NodesAddonsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,9 +210,9 @@ func (s *nodes) NodesAddonsList(ctx context.Context, request operations.NodesAdd
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesChildrenCreate(ctx context.Context, request operations.NodesChildrenCreateRequest) (*operations.NodesChildrenCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/children/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/children/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -273,7 +273,7 @@ func (s *nodes) NodesChildrenCreate(ctx context.Context, request operations.Node
 // Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
 func (s *nodes) NodesChildrenList(ctx context.Context, request operations.NodesChildrenListRequest) (*operations.NodesChildrenListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/children/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/children/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -320,7 +320,7 @@ func (s *nodes) NodesChildrenList(ctx context.Context, request operations.NodesC
 // Returns a JSON object with a `data` key that contains the representation of the details necessary for the node citation.
 func (s *nodes) NodesCitationList(ctx context.Context, request operations.NodesCitationListRequest) (*operations.NodesCitationListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/citation/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/citation/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -367,7 +367,7 @@ func (s *nodes) NodesCitationList(ctx context.Context, request operations.NodesC
 // Returns a JSON object with a `data` key that contains the representation of the node citation, in the requested style.
 func (s *nodes) NodesCitationRead(ctx context.Context, request operations.NodesCitationReadRequest) (*operations.NodesCitationReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/citation/{style_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/citation/{style_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -423,9 +423,9 @@ func (s *nodes) NodesCitationRead(ctx context.Context, request operations.NodesC
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesCommentCreate(ctx context.Context, request operations.NodesCommentCreateRequest) (*operations.NodesCommentCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/comments/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/comments/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -492,7 +492,7 @@ func (s *nodes) NodesCommentCreate(ctx context.Context, request operations.Nodes
 // Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting `true` or `false` in the query will cause the match to fail.
 func (s *nodes) NodesCommentsList(ctx context.Context, request operations.NodesCommentsListRequest) (*operations.NodesCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/comments/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/comments/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -551,9 +551,9 @@ func (s *nodes) NodesCommentsList(ctx context.Context, request operations.NodesC
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesContributorsCreate(ctx context.Context, request operations.NodesContributorsCreateRequest) (*operations.NodesContributorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -605,7 +605,7 @@ func (s *nodes) NodesContributorsCreate(ctx context.Context, request operations.
 // If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesContributorsDelete(ctx context.Context, request operations.NodesContributorsDeleteRequest) (*operations.NodesContributorsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/{user_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -658,7 +658,7 @@ func (s *nodes) NodesContributorsDelete(ctx context.Context, request operations.
 // Contributors may be filtered by their `bibliographic` and `permission` attributes.
 func (s *nodes) NodesContributorsList(ctx context.Context, request operations.NodesContributorsListRequest) (*operations.NodesContributorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -713,9 +713,9 @@ func (s *nodes) NodesContributorsList(ctx context.Context, request operations.No
 // If the given user is not already in the contributor list, a 404 Not Found error will be returned. A node must always have at least one admin, and any attempt to downgrade the permissions of a sole admin will result in a 400 Bad Request error.
 func (s *nodes) NodesContributorsPartialUpdate(ctx context.Context, request operations.NodesContributorsPartialUpdateRequest) (*operations.NodesContributorsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/{user_id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -767,7 +767,7 @@ func (s *nodes) NodesContributorsPartialUpdate(ctx context.Context, request oper
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesContributorsRead(ctx context.Context, request operations.NodesContributorsReadRequest) (*operations.NodesContributorsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/{user_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/contributors/{user_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -826,7 +826,7 @@ func (s *nodes) NodesContributorsRead(ctx context.Context, request operations.No
 // Returns a JSON object with a `data` key containing the representation of the created node, if the request is successful.
 //
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-func (s *nodes) NodesCreate(ctx context.Context, request operations.NodesCreateRequest) (*operations.NodesCreateResponse, error) {
+func (s *nodes) NodesCreate(ctx context.Context, request operations.NodesCreateNodeInput) (*operations.NodesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nodes/"
 
@@ -881,7 +881,7 @@ func (s *nodes) NodesCreate(ctx context.Context, request operations.NodesCreateR
 // If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesDelete(ctx context.Context, request operations.NodesDeleteRequest) (*operations.NodesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -930,9 +930,9 @@ func (s *nodes) NodesDelete(ctx context.Context, request operations.NodesDeleteR
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesDraftRegistrationsCreate(ctx context.Context, request operations.NodesDraftRegistrationsCreateRequest) (*operations.NodesDraftRegistrationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -982,7 +982,7 @@ func (s *nodes) NodesDraftRegistrationsCreate(ctx context.Context, request opera
 // If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
 func (s *nodes) NodesDraftRegistrationsDelete(ctx context.Context, request operations.NodesDraftRegistrationsDeleteRequest) (*operations.NodesDraftRegistrationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1030,7 +1030,7 @@ func (s *nodes) NodesDraftRegistrationsDelete(ctx context.Context, request opera
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *nodes) NodesDraftRegistrationsList(ctx context.Context, request operations.NodesDraftRegistrationsListRequest) (*operations.NodesDraftRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1089,9 +1089,9 @@ func (s *nodes) NodesDraftRegistrationsList(ctx context.Context, request operati
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesDraftRegistrationsPartialUpdate(ctx context.Context, request operations.NodesDraftRegistrationsPartialUpdateRequest) (*operations.NodesDraftRegistrationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1181,7 +1181,7 @@ func (s *nodes) NodesDraftRegistrationsPartialUpdate(ctx context.Context, reques
 // To delete a file or folder send a DELETE request to the delete link. Nothing will be returned in the response body.
 func (s *nodes) NodesFilesList(ctx context.Context, request operations.NodesFilesListRequest) (*operations.NodesFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/{provider}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/{provider}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1230,7 +1230,7 @@ func (s *nodes) NodesFilesList(ctx context.Context, request operations.NodesFile
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesFilesRead(ctx context.Context, request operations.NodesFilesReadRequest) (*operations.NodesFilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/{provider}/{path}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/{provider}/{path}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1288,9 +1288,9 @@ func (s *nodes) NodesFilesRead(ctx context.Context, request operations.NodesFile
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesForksCreate(ctx context.Context, request operations.NodesForksCreateRequest) (*operations.NodesForksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/forks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/forks/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1345,7 +1345,7 @@ func (s *nodes) NodesForksCreate(ctx context.Context, request operations.NodesFo
 // This request should never return an error.
 func (s *nodes) NodesForksList(ctx context.Context, request operations.NodesForksListRequest) (*operations.NodesForksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/forks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/forks/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1401,7 +1401,7 @@ func (s *nodes) NodesForksList(ctx context.Context, request operations.NodesFork
 // Identifiers may be filtered by their `category` e.g `ark` or `doi`.
 func (s *nodes) NodesIdentifiersList(ctx context.Context, request operations.NodesIdentifiersListRequest) (*operations.NodesIdentifiersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/identifiers/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/identifiers/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1452,7 +1452,7 @@ func (s *nodes) NodesIdentifiersList(ctx context.Context, request operations.Nod
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *nodes) NodesInstitutionsList(ctx context.Context, request operations.NodesInstitutionsListRequest) (*operations.NodesInstitutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/institutions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/institutions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1507,7 +1507,7 @@ func (s *nodes) NodesInstitutionsList(ctx context.Context, request operations.No
 // Nodes may be filtered by their `title`, `category`, `description`, `public`, `registration`, or `tags`. `title`, `description`, and `category` are string fields and will be filteres using simple substring matching. `public`, `registration` are boolean and can be filtered using truthy values, such as `true`, `false`, `0`, `1`. `tags` is an array of simple strings.
 func (s *nodes) NodesLinkedNodesList(ctx context.Context, request operations.NodesLinkedNodesListRequest) (*operations.NodesLinkedNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/linked_nodes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/linked_nodes/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1633,7 +1633,7 @@ func (s *nodes) NodesList(ctx context.Context) (*operations.NodesListResponse, e
 // Nodes may be filtered by their `action`, and `date`.
 func (s *nodes) NodesLogsList(ctx context.Context, request operations.NodesLogsListRequest) (*operations.NodesLogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/logs/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/logs/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1690,9 +1690,9 @@ func (s *nodes) NodesLogsList(ctx context.Context, request operations.NodesLogsL
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesNodeAddonUpdate(ctx context.Context, request operations.NodesNodeAddonUpdateRequest) (*operations.NodesNodeAddonUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/{provider}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/addons/{provider}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1744,9 +1744,9 @@ func (s *nodes) NodesNodeAddonUpdate(ctx context.Context, request operations.Nod
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesPartialUpdate(ctx context.Context, request operations.NodesPartialUpdateRequest) (*operations.NodesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1798,7 +1798,7 @@ func (s *nodes) NodesPartialUpdate(ctx context.Context, request operations.Nodes
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
 func (s *nodes) NodesPreprintsList(ctx context.Context, request operations.NodesPreprintsListRequest) (*operations.NodesPreprintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/preprints/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/preprints/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1854,7 +1854,7 @@ func (s *nodes) NodesPreprintsList(ctx context.Context, request operations.Nodes
 // Note: In the OSF filesystem model, providers are treated as folders, but with special properties that distinguish them from regular folders. Every provider folder is considered a root folder, and may not be deleted through the regular file API.
 func (s *nodes) NodesProvidersList(ctx context.Context, request operations.NodesProvidersListRequest) (*operations.NodesProvidersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1903,7 +1903,7 @@ func (s *nodes) NodesProvidersList(ctx context.Context, request operations.Nodes
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesProvidersRead(ctx context.Context, request operations.NodesProvidersReadRequest) (*operations.NodesProvidersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/providers/{provider}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/files/providers/{provider}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1956,7 +1956,7 @@ func (s *nodes) NodesProvidersRead(ctx context.Context, request operations.Nodes
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *nodes) NodesRead(ctx context.Context, request operations.NodesReadRequest) (*operations.NodesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2013,7 +2013,7 @@ func (s *nodes) NodesRead(ctx context.Context, request operations.NodesReadReque
 // Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
 func (s *nodes) NodesRegistrationsList(ctx context.Context, request operations.NodesRegistrationsListRequest) (*operations.NodesRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/registrations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/registrations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2074,7 +2074,7 @@ func (s *nodes) NodesRegistrationsList(ctx context.Context, request operations.N
 // View Only Links may be filtered based on their `name`, `anonymous` and `date_created` fields. Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
 func (s *nodes) NodesViewOnlyLinksList(ctx context.Context, request operations.NodesViewOnlyLinksListRequest) (*operations.NodesViewOnlyLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/view_only_links/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/view_only_links/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2126,7 +2126,7 @@ func (s *nodes) NodesViewOnlyLinksList(ctx context.Context, request operations.N
 // View only links on a node, public or private, are readable and writeable only by users that are administrators on the node.
 func (s *nodes) NodesViewOnlyLinksRead(ctx context.Context, request operations.NodesViewOnlyLinksReadRequest) (*operations.NodesViewOnlyLinksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/view_only_links/{link_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/view_only_links/{link_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2183,7 +2183,7 @@ func (s *nodes) NodesViewOnlyLinksRead(ctx context.Context, request operations.N
 // Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
 func (s *nodes) NodesWikisList(ctx context.Context, request operations.NodesWikisListRequest) (*operations.NodesWikisListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/wikis/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/wikis/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

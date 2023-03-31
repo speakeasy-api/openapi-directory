@@ -92,15 +92,25 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateActivity(ctx context.Context, request operations.CreateActivityRequest) (*operations.CreateActivityResponse, error) {
-	baseURL := operations.CreateActivityServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateActivity(ctx context.Context, request operations.CreateActivityRequest, security operations.CreateActivitySecurity, opts ...operations.Option) (*operations.CreateActivityResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateActivityServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -112,7 +122,7 @@ func (s *SDK) CreateActivity(ctx context.Context, request operations.CreateActiv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,15 +155,25 @@ func (s *SDK) CreateActivity(ctx context.Context, request operations.CreateActiv
 
 	return res, nil
 }
-func (s *SDK) CreateTask(ctx context.Context, request operations.CreateTaskRequest) (*operations.CreateTaskResponse, error) {
-	baseURL := operations.CreateTaskServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateTask(ctx context.Context, request operations.CreateTaskRequest, security operations.CreateTaskSecurity, opts ...operations.Option) (*operations.CreateTaskResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTaskServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -165,7 +185,7 @@ func (s *SDK) CreateTask(ctx context.Context, request operations.CreateTaskReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,15 +218,25 @@ func (s *SDK) CreateTask(ctx context.Context, request operations.CreateTaskReque
 
 	return res, nil
 }
-func (s *SDK) CreateTaskChannel(ctx context.Context, request operations.CreateTaskChannelRequest) (*operations.CreateTaskChannelResponse, error) {
-	baseURL := operations.CreateTaskChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateTaskChannel(ctx context.Context, request operations.CreateTaskChannelRequest, security operations.CreateTaskChannelSecurity, opts ...operations.Option) (*operations.CreateTaskChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTaskChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +248,7 @@ func (s *SDK) CreateTaskChannel(ctx context.Context, request operations.CreateTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,15 +281,25 @@ func (s *SDK) CreateTaskChannel(ctx context.Context, request operations.CreateTa
 
 	return res, nil
 }
-func (s *SDK) CreateTaskQueue(ctx context.Context, request operations.CreateTaskQueueRequest) (*operations.CreateTaskQueueResponse, error) {
-	baseURL := operations.CreateTaskQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateTaskQueue(ctx context.Context, request operations.CreateTaskQueueRequest, security operations.CreateTaskQueueSecurity, opts ...operations.Option) (*operations.CreateTaskQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTaskQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -271,7 +311,7 @@ func (s *SDK) CreateTaskQueue(ctx context.Context, request operations.CreateTask
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -304,15 +344,25 @@ func (s *SDK) CreateTaskQueue(ctx context.Context, request operations.CreateTask
 
 	return res, nil
 }
-func (s *SDK) CreateWorker(ctx context.Context, request operations.CreateWorkerRequest) (*operations.CreateWorkerResponse, error) {
-	baseURL := operations.CreateWorkerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateWorker(ctx context.Context, request operations.CreateWorkerRequest, security operations.CreateWorkerSecurity, opts ...operations.Option) (*operations.CreateWorkerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateWorkerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,7 +374,7 @@ func (s *SDK) CreateWorker(ctx context.Context, request operations.CreateWorkerR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,15 +407,25 @@ func (s *SDK) CreateWorker(ctx context.Context, request operations.CreateWorkerR
 
 	return res, nil
 }
-func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkflowRequest) (*operations.CreateWorkflowResponse, error) {
-	baseURL := operations.CreateWorkflowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkflowRequest, security operations.CreateWorkflowSecurity, opts ...operations.Option) (*operations.CreateWorkflowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateWorkflowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -377,7 +437,7 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,10 +470,20 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 
 	return res, nil
 }
-func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWorkspaceRequest) (*operations.CreateWorkspaceResponse, error) {
+func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWorkspaceCreateWorkspaceRequest, security operations.CreateWorkspaceSecurity, opts ...operations.Option) (*operations.CreateWorkspaceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateWorkspaceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Workspaces"
@@ -430,7 +500,7 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -463,20 +533,30 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 
 	return res, nil
 }
-func (s *SDK) DeleteActivity(ctx context.Context, request operations.DeleteActivityRequest) (*operations.DeleteActivityResponse, error) {
-	baseURL := operations.DeleteActivityServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteActivity(ctx context.Context, request operations.DeleteActivityRequest, security operations.DeleteActivitySecurity, opts ...operations.Option) (*operations.DeleteActivityResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteActivityServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -500,22 +580,32 @@ func (s *SDK) DeleteActivity(ctx context.Context, request operations.DeleteActiv
 
 	return res, nil
 }
-func (s *SDK) DeleteTask(ctx context.Context, request operations.DeleteTaskRequest) (*operations.DeleteTaskResponse, error) {
-	baseURL := operations.DeleteTaskServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTask(ctx context.Context, request operations.DeleteTaskRequest, security operations.DeleteTaskSecurity, opts ...operations.Option) (*operations.DeleteTaskResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTaskServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -539,20 +629,30 @@ func (s *SDK) DeleteTask(ctx context.Context, request operations.DeleteTaskReque
 
 	return res, nil
 }
-func (s *SDK) DeleteTaskChannel(ctx context.Context, request operations.DeleteTaskChannelRequest) (*operations.DeleteTaskChannelResponse, error) {
-	baseURL := operations.DeleteTaskChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTaskChannel(ctx context.Context, request operations.DeleteTaskChannelRequest, security operations.DeleteTaskChannelSecurity, opts ...operations.Option) (*operations.DeleteTaskChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTaskChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -576,20 +676,30 @@ func (s *SDK) DeleteTaskChannel(ctx context.Context, request operations.DeleteTa
 
 	return res, nil
 }
-func (s *SDK) DeleteTaskQueue(ctx context.Context, request operations.DeleteTaskQueueRequest) (*operations.DeleteTaskQueueResponse, error) {
-	baseURL := operations.DeleteTaskQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTaskQueue(ctx context.Context, request operations.DeleteTaskQueueRequest, security operations.DeleteTaskQueueSecurity, opts ...operations.Option) (*operations.DeleteTaskQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTaskQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -613,22 +723,32 @@ func (s *SDK) DeleteTaskQueue(ctx context.Context, request operations.DeleteTask
 
 	return res, nil
 }
-func (s *SDK) DeleteWorker(ctx context.Context, request operations.DeleteWorkerRequest) (*operations.DeleteWorkerResponse, error) {
-	baseURL := operations.DeleteWorkerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteWorker(ctx context.Context, request operations.DeleteWorkerRequest, security operations.DeleteWorkerSecurity, opts ...operations.Option) (*operations.DeleteWorkerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteWorkerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -652,20 +772,30 @@ func (s *SDK) DeleteWorker(ctx context.Context, request operations.DeleteWorkerR
 
 	return res, nil
 }
-func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkflowRequest) (*operations.DeleteWorkflowResponse, error) {
-	baseURL := operations.DeleteWorkflowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkflowRequest, security operations.DeleteWorkflowSecurity, opts ...operations.Option) (*operations.DeleteWorkflowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteWorkflowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -689,20 +819,30 @@ func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkf
 
 	return res, nil
 }
-func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest) (*operations.DeleteWorkspaceResponse, error) {
-	baseURL := operations.DeleteWorkspaceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest, security operations.DeleteWorkspaceSecurity, opts ...operations.Option) (*operations.DeleteWorkspaceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteWorkspaceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -726,20 +866,30 @@ func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWork
 
 	return res, nil
 }
-func (s *SDK) FetchActivity(ctx context.Context, request operations.FetchActivityRequest) (*operations.FetchActivityResponse, error) {
-	baseURL := operations.FetchActivityServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchActivity(ctx context.Context, request operations.FetchActivityRequest, security operations.FetchActivitySecurity, opts ...operations.Option) (*operations.FetchActivityResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchActivityServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -772,20 +922,30 @@ func (s *SDK) FetchActivity(ctx context.Context, request operations.FetchActivit
 
 	return res, nil
 }
-func (s *SDK) FetchEvent(ctx context.Context, request operations.FetchEventRequest) (*operations.FetchEventResponse, error) {
-	baseURL := operations.FetchEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEvent(ctx context.Context, request operations.FetchEventRequest, security operations.FetchEventSecurity, opts ...operations.Option) (*operations.FetchEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Events/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Events/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -818,20 +978,30 @@ func (s *SDK) FetchEvent(ctx context.Context, request operations.FetchEventReque
 
 	return res, nil
 }
-func (s *SDK) FetchTask(ctx context.Context, request operations.FetchTaskRequest) (*operations.FetchTaskResponse, error) {
-	baseURL := operations.FetchTaskServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTask(ctx context.Context, request operations.FetchTaskRequest, security operations.FetchTaskSecurity, opts ...operations.Option) (*operations.FetchTaskResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -864,20 +1034,30 @@ func (s *SDK) FetchTask(ctx context.Context, request operations.FetchTaskRequest
 
 	return res, nil
 }
-func (s *SDK) FetchTaskChannel(ctx context.Context, request operations.FetchTaskChannelRequest) (*operations.FetchTaskChannelResponse, error) {
-	baseURL := operations.FetchTaskChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTaskChannel(ctx context.Context, request operations.FetchTaskChannelRequest, security operations.FetchTaskChannelSecurity, opts ...operations.Option) (*operations.FetchTaskChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -910,20 +1090,30 @@ func (s *SDK) FetchTaskChannel(ctx context.Context, request operations.FetchTask
 
 	return res, nil
 }
-func (s *SDK) FetchTaskQueue(ctx context.Context, request operations.FetchTaskQueueRequest) (*operations.FetchTaskQueueResponse, error) {
-	baseURL := operations.FetchTaskQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTaskQueue(ctx context.Context, request operations.FetchTaskQueueRequest, security operations.FetchTaskQueueSecurity, opts ...operations.Option) (*operations.FetchTaskQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -956,24 +1146,34 @@ func (s *SDK) FetchTaskQueue(ctx context.Context, request operations.FetchTaskQu
 
 	return res, nil
 }
-func (s *SDK) FetchTaskQueueCumulativeStatistics(ctx context.Context, request operations.FetchTaskQueueCumulativeStatisticsRequest) (*operations.FetchTaskQueueCumulativeStatisticsResponse, error) {
-	baseURL := operations.FetchTaskQueueCumulativeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTaskQueueCumulativeStatistics(ctx context.Context, request operations.FetchTaskQueueCumulativeStatisticsRequest, security operations.FetchTaskQueueCumulativeStatisticsSecurity, opts ...operations.Option) (*operations.FetchTaskQueueCumulativeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/CumulativeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskQueueCumulativeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/CumulativeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1006,24 +1206,34 @@ func (s *SDK) FetchTaskQueueCumulativeStatistics(ctx context.Context, request op
 
 	return res, nil
 }
-func (s *SDK) FetchTaskQueueRealTimeStatistics(ctx context.Context, request operations.FetchTaskQueueRealTimeStatisticsRequest) (*operations.FetchTaskQueueRealTimeStatisticsResponse, error) {
-	baseURL := operations.FetchTaskQueueRealTimeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTaskQueueRealTimeStatistics(ctx context.Context, request operations.FetchTaskQueueRealTimeStatisticsRequest, security operations.FetchTaskQueueRealTimeStatisticsSecurity, opts ...operations.Option) (*operations.FetchTaskQueueRealTimeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/RealTimeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskQueueRealTimeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/RealTimeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1056,24 +1266,34 @@ func (s *SDK) FetchTaskQueueRealTimeStatistics(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) FetchTaskQueueStatistics(ctx context.Context, request operations.FetchTaskQueueStatisticsRequest) (*operations.FetchTaskQueueStatisticsResponse, error) {
-	baseURL := operations.FetchTaskQueueStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTaskQueueStatistics(ctx context.Context, request operations.FetchTaskQueueStatisticsRequest, security operations.FetchTaskQueueStatisticsSecurity, opts ...operations.Option) (*operations.FetchTaskQueueStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/Statistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskQueueStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/Statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1106,20 +1326,30 @@ func (s *SDK) FetchTaskQueueStatistics(ctx context.Context, request operations.F
 
 	return res, nil
 }
-func (s *SDK) FetchTaskReservation(ctx context.Context, request operations.FetchTaskReservationRequest) (*operations.FetchTaskReservationResponse, error) {
-	baseURL := operations.FetchTaskReservationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTaskReservation(ctx context.Context, request operations.FetchTaskReservationRequest, security operations.FetchTaskReservationSecurity, opts ...operations.Option) (*operations.FetchTaskReservationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTaskReservationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1152,20 +1382,30 @@ func (s *SDK) FetchTaskReservation(ctx context.Context, request operations.Fetch
 
 	return res, nil
 }
-func (s *SDK) FetchWorker(ctx context.Context, request operations.FetchWorkerRequest) (*operations.FetchWorkerResponse, error) {
-	baseURL := operations.FetchWorkerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorker(ctx context.Context, request operations.FetchWorkerRequest, security operations.FetchWorkerSecurity, opts ...operations.Option) (*operations.FetchWorkerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1198,20 +1438,30 @@ func (s *SDK) FetchWorker(ctx context.Context, request operations.FetchWorkerReq
 
 	return res, nil
 }
-func (s *SDK) FetchWorkerChannel(ctx context.Context, request operations.FetchWorkerChannelRequest) (*operations.FetchWorkerChannelResponse, error) {
-	baseURL := operations.FetchWorkerChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkerChannel(ctx context.Context, request operations.FetchWorkerChannelRequest, security operations.FetchWorkerChannelSecurity, opts ...operations.Option) (*operations.FetchWorkerChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkerChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1244,24 +1494,34 @@ func (s *SDK) FetchWorkerChannel(ctx context.Context, request operations.FetchWo
 
 	return res, nil
 }
-func (s *SDK) FetchWorkerInstanceStatistics(ctx context.Context, request operations.FetchWorkerInstanceStatisticsRequest) (*operations.FetchWorkerInstanceStatisticsResponse, error) {
-	baseURL := operations.FetchWorkerInstanceStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkerInstanceStatistics(ctx context.Context, request operations.FetchWorkerInstanceStatisticsRequest, security operations.FetchWorkerInstanceStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkerInstanceStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Statistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkerInstanceStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1294,20 +1554,30 @@ func (s *SDK) FetchWorkerInstanceStatistics(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *SDK) FetchWorkerReservation(ctx context.Context, request operations.FetchWorkerReservationRequest) (*operations.FetchWorkerReservationResponse, error) {
-	baseURL := operations.FetchWorkerReservationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkerReservation(ctx context.Context, request operations.FetchWorkerReservationRequest, security operations.FetchWorkerReservationSecurity, opts ...operations.Option) (*operations.FetchWorkerReservationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkerReservationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1340,24 +1610,34 @@ func (s *SDK) FetchWorkerReservation(ctx context.Context, request operations.Fet
 
 	return res, nil
 }
-func (s *SDK) FetchWorkerStatistics(ctx context.Context, request operations.FetchWorkerStatisticsRequest) (*operations.FetchWorkerStatisticsResponse, error) {
-	baseURL := operations.FetchWorkerStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkerStatistics(ctx context.Context, request operations.FetchWorkerStatisticsRequest, security operations.FetchWorkerStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkerStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/Statistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkerStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/Statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1390,24 +1670,34 @@ func (s *SDK) FetchWorkerStatistics(ctx context.Context, request operations.Fetc
 
 	return res, nil
 }
-func (s *SDK) FetchWorkersCumulativeStatistics(ctx context.Context, request operations.FetchWorkersCumulativeStatisticsRequest) (*operations.FetchWorkersCumulativeStatisticsResponse, error) {
-	baseURL := operations.FetchWorkersCumulativeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkersCumulativeStatistics(ctx context.Context, request operations.FetchWorkersCumulativeStatisticsRequest, security operations.FetchWorkersCumulativeStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkersCumulativeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/CumulativeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkersCumulativeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/CumulativeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1440,24 +1730,34 @@ func (s *SDK) FetchWorkersCumulativeStatistics(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) FetchWorkersRealTimeStatistics(ctx context.Context, request operations.FetchWorkersRealTimeStatisticsRequest) (*operations.FetchWorkersRealTimeStatisticsResponse, error) {
-	baseURL := operations.FetchWorkersRealTimeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkersRealTimeStatistics(ctx context.Context, request operations.FetchWorkersRealTimeStatisticsRequest, security operations.FetchWorkersRealTimeStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkersRealTimeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/RealTimeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkersRealTimeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/RealTimeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1490,20 +1790,30 @@ func (s *SDK) FetchWorkersRealTimeStatistics(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *SDK) FetchWorkflow(ctx context.Context, request operations.FetchWorkflowRequest) (*operations.FetchWorkflowResponse, error) {
-	baseURL := operations.FetchWorkflowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkflow(ctx context.Context, request operations.FetchWorkflowRequest, security operations.FetchWorkflowSecurity, opts ...operations.Option) (*operations.FetchWorkflowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkflowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1536,24 +1846,34 @@ func (s *SDK) FetchWorkflow(ctx context.Context, request operations.FetchWorkflo
 
 	return res, nil
 }
-func (s *SDK) FetchWorkflowCumulativeStatistics(ctx context.Context, request operations.FetchWorkflowCumulativeStatisticsRequest) (*operations.FetchWorkflowCumulativeStatisticsResponse, error) {
-	baseURL := operations.FetchWorkflowCumulativeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkflowCumulativeStatistics(ctx context.Context, request operations.FetchWorkflowCumulativeStatisticsRequest, security operations.FetchWorkflowCumulativeStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkflowCumulativeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/CumulativeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkflowCumulativeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/CumulativeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1586,24 +1906,34 @@ func (s *SDK) FetchWorkflowCumulativeStatistics(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *SDK) FetchWorkflowRealTimeStatistics(ctx context.Context, request operations.FetchWorkflowRealTimeStatisticsRequest) (*operations.FetchWorkflowRealTimeStatisticsResponse, error) {
-	baseURL := operations.FetchWorkflowRealTimeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkflowRealTimeStatistics(ctx context.Context, request operations.FetchWorkflowRealTimeStatisticsRequest, security operations.FetchWorkflowRealTimeStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkflowRealTimeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/RealTimeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkflowRealTimeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/RealTimeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1636,24 +1966,34 @@ func (s *SDK) FetchWorkflowRealTimeStatistics(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *SDK) FetchWorkflowStatistics(ctx context.Context, request operations.FetchWorkflowStatisticsRequest) (*operations.FetchWorkflowStatisticsResponse, error) {
-	baseURL := operations.FetchWorkflowStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkflowStatistics(ctx context.Context, request operations.FetchWorkflowStatisticsRequest, security operations.FetchWorkflowStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkflowStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/Statistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkflowStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/Statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1686,20 +2026,30 @@ func (s *SDK) FetchWorkflowStatistics(ctx context.Context, request operations.Fe
 
 	return res, nil
 }
-func (s *SDK) FetchWorkspace(ctx context.Context, request operations.FetchWorkspaceRequest) (*operations.FetchWorkspaceResponse, error) {
-	baseURL := operations.FetchWorkspaceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkspace(ctx context.Context, request operations.FetchWorkspaceRequest, security operations.FetchWorkspaceSecurity, opts ...operations.Option) (*operations.FetchWorkspaceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkspaceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1732,24 +2082,34 @@ func (s *SDK) FetchWorkspace(ctx context.Context, request operations.FetchWorksp
 
 	return res, nil
 }
-func (s *SDK) FetchWorkspaceCumulativeStatistics(ctx context.Context, request operations.FetchWorkspaceCumulativeStatisticsRequest) (*operations.FetchWorkspaceCumulativeStatisticsResponse, error) {
-	baseURL := operations.FetchWorkspaceCumulativeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkspaceCumulativeStatistics(ctx context.Context, request operations.FetchWorkspaceCumulativeStatisticsRequest, security operations.FetchWorkspaceCumulativeStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkspaceCumulativeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/CumulativeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkspaceCumulativeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/CumulativeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1782,24 +2142,34 @@ func (s *SDK) FetchWorkspaceCumulativeStatistics(ctx context.Context, request op
 
 	return res, nil
 }
-func (s *SDK) FetchWorkspaceRealTimeStatistics(ctx context.Context, request operations.FetchWorkspaceRealTimeStatisticsRequest) (*operations.FetchWorkspaceRealTimeStatisticsResponse, error) {
-	baseURL := operations.FetchWorkspaceRealTimeStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkspaceRealTimeStatistics(ctx context.Context, request operations.FetchWorkspaceRealTimeStatisticsRequest, security operations.FetchWorkspaceRealTimeStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkspaceRealTimeStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/RealTimeStatistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkspaceRealTimeStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/RealTimeStatistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1832,24 +2202,34 @@ func (s *SDK) FetchWorkspaceRealTimeStatistics(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) FetchWorkspaceStatistics(ctx context.Context, request operations.FetchWorkspaceStatisticsRequest) (*operations.FetchWorkspaceStatisticsResponse, error) {
-	baseURL := operations.FetchWorkspaceStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchWorkspaceStatistics(ctx context.Context, request operations.FetchWorkspaceStatisticsRequest, security operations.FetchWorkspaceStatisticsSecurity, opts ...operations.Option) (*operations.FetchWorkspaceStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Statistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchWorkspaceStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1882,24 +2262,34 @@ func (s *SDK) FetchWorkspaceStatistics(ctx context.Context, request operations.F
 
 	return res, nil
 }
-func (s *SDK) ListActivity(ctx context.Context, request operations.ListActivityRequest) (*operations.ListActivityResponse, error) {
-	baseURL := operations.ListActivityServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListActivity(ctx context.Context, request operations.ListActivityRequest, security operations.ListActivitySecurity, opts ...operations.Option) (*operations.ListActivityResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListActivityServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1932,24 +2322,34 @@ func (s *SDK) ListActivity(ctx context.Context, request operations.ListActivityR
 
 	return res, nil
 }
-func (s *SDK) ListEvent(ctx context.Context, request operations.ListEventRequest) (*operations.ListEventResponse, error) {
-	baseURL := operations.ListEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListEvent(ctx context.Context, request operations.ListEventRequest, security operations.ListEventSecurity, opts ...operations.Option) (*operations.ListEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Events", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1982,24 +2382,34 @@ func (s *SDK) ListEvent(ctx context.Context, request operations.ListEventRequest
 
 	return res, nil
 }
-func (s *SDK) ListTask(ctx context.Context, request operations.ListTaskRequest) (*operations.ListTaskResponse, error) {
-	baseURL := operations.ListTaskServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTask(ctx context.Context, request operations.ListTaskRequest, security operations.ListTaskSecurity, opts ...operations.Option) (*operations.ListTaskResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTaskServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2032,24 +2442,34 @@ func (s *SDK) ListTask(ctx context.Context, request operations.ListTaskRequest) 
 
 	return res, nil
 }
-func (s *SDK) ListTaskChannel(ctx context.Context, request operations.ListTaskChannelRequest) (*operations.ListTaskChannelResponse, error) {
-	baseURL := operations.ListTaskChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTaskChannel(ctx context.Context, request operations.ListTaskChannelRequest, security operations.ListTaskChannelSecurity, opts ...operations.Option) (*operations.ListTaskChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTaskChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2082,24 +2502,34 @@ func (s *SDK) ListTaskChannel(ctx context.Context, request operations.ListTaskCh
 
 	return res, nil
 }
-func (s *SDK) ListTaskQueue(ctx context.Context, request operations.ListTaskQueueRequest) (*operations.ListTaskQueueResponse, error) {
-	baseURL := operations.ListTaskQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTaskQueue(ctx context.Context, request operations.ListTaskQueueRequest, security operations.ListTaskQueueSecurity, opts ...operations.Option) (*operations.ListTaskQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTaskQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2132,24 +2562,34 @@ func (s *SDK) ListTaskQueue(ctx context.Context, request operations.ListTaskQueu
 
 	return res, nil
 }
-func (s *SDK) ListTaskQueuesStatistics(ctx context.Context, request operations.ListTaskQueuesStatisticsRequest) (*operations.ListTaskQueuesStatisticsResponse, error) {
-	baseURL := operations.ListTaskQueuesStatisticsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTaskQueuesStatistics(ctx context.Context, request operations.ListTaskQueuesStatisticsRequest, security operations.ListTaskQueuesStatisticsSecurity, opts ...operations.Option) (*operations.ListTaskQueuesStatisticsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/Statistics", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTaskQueuesStatisticsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/Statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2182,24 +2622,34 @@ func (s *SDK) ListTaskQueuesStatistics(ctx context.Context, request operations.L
 
 	return res, nil
 }
-func (s *SDK) ListTaskReservation(ctx context.Context, request operations.ListTaskReservationRequest) (*operations.ListTaskReservationResponse, error) {
-	baseURL := operations.ListTaskReservationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTaskReservation(ctx context.Context, request operations.ListTaskReservationRequest, security operations.ListTaskReservationSecurity, opts ...operations.Option) (*operations.ListTaskReservationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTaskReservationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2232,24 +2682,34 @@ func (s *SDK) ListTaskReservation(ctx context.Context, request operations.ListTa
 
 	return res, nil
 }
-func (s *SDK) ListWorker(ctx context.Context, request operations.ListWorkerRequest) (*operations.ListWorkerResponse, error) {
-	baseURL := operations.ListWorkerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListWorker(ctx context.Context, request operations.ListWorkerRequest, security operations.ListWorkerSecurity, opts ...operations.Option) (*operations.ListWorkerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListWorkerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2282,24 +2742,34 @@ func (s *SDK) ListWorker(ctx context.Context, request operations.ListWorkerReque
 
 	return res, nil
 }
-func (s *SDK) ListWorkerChannel(ctx context.Context, request operations.ListWorkerChannelRequest) (*operations.ListWorkerChannelResponse, error) {
-	baseURL := operations.ListWorkerChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListWorkerChannel(ctx context.Context, request operations.ListWorkerChannelRequest, security operations.ListWorkerChannelSecurity, opts ...operations.Option) (*operations.ListWorkerChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListWorkerChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2332,24 +2802,34 @@ func (s *SDK) ListWorkerChannel(ctx context.Context, request operations.ListWork
 
 	return res, nil
 }
-func (s *SDK) ListWorkerReservation(ctx context.Context, request operations.ListWorkerReservationRequest) (*operations.ListWorkerReservationResponse, error) {
-	baseURL := operations.ListWorkerReservationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListWorkerReservation(ctx context.Context, request operations.ListWorkerReservationRequest, security operations.ListWorkerReservationSecurity, opts ...operations.Option) (*operations.ListWorkerReservationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListWorkerReservationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2382,24 +2862,34 @@ func (s *SDK) ListWorkerReservation(ctx context.Context, request operations.List
 
 	return res, nil
 }
-func (s *SDK) ListWorkflow(ctx context.Context, request operations.ListWorkflowRequest) (*operations.ListWorkflowResponse, error) {
-	baseURL := operations.ListWorkflowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListWorkflow(ctx context.Context, request operations.ListWorkflowRequest, security operations.ListWorkflowSecurity, opts ...operations.Option) (*operations.ListWorkflowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListWorkflowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2432,10 +2922,20 @@ func (s *SDK) ListWorkflow(ctx context.Context, request operations.ListWorkflowR
 
 	return res, nil
 }
-func (s *SDK) ListWorkspace(ctx context.Context, request operations.ListWorkspaceRequest) (*operations.ListWorkspaceResponse, error) {
+func (s *SDK) ListWorkspace(ctx context.Context, request operations.ListWorkspaceRequest, security operations.ListWorkspaceSecurity, opts ...operations.Option) (*operations.ListWorkspaceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListWorkspaceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Workspaces"
@@ -2445,11 +2945,11 @@ func (s *SDK) ListWorkspace(ctx context.Context, request operations.ListWorkspac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2482,15 +2982,25 @@ func (s *SDK) ListWorkspace(ctx context.Context, request operations.ListWorkspac
 
 	return res, nil
 }
-func (s *SDK) UpdateActivity(ctx context.Context, request operations.UpdateActivityRequest) (*operations.UpdateActivityResponse, error) {
-	baseURL := operations.UpdateActivityServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateActivity(ctx context.Context, request operations.UpdateActivityRequest, security operations.UpdateActivitySecurity, opts ...operations.Option) (*operations.UpdateActivityResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateActivityServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2502,7 +3012,7 @@ func (s *SDK) UpdateActivity(ctx context.Context, request operations.UpdateActiv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2535,15 +3045,25 @@ func (s *SDK) UpdateActivity(ctx context.Context, request operations.UpdateActiv
 
 	return res, nil
 }
-func (s *SDK) UpdateTask(ctx context.Context, request operations.UpdateTaskRequest) (*operations.UpdateTaskResponse, error) {
-	baseURL := operations.UpdateTaskServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateTask(ctx context.Context, request operations.UpdateTaskRequest, security operations.UpdateTaskSecurity, opts ...operations.Option) (*operations.UpdateTaskResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateTaskServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2555,9 +3075,9 @@ func (s *SDK) UpdateTask(ctx context.Context, request operations.UpdateTaskReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2590,15 +3110,25 @@ func (s *SDK) UpdateTask(ctx context.Context, request operations.UpdateTaskReque
 
 	return res, nil
 }
-func (s *SDK) UpdateTaskChannel(ctx context.Context, request operations.UpdateTaskChannelRequest) (*operations.UpdateTaskChannelResponse, error) {
-	baseURL := operations.UpdateTaskChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateTaskChannel(ctx context.Context, request operations.UpdateTaskChannelRequest, security operations.UpdateTaskChannelSecurity, opts ...operations.Option) (*operations.UpdateTaskChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateTaskChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2610,7 +3140,7 @@ func (s *SDK) UpdateTaskChannel(ctx context.Context, request operations.UpdateTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2643,15 +3173,25 @@ func (s *SDK) UpdateTaskChannel(ctx context.Context, request operations.UpdateTa
 
 	return res, nil
 }
-func (s *SDK) UpdateTaskQueue(ctx context.Context, request operations.UpdateTaskQueueRequest) (*operations.UpdateTaskQueueResponse, error) {
-	baseURL := operations.UpdateTaskQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateTaskQueue(ctx context.Context, request operations.UpdateTaskQueueRequest, security operations.UpdateTaskQueueSecurity, opts ...operations.Option) (*operations.UpdateTaskQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateTaskQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2663,7 +3203,7 @@ func (s *SDK) UpdateTaskQueue(ctx context.Context, request operations.UpdateTask
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2696,15 +3236,25 @@ func (s *SDK) UpdateTaskQueue(ctx context.Context, request operations.UpdateTask
 
 	return res, nil
 }
-func (s *SDK) UpdateTaskReservation(ctx context.Context, request operations.UpdateTaskReservationRequest) (*operations.UpdateTaskReservationResponse, error) {
-	baseURL := operations.UpdateTaskReservationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateTaskReservation(ctx context.Context, request operations.UpdateTaskReservationRequest, security operations.UpdateTaskReservationSecurity, opts ...operations.Option) (*operations.UpdateTaskReservationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateTaskReservationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2716,9 +3266,9 @@ func (s *SDK) UpdateTaskReservation(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2751,15 +3301,25 @@ func (s *SDK) UpdateTaskReservation(ctx context.Context, request operations.Upda
 
 	return res, nil
 }
-func (s *SDK) UpdateWorker(ctx context.Context, request operations.UpdateWorkerRequest) (*operations.UpdateWorkerResponse, error) {
-	baseURL := operations.UpdateWorkerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateWorker(ctx context.Context, request operations.UpdateWorkerRequest, security operations.UpdateWorkerSecurity, opts ...operations.Option) (*operations.UpdateWorkerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateWorkerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2771,9 +3331,9 @@ func (s *SDK) UpdateWorker(ctx context.Context, request operations.UpdateWorkerR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2806,15 +3366,25 @@ func (s *SDK) UpdateWorker(ctx context.Context, request operations.UpdateWorkerR
 
 	return res, nil
 }
-func (s *SDK) UpdateWorkerChannel(ctx context.Context, request operations.UpdateWorkerChannelRequest) (*operations.UpdateWorkerChannelResponse, error) {
-	baseURL := operations.UpdateWorkerChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateWorkerChannel(ctx context.Context, request operations.UpdateWorkerChannelRequest, security operations.UpdateWorkerChannelSecurity, opts ...operations.Option) (*operations.UpdateWorkerChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateWorkerChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2826,7 +3396,7 @@ func (s *SDK) UpdateWorkerChannel(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2859,15 +3429,25 @@ func (s *SDK) UpdateWorkerChannel(ctx context.Context, request operations.Update
 
 	return res, nil
 }
-func (s *SDK) UpdateWorkerReservation(ctx context.Context, request operations.UpdateWorkerReservationRequest) (*operations.UpdateWorkerReservationResponse, error) {
-	baseURL := operations.UpdateWorkerReservationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateWorkerReservation(ctx context.Context, request operations.UpdateWorkerReservationRequest, security operations.UpdateWorkerReservationSecurity, opts ...operations.Option) (*operations.UpdateWorkerReservationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateWorkerReservationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2879,9 +3459,9 @@ func (s *SDK) UpdateWorkerReservation(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2914,15 +3494,25 @@ func (s *SDK) UpdateWorkerReservation(ctx context.Context, request operations.Up
 
 	return res, nil
 }
-func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkflowRequest) (*operations.UpdateWorkflowResponse, error) {
-	baseURL := operations.UpdateWorkflowServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkflowRequest, security operations.UpdateWorkflowSecurity, opts ...operations.Option) (*operations.UpdateWorkflowResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateWorkflowServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2934,7 +3524,7 @@ func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2967,15 +3557,25 @@ func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkf
 
 	return res, nil
 }
-func (s *SDK) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest) (*operations.UpdateWorkspaceResponse, error) {
-	baseURL := operations.UpdateWorkspaceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest, security operations.UpdateWorkspaceSecurity, opts ...operations.Option) (*operations.UpdateWorkspaceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateWorkspaceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Workspaces/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2987,7 +3587,7 @@ func (s *SDK) UpdateWorkspace(ctx context.Context, request operations.UpdateWork
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

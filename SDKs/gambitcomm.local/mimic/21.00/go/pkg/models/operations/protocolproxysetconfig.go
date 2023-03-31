@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolProxySetConfigPathParams struct {
+type ProtocolProxySetConfigRequest struct {
 	// Agent to set the PROXY configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the PROXY configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the PROXY configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolProxySetConfigRequest struct {
-	PathParams ProtocolProxySetConfigPathParams
 }
 
 type ProtocolProxySetConfigResponse struct {

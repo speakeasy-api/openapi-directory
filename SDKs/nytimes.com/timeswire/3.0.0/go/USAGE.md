@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetContentJSONRequest{
-        QueryParams: operations.GetContentJSONQueryParams{
-            URL: "corrupti",
-        },
+        URL: "corrupti",
     }
 
     ctx := context.Background()

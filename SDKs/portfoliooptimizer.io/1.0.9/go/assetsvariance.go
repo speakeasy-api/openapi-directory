@@ -39,7 +39,7 @@ func newAssetsVariance(defaultClient, securityClient HTTPClient, serverURL, lang
 //
 // References
 // * [Wikipedia, Variance](https://en.wikipedia.org/wiki/Variance)
-func (s *assetsVariance) PostAssetsVariance(ctx context.Context, request operations.PostAssetsVarianceRequest) (*operations.PostAssetsVarianceResponse, error) {
+func (s *assetsVariance) PostAssetsVariance(ctx context.Context, request operations.PostAssetsVarianceRequestBody) (*operations.PostAssetsVarianceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/variance"
 

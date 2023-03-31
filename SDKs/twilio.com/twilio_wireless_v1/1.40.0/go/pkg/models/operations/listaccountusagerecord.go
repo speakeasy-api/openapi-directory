@@ -13,10 +13,11 @@ var ListAccountUsageRecordServerList = []string{
 }
 
 type ListAccountUsageRecordSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListAccountUsageRecordQueryParams struct {
+type ListAccountUsageRecordRequest struct {
 	// Only include usage that has occurred on or before this date. Format is [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
 	End *time.Time `queryParam:"style=form,explode=true,name=End"`
 	// How to summarize the usage by time. Can be: `daily`, `hourly`, or `all`. A value of `all` returns one Usage Record that describes the usage for the entire period.
@@ -29,12 +30,6 @@ type ListAccountUsageRecordQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Only include usage that has occurred on or after this date. Format is [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
 	Start *time.Time `queryParam:"style=form,explode=true,name=Start"`
-}
-
-type ListAccountUsageRecordRequest struct {
-	QueryParams ListAccountUsageRecordQueryParams
-	Security    ListAccountUsageRecordSecurity
-	ServerURL   *string
 }
 
 type ListAccountUsageRecordListAccountUsageRecordResponseMeta struct {

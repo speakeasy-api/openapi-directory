@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingFloodlightActivitiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingFloodlightActivitiesListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingFloodlightActivitiesListFloodlightActivityGroupTypeEnum - Select only floodlight activities with the specified floodlight activity group type.
@@ -91,7 +86,7 @@ func (e *DfareportingFloodlightActivitiesListSortOrderEnum) UnmarshalJSON(data [
 	}
 }
 
-type DfareportingFloodlightActivitiesListQueryParams struct {
+type DfareportingFloodlightActivitiesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -126,6 +121,8 @@ type DfareportingFloodlightActivitiesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for objects by name or ID. Wildcards (*) are allowed. For example, "floodlightactivity*2015" will return objects with names like "floodlightactivity June 2015", "floodlightactivity April 2015", or simply "floodlightactivity 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "floodlightactivity" will match objects with name "my floodlightactivity activity", "floodlightactivity 2015", or simply "floodlightactivity".
@@ -140,12 +137,6 @@ type DfareportingFloodlightActivitiesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingFloodlightActivitiesListRequest struct {
-	PathParams  DfareportingFloodlightActivitiesListPathParams
-	QueryParams DfareportingFloodlightActivitiesListQueryParams
-	Security    DfareportingFloodlightActivitiesListSecurity
 }
 
 type DfareportingFloodlightActivitiesListResponse struct {

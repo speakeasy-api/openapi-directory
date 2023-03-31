@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateProjectCollaboratorsInviteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateProjectCollaboratorsInvitePathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateProjectCollaboratorsInviteRequest struct {
-	PathParams PrivateProjectCollaboratorsInvitePathParams
 	// viewer or collaborator role. User user_id or email of user
-	Request  shared.ProjectCollaboratorInvite `request:"mediaType=application/json"`
-	Security PrivateProjectCollaboratorsInviteSecurity
+	ProjectCollaboratorInvite shared.ProjectCollaboratorInvite `request:"mediaType=application/json"`
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectCollaboratorsInviteResponse struct {

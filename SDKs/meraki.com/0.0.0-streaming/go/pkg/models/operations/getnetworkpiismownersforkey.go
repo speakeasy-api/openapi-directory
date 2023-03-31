@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type GetNetworkPiiSmOwnersForKeyPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkPiiSmOwnersForKeyQueryParams struct {
+type GetNetworkPiiSmOwnersForKeyRequest struct {
 	// The MAC of a Bluetooth client
 	BluetoothMac *string `queryParam:"style=form,explode=true,name=bluetoothMac"`
 	// The email of a network user account or a Systems Manager device
@@ -18,16 +14,12 @@ type GetNetworkPiiSmOwnersForKeyQueryParams struct {
 	// The IMEI of a Systems Manager device
 	Imei *string `queryParam:"style=form,explode=true,name=imei"`
 	// The MAC of a network client device or a Systems Manager device
-	Mac *string `queryParam:"style=form,explode=true,name=mac"`
+	Mac       *string `queryParam:"style=form,explode=true,name=mac"`
+	NetworkID string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The serial of a Systems Manager device
 	Serial *string `queryParam:"style=form,explode=true,name=serial"`
 	// The username of a Systems Manager user
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetNetworkPiiSmOwnersForKeyRequest struct {
-	PathParams  GetNetworkPiiSmOwnersForKeyPathParams
-	QueryParams GetNetworkPiiSmOwnersForKeyQueryParams
 }
 
 type GetNetworkPiiSmOwnersForKeyResponse struct {

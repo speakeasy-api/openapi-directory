@@ -43,7 +43,7 @@ func (s *revenueRules) GETRevenueAutomationStartDate(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -87,14 +87,14 @@ func (s *revenueRules) GETRevenueAutomationStartDate(ctx context.Context, reques
 // Retrieves the revenue recognition rule associated with a production rate plan charge by specifying the charge ID.
 func (s *revenueRules) GETRevenueRecRulebyProductRatePlanCharge(ctx context.Context, request operations.GETRevenueRecRulebyProductRatePlanChargeRequest) (*operations.GETRevenueRecRulebyProductRatePlanChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-recognition-rules/product-charges/{charge-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-recognition-rules/product-charges/{charge-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -136,14 +136,14 @@ func (s *revenueRules) GETRevenueRecRulebyProductRatePlanCharge(ctx context.Cont
 // Retrieves the revenue recognition rule associated with a subscription charge by specifying the charge ID. Request and response field descriptions and sample code are provided.
 func (s *revenueRules) GETRevenueRecRules(ctx context.Context, request operations.GETRevenueRecRulesRequest) (*operations.GETRevenueRecRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-recognition-rules/subscription-charges/{charge-key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-recognition-rules/subscription-charges/{charge-key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type RemoveRolefromUserPathParams struct {
+type RemoveRolefromUserRequest struct {
+	// The media type of the body of the request. Default value for license manager protocol is application/json
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// ID of the role which will be removed from the user
 	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
 	// ID corresponding to the user
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type RemoveRolefromUserHeaders struct {
-	// The media type of the body of the request. Default value for license manager protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RemoveRolefromUserRequest struct {
-	PathParams RemoveRolefromUserPathParams
-	Headers    RemoveRolefromUserHeaders
 }
 
 // RemoveRolefromUser400ApplicationJSON - Bad Request - A userId or role list with invalid format. The message on the body of the response will contain further information.

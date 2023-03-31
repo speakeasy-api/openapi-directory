@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPirateGenerateLoremIpsumSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetPirateGenerateLoremIpsumQueryParams struct {
+type GetPirateGenerateLoremIpsumRequest struct {
 	// No of elements to generate
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Type of element to generate `paragraphs/sentences/words`.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetPirateGenerateLoremIpsumRequest struct {
-	QueryParams GetPirateGenerateLoremIpsumQueryParams
-	Security    GetPirateGenerateLoremIpsumSecurity
 }
 
 type GetPirateGenerateLoremIpsumResponse struct {

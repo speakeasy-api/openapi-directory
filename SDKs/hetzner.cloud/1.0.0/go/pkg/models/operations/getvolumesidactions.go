@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetVolumesIDActionsPathParams struct {
-	// ID of the Volume
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetVolumesIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetVolumesIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetVolumesIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetVolumesIDActionsQueryParams struct {
+type GetVolumesIDActionsRequest struct {
+	// ID of the Volume
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetVolumesIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetVolumesIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetVolumesIDActionsRequest struct {
-	PathParams  GetVolumesIDActionsPathParams
-	QueryParams GetVolumesIDActionsQueryParams
 }
 
 // GetVolumesIDActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type PostPermissionAppsAppIDPathParams struct {
+type PostPermissionAppsAppIDRequest struct {
 	// The id of the app
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type PostPermissionAppsAppIDQueryParams struct {
 	// The time (in milliseconds) of when the user agreed to the access request
 	Date *int64 `queryParam:"style=form,explode=true,name=date"`
 	// The ip address of the user agreeing to the access request
 	IP *string `queryParam:"style=form,explode=true,name=ip"`
 	// The id of the user
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type PostPermissionAppsAppIDRequest struct {
-	PathParams  PostPermissionAppsAppIDPathParams
-	QueryParams PostPermissionAppsAppIDQueryParams
 }
 
 type PostPermissionAppsAppIDResponse struct {

@@ -94,16 +94,16 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // UserCtrlGetUserByID - Get user data by account ID and user ID
-func (s *SDK) UserCtrlGetUserByID(ctx context.Context, request operations.UserCtrlGetUserByIDRequest) (*operations.UserCtrlGetUserByIDResponse, error) {
+func (s *SDK) UserCtrlGetUserByID(ctx context.Context, request operations.UserCtrlGetUserByIDRequest, security operations.UserCtrlGetUserByIDSecurity) (*operations.UserCtrlGetUserByIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,20 +148,20 @@ func (s *SDK) UserCtrlGetUserByID(ctx context.Context, request operations.UserCt
 }
 
 // UserCtrlGetUsers - Get account users data by account ID
-func (s *SDK) UserCtrlGetUsers(ctx context.Context, request operations.UserCtrlGetUsersRequest) (*operations.UserCtrlGetUsersResponse, error) {
+func (s *SDK) UserCtrlGetUsers(ctx context.Context, request operations.UserCtrlGetUsersRequest, security operations.UserCtrlGetUsersSecurity) (*operations.UserCtrlGetUsersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTaskPathParams struct {
+type CreateTaskRequest struct {
+	// Created new task for a given project.
+	TaskCreateDTO shared.TaskCreateDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateTaskRequest struct {
-	PathParams CreateTaskPathParams
-	// Created new task for a given project.
-	Request shared.TaskCreateDTO `request:"mediaType=application/json"`
 }
 
 type CreateTaskResponse struct {

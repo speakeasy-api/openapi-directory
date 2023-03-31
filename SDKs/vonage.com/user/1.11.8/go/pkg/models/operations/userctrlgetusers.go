@@ -8,15 +8,12 @@ import (
 )
 
 type UserCtrlGetUsersSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type UserCtrlGetUsersPathParams struct {
+type UserCtrlGetUsersRequest struct {
 	// The Vonage Business Cloud account ID
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
-type UserCtrlGetUsersQueryParams struct {
 	// Filter by email address
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Filter by first name
@@ -29,12 +26,6 @@ type UserCtrlGetUsersQueryParams struct {
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of records per page
 	PageSize *float64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type UserCtrlGetUsersRequest struct {
-	PathParams  UserCtrlGetUsersPathParams
-	QueryParams UserCtrlGetUsersQueryParams
-	Security    UserCtrlGetUsersSecurity
 }
 
 type UserCtrlGetUsersResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveSubscriptionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveSubscriptionPathParams struct {
-	// The ID of the subscription to retrieve.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveSubscriptionRequest struct {
-	PathParams RetrieveSubscriptionPathParams
-	Security   RetrieveSubscriptionSecurity
+	// The ID of the subscription to retrieve.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
 }
 
 type RetrieveSubscriptionResponse struct {

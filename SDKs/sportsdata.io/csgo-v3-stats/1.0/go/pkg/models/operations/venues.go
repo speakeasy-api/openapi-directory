@@ -33,13 +33,9 @@ func (e *VenuesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VenuesPathParams struct {
+type VenuesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format VenuesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type VenuesRequest struct {
-	PathParams VenuesPathParams
 }
 
 type VenuesResponse struct {

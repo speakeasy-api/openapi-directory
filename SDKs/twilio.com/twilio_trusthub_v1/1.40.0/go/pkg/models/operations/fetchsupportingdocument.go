@@ -12,18 +12,13 @@ var FetchSupportingDocumentServerList = []string{
 }
 
 type FetchSupportingDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSupportingDocumentPathParams struct {
-	// The unique string created by Twilio to identify the Supporting Document resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSupportingDocumentRequest struct {
-	PathParams FetchSupportingDocumentPathParams
-	Security   FetchSupportingDocumentSecurity
-	ServerURL  *string
+	// The unique string created by Twilio to identify the Supporting Document resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSupportingDocumentResponse struct {

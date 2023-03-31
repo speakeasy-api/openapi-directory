@@ -8,21 +8,16 @@ import (
 )
 
 type ArticleVersionUpdateThumbSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ArticleVersionUpdateThumbPathParams struct {
+type ArticleVersionUpdateThumbRequest struct {
+	// File ID
+	FileID shared.FileID `request:"mediaType=application/json"`
 	// Article unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Article version identifier
 	VersionID int64 `pathParam:"style=simple,explode=false,name=version_id"`
-}
-
-type ArticleVersionUpdateThumbRequest struct {
-	PathParams ArticleVersionUpdateThumbPathParams
-	// File ID
-	Request  shared.FileID `request:"mediaType=application/json"`
-	Security ArticleVersionUpdateThumbSecurity
 }
 
 type ArticleVersionUpdateThumbResponse struct {

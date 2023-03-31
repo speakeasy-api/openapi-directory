@@ -108,10 +108,6 @@ func (u UsersDeleteEmailForAuthenticatedRequestBody) MarshalJSON() ([]byte, erro
 	return nil, nil
 }
 
-type UsersDeleteEmailForAuthenticatedRequest struct {
-	Request *UsersDeleteEmailForAuthenticatedRequestBody `request:"mediaType=application/json"`
-}
-
 type UsersDeleteEmailForAuthenticatedResponse struct {
 	ContentType string
 	StatusCode  int

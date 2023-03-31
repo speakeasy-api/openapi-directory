@@ -33,7 +33,7 @@ func newPrivilege(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // GetPrivileges - This method retrieves the seller's current set of privileges, including whether or not the seller's eBay registration has been completed, as well as the details of their site-wide <b>sellingLimt</b> (the amount and quantity they can sell on a given day).
-func (s *privilege) GetPrivileges(ctx context.Context, request operations.GetPrivilegesRequest) (*operations.GetPrivilegesResponse, error) {
+func (s *privilege) GetPrivileges(ctx context.Context) (*operations.GetPrivilegesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/privilege"
 
@@ -42,7 +42,7 @@ func (s *privilege) GetPrivileges(ctx context.Context, request operations.GetPri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

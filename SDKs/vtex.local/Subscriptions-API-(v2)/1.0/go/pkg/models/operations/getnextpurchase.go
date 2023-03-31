@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetNextpurchasePathParams struct {
-	// Reference date that retrieves all next purchases, starting from the dateStr inserted. Must be in the format of {{yyyyMMdd}}
-	DateStr string `pathParam:"style=simple,explode=false,name=dateStr"`
-}
-
-type GetNextpurchaseHeaders struct {
+type GetNextpurchaseRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetNextpurchaseRequest struct {
-	PathParams GetNextpurchasePathParams
-	Headers    GetNextpurchaseHeaders
+	// Reference date that retrieves all next purchases, starting from the dateStr inserted. Must be in the format of {{yyyyMMdd}}
+	DateStr string `pathParam:"style=simple,explode=false,name=dateStr"`
 }
 
 type GetNextpurchaseResponse struct {

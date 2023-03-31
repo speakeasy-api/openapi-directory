@@ -43,7 +43,7 @@ func (s *prices) OptCapProgramInPrice(ctx context.Context, request operations.Op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/cppreference"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *prices) OptCapProgramInPrice(ctx context.Context, request operations.Op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -112,7 +112,7 @@ func (s *prices) PriceBulkUploads(ctx context.Context, request operations.PriceB
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/feeds"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,9 +127,9 @@ func (s *prices) PriceBulkUploads(ctx context.Context, request operations.PriceB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,7 +180,7 @@ func (s *prices) UpdatePrice(ctx context.Context, request operations.UpdatePrice
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/price"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -195,7 +195,7 @@ func (s *prices) UpdatePrice(ctx context.Context, request operations.UpdatePrice
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

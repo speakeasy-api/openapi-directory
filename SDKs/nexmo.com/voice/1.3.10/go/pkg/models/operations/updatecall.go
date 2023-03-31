@@ -11,12 +11,7 @@ import (
 )
 
 type UpdateCallSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateCallPathParams struct {
-	// UUID of the Call
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateCallRequestBodyType string
@@ -208,9 +203,9 @@ func (u UpdateCallRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type UpdateCallRequest struct {
-	PathParams UpdateCallPathParams
-	Request    UpdateCallRequestBody `request:"mediaType=application/json"`
-	Security   UpdateCallSecurity
+	RequestBody UpdateCallRequestBody `request:"mediaType=application/json"`
+	// UUID of the Call
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type UpdateCallResponse struct {

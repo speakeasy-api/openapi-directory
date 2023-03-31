@@ -12,12 +12,8 @@ var CreateModelBuildServerList = []string{
 }
 
 type CreateModelBuildSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateModelBuildPathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateModelBuildCreateModelBuildRequest struct {
@@ -28,10 +24,9 @@ type CreateModelBuildCreateModelBuildRequest struct {
 }
 
 type CreateModelBuildRequest struct {
-	PathParams CreateModelBuildPathParams
-	Request    *CreateModelBuildCreateModelBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateModelBuildSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+	AssistantSid string                                   `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateModelBuildCreateModelBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateModelBuildResponse struct {

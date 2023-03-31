@@ -8,18 +8,18 @@ import (
 )
 
 type YoutubeWatermarksUnsetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeWatermarksUnsetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeWatermarksUnsetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeWatermarksUnsetSecurity struct {
@@ -28,7 +28,7 @@ type YoutubeWatermarksUnsetSecurity struct {
 	Option3 *YoutubeWatermarksUnsetSecurityOption3 `security:"option"`
 }
 
-type YoutubeWatermarksUnsetQueryParams struct {
+type YoutubeWatermarksUnsetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -54,11 +54,6 @@ type YoutubeWatermarksUnsetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubeWatermarksUnsetRequest struct {
-	QueryParams YoutubeWatermarksUnsetQueryParams
-	Security    YoutubeWatermarksUnsetSecurity
 }
 
 type YoutubeWatermarksUnsetResponse struct {

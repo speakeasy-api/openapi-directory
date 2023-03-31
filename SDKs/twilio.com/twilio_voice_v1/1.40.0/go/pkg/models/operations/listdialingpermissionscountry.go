@@ -12,10 +12,11 @@ var ListDialingPermissionsCountryServerList = []string{
 }
 
 type ListDialingPermissionsCountrySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListDialingPermissionsCountryQueryParams struct {
+type ListDialingPermissionsCountryRequest struct {
 	// Filter to retrieve the country permissions by specifying the continent
 	Continent *string `queryParam:"style=form,explode=true,name=Continent"`
 	// Filter the results by specified [country codes](https://www.itu.int/itudoc/itu-t/ob-lists/icc/e164_763.html)
@@ -34,12 +35,6 @@ type ListDialingPermissionsCountryQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListDialingPermissionsCountryRequest struct {
-	QueryParams ListDialingPermissionsCountryQueryParams
-	Security    ListDialingPermissionsCountrySecurity
-	ServerURL   *string
 }
 
 type ListDialingPermissionsCountryListDialingPermissionsCountryResponseMeta struct {

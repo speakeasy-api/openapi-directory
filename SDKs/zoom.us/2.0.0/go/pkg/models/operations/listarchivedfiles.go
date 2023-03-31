@@ -32,7 +32,7 @@ func (e *ListArchivedFilesQueryDataTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListArchivedFilesQueryParams struct {
+type ListArchivedFilesRequest struct {
 	// Start date for the query in "yyyy-MM-dd'T'HH:mm:ss'Z'" format. The duration for the query defined using the "from" and "to" parameters should not exceed 7 days as this API only provides a week's data at once.
 	From *string `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -43,10 +43,6 @@ type ListArchivedFilesQueryParams struct {
 	QueryDataType *ListArchivedFilesQueryDataTypeEnum `queryParam:"style=form,explode=true,name=query_data_type"`
 	// End date for the query in "yyyy-MM-dd'T'HH:mm:ss'Z'" format.
 	To *string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ListArchivedFilesRequest struct {
-	QueryParams ListArchivedFilesQueryParams
 }
 
 type ListArchivedFiles200ApplicationXMLMeetingsArchiveFiles struct {

@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateMembershipForUserInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum - The role that this user should have in the team.
 type TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum string
 
@@ -48,8 +39,13 @@ type TeamsAddOrUpdateMembershipForUserInOrgRequestBody struct {
 }
 
 type TeamsAddOrUpdateMembershipForUserInOrgRequest struct {
-	PathParams TeamsAddOrUpdateMembershipForUserInOrgPathParams
-	Request    *TeamsAddOrUpdateMembershipForUserInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateMembershipForUserInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type TeamsAddOrUpdateMembershipForUserInOrgResponse struct {

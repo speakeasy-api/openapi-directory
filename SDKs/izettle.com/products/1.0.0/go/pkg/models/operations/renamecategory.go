@@ -8,18 +8,13 @@ import (
 )
 
 type RenameCategorySecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type RenameCategoryPathParams struct {
-	CategoryUUID     string `pathParam:"style=simple,explode=false,name=categoryUuid"`
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RenameCategoryRequest struct {
-	PathParams RenameCategoryPathParams
-	Request    shared.RenameCategoryRequest `request:"mediaType=application/json"`
-	Security   RenameCategorySecurity
+	RenameCategoryRequest shared.RenameCategoryRequest `request:"mediaType=application/json"`
+	CategoryUUID          string                       `pathParam:"style=simple,explode=false,name=categoryUuid"`
+	OrganizationUUID      string                       `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type RenameCategoryResponse struct {

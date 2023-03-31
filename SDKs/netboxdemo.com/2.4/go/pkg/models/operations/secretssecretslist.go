@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretsSecretsListQueryParams struct {
+type SecretsSecretsListRequest struct {
 	Device   *string `queryParam:"style=form,explode=true,name=device"`
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// Multiple values may be separated by commas.
@@ -21,10 +21,6 @@ type SecretsSecretsListQueryParams struct {
 	Role   *string `queryParam:"style=form,explode=true,name=role"`
 	RoleID *string `queryParam:"style=form,explode=true,name=role_id"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type SecretsSecretsListRequest struct {
-	QueryParams SecretsSecretsListQueryParams
 }
 
 type SecretsSecretsList200ApplicationJSON struct {

@@ -65,14 +65,7 @@ func (e *GetGenericObjectByTypeTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGenericObjectByTypePathParams struct {
-	// id, e.g. NCBIGene:84570
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// bioentity type
-	Type GetGenericObjectByTypeTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetGenericObjectByTypeQueryParams struct {
+type GetGenericObjectByTypeRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Get distinct counts for associations (to be used in conjunction with 'get_association_counts' parameter)
@@ -89,21 +82,20 @@ type GetGenericObjectByTypeQueryParams struct {
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
 	// Get association counts
 	GetAssociationCounts *bool `queryParam:"style=form,explode=true,name=get_association_counts"`
+	// id, e.g. NCBIGene:84570
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// number of rows
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
 	Slim []string `queryParam:"style=form,explode=true,name=slim"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	// bioentity type
+	Type GetGenericObjectByTypeTypeEnum `pathParam:"style=simple,explode=false,name=type"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetGenericObjectByTypeRequest struct {
-	PathParams  GetGenericObjectByTypePathParams
-	QueryParams GetGenericObjectByTypeQueryParams
 }
 
 type GetGenericObjectByTypeResponse struct {

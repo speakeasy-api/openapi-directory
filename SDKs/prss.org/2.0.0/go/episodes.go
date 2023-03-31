@@ -34,7 +34,7 @@ func newEpisodes(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GetAPIV2Episodes - Gets episodes matching the given criteria.
-func (s *episodes) GetAPIV2Episodes(ctx context.Context, request operations.GetAPIV2EpisodesRequest) (*operations.GetAPIV2EpisodesResponse, error) {
+func (s *episodes) GetAPIV2Episodes(ctx context.Context, request operations.GetAPIV2EpisodesRequest, security operations.GetAPIV2EpisodesSecurity) (*operations.GetAPIV2EpisodesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/episodes"
 
@@ -43,11 +43,11 @@ func (s *episodes) GetAPIV2Episodes(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,16 +96,16 @@ func (s *episodes) GetAPIV2Episodes(ctx context.Context, request operations.GetA
 }
 
 // GetAPIV2EpisodesID - Returns the episode matching the given ID.
-func (s *episodes) GetAPIV2EpisodesID(ctx context.Context, request operations.GetAPIV2EpisodesIDRequest) (*operations.GetAPIV2EpisodesIDResponse, error) {
+func (s *episodes) GetAPIV2EpisodesID(ctx context.Context, request operations.GetAPIV2EpisodesIDRequest, security operations.GetAPIV2EpisodesIDSecurity) (*operations.GetAPIV2EpisodesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/episodes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/episodes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

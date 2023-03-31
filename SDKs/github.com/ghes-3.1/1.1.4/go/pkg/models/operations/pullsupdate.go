@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsUpdatePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The number that identifies the pull request.
-	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsUpdateRequestBodyStateEnum - State of this Pull Request. Either `open` or `closed`.
 type PullsUpdateRequestBodyStateEnum string
 
@@ -56,8 +47,13 @@ type PullsUpdateRequestBody struct {
 }
 
 type PullsUpdateRequest struct {
-	PathParams PullsUpdatePathParams
-	Request    *PullsUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *PullsUpdateRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The number that identifies the pull request.
+	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsUpdateResponse struct {

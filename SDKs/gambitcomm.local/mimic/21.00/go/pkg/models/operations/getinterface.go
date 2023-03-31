@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetInterfacePathParams struct {
+type GetInterfaceRequest struct {
 	// Agent to return the primary interface
 	AgentNum int64 `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetInterfaceRequest struct {
-	PathParams GetInterfacePathParams
 }
 
 type GetInterfaceResponse struct {

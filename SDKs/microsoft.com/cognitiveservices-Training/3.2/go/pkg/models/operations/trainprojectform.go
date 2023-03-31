@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrainProjectFormPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // TrainProjectFormTrainingTypeEnum - The type of training to use to train the project (default: Regular).
 type TrainProjectFormTrainingTypeEnum string
 
@@ -38,22 +33,19 @@ func (e *TrainProjectFormTrainingTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TrainProjectFormQueryParams struct {
+type TrainProjectFormRequest struct {
+	// Additional training parameters passed in to control how the project is trained.
+	TrainingParameters *shared.TrainingParameters `request:"mediaType=application/x-www-form-urlencoded"`
 	// Whether to force train even if dataset and configuration does not change (default: false).
 	ForceTrain *bool `queryParam:"style=form,explode=true,name=forceTrain"`
 	// The email address to send notification to when training finishes (default: null).
 	NotificationEmailAddress *string `queryParam:"style=form,explode=true,name=notificationEmailAddress"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The number of hours reserved as budget for training (if applicable).
 	ReservedBudgetInHours *int `queryParam:"style=form,explode=true,name=reservedBudgetInHours"`
 	// The type of training to use to train the project (default: Regular).
 	TrainingType *TrainProjectFormTrainingTypeEnum `queryParam:"style=form,explode=true,name=trainingType"`
-}
-
-type TrainProjectFormRequest struct {
-	PathParams  TrainProjectFormPathParams
-	QueryParams TrainProjectFormQueryParams
-	// Additional training parameters passed in to control how the project is trained.
-	Request *shared.TrainingParameters `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type TrainProjectFormResponse struct {

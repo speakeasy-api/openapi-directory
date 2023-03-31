@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimSitesGraphsPathParams struct {
+type DcimSitesGraphsRequest struct {
 	// A unique integer value identifying this site.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimSitesGraphsRequest struct {
-	PathParams DcimSitesGraphsPathParams
 }
 
 type DcimSitesGraphsResponse struct {

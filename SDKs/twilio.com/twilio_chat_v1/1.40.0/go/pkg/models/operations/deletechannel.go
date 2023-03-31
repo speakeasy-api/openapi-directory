@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteChannelServerList = []string{
@@ -12,20 +11,15 @@ var DeleteChannelServerList = []string{
 }
 
 type DeleteChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteChannelPathParams struct {
+type DeleteChannelRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to delete the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Channel resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteChannelRequest struct {
-	PathParams DeleteChannelPathParams
-	Security   DeleteChannelSecurity
-	ServerURL  *string
 }
 
 type DeleteChannelResponse struct {

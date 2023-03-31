@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolWebSetConfigPathParams struct {
+type ProtocolWebSetConfigRequest struct {
 	// Agent to set the WEB configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the WEB configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the WEB configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolWebSetConfigRequest struct {
-	PathParams ProtocolWebSetConfigPathParams
 }
 
 type ProtocolWebSetConfigResponse struct {

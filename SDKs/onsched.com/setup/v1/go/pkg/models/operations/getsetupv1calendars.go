@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1CalendarsQueryParams struct {
+type GetSetupV1CalendarsRequest struct {
 	// Filter by deleted status
 	Deleted *bool `queryParam:"style=form,explode=true,name=deleted"`
 	// Page limit default 20, max 100
@@ -16,10 +16,6 @@ type GetSetupV1CalendarsQueryParams struct {
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetSetupV1CalendarsRequest struct {
-	QueryParams GetSetupV1CalendarsQueryParams
 }
 
 type GetSetupV1CalendarsResponse struct {

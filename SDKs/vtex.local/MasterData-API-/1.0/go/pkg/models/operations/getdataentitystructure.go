@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetdataentitystructurePathParams struct {
-	// Identifies the kind of data
-	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
-}
-
-type GetdataentitystructureHeaders struct {
+type GetdataentitystructureRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetdataentitystructureRequest struct {
-	PathParams GetdataentitystructurePathParams
-	Headers    GetdataentitystructureHeaders
+	// Identifies the kind of data
+	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 }
 
 type GetdataentitystructureResponse struct {

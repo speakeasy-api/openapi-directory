@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostPhoneSIPTrunkSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type PostPhoneSIPTrunkPathParams struct {
-	// Unique identifier of the account.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostPhoneSIPTrunkApplicationJSONSIPTrunks struct {
@@ -32,9 +26,9 @@ type PostPhoneSIPTrunkApplicationJSON struct {
 }
 
 type PostPhoneSIPTrunkRequest struct {
-	PathParams PostPhoneSIPTrunkPathParams
-	Request    *PostPhoneSIPTrunkApplicationJSON `request:"mediaType=application/json"`
-	Security   PostPhoneSIPTrunkSecurity
+	RequestBody *PostPhoneSIPTrunkApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the account.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type PostPhoneSIPTrunk201ApplicationXMLSIPTrunks struct {

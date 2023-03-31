@@ -4,11 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetFamilyDetailsRequest(
-    query_params=operations.GetFamilyDetailsQueryParams(
-        id="nemo",
-    ),
+    ocp_apim_subscription_key="{{apiKey}}",
+    id="{family_id}",
 )
     
 res = s.language_model_direct_access.get_family_details(req)

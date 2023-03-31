@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProcessIDPathParams struct {
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 type GetProcessIDRequest struct {
-	PathParams GetProcessIDPathParams
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetProcessIDResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConvertQueryParams struct {
+type ConvertRequest struct {
 	// The type of the value to convert from (e.g. USD)
 	FromType string `queryParam:"style=form,explode=true,name=from-type"`
 	// The value to convert from (e.g. 10.95)
 	FromValue string `queryParam:"style=form,explode=true,name=from-value"`
 	// The type to convert to (e.g. EUR)
 	ToType string `queryParam:"style=form,explode=true,name=to-type"`
-}
-
-type ConvertRequest struct {
-	QueryParams ConvertQueryParams
 }
 
 type ConvertResponse struct {

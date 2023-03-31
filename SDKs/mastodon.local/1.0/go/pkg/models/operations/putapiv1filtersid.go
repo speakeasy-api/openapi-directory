@@ -10,12 +10,7 @@ import (
 )
 
 type PutAPIV1FiltersIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PutAPIV1FiltersIDPathParams struct {
-	// The id of the account in the database
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PutAPIV1FiltersIDRequestBodyContextEnum string
@@ -61,9 +56,9 @@ type PutAPIV1FiltersIDRequestBody struct {
 }
 
 type PutAPIV1FiltersIDRequest struct {
-	PathParams PutAPIV1FiltersIDPathParams
-	Request    []byte `request:"mediaType=application/form-data"`
-	Security   PutAPIV1FiltersIDSecurity
+	RequestBody []byte `request:"mediaType=application/form-data"`
+	// The id of the account in the database
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutAPIV1FiltersIDResponse struct {

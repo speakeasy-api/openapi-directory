@@ -33,16 +33,12 @@ func (e *DfsSlatesByDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DfsSlatesByDatePathParams struct {
+type DfsSlatesByDateRequest struct {
 	// The date of the slates.
 	// <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DfsSlatesByDateFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type DfsSlatesByDateRequest struct {
-	PathParams DfsSlatesByDatePathParams
 }
 
 type DfsSlatesByDateResponse struct {

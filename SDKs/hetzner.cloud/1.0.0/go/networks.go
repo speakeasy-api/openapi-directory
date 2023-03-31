@@ -86,7 +86,7 @@ func newNetworks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Note: if the network object changes during the request, the response will be a “conflict” error.
 func (s *networks) DeleteNetworksID(ctx context.Context, request operations.DeleteNetworksIDRequest) (*operations.DeleteNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *networks) GetNetworks(ctx context.Context, request operations.GetNetwor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,7 +171,7 @@ func (s *networks) GetNetworks(ctx context.Context, request operations.GetNetwor
 // Gets a specific network object.
 func (s *networks) GetNetworksID(ctx context.Context, request operations.GetNetworksIDRequest) (*operations.GetNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +218,7 @@ func (s *networks) GetNetworksID(ctx context.Context, request operations.GetNetw
 // You may specify one or more `subnets`. You can also add more Subnets later by using the [add subnet action](https://docs.hetzner.cloud/#network-actions-add-a-subnet-to-a-network). If you do not specify an `ip_range` in the subnet we will automatically pick the first available /24 range for you.
 //
 // You may specify one or more routes in `routes`. You can also add more routes later by using the [add route action](https://docs.hetzner.cloud/#network-actions-add-a-route-to-a-network).
-func (s *networks) PostNetworks(ctx context.Context, request operations.PostNetworksRequest) (*operations.PostNetworksResponse, error) {
+func (s *networks) PostNetworks(ctx context.Context, request operations.PostNetworksCreateNetworkRequest) (*operations.PostNetworksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/networks"
 
@@ -276,9 +276,9 @@ func (s *networks) PostNetworks(ctx context.Context, request operations.PostNetw
 // Note: if the network object changes during the request, the response will be a “conflict” error.
 func (s *networks) PutNetworksID(ctx context.Context, request operations.PutNetworksIDRequest) (*operations.PutNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

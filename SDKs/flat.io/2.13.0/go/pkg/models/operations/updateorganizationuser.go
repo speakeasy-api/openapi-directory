@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateOrganizationUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateOrganizationUserPathParams struct {
-	// Unique identifier of the Flat account
-	//
-	User string `pathParam:"style=simple,explode=false,name=user"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateOrganizationUserRequest struct {
-	PathParams UpdateOrganizationUserPathParams
-	Request    shared.UserAdminUpdate `request:"mediaType=application/json"`
-	Security   UpdateOrganizationUserSecurity
+	UserAdminUpdate shared.UserAdminUpdate `request:"mediaType=application/json"`
+	// Unique identifier of the Flat account
+	//
+	User string `pathParam:"style=simple,explode=false,name=user"`
 }
 
 type UpdateOrganizationUserResponse struct {

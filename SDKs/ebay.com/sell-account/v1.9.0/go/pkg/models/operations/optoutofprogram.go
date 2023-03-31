@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OptOutOfProgramSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type OptOutOfProgramRequest struct {
-	// Program being opted-out of.
-	Request  shared.Program `request:"mediaType=application/json"`
-	Security OptOutOfProgramSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type OptOutOfProgramResponse struct {

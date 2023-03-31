@@ -10,13 +10,8 @@ import (
 )
 
 type DlpProjectsLocationsJobTriggersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DlpProjectsLocationsJobTriggersListPathParams struct {
-	// Required. Parent resource name. The format of this value varies depending on whether you have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project with the identifier `example-project`, and specifies the `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DlpProjectsLocationsJobTriggersListTypeEnum - The type of jobs. Will use `DlpJobType.INSPECT` if not set.
@@ -46,7 +41,7 @@ func (e *DlpProjectsLocationsJobTriggersListTypeEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DlpProjectsLocationsJobTriggersListQueryParams struct {
+type DlpProjectsLocationsJobTriggersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -71,6 +66,8 @@ type DlpProjectsLocationsJobTriggersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by` field must not change for subsequent calls.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent resource name. The format of this value varies depending on whether you have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project with the identifier `example-project`, and specifies the `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -81,12 +78,6 @@ type DlpProjectsLocationsJobTriggersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DlpProjectsLocationsJobTriggersListRequest struct {
-	PathParams  DlpProjectsLocationsJobTriggersListPathParams
-	QueryParams DlpProjectsLocationsJobTriggersListQueryParams
-	Security    DlpProjectsLocationsJobTriggersListSecurity
 }
 
 type DlpProjectsLocationsJobTriggersListResponse struct {

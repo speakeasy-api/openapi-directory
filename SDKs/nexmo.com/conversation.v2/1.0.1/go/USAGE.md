@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetUsersRequest{
-        QueryParams: operations.GetUsersQueryParams{
-            Cursor: "corrupti",
-            Order: "desc",
-            PageSize: 715190,
-        },
+        Cursor: "corrupti",
+        Order: "desc",
+        PageSize: 715190,
     }
 
     ctx := context.Background()

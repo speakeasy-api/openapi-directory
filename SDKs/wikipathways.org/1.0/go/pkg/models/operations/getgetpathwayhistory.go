@@ -44,16 +44,12 @@ func (e *GetGetPathwayHistoryFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetPathwayHistoryQueryParams struct {
+type GetGetPathwayHistoryRequest struct {
 	Format *GetGetPathwayHistoryFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The pathway identifier
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
 	// Limit by time, only history items after the given
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type GetGetPathwayHistoryRequest struct {
-	QueryParams GetGetPathwayHistoryQueryParams
 }
 
 type GetGetPathwayHistoryResponse struct {

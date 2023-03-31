@@ -8,17 +8,12 @@ import (
 )
 
 type AddVideoPrivacyUsersSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AddVideoPrivacyUsersPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddVideoPrivacyUsersRequest struct {
-	PathParams AddVideoPrivacyUsersPathParams
-	Security   AddVideoPrivacyUsersSecurity
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type AddVideoPrivacyUsersResponse struct {

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteBankAccountPathParams struct {
+type DeleteBankAccountRequest struct {
 	// The unique identifier of the group application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
 	// The unique identifier of the bank account in Noyo
 	BankAccountID string `pathParam:"style=simple,explode=false,name=bank_account_id"`
 	// The current version identifier of the bank account
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type DeleteBankAccountRequest struct {
-	PathParams DeleteBankAccountPathParams
 }
 
 type DeleteBankAccountResponse struct {

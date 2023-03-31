@@ -8,10 +8,10 @@ import (
 )
 
 type GetQuoteSearchSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteSearchQueryParams struct {
+type GetQuoteSearchRequest struct {
 	// Quote Author
 	Author *string `queryParam:"style=form,explode=true,name=author"`
 	// Quote Category
@@ -30,11 +30,6 @@ type GetQuoteSearchQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Should search only SFW (Safe For Work) quotes?
 	Sfw *bool `queryParam:"style=form,explode=true,name=sfw"`
-}
-
-type GetQuoteSearchRequest struct {
-	QueryParams GetQuoteSearchQueryParams
-	Security    GetQuoteSearchSecurity
 }
 
 type GetQuoteSearchResponse struct {

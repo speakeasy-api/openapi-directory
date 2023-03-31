@@ -35,15 +35,25 @@ func newProfile(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostV05PatientsProfileShareJSON - Share patient profile details
 // Request for sharing patient's profile details to HIP
-func (s *profile) PostV05PatientsProfileShareJSON(ctx context.Context, request operations.PostV05PatientsProfileShareJSONRequest) (*operations.PostV05PatientsProfileShareJSONResponse, error) {
+func (s *profile) PostV05PatientsProfileShareJSON(ctx context.Context, request operations.PostV05PatientsProfileShareJSONRequest, opts ...operations.Option) (*operations.PostV05PatientsProfileShareJSONResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05PatientsProfileShareJSONServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/patients/profile/share"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShareProfileRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +68,7 @@ func (s *profile) PostV05PatientsProfileShareJSON(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -116,15 +126,25 @@ func (s *profile) PostV05PatientsProfileShareJSON(ctx context.Context, request o
 
 // PostV05PatientsProfileShareRaw - Share patient profile details
 // Request for sharing patient's profile details to HIP
-func (s *profile) PostV05PatientsProfileShareRaw(ctx context.Context, request operations.PostV05PatientsProfileShareRawRequest) (*operations.PostV05PatientsProfileShareRawResponse, error) {
+func (s *profile) PostV05PatientsProfileShareRaw(ctx context.Context, request operations.PostV05PatientsProfileShareRawRequest, opts ...operations.Option) (*operations.PostV05PatientsProfileShareRawResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostV05PatientsProfileShareRawServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/patients/profile/share"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -139,7 +159,7 @@ func (s *profile) PostV05PatientsProfileShareRaw(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

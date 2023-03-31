@@ -12,20 +12,15 @@ var FetchBrandVettingServerList = []string{
 }
 
 type FetchBrandVettingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchBrandVettingPathParams struct {
+type FetchBrandVettingRequest struct {
 	// The SID of the Brand Registration resource of the vettings to read .
 	BrandSid string `pathParam:"style=simple,explode=false,name=BrandSid"`
 	// The Twilio SID of the third-party vetting record.
 	BrandVettingSid string `pathParam:"style=simple,explode=false,name=BrandVettingSid"`
-}
-
-type FetchBrandVettingRequest struct {
-	PathParams FetchBrandVettingPathParams
-	Security   FetchBrandVettingSecurity
-	ServerURL  *string
 }
 
 type FetchBrandVettingResponse struct {

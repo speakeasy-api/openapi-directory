@@ -29,7 +29,6 @@ pkg/models/shared/listitem.go
 pkg/models/shared/attachment.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listnotesresponse.go
 pkg/models/shared/batchcreatepermissionsresponse.go
 pkg/models/shared/batchcreatepermissionsrequest.go

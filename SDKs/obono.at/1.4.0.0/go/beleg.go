@@ -35,9 +35,9 @@ func newBeleg(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AddBeleg - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
 func (s *beleg) AddBeleg(ctx context.Context, request operations.AddBelegRequest) (*operations.AddBelegResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Belegdaten", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -93,9 +93,9 @@ func (s *beleg) AddBeleg(ctx context.Context, request operations.AddBelegRequest
 // CreateAbschluss - Generates an `Abschlussbeleg`.
 func (s *beleg) CreateAbschluss(ctx context.Context, request operations.CreateAbschlussRequest) (*operations.CreateAbschlussResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/abschluss", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/abschluss", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Abschlussbelegdaten", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -139,7 +139,7 @@ func (s *beleg) CreateAbschluss(ctx context.Context, request operations.CreateAb
 // GetBeleg - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
 func (s *beleg) GetBeleg(ctx context.Context, request operations.GetBelegRequest) (*operations.GetBelegResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,14 +184,14 @@ func (s *beleg) GetBeleg(ctx context.Context, request operations.GetBelegRequest
 // GetBelege - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
 func (s *beleg) GetBelege(ctx context.Context, request operations.GetBelegeRequest) (*operations.GetBelegeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/belege", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/belege", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -232,7 +232,7 @@ func (s *beleg) GetBelege(ctx context.Context, request operations.GetBelegeReque
 // GetBelegeBelegUUID - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
 func (s *beleg) GetBelegeBelegUUID(ctx context.Context, request operations.GetBelegeBelegUUIDRequest) (*operations.GetBelegeBelegUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/belege/{belegUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

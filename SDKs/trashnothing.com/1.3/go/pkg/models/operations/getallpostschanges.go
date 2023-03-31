@@ -4,17 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetAllPostsChangesSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllPostsChangesQueryParams struct {
+type GetAllPostsChangesRequest struct {
 	// Only changes older than this UTC date and time will be returned. The UTC date and time used must be within a day or less of date_min. And the date and time must be rounded to the nearest second.
 	//
 	DateMax time.Time `queryParam:"style=form,explode=true,name=date_max"`
@@ -25,11 +24,6 @@ type GetAllPostsChangesQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of changes to return per page (must be >= 1 and <= 50).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetAllPostsChangesRequest struct {
-	QueryParams GetAllPostsChangesQueryParams
-	Security    GetAllPostsChangesSecurity
 }
 
 type GetAllPostsChanges200ApplicationJSONChanges struct {

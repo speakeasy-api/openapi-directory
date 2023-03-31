@@ -8,23 +8,14 @@ import (
 )
 
 type GetCharityOrgSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetCharityOrgPathParams struct {
-	// The unique ID of the charitable organization.
-	CharityOrgID string `pathParam:"style=simple,explode=false,name=charity_org_id"`
-}
-
-type GetCharityOrgHeaders struct {
-	// A header used to specify the eBay marketplace ID.<br /><br /><b>Valid Values:</b> <code>EBAY_GB</code> and <code>EBAY_US</code>
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetCharityOrgRequest struct {
-	PathParams GetCharityOrgPathParams
-	Headers    GetCharityOrgHeaders
-	Security   GetCharityOrgSecurity
+	// A header used to specify the eBay marketplace ID.<br /><br /><b>Valid Values:</b> <code>EBAY_GB</code> and <code>EBAY_US</code>
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	// The unique ID of the charitable organization.
+	CharityOrgID string `pathParam:"style=simple,explode=false,name=charity_org_id"`
 }
 
 type GetCharityOrgResponse struct {

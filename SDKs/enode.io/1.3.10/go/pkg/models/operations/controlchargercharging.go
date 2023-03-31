@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ControlChargerChargingSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type ControlChargerChargingPathParams struct {
-	// ID of the Charger
-	ChargerID string `pathParam:"style=simple,explode=false,name=chargerId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ControlChargerChargingRequestBodyActionEnum - Charging action to perform
@@ -49,9 +43,9 @@ type ControlChargerChargingRequestBody struct {
 }
 
 type ControlChargerChargingRequest struct {
-	PathParams ControlChargerChargingPathParams
-	Request    *ControlChargerChargingRequestBody `request:"mediaType=application/json"`
-	Security   ControlChargerChargingSecurity
+	RequestBody *ControlChargerChargingRequestBody `request:"mediaType=application/json"`
+	// ID of the Charger
+	ChargerID string `pathParam:"style=simple,explode=false,name=chargerId"`
 }
 
 type ControlChargerChargingResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type CreateAliasSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
-type CreateAliasQueryParams struct {
+type CreateAliasRequest struct {
+	// alias properties
+	CreateAliasModel shared.CreateAliasModel `request:"mediaType=application/json"`
 	// alias (without `/` at the beginning)
 	AliasName *string `queryParam:"style=form,explode=true,name=aliasName"`
 	// domain which alias will belong to (string without `http/https` or `/`)
 	DomainName *string `queryParam:"style=form,explode=true,name=domainName"`
-}
-
-type CreateAliasRequest struct {
-	QueryParams CreateAliasQueryParams
-	// alias properties
-	Request  shared.CreateAliasModel `request:"mediaType=application/json"`
-	Security CreateAliasSecurity
 }
 
 type CreateAliasResponse struct {

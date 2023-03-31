@@ -24,10 +24,6 @@ type PostBundleRecipientsRequestBody struct {
 	UserID *int `multipartForm:"name=user_id"`
 }
 
-type PostBundleRecipientsRequest struct {
-	Request *PostBundleRecipientsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostBundleRecipientsResponse struct {
 	// The BundleRecipients object.
 	BundleRecipientEntity *shared.BundleRecipientEntity

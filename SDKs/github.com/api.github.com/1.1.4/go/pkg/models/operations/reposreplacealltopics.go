@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposReplaceAllTopicsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposReplaceAllTopicsRequestBody struct {
 	// An array of topics to add to the repository. Pass one or more topics to _replace_ the set of existing topics. Send an empty array (`[]`) to clear all topics from the repository. **Note:** Topic `names` cannot contain uppercase letters.
 	Names []string `json:"names"`
 }
 
 type ReposReplaceAllTopicsRequest struct {
-	PathParams ReposReplaceAllTopicsPathParams
-	Request    ReposReplaceAllTopicsRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposReplaceAllTopicsRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposReplaceAllTopicsResponse struct {

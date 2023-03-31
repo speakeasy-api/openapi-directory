@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchPoliceStopDataQueryParams struct {
+type SearchPoliceStopDataRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -56,10 +56,6 @@ type SearchPoliceStopDataQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchPoliceStopDataRequest struct {
-	QueryParams SearchPoliceStopDataQueryParams
 }
 
 type SearchPoliceStopDataResponse struct {

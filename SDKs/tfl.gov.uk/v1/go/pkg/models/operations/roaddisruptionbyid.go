@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RoadDisruptionByIDPathParams struct {
+type RoadDisruptionByIDRequest struct {
 	// Comma-separated list of disruption identifiers to filter by.
 	DisruptionIds []string `pathParam:"style=simple,explode=false,name=disruptionIds"`
-}
-
-type RoadDisruptionByIDQueryParams struct {
 	// Optional, defaults to false. When true, removes every property/node except for id, point, severity, severityDescription, startDate, endDate, corridor details, location and comments.
 	StripContent *bool `queryParam:"style=form,explode=true,name=stripContent"`
-}
-
-type RoadDisruptionByIDRequest struct {
-	PathParams  RoadDisruptionByIDPathParams
-	QueryParams RoadDisruptionByIDQueryParams
 }
 
 type RoadDisruptionByIDResponse struct {

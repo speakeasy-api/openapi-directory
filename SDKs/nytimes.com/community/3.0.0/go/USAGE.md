@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GETUserContentByDateJSONRequest{
-        Security: operations.GETUserContentByDateJSONSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GETUserContentByDateJSONQueryParams{
-            Date: "corrupti",
-        },
+        Date: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.GETUserContentByDateJSON(ctx, req)
+    res, err := s.GETUserContentByDateJSON(ctx, req, operations.GETUserContentByDateJSONSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

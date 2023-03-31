@@ -34,7 +34,7 @@ func newRandomRiddle(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GetRiddleRandom - Get a random riddle for a given category(optional)
-func (s *randomRiddle) GetRiddleRandom(ctx context.Context, request operations.GetRiddleRandomRequest) (*operations.GetRiddleRandomResponse, error) {
+func (s *randomRiddle) GetRiddleRandom(ctx context.Context, request operations.GetRiddleRandomRequest, security operations.GetRiddleRandomSecurity) (*operations.GetRiddleRandomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/riddle/random"
 
@@ -43,11 +43,11 @@ func (s *randomRiddle) GetRiddleRandom(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *randomRiddle) GetRiddleRandom(ctx context.Context, request operations.G
 }
 
 // GetRiddleSearch - Search for random riddle which has the text in the query, for a given category(optional).
-func (s *randomRiddle) GetRiddleSearch(ctx context.Context, request operations.GetRiddleSearchRequest) (*operations.GetRiddleSearchResponse, error) {
+func (s *randomRiddle) GetRiddleSearch(ctx context.Context, request operations.GetRiddleSearchRequest, security operations.GetRiddleSearchSecurity) (*operations.GetRiddleSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/riddle/search"
 
@@ -84,11 +84,11 @@ func (s *randomRiddle) GetRiddleSearch(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

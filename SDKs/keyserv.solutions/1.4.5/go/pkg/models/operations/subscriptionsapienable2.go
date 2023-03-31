@@ -54,10 +54,6 @@ func (u SubscriptionsAPIEnable2RequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type SubscriptionsAPIEnable2Request struct {
-	Request SubscriptionsAPIEnable2RequestBody `request:"mediaType=application/json"`
-}
-
 type SubscriptionsAPIEnable2Response struct {
 	ContentType string
 	StatusCode  int

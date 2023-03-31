@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListForOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ReposListForOrgDirectionEnum - Can be one of `asc` or `desc`. Default: when using `full_name`: `asc`, otherwise `desc`
 type ReposListForOrgDirectionEnum string
 
@@ -106,9 +102,10 @@ func (e *ReposListForOrgTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReposListForOrgQueryParams struct {
+type ReposListForOrgRequest struct {
 	// Can be one of `asc` or `desc`. Default: when using `full_name`: `asc`, otherwise `desc`
 	Direction *ReposListForOrgDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Org       string                        `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
@@ -117,11 +114,6 @@ type ReposListForOrgQueryParams struct {
 	Sort *ReposListForOrgSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Specifies the types of repositories you want returned. Can be one of `all`, `public`, `private`, `forks`, `sources`, `member`, `internal`. Note: For GitHub AE, can be one of `all`, `private`, `forks`, `sources`, `member`, `internal`. Default: `all`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `type` can also be `internal`. However, the `internal` value is not yet supported when a GitHub App calls this API with an installation access token.
 	Type *ReposListForOrgTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ReposListForOrgRequest struct {
-	PathParams  ReposListForOrgPathParams
-	QueryParams ReposListForOrgQueryParams
 }
 
 type ReposListForOrgResponse struct {

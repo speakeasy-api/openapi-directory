@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type EstimationAPIDeleteRawHeaders struct {
+type EstimationAPIDeleteRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type EstimationAPIDeleteRawRequest struct {
-	Headers EstimationAPIDeleteRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type EstimationAPIDeleteRawResponse struct {

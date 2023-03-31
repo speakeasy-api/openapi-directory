@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateReleasePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// release_id parameter
-	ReleaseID int64  `pathParam:"style=simple,explode=false,name=release_id"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposUpdateReleaseRequestBody struct {
 	// Text describing the contents of the tag.
 	Body *string `json:"body,omitempty"`
@@ -30,8 +23,11 @@ type ReposUpdateReleaseRequestBody struct {
 }
 
 type ReposUpdateReleaseRequest struct {
-	PathParams ReposUpdateReleasePathParams
-	Request    *ReposUpdateReleaseRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateReleaseRequestBody `request:"mediaType=application/json"`
+	Owner       string                         `pathParam:"style=simple,explode=false,name=owner"`
+	// release_id parameter
+	ReleaseID int64  `pathParam:"style=simple,explode=false,name=release_id"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateReleaseResponse struct {

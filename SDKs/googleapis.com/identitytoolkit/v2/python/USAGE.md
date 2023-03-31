@@ -4,43 +4,41 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest(
-    security=operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeQueryParams(
-        dollar_xgafv="2",
-        access_token="in",
-        alt="proto",
-        callback="et",
-        fields="nisi",
-        key="aspernatur",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="nobis",
-        upload_type="ex",
-        upload_protocol="repellat",
-    ),
-    request=shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest(
-        display_name="in",
-        id_token="voluptatibus",
+    dollar_xgafv="2",
+    google_cloud_identitytoolkit_v2_finalize_mfa_enrollment_request=shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest(
+        display_name="provident",
+        id_token="distinctio",
         phone_verification_info=shared.GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo(
-            android_verification_proof="consequatur",
-            code="et",
-            phone_number="nihil",
-            session_info="in",
+            android_verification_proof="quibusdam",
+            code="unde",
+            phone_number="nulla",
+            session_info="corrupti",
         ),
-        tenant_id="dolorum",
+        tenant_id="illum",
+        totp_verification_info=shared.GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo(
+            session_info="vel",
+            verification_code="error",
+        ),
     ),
+    access_token="deserunt",
+    alt="media",
+    callback="iure",
+    fields_="magnam",
+    key="debitis",
+    oauth_token="ipsa",
+    pretty_print=False,
+    quota_user="delectus",
+    upload_type="tempora",
+    upload_protocol="suscipit",
 )
     
-res = s.accounts.identitytoolkit_accounts_mfa_enrollment_finalize(req)
+res = s.accounts.identitytoolkit_accounts_mfa_enrollment_finalize(req, operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_identitytoolkit_v2_finalize_mfa_enrollment_response is not None:
     # handle response

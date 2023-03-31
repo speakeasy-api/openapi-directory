@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryPredictionsRawPathParams struct {
+type QueryPredictionsRawRequest struct {
+	// Parameters used to query the predictions. Limited to combining 2 tags.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QueryPredictionsRawRequest struct {
-	PathParams QueryPredictionsRawPathParams
-	// Parameters used to query the predictions. Limited to combining 2 tags.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type QueryPredictionsRawResponse struct {

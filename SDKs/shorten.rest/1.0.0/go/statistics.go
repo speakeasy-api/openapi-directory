@@ -34,7 +34,7 @@ func newStatistics(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetStatistics - Get clicks statistics
 // Retrieve the raw click statistics for your account. Clicks are retrieved by creation date in descending order.
-func (s *statistics) GetStatistics(ctx context.Context, request operations.GetStatisticsRequest) (*operations.GetStatisticsResponse, error) {
+func (s *statistics) GetStatistics(ctx context.Context, request shared.ClicksFilterModel, security operations.GetStatisticsSecurity) (*operations.GetStatisticsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clicks/pg"
 
@@ -53,7 +53,7 @@ func (s *statistics) GetStatistics(ctx context.Context, request operations.GetSt
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

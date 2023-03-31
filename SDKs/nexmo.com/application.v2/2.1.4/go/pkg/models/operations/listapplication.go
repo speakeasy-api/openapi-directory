@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListApplicationQueryParams struct {
+type ListApplicationRequest struct {
 	// The current page number (starts at 1)
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of applications per page
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ListApplicationRequest struct {
-	QueryParams ListApplicationQueryParams
 }
 
 // ListApplication406ApplicationJSON - Invalid Accept Header

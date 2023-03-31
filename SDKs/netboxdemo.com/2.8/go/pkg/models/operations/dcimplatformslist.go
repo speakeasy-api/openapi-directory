@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPlatformsListQueryParams struct {
+type DcimPlatformsListRequest struct {
 	Description     *string `queryParam:"style=form,explode=true,name=description"`
 	DescriptionIc   *string `queryParam:"style=form,explode=true,name=description__ic"`
 	DescriptionIe   *string `queryParam:"style=form,explode=true,name=description__ie"`
@@ -63,10 +63,6 @@ type DcimPlatformsListQueryParams struct {
 	SlugNie  *string `queryParam:"style=form,explode=true,name=slug__nie"`
 	SlugNiew *string `queryParam:"style=form,explode=true,name=slug__niew"`
 	SlugNisw *string `queryParam:"style=form,explode=true,name=slug__nisw"`
-}
-
-type DcimPlatformsListRequest struct {
-	QueryParams DcimPlatformsListQueryParams
 }
 
 type DcimPlatformsList200ApplicationJSON struct {

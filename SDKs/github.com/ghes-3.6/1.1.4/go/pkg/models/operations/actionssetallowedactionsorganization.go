@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetAllowedActionsOrganizationPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsSetAllowedActionsOrganizationRequest struct {
-	PathParams ActionsSetAllowedActionsOrganizationPathParams
-	Request    *shared.SelectedActions `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org             string                  `pathParam:"style=simple,explode=false,name=org"`
+	SelectedActions *shared.SelectedActions `request:"mediaType=application/json"`
 }
 
 type ActionsSetAllowedActionsOrganizationResponse struct {

@@ -4,38 +4,28 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingDeleteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MeetingDeletePathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type MeetingDeleteQueryParams struct {
+type MeetingDeleteRequest struct {
 	// `true`: Notify registrants about the meeting cancellation via email.
 	//
 	// `false`: Do not send any email notification to meeting registrants.
 	//
 	// The default value of this field is `false`.
 	CancelMeetingReminder *string `queryParam:"style=form,explode=true,name=cancel_meeting_reminder"`
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
 	// The meeting occurrence ID.
 	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 	// `true`: Notify host and alternative host about the meeting cancellation via email.
 	// `false`: Do not send any email notification.
 	ScheduleForReminder *bool `queryParam:"style=form,explode=true,name=schedule_for_reminder"`
-}
-
-type MeetingDeleteRequest struct {
-	PathParams  MeetingDeletePathParams
-	QueryParams MeetingDeleteQueryParams
-	Security    MeetingDeleteSecurity
 }
 
 type MeetingDeleteResponse struct {

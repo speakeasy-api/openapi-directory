@@ -147,7 +147,7 @@ func (e *GetLegalSearchCaseDocCategoryIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLegalSearchQueryParams struct {
+type GetLegalSearchRequest struct {
 	// Admin fine committee ID
 	//
 	AfCommitteeID *string `queryParam:"style=form,explode=true,name=af_committee_id"`
@@ -288,10 +288,6 @@ type GetLegalSearchQueryParams struct {
 	//     - admin_fines
 	//
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetLegalSearchRequest struct {
-	QueryParams GetLegalSearchQueryParams
 }
 
 type GetLegalSearchDefaultApplicationJSONAdminFinesCommissionVotes struct {

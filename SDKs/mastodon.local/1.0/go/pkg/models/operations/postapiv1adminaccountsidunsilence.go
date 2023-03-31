@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1AdminAccountsIDUnsilenceSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AdminAccountsIDUnsilencePathParams struct {
-	// ID of the account
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AdminAccountsIDUnsilenceRequest struct {
-	PathParams PostAPIV1AdminAccountsIDUnsilencePathParams
-	Security   PostAPIV1AdminAccountsIDUnsilenceSecurity
+	// ID of the account
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AdminAccountsIDUnsilenceResponse struct {

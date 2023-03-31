@@ -33,13 +33,9 @@ func (e *DriversFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DriversPathParams struct {
+type DriversRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DriversFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type DriversRequest struct {
-	PathParams DriversPathParams
 }
 
 type DriversResponse struct {

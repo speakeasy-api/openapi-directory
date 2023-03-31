@@ -10,13 +10,8 @@ import (
 )
 
 type ManufacturersAccountsProductsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ManufacturersAccountsProductsListPathParams struct {
-	// Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer Center account.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ManufacturersAccountsProductsListIncludeEnum string
@@ -48,7 +43,7 @@ func (e *ManufacturersAccountsProductsListIncludeEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ManufacturersAccountsProductsListQueryParams struct {
+type ManufacturersAccountsProductsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type ManufacturersAccountsProductsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The token returned by the previous request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer Center account.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -77,12 +74,6 @@ type ManufacturersAccountsProductsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ManufacturersAccountsProductsListRequest struct {
-	PathParams  ManufacturersAccountsProductsListPathParams
-	QueryParams ManufacturersAccountsProductsListQueryParams
-	Security    ManufacturersAccountsProductsListSecurity
 }
 
 type ManufacturersAccountsProductsListResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type ScriptProcessesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ScriptProcessesListUserProcessFilterStatusesEnum string
@@ -137,7 +137,7 @@ func (e *ScriptProcessesListUserProcessFilterUserAccessLevelsEnum) UnmarshalJSON
 	}
 }
 
-type ScriptProcessesListQueryParams struct {
+type ScriptProcessesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -182,11 +182,6 @@ type ScriptProcessesListQueryParams struct {
 	UserProcessFilterTypes []ScriptProcessesListUserProcessFilterTypesEnum `queryParam:"style=form,explode=true,name=userProcessFilter.types"`
 	// Optional field used to limit returned processes to those having one of the specified user access levels.
 	UserProcessFilterUserAccessLevels []ScriptProcessesListUserProcessFilterUserAccessLevelsEnum `queryParam:"style=form,explode=true,name=userProcessFilter.userAccessLevels"`
-}
-
-type ScriptProcessesListRequest struct {
-	QueryParams ScriptProcessesListQueryParams
-	Security    ScriptProcessesListSecurity
 }
 
 type ScriptProcessesListResponse struct {

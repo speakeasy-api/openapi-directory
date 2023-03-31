@@ -32,20 +32,20 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // AdvisorynotificationsOrganizationsLocationsNotificationsGet - Gets a notification.
-func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotificationsGet(ctx context.Context, request operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetRequest) (*operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetResponse, error) {
+func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotificationsGet(ctx context.Context, request operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetRequest, security operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetSecurity) (*operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotifications
 }
 
 // AdvisorynotificationsOrganizationsLocationsNotificationsList - Lists notifications under a given parent.
-func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotificationsList(ctx context.Context, request operations.AdvisorynotificationsOrganizationsLocationsNotificationsListRequest) (*operations.AdvisorynotificationsOrganizationsLocationsNotificationsListResponse, error) {
+func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotificationsList(ctx context.Context, request operations.AdvisorynotificationsOrganizationsLocationsNotificationsListRequest, security operations.AdvisorynotificationsOrganizationsLocationsNotificationsListSecurity) (*operations.AdvisorynotificationsOrganizationsLocationsNotificationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notifications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notifications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

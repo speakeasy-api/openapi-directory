@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposRedeliverWebhookDeliveryPathParams struct {
+type ReposRedeliverWebhookDeliveryRequest struct {
 	DeliveryID int64 `pathParam:"style=simple,explode=false,name=delivery_id"`
 	// The unique identifier of the hook.
 	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
@@ -15,10 +15,6 @@ type ReposRedeliverWebhookDeliveryPathParams struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposRedeliverWebhookDeliveryRequest struct {
-	PathParams ReposRedeliverWebhookDeliveryPathParams
 }
 
 type ReposRedeliverWebhookDeliveryResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminDeleteUserFromEnterprisePathParams struct {
+type EnterpriseAdminDeleteUserFromEnterpriseRequest struct {
 	// The unique identifier of the SCIM user.
 	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
-type EnterpriseAdminDeleteUserFromEnterpriseRequest struct {
-	PathParams EnterpriseAdminDeleteUserFromEnterprisePathParams
 }
 
 type EnterpriseAdminDeleteUserFromEnterpriseResponse struct {

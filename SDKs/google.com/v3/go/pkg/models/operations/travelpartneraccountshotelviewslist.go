@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TravelpartnerAccountsHotelViewsListPathParams struct {
-	// The resource name of the account being queried. The format is `accounts/{account_id}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type TravelpartnerAccountsHotelViewsListQueryParams struct {
+type TravelpartnerAccountsHotelViewsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -33,6 +28,8 @@ type TravelpartnerAccountsHotelViewsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token of the page to retrieve.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The resource name of the account being queried. The format is `accounts/{account_id}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -41,11 +38,6 @@ type TravelpartnerAccountsHotelViewsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TravelpartnerAccountsHotelViewsListRequest struct {
-	PathParams  TravelpartnerAccountsHotelViewsListPathParams
-	QueryParams TravelpartnerAccountsHotelViewsListQueryParams
 }
 
 type TravelpartnerAccountsHotelViewsListResponse struct {

@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RotatePhotoPathParams struct {
-	PhotoID string `pathParam:"style=simple,explode=false,name=photo_id"`
-}
-
-type RotatePhotoQueryParams struct {
+type RotatePhotoRequest struct {
 	// Rotation in degrees - currently only 90, 180 and 270 are supported which correspond to rotate left, rotate upside down and rotate right.
 	Degrees int64 `queryParam:"style=form,explode=true,name=degrees"`
 	// Client device pixel ratio used to determine thumbnail size (default 1.0).
 	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
-}
-
-type RotatePhotoRequest struct {
-	PathParams  RotatePhotoPathParams
-	QueryParams RotatePhotoQueryParams
+	PhotoID          string   `pathParam:"style=simple,explode=false,name=photo_id"`
 }
 
 type RotatePhotoResponse struct {

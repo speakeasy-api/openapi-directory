@@ -24,152 +24,141 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AzureAuth: shared.SchemeAzureAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            AzureAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
     req := operations.ApplicationsCreateRequest{
-        PathParams: operations.ApplicationsCreatePathParams{
-            TenantID: "corrupti",
-        },
-        QueryParams: operations.ApplicationsCreateQueryParams{
-            APIVersion: "provident",
-        },
-        Request: shared.ApplicationCreateParameters{
+        ApplicationCreateParameters: shared.ApplicationCreateParameters{
             AllowGuestsSignIn: false,
             AllowPassthroughUsers: false,
-            AppLogoURL: "distinctio",
+            AppLogoURL: "corrupti",
             AppPermissions: []string{
+                "distinctio",
+                "quibusdam",
                 "unde",
-                "nulla",
-                "corrupti",
-                "illum",
             },
             AppRoles: []shared.AppRole{
                 shared.AppRole{
                     AllowedMemberTypes: []string{
-                        "deserunt",
-                        "suscipit",
-                        "iure",
+                        "illum",
+                        "vel",
+                        "error",
                     },
-                    Description: "magnam",
-                    DisplayName: "debitis",
-                    ID: "ipsa",
+                    Description: "deserunt",
+                    DisplayName: "suscipit",
+                    ID: "iure",
                     IsEnabled: false,
-                    Value: "delectus",
+                    Value: "magnam",
                 },
                 shared.AppRole{
                     AllowedMemberTypes: []string{
+                        "ipsa",
+                        "delectus",
+                        "tempora",
                         "suscipit",
-                        "molestiae",
                     },
-                    Description: "minus",
-                    DisplayName: "placeat",
-                    ID: "voluptatum",
+                    Description: "molestiae",
+                    DisplayName: "minus",
+                    ID: "placeat",
                     IsEnabled: false,
-                    Value: "iusto",
+                    Value: "voluptatum",
+                },
+                shared.AppRole{
+                    AllowedMemberTypes: []string{
+                        "excepturi",
+                        "nisi",
+                    },
+                    Description: "recusandae",
+                    DisplayName: "temporibus",
+                    ID: "ab",
+                    IsEnabled: false,
+                    Value: "quis",
+                },
+                shared.AppRole{
+                    AllowedMemberTypes: []string{
+                        "deserunt",
+                    },
+                    Description: "perferendis",
+                    DisplayName: "ipsam",
+                    ID: "repellendus",
+                    IsEnabled: false,
+                    Value: "sapiente",
                 },
             },
             AvailableToOtherTenants: false,
-            DisplayName: "excepturi",
-            ErrorURL: "nisi",
+            DisplayName: "quo",
+            ErrorURL: "odit",
             GroupMembershipClaims: "All",
-            Homepage: "temporibus",
+            Homepage: "at",
             IdentifierUris: []string{
-                "quis",
+                "molestiae",
+                "quod",
+                "quod",
+                "esse",
             },
             InformationalUrls: &shared.InformationalURL{
-                Marketing: "veritatis",
-                Privacy: "deserunt",
-                Support: "perferendis",
-                TermsOfService: "ipsam",
+                Marketing: "totam",
+                Privacy: "porro",
+                Support: "dolorum",
+                TermsOfService: "dicta",
             },
             IsDeviceOnlyAuthSupported: false,
             KeyCredentials: []map[string]map[string]interface{}{
                 map[string]map[string]interface{}{
-                    "quo": map[string]interface{}{
-                        "at": "at",
-                    },
-                    "maiores": map[string]interface{}{
-                        "quod": "quod",
-                        "esse": "totam",
-                    },
-                    "porro": map[string]interface{}{
-                        "dicta": "nam",
-                        "officia": "occaecati",
-                        "fugit": "deleniti",
-                    },
-                    "hic": map[string]interface{}{
-                        "totam": "beatae",
-                        "commodi": "molestiae",
-                        "modi": "qui",
-                        "impedit": "cum",
-                    },
-                },
-                map[string]map[string]interface{}{
-                    "ipsum": map[string]interface{}{
-                        "aspernatur": "perferendis",
-                        "ad": "natus",
-                        "sed": "iste",
-                    },
-                    "dolor": map[string]interface{}{
-                        "laboriosam": "hic",
-                        "saepe": "fuga",
-                        "in": "corporis",
-                    },
-                },
-                map[string]map[string]interface{}{
-                    "iure": map[string]interface{}{
-                        "quidem": "architecto",
-                        "ipsa": "reiciendis",
-                        "est": "mollitia",
-                        "laborum": "dolores",
-                    },
-                    "dolorem": map[string]interface{}{
-                        "explicabo": "nobis",
-                        "enim": "omnis",
-                    },
-                    "nemo": map[string]interface{}{
-                        "excepturi": "accusantium",
-                        "iure": "culpa",
-                    },
-                },
-                map[string]map[string]interface{}{
-                    "sapiente": map[string]interface{}{
-                        "mollitia": "dolorem",
-                    },
-                    "culpa": map[string]interface{}{
-                        "repellat": "mollitia",
-                    },
                     "occaecati": map[string]interface{}{
-                        "commodi": "quam",
-                        "molestiae": "velit",
+                        "deleniti": "hic",
                     },
-                    "error": map[string]interface{}{
-                        "quis": "vitae",
+                    "optio": map[string]interface{}{
+                        "beatae": "commodi",
+                        "molestiae": "modi",
+                        "qui": "impedit",
+                    },
+                    "cum": map[string]interface{}{
+                        "ipsum": "excepturi",
+                        "aspernatur": "perferendis",
+                    },
+                },
+                map[string]map[string]interface{}{
+                    "natus": map[string]interface{}{
+                        "iste": "dolor",
+                    },
+                    "natus": map[string]interface{}{
+                        "hic": "saepe",
+                        "fuga": "in",
+                    },
+                },
+                map[string]map[string]interface{}{
+                    "iste": map[string]interface{}{
+                        "saepe": "quidem",
+                        "architecto": "ipsa",
+                    },
+                    "reiciendis": map[string]interface{}{
+                        "mollitia": "laborum",
+                        "dolores": "dolorem",
+                        "corporis": "explicabo",
                     },
                 },
             },
             KnownClientApplications: []string{
-                "animi",
                 "enim",
-                "odit",
+                "omnis",
+                "nemo",
+                "minima",
             },
-            LogoutURL: "quo",
+            LogoutURL: "excepturi",
             Oauth2AllowImplicitFlow: false,
             Oauth2AllowURLPathMatching: false,
             Oauth2Permissions: []shared.OAuth2Permission{
                 shared.OAuth2Permission{
-                    AdminConsentDescription: "tenetur",
-                    AdminConsentDisplayName: "ipsam",
-                    ID: "id",
+                    AdminConsentDescription: "iure",
+                    AdminConsentDisplayName: "culpa",
+                    ID: "doloribus",
                     IsEnabled: false,
-                    Type: "possimus",
-                    UserConsentDescription: "aut",
-                    UserConsentDisplayName: "quasi",
-                    Value: "error",
+                    Type: "sapiente",
+                    UserConsentDescription: "architecto",
+                    UserConsentDisplayName: "mollitia",
+                    Value: "dolorem",
                 },
             },
             Oauth2RequirePostResponse: false,
@@ -177,36 +166,80 @@ func main() {
                 AccessToken: []shared.OptionalClaim{
                     shared.OptionalClaim{
                         AdditionalProperties: map[string]interface{}{
-                            "quasi": "reiciendis",
-                            "voluptatibus": "vero",
-                            "nihil": "praesentium",
+                            "repellat": "mollitia",
                         },
                         Essential: false,
-                        Name: "voluptatibus",
-                        Source: "ipsa",
+                        Name: "occaecati",
+                        Source: "numquam",
                     },
                     shared.OptionalClaim{
                         AdditionalProperties: map[string]interface{}{
-                            "voluptate": "cum",
-                            "perferendis": "doloremque",
-                            "reprehenderit": "ut",
+                            "quam": "molestiae",
+                            "velit": "error",
                         },
                         Essential: false,
-                        Name: "maiores",
-                        Source: "dicta",
+                        Name: "quia",
+                        Source: "quis",
                     },
                     shared.OptionalClaim{
                         AdditionalProperties: map[string]interface{}{
-                            "dolore": "iusto",
-                            "dicta": "harum",
+                            "laborum": "animi",
                         },
                         Essential: false,
                         Name: "enim",
-                        Source: "accusamus",
+                        Source: "odit",
+                    },
+                },
+                IDToken: []shared.OptionalClaim{
+                    shared.OptionalClaim{
+                        AdditionalProperties: map[string]interface{}{
+                            "tenetur": "ipsam",
+                        },
+                        Essential: false,
+                        Name: "id",
+                        Source: "possimus",
                     },
                     shared.OptionalClaim{
                         AdditionalProperties: map[string]interface{}{
-                            "repudiandae": "quae",
+                            "quasi": "error",
+                        },
+                        Essential: false,
+                        Name: "temporibus",
+                        Source: "laborum",
+                    },
+                    shared.OptionalClaim{
+                        AdditionalProperties: map[string]interface{}{
+                            "reiciendis": "voluptatibus",
+                        },
+                        Essential: false,
+                        Name: "vero",
+                        Source: "nihil",
+                    },
+                    shared.OptionalClaim{
+                        AdditionalProperties: map[string]interface{}{
+                            "voluptatibus": "ipsa",
+                            "omnis": "voluptate",
+                            "cum": "perferendis",
+                        },
+                        Essential: false,
+                        Name: "doloremque",
+                        Source: "reprehenderit",
+                    },
+                },
+                SamlToken: []shared.OptionalClaim{
+                    shared.OptionalClaim{
+                        AdditionalProperties: map[string]interface{}{
+                            "dicta": "corporis",
+                            "dolore": "iusto",
+                            "dicta": "harum",
+                            "enim": "accusamus",
+                        },
+                        Essential: false,
+                        Name: "commodi",
+                        Source: "repudiandae",
+                    },
+                    shared.OptionalClaim{
+                        AdditionalProperties: map[string]interface{}{
                             "ipsum": "quidem",
                         },
                         Essential: false,
@@ -214,123 +247,133 @@ func main() {
                         Source: "excepturi",
                     },
                 },
-                IDToken: []shared.OptionalClaim{
-                    shared.OptionalClaim{
-                        AdditionalProperties: map[string]interface{}{
-                            "praesentium": "rem",
-                            "voluptates": "quasi",
-                        },
-                        Essential: false,
-                        Name: "repudiandae",
-                        Source: "sint",
-                    },
-                    shared.OptionalClaim{
-                        AdditionalProperties: map[string]interface{}{
-                            "itaque": "incidunt",
-                        },
-                        Essential: false,
-                        Name: "enim",
-                        Source: "consequatur",
-                    },
-                    shared.OptionalClaim{
-                        AdditionalProperties: map[string]interface{}{
-                            "quibusdam": "explicabo",
-                            "deserunt": "distinctio",
-                            "quibusdam": "labore",
-                        },
-                        Essential: false,
-                        Name: "modi",
-                        Source: "qui",
-                    },
-                    shared.OptionalClaim{
-                        AdditionalProperties: map[string]interface{}{
-                            "cupiditate": "quos",
-                            "perferendis": "magni",
-                        },
-                        Essential: false,
-                        Name: "assumenda",
-                        Source: "ipsam",
-                    },
-                },
-                SamlToken: []shared.OptionalClaim{
-                    shared.OptionalClaim{
-                        AdditionalProperties: map[string]interface{}{
-                            "dolorum": "excepturi",
-                        },
-                        Essential: false,
-                        Name: "tempora",
-                        Source: "facilis",
-                    },
-                },
             },
             OrgRestrictions: []string{
-                "labore",
-                "delectus",
-                "eum",
+                "modi",
+                "praesentium",
+                "rem",
+                "voluptates",
             },
             PasswordCredentials: []map[string]map[string]interface{}{
                 map[string]map[string]interface{}{
                     "sint": map[string]interface{}{
-                        "provident": "necessitatibus",
-                        "sint": "officia",
+                        "itaque": "incidunt",
                     },
-                    "dolor": map[string]interface{}{
-                        "a": "dolorum",
-                        "in": "in",
-                        "illum": "maiores",
-                        "rerum": "dicta",
+                    "enim": map[string]interface{}{
+                        "est": "quibusdam",
                     },
-                    "magnam": map[string]interface{}{
-                        "facere": "ea",
-                        "aliquid": "laborum",
-                        "accusamus": "non",
-                        "occaecati": "enim",
+                    "explicabo": map[string]interface{}{
+                        "distinctio": "quibusdam",
+                        "labore": "modi",
+                        "qui": "aliquid",
                     },
-                    "accusamus": map[string]interface{}{
-                        "quidem": "provident",
-                        "nam": "id",
-                        "blanditiis": "deleniti",
-                        "sapiente": "amet",
+                    "cupiditate": map[string]interface{}{
+                        "perferendis": "magni",
+                        "assumenda": "ipsam",
+                        "alias": "fugit",
                     },
                 },
             },
             PreAuthorizedApplications: []shared.PreAuthorizedApplication{
                 shared.PreAuthorizedApplication{
-                    AppID: "nisi",
+                    AppID: "excepturi",
                     Extensions: []shared.PreAuthorizedApplicationExtension{
                         shared.PreAuthorizedApplicationExtension{
                             Conditions: []string{
-                                "omnis",
-                                "molestiae",
-                                "perferendis",
+                                "tempore",
+                                "labore",
+                                "delectus",
                             },
                         },
                         shared.PreAuthorizedApplicationExtension{
                             Conditions: []string{
-                                "magnam",
-                                "distinctio",
+                                "non",
+                                "eligendi",
                             },
                         },
                     },
                     Permissions: []shared.PreAuthorizedApplicationPermission{
                         shared.PreAuthorizedApplicationPermission{
                             AccessGrants: []string{
-                                "labore",
-                                "suscipit",
+                                "provident",
+                                "necessitatibus",
                             },
                             DirectAccessGrant: false,
                         },
                         shared.PreAuthorizedApplicationPermission{
                             AccessGrants: []string{
-                                "nobis",
-                                "eum",
-                                "vero",
+                                "officia",
+                                "dolor",
+                                "debitis",
                             },
                             DirectAccessGrant: false,
                         },
                         shared.PreAuthorizedApplicationPermission{
                             AccessGrants: []string{
-                                "architecto",
+                                "dolorum",
+                                "in",
+                                "in",
+                                "illum",
+                            },
+                            DirectAccessGrant: false,
+                        },
+                    },
+                },
+                shared.PreAuthorizedApplication{
+                    AppID: "maiores",
+                    Extensions: []shared.PreAuthorizedApplicationExtension{
+                        shared.PreAuthorizedApplicationExtension{
+                            Conditions: []string{
+                                "magnam",
+                            },
+                        },
+                        shared.PreAuthorizedApplicationExtension{
+                            Conditions: []string{
+                                "facere",
+                                "ea",
+                                "aliquid",
+                                "laborum",
+                            },
+                        },
+                        shared.PreAuthorizedApplicationExtension{
+                            Conditions: []string{
+                                "non",
+                                "occaecati",
+                                "enim",
+                                "accusamus",
+                            },
+                        },
+                    },
+                    Permissions: []shared.PreAuthorizedApplicationPermission{
+                        shared.PreAuthorizedApplicationPermission{
+                            AccessGrants: []string{
+                                "provident",
+                                "nam",
+                                "id",
+                            },
+                            DirectAccessGrant: false,
+                        },
+                        shared.PreAuthorizedApplicationPermission{
+                            AccessGrants: []string{
+                                "deleniti",
+                                "sapiente",
+                                "amet",
+                            },
+                            DirectAccessGrant: false,
+                        },
+                        shared.PreAuthorizedApplicationPermission{
+                            AccessGrants: []string{
+                                "nisi",
+                                "vel",
+                                "natus",
+                            },
+                            DirectAccessGrant: false,
+                        },
+                        shared.PreAuthorizedApplicationPermission{
+                            AccessGrants: []string{
+                                "molestiae",
+                                "perferendis",
+                                "nihil",
                             },
                             DirectAccessGrant: false,
                         },
@@ -341,78 +384,35 @@ func main() {
                     Extensions: []shared.PreAuthorizedApplicationExtension{
                         shared.PreAuthorizedApplicationExtension{
                             Conditions: []string{
-                                "ullam",
+                                "labore",
+                                "labore",
+                                "suscipit",
+                            },
+                        },
+                        shared.PreAuthorizedApplicationExtension{
+                            Conditions: []string{
+                                "nobis",
+                                "eum",
+                                "vero",
+                            },
+                        },
+                        shared.PreAuthorizedApplicationExtension{
+                            Conditions: []string{
+                                "architecto",
+                            },
+                        },
+                    },
+                    Permissions: []shared.PreAuthorizedApplicationPermission{
+                        shared.PreAuthorizedApplicationPermission{
+                            AccessGrants: []string{
+                                "excepturi",
+                            },
+                            DirectAccessGrant: false,
+                        },
+                        shared.PreAuthorizedApplicationPermission{
+                            AccessGrants: []string{
                                 "provident",
                                 "quos",
-                            },
-                        },
-                    },
-                    Permissions: []shared.PreAuthorizedApplicationPermission{
-                        shared.PreAuthorizedApplicationPermission{
-                            AccessGrants: []string{
-                                "mollitia",
-                            },
-                            DirectAccessGrant: false,
-                        },
-                        shared.PreAuthorizedApplicationPermission{
-                            AccessGrants: []string{
-                                "mollitia",
-                                "ad",
-                                "eum",
-                                "dolor",
-                            },
-                            DirectAccessGrant: false,
-                        },
-                        shared.PreAuthorizedApplicationPermission{
-                            AccessGrants: []string{
-                                "odit",
-                                "nemo",
-                                "quasi",
-                                "iure",
-                            },
-                            DirectAccessGrant: false,
-                        },
-                    },
-                },
-                shared.PreAuthorizedApplication{
-                    AppID: "doloribus",
-                    Extensions: []shared.PreAuthorizedApplicationExtension{
-                        shared.PreAuthorizedApplicationExtension{
-                            Conditions: []string{
-                                "maxime",
-                                "deleniti",
-                            },
-                        },
-                        shared.PreAuthorizedApplicationExtension{
-                            Conditions: []string{
-                                "in",
-                                "architecto",
-                                "architecto",
-                            },
-                        },
-                        shared.PreAuthorizedApplicationExtension{
-                            Conditions: []string{
-                                "ullam",
-                                "expedita",
-                                "nihil",
-                                "repellat",
-                            },
-                        },
-                        shared.PreAuthorizedApplicationExtension{
-                            Conditions: []string{
-                                "sed",
-                                "saepe",
-                                "pariatur",
-                                "accusantium",
-                            },
-                        },
-                    },
-                    Permissions: []shared.PreAuthorizedApplicationPermission{
-                        shared.PreAuthorizedApplicationPermission{
-                            AccessGrants: []string{
-                                "natus",
-                                "magni",
-                                "sunt",
                             },
                             DirectAccessGrant: false,
                         },
@@ -420,28 +420,65 @@ func main() {
                 },
             },
             PublicClient: false,
-            PublisherDomain: "quo",
+            PublisherDomain: "sint",
             ReplyUrls: []string{
-                "pariatur",
-                "maxime",
-                "ea",
-                "excepturi",
+                "mollitia",
             },
             RequiredResourceAccess: []map[string]map[string]interface{}{
                 map[string]map[string]interface{}{
-                    "accusantium": map[string]interface{}{
-                        "maiores": "quidem",
+                    "ad": map[string]interface{}{
+                        "dolor": "necessitatibus",
+                        "odit": "nemo",
                     },
-                    "ipsam": map[string]interface{}{
+                    "quasi": map[string]interface{}{
+                        "doloribus": "debitis",
+                        "eius": "maxime",
+                    },
+                    "deleniti": map[string]interface{}{
+                        "in": "architecto",
+                        "architecto": "repudiandae",
+                        "ullam": "expedita",
+                    },
+                },
+                map[string]map[string]interface{}{
+                    "repellat": map[string]interface{}{
+                        "sed": "saepe",
+                        "pariatur": "accusantium",
+                        "consequuntur": "praesentium",
+                        "natus": "magni",
+                    },
+                    "sunt": map[string]interface{}{
+                        "illum": "pariatur",
+                        "maxime": "ea",
+                        "excepturi": "odit",
+                        "ea": "accusantium",
+                    },
+                },
+                map[string]map[string]interface{}{
+                    "maiores": map[string]interface{}{
+                        "ipsam": "voluptate",
                         "autem": "nam",
                         "eaque": "pariatur",
                     },
                 },
+                map[string]map[string]interface{}{
+                    "voluptatibus": map[string]interface{}{
+                        "fugiat": "amet",
+                    },
+                    "aut": map[string]interface{}{
+                        "corporis": "hic",
+                        "libero": "nobis",
+                        "dolores": "quis",
+                        "totam": "dignissimos",
+                    },
+                },
             },
-            SamlMetadataURL: "nemo",
-            SignInAudience: "voluptatibus",
-            WwwHomepage: "perferendis",
+            SamlMetadataURL: "eaque",
+            SignInAudience: "quis",
+            WwwHomepage: "nesciunt",
         },
+        APIVersion: "eos",
+        TenantID: "perferendis",
     }
 
     ctx := context.Background()
@@ -458,7 +495,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Application
@@ -584,4 +621,15 @@ func main() {
 * `DeletedApplicationsRestore` - Restores the deleted application in the directory.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

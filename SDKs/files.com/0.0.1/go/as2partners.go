@@ -37,7 +37,7 @@ func newAs2Partners(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete As2 Partner
 func (s *as2Partners) DeleteAs2PartnersID(ctx context.Context, request operations.DeleteAs2PartnersIDRequest) (*operations.DeleteAs2PartnersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *as2Partners) GetAs2Partners(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *as2Partners) GetAs2Partners(ctx context.Context, request operations.Get
 // Show As2 Partner
 func (s *as2Partners) GetAs2PartnersID(ctx context.Context, request operations.GetAs2PartnersIDRequest) (*operations.GetAs2PartnersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *as2Partners) GetAs2PartnersID(ctx context.Context, request operations.G
 // Update As2 Partner
 func (s *as2Partners) PatchAs2PartnersID(ctx context.Context, request operations.PatchAs2PartnersIDRequest) (*operations.PatchAs2PartnersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *as2Partners) PatchAs2PartnersID(ctx context.Context, request operations
 
 // PostAs2Partners - Create As2 Partner
 // Create As2 Partner
-func (s *as2Partners) PostAs2Partners(ctx context.Context, request operations.PostAs2PartnersRequest) (*operations.PostAs2PartnersResponse, error) {
+func (s *as2Partners) PostAs2Partners(ctx context.Context, request operations.PostAs2PartnersRequestBody) (*operations.PostAs2PartnersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/as2_partners"
 

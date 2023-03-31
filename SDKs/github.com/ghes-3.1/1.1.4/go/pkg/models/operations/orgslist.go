@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListQueryParams struct {
+type OrgsListRequest struct {
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// An organization ID. Only return organizations with an ID greater than this ID.
 	Since *int64 `queryParam:"style=form,explode=true,name=since"`
-}
-
-type OrgsListRequest struct {
-	QueryParams OrgsListQueryParams
 }
 
 type OrgsListResponse struct {

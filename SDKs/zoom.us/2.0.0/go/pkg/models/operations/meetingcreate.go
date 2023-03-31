@@ -9,11 +9,6 @@ import (
 	"time"
 )
 
-type MeetingCreatePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // MeetingCreateApplicationJSONRecurrenceMonthlyWeekEnum - Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
 type MeetingCreateApplicationJSONRecurrenceMonthlyWeekEnum string
 
@@ -590,9 +585,10 @@ type MeetingCreateApplicationJSON struct {
 }
 
 type MeetingCreateRequest struct {
-	PathParams MeetingCreatePathParams
 	// Meeting object.
-	Request MeetingCreateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody MeetingCreateApplicationJSON `request:"mediaType=application/json"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // MeetingCreate201ApplicationXMLOccurrences - Occurence object. This object is only returned for Recurring Webinars.

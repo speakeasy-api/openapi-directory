@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteQuoteImageBackgroundSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteQuoteImageBackgroundQueryParams struct {
-	// Font ID
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type DeleteQuoteImageBackgroundRequest struct {
-	QueryParams DeleteQuoteImageBackgroundQueryParams
-	Security    DeleteQuoteImageBackgroundSecurity
+	// Font ID
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type DeleteQuoteImageBackgroundResponse struct {

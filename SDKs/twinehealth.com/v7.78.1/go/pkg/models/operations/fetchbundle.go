@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchBundlePathParams struct {
+type FetchBundleRequest struct {
 	// Bundle identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchBundleRequest struct {
-	PathParams FetchBundlePathParams
 }
 
 type FetchBundleResponse struct {

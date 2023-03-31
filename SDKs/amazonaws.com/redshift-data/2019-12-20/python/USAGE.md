@@ -3,37 +3,38 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.BatchExecuteStatementRequest(
-    headers=operations.BatchExecuteStatementHeaders(
-        x_amz_algorithm="inventore",
-        x_amz_content_sha256="est",
-        x_amz_credential="dolor",
-        x_amz_date="animi",
-        x_amz_security_token="rerum",
-        x_amz_signature="sit",
-        x_amz_signed_headers="et",
-        x_amz_target="RedshiftData.BatchExecuteStatement",
-    ),
-    request=shared.BatchExecuteStatementInput(
-        cluster_identifier="eos",
-        database="accusantium",
-        db_user="minima",
-        secret_arn="qui",
+    batch_execute_statement_input=shared.BatchExecuteStatementInput(
+        client_token="corrupti",
+        cluster_identifier="provident",
+        database="distinctio",
+        db_user="quibusdam",
+        secret_arn="unde",
         sqls=[
-            "est",
+            "corrupti",
+            "illum",
+            "vel",
+            "error",
         ],
-        statement_name="tempora",
+        statement_name="deserunt",
         with_event=False,
+        workgroup_name="suscipit",
     ),
+    x_amz_algorithm="iure",
+    x_amz_content_sha256="magnam",
+    x_amz_credential="debitis",
+    x_amz_date="ipsa",
+    x_amz_security_token="delectus",
+    x_amz_signature="tempora",
+    x_amz_signed_headers="suscipit",
+    x_amz_target="RedshiftData.BatchExecuteStatement",
 )
     
 res = s.batch_execute_statement(req)

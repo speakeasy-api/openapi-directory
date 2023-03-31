@@ -36,14 +36,14 @@ func newWorkflows(defaultClient, securityClient HTTPClient, serverURL, language,
 // Deletes a specific workflow by its ID.
 func (s *workflows) DELETEWorkflow(ctx context.Context, request operations.DELETEWorkflowRequest) (*operations.DELETEWorkflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -97,14 +97,14 @@ func (s *workflows) DELETEWorkflow(ctx context.Context, request operations.DELET
 // Retrieves information about a specific workflow by its ID.
 func (s *workflows) GETWorkflow(ctx context.Context, request operations.GETWorkflowRequest) (*operations.GETWorkflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -146,14 +146,14 @@ func (s *workflows) GETWorkflow(ctx context.Context, request operations.GETWorkf
 // Export a Workflow in a JSON document. This document can be used to create a copy of this workflow.
 func (s *workflows) GETWorkflowExport(ctx context.Context, request operations.GETWorkflowExportRequest) (*operations.GETWorkflowExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -202,9 +202,9 @@ func (s *workflows) GETWorkflows(ctx context.Context, request operations.GETWork
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -248,14 +248,14 @@ func (s *workflows) GETWorkflows(ctx context.Context, request operations.GETWork
 // Retrieves a specific workflow task by its ID.
 func (s *workflows) GETWorkflowsTask(ctx context.Context, request operations.GETWorkflowsTaskRequest) (*operations.GETWorkflowsTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/tasks/{task_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/tasks/{task_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -304,9 +304,9 @@ func (s *workflows) GETWorkflowsTasks(ctx context.Context, request operations.GE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -357,9 +357,9 @@ func (s *workflows) GETWorkflowsUsages(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -403,9 +403,9 @@ func (s *workflows) GETWorkflowsUsages(ctx context.Context, request operations.G
 // Updates the definition of a specific workflow by its ID, which allows you to [configure the settings of a workflow](https://knowledgecenter.zuora.com/CE_Workflow/Using_Workflow/B_Configure_a_Workflow) via API.
 func (s *workflows) PATCHUpdateWorkflow(ctx context.Context, request operations.PATCHUpdateWorkflowRequest) (*operations.PATCHUpdateWorkflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -417,7 +417,7 @@ func (s *workflows) PATCHUpdateWorkflow(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -485,9 +485,9 @@ func (s *workflows) PATCHUpdateWorkflow(ctx context.Context, request operations.
 // To learn about how to define parameters, see [Configure the settings of a workflow](https://knowledgecenter.zuora.com/CE_Workflow/Using_Workflow/B_Configure_a_Workflow).
 func (s *workflows) POSTRunWorkflow(ctx context.Context, request operations.POSTRunWorkflowRequest) (*operations.POSTRunWorkflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}/run", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/{workflow_id}/run", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -499,7 +499,7 @@ func (s *workflows) POSTRunWorkflow(ctx context.Context, request operations.POST
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -579,7 +579,7 @@ func (s *workflows) POSTWorkflowImport(ctx context.Context, request operations.P
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workflows/import"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -591,7 +591,7 @@ func (s *workflows) POSTWorkflowImport(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -633,14 +633,14 @@ func (s *workflows) POSTWorkflowImport(ctx context.Context, request operations.P
 // Reruns a specific workflow task by its ID.
 func (s *workflows) POSTWorkflowsTaskRerun(ctx context.Context, request operations.POSTWorkflowsTaskRerunRequest) (*operations.POSTWorkflowsTaskRerunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflows/tasks/{task_id}/rerun", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflows/tasks/{task_id}/rerun", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -684,7 +684,7 @@ func (s *workflows) PUTWorkflowsTasksUpdate(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workflows/tasks/batch_update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutTasksRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -696,7 +696,7 @@ func (s *workflows) PUTWorkflowsTasksUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

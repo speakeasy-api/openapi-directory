@@ -8,23 +8,15 @@ import (
 	"time"
 )
 
-type GistsListForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GistsListForUserQueryParams struct {
+type GistsListForUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
-}
-
-type GistsListForUserRequest struct {
-	PathParams  GistsListForUserPathParams
-	QueryParams GistsListForUserQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GistsListForUserResponse struct {

@@ -8,10 +8,10 @@ import (
 )
 
 type GetCampaignsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetCampaignsQueryParams struct {
+type GetCampaignsRequest struct {
 	// Specifies the campaign name. The results are filtered to include only the campaign by the specified name.<br /><br /><b>Note: </b>The results might be null if other filters exclude the campaign with this name. <br /><br /><b>Maximum: </b> 1 campaign name
 	CampaignName *string `queryParam:"style=form,explode=true,name=campaign_name"`
 	// Include this filter and input a specific campaign status to retrieve campaigns currently in that state. <br /><br /><b>Note: </b>The results might not include all the campaigns with this status if other filters exclude them. <br /><br /><b>Valid values:</b> See <a href="/api-docs/sell/marketing/types/pls:CampaignStatusEnum">CampaignStatusEnum</a> <br /><br /><b>Maximum: </b> 1 status
@@ -26,11 +26,6 @@ type GetCampaignsQueryParams struct {
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// Specifies the range of a campaign's start date in which to filter the results. The results are filtered to include only campaigns with a start date that is equal to this date or is within specified range.<br><br><b>Valid format (UTC): </b> <ul><li><code>yyyy-MM-ddThh:mm:ssZ..yyyy-MM-ddThh:mm:ssZ</code> (starts within this range)</li><li><code>yyyy-MM-ddThh:mm:ssZ</code> (campaign starts on or after this date)</li><li><code>..yyyy-MM-ddThh:mm:ssZ </code>(campaign starts on or before this date)</li><li><code>2016-09-08T00:00.00.000Z..2016-09-09T00:00:00Z</code> (campaign starts on September 08, 2016)</li></ul><br /><br /><b>Note: </b>The results might not include all the campaigns with this start date if other filters exclude them.
 	StartDateRange *string `queryParam:"style=form,explode=true,name=start_date_range"`
-}
-
-type GetCampaignsRequest struct {
-	QueryParams GetCampaignsQueryParams
-	Security    GetCampaignsSecurity
 }
 
 type GetCampaignsResponse struct {

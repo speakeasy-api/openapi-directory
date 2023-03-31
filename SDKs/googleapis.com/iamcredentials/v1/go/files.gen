@@ -17,10 +17,9 @@ pkg/models/operations/iamcredentialsprojectsserviceaccountsgenerateidtoken.go
 pkg/models/operations/iamcredentialsprojectsserviceaccountssignblob.go
 pkg/models/operations/iamcredentialsprojectsserviceaccountssignjwt.go
 pkg/models/shared/generateaccesstokenresponse.go
-pkg/models/shared/generateaccesstokenrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/generateaccesstokenrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/generateidtokenresponse.go
 pkg/models/shared/generateidtokenrequest.go
 pkg/models/shared/signblobresponse.go

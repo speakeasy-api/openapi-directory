@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SearchDevicesQueryParams struct {
+type SearchDevicesRequest struct {
 	// The ID of the application.
 	ApplicationID *string `queryParam:"style=form,explode=true,name=applicationId"`
 	// The ID of the group.
@@ -19,10 +19,6 @@ type SearchDevicesQueryParams struct {
 	SearchTerms string `queryParam:"style=form,explode=true,name=searchTerms"`
 	// The ID of the service.
 	ServiceID *string `queryParam:"style=form,explode=true,name=serviceId"`
-}
-
-type SearchDevicesRequest struct {
-	QueryParams SearchDevicesQueryParams
 }
 
 type SearchDevicesResponse struct {

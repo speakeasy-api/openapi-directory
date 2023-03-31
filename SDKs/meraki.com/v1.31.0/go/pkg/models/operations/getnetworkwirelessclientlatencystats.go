@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessClientLatencyStatsPathParams struct {
-	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkWirelessClientLatencyStatsBandEnum - Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
 type GetNetworkWirelessClientLatencyStatsBandEnum string
 
@@ -40,13 +35,15 @@ func (e *GetNetworkWirelessClientLatencyStatsBandEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetNetworkWirelessClientLatencyStatsQueryParams struct {
+type GetNetworkWirelessClientLatencyStatsRequest struct {
 	// Filter results by AP Tag
 	ApTag *string `queryParam:"style=form,explode=true,name=apTag"`
 	// Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
-	Band *GetNetworkWirelessClientLatencyStatsBandEnum `queryParam:"style=form,explode=true,name=band"`
+	Band     *GetNetworkWirelessClientLatencyStatsBandEnum `queryParam:"style=form,explode=true,name=band"`
+	ClientID string                                        `pathParam:"style=simple,explode=false,name=clientId"`
 	// Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Fields    *string `queryParam:"style=form,explode=true,name=fields"`
+	NetworkID string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// Filter results by SSID
 	Ssid *int64 `queryParam:"style=form,explode=true,name=ssid"`
 	// The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -57,11 +54,6 @@ type GetNetworkWirelessClientLatencyStatsQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// Filter results by VLAN
 	Vlan *int64 `queryParam:"style=form,explode=true,name=vlan"`
-}
-
-type GetNetworkWirelessClientLatencyStatsRequest struct {
-	PathParams  GetNetworkWirelessClientLatencyStatsPathParams
-	QueryParams GetNetworkWirelessClientLatencyStatsQueryParams
 }
 
 type GetNetworkWirelessClientLatencyStatsResponse struct {

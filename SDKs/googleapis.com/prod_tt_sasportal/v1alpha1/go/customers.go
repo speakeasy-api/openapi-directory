@@ -33,7 +33,7 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ProdTtSasportalCustomersList - Returns a list of requested customers.
-func (s *customers) ProdTtSasportalCustomersList(ctx context.Context, request operations.ProdTtSasportalCustomersListRequest) (*operations.ProdTtSasportalCustomersListResponse, error) {
+func (s *customers) ProdTtSasportalCustomersList(ctx context.Context, request operations.ProdTtSasportalCustomersListRequest, security operations.ProdTtSasportalCustomersListSecurity) (*operations.ProdTtSasportalCustomersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/customers"
 
@@ -42,11 +42,11 @@ func (s *customers) ProdTtSasportalCustomersList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *customers) ProdTtSasportalCustomersList(ctx context.Context, request op
 }
 
 // ProdTtSasportalCustomersProvisionDeployment - Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an organization match is not found.
-func (s *customers) ProdTtSasportalCustomersProvisionDeployment(ctx context.Context, request operations.ProdTtSasportalCustomersProvisionDeploymentRequest) (*operations.ProdTtSasportalCustomersProvisionDeploymentResponse, error) {
+func (s *customers) ProdTtSasportalCustomersProvisionDeployment(ctx context.Context, request operations.ProdTtSasportalCustomersProvisionDeploymentRequest, security operations.ProdTtSasportalCustomersProvisionDeploymentSecurity) (*operations.ProdTtSasportalCustomersProvisionDeploymentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/customers:provisionDeployment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SasPortalProvisionDeploymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *customers) ProdTtSasportalCustomersProvisionDeployment(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

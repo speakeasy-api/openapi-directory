@@ -34,7 +34,7 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteLocation - Delete a location
 func (s *locations) DeleteLocation(ctx context.Context, request operations.DeleteLocationRequest) (*operations.DeleteLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,14 +69,14 @@ func (s *locations) DeleteLocation(ctx context.Context, request operations.Delet
 // GetLocation - Get a location's data
 func (s *locations) GetLocation(ctx context.Context, request operations.GetLocationRequest) (*operations.GetLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,7 +115,7 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -149,9 +149,9 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 // PatchLocation - Update a location's data
 func (s *locations) PatchLocation(ctx context.Context, request operations.PatchLocationRequest) (*operations.PatchLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,7 +202,7 @@ func (s *locations) PatchLocation(ctx context.Context, request operations.PatchL
 }
 
 // PostLocations - Create a new location
-func (s *locations) PostLocations(ctx context.Context, request operations.PostLocationsRequest) (*operations.PostLocationsResponse, error) {
+func (s *locations) PostLocations(ctx context.Context, request operations.PostLocationsRequestBody) (*operations.PostLocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/locations"
 

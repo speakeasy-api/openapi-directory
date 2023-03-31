@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowSetConfigPathParams struct {
+type ProtocolNetflowSetConfigRequest struct {
 	// Agent to set the NETFLOW configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the NETFLOW configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the NETFLOW configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolNetflowSetConfigRequest struct {
-	PathParams ProtocolNetflowSetConfigPathParams
 }
 
 type ProtocolNetflowSetConfigResponse struct {

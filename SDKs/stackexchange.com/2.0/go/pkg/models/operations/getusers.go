@@ -62,7 +62,7 @@ func (e *GetUsersSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -122,10 +122,6 @@ type GetUsersQueryParams struct {
 	Sort *GetUsersSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 type GetUsersResponse struct {

@@ -37,7 +37,7 @@ func newUserRequests(defaultClient, securityClient HTTPClient, serverURL, langua
 // Delete User Request
 func (s *userRequests) DeleteUserRequestsID(ctx context.Context, request operations.DeleteUserRequestsIDRequest) (*operations.DeleteUserRequestsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *userRequests) GetUserRequests(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *userRequests) GetUserRequests(ctx context.Context, request operations.G
 // Show User Request
 func (s *userRequests) GetUserRequestsID(ctx context.Context, request operations.GetUserRequestsIDRequest) (*operations.GetUserRequestsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *userRequests) GetUserRequestsID(ctx context.Context, request operations
 
 // PostUserRequests - Create User Request
 // Create User Request
-func (s *userRequests) PostUserRequests(ctx context.Context, request operations.PostUserRequestsRequest) (*operations.PostUserRequestsResponse, error) {
+func (s *userRequests) PostUserRequests(ctx context.Context, request operations.PostUserRequestsRequestBody) (*operations.PostUserRequestsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user_requests"
 

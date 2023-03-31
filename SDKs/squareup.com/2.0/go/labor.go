@@ -47,7 +47,7 @@ func newLabor(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // You can only have three `BreakType` instances per location. If you attempt to add a fourth
 // `BreakType` for a location, an `INVALID_REQUEST_ERROR` "Exceeded limit of 3 breaks per location."
 // is returned.
-func (s *labor) CreateBreakType(ctx context.Context, request operations.CreateBreakTypeRequest) (*operations.CreateBreakTypeResponse, error) {
+func (s *labor) CreateBreakType(ctx context.Context, request shared.CreateBreakTypeRequest, security operations.CreateBreakTypeSecurity) (*operations.CreateBreakTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/break-types"
 
@@ -66,7 +66,7 @@ func (s *labor) CreateBreakType(ctx context.Context, request operations.CreateBr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,7 +119,7 @@ func (s *labor) CreateBreakType(ctx context.Context, request operations.CreateBr
 // - The `Break` instances are set in the request and a break `start_at`
 // is before the `Shift.start_at`, a break `end_at` is after
 // the `Shift.end_at`, or both.
-func (s *labor) CreateShift(ctx context.Context, request operations.CreateShiftRequest) (*operations.CreateShiftResponse, error) {
+func (s *labor) CreateShift(ctx context.Context, request shared.CreateShiftRequest, security operations.CreateShiftSecurity) (*operations.CreateShiftResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/shifts"
 
@@ -138,7 +138,7 @@ func (s *labor) CreateShift(ctx context.Context, request operations.CreateShiftR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,16 +176,16 @@ func (s *labor) CreateShift(ctx context.Context, request operations.CreateShiftR
 // Deletes an existing `BreakType`.
 //
 // A `BreakType` can be deleted even if it is referenced from a `Shift`.
-func (s *labor) DeleteBreakType(ctx context.Context, request operations.DeleteBreakTypeRequest) (*operations.DeleteBreakTypeResponse, error) {
+func (s *labor) DeleteBreakType(ctx context.Context, request operations.DeleteBreakTypeRequest, security operations.DeleteBreakTypeSecurity) (*operations.DeleteBreakTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,16 +221,16 @@ func (s *labor) DeleteBreakType(ctx context.Context, request operations.DeleteBr
 
 // DeleteShift - DeleteShift
 // Deletes a `Shift`.
-func (s *labor) DeleteShift(ctx context.Context, request operations.DeleteShiftRequest) (*operations.DeleteShiftResponse, error) {
+func (s *labor) DeleteShift(ctx context.Context, request operations.DeleteShiftRequest, security operations.DeleteShiftSecurity) (*operations.DeleteShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,16 +266,16 @@ func (s *labor) DeleteShift(ctx context.Context, request operations.DeleteShiftR
 
 // GetBreakType - GetBreakType
 // Returns a single `BreakType` specified by `id`.
-func (s *labor) GetBreakType(ctx context.Context, request operations.GetBreakTypeRequest) (*operations.GetBreakTypeResponse, error) {
+func (s *labor) GetBreakType(ctx context.Context, request operations.GetBreakTypeRequest, security operations.GetBreakTypeSecurity) (*operations.GetBreakTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -311,16 +311,16 @@ func (s *labor) GetBreakType(ctx context.Context, request operations.GetBreakTyp
 
 // GetEmployeeWage - GetEmployeeWage
 // Returns a single `EmployeeWage` specified by `id`.
-func (s *labor) GetEmployeeWage(ctx context.Context, request operations.GetEmployeeWageRequest) (*operations.GetEmployeeWageResponse, error) {
+func (s *labor) GetEmployeeWage(ctx context.Context, request operations.GetEmployeeWageRequest, security operations.GetEmployeeWageSecurity) (*operations.GetEmployeeWageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/employee-wages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/employee-wages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -356,16 +356,16 @@ func (s *labor) GetEmployeeWage(ctx context.Context, request operations.GetEmplo
 
 // GetShift - GetShift
 // Returns a single `Shift` specified by `id`.
-func (s *labor) GetShift(ctx context.Context, request operations.GetShiftRequest) (*operations.GetShiftResponse, error) {
+func (s *labor) GetShift(ctx context.Context, request operations.GetShiftRequest, security operations.GetShiftSecurity) (*operations.GetShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -401,16 +401,16 @@ func (s *labor) GetShift(ctx context.Context, request operations.GetShiftRequest
 
 // GetTeamMemberWage - GetTeamMemberWage
 // Returns a single `TeamMemberWage` specified by `id `.
-func (s *labor) GetTeamMemberWage(ctx context.Context, request operations.GetTeamMemberWageRequest) (*operations.GetTeamMemberWageResponse, error) {
+func (s *labor) GetTeamMemberWage(ctx context.Context, request operations.GetTeamMemberWageRequest, security operations.GetTeamMemberWageSecurity) (*operations.GetTeamMemberWageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/team-member-wages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/team-member-wages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -446,7 +446,7 @@ func (s *labor) GetTeamMemberWage(ctx context.Context, request operations.GetTea
 
 // ListBreakTypes - ListBreakTypes
 // Returns a paginated list of `BreakType` instances for a business.
-func (s *labor) ListBreakTypes(ctx context.Context, request operations.ListBreakTypesRequest) (*operations.ListBreakTypesResponse, error) {
+func (s *labor) ListBreakTypes(ctx context.Context, request operations.ListBreakTypesRequest, security operations.ListBreakTypesSecurity) (*operations.ListBreakTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/break-types"
 
@@ -455,11 +455,11 @@ func (s *labor) ListBreakTypes(ctx context.Context, request operations.ListBreak
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -495,7 +495,7 @@ func (s *labor) ListBreakTypes(ctx context.Context, request operations.ListBreak
 
 // ListEmployeeWages - ListEmployeeWages
 // Returns a paginated list of `EmployeeWage` instances for a business.
-func (s *labor) ListEmployeeWages(ctx context.Context, request operations.ListEmployeeWagesRequest) (*operations.ListEmployeeWagesResponse, error) {
+func (s *labor) ListEmployeeWages(ctx context.Context, request operations.ListEmployeeWagesRequest, security operations.ListEmployeeWagesSecurity) (*operations.ListEmployeeWagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/employee-wages"
 
@@ -504,11 +504,11 @@ func (s *labor) ListEmployeeWages(ctx context.Context, request operations.ListEm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -544,7 +544,7 @@ func (s *labor) ListEmployeeWages(ctx context.Context, request operations.ListEm
 
 // ListTeamMemberWages - ListTeamMemberWages
 // Returns a paginated list of `TeamMemberWage` instances for a business.
-func (s *labor) ListTeamMemberWages(ctx context.Context, request operations.ListTeamMemberWagesRequest) (*operations.ListTeamMemberWagesResponse, error) {
+func (s *labor) ListTeamMemberWages(ctx context.Context, request operations.ListTeamMemberWagesRequest, security operations.ListTeamMemberWagesSecurity) (*operations.ListTeamMemberWagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/team-member-wages"
 
@@ -553,11 +553,11 @@ func (s *labor) ListTeamMemberWages(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -593,7 +593,7 @@ func (s *labor) ListTeamMemberWages(ctx context.Context, request operations.List
 
 // ListWorkweekConfigs - ListWorkweekConfigs
 // Returns a list of `WorkweekConfig` instances for a business.
-func (s *labor) ListWorkweekConfigs(ctx context.Context, request operations.ListWorkweekConfigsRequest) (*operations.ListWorkweekConfigsResponse, error) {
+func (s *labor) ListWorkweekConfigs(ctx context.Context, request operations.ListWorkweekConfigsRequest, security operations.ListWorkweekConfigsSecurity) (*operations.ListWorkweekConfigsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/workweek-configs"
 
@@ -602,11 +602,11 @@ func (s *labor) ListWorkweekConfigs(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -655,7 +655,7 @@ func (s *labor) ListWorkweekConfigs(ctx context.Context, request operations.List
 // - `end_at`.
 // - `created_at`.
 // - `updated_at`.
-func (s *labor) SearchShifts(ctx context.Context, request operations.SearchShiftsRequest) (*operations.SearchShiftsResponse, error) {
+func (s *labor) SearchShifts(ctx context.Context, request shared.SearchShiftsRequest, security operations.SearchShiftsSecurity) (*operations.SearchShiftsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/labor/shifts/search"
 
@@ -674,7 +674,7 @@ func (s *labor) SearchShifts(ctx context.Context, request operations.SearchShift
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -710,11 +710,11 @@ func (s *labor) SearchShifts(ctx context.Context, request operations.SearchShift
 
 // UpdateBreakType - UpdateBreakType
 // Updates an existing `BreakType`.
-func (s *labor) UpdateBreakType(ctx context.Context, request operations.UpdateBreakTypeRequest) (*operations.UpdateBreakTypeResponse, error) {
+func (s *labor) UpdateBreakType(ctx context.Context, request operations.UpdateBreakTypeRequest, security operations.UpdateBreakTypeSecurity) (*operations.UpdateBreakTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBreakTypeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -729,7 +729,7 @@ func (s *labor) UpdateBreakType(ctx context.Context, request operations.UpdateBr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -771,11 +771,11 @@ func (s *labor) UpdateBreakType(ctx context.Context, request operations.UpdateBr
 //
 // When closing a `Shift`, all `Break` instances in the `Shift` must be complete with `end_at`
 // set on each `Break`.
-func (s *labor) UpdateShift(ctx context.Context, request operations.UpdateShiftRequest) (*operations.UpdateShiftResponse, error) {
+func (s *labor) UpdateShift(ctx context.Context, request operations.UpdateShiftRequest, security operations.UpdateShiftSecurity) (*operations.UpdateShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateShiftRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -790,7 +790,7 @@ func (s *labor) UpdateShift(ctx context.Context, request operations.UpdateShiftR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -826,11 +826,11 @@ func (s *labor) UpdateShift(ctx context.Context, request operations.UpdateShiftR
 
 // UpdateWorkweekConfig - UpdateWorkweekConfig
 // Updates a `WorkweekConfig`.
-func (s *labor) UpdateWorkweekConfig(ctx context.Context, request operations.UpdateWorkweekConfigRequest) (*operations.UpdateWorkweekConfigResponse, error) {
+func (s *labor) UpdateWorkweekConfig(ctx context.Context, request operations.UpdateWorkweekConfigRequest, security operations.UpdateWorkweekConfigSecurity) (*operations.UpdateWorkweekConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/workweek-configs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/workweek-configs/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWorkweekConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -845,7 +845,7 @@ func (s *labor) UpdateWorkweekConfig(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

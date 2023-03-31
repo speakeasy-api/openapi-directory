@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesListDevcontainersInRepositoryForAuthenticatedUserPathParams struct {
+type CodespacesListDevcontainersInRepositoryForAuthenticatedUserRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodespacesListDevcontainersInRepositoryForAuthenticatedUserQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type CodespacesListDevcontainersInRepositoryForAuthenticatedUserRequest struct {
-	PathParams  CodespacesListDevcontainersInRepositoryForAuthenticatedUserPathParams
-	QueryParams CodespacesListDevcontainersInRepositoryForAuthenticatedUserQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type CodespacesListDevcontainersInRepositoryForAuthenticatedUser200ApplicationJSONDevcontainers struct {

@@ -13,17 +13,15 @@ var ListConferenceRecordingServerList = []string{
 }
 
 type ListConferenceRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListConferenceRecordingPathParams struct {
+type ListConferenceRecordingRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Conference SID that identifies the conference associated with the recording to read.
 	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
-}
-
-type ListConferenceRecordingQueryParams struct {
 	// The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated<=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated>=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
 	DateCreated *types.Date `queryParam:"style=form,explode=true,name=DateCreated"`
 	// The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated<=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated>=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
@@ -36,13 +34,6 @@ type ListConferenceRecordingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListConferenceRecordingRequest struct {
-	PathParams  ListConferenceRecordingPathParams
-	QueryParams ListConferenceRecordingQueryParams
-	Security    ListConferenceRecordingSecurity
-	ServerURL   *string
 }
 
 // ListConferenceRecordingListConferenceRecordingResponse - OK

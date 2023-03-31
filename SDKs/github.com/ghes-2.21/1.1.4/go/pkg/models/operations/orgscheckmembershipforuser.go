@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OrgsCheckMembershipForUserPathParams struct {
+type OrgsCheckMembershipForUserRequest struct {
 	Org      string `pathParam:"style=simple,explode=false,name=org"`
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type OrgsCheckMembershipForUserRequest struct {
-	PathParams OrgsCheckMembershipForUserPathParams
 }
 
 type OrgsCheckMembershipForUserResponse struct {

@@ -32,20 +32,20 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // DfareportingOrdersGet - Gets one order by ID.
-func (s *orders) DfareportingOrdersGet(ctx context.Context, request operations.DfareportingOrdersGetRequest) (*operations.DfareportingOrdersGetResponse, error) {
+func (s *orders) DfareportingOrdersGet(ctx context.Context, request operations.DfareportingOrdersGetRequest, security operations.DfareportingOrdersGetSecurity) (*operations.DfareportingOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *orders) DfareportingOrdersGet(ctx context.Context, request operations.D
 }
 
 // DfareportingOrdersList - Retrieves a list of orders, possibly filtered. This method supports paging.
-func (s *orders) DfareportingOrdersList(ctx context.Context, request operations.DfareportingOrdersListRequest) (*operations.DfareportingOrdersListResponse, error) {
+func (s *orders) DfareportingOrdersList(ctx context.Context, request operations.DfareportingOrdersListRequest, security operations.DfareportingOrdersListSecurity) (*operations.DfareportingOrdersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

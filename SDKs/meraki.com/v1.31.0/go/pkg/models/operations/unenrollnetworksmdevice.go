@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UnenrollNetworkSmDevicePathParams struct {
+type UnenrollNetworkSmDeviceRequest struct {
 	DeviceID  string `pathParam:"style=simple,explode=false,name=deviceId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type UnenrollNetworkSmDeviceRequest struct {
-	PathParams UnenrollNetworkSmDevicePathParams
 }
 
 type UnenrollNetworkSmDeviceResponse struct {

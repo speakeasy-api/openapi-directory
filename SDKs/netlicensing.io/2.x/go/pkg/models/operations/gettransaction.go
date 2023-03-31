@@ -8,17 +8,13 @@ import (
 )
 
 type GetTransactionSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetTransactionPathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Transaction
-	TransactionNumber string `pathParam:"style=simple,explode=false,name=transactionNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetTransactionRequest struct {
-	PathParams GetTransactionPathParams
-	Security   GetTransactionSecurity
+	// Unique number (across all Products of a Vendor) that identifies the Transaction
+	TransactionNumber string `pathParam:"style=simple,explode=false,name=transactionNumber"`
 }
 
 type GetTransactionResponse struct {

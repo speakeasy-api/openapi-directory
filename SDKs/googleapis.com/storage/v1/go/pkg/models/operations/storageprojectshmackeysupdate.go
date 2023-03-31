@@ -8,13 +8,13 @@ import (
 )
 
 type StorageProjectsHmacKeysUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysUpdateSecurity struct {
@@ -22,14 +22,10 @@ type StorageProjectsHmacKeysUpdateSecurity struct {
 	Option2 *StorageProjectsHmacKeysUpdateSecurityOption2 `security:"option"`
 }
 
-type StorageProjectsHmacKeysUpdatePathParams struct {
+type StorageProjectsHmacKeysUpdateRequest struct {
+	HmacKeyMetadata *shared.HmacKeyMetadata `request:"mediaType=application/json"`
 	// Name of the HMAC key being updated.
 	AccessID string `pathParam:"style=simple,explode=false,name=accessId"`
-	// Project ID owning the service account of the updated key.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type StorageProjectsHmacKeysUpdateQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,6 +36,8 @@ type StorageProjectsHmacKeysUpdateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID owning the service account of the updated key.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Upload protocol for media (e.g. "media", "multipart", "resumable").
@@ -48,13 +46,6 @@ type StorageProjectsHmacKeysUpdateQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageProjectsHmacKeysUpdateRequest struct {
-	PathParams  StorageProjectsHmacKeysUpdatePathParams
-	QueryParams StorageProjectsHmacKeysUpdateQueryParams
-	Request     *shared.HmacKeyMetadata `request:"mediaType=application/json"`
-	Security    StorageProjectsHmacKeysUpdateSecurity
 }
 
 type StorageProjectsHmacKeysUpdateResponse struct {

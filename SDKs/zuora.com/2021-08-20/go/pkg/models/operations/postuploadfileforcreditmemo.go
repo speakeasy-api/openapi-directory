@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTUploadFileForCreditMemoPathParams struct {
-	// The ID of the credit memo that you want to upload a PDF file for. For example, 402890555a7e9791015a879f064a0054.
-	//
-	CreditMemoID string `pathParam:"style=simple,explode=false,name=creditMemoId"`
-}
-
-type POSTUploadFileForCreditMemoHeaders struct {
-	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
-	//
-	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
-	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
 type POSTUploadFileForCreditMemoRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -36,9 +19,18 @@ type POSTUploadFileForCreditMemoRequestBody struct {
 }
 
 type POSTUploadFileForCreditMemoRequest struct {
-	PathParams POSTUploadFileForCreditMemoPathParams
-	Headers    POSTUploadFileForCreditMemoHeaders
-	Request    *POSTUploadFileForCreditMemoRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *POSTUploadFileForCreditMemoRequestBody `request:"mediaType=multipart/form-data"`
+	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+	//
+	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	//
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
+	// The ID of the credit memo that you want to upload a PDF file for. For example, 402890555a7e9791015a879f064a0054.
+	//
+	CreditMemoID string `pathParam:"style=simple,explode=false,name=creditMemoId"`
 }
 
 type POSTUploadFileForCreditMemoResponse struct {

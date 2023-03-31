@@ -33,11 +33,11 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CommentanalyzerCommentsAnalyze - Analyzes the provided text and returns scores for requested attributes.
-func (s *comments) CommentanalyzerCommentsAnalyze(ctx context.Context, request operations.CommentanalyzerCommentsAnalyzeRequest) (*operations.CommentanalyzerCommentsAnalyzeResponse, error) {
+func (s *comments) CommentanalyzerCommentsAnalyze(ctx context.Context, request operations.CommentanalyzerCommentsAnalyzeRequest, security operations.CommentanalyzerCommentsAnalyzeSecurity) (*operations.CommentanalyzerCommentsAnalyzeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/comments:analyze"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzeCommentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *comments) CommentanalyzerCommentsAnalyze(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *comments) CommentanalyzerCommentsAnalyze(ctx context.Context, request o
 }
 
 // CommentanalyzerCommentsSuggestscore - Suggest comment scores as training data.
-func (s *comments) CommentanalyzerCommentsSuggestscore(ctx context.Context, request operations.CommentanalyzerCommentsSuggestscoreRequest) (*operations.CommentanalyzerCommentsSuggestscoreResponse, error) {
+func (s *comments) CommentanalyzerCommentsSuggestscore(ctx context.Context, request operations.CommentanalyzerCommentsSuggestscoreRequest, security operations.CommentanalyzerCommentsSuggestscoreSecurity) (*operations.CommentanalyzerCommentsSuggestscoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/comments:suggestscore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuggestCommentScoreRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *comments) CommentanalyzerCommentsSuggestscore(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

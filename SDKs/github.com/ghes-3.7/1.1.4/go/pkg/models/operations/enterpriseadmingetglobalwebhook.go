@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetGlobalWebhookPathParams struct {
+type EnterpriseAdminGetGlobalWebhookRequest struct {
 	// The unique identifier of the hook.
 	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
-type EnterpriseAdminGetGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminGetGlobalWebhookPathParams
 }
 
 type EnterpriseAdminGetGlobalWebhookResponse struct {

@@ -4,26 +4,25 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.SearchRequest(
-    headers=operations.SearchHeaders(
-        galaxy_ap_name="voluptate",
-        galaxy_ap_password="tenetur",
-        galaxy_search_type="aliquid",
-    ),
-    request=operations.SearchRequestBody(
+    request_body=operations.SearchRequestBody(
         address=operations.SearchRequestBodyAddress(
-            address_line1="quo",
-            address_line2="ut",
+            address_line1="corrupti",
+            address_line2="provident",
         ),
-        age=55.099998,
-        dob="laudantium",
-        email="est",
-        first_name="quo",
-        last_name="officia",
-        middle_name="rem",
-        phone_number="sint",
+        age=7151.9,
+        dob="quibusdam",
+        email="Ryan.Little62@yahoo.com",
+        first_name="Luna",
+        last_name="Hoppe",
+        middle_name="iure",
+        phone_number="magnam",
     ),
+    galaxy_ap_name="debitis",
+    galaxy_ap_password="ipsa",
+    galaxy_search_type="delectus",
 )
     
 res = s.search(req)

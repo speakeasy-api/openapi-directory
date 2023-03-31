@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type GetCallQoSPathParams struct {
+type GetCallQoSRequest struct {
 	// Unique identifier of the call.
 	CallID string `pathParam:"style=simple,explode=false,name=callId"`
-}
-
-type GetCallQoSRequest struct {
-	PathParams GetCallQoSPathParams
 }
 
 type GetCallQoS200ApplicationXMLCalleeQosReceivingQos struct {

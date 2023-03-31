@@ -19,5 +19,4 @@ pkg/models/shared/marketingrecommendation.go
 pkg/models/shared/ad.go
 pkg/models/shared/bidpercentages.go
 pkg/models/shared/findlistingrecommendationrequest.go
-pkg/models/shared/security.go
 USAGE.md

@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDLegalEntitiesIDInsurancesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDLegalEntitiesIDInsurancesPathParams struct {
-	// Id of the insurance or memberId
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDLegalEntitiesIDInsurancesRequestBodyLevelEnum string
@@ -61,10 +53,12 @@ type PostSpacesSpaceIDLegalEntitiesIDInsurancesRequestBody struct {
 }
 
 type PostSpacesSpaceIDLegalEntitiesIDInsurancesRequest struct {
-	PathParams PostSpacesSpaceIDLegalEntitiesIDInsurancesPathParams
 	// Insurance to add (except name, class and archivaldate)
-	Request  PostSpacesSpaceIDLegalEntitiesIDInsurancesRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDLegalEntitiesIDInsurancesSecurity
+	RequestBody PostSpacesSpaceIDLegalEntitiesIDInsurancesRequestBody `request:"mediaType=application/json"`
+	// Id of the insurance or memberId
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDLegalEntitiesIDInsurances201ApplicationJSON - Id of folder created

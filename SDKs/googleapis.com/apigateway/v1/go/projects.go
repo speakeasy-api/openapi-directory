@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ApigatewayProjectsLocationsApisConfigsCreate - Creates a new ApiConfig in a given project and location.
-func (s *projects) ApigatewayProjectsLocationsApisConfigsCreate(ctx context.Context, request operations.ApigatewayProjectsLocationsApisConfigsCreateRequest) (*operations.ApigatewayProjectsLocationsApisConfigsCreateResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsApisConfigsCreate(ctx context.Context, request operations.ApigatewayProjectsLocationsApisConfigsCreateRequest, security operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity) (*operations.ApigatewayProjectsLocationsApisConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewayAPIConfigInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) ApigatewayProjectsLocationsApisConfigsCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) ApigatewayProjectsLocationsApisConfigsCreate(ctx context.Cont
 }
 
 // ApigatewayProjectsLocationsApisConfigsList - Lists ApiConfigs in a given project and location.
-func (s *projects) ApigatewayProjectsLocationsApisConfigsList(ctx context.Context, request operations.ApigatewayProjectsLocationsApisConfigsListRequest) (*operations.ApigatewayProjectsLocationsApisConfigsListResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsApisConfigsList(ctx context.Context, request operations.ApigatewayProjectsLocationsApisConfigsListRequest, security operations.ApigatewayProjectsLocationsApisConfigsListSecurity) (*operations.ApigatewayProjectsLocationsApisConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) ApigatewayProjectsLocationsApisConfigsList(ctx context.Contex
 }
 
 // ApigatewayProjectsLocationsApisCreate - Creates a new Api in a given project and location.
-func (s *projects) ApigatewayProjectsLocationsApisCreate(ctx context.Context, request operations.ApigatewayProjectsLocationsApisCreateRequest) (*operations.ApigatewayProjectsLocationsApisCreateResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsApisCreate(ctx context.Context, request operations.ApigatewayProjectsLocationsApisCreateRequest, security operations.ApigatewayProjectsLocationsApisCreateSecurity) (*operations.ApigatewayProjectsLocationsApisCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewayAPIInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) ApigatewayProjectsLocationsApisCreate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) ApigatewayProjectsLocationsApisCreate(ctx context.Context, re
 }
 
 // ApigatewayProjectsLocationsApisList - Lists Apis in a given project and location.
-func (s *projects) ApigatewayProjectsLocationsApisList(ctx context.Context, request operations.ApigatewayProjectsLocationsApisListRequest) (*operations.ApigatewayProjectsLocationsApisListResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsApisList(ctx context.Context, request operations.ApigatewayProjectsLocationsApisListRequest, security operations.ApigatewayProjectsLocationsApisListSecurity) (*operations.ApigatewayProjectsLocationsApisListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) ApigatewayProjectsLocationsApisList(ctx context.Context, requ
 }
 
 // ApigatewayProjectsLocationsGatewaysCreate - Creates a new Gateway in a given project and location.
-func (s *projects) ApigatewayProjectsLocationsGatewaysCreate(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysCreateRequest) (*operations.ApigatewayProjectsLocationsGatewaysCreateResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsGatewaysCreate(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysCreateRequest, security operations.ApigatewayProjectsLocationsGatewaysCreateSecurity) (*operations.ApigatewayProjectsLocationsGatewaysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gateways", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewayGatewayInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysCreate(ctx context.Context
 }
 
 // ApigatewayProjectsLocationsGatewaysGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) ApigatewayProjectsLocationsGatewaysGetIamPolicy(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest) (*operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsGatewaysGetIamPolicy(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest, security operations.ApigatewayProjectsLocationsGatewaysGetIamPolicySecurity) (*operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,20 +341,20 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysGetIamPolicy(ctx context.C
 }
 
 // ApigatewayProjectsLocationsGatewaysList - Lists Gateways in a given project and location.
-func (s *projects) ApigatewayProjectsLocationsGatewaysList(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysListRequest) (*operations.ApigatewayProjectsLocationsGatewaysListResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsGatewaysList(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysListRequest, security operations.ApigatewayProjectsLocationsGatewaysListSecurity) (*operations.ApigatewayProjectsLocationsGatewaysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gateways", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysList(ctx context.Context, 
 }
 
 // ApigatewayProjectsLocationsGatewaysPatch - Updates the parameters of a single Gateway.
-func (s *projects) ApigatewayProjectsLocationsGatewaysPatch(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysPatchRequest) (*operations.ApigatewayProjectsLocationsGatewaysPatchResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsGatewaysPatch(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysPatchRequest, security operations.ApigatewayProjectsLocationsGatewaysPatchSecurity) (*operations.ApigatewayProjectsLocationsGatewaysPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewayGatewayInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,11 +405,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysPatch(ctx context.Context,
 }
 
 // ApigatewayProjectsLocationsGatewaysSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) ApigatewayProjectsLocationsGatewaysSetIamPolicy(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyRequest) (*operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsGatewaysSetIamPolicy(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyRequest, security operations.ApigatewayProjectsLocationsGatewaysSetIamPolicySecurity) (*operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewaySetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysSetIamPolicy(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysSetIamPolicy(ctx context.C
 }
 
 // ApigatewayProjectsLocationsGatewaysTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) ApigatewayProjectsLocationsGatewaysTestIamPermissions(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsRequest) (*operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsGatewaysTestIamPermissions(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsRequest, security operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsSecurity) (*operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewayTestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysTestIamPermissions(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysTestIamPermissions(ctx con
 }
 
 // ApigatewayProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) ApigatewayProjectsLocationsList(ctx context.Context, request operations.ApigatewayProjectsLocationsListRequest) (*operations.ApigatewayProjectsLocationsListResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsList(ctx context.Context, request operations.ApigatewayProjectsLocationsListRequest, security operations.ApigatewayProjectsLocationsListSecurity) (*operations.ApigatewayProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *projects) ApigatewayProjectsLocationsList(ctx context.Context, request 
 }
 
 // ApigatewayProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) ApigatewayProjectsLocationsOperationsCancel(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsCancelRequest) (*operations.ApigatewayProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsOperationsCancel(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsCancelRequest, security operations.ApigatewayProjectsLocationsOperationsCancelSecurity) (*operations.ApigatewayProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *projects) ApigatewayProjectsLocationsOperationsCancel(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,20 +657,20 @@ func (s *projects) ApigatewayProjectsLocationsOperationsCancel(ctx context.Conte
 }
 
 // ApigatewayProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) ApigatewayProjectsLocationsOperationsDelete(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsDeleteRequest) (*operations.ApigatewayProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsOperationsDelete(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsDeleteRequest, security operations.ApigatewayProjectsLocationsOperationsDeleteSecurity) (*operations.ApigatewayProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,20 +705,20 @@ func (s *projects) ApigatewayProjectsLocationsOperationsDelete(ctx context.Conte
 }
 
 // ApigatewayProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) ApigatewayProjectsLocationsOperationsGet(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsGetRequest) (*operations.ApigatewayProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsOperationsGet(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsGetRequest, security operations.ApigatewayProjectsLocationsOperationsGetSecurity) (*operations.ApigatewayProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,20 +753,20 @@ func (s *projects) ApigatewayProjectsLocationsOperationsGet(ctx context.Context,
 }
 
 // ApigatewayProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) ApigatewayProjectsLocationsOperationsList(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsListRequest) (*operations.ApigatewayProjectsLocationsOperationsListResponse, error) {
+func (s *projects) ApigatewayProjectsLocationsOperationsList(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsListRequest, security operations.ApigatewayProjectsLocationsOperationsListSecurity) (*operations.ApigatewayProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

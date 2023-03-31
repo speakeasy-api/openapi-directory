@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkWebhooksWebhookTestPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkWebhooksWebhookTestRequestBody struct {
 	// The type of alert which the test webhook will send. Optional. Defaults to power_supply_down.
 	AlertTypeID *string `json:"alertTypeId,omitempty"`
@@ -26,8 +22,8 @@ type CreateNetworkWebhooksWebhookTestRequestBody struct {
 }
 
 type CreateNetworkWebhooksWebhookTestRequest struct {
-	PathParams CreateNetworkWebhooksWebhookTestPathParams
-	Request    CreateNetworkWebhooksWebhookTestRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkWebhooksWebhookTestRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkWebhooksWebhookTest201ApplicationJSONStatusEnum - Current status of the webhook delivery

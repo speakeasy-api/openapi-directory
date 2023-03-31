@@ -32,11 +32,11 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // IapGetIamPolicy - Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
-func (s *v1) IapGetIamPolicy(ctx context.Context, request operations.IapGetIamPolicyRequest) (*operations.IapGetIamPolicyResponse, error) {
+func (s *v1) IapGetIamPolicy(ctx context.Context, request operations.IapGetIamPolicyRequest, security operations.IapGetIamPolicySecurity) (*operations.IapGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *v1) IapGetIamPolicy(ctx context.Context, request operations.IapGetIamPo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *v1) IapGetIamPolicy(ctx context.Context, request operations.IapGetIamPo
 }
 
 // IapGetIapSettings - Gets the IAP settings on a particular IAP protected resource.
-func (s *v1) IapGetIapSettings(ctx context.Context, request operations.IapGetIapSettingsRequest) (*operations.IapGetIapSettingsResponse, error) {
+func (s *v1) IapGetIapSettings(ctx context.Context, request operations.IapGetIapSettingsRequest, security operations.IapGetIapSettingsSecurity) (*operations.IapGetIapSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:iapSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:iapSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *v1) IapGetIapSettings(ctx context.Context, request operations.IapGetIap
 }
 
 // IapSetIamPolicy - Sets the access control policy for an Identity-Aware Proxy protected resource. Replaces any existing policy. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
-func (s *v1) IapSetIamPolicy(ctx context.Context, request operations.IapSetIamPolicyRequest) (*operations.IapSetIamPolicyResponse, error) {
+func (s *v1) IapSetIamPolicy(ctx context.Context, request operations.IapSetIamPolicyRequest, security operations.IapSetIamPolicySecurity) (*operations.IapSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *v1) IapSetIamPolicy(ctx context.Context, request operations.IapSetIamPo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *v1) IapSetIamPolicy(ctx context.Context, request operations.IapSetIamPo
 }
 
 // IapTestIamPermissions - Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
-func (s *v1) IapTestIamPermissions(ctx context.Context, request operations.IapTestIamPermissionsRequest) (*operations.IapTestIamPermissionsResponse, error) {
+func (s *v1) IapTestIamPermissions(ctx context.Context, request operations.IapTestIamPermissionsRequest, security operations.IapTestIamPermissionsSecurity) (*operations.IapTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *v1) IapTestIamPermissions(ctx context.Context, request operations.IapTe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *v1) IapTestIamPermissions(ctx context.Context, request operations.IapTe
 }
 
 // IapUpdateIapSettings - Updates the IAP settings on a particular IAP protected resource. It replaces all fields unless the `update_mask` is set.
-func (s *v1) IapUpdateIapSettings(ctx context.Context, request operations.IapUpdateIapSettingsRequest) (*operations.IapUpdateIapSettingsResponse, error) {
+func (s *v1) IapUpdateIapSettings(ctx context.Context, request operations.IapUpdateIapSettingsRequest, security operations.IapUpdateIapSettingsSecurity) (*operations.IapUpdateIapSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:iapSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:iapSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IapSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *v1) IapUpdateIapSettings(ctx context.Context, request operations.IapUpd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

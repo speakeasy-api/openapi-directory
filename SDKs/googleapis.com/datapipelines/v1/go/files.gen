@@ -31,7 +31,6 @@ pkg/models/shared/googleclouddatapipelinesv1flextemplateruntimeenvironment.go
 pkg/models/shared/googleclouddatapipelinesv1schedulespec.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleclouddatapipelinesv1listjobsresponse.go
 pkg/models/shared/googleclouddatapipelinesv1job.go
 pkg/models/shared/googlerpcstatus.go

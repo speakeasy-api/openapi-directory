@@ -29,6 +29,7 @@ pkg/models/shared/costestimate.go
 pkg/models/shared/creditestimate.go
 pkg/models/shared/skucostestimate.go
 pkg/models/shared/commitmentcostestimate.go
+pkg/models/shared/altenum.go
 pkg/models/shared/estimatecostscenarioforbillingaccountrequest.go
 pkg/models/shared/costscenario.go
 pkg/models/shared/workload.go
@@ -60,9 +61,7 @@ pkg/models/shared/cloudcdnegressworkload.go
 pkg/models/shared/scenarioconfig.go
 pkg/models/shared/commitment.go
 pkg/models/shared/vmresourcebasedcud.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/estimatecostscenariowithlistpriceresponse.go
 pkg/models/shared/estimatecostscenariowithlistpricerequest.go
 USAGE.md

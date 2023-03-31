@@ -37,16 +37,16 @@ func newGetVersions(defaultClient, securityClient HTTPClient, serverURL, languag
 // This endpoint retrieves a specific *version* of a chosen SKU sent by the seller. Add the Seller's ID, Seller's SKU ID, and version ID in the path to detail your search.
 func (s *getVersions) GetSuggestionbyversion(ctx context.Context, request operations.GetSuggestionbyversionRequest) (*operations.GetSuggestionbyversionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,16 +83,16 @@ func (s *getVersions) GetSuggestionbyversion(ctx context.Context, request operat
 // The response's object [latestversion] provides the information of the most recent version of that SKU suggestion.
 func (s *getVersions) GetVersions(ctx context.Context, request operations.GetVersionsRequest) (*operations.GetVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -12,20 +12,15 @@ var FetchTaskServerList = []string{
 }
 
 type FetchTaskSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTaskPathParams struct {
+type FetchTaskRequest struct {
 	// The SID of the Task resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the Task to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchTaskRequest struct {
-	PathParams FetchTaskPathParams
-	Security   FetchTaskSecurity
-	ServerURL  *string
 }
 
 type FetchTaskResponse struct {

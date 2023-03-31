@@ -6,24 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type MeetingUpdateMultipartSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingUpdateMultipartPathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type MeetingUpdateMultipartQueryParams struct {
-	// Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording}
-	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingUpdateMultipartFormDataRecurrenceMonthlyWeekEnum - Use this field **only if you're scheduling a recurring meeting of type** `3` to state the week of the month when the meeting should recur. If you use this field, **you must also use the `monthly_week_day` field to state the day of the week when the meeting should recur.** <br>`-1` - Last week of the month.<br>`1` - First week of the month.<br>`2` - Second week of the month.<br>`3` - Third week of the month.<br>`4` - Fourth week of the month.
@@ -267,11 +254,14 @@ type MeetingUpdateMultipartFormData3 struct {
 }
 
 type MeetingUpdateMultipartRequest struct {
-	PathParams  MeetingUpdateMultipartPathParams
-	QueryParams MeetingUpdateMultipartQueryParams
 	// Meeting
-	Request  MeetingUpdateMultipartFormData3 `request:"mediaType=multipart/form-data"`
-	Security MeetingUpdateMultipartSecurity
+	RequestBody MeetingUpdateMultipartFormData3 `request:"mediaType=multipart/form-data"`
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
+	// Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording}
+	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
 }
 
 type MeetingUpdateMultipartResponse struct {

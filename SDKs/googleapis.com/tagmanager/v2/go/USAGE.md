@@ -14,37 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.TagmanagerAccountsContainersCombineRequest{
-        Security: operations.TagmanagerAccountsContainersCombineSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.TagmanagerAccountsContainersCombinePathParams{
-            Path: "corrupti",
-        },
-        QueryParams: operations.TagmanagerAccountsContainersCombineQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            AllowUserPermissionFeatureUpdate: false,
-            Alt: "proto",
-            Callback: "unde",
-            ContainerID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            SettingSource: "current",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        AllowUserPermissionFeatureUpdate: false,
+        Alt: "proto",
+        Callback: "quibusdam",
+        ContainerID: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        Path: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        SettingSource: "current",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.TagmanagerAccountsContainersCombine(ctx, req)
+    res, err := s.Accounts.TagmanagerAccountsContainersCombine(ctx, req, operations.TagmanagerAccountsContainersCombineSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

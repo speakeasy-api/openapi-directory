@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkFirmwareUpgradesStagedGroupPathParams struct {
+type DeleteNetworkFirmwareUpgradesStagedGroupRequest struct {
 	GroupID   string `pathParam:"style=simple,explode=false,name=groupId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type DeleteNetworkFirmwareUpgradesStagedGroupRequest struct {
-	PathParams DeleteNetworkFirmwareUpgradesStagedGroupPathParams
 }
 
 type DeleteNetworkFirmwareUpgradesStagedGroupResponse struct {

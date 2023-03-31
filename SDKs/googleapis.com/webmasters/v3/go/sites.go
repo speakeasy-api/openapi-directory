@@ -33,20 +33,20 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // WebmastersSitesAdd - Adds a site to the set of the user's sites in Search Console.
-func (s *sites) WebmastersSitesAdd(ctx context.Context, request operations.WebmastersSitesAddRequest) (*operations.WebmastersSitesAddResponse, error) {
+func (s *sites) WebmastersSitesAdd(ctx context.Context, request operations.WebmastersSitesAddRequest, security operations.WebmastersSitesAddSecurity) (*operations.WebmastersSitesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *sites) WebmastersSitesAdd(ctx context.Context, request operations.Webma
 }
 
 // WebmastersSitesDelete - Removes a site from the set of the user's Search Console sites.
-func (s *sites) WebmastersSitesDelete(ctx context.Context, request operations.WebmastersSitesDeleteRequest) (*operations.WebmastersSitesDeleteResponse, error) {
+func (s *sites) WebmastersSitesDelete(ctx context.Context, request operations.WebmastersSitesDeleteRequest, security operations.WebmastersSitesDeleteSecurity) (*operations.WebmastersSitesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,20 +111,20 @@ func (s *sites) WebmastersSitesDelete(ctx context.Context, request operations.We
 }
 
 // WebmastersSitesGet - Retrieves information about specific site.
-func (s *sites) WebmastersSitesGet(ctx context.Context, request operations.WebmastersSitesGetRequest) (*operations.WebmastersSitesGetResponse, error) {
+func (s *sites) WebmastersSitesGet(ctx context.Context, request operations.WebmastersSitesGetRequest, security operations.WebmastersSitesGetSecurity) (*operations.WebmastersSitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,7 +159,7 @@ func (s *sites) WebmastersSitesGet(ctx context.Context, request operations.Webma
 }
 
 // WebmastersSitesList - Lists the user's Search Console sites.
-func (s *sites) WebmastersSitesList(ctx context.Context, request operations.WebmastersSitesListRequest) (*operations.WebmastersSitesListResponse, error) {
+func (s *sites) WebmastersSitesList(ctx context.Context, request operations.WebmastersSitesListRequest, security operations.WebmastersSitesListSecurity) (*operations.WebmastersSitesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sites"
 
@@ -168,11 +168,11 @@ func (s *sites) WebmastersSitesList(ctx context.Context, request operations.Webm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

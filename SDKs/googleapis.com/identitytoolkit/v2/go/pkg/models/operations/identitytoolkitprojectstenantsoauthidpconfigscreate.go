@@ -8,13 +8,13 @@ import (
 )
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurity struct {
@@ -22,14 +22,10 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurity struct {
 	Option2 *IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurityOption2 `security:"option"`
 }
 
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreatePathParams struct {
-	// The parent resource name where the config to be created, for example: "projects/my-awesome-project"
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateQueryParams struct {
+type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                     *shared.XgafvEnum                                       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig *shared.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -44,6 +40,8 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateQueryParams struct {
 	OauthIdpConfigID *string `queryParam:"style=form,explode=true,name=oauthIdpConfigId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The parent resource name where the config to be created, for example: "projects/my-awesome-project"
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest struct {
-	PathParams  IdentitytoolkitProjectsTenantsOauthIdpConfigsCreatePathParams
-	QueryParams IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateQueryParams
-	Request     *shared.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig `request:"mediaType=application/json"`
-	Security    IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurity
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse struct {

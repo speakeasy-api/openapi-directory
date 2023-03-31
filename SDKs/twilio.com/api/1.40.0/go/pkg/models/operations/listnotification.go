@@ -13,15 +13,13 @@ var ListNotificationServerList = []string{
 }
 
 type ListNotificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListNotificationPathParams struct {
+type ListNotificationRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Notification resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListNotificationQueryParams struct {
 	// Only read notifications of the specified log level. Can be:  `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.
 	Log *int64 `queryParam:"style=form,explode=true,name=Log"`
 	// Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `<=YYYY-MM-DD` for messages logged at or before midnight on a date, or `>=YYYY-MM-DD` for messages logged at or after midnight on a date.
@@ -36,13 +34,6 @@ type ListNotificationQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListNotificationRequest struct {
-	PathParams  ListNotificationPathParams
-	QueryParams ListNotificationQueryParams
-	Security    ListNotificationSecurity
-	ServerURL   *string
 }
 
 // ListNotificationListNotificationResponse - OK

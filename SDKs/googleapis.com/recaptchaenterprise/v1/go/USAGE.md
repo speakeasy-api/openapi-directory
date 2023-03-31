@@ -14,48 +14,41 @@ func main() {
     s := sdk.New()
 
     req := operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest{
-        Security: operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest{
-            Annotation: "LEGITIMATE",
-            HashedAccountID: "iure",
+        DollarXgafv: "2",
+        GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest: &shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest{
+            Annotation: "FRAUDULENT",
+            HashedAccountID: "distinctio",
             Reasons: []shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum{
-                "INCORRECT_PASSWORD",
-                "REASON_UNSPECIFIED",
+                "INITIATED_TWO_FACTOR",
+                "CORRECT_PASSWORD",
+                "PAYMENT_HEURISTICS",
+                "CORRECT_PASSWORD",
             },
             TransactionEvent: &shared.GoogleCloudRecaptchaenterpriseV1TransactionEvent{
-                EventTime: "delectus",
-                EventType: "AUTHORIZATION_DECLINE",
-                Reason: "suscipit",
-                Value: 4776.65,
+                EventTime: "vel",
+                EventType: "FRAUD_NOTIFICATION",
+                Reason: "deserunt",
+                Value: 3843.82,
             },
         },
+        AccessToken: "iure",
+        Alt: "json",
+        Callback: "debitis",
+        Fields: "ipsa",
+        Key: "delectus",
+        Name: "tempora",
+        OauthToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "molestiae",
+        UploadType: "minus",
+        UploadProtocol: "placeat",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx, req)
+    res, err := s.Projects.RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx, req, operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

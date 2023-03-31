@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNotificationsIDPathParams struct {
+type DeleteNotificationsIDRequest struct {
 	// Notification ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteNotificationsIDRequest struct {
-	PathParams DeleteNotificationsIDPathParams
 }
 
 type DeleteNotificationsIDResponse struct {

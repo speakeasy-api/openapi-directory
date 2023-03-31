@@ -13,10 +13,6 @@ type AddAutoReceptionistApplicationJSON struct {
 	SiteID *string `json:"site_id,omitempty"`
 }
 
-type AddAutoReceptionistRequest struct {
-	Request *AddAutoReceptionistApplicationJSON `request:"mediaType=application/json"`
-}
-
 // AddAutoReceptionist201ApplicationXML - **HTTP Status Code:** `201` **Created**
 //
 // Auto receptionist added successfully.

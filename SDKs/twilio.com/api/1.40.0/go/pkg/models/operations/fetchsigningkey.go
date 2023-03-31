@@ -12,18 +12,13 @@ var FetchSigningKeyServerList = []string{
 }
 
 type FetchSigningKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSigningKeyPathParams struct {
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSigningKeyRequest struct {
-	PathParams FetchSigningKeyPathParams
-	Security   FetchSigningKeySecurity
-	ServerURL  *string
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSigningKeyResponse struct {

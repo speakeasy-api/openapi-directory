@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type MetaGetOctocatQueryParams struct {
+type MetaGetOctocatRequest struct {
 	// The words to show in Octocat's speech bubble
 	S *string `queryParam:"style=form,explode=true,name=s"`
-}
-
-type MetaGetOctocatRequest struct {
-	QueryParams MetaGetOctocatQueryParams
 }
 
 type MetaGetOctocatResponse struct {

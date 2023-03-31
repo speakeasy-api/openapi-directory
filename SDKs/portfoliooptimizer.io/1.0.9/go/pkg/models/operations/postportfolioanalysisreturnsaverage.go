@@ -15,10 +15,6 @@ type PostPortfolioAnalysisReturnsAverageRequestBody struct {
 	Portfolios []PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisReturnsAverageRequest struct {
-	Request PostPortfolioAnalysisReturnsAverageRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios struct {
 	// The arithmetic average return of the portfolio
 	PortfolioAverageReturn float64 `json:"portfolioAverageReturn"`

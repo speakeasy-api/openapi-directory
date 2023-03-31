@@ -4,23 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetChangelogsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetChangelogsQueryParams struct {
+type GetChangelogsRequest struct {
 	// Used to specify further pages (starts at 1)
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of items to include in pagination (up to 100, defaults to 10)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
-}
-
-type GetChangelogsRequest struct {
-	QueryParams GetChangelogsQueryParams
-	Security    GetChangelogsSecurity
 }
 
 type GetChangelogsResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type GamesMetagameListCategoriesByPlayerSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GamesMetagameListCategoriesByPlayerCollectionEnum - The collection of categories for which data will be returned.
@@ -38,14 +38,7 @@ func (e *GamesMetagameListCategoriesByPlayerCollectionEnum) UnmarshalJSON(data [
 	}
 }
 
-type GamesMetagameListCategoriesByPlayerPathParams struct {
-	// The collection of categories for which data will be returned.
-	Collection GamesMetagameListCategoriesByPlayerCollectionEnum `pathParam:"style=simple,explode=false,name=collection"`
-	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
-	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
-}
-
-type GamesMetagameListCategoriesByPlayerQueryParams struct {
+type GamesMetagameListCategoriesByPlayerRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -54,6 +47,8 @@ type GamesMetagameListCategoriesByPlayerQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The collection of categories for which data will be returned.
+	Collection GamesMetagameListCategoriesByPlayerCollectionEnum `pathParam:"style=simple,explode=false,name=collection"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -66,6 +61,8 @@ type GamesMetagameListCategoriesByPlayerQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The token returned by the previous request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
+	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -74,12 +71,6 @@ type GamesMetagameListCategoriesByPlayerQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesMetagameListCategoriesByPlayerRequest struct {
-	PathParams  GamesMetagameListCategoriesByPlayerPathParams
-	QueryParams GamesMetagameListCategoriesByPlayerQueryParams
-	Security    GamesMetagameListCategoriesByPlayerSecurity
 }
 
 type GamesMetagameListCategoriesByPlayerResponse struct {

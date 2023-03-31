@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListPadsUsingGETQueryParams struct {
-	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
-}
-
 type ListPadsUsingGETRequest struct {
-	QueryParams ListPadsUsingGETQueryParams
+	GroupID *string `queryParam:"style=form,explode=true,name=groupID"`
 }
 
 // ListPadsUsingGET500ApplicationJSON - internal api error (code 2)

@@ -12,18 +12,13 @@ var FetchSimServerList = []string{
 }
 
 type FetchSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSimPathParams struct {
-	// The SID or the `unique_name` of the Sim resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSimRequest struct {
-	PathParams FetchSimPathParams
-	Security   FetchSimSecurity
-	ServerURL  *string
+	// The SID or the `unique_name` of the Sim resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSimResponse struct {

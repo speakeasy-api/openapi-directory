@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UploadBlobByIDPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UploadBlobByIDRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -21,8 +16,9 @@ type UploadBlobByIDRequestBody struct {
 }
 
 type UploadBlobByIDRequest struct {
-	PathParams UploadBlobByIDPathParams
-	Request    *UploadBlobByIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UploadBlobByIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Unique identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UploadBlobByIDResponse struct {

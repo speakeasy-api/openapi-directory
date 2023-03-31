@@ -29,13 +29,12 @@ pkg/models/operations/datafusionprojectslocationsoperationslist.go
 pkg/models/operations/datafusionprojectslocationsversionslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/instance.go
 pkg/models/shared/networkconfig.go
 pkg/models/shared/eventpublishconfig.go
 pkg/models/shared/cryptokeyconfig.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/dnspeering.go
 pkg/models/shared/listdnspeeringsresponse.go
 pkg/models/shared/policy.go

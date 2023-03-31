@@ -34,11 +34,11 @@ func newSearchanalytics(defaultClient, securityClient HTTPClient, serverURL, lan
 // WebmastersSearchanalyticsQuery - Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row keys that you define. You must define a date range of one or more days.
 //
 // When date is one of the group by values, any days without data are omitted from the result list. If you need to know which days have data, issue a broad date range query grouped by date for any metric, and see which day rows are returned.
-func (s *searchanalytics) WebmastersSearchanalyticsQuery(ctx context.Context, request operations.WebmastersSearchanalyticsQueryRequest) (*operations.WebmastersSearchanalyticsQueryResponse, error) {
+func (s *searchanalytics) WebmastersSearchanalyticsQuery(ctx context.Context, request operations.WebmastersSearchanalyticsQueryRequest, security operations.WebmastersSearchanalyticsQuerySecurity) (*operations.WebmastersSearchanalyticsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/searchAnalytics/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}/searchAnalytics/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchAnalyticsQueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,11 +50,11 @@ func (s *searchanalytics) WebmastersSearchanalyticsQuery(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -44,14 +44,10 @@ func (e *GetGetCurationTagsByNameFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetCurationTagsByNameQueryParams struct {
+type GetGetCurationTagsByNameRequest struct {
 	Format *GetGetCurationTagsByNameFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The tag name
 	TagName string `queryParam:"style=form,explode=true,name=tagName"`
-}
-
-type GetGetCurationTagsByNameRequest struct {
-	QueryParams GetGetCurationTagsByNameQueryParams
 }
 
 type GetGetCurationTagsByNameResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListBranchesForHeadCommitPathParams struct {
+type ReposListBranchesForHeadCommitRequest struct {
 	// commit_sha parameter
 	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
 	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListBranchesForHeadCommitRequest struct {
-	PathParams ReposListBranchesForHeadCommitPathParams
 }
 
 // ReposListBranchesForHeadCommit415ApplicationJSON - Preview header missing

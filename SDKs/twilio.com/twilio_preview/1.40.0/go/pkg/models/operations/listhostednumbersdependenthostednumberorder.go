@@ -12,14 +12,11 @@ var ListHostedNumbersDependentHostedNumberOrderServerList = []string{
 }
 
 type ListHostedNumbersDependentHostedNumberOrderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListHostedNumbersDependentHostedNumberOrderPathParams struct {
-	SigningDocumentSid string `pathParam:"style=simple,explode=false,name=SigningDocumentSid"`
-}
-
-type ListHostedNumbersDependentHostedNumberOrderQueryParams struct {
+type ListHostedNumbersDependentHostedNumberOrderRequest struct {
 	// A human readable description of this resource, up to 64 characters.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// A 34 character string that uniquely identifies the IncomingPhoneNumber resource created by this HostedNumberOrder.
@@ -31,18 +28,12 @@ type ListHostedNumbersDependentHostedNumberOrderQueryParams struct {
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// An E164 formatted phone number hosted by this HostedNumberOrder.
-	PhoneNumber *string `queryParam:"style=form,explode=true,name=PhoneNumber"`
+	PhoneNumber        *string `queryParam:"style=form,explode=true,name=PhoneNumber"`
+	SigningDocumentSid string  `pathParam:"style=simple,explode=false,name=SigningDocumentSid"`
 	// Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/api/phone-numbers/hosted-number-authorization-documents#status-values) for more information on each of these statuses.
 	Status *shared.DependentHostedNumberOrderEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// Provides a unique and addressable name to be assigned to this HostedNumberOrder, assigned by the developer, to be optionally used in addition to SID.
 	UniqueName *string `queryParam:"style=form,explode=true,name=UniqueName"`
-}
-
-type ListHostedNumbersDependentHostedNumberOrderRequest struct {
-	PathParams  ListHostedNumbersDependentHostedNumberOrderPathParams
-	QueryParams ListHostedNumbersDependentHostedNumberOrderQueryParams
-	Security    ListHostedNumbersDependentHostedNumberOrderSecurity
-	ServerURL   *string
 }
 
 type ListHostedNumbersDependentHostedNumberOrderListHostedNumbersDependentHostedNumberOrderResponseMeta struct {

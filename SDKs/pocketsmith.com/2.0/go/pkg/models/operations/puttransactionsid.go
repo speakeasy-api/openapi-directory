@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutTransactionsIDPathParams struct {
-	// The unique identifier of the transaction.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutTransactionsIDRequestBody struct {
 	// A new amount for the transaction.
 	Amount *float64 `json:"amount,omitempty"`
@@ -36,8 +31,9 @@ type PutTransactionsIDRequestBody struct {
 }
 
 type PutTransactionsIDRequest struct {
-	PathParams PutTransactionsIDPathParams
-	Request    *PutTransactionsIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutTransactionsIDRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the transaction.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutTransactionsIDResponse struct {

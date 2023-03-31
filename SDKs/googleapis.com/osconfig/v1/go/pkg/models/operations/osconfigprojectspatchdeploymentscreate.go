@@ -8,18 +8,14 @@ import (
 )
 
 type OsconfigProjectsPatchDeploymentsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OsconfigProjectsPatchDeploymentsCreatePathParams struct {
-	// Required. The project to apply this patch deployment to in the form `projects/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OsconfigProjectsPatchDeploymentsCreateQueryParams struct {
+type OsconfigProjectsPatchDeploymentsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	PatchDeploymentInput *shared.PatchDeploymentInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type OsconfigProjectsPatchDeploymentsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The project to apply this patch deployment to in the form `projects/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
 	PatchDeploymentID *string `queryParam:"style=form,explode=true,name=patchDeploymentId"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type OsconfigProjectsPatchDeploymentsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OsconfigProjectsPatchDeploymentsCreateRequest struct {
-	PathParams  OsconfigProjectsPatchDeploymentsCreatePathParams
-	QueryParams OsconfigProjectsPatchDeploymentsCreateQueryParams
-	Request     *shared.PatchDeploymentInput `request:"mediaType=application/json"`
-	Security    OsconfigProjectsPatchDeploymentsCreateSecurity
 }
 
 type OsconfigProjectsPatchDeploymentsCreateResponse struct {

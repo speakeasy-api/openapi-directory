@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRemovebgMultipartRequest struct {
-	Request shared.RemoveBgMultipart `request:"mediaType=multipart/form-data"`
-}
-
 type PostRemovebgMultipart400WildcardErrors struct {
 	// Error code
 	Code *string

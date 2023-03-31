@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type TripsTripDetailsQueryParams struct {
-	TrackToken *string `queryParam:"style=form,explode=true,name=trackToken"`
-}
-
 type TripsTripDetailsRequest struct {
-	QueryParams TripsTripDetailsQueryParams
+	TrackToken *string `queryParam:"style=form,explode=true,name=trackToken"`
 }
 
 type TripsTripDetails200ApplicationJSONResultTrackAddressFinishParts struct {

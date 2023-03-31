@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetScenPathParams struct {
+type GetScenRequest struct {
 	// Agent to return the first scenario number
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetScenRequest struct {
-	PathParams GetScenPathParams
 }
 
 type GetScenResponse struct {

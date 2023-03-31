@@ -25,56 +25,34 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest{
-        Security: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
+        DollarXgafv: "2",
+        GoogleCloudChannelV1ChannelPartnerRepricingConfigInput: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "suscipit",
+                            Value: "provident",
                         },
                     },
                 },
                 ChannelPartnerGranularity: map[string]interface{}{
-                    "magnam": "debitis",
-                    "ipsa": "delectus",
+                    "quibusdam": "unde",
+                    "nulla": "corrupti",
+                    "illum": "vel",
                 },
                 ConditionalOverrides: []shared.GoogleCloudChannelV1ConditionalOverride{
                     shared.GoogleCloudChannelV1ConditionalOverride{
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "suscipit",
+                                    Value: "deserunt",
                                 },
                             },
                         },
                         RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "minus",
+                                SkuGroup: "iure",
                             },
                         },
                     },
@@ -82,33 +60,62 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "placeat",
+                                    Value: "magnam",
                                 },
                             },
                         },
-                        RebillingBasis: "COST_AT_LIST",
+                        RebillingBasis: "DIRECT_CUSTOMER_COST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "iusto",
+                                SkuGroup: "ipsa",
+                            },
+                        },
+                    },
+                    shared.GoogleCloudChannelV1ConditionalOverride{
+                        Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
+                            PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
+                                Percentage: &shared.GoogleTypeDecimal{
+                                    Value: "delectus",
+                                },
+                            },
+                        },
+                        RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                        RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
+                            SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
+                                SkuGroup: "suscipit",
                             },
                         },
                     },
                 },
                 EffectiveInvoiceMonth: &shared.GoogleTypeDate{
-                    Day: 568045,
-                    Month: 392785,
-                    Year: 925597,
+                    Day: 477665,
+                    Month: 791725,
+                    Year: 812169,
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "temporibus",
+                    Entitlement: "voluptatum",
                 },
-                RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                RebillingBasis: "COST_AT_LIST",
             },
         },
+        AccessToken: "excepturi",
+        Alt: "media",
+        Callback: "recusandae",
+        Fields: "temporibus",
+        Key: "ab",
+        OauthToken: "quis",
+        Parent: "veritatis",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "perferendis",
+        UploadProtocol: "ipsam",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(ctx, req)
+    res, err := s.Accounts.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(ctx, req, operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -121,7 +128,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Accounts
@@ -174,4 +181,15 @@ func main() {
 * `CloudchannelProductsSkusList` - Lists the SKUs for a product the reseller is authorized to sell. Possible error codes: * INVALID_ARGUMENT: Required request parameters are missing or invalid.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

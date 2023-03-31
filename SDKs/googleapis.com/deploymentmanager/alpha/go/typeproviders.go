@@ -32,20 +32,20 @@ func newTypeProviders(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // DeploymentmanagerTypeProvidersDelete - Deletes a type provider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersDelete(ctx context.Context, request operations.DeploymentmanagerTypeProvidersDeleteRequest) (*operations.DeploymentmanagerTypeProvidersDeleteResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersDelete(ctx context.Context, request operations.DeploymentmanagerTypeProvidersDeleteRequest, security operations.DeploymentmanagerTypeProvidersDeleteSecurity) (*operations.DeploymentmanagerTypeProvidersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersDelete(ctx context.Context
 }
 
 // DeploymentmanagerTypeProvidersGet - Gets information about a specific type provider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersGet(ctx context.Context, request operations.DeploymentmanagerTypeProvidersGetRequest) (*operations.DeploymentmanagerTypeProvidersGetResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersGet(ctx context.Context, request operations.DeploymentmanagerTypeProvidersGetRequest, security operations.DeploymentmanagerTypeProvidersGetSecurity) (*operations.DeploymentmanagerTypeProvidersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersGet(ctx context.Context, r
 }
 
 // DeploymentmanagerTypeProvidersGetType - Gets a type info for a type provided by a TypeProvider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersGetType(ctx context.Context, request operations.DeploymentmanagerTypeProvidersGetTypeRequest) (*operations.DeploymentmanagerTypeProvidersGetTypeResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersGetType(ctx context.Context, request operations.DeploymentmanagerTypeProvidersGetTypeRequest, security operations.DeploymentmanagerTypeProvidersGetTypeSecurity) (*operations.DeploymentmanagerTypeProvidersGetTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,11 +176,11 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersGetType(ctx context.Contex
 }
 
 // DeploymentmanagerTypeProvidersInsert - Creates a type provider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersInsert(ctx context.Context, request operations.DeploymentmanagerTypeProvidersInsertRequest) (*operations.DeploymentmanagerTypeProvidersInsertResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersInsert(ctx context.Context, request operations.DeploymentmanagerTypeProvidersInsertRequest, security operations.DeploymentmanagerTypeProvidersInsertSecurity) (*operations.DeploymentmanagerTypeProvidersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TypeProvider", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -192,11 +192,11 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersInsert(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersInsert(ctx context.Context
 }
 
 // DeploymentmanagerTypeProvidersList - Lists all resource type providers for Deployment Manager.
-func (s *typeProviders) DeploymentmanagerTypeProvidersList(ctx context.Context, request operations.DeploymentmanagerTypeProvidersListRequest) (*operations.DeploymentmanagerTypeProvidersListResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersList(ctx context.Context, request operations.DeploymentmanagerTypeProvidersListRequest, security operations.DeploymentmanagerTypeProvidersListSecurity) (*operations.DeploymentmanagerTypeProvidersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersList(ctx context.Context, 
 }
 
 // DeploymentmanagerTypeProvidersListTypes - Lists all the type info for a TypeProvider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersListTypes(ctx context.Context, request operations.DeploymentmanagerTypeProvidersListTypesRequest) (*operations.DeploymentmanagerTypeProvidersListTypesResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersListTypes(ctx context.Context, request operations.DeploymentmanagerTypeProvidersListTypesRequest, security operations.DeploymentmanagerTypeProvidersListTypesSecurity) (*operations.DeploymentmanagerTypeProvidersListTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,11 +327,11 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersListTypes(ctx context.Cont
 }
 
 // DeploymentmanagerTypeProvidersPatch - Patches a type provider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersPatch(ctx context.Context, request operations.DeploymentmanagerTypeProvidersPatchRequest) (*operations.DeploymentmanagerTypeProvidersPatchResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersPatch(ctx context.Context, request operations.DeploymentmanagerTypeProvidersPatchRequest, security operations.DeploymentmanagerTypeProvidersPatchSecurity) (*operations.DeploymentmanagerTypeProvidersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TypeProvider1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,11 +343,11 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,11 +382,11 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersPatch(ctx context.Context,
 }
 
 // DeploymentmanagerTypeProvidersUpdate - Updates a type provider.
-func (s *typeProviders) DeploymentmanagerTypeProvidersUpdate(ctx context.Context, request operations.DeploymentmanagerTypeProvidersUpdateRequest) (*operations.DeploymentmanagerTypeProvidersUpdateResponse, error) {
+func (s *typeProviders) DeploymentmanagerTypeProvidersUpdate(ctx context.Context, request operations.DeploymentmanagerTypeProvidersUpdateRequest, security operations.DeploymentmanagerTypeProvidersUpdateSecurity) (*operations.DeploymentmanagerTypeProvidersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TypeProvider1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -398,11 +398,11 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersUpdate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,15 +8,7 @@ import (
 )
 
 type CreateTeamMemberSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateTeamMemberRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateTeamMemberRequest `request:"mediaType=application/json"`
-	Security CreateTeamMemberSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateTeamMemberResponse struct {

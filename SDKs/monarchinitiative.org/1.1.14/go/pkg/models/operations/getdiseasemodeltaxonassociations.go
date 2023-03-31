@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDiseaseModelTaxonAssociationsPathParams struct {
-	// CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// CURIE of organism taxonomy class to constrain models, e.g NCBITaxon:10090 (M. musculus).
-	//
-	//  Higher level taxa may be used
-	Taxon string `pathParam:"style=simple,explode=false,name=taxon"`
-}
-
-type GetDiseaseModelTaxonAssociationsQueryParams struct {
+type GetDiseaseModelTaxonAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
@@ -29,21 +20,22 @@ type GetDiseaseModelTaxonAssociationsQueryParams struct {
 	FacetFields []string `queryParam:"style=form,explode=true,name=facet_fields"`
 	// If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
+	// CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// number of rows
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
 	Slim []string `queryParam:"style=form,explode=true,name=slim"`
 	// beginning row
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
+	// CURIE of organism taxonomy class to constrain models, e.g NCBITaxon:10090 (M. musculus).
+	//
+	//  Higher level taxa may be used
+	Taxon string `pathParam:"style=simple,explode=false,name=taxon"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetDiseaseModelTaxonAssociationsRequest struct {
-	PathParams  GetDiseaseModelTaxonAssociationsPathParams
-	QueryParams GetDiseaseModelTaxonAssociationsQueryParams
 }
 
 type GetDiseaseModelTaxonAssociationsResponse struct {

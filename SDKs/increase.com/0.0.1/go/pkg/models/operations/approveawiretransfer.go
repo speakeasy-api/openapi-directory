@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApproveAWireTransferPathParams struct {
-	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
-}
-
 type ApproveAWireTransferRequest struct {
-	PathParams ApproveAWireTransferPathParams
+	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
 type ApproveAWireTransferDefaultApplicationJSON13StatusEnum string

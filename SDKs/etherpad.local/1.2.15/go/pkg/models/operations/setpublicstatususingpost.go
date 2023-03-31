@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SetPublicStatusUsingPOSTQueryParams struct {
+type SetPublicStatusUsingPOSTRequest struct {
 	PadID        *string `queryParam:"style=form,explode=true,name=padID"`
 	PublicStatus *string `queryParam:"style=form,explode=true,name=publicStatus"`
-}
-
-type SetPublicStatusUsingPOSTRequest struct {
-	QueryParams SetPublicStatusUsingPOSTQueryParams
 }
 
 // SetPublicStatusUsingPOST500ApplicationJSON - internal api error (code 2)

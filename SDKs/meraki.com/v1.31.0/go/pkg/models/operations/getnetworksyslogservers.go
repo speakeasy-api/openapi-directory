@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkSyslogServersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkSyslogServersRequest struct {
-	PathParams GetNetworkSyslogServersPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkSyslogServers200ApplicationJSONServers struct {

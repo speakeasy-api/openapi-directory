@@ -34,9 +34,9 @@ func newInventory(defaultClient, securityClient HTTPClient, serverURL, language,
 // Claim a list of devices, licenses, and/or orders into an organization inventory. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory. Use /organizations/{organizationId}/inventory/release to release devices from an organization.
 func (s *inventory) ClaimIntoOrganizationInventory(ctx context.Context, request operations.ClaimIntoOrganizationInventoryRequest) (*operations.ClaimIntoOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -86,9 +86,9 @@ func (s *inventory) ClaimIntoOrganizationInventory(ctx context.Context, request 
 // Imports event logs related to the onboarding app into elastisearch
 func (s *inventory) CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -141,9 +141,9 @@ func (s *inventory) CreateOrganizationInventoryOnboardingCloudMonitoringExportEv
 // Commits the import operation to complete the onboarding of a device into Dashboard for monitoring.
 func (s *inventory) CreateOrganizationInventoryOnboardingCloudMonitoringImport(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -196,7 +196,7 @@ func (s *inventory) CreateOrganizationInventoryOnboardingCloudMonitoringImport(c
 // Return a single device from the inventory of an organization
 func (s *inventory) GetOrganizationInventoryDevice(ctx context.Context, request operations.GetOrganizationInventoryDeviceRequest) (*operations.GetOrganizationInventoryDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,14 +241,14 @@ func (s *inventory) GetOrganizationInventoryDevice(ctx context.Context, request 
 // Return the device inventory for an organization
 func (s *inventory) GetOrganizationInventoryDevices(ctx context.Context, request operations.GetOrganizationInventoryDevicesRequest) (*operations.GetOrganizationInventoryDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -292,14 +292,14 @@ func (s *inventory) GetOrganizationInventoryDevices(ctx context.Context, request
 // Check the status of a committed Import operation
 func (s *inventory) GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -341,14 +341,14 @@ func (s *inventory) GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx
 // Returns list of networks eligible for adding cloud monitored device
 func (s *inventory) GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -392,9 +392,9 @@ func (s *inventory) GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ct
 // Release a list of claimed devices from an organization.
 func (s *inventory) ReleaseFromOrganizationInventory(ctx context.Context, request operations.ReleaseFromOrganizationInventoryRequest) (*operations.ReleaseFromOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/release", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/release", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

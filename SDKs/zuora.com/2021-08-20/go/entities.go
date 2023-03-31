@@ -41,14 +41,14 @@ func newEntities(defaultClient, securityClient HTTPClient, serverURL, language, 
 // You must make the call as a global entity administrator.
 func (s *entities) DELETEEntities(ctx context.Context, request operations.DELETEEntitiesRequest) (*operations.DELETEEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -111,9 +111,9 @@ func (s *entities) GETEntities(ctx context.Context, request operations.GETEntiti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -162,14 +162,14 @@ func (s *entities) GETEntities(ctx context.Context, request operations.GETEntiti
 // You can make the call as any entity user.
 func (s *entities) GETEntityByID(ctx context.Context, request operations.GETEntityByIDRequest) (*operations.GETEntityByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -221,7 +221,7 @@ func (s *entities) POSTEntities(ctx context.Context, request operations.POSTEnti
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/entities"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateEntityType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -236,7 +236,7 @@ func (s *entities) POSTEntities(ctx context.Context, request operations.POSTEnti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -295,9 +295,9 @@ func (s *entities) POSTEntities(ctx context.Context, request operations.POSTEnti
 // * You are not allowed to edit the display name of the global entity.
 func (s *entities) PUTEntities(ctx context.Context, request operations.PUTEntitiesRequest) (*operations.PUTEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateEntityType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -312,7 +312,7 @@ func (s *entities) PUTEntities(ctx context.Context, request operations.PUTEntiti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -362,14 +362,14 @@ func (s *entities) PUTEntities(ctx context.Context, request operations.PUTEntiti
 // * Zuora does not allow you to remove a provisioned entity from the multi-entity hierarchy. So before you provision an entity, make sure that you put the entity in the correct place in the multi-entity hierarchy.
 func (s *entities) PUTProvisionEntity(ctx context.Context, request operations.PUTProvisionEntityRequest) (*operations.PUTProvisionEntityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}/provision", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/entities/{id}/provision", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

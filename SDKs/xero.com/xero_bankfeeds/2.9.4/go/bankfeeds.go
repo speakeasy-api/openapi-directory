@@ -34,11 +34,11 @@ func newBankFeeds(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // CreateFeedConnections - Create one or more new feed connection
 // By passing in the FeedConnections array object in the body, you can create one or more new feed connections
-func (s *bankFeeds) CreateFeedConnections(ctx context.Context, request operations.CreateFeedConnectionsRequest) (*operations.CreateFeedConnectionsResponse, error) {
+func (s *bankFeeds) CreateFeedConnections(ctx context.Context, request operations.CreateFeedConnectionsRequest, security operations.CreateFeedConnectionsSecurity) (*operations.CreateFeedConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/FeedConnections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeedConnections", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *bankFeeds) CreateFeedConnections(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,11 +101,11 @@ func (s *bankFeeds) CreateFeedConnections(ctx context.Context, request operation
 }
 
 // CreateStatements - Creates one or more new statements
-func (s *bankFeeds) CreateStatements(ctx context.Context, request operations.CreateStatementsRequest) (*operations.CreateStatementsResponse, error) {
+func (s *bankFeeds) CreateStatements(ctx context.Context, request operations.CreateStatementsRequest, security operations.CreateStatementsSecurity) (*operations.CreateStatementsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Statements"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Statements", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -117,9 +117,9 @@ func (s *bankFeeds) CreateStatements(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *bankFeeds) CreateStatements(ctx context.Context, request operations.Cre
 
 // DeleteFeedConnections - Delete an existing feed connection
 // By passing in FeedConnections array object in the body, you can delete a feed connection.
-func (s *bankFeeds) DeleteFeedConnections(ctx context.Context, request operations.DeleteFeedConnectionsRequest) (*operations.DeleteFeedConnectionsResponse, error) {
+func (s *bankFeeds) DeleteFeedConnections(ctx context.Context, request operations.DeleteFeedConnectionsRequest, security operations.DeleteFeedConnectionsSecurity) (*operations.DeleteFeedConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/FeedConnections/DeleteRequests"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeedConnections", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,9 +202,9 @@ func (s *bankFeeds) DeleteFeedConnections(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -241,18 +241,18 @@ func (s *bankFeeds) DeleteFeedConnections(ctx context.Context, request operation
 
 // GetFeedConnection - Retrieve single feed connection based on a unique id provided
 // By passing in a FeedConnection Id options, you can search for matching feed connections
-func (s *bankFeeds) GetFeedConnection(ctx context.Context, request operations.GetFeedConnectionRequest) (*operations.GetFeedConnectionResponse, error) {
+func (s *bankFeeds) GetFeedConnection(ctx context.Context, request operations.GetFeedConnectionRequest, security operations.GetFeedConnectionSecurity) (*operations.GetFeedConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/FeedConnections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/FeedConnections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,7 +289,7 @@ func (s *bankFeeds) GetFeedConnection(ctx context.Context, request operations.Ge
 
 // GetFeedConnections - Searches for feed connections
 // By passing in the appropriate options, you can search for available feed connections in the system.
-func (s *bankFeeds) GetFeedConnections(ctx context.Context, request operations.GetFeedConnectionsRequest) (*operations.GetFeedConnectionsResponse, error) {
+func (s *bankFeeds) GetFeedConnections(ctx context.Context, request operations.GetFeedConnectionsRequest, security operations.GetFeedConnectionsSecurity) (*operations.GetFeedConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/FeedConnections"
 
@@ -298,13 +298,13 @@ func (s *bankFeeds) GetFeedConnections(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,22 +341,22 @@ func (s *bankFeeds) GetFeedConnections(ctx context.Context, request operations.G
 
 // GetStatement - Retrieve single statement based on unique id provided
 // By passing in a statement id, you can search for matching statements
-func (s *bankFeeds) GetStatement(ctx context.Context, request operations.GetStatementRequest) (*operations.GetStatementResponse, error) {
+func (s *bankFeeds) GetStatement(ctx context.Context, request operations.GetStatementRequest, security operations.GetStatementSecurity) (*operations.GetStatementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Statements/{statementID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Statements/{statementID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -393,7 +393,7 @@ func (s *bankFeeds) GetStatement(ctx context.Context, request operations.GetStat
 
 // GetStatements - Retrieve all statements
 // By passing in parameters, you can search for matching statements
-func (s *bankFeeds) GetStatements(ctx context.Context, request operations.GetStatementsRequest) (*operations.GetStatementsResponse, error) {
+func (s *bankFeeds) GetStatements(ctx context.Context, request operations.GetStatementsRequest, security operations.GetStatementsSecurity) (*operations.GetStatementsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Statements"
 
@@ -402,13 +402,13 @@ func (s *bankFeeds) GetStatements(ctx context.Context, request operations.GetSta
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

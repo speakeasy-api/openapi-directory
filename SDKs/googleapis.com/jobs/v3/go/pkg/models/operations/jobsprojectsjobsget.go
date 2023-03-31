@@ -8,13 +8,13 @@ import (
 )
 
 type JobsProjectsJobsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsJobsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsJobsGetSecurity struct {
@@ -22,12 +22,7 @@ type JobsProjectsJobsGetSecurity struct {
 	Option2 *JobsProjectsJobsGetSecurityOption2 `security:"option"`
 }
 
-type JobsProjectsJobsGetPathParams struct {
-	// Required. The resource name of the job to retrieve. The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type JobsProjectsJobsGetQueryParams struct {
+type JobsProjectsJobsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type JobsProjectsJobsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The resource name of the job to retrieve. The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type JobsProjectsJobsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsJobsGetRequest struct {
-	PathParams  JobsProjectsJobsGetPathParams
-	QueryParams JobsProjectsJobsGetQueryParams
-	Security    JobsProjectsJobsGetSecurity
 }
 
 type JobsProjectsJobsGetResponse struct {

@@ -33,7 +33,7 @@ func (e *GetCommunicationCostsSupportOpposeIndicatorEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetCommunicationCostsQueryParams struct {
+type GetCommunicationCostsRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -76,10 +76,6 @@ type GetCommunicationCostsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// Support or opposition
 	SupportOpposeIndicator []GetCommunicationCostsSupportOpposeIndicatorEnum `queryParam:"style=form,explode=true,name=support_oppose_indicator"`
-}
-
-type GetCommunicationCostsRequest struct {
-	QueryParams GetCommunicationCostsQueryParams
 }
 
 type GetCommunicationCostsResponse struct {

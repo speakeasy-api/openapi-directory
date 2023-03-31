@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveHotelPathParams struct {
-	// The unique identifier of this hotel on the Impala platform.
-	HotelID string `pathParam:"style=simple,explode=false,name=hotelId"`
-}
-
-type RetrieveHotelQueryParams struct {
+type RetrieveHotelRequest struct {
 	// The departure day of the desired stay range in ISO 8601 format (`YYYY-MM-DD`).
 	End *string `queryParam:"style=form,explode=true,name=end"`
+	// The unique identifier of this hotel on the Impala platform.
+	HotelID string `pathParam:"style=simple,explode=false,name=hotelId"`
 	// The arrival day of the desired stay range in ISO 8601 format (`YYYY-MM-DD`).
 	Start *string `queryParam:"style=form,explode=true,name=start"`
-}
-
-type RetrieveHotelRequest struct {
-	PathParams  RetrieveHotelPathParams
-	QueryParams RetrieveHotelQueryParams
 }
 
 type RetrieveHotelResponse struct {

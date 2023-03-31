@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PartnerCustomerEnableRequest struct {
-	Request shared.PartnerCustomerEnableRequest `request:"mediaType=application/json"`
-}
 
 type PartnerCustomerEnableResponse struct {
 	ContentType string

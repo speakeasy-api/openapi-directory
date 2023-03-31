@@ -45,7 +45,7 @@ func newMobileAuthorization(defaultClient, securityClient HTTPClient, serverURL,
 //
 // Replace `ACCESS_TOKEN` with a
 // [valid production authorization credential](https://developer.squareup.com/docs/build-basics/access-tokens).
-func (s *mobileAuthorization) CreateMobileAuthorizationCode(ctx context.Context, request operations.CreateMobileAuthorizationCodeRequest) (*operations.CreateMobileAuthorizationCodeResponse, error) {
+func (s *mobileAuthorization) CreateMobileAuthorizationCode(ctx context.Context, request shared.CreateMobileAuthorizationCodeRequest, security operations.CreateMobileAuthorizationCodeSecurity) (*operations.CreateMobileAuthorizationCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mobile/authorization-code"
 
@@ -64,7 +64,7 @@ func (s *mobileAuthorization) CreateMobileAuthorizationCode(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

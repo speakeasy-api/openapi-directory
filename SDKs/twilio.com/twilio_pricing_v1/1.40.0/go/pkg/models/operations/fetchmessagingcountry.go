@@ -12,18 +12,13 @@ var FetchMessagingCountryServerList = []string{
 }
 
 type FetchMessagingCountrySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchMessagingCountryPathParams struct {
-	// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
-	IsoCountry string `pathParam:"style=simple,explode=false,name=IsoCountry"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchMessagingCountryRequest struct {
-	PathParams FetchMessagingCountryPathParams
-	Security   FetchMessagingCountrySecurity
-	ServerURL  *string
+	// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
+	IsoCountry string `pathParam:"style=simple,explode=false,name=IsoCountry"`
 }
 
 type FetchMessagingCountryResponse struct {

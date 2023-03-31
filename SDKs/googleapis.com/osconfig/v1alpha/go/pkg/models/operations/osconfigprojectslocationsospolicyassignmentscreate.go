@@ -8,18 +8,14 @@ import (
 )
 
 type OsconfigProjectsLocationsOsPolicyAssignmentsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OsconfigProjectsLocationsOsPolicyAssignmentsCreatePathParams struct {
-	// Required. The parent resource name in the form: projects/{project}/locations/{location}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OsconfigProjectsLocationsOsPolicyAssignmentsCreateQueryParams struct {
+type OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	OSPolicyAssignmentInput *shared.OSPolicyAssignmentInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,6 +30,8 @@ type OsconfigProjectsLocationsOsPolicyAssignmentsCreateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Required. The logical name of the OS policy assignment in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
 	OsPolicyAssignmentID *string `queryParam:"style=form,explode=true,name=osPolicyAssignmentId"`
+	// Required. The parent resource name in the form: projects/{project}/locations/{location}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type OsconfigProjectsLocationsOsPolicyAssignmentsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest struct {
-	PathParams  OsconfigProjectsLocationsOsPolicyAssignmentsCreatePathParams
-	QueryParams OsconfigProjectsLocationsOsPolicyAssignmentsCreateQueryParams
-	Request     *shared.OSPolicyAssignmentInput `request:"mediaType=application/json"`
-	Security    OsconfigProjectsLocationsOsPolicyAssignmentsCreateSecurity
 }
 
 type OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse struct {

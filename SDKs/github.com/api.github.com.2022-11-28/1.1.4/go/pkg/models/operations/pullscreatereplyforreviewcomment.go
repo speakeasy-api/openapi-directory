@@ -7,7 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsCreateReplyForReviewCommentPathParams struct {
+type PullsCreateReplyForReviewCommentRequestBody struct {
+	// The text of the review comment.
+	Body string `json:"body"`
+}
+
+type PullsCreateReplyForReviewCommentRequest struct {
+	RequestBody PullsCreateReplyForReviewCommentRequestBody `request:"mediaType=application/json"`
 	// The unique identifier of the comment.
 	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -16,16 +22,6 @@ type PullsCreateReplyForReviewCommentPathParams struct {
 	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type PullsCreateReplyForReviewCommentRequestBody struct {
-	// The text of the review comment.
-	Body string `json:"body"`
-}
-
-type PullsCreateReplyForReviewCommentRequest struct {
-	PathParams PullsCreateReplyForReviewCommentPathParams
-	Request    PullsCreateReplyForReviewCommentRequestBody `request:"mediaType=application/json"`
 }
 
 type PullsCreateReplyForReviewCommentResponse struct {

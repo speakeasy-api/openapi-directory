@@ -32,11 +32,11 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ServicenetworkingServicesAddSubnetwork - For service producers, provisions a new subnet in a peered service's shared VPC network in the requested region and with the requested size that's expressed as a CIDR range (number of leading bits of ipV4 network mask). The method checks against the assigned allocated ranges to find a non-conflicting IP address range. The method will reuse a subnet if subsequent calls contain the same subnet name, region, and prefix length. This method will make producer's tenant project to be a shared VPC service project as needed.
-func (s *services) ServicenetworkingServicesAddSubnetwork(ctx context.Context, request operations.ServicenetworkingServicesAddSubnetworkRequest) (*operations.ServicenetworkingServicesAddSubnetworkResponse, error) {
+func (s *services) ServicenetworkingServicesAddSubnetwork(ctx context.Context, request operations.ServicenetworkingServicesAddSubnetworkRequest, security operations.ServicenetworkingServicesAddSubnetworkSecurity) (*operations.ServicenetworkingServicesAddSubnetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:addSubnetwork", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:addSubnetwork", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddSubnetworkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *services) ServicenetworkingServicesAddSubnetwork(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *services) ServicenetworkingServicesAddSubnetwork(ctx context.Context, r
 }
 
 // ServicenetworkingServicesConnectionsCreate - Creates a private connection that establishes a VPC Network Peering connection to a VPC network in the service producer's organization. The administrator of the service consumer's VPC network invokes this method. The administrator must assign one or more allocated IP ranges for provisioning subnetworks in the service producer's VPC network. This connection is used for all supported services in the service producer's organization, so it only needs to be invoked once.
-func (s *services) ServicenetworkingServicesConnectionsCreate(ctx context.Context, request operations.ServicenetworkingServicesConnectionsCreateRequest) (*operations.ServicenetworkingServicesConnectionsCreateResponse, error) {
+func (s *services) ServicenetworkingServicesConnectionsCreate(ctx context.Context, request operations.ServicenetworkingServicesConnectionsCreateRequest, security operations.ServicenetworkingServicesConnectionsCreateSecurity) (*operations.ServicenetworkingServicesConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *services) ServicenetworkingServicesConnectionsCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *services) ServicenetworkingServicesConnectionsCreate(ctx context.Contex
 }
 
 // ServicenetworkingServicesConnectionsDeleteConnection - Deletes a private service access connection.
-func (s *services) ServicenetworkingServicesConnectionsDeleteConnection(ctx context.Context, request operations.ServicenetworkingServicesConnectionsDeleteConnectionRequest) (*operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse, error) {
+func (s *services) ServicenetworkingServicesConnectionsDeleteConnection(ctx context.Context, request operations.ServicenetworkingServicesConnectionsDeleteConnectionRequest, security operations.ServicenetworkingServicesConnectionsDeleteConnectionSecurity) (*operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *services) ServicenetworkingServicesConnectionsDeleteConnection(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *services) ServicenetworkingServicesConnectionsDeleteConnection(ctx cont
 }
 
 // ServicenetworkingServicesConnectionsList - List the private connections that are configured in a service consumer's VPC network.
-func (s *services) ServicenetworkingServicesConnectionsList(ctx context.Context, request operations.ServicenetworkingServicesConnectionsListRequest) (*operations.ServicenetworkingServicesConnectionsListResponse, error) {
+func (s *services) ServicenetworkingServicesConnectionsList(ctx context.Context, request operations.ServicenetworkingServicesConnectionsListRequest, security operations.ServicenetworkingServicesConnectionsListSecurity) (*operations.ServicenetworkingServicesConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *services) ServicenetworkingServicesConnectionsList(ctx context.Context,
 }
 
 // ServicenetworkingServicesConnectionsPatch - Updates the allocated ranges that are assigned to a connection.
-func (s *services) ServicenetworkingServicesConnectionsPatch(ctx context.Context, request operations.ServicenetworkingServicesConnectionsPatchRequest) (*operations.ServicenetworkingServicesConnectionsPatchResponse, error) {
+func (s *services) ServicenetworkingServicesConnectionsPatch(ctx context.Context, request operations.ServicenetworkingServicesConnectionsPatchRequest, security operations.ServicenetworkingServicesConnectionsPatchSecurity) (*operations.ServicenetworkingServicesConnectionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *services) ServicenetworkingServicesConnectionsPatch(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *services) ServicenetworkingServicesConnectionsPatch(ctx context.Context
 }
 
 // ServicenetworkingServicesDisableVpcServiceControls - Disables VPC service controls for a connection.
-func (s *services) ServicenetworkingServicesDisableVpcServiceControls(ctx context.Context, request operations.ServicenetworkingServicesDisableVpcServiceControlsRequest) (*operations.ServicenetworkingServicesDisableVpcServiceControlsResponse, error) {
+func (s *services) ServicenetworkingServicesDisableVpcServiceControls(ctx context.Context, request operations.ServicenetworkingServicesDisableVpcServiceControlsRequest, security operations.ServicenetworkingServicesDisableVpcServiceControlsSecurity) (*operations.ServicenetworkingServicesDisableVpcServiceControlsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:disableVpcServiceControls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:disableVpcServiceControls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisableVpcServiceControlsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *services) ServicenetworkingServicesDisableVpcServiceControls(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,11 +355,11 @@ func (s *services) ServicenetworkingServicesDisableVpcServiceControls(ctx contex
 }
 
 // ServicenetworkingServicesDNSRecordSetsAdd - Service producers can use this method to add DNS record sets to private DNS zones in the shared producer host project.
-func (s *services) ServicenetworkingServicesDNSRecordSetsAdd(ctx context.Context, request operations.ServicenetworkingServicesDNSRecordSetsAddRequest) (*operations.ServicenetworkingServicesDNSRecordSetsAddResponse, error) {
+func (s *services) ServicenetworkingServicesDNSRecordSetsAdd(ctx context.Context, request operations.ServicenetworkingServicesDNSRecordSetsAddRequest, security operations.ServicenetworkingServicesDNSRecordSetsAddSecurity) (*operations.ServicenetworkingServicesDNSRecordSetsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsRecordSets:add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsRecordSets:add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddDNSRecordSetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -371,11 +371,11 @@ func (s *services) ServicenetworkingServicesDNSRecordSetsAdd(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,11 +410,11 @@ func (s *services) ServicenetworkingServicesDNSRecordSetsAdd(ctx context.Context
 }
 
 // ServicenetworkingServicesDNSRecordSetsRemove - Service producers can use this method to remove DNS record sets from private DNS zones in the shared producer host project.
-func (s *services) ServicenetworkingServicesDNSRecordSetsRemove(ctx context.Context, request operations.ServicenetworkingServicesDNSRecordSetsRemoveRequest) (*operations.ServicenetworkingServicesDNSRecordSetsRemoveResponse, error) {
+func (s *services) ServicenetworkingServicesDNSRecordSetsRemove(ctx context.Context, request operations.ServicenetworkingServicesDNSRecordSetsRemoveRequest, security operations.ServicenetworkingServicesDNSRecordSetsRemoveSecurity) (*operations.ServicenetworkingServicesDNSRecordSetsRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsRecordSets:remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsRecordSets:remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveDNSRecordSetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -426,11 +426,11 @@ func (s *services) ServicenetworkingServicesDNSRecordSetsRemove(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -465,11 +465,11 @@ func (s *services) ServicenetworkingServicesDNSRecordSetsRemove(ctx context.Cont
 }
 
 // ServicenetworkingServicesDNSRecordSetsUpdate - Service producers can use this method to update DNS record sets from private DNS zones in the shared producer host project.
-func (s *services) ServicenetworkingServicesDNSRecordSetsUpdate(ctx context.Context, request operations.ServicenetworkingServicesDNSRecordSetsUpdateRequest) (*operations.ServicenetworkingServicesDNSRecordSetsUpdateResponse, error) {
+func (s *services) ServicenetworkingServicesDNSRecordSetsUpdate(ctx context.Context, request operations.ServicenetworkingServicesDNSRecordSetsUpdateRequest, security operations.ServicenetworkingServicesDNSRecordSetsUpdateSecurity) (*operations.ServicenetworkingServicesDNSRecordSetsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsRecordSets:update", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsRecordSets:update", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDNSRecordSetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -481,11 +481,11 @@ func (s *services) ServicenetworkingServicesDNSRecordSetsUpdate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -520,11 +520,11 @@ func (s *services) ServicenetworkingServicesDNSRecordSetsUpdate(ctx context.Cont
 }
 
 // ServicenetworkingServicesDNSZonesAdd - Service producers can use this method to add private DNS zones in the shared producer host project and matching peering zones in the consumer project.
-func (s *services) ServicenetworkingServicesDNSZonesAdd(ctx context.Context, request operations.ServicenetworkingServicesDNSZonesAddRequest) (*operations.ServicenetworkingServicesDNSZonesAddResponse, error) {
+func (s *services) ServicenetworkingServicesDNSZonesAdd(ctx context.Context, request operations.ServicenetworkingServicesDNSZonesAddRequest, security operations.ServicenetworkingServicesDNSZonesAddSecurity) (*operations.ServicenetworkingServicesDNSZonesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsZones:add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsZones:add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddDNSZoneRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -536,11 +536,11 @@ func (s *services) ServicenetworkingServicesDNSZonesAdd(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -575,11 +575,11 @@ func (s *services) ServicenetworkingServicesDNSZonesAdd(ctx context.Context, req
 }
 
 // ServicenetworkingServicesDNSZonesRemove - Service producers can use this method to remove private DNS zones in the shared producer host project and matching peering zones in the consumer project.
-func (s *services) ServicenetworkingServicesDNSZonesRemove(ctx context.Context, request operations.ServicenetworkingServicesDNSZonesRemoveRequest) (*operations.ServicenetworkingServicesDNSZonesRemoveResponse, error) {
+func (s *services) ServicenetworkingServicesDNSZonesRemove(ctx context.Context, request operations.ServicenetworkingServicesDNSZonesRemoveRequest, security operations.ServicenetworkingServicesDNSZonesRemoveSecurity) (*operations.ServicenetworkingServicesDNSZonesRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsZones:remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsZones:remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveDNSZoneRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -591,11 +591,11 @@ func (s *services) ServicenetworkingServicesDNSZonesRemove(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -630,11 +630,11 @@ func (s *services) ServicenetworkingServicesDNSZonesRemove(ctx context.Context, 
 }
 
 // ServicenetworkingServicesEnableVpcServiceControls - Enables VPC service controls for a connection.
-func (s *services) ServicenetworkingServicesEnableVpcServiceControls(ctx context.Context, request operations.ServicenetworkingServicesEnableVpcServiceControlsRequest) (*operations.ServicenetworkingServicesEnableVpcServiceControlsResponse, error) {
+func (s *services) ServicenetworkingServicesEnableVpcServiceControls(ctx context.Context, request operations.ServicenetworkingServicesEnableVpcServiceControlsRequest, security operations.ServicenetworkingServicesEnableVpcServiceControlsSecurity) (*operations.ServicenetworkingServicesEnableVpcServiceControlsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:enableVpcServiceControls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:enableVpcServiceControls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableVpcServiceControlsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -646,11 +646,11 @@ func (s *services) ServicenetworkingServicesEnableVpcServiceControls(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -685,20 +685,20 @@ func (s *services) ServicenetworkingServicesEnableVpcServiceControls(ctx context
 }
 
 // ServicenetworkingServicesProjectsGlobalNetworksGet - Service producers use this method to get the configuration of their connection including the import/export of custom routes and subnetwork routes with public IP.
-func (s *services) ServicenetworkingServicesProjectsGlobalNetworksGet(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksGetRequest) (*operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse, error) {
+func (s *services) ServicenetworkingServicesProjectsGlobalNetworksGet(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksGetRequest, security operations.ServicenetworkingServicesProjectsGlobalNetworksGetSecurity) (*operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -733,11 +733,11 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksGet(ctx contex
 }
 
 // ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreate - Creates a peered DNS domain which sends requests for records in given namespace originating in the service producer VPC network to the consumer VPC network to be resolved.
-func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreate(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateRequest) (*operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateResponse, error) {
+func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreate(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateRequest, security operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateSecurity) (*operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/peeredDnsDomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/peeredDnsDomains", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PeeredDNSDomain", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -749,11 +749,11 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomai
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -788,20 +788,20 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomai
 }
 
 // ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDelete - Deletes a peered DNS domain.
-func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDelete(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteRequest) (*operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteResponse, error) {
+func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDelete(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteRequest, security operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteSecurity) (*operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -836,20 +836,20 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomai
 }
 
 // ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsList - Lists peered DNS domains for a connection.
-func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsList(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListRequest) (*operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListResponse, error) {
+func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsList(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListRequest, security operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListSecurity) (*operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/peeredDnsDomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/peeredDnsDomains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -884,11 +884,11 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksPeeredDNSDomai
 }
 
 // ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfig - Service producers use this method to update the configuration of their connection including the import/export of custom routes and subnetwork routes with public IP.
-func (s *services) ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfig(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigRequest) (*operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse, error) {
+func (s *services) ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfig(ctx context.Context, request operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigRequest, security operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurity) (*operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:updateConsumerConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:updateConsumerConfig", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateConsumerConfigRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -900,11 +900,11 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumer
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -939,11 +939,11 @@ func (s *services) ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumer
 }
 
 // ServicenetworkingServicesRolesAdd - Service producers can use this method to add roles in the shared VPC host project. Each role is bound to the provided member. Each role must be selected from within an allowlisted set of roles. Each role is applied at only the granularity specified in the allowlist.
-func (s *services) ServicenetworkingServicesRolesAdd(ctx context.Context, request operations.ServicenetworkingServicesRolesAddRequest) (*operations.ServicenetworkingServicesRolesAddResponse, error) {
+func (s *services) ServicenetworkingServicesRolesAdd(ctx context.Context, request operations.ServicenetworkingServicesRolesAddRequest, security operations.ServicenetworkingServicesRolesAddSecurity) (*operations.ServicenetworkingServicesRolesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/roles:add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/roles:add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddRolesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -955,11 +955,11 @@ func (s *services) ServicenetworkingServicesRolesAdd(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -994,11 +994,11 @@ func (s *services) ServicenetworkingServicesRolesAdd(ctx context.Context, reques
 }
 
 // ServicenetworkingServicesSearchRange - Service producers can use this method to find a currently unused range within consumer allocated ranges. This returned range is not reserved, and not guaranteed to remain unused. It will validate previously provided allocated ranges, find non-conflicting sub-range of requested size (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation).
-func (s *services) ServicenetworkingServicesSearchRange(ctx context.Context, request operations.ServicenetworkingServicesSearchRangeRequest) (*operations.ServicenetworkingServicesSearchRangeResponse, error) {
+func (s *services) ServicenetworkingServicesSearchRange(ctx context.Context, request operations.ServicenetworkingServicesSearchRangeRequest, security operations.ServicenetworkingServicesSearchRangeSecurity) (*operations.ServicenetworkingServicesSearchRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:searchRange", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:searchRange", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchRangeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1010,11 +1010,11 @@ func (s *services) ServicenetworkingServicesSearchRange(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1049,11 +1049,11 @@ func (s *services) ServicenetworkingServicesSearchRange(ctx context.Context, req
 }
 
 // ServicenetworkingServicesValidate - Service producers use this method to validate if the consumer provided network, project and requested range are valid. This allows them to use a fail-fast mechanism for consumer requests, and not have to wait for AddSubnetwork operation completion to determine if user request is invalid.
-func (s *services) ServicenetworkingServicesValidate(ctx context.Context, request operations.ServicenetworkingServicesValidateRequest) (*operations.ServicenetworkingServicesValidateResponse, error) {
+func (s *services) ServicenetworkingServicesValidate(ctx context.Context, request operations.ServicenetworkingServicesValidateRequest, security operations.ServicenetworkingServicesValidateSecurity) (*operations.ServicenetworkingServicesValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:validate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:validate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValidateConsumerConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1065,11 +1065,11 @@ func (s *services) ServicenetworkingServicesValidate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

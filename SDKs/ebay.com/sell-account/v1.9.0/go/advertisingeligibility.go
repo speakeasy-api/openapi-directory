@@ -33,7 +33,7 @@ func newAdvertisingEligibility(defaultClient, securityClient HTTPClient, serverU
 }
 
 // GetAdvertisingEligibility - This method allows developers to check the seller eligibility status for eBay advertising programs.
-func (s *advertisingEligibility) GetAdvertisingEligibility(ctx context.Context, request operations.GetAdvertisingEligibilityRequest) (*operations.GetAdvertisingEligibilityResponse, error) {
+func (s *advertisingEligibility) GetAdvertisingEligibility(ctx context.Context, request operations.GetAdvertisingEligibilityRequest, security operations.GetAdvertisingEligibilitySecurity) (*operations.GetAdvertisingEligibilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/advertising_eligibility"
 
@@ -42,13 +42,13 @@ func (s *advertisingEligibility) GetAdvertisingEligibility(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

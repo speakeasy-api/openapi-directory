@@ -14,41 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.MemcacheProjectsLocationsInstancesApplyParametersRequest{
-        Security: operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.MemcacheProjectsLocationsInstancesApplyParametersPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.MemcacheProjectsLocationsInstancesApplyParametersQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ApplyParametersRequest{
+        DollarXgafv: "2",
+        ApplyParametersRequest: &shared.ApplyParametersRequest{
             ApplyAll: false,
             NodeIds: []string{
-                "iure",
-                "magnam",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
         },
+        AccessToken: "nulla",
+        Alt: "media",
+        Callback: "illum",
+        Fields: "vel",
+        Key: "error",
+        Name: "deserunt",
+        OauthToken: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.MemcacheProjectsLocationsInstancesApplyParameters(ctx, req)
+    res, err := s.Projects.MemcacheProjectsLocationsInstancesApplyParameters(ctx, req, operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

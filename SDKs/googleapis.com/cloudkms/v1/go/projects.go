@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudkmsProjectsLocationsEkmConnectionsCreate - Creates a new EkmConnection in a given Project and Location.
-func (s *projects) CloudkmsProjectsLocationsEkmConnectionsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest) (*operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsEkmConnectionsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest, security operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity) (*operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/ekmConnections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/ekmConnections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EkmConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CloudkmsProjectsLocationsEkmConnectionsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) CloudkmsProjectsLocationsEkmConnectionsCreate(ctx context.Con
 }
 
 // CloudkmsProjectsLocationsEkmConnectionsList - Lists EkmConnections.
-func (s *projects) CloudkmsProjectsLocationsEkmConnectionsList(ctx context.Context, request operations.CloudkmsProjectsLocationsEkmConnectionsListRequest) (*operations.CloudkmsProjectsLocationsEkmConnectionsListResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsEkmConnectionsList(ctx context.Context, request operations.CloudkmsProjectsLocationsEkmConnectionsListRequest, security operations.CloudkmsProjectsLocationsEkmConnectionsListSecurity) (*operations.CloudkmsProjectsLocationsEkmConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/ekmConnections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/ekmConnections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) CloudkmsProjectsLocationsEkmConnectionsList(ctx context.Conte
 }
 
 // CloudkmsProjectsLocationsGenerateRandomBytes - Generate random bytes using the Cloud KMS randomness source in the provided location.
-func (s *projects) CloudkmsProjectsLocationsGenerateRandomBytes(ctx context.Context, request operations.CloudkmsProjectsLocationsGenerateRandomBytesRequest) (*operations.CloudkmsProjectsLocationsGenerateRandomBytesResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsGenerateRandomBytes(ctx context.Context, request operations.CloudkmsProjectsLocationsGenerateRandomBytesRequest, security operations.CloudkmsProjectsLocationsGenerateRandomBytesSecurity) (*operations.CloudkmsProjectsLocationsGenerateRandomBytesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}:generateRandomBytes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}:generateRandomBytes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateRandomBytesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) CloudkmsProjectsLocationsGenerateRandomBytes(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) CloudkmsProjectsLocationsGenerateRandomBytes(ctx context.Cont
 }
 
 // CloudkmsProjectsLocationsKeyRingsCreate - Create a new KeyRing in a given Project and Location.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCreateRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCreateResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCreateRequest, security operations.CloudkmsProjectsLocationsKeyRingsCreateSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keyRings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keyRings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCreate(ctx context.Context, 
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCreate - Create a new CryptoKey within a KeyRing. CryptoKey.purpose and CryptoKey.version_template.algorithm are required.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CryptoKeyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCreate(ctx context
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecrypt - Decrypts data that was encrypted with a public key retrieved from GetPublicKey corresponding to a CryptoKeyVersion with CryptoKey.purpose ASYMMETRIC_DECRYPT.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecrypt(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecrypt(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:asymmetricDecrypt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:asymmetricDecrypt", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AsymmetricDecryptRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,11 +348,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsA
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSign - Signs data using a CryptoKeyVersion with CryptoKey.purpose ASYMMETRIC_SIGN, producing a signature that can be verified with the public key retrieved from GetPublicKey.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSign(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSign(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:asymmetricSign", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:asymmetricSign", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AsymmetricSignRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,11 +364,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,11 +403,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsA
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreate - Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next sequential id. If unset, state will be set to ENABLED.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeyVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeyVersions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CryptoKeyVersionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,11 +419,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -458,11 +458,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsC
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroy - Schedule a CryptoKeyVersion for destruction. Upon calling this method, CryptoKeyVersion.state will be set to DESTROY_SCHEDULED, and destroy_time will be set to the time destroy_scheduled_duration in the future. At that time, the state will automatically change to DESTROYED, and the key material will be irrevocably destroyed. Before the destroy_time is reached, RestoreCryptoKeyVersion may be called to reverse the process.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroy(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroy(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroySecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:destroy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:destroy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,11 +474,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,20 +513,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsD
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKey - Returns the public key for the given CryptoKeyVersion. The CryptoKey.purpose must be ASYMMETRIC_SIGN or ASYMMETRIC_DECRYPT.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKey(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKey(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeySecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/publicKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/publicKey", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,11 +561,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsG
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImport - Import wrapped key material into a CryptoKeyVersion. All requests must specify a CryptoKey. If a CryptoKeyVersion is additionally specified in the request, key material will be reimported into that version. Otherwise, a new version will be created, and will be assigned the next sequential id within the CryptoKey.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImport(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImport(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeyVersions:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeyVersions:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportCryptoKeyVersionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -577,11 +577,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -616,20 +616,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsI
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsList - Lists CryptoKeyVersions.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeyVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeyVersions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,11 +664,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsL
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSign - Signs data using a CryptoKeyVersion with CryptoKey.purpose MAC, producing a tag that can be verified by another source with the same key.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSign(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSign(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:macSign", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:macSign", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MacSignRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -680,11 +680,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -719,11 +719,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsM
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerify - Verifies MAC tag using a CryptoKeyVersion with CryptoKey.purpose MAC, and returns a response that indicates whether or not the verification was successful.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerify(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerify(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifySecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:macVerify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:macVerify", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MacVerifyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -735,11 +735,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,11 +774,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsM
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatch - Update a CryptoKeyVersion's metadata. state may be changed between ENABLED and DISABLED using this method. See DestroyCryptoKeyVersion and RestoreCryptoKeyVersion to move between other states.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatch(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatch(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CryptoKeyVersionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -790,11 +790,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,11 +829,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsP
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestore - Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state. Upon restoration of the CryptoKeyVersion, state will be set to DISABLED, and destroy_time will be cleared.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestore(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestore(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -845,11 +845,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -884,11 +884,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsR
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysDecrypt - Decrypts data that was protected by Encrypt. The CryptoKey.purpose must be ENCRYPT_DECRYPT.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysDecrypt(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysDecrypt(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:decrypt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:decrypt", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DecryptRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -900,11 +900,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysDecrypt(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -939,11 +939,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysDecrypt(ctx contex
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysEncrypt - Encrypts data, so that it can only be recovered by a call to Decrypt. The CryptoKey.purpose must be ENCRYPT_DECRYPT.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysEncrypt(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysEncrypt(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:encrypt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:encrypt", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EncryptRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -955,11 +955,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysEncrypt(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -994,20 +994,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysEncrypt(ctx contex
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysList - Lists CryptoKeys.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,11 +1042,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysList(ctx context.C
 }
 
 // CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersion - Update the version of a CryptoKey that will be used in Encrypt. Returns an error if called on a key whose purpose is not ENCRYPT_DECRYPT.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersion(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionRequest) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersion(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionRequest, security operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updatePrimaryVersion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updatePrimaryVersion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCryptoKeyPrimaryVersionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1058,11 +1058,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1097,11 +1097,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersi
 }
 
 // CloudkmsProjectsLocationsKeyRingsImportJobsCreate - Create a new ImportJob within a KeyRing. ImportJob.import_method is required.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsCreate(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest, security operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/importJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/importJobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportJobInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1113,11 +1113,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsCreate(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1152,20 +1152,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsCreate(ctx context
 }
 
 // CloudkmsProjectsLocationsKeyRingsImportJobsGet - Returns metadata for a given ImportJob.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsGet(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetRequest) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsGet(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetRequest, security operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1200,20 +1200,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsGet(ctx context.Co
 }
 
 // CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicy(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyRequest) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicy(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyRequest, security operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicySecurity) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1248,20 +1248,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicy(ctx c
 }
 
 // CloudkmsProjectsLocationsKeyRingsImportJobsList - Lists ImportJobs.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsListRequest) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsListResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsListRequest, security operations.CloudkmsProjectsLocationsKeyRingsImportJobsListSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/importJobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/importJobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1296,11 +1296,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsList(ctx context.C
 }
 
 // CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicy(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyRequest) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicy(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyRequest, security operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicySecurity) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1312,11 +1312,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicy(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1351,11 +1351,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicy(ctx c
 }
 
 // CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissions(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsRequest) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissions(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsRequest, security operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1367,11 +1367,11 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissions
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1406,20 +1406,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissions
 }
 
 // CloudkmsProjectsLocationsKeyRingsList - Lists KeyRings.
-func (s *projects) CloudkmsProjectsLocationsKeyRingsList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsListRequest) (*operations.CloudkmsProjectsLocationsKeyRingsListResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsKeyRingsList(ctx context.Context, request operations.CloudkmsProjectsLocationsKeyRingsListRequest, security operations.CloudkmsProjectsLocationsKeyRingsListSecurity) (*operations.CloudkmsProjectsLocationsKeyRingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keyRings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keyRings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1454,20 +1454,20 @@ func (s *projects) CloudkmsProjectsLocationsKeyRingsList(ctx context.Context, re
 }
 
 // CloudkmsProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) CloudkmsProjectsLocationsList(ctx context.Context, request operations.CloudkmsProjectsLocationsListRequest) (*operations.CloudkmsProjectsLocationsListResponse, error) {
+func (s *projects) CloudkmsProjectsLocationsList(ctx context.Context, request operations.CloudkmsProjectsLocationsListRequest, security operations.CloudkmsProjectsLocationsListSecurity) (*operations.CloudkmsProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

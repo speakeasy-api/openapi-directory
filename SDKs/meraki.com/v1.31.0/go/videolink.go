@@ -34,14 +34,14 @@ func newVideoLink(defaultClient, securityClient HTTPClient, serverURL, language,
 // Returns video link to the specified camera. If a timestamp is supplied, it links to that timestamp.
 func (s *videoLink) GetDeviceCameraVideoLink(ctx context.Context, request operations.GetDeviceCameraVideoLinkRequest) (*operations.GetDeviceCameraVideoLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/videoLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/videoLink", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

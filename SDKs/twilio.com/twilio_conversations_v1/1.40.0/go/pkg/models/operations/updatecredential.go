@@ -12,12 +12,8 @@ var UpdateCredentialServerList = []string{
 }
 
 type UpdateCredentialSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCredentialPathParams struct {
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCredentialUpdateCredentialRequest struct {
@@ -43,10 +39,9 @@ type UpdateCredentialUpdateCredentialRequest struct {
 }
 
 type UpdateCredentialRequest struct {
-	PathParams UpdateCredentialPathParams
-	Request    *UpdateCredentialUpdateCredentialRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCredentialSecurity
-	ServerURL  *string
+	RequestBody *UpdateCredentialUpdateCredentialRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCredentialResponse struct {

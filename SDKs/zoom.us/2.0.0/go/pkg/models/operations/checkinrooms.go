@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CheckInRoomsPathParams struct {
-	// Room ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type CheckInRoomsApplicationJSONParams struct {
 	// This field is only required if Google Calendar is being used for the event associated with the Zoom Room. The value for this field can be retrieved by calling Google's [CalendarList:list API](https://developers.google.com/calendar/v3/reference/events/list) and referring to the "id" field included in the [calendarList resource](https://developers.google.com/calendar/v3/reference/calendarList#resource).
 	//
@@ -35,8 +30,9 @@ type CheckInRoomsApplicationJSON struct {
 }
 
 type CheckInRoomsRequest struct {
-	PathParams CheckInRoomsPathParams
-	Request    *CheckInRoomsApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *CheckInRoomsApplicationJSON `request:"mediaType=application/json"`
+	// Room ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type CheckInRoomsResponse struct {

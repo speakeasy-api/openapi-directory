@@ -13,11 +13,9 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostPerfectpdfAPIRequest{
-        Request: shared.PerfectpdfAPIBody{
-            APIKey: "abc123",
-            HTML: "<!doctype html><html><head><meta charset="UTF-8"><title>my title</title><script src="script.js"></script></head><body><div>My PDF</div></body></html>",
-        },
+    req := shared.PerfectpdfAPIBody{
+        APIKey: "abc123",
+        HTML: "<!doctype html><html><head><meta charset="UTF-8"><title>my title</title><script src="script.js"></script></head><body><div>My PDF</div></body></html>",
     }
 
     ctx := context.Background()

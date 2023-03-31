@@ -8,17 +8,12 @@ import (
 )
 
 type PostAPIV1DomainBlocksSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1DomainBlocksRequestBody struct {
 	// Domain to block.
 	Domain string
-}
-
-type PostAPIV1DomainBlocksRequest struct {
-	Request  []byte `request:"mediaType=application/form-data"`
-	Security PostAPIV1DomainBlocksSecurity
 }
 
 type PostAPIV1DomainBlocksResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlansPartialUpdatePathParams struct {
+type IpamVlansPartialUpdateRequest struct {
+	WritableVLANInput shared.WritableVLANInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this VLAN.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVlansPartialUpdateRequest struct {
-	PathParams IpamVlansPartialUpdatePathParams
-	Request    shared.WritableVLANInput `request:"mediaType=application/json"`
 }
 
 type IpamVlansPartialUpdateResponse struct {

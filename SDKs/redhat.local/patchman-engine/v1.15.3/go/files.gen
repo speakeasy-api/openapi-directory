@@ -35,7 +35,6 @@ pkg/models/operations/viewsystemsadvisories.go
 pkg/models/shared/controllerspackagedetailresponse.go
 pkg/models/shared/controllerspackagedetailitem.go
 pkg/models/shared/controllerspackagedetailattributes.go
-pkg/models/shared/security.go
 pkg/models/shared/controllersadvisorydetailresponse.go
 pkg/models/shared/controllersadvisorydetailitem.go
 pkg/models/shared/controllersadvisorydetailattributes.go

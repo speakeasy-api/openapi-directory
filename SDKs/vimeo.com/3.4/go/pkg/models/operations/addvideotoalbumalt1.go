@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoToAlbumAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoToAlbumAlt1PathParams struct {
+type AddVideoToAlbumAlt1Request struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type AddVideoToAlbumAlt1Request struct {
-	PathParams AddVideoToAlbumAlt1PathParams
-	Security   AddVideoToAlbumAlt1Security
 }
 
 type AddVideoToAlbumAlt1Response struct {

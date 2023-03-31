@@ -8,18 +8,16 @@ import (
 )
 
 type CalendarCalendarListPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CalendarCalendarListPatchPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-}
-
-type CalendarCalendarListPatchQueryParams struct {
+type CalendarCalendarListPatchRequest struct {
+	CalendarListEntry *shared.CalendarListEntry `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
 	ColorRgbFormat *bool `queryParam:"style=form,explode=true,name=colorRgbFormat"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,13 +32,6 @@ type CalendarCalendarListPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarCalendarListPatchRequest struct {
-	PathParams  CalendarCalendarListPatchPathParams
-	QueryParams CalendarCalendarListPatchQueryParams
-	Request     *shared.CalendarListEntry `request:"mediaType=application/json"`
-	Security    CalendarCalendarListPatchSecurity
 }
 
 type CalendarCalendarListPatchResponse struct {

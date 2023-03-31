@@ -40,7 +40,6 @@ pkg/models/shared/adunit.go
 pkg/models/shared/contentadssettings.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/adunitadcode.go
 pkg/models/shared/listadunitsresponse.go
 pkg/models/shared/listlinkedcustomchannelsresponse.go

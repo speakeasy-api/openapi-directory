@@ -8,17 +8,12 @@ import (
 )
 
 type GetAristaSwitchSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAristaSwitchSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetAristaSwitchSnmpConfigRequest struct {
-	PathParams GetAristaSwitchSnmpConfigPathParams
-	Security   GetAristaSwitchSnmpConfigSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAristaSwitchSnmpConfigResponse struct {

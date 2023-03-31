@@ -34,7 +34,7 @@ func newPrivateRiddles(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DeleteRiddle - Create a random Riddle entry.
-func (s *privateRiddles) DeleteRiddle(ctx context.Context, request operations.DeleteRiddleRequest) (*operations.DeleteRiddleResponse, error) {
+func (s *privateRiddles) DeleteRiddle(ctx context.Context, request operations.DeleteRiddleRequest, security operations.DeleteRiddleSecurity) (*operations.DeleteRiddleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/riddle"
 
@@ -43,11 +43,11 @@ func (s *privateRiddles) DeleteRiddle(ctx context.Context, request operations.De
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *privateRiddles) DeleteRiddle(ctx context.Context, request operations.De
 }
 
 // GetRiddle - Get a Riddle entry for a given id. Retrieves a riddle question and answer based on the id.
-func (s *privateRiddles) GetRiddle(ctx context.Context, request operations.GetRiddleRequest) (*operations.GetRiddleResponse, error) {
+func (s *privateRiddles) GetRiddle(ctx context.Context, request operations.GetRiddleRequest, security operations.GetRiddleSecurity) (*operations.GetRiddleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/riddle"
 
@@ -84,11 +84,11 @@ func (s *privateRiddles) GetRiddle(ctx context.Context, request operations.GetRi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *privateRiddles) GetRiddle(ctx context.Context, request operations.GetRi
 }
 
 // PostRiddle - Create a random Riddle entry. Same as 'PUT' but can be used when some of the client libraries don't support 'PUT'.
-func (s *privateRiddles) PostRiddle(ctx context.Context, request operations.PostRiddleRequest) (*operations.PostRiddleResponse, error) {
+func (s *privateRiddles) PostRiddle(ctx context.Context, request operations.PostRiddleRequest, security operations.PostRiddleSecurity) (*operations.PostRiddleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/riddle"
 
@@ -125,11 +125,11 @@ func (s *privateRiddles) PostRiddle(ctx context.Context, request operations.Post
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,7 +157,7 @@ func (s *privateRiddles) PostRiddle(ctx context.Context, request operations.Post
 }
 
 // PutRiddle - Create a random Riddle entry.
-func (s *privateRiddles) PutRiddle(ctx context.Context, request operations.PutRiddleRequest) (*operations.PutRiddleResponse, error) {
+func (s *privateRiddles) PutRiddle(ctx context.Context, request operations.PutRiddleRequest, security operations.PutRiddleSecurity) (*operations.PutRiddleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/riddle"
 
@@ -166,11 +166,11 @@ func (s *privateRiddles) PutRiddle(ctx context.Context, request operations.PutRi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

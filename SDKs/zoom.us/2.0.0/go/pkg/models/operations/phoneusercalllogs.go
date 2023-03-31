@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type PhoneUserCallLogsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type PhoneUserCallLogsPathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PhoneUserCallLogsTimeTypeEnum - Enables you to sort call logs by start or end time. Choose the sort time value. Values include `startTime` or `endTime`.
@@ -67,7 +61,7 @@ func (e *PhoneUserCallLogsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PhoneUserCallLogsQueryParams struct {
+type PhoneUserCallLogsRequest struct {
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
 	From types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -81,12 +75,8 @@ type PhoneUserCallLogsQueryParams struct {
 	// End date.
 	To   types.Date                 `queryParam:"style=form,explode=true,name=to"`
 	Type *PhoneUserCallLogsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type PhoneUserCallLogsRequest struct {
-	PathParams  PhoneUserCallLogsPathParams
-	QueryParams PhoneUserCallLogsQueryParams
-	Security    PhoneUserCallLogsSecurity
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // PhoneUserCallLogs200ApplicationXMLCallLogsAcceptedBy - Indicates who accepted the call.

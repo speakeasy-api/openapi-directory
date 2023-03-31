@@ -13,10 +13,11 @@ var ListFaxServerList = []string{
 }
 
 type ListFaxSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListFaxQueryParams struct {
+type ListFaxRequest struct {
 	// Retrieve only those faxes with a `date_created` that is later than this value, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Retrieve only those faxes with a `date_created` that is before or equal to this value, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
@@ -27,12 +28,6 @@ type ListFaxQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// Retrieve only those faxes sent to this phone number, specified in [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
 	To *string `queryParam:"style=form,explode=true,name=To"`
-}
-
-type ListFaxRequest struct {
-	QueryParams ListFaxQueryParams
-	Security    ListFaxSecurity
-	ServerURL   *string
 }
 
 type ListFaxListFaxResponseMeta struct {

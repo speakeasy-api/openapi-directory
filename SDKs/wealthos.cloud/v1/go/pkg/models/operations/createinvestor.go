@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CreateInvestorSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateInvestorHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type CreateInvestorRootTypeForInvestorCreationRequestAddress struct {
@@ -356,9 +350,9 @@ type CreateInvestorRootTypeForInvestorCreationRequestInput struct {
 }
 
 type CreateInvestorRequest struct {
-	Headers  CreateInvestorHeaders
-	Request  CreateInvestorRootTypeForInvestorCreationRequestInput `request:"mediaType=application/json"`
-	Security CreateInvestorSecurity
+	RequestBody CreateInvestorRootTypeForInvestorCreationRequestInput `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreateInvestor500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

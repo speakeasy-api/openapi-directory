@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type EmploymentVerificationGetRequest struct {
-	Request shared.EmploymentVerificationGetRequest `request:"mediaType=application/json"`
-}
 
 type EmploymentVerificationGetResponse struct {
 	ContentType string

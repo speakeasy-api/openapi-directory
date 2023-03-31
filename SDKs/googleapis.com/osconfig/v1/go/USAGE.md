@@ -14,38 +14,29 @@ func main() {
     s := sdk.New()
 
     req := operations.OsconfigProjectsLocationsInstancesInventoriesListRequest{
-        Security: operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.OsconfigProjectsLocationsInstancesInventoriesListPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.OsconfigProjectsLocationsInstancesInventoriesListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Filter: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PageSize: 623564,
-            PageToken: "deserunt",
-            PrettyPrint: false,
-            QuotaUser: "suscipit",
-            UploadType: "iure",
-            UploadProtocol: "magnam",
-            View: "FULL",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Filter: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PageSize: 423655,
+        PageToken: "error",
+        Parent: "deserunt",
+        PrettyPrint: false,
+        QuotaUser: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
+        View: "FULL",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.OsconfigProjectsLocationsInstancesInventoriesList(ctx, req)
+    res, err := s.Projects.OsconfigProjectsLocationsInstancesInventoriesList(ctx, req, operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

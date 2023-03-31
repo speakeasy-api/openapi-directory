@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceRolesListQueryParams struct {
+type DcimDeviceRolesListRequest struct {
 	Color     *string `queryParam:"style=form,explode=true,name=color"`
 	ColorIc   *string `queryParam:"style=form,explode=true,name=color__ic"`
 	ColorIe   *string `queryParam:"style=form,explode=true,name=color__ie"`
@@ -50,10 +50,6 @@ type DcimDeviceRolesListQueryParams struct {
 	SlugNiew *string `queryParam:"style=form,explode=true,name=slug__niew"`
 	SlugNisw *string `queryParam:"style=form,explode=true,name=slug__nisw"`
 	VMRole   *string `queryParam:"style=form,explode=true,name=vm_role"`
-}
-
-type DcimDeviceRolesListRequest struct {
-	QueryParams DcimDeviceRolesListQueryParams
 }
 
 type DcimDeviceRolesList200ApplicationJSON struct {

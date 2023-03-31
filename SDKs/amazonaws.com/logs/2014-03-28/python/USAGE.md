@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateKmsKeyRequest(
-    headers=operations.AssociateKmsKeyHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="vel",
-        x_amz_credential="dolores",
-        x_amz_date="iste",
-        x_amz_security_token="ut",
-        x_amz_signature="quia",
-        x_amz_signed_headers="dolorum",
-        x_amz_target="Logs_20140328.AssociateKmsKey",
+    associate_kms_key_request=shared.AssociateKmsKeyRequest(
+        kms_key_id="corrupti",
+        log_group_name="provident",
     ),
-    request=shared.AssociateKmsKeyRequest(
-        kms_key_id="ducimus",
-        log_group_name="ipsum",
-    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+    x_amz_target="Logs_20140328.AssociateKmsKey",
 )
     
 res = s.associate_kms_key(req)

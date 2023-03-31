@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpsertPushProviderRequest struct {
-	Request shared.UpsertPushProviderRequest `request:"mediaType=application/json"`
-}
-
 type UpsertPushProviderResponse struct {
 	// Bad request
 	APIError    *shared.APIError

@@ -36,14 +36,14 @@ func newStatsFindMarketplaceStatistics(defaultClient, securityClient HTTPClient,
 // Return a timeseries nested array containing date and value. Example: [[1406520000000,2],[1406606400000,34],[1406692800000,245],...]
 func (s *statsFindMarketplaceStatistics) GetStatsSeriesPeriodFields(ctx context.Context, request operations.GetStatsSeriesPeriodFieldsRequest) (*operations.GetStatsSeriesPeriodFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/series/{period}/{fields}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/series/{period}/{fields}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,7 +91,7 @@ func (s *statsFindMarketplaceStatistics) GetStatsTotal(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -133,14 +133,14 @@ func (s *statsFindMarketplaceStatistics) GetStatsTotal(ctx context.Context, requ
 // increment a statistics field
 func (s *statsFindMarketplaceStatistics) PostStatsIncrementField(ctx context.Context, request operations.PostStatsIncrementFieldRequest) (*operations.PostStatsIncrementFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/increment/{field}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/increment/{field}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -4,18 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.AppDgetRequest(
-    path_params=operations.AppDgetPathParams(
-        app_d_id="ut",
-    ),
-    query_params=operations.AppDgetQueryParams(
-        all_fields="sit",
-        exclude_default="accusamus",
-        exclude_fields="beatae",
-        fields="rerum",
-        filter="aspernatur",
-    ),
+
+
+req = operations.AppDGETRequest(
+    all_fields="corrupti",
+    app_d_id="provident",
+    exclude_default="distinctio",
+    exclude_fields="quibusdam",
+    fields_="unde",
+    filter="nulla",
 )
     
 res = s.app_pkgm.app_dget(req)

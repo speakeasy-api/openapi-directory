@@ -12,7 +12,8 @@ var CreateServiceServerList = []string{
 }
 
 type CreateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceCreateServiceRequest struct {
@@ -30,12 +31,6 @@ type CreateServiceCreateServiceRequest struct {
 	OutOfSessionCallbackURL *string `form:"name=OutOfSessionCallbackUrl"`
 	// An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. **This value should not have PII.**
 	UniqueName string `form:"name=UniqueName"`
-}
-
-type CreateServiceRequest struct {
-	Request   *CreateServiceCreateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateServiceSecurity
-	ServerURL *string
 }
 
 type CreateServiceResponse struct {

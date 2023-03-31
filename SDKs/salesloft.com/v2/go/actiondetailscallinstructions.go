@@ -45,7 +45,7 @@ func (s *actionDetailsCallInstructions) GetV2ActionDetailsCallInstructionsJSON(c
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *actionDetailsCallInstructions) GetV2ActionDetailsCallInstructionsJSON(c
 // Fetches a call instruction, by ID only.
 func (s *actionDetailsCallInstructions) GetV2ActionDetailsCallInstructionsIDJSON(ctx context.Context, request operations.GetV2ActionDetailsCallInstructionsIDJSONRequest) (*operations.GetV2ActionDetailsCallInstructionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/action_details/call_instructions/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/action_details/call_instructions/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

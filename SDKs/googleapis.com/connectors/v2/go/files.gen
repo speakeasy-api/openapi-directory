@@ -24,10 +24,9 @@ pkg/models/operations/connectorsprojectslocationsconnectionsentitytypesentitiesu
 pkg/models/operations/connectorsprojectslocationsconnectionsentitytypeslist.go
 pkg/models/operations/connectorsprojectslocationsconnectionsexecutesqlquery.go
 pkg/models/shared/executeactionresponse.go
-pkg/models/shared/executeactionrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/executeactionrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listactionsresponse.go
 pkg/models/shared/action.go
 pkg/models/shared/resultmetadata.go

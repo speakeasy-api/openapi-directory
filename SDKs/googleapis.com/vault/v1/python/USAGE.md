@@ -4,43 +4,35 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VaultMattersAddPermissionsRequest(
-    security=operations.VaultMattersAddPermissionsSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.VaultMattersAddPermissionsPathParams(
-        matter_id="ut",
-    ),
-    query_params=operations.VaultMattersAddPermissionsQueryParams(
-        dollar_xgafv="1",
-        access_token="sit",
-        alt="json",
-        callback="doloremque",
-        fields="facere",
-        key="voluptatum",
-        oauth_token="possimus",
-        pretty_print=True,
-        quota_user="rem",
-        upload_type="praesentium",
-        upload_protocol="at",
-    ),
-    request=shared.AddMatterPermissionsRequest(
+    dollar_xgafv="2",
+    add_matter_permissions_request=shared.AddMatterPermissionsRequest(
         cc_me=False,
         matter_permission=shared.MatterPermission(
-            account_id="non",
-            role="COLLABORATOR",
+            account_id="provident",
+            role="OWNER",
         ),
-        send_emails=True,
+        send_emails=False,
     ),
+    access_token="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    matter_id="vel",
+    oauth_token="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.matters.vault_matters_add_permissions(req)
+res = s.matters.vault_matters_add_permissions(req, operations.VaultMattersAddPermissionsSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.matter_permission is not None:
     # handle response

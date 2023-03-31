@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateUserPathParams struct {
-	// The user's ID. Note that this is our internal ID, and _not the username_. You can obtain it by calling the [GET /users](#operation/listUsers) method.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateUserHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 // UpdateUserUpdateUserRequestBodyRoleEnum - The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least "download,upload,list,delete" in the `permissions` parameter.
 type UpdateUserUpdateUserRequestBodyRoleEnum string
 
@@ -77,9 +65,13 @@ type UpdateUserUpdateUserRequestBody struct {
 }
 
 type UpdateUserRequest struct {
-	PathParams UpdateUserPathParams
-	Headers    UpdateUserHeaders
-	Request    *UpdateUserUpdateUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateUserUpdateUserRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// The user's ID. Note that this is our internal ID, and _not the username_. You can obtain it by calling the [GET /users](#operation/listUsers) method.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateUserResponse struct {

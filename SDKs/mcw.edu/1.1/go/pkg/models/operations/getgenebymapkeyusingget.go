@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETGeneByMapKeyUsingGETPathParams struct {
+type GETGeneByMapKeyUsingGETRequest struct {
 	// A list of RGD assembly map keys can be found in the lookup service
 	MapKey int `pathParam:"style=simple,explode=false,name=mapKey"`
-}
-
-type GETGeneByMapKeyUsingGETRequest struct {
-	PathParams GETGeneByMapKeyUsingGETPathParams
 }
 
 type GETGeneByMapKeyUsingGETResponse struct {

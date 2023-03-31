@@ -12,14 +12,8 @@ var UpdateServiceRoleServerList = []string{
 }
 
 type UpdateServiceRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceRolePathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to update the Role resource in.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-	// The SID of the Role resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceRoleUpdateServiceRoleRequest struct {
@@ -28,10 +22,11 @@ type UpdateServiceRoleUpdateServiceRoleRequest struct {
 }
 
 type UpdateServiceRoleRequest struct {
-	PathParams UpdateServiceRolePathParams
-	Request    *UpdateServiceRoleUpdateServiceRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceRoleSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to update the Role resource in.
+	ChatServiceSid string                                     `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *UpdateServiceRoleUpdateServiceRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Role resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateServiceRoleResponse struct {

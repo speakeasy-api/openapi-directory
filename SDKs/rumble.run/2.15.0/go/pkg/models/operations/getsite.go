@@ -8,17 +8,12 @@ import (
 )
 
 type GetSiteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetSitePathParams struct {
-	// UUID or name of the site
-	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetSiteRequest struct {
-	PathParams GetSitePathParams
-	Security   GetSiteSecurity
+	// UUID or name of the site
+	SiteID string `pathParam:"style=simple,explode=false,name=site_id"`
 }
 
 type GetSiteResponse struct {

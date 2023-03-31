@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListMinimumRequiredFieldsForInstitutionPathParams struct {
-	InstitutionID string `pathParam:"style=simple,explode=false,name=institution_id"`
-}
-
 type ListMinimumRequiredFieldsForInstitutionRequest struct {
-	PathParams ListMinimumRequiredFieldsForInstitutionPathParams
+	InstitutionID string `pathParam:"style=simple,explode=false,name=institution_id"`
 }
 
 type ListMinimumRequiredFieldsForInstitutionResponse struct {

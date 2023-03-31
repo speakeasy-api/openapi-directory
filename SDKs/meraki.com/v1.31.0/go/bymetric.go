@@ -34,7 +34,7 @@ func newByMetric(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Return an overview of currently alerting sensors by metric
 func (s *byMetric) GetNetworkSensorAlertsCurrentOverviewByMetric(ctx context.Context, request operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest) (*operations.GetNetworkSensorAlertsCurrentOverviewByMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,14 +79,14 @@ func (s *byMetric) GetNetworkSensorAlertsCurrentOverviewByMetric(ctx context.Con
 // Return an overview of alert occurrences over a timespan, by metric
 func (s *byMetric) GetNetworkSensorAlertsOverviewByMetric(ctx context.Context, request operations.GetNetworkSensorAlertsOverviewByMetricRequest) (*operations.GetNetworkSensorAlertsOverviewByMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/overview/byMetric", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/overview/byMetric", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

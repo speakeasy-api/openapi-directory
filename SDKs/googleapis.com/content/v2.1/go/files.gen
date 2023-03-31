@@ -224,7 +224,6 @@ pkg/models/shared/accountsauthinforesponse.go
 pkg/models/shared/accountidentifier.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/accountsclaimwebsiteresponse.go
 pkg/models/shared/accountcredentials.go
 pkg/models/shared/accountscustombatchresponse.go

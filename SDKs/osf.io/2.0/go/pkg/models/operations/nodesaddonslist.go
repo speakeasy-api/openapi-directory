@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type NodesAddonsListPathParams struct {
+type NodesAddonsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesAddonsListRequest struct {
-	PathParams NodesAddonsListPathParams
 }
 
 type NodesAddonsListAddonAttributesCategoriesEnum string

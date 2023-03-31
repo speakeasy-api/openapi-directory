@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJournalInstructionTemplatePathParams struct {
-	// The journal instruction unique identifier. E.g JI001
-	JournalInstructionID string `pathParam:"style=simple,explode=false,name=JournalInstructionId"`
-}
-
-type GetJournalInstructionTemplateHeaders struct {
+type GetJournalInstructionTemplateRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetJournalInstructionTemplateRequest struct {
-	PathParams GetJournalInstructionTemplatePathParams
-	Headers    GetJournalInstructionTemplateHeaders
+	// The journal instruction unique identifier. E.g JI001
+	JournalInstructionID string `pathParam:"style=simple,explode=false,name=JournalInstructionId"`
 }
 
 type GetJournalInstructionTemplateResponse struct {

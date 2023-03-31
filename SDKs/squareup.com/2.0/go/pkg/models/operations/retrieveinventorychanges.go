@@ -8,15 +8,12 @@ import (
 )
 
 type RetrieveInventoryChangesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrieveInventoryChangesPathParams struct {
+type RetrieveInventoryChangesRequest struct {
 	// ID of the [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject) to retrieve.
 	CatalogObjectID string `pathParam:"style=simple,explode=false,name=catalog_object_id"`
-}
-
-type RetrieveInventoryChangesQueryParams struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this to retrieve the next set of results for the original query.
 	//
@@ -25,12 +22,6 @@ type RetrieveInventoryChangesQueryParams struct {
 	// The [Location](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) IDs to look up as a comma-separated
 	// list. An empty list queries all locations.
 	LocationIds *string `queryParam:"style=form,explode=true,name=location_ids"`
-}
-
-type RetrieveInventoryChangesRequest struct {
-	PathParams  RetrieveInventoryChangesPathParams
-	QueryParams RetrieveInventoryChangesQueryParams
-	Security    RetrieveInventoryChangesSecurity
 }
 
 type RetrieveInventoryChangesResponse struct {

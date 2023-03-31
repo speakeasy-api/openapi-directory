@@ -34,7 +34,7 @@ func newGeneration(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetShakespeareGenerateInsult - Generate random Shakespeare style insults.
-func (s *generation) GetShakespeareGenerateInsult(ctx context.Context, request operations.GetShakespeareGenerateInsultRequest) (*operations.GetShakespeareGenerateInsultResponse, error) {
+func (s *generation) GetShakespeareGenerateInsult(ctx context.Context, request operations.GetShakespeareGenerateInsultRequest, security operations.GetShakespeareGenerateInsultSecurity) (*operations.GetShakespeareGenerateInsultResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shakespeare/generate/insult"
 
@@ -43,11 +43,11 @@ func (s *generation) GetShakespeareGenerateInsult(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *generation) GetShakespeareGenerateInsult(ctx context.Context, request o
 }
 
 // GetShakespeareGenerateLoremIpsum - Generate Shakespeare lorem ipsum.
-func (s *generation) GetShakespeareGenerateLoremIpsum(ctx context.Context, request operations.GetShakespeareGenerateLoremIpsumRequest) (*operations.GetShakespeareGenerateLoremIpsumResponse, error) {
+func (s *generation) GetShakespeareGenerateLoremIpsum(ctx context.Context, request operations.GetShakespeareGenerateLoremIpsumRequest, security operations.GetShakespeareGenerateLoremIpsumSecurity) (*operations.GetShakespeareGenerateLoremIpsumResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shakespeare/generate/lorem-ipsum"
 
@@ -84,11 +84,11 @@ func (s *generation) GetShakespeareGenerateLoremIpsum(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *generation) GetShakespeareGenerateLoremIpsum(ctx context.Context, reque
 }
 
 // GetShakespeareGenerateName - Generate random Shakespearen names.
-func (s *generation) GetShakespeareGenerateName(ctx context.Context, request operations.GetShakespeareGenerateNameRequest) (*operations.GetShakespeareGenerateNameResponse, error) {
+func (s *generation) GetShakespeareGenerateName(ctx context.Context, request operations.GetShakespeareGenerateNameRequest, security operations.GetShakespeareGenerateNameSecurity) (*operations.GetShakespeareGenerateNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shakespeare/generate/name"
 
@@ -125,11 +125,11 @@ func (s *generation) GetShakespeareGenerateName(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

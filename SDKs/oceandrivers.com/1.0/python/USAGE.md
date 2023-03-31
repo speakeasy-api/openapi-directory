@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CompareStationRequest(
-    path_params=operations.CompareStationPathParams(
-        station_name="quia",
-    ),
+    station_name="corrupti",
 )
     
 res = s.od_weather.compare_station(req)

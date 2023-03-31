@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAnInboundAchTransferReturnPathParams struct {
-	InboundAchTransferReturnID string `pathParam:"style=simple,explode=false,name=inbound_ach_transfer_return_id"`
-}
-
 type RetrieveAnInboundAchTransferReturnRequest struct {
-	PathParams RetrieveAnInboundAchTransferReturnPathParams
+	InboundAchTransferReturnID string `pathParam:"style=simple,explode=false,name=inbound_ach_transfer_return_id"`
 }
 
 type RetrieveAnInboundAchTransferReturnDefaultApplicationJSON13StatusEnum string

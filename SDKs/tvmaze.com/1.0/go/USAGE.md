@@ -13,10 +13,8 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Usertoken: shared.SchemeUsertoken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
         }),
     )
 

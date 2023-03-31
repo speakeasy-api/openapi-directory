@@ -126,10 +126,6 @@ func (u PostAssetsVarianceRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostAssetsVarianceRequest struct {
-	Request PostAssetsVarianceRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsVariance200ApplicationJSONAssets struct {
 	// The variance of the asset
 	AssetVariance float64 `json:"assetVariance"`

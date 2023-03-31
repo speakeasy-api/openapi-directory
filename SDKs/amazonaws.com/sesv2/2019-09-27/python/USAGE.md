@@ -3,67 +3,66 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateConfigurationSetRequest(
-    headers=operations.CreateConfigurationSetHeaders(
-        x_amz_algorithm="nam",
-        x_amz_content_sha256="non",
-        x_amz_credential="doloremque",
-        x_amz_date="qui",
-        x_amz_security_token="quaerat",
-        x_amz_signature="natus",
-        x_amz_signed_headers="illo",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateConfigurationSetRequestBody(
-        configuration_set_name="optio",
-        delivery_options=operations.CreateConfigurationSetRequestBodyDeliveryOptions(
-            sending_pool_name="reprehenderit",
-            tls_policy="REQUIRE",
-        ),
-        reputation_options=operations.CreateConfigurationSetRequestBodyReputationOptions(
-            last_fresh_start="2000-05-10T08:14:20Z",
-            reputation_metrics_enabled=False,
-        ),
-        sending_options=operations.CreateConfigurationSetRequestBodySendingOptions(
-            sending_enabled=True,
-        ),
-        suppression_options=operations.CreateConfigurationSetRequestBodySuppressionOptions(
-            suppressed_reasons=[
-                "BOUNCE",
-                "COMPLAINT",
-            ],
-        ),
-        tags=[
-            shared.Tag(
-                key="iusto",
-                value="esse",
+)
+
+
+req = operations.BatchGetMetricDataRequest(
+    request_body=operations.BatchGetMetricDataRequestBody(
+        queries=[
+            shared.BatchGetMetricDataQuery(
+                dimensions={
+                    "distinctio": "quibusdam",
+                    "unde": "nulla",
+                    "corrupti": "illum",
+                },
+                end_date="2022-05-18T09:34:54.894Z",
+                id="deserunt",
+                metric="TRANSIENT_BOUNCE",
+                namespace="VDM",
+                start_date="2022-09-14T09:35:47.986Z",
             ),
-            shared.Tag(
-                key="architecto",
-                value="est",
+            shared.BatchGetMetricDataQuery(
+                dimensions={
+                    "ipsa": "delectus",
+                    "tempora": "suscipit",
+                    "molestiae": "minus",
+                    "placeat": "voluptatum",
+                },
+                end_date="2022-06-07T15:55:46.205Z",
+                id="nisi",
+                metric="DELIVERY_COMPLAINT",
+                namespace="VDM",
+                start_date="2022-10-15T05:10:19.629Z",
             ),
-            shared.Tag(
-                key="aliquam",
-                value="aut",
+            shared.BatchGetMetricDataQuery(
+                dimensions={
+                    "veritatis": "deserunt",
+                    "perferendis": "ipsam",
+                },
+                end_date="2020-02-17T21:57:45.117Z",
+                id="quo",
+                metric="COMPLAINT",
+                namespace="VDM",
+                start_date="2020-05-23T06:06:25.221Z",
             ),
         ],
-        tracking_options=operations.CreateConfigurationSetRequestBodyTrackingOptions(
-            custom_redirect_domain="corporis",
-        ),
     ),
+    x_amz_algorithm="maiores",
+    x_amz_content_sha256="molestiae",
+    x_amz_credential="quod",
+    x_amz_date="quod",
+    x_amz_security_token="esse",
+    x_amz_signature="totam",
+    x_amz_signed_headers="porro",
 )
     
-res = s.create_configuration_set(req)
+res = s.batch_get_metric_data(req)
 
-if res.create_configuration_set_response is not None:
+if res.batch_get_metric_data_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

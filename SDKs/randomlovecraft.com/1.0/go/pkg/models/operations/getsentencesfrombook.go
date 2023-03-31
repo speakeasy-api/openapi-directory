@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSentencesFromBookPathParams struct {
-	// Book ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSentencesFromBookQueryParams struct {
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
 type GetSentencesFromBookRequest struct {
-	PathParams  GetSentencesFromBookPathParams
-	QueryParams GetSentencesFromBookQueryParams
+	// Book ID
+	ID    string `pathParam:"style=simple,explode=false,name=id"`
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetSentencesFromBook200ApplicationJSON struct {

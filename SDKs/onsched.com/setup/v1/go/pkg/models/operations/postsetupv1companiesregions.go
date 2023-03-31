@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1CompaniesRegionsRequest struct {
-	Request *shared.RegionInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1CompaniesRegionsResponse struct {
 	ContentType string
 	// Success

@@ -11,17 +11,13 @@ import (
 )
 
 type FindGlobalAuthModuleByIDSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindGlobalAuthModuleByIDPathParams struct {
-	// The auth. config id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindGlobalAuthModuleByIDRequest struct {
-	PathParams FindGlobalAuthModuleByIDPathParams
-	Security   FindGlobalAuthModuleByIDSecurity
+	// The auth. config id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type FindGlobalAuthModuleByID200ApplicationJSONType string

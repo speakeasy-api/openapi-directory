@@ -33,16 +33,12 @@ func (e *AllStarsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AllStarsPathParams struct {
+type AllStarsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format AllStarsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
 	// <br>Examples: <code>2015</code>, <code>2016</code>.
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type AllStarsRequest struct {
-	PathParams AllStarsPathParams
 }
 
 type AllStarsResponse struct {

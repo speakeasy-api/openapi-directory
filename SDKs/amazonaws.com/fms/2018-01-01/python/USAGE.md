@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateAdminAccountRequest(
-    headers=operations.AssociateAdminAccountHeaders(
-        x_amz_algorithm="expedita",
-        x_amz_content_sha256="cupiditate",
-        x_amz_credential="aut",
-        x_amz_date="id",
-        x_amz_security_token="suscipit",
-        x_amz_signature="dicta",
-        x_amz_signed_headers="laboriosam",
-        x_amz_target="AWSFMS_20180101.AssociateAdminAccount",
+    associate_admin_account_request=shared.AssociateAdminAccountRequest(
+        admin_account="corrupti",
     ),
-    request=shared.AssociateAdminAccountRequest(
-        admin_account="architecto",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="AWSFMS_20180101.AssociateAdminAccount",
 )
     
 res = s.associate_admin_account(req)

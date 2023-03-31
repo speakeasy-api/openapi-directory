@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFundingByIDV1PathParams struct {
-	FundingID string `pathParam:"style=simple,explode=false,name=fundingId"`
-}
-
 type GetFundingByIDV1Request struct {
-	PathParams GetFundingByIDV1PathParams
+	FundingID string `pathParam:"style=simple,explode=false,name=fundingId"`
 }
 
 type GetFundingByIDV1Response struct {

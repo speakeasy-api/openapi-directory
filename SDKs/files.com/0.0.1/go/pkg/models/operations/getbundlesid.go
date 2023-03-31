@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBundlesIDPathParams struct {
+type GetBundlesIDRequest struct {
 	// Bundle ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBundlesIDRequest struct {
-	PathParams GetBundlesIDPathParams
 }
 
 type GetBundlesIDResponse struct {

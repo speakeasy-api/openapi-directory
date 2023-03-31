@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListPendingInvitationsPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsListPendingInvitationsInvitationSourceEnum - Filter invitations by their invitation source.
 type OrgsListPendingInvitationsInvitationSourceEnum string
 
@@ -74,20 +69,17 @@ func (e *OrgsListPendingInvitationsRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type OrgsListPendingInvitationsQueryParams struct {
+type OrgsListPendingInvitationsRequest struct {
 	// Filter invitations by their invitation source.
 	InvitationSource *OrgsListPendingInvitationsInvitationSourceEnum `queryParam:"style=form,explode=true,name=invitation_source"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Filter invitations by their member role.
 	Role *OrgsListPendingInvitationsRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type OrgsListPendingInvitationsRequest struct {
-	PathParams  OrgsListPendingInvitationsPathParams
-	QueryParams OrgsListPendingInvitationsQueryParams
 }
 
 type OrgsListPendingInvitationsResponse struct {

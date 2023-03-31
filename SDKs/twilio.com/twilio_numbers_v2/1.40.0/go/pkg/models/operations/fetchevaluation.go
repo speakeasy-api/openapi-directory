@@ -12,20 +12,15 @@ var FetchEvaluationServerList = []string{
 }
 
 type FetchEvaluationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchEvaluationPathParams struct {
+type FetchEvaluationRequest struct {
 	// The unique string that we created to identify the Bundle resource.
 	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
 	// The unique string that identifies the Evaluation resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchEvaluationRequest struct {
-	PathParams FetchEvaluationPathParams
-	Security   FetchEvaluationSecurity
-	ServerURL  *string
 }
 
 type FetchEvaluationResponse struct {

@@ -14,42 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.EssentialcontactsProjectsContactsComputeRequest{
-        Security: operations.EssentialcontactsProjectsContactsComputeSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        NotificationCategories: []EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum{
+            "PRODUCT_UPDATES",
+            "SECURITY",
+            "BILLING",
         },
-        PathParams: operations.EssentialcontactsProjectsContactsComputePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.EssentialcontactsProjectsContactsComputeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            NotificationCategories: []EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum{
-                "SECURITY",
-                "BILLING",
-                "BILLING",
-                "SECURITY",
-            },
-            OauthToken: "iure",
-            PageSize: 297534,
-            PageToken: "debitis",
-            PrettyPrint: false,
-            QuotaUser: "ipsa",
-            UploadType: "delectus",
-            UploadProtocol: "tempora",
-        },
+        OauthToken: "deserunt",
+        PageSize: 384382,
+        PageToken: "iure",
+        Parent: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        UploadType: "ipsa",
+        UploadProtocol: "delectus",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.EssentialcontactsProjectsContactsCompute(ctx, req)
+    res, err := s.Projects.EssentialcontactsProjectsContactsCompute(ctx, req, operations.EssentialcontactsProjectsContactsComputeSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

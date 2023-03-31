@@ -12,14 +12,8 @@ var UpdateMessagingConfigurationServerList = []string{
 }
 
 type UpdateMessagingConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMessagingConfigurationPathParams struct {
-	// The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country this configuration will be applied to. If this is a global configuration, Country will take the value `all`.
-	Country string `pathParam:"style=simple,explode=false,name=Country"`
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMessagingConfigurationUpdateMessagingConfigurationRequest struct {
@@ -28,10 +22,11 @@ type UpdateMessagingConfigurationUpdateMessagingConfigurationRequest struct {
 }
 
 type UpdateMessagingConfigurationRequest struct {
-	PathParams UpdateMessagingConfigurationPathParams
-	Request    *UpdateMessagingConfigurationUpdateMessagingConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMessagingConfigurationSecurity
-	ServerURL  *string
+	// The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country this configuration will be applied to. If this is a global configuration, Country will take the value `all`.
+	Country     string                                                           `pathParam:"style=simple,explode=false,name=Country"`
+	RequestBody *UpdateMessagingConfigurationUpdateMessagingConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateMessagingConfigurationResponse struct {

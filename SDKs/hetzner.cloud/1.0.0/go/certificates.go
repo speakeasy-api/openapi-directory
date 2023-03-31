@@ -36,7 +36,7 @@ func newCertificates(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes a Certificate.
 func (s *certificates) DeleteCertificatesID(ctx context.Context, request operations.DeleteCertificatesIDRequest) (*operations.DeleteCertificatesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *certificates) GetCertificates(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -121,7 +121,7 @@ func (s *certificates) GetCertificates(ctx context.Context, request operations.G
 // Gets a specific Certificate object.
 func (s *certificates) GetCertificatesID(ctx context.Context, request operations.GetCertificatesIDRequest) (*operations.GetCertificatesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *certificates) GetCertificatesID(ctx context.Context, request operations
 // In contrast, type **managed** requests a new Certificate from *Let's Encrypt* for the specified `domain_names`. Only domains managed by *Hetzner DNS* are supported. We handle renewal and timely alert the project owner via email if problems occur.
 //
 // For type `managed` Certificates the `action` key of the response contains the Action that allows for tracking the issuance process. For type `uploaded` Certificates the `action` is always null.
-func (s *certificates) PostCertificates(ctx context.Context, request operations.PostCertificatesRequest) (*operations.PostCertificatesResponse, error) {
+func (s *certificates) PostCertificates(ctx context.Context, request operations.PostCertificatesCreateCertificateRequest) (*operations.PostCertificatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/certificates"
 
@@ -228,9 +228,9 @@ func (s *certificates) PostCertificates(ctx context.Context, request operations.
 // Note: if the Certificate object changes during the request, the response will be a “conflict” error.
 func (s *certificates) PutCertificatesID(ctx context.Context, request operations.PutCertificatesIDRequest) (*operations.PutCertificatesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

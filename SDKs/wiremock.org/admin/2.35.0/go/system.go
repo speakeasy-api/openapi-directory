@@ -69,7 +69,7 @@ func (s *system) PostAdminReset(ctx context.Context) (*operations.PostAdminReset
 }
 
 // PostAdminSettings - Update global settings
-func (s *system) PostAdminSettings(ctx context.Context, request operations.PostAdminSettingsRequest) (*operations.PostAdminSettingsResponse, error) {
+func (s *system) PostAdminSettings(ctx context.Context, request operations.PostAdminSettingsRequestBody) (*operations.PostAdminSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/settings"
 

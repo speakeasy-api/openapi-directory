@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAlmawsV1TaskListsRsLendingRequestsQueryParams struct {
+type PostAlmawsV1TaskListsRsLendingRequestsRequest struct {
 	// The resource sharing library from which lending requests should be retrieved. Mandatory. List of possible libraries can be retrieved using the [GET /almaws/v1/conf/libraries API](https://developers.exlibrisgroup.com/alma/apis/conf/GET/gwPcGly021p29HpB7XTI4Dp4I8TKv6CAxBlD4LyRaVE=/37088dc9-c685-4641-bc7f-60b5ca7cabed).
 	Library *string `queryParam:"style=form,explode=true,name=library"`
 	// Operation to be preformed on the list of given requests. Currently the only supported action is 'mark_reported'. Mandatory.
@@ -24,10 +24,6 @@ type PostAlmawsV1TaskListsRsLendingRequestsQueryParams struct {
 	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// Supplied Format of the resource. Optional. List of possible formats can be retrieved using the [GET almaws/v1/conf/code-tables/RequestFormats API](https://developers.exlibrisgroup.com/alma/apis/conf/GET/gwPcGly021p29HpB7XTI4K7cQ0vuYHLS4NSgDGmcRpRYqx5hIMRTng9SIKO5Vof+/37088dc9-c685-4641-bc7f-60b5ca7cabed).
 	SuppliedFormat *string `queryParam:"style=form,explode=true,name=supplied_format"`
-}
-
-type PostAlmawsV1TaskListsRsLendingRequestsRequest struct {
-	QueryParams PostAlmawsV1TaskListsRsLendingRequestsQueryParams
 }
 
 type PostAlmawsV1TaskListsRsLendingRequestsResponse struct {

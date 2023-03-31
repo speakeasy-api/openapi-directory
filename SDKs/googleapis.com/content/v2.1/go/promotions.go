@@ -32,11 +32,11 @@ func newPromotions(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // ContentPromotionsCreate - Inserts a promotion for your Merchant Center account. If the promotion already exists, then it updates the promotion instead. To [end or delete] (https://developers.google.com/shopping-content/guides/promotions#end_a_promotion) a promotion update the time period of the promotion to a time that has already passed.
-func (s *promotions) ContentPromotionsCreate(ctx context.Context, request operations.ContentPromotionsCreateRequest) (*operations.ContentPromotionsCreateResponse, error) {
+func (s *promotions) ContentPromotionsCreate(ctx context.Context, request operations.ContentPromotionsCreateRequest, security operations.ContentPromotionsCreateSecurity) (*operations.ContentPromotionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PromotionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *promotions) ContentPromotionsCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *promotions) ContentPromotionsCreate(ctx context.Context, request operat
 }
 
 // ContentPromotionsGet - Retrieves a promotion from your Merchant Center account.
-func (s *promotions) ContentPromotionsGet(ctx context.Context, request operations.ContentPromotionsGetRequest) (*operations.ContentPromotionsGetResponse, error) {
+func (s *promotions) ContentPromotionsGet(ctx context.Context, request operations.ContentPromotionsGetRequest, security operations.ContentPromotionsGetSecurity) (*operations.ContentPromotionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

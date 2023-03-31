@@ -8,20 +8,18 @@ import (
 )
 
 type DisplayvideoAdvertisersNegativeKeywordListsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersNegativeKeywordListsCreatePathParams struct {
-	// Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-}
-
-type DisplayvideoAdvertisersNegativeKeywordListsCreateQueryParams struct {
+type DisplayvideoAdvertisersNegativeKeywordListsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv              *shared.XgafvEnum                `queryParam:"style=form,explode=true,name=$.xgafv"`
+	NegativeKeywordListInput *shared.NegativeKeywordListInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,13 +38,6 @@ type DisplayvideoAdvertisersNegativeKeywordListsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersNegativeKeywordListsCreateRequest struct {
-	PathParams  DisplayvideoAdvertisersNegativeKeywordListsCreatePathParams
-	QueryParams DisplayvideoAdvertisersNegativeKeywordListsCreateQueryParams
-	Request     *shared.NegativeKeywordListInput `request:"mediaType=application/json"`
-	Security    DisplayvideoAdvertisersNegativeKeywordListsCreateSecurity
 }
 
 type DisplayvideoAdvertisersNegativeKeywordListsCreateResponse struct {

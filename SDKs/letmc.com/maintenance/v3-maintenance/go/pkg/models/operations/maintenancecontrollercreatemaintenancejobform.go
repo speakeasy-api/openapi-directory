@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MaintenanceControllerCreateMaintenanceJobFormPathParams struct {
+type MaintenanceControllerCreateMaintenanceJobFormRequest struct {
+	// A JSON object containing details of the maintenance job
+	MaintenanceIssueModel shared.MaintenanceIssueModel `request:"mediaType=application/x-www-form-urlencoded"`
 	// The unique ID of the Branch
 	BranchID string `pathParam:"style=simple,explode=false,name=branchID"`
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type MaintenanceControllerCreateMaintenanceJobFormRequest struct {
-	PathParams MaintenanceControllerCreateMaintenanceJobFormPathParams
-	// A JSON object containing details of the maintenance job
-	Request shared.MaintenanceIssueModel `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type MaintenanceControllerCreateMaintenanceJobFormResponse struct {

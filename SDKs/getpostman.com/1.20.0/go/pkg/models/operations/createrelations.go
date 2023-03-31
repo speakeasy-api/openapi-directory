@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateRelationsPathParams struct {
-	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
-	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
 type CreateRelationsRequestBody struct {
 	Contracttest  []string `json:"contracttest,omitempty"`
 	Documentation []string `json:"documentation,omitempty"`
@@ -19,8 +14,9 @@ type CreateRelationsRequestBody struct {
 }
 
 type CreateRelationsRequest struct {
-	PathParams CreateRelationsPathParams
-	Request    *CreateRelationsRequestBody `request:"mediaType=application/json"`
+	RequestBody  *CreateRelationsRequestBody `request:"mediaType=application/json"`
+	APIID        string                      `pathParam:"style=simple,explode=false,name=apiId"`
+	APIVersionID string                      `pathParam:"style=simple,explode=false,name=apiVersionId"`
 }
 
 // CreateRelations200ApplicationJSON - Create multiple relations from existing collections

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05PatientsProfileOnShareRawHeaders struct {
+type PostV05PatientsProfileOnShareRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostV05PatientsProfileOnShareRawRequest struct {
-	Headers PostV05PatientsProfileOnShareRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05PatientsProfileOnShareRawResponse struct {

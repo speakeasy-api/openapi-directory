@@ -8,11 +8,11 @@ import (
 )
 
 type FactchecktoolsPagesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FactchecktoolsPagesListQueryParams struct {
+type FactchecktoolsPagesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -45,11 +45,6 @@ type FactchecktoolsPagesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The URL from which to get `ClaimReview` markup. There will be at most one result. If markup is associated with a more canonical version of the URL provided, we will return that URL instead. Cannot be specified along with an organization.
 	URL *string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type FactchecktoolsPagesListRequest struct {
-	QueryParams FactchecktoolsPagesListQueryParams
-	Security    FactchecktoolsPagesListSecurity
 }
 
 type FactchecktoolsPagesListResponse struct {

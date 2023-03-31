@@ -12,7 +12,8 @@ var CreateSimServerList = []string{
 }
 
 type CreateSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSimCreateSimRequest struct {
@@ -20,12 +21,6 @@ type CreateSimCreateSimRequest struct {
 	Iccid string `form:"name=Iccid"`
 	// The 10-digit code required to claim the Super SIM for your Account.
 	RegistrationCode string `form:"name=RegistrationCode"`
-}
-
-type CreateSimRequest struct {
-	Request   *CreateSimCreateSimRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSimSecurity
-	ServerURL *string
 }
 
 type CreateSimResponse struct {

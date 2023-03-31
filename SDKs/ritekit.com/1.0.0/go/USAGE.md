@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.AnimateImageRequest{
-        QueryParams: operations.AnimateImageQueryParams{
-            Type: "corrupti",
-            URL: "provident",
-        },
+        Type: "corrupti",
+        URL: "provident",
     }
 
     ctx := context.Background()

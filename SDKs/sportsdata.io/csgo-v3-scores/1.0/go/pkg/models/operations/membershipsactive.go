@@ -33,13 +33,9 @@ func (e *MembershipsActiveFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MembershipsActivePathParams struct {
+type MembershipsActiveRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format MembershipsActiveFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type MembershipsActiveRequest struct {
-	PathParams MembershipsActivePathParams
 }
 
 type MembershipsActiveResponse struct {

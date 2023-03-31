@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddCommonAreaPhoneSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddCommonAreaPhoneRequestBody struct {
@@ -28,11 +27,6 @@ type AddCommonAreaPhoneRequestBody struct {
 	TimeZone *string `json:"time_zone,omitempty"`
 	// Phone device manufacturer name. Refer to the "Manufacturer Name" field in [this](https://marketplace.zoom.us/docs/api-reference/other-references/zoomphone-supporteddevice) table.
 	Type string `json:"type"`
-}
-
-type AddCommonAreaPhoneRequest struct {
-	Request  *AddCommonAreaPhoneRequestBody `request:"mediaType=application/json"`
-	Security AddCommonAreaPhoneSecurity
 }
 
 // AddCommonAreaPhone201ApplicationXML - **HTTP Status Code:** `201` **Created**<br>

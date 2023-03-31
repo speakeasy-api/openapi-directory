@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoPrivacyUsersAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoPrivacyUsersAlt1PathParams struct {
+type AddVideoPrivacyUsersAlt1Request struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type AddVideoPrivacyUsersAlt1Request struct {
-	PathParams AddVideoPrivacyUsersAlt1PathParams
-	Security   AddVideoPrivacyUsersAlt1Security
 }
 
 type AddVideoPrivacyUsersAlt1Response struct {

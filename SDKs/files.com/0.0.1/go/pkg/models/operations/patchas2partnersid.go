@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchAs2PartnersIDPathParams struct {
-	// As2 Partner ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchAs2PartnersIDRequestBody struct {
 	// AS2 Name
 	Name              *string `multipartForm:"name=name"`
@@ -23,8 +18,9 @@ type PatchAs2PartnersIDRequestBody struct {
 }
 
 type PatchAs2PartnersIDRequest struct {
-	PathParams PatchAs2PartnersIDPathParams
-	Request    *PatchAs2PartnersIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchAs2PartnersIDRequestBody `request:"mediaType=multipart/form-data"`
+	// As2 Partner ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchAs2PartnersIDResponse struct {

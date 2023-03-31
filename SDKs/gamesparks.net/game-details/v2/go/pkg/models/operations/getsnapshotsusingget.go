@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETSnapshotsUsingGETPathParams struct {
+type GETSnapshotsUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// page
 	Page int `pathParam:"style=simple,explode=false,name=page"`
-}
-
-type GETSnapshotsUsingGETQueryParams struct {
 	// pageSize
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETSnapshotsUsingGETRequest struct {
-	PathParams  GETSnapshotsUsingGETPathParams
-	QueryParams GETSnapshotsUsingGETQueryParams
 }
 
 type GETSnapshotsUsingGETResponse struct {

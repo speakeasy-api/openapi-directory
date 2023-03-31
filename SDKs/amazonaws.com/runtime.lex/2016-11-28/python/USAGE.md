@@ -3,30 +3,24 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.DeleteSessionRequest(
-    path_params=operations.DeleteSessionPathParams(
-        bot_alias="ex",
-        bot_name="magnam",
-        user_id="a",
-    ),
-    headers=operations.DeleteSessionHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="omnis",
-        x_amz_credential="dicta",
-        x_amz_date="in",
-        x_amz_security_token="et",
-        x_amz_signature="enim",
-        x_amz_signed_headers="saepe",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    bot_alias="illum",
+    bot_name="vel",
+    user_id="error",
 )
     
 res = s.delete_session(req)

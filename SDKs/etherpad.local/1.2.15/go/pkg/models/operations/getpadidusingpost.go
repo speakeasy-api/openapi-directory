@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetPadIDUsingPOSTQueryParams struct {
-	RoID *string `queryParam:"style=form,explode=true,name=roID"`
-}
-
 type GetPadIDUsingPOSTRequest struct {
-	QueryParams GetPadIDUsingPOSTQueryParams
+	RoID *string `queryParam:"style=form,explode=true,name=roID"`
 }
 
 // GetPadIDUsingPOST500ApplicationJSON - internal api error (code 2)

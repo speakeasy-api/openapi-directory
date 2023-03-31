@@ -10,13 +10,8 @@ import (
 )
 
 type NotebooksProjectsLocationsInstancesIsUpgradeableSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type NotebooksProjectsLocationsInstancesIsUpgradeablePathParams struct {
-	// Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
-	NotebookInstance string `pathParam:"style=simple,explode=false,name=notebookInstance"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // NotebooksProjectsLocationsInstancesIsUpgradeableTypeEnum - Optional. The optional UpgradeType. Setting this field will search for additional compute images to upgrade this instance.
@@ -52,7 +47,7 @@ func (e *NotebooksProjectsLocationsInstancesIsUpgradeableTypeEnum) UnmarshalJSON
 	}
 }
 
-type NotebooksProjectsLocationsInstancesIsUpgradeableQueryParams struct {
+type NotebooksProjectsLocationsInstancesIsUpgradeableRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -65,6 +60,8 @@ type NotebooksProjectsLocationsInstancesIsUpgradeableQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+	NotebookInstance string `pathParam:"style=simple,explode=false,name=notebookInstance"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -77,12 +74,6 @@ type NotebooksProjectsLocationsInstancesIsUpgradeableQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NotebooksProjectsLocationsInstancesIsUpgradeableRequest struct {
-	PathParams  NotebooksProjectsLocationsInstancesIsUpgradeablePathParams
-	QueryParams NotebooksProjectsLocationsInstancesIsUpgradeableQueryParams
-	Security    NotebooksProjectsLocationsInstancesIsUpgradeableSecurity
 }
 
 type NotebooksProjectsLocationsInstancesIsUpgradeableResponse struct {

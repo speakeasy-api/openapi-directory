@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRacksListQueryParams struct {
+type DcimRacksListRequest struct {
 	DescUnits  *string `queryParam:"style=form,explode=true,name=desc_units"`
 	FacilityID *string `queryParam:"style=form,explode=true,name=facility_id"`
 	Group      *string `queryParam:"style=form,explode=true,name=group"`
@@ -31,10 +31,6 @@ type DcimRacksListQueryParams struct {
 	Type     *string  `queryParam:"style=form,explode=true,name=type"`
 	UHeight  *float64 `queryParam:"style=form,explode=true,name=u_height"`
 	Width    *string  `queryParam:"style=form,explode=true,name=width"`
-}
-
-type DcimRacksListRequest struct {
-	QueryParams DcimRacksListQueryParams
 }
 
 type DcimRacksList200ApplicationJSON struct {

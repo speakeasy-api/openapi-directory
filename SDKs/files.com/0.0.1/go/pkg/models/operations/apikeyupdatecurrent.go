@@ -55,10 +55,6 @@ type APIKeyUpdateCurrentRequestBody struct {
 	PermissionSet *APIKeyUpdateCurrentRequestBodyPermissionSetEnum `multipartForm:"name=permission_set"`
 }
 
-type APIKeyUpdateCurrentRequest struct {
-	Request *APIKeyUpdateCurrentRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type APIKeyUpdateCurrentResponse struct {
 	// The ApiKey object.
 	APIKeyEntity *shared.APIKeyEntity

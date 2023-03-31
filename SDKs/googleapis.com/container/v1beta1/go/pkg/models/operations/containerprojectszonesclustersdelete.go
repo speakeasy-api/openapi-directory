@@ -8,20 +8,11 @@ import (
 )
 
 type ContainerProjectsZonesClustersDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContainerProjectsZonesClustersDeletePathParams struct {
-	// Required. Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the name field.
-	ClusterID string `pathParam:"style=simple,explode=false,name=clusterId"`
-	// Required. Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the name field.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the name field.
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type ContainerProjectsZonesClustersDeleteQueryParams struct {
+type ContainerProjectsZonesClustersDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +21,8 @@ type ContainerProjectsZonesClustersDeleteQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the name field.
+	ClusterID string `pathParam:"style=simple,explode=false,name=clusterId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -40,18 +33,16 @@ type ContainerProjectsZonesClustersDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the name field.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContainerProjectsZonesClustersDeleteRequest struct {
-	PathParams  ContainerProjectsZonesClustersDeletePathParams
-	QueryParams ContainerProjectsZonesClustersDeleteQueryParams
-	Security    ContainerProjectsZonesClustersDeleteSecurity
+	// Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the name field.
+	Zone string `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type ContainerProjectsZonesClustersDeleteResponse struct {

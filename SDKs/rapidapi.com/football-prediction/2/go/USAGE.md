@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAPIV2ListFederationsRequest{
-        Headers: operations.GetAPIV2ListFederationsHeaders{
-            XRapidAPIKey: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
+        XRapidAPIKey: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
     }
 
     ctx := context.Background()

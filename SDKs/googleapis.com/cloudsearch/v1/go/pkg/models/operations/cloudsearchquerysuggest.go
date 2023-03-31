@@ -8,13 +8,13 @@ import (
 )
 
 type CloudsearchQuerySuggestSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchQuerySuggestSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchQuerySuggestSecurity struct {
@@ -22,9 +22,10 @@ type CloudsearchQuerySuggestSecurity struct {
 	Option2 *CloudsearchQuerySuggestSecurityOption2 `security:"option"`
 }
 
-type CloudsearchQuerySuggestQueryParams struct {
+type CloudsearchQuerySuggestRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv    *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SuggestRequest *shared.SuggestRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -45,12 +46,6 @@ type CloudsearchQuerySuggestQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchQuerySuggestRequest struct {
-	QueryParams CloudsearchQuerySuggestQueryParams
-	Request     *shared.SuggestRequest `request:"mediaType=application/json"`
-	Security    CloudsearchQuerySuggestSecurity
 }
 
 type CloudsearchQuerySuggestResponse struct {

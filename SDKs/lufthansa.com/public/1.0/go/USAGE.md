@@ -14,24 +14,17 @@ func main() {
     s := sdk.New()
 
     req := operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest{
-        Security: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity{
-            Auth: shared.SchemeAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams{
-            Destination: "corrupti",
-            FromDate: "provident",
-            Origin: "distinctio",
-            ProductCode: "ZXB",
-        },
-        Headers: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders{
-            Accept: "unde",
-        },
+        Accept: "corrupti",
+        Destination: "provident",
+        FromDate: "distinctio",
+        Origin: "quibusdam",
+        ProductCode: "YNB",
     }
 
     ctx := context.Background()
-    res, err := s.Cargo.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, req)
+    res, err := s.Cargo.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, req, operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity{
+        Auth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

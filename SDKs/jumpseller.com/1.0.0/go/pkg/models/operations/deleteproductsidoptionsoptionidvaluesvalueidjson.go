@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteProductsIDOptionsOptionIDValuesValueIDJSONPathParams struct {
+type DeleteProductsIDOptionsOptionIDValuesValueIDJSONRequest struct {
+	// API OAuth token.
+	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Id of the Product
 	ID int `pathParam:"style=simple,explode=false,name=id"`
+	// API OAuth login.
+	Login string `queryParam:"style=form,explode=true,name=login"`
 	// Id of the Product Option
 	OptionID int `pathParam:"style=simple,explode=false,name=option_id"`
 	// ID of the Product Option Value
 	ValueID int `pathParam:"style=simple,explode=false,name=value_id"`
-}
-
-type DeleteProductsIDOptionsOptionIDValuesValueIDJSONQueryParams struct {
-	// API OAuth token.
-	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
-	// API OAuth login.
-	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteProductsIDOptionsOptionIDValuesValueIDJSONRequest struct {
-	PathParams  DeleteProductsIDOptionsOptionIDValuesValueIDJSONPathParams
-	QueryParams DeleteProductsIDOptionsOptionIDValuesValueIDJSONQueryParams
 }
 
 type DeleteProductsIDOptionsOptionIDValuesValueIDJSONResponse struct {

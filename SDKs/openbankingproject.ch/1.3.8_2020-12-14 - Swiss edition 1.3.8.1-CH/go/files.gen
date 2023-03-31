@@ -97,7 +97,6 @@ pkg/models/shared/accountaccess.go
 pkg/models/shared/accountreference16ch.go
 pkg/models/shared/additionalinformationaccess.go
 pkg/models/shared/psuhttpmethodenum.go
-pkg/models/shared/security.go
 pkg/models/shared/accountlist.go
 pkg/models/shared/accountdetails.go
 pkg/models/shared/accountstatusenum.go

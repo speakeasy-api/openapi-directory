@@ -36,7 +36,7 @@ func newMediaTypes(defaultClient, securityClient HTTPClient, serverURL, language
 // Information about media types
 func (s *mediaTypes) GetResourcesMediaTypesFormat(ctx context.Context, request operations.GetResourcesMediaTypesFormatRequest) (*operations.GetResourcesMediaTypesFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/mediaTypes.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/mediaTypes.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

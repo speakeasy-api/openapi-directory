@@ -32,11 +32,11 @@ func newNamespaces(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // RunNamespacesJobsCreate - Create a job.
-func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operations.RunNamespacesJobsCreateRequest) (*operations.RunNamespacesJobsCreateResponse, error) {
+func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operations.RunNamespacesJobsCreateRequest, security operations.RunNamespacesJobsCreateSecurity) (*operations.RunNamespacesJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{parent}/jobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Job", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *namespaces) RunNamespacesJobsCreate(ctx context.Context, request operat
 }
 
 // RunNamespacesJobsDelete - Delete a job.
-func (s *namespaces) RunNamespacesJobsDelete(ctx context.Context, request operations.RunNamespacesJobsDeleteRequest) (*operations.RunNamespacesJobsDeleteResponse, error) {
+func (s *namespaces) RunNamespacesJobsDelete(ctx context.Context, request operations.RunNamespacesJobsDeleteRequest, security operations.RunNamespacesJobsDeleteSecurity) (*operations.RunNamespacesJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *namespaces) RunNamespacesJobsDelete(ctx context.Context, request operat
 }
 
 // RunNamespacesJobsGet - Get information about a job.
-func (s *namespaces) RunNamespacesJobsGet(ctx context.Context, request operations.RunNamespacesJobsGetRequest) (*operations.RunNamespacesJobsGetResponse, error) {
+func (s *namespaces) RunNamespacesJobsGet(ctx context.Context, request operations.RunNamespacesJobsGetRequest, security operations.RunNamespacesJobsGetSecurity) (*operations.RunNamespacesJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *namespaces) RunNamespacesJobsGet(ctx context.Context, request operation
 }
 
 // RunNamespacesJobsList - List jobs.
-func (s *namespaces) RunNamespacesJobsList(ctx context.Context, request operations.RunNamespacesJobsListRequest) (*operations.RunNamespacesJobsListResponse, error) {
+func (s *namespaces) RunNamespacesJobsList(ctx context.Context, request operations.RunNamespacesJobsListRequest, security operations.RunNamespacesJobsListSecurity) (*operations.RunNamespacesJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{parent}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/run.googleapis.com/v1alpha1/{parent}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

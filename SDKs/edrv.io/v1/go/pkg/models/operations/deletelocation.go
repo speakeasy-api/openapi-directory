@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteLocationPathParams struct {
+type DeleteLocationRequest struct {
 	// The location id that needs to be deleted
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteLocationRequest struct {
-	PathParams DeleteLocationPathParams
 }
 
 type DeleteLocationResponse struct {

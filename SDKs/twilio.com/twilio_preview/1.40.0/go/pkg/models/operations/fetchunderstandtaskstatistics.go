@@ -12,20 +12,15 @@ var FetchUnderstandTaskStatisticsServerList = []string{
 }
 
 type FetchUnderstandTaskStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchUnderstandTaskStatisticsPathParams struct {
+type FetchUnderstandTaskStatisticsRequest struct {
 	// The unique ID of the parent Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// The unique ID of the Task associated with this Field.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type FetchUnderstandTaskStatisticsRequest struct {
-	PathParams FetchUnderstandTaskStatisticsPathParams
-	Security   FetchUnderstandTaskStatisticsSecurity
-	ServerURL  *string
 }
 
 type FetchUnderstandTaskStatisticsResponse struct {

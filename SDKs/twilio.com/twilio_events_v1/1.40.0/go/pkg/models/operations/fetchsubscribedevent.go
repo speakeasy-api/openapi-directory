@@ -12,20 +12,15 @@ var FetchSubscribedEventServerList = []string{
 }
 
 type FetchSubscribedEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSubscribedEventPathParams struct {
+type FetchSubscribedEventRequest struct {
 	// The unique SID identifier of the Subscription.
 	SubscriptionSid string `pathParam:"style=simple,explode=false,name=SubscriptionSid"`
 	// Type of event being subscribed to.
 	Type string `pathParam:"style=simple,explode=false,name=Type"`
-}
-
-type FetchSubscribedEventRequest struct {
-	PathParams FetchSubscribedEventPathParams
-	Security   FetchSubscribedEventSecurity
-	ServerURL  *string
 }
 
 type FetchSubscribedEventResponse struct {

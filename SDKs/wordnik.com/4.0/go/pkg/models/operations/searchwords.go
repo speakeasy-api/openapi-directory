@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type SearchWordsPathParams struct {
-	// Search query
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
-type SearchWordsQueryParams struct {
+type SearchWordsRequest struct {
 	// Search term is a Regular Expression
 	AllowRegex *string `queryParam:"style=form,explode=true,name=allowRegex"`
 	// Search case sensitive
@@ -34,13 +29,10 @@ type SearchWordsQueryParams struct {
 	MinDictionaryCount *int `queryParam:"style=form,explode=true,name=minDictionaryCount"`
 	// Minimum word length
 	MinLength *int `queryParam:"style=form,explode=true,name=minLength"`
+	// Search query
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 	// Results to skip
 	Skip *int `queryParam:"style=form,explode=true,name=skip"`
-}
-
-type SearchWordsRequest struct {
-	PathParams  SearchWordsPathParams
-	QueryParams SearchWordsQueryParams
 }
 
 type SearchWordsResponse struct {

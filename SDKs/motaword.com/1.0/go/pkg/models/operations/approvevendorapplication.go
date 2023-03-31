@@ -8,17 +8,12 @@ import (
 )
 
 type ApproveVendorApplicationSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type ApproveVendorApplicationPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ApproveVendorApplicationRequest struct {
-	PathParams ApproveVendorApplicationPathParams
-	Security   ApproveVendorApplicationSecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ApproveVendorApplicationResponse struct {

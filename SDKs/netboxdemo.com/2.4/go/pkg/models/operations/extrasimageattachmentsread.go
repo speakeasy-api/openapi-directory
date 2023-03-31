@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasImageAttachmentsReadPathParams struct {
+type ExtrasImageAttachmentsReadRequest struct {
 	// A unique integer value identifying this image attachment.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasImageAttachmentsReadRequest struct {
-	PathParams ExtrasImageAttachmentsReadPathParams
 }
 
 type ExtrasImageAttachmentsReadResponse struct {

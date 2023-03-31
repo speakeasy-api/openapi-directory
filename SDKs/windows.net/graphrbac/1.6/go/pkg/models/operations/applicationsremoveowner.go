@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsRemoveOwnerPathParams struct {
+type ApplicationsRemoveOwnerRequest struct {
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the application from which to remove the owner.
 	ApplicationObjectID string `pathParam:"style=simple,explode=false,name=applicationObjectId"`
 	// Owner object id
 	OwnerObjectID string `pathParam:"style=simple,explode=false,name=ownerObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsRemoveOwnerQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsRemoveOwnerRequest struct {
-	PathParams  ApplicationsRemoveOwnerPathParams
-	QueryParams ApplicationsRemoveOwnerQueryParams
 }
 
 type ApplicationsRemoveOwnerResponse struct {

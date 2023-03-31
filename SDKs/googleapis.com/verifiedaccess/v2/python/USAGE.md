@@ -4,36 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VerifiedaccessChallengeGenerateRequest(
-    security=operations.VerifiedaccessChallengeGenerateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.VerifiedaccessChallengeGenerateQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
-        alt="json",
-        callback="voluptatem",
-        fields="atque",
-        key="ut",
-        oauth_token="voluptate",
-        pretty_print=True,
-        quota_user="facilis",
-        upload_type="nulla",
-        upload_protocol="eius",
-    ),
-    request={
-        "aliquam": "eum",
-        "mollitia": "accusamus",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    pretty_print=False,
+    quota_user="debitis",
+    upload_type="ipsa",
+    upload_protocol="delectus",
 )
     
-res = s.challenge.verifiedaccess_challenge_generate(req)
+res = s.challenge.verifiedaccess_challenge_generate(req, operations.VerifiedaccessChallengeGenerateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.challenge is not None:
     # handle response

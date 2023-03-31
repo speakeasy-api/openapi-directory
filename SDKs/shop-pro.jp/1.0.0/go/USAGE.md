@@ -14,27 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateUsageChargeRequest{
-        Security: operations.CreateUsageChargeSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CreateUsageChargePathParams{
-            RecurringApplicationChargeID: "corrupti",
-        },
-        Headers: operations.CreateUsageChargeHeaders{
-            XAppstoreUsageChargeToken: "provident",
-        },
-        Request: operations.CreateUsageChargeRequestBody{
+        RequestBody: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{
                 Description: "2019/4 メール送信分",
                 Point: 100,
             },
         },
+        XAppstoreUsageChargeToken: "corrupti",
+        RecurringApplicationChargeID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.ApplicationCharge.CreateUsageCharge(ctx, req)
+    res, err := s.ApplicationCharge.CreateUsageCharge(ctx, req, operations.CreateUsageChargeSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

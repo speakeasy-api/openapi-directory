@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteRequisitionByIDV2PathParams struct {
+type DeleteRequisitionByIDV2Request struct {
 	// A UUID string identifying this requisition.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteRequisitionByIDV2Request struct {
-	PathParams DeleteRequisitionByIDV2PathParams
 }
 
 type DeleteRequisitionByIDV2Response struct {

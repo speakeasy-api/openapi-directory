@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveLicenseePathParams struct {
-	Key      string `pathParam:"style=simple,explode=false,name=key"`
-	Licensee string `pathParam:"style=simple,explode=false,name=licensee"`
-}
-
-type RetrieveLicenseeQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type RetrieveLicenseeRequest struct {
-	PathParams  RetrieveLicenseePathParams
-	QueryParams RetrieveLicenseeQueryParams
+	Key       string  `pathParam:"style=simple,explode=false,name=key"`
+	Licensee  string  `pathParam:"style=simple,explode=false,name=licensee"`
+	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type RetrieveLicenseeResponse struct {

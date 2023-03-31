@@ -8,18 +8,13 @@ import (
 )
 
 type CampaignsCreateSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type CampaignsCreatePathParams struct {
-	// Account to apply operations to
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CampaignsCreateRequest struct {
-	PathParams CampaignsCreatePathParams
-	Request    *shared.CampaignRequest `request:"mediaType=application/json"`
-	Security   CampaignsCreateSecurity
+	CampaignRequest *shared.CampaignRequest `request:"mediaType=application/json"`
+	// Account to apply operations to
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type CampaignsCreateResponse struct {

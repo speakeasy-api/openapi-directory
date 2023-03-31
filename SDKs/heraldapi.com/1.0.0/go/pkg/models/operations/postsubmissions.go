@@ -83,10 +83,6 @@ type PostSubmissionsRequestBody struct {
 	ProducerID  string                                `json:"producer_id"`
 }
 
-type PostSubmissionsRequest struct {
-	Request *PostSubmissionsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostSubmissions400ApplicationJSON - Bad Request: something was wrong with the submission
 type PostSubmissions400ApplicationJSON struct {
 	Errors []shared.ErrorV1 `json:"errors,omitempty"`

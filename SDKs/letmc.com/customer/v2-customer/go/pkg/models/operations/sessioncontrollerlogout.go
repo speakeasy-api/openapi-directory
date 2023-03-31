@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type SessionControllerLogoutPathParams struct {
+type SessionControllerLogoutRequest struct {
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type SessionControllerLogoutQueryParams struct {
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type SessionControllerLogoutRequest struct {
-	PathParams  SessionControllerLogoutPathParams
-	QueryParams SessionControllerLogoutQueryParams
 }
 
 type SessionControllerLogoutResponse struct {

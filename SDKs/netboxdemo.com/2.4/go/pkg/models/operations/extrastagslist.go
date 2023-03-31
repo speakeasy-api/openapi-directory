@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTagsListQueryParams struct {
+type ExtrasTagsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
@@ -15,10 +15,6 @@ type ExtrasTagsListQueryParams struct {
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Q      *string `queryParam:"style=form,explode=true,name=q"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type ExtrasTagsListRequest struct {
-	QueryParams ExtrasTagsListQueryParams
 }
 
 type ExtrasTagsList200ApplicationJSON struct {

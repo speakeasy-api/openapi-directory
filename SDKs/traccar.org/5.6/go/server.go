@@ -78,7 +78,7 @@ func (s *server) GetServer(ctx context.Context) (*operations.GetServerResponse, 
 }
 
 // PutServer - Update Server information
-func (s *server) PutServer(ctx context.Context, request operations.PutServerRequest) (*operations.PutServerResponse, error) {
+func (s *server) PutServer(ctx context.Context, request shared.Server) (*operations.PutServerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/server"
 

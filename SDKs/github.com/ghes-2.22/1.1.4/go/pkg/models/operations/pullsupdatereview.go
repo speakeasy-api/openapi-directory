@@ -7,22 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsUpdateReviewPathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-	// review_id parameter
-	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
 type PullsUpdateReviewRequestBody struct {
 	// The body text of the pull request review.
 	Body string `json:"body"`
 }
 
 type PullsUpdateReviewRequest struct {
-	PathParams PullsUpdateReviewPathParams
-	Request    PullsUpdateReviewRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsUpdateReviewRequestBody `request:"mediaType=application/json"`
+	Owner       string                       `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64                        `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string                       `pathParam:"style=simple,explode=false,name=repo"`
+	// review_id parameter
+	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
 }
 
 type PullsUpdateReviewResponse struct {

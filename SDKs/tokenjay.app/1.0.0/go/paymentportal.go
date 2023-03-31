@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newPaymentPortal(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // AddPaymentRequest - Creates a new payment request. Will return request id to check for transaction state and ergopay url to show the user as QR code
-func (s *paymentPortal) AddPaymentRequest(ctx context.Context, request operations.AddPaymentRequestRequest) (*operations.AddPaymentRequestResponse, error) {
+func (s *paymentPortal) AddPaymentRequest(ctx context.Context, request shared.CreatePaymentRequest) (*operations.AddPaymentRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment/addrequest"
 
@@ -134,7 +135,7 @@ func (s *paymentPortal) AddPaymentRequest(ctx context.Context, request operation
 // GetPaymentState - Returns the state of a payment request. Please note that payment requests are purged after some time, so persist the state at your side when needed
 func (s *paymentPortal) GetPaymentState(ctx context.Context, request operations.GetPaymentStateRequest) (*operations.GetPaymentStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment/state/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payment/state/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

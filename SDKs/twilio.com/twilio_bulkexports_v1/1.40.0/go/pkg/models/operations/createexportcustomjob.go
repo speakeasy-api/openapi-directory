@@ -12,12 +12,8 @@ var CreateExportCustomJobServerList = []string{
 }
 
 type CreateExportCustomJobSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateExportCustomJobPathParams struct {
-	// The type of communication – Messages or Calls, Conferences, and Participants
-	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateExportCustomJobCreateExportCustomJobRequest struct {
@@ -36,10 +32,9 @@ type CreateExportCustomJobCreateExportCustomJobRequest struct {
 }
 
 type CreateExportCustomJobRequest struct {
-	PathParams CreateExportCustomJobPathParams
-	Request    *CreateExportCustomJobCreateExportCustomJobRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateExportCustomJobSecurity
-	ServerURL  *string
+	RequestBody *CreateExportCustomJobCreateExportCustomJobRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The type of communication – Messages or Calls, Conferences, and Participants
+	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
 }
 
 type CreateExportCustomJobResponse struct {

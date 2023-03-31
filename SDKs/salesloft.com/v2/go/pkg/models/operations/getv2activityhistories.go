@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2ActivityHistoriesQueryParams struct {
+type GetV2ActivityHistoriesRequest struct {
 	// For internal use only. This field does not comply with our backwards compatibility policies. This filter is for authenticated users of Salesloft only and will not work for OAuth Applications. Filter by the {resource_type, resource_id} of activity. Provide this in the format resource[]=person,1234
 	Resource *string `queryParam:"style=form,explode=true,name=_resource"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -39,10 +39,6 @@ type GetV2ActivityHistoriesQueryParams struct {
 	UpdatedAt map[string]interface{} `queryParam:"style=form,explode=true,name=updated_at"`
 	// Filter activities by a user's guid.
 	UserGUID *string `queryParam:"style=form,explode=true,name=user_guid"`
-}
-
-type GetV2ActivityHistoriesRequest struct {
-	QueryParams GetV2ActivityHistoriesQueryParams
 }
 
 type GetV2ActivityHistoriesResponse struct {

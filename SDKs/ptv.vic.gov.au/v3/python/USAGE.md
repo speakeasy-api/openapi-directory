@@ -4,31 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeparturesGetForStopRequest(
-    path_params=operations.DeparturesGetForStopPathParams(
-        route_type=1875779757757656623,
-        stop_id=158847938390706278,
-    ),
-    query_params=operations.DeparturesGetForStopQueryParams(
-        date_utc="2010-04-18T02:08:53Z",
-        devid="reiciendis",
-        direction_id=987590293786385272,
-        expand=[
-            "Direction",
-        ],
-        gtfs=False,
-        include_cancelled=True,
-        include_geopath=True,
-        look_backwards=False,
-        max_results=638447667090541478,
-        platform_numbers=[
-            4289703848110996868,
-            684912401521822353,
-        ],
-        signature="natus",
-        token="non",
-    ),
+    date_utc="2021-10-25T05:21:43.948Z",
+    devid="distinctio",
+    direction_id=844266,
+    expand=[
+        "VehiclePosition",
+        "Direction",
+        "VehiclePosition",
+    ],
+    gtfs=False,
+    include_cancelled=False,
+    include_geopath=False,
+    look_backwards=False,
+    max_results=423655,
+    platform_numbers=[
+        645894,
+        384382,
+        437587,
+    ],
+    route_type="1",
+    signature="debitis",
+    stop_id=56713,
+    token="delectus",
 )
     
 res = s.departures.departures_get_for_stop(req)

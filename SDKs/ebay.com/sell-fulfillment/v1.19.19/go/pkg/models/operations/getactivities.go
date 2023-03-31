@@ -12,18 +12,12 @@ var GetActivitiesServerList = []string{
 }
 
 type GetActivitiesSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetActivitiesPathParams struct {
-	// This is the unique identifier of the payment dispute. This path parameter must be passed in at the end of the call URI to identify the payment dispute for which the user wishes to see all activity. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the <strong>paymentDisputeId</strong> field in the <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter is required, and the actual identifier value is passed in right after the <strong>payment_dispute</strong> resource. See the Resource URI above.
-	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetActivitiesRequest struct {
-	PathParams GetActivitiesPathParams
-	Security   GetActivitiesSecurity
-	ServerURL  *string
+	// This is the unique identifier of the payment dispute. This path parameter must be passed in at the end of the call URI to identify the payment dispute for which the user wishes to see all activity. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the <strong>paymentDisputeId</strong> field in the <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter is required, and the actual identifier value is passed in right after the <strong>payment_dispute</strong> resource. See the Resource URI above.
+	PaymentDisputeID string `pathParam:"style=simple,explode=false,name=payment_dispute_id"`
 }
 
 type GetActivitiesResponse struct {

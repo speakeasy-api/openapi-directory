@@ -8,20 +8,11 @@ import (
 )
 
 type DoubleclicksearchConversionGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DoubleclicksearchConversionGetPathParams struct {
-	// Numeric ID of the advertiser.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Numeric ID of the agency.
-	AgencyID string `pathParam:"style=simple,explode=false,name=agencyId"`
-	// Numeric ID of the engine account.
-	EngineAccountID string `pathParam:"style=simple,explode=false,name=engineAccountId"`
-}
-
-type DoubleclicksearchConversionGetQueryParams struct {
+type DoubleclicksearchConversionGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +21,10 @@ type DoubleclicksearchConversionGetQueryParams struct {
 	AdGroupID *string `queryParam:"style=form,explode=true,name=adGroupId"`
 	// Numeric ID of the ad.
 	AdID *string `queryParam:"style=form,explode=true,name=adId"`
+	// Numeric ID of the advertiser.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
+	// Numeric ID of the agency.
+	AgencyID string `pathParam:"style=simple,explode=false,name=agencyId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -42,6 +37,8 @@ type DoubleclicksearchConversionGetQueryParams struct {
 	CustomerID *string `queryParam:"style=form,explode=true,name=customerId"`
 	// Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
 	EndDate int64 `queryParam:"style=form,explode=true,name=endDate"`
+	// Numeric ID of the engine account.
+	EngineAccountID string `pathParam:"style=simple,explode=false,name=engineAccountId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -62,12 +59,6 @@ type DoubleclicksearchConversionGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DoubleclicksearchConversionGetRequest struct {
-	PathParams  DoubleclicksearchConversionGetPathParams
-	QueryParams DoubleclicksearchConversionGetQueryParams
-	Security    DoubleclicksearchConversionGetSecurity
 }
 
 type DoubleclicksearchConversionGetResponse struct {

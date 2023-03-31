@@ -116,7 +116,6 @@ pkg/models/shared/conversationsv1configurationaddress.go
 pkg/models/shared/configurationaddressenumtypeenum.go
 pkg/models/shared/configurationaddressenummethodenum.go
 pkg/models/shared/configurationaddressenumautocreationtypeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/conversationsv1conversation.go
 pkg/models/shared/conversationenumstateenum.go
 pkg/models/shared/conversationenumwebhookenabledtypeenum.go
@@ -175,3 +174,4 @@ pkg/models/shared/serviceconversationmessageenumordertypeenum.go
 pkg/models/shared/conversationsv1serviceserviceparticipantconversation.go
 pkg/models/shared/serviceparticipantconversationenumstateenum.go
 USAGE.md
+pkg/models/operations/options.go

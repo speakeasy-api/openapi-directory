@@ -8,27 +8,18 @@ import (
 )
 
 type CompleteStreamingUploadSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CompleteStreamingUploadPathParams struct {
+type CompleteStreamingUploadRequest struct {
+	// The crypto signature of the completed upload.
+	Signature string `queryParam:"style=form,explode=true,name=signature"`
 	// The ID of the upload attempt.
 	Upload float64 `pathParam:"style=simple,explode=false,name=upload"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type CompleteStreamingUploadQueryParams struct {
-	// The crypto signature of the completed upload.
-	Signature string `queryParam:"style=form,explode=true,name=signature"`
 	// The ID of the uploaded file.
 	VideoFileID float64 `queryParam:"style=form,explode=true,name=video_file_id"`
-}
-
-type CompleteStreamingUploadRequest struct {
-	PathParams  CompleteStreamingUploadPathParams
-	QueryParams CompleteStreamingUploadQueryParams
-	Security    CompleteStreamingUploadSecurity
 }
 
 type CompleteStreamingUploadResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostPrimaryIpsIDActionsUnassignPathParams struct {
+type PostPrimaryIpsIDActionsUnassignRequest struct {
 	// ID of the Primary IP
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostPrimaryIpsIDActionsUnassignRequest struct {
-	PathParams PostPrimaryIpsIDActionsUnassignPathParams
 }
 
 // PostPrimaryIpsIDActionsUnassignActionResponseActionError - Error message for the Action if error occurred, otherwise null

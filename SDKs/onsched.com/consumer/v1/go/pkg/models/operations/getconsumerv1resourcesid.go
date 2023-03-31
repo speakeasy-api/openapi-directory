@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1ResourcesIDPathParams struct {
+type GetConsumerV1ResourcesIDRequest struct {
 	// id of resource object
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetConsumerV1ResourcesIDRequest struct {
-	PathParams GetConsumerV1ResourcesIDPathParams
 }
 
 type GetConsumerV1ResourcesIDResponse struct {

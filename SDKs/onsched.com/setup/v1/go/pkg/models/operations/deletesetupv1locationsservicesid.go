@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSetupV1LocationsServicesIDPathParams struct {
+type DeleteSetupV1LocationsServicesIDRequest struct {
 	// id of locationService object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1LocationsServicesIDRequest struct {
-	PathParams DeleteSetupV1LocationsServicesIDPathParams
 }
 
 type DeleteSetupV1LocationsServicesIDResponse struct {

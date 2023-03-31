@@ -25,7 +25,6 @@ pkg/models/operations/gamesconfigurationleaderboardconfigurationslist.go
 pkg/models/operations/gamesconfigurationleaderboardconfigurationsupdate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/achievementconfiguration.go
 pkg/models/shared/achievementconfigurationdetail.go
 pkg/models/shared/localizedstringbundle.go

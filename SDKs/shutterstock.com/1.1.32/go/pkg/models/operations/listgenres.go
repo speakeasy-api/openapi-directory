@@ -8,18 +8,13 @@ import (
 )
 
 type ListGenresSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type ListGenresQueryParams struct {
-	// Which language the genres will be returned
-	Language *string `queryParam:"style=form,explode=true,name=language"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ListGenresRequest struct {
-	QueryParams ListGenresQueryParams
-	Security    ListGenresSecurity
+	// Which language the genres will be returned
+	Language *string `queryParam:"style=form,explode=true,name=language"`
 }
 
 type ListGenresResponse struct {

@@ -14,17 +14,12 @@ var TopUpAccountBalanceServerList = []string{
 	"https://rest.nexmo.com",
 }
 
-type TopUpAccountBalanceQueryParams struct {
+type TopUpAccountBalanceRequest struct {
 	// Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
-	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
-}
-
-type TopUpAccountBalanceRequest struct {
-	QueryParams TopUpAccountBalanceQueryParams
-	Request     shared.TopupRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL   *string
+	APISecret    string              `queryParam:"style=form,explode=true,name=api_secret"`
+	TopupRequest shared.TopupRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type TopUpAccountBalance401ApplicationJSONType string

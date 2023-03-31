@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPortPathParams struct {
+type GetPortRequest struct {
 	// Agent to return the primary SNMP port
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetPortRequest struct {
-	PathParams GetPortPathParams
 }
 
 type GetPortResponse struct {

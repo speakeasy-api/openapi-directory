@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type HashtagStatsQueryParams struct {
+type HashtagStatsRequest struct {
 	// Hashtag(s) without # mark
 	Tags []interface{} `queryParam:"style=form,explode=false,name=tags"`
-}
-
-type HashtagStatsRequest struct {
-	QueryParams HashtagStatsQueryParams
 }
 
 type HashtagStatsResponse struct {

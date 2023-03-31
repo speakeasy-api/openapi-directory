@@ -8,13 +8,13 @@ import (
 )
 
 type YoutubereportingJobsReportsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubereportingJobsReportsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubereportingJobsReportsListSecurity struct {
@@ -22,12 +22,7 @@ type YoutubereportingJobsReportsListSecurity struct {
 	Option2 *YoutubereportingJobsReportsListSecurityOption2 `security:"option"`
 }
 
-type YoutubereportingJobsReportsListPathParams struct {
-	// The ID of the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type YoutubereportingJobsReportsListQueryParams struct {
+type YoutubereportingJobsReportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type YoutubereportingJobsReportsListQueryParams struct {
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -62,12 +59,6 @@ type YoutubereportingJobsReportsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubereportingJobsReportsListRequest struct {
-	PathParams  YoutubereportingJobsReportsListPathParams
-	QueryParams YoutubereportingJobsReportsListQueryParams
-	Security    YoutubereportingJobsReportsListSecurity
 }
 
 type YoutubereportingJobsReportsListResponse struct {

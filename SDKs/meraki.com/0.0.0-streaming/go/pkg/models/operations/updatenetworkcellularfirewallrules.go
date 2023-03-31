@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkCellularFirewallRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum - 'allow' or 'deny' traffic specified by this rule
 type UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum string
 
@@ -94,8 +90,8 @@ type UpdateNetworkCellularFirewallRulesRequestBody struct {
 }
 
 type UpdateNetworkCellularFirewallRulesRequest struct {
-	PathParams UpdateNetworkCellularFirewallRulesPathParams
-	Request    *UpdateNetworkCellularFirewallRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkCellularFirewallRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                         `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkCellularFirewallRulesResponse struct {

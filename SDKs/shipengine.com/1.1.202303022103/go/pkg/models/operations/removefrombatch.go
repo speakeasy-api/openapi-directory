@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveFromBatchPathParams struct {
-	// Batch ID
-	BatchID string `pathParam:"style=simple,explode=false,name=batch_id"`
-}
-
 type RemoveFromBatchRequest struct {
-	PathParams RemoveFromBatchPathParams
-	Request    shared.RemoveFromBatchRequestBody `request:"mediaType=application/json"`
+	// Batch ID
+	BatchID                    string                            `pathParam:"style=simple,explode=false,name=batch_id"`
+	RemoveFromBatchRequestBody shared.RemoveFromBatchRequestBody `request:"mediaType=application/json"`
 }
 
 type RemoveFromBatchResponse struct {

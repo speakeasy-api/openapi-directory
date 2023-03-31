@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlanGroupsListQueryParams struct {
+type IpamVlanGroupsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
@@ -16,10 +16,6 @@ type IpamVlanGroupsListQueryParams struct {
 	Site   *string `queryParam:"style=form,explode=true,name=site"`
 	SiteID *string `queryParam:"style=form,explode=true,name=site_id"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type IpamVlanGroupsListRequest struct {
-	QueryParams IpamVlanGroupsListQueryParams
 }
 
 type IpamVlanGroupsList200ApplicationJSON struct {

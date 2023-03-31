@@ -7,15 +7,11 @@ import (
 	"time"
 )
 
-type RegistrationsFilesListPathParams struct {
+type RegistrationsFilesListRequest struct {
 	// The unique identifier of the storage provider.
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsFilesListRequest struct {
-	PathParams RegistrationsFilesListPathParams
 }
 
 // RegistrationsFilesListFileAttributes - The properties of the file entity.

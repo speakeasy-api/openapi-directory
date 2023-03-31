@@ -36,7 +36,7 @@ func newSNMPv3(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Adds a new access entry with the specified parameters.
 func (s *snmPv3) ProtocolSnmpv3AccessAdd(ctx context.Context, request operations.ProtocolSnmpv3AccessAddRequest) (*operations.ProtocolSnmpv3AccessAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/add/{groupName}/{prefix}/{securityModel}/{securityLevel}/{contextMatch}/{readView}/{writeView}/{notifyView}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/add/{groupName}/{prefix}/{securityModel}/{securityLevel}/{contextMatch}/{readView}/{writeView}/{notifyView}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *snmPv3) ProtocolSnmpv3AccessAdd(ctx context.Context, request operations
 // Clears all access entries.
 func (s *snmPv3) ProtocolSnmpv3AccessClear(ctx context.Context, request operations.ProtocolSnmpv3AccessClearRequest) (*operations.ProtocolSnmpv3AccessClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +130,7 @@ func (s *snmPv3) ProtocolSnmpv3AccessClear(ctx context.Context, request operatio
 // Deletes the specified access entry.
 func (s *snmPv3) ProtocolSnmpv3AccessDel(ctx context.Context, request operations.ProtocolSnmpv3AccessDelRequest) (*operations.ProtocolSnmpv3AccessDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/del/{accessName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/del/{accessName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *snmPv3) ProtocolSnmpv3AccessDel(ctx context.Context, request operations
 // Returns the current acccess entries as an array of strings.
 func (s *snmPv3) ProtocolSnmpv3AccessList(ctx context.Context, request operations.ProtocolSnmpv3AccessListRequest) (*operations.ProtocolSnmpv3AccessListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *snmPv3) ProtocolSnmpv3AccessList(ctx context.Context, request operation
 // Returns the SNMPv3 configuration.
 func (s *snmPv3) ProtocolSnmpv3GetConfig(ctx context.Context, request operations.ProtocolSnmpv3GetConfigRequest) (*operations.ProtocolSnmpv3GetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +269,7 @@ func (s *snmPv3) ProtocolSnmpv3GetConfig(ctx context.Context, request operations
 // Retrieves the contextEngineID for the agent instance.
 func (s *snmPv3) ProtocolSnmpv3GetContextEngineid(ctx context.Context, request operations.ProtocolSnmpv3GetContextEngineidRequest) (*operations.ProtocolSnmpv3GetContextEngineidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/context_engineid", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/context_engineid", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +316,7 @@ func (s *snmPv3) ProtocolSnmpv3GetContextEngineid(ctx context.Context, request o
 // Retrieves the number of times the agent has been restarted.
 func (s *snmPv3) ProtocolSnmpv3GetEngineboots(ctx context.Context, request operations.ProtocolSnmpv3GetEnginebootsRequest) (*operations.ProtocolSnmpv3GetEnginebootsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineboots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineboots", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *snmPv3) ProtocolSnmpv3GetEngineboots(ctx context.Context, request opera
 // For stopped agents, this operation is meaningless. If not explicitly set by the user then the autogenerated engineID is returned. The format of the engineID is in the familiar hex format, eg. \x01 23 45 67 89...
 func (s *snmPv3) ProtocolSnmpv3GetEngineid(ctx context.Context, request operations.ProtocolSnmpv3GetEngineidRequest) (*operations.ProtocolSnmpv3GetEngineidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineid", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineid", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -409,7 +409,7 @@ func (s *snmPv3) ProtocolSnmpv3GetEngineid(ctx context.Context, request operatio
 // Retrieves the time in seconds for which the agent has been running.
 func (s *snmPv3) ProtocolSnmpv3GetEnginetime(ctx context.Context, request operations.ProtocolSnmpv3GetEnginetimeRequest) (*operations.ProtocolSnmpv3GetEnginetimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/enginetime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/enginetime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -455,7 +455,7 @@ func (s *snmPv3) ProtocolSnmpv3GetEnginetime(ctx context.Context, request operat
 // Adds a new group entry with the specified parameters.
 func (s *snmPv3) ProtocolSnmpv3GroupAdd(ctx context.Context, request operations.ProtocolSnmpv3GroupAddRequest) (*operations.ProtocolSnmpv3GroupAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/add/{groupName}/{securityModel}/{securityName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/add/{groupName}/{securityModel}/{securityName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -502,7 +502,7 @@ func (s *snmPv3) ProtocolSnmpv3GroupAdd(ctx context.Context, request operations.
 // Clears all group entries.
 func (s *snmPv3) ProtocolSnmpv3GroupClear(ctx context.Context, request operations.ProtocolSnmpv3GroupClearRequest) (*operations.ProtocolSnmpv3GroupClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -549,7 +549,7 @@ func (s *snmPv3) ProtocolSnmpv3GroupClear(ctx context.Context, request operation
 // Deletes the specified group entry.
 func (s *snmPv3) ProtocolSnmpv3GroupDel(ctx context.Context, request operations.ProtocolSnmpv3GroupDelRequest) (*operations.ProtocolSnmpv3GroupDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/del/{groupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/del/{groupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -596,7 +596,7 @@ func (s *snmPv3) ProtocolSnmpv3GroupDel(ctx context.Context, request operations.
 // Returns the current group entries as an array of strings.
 func (s *snmPv3) ProtocolSnmpv3GroupList(ctx context.Context, request operations.ProtocolSnmpv3GroupListRequest) (*operations.ProtocolSnmpv3GroupListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -642,7 +642,7 @@ func (s *snmPv3) ProtocolSnmpv3GroupList(ctx context.Context, request operations
 // Changes the SNMPv3 configuration.
 func (s *snmPv3) ProtocolSnmpv3SetConfig(ctx context.Context, request operations.ProtocolSnmpv3SetConfigRequest) (*operations.ProtocolSnmpv3SetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/set/config/{parameter}/{value}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/set/config/{parameter}/{value}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -689,7 +689,7 @@ func (s *snmPv3) ProtocolSnmpv3SetConfig(ctx context.Context, request operations
 // Adds a new user entry with the specified parameters.
 func (s *snmPv3) ProtocolSnmpv3UserAdd(ctx context.Context, request operations.ProtocolSnmpv3UserAddRequest) (*operations.ProtocolSnmpv3UserAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/add/{userName}/{securityName}/{authProtocol}/{authKey}/{privProtocol}/{privKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/add/{userName}/{securityName}/{authProtocol}/{authKey}/{privProtocol}/{privKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -736,7 +736,7 @@ func (s *snmPv3) ProtocolSnmpv3UserAdd(ctx context.Context, request operations.P
 // Clears all user entries.
 func (s *snmPv3) ProtocolSnmpv3UserClear(ctx context.Context, request operations.ProtocolSnmpv3UserClearRequest) (*operations.ProtocolSnmpv3UserClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -783,7 +783,7 @@ func (s *snmPv3) ProtocolSnmpv3UserClear(ctx context.Context, request operations
 // Deletes the specified user entry.
 func (s *snmPv3) ProtocolSnmpv3UserDel(ctx context.Context, request operations.ProtocolSnmpv3UserDelRequest) (*operations.ProtocolSnmpv3UserDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/del/{userName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/del/{userName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -830,7 +830,7 @@ func (s *snmPv3) ProtocolSnmpv3UserDel(ctx context.Context, request operations.P
 // Returns the current user entries as a Tcl list.
 func (s *snmPv3) ProtocolSnmpv3UserList(ctx context.Context, request operations.ProtocolSnmpv3UserListRequest) (*operations.ProtocolSnmpv3UserListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -876,7 +876,7 @@ func (s *snmPv3) ProtocolSnmpv3UserList(ctx context.Context, request operations.
 // Saves current user settings in the currently loaded USM config file.
 func (s *snmPv3) ProtocolSnmpv3UsmSave(ctx context.Context, request operations.ProtocolSnmpv3UsmSaveRequest) (*operations.ProtocolSnmpv3UsmSaveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/save", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/save", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -922,7 +922,7 @@ func (s *snmPv3) ProtocolSnmpv3UsmSave(ctx context.Context, request operations.P
 // Saves current user settings in the specified USM config file.
 func (s *snmPv3) ProtocolSnmpv3UsmSaveas(ctx context.Context, request operations.ProtocolSnmpv3UsmSaveasRequest) (*operations.ProtocolSnmpv3UsmSaveasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/saveas/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/saveas/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -968,7 +968,7 @@ func (s *snmPv3) ProtocolSnmpv3UsmSaveas(ctx context.Context, request operations
 // Saves current group, access, view settings in the currently loaded VACM config file.
 func (s *snmPv3) ProtocolSnmpv3VacmSave(ctx context.Context, request operations.ProtocolSnmpv3VacmSaveRequest) (*operations.ProtocolSnmpv3VacmSaveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/save", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/save", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1014,7 +1014,7 @@ func (s *snmPv3) ProtocolSnmpv3VacmSave(ctx context.Context, request operations.
 // Saves current group, access, view settings in the specified VACM config file.
 func (s *snmPv3) ProtocolSnmpv3VacmSaveas(ctx context.Context, request operations.ProtocolSnmpv3VacmSaveasRequest) (*operations.ProtocolSnmpv3VacmSaveasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/saveas/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/saveas/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1060,7 +1060,7 @@ func (s *snmPv3) ProtocolSnmpv3VacmSaveas(ctx context.Context, request operation
 // Adds a new view entry with the specified parameters.
 func (s *snmPv3) ProtocolSnmpv3ViewAdd(ctx context.Context, request operations.ProtocolSnmpv3ViewAddRequest) (*operations.ProtocolSnmpv3ViewAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/add/{viewName}/{viewType}/{subtree}/{mask}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/add/{viewName}/{viewType}/{subtree}/{mask}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1107,7 +1107,7 @@ func (s *snmPv3) ProtocolSnmpv3ViewAdd(ctx context.Context, request operations.P
 // Clears all view entries.
 func (s *snmPv3) ProtocolSnmpv3ViewClear(ctx context.Context, request operations.ProtocolSnmpv3ViewClearRequest) (*operations.ProtocolSnmpv3ViewClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1154,7 +1154,7 @@ func (s *snmPv3) ProtocolSnmpv3ViewClear(ctx context.Context, request operations
 // Deletes the specified view entry.
 func (s *snmPv3) ProtocolSnmpv3ViewDel(ctx context.Context, request operations.ProtocolSnmpv3ViewDelRequest) (*operations.ProtocolSnmpv3ViewDelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/del/{viewName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/del/{viewName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1201,7 +1201,7 @@ func (s *snmPv3) ProtocolSnmpv3ViewDel(ctx context.Context, request operations.P
 // Returns the current view entries as an array of strings.
 func (s *snmPv3) ProtocolSnmpv3ViewList(ctx context.Context, request operations.ProtocolSnmpv3ViewListRequest) (*operations.ProtocolSnmpv3ViewListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateConfigPathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type CreateConfigQueryParams struct {
-	UserToken *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
 type CreateConfigRequest struct {
-	PathParams  CreateConfigPathParams
-	QueryParams CreateConfigQueryParams
-	Request     shared.ConfigNewParam `request:"mediaType=application/json"`
+	ConfigNewParam shared.ConfigNewParam `request:"mediaType=application/json"`
+	Key            string                `pathParam:"style=simple,explode=false,name=key"`
+	UserToken      *string               `queryParam:"style=form,explode=false,name=user_token"`
 }
 
 type CreateConfigResponse struct {

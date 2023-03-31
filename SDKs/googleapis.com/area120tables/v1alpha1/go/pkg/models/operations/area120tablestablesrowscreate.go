@@ -10,23 +10,23 @@ import (
 )
 
 type Area120tablesTablesRowsCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsCreateSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Area120tablesTablesRowsCreateSecurity struct {
@@ -34,11 +34,6 @@ type Area120tablesTablesRowsCreateSecurity struct {
 	Option2 *Area120tablesTablesRowsCreateSecurityOption2 `security:"option"`
 	Option3 *Area120tablesTablesRowsCreateSecurityOption3 `security:"option"`
 	Option4 *Area120tablesTablesRowsCreateSecurityOption4 `security:"option"`
-}
-
-type Area120tablesTablesRowsCreatePathParams struct {
-	// Required. The parent table where this row will be created. Format: tables/{table}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // Area120tablesTablesRowsCreateViewEnum - Optional. Column key to use for values in the row. Defaults to user entered name.
@@ -65,9 +60,10 @@ func (e *Area120tablesTablesRowsCreateViewEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type Area120tablesTablesRowsCreateQueryParams struct {
+type Area120tablesTablesRowsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Row         *shared.Row       `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -80,6 +76,8 @@ type Area120tablesTablesRowsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent table where this row will be created. Format: tables/{table}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -90,13 +88,6 @@ type Area120tablesTablesRowsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Column key to use for values in the row. Defaults to user entered name.
 	View *Area120tablesTablesRowsCreateViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type Area120tablesTablesRowsCreateRequest struct {
-	PathParams  Area120tablesTablesRowsCreatePathParams
-	QueryParams Area120tablesTablesRowsCreateQueryParams
-	Request     *shared.Row `request:"mediaType=application/json"`
-	Security    Area120tablesTablesRowsCreateSecurity
 }
 
 type Area120tablesTablesRowsCreateResponse struct {

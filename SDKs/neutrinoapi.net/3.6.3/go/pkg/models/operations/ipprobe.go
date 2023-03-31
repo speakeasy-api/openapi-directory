@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IPProbeQueryParams struct {
+type IPProbeRequest struct {
 	// IPv4 or IPv6 address
 	IP string `queryParam:"style=form,explode=true,name=ip"`
-}
-
-type IPProbeRequest struct {
-	QueryParams IPProbeQueryParams
 }
 
 type IPProbeResponse struct {

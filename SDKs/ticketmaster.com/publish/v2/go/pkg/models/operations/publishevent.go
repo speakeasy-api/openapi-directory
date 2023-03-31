@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishEventHeaders struct {
+type PublishEventRequest struct {
+	// Event
+	Event shared.Event `request:"mediaType=application/json"`
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PublishEventRequest struct {
-	Headers PublishEventHeaders
-	// Event
-	Request shared.Event `request:"mediaType=application/json"`
 }
 
 type PublishEventResponse struct {

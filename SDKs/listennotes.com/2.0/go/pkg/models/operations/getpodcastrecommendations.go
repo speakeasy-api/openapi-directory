@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPodcastRecommendationsPathParams struct {
-	// Podcast id.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPodcastRecommendationsQueryParams struct {
-	// Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
-	SafeMode *shared.SafeModeParamEnum `queryParam:"style=form,explode=true,name=safe_mode"`
-}
-
-type GetPodcastRecommendationsHeaders struct {
+type GetPodcastRecommendationsRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetPodcastRecommendationsRequest struct {
-	PathParams  GetPodcastRecommendationsPathParams
-	QueryParams GetPodcastRecommendationsQueryParams
-	Headers     GetPodcastRecommendationsHeaders
+	// Podcast id.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
+	SafeMode *shared.SafeModeParamEnum `queryParam:"style=form,explode=true,name=safe_mode"`
 }
 
 type GetPodcastRecommendationsResponse struct {

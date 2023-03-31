@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UseAsRegularPathParams struct {
+type UseAsRegularRequest struct {
+	UseAsRegularPayload *shared.UseAsRegularPayload `request:"mediaType=application/json"`
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type UseAsRegularRequest struct {
-	PathParams UseAsRegularPathParams
-	Request    *shared.UseAsRegularPayload `request:"mediaType=application/json"`
 }
 
 type UseAsRegularResponse struct {

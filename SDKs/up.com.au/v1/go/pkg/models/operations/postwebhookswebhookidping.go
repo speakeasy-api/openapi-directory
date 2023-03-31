@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostWebhooksWebhookIDPingPathParams struct {
+type PostWebhooksWebhookIDPingRequest struct {
 	// The unique identifier for the webhook.
 	//
 	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type PostWebhooksWebhookIDPingRequest struct {
-	PathParams PostWebhooksWebhookIDPingPathParams
 }
 
 type PostWebhooksWebhookIDPingResponse struct {

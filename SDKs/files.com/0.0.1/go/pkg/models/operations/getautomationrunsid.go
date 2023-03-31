@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAutomationRunsIDPathParams struct {
+type GetAutomationRunsIDRequest struct {
 	// Automation Run ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAutomationRunsIDRequest struct {
-	PathParams GetAutomationRunsIDPathParams
 }
 
 type GetAutomationRunsIDResponse struct {

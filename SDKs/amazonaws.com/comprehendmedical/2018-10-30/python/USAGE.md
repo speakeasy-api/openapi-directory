@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.DescribeEntitiesDetectionV2JobRequest(
-    headers=operations.DescribeEntitiesDetectionV2JobHeaders(
-        x_amz_algorithm="enim",
-        x_amz_content_sha256="sunt",
-        x_amz_credential="quos",
-        x_amz_date="at",
-        x_amz_security_token="iusto",
-        x_amz_signature="et",
-        x_amz_signed_headers="praesentium",
-        x_amz_target="ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job",
+    describe_entities_detection_v2_job_request=shared.DescribeEntitiesDetectionV2JobRequest(
+        job_id="corrupti",
     ),
-    request=shared.DescribeEntitiesDetectionV2JobRequest(
-        job_id="aut",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job",
 )
     
 res = s.describe_entities_detection_v2_job(req)

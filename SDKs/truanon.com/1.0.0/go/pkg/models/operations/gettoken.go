@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetTokenQueryParams struct {
+type GetTokenRequest struct {
 	// This is your unique username or member ID
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// The service name given to you by TruAnon
 	Service *string `queryParam:"style=form,explode=true,name=service"`
-}
-
-type GetTokenRequest struct {
-	QueryParams GetTokenQueryParams
 }
 
 type GetTokenResponse struct {

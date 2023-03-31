@@ -36,14 +36,14 @@ func newCheckoutCustomFields(defaultClient, securityClient HTTPClient, serverURL
 // DeleteCheckoutCustomFieldsIDJSON - Delete an existing CheckoutCustomField.
 func (s *checkoutCustomFields) DeleteCheckoutCustomFieldsIDJSON(ctx context.Context, request operations.DeleteCheckoutCustomFieldsIDJSONRequest) (*operations.DeleteCheckoutCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/checkout_custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/checkout_custom_fields/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *checkoutCustomFields) GetCheckoutCustomFieldsJSON(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *checkoutCustomFields) GetCheckoutCustomFieldsJSON(ctx context.Context, 
 // GetCheckoutCustomFieldsIDJSON - Retrieve a single CheckoutCustomField.
 func (s *checkoutCustomFields) GetCheckoutCustomFieldsIDJSON(ctx context.Context, request operations.GetCheckoutCustomFieldsIDJSONRequest) (*operations.GetCheckoutCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/checkout_custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/checkout_custom_fields/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -204,7 +204,7 @@ func (s *checkoutCustomFields) PostCheckoutCustomFieldsJSON(ctx context.Context,
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/checkout_custom_fields.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckoutCustomFieldEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -219,7 +219,7 @@ func (s *checkoutCustomFields) PostCheckoutCustomFieldsJSON(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -270,9 +270,9 @@ func (s *checkoutCustomFields) PostCheckoutCustomFieldsJSON(ctx context.Context,
 // PutCheckoutCustomFieldsIDJSON - Update a CheckoutCustomField.
 func (s *checkoutCustomFields) PutCheckoutCustomFieldsIDJSON(ctx context.Context, request operations.PutCheckoutCustomFieldsIDJSONRequest) (*operations.PutCheckoutCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/checkout_custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/checkout_custom_fields/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckoutCustomFieldEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -287,7 +287,7 @@ func (s *checkoutCustomFields) PutCheckoutCustomFieldsIDJSON(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

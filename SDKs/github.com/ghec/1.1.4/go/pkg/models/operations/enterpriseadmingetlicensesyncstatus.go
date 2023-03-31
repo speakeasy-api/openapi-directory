@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetLicenseSyncStatusPathParams struct {
+type EnterpriseAdminGetLicenseSyncStatusRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminGetLicenseSyncStatusRequest struct {
-	PathParams EnterpriseAdminGetLicenseSyncStatusPathParams
 }
 
 type EnterpriseAdminGetLicenseSyncStatusResponse struct {

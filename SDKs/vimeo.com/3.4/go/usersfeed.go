@@ -33,20 +33,20 @@ func newUsersFeed(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // GetFeed - Get all videos in a user's feed
-func (s *usersFeed) GetFeed(ctx context.Context, request operations.GetFeedRequest) (*operations.GetFeedResponse, error) {
+func (s *usersFeed) GetFeed(ctx context.Context, request operations.GetFeedRequest, security operations.GetFeedSecurity) (*operations.GetFeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/feed", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/feed", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *usersFeed) GetFeed(ctx context.Context, request operations.GetFeedReque
 }
 
 // GetFeedAlt1 - Get all videos in a user's feed
-func (s *usersFeed) GetFeedAlt1(ctx context.Context, request operations.GetFeedAlt1Request) (*operations.GetFeedAlt1Response, error) {
+func (s *usersFeed) GetFeedAlt1(ctx context.Context, request operations.GetFeedAlt1Request, security operations.GetFeedAlt1Security) (*operations.GetFeedAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/feed"
 
@@ -90,11 +90,11 @@ func (s *usersFeed) GetFeedAlt1(ctx context.Context, request operations.GetFeedA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

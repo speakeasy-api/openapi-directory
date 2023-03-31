@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportChannelsRequest struct {
-	Request shared.ExportChannelsRequest `request:"mediaType=application/json"`
-}
-
 type ExportChannelsResponse struct {
 	// Bad request
 	APIError    *shared.APIError

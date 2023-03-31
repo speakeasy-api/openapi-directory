@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetExamplesPathParams struct {
-	// Word to return examples for
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetExamplesIncludeDuplicatesEnum - Show duplicate examples from different sources
 type GetExamplesIncludeDuplicatesEnum string
 
@@ -61,7 +56,7 @@ func (e *GetExamplesUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetExamplesQueryParams struct {
+type GetExamplesRequest struct {
 	// Show duplicate examples from different sources
 	IncludeDuplicates *GetExamplesIncludeDuplicatesEnum `queryParam:"style=form,explode=true,name=includeDuplicates"`
 	// Maximum number of results to return
@@ -70,11 +65,8 @@ type GetExamplesQueryParams struct {
 	Skip *int `queryParam:"style=form,explode=true,name=skip"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetExamplesUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetExamplesRequest struct {
-	PathParams  GetExamplesPathParams
-	QueryParams GetExamplesQueryParams
+	// Word to return examples for
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetExamplesResponse struct {

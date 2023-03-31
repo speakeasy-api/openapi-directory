@@ -12,7 +12,8 @@ var CreateCredentialPublicKeyServerList = []string{
 }
 
 type CreateCredentialPublicKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCredentialPublicKeyCreateCredentialPublicKeyRequest struct {
@@ -22,12 +23,6 @@ type CreateCredentialPublicKeyCreateCredentialPublicKeyRequest struct {
 	FriendlyName *string `form:"name=FriendlyName"`
 	// A URL encoded representation of the public key. For example, `-----BEGIN PUBLIC KEY-----MIIBIjANB.pa9xQIDAQAB-----END PUBLIC KEY-----`
 	PublicKey string `form:"name=PublicKey"`
-}
-
-type CreateCredentialPublicKeyRequest struct {
-	Request   *CreateCredentialPublicKeyCreateCredentialPublicKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCredentialPublicKeySecurity
-	ServerURL *string
 }
 
 type CreateCredentialPublicKeyResponse struct {

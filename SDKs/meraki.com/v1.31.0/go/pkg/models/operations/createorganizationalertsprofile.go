@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationAlertsProfilePathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // CreateOrganizationAlertsProfileRequestBodyAlertConditionInterfaceEnum - The uplink observed for the alert.  interface must be one of the following: wan1, wan2, cellular
 type CreateOrganizationAlertsProfileRequestBodyAlertConditionInterfaceEnum string
 
@@ -123,8 +119,8 @@ type CreateOrganizationAlertsProfileRequestBody struct {
 }
 
 type CreateOrganizationAlertsProfileRequest struct {
-	PathParams CreateOrganizationAlertsProfilePathParams
-	Request    CreateOrganizationAlertsProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationAlertsProfileRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                     `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationAlertsProfileResponse struct {

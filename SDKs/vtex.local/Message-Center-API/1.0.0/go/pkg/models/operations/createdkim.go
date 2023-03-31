@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CreateDKIMPathParams struct {
+type CreateDKIMRequest struct {
 	// E-mail address for sender that was setup in VTEX mail servers
 	EmailProvider string `pathParam:"style=simple,explode=false,name=EmailProvider"`
-}
-
-type CreateDKIMRequest struct {
-	PathParams CreateDKIMPathParams
 }
 
 type CreateDKIMResponse struct {

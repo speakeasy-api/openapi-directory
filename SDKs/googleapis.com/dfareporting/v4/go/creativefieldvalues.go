@@ -32,20 +32,20 @@ func newCreativeFieldValues(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // DfareportingCreativeFieldValuesDelete - Deletes an existing creative field value.
-func (s *creativeFieldValues) DfareportingCreativeFieldValuesDelete(ctx context.Context, request operations.DfareportingCreativeFieldValuesDeleteRequest) (*operations.DfareportingCreativeFieldValuesDeleteResponse, error) {
+func (s *creativeFieldValues) DfareportingCreativeFieldValuesDelete(ctx context.Context, request operations.DfareportingCreativeFieldValuesDeleteRequest, security operations.DfareportingCreativeFieldValuesDeleteSecurity) (*operations.DfareportingCreativeFieldValuesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesDelete(ctx context.
 }
 
 // DfareportingCreativeFieldValuesGet - Gets one creative field value by ID.
-func (s *creativeFieldValues) DfareportingCreativeFieldValuesGet(ctx context.Context, request operations.DfareportingCreativeFieldValuesGetRequest) (*operations.DfareportingCreativeFieldValuesGetResponse, error) {
+func (s *creativeFieldValues) DfareportingCreativeFieldValuesGet(ctx context.Context, request operations.DfareportingCreativeFieldValuesGetRequest, security operations.DfareportingCreativeFieldValuesGetSecurity) (*operations.DfareportingCreativeFieldValuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesGet(ctx context.Con
 }
 
 // DfareportingCreativeFieldValuesInsert - Inserts a new creative field value.
-func (s *creativeFieldValues) DfareportingCreativeFieldValuesInsert(ctx context.Context, request operations.DfareportingCreativeFieldValuesInsertRequest) (*operations.DfareportingCreativeFieldValuesInsertResponse, error) {
+func (s *creativeFieldValues) DfareportingCreativeFieldValuesInsert(ctx context.Context, request operations.DfareportingCreativeFieldValuesInsertRequest, security operations.DfareportingCreativeFieldValuesInsertSecurity) (*operations.DfareportingCreativeFieldValuesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeFieldValue", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesInsert(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesInsert(ctx context.
 }
 
 // DfareportingCreativeFieldValuesList - Retrieves a list of creative field values, possibly filtered. This method supports paging.
-func (s *creativeFieldValues) DfareportingCreativeFieldValuesList(ctx context.Context, request operations.DfareportingCreativeFieldValuesListRequest) (*operations.DfareportingCreativeFieldValuesListResponse, error) {
+func (s *creativeFieldValues) DfareportingCreativeFieldValuesList(ctx context.Context, request operations.DfareportingCreativeFieldValuesListRequest, security operations.DfareportingCreativeFieldValuesListSecurity) (*operations.DfareportingCreativeFieldValuesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesList(ctx context.Co
 }
 
 // DfareportingCreativeFieldValuesPatch - Updates an existing creative field value. This method supports patch semantics.
-func (s *creativeFieldValues) DfareportingCreativeFieldValuesPatch(ctx context.Context, request operations.DfareportingCreativeFieldValuesPatchRequest) (*operations.DfareportingCreativeFieldValuesPatchResponse, error) {
+func (s *creativeFieldValues) DfareportingCreativeFieldValuesPatch(ctx context.Context, request operations.DfareportingCreativeFieldValuesPatchRequest, security operations.DfareportingCreativeFieldValuesPatchSecurity) (*operations.DfareportingCreativeFieldValuesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeFieldValue", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesPatch(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesPatch(ctx context.C
 }
 
 // DfareportingCreativeFieldValuesUpdate - Updates an existing creative field value.
-func (s *creativeFieldValues) DfareportingCreativeFieldValuesUpdate(ctx context.Context, request operations.DfareportingCreativeFieldValuesUpdateRequest) (*operations.DfareportingCreativeFieldValuesUpdateResponse, error) {
+func (s *creativeFieldValues) DfareportingCreativeFieldValuesUpdate(ctx context.Context, request operations.DfareportingCreativeFieldValuesUpdateRequest, security operations.DfareportingCreativeFieldValuesUpdateSecurity) (*operations.DfareportingCreativeFieldValuesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeFieldValue", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *creativeFieldValues) DfareportingCreativeFieldValuesUpdate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

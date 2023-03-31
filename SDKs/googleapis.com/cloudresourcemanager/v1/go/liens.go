@@ -33,11 +33,11 @@ func newLiens(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CloudresourcemanagerLiensCreate - Create a Lien which applies to the resource denoted by the `parent` field. Callers of this method will require permission on the `parent` resource. For example, applying to `projects/1234` requires permission `resourcemanager.projects.updateLiens`. NOTE: Some resources may limit the number of Liens which may be applied.
-func (s *liens) CloudresourcemanagerLiensCreate(ctx context.Context, request operations.CloudresourcemanagerLiensCreateRequest) (*operations.CloudresourcemanagerLiensCreateResponse, error) {
+func (s *liens) CloudresourcemanagerLiensCreate(ctx context.Context, request operations.CloudresourcemanagerLiensCreateRequest, security operations.CloudresourcemanagerLiensCreateSecurity) (*operations.CloudresourcemanagerLiensCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/liens"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Lien", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *liens) CloudresourcemanagerLiensCreate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *liens) CloudresourcemanagerLiensCreate(ctx context.Context, request ope
 }
 
 // CloudresourcemanagerLiensDelete - Delete a Lien by `name`. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.updateLiens`.
-func (s *liens) CloudresourcemanagerLiensDelete(ctx context.Context, request operations.CloudresourcemanagerLiensDeleteRequest) (*operations.CloudresourcemanagerLiensDeleteResponse, error) {
+func (s *liens) CloudresourcemanagerLiensDelete(ctx context.Context, request operations.CloudresourcemanagerLiensDeleteRequest, security operations.CloudresourcemanagerLiensDeleteSecurity) (*operations.CloudresourcemanagerLiensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *liens) CloudresourcemanagerLiensDelete(ctx context.Context, request ope
 }
 
 // CloudresourcemanagerLiensList - List all Liens applied to the `parent` resource. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.get`.
-func (s *liens) CloudresourcemanagerLiensList(ctx context.Context, request operations.CloudresourcemanagerLiensListRequest) (*operations.CloudresourcemanagerLiensListResponse, error) {
+func (s *liens) CloudresourcemanagerLiensList(ctx context.Context, request operations.CloudresourcemanagerLiensListRequest, security operations.CloudresourcemanagerLiensListSecurity) (*operations.CloudresourcemanagerLiensListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/liens"
 
@@ -145,11 +145,11 @@ func (s *liens) CloudresourcemanagerLiensList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

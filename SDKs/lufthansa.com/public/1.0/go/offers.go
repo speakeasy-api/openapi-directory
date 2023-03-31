@@ -32,22 +32,22 @@ func newOffers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // OffersLoungesByLocationGet - Lounges
 // Lounge information
-func (s *offers) OffersLoungesByLocationGet(ctx context.Context, request operations.OffersLoungesByLocationGetRequest) (*operations.OffersLoungesByLocationGetResponse, error) {
+func (s *offers) OffersLoungesByLocationGet(ctx context.Context, request operations.OffersLoungesByLocationGetRequest, security operations.OffersLoungesByLocationGetSecurity) (*operations.OffersLoungesByLocationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offers/lounges/{location}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offers/lounges/{location}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,18 +83,18 @@ func (s *offers) OffersLoungesByLocationGet(ctx context.Context, request operati
 
 // OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet - Seat Maps
 // Cabin layout and seat characteristics.
-func (s *offers) OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet(ctx context.Context, request operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest) (*operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse, error) {
+func (s *offers) OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet(ctx context.Context, request operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest, security operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity) (*operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offers/seatmaps/{flightNumber}/{origin}/{destination}/{date}/{cabinClass}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offers/seatmaps/{flightNumber}/{origin}/{destination}/{date}/{cabinClass}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

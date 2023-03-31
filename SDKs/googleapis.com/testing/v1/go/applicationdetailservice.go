@@ -33,11 +33,11 @@ func newApplicationDetailService(defaultClient, securityClient HTTPClient, serve
 }
 
 // TestingApplicationDetailServiceGetApkDetails - Gets the details of an Android application APK.
-func (s *applicationDetailService) TestingApplicationDetailServiceGetApkDetails(ctx context.Context, request operations.TestingApplicationDetailServiceGetApkDetailsRequest) (*operations.TestingApplicationDetailServiceGetApkDetailsResponse, error) {
+func (s *applicationDetailService) TestingApplicationDetailServiceGetApkDetails(ctx context.Context, request operations.TestingApplicationDetailServiceGetApkDetailsRequest, security operations.TestingApplicationDetailServiceGetApkDetailsSecurity) (*operations.TestingApplicationDetailServiceGetApkDetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/applicationDetailService/getApkDetails"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *applicationDetailService) TestingApplicationDetailServiceGetApkDetails(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeletHookSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeletHookPathParams struct {
-	// Hook ID
-	HookID string `pathParam:"style=simple,explode=false,name=hook_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type DeletHookRequest struct {
-	PathParams DeletHookPathParams
-	Security   DeletHookSecurity
+	// Hook ID
+	HookID string `pathParam:"style=simple,explode=false,name=hook_id"`
 }
 
 type DeletHookResponse struct {

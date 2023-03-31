@@ -33,11 +33,11 @@ func newURLInspection(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // SearchconsoleURLInspectionIndexInspect - Index inspection.
-func (s *urlInspection) SearchconsoleURLInspectionIndexInspect(ctx context.Context, request operations.SearchconsoleURLInspectionIndexInspectRequest) (*operations.SearchconsoleURLInspectionIndexInspectResponse, error) {
+func (s *urlInspection) SearchconsoleURLInspectionIndexInspect(ctx context.Context, request operations.SearchconsoleURLInspectionIndexInspectRequest, security operations.SearchconsoleURLInspectionIndexInspectSecurity) (*operations.SearchconsoleURLInspectionIndexInspectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/urlInspection/index:inspect"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InspectURLIndexRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *urlInspection) SearchconsoleURLInspectionIndexInspect(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

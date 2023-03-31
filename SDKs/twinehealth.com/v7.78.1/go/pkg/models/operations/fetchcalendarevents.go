@@ -63,7 +63,7 @@ func (e *FetchCalendarEventsIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FetchCalendarEventsQueryParams struct {
+type FetchCalendarEventsRequest struct {
 	// Comma-separated list of coach or patient ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.
 	//
 	FilterAttendees *string `queryParam:"style=form,explode=true,name=filter[attendees]"`
@@ -105,10 +105,6 @@ type FetchCalendarEventsQueryParams struct {
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page[number]"`
 	// Page size
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type FetchCalendarEventsRequest struct {
-	QueryParams FetchCalendarEventsQueryParams
 }
 
 type FetchCalendarEventsResponse struct {

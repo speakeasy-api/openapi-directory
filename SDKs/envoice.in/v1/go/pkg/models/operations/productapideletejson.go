@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductAPIDeleteJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type ProductAPIDeleteJSONRequest struct {
-	Headers ProductAPIDeleteJSONHeaders
-	Request shared.ProductDeleteAPIModel `request:"mediaType=application/json"`
+	ProductDeleteAPIModel shared.ProductDeleteAPIModel `request:"mediaType=application/json"`
+	XAuthKey              string                       `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret           string                       `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type ProductAPIDeleteJSONResponse struct {

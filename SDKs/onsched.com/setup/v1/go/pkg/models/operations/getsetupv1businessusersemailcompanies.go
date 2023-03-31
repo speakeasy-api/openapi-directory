@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1BusinessusersEmailCompaniesPathParams struct {
+type GetSetupV1BusinessusersEmailCompaniesRequest struct {
 	// Email of business user
 	Email string `pathParam:"style=simple,explode=false,name=email"`
-}
-
-type GetSetupV1BusinessusersEmailCompaniesQueryParams struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// All or partial company name
 	SearchText *string `queryParam:"style=form,explode=true,name=searchText"`
-}
-
-type GetSetupV1BusinessusersEmailCompaniesRequest struct {
-	PathParams  GetSetupV1BusinessusersEmailCompaniesPathParams
-	QueryParams GetSetupV1BusinessusersEmailCompaniesQueryParams
 }
 
 type GetSetupV1BusinessusersEmailCompaniesResponse struct {

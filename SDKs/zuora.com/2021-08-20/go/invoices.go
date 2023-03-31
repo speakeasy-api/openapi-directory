@@ -38,14 +38,14 @@ func newInvoices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Retrieves information about the payments or credit memos that are applied to a specified invoice.
 func (s *invoices) GETInvoiceApplicationParts(ctx context.Context, request operations.GETInvoiceApplicationPartsRequest) (*operations.GETInvoiceApplicationPartsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/application-parts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/application-parts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -95,16 +95,16 @@ func (s *invoices) GETInvoiceApplicationParts(ctx context.Context, request opera
 // See [Query an Invoice Body](https://knowledgecenter.zuora.com/Central_Platform/API/G_SOAP_API/E1_SOAP_API_Object_Reference/Invoice/Query_an_Invoice_Body_Field) for more information.
 func (s *invoices) GETInvoiceFiles(ctx context.Context, request operations.GETInvoiceFilesRequest) (*operations.GETInvoiceFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -148,16 +148,16 @@ func (s *invoices) GETInvoiceFiles(ctx context.Context, request operations.GETIn
 // Retrieves the information about all items of a specified invoice.
 func (s *invoices) GETInvoiceItems(ctx context.Context, request operations.GETInvoiceItemsRequest) (*operations.GETInvoiceItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -201,16 +201,16 @@ func (s *invoices) GETInvoiceItems(ctx context.Context, request operations.GETIn
 // Retrieves information about the taxation items of a specific invoice item.
 func (s *invoices) GETTaxationItemsOfInvoiceItem(ctx context.Context, request operations.GETTaxationItemsOfInvoiceItemRequest) (*operations.GETTaxationItemsOfInvoiceItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/items/{itemId}/taxation-items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/items/{itemId}/taxation-items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -253,14 +253,14 @@ func (s *invoices) GETTaxationItemsOfInvoiceItem(ctx context.Context, request op
 // ObjectDELETEInvoice - CRUD: Delete an invoice
 func (s *invoices) ObjectDELETEInvoice(ctx context.Context, request operations.ObjectDELETEInvoiceRequest) (*operations.ObjectDELETEInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -313,16 +313,16 @@ func (s *invoices) ObjectDELETEInvoice(ctx context.Context, request operations.O
 // ObjectGETInvoice - CRUD: Retrieve an invoice
 func (s *invoices) ObjectGETInvoice(ctx context.Context, request operations.ObjectGETInvoiceRequest) (*operations.ObjectGETInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -389,9 +389,9 @@ func (s *invoices) ObjectGETInvoice(ctx context.Context, request operations.Obje
 // ObjectPUTInvoice - CRUD: Update an invoice
 func (s *invoices) ObjectPUTInvoice(ctx context.Context, request operations.ObjectPUTInvoiceRequest) (*operations.ObjectPUTInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/invoice/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyInvoice", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -406,9 +406,9 @@ func (s *invoices) ObjectPUTInvoice(ctx context.Context, request operations.Obje
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -470,9 +470,9 @@ func (s *invoices) ObjectPUTInvoice(ctx context.Context, request operations.Obje
 // For a use case of this operation, see [Create credit memo](https://www.zuora.com/developer/api-guides/#Create-credit-memo).
 func (s *invoices) POSTCreditMemoFromInvoice(ctx context.Context, request operations.POSTCreditMemoFromInvoiceRequest) (*operations.POSTCreditMemoFromInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/creditmemos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/creditmemos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreditMemoFromInvoiceType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -487,7 +487,7 @@ func (s *invoices) POSTCreditMemoFromInvoice(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -533,9 +533,9 @@ func (s *invoices) POSTCreditMemoFromInvoice(ctx context.Context, request operat
 // You can create a debit memo from an invoice only if you have the user permission. See [Billing Roles](https://knowledgecenter.zuora.com/CF_Users_and_Administrators/A_Administrator_Settings/User_Roles/d_Billing_Roles) for more information.
 func (s *invoices) POSTDebitMemoFromInvoice(ctx context.Context, request operations.POSTDebitMemoFromInvoiceRequest) (*operations.POSTDebitMemoFromInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/debitmemos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/debitmemos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DebitMemoFromInvoiceType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -550,7 +550,7 @@ func (s *invoices) POSTDebitMemoFromInvoice(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -604,9 +604,9 @@ func (s *invoices) POSTDebitMemoFromInvoice(ctx context.Context, request operati
 //   - The email addresses are not specified in the `emailAddresses` field.
 func (s *invoices) POSTEmailInvoice(ctx context.Context, request operations.POSTEmailInvoiceRequest) (*operations.POSTEmailInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/emails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/emails", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostInvoiceEmailRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -621,7 +621,7 @@ func (s *invoices) POSTEmailInvoice(ctx context.Context, request operations.POST
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -669,7 +669,7 @@ func (s *invoices) POSTStandaloneInvoice(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/invoices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostInvoiceType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -684,7 +684,7 @@ func (s *invoices) POSTStandaloneInvoice(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -733,9 +733,9 @@ func (s *invoices) POSTStandaloneInvoice(ctx context.Context, request operations
 // - A maximum of 50 PDF files can be uploaded for one invoice.
 func (s *invoices) POSTUploadFileForInvoice(ctx context.Context, request operations.POSTUploadFileForInvoiceRequest) (*operations.POSTUploadFileForInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/files", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -747,7 +747,7 @@ func (s *invoices) POSTUploadFileForInvoice(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -797,7 +797,7 @@ func (s *invoices) PUTBatchUpdateInvoices(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/invoices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutBatchInvoiceType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -812,7 +812,7 @@ func (s *invoices) PUTBatchUpdateInvoices(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -869,9 +869,9 @@ func (s *invoices) PUTBatchUpdateInvoices(ctx context.Context, request operation
 // See [Invoice Reversal](https://knowledgecenter.zuora.com/CB_Billing/IA_Invoices/Reverse_Posted_Invoices) for more information.
 func (s *invoices) PUTReverseInvoice(ctx context.Context, request operations.PUTReverseInvoiceRequest) (*operations.PUTReverseInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/reverse", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/reverse", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutReverseInvoiceType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -886,7 +886,7 @@ func (s *invoices) PUTReverseInvoice(ctx context.Context, request operations.PUT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -928,9 +928,9 @@ func (s *invoices) PUTReverseInvoice(ctx context.Context, request operations.PUT
 // Updates a specific invoice.
 func (s *invoices) PUTUpdateInvoice(ctx context.Context, request operations.PUTUpdateInvoiceRequest) (*operations.PUTUpdateInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutInvoiceType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -945,7 +945,7 @@ func (s *invoices) PUTUpdateInvoice(ctx context.Context, request operations.PUTU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1005,9 +1005,9 @@ func (s *invoices) PUTUpdateInvoice(ctx context.Context, request operations.PUTU
 // See [Invoice Write-off](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/IA_Invoices/Invoice_Write-Off) for more information.
 func (s *invoices) PUTWriteOffInvoice(ctx context.Context, request operations.PUTWriteOffInvoiceRequest) (*operations.PUTWriteOffInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/write-off", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/invoices/{invoiceId}/write-off", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTWriteOffInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1022,7 +1022,7 @@ func (s *invoices) PUTWriteOffInvoice(ctx context.Context, request operations.PU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

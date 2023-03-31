@@ -3,62 +3,113 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.BatchCreateTableRowsRequest(
-    path_params=operations.BatchCreateTableRowsPathParams(
-        table_id="praesentium",
-        workbook_id="et",
-    ),
-    headers=operations.BatchCreateTableRowsHeaders(
-        x_amz_algorithm="ratione",
-        x_amz_content_sha256="est",
-        x_amz_credential="in",
-        x_amz_date="corporis",
-        x_amz_security_token="dolores",
-        x_amz_signature="perferendis",
-        x_amz_signed_headers="laboriosam",
-    ),
-    request=operations.BatchCreateTableRowsRequestBody(
-        client_request_token="numquam",
+    request_body=operations.BatchCreateTableRowsRequestBody(
+        client_request_token="corrupti",
         rows_to_create=[
             shared.CreateRowData(
-                batch_item_id="aperiam",
+                batch_item_id="distinctio",
                 cells_to_create={
-                    "velit": shared.CellInput(
-                        fact="possimus",
+                    "unde": shared.CellInput(
+                        fact="nulla",
+                        facts=[
+                            "illum",
+                            "vel",
+                            "error",
+                        ],
                     ),
-                    "hic": shared.CellInput(
-                        fact="quis",
+                    "deserunt": shared.CellInput(
+                        fact="suscipit",
+                        facts=[
+                            "magnam",
+                            "debitis",
+                        ],
                     ),
-                    "sunt": shared.CellInput(
-                        fact="quo",
+                    "ipsa": shared.CellInput(
+                        fact="delectus",
+                        facts=[
+                            "suscipit",
+                            "molestiae",
+                        ],
+                    ),
+                    "minus": shared.CellInput(
+                        fact="placeat",
+                        facts=[
+                            "iusto",
+                            "excepturi",
+                            "nisi",
+                        ],
                     ),
                 },
             ),
             shared.CreateRowData(
-                batch_item_id="eveniet",
+                batch_item_id="recusandae",
                 cells_to_create={
-                    "reiciendis": shared.CellInput(
-                        fact="non",
+                    "ab": shared.CellInput(
+                        fact="quis",
+                        facts=[
+                            "deserunt",
+                        ],
                     ),
-                    "dolor": shared.CellInput(
+                    "perferendis": shared.CellInput(
+                        fact="ipsam",
+                        facts=[
+                            "sapiente",
+                            "quo",
+                            "odit",
+                            "at",
+                        ],
+                    ),
+                    "at": shared.CellInput(
                         fact="maiores",
+                        facts=[
+                            "quod",
+                            "quod",
+                        ],
                     ),
-                    "itaque": shared.CellInput(
-                        fact="pariatur",
+                    "esse": shared.CellInput(
+                        fact="totam",
+                        facts=[
+                            "dolorum",
+                            "dicta",
+                            "nam",
+                            "officia",
+                        ],
+                    ),
+                },
+            ),
+            shared.CreateRowData(
+                batch_item_id="occaecati",
+                cells_to_create={
+                    "deleniti": shared.CellInput(
+                        fact="hic",
+                        facts=[
+                            "totam",
+                            "beatae",
+                            "commodi",
+                            "molestiae",
+                        ],
                     ),
                 },
             ),
         ],
     ),
+    x_amz_algorithm="modi",
+    x_amz_content_sha256="qui",
+    x_amz_credential="impedit",
+    x_amz_date="cum",
+    x_amz_security_token="esse",
+    x_amz_signature="ipsum",
+    x_amz_signed_headers="excepturi",
+    table_id="aspernatur",
+    workbook_id="perferendis",
 )
     
 res = s.batch_create_table_rows(req)

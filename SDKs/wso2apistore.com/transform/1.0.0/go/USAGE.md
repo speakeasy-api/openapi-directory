@@ -13,9 +13,7 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostJsontoxmlRequest{
-        Request: "corrupti",
-    }
+    req := "corrupti"
 
     ctx := context.Background()
     res, err := s.PostJsontoxml(ctx, req)

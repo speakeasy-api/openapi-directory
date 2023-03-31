@@ -33,11 +33,11 @@ func newSalesTax(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CreateOrReplaceSalesTax - This method creates or updates a sales tax table entry for a jurisdiction. Specify the tax table entry you want to configure using the two path parameters: <b>countryCode</b> and <b>jurisdictionId</b>.  <br/><br/>A tax table entry for a jurisdiction is comprised of two fields: one for the jurisdiction's sales-tax rate and another that's a boolean value indicating whether or not shipping and handling are taxed in the jurisdiction.  <br/><br/>You can set up <i>tax tables</i> for countries that support different <i>tax jurisdictions</i>. Currently, only Canada, India, and the US support separate tax jurisdictions. If you sell into any of these countries, you can set up tax tables for any of the country's jurisdictions. Retrieve valid jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API.  <br/><br/>For details on using this call, see <a href="/api-docs/sell/static/seller-accounts/tax-tables.html">Establishing sales-tax tables</a>. <br/><br/><span class="tablenote"><b>Important!</b> In the US, eBay now 'collects and remits' sales tax for every US state except for Missouri (and a few US territories), so sellers can no longer configure sales tax rates for any states except Missouri. With eBay 'collect and remit', eBay calculates the sales tax, collects the sales tax from the buyer, and remits the sales tax to the tax authorities at the buyer's location.</span>
-func (s *salesTax) CreateOrReplaceSalesTax(ctx context.Context, request operations.CreateOrReplaceSalesTaxRequest) (*operations.CreateOrReplaceSalesTaxResponse, error) {
+func (s *salesTax) CreateOrReplaceSalesTax(ctx context.Context, request operations.CreateOrReplaceSalesTaxRequest, security operations.CreateOrReplaceSalesTaxSecurity) (*operations.CreateOrReplaceSalesTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sales_tax/{countryCode}/{jurisdictionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sales_tax/{countryCode}/{jurisdictionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesTaxBase", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *salesTax) CreateOrReplaceSalesTax(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,16 +84,16 @@ func (s *salesTax) CreateOrReplaceSalesTax(ctx context.Context, request operatio
 }
 
 // DeleteSalesTax - This call deletes a sales tax table entry for a jurisdiction. Specify the jurisdiction to delete using the <b>countryCode</b> and <b>jurisdictionId</b> path parameters.
-func (s *salesTax) DeleteSalesTax(ctx context.Context, request operations.DeleteSalesTaxRequest) (*operations.DeleteSalesTaxResponse, error) {
+func (s *salesTax) DeleteSalesTax(ctx context.Context, request operations.DeleteSalesTaxRequest, security operations.DeleteSalesTaxSecurity) (*operations.DeleteSalesTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sales_tax/{countryCode}/{jurisdictionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sales_tax/{countryCode}/{jurisdictionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,16 +125,16 @@ func (s *salesTax) DeleteSalesTax(ctx context.Context, request operations.Delete
 }
 
 // GetSalesTax - This call gets the current sales tax table entry for a specific tax jurisdiction. Specify the jurisdiction to retrieve using the <b>countryCode</b> and <b>jurisdictionId</b> path parameters. All four response fields will be returned if a sales tax entry exists for the tax jurisdiction. Otherwise, the response will be returned as empty.<br/><br/><span class="tablenote"><b>Important!</b> In most US states and territories, eBay now 'collects and remits' sales tax, so sellers can no longer configure sales tax rates for these states/territories.</span>
-func (s *salesTax) GetSalesTax(ctx context.Context, request operations.GetSalesTaxRequest) (*operations.GetSalesTaxResponse, error) {
+func (s *salesTax) GetSalesTax(ctx context.Context, request operations.GetSalesTaxRequest, security operations.GetSalesTaxSecurity) (*operations.GetSalesTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sales_tax/{countryCode}/{jurisdictionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sales_tax/{countryCode}/{jurisdictionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *salesTax) GetSalesTax(ctx context.Context, request operations.GetSalesT
 }
 
 // GetSalesTaxes - Use this call to retrieve all sales tax table entries that the seller has defined for a specific country. All four response fields will be returned for each tax jurisdiction that matches the search criteria. <br/><br/><span class="tablenote"><b>Important!</b> In most US states and territories, eBay now 'collects and remits' sales tax, so sellers can no longer configure sales tax rates for these states/territories.</span>
-func (s *salesTax) GetSalesTaxes(ctx context.Context, request operations.GetSalesTaxesRequest) (*operations.GetSalesTaxesResponse, error) {
+func (s *salesTax) GetSalesTaxes(ctx context.Context, request operations.GetSalesTaxesRequest, security operations.GetSalesTaxesSecurity) (*operations.GetSalesTaxesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sales_tax"
 
@@ -185,11 +185,11 @@ func (s *salesTax) GetSalesTaxes(ctx context.Context, request operations.GetSale
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

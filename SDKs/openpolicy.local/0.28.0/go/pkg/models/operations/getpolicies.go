@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPoliciesQueryParams struct {
+type GetPoliciesRequest struct {
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type GetPoliciesRequest struct {
-	QueryParams GetPoliciesQueryParams
 }
 
 type GetPoliciesResponse struct {

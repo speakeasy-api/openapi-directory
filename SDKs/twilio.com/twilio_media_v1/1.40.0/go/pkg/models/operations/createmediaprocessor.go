@@ -14,7 +14,8 @@ var CreateMediaProcessorServerList = []string{
 }
 
 type CreateMediaProcessorSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateMediaProcessorCreateMediaProcessorRequestStatusCallbackMethodEnum - The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.
@@ -66,12 +67,6 @@ type CreateMediaProcessorCreateMediaProcessorRequest struct {
 	StatusCallback *string `form:"name=StatusCallback"`
 	// The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.
 	StatusCallbackMethod *CreateMediaProcessorCreateMediaProcessorRequestStatusCallbackMethodEnum `form:"name=StatusCallbackMethod"`
-}
-
-type CreateMediaProcessorRequest struct {
-	Request   *CreateMediaProcessorCreateMediaProcessorRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateMediaProcessorSecurity
-	ServerURL *string
 }
 
 type CreateMediaProcessorResponse struct {

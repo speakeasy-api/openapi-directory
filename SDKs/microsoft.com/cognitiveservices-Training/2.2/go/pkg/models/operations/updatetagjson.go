@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTagJSONPathParams struct {
+type UpdateTagJSONRequest struct {
+	// The updated tag model.
+	TagInput    shared.TagInput `request:"mediaType=application/json"`
+	TrainingKey string          `header:"style=simple,explode=false,name=Training-Key"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The id of the target tag.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type UpdateTagJSONHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateTagJSONRequest struct {
-	PathParams UpdateTagJSONPathParams
-	Headers    UpdateTagJSONHeaders
-	// The updated tag model.
-	Request shared.TagInput `request:"mediaType=application/json"`
 }
 
 type UpdateTagJSONResponse struct {

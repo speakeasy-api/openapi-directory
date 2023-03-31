@@ -34,9 +34,9 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // TravelpartnerAccountsAccountLinksCreate - Creates a new account link between a Hotel Center account and a Google Ads account.
 func (s *accounts) TravelpartnerAccountsAccountLinksCreate(ctx context.Context, request operations.TravelpartnerAccountsAccountLinksCreateRequest) (*operations.TravelpartnerAccountsAccountLinksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/accountLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/accountLinks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountLink", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *accounts) TravelpartnerAccountsAccountLinksCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *accounts) TravelpartnerAccountsAccountLinksCreate(ctx context.Context, 
 // TravelpartnerAccountsAccountLinksDelete - Deletes an account link.
 func (s *accounts) TravelpartnerAccountsAccountLinksDelete(ctx context.Context, request operations.TravelpartnerAccountsAccountLinksDeleteRequest) (*operations.TravelpartnerAccountsAccountLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,14 +137,14 @@ func (s *accounts) TravelpartnerAccountsAccountLinksDelete(ctx context.Context, 
 // TravelpartnerAccountsAccountLinksList - Returns the account links for a Hotel Center account.
 func (s *accounts) TravelpartnerAccountsAccountLinksList(ctx context.Context, request operations.TravelpartnerAccountsAccountLinksListRequest) (*operations.TravelpartnerAccountsAccountLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/accountLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/accountLinks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,9 +185,9 @@ func (s *accounts) TravelpartnerAccountsAccountLinksList(ctx context.Context, re
 // TravelpartnerAccountsBrandsCreate - Creates a new brand. Because Google detects brands from your existing properties, you only need this operation when you want to configure a brand before you send its properties to Google. Note that it might take a couple of days after your listing feed first provides a brand for the brand to appear.
 func (s *accounts) TravelpartnerAccountsBrandsCreate(ctx context.Context, request operations.TravelpartnerAccountsBrandsCreateRequest) (*operations.TravelpartnerAccountsBrandsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/brands", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/brands", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BrandInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *accounts) TravelpartnerAccountsBrandsCreate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,14 +240,14 @@ func (s *accounts) TravelpartnerAccountsBrandsCreate(ctx context.Context, reques
 // TravelpartnerAccountsBrandsList - Returns the brands for a partner account.
 func (s *accounts) TravelpartnerAccountsBrandsList(ctx context.Context, request operations.TravelpartnerAccountsBrandsListRequest) (*operations.TravelpartnerAccountsBrandsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/brands", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/brands", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -288,9 +288,9 @@ func (s *accounts) TravelpartnerAccountsBrandsList(ctx context.Context, request 
 // TravelpartnerAccountsBrandsPatch - Updates a brand.
 func (s *accounts) TravelpartnerAccountsBrandsPatch(ctx context.Context, request operations.TravelpartnerAccountsBrandsPatchRequest) (*operations.TravelpartnerAccountsBrandsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BrandInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,7 +302,7 @@ func (s *accounts) TravelpartnerAccountsBrandsPatch(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -343,14 +343,14 @@ func (s *accounts) TravelpartnerAccountsBrandsPatch(ctx context.Context, request
 // TravelpartnerAccountsFreeBookingLinksReportViewsQuery - **DEPRECATED:** Use PropertyPerformanceReportService.QueryPropertyPerformanceReport, which also has impression reporting, instead. Provides the ability to query (get, filter, and segment) a free booking links report for a specific account.
 func (s *accounts) TravelpartnerAccountsFreeBookingLinksReportViewsQuery(ctx context.Context, request operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryRequest) (*operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/freeBookingLinksReportViews:query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/freeBookingLinksReportViews:query", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -391,14 +391,14 @@ func (s *accounts) TravelpartnerAccountsFreeBookingLinksReportViewsQuery(ctx con
 // TravelpartnerAccountsHotelViewsList - Returns the list of hotel views.
 func (s *accounts) TravelpartnerAccountsHotelViewsList(ctx context.Context, request operations.TravelpartnerAccountsHotelViewsListRequest) (*operations.TravelpartnerAccountsHotelViewsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/hotelViews", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/hotelViews", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -439,14 +439,14 @@ func (s *accounts) TravelpartnerAccountsHotelViewsList(ctx context.Context, requ
 // TravelpartnerAccountsHotelViewsSummarize - Returns summarized information about hotels.
 func (s *accounts) TravelpartnerAccountsHotelViewsSummarize(ctx context.Context, request operations.TravelpartnerAccountsHotelViewsSummarizeRequest) (*operations.TravelpartnerAccountsHotelViewsSummarizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/hotelViews:summarize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/hotelViews:summarize", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -487,9 +487,9 @@ func (s *accounts) TravelpartnerAccountsHotelViewsSummarize(ctx context.Context,
 // TravelpartnerAccountsHotelsSetLiveOnGoogle - Collection-level custom method to update the Live on Google status for multiple properties. Each call can turn on or off multiple hotels. To turn some hotels on and turn some hotels off, you will have to make multiple calls.
 func (s *accounts) TravelpartnerAccountsHotelsSetLiveOnGoogle(ctx context.Context, request operations.TravelpartnerAccountsHotelsSetLiveOnGoogleRequest) (*operations.TravelpartnerAccountsHotelsSetLiveOnGoogleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{account}/hotels:setLiveOnGoogle", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{account}/hotels:setLiveOnGoogle", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetLiveOnGoogleRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -501,7 +501,7 @@ func (s *accounts) TravelpartnerAccountsHotelsSetLiveOnGoogle(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -542,9 +542,9 @@ func (s *accounts) TravelpartnerAccountsHotelsSetLiveOnGoogle(ctx context.Contex
 // TravelpartnerAccountsIconsCreate - Uploads a new icon and starts its review process. Generates an `icon_id` and includes it in the icon's resource name, which is the format `accounts/{account_id}/icons/{icon_id}` Returns HTTP status 400 and doesn't trigger the review process if the icon has any of these conditions: * Image is not in PNG format, or not convertible to PNG format. * Size less than 72 pixels * Size greater than 1200 pixels * Aspect ratio other than 1:1
 func (s *accounts) TravelpartnerAccountsIconsCreate(ctx context.Context, request operations.TravelpartnerAccountsIconsCreateRequest) (*operations.TravelpartnerAccountsIconsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/icons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/icons", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IconInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,7 +556,7 @@ func (s *accounts) TravelpartnerAccountsIconsCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -597,14 +597,14 @@ func (s *accounts) TravelpartnerAccountsIconsCreate(ctx context.Context, request
 // TravelpartnerAccountsIconsList - Returns the `Icon`s for a partner account.
 func (s *accounts) TravelpartnerAccountsIconsList(ctx context.Context, request operations.TravelpartnerAccountsIconsListRequest) (*operations.TravelpartnerAccountsIconsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/icons", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/icons", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -645,9 +645,9 @@ func (s *accounts) TravelpartnerAccountsIconsList(ctx context.Context, request o
 // TravelpartnerAccountsListingsVerify - returns verified listings with data issues and serving eligibilities
 func (s *accounts) TravelpartnerAccountsListingsVerify(ctx context.Context, request operations.TravelpartnerAccountsListingsVerifyRequest) (*operations.TravelpartnerAccountsListingsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/listings:verify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/listings:verify", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyListingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -659,7 +659,7 @@ func (s *accounts) TravelpartnerAccountsListingsVerify(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -700,14 +700,14 @@ func (s *accounts) TravelpartnerAccountsListingsVerify(ctx context.Context, requ
 // TravelpartnerAccountsParticipationReportViewsQuery - Provides the ability to query (get, filter, and segment) a participation report for a particular account.
 func (s *accounts) TravelpartnerAccountsParticipationReportViewsQuery(ctx context.Context, request operations.TravelpartnerAccountsParticipationReportViewsQueryRequest) (*operations.TravelpartnerAccountsParticipationReportViewsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/participationReportViews:query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/participationReportViews:query", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -748,14 +748,14 @@ func (s *accounts) TravelpartnerAccountsParticipationReportViewsQuery(ctx contex
 // TravelpartnerAccountsPriceAccuracyViewsList - Lists the available price accuracy views.
 func (s *accounts) TravelpartnerAccountsPriceAccuracyViewsList(ctx context.Context, request operations.TravelpartnerAccountsPriceAccuracyViewsListRequest) (*operations.TravelpartnerAccountsPriceAccuracyViewsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceAccuracyViews", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceAccuracyViews", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -796,14 +796,14 @@ func (s *accounts) TravelpartnerAccountsPriceAccuracyViewsList(ctx context.Conte
 // TravelpartnerAccountsPriceAccuracyViewsSummarize - Returns the price accuracy summary.
 func (s *accounts) TravelpartnerAccountsPriceAccuracyViewsSummarize(ctx context.Context, request operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeRequest) (*operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceAccuracyViews:summarize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceAccuracyViews:summarize", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -844,14 +844,14 @@ func (s *accounts) TravelpartnerAccountsPriceAccuracyViewsSummarize(ctx context.
 // TravelpartnerAccountsPriceCoverageViewsGetLatest - Returns the latest price coverage view in full detail.
 func (s *accounts) TravelpartnerAccountsPriceCoverageViewsGetLatest(ctx context.Context, request operations.TravelpartnerAccountsPriceCoverageViewsGetLatestRequest) (*operations.TravelpartnerAccountsPriceCoverageViewsGetLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceCoverageViews:latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceCoverageViews:latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -892,14 +892,14 @@ func (s *accounts) TravelpartnerAccountsPriceCoverageViewsGetLatest(ctx context.
 // TravelpartnerAccountsPriceCoverageViewsList - Returns the entire price coverage history.
 func (s *accounts) TravelpartnerAccountsPriceCoverageViewsList(ctx context.Context, request operations.TravelpartnerAccountsPriceCoverageViewsListRequest) (*operations.TravelpartnerAccountsPriceCoverageViewsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceCoverageViews", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/priceCoverageViews", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -940,14 +940,14 @@ func (s *accounts) TravelpartnerAccountsPriceCoverageViewsList(ctx context.Conte
 // TravelpartnerAccountsPropertyPerformanceReportViewsQuery - Provides the ability to query (get, filter, and segment) a property performance links report for a specific account.
 func (s *accounts) TravelpartnerAccountsPropertyPerformanceReportViewsQuery(ctx context.Context, request operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest) (*operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/propertyPerformanceReportViews:query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/propertyPerformanceReportViews:query", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -988,9 +988,9 @@ func (s *accounts) TravelpartnerAccountsPropertyPerformanceReportViewsQuery(ctx 
 // TravelpartnerAccountsReconciliationReportsCreate - Creates a reconciliation report and uploads it to Google.
 func (s *accounts) TravelpartnerAccountsReconciliationReportsCreate(ctx context.Context, request operations.TravelpartnerAccountsReconciliationReportsCreateRequest) (*operations.TravelpartnerAccountsReconciliationReportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/reconciliationReports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/reconciliationReports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReconciliationReport", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1002,7 +1002,7 @@ func (s *accounts) TravelpartnerAccountsReconciliationReportsCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1043,14 +1043,14 @@ func (s *accounts) TravelpartnerAccountsReconciliationReportsCreate(ctx context.
 // TravelpartnerAccountsReconciliationReportsGet - Returns a reconciliation report.
 func (s *accounts) TravelpartnerAccountsReconciliationReportsGet(ctx context.Context, request operations.TravelpartnerAccountsReconciliationReportsGetRequest) (*operations.TravelpartnerAccountsReconciliationReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1091,14 +1091,14 @@ func (s *accounts) TravelpartnerAccountsReconciliationReportsGet(ctx context.Con
 // TravelpartnerAccountsReconciliationReportsList - Returns a list of the names of created reconciliation reports.
 func (s *accounts) TravelpartnerAccountsReconciliationReportsList(ctx context.Context, request operations.TravelpartnerAccountsReconciliationReportsListRequest) (*operations.TravelpartnerAccountsReconciliationReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/reconciliationReports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/reconciliationReports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1139,9 +1139,9 @@ func (s *accounts) TravelpartnerAccountsReconciliationReportsList(ctx context.Co
 // TravelpartnerAccountsReconciliationReportsValidate - Validates a reconciliation report.
 func (s *accounts) TravelpartnerAccountsReconciliationReportsValidate(ctx context.Context, request operations.TravelpartnerAccountsReconciliationReportsValidateRequest) (*operations.TravelpartnerAccountsReconciliationReportsValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/reconciliationReports:validate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/reconciliationReports:validate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReconciliationReport", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1153,7 +1153,7 @@ func (s *accounts) TravelpartnerAccountsReconciliationReportsValidate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

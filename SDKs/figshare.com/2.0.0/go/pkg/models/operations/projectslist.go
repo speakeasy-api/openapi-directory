@@ -60,7 +60,9 @@ func (e *ProjectsListOrderDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListQueryParams struct {
+type ProjectsListRequest struct {
+	// Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+	XCursor *string `header:"style=simple,explode=false,name=X-Cursor"`
 	// only return collections from this group
 	Group *int64 `queryParam:"style=form,explode=true,name=group"`
 	// only return collections from this institution
@@ -78,16 +80,6 @@ type ProjectsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Filter by article publishing date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
 	PublishedSince *string `queryParam:"style=form,explode=true,name=published_since"`
-}
-
-type ProjectsListHeaders struct {
-	// Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
-	XCursor *string `header:"style=simple,explode=false,name=X-Cursor"`
-}
-
-type ProjectsListRequest struct {
-	QueryParams ProjectsListQueryParams
-	Headers     ProjectsListHeaders
 }
 
 type ProjectsListResponse struct {

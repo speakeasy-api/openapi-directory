@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsDetachFromNetworkPathParams struct {
-	// ID of the Server
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostServersIDActionsDetachFromNetworkDetachFromNetworkRequest struct {
 	// ID of an existing network to detach the Server from
 	Network int64 `json:"network"`
 }
 
 type PostServersIDActionsDetachFromNetworkRequest struct {
-	PathParams PostServersIDActionsDetachFromNetworkPathParams
-	Request    *PostServersIDActionsDetachFromNetworkDetachFromNetworkRequest `request:"mediaType=application/json"`
+	RequestBody *PostServersIDActionsDetachFromNetworkDetachFromNetworkRequest `request:"mediaType=application/json"`
+	// ID of the Server
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostServersIDActionsDetachFromNetworkActionResponseActionError - Error message for the Action if error occurred, otherwise null

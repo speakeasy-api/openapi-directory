@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatorsListQueryParams struct {
+type CreatorsListRequest struct {
 	// A page number within the paginated result set.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results to return per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type CreatorsListRequest struct {
-	QueryParams CreatorsListQueryParams
 }
 
 type CreatorsList200ApplicationJSON struct {

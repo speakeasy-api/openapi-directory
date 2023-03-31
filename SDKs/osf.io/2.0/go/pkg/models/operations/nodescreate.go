@@ -81,10 +81,6 @@ type NodesCreateNodeInput struct {
 	Type string `json:"type"`
 }
 
-type NodesCreateRequest struct {
-	Request NodesCreateNodeInput `request:"mediaType=application/json"`
-}
-
 type NodesCreateResponse struct {
 	ContentType string
 	StatusCode  int

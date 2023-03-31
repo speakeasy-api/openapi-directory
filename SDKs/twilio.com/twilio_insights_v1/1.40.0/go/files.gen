@@ -29,7 +29,6 @@ pkg/models/operations/listvideoroomsummary.go
 pkg/models/operations/updateaccountsettings.go
 pkg/models/operations/updateannotation.go
 pkg/models/shared/insightsv1accountsettings.go
-pkg/models/shared/security.go
 pkg/models/shared/insightsv1callannotation.go
 pkg/models/shared/annotationenumconnectivityissueenum.go
 pkg/models/shared/annotationenumansweredbyenum.go
@@ -80,3 +79,4 @@ pkg/models/shared/insightsv1callmetric.go
 pkg/models/shared/metricenumtwilioedgeenum.go
 pkg/models/shared/metricenumstreamdirectionenum.go
 USAGE.md
+pkg/models/operations/options.go

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CollectionsSearchHeaders struct {
+type CollectionsSearchRequest struct {
+	// Search Parameters
+	CollectionSearch *shared.CollectionSearch `request:"mediaType=application/json"`
 	// Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
 	XCursor *string `header:"style=simple,explode=false,name=X-Cursor"`
-}
-
-type CollectionsSearchRequest struct {
-	Headers CollectionsSearchHeaders
-	// Search Parameters
-	Request *shared.CollectionSearch `request:"mediaType=application/json"`
 }
 
 type CollectionsSearchResponse struct {

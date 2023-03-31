@@ -8,18 +8,16 @@ import (
 )
 
 type DriveDrivesUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DriveDrivesUpdatePathParams struct {
-	// The ID of the shared drive.
-	DriveID string `pathParam:"style=simple,explode=false,name=driveId"`
-}
-
-type DriveDrivesUpdateQueryParams struct {
+type DriveDrivesUpdateRequest struct {
+	Drive *shared.Drive `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the shared drive.
+	DriveID string `pathParam:"style=simple,explode=false,name=driveId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -34,13 +32,6 @@ type DriveDrivesUpdateQueryParams struct {
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveDrivesUpdateRequest struct {
-	PathParams  DriveDrivesUpdatePathParams
-	QueryParams DriveDrivesUpdateQueryParams
-	Request     *shared.Drive `request:"mediaType=application/json"`
-	Security    DriveDrivesUpdateSecurity
 }
 
 type DriveDrivesUpdateResponse struct {

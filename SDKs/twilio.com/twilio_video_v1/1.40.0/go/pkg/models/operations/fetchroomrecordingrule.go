@@ -12,18 +12,13 @@ var FetchRoomRecordingRuleServerList = []string{
 }
 
 type FetchRoomRecordingRuleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchRoomRecordingRulePathParams struct {
-	// The SID of the Room resource where the recording rules to fetch apply.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchRoomRecordingRuleRequest struct {
-	PathParams FetchRoomRecordingRulePathParams
-	Security   FetchRoomRecordingRuleSecurity
-	ServerURL  *string
+	// The SID of the Room resource where the recording rules to fetch apply.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 }
 
 type FetchRoomRecordingRuleResponse struct {

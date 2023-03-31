@@ -10,13 +10,8 @@ import (
 )
 
 type AndroidmanagementEnterprisesWebAppsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type AndroidmanagementEnterprisesWebAppsDeletePathParams struct {
-	// The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum string
@@ -45,7 +40,7 @@ func (e *AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum) UnmarshalJS
 	}
 }
 
-type AndroidmanagementEnterprisesWebAppsDeleteQueryParams struct {
+type AndroidmanagementEnterprisesWebAppsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,6 +53,8 @@ type AndroidmanagementEnterprisesWebAppsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -72,12 +69,6 @@ type AndroidmanagementEnterprisesWebAppsDeleteQueryParams struct {
 	WipeDataFlags []AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum `queryParam:"style=form,explode=true,name=wipeDataFlags"`
 	// Optional. A short message displayed to the user before wiping the work profile on personal devices. This has no effect on company owned devices. The maximum message length is 200 characters.
 	WipeReasonMessage *string `queryParam:"style=form,explode=true,name=wipeReasonMessage"`
-}
-
-type AndroidmanagementEnterprisesWebAppsDeleteRequest struct {
-	PathParams  AndroidmanagementEnterprisesWebAppsDeletePathParams
-	QueryParams AndroidmanagementEnterprisesWebAppsDeleteQueryParams
-	Security    AndroidmanagementEnterprisesWebAppsDeleteSecurity
 }
 
 type AndroidmanagementEnterprisesWebAppsDeleteResponse struct {

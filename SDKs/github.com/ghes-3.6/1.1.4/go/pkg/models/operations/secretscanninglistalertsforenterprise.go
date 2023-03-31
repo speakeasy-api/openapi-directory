@@ -7,18 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningListAlertsForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type SecretScanningListAlertsForEnterpriseQueryParams struct {
+type SecretScanningListAlertsForEnterpriseRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.6/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.6/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
 	Before *string `queryParam:"style=form,explode=true,name=before"`
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
@@ -31,11 +28,6 @@ type SecretScanningListAlertsForEnterpriseQueryParams struct {
 	Sort *shared.SecretScanningAlertSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
 	State *shared.SecretScanningAlertStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type SecretScanningListAlertsForEnterpriseRequest struct {
-	PathParams  SecretScanningListAlertsForEnterprisePathParams
-	QueryParams SecretScanningListAlertsForEnterpriseQueryParams
 }
 
 // SecretScanningListAlertsForEnterprise503ApplicationJSON - Service unavailable

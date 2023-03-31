@@ -8,23 +8,15 @@ import (
 )
 
 type DeleteProductSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteProductPathParams struct {
-	// Unique number that identifies the Product.
-	ProductNumber string `pathParam:"style=simple,explode=false,name=productNumber"`
-}
-
-type DeleteProductQueryParams struct {
-	// Force object deletion and all descendants.
-	ForceCascade *bool `queryParam:"style=form,explode=true,name=forceCascade"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteProductRequest struct {
-	PathParams  DeleteProductPathParams
-	QueryParams DeleteProductQueryParams
-	Security    DeleteProductSecurity
+	// Force object deletion and all descendants.
+	ForceCascade *bool `queryParam:"style=form,explode=true,name=forceCascade"`
+	// Unique number that identifies the Product.
+	ProductNumber string `pathParam:"style=simple,explode=false,name=productNumber"`
 }
 
 type DeleteProductResponse struct {

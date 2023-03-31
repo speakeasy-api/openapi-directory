@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type AddRoleMembersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AddRoleMembersPathParams struct {
-	// The role ID
-	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddRoleMembersApplicationJSONMembers struct {
@@ -31,10 +25,10 @@ type AddRoleMembersApplicationJSON struct {
 }
 
 type AddRoleMembersRequest struct {
-	PathParams AddRoleMembersPathParams
 	// Role members
-	Request  AddRoleMembersApplicationJSON `request:"mediaType=application/json"`
-	Security AddRoleMembersSecurity
+	RequestBody AddRoleMembersApplicationJSON `request:"mediaType=application/json"`
+	// The role ID
+	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
 }
 
 // AddRoleMembers201ApplicationXML - **HTTP Status Code:** `201`<br>Members Added

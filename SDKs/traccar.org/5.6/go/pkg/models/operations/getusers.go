@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// Can only be used by admin or manager users
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 type GetUsersResponse struct {

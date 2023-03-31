@@ -33,7 +33,7 @@ func newVideoCategories(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // YoutubeVideoCategoriesList - Retrieves a list of resources, possibly filtered.
-func (s *videoCategories) YoutubeVideoCategoriesList(ctx context.Context, request operations.YoutubeVideoCategoriesListRequest) (*operations.YoutubeVideoCategoriesListResponse, error) {
+func (s *videoCategories) YoutubeVideoCategoriesList(ctx context.Context, request operations.YoutubeVideoCategoriesListRequest, security operations.YoutubeVideoCategoriesListSecurity) (*operations.YoutubeVideoCategoriesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videoCategories"
 
@@ -42,11 +42,11 @@ func (s *videoCategories) YoutubeVideoCategoriesList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

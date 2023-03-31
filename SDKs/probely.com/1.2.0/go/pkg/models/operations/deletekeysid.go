@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteKeysIDPathParams struct {
+type DeleteKeysIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteKeysIDRequest struct {
-	PathParams DeleteKeysIDPathParams
 }
 
 // DeleteKeysID403ApplicationJSON - Not allowed to perform operation

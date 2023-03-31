@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchGeoGpxQueryParams struct {
+type SearchGeoGpxRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -54,10 +54,6 @@ type SearchGeoGpxQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchGeoGpxRequest struct {
-	QueryParams SearchGeoGpxQueryParams
 }
 
 type SearchGeoGpxResponse struct {

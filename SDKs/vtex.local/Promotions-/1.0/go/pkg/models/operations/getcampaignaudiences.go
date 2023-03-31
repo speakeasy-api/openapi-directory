@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcampaignaudiencesHeaders struct {
+type GetcampaignaudiencesRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetcampaignaudiencesRequest struct {
-	Headers GetcampaignaudiencesHeaders
 }
 
 // Getcampaignaudiences200ApplicationJSONLastModified - Object with information about the most recent update of the campaign audience.

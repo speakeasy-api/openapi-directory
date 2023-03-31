@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListRolesQueryParams struct {
+type GetListRolesRequest struct {
+	// The media type of the body of the request. Default value for license manager protocol is application/json
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Number of items in the returned page
 	NumItems *int64 `queryParam:"style=form,explode=true,name=numItems"`
 	// Which page from the whole list will be returned
@@ -16,16 +18,6 @@ type GetListRolesQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Defines the sorting order. ASC is used for ascendant order. DSC is used for descendant order
 	SortType *string `queryParam:"style=form,explode=true,name=sortType"`
-}
-
-type GetListRolesHeaders struct {
-	// The media type of the body of the request. Default value for license manager protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetListRolesRequest struct {
-	QueryParams GetListRolesQueryParams
-	Headers     GetListRolesHeaders
 }
 
 type GetListRolesResponse struct {

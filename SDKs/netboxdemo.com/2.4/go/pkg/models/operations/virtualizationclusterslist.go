@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationClustersListQueryParams struct {
+type VirtualizationClustersListRequest struct {
 	Group   *string `queryParam:"style=form,explode=true,name=group"`
 	GroupID *string `queryParam:"style=form,explode=true,name=group_id"`
 	// Multiple values may be separated by commas.
@@ -23,10 +23,6 @@ type VirtualizationClustersListQueryParams struct {
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
 	Type   *string `queryParam:"style=form,explode=true,name=type"`
 	TypeID *string `queryParam:"style=form,explode=true,name=type_id"`
-}
-
-type VirtualizationClustersListRequest struct {
-	QueryParams VirtualizationClustersListQueryParams
 }
 
 type VirtualizationClustersList200ApplicationJSON struct {

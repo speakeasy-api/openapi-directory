@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchFileCommentsIDPathParams struct {
-	// File Comment ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchFileCommentsIDRequestBody struct {
 	// Comment body.
 	Body string `multipartForm:"name=body"`
 }
 
 type PatchFileCommentsIDRequest struct {
-	PathParams PatchFileCommentsIDPathParams
-	Request    PatchFileCommentsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PatchFileCommentsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// File Comment ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchFileCommentsIDResponse struct {

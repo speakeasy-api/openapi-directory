@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type UpdateCollectionPathParams struct {
-	// ID of collection that needs to be modified
-	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateCollectionRequest struct {
-	PathParams UpdateCollectionPathParams
 	// Collections Metadata to update
-	Request  shared.UpdateCatalogCollection `request:"mediaType=application/json"`
-	Security UpdateCollectionSecurity
+	UpdateCatalogCollection shared.UpdateCatalogCollection `request:"mediaType=application/json"`
+	// ID of collection that needs to be modified
+	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type UpdateCollectionResponse struct {

@@ -54,6 +54,7 @@ pkg/models/shared/questiongroupitem.go
 pkg/models/shared/grid.go
 pkg/models/shared/imageitem.go
 pkg/models/shared/info.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchupdateformrequest.go
 pkg/models/shared/request.go
 pkg/models/shared/updatesettingsrequest.go
@@ -63,9 +64,7 @@ pkg/models/shared/updateforminforequest.go
 pkg/models/shared/moveitemrequest.go
 pkg/models/shared/deleteitemrequest.go
 pkg/models/shared/createitemrequest.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/formresponse.go
 pkg/models/shared/answer.go
 pkg/models/shared/textanswers.go

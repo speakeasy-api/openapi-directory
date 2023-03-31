@@ -27,10 +27,6 @@ type PostBehaviorsRequestBody struct {
 	Value *string `multipartForm:"name=value"`
 }
 
-type PostBehaviorsRequest struct {
-	Request *PostBehaviorsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostBehaviorsResponse struct {
 	// The Behaviors object.
 	BehaviorEntity *shared.BehaviorEntity

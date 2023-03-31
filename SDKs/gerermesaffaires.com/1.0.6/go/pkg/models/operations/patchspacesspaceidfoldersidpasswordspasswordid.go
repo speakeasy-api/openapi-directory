@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the password
-	PasswordID string `pathParam:"style=simple,explode=false,name=passwordId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequestBody - Password to modify
 type PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequestBody struct {
 	Comment     *string `json:"Comment,omitempty"`
@@ -25,9 +16,14 @@ type PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDPathParams
 	// Password to modify
-	Request PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the password
+	PasswordID string `pathParam:"style=simple,explode=false,name=passwordId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDResponse struct {

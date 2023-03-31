@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkClientSplashAuthorizationStatusPathParams struct {
-	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0 - Splash authorization for SSID 0
 type UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0 struct {
 	// New authorization status for the SSID (true, false).
@@ -141,8 +136,9 @@ type UpdateNetworkClientSplashAuthorizationStatusRequestBody struct {
 }
 
 type UpdateNetworkClientSplashAuthorizationStatusRequest struct {
-	PathParams UpdateNetworkClientSplashAuthorizationStatusPathParams
-	Request    UpdateNetworkClientSplashAuthorizationStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkClientSplashAuthorizationStatusRequestBody `request:"mediaType=application/json"`
+	ClientID    string                                                  `pathParam:"style=simple,explode=false,name=clientId"`
+	NetworkID   string                                                  `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkClientSplashAuthorizationStatusResponse struct {

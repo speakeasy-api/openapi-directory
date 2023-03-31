@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // GETUserContentByDateJSON - Comments by Date
-func (s *SDK) GETUserContentByDateJSON(ctx context.Context, request operations.GETUserContentByDateJSONRequest) (*operations.GETUserContentByDateJSONResponse, error) {
+func (s *SDK) GETUserContentByDateJSON(ctx context.Context, request operations.GETUserContentByDateJSONRequest, security operations.GETUserContentByDateJSONSecurity) (*operations.GETUserContentByDateJSONResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-content/by-date.json"
 
@@ -102,11 +102,11 @@ func (s *SDK) GETUserContentByDateJSON(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,7 +141,7 @@ func (s *SDK) GETUserContentByDateJSON(ctx context.Context, request operations.G
 }
 
 // GETUserContentRecentJSON - Recent User Comments
-func (s *SDK) GETUserContentRecentJSON(ctx context.Context, request operations.GETUserContentRecentJSONRequest) (*operations.GETUserContentRecentJSONResponse, error) {
+func (s *SDK) GETUserContentRecentJSON(ctx context.Context) (*operations.GETUserContentRecentJSONResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-content/recent.json"
 
@@ -150,7 +150,7 @@ func (s *SDK) GETUserContentRecentJSON(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *SDK) GETUserContentRecentJSON(ctx context.Context, request operations.G
 }
 
 // GETUserContentURLJSON - Comments by URL
-func (s *SDK) GETUserContentURLJSON(ctx context.Context, request operations.GETUserContentURLJSONRequest) (*operations.GETUserContentURLJSONResponse, error) {
+func (s *SDK) GETUserContentURLJSON(ctx context.Context, request operations.GETUserContentURLJSONRequest, security operations.GETUserContentURLJSONSecurity) (*operations.GETUserContentURLJSONResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-content/url.json"
 
@@ -194,11 +194,11 @@ func (s *SDK) GETUserContentURLJSON(ctx context.Context, request operations.GETU
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,7 +233,7 @@ func (s *SDK) GETUserContentURLJSON(ctx context.Context, request operations.GETU
 }
 
 // GETUserContentUserJSON - Comments by User
-func (s *SDK) GETUserContentUserJSON(ctx context.Context, request operations.GETUserContentUserJSONRequest) (*operations.GETUserContentUserJSONResponse, error) {
+func (s *SDK) GETUserContentUserJSON(ctx context.Context, request operations.GETUserContentUserJSONRequest, security operations.GETUserContentUserJSONSecurity) (*operations.GETUserContentUserJSONResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-content/user.json"
 
@@ -242,11 +242,11 @@ func (s *SDK) GETUserContentUserJSON(ctx context.Context, request operations.GET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

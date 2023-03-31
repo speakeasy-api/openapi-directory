@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GistsCreateCommentPathParams struct {
-	// gist_id parameter
-	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
-}
-
 type GistsCreateCommentRequestBody struct {
 	// The comment text.
 	Body string `json:"body"`
 }
 
 type GistsCreateCommentRequest struct {
-	PathParams GistsCreateCommentPathParams
-	Request    GistsCreateCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody GistsCreateCommentRequestBody `request:"mediaType=application/json"`
+	// gist_id parameter
+	GistID string `pathParam:"style=simple,explode=false,name=gist_id"`
 }
 
 type GistsCreateCommentResponse struct {

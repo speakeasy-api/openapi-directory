@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirebasestorageProjectsBucketsAddFirebase - Links a Google Cloud Storage bucket to a Firebase project.
-func (s *projects) FirebasestorageProjectsBucketsAddFirebase(ctx context.Context, request operations.FirebasestorageProjectsBucketsAddFirebaseRequest) (*operations.FirebasestorageProjectsBucketsAddFirebaseResponse, error) {
+func (s *projects) FirebasestorageProjectsBucketsAddFirebase(ctx context.Context, request operations.FirebasestorageProjectsBucketsAddFirebaseRequest, security operations.FirebasestorageProjectsBucketsAddFirebaseSecurity) (*operations.FirebasestorageProjectsBucketsAddFirebaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:addFirebase", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:addFirebase", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FirebasestorageProjectsBucketsAddFirebase(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) FirebasestorageProjectsBucketsAddFirebase(ctx context.Context
 }
 
 // FirebasestorageProjectsBucketsGet - Gets a single linked storage bucket.
-func (s *projects) FirebasestorageProjectsBucketsGet(ctx context.Context, request operations.FirebasestorageProjectsBucketsGetRequest) (*operations.FirebasestorageProjectsBucketsGetResponse, error) {
+func (s *projects) FirebasestorageProjectsBucketsGet(ctx context.Context, request operations.FirebasestorageProjectsBucketsGetRequest, security operations.FirebasestorageProjectsBucketsGetSecurity) (*operations.FirebasestorageProjectsBucketsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) FirebasestorageProjectsBucketsGet(ctx context.Context, reques
 }
 
 // FirebasestorageProjectsBucketsList - Lists the linked storage buckets for a project.
-func (s *projects) FirebasestorageProjectsBucketsList(ctx context.Context, request operations.FirebasestorageProjectsBucketsListRequest) (*operations.FirebasestorageProjectsBucketsListResponse, error) {
+func (s *projects) FirebasestorageProjectsBucketsList(ctx context.Context, request operations.FirebasestorageProjectsBucketsListRequest, security operations.FirebasestorageProjectsBucketsListSecurity) (*operations.FirebasestorageProjectsBucketsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/buckets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/buckets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *projects) FirebasestorageProjectsBucketsList(ctx context.Context, reque
 }
 
 // FirebasestorageProjectsBucketsRemoveFirebase - Unlinks a linked Google Cloud Storage bucket from a Firebase project.
-func (s *projects) FirebasestorageProjectsBucketsRemoveFirebase(ctx context.Context, request operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest) (*operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse, error) {
+func (s *projects) FirebasestorageProjectsBucketsRemoveFirebase(ctx context.Context, request operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest, security operations.FirebasestorageProjectsBucketsRemoveFirebaseSecurity) (*operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:removeFirebase", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:removeFirebase", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *projects) FirebasestorageProjectsBucketsRemoveFirebase(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

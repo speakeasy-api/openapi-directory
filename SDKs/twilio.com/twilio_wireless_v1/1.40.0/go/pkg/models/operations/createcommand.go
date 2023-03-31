@@ -14,7 +14,8 @@ var CreateCommandServerList = []string{
 }
 
 type CreateCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateCommandCreateCommandRequestCallbackMethodEnum - The HTTP method we use to call `callback_url`. Can be: `POST` or `GET`, and the default is `POST`.
@@ -67,12 +68,6 @@ type CreateCommandCreateCommandRequest struct {
 	IncludeSid *string `form:"name=IncludeSid"`
 	// The `sid` or `unique_name` of the [SIM](https://www.twilio.com/docs/wireless/api/sim-resource) to send the Command to.
 	Sim *string `form:"name=Sim"`
-}
-
-type CreateCommandRequest struct {
-	Request   *CreateCommandCreateCommandRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCommandSecurity
-	ServerURL *string
 }
 
 type CreateCommandResponse struct {

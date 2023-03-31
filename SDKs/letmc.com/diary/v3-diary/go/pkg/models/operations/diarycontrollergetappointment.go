@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiaryControllerGetAppointmentPathParams struct {
-	// Company short name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerGetAppointmentQueryParams struct {
+type DiaryControllerGetAppointmentRequest struct {
 	// Appointment ID
 	AppointmentID string `queryParam:"style=form,explode=true,name=appointmentID"`
-}
-
-type DiaryControllerGetAppointmentRequest struct {
-	PathParams  DiaryControllerGetAppointmentPathParams
-	QueryParams DiaryControllerGetAppointmentQueryParams
+	// Company short name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerGetAppointmentResponse struct {

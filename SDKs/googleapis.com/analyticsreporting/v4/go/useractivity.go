@@ -33,11 +33,11 @@ func newUserActivity(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // AnalyticsreportingUserActivitySearch - Returns User Activity data.
-func (s *userActivity) AnalyticsreportingUserActivitySearch(ctx context.Context, request operations.AnalyticsreportingUserActivitySearchRequest) (*operations.AnalyticsreportingUserActivitySearchResponse, error) {
+func (s *userActivity) AnalyticsreportingUserActivitySearch(ctx context.Context, request operations.AnalyticsreportingUserActivitySearchRequest, security operations.AnalyticsreportingUserActivitySearchSecurity) (*operations.AnalyticsreportingUserActivitySearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/userActivity:search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchUserActivityRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *userActivity) AnalyticsreportingUserActivitySearch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

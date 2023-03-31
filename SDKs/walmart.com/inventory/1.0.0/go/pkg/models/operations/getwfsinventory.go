@@ -6,7 +6,15 @@ import (
 	"net/http"
 )
 
-type GetWFSInventoryQueryParams struct {
+type GetWFSInventoryRequest struct {
+	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
+	// The access token retrieved in the Token API call
+	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
+	// Walmart Service Name
+	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
 	// last inventory modified date - starting range.
 	FromModifiedDate *string `queryParam:"style=form,explode=true,name=fromModifiedDate"`
 	// Number of Sku to be returned. Cannot be larger than 300.
@@ -17,22 +25,6 @@ type GetWFSInventoryQueryParams struct {
 	Sku *string `queryParam:"style=form,explode=true,name=sku"`
 	// last inventory modified date - starting range.
 	ToModifiedDate *string `queryParam:"style=form,explode=true,name=toModifiedDate"`
-}
-
-type GetWFSInventoryHeaders struct {
-	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
-	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
-	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
-	// The access token retrieved in the Token API call
-	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
-	// Walmart Service Name
-	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
-type GetWFSInventoryRequest struct {
-	QueryParams GetWFSInventoryQueryParams
-	Headers     GetWFSInventoryHeaders
 }
 
 type GetWFSInventory200ApplicationJSONHeaders struct {

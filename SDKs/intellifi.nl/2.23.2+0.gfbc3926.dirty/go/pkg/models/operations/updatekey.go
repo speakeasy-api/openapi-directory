@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateKeySecurity struct {
-	CookieSid shared.SchemeCookieSid `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type UpdateKeyPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CookieSid string `security:"scheme,type=apiKey,subtype=cookie,name=brain.sid"`
 }
 
 type UpdateKeyRequest struct {
-	PathParams UpdateKeyPathParams
 	// A JSON object containing key information
-	Request  shared.KeyInput `request:"mediaType=application/json"`
-	Security UpdateKeySecurity
+	KeyInput shared.KeyInput `request:"mediaType=application/json"`
+	// Unique identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateKeyResponse struct {

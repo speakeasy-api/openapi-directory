@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UALookupQueryParams struct {
+type UALookupRequest struct {
 	// This parameter is only used in combination with 'device-model' when doing direct device lookups without any user-agent data. Set this to the brand or manufacturer name, this is required for accurate device detection with ambiguous model names. On android you can get the device brand from: https://developer.android.com/reference/android/os/Build#MANUFACTURER
 	DeviceBrand *string `queryParam:"style=form,explode=true,name=device-brand"`
 	// For client hints this corresponds to the 'UA-Model' header or 'model' from NavigatorUAData. <br>You can also use this parameter to lookup a device directly by its model name, model code or hardware code, on android you can get the model name from: https://developer.android.com/reference/android/os/Build.html#MODEL
@@ -22,10 +22,6 @@ type UALookupQueryParams struct {
 	UaPlatformVersion *string `queryParam:"style=form,explode=true,name=ua-platform-version"`
 	// For client hints this corresponds to the 'UA-Full-Version' header or 'uaFullVersion' from NavigatorUAData
 	UaVersion *string `queryParam:"style=form,explode=true,name=ua-version"`
-}
-
-type UALookupRequest struct {
-	QueryParams UALookupQueryParams
 }
 
 type UALookupResponse struct {

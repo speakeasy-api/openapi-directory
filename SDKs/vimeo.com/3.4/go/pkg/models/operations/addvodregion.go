@@ -8,19 +8,14 @@ import (
 )
 
 type AddVodRegionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVodRegionPathParams struct {
+type AddVodRegionRequest struct {
 	// The country code.
 	Country string `pathParam:"style=simple,explode=false,name=country"`
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type AddVodRegionRequest struct {
-	PathParams AddVodRegionPathParams
-	Security   AddVodRegionSecurity
 }
 
 type AddVodRegionResponse struct {

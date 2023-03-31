@@ -47,7 +47,7 @@ func (s *playlist) GetPlaylists(ctx context.Context, request operations.GetPlayl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,14 +98,14 @@ func (s *playlist) GetPlaylists(ctx context.Context, request operations.GetPlayl
 // Status 404 is returned if a playlist with {id} does not exist or if it does but starts in the future (with allowed tolerance equals 1 hour in future).
 func (s *playlist) GetPlaylistsID(ctx context.Context, request operations.GetPlaylistsIDRequest) (*operations.GetPlaylistsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

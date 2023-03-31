@@ -8,16 +8,11 @@ import (
 )
 
 type CloudsupportProjectsCasesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudsupportProjectsCasesListPathParams struct {
-	// Required. The fully qualified name of parent resource to list cases under.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudsupportProjectsCasesListQueryParams struct {
+type CloudsupportProjectsCasesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type CloudsupportProjectsCasesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying the page of results to return. If unspecified, the first page is retrieved.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The fully qualified name of parent resource to list cases under.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type CloudsupportProjectsCasesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsupportProjectsCasesListRequest struct {
-	PathParams  CloudsupportProjectsCasesListPathParams
-	QueryParams CloudsupportProjectsCasesListQueryParams
-	Security    CloudsupportProjectsCasesListSecurity
 }
 
 type CloudsupportProjectsCasesListResponse struct {

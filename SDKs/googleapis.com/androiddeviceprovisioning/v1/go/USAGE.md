@@ -14,32 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest{
-        PathParams: operations.AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ConfigurationInput{
-            CompanyName: "suscipit",
-            ConfigurationName: "iure",
-            ContactEmail: "magnam",
-            ContactPhone: "debitis",
-            CustomMessage: "ipsa",
-            DpcExtras: "delectus",
-            DpcResourcePath: "tempora",
+        DollarXgafv: "2",
+        ConfigurationInput: &shared.ConfigurationInput{
+            CompanyName: "provident",
+            ConfigurationName: "distinctio",
+            ContactEmail: "quibusdam",
+            ContactPhone: "unde",
+            CustomMessage: "nulla",
+            DpcExtras: "corrupti",
+            DpcResourcePath: "illum",
             IsDefault: false,
         },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        OauthToken: "magnam",
+        Parent: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()

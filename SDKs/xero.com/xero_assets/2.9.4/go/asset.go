@@ -34,11 +34,11 @@ func newAsset(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateAsset - adds a fixed asset
 // Adds an asset to the system
-func (s *asset) CreateAsset(ctx context.Context, request operations.CreateAssetRequest) (*operations.CreateAssetResponse, error) {
+func (s *asset) CreateAsset(ctx context.Context, request operations.CreateAssetRequest, security operations.CreateAssetSecurity) (*operations.CreateAssetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Assets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Asset", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *asset) CreateAsset(ctx context.Context, request operations.CreateAssetR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,11 +92,11 @@ func (s *asset) CreateAsset(ctx context.Context, request operations.CreateAssetR
 
 // CreateAssetType - adds a fixed asset type
 // Adds an fixed asset type to the system
-func (s *asset) CreateAssetType(ctx context.Context, request operations.CreateAssetTypeRequest) (*operations.CreateAssetTypeResponse, error) {
+func (s *asset) CreateAssetType(ctx context.Context, request operations.CreateAssetTypeRequest, security operations.CreateAssetTypeSecurity) (*operations.CreateAssetTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/AssetTypes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssetType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -108,9 +108,9 @@ func (s *asset) CreateAssetType(ctx context.Context, request operations.CreateAs
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,18 +150,18 @@ func (s *asset) CreateAssetType(ctx context.Context, request operations.CreateAs
 // GetAssetByID - Retrieves fixed asset by id
 // By passing in the appropriate asset id, you can search for
 // a specific fixed asset in the system
-func (s *asset) GetAssetByID(ctx context.Context, request operations.GetAssetByIDRequest) (*operations.GetAssetByIDResponse, error) {
+func (s *asset) GetAssetByID(ctx context.Context, request operations.GetAssetByIDRequest, security operations.GetAssetByIDSecurity) (*operations.GetAssetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Assets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Assets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *asset) GetAssetByID(ctx context.Context, request operations.GetAssetByI
 
 // GetAssetSettings - searches fixed asset settings
 // By passing in the appropriate options, you can search for available fixed asset types in the system
-func (s *asset) GetAssetSettings(ctx context.Context, request operations.GetAssetSettingsRequest) (*operations.GetAssetSettingsResponse, error) {
+func (s *asset) GetAssetSettings(ctx context.Context, request operations.GetAssetSettingsRequest, security operations.GetAssetSettingsSecurity) (*operations.GetAssetSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Settings"
 
@@ -207,9 +207,9 @@ func (s *asset) GetAssetSettings(ctx context.Context, request operations.GetAsse
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,7 +246,7 @@ func (s *asset) GetAssetSettings(ctx context.Context, request operations.GetAsse
 
 // GetAssetTypes - searches fixed asset types
 // By passing in the appropriate options, you can search for available fixed asset types in the system
-func (s *asset) GetAssetTypes(ctx context.Context, request operations.GetAssetTypesRequest) (*operations.GetAssetTypesResponse, error) {
+func (s *asset) GetAssetTypes(ctx context.Context, request operations.GetAssetTypesRequest, security operations.GetAssetTypesSecurity) (*operations.GetAssetTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/AssetTypes"
 
@@ -255,9 +255,9 @@ func (s *asset) GetAssetTypes(ctx context.Context, request operations.GetAssetTy
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,7 +294,7 @@ func (s *asset) GetAssetTypes(ctx context.Context, request operations.GetAssetTy
 
 // GetAssets - searches fixed asset
 // By passing in the appropriate options, you can search for available fixed asset in the system
-func (s *asset) GetAssets(ctx context.Context, request operations.GetAssetsRequest) (*operations.GetAssetsResponse, error) {
+func (s *asset) GetAssets(ctx context.Context, request operations.GetAssetsRequest, security operations.GetAssetsSecurity) (*operations.GetAssetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Assets"
 
@@ -303,13 +303,13 @@ func (s *asset) GetAssets(ctx context.Context, request operations.GetAssetsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,40 +4,34 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FirebasestorageProjectsBucketsAddFirebaseRequest(
-    security=operations.FirebasestorageProjectsBucketsAddFirebaseSecurity(
-        option1=operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.FirebasestorageProjectsBucketsAddFirebasePathParams(
-        bucket="voluptas",
-    ),
-    query_params=operations.FirebasestorageProjectsBucketsAddFirebaseQueryParams(
-        dollar_xgafv="2",
-        access_token="animi",
-        alt="media",
-        callback="non",
-        fields="eligendi",
-        key="iure",
-        oauth_token="est",
-        pretty_print=True,
-        quota_user="distinctio",
-        upload_type="et",
-        upload_protocol="dolor",
-    ),
-    request={
-        "sed": "ipsa",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    bucket="deserunt",
+    callback="suscipit",
+    fields_="iure",
+    key="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.projects.firebasestorage_projects_buckets_add_firebase(req)
+res = s.projects.firebasestorage_projects_buckets_add_firebase(req, operations.FirebasestorageProjectsBucketsAddFirebaseSecurity(
+    option1=operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.bucket is not None:
     # handle response

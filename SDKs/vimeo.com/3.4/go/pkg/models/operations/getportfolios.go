@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortfoliosPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetPortfoliosDirectionEnum - The sort direction of the results.
 type GetPortfoliosDirectionEnum string
 
@@ -62,7 +57,7 @@ func (e *GetPortfoliosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPortfoliosQueryParams struct {
+type GetPortfoliosRequest struct {
 	// The sort direction of the results.
 	Direction *GetPortfoliosDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -73,11 +68,8 @@ type GetPortfoliosQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetPortfoliosSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetPortfoliosRequest struct {
-	PathParams  GetPortfoliosPathParams
-	QueryParams GetPortfoliosQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetPortfoliosResponse struct {

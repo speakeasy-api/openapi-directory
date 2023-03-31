@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type TeamsRemoveProjectInOrgPathParams struct {
+type TeamsRemoveProjectInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsRemoveProjectInOrgRequest struct {
-	PathParams TeamsRemoveProjectInOrgPathParams
 }
 
 type TeamsRemoveProjectInOrgResponse struct {

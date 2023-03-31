@@ -8,13 +8,13 @@ import (
 )
 
 type FirestoreProjectsDatabasesDocumentsBeginTransactionSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsBeginTransactionSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsBeginTransactionSecurity struct {
@@ -22,20 +22,18 @@ type FirestoreProjectsDatabasesDocumentsBeginTransactionSecurity struct {
 	Option2 *FirestoreProjectsDatabasesDocumentsBeginTransactionSecurityOption2 `security:"option"`
 }
 
-type FirestoreProjectsDatabasesDocumentsBeginTransactionPathParams struct {
-	// Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
-	Database string `pathParam:"style=simple,explode=false,name=database"`
-}
-
-type FirestoreProjectsDatabasesDocumentsBeginTransactionQueryParams struct {
+type FirestoreProjectsDatabasesDocumentsBeginTransactionRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BeginTransactionRequest *shared.BeginTransactionRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+	Database string `pathParam:"style=simple,explode=false,name=database"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -50,13 +48,6 @@ type FirestoreProjectsDatabasesDocumentsBeginTransactionQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirestoreProjectsDatabasesDocumentsBeginTransactionRequest struct {
-	PathParams  FirestoreProjectsDatabasesDocumentsBeginTransactionPathParams
-	QueryParams FirestoreProjectsDatabasesDocumentsBeginTransactionQueryParams
-	Request     *shared.BeginTransactionRequest `request:"mediaType=application/json"`
-	Security    FirestoreProjectsDatabasesDocumentsBeginTransactionSecurity
 }
 
 type FirestoreProjectsDatabasesDocumentsBeginTransactionResponse struct {

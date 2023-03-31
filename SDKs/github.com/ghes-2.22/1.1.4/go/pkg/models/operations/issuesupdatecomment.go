@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesUpdateCommentPathParams struct {
-	// comment_id parameter
-	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
-	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesUpdateCommentRequestBody struct {
 	// The contents of the comment.
 	Body string `json:"body"`
 }
 
 type IssuesUpdateCommentRequest struct {
-	PathParams IssuesUpdateCommentPathParams
-	Request    IssuesUpdateCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesUpdateCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
+	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesUpdateCommentResponse struct {

@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
-type DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams struct {
+type DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest struct {
 	// The ID of the target app.
 	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the card to delete.
 	CardID string `pathParam:"style=simple,explode=false,name=cardId"`
-}
-
-type DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest struct {
-	PathParams DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams
-	Security   DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity
 }
 
 type DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveResponse struct {

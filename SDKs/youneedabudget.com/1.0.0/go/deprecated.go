@@ -35,9 +35,9 @@ func newDeprecated(defaultClient, securityClient HTTPClient, serverURL, language
 // Creates multiple transactions.  Although this endpoint is still supported, it is recommended to use 'POST /budgets/{budget_id}/transactions' to create multiple transactions.
 func (s *deprecated) BulkCreateTransactions(ctx context.Context, request operations.BulkCreateTransactionsRequest) (*operations.BulkCreateTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/bulk", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/transactions/bulk", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkTransactions", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

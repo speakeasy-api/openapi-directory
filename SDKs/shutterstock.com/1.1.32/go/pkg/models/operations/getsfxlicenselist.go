@@ -11,7 +11,7 @@ import (
 )
 
 type GetSfxLicenseListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetSfxLicenseListDownloadAvailabilityEnum - Filter licenses by download availability
@@ -65,7 +65,7 @@ func (e *GetSfxLicenseListSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSfxLicenseListQueryParams struct {
+type GetSfxLicenseListRequest struct {
 	// Filter licenses by download availability
 	DownloadAvailability *GetSfxLicenseListDownloadAvailabilityEnum `queryParam:"style=form,explode=true,name=download_availability"`
 	// Show licenses created before the specified date
@@ -88,11 +88,6 @@ type GetSfxLicenseListQueryParams struct {
 	TeamHistory *bool `queryParam:"style=form,explode=true,name=team_history"`
 	// Filter licenses by username of licensee
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetSfxLicenseListRequest struct {
-	QueryParams GetSfxLicenseListQueryParams
-	Security    GetSfxLicenseListSecurity
 }
 
 type GetSfxLicenseListResponse struct {

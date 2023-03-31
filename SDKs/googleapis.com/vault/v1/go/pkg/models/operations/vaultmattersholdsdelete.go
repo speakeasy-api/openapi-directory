@@ -8,18 +8,11 @@ import (
 )
 
 type VaultMattersHoldsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type VaultMattersHoldsDeletePathParams struct {
-	// The hold ID.
-	HoldID string `pathParam:"style=simple,explode=false,name=holdId"`
-	// The matter ID.
-	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
-}
-
-type VaultMattersHoldsDeleteQueryParams struct {
+type VaultMattersHoldsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,8 +23,12 @@ type VaultMattersHoldsDeleteQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The hold ID.
+	HoldID string `pathParam:"style=simple,explode=false,name=holdId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The matter ID.
+	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,12 +39,6 @@ type VaultMattersHoldsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VaultMattersHoldsDeleteRequest struct {
-	PathParams  VaultMattersHoldsDeletePathParams
-	QueryParams VaultMattersHoldsDeleteQueryParams
-	Security    VaultMattersHoldsDeleteSecurity
 }
 
 type VaultMattersHoldsDeleteResponse struct {

@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteUserSettingSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteUserSettingPathParams struct {
-	// Corresponds to the setting item you wish to remove. Allowed values: `voice_mail`
-	SettingType string `pathParam:"style=simple,explode=false,name=settingType"`
-	// Unique identifier of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteUserSettingQueryParams struct {
-	// Required only for voicemail setting type.
-	SharedID string `queryParam:"style=form,explode=true,name=shared_id"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteUserSettingRequest struct {
-	PathParams  DeleteUserSettingPathParams
-	QueryParams DeleteUserSettingQueryParams
-	Security    DeleteUserSettingSecurity
+	// Corresponds to the setting item you wish to remove. Allowed values: `voice_mail`
+	SettingType string `pathParam:"style=simple,explode=false,name=settingType"`
+	// Required only for voicemail setting type.
+	SharedID string `queryParam:"style=form,explode=true,name=shared_id"`
+	// Unique identifier of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DeleteUserSettingResponse struct {

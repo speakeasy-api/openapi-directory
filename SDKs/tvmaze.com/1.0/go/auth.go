@@ -83,7 +83,7 @@ func (s *auth) GetAuthValidate(ctx context.Context) (*operations.GetAuthValidate
 // When the user has confirmed the authentication request on their end, this endpoint will return the user's API key that you can use in subsequent authenticated endpoints. Note that it'll do so only once, subsequent requests after the initial 200 response will return a 404.
 //
 // For as long as the user did not yet confirm their authentication request, this endpoint will return a 403.
-func (s *auth) PostAuthPoll(ctx context.Context, request operations.PostAuthPollRequest) (*operations.PostAuthPollResponse, error) {
+func (s *auth) PostAuthPoll(ctx context.Context, request operations.PostAuthPollRequestBody) (*operations.PostAuthPollResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/poll"
 
@@ -147,7 +147,7 @@ func (s *auth) PostAuthPoll(ctx context.Context, request operations.PostAuthPoll
 // To get started, send a POST request containing the user's email address. The response will contain a `token`, which you can use as input to the `poll` endpoint. The user will receive an email prompting them to confirm the authentication request.
 //
 // Alternatively, if you expect the user to be logged in to TVmaze on the device they are currently interacting with, you can set `email_confirmation` to false and redirect them to the `confirm_url` URL. If they are logged in to TVmaze, they will be able to confirm the authentication request instantly.
-func (s *auth) PostAuthStart(ctx context.Context, request operations.PostAuthStartRequest) (*operations.PostAuthStartResponse, error) {
+func (s *auth) PostAuthStart(ctx context.Context, request operations.PostAuthStartRequestBody) (*operations.PostAuthStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/start"
 

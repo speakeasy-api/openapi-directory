@@ -20,7 +20,6 @@ pkg/models/shared/fourhundredandone.go
 pkg/models/shared/fourhundredandthree.go
 pkg/models/shared/fourhundredandtwentytwo.go
 pkg/models/shared/balanceresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/ibanresult.go
 pkg/models/shared/ibanresultbasic.go
 USAGE.md

@@ -36,7 +36,6 @@ pkg/models/operations/updatesubscription.go
 pkg/models/shared/eventsv1sink.go
 pkg/models/shared/sinkenumstatusenum.go
 pkg/models/shared/sinkenumsinktypeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/eventsv1sinksinktest.go
 pkg/models/shared/eventsv1sinksinkvalidate.go
 pkg/models/shared/eventsv1subscriptionsubscribedevent.go
@@ -45,3 +44,4 @@ pkg/models/shared/eventsv1eventtype.go
 pkg/models/shared/eventsv1schema.go
 pkg/models/shared/eventsv1schemaschemaversion.go
 USAGE.md
+pkg/models/operations/options.go

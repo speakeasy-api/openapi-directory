@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceWirelessStatusPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceWirelessStatusRequest struct {
-	PathParams GetDeviceWirelessStatusPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceWirelessStatusResponse struct {

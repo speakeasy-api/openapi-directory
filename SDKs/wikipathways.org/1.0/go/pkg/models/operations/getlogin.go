@@ -44,16 +44,12 @@ func (e *GetLoginFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLoginQueryParams struct {
+type GetLoginRequest struct {
 	Format *GetLoginFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The usernameset_include_path(get_include_path().PATH_SEPARATOR.realpath('../includes').PATH_SEPARATOR.realpath('../').PATH_SEPARATOR);
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// The password
 	Pass string `queryParam:"style=form,explode=true,name=pass"`
-}
-
-type GetLoginRequest struct {
-	QueryParams GetLoginQueryParams
 }
 
 type GetLoginResponse struct {

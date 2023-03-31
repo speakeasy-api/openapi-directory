@@ -14,7 +14,8 @@ var CreateCompositionServerList = []string{
 }
 
 type CreateCompositionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateCompositionCreateCompositionRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.
@@ -85,12 +86,6 @@ type CreateCompositionCreateCompositionRequest struct {
 	Trim *bool `form:"name=Trim"`
 	// An object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info. Please, be aware that either video_layout or audio_sources have to be provided to get a valid creation request
 	VideoLayout interface{} `form:"name=VideoLayout"`
-}
-
-type CreateCompositionRequest struct {
-	Request   *CreateCompositionCreateCompositionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCompositionSecurity
-	ServerURL *string
 }
 
 type CreateCompositionResponse struct {

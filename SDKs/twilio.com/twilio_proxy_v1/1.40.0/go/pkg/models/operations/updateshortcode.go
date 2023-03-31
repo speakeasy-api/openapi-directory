@@ -12,14 +12,8 @@ var UpdateShortCodeServerList = []string{
 }
 
 type UpdateShortCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateShortCodePathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the ShortCode resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateShortCodeUpdateShortCodeRequest struct {
@@ -28,10 +22,11 @@ type UpdateShortCodeUpdateShortCodeRequest struct {
 }
 
 type UpdateShortCodeRequest struct {
-	PathParams UpdateShortCodePathParams
-	Request    *UpdateShortCodeUpdateShortCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateShortCodeSecurity
-	ServerURL  *string
+	RequestBody *UpdateShortCodeUpdateShortCodeRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the ShortCode resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateShortCodeResponse struct {

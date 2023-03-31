@@ -12,7 +12,8 @@ var CreateSourceIPMappingServerList = []string{
 }
 
 type CreateSourceIPMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSourceIPMappingCreateSourceIPMappingRequest struct {
@@ -20,12 +21,6 @@ type CreateSourceIPMappingCreateSourceIPMappingRequest struct {
 	IPRecordSid string `form:"name=IpRecordSid"`
 	// The SID of the SIP Domain that the IP Record should be mapped to.
 	SipDomainSid string `form:"name=SipDomainSid"`
-}
-
-type CreateSourceIPMappingRequest struct {
-	Request   *CreateSourceIPMappingCreateSourceIPMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSourceIPMappingSecurity
-	ServerURL *string
 }
 
 type CreateSourceIPMappingResponse struct {

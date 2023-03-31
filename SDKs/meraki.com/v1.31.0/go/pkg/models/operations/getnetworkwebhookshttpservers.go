@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkWebhooksHTTPServersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkWebhooksHTTPServersRequest struct {
-	PathParams GetNetworkWebhooksHTTPServersPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkWebhooksHTTPServers200ApplicationJSONPayloadTemplate - The payload template to use when posting data to the HTTP server.

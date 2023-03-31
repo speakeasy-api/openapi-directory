@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDExpenseProofsPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // GetSpacesSpaceIDFoldersIDExpenseProofsStatusEnum - Status of the expense proof
 type GetSpacesSpaceIDFoldersIDExpenseProofsStatusEnum string
 
@@ -43,7 +36,7 @@ func (e *GetSpacesSpaceIDFoldersIDExpenseProofsStatusEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetSpacesSpaceIDFoldersIDExpenseProofsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDExpenseProofsRequest struct {
 	// date range of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// date range of attachment
@@ -54,11 +47,10 @@ type GetSpacesSpaceIDFoldersIDExpenseProofsQueryParams struct {
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
 	// Status of the expense proof
 	Status *GetSpacesSpaceIDFoldersIDExpenseProofsStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type GetSpacesSpaceIDFoldersIDExpenseProofsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDExpenseProofsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDExpenseProofsQueryParams
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDExpenseProofsResponse struct {

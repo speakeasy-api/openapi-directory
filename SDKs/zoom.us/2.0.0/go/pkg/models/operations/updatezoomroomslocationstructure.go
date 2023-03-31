@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateZoomRoomsLocationStructureSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateZoomRoomsLocationStructureApplicationJSON struct {
 	// Location Structure. The value can be either one or a combination of the following strings separated by comma:
 	// `country`, `state`, `city`, `campus`, `building`, `floor`
 	Structures []string `json:"structures,omitempty"`
-}
-
-type UpdateZoomRoomsLocationStructureRequest struct {
-	Request  *UpdateZoomRoomsLocationStructureApplicationJSON `request:"mediaType=application/json"`
-	Security UpdateZoomRoomsLocationStructureSecurity
 }
 
 type UpdateZoomRoomsLocationStructureResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeletePagesSitePathParams struct {
+type ReposDeletePagesSiteRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeletePagesSiteRequest struct {
-	PathParams ReposDeletePagesSitePathParams
 }
 
 // ReposDeletePagesSite415ApplicationJSON - Preview header missing

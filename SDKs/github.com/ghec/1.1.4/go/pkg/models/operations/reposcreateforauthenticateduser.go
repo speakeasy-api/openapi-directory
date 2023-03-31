@@ -188,10 +188,6 @@ type ReposCreateForAuthenticatedUserRequestBody struct {
 	TeamID *int64 `json:"team_id,omitempty"`
 }
 
-type ReposCreateForAuthenticatedUserRequest struct {
-	Request ReposCreateForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
-}
-
 type ReposCreateForAuthenticatedUserResponse struct {
 	ContentType string
 	Headers     map[string][]string

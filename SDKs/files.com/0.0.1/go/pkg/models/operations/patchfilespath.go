@@ -8,11 +8,6 @@ import (
 	"time"
 )
 
-type PatchFilesPathPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type PatchFilesPathRequestBody struct {
 	// Priority/Bookmark color of file.
 	PriorityColor *string `multipartForm:"name=priority_color"`
@@ -21,8 +16,9 @@ type PatchFilesPathRequestBody struct {
 }
 
 type PatchFilesPathRequest struct {
-	PathParams PatchFilesPathPathParams
-	Request    *PatchFilesPathRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchFilesPathRequestBody `request:"mediaType=multipart/form-data"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PatchFilesPathResponse struct {

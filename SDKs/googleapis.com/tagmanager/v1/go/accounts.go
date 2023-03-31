@@ -33,11 +33,11 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // TagmanagerAccountsContainersCreate - Creates a Container.
-func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersCreateRequest) (*operations.TagmanagerAccountsContainersCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersCreateRequest, security operations.TagmanagerAccountsContainersCreateSecurity) (*operations.TagmanagerAccountsContainersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Container", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, reque
 }
 
 // TagmanagerAccountsContainersDelete - Deletes a Container.
-func (s *accounts) TagmanagerAccountsContainersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersDeleteRequest) (*operations.TagmanagerAccountsContainersDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersDeleteRequest, security operations.TagmanagerAccountsContainersDeleteSecurity) (*operations.TagmanagerAccountsContainersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,11 +127,11 @@ func (s *accounts) TagmanagerAccountsContainersDelete(ctx context.Context, reque
 }
 
 // TagmanagerAccountsContainersEnvironmentsCreate - Creates a GTM Environment.
-func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsCreateRequest) (*operations.TagmanagerAccountsContainersEnvironmentsCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsCreateRequest, security operations.TagmanagerAccountsContainersEnvironmentsCreateSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -143,11 +143,11 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,20 +182,20 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Co
 }
 
 // TagmanagerAccountsContainersEnvironmentsDelete - Deletes a GTM Environment.
-func (s *accounts) TagmanagerAccountsContainersEnvironmentsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsDeleteRequest) (*operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersEnvironmentsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsDeleteRequest, security operations.TagmanagerAccountsContainersEnvironmentsDeleteSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,20 +221,20 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsDelete(ctx context.Co
 }
 
 // TagmanagerAccountsContainersEnvironmentsGet - Gets a GTM Environment.
-func (s *accounts) TagmanagerAccountsContainersEnvironmentsGet(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsGetRequest) (*operations.TagmanagerAccountsContainersEnvironmentsGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersEnvironmentsGet(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsGetRequest, security operations.TagmanagerAccountsContainersEnvironmentsGetSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -269,20 +269,20 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsGet(ctx context.Conte
 }
 
 // TagmanagerAccountsContainersEnvironmentsList - Lists all GTM Environments of a GTM Container.
-func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsListRequest) (*operations.TagmanagerAccountsContainersEnvironmentsListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsListRequest, security operations.TagmanagerAccountsContainersEnvironmentsListSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -317,11 +317,11 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Cont
 }
 
 // TagmanagerAccountsContainersEnvironmentsUpdate - Updates a GTM Environment.
-func (s *accounts) TagmanagerAccountsContainersEnvironmentsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsUpdateRequest) (*operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersEnvironmentsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsUpdateRequest, security operations.TagmanagerAccountsContainersEnvironmentsUpdateSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,11 +333,11 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsUpdate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,11 +372,11 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsUpdate(ctx context.Co
 }
 
 // TagmanagerAccountsContainersFoldersCreate - Creates a GTM Folder.
-func (s *accounts) TagmanagerAccountsContainersFoldersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersCreateRequest) (*operations.TagmanagerAccountsContainersFoldersCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersFoldersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersCreateRequest, security operations.TagmanagerAccountsContainersFoldersCreateSecurity) (*operations.TagmanagerAccountsContainersFoldersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,11 +388,11 @@ func (s *accounts) TagmanagerAccountsContainersFoldersCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -427,20 +427,20 @@ func (s *accounts) TagmanagerAccountsContainersFoldersCreate(ctx context.Context
 }
 
 // TagmanagerAccountsContainersFoldersDelete - Deletes a GTM Folder.
-func (s *accounts) TagmanagerAccountsContainersFoldersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersDeleteRequest) (*operations.TagmanagerAccountsContainersFoldersDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersFoldersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersDeleteRequest, security operations.TagmanagerAccountsContainersFoldersDeleteSecurity) (*operations.TagmanagerAccountsContainersFoldersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -466,20 +466,20 @@ func (s *accounts) TagmanagerAccountsContainersFoldersDelete(ctx context.Context
 }
 
 // TagmanagerAccountsContainersFoldersEntitiesList - List all entities in a GTM Folder.
-func (s *accounts) TagmanagerAccountsContainersFoldersEntitiesList(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersEntitiesListRequest) (*operations.TagmanagerAccountsContainersFoldersEntitiesListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersFoldersEntitiesList(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersEntitiesListRequest, security operations.TagmanagerAccountsContainersFoldersEntitiesListSecurity) (*operations.TagmanagerAccountsContainersFoldersEntitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -514,20 +514,20 @@ func (s *accounts) TagmanagerAccountsContainersFoldersEntitiesList(ctx context.C
 }
 
 // TagmanagerAccountsContainersFoldersGet - Gets a GTM Folder.
-func (s *accounts) TagmanagerAccountsContainersFoldersGet(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersGetRequest) (*operations.TagmanagerAccountsContainersFoldersGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersFoldersGet(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersGetRequest, security operations.TagmanagerAccountsContainersFoldersGetSecurity) (*operations.TagmanagerAccountsContainersFoldersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,20 +562,20 @@ func (s *accounts) TagmanagerAccountsContainersFoldersGet(ctx context.Context, r
 }
 
 // TagmanagerAccountsContainersFoldersList - Lists all GTM Folders of a Container.
-func (s *accounts) TagmanagerAccountsContainersFoldersList(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersListRequest) (*operations.TagmanagerAccountsContainersFoldersListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersFoldersList(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersListRequest, security operations.TagmanagerAccountsContainersFoldersListSecurity) (*operations.TagmanagerAccountsContainersFoldersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -610,11 +610,11 @@ func (s *accounts) TagmanagerAccountsContainersFoldersList(ctx context.Context, 
 }
 
 // TagmanagerAccountsContainersFoldersUpdate - Updates a GTM Folder.
-func (s *accounts) TagmanagerAccountsContainersFoldersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersUpdateRequest) (*operations.TagmanagerAccountsContainersFoldersUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersFoldersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersUpdateRequest, security operations.TagmanagerAccountsContainersFoldersUpdateSecurity) (*operations.TagmanagerAccountsContainersFoldersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -626,11 +626,11 @@ func (s *accounts) TagmanagerAccountsContainersFoldersUpdate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -665,20 +665,20 @@ func (s *accounts) TagmanagerAccountsContainersFoldersUpdate(ctx context.Context
 }
 
 // TagmanagerAccountsContainersGet - Gets a Container.
-func (s *accounts) TagmanagerAccountsContainersGet(ctx context.Context, request operations.TagmanagerAccountsContainersGetRequest) (*operations.TagmanagerAccountsContainersGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersGet(ctx context.Context, request operations.TagmanagerAccountsContainersGetRequest, security operations.TagmanagerAccountsContainersGetSecurity) (*operations.TagmanagerAccountsContainersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -713,20 +713,20 @@ func (s *accounts) TagmanagerAccountsContainersGet(ctx context.Context, request 
 }
 
 // TagmanagerAccountsContainersList - Lists all Containers that belongs to a GTM Account.
-func (s *accounts) TagmanagerAccountsContainersList(ctx context.Context, request operations.TagmanagerAccountsContainersListRequest) (*operations.TagmanagerAccountsContainersListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersList(ctx context.Context, request operations.TagmanagerAccountsContainersListRequest, security operations.TagmanagerAccountsContainersListSecurity) (*operations.TagmanagerAccountsContainersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -761,11 +761,11 @@ func (s *accounts) TagmanagerAccountsContainersList(ctx context.Context, request
 }
 
 // TagmanagerAccountsContainersMoveFoldersUpdate - Moves entities to a GTM Folder.
-func (s *accounts) TagmanagerAccountsContainersMoveFoldersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersMoveFoldersUpdateRequest) (*operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersMoveFoldersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersMoveFoldersUpdateRequest, security operations.TagmanagerAccountsContainersMoveFoldersUpdateSecurity) (*operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/move_folders/{folderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/move_folders/{folderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -777,11 +777,11 @@ func (s *accounts) TagmanagerAccountsContainersMoveFoldersUpdate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -807,11 +807,11 @@ func (s *accounts) TagmanagerAccountsContainersMoveFoldersUpdate(ctx context.Con
 }
 
 // TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate - Re-generates the authorization code for a GTM Environment.
-func (s *accounts) TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateRequest) (*operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateRequest, security operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateSecurity) (*operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -823,11 +823,11 @@ func (s *accounts) TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -862,11 +862,11 @@ func (s *accounts) TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate(ctx
 }
 
 // TagmanagerAccountsContainersTagsCreate - Creates a GTM Tag.
-func (s *accounts) TagmanagerAccountsContainersTagsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersTagsCreateRequest) (*operations.TagmanagerAccountsContainersTagsCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTagsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersTagsCreateRequest, security operations.TagmanagerAccountsContainersTagsCreateSecurity) (*operations.TagmanagerAccountsContainersTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -878,11 +878,11 @@ func (s *accounts) TagmanagerAccountsContainersTagsCreate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -917,20 +917,20 @@ func (s *accounts) TagmanagerAccountsContainersTagsCreate(ctx context.Context, r
 }
 
 // TagmanagerAccountsContainersTagsDelete - Deletes a GTM Tag.
-func (s *accounts) TagmanagerAccountsContainersTagsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersTagsDeleteRequest) (*operations.TagmanagerAccountsContainersTagsDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTagsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersTagsDeleteRequest, security operations.TagmanagerAccountsContainersTagsDeleteSecurity) (*operations.TagmanagerAccountsContainersTagsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -956,20 +956,20 @@ func (s *accounts) TagmanagerAccountsContainersTagsDelete(ctx context.Context, r
 }
 
 // TagmanagerAccountsContainersTagsGet - Gets a GTM Tag.
-func (s *accounts) TagmanagerAccountsContainersTagsGet(ctx context.Context, request operations.TagmanagerAccountsContainersTagsGetRequest) (*operations.TagmanagerAccountsContainersTagsGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTagsGet(ctx context.Context, request operations.TagmanagerAccountsContainersTagsGetRequest, security operations.TagmanagerAccountsContainersTagsGetSecurity) (*operations.TagmanagerAccountsContainersTagsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1004,20 +1004,20 @@ func (s *accounts) TagmanagerAccountsContainersTagsGet(ctx context.Context, requ
 }
 
 // TagmanagerAccountsContainersTagsList - Lists all GTM Tags of a Container.
-func (s *accounts) TagmanagerAccountsContainersTagsList(ctx context.Context, request operations.TagmanagerAccountsContainersTagsListRequest) (*operations.TagmanagerAccountsContainersTagsListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTagsList(ctx context.Context, request operations.TagmanagerAccountsContainersTagsListRequest, security operations.TagmanagerAccountsContainersTagsListSecurity) (*operations.TagmanagerAccountsContainersTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1052,11 +1052,11 @@ func (s *accounts) TagmanagerAccountsContainersTagsList(ctx context.Context, req
 }
 
 // TagmanagerAccountsContainersTagsUpdate - Updates a GTM Tag.
-func (s *accounts) TagmanagerAccountsContainersTagsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersTagsUpdateRequest) (*operations.TagmanagerAccountsContainersTagsUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTagsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersTagsUpdateRequest, security operations.TagmanagerAccountsContainersTagsUpdateSecurity) (*operations.TagmanagerAccountsContainersTagsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1068,11 +1068,11 @@ func (s *accounts) TagmanagerAccountsContainersTagsUpdate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1107,11 +1107,11 @@ func (s *accounts) TagmanagerAccountsContainersTagsUpdate(ctx context.Context, r
 }
 
 // TagmanagerAccountsContainersTriggersCreate - Creates a GTM Trigger.
-func (s *accounts) TagmanagerAccountsContainersTriggersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersCreateRequest) (*operations.TagmanagerAccountsContainersTriggersCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTriggersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersCreateRequest, security operations.TagmanagerAccountsContainersTriggersCreateSecurity) (*operations.TagmanagerAccountsContainersTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Trigger", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1123,11 +1123,11 @@ func (s *accounts) TagmanagerAccountsContainersTriggersCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1162,20 +1162,20 @@ func (s *accounts) TagmanagerAccountsContainersTriggersCreate(ctx context.Contex
 }
 
 // TagmanagerAccountsContainersTriggersDelete - Deletes a GTM Trigger.
-func (s *accounts) TagmanagerAccountsContainersTriggersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersDeleteRequest) (*operations.TagmanagerAccountsContainersTriggersDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTriggersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersDeleteRequest, security operations.TagmanagerAccountsContainersTriggersDeleteSecurity) (*operations.TagmanagerAccountsContainersTriggersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1201,20 +1201,20 @@ func (s *accounts) TagmanagerAccountsContainersTriggersDelete(ctx context.Contex
 }
 
 // TagmanagerAccountsContainersTriggersGet - Gets a GTM Trigger.
-func (s *accounts) TagmanagerAccountsContainersTriggersGet(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersGetRequest) (*operations.TagmanagerAccountsContainersTriggersGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTriggersGet(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersGetRequest, security operations.TagmanagerAccountsContainersTriggersGetSecurity) (*operations.TagmanagerAccountsContainersTriggersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1249,20 +1249,20 @@ func (s *accounts) TagmanagerAccountsContainersTriggersGet(ctx context.Context, 
 }
 
 // TagmanagerAccountsContainersTriggersList - Lists all GTM Triggers of a Container.
-func (s *accounts) TagmanagerAccountsContainersTriggersList(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersListRequest) (*operations.TagmanagerAccountsContainersTriggersListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTriggersList(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersListRequest, security operations.TagmanagerAccountsContainersTriggersListSecurity) (*operations.TagmanagerAccountsContainersTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1297,11 +1297,11 @@ func (s *accounts) TagmanagerAccountsContainersTriggersList(ctx context.Context,
 }
 
 // TagmanagerAccountsContainersTriggersUpdate - Updates a GTM Trigger.
-func (s *accounts) TagmanagerAccountsContainersTriggersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersUpdateRequest) (*operations.TagmanagerAccountsContainersTriggersUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersTriggersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersUpdateRequest, security operations.TagmanagerAccountsContainersTriggersUpdateSecurity) (*operations.TagmanagerAccountsContainersTriggersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Trigger", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1313,11 +1313,11 @@ func (s *accounts) TagmanagerAccountsContainersTriggersUpdate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1352,11 +1352,11 @@ func (s *accounts) TagmanagerAccountsContainersTriggersUpdate(ctx context.Contex
 }
 
 // TagmanagerAccountsContainersUpdate - Updates a Container.
-func (s *accounts) TagmanagerAccountsContainersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersUpdateRequest) (*operations.TagmanagerAccountsContainersUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersUpdateRequest, security operations.TagmanagerAccountsContainersUpdateSecurity) (*operations.TagmanagerAccountsContainersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Container", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1368,11 +1368,11 @@ func (s *accounts) TagmanagerAccountsContainersUpdate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1407,11 +1407,11 @@ func (s *accounts) TagmanagerAccountsContainersUpdate(ctx context.Context, reque
 }
 
 // TagmanagerAccountsContainersVariablesCreate - Creates a GTM Variable.
-func (s *accounts) TagmanagerAccountsContainersVariablesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesCreateRequest) (*operations.TagmanagerAccountsContainersVariablesCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVariablesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesCreateRequest, security operations.TagmanagerAccountsContainersVariablesCreateSecurity) (*operations.TagmanagerAccountsContainersVariablesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1423,11 +1423,11 @@ func (s *accounts) TagmanagerAccountsContainersVariablesCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1462,20 +1462,20 @@ func (s *accounts) TagmanagerAccountsContainersVariablesCreate(ctx context.Conte
 }
 
 // TagmanagerAccountsContainersVariablesDelete - Deletes a GTM Variable.
-func (s *accounts) TagmanagerAccountsContainersVariablesDelete(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesDeleteRequest) (*operations.TagmanagerAccountsContainersVariablesDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVariablesDelete(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesDeleteRequest, security operations.TagmanagerAccountsContainersVariablesDeleteSecurity) (*operations.TagmanagerAccountsContainersVariablesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1501,20 +1501,20 @@ func (s *accounts) TagmanagerAccountsContainersVariablesDelete(ctx context.Conte
 }
 
 // TagmanagerAccountsContainersVariablesGet - Gets a GTM Variable.
-func (s *accounts) TagmanagerAccountsContainersVariablesGet(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesGetRequest) (*operations.TagmanagerAccountsContainersVariablesGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVariablesGet(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesGetRequest, security operations.TagmanagerAccountsContainersVariablesGetSecurity) (*operations.TagmanagerAccountsContainersVariablesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1549,20 +1549,20 @@ func (s *accounts) TagmanagerAccountsContainersVariablesGet(ctx context.Context,
 }
 
 // TagmanagerAccountsContainersVariablesList - Lists all GTM Variables of a Container.
-func (s *accounts) TagmanagerAccountsContainersVariablesList(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesListRequest) (*operations.TagmanagerAccountsContainersVariablesListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVariablesList(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesListRequest, security operations.TagmanagerAccountsContainersVariablesListSecurity) (*operations.TagmanagerAccountsContainersVariablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1597,11 +1597,11 @@ func (s *accounts) TagmanagerAccountsContainersVariablesList(ctx context.Context
 }
 
 // TagmanagerAccountsContainersVariablesUpdate - Updates a GTM Variable.
-func (s *accounts) TagmanagerAccountsContainersVariablesUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesUpdateRequest) (*operations.TagmanagerAccountsContainersVariablesUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVariablesUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesUpdateRequest, security operations.TagmanagerAccountsContainersVariablesUpdateSecurity) (*operations.TagmanagerAccountsContainersVariablesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1613,11 +1613,11 @@ func (s *accounts) TagmanagerAccountsContainersVariablesUpdate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1652,11 +1652,11 @@ func (s *accounts) TagmanagerAccountsContainersVariablesUpdate(ctx context.Conte
 }
 
 // TagmanagerAccountsContainersVersionsCreate - Creates a Container Version.
-func (s *accounts) TagmanagerAccountsContainersVersionsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsCreateRequest) (*operations.TagmanagerAccountsContainersVersionsCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsCreateRequest, security operations.TagmanagerAccountsContainersVersionsCreateSecurity) (*operations.TagmanagerAccountsContainersVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContainerVersionRequestVersionOptions", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1668,11 +1668,11 @@ func (s *accounts) TagmanagerAccountsContainersVersionsCreate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1707,20 +1707,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsCreate(ctx context.Contex
 }
 
 // TagmanagerAccountsContainersVersionsDelete - Deletes a Container Version.
-func (s *accounts) TagmanagerAccountsContainersVersionsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsDeleteRequest) (*operations.TagmanagerAccountsContainersVersionsDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsDeleteRequest, security operations.TagmanagerAccountsContainersVersionsDeleteSecurity) (*operations.TagmanagerAccountsContainersVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1746,20 +1746,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsDelete(ctx context.Contex
 }
 
 // TagmanagerAccountsContainersVersionsGet - Gets a Container Version.
-func (s *accounts) TagmanagerAccountsContainersVersionsGet(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsGetRequest) (*operations.TagmanagerAccountsContainersVersionsGetResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsGet(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsGetRequest, security operations.TagmanagerAccountsContainersVersionsGetSecurity) (*operations.TagmanagerAccountsContainersVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1794,20 +1794,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsGet(ctx context.Context, 
 }
 
 // TagmanagerAccountsContainersVersionsList - Lists all Container Versions of a GTM Container.
-func (s *accounts) TagmanagerAccountsContainersVersionsList(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsListRequest) (*operations.TagmanagerAccountsContainersVersionsListResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsList(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsListRequest, security operations.TagmanagerAccountsContainersVersionsListSecurity) (*operations.TagmanagerAccountsContainersVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1842,20 +1842,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsList(ctx context.Context,
 }
 
 // TagmanagerAccountsContainersVersionsPublish - Publishes a Container Version.
-func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsPublishRequest) (*operations.TagmanagerAccountsContainersVersionsPublishResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsPublishRequest, security operations.TagmanagerAccountsContainersVersionsPublishSecurity) (*operations.TagmanagerAccountsContainersVersionsPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1890,20 +1890,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Conte
 }
 
 // TagmanagerAccountsContainersVersionsRestore - Restores a Container Version. This will overwrite the container's current configuration (including its variables, triggers and tags). The operation will not have any effect on the version that is being served (i.e. the published version).
-func (s *accounts) TagmanagerAccountsContainersVersionsRestore(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsRestoreRequest) (*operations.TagmanagerAccountsContainersVersionsRestoreResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsRestore(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsRestoreRequest, security operations.TagmanagerAccountsContainersVersionsRestoreSecurity) (*operations.TagmanagerAccountsContainersVersionsRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1938,20 +1938,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsRestore(ctx context.Conte
 }
 
 // TagmanagerAccountsContainersVersionsUndelete - Undeletes a Container Version.
-func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUndeleteRequest) (*operations.TagmanagerAccountsContainersVersionsUndeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUndeleteRequest, security operations.TagmanagerAccountsContainersVersionsUndeleteSecurity) (*operations.TagmanagerAccountsContainersVersionsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1986,11 +1986,11 @@ func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Cont
 }
 
 // TagmanagerAccountsContainersVersionsUpdate - Updates a Container Version.
-func (s *accounts) TagmanagerAccountsContainersVersionsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUpdateRequest) (*operations.TagmanagerAccountsContainersVersionsUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsContainersVersionsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUpdateRequest, security operations.TagmanagerAccountsContainersVersionsUpdateSecurity) (*operations.TagmanagerAccountsContainersVersionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContainerVersion", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2002,11 +2002,11 @@ func (s *accounts) TagmanagerAccountsContainersVersionsUpdate(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2041,20 +2041,20 @@ func (s *accounts) TagmanagerAccountsContainersVersionsUpdate(ctx context.Contex
 }
 
 // TagmanagerAccountsGet - Gets a GTM Account.
-func (s *accounts) TagmanagerAccountsGet(ctx context.Context, request operations.TagmanagerAccountsGetRequest) (*operations.TagmanagerAccountsGetResponse, error) {
+func (s *accounts) TagmanagerAccountsGet(ctx context.Context, request operations.TagmanagerAccountsGetRequest, security operations.TagmanagerAccountsGetSecurity) (*operations.TagmanagerAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2089,7 +2089,7 @@ func (s *accounts) TagmanagerAccountsGet(ctx context.Context, request operations
 }
 
 // TagmanagerAccountsList - Lists all GTM Accounts that a user has access to.
-func (s *accounts) TagmanagerAccountsList(ctx context.Context, request operations.TagmanagerAccountsListRequest) (*operations.TagmanagerAccountsListResponse, error) {
+func (s *accounts) TagmanagerAccountsList(ctx context.Context, request operations.TagmanagerAccountsListRequest, security operations.TagmanagerAccountsListSecurity) (*operations.TagmanagerAccountsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tagmanager/v1/accounts"
 
@@ -2098,11 +2098,11 @@ func (s *accounts) TagmanagerAccountsList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2137,11 +2137,11 @@ func (s *accounts) TagmanagerAccountsList(ctx context.Context, request operation
 }
 
 // TagmanagerAccountsPermissionsCreate - Creates a user's Account & Container Permissions.
-func (s *accounts) TagmanagerAccountsPermissionsCreate(ctx context.Context, request operations.TagmanagerAccountsPermissionsCreateRequest) (*operations.TagmanagerAccountsPermissionsCreateResponse, error) {
+func (s *accounts) TagmanagerAccountsPermissionsCreate(ctx context.Context, request operations.TagmanagerAccountsPermissionsCreateRequest, security operations.TagmanagerAccountsPermissionsCreateSecurity) (*operations.TagmanagerAccountsPermissionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAccess", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2153,11 +2153,11 @@ func (s *accounts) TagmanagerAccountsPermissionsCreate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2192,20 +2192,20 @@ func (s *accounts) TagmanagerAccountsPermissionsCreate(ctx context.Context, requ
 }
 
 // TagmanagerAccountsPermissionsDelete - Removes a user from the account, revoking access to it and all of its containers.
-func (s *accounts) TagmanagerAccountsPermissionsDelete(ctx context.Context, request operations.TagmanagerAccountsPermissionsDeleteRequest) (*operations.TagmanagerAccountsPermissionsDeleteResponse, error) {
+func (s *accounts) TagmanagerAccountsPermissionsDelete(ctx context.Context, request operations.TagmanagerAccountsPermissionsDeleteRequest, security operations.TagmanagerAccountsPermissionsDeleteSecurity) (*operations.TagmanagerAccountsPermissionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2231,20 +2231,20 @@ func (s *accounts) TagmanagerAccountsPermissionsDelete(ctx context.Context, requ
 }
 
 // TagmanagerAccountsPermissionsGet - Gets a user's Account & Container Permissions.
-func (s *accounts) TagmanagerAccountsPermissionsGet(ctx context.Context, request operations.TagmanagerAccountsPermissionsGetRequest) (*operations.TagmanagerAccountsPermissionsGetResponse, error) {
+func (s *accounts) TagmanagerAccountsPermissionsGet(ctx context.Context, request operations.TagmanagerAccountsPermissionsGetRequest, security operations.TagmanagerAccountsPermissionsGetSecurity) (*operations.TagmanagerAccountsPermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2279,20 +2279,20 @@ func (s *accounts) TagmanagerAccountsPermissionsGet(ctx context.Context, request
 }
 
 // TagmanagerAccountsPermissionsList - List all users that have access to the account along with Account and Container Permissions granted to each of them.
-func (s *accounts) TagmanagerAccountsPermissionsList(ctx context.Context, request operations.TagmanagerAccountsPermissionsListRequest) (*operations.TagmanagerAccountsPermissionsListResponse, error) {
+func (s *accounts) TagmanagerAccountsPermissionsList(ctx context.Context, request operations.TagmanagerAccountsPermissionsListRequest, security operations.TagmanagerAccountsPermissionsListSecurity) (*operations.TagmanagerAccountsPermissionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2327,11 +2327,11 @@ func (s *accounts) TagmanagerAccountsPermissionsList(ctx context.Context, reques
 }
 
 // TagmanagerAccountsPermissionsUpdate - Updates a user's Account & Container Permissions.
-func (s *accounts) TagmanagerAccountsPermissionsUpdate(ctx context.Context, request operations.TagmanagerAccountsPermissionsUpdateRequest) (*operations.TagmanagerAccountsPermissionsUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsPermissionsUpdate(ctx context.Context, request operations.TagmanagerAccountsPermissionsUpdateRequest, security operations.TagmanagerAccountsPermissionsUpdateSecurity) (*operations.TagmanagerAccountsPermissionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAccess", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2343,11 +2343,11 @@ func (s *accounts) TagmanagerAccountsPermissionsUpdate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2382,11 +2382,11 @@ func (s *accounts) TagmanagerAccountsPermissionsUpdate(ctx context.Context, requ
 }
 
 // TagmanagerAccountsUpdate - Updates a GTM Account.
-func (s *accounts) TagmanagerAccountsUpdate(ctx context.Context, request operations.TagmanagerAccountsUpdateRequest) (*operations.TagmanagerAccountsUpdateResponse, error) {
+func (s *accounts) TagmanagerAccountsUpdate(ctx context.Context, request operations.TagmanagerAccountsUpdateRequest, security operations.TagmanagerAccountsUpdateSecurity) (*operations.TagmanagerAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2398,11 +2398,11 @@ func (s *accounts) TagmanagerAccountsUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetsSetCardLocalIDPathParams struct {
+type GetSetsSetCardLocalIDRequest struct {
 	CardLocalID string `pathParam:"style=simple,explode=false,name=cardLocalId"`
 	Set         string `pathParam:"style=simple,explode=false,name=set"`
-}
-
-type GetSetsSetCardLocalIDRequest struct {
-	PathParams GetSetsSetCardLocalIDPathParams
 }
 
 type GetSetsSetCardLocalIDResponse struct {

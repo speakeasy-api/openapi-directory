@@ -13,21 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetNameConceptTypeSpecificConceptJSONRequest{
-        PathParams: operations.GetNameConceptTypeSpecificConceptJSONPathParams{
-            ConceptType: "nytd_org",
-            SpecificConcept: "provident",
-        },
-        QueryParams: operations.GetNameConceptTypeSpecificConceptJSONQueryParams{
-            Fields: "article_list",
-            Query: "quibusdam",
-        },
+        ConceptType: "nytd_org",
+        Fields: "combinations",
+        Query: "distinctio",
+        SpecificConcept: "quibusdam",
     }
 
     ctx := context.Background()

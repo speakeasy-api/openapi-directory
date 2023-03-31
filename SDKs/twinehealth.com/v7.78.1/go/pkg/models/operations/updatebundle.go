@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateBundlePathParams struct {
+type UpdateBundleRequest struct {
+	UpdateBundleRequest shared.UpdateBundleRequest `request:"mediaType=application/vnd.api+json"`
 	// Bundle identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateBundleRequest struct {
-	PathParams UpdateBundlePathParams
-	Request    shared.UpdateBundleRequest `request:"mediaType=application/vnd.api+json"`
 }
 
 type UpdateBundleResponse struct {

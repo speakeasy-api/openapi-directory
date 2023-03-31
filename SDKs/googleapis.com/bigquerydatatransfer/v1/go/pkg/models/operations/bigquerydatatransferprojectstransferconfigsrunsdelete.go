@@ -8,13 +8,13 @@ import (
 )
 
 type BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurity struct {
@@ -22,12 +22,7 @@ type BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurity struct {
 	Option2 *BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurityOption2 `security:"option"`
 }
 
-type BigquerydatatransferProjectsTransferConfigsRunsDeletePathParams struct {
-	// Required. The field will contain name of the resource requested, for example: `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsRunsDeleteQueryParams struct {
+type BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type BigquerydatatransferProjectsTransferConfigsRunsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The field will contain name of the resource requested, for example: `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type BigquerydatatransferProjectsTransferConfigsRunsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest struct {
-	PathParams  BigquerydatatransferProjectsTransferConfigsRunsDeletePathParams
-	QueryParams BigquerydatatransferProjectsTransferConfigsRunsDeleteQueryParams
-	Security    BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurity
 }
 
 type BigquerydatatransferProjectsTransferConfigsRunsDeleteResponse struct {

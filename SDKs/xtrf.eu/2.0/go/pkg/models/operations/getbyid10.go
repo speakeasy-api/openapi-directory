@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByID10PathParams struct {
+type GetByID10Request struct {
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type GetByID10Request struct {
-	PathParams GetByID10PathParams
 }
 
 type GetByID10Response struct {

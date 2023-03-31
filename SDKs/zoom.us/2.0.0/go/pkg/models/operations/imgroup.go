@@ -8,14 +8,10 @@ import (
 	"net/http"
 )
 
-type ImGroupPathParams struct {
+type ImGroupRequest struct {
 	// The group ID.<br>
 	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type ImGroupRequest struct {
-	PathParams ImGroupPathParams
 }
 
 // ImGroup200ApplicationXMLTypeEnum - IM Group types:<br>`normal` - Only members can see the other members in the group. Other people can search for members in the group.<br>`shared` - Everyone in the account can see the group and members. <br>`restricted` - No one except group members can see the group or search for other group members.

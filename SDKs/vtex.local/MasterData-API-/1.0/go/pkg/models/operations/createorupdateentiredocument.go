@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type CreateorupdateentiredocumentPathParams struct {
+type CreateorupdateentiredocumentRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept      string                 `header:"style=simple,explode=false,name=Accept"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Identifies the kind of data
 	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
-}
-
-type CreateorupdateentiredocumentHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type CreateorupdateentiredocumentRequest struct {
-	PathParams CreateorupdateentiredocumentPathParams
-	Headers    CreateorupdateentiredocumentHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreateorupdateentiredocumentResponse struct {

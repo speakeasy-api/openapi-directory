@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewsByDatePathParams struct {
+type NewsByDateRequest struct {
 	// The date of the news.
 	// <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type NewsByDateRequest struct {
-	PathParams NewsByDatePathParams
 }
 
 type NewsByDateResponse struct {

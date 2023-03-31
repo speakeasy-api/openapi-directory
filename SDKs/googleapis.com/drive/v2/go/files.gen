@@ -102,7 +102,6 @@ pkg/models/operations/driveteamdrivesupdate.go
 pkg/models/shared/about.go
 pkg/models/shared/user.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/app.go
 pkg/models/shared/applist.go
 pkg/models/shared/change.go

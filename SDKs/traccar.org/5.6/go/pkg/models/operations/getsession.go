@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSessionQueryParams struct {
-	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
 type GetSessionRequest struct {
-	QueryParams GetSessionQueryParams
+	Token *string `queryParam:"style=form,explode=true,name=token"`
 }
 
 type GetSessionResponse struct {

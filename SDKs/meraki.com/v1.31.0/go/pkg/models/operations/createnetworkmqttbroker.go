@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkMqttBrokerPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkMqttBrokerRequestBodySecuritySecurity - TLS settings of the MQTT broker.
 type CreateNetworkMqttBrokerRequestBodySecuritySecurity struct {
 	// CA Certificate of the MQTT broker.
@@ -40,8 +36,8 @@ type CreateNetworkMqttBrokerRequestBody struct {
 }
 
 type CreateNetworkMqttBrokerRequest struct {
-	PathParams CreateNetworkMqttBrokerPathParams
-	Request    CreateNetworkMqttBrokerRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkMqttBrokerRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkMqttBrokerResponse struct {

@@ -35,7 +35,7 @@ func newBundle(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // CreateBundle - Create bundle
 // Create a bundle in a patient's plan
-func (s *bundle) CreateBundle(ctx context.Context, request operations.CreateBundleRequest) (*operations.CreateBundleResponse, error) {
+func (s *bundle) CreateBundle(ctx context.Context, request shared.CreateBundleRequest) (*operations.CreateBundleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bundle"
 
@@ -106,7 +106,7 @@ func (s *bundle) CreateBundle(ctx context.Context, request operations.CreateBund
 // Get a bundle from a patient's plan.
 func (s *bundle) FetchBundle(ctx context.Context, request operations.FetchBundleRequest) (*operations.FetchBundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,9 +163,9 @@ func (s *bundle) FetchBundle(ctx context.Context, request operations.FetchBundle
 // Updte a bundle from a patient's plan.
 func (s *bundle) UpdateBundle(ctx context.Context, request operations.UpdateBundleRequest) (*operations.UpdateBundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBundleRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

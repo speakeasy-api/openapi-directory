@@ -32,11 +32,11 @@ func newMarketplacedeals(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // AdexchangebuyerMarketplacedealsDelete - Delete the specified deals from the proposal
-func (s *marketplacedeals) AdexchangebuyerMarketplacedealsDelete(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsDeleteRequest) (*operations.AdexchangebuyerMarketplacedealsDeleteResponse, error) {
+func (s *marketplacedeals) AdexchangebuyerMarketplacedealsDelete(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsDeleteRequest, security operations.AdexchangebuyerMarketplacedealsDeleteSecurity) (*operations.AdexchangebuyerMarketplacedealsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/delete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteOrderDealsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsDelete(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsDelete(ctx context.Con
 }
 
 // AdexchangebuyerMarketplacedealsInsert - Add new deals for the specified proposal
-func (s *marketplacedeals) AdexchangebuyerMarketplacedealsInsert(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsInsertRequest) (*operations.AdexchangebuyerMarketplacedealsInsertResponse, error) {
+func (s *marketplacedeals) AdexchangebuyerMarketplacedealsInsert(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsInsertRequest, security operations.AdexchangebuyerMarketplacedealsInsertSecurity) (*operations.AdexchangebuyerMarketplacedealsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/insert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/insert", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrderDealsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsInsert(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsInsert(ctx context.Con
 }
 
 // AdexchangebuyerMarketplacedealsList - List all the deals for a given proposal
-func (s *marketplacedeals) AdexchangebuyerMarketplacedealsList(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsListRequest) (*operations.AdexchangebuyerMarketplacedealsListResponse, error) {
+func (s *marketplacedeals) AdexchangebuyerMarketplacedealsList(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsListRequest, security operations.AdexchangebuyerMarketplacedealsListSecurity) (*operations.AdexchangebuyerMarketplacedealsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsList(ctx context.Conte
 }
 
 // AdexchangebuyerMarketplacedealsUpdate - Replaces all the deals in the proposal with the passed in deals
-func (s *marketplacedeals) AdexchangebuyerMarketplacedealsUpdate(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsUpdateRequest) (*operations.AdexchangebuyerMarketplacedealsUpdateResponse, error) {
+func (s *marketplacedeals) AdexchangebuyerMarketplacedealsUpdate(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsUpdateRequest, security operations.AdexchangebuyerMarketplacedealsUpdateSecurity) (*operations.AdexchangebuyerMarketplacedealsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/update", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/update", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditAllOrderDealsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsUpdate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -35,14 +35,14 @@ func newNominalCode(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes the nominal code
 func (s *nominalCode) DeleteNominalCode(ctx context.Context, request operations.DeleteNominalCodeRequest) (*operations.DeleteNominalCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *nominalCode) DeleteNominalCode(ctx context.Context, request operations.
 // Gets the nominal code
 func (s *nominalCode) GetNominalCodeFromEmployer(ctx context.Context, request operations.GetNominalCodeFromEmployerRequest) (*operations.GetNominalCodeFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *nominalCode) GetNominalCodeFromEmployer(ctx context.Context, request op
 // Gets the nominal code links
 func (s *nominalCode) GetNominalCodesFromEmployer(ctx context.Context, request operations.GetNominalCodesFromEmployerRequest) (*operations.GetNominalCodesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,9 +215,9 @@ func (s *nominalCode) GetNominalCodesFromEmployer(ctx context.Context, request o
 // Inserts a new nominal code
 func (s *nominalCode) PostNominalCode(ctx context.Context, request operations.PostNominalCodeRequest) (*operations.PostNominalCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NominalCode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -232,7 +232,7 @@ func (s *nominalCode) PostNominalCode(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -288,9 +288,9 @@ func (s *nominalCode) PostNominalCode(ctx context.Context, request operations.Po
 // Inserts a new nominal code at the specified resource location
 func (s *nominalCode) PutNominalCode(ctx context.Context, request operations.PutNominalCodeRequest) (*operations.PutNominalCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NominalCode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *nominalCode) PutNominalCode(ctx context.Context, request operations.Put
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

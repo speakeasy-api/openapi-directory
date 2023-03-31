@@ -8,18 +8,13 @@ import (
 )
 
 type DeprecatedRetrieveInventoryPhysicalCountSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeprecatedRetrieveInventoryPhysicalCountPathParams struct {
-	// ID of the
-	// [InventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryPhysicalCount) to retrieve.
-	PhysicalCountID string `pathParam:"style=simple,explode=false,name=physical_count_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeprecatedRetrieveInventoryPhysicalCountRequest struct {
-	PathParams DeprecatedRetrieveInventoryPhysicalCountPathParams
-	Security   DeprecatedRetrieveInventoryPhysicalCountSecurity
+	// ID of the
+	// [InventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryPhysicalCount) to retrieve.
+	PhysicalCountID string `pathParam:"style=simple,explode=false,name=physical_count_id"`
 }
 
 type DeprecatedRetrieveInventoryPhysicalCountResponse struct {

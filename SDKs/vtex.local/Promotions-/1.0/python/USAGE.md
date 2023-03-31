@@ -1,0 +1,172 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        app_key="YOUR_API_KEY_HERE",
+        app_token="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.CalculatediscountsandtaxesBundlesRequest(
+    accept="corrupti",
+    calculatediscountsandtaxes_bundles_request=shared.CalculatediscountsandtaxesBundlesRequest(
+        is_shopping_cart=False,
+        items=[
+            shared.Item(
+                id="distinctio",
+                index=844266,
+                is_gift=False,
+                logistics_infos=[
+                    "nulla",
+                    "corrupti",
+                    "illum",
+                ],
+                measurement_unit="vel",
+                params=[
+                    shared.Param(
+                        name="deserunt",
+                        value="suscipit",
+                    ),
+                    shared.Param(
+                        name="iure",
+                        value="magnam",
+                    ),
+                    shared.Param(
+                        name="debitis",
+                        value="ipsa",
+                    ),
+                ],
+                price_sheet=[
+                    "tempora",
+                    "suscipit",
+                    "molestiae",
+                    "minus",
+                ],
+                price_tags=[
+                    "voluptatum",
+                    "iusto",
+                    "excepturi",
+                    "nisi",
+                ],
+                product_specifications=[
+                    "temporibus",
+                    "ab",
+                    "quis",
+                    "veritatis",
+                ],
+                quantity=648172,
+                seller_id="perferendis",
+                unit_multiplier=368241,
+            ),
+            shared.Item(
+                id="repellendus",
+                index=957156,
+                is_gift=False,
+                logistics_infos=[
+                    "odit",
+                    "at",
+                    "at",
+                    "maiores",
+                ],
+                measurement_unit="molestiae",
+                params=[
+                    shared.Param(
+                        name="quod",
+                        value="esse",
+                    ),
+                    shared.Param(
+                        name="totam",
+                        value="porro",
+                    ),
+                    shared.Param(
+                        name="dolorum",
+                        value="dicta",
+                    ),
+                    shared.Param(
+                        name="nam",
+                        value="officia",
+                    ),
+                ],
+                price_sheet=[
+                    "fugit",
+                    "deleniti",
+                    "hic",
+                ],
+                price_tags=[
+                    "totam",
+                    "beatae",
+                    "commodi",
+                    "molestiae",
+                ],
+                product_specifications=[
+                    "qui",
+                    "impedit",
+                ],
+                quantity=736918,
+                seller_id="esse",
+                unit_multiplier=216550,
+            ),
+            shared.Item(
+                id="excepturi",
+                index=135218,
+                is_gift=False,
+                logistics_infos=[
+                    "ad",
+                ],
+                measurement_unit="natus",
+                params=[
+                    shared.Param(
+                        name="iste",
+                        value="dolor",
+                    ),
+                ],
+                price_sheet=[
+                    "laboriosam",
+                    "hic",
+                    "saepe",
+                ],
+                price_tags=[
+                    "in",
+                    "corporis",
+                    "iste",
+                ],
+                product_specifications=[
+                    "saepe",
+                    "quidem",
+                ],
+                quantity=99280,
+                seller_id="ipsa",
+                unit_multiplier=969810,
+            ),
+        ],
+        origin="est",
+        params=[
+            shared.Param(
+                name="laborum",
+                value="dolores",
+            ),
+            shared.Param(
+                name="dolorem",
+                value="corporis",
+            ),
+            shared.Param(
+                name="explicabo",
+                value="nobis",
+            ),
+        ],
+        profile_id="enim",
+        sales_channel="omnis",
+    ),
+    content_type="nemo",
+)
+    
+res = s.bundles.calculatediscountsandtaxes_bundles_(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

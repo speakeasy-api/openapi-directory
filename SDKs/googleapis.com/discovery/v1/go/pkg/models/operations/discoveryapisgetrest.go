@@ -7,16 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiscoveryApisGetRestPathParams struct {
-	// The name of the API.
-	API string `pathParam:"style=simple,explode=false,name=api"`
-	// The version of the API.
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type DiscoveryApisGetRestQueryParams struct {
+type DiscoveryApisGetRestRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The name of the API.
+	API string `pathParam:"style=simple,explode=false,name=api"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -29,11 +24,8 @@ type DiscoveryApisGetRestQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DiscoveryApisGetRestRequest struct {
-	PathParams  DiscoveryApisGetRestPathParams
-	QueryParams DiscoveryApisGetRestQueryParams
+	// The version of the API.
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type DiscoveryApisGetRestResponse struct {

@@ -8,12 +8,6 @@ import (
 	"net/http"
 )
 
-type TaxonomyAttractionsHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 // TaxonomyAttractionsRequestBodySortOrderEnum - **sort order** in which to return the results that is *one of*:
 //   - `"SEO_PUBLISHED_DATE_D"`: publish date (descending)
 //   - `"SEO_PUBLISHED_DATE_A"`: publish date (ascending)
@@ -74,8 +68,10 @@ type TaxonomyAttractionsRequestBody struct {
 }
 
 type TaxonomyAttractionsRequest struct {
-	Headers TaxonomyAttractionsHeaders
-	Request *TaxonomyAttractionsRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                          `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *TaxonomyAttractionsRequestBody `request:"mediaType=application/json"`
 }
 
 type TaxonomyAttractions200ApplicationJSONData struct {

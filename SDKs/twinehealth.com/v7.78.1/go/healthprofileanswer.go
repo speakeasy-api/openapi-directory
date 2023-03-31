@@ -37,14 +37,14 @@ func newHealthProfileAnswer(defaultClient, securityClient HTTPClient, serverURL,
 // Get a health profile answer by id
 func (s *healthProfileAnswer) FetchHealthProfileAnswer(ctx context.Context, request operations.FetchHealthProfileAnswerRequest) (*operations.FetchHealthProfileAnswerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/health_profile_answer/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/health_profile_answer/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *healthProfileAnswer) FetchHealthProfileAnswers(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

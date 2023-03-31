@@ -92,7 +92,7 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) PostJsontoxml(ctx context.Context, request operations.PostJsontoxmlRequest) (*operations.PostJsontoxmlResponse, error) {
+func (s *SDK) PostJsontoxml(ctx context.Context, request string) (*operations.PostJsontoxmlResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jsontoxml"
 
@@ -135,7 +135,7 @@ func (s *SDK) PostJsontoxml(ctx context.Context, request operations.PostJsontoxm
 
 	return res, nil
 }
-func (s *SDK) PostXmltojson(ctx context.Context, request operations.PostXmltojsonRequest) (*operations.PostXmltojsonResponse, error) {
+func (s *SDK) PostXmltojson(ctx context.Context, request string) (*operations.PostXmltojsonResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/xmltojson"
 

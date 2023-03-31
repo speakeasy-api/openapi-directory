@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExtrasExportTemplatesDeletePathParams struct {
+type ExtrasExportTemplatesDeleteRequest struct {
 	// A unique integer value identifying this export template.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasExportTemplatesDeleteRequest struct {
-	PathParams ExtrasExportTemplatesDeletePathParams
 }
 
 type ExtrasExportTemplatesDeleteResponse struct {

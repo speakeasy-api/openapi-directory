@@ -11,7 +11,7 @@ import (
 )
 
 type TimeMachineTimeMachineGetSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 // TimeMachineTimeMachineGetUnitsUnitsEnum - An enumeration.
@@ -47,7 +47,7 @@ func (e *TimeMachineTimeMachineGetUnitsUnitsEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type TimeMachineTimeMachineGetQueryParams struct {
+type TimeMachineTimeMachineGetRequest struct {
 	// The UTC day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
 	//
 	Date types.Date `queryParam:"style=form,explode=true,name=date"`
@@ -74,11 +74,6 @@ type TimeMachineTimeMachineGetQueryParams struct {
 	// * `ca`: Same as ``metric``, except that wind speeds are in `km/h` and pressure is in `kPa`.
 	//
 	Units *TimeMachineTimeMachineGetUnitsUnitsEnum `queryParam:"style=form,explode=true,name=units"`
-}
-
-type TimeMachineTimeMachineGetRequest struct {
-	QueryParams TimeMachineTimeMachineGetQueryParams
-	Security    TimeMachineTimeMachineGetSecurity
 }
 
 type TimeMachineTimeMachineGetResponse struct {

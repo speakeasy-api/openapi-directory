@@ -38,7 +38,7 @@ func newWikis(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // If the request is unsuccessful, plaintext with the error message will be displayed.
 func (s *wikis) WikiContent(ctx context.Context, request operations.WikiContentRequest) (*operations.WikiContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wikis/{wiki_id}/content/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wikis/{wiki_id}/content/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *wikis) WikiContent(ctx context.Context, request operations.WikiContentR
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *wikis) WikiRead(ctx context.Context, request operations.WikiReadRequest) (*operations.WikiReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wikis/{wiki_id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wikis/{wiki_id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

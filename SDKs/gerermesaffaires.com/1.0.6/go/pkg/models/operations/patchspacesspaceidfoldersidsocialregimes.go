@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDSocialRegimesPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum string
 
 const (
@@ -114,9 +107,12 @@ type PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDSocialRegimesRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDSocialRegimesPathParams
 	// Social Regime to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDSocialRegimesResponse struct {

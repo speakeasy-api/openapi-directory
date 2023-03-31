@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type GitCreateTagPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // GitCreateTagRequestBodyTagger - An object with information about the individual creating the tag.
 type GitCreateTagRequestBodyTagger struct {
 	// When this object was tagged. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
@@ -66,8 +61,9 @@ type GitCreateTagRequestBody struct {
 }
 
 type GitCreateTagRequest struct {
-	PathParams GitCreateTagPathParams
-	Request    GitCreateTagRequestBody `request:"mediaType=application/json"`
+	RequestBody GitCreateTagRequestBody `request:"mediaType=application/json"`
+	Owner       string                  `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                  `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitCreateTagResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchOfferingsOfferingIDPathParams struct {
+type PatchOfferingsOfferingIDRequest struct {
+	Offering shared.Offering `request:"mediaType=application/json"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type PatchOfferingsOfferingIDRequest struct {
-	PathParams PatchOfferingsOfferingIDPathParams
-	Request    shared.Offering `request:"mediaType=application/json"`
 }
 
 type PatchOfferingsOfferingIDResponse struct {

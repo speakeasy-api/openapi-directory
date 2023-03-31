@@ -8,19 +8,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesIDProfessionalVehiclesPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpacesIDProfessionalVehiclesQueryParams struct {
+type GetSpacesIDProfessionalVehiclesRequest struct {
 	// designation of the vehicle
 	Designation *string `queryParam:"style=form,explode=true,name=Designation"`
-}
-
-type GetSpacesIDProfessionalVehiclesRequest struct {
-	PathParams  GetSpacesIDProfessionalVehiclesPathParams
-	QueryParams GetSpacesIDProfessionalVehiclesQueryParams
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpacesIDProfessionalVehicles200ApplicationJSONLevelEnum string

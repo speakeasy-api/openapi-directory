@@ -35,14 +35,14 @@ func newProductOptionValues(defaultClient, securityClient HTTPClient, serverURL,
 // DeleteProductsIDOptionsOptionIDValuesValueIDJSON - Delete a Product Option Value.
 func (s *productOptionValues) DeleteProductsIDOptionsOptionIDValuesValueIDJSON(ctx context.Context, request operations.DeleteProductsIDOptionsOptionIDValuesValueIDJSONRequest) (*operations.DeleteProductsIDOptionsOptionIDValuesValueIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/{value_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/{value_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -94,14 +94,14 @@ func (s *productOptionValues) DeleteProductsIDOptionsOptionIDValuesValueIDJSON(c
 // GetProductsIDOptionsOptionIDValuesJSON - Retrieve all Product Option Values.
 func (s *productOptionValues) GetProductsIDOptionsOptionIDValuesJSON(ctx context.Context, request operations.GetProductsIDOptionsOptionIDValuesJSONRequest) (*operations.GetProductsIDOptionsOptionIDValuesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -152,14 +152,14 @@ func (s *productOptionValues) GetProductsIDOptionsOptionIDValuesJSON(ctx context
 // GetProductsIDOptionsOptionIDValuesCountJSON - Count all Product Option Values.
 func (s *productOptionValues) GetProductsIDOptionsOptionIDValuesCountJSON(ctx context.Context, request operations.GetProductsIDOptionsOptionIDValuesCountJSONRequest) (*operations.GetProductsIDOptionsOptionIDValuesCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/count.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/count.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -210,14 +210,14 @@ func (s *productOptionValues) GetProductsIDOptionsOptionIDValuesCountJSON(ctx co
 // GetProductsIDOptionsOptionIDValuesValueIDJSON - Retrieve a single Product Option Value.
 func (s *productOptionValues) GetProductsIDOptionsOptionIDValuesValueIDJSON(ctx context.Context, request operations.GetProductsIDOptionsOptionIDValuesValueIDJSONRequest) (*operations.GetProductsIDOptionsOptionIDValuesValueIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/{value_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/{value_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,9 +268,9 @@ func (s *productOptionValues) GetProductsIDOptionsOptionIDValuesValueIDJSON(ctx 
 // PostProductsIDOptionsOptionIDValuesJSON - Create a new Product Option Value.
 func (s *productOptionValues) PostProductsIDOptionsOptionIDValuesJSON(ctx context.Context, request operations.PostProductsIDOptionsOptionIDValuesJSONRequest) (*operations.PostProductsIDOptionsOptionIDValuesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductOptionValueEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -285,7 +285,7 @@ func (s *productOptionValues) PostProductsIDOptionsOptionIDValuesJSON(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -326,9 +326,9 @@ func (s *productOptionValues) PostProductsIDOptionsOptionIDValuesJSON(ctx contex
 // PutProductsIDOptionsOptionIDValuesValueIDJSON - Modify an existing Product Option Value.
 func (s *productOptionValues) PutProductsIDOptionsOptionIDValuesValueIDJSON(ctx context.Context, request operations.PutProductsIDOptionsOptionIDValuesValueIDJSONRequest) (*operations.PutProductsIDOptionsOptionIDValuesValueIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/{value_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/options/{option_id}/values/{value_id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductOptionValueEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,7 +343,7 @@ func (s *productOptionValues) PutProductsIDOptionsOptionIDValuesValueIDJSON(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

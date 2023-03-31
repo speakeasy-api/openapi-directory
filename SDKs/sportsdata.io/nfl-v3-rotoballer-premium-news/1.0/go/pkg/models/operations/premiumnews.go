@@ -33,13 +33,9 @@ func (e *PremiumNewsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PremiumNewsPathParams struct {
+type PremiumNewsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PremiumNewsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type PremiumNewsRequest struct {
-	PathParams PremiumNewsPathParams
 }
 
 type PremiumNewsResponse struct {

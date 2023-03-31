@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type SubUserPostRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type SubUserPostRawResponse struct {
 	ContentType string
 	StatusCode  int

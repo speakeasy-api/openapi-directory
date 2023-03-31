@@ -10,13 +10,8 @@ import (
 )
 
 type ScriptProjectsGetMetricsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ScriptProjectsGetMetricsPathParams struct {
-	// Required field indicating the script to get metrics for.
-	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ScriptProjectsGetMetricsMetricsGranularityEnum - Required field indicating what granularity of metrics are returned.
@@ -46,7 +41,7 @@ func (e *ScriptProjectsGetMetricsMetricsGranularityEnum) UnmarshalJSON(data []by
 	}
 }
 
-type ScriptProjectsGetMetricsQueryParams struct {
+type ScriptProjectsGetMetricsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,16 +64,12 @@ type ScriptProjectsGetMetricsQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required field indicating the script to get metrics for.
+	ScriptID string `pathParam:"style=simple,explode=false,name=scriptId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ScriptProjectsGetMetricsRequest struct {
-	PathParams  ScriptProjectsGetMetricsPathParams
-	QueryParams ScriptProjectsGetMetricsQueryParams
-	Security    ScriptProjectsGetMetricsSecurity
 }
 
 type ScriptProjectsGetMetricsResponse struct {

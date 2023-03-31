@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/accesscontextmanager/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,40 +15,127 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest(
-    security=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams(
-        parent="vel",
-    ),
-    query_params=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="json",
-        callback="atque",
-        fields="quo",
-        key="amet",
-        oauth_token="ipsa",
-        pretty_print=True,
-        quota_user="aspernatur",
-        upload_type="at",
-        upload_protocol="esse",
-    ),
-    request=shared.AccessLevel(
+    dollar_xgafv="2",
+    access_level=shared.AccessLevel(
         basic=shared.BasicLevel(
-            combining_function="AND",
+            combining_function="OR",
             conditions=[
                 shared.Condition(
                     device_policy=shared.DevicePolicy(
                         allowed_device_management_levels=[
-                            "NONE",
+                            "BASIC",
+                            "COMPLETE",
+                            "BASIC",
+                            "COMPLETE",
+                        ],
+                        allowed_encryption_statuses=[
+                            "UNENCRYPTED",
+                            "UNENCRYPTED",
+                        ],
+                        os_constraints=[
+                            shared.OsConstraint(
+                                minimum_version="iure",
+                                os_type="DESKTOP_WINDOWS",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="debitis",
+                                os_type="OS_UNSPECIFIED",
+                                require_verified_chrome_os=False,
+                            ),
+                        ],
+                        require_admin_approval=False,
+                        require_corp_owned=False,
+                        require_screenlock=False,
+                    ),
+                    ip_subnetworks=[
+                        "tempora",
+                        "suscipit",
+                        "molestiae",
+                        "minus",
+                    ],
+                    members=[
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
+                        "nisi",
+                    ],
+                    negate=False,
+                    regions=[
+                        "temporibus",
+                        "ab",
+                        "quis",
+                        "veritatis",
+                    ],
+                    required_access_levels=[
+                        "perferendis",
+                        "ipsam",
+                        "repellendus",
+                    ],
+                ),
+                shared.Condition(
+                    device_policy=shared.DevicePolicy(
+                        allowed_device_management_levels=[
+                            "COMPLETE",
+                            "MANAGEMENT_UNSPECIFIED",
+                            "COMPLETE",
+                            "COMPLETE",
+                        ],
+                        allowed_encryption_statuses=[
+                            "ENCRYPTION_UNSUPPORTED",
+                            "ENCRYPTED",
+                            "ENCRYPTED",
+                            "ENCRYPTION_UNSUPPORTED",
+                        ],
+                        os_constraints=[
+                            shared.OsConstraint(
+                                minimum_version="porro",
+                                os_type="DESKTOP_CHROME_OS",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="dicta",
+                                os_type="ANDROID",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="officia",
+                                os_type="DESKTOP_CHROME_OS",
+                                require_verified_chrome_os=False,
+                            ),
+                        ],
+                        require_admin_approval=False,
+                        require_corp_owned=False,
+                        require_screenlock=False,
+                    ),
+                    ip_subnetworks=[
+                        "deleniti",
+                    ],
+                    members=[
+                        "optio",
+                        "totam",
+                        "beatae",
+                        "commodi",
+                    ],
+                    negate=False,
+                    regions=[
+                        "modi",
+                        "qui",
+                    ],
+                    required_access_levels=[
+                        "cum",
+                        "esse",
+                        "ipsum",
+                        "excepturi",
+                    ],
+                ),
+                shared.Condition(
+                    device_policy=shared.DevicePolicy(
+                        allowed_device_management_levels=[
+                            "MANAGEMENT_UNSPECIFIED",
                         ],
                         allowed_encryption_statuses=[
                             "UNENCRYPTED",
@@ -56,94 +143,75 @@ req = operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest(
                         ],
                         os_constraints=[
                             shared.OsConstraint(
-                                minimum_version="voluptatibus",
-                                os_type="DESKTOP_MAC",
-                                require_verified_chrome_os=False,
-                            ),
-                        ],
-                        require_admin_approval=True,
-                        require_corp_owned=True,
-                        require_screenlock=False,
-                    ),
-                    ip_subnetworks=[
-                        "doloribus",
-                    ],
-                    members=[
-                        "excepturi",
-                    ],
-                    negate=True,
-                    regions=[
-                        "beatae",
-                        "quia",
-                    ],
-                    required_access_levels=[
-                        "suscipit",
-                        "cupiditate",
-                    ],
-                ),
-                shared.Condition(
-                    device_policy=shared.DevicePolicy(
-                        allowed_device_management_levels=[
-                            "BASIC",
-                        ],
-                        allowed_encryption_statuses=[
-                            "ENCRYPTION_UNSPECIFIED",
-                            "ENCRYPTION_UNSPECIFIED",
-                        ],
-                        os_constraints=[
-                            shared.OsConstraint(
-                                minimum_version="rerum",
-                                os_type="IOS",
-                                require_verified_chrome_os=False,
-                            ),
-                            shared.OsConstraint(
-                                minimum_version="autem",
-                                os_type="IOS",
-                                require_verified_chrome_os=True,
-                            ),
-                            shared.OsConstraint(
-                                minimum_version="ipsam",
+                                minimum_version="dolor",
                                 os_type="DESKTOP_CHROME_OS",
-                                require_verified_chrome_os=True,
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="laboriosam",
+                                os_type="IOS",
+                                require_verified_chrome_os=False,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="saepe",
+                                os_type="DESKTOP_CHROME_OS",
+                                require_verified_chrome_os=False,
                             ),
                         ],
                         require_admin_approval=False,
-                        require_corp_owned=True,
-                        require_screenlock=True,
+                        require_corp_owned=False,
+                        require_screenlock=False,
                     ),
                     ip_subnetworks=[
-                        "quis",
+                        "corporis",
+                        "iste",
                     ],
                     members=[
-                        "optio",
-                        "eos",
+                        "saepe",
+                        "quidem",
                     ],
                     negate=False,
                     regions=[
-                        "sunt",
+                        "ipsa",
                     ],
                     required_access_levels=[
-                        "non",
-                        "iure",
+                        "est",
+                        "mollitia",
+                        "laborum",
+                        "dolores",
                     ],
                 ),
             ],
         ),
         custom=shared.CustomLevel(
             expr=shared.Expr(
-                description="atque",
+                description="dolorem",
                 expression="corporis",
-                location="sed",
-                title="illum",
+                location="explicabo",
+                title="Miss",
             ),
         ),
         description="enim",
-        name="aut",
-        title="et",
+        name="omnis",
+        title="Mrs.",
     ),
+    access_token="minima",
+    alt="media",
+    callback="accusantium",
+    fields_="iure",
+    key="culpa",
+    oauth_token="doloribus",
+    parent="sapiente",
+    pretty_print=False,
+    quota_user="architecto",
+    upload_type="mollitia",
+    upload_protocol="dolorem",
 )
     
-res = s.access_policies.accesscontextmanager_access_policies_access_levels_create(req)
+res = s.access_policies.accesscontextmanager_access_policies_access_levels_create(req, operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -151,13 +219,16 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### accessPolicies
+
+### access_policies
 
 * `accesscontextmanager_access_policies_access_levels_create` - Creates an access level. The long-running operation from this RPC has a successful status after the access level propagates to long-lasting storage. If access levels contain errors, an error response is returned for the first error encountered.
 * `accesscontextmanager_access_policies_access_levels_list` - Lists all access levels for an access policy.
 * `accesscontextmanager_access_policies_access_levels_replace_all` - Replaces all existing access levels in an access policy with the access levels provided. This is done atomically. The long-running operation from this RPC has a successful status after all replacements propagate to long-lasting storage. If the replacement contains errors, an error response is returned for the first error encountered. Upon error, the replacement is cancelled, and existing access levels are not affected. The Operation.response field contains ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters result in an error.
+* `accesscontextmanager_access_policies_authorized_orgs_descs_create` - Creates an authorized orgs desc. The long-running operation from this RPC has a successful status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc contains errors, an error response is returned for the first error encountered. The name of this `AuthorizedOrgsDesc` will be assigned during creation.
+* `accesscontextmanager_access_policies_authorized_orgs_descs_list` - Lists all authorized orgs descs for an access policy.
 * `accesscontextmanager_access_policies_create` - Creates an access policy. This method fails if the organization already has an access policy. The long-running operation has a successful status after the access policy propagates to long-lasting storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest proto.
 * `accesscontextmanager_access_policies_get_iam_policy` - Gets the IAM policy for the specified Access Context Manager access policy.
 * `accesscontextmanager_access_policies_list` - Lists all access policies in an organization.
@@ -179,7 +250,17 @@ if res.operation is not None:
 * `accesscontextmanager_organizations_gcp_user_access_bindings_get` - Gets the GcpUserAccessBinding with the given name.
 * `accesscontextmanager_organizations_gcp_user_access_bindings_list` - Lists all GcpUserAccessBindings for a Google Cloud organization.
 * `accesscontextmanager_organizations_gcp_user_access_bindings_patch` - Updates a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the changed binding is deployed onto all affected users, which may take more time.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -10,7 +10,7 @@ import (
 )
 
 type GetAPIV2SegmentsSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetAPIV2SegmentsOrderByIDEnum - The sort order of the list of segments, based on segment ID. If unspecified, the segments are returned in random order. If using paging to iterate through the results, sort order should be specified.
@@ -37,7 +37,7 @@ func (e *GetAPIV2SegmentsOrderByIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV2SegmentsQueryParams struct {
+type GetAPIV2SegmentsRequest struct {
 	// The ID of the episode that owns the segment.
 	EpisodeID int64 `queryParam:"style=form,explode=true,name=episodeId"`
 	// The sort order of the list of segments, based on segment ID. If unspecified, the segments are returned in random order. If using paging to iterate through the results, sort order should be specified.
@@ -47,11 +47,6 @@ type GetAPIV2SegmentsQueryParams struct {
 	// The start page of the results to return. The first item is indexed at 0.
 	PageStart     *int `queryParam:"style=form,explode=true,name=pageStart"`
 	SegmentNumber *int `queryParam:"style=form,explode=true,name=segmentNumber"`
-}
-
-type GetAPIV2SegmentsRequest struct {
-	QueryParams GetAPIV2SegmentsQueryParams
-	Security    GetAPIV2SegmentsSecurity
 }
 
 type GetAPIV2SegmentsResponse struct {

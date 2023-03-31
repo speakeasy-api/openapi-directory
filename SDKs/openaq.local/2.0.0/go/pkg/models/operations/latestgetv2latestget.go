@@ -75,7 +75,7 @@ func (e *LatestGetV2LatestGetSortSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LatestGetV2LatestGetQueryParams struct {
+type LatestGetV2LatestGetRequest struct {
 	//         Limit results by a certain city or cities.
 	//         (ex. ?city=Chicago or ?city=Chicago&city=Boston)
 	//
@@ -120,10 +120,6 @@ type LatestGetV2LatestGetQueryParams struct {
 	// Name of the data source
 	SourceName []string `queryParam:"style=form,explode=true,name=sourceName"`
 	Unit       []string `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type LatestGetV2LatestGetRequest struct {
-	QueryParams LatestGetV2LatestGetQueryParams
 }
 
 type LatestGetV2LatestGetResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1LocationsBulkRequest struct {
-	Request *shared.LocationsInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1LocationsBulkResponse struct {
 	ContentType string
 	// Success

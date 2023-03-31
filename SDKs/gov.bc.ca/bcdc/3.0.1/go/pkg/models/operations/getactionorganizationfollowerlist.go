@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionOrganizationFollowerListQueryParams struct {
+type GetActionOrganizationFollowerListRequest struct {
 	// The id or name of the organization
 	ID *string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetActionOrganizationFollowerListRequest struct {
-	QueryParams GetActionOrganizationFollowerListQueryParams
 }
 
 type GetActionOrganizationFollowerListResponse struct {

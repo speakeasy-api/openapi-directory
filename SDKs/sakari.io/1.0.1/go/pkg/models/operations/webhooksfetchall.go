@@ -8,17 +8,12 @@ import (
 )
 
 type WebhooksFetchAllSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type WebhooksFetchAllPathParams struct {
-	// Account to apply operations to
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebhooksFetchAllRequest struct {
-	PathParams WebhooksFetchAllPathParams
-	Security   WebhooksFetchAllSecurity
+	// Account to apply operations to
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type WebhooksFetchAllResponse struct {

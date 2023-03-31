@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetAPILogisticsPvtShippingPoliciesQueryParams struct {
-	// Desired number of pages to retrieve information from your Shipping Policies.
-	Page string `queryParam:"style=form,explode=true,name=page"`
-	// Desired number of items per page, to retrieve information from your Shipping Policies.
-	PerPage string `queryParam:"style=form,explode=true,name=perPage"`
-}
-
-type GetAPILogisticsPvtShippingPoliciesHeaders struct {
+type GetAPILogisticsPvtShippingPoliciesRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAPILogisticsPvtShippingPoliciesRequest struct {
-	QueryParams GetAPILogisticsPvtShippingPoliciesQueryParams
-	Headers     GetAPILogisticsPvtShippingPoliciesHeaders
+	// Desired number of pages to retrieve information from your Shipping Policies.
+	Page string `queryParam:"style=form,explode=true,name=page"`
+	// Desired number of items per page, to retrieve information from your Shipping Policies.
+	PerPage string `queryParam:"style=form,explode=true,name=perPage"`
 }
 
 type GetAPILogisticsPvtShippingPoliciesResponse struct {

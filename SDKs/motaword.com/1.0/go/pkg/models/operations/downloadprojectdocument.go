@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadProjectDocumentPathParams struct {
+type DownloadProjectDocumentRequest struct {
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DownloadProjectDocumentRequest struct {
-	PathParams DownloadProjectDocumentPathParams
 }
 
 type DownloadProjectDocumentResponse struct {

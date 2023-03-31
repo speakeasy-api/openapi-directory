@@ -8,12 +8,7 @@ import (
 )
 
 type AddTagsToChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AddTagsToChannelPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddTagsToChannelRequestBody struct {
@@ -22,9 +17,9 @@ type AddTagsToChannelRequestBody struct {
 }
 
 type AddTagsToChannelRequest struct {
-	PathParams AddTagsToChannelPathParams
-	Request    AddTagsToChannelRequestBody `request:"mediaType=application/vnd.vimeo.tag+json"`
-	Security   AddTagsToChannelSecurity
+	RequestBody AddTagsToChannelRequestBody `request:"mediaType=application/vnd.vimeo.tag+json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type AddTagsToChannelResponse struct {

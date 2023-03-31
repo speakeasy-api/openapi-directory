@@ -14,17 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.AccountListNodeAgentSkusRequest{
-        QueryParams: operations.AccountListNodeAgentSkusQueryParams{
-            DollarFilter: "corrupti",
-            APIVersion: "provident",
-            Maxresults: 715190,
-            Timeout: 844266,
-        },
-        Headers: operations.AccountListNodeAgentSkusHeaders{
-            ClientRequestID: "unde",
-            OcpDate: "nulla",
-            ReturnClientRequestID: false,
-        },
+        DollarFilter: "corrupti",
+        APIVersion: "provident",
+        ClientRequestID: "distinctio",
+        Maxresults: 844266,
+        OcpDate: "unde",
+        ReturnClientRequestID: false,
+        Timeout: 857946,
     }
 
     ctx := context.Background()

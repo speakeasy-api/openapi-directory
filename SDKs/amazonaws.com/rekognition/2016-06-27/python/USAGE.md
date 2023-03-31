@@ -3,46 +3,42 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CompareFacesRequest(
-    headers=operations.CompareFacesHeaders(
-        x_amz_algorithm="dolorum",
-        x_amz_content_sha256="blanditiis",
-        x_amz_credential="culpa",
-        x_amz_date="est",
-        x_amz_security_token="soluta",
-        x_amz_signature="omnis",
-        x_amz_signed_headers="sint",
-        x_amz_target="RekognitionService.CompareFaces",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CompareFacesRequest(
-        quality_filter="NONE",
-        similarity_threshold=87.099998,
+)
+
+
+req = operations.CompareFacesRequest(
+    compare_faces_request=shared.CompareFacesRequest(
+        quality_filter="LOW",
+        similarity_threshold=5928.45,
         source_image=shared.Image(
-            bytes="labore",
+            bytes="distinctio",
             s3_object=shared.S3Object(
-                bucket="maxime",
-                name="eaque",
-                version="sed",
+                bucket="quibusdam",
+                name="unde",
+                version="nulla",
             ),
         ),
         target_image=shared.Image(
-            bytes="ut",
+            bytes="corrupti",
             s3_object=shared.S3Object(
-                bucket="expedita",
-                name="modi",
-                version="aliquam",
+                bucket="illum",
+                name="vel",
+                version="error",
             ),
         ),
     ),
+    x_amz_algorithm="deserunt",
+    x_amz_content_sha256="suscipit",
+    x_amz_credential="iure",
+    x_amz_date="magnam",
+    x_amz_security_token="debitis",
+    x_amz_signature="ipsa",
+    x_amz_signed_headers="delectus",
+    x_amz_target="RekognitionService.CompareFaces",
 )
     
 res = s.compare_faces(req)

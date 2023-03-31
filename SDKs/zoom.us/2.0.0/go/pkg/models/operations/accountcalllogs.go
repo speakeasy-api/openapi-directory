@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type AccountCallLogsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AccountCallLogsTimeTypeEnum - Enables you to sort call logs by start or end time. Choose the sort time value. Values include `startTime` or `endTime`.
@@ -38,7 +37,7 @@ func (e *AccountCallLogsTimeTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountCallLogsQueryParams struct {
+type AccountCallLogsRequest struct {
 	// Start date from which you would like to get the call logs. The start date should be within past six months. <br>
 	//
 	// The API only returns data pertaining to a month. Thus, the date range(defined using "from" and "to" fields) for which the call logs are to be returned must not exceed a month.
@@ -59,11 +58,6 @@ type AccountCallLogsQueryParams struct {
 	To *string `queryParam:"style=form,explode=true,name=to"`
 	// The type of the call logs. The value can be either "all" or "missed".
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type AccountCallLogsRequest struct {
-	QueryParams AccountCallLogsQueryParams
-	Security    AccountCallLogsSecurity
 }
 
 // AccountCallLogs200ApplicationXMLCallLogsCallTypeEnum - The type of call:

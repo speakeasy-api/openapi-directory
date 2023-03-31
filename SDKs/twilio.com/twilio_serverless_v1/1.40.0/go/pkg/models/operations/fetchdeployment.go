@@ -12,22 +12,17 @@ var FetchDeploymentServerList = []string{
 }
 
 type FetchDeploymentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchDeploymentPathParams struct {
+type FetchDeploymentRequest struct {
 	// The SID of the Environment used by the Deployment to fetch.
 	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
 	// The SID of the Service to fetch the Deployment resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID that identifies the Deployment resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchDeploymentRequest struct {
-	PathParams FetchDeploymentPathParams
-	Security   FetchDeploymentSecurity
-	ServerURL  *string
 }
 
 type FetchDeploymentResponse struct {

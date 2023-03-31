@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVVersionAreasAreaIdsPathParams struct {
+type GetVVersionAreasAreaIdsRequest struct {
 	AreaIds string `pathParam:"style=simple,explode=false,name=area_Ids"`
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetVVersionAreasAreaIdsRequest struct {
-	PathParams GetVVersionAreasAreaIdsPathParams
 }
 
 type GetVVersionAreasAreaIdsResponse struct {

@@ -12,18 +12,13 @@ var FetchUnderstandModelBuildServerList = []string{
 }
 
 type FetchUnderstandModelBuildSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUnderstandModelBuildPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUnderstandModelBuildRequest struct {
-	PathParams FetchUnderstandModelBuildPathParams
-	Security   FetchUnderstandModelBuildSecurity
-	ServerURL  *string
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Sid          string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchUnderstandModelBuildResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetFulfillmentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetFulfillmentPolicyPathParams struct {
-	// This path parameter specifies the ID of the fulfillment policy you want to retrieve.
-	FulfillmentPolicyID string `pathParam:"style=simple,explode=false,name=fulfillmentPolicyId"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetFulfillmentPolicyRequest struct {
-	PathParams GetFulfillmentPolicyPathParams
-	Security   GetFulfillmentPolicySecurity
+	// This path parameter specifies the ID of the fulfillment policy you want to retrieve.
+	FulfillmentPolicyID string `pathParam:"style=simple,explode=false,name=fulfillmentPolicyId"`
 }
 
 type GetFulfillmentPolicyResponse struct {

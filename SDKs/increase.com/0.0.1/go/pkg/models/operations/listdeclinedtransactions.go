@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type ListDeclinedTransactionsQueryParams struct {
+type ListDeclinedTransactionsRequest struct {
 	AccountID           *string    `queryParam:"style=form,explode=true,name=account_id"`
 	CreatedAtAfter      *time.Time `queryParam:"style=form,explode=true,name=created_at.after"`
 	CreatedAtBefore     *time.Time `queryParam:"style=form,explode=true,name=created_at.before"`
@@ -19,10 +19,6 @@ type ListDeclinedTransactionsQueryParams struct {
 	Cursor              *string    `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64     `queryParam:"style=form,explode=true,name=limit"`
 	RouteID             *string    `queryParam:"style=form,explode=true,name=route_id"`
-}
-
-type ListDeclinedTransactionsRequest struct {
-	QueryParams ListDeclinedTransactionsQueryParams
 }
 
 type ListDeclinedTransactionsDefaultApplicationJSON13StatusEnum string

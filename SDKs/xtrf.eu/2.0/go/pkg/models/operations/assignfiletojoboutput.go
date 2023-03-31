@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssignFileToJobOutputPathParams struct {
+type AssignFileToJobOutputRequest struct {
+	// Assigns file to job output files.
+	TaskFileDTO shared.TaskFileDTO `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type AssignFileToJobOutputRequest struct {
-	PathParams AssignFileToJobOutputPathParams
-	// Assigns file to job output files.
-	Request shared.TaskFileDTO `request:"mediaType=application/json"`
 }
 
 type AssignFileToJobOutputResponse struct {

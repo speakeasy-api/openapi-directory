@@ -8,13 +8,9 @@ import (
 	"time"
 )
 
-type GetSetupV1CompaniesTimezonesDatePathParams struct {
+type GetSetupV1CompaniesTimezonesDateRequest struct {
 	// "YYYY-MM-DD: Date for timezone info"
 	Date time.Time `pathParam:"style=simple,explode=false,name=date"`
-}
-
-type GetSetupV1CompaniesTimezonesDateRequest struct {
-	PathParams GetSetupV1CompaniesTimezonesDatePathParams
 }
 
 type GetSetupV1CompaniesTimezonesDateResponse struct {

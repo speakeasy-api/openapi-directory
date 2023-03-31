@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetExportQrBelegeBelegUUIDPathParams struct {
+type GetExportQrBelegeBelegUUIDRequest struct {
 	// The `_uuid` of a particular `Beleg` to export.
 	BelegUUID string `pathParam:"style=simple,explode=false,name=belegUuid"`
-}
-
-type GetExportQrBelegeBelegUUIDRequest struct {
-	PathParams GetExportQrBelegeBelegUUIDPathParams
 }
 
 type GetExportQrBelegeBelegUUIDResponse struct {

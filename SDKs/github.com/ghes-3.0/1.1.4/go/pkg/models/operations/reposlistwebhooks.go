@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListWebhooksPathParams struct {
+type ReposListWebhooksRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListWebhooksQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListWebhooksRequest struct {
-	PathParams  ReposListWebhooksPathParams
-	QueryParams ReposListWebhooksQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListWebhooksResponse struct {

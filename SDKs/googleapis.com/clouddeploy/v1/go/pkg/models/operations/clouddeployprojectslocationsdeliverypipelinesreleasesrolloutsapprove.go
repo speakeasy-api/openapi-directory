@@ -8,18 +8,14 @@ import (
 )
 
 type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprovePathParams struct {
-	// Required. Name of the Rollout. Format is projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/{rollout}.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveQueryParams struct {
+type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ApproveRolloutRequest *shared.ApproveRolloutRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveQueryPa
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Name of the Rollout. Format is projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/{rollout}.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,13 +38,6 @@ type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveQueryPa
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest struct {
-	PathParams  ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprovePathParams
-	QueryParams ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveQueryParams
-	Request     *shared.ApproveRolloutRequest `request:"mediaType=application/json"`
-	Security    ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveSecurity
 }
 
 type ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse struct {

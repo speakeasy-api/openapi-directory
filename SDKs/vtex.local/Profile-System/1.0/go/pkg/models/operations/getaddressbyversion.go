@@ -6,35 +6,23 @@ import (
 	"net/http"
 )
 
-type GetAddressByVersionPathParams struct {
-	// ID of a client's specific address as returned in the Create client address endpoint's response, in the `id` field.
-	AddressID string `pathParam:"style=simple,explode=false,name=addressId"`
-	// ID of the version of a given client's address as returned by endpoints that create or update address information in the `version` field.
-	AddressVersionID string `pathParam:"style=simple,explode=false,name=addressVersionId"`
-	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type GetAddressByVersionQueryParams struct {
-	// The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
-	//
-	// > Currently, there are two possible values for this parameter: `email` and `document`.
-	AlternativeKey *string `queryParam:"style=form,explode=true,name=alternativeKey"`
-	// Reason for requesting unmasked data.
-	Reason string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type GetAddressByVersionHeaders struct {
+type GetAddressByVersionRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetAddressByVersionRequest struct {
-	PathParams  GetAddressByVersionPathParams
-	QueryParams GetAddressByVersionQueryParams
-	Headers     GetAddressByVersionHeaders
+	// ID of a client's specific address as returned in the Create client address endpoint's response, in the `id` field.
+	AddressID string `pathParam:"style=simple,explode=false,name=addressId"`
+	// ID of the version of a given client's address as returned by endpoints that create or update address information in the `version` field.
+	AddressVersionID string `pathParam:"style=simple,explode=false,name=addressVersionId"`
+	// The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
+	//
+	// > Currently, there are two possible values for this parameter: `email` and `document`.
+	AlternativeKey *string `queryParam:"style=form,explode=true,name=alternativeKey"`
+	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	// Reason for requesting unmasked data.
+	Reason string `queryParam:"style=form,explode=true,name=reason"`
 }
 
 type GetAddressByVersionResponse struct {

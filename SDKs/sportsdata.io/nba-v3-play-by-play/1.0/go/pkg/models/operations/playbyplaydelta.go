@@ -33,7 +33,7 @@ func (e *PlayByPlayDeltaFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayByPlayDeltaPathParams struct {
+type PlayByPlayDeltaRequest struct {
 	// The date of the game(s).
 	// <br>Examples: <code>2016-OCT-31</code>, <code>2017-JAN-15</code>.
 	Date string `pathParam:"style=simple,explode=false,name=date"`
@@ -42,10 +42,6 @@ type PlayByPlayDeltaPathParams struct {
 	// Only returns plays that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:
 	// <code>1</code>, <code>2</code> ... <code>all</code>.
 	Minutes string `pathParam:"style=simple,explode=false,name=minutes"`
-}
-
-type PlayByPlayDeltaRequest struct {
-	PathParams PlayByPlayDeltaPathParams
 }
 
 type PlayByPlayDeltaResponse struct {

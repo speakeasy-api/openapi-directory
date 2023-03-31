@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsAdclientsGetAdCodeSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdclientsGetAdCodeSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdclientsGetAdCodeSecurity struct {
@@ -22,14 +22,11 @@ type AdsenseAccountsAdclientsGetAdCodeSecurity struct {
 	Option2 *AdsenseAccountsAdclientsGetAdCodeSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsAdclientsGetAdCodePathParams struct {
+type AdsenseAccountsAdclientsGetAdCodeRequest struct {
 	// Account which contains the ad client.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Ad client to get the code for.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-}
-
-type AdsenseAccountsAdclientsGetAdCodeQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,12 +43,6 @@ type AdsenseAccountsAdclientsGetAdCodeQueryParams struct {
 	TagPartner *string `queryParam:"style=form,explode=true,name=tagPartner"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsenseAccountsAdclientsGetAdCodeRequest struct {
-	PathParams  AdsenseAccountsAdclientsGetAdCodePathParams
-	QueryParams AdsenseAccountsAdclientsGetAdCodeQueryParams
-	Security    AdsenseAccountsAdclientsGetAdCodeSecurity
 }
 
 type AdsenseAccountsAdclientsGetAdCodeResponse struct {

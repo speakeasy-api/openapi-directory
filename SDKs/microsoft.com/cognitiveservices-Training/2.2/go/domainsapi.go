@@ -36,14 +36,14 @@ func newDomainsAPI(defaultClient, securityClient HTTPClient, serverURL, language
 // GetDomain - Get information about a specific domain.
 func (s *domainsAPI) GetDomain(ctx context.Context, request operations.GetDomainRequest) (*operations.GetDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -110,7 +110,7 @@ func (s *domainsAPI) GetDomains(ctx context.Context, request operations.GetDomai
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

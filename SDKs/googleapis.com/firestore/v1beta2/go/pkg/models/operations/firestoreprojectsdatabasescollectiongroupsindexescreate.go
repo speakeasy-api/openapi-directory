@@ -8,13 +8,13 @@ import (
 )
 
 type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity struct {
@@ -22,14 +22,10 @@ type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity struct {
 	Option2 *FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurityOption2 `security:"option"`
 }
 
-type FirestoreProjectsDatabasesCollectionGroupsIndexesCreatePathParams struct {
-	// A parent name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams struct {
+type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                      *shared.XgafvEnum                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleFirestoreAdminV1beta2Index *shared.GoogleFirestoreAdminV1beta2Index `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// A parent name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest struct {
-	PathParams  FirestoreProjectsDatabasesCollectionGroupsIndexesCreatePathParams
-	QueryParams FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams
-	Request     *shared.GoogleFirestoreAdminV1beta2Index `request:"mediaType=application/json"`
-	Security    FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity
 }
 
 type FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse struct {

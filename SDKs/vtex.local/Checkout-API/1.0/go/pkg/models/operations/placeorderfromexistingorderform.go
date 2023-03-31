@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type PlaceOrderFromExistingOrderFormPathParams struct {
-	// ID of the `orderForm` corresponding to the cart from which to place the order.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type PlaceOrderFromExistingOrderFormHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type PlaceOrderFromExistingOrderFormRequestBody struct {
 	// Interest rate to be used in case it applies.
 	InterestValue int64 `json:"interestValue"`
@@ -34,9 +22,13 @@ type PlaceOrderFromExistingOrderFormRequestBody struct {
 }
 
 type PlaceOrderFromExistingOrderFormRequest struct {
-	PathParams PlaceOrderFromExistingOrderFormPathParams
-	Headers    PlaceOrderFromExistingOrderFormHeaders
-	Request    *PlaceOrderFromExistingOrderFormRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                                      `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PlaceOrderFromExistingOrderFormRequestBody `request:"mediaType=application/json"`
+	// ID of the `orderForm` corresponding to the cart from which to place the order.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type PlaceOrderFromExistingOrderFormResponse struct {

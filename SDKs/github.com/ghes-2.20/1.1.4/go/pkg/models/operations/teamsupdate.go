@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsUpdatePathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsUpdateRequestBodyPermissionEnum - **Deprecated**. The permission that new repositories will be added to the team with when none is specified. Can be one of:
 // \* `pull` - team members can pull, but not push to or administer newly-added repositories.
 // \* `push` - team members can pull and push, but not administer newly-added repositories.
@@ -94,8 +90,8 @@ type TeamsUpdateRequestBody struct {
 }
 
 type TeamsUpdateRequest struct {
-	PathParams TeamsUpdatePathParams
-	Request    *TeamsUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsUpdateRequestBody `request:"mediaType=application/json"`
+	TeamID      int64                   `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsUpdateResponse struct {

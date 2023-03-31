@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETEntitiesUserAccessiblePathParams struct {
-	// Specify the login user name that you want to retrieve.
-	//
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GETEntitiesUserAccessibleHeaders struct {
+type GETEntitiesUserAccessibleRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,11 +16,9 @@ type GETEntitiesUserAccessibleHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETEntitiesUserAccessibleRequest struct {
-	PathParams GETEntitiesUserAccessiblePathParams
-	Headers    GETEntitiesUserAccessibleHeaders
+	// Specify the login user name that you want to retrieve.
+	//
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GETEntitiesUserAccessibleResponse struct {

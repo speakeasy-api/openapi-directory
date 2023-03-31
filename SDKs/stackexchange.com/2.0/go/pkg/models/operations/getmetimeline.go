@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetMeTimelineQueryParams struct {
+type GetMeTimelineRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -51,10 +51,6 @@ type GetMeTimelineQueryParams struct {
 	Site string `queryParam:"style=form,explode=true,name=site"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetMeTimelineRequest struct {
-	QueryParams GetMeTimelineQueryParams
 }
 
 type GetMeTimelineResponse struct {

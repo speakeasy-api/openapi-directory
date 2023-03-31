@@ -14,21 +14,8 @@ var UpdateWorkerReservationServerList = []string{
 }
 
 type UpdateWorkerReservationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWorkerReservationPathParams struct {
-	// The SID of the WorkerReservation resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the reserved Worker resource with the WorkerReservation resources to update.
-	WorkerSid string `pathParam:"style=simple,explode=false,name=WorkerSid"`
-	// The SID of the Workspace with the WorkerReservation resources to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type UpdateWorkerReservationHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateWorkerReservationUpdateWorkerReservationRequestConferenceRecordingStatusCallbackMethodEnum - The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.
@@ -316,11 +303,15 @@ type UpdateWorkerReservationUpdateWorkerReservationRequest struct {
 }
 
 type UpdateWorkerReservationRequest struct {
-	PathParams UpdateWorkerReservationPathParams
-	Headers    UpdateWorkerReservationHeaders
-	Request    *UpdateWorkerReservationUpdateWorkerReservationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateWorkerReservationSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch     *string                                                `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody *UpdateWorkerReservationUpdateWorkerReservationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the WorkerReservation resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the reserved Worker resource with the WorkerReservation resources to update.
+	WorkerSid string `pathParam:"style=simple,explode=false,name=WorkerSid"`
+	// The SID of the Workspace with the WorkerReservation resources to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateWorkerReservationResponse struct {

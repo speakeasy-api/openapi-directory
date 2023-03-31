@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetLegacyPathParams struct {
+type TeamsGetLegacyRequest struct {
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsGetLegacyRequest struct {
-	PathParams TeamsGetLegacyPathParams
 }
 
 type TeamsGetLegacyResponse struct {

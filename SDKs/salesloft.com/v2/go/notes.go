@@ -39,7 +39,7 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This operation can be called multiple times successfully.
 func (s *notes) DeleteV2NotesIDJSON(ctx context.Context, request operations.DeleteV2NotesIDJSONRequest) (*operations.DeleteV2NotesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *notes) GetV2NotesJSON(ctx context.Context, request operations.GetV2Note
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,7 +125,7 @@ func (s *notes) GetV2NotesJSON(ctx context.Context, request operations.GetV2Note
 // Fetches a note, by ID only.
 func (s *notes) GetV2NotesIDJSON(ctx context.Context, request operations.GetV2NotesIDJSONRequest) (*operations.GetV2NotesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *notes) GetV2NotesIDJSON(ctx context.Context, request operations.GetV2No
 
 // PostV2NotesJSON - Create a note
 // Creates a note.
-func (s *notes) PostV2NotesJSON(ctx context.Context, request operations.PostV2NotesJSONRequest) (*operations.PostV2NotesJSONResponse, error) {
+func (s *notes) PostV2NotesJSON(ctx context.Context, request operations.PostV2NotesJSONRequestBody) (*operations.PostV2NotesJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/notes.json"
 
@@ -225,9 +225,9 @@ func (s *notes) PostV2NotesJSON(ctx context.Context, request operations.PostV2No
 // Updates a note. Any changes to the note or associated records will not reflect in your CRM.
 func (s *notes) PutV2NotesIDJSON(ctx context.Context, request operations.PutV2NotesIDJSONRequest) (*operations.PutV2NotesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

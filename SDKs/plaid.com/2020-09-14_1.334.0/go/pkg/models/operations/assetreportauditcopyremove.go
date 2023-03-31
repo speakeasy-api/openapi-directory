@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AssetReportAuditCopyRemoveRequest struct {
-	Request shared.AssetReportAuditCopyRemoveRequest `request:"mediaType=application/json"`
-}
 
 type AssetReportAuditCopyRemoveResponse struct {
 	// OK

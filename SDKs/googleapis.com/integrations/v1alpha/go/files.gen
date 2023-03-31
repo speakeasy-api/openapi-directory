@@ -50,7 +50,6 @@ pkg/models/operations/integrationsprojectslocationssfdcinstancessfdcchannelspatc
 pkg/models/shared/googlecloudintegrationsv1alphageneratetokenresponse.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudintegrationsv1alphaenumerateconnectorplatformregionsresponse.go
 pkg/models/shared/googlecloudintegrationsv1alphacreateappsscriptprojectresponse.go
 pkg/models/shared/googlecloudintegrationsv1alphacreateappsscriptprojectrequest.go

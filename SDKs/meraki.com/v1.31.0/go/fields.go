@@ -34,9 +34,9 @@ func newFields(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Modify the fields of a device
 func (s *fields) UpdateNetworkSmDevicesFields(ctx context.Context, request operations.UpdateNetworkSmDevicesFieldsRequest) (*operations.UpdateNetworkSmDevicesFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/fields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

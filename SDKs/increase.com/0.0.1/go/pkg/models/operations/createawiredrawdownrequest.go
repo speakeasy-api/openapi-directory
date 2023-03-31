@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAWireDrawdownRequestRequest struct {
-	Request shared.CreateAWireDrawdownRequestParameters `request:"mediaType=application/json"`
-}
-
 type CreateAWireDrawdownRequestDefaultApplicationJSON13StatusEnum string
 
 const (

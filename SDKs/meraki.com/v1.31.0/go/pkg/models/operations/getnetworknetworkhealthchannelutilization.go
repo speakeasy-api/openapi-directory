@@ -6,13 +6,10 @@ import (
 	"net/http"
 )
 
-type GetNetworkNetworkHealthChannelUtilizationPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkNetworkHealthChannelUtilizationQueryParams struct {
+type GetNetworkNetworkHealthChannelUtilizationRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The number of entries per page returned. Acceptable range is 3 - 100. Default is 10.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// The time resolution in seconds for returned data. The valid resolutions are: 600. The default is 600.
@@ -25,11 +22,6 @@ type GetNetworkNetworkHealthChannelUtilizationQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkNetworkHealthChannelUtilizationRequest struct {
-	PathParams  GetNetworkNetworkHealthChannelUtilizationPathParams
-	QueryParams GetNetworkNetworkHealthChannelUtilizationQueryParams
 }
 
 type GetNetworkNetworkHealthChannelUtilizationResponse struct {

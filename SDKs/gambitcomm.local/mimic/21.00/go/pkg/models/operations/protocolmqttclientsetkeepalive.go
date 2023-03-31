@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetKeepalivePathParams struct {
+type ProtocolMqttClientSetKeepaliveRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// period to send keepalive messages
 	AliveTime int `pathParam:"style=simple,explode=false,name=aliveTime"`
-}
-
-type ProtocolMqttClientSetKeepaliveRequest struct {
-	PathParams ProtocolMqttClientSetKeepalivePathParams
 }
 
 type ProtocolMqttClientSetKeepaliveResponse struct {

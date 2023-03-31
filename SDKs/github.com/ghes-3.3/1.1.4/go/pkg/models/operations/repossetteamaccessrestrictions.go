@@ -10,15 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposSetTeamAccessRestrictionsPathParams struct {
-	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.3/graphql).
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposSetTeamAccessRestrictionsRequestBody1 struct {
 	// The slug values for teams
 	Teams []string `json:"teams"`
@@ -93,8 +84,13 @@ func (u ReposSetTeamAccessRestrictionsRequestBody) MarshalJSON() ([]byte, error)
 }
 
 type ReposSetTeamAccessRestrictionsRequest struct {
-	PathParams ReposSetTeamAccessRestrictionsPathParams
-	Request    *ReposSetTeamAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposSetTeamAccessRestrictionsRequestBody `request:"mediaType=application/json"`
+	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.3/graphql).
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposSetTeamAccessRestrictionsResponse struct {

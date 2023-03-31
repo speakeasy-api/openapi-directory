@@ -9,12 +9,12 @@ import (
 )
 
 type SearchPostsSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SearchPostsQueryParams struct {
+type SearchPostsRequest struct {
 	// Only posts older than this UTC date and time will be returned.  If unset, defaults to the current date and time.
 	DateMax *time.Time `queryParam:"style=form,explode=true,name=date_max"`
 	// Only posts newer than or equal to this UTC date and time will be returned.  If unset, defaults to the current date and time minus 90 days.
@@ -58,11 +58,6 @@ type SearchPostsQueryParams struct {
 	// If user_state is set, only posts matching the state specified will be returned.  Only one state may be passed and it must be one of the following: viewed, replied, bookmarked <br><br> NOTE: This option will only work with oauth requests.
 	//
 	UserState *string `queryParam:"style=form,explode=true,name=user_state"`
-}
-
-type SearchPostsRequest struct {
-	QueryParams SearchPostsQueryParams
-	Security    SearchPostsSecurity
 }
 
 // SearchPosts200ApplicationJSON - The posts and paging data.

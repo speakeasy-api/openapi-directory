@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsDeleteLegacyPathParams struct {
+type ReactionsDeleteLegacyRequest struct {
 	// The unique identifier of the reaction.
 	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
-}
-
-type ReactionsDeleteLegacyRequest struct {
-	PathParams ReactionsDeleteLegacyPathParams
 }
 
 type ReactionsDeleteLegacyResponse struct {

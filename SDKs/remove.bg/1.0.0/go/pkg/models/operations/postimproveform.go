@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostImproveFormRequest struct {
-	Request shared.ImprovementProgramJSON `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type PostImproveFormResponse struct {
 	Body        []byte

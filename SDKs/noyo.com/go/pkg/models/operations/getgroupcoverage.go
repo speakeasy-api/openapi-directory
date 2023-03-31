@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupCoveragePathParams struct {
+type GetGroupCoverageRequest struct {
 	// The unique identifier of the group coverage in Noyo
 	GroupCoverageID string `pathParam:"style=simple,explode=false,name=group_coverage_id"`
-}
-
-type GetGroupCoverageRequest struct {
-	PathParams GetGroupCoveragePathParams
 }
 
 type GetGroupCoverageResponse struct {

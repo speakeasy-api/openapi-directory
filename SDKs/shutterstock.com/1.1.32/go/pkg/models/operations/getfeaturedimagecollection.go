@@ -10,13 +10,8 @@ import (
 )
 
 type GetFeaturedImageCollectionSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetFeaturedImageCollectionPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetFeaturedImageCollectionAssetHintEnum - Cover image size
@@ -64,17 +59,13 @@ func (e *GetFeaturedImageCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFeaturedImageCollectionQueryParams struct {
+type GetFeaturedImageCollectionRequest struct {
 	// Cover image size
 	AssetHint *GetFeaturedImageCollectionAssetHintEnum `queryParam:"style=form,explode=true,name=asset_hint"`
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed *GetFeaturedImageCollectionEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetFeaturedImageCollectionRequest struct {
-	PathParams  GetFeaturedImageCollectionPathParams
-	QueryParams GetFeaturedImageCollectionQueryParams
-	Security    GetFeaturedImageCollectionSecurity
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetFeaturedImageCollectionResponse struct {

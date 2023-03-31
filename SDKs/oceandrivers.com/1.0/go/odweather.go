@@ -35,7 +35,7 @@ func newODWeather(defaultClient, securityClient HTTPClient, serverURL, language,
 // CompareStation - Get forecast and realtime information for known points<br/>None
 func (s *odWeather) CompareStation(ctx context.Context, request operations.CompareStationRequest) (*operations.CompareStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/compareStation/{stationName}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/compareStation/{stationName}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -70,7 +70,7 @@ func (s *odWeather) CompareStation(ctx context.Context, request operations.Compa
 // GetAemetStation - Get data from the aemet stations<br/>None
 func (s *odWeather) GetAemetStation(ctx context.Context, request operations.GetAemetStationRequest) (*operations.GetAemetStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getAemetStation/{stationName}/{period}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getAemetStation/{stationName}/{period}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,14 +105,14 @@ func (s *odWeather) GetAemetStation(ctx context.Context, request operations.GetA
 // GetEasywind - Get data from the easywind weather stations<br/>None
 func (s *odWeather) GetEasywind(ctx context.Context, request operations.GetEasywindRequest) (*operations.GetEasywindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getEasyWind/{easywindId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getEasyWind/{easywindId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -144,7 +144,7 @@ func (s *odWeather) GetEasywind(ctx context.Context, request operations.GetEasyw
 // GetEventStations - Get stations in an event<br/>None
 func (s *odWeather) GetEventStations(ctx context.Context, request operations.GetEventStationsRequest) (*operations.GetEventStationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getEventStations/{eventId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getEventStations/{eventId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +179,7 @@ func (s *odWeather) GetEventStations(ctx context.Context, request operations.Get
 // GetForecastPoints - Get forecast points of a yatchclub<br/>None
 func (s *odWeather) GetForecastPoints(ctx context.Context, request operations.GetForecastPointsRequest) (*operations.GetForecastPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getForecastPoints/{yatchclubid}/language/{language}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getForecastPoints/{yatchclubid}/language/{language}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,14 +214,14 @@ func (s *odWeather) GetForecastPoints(ctx context.Context, request operations.Ge
 // GetForecastTimeSeries - Get timeseries forecast information<br/>None
 func (s *odWeather) GetForecastTimeSeries(ctx context.Context, request operations.GetForecastTimeSeriesRequest) (*operations.GetForecastTimeSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getForecastTimeSeries/{latitude}/{longitude}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getForecastTimeSeries/{latitude}/{longitude}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -253,14 +253,14 @@ func (s *odWeather) GetForecastTimeSeries(ctx context.Context, request operation
 // GetForecastTimeSeriesWrf - Get timeseries forecast information<br/>None
 func (s *odWeather) GetForecastTimeSeriesWrf(ctx context.Context, request operations.GetForecastTimeSeriesWrfRequest) (*operations.GetForecastTimeSeriesWrfResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getForecastTimeSeriesWrf/{latitude}/{longitude}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getForecastTimeSeriesWrf/{latitude}/{longitude}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -292,7 +292,7 @@ func (s *odWeather) GetForecastTimeSeriesWrf(ctx context.Context, request operat
 // GetSocibWeatherStation - Get data from the socib bahia de palma buoy<br/>None
 func (s *odWeather) GetSocibWeatherStation(ctx context.Context, request operations.GetSocibWeatherStationRequest) (*operations.GetSocibWeatherStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getSocibWeatherStation/{stationName}/{period}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getSocibWeatherStation/{stationName}/{period}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,14 +327,14 @@ func (s *odWeather) GetSocibWeatherStation(ctx context.Context, request operatio
 // GetWeatherDisplay - Get data from the weather display software<br/>None
 func (s *odWeather) GetWeatherDisplay(ctx context.Context, request operations.GetWeatherDisplayRequest) (*operations.GetWeatherDisplayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getWeatherDisplay/{stationName}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.0/getWeatherDisplay/{stationName}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

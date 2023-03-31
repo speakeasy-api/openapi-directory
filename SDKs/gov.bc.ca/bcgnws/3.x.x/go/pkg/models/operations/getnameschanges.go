@@ -158,7 +158,7 @@ func (e *GetNamesChangesSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNamesChangesQueryParams struct {
+type GetNamesChangesRequest struct {
 	// A flag to indicate whether to embed the corresponding 'feature' into each matching name
 	Embed *GetNamesChangesEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
 	// A filter to limit the search to names associated with features of a certain 'category'  The value of this parameter should be a 'featureCategoryCode' value returned by the /featureCategories resource, or an asterisk (*) to request that all feature categories be included.
@@ -183,10 +183,6 @@ type GetNamesChangesQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
 	// Defines the latest date (YYYY-MM-DD format) of the change time window for the search
 	ToDate int64 `queryParam:"style=form,explode=true,name=toDate"`
-}
-
-type GetNamesChangesRequest struct {
-	QueryParams GetNamesChangesQueryParams
 }
 
 type GetNamesChangesResponse struct {

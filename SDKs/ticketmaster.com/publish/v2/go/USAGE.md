@@ -14,50 +14,49 @@ func main() {
     s := sdk.New()
 
     req := operations.PatchAttractionRequest{
-        PathParams: operations.PatchAttractionPathParams{
-            ID: "corrupti",
-        },
-        Headers: operations.PatchAttractionHeaders{
-            TMPSCorrelationID: "provident",
-        },
-        Request: shared.AugmentationData{
+        AugmentationData: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "quibusdam",
-                    Op: "move",
-                    Path: "nulla",
+                    From: "provident",
+                    Op: "copy",
+                    Path: "quibusdam",
                     Value: map[string]interface{}{
+                        "nulla": "corrupti",
                         "illum": "vel",
                         "error": "deserunt",
-                        "suscipit": "iure",
                     },
                 },
                 shared.Change{
-                    From: "magnam",
-                    Op: "test",
-                    Path: "ipsa",
+                    From: "suscipit",
+                    Op: "replace",
+                    Path: "magnam",
                     Value: map[string]interface{}{
+                        "ipsa": "delectus",
                         "tempora": "suscipit",
                         "molestiae": "minus",
                         "placeat": "voluptatum",
-                        "iusto": "excepturi",
                     },
                 },
                 shared.Change{
-                    From: "nisi",
-                    Op: "test",
-                    Path: "temporibus",
+                    From: "iusto",
+                    Op: "move",
+                    Path: "nisi",
                     Value: map[string]interface{}{
+                        "temporibus": "ab",
                         "quis": "veritatis",
+                        "deserunt": "perferendis",
+                        "ipsam": "repellendus",
                     },
                 },
             },
-            RelatedEntityID: "deserunt",
-            RelatedEntityType: "event",
-            Score: 3682.41,
-            Source: "repellendus",
-            VersionNumber: 957156,
+            RelatedEntityID: "sapiente",
+            RelatedEntityType: "venue",
+            Score: 1403.5,
+            Source: "at",
+            VersionNumber: 870088,
         },
+        TMPSCorrelationID: "maiores",
+        ID: "molestiae",
     }
 
     ctx := context.Background()

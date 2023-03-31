@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type StoreGetPathParams struct {
+type StoreGetRequest struct {
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type StoreGetRequest struct {
-	PathParams StoreGetPathParams
 }
 
 type StoreGetResponse struct {

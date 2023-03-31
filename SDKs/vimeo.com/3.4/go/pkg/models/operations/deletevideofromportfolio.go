@@ -8,21 +8,16 @@ import (
 )
 
 type DeleteVideoFromPortfolioSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVideoFromPortfolioPathParams struct {
+type DeleteVideoFromPortfolioRequest struct {
 	// The ID of the portfolio.
 	PortfolioID float64 `pathParam:"style=simple,explode=false,name=portfolio_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteVideoFromPortfolioRequest struct {
-	PathParams DeleteVideoFromPortfolioPathParams
-	Security   DeleteVideoFromPortfolioSecurity
 }
 
 type DeleteVideoFromPortfolioResponse struct {

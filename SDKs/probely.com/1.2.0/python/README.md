@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/probely.com/1.2.0/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,19 +14,15 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        jwt_auth=shared.SchemeJwtAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.DeleteKeysIDRequest(
-    path_params=operations.DeleteKeysIDPathParams(
-        id="culpa",
+        jwt_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
+)
+
+
+req = operations.DeleteKeysIDRequest(
+    id="jMXUw-BE_2vd",
 )
     
 res = s.api_keys.delete_keys_id_(req)
@@ -37,9 +33,10 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### API Keys
+
+### api_keys
 
 * `delete_keys_id_` - Delete account API key
 * `delete_targets_target_id_keys_id_` - Delete target API key
@@ -50,7 +47,7 @@ if res.status_code == 200:
 * `post_keys_` - Create account API key
 * `post_targets_target_id_keys_` - Create target API key
 
-### Account
+### account
 
 * `get_account_` - Retrieve account information
 * `get_billing_` - Retrieve billing information
@@ -61,13 +58,13 @@ if res.status_code == 200:
 * `post_target_actions_` - Available actions for the selected targets
 * `put_billing_` - Update billing information
 
-### Archive
+### archive
 
 * `post_targets_activate_` - Activate targets
 * `post_targets_archive_` - Archive targets
 * `post_targets_archived_` - List archived targets
 
-### Assets
+### assets
 
 * `delete_targets_target_id_assets_id_` - Delete asset
 * `get_targets_target_id_assets_` - List target's assets
@@ -77,7 +74,7 @@ if res.status_code == 200:
 * `post_targets_target_id_assets_id_verify_` - Verify asset ownership
 * `put_targets_target_id_assets_id_` - Update asset
 
-### Events
+### events
 
 * `delete_targets_target_id_webhooks_id_` - Delete target webhook
 * `delete_webhooks_id_` - Delete account webhook
@@ -96,7 +93,7 @@ if res.status_code == 200:
 * `put_targets_target_id_webhooks_id_` - Update target webhook
 * `put_webhooks_id_` - Update account webhook
 
-### Findings
+### findings
 
 * `get_targets_target_id_findings_` - List target findings
 * `get_targets_target_id_findings_report_` - Retrieve finding report PDF format
@@ -109,17 +106,17 @@ if res.status_code == 200:
 * `post_targets_target_id_findings_id_retest_` - Retest finding
 * `put_targets_target_id_findings_id_` - Update finding
 
-### Frameworks
+### frameworks
 
 * `get_frameworks_` - List frameworks
 * `get_frameworks_id_` - Retrieve framework
 
-### Integrations
+### integrations
 
 * `get_integrations_` - Integrations available and installed in the account
 * `get_targets_target_id_integrations_` - Integrations available and installed for the target
 
-### Jira Cloud Integration
+### jira_cloud_integration
 
 * `get_integrations_jira_cloud_projects_` - List Jira Projects
 * `get_integrations_jira_cloud_projects_project_id_issue_types_` - Retrieve project issue types
@@ -132,7 +129,7 @@ if res.status_code == 200:
 * `put_targets_target_id_findings_id_integrations_jira_cloud_` - Update Jira Cloud finding configuration
 * `put_targets_target_id_integrations_jira_cloud_` - Update Jira Cloud target configuration
 
-### Jira Server Integration
+### jira_server_integration
 
 * `get_integrations_jira_server_projects_` - List Jira Projects
 * `get_integrations_jira_server_projects_project_id_issue_types_` - Retrieve project issue types
@@ -145,7 +142,7 @@ if res.status_code == 200:
 * `put_targets_target_id_findings_id_integrations_jira_server_` - Update Jira Server finding configuration
 * `put_targets_target_id_integrations_jira_server_` - Update Jira Server target configuration
 
-### Labels
+### labels
 
 * `delete_labels_id_` - Delete label
 * `get_labels_` - List labels
@@ -154,7 +151,7 @@ if res.status_code == 200:
 * `post_labels_` - Create label
 * `put_labels_id_` - Update label
 
-### Login
+### login
 
 * `post_auth_obtain_` - Authenticate user
 * `post_auth_refresh_` - Replace token with a new one
@@ -165,18 +162,18 @@ if res.status_code == 200:
 * `post_enterprise_auth_revoke_` - Enterprise token revokation
 * `post_enterprise_auth_verify_` - Enterprise token verification
 
-### Password Reset
+### password_reset
 
 * `post_check_` - Check validity of password reset token
 * `post_reset_` - Send reset password email
 * `post_setpassword_` - Reset password after asking for a reset (with the token sent by email).
 
 
-### Plan
+### plan
 
 * `get_plans_` - Subscription plans
 
-### Scans
+### scans
 
 * `get_targets_all_scans_` - List scans for all targets
 * `get_targets_target_id_scans_` - List scans
@@ -191,7 +188,7 @@ if res.status_code == 200:
 * `post_targets_target_id_scan_now_` - Start a scan on the target
 * `post_targets_target_id_scans_id_cancel_` - Cancel running scan
 
-### Scheduled
+### scheduled
 
 * `delete_targets_target_id_scheduledscans_id_` - Delete
 * `get_targets_all_scheduledscans_expanded_` - List scheduled scans for all targets expanding recurrence
@@ -202,20 +199,20 @@ if res.status_code == 200:
 * `post_targets_target_id_scheduledscans_` - Create new scheduled scan
 * `put_targets_target_id_scheduledscans_id_` - Update a scheduled scan
 
-### Site
+### site
 
 * `get_targets_target_id_site_` - Retrieve target's site
 * `patch_targets_target_id_site_` - Partial update target's site
 * `post_targets_target_id_site_verify_` - Verify site ownership
 * `put_targets_target_id_site_` - Update target's site
 
-### Slack Integration
+### slack_integration
 
 * `get_targets_target_id_integrations_slack_` - Retrieve slack integration data
 * `patch_targets_target_id_integrations_slack_` - Update slack integration data
 * `put_targets_target_id_integrations_slack_` - Update slack integration data
 
-### Statistics
+### statistics
 
 * `get_targets_all_average_fix_time_` - Average fix time graph data (all targets)
 * `get_targets_all_needs_attention_pie_` - Targets with open vulnerabilities pie chart data
@@ -228,7 +225,7 @@ if res.status_code == 200:
 * `get_targets_target_id_severity_trend_` - Severity trend graph data.
 * `get_targets_target_id_top_vulns_` - Top 5 vulnerabilities
 
-### Targets
+### targets
 
 * `delete_targets_id_` - Delete target
 * `get_targets_` - List targets
@@ -237,7 +234,7 @@ if res.status_code == 200:
 * `post_targets_` - Create target
 * `put_targets_id_` - Update target
 
-### Users
+### users
 
 * `delete_users_id_` - Deactivate a user
 * `get_profile_` - User data
@@ -248,11 +245,21 @@ if res.status_code == 200:
 * `post_users_` - Create/Reactivate a user.
 * `put_users_id_` - Update user
 
-### Vulnerabilities
+### vulnerabilities
 
 * `get_vulnerability_definitions_` - List vulnerability definitions
 * `get_vulnerability_definitions_id_` - Retrieve vulnerability definition
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

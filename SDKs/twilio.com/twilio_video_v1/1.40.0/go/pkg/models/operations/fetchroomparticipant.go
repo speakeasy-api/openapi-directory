@@ -12,20 +12,15 @@ var FetchRoomParticipantServerList = []string{
 }
 
 type FetchRoomParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRoomParticipantPathParams struct {
+type FetchRoomParticipantRequest struct {
 	// The SID of the room with the Participant resource to fetch.
 	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// The SID of the RoomParticipant resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRoomParticipantRequest struct {
-	PathParams FetchRoomParticipantPathParams
-	Security   FetchRoomParticipantSecurity
-	ServerURL  *string
 }
 
 type FetchRoomParticipantResponse struct {

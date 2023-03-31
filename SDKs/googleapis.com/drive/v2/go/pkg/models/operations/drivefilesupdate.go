@@ -10,33 +10,33 @@ import (
 )
 
 type DriveFilesUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesUpdateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesUpdateSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesUpdateSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesUpdateSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesUpdateSecurity struct {
@@ -46,11 +46,6 @@ type DriveFilesUpdateSecurity struct {
 	Option4 *DriveFilesUpdateSecurityOption4 `security:"option"`
 	Option5 *DriveFilesUpdateSecurityOption5 `security:"option"`
 	Option6 *DriveFilesUpdateSecurityOption6 `security:"option"`
-}
-
-type DriveFilesUpdatePathParams struct {
-	// The ID of the file to update.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 // DriveFilesUpdateModifiedDateBehaviorEnum - Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
@@ -89,7 +84,8 @@ func (e *DriveFilesUpdateModifiedDateBehaviorEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DriveFilesUpdateQueryParams struct {
+type DriveFilesUpdateRequest struct {
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// Comma-separated list of parent IDs to add.
 	AddParents *string `queryParam:"style=form,explode=true,name=addParents"`
 	// Data format for the response.
@@ -100,6 +96,8 @@ type DriveFilesUpdateQueryParams struct {
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file to update.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// A comma-separated list of IDs of labels to include in the labelInfo part of the response.
 	IncludeLabels *string `queryParam:"style=form,explode=true,name=includeLabels"`
 	// Specifies which additional view's permissions to include in the response. Only 'published' is supported.
@@ -140,13 +138,6 @@ type DriveFilesUpdateQueryParams struct {
 	UseContentAsIndexableText *bool `queryParam:"style=form,explode=true,name=useContentAsIndexableText"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesUpdateRequest struct {
-	PathParams  DriveFilesUpdatePathParams
-	QueryParams DriveFilesUpdateQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
-	Security    DriveFilesUpdateSecurity
 }
 
 type DriveFilesUpdateResponse struct {

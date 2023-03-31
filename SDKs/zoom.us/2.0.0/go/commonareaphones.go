@@ -41,7 +41,7 @@ func newCommonAreaPhones(defaultClient, securityClient HTTPClient, serverURL, la
 // **Scope:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *commonAreaPhones) AddCommonAreaPhone(ctx context.Context, request operations.AddCommonAreaPhoneRequest) (*operations.AddCommonAreaPhoneResponse, error) {
+func (s *commonAreaPhones) AddCommonAreaPhone(ctx context.Context, request operations.AddCommonAreaPhoneRequestBody, security operations.AddCommonAreaPhoneSecurity) (*operations.AddCommonAreaPhoneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/common_area_phones"
 
@@ -57,7 +57,7 @@ func (s *commonAreaPhones) AddCommonAreaPhone(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -109,16 +109,16 @@ func (s *commonAreaPhones) AddCommonAreaPhone(ctx context.Context, request opera
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *commonAreaPhones) DeleteCommonAreaPhone(ctx context.Context, request operations.DeleteCommonAreaPhoneRequest) (*operations.DeleteCommonAreaPhoneResponse, error) {
+func (s *commonAreaPhones) DeleteCommonAreaPhone(ctx context.Context, request operations.DeleteCommonAreaPhoneRequest, security operations.DeleteCommonAreaPhoneSecurity) (*operations.DeleteCommonAreaPhoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/common_area_phones/{commonAreaPhoneId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/common_area_phones/{commonAreaPhoneId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,16 +168,16 @@ func (s *commonAreaPhones) DeleteCommonAreaPhone(ctx context.Context, request op
 // **Scopes:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *commonAreaPhones) GetACommonAreaPhone(ctx context.Context, request operations.GetACommonAreaPhoneRequest) (*operations.GetACommonAreaPhoneResponse, error) {
+func (s *commonAreaPhones) GetACommonAreaPhone(ctx context.Context, request operations.GetACommonAreaPhoneRequest, security operations.GetACommonAreaPhoneSecurity) (*operations.GetACommonAreaPhoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/common_area_phones/{commonAreaPhoneId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/common_area_phones/{commonAreaPhoneId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -227,7 +227,7 @@ func (s *commonAreaPhones) GetACommonAreaPhone(ctx context.Context, request oper
 // **Scope:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *commonAreaPhones) ListCommonAreaPhones(ctx context.Context, request operations.ListCommonAreaPhonesRequest) (*operations.ListCommonAreaPhonesResponse, error) {
+func (s *commonAreaPhones) ListCommonAreaPhones(ctx context.Context, request operations.ListCommonAreaPhonesRequest, security operations.ListCommonAreaPhonesSecurity) (*operations.ListCommonAreaPhonesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/common_area_phones"
 
@@ -236,11 +236,11 @@ func (s *commonAreaPhones) ListCommonAreaPhones(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,11 +289,11 @@ func (s *commonAreaPhones) ListCommonAreaPhones(ctx context.Context, request ope
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *commonAreaPhones) UpdateCommonAreaPhone(ctx context.Context, request operations.UpdateCommonAreaPhoneRequest) (*operations.UpdateCommonAreaPhoneResponse, error) {
+func (s *commonAreaPhones) UpdateCommonAreaPhone(ctx context.Context, request operations.UpdateCommonAreaPhoneRequest, security operations.UpdateCommonAreaPhoneSecurity) (*operations.UpdateCommonAreaPhoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/common_area_phones/{commonAreaPhoneId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/common_area_phones/{commonAreaPhoneId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *commonAreaPhones) UpdateCommonAreaPhone(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

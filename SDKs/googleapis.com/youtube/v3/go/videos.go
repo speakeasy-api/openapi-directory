@@ -33,7 +33,7 @@ func newVideos(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // YoutubeVideosDelete - Deletes a resource.
-func (s *videos) YoutubeVideosDelete(ctx context.Context, request operations.YoutubeVideosDeleteRequest) (*operations.YoutubeVideosDeleteResponse, error) {
+func (s *videos) YoutubeVideosDelete(ctx context.Context, request operations.YoutubeVideosDeleteRequest, security operations.YoutubeVideosDeleteSecurity) (*operations.YoutubeVideosDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos"
 
@@ -42,11 +42,11 @@ func (s *videos) YoutubeVideosDelete(ctx context.Context, request operations.You
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *videos) YoutubeVideosDelete(ctx context.Context, request operations.You
 }
 
 // YoutubeVideosGetRating - Retrieves the ratings that the authorized user gave to a list of specified videos.
-func (s *videos) YoutubeVideosGetRating(ctx context.Context, request operations.YoutubeVideosGetRatingRequest) (*operations.YoutubeVideosGetRatingResponse, error) {
+func (s *videos) YoutubeVideosGetRating(ctx context.Context, request operations.YoutubeVideosGetRatingRequest, security operations.YoutubeVideosGetRatingSecurity) (*operations.YoutubeVideosGetRatingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos/getRating"
 
@@ -81,11 +81,11 @@ func (s *videos) YoutubeVideosGetRating(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *videos) YoutubeVideosGetRating(ctx context.Context, request operations.
 }
 
 // YoutubeVideosInsert - Inserts a new resource into this collection.
-func (s *videos) YoutubeVideosInsert(ctx context.Context, request operations.YoutubeVideosInsertRequest) (*operations.YoutubeVideosInsertResponse, error) {
+func (s *videos) YoutubeVideosInsert(ctx context.Context, request operations.YoutubeVideosInsertRequest, security operations.YoutubeVideosInsertSecurity) (*operations.YoutubeVideosInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *videos) YoutubeVideosInsert(ctx context.Context, request operations.You
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *videos) YoutubeVideosInsert(ctx context.Context, request operations.You
 }
 
 // YoutubeVideosList - Retrieves a list of resources, possibly filtered.
-func (s *videos) YoutubeVideosList(ctx context.Context, request operations.YoutubeVideosListRequest) (*operations.YoutubeVideosListResponse, error) {
+func (s *videos) YoutubeVideosList(ctx context.Context, request operations.YoutubeVideosListRequest, security operations.YoutubeVideosListSecurity) (*operations.YoutubeVideosListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos"
 
@@ -184,11 +184,11 @@ func (s *videos) YoutubeVideosList(ctx context.Context, request operations.Youtu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *videos) YoutubeVideosList(ctx context.Context, request operations.Youtu
 }
 
 // YoutubeVideosRate - Adds a like or dislike rating to a video or removes a rating from a video.
-func (s *videos) YoutubeVideosRate(ctx context.Context, request operations.YoutubeVideosRateRequest) (*operations.YoutubeVideosRateResponse, error) {
+func (s *videos) YoutubeVideosRate(ctx context.Context, request operations.YoutubeVideosRateRequest, security operations.YoutubeVideosRateSecurity) (*operations.YoutubeVideosRateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos/rate"
 
@@ -232,11 +232,11 @@ func (s *videos) YoutubeVideosRate(ctx context.Context, request operations.Youtu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,11 +262,11 @@ func (s *videos) YoutubeVideosRate(ctx context.Context, request operations.Youtu
 }
 
 // YoutubeVideosReportAbuse - Report abuse for a video.
-func (s *videos) YoutubeVideosReportAbuse(ctx context.Context, request operations.YoutubeVideosReportAbuseRequest) (*operations.YoutubeVideosReportAbuseResponse, error) {
+func (s *videos) YoutubeVideosReportAbuse(ctx context.Context, request operations.YoutubeVideosReportAbuseRequest, security operations.YoutubeVideosReportAbuseSecurity) (*operations.YoutubeVideosReportAbuseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos/reportAbuse"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VideoAbuseReport", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,11 +278,11 @@ func (s *videos) YoutubeVideosReportAbuse(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,11 +308,11 @@ func (s *videos) YoutubeVideosReportAbuse(ctx context.Context, request operation
 }
 
 // YoutubeVideosUpdate - Updates an existing resource.
-func (s *videos) YoutubeVideosUpdate(ctx context.Context, request operations.YoutubeVideosUpdateRequest) (*operations.YoutubeVideosUpdateResponse, error) {
+func (s *videos) YoutubeVideosUpdate(ctx context.Context, request operations.YoutubeVideosUpdateRequest, security operations.YoutubeVideosUpdateSecurity) (*operations.YoutubeVideosUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/videos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Video", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,11 +324,11 @@ func (s *videos) YoutubeVideosUpdate(ctx context.Context, request operations.You
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

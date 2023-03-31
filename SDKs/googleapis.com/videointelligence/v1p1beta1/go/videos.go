@@ -33,11 +33,11 @@ func newVideos(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // VideointelligenceVideosAnnotate - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
-func (s *videos) VideointelligenceVideosAnnotate(ctx context.Context, request operations.VideointelligenceVideosAnnotateRequest) (*operations.VideointelligenceVideosAnnotateResponse, error) {
+func (s *videos) VideointelligenceVideosAnnotate(ctx context.Context, request operations.VideointelligenceVideosAnnotateRequest, security operations.VideointelligenceVideosAnnotateSecurity) (*operations.VideointelligenceVideosAnnotateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1p1beta1/videos:annotate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *videos) VideointelligenceVideosAnnotate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

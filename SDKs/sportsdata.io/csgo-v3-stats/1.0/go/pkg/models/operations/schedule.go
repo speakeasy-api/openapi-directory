@@ -33,16 +33,12 @@ func (e *ScheduleFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SchedulePathParams struct {
+type ScheduleRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ScheduleFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Round ID. RoundIDs can be found in the Competitions and Competition Details endpoints.
 	// Examples: <code>100000138</code>, <code>1000001412</code>, etc
 	Roundid string `pathParam:"style=simple,explode=false,name=roundid"`
-}
-
-type ScheduleRequest struct {
-	PathParams SchedulePathParams
 }
 
 type ScheduleResponse struct {

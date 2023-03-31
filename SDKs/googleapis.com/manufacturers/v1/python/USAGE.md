@@ -4,36 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.ManufacturersAccountsProductsDeleteRequest(
-    security=operations.ManufacturersAccountsProductsDeleteSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ManufacturersAccountsProductsDeletePathParams(
-        name="et",
-        parent="officia",
-    ),
-    query_params=operations.ManufacturersAccountsProductsDeleteQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
-        alt="json",
-        callback="commodi",
-        fields="modi",
-        key="temporibus",
-        oauth_token="aut",
-        pretty_print=True,
-        quota_user="aut",
-        upload_type="tempora",
-        upload_protocol="pariatur",
-    ),
+
+
+req = operations.ManufacturersAccountsLanguagesProductCertificationsDeleteRequest(
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    upload_type="error",
+    upload_protocol="deserunt",
 )
     
-res = s.accounts.manufacturers_accounts_products_delete(req)
+res = s.accounts.manufacturers_accounts_languages_product_certifications_delete(req, operations.ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.empty is not None:
     # handle response

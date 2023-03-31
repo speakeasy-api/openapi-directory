@@ -35,11 +35,11 @@ func newAttendanceSubscriberStateChanges(defaultClient, securityClient HTTPClien
 
 // PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate - Record
 // Record a subscription state between multiple HubSpot contacts and a marketing event, using HubSpot contact ids.
-func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx context.Context, request operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest) (*operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateResponse, error) {
+func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx context.Context, request operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest, security operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity) (*operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/create", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/create", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputMarketingEventSubscriber", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,11 +54,11 @@ func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttenda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -104,11 +104,11 @@ func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttenda
 
 // PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmail - Record
 // Record a subscription state between multiple HubSpot contacts and a marketing event, using contact email addresses. If contact is not present it will be automatically created. If you set params
-func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmail(ctx context.Context, request operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailRequest) (*operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailResponse, error) {
+func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmail(ctx context.Context, request operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailRequest, security operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailSecurity) (*operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/email-create", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/email-create", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputMarketingEventEmailSubscriber", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -123,11 +123,11 @@ func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttenda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

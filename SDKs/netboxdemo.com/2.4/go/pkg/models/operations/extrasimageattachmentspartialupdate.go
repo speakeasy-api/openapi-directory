@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasImageAttachmentsPartialUpdatePathParams struct {
+type ExtrasImageAttachmentsPartialUpdateRequest struct {
+	ImageAttachmentInput shared.ImageAttachmentInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this image attachment.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasImageAttachmentsPartialUpdateRequest struct {
-	PathParams ExtrasImageAttachmentsPartialUpdatePathParams
-	Request    shared.ImageAttachmentInput `request:"mediaType=application/json"`
 }
 
 type ExtrasImageAttachmentsPartialUpdateResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GETStrainsByPositionUsingGETPathParams struct {
+type GETStrainsByPositionUsingGETRequest struct {
 	// Chromosome
 	Chr string `pathParam:"style=simple,explode=false,name=chr"`
 	// RGD Map Key (available through lookup service)
@@ -15,10 +15,6 @@ type GETStrainsByPositionUsingGETPathParams struct {
 	Start int64 `pathParam:"style=simple,explode=false,name=start"`
 	// Stop Position
 	Stop int64 `pathParam:"style=simple,explode=false,name=stop"`
-}
-
-type GETStrainsByPositionUsingGETRequest struct {
-	PathParams GETStrainsByPositionUsingGETPathParams
 }
 
 type GETStrainsByPositionUsingGETResponse struct {

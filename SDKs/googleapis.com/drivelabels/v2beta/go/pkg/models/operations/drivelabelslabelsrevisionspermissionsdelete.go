@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsLabelsRevisionsPermissionsDeletePathParams struct {
-	// Required. Label Permission resource name.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsDeleteQueryParams struct {
+type DrivelabelsLabelsRevisionsPermissionsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -25,6 +20,8 @@ type DrivelabelsLabelsRevisionsPermissionsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Label Permission resource name.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -39,11 +36,6 @@ type DrivelabelsLabelsRevisionsPermissionsDeleteQueryParams struct {
 	UseAdminAccess *bool `queryParam:"style=form,explode=true,name=useAdminAccess"`
 	// The revision_id of the label that the write request will be applied to. If this is not the latest revision of the label, the request will not be processed and will return a 400 Bad Request error.
 	WriteControlRequiredRevisionID *string `queryParam:"style=form,explode=true,name=writeControl.requiredRevisionId"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsDeleteRequest struct {
-	PathParams  DrivelabelsLabelsRevisionsPermissionsDeletePathParams
-	QueryParams DrivelabelsLabelsRevisionsPermissionsDeleteQueryParams
 }
 
 type DrivelabelsLabelsRevisionsPermissionsDeleteResponse struct {

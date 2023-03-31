@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchCompanyAttendancesIDPathParams struct {
+type PatchCompanyAttendancesIDRequest struct {
+	// attendance period data to update
+	UpdateAttendancePeriodRequest shared.UpdateAttendancePeriodRequest `request:"mediaType=application/json"`
 	// ID of the attendance period to update
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatchCompanyAttendancesIDRequest struct {
-	PathParams PatchCompanyAttendancesIDPathParams
-	// attendance period data to update
-	Request shared.UpdateAttendancePeriodRequest `request:"mediaType=application/json"`
 }
 
 type PatchCompanyAttendancesIDResponse struct {

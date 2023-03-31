@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateDiscussionCommentInOrgPathParams struct {
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 type TeamsCreateDiscussionCommentInOrgRequestBody struct {
 	// The discussion comment's body text.
 	Body string `json:"body"`
 }
 
 type TeamsCreateDiscussionCommentInOrgRequest struct {
-	PathParams TeamsCreateDiscussionCommentInOrgPathParams
-	Request    TeamsCreateDiscussionCommentInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateDiscussionCommentInOrgRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsCreateDiscussionCommentInOrgResponse struct {

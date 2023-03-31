@@ -13,21 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            UserID: shared.SchemeUserID{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
+            UserID: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.BadWordFilterRequest{
-        Request: operations.BadWordFilterRequestBody{
-            Catalog: "corrupti",
-            CensorCharacter: "provident",
-            Content: "distinctio",
-        },
+    req := operations.BadWordFilterRequestBody{
+        Catalog: "corrupti",
+        CensorCharacter: "provident",
+        Content: "distinctio",
     }
 
     ctx := context.Background()

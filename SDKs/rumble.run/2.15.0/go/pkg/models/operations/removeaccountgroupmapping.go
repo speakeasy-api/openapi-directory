@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveAccountGroupMappingSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveAccountGroupMappingPathParams struct {
-	// UUID of the SSO group mapping
-	GroupMappingID string `pathParam:"style=simple,explode=false,name=group_mapping_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveAccountGroupMappingRequest struct {
-	PathParams RemoveAccountGroupMappingPathParams
-	Security   RemoveAccountGroupMappingSecurity
+	// UUID of the SSO group mapping
+	GroupMappingID string `pathParam:"style=simple,explode=false,name=group_mapping_id"`
 }
 
 type RemoveAccountGroupMappingResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type CloudschedulerProjectsLocationsJobsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudschedulerProjectsLocationsJobsListPathParams struct {
-	// Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudschedulerProjectsLocationsJobsListQueryParams struct {
+type CloudschedulerProjectsLocationsJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type CloudschedulerProjectsLocationsJobsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results the server will return. To request the first page results, page_token must be empty. To request the next page of results, page_token must be the value of next_page_token returned from the previous call to ListJobs. It is an error to switch the value of filter or order_by while iterating through pages.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type CloudschedulerProjectsLocationsJobsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudschedulerProjectsLocationsJobsListRequest struct {
-	PathParams  CloudschedulerProjectsLocationsJobsListPathParams
-	QueryParams CloudschedulerProjectsLocationsJobsListQueryParams
-	Security    CloudschedulerProjectsLocationsJobsListSecurity
 }
 
 type CloudschedulerProjectsLocationsJobsListResponse struct {

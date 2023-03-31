@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteContentServerList = []string{
@@ -12,18 +11,13 @@ var DeleteContentServerList = []string{
 }
 
 type DeleteContentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteContentPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Content resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteContentRequest struct {
-	PathParams DeleteContentPathParams
-	Security   DeleteContentSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the Content resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteContentResponse struct {

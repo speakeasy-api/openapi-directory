@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationConfigTemplatePathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationConfigTemplateRequestBody struct {
 	// The ID of the network or config template to copy configuration from
 	CopyFromNetworkID *string `json:"copyFromNetworkId,omitempty"`
@@ -20,8 +16,8 @@ type CreateOrganizationConfigTemplateRequestBody struct {
 }
 
 type CreateOrganizationConfigTemplateRequest struct {
-	PathParams CreateOrganizationConfigTemplatePathParams
-	Request    CreateOrganizationConfigTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationConfigTemplateRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                      `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationConfigTemplateResponse struct {

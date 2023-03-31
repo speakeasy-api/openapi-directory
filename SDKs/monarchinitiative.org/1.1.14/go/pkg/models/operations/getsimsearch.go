@@ -42,7 +42,7 @@ func (e *GetSimSearchMetricEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSimSearchQueryParams struct {
+type GetSimSearchRequest struct {
 	// A phenotype or identifier that is composed of phenotypes (eg disease, gene)
 	ID []string `queryParam:"style=form,explode=true,name=id"`
 	// set to true if *all* input ids are phenotypic features, else set to false
@@ -53,10 +53,6 @@ type GetSimSearchQueryParams struct {
 	Metric *GetSimSearchMetricEnum `queryParam:"style=form,explode=true,name=metric"`
 	// ncbi taxon id
 	Taxon *string `queryParam:"style=form,explode=true,name=taxon"`
-}
-
-type GetSimSearchRequest struct {
-	QueryParams GetSimSearchQueryParams
 }
 
 type GetSimSearchResponse struct {

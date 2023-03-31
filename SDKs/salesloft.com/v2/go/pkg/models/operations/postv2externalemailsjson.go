@@ -13,10 +13,6 @@ type PostV2ExternalEmailsJSONRequestBody struct {
 	Raw string `form:"name=raw"`
 }
 
-type PostV2ExternalEmailsJSONRequest struct {
-	Request PostV2ExternalEmailsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2ExternalEmailsJSONResponse struct {
 	Body        []byte
 	ContentType string

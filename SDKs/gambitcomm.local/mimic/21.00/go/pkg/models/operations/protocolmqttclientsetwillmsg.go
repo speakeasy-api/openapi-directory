@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetWillmsgPathParams struct {
+type ProtocolMqttClientSetWillmsgRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Will message
 	Msg string `pathParam:"style=simple,explode=false,name=msg"`
-}
-
-type ProtocolMqttClientSetWillmsgRequest struct {
-	PathParams ProtocolMqttClientSetWillmsgPathParams
 }
 
 type ProtocolMqttClientSetWillmsgResponse struct {

@@ -6,28 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetAllFinancialProductsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAllFinancialProductsQueryParams struct {
-	// multiple product types as a comma seperated string
-	ProductTypes *string `queryParam:"style=form,explode=true,name=product_types"`
-}
-
-type GetAllFinancialProductsHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetAllFinancialProductsRequest struct {
-	QueryParams GetAllFinancialProductsQueryParams
-	Headers     GetAllFinancialProductsHeaders
-	Security    GetAllFinancialProductsSecurity
+	// multiple product types as a comma seperated string
+	ProductTypes *string `queryParam:"style=form,explode=true,name=product_types"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetAllFinancialProducts500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

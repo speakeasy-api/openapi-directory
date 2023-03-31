@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ReposDeleteAccessRestrictionsPathParams struct {
+type ReposDeleteAccessRestrictionsRequest struct {
 	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/graphql).
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteAccessRestrictionsRequest struct {
-	PathParams ReposDeleteAccessRestrictionsPathParams
 }
 
 type ReposDeleteAccessRestrictionsResponse struct {

@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAutocompletePathParams struct {
-	Term string `pathParam:"style=simple,explode=false,name=term"`
-}
-
-type GetAutocompleteQueryParams struct {
+type GetAutocompleteRequest struct {
 	// boost function e.g. pow(edges,0.334)
 	BoostFx []string `queryParam:"style=form,explode=true,name=boost_fx"`
 	// boost query e.g. category:genotype^-10
@@ -38,11 +34,7 @@ type GetAutocompleteQueryParams struct {
 	Start *string `queryParam:"style=form,explode=true,name=start"`
 	// taxon filter, eg NCBITaxon:9606, includes inferred taxa
 	Taxon []string `queryParam:"style=form,explode=true,name=taxon"`
-}
-
-type GetAutocompleteRequest struct {
-	PathParams  GetAutocompletePathParams
-	QueryParams GetAutocompleteQueryParams
+	Term  string   `pathParam:"style=simple,explode=false,name=term"`
 }
 
 type GetAutocompleteResponse struct {

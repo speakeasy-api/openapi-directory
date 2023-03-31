@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type RegisterForRealtimeAPIPostFormRequest struct {
-	Request shared.RegisterRealtimeAPIData `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type RegisterForRealtimeAPIPostFormResponse struct {
 	ContentType string

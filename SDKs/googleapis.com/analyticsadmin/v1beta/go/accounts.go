@@ -33,7 +33,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AnalyticsadminAccountsList - Returns all accounts accessible by the caller. Note that these accounts might not currently have GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty list if no relevant accounts are found.
-func (s *accounts) AnalyticsadminAccountsList(ctx context.Context, request operations.AnalyticsadminAccountsListRequest) (*operations.AnalyticsadminAccountsListResponse, error) {
+func (s *accounts) AnalyticsadminAccountsList(ctx context.Context, request operations.AnalyticsadminAccountsListRequest, security operations.AnalyticsadminAccountsListSecurity) (*operations.AnalyticsadminAccountsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta/accounts"
 
@@ -42,11 +42,11 @@ func (s *accounts) AnalyticsadminAccountsList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *accounts) AnalyticsadminAccountsList(ctx context.Context, request opera
 }
 
 // AnalyticsadminAccountsProvisionAccountTicket - Requests a ticket for creating an account.
-func (s *accounts) AnalyticsadminAccountsProvisionAccountTicket(ctx context.Context, request operations.AnalyticsadminAccountsProvisionAccountTicketRequest) (*operations.AnalyticsadminAccountsProvisionAccountTicketResponse, error) {
+func (s *accounts) AnalyticsadminAccountsProvisionAccountTicket(ctx context.Context, request operations.AnalyticsadminAccountsProvisionAccountTicketRequest, security operations.AnalyticsadminAccountsProvisionAccountTicketSecurity) (*operations.AnalyticsadminAccountsProvisionAccountTicketResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta/accounts:provisionAccountTicket"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaProvisionAccountTicketRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *accounts) AnalyticsadminAccountsProvisionAccountTicket(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *accounts) AnalyticsadminAccountsProvisionAccountTicket(ctx context.Cont
 }
 
 // AnalyticsadminAccountsSearchChangeHistoryEvents - Searches through all changes to an account or its children given the specified set of filters.
-func (s *accounts) AnalyticsadminAccountsSearchChangeHistoryEvents(ctx context.Context, request operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest) (*operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse, error) {
+func (s *accounts) AnalyticsadminAccountsSearchChangeHistoryEvents(ctx context.Context, request operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest, security operations.AnalyticsadminAccountsSearchChangeHistoryEventsSecurity) (*operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{account}:searchChangeHistoryEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{account}:searchChangeHistoryEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *accounts) AnalyticsadminAccountsSearchChangeHistoryEvents(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

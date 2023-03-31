@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEndpointsQueryParams struct {
+type GetEndpointsRequest struct {
 	// Return an OpenAPI specification.
 	Openapi *bool `queryParam:"style=form,explode=true,name=openapi"`
-}
-
-type GetEndpointsRequest struct {
-	QueryParams GetEndpointsQueryParams
 }
 
 type GetEndpointsResponse struct {

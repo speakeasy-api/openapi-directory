@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/fcm/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,149 +15,145 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FcmProjectsMessagesSendRequest(
-    security=operations.FcmProjectsMessagesSendSecurity(
-        option1=operations.FcmProjectsMessagesSendSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.FcmProjectsMessagesSendPathParams(
-        parent="delectus",
-    ),
-    query_params=operations.FcmProjectsMessagesSendQueryParams(
-        dollar_xgafv="1",
-        access_token="eum",
-        alt="media",
-        callback="praesentium",
-        fields="nulla",
-        key="blanditiis",
-        oauth_token="blanditiis",
-        pretty_print=True,
-        quota_user="voluptas",
-        upload_type="rerum",
-        upload_protocol="quibusdam",
-    ),
-    request=shared.SendMessageRequest(
+    dollar_xgafv="2",
+    send_message_request=shared.SendMessageRequest(
         message=shared.Message(
             android=shared.AndroidConfig(
-                collapse_key="et",
+                collapse_key="provident",
                 data={
-                    "ut": "dolorem",
-                    "quos": "exercitationem",
+                    "quibusdam": "unde",
+                    "nulla": "corrupti",
+                    "illum": "vel",
                 },
                 direct_boot_ok=False,
                 fcm_options=shared.AndroidFcmOptions(
-                    analytics_label="enim",
+                    analytics_label="error",
                 ),
                 notification=shared.AndroidNotification(
-                    body="quaerat",
+                    body="deserunt",
                     body_loc_args=[
-                        "ab",
+                        "iure",
+                        "magnam",
                     ],
-                    body_loc_key="architecto",
+                    body_loc_key="debitis",
                     bypass_proxy_notification=False,
-                    channel_id="quas",
-                    click_action="sed",
-                    color="eum",
-                    default_light_settings=True,
+                    channel_id="ipsa",
+                    click_action="delectus",
+                    color="tempora",
+                    default_light_settings=False,
                     default_sound=False,
-                    default_vibrate_timings=True,
-                    event_time="ipsam",
-                    icon="repellat",
-                    image="consequuntur",
+                    default_vibrate_timings=False,
+                    event_time="suscipit",
+                    icon="molestiae",
+                    image="minus",
                     light_settings=shared.LightSettings(
                         color=shared.Color(
-                            alpha=97.199997,
-                            blue=39.200001,
-                            green=73.199997,
-                            red=22.100000,
+                            alpha=8121.69,
+                            blue=5288.95,
+                            green=4799.77,
+                            red=5680.45,
                         ),
-                        light_off_duration="corrupti",
-                        light_on_duration="est",
+                        light_off_duration="nisi",
+                        light_on_duration="recusandae",
                     ),
                     local_only=False,
-                    notification_count=2801199715974625794,
+                    notification_count=836079,
                     notification_priority="PRIORITY_UNSPECIFIED",
-                    sound="reprehenderit",
+                    sound="quis",
                     sticky=False,
-                    tag="sed",
-                    ticker="voluptatem",
-                    title="sit",
+                    tag="veritatis",
+                    ticker="deserunt",
+                    title="Mr.",
                     title_loc_args=[
-                        "earum",
+                        "repellendus",
+                        "sapiente",
                     ],
-                    title_loc_key="animi",
+                    title_loc_key="quo",
                     vibrate_timings=[
-                        "ex",
+                        "at",
                     ],
-                    visibility="VISIBILITY_UNSPECIFIED",
+                    visibility="SECRET",
                 ),
-                priority="NORMAL",
-                restricted_package_name="non",
-                ttl="consequatur",
+                priority="HIGH",
+                restricted_package_name="molestiae",
+                ttl="quod",
             ),
             apns=shared.ApnsConfig(
                 fcm_options=shared.ApnsFcmOptions(
-                    analytics_label="cumque",
-                    image="autem",
+                    analytics_label="quod",
+                    image="esse",
                 ),
                 headers={
-                    "deserunt": "iure",
-                    "exercitationem": "molestiae",
-                    "neque": "deleniti",
+                    "porro": "dolorum",
+                    "dicta": "nam",
+                    "officia": "occaecati",
                 },
                 payload={
-                    "commodi": "ut",
-                    "esse": "nam",
+                    "deleniti": "hic",
                 },
             ),
-            condition="eius",
+            condition="optio",
             data={
-                "et": "velit",
+                "beatae": "commodi",
+                "molestiae": "modi",
+                "qui": "impedit",
             },
             fcm_options=shared.FcmOptions(
-                analytics_label="quas",
+                analytics_label="cum",
             ),
-            name="nostrum",
+            name="esse",
             notification=shared.Notification(
-                body="eligendi",
-                image="veritatis",
-                title="quis",
+                body="ipsum",
+                image="excepturi",
+                title="Mr.",
             ),
-            token="quidem",
-            topic="ratione",
+            token="perferendis",
+            topic="ad",
             webpush=shared.WebpushConfig(
                 data={
-                    "perferendis": "enim",
-                    "natus": "repudiandae",
-                    "aperiam": "minus",
+                    "sed": "iste",
+                    "dolor": "natus",
+                    "laboriosam": "hic",
                 },
                 fcm_options=shared.WebpushFcmOptions(
-                    analytics_label="esse",
-                    link="molestias",
+                    analytics_label="saepe",
+                    link="fuga",
                 ),
                 headers={
-                    "ut": "neque",
-                    "sed": "dolores",
-                    "reprehenderit": "est",
+                    "corporis": "iste",
+                    "iure": "saepe",
                 },
                 notification={
-                    "dolores": "officia",
-                    "consequatur": "et",
+                    "architecto": "ipsa",
+                    "reiciendis": "est",
+                    "mollitia": "laborum",
                 },
             ),
         ),
-        validate_only=True,
+        validate_only=False,
     ),
+    access_token="dolores",
+    alt="json",
+    callback="corporis",
+    fields_="explicabo",
+    key="nobis",
+    oauth_token="enim",
+    parent="omnis",
+    pretty_print=False,
+    quota_user="nemo",
+    upload_type="minima",
+    upload_protocol="excepturi",
 )
     
-res = s.projects.fcm_projects_messages_send(req)
+res = s.projects.fcm_projects_messages_send(req, operations.FcmProjectsMessagesSendSecurity(
+    option1=operations.FcmProjectsMessagesSendSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.message is not None:
     # handle response
@@ -165,12 +161,23 @@ if res.message is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
 * `fcm_projects_messages_send` - Send a message to specified target (a registration token, topic or condition).
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

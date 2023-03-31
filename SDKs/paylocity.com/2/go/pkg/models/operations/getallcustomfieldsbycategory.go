@@ -8,19 +8,14 @@ import (
 )
 
 type GetAllCustomFieldsByCategorySecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetAllCustomFieldsByCategoryPathParams struct {
+type GetAllCustomFieldsByCategoryRequest struct {
 	// Custom Fields Category
 	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// Company Id
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetAllCustomFieldsByCategoryRequest struct {
-	PathParams GetAllCustomFieldsByCategoryPathParams
-	Security   GetAllCustomFieldsByCategorySecurity
 }
 
 type GetAllCustomFieldsByCategoryResponse struct {

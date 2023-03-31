@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelAPendingWireTransferPathParams struct {
-	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
-}
-
 type CancelAPendingWireTransferRequest struct {
-	PathParams CancelAPendingWireTransferPathParams
+	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
 type CancelAPendingWireTransferDefaultApplicationJSON13StatusEnum string

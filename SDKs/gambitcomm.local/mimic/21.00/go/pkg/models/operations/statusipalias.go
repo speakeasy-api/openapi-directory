@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type StatusIpaliasPathParams struct {
+type StatusIpaliasRequest struct {
 	// IP address , IPv4 or IPv6
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to show status of the IP alias
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMP port , 0 or empty for default
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type StatusIpaliasRequest struct {
-	PathParams StatusIpaliasPathParams
 }
 
 type StatusIpaliasResponse struct {

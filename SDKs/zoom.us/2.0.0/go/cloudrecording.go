@@ -45,20 +45,20 @@ func newCloudRecording(defaultClient, securityClient HTTPClient, serverURL, lang
 // If the scope `recording:read:admin` is used, the Account ID of the Account must be provided in the `accountId` path parameter to list recordings that belong to the Account. This scope only works for sub accounts.
 //
 // To list recordings of a master account, the scope must be `account:read:admin` and the value of `accountId` should be `me`.<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *cloudRecording) GetAccountCloudRecording(ctx context.Context, request operations.GetAccountCloudRecordingRequest) (*operations.GetAccountCloudRecordingResponse, error) {
+func (s *cloudRecording) GetAccountCloudRecording(ctx context.Context, request operations.GetAccountCloudRecordingRequest, security operations.GetAccountCloudRecordingSecurity) (*operations.GetAccountCloudRecordingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -118,7 +118,7 @@ func (s *cloudRecording) ListArchivedFiles(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,11 +171,11 @@ func (s *cloudRecording) ListArchivedFiles(ctx context.Context, request operatio
 // **Scopes:** `recording:write:admin`, `recording:write`.<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *cloudRecording) MeetingRecordingRegistrantCreate(ctx context.Context, request operations.MeetingRecordingRegistrantCreateRequest) (*operations.MeetingRecordingRegistrantCreateResponse, error) {
+func (s *cloudRecording) MeetingRecordingRegistrantCreate(ctx context.Context, request operations.MeetingRecordingRegistrantCreateRequest, security operations.MeetingRecordingRegistrantCreateSecurity) (*operations.MeetingRecordingRegistrantCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *cloudRecording) MeetingRecordingRegistrantCreate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,11 +239,11 @@ func (s *cloudRecording) MeetingRecordingRegistrantCreate(ctx context.Context, r
 // **Scopes:** `recording:write:admin`, `recording:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *cloudRecording) MeetingRecordingRegistrantStatus(ctx context.Context, request operations.MeetingRecordingRegistrantStatusRequest) (*operations.MeetingRecordingRegistrantStatusResponse, error) {
+func (s *cloudRecording) MeetingRecordingRegistrantStatus(ctx context.Context, request operations.MeetingRecordingRegistrantStatusRequest, security operations.MeetingRecordingRegistrantStatusSecurity) (*operations.MeetingRecordingRegistrantStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -258,7 +258,7 @@ func (s *cloudRecording) MeetingRecordingRegistrantStatus(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -292,20 +292,20 @@ func (s *cloudRecording) MeetingRecordingRegistrantStatus(ctx context.Context, r
 // **Scopes:** `recording:read:admin`, `recording:read`.<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *cloudRecording) MeetingRecordingRegistrants(ctx context.Context, request operations.MeetingRecordingRegistrantsRequest) (*operations.MeetingRecordingRegistrantsResponse, error) {
+func (s *cloudRecording) MeetingRecordingRegistrants(ctx context.Context, request operations.MeetingRecordingRegistrantsRequest, security operations.MeetingRecordingRegistrantsSecurity) (*operations.MeetingRecordingRegistrantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -356,20 +356,20 @@ func (s *cloudRecording) MeetingRecordingRegistrants(ctx context.Context, reques
 //
 // **Prerequisites**:
 // * Cloud Recording should be enabled on the user's account.<br>
-func (s *cloudRecording) RecordingDelete(ctx context.Context, request operations.RecordingDeleteRequest) (*operations.RecordingDeleteResponse, error) {
+func (s *cloudRecording) RecordingDelete(ctx context.Context, request operations.RecordingDeleteRequest, security operations.RecordingDeleteSecurity) (*operations.RecordingDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,20 +406,20 @@ func (s *cloudRecording) RecordingDelete(ctx context.Context, request operations
 //
 //	<br>
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *cloudRecording) RecordingDeleteOne(ctx context.Context, request operations.RecordingDeleteOneRequest) (*operations.RecordingDeleteOneResponse, error) {
+func (s *cloudRecording) RecordingDeleteOne(ctx context.Context, request operations.RecordingDeleteOneRequest, security operations.RecordingDeleteOneSecurity) (*operations.RecordingDeleteOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/{recordingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/{recordingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,20 +459,20 @@ func (s *cloudRecording) RecordingDeleteOne(ctx context.Context, request operati
 // **Scopes:** `recording:read:admin` `recording:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *cloudRecording) RecordingGet(ctx context.Context, request operations.RecordingGetRequest) (*operations.RecordingGetResponse, error) {
+func (s *cloudRecording) RecordingGet(ctx context.Context, request operations.RecordingGetRequest, security operations.RecordingGetSecurity) (*operations.RecordingGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -523,11 +523,11 @@ func (s *cloudRecording) RecordingGet(ctx context.Context, request operations.Re
 // **Scopes:** `recording:write:admin`, `recording:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *cloudRecording) RecordingRegistrantQuestionUpdate(ctx context.Context, request operations.RecordingRegistrantQuestionUpdateRequest) (*operations.RecordingRegistrantQuestionUpdateResponse, error) {
+func (s *cloudRecording) RecordingRegistrantQuestionUpdate(ctx context.Context, request operations.RecordingRegistrantQuestionUpdateRequest, security operations.RecordingRegistrantQuestionUpdateSecurity) (*operations.RecordingRegistrantQuestionUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants/questions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -542,7 +542,7 @@ func (s *cloudRecording) RecordingRegistrantQuestionUpdate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -576,16 +576,16 @@ func (s *cloudRecording) RecordingRegistrantQuestionUpdate(ctx context.Context, 
 // **Scopes:** `recording:read:admin`, `recording:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *cloudRecording) RecordingRegistrantsQuestionsGet(ctx context.Context, request operations.RecordingRegistrantsQuestionsGetRequest) (*operations.RecordingRegistrantsQuestionsGetResponse, error) {
+func (s *cloudRecording) RecordingRegistrantsQuestionsGet(ctx context.Context, request operations.RecordingRegistrantsQuestionsGetRequest, security operations.RecordingRegistrantsQuestionsGetSecurity) (*operations.RecordingRegistrantsQuestionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/registrants/questions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -632,16 +632,16 @@ func (s *cloudRecording) RecordingRegistrantsQuestionsGet(ctx context.Context, r
 // **Scopes**: `recording:read:admin` `recording:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` <br>
-func (s *cloudRecording) RecordingSettingUpdate(ctx context.Context, request operations.RecordingSettingUpdateRequest) (*operations.RecordingSettingUpdateResponse, error) {
+func (s *cloudRecording) RecordingSettingUpdate(ctx context.Context, request operations.RecordingSettingUpdateRequest, security operations.RecordingSettingUpdateSecurity) (*operations.RecordingSettingUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -688,11 +688,11 @@ func (s *cloudRecording) RecordingSettingUpdate(ctx context.Context, request ope
 // **Scopes**: `recording:write:admin` `recording:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` <br>
-func (s *cloudRecording) RecordingSettingsUpdate(ctx context.Context, request operations.RecordingSettingsUpdateRequest) (*operations.RecordingSettingsUpdateResponse, error) {
+func (s *cloudRecording) RecordingSettingsUpdate(ctx context.Context, request operations.RecordingSettingsUpdateRequest, security operations.RecordingSettingsUpdateSecurity) (*operations.RecordingSettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -707,7 +707,7 @@ func (s *cloudRecording) RecordingSettingsUpdate(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -742,11 +742,11 @@ func (s *cloudRecording) RecordingSettingsUpdate(ctx context.Context, request op
 //
 // **Prerequisites**:<br>
 // * A Pro user with Cloud Recording enabled.
-func (s *cloudRecording) RecordingStatusUpdate(ctx context.Context, request operations.RecordingStatusUpdateRequest) (*operations.RecordingStatusUpdateResponse, error) {
+func (s *cloudRecording) RecordingStatusUpdate(ctx context.Context, request operations.RecordingStatusUpdateRequest, security operations.RecordingStatusUpdateSecurity) (*operations.RecordingStatusUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -761,7 +761,7 @@ func (s *cloudRecording) RecordingStatusUpdate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -797,11 +797,11 @@ func (s *cloudRecording) RecordingStatusUpdate(ctx context.Context, request oper
 // **Scopes:** `recording:write:admin` `recording:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *cloudRecording) RecordingStatusUpdateOne(ctx context.Context, request operations.RecordingStatusUpdateOneRequest) (*operations.RecordingStatusUpdateOneResponse, error) {
+func (s *cloudRecording) RecordingStatusUpdateOne(ctx context.Context, request operations.RecordingStatusUpdateOneRequest, security operations.RecordingStatusUpdateOneSecurity) (*operations.RecordingStatusUpdateOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/{recordingId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/meetings/{meetingId}/recordings/{recordingId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -816,7 +816,7 @@ func (s *cloudRecording) RecordingStatusUpdateOne(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -859,20 +859,20 @@ func (s *cloudRecording) RecordingStatusUpdateOne(ctx context.Context, request o
 // **Prerequisites:**
 // * Pro or a higher plan.
 // * Cloud Recording must be enabled on the user's account.
-func (s *cloudRecording) RecordingsList(ctx context.Context, request operations.RecordingsListRequest) (*operations.RecordingsListResponse, error) {
+func (s *cloudRecording) RecordingsList(ctx context.Context, request operations.RecordingsListRequest, security operations.RecordingsListSecurity) (*operations.RecordingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

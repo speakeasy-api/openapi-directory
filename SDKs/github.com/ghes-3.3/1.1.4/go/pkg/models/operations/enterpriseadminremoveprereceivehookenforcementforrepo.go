@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoPathParams struct {
+type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The unique identifier of the pre-receive hook.
 	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest struct {
-	PathParams EnterpriseAdminRemovePreReceiveHookEnforcementForRepoPathParams
 }
 
 type EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse struct {

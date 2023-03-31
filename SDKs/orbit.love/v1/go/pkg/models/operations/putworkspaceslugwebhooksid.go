@@ -8,18 +8,13 @@ import (
 )
 
 type PutWorkspaceSlugWebhooksIDSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PutWorkspaceSlugWebhooksIDPathParams struct {
-	ID            string `pathParam:"style=simple,explode=false,name=id"`
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PutWorkspaceSlugWebhooksIDRequest struct {
-	PathParams PutWorkspaceSlugWebhooksIDPathParams
-	Request    *shared.WebhookSubscription `request:"mediaType=application/json"`
-	Security   PutWorkspaceSlugWebhooksIDSecurity
+	ID                  string                      `pathParam:"style=simple,explode=false,name=id"`
+	WebhookSubscription *shared.WebhookSubscription `request:"mediaType=application/json"`
+	WorkspaceSlug       string                      `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type PutWorkspaceSlugWebhooksIDResponse struct {

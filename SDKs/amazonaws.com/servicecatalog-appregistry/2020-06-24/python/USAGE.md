@@ -3,29 +3,23 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateAttributeGroupRequest(
-    path_params=operations.AssociateAttributeGroupPathParams(
-        application="quasi",
-        attribute_group="eos",
-    ),
-    headers=operations.AssociateAttributeGroupHeaders(
-        x_amz_algorithm="nesciunt",
-        x_amz_content_sha256="neque",
-        x_amz_credential="quos",
-        x_amz_date="et",
-        x_amz_security_token="magni",
-        x_amz_signature="nemo",
-        x_amz_signed_headers="ad",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    application="illum",
+    attribute_group="vel",
 )
     
 res = s.associate_attribute_group(req)

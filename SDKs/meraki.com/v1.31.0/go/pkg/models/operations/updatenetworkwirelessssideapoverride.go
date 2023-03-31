@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidEapOverridePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey - EAPOL Key settings.
 type UpdateNetworkWirelessSsidEapOverrideRequestBodyEapolKey struct {
 	// Maximum number of EAPOL key retries.
@@ -39,8 +34,9 @@ type UpdateNetworkWirelessSsidEapOverrideRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidEapOverrideRequest struct {
-	PathParams UpdateNetworkWirelessSsidEapOverridePathParams
-	Request    *UpdateNetworkWirelessSsidEapOverrideRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidEapOverrideRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                           `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                           `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidEapOverrideResponse struct {

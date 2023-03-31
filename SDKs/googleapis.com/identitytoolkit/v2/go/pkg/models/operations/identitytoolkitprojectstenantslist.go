@@ -8,13 +8,13 @@ import (
 )
 
 type IdentitytoolkitProjectsTenantsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsListSecurity struct {
@@ -22,12 +22,7 @@ type IdentitytoolkitProjectsTenantsListSecurity struct {
 	Option2 *IdentitytoolkitProjectsTenantsListSecurityOption2 `security:"option"`
 }
 
-type IdentitytoolkitProjectsTenantsListPathParams struct {
-	// Required. The parent resource name to list tenants for.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IdentitytoolkitProjectsTenantsListQueryParams struct {
+type IdentitytoolkitProjectsTenantsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type IdentitytoolkitProjectsTenantsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The pagination token from the response of a previous request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name to list tenants for.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type IdentitytoolkitProjectsTenantsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdentitytoolkitProjectsTenantsListRequest struct {
-	PathParams  IdentitytoolkitProjectsTenantsListPathParams
-	QueryParams IdentitytoolkitProjectsTenantsListQueryParams
-	Security    IdentitytoolkitProjectsTenantsListSecurity
 }
 
 type IdentitytoolkitProjectsTenantsListResponse struct {

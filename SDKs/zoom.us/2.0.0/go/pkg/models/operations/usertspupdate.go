@@ -8,37 +8,6 @@ import (
 	"net/http"
 )
 
-// UserTSPUpdateTSPIDEnum - TSP account ID.
-type UserTSPUpdateTSPIDEnum string
-
-const (
-	UserTSPUpdateTSPIDEnumOne UserTSPUpdateTSPIDEnum = "1"
-	UserTSPUpdateTSPIDEnumTwo UserTSPUpdateTSPIDEnum = "2"
-)
-
-func (e *UserTSPUpdateTSPIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "1":
-		fallthrough
-	case "2":
-		*e = UserTSPUpdateTSPIDEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UserTSPUpdateTSPIDEnum: %s", s)
-	}
-}
-
-type UserTSPUpdatePathParams struct {
-	// TSP account ID.
-	TspID UserTSPUpdateTSPIDEnum `pathParam:"style=simple,explode=false,name=tspId"`
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 // UserTSPUpdateTSPAccountDialInNumbersTypeEnum - Dial-in number types:<br>`toll` - Toll number.<br>`tollfree` -Toll free number.<br>`media_link` - Media Link Phone Number. It is used for PSTN integration instead of paid bridge number.
 type UserTSPUpdateTSPAccountDialInNumbersTypeEnum string
 
@@ -113,10 +82,37 @@ type UserTSPUpdateTSPAccount struct {
 	TspBridge *UserTSPUpdateTSPAccountTSPBridgeEnum `json:"tsp_bridge,omitempty" multipartForm:"name=tsp_bridge"`
 }
 
+// UserTSPUpdateTSPIDEnum - TSP account ID.
+type UserTSPUpdateTSPIDEnum string
+
+const (
+	UserTSPUpdateTSPIDEnumOne UserTSPUpdateTSPIDEnum = "1"
+	UserTSPUpdateTSPIDEnumTwo UserTSPUpdateTSPIDEnum = "2"
+)
+
+func (e *UserTSPUpdateTSPIDEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "1":
+		fallthrough
+	case "2":
+		*e = UserTSPUpdateTSPIDEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UserTSPUpdateTSPIDEnum: %s", s)
+	}
+}
+
 type UserTSPUpdateRequest struct {
-	PathParams UserTSPUpdatePathParams
 	// TSP account.
-	Request UserTSPUpdateTSPAccount `request:"mediaType=application/json"`
+	RequestBody UserTSPUpdateTSPAccount `request:"mediaType=application/json"`
+	// TSP account ID.
+	TspID UserTSPUpdateTSPIDEnum `pathParam:"style=simple,explode=false,name=tspId"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserTSPUpdateResponse struct {

@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type UpdateNetworkFirmwareUpgradesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkFirmwareUpgradesRequestBodyProductsApplianceNextUpgradeToVersion - The version to be updated to
 type UpdateNetworkFirmwareUpgradesRequestBodyProductsApplianceNextUpgradeToVersion struct {
 	// The version ID
@@ -329,8 +325,8 @@ type UpdateNetworkFirmwareUpgradesRequestBody struct {
 }
 
 type UpdateNetworkFirmwareUpgradesRequest struct {
-	PathParams UpdateNetworkFirmwareUpgradesPathParams
-	Request    *UpdateNetworkFirmwareUpgradesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkFirmwareUpgradesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkFirmwareUpgrades200ApplicationJSONProductsApplianceAvailableVersions struct {

@@ -8,20 +8,13 @@ import (
 )
 
 type AnalyticsManagementProfilesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementProfilesDeletePathParams struct {
+type AnalyticsManagementProfilesDeleteRequest struct {
 	// Account ID to delete the view (profile) for.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// ID of the view (profile) to be deleted.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property ID to delete the view (profile) for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementProfilesDeleteQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -32,16 +25,14 @@ type AnalyticsManagementProfilesDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// ID of the view (profile) to be deleted.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementProfilesDeleteRequest struct {
-	PathParams  AnalyticsManagementProfilesDeletePathParams
-	QueryParams AnalyticsManagementProfilesDeleteQueryParams
-	Security    AnalyticsManagementProfilesDeleteSecurity
+	// Web property ID to delete the view (profile) for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementProfilesDeleteResponse struct {

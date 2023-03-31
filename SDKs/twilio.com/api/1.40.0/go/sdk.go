@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateAccount - Create a new Twilio Subaccount from the account making the request
-func (s *SDK) CreateAccount(ctx context.Context, request operations.CreateAccountRequest) (*operations.CreateAccountResponse, error) {
+func (s *SDK) CreateAccount(ctx context.Context, request operations.CreateAccountCreateAccountRequest, security operations.CreateAccountSecurity, opts ...operations.Option) (*operations.CreateAccountResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateAccountServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/2010-04-01/Accounts.json"
@@ -113,7 +123,7 @@ func (s *SDK) CreateAccount(ctx context.Context, request operations.CreateAccoun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,15 +156,25 @@ func (s *SDK) CreateAccount(ctx context.Context, request operations.CreateAccoun
 
 	return res, nil
 }
-func (s *SDK) CreateAddress(ctx context.Context, request operations.CreateAddressRequest) (*operations.CreateAddressResponse, error) {
-	baseURL := operations.CreateAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateAddress(ctx context.Context, request operations.CreateAddressRequest, security operations.CreateAddressSecurity, opts ...operations.Option) (*operations.CreateAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -166,7 +186,7 @@ func (s *SDK) CreateAddress(ctx context.Context, request operations.CreateAddres
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,15 +221,25 @@ func (s *SDK) CreateAddress(ctx context.Context, request operations.CreateAddres
 }
 
 // CreateApplication - Create a new application within your account
-func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateApplicationRequest) (*operations.CreateApplicationResponse, error) {
-	baseURL := operations.CreateApplicationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateApplicationRequest, security operations.CreateApplicationSecurity, opts ...operations.Option) (*operations.CreateApplicationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateApplicationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -221,7 +251,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -256,15 +286,25 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 }
 
 // CreateCall - Create a new outgoing call to phones, SIP-enabled endpoints or Twilio Client connections
-func (s *SDK) CreateCall(ctx context.Context, request operations.CreateCallRequest) (*operations.CreateCallResponse, error) {
-	baseURL := operations.CreateCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateCall(ctx context.Context, request operations.CreateCallRequest, security operations.CreateCallSecurity, opts ...operations.Option) (*operations.CreateCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -276,7 +316,7 @@ func (s *SDK) CreateCall(ctx context.Context, request operations.CreateCallReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -311,15 +351,25 @@ func (s *SDK) CreateCall(ctx context.Context, request operations.CreateCallReque
 }
 
 // CreateCallFeedbackSummary - Create a FeedbackSummary resource for a call
-func (s *SDK) CreateCallFeedbackSummary(ctx context.Context, request operations.CreateCallFeedbackSummaryRequest) (*operations.CreateCallFeedbackSummaryResponse, error) {
-	baseURL := operations.CreateCallFeedbackSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateCallFeedbackSummary(ctx context.Context, request operations.CreateCallFeedbackSummaryRequest, security operations.CreateCallFeedbackSummarySecurity, opts ...operations.Option) (*operations.CreateCallFeedbackSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/FeedbackSummary.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateCallFeedbackSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/FeedbackSummary.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -331,7 +381,7 @@ func (s *SDK) CreateCallFeedbackSummary(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -366,15 +416,25 @@ func (s *SDK) CreateCallFeedbackSummary(ctx context.Context, request operations.
 }
 
 // CreateCallRecording - Create a recording for the call
-func (s *SDK) CreateCallRecording(ctx context.Context, request operations.CreateCallRecordingRequest) (*operations.CreateCallRecordingResponse, error) {
-	baseURL := operations.CreateCallRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateCallRecording(ctx context.Context, request operations.CreateCallRecordingRequest, security operations.CreateCallRecordingSecurity, opts ...operations.Option) (*operations.CreateCallRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateCallRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -386,7 +446,7 @@ func (s *SDK) CreateCallRecording(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -421,15 +481,25 @@ func (s *SDK) CreateCallRecording(ctx context.Context, request operations.Create
 }
 
 // CreateIncomingPhoneNumber - Purchase a phone-number for the account.
-func (s *SDK) CreateIncomingPhoneNumber(ctx context.Context, request operations.CreateIncomingPhoneNumberRequest) (*operations.CreateIncomingPhoneNumberResponse, error) {
-	baseURL := operations.CreateIncomingPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateIncomingPhoneNumber(ctx context.Context, request operations.CreateIncomingPhoneNumberRequest, security operations.CreateIncomingPhoneNumberSecurity, opts ...operations.Option) (*operations.CreateIncomingPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateIncomingPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -441,7 +511,7 @@ func (s *SDK) CreateIncomingPhoneNumber(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -476,15 +546,25 @@ func (s *SDK) CreateIncomingPhoneNumber(ctx context.Context, request operations.
 }
 
 // CreateIncomingPhoneNumberAssignedAddOn - Assign an Add-on installation to the Number specified.
-func (s *SDK) CreateIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.CreateIncomingPhoneNumberAssignedAddOnRequest) (*operations.CreateIncomingPhoneNumberAssignedAddOnResponse, error) {
-	baseURL := operations.CreateIncomingPhoneNumberAssignedAddOnServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.CreateIncomingPhoneNumberAssignedAddOnRequest, security operations.CreateIncomingPhoneNumberAssignedAddOnSecurity, opts ...operations.Option) (*operations.CreateIncomingPhoneNumberAssignedAddOnResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateIncomingPhoneNumberAssignedAddOnServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -496,7 +576,7 @@ func (s *SDK) CreateIncomingPhoneNumberAssignedAddOn(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -529,15 +609,25 @@ func (s *SDK) CreateIncomingPhoneNumberAssignedAddOn(ctx context.Context, reques
 
 	return res, nil
 }
-func (s *SDK) CreateIncomingPhoneNumberLocal(ctx context.Context, request operations.CreateIncomingPhoneNumberLocalRequest) (*operations.CreateIncomingPhoneNumberLocalResponse, error) {
-	baseURL := operations.CreateIncomingPhoneNumberLocalServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateIncomingPhoneNumberLocal(ctx context.Context, request operations.CreateIncomingPhoneNumberLocalRequest, security operations.CreateIncomingPhoneNumberLocalSecurity, opts ...operations.Option) (*operations.CreateIncomingPhoneNumberLocalResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Local.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateIncomingPhoneNumberLocalServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Local.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -549,7 +639,7 @@ func (s *SDK) CreateIncomingPhoneNumberLocal(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -582,15 +672,25 @@ func (s *SDK) CreateIncomingPhoneNumberLocal(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *SDK) CreateIncomingPhoneNumberMobile(ctx context.Context, request operations.CreateIncomingPhoneNumberMobileRequest) (*operations.CreateIncomingPhoneNumberMobileResponse, error) {
-	baseURL := operations.CreateIncomingPhoneNumberMobileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateIncomingPhoneNumberMobile(ctx context.Context, request operations.CreateIncomingPhoneNumberMobileRequest, security operations.CreateIncomingPhoneNumberMobileSecurity, opts ...operations.Option) (*operations.CreateIncomingPhoneNumberMobileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Mobile.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateIncomingPhoneNumberMobileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Mobile.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -602,7 +702,7 @@ func (s *SDK) CreateIncomingPhoneNumberMobile(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -635,15 +735,25 @@ func (s *SDK) CreateIncomingPhoneNumberMobile(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *SDK) CreateIncomingPhoneNumberTollFree(ctx context.Context, request operations.CreateIncomingPhoneNumberTollFreeRequest) (*operations.CreateIncomingPhoneNumberTollFreeResponse, error) {
-	baseURL := operations.CreateIncomingPhoneNumberTollFreeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateIncomingPhoneNumberTollFree(ctx context.Context, request operations.CreateIncomingPhoneNumberTollFreeRequest, security operations.CreateIncomingPhoneNumberTollFreeSecurity, opts ...operations.Option) (*operations.CreateIncomingPhoneNumberTollFreeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/TollFree.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateIncomingPhoneNumberTollFreeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/TollFree.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -655,7 +765,7 @@ func (s *SDK) CreateIncomingPhoneNumberTollFree(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -690,15 +800,25 @@ func (s *SDK) CreateIncomingPhoneNumberTollFree(ctx context.Context, request ope
 }
 
 // CreateMessage - Send a message from the account used to make the request
-func (s *SDK) CreateMessage(ctx context.Context, request operations.CreateMessageRequest) (*operations.CreateMessageResponse, error) {
-	baseURL := operations.CreateMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateMessage(ctx context.Context, request operations.CreateMessageRequest, security operations.CreateMessageSecurity, opts ...operations.Option) (*operations.CreateMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -710,7 +830,7 @@ func (s *SDK) CreateMessage(ctx context.Context, request operations.CreateMessag
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -743,15 +863,25 @@ func (s *SDK) CreateMessage(ctx context.Context, request operations.CreateMessag
 
 	return res, nil
 }
-func (s *SDK) CreateMessageFeedback(ctx context.Context, request operations.CreateMessageFeedbackRequest) (*operations.CreateMessageFeedbackResponse, error) {
-	baseURL := operations.CreateMessageFeedbackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateMessageFeedback(ctx context.Context, request operations.CreateMessageFeedbackRequest, security operations.CreateMessageFeedbackSecurity, opts ...operations.Option) (*operations.CreateMessageFeedbackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Feedback.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateMessageFeedbackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Feedback.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -763,7 +893,7 @@ func (s *SDK) CreateMessageFeedback(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -796,15 +926,25 @@ func (s *SDK) CreateMessageFeedback(ctx context.Context, request operations.Crea
 
 	return res, nil
 }
-func (s *SDK) CreateNewKey(ctx context.Context, request operations.CreateNewKeyRequest) (*operations.CreateNewKeyResponse, error) {
-	baseURL := operations.CreateNewKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateNewKey(ctx context.Context, request operations.CreateNewKeyRequest, security operations.CreateNewKeySecurity, opts ...operations.Option) (*operations.CreateNewKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateNewKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -816,7 +956,7 @@ func (s *SDK) CreateNewKey(ctx context.Context, request operations.CreateNewKeyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -851,15 +991,25 @@ func (s *SDK) CreateNewKey(ctx context.Context, request operations.CreateNewKeyR
 }
 
 // CreateNewSigningKey - Create a new Signing Key for the account making the request.
-func (s *SDK) CreateNewSigningKey(ctx context.Context, request operations.CreateNewSigningKeyRequest) (*operations.CreateNewSigningKeyResponse, error) {
-	baseURL := operations.CreateNewSigningKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateNewSigningKey(ctx context.Context, request operations.CreateNewSigningKeyRequest, security operations.CreateNewSigningKeySecurity, opts ...operations.Option) (*operations.CreateNewSigningKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateNewSigningKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -871,7 +1021,7 @@ func (s *SDK) CreateNewSigningKey(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -904,15 +1054,25 @@ func (s *SDK) CreateNewSigningKey(ctx context.Context, request operations.Create
 
 	return res, nil
 }
-func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreateParticipantRequest) (*operations.CreateParticipantResponse, error) {
-	baseURL := operations.CreateParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreateParticipantRequest, security operations.CreateParticipantSecurity, opts ...operations.Option) (*operations.CreateParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -924,7 +1084,7 @@ func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreatePa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -959,15 +1119,25 @@ func (s *SDK) CreateParticipant(ctx context.Context, request operations.CreatePa
 }
 
 // CreatePayments - create an instance of payments. This will start a new payments session
-func (s *SDK) CreatePayments(ctx context.Context, request operations.CreatePaymentsRequest) (*operations.CreatePaymentsResponse, error) {
-	baseURL := operations.CreatePaymentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreatePayments(ctx context.Context, request operations.CreatePaymentsRequest, security operations.CreatePaymentsSecurity, opts ...operations.Option) (*operations.CreatePaymentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Payments.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreatePaymentsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Payments.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -979,7 +1149,7 @@ func (s *SDK) CreatePayments(ctx context.Context, request operations.CreatePayme
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1014,15 +1184,25 @@ func (s *SDK) CreatePayments(ctx context.Context, request operations.CreatePayme
 }
 
 // CreateQueue - Create a queue
-func (s *SDK) CreateQueue(ctx context.Context, request operations.CreateQueueRequest) (*operations.CreateQueueResponse, error) {
-	baseURL := operations.CreateQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateQueue(ctx context.Context, request operations.CreateQueueRequest, security operations.CreateQueueSecurity, opts ...operations.Option) (*operations.CreateQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1034,7 +1214,7 @@ func (s *SDK) CreateQueue(ctx context.Context, request operations.CreateQueueReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1069,15 +1249,25 @@ func (s *SDK) CreateQueue(ctx context.Context, request operations.CreateQueueReq
 }
 
 // CreateSipAuthCallsCredentialListMapping - Create a new credential list mapping resource
-func (s *SDK) CreateSipAuthCallsCredentialListMapping(ctx context.Context, request operations.CreateSipAuthCallsCredentialListMappingRequest) (*operations.CreateSipAuthCallsCredentialListMappingResponse, error) {
-	baseURL := operations.CreateSipAuthCallsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipAuthCallsCredentialListMapping(ctx context.Context, request operations.CreateSipAuthCallsCredentialListMappingRequest, security operations.CreateSipAuthCallsCredentialListMappingSecurity, opts ...operations.Option) (*operations.CreateSipAuthCallsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipAuthCallsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1089,7 +1279,7 @@ func (s *SDK) CreateSipAuthCallsCredentialListMapping(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1124,15 +1314,25 @@ func (s *SDK) CreateSipAuthCallsCredentialListMapping(ctx context.Context, reque
 }
 
 // CreateSipAuthCallsIPAccessControlListMapping - Create a new IP Access Control List mapping
-func (s *SDK) CreateSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.CreateSipAuthCallsIPAccessControlListMappingRequest) (*operations.CreateSipAuthCallsIPAccessControlListMappingResponse, error) {
-	baseURL := operations.CreateSipAuthCallsIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.CreateSipAuthCallsIPAccessControlListMappingRequest, security operations.CreateSipAuthCallsIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.CreateSipAuthCallsIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipAuthCallsIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1144,7 +1344,7 @@ func (s *SDK) CreateSipAuthCallsIPAccessControlListMapping(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1179,15 +1379,25 @@ func (s *SDK) CreateSipAuthCallsIPAccessControlListMapping(ctx context.Context, 
 }
 
 // CreateSipAuthRegistrationsCredentialListMapping - Create a new credential list mapping resource
-func (s *SDK) CreateSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.CreateSipAuthRegistrationsCredentialListMappingRequest) (*operations.CreateSipAuthRegistrationsCredentialListMappingResponse, error) {
-	baseURL := operations.CreateSipAuthRegistrationsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.CreateSipAuthRegistrationsCredentialListMappingRequest, security operations.CreateSipAuthRegistrationsCredentialListMappingSecurity, opts ...operations.Option) (*operations.CreateSipAuthRegistrationsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipAuthRegistrationsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1199,7 +1409,7 @@ func (s *SDK) CreateSipAuthRegistrationsCredentialListMapping(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1234,15 +1444,25 @@ func (s *SDK) CreateSipAuthRegistrationsCredentialListMapping(ctx context.Contex
 }
 
 // CreateSipCredential - Create a new credential resource.
-func (s *SDK) CreateSipCredential(ctx context.Context, request operations.CreateSipCredentialRequest) (*operations.CreateSipCredentialResponse, error) {
-	baseURL := operations.CreateSipCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipCredential(ctx context.Context, request operations.CreateSipCredentialRequest, security operations.CreateSipCredentialSecurity, opts ...operations.Option) (*operations.CreateSipCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1254,7 +1474,7 @@ func (s *SDK) CreateSipCredential(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1289,15 +1509,25 @@ func (s *SDK) CreateSipCredential(ctx context.Context, request operations.Create
 }
 
 // CreateSipCredentialList - Create a Credential List
-func (s *SDK) CreateSipCredentialList(ctx context.Context, request operations.CreateSipCredentialListRequest) (*operations.CreateSipCredentialListResponse, error) {
-	baseURL := operations.CreateSipCredentialListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipCredentialList(ctx context.Context, request operations.CreateSipCredentialListRequest, security operations.CreateSipCredentialListSecurity, opts ...operations.Option) (*operations.CreateSipCredentialListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipCredentialListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1309,7 +1539,7 @@ func (s *SDK) CreateSipCredentialList(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1344,15 +1574,25 @@ func (s *SDK) CreateSipCredentialList(ctx context.Context, request operations.Cr
 }
 
 // CreateSipCredentialListMapping - Create a CredentialListMapping resource for an account.
-func (s *SDK) CreateSipCredentialListMapping(ctx context.Context, request operations.CreateSipCredentialListMappingRequest) (*operations.CreateSipCredentialListMappingResponse, error) {
-	baseURL := operations.CreateSipCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipCredentialListMapping(ctx context.Context, request operations.CreateSipCredentialListMappingRequest, security operations.CreateSipCredentialListMappingSecurity, opts ...operations.Option) (*operations.CreateSipCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1364,7 +1604,7 @@ func (s *SDK) CreateSipCredentialListMapping(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1399,15 +1639,25 @@ func (s *SDK) CreateSipCredentialListMapping(ctx context.Context, request operat
 }
 
 // CreateSipDomain - Create a new Domain
-func (s *SDK) CreateSipDomain(ctx context.Context, request operations.CreateSipDomainRequest) (*operations.CreateSipDomainResponse, error) {
-	baseURL := operations.CreateSipDomainServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipDomain(ctx context.Context, request operations.CreateSipDomainRequest, security operations.CreateSipDomainSecurity, opts ...operations.Option) (*operations.CreateSipDomainResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipDomainServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1419,7 +1669,7 @@ func (s *SDK) CreateSipDomain(ctx context.Context, request operations.CreateSipD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1454,15 +1704,25 @@ func (s *SDK) CreateSipDomain(ctx context.Context, request operations.CreateSipD
 }
 
 // CreateSipIPAccessControlList - Create a new IpAccessControlList resource
-func (s *SDK) CreateSipIPAccessControlList(ctx context.Context, request operations.CreateSipIPAccessControlListRequest) (*operations.CreateSipIPAccessControlListResponse, error) {
-	baseURL := operations.CreateSipIPAccessControlListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipIPAccessControlList(ctx context.Context, request operations.CreateSipIPAccessControlListRequest, security operations.CreateSipIPAccessControlListSecurity, opts ...operations.Option) (*operations.CreateSipIPAccessControlListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipIPAccessControlListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1474,7 +1734,7 @@ func (s *SDK) CreateSipIPAccessControlList(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1509,15 +1769,25 @@ func (s *SDK) CreateSipIPAccessControlList(ctx context.Context, request operatio
 }
 
 // CreateSipIPAccessControlListMapping - Create a new IpAccessControlListMapping resource.
-func (s *SDK) CreateSipIPAccessControlListMapping(ctx context.Context, request operations.CreateSipIPAccessControlListMappingRequest) (*operations.CreateSipIPAccessControlListMappingResponse, error) {
-	baseURL := operations.CreateSipIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipIPAccessControlListMapping(ctx context.Context, request operations.CreateSipIPAccessControlListMappingRequest, security operations.CreateSipIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.CreateSipIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1529,7 +1799,7 @@ func (s *SDK) CreateSipIPAccessControlListMapping(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1564,15 +1834,25 @@ func (s *SDK) CreateSipIPAccessControlListMapping(ctx context.Context, request o
 }
 
 // CreateSipIPAddress - Create a new IpAddress resource.
-func (s *SDK) CreateSipIPAddress(ctx context.Context, request operations.CreateSipIPAddressRequest) (*operations.CreateSipIPAddressResponse, error) {
-	baseURL := operations.CreateSipIPAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSipIPAddress(ctx context.Context, request operations.CreateSipIPAddressRequest, security operations.CreateSipIPAddressSecurity, opts ...operations.Option) (*operations.CreateSipIPAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSipIPAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1584,7 +1864,7 @@ func (s *SDK) CreateSipIPAddress(ctx context.Context, request operations.CreateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1619,15 +1899,25 @@ func (s *SDK) CreateSipIPAddress(ctx context.Context, request operations.CreateS
 }
 
 // CreateSiprec - Create a Siprec
-func (s *SDK) CreateSiprec(ctx context.Context, request operations.CreateSiprecRequest) (*operations.CreateSiprecResponse, error) {
-	baseURL := operations.CreateSiprecServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateSiprec(ctx context.Context, request operations.CreateSiprecRequest, security operations.CreateSiprecSecurity, opts ...operations.Option) (*operations.CreateSiprecResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Siprec.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateSiprecServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Siprec.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1639,7 +1929,7 @@ func (s *SDK) CreateSiprec(ctx context.Context, request operations.CreateSiprecR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1674,15 +1964,25 @@ func (s *SDK) CreateSiprec(ctx context.Context, request operations.CreateSiprecR
 }
 
 // CreateStream - Create a Stream
-func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamRequest) (*operations.CreateStreamResponse, error) {
-	baseURL := operations.CreateStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamRequest, security operations.CreateStreamSecurity, opts ...operations.Option) (*operations.CreateStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Streams.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Streams.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1694,7 +1994,7 @@ func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1729,15 +2029,25 @@ func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamR
 }
 
 // CreateToken - Create a new token for ICE servers
-func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenRequest) (*operations.CreateTokenResponse, error) {
-	baseURL := operations.CreateTokenServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenRequest, security operations.CreateTokenSecurity, opts ...operations.Option) (*operations.CreateTokenResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Tokens.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateTokenServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Tokens.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1749,7 +2059,7 @@ func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1784,15 +2094,25 @@ func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenReq
 }
 
 // CreateUsageTrigger - Create a new UsageTrigger
-func (s *SDK) CreateUsageTrigger(ctx context.Context, request operations.CreateUsageTriggerRequest) (*operations.CreateUsageTriggerResponse, error) {
-	baseURL := operations.CreateUsageTriggerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateUsageTrigger(ctx context.Context, request operations.CreateUsageTriggerRequest, security operations.CreateUsageTriggerSecurity, opts ...operations.Option) (*operations.CreateUsageTriggerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateUsageTriggerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1804,7 +2124,7 @@ func (s *SDK) CreateUsageTrigger(ctx context.Context, request operations.CreateU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1839,15 +2159,25 @@ func (s *SDK) CreateUsageTrigger(ctx context.Context, request operations.CreateU
 }
 
 // CreateUserDefinedMessage - Create a new User Defined Message for the given Call SID.
-func (s *SDK) CreateUserDefinedMessage(ctx context.Context, request operations.CreateUserDefinedMessageRequest) (*operations.CreateUserDefinedMessageResponse, error) {
-	baseURL := operations.CreateUserDefinedMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateUserDefinedMessage(ctx context.Context, request operations.CreateUserDefinedMessageRequest, security operations.CreateUserDefinedMessageSecurity, opts ...operations.Option) (*operations.CreateUserDefinedMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/UserDefinedMessages.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateUserDefinedMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/UserDefinedMessages.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1859,7 +2189,7 @@ func (s *SDK) CreateUserDefinedMessage(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1894,15 +2224,25 @@ func (s *SDK) CreateUserDefinedMessage(ctx context.Context, request operations.C
 }
 
 // CreateUserDefinedMessageSubscription - Subscribe to User Defined Messages for a given Call SID.
-func (s *SDK) CreateUserDefinedMessageSubscription(ctx context.Context, request operations.CreateUserDefinedMessageSubscriptionRequest) (*operations.CreateUserDefinedMessageSubscriptionResponse, error) {
-	baseURL := operations.CreateUserDefinedMessageSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateUserDefinedMessageSubscription(ctx context.Context, request operations.CreateUserDefinedMessageSubscriptionRequest, security operations.CreateUserDefinedMessageSubscriptionSecurity, opts ...operations.Option) (*operations.CreateUserDefinedMessageSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/UserDefinedMessageSubscriptions.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateUserDefinedMessageSubscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/UserDefinedMessageSubscriptions.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1914,7 +2254,7 @@ func (s *SDK) CreateUserDefinedMessageSubscription(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1947,15 +2287,25 @@ func (s *SDK) CreateUserDefinedMessageSubscription(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *SDK) CreateValidationRequest(ctx context.Context, request operations.CreateValidationRequestRequest) (*operations.CreateValidationRequestResponse, error) {
-	baseURL := operations.CreateValidationRequestServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateValidationRequest(ctx context.Context, request operations.CreateValidationRequestRequest, security operations.CreateValidationRequestSecurity, opts ...operations.Option) (*operations.CreateValidationRequestResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateValidationRequestServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1967,7 +2317,7 @@ func (s *SDK) CreateValidationRequest(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2000,20 +2350,30 @@ func (s *SDK) CreateValidationRequest(ctx context.Context, request operations.Cr
 
 	return res, nil
 }
-func (s *SDK) DeleteAddress(ctx context.Context, request operations.DeleteAddressRequest) (*operations.DeleteAddressResponse, error) {
-	baseURL := operations.DeleteAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteAddress(ctx context.Context, request operations.DeleteAddressRequest, security operations.DeleteAddressSecurity, opts ...operations.Option) (*operations.DeleteAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2039,20 +2399,30 @@ func (s *SDK) DeleteAddress(ctx context.Context, request operations.DeleteAddres
 }
 
 // DeleteApplication - Delete the application by the specified application sid
-func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
-	baseURL := operations.DeleteApplicationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest, security operations.DeleteApplicationSecurity, opts ...operations.Option) (*operations.DeleteApplicationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteApplicationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2078,20 +2448,30 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 }
 
 // DeleteCall - Delete a Call record from your account. Once the record is deleted, it will no longer appear in the API and Account Portal logs.
-func (s *SDK) DeleteCall(ctx context.Context, request operations.DeleteCallRequest) (*operations.DeleteCallResponse, error) {
-	baseURL := operations.DeleteCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCall(ctx context.Context, request operations.DeleteCallRequest, security operations.DeleteCallSecurity, opts ...operations.Option) (*operations.DeleteCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2117,20 +2497,30 @@ func (s *SDK) DeleteCall(ctx context.Context, request operations.DeleteCallReque
 }
 
 // DeleteCallFeedbackSummary - Delete a FeedbackSummary resource from a call
-func (s *SDK) DeleteCallFeedbackSummary(ctx context.Context, request operations.DeleteCallFeedbackSummaryRequest) (*operations.DeleteCallFeedbackSummaryResponse, error) {
-	baseURL := operations.DeleteCallFeedbackSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCallFeedbackSummary(ctx context.Context, request operations.DeleteCallFeedbackSummaryRequest, security operations.DeleteCallFeedbackSummarySecurity, opts ...operations.Option) (*operations.DeleteCallFeedbackSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/FeedbackSummary/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCallFeedbackSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/FeedbackSummary/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2156,20 +2546,30 @@ func (s *SDK) DeleteCallFeedbackSummary(ctx context.Context, request operations.
 }
 
 // DeleteCallRecording - Delete a recording from your account
-func (s *SDK) DeleteCallRecording(ctx context.Context, request operations.DeleteCallRecordingRequest) (*operations.DeleteCallRecordingResponse, error) {
-	baseURL := operations.DeleteCallRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCallRecording(ctx context.Context, request operations.DeleteCallRecordingRequest, security operations.DeleteCallRecordingSecurity, opts ...operations.Option) (*operations.DeleteCallRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCallRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2195,20 +2595,30 @@ func (s *SDK) DeleteCallRecording(ctx context.Context, request operations.Delete
 }
 
 // DeleteConferenceRecording - Delete a recording from your account
-func (s *SDK) DeleteConferenceRecording(ctx context.Context, request operations.DeleteConferenceRecordingRequest) (*operations.DeleteConferenceRecordingResponse, error) {
-	baseURL := operations.DeleteConferenceRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConferenceRecording(ctx context.Context, request operations.DeleteConferenceRecordingRequest, security operations.DeleteConferenceRecordingSecurity, opts ...operations.Option) (*operations.DeleteConferenceRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConferenceRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2234,20 +2644,30 @@ func (s *SDK) DeleteConferenceRecording(ctx context.Context, request operations.
 }
 
 // DeleteConnectApp - Delete an instance of a connect-app
-func (s *SDK) DeleteConnectApp(ctx context.Context, request operations.DeleteConnectAppRequest) (*operations.DeleteConnectAppResponse, error) {
-	baseURL := operations.DeleteConnectAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConnectApp(ctx context.Context, request operations.DeleteConnectAppRequest, security operations.DeleteConnectAppSecurity, opts ...operations.Option) (*operations.DeleteConnectAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConnectAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2273,20 +2693,30 @@ func (s *SDK) DeleteConnectApp(ctx context.Context, request operations.DeleteCon
 }
 
 // DeleteIncomingPhoneNumber - Delete a phone-numbers belonging to the account used to make the request.
-func (s *SDK) DeleteIncomingPhoneNumber(ctx context.Context, request operations.DeleteIncomingPhoneNumberRequest) (*operations.DeleteIncomingPhoneNumberResponse, error) {
-	baseURL := operations.DeleteIncomingPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteIncomingPhoneNumber(ctx context.Context, request operations.DeleteIncomingPhoneNumberRequest, security operations.DeleteIncomingPhoneNumberSecurity, opts ...operations.Option) (*operations.DeleteIncomingPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteIncomingPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2312,20 +2742,30 @@ func (s *SDK) DeleteIncomingPhoneNumber(ctx context.Context, request operations.
 }
 
 // DeleteIncomingPhoneNumberAssignedAddOn - Remove the assignment of an Add-on installation from the Number specified.
-func (s *SDK) DeleteIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.DeleteIncomingPhoneNumberAssignedAddOnRequest) (*operations.DeleteIncomingPhoneNumberAssignedAddOnResponse, error) {
-	baseURL := operations.DeleteIncomingPhoneNumberAssignedAddOnServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.DeleteIncomingPhoneNumberAssignedAddOnRequest, security operations.DeleteIncomingPhoneNumberAssignedAddOnSecurity, opts ...operations.Option) (*operations.DeleteIncomingPhoneNumberAssignedAddOnResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteIncomingPhoneNumberAssignedAddOnServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2349,20 +2789,30 @@ func (s *SDK) DeleteIncomingPhoneNumberAssignedAddOn(ctx context.Context, reques
 
 	return res, nil
 }
-func (s *SDK) DeleteKey(ctx context.Context, request operations.DeleteKeyRequest) (*operations.DeleteKeyResponse, error) {
-	baseURL := operations.DeleteKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteKey(ctx context.Context, request operations.DeleteKeyRequest, security operations.DeleteKeySecurity, opts ...operations.Option) (*operations.DeleteKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2388,20 +2838,30 @@ func (s *SDK) DeleteKey(ctx context.Context, request operations.DeleteKeyRequest
 }
 
 // DeleteMedia - Delete media from your account. Once delete, you will no longer be billed
-func (s *SDK) DeleteMedia(ctx context.Context, request operations.DeleteMediaRequest) (*operations.DeleteMediaResponse, error) {
-	baseURL := operations.DeleteMediaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteMedia(ctx context.Context, request operations.DeleteMediaRequest, security operations.DeleteMediaSecurity, opts ...operations.Option) (*operations.DeleteMediaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Media/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteMediaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Media/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2427,20 +2887,30 @@ func (s *SDK) DeleteMedia(ctx context.Context, request operations.DeleteMediaReq
 }
 
 // DeleteMessage - Deletes a message record from your account
-func (s *SDK) DeleteMessage(ctx context.Context, request operations.DeleteMessageRequest) (*operations.DeleteMessageResponse, error) {
-	baseURL := operations.DeleteMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteMessage(ctx context.Context, request operations.DeleteMessageRequest, security operations.DeleteMessageSecurity, opts ...operations.Option) (*operations.DeleteMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2466,20 +2936,30 @@ func (s *SDK) DeleteMessage(ctx context.Context, request operations.DeleteMessag
 }
 
 // DeleteOutgoingCallerID - Delete the caller-id specified from the account
-func (s *SDK) DeleteOutgoingCallerID(ctx context.Context, request operations.DeleteOutgoingCallerIDRequest) (*operations.DeleteOutgoingCallerIDResponse, error) {
-	baseURL := operations.DeleteOutgoingCallerIDServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteOutgoingCallerID(ctx context.Context, request operations.DeleteOutgoingCallerIDRequest, security operations.DeleteOutgoingCallerIDSecurity, opts ...operations.Option) (*operations.DeleteOutgoingCallerIDResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteOutgoingCallerIDServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2505,20 +2985,30 @@ func (s *SDK) DeleteOutgoingCallerID(ctx context.Context, request operations.Del
 }
 
 // DeleteParticipant - Kick a participant from a given conference
-func (s *SDK) DeleteParticipant(ctx context.Context, request operations.DeleteParticipantRequest) (*operations.DeleteParticipantResponse, error) {
-	baseURL := operations.DeleteParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteParticipant(ctx context.Context, request operations.DeleteParticipantRequest, security operations.DeleteParticipantSecurity, opts ...operations.Option) (*operations.DeleteParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2544,20 +3034,30 @@ func (s *SDK) DeleteParticipant(ctx context.Context, request operations.DeletePa
 }
 
 // DeleteQueue - Remove an empty queue
-func (s *SDK) DeleteQueue(ctx context.Context, request operations.DeleteQueueRequest) (*operations.DeleteQueueResponse, error) {
-	baseURL := operations.DeleteQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteQueue(ctx context.Context, request operations.DeleteQueueRequest, security operations.DeleteQueueSecurity, opts ...operations.Option) (*operations.DeleteQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2583,20 +3083,30 @@ func (s *SDK) DeleteQueue(ctx context.Context, request operations.DeleteQueueReq
 }
 
 // DeleteRecording - Delete a recording from your account
-func (s *SDK) DeleteRecording(ctx context.Context, request operations.DeleteRecordingRequest) (*operations.DeleteRecordingResponse, error) {
-	baseURL := operations.DeleteRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRecording(ctx context.Context, request operations.DeleteRecordingRequest, security operations.DeleteRecordingSecurity, opts ...operations.Option) (*operations.DeleteRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2622,20 +3132,30 @@ func (s *SDK) DeleteRecording(ctx context.Context, request operations.DeleteReco
 }
 
 // DeleteRecordingAddOnResult - Delete a result and purge all associated Payloads
-func (s *SDK) DeleteRecordingAddOnResult(ctx context.Context, request operations.DeleteRecordingAddOnResultRequest) (*operations.DeleteRecordingAddOnResultResponse, error) {
-	baseURL := operations.DeleteRecordingAddOnResultServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRecordingAddOnResult(ctx context.Context, request operations.DeleteRecordingAddOnResultRequest, security operations.DeleteRecordingAddOnResultSecurity, opts ...operations.Option) (*operations.DeleteRecordingAddOnResultResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRecordingAddOnResultServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2661,20 +3181,30 @@ func (s *SDK) DeleteRecordingAddOnResult(ctx context.Context, request operations
 }
 
 // DeleteRecordingAddOnResultPayload - Delete a payload from the result along with all associated Data
-func (s *SDK) DeleteRecordingAddOnResultPayload(ctx context.Context, request operations.DeleteRecordingAddOnResultPayloadRequest) (*operations.DeleteRecordingAddOnResultPayloadResponse, error) {
-	baseURL := operations.DeleteRecordingAddOnResultPayloadServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRecordingAddOnResultPayload(ctx context.Context, request operations.DeleteRecordingAddOnResultPayloadRequest, security operations.DeleteRecordingAddOnResultPayloadSecurity, opts ...operations.Option) (*operations.DeleteRecordingAddOnResultPayloadResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{AddOnResultSid}/Payloads/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRecordingAddOnResultPayloadServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{AddOnResultSid}/Payloads/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2698,20 +3228,30 @@ func (s *SDK) DeleteRecordingAddOnResultPayload(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *SDK) DeleteRecordingTranscription(ctx context.Context, request operations.DeleteRecordingTranscriptionRequest) (*operations.DeleteRecordingTranscriptionResponse, error) {
-	baseURL := operations.DeleteRecordingTranscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRecordingTranscription(ctx context.Context, request operations.DeleteRecordingTranscriptionRequest, security operations.DeleteRecordingTranscriptionSecurity, opts ...operations.Option) (*operations.DeleteRecordingTranscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{RecordingSid}/Transcriptions/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRecordingTranscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{RecordingSid}/Transcriptions/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2735,20 +3275,30 @@ func (s *SDK) DeleteRecordingTranscription(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *SDK) DeleteSigningKey(ctx context.Context, request operations.DeleteSigningKeyRequest) (*operations.DeleteSigningKeyResponse, error) {
-	baseURL := operations.DeleteSigningKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSigningKey(ctx context.Context, request operations.DeleteSigningKeyRequest, security operations.DeleteSigningKeySecurity, opts ...operations.Option) (*operations.DeleteSigningKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSigningKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2774,20 +3324,30 @@ func (s *SDK) DeleteSigningKey(ctx context.Context, request operations.DeleteSig
 }
 
 // DeleteSipAuthCallsCredentialListMapping - Delete a credential list mapping from the requested domain
-func (s *SDK) DeleteSipAuthCallsCredentialListMapping(ctx context.Context, request operations.DeleteSipAuthCallsCredentialListMappingRequest) (*operations.DeleteSipAuthCallsCredentialListMappingResponse, error) {
-	baseURL := operations.DeleteSipAuthCallsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipAuthCallsCredentialListMapping(ctx context.Context, request operations.DeleteSipAuthCallsCredentialListMappingRequest, security operations.DeleteSipAuthCallsCredentialListMappingSecurity, opts ...operations.Option) (*operations.DeleteSipAuthCallsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipAuthCallsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2813,20 +3373,30 @@ func (s *SDK) DeleteSipAuthCallsCredentialListMapping(ctx context.Context, reque
 }
 
 // DeleteSipAuthCallsIPAccessControlListMapping - Delete an IP Access Control List mapping from the requested domain
-func (s *SDK) DeleteSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.DeleteSipAuthCallsIPAccessControlListMappingRequest) (*operations.DeleteSipAuthCallsIPAccessControlListMappingResponse, error) {
-	baseURL := operations.DeleteSipAuthCallsIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.DeleteSipAuthCallsIPAccessControlListMappingRequest, security operations.DeleteSipAuthCallsIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.DeleteSipAuthCallsIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipAuthCallsIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2852,20 +3422,30 @@ func (s *SDK) DeleteSipAuthCallsIPAccessControlListMapping(ctx context.Context, 
 }
 
 // DeleteSipAuthRegistrationsCredentialListMapping - Delete a credential list mapping from the requested domain
-func (s *SDK) DeleteSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.DeleteSipAuthRegistrationsCredentialListMappingRequest) (*operations.DeleteSipAuthRegistrationsCredentialListMappingResponse, error) {
-	baseURL := operations.DeleteSipAuthRegistrationsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.DeleteSipAuthRegistrationsCredentialListMappingRequest, security operations.DeleteSipAuthRegistrationsCredentialListMappingSecurity, opts ...operations.Option) (*operations.DeleteSipAuthRegistrationsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipAuthRegistrationsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2891,20 +3471,30 @@ func (s *SDK) DeleteSipAuthRegistrationsCredentialListMapping(ctx context.Contex
 }
 
 // DeleteSipCredential - Delete a credential resource.
-func (s *SDK) DeleteSipCredential(ctx context.Context, request operations.DeleteSipCredentialRequest) (*operations.DeleteSipCredentialResponse, error) {
-	baseURL := operations.DeleteSipCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipCredential(ctx context.Context, request operations.DeleteSipCredentialRequest, security operations.DeleteSipCredentialSecurity, opts ...operations.Option) (*operations.DeleteSipCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2930,20 +3520,30 @@ func (s *SDK) DeleteSipCredential(ctx context.Context, request operations.Delete
 }
 
 // DeleteSipCredentialList - Delete a Credential List
-func (s *SDK) DeleteSipCredentialList(ctx context.Context, request operations.DeleteSipCredentialListRequest) (*operations.DeleteSipCredentialListResponse, error) {
-	baseURL := operations.DeleteSipCredentialListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipCredentialList(ctx context.Context, request operations.DeleteSipCredentialListRequest, security operations.DeleteSipCredentialListSecurity, opts ...operations.Option) (*operations.DeleteSipCredentialListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipCredentialListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2969,20 +3569,30 @@ func (s *SDK) DeleteSipCredentialList(ctx context.Context, request operations.De
 }
 
 // DeleteSipCredentialListMapping - Delete a CredentialListMapping resource from an account.
-func (s *SDK) DeleteSipCredentialListMapping(ctx context.Context, request operations.DeleteSipCredentialListMappingRequest) (*operations.DeleteSipCredentialListMappingResponse, error) {
-	baseURL := operations.DeleteSipCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipCredentialListMapping(ctx context.Context, request operations.DeleteSipCredentialListMappingRequest, security operations.DeleteSipCredentialListMappingSecurity, opts ...operations.Option) (*operations.DeleteSipCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3008,20 +3618,30 @@ func (s *SDK) DeleteSipCredentialListMapping(ctx context.Context, request operat
 }
 
 // DeleteSipDomain - Delete an instance of a Domain
-func (s *SDK) DeleteSipDomain(ctx context.Context, request operations.DeleteSipDomainRequest) (*operations.DeleteSipDomainResponse, error) {
-	baseURL := operations.DeleteSipDomainServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipDomain(ctx context.Context, request operations.DeleteSipDomainRequest, security operations.DeleteSipDomainSecurity, opts ...operations.Option) (*operations.DeleteSipDomainResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipDomainServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3047,20 +3667,30 @@ func (s *SDK) DeleteSipDomain(ctx context.Context, request operations.DeleteSipD
 }
 
 // DeleteSipIPAccessControlList - Delete an IpAccessControlList from the requested account
-func (s *SDK) DeleteSipIPAccessControlList(ctx context.Context, request operations.DeleteSipIPAccessControlListRequest) (*operations.DeleteSipIPAccessControlListResponse, error) {
-	baseURL := operations.DeleteSipIPAccessControlListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipIPAccessControlList(ctx context.Context, request operations.DeleteSipIPAccessControlListRequest, security operations.DeleteSipIPAccessControlListSecurity, opts ...operations.Option) (*operations.DeleteSipIPAccessControlListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipIPAccessControlListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3086,20 +3716,30 @@ func (s *SDK) DeleteSipIPAccessControlList(ctx context.Context, request operatio
 }
 
 // DeleteSipIPAccessControlListMapping - Delete an IpAccessControlListMapping resource.
-func (s *SDK) DeleteSipIPAccessControlListMapping(ctx context.Context, request operations.DeleteSipIPAccessControlListMappingRequest) (*operations.DeleteSipIPAccessControlListMappingResponse, error) {
-	baseURL := operations.DeleteSipIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipIPAccessControlListMapping(ctx context.Context, request operations.DeleteSipIPAccessControlListMappingRequest, security operations.DeleteSipIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.DeleteSipIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3125,20 +3765,30 @@ func (s *SDK) DeleteSipIPAccessControlListMapping(ctx context.Context, request o
 }
 
 // DeleteSipIPAddress - Delete an IpAddress resource.
-func (s *SDK) DeleteSipIPAddress(ctx context.Context, request operations.DeleteSipIPAddressRequest) (*operations.DeleteSipIPAddressResponse, error) {
-	baseURL := operations.DeleteSipIPAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSipIPAddress(ctx context.Context, request operations.DeleteSipIPAddressRequest, security operations.DeleteSipIPAddressSecurity, opts ...operations.Option) (*operations.DeleteSipIPAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSipIPAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3164,20 +3814,30 @@ func (s *SDK) DeleteSipIPAddress(ctx context.Context, request operations.DeleteS
 }
 
 // DeleteTranscription - Delete a transcription from the account used to make the request
-func (s *SDK) DeleteTranscription(ctx context.Context, request operations.DeleteTranscriptionRequest) (*operations.DeleteTranscriptionResponse, error) {
-	baseURL := operations.DeleteTranscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteTranscription(ctx context.Context, request operations.DeleteTranscriptionRequest, security operations.DeleteTranscriptionSecurity, opts ...operations.Option) (*operations.DeleteTranscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Transcriptions/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteTranscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Transcriptions/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3201,20 +3861,30 @@ func (s *SDK) DeleteTranscription(ctx context.Context, request operations.Delete
 
 	return res, nil
 }
-func (s *SDK) DeleteUsageTrigger(ctx context.Context, request operations.DeleteUsageTriggerRequest) (*operations.DeleteUsageTriggerResponse, error) {
-	baseURL := operations.DeleteUsageTriggerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteUsageTrigger(ctx context.Context, request operations.DeleteUsageTriggerRequest, security operations.DeleteUsageTriggerSecurity, opts ...operations.Option) (*operations.DeleteUsageTriggerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteUsageTriggerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3240,20 +3910,30 @@ func (s *SDK) DeleteUsageTrigger(ctx context.Context, request operations.DeleteU
 }
 
 // DeleteUserDefinedMessageSubscription - Delete a specific User Defined Message Subscription.
-func (s *SDK) DeleteUserDefinedMessageSubscription(ctx context.Context, request operations.DeleteUserDefinedMessageSubscriptionRequest) (*operations.DeleteUserDefinedMessageSubscriptionResponse, error) {
-	baseURL := operations.DeleteUserDefinedMessageSubscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteUserDefinedMessageSubscription(ctx context.Context, request operations.DeleteUserDefinedMessageSubscriptionRequest, security operations.DeleteUserDefinedMessageSubscriptionSecurity, opts ...operations.Option) (*operations.DeleteUserDefinedMessageSubscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/UserDefinedMessageSubscriptions/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteUserDefinedMessageSubscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/UserDefinedMessageSubscriptions/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3279,20 +3959,30 @@ func (s *SDK) DeleteUserDefinedMessageSubscription(ctx context.Context, request 
 }
 
 // FetchAccount - Fetch the account specified by the provided Account Sid
-func (s *SDK) FetchAccount(ctx context.Context, request operations.FetchAccountRequest) (*operations.FetchAccountResponse, error) {
-	baseURL := operations.FetchAccountServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAccount(ctx context.Context, request operations.FetchAccountRequest, security operations.FetchAccountSecurity, opts ...operations.Option) (*operations.FetchAccountResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAccountServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3325,20 +4015,30 @@ func (s *SDK) FetchAccount(ctx context.Context, request operations.FetchAccountR
 
 	return res, nil
 }
-func (s *SDK) FetchAddress(ctx context.Context, request operations.FetchAddressRequest) (*operations.FetchAddressResponse, error) {
-	baseURL := operations.FetchAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAddress(ctx context.Context, request operations.FetchAddressRequest, security operations.FetchAddressSecurity, opts ...operations.Option) (*operations.FetchAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3373,20 +4073,30 @@ func (s *SDK) FetchAddress(ctx context.Context, request operations.FetchAddressR
 }
 
 // FetchApplication - Fetch the application specified by the provided sid
-func (s *SDK) FetchApplication(ctx context.Context, request operations.FetchApplicationRequest) (*operations.FetchApplicationResponse, error) {
-	baseURL := operations.FetchApplicationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchApplication(ctx context.Context, request operations.FetchApplicationRequest, security operations.FetchApplicationSecurity, opts ...operations.Option) (*operations.FetchApplicationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchApplicationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3421,20 +4131,30 @@ func (s *SDK) FetchApplication(ctx context.Context, request operations.FetchAppl
 }
 
 // FetchAuthorizedConnectApp - Fetch an instance of an authorized-connect-app
-func (s *SDK) FetchAuthorizedConnectApp(ctx context.Context, request operations.FetchAuthorizedConnectAppRequest) (*operations.FetchAuthorizedConnectAppResponse, error) {
-	baseURL := operations.FetchAuthorizedConnectAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAuthorizedConnectApp(ctx context.Context, request operations.FetchAuthorizedConnectAppRequest, security operations.FetchAuthorizedConnectAppSecurity, opts ...operations.Option) (*operations.FetchAuthorizedConnectAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AuthorizedConnectApps/{ConnectAppSid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAuthorizedConnectAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AuthorizedConnectApps/{ConnectAppSid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3467,20 +4187,30 @@ func (s *SDK) FetchAuthorizedConnectApp(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *SDK) FetchAvailablePhoneNumberCountry(ctx context.Context, request operations.FetchAvailablePhoneNumberCountryRequest) (*operations.FetchAvailablePhoneNumberCountryResponse, error) {
-	baseURL := operations.FetchAvailablePhoneNumberCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchAvailablePhoneNumberCountry(ctx context.Context, request operations.FetchAvailablePhoneNumberCountryRequest, security operations.FetchAvailablePhoneNumberCountrySecurity, opts ...operations.Option) (*operations.FetchAvailablePhoneNumberCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchAvailablePhoneNumberCountryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3515,20 +4245,30 @@ func (s *SDK) FetchAvailablePhoneNumberCountry(ctx context.Context, request oper
 }
 
 // FetchBalance - Fetch the balance for an Account based on Account Sid. Balance changes may not be reflected immediately. Child accounts do not contain balance information
-func (s *SDK) FetchBalance(ctx context.Context, request operations.FetchBalanceRequest) (*operations.FetchBalanceResponse, error) {
-	baseURL := operations.FetchBalanceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchBalance(ctx context.Context, request operations.FetchBalanceRequest, security operations.FetchBalanceSecurity, opts ...operations.Option) (*operations.FetchBalanceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Balance.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchBalanceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Balance.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3563,20 +4303,30 @@ func (s *SDK) FetchBalance(ctx context.Context, request operations.FetchBalanceR
 }
 
 // FetchCall - Fetch the call specified by the provided Call SID
-func (s *SDK) FetchCall(ctx context.Context, request operations.FetchCallRequest) (*operations.FetchCallResponse, error) {
-	baseURL := operations.FetchCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCall(ctx context.Context, request operations.FetchCallRequest, security operations.FetchCallSecurity, opts ...operations.Option) (*operations.FetchCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3611,20 +4361,30 @@ func (s *SDK) FetchCall(ctx context.Context, request operations.FetchCallRequest
 }
 
 // FetchCallFeedback - Fetch a Feedback resource from a call
-func (s *SDK) FetchCallFeedback(ctx context.Context, request operations.FetchCallFeedbackRequest) (*operations.FetchCallFeedbackResponse, error) {
-	baseURL := operations.FetchCallFeedbackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCallFeedback(ctx context.Context, request operations.FetchCallFeedbackRequest, security operations.FetchCallFeedbackSecurity, opts ...operations.Option) (*operations.FetchCallFeedbackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Feedback.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCallFeedbackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Feedback.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3659,20 +4419,30 @@ func (s *SDK) FetchCallFeedback(ctx context.Context, request operations.FetchCal
 }
 
 // FetchCallFeedbackSummary - Fetch a FeedbackSummary resource from a call
-func (s *SDK) FetchCallFeedbackSummary(ctx context.Context, request operations.FetchCallFeedbackSummaryRequest) (*operations.FetchCallFeedbackSummaryResponse, error) {
-	baseURL := operations.FetchCallFeedbackSummaryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCallFeedbackSummary(ctx context.Context, request operations.FetchCallFeedbackSummaryRequest, security operations.FetchCallFeedbackSummarySecurity, opts ...operations.Option) (*operations.FetchCallFeedbackSummaryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/FeedbackSummary/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCallFeedbackSummaryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/FeedbackSummary/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3705,20 +4475,30 @@ func (s *SDK) FetchCallFeedbackSummary(ctx context.Context, request operations.F
 
 	return res, nil
 }
-func (s *SDK) FetchCallNotification(ctx context.Context, request operations.FetchCallNotificationRequest) (*operations.FetchCallNotificationResponse, error) {
-	baseURL := operations.FetchCallNotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCallNotification(ctx context.Context, request operations.FetchCallNotificationRequest, security operations.FetchCallNotificationSecurity, opts ...operations.Option) (*operations.FetchCallNotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Notifications/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCallNotificationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Notifications/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3753,20 +4533,30 @@ func (s *SDK) FetchCallNotification(ctx context.Context, request operations.Fetc
 }
 
 // FetchCallRecording - Fetch an instance of a recording for a call
-func (s *SDK) FetchCallRecording(ctx context.Context, request operations.FetchCallRecordingRequest) (*operations.FetchCallRecordingResponse, error) {
-	baseURL := operations.FetchCallRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCallRecording(ctx context.Context, request operations.FetchCallRecordingRequest, security operations.FetchCallRecordingSecurity, opts ...operations.Option) (*operations.FetchCallRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCallRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3801,20 +4591,30 @@ func (s *SDK) FetchCallRecording(ctx context.Context, request operations.FetchCa
 }
 
 // FetchConference - Fetch an instance of a conference
-func (s *SDK) FetchConference(ctx context.Context, request operations.FetchConferenceRequest) (*operations.FetchConferenceResponse, error) {
-	baseURL := operations.FetchConferenceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConference(ctx context.Context, request operations.FetchConferenceRequest, security operations.FetchConferenceSecurity, opts ...operations.Option) (*operations.FetchConferenceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConferenceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3849,20 +4649,30 @@ func (s *SDK) FetchConference(ctx context.Context, request operations.FetchConfe
 }
 
 // FetchConferenceRecording - Fetch an instance of a recording for a call
-func (s *SDK) FetchConferenceRecording(ctx context.Context, request operations.FetchConferenceRecordingRequest) (*operations.FetchConferenceRecordingResponse, error) {
-	baseURL := operations.FetchConferenceRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConferenceRecording(ctx context.Context, request operations.FetchConferenceRecordingRequest, security operations.FetchConferenceRecordingSecurity, opts ...operations.Option) (*operations.FetchConferenceRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConferenceRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3897,20 +4707,30 @@ func (s *SDK) FetchConferenceRecording(ctx context.Context, request operations.F
 }
 
 // FetchConnectApp - Fetch an instance of a connect-app
-func (s *SDK) FetchConnectApp(ctx context.Context, request operations.FetchConnectAppRequest) (*operations.FetchConnectAppResponse, error) {
-	baseURL := operations.FetchConnectAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConnectApp(ctx context.Context, request operations.FetchConnectAppRequest, security operations.FetchConnectAppSecurity, opts ...operations.Option) (*operations.FetchConnectAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConnectAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3945,20 +4765,30 @@ func (s *SDK) FetchConnectApp(ctx context.Context, request operations.FetchConne
 }
 
 // FetchIncomingPhoneNumber - Fetch an incoming-phone-number belonging to the account used to make the request.
-func (s *SDK) FetchIncomingPhoneNumber(ctx context.Context, request operations.FetchIncomingPhoneNumberRequest) (*operations.FetchIncomingPhoneNumberResponse, error) {
-	baseURL := operations.FetchIncomingPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchIncomingPhoneNumber(ctx context.Context, request operations.FetchIncomingPhoneNumberRequest, security operations.FetchIncomingPhoneNumberSecurity, opts ...operations.Option) (*operations.FetchIncomingPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchIncomingPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3993,20 +4823,30 @@ func (s *SDK) FetchIncomingPhoneNumber(ctx context.Context, request operations.F
 }
 
 // FetchIncomingPhoneNumberAssignedAddOn - Fetch an instance of an Add-on installation currently assigned to this Number.
-func (s *SDK) FetchIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.FetchIncomingPhoneNumberAssignedAddOnRequest) (*operations.FetchIncomingPhoneNumberAssignedAddOnResponse, error) {
-	baseURL := operations.FetchIncomingPhoneNumberAssignedAddOnServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.FetchIncomingPhoneNumberAssignedAddOnRequest, security operations.FetchIncomingPhoneNumberAssignedAddOnSecurity, opts ...operations.Option) (*operations.FetchIncomingPhoneNumberAssignedAddOnResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchIncomingPhoneNumberAssignedAddOnServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4041,20 +4881,30 @@ func (s *SDK) FetchIncomingPhoneNumberAssignedAddOn(ctx context.Context, request
 }
 
 // FetchIncomingPhoneNumberAssignedAddOnExtension - Fetch an instance of an Extension for the Assigned Add-on.
-func (s *SDK) FetchIncomingPhoneNumberAssignedAddOnExtension(ctx context.Context, request operations.FetchIncomingPhoneNumberAssignedAddOnExtensionRequest) (*operations.FetchIncomingPhoneNumberAssignedAddOnExtensionResponse, error) {
-	baseURL := operations.FetchIncomingPhoneNumberAssignedAddOnExtensionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchIncomingPhoneNumberAssignedAddOnExtension(ctx context.Context, request operations.FetchIncomingPhoneNumberAssignedAddOnExtensionRequest, security operations.FetchIncomingPhoneNumberAssignedAddOnExtensionSecurity, opts ...operations.Option) (*operations.FetchIncomingPhoneNumberAssignedAddOnExtensionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{AssignedAddOnSid}/Extensions/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchIncomingPhoneNumberAssignedAddOnExtensionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{AssignedAddOnSid}/Extensions/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4087,20 +4937,30 @@ func (s *SDK) FetchIncomingPhoneNumberAssignedAddOnExtension(ctx context.Context
 
 	return res, nil
 }
-func (s *SDK) FetchKey(ctx context.Context, request operations.FetchKeyRequest) (*operations.FetchKeyResponse, error) {
-	baseURL := operations.FetchKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchKey(ctx context.Context, request operations.FetchKeyRequest, security operations.FetchKeySecurity, opts ...operations.Option) (*operations.FetchKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4135,20 +4995,30 @@ func (s *SDK) FetchKey(ctx context.Context, request operations.FetchKeyRequest) 
 }
 
 // FetchMedia - Fetch a single media instance belonging to the account used to make the request
-func (s *SDK) FetchMedia(ctx context.Context, request operations.FetchMediaRequest) (*operations.FetchMediaResponse, error) {
-	baseURL := operations.FetchMediaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchMedia(ctx context.Context, request operations.FetchMediaRequest, security operations.FetchMediaSecurity, opts ...operations.Option) (*operations.FetchMediaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Media/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchMediaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Media/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4183,20 +5053,30 @@ func (s *SDK) FetchMedia(ctx context.Context, request operations.FetchMediaReque
 }
 
 // FetchMember - Fetch a specific member from the queue
-func (s *SDK) FetchMember(ctx context.Context, request operations.FetchMemberRequest) (*operations.FetchMemberResponse, error) {
-	baseURL := operations.FetchMemberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchMember(ctx context.Context, request operations.FetchMemberRequest, security operations.FetchMemberSecurity, opts ...operations.Option) (*operations.FetchMemberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{QueueSid}/Members/{CallSid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchMemberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{QueueSid}/Members/{CallSid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4231,20 +5111,30 @@ func (s *SDK) FetchMember(ctx context.Context, request operations.FetchMemberReq
 }
 
 // FetchMessage - Fetch a message belonging to the account used to make the request
-func (s *SDK) FetchMessage(ctx context.Context, request operations.FetchMessageRequest) (*operations.FetchMessageResponse, error) {
-	baseURL := operations.FetchMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchMessage(ctx context.Context, request operations.FetchMessageRequest, security operations.FetchMessageSecurity, opts ...operations.Option) (*operations.FetchMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4279,20 +5169,30 @@ func (s *SDK) FetchMessage(ctx context.Context, request operations.FetchMessageR
 }
 
 // FetchNotification - Fetch a notification belonging to the account used to make the request
-func (s *SDK) FetchNotification(ctx context.Context, request operations.FetchNotificationRequest) (*operations.FetchNotificationResponse, error) {
-	baseURL := operations.FetchNotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchNotification(ctx context.Context, request operations.FetchNotificationRequest, security operations.FetchNotificationSecurity, opts ...operations.Option) (*operations.FetchNotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Notifications/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchNotificationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Notifications/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4327,20 +5227,30 @@ func (s *SDK) FetchNotification(ctx context.Context, request operations.FetchNot
 }
 
 // FetchOutgoingCallerID - Fetch an outgoing-caller-id belonging to the account used to make the request
-func (s *SDK) FetchOutgoingCallerID(ctx context.Context, request operations.FetchOutgoingCallerIDRequest) (*operations.FetchOutgoingCallerIDResponse, error) {
-	baseURL := operations.FetchOutgoingCallerIDServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchOutgoingCallerID(ctx context.Context, request operations.FetchOutgoingCallerIDRequest, security operations.FetchOutgoingCallerIDSecurity, opts ...operations.Option) (*operations.FetchOutgoingCallerIDResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchOutgoingCallerIDServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4375,20 +5285,30 @@ func (s *SDK) FetchOutgoingCallerID(ctx context.Context, request operations.Fetc
 }
 
 // FetchParticipant - Fetch an instance of a participant
-func (s *SDK) FetchParticipant(ctx context.Context, request operations.FetchParticipantRequest) (*operations.FetchParticipantResponse, error) {
-	baseURL := operations.FetchParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchParticipant(ctx context.Context, request operations.FetchParticipantRequest, security operations.FetchParticipantSecurity, opts ...operations.Option) (*operations.FetchParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4423,20 +5343,30 @@ func (s *SDK) FetchParticipant(ctx context.Context, request operations.FetchPart
 }
 
 // FetchQueue - Fetch an instance of a queue identified by the QueueSid
-func (s *SDK) FetchQueue(ctx context.Context, request operations.FetchQueueRequest) (*operations.FetchQueueResponse, error) {
-	baseURL := operations.FetchQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchQueue(ctx context.Context, request operations.FetchQueueRequest, security operations.FetchQueueSecurity, opts ...operations.Option) (*operations.FetchQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4471,24 +5401,34 @@ func (s *SDK) FetchQueue(ctx context.Context, request operations.FetchQueueReque
 }
 
 // FetchRecording - Fetch an instance of a recording
-func (s *SDK) FetchRecording(ctx context.Context, request operations.FetchRecordingRequest) (*operations.FetchRecordingResponse, error) {
-	baseURL := operations.FetchRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRecording(ctx context.Context, request operations.FetchRecordingRequest, security operations.FetchRecordingSecurity, opts ...operations.Option) (*operations.FetchRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4523,20 +5463,30 @@ func (s *SDK) FetchRecording(ctx context.Context, request operations.FetchRecord
 }
 
 // FetchRecordingAddOnResult - Fetch an instance of an AddOnResult
-func (s *SDK) FetchRecordingAddOnResult(ctx context.Context, request operations.FetchRecordingAddOnResultRequest) (*operations.FetchRecordingAddOnResultResponse, error) {
-	baseURL := operations.FetchRecordingAddOnResultServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRecordingAddOnResult(ctx context.Context, request operations.FetchRecordingAddOnResultRequest, security operations.FetchRecordingAddOnResultSecurity, opts ...operations.Option) (*operations.FetchRecordingAddOnResultResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRecordingAddOnResultServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4571,20 +5521,30 @@ func (s *SDK) FetchRecordingAddOnResult(ctx context.Context, request operations.
 }
 
 // FetchRecordingAddOnResultPayload - Fetch an instance of a result payload
-func (s *SDK) FetchRecordingAddOnResultPayload(ctx context.Context, request operations.FetchRecordingAddOnResultPayloadRequest) (*operations.FetchRecordingAddOnResultPayloadResponse, error) {
-	baseURL := operations.FetchRecordingAddOnResultPayloadServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRecordingAddOnResultPayload(ctx context.Context, request operations.FetchRecordingAddOnResultPayloadRequest, security operations.FetchRecordingAddOnResultPayloadSecurity, opts ...operations.Option) (*operations.FetchRecordingAddOnResultPayloadResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{AddOnResultSid}/Payloads/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRecordingAddOnResultPayloadServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{AddOnResultSid}/Payloads/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4617,20 +5577,30 @@ func (s *SDK) FetchRecordingAddOnResultPayload(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) FetchRecordingTranscription(ctx context.Context, request operations.FetchRecordingTranscriptionRequest) (*operations.FetchRecordingTranscriptionResponse, error) {
-	baseURL := operations.FetchRecordingTranscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRecordingTranscription(ctx context.Context, request operations.FetchRecordingTranscriptionRequest, security operations.FetchRecordingTranscriptionSecurity, opts ...operations.Option) (*operations.FetchRecordingTranscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{RecordingSid}/Transcriptions/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRecordingTranscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{RecordingSid}/Transcriptions/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4665,20 +5635,30 @@ func (s *SDK) FetchRecordingTranscription(ctx context.Context, request operation
 }
 
 // FetchShortCode - Fetch an instance of a short code
-func (s *SDK) FetchShortCode(ctx context.Context, request operations.FetchShortCodeRequest) (*operations.FetchShortCodeResponse, error) {
-	baseURL := operations.FetchShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchShortCode(ctx context.Context, request operations.FetchShortCodeRequest, security operations.FetchShortCodeSecurity, opts ...operations.Option) (*operations.FetchShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SMS/ShortCodes/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SMS/ShortCodes/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4711,20 +5691,30 @@ func (s *SDK) FetchShortCode(ctx context.Context, request operations.FetchShortC
 
 	return res, nil
 }
-func (s *SDK) FetchSigningKey(ctx context.Context, request operations.FetchSigningKeyRequest) (*operations.FetchSigningKeyResponse, error) {
-	baseURL := operations.FetchSigningKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSigningKey(ctx context.Context, request operations.FetchSigningKeyRequest, security operations.FetchSigningKeySecurity, opts ...operations.Option) (*operations.FetchSigningKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSigningKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4759,20 +5749,30 @@ func (s *SDK) FetchSigningKey(ctx context.Context, request operations.FetchSigni
 }
 
 // FetchSipAuthCallsCredentialListMapping - Fetch a specific instance of a credential list mapping
-func (s *SDK) FetchSipAuthCallsCredentialListMapping(ctx context.Context, request operations.FetchSipAuthCallsCredentialListMappingRequest) (*operations.FetchSipAuthCallsCredentialListMappingResponse, error) {
-	baseURL := operations.FetchSipAuthCallsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipAuthCallsCredentialListMapping(ctx context.Context, request operations.FetchSipAuthCallsCredentialListMappingRequest, security operations.FetchSipAuthCallsCredentialListMappingSecurity, opts ...operations.Option) (*operations.FetchSipAuthCallsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipAuthCallsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4807,20 +5807,30 @@ func (s *SDK) FetchSipAuthCallsCredentialListMapping(ctx context.Context, reques
 }
 
 // FetchSipAuthCallsIPAccessControlListMapping - Fetch a specific instance of an IP Access Control List mapping
-func (s *SDK) FetchSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.FetchSipAuthCallsIPAccessControlListMappingRequest) (*operations.FetchSipAuthCallsIPAccessControlListMappingResponse, error) {
-	baseURL := operations.FetchSipAuthCallsIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.FetchSipAuthCallsIPAccessControlListMappingRequest, security operations.FetchSipAuthCallsIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.FetchSipAuthCallsIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipAuthCallsIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4855,20 +5865,30 @@ func (s *SDK) FetchSipAuthCallsIPAccessControlListMapping(ctx context.Context, r
 }
 
 // FetchSipAuthRegistrationsCredentialListMapping - Fetch a specific instance of a credential list mapping
-func (s *SDK) FetchSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.FetchSipAuthRegistrationsCredentialListMappingRequest) (*operations.FetchSipAuthRegistrationsCredentialListMappingResponse, error) {
-	baseURL := operations.FetchSipAuthRegistrationsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.FetchSipAuthRegistrationsCredentialListMappingRequest, security operations.FetchSipAuthRegistrationsCredentialListMappingSecurity, opts ...operations.Option) (*operations.FetchSipAuthRegistrationsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipAuthRegistrationsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4903,20 +5923,30 @@ func (s *SDK) FetchSipAuthRegistrationsCredentialListMapping(ctx context.Context
 }
 
 // FetchSipCredential - Fetch a single credential.
-func (s *SDK) FetchSipCredential(ctx context.Context, request operations.FetchSipCredentialRequest) (*operations.FetchSipCredentialResponse, error) {
-	baseURL := operations.FetchSipCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipCredential(ctx context.Context, request operations.FetchSipCredentialRequest, security operations.FetchSipCredentialSecurity, opts ...operations.Option) (*operations.FetchSipCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4951,20 +5981,30 @@ func (s *SDK) FetchSipCredential(ctx context.Context, request operations.FetchSi
 }
 
 // FetchSipCredentialList - Get a Credential List
-func (s *SDK) FetchSipCredentialList(ctx context.Context, request operations.FetchSipCredentialListRequest) (*operations.FetchSipCredentialListResponse, error) {
-	baseURL := operations.FetchSipCredentialListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipCredentialList(ctx context.Context, request operations.FetchSipCredentialListRequest, security operations.FetchSipCredentialListSecurity, opts ...operations.Option) (*operations.FetchSipCredentialListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipCredentialListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4999,20 +6039,30 @@ func (s *SDK) FetchSipCredentialList(ctx context.Context, request operations.Fet
 }
 
 // FetchSipCredentialListMapping - Fetch a single CredentialListMapping resource from an account.
-func (s *SDK) FetchSipCredentialListMapping(ctx context.Context, request operations.FetchSipCredentialListMappingRequest) (*operations.FetchSipCredentialListMappingResponse, error) {
-	baseURL := operations.FetchSipCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipCredentialListMapping(ctx context.Context, request operations.FetchSipCredentialListMappingRequest, security operations.FetchSipCredentialListMappingSecurity, opts ...operations.Option) (*operations.FetchSipCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5047,20 +6097,30 @@ func (s *SDK) FetchSipCredentialListMapping(ctx context.Context, request operati
 }
 
 // FetchSipDomain - Fetch an instance of a Domain
-func (s *SDK) FetchSipDomain(ctx context.Context, request operations.FetchSipDomainRequest) (*operations.FetchSipDomainResponse, error) {
-	baseURL := operations.FetchSipDomainServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipDomain(ctx context.Context, request operations.FetchSipDomainRequest, security operations.FetchSipDomainSecurity, opts ...operations.Option) (*operations.FetchSipDomainResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipDomainServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5095,20 +6155,30 @@ func (s *SDK) FetchSipDomain(ctx context.Context, request operations.FetchSipDom
 }
 
 // FetchSipIPAccessControlList - Fetch a specific instance of an IpAccessControlList
-func (s *SDK) FetchSipIPAccessControlList(ctx context.Context, request operations.FetchSipIPAccessControlListRequest) (*operations.FetchSipIPAccessControlListResponse, error) {
-	baseURL := operations.FetchSipIPAccessControlListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipIPAccessControlList(ctx context.Context, request operations.FetchSipIPAccessControlListRequest, security operations.FetchSipIPAccessControlListSecurity, opts ...operations.Option) (*operations.FetchSipIPAccessControlListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipIPAccessControlListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5143,20 +6213,30 @@ func (s *SDK) FetchSipIPAccessControlList(ctx context.Context, request operation
 }
 
 // FetchSipIPAccessControlListMapping - Fetch an IpAccessControlListMapping resource.
-func (s *SDK) FetchSipIPAccessControlListMapping(ctx context.Context, request operations.FetchSipIPAccessControlListMappingRequest) (*operations.FetchSipIPAccessControlListMappingResponse, error) {
-	baseURL := operations.FetchSipIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipIPAccessControlListMapping(ctx context.Context, request operations.FetchSipIPAccessControlListMappingRequest, security operations.FetchSipIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.FetchSipIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5191,20 +6271,30 @@ func (s *SDK) FetchSipIPAccessControlListMapping(ctx context.Context, request op
 }
 
 // FetchSipIPAddress - Read one IpAddress resource.
-func (s *SDK) FetchSipIPAddress(ctx context.Context, request operations.FetchSipIPAddressRequest) (*operations.FetchSipIPAddressResponse, error) {
-	baseURL := operations.FetchSipIPAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSipIPAddress(ctx context.Context, request operations.FetchSipIPAddressRequest, security operations.FetchSipIPAddressSecurity, opts ...operations.Option) (*operations.FetchSipIPAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSipIPAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5239,20 +6329,30 @@ func (s *SDK) FetchSipIPAddress(ctx context.Context, request operations.FetchSip
 }
 
 // FetchTranscription - Fetch an instance of a Transcription
-func (s *SDK) FetchTranscription(ctx context.Context, request operations.FetchTranscriptionRequest) (*operations.FetchTranscriptionResponse, error) {
-	baseURL := operations.FetchTranscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchTranscription(ctx context.Context, request operations.FetchTranscriptionRequest, security operations.FetchTranscriptionSecurity, opts ...operations.Option) (*operations.FetchTranscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Transcriptions/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchTranscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Transcriptions/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5287,20 +6387,30 @@ func (s *SDK) FetchTranscription(ctx context.Context, request operations.FetchTr
 }
 
 // FetchUsageTrigger - Fetch and instance of a usage-trigger
-func (s *SDK) FetchUsageTrigger(ctx context.Context, request operations.FetchUsageTriggerRequest) (*operations.FetchUsageTriggerResponse, error) {
-	baseURL := operations.FetchUsageTriggerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchUsageTrigger(ctx context.Context, request operations.FetchUsageTriggerRequest, security operations.FetchUsageTriggerSecurity, opts ...operations.Option) (*operations.FetchUsageTriggerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchUsageTriggerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers/{Sid}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5335,10 +6445,20 @@ func (s *SDK) FetchUsageTrigger(ctx context.Context, request operations.FetchUsa
 }
 
 // ListAccount - Retrieves a collection of Accounts belonging to the account used to make the request
-func (s *SDK) ListAccount(ctx context.Context, request operations.ListAccountRequest) (*operations.ListAccountResponse, error) {
+func (s *SDK) ListAccount(ctx context.Context, request operations.ListAccountRequest, security operations.ListAccountSecurity, opts ...operations.Option) (*operations.ListAccountResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListAccountServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/2010-04-01/Accounts.json"
@@ -5348,11 +6468,11 @@ func (s *SDK) ListAccount(ctx context.Context, request operations.ListAccountReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5385,24 +6505,34 @@ func (s *SDK) ListAccount(ctx context.Context, request operations.ListAccountReq
 
 	return res, nil
 }
-func (s *SDK) ListAddress(ctx context.Context, request operations.ListAddressRequest) (*operations.ListAddressResponse, error) {
-	baseURL := operations.ListAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAddress(ctx context.Context, request operations.ListAddressRequest, security operations.ListAddressSecurity, opts ...operations.Option) (*operations.ListAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5437,24 +6567,34 @@ func (s *SDK) ListAddress(ctx context.Context, request operations.ListAddressReq
 }
 
 // ListApplication - Retrieve a list of applications representing an application within the requesting account
-func (s *SDK) ListApplication(ctx context.Context, request operations.ListApplicationRequest) (*operations.ListApplicationResponse, error) {
-	baseURL := operations.ListApplicationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListApplication(ctx context.Context, request operations.ListApplicationRequest, security operations.ListApplicationSecurity, opts ...operations.Option) (*operations.ListApplicationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListApplicationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5489,24 +6629,34 @@ func (s *SDK) ListApplication(ctx context.Context, request operations.ListApplic
 }
 
 // ListAuthorizedConnectApp - Retrieve a list of authorized-connect-apps belonging to the account used to make the request
-func (s *SDK) ListAuthorizedConnectApp(ctx context.Context, request operations.ListAuthorizedConnectAppRequest) (*operations.ListAuthorizedConnectAppResponse, error) {
-	baseURL := operations.ListAuthorizedConnectAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAuthorizedConnectApp(ctx context.Context, request operations.ListAuthorizedConnectAppRequest, security operations.ListAuthorizedConnectAppSecurity, opts ...operations.Option) (*operations.ListAuthorizedConnectAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AuthorizedConnectApps.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAuthorizedConnectAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AuthorizedConnectApps.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5539,24 +6689,34 @@ func (s *SDK) ListAuthorizedConnectApp(ctx context.Context, request operations.L
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberCountry(ctx context.Context, request operations.ListAvailablePhoneNumberCountryRequest) (*operations.ListAvailablePhoneNumberCountryResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberCountryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberCountry(ctx context.Context, request operations.ListAvailablePhoneNumberCountryRequest, security operations.ListAvailablePhoneNumberCountrySecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberCountryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberCountryServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5589,24 +6749,34 @@ func (s *SDK) ListAvailablePhoneNumberCountry(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberLocal(ctx context.Context, request operations.ListAvailablePhoneNumberLocalRequest) (*operations.ListAvailablePhoneNumberLocalResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberLocalServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberLocal(ctx context.Context, request operations.ListAvailablePhoneNumberLocalRequest, security operations.ListAvailablePhoneNumberLocalSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberLocalResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/Local.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberLocalServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/Local.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5639,24 +6809,34 @@ func (s *SDK) ListAvailablePhoneNumberLocal(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberMachineToMachine(ctx context.Context, request operations.ListAvailablePhoneNumberMachineToMachineRequest) (*operations.ListAvailablePhoneNumberMachineToMachineResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberMachineToMachineServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberMachineToMachine(ctx context.Context, request operations.ListAvailablePhoneNumberMachineToMachineRequest, security operations.ListAvailablePhoneNumberMachineToMachineSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberMachineToMachineResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/MachineToMachine.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberMachineToMachineServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/MachineToMachine.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5689,24 +6869,34 @@ func (s *SDK) ListAvailablePhoneNumberMachineToMachine(ctx context.Context, requ
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberMobile(ctx context.Context, request operations.ListAvailablePhoneNumberMobileRequest) (*operations.ListAvailablePhoneNumberMobileResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberMobileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberMobile(ctx context.Context, request operations.ListAvailablePhoneNumberMobileRequest, security operations.ListAvailablePhoneNumberMobileSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberMobileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/Mobile.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberMobileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/Mobile.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5739,24 +6929,34 @@ func (s *SDK) ListAvailablePhoneNumberMobile(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberNational(ctx context.Context, request operations.ListAvailablePhoneNumberNationalRequest) (*operations.ListAvailablePhoneNumberNationalResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberNationalServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberNational(ctx context.Context, request operations.ListAvailablePhoneNumberNationalRequest, security operations.ListAvailablePhoneNumberNationalSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberNationalResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/National.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberNationalServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/National.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5789,24 +6989,34 @@ func (s *SDK) ListAvailablePhoneNumberNational(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberSharedCost(ctx context.Context, request operations.ListAvailablePhoneNumberSharedCostRequest) (*operations.ListAvailablePhoneNumberSharedCostResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberSharedCostServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberSharedCost(ctx context.Context, request operations.ListAvailablePhoneNumberSharedCostRequest, security operations.ListAvailablePhoneNumberSharedCostSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberSharedCostResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/SharedCost.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberSharedCostServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/SharedCost.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5839,24 +7049,34 @@ func (s *SDK) ListAvailablePhoneNumberSharedCost(ctx context.Context, request op
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberTollFree(ctx context.Context, request operations.ListAvailablePhoneNumberTollFreeRequest) (*operations.ListAvailablePhoneNumberTollFreeResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberTollFreeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberTollFree(ctx context.Context, request operations.ListAvailablePhoneNumberTollFreeRequest, security operations.ListAvailablePhoneNumberTollFreeSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberTollFreeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/TollFree.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberTollFreeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/TollFree.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5889,24 +7109,34 @@ func (s *SDK) ListAvailablePhoneNumberTollFree(ctx context.Context, request oper
 
 	return res, nil
 }
-func (s *SDK) ListAvailablePhoneNumberVoip(ctx context.Context, request operations.ListAvailablePhoneNumberVoipRequest) (*operations.ListAvailablePhoneNumberVoipResponse, error) {
-	baseURL := operations.ListAvailablePhoneNumberVoipServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListAvailablePhoneNumberVoip(ctx context.Context, request operations.ListAvailablePhoneNumberVoipRequest, security operations.ListAvailablePhoneNumberVoipSecurity, opts ...operations.Option) (*operations.ListAvailablePhoneNumberVoipResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/Voip.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListAvailablePhoneNumberVoipServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/AvailablePhoneNumbers/{CountryCode}/Voip.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5941,24 +7171,34 @@ func (s *SDK) ListAvailablePhoneNumberVoip(ctx context.Context, request operatio
 }
 
 // ListCall - Retrieves a collection of calls made to and from your account
-func (s *SDK) ListCall(ctx context.Context, request operations.ListCallRequest) (*operations.ListCallResponse, error) {
-	baseURL := operations.ListCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCall(ctx context.Context, request operations.ListCallRequest, security operations.ListCallSecurity, opts ...operations.Option) (*operations.ListCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5993,24 +7233,34 @@ func (s *SDK) ListCall(ctx context.Context, request operations.ListCallRequest) 
 }
 
 // ListCallEvent - Retrieve a list of all events for a call.
-func (s *SDK) ListCallEvent(ctx context.Context, request operations.ListCallEventRequest) (*operations.ListCallEventResponse, error) {
-	baseURL := operations.ListCallEventServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCallEvent(ctx context.Context, request operations.ListCallEventRequest, security operations.ListCallEventSecurity, opts ...operations.Option) (*operations.ListCallEventResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Events.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCallEventServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Events.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6043,24 +7293,34 @@ func (s *SDK) ListCallEvent(ctx context.Context, request operations.ListCallEven
 
 	return res, nil
 }
-func (s *SDK) ListCallNotification(ctx context.Context, request operations.ListCallNotificationRequest) (*operations.ListCallNotificationResponse, error) {
-	baseURL := operations.ListCallNotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCallNotification(ctx context.Context, request operations.ListCallNotificationRequest, security operations.ListCallNotificationSecurity, opts ...operations.Option) (*operations.ListCallNotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Notifications.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCallNotificationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Notifications.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6095,24 +7355,34 @@ func (s *SDK) ListCallNotification(ctx context.Context, request operations.ListC
 }
 
 // ListCallRecording - Retrieve a list of recordings belonging to the call used to make the request
-func (s *SDK) ListCallRecording(ctx context.Context, request operations.ListCallRecordingRequest) (*operations.ListCallRecordingResponse, error) {
-	baseURL := operations.ListCallRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListCallRecording(ctx context.Context, request operations.ListCallRecordingRequest, security operations.ListCallRecordingSecurity, opts ...operations.Option) (*operations.ListCallRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListCallRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6147,24 +7417,34 @@ func (s *SDK) ListCallRecording(ctx context.Context, request operations.ListCall
 }
 
 // ListConference - Retrieve a list of conferences belonging to the account used to make the request
-func (s *SDK) ListConference(ctx context.Context, request operations.ListConferenceRequest) (*operations.ListConferenceResponse, error) {
-	baseURL := operations.ListConferenceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConference(ctx context.Context, request operations.ListConferenceRequest, security operations.ListConferenceSecurity, opts ...operations.Option) (*operations.ListConferenceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConferenceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6199,24 +7479,34 @@ func (s *SDK) ListConference(ctx context.Context, request operations.ListConfere
 }
 
 // ListConferenceRecording - Retrieve a list of recordings belonging to the call used to make the request
-func (s *SDK) ListConferenceRecording(ctx context.Context, request operations.ListConferenceRecordingRequest) (*operations.ListConferenceRecordingResponse, error) {
-	baseURL := operations.ListConferenceRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConferenceRecording(ctx context.Context, request operations.ListConferenceRecordingRequest, security operations.ListConferenceRecordingSecurity, opts ...operations.Option) (*operations.ListConferenceRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConferenceRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6251,24 +7541,34 @@ func (s *SDK) ListConferenceRecording(ctx context.Context, request operations.Li
 }
 
 // ListConnectApp - Retrieve a list of connect-apps belonging to the account used to make the request
-func (s *SDK) ListConnectApp(ctx context.Context, request operations.ListConnectAppRequest) (*operations.ListConnectAppResponse, error) {
-	baseURL := operations.ListConnectAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConnectApp(ctx context.Context, request operations.ListConnectAppRequest, security operations.ListConnectAppSecurity, opts ...operations.Option) (*operations.ListConnectAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConnectAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6301,24 +7601,34 @@ func (s *SDK) ListConnectApp(ctx context.Context, request operations.ListConnect
 
 	return res, nil
 }
-func (s *SDK) ListDependentPhoneNumber(ctx context.Context, request operations.ListDependentPhoneNumberRequest) (*operations.ListDependentPhoneNumberResponse, error) {
-	baseURL := operations.ListDependentPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDependentPhoneNumber(ctx context.Context, request operations.ListDependentPhoneNumberRequest, security operations.ListDependentPhoneNumberSecurity, opts ...operations.Option) (*operations.ListDependentPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{AddressSid}/DependentPhoneNumbers.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDependentPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{AddressSid}/DependentPhoneNumbers.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6353,24 +7663,34 @@ func (s *SDK) ListDependentPhoneNumber(ctx context.Context, request operations.L
 }
 
 // ListIncomingPhoneNumber - Retrieve a list of incoming-phone-numbers belonging to the account used to make the request.
-func (s *SDK) ListIncomingPhoneNumber(ctx context.Context, request operations.ListIncomingPhoneNumberRequest) (*operations.ListIncomingPhoneNumberResponse, error) {
-	baseURL := operations.ListIncomingPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListIncomingPhoneNumber(ctx context.Context, request operations.ListIncomingPhoneNumberRequest, security operations.ListIncomingPhoneNumberSecurity, opts ...operations.Option) (*operations.ListIncomingPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListIncomingPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6405,24 +7725,34 @@ func (s *SDK) ListIncomingPhoneNumber(ctx context.Context, request operations.Li
 }
 
 // ListIncomingPhoneNumberAssignedAddOn - Retrieve a list of Add-on installations currently assigned to this Number.
-func (s *SDK) ListIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.ListIncomingPhoneNumberAssignedAddOnRequest) (*operations.ListIncomingPhoneNumberAssignedAddOnResponse, error) {
-	baseURL := operations.ListIncomingPhoneNumberAssignedAddOnServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListIncomingPhoneNumberAssignedAddOn(ctx context.Context, request operations.ListIncomingPhoneNumberAssignedAddOnRequest, security operations.ListIncomingPhoneNumberAssignedAddOnSecurity, opts ...operations.Option) (*operations.ListIncomingPhoneNumberAssignedAddOnResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListIncomingPhoneNumberAssignedAddOnServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6457,24 +7787,34 @@ func (s *SDK) ListIncomingPhoneNumberAssignedAddOn(ctx context.Context, request 
 }
 
 // ListIncomingPhoneNumberAssignedAddOnExtension - Retrieve a list of Extensions for the Assigned Add-on.
-func (s *SDK) ListIncomingPhoneNumberAssignedAddOnExtension(ctx context.Context, request operations.ListIncomingPhoneNumberAssignedAddOnExtensionRequest) (*operations.ListIncomingPhoneNumberAssignedAddOnExtensionResponse, error) {
-	baseURL := operations.ListIncomingPhoneNumberAssignedAddOnExtensionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListIncomingPhoneNumberAssignedAddOnExtension(ctx context.Context, request operations.ListIncomingPhoneNumberAssignedAddOnExtensionRequest, security operations.ListIncomingPhoneNumberAssignedAddOnExtensionSecurity, opts ...operations.Option) (*operations.ListIncomingPhoneNumberAssignedAddOnExtensionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{AssignedAddOnSid}/Extensions.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListIncomingPhoneNumberAssignedAddOnExtensionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{ResourceSid}/AssignedAddOns/{AssignedAddOnSid}/Extensions.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6507,24 +7847,34 @@ func (s *SDK) ListIncomingPhoneNumberAssignedAddOnExtension(ctx context.Context,
 
 	return res, nil
 }
-func (s *SDK) ListIncomingPhoneNumberLocal(ctx context.Context, request operations.ListIncomingPhoneNumberLocalRequest) (*operations.ListIncomingPhoneNumberLocalResponse, error) {
-	baseURL := operations.ListIncomingPhoneNumberLocalServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListIncomingPhoneNumberLocal(ctx context.Context, request operations.ListIncomingPhoneNumberLocalRequest, security operations.ListIncomingPhoneNumberLocalSecurity, opts ...operations.Option) (*operations.ListIncomingPhoneNumberLocalResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Local.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListIncomingPhoneNumberLocalServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Local.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6557,24 +7907,34 @@ func (s *SDK) ListIncomingPhoneNumberLocal(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *SDK) ListIncomingPhoneNumberMobile(ctx context.Context, request operations.ListIncomingPhoneNumberMobileRequest) (*operations.ListIncomingPhoneNumberMobileResponse, error) {
-	baseURL := operations.ListIncomingPhoneNumberMobileServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListIncomingPhoneNumberMobile(ctx context.Context, request operations.ListIncomingPhoneNumberMobileRequest, security operations.ListIncomingPhoneNumberMobileSecurity, opts ...operations.Option) (*operations.ListIncomingPhoneNumberMobileResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Mobile.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListIncomingPhoneNumberMobileServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/Mobile.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6607,24 +7967,34 @@ func (s *SDK) ListIncomingPhoneNumberMobile(ctx context.Context, request operati
 
 	return res, nil
 }
-func (s *SDK) ListIncomingPhoneNumberTollFree(ctx context.Context, request operations.ListIncomingPhoneNumberTollFreeRequest) (*operations.ListIncomingPhoneNumberTollFreeResponse, error) {
-	baseURL := operations.ListIncomingPhoneNumberTollFreeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListIncomingPhoneNumberTollFree(ctx context.Context, request operations.ListIncomingPhoneNumberTollFreeRequest, security operations.ListIncomingPhoneNumberTollFreeSecurity, opts ...operations.Option) (*operations.ListIncomingPhoneNumberTollFreeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/TollFree.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListIncomingPhoneNumberTollFreeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/TollFree.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6657,24 +8027,34 @@ func (s *SDK) ListIncomingPhoneNumberTollFree(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *SDK) ListKey(ctx context.Context, request operations.ListKeyRequest) (*operations.ListKeyResponse, error) {
-	baseURL := operations.ListKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListKey(ctx context.Context, request operations.ListKeyRequest, security operations.ListKeySecurity, opts ...operations.Option) (*operations.ListKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6709,24 +8089,34 @@ func (s *SDK) ListKey(ctx context.Context, request operations.ListKeyRequest) (*
 }
 
 // ListMedia - Retrieve a list of Media resources belonging to the account used to make the request
-func (s *SDK) ListMedia(ctx context.Context, request operations.ListMediaRequest) (*operations.ListMediaResponse, error) {
-	baseURL := operations.ListMediaServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListMedia(ctx context.Context, request operations.ListMediaRequest, security operations.ListMediaSecurity, opts ...operations.Option) (*operations.ListMediaResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Media.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListMediaServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{MessageSid}/Media.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6761,24 +8151,34 @@ func (s *SDK) ListMedia(ctx context.Context, request operations.ListMediaRequest
 }
 
 // ListMember - Retrieve the members of the queue
-func (s *SDK) ListMember(ctx context.Context, request operations.ListMemberRequest) (*operations.ListMemberResponse, error) {
-	baseURL := operations.ListMemberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListMember(ctx context.Context, request operations.ListMemberRequest, security operations.ListMemberSecurity, opts ...operations.Option) (*operations.ListMemberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{QueueSid}/Members.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListMemberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{QueueSid}/Members.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6813,24 +8213,34 @@ func (s *SDK) ListMember(ctx context.Context, request operations.ListMemberReque
 }
 
 // ListMessage - Retrieve a list of messages belonging to the account used to make the request
-func (s *SDK) ListMessage(ctx context.Context, request operations.ListMessageRequest) (*operations.ListMessageResponse, error) {
-	baseURL := operations.ListMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListMessage(ctx context.Context, request operations.ListMessageRequest, security operations.ListMessageSecurity, opts ...operations.Option) (*operations.ListMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6865,24 +8275,34 @@ func (s *SDK) ListMessage(ctx context.Context, request operations.ListMessageReq
 }
 
 // ListNotification - Retrieve a list of notifications belonging to the account used to make the request
-func (s *SDK) ListNotification(ctx context.Context, request operations.ListNotificationRequest) (*operations.ListNotificationResponse, error) {
-	baseURL := operations.ListNotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListNotification(ctx context.Context, request operations.ListNotificationRequest, security operations.ListNotificationSecurity, opts ...operations.Option) (*operations.ListNotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Notifications.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListNotificationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Notifications.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6917,24 +8337,34 @@ func (s *SDK) ListNotification(ctx context.Context, request operations.ListNotif
 }
 
 // ListOutgoingCallerID - Retrieve a list of outgoing-caller-ids belonging to the account used to make the request
-func (s *SDK) ListOutgoingCallerID(ctx context.Context, request operations.ListOutgoingCallerIDRequest) (*operations.ListOutgoingCallerIDResponse, error) {
-	baseURL := operations.ListOutgoingCallerIDServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListOutgoingCallerID(ctx context.Context, request operations.ListOutgoingCallerIDRequest, security operations.ListOutgoingCallerIDSecurity, opts ...operations.Option) (*operations.ListOutgoingCallerIDResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListOutgoingCallerIDServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6969,24 +8399,34 @@ func (s *SDK) ListOutgoingCallerID(ctx context.Context, request operations.ListO
 }
 
 // ListParticipant - Retrieve a list of participants belonging to the account used to make the request
-func (s *SDK) ListParticipant(ctx context.Context, request operations.ListParticipantRequest) (*operations.ListParticipantResponse, error) {
-	baseURL := operations.ListParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListParticipant(ctx context.Context, request operations.ListParticipantRequest, security operations.ListParticipantSecurity, opts ...operations.Option) (*operations.ListParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7021,24 +8461,34 @@ func (s *SDK) ListParticipant(ctx context.Context, request operations.ListPartic
 }
 
 // ListQueue - Retrieve a list of queues belonging to the account used to make the request
-func (s *SDK) ListQueue(ctx context.Context, request operations.ListQueueRequest) (*operations.ListQueueResponse, error) {
-	baseURL := operations.ListQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListQueue(ctx context.Context, request operations.ListQueueRequest, security operations.ListQueueSecurity, opts ...operations.Option) (*operations.ListQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7073,24 +8523,34 @@ func (s *SDK) ListQueue(ctx context.Context, request operations.ListQueueRequest
 }
 
 // ListRecording - Retrieve a list of recordings belonging to the account used to make the request
-func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordingRequest) (*operations.ListRecordingResponse, error) {
-	baseURL := operations.ListRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordingRequest, security operations.ListRecordingSecurity, opts ...operations.Option) (*operations.ListRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7125,24 +8585,34 @@ func (s *SDK) ListRecording(ctx context.Context, request operations.ListRecordin
 }
 
 // ListRecordingAddOnResult - Retrieve a list of results belonging to the recording
-func (s *SDK) ListRecordingAddOnResult(ctx context.Context, request operations.ListRecordingAddOnResultRequest) (*operations.ListRecordingAddOnResultResponse, error) {
-	baseURL := operations.ListRecordingAddOnResultServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRecordingAddOnResult(ctx context.Context, request operations.ListRecordingAddOnResultRequest, security operations.ListRecordingAddOnResultSecurity, opts ...operations.Option) (*operations.ListRecordingAddOnResultResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRecordingAddOnResultServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7177,24 +8647,34 @@ func (s *SDK) ListRecordingAddOnResult(ctx context.Context, request operations.L
 }
 
 // ListRecordingAddOnResultPayload - Retrieve a list of payloads belonging to the AddOnResult
-func (s *SDK) ListRecordingAddOnResultPayload(ctx context.Context, request operations.ListRecordingAddOnResultPayloadRequest) (*operations.ListRecordingAddOnResultPayloadResponse, error) {
-	baseURL := operations.ListRecordingAddOnResultPayloadServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRecordingAddOnResultPayload(ctx context.Context, request operations.ListRecordingAddOnResultPayloadRequest, security operations.ListRecordingAddOnResultPayloadSecurity, opts ...operations.Option) (*operations.ListRecordingAddOnResultPayloadResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{AddOnResultSid}/Payloads.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRecordingAddOnResultPayloadServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{ReferenceSid}/AddOnResults/{AddOnResultSid}/Payloads.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7227,24 +8707,34 @@ func (s *SDK) ListRecordingAddOnResultPayload(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *SDK) ListRecordingTranscription(ctx context.Context, request operations.ListRecordingTranscriptionRequest) (*operations.ListRecordingTranscriptionResponse, error) {
-	baseURL := operations.ListRecordingTranscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListRecordingTranscription(ctx context.Context, request operations.ListRecordingTranscriptionRequest, security operations.ListRecordingTranscriptionSecurity, opts ...operations.Option) (*operations.ListRecordingTranscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{RecordingSid}/Transcriptions.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListRecordingTranscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Recordings/{RecordingSid}/Transcriptions.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7279,24 +8769,34 @@ func (s *SDK) ListRecordingTranscription(ctx context.Context, request operations
 }
 
 // ListShortCode - Retrieve a list of short-codes belonging to the account used to make the request
-func (s *SDK) ListShortCode(ctx context.Context, request operations.ListShortCodeRequest) (*operations.ListShortCodeResponse, error) {
-	baseURL := operations.ListShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListShortCode(ctx context.Context, request operations.ListShortCodeRequest, security operations.ListShortCodeSecurity, opts ...operations.Option) (*operations.ListShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SMS/ShortCodes.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SMS/ShortCodes.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7329,24 +8829,34 @@ func (s *SDK) ListShortCode(ctx context.Context, request operations.ListShortCod
 
 	return res, nil
 }
-func (s *SDK) ListSigningKey(ctx context.Context, request operations.ListSigningKeyRequest) (*operations.ListSigningKeyResponse, error) {
-	baseURL := operations.ListSigningKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSigningKey(ctx context.Context, request operations.ListSigningKeyRequest, security operations.ListSigningKeySecurity, opts ...operations.Option) (*operations.ListSigningKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSigningKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7381,24 +8891,34 @@ func (s *SDK) ListSigningKey(ctx context.Context, request operations.ListSigning
 }
 
 // ListSipAuthCallsCredentialListMapping - Retrieve a list of credential list mappings belonging to the domain used in the request
-func (s *SDK) ListSipAuthCallsCredentialListMapping(ctx context.Context, request operations.ListSipAuthCallsCredentialListMappingRequest) (*operations.ListSipAuthCallsCredentialListMappingResponse, error) {
-	baseURL := operations.ListSipAuthCallsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipAuthCallsCredentialListMapping(ctx context.Context, request operations.ListSipAuthCallsCredentialListMappingRequest, security operations.ListSipAuthCallsCredentialListMappingSecurity, opts ...operations.Option) (*operations.ListSipAuthCallsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipAuthCallsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/CredentialListMappings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7433,24 +8953,34 @@ func (s *SDK) ListSipAuthCallsCredentialListMapping(ctx context.Context, request
 }
 
 // ListSipAuthCallsIPAccessControlListMapping - Retrieve a list of IP Access Control List mappings belonging to the domain used in the request
-func (s *SDK) ListSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.ListSipAuthCallsIPAccessControlListMappingRequest) (*operations.ListSipAuthCallsIPAccessControlListMappingResponse, error) {
-	baseURL := operations.ListSipAuthCallsIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipAuthCallsIPAccessControlListMapping(ctx context.Context, request operations.ListSipAuthCallsIPAccessControlListMappingRequest, security operations.ListSipAuthCallsIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.ListSipAuthCallsIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipAuthCallsIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Calls/IpAccessControlListMappings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7485,24 +9015,34 @@ func (s *SDK) ListSipAuthCallsIPAccessControlListMapping(ctx context.Context, re
 }
 
 // ListSipAuthRegistrationsCredentialListMapping - Retrieve a list of credential list mappings belonging to the domain used in the request
-func (s *SDK) ListSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.ListSipAuthRegistrationsCredentialListMappingRequest) (*operations.ListSipAuthRegistrationsCredentialListMappingResponse, error) {
-	baseURL := operations.ListSipAuthRegistrationsCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipAuthRegistrationsCredentialListMapping(ctx context.Context, request operations.ListSipAuthRegistrationsCredentialListMappingRequest, security operations.ListSipAuthRegistrationsCredentialListMappingSecurity, opts ...operations.Option) (*operations.ListSipAuthRegistrationsCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipAuthRegistrationsCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/Auth/Registrations/CredentialListMappings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7537,24 +9077,34 @@ func (s *SDK) ListSipAuthRegistrationsCredentialListMapping(ctx context.Context,
 }
 
 // ListSipCredential - Retrieve a list of credentials.
-func (s *SDK) ListSipCredential(ctx context.Context, request operations.ListSipCredentialRequest) (*operations.ListSipCredentialResponse, error) {
-	baseURL := operations.ListSipCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipCredential(ctx context.Context, request operations.ListSipCredentialRequest, security operations.ListSipCredentialSecurity, opts ...operations.Option) (*operations.ListSipCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7589,24 +9139,34 @@ func (s *SDK) ListSipCredential(ctx context.Context, request operations.ListSipC
 }
 
 // ListSipCredentialList - Get All Credential Lists
-func (s *SDK) ListSipCredentialList(ctx context.Context, request operations.ListSipCredentialListRequest) (*operations.ListSipCredentialListResponse, error) {
-	baseURL := operations.ListSipCredentialListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipCredentialList(ctx context.Context, request operations.ListSipCredentialListRequest, security operations.ListSipCredentialListSecurity, opts ...operations.Option) (*operations.ListSipCredentialListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipCredentialListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7641,24 +9201,34 @@ func (s *SDK) ListSipCredentialList(ctx context.Context, request operations.List
 }
 
 // ListSipCredentialListMapping - Read multiple CredentialListMapping resources from an account.
-func (s *SDK) ListSipCredentialListMapping(ctx context.Context, request operations.ListSipCredentialListMappingRequest) (*operations.ListSipCredentialListMappingResponse, error) {
-	baseURL := operations.ListSipCredentialListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipCredentialListMapping(ctx context.Context, request operations.ListSipCredentialListMappingRequest, security operations.ListSipCredentialListMappingSecurity, opts ...operations.Option) (*operations.ListSipCredentialListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipCredentialListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/CredentialListMappings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7693,24 +9263,34 @@ func (s *SDK) ListSipCredentialListMapping(ctx context.Context, request operatio
 }
 
 // ListSipDomain - Retrieve a list of domains belonging to the account used to make the request
-func (s *SDK) ListSipDomain(ctx context.Context, request operations.ListSipDomainRequest) (*operations.ListSipDomainResponse, error) {
-	baseURL := operations.ListSipDomainServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipDomain(ctx context.Context, request operations.ListSipDomainRequest, security operations.ListSipDomainSecurity, opts ...operations.Option) (*operations.ListSipDomainResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipDomainServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7745,24 +9325,34 @@ func (s *SDK) ListSipDomain(ctx context.Context, request operations.ListSipDomai
 }
 
 // ListSipIPAccessControlList - Retrieve a list of IpAccessControlLists that belong to the account used to make the request
-func (s *SDK) ListSipIPAccessControlList(ctx context.Context, request operations.ListSipIPAccessControlListRequest) (*operations.ListSipIPAccessControlListResponse, error) {
-	baseURL := operations.ListSipIPAccessControlListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipIPAccessControlList(ctx context.Context, request operations.ListSipIPAccessControlListRequest, security operations.ListSipIPAccessControlListSecurity, opts ...operations.Option) (*operations.ListSipIPAccessControlListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipIPAccessControlListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7797,24 +9387,34 @@ func (s *SDK) ListSipIPAccessControlList(ctx context.Context, request operations
 }
 
 // ListSipIPAccessControlListMapping - Retrieve a list of IpAccessControlListMapping resources.
-func (s *SDK) ListSipIPAccessControlListMapping(ctx context.Context, request operations.ListSipIPAccessControlListMappingRequest) (*operations.ListSipIPAccessControlListMappingResponse, error) {
-	baseURL := operations.ListSipIPAccessControlListMappingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipIPAccessControlListMapping(ctx context.Context, request operations.ListSipIPAccessControlListMappingRequest, security operations.ListSipIPAccessControlListMappingSecurity, opts ...operations.Option) (*operations.ListSipIPAccessControlListMappingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipIPAccessControlListMappingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{DomainSid}/IpAccessControlListMappings.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7849,24 +9449,34 @@ func (s *SDK) ListSipIPAccessControlListMapping(ctx context.Context, request ope
 }
 
 // ListSipIPAddress - Read multiple IpAddress resources.
-func (s *SDK) ListSipIPAddress(ctx context.Context, request operations.ListSipIPAddressRequest) (*operations.ListSipIPAddressResponse, error) {
-	baseURL := operations.ListSipIPAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListSipIPAddress(ctx context.Context, request operations.ListSipIPAddressRequest, security operations.ListSipIPAddressSecurity, opts ...operations.Option) (*operations.ListSipIPAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListSipIPAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7901,24 +9511,34 @@ func (s *SDK) ListSipIPAddress(ctx context.Context, request operations.ListSipIP
 }
 
 // ListTranscription - Retrieve a list of transcriptions belonging to the account used to make the request
-func (s *SDK) ListTranscription(ctx context.Context, request operations.ListTranscriptionRequest) (*operations.ListTranscriptionResponse, error) {
-	baseURL := operations.ListTranscriptionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListTranscription(ctx context.Context, request operations.ListTranscriptionRequest, security operations.ListTranscriptionSecurity, opts ...operations.Option) (*operations.ListTranscriptionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Transcriptions.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListTranscriptionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Transcriptions.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7953,24 +9573,34 @@ func (s *SDK) ListTranscription(ctx context.Context, request operations.ListTran
 }
 
 // ListUsageRecord - Retrieve a list of usage-records belonging to the account used to make the request
-func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageRecordRequest) (*operations.ListUsageRecordResponse, error) {
-	baseURL := operations.ListUsageRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageRecordRequest, security operations.ListUsageRecordSecurity, opts ...operations.Option) (*operations.ListUsageRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8003,24 +9633,34 @@ func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageR
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordAllTime(ctx context.Context, request operations.ListUsageRecordAllTimeRequest) (*operations.ListUsageRecordAllTimeResponse, error) {
-	baseURL := operations.ListUsageRecordAllTimeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordAllTime(ctx context.Context, request operations.ListUsageRecordAllTimeRequest, security operations.ListUsageRecordAllTimeSecurity, opts ...operations.Option) (*operations.ListUsageRecordAllTimeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/AllTime.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordAllTimeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/AllTime.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8053,24 +9693,34 @@ func (s *SDK) ListUsageRecordAllTime(ctx context.Context, request operations.Lis
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordDaily(ctx context.Context, request operations.ListUsageRecordDailyRequest) (*operations.ListUsageRecordDailyResponse, error) {
-	baseURL := operations.ListUsageRecordDailyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordDaily(ctx context.Context, request operations.ListUsageRecordDailyRequest, security operations.ListUsageRecordDailySecurity, opts ...operations.Option) (*operations.ListUsageRecordDailyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Daily.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordDailyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Daily.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8103,24 +9753,34 @@ func (s *SDK) ListUsageRecordDaily(ctx context.Context, request operations.ListU
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordLastMonth(ctx context.Context, request operations.ListUsageRecordLastMonthRequest) (*operations.ListUsageRecordLastMonthResponse, error) {
-	baseURL := operations.ListUsageRecordLastMonthServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordLastMonth(ctx context.Context, request operations.ListUsageRecordLastMonthRequest, security operations.ListUsageRecordLastMonthSecurity, opts ...operations.Option) (*operations.ListUsageRecordLastMonthResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/LastMonth.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordLastMonthServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/LastMonth.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8153,24 +9813,34 @@ func (s *SDK) ListUsageRecordLastMonth(ctx context.Context, request operations.L
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordMonthly(ctx context.Context, request operations.ListUsageRecordMonthlyRequest) (*operations.ListUsageRecordMonthlyResponse, error) {
-	baseURL := operations.ListUsageRecordMonthlyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordMonthly(ctx context.Context, request operations.ListUsageRecordMonthlyRequest, security operations.ListUsageRecordMonthlySecurity, opts ...operations.Option) (*operations.ListUsageRecordMonthlyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Monthly.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordMonthlyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Monthly.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8203,24 +9873,34 @@ func (s *SDK) ListUsageRecordMonthly(ctx context.Context, request operations.Lis
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordThisMonth(ctx context.Context, request operations.ListUsageRecordThisMonthRequest) (*operations.ListUsageRecordThisMonthResponse, error) {
-	baseURL := operations.ListUsageRecordThisMonthServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordThisMonth(ctx context.Context, request operations.ListUsageRecordThisMonthRequest, security operations.ListUsageRecordThisMonthSecurity, opts ...operations.Option) (*operations.ListUsageRecordThisMonthResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/ThisMonth.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordThisMonthServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/ThisMonth.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8253,24 +9933,34 @@ func (s *SDK) ListUsageRecordThisMonth(ctx context.Context, request operations.L
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordToday(ctx context.Context, request operations.ListUsageRecordTodayRequest) (*operations.ListUsageRecordTodayResponse, error) {
-	baseURL := operations.ListUsageRecordTodayServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordToday(ctx context.Context, request operations.ListUsageRecordTodayRequest, security operations.ListUsageRecordTodaySecurity, opts ...operations.Option) (*operations.ListUsageRecordTodayResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Today.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordTodayServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Today.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8303,24 +9993,34 @@ func (s *SDK) ListUsageRecordToday(ctx context.Context, request operations.ListU
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordYearly(ctx context.Context, request operations.ListUsageRecordYearlyRequest) (*operations.ListUsageRecordYearlyResponse, error) {
-	baseURL := operations.ListUsageRecordYearlyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordYearly(ctx context.Context, request operations.ListUsageRecordYearlyRequest, security operations.ListUsageRecordYearlySecurity, opts ...operations.Option) (*operations.ListUsageRecordYearlyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Yearly.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordYearlyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Yearly.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8353,24 +10053,34 @@ func (s *SDK) ListUsageRecordYearly(ctx context.Context, request operations.List
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecordYesterday(ctx context.Context, request operations.ListUsageRecordYesterdayRequest) (*operations.ListUsageRecordYesterdayResponse, error) {
-	baseURL := operations.ListUsageRecordYesterdayServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecordYesterday(ctx context.Context, request operations.ListUsageRecordYesterdayRequest, security operations.ListUsageRecordYesterdaySecurity, opts ...operations.Option) (*operations.ListUsageRecordYesterdayResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Yesterday.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordYesterdayServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Records/Yesterday.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8405,24 +10115,34 @@ func (s *SDK) ListUsageRecordYesterday(ctx context.Context, request operations.L
 }
 
 // ListUsageTrigger - Retrieve a list of usage-triggers belonging to the account used to make the request
-func (s *SDK) ListUsageTrigger(ctx context.Context, request operations.ListUsageTriggerRequest) (*operations.ListUsageTriggerResponse, error) {
-	baseURL := operations.ListUsageTriggerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageTrigger(ctx context.Context, request operations.ListUsageTriggerRequest, security operations.ListUsageTriggerSecurity, opts ...operations.Option) (*operations.ListUsageTriggerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageTriggerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8457,15 +10177,25 @@ func (s *SDK) ListUsageTrigger(ctx context.Context, request operations.ListUsage
 }
 
 // UpdateAccount - Modify the properties of a given Account
-func (s *SDK) UpdateAccount(ctx context.Context, request operations.UpdateAccountRequest) (*operations.UpdateAccountResponse, error) {
-	baseURL := operations.UpdateAccountServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateAccount(ctx context.Context, request operations.UpdateAccountRequest, security operations.UpdateAccountSecurity, opts ...operations.Option) (*operations.UpdateAccountResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateAccountServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8477,7 +10207,7 @@ func (s *SDK) UpdateAccount(ctx context.Context, request operations.UpdateAccoun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8510,15 +10240,25 @@ func (s *SDK) UpdateAccount(ctx context.Context, request operations.UpdateAccoun
 
 	return res, nil
 }
-func (s *SDK) UpdateAddress(ctx context.Context, request operations.UpdateAddressRequest) (*operations.UpdateAddressResponse, error) {
-	baseURL := operations.UpdateAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateAddress(ctx context.Context, request operations.UpdateAddressRequest, security operations.UpdateAddressSecurity, opts ...operations.Option) (*operations.UpdateAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Addresses/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8530,7 +10270,7 @@ func (s *SDK) UpdateAddress(ctx context.Context, request operations.UpdateAddres
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8565,15 +10305,25 @@ func (s *SDK) UpdateAddress(ctx context.Context, request operations.UpdateAddres
 }
 
 // UpdateApplication - Updates the application's properties
-func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
-	baseURL := operations.UpdateApplicationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest, security operations.UpdateApplicationSecurity, opts ...operations.Option) (*operations.UpdateApplicationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateApplicationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Applications/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8585,7 +10335,7 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8620,15 +10370,25 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 }
 
 // UpdateCall - Initiates a call redirect or terminates a call
-func (s *SDK) UpdateCall(ctx context.Context, request operations.UpdateCallRequest) (*operations.UpdateCallResponse, error) {
-	baseURL := operations.UpdateCallServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCall(ctx context.Context, request operations.UpdateCallRequest, security operations.UpdateCallSecurity, opts ...operations.Option) (*operations.UpdateCallResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCallServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8640,7 +10400,7 @@ func (s *SDK) UpdateCall(ctx context.Context, request operations.UpdateCallReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8675,15 +10435,25 @@ func (s *SDK) UpdateCall(ctx context.Context, request operations.UpdateCallReque
 }
 
 // UpdateCallFeedback - Update a Feedback resource for a call
-func (s *SDK) UpdateCallFeedback(ctx context.Context, request operations.UpdateCallFeedbackRequest) (*operations.UpdateCallFeedbackResponse, error) {
-	baseURL := operations.UpdateCallFeedbackServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCallFeedback(ctx context.Context, request operations.UpdateCallFeedbackRequest, security operations.UpdateCallFeedbackSecurity, opts ...operations.Option) (*operations.UpdateCallFeedbackResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Feedback.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCallFeedbackServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Feedback.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8695,7 +10465,7 @@ func (s *SDK) UpdateCallFeedback(ctx context.Context, request operations.UpdateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8730,15 +10500,25 @@ func (s *SDK) UpdateCallFeedback(ctx context.Context, request operations.UpdateC
 }
 
 // UpdateCallRecording - Changes the status of the recording to paused, stopped, or in-progress. Note: Pass `Twilio.CURRENT` instead of recording sid to reference current active recording.
-func (s *SDK) UpdateCallRecording(ctx context.Context, request operations.UpdateCallRecordingRequest) (*operations.UpdateCallRecordingResponse, error) {
-	baseURL := operations.UpdateCallRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCallRecording(ctx context.Context, request operations.UpdateCallRecordingRequest, security operations.UpdateCallRecordingSecurity, opts ...operations.Option) (*operations.UpdateCallRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCallRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Recordings/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8750,7 +10530,7 @@ func (s *SDK) UpdateCallRecording(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8783,15 +10563,25 @@ func (s *SDK) UpdateCallRecording(ctx context.Context, request operations.Update
 
 	return res, nil
 }
-func (s *SDK) UpdateConference(ctx context.Context, request operations.UpdateConferenceRequest) (*operations.UpdateConferenceResponse, error) {
-	baseURL := operations.UpdateConferenceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConference(ctx context.Context, request operations.UpdateConferenceRequest, security operations.UpdateConferenceSecurity, opts ...operations.Option) (*operations.UpdateConferenceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConferenceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8803,7 +10593,7 @@ func (s *SDK) UpdateConference(ctx context.Context, request operations.UpdateCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8838,15 +10628,25 @@ func (s *SDK) UpdateConference(ctx context.Context, request operations.UpdateCon
 }
 
 // UpdateConferenceRecording - Changes the status of the recording to paused, stopped, or in-progress. Note: To use `Twilio.CURRENT`, pass it as recording sid.
-func (s *SDK) UpdateConferenceRecording(ctx context.Context, request operations.UpdateConferenceRecordingRequest) (*operations.UpdateConferenceRecordingResponse, error) {
-	baseURL := operations.UpdateConferenceRecordingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConferenceRecording(ctx context.Context, request operations.UpdateConferenceRecordingRequest, security operations.UpdateConferenceRecordingSecurity, opts ...operations.Option) (*operations.UpdateConferenceRecordingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConferenceRecordingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Recordings/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8858,7 +10658,7 @@ func (s *SDK) UpdateConferenceRecording(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8893,15 +10693,25 @@ func (s *SDK) UpdateConferenceRecording(ctx context.Context, request operations.
 }
 
 // UpdateConnectApp - Update a connect-app with the specified parameters
-func (s *SDK) UpdateConnectApp(ctx context.Context, request operations.UpdateConnectAppRequest) (*operations.UpdateConnectAppResponse, error) {
-	baseURL := operations.UpdateConnectAppServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConnectApp(ctx context.Context, request operations.UpdateConnectAppRequest, security operations.UpdateConnectAppSecurity, opts ...operations.Option) (*operations.UpdateConnectAppResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConnectAppServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/ConnectApps/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8913,7 +10723,7 @@ func (s *SDK) UpdateConnectApp(ctx context.Context, request operations.UpdateCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8948,15 +10758,25 @@ func (s *SDK) UpdateConnectApp(ctx context.Context, request operations.UpdateCon
 }
 
 // UpdateIncomingPhoneNumber - Update an incoming-phone-number instance.
-func (s *SDK) UpdateIncomingPhoneNumber(ctx context.Context, request operations.UpdateIncomingPhoneNumberRequest) (*operations.UpdateIncomingPhoneNumberResponse, error) {
-	baseURL := operations.UpdateIncomingPhoneNumberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateIncomingPhoneNumber(ctx context.Context, request operations.UpdateIncomingPhoneNumberRequest, security operations.UpdateIncomingPhoneNumberSecurity, opts ...operations.Option) (*operations.UpdateIncomingPhoneNumberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateIncomingPhoneNumberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8968,7 +10788,7 @@ func (s *SDK) UpdateIncomingPhoneNumber(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9001,15 +10821,25 @@ func (s *SDK) UpdateIncomingPhoneNumber(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *SDK) UpdateKey(ctx context.Context, request operations.UpdateKeyRequest) (*operations.UpdateKeyResponse, error) {
-	baseURL := operations.UpdateKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateKey(ctx context.Context, request operations.UpdateKeyRequest, security operations.UpdateKeySecurity, opts ...operations.Option) (*operations.UpdateKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Keys/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9021,7 +10851,7 @@ func (s *SDK) UpdateKey(ctx context.Context, request operations.UpdateKeyRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9056,15 +10886,25 @@ func (s *SDK) UpdateKey(ctx context.Context, request operations.UpdateKeyRequest
 }
 
 // UpdateMember - Dequeue a member from a queue and have the member's call begin executing the TwiML document at that URL
-func (s *SDK) UpdateMember(ctx context.Context, request operations.UpdateMemberRequest) (*operations.UpdateMemberResponse, error) {
-	baseURL := operations.UpdateMemberServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateMember(ctx context.Context, request operations.UpdateMemberRequest, security operations.UpdateMemberSecurity, opts ...operations.Option) (*operations.UpdateMemberResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{QueueSid}/Members/{CallSid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateMemberServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{QueueSid}/Members/{CallSid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9076,7 +10916,7 @@ func (s *SDK) UpdateMember(ctx context.Context, request operations.UpdateMemberR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9111,15 +10951,25 @@ func (s *SDK) UpdateMember(ctx context.Context, request operations.UpdateMemberR
 }
 
 // UpdateMessage - To redact a message-body from a post-flight message record, post to the message instance resource with an empty body
-func (s *SDK) UpdateMessage(ctx context.Context, request operations.UpdateMessageRequest) (*operations.UpdateMessageResponse, error) {
-	baseURL := operations.UpdateMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateMessage(ctx context.Context, request operations.UpdateMessageRequest, security operations.UpdateMessageSecurity, opts ...operations.Option) (*operations.UpdateMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9131,7 +10981,7 @@ func (s *SDK) UpdateMessage(ctx context.Context, request operations.UpdateMessag
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9166,15 +11016,25 @@ func (s *SDK) UpdateMessage(ctx context.Context, request operations.UpdateMessag
 }
 
 // UpdateOutgoingCallerID - Updates the caller-id
-func (s *SDK) UpdateOutgoingCallerID(ctx context.Context, request operations.UpdateOutgoingCallerIDRequest) (*operations.UpdateOutgoingCallerIDResponse, error) {
-	baseURL := operations.UpdateOutgoingCallerIDServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateOutgoingCallerID(ctx context.Context, request operations.UpdateOutgoingCallerIDRequest, security operations.UpdateOutgoingCallerIDSecurity, opts ...operations.Option) (*operations.UpdateOutgoingCallerIDResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateOutgoingCallerIDServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/OutgoingCallerIds/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9186,7 +11046,7 @@ func (s *SDK) UpdateOutgoingCallerID(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9221,15 +11081,25 @@ func (s *SDK) UpdateOutgoingCallerID(ctx context.Context, request operations.Upd
 }
 
 // UpdateParticipant - Update the properties of the participant
-func (s *SDK) UpdateParticipant(ctx context.Context, request operations.UpdateParticipantRequest) (*operations.UpdateParticipantResponse, error) {
-	baseURL := operations.UpdateParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateParticipant(ctx context.Context, request operations.UpdateParticipantRequest, security operations.UpdateParticipantSecurity, opts ...operations.Option) (*operations.UpdateParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9241,7 +11111,7 @@ func (s *SDK) UpdateParticipant(ctx context.Context, request operations.UpdatePa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9276,15 +11146,25 @@ func (s *SDK) UpdateParticipant(ctx context.Context, request operations.UpdatePa
 }
 
 // UpdatePayments - update an instance of payments with different phases of payment flows.
-func (s *SDK) UpdatePayments(ctx context.Context, request operations.UpdatePaymentsRequest) (*operations.UpdatePaymentsResponse, error) {
-	baseURL := operations.UpdatePaymentsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdatePayments(ctx context.Context, request operations.UpdatePaymentsRequest, security operations.UpdatePaymentsSecurity, opts ...operations.Option) (*operations.UpdatePaymentsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Payments/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdatePaymentsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Payments/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9296,7 +11176,7 @@ func (s *SDK) UpdatePayments(ctx context.Context, request operations.UpdatePayme
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9331,15 +11211,25 @@ func (s *SDK) UpdatePayments(ctx context.Context, request operations.UpdatePayme
 }
 
 // UpdateQueue - Update the queue with the new parameters
-func (s *SDK) UpdateQueue(ctx context.Context, request operations.UpdateQueueRequest) (*operations.UpdateQueueResponse, error) {
-	baseURL := operations.UpdateQueueServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateQueue(ctx context.Context, request operations.UpdateQueueRequest, security operations.UpdateQueueSecurity, opts ...operations.Option) (*operations.UpdateQueueResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateQueueServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Queues/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9351,7 +11241,7 @@ func (s *SDK) UpdateQueue(ctx context.Context, request operations.UpdateQueueReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9386,15 +11276,25 @@ func (s *SDK) UpdateQueue(ctx context.Context, request operations.UpdateQueueReq
 }
 
 // UpdateShortCode - Update a short code with the following parameters
-func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShortCodeRequest) (*operations.UpdateShortCodeResponse, error) {
-	baseURL := operations.UpdateShortCodeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShortCodeRequest, security operations.UpdateShortCodeSecurity, opts ...operations.Option) (*operations.UpdateShortCodeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SMS/ShortCodes/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateShortCodeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SMS/ShortCodes/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9406,7 +11306,7 @@ func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9439,15 +11339,25 @@ func (s *SDK) UpdateShortCode(ctx context.Context, request operations.UpdateShor
 
 	return res, nil
 }
-func (s *SDK) UpdateSigningKey(ctx context.Context, request operations.UpdateSigningKeyRequest) (*operations.UpdateSigningKeyResponse, error) {
-	baseURL := operations.UpdateSigningKeyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSigningKey(ctx context.Context, request operations.UpdateSigningKeyRequest, security operations.UpdateSigningKeySecurity, opts ...operations.Option) (*operations.UpdateSigningKeyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSigningKeyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SigningKeys/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9459,7 +11369,7 @@ func (s *SDK) UpdateSigningKey(ctx context.Context, request operations.UpdateSig
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9494,15 +11404,25 @@ func (s *SDK) UpdateSigningKey(ctx context.Context, request operations.UpdateSig
 }
 
 // UpdateSipCredential - Update a credential resource.
-func (s *SDK) UpdateSipCredential(ctx context.Context, request operations.UpdateSipCredentialRequest) (*operations.UpdateSipCredentialResponse, error) {
-	baseURL := operations.UpdateSipCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSipCredential(ctx context.Context, request operations.UpdateSipCredentialRequest, security operations.UpdateSipCredentialSecurity, opts ...operations.Option) (*operations.UpdateSipCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSipCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{CredentialListSid}/Credentials/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9514,7 +11434,7 @@ func (s *SDK) UpdateSipCredential(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9549,15 +11469,25 @@ func (s *SDK) UpdateSipCredential(ctx context.Context, request operations.Update
 }
 
 // UpdateSipCredentialList - Update a Credential List
-func (s *SDK) UpdateSipCredentialList(ctx context.Context, request operations.UpdateSipCredentialListRequest) (*operations.UpdateSipCredentialListResponse, error) {
-	baseURL := operations.UpdateSipCredentialListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSipCredentialList(ctx context.Context, request operations.UpdateSipCredentialListRequest, security operations.UpdateSipCredentialListSecurity, opts ...operations.Option) (*operations.UpdateSipCredentialListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSipCredentialListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/CredentialLists/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9569,7 +11499,7 @@ func (s *SDK) UpdateSipCredentialList(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9604,15 +11534,25 @@ func (s *SDK) UpdateSipCredentialList(ctx context.Context, request operations.Up
 }
 
 // UpdateSipDomain - Update the attributes of a domain
-func (s *SDK) UpdateSipDomain(ctx context.Context, request operations.UpdateSipDomainRequest) (*operations.UpdateSipDomainResponse, error) {
-	baseURL := operations.UpdateSipDomainServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSipDomain(ctx context.Context, request operations.UpdateSipDomainRequest, security operations.UpdateSipDomainSecurity, opts ...operations.Option) (*operations.UpdateSipDomainResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSipDomainServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/Domains/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9624,7 +11564,7 @@ func (s *SDK) UpdateSipDomain(ctx context.Context, request operations.UpdateSipD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9659,15 +11599,25 @@ func (s *SDK) UpdateSipDomain(ctx context.Context, request operations.UpdateSipD
 }
 
 // UpdateSipIPAccessControlList - Rename an IpAccessControlList
-func (s *SDK) UpdateSipIPAccessControlList(ctx context.Context, request operations.UpdateSipIPAccessControlListRequest) (*operations.UpdateSipIPAccessControlListResponse, error) {
-	baseURL := operations.UpdateSipIPAccessControlListServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSipIPAccessControlList(ctx context.Context, request operations.UpdateSipIPAccessControlListRequest, security operations.UpdateSipIPAccessControlListSecurity, opts ...operations.Option) (*operations.UpdateSipIPAccessControlListResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSipIPAccessControlListServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9679,7 +11629,7 @@ func (s *SDK) UpdateSipIPAccessControlList(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9714,15 +11664,25 @@ func (s *SDK) UpdateSipIPAccessControlList(ctx context.Context, request operatio
 }
 
 // UpdateSipIPAddress - Update an IpAddress resource.
-func (s *SDK) UpdateSipIPAddress(ctx context.Context, request operations.UpdateSipIPAddressRequest) (*operations.UpdateSipIPAddressResponse, error) {
-	baseURL := operations.UpdateSipIPAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSipIPAddress(ctx context.Context, request operations.UpdateSipIPAddressRequest, security operations.UpdateSipIPAddressSecurity, opts ...operations.Option) (*operations.UpdateSipIPAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSipIPAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/SIP/IpAccessControlLists/{IpAccessControlListSid}/IpAddresses/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9734,7 +11694,7 @@ func (s *SDK) UpdateSipIPAddress(ctx context.Context, request operations.UpdateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9769,15 +11729,25 @@ func (s *SDK) UpdateSipIPAddress(ctx context.Context, request operations.UpdateS
 }
 
 // UpdateSiprec - Stop a Siprec using either the SID of the Siprec resource or the `name` used when creating the resource
-func (s *SDK) UpdateSiprec(ctx context.Context, request operations.UpdateSiprecRequest) (*operations.UpdateSiprecResponse, error) {
-	baseURL := operations.UpdateSiprecServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSiprec(ctx context.Context, request operations.UpdateSiprecRequest, security operations.UpdateSiprecSecurity, opts ...operations.Option) (*operations.UpdateSiprecResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Siprec/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSiprecServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Siprec/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9789,7 +11759,7 @@ func (s *SDK) UpdateSiprec(ctx context.Context, request operations.UpdateSiprecR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9824,15 +11794,25 @@ func (s *SDK) UpdateSiprec(ctx context.Context, request operations.UpdateSiprecR
 }
 
 // UpdateStream - Stop a Stream using either the SID of the Stream resource or the `name` used when creating the resource
-func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamRequest) (*operations.UpdateStreamResponse, error) {
-	baseURL := operations.UpdateStreamServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamRequest, security operations.UpdateStreamSecurity, opts ...operations.Option) (*operations.UpdateStreamResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Streams/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateStreamServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Calls/{CallSid}/Streams/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9844,7 +11824,7 @@ func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9879,15 +11859,25 @@ func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamR
 }
 
 // UpdateUsageTrigger - Update an instance of a usage trigger
-func (s *SDK) UpdateUsageTrigger(ctx context.Context, request operations.UpdateUsageTriggerRequest) (*operations.UpdateUsageTriggerResponse, error) {
-	baseURL := operations.UpdateUsageTriggerServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateUsageTrigger(ctx context.Context, request operations.UpdateUsageTriggerRequest, security operations.UpdateUsageTriggerSecurity, opts ...operations.Option) (*operations.UpdateUsageTriggerResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers/{Sid}.json", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateUsageTriggerServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/2010-04-01/Accounts/{AccountSid}/Usage/Triggers/{Sid}.json", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9899,7 +11889,7 @@ func (s *SDK) UpdateUsageTrigger(ctx context.Context, request operations.UpdateU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

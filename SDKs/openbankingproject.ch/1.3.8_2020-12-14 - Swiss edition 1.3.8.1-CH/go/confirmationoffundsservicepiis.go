@@ -36,11 +36,11 @@ func newConfirmationOfFundsServicePIIS(defaultClient, securityClient HTTPClient,
 // CheckAvailabilityOfFunds - Confirmation of funds request
 // Creates a confirmation of funds request at the ASPSP. Checks whether a specific amount is available at point of time of the request on an account linked to a given tuple card issuer(TPP)/card number, or addressed by IBAN and TPP respectively.
 // If the related extended services are used a conditional Consent-ID is contained in the header. This field is contained but commented out in this specification.
-func (s *confirmationOfFundsServicePIIS) CheckAvailabilityOfFunds(ctx context.Context, request operations.CheckAvailabilityOfFundsRequest) (*operations.CheckAvailabilityOfFundsResponse, error) {
+func (s *confirmationOfFundsServicePIIS) CheckAvailabilityOfFunds(ctx context.Context, request operations.CheckAvailabilityOfFundsRequest, security operations.CheckAvailabilityOfFundsSecurity) (*operations.CheckAvailabilityOfFundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/funds-confirmations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfirmationOfFunds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -55,9 +55,9 @@ func (s *confirmationOfFundsServicePIIS) CheckAvailabilityOfFunds(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

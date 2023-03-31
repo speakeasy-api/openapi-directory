@@ -8,13 +8,7 @@ import (
 )
 
 type PrivateCollectionsSearchSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateCollectionsSearchRequest struct {
-	// Search Parameters
-	Request  shared.PrivateCollectionSearch `request:"mediaType=application/json"`
-	Security PrivateCollectionsSearchSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateCollectionsSearchResponse struct {

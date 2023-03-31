@@ -30,7 +30,7 @@ func (e *FetchHealthProfileAnswersIncludeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type FetchHealthProfileAnswersQueryParams struct {
+type FetchHealthProfileAnswersRequest struct {
 	// Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
 	//
 	FilterGroups *string `queryParam:"style=form,explode=true,name=filter[groups]"`
@@ -50,10 +50,6 @@ type FetchHealthProfileAnswersQueryParams struct {
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page[number]"`
 	// Page size
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type FetchHealthProfileAnswersRequest struct {
-	QueryParams FetchHealthProfileAnswersQueryParams
 }
 
 type FetchHealthProfileAnswersResponse struct {

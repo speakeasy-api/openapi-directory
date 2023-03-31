@@ -8,18 +8,13 @@ import (
 )
 
 type ListInstrumentsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type ListInstrumentsQueryParams struct {
-	// Which language the instruments will be returned in
-	Language *string `queryParam:"style=form,explode=true,name=language"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ListInstrumentsRequest struct {
-	QueryParams ListInstrumentsQueryParams
-	Security    ListInstrumentsSecurity
+	// Which language the instruments will be returned in
+	Language *string `queryParam:"style=form,explode=true,name=language"`
 }
 
 type ListInstrumentsResponse struct {

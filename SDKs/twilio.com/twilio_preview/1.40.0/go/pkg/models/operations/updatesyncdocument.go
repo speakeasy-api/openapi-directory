@@ -12,17 +12,8 @@ var UpdateSyncDocumentServerList = []string{
 }
 
 type UpdateSyncDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncDocumentPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateSyncDocumentHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncDocumentUpdateSyncDocumentRequest struct {
@@ -30,11 +21,11 @@ type UpdateSyncDocumentUpdateSyncDocumentRequest struct {
 }
 
 type UpdateSyncDocumentRequest struct {
-	PathParams UpdateSyncDocumentPathParams
-	Headers    UpdateSyncDocumentHeaders
-	Request    *UpdateSyncDocumentUpdateSyncDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncDocumentSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch     *string                                      `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody *UpdateSyncDocumentUpdateSyncDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                                       `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid         string                                       `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSyncDocumentResponse struct {

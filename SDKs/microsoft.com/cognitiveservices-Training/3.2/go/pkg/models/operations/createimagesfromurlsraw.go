@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImagesFromUrlsRawPathParams struct {
+type CreateImagesFromUrlsRawRequest struct {
+	// Image urls and tag ids. Limited to 64 images and 20 tags per batch.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImagesFromUrlsRawRequest struct {
-	PathParams CreateImagesFromUrlsRawPathParams
-	// Image urls and tag ids. Limited to 64 images and 20 tags per batch.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type CreateImagesFromUrlsRawResponse struct {

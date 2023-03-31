@@ -22,10 +22,6 @@ type ImageResizeRequestBody struct {
 	Width int `form:"name=width"`
 }
 
-type ImageResizeRequest struct {
-	Request ImageResizeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type ImageResizeResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError                                  *shared.APIError

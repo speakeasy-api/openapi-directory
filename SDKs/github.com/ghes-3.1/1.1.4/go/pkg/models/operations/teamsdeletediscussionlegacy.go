@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type TeamsDeleteDiscussionLegacyPathParams struct {
+type TeamsDeleteDiscussionLegacyRequest struct {
 	// The number that identifies the discussion.
 	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsDeleteDiscussionLegacyRequest struct {
-	PathParams TeamsDeleteDiscussionLegacyPathParams
 }
 
 type TeamsDeleteDiscussionLegacyResponse struct {

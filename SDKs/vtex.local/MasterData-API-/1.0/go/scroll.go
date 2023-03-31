@@ -57,14 +57,14 @@ func newScroll(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ```
 func (s *scroll) Scrolldocuments(ctx context.Context, request operations.ScrolldocumentsRequest) (*operations.ScrolldocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/scroll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/scroll", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

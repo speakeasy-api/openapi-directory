@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitGroupApplicationPathParams struct {
+type SubmitGroupApplicationRequest struct {
 	// The unique identifier of the group application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
 	// The current version identifier of the group application
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type SubmitGroupApplicationRequest struct {
-	PathParams SubmitGroupApplicationPathParams
 }
 
 type SubmitGroupApplicationResponse struct {

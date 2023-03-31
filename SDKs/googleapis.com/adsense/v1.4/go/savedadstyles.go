@@ -33,20 +33,20 @@ func newSavedadstyles(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // AdsenseSavedadstylesGet - Get a specific saved ad style from the user's account.
-func (s *savedadstyles) AdsenseSavedadstylesGet(ctx context.Context, request operations.AdsenseSavedadstylesGetRequest) (*operations.AdsenseSavedadstylesGetResponse, error) {
+func (s *savedadstyles) AdsenseSavedadstylesGet(ctx context.Context, request operations.AdsenseSavedadstylesGetRequest, security operations.AdsenseSavedadstylesGetSecurity) (*operations.AdsenseSavedadstylesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/savedadstyles/{savedAdStyleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/savedadstyles/{savedAdStyleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *savedadstyles) AdsenseSavedadstylesGet(ctx context.Context, request ope
 }
 
 // AdsenseSavedadstylesList - List all saved ad styles in the user's account.
-func (s *savedadstyles) AdsenseSavedadstylesList(ctx context.Context, request operations.AdsenseSavedadstylesListRequest) (*operations.AdsenseSavedadstylesListResponse, error) {
+func (s *savedadstyles) AdsenseSavedadstylesList(ctx context.Context, request operations.AdsenseSavedadstylesListRequest, security operations.AdsenseSavedadstylesListSecurity) (*operations.AdsenseSavedadstylesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/savedadstyles"
 
@@ -90,11 +90,11 @@ func (s *savedadstyles) AdsenseSavedadstylesList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

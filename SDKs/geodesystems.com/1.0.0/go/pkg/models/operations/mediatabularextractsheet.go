@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type MediaTabularExtractsheetQueryParams struct {
+type MediaTabularExtractsheetRequest struct {
 	// Sheets
 	Arg1 *string `queryParam:"style=form,explode=true,name=arg1"`
 	// Entry ID
 	Entryid string `queryParam:"style=form,explode=true,name=entryid"`
 	// Output type  -don't change
 	Output string `queryParam:"style=form,explode=true,name=output"`
-}
-
-type MediaTabularExtractsheetRequest struct {
-	QueryParams MediaTabularExtractsheetQueryParams
 }
 
 type MediaTabularExtractsheetResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type FirebaseappcheckProjectsServicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsServicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsServicesListSecurity struct {
@@ -22,12 +22,7 @@ type FirebaseappcheckProjectsServicesListSecurity struct {
 	Option2 *FirebaseappcheckProjectsServicesListSecurityOption2 `security:"option"`
 }
 
-type FirebaseappcheckProjectsServicesListPathParams struct {
-	// Required. The relative resource name of the parent project for which to list each associated Service, in the format: ``` projects/{project_number} ```
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseappcheckProjectsServicesListQueryParams struct {
+type FirebaseappcheckProjectsServicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type FirebaseappcheckProjectsServicesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token returned from a previous call to ListServices indicating where in the set of Services to resume listing. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListServices must match the call that provided the page token; if they do not match, the result is undefined.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The relative resource name of the parent project for which to list each associated Service, in the format: ``` projects/{project_number} ```
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type FirebaseappcheckProjectsServicesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappcheckProjectsServicesListRequest struct {
-	PathParams  FirebaseappcheckProjectsServicesListPathParams
-	QueryParams FirebaseappcheckProjectsServicesListQueryParams
-	Security    FirebaseappcheckProjectsServicesListSecurity
 }
 
 type FirebaseappcheckProjectsServicesListResponse struct {

@@ -177,7 +177,7 @@ func (e *GetSchedulesScheduleARecipientCommitteeTypeEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetSchedulesScheduleAQueryParams struct {
+type GetSchedulesScheduleARequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -284,10 +284,6 @@ type GetSchedulesScheduleAQueryParams struct {
 	// specified, the results default to the most current cycle.
 	//
 	TwoYearTransactionPeriod []int `queryParam:"style=form,explode=true,name=two_year_transaction_period"`
-}
-
-type GetSchedulesScheduleARequest struct {
-	QueryParams GetSchedulesScheduleAQueryParams
 }
 
 type GetSchedulesScheduleAResponse struct {

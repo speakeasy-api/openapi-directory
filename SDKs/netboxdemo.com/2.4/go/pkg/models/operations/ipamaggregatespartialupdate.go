@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamAggregatesPartialUpdatePathParams struct {
+type IpamAggregatesPartialUpdateRequest struct {
+	WritableAggregateInput shared.WritableAggregateInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this aggregate.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamAggregatesPartialUpdateRequest struct {
-	PathParams IpamAggregatesPartialUpdatePathParams
-	Request    shared.WritableAggregateInput `request:"mediaType=application/json"`
 }
 
 type IpamAggregatesPartialUpdateResponse struct {

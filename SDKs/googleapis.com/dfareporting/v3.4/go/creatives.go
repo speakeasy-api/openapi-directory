@@ -32,20 +32,20 @@ func newCreatives(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DfareportingCreativesGet - Gets one creative by ID.
-func (s *creatives) DfareportingCreativesGet(ctx context.Context, request operations.DfareportingCreativesGetRequest) (*operations.DfareportingCreativesGetResponse, error) {
+func (s *creatives) DfareportingCreativesGet(ctx context.Context, request operations.DfareportingCreativesGetRequest, security operations.DfareportingCreativesGetSecurity) (*operations.DfareportingCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *creatives) DfareportingCreativesGet(ctx context.Context, request operat
 }
 
 // DfareportingCreativesInsert - Inserts a new creative.
-func (s *creatives) DfareportingCreativesInsert(ctx context.Context, request operations.DfareportingCreativesInsertRequest) (*operations.DfareportingCreativesInsertResponse, error) {
+func (s *creatives) DfareportingCreativesInsert(ctx context.Context, request operations.DfareportingCreativesInsertRequest, security operations.DfareportingCreativesInsertSecurity) (*operations.DfareportingCreativesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *creatives) DfareportingCreativesInsert(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *creatives) DfareportingCreativesInsert(ctx context.Context, request ope
 }
 
 // DfareportingCreativesList - Retrieves a list of creatives, possibly filtered. This method supports paging.
-func (s *creatives) DfareportingCreativesList(ctx context.Context, request operations.DfareportingCreativesListRequest) (*operations.DfareportingCreativesListResponse, error) {
+func (s *creatives) DfareportingCreativesList(ctx context.Context, request operations.DfareportingCreativesListRequest, security operations.DfareportingCreativesListSecurity) (*operations.DfareportingCreativesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *creatives) DfareportingCreativesList(ctx context.Context, request opera
 }
 
 // DfareportingCreativesPatch - Updates an existing creative. This method supports patch semantics.
-func (s *creatives) DfareportingCreativesPatch(ctx context.Context, request operations.DfareportingCreativesPatchRequest) (*operations.DfareportingCreativesPatchResponse, error) {
+func (s *creatives) DfareportingCreativesPatch(ctx context.Context, request operations.DfareportingCreativesPatchRequest, security operations.DfareportingCreativesPatchSecurity) (*operations.DfareportingCreativesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *creatives) DfareportingCreativesPatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *creatives) DfareportingCreativesPatch(ctx context.Context, request oper
 }
 
 // DfareportingCreativesUpdate - Updates an existing creative.
-func (s *creatives) DfareportingCreativesUpdate(ctx context.Context, request operations.DfareportingCreativesUpdateRequest) (*operations.DfareportingCreativesUpdateResponse, error) {
+func (s *creatives) DfareportingCreativesUpdate(ctx context.Context, request operations.DfareportingCreativesUpdateRequest, security operations.DfareportingCreativesUpdateSecurity) (*operations.DfareportingCreativesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *creatives) DfareportingCreativesUpdate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

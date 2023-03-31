@@ -34,11 +34,11 @@ func newCatalog(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // AddToCollection - Add items to catalog collections
 // This endpoint adds assets to a catalog collection. It also automatically adds the assets to the user's account's catalog.
-func (s *catalog) AddToCollection(ctx context.Context, request operations.AddToCollectionRequest) (*operations.AddToCollectionResponse, error) {
+func (s *catalog) AddToCollection(ctx context.Context, request operations.AddToCollectionRequest, security operations.AddToCollectionSecurity) (*operations.AddToCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCatalogCollectionItems", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *catalog) AddToCollection(ctx context.Context, request operations.AddToC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *catalog) AddToCollection(ctx context.Context, request operations.AddToC
 
 // CreateCollection - Create catalog collections
 // This endpoint creates a catalog collection and optionally adds assets. To add assets to the collection later, use `PATCH /v2/catalog/collections/{collection_id}/items`.
-func (s *catalog) CreateCollection(ctx context.Context, request operations.CreateCollectionRequest) (*operations.CreateCollectionResponse, error) {
+func (s *catalog) CreateCollection(ctx context.Context, request shared.CreateCatalogCollection, security operations.CreateCollectionSecurity) (*operations.CreateCollectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/collections"
 
@@ -108,7 +108,7 @@ func (s *catalog) CreateCollection(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,16 +144,16 @@ func (s *catalog) CreateCollection(ctx context.Context, request operations.Creat
 
 // DeleteCollection - Delete catalog collections
 // This endpoint deletes a catalog collection. It does not remove the assets from the user's account's catalog.
-func (s *catalog) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest) (*operations.DeleteCollectionResponse, error) {
+func (s *catalog) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest, security operations.DeleteCollectionSecurity) (*operations.DeleteCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,11 +182,11 @@ func (s *catalog) DeleteCollection(ctx context.Context, request operations.Delet
 
 // DeleteFromCollection - Remove items from catalog collection
 // This endpoint removes assets from a catalog collection. It does not remove the assets from the user's account's catalog.
-func (s *catalog) DeleteFromCollection(ctx context.Context, request operations.DeleteFromCollectionRequest) (*operations.DeleteFromCollectionResponse, error) {
+func (s *catalog) DeleteFromCollection(ctx context.Context, request operations.DeleteFromCollectionRequest, security operations.DeleteFromCollectionSecurity) (*operations.DeleteFromCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveCatalogCollectionItems", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -201,7 +201,7 @@ func (s *catalog) DeleteFromCollection(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,7 +237,7 @@ func (s *catalog) DeleteFromCollection(ctx context.Context, request operations.D
 
 // GetCollections - List catalog collections
 // This endpoint returns a list of catalog collections.
-func (s *catalog) GetCollections(ctx context.Context, request operations.GetCollectionsRequest) (*operations.GetCollectionsResponse, error) {
+func (s *catalog) GetCollections(ctx context.Context, request operations.GetCollectionsRequest, security operations.GetCollectionsSecurity) (*operations.GetCollectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/collections"
 
@@ -246,11 +246,11 @@ func (s *catalog) GetCollections(ctx context.Context, request operations.GetColl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,7 +287,7 @@ func (s *catalog) GetCollections(ctx context.Context, request operations.GetColl
 
 // SearchCatalog - Search catalogs for assets
 // This endpoint searches for assets in the account's catalog. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
-func (s *catalog) SearchCatalog(ctx context.Context, request operations.SearchCatalogRequest) (*operations.SearchCatalogResponse, error) {
+func (s *catalog) SearchCatalog(ctx context.Context, request operations.SearchCatalogRequest, security operations.SearchCatalogSecurity) (*operations.SearchCatalogResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/search"
 
@@ -296,11 +296,11 @@ func (s *catalog) SearchCatalog(ctx context.Context, request operations.SearchCa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *catalog) SearchCatalog(ctx context.Context, request operations.SearchCa
 
 // UpdateCollection - Update collection metadata
 // This endpoint updates the metadata of a catalog collection.
-func (s *catalog) UpdateCollection(ctx context.Context, request operations.UpdateCollectionRequest) (*operations.UpdateCollectionResponse, error) {
+func (s *catalog) UpdateCollection(ctx context.Context, request operations.UpdateCollectionRequest, security operations.UpdateCollectionSecurity) (*operations.UpdateCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/collections/{collection_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCatalogCollection", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -360,7 +360,7 @@ func (s *catalog) UpdateCollection(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

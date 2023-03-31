@@ -34,9 +34,9 @@ func newCameraQualityRetentionProfiles(defaultClient, securityClient HTTPClient,
 // Creates new quality retention profile for this network.
 func (s *cameraQualityRetentionProfiles) CreateNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.CreateNetworkCameraQualityRetentionProfileRequest) (*operations.CreateNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *cameraQualityRetentionProfiles) CreateNetworkCameraQualityRetentionProf
 // Delete an existing quality retention profile for this network.
 func (s *cameraQualityRetentionProfiles) DeleteNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.DeleteNetworkCameraQualityRetentionProfileRequest) (*operations.DeleteNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *cameraQualityRetentionProfiles) DeleteNetworkCameraQualityRetentionProf
 // Retrieve a single quality retention profile
 func (s *cameraQualityRetentionProfiles) GetNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.GetNetworkCameraQualityRetentionProfileRequest) (*operations.GetNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *cameraQualityRetentionProfiles) GetNetworkCameraQualityRetentionProfile
 // List the quality retention profiles for this network
 func (s *cameraQualityRetentionProfiles) GetNetworkCameraQualityRetentionProfiles(ctx context.Context, request operations.GetNetworkCameraQualityRetentionProfilesRequest) (*operations.GetNetworkCameraQualityRetentionProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *cameraQualityRetentionProfiles) GetNetworkCameraQualityRetentionProfile
 // Update an existing quality retention profile for this network.
 func (s *cameraQualityRetentionProfiles) UpdateNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.UpdateNetworkCameraQualityRetentionProfileRequest) (*operations.UpdateNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

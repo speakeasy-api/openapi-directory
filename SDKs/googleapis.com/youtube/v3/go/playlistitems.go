@@ -33,7 +33,7 @@ func newPlaylistItems(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // YoutubePlaylistItemsDelete - Deletes a resource.
-func (s *playlistItems) YoutubePlaylistItemsDelete(ctx context.Context, request operations.YoutubePlaylistItemsDeleteRequest) (*operations.YoutubePlaylistItemsDeleteResponse, error) {
+func (s *playlistItems) YoutubePlaylistItemsDelete(ctx context.Context, request operations.YoutubePlaylistItemsDeleteRequest, security operations.YoutubePlaylistItemsDeleteSecurity) (*operations.YoutubePlaylistItemsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/playlistItems"
 
@@ -42,11 +42,11 @@ func (s *playlistItems) YoutubePlaylistItemsDelete(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *playlistItems) YoutubePlaylistItemsDelete(ctx context.Context, request 
 }
 
 // YoutubePlaylistItemsInsert - Inserts a new resource into this collection.
-func (s *playlistItems) YoutubePlaylistItemsInsert(ctx context.Context, request operations.YoutubePlaylistItemsInsertRequest) (*operations.YoutubePlaylistItemsInsertResponse, error) {
+func (s *playlistItems) YoutubePlaylistItemsInsert(ctx context.Context, request operations.YoutubePlaylistItemsInsertRequest, security operations.YoutubePlaylistItemsInsertSecurity) (*operations.YoutubePlaylistItemsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/playlistItems"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlaylistItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *playlistItems) YoutubePlaylistItemsInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *playlistItems) YoutubePlaylistItemsInsert(ctx context.Context, request 
 }
 
 // YoutubePlaylistItemsList - Retrieves a list of resources, possibly filtered.
-func (s *playlistItems) YoutubePlaylistItemsList(ctx context.Context, request operations.YoutubePlaylistItemsListRequest) (*operations.YoutubePlaylistItemsListResponse, error) {
+func (s *playlistItems) YoutubePlaylistItemsList(ctx context.Context, request operations.YoutubePlaylistItemsListRequest, security operations.YoutubePlaylistItemsListSecurity) (*operations.YoutubePlaylistItemsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/playlistItems"
 
@@ -136,11 +136,11 @@ func (s *playlistItems) YoutubePlaylistItemsList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *playlistItems) YoutubePlaylistItemsList(ctx context.Context, request op
 }
 
 // YoutubePlaylistItemsUpdate - Updates an existing resource.
-func (s *playlistItems) YoutubePlaylistItemsUpdate(ctx context.Context, request operations.YoutubePlaylistItemsUpdateRequest) (*operations.YoutubePlaylistItemsUpdateResponse, error) {
+func (s *playlistItems) YoutubePlaylistItemsUpdate(ctx context.Context, request operations.YoutubePlaylistItemsUpdateRequest, security operations.YoutubePlaylistItemsUpdateSecurity) (*operations.YoutubePlaylistItemsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/playlistItems"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlaylistItem", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *playlistItems) YoutubePlaylistItemsUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

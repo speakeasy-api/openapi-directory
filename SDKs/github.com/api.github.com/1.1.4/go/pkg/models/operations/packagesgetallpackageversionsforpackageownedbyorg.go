@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The name of the package.
-	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
-	// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-	PackageType shared.PackageTypeEnum `pathParam:"style=simple,explode=false,name=package_type"`
-}
-
 // PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum - The state of the package, either active or deleted.
 type PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum string
 
@@ -42,18 +33,19 @@ func (e *PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum) UnmarshalJS
 	}
 }
 
-type PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams struct {
+type PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest struct {
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The name of the package.
+	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
+	// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+	PackageType shared.PackageTypeEnum `pathParam:"style=simple,explode=false,name=package_type"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The state of the package, either active or deleted.
 	State *PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest struct {
-	PathParams  PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams
-	QueryParams PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams
 }
 
 type PackagesGetAllPackageVersionsForPackageOwnedByOrgResponse struct {

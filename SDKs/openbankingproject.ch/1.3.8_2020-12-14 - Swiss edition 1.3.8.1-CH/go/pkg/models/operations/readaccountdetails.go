@@ -8,27 +8,10 @@ import (
 )
 
 type ReadAccountDetailsSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type ReadAccountDetailsPathParams struct {
-	// This identification is denoting the addressed (card) account.
-	// The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call.
-	// The account-id is the "resourceId" attribute of the account structure.
-	// Its value is constant at least throughout the lifecycle of a given consent.
-	//
-	AccountID string `pathParam:"style=simple,explode=false,name=account-id"`
-}
-
-type ReadAccountDetailsQueryParams struct {
-	// If contained, this function reads the list of accessible payment accounts including the booking balance,
-	// if granted by the PSU in the related consent and available by the ASPSP.
-	// This parameter might be ignored by the ASPSP.
-	//
-	WithBalance *bool `queryParam:"style=form,explode=true,name=withBalance"`
-}
-
-type ReadAccountDetailsHeaders struct {
+type ReadAccountDetailsRequest struct {
 	// This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
 	//
 	ConsentID string `header:"style=simple,explode=false,name=Consent-ID"`
@@ -83,13 +66,17 @@ type ReadAccountDetailsHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type ReadAccountDetailsRequest struct {
-	PathParams  ReadAccountDetailsPathParams
-	QueryParams ReadAccountDetailsQueryParams
-	Headers     ReadAccountDetailsHeaders
-	Security    ReadAccountDetailsSecurity
+	// This identification is denoting the addressed (card) account.
+	// The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call.
+	// The account-id is the "resourceId" attribute of the account structure.
+	// Its value is constant at least throughout the lifecycle of a given consent.
+	//
+	AccountID string `pathParam:"style=simple,explode=false,name=account-id"`
+	// If contained, this function reads the list of accessible payment accounts including the booking balance,
+	// if granted by the PSU in the related consent and available by the ASPSP.
+	// This parameter might be ignored by the ASPSP.
+	//
+	WithBalance *bool `queryParam:"style=form,explode=true,name=withBalance"`
 }
 
 // ReadAccountDetails200ApplicationJSON - OK

@@ -3,29 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateClusterRequest(
-    headers=operations.CreateClusterHeaders(
-        x_amz_algorithm="omnis",
-        x_amz_content_sha256="velit",
-        x_amz_credential="commodi",
-        x_amz_date="ut",
-        x_amz_security_token="aut",
-        x_amz_signature="explicabo",
-        x_amz_signed_headers="sit",
+    request_body=operations.CreateClusterRequestBody(
+        client_token="corrupti",
+        cluster_name="provident",
+        tags={
+            "quibusdam": "unde",
+            "nulla": "corrupti",
+            "illum": "vel",
+        },
     ),
-    request=operations.CreateClusterRequestBody(
-        client_token="sed",
-        cluster_name="est",
-    ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
 )
     
 res = s.create_cluster(req)

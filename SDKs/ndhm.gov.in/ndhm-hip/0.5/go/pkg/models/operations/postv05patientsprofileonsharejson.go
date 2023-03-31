@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05PatientsProfileOnShareJSONHeaders struct {
+type PostV05PatientsProfileOnShareJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization      string                    `header:"style=simple,explode=false,name=Authorization"`
+	ShareProfileResult shared.ShareProfileResult `request:"mediaType=application/json"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05PatientsProfileOnShareJSONRequest struct {
-	Headers PostV05PatientsProfileOnShareJSONHeaders
-	Request shared.ShareProfileResult `request:"mediaType=application/json"`
 }
 
 type PostV05PatientsProfileOnShareJSONResponse struct {

@@ -8,25 +8,16 @@ import (
 )
 
 type GetTeamsByYearSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
-type GetTeamsByYearPathParams struct {
+type GetTeamsByYearRequest struct {
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
 	// Page number of results to return, zero-indexed
 	PageNum int64 `pathParam:"style=simple,explode=false,name=page_num"`
 	// Competition Year (or Season). Must be 4 digits.
 	Year int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetTeamsByYearHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetTeamsByYearRequest struct {
-	PathParams GetTeamsByYearPathParams
-	Headers    GetTeamsByYearHeaders
-	Security   GetTeamsByYearSecurity
 }
 
 type GetTeamsByYearResponse struct {

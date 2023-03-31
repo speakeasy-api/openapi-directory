@@ -14,22 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.GetCustomerServiceMetricRequest{
-        Security: operations.GetCustomerServiceMetricSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GetCustomerServiceMetricPathParams{
-            CustomerServiceMetricType: "corrupti",
-            EvaluationType: "provident",
-        },
-        QueryParams: operations.GetCustomerServiceMetricQueryParams{
-            EvaluationMarketplaceID: "distinctio",
-        },
+        CustomerServiceMetricType: "corrupti",
+        EvaluationMarketplaceID: "provident",
+        EvaluationType: "distinctio",
     }
 
     ctx := context.Background()
-    res, err := s.CustomerServiceMetric.GetCustomerServiceMetric(ctx, req)
+    res, err := s.CustomerServiceMetric.GetCustomerServiceMetric(ctx, req, operations.GetCustomerServiceMetricSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

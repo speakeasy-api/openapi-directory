@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDocumentProgressPathParams struct {
+type GetDocumentProgressRequest struct {
 	// Document ID
 	DocumentID float64 `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type GetDocumentProgressRequest struct {
-	PathParams GetDocumentProgressPathParams
 }
 
 type GetDocumentProgressResponse struct {

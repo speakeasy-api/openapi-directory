@@ -35,14 +35,14 @@ func newApis(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DiscoveryApisGetRest - Retrieve the description of a particular version of an api.
 func (s *apis) DiscoveryApisGetRest(ctx context.Context, request operations.DiscoveryApisGetRestRequest) (*operations.DiscoveryApisGetRestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{api}/{version}/rest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{api}/{version}/rest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *apis) DiscoveryApisList(ctx context.Context, request operations.Discove
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

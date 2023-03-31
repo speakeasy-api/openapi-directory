@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEEventTriggerPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DELETEEventTriggerHeaders struct {
+type DELETEEventTriggerRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -23,11 +19,7 @@ type DELETEEventTriggerHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type DELETEEventTriggerRequest struct {
-	PathParams DELETEEventTriggerPathParams
-	Headers    DELETEEventTriggerHeaders
+	ID           string  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DELETEEventTriggerResponse struct {

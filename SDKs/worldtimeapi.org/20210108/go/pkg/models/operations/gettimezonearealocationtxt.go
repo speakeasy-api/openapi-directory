@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTimezoneAreaLocationTxtPathParams struct {
+type GetTimezoneAreaLocationTxtRequest struct {
 	Area     string `pathParam:"style=simple,explode=false,name=area"`
 	Location string `pathParam:"style=simple,explode=false,name=location"`
-}
-
-type GetTimezoneAreaLocationTxtRequest struct {
-	PathParams GetTimezoneAreaLocationTxtPathParams
 }
 
 type GetTimezoneAreaLocationTxtResponse struct {

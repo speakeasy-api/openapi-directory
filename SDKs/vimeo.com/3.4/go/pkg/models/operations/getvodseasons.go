@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodSeasonsPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
 // GetVodSeasonsDirectionEnum - The sort direction of the results.
 type GetVodSeasonsDirectionEnum string
 
@@ -83,22 +78,19 @@ func (e *GetVodSeasonsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVodSeasonsQueryParams struct {
+type GetVodSeasonsRequest struct {
 	// The sort direction of the results.
 	Direction *GetVodSeasonsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
 	Filter *GetVodSeasonsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetVodSeasonsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVodSeasonsRequest struct {
-	PathParams  GetVodSeasonsPathParams
-	QueryParams GetVodSeasonsQueryParams
 }
 
 type GetVodSeasonsResponse struct {

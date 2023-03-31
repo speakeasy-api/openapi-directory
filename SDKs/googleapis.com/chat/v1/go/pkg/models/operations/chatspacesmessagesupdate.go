@@ -8,13 +8,13 @@ import (
 )
 
 type ChatSpacesMessagesUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChatSpacesMessagesUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChatSpacesMessagesUpdateSecurity struct {
@@ -22,14 +22,10 @@ type ChatSpacesMessagesUpdateSecurity struct {
 	Option2 *ChatSpacesMessagesUpdateSecurityOption2 `security:"option"`
 }
 
-type ChatSpacesMessagesUpdatePathParams struct {
-	// Resource name in the form `spaces/*/messages/*`. Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ChatSpacesMessagesUpdateQueryParams struct {
+type ChatSpacesMessagesUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv  *shared.XgafvEnum    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	MessageInput *shared.MessageInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Optional. If `true` and the message is not found, a new message is created and `updateMask` is ignored. The specified message ID must be [client-assigned](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request fails.
@@ -42,6 +38,8 @@ type ChatSpacesMessagesUpdateQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Resource name in the form `spaces/*/messages/*`. Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -54,13 +52,6 @@ type ChatSpacesMessagesUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ChatSpacesMessagesUpdateRequest struct {
-	PathParams  ChatSpacesMessagesUpdatePathParams
-	QueryParams ChatSpacesMessagesUpdateQueryParams
-	Request     *shared.MessageInput `request:"mediaType=application/json"`
-	Security    ChatSpacesMessagesUpdateSecurity
 }
 
 type ChatSpacesMessagesUpdateResponse struct {

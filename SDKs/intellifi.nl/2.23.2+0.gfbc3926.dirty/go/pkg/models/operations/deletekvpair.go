@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteKvPairPathParams struct {
+type DeleteKvPairRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteKvPairRequest struct {
-	PathParams DeleteKvPairPathParams
 }
 
 type DeleteKvPairResponse struct {

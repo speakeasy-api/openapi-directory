@@ -154,7 +154,6 @@ pkg/models/operations/projectdetails.go
 pkg/models/operations/projectslist.go
 pkg/models/operations/projectssearch.go
 pkg/models/shared/accountreport.go
-pkg/models/shared/security.go
 pkg/models/shared/articlecomplete.go
 pkg/models/shared/timeline.go
 pkg/models/shared/license.go

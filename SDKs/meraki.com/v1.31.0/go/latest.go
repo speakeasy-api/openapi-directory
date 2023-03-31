@@ -34,14 +34,14 @@ func newLatest(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Return the latest available reading for each metric from each sensor, sorted by sensor serial
 func (s *latest) GetOrganizationSensorReadingsLatest(ctx context.Context, request operations.GetOrganizationSensorReadingsLatestRequest) (*operations.GetOrganizationSensorReadingsLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sensor/readings/latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sensor/readings/latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

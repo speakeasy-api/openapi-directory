@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchBusSchedulesQueryParams struct {
+type SearchBusSchedulesRequest struct {
 	// The search query
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type SearchBusSchedulesRequest struct {
-	QueryParams SearchBusSchedulesQueryParams
 }
 
 type SearchBusSchedulesResponse struct {

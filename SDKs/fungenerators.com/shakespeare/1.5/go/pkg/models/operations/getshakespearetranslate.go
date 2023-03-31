@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetShakespeareTranslateSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetShakespeareTranslateQueryParams struct {
-	// Text to translate to Shakespeare English.
-	Text string `queryParam:"style=form,explode=true,name=text"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type GetShakespeareTranslateRequest struct {
-	QueryParams GetShakespeareTranslateQueryParams
-	Security    GetShakespeareTranslateSecurity
+	// Text to translate to Shakespeare English.
+	Text string `queryParam:"style=form,explode=true,name=text"`
 }
 
 type GetShakespeareTranslateResponse struct {

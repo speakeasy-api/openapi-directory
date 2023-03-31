@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementCustomMetricsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomMetricsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementCustomMetricsGetSecurity struct {
@@ -22,18 +22,13 @@ type AnalyticsManagementCustomMetricsGetSecurity struct {
 	Option2 *AnalyticsManagementCustomMetricsGetSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementCustomMetricsGetPathParams struct {
+type AnalyticsManagementCustomMetricsGetRequest struct {
 	// Account ID for the custom metric to retrieve.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The ID of the custom metric to retrieve.
-	CustomMetricID string `pathParam:"style=simple,explode=false,name=customMetricId"`
-	// Web property ID for the custom metric to retrieve.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementCustomMetricsGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The ID of the custom metric to retrieve.
+	CustomMetricID string `pathParam:"style=simple,explode=false,name=customMetricId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,12 +41,8 @@ type AnalyticsManagementCustomMetricsGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementCustomMetricsGetRequest struct {
-	PathParams  AnalyticsManagementCustomMetricsGetPathParams
-	QueryParams AnalyticsManagementCustomMetricsGetQueryParams
-	Security    AnalyticsManagementCustomMetricsGetSecurity
+	// Web property ID for the custom metric to retrieve.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementCustomMetricsGetResponse struct {

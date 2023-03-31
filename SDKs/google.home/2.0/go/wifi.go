@@ -36,7 +36,7 @@ func newWifi(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // ConnecttoWiFiNetwork - Connect to Wi-Fi Network
 // **Note:** Not sure how the password is encrypted. Might be using the public certificate from /setup/eureka_info. So this cannot be used as of now. If someone figures it out, please [create a new issue here](https://github.com/rithvikvibhu/GHLocalApi/issues/new).
-func (s *wifi) ConnecttoWiFiNetwork(ctx context.Context, request operations.ConnecttoWiFiNetworkRequest) (*operations.ConnecttoWiFiNetworkResponse, error) {
+func (s *wifi) ConnecttoWiFiNetwork(ctx context.Context, request shared.ConnecttoWiFiNetworkRequest) (*operations.ConnecttoWiFiNetworkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connect_wifi"
 
@@ -82,7 +82,7 @@ func (s *wifi) ConnecttoWiFiNetwork(ctx context.Context, request operations.Conn
 
 // ForgetWiFiNetwork - Forget Wi-Fi Network
 // This is to forget a saved network by `wpa_id`. Get the `wpa_id` from /setup/configured_networks
-func (s *wifi) ForgetWiFiNetwork(ctx context.Context, request operations.ForgetWiFiNetworkRequest) (*operations.ForgetWiFiNetworkResponse, error) {
+func (s *wifi) ForgetWiFiNetwork(ctx context.Context, request shared.ForgetWiFiNetworkRequest) (*operations.ForgetWiFiNetworkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/forget_wifi"
 

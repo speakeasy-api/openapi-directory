@@ -12,28 +12,19 @@ var DeleteMemberServerList = []string{
 }
 
 type DeleteMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteMemberPathParams struct {
+type DeleteMemberRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Member resource to delete belongs to. This value can be the Channel resource's `sid` or `unique_name`.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the Member resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Member resource to delete. This value can be either the Member's `sid` or its `identity` value.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteMemberHeaders struct {
 	// The X-Twilio-Webhook-Enabled HTTP request header
 	XTwilioWebhookEnabled *shared.MemberEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
-}
-
-type DeleteMemberRequest struct {
-	PathParams DeleteMemberPathParams
-	Headers    DeleteMemberHeaders
-	Security   DeleteMemberSecurity
-	ServerURL  *string
 }
 
 type DeleteMemberResponse struct {

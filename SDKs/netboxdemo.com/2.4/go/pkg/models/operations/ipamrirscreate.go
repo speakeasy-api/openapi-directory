@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRirsCreateRequest struct {
-	Request shared.RIRInput `request:"mediaType=application/json"`
-}
-
 type IpamRirsCreateResponse struct {
 	ContentType string
 	Rir         *shared.Rir

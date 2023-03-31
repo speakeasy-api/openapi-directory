@@ -17,9 +17,9 @@ pkg/models/operations/fetchcerts.go
 pkg/models/operations/fetchopeniddiscovery.go
 pkg/models/operations/fetchuserinfo.go
 pkg/models/shared/oauthv1devicecode.go
-pkg/models/shared/security.go
 pkg/models/shared/oauthv1token.go
 pkg/models/shared/oauthv1certs.go
 pkg/models/shared/oauthv1openiddiscovery.go
 pkg/models/shared/oauthv1userinfo.go
 USAGE.md
+pkg/models/operations/options.go

@@ -4,17 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ExtensionConfigurationRequest(
-    headers=operations.ExtensionConfigurationHeaders(
-        accept_language="beatae",
-        cache_control="aut",
-        if_none_match="quia",
-        request_timeout=22.200001,
-        user_agent="ea",
-        x_applecloudextension_retry_count=66.099998,
-        x_applecloudextension_session_id="animi",
-    ),
+    accept_language="corrupti",
+    cache_control="provident",
+    if_none_match="distinctio",
+    request_timeout=8442.66,
+    user_agent="unde",
+    x_applecloudextension_retry_count=8579.46,
+    x_applecloudextension_session_id="corrupti",
 )
     
 res = s.config.extension_configuration(req)

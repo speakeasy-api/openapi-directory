@@ -208,3 +208,4 @@ pkg/models/shared/certificateorkeygetschema.go
 pkg/models/shared/sessionresponse.go
 pkg/models/shared/sessionrequest.go
 USAGE.md
+pkg/models/operations/options.go

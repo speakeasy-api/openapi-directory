@@ -34,9 +34,9 @@ func newQosRules(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Add a quality of service rule
 func (s *qosRules) CreateNetworkSwitchQosRule(ctx context.Context, request operations.CreateNetworkSwitchQosRuleRequest) (*operations.CreateNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *qosRules) CreateNetworkSwitchQosRule(ctx context.Context, request opera
 // Delete a quality of service rule
 func (s *qosRules) DeleteNetworkSwitchQosRule(ctx context.Context, request operations.DeleteNetworkSwitchQosRuleRequest) (*operations.DeleteNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *qosRules) DeleteNetworkSwitchQosRule(ctx context.Context, request opera
 // Return a quality of service rule
 func (s *qosRules) GetNetworkSwitchQosRule(ctx context.Context, request operations.GetNetworkSwitchQosRuleRequest) (*operations.GetNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *qosRules) GetNetworkSwitchQosRule(ctx context.Context, request operatio
 // List quality of service rules
 func (s *qosRules) GetNetworkSwitchQosRules(ctx context.Context, request operations.GetNetworkSwitchQosRulesRequest) (*operations.GetNetworkSwitchQosRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *qosRules) GetNetworkSwitchQosRules(ctx context.Context, request operati
 // Return the quality of service rule IDs by order in which they will be processed by the switch
 func (s *qosRules) GetNetworkSwitchQosRulesOrder(ctx context.Context, request operations.GetNetworkSwitchQosRulesOrderRequest) (*operations.GetNetworkSwitchQosRulesOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,9 +260,9 @@ func (s *qosRules) GetNetworkSwitchQosRulesOrder(ctx context.Context, request op
 // Update a quality of service rule
 func (s *qosRules) UpdateNetworkSwitchQosRule(ctx context.Context, request operations.UpdateNetworkSwitchQosRuleRequest) (*operations.UpdateNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -312,9 +312,9 @@ func (s *qosRules) UpdateNetworkSwitchQosRule(ctx context.Context, request opera
 // Update the order in which the rules should be processed by the switch
 func (s *qosRules) UpdateNetworkSwitchQosRulesOrder(ctx context.Context, request operations.UpdateNetworkSwitchQosRulesOrderRequest) (*operations.UpdateNetworkSwitchQosRulesOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

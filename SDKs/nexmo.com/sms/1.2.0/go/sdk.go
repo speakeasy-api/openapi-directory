@@ -95,9 +95,9 @@ func New(opts ...SDKOption) *SDK {
 // Send an outbound SMS from your Vonage account
 func (s *SDK) SendAnSms(ctx context.Context, request operations.SendAnSmsRequest) (*operations.SendAnSmsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NewMessage", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

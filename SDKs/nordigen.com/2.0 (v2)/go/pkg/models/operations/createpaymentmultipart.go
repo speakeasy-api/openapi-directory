@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePaymentMultipartRequest struct {
-	Request shared.PaymentWriteRequest2 `request:"mediaType=multipart/form-data"`
-}
-
 type CreatePaymentMultipartResponse struct {
 	ContentType string
 	// Create payment

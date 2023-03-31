@@ -32,16 +32,16 @@ func newOnboarding(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetPaymentsProgramOnboarding - <span class="tablenote"><b>Note:</b> This method is no longer applicable, as all seller accounts globally have been enabled for the new eBay payment and checkout flow.</span><br/><br/>This method retrieves a seller's onboarding status for a payments program for a specified marketplace. The overall onboarding status of the seller and the status of each onboarding step is returned.
-func (s *onboarding) GetPaymentsProgramOnboarding(ctx context.Context, request operations.GetPaymentsProgramOnboardingRequest) (*operations.GetPaymentsProgramOnboardingResponse, error) {
+func (s *onboarding) GetPaymentsProgramOnboarding(ctx context.Context, request operations.GetPaymentsProgramOnboardingRequest, security operations.GetPaymentsProgramOnboardingSecurity) (*operations.GetPaymentsProgramOnboardingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments_program/{marketplace_id}/{payments_program_type}/onboarding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payments_program/{marketplace_id}/{payments_program_type}/onboarding", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

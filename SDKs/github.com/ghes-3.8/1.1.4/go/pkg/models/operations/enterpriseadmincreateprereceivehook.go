@@ -22,10 +22,6 @@ type EnterpriseAdminCreatePreReceiveHookRequestBody struct {
 	ScriptRepository map[string]interface{} `json:"script_repository"`
 }
 
-type EnterpriseAdminCreatePreReceiveHookRequest struct {
-	Request EnterpriseAdminCreatePreReceiveHookRequestBody `request:"mediaType=application/json"`
-}
-
 type EnterpriseAdminCreatePreReceiveHookResponse struct {
 	ContentType string
 	StatusCode  int

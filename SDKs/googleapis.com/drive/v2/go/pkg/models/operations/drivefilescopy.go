@@ -10,28 +10,28 @@ import (
 )
 
 type DriveFilesCopySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCopySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCopySecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCopySecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCopySecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCopySecurity struct {
@@ -40,11 +40,6 @@ type DriveFilesCopySecurity struct {
 	Option3 *DriveFilesCopySecurityOption3 `security:"option"`
 	Option4 *DriveFilesCopySecurityOption4 `security:"option"`
 	Option5 *DriveFilesCopySecurityOption5 `security:"option"`
-}
-
-type DriveFilesCopyPathParams struct {
-	// The ID of the file to copy.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 // DriveFilesCopyVisibilityEnum - The visibility of the new file. This parameter is only relevant when the source is not a native Google Doc and convert=false.
@@ -71,7 +66,8 @@ func (e *DriveFilesCopyVisibilityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DriveFilesCopyQueryParams struct {
+type DriveFilesCopyRequest struct {
+	FileInput *shared.FileInput `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Whether to convert this file to the corresponding Docs Editors format.
@@ -80,6 +76,8 @@ type DriveFilesCopyQueryParams struct {
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file to copy.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// A comma-separated list of IDs of labels to include in the labelInfo part of the response.
 	IncludeLabels *string `queryParam:"style=form,explode=true,name=includeLabels"`
 	// Specifies which additional view's permissions to include in the response. Only 'published' is supported.
@@ -110,13 +108,6 @@ type DriveFilesCopyQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The visibility of the new file. This parameter is only relevant when the source is not a native Google Doc and convert=false.
 	Visibility *DriveFilesCopyVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type DriveFilesCopyRequest struct {
-	PathParams  DriveFilesCopyPathParams
-	QueryParams DriveFilesCopyQueryParams
-	Request     *shared.FileInput `request:"mediaType=application/json"`
-	Security    DriveFilesCopySecurity
 }
 
 type DriveFilesCopyResponse struct {

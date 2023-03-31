@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionPackageSearchQueryParams struct {
+type GetActionPackageSearchRequest struct {
 	// A query string
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GetActionPackageSearchRequest struct {
-	QueryParams GetActionPackageSearchQueryParams
 }
 
 type GetActionPackageSearchResponse struct {

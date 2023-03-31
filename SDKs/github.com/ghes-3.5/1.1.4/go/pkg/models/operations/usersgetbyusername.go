@@ -10,13 +10,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersGetByUsernamePathParams struct {
+type UsersGetByUsernameRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersGetByUsernameRequest struct {
-	PathParams UsersGetByUsernamePathParams
 }
 
 type UsersGetByUsername200ApplicationJSONType string

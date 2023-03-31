@@ -12,15 +12,11 @@ var ListActivityServerList = []string{
 }
 
 type ListActivitySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListActivityPathParams struct {
-	// The SID of the Workspace with the Activity resources to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListActivityQueryParams struct {
+type ListActivityRequest struct {
 	// Whether return only Activity resources that are available or unavailable. A value of `true` returns only available activities. Values of '1' or `yes` also indicate `true`. All other values represent `false` and return activities that are unavailable.
 	Available *string `queryParam:"style=form,explode=true,name=Available"`
 	// The `friendly_name` of the Activity resources to read.
@@ -31,13 +27,8 @@ type ListActivityQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListActivityRequest struct {
-	PathParams  ListActivityPathParams
-	QueryParams ListActivityQueryParams
-	Security    ListActivitySecurity
-	ServerURL   *string
+	// The SID of the Workspace with the Activity resources to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListActivityListActivityResponseMeta struct {

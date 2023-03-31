@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1CompaniesEmailTemplatesTemplateNamePathParams struct {
+type GetSetupV1CompaniesEmailTemplatesTemplateNameRequest struct {
 	// Email template name
 	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type GetSetupV1CompaniesEmailTemplatesTemplateNameRequest struct {
-	PathParams GetSetupV1CompaniesEmailTemplatesTemplateNamePathParams
 }
 
 type GetSetupV1CompaniesEmailTemplatesTemplateNameResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteTaskQueueServerList = []string{
@@ -12,20 +11,15 @@ var DeleteTaskQueueServerList = []string{
 }
 
 type DeleteTaskQueueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteTaskQueuePathParams struct {
+type DeleteTaskQueueRequest struct {
 	// The SID of the TaskQueue resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Workspace with the TaskQueue to delete.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type DeleteTaskQueueRequest struct {
-	PathParams DeleteTaskQueuePathParams
-	Security   DeleteTaskQueueSecurity
-	ServerURL  *string
 }
 
 type DeleteTaskQueueResponse struct {

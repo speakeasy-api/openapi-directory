@@ -32,11 +32,11 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // ContentOrdersAcknowledge - Marks an order as acknowledged.
-func (s *orders) ContentOrdersAcknowledge(ctx context.Context, request operations.ContentOrdersAcknowledgeRequest) (*operations.ContentOrdersAcknowledgeResponse, error) {
+func (s *orders) ContentOrdersAcknowledge(ctx context.Context, request operations.ContentOrdersAcknowledgeRequest, security operations.ContentOrdersAcknowledgeSecurity) (*operations.ContentOrdersAcknowledgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/acknowledge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/acknowledge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersAcknowledgeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *orders) ContentOrdersAcknowledge(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *orders) ContentOrdersAcknowledge(ctx context.Context, request operation
 }
 
 // ContentOrdersAdvancetestorder - Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
-func (s *orders) ContentOrdersAdvancetestorder(ctx context.Context, request operations.ContentOrdersAdvancetestorderRequest) (*operations.ContentOrdersAdvancetestorderResponse, error) {
+func (s *orders) ContentOrdersAdvancetestorder(ctx context.Context, request operations.ContentOrdersAdvancetestorderRequest, security operations.ContentOrdersAdvancetestorderSecurity) (*operations.ContentOrdersAdvancetestorderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/advance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/advance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *orders) ContentOrdersAdvancetestorder(ctx context.Context, request oper
 }
 
 // ContentOrdersCancel - Cancels all line items in an order, making a full refund.
-func (s *orders) ContentOrdersCancel(ctx context.Context, request operations.ContentOrdersCancelRequest) (*operations.ContentOrdersCancelResponse, error) {
+func (s *orders) ContentOrdersCancel(ctx context.Context, request operations.ContentOrdersCancelRequest, security operations.ContentOrdersCancelSecurity) (*operations.ContentOrdersCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCancelRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *orders) ContentOrdersCancel(ctx context.Context, request operations.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *orders) ContentOrdersCancel(ctx context.Context, request operations.Con
 }
 
 // ContentOrdersCancellineitem - Cancels a line item, making a full refund.
-func (s *orders) ContentOrdersCancellineitem(ctx context.Context, request operations.ContentOrdersCancellineitemRequest) (*operations.ContentOrdersCancellineitemResponse, error) {
+func (s *orders) ContentOrdersCancellineitem(ctx context.Context, request operations.ContentOrdersCancellineitemRequest, security operations.ContentOrdersCancellineitemSecurity) (*operations.ContentOrdersCancellineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancelLineItem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancelLineItem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCancelLineItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *orders) ContentOrdersCancellineitem(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,11 +245,11 @@ func (s *orders) ContentOrdersCancellineitem(ctx context.Context, request operat
 }
 
 // ContentOrdersCanceltestorderbycustomer - Sandbox only. Cancels a test order for customer-initiated cancellation.
-func (s *orders) ContentOrdersCanceltestorderbycustomer(ctx context.Context, request operations.ContentOrdersCanceltestorderbycustomerRequest) (*operations.ContentOrdersCanceltestorderbycustomerResponse, error) {
+func (s *orders) ContentOrdersCanceltestorderbycustomer(ctx context.Context, request operations.ContentOrdersCanceltestorderbycustomerRequest, security operations.ContentOrdersCanceltestorderbycustomerSecurity) (*operations.ContentOrdersCanceltestorderbycustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/cancelByCustomer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/cancelByCustomer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCancelTestOrderByCustomerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,11 +261,11 @@ func (s *orders) ContentOrdersCanceltestorderbycustomer(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *orders) ContentOrdersCanceltestorderbycustomer(ctx context.Context, req
 }
 
 // ContentOrdersCaptureOrder - Capture funds from the customer for the current order total. This method should be called after the merchant verifies that they are able and ready to start shipping the order. This method blocks until a response is received from the payment processsor. If this method succeeds, the merchant is guaranteed to receive funds for the order after shipment. If the request fails, it can be retried or the order may be cancelled. This method cannot be called after the entire order is already shipped. A rejected error code is returned when the payment service provider has declined the charge. This indicates a problem between the PSP and either the merchant's or customer's account. Sometimes this error will be resolved by the customer. We recommend retrying these errors once per day or cancelling the order with reason `failedToCaptureFunds` if the items cannot be held.
-func (s *orders) ContentOrdersCaptureOrder(ctx context.Context, request operations.ContentOrdersCaptureOrderRequest) (*operations.ContentOrdersCaptureOrderResponse, error) {
+func (s *orders) ContentOrdersCaptureOrder(ctx context.Context, request operations.ContentOrdersCaptureOrderRequest, security operations.ContentOrdersCaptureOrderSecurity) (*operations.ContentOrdersCaptureOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/captureOrder", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/captureOrder", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *orders) ContentOrdersCaptureOrder(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,11 +355,11 @@ func (s *orders) ContentOrdersCaptureOrder(ctx context.Context, request operatio
 }
 
 // ContentOrdersCreatetestorder - Sandbox only. Creates a test order.
-func (s *orders) ContentOrdersCreatetestorder(ctx context.Context, request operations.ContentOrdersCreatetestorderRequest) (*operations.ContentOrdersCreatetestorderResponse, error) {
+func (s *orders) ContentOrdersCreatetestorder(ctx context.Context, request operations.ContentOrdersCreatetestorderRequest, security operations.ContentOrdersCreatetestorderSecurity) (*operations.ContentOrdersCreatetestorderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCreateTestOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -371,11 +371,11 @@ func (s *orders) ContentOrdersCreatetestorder(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,11 +410,11 @@ func (s *orders) ContentOrdersCreatetestorder(ctx context.Context, request opera
 }
 
 // ContentOrdersCreatetestreturn - Sandbox only. Creates a test return.
-func (s *orders) ContentOrdersCreatetestreturn(ctx context.Context, request operations.ContentOrdersCreatetestreturnRequest) (*operations.ContentOrdersCreatetestreturnResponse, error) {
+func (s *orders) ContentOrdersCreatetestreturn(ctx context.Context, request operations.ContentOrdersCreatetestreturnRequest, security operations.ContentOrdersCreatetestreturnSecurity) (*operations.ContentOrdersCreatetestreturnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/testreturn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/testreturn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCreateTestReturnRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -426,11 +426,11 @@ func (s *orders) ContentOrdersCreatetestreturn(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -465,20 +465,20 @@ func (s *orders) ContentOrdersCreatetestreturn(ctx context.Context, request oper
 }
 
 // ContentOrdersGet - Retrieves an order from your Merchant Center account.
-func (s *orders) ContentOrdersGet(ctx context.Context, request operations.ContentOrdersGetRequest) (*operations.ContentOrdersGetResponse, error) {
+func (s *orders) ContentOrdersGet(ctx context.Context, request operations.ContentOrdersGetRequest, security operations.ContentOrdersGetSecurity) (*operations.ContentOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,20 +513,20 @@ func (s *orders) ContentOrdersGet(ctx context.Context, request operations.Conten
 }
 
 // ContentOrdersGetbymerchantorderid - Retrieves an order using merchant order ID.
-func (s *orders) ContentOrdersGetbymerchantorderid(ctx context.Context, request operations.ContentOrdersGetbymerchantorderidRequest) (*operations.ContentOrdersGetbymerchantorderidResponse, error) {
+func (s *orders) ContentOrdersGetbymerchantorderid(ctx context.Context, request operations.ContentOrdersGetbymerchantorderidRequest, security operations.ContentOrdersGetbymerchantorderidSecurity) (*operations.ContentOrdersGetbymerchantorderidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordersbymerchantid/{merchantOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordersbymerchantid/{merchantOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,20 +561,20 @@ func (s *orders) ContentOrdersGetbymerchantorderid(ctx context.Context, request 
 }
 
 // ContentOrdersGettestordertemplate - Sandbox only. Retrieves an order template that can be used to quickly create a new order in sandbox.
-func (s *orders) ContentOrdersGettestordertemplate(ctx context.Context, request operations.ContentOrdersGettestordertemplateRequest) (*operations.ContentOrdersGettestordertemplateResponse, error) {
+func (s *orders) ContentOrdersGettestordertemplate(ctx context.Context, request operations.ContentOrdersGettestordertemplateRequest, security operations.ContentOrdersGettestordertemplateSecurity) (*operations.ContentOrdersGettestordertemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testordertemplates/{templateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testordertemplates/{templateName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,11 +609,11 @@ func (s *orders) ContentOrdersGettestordertemplate(ctx context.Context, request 
 }
 
 // ContentOrdersInstorerefundlineitem - Deprecated. Notifies that item return and refund was handled directly by merchant outside of Google payments processing (for example, cash refund done in store). Note: We recommend calling the returnrefundlineitem method to refund in-store returns. We will issue the refund directly to the customer. This helps to prevent possible differences arising between merchant and Google transaction records. We also recommend having the point of sale system communicate with Google to ensure that customers do not receive a double refund by first refunding through Google then through an in-store return.
-func (s *orders) ContentOrdersInstorerefundlineitem(ctx context.Context, request operations.ContentOrdersInstorerefundlineitemRequest) (*operations.ContentOrdersInstorerefundlineitemResponse, error) {
+func (s *orders) ContentOrdersInstorerefundlineitem(ctx context.Context, request operations.ContentOrdersInstorerefundlineitemRequest, security operations.ContentOrdersInstorerefundlineitemSecurity) (*operations.ContentOrdersInstorerefundlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/inStoreRefundLineItem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/inStoreRefundLineItem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersInStoreRefundLineItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -625,11 +625,11 @@ func (s *orders) ContentOrdersInstorerefundlineitem(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,20 +664,20 @@ func (s *orders) ContentOrdersInstorerefundlineitem(ctx context.Context, request
 }
 
 // ContentOrdersList - Lists the orders in your Merchant Center account.
-func (s *orders) ContentOrdersList(ctx context.Context, request operations.ContentOrdersListRequest) (*operations.ContentOrdersListResponse, error) {
+func (s *orders) ContentOrdersList(ctx context.Context, request operations.ContentOrdersListRequest, security operations.ContentOrdersListSecurity) (*operations.ContentOrdersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,11 +712,11 @@ func (s *orders) ContentOrdersList(ctx context.Context, request operations.Conte
 }
 
 // ContentOrdersRefunditem - Issues a partial or total refund for items and shipment.
-func (s *orders) ContentOrdersRefunditem(ctx context.Context, request operations.ContentOrdersRefunditemRequest) (*operations.ContentOrdersRefunditemResponse, error) {
+func (s *orders) ContentOrdersRefunditem(ctx context.Context, request operations.ContentOrdersRefunditemRequest, security operations.ContentOrdersRefunditemSecurity) (*operations.ContentOrdersRefunditemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/refunditem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/refunditem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersRefundItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -728,11 +728,11 @@ func (s *orders) ContentOrdersRefunditem(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,11 +767,11 @@ func (s *orders) ContentOrdersRefunditem(ctx context.Context, request operations
 }
 
 // ContentOrdersRefundorder - Issues a partial or total refund for an order.
-func (s *orders) ContentOrdersRefundorder(ctx context.Context, request operations.ContentOrdersRefundorderRequest) (*operations.ContentOrdersRefundorderResponse, error) {
+func (s *orders) ContentOrdersRefundorder(ctx context.Context, request operations.ContentOrdersRefundorderRequest, security operations.ContentOrdersRefundorderSecurity) (*operations.ContentOrdersRefundorderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/refundorder", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/refundorder", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersRefundOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -783,11 +783,11 @@ func (s *orders) ContentOrdersRefundorder(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -822,11 +822,11 @@ func (s *orders) ContentOrdersRefundorder(ctx context.Context, request operation
 }
 
 // ContentOrdersRejectreturnlineitem - Rejects return on an line item.
-func (s *orders) ContentOrdersRejectreturnlineitem(ctx context.Context, request operations.ContentOrdersRejectreturnlineitemRequest) (*operations.ContentOrdersRejectreturnlineitemResponse, error) {
+func (s *orders) ContentOrdersRejectreturnlineitem(ctx context.Context, request operations.ContentOrdersRejectreturnlineitemRequest, security operations.ContentOrdersRejectreturnlineitemSecurity) (*operations.ContentOrdersRejectreturnlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/rejectReturnLineItem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/rejectReturnLineItem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersRejectReturnLineItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -838,11 +838,11 @@ func (s *orders) ContentOrdersRejectreturnlineitem(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,11 +877,11 @@ func (s *orders) ContentOrdersRejectreturnlineitem(ctx context.Context, request 
 }
 
 // ContentOrdersReturnrefundlineitem - Returns and refunds a line item. Note that this method can only be called on fully shipped orders. The Orderreturns API is the preferred way to handle returns after you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot be found, then we recommend using this API to issue a refund.
-func (s *orders) ContentOrdersReturnrefundlineitem(ctx context.Context, request operations.ContentOrdersReturnrefundlineitemRequest) (*operations.ContentOrdersReturnrefundlineitemResponse, error) {
+func (s *orders) ContentOrdersReturnrefundlineitem(ctx context.Context, request operations.ContentOrdersReturnrefundlineitemRequest, security operations.ContentOrdersReturnrefundlineitemSecurity) (*operations.ContentOrdersReturnrefundlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/returnRefundLineItem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/returnRefundLineItem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersReturnRefundLineItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -893,11 +893,11 @@ func (s *orders) ContentOrdersReturnrefundlineitem(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -932,11 +932,11 @@ func (s *orders) ContentOrdersReturnrefundlineitem(ctx context.Context, request 
 }
 
 // ContentOrdersSetlineitemmetadata - Sets (or overrides if it already exists) merchant provided annotations in the form of key-value pairs. A common use case would be to supply us with additional structured information about a line item that cannot be provided through other methods. Submitted key-value pairs can be retrieved as part of the orders resource.
-func (s *orders) ContentOrdersSetlineitemmetadata(ctx context.Context, request operations.ContentOrdersSetlineitemmetadataRequest) (*operations.ContentOrdersSetlineitemmetadataResponse, error) {
+func (s *orders) ContentOrdersSetlineitemmetadata(ctx context.Context, request operations.ContentOrdersSetlineitemmetadataRequest, security operations.ContentOrdersSetlineitemmetadataSecurity) (*operations.ContentOrdersSetlineitemmetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/setLineItemMetadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/setLineItemMetadata", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersSetLineItemMetadataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -948,11 +948,11 @@ func (s *orders) ContentOrdersSetlineitemmetadata(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -987,11 +987,11 @@ func (s *orders) ContentOrdersSetlineitemmetadata(ctx context.Context, request o
 }
 
 // ContentOrdersShiplineitems - Marks line item(s) as shipped.
-func (s *orders) ContentOrdersShiplineitems(ctx context.Context, request operations.ContentOrdersShiplineitemsRequest) (*operations.ContentOrdersShiplineitemsResponse, error) {
+func (s *orders) ContentOrdersShiplineitems(ctx context.Context, request operations.ContentOrdersShiplineitemsRequest, security operations.ContentOrdersShiplineitemsSecurity) (*operations.ContentOrdersShiplineitemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/shipLineItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/shipLineItems", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersShipLineItemsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1003,11 +1003,11 @@ func (s *orders) ContentOrdersShiplineitems(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,11 +1042,11 @@ func (s *orders) ContentOrdersShiplineitems(ctx context.Context, request operati
 }
 
 // ContentOrdersUpdatelineitemshippingdetails - Updates ship by and delivery by dates for a line item.
-func (s *orders) ContentOrdersUpdatelineitemshippingdetails(ctx context.Context, request operations.ContentOrdersUpdatelineitemshippingdetailsRequest) (*operations.ContentOrdersUpdatelineitemshippingdetailsResponse, error) {
+func (s *orders) ContentOrdersUpdatelineitemshippingdetails(ctx context.Context, request operations.ContentOrdersUpdatelineitemshippingdetailsRequest, security operations.ContentOrdersUpdatelineitemshippingdetailsSecurity) (*operations.ContentOrdersUpdatelineitemshippingdetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateLineItemShippingDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateLineItemShippingDetails", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersUpdateLineItemShippingDetailsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1058,11 +1058,11 @@ func (s *orders) ContentOrdersUpdatelineitemshippingdetails(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1097,11 +1097,11 @@ func (s *orders) ContentOrdersUpdatelineitemshippingdetails(ctx context.Context,
 }
 
 // ContentOrdersUpdatemerchantorderid - Updates the merchant order ID for a given order.
-func (s *orders) ContentOrdersUpdatemerchantorderid(ctx context.Context, request operations.ContentOrdersUpdatemerchantorderidRequest) (*operations.ContentOrdersUpdatemerchantorderidResponse, error) {
+func (s *orders) ContentOrdersUpdatemerchantorderid(ctx context.Context, request operations.ContentOrdersUpdatemerchantorderidRequest, security operations.ContentOrdersUpdatemerchantorderidSecurity) (*operations.ContentOrdersUpdatemerchantorderidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateMerchantOrderId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateMerchantOrderId", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersUpdateMerchantOrderIDRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1113,11 +1113,11 @@ func (s *orders) ContentOrdersUpdatemerchantorderid(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1152,11 +1152,11 @@ func (s *orders) ContentOrdersUpdatemerchantorderid(ctx context.Context, request
 }
 
 // ContentOrdersUpdateshipment - Updates a shipment's status, carrier, and/or tracking ID.
-func (s *orders) ContentOrdersUpdateshipment(ctx context.Context, request operations.ContentOrdersUpdateshipmentRequest) (*operations.ContentOrdersUpdateshipmentResponse, error) {
+func (s *orders) ContentOrdersUpdateshipment(ctx context.Context, request operations.ContentOrdersUpdateshipmentRequest, security operations.ContentOrdersUpdateshipmentSecurity) (*operations.ContentOrdersUpdateshipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateShipment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateShipment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersUpdateShipmentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1168,11 +1168,11 @@ func (s *orders) ContentOrdersUpdateshipment(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

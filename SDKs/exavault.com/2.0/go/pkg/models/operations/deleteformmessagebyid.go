@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteFormMessageByIDPathParams struct {
-	// ID of the entry to be deleted data for
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteFormMessageByIDHeaders struct {
+type DeleteFormMessageByIDRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteFormMessageByIDRequest struct {
-	PathParams DeleteFormMessageByIDPathParams
-	Headers    DeleteFormMessageByIDHeaders
+	// ID of the entry to be deleted data for
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteFormMessageByIDResponse struct {

@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListMembersInOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsListMembersInOrgRoleEnum - Filters members returned by their role in the team. Can be one of:
 // \* `member` - normal members of the team.
 // \* `maintainer` - team maintainers.
@@ -45,7 +39,8 @@ func (e *TeamsListMembersInOrgRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TeamsListMembersInOrgQueryParams struct {
+type TeamsListMembersInOrgRequest struct {
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
@@ -55,11 +50,8 @@ type TeamsListMembersInOrgQueryParams struct {
 	// \* `maintainer` - team maintainers.
 	// \* `all` - all members of the team.
 	Role *TeamsListMembersInOrgRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type TeamsListMembersInOrgRequest struct {
-	PathParams  TeamsListMembersInOrgPathParams
-	QueryParams TeamsListMembersInOrgQueryParams
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsListMembersInOrgResponse struct {

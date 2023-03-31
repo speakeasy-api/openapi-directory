@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasObjectChangesListQueryParams struct {
+type ExtrasObjectChangesListRequest struct {
 	Action             *string `queryParam:"style=form,explode=true,name=action"`
 	ActionN            *string `queryParam:"style=form,explode=true,name=action__n"`
 	ChangedObjectID    *string `queryParam:"style=form,explode=true,name=changed_object_id"`
@@ -53,10 +53,6 @@ type ExtrasObjectChangesListQueryParams struct {
 	UserNameNie  *string `queryParam:"style=form,explode=true,name=user_name__nie"`
 	UserNameNiew *string `queryParam:"style=form,explode=true,name=user_name__niew"`
 	UserNameNisw *string `queryParam:"style=form,explode=true,name=user_name__nisw"`
-}
-
-type ExtrasObjectChangesListRequest struct {
-	QueryParams ExtrasObjectChangesListQueryParams
 }
 
 type ExtrasObjectChangesList200ApplicationJSON struct {

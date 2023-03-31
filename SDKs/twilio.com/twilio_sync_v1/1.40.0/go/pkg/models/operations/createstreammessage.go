@@ -12,14 +12,8 @@ var CreateStreamMessageServerList = []string{
 }
 
 type CreateStreamMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateStreamMessagePathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Stream Message in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Sync Stream to create the new Stream Message resource for.
-	StreamSid string `pathParam:"style=simple,explode=false,name=StreamSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateStreamMessageCreateStreamMessageRequest struct {
@@ -28,10 +22,11 @@ type CreateStreamMessageCreateStreamMessageRequest struct {
 }
 
 type CreateStreamMessageRequest struct {
-	PathParams CreateStreamMessagePathParams
-	Request    *CreateStreamMessageCreateStreamMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateStreamMessageSecurity
-	ServerURL  *string
+	RequestBody *CreateStreamMessageCreateStreamMessageRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Stream Message in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Sync Stream to create the new Stream Message resource for.
+	StreamSid string `pathParam:"style=simple,explode=false,name=StreamSid"`
 }
 
 type CreateStreamMessageResponse struct {

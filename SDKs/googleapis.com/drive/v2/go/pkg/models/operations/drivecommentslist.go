@@ -8,18 +8,18 @@ import (
 )
 
 type DriveCommentsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveCommentsListSecurity struct {
@@ -28,16 +28,13 @@ type DriveCommentsListSecurity struct {
 	Option3 *DriveCommentsListSecurityOption3 `security:"option"`
 }
 
-type DriveCommentsListPathParams struct {
-	// The ID of the file.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DriveCommentsListQueryParams struct {
+type DriveCommentsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// If set, all comments and replies, including deleted comments and replies (with content stripped) will be returned.
 	IncludeDeleted *bool `queryParam:"style=form,explode=true,name=includeDeleted"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,12 +53,6 @@ type DriveCommentsListQueryParams struct {
 	UpdatedMin *string `queryParam:"style=form,explode=true,name=updatedMin"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveCommentsListRequest struct {
-	PathParams  DriveCommentsListPathParams
-	QueryParams DriveCommentsListQueryParams
-	Security    DriveCommentsListSecurity
 }
 
 type DriveCommentsListResponse struct {

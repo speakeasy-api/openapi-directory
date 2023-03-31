@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.ConvertRequest(
-    request=operations.ConvertRequestBody(
-        filename="aut",
-        source="beatae",
-        validate="on",
-    ),
+
+
+req = operations.ConvertRequestBody(
+    filename="corrupti",
+    source="provident",
+    validate="on",
 )
     
 res = s.conversion.convert(req)

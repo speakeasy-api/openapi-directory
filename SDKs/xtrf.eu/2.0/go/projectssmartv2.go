@@ -35,9 +35,9 @@ func newProjectsSmartV2(defaultClient, securityClient HTTPClient, serverURL, lan
 
 func (s *projectsSmartV2) AddExternalFileLinks(ctx context.Context, request operations.AddExternalFileLinksRequest) (*operations.AddExternalFileLinksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/addExternalLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/addExternalLink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExternalFileDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -81,9 +81,9 @@ func (s *projectsSmartV2) AddExternalFileLinks(ctx context.Context, request oper
 // Adds file links to the project as added by PM. The following properties can be specified for each file link:<ul><li>url (required, 400 Bad Request is returned otherwise)</li><li>category (required, 400 Bad Request is returned otherwise)</li><li>languageIds – when the file category depends on a list of languages</li><li>languageCombinationIds – when the file category depends on a list of language combinations</li></ul>
 func (s *projectsSmartV2) AddFileLinks1(ctx context.Context, request operations.AddFileLinks1Request) (*operations.AddFileLinks1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/addLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/addLink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileLinkCategorizationsDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,9 +136,9 @@ func (s *projectsSmartV2) AddFileLinks1(ctx context.Context, request operations.
 // Adds files to the project as added by PM. The files have to be uploaded beforehand (see "POST /v2/projects/{projectId}/files/upload" operation). The following properties can be specified for each file:<ul><li>category (required, 400 Bad Request is returned otherwise)</li><li>languageIds – when the file category depends on a list of languages</li><li>languageCombinationIds – when the file category depends on a list of language combinations</li></ul>
 func (s *projectsSmartV2) AddFiles1(ctx context.Context, request operations.AddFiles1Request) (*operations.AddFiles1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileCategorizationsDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -181,7 +181,7 @@ func (s *projectsSmartV2) AddFiles1(ctx context.Context, request operations.AddF
 // AddJobToProcess - Returns process id.
 func (s *projectsSmartV2) AddJobToProcess(ctx context.Context, request operations.AddJobToProcessRequest) (*operations.AddJobToProcessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/addJob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/addJob", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *projectsSmartV2) AddJobToProcess(ctx context.Context, request operation
 
 // Archive - Prepares a ZIP archive that contains the specified files.
 // Prepares a ZIP archive that contains the specified files.
-func (s *projectsSmartV2) Archive(ctx context.Context, request operations.ArchiveRequest) (*operations.ArchiveResponse, error) {
+func (s *projectsSmartV2) Archive(ctx context.Context, request shared.FilesDto) (*operations.ArchiveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/projects/files/archive"
 
@@ -281,9 +281,9 @@ func (s *projectsSmartV2) Archive(ctx context.Context, request operations.Archiv
 // Changes project status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys: <ul><li>CANCELLED – available when the job has one of the following statuses: OPEN, STARTED</li></ul>
 func (s *projectsSmartV2) ChangeStatus2(ctx context.Context, request operations.ChangeStatus2Request) (*operations.ChangeStatus2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectStatusDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -327,9 +327,9 @@ func (s *projectsSmartV2) ChangeStatus2(ctx context.Context, request operations.
 // Adds a payable to a project.
 func (s *projectsSmartV2) CreatePayable2(ctx context.Context, request operations.CreatePayable2Request) (*operations.CreatePayable2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/payables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/payables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -382,9 +382,9 @@ func (s *projectsSmartV2) CreatePayable2(ctx context.Context, request operations
 // Adds a receivable to a project.
 func (s *projectsSmartV2) CreateReceivable2(ctx context.Context, request operations.CreateReceivable2Request) (*operations.CreateReceivable2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/receivables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/receivables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -435,7 +435,7 @@ func (s *projectsSmartV2) CreateReceivable2(ctx context.Context, request operati
 
 // Create6 - Creates a new Smart Project.
 // Creates a new Smart Project. If the specified service ID refers to Classic Project, 400 Bad Request is returned instead.
-func (s *projectsSmartV2) Create6(ctx context.Context, request operations.Create6Request) (*operations.Create6Response, error) {
+func (s *projectsSmartV2) Create6(ctx context.Context, request shared.ProjectCreateDTO) (*operations.Create6Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/projects"
 
@@ -489,7 +489,7 @@ func (s *projectsSmartV2) Create6(ctx context.Context, request operations.Create
 // Deletes a payable.
 func (s *projectsSmartV2) DeletePayable2(ctx context.Context, request operations.DeletePayable2Request) (*operations.DeletePayable2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/payables/{payableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/payables/{payableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -525,7 +525,7 @@ func (s *projectsSmartV2) DeletePayable2(ctx context.Context, request operations
 // Deletes a receivable.
 func (s *projectsSmartV2) DeleteReceivable2(ctx context.Context, request operations.DeleteReceivable2Request) (*operations.DeleteReceivable2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -561,7 +561,7 @@ func (s *projectsSmartV2) DeleteReceivable2(ctx context.Context, request operati
 // Returns project details.
 func (s *projectsSmartV2) GetByExternalID1(ctx context.Context, request operations.GetByExternalID1Request) (*operations.GetByExternalID1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/for-external-id/{externalProjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/for-external-id/{externalProjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -606,7 +606,7 @@ func (s *projectsSmartV2) GetByExternalID1(ctx context.Context, request operatio
 // Returns project details. If the specified project ID refers to Classic Project, 400 Bad Request is returned instead.
 func (s *projectsSmartV2) GetByID9(ctx context.Context, request operations.GetByID9Request) (*operations.GetByID9Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -650,7 +650,7 @@ func (s *projectsSmartV2) GetByID9(ctx context.Context, request operations.GetBy
 // GetCATToolProjectInfo - Returns if cat tool project is created or queued.
 func (s *projectsSmartV2) GetCATToolProjectInfo(ctx context.Context, request operations.GetCATToolProjectInfoRequest) (*operations.GetCATToolProjectInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/catToolProject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/catToolProject", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -695,7 +695,7 @@ func (s *projectsSmartV2) GetCATToolProjectInfo(ctx context.Context, request ope
 // Returns Client Contacts information for a project
 func (s *projectsSmartV2) GetContacts2(ctx context.Context, request operations.GetContacts2Request) (*operations.GetContacts2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientContacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientContacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -740,7 +740,7 @@ func (s *projectsSmartV2) GetContacts2(ctx context.Context, request operations.G
 // Returns a list of custom field keys and values for a project.
 func (s *projectsSmartV2) GetCustomFields8(ctx context.Context, request operations.GetCustomFields8Request) (*operations.GetCustomFields8Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/customFields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -785,7 +785,7 @@ func (s *projectsSmartV2) GetCustomFields8(ctx context.Context, request operatio
 // Returns list of files in a project, that are ready to be delivered to client. A file is considered deliverable to client when all of the following criteria are met:<ul><li>the file was added to a job in the last step in the process</li><li>the file is marked as verified (if it was added in a verification step and the file is verifiable, according to its category)</li><li>the job is finished (has Ready status)</li></ul>
 func (s *projectsSmartV2) GetDeliverableFiles(ctx context.Context, request operations.GetDeliverableFilesRequest) (*operations.GetDeliverableFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/deliverable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/deliverable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -830,7 +830,7 @@ func (s *projectsSmartV2) GetDeliverableFiles(ctx context.Context, request opera
 // Returns details of a file.
 func (s *projectsSmartV2) GetFileByID2(ctx context.Context, request operations.GetFileByID2Request) (*operations.GetFileByID2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -875,7 +875,7 @@ func (s *projectsSmartV2) GetFileByID2(ctx context.Context, request operations.G
 // Downloads a file content.
 func (s *projectsSmartV2) GetFileContentByID(ctx context.Context, request operations.GetFileContentByIDRequest) (*operations.GetFileContentByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/files/{fileId}/download/{fileName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/files/{fileId}/download/{fileName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -911,7 +911,7 @@ func (s *projectsSmartV2) GetFileContentByID(ctx context.Context, request operat
 // Returns list of files in a project. Only files added to the project (i.e. files that have assigned category and languages) are listed.
 func (s *projectsSmartV2) GetFiles(ctx context.Context, request operations.GetFilesRequest) (*operations.GetFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -956,7 +956,7 @@ func (s *projectsSmartV2) GetFiles(ctx context.Context, request operations.GetFi
 // Returns finance information for a project.
 func (s *projectsSmartV2) GetFinance2(ctx context.Context, request operations.GetFinance2Request) (*operations.GetFinance2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1001,7 +1001,7 @@ func (s *projectsSmartV2) GetFinance2(ctx context.Context, request operations.Ge
 // Returns list of jobs in a project.
 func (s *projectsSmartV2) GetJobs(ctx context.Context, request operations.GetJobsRequest) (*operations.GetJobsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1045,7 +1045,7 @@ func (s *projectsSmartV2) GetJobs(ctx context.Context, request operations.GetJob
 // GetProcessID - Returns process id.
 func (s *projectsSmartV2) GetProcessID(ctx context.Context, request operations.GetProcessIDRequest) (*operations.GetProcessIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/process", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/process", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1090,9 +1090,9 @@ func (s *projectsSmartV2) GetProcessID(ctx context.Context, request operations.G
 // Updates Client Deadline for a project.
 func (s *projectsSmartV2) UpdateClientDeadline(ctx context.Context, request operations.UpdateClientDeadlineRequest) (*operations.UpdateClientDeadlineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientDeadline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientDeadline", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1136,9 +1136,9 @@ func (s *projectsSmartV2) UpdateClientDeadline(ctx context.Context, request oper
 // Updates Client Notes for a project.
 func (s *projectsSmartV2) UpdateClientNotes(ctx context.Context, request operations.UpdateClientNotesRequest) (*operations.UpdateClientNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientNotes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientNotes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1182,9 +1182,9 @@ func (s *projectsSmartV2) UpdateClientNotes(ctx context.Context, request operati
 // Updates Client Reference Number for a project.
 func (s *projectsSmartV2) UpdateClientReferenceNumber(ctx context.Context, request operations.UpdateClientReferenceNumberRequest) (*operations.UpdateClientReferenceNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientReferenceNumber", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientReferenceNumber", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1228,9 +1228,9 @@ func (s *projectsSmartV2) UpdateClientReferenceNumber(ctx context.Context, reque
 // Updates Client Contacts for a project.
 func (s *projectsSmartV2) UpdateContacts2(ctx context.Context, request operations.UpdateContacts2Request) (*operations.UpdateContacts2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientContacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/clientContacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SmartContactsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1283,9 +1283,9 @@ func (s *projectsSmartV2) UpdateContacts2(ctx context.Context, request operation
 // Updates a custom field with a specified key in a project
 func (s *projectsSmartV2) UpdateCustomField2(ctx context.Context, request operations.UpdateCustomField2Request) (*operations.UpdateCustomField2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/customFields/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/customFields/{key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SmartCustomFieldDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1329,9 +1329,9 @@ func (s *projectsSmartV2) UpdateCustomField2(ctx context.Context, request operat
 // Updates Internal Notes for a project.
 func (s *projectsSmartV2) UpdateInternalNotes(ctx context.Context, request operations.UpdateInternalNotesRequest) (*operations.UpdateInternalNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/internalNotes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/internalNotes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1375,9 +1375,9 @@ func (s *projectsSmartV2) UpdateInternalNotes(ctx context.Context, request opera
 // Updates Order Date for a project.
 func (s *projectsSmartV2) UpdateOrderedOn(ctx context.Context, request operations.UpdateOrderedOnRequest) (*operations.UpdateOrderedOnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/orderDate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/orderDate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1421,9 +1421,9 @@ func (s *projectsSmartV2) UpdateOrderedOn(ctx context.Context, request operation
 // Updates a payable.
 func (s *projectsSmartV2) UpdatePayable2(ctx context.Context, request operations.UpdatePayable2Request) (*operations.UpdatePayable2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/payables/{payableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/payables/{payableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1476,9 +1476,9 @@ func (s *projectsSmartV2) UpdatePayable2(ctx context.Context, request operations
 // Updates a receivable.
 func (s *projectsSmartV2) UpdateReceivable2(ctx context.Context, request operations.UpdateReceivable2Request) (*operations.UpdateReceivable2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1531,9 +1531,9 @@ func (s *projectsSmartV2) UpdateReceivable2(ctx context.Context, request operati
 // Updates source language for a project.
 func (s *projectsSmartV2) UpdateSourceLanguage(ctx context.Context, request operations.UpdateSourceLanguageRequest) (*operations.UpdateSourceLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/sourceLanguage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/sourceLanguage", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SourceLanguageDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1577,9 +1577,9 @@ func (s *projectsSmartV2) UpdateSourceLanguage(ctx context.Context, request oper
 // Updates specialization for a project.
 func (s *projectsSmartV2) UpdateSpecialization(ctx context.Context, request operations.UpdateSpecializationRequest) (*operations.UpdateSpecializationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/specialization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/specialization", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpecializationDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1623,9 +1623,9 @@ func (s *projectsSmartV2) UpdateSpecialization(ctx context.Context, request oper
 // Updates target languages for a project.
 func (s *projectsSmartV2) UpdateTargetLanguages(ctx context.Context, request operations.UpdateTargetLanguagesRequest) (*operations.UpdateTargetLanguagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/targetLanguages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/targetLanguages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetLanguagesDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1669,9 +1669,9 @@ func (s *projectsSmartV2) UpdateTargetLanguages(ctx context.Context, request ope
 // Updates instructions for all vendors performing the jobs in a project. See also "PUT /jobs/{jobId}/instructions" for updating instructions for a specific job in a project or quote.
 func (s *projectsSmartV2) UpdateVendorInstructions(ctx context.Context, request operations.UpdateVendorInstructionsRequest) (*operations.UpdateVendorInstructionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/vendorInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/vendorInstructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1715,9 +1715,9 @@ func (s *projectsSmartV2) UpdateVendorInstructions(ctx context.Context, request 
 // Updates volume for a project.
 func (s *projectsSmartV2) UpdateVolume(ctx context.Context, request operations.UpdateVolumeRequest) (*operations.UpdateVolumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/volume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/volume", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BigDecimalDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1761,9 +1761,9 @@ func (s *projectsSmartV2) UpdateVolume(ctx context.Context, request operations.U
 // Uploads file to the project as a file uploaded by PM. Only one file can be uploaded at once. When the upload is finished the file has to be added by specifying its category and languages (see "PUT /v2/projects/{projectId}/files/add" operation
 func (s *projectsSmartV2) UploadFile2(ctx context.Context, request operations.UploadFile2Request) (*operations.UploadFile2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/projects/{projectId}/files/upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileToUploadDto", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

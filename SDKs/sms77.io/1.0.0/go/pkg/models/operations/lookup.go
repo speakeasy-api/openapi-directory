@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type LookupQueryParams struct {
+type LookupRequest struct {
 	// Determines whether the response shall be returned in JSON format. Does not work with type "format".
 	JSON *string `queryParam:"style=form,explode=true,name=json"`
 	// The phone number to look up.
 	Number []string `queryParam:"style=form,explode=false,name=number"`
 	// Allowed values are "cnam", "format", "hlr" and "mnp".
 	Type string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type LookupRequest struct {
-	QueryParams LookupQueryParams
 }
 
 type LookupResponse struct {

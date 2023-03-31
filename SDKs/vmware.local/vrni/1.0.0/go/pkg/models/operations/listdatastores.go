@@ -8,10 +8,10 @@ import (
 )
 
 type ListDatastoresSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ListDatastoresQueryParams struct {
+type ListDatastoresRequest struct {
 	// cursor from previous response
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// end time for query in epoch seconds
@@ -20,11 +20,6 @@ type ListDatastoresQueryParams struct {
 	Size *float64 `queryParam:"style=form,explode=true,name=size"`
 	// start time for query in epoch seconds
 	StartTime *float64 `queryParam:"style=form,explode=true,name=start_time"`
-}
-
-type ListDatastoresRequest struct {
-	QueryParams ListDatastoresQueryParams
-	Security    ListDatastoresSecurity
 }
 
 type ListDatastoresResponse struct {

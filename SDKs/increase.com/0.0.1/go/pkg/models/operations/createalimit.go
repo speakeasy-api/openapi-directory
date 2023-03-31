@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateALimitRequest struct {
-	Request shared.CreateALimitParameters `request:"mediaType=application/json"`
-}
-
 type CreateALimitDefaultApplicationJSON13StatusEnum string
 
 const (

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupsGroupIDPermissionsPathParams struct {
-	// DEPRECATED: Group ID.  If provided, will scope permissions to this group. Use `filter[group_id]` instead.`
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type GetGroupsGroupIDPermissionsQueryParams struct {
+type GetGroupsGroupIDPermissionsRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
@@ -27,6 +22,8 @@ type GetGroupsGroupIDPermissionsQueryParams struct {
 	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
 	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
+	// DEPRECATED: Group ID.  If provided, will scope permissions to this group. Use `filter[group_id]` instead.`
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 	// If searching by user or group, also include user's permissions that are inherited from its groups?
 	IncludeGroups *bool `queryParam:"style=form,explode=true,name=include_groups"`
 	// DEPRECATED: Permission path.  If provided, will scope permissions to this path. Use `filter[path]` instead.
@@ -37,11 +34,6 @@ type GetGroupsGroupIDPermissionsQueryParams struct {
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 	// DEPRECATED: User ID.  If provided, will scope permissions to this user. Use `filter[user_id]` instead.`
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type GetGroupsGroupIDPermissionsRequest struct {
-	PathParams  GetGroupsGroupIDPermissionsPathParams
-	QueryParams GetGroupsGroupIDPermissionsQueryParams
 }
 
 type GetGroupsGroupIDPermissionsResponse struct {

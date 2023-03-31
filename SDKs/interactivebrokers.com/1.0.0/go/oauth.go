@@ -33,7 +33,7 @@ func newOAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // PostOauthAccessToken - Obtain a access token
 // Obtain an access token using the request token and the verification code you received after the user provided authorization. See section 6.3 of the OAuth v1.0a specification for more details.
-func (s *oAuth) PostOauthAccessToken(ctx context.Context, request operations.PostOauthAccessTokenRequest) (*operations.PostOauthAccessTokenResponse, error) {
+func (s *oAuth) PostOauthAccessToken(ctx context.Context, request operations.PostOauthAccessTokenRequestBody) (*operations.PostOauthAccessTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/access_token"
 
@@ -96,7 +96,7 @@ func (s *oAuth) PostOauthAccessToken(ctx context.Context, request operations.Pos
 // PostOauthLiveSessionToken - Obtain a live session token
 // In order to access protected IB resources, a live session token is required. This endpoint allows consumers to obtain a live session token to access these resources using an OAuth access token and the Diffie-Hellman prime and generator supplied during the registration process.
 // Note this is an additional IB-specific step, and not part of the OAuth v1.0a specification. Please refer to the "OAuth at Interactive Brokers" document for more details.  https://www.interactivebrokers.com/webtradingapi/oauth.pdf
-func (s *oAuth) PostOauthLiveSessionToken(ctx context.Context, request operations.PostOauthLiveSessionTokenRequest) (*operations.PostOauthLiveSessionTokenResponse, error) {
+func (s *oAuth) PostOauthLiveSessionToken(ctx context.Context, request operations.PostOauthLiveSessionTokenRequestBody) (*operations.PostOauthLiveSessionTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/live_session_token"
 
@@ -160,7 +160,7 @@ func (s *oAuth) PostOauthLiveSessionToken(ctx context.Context, request operation
 // Obtain a request token. See section 6.1 of the OAuth v1.0a specification for more information. http://oauth.net/core/1.0a/#auth_step1
 //
 // Note we do not return an oauth_token_secret in the response as we are using RSA signatures rather than PLAINTEXT authentication.
-func (s *oAuth) PostOauthRequestToken(ctx context.Context, request operations.PostOauthRequestTokenRequest) (*operations.PostOauthRequestTokenResponse, error) {
+func (s *oAuth) PostOauthRequestToken(ctx context.Context, request operations.PostOauthRequestTokenRequestBody) (*operations.PostOauthRequestTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/request_token"
 

@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchGeoHdf5QueryParams struct {
+type SearchGeoHdf5Request struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchGeoHdf5QueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchGeoHdf5Request struct {
-	QueryParams SearchGeoHdf5QueryParams
 }
 
 type SearchGeoHdf5Response struct {

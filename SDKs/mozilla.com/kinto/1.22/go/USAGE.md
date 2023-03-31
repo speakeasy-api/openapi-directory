@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAttachmentRequest{
-        PathParams: operations.CreateAttachmentPathParams{
-            BucketID: "corrupti",
-            CollectionID: "provident",
-            ID: "distinctio",
-        },
+        BucketID: "corrupti",
+        CollectionID: "provident",
+        ID: "distinctio",
     }
 
     ctx := context.Background()

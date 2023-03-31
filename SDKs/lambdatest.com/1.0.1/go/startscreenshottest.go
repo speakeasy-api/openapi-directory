@@ -34,7 +34,7 @@ func newStartScreenshotTest(defaultClient, securityClient HTTPClient, serverURL,
 
 // StartScreenshotTest - Start Screenshot Test
 // Start Screenshot Test
-func (s *startScreenshotTest) StartScreenshotTest(ctx context.Context, request operations.StartScreenshotTestRequest) (*operations.StartScreenshotTestResponse, error) {
+func (s *startScreenshotTest) StartScreenshotTest(ctx context.Context, request shared.ScreenshotPayload, security operations.StartScreenshotTestSecurity) (*operations.StartScreenshotTestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -53,7 +53,7 @@ func (s *startScreenshotTest) StartScreenshotTest(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,13 +8,13 @@ import (
 )
 
 type FirebasehostingProjectsSitesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingProjectsSitesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebasehostingProjectsSitesCreateSecurity struct {
@@ -22,14 +22,10 @@ type FirebasehostingProjectsSitesCreateSecurity struct {
 	Option2 *FirebasehostingProjectsSitesCreateSecurityOption2 `security:"option"`
 }
 
-type FirebasehostingProjectsSitesCreatePathParams struct {
-	// Required. The Firebase project in which to create a Hosting site, in the format: projects/PROJECT_IDENTIFIER Refer to the `Site` [`name`](../projects#Site.FIELDS.name) field for details about PROJECT_IDENTIFIER values.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebasehostingProjectsSitesCreateQueryParams struct {
+type FirebasehostingProjectsSitesCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SiteInput   *shared.SiteInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type FirebasehostingProjectsSitesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The Firebase project in which to create a Hosting site, in the format: projects/PROJECT_IDENTIFIER Refer to the `Site` [`name`](../projects#Site.FIELDS.name) field for details about PROJECT_IDENTIFIER values.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,13 +50,6 @@ type FirebasehostingProjectsSitesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebasehostingProjectsSitesCreateRequest struct {
-	PathParams  FirebasehostingProjectsSitesCreatePathParams
-	QueryParams FirebasehostingProjectsSitesCreateQueryParams
-	Request     *shared.SiteInput `request:"mediaType=application/json"`
-	Security    FirebasehostingProjectsSitesCreateSecurity
 }
 
 type FirebasehostingProjectsSitesCreateResponse struct {

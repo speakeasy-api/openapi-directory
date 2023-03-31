@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRegionsReadPathParams struct {
+type DcimRegionsReadRequest struct {
 	// A unique integer value identifying this region.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRegionsReadRequest struct {
-	PathParams DcimRegionsReadPathParams
 }
 
 type DcimRegionsReadResponse struct {

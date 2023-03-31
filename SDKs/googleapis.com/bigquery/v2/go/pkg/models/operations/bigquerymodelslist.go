@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryModelsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryModelsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryModelsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryModelsListSecurity struct {
@@ -28,16 +28,11 @@ type BigqueryModelsListSecurity struct {
 	Option3 *BigqueryModelsListSecurityOption3 `security:"option"`
 }
 
-type BigqueryModelsListPathParams struct {
-	// Required. Dataset ID of the models to list.
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Required. Project ID of the models to list.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BigqueryModelsListQueryParams struct {
+type BigqueryModelsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. Dataset ID of the models to list.
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -50,16 +45,12 @@ type BigqueryModelsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Project ID of the models to list.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryModelsListRequest struct {
-	PathParams  BigqueryModelsListPathParams
-	QueryParams BigqueryModelsListQueryParams
-	Security    BigqueryModelsListSecurity
 }
 
 type BigqueryModelsListResponse struct {

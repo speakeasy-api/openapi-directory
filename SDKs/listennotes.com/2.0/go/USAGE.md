@@ -14,18 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetBestPodcastsRequest{
-        QueryParams: operations.GetBestPodcastsQueryParams{
-            GenreID: "corrupti",
-            Language: "provident",
-            Page: 715190,
-            PublisherRegion: "quibusdam",
-            Region: "unde",
-            SafeMode: "1",
-            Sort: "recent_published_first",
-        },
-        Headers: operations.GetBestPodcastsHeaders{
-            XListenAPIKey: "illum",
-        },
+        XListenAPIKey: "corrupti",
+        GenreID: "provident",
+        Language: "distinctio",
+        Page: 844266,
+        PublisherRegion: "unde",
+        Region: "nulla",
+        SafeMode: "1",
+        Sort: "listen_score",
     }
 
     ctx := context.Background()

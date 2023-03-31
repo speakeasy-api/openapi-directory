@@ -32,20 +32,20 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // BigqueryJobsCancel - Requests that a job be cancelled. This call will return immediately, and the client will need to poll for the job status to see if the cancel completed successfully. Cancelled jobs may still incur costs.
-func (s *jobs) BigqueryJobsCancel(ctx context.Context, request operations.BigqueryJobsCancelRequest) (*operations.BigqueryJobsCancelResponse, error) {
+func (s *jobs) BigqueryJobsCancel(ctx context.Context, request operations.BigqueryJobsCancelRequest, security operations.BigqueryJobsCancelSecurity) (*operations.BigqueryJobsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs/{jobId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs/{jobId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *jobs) BigqueryJobsCancel(ctx context.Context, request operations.Bigque
 }
 
 // BigqueryJobsDelete - Requests the deletion of the metadata of a job. This call returns when the job's metadata is deleted.
-func (s *jobs) BigqueryJobsDelete(ctx context.Context, request operations.BigqueryJobsDeleteRequest) (*operations.BigqueryJobsDeleteResponse, error) {
+func (s *jobs) BigqueryJobsDelete(ctx context.Context, request operations.BigqueryJobsDeleteRequest, security operations.BigqueryJobsDeleteSecurity) (*operations.BigqueryJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs/{jobId}/delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs/{jobId}/delete", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *jobs) BigqueryJobsDelete(ctx context.Context, request operations.Bigque
 }
 
 // BigqueryJobsGet - Returns information about a specific job. Job information is available for a six month period after creation. Requires that you're the person who ran the job, or have the Is Owner project role.
-func (s *jobs) BigqueryJobsGet(ctx context.Context, request operations.BigqueryJobsGetRequest) (*operations.BigqueryJobsGetResponse, error) {
+func (s *jobs) BigqueryJobsGet(ctx context.Context, request operations.BigqueryJobsGetRequest, security operations.BigqueryJobsGetSecurity) (*operations.BigqueryJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,20 +167,20 @@ func (s *jobs) BigqueryJobsGet(ctx context.Context, request operations.BigqueryJ
 }
 
 // BigqueryJobsGetQueryResults - Retrieves the results of a query job.
-func (s *jobs) BigqueryJobsGetQueryResults(ctx context.Context, request operations.BigqueryJobsGetQueryResultsRequest) (*operations.BigqueryJobsGetQueryResultsResponse, error) {
+func (s *jobs) BigqueryJobsGetQueryResults(ctx context.Context, request operations.BigqueryJobsGetQueryResultsRequest, security operations.BigqueryJobsGetQueryResultsSecurity) (*operations.BigqueryJobsGetQueryResultsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/queries/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/queries/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,11 +215,11 @@ func (s *jobs) BigqueryJobsGetQueryResults(ctx context.Context, request operatio
 }
 
 // BigqueryJobsInsert - Starts a new asynchronous job. Requires the Can View project role.
-func (s *jobs) BigqueryJobsInsert(ctx context.Context, request operations.BigqueryJobsInsertRequest) (*operations.BigqueryJobsInsertResponse, error) {
+func (s *jobs) BigqueryJobsInsert(ctx context.Context, request operations.BigqueryJobsInsertRequest, security operations.BigqueryJobsInsertSecurity) (*operations.BigqueryJobsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -231,11 +231,11 @@ func (s *jobs) BigqueryJobsInsert(ctx context.Context, request operations.Bigque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,20 +270,20 @@ func (s *jobs) BigqueryJobsInsert(ctx context.Context, request operations.Bigque
 }
 
 // BigqueryJobsList - Lists all jobs that you started in the specified project. Job information is available for a six month period after creation. The job list is sorted in reverse chronological order, by job creation time. Requires the Can View project role, or the Is Owner project role if you set the allUsers property.
-func (s *jobs) BigqueryJobsList(ctx context.Context, request operations.BigqueryJobsListRequest) (*operations.BigqueryJobsListResponse, error) {
+func (s *jobs) BigqueryJobsList(ctx context.Context, request operations.BigqueryJobsListRequest, security operations.BigqueryJobsListSecurity) (*operations.BigqueryJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -318,11 +318,11 @@ func (s *jobs) BigqueryJobsList(ctx context.Context, request operations.Bigquery
 }
 
 // BigqueryJobsQuery - Runs a BigQuery SQL query synchronously and returns query results if the query completes within a specified timeout.
-func (s *jobs) BigqueryJobsQuery(ctx context.Context, request operations.BigqueryJobsQueryRequest) (*operations.BigqueryJobsQueryResponse, error) {
+func (s *jobs) BigqueryJobsQuery(ctx context.Context, request operations.BigqueryJobsQueryRequest, security operations.BigqueryJobsQuerySecurity) (*operations.BigqueryJobsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/queries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/queries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -334,11 +334,11 @@ func (s *jobs) BigqueryJobsQuery(ctx context.Context, request operations.Bigquer
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1CompaniesDomainsIDPathParams struct {
+type PutSetupV1CompaniesDomainsIDRequest struct {
+	// Company Domain Update Model
+	CompanyDomainUpdateModel *shared.CompanyDomainUpdateModel `request:"mediaType=application/json"`
 	// id of companyDomain object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1CompaniesDomainsIDRequest struct {
-	PathParams PutSetupV1CompaniesDomainsIDPathParams
-	// Company Domain Update Model
-	Request *shared.CompanyDomainUpdateModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1CompaniesDomainsIDResponse struct {

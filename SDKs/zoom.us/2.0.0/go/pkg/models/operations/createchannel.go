@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateChannelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateChannelPathParams struct {
-	// Unique identifier of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateChannelApplicationJSONMembers struct {
@@ -68,9 +62,9 @@ type CreateChannelApplicationJSON struct {
 }
 
 type CreateChannelRequest struct {
-	PathParams CreateChannelPathParams
-	Request    *CreateChannelApplicationJSON `request:"mediaType=application/json"`
-	Security   CreateChannelSecurity
+	RequestBody *CreateChannelApplicationJSON `request:"mediaType=application/json"`
+	// Unique identifier of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 // CreateChannel201ApplicationXML - **Status Code**: `201` <br>

@@ -11,15 +11,10 @@ import (
 )
 
 type GetTracksTrackIDRelatedSecurity struct {
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=query"`
+	ClientID string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetTracksTrackIDRelatedPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
-}
-
-type GetTracksTrackIDRelatedQueryParams struct {
+type GetTracksTrackIDRelatedRequest struct {
 	// Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
 	//
 	Access []shared.AccessEnum `queryParam:"style=form,explode=false,name=access"`
@@ -29,12 +24,8 @@ type GetTracksTrackIDRelatedQueryParams struct {
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetTracksTrackIDRelatedRequest struct {
-	PathParams  GetTracksTrackIDRelatedPathParams
-	QueryParams GetTracksTrackIDRelatedQueryParams
-	Security    GetTracksTrackIDRelatedSecurity
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type GetTracksTrackIDRelated200ApplicationJSONType string

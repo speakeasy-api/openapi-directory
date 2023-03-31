@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ReportWebinarParticipantsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ReportWebinarParticipantsPathParams struct {
-	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportWebinarParticipantsIncludeFieldsEnum - Enter 'registrant_id' as the value for this field if you would like to see the registrant ID attribute included in the response of this API call. A registrant ID is a unique identifier of a [webinar registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinarregistrants).<br>
@@ -42,7 +34,7 @@ func (e *ReportWebinarParticipantsIncludeFieldsEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ReportWebinarParticipantsQueryParams struct {
+type ReportWebinarParticipantsRequest struct {
 	// Enter 'registrant_id' as the value for this field if you would like to see the registrant ID attribute included in the response of this API call. A registrant ID is a unique identifier of a [webinar registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinarregistrants).<br>
 	//
 	//
@@ -51,12 +43,10 @@ type ReportWebinarParticipantsQueryParams struct {
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type ReportWebinarParticipantsRequest struct {
-	PathParams  ReportWebinarParticipantsPathParams
-	QueryParams ReportWebinarParticipantsQueryParams
-	Security    ReportWebinarParticipantsSecurity
+	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type ReportWebinarParticipants200ApplicationXMLParticipants struct {

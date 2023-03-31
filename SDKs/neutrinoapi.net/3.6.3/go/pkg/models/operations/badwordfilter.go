@@ -16,10 +16,6 @@ type BadWordFilterRequestBody struct {
 	Content string `form:"name=content"`
 }
 
-type BadWordFilterRequest struct {
-	Request BadWordFilterRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type BadWordFilterResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError              *shared.APIError

@@ -40,7 +40,7 @@ func newDeviceInfo(defaultClient, securityClient HTTPClient, serverURL, language
 // The certificate is valid and issued by `Chromecast ICA 6 (Audio Assist), Google Inc`.
 //
 // Not sure what the other two are.
-func (s *deviceInfo) AppDeviceID(ctx context.Context, request operations.AppDeviceIDRequest) (*operations.AppDeviceIDResponse, error) {
+func (s *deviceInfo) AppDeviceID(ctx context.Context, request shared.AppDeviceIDRequest) (*operations.AppDeviceIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_app_device_id"
 
@@ -98,7 +98,7 @@ func (s *deviceInfo) AppDeviceID(ctx context.Context, request operations.AppDevi
 // **Update:** This seems to have changed now and is no longer possible. The error is also new.
 //
 // Setting `play_ready_message` to true plays a welcome message on the device saying "Hi, I'm your Google Assistant. I'm here to help. To learn a few things you can do, continue in the Google Home app."
-func (s *deviceInfo) CheckReadyStatus(ctx context.Context, request operations.CheckReadyStatusRequest) (*operations.CheckReadyStatusResponse, error) {
+func (s *deviceInfo) CheckReadyStatus(ctx context.Context, request shared.CheckReadyStatusRequest) (*operations.CheckReadyStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assistant/check_ready_status"
 
@@ -168,7 +168,7 @@ func (s *deviceInfo) EurekaInfo(ctx context.Context, request operations.EurekaIn
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -301,7 +301,7 @@ func (s *deviceInfo) Offer(ctx context.Context) (*operations.OfferResponse, erro
 // **Update:** This seems to have been removed. Returns 404 Not Found.
 //
 // This endpoint tests internet download speed. Any sample file URL can be provided.
-func (s *deviceInfo) TestInternetDownloadSpeed(ctx context.Context, request operations.TestInternetDownloadSpeedRequest) (*operations.TestInternetDownloadSpeedResponse, error) {
+func (s *deviceInfo) TestInternetDownloadSpeed(ctx context.Context, request shared.TestInternetDownloadSpeedRequest) (*operations.TestInternetDownloadSpeedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/test_internet_download_speed"
 

@@ -14,21 +14,16 @@ func main() {
     s := sdk.New()
 
     req := operations.GetMerchandisedProductsRequest{
-        Security: operations.GetMerchandisedProductsSecurity{
-            ClientCredentials: shared.SchemeClientCredentials{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetMerchandisedProductsQueryParams{
-            AspectFilter: "corrupti",
-            CategoryID: "provident",
-            Limit: "distinctio",
-            MetricName: "quibusdam",
-        },
+        AspectFilter: "corrupti",
+        CategoryID: "provident",
+        Limit: "distinctio",
+        MetricName: "quibusdam",
     }
 
     ctx := context.Background()
-    res, err := s.MerchandisedProduct.GetMerchandisedProducts(ctx, req)
+    res, err := s.MerchandisedProduct.GetMerchandisedProducts(ctx, req, operations.GetMerchandisedProductsSecurity{
+        ClientCredentials: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

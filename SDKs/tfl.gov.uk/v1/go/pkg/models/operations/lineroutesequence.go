@@ -36,13 +36,6 @@ func (e *LineRouteSequenceDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineRouteSequencePathParams struct {
-	// The direction of travel. Can be inbound or outbound.
-	Direction LineRouteSequenceDirectionEnum `pathParam:"style=simple,explode=false,name=direction"`
-	// A single line id e.g. victoria
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type LineRouteSequenceServiceTypesEnum string
 
 const (
@@ -66,16 +59,15 @@ func (e *LineRouteSequenceServiceTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineRouteSequenceQueryParams struct {
+type LineRouteSequenceRequest struct {
+	// The direction of travel. Can be inbound or outbound.
+	Direction LineRouteSequenceDirectionEnum `pathParam:"style=simple,explode=false,name=direction"`
 	// That excludes crowding from line disruptions. Can be true or false.
 	ExcludeCrowding *bool `queryParam:"style=form,explode=true,name=excludeCrowding"`
+	// A single line id e.g. victoria
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
 	ServiceTypes []LineRouteSequenceServiceTypesEnum `queryParam:"style=form,explode=true,name=serviceTypes"`
-}
-
-type LineRouteSequenceRequest struct {
-	PathParams  LineRouteSequencePathParams
-	QueryParams LineRouteSequenceQueryParams
 }
 
 type LineRouteSequenceResponse struct {

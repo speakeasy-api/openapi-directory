@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TenancyTenantsPartialUpdatePathParams struct {
+type TenancyTenantsPartialUpdateRequest struct {
+	WritableTenantInput shared.WritableTenantInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this tenant.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TenancyTenantsPartialUpdateRequest struct {
-	PathParams TenancyTenantsPartialUpdatePathParams
-	Request    shared.WritableTenantInput `request:"mediaType=application/json"`
 }
 
 type TenancyTenantsPartialUpdateResponse struct {

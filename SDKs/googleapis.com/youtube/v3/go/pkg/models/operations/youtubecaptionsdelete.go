@@ -8,13 +8,13 @@ import (
 )
 
 type YoutubeCaptionsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeCaptionsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubeCaptionsDeleteSecurity struct {
@@ -22,7 +22,7 @@ type YoutubeCaptionsDeleteSecurity struct {
 	Option2 *YoutubeCaptionsDeleteSecurityOption2 `security:"option"`
 }
 
-type YoutubeCaptionsDeleteQueryParams struct {
+type YoutubeCaptionsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,11 +50,6 @@ type YoutubeCaptionsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubeCaptionsDeleteRequest struct {
-	QueryParams YoutubeCaptionsDeleteQueryParams
-	Security    YoutubeCaptionsDeleteSecurity
 }
 
 type YoutubeCaptionsDeleteResponse struct {

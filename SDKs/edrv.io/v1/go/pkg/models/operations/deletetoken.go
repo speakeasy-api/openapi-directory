@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteTokenPathParams struct {
+type DeleteTokenRequest struct {
 	// The token id that needs to be deleted
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteTokenRequest struct {
-	PathParams DeleteTokenPathParams
 }
 
 type DeleteTokenResponse struct {

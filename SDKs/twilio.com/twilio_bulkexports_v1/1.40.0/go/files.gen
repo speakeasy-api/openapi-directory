@@ -21,10 +21,10 @@ pkg/models/operations/listday.go
 pkg/models/operations/listexportcustomjob.go
 pkg/models/operations/updateexportconfiguration.go
 pkg/models/shared/bulkexportsv1exportexportcustomjob.go
-pkg/models/shared/security.go
 pkg/models/shared/bulkexportsv1exportdayinstance.go
 pkg/models/shared/bulkexportsv1export.go
 pkg/models/shared/bulkexportsv1exportconfiguration.go
 pkg/models/shared/bulkexportsv1exportjob.go
 pkg/models/shared/bulkexportsv1exportday.go
 USAGE.md
+pkg/models/operations/options.go

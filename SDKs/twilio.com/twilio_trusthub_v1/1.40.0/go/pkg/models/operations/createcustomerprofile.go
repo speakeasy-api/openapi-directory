@@ -12,7 +12,8 @@ var CreateCustomerProfileServerList = []string{
 }
 
 type CreateCustomerProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCustomerProfileCreateCustomerProfileRequest struct {
@@ -24,12 +25,6 @@ type CreateCustomerProfileCreateCustomerProfileRequest struct {
 	PolicySid string `form:"name=PolicySid"`
 	// The URL we call to inform your application of status changes.
 	StatusCallback *string `form:"name=StatusCallback"`
-}
-
-type CreateCustomerProfileRequest struct {
-	Request   *CreateCustomerProfileCreateCustomerProfileRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateCustomerProfileSecurity
-	ServerURL *string
 }
 
 type CreateCustomerProfileResponse struct {

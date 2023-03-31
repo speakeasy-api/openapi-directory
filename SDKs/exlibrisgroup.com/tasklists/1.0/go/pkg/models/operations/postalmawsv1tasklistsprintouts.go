@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAlmawsV1TaskListsPrintoutsQueryParams struct {
+type PostAlmawsV1TaskListsPrintoutsRequest struct {
 	// Printout Name. Optional.
 	Letter *string `queryParam:"style=form,explode=true,name=letter"`
 	// The operation to perform on the printout. Currently, the options are: 'mark_as_printed','mark_as_canceled'
@@ -18,10 +18,6 @@ type PostAlmawsV1TaskListsPrintoutsQueryParams struct {
 	PrintoutID *string `queryParam:"style=form,explode=true,name=printout_id"`
 	// Printout status. Optional. Valid values are: Printed, Pending, Canceled.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type PostAlmawsV1TaskListsPrintoutsRequest struct {
-	QueryParams PostAlmawsV1TaskListsPrintoutsQueryParams
 }
 
 type PostAlmawsV1TaskListsPrintoutsResponse struct {

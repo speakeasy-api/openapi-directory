@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETAffectedGenomicModelsUsingGETPathParams struct {
+type GETAffectedGenomicModelsUsingGETRequest struct {
 	// The taxon ID for species
 	TaxonID string `pathParam:"style=simple,explode=false,name=taxonId"`
-}
-
-type GETAffectedGenomicModelsUsingGETRequest struct {
-	PathParams GETAffectedGenomicModelsUsingGETPathParams
 }
 
 type GETAffectedGenomicModelsUsingGETResponse struct {

@@ -10,23 +10,18 @@ import (
 )
 
 type CloudsearchDebugIdentitysourcesUnmappedidsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchDebugIdentitysourcesUnmappedidsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchDebugIdentitysourcesUnmappedidsListSecurity struct {
 	Option1 *CloudsearchDebugIdentitysourcesUnmappedidsListSecurityOption1 `security:"option"`
 	Option2 *CloudsearchDebugIdentitysourcesUnmappedidsListSecurityOption2 `security:"option"`
-}
-
-type CloudsearchDebugIdentitysourcesUnmappedidsListPathParams struct {
-	// The name of the identity source, in the following format: identitysources/{source_id}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum - Limit users selection to this status.
@@ -65,7 +60,7 @@ func (e *CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum)
 	}
 }
 
-type CloudsearchDebugIdentitysourcesUnmappedidsListQueryParams struct {
+type CloudsearchDebugIdentitysourcesUnmappedidsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -86,6 +81,8 @@ type CloudsearchDebugIdentitysourcesUnmappedidsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous List request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The name of the identity source, in the following format: identitysources/{source_id}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -96,12 +93,6 @@ type CloudsearchDebugIdentitysourcesUnmappedidsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchDebugIdentitysourcesUnmappedidsListRequest struct {
-	PathParams  CloudsearchDebugIdentitysourcesUnmappedidsListPathParams
-	QueryParams CloudsearchDebugIdentitysourcesUnmappedidsListQueryParams
-	Security    CloudsearchDebugIdentitysourcesUnmappedidsListSecurity
 }
 
 type CloudsearchDebugIdentitysourcesUnmappedidsListResponse struct {

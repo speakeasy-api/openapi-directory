@@ -40,11 +40,11 @@ func newWebinars(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * The webinar should be of type `5`, i.e., it should be a scheduled webinar. Other types of webinars are not supported by this API.<br><br>
 // **Scope:** `webinar:write`, `webinar:write:admin`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
-func (s *webinars) AddBatchWebinarRegistrants(ctx context.Context, request operations.AddBatchWebinarRegistrantsRequest) (*operations.AddBatchWebinarRegistrantsResponse, error) {
+func (s *webinars) AddBatchWebinarRegistrants(ctx context.Context, request operations.AddBatchWebinarRegistrantsRequest, security operations.AddBatchWebinarRegistrantsSecurity) (*operations.AddBatchWebinarRegistrantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/batch_registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/batch_registrants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *webinars) AddBatchWebinarRegistrants(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,14 +108,14 @@ func (s *webinars) AddBatchWebinarRegistrants(ctx context.Context, request opera
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *webinars) DeleteWebinarRegistrant(ctx context.Context, request operations.DeleteWebinarRegistrantRequest) (*operations.DeleteWebinarRegistrantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/{registrantId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/{registrantId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -155,16 +155,16 @@ func (s *webinars) DeleteWebinarRegistrant(ctx context.Context, request operatio
 // **Prerequisites**:<br>
 // * [Webinar license](https://zoom.us/webinar).
 // * Registration must be required for the Webinar.
-func (s *webinars) GetTrackingSources(ctx context.Context, request operations.GetTrackingSourcesRequest) (*operations.GetTrackingSourcesResponse, error) {
+func (s *webinars) GetTrackingSources(ctx context.Context, request operations.GetTrackingSourcesRequest, security operations.GetTrackingSourcesSecurity) (*operations.GetTrackingSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/tracking_sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/tracking_sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,16 +212,16 @@ func (s *webinars) GetTrackingSources(ctx context.Context, request operations.Ge
 // * [Webinar license](https://zoom.us/webinar)<br>
 // **Scopes**: `webinar:read:admin`, `webinar:read`<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *webinars) ListPastWebinarPollResults(ctx context.Context, request operations.ListPastWebinarPollResultsRequest) (*operations.ListPastWebinarPollResultsResponse, error) {
+func (s *webinars) ListPastWebinarPollResults(ctx context.Context, request operations.ListPastWebinarPollResultsRequest, security operations.ListPastWebinarPollResultsSecurity) (*operations.ListPastWebinarPollResultsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/polls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,16 +277,16 @@ func (s *webinars) ListPastWebinarPollResults(ctx context.Context, request opera
 //
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *webinars) ListPastWebinarQA(ctx context.Context, request operations.ListPastWebinarQARequest) (*operations.ListPastWebinarQAResponse, error) {
+func (s *webinars) ListPastWebinarQA(ctx context.Context, request operations.ListPastWebinarQARequest, security operations.ListPastWebinarQASecurity) (*operations.ListPastWebinarQAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/qa", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/qa", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -340,14 +340,14 @@ func (s *webinars) ListPastWebinarQA(ctx context.Context, request operations.Lis
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 func (s *webinars) ListWebinarParticipants(ctx context.Context, request operations.ListWebinarParticipantsRequest) (*operations.ListWebinarParticipantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -402,7 +402,7 @@ func (s *webinars) ListWebinarParticipants(ctx context.Context, request operatio
 // * Pro or a higher account with Webinar plan enabled.
 func (s *webinars) ListWebinarTemplates(ctx context.Context, request operations.ListWebinarTemplatesRequest) (*operations.ListWebinarTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/webinar_templates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/webinar_templates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -456,16 +456,16 @@ func (s *webinars) ListWebinarTemplates(ctx context.Context, request operations.
 // **Scopes:** `webinar:read:admin` `webinar:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) PastWebinars(ctx context.Context, request operations.PastWebinarsRequest) (*operations.PastWebinarsResponse, error) {
+func (s *webinars) PastWebinars(ctx context.Context, request operations.PastWebinarsRequest, security operations.PastWebinarsSecurity) (*operations.PastWebinarsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{webinarId}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -516,20 +516,20 @@ func (s *webinars) PastWebinars(ctx context.Context, request operations.PastWebi
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>**Prerequisites:**
 //
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) Webinar(ctx context.Context, request operations.WebinarRequest) (*operations.WebinarResponse, error) {
+func (s *webinars) Webinar(ctx context.Context, request operations.WebinarRequest, security operations.WebinarSecurity) (*operations.WebinarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -580,20 +580,20 @@ func (s *webinars) Webinar(ctx context.Context, request operations.WebinarReques
 // **Scopes:** `webinar:read:admin` `webinar:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *webinars) WebinarAbsentees(ctx context.Context, request operations.WebinarAbsenteesRequest) (*operations.WebinarAbsenteesResponse, error) {
+func (s *webinars) WebinarAbsentees(ctx context.Context, request operations.WebinarAbsenteesRequest, security operations.WebinarAbsenteesSecurity) (*operations.WebinarAbsenteesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{WebinarUUID}/absentees", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/past_webinars/{WebinarUUID}/absentees", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -647,11 +647,11 @@ func (s *webinars) WebinarAbsentees(ctx context.Context, request operations.Webi
 //
 // **Prerequisites:**
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) WebinarCreate(ctx context.Context, request operations.WebinarCreateRequest) (*operations.WebinarCreateResponse, error) {
+func (s *webinars) WebinarCreate(ctx context.Context, request operations.WebinarCreateRequest, security operations.WebinarCreateSecurity) (*operations.WebinarCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/webinars", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/webinars", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,7 +666,7 @@ func (s *webinars) WebinarCreate(ctx context.Context, request operations.Webinar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -720,20 +720,20 @@ func (s *webinars) WebinarCreate(ctx context.Context, request operations.Webinar
 //
 // **Prerequisites:**<br>
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) WebinarDelete(ctx context.Context, request operations.WebinarDeleteRequest) (*operations.WebinarDeleteResponse, error) {
+func (s *webinars) WebinarDelete(ctx context.Context, request operations.WebinarDeleteRequest, security operations.WebinarDeleteSecurity) (*operations.WebinarDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -774,11 +774,11 @@ func (s *webinars) WebinarDelete(ctx context.Context, request operations.Webinar
 //
 // **Prerequisites:**
 // * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
-func (s *webinars) WebinarPanelistCreate(ctx context.Context, request operations.WebinarPanelistCreateRequest) (*operations.WebinarPanelistCreateResponse, error) {
+func (s *webinars) WebinarPanelistCreate(ctx context.Context, request operations.WebinarPanelistCreateRequest, security operations.WebinarPanelistCreateSecurity) (*operations.WebinarPanelistCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -793,7 +793,7 @@ func (s *webinars) WebinarPanelistCreate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -847,16 +847,16 @@ func (s *webinars) WebinarPanelistCreate(ctx context.Context, request operations
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
-func (s *webinars) WebinarPanelistDelete(ctx context.Context, request operations.WebinarPanelistDeleteRequest) (*operations.WebinarPanelistDeleteResponse, error) {
+func (s *webinars) WebinarPanelistDelete(ctx context.Context, request operations.WebinarPanelistDeleteRequest, security operations.WebinarPanelistDeleteSecurity) (*operations.WebinarPanelistDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists/{panelistId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists/{panelistId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -897,16 +897,16 @@ func (s *webinars) WebinarPanelistDelete(ctx context.Context, request operations
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
-func (s *webinars) WebinarPanelists(ctx context.Context, request operations.WebinarPanelistsRequest) (*operations.WebinarPanelistsResponse, error) {
+func (s *webinars) WebinarPanelists(ctx context.Context, request operations.WebinarPanelistsRequest, security operations.WebinarPanelistsSecurity) (*operations.WebinarPanelistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -960,16 +960,16 @@ func (s *webinars) WebinarPanelists(ctx context.Context, request operations.Webi
 //
 // **Prerequisites:**<br>
 // * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
-func (s *webinars) WebinarPanelistsDelete(ctx context.Context, request operations.WebinarPanelistsDeleteRequest) (*operations.WebinarPanelistsDeleteResponse, error) {
+func (s *webinars) WebinarPanelistsDelete(ctx context.Context, request operations.WebinarPanelistsDeleteRequest, security operations.WebinarPanelistsDeleteSecurity) (*operations.WebinarPanelistsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/panelists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1003,11 +1003,11 @@ func (s *webinars) WebinarPanelistsDelete(ctx context.Context, request operation
 // **Scopes:** `webinar:write:admin` `webinar:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) WebinarPollCreate(ctx context.Context, request operations.WebinarPollCreateRequest) (*operations.WebinarPollCreateResponse, error) {
+func (s *webinars) WebinarPollCreate(ctx context.Context, request operations.WebinarPollCreateRequest, security operations.WebinarPollCreateSecurity) (*operations.WebinarPollCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1022,7 +1022,7 @@ func (s *webinars) WebinarPollCreate(ctx context.Context, request operations.Web
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1073,16 +1073,16 @@ func (s *webinars) WebinarPollCreate(ctx context.Context, request operations.Web
 // **Scopes:** `webinar:write:admin` `webinar:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) WebinarPollDelete(ctx context.Context, request operations.WebinarPollDeleteRequest) (*operations.WebinarPollDeleteResponse, error) {
+func (s *webinars) WebinarPollDelete(ctx context.Context, request operations.WebinarPollDeleteRequest, security operations.WebinarPollDeleteSecurity) (*operations.WebinarPollDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls/{pollId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls/{pollId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1114,16 +1114,16 @@ func (s *webinars) WebinarPollDelete(ctx context.Context, request operations.Web
 // **Scopes:** `webinar:read:admin` `webinar:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) WebinarPollGet(ctx context.Context, request operations.WebinarPollGetRequest) (*operations.WebinarPollGetResponse, error) {
+func (s *webinars) WebinarPollGet(ctx context.Context, request operations.WebinarPollGetRequest, security operations.WebinarPollGetSecurity) (*operations.WebinarPollGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls/{pollId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls/{pollId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1170,11 +1170,11 @@ func (s *webinars) WebinarPollGet(ctx context.Context, request operations.Webina
 // **Scopes:** `webinar:write:admin` `webinar:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) WebinarPollUpdate(ctx context.Context, request operations.WebinarPollUpdateRequest) (*operations.WebinarPollUpdateResponse, error) {
+func (s *webinars) WebinarPollUpdate(ctx context.Context, request operations.WebinarPollUpdateRequest, security operations.WebinarPollUpdateSecurity) (*operations.WebinarPollUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls/{pollId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls/{pollId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1189,7 +1189,7 @@ func (s *webinars) WebinarPollUpdate(ctx context.Context, request operations.Web
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1221,16 +1221,16 @@ func (s *webinars) WebinarPollUpdate(ctx context.Context, request operations.Web
 // **Scopes:** `webinar:read:admin` `webinar:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) WebinarPolls(ctx context.Context, request operations.WebinarPollsRequest) (*operations.WebinarPollsResponse, error) {
+func (s *webinars) WebinarPolls(ctx context.Context, request operations.WebinarPollsRequest, security operations.WebinarPollsSecurity) (*operations.WebinarPollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/polls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1280,11 +1280,11 @@ func (s *webinars) WebinarPolls(ctx context.Context, request operations.WebinarP
 //
 // **Prerequisites:**
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) WebinarRegistrantCreate(ctx context.Context, request operations.WebinarRegistrantCreateRequest) (*operations.WebinarRegistrantCreateResponse, error) {
+func (s *webinars) WebinarRegistrantCreate(ctx context.Context, request operations.WebinarRegistrantCreateRequest, security operations.WebinarRegistrantCreateSecurity) (*operations.WebinarRegistrantCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1299,11 +1299,11 @@ func (s *webinars) WebinarRegistrantCreate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1357,20 +1357,20 @@ func (s *webinars) WebinarRegistrantCreate(ctx context.Context, request operatio
 //
 // **Prerequisites:**<br>
 // * The account must have a Webinar plan.
-func (s *webinars) WebinarRegistrantGet(ctx context.Context, request operations.WebinarRegistrantGetRequest) (*operations.WebinarRegistrantGetResponse, error) {
+func (s *webinars) WebinarRegistrantGet(ctx context.Context, request operations.WebinarRegistrantGetRequest, security operations.WebinarRegistrantGetSecurity) (*operations.WebinarRegistrantGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/{registrantId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/{registrantId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1424,11 +1424,11 @@ func (s *webinars) WebinarRegistrantGet(ctx context.Context, request operations.
 // **Scopes:** `webinar:write:admin` `webinar:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *webinars) WebinarRegistrantQuestionUpdate(ctx context.Context, request operations.WebinarRegistrantQuestionUpdateRequest) (*operations.WebinarRegistrantQuestionUpdateResponse, error) {
+func (s *webinars) WebinarRegistrantQuestionUpdate(ctx context.Context, request operations.WebinarRegistrantQuestionUpdateRequest, security operations.WebinarRegistrantQuestionUpdateSecurity) (*operations.WebinarRegistrantQuestionUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/questions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1443,7 +1443,7 @@ func (s *webinars) WebinarRegistrantQuestionUpdate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1475,11 +1475,11 @@ func (s *webinars) WebinarRegistrantQuestionUpdate(ctx context.Context, request 
 // **Scopes:** `webinar:write:admin` `webinar:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *webinars) WebinarRegistrantStatus(ctx context.Context, request operations.WebinarRegistrantStatusRequest) (*operations.WebinarRegistrantStatusResponse, error) {
+func (s *webinars) WebinarRegistrantStatus(ctx context.Context, request operations.WebinarRegistrantStatusRequest, security operations.WebinarRegistrantStatusSecurity) (*operations.WebinarRegistrantStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1494,11 +1494,11 @@ func (s *webinars) WebinarRegistrantStatus(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1537,20 +1537,20 @@ func (s *webinars) WebinarRegistrantStatus(ctx context.Context, request operatio
 // **Scopes:** `webinar:read:admin` `webinar:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
-func (s *webinars) WebinarRegistrants(ctx context.Context, request operations.WebinarRegistrantsRequest) (*operations.WebinarRegistrantsResponse, error) {
+func (s *webinars) WebinarRegistrants(ctx context.Context, request operations.WebinarRegistrantsRequest, security operations.WebinarRegistrantsSecurity) (*operations.WebinarRegistrantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1603,16 +1603,16 @@ func (s *webinars) WebinarRegistrants(ctx context.Context, request operations.We
 // **Scopes:** `webinar:read:admin` `webinar:read`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
-func (s *webinars) WebinarRegistrantsQuestionsGet(ctx context.Context, request operations.WebinarRegistrantsQuestionsGetRequest) (*operations.WebinarRegistrantsQuestionsGetResponse, error) {
+func (s *webinars) WebinarRegistrantsQuestionsGet(ctx context.Context, request operations.WebinarRegistrantsQuestionsGetRequest, security operations.WebinarRegistrantsQuestionsGetSecurity) (*operations.WebinarRegistrantsQuestionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/questions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/registrants/questions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1662,11 +1662,11 @@ func (s *webinars) WebinarRegistrantsQuestionsGet(ctx context.Context, request o
 //
 // **Prerequisites:**<br>
 // * The account must hold a valid [Webinar plan](https://zoom.us/webinar).
-func (s *webinars) WebinarStatus(ctx context.Context, request operations.WebinarStatusRequest) (*operations.WebinarStatusResponse, error) {
+func (s *webinars) WebinarStatus(ctx context.Context, request operations.WebinarStatusRequest, security operations.WebinarStatusSecurity) (*operations.WebinarStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1681,7 +1681,7 @@ func (s *webinars) WebinarStatus(ctx context.Context, request operations.Webinar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1721,11 +1721,11 @@ func (s *webinars) WebinarStatus(ctx context.Context, request operations.Webinar
 //
 // **Prerequisites:**<br>
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) WebinarUpdateJSON(ctx context.Context, request operations.WebinarUpdateJSONRequest) (*operations.WebinarUpdateJSONResponse, error) {
+func (s *webinars) WebinarUpdateJSON(ctx context.Context, request operations.WebinarUpdateJSONRequest, security operations.WebinarUpdateJSONSecurity) (*operations.WebinarUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1740,11 +1740,11 @@ func (s *webinars) WebinarUpdateJSON(ctx context.Context, request operations.Web
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1786,11 +1786,11 @@ func (s *webinars) WebinarUpdateJSON(ctx context.Context, request operations.Web
 //
 // **Prerequisites:**<br>
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) WebinarUpdateMultipart(ctx context.Context, request operations.WebinarUpdateMultipartRequest) (*operations.WebinarUpdateMultipartResponse, error) {
+func (s *webinars) WebinarUpdateMultipart(ctx context.Context, request operations.WebinarUpdateMultipartRequest, security operations.WebinarUpdateMultipartSecurity) (*operations.WebinarUpdateMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webinars/{webinarId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1805,11 +1805,11 @@ func (s *webinars) WebinarUpdateMultipart(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1850,20 +1850,20 @@ func (s *webinars) WebinarUpdateMultipart(ctx context.Context, request operation
 //
 // **Prerequisites:**
 // * Pro or higher plan with a Webinar Add-on.
-func (s *webinars) Webinars(ctx context.Context, request operations.WebinarsRequest) (*operations.WebinarsResponse, error) {
+func (s *webinars) Webinars(ctx context.Context, request operations.WebinarsRequest, security operations.WebinarsSecurity) (*operations.WebinarsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/webinars", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/webinars", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

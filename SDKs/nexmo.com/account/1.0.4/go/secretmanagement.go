@@ -34,11 +34,11 @@ func newSecretManagement(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // CreateAPISecret - Create API Secret
-func (s *secretManagement) CreateAPISecret(ctx context.Context, request operations.CreateAPISecretRequest) (*operations.CreateAPISecretResponse, error) {
+func (s *secretManagement) CreateAPISecret(ctx context.Context, request operations.CreateAPISecretRequest, security operations.CreateAPISecretSecurity) (*operations.CreateAPISecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSecretRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *secretManagement) CreateAPISecret(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -118,16 +118,16 @@ func (s *secretManagement) CreateAPISecret(ctx context.Context, request operatio
 }
 
 // RetrieveAPISecret - Retrieve one API Secret
-func (s *secretManagement) RetrieveAPISecret(ctx context.Context, request operations.RetrieveAPISecretRequest) (*operations.RetrieveAPISecretResponse, error) {
+func (s *secretManagement) RetrieveAPISecret(ctx context.Context, request operations.RetrieveAPISecretRequest, security operations.RetrieveAPISecretSecurity) (*operations.RetrieveAPISecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets/{secret_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets/{secret_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,16 +182,16 @@ func (s *secretManagement) RetrieveAPISecret(ctx context.Context, request operat
 }
 
 // RetrieveAPISecrets - Retrieve API Secrets
-func (s *secretManagement) RetrieveAPISecrets(ctx context.Context, request operations.RetrieveAPISecretsRequest) (*operations.RetrieveAPISecretsResponse, error) {
+func (s *secretManagement) RetrieveAPISecrets(ctx context.Context, request operations.RetrieveAPISecretsRequest, security operations.RetrieveAPISecretsSecurity) (*operations.RetrieveAPISecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,16 +246,16 @@ func (s *secretManagement) RetrieveAPISecrets(ctx context.Context, request opera
 }
 
 // RevokeAPISecret - Revoke an API Secret
-func (s *secretManagement) RevokeAPISecret(ctx context.Context, request operations.RevokeAPISecretRequest) (*operations.RevokeAPISecretResponse, error) {
+func (s *secretManagement) RevokeAPISecret(ctx context.Context, request operations.RevokeAPISecretRequest, security operations.RevokeAPISecretSecurity) (*operations.RevokeAPISecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets/{secret_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{api_key}/secrets/{secret_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

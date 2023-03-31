@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.PostV05ConsentRequestsInitJSONRequest{
-        Headers: operations.PostV05ConsentRequestsInitJSONHeaders{
-            Authorization: "corrupti",
-        },
-        Request: shared.ConsentRequest{
+        Authorization: "corrupti",
+        ConsentRequest: shared.ConsentRequest{
             Consent: shared.ConsentRequestConsent{
                 CareContexts: []shared.CareContextDefinition{
                     shared.CareContextDefinition{

@@ -33,20 +33,20 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdexchangebuyerProductsGet - Gets the requested product by id.
-func (s *products) AdexchangebuyerProductsGet(ctx context.Context, request operations.AdexchangebuyerProductsGetRequest) (*operations.AdexchangebuyerProductsGetResponse, error) {
+func (s *products) AdexchangebuyerProductsGet(ctx context.Context, request operations.AdexchangebuyerProductsGetRequest, security operations.AdexchangebuyerProductsGetSecurity) (*operations.AdexchangebuyerProductsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *products) AdexchangebuyerProductsGet(ctx context.Context, request opera
 }
 
 // AdexchangebuyerProductsSearch - Gets the requested product.
-func (s *products) AdexchangebuyerProductsSearch(ctx context.Context, request operations.AdexchangebuyerProductsSearchRequest) (*operations.AdexchangebuyerProductsSearchResponse, error) {
+func (s *products) AdexchangebuyerProductsSearch(ctx context.Context, request operations.AdexchangebuyerProductsSearchRequest, security operations.AdexchangebuyerProductsSearchSecurity) (*operations.AdexchangebuyerProductsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/products/search"
 
@@ -90,11 +90,11 @@ func (s *products) AdexchangebuyerProductsSearch(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

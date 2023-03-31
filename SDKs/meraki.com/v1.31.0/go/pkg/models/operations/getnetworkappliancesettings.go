@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkApplianceSettingsRequest struct {
-	PathParams GetNetworkApplianceSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkApplianceSettings200ApplicationJSONClientTrackingMethodEnum - Client tracking method of a network

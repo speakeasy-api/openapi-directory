@@ -8,18 +8,18 @@ import (
 )
 
 type CloudsearchInitializeCustomerSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchInitializeCustomerSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchInitializeCustomerSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchInitializeCustomerSecurity struct {
@@ -28,9 +28,10 @@ type CloudsearchInitializeCustomerSecurity struct {
 	Option3 *CloudsearchInitializeCustomerSecurityOption3 `security:"option"`
 }
 
-type CloudsearchInitializeCustomerQueryParams struct {
+type CloudsearchInitializeCustomerRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -51,12 +52,6 @@ type CloudsearchInitializeCustomerQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchInitializeCustomerRequest struct {
-	QueryParams CloudsearchInitializeCustomerQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    CloudsearchInitializeCustomerSecurity
 }
 
 type CloudsearchInitializeCustomerResponse struct {

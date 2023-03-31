@@ -32,20 +32,20 @@ func newArchive(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GroupsmigrationArchiveInsert - Inserts a new mail into the archive of the Google group.
-func (s *archive) GroupsmigrationArchiveInsert(ctx context.Context, request operations.GroupsmigrationArchiveInsertRequest) (*operations.GroupsmigrationArchiveInsertResponse, error) {
+func (s *archive) GroupsmigrationArchiveInsert(ctx context.Context, request operations.GroupsmigrationArchiveInsertRequest, security operations.GroupsmigrationArchiveInsertSecurity) (*operations.GroupsmigrationArchiveInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/v1/groups/{groupId}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/v1/groups/{groupId}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

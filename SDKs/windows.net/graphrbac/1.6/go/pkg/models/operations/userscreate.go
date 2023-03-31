@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersCreatePathParams struct {
-	// The tenant ID.
-	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type UsersCreateQueryParams struct {
+type UsersCreateRequest struct {
+	// Parameters to create a user.
+	RequestBody map[string]map[string]interface{} `request:"mediaType=application/json"`
 	// Client API version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type UsersCreateRequest struct {
-	PathParams  UsersCreatePathParams
-	QueryParams UsersCreateQueryParams
-	// Parameters to create a user.
-	Request map[string]map[string]interface{} `request:"mediaType=application/json"`
+	// The tenant ID.
+	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
 }
 
 type UsersCreateResponse struct {

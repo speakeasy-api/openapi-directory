@@ -8,23 +8,14 @@ import (
 )
 
 type GetPlaylistsPlaylistIDRepostersSecurity struct {
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetPlaylistsPlaylistIDRepostersPathParams struct {
-	// SoundCloud playlist id
-	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
-}
-
-type GetPlaylistsPlaylistIDRepostersQueryParams struct {
-	// Number of results to return in the collection.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	ClientID string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type GetPlaylistsPlaylistIDRepostersRequest struct {
-	PathParams  GetPlaylistsPlaylistIDRepostersPathParams
-	QueryParams GetPlaylistsPlaylistIDRepostersQueryParams
-	Security    GetPlaylistsPlaylistIDRepostersSecurity
+	// Number of results to return in the collection.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// SoundCloud playlist id
+	PlaylistID int64 `pathParam:"style=simple,explode=false,name=playlist_id"`
 }
 
 type GetPlaylistsPlaylistIDRepostersResponse struct {

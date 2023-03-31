@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAbschlussPathParams struct {
+type CreateAbschlussRequest struct {
+	// An object that contains all data for a particular `Abschlussbeleg`.
+	Abschlussbelegdaten shared.Abschlussbelegdaten `request:"mediaType=application/json"`
 	// The `_uuid` of the `Registrierkasse` to retrieve the `Beleg` collection.
 	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
-type CreateAbschlussRequest struct {
-	PathParams CreateAbschlussPathParams
-	// An object that contains all data for a particular `Abschlussbeleg`.
-	Request shared.Abschlussbelegdaten `request:"mediaType=application/json"`
 }
 
 type CreateAbschlussResponse struct {

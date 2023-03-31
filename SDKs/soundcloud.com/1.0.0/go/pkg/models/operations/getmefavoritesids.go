@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetMeFavoritesIdsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMeFavoritesIdsQueryParams struct {
-	// Number of results to return in the collection.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetMeFavoritesIdsRequest struct {
-	QueryParams GetMeFavoritesIdsQueryParams
-	Security    GetMeFavoritesIdsSecurity
+	// Number of results to return in the collection.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetMeFavoritesIdsResponse struct {

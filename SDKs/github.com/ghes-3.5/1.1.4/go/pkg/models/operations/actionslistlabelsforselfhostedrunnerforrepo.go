@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListLabelsForSelfHostedRunnerForRepoPathParams struct {
+type ActionsListLabelsForSelfHostedRunnerForRepoRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsListLabelsForSelfHostedRunnerForRepoRequest struct {
-	PathParams ActionsListLabelsForSelfHostedRunnerForRepoPathParams
 }
 
 // ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON - Response

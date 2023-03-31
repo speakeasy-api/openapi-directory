@@ -8,24 +8,15 @@ import (
 )
 
 type GetEditorialLivefeedItemsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetEditorialLivefeedItemsPathParams struct {
-	// Editorial livefeed ID; must be an URI encoded string
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEditorialLivefeedItemsQueryParams struct {
-	// Returns only if the livefeed items are available for distribution in a certain country
-	Country string `queryParam:"style=form,explode=true,name=country"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetEditorialLivefeedItemsRequest struct {
-	PathParams  GetEditorialLivefeedItemsPathParams
-	QueryParams GetEditorialLivefeedItemsQueryParams
-	Security    GetEditorialLivefeedItemsSecurity
+	// Returns only if the livefeed items are available for distribution in a certain country
+	Country string `queryParam:"style=form,explode=true,name=country"`
+	// Editorial livefeed ID; must be an URI encoded string
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetEditorialLivefeedItemsResponse struct {

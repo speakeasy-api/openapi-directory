@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsAllScheduledscansExpandedQueryParams struct {
+type GetTargetsAllScheduledscansExpandedRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
-}
-
-type GetTargetsAllScheduledscansExpandedRequest struct {
-	QueryParams GetTargetsAllScheduledscansExpandedQueryParams
 }
 
 // GetTargetsAllScheduledscansExpanded404ApplicationJSON - Not found

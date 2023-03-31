@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPirateTranslateSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPirateTranslateQueryParams struct {
-	// Text to translate to pirate lingo.
-	Text string `queryParam:"style=form,explode=true,name=text"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type GetPirateTranslateRequest struct {
-	QueryParams GetPirateTranslateQueryParams
-	Security    GetPirateTranslateSecurity
+	// Text to translate to pirate lingo.
+	Text string `queryParam:"style=form,explode=true,name=text"`
 }
 
 type GetPirateTranslateResponse struct {

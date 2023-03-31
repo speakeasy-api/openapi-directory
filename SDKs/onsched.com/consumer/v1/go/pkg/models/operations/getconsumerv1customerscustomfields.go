@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1CustomersCustomfieldsQueryParams struct {
+type GetConsumerV1CustomersCustomfieldsRequest struct {
 	// A true/false indicator to filter on custom fields used for lead questions
 	LeadQuestions *bool `queryParam:"style=form,explode=true,name=leadQuestions"`
 	// id of business location, defaults to primary business location
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
-}
-
-type GetConsumerV1CustomersCustomfieldsRequest struct {
-	QueryParams GetConsumerV1CustomersCustomfieldsQueryParams
 }
 
 type GetConsumerV1CustomersCustomfieldsResponse struct {

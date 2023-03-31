@@ -38,7 +38,7 @@ func (e *AnalyticsGroupByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AnalyticsQueryParams struct {
+type AnalyticsRequest struct {
 	// End date of the statistics in the format YYYY-MM-DD. By default, the current day.
 	End *string `queryParam:"style=form,explode=true,name=end"`
 	// Defines the grouping of the data.
@@ -49,10 +49,6 @@ type AnalyticsQueryParams struct {
 	Start *string `queryParam:"style=form,explode=true,name=start"`
 	// Receive the data only for the main account, all your (sub-)accounts or only for specific subaccounts.
 	Subaccounts *string `queryParam:"style=form,explode=true,name=subaccounts"`
-}
-
-type AnalyticsRequest struct {
-	QueryParams AnalyticsQueryParams
 }
 
 // Analytics200ApplicationJSON - OK

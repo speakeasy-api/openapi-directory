@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostKeysRequest struct {
-	Request shared.APIKeyInput `request:"mediaType=application/json"`
-}
-
 // PostKeys403ApplicationJSON - Not allowed to perform operation
 type PostKeys403ApplicationJSON struct {
 	// Error message.

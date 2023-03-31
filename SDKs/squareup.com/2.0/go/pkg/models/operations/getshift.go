@@ -8,17 +8,12 @@ import (
 )
 
 type GetShiftSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetShiftPathParams struct {
-	// The UUID for the `Shift` being retrieved.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetShiftRequest struct {
-	PathParams GetShiftPathParams
-	Security   GetShiftSecurity
+	// The UUID for the `Shift` being retrieved.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetShiftResponse struct {

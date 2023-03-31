@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSsidEapOverridePathParams struct {
+type GetNetworkWirelessSsidEapOverrideRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkWirelessSsidEapOverrideRequest struct {
-	PathParams GetNetworkWirelessSsidEapOverridePathParams
 }
 
 // GetNetworkWirelessSsidEapOverride200ApplicationJSONEapolKey - EAPOL Key settings.

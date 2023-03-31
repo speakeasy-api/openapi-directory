@@ -6,29 +6,21 @@ import (
 	"net/http"
 )
 
-type GetVVersionReportsStartDateToEndDateReportTypePathParams struct {
+type GetVVersionReportsStartDateToEndDateReportTypeRequest struct {
 	// The end date of the report in the format ddmmyyyy (i.e 31012016)
 	EndDate string `pathParam:"style=simple,explode=false,name=end_date"`
-	// Report Type Id (i.e Daily, Monthly, Annual)
-	ReportType string `pathParam:"style=simple,explode=false,name=report_type"`
-	// The start date of the report in the format ddmmyyyy (i.e 31012016)
-	StartDate string `pathParam:"style=simple,explode=false,name=start_date"`
-	Version   string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetVVersionReportsStartDateToEndDateReportTypeQueryParams struct {
 	// The page offset to return.
 	Page int `queryParam:"style=form,explode=true,name=page"`
 	// The number of rows to return.
 	PageSize        int  `queryParam:"style=form,explode=true,name=page_size"`
 	ReportSubTypeID *int `queryParam:"style=form,explode=true,name=reportSubTypeId"`
+	// Report Type Id (i.e Daily, Monthly, Annual)
+	ReportType string `pathParam:"style=simple,explode=false,name=report_type"`
 	// Comma separated list of site Ids.
 	Sites string `queryParam:"style=form,explode=true,name=sites"`
-}
-
-type GetVVersionReportsStartDateToEndDateReportTypeRequest struct {
-	PathParams  GetVVersionReportsStartDateToEndDateReportTypePathParams
-	QueryParams GetVVersionReportsStartDateToEndDateReportTypeQueryParams
+	// The start date of the report in the format ddmmyyyy (i.e 31012016)
+	StartDate string `pathParam:"style=simple,explode=false,name=start_date"`
+	Version   string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type GetVVersionReportsStartDateToEndDateReportTypeResponse struct {

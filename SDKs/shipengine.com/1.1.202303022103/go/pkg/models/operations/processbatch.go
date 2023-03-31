@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProcessBatchPathParams struct {
-	// Batch ID
-	BatchID string `pathParam:"style=simple,explode=false,name=batch_id"`
-}
-
 type ProcessBatchRequest struct {
-	PathParams ProcessBatchPathParams
-	Request    shared.ProcessBatchRequestBody `request:"mediaType=application/json"`
+	// Batch ID
+	BatchID                 string                         `pathParam:"style=simple,explode=false,name=batch_id"`
+	ProcessBatchRequestBody shared.ProcessBatchRequestBody `request:"mediaType=application/json"`
 }
 
 type ProcessBatchResponse struct {

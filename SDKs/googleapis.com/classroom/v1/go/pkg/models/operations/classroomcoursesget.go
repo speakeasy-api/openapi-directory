@@ -8,13 +8,13 @@ import (
 )
 
 type ClassroomCoursesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClassroomCoursesGetSecurity struct {
@@ -22,12 +22,7 @@ type ClassroomCoursesGetSecurity struct {
 	Option2 *ClassroomCoursesGetSecurityOption2 `security:"option"`
 }
 
-type ClassroomCoursesGetPathParams struct {
-	// Identifier of the course to return. This identifier can be either the Classroom-assigned identifier or an alias.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClassroomCoursesGetQueryParams struct {
+type ClassroomCoursesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type ClassroomCoursesGetQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifier of the course to return. This identifier can be either the Classroom-assigned identifier or an alias.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -50,12 +47,6 @@ type ClassroomCoursesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesGetRequest struct {
-	PathParams  ClassroomCoursesGetPathParams
-	QueryParams ClassroomCoursesGetQueryParams
-	Security    ClassroomCoursesGetSecurity
 }
 
 type ClassroomCoursesGetResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteConnectorPathParams struct {
+type DeleteConnectorRequest struct {
 	// The connector id that needs to be deleted
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteConnectorRequest struct {
-	PathParams DeleteConnectorPathParams
 }
 
 type DeleteConnectorResponse struct {

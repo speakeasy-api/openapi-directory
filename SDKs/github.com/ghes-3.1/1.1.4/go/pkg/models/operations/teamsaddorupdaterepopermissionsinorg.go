@@ -8,17 +8,6 @@ import (
 	"net/http"
 )
 
-type TeamsAddOrUpdateRepoPermissionsInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum - The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
 type TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum string
 
@@ -58,8 +47,15 @@ type TeamsAddOrUpdateRepoPermissionsInOrgRequestBody struct {
 }
 
 type TeamsAddOrUpdateRepoPermissionsInOrgRequest struct {
-	PathParams TeamsAddOrUpdateRepoPermissionsInOrgPathParams
-	Request    *TeamsAddOrUpdateRepoPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateRepoPermissionsInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsAddOrUpdateRepoPermissionsInOrgResponse struct {

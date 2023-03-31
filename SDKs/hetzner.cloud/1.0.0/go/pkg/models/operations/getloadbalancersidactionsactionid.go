@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetLoadBalancersIDActionsActionIDPathParams struct {
+type GetLoadBalancersIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Load Balancer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetLoadBalancersIDActionsActionIDRequest struct {
-	PathParams GetLoadBalancersIDActionsActionIDPathParams
 }
 
 // GetLoadBalancersIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

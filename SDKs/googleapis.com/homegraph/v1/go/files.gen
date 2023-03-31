@@ -20,7 +20,6 @@ pkg/models/operations/homegraphdevicesrequestsync.go
 pkg/models/operations/homegraphdevicessync.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/queryresponse.go
 pkg/models/shared/queryresponsepayload.go
 pkg/models/shared/queryrequest.go

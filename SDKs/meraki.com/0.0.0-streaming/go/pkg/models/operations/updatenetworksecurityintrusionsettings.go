@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSecurityIntrusionSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum - Set the detection ruleset 'connectivity'/'balanced'/'security' (optional - omitting will leave current config unchanged). Default value is 'balanced' if none currently saved
 type UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum string
 
@@ -86,8 +82,8 @@ type UpdateNetworkSecurityIntrusionSettingsRequestBody struct {
 }
 
 type UpdateNetworkSecurityIntrusionSettingsRequest struct {
-	PathParams UpdateNetworkSecurityIntrusionSettingsPathParams
-	Request    *UpdateNetworkSecurityIntrusionSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSecurityIntrusionSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSecurityIntrusionSettingsResponse struct {

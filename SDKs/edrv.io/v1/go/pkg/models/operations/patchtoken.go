@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchTokenPathParams struct {
-	// ID of token that needs to be updated
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchTokenRequestBodyChannelEnum string
 
 const (
@@ -52,9 +47,10 @@ type PatchTokenRequestBody struct {
 }
 
 type PatchTokenRequest struct {
-	PathParams PatchTokenPathParams
 	// Include token properties to create here
-	Request PatchTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchTokenRequestBody `request:"mediaType=application/json"`
+	// ID of token that needs to be updated
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PatchToken201ApplicationJSON - Returns the updated token

@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteVideoSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteVideoPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteVideoRequest struct {
-	PathParams DeleteVideoPathParams
-	Security   DeleteVideoSecurity
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type DeleteVideoResponse struct {

@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDFoldersFolderIDPersonsMemberIDPathParams struct {
-	// id of the customer folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// memberId of the person
-	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
-}
-
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum string
 
 const (
@@ -92,9 +83,14 @@ type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBody struct {
 }
 
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequest struct {
-	PathParams PatchSpacesIDFoldersFolderIDPersonsMemberIDPathParams
 	// Customer contract to modify
-	Request PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBody `request:"mediaType=application/json"`
+	// id of the customer folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// memberId of the person
+	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
 }
 
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDResponse struct {

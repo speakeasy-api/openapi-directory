@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEntitiesQueryParams struct {
+type ListEntitiesRequest struct {
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit  *int64  `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListEntitiesRequest struct {
-	QueryParams ListEntitiesQueryParams
 }
 
 type ListEntitiesDefaultApplicationJSON13StatusEnum string

@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONPathParams struct {
-	// Id of the folder social regime
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDSocialDeclarationsApplicationJSON2AccountingWorkbookEnum string
@@ -164,10 +156,12 @@ func (u PostSpacesSpaceIDFoldersIDSocialDeclarationsApplicationJSON) MarshalJSON
 }
 
 type PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONPathParams
 	// Social declaration to add (either (Reference,DocumentId) either (File,Name,Content64Encoded,Title,Reference) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDSocialDeclarationsApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDSocialDeclarationsApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder social regime
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDSocialDeclarationsJSON201ApplicationJSON - Id of document created

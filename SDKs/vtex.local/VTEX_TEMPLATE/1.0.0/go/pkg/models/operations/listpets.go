@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPetsQueryParams struct {
+type ListPetsRequest struct {
 	// How many items to return at one time (max 100)
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListPetsRequest struct {
-	QueryParams ListPetsQueryParams
 }
 
 type ListPetsResponse struct {

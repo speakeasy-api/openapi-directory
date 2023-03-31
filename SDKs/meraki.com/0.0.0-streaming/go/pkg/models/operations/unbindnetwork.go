@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type UnbindNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UnbindNetworkRequest struct {
-	PathParams UnbindNetworkPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UnbindNetworkResponse struct {

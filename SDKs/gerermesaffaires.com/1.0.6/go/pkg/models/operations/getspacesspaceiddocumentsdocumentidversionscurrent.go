@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrentPathParams struct {
+type GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrentRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrentRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrentPathParams
 }
 
 // GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrent200ApplicationJSON - current version of the document

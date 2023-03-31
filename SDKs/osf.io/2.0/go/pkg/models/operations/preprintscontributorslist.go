@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PreprintsContributorsListPathParams struct {
+type PreprintsContributorsListRequest struct {
 	// The unique identifier of the preprint.
 	PreprintID string `pathParam:"style=simple,explode=false,name=preprint_id"`
-}
-
-type PreprintsContributorsListRequest struct {
-	PathParams PreprintsContributorsListPathParams
 }
 
 // PreprintsContributorsListContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.

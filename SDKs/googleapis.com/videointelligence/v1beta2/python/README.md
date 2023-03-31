@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/videointelligence/v1beta2/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,118 +15,138 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VideointelligenceVideosAnnotateRequest(
-    security=operations.VideointelligenceVideosAnnotateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.VideointelligenceVideosAnnotateQueryParams(
-        dollar_xgafv="1",
-        access_token="aut",
-        alt="media",
-        callback="eum",
-        fields="quis",
-        key="deleniti",
-        oauth_token="quibusdam",
-        pretty_print=True,
-        quota_user="doloremque",
-        upload_type="eius",
-        upload_protocol="quasi",
-    ),
-    request=shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequest(
+    dollar_xgafv="2",
+    google_cloud_videointelligence_v1beta2_annotate_video_request=shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequest(
         features=[
-            "FACE_DETECTION",
+            "OBJECT_TRACKING",
             "LOGO_RECOGNITION",
+            "TEXT_DETECTION",
         ],
-        input_content="voluptatem",
-        input_uri="cum",
-        location_id="explicabo",
-        output_uri="accusamus",
+        input_content="nulla",
+        input_uri="corrupti",
+        location_id="illum",
+        output_uri="vel",
         video_context=shared.GoogleCloudVideointelligenceV1beta2VideoContext(
             explicit_content_detection_config=shared.GoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig(
-                model="repellat",
+                model="error",
             ),
             face_detection_config=shared.GoogleCloudVideointelligenceV1beta2FaceDetectionConfig(
                 include_attributes=False,
                 include_bounding_boxes=False,
-                model="nulla",
+                model="deserunt",
             ),
             label_detection_config=shared.GoogleCloudVideointelligenceV1beta2LabelDetectionConfig(
-                frame_confidence_threshold=13.100000,
-                label_detection_mode="FRAME_MODE",
-                model="suscipit",
-                stationary_camera=True,
-                video_confidence_threshold=82.099998,
+                frame_confidence_threshold=3843.82,
+                label_detection_mode="SHOT_MODE",
+                model="magnam",
+                stationary_camera=False,
+                video_confidence_threshold=8917.73,
             ),
             object_tracking_config=shared.GoogleCloudVideointelligenceV1beta2ObjectTrackingConfig(
-                model="beatae",
+                model="ipsa",
             ),
             person_detection_config=shared.GoogleCloudVideointelligenceV1beta2PersonDetectionConfig(
-                include_attributes=True,
-                include_bounding_boxes=True,
-                include_pose_landmarks=True,
+                include_attributes=False,
+                include_bounding_boxes=False,
+                include_pose_landmarks=False,
             ),
             segments=[
                 shared.GoogleCloudVideointelligenceV1beta2VideoSegment(
-                    end_time_offset="vel",
-                    start_time_offset="laudantium",
+                    end_time_offset="tempora",
+                    start_time_offset="suscipit",
                 ),
                 shared.GoogleCloudVideointelligenceV1beta2VideoSegment(
-                    end_time_offset="officiis",
-                    start_time_offset="ratione",
+                    end_time_offset="molestiae",
+                    start_time_offset="minus",
                 ),
                 shared.GoogleCloudVideointelligenceV1beta2VideoSegment(
-                    end_time_offset="debitis",
-                    start_time_offset="ipsam",
+                    end_time_offset="placeat",
+                    start_time_offset="voluptatum",
+                ),
+                shared.GoogleCloudVideointelligenceV1beta2VideoSegment(
+                    end_time_offset="iusto",
+                    start_time_offset="excepturi",
                 ),
             ],
             shot_change_detection_config=shared.GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig(
-                model="voluptatem",
+                model="nisi",
             ),
             speech_transcription_config=shared.GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig(
                 audio_tracks=[
-                    7978414240435591701,
-                    5274862137229999836,
+                    836079,
+                    71036,
+                    337396,
+                    87129,
                 ],
-                diarization_speaker_count=1766583513219013839,
-                enable_automatic_punctuation=True,
+                diarization_speaker_count=648172,
+                enable_automatic_punctuation=False,
                 enable_speaker_diarization=False,
-                enable_word_confidence=True,
+                enable_word_confidence=False,
                 filter_profanity=False,
-                language_code="recusandae",
-                max_alternatives=432962744048564394,
+                language_code="perferendis",
+                max_alternatives=368241,
                 speech_contexts=[
                     shared.GoogleCloudVideointelligenceV1beta2SpeechContext(
                         phrases=[
-                            "placeat",
+                            "quo",
+                            "odit",
+                            "at",
+                            "at",
                         ],
                     ),
                     shared.GoogleCloudVideointelligenceV1beta2SpeechContext(
                         phrases=[
-                            "voluptatem",
-                            "qui",
+                            "molestiae",
+                            "quod",
+                            "quod",
+                            "esse",
+                        ],
+                    ),
+                    shared.GoogleCloudVideointelligenceV1beta2SpeechContext(
+                        phrases=[
+                            "porro",
+                            "dolorum",
+                            "dicta",
+                        ],
+                    ),
+                    shared.GoogleCloudVideointelligenceV1beta2SpeechContext(
+                        phrases=[
+                            "officia",
+                            "occaecati",
+                            "fugit",
                         ],
                     ),
                 ],
             ),
             text_detection_config=shared.GoogleCloudVideointelligenceV1beta2TextDetectionConfig(
                 language_hints=[
-                    "consequatur",
-                    "debitis",
-                    "dolor",
+                    "hic",
+                    "optio",
+                    "totam",
                 ],
-                model="unde",
+                model="beatae",
             ),
         ),
     ),
+    access_token="commodi",
+    alt="media",
+    callback="modi",
+    fields_="qui",
+    key="impedit",
+    oauth_token="cum",
+    pretty_print=False,
+    quota_user="esse",
+    upload_type="ipsum",
+    upload_protocol="excepturi",
 )
     
-res = s.videos.videointelligence_videos_annotate(req)
+res = s.videos.videointelligence_videos_annotate(req, operations.VideointelligenceVideosAnnotateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_longrunning_operation is not None:
     # handle response
@@ -134,12 +154,23 @@ if res.google_longrunning_operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### videos
 
 * `videointelligence_videos_annotate` - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

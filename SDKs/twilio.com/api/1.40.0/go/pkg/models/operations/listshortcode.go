@@ -12,15 +12,13 @@ var ListShortCodeServerList = []string{
 }
 
 type ListShortCodeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListShortCodePathParams struct {
+type ListShortCodeRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListShortCodeQueryParams struct {
 	// The string that identifies the ShortCode resources to read.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -31,13 +29,6 @@ type ListShortCodeQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Only show the ShortCode resources that match this pattern. You can specify partial numbers and use '*' as a wildcard for any digit.
 	ShortCode *string `queryParam:"style=form,explode=true,name=ShortCode"`
-}
-
-type ListShortCodeRequest struct {
-	PathParams  ListShortCodePathParams
-	QueryParams ListShortCodeQueryParams
-	Security    ListShortCodeSecurity
-	ServerURL   *string
 }
 
 // ListShortCodeListShortCodeResponse - OK

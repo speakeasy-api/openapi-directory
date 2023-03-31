@@ -12,7 +12,8 @@ var CreateEndUserServerList = []string{
 }
 
 type CreateEndUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateEndUserCreateEndUserRequest struct {
@@ -22,12 +23,6 @@ type CreateEndUserCreateEndUserRequest struct {
 	FriendlyName string `form:"name=FriendlyName"`
 	// The type of end user of the Bundle resource - can be `individual` or `business`.
 	Type string `form:"name=Type"`
-}
-
-type CreateEndUserRequest struct {
-	Request   *CreateEndUserCreateEndUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateEndUserSecurity
-	ServerURL *string
 }
 
 type CreateEndUserResponse struct {

@@ -10,23 +10,18 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentsTestCasesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesListSecurity struct {
 	Option1 *DialogflowProjectsLocationsAgentsTestCasesListSecurityOption1 `security:"option"`
 	Option2 *DialogflowProjectsLocationsAgentsTestCasesListSecurityOption2 `security:"option"`
-}
-
-type DialogflowProjectsLocationsAgentsTestCasesListPathParams struct {
-	// Required. The agent to list all pages for. Format: `projects//locations//agents/`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // DialogflowProjectsLocationsAgentsTestCasesListViewEnum - Specifies whether response should include all fields or just the metadata.
@@ -56,7 +51,7 @@ func (e *DialogflowProjectsLocationsAgentsTestCasesListViewEnum) UnmarshalJSON(d
 	}
 }
 
-type DialogflowProjectsLocationsAgentsTestCasesListQueryParams struct {
+type DialogflowProjectsLocationsAgentsTestCasesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -75,6 +70,8 @@ type DialogflowProjectsLocationsAgentsTestCasesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The agent to list all pages for. Format: `projects//locations//agents/`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -85,12 +82,6 @@ type DialogflowProjectsLocationsAgentsTestCasesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies whether response should include all fields or just the metadata.
 	View *DialogflowProjectsLocationsAgentsTestCasesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DialogflowProjectsLocationsAgentsTestCasesListRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentsTestCasesListPathParams
-	QueryParams DialogflowProjectsLocationsAgentsTestCasesListQueryParams
-	Security    DialogflowProjectsLocationsAgentsTestCasesListSecurity
 }
 
 type DialogflowProjectsLocationsAgentsTestCasesListResponse struct {

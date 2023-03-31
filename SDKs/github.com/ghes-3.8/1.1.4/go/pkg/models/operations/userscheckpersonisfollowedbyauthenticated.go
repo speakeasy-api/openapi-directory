@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersCheckPersonIsFollowedByAuthenticatedPathParams struct {
+type UsersCheckPersonIsFollowedByAuthenticatedRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersCheckPersonIsFollowedByAuthenticatedRequest struct {
-	PathParams UsersCheckPersonIsFollowedByAuthenticatedPathParams
 }
 
 type UsersCheckPersonIsFollowedByAuthenticatedResponse struct {

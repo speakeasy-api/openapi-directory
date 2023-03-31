@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeactivateUsersRequest struct {
-	Request shared.DeactivateUsersRequest `request:"mediaType=application/json"`
-}
-
 type DeactivateUsersResponse struct {
 	// Bad request
 	APIError    *shared.APIError

@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateProjectUpdateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateProjectUpdatePathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateProjectUpdateRequest struct {
-	PathParams PrivateProjectUpdatePathParams
 	// Project description
-	Request  shared.ProjectUpdate `request:"mediaType=application/json"`
-	Security PrivateProjectUpdateSecurity
+	ProjectUpdate shared.ProjectUpdate `request:"mediaType=application/json"`
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectUpdateResponse struct {

@@ -106,7 +106,7 @@ func New(opts ...SDKOption) *SDK {
 // PlayByPlay - Play By Play
 func (s *SDK) PlayByPlay(ctx context.Context, request operations.PlayByPlayRequest) (*operations.PlayByPlayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlay/{gameid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlay/{gameid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *SDK) PlayByPlay(ctx context.Context, request operations.PlayByPlayReque
 // PlayByPlayDelta - Play By Play Delta
 func (s *SDK) PlayByPlayDelta(ctx context.Context, request operations.PlayByPlayDeltaRequest) (*operations.PlayByPlayDeltaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlayDelta/{date}/{minutes}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlayDelta/{date}/{minutes}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

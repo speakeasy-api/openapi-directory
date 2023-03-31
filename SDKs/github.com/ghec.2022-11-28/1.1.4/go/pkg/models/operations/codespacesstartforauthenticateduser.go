@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesStartForAuthenticatedUserPathParams struct {
+type CodespacesStartForAuthenticatedUserRequest struct {
 	// The name of the codespace.
 	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
-}
-
-type CodespacesStartForAuthenticatedUserRequest struct {
-	PathParams CodespacesStartForAuthenticatedUserPathParams
 }
 
 type CodespacesStartForAuthenticatedUserResponse struct {

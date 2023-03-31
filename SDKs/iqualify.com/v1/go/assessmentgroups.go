@@ -35,7 +35,7 @@ func newAssessmentGroups(defaultClient, securityClient HTTPClient, serverURL, la
 // Removes a learner from the specified assessment group.
 func (s *assessmentGroups) DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEmail(ctx context.Context, request operations.DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEmailRequest) (*operations.DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups/{groupId}/learners/{userEmail}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups/{groupId}/learners/{userEmail}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *assessmentGroups) DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEma
 // Responds with a list of assessment groups in an offering.
 func (s *assessmentGroups) GetOfferingsOfferingIDGroups(ctx context.Context, request operations.GetOfferingsOfferingIDGroupsRequest) (*operations.GetOfferingsOfferingIDGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *assessmentGroups) GetOfferingsOfferingIDGroups(ctx context.Context, req
 // Responds with a list of learners in a specified assessment group.
 func (s *assessmentGroups) GetOfferingsOfferingIDGroupsGroupIDLearners(ctx context.Context, request operations.GetOfferingsOfferingIDGroupsGroupIDLearnersRequest) (*operations.GetOfferingsOfferingIDGroupsGroupIDLearnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups/{groupId}/learners", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups/{groupId}/learners", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -207,9 +207,9 @@ func (s *assessmentGroups) GetOfferingsOfferingIDGroupsGroupIDLearners(ctx conte
 // Creates a new assessment group in an offering.
 func (s *assessmentGroups) PostOfferingsOfferingIDGroups(ctx context.Context, request operations.PostOfferingsOfferingIDGroupsRequest) (*operations.PostOfferingsOfferingIDGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssessmentGroupRequired", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,9 +278,9 @@ func (s *assessmentGroups) PostOfferingsOfferingIDGroups(ctx context.Context, re
 // Adds a learner into the specified assessment group.
 func (s *assessmentGroups) PostOfferingsOfferingIDGroupsGroupIDLearners(ctx context.Context, request operations.PostOfferingsOfferingIDGroupsGroupIDLearnersRequest) (*operations.PostOfferingsOfferingIDGroupsGroupIDLearnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups/{groupId}/learners", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/groups/{groupId}/learners", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

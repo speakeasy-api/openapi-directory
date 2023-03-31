@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetDriversQueryParams struct {
+type GetDriversRequest struct {
 	// Get a list of active drivers
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Date as ISO String
@@ -35,10 +35,6 @@ type GetDriversQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetDriversRequest struct {
-	QueryParams GetDriversQueryParams
 }
 
 // GetDrivers200ApplicationJSON - Returns a list of driver objects

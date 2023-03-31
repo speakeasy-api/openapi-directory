@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSflowGetStatisticsPathParams struct {
+type ProtocolSflowGetStatisticsRequest struct {
 	// Agent to show SFLOW statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSflowGetStatisticsRequest struct {
-	PathParams ProtocolSflowGetStatisticsPathParams
 }
 
 type ProtocolSflowGetStatisticsResponse struct {

@@ -14,43 +14,36 @@ func main() {
     s := sdk.New()
 
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
-        Security: operations.PagespeedonlinePagespeedapiRunpagespeedSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        CaptchaToken: "unde",
+        Category: []PagespeedonlinePagespeedapiRunpagespeedCategoryEnum{
+            "PERFORMANCE",
+            "SEO",
+            "BEST_PRACTICES",
+            "PERFORMANCE",
         },
-        QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            CaptchaToken: "unde",
-            Category: []PagespeedonlinePagespeedapiRunpagespeedCategoryEnum{
-                "PERFORMANCE",
-                "SEO",
-                "BEST_PRACTICES",
-                "PERFORMANCE",
-            },
-            Fields: "deserunt",
-            Key: "suscipit",
-            Locale: "iure",
-            OauthToken: "magnam",
-            PrettyPrint: false,
-            QuotaUser: "debitis",
-            Strategy: "STRATEGY_UNSPECIFIED",
-            UploadType: "delectus",
-            UploadProtocol: "tempora",
-            URL: "suscipit",
-            UtmCampaign: "molestiae",
-            UtmSource: "minus",
-        },
+        Fields: "deserunt",
+        Key: "suscipit",
+        Locale: "iure",
+        OauthToken: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        Strategy: "STRATEGY_UNSPECIFIED",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
+        URL: "suscipit",
+        UtmCampaign: "molestiae",
+        UtmSource: "minus",
     }
 
     ctx := context.Background()
-    res, err := s.Pagespeedapi.PagespeedonlinePagespeedapiRunpagespeed(ctx, req)
+    res, err := s.Pagespeedapi.PagespeedonlinePagespeedapiRunpagespeed(ctx, req, operations.PagespeedonlinePagespeedapiRunpagespeedSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

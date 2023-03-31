@@ -8,17 +8,13 @@ import (
 	"time"
 )
 
-type GetReportsSummaryQueryParams struct {
+type GetReportsSummaryRequest struct {
 	DeviceID []int64 `queryParam:"style=form,explode=true,name=deviceId"`
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
 	From    time.Time `queryParam:"style=form,explode=true,name=from"`
 	GroupID []int64   `queryParam:"style=form,explode=true,name=groupId"`
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
 	To time.Time `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetReportsSummaryRequest struct {
-	QueryParams GetReportsSummaryQueryParams
 }
 
 type GetReportsSummaryResponse struct {

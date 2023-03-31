@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CinemaSearchReadRequest{
-        PathParams: operations.CinemaSearchReadPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()

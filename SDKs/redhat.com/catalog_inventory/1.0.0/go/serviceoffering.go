@@ -36,9 +36,9 @@ func newServiceOffering(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns an array of inventories tags
 func (s *serviceOffering) AppliedInventoriesTagsForServiceOffering(ctx context.Context, request operations.AppliedInventoriesTagsForServiceOfferingRequest) (*operations.AppliedInventoriesTagsForServiceOfferingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/applied_inventories_tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/applied_inventories_tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppliedInventoriesParametersServicePlan", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -92,14 +92,14 @@ func (s *serviceOffering) AppliedInventoriesTagsForServiceOffering(ctx context.C
 // Returns an array of ServiceInstance objects
 func (s *serviceOffering) ListServiceOfferingServiceInstances(ctx context.Context, request operations.ListServiceOfferingServiceInstancesRequest) (*operations.ListServiceOfferingServiceInstancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -151,14 +151,14 @@ func (s *serviceOffering) ListServiceOfferingServiceInstances(ctx context.Contex
 // Returns an array of ServiceOfferingNode objects
 func (s *serviceOffering) ListServiceOfferingServiceOfferingNodes(ctx context.Context, request operations.ListServiceOfferingServiceOfferingNodesRequest) (*operations.ListServiceOfferingServiceOfferingNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_offering_nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_offering_nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -210,14 +210,14 @@ func (s *serviceOffering) ListServiceOfferingServiceOfferingNodes(ctx context.Co
 // Returns an array of ServicePlan objects
 func (s *serviceOffering) ListServiceOfferingServicePlans(ctx context.Context, request operations.ListServiceOfferingServicePlansRequest) (*operations.ListServiceOfferingServicePlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_plans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_plans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -276,7 +276,7 @@ func (s *serviceOffering) ListServiceOfferings(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -318,9 +318,9 @@ func (s *serviceOffering) ListServiceOfferings(ctx context.Context, request oper
 // Returns a Task id
 func (s *serviceOffering) OrderServiceOffering(ctx context.Context, request operations.OrderServiceOfferingRequest) (*operations.OrderServiceOfferingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/order", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderParametersServiceOfferingInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -374,7 +374,7 @@ func (s *serviceOffering) OrderServiceOffering(ctx context.Context, request oper
 // Returns a ServiceOffering object
 func (s *serviceOffering) ShowServiceOffering(ctx context.Context, request operations.ShowServiceOfferingRequest) (*operations.ShowServiceOfferingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsDeleteActionsCacheByKeyPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsDeleteActionsCacheByKeyQueryParams struct {
+type ActionsDeleteActionsCacheByKeyRequest struct {
 	// A key for identifying the cache.
 	Key string `queryParam:"style=form,explode=true,name=key"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type ActionsDeleteActionsCacheByKeyRequest struct {
-	PathParams  ActionsDeleteActionsCacheByKeyPathParams
-	QueryParams ActionsDeleteActionsCacheByKeyQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ActionsDeleteActionsCacheByKeyResponse struct {

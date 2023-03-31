@@ -6,27 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetPaymentSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPaymentPathParams struct {
-	// Transaction Id
-	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
-}
-
-type GetPaymentHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetPaymentRequest struct {
-	PathParams GetPaymentPathParams
-	Headers    GetPaymentHeaders
-	Security   GetPaymentSecurity
+	// Transaction Id
+	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetPayment500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

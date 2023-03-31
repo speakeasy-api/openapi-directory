@@ -8,26 +8,19 @@ import (
 )
 
 type AppengineAppsServicesVersionsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppengineAppsServicesVersionsDeletePathParams struct {
-	// Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
-	// Part of `name`. See documentation of `appsId`.
-	VersionsID string `pathParam:"style=simple,explode=false,name=versionsId"`
-}
-
-type AppengineAppsServicesVersionsDeleteQueryParams struct {
+type AppengineAppsServicesVersionsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,16 +33,14 @@ type AppengineAppsServicesVersionsDeleteQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Part of `name`. See documentation of `appsId`.
+	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsServicesVersionsDeleteRequest struct {
-	PathParams  AppengineAppsServicesVersionsDeletePathParams
-	QueryParams AppengineAppsServicesVersionsDeleteQueryParams
-	Security    AppengineAppsServicesVersionsDeleteSecurity
+	// Part of `name`. See documentation of `appsId`.
+	VersionsID string `pathParam:"style=simple,explode=false,name=versionsId"`
 }
 
 type AppengineAppsServicesVersionsDeleteResponse struct {

@@ -8,23 +8,23 @@ import (
 )
 
 type DataflowProjectsSnapshotsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsSnapshotsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsSnapshotsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsSnapshotsGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsSnapshotsGetSecurity struct {
@@ -34,14 +34,7 @@ type DataflowProjectsSnapshotsGetSecurity struct {
 	Option4 *DataflowProjectsSnapshotsGetSecurityOption4 `security:"option"`
 }
 
-type DataflowProjectsSnapshotsGetPathParams struct {
-	// The ID of the Cloud Platform project that the snapshot belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// The ID of the snapshot.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
-}
-
-type DataflowProjectsSnapshotsGetQueryParams struct {
+type DataflowProjectsSnapshotsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -60,18 +53,16 @@ type DataflowProjectsSnapshotsGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The ID of the Cloud Platform project that the snapshot belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the snapshot.
+	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataflowProjectsSnapshotsGetRequest struct {
-	PathParams  DataflowProjectsSnapshotsGetPathParams
-	QueryParams DataflowProjectsSnapshotsGetQueryParams
-	Security    DataflowProjectsSnapshotsGetSecurity
 }
 
 type DataflowProjectsSnapshotsGetResponse struct {

@@ -12,18 +12,13 @@ var FetchExportServerList = []string{
 }
 
 type FetchExportSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchExportPathParams struct {
-	// The type of communication – Messages, Calls, Conferences, and Participants
-	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchExportRequest struct {
-	PathParams FetchExportPathParams
-	Security   FetchExportSecurity
-	ServerURL  *string
+	// The type of communication – Messages, Calls, Conferences, and Participants
+	ResourceType string `pathParam:"style=simple,explode=false,name=ResourceType"`
 }
 
 type FetchExportResponse struct {

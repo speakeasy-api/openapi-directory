@@ -8,18 +8,13 @@ import (
 )
 
 type ChineseNameMatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ChineseNameMatchPathParams struct {
-	ChineseGivenNameLatin string `pathParam:"style=simple,explode=false,name=chineseGivenNameLatin"`
-	ChineseName           string `pathParam:"style=simple,explode=false,name=chineseName"`
-	ChineseSurnameLatin   string `pathParam:"style=simple,explode=false,name=chineseSurnameLatin"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ChineseNameMatchRequest struct {
-	PathParams ChineseNameMatchPathParams
-	Security   ChineseNameMatchSecurity
+	ChineseGivenNameLatin string `pathParam:"style=simple,explode=false,name=chineseGivenNameLatin"`
+	ChineseName           string `pathParam:"style=simple,explode=false,name=chineseName"`
+	ChineseSurnameLatin   string `pathParam:"style=simple,explode=false,name=chineseSurnameLatin"`
 }
 
 type ChineseNameMatchResponse struct {

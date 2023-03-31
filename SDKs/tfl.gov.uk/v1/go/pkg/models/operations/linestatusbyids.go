@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineStatusByIdsPathParams struct {
-	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
-	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type LineStatusByIdsQueryParams struct {
+type LineStatusByIdsRequest struct {
 	// Include details of the disruptions that are causing the line status including the affected stops and routes
 	Detail *bool `queryParam:"style=form,explode=true,name=detail"`
-}
-
-type LineStatusByIdsRequest struct {
-	PathParams  LineStatusByIdsPathParams
-	QueryParams LineStatusByIdsQueryParams
+	// A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
 }
 
 type LineStatusByIdsResponse struct {

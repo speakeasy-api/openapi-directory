@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2MimeEmailPayloadsIDJSONPathParams struct {
+type GetV2MimeEmailPayloadsIDJSONRequest struct {
 	// ID of Email
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2MimeEmailPayloadsIDJSONRequest struct {
-	PathParams GetV2MimeEmailPayloadsIDJSONPathParams
 }
 
 type GetV2MimeEmailPayloadsIDJSONResponse struct {

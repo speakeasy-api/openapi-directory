@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/mgn/2020-02-26/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,71 +14,110 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.ChangeServerLifeCycleStateRequest(
-    headers=operations.ChangeServerLifeCycleStateHeaders(
-        x_amz_algorithm="natus",
-        x_amz_content_sha256="corrupti",
-        x_amz_credential="quis",
-        x_amz_date="consequatur",
-        x_amz_security_token="tenetur",
-        x_amz_signature="alias",
-        x_amz_signed_headers="similique",
-    ),
-    request=operations.ChangeServerLifeCycleStateRequestBody(
-        life_cycle=operations.ChangeServerLifeCycleStateRequestBodyLifeCycle(
-            state="READY_FOR_TEST",
-        ),
-        source_server_id="fugit",
+        hmac="YOUR_API_KEY_HERE",
     ),
 )
-    
-res = s.change_server_life_cycle_state(req)
 
-if res.source_server is not None:
+
+req = operations.ArchiveApplicationRequest(
+    request_body=operations.ArchiveApplicationRequestBody(
+        application_id="corrupti",
+    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+)
+    
+res = s.archive_application(req)
+
+if res.application is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
+* `archive_application` - Archive application.
+* `archive_wave` - Archive wave.
+* `associate_applications` - Associate applications to wave.
+* `associate_source_servers` - Associate source servers to application.
 * `change_server_life_cycle_state` - Allows the user to set the SourceServer.LifeCycle.state property for specific Source Server IDs to one of the following: READY_FOR_TEST or READY_FOR_CUTOVER. This command only works if the Source Server is already launchable (dataReplicationInfo.lagDuration is not null.)
+* `create_application` - Create application.
+* `create_launch_configuration_template` - Creates a new Launch Configuration Template.
 * `create_replication_configuration_template` - Creates a new ReplicationConfigurationTemplate.
+* `create_wave` - Create wave.
+* `delete_application` - Delete application.
 * `delete_job` - Deletes a single Job by ID.
+* `delete_launch_configuration_template` - Deletes a single Launch Configuration Template by ID.
 * `delete_replication_configuration_template` - Deletes a single Replication Configuration Template by ID
 * `delete_source_server` - Deletes a single source server by ID.
-* `describe_job_log_items` - Retrieves detailed Job log with paging.
-* `describe_jobs` - Returns a list of Jobs. Use the JobsID and fromDate and toData filters to limit which jobs are returned. The response is sorted by creationDataTime - latest date first. Jobs are normaly created by the StartTest, StartCutover, and TerminateTargetInstances APIs. Jobs are also created by DiagnosticLaunch and TerminateDiagnosticInstances, which are APIs available only to *Support* and only used in response to relevant support tickets.
+* `delete_vcenter_client` - Deletes a given vCenter client by ID.
+* `delete_wave` - Delete wave.
+* `describe_job_log_items` - Retrieves detailed job log items with paging.
+* `describe_jobs` - Returns a list of Jobs. Use the JobsID and fromDate and toData filters to limit which jobs are returned. The response is sorted by creationDataTime - latest date first. Jobs are normally created by the StartTest, StartCutover, and TerminateTargetInstances APIs. Jobs are also created by DiagnosticLaunch and TerminateDiagnosticInstances, which are APIs available only to *Support* and only used in response to relevant support tickets.
+* `describe_launch_configuration_templates` - Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
 * `describe_replication_configuration_templates` - Lists all ReplicationConfigurationTemplates, filtered by Source Server IDs.
 * `describe_source_servers` - Retrieves all SourceServers or multiple SourceServers by ID.
-* `disconnect_from_service` - Disconnects specific Source Servers from Application Migration Service. Data replication is stopped immediately. All AWS resources created by Application Migration Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. If the agent on the source server has not been prevented from communciating with the Application Migration Service service, then it will receive a command to uninstall itself (within approximately 10 minutes). The following properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be set to DISCONNECTED; The totalStorageBytes property for each of dataReplicationInfo.replicatedDisks will be set to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
-* `finalize_cutover` - Finalizes the cutover immediately for specific Source Servers. All AWS resources created by Application Migration Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. The AWS Replication Agent will receive a command to uninstall itself (within 10 minutes). The following properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be to DISCONNECTED; The SourceServer.lifeCycle.state will be changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+* `describe_vcenter_clients` - Returns a list of the installed vCenter clients.
+* `disassociate_applications` - Disassociate applications from wave.
+* `disassociate_source_servers` - Disassociate source servers from application.
+* `disconnect_from_service` - Disconnects specific Source Servers from Application Migration Service. Data replication is stopped immediately. All AWS resources created by Application Migration Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. If the agent on the source server has not been prevented from communicating with the Application Migration Service service, then it will receive a command to uninstall itself (within approximately 10 minutes). The following properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be set to DISCONNECTED; The totalStorageBytes property for each of dataReplicationInfo.replicatedDisks will be set to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
+* `finalize_cutover` - Finalizes the cutover immediately for specific Source Servers. All AWS resources created by Application Migration Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. The AWS Replication Agent will receive a command to uninstall itself (within 10 minutes). The following properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be changed to DISCONNECTED; The SourceServer.lifeCycle.state will be changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
 * `get_launch_configuration` - Lists all LaunchConfigurations available, filtered by Source Server IDs.
 * `get_replication_configuration` - Lists all ReplicationConfigurations, filtered by Source Server ID.
 * `initialize_service` - Initialize Application Migration Service.
+* `list_applications` - Retrieves all applications or multiple applications by ID.
+* `list_export_errors` - List export errors.
+* `list_exports` - List exports.
+* `list_import_errors` - List import errors.
+* `list_imports` - List imports.
+* `list_source_server_actions` - List source server post migration custom actions.
 * `list_tags_for_resource` - List all tags for your Application Migration Service resources.
-* `mark_as_archived` - Archives specific Source Servers by setting the SourceServer.isArchived property to true for specified SourceServers by ID. This command only works for SourceServers with a lifecycle.state which equals DISCONNECTED or CUTOVER.
+* `list_template_actions` - List template post migration custom actions.
+* `list_waves` - Retrieves all waves or multiple waves by ID.
+* `mark_as_archived` - Archives specific Source Servers by setting the SourceServer.isArchived property to true for specified SourceServers by ID. This command only works for SourceServers with a lifecycle. state which equals DISCONNECTED or CUTOVER.
+* `put_source_server_action` - Put source server post migration custom action.
+* `put_template_action` - Put template post migration custom action.
+* `remove_source_server_action` - Remove source server post migration custom action.
+* `remove_template_action` - Remove template post migration custom action.
 * `retry_data_replication` - Causes the data replication initiation sequence to begin immediately upon next Handshake for specified SourceServer IDs, regardless of when the previous initiation started. This command will not work if the SourceServer is not stalled or is in a DISCONNECTED or STOPPED state.
 * `start_cutover` - Launches a Cutover Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property is StartCutover and changes the SourceServer.lifeCycle.state property to CUTTING_OVER.
-* `start_test` - Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
+* `start_export` - Start export.
+* `start_import` - Start import.
+* `start_replication` - Starts replication for SNAPSHOT_SHIPPING agents.
+* `start_test` - Launches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
 * `tag_resource` - Adds or overwrites only the specified tags for the specified Application Migration Service resource or resources. When you specify an existing tag key, the value is overwritten with the new value. Each resource can have a maximum of 50 tags. Each tag consists of a key and optional value.
 * `terminate_target_instances` - Starts a job that terminates specific launched EC2 Test and Cutover instances. This command will not work for any Source Server with a lifecycle.state of TESTING, CUTTING_OVER, or CUTOVER.
+* `unarchive_application` - Unarchive application.
+* `unarchive_wave` - Unarchive wave.
 * `untag_resource` - Deletes the specified set of tags from the specified set of Application Migration Service resources.
+* `update_application` - Update application.
 * `update_launch_configuration` - Updates multiple LaunchConfigurations by Source Server ID.
+* `update_launch_configuration_template` - Updates an existing Launch Configuration Template by ID.
 * `update_replication_configuration` - Allows you to update multiple ReplicationConfigurations by Source Server ID.
 * `update_replication_configuration_template` - Updates multiple ReplicationConfigurationTemplates by ID.
-
+* `update_source_server_replication_type` - Allows you to change between the AGENT_BASED replication type and the SNAPSHOT_SHIPPING replication type.
+* `update_wave` - Update wave.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

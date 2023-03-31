@@ -1,0 +1,83 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/statsocial.com/1.0.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        api_key="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.GetApplicationsStatusRequest(
+    key="corrupti",
+)
+    
+res = s.application.get_applications_status_(req)
+
+if res.application_status is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### application
+
+* `get_applications_status_` - Used to understand API usage
+
+### custom_reports
+
+* `get_reports_custom_create_` - Step 3 of executing custom report
+* `get_reports_custom_generate_` - Step 1 of executing custom report
+* `get_reports_custom_insert_` - Step 2 of executing custom report
+* `post_reports_custom_create_` - Step 3 of executing custom report
+* `post_reports_custom_generate_` - Step 1 of executing custom report
+* `post_reports_custom_insert_` - Step 2 of executing custom report
+
+### follower_reports
+
+* `get_reports_twitter_create_` - Used to create twitter follower report
+* `post_reports_twitter_create_` - Used to create twitter follower report
+
+### reports
+
+* `get_reports_` - Obtain report output
+* `get_reports_dates_` - Get report dates available for a specific report
+* `get_reports_status_` - Get list of generated reports
+* `post_reports_` - Obtain report output
+* `post_reports_dates_` - Get report dates available for a specific report
+* `post_reports_status_` - Get list of generated reports
+
+### tweet_reports
+
+* `get_reports_tweet_create_` - Used to create tweet reports
+* `post_reports_tweet_create_` - Used to create tweet reports
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolNetflowGetConfigPathParams struct {
+type ProtocolNetflowGetConfigRequest struct {
 	// Agent to show the NETFLOW configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolNetflowGetConfigRequest struct {
-	PathParams ProtocolNetflowGetConfigPathParams
 }
 
 type ProtocolNetflowGetConfigResponse struct {

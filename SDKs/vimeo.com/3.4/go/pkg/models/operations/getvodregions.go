@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodRegionsPathParams struct {
+type GetVodRegionsRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type GetVodRegionsRequest struct {
-	PathParams GetVodRegionsPathParams
 }
 
 type GetVodRegionsResponse struct {

@@ -12,30 +12,21 @@ var ListIncomingPhoneNumberAssignedAddOnServerList = []string{
 }
 
 type ListIncomingPhoneNumberAssignedAddOnSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListIncomingPhoneNumberAssignedAddOnPathParams struct {
+type ListIncomingPhoneNumberAssignedAddOnRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the Phone Number to which the Add-on is assigned.
-	ResourceSid string `pathParam:"style=simple,explode=false,name=ResourceSid"`
-}
-
-type ListIncomingPhoneNumberAssignedAddOnQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListIncomingPhoneNumberAssignedAddOnRequest struct {
-	PathParams  ListIncomingPhoneNumberAssignedAddOnPathParams
-	QueryParams ListIncomingPhoneNumberAssignedAddOnQueryParams
-	Security    ListIncomingPhoneNumberAssignedAddOnSecurity
-	ServerURL   *string
+	// The SID of the Phone Number to which the Add-on is assigned.
+	ResourceSid string `pathParam:"style=simple,explode=false,name=ResourceSid"`
 }
 
 // ListIncomingPhoneNumberAssignedAddOnListIncomingPhoneNumberAssignedAddOnResponse - OK

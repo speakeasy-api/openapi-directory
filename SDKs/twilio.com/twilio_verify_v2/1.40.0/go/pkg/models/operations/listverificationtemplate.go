@@ -12,10 +12,11 @@ var ListVerificationTemplateServerList = []string{
 }
 
 type ListVerificationTemplateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListVerificationTemplateQueryParams struct {
+type ListVerificationTemplateRequest struct {
 	// String filter used to query templates with a given friendly name
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// The page index. This value is simply for client state.
@@ -24,12 +25,6 @@ type ListVerificationTemplateQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListVerificationTemplateRequest struct {
-	QueryParams ListVerificationTemplateQueryParams
-	Security    ListVerificationTemplateSecurity
-	ServerURL   *string
 }
 
 type ListVerificationTemplateListVerificationTemplateResponseMeta struct {

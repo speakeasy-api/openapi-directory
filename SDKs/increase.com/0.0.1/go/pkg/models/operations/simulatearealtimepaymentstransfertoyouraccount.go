@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateARealTimePaymentsTransferToYourAccountRequest struct {
-	Request shared.SimulateARealTimePaymentsTransferToYourAccountParameters `request:"mediaType=application/json"`
-}
-
 type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum string
 
 const (

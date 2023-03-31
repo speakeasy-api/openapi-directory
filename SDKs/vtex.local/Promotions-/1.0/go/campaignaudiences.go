@@ -42,7 +42,7 @@ func (s *campaignAudiences) Getcampaignaudiences(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -82,14 +82,14 @@ func (s *campaignAudiences) Getcampaignaudiences(ctx context.Context, request op
 // Retrieves a specific campaign audience configuration by its ID. This API uses the campaign ID, not the campaign name.
 func (s *campaignAudiences) Getcampaignconfiguration(ctx context.Context, request operations.GetcampaignconfigurationRequest) (*operations.GetcampaignconfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/campaignConfiguration/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/campaignConfiguration/{campaignId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -131,7 +131,7 @@ func (s *campaignAudiences) Setcampaignconfiguration(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/rnb/pvt/campaignConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -146,7 +146,7 @@ func (s *campaignAudiences) Setcampaignconfiguration(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

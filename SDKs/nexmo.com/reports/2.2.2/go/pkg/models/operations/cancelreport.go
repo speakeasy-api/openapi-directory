@@ -11,17 +11,13 @@ import (
 )
 
 type CancelReportSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CancelReportPathParams struct {
-	// UUID of the report
-	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CancelReportRequest struct {
-	PathParams CancelReportPathParams
-	Security   CancelReportSecurity
+	// UUID of the report
+	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
 }
 
 // CancelReport409ApplicationJSON - Invalid Abort Operation

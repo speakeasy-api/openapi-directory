@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type NodesContributorsCreatePathParams struct {
-	// The unique identifier of the node.
-	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 // NodesContributorsCreateContributorAttributesPermissionEnum - The permission level of the contributor. The default value is 'write'.
 type NodesContributorsCreateContributorAttributesPermissionEnum string
 
@@ -64,8 +59,9 @@ type NodesContributorsCreateContributorInput struct {
 }
 
 type NodesContributorsCreateRequest struct {
-	PathParams NodesContributorsCreatePathParams
-	Request    NodesContributorsCreateContributorInput `request:"mediaType=application/json"`
+	RequestBody NodesContributorsCreateContributorInput `request:"mediaType=application/json"`
+	// The unique identifier of the node.
+	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type NodesContributorsCreateResponse struct {

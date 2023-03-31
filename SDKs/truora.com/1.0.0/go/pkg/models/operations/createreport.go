@@ -8,13 +8,7 @@ import (
 )
 
 type CreateReportSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateReportRequest struct {
-	// The params required to create a Report
-	Request  shared.CreateReportInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateReportSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type CreateReportResponse struct {

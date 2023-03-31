@@ -10,28 +10,28 @@ import (
 )
 
 type SheetsSpreadsheetsValuesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SheetsSpreadsheetsValuesGetSecurity struct {
@@ -40,13 +40,6 @@ type SheetsSpreadsheetsValuesGetSecurity struct {
 	Option3 *SheetsSpreadsheetsValuesGetSecurityOption3 `security:"option"`
 	Option4 *SheetsSpreadsheetsValuesGetSecurityOption4 `security:"option"`
 	Option5 *SheetsSpreadsheetsValuesGetSecurityOption5 `security:"option"`
-}
-
-type SheetsSpreadsheetsValuesGetPathParams struct {
-	// The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values from.
-	Range string `pathParam:"style=simple,explode=false,name=range"`
-	// The ID of the spreadsheet to retrieve data from.
-	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 }
 
 // SheetsSpreadsheetsValuesGetDateTimeRenderOptionEnum - How dates, times, and durations should be represented in the output. This is ignored if value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
@@ -127,7 +120,7 @@ func (e *SheetsSpreadsheetsValuesGetValueRenderOptionEnum) UnmarshalJSON(data []
 	}
 }
 
-type SheetsSpreadsheetsValuesGetQueryParams struct {
+type SheetsSpreadsheetsValuesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -150,18 +143,16 @@ type SheetsSpreadsheetsValuesGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values from.
+	Range string `pathParam:"style=simple,explode=false,name=range"`
+	// The ID of the spreadsheet to retrieve data from.
+	SpreadsheetID string `pathParam:"style=simple,explode=false,name=spreadsheetId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// How values should be represented in the output. The default render option is FORMATTED_VALUE.
 	ValueRenderOption *SheetsSpreadsheetsValuesGetValueRenderOptionEnum `queryParam:"style=form,explode=true,name=valueRenderOption"`
-}
-
-type SheetsSpreadsheetsValuesGetRequest struct {
-	PathParams  SheetsSpreadsheetsValuesGetPathParams
-	QueryParams SheetsSpreadsheetsValuesGetQueryParams
-	Security    SheetsSpreadsheetsValuesGetSecurity
 }
 
 type SheetsSpreadsheetsValuesGetResponse struct {

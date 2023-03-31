@@ -4,40 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RealtimebiddingBiddersCreativesWatchRequest(
-    security=operations.RealtimebiddingBiddersCreativesWatchSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RealtimebiddingBiddersCreativesWatchPathParams(
-        parent="autem",
-    ),
-    query_params=operations.RealtimebiddingBiddersCreativesWatchQueryParams(
-        dollar_xgafv="2",
-        access_token="quibusdam",
-        alt="proto",
-        callback="incidunt",
-        fields="cupiditate",
-        key="qui",
-        oauth_token="quidem",
-        pretty_print=False,
-        quota_user="dolorum",
-        upload_type="iure",
-        upload_protocol="doloribus",
-    ),
-    request={
-        "eum": "fuga",
-        "natus": "voluptatem",
-        "assumenda": "repellat",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    parent="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.bidders.realtimebidding_bidders_creatives_watch(req)
+res = s.bidders.realtimebidding_bidders_creatives_watch(req, operations.RealtimebiddingBiddersCreativesWatchSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.watch_creatives_response is not None:
     # handle response

@@ -13,17 +13,8 @@ var CreateServiceConversationServerList = []string{
 }
 
 type CreateServiceConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateServiceConversationPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-}
-
-type CreateServiceConversationHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ServiceConversationEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceConversationCreateServiceConversationRequest struct {
@@ -47,11 +38,11 @@ type CreateServiceConversationCreateServiceConversationRequest struct {
 }
 
 type CreateServiceConversationRequest struct {
-	PathParams CreateServiceConversationPathParams
-	Headers    CreateServiceConversationHeaders
-	Request    *CreateServiceConversationCreateServiceConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateServiceConversationSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
+	ChatServiceSid string                                                     `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *CreateServiceConversationCreateServiceConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ServiceConversationEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateServiceConversationResponse struct {

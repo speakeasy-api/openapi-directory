@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGroupApplicationPathParams struct {
+type CreateGroupApplicationRequest struct {
+	ApplicationCreateRequest shared.ApplicationCreateRequest `request:"mediaType=application/json"`
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type CreateGroupApplicationRequest struct {
-	PathParams CreateGroupApplicationPathParams
-	Request    shared.ApplicationCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateGroupApplicationResponse struct {

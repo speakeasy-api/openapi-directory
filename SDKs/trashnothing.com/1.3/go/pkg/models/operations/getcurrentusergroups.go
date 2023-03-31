@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCurrentUserGroupsQueryParams struct {
+type GetCurrentUserGroupsRequest struct {
 	// Set the membership parameter to only return certain groups. The options are: <br /><br /> - **subscribed**: Only return groups the user is a member of.<br /> - **pending-questions**: Only return groups where the user needs to respond to a new member questionnaire.<br /> - **pending**: Only return groups where the user is waiting for their membership request to be approved (excludes groups which are pending-questions). <br /><br /> If unset, all groups the user is a member of and pending membership on will be returned.
 	//
 	Membership *string `queryParam:"style=form,explode=true,name=membership"`
-}
-
-type GetCurrentUserGroupsRequest struct {
-	QueryParams GetCurrentUserGroupsQueryParams
 }
 
 type GetCurrentUserGroupsResponse struct {

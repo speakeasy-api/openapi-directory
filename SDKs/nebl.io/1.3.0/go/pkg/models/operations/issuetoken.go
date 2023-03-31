@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssueTokenRequest struct {
-	// Object representing the token to be created
-	Request shared.IssueTokenRequest `request:"mediaType=application/json"`
-}
-
 type IssueTokenResponse struct {
 	ContentType string
 	// Unexpected error

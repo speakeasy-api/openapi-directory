@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type MoveOrganizationLicensingCotermLicensesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // MoveOrganizationLicensingCotermLicensesRequestBodyDestinationModeEnum - The claim mode of the moved license
 type MoveOrganizationLicensingCotermLicensesRequestBodyDestinationModeEnum string
 
@@ -67,8 +63,8 @@ type MoveOrganizationLicensingCotermLicensesRequestBody struct {
 }
 
 type MoveOrganizationLicensingCotermLicensesRequest struct {
-	PathParams MoveOrganizationLicensingCotermLicensesPathParams
-	Request    MoveOrganizationLicensingCotermLicensesRequestBody `request:"mediaType=application/json"`
+	RequestBody    MoveOrganizationLicensingCotermLicensesRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                             `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type MoveOrganizationLicensingCotermLicenses200ApplicationJSONMovedLicensesCounts struct {

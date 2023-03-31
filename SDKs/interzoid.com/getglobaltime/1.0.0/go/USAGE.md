@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetglobaltimeRequest{
-        QueryParams: operations.GetglobaltimeQueryParams{
-            License: "corrupti",
-            Locale: "provident",
-        },
+        License: "corrupti",
+        Locale: "provident",
     }
 
     ctx := context.Background()

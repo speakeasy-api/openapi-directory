@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommentsPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 // GetCommentsDirectionEnum - The sort direction of the results.
 type GetCommentsDirectionEnum string
 
@@ -38,18 +33,15 @@ func (e *GetCommentsDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCommentsQueryParams struct {
+type GetCommentsRequest struct {
 	// The sort direction of the results.
 	Direction *GetCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetCommentsRequest struct {
-	PathParams  GetCommentsPathParams
-	QueryParams GetCommentsQueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetCommentsResponse struct {

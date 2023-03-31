@@ -16,8 +16,8 @@ pkg/models/operations/stsintrospect.go
 pkg/models/operations/stsoauthtoken.go
 pkg/models/operations/ststoken.go
 pkg/models/shared/googleidentitystsv1introspecttokenresponse.go
-pkg/models/shared/googleidentitystsv1introspecttokenrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googleidentitystsv1introspecttokenrequest.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/googleidentitystsv1exchangeoauthtokenresponse.go
 pkg/models/shared/googleidentitystsv1exchangeoauthtokenrequest.go

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomersIDFieldsFieldIDPathParams struct {
+type GetCustomersIDFieldsFieldIDRequest struct {
+	// API OAuth token.
+	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Id of the Customer Additional Field
 	FieldID int `pathParam:"style=simple,explode=false,name=field_id"`
 	// Id of the Customer
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCustomersIDFieldsFieldIDQueryParams struct {
-	// API OAuth token.
-	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCustomersIDFieldsFieldIDRequest struct {
-	PathParams  GetCustomersIDFieldsFieldIDPathParams
-	QueryParams GetCustomersIDFieldsFieldIDQueryParams
 }
 
 type GetCustomersIDFieldsFieldIDResponse struct {

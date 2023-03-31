@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateStyleGuideJSONPathParams struct {
+type CreateStyleGuideJSONRequest struct {
+	StyleGuideUploadRequest *shared.StyleGuideUploadRequest `request:"mediaType=application/json"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateStyleGuideJSONRequest struct {
-	PathParams CreateStyleGuideJSONPathParams
-	Request    *shared.StyleGuideUploadRequest `request:"mediaType=application/json"`
 }
 
 type CreateStyleGuideJSONResponse struct {

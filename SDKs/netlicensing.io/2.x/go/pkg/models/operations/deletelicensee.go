@@ -8,23 +8,15 @@ import (
 )
 
 type DeleteLicenseeSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteLicenseePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Licensee.
-	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
-}
-
-type DeleteLicenseeQueryParams struct {
-	// Force object deletion and all descendants.
-	ForceCascade *bool `queryParam:"style=form,explode=true,name=forceCascade"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteLicenseeRequest struct {
-	PathParams  DeleteLicenseePathParams
-	QueryParams DeleteLicenseeQueryParams
-	Security    DeleteLicenseeSecurity
+	// Force object deletion and all descendants.
+	ForceCascade *bool `queryParam:"style=form,explode=true,name=forceCascade"`
+	// Unique number (across all Products of a Vendor) that identifies the Licensee.
+	LicenseeNumber string `pathParam:"style=simple,explode=false,name=licenseeNumber"`
 }
 
 type DeleteLicenseeResponse struct {

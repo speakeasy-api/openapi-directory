@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type CycleDeviceSwitchPortsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type CycleDeviceSwitchPortsRequestBody struct {
 	// List of switch ports. Example: [1, 2-5, 1_MA-MOD-8X10G_1, 1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8]
 	Ports []string `json:"ports"`
 }
 
 type CycleDeviceSwitchPortsRequest struct {
-	PathParams CycleDeviceSwitchPortsPathParams
-	Request    CycleDeviceSwitchPortsRequestBody `request:"mediaType=application/json"`
+	RequestBody CycleDeviceSwitchPortsRequestBody `request:"mediaType=application/json"`
+	Serial      string                            `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type CycleDeviceSwitchPortsResponse struct {

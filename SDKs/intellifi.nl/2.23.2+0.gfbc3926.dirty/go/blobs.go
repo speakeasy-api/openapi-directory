@@ -38,7 +38,7 @@ func newBlobs(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // AddBlob - Create binary large object (blob) metadata
-func (s *blobs) AddBlob(ctx context.Context, request operations.AddBlobRequest) (*operations.AddBlobResponse, error) {
+func (s *blobs) AddBlob(ctx context.Context, request shared.BlobInput) (*operations.AddBlobResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/blobs"
 
@@ -94,7 +94,7 @@ func (s *blobs) AddBlob(ctx context.Context, request operations.AddBlobRequest) 
 // DeleteBlob - Delete binary large object (blob)
 func (s *blobs) DeleteBlob(ctx context.Context, request operations.DeleteBlobRequest) (*operations.DeleteBlobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *blobs) DeleteBlob(ctx context.Context, request operations.DeleteBlobReq
 // GetBlobByID - Download a binary large object (blob)
 func (s *blobs) GetBlobByID(ctx context.Context, request operations.GetBlobByIDRequest) (*operations.GetBlobByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}/download/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}/download/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -182,7 +182,7 @@ func (s *blobs) GetBlobByID(ctx context.Context, request operations.GetBlobByIDR
 // GetBlobMetadataByID - Get binary large object (blob)
 func (s *blobs) GetBlobMetadataByID(ctx context.Context, request operations.GetBlobMetadataByIDRequest) (*operations.GetBlobMetadataByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +233,7 @@ func (s *blobs) GetBlobs(ctx context.Context, request operations.GetBlobsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -274,9 +274,9 @@ func (s *blobs) GetBlobs(ctx context.Context, request operations.GetBlobsRequest
 // UploadBlobByID - Create binary large object (blob)
 func (s *blobs) UploadBlobByID(ctx context.Context, request operations.UploadBlobByIDRequest) (*operations.UploadBlobByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}/upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/blobs/{id}/upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

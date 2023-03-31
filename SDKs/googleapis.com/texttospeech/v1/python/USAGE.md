@@ -4,38 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TexttospeechOperationsCancelRequest(
-    security=operations.TexttospeechOperationsCancelSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.TexttospeechOperationsCancelPathParams(
-        name="sunt",
-    ),
-    query_params=operations.TexttospeechOperationsCancelQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="json",
-        callback="et",
-        fields="ullam",
-        key="aliquid",
-        oauth_token="quia",
-        pretty_print=True,
-        quota_user="minus",
-        upload_type="dolorum",
-        upload_protocol="illo",
-    ),
-    request={
-        "hic": "consequatur",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
-res = s.operations.texttospeech_operations_cancel(req)
+res = s.operations.texttospeech_operations_cancel(req, operations.TexttospeechOperationsCancelSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.empty is not None:
     # handle response

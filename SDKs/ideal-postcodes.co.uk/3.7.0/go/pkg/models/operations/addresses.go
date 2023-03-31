@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddressesQueryParams struct {
+type AddressesRequest struct {
 	APIKey              string   `queryParam:"style=form,explode=false,name=api_key"`
 	BiasCountry         *string  `queryParam:"style=form,explode=false,name=bias_country"`
 	BiasLonlat          *string  `queryParam:"style=form,explode=false,name=bias_lonlat"`
@@ -34,10 +34,6 @@ type AddressesQueryParams struct {
 	Query                   *string `queryParam:"style=form,explode=false,name=query"`
 	SuOrganisationIndicator *string `queryParam:"style=form,explode=false,name=su_organisation_indicator"`
 	Uprn                    *int64  `queryParam:"style=form,explode=false,name=uprn"`
-}
-
-type AddressesRequest struct {
-	QueryParams AddressesQueryParams
 }
 
 type AddressesResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomersIDFieldsFieldIDPathParams struct {
+type DeleteCustomersIDFieldsFieldIDRequest struct {
+	// API OAuth token.
+	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Id of the Customer Additional Field
 	FieldID int `pathParam:"style=simple,explode=false,name=field_id"`
 	// Id of the Customer
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCustomersIDFieldsFieldIDQueryParams struct {
-	// API OAuth token.
-	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteCustomersIDFieldsFieldIDRequest struct {
-	PathParams  DeleteCustomersIDFieldsFieldIDPathParams
-	QueryParams DeleteCustomersIDFieldsFieldIDQueryParams
 }
 
 type DeleteCustomersIDFieldsFieldIDResponse struct {

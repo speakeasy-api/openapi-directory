@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchTransactionsTransactionIDRelationshipsCategoryPathParams struct {
+type PatchTransactionsTransactionIDRelationshipsCategoryRequest struct {
+	UpdateTransactionCategoryRequest *shared.UpdateTransactionCategoryRequest `request:"mediaType=application/json"`
 	// The unique identifier for the transaction.
 	//
 	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type PatchTransactionsTransactionIDRelationshipsCategoryRequest struct {
-	PathParams PatchTransactionsTransactionIDRelationshipsCategoryPathParams
-	Request    *shared.UpdateTransactionCategoryRequest `request:"mediaType=application/json"`
 }
 
 type PatchTransactionsTransactionIDRelationshipsCategoryResponse struct {

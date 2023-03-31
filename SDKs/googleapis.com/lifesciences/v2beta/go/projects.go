@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // LifesciencesProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) LifesciencesProjectsLocationsList(ctx context.Context, request operations.LifesciencesProjectsLocationsListRequest) (*operations.LifesciencesProjectsLocationsListResponse, error) {
+func (s *projects) LifesciencesProjectsLocationsList(ctx context.Context, request operations.LifesciencesProjectsLocationsListRequest, security operations.LifesciencesProjectsLocationsListSecurity) (*operations.LifesciencesProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) LifesciencesProjectsLocationsList(ctx context.Context, reques
 }
 
 // LifesciencesProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or Operations.ListOperations to check whether the cancellation succeeded or the operation completed despite cancellation. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.cancel`
-func (s *projects) LifesciencesProjectsLocationsOperationsCancel(ctx context.Context, request operations.LifesciencesProjectsLocationsOperationsCancelRequest) (*operations.LifesciencesProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) LifesciencesProjectsLocationsOperationsCancel(ctx context.Context, request operations.LifesciencesProjectsLocationsOperationsCancelRequest, security operations.LifesciencesProjectsLocationsOperationsCancelSecurity) (*operations.LifesciencesProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) LifesciencesProjectsLocationsOperationsCancel(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) LifesciencesProjectsLocationsOperationsCancel(ctx context.Con
 }
 
 // LifesciencesProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.get`
-func (s *projects) LifesciencesProjectsLocationsOperationsGet(ctx context.Context, request operations.LifesciencesProjectsLocationsOperationsGetRequest) (*operations.LifesciencesProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) LifesciencesProjectsLocationsOperationsGet(ctx context.Context, request operations.LifesciencesProjectsLocationsOperationsGetRequest, security operations.LifesciencesProjectsLocationsOperationsGetSecurity) (*operations.LifesciencesProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) LifesciencesProjectsLocationsOperationsGet(ctx context.Contex
 }
 
 // LifesciencesProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.list`
-func (s *projects) LifesciencesProjectsLocationsOperationsList(ctx context.Context, request operations.LifesciencesProjectsLocationsOperationsListRequest) (*operations.LifesciencesProjectsLocationsOperationsListResponse, error) {
+func (s *projects) LifesciencesProjectsLocationsOperationsList(ctx context.Context, request operations.LifesciencesProjectsLocationsOperationsListRequest, security operations.LifesciencesProjectsLocationsOperationsListSecurity) (*operations.LifesciencesProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *projects) LifesciencesProjectsLocationsOperationsList(ctx context.Conte
 }
 
 // LifesciencesProjectsLocationsPipelinesRun - Runs a pipeline. The returned Operation's metadata field will contain a google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution. The response field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object if the pipeline completes successfully. **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to your project. This is done automatically when the Cloud Life Sciences API is first enabled, but if you delete this permission you must disable and re-enable the API to grant the Life Sciences Service Agent the required permissions. Authorization requires the following [Google IAM](https://cloud.google.com/iam/) permission: * `lifesciences.workflows.run`
-func (s *projects) LifesciencesProjectsLocationsPipelinesRun(ctx context.Context, request operations.LifesciencesProjectsLocationsPipelinesRunRequest) (*operations.LifesciencesProjectsLocationsPipelinesRunResponse, error) {
+func (s *projects) LifesciencesProjectsLocationsPipelinesRun(ctx context.Context, request operations.LifesciencesProjectsLocationsPipelinesRunRequest, security operations.LifesciencesProjectsLocationsPipelinesRunSecurity) (*operations.LifesciencesProjectsLocationsPipelinesRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/pipelines:run", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/pipelines:run", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunPipelineRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *projects) LifesciencesProjectsLocationsPipelinesRun(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

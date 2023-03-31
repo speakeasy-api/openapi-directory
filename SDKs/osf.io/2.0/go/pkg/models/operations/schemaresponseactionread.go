@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type SchemaResponseActionReadPathParams struct {
+type SchemaResponseActionReadRequest struct {
 	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
 	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
-type SchemaResponseActionReadRequest struct {
-	PathParams SchemaResponseActionReadPathParams
 }
 
 // SchemaResponseActionReadSchemaResponseActionsAttributesFromStateEnum - The name of the state of the Schema Response prior to the creation of the action.

@@ -9,19 +9,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostQueryQueryParams struct {
+type PostQueryRequest struct {
+	// The test of the query (in JSON format)
+	RequestBody []byte `request:"mediaType=application/x-yaml"`
 	// If set to *full*, response will include query explanations in addition to the result.
 	Explain *string `queryParam:"style=form,explode=true,name=explain"`
 	// If true, compiler performance metrics will be returned in the response.
 	Metrics *bool `queryParam:"style=form,explode=true,name=metrics"`
 	// If true, response will be in a human-readable format.
 	Pretty *bool `queryParam:"style=form,explode=true,name=pretty"`
-}
-
-type PostQueryRequest struct {
-	QueryParams PostQueryQueryParams
-	// The test of the query (in JSON format)
-	Request []byte `request:"mediaType=application/x-yaml"`
 }
 
 type PostQuery200ApplicationJSONExplanationLocalsKey struct {

@@ -8,18 +8,18 @@ import (
 )
 
 type YoutubePlaylistsUpdateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistsUpdateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistsUpdateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type YoutubePlaylistsUpdateSecurity struct {
@@ -28,9 +28,10 @@ type YoutubePlaylistsUpdateSecurity struct {
 	Option3 *YoutubePlaylistsUpdateSecurityOption3 `security:"option"`
 }
 
-type YoutubePlaylistsUpdateQueryParams struct {
+type YoutubePlaylistsUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Playlist    *shared.Playlist  `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -55,12 +56,6 @@ type YoutubePlaylistsUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type YoutubePlaylistsUpdateRequest struct {
-	QueryParams YoutubePlaylistsUpdateQueryParams
-	Request     *shared.Playlist `request:"mediaType=application/json"`
-	Security    YoutubePlaylistsUpdateSecurity
 }
 
 type YoutubePlaylistsUpdateResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type TasksTasklistsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TasksTasklistsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TasksTasklistsGetSecurity struct {
@@ -22,12 +22,7 @@ type TasksTasklistsGetSecurity struct {
 	Option2 *TasksTasklistsGetSecurityOption2 `security:"option"`
 }
 
-type TasksTasklistsGetPathParams struct {
-	// Task list identifier.
-	Tasklist string `pathParam:"style=simple,explode=false,name=tasklist"`
-}
-
-type TasksTasklistsGetQueryParams struct {
+type TasksTasklistsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,16 +41,12 @@ type TasksTasklistsGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Task list identifier.
+	Tasklist string `pathParam:"style=simple,explode=false,name=tasklist"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TasksTasklistsGetRequest struct {
-	PathParams  TasksTasklistsGetPathParams
-	QueryParams TasksTasklistsGetQueryParams
-	Security    TasksTasklistsGetSecurity
 }
 
 type TasksTasklistsGetResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayorByIDV2PathParams struct {
+type GetPayorByIDV2Request struct {
 	// The Payor Id
 	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
-}
-
-type GetPayorByIDV2Request struct {
-	PathParams GetPayorByIDV2PathParams
 }
 
 type GetPayorByIDV2Response struct {

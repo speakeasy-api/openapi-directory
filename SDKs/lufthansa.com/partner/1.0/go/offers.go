@@ -34,7 +34,7 @@ func newOffers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AllFares - All Fares
 // Retrieves all available fares for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS
-func (s *offers) AllFares(ctx context.Context, request operations.AllFaresRequest) (*operations.AllFaresResponse, error) {
+func (s *offers) AllFares(ctx context.Context, request operations.AllFaresRequest, security operations.AllFaresSecurity) (*operations.AllFaresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/allfares"
 
@@ -43,13 +43,13 @@ func (s *offers) AllFares(ctx context.Context, request operations.AllFaresReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *offers) AllFares(ctx context.Context, request operations.AllFaresReques
 
 // BestFares - Best Fares
 // Retrieve best fares for the requested journey across multiple days or multiple months.
-func (s *offers) BestFares(ctx context.Context, request operations.BestFaresRequest) (*operations.BestFaresResponse, error) {
+func (s *offers) BestFares(ctx context.Context, request operations.BestFaresRequest, security operations.BestFaresSecurity) (*operations.BestFaresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/bestfares"
 
@@ -95,13 +95,13 @@ func (s *offers) BestFares(ctx context.Context, request operations.BestFaresRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *offers) BestFares(ctx context.Context, request operations.BestFaresRequ
 
 // DeepLinks - Deep Links
 // Returns valid deep links for the provided input parameters
-func (s *offers) DeepLinks(ctx context.Context, request operations.DeepLinksRequest) (*operations.DeepLinksResponse, error) {
+func (s *offers) DeepLinks(ctx context.Context, request operations.DeepLinksRequest, security operations.DeepLinksSecurity) (*operations.DeepLinksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/deeplink"
 
@@ -147,13 +147,13 @@ func (s *offers) DeepLinks(ctx context.Context, request operations.DeepLinksRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,7 +190,7 @@ func (s *offers) DeepLinks(ctx context.Context, request operations.DeepLinksRequ
 
 // Fares - Fares
 // Retrieve all available fares per fare family for a specific Origin & Destination on a given date
-func (s *offers) Fares(ctx context.Context, request operations.FaresRequest) (*operations.FaresResponse, error) {
+func (s *offers) Fares(ctx context.Context, request operations.FaresRequest, security operations.FaresSecurity) (*operations.FaresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/fares"
 
@@ -199,13 +199,13 @@ func (s *offers) Fares(ctx context.Context, request operations.FaresRequest) (*o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,7 +242,7 @@ func (s *offers) Fares(ctx context.Context, request operations.FaresRequest) (*o
 
 // FaresSubscriptions - Fares Subscriptions
 // Create a subscription for best price O&D. Receive regular updates on lowest fares
-func (s *offers) FaresSubscriptions(ctx context.Context, request operations.FaresSubscriptionsRequest) (*operations.FaresSubscriptionsResponse, error) {
+func (s *offers) FaresSubscriptions(ctx context.Context, request operations.FaresSubscriptionsRequest, security operations.FaresSubscriptionsSecurity) (*operations.FaresSubscriptionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/subscriptions"
 
@@ -251,13 +251,13 @@ func (s *offers) FaresSubscriptions(ctx context.Context, request operations.Fare
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,7 +294,7 @@ func (s *offers) FaresSubscriptions(ctx context.Context, request operations.Fare
 
 // LHDeepLinksFFP - LH Deep Links - FFP
 // Returns valid LH deep links (FFP - links to flight selection screen on LH.COM)
-func (s *offers) LHDeepLinksFFP(ctx context.Context, request operations.LHDeepLinksFFPRequest) (*operations.LHDeepLinksFFPResponse, error) {
+func (s *offers) LHDeepLinksFFP(ctx context.Context, request operations.LHDeepLinksFFPRequest, security operations.LHDeepLinksFFPSecurity) (*operations.LHDeepLinksFFPResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/deeplink/ffp"
 
@@ -303,13 +303,13 @@ func (s *offers) LHDeepLinksFFP(ctx context.Context, request operations.LHDeepLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *offers) LHDeepLinksFFP(ctx context.Context, request operations.LHDeepLi
 
 // LHDeepLinksITCO - LH Deep Links - ITCO
 // Returns valid LH deep links (ITCO - links to shopping cart on LH.COM)
-func (s *offers) LHDeepLinksITCO(ctx context.Context, request operations.LHDeepLinksITCORequest) (*operations.LHDeepLinksITCOResponse, error) {
+func (s *offers) LHDeepLinksITCO(ctx context.Context, request operations.LHDeepLinksITCORequest, security operations.LHDeepLinksITCOSecurity) (*operations.LHDeepLinksITCOResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/deeplink/itco"
 
@@ -355,13 +355,13 @@ func (s *offers) LHDeepLinksITCO(ctx context.Context, request operations.LHDeepL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *offers) LHDeepLinksITCO(ctx context.Context, request operations.LHDeepL
 
 // LowestFares - Lowest Fares
 // Retrieve lowest fare for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS & LH
-func (s *offers) LowestFares(ctx context.Context, request operations.LowestFaresRequest) (*operations.LowestFaresResponse, error) {
+func (s *offers) LowestFares(ctx context.Context, request operations.LowestFaresRequest, security operations.LowestFaresSecurity) (*operations.LowestFaresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/fares/lowestfares"
 
@@ -407,13 +407,13 @@ func (s *offers) LowestFares(ctx context.Context, request operations.LowestFares
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -450,22 +450,22 @@ func (s *offers) LowestFares(ctx context.Context, request operations.LowestFares
 
 // ONDRoute - OND Route
 // Returns LH route origin & destination information
-func (s *offers) ONDRoute(ctx context.Context, request operations.ONDRouteRequest) (*operations.ONDRouteResponse, error) {
+func (s *offers) ONDRoute(ctx context.Context, request operations.ONDRouteRequest, security operations.ONDRouteSecurity) (*operations.ONDRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offers/ond/route/{origin}/{destination}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offers/ond/route/{origin}/{destination}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -502,7 +502,7 @@ func (s *offers) ONDRoute(ctx context.Context, request operations.ONDRouteReques
 
 // ONDStatus - OND Status
 // Returns LH network route status information. Search for recently added or retired routes
-func (s *offers) ONDStatus(ctx context.Context, request operations.ONDStatusRequest) (*operations.ONDStatusResponse, error) {
+func (s *offers) ONDStatus(ctx context.Context, request operations.ONDStatusRequest, security operations.ONDStatusSecurity) (*operations.ONDStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/ond/status"
 
@@ -511,13 +511,13 @@ func (s *offers) ONDStatus(ctx context.Context, request operations.ONDStatusRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,7 +554,7 @@ func (s *offers) ONDStatus(ctx context.Context, request operations.ONDStatusRequ
 
 // TopOND - Top OND
 // Returns LH Top routes per country or across all countries
-func (s *offers) TopOND(ctx context.Context, request operations.TopONDRequest) (*operations.TopONDResponse, error) {
+func (s *offers) TopOND(ctx context.Context, request operations.TopONDRequest, security operations.TopONDSecurity) (*operations.TopONDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/offers/ond/top"
 
@@ -563,13 +563,13 @@ func (s *offers) TopOND(ctx context.Context, request operations.TopONDRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

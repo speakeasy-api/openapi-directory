@@ -33,7 +33,7 @@ func newHashes(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // WebriskHashesSearch - Gets the full hashes that match the requested hash prefix. This is used after a hash prefix is looked up in a threatList and there is a match. The client side threatList only holds partial hashes so the client must query this method to determine if there is a full hash match of a threat.
-func (s *hashes) WebriskHashesSearch(ctx context.Context, request operations.WebriskHashesSearchRequest) (*operations.WebriskHashesSearchResponse, error) {
+func (s *hashes) WebriskHashesSearch(ctx context.Context, request operations.WebriskHashesSearchRequest, security operations.WebriskHashesSearchSecurity) (*operations.WebriskHashesSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/hashes:search"
 
@@ -42,11 +42,11 @@ func (s *hashes) WebriskHashesSearch(ctx context.Context, request operations.Web
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

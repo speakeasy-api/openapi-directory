@@ -8,13 +8,13 @@ import (
 )
 
 type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurity struct {
@@ -22,14 +22,10 @@ type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurity struct {
 	Option2 *FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurityOption2 `security:"option"`
 }
 
-type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchPathParams struct {
-	// A field name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}` A field path may be a simple field name, e.g. `address` or a path to fields within map_value , e.g. `address.city`, or a special field path. The only valid special field is `*`, which represents any field. Field paths may be quoted using ` (backtick). The only character that needs to be escaped within a quoted field path is the backtick character itself, escaped using a backslash. Special characters in field paths that must be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note: Comments here are written in markdown syntax, so there is an additional layer of backticks to represent a code block) `\`address.city\`` represents a field named `address.city`, not the map key `city` in the field `address`. `\`*\`` represents a field named `*`, not any field. A special `Field` contains the default indexing settings for all fields. This field's resource name is: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*` Indexes defined on this `Field` will be applied to all fields which do not have their own `Field` index configuration.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchQueryParams struct {
+type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                      *shared.XgafvEnum                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleFirestoreAdminV1beta2Field *shared.GoogleFirestoreAdminV1beta2Field `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// A field name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}` A field path may be a simple field name, e.g. `address` or a path to fields within map_value , e.g. `address.city`, or a special field path. The only valid special field is `*`, which represents any field. Field paths may be quoted using ` (backtick). The only character that needs to be escaped within a quoted field path is the backtick character itself, escaped using a backslash. Special characters in field paths that must be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note: Comments here are written in markdown syntax, so there is an additional layer of backticks to represent a code block) `\`address.city\`` represents a field named `address.city`, not the map key `city` in the field `address`. `\`*\`` represents a field named `*`, not any field. A special `Field` contains the default indexing settings for all fields. This field's resource name is: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*` Indexes defined on this `Field` will be applied to all fields which do not have their own `Field` index configuration.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,13 +50,6 @@ type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest struct {
-	PathParams  FirestoreProjectsDatabasesCollectionGroupsFieldsPatchPathParams
-	QueryParams FirestoreProjectsDatabasesCollectionGroupsFieldsPatchQueryParams
-	Request     *shared.GoogleFirestoreAdminV1beta2Field `request:"mediaType=application/json"`
-	Security    FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurity
 }
 
 type FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse struct {

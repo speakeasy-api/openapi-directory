@@ -52,7 +52,7 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Deletes an Image. Only Images of type `snapshot` and `backup` can be deleted.
 func (s *images) DeleteImagesID(ctx context.Context, request operations.DeleteImagesIDRequest) (*operations.DeleteImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -95,7 +95,7 @@ func (s *images) GetImages(ctx context.Context, request operations.GetImagesRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,7 +137,7 @@ func (s *images) GetImages(ctx context.Context, request operations.GetImagesRequ
 // Returns a specific Image object.
 func (s *images) GetImagesID(ctx context.Context, request operations.GetImagesIDRequest) (*operations.GetImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,9 +184,9 @@ func (s *images) GetImagesID(ctx context.Context, request operations.GetImagesID
 // Note that when updating labels, the current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
 func (s *images) PutImagesID(ctx context.Context, request operations.PutImagesIDRequest) (*operations.PutImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

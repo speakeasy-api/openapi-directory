@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccountTrustedDomainPathParams struct {
+type AccountTrustedDomainRequest struct {
 	// The account ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type AccountTrustedDomainRequest struct {
-	PathParams AccountTrustedDomainPathParams
 }
 
 // AccountTrustedDomain200ApplicationXML - **HTTP Status Code:** `200`<br>

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BuyANumberRequest struct {
-	// Number details
-	Request shared.NumberDetails `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type BuyANumberResponse struct {
 	Body        []byte
 	ContentType string

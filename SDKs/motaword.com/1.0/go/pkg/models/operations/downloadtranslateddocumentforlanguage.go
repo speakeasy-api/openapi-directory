@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadTranslatedDocumentForLanguagePathParams struct {
+type DownloadTranslatedDocumentForLanguageRequest struct {
+	// Download certified translation
+	Certified *bool `queryParam:"style=form,explode=true,name=certified"`
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
 	// Target language code.
 	Language string `pathParam:"style=simple,explode=false,name=language"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DownloadTranslatedDocumentForLanguageQueryParams struct {
-	// Download certified translation
-	Certified *bool `queryParam:"style=form,explode=true,name=certified"`
-}
-
-type DownloadTranslatedDocumentForLanguageRequest struct {
-	PathParams  DownloadTranslatedDocumentForLanguagePathParams
-	QueryParams DownloadTranslatedDocumentForLanguageQueryParams
 }
 
 type DownloadTranslatedDocumentForLanguageResponse struct {

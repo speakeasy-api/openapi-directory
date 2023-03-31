@@ -41,7 +41,6 @@ pkg/models/operations/cloudresourcemanagerprojectsupdate.go
 pkg/models/shared/lien.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listliensresponse.go
 pkg/models/shared/organization.go
 pkg/models/shared/organizationowner.go

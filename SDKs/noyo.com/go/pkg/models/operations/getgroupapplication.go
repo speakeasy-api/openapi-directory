@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupApplicationPathParams struct {
+type GetGroupApplicationRequest struct {
 	// The unique identifier of the application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-}
-
-type GetGroupApplicationRequest struct {
-	PathParams GetGroupApplicationPathParams
 }
 
 type GetGroupApplicationResponse struct {

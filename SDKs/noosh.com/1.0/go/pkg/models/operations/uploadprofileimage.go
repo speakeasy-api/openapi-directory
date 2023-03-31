@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadProfileImagePathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type UploadProfileImageRequest struct {
-	PathParams UploadProfileImagePathParams
-	Request    []byte `request:"mediaType=application/json"`
+	RequestBody []byte `request:"mediaType=application/json"`
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type UploadProfileImageResponse struct {

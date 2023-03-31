@@ -12,12 +12,8 @@ var UpdateSigningKeyServerList = []string{
 }
 
 type UpdateSigningKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSigningKeyPathParams struct {
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSigningKeyUpdateSigningKeyRequest struct {
@@ -25,10 +21,9 @@ type UpdateSigningKeyUpdateSigningKeyRequest struct {
 }
 
 type UpdateSigningKeyRequest struct {
-	PathParams UpdateSigningKeyPathParams
-	Request    *UpdateSigningKeyUpdateSigningKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSigningKeySecurity
-	ServerURL  *string
+	AccountSid  string                                   `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *UpdateSigningKeyUpdateSigningKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid         string                                   `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSigningKeyResponse struct {

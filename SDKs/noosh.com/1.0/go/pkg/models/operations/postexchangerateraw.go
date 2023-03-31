@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostExchangeRateRawPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PostExchangeRateRawRequest struct {
-	PathParams PostExchangeRateRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
+	RequestBody []byte `request:"mediaType=text/xml"`
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PostExchangeRateRawResponse struct {

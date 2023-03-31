@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSetupV1CalendarsBlockIDPathParams struct {
+type DeleteSetupV1CalendarsBlockIDRequest struct {
 	// id of a calendarBlock object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1CalendarsBlockIDRequest struct {
-	PathParams DeleteSetupV1CalendarsBlockIDPathParams
 }
 
 type DeleteSetupV1CalendarsBlockIDResponse struct {

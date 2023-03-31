@@ -42,7 +42,7 @@ func newCompanyCredits(defaultClient, securityClient HTTPClient, serverURL, lang
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *companyCredits) CompanyCreditsSearchRead(ctx context.Context, request operations.CompanyCreditsSearchReadRequest) (*operations.CompanyCreditsSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company-credits/search/{movie_title}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company-credits/search/{movie_title}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *companyCredits) CompanyCreditsSearchRead(ctx context.Context, request o
 // [ref]: https://etmdb.com/en/company-list/company_name
 func (s *companyCredits) CompanyCreditsSearchallRead(ctx context.Context, request operations.CompanyCreditsSearchallReadRequest) (*operations.CompanyCreditsSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company-credits/searchall/{param}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company-credits/searchall/{param}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

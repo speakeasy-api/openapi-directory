@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetActionResourceSearchQueryParams struct {
+type GetActionResourceSearchRequest struct {
 	// Depreciated
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Apply a limit to the query
@@ -17,10 +17,6 @@ type GetActionResourceSearchQueryParams struct {
 	OrderBy *string `queryParam:"style=form,explode=true,name=order_by"`
 	// The search criteria string or list of strings of the form ``{field}:{term1}``
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetActionResourceSearchRequest struct {
-	QueryParams GetActionResourceSearchQueryParams
 }
 
 type GetActionResourceSearchResponse struct {

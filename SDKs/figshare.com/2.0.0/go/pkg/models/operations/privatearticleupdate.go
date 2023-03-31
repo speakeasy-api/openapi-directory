@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateArticleUpdateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleUpdatePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleUpdateRequest struct {
-	PathParams PrivateArticleUpdatePathParams
 	// Article description
-	Request  shared.ArticleUpdate `request:"mediaType=application/json"`
-	Security PrivateArticleUpdateSecurity
+	ArticleUpdate shared.ArticleUpdate `request:"mediaType=application/json"`
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleUpdateResponse struct {

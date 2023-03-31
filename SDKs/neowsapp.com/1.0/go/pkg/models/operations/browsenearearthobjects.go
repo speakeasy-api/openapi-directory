@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BrowseNearEarthObjectsQueryParams struct {
+type BrowseNearEarthObjectsRequest struct {
 	// page
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// size
 	Size *int `queryParam:"style=form,explode=true,name=size"`
-}
-
-type BrowseNearEarthObjectsRequest struct {
-	QueryParams BrowseNearEarthObjectsQueryParams
 }
 
 type BrowseNearEarthObjectsResponse struct {

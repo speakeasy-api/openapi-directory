@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddCommentPathParams struct {
-	// Task ID.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type AddCommentHeaders struct {
+type AddCommentRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
+	Accept            string                   `header:"style=simple,explode=false,name=Accept"`
+	AddCommentRequest shared.AddCommentRequest `request:"mediaType=application/json"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type AddCommentRequest struct {
-	PathParams AddCommentPathParams
-	Headers    AddCommentHeaders
-	Request    shared.AddCommentRequest `request:"mediaType=application/json"`
+	// Task ID.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type AddCommentResponse struct {

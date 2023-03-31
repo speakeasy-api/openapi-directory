@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimSitesUpdatePathParams struct {
+type DcimSitesUpdateRequest struct {
+	WritableSiteInput shared.WritableSiteInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this site.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimSitesUpdateRequest struct {
-	PathParams DcimSitesUpdatePathParams
-	Request    shared.WritableSiteInput `request:"mediaType=application/json"`
 }
 
 type DcimSitesUpdateResponse struct {

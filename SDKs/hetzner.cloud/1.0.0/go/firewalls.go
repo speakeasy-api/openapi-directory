@@ -45,7 +45,7 @@ func newFirewalls(defaultClient, securityClient HTTPClient, serverURL, language,
 // | `resource_in_use`    | Firewall must not be in use to be deleted |
 func (s *firewalls) DeleteFirewallsID(ctx context.Context, request operations.DeleteFirewallsIDRequest) (*operations.DeleteFirewallsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *firewalls) GetFirewalls(ctx context.Context, request operations.GetFire
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,7 +130,7 @@ func (s *firewalls) GetFirewalls(ctx context.Context, request operations.GetFire
 // Gets a specific Firewall object.
 func (s *firewalls) GetFirewallsID(ctx context.Context, request operations.GetFirewallsIDRequest) (*operations.GetFirewallsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +181,7 @@ func (s *firewalls) GetFirewallsID(ctx context.Context, request operations.GetFi
 // | `server_already_added`        | Server added more than one time to resource                   |
 // | `incompatible_network_type`   | The Network type is incompatible for the given resource       |
 // | `firewall_resource_not_found` | The resource the Firewall should be attached to was not found |
-func (s *firewalls) PostFirewalls(ctx context.Context, request operations.PostFirewallsRequest) (*operations.PostFirewallsResponse, error) {
+func (s *firewalls) PostFirewalls(ctx context.Context, request operations.PostFirewallsCreateFirewallRequest) (*operations.PostFirewallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/firewalls"
 
@@ -239,9 +239,9 @@ func (s *firewalls) PostFirewalls(ctx context.Context, request operations.PostFi
 // Note: if the Firewall object changes during the request, the response will be a “conflict” error.
 func (s *firewalls) PutFirewallsID(ctx context.Context, request operations.PutFirewallsIDRequest) (*operations.PutFirewallsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

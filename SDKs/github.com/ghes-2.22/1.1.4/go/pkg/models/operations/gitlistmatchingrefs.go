@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitListMatchingRefsPathParams struct {
+type GitListMatchingRefsRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// ref parameter
-	Ref  string `pathParam:"style=simple,explode=false,name=ref"`
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type GitListMatchingRefsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GitListMatchingRefsRequest struct {
-	PathParams  GitListMatchingRefsPathParams
-	QueryParams GitListMatchingRefsQueryParams
+	// ref parameter
+	Ref  string `pathParam:"style=simple,explode=false,name=ref"`
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitListMatchingRefsResponse struct {

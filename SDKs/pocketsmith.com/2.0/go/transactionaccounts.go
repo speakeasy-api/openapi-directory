@@ -35,7 +35,7 @@ func newTransactionAccounts(defaultClient, securityClient HTTPClient, serverURL,
 // Gets a transaction account by its ID.
 func (s *transactionAccounts) GetTransactionAccountsID(ctx context.Context, request operations.GetTransactionAccountsIDRequest) (*operations.GetTransactionAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *transactionAccounts) GetTransactionAccountsID(ctx context.Context, requ
 // List all transaction accounts belonging to a user.
 func (s *transactionAccounts) GetUsersIDTransactionAccounts(ctx context.Context, request operations.GetUsersIDTransactionAccountsRequest) (*operations.GetUsersIDTransactionAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/transaction_accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/transaction_accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,9 +149,9 @@ func (s *transactionAccounts) GetUsersIDTransactionAccounts(ctx context.Context,
 // Updates the transaction account by its ID.
 func (s *transactionAccounts) PutTransactionAccountsID(ctx context.Context, request operations.PutTransactionAccountsIDRequest) (*operations.PutTransactionAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

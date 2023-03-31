@@ -8,23 +8,15 @@ import (
 	"time"
 )
 
-type ValuesInPastMultipleGetPathParams struct {
-	// The ID of the device
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ValuesInPastMultipleGetQueryParams struct {
+type ValuesInPastMultipleGetRequest struct {
 	// The date when the last value should start
 	EndDate time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// The ID of the device
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The interval in minutes betwenn the values. 0 means as fast as possible. Only 1000 values can be get in one call.
 	Interval int `queryParam:"style=form,explode=true,name=interval"`
 	// The date when the first value should start
 	StartDate time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type ValuesInPastMultipleGetRequest struct {
-	PathParams  ValuesInPastMultipleGetPathParams
-	QueryParams ValuesInPastMultipleGetQueryParams
 }
 
 type ValuesInPastMultipleGetResponse struct {

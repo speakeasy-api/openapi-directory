@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendWelcomeEmailPathParams struct {
-	// A username to send the welcome email to.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type SendWelcomeEmailHeaders struct {
+type SendWelcomeEmailRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type SendWelcomeEmailRequest struct {
-	PathParams SendWelcomeEmailPathParams
-	Headers    SendWelcomeEmailHeaders
+	// A username to send the welcome email to.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type SendWelcomeEmailResponse struct {

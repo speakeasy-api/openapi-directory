@@ -34,9 +34,9 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Create a Staged Upgrade Group for a network
 func (s *groups) CreateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesStagedGroupRequest) (*operations.CreateNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *groups) CreateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // Creates a new adaptive policy group
 func (s *groups) CreateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyGroupRequest) (*operations.CreateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,9 +144,9 @@ func (s *groups) CreateOrganizationAdaptivePolicyGroup(ctx context.Context, requ
 // Creates a new Policy Object Group.
 func (s *groups) CreateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.CreateOrganizationPolicyObjectsGroupRequest) (*operations.CreateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *groups) CreateOrganizationPolicyObjectsGroup(ctx context.Context, reque
 // Delete a Staged Upgrade Group
 func (s *groups) DeleteNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest) (*operations.DeleteNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *groups) DeleteNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // Deletes the specified adaptive policy group and any associated policies and references
 func (s *groups) DeleteOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyGroupRequest) (*operations.DeleteOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *groups) DeleteOrganizationAdaptivePolicyGroup(ctx context.Context, requ
 // Deletes a Policy Object Group.
 func (s *groups) DeleteOrganizationPolicyObjectsGroup(ctx context.Context, request operations.DeleteOrganizationPolicyObjectsGroupRequest) (*operations.DeleteOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -307,7 +307,7 @@ func (s *groups) DeleteOrganizationPolicyObjectsGroup(ctx context.Context, reque
 // Get a Staged Upgrade Group from a network
 func (s *groups) GetNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedGroupRequest) (*operations.GetNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -352,7 +352,7 @@ func (s *groups) GetNetworkFirmwareUpgradesStagedGroup(ctx context.Context, requ
 // List of Staged Upgrade Groups in a network
 func (s *groups) GetNetworkFirmwareUpgradesStagedGroups(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedGroupsRequest) (*operations.GetNetworkFirmwareUpgradesStagedGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -397,7 +397,7 @@ func (s *groups) GetNetworkFirmwareUpgradesStagedGroups(ctx context.Context, req
 // Returns an adaptive policy group
 func (s *groups) GetOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupRequest) (*operations.GetOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -442,7 +442,7 @@ func (s *groups) GetOrganizationAdaptivePolicyGroup(ctx context.Context, request
 // List adaptive policy groups in a organization
 func (s *groups) GetOrganizationAdaptivePolicyGroups(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupsRequest) (*operations.GetOrganizationAdaptivePolicyGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -487,7 +487,7 @@ func (s *groups) GetOrganizationAdaptivePolicyGroups(ctx context.Context, reques
 // Shows details of a Policy Object Group.
 func (s *groups) GetOrganizationPolicyObjectsGroup(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupRequest) (*operations.GetOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -532,14 +532,14 @@ func (s *groups) GetOrganizationPolicyObjectsGroup(ctx context.Context, request 
 // Lists Policy Object Groups belonging to the organization.
 func (s *groups) GetOrganizationPolicyObjectsGroups(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupsRequest) (*operations.GetOrganizationPolicyObjectsGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -583,9 +583,9 @@ func (s *groups) GetOrganizationPolicyObjectsGroups(ctx context.Context, request
 // Update a Staged Upgrade Group for a network
 func (s *groups) UpdateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -638,9 +638,9 @@ func (s *groups) UpdateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // Updates an adaptive policy group. If updating "Infrastructure", only the SGT is allowed. Cannot update "Unknown".
 func (s *groups) UpdateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyGroupRequest) (*operations.UpdateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -690,9 +690,9 @@ func (s *groups) UpdateOrganizationAdaptivePolicyGroup(ctx context.Context, requ
 // Updates a Policy Object Group.
 func (s *groups) UpdateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.UpdateOrganizationPolicyObjectsGroupRequest) (*operations.UpdateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

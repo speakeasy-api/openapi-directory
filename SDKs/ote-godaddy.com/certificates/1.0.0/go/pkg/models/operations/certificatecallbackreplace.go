@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateCallbackReplacePathParams struct {
-	// Certificate id to register/replace for callback
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateCallbackReplaceQueryParams struct {
+type CertificateCallbackReplaceRequest struct {
 	// Callback url registered/replaced to receive stateful actions
 	CallbackURL string `queryParam:"style=form,explode=true,name=callbackUrl"`
-}
-
-type CertificateCallbackReplaceRequest struct {
-	PathParams  CertificateCallbackReplacePathParams
-	QueryParams CertificateCallbackReplaceQueryParams
+	// Certificate id to register/replace for callback
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 }
 
 type CertificateCallbackReplaceResponse struct {

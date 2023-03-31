@@ -8,17 +8,12 @@ import (
 )
 
 type GetMePlaylistsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMePlaylistsQueryParams struct {
-	// Number of results to return in the collection.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetMePlaylistsRequest struct {
-	QueryParams GetMePlaylistsQueryParams
-	Security    GetMePlaylistsSecurity
+	// Number of results to return in the collection.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetMePlaylistsResponse struct {

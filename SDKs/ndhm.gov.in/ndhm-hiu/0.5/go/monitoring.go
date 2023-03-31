@@ -34,10 +34,20 @@ func newMonitoring(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetV05Heartbeat - Get consent request status
-func (s *monitoring) GetV05Heartbeat(ctx context.Context, request operations.GetV05HeartbeatRequest) (*operations.GetV05HeartbeatResponse, error) {
+func (s *monitoring) GetV05Heartbeat(ctx context.Context, opts ...operations.Option) (*operations.GetV05HeartbeatResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetV05HeartbeatServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.5/heartbeat"

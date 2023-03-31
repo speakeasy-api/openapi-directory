@@ -10,8 +10,8 @@ import (
 )
 
 type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum - Required. Identifies the type of this assigned targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
@@ -179,18 +179,14 @@ func (e *DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateTarg
 	}
 }
 
-type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreatePathParams struct {
-	// Required. The ID of the advertiser.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. Identifies the type of this assigned targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
-	TargetingType DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum `pathParam:"style=simple,explode=false,name=targetingType"`
-}
-
-type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateQueryParams struct {
+type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                  *shared.XgafvEnum                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AssignedTargetingOptionInput *shared.AssignedTargetingOptionInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -205,17 +201,12 @@ type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateQueryPar
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. Identifies the type of this assigned targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+	TargetingType DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum `pathParam:"style=simple,explode=false,name=targetingType"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest struct {
-	PathParams  DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreatePathParams
-	QueryParams DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateQueryParams
-	Request     *shared.AssignedTargetingOptionInput `request:"mediaType=application/json"`
-	Security    DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateSecurity
 }
 
 type DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse struct {

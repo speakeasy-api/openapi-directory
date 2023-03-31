@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DownloadInvoicePDFPathParams struct {
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
 type DownloadInvoicePDFRequest struct {
-	PathParams DownloadInvoicePDFPathParams
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
 }
 
 type DownloadInvoicePDFResponse struct {

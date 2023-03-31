@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAccountGroupMappingSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountGroupMappingPathParams struct {
-	// UUID of the SSO group mapping
-	GroupMappingID string `pathParam:"style=simple,explode=false,name=group_mapping_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAccountGroupMappingRequest struct {
-	PathParams GetAccountGroupMappingPathParams
-	Security   GetAccountGroupMappingSecurity
+	// UUID of the SSO group mapping
+	GroupMappingID string `pathParam:"style=simple,explode=false,name=group_mapping_id"`
 }
 
 type GetAccountGroupMappingResponse struct {

@@ -12,18 +12,13 @@ var FetchPlayerStreamerServerList = []string{
 }
 
 type FetchPlayerStreamerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchPlayerStreamerPathParams struct {
-	// The SID of the PlayerStreamer resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchPlayerStreamerRequest struct {
-	PathParams FetchPlayerStreamerPathParams
-	Security   FetchPlayerStreamerSecurity
-	ServerURL  *string
+	// The SID of the PlayerStreamer resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchPlayerStreamerResponse struct {

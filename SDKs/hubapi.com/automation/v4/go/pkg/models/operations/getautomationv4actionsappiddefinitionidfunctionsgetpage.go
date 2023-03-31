@@ -8,18 +8,13 @@ import (
 )
 
 type GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPagePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
-	// The ID of the custom workflow action.
-	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageRequest struct {
-	PathParams GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPagePathParams
-	Security   GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageSecurity
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	// The ID of the custom workflow action.
+	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 }
 
 type GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageResponse struct {

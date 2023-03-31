@@ -12,12 +12,8 @@ var CreateNewSigningKeyServerList = []string{
 }
 
 type CreateNewSigningKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateNewSigningKeyPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateNewSigningKeyCreateNewSigningKeyRequest struct {
@@ -26,10 +22,9 @@ type CreateNewSigningKeyCreateNewSigningKeyRequest struct {
 }
 
 type CreateNewSigningKeyRequest struct {
-	PathParams CreateNewSigningKeyPathParams
-	Request    *CreateNewSigningKeyCreateNewSigningKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateNewSigningKeySecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
+	AccountSid  string                                         `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateNewSigningKeyCreateNewSigningKeyRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateNewSigningKeyResponse struct {

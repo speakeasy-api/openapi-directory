@@ -37,7 +37,7 @@ func newFactors(defaultClient, securityClient HTTPClient, serverURL, language, s
 // References
 // * [Factor Research, Factor Exposure Analysis: Exploring Residualization](https://insights.factorresearch.com/research-factor-exposure-analysis-exploring-residualization/)
 // * [Catalina B. Garcia, Román Salmeron, Claudia Garcia & Jose Garcia (2019): Residualization: justification, properties and application, Journal of Applied Statistics](https://doi.org/10.1080/02664763.2019.1701638)
-func (s *factors) PostFactorsResidualization(ctx context.Context, request operations.PostFactorsResidualizationRequest) (*operations.PostFactorsResidualizationResponse, error) {
+func (s *factors) PostFactorsResidualization(ctx context.Context, request operations.PostFactorsResidualizationRequestBody) (*operations.PostFactorsResidualizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/factors/residualization"
 

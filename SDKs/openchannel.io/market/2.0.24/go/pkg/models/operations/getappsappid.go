@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetAppsAppIDPathParams struct {
+type GetAppsAppIDRequest struct {
 	// The id of the App to be located
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type GetAppsAppIDQueryParams struct {
 	// Whether this call should be tracked as a 'view' for this app. Default is false.
 	TrackViews *bool `queryParam:"style=form,explode=true,name=trackViews"`
 	// The unique id of the user that is requesting this resource
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetAppsAppIDRequest struct {
-	PathParams  GetAppsAppIDPathParams
-	QueryParams GetAppsAppIDQueryParams
 }
 
 type GetAppsAppIDResponse struct {

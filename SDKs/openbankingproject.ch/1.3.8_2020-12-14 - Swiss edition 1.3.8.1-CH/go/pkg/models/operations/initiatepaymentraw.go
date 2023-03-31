@@ -8,43 +8,10 @@ import (
 )
 
 type InitiatePaymentRawSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type InitiatePaymentRawPathParams struct {
-	// The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
-	// The ASPSP will publish which of the payment products/endpoints will be supported.
-	//
-	// The following payment products are supported:
-	//   - domestic-swiss-credit-transfers-isr
-	//   - domestic-swiss-credit-transfers
-	//   - domestic-swiss-credit-transfers-qr
-	//   - domestic-swiss-foreign-credit-transfers
-	//   - swiss-sepa-credit-transfers
-	//   - swiss-cross-border-credit-transfers
-	//   - pain.001-sepa-credit-transfers
-	//   - pain.001-cross-border-credit-transfers
-	//   - pain.001-swiss-six-credit-transfers
-	//
-	// **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
-	// the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
-	// Further XML schemes might be supported by some communities.
-	//
-	// **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
-	// There are plenty of country specificic scheme variants.
-	//
-	PaymentProduct shared.PaymentProductEnum `pathParam:"style=simple,explode=false,name=payment-product"`
-	// Payment service:
-	//
-	// Possible values are:
-	// * payments
-	// * bulk-payments
-	// * periodic-payments
-	//
-	PaymentService shared.PaymentServiceEnum `pathParam:"style=simple,explode=false,name=payment-service"`
-}
-
-type InitiatePaymentRawHeaders struct {
+type InitiatePaymentRawRequest struct {
 	// This data element may be contained, if the payment initiation transaction is part of a session, i.e. combined AIS/PIS service.
 	// This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
 	//
@@ -111,6 +78,29 @@ type InitiatePaymentRawHeaders struct {
 	// The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
 	//
 	PSUUserAgent *string `header:"style=simple,explode=false,name=PSU-User-Agent"`
+	// JSON request body for a payment inition request message.
+	//
+	// There are the following payment-products supported:
+	//   * "domestic-swiss-credit-transfers-isr"
+	//   * "domestic-swiss-credit-transfers"
+	//   * "domestic-swiss-credit-transfers-qr"
+	//   * "domestic-swiss-foreign-credit-transfers"
+	//   * "swiss-sepa-credit-transfers" with JSON-Body
+	//   * "swiss-cross-border-credit-transfers" with JSON-Body
+	//   * "pain.001-sepa-credit-transfers" with XML pain.001.001.03 body for SCT scheme
+	//     Only country specific schemes are currently available
+	//   * "pain.001-cross-border-credit-transfers" with pain.001 body.
+	//     Only country specific schemes are currently available
+	//   * "pain.001-swiss-six-credit-transfers"
+	//
+	// There are the following payment-services supported:
+	//   * "payments"
+	//   * "periodic-payments"
+	//   * "bulk-paments"
+	//
+	// All optional, conditional and predefined but not yet used fields are defined.
+	//
+	RequestBody []byte `request:"mediaType=application/xml"`
 	// A signature of the request by the TPP on application level. This might be mandated by ASPSP.
 	//
 	Signature *string `header:"style=simple,explode=false,name=Signature"`
@@ -192,35 +182,36 @@ type InitiatePaymentRawHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type InitiatePaymentRawRequest struct {
-	PathParams InitiatePaymentRawPathParams
-	Headers    InitiatePaymentRawHeaders
-	// JSON request body for a payment inition request message.
+	// The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
+	// The ASPSP will publish which of the payment products/endpoints will be supported.
 	//
-	// There are the following payment-products supported:
-	//   * "domestic-swiss-credit-transfers-isr"
-	//   * "domestic-swiss-credit-transfers"
-	//   * "domestic-swiss-credit-transfers-qr"
-	//   * "domestic-swiss-foreign-credit-transfers"
-	//   * "swiss-sepa-credit-transfers" with JSON-Body
-	//   * "swiss-cross-border-credit-transfers" with JSON-Body
-	//   * "pain.001-sepa-credit-transfers" with XML pain.001.001.03 body for SCT scheme
-	//     Only country specific schemes are currently available
-	//   * "pain.001-cross-border-credit-transfers" with pain.001 body.
-	//     Only country specific schemes are currently available
-	//   * "pain.001-swiss-six-credit-transfers"
+	// The following payment products are supported:
+	//   - domestic-swiss-credit-transfers-isr
+	//   - domestic-swiss-credit-transfers
+	//   - domestic-swiss-credit-transfers-qr
+	//   - domestic-swiss-foreign-credit-transfers
+	//   - swiss-sepa-credit-transfers
+	//   - swiss-cross-border-credit-transfers
+	//   - pain.001-sepa-credit-transfers
+	//   - pain.001-cross-border-credit-transfers
+	//   - pain.001-swiss-six-credit-transfers
 	//
-	// There are the following payment-services supported:
-	//   * "payments"
-	//   * "periodic-payments"
-	//   * "bulk-paments"
+	// **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
+	// the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
+	// Further XML schemes might be supported by some communities.
 	//
-	// All optional, conditional and predefined but not yet used fields are defined.
+	// **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
+	// There are plenty of country specificic scheme variants.
 	//
-	Request  []byte `request:"mediaType=application/xml"`
-	Security InitiatePaymentRawSecurity
+	PaymentProduct shared.PaymentProductEnum `pathParam:"style=simple,explode=false,name=payment-product"`
+	// Payment service:
+	//
+	// Possible values are:
+	// * payments
+	// * bulk-payments
+	// * periodic-payments
+	//
+	PaymentService shared.PaymentServiceEnum `pathParam:"style=simple,explode=false,name=payment-service"`
 }
 
 type InitiatePaymentRawResponse struct {

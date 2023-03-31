@@ -12,11 +12,8 @@ var UpdateHostedNumbersHostedNumberOrderServerList = []string{
 }
 
 type UpdateHostedNumbersHostedNumberOrderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateHostedNumbersHostedNumberOrderPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateHostedNumbersHostedNumberOrderUpdateHostedNumbersHostedNumberOrderRequest struct {
@@ -41,10 +38,8 @@ type UpdateHostedNumbersHostedNumberOrderUpdateHostedNumbersHostedNumberOrderReq
 }
 
 type UpdateHostedNumbersHostedNumberOrderRequest struct {
-	PathParams UpdateHostedNumbersHostedNumberOrderPathParams
-	Request    *UpdateHostedNumbersHostedNumberOrderUpdateHostedNumbersHostedNumberOrderRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateHostedNumbersHostedNumberOrderSecurity
-	ServerURL  *string
+	RequestBody *UpdateHostedNumbersHostedNumberOrderUpdateHostedNumbersHostedNumberOrderRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	Sid         string                                                                           `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateHostedNumbersHostedNumberOrderResponse struct {

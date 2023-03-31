@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsDeletePathParams struct {
+type ProjectsDeleteRequest struct {
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type ProjectsDeleteRequest struct {
-	PathParams ProjectsDeletePathParams
 }
 
 // ProjectsDelete403ApplicationJSON - Forbidden

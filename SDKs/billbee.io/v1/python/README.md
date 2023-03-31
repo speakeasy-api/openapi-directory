@@ -1,0 +1,221 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/billbee.io/v1/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+    
+res = s.cloud_storage.cloud_storage_api_get_list()
+
+if res.rechnungsdruck_web_app_controllers_api_api_result_system_collections_generic_list_billbee_interfaces_billbee_api_model_cloud_storage_api_model is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### cloud_storage
+
+* `cloud_storage_api_get_list` - Gets a list of all connected cloud storage devices
+
+### customer_addresses
+
+* `customer_addresses_create_form` - Creates a new customer address
+* `customer_addresses_create_json` - Creates a new customer address
+* `customer_addresses_create_raw` - Creates a new customer address
+* `customer_addresses_get_all` - Get a list of all customer addresses
+* `customer_addresses_get_one` - Queries a single customer address by id
+* `customer_addresses_update_form` - Updates a customer address by id
+* `customer_addresses_update_json` - Updates a customer address by id
+* `customer_addresses_update_raw` - Updates a customer address by id
+
+### customers
+
+* `customer_add_customer_address_form` - Adds a new address to a customer
+* `customer_add_customer_address_json` - Adds a new address to a customer
+* `customer_add_customer_address_raw` - Adds a new address to a customer
+* `customer_create_form` - Creates a new customer
+* `customer_create_json` - Creates a new customer
+* `customer_create_raw` - Creates a new customer
+* `customer_get_all` - Get a list of all customers
+* `customer_get_customer_address` - Queries a single address from a customer
+* `customer_get_customer_addresses` - Queries a list of addresses from a customer
+* `customer_get_customer_orders` - Queries a list of orders from a customer
+* `customer_get_one` - Queries a single customer by id
+* `customer_patch_address` - Updates one or more fields of an address
+* `customer_update_address_form` - Updates all fields of an address
+* `customer_update_address_json` - Updates all fields of an address
+* `customer_update_address_raw` - Updates all fields of an address
+* `customer_update_form` - Updates a customer by id
+* `customer_update_json` - Updates a customer by id
+* `customer_update_raw` - Updates a customer by id
+* `search_search_form` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* `search_search_json` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* `search_search_raw` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+
+### delivery_note
+
+* `order_api_create_delivery_note` - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+
+### enum_api
+
+* `enum_api_get_order_states` - Returns a list with all defined orderstates
+* `enum_api_get_payment_types` - Returns a list with all defined paymenttypes
+* `enum_api_get_shipment_types` - Returns a list with all defined shipmenttypes
+* `enum_api_get_shipping_carriers` - Returns a list with all defined shippingcarriers
+
+### events
+
+* `event_api_get_list` - Get a list of all events optionally filtered by date. This request is extra throttled to 2 calls per page per hour.
+
+### invoice
+
+* `order_api_create_invoice` - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+* `order_api_get_invoice_list` - Get a list of all invoices optionally filtered by date. This request ist throttled to 1 per 1 minute for same page and minInvoiceDate
+
+### orders
+
+* `layout_api_get_list`
+* `order_api_add_shipment_form` - Add a shipment to a given order
+* `order_api_add_shipment_json` - Add a shipment to a given order
+* `order_api_add_shipment_raw` - Add a shipment to a given order
+* `order_api_create_delivery_note` - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+* `order_api_create_invoice` - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+* `order_api_find` - Find a single order by its external id (order number)
+* `order_api_get` - Get a single order by its internal billbee id. This request is throttled to 6 calls per order in one minute
+* `order_api_get_by_ext_ref` - Get a single order by its external order number
+* `order_api_get_invoice_list` - Get a list of all invoices optionally filtered by date. This request ist throttled to 1 per 1 minute for same page and minInvoiceDate
+* `order_api_get_list` - Get a list of all orders optionally filtered by date
+* `order_api_get_patchable_fields` - Returns a list of fields which can be updated with the orders/{id} patch call
+* `order_api_parse_placeholders_form` - Parses a text and replaces all placeholders
+* `order_api_parse_placeholders_json` - Parses a text and replaces all placeholders
+* `order_api_parse_placeholders_raw` - Parses a text and replaces all placeholders
+* `order_api_patch_order` - Updates one or more fields of an order
+* `order_api_post_new_order_form` - Creates a new order in the Billbee account
+* `order_api_post_new_order_json` - Creates a new order in the Billbee account
+* `order_api_post_new_order_raw` - Creates a new order in the Billbee account
+* `order_api_send_message_form` - Sends a message to the buyer
+* `order_api_send_message_json` - Sends a message to the buyer
+* `order_api_send_message_raw` - Sends a message to the buyer
+* `order_api_tags_create_form` - Attach one or more tags to an order
+* `order_api_tags_create_json` - Attach one or more tags to an order
+* `order_api_tags_create_raw` - Attach one or more tags to an order
+* `order_api_tags_update_form` - Sets the tags attached to an order
+* `order_api_tags_update_json` - Sets the tags attached to an order
+* `order_api_tags_update_raw` - Sets the tags attached to an order
+* `order_api_trigger_event_form` - Triggers a rule event
+* `order_api_trigger_event_json` - Triggers a rule event
+* `order_api_trigger_event_raw` - Triggers a rule event
+* `order_api_update_state_form` - Changes the main state of a single order
+* `order_api_update_state_json` - Changes the main state of a single order
+* `order_api_update_state_raw` - Changes the main state of a single order
+* `search_search_form` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* `search_search_json` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* `search_search_raw` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+
+### products
+
+* `article_create_article` - Creates a new product
+* `article_delete_article` - Deletes a product
+* `article_delete_image` - Deletes a single image by id
+* `article_delete_image_from_product` - Deletes a single image from a product
+* `article_get_article` - Queries a single article by id or by sku
+* `article_get_category` - GEts a list of all defined categories
+* `article_get_custom_field` - Queries a single custom field
+* `article_get_custom_fields` - Queries a list of all custom fields
+* `article_get_image` - Returns a single image by id
+* `article_get_image_from_product` - Returns a single image by id
+* `article_get_images` - Returns a list of all images of the product
+* `article_get_list` - Get a list of all products
+* `article_get_patchable_fields` - Returns a list of fields which can be updated with the patch call
+* `article_get_reserved_amount` - Queries the reserved amount for a single article by id or by sku
+* `article_get_stocks` - Query all defined stock locations
+* `article_patch_article` - Updates one or more fields of a product
+* `article_put_image_form` - Add or update an existing image of a product
+* `article_put_image_json` - Add or update an existing image of a product
+* `article_put_image_raw` - Add or update an existing image of a product
+* `article_update_stock_code_form` - Update the stock code of an article
+* `article_update_stock_code_json` - Update the stock code of an article
+* `article_update_stock_code_raw` - Update the stock code of an article
+* `article_update_stock_form` - Update the stock qty of an article
+* `article_update_stock_json` - Update the stock qty of an article
+* `article_update_stock_raw` - Update the stock qty of an article
+* `search_search_form` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* `search_search_json` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* `search_search_raw` - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+
+### provisioning
+
+* `automatic_provisioning_create_account_form` - Creates a new Billbee user account with the data passed
+* `automatic_provisioning_create_account_json` - Creates a new Billbee user account with the data passed
+* `automatic_provisioning_create_account_raw` - Creates a new Billbee user account with the data passed
+* `automatic_provisioning_terms_info` - Returns infos about Billbee terms and conditions
+
+### shipments
+
+* `shipment_get_list` - Get a list of all shipments optionally filtered by date. All parameters are optional.
+* `shipment_get_ping`
+* `shipment_get_shipping_carrier` - Queries the currently available shipping carriers.
+* `shipment_get_shippingproviders` - Query all defined shipping providers
+* `shipment_post_shipment_form` - Creates a new shipment with the selected Shippingprovider
+* `shipment_post_shipment_json` - Creates a new shipment with the selected Shippingprovider
+* `shipment_post_shipment_raw` - Creates a new shipment with the selected Shippingprovider
+* `shipment_ship_with_label_form` - Creates a shipment for an order in billbee
+* `shipment_ship_with_label_json` - Creates a shipment for an order in billbee
+* `shipment_ship_with_label_raw` - Creates a shipment for an order in billbee
+
+### webhooks
+
+* `web_hook_management_delete` - Deletes an existing WebHook registration.
+* `web_hook_management_delete_all` - Deletes all existing WebHook registrations.
+* `web_hook_management_get` - Gets all registered WebHooks for a given user.
+* `web_hook_management_get_filters` - Returns a list of all known filters you can use to register webhooks
+* `web_hook_management_lookup` - Looks up a registered WebHook with the given {id} for a given user.
+* `web_hook_management_post` - Registers a new WebHook for a given user.
+* `web_hook_management_put` - Updates an existing WebHook registration.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

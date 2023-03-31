@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CommentsPutPathParams struct {
+type CommentsPutRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The unique identifier of the comment you wish to update.
 	CommentID string `pathParam:"style=simple,explode=false,name=comment_id"`
-}
-
-type CommentsPutRequest struct {
-	PathParams CommentsPutPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CommentsPutResponse struct {

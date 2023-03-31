@@ -8,17 +8,12 @@ import (
 )
 
 type AcceptDisputeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AcceptDisputePathParams struct {
-	// The ID of the dispute you want to accept.
-	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AcceptDisputeRequest struct {
-	PathParams AcceptDisputePathParams
-	Security   AcceptDisputeSecurity
+	// The ID of the dispute you want to accept.
+	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
 }
 
 type AcceptDisputeResponse struct {

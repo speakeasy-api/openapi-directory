@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpGetArgsPathParams struct {
+type ProtocolTftpGetArgsRequest struct {
 	// Agent to show the TFTP argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTftpGetArgsRequest struct {
-	PathParams ProtocolTftpGetArgsPathParams
 }
 
 type ProtocolTftpGetArgsResponse struct {

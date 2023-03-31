@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/ndhm.gov.in/ndhm-hiu/0.5/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,6 +15,7 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
+
     
 res = s.gateway.get_v0_5_well_known_openid_configuration()
 
@@ -24,43 +25,61 @@ if res.open_id_configuration is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Gateway
+
+### gateway
 
 * `get_v0_5_well_known_openid_configuration` - Get openid configuration
 * `get_v0_5_certs` - Get certs for JWT verification
-* `post_v0_5_consent_requests_init` - Create consent request
-* `post_v0_5_consent_requests_status` - Get consent request status
+* `post_v0_5_consent_requests_init_json` - Create consent request
+* `post_v0_5_consent_requests_init_raw` - Create consent request
+* `post_v0_5_consent_requests_status_json` - Get consent request status
+* `post_v0_5_consent_requests_status_raw` - Get consent request status
 * `post_v0_5_consents_fetch` - Get consent artefact
 * `post_v0_5_consents_hiu_on_notify` - Consent notification
-* `post_v0_5_health_information_cm_request` - Health information data request
-* `post_v0_5_health_information_notify` - Notifications corresponding to events during data flow
-* `post_v0_5_patients_find` - Identify a patient by her consent-manager user-id
-* `post_v0_5_sessions` - Get access token
-* `post_v0_5_subscription_requests_cm_init` - Request for subscription
+* `post_v0_5_health_information_cm_request_json` - Health information data request
+* `post_v0_5_health_information_cm_request_raw` - Health information data request
+* `post_v0_5_health_information_notify_json` - Notifications corresponding to events during data flow
+* `post_v0_5_health_information_notify_raw` - Notifications corresponding to events during data flow
+* `post_v0_5_patients_find_json` - Identify a patient by her consent-manager user-id
+* `post_v0_5_patients_find_raw` - Identify a patient by her consent-manager user-id
+* `post_v0_5_sessions_json` - Get access token
+* `post_v0_5_sessions_raw` - Get access token
+* `post_v0_5_subscription_requests_cm_init_json` - Request for subscription
+* `post_v0_5_subscription_requests_cm_init_raw` - Request for subscription
 * `post_v0_5_subscription_requests_hiu_on_notify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `post_v0_5_subscriptions_hiu_on_notify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-* `post_v0_5_users_auth_confirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `post_v0_5_users_auth_fetch_modes` - Get a patient's authentication modes relevant to specified purpose
-* `post_v0_5_users_auth_init` - Initialize authentication from HIP
-* `post_v0_5_users_auth_on_notify` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `post_v0_5_users_auth_confirm_json` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `post_v0_5_users_auth_confirm_raw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `post_v0_5_users_auth_fetch_modes_json` - Get a patient's authentication modes relevant to specified purpose
+* `post_v0_5_users_auth_fetch_modes_raw` - Get a patient's authentication modes relevant to specified purpose
+* `post_v0_5_users_auth_init_json` - Initialize authentication from HIP
+* `post_v0_5_users_auth_init_raw` - Initialize authentication from HIP
+* `post_v0_5_users_auth_on_notify_json` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `post_v0_5_users_auth_on_notify_raw` - callback API by HIU/HIPs as acknowledgement of auth notification
 
-### consent flow
+### consent_flow
 
-* `post_v0_5_consent_requests_on_init` - Response to consent request
-* `post_v0_5_consent_requests_on_status` - Result of consent request status
+* `post_v0_5_consent_requests_on_init_json` - Response to consent request
+* `post_v0_5_consent_requests_on_init_raw` - Response to consent request
+* `post_v0_5_consent_requests_on_status_json` - Result of consent request status
+* `post_v0_5_consent_requests_on_status_raw` - Result of consent request status
 * `post_v0_5_consents_hiu_notify` - Consent notification
-* `post_v0_5_consents_on_fetch` - Result of fetch request for a consent artefact
+* `post_v0_5_consents_on_fetch_json` - Result of fetch request for a consent artefact
+* `post_v0_5_consents_on_fetch_raw` - Result of fetch request for a consent artefact
 
-### data flow
+### data_flow
 
-* `post_v0_5_health_information_hiu_on_request` - Health information data request
-* `post_v0_5_health_information_transfer` - health information transfer API
+* `post_v0_5_health_information_hiu_on_request_json` - Health information data request
+* `post_v0_5_health_information_hiu_on_request_raw` - Health information data request
+* `post_v0_5_health_information_transfer_json` - health information transfer API
+* `post_v0_5_health_information_transfer_raw` - health information transfer API
 
 ### identification
 
-* `post_v0_5_patients_on_find` - Identification result for a consent-manager user-id
+* `post_v0_5_patients_on_find_json` - Identification result for a consent-manager user-id
+* `post_v0_5_patients_on_find_raw` - Identification result for a consent-manager user-id
 
 ### monitoring
 
@@ -68,17 +87,33 @@ if res.open_id_configuration is not None:
 
 ### subscriptions
 
-* `post_v0_5_subscription_requests_hiu_notify` - Notification for subscription grant/deny/revoke
+* `post_v0_5_subscription_requests_hiu_notify_json` - Notification for subscription grant/deny/revoke
+* `post_v0_5_subscription_requests_hiu_notify_raw` - Notification for subscription grant/deny/revoke
 * `post_v0_5_subscription_requests_hiu_on_init` - callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
-* `post_v0_5_subscriptions_hiu_notify` - Notification to HIU on basis of a granted subscription
+* `post_v0_5_subscriptions_hiu_notify_json` - Notification to HIU on basis of a granted subscription
+* `post_v0_5_subscriptions_hiu_notify_raw` - Notification to HIU on basis of a granted subscription
 
-### user auth
+### user_auth
 
-* `post_v0_5_users_auth_notify` - notification API in case of DIRECT mode of authentication by the CM
-* `post_v0_5_users_auth_on_confirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-* `post_v0_5_users_auth_on_fetch_modes` - Identification result for a consent-manager user-id
-* `post_v0_5_users_auth_on_init` - Response to user authentication initialization from HIP
-
+* `post_v0_5_users_auth_notify_json` - notification API in case of DIRECT mode of authentication by the CM
+* `post_v0_5_users_auth_notify_raw` - notification API in case of DIRECT mode of authentication by the CM
+* `post_v0_5_users_auth_on_confirm_json` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `post_v0_5_users_auth_on_confirm_raw` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `post_v0_5_users_auth_on_fetch_modes_json` - Identification result for a consent-manager user-id
+* `post_v0_5_users_auth_on_fetch_modes_raw` - Identification result for a consent-manager user-id
+* `post_v0_5_users_auth_on_init_json` - Response to user authentication initialization from HIP
+* `post_v0_5_users_auth_on_init_raw` - Response to user authentication initialization from HIP
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

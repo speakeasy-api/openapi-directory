@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteSetupV1BusinessusersIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteSetupV1BusinessusersIDRequest struct {
-	PathParams DeleteSetupV1BusinessusersIDPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteSetupV1BusinessusersIDResponse struct {

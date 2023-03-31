@@ -8,19 +8,14 @@ import (
 )
 
 type AddClassUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddClassUserPathParams struct {
+type AddClassUserRequest struct {
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
 	// Unique identifier of the user
 	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type AddClassUserRequest struct {
-	PathParams AddClassUserPathParams
-	Security   AddClassUserSecurity
 }
 
 type AddClassUserResponse struct {

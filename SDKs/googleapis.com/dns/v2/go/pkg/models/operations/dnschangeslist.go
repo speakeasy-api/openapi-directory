@@ -10,23 +10,23 @@ import (
 )
 
 type DNSChangesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DNSChangesListSecurity struct {
@@ -34,14 +34,6 @@ type DNSChangesListSecurity struct {
 	Option2 *DNSChangesListSecurityOption2 `security:"option"`
 	Option3 *DNSChangesListSecurityOption3 `security:"option"`
 	Option4 *DNSChangesListSecurityOption4 `security:"option"`
-}
-
-type DNSChangesListPathParams struct {
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
-	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
-	// Identifies the project addressed by this request.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 // DNSChangesListSortByEnum - Sorting criterion. The only supported value is change sequence.
@@ -65,7 +57,7 @@ func (e *DNSChangesListSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DNSChangesListQueryParams struct {
+type DNSChangesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -77,7 +69,10 @@ type DNSChangesListQueryParams struct {
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-	Key *string `queryParam:"style=form,explode=true,name=key"`
+	Key      *string `queryParam:"style=form,explode=true,name=key"`
+	Location string  `pathParam:"style=simple,explode=false,name=location"`
+	// Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+	ManagedZone string `pathParam:"style=simple,explode=false,name=managedZone"`
 	// Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.
@@ -86,6 +81,8 @@ type DNSChangesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Identifies the project addressed by this request.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Sorting criterion. The only supported value is change sequence.
@@ -96,12 +93,6 @@ type DNSChangesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DNSChangesListRequest struct {
-	PathParams  DNSChangesListPathParams
-	QueryParams DNSChangesListQueryParams
-	Security    DNSChangesListSecurity
 }
 
 type DNSChangesListResponse struct {

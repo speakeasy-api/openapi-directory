@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryRoutinesDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryRoutinesDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryRoutinesDeleteSecurity struct {
@@ -22,18 +22,11 @@ type BigqueryRoutinesDeleteSecurity struct {
 	Option2 *BigqueryRoutinesDeleteSecurityOption2 `security:"option"`
 }
 
-type BigqueryRoutinesDeletePathParams struct {
-	// Required. Dataset ID of the routine to delete
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Required. Project ID of the routine to delete
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Required. Routine ID of the routine to delete
-	RoutineID string `pathParam:"style=simple,explode=false,name=routineId"`
-}
-
-type BigqueryRoutinesDeleteQueryParams struct {
+type BigqueryRoutinesDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. Dataset ID of the routine to delete
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,16 +35,14 @@ type BigqueryRoutinesDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Project ID of the routine to delete
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. Routine ID of the routine to delete
+	RoutineID string `pathParam:"style=simple,explode=false,name=routineId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryRoutinesDeleteRequest struct {
-	PathParams  BigqueryRoutinesDeletePathParams
-	QueryParams BigqueryRoutinesDeleteQueryParams
-	Security    BigqueryRoutinesDeleteSecurity
 }
 
 type BigqueryRoutinesDeleteResponse struct {

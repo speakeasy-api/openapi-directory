@@ -33,7 +33,7 @@ func newInvestorAccounts(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // GetAllinvestorAccounts - Retrieve all the investor accounts
-func (s *investorAccounts) GetAllinvestorAccounts(ctx context.Context, request operations.GetAllinvestorAccountsRequest) (*operations.GetAllinvestorAccountsResponse, error) {
+func (s *investorAccounts) GetAllinvestorAccounts(ctx context.Context, request operations.GetAllinvestorAccountsRequest, security operations.GetAllinvestorAccountsSecurity) (*operations.GetAllinvestorAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/investor-accounts/v1"
 
@@ -42,13 +42,13 @@ func (s *investorAccounts) GetAllinvestorAccounts(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -153,18 +153,18 @@ func (s *investorAccounts) GetAllinvestorAccounts(ctx context.Context, request o
 }
 
 // GetinvestorAccount - Retrieve existing investor account from account id
-func (s *investorAccounts) GetinvestorAccount(ctx context.Context, request operations.GetinvestorAccountRequest) (*operations.GetinvestorAccountResponse, error) {
+func (s *investorAccounts) GetinvestorAccount(ctx context.Context, request operations.GetinvestorAccountRequest, security operations.GetinvestorAccountSecurity) (*operations.GetinvestorAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investor-accounts/v1/{account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/investor-accounts/v1/{account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

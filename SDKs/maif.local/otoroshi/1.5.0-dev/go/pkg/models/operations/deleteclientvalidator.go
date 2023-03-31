@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteClientValidatorSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteClientValidatorPathParams struct {
-	// The validation authorities id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteClientValidatorRequest struct {
-	PathParams DeleteClientValidatorPathParams
-	Security   DeleteClientValidatorSecurity
+	// The validation authorities id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteClientValidatorResponse struct {

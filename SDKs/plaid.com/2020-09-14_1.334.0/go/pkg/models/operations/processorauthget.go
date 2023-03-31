@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ProcessorAuthGetRequest struct {
-	Request shared.ProcessorAuthGetRequest `request:"mediaType=application/json"`
-}
 
 type ProcessorAuthGetResponse struct {
 	ContentType string

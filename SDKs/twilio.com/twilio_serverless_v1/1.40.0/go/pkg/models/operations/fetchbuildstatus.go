@@ -12,20 +12,15 @@ var FetchBuildStatusServerList = []string{
 }
 
 type FetchBuildStatusSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchBuildStatusPathParams struct {
+type FetchBuildStatusRequest struct {
 	// The SID of the Service to fetch the Build resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Build resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchBuildStatusRequest struct {
-	PathParams FetchBuildStatusPathParams
-	Security   FetchBuildStatusSecurity
-	ServerURL  *string
 }
 
 type FetchBuildStatusResponse struct {

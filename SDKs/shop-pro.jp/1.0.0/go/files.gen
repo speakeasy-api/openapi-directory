@@ -34,5 +34,4 @@ pkg/models/operations/getscripttag.go
 pkg/models/operations/getscripttags.go
 pkg/models/operations/updatescripttag.go
 pkg/models/operations/deleteinstallation.go
-pkg/models/shared/security.go
 USAGE.md

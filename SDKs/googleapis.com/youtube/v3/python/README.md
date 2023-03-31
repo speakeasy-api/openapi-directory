@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/youtube/v3/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,79 +15,74 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.YoutubeAbuseReportsInsertRequest(
-    security=operations.YoutubeAbuseReportsInsertSecurity(
-        option1=operations.YoutubeAbuseReportsInsertSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.YoutubeAbuseReportsInsertQueryParams(
-        dollar_xgafv="2",
-        access_token="dolores",
-        alt="json",
-        callback="nihil",
-        fields="dolorem",
-        key="a",
-        oauth_token="dicta",
-        part=[
-            "consequatur",
-        ],
-        pretty_print=True,
-        quota_user="omnis",
-        upload_type="doloremque",
-        upload_protocol="magnam",
-    ),
-    request=shared.AbuseReport(
+    dollar_xgafv="2",
+    abuse_report=shared.AbuseReport(
         abuse_types=[
             shared.AbuseType(
-                id="ea",
+                id="distinctio",
             ),
             shared.AbuseType(
-                id="in",
+                id="quibusdam",
             ),
             shared.AbuseType(
-                id="et",
+                id="unde",
             ),
         ],
-        description="aut",
+        description="nulla",
         related_entities=[
             shared.RelatedEntity(
                 entity=shared.Entity(
-                    id="qui",
-                    type_id="blanditiis",
-                    url="inventore",
+                    id="illum",
+                    type_id="vel",
+                    url="error",
                 ),
             ),
             shared.RelatedEntity(
                 entity=shared.Entity(
-                    id="minima",
-                    type_id="eum",
-                    url="dolorum",
+                    id="deserunt",
+                    type_id="suscipit",
+                    url="iure",
                 ),
             ),
             shared.RelatedEntity(
                 entity=shared.Entity(
-                    id="quibusdam",
-                    type_id="est",
-                    url="sint",
+                    id="magnam",
+                    type_id="debitis",
+                    url="ipsa",
                 ),
             ),
         ],
         subject=shared.Entity(
-            id="et",
-            type_id="aut",
-            url="repellendus",
+            id="delectus",
+            type_id="tempora",
+            url="suscipit",
         ),
     ),
+    access_token="molestiae",
+    alt="proto",
+    callback="placeat",
+    fields_="voluptatum",
+    key="iusto",
+    oauth_token="excepturi",
+    part=[
+        "recusandae",
+        "temporibus",
+    ],
+    pretty_print=False,
+    quota_user="ab",
+    upload_type="quis",
+    upload_protocol="veritatis",
 )
     
-res = s.abuse_reports.youtube_abuse_reports_insert(req)
+res = s.abuse_reports.youtube_abuse_reports_insert(req, operations.YoutubeAbuseReportsInsertSecurity(
+    option1=operations.YoutubeAbuseReportsInsertSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.abuse_report is not None:
     # handle response
@@ -95,9 +90,10 @@ if res.abuse_report is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### abuseReports
+
+### abuse_reports
 
 * `youtube_abuse_reports_insert` - Inserts a new resource into this collection.
 
@@ -113,11 +109,11 @@ if res.abuse_report is not None:
 * `youtube_captions_list` - Retrieves a list of resources, possibly filtered.
 * `youtube_captions_update` - Updates an existing resource.
 
-### channelBanners
+### channel_banners
 
 * `youtube_channel_banners_insert` - Inserts a new resource into this collection.
 
-### channelSections
+### channel_sections
 
 * `youtube_channel_sections_delete` - Deletes a resource.
 * `youtube_channel_sections_insert` - Inserts a new resource into this collection.
@@ -129,7 +125,7 @@ if res.abuse_report is not None:
 * `youtube_channels_list` - Retrieves a list of resources, possibly filtered.
 * `youtube_channels_update` - Updates an existing resource.
 
-### commentThreads
+### comment_threads
 
 * `youtube_comment_threads_insert` - Inserts a new resource into this collection.
 * `youtube_comment_threads_list` - Retrieves a list of resources, possibly filtered.
@@ -143,15 +139,15 @@ if res.abuse_report is not None:
 * `youtube_comments_set_moderation_status` - Sets the moderation status of one or more comments.
 * `youtube_comments_update` - Updates an existing resource.
 
-### i18nLanguages
+### i18n_languages
 
 * `youtube_i18n_languages_list` - Retrieves a list of resources, possibly filtered.
 
-### i18nRegions
+### i18n_regions
 
 * `youtube_i18n_regions_list` - Retrieves a list of resources, possibly filtered.
 
-### liveBroadcasts
+### live_broadcasts
 
 * `youtube_live_broadcasts_bind` - Bind a broadcast to a stream.
 * `youtube_live_broadcasts_delete` - Delete a given broadcast.
@@ -161,24 +157,24 @@ if res.abuse_report is not None:
 * `youtube_live_broadcasts_transition` - Transition a broadcast to a given status.
 * `youtube_live_broadcasts_update` - Updates an existing broadcast for the authenticated user.
 
-### liveChatBans
+### live_chat_bans
 
 * `youtube_live_chat_bans_delete` - Deletes a chat ban.
 * `youtube_live_chat_bans_insert` - Inserts a new resource into this collection.
 
-### liveChatMessages
+### live_chat_messages
 
 * `youtube_live_chat_messages_delete` - Deletes a chat message.
 * `youtube_live_chat_messages_insert` - Inserts a new resource into this collection.
 * `youtube_live_chat_messages_list` - Retrieves a list of resources, possibly filtered.
 
-### liveChatModerators
+### live_chat_moderators
 
 * `youtube_live_chat_moderators_delete` - Deletes a chat moderator.
 * `youtube_live_chat_moderators_insert` - Inserts a new resource into this collection.
 * `youtube_live_chat_moderators_list` - Retrieves a list of resources, possibly filtered.
 
-### liveStreams
+### live_streams
 
 * `youtube_live_streams_delete` - Deletes an existing stream for the authenticated user.
 * `youtube_live_streams_insert` - Inserts a new stream for the authenticated user.
@@ -189,11 +185,11 @@ if res.abuse_report is not None:
 
 * `youtube_members_list` - Retrieves a list of members that match the request criteria for a channel.
 
-### membershipsLevels
+### memberships_levels
 
 * `youtube_memberships_levels_list` - Retrieves a list of all pricing levels offered by a creator to the fans.
 
-### playlistItems
+### playlist_items
 
 * `youtube_playlist_items_delete` - Deletes a resource.
 * `youtube_playlist_items_insert` - Inserts a new resource into this collection.
@@ -217,7 +213,7 @@ if res.abuse_report is not None:
 * `youtube_subscriptions_insert` - Inserts a new resource into this collection.
 * `youtube_subscriptions_list` - Retrieves a list of resources, possibly filtered.
 
-### superChatEvents
+### super_chat_events
 
 * `youtube_super_chat_events_list` - Retrieves a list of resources, possibly filtered.
 
@@ -225,7 +221,7 @@ if res.abuse_report is not None:
 
 * `youtube_tests_insert` - POST method.
 
-### thirdPartyLinks
+### third_party_links
 
 * `youtube_third_party_links_delete` - Deletes a resource.
 * `youtube_third_party_links_insert` - Inserts a new resource into this collection.
@@ -236,11 +232,11 @@ if res.abuse_report is not None:
 
 * `youtube_thumbnails_set` - As this is not an insert in a strict sense (it supports uploading/setting of a thumbnail for multiple videos, which doesn't result in creation of a single resource), I use a custom verb here.
 
-### videoAbuseReportReasons
+### video_abuse_report_reasons
 
 * `youtube_video_abuse_report_reasons_list` - Retrieves a list of resources, possibly filtered.
 
-### videoCategories
+### video_categories
 
 * `youtube_video_categories_list` - Retrieves a list of resources, possibly filtered.
 
@@ -262,7 +258,17 @@ if res.abuse_report is not None:
 ### youtube
 
 * `youtube_youtube_v3_update_comment_threads` - Updates an existing resource.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -39,7 +39,7 @@ func (e *ListShipmentsSortDirSortDirEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListShipmentsQueryParams struct {
+type ListShipmentsRequest struct {
 	// Batch ID
 	BatchID *string `queryParam:"style=form,explode=true,name=batch_id"`
 	// Used to create a filter for when a resource was created, (ex. A shipment that was created before a certain time)
@@ -65,10 +65,6 @@ type ListShipmentsQueryParams struct {
 	SortDir *ListShipmentsSortDirSortDirEnum `queryParam:"style=form,explode=true,name=sort_dir"`
 	// Search for shipments based on the custom tag added to the shipment object
 	Tag *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type ListShipmentsRequest struct {
-	QueryParams ListShipmentsQueryParams
 }
 
 type ListShipmentsResponse struct {

@@ -8,13 +8,7 @@ import (
 )
 
 type AddPanoramaFirewallSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddPanoramaFirewallRequest struct {
-	// Add a panorama firewall as datasource
-	Request  *shared.SwitchDataSourceRequest `request:"mediaType=application/json"`
-	Security AddPanoramaFirewallSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddPanoramaFirewallResponse struct {

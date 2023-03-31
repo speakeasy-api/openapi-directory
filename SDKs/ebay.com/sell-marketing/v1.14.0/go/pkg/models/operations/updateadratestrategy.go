@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateAdRateStrategySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateAdRateStrategyPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateAdRateStrategyRequest struct {
-	PathParams UpdateAdRateStrategyPathParams
 	// This type defines the request fields for the ad rate strategy that shall be updated.
-	Request  shared.UpdateAdrateStrategyRequest `request:"mediaType=application/json"`
-	Security UpdateAdRateStrategySecurity
+	UpdateAdrateStrategyRequest shared.UpdateAdrateStrategyRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type UpdateAdRateStrategyResponse struct {

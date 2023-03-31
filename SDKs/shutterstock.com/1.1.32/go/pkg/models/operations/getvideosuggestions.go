@@ -8,20 +8,15 @@ import (
 )
 
 type GetVideoSuggestionsSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetVideoSuggestionsQueryParams struct {
+type GetVideoSuggestionsRequest struct {
 	// Limit the number of the suggestions
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search term for which you want keyword suggestions
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetVideoSuggestionsRequest struct {
-	QueryParams GetVideoSuggestionsQueryParams
-	Security    GetVideoSuggestionsSecurity
 }
 
 type GetVideoSuggestionsResponse struct {

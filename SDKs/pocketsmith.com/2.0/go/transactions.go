@@ -35,7 +35,7 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes a transaction and all its data by ID.
 func (s *transactions) DeleteTransactionsID(ctx context.Context, request operations.DeleteTransactionsIDRequest) (*operations.DeleteTransactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,14 +83,14 @@ func (s *transactions) DeleteTransactionsID(ctx context.Context, request operati
 // Lists transactions belonging to an account by its ID.
 func (s *transactions) GetAccountsIDTransactions(ctx context.Context, request operations.GetAccountsIDTransactionsRequest) (*operations.GetAccountsIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -146,14 +146,14 @@ func (s *transactions) GetAccountsIDTransactions(ctx context.Context, request op
 // Lists transactions belonging to one or more categories by their IDs.
 func (s *transactions) GetCategoriesIDTransactions(ctx context.Context, request operations.GetCategoriesIDTransactionsRequest) (*operations.GetCategoriesIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -209,14 +209,14 @@ func (s *transactions) GetCategoriesIDTransactions(ctx context.Context, request 
 // Lists transactions belonging to a transaction account by its ID.
 func (s *transactions) GetTransactionAccountsIDTransactions(ctx context.Context, request operations.GetTransactionAccountsIDTransactionsRequest) (*operations.GetTransactionAccountsIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -272,7 +272,7 @@ func (s *transactions) GetTransactionAccountsIDTransactions(ctx context.Context,
 // Gets a transaction by its ID.
 func (s *transactions) GetTransactionsID(ctx context.Context, request operations.GetTransactionsIDRequest) (*operations.GetTransactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,14 +329,14 @@ func (s *transactions) GetTransactionsID(ctx context.Context, request operations
 // Lists transactions belonging to a user by their ID.
 func (s *transactions) GetUsersIDTransactions(ctx context.Context, request operations.GetUsersIDTransactionsRequest) (*operations.GetUsersIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -392,9 +392,9 @@ func (s *transactions) GetUsersIDTransactions(ctx context.Context, request opera
 // Creates a transaction in a transaction account by its ID.
 func (s *transactions) PostTransactionAccountsIDTransactions(ctx context.Context, request operations.PostTransactionAccountsIDTransactionsRequest) (*operations.PostTransactionAccountsIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}/transactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -458,9 +458,9 @@ func (s *transactions) PostTransactionAccountsIDTransactions(ctx context.Context
 // Updates a transaction by its ID.
 func (s *transactions) PutTransactionsID(ctx context.Context, request operations.PutTransactionsIDRequest) (*operations.PutTransactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

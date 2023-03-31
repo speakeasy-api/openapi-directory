@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDevicesIDAccumulatorsPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutDevicesIDAccumulatorsRequest struct {
-	PathParams PutDevicesIDAccumulatorsPathParams
-	Request    shared.DeviceAccumulators `request:"mediaType=application/json"`
+	DeviceAccumulators shared.DeviceAccumulators `request:"mediaType=application/json"`
+	ID                 int64                     `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutDevicesIDAccumulatorsResponse struct {

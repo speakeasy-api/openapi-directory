@@ -8,13 +8,13 @@ import (
 )
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurity struct {
@@ -22,12 +22,7 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurity struct {
 	Option2 *IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurityOption2 `security:"option"`
 }
 
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeletePathParams struct {
-	// The resource name of the config to be deleted, for example: 'projects/my-awesome-project/oauthIdpConfigs/oauth-config-id'.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteQueryParams struct {
+type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the config to be deleted, for example: 'projects/my-awesome-project/oauthIdpConfigs/oauth-config-id'.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,12 +47,6 @@ type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest struct {
-	PathParams  IdentitytoolkitProjectsTenantsOauthIdpConfigsDeletePathParams
-	QueryParams IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteQueryParams
-	Security    IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurity
 }
 
 type IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse struct {

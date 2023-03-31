@@ -4,74 +4,69 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FitnessUsersDataSourcesCreateRequest(
-    security=operations.FitnessUsersDataSourcesCreateSecurity(
-        option1=operations.FitnessUsersDataSourcesCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.FitnessUsersDataSourcesCreatePathParams(
-        user_id="saepe",
-    ),
-    query_params=operations.FitnessUsersDataSourcesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="hic",
-        alt="json",
-        callback="reprehenderit",
-        fields="voluptas",
-        key="porro",
-        oauth_token="saepe",
-        pretty_print=True,
-        quota_user="est",
-        upload_type="consectetur",
-        upload_protocol="ipsam",
-    ),
-    request=shared.DataSource(
+    dollar_xgafv="2",
+    data_source=shared.DataSource(
         application=shared.Application(
-            details_url="deserunt",
-            name="temporibus",
-            package_name="occaecati",
-            version="deleniti",
+            details_url="provident",
+            name="distinctio",
+            package_name="quibusdam",
+            version="unde",
         ),
         data_quality_standard=[
-            "dataQualityBloodGlucoseIso151972013",
+            "dataQualityBloodPressureBhsAB",
+            "dataQualityBloodGlucoseIso151972003",
+            "dataQualityBloodPressureBhsAA",
+            "dataQualityBloodPressureBhsBA",
         ],
-        data_stream_id="eligendi",
-        data_stream_name="ut",
+        data_stream_id="deserunt",
+        data_stream_name="suscipit",
         data_type=shared.DataType(
             field=[
                 shared.DataTypeField(
-                    format="map",
-                    name="blanditiis",
-                    optional=True,
+                    format="string",
+                    name="debitis",
+                    optional=False,
                 ),
                 shared.DataTypeField(
-                    format="map",
-                    name="voluptatem",
-                    optional=True,
+                    format="integer",
+                    name="delectus",
+                    optional=False,
                 ),
             ],
-            name="ratione",
+            name="tempora",
         ),
         device=shared.Device(
-            manufacturer="qui",
-            model="nemo",
-            type="smartDisplay",
-            uid="saepe",
-            version="deleniti",
+            manufacturer="suscipit",
+            model="molestiae",
+            type="headMounted",
+            uid="placeat",
+            version="voluptatum",
         ),
-        name="ex",
-        type="raw",
+        name="iusto",
+        type="derived",
     ),
+    access_token="nisi",
+    alt="proto",
+    callback="temporibus",
+    fields_="ab",
+    key="quis",
+    oauth_token="veritatis",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="perferendis",
+    upload_protocol="ipsam",
+    user_id="repellendus",
 )
     
-res = s.users.fitness_users_data_sources_create(req)
+res = s.users.fitness_users_data_sources_create(req, operations.FitnessUsersDataSourcesCreateSecurity(
+    option1=operations.FitnessUsersDataSourcesCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.data_source is not None:
     # handle response

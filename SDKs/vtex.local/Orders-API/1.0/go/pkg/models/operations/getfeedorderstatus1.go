@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Getfeedorderstatus1QueryParams struct {
-	// Lot quantity to retrieve. Maximum accepted value is 10.
-	Maxlot string `queryParam:"style=form,explode=true,name=maxlot"`
-}
-
-type Getfeedorderstatus1Headers struct {
+type Getfeedorderstatus1Request struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type Getfeedorderstatus1Request struct {
-	QueryParams Getfeedorderstatus1QueryParams
-	Headers     Getfeedorderstatus1Headers
+	// Lot quantity to retrieve. Maximum accepted value is 10.
+	Maxlot string `queryParam:"style=form,explode=true,name=maxlot"`
 }
 
 type Getfeedorderstatus1Response struct {

@@ -8,18 +8,14 @@ import (
 )
 
 type BigquerydatatransferProjectsTransferConfigsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BigquerydatatransferProjectsTransferConfigsCreatePathParams struct {
-	// Required. The BigQuery project id where the transfer configuration should be created. Must be in the format projects/{project_id}/locations/{location_id} or projects/{project_id}. If specified location and location of the destination bigquery dataset do not match - the request will fail.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsCreateQueryParams struct {
+type BigquerydatatransferProjectsTransferConfigsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv         *shared.XgafvEnum           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TransferConfigInput *shared.TransferConfigInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,6 +30,8 @@ type BigquerydatatransferProjectsTransferConfigsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The BigQuery project id where the transfer configuration should be created. Must be in the format projects/{project_id}/locations/{location_id} or projects/{project_id}. If specified location and location of the destination bigquery dataset do not match - the request will fail.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,13 +44,6 @@ type BigquerydatatransferProjectsTransferConfigsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional version info. This is required only if `transferConfig.dataSourceId` is not 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=version_info&client_id=client_id&scope=data_source_scopes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
 	VersionInfo *string `queryParam:"style=form,explode=true,name=versionInfo"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsCreateRequest struct {
-	PathParams  BigquerydatatransferProjectsTransferConfigsCreatePathParams
-	QueryParams BigquerydatatransferProjectsTransferConfigsCreateQueryParams
-	Request     *shared.TransferConfigInput `request:"mediaType=application/json"`
-	Security    BigquerydatatransferProjectsTransferConfigsCreateSecurity
 }
 
 type BigquerydatatransferProjectsTransferConfigsCreateResponse struct {

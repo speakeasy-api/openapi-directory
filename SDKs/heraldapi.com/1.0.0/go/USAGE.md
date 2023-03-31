@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BearerToken: shared.SchemeBearerToken{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            BearerToken: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
     req := operations.GetApplicationsApplicationIDRequest{
-        PathParams: operations.GetApplicationsApplicationIDPathParams{
-            ApplicationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
+        ApplicationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
     }
 
     ctx := context.Background()

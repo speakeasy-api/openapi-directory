@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TranslateGifQueryParams struct {
+type TranslateGifRequest struct {
 	// Search term.
 	S string `queryParam:"style=form,explode=true,name=s"`
-}
-
-type TranslateGifRequest struct {
-	QueryParams TranslateGifQueryParams
 }
 
 type TranslateGif200ApplicationJSON struct {

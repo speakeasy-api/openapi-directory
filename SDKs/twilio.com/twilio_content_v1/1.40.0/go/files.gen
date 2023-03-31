@@ -17,9 +17,9 @@ pkg/models/operations/fetchcontent.go
 pkg/models/operations/listcontent.go
 pkg/models/operations/listcontentandapprovals.go
 pkg/models/operations/listlegacycontent.go
-pkg/models/shared/security.go
 pkg/models/shared/contentv1contentapprovalfetch.go
 pkg/models/shared/contentv1content.go
 pkg/models/shared/contentv1contentandapprovals.go
 pkg/models/shared/contentv1legacycontent.go
 USAGE.md
+pkg/models/operations/options.go

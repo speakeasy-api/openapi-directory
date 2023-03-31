@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppPackagesGETQueryParams struct {
+type AppPackagesGETRequest struct {
 	// Include all complex attributes in the response.
 	AllFields *string `queryParam:"style=form,explode=true,name=all_fields"`
 	// Indicates to exclude the following complex attributes of AppPkgInfo from the response.
@@ -18,10 +18,6 @@ type AppPackagesGETQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Attribute-based filtering parameters according to ETSI GS MEC 009
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-}
-
-type AppPackagesGETRequest struct {
-	QueryParams AppPackagesGETQueryParams
 }
 
 type AppPackagesGETResponse struct {

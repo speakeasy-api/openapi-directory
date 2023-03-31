@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlansListQueryParams struct {
+type IpamVlansListRequest struct {
 	Group   *string `queryParam:"style=form,explode=true,name=group"`
 	GroupID *string `queryParam:"style=form,explode=true,name=group_id"`
 	// Multiple values may be separated by commas.
@@ -27,10 +27,6 @@ type IpamVlansListQueryParams struct {
 	Tenant   *string  `queryParam:"style=form,explode=true,name=tenant"`
 	TenantID *string  `queryParam:"style=form,explode=true,name=tenant_id"`
 	Vid      *float64 `queryParam:"style=form,explode=true,name=vid"`
-}
-
-type IpamVlansListRequest struct {
-	QueryParams IpamVlansListQueryParams
 }
 
 type IpamVlansList200ApplicationJSON struct {

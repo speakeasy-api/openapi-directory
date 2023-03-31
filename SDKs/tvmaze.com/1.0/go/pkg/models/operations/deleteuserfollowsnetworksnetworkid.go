@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteUserFollowsNetworksNetworkIDPathParams struct {
-	NetworkID int64 `pathParam:"style=simple,explode=false,name=network_id"`
-}
-
 type DeleteUserFollowsNetworksNetworkIDRequest struct {
-	PathParams DeleteUserFollowsNetworksNetworkIDPathParams
+	NetworkID int64 `pathParam:"style=simple,explode=false,name=network_id"`
 }
 
 type DeleteUserFollowsNetworksNetworkIDResponse struct {

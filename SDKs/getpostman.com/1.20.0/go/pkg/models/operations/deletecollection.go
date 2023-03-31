@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteCollectionPathParams struct {
-	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
-}
-
 type DeleteCollectionRequest struct {
-	PathParams DeleteCollectionPathParams
+	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
 }
 
 type DeleteCollection404ApplicationJSONErrorDetails struct {

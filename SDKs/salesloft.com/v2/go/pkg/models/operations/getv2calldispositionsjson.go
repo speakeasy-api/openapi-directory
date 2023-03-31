@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2CallDispositionsJSONQueryParams struct {
+type GetV2CallDispositionsJSONRequest struct {
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
 	IncludePagingCounts *bool `queryParam:"style=form,explode=true,name=include_paging_counts"`
 	// Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
@@ -19,10 +19,6 @@ type GetV2CallDispositionsJSONQueryParams struct {
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to ASC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2CallDispositionsJSONRequest struct {
-	QueryParams GetV2CallDispositionsJSONQueryParams
 }
 
 type GetV2CallDispositionsJSONResponse struct {

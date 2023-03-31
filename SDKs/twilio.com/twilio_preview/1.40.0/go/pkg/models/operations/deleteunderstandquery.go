@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUnderstandQueryServerList = []string{
@@ -12,20 +11,15 @@ var DeleteUnderstandQueryServerList = []string{
 }
 
 type DeleteUnderstandQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUnderstandQueryPathParams struct {
+type DeleteUnderstandQueryRequest struct {
 	// The unique ID of the Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteUnderstandQueryRequest struct {
-	PathParams DeleteUnderstandQueryPathParams
-	Security   DeleteUnderstandQuerySecurity
-	ServerURL  *string
 }
 
 type DeleteUnderstandQueryResponse struct {

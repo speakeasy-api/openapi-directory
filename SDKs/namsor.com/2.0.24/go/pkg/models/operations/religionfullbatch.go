@@ -8,13 +8,7 @@ import (
 )
 
 type ReligionFullBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReligionFullBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchPersonalNameGeoSubdivisionIn `request:"mediaType=application/json"`
-	Security ReligionFullBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ReligionFullBatchResponse struct {

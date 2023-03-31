@@ -12,17 +12,12 @@ var FetchWirelessCommandServerList = []string{
 }
 
 type FetchWirelessCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchWirelessCommandPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchWirelessCommandRequest struct {
-	PathParams FetchWirelessCommandPathParams
-	Security   FetchWirelessCommandSecurity
-	ServerURL  *string
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchWirelessCommandResponse struct {

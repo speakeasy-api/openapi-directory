@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationSamlRolePathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-	SamlRoleID     string `pathParam:"style=simple,explode=false,name=samlRoleId"`
-}
-
 // UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum - The privilege of the SAML administrator on the network. Can be one of 'full', 'read-only', 'guest-ambassador', 'monitor-only' or 'ssid-admin'
 type UpdateOrganizationSamlRoleRequestBodyNetworksAccessEnum string
 
@@ -132,8 +127,9 @@ type UpdateOrganizationSamlRoleRequestBody struct {
 }
 
 type UpdateOrganizationSamlRoleRequest struct {
-	PathParams UpdateOrganizationSamlRolePathParams
-	Request    *UpdateOrganizationSamlRoleRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationSamlRoleRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                 `pathParam:"style=simple,explode=false,name=organizationId"`
+	SamlRoleID     string                                 `pathParam:"style=simple,explode=false,name=samlRoleId"`
 }
 
 type UpdateOrganizationSamlRole200ApplicationJSONNetworks struct {

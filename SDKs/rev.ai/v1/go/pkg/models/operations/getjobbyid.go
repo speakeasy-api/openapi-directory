@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJobByIDPathParams struct {
+type GetJobByIDRequest struct {
 	// Rev.ai API Job Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetJobByIDRequest struct {
-	PathParams GetJobByIDPathParams
 }
 
 // GetJobByID404ApplicationProblemPlusJSON - Problem details object returned on errors

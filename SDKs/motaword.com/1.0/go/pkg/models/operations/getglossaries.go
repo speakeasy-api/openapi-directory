@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGlossariesPathParams struct {
+type GetGlossariesRequest struct {
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetGlossariesRequest struct {
-	PathParams GetGlossariesPathParams
 }
 
 type GetGlossariesResponse struct {

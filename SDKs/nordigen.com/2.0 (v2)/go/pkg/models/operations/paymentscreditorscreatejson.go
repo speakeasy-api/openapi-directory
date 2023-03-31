@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentsCreditorsCreateJSONRequest struct {
-	Request shared.CreditorAccountWriteRequest `request:"mediaType=application/json"`
-}
-
 type PaymentsCreditorsCreateJSONResponse struct {
 	ContentType          string
 	CreditorAccountWrite *shared.CreditorAccountWrite

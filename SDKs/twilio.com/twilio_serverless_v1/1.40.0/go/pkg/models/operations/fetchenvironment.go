@@ -12,20 +12,15 @@ var FetchEnvironmentServerList = []string{
 }
 
 type FetchEnvironmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchEnvironmentPathParams struct {
+type FetchEnvironmentRequest struct {
 	// The SID of the Service to fetch the Environment resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Environment resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchEnvironmentRequest struct {
-	PathParams FetchEnvironmentPathParams
-	Security   FetchEnvironmentSecurity
-	ServerURL  *string
 }
 
 type FetchEnvironmentResponse struct {

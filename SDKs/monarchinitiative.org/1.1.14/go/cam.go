@@ -43,7 +43,7 @@ func (s *cam) GetActivityCollection(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -75,14 +75,14 @@ func (s *cam) GetActivityCollection(ctx context.Context, request operations.GetA
 // GetInstanceObject - Returns list of matches
 func (s *cam) GetInstanceObject(ctx context.Context, request operations.GetInstanceObjectRequest) (*operations.GetInstanceObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cam/instance/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cam/instance/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -228,7 +228,7 @@ func (s *cam) GetModelInstances(ctx context.Context) (*operations.GetModelInstan
 // GetModelObject - Returns a complete model
 func (s *cam) GetModelObject(ctx context.Context, request operations.GetModelObjectRequest) (*operations.GetModelObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cam/model/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cam/model/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +270,7 @@ func (s *cam) GetModelProperties(ctx context.Context, request operations.GetMode
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,7 +309,7 @@ func (s *cam) GetModelPropertyValues(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -348,7 +348,7 @@ func (s *cam) GetModelQuery(ctx context.Context, request operations.GetModelQuer
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -387,7 +387,7 @@ func (s *cam) GetPhysicalInteraction(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

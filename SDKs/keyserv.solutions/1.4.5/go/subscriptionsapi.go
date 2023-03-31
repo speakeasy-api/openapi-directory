@@ -32,7 +32,7 @@ func newSubscriptionsAPI(defaultClient, securityClient HTTPClient, serverURL, la
 	}
 }
 
-func (s *subscriptionsAPI) SubscriptionsAPICount(ctx context.Context, request operations.SubscriptionsAPICountRequest) (*operations.SubscriptionsAPICountResponse, error) {
+func (s *subscriptionsAPI) SubscriptionsAPICount(ctx context.Context, request operations.SubscriptionsAPICountRequestBody) (*operations.SubscriptionsAPICountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Count"
 
@@ -86,16 +86,16 @@ func (s *subscriptionsAPI) SubscriptionsAPICount(ctx context.Context, request op
 }
 func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription(ctx context.Context, request operations.SubscriptionsAPIDeleteSubscriptionRequest) (*operations.SubscriptionsAPIDeleteSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,16 +125,16 @@ func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription(ctx context.Contex
 }
 func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription2(ctx context.Context, request operations.SubscriptionsAPIDeleteSubscription2Request) (*operations.SubscriptionsAPIDeleteSubscription2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -162,7 +162,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription2(ctx context.Conte
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIDisable(ctx context.Context, request operations.SubscriptionsAPIDisableRequest) (*operations.SubscriptionsAPIDisableResponse, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIDisable(ctx context.Context, request operations.SubscriptionsAPIDisableRequestBody) (*operations.SubscriptionsAPIDisableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Disable"
 
@@ -205,7 +205,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIDisable(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIDisable2(ctx context.Context, request operations.SubscriptionsAPIDisable2Request) (*operations.SubscriptionsAPIDisable2Response, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIDisable2(ctx context.Context, request operations.SubscriptionsAPIDisable2RequestBody) (*operations.SubscriptionsAPIDisable2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Disable"
 
@@ -248,7 +248,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIDisable2(ctx context.Context, request
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIEnable(ctx context.Context, request operations.SubscriptionsAPIEnableRequest) (*operations.SubscriptionsAPIEnableResponse, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIEnable(ctx context.Context, request operations.SubscriptionsAPIEnableRequestBody) (*operations.SubscriptionsAPIEnableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Enable"
 
@@ -291,7 +291,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIEnable(ctx context.Context, request o
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIEnable2(ctx context.Context, request operations.SubscriptionsAPIEnable2Request) (*operations.SubscriptionsAPIEnable2Response, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIEnable2(ctx context.Context, request operations.SubscriptionsAPIEnable2RequestBody) (*operations.SubscriptionsAPIEnable2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Enable"
 
@@ -334,7 +334,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIEnable2(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIFind(ctx context.Context, request operations.SubscriptionsAPIFindRequest) (*operations.SubscriptionsAPIFindResponse, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIFind(ctx context.Context, request operations.SubscriptionsAPIFindRequestBody) (*operations.SubscriptionsAPIFindResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Find"
 
@@ -390,7 +390,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIList(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/List"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,7 +405,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIList(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -442,7 +442,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIList(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription(ctx context.Context, request operations.SubscriptionsAPIPutSubscriptionRequest) (*operations.SubscriptionsAPIPutSubscriptionResponse, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription(ctx context.Context, request operations.SubscriptionsAPIPutSubscriptionRequestBody) (*operations.SubscriptionsAPIPutSubscriptionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi"
 
@@ -485,7 +485,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription(ctx context.Context, 
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription2(ctx context.Context, request operations.SubscriptionsAPIPutSubscription2Request) (*operations.SubscriptionsAPIPutSubscription2Response, error) {
+func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription2(ctx context.Context, request operations.SubscriptionsAPIPutSubscription2RequestBody) (*operations.SubscriptionsAPIPutSubscription2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi"
 
@@ -528,7 +528,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription2(ctx context.Context,
 
 	return res, nil
 }
-func (s *subscriptionsAPI) SubscriptionsAPISave(ctx context.Context, request operations.SubscriptionsAPISaveRequest) (*operations.SubscriptionsAPISaveResponse, error) {
+func (s *subscriptionsAPI) SubscriptionsAPISave(ctx context.Context, request operations.SubscriptionsAPISaveRequestBody) (*operations.SubscriptionsAPISaveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Save"
 

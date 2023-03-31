@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAccountInfoRequest(
-    headers=operations.GetAccountInfoHeaders(
-        training_key="voluptatem",
-    ),
+    training_key="corrupti",
 )
     
 res = s.account_api.get_account_info(req)

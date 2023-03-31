@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFields2PathParams struct {
+type GetCustomFields2Request struct {
 	// person's internal identifier
 	PersonID int64 `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type GetCustomFields2Request struct {
-	PathParams GetCustomFields2PathParams
 }
 
 type GetCustomFields2Response struct {

@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1AccountsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AccountsRequestBody struct {
@@ -24,11 +23,6 @@ type PostAPIV1AccountsRequestBody struct {
 	Reason *string
 	// The desired username for the account
 	Username string
-}
-
-type PostAPIV1AccountsRequest struct {
-	Request  []byte `request:"mediaType=application/form-data"`
-	Security PostAPIV1AccountsSecurity
 }
 
 type PostAPIV1AccountsResponse struct {

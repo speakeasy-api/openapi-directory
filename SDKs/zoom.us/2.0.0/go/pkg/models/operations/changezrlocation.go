@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ChangeZRLocationSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ChangeZRLocationPathParams struct {
-	// Unique Identifier of the Zoom Room.
-	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChangeZRLocationApplicationJSON struct {
@@ -22,9 +16,9 @@ type ChangeZRLocationApplicationJSON struct {
 }
 
 type ChangeZRLocationRequest struct {
-	PathParams ChangeZRLocationPathParams
-	Request    *ChangeZRLocationApplicationJSON `request:"mediaType=application/json"`
-	Security   ChangeZRLocationSecurity
+	RequestBody *ChangeZRLocationApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Zoom Room.
+	RoomID string `pathParam:"style=simple,explode=false,name=roomId"`
 }
 
 type ChangeZRLocationResponse struct {

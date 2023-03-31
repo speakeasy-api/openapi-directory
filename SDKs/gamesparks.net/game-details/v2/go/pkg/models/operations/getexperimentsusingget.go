@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETExperimentsUsingGETPathParams struct {
+type GETExperimentsUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type GETExperimentsUsingGETRequest struct {
-	PathParams GETExperimentsUsingGETPathParams
 }
 
 type GETExperimentsUsingGETResponse struct {

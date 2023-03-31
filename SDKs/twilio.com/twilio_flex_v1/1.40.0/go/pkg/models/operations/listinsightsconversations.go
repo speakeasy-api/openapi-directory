@@ -12,10 +12,11 @@ var ListInsightsConversationsServerList = []string{
 }
 
 type ListInsightsConversationsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListInsightsConversationsQueryParams struct {
+type ListInsightsConversationsRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -24,18 +25,8 @@ type ListInsightsConversationsQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Unique Id of the segment for which conversation details needs to be fetched
 	SegmentID *string `queryParam:"style=form,explode=true,name=SegmentId"`
-}
-
-type ListInsightsConversationsHeaders struct {
 	// The Token HTTP request header
 	Token *string `header:"style=simple,explode=false,name=Token"`
-}
-
-type ListInsightsConversationsRequest struct {
-	QueryParams ListInsightsConversationsQueryParams
-	Headers     ListInsightsConversationsHeaders
-	Security    ListInsightsConversationsSecurity
-	ServerURL   *string
 }
 
 type ListInsightsConversationsListInsightsConversationsResponseMeta struct {

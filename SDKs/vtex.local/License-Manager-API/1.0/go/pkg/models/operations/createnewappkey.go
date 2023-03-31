@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatenewappkeyRequest struct {
-	Request shared.CreatenewappkeyRequest `request:"mediaType=application/json"`
-}
-
 type CreatenewappkeyResponse struct {
 	ContentType string
 	// Success

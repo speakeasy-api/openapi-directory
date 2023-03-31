@@ -10,10 +10,6 @@ type CancelreservationRequestBody struct {
 	Reservation *string `json:"reservation,omitempty"`
 }
 
-type CancelreservationRequest struct {
-	Request CancelreservationRequestBody `request:"mediaType=application/json"`
-}
-
 // Cancelreservation201ApplicationJSON - A successful response
 type Cancelreservation201ApplicationJSON struct {
 	Message *string                `json:"message,omitempty"`

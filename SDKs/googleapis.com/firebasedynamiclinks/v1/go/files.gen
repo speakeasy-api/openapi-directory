@@ -31,11 +31,10 @@ pkg/models/shared/androidinfo.go
 pkg/models/shared/analyticsinfo.go
 pkg/models/shared/itunesconnectanalytics.go
 pkg/models/shared/googleplayanalytics.go
+pkg/models/shared/altenum.go
 pkg/models/shared/createmanagedshortlinkrequest.go
 pkg/models/shared/suffix.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/createshortdynamiclinkresponse.go
 pkg/models/shared/createshortdynamiclinkrequest.go
 pkg/models/shared/dynamiclinkstats.go

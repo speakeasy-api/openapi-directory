@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBelegePathParams struct {
-	// The `_uuid` of the `Registrierkasse` to retrieve the `Beleg` collection.
-	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
 // GetBelegeFormatEnum - Determines the format of the `Beleg` collection.
 type GetBelegeFormatEnum string
 
@@ -65,7 +60,7 @@ func (e *GetBelegeOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBelegeQueryParams struct {
+type GetBelegeRequest struct {
 	// Only return results that where saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// Only return results that where saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
@@ -82,11 +77,8 @@ type GetBelegeQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Determines the sorting order.
 	Order *GetBelegeOrderEnum `queryParam:"style=form,explode=true,name=order"`
-}
-
-type GetBelegeRequest struct {
-	PathParams  GetBelegePathParams
-	QueryParams GetBelegeQueryParams
+	// The `_uuid` of the `Registrierkasse` to retrieve the `Beleg` collection.
+	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
 }
 
 type GetBelegeResponse struct {

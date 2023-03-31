@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDevicesQueryParams struct {
+type GetDevicesRequest struct {
 	// Can only be used by admins or managers to fetch all entities
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// To fetch one or more devices. Multiple params can be passed like `id=31&id=42`
@@ -16,10 +16,6 @@ type GetDevicesQueryParams struct {
 	UniqueID *string `queryParam:"style=form,explode=true,name=uniqueId"`
 	// Standard users can use this only with their own _userId_
 	UserID *int64 `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetDevicesRequest struct {
-	QueryParams GetDevicesQueryParams
 }
 
 type GetDevicesResponse struct {

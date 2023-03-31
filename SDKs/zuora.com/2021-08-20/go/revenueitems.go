@@ -35,16 +35,16 @@ func newRevenueItems(defaultClient, securityClient HTTPClient, serverURL, langua
 // This REST API reference describes how to get the details of each revenue item in a revenue event by specifying the revenue event number. Request and response field descriptions and sample code are provided.
 func (s *revenueItems) GETRevenueItemsByChargeRevenueEventNumber(ctx context.Context, request operations.GETRevenueItemsByChargeRevenueEventNumberRequest) (*operations.GETRevenueItemsByChargeRevenueEventNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-events/{event-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-events/{event-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -88,16 +88,16 @@ func (s *revenueItems) GETRevenueItemsByChargeRevenueEventNumber(ctx context.Con
 // This REST API reference describes how to get the details for each revenue item in a charge revenue summary by specifying the charge revenue summary number. Request and response field descriptions and sample code are provided.
 func (s *revenueItems) GETRevenueItemsByChargeRevenueSummaryNumber(ctx context.Context, request operations.GETRevenueItemsByChargeRevenueSummaryNumberRequest) (*operations.GETRevenueItemsByChargeRevenueSummaryNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/charge-revenue-summaries/{crs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/charge-revenue-summaries/{crs-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -141,16 +141,16 @@ func (s *revenueItems) GETRevenueItemsByChargeRevenueSummaryNumber(ctx context.C
 // This REST API reference describes how to get the details for each revenue items in a revenue schedule by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
 func (s *revenueItems) GETRevenueItemsByRevenueSchedule(ctx context.Context, request operations.GETRevenueItemsByRevenueScheduleRequest) (*operations.GETRevenueItemsByRevenueScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-schedules/{rs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-schedules/{rs-number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,9 +194,9 @@ func (s *revenueItems) GETRevenueItemsByRevenueSchedule(ctx context.Context, req
 // This REST API reference describes how to update custom fields on revenue items by specifying the revenue event number. Request and response field descriptions and sample code are provided.
 func (s *revenueItems) PUTCustomFieldsonRevenueItemsByRevenueEvent(ctx context.Context, request operations.PUTCustomFieldsonRevenueItemsByRevenueEventRequest) (*operations.PUTCustomFieldsonRevenueItemsByRevenueEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-events/{event-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-events/{event-number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTEventRIDetailType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,7 +211,7 @@ func (s *revenueItems) PUTCustomFieldsonRevenueItemsByRevenueEvent(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -253,9 +253,9 @@ func (s *revenueItems) PUTCustomFieldsonRevenueItemsByRevenueEvent(ctx context.C
 // This REST API reference describes how to update custom fields on revenue Items by specifying the revenue schedule number. Request and response field descriptions and sample code are provided.
 func (s *revenueItems) PUTCustomFieldsonRevenueItemsByRevenueSchedule(ctx context.Context, request operations.PUTCustomFieldsonRevenueItemsByRevenueScheduleRequest) (*operations.PUTCustomFieldsonRevenueItemsByRevenueScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-schedules/{rs-number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/revenue-items/revenue-schedules/{rs-number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTScheduleRIDetailType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -270,7 +270,7 @@ func (s *revenueItems) PUTCustomFieldsonRevenueItemsByRevenueSchedule(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

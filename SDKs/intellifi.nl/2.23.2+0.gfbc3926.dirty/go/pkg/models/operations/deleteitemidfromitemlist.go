@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteItemIDFromItemListPathParams struct {
+type DeleteItemIDFromItemListRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Item ID.
 	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type DeleteItemIDFromItemListRequest struct {
-	PathParams DeleteItemIDFromItemListPathParams
 }
 
 type DeleteItemIDFromItemListResponse struct {

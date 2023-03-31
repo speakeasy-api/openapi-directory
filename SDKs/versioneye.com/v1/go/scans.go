@@ -32,7 +32,7 @@ func newScans(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetAPIV1Scans - Retrieves all scans
-func (s *scans) GetAPIV1Scans(ctx context.Context, request operations.GetAPIV1ScansRequest) (*operations.GetAPIV1ScansResponse, error) {
+func (s *scans) GetAPIV1Scans(ctx context.Context, request operations.GetAPIV1ScansRequest, security operations.GetAPIV1ScansSecurity) (*operations.GetAPIV1ScansResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/scans"
 
@@ -41,11 +41,11 @@ func (s *scans) GetAPIV1Scans(ctx context.Context, request operations.GetAPIV1Sc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -73,16 +73,16 @@ func (s *scans) GetAPIV1Scans(ctx context.Context, request operations.GetAPIV1Sc
 }
 
 // GetAPIV1ScansID - Retrieves a project scan result
-func (s *scans) GetAPIV1ScansID(ctx context.Context, request operations.GetAPIV1ScansIDRequest) (*operations.GetAPIV1ScansIDResponse, error) {
+func (s *scans) GetAPIV1ScansID(ctx context.Context, request operations.GetAPIV1ScansIDRequest, security operations.GetAPIV1ScansIDSecurity) (*operations.GetAPIV1ScansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,20 +110,20 @@ func (s *scans) GetAPIV1ScansID(ctx context.Context, request operations.GetAPIV1
 }
 
 // GetAPIV1ScansIDFilesFileID - Retrieves a file object, containing information about dependencies in the file
-func (s *scans) GetAPIV1ScansIDFilesFileID(ctx context.Context, request operations.GetAPIV1ScansIDFilesFileIDRequest) (*operations.GetAPIV1ScansIDFilesFileIDResponse, error) {
+func (s *scans) GetAPIV1ScansIDFilesFileID(ctx context.Context, request operations.GetAPIV1ScansIDFilesFileIDRequest, security operations.GetAPIV1ScansIDFilesFileIDSecurity) (*operations.GetAPIV1ScansIDFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}/files/{file_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

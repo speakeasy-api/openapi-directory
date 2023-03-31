@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDCandidatesHistoryPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
-type GetCommitteeCommitteeIDCandidatesHistoryQueryParams struct {
+type GetCommitteeCommitteeIDCandidatesHistoryRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// `True` indicates that full election period of a candidate.
 	// `False` indicates that two year election cycle.
 	ElectionFull *bool `queryParam:"style=form,explode=true,name=election_full"`
@@ -33,11 +30,6 @@ type GetCommitteeCommitteeIDCandidatesHistoryQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCommitteeCommitteeIDCandidatesHistoryRequest struct {
-	PathParams  GetCommitteeCommitteeIDCandidatesHistoryPathParams
-	QueryParams GetCommitteeCommitteeIDCandidatesHistoryQueryParams
 }
 
 type GetCommitteeCommitteeIDCandidatesHistoryResponse struct {

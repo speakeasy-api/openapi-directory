@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetBng2latlongEastingNorthingRequest{
-        PathParams: operations.GetBng2latlongEastingNorthingPathParams{
-            Easting: 548814,
-            Northing: 592845,
-        },
+        Easting: 548814,
+        Northing: 592845,
     }
 
     ctx := context.Background()

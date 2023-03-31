@@ -6,29 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateClientProfilePathParams struct {
-	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type UpdateClientProfileQueryParams struct {
-	// The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
-	//
-	// > Currently, there are two possible values for this parameter: `email` and `document`.
-	AlternativeKey *string `queryParam:"style=form,explode=true,name=alternativeKey"`
-	// This parameter sets the the Time To Live (TTL), in days, of the specific document being created or updated with this request. After this period of time from the moment of the request, the document is deleted. By sending this parameter you override the TTL set for the schema.
-	//
-	// > Currently, the available default document schemas have no TTL. This means that documents are stored indefinitely, unless a TTL is sent when creating or updating.
-	TTL *int64 `queryParam:"style=form,explode=true,name=ttl"`
-}
-
-type UpdateClientProfileHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type UpdateClientProfileRequestBody struct {
 	// Client's birth date in ISO 8601 format.
 	BirthDate *string `json:"birthDate,omitempty"`
@@ -45,10 +22,21 @@ type UpdateClientProfileRequestBody struct {
 }
 
 type UpdateClientProfileRequest struct {
-	PathParams  UpdateClientProfilePathParams
-	QueryParams UpdateClientProfileQueryParams
-	Headers     UpdateClientProfileHeaders
-	Request     *UpdateClientProfileRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                          `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *UpdateClientProfileRequestBody `request:"mediaType=application/json"`
+	// The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
+	//
+	// > Currently, there are two possible values for this parameter: `email` and `document`.
+	AlternativeKey *string `queryParam:"style=form,explode=true,name=alternativeKey"`
+	// ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	// This parameter sets the the Time To Live (TTL), in days, of the specific document being created or updated with this request. After this period of time from the moment of the request, the document is deleted. By sending this parameter you override the TTL set for the schema.
+	//
+	// > Currently, the available default document schemas have no TTL. This means that documents are stored indefinitely, unless a TTL is sent when creating or updating.
+	TTL *int64 `queryParam:"style=form,explode=true,name=ttl"`
 }
 
 type UpdateClientProfileResponse struct {

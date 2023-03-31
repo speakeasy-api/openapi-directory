@@ -10,10 +10,6 @@ type SwapIndexesRequestBody struct {
 	Indexes []string `json:"indexes,omitempty"`
 }
 
-type SwapIndexesRequest struct {
-	Request []SwapIndexesRequestBody `request:"mediaType=application/json"`
-}
-
 type SwapIndexesResponse struct {
 	ContentType string
 	StatusCode  int

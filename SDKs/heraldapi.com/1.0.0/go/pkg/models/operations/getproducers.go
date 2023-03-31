@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProducersQueryParams struct {
+type GetProducersRequest struct {
 	// The external_id that is associated with a specific producer
 	ExternalID *string `queryParam:"style=form,explode=true,name=external_id"`
-}
-
-type GetProducersRequest struct {
-	QueryParams GetProducersQueryParams
 }
 
 // GetProducers200ApplicationJSON - OK

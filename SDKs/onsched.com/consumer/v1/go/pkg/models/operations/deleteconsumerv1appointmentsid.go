@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteConsumerV1AppointmentsIDPathParams struct {
+type DeleteConsumerV1AppointmentsIDRequest struct {
 	// appointment id to delete
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteConsumerV1AppointmentsIDRequest struct {
-	PathParams DeleteConsumerV1AppointmentsIDPathParams
 }
 
 type DeleteConsumerV1AppointmentsIDResponse struct {

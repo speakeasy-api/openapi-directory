@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetAllTopicsPathParams struct {
+type ReposGetAllTopicsRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetAllTopicsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposGetAllTopicsRequest struct {
-	PathParams  ReposGetAllTopicsPathParams
-	QueryParams ReposGetAllTopicsQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposGetAllTopics415ApplicationJSON - Preview header missing

@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetBenefitsDocumentUploadDownloadRequest{
-        Security: operations.GetBenefitsDocumentUploadDownloadSecurity{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.GetBenefitsDocumentUploadDownloadPathParams{
-            ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
     }
 
     ctx := context.Background()
-    res, err := s.VBADocuments.GetBenefitsDocumentUploadDownload(ctx, req)
+    res, err := s.VBADocuments.GetBenefitsDocumentUploadDownload(ctx, req, operations.GetBenefitsDocumentUploadDownloadSecurity{
+        Apikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolTodGetArgsPathParams struct {
+type ProtocolTodGetArgsRequest struct {
 	// Agent to show the TOD argument structure
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTodGetArgsRequest struct {
-	PathParams ProtocolTodGetArgsPathParams
 }
 
 type ProtocolTodGetArgsResponse struct {

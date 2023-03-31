@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteAPhoneNumberSLGPathParams struct {
+type DeleteAPhoneNumberSLGRequest struct {
 	// Unique identifier of the phone number which is to be unassigned. This can be retrieved from Get a Shared Line Group API.
 	PhoneNumberID string `pathParam:"style=simple,explode=false,name=phoneNumberId"`
 	// Unique identifier of the shared line group from which you would like to unassign a phone number.
 	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
-type DeleteAPhoneNumberSLGRequest struct {
-	PathParams DeleteAPhoneNumberSLGPathParams
 }
 
 type DeleteAPhoneNumberSLGResponse struct {

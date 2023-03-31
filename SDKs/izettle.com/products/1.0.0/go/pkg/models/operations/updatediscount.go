@@ -8,23 +8,14 @@ import (
 )
 
 type UpdateDiscountSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type UpdateDiscountPathParams struct {
-	DiscountUUID     string `pathParam:"style=simple,explode=false,name=discountUuid"`
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-}
-
-type UpdateDiscountHeaders struct {
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateDiscountRequest struct {
-	PathParams UpdateDiscountPathParams
-	Headers    UpdateDiscountHeaders
-	Request    shared.DiscountRequest `request:"mediaType=application/json"`
-	Security   UpdateDiscountSecurity
+	DiscountRequest  shared.DiscountRequest `request:"mediaType=application/json"`
+	IfMatch          *string                `header:"style=simple,explode=false,name=If-Match"`
+	DiscountUUID     string                 `pathParam:"style=simple,explode=false,name=discountUuid"`
+	OrganizationUUID string                 `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type UpdateDiscountResponse struct {

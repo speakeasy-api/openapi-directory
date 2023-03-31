@@ -6,24 +6,12 @@ import (
 	"net/http"
 )
 
-type GetGroupPathParams struct {
-	BucketID string `pathParam:"style=simple,explode=false,name=bucket_id"`
-	ID       string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetGroupQueryParams struct {
-	Fields []string `queryParam:"style=form,explode=false,name=_fields"`
-}
-
-type GetGroupHeaders struct {
-	IfMatch     *string `header:"style=simple,explode=false,name=If-Match"`
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
 type GetGroupRequest struct {
-	PathParams  GetGroupPathParams
-	QueryParams GetGroupQueryParams
-	Headers     GetGroupHeaders
+	IfMatch     *string  `header:"style=simple,explode=false,name=If-Match"`
+	IfNoneMatch *string  `header:"style=simple,explode=false,name=If-None-Match"`
+	Fields      []string `queryParam:"style=form,explode=false,name=_fields"`
+	BucketID    string   `pathParam:"style=simple,explode=false,name=bucket_id"`
+	ID          string   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetGroupErrorSchema - The request is invalid.

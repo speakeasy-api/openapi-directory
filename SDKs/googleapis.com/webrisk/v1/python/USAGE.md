@@ -4,37 +4,32 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebriskHashesSearchRequest(
-    security=operations.WebriskHashesSearchSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.WebriskHashesSearchQueryParams(
-        dollar_xgafv="2",
-        access_token="doloremque",
-        alt="proto",
-        callback="iure",
-        fields="libero",
-        hash_prefix="libero",
-        key="aut",
-        oauth_token="qui",
-        pretty_print=True,
-        quota_user="nihil",
-        threat_types=[
-            "THREAT_TYPE_UNSPECIFIED",
-            "MALWARE",
-        ],
-        upload_type="numquam",
-        upload_protocol="recusandae",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    hash_prefix="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    quota_user="vel",
+    threat_types=[
+        "UNWANTED_SOFTWARE",
+        "MALWARE",
+        "SOCIAL_ENGINEERING",
+    ],
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
-res = s.hashes.webrisk_hashes_search(req)
+res = s.hashes.webrisk_hashes_search(req, operations.WebriskHashesSearchSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_webrisk_v1_search_hashes_response is not None:
     # handle response

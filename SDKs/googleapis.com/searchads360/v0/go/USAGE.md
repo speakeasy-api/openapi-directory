@@ -14,34 +14,25 @@ func main() {
     s := sdk.New()
 
     req := operations.Searchads360CustomersCustomColumnsListRequest{
-        Security: operations.Searchads360CustomersCustomColumnsListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.Searchads360CustomersCustomColumnsListPathParams{
-            CustomerID: "corrupti",
-        },
-        QueryParams: operations.Searchads360CustomersCustomColumnsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        CustomerID: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Customers.Searchads360CustomersCustomColumnsList(ctx, req)
+    res, err := s.Customers.Searchads360CustomersCustomColumnsList(ctx, req, operations.Searchads360CustomersCustomColumnsListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

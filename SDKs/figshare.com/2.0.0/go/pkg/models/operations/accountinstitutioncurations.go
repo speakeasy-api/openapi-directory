@@ -10,7 +10,7 @@ import (
 )
 
 type AccountInstitutionCurationsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AccountInstitutionCurationsStatusEnum - Filter by the status of the review
@@ -43,7 +43,7 @@ func (e *AccountInstitutionCurationsStatusEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type AccountInstitutionCurationsQueryParams struct {
+type AccountInstitutionCurationsRequest struct {
 	// Retrieve the reviews for this article
 	ArticleID *int64 `queryParam:"style=form,explode=true,name=article_id"`
 	// Filter by the group ID
@@ -54,11 +54,6 @@ type AccountInstitutionCurationsQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Filter by the status of the review
 	Status *AccountInstitutionCurationsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type AccountInstitutionCurationsRequest struct {
-	QueryParams AccountInstitutionCurationsQueryParams
-	Security    AccountInstitutionCurationsSecurity
 }
 
 type AccountInstitutionCurationsResponse struct {

@@ -39,15 +39,6 @@ func (e *GetNameConceptTypeSpecificConceptJSONConceptTypeEnum) UnmarshalJSON(dat
 	}
 }
 
-type GetNameConceptTypeSpecificConceptJSONPathParams struct {
-	// The type of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined as a name-value pair, as in "concept_type=[nytd_geo|nytd_per|nytd_org|nytd_des]".
-	//
-	ConceptType GetNameConceptTypeSpecificConceptJSONConceptTypeEnum `pathParam:"style=simple,explode=false,name=concept-type"`
-	// The name of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined in the URI path, as the element immediately preceding ".json" like with "Baseball.json".
-	//
-	SpecificConcept string `pathParam:"style=simple,explode=false,name=specific-concept"`
-}
-
 // GetNameConceptTypeSpecificConceptJSONFieldsEnum - "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
 //
 // Optional fields are returned in result_set. They are briefly explained here:
@@ -108,7 +99,10 @@ func (e *GetNameConceptTypeSpecificConceptJSONFieldsEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetNameConceptTypeSpecificConceptJSONQueryParams struct {
+type GetNameConceptTypeSpecificConceptJSONRequest struct {
+	// The type of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined as a name-value pair, as in "concept_type=[nytd_geo|nytd_per|nytd_org|nytd_des]".
+	//
+	ConceptType GetNameConceptTypeSpecificConceptJSONConceptTypeEnum `pathParam:"style=simple,explode=false,name=concept-type"`
 	// "all" or comma-separated list of specific optional fields: pages, ticker_symbol, links, taxonomy, combinations, geocodes, article_list, scope_notes, search_api_query
 	//
 	// Optional fields are returned in result_set. They are briefly explained here:
@@ -126,11 +120,9 @@ type GetNameConceptTypeSpecificConceptJSONQueryParams struct {
 	Fields *GetNameConceptTypeSpecificConceptJSONFieldsEnum `queryParam:"style=form,explode=true,name=fields"`
 	// Precedes the search term string. Used in a Search Query. Except for &lt;specific_concept_name&gt;, Search Query will take the required parameters listed above (&lt;concept_type&gt;, &lt;concept_uri&gt;, &lt;article_uri&gt;) as an optional_parameter in addition to the query=&lt;query_term&gt;.
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetNameConceptTypeSpecificConceptJSONRequest struct {
-	PathParams  GetNameConceptTypeSpecificConceptJSONPathParams
-	QueryParams GetNameConceptTypeSpecificConceptJSONQueryParams
+	// The name of the concept, used for Constructing a Semantic API Request by Concept Type and Specific Concept Name. The parameter is defined in the URI path, as the element immediately preceding ".json" like with "Baseball.json".
+	//
+	SpecificConcept string `pathParam:"style=simple,explode=false,name=specific-concept"`
 }
 
 // GetNameConceptTypeSpecificConceptJSON200ApplicationJSON - An array of Concepts

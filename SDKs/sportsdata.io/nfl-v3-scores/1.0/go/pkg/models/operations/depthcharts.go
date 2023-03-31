@@ -33,13 +33,9 @@ func (e *DepthChartsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DepthChartsPathParams struct {
+type DepthChartsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DepthChartsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type DepthChartsRequest struct {
-	PathParams DepthChartsPathParams
 }
 
 type DepthChartsResponse struct {

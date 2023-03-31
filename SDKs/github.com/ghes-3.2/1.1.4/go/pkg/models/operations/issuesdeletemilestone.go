@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesDeleteMilestonePathParams struct {
+type IssuesDeleteMilestoneRequest struct {
 	// The number that identifies the milestone.
 	MilestoneNumber int64 `pathParam:"style=simple,explode=false,name=milestone_number"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesDeleteMilestoneRequest struct {
-	PathParams IssuesDeleteMilestonePathParams
 }
 
 type IssuesDeleteMilestoneResponse struct {

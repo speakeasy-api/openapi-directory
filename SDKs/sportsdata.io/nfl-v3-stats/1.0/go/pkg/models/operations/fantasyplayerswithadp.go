@@ -33,13 +33,9 @@ func (e *FantasyPlayersWithAdpFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FantasyPlayersWithAdpPathParams struct {
+type FantasyPlayersWithAdpRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format FantasyPlayersWithAdpFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type FantasyPlayersWithAdpRequest struct {
-	PathParams FantasyPlayersWithAdpPathParams
 }
 
 type FantasyPlayersWithAdpResponse struct {

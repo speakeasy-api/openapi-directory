@@ -35,7 +35,7 @@ func newWebhookTests(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // PostWebhookTests - Create Webhook Test
 // Create Webhook Test
-func (s *webhookTests) PostWebhookTests(ctx context.Context, request operations.PostWebhookTestsRequest) (*operations.PostWebhookTestsResponse, error) {
+func (s *webhookTests) PostWebhookTests(ctx context.Context, request operations.PostWebhookTestsRequestBody) (*operations.PostWebhookTestsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhook_tests"
 

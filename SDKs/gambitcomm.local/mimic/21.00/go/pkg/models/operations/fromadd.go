@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type FromAddPathParams struct {
+type FromAddRequest struct {
 	// IP of the port, 0.0.0.0 for any
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to add the IP source
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// port of the source, 0 for any
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type FromAddRequest struct {
-	PathParams FromAddPathParams
 }
 
 type FromAddResponse struct {

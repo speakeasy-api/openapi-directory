@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SiteTypesGetSitesForPublicFacingAPIPathParams struct {
+type SiteTypesGetSitesForPublicFacingAPIRequest struct {
 	// 1 = MIDAS, 2 = TAME, 3 = TMU, 4 = TRADS Legacy
 	SiteTypeID int    `pathParam:"style=simple,explode=false,name=siteType_Id"`
 	Version    string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type SiteTypesGetSitesForPublicFacingAPIRequest struct {
-	PathParams SiteTypesGetSitesForPublicFacingAPIPathParams
 }
 
 type SiteTypesGetSitesForPublicFacingAPIResponse struct {

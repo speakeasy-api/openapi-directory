@@ -7,28 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QuickTestImageURLJSONPathParams struct {
-	// The project to evaluate against.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QuickTestImageURLJSONQueryParams struct {
+type QuickTestImageURLJSONRequest struct {
+	// An ImageUrl that contains the url of the image to be evaluated.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// Optional. Specifies the id of a particular iteration to evaluate against.
 	//             The default iteration for the project will be used when not specified.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type QuickTestImageURLJSONHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type QuickTestImageURLJSONRequest struct {
-	PathParams  QuickTestImageURLJSONPathParams
-	QueryParams QuickTestImageURLJSONQueryParams
-	Headers     QuickTestImageURLJSONHeaders
-	// An ImageUrl that contains the url of the image to be evaluated.
-	Request shared.ImageURL `request:"mediaType=application/json"`
+	// The project to evaluate against.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type QuickTestImageURLJSONResponse struct {

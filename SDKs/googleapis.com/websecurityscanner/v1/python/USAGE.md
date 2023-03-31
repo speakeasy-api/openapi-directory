@@ -4,74 +4,70 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebsecurityscannerProjectsScanConfigsCreateRequest(
-    security=operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.WebsecurityscannerProjectsScanConfigsCreatePathParams(
-        parent="facilis",
-    ),
-    query_params=operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="culpa",
-        alt="proto",
-        callback="quis",
-        fields="repellat",
-        key="qui",
-        oauth_token="ea",
-        pretty_print=True,
-        quota_user="laudantium",
-        upload_type="earum",
-        upload_protocol="eligendi",
-    ),
-    request=shared.ScanConfig(
+    dollar_xgafv="2",
+    scan_config=shared.ScanConfig(
         authentication=shared.Authentication(
             custom_account=shared.CustomAccount(
-                login_url="ut",
-                password="eveniet",
-                username="quos",
+                login_url="provident",
+                password="distinctio",
+                username="Rosalinda_Mitchell84",
             ),
             google_account=shared.GoogleAccount(
-                password="consectetur",
-                username="rem",
+                password="vel",
+                username="Linda.Oberbrunner",
             ),
             iap_credential=shared.IapCredential(
                 iap_test_service_account_info=shared.IapTestServiceAccountInfo(
-                    target_audience_client_id="et",
+                    target_audience_client_id="magnam",
                 ),
             ),
         ),
         blacklist_patterns=[
-            "sed",
-            "sint",
+            "ipsa",
+            "delectus",
+            "tempora",
             "suscipit",
         ],
-        display_name="voluptatum",
-        export_to_security_command_center="EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED",
-        ignore_http_status_errors=True,
-        managed_scan=True,
-        max_qps=1531485269277272612,
-        name="quam",
-        risk_level="LOW",
+        display_name="molestiae",
+        export_to_security_command_center="DISABLED",
+        ignore_http_status_errors=False,
+        managed_scan=False,
+        max_qps=812169,
+        name="voluptatum",
+        risk_level="NORMAL",
         schedule=shared.Schedule(
-            interval_duration_days=1862485506550677711,
-            schedule_time="ipsam",
+            interval_duration_days=568045,
+            schedule_time="nisi",
         ),
         starting_urls=[
-            "reiciendis",
+            "temporibus",
+            "ab",
+            "quis",
+            "veritatis",
         ],
-        static_ip_scan=True,
-        user_agent="USER_AGENT_UNSPECIFIED",
+        static_ip_scan=False,
+        user_agent="CHROME_ANDROID",
     ),
+    access_token="perferendis",
+    alt="media",
+    callback="repellendus",
+    fields_="sapiente",
+    key="quo",
+    oauth_token="odit",
+    parent="at",
+    pretty_print=False,
+    quota_user="at",
+    upload_type="maiores",
+    upload_protocol="molestiae",
 )
     
-res = s.projects.websecurityscanner_projects_scan_configs_create(req)
+res = s.projects.websecurityscanner_projects_scan_configs_create(req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.scan_config is not None:
     # handle response

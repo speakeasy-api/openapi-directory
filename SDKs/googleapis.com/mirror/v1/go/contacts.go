@@ -33,20 +33,20 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // MirrorContactsDelete - Deletes a contact.
-func (s *contacts) MirrorContactsDelete(ctx context.Context, request operations.MirrorContactsDeleteRequest) (*operations.MirrorContactsDeleteResponse, error) {
+func (s *contacts) MirrorContactsDelete(ctx context.Context, request operations.MirrorContactsDeleteRequest, security operations.MirrorContactsDeleteSecurity) (*operations.MirrorContactsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *contacts) MirrorContactsDelete(ctx context.Context, request operations.
 }
 
 // MirrorContactsGet - Gets a single contact by ID.
-func (s *contacts) MirrorContactsGet(ctx context.Context, request operations.MirrorContactsGetRequest) (*operations.MirrorContactsGetResponse, error) {
+func (s *contacts) MirrorContactsGet(ctx context.Context, request operations.MirrorContactsGetRequest, security operations.MirrorContactsGetSecurity) (*operations.MirrorContactsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *contacts) MirrorContactsGet(ctx context.Context, request operations.Mir
 }
 
 // MirrorContactsInsert - Inserts a new contact.
-func (s *contacts) MirrorContactsInsert(ctx context.Context, request operations.MirrorContactsInsertRequest) (*operations.MirrorContactsInsertResponse, error) {
+func (s *contacts) MirrorContactsInsert(ctx context.Context, request operations.MirrorContactsInsertRequest, security operations.MirrorContactsInsertSecurity) (*operations.MirrorContactsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Contact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *contacts) MirrorContactsInsert(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *contacts) MirrorContactsInsert(ctx context.Context, request operations.
 }
 
 // MirrorContactsList - Retrieves a list of contacts for the authenticated user.
-func (s *contacts) MirrorContactsList(ctx context.Context, request operations.MirrorContactsListRequest) (*operations.MirrorContactsListResponse, error) {
+func (s *contacts) MirrorContactsList(ctx context.Context, request operations.MirrorContactsListRequest, security operations.MirrorContactsListSecurity) (*operations.MirrorContactsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts"
 
@@ -184,11 +184,11 @@ func (s *contacts) MirrorContactsList(ctx context.Context, request operations.Mi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *contacts) MirrorContactsList(ctx context.Context, request operations.Mi
 }
 
 // MirrorContactsPatch - Updates a contact in place. This method supports patch semantics.
-func (s *contacts) MirrorContactsPatch(ctx context.Context, request operations.MirrorContactsPatchRequest) (*operations.MirrorContactsPatchResponse, error) {
+func (s *contacts) MirrorContactsPatch(ctx context.Context, request operations.MirrorContactsPatchRequest, security operations.MirrorContactsPatchSecurity) (*operations.MirrorContactsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Contact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *contacts) MirrorContactsPatch(ctx context.Context, request operations.M
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,11 +278,11 @@ func (s *contacts) MirrorContactsPatch(ctx context.Context, request operations.M
 }
 
 // MirrorContactsUpdate - Updates a contact in place.
-func (s *contacts) MirrorContactsUpdate(ctx context.Context, request operations.MirrorContactsUpdateRequest) (*operations.MirrorContactsUpdateResponse, error) {
+func (s *contacts) MirrorContactsUpdate(ctx context.Context, request operations.MirrorContactsUpdateRequest, security operations.MirrorContactsUpdateSecurity) (*operations.MirrorContactsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Contact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,11 +294,11 @@ func (s *contacts) MirrorContactsUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

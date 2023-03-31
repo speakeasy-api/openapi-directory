@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LockListForPathPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type LockListForPathQueryParams struct {
+type LockListForPathRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Include locks from children objects?
 	IncludeChildren *bool `queryParam:"style=form,explode=true,name=include_children"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type LockListForPathRequest struct {
-	PathParams  LockListForPathPathParams
-	QueryParams LockListForPathQueryParams
 }
 
 type LockListForPathResponse struct {

@@ -94,7 +94,7 @@ func New(opts ...SDKOption) *SDK {
 
 // Convert - Convert the number into its Arabic text representation
 // حول العدد إلى ما يقابله كتابة
-func (s *SDK) Convert(ctx context.Context, request operations.ConvertRequest) (*operations.ConvertResponse, error) {
+func (s *SDK) Convert(ctx context.Context, request operations.ConvertRequestBody) (*operations.ConvertResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/convert"
 

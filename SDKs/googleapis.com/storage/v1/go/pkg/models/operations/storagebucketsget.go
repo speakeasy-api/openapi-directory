@@ -10,28 +10,28 @@ import (
 )
 
 type StorageBucketsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsGetSecurity struct {
@@ -40,11 +40,6 @@ type StorageBucketsGetSecurity struct {
 	Option3 *StorageBucketsGetSecurityOption3 `security:"option"`
 	Option4 *StorageBucketsGetSecurityOption4 `security:"option"`
 	Option5 *StorageBucketsGetSecurityOption5 `security:"option"`
-}
-
-type StorageBucketsGetPathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 }
 
 // StorageBucketsGetProjectionEnum - Set of properties to return. Defaults to noAcl.
@@ -71,9 +66,11 @@ func (e *StorageBucketsGetProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageBucketsGetQueryParams struct {
+type StorageBucketsGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Makes the return of the bucket metadata conditional on whether the bucket's current metageneration matches the given value.
@@ -96,12 +93,6 @@ type StorageBucketsGetQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageBucketsGetRequest struct {
-	PathParams  StorageBucketsGetPathParams
-	QueryParams StorageBucketsGetQueryParams
-	Security    StorageBucketsGetSecurity
 }
 
 type StorageBucketsGetResponse struct {

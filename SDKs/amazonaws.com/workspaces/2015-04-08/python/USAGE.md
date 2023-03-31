@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateConnectionAliasRequest(
-    headers=operations.AssociateConnectionAliasHeaders(
-        x_amz_algorithm="hic",
-        x_amz_content_sha256="quisquam",
-        x_amz_credential="sit",
-        x_amz_date="autem",
-        x_amz_security_token="sed",
-        x_amz_signature="itaque",
-        x_amz_signed_headers="qui",
-        x_amz_target="WorkspacesService.AssociateConnectionAlias",
+    associate_connection_alias_request=shared.AssociateConnectionAliasRequest(
+        alias_id="corrupti",
+        resource_id="provident",
     ),
-    request=shared.AssociateConnectionAliasRequest(
-        alias_id="et",
-        resource_id="sequi",
-    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+    x_amz_target="WorkspacesService.AssociateConnectionAlias",
 )
     
 res = s.associate_connection_alias(req)

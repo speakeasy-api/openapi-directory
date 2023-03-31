@@ -8,15 +8,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type PostScrobbleShowsQueryParams struct {
-	// The show's IMDB ID
-	ImdbID *int64 `queryParam:"style=form,explode=true,name=imdb_id"`
-	// The show's TheTVDB ID
-	ThetvdbID *int64 `queryParam:"style=form,explode=true,name=thetvdb_id"`
-	// The show's TVmaze ID
-	TvmazeID *int64 `queryParam:"style=form,explode=true,name=tvmaze_id"`
-}
-
 type PostScrobbleShowsRequestBody struct {
 	// The episode airdate
 	Airdate *types.Date `json:"airdate,omitempty"`
@@ -31,8 +22,13 @@ type PostScrobbleShowsRequestBody struct {
 }
 
 type PostScrobbleShowsRequest struct {
-	QueryParams PostScrobbleShowsQueryParams
-	Request     []PostScrobbleShowsRequestBody `request:"mediaType=application/json"`
+	RequestBody []PostScrobbleShowsRequestBody `request:"mediaType=application/json"`
+	// The show's IMDB ID
+	ImdbID *int64 `queryParam:"style=form,explode=true,name=imdb_id"`
+	// The show's TheTVDB ID
+	ThetvdbID *int64 `queryParam:"style=form,explode=true,name=thetvdb_id"`
+	// The show's TVmaze ID
+	TvmazeID *int64 `queryParam:"style=form,explode=true,name=tvmaze_id"`
 }
 
 type PostScrobbleShowsResponse struct {

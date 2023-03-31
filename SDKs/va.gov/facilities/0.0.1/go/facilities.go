@@ -36,7 +36,7 @@ func newFacilities(defaultClient, securityClient HTTPClient, serverURL, language
 
 // GetAllFacilities - Bulk download information for all facilities
 // Retrieve all available facilities in a single operation, formatted as either a GeoJSON FeatureCollection or as a CSV. Due to the complexity of the facility resource type, the CSV response contains a subset of available facility data - specifically it omits the available services, patient satisfaction, and patient wait time data.
-func (s *facilities) GetAllFacilities(ctx context.Context, request operations.GetAllFacilitiesRequest) (*operations.GetAllFacilitiesResponse, error) {
+func (s *facilities) GetAllFacilities(ctx context.Context, request operations.GetAllFacilitiesRequest, security operations.GetAllFacilitiesSecurity) (*operations.GetAllFacilitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/facilities/all"
 
@@ -45,9 +45,9 @@ func (s *facilities) GetAllFacilities(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -154,7 +154,7 @@ func (s *facilities) GetAllFacilities(ctx context.Context, request operations.Ge
 // - `zip`, with the option of any combination of `type`, `services[]`, or `mobile`
 //
 //	Invalid combinations will return `400 Bad Request`.
-func (s *facilities) GetFacilitiesByLocation(ctx context.Context, request operations.GetFacilitiesByLocationRequest) (*operations.GetFacilitiesByLocationResponse, error) {
+func (s *facilities) GetFacilitiesByLocation(ctx context.Context, request operations.GetFacilitiesByLocationRequest, security operations.GetFacilitiesByLocationSecurity) (*operations.GetFacilitiesByLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/facilities"
 
@@ -163,11 +163,11 @@ func (s *facilities) GetFacilitiesByLocation(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *facilities) GetFacilitiesByLocation(ctx context.Context, request operat
 }
 
 // GetFacilityByID - Retrieve a specific facility by ID
-func (s *facilities) GetFacilityByID(ctx context.Context, request operations.GetFacilityByIDRequest) (*operations.GetFacilityByIDResponse, error) {
+func (s *facilities) GetFacilityByID(ctx context.Context, request operations.GetFacilityByIDRequest, security operations.GetFacilityByIDSecurity) (*operations.GetFacilityByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/facilities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/facilities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,7 +327,7 @@ func (s *facilities) GetFacilityByID(ctx context.Context, request operations.Get
 
 // GetFacilityIds - Bulk download of all facility IDs
 // Retrieves all available facility IDs only
-func (s *facilities) GetFacilityIds(ctx context.Context, request operations.GetFacilityIdsRequest) (*operations.GetFacilityIdsResponse, error) {
+func (s *facilities) GetFacilityIds(ctx context.Context, request operations.GetFacilityIdsRequest, security operations.GetFacilityIdsSecurity) (*operations.GetFacilityIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ids"
 
@@ -336,11 +336,11 @@ func (s *facilities) GetFacilityIds(ctx context.Context, request operations.GetF
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,7 +406,7 @@ func (s *facilities) GetFacilityIds(ctx context.Context, request operations.GetF
 // The "attributes" element has information about the drive-time band that contains the requested location for each facility in the response. The values of `min_time` and `max_time` are in minutes. For example, a facility returned with a matched `min_time` of 10 and `max_time` of 20 is a 10 to 20 minute drive from the requested location.
 //
 // To retrieve full details for nearby facilities, see the documentation for `/facilities?ids`.
-func (s *facilities) GetNearbyFacilities(ctx context.Context, request operations.GetNearbyFacilitiesRequest) (*operations.GetNearbyFacilitiesResponse, error) {
+func (s *facilities) GetNearbyFacilities(ctx context.Context, request operations.GetNearbyFacilitiesRequest, security operations.GetNearbyFacilitiesSecurity) (*operations.GetNearbyFacilitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nearby"
 
@@ -415,11 +415,11 @@ func (s *facilities) GetNearbyFacilities(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

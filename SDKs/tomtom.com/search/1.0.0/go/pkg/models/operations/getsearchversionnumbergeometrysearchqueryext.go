@@ -7,16 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberGeometrySearchQueryExtPathParams struct {
+type GetSearchVersionNumberGeometrySearchQueryExtRequest struct {
 	// Expected response format.
 	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Query string. Must be properly URL encoded.
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberGeometrySearchQueryExtQueryParams struct {
 	// Indexes for which extended postal codes should be included in the results. Available indexes are:
 	//   - <b>Addr</b> = Address ranges
 	//   - <b>Geo</b> = Geographies
@@ -39,11 +32,10 @@ type GetSearchVersionNumberGeometrySearchQueryExtQueryParams struct {
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// Maximum number of search results that will be returned.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetSearchVersionNumberGeometrySearchQueryExtRequest struct {
-	PathParams  GetSearchVersionNumberGeometrySearchQueryExtPathParams
-	QueryParams GetSearchVersionNumberGeometrySearchQueryExtQueryParams
+	// Query string. Must be properly URL encoded.
+	Query string `pathParam:"style=simple,explode=false,name=query"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberGeometrySearchQueryExtResponse struct {

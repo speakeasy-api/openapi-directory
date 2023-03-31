@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDatesPathParams struct {
+type GetDatesRequest struct {
 	// client invoice's internal identifier
 	InvoiceID int64 `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type GetDatesRequest struct {
-	PathParams GetDatesPathParams
 }
 
 type GetDatesResponse struct {

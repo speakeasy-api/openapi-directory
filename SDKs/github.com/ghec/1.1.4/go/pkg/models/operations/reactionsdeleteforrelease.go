@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ReactionsDeleteForReleasePathParams struct {
+type ReactionsDeleteForReleaseRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The unique identifier of the reaction.
@@ -15,10 +15,6 @@ type ReactionsDeleteForReleasePathParams struct {
 	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReactionsDeleteForReleaseRequest struct {
-	PathParams ReactionsDeleteForReleasePathParams
 }
 
 type ReactionsDeleteForReleaseResponse struct {

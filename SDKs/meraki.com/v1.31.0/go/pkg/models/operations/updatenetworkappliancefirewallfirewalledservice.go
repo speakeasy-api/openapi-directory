@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceFirewallFirewalledServicePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Service   string `pathParam:"style=simple,explode=false,name=service"`
-}
-
 // UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum - A string indicating the rule for which IPs are allowed to use the specified service. Acceptable values are "blocked" (no remote IPs can access the service), "restricted" (only allowed IPs can access the service), and "unrestriced" (any remote IP can access the service). This field is required
 type UpdateNetworkApplianceFirewallFirewalledServiceRequestBodyAccessEnum string
 
@@ -48,8 +43,9 @@ type UpdateNetworkApplianceFirewallFirewalledServiceRequestBody struct {
 }
 
 type UpdateNetworkApplianceFirewallFirewalledServiceRequest struct {
-	PathParams UpdateNetworkApplianceFirewallFirewalledServicePathParams
-	Request    UpdateNetworkApplianceFirewallFirewalledServiceRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkApplianceFirewallFirewalledServiceRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                     `pathParam:"style=simple,explode=false,name=networkId"`
+	Service     string                                                     `pathParam:"style=simple,explode=false,name=service"`
 }
 
 type UpdateNetworkApplianceFirewallFirewalledServiceResponse struct {

@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.ConnectRequest(
-    request=operations.ConnectRequestBody(
-        endpoint="iste",
-    ),
+
+
+req = operations.ConnectRequestBody(
+    endpoint="corrupti",
 )
     
 res = s.connect(req)

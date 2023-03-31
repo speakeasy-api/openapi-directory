@@ -8,18 +8,14 @@ import (
 )
 
 type PutCertSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PutCertPathParams struct {
-	// The certificate id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PutCertRequest struct {
-	PathParams PutCertPathParams
-	Request    *shared.Certificate `request:"mediaType=application/json"`
-	Security   PutCertSecurity
+	Certificate *shared.Certificate `request:"mediaType=application/json"`
+	// The certificate id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutCertResponse struct {

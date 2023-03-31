@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetProtocolsPathParams struct {
+type GetProtocolsRequest struct {
 	// Agent to return the protocols arrary
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetProtocolsRequest struct {
-	PathParams GetProtocolsPathParams
 }
 
 type GetProtocolsResponse struct {

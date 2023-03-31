@@ -34,14 +34,14 @@ func newApplicationPasswordCredentials(defaultClient, securityClient HTTPClient,
 // ApplicationsListPasswordCredentials - Get the passwordCredentials associated with an application.
 func (s *applicationPasswordCredentials) ApplicationsListPasswordCredentials(ctx context.Context, request operations.ApplicationsListPasswordCredentialsRequest) (*operations.ApplicationsListPasswordCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/passwordCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/passwordCredentials", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,9 +106,9 @@ func (s *applicationPasswordCredentials) ApplicationsListPasswordCredentials(ctx
 // ApplicationsUpdatePasswordCredentials - Update passwordCredentials associated with an application.
 func (s *applicationPasswordCredentials) ApplicationsUpdatePasswordCredentials(ctx context.Context, request operations.ApplicationsUpdatePasswordCredentialsRequest) (*operations.ApplicationsUpdatePasswordCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/passwordCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}/passwordCredentials", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PasswordCredentialsUpdateParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -123,7 +123,7 @@ func (s *applicationPasswordCredentials) ApplicationsUpdatePasswordCredentials(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

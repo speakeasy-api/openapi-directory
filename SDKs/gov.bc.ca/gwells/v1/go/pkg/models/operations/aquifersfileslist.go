@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type AquifersFilesListPathParams struct {
-	AquiferID string `pathParam:"style=simple,explode=false,name=aquifer_id"`
-}
-
 type AquifersFilesListRequest struct {
-	PathParams AquifersFilesListPathParams
+	AquiferID string `pathParam:"style=simple,explode=false,name=aquifer_id"`
 }
 
 type AquifersFilesList200ApplicationJSONPrivate struct {

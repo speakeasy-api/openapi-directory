@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamAggregatesListQueryParams struct {
+type IpamAggregatesListRequest struct {
 	Created        *string  `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string  `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string  `queryParam:"style=form,explode=true,name=created__lte"`
@@ -39,10 +39,6 @@ type IpamAggregatesListQueryParams struct {
 	RirIDN *string `queryParam:"style=form,explode=true,name=rir_id__n"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
 	TagN   *string `queryParam:"style=form,explode=true,name=tag__n"`
-}
-
-type IpamAggregatesListRequest struct {
-	QueryParams IpamAggregatesListQueryParams
 }
 
 type IpamAggregatesList200ApplicationJSON struct {

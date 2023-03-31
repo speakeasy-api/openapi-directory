@@ -92,15 +92,25 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // UpdateChannel - Update a specific Channel.
-func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChannelRequest) (*operations.UpdateChannelResponse, error) {
-	baseURL := operations.UpdateChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChannelRequest, security operations.UpdateChannelSecurity, opts ...operations.Option) (*operations.UpdateChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v3/Services/{ServiceSid}/Channels/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateChannelServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v3/Services/{ServiceSid}/Channels/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -112,9 +122,9 @@ func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChanne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

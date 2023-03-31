@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetBasicPatientDetailsPathParams struct {
+type GetBasicPatientDetailsRequest struct {
 	// userId
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetBasicPatientDetailsRequest struct {
-	PathParams GetBasicPatientDetailsPathParams
 }
 
 type GetBasicPatientDetailsResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1AppointmentsIDReassignResourceResourceIDPathParams struct {
+type PutSetupV1AppointmentsIDReassignResourceResourceIDRequest struct {
 	// id of appointment object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// id of target resource
 	ResourceID string `pathParam:"style=simple,explode=false,name=resourceId"`
-}
-
-type PutSetupV1AppointmentsIDReassignResourceResourceIDRequest struct {
-	PathParams PutSetupV1AppointmentsIDReassignResourceResourceIDPathParams
 }
 
 type PutSetupV1AppointmentsIDReassignResourceResourceIDResponse struct {

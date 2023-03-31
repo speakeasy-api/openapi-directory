@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkCameraWirelessProfilePathParams struct {
+type DeleteNetworkCameraWirelessProfileRequest struct {
 	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
 	WirelessProfileID string `pathParam:"style=simple,explode=false,name=wirelessProfileId"`
-}
-
-type DeleteNetworkCameraWirelessProfileRequest struct {
-	PathParams DeleteNetworkCameraWirelessProfilePathParams
 }
 
 type DeleteNetworkCameraWirelessProfileResponse struct {

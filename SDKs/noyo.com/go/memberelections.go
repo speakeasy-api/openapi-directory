@@ -35,9 +35,9 @@ func newMemberElections(defaultClient, securityClient HTTPClient, serverURL, lan
 // Create a new member election for an coverage plan
 func (s *memberElections) CreateMemberElection(ctx context.Context, request operations.CreateMemberElectionRequest) (*operations.CreateMemberElectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}/member_elections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}/member_elections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MemberElectionCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *memberElections) CreateMemberElection(ctx context.Context, request oper
 // Edit a member election based on the ID provided. The version parameter must match the latest member election version.
 func (s *memberElections) EditMemberElection(ctx context.Context, request operations.EditMemberElectionRequest) (*operations.EditMemberElectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/member_elections/{member_election_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/member_elections/{member_election_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MemberElectionEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,14 +145,14 @@ func (s *memberElections) EditMemberElection(ctx context.Context, request operat
 // Returns a list of all member elections for a given application
 func (s *memberElections) GetApplicationMemberElections(ctx context.Context, request operations.GetApplicationMemberElectionsRequest) (*operations.GetApplicationMemberElectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/member_elections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/member_elections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,14 +194,14 @@ func (s *memberElections) GetApplicationMemberElections(ctx context.Context, req
 // Returns a list of all member elections for a given coverage plan
 func (s *memberElections) GetCoveragePlanMemberElections(ctx context.Context, request operations.GetCoveragePlanMemberElectionsRequest) (*operations.GetCoveragePlanMemberElectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}/member_elections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/coverage_plans/{plan_id}/member_elections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -243,7 +243,7 @@ func (s *memberElections) GetCoveragePlanMemberElections(ctx context.Context, re
 // Returns a member election.
 func (s *memberElections) GetMemberElection(ctx context.Context, request operations.GetMemberElectionRequest) (*operations.GetMemberElectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/member_elections/{member_election_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/member_elections/{member_election_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

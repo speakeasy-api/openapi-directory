@@ -10,23 +10,18 @@ import (
 )
 
 type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurity struct {
 	Option1 *ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurityOption1 `security:"option"`
 	Option2 *ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurityOption2 `security:"option"`
-}
-
-type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListPathParams struct {
-	// The name of the parent resource whose versions will be listed.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListViewEnum - The view that should be returned in the response.
@@ -56,7 +51,7 @@ func (e *ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListViewEn
 	}
 }
 
-type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListQueryParams struct {
+type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -77,6 +72,8 @@ type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListQueryParam
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The name of the parent resource whose versions will be listed.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -87,12 +84,6 @@ type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListQueryParam
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The view that should be returned in the response.
 	View *ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListRequest struct {
-	PathParams  ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListPathParams
-	QueryParams ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListQueryParams
-	Security    ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurity
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse struct {

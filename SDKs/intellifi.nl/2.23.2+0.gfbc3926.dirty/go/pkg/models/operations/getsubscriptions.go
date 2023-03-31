@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetSubscriptionsQueryParams struct {
+type GetSubscriptionsRequest struct {
 	// Limits on `time_created`, Marks the start of a range, optionally use `before` to set the end. Result output excludes the given timestamp.
 	After *time.Time `queryParam:"style=form,explode=true,name=after"`
 	// Limits directly on `id`. Marks the start of a range, optionally use `before_id` to set the end. Result output excludes the given `id` value. Please note that `id` is in chronological order.
@@ -55,10 +55,6 @@ type GetSubscriptionsQueryParams struct {
 	UntilID *string `queryParam:"style=form,explode=true,name=until_id"`
 	// Filter on the verification of the target certificate.
 	VerifyTargetCertificate *bool `queryParam:"style=form,explode=true,name=verify_target_certificate"`
-}
-
-type GetSubscriptionsRequest struct {
-	QueryParams GetSubscriptionsQueryParams
 }
 
 // GetSubscriptions200ApplicationJSON - A JSON object containing a list of subscriptions

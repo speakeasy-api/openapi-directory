@@ -33,11 +33,11 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudsearchSettingsDatasourcesCreate - Creates a datasource. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsDatasourcesCreate(ctx context.Context, request operations.CloudsearchSettingsDatasourcesCreateRequest) (*operations.CloudsearchSettingsDatasourcesCreateResponse, error) {
+func (s *settings) CloudsearchSettingsDatasourcesCreate(ctx context.Context, request operations.CloudsearchSettingsDatasourcesCreateRequest, security operations.CloudsearchSettingsDatasourcesCreateSecurity) (*operations.CloudsearchSettingsDatasourcesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/settings/datasources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DataSource", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *settings) CloudsearchSettingsDatasourcesCreate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *settings) CloudsearchSettingsDatasourcesCreate(ctx context.Context, req
 }
 
 // CloudsearchSettingsDatasourcesList - Lists datasources. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsDatasourcesList(ctx context.Context, request operations.CloudsearchSettingsDatasourcesListRequest) (*operations.CloudsearchSettingsDatasourcesListResponse, error) {
+func (s *settings) CloudsearchSettingsDatasourcesList(ctx context.Context, request operations.CloudsearchSettingsDatasourcesListRequest, security operations.CloudsearchSettingsDatasourcesListSecurity) (*operations.CloudsearchSettingsDatasourcesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/settings/datasources"
 
@@ -97,11 +97,11 @@ func (s *settings) CloudsearchSettingsDatasourcesList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *settings) CloudsearchSettingsDatasourcesList(ctx context.Context, reque
 }
 
 // CloudsearchSettingsGetCustomer - Get customer settings. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsGetCustomer(ctx context.Context, request operations.CloudsearchSettingsGetCustomerRequest) (*operations.CloudsearchSettingsGetCustomerResponse, error) {
+func (s *settings) CloudsearchSettingsGetCustomer(ctx context.Context, request operations.CloudsearchSettingsGetCustomerRequest, security operations.CloudsearchSettingsGetCustomerSecurity) (*operations.CloudsearchSettingsGetCustomerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/settings/customer"
 
@@ -145,11 +145,11 @@ func (s *settings) CloudsearchSettingsGetCustomer(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *settings) CloudsearchSettingsGetCustomer(ctx context.Context, request o
 }
 
 // CloudsearchSettingsSearchapplicationsCreate - Creates a search application. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsCreate(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsCreateRequest) (*operations.CloudsearchSettingsSearchapplicationsCreateResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsCreate(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsCreateRequest, security operations.CloudsearchSettingsSearchapplicationsCreateSecurity) (*operations.CloudsearchSettingsSearchapplicationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/settings/searchapplications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchApplicationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,20 +239,20 @@ func (s *settings) CloudsearchSettingsSearchapplicationsCreate(ctx context.Conte
 }
 
 // CloudsearchSettingsSearchapplicationsDelete - Deletes a search application. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsDelete(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsDeleteRequest) (*operations.CloudsearchSettingsSearchapplicationsDeleteResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsDelete(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsDeleteRequest, security operations.CloudsearchSettingsSearchapplicationsDeleteSecurity) (*operations.CloudsearchSettingsSearchapplicationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,20 +287,20 @@ func (s *settings) CloudsearchSettingsSearchapplicationsDelete(ctx context.Conte
 }
 
 // CloudsearchSettingsSearchapplicationsGet - Gets the specified search application. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsGet(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsGetRequest) (*operations.CloudsearchSettingsSearchapplicationsGetResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsGet(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsGetRequest, security operations.CloudsearchSettingsSearchapplicationsGetSecurity) (*operations.CloudsearchSettingsSearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,7 +335,7 @@ func (s *settings) CloudsearchSettingsSearchapplicationsGet(ctx context.Context,
 }
 
 // CloudsearchSettingsSearchapplicationsList - Lists all search applications. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsList(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsListRequest) (*operations.CloudsearchSettingsSearchapplicationsListResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsList(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsListRequest, security operations.CloudsearchSettingsSearchapplicationsListSecurity) (*operations.CloudsearchSettingsSearchapplicationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/settings/searchapplications"
 
@@ -344,11 +344,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsList(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -383,11 +383,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsList(ctx context.Context
 }
 
 // CloudsearchSettingsSearchapplicationsPatch - Updates a search application. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsPatch(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsPatchRequest) (*operations.CloudsearchSettingsSearchapplicationsPatchResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsPatch(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsPatchRequest, security operations.CloudsearchSettingsSearchapplicationsPatchSecurity) (*operations.CloudsearchSettingsSearchapplicationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchApplicationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -399,11 +399,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsPatch(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,11 +438,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsPatch(ctx context.Contex
 }
 
 // CloudsearchSettingsSearchapplicationsReset - Resets a search application to default settings. This will return an empty response. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsReset(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsResetRequest) (*operations.CloudsearchSettingsSearchapplicationsResetResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsReset(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsResetRequest, security operations.CloudsearchSettingsSearchapplicationsResetSecurity) (*operations.CloudsearchSettingsSearchapplicationsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}:reset", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}:reset", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResetSearchApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -454,11 +454,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsReset(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -493,11 +493,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsReset(ctx context.Contex
 }
 
 // CloudsearchSettingsSearchapplicationsUpdate - Updates a search application. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsSearchapplicationsUpdate(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsUpdateRequest) (*operations.CloudsearchSettingsSearchapplicationsUpdateResponse, error) {
+func (s *settings) CloudsearchSettingsSearchapplicationsUpdate(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsUpdateRequest, security operations.CloudsearchSettingsSearchapplicationsUpdateSecurity) (*operations.CloudsearchSettingsSearchapplicationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchApplicationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,11 +509,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsUpdate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -548,11 +548,11 @@ func (s *settings) CloudsearchSettingsSearchapplicationsUpdate(ctx context.Conte
 }
 
 // CloudsearchSettingsUpdateCustomer - Update customer settings. **Note:** This API requires an admin account to execute.
-func (s *settings) CloudsearchSettingsUpdateCustomer(ctx context.Context, request operations.CloudsearchSettingsUpdateCustomerRequest) (*operations.CloudsearchSettingsUpdateCustomerResponse, error) {
+func (s *settings) CloudsearchSettingsUpdateCustomer(ctx context.Context, request operations.CloudsearchSettingsUpdateCustomerRequest, security operations.CloudsearchSettingsUpdateCustomerSecurity) (*operations.CloudsearchSettingsUpdateCustomerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/settings/customer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -564,11 +564,11 @@ func (s *settings) CloudsearchSettingsUpdateCustomer(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

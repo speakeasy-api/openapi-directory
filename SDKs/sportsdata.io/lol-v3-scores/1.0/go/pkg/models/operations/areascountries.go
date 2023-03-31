@@ -33,13 +33,9 @@ func (e *AreasCountriesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AreasCountriesPathParams struct {
+type AreasCountriesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format AreasCountriesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type AreasCountriesRequest struct {
-	PathParams AreasCountriesPathParams
 }
 
 type AreasCountriesResponse struct {

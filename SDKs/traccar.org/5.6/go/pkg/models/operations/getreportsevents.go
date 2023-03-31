@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetReportsEventsQueryParams struct {
+type GetReportsEventsRequest struct {
 	DeviceID []int64 `queryParam:"style=form,explode=true,name=deviceId"`
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
 	From    time.Time `queryParam:"style=form,explode=true,name=from"`
@@ -17,10 +17,6 @@ type GetReportsEventsQueryParams struct {
 	To time.Time `queryParam:"style=form,explode=true,name=to"`
 	// % can be used to return events of all types
 	Type []string `queryParam:"style=form,explode=false,name=type"`
-}
-
-type GetReportsEventsRequest struct {
-	QueryParams GetReportsEventsQueryParams
 }
 
 type GetReportsEventsResponse struct {

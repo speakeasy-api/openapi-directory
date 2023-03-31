@@ -81,7 +81,7 @@ func (s *corporate) GetAvailableCorporatePermissions(ctx context.Context) (*oper
 // Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
 func (s *corporate) GetAvailableCorporatePermissionsByID(ctx context.Context, request operations.GetAvailableCorporatePermissionsByIDRequest) (*operations.GetAvailableCorporatePermissionsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *corporate) GetCorporate(ctx context.Context) (*operations.GetCorporateR
 // Get details of this corporate account
 func (s *corporate) GetCorporateByID(ctx context.Context, request operations.GetCorporateByIDRequest) (*operations.GetCorporateByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *corporate) GetCorporateUserGroups(ctx context.Context) (*operations.Get
 // Get a list of user groups for this corporate account
 func (s *corporate) GetCorporateUserGroupsByID(ctx context.Context, request operations.GetCorporateUserGroupsByIDRequest) (*operations.GetCorporateUserGroupsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/user-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/user-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +351,7 @@ func (s *corporate) GetCorporateUsers(ctx context.Context) (*operations.GetCorpo
 // Get a list of users for this corporate account
 func (s *corporate) GetCorporateUsersByID(ctx context.Context, request operations.GetCorporateUsersByIDRequest) (*operations.GetCorporateUsersByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +439,7 @@ func (s *corporate) GetCorporatesList(ctx context.Context) (*operations.GetCorpo
 
 // SaveCorporateUser - Create or update a user
 // Create or update a user under your corporate account. This endpoint requires permissions for corporate user management, configured by your administrator.
-func (s *corporate) SaveCorporateUser(ctx context.Context, request operations.SaveCorporateUserRequest) (*operations.SaveCorporateUserResponse, error) {
+func (s *corporate) SaveCorporateUser(ctx context.Context, request shared.UserUpdateContent) (*operations.SaveCorporateUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate/users"
 
@@ -494,7 +494,7 @@ func (s *corporate) SaveCorporateUser(ctx context.Context, request operations.Sa
 
 // SaveCorporateUserGroup - Create or update a corporate user group
 // Create or update a corporate user group
-func (s *corporate) SaveCorporateUserGroup(ctx context.Context, request operations.SaveCorporateUserGroupRequest) (*operations.SaveCorporateUserGroupResponse, error) {
+func (s *corporate) SaveCorporateUserGroup(ctx context.Context, request shared.UserGroup) (*operations.SaveCorporateUserGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate/user-groups"
 
@@ -551,9 +551,9 @@ func (s *corporate) SaveCorporateUserGroup(ctx context.Context, request operatio
 // Create or update a corporate user group for this corporate account
 func (s *corporate) SaveCorporateUserGroupByID(ctx context.Context, request operations.SaveCorporateUserGroupByIDRequest) (*operations.SaveCorporateUserGroupByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/user-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/corporates/{corporateId}/user-groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserGroup", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

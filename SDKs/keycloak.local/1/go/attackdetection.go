@@ -33,7 +33,7 @@ func newAttackDetection(defaultClient, securityClient HTTPClient, serverURL, lan
 // DeleteRealmAttackDetectionBruteForceUsers - Clear any user login failures for all users   This can release temporary disabled users
 func (s *attackDetection) DeleteRealmAttackDetectionBruteForceUsers(ctx context.Context, request operations.DeleteRealmAttackDetectionBruteForceUsersRequest) (*operations.DeleteRealmAttackDetectionBruteForceUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/attack-detection/brute-force/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/attack-detection/brute-force/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -68,7 +68,7 @@ func (s *attackDetection) DeleteRealmAttackDetectionBruteForceUsers(ctx context.
 // DeleteRealmAttackDetectionBruteForceUsersUserID - Clear any user login failures for the user   This can release temporary disabled user
 func (s *attackDetection) DeleteRealmAttackDetectionBruteForceUsersUserID(ctx context.Context, request operations.DeleteRealmAttackDetectionBruteForceUsersUserIDRequest) (*operations.DeleteRealmAttackDetectionBruteForceUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/attack-detection/brute-force/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/attack-detection/brute-force/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -103,7 +103,7 @@ func (s *attackDetection) DeleteRealmAttackDetectionBruteForceUsersUserID(ctx co
 // GetRealmAttackDetectionBruteForceUsersUserID - Get status of a username in brute force detection
 func (s *attackDetection) GetRealmAttackDetectionBruteForceUsersUserID(ctx context.Context, request operations.GetRealmAttackDetectionBruteForceUsersUserIDRequest) (*operations.GetRealmAttackDetectionBruteForceUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/attack-detection/brute-force/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/attack-detection/brute-force/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

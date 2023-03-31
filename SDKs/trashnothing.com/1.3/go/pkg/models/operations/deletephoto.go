@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeletePhotoPathParams struct {
-	PhotoID string `pathParam:"style=simple,explode=false,name=photo_id"`
-}
-
 type DeletePhotoRequest struct {
-	PathParams DeletePhotoPathParams
+	PhotoID string `pathParam:"style=simple,explode=false,name=photo_id"`
 }
 
 type DeletePhotoResponse struct {

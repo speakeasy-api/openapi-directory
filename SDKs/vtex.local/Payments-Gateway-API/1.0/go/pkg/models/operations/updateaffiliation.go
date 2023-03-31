@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAffiliationPathParams struct {
-	AffiliationID string `pathParam:"style=simple,explode=false,name=affiliationId"`
-}
-
-type UpdateAffiliationHeaders struct {
+type UpdateAffiliationRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	ContentType              string                          `header:"style=simple,explode=false,name=Content-Type"`
+	UpdateAffiliationRequest shared.UpdateAffiliationRequest `request:"mediaType=application/json"`
 	// The AppKey configured by the merchant (optional configuration)
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type UpdateAffiliationRequest struct {
-	PathParams UpdateAffiliationPathParams
-	Headers    UpdateAffiliationHeaders
-	Request    shared.UpdateAffiliationRequest `request:"mediaType=application/json"`
+	AffiliationID        string `pathParam:"style=simple,explode=false,name=affiliationId"`
 }
 
 type UpdateAffiliationResponse struct {

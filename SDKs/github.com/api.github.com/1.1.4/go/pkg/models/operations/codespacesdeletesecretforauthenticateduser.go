@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CodespacesDeleteSecretForAuthenticatedUserPathParams struct {
+type CodespacesDeleteSecretForAuthenticatedUserRequest struct {
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type CodespacesDeleteSecretForAuthenticatedUserRequest struct {
-	PathParams CodespacesDeleteSecretForAuthenticatedUserPathParams
 }
 
 type CodespacesDeleteSecretForAuthenticatedUserResponse struct {

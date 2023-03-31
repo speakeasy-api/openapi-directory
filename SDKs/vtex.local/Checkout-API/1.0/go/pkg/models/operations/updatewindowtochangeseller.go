@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWindowToChangeSellerHeaders struct {
+type UpdateWindowToChangeSellerRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdateWindowToChangeSellerRequest struct {
-	Headers UpdateWindowToChangeSellerHeaders
-	Request shared.WaitingTime `request:"mediaType=application/json"`
+	ContentType string             `header:"style=simple,explode=false,name=Content-Type"`
+	WaitingTime shared.WaitingTime `request:"mediaType=application/json"`
 }
 
 type UpdateWindowToChangeSellerResponse struct {

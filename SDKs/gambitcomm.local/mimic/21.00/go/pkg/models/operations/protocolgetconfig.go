@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolGetConfigPathParams struct {
+type ProtocolGetConfigRequest struct {
 	// Agent to show the protocol configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Protocol to show configuration
 	Prot string `pathParam:"style=simple,explode=false,name=prot"`
-}
-
-type ProtocolGetConfigRequest struct {
-	PathParams ProtocolGetConfigPathParams
 }
 
 type ProtocolGetConfigResponse struct {

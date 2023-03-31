@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetDocumentsQueryParams struct {
+type GetDocumentsRequest struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetDocumentsRequest struct {
-	QueryParams GetDocumentsQueryParams
 }
 
 type GetDocumentsResponse struct {

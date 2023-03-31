@@ -6,28 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetinvestorAccountSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetinvestorAccountPathParams struct {
-	// Unique identifier of the investor account
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
-type GetinvestorAccountHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetinvestorAccountRequest struct {
-	PathParams GetinvestorAccountPathParams
-	Headers    GetinvestorAccountHeaders
-	Security   GetinvestorAccountSecurity
+	// Unique identifier of the investor account
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetinvestorAccount500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

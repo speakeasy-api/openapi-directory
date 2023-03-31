@@ -8,13 +8,13 @@ import (
 )
 
 type CloudiotProjectsLocationsRegistriesDevicesStatesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesDevicesStatesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudiotProjectsLocationsRegistriesDevicesStatesListSecurity struct {
@@ -22,12 +22,7 @@ type CloudiotProjectsLocationsRegistriesDevicesStatesListSecurity struct {
 	Option2 *CloudiotProjectsLocationsRegistriesDevicesStatesListSecurityOption2 `security:"option"`
 }
 
-type CloudiotProjectsLocationsRegistriesDevicesStatesListPathParams struct {
-	// Required. The name of the device. For example, `projects/p0/locations/us-central1/registries/registry0/devices/device0` or `projects/p0/locations/us-central1/registries/registry0/devices/{num_id}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudiotProjectsLocationsRegistriesDevicesStatesListQueryParams struct {
+type CloudiotProjectsLocationsRegistriesDevicesStatesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type CloudiotProjectsLocationsRegistriesDevicesStatesListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the device. For example, `projects/p0/locations/us-central1/registries/registry0/devices/device0` or `projects/p0/locations/us-central1/registries/registry0/devices/{num_id}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The number of states to list. States are listed in descending order of update time. The maximum number of states retained is 10. If this value is zero, it will return all the states available.
 	NumStates *int64 `queryParam:"style=form,explode=true,name=numStates"`
 	// OAuth 2.0 token for the current user.
@@ -52,12 +49,6 @@ type CloudiotProjectsLocationsRegistriesDevicesStatesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudiotProjectsLocationsRegistriesDevicesStatesListRequest struct {
-	PathParams  CloudiotProjectsLocationsRegistriesDevicesStatesListPathParams
-	QueryParams CloudiotProjectsLocationsRegistriesDevicesStatesListQueryParams
-	Security    CloudiotProjectsLocationsRegistriesDevicesStatesListSecurity
 }
 
 type CloudiotProjectsLocationsRegistriesDevicesStatesListResponse struct {

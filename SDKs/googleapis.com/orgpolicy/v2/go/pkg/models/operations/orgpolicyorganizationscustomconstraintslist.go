@@ -8,16 +8,11 @@ import (
 )
 
 type OrgpolicyOrganizationsCustomConstraintsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type OrgpolicyOrganizationsCustomConstraintsListPathParams struct {
-	// Required. The target Google Cloud resource that parents the set of custom constraints that will be returned from this call. Must be in one of the following forms: * `organizations/{organization_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OrgpolicyOrganizationsCustomConstraintsListQueryParams struct {
+type OrgpolicyOrganizationsCustomConstraintsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type OrgpolicyOrganizationsCustomConstraintsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token used to retrieve the next page. This is currently unsupported and will be ignored. The server may at any point start using this field.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The target Google Cloud resource that parents the set of custom constraints that will be returned from this call. Must be in one of the following forms: * `organizations/{organization_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type OrgpolicyOrganizationsCustomConstraintsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OrgpolicyOrganizationsCustomConstraintsListRequest struct {
-	PathParams  OrgpolicyOrganizationsCustomConstraintsListPathParams
-	QueryParams OrgpolicyOrganizationsCustomConstraintsListQueryParams
-	Security    OrgpolicyOrganizationsCustomConstraintsListSecurity
 }
 
 type OrgpolicyOrganizationsCustomConstraintsListResponse struct {

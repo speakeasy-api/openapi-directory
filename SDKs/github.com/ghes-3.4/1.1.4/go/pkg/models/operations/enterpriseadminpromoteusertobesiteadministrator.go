@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams struct {
+type EnterpriseAdminPromoteUserToBeSiteAdministratorRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type EnterpriseAdminPromoteUserToBeSiteAdministratorRequest struct {
-	PathParams EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams
 }
 
 type EnterpriseAdminPromoteUserToBeSiteAdministratorResponse struct {

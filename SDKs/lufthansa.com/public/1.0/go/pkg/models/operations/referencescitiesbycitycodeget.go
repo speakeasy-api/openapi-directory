@@ -4,37 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReferencesCitiesByCityCodeGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReferencesCitiesByCityCodeGetPathParams struct {
+type ReferencesCitiesByCityCodeGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// 3-letter IATA city code
 	CityCode string `pathParam:"style=simple,explode=false,name=cityCode"`
-}
-
-type ReferencesCitiesByCityCodeGetQueryParams struct {
 	// 2 letter ISO 3166-1 language code
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ReferencesCitiesByCityCodeGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type ReferencesCitiesByCityCodeGetRequest struct {
-	PathParams  ReferencesCitiesByCityCodeGetPathParams
-	QueryParams ReferencesCitiesByCityCodeGetQueryParams
-	Headers     ReferencesCitiesByCityCodeGetHeaders
-	Security    ReferencesCitiesByCityCodeGetSecurity
 }
 
 type ReferencesCitiesByCityCodeGetResponse struct {

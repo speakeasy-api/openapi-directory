@@ -36,7 +36,7 @@ func (e *EnterpriseAdminListPreReceiveEnvironmentsSortEnum) UnmarshalJSON(data [
 	}
 }
 
-type EnterpriseAdminListPreReceiveEnvironmentsQueryParams struct {
+type EnterpriseAdminListPreReceiveEnvironmentsRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -44,10 +44,6 @@ type EnterpriseAdminListPreReceiveEnvironmentsQueryParams struct {
 	// Results per page (max 100)
 	PerPage *int64                                             `queryParam:"style=form,explode=true,name=per_page"`
 	Sort    *EnterpriseAdminListPreReceiveEnvironmentsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type EnterpriseAdminListPreReceiveEnvironmentsRequest struct {
-	QueryParams EnterpriseAdminListPreReceiveEnvironmentsQueryParams
 }
 
 type EnterpriseAdminListPreReceiveEnvironmentsResponse struct {

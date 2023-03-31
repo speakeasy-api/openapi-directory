@@ -35,7 +35,7 @@ func newRewardEarning(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CreateRewardEarning - Create a reward earning
 // Create a reward earning for a reward. There can only be one earning for a reward. It is possilble to create multiple reward earnings simultaneously by providing and array of reward earnings in the data property.
-func (s *rewardEarning) CreateRewardEarning(ctx context.Context, request operations.CreateRewardEarningRequest) (*operations.CreateRewardEarningResponse, error) {
+func (s *rewardEarning) CreateRewardEarning(ctx context.Context, request shared.CreateRewardEarningRequestInput) (*operations.CreateRewardEarningResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reward_earning"
 
@@ -106,7 +106,7 @@ func (s *rewardEarning) CreateRewardEarning(ctx context.Context, request operati
 // Get a reward earning record by id.
 func (s *rewardEarning) FetchRewardEarning(ctx context.Context, request operations.FetchRewardEarningRequest) (*operations.FetchRewardEarningResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_earning/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reward_earning/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *rewardEarning) FetchRewardEarnings(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

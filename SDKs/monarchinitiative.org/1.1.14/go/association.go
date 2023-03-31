@@ -35,14 +35,14 @@ func newAssociation(defaultClient, securityClient HTTPClient, serverURL, languag
 // GetAssociationBySubjectAndAssocType - Returns list of matching associations of a given type
 func (s *association) GetAssociationBySubjectAndAssocType(ctx context.Context, request operations.GetAssociationBySubjectAndAssocTypeRequest) (*operations.GetAssociationBySubjectAndAssocTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/type/{association_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/type/{association_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *association) GetAssociationBySubjectAndAssocType(ctx context.Context, r
 // GetAssociationBySubjectAndObjectCategorySearch - Returns list of matching associations between a given subject and object category
 func (s *association) GetAssociationBySubjectAndObjectCategorySearch(ctx context.Context, request operations.GetAssociationBySubjectAndObjectCategorySearchRequest) (*operations.GetAssociationBySubjectAndObjectCategorySearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}/{object_category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}/{object_category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,14 +131,14 @@ func (s *association) GetAssociationBySubjectAndObjectCategorySearch(ctx context
 // GetAssociationBySubjectCategorySearch - Returns list of matching associations for a given subject category
 func (s *association) GetAssociationBySubjectCategorySearch(ctx context.Context, request operations.GetAssociationBySubjectCategorySearchRequest) (*operations.GetAssociationBySubjectCategorySearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,7 +181,7 @@ func (s *association) GetAssociationBySubjectCategorySearch(ctx context.Context,
 // via some relationship. Associations also include evidence, provenance etc.
 func (s *association) GetAssociationObject(ctx context.Context, request operations.GetAssociationObjectRequest) (*operations.GetAssociationObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,14 +228,14 @@ func (s *association) GetAssociationObject(ctx context.Context, request operatio
 // the connection.
 func (s *association) GetAssociationsBetween(ctx context.Context, request operations.GetAssociationsBetweenRequest) (*operations.GetAssociationsBetweenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/between/{subject}/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/between/{subject}/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -276,14 +276,14 @@ func (s *association) GetAssociationsBetween(ctx context.Context, request operat
 // GetAssociationsFrom - Returns list of matching associations starting from a given subject (source)
 func (s *association) GetAssociationsFrom(ctx context.Context, request operations.GetAssociationsFromRequest) (*operations.GetAssociationsFromResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/from/{subject}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/from/{subject}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -324,14 +324,14 @@ func (s *association) GetAssociationsFrom(ctx context.Context, request operation
 // GetAssociationsTo - Returns list of matching associations pointing to a given object (target)
 func (s *association) GetAssociationsTo(ctx context.Context, request operations.GetAssociationsToRequest) (*operations.GetAssociationsToResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/to/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/association/to/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

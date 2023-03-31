@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteMediaServerList = []string{
@@ -12,22 +11,17 @@ var DeleteMediaServerList = []string{
 }
 
 type DeleteMediaSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteMediaPathParams struct {
+type DeleteMediaRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Media resource(s) to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the Message resource that this Media resource belongs to.
 	MessageSid string `pathParam:"style=simple,explode=false,name=MessageSid"`
 	// The Twilio-provided string that uniquely identifies the Media resource to delete
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteMediaRequest struct {
-	PathParams DeleteMediaPathParams
-	Security   DeleteMediaSecurity
-	ServerURL  *string
 }
 
 type DeleteMediaResponse struct {

@@ -10,33 +10,33 @@ import (
 )
 
 type BigtableadminProjectsInstancesTablesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesListSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesListSecurity struct {
@@ -46,11 +46,6 @@ type BigtableadminProjectsInstancesTablesListSecurity struct {
 	Option4 *BigtableadminProjectsInstancesTablesListSecurityOption4 `security:"option"`
 	Option5 *BigtableadminProjectsInstancesTablesListSecurityOption5 `security:"option"`
 	Option6 *BigtableadminProjectsInstancesTablesListSecurityOption6 `security:"option"`
-}
-
-type BigtableadminProjectsInstancesTablesListPathParams struct {
-	// Required. The unique name of the instance for which tables should be listed. Values are of the form `projects/{project}/instances/{instance}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // BigtableadminProjectsInstancesTablesListViewEnum - The view to be applied to the returned tables' fields. Only NAME_ONLY view (default), REPLICATION_VIEW and ENCRYPTION_VIEW are supported.
@@ -92,7 +87,7 @@ func (e *BigtableadminProjectsInstancesTablesListViewEnum) UnmarshalJSON(data []
 	}
 }
 
-type BigtableadminProjectsInstancesTablesListQueryParams struct {
+type BigtableadminProjectsInstancesTablesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -111,6 +106,8 @@ type BigtableadminProjectsInstancesTablesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value of `next_page_token` returned by a previous call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The unique name of the instance for which tables should be listed. Values are of the form `projects/{project}/instances/{instance}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -121,12 +118,6 @@ type BigtableadminProjectsInstancesTablesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The view to be applied to the returned tables' fields. Only NAME_ONLY view (default), REPLICATION_VIEW and ENCRYPTION_VIEW are supported.
 	View *BigtableadminProjectsInstancesTablesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type BigtableadminProjectsInstancesTablesListRequest struct {
-	PathParams  BigtableadminProjectsInstancesTablesListPathParams
-	QueryParams BigtableadminProjectsInstancesTablesListQueryParams
-	Security    BigtableadminProjectsInstancesTablesListSecurity
 }
 
 type BigtableadminProjectsInstancesTablesListResponse struct {

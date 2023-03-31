@@ -35,7 +35,7 @@ func newWelcome(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // Addwebhook - Links a callback url to a user.
-func (s *welcome) Addwebhook(ctx context.Context, request operations.AddwebhookRequest) (*operations.AddwebhookResponse, error) {
+func (s *welcome) Addwebhook(ctx context.Context, request operations.AddwebhookRequest, security operations.AddwebhookSecurity) (*operations.AddwebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addwebhook"
 
@@ -44,11 +44,11 @@ func (s *welcome) Addwebhook(ctx context.Context, request operations.AddwebhookR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *welcome) Addwebhook(ctx context.Context, request operations.AddwebhookR
 }
 
 // Dropwebhook - Dissociates a webhook from a user.
-func (s *welcome) Dropwebhook(ctx context.Context, request operations.DropwebhookRequest) (*operations.DropwebhookResponse, error) {
+func (s *welcome) Dropwebhook(ctx context.Context, request operations.DropwebhookRequest, security operations.DropwebhookSecurity) (*operations.DropwebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dropwebhook"
 
@@ -92,11 +92,11 @@ func (s *welcome) Dropwebhook(ctx context.Context, request operations.Dropwebhoo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *welcome) Dropwebhook(ctx context.Context, request operations.Dropwebhoo
 }
 
 // Getcamerapicture - Returns the snapshot associated to an event.
-func (s *welcome) Getcamerapicture(ctx context.Context, request operations.GetcamerapictureRequest) (*operations.GetcamerapictureResponse, error) {
+func (s *welcome) Getcamerapicture(ctx context.Context, request operations.GetcamerapictureRequest, security operations.GetcamerapictureSecurity) (*operations.GetcamerapictureResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getcamerapicture"
 
@@ -140,11 +140,11 @@ func (s *welcome) Getcamerapicture(ctx context.Context, request operations.Getca
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *welcome) Getcamerapicture(ctx context.Context, request operations.Getca
 }
 
 // Geteventsuntil - Returns the snapshot associated to an event.
-func (s *welcome) Geteventsuntil(ctx context.Context, request operations.GeteventsuntilRequest) (*operations.GeteventsuntilResponse, error) {
+func (s *welcome) Geteventsuntil(ctx context.Context, request operations.GeteventsuntilRequest, security operations.GeteventsuntilSecurity) (*operations.GeteventsuntilResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/geteventsuntil"
 
@@ -189,11 +189,11 @@ func (s *welcome) Geteventsuntil(ctx context.Context, request operations.Geteven
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -228,7 +228,7 @@ func (s *welcome) Geteventsuntil(ctx context.Context, request operations.Geteven
 }
 
 // Gethomedata - Returns information about users homes and cameras.
-func (s *welcome) Gethomedata(ctx context.Context, request operations.GethomedataRequest) (*operations.GethomedataResponse, error) {
+func (s *welcome) Gethomedata(ctx context.Context, request operations.GethomedataRequest, security operations.GethomedataSecurity) (*operations.GethomedataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/gethomedata"
 
@@ -237,11 +237,11 @@ func (s *welcome) Gethomedata(ctx context.Context, request operations.Gethomedat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -276,7 +276,7 @@ func (s *welcome) Gethomedata(ctx context.Context, request operations.Gethomedat
 }
 
 // Getlasteventof - Returns most recent events.
-func (s *welcome) Getlasteventof(ctx context.Context, request operations.GetlasteventofRequest) (*operations.GetlasteventofResponse, error) {
+func (s *welcome) Getlasteventof(ctx context.Context, request operations.GetlasteventofRequest, security operations.GetlasteventofSecurity) (*operations.GetlasteventofResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getlasteventof"
 
@@ -285,11 +285,11 @@ func (s *welcome) Getlasteventof(ctx context.Context, request operations.Getlast
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -324,7 +324,7 @@ func (s *welcome) Getlasteventof(ctx context.Context, request operations.Getlast
 }
 
 // Getnextevents - Returns previous events.
-func (s *welcome) Getnextevents(ctx context.Context, request operations.GetnexteventsRequest) (*operations.GetnexteventsResponse, error) {
+func (s *welcome) Getnextevents(ctx context.Context, request operations.GetnexteventsRequest, security operations.GetnexteventsSecurity) (*operations.GetnexteventsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getnextevents"
 
@@ -333,11 +333,11 @@ func (s *welcome) Getnextevents(ctx context.Context, request operations.Getnexte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *welcome) Getnextevents(ctx context.Context, request operations.Getnexte
 }
 
 // Setpersonsaway - Sets a person as 'Away' or the Home as 'Empty'. The event will be added to the user’s timeline.
-func (s *welcome) Setpersonsaway(ctx context.Context, request operations.SetpersonsawayRequest) (*operations.SetpersonsawayResponse, error) {
+func (s *welcome) Setpersonsaway(ctx context.Context, request operations.SetpersonsawayRequest, security operations.SetpersonsawaySecurity) (*operations.SetpersonsawayResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setpersonsaway"
 
@@ -381,11 +381,11 @@ func (s *welcome) Setpersonsaway(ctx context.Context, request operations.Setpers
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -420,7 +420,7 @@ func (s *welcome) Setpersonsaway(ctx context.Context, request operations.Setpers
 }
 
 // Setpersonshome - Sets a person as 'At home'.
-func (s *welcome) Setpersonshome(ctx context.Context, request operations.SetpersonshomeRequest) (*operations.SetpersonshomeResponse, error) {
+func (s *welcome) Setpersonshome(ctx context.Context, request operations.SetpersonshomeRequest, security operations.SetpersonshomeSecurity) (*operations.SetpersonshomeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setpersonshome"
 
@@ -429,11 +429,11 @@ func (s *welcome) Setpersonshome(ctx context.Context, request operations.Setpers
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -12,14 +12,8 @@ var UpdateSyncListServerList = []string{
 }
 
 type UpdateSyncListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncListPathParams struct {
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Sync List resource to update. Can be the Sync List resource's `sid` or its `unique_name`.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncListUpdateSyncListRequest struct {
@@ -30,10 +24,11 @@ type UpdateSyncListUpdateSyncListRequest struct {
 }
 
 type UpdateSyncListRequest struct {
-	PathParams UpdateSyncListPathParams
-	Request    *UpdateSyncListUpdateSyncListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncListSecurity
-	ServerURL  *string
+	RequestBody *UpdateSyncListUpdateSyncListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Sync List resource to update. Can be the Sync List resource's `sid` or its `unique_name`.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSyncListResponse struct {

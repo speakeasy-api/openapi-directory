@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateVideoVersionPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 // CreateVideoVersionRequestBodyUploadApproachEnum - Upload approach
 type CreateVideoVersionRequestBodyUploadApproachEnum string
 
@@ -62,8 +57,9 @@ type CreateVideoVersionRequestBody struct {
 }
 
 type CreateVideoVersionRequest struct {
-	PathParams CreateVideoVersionPathParams
-	Request    CreateVideoVersionRequestBody `request:"mediaType=application/vnd.vimeo.video.version+json"`
+	RequestBody CreateVideoVersionRequestBody `request:"mediaType=application/vnd.vimeo.video.version+json"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type CreateVideoVersionResponse struct {

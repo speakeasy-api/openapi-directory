@@ -3,111 +3,199 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateExperimentTemplateRequest(
-    headers=operations.CreateExperimentTemplateHeaders(
-        x_amz_algorithm="rem",
-        x_amz_content_sha256="perspiciatis",
-        x_amz_credential="molestias",
-        x_amz_date="repellendus",
-        x_amz_security_token="doloremque",
-        x_amz_signature="doloremque",
-        x_amz_signed_headers="consectetur",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateExperimentTemplateRequestBody(
+)
+
+
+req = operations.CreateExperimentTemplateRequest(
+    request_body=operations.CreateExperimentTemplateRequestBody(
         actions={
-            "et": shared.CreateExperimentTemplateActionInput(
-                action_id="ut",
-                description="eaque",
+            "provident": shared.CreateExperimentTemplateActionInput(
+                action_id="distinctio",
+                description="quibusdam",
                 parameters={
-                    "dolorem": "nulla",
-                    "nam": "velit",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
                 },
                 start_after=[
-                    "culpa",
+                    "iure",
+                    "magnam",
+                ],
+                targets={
+                    "ipsa": "delectus",
+                    "tempora": "suscipit",
+                    "molestiae": "minus",
+                    "placeat": "voluptatum",
+                },
+            ),
+            "iusto": shared.CreateExperimentTemplateActionInput(
+                action_id="excepturi",
+                description="nisi",
+                parameters={
+                    "temporibus": "ab",
+                    "quis": "veritatis",
+                    "deserunt": "perferendis",
+                    "ipsam": "repellendus",
+                },
+                start_after=[
+                    "quo",
+                    "odit",
+                    "at",
+                    "at",
+                ],
+                targets={
+                    "molestiae": "quod",
+                    "quod": "esse",
+                    "totam": "porro",
+                    "dolorum": "dicta",
+                },
+            ),
+            "nam": shared.CreateExperimentTemplateActionInput(
+                action_id="officia",
+                description="occaecati",
+                parameters={
+                    "deleniti": "hic",
+                },
+                start_after=[
+                    "totam",
+                    "beatae",
+                    "commodi",
+                    "molestiae",
                 ],
                 targets={
                     "qui": "impedit",
-                    "culpa": "voluptatibus",
-                    "consequuntur": "sapiente",
-                },
-            ),
-            "sint": shared.CreateExperimentTemplateActionInput(
-                action_id="et",
-                description="fuga",
-                parameters={
-                    "quidem": "reiciendis",
-                },
-                start_after=[
-                    "quas",
-                    "pariatur",
-                    "omnis",
-                ],
-                targets={
-                    "soluta": "qui",
-                    "aut": "et",
+                    "cum": "esse",
                 },
             ),
         },
-        client_token="omnis",
-        description="et",
-        role_arn="architecto",
+        client_token="ipsum",
+        description="excepturi",
+        log_configuration=operations.CreateExperimentTemplateRequestBodyLogConfiguration(
+            cloud_watch_logs_configuration=shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput(
+                log_group_arn="aspernatur",
+            ),
+            log_schema_version=18789,
+            s3_configuration=shared.ExperimentTemplateS3LogConfigurationInput(
+                bucket_name="ad",
+                prefix="natus",
+            ),
+        ),
+        role_arn="sed",
         stop_conditions=[
             shared.CreateExperimentTemplateStopConditionInput(
-                source="dolorem",
-                value="recusandae",
+                source="dolor",
+                value="natus",
+            ),
+            shared.CreateExperimentTemplateStopConditionInput(
+                source="laboriosam",
+                value="hic",
+            ),
+            shared.CreateExperimentTemplateStopConditionInput(
+                source="saepe",
+                value="fuga",
             ),
         ],
         tags={
-            "ut": "ab",
+            "corporis": "iste",
+            "iure": "saepe",
         },
         targets={
-            "ut": shared.CreateExperimentTemplateTargetInput(
+            "architecto": shared.CreateExperimentTemplateTargetInput(
                 filters=[
                     shared.ExperimentTemplateTargetInputFilter(
-                        path="molestiae",
+                        path="reiciendis",
                         values=[
-                            "aut",
-                            "sequi",
-                            "eum",
-                        ],
-                    ),
-                    shared.ExperimentTemplateTargetInputFilter(
-                        path="iusto",
-                        values=[
-                            "sunt",
-                            "ea",
-                            "et",
-                        ],
-                    ),
-                    shared.ExperimentTemplateTargetInputFilter(
-                        path="officiis",
-                        values=[
-                            "delectus",
+                            "mollitia",
+                            "laborum",
+                            "dolores",
                         ],
                     ),
                 ],
+                parameters={
+                    "corporis": "explicabo",
+                },
                 resource_arns=[
-                    "esse",
-                    "ut",
+                    "enim",
+                    "omnis",
+                    "nemo",
+                    "minima",
                 ],
                 resource_tags={
-                    "deserunt": "ut",
-                    "in": "maiores",
+                    "accusantium": "iure",
+                    "culpa": "doloribus",
+                    "sapiente": "architecto",
                 },
-                resource_type="iure",
-                selection_mode="qui",
+                resource_type="mollitia",
+                selection_mode="dolorem",
+            ),
+            "culpa": shared.CreateExperimentTemplateTargetInput(
+                filters=[
+                    shared.ExperimentTemplateTargetInputFilter(
+                        path="repellat",
+                        values=[
+                            "occaecati",
+                            "numquam",
+                            "commodi",
+                        ],
+                    ),
+                ],
+                parameters={
+                    "molestiae": "velit",
+                    "error": "quia",
+                },
+                resource_arns=[
+                    "vitae",
+                    "laborum",
+                ],
+                resource_tags={
+                    "enim": "odit",
+                    "quo": "sequi",
+                    "tenetur": "ipsam",
+                },
+                resource_type="id",
+                selection_mode="possimus",
+            ),
+            "aut": shared.CreateExperimentTemplateTargetInput(
+                filters=[
+                    shared.ExperimentTemplateTargetInputFilter(
+                        path="error",
+                        values=[
+                            "laborum",
+                            "quasi",
+                            "reiciendis",
+                            "voluptatibus",
+                        ],
+                    ),
+                ],
+                parameters={
+                    "nihil": "praesentium",
+                    "voluptatibus": "ipsa",
+                    "omnis": "voluptate",
+                    "cum": "perferendis",
+                },
+                resource_arns=[
+                    "reprehenderit",
+                ],
+                resource_tags={
+                    "maiores": "dicta",
+                    "corporis": "dolore",
+                },
+                resource_type="iusto",
+                selection_mode="dicta",
             ),
         },
     ),
+    x_amz_algorithm="harum",
+    x_amz_content_sha256="enim",
+    x_amz_credential="accusamus",
+    x_amz_date="commodi",
+    x_amz_security_token="repudiandae",
+    x_amz_signature="quae",
+    x_amz_signed_headers="ipsum",
 )
     
 res = s.create_experiment_template(req)

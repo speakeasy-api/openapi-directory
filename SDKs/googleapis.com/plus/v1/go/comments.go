@@ -32,20 +32,20 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // PlusCommentsGet - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-func (s *comments) PlusCommentsGet(ctx context.Context, request operations.PlusCommentsGetRequest) (*operations.PlusCommentsGetResponse, error) {
+func (s *comments) PlusCommentsGet(ctx context.Context, request operations.PlusCommentsGetRequest, security operations.PlusCommentsGetSecurity) (*operations.PlusCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{commentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/comments/{commentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *comments) PlusCommentsGet(ctx context.Context, request operations.PlusC
 }
 
 // PlusCommentsList - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-func (s *comments) PlusCommentsList(ctx context.Context, request operations.PlusCommentsListRequest) (*operations.PlusCommentsListResponse, error) {
+func (s *comments) PlusCommentsList(ctx context.Context, request operations.PlusCommentsListRequest, security operations.PlusCommentsListSecurity) (*operations.PlusCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

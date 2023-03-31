@@ -11,22 +11,13 @@ var PricebycontextServerList = []string{
 	"https://rnb.{environment}.com.br/api/pricing/pvt",
 }
 
-type PricebycontextQueryParams struct {
-	An string `queryParam:"style=form,explode=true,name=an"`
-}
-
-type PricebycontextHeaders struct {
+type PricebycontextRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type PricebycontextRequest struct {
-	QueryParams PricebycontextQueryParams
-	Headers     PricebycontextHeaders
-	Request     shared.PricebycontextRequest `request:"mediaType=application/json"`
-	ServerURL   *string
+	ContentType           string                       `header:"style=simple,explode=false,name=Content-Type"`
+	PricebycontextRequest shared.PricebycontextRequest `request:"mediaType=application/json"`
+	An                    string                       `queryParam:"style=form,explode=true,name=an"`
 }
 
 type PricebycontextResponse struct {

@@ -44,16 +44,12 @@ func (e *GetGetPathwayFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetPathwayQueryParams struct {
+type GetGetPathwayRequest struct {
 	Format *GetGetPathwayFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The pathway identifier
 	PwID string `queryParam:"style=form,explode=true,name=pwId"`
 	// The revision number of the pathway (use 0 for most recent)
 	Revision *int64 `queryParam:"style=form,explode=true,name=revision"`
-}
-
-type GetGetPathwayRequest struct {
-	QueryParams GetGetPathwayQueryParams
 }
 
 type GetGetPathwayResponse struct {

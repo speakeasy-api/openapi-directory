@@ -4,21 +4,17 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostVisitorIdentificationV3TokensCreateGenerateTokenRequest(
-    security=operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity(
-        hapikey=shared.SchemeHapikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    request=shared.IdentificationTokenGenerationRequest(
-        email="similique",
-        first_name="ullam",
-        last_name="qui",
-    ),
+
+
+req = shared.IdentificationTokenGenerationRequest(
+    email="Larue_Rau85@yahoo.com",
+    first_name="Karley",
+    last_name="Stamm",
 )
     
-res = s.generate.post_visitor_identification_v3_tokens_create_generate_token(req)
+res = s.generate.post_visitor_identification_v3_tokens_create_generate_token(req, operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity(
+    hapikey="YOUR_API_KEY_HERE",
+))
 
 if res.identification_token_response is not None:
     # handle response

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelGroupApplicationPathParams struct {
+type CancelGroupApplicationRequest struct {
 	// The unique identifier of the group application in Noyo
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
 	// The current version identifier of the group application
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type CancelGroupApplicationRequest struct {
-	PathParams CancelGroupApplicationPathParams
 }
 
 type CancelGroupApplicationResponse struct {

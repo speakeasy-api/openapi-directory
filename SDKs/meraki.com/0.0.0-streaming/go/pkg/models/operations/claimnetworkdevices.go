@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ClaimNetworkDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type ClaimNetworkDevicesRequestBody struct {
 	// [DEPRECATED] The serial of a device to claim
 	Serial *string `json:"serial,omitempty"`
@@ -18,8 +14,8 @@ type ClaimNetworkDevicesRequestBody struct {
 }
 
 type ClaimNetworkDevicesRequest struct {
-	PathParams ClaimNetworkDevicesPathParams
-	Request    *ClaimNetworkDevicesRequestBody `request:"mediaType=application/json"`
+	RequestBody *ClaimNetworkDevicesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type ClaimNetworkDevicesResponse struct {

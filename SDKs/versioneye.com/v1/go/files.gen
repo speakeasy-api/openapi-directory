@@ -15,5 +15,4 @@ pkg/utils/utils.go
 pkg/models/operations/getapiv1scans.go
 pkg/models/operations/getapiv1scansid.go
 pkg/models/operations/getapiv1scansidfilesfileid.go
-pkg/models/shared/security.go
 USAGE.md

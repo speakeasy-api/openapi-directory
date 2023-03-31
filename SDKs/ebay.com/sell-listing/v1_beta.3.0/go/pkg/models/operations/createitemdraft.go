@@ -8,20 +8,15 @@ import (
 )
 
 type CreateItemDraftSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateItemDraftHeaders struct {
-	// Use this header to specify the natural language of the seller. For details, see Content-Language in HTTP request headers. Required: For EBAY_CA in French. (Content-Language = fr-CA)
-	ContentLanguage *string `header:"style=simple,explode=false,name=Content-Language"`
-	// Use this header to specify an eBay marketplace ID. For a list of supported sites, see API Restrictions in the Listing API overview.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateItemDraftRequest struct {
-	Headers  CreateItemDraftHeaders
-	Request  *shared.ItemDraft `request:"mediaType=application/json"`
-	Security CreateItemDraftSecurity
+	// Use this header to specify the natural language of the seller. For details, see Content-Language in HTTP request headers. Required: For EBAY_CA in French. (Content-Language = fr-CA)
+	ContentLanguage *string           `header:"style=simple,explode=false,name=Content-Language"`
+	ItemDraft       *shared.ItemDraft `request:"mediaType=application/json"`
+	// Use this header to specify an eBay marketplace ID. For a list of supported sites, see API Restrictions in the Listing API overview.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type CreateItemDraftResponse struct {

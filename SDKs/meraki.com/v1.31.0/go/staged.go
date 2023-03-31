@@ -34,9 +34,9 @@ func newStaged(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Create a Staged Upgrade Event for a network
 func (s *staged) CreateNetworkFirmwareUpgradesStagedEvent(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesStagedEventRequest) (*operations.CreateNetworkFirmwareUpgradesStagedEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *staged) CreateNetworkFirmwareUpgradesStagedEvent(ctx context.Context, r
 // Create a Staged Upgrade Group for a network
 func (s *staged) CreateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesStagedGroupRequest) (*operations.CreateNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *staged) CreateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // Postpone by 1 week all pending staged upgrade stages for a network
 func (s *staged) DeferNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.DeferNetworkFirmwareUpgradesStagedEventsRequest) (*operations.DeferNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -189,7 +189,7 @@ func (s *staged) DeferNetworkFirmwareUpgradesStagedEvents(ctx context.Context, r
 // Delete a Staged Upgrade Group
 func (s *staged) DeleteNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest) (*operations.DeleteNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *staged) DeleteNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // Get the Staged Upgrade Event from a network
 func (s *staged) GetNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedEventsRequest) (*operations.GetNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +270,7 @@ func (s *staged) GetNetworkFirmwareUpgradesStagedEvents(ctx context.Context, req
 // Get a Staged Upgrade Group from a network
 func (s *staged) GetNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedGroupRequest) (*operations.GetNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,7 +315,7 @@ func (s *staged) GetNetworkFirmwareUpgradesStagedGroup(ctx context.Context, requ
 // List of Staged Upgrade Groups in a network
 func (s *staged) GetNetworkFirmwareUpgradesStagedGroups(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedGroupsRequest) (*operations.GetNetworkFirmwareUpgradesStagedGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -360,7 +360,7 @@ func (s *staged) GetNetworkFirmwareUpgradesStagedGroups(ctx context.Context, req
 // Order of Staged Upgrade Groups in a network
 func (s *staged) GetNetworkFirmwareUpgradesStagedStages(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedStagesRequest) (*operations.GetNetworkFirmwareUpgradesStagedStagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,9 +405,9 @@ func (s *staged) GetNetworkFirmwareUpgradesStagedStages(ctx context.Context, req
 // Rollback a Staged Upgrade Event for a network
 func (s *staged) RollbacksNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.RollbacksNetworkFirmwareUpgradesStagedEventsRequest) (*operations.RollbacksNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,9 +460,9 @@ func (s *staged) RollbacksNetworkFirmwareUpgradesStagedEvents(ctx context.Contex
 // Update the Staged Upgrade Event for a network
 func (s *staged) UpdateNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedEventsRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,9 +515,9 @@ func (s *staged) UpdateNetworkFirmwareUpgradesStagedEvents(ctx context.Context, 
 // Update a Staged Upgrade Group for a network
 func (s *staged) UpdateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,9 +570,9 @@ func (s *staged) UpdateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // Assign Staged Upgrade Group order in the sequence.
 func (s *staged) UpdateNetworkFirmwareUpgradesStagedStages(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedStagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

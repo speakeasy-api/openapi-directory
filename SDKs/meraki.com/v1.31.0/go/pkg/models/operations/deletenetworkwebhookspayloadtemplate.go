@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkWebhooksPayloadTemplatePathParams struct {
+type DeleteNetworkWebhooksPayloadTemplateRequest struct {
 	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
 	PayloadTemplateID string `pathParam:"style=simple,explode=false,name=payloadTemplateId"`
-}
-
-type DeleteNetworkWebhooksPayloadTemplateRequest struct {
-	PathParams DeleteNetworkWebhooksPayloadTemplatePathParams
 }
 
 type DeleteNetworkWebhooksPayloadTemplateResponse struct {

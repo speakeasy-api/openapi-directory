@@ -8,20 +8,14 @@ import (
 )
 
 type DfareportingReportsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DfareportingReportsUpdatePathParams struct {
-	// The Campaign Manager 360 user profile ID.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// The ID of the report.
-	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type DfareportingReportsUpdateQueryParams struct {
+type DfareportingReportsUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Report      *shared.Report    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,19 +30,16 @@ type DfareportingReportsUpdateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The Campaign Manager 360 user profile ID.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the report.
+	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingReportsUpdateRequest struct {
-	PathParams  DfareportingReportsUpdatePathParams
-	QueryParams DfareportingReportsUpdateQueryParams
-	Request     *shared.Report `request:"mediaType=application/json"`
-	Security    DfareportingReportsUpdateSecurity
 }
 
 type DfareportingReportsUpdateResponse struct {

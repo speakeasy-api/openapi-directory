@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClassifyImagePathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Specifies the name of the model to evaluate against.
-	PublishedName string `pathParam:"style=simple,explode=false,name=publishedName"`
-}
-
-type ClassifyImageQueryParams struct {
-	// Optional. Specifies the name of application using the endpoint.
-	Application *string `queryParam:"style=form,explode=true,name=application"`
-}
-
 type ClassifyImageRequestBodyImageData struct {
 	Content   []byte `multipartForm:"content"`
 	ImageData string `multipartForm:"name=imageData"`
@@ -30,9 +18,13 @@ type ClassifyImageRequestBody struct {
 }
 
 type ClassifyImageRequest struct {
-	PathParams  ClassifyImagePathParams
-	QueryParams ClassifyImageQueryParams
-	Request     ClassifyImageRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ClassifyImageRequestBody `request:"mediaType=multipart/form-data"`
+	// Optional. Specifies the name of application using the endpoint.
+	Application *string `queryParam:"style=form,explode=true,name=application"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+	// Specifies the name of the model to evaluate against.
+	PublishedName string `pathParam:"style=simple,explode=false,name=publishedName"`
 }
 
 type ClassifyImageResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserPaymentInfoPathParams struct {
+type GetUserPaymentInfoRequest struct {
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetUserPaymentInfoRequest struct {
-	PathParams GetUserPaymentInfoPathParams
 }
 
 type GetUserPaymentInfoResponse struct {

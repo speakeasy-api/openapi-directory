@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams struct {
-	NetworkID       string `pathParam:"style=simple,explode=false,name=networkId"`
-	TrustedServerID string `pathParam:"style=simple,explode=false,name=trustedServerId"`
-}
-
 // UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBodyIpv4 - The updated IPv4 attributes of the trusted server
 type UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBodyIpv4 struct {
 	// The updated IPv4 address of the trusted server
@@ -27,8 +22,9 @@ type UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody st
 }
 
 type UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest struct {
-	PathParams UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams
-	Request    *UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody `request:"mediaType=application/json"`
+	RequestBody     *UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody `request:"mediaType=application/json"`
+	NetworkID       string                                                                    `pathParam:"style=simple,explode=false,name=networkId"`
+	TrustedServerID string                                                                    `pathParam:"style=simple,explode=false,name=trustedServerId"`
 }
 
 // UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer200ApplicationJSONIpv4 - IPv4 attributes of the trusted server.

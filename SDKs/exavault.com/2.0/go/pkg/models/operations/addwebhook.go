@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddWebhookHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 // AddWebhookAddWebhookRequestBodyResponseVersionEnum - What version of webhook request should be sent to the endpoint URL when messages are sent
 type AddWebhookAddWebhookRequestBodyResponseVersionEnum string
 
@@ -51,8 +44,11 @@ type AddWebhookAddWebhookRequestBody struct {
 }
 
 type AddWebhookRequest struct {
-	Headers AddWebhookHeaders
-	Request *AddWebhookAddWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddWebhookAddWebhookRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddWebhookResponse struct {

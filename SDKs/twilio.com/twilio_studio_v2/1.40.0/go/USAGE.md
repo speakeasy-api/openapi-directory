@@ -14,16 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateExecutionRequest{
-        Security: operations.CreateExecutionSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateExecutionPathParams{
-            FlowSid: "corrupti",
-        },
-        Request: &operations.CreateExecutionCreateExecutionRequest{
+        FlowSid: "corrupti",
+        RequestBody: &operations.CreateExecutionCreateExecutionRequest{
             From: "provident",
             Parameters: "distinctio",
             To: "quibusdam",
@@ -31,7 +23,10 @@ func main() {
     }
 
     ctx := context.Background()
-    res, err := s.CreateExecution(ctx, req)
+    res, err := s.CreateExecution(ctx, req, operations.CreateExecutionSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

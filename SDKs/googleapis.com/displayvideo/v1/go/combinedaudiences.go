@@ -33,20 +33,20 @@ func newCombinedAudiences(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // DisplayvideoCombinedAudiencesGet - Gets a combined audience.
-func (s *combinedAudiences) DisplayvideoCombinedAudiencesGet(ctx context.Context, request operations.DisplayvideoCombinedAudiencesGetRequest) (*operations.DisplayvideoCombinedAudiencesGetResponse, error) {
+func (s *combinedAudiences) DisplayvideoCombinedAudiencesGet(ctx context.Context, request operations.DisplayvideoCombinedAudiencesGetRequest, security operations.DisplayvideoCombinedAudiencesGetSecurity) (*operations.DisplayvideoCombinedAudiencesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/combinedAudiences/{combinedAudienceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/combinedAudiences/{combinedAudienceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *combinedAudiences) DisplayvideoCombinedAudiencesGet(ctx context.Context
 }
 
 // DisplayvideoCombinedAudiencesList - Lists combined audiences. The order is defined by the order_by parameter.
-func (s *combinedAudiences) DisplayvideoCombinedAudiencesList(ctx context.Context, request operations.DisplayvideoCombinedAudiencesListRequest) (*operations.DisplayvideoCombinedAudiencesListResponse, error) {
+func (s *combinedAudiences) DisplayvideoCombinedAudiencesList(ctx context.Context, request operations.DisplayvideoCombinedAudiencesListRequest, security operations.DisplayvideoCombinedAudiencesListSecurity) (*operations.DisplayvideoCombinedAudiencesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/combinedAudiences"
 
@@ -90,11 +90,11 @@ func (s *combinedAudiences) DisplayvideoCombinedAudiencesList(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

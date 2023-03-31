@@ -8,21 +8,16 @@ import (
 )
 
 type RenewTokenSecurity struct {
-	Oauth2ClientSecret shared.SchemeOauth2ClientSecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type RenewTokenPathParams struct {
-	// Your application ID, available from the [developer dashboard](https://developer.squareup.com/apps).
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
+	Oauth2ClientSecret string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type RenewTokenRequest struct {
-	PathParams RenewTokenPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.RenewTokenRequest `request:"mediaType=application/json"`
-	Security RenewTokenSecurity
+	RenewTokenRequest shared.RenewTokenRequest `request:"mediaType=application/json"`
+	// Your application ID, available from the [developer dashboard](https://developer.squareup.com/apps).
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type RenewTokenResponse struct {

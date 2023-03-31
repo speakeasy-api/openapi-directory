@@ -13,10 +13,11 @@ var ListBundleServerList = []string{
 }
 
 type ListBundleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListBundleQueryParams struct {
+type ListBundleRequest struct {
 	// The string that you assigned to describe the resource. The column can contain 255 variable characters.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// Indicates that the Bundle is a valid Bundle until a specified expiration date.
@@ -45,12 +46,6 @@ type ListBundleQueryParams struct {
 	ValidUntilDateLessThan *time.Time `queryParam:"style=form,explode=true,name=ValidUntilDate<"`
 	// Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate>=` or `ValidUntilDate<=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.
 	ValidUntilDateGreaterThan *time.Time `queryParam:"style=form,explode=true,name=ValidUntilDate>"`
-}
-
-type ListBundleRequest struct {
-	QueryParams ListBundleQueryParams
-	Security    ListBundleSecurity
-	ServerURL   *string
 }
 
 type ListBundleListBundleResponseMeta struct {

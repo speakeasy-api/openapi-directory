@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PayorLinksV1QueryParams struct {
+type PayorLinksV1Request struct {
 	// The Payor ID from which to start the query to show all descendants
 	DescendantsOfPayor *string `queryParam:"style=form,explode=true,name=descendantsOfPayor"`
 	// <p>List of additional Payor fields to include in the response for each Payor</p>
@@ -18,10 +18,6 @@ type PayorLinksV1QueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Query for the parent payor details for this payor id
 	ParentOfPayor *string `queryParam:"style=form,explode=true,name=parentOfPayor"`
-}
-
-type PayorLinksV1Request struct {
-	QueryParams PayorLinksV1QueryParams
 }
 
 type PayorLinksV1Response struct {

@@ -14,33 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateBindingRequest{
-        Security: operations.CreateBindingSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateBindingPathParams{
-            ServiceSid: "corrupti",
-        },
-        Request: &operations.CreateBindingCreateBindingRequest{
-            Address: "7868 Stamm Junctions",
-            BindingType: "fcm",
-            CredentialSid: "deserunt",
-            Endpoint: "suscipit",
-            Identity: "iure",
-            NotificationProtocolVersion: "magnam",
+        RequestBody: &operations.CreateBindingCreateBindingRequest{
+            Address: "5786 Little Streets",
+            BindingType: "sms",
+            CredentialSid: "error",
+            Endpoint: "deserunt",
+            Identity: "suscipit",
+            NotificationProtocolVersion: "iure",
             Tag: []string{
+                "debitis",
                 "ipsa",
-                "delectus",
-                "tempora",
-                "suscipit",
             },
         },
+        ServiceSid: "delectus",
     }
 
     ctx := context.Background()
-    res, err := s.CreateBinding(ctx, req)
+    res, err := s.CreateBinding(ctx, req, operations.CreateBindingSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

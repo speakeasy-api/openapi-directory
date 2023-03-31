@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveALimitPathParams struct {
-	LimitID string `pathParam:"style=simple,explode=false,name=limit_id"`
-}
-
 type RetrieveALimitRequest struct {
-	PathParams RetrieveALimitPathParams
+	LimitID string `pathParam:"style=simple,explode=false,name=limit_id"`
 }
 
 type RetrieveALimitDefaultApplicationJSON13StatusEnum string

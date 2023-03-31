@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelShipmentsPathParams struct {
+type CancelShipmentsRequest struct {
 	// Shipment ID
 	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
-}
-
-type CancelShipmentsRequest struct {
-	PathParams CancelShipmentsPathParams
 }
 
 type CancelShipmentsResponse struct {

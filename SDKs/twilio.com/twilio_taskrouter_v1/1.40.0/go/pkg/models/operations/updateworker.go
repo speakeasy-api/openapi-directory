@@ -12,19 +12,8 @@ var UpdateWorkerServerList = []string{
 }
 
 type UpdateWorkerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWorkerPathParams struct {
-	// The SID of the Worker resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the Workspace with the Worker to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type UpdateWorkerHeaders struct {
-	// The If-Match HTTP request header
-	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateWorkerUpdateWorkerRequest struct {
@@ -39,11 +28,13 @@ type UpdateWorkerUpdateWorkerRequest struct {
 }
 
 type UpdateWorkerRequest struct {
-	PathParams UpdateWorkerPathParams
-	Headers    UpdateWorkerHeaders
-	Request    *UpdateWorkerUpdateWorkerRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateWorkerSecurity
-	ServerURL  *string
+	// The If-Match HTTP request header
+	IfMatch     *string                          `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody *UpdateWorkerUpdateWorkerRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Worker resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the Workspace with the Worker to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateWorkerResponse struct {

@@ -8,11 +8,12 @@ import (
 )
 
 type DriveTeamdrivesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DriveTeamdrivesCreateQueryParams struct {
+type DriveTeamdrivesCreateRequest struct {
+	TeamDrive *shared.TeamDrive `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -29,12 +30,6 @@ type DriveTeamdrivesCreateQueryParams struct {
 	RequestID string `queryParam:"style=form,explode=true,name=requestId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveTeamdrivesCreateRequest struct {
-	QueryParams DriveTeamdrivesCreateQueryParams
-	Request     *shared.TeamDrive `request:"mediaType=application/json"`
-	Security    DriveTeamdrivesCreateSecurity
 }
 
 type DriveTeamdrivesCreateResponse struct {

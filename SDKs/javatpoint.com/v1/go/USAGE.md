@@ -14,154 +14,143 @@ func main() {
     s := sdk.New()
 
     req := operations.FcmProjectsMessagesSendRequest{
-        Security: operations.FcmProjectsMessagesSendSecurity{
-            Option1: &operations.FcmProjectsMessagesSendSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.FcmProjectsMessagesSendPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.FcmProjectsMessagesSendQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.SendMessageRequest{
+        DollarXgafv: "2",
+        SendMessageRequest: &shared.SendMessageRequest{
             Message: &shared.Message{
                 Android: &shared.AndroidConfig{
-                    CollapseKey: "suscipit",
+                    CollapseKey: "provident",
                     Data: map[string]string{
-                        "magnam": "debitis",
-                        "ipsa": "delectus",
+                        "quibusdam": "unde",
+                        "nulla": "corrupti",
+                        "illum": "vel",
                     },
                     DirectBootOk: false,
                     FcmOptions: &shared.AndroidFcmOptions{
-                        AnalyticsLabel: "tempora",
+                        AnalyticsLabel: "error",
                     },
                     Notification: &shared.AndroidNotification{
-                        Body: "suscipit",
+                        Body: "deserunt",
                         BodyLocArgs: []string{
-                            "minus",
-                            "placeat",
+                            "iure",
+                            "magnam",
                         },
-                        BodyLocKey: "voluptatum",
+                        BodyLocKey: "debitis",
                         BypassProxyNotification: false,
-                        ChannelID: "iusto",
-                        ClickAction: "excepturi",
-                        Color: "nisi",
+                        ChannelID: "ipsa",
+                        ClickAction: "delectus",
+                        Color: "tempora",
                         DefaultLightSettings: false,
                         DefaultSound: false,
                         DefaultVibrateTimings: false,
-                        EventTime: "recusandae",
-                        Icon: "temporibus",
-                        Image: "ab",
+                        EventTime: "suscipit",
+                        Icon: "molestiae",
+                        Image: "minus",
                         LightSettings: &shared.LightSettings{
                             Color: &shared.Color{
-                                Alpha: 3373.96,
-                                Blue: 871.29,
-                                Green: 6481.72,
-                                Red: 202.18,
+                                Alpha: 8121.69,
+                                Blue: 5288.95,
+                                Green: 4799.77,
+                                Red: 5680.45,
                             },
-                            LightOffDuration: "ipsam",
-                            LightOnDuration: "repellendus",
+                            LightOffDuration: "nisi",
+                            LightOnDuration: "recusandae",
                         },
                         LocalOnly: false,
-                        NotificationCount: 957156,
-                        NotificationPriority: "PRIORITY_HIGH",
-                        Sound: "odit",
+                        NotificationCount: 836079,
+                        NotificationPriority: "PRIORITY_UNSPECIFIED",
+                        Sound: "quis",
                         Sticky: false,
-                        Tag: "at",
-                        Ticker: "at",
-                        Title: "Dr.",
+                        Tag: "veritatis",
+                        Ticker: "deserunt",
+                        Title: "Mr.",
                         TitleLocArgs: []string{
-                            "quod",
-                            "quod",
+                            "repellendus",
+                            "sapiente",
                         },
-                        TitleLocKey: "esse",
+                        TitleLocKey: "quo",
                         VibrateTimings: []string{
-                            "porro",
-                            "dolorum",
-                            "dicta",
+                            "at",
                         },
-                        Visibility: "PUBLIC",
+                        Visibility: "SECRET",
                     },
                     Priority: "HIGH",
-                    RestrictedPackageName: "occaecati",
-                    TTL: "fugit",
+                    RestrictedPackageName: "molestiae",
+                    TTL: "quod",
                 },
                 Apns: &shared.ApnsConfig{
                     FcmOptions: &shared.ApnsFcmOptions{
-                        AnalyticsLabel: "deleniti",
-                        Image: "hic",
+                        AnalyticsLabel: "quod",
+                        Image: "esse",
                     },
                     Headers: map[string]string{
-                        "totam": "beatae",
-                        "commodi": "molestiae",
-                        "modi": "qui",
-                        "impedit": "cum",
+                        "porro": "dolorum",
+                        "dicta": "nam",
+                        "officia": "occaecati",
                     },
                     Payload: map[string]interface{}{
-                        "ipsum": "excepturi",
-                        "aspernatur": "perferendis",
+                        "deleniti": "hic",
                     },
                 },
-                Condition: "ad",
+                Condition: "optio",
                 Data: map[string]string{
-                    "sed": "iste",
-                    "dolor": "natus",
-                    "laboriosam": "hic",
+                    "beatae": "commodi",
+                    "molestiae": "modi",
+                    "qui": "impedit",
                 },
                 FcmOptions: &shared.FcmOptions{
-                    AnalyticsLabel: "saepe",
+                    AnalyticsLabel: "cum",
                 },
-                Name: "fuga",
+                Name: "esse",
                 Notification: &shared.Notification{
-                    Body: "in",
-                    Image: "corporis",
-                    Title: "Miss",
+                    Body: "ipsum",
+                    Image: "excepturi",
+                    Title: "Mr.",
                 },
-                Token: "iure",
-                Topic: "saepe",
+                Token: "perferendis",
+                Topic: "ad",
                 Webpush: &shared.WebpushConfig{
                     Data: map[string]string{
+                        "sed": "iste",
+                        "dolor": "natus",
+                        "laboriosam": "hic",
+                    },
+                    FcmOptions: &shared.WebpushFcmOptions{
+                        AnalyticsLabel: "saepe",
+                        Link: "fuga",
+                    },
+                    Headers: map[string]string{
+                        "corporis": "iste",
+                        "iure": "saepe",
+                    },
+                    Notification: map[string]interface{}{
                         "architecto": "ipsa",
                         "reiciendis": "est",
                         "mollitia": "laborum",
-                    },
-                    FcmOptions: &shared.WebpushFcmOptions{
-                        AnalyticsLabel: "dolores",
-                        Link: "dolorem",
-                    },
-                    Headers: map[string]string{
-                        "explicabo": "nobis",
-                        "enim": "omnis",
-                    },
-                    Notification: map[string]interface{}{
-                        "minima": "excepturi",
-                        "accusantium": "iure",
                     },
                 },
             },
             ValidateOnly: false,
         },
+        AccessToken: "dolores",
+        Alt: "json",
+        Callback: "corporis",
+        Fields: "explicabo",
+        Key: "nobis",
+        OauthToken: "enim",
+        Parent: "omnis",
+        PrettyPrint: false,
+        QuotaUser: "nemo",
+        UploadType: "minima",
+        UploadProtocol: "excepturi",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.FcmProjectsMessagesSend(ctx, req)
+    res, err := s.Projects.FcmProjectsMessagesSend(ctx, req, operations.FcmProjectsMessagesSendSecurity{
+        Option1: &operations.FcmProjectsMessagesSendSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

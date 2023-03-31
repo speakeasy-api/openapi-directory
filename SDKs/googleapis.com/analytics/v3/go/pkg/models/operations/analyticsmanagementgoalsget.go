@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementGoalsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementGoalsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementGoalsGetSecurity struct {
@@ -22,38 +22,29 @@ type AnalyticsManagementGoalsGetSecurity struct {
 	Option2 *AnalyticsManagementGoalsGetSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementGoalsGetPathParams struct {
+type AnalyticsManagementGoalsGetRequest struct {
 	// Account ID to retrieve the goal for.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Goal ID to retrieve the goal for.
-	GoalID string `pathParam:"style=simple,explode=false,name=goalId"`
-	// View (Profile) ID to retrieve the goal for.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property ID to retrieve the goal for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementGoalsGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Goal ID to retrieve the goal for.
+	GoalID string `pathParam:"style=simple,explode=false,name=goalId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// View (Profile) ID to retrieve the goal for.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementGoalsGetRequest struct {
-	PathParams  AnalyticsManagementGoalsGetPathParams
-	QueryParams AnalyticsManagementGoalsGetQueryParams
-	Security    AnalyticsManagementGoalsGetSecurity
+	// Web property ID to retrieve the goal for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementGoalsGetResponse struct {

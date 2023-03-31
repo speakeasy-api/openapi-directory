@@ -8,17 +8,12 @@ import (
 )
 
 type GetServicesSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetServicesQueryParams struct {
-	// an optional search string for filtering results
-	Search *string `queryParam:"style=form,explode=true,name=search"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetServicesRequest struct {
-	QueryParams GetServicesQueryParams
-	Security    GetServicesSecurity
+	// an optional search string for filtering results
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type GetServicesResponse struct {

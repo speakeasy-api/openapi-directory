@@ -12,18 +12,13 @@ var FetchTrunkingCountryServerList = []string{
 }
 
 type FetchTrunkingCountrySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchTrunkingCountryPathParams struct {
-	// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the origin-based voice pricing information to fetch.
-	IsoCountry string `pathParam:"style=simple,explode=false,name=IsoCountry"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchTrunkingCountryRequest struct {
-	PathParams FetchTrunkingCountryPathParams
-	Security   FetchTrunkingCountrySecurity
-	ServerURL  *string
+	// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the origin-based voice pricing information to fetch.
+	IsoCountry string `pathParam:"style=simple,explode=false,name=IsoCountry"`
 }
 
 type FetchTrunkingCountryResponse struct {

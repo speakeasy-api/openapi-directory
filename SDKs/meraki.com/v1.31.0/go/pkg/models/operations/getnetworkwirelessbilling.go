@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessBillingPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkWirelessBillingRequest struct {
-	PathParams GetNetworkWirelessBillingPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkWirelessBillingResponse struct {

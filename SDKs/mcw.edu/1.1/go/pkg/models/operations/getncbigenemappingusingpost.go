@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetNCBIGeneMappingUsingPOSTRequest struct {
-	// data
-	Request *shared.RGDIDListRequest `request:"mediaType=application/json"`
-}
 
 type GetNCBIGeneMappingUsingPOSTResponse struct {
 	Body        []byte

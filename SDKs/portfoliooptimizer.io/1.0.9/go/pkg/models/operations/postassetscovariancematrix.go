@@ -128,10 +128,6 @@ func (u PostAssetsCovarianceMatrixRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostAssetsCovarianceMatrixRequest struct {
-	Request PostAssetsCovarianceMatrixRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCovarianceMatrix200ApplicationJSON - OK
 type PostAssetsCovarianceMatrix200ApplicationJSON struct {
 	// assetsCovarianceMatrix[i][j] is the covariance between the asset i and the asset j

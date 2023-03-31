@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type PostOwnershipUninstallOwnershipIDPathParams struct {
-	// The id of the ownership to be unintalled
-	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
-}
-
-type PostOwnershipUninstallOwnershipIDQueryParams struct {
+type PostOwnershipUninstallOwnershipIDRequest struct {
 	// True if this app will require payment to be re-installed. Default is false
 	CancelOwnership *bool `queryParam:"style=form,explode=true,name=cancelOwnership"`
 	// A custom JSON object to attach to this ownership record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
+	// The id of the ownership to be unintalled
+	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
 	// The id of the User requesting to uninstall the App
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type PostOwnershipUninstallOwnershipIDRequest struct {
-	PathParams  PostOwnershipUninstallOwnershipIDPathParams
-	QueryParams PostOwnershipUninstallOwnershipIDQueryParams
 }
 
 type PostOwnershipUninstallOwnershipIDResponse struct {

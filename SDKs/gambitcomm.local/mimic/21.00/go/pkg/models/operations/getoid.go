@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetOidPathParams struct {
+type GetOidRequest struct {
 	// Agent to show the OID
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object
 	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GetOidRequest struct {
-	PathParams GetOidPathParams
 }
 
 type GetOidResponse struct {

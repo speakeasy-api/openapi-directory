@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SplitOidPathParams struct {
+type SplitOidRequest struct {
 	// OID
 	Oid string `pathParam:"style=simple,explode=false,name=OID"`
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type SplitOidRequest struct {
-	PathParams SplitOidPathParams
 }
 
 type SplitOidResponse struct {

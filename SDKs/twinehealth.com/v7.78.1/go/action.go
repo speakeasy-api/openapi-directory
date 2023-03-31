@@ -35,7 +35,7 @@ func newAction(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // CreateAction - Create action
 // Create a plan action
-func (s *action) CreateAction(ctx context.Context, request operations.CreateActionRequest) (*operations.CreateActionResponse, error) {
+func (s *action) CreateAction(ctx context.Context, request shared.CreateActionRequestInput) (*operations.CreateActionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/action"
 
@@ -106,7 +106,7 @@ func (s *action) CreateAction(ctx context.Context, request operations.CreateActi
 // Get a health action from a patient's plan.
 func (s *action) FetchAction(ctx context.Context, request operations.FetchActionRequest) (*operations.FetchActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/action/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/action/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,9 +163,9 @@ func (s *action) FetchAction(ctx context.Context, request operations.FetchAction
 // Update a health action from a patient's plan.
 func (s *action) UpdateAction(ctx context.Context, request operations.UpdateActionRequest) (*operations.UpdateActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/action/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/action/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateActionRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

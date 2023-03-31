@@ -8,13 +8,13 @@ import (
 )
 
 type DisplayvideoAdvertisersCampaignsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DisplayvideoAdvertisersCampaignsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DisplayvideoAdvertisersCampaignsListSecurity struct {
@@ -22,16 +22,13 @@ type DisplayvideoAdvertisersCampaignsListSecurity struct {
 	Option2 *DisplayvideoAdvertisersCampaignsListSecurityOption2 `security:"option"`
 }
 
-type DisplayvideoAdvertisersCampaignsListPathParams struct {
-	// The ID of the advertiser to list campaigns for.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-}
-
-type DisplayvideoAdvertisersCampaignsListQueryParams struct {
+type DisplayvideoAdvertisersCampaignsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The ID of the advertiser to list campaigns for.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -58,12 +55,6 @@ type DisplayvideoAdvertisersCampaignsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersCampaignsListRequest struct {
-	PathParams  DisplayvideoAdvertisersCampaignsListPathParams
-	QueryParams DisplayvideoAdvertisersCampaignsListQueryParams
-	Security    DisplayvideoAdvertisersCampaignsListSecurity
 }
 
 type DisplayvideoAdvertisersCampaignsListResponse struct {

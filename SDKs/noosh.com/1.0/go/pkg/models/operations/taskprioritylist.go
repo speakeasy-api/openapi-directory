@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TaskPriorityListPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type TaskPriorityListRequest struct {
-	PathParams TaskPriorityListPathParams
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type TaskPriorityListResponse struct {

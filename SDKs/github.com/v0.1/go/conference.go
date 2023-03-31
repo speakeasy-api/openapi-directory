@@ -35,7 +35,7 @@ func newConference(defaultClient, securityClient HTTPClient, serverURL, language
 
 // PostV01ConferenceDeaf - /v0.1/ConferenceDeaf/
 // Blocks audio to one or more conference members
-func (s *conference) PostV01ConferenceDeaf(ctx context.Context, request operations.PostV01ConferenceDeafRequest) (*operations.PostV01ConferenceDeafResponse, error) {
+func (s *conference) PostV01ConferenceDeaf(ctx context.Context, request shared.ConferenceDeafParameters, security operations.PostV01ConferenceDeafSecurity) (*operations.PostV01ConferenceDeafResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceDeaf/"
 
@@ -51,7 +51,7 @@ func (s *conference) PostV01ConferenceDeaf(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *conference) PostV01ConferenceDeaf(ctx context.Context, request operatio
 
 // PostV01ConferenceHangup - /v0.1/ConferenceHangup/
 // Kicks one or more conference members, without playing the kick sound
-func (s *conference) PostV01ConferenceHangup(ctx context.Context, request operations.PostV01ConferenceHangupRequest) (*operations.PostV01ConferenceHangupResponse, error) {
+func (s *conference) PostV01ConferenceHangup(ctx context.Context, request shared.ConferenceHangupParameters, security operations.PostV01ConferenceHangupSecurity) (*operations.PostV01ConferenceHangupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceHangup/"
 
@@ -103,7 +103,7 @@ func (s *conference) PostV01ConferenceHangup(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,7 +139,7 @@ func (s *conference) PostV01ConferenceHangup(ctx context.Context, request operat
 
 // PostV01ConferenceKick - /v0.1/ConferenceKick/
 // Kicks one or more conference members
-func (s *conference) PostV01ConferenceKick(ctx context.Context, request operations.PostV01ConferenceKickRequest) (*operations.PostV01ConferenceKickResponse, error) {
+func (s *conference) PostV01ConferenceKick(ctx context.Context, request shared.ConferenceKickParameters, security operations.PostV01ConferenceKickSecurity) (*operations.PostV01ConferenceKickResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceKick/"
 
@@ -155,7 +155,7 @@ func (s *conference) PostV01ConferenceKick(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *conference) PostV01ConferenceKick(ctx context.Context, request operatio
 
 // PostV01ConferenceList - /v0.1/ConferenceList/
 // Returns a list of all established conferences
-func (s *conference) PostV01ConferenceList(ctx context.Context, request operations.PostV01ConferenceListRequest) (*operations.PostV01ConferenceListResponse, error) {
+func (s *conference) PostV01ConferenceList(ctx context.Context, request shared.ConferenceListParameters, security operations.PostV01ConferenceListSecurity) (*operations.PostV01ConferenceListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceList/"
 
@@ -207,7 +207,7 @@ func (s *conference) PostV01ConferenceList(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -243,7 +243,7 @@ func (s *conference) PostV01ConferenceList(ctx context.Context, request operatio
 
 // PostV01ConferenceListMembers - /v0.1/ConferenceListMembers/
 // Retrieves the member list for a given conference
-func (s *conference) PostV01ConferenceListMembers(ctx context.Context, request operations.PostV01ConferenceListMembersRequest) (*operations.PostV01ConferenceListMembersResponse, error) {
+func (s *conference) PostV01ConferenceListMembers(ctx context.Context, request shared.ConferenceListMembersParameters, security operations.PostV01ConferenceListMembersSecurity) (*operations.PostV01ConferenceListMembersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceListMembers/"
 
@@ -259,7 +259,7 @@ func (s *conference) PostV01ConferenceListMembers(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -295,7 +295,7 @@ func (s *conference) PostV01ConferenceListMembers(ctx context.Context, request o
 
 // PostV01ConferenceMute - /v0.1/ConferenceMute/
 // Blocks audio from one or more conference members
-func (s *conference) PostV01ConferenceMute(ctx context.Context, request operations.PostV01ConferenceMuteRequest) (*operations.PostV01ConferenceMuteResponse, error) {
+func (s *conference) PostV01ConferenceMute(ctx context.Context, request shared.ConferenceMuteParameters, security operations.PostV01ConferenceMuteSecurity) (*operations.PostV01ConferenceMuteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceMute/"
 
@@ -311,7 +311,7 @@ func (s *conference) PostV01ConferenceMute(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -347,7 +347,7 @@ func (s *conference) PostV01ConferenceMute(ctx context.Context, request operatio
 
 // PostV01ConferencePlay - /v0.1/ConferencePlay/
 // Plays media to one or more conference members
-func (s *conference) PostV01ConferencePlay(ctx context.Context, request operations.PostV01ConferencePlayRequest) (*operations.PostV01ConferencePlayResponse, error) {
+func (s *conference) PostV01ConferencePlay(ctx context.Context, request shared.ConferencePlayParameters, security operations.PostV01ConferencePlaySecurity) (*operations.PostV01ConferencePlayResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferencePlay/"
 
@@ -363,7 +363,7 @@ func (s *conference) PostV01ConferencePlay(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -399,7 +399,7 @@ func (s *conference) PostV01ConferencePlay(ctx context.Context, request operatio
 
 // PostV01ConferenceRecordStart - /v0.1/ConferenceRecordStart/
 // Initiates a conference recording
-func (s *conference) PostV01ConferenceRecordStart(ctx context.Context, request operations.PostV01ConferenceRecordStartRequest) (*operations.PostV01ConferenceRecordStartResponse, error) {
+func (s *conference) PostV01ConferenceRecordStart(ctx context.Context, request shared.ConferenceRecordStartParameters, security operations.PostV01ConferenceRecordStartSecurity) (*operations.PostV01ConferenceRecordStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceRecordStart/"
 
@@ -415,7 +415,7 @@ func (s *conference) PostV01ConferenceRecordStart(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,7 +451,7 @@ func (s *conference) PostV01ConferenceRecordStart(ctx context.Context, request o
 
 // PostV01ConferenceRecordStop - /v0.1/ConferenceRecordStop/
 // Stops a conference recording
-func (s *conference) PostV01ConferenceRecordStop(ctx context.Context, request operations.PostV01ConferenceRecordStopRequest) (*operations.PostV01ConferenceRecordStopResponse, error) {
+func (s *conference) PostV01ConferenceRecordStop(ctx context.Context, request shared.ConferenceRecordStopParameters, security operations.PostV01ConferenceRecordStopSecurity) (*operations.PostV01ConferenceRecordStopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceRecordStop/"
 
@@ -467,7 +467,7 @@ func (s *conference) PostV01ConferenceRecordStop(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -503,7 +503,7 @@ func (s *conference) PostV01ConferenceRecordStop(ctx context.Context, request op
 
 // PostV01ConferenceSpeak - /v0.1/ConferenceSpeak/
 // Plays synthesized speech into a conference
-func (s *conference) PostV01ConferenceSpeak(ctx context.Context, request operations.PostV01ConferenceSpeakRequest) (*operations.PostV01ConferenceSpeakResponse, error) {
+func (s *conference) PostV01ConferenceSpeak(ctx context.Context, request shared.ConferenceSpeakParameters, security operations.PostV01ConferenceSpeakSecurity) (*operations.PostV01ConferenceSpeakResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceSpeak/"
 
@@ -519,7 +519,7 @@ func (s *conference) PostV01ConferenceSpeak(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -555,7 +555,7 @@ func (s *conference) PostV01ConferenceSpeak(ctx context.Context, request operati
 
 // PostV01ConferenceUndeaf - /v0.1/ConferenceUndeaf/
 // Restores audio to one or more conference members
-func (s *conference) PostV01ConferenceUndeaf(ctx context.Context, request operations.PostV01ConferenceUndeafRequest) (*operations.PostV01ConferenceUndeafResponse, error) {
+func (s *conference) PostV01ConferenceUndeaf(ctx context.Context, request shared.ConferenceUndeafParameters, security operations.PostV01ConferenceUndeafSecurity) (*operations.PostV01ConferenceUndeafResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceUndeaf/"
 
@@ -571,7 +571,7 @@ func (s *conference) PostV01ConferenceUndeaf(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -607,7 +607,7 @@ func (s *conference) PostV01ConferenceUndeaf(ctx context.Context, request operat
 
 // PostV01ConferenceUnmute - /v0.1/ConferenceUnmute/
 // Restores audio from one or more conference members
-func (s *conference) PostV01ConferenceUnmute(ctx context.Context, request operations.PostV01ConferenceUnmuteRequest) (*operations.PostV01ConferenceUnmuteResponse, error) {
+func (s *conference) PostV01ConferenceUnmute(ctx context.Context, request shared.ConferenceUnmuteParameters, security operations.PostV01ConferenceUnmuteSecurity) (*operations.PostV01ConferenceUnmuteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ConferenceUnmute/"
 
@@ -623,7 +623,7 @@ func (s *conference) PostV01ConferenceUnmute(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

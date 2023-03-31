@@ -68,3 +68,4 @@ pkg/models/shared/sortorderenum.go
 pkg/models/shared/destinationtypeenum.go
 pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

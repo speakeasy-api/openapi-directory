@@ -4,16 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RetrievePrefixPricingRequest(
-    path_params=operations.RetrievePrefixPricingPathParams(
-        type="ab",
-    ),
-    query_params=operations.RetrievePrefixPricingQueryParams(
-        api_key="illo",
-        api_secret="exercitationem",
-        prefix="id",
-    ),
+    api_key="corrupti",
+    api_secret="provident",
+    prefix="distinctio",
+    type="quibusdam",
 )
     
 res = s.pricing.retrieve_prefix_pricing(req)

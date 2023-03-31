@@ -8,11 +8,11 @@ import (
 )
 
 type GetConnectSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetConnectQueryParams struct {
+type GetConnectRequest struct {
 	// The client id belonging to your application
 	ClientID string `queryParam:"style=form,explode=true,name=client_id"`
 	// The redirect uri you have configured for your application
@@ -23,11 +23,6 @@ type GetConnectQueryParams struct {
 	Scope string `queryParam:"style=form,explode=true,name=scope"`
 	// Any value included here will be appended to the redirect URI. Use this for CSRF protection.
 	State *string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetConnectRequest struct {
-	QueryParams GetConnectQueryParams
-	Security    GetConnectSecurity
 }
 
 type GetConnectResponse struct {

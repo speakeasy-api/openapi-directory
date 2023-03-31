@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type IpamVlanGroupsDeletePathParams struct {
+type IpamVlanGroupsDeleteRequest struct {
 	// A unique integer value identifying this VLAN group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamVlanGroupsDeleteRequest struct {
-	PathParams IpamVlanGroupsDeletePathParams
 }
 
 type IpamVlanGroupsDeleteResponse struct {

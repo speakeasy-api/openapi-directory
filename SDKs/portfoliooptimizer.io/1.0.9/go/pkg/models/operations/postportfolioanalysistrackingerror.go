@@ -17,10 +17,6 @@ type PostPortfolioAnalysisTrackingErrorRequestBody struct {
 	Portfolios       []PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisTrackingErrorRequest struct {
-	Request PostPortfolioAnalysisTrackingErrorRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisTrackingError200ApplicationJSONPortfolios struct {
 	// The tracking error of the portfolio
 	PortfolioTrackingError float64 `json:"portfolioTrackingError"`

@@ -8,43 +8,34 @@ import (
 )
 
 type AnalyticsManagementProfileFilterLinksUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementProfileFilterLinksUpdatePathParams struct {
+type AnalyticsManagementProfileFilterLinksUpdateRequest struct {
+	ProfileFilterLinkInput *shared.ProfileFilterLinkInput `request:"mediaType=application/json"`
 	// Account ID to which profile filter link belongs.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// ID of the profile filter link to be updated.
-	LinkID string `pathParam:"style=simple,explode=false,name=linkId"`
-	// Profile ID to which filter link belongs
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property Id to which profile filter link belongs
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementProfileFilterLinksUpdateQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// ID of the profile filter link to be updated.
+	LinkID string `pathParam:"style=simple,explode=false,name=linkId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Profile ID to which filter link belongs
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementProfileFilterLinksUpdateRequest struct {
-	PathParams  AnalyticsManagementProfileFilterLinksUpdatePathParams
-	QueryParams AnalyticsManagementProfileFilterLinksUpdateQueryParams
-	Request     *shared.ProfileFilterLinkInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementProfileFilterLinksUpdateSecurity
+	// Web property Id to which profile filter link belongs
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementProfileFilterLinksUpdateResponse struct {

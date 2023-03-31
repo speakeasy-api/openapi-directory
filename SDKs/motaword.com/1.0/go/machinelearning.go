@@ -34,7 +34,7 @@ func newMachineLearning(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // GetDeliveryPrediction - Get a delivery prediction for a project
 // Get a delivery prediction for a project
-func (s *machineLearning) GetDeliveryPrediction(ctx context.Context, request operations.GetDeliveryPredictionRequest) (*operations.GetDeliveryPredictionResponse, error) {
+func (s *machineLearning) GetDeliveryPrediction(ctx context.Context, request shared.DeliveryPredictionPayload) (*operations.GetDeliveryPredictionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ml/delivery-prediction"
 

@@ -8,17 +8,12 @@ import (
 )
 
 type GetAssetSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAssetPathParams struct {
-	// UUID of the asset to retrieve
-	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAssetRequest struct {
-	PathParams GetAssetPathParams
-	Security   GetAssetSecurity
+	// UUID of the asset to retrieve
+	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
 }
 
 type GetAssetResponse struct {

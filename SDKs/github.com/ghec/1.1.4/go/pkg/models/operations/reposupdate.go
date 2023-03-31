@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdatePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateRequestBodyMergeCommitMessageEnum - The default value for a merge commit message.
 //
 // - `PR_TITLE` - default to the pull request's title.
@@ -226,8 +219,11 @@ type ReposUpdateRequestBody struct {
 }
 
 type ReposUpdateRequest struct {
-	PathParams ReposUpdatePathParams
-	Request    *ReposUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateResponse struct {

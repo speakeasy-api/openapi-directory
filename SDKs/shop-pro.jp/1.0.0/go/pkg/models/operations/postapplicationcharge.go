@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostApplicationChargeSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostApplicationChargeRequestBodyApplicationCharge struct {
@@ -18,11 +17,6 @@ type PostApplicationChargeRequestBodyApplicationCharge struct {
 
 type PostApplicationChargeRequestBody struct {
 	ApplicationCharge *PostApplicationChargeRequestBodyApplicationCharge `json:"application_charge,omitempty"`
-}
-
-type PostApplicationChargeRequest struct {
-	Request  PostApplicationChargeRequestBody `request:"mediaType=application/json"`
-	Security PostApplicationChargeSecurity
 }
 
 type PostApplicationCharge201ApplicationJSONApplicationCharge struct {

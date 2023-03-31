@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BikePointSearchQueryParams struct {
+type BikePointSearchRequest struct {
 	// The search term e.g. "St. James"
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type BikePointSearchRequest struct {
-	QueryParams BikePointSearchQueryParams
 }
 
 type BikePointSearchResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TranslateStickerQueryParams struct {
+type TranslateStickerRequest struct {
 	// Search term.
 	S string `queryParam:"style=form,explode=true,name=s"`
-}
-
-type TranslateStickerRequest struct {
-	QueryParams TranslateStickerQueryParams
 }
 
 type TranslateSticker200ApplicationJSON struct {

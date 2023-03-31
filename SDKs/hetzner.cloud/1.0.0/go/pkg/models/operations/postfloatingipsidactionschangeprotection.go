@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostFloatingIpsIDActionsChangeProtectionPathParams struct {
-	// ID of the Floating IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostFloatingIpsIDActionsChangeProtectionChangeProtectionRequest struct {
 	// If true, prevents the Floating IP from being deleted
 	Delete *bool `json:"delete,omitempty"`
 }
 
 type PostFloatingIpsIDActionsChangeProtectionRequest struct {
-	PathParams PostFloatingIpsIDActionsChangeProtectionPathParams
-	Request    *PostFloatingIpsIDActionsChangeProtectionChangeProtectionRequest `request:"mediaType=application/json"`
+	RequestBody *PostFloatingIpsIDActionsChangeProtectionChangeProtectionRequest `request:"mediaType=application/json"`
+	// ID of the Floating IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostFloatingIpsIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

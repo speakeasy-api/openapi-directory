@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrgsCheckMembershipForUserPathParams struct {
+type OrgsCheckMembershipForUserRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type OrgsCheckMembershipForUserRequest struct {
-	PathParams OrgsCheckMembershipForUserPathParams
 }
 
 type OrgsCheckMembershipForUserResponse struct {

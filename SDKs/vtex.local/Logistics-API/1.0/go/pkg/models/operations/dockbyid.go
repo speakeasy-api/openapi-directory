@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type DockByIDPathParams struct {
-	DockID string `pathParam:"style=simple,explode=false,name=dockId"`
-}
-
-type DockByIDHeaders struct {
+type DockByIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DockByIDRequest struct {
-	PathParams DockByIDPathParams
-	Headers    DockByIDHeaders
+	DockID      string `pathParam:"style=simple,explode=false,name=dockId"`
 }
 
 type DockByID200ApplicationJSONPickupStoreInfo1 struct {

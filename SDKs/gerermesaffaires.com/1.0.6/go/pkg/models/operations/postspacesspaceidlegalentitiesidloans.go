@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDLegalEntitiesIDLoansSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDLegalEntitiesIDLoansPathParams struct {
-	// Id of the loan or memberId
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum string
@@ -100,10 +92,12 @@ type PostSpacesSpaceIDLegalEntitiesIDLoansRequestBody struct {
 }
 
 type PostSpacesSpaceIDLegalEntitiesIDLoansRequest struct {
-	PathParams PostSpacesSpaceIDLegalEntitiesIDLoansPathParams
 	// Loan to add (except name, class and archivaldate)
-	Request  PostSpacesSpaceIDLegalEntitiesIDLoansRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDLegalEntitiesIDLoansSecurity
+	RequestBody PostSpacesSpaceIDLegalEntitiesIDLoansRequestBody `request:"mediaType=application/json"`
+	// Id of the loan or memberId
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDLegalEntitiesIDLoans201ApplicationJSON - Id of folder created

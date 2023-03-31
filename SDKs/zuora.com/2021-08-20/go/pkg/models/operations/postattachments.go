@@ -9,6 +9,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type POSTAttachmentsRequestBodyFile struct {
+	Content []byte `multipartForm:"content"`
+	File    string `multipartForm:"name=file"`
+}
+
+type POSTAttachmentsRequestBody struct {
+	// The file to be attached. Files with the following extensions are supported: .pdf, .csv, .png, .xlsx, .xls, .doc, .docx, .msg, .jpg, .txt, .htm, .html, .eml, .pptx, .gif, .rtf, .xml, .jpeg, .log, .cls
+	//
+	// The maximum file size is 4 MB.
+	//
+	File POSTAttachmentsRequestBodyFile `multipartForm:"file"`
+}
+
 // POSTAttachmentsAssociatedObjectTypeEnum - The type of the object to add attachements for.
 type POSTAttachmentsAssociatedObjectTypeEnum string
 
@@ -42,7 +55,16 @@ func (e *POSTAttachmentsAssociatedObjectTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTAttachmentsQueryParams struct {
+type POSTAttachmentsRequest struct {
+	RequestBody POSTAttachmentsRequestBody `request:"mediaType=multipart/form-data"`
+	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+	//
+	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	//
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// For the Subscription type, specify the Subscription Number. An attachment is tied to the Subscription Number and thus viewable with every subscription version.
 	//
 	// For Account, Invoice, Credit Memo, and Debit Memo, specify the correponding ID.
@@ -54,36 +76,6 @@ type POSTAttachmentsQueryParams struct {
 	// Description of the attachment document.
 	//
 	Description *string `queryParam:"style=form,explode=true,name=description"`
-}
-
-type POSTAttachmentsHeaders struct {
-	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
-	//
-	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
-	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type POSTAttachmentsRequestBodyFile struct {
-	Content []byte `multipartForm:"content"`
-	File    string `multipartForm:"name=file"`
-}
-
-type POSTAttachmentsRequestBody struct {
-	// The file to be attached. Files with the following extensions are supported: .pdf, .csv, .png, .xlsx, .xls, .doc, .docx, .msg, .jpg, .txt, .htm, .html, .eml, .pptx, .gif, .rtf, .xml, .jpeg, .log, .cls
-	//
-	// The maximum file size is 4 MB.
-	//
-	File POSTAttachmentsRequestBodyFile `multipartForm:"file"`
-}
-
-type POSTAttachmentsRequest struct {
-	QueryParams POSTAttachmentsQueryParams
-	Headers     POSTAttachmentsHeaders
-	Request     POSTAttachmentsRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 type POSTAttachmentsResponse struct {

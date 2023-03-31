@@ -32,11 +32,11 @@ func newEnterprises(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // SmartdevicemanagementEnterprisesDevicesExecuteCommand - Executes a command to device managed by the enterprise.
-func (s *enterprises) SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx context.Context, request operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest) (*operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse, error) {
+func (s *enterprises) SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx context.Context, request operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest, security operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity) (*operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:executeCommand", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:executeCommand", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *enterprises) SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *enterprises) SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx 
 }
 
 // SmartdevicemanagementEnterprisesDevicesList - Lists devices managed by the enterprise.
-func (s *enterprises) SmartdevicemanagementEnterprisesDevicesList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesDevicesListRequest) (*operations.SmartdevicemanagementEnterprisesDevicesListResponse, error) {
+func (s *enterprises) SmartdevicemanagementEnterprisesDevicesList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesDevicesListRequest, security operations.SmartdevicemanagementEnterprisesDevicesListSecurity) (*operations.SmartdevicemanagementEnterprisesDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *enterprises) SmartdevicemanagementEnterprisesDevicesList(ctx context.Co
 }
 
 // SmartdevicemanagementEnterprisesStructuresList - Lists structures managed by the enterprise.
-func (s *enterprises) SmartdevicemanagementEnterprisesStructuresList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresListRequest) (*operations.SmartdevicemanagementEnterprisesStructuresListResponse, error) {
+func (s *enterprises) SmartdevicemanagementEnterprisesStructuresList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresListRequest, security operations.SmartdevicemanagementEnterprisesStructuresListSecurity) (*operations.SmartdevicemanagementEnterprisesStructuresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/structures", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/structures", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *enterprises) SmartdevicemanagementEnterprisesStructuresList(ctx context
 }
 
 // SmartdevicemanagementEnterprisesStructuresRoomsGet - Gets a room managed by the enterprise.
-func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsGet(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest) (*operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse, error) {
+func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsGet(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest, security operations.SmartdevicemanagementEnterprisesStructuresRoomsGetSecurity) (*operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsGet(ctx con
 }
 
 // SmartdevicemanagementEnterprisesStructuresRoomsList - Lists rooms managed by the enterprise.
-func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest) (*operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse, error) {
+func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest, security operations.SmartdevicemanagementEnterprisesStructuresRoomsListSecurity) (*operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rooms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rooms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

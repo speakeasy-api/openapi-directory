@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TaxAPINewFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type TaxAPINewFormRequest struct {
-	Headers TaxAPINewFormHeaders
-	Request shared.TaxCreateAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	TaxCreateAPIModel shared.TaxCreateAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	XAuthKey          string                   `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret       string                   `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type TaxAPINewFormResponse struct {

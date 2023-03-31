@@ -8,28 +8,19 @@ import (
 )
 
 type PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
-type PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailPathParams struct {
+type PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailRequest struct {
+	// The details of the contacts to subscribe to the event. Parameters of join and left time if state is Attended.
+	BatchInputMarketingEventEmailSubscriber shared.BatchInputMarketingEventEmailSubscriber `request:"mediaType=application/json"`
+	// The account id associated with the marketing event
+	ExternalAccountID *string `queryParam:"style=form,explode=true,name=externalAccountId"`
 	// The id of the marketing event
 	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
 	// The new subscriber state for the HubSpot contacts and the specified marketing event. For example: 'register', 'attend' or 'cancel'.
 	SubscriberState string `pathParam:"style=simple,explode=false,name=subscriberState"`
-}
-
-type PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailQueryParams struct {
-	// The account id associated with the marketing event
-	ExternalAccountID *string `queryParam:"style=form,explode=true,name=externalAccountId"`
-}
-
-type PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailRequest struct {
-	PathParams  PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailPathParams
-	QueryParams PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailQueryParams
-	// The details of the contacts to subscribe to the event. Parameters of join and left time if state is Attended.
-	Request  shared.BatchInputMarketingEventEmailSubscriber `request:"mediaType=application/json"`
-	Security PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailSecurity
 }
 
 type PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailResponse struct {

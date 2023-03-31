@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConversationMessagesPathParams struct {
+type GetConversationMessagesRequest struct {
 	// The ID of the conversation to return messages from.
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
-type GetConversationMessagesQueryParams struct {
 	// Client device pixel ratio used to determine thumbnail size (default 1.0).
 	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
 	// If set to 1, the conversation will be returned along with the messages.
@@ -21,11 +18,6 @@ type GetConversationMessagesQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of messages to return per page (must be >= 1 and <= 30).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetConversationMessagesRequest struct {
-	PathParams  GetConversationMessagesPathParams
-	QueryParams GetConversationMessagesQueryParams
 }
 
 // GetConversationMessages200ApplicationJSON - The messages and page data.  The conversation data is optional and is only returned if the include_conversation parameter is set.

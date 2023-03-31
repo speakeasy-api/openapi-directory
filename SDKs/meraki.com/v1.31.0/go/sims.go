@@ -34,7 +34,7 @@ func newSims(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Return the SIM and APN configurations for a cellular device.
 func (s *sims) GetDeviceCellularSims(ctx context.Context, request operations.GetDeviceCellularSimsRequest) (*operations.GetDeviceCellularSimsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *sims) GetDeviceCellularSims(ctx context.Context, request operations.Get
 // Updates the SIM and APN configurations for a cellular device.
 func (s *sims) UpdateDeviceCellularSims(ctx context.Context, request operations.UpdateDeviceCellularSimsRequest) (*operations.UpdateDeviceCellularSimsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

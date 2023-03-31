@@ -13,24 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.InvoiceNotification2Request{
-        PathParams: operations.InvoiceNotification2PathParams{
-            OrderID: "70caf3941s6df1",
-        },
-        Headers: operations.InvoiceNotification2Headers{
-            Accept: "application/json",
-            ContentType: "application/json",
-        },
-        Request: shared.InvoiceNotificationRequest{
+        Accept: "application/json",
+        ContentType: "application/json",
+        InvoiceNotificationRequest: shared.InvoiceNotificationRequest{
             Cfop: "6.104",
             Courier: "corrupti",
             ExtraValue: 100,
@@ -66,6 +57,7 @@ func main() {
             Type: "Output",
             Volumes: 3,
         },
+        OrderID: "70caf3941s6df1",
     }
 
     ctx := context.Background()

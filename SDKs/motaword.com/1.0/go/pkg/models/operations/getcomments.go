@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommentsPathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetCommentsQueryParams struct {
+type GetCommentsRequest struct {
 	Page    *int64 `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetCommentsRequest struct {
-	PathParams  GetCommentsPathParams
-	QueryParams GetCommentsQueryParams
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetCommentsResponse struct {

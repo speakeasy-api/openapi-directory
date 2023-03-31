@@ -8,28 +8,19 @@ import (
 )
 
 type ListOrdersSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListOrdersPathParams struct {
-	// The ID of the location to list online store orders for.
-	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
-type ListOrdersQueryParams struct {
+type ListOrdersRequest struct {
 	// A pagination cursor to retrieve the next set of results for your
 	// original query to the endpoint.
 	BatchToken *string `queryParam:"style=form,explode=true,name=batch_token"`
 	// The maximum number of payments to return in a single response. This value cannot exceed 200.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// The ID of the location to list online store orders for.
+	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The order in which payments are listed in the response.
 	Order *string `queryParam:"style=form,explode=true,name=order"`
-}
-
-type ListOrdersRequest struct {
-	PathParams  ListOrdersPathParams
-	QueryParams ListOrdersQueryParams
-	Security    ListOrdersSecurity
 }
 
 type ListOrdersResponse struct {

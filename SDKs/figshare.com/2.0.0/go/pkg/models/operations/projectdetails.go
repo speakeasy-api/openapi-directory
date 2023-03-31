@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectDetailsPathParams struct {
+type ProjectDetailsRequest struct {
 	// Project Unique identifier
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type ProjectDetailsRequest struct {
-	PathParams ProjectDetailsPathParams
 }
 
 type ProjectDetailsResponse struct {

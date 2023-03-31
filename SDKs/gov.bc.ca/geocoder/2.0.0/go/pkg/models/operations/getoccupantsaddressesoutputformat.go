@@ -8,54 +8,6 @@ import (
 	"net/http"
 )
 
-// GetOccupantsAddressesOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-//
-// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-type GetOccupantsAddressesOutputFormatOutputFormatEnum string
-
-const (
-	GetOccupantsAddressesOutputFormatOutputFormatEnumJSON    GetOccupantsAddressesOutputFormatOutputFormatEnum = "json"
-	GetOccupantsAddressesOutputFormatOutputFormatEnumGeojson GetOccupantsAddressesOutputFormatOutputFormatEnum = "geojson"
-	GetOccupantsAddressesOutputFormatOutputFormatEnumXhtml   GetOccupantsAddressesOutputFormatOutputFormatEnum = "xhtml"
-	GetOccupantsAddressesOutputFormatOutputFormatEnumKml     GetOccupantsAddressesOutputFormatOutputFormatEnum = "kml"
-	GetOccupantsAddressesOutputFormatOutputFormatEnumGml     GetOccupantsAddressesOutputFormatOutputFormatEnum = "gml"
-	GetOccupantsAddressesOutputFormatOutputFormatEnumCsv     GetOccupantsAddressesOutputFormatOutputFormatEnum = "csv"
-	GetOccupantsAddressesOutputFormatOutputFormatEnumShpz    GetOccupantsAddressesOutputFormatOutputFormatEnum = "shpz"
-)
-
-func (e *GetOccupantsAddressesOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "json":
-		fallthrough
-	case "geojson":
-		fallthrough
-	case "xhtml":
-		fallthrough
-	case "kml":
-		fallthrough
-	case "gml":
-		fallthrough
-	case "csv":
-		fallthrough
-	case "shpz":
-		*e = GetOccupantsAddressesOutputFormatOutputFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetOccupantsAddressesOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetOccupantsAddressesOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetOccupantsAddressesOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetOccupantsAddressesOutputFormatInterpolationEnum - accessPoint interpolation method. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#interpolation target="_blank">interpolation</a>
 type GetOccupantsAddressesOutputFormatInterpolationEnum string
 
@@ -116,6 +68,47 @@ func (e *GetOccupantsAddressesOutputFormatLocationDescriptorEnum) UnmarshalJSON(
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetOccupantsAddressesOutputFormatLocationDescriptorEnum: %s", s)
+	}
+}
+
+// GetOccupantsAddressesOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+type GetOccupantsAddressesOutputFormatOutputFormatEnum string
+
+const (
+	GetOccupantsAddressesOutputFormatOutputFormatEnumJSON    GetOccupantsAddressesOutputFormatOutputFormatEnum = "json"
+	GetOccupantsAddressesOutputFormatOutputFormatEnumGeojson GetOccupantsAddressesOutputFormatOutputFormatEnum = "geojson"
+	GetOccupantsAddressesOutputFormatOutputFormatEnumXhtml   GetOccupantsAddressesOutputFormatOutputFormatEnum = "xhtml"
+	GetOccupantsAddressesOutputFormatOutputFormatEnumKml     GetOccupantsAddressesOutputFormatOutputFormatEnum = "kml"
+	GetOccupantsAddressesOutputFormatOutputFormatEnumGml     GetOccupantsAddressesOutputFormatOutputFormatEnum = "gml"
+	GetOccupantsAddressesOutputFormatOutputFormatEnumCsv     GetOccupantsAddressesOutputFormatOutputFormatEnum = "csv"
+	GetOccupantsAddressesOutputFormatOutputFormatEnumShpz    GetOccupantsAddressesOutputFormatOutputFormatEnum = "shpz"
+)
+
+func (e *GetOccupantsAddressesOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "json":
+		fallthrough
+	case "geojson":
+		fallthrough
+	case "xhtml":
+		fallthrough
+	case "kml":
+		fallthrough
+	case "gml":
+		fallthrough
+	case "csv":
+		fallthrough
+	case "shpz":
+		*e = GetOccupantsAddressesOutputFormatOutputFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetOccupantsAddressesOutputFormatOutputFormatEnum: %s", s)
 	}
 }
 
@@ -278,7 +271,7 @@ func (e *GetOccupantsAddressesOutputFormatUnitDesignatorEnum) UnmarshalJSON(data
 	}
 }
 
-type GetOccupantsAddressesOutputFormatQueryParams struct {
+type GetOccupantsAddressesOutputFormatRequest struct {
 	// Occupant name OR Occupant name ** address
 	AddressString *string `queryParam:"style=form,explode=true,name=addressString"`
 	// If true, addressString is expected to contain a partial address that requires completion. Not supported for shp, csv, gml formats.
@@ -317,6 +310,10 @@ type GetOccupantsAddressesOutputFormatQueryParams struct {
 	MinScore *int64 `queryParam:"style=form,explode=true,name=minScore"`
 	// A comma-separated list of localities to exclude from the search.
 	NotLocalities *string `queryParam:"style=form,explode=true,name=notLocalities"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetOccupantsAddressesOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetOccupantsAddressesOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The coordinates of a point (x,y) known to be inside the parcel containing a given address. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#parcelPoint target="_blank">parcelPoint</a>
@@ -343,11 +340,6 @@ type GetOccupantsAddressesOutputFormatQueryParams struct {
 	UnitNumber *string `queryParam:"style=form,explode=true,name=unitNumber"`
 	// A letter that follows the unit number as in Unit 1A or Suite 302B.
 	UnitNumberSuffix *string `queryParam:"style=form,explode=true,name=unitNumberSuffix"`
-}
-
-type GetOccupantsAddressesOutputFormatRequest struct {
-	PathParams  GetOccupantsAddressesOutputFormatPathParams
-	QueryParams GetOccupantsAddressesOutputFormatQueryParams
 }
 
 type GetOccupantsAddressesOutputFormatResponse struct {

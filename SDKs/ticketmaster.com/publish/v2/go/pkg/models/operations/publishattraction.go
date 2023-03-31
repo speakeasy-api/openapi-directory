@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishAttractionHeaders struct {
+type PublishAttractionRequest struct {
+	// Attraction
+	Attraction shared.Attraction `request:"mediaType=application/json"`
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PublishAttractionRequest struct {
-	Headers PublishAttractionHeaders
-	// Attraction
-	Request shared.Attraction `request:"mediaType=application/json"`
 }
 
 type PublishAttractionResponse struct {

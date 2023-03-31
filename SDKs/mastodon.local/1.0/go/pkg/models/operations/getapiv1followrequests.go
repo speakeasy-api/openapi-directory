@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1FollowRequestsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1FollowRequestsQueryParams struct {
-	// Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1FollowRequestsRequest struct {
-	QueryParams GetAPIV1FollowRequestsQueryParams
-	Security    GetAPIV1FollowRequestsSecurity
+	// Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetAPIV1FollowRequestsResponse struct {

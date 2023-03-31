@@ -14,37 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest{
-        Security: operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CloudprivatecatalogOrganizationsCatalogsSearchPathParams{
-            Resource: "corrupti",
-        },
-        QueryParams: operations.CloudprivatecatalogOrganizationsCatalogsSearchQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PageSize: 423655,
-            PageToken: "error",
-            PrettyPrint: false,
-            Query: "deserunt",
-            QuotaUser: "suscipit",
-            UploadType: "iure",
-            UploadProtocol: "magnam",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PageSize: 847252,
+        PageToken: "vel",
+        PrettyPrint: false,
+        Query: "error",
+        QuotaUser: "deserunt",
+        Resource: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
     }
 
     ctx := context.Background()
-    res, err := s.Organizations.CloudprivatecatalogOrganizationsCatalogsSearch(ctx, req)
+    res, err := s.Organizations.CloudprivatecatalogOrganizationsCatalogsSearch(ctx, req, operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

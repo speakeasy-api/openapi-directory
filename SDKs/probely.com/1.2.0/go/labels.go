@@ -37,7 +37,7 @@ func newLabels(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeleteLabelsID - Delete label
 func (s *labels) DeleteLabelsID(ctx context.Context, request operations.DeleteLabelsIDRequest) (*operations.DeleteLabelsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *labels) GetLabels(ctx context.Context, request operations.GetLabelsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -140,7 +140,7 @@ func (s *labels) GetLabels(ctx context.Context, request operations.GetLabelsRequ
 // GetLabelsID - Retrieve framework
 func (s *labels) GetLabelsID(ctx context.Context, request operations.GetLabelsIDRequest) (*operations.GetLabelsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,9 +204,9 @@ func (s *labels) GetLabelsID(ctx context.Context, request operations.GetLabelsID
 // PatchLabelsID - Partial update
 func (s *labels) PatchLabelsID(ctx context.Context, request operations.PatchLabelsIDRequest) (*operations.PatchLabelsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LabelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -276,7 +276,7 @@ func (s *labels) PatchLabelsID(ctx context.Context, request operations.PatchLabe
 }
 
 // PostLabels - Create label
-func (s *labels) PostLabels(ctx context.Context, request operations.PostLabelsRequest) (*operations.PostLabelsResponse, error) {
+func (s *labels) PostLabels(ctx context.Context, request shared.LabelInput) (*operations.PostLabelsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/labels/"
 
@@ -352,9 +352,9 @@ func (s *labels) PostLabels(ctx context.Context, request operations.PostLabelsRe
 // PutLabelsID - Update label
 func (s *labels) PutLabelsID(ctx context.Context, request operations.PutLabelsIDRequest) (*operations.PutLabelsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/labels/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LabelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

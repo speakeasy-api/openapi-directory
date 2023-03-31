@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOrdersIDHistoryJSONPathParams struct {
-	// Id of the OrderHistory
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostOrdersIDHistoryJSONQueryParams struct {
+type PostOrdersIDHistoryJSONRequest struct {
+	// Order History parameters.
+	OrderHistoryEdit shared.OrderHistoryEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the OrderHistory
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostOrdersIDHistoryJSONRequest struct {
-	PathParams  PostOrdersIDHistoryJSONPathParams
-	QueryParams PostOrdersIDHistoryJSONQueryParams
-	// Order History parameters.
-	Request shared.OrderHistoryEdit `request:"mediaType=application/json"`
 }
 
 type PostOrdersIDHistoryJSONResponse struct {

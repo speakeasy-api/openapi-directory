@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RandomStickerQueryParams struct {
+type RandomStickerRequest struct {
 	// Filters results by specified rating.
 	Rating *string `queryParam:"style=form,explode=true,name=rating"`
 	// Filters results by specified tag.
 	Tag *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type RandomStickerRequest struct {
-	QueryParams RandomStickerQueryParams
 }
 
 type RandomSticker200ApplicationJSON struct {

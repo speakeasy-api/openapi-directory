@@ -8,13 +8,8 @@ import (
 )
 
 type PostMarketingV3MarketingEventsEventsUpsertDoUpsertSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostMarketingV3MarketingEventsEventsUpsertDoUpsertRequest struct {
-	Request  shared.BatchInputMarketingEventCreateRequestParams `request:"mediaType=application/json"`
-	Security PostMarketingV3MarketingEventsEventsUpsertDoUpsertSecurity
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateClientTaskPONumberPathParams struct {
+type UpdateClientTaskPONumberRequest struct {
+	// Updated Client Task PO Number of a given task.
+	StringDTO shared.StringDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type UpdateClientTaskPONumberRequest struct {
-	PathParams UpdateClientTaskPONumberPathParams
-	// Updated Client Task PO Number of a given task.
-	Request shared.StringDTO `request:"mediaType=application/json"`
 }
 
 type UpdateClientTaskPONumberResponse struct {

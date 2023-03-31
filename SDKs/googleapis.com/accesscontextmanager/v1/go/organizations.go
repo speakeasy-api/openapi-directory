@@ -32,11 +32,11 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreate - Creates a GcpUserAccessBinding. If the client specifies a name, the server ignores it. Fails if a resource already exists with the same group_key. Completion of this long-running operation does not necessarily signify that the new binding is deployed onto all affected users, which may take more time.
-func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreate(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse, error) {
+func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreate(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GcpUserAccessBinding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsCr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsCr
 }
 
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsDelete - Deletes a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the binding deletion is deployed onto all affected users, which may take more time.
-func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsDelete(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse, error) {
+func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsDelete(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsDe
 }
 
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsGet - Gets the GcpUserAccessBinding with the given name.
-func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsGet(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse, error) {
+func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsGet(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsGe
 }
 
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsList - Lists all GcpUserAccessBindings for a Google Cloud organization.
-func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsList(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse, error) {
+func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsList(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsLi
 }
 
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatch - Updates a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the changed binding is deployed onto all affected users, which may take more time.
-func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatch(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse, error) {
+func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatch(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GcpUserAccessBinding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsPa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

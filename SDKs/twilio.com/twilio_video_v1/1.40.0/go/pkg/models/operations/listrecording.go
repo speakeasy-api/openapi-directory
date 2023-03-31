@@ -13,10 +13,11 @@ var ListRecordingServerList = []string{
 }
 
 type ListRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRecordingQueryParams struct {
+type ListRecordingRequest struct {
 	// Read only recordings that started on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time with time zone.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Read only recordings that started before this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time with time zone, given as `YYYY-MM-DDThh:mm:ss+|-hh:mm` or `YYYY-MM-DDThh:mm:ssZ`.
@@ -35,12 +36,6 @@ type ListRecordingQueryParams struct {
 	SourceSid *string `queryParam:"style=form,explode=true,name=SourceSid"`
 	// Read only the recordings that have this status. Can be: `processing`, `completed`, or `deleted`.
 	Status *shared.RecordingEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListRecordingRequest struct {
-	QueryParams ListRecordingQueryParams
-	Security    ListRecordingSecurity
-	ServerURL   *string
 }
 
 type ListRecordingListRecordingResponseMeta struct {

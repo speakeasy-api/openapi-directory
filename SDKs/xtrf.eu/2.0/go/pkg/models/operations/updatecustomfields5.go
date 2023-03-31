@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomFields5PathParams struct {
+type UpdateCustomFields5Request struct {
+	// Updated custom fields
+	RequestBody []shared.CustomFieldDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type UpdateCustomFields5Request struct {
-	PathParams UpdateCustomFields5PathParams
-	// Updated custom fields
-	Request []shared.CustomFieldDTO `request:"mediaType=application/json"`
 }
 
 type UpdateCustomFields5Response struct {

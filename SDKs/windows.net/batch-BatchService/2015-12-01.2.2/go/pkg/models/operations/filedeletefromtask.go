@@ -7,37 +7,25 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileDeleteFromTaskPathParams struct {
+type FileDeleteFromTaskRequest struct {
+	// Client API Version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
+	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The path to the task file that you want to delete.
 	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
 	// The id of the job that contains the task.
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The id of the task whose file you want to delete.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type FileDeleteFromTaskQueryParams struct {
-	// Client API Version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets whether to delete children of a directory. If the fileName parameter represents a directory instead of a file, you can set Recursive to true to delete the directory and all of the files and subdirectories in it. If Recursive is false then the directory must be empty or deletion will fail.
-	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type FileDeleteFromTaskHeaders struct {
-	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
-	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
+	// Sets whether to delete children of a directory. If the fileName parameter represents a directory instead of a file, you can set Recursive to true to delete the directory and all of the files and subdirectories in it. If Recursive is false then the directory must be empty or deletion will fail.
+	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type FileDeleteFromTaskRequest struct {
-	PathParams  FileDeleteFromTaskPathParams
-	QueryParams FileDeleteFromTaskQueryParams
-	Headers     FileDeleteFromTaskHeaders
+	// The id of the task whose file you want to delete.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type FileDeleteFromTaskResponse struct {

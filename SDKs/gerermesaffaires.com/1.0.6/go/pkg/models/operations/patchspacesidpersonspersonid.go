@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDPersonsPersonIDPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the person to modify or memberId
-	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
 type PatchSpacesIDPersonsPersonIDRequestBodyAddress struct {
 	City       *string `json:"City,omitempty"`
 	Complement *string `json:"Complement,omitempty"`
@@ -65,9 +58,12 @@ type PatchSpacesIDPersonsPersonIDRequestBody struct {
 }
 
 type PatchSpacesIDPersonsPersonIDRequest struct {
-	PathParams PatchSpacesIDPersonsPersonIDPathParams
 	// Person to modify
-	Request PatchSpacesIDPersonsPersonIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDPersonsPersonIDRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the person to modify or memberId
+	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
 }
 
 type PatchSpacesIDPersonsPersonIDResponse struct {

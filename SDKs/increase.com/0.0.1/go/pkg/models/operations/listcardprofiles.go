@@ -38,14 +38,10 @@ func (e *ListCardProfilesStatusInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCardProfilesQueryParams struct {
+type ListCardProfilesRequest struct {
 	Cursor   *string                        `queryParam:"style=form,explode=true,name=cursor"`
 	Limit    *int64                         `queryParam:"style=form,explode=true,name=limit"`
 	StatusIn []ListCardProfilesStatusInEnum `queryParam:"style=form,explode=true,name=status.in"`
-}
-
-type ListCardProfilesRequest struct {
-	QueryParams ListCardProfilesQueryParams
 }
 
 type ListCardProfilesDefaultApplicationJSON13StatusEnum string

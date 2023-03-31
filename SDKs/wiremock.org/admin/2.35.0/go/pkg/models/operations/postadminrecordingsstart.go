@@ -299,10 +299,6 @@ type PostAdminRecordingsStartRequestBody struct {
 	Transformers []string `json:"transformers,omitempty"`
 }
 
-type PostAdminRecordingsStartRequest struct {
-	Request PostAdminRecordingsStartRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAdminRecordingsStartResponse struct {
 	ContentType string
 	StatusCode  int

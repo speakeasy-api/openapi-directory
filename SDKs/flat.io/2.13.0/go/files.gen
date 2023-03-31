@@ -104,7 +104,6 @@ pkg/models/shared/organizationrolesenum.go
 pkg/models/shared/flatlocalesenum.go
 pkg/models/shared/classrolesenum.go
 pkg/models/shared/flaterrorresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/classdetails.go
 pkg/models/shared/groupdetails.go
 pkg/models/shared/grouptypeenum.go

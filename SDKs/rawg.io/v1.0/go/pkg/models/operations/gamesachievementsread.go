@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesAchievementsReadPathParams struct {
+type GamesAchievementsReadRequest struct {
 	// An ID or a slug identifying this Game.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GamesAchievementsReadRequest struct {
-	PathParams GamesAchievementsReadPathParams
 }
 
 type GamesAchievementsReadResponse struct {

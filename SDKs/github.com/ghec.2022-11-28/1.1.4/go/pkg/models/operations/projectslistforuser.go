@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListForUserPathParams struct {
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ProjectsListForUserStateEnum - Indicates the state of the projects to return.
 type ProjectsListForUserStateEnum string
 
@@ -41,18 +36,15 @@ func (e *ProjectsListForUserStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListForUserQueryParams struct {
+type ProjectsListForUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Indicates the state of the projects to return.
 	State *ProjectsListForUserStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ProjectsListForUserRequest struct {
-	PathParams  ProjectsListForUserPathParams
-	QueryParams ProjectsListForUserQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ProjectsListForUserResponse struct {

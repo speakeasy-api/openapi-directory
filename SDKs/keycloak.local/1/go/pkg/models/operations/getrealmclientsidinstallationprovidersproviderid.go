@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type GetRealmClientsIDInstallationProvidersProviderIDPathParams struct {
+type GetRealmClientsIDInstallationProvidersProviderIDRequest struct {
 	// id of client (not client-id)
 	ID         string `pathParam:"style=simple,explode=false,name=id"`
 	ProviderID string `pathParam:"style=simple,explode=false,name=providerId"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmClientsIDInstallationProvidersProviderIDRequest struct {
-	PathParams GetRealmClientsIDInstallationProvidersProviderIDPathParams
 }
 
 type GetRealmClientsIDInstallationProvidersProviderIDResponse struct {

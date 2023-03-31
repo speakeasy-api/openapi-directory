@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type AccessTokenPutRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AccessTokenPutRawResponse struct {
 	// OK
 	AccessTokenPutRaw200ApplicationJSONString *string

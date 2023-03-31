@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type IssuesDeleteLabelPathParams struct {
+type IssuesDeleteLabelRequest struct {
 	Name  string `pathParam:"style=simple,explode=false,name=name"`
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type IssuesDeleteLabelRequest struct {
-	PathParams IssuesDeleteLabelPathParams
 }
 
 type IssuesDeleteLabelResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetRevisionsCountUsingPOSTQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type GetRevisionsCountUsingPOSTRequest struct {
-	QueryParams GetRevisionsCountUsingPOSTQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // GetRevisionsCountUsingPOST500ApplicationJSON - internal api error (code 2)

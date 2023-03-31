@@ -10,7 +10,7 @@ import (
 )
 
 type ListPackagesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 // ListPackagesSortEnum - Sort field
@@ -43,7 +43,7 @@ func (e *ListPackagesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPackagesQueryParams struct {
+type ListPackagesRequest struct {
 	// Filter
 	FilterName *string `queryParam:"style=form,explode=true,name=filter[name]"`
 	// Filter
@@ -66,11 +66,6 @@ type ListPackagesQueryParams struct {
 	Sort *ListPackagesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ListPackagesRequest struct {
-	QueryParams ListPackagesQueryParams
-	Security    ListPackagesSecurity
 }
 
 type ListPackagesResponse struct {

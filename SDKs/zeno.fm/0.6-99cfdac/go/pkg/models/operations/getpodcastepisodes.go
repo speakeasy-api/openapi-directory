@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetPodcastEpisodesPathParams struct {
-	PodcastKey string `pathParam:"style=simple,explode=false,name=podcastKey"`
-}
-
-type GetPodcastEpisodesQueryParams struct {
-	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
-	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
 type GetPodcastEpisodesRequest struct {
-	PathParams  GetPodcastEpisodesPathParams
-	QueryParams GetPodcastEpisodesQueryParams
+	Limit      *string `queryParam:"style=form,explode=true,name=limit"`
+	Offset     *string `queryParam:"style=form,explode=true,name=offset"`
+	PodcastKey string  `pathParam:"style=simple,explode=false,name=podcastKey"`
 }
 
 type GetPodcastEpisodesResponse struct {

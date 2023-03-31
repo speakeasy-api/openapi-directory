@@ -35,20 +35,20 @@ func newEntities(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetCluster - Show cluster details
 // Show cluster details
-func (s *entities) GetCluster(ctx context.Context, request operations.GetClusterRequest) (*operations.GetClusterResponse, error) {
+func (s *entities) GetCluster(ctx context.Context, request operations.GetClusterRequest, security operations.GetClusterSecurity) (*operations.GetClusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/clusters/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/clusters/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,20 +99,20 @@ func (s *entities) GetCluster(ctx context.Context, request operations.GetCluster
 
 // GetDatacenter - Show vCenter datacenter details
 // Show vCenter datacenter details
-func (s *entities) GetDatacenter(ctx context.Context, request operations.GetDatacenterRequest) (*operations.GetDatacenterResponse, error) {
+func (s *entities) GetDatacenter(ctx context.Context, request operations.GetDatacenterRequest, security operations.GetDatacenterSecurity) (*operations.GetDatacenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vc-datacenters/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/vc-datacenters/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,20 +163,20 @@ func (s *entities) GetDatacenter(ctx context.Context, request operations.GetData
 
 // GetDatastore - Show datastore details
 // Show datastore details
-func (s *entities) GetDatastore(ctx context.Context, request operations.GetDatastoreRequest) (*operations.GetDatastoreResponse, error) {
+func (s *entities) GetDatastore(ctx context.Context, request operations.GetDatastoreRequest, security operations.GetDatastoreSecurity) (*operations.GetDatastoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/datastores/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/datastores/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -227,20 +227,20 @@ func (s *entities) GetDatastore(ctx context.Context, request operations.GetDatas
 
 // GetDistributedVirtualPortgroup - Show distributed virtual portgroup details
 // Show distributed virtual portgroup details
-func (s *entities) GetDistributedVirtualPortgroup(ctx context.Context, request operations.GetDistributedVirtualPortgroupRequest) (*operations.GetDistributedVirtualPortgroupResponse, error) {
+func (s *entities) GetDistributedVirtualPortgroup(ctx context.Context, request operations.GetDistributedVirtualPortgroupRequest, security operations.GetDistributedVirtualPortgroupSecurity) (*operations.GetDistributedVirtualPortgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-portgroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-portgroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -291,20 +291,20 @@ func (s *entities) GetDistributedVirtualPortgroup(ctx context.Context, request o
 
 // GetDistributedVirtualSwitch - Show distributed virtual switch details
 // Show distributed virtual switch details
-func (s *entities) GetDistributedVirtualSwitch(ctx context.Context, request operations.GetDistributedVirtualSwitchRequest) (*operations.GetDistributedVirtualSwitchResponse, error) {
+func (s *entities) GetDistributedVirtualSwitch(ctx context.Context, request operations.GetDistributedVirtualSwitchRequest, security operations.GetDistributedVirtualSwitchSecurity) (*operations.GetDistributedVirtualSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-switches/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-switches/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,20 +355,20 @@ func (s *entities) GetDistributedVirtualSwitch(ctx context.Context, request oper
 
 // GetFirewall - Show firewall details
 // Show firewall details
-func (s *entities) GetFirewall(ctx context.Context, request operations.GetFirewallRequest) (*operations.GetFirewallResponse, error) {
+func (s *entities) GetFirewall(ctx context.Context, request operations.GetFirewallRequest, security operations.GetFirewallSecurity) (*operations.GetFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/firewalls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/firewalls/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -419,20 +419,20 @@ func (s *entities) GetFirewall(ctx context.Context, request operations.GetFirewa
 
 // GetFirewallRule - Show firewall rule details
 // Show firewall rule details
-func (s *entities) GetFirewallRule(ctx context.Context, request operations.GetFirewallRuleRequest) (*operations.GetFirewallRuleResponse, error) {
+func (s *entities) GetFirewallRule(ctx context.Context, request operations.GetFirewallRuleRequest, security operations.GetFirewallRuleSecurity) (*operations.GetFirewallRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/firewall-rules/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/firewall-rules/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -483,20 +483,20 @@ func (s *entities) GetFirewallRule(ctx context.Context, request operations.GetFi
 
 // GetFlow - Show flow details
 // Show flow details
-func (s *entities) GetFlow(ctx context.Context, request operations.GetFlowRequest) (*operations.GetFlowResponse, error) {
+func (s *entities) GetFlow(ctx context.Context, request operations.GetFlowRequest, security operations.GetFlowSecurity) (*operations.GetFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/flows/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/flows/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,7 +547,7 @@ func (s *entities) GetFlow(ctx context.Context, request operations.GetFlowReques
 
 // GetFlows - List flows
 // List flows
-func (s *entities) GetFlows(ctx context.Context, request operations.GetFlowsRequest) (*operations.GetFlowsResponse, error) {
+func (s *entities) GetFlows(ctx context.Context, request operations.GetFlowsRequest, security operations.GetFlowsSecurity) (*operations.GetFlowsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/flows"
 
@@ -556,11 +556,11 @@ func (s *entities) GetFlows(ctx context.Context, request operations.GetFlowsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -609,20 +609,20 @@ func (s *entities) GetFlows(ctx context.Context, request operations.GetFlowsRequ
 
 // GetFolder - Show folder details
 // Show folder details
-func (s *entities) GetFolder(ctx context.Context, request operations.GetFolderRequest) (*operations.GetFolderResponse, error) {
+func (s *entities) GetFolder(ctx context.Context, request operations.GetFolderRequest, security operations.GetFolderSecurity) (*operations.GetFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/folders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/folders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -673,20 +673,20 @@ func (s *entities) GetFolder(ctx context.Context, request operations.GetFolderRe
 
 // GetHost - Show host details
 // Show host details
-func (s *entities) GetHost(ctx context.Context, request operations.GetHostRequest) (*operations.GetHostResponse, error) {
+func (s *entities) GetHost(ctx context.Context, request operations.GetHostRequest, security operations.GetHostSecurity) (*operations.GetHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/hosts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/hosts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -737,20 +737,20 @@ func (s *entities) GetHost(ctx context.Context, request operations.GetHostReques
 
 // GetIPSet - Show ip set details
 // Show ip set details
-func (s *entities) GetIPSet(ctx context.Context, request operations.GetIPSetRequest) (*operations.GetIPSetResponse, error) {
+func (s *entities) GetIPSet(ctx context.Context, request operations.GetIPSetRequest, security operations.GetIPSetSecurity) (*operations.GetIPSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/ip-sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/ip-sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -801,20 +801,20 @@ func (s *entities) GetIPSet(ctx context.Context, request operations.GetIPSetRequ
 
 // GetLayer2Network - Show layer2 network details
 // Show layer2 network details
-func (s *entities) GetLayer2Network(ctx context.Context, request operations.GetLayer2NetworkRequest) (*operations.GetLayer2NetworkResponse, error) {
+func (s *entities) GetLayer2Network(ctx context.Context, request operations.GetLayer2NetworkRequest, security operations.GetLayer2NetworkSecurity) (*operations.GetLayer2NetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/layer2-networks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/layer2-networks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -865,20 +865,20 @@ func (s *entities) GetLayer2Network(ctx context.Context, request operations.GetL
 
 // GetNSXManager - Show nsx manager details
 // Show nsx manager details
-func (s *entities) GetNSXManager(ctx context.Context, request operations.GetNSXManagerRequest) (*operations.GetNSXManagerResponse, error) {
+func (s *entities) GetNSXManager(ctx context.Context, request operations.GetNSXManagerRequest, security operations.GetNSXManagerSecurity) (*operations.GetNSXManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/nsx-managers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/nsx-managers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -929,20 +929,20 @@ func (s *entities) GetNSXManager(ctx context.Context, request operations.GetNSXM
 
 // GetName - Get name of an entity
 // Get name of an entity
-func (s *entities) GetName(ctx context.Context, request operations.GetNameRequest) (*operations.GetNameResponse, error) {
+func (s *entities) GetName(ctx context.Context, request operations.GetNameRequest, security operations.GetNameSecurity) (*operations.GetNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/names/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/names/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -981,7 +981,7 @@ func (s *entities) GetName(ctx context.Context, request operations.GetNameReques
 
 // GetNames - Get names for entities
 // Get names for entities.Limit of 1000 entities in a single request.
-func (s *entities) GetNames(ctx context.Context, request operations.GetNamesRequest) (*operations.GetNamesResponse, error) {
+func (s *entities) GetNames(ctx context.Context, request shared.NamesRequest, security operations.GetNamesSecurity) (*operations.GetNamesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/names"
 
@@ -1000,7 +1000,7 @@ func (s *entities) GetNames(ctx context.Context, request operations.GetNamesRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1039,20 +1039,20 @@ func (s *entities) GetNames(ctx context.Context, request operations.GetNamesRequ
 
 // GetProblemEvent - Show problem details
 // Show problem event details.
-func (s *entities) GetProblemEvent(ctx context.Context, request operations.GetProblemEventRequest) (*operations.GetProblemEventResponse, error) {
+func (s *entities) GetProblemEvent(ctx context.Context, request operations.GetProblemEventRequest, security operations.GetProblemEventSecurity) (*operations.GetProblemEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/problems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/problems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1103,20 +1103,20 @@ func (s *entities) GetProblemEvent(ctx context.Context, request operations.GetPr
 
 // GetSecurityGroup - Show security group details
 // Show security group details
-func (s *entities) GetSecurityGroup(ctx context.Context, request operations.GetSecurityGroupRequest) (*operations.GetSecurityGroupResponse, error) {
+func (s *entities) GetSecurityGroup(ctx context.Context, request operations.GetSecurityGroupRequest, security operations.GetSecurityGroupSecurity) (*operations.GetSecurityGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/security-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/security-groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1167,20 +1167,20 @@ func (s *entities) GetSecurityGroup(ctx context.Context, request operations.GetS
 
 // GetSecurityTag - Show security tag details
 // Show security tag details
-func (s *entities) GetSecurityTag(ctx context.Context, request operations.GetSecurityTagRequest) (*operations.GetSecurityTagResponse, error) {
+func (s *entities) GetSecurityTag(ctx context.Context, request operations.GetSecurityTagRequest, security operations.GetSecurityTagSecurity) (*operations.GetSecurityTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/security-tags/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/security-tags/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1231,20 +1231,20 @@ func (s *entities) GetSecurityTag(ctx context.Context, request operations.GetSec
 
 // GetService - Show service details
 // Show service details
-func (s *entities) GetService(ctx context.Context, request operations.GetServiceRequest) (*operations.GetServiceResponse, error) {
+func (s *entities) GetService(ctx context.Context, request operations.GetServiceRequest, security operations.GetServiceSecurity) (*operations.GetServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/services/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/services/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1295,20 +1295,20 @@ func (s *entities) GetService(ctx context.Context, request operations.GetService
 
 // GetServiceGroup - Show service group details
 // Show service group details
-func (s *entities) GetServiceGroup(ctx context.Context, request operations.GetServiceGroupRequest) (*operations.GetServiceGroupResponse, error) {
+func (s *entities) GetServiceGroup(ctx context.Context, request operations.GetServiceGroupRequest, security operations.GetServiceGroupSecurity) (*operations.GetServiceGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/service-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/service-groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1359,20 +1359,20 @@ func (s *entities) GetServiceGroup(ctx context.Context, request operations.GetSe
 
 // GetVcenterManager - Show vCenter manager details
 // Show vCenter manager details
-func (s *entities) GetVcenterManager(ctx context.Context, request operations.GetVcenterManagerRequest) (*operations.GetVcenterManagerResponse, error) {
+func (s *entities) GetVcenterManager(ctx context.Context, request operations.GetVcenterManagerRequest, security operations.GetVcenterManagerSecurity) (*operations.GetVcenterManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vcenter-managers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/vcenter-managers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1423,20 +1423,20 @@ func (s *entities) GetVcenterManager(ctx context.Context, request operations.Get
 
 // GetVM - Show vm details
 // Show vm details
-func (s *entities) GetVM(ctx context.Context, request operations.GetVMRequest) (*operations.GetVMResponse, error) {
+func (s *entities) GetVM(ctx context.Context, request operations.GetVMRequest, security operations.GetVMSecurity) (*operations.GetVMResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/vms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1487,20 +1487,20 @@ func (s *entities) GetVM(ctx context.Context, request operations.GetVMRequest) (
 
 // GetVmknic - Show vmknic details
 // Show vmknic details
-func (s *entities) GetVmknic(ctx context.Context, request operations.GetVmknicRequest) (*operations.GetVmknicResponse, error) {
+func (s *entities) GetVmknic(ctx context.Context, request operations.GetVmknicRequest, security operations.GetVmknicSecurity) (*operations.GetVmknicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vmknics/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/vmknics/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1551,20 +1551,20 @@ func (s *entities) GetVmknic(ctx context.Context, request operations.GetVmknicRe
 
 // GetVnic - Show vnic details
 // Show vnic details
-func (s *entities) GetVnic(ctx context.Context, request operations.GetVnicRequest) (*operations.GetVnicResponse, error) {
+func (s *entities) GetVnic(ctx context.Context, request operations.GetVnicRequest, security operations.GetVnicSecurity) (*operations.GetVnicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vnics/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/entities/vnics/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1615,7 +1615,7 @@ func (s *entities) GetVnic(ctx context.Context, request operations.GetVnicReques
 
 // ListClusters - List clusters
 // List clusters
-func (s *entities) ListClusters(ctx context.Context, request operations.ListClustersRequest) (*operations.ListClustersResponse, error) {
+func (s *entities) ListClusters(ctx context.Context, request operations.ListClustersRequest, security operations.ListClustersSecurity) (*operations.ListClustersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/clusters"
 
@@ -1624,11 +1624,11 @@ func (s *entities) ListClusters(ctx context.Context, request operations.ListClus
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1677,7 +1677,7 @@ func (s *entities) ListClusters(ctx context.Context, request operations.ListClus
 
 // ListDatacenters - List vCenter datacenters
 // List vCenter datacenters
-func (s *entities) ListDatacenters(ctx context.Context, request operations.ListDatacentersRequest) (*operations.ListDatacentersResponse, error) {
+func (s *entities) ListDatacenters(ctx context.Context, request operations.ListDatacentersRequest, security operations.ListDatacentersSecurity) (*operations.ListDatacentersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/vc-datacenters"
 
@@ -1686,11 +1686,11 @@ func (s *entities) ListDatacenters(ctx context.Context, request operations.ListD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1739,7 +1739,7 @@ func (s *entities) ListDatacenters(ctx context.Context, request operations.ListD
 
 // ListDatastores - List datastores
 // List datastores
-func (s *entities) ListDatastores(ctx context.Context, request operations.ListDatastoresRequest) (*operations.ListDatastoresResponse, error) {
+func (s *entities) ListDatastores(ctx context.Context, request operations.ListDatastoresRequest, security operations.ListDatastoresSecurity) (*operations.ListDatastoresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/datastores"
 
@@ -1748,11 +1748,11 @@ func (s *entities) ListDatastores(ctx context.Context, request operations.ListDa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1801,7 +1801,7 @@ func (s *entities) ListDatastores(ctx context.Context, request operations.ListDa
 
 // ListDistributedVirtualPortgroups - List distributed virtual portgroups
 // List distributed virtual portgroups
-func (s *entities) ListDistributedVirtualPortgroups(ctx context.Context, request operations.ListDistributedVirtualPortgroupsRequest) (*operations.ListDistributedVirtualPortgroupsResponse, error) {
+func (s *entities) ListDistributedVirtualPortgroups(ctx context.Context, request operations.ListDistributedVirtualPortgroupsRequest, security operations.ListDistributedVirtualPortgroupsSecurity) (*operations.ListDistributedVirtualPortgroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/distributed-virtual-portgroups"
 
@@ -1810,11 +1810,11 @@ func (s *entities) ListDistributedVirtualPortgroups(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1863,7 +1863,7 @@ func (s *entities) ListDistributedVirtualPortgroups(ctx context.Context, request
 
 // ListDistributedVirtualSwitches - List distributed virtual switches
 // List distributed virtual switches
-func (s *entities) ListDistributedVirtualSwitches(ctx context.Context, request operations.ListDistributedVirtualSwitchesRequest) (*operations.ListDistributedVirtualSwitchesResponse, error) {
+func (s *entities) ListDistributedVirtualSwitches(ctx context.Context, request operations.ListDistributedVirtualSwitchesRequest, security operations.ListDistributedVirtualSwitchesSecurity) (*operations.ListDistributedVirtualSwitchesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/distributed-virtual-switches"
 
@@ -1872,11 +1872,11 @@ func (s *entities) ListDistributedVirtualSwitches(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1925,7 +1925,7 @@ func (s *entities) ListDistributedVirtualSwitches(ctx context.Context, request o
 
 // ListFirewallRules - List firewall rules
 // List firewall rules
-func (s *entities) ListFirewallRules(ctx context.Context, request operations.ListFirewallRulesRequest) (*operations.ListFirewallRulesResponse, error) {
+func (s *entities) ListFirewallRules(ctx context.Context, request operations.ListFirewallRulesRequest, security operations.ListFirewallRulesSecurity) (*operations.ListFirewallRulesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/firewall-rules"
 
@@ -1934,11 +1934,11 @@ func (s *entities) ListFirewallRules(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1987,7 +1987,7 @@ func (s *entities) ListFirewallRules(ctx context.Context, request operations.Lis
 
 // ListFirewalls - List firewalls
 // List firewalls
-func (s *entities) ListFirewalls(ctx context.Context, request operations.ListFirewallsRequest) (*operations.ListFirewallsResponse, error) {
+func (s *entities) ListFirewalls(ctx context.Context, request operations.ListFirewallsRequest, security operations.ListFirewallsSecurity) (*operations.ListFirewallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/firewalls"
 
@@ -1996,11 +1996,11 @@ func (s *entities) ListFirewalls(ctx context.Context, request operations.ListFir
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2049,7 +2049,7 @@ func (s *entities) ListFirewalls(ctx context.Context, request operations.ListFir
 
 // ListFolders - List folders
 // List folders
-func (s *entities) ListFolders(ctx context.Context, request operations.ListFoldersRequest) (*operations.ListFoldersResponse, error) {
+func (s *entities) ListFolders(ctx context.Context, request operations.ListFoldersRequest, security operations.ListFoldersSecurity) (*operations.ListFoldersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/folders"
 
@@ -2058,11 +2058,11 @@ func (s *entities) ListFolders(ctx context.Context, request operations.ListFolde
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2111,7 +2111,7 @@ func (s *entities) ListFolders(ctx context.Context, request operations.ListFolde
 
 // ListHosts - List hosts
 // List hosts
-func (s *entities) ListHosts(ctx context.Context, request operations.ListHostsRequest) (*operations.ListHostsResponse, error) {
+func (s *entities) ListHosts(ctx context.Context, request operations.ListHostsRequest, security operations.ListHostsSecurity) (*operations.ListHostsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/hosts"
 
@@ -2120,11 +2120,11 @@ func (s *entities) ListHosts(ctx context.Context, request operations.ListHostsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2173,7 +2173,7 @@ func (s *entities) ListHosts(ctx context.Context, request operations.ListHostsRe
 
 // ListIPSets - List ip sets
 // List ip sets
-func (s *entities) ListIPSets(ctx context.Context, request operations.ListIPSetsRequest) (*operations.ListIPSetsResponse, error) {
+func (s *entities) ListIPSets(ctx context.Context, request operations.ListIPSetsRequest, security operations.ListIPSetsSecurity) (*operations.ListIPSetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/ip-sets"
 
@@ -2182,11 +2182,11 @@ func (s *entities) ListIPSets(ctx context.Context, request operations.ListIPSets
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2235,7 +2235,7 @@ func (s *entities) ListIPSets(ctx context.Context, request operations.ListIPSets
 
 // ListLayer2Networks - List layer2 networks
 // List layer2 networks
-func (s *entities) ListLayer2Networks(ctx context.Context, request operations.ListLayer2NetworksRequest) (*operations.ListLayer2NetworksResponse, error) {
+func (s *entities) ListLayer2Networks(ctx context.Context, request operations.ListLayer2NetworksRequest, security operations.ListLayer2NetworksSecurity) (*operations.ListLayer2NetworksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/layer2-networks"
 
@@ -2244,11 +2244,11 @@ func (s *entities) ListLayer2Networks(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2297,7 +2297,7 @@ func (s *entities) ListLayer2Networks(ctx context.Context, request operations.Li
 
 // ListNSXManagers - List nsx managers
 // List nsx managers
-func (s *entities) ListNSXManagers(ctx context.Context, request operations.ListNSXManagersRequest) (*operations.ListNSXManagersResponse, error) {
+func (s *entities) ListNSXManagers(ctx context.Context, request operations.ListNSXManagersRequest, security operations.ListNSXManagersSecurity) (*operations.ListNSXManagersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/nsx-managers"
 
@@ -2306,11 +2306,11 @@ func (s *entities) ListNSXManagers(ctx context.Context, request operations.ListN
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2359,7 +2359,7 @@ func (s *entities) ListNSXManagers(ctx context.Context, request operations.ListN
 
 // ListProblemEvents - List problems
 // List problem events.
-func (s *entities) ListProblemEvents(ctx context.Context, request operations.ListProblemEventsRequest) (*operations.ListProblemEventsResponse, error) {
+func (s *entities) ListProblemEvents(ctx context.Context, request operations.ListProblemEventsRequest, security operations.ListProblemEventsSecurity) (*operations.ListProblemEventsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/problems"
 
@@ -2368,11 +2368,11 @@ func (s *entities) ListProblemEvents(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2421,7 +2421,7 @@ func (s *entities) ListProblemEvents(ctx context.Context, request operations.Lis
 
 // ListSecurityGroups - List security groups
 // List security groups
-func (s *entities) ListSecurityGroups(ctx context.Context, request operations.ListSecurityGroupsRequest) (*operations.ListSecurityGroupsResponse, error) {
+func (s *entities) ListSecurityGroups(ctx context.Context, request operations.ListSecurityGroupsRequest, security operations.ListSecurityGroupsSecurity) (*operations.ListSecurityGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/security-groups"
 
@@ -2430,11 +2430,11 @@ func (s *entities) ListSecurityGroups(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2483,7 +2483,7 @@ func (s *entities) ListSecurityGroups(ctx context.Context, request operations.Li
 
 // ListSecurityTags - List security tags
 // List security tags
-func (s *entities) ListSecurityTags(ctx context.Context, request operations.ListSecurityTagsRequest) (*operations.ListSecurityTagsResponse, error) {
+func (s *entities) ListSecurityTags(ctx context.Context, request operations.ListSecurityTagsRequest, security operations.ListSecurityTagsSecurity) (*operations.ListSecurityTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/security-tags"
 
@@ -2492,11 +2492,11 @@ func (s *entities) ListSecurityTags(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2545,7 +2545,7 @@ func (s *entities) ListSecurityTags(ctx context.Context, request operations.List
 
 // ListServiceGroups - List service groups
 // List service groups
-func (s *entities) ListServiceGroups(ctx context.Context, request operations.ListServiceGroupsRequest) (*operations.ListServiceGroupsResponse, error) {
+func (s *entities) ListServiceGroups(ctx context.Context, request operations.ListServiceGroupsRequest, security operations.ListServiceGroupsSecurity) (*operations.ListServiceGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/service-groups"
 
@@ -2554,11 +2554,11 @@ func (s *entities) ListServiceGroups(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2607,7 +2607,7 @@ func (s *entities) ListServiceGroups(ctx context.Context, request operations.Lis
 
 // ListServices - List services
 // List services
-func (s *entities) ListServices(ctx context.Context, request operations.ListServicesRequest) (*operations.ListServicesResponse, error) {
+func (s *entities) ListServices(ctx context.Context, request operations.ListServicesRequest, security operations.ListServicesSecurity) (*operations.ListServicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/services"
 
@@ -2616,11 +2616,11 @@ func (s *entities) ListServices(ctx context.Context, request operations.ListServ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2669,7 +2669,7 @@ func (s *entities) ListServices(ctx context.Context, request operations.ListServ
 
 // ListVcenterManagers - List vCenter managers
 // List vCenter managers
-func (s *entities) ListVcenterManagers(ctx context.Context, request operations.ListVcenterManagersRequest) (*operations.ListVcenterManagersResponse, error) {
+func (s *entities) ListVcenterManagers(ctx context.Context, request operations.ListVcenterManagersRequest, security operations.ListVcenterManagersSecurity) (*operations.ListVcenterManagersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/vcenter-managers"
 
@@ -2678,11 +2678,11 @@ func (s *entities) ListVcenterManagers(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2731,7 +2731,7 @@ func (s *entities) ListVcenterManagers(ctx context.Context, request operations.L
 
 // ListVmknics - List vmknics
 // List vmknics
-func (s *entities) ListVmknics(ctx context.Context, request operations.ListVmknicsRequest) (*operations.ListVmknicsResponse, error) {
+func (s *entities) ListVmknics(ctx context.Context, request operations.ListVmknicsRequest, security operations.ListVmknicsSecurity) (*operations.ListVmknicsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/vmknics"
 
@@ -2740,11 +2740,11 @@ func (s *entities) ListVmknics(ctx context.Context, request operations.ListVmkni
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2793,7 +2793,7 @@ func (s *entities) ListVmknics(ctx context.Context, request operations.ListVmkni
 
 // ListVms - List vms
 // List vms
-func (s *entities) ListVms(ctx context.Context, request operations.ListVmsRequest) (*operations.ListVmsResponse, error) {
+func (s *entities) ListVms(ctx context.Context, request operations.ListVmsRequest, security operations.ListVmsSecurity) (*operations.ListVmsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/vms"
 
@@ -2802,11 +2802,11 @@ func (s *entities) ListVms(ctx context.Context, request operations.ListVmsReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2855,7 +2855,7 @@ func (s *entities) ListVms(ctx context.Context, request operations.ListVmsReques
 
 // ListVnics - List vnics
 // List vnics
-func (s *entities) ListVnics(ctx context.Context, request operations.ListVnicsRequest) (*operations.ListVnicsResponse, error) {
+func (s *entities) ListVnics(ctx context.Context, request operations.ListVnicsRequest, security operations.ListVnicsSecurity) (*operations.ListVnicsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/entities/vnics"
 
@@ -2864,11 +2864,11 @@ func (s *entities) ListVnics(ctx context.Context, request operations.ListVnicsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

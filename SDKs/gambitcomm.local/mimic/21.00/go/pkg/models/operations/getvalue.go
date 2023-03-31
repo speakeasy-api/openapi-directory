@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetValuePathParams struct {
+type GetValueRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object (column) of the table in the agent's value space
@@ -15,10 +15,6 @@ type GetValuePathParams struct {
 	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Object (column) of the table in the agent's value space
 	Variable string `pathParam:"style=simple,explode=false,name=variable"`
-}
-
-type GetValueRequest struct {
-	PathParams GetValuePathParams
 }
 
 type GetValueResponse struct {

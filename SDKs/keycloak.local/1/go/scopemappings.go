@@ -34,9 +34,9 @@ func newScopeMappings(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteRealmClientScopesIDScopeMappingsClientsClient - Remove client-level roles from the client’s scope.
 func (s *scopeMappings) DeleteRealmClientScopesIDScopeMappingsClientsClient(ctx context.Context, request operations.DeleteRealmClientScopesIDScopeMappingsClientsClientRequest) (*operations.DeleteRealmClientScopesIDScopeMappingsClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -79,9 +79,9 @@ func (s *scopeMappings) DeleteRealmClientScopesIDScopeMappingsClientsClient(ctx 
 // DeleteRealmClientScopesIDScopeMappingsRealm - Remove a set of realm-level roles from the client’s scope
 func (s *scopeMappings) DeleteRealmClientScopesIDScopeMappingsRealm(ctx context.Context, request operations.DeleteRealmClientScopesIDScopeMappingsRealmRequest) (*operations.DeleteRealmClientScopesIDScopeMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,9 +124,9 @@ func (s *scopeMappings) DeleteRealmClientScopesIDScopeMappingsRealm(ctx context.
 // DeleteRealmClientsIDScopeMappingsClientsClient - Remove client-level roles from the client’s scope.
 func (s *scopeMappings) DeleteRealmClientsIDScopeMappingsClientsClient(ctx context.Context, request operations.DeleteRealmClientsIDScopeMappingsClientsClientRequest) (*operations.DeleteRealmClientsIDScopeMappingsClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -169,9 +169,9 @@ func (s *scopeMappings) DeleteRealmClientsIDScopeMappingsClientsClient(ctx conte
 // DeleteRealmClientsIDScopeMappingsRealm - Remove a set of realm-level roles from the client’s scope
 func (s *scopeMappings) DeleteRealmClientsIDScopeMappingsRealm(ctx context.Context, request operations.DeleteRealmClientsIDScopeMappingsRealmRequest) (*operations.DeleteRealmClientsIDScopeMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,7 +214,7 @@ func (s *scopeMappings) DeleteRealmClientsIDScopeMappingsRealm(ctx context.Conte
 // GetRealmClientScopesIDScopeMappings - Get all scope mappings for the client
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappings(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsRequest) (*operations.GetRealmClientScopesIDScopeMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -258,7 +258,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappings(ctx context.Context,
 // GetRealmClientScopesIDScopeMappingsClientsClient - Get the roles associated with a client’s scope   Returns roles for the client.
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsClientsClient(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsClientsClientRequest) (*operations.GetRealmClientScopesIDScopeMappingsClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +302,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsClientsClient(ctx con
 // GetRealmClientScopesIDScopeMappingsClientsClientAvailable - The available client-level roles   Returns the roles for the client that can be associated with the client’s scope
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsClientsClientAvailable(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsClientsClientAvailableRequest) (*operations.GetRealmClientScopesIDScopeMappingsClientsClientAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsClientsClientAvailabl
 // GetRealmClientScopesIDScopeMappingsClientsClientComposite - Get effective client roles   Returns the roles for the client that are associated with the client’s scope.
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsClientsClientComposite(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsClientsClientCompositeRequest) (*operations.GetRealmClientScopesIDScopeMappingsClientsClientCompositeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}/composite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}/composite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -390,7 +390,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsClientsClientComposit
 // GetRealmClientScopesIDScopeMappingsRealm - Get realm-level roles associated with the client’s scope
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsRealm(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsRealmRequest) (*operations.GetRealmClientScopesIDScopeMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -434,7 +434,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsRealm(ctx context.Con
 // GetRealmClientScopesIDScopeMappingsRealmAvailable - Get realm-level roles that are available to attach to this client’s scope
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsRealmAvailable(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsRealmAvailableRequest) (*operations.GetRealmClientScopesIDScopeMappingsRealmAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -478,7 +478,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsRealmAvailable(ctx co
 // GetRealmClientScopesIDScopeMappingsRealmComposite - Get effective realm-level roles associated with the client’s scope   What this does is recurse  any composite roles associated with the client’s scope and adds the roles to this lists.
 func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsRealmComposite(ctx context.Context, request operations.GetRealmClientScopesIDScopeMappingsRealmCompositeRequest) (*operations.GetRealmClientScopesIDScopeMappingsRealmCompositeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm/composite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm/composite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -522,7 +522,7 @@ func (s *scopeMappings) GetRealmClientScopesIDScopeMappingsRealmComposite(ctx co
 // GetRealmClientsIDScopeMappings - Get all scope mappings for the client
 func (s *scopeMappings) GetRealmClientsIDScopeMappings(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsRequest) (*operations.GetRealmClientsIDScopeMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -566,7 +566,7 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappings(ctx context.Context, requ
 // GetRealmClientsIDScopeMappingsClientsClient - Get the roles associated with a client’s scope   Returns roles for the client.
 func (s *scopeMappings) GetRealmClientsIDScopeMappingsClientsClient(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsClientsClientRequest) (*operations.GetRealmClientsIDScopeMappingsClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -610,7 +610,7 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappingsClientsClient(ctx context.
 // GetRealmClientsIDScopeMappingsClientsClientAvailable - The available client-level roles   Returns the roles for the client that can be associated with the client’s scope
 func (s *scopeMappings) GetRealmClientsIDScopeMappingsClientsClientAvailable(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsClientsClientAvailableRequest) (*operations.GetRealmClientsIDScopeMappingsClientsClientAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -654,7 +654,7 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappingsClientsClientAvailable(ctx
 // GetRealmClientsIDScopeMappingsClientsClientComposite - Get effective client roles   Returns the roles for the client that are associated with the client’s scope.
 func (s *scopeMappings) GetRealmClientsIDScopeMappingsClientsClientComposite(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsClientsClientCompositeRequest) (*operations.GetRealmClientsIDScopeMappingsClientsClientCompositeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}/composite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}/composite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -698,7 +698,7 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappingsClientsClientComposite(ctx
 // GetRealmClientsIDScopeMappingsRealm - Get realm-level roles associated with the client’s scope
 func (s *scopeMappings) GetRealmClientsIDScopeMappingsRealm(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsRealmRequest) (*operations.GetRealmClientsIDScopeMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -742,7 +742,7 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappingsRealm(ctx context.Context,
 // GetRealmClientsIDScopeMappingsRealmAvailable - Get realm-level roles that are available to attach to this client’s scope
 func (s *scopeMappings) GetRealmClientsIDScopeMappingsRealmAvailable(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsRealmAvailableRequest) (*operations.GetRealmClientsIDScopeMappingsRealmAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -786,7 +786,7 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappingsRealmAvailable(ctx context
 // GetRealmClientsIDScopeMappingsRealmComposite - Get effective realm-level roles associated with the client’s scope   What this does is recurse  any composite roles associated with the client’s scope and adds the roles to this lists.
 func (s *scopeMappings) GetRealmClientsIDScopeMappingsRealmComposite(ctx context.Context, request operations.GetRealmClientsIDScopeMappingsRealmCompositeRequest) (*operations.GetRealmClientsIDScopeMappingsRealmCompositeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm/composite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm/composite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -830,9 +830,9 @@ func (s *scopeMappings) GetRealmClientsIDScopeMappingsRealmComposite(ctx context
 // PostRealmClientScopesIDScopeMappingsClientsClient - Add client-level roles to the client’s scope
 func (s *scopeMappings) PostRealmClientScopesIDScopeMappingsClientsClient(ctx context.Context, request operations.PostRealmClientScopesIDScopeMappingsClientsClientRequest) (*operations.PostRealmClientScopesIDScopeMappingsClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -875,9 +875,9 @@ func (s *scopeMappings) PostRealmClientScopesIDScopeMappingsClientsClient(ctx co
 // PostRealmClientScopesIDScopeMappingsRealm - Add a set of realm-level roles to the client’s scope
 func (s *scopeMappings) PostRealmClientScopesIDScopeMappingsRealm(ctx context.Context, request operations.PostRealmClientScopesIDScopeMappingsRealmRequest) (*operations.PostRealmClientScopesIDScopeMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-scopes/{id}/scope-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -920,9 +920,9 @@ func (s *scopeMappings) PostRealmClientScopesIDScopeMappingsRealm(ctx context.Co
 // PostRealmClientsIDScopeMappingsClientsClient - Add client-level roles to the client’s scope
 func (s *scopeMappings) PostRealmClientsIDScopeMappingsClientsClient(ctx context.Context, request operations.PostRealmClientsIDScopeMappingsClientsClientRequest) (*operations.PostRealmClientsIDScopeMappingsClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/clients/{client}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -965,9 +965,9 @@ func (s *scopeMappings) PostRealmClientsIDScopeMappingsClientsClient(ctx context
 // PostRealmClientsIDScopeMappingsRealm - Add a set of realm-level roles to the client’s scope
 func (s *scopeMappings) PostRealmClientsIDScopeMappingsRealm(ctx context.Context, request operations.PostRealmClientsIDScopeMappingsRealmRequest) (*operations.PostRealmClientsIDScopeMappingsRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients/{id}/scope-mappings/realm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

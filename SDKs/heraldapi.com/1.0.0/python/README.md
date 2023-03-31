@@ -1,0 +1,108 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/heraldapi.com/1.0.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        bearer_token="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.GetApplicationsApplicationIDRequest(
+    application_id="89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+)
+    
+res = s.applications.get_applications_application_id(req)
+
+if res.get_applications_application_id_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### applications
+
+* `get_applications_application_id` - /applications/{application_id}
+* `post_applications` - /applications
+* `put_applications_application_id` - /applications/{application_id}
+
+### auth
+
+* `post_auth_token` - /auth/token
+
+### classifications
+
+* `get_classifications` - /classifications/naics_index_entries
+
+### coverage_parameters
+
+* `get_coverage_parameters` - /coverage_parameters
+
+### files
+
+* `get_files_file_id` - /files/{file_id}
+* `post_files_file_id_get_temporary_link` - /files/{file_id}/get_temporary_link
+
+### institutions
+
+* `get_institutions` - /institutions
+
+### policies
+
+* `get_policies_policy_id` - /policies/{policy_id}
+* `post_policies` - /policies
+
+### producers
+
+* `get_producers` - /producers
+
+### products
+
+* `get_products` - /products
+
+### quotes
+
+* `get_quotes_quote_id` - /quotes/{quote_id}
+
+### risk_parameters
+
+* `get_risk_parameters` - /risk_parameters
+
+### submissions
+
+* `get_submissions_submission_id` - /submissions/{submission_id}
+* `post_submissions` - /submissions
+
+### welcome_and_health_check
+
+* `get` - /
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

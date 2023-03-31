@@ -8,15 +8,10 @@ import (
 )
 
 type SystemPackagesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type SystemPackagesPathParams struct {
-	// Inventory ID
-	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
-}
-
-type SystemPackagesQueryParams struct {
+type SystemPackagesRequest struct {
 	// Filter
 	FilterDescription *string `queryParam:"style=form,explode=true,name=filter[description]"`
 	// Filter
@@ -27,18 +22,14 @@ type SystemPackagesQueryParams struct {
 	FilterSummary *string `queryParam:"style=form,explode=true,name=filter[summary]"`
 	// Filter
 	FilterUpdatable *bool `queryParam:"style=form,explode=true,name=filter[updatable]"`
+	// Inventory ID
+	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
 	// Limit for paging, set -1 to return all
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset for paging
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Find matching text
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type SystemPackagesRequest struct {
-	PathParams  SystemPackagesPathParams
-	QueryParams SystemPackagesQueryParams
-	Security    SystemPackagesSecurity
 }
 
 type SystemPackagesResponse struct {

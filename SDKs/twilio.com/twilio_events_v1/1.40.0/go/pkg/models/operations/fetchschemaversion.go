@@ -12,20 +12,15 @@ var FetchSchemaVersionServerList = []string{
 }
 
 type FetchSchemaVersionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSchemaVersionPathParams struct {
+type FetchSchemaVersionRequest struct {
 	// The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
 	// The version of the schema
 	SchemaVersion int64 `pathParam:"style=simple,explode=false,name=SchemaVersion"`
-}
-
-type FetchSchemaVersionRequest struct {
-	PathParams FetchSchemaVersionPathParams
-	Security   FetchSchemaVersionSecurity
-	ServerURL  *string
 }
 
 type FetchSchemaVersionResponse struct {

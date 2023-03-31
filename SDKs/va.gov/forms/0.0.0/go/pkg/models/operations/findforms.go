@@ -8,17 +8,12 @@ import (
 )
 
 type FindFormsSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type FindFormsQueryParams struct {
-	// Returns form data based on entered form name.
-	Query *string `queryParam:"style=form,explode=true,name=query"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type FindFormsRequest struct {
-	QueryParams FindFormsQueryParams
-	Security    FindFormsSecurity
+	// Returns form data based on entered form name.
+	Query *string `queryParam:"style=form,explode=true,name=query"`
 }
 
 // FindForms429ApplicationJSON - Too many requests

@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV2BroadcastservicesIDSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAPIV2BroadcastservicesIDPathParams struct {
-	// The ID of the broadcast service to find.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAPIV2BroadcastservicesIDRequest struct {
-	PathParams GetAPIV2BroadcastservicesIDPathParams
-	Security   GetAPIV2BroadcastservicesIDSecurity
+	// The ID of the broadcast service to find.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV2BroadcastservicesIDResponse struct {

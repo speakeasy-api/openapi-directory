@@ -113,7 +113,7 @@ func (e *GetDiscoveryV2ClassificationsSourceEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetDiscoveryV2ClassificationsQueryParams struct {
+type GetDiscoveryV2ClassificationsRequest struct {
 	// Filter entities by its id
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// Yes if you want to display licensed content
@@ -134,10 +134,6 @@ type GetDiscoveryV2ClassificationsQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Filter entities by its source name
 	Source *GetDiscoveryV2ClassificationsSourceEnum `queryParam:"style=form,explode=true,name=source"`
-}
-
-type GetDiscoveryV2ClassificationsRequest struct {
-	QueryParams GetDiscoveryV2ClassificationsQueryParams
 }
 
 type GetDiscoveryV2ClassificationsResponse struct {

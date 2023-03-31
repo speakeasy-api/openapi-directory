@@ -8,18 +8,11 @@ import (
 )
 
 type BooksLayersAnnotationDataListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BooksLayersAnnotationDataListPathParams struct {
-	// The ID for the layer to get the annotation data.
-	LayerID string `pathParam:"style=simple,explode=false,name=layerId"`
-	// The volume to retrieve annotation data for.
-	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
-}
-
-type BooksLayersAnnotationDataListQueryParams struct {
+type BooksLayersAnnotationDataListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +31,8 @@ type BooksLayersAnnotationDataListQueryParams struct {
 	H *int64 `queryParam:"style=form,explode=true,name=h"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The ID for the layer to get the annotation data.
+	LayerID string `pathParam:"style=simple,explode=false,name=layerId"`
 	// The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// Maximum number of results to return
@@ -62,14 +57,10 @@ type BooksLayersAnnotationDataListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
+	// The volume to retrieve annotation data for.
+	VolumeID string `pathParam:"style=simple,explode=false,name=volumeId"`
 	// The requested pixel width for any images. If width is provided height must also be provided.
 	W *int64 `queryParam:"style=form,explode=true,name=w"`
-}
-
-type BooksLayersAnnotationDataListRequest struct {
-	PathParams  BooksLayersAnnotationDataListPathParams
-	QueryParams BooksLayersAnnotationDataListQueryParams
-	Security    BooksLayersAnnotationDataListSecurity
 }
 
 type BooksLayersAnnotationDataListResponse struct {

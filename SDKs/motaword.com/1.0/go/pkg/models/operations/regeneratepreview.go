@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegeneratePreviewPathParams struct {
+type RegeneratePreviewRequest struct {
 	// Document ID
 	DocumentID int64 `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type RegeneratePreviewRequest struct {
-	PathParams RegeneratePreviewPathParams
 }
 
 type RegeneratePreviewResponse struct {

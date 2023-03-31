@@ -14,24 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateDocumentRequest{
-        Security: operations.CreateDocumentSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+        RequestBody: &operations.CreateDocumentCreateDocumentRequest{
+            Data: "corrupti",
+            TTL: 592845,
+            UniqueName: "distinctio",
         },
-        PathParams: operations.CreateDocumentPathParams{
-            ServiceSid: "corrupti",
-        },
-        Request: &operations.CreateDocumentCreateDocumentRequest{
-            Data: "provident",
-            TTL: 715190,
-            UniqueName: "quibusdam",
-        },
+        ServiceSid: "quibusdam",
     }
 
     ctx := context.Background()
-    res, err := s.CreateDocument(ctx, req)
+    res, err := s.CreateDocument(ctx, req, operations.CreateDocumentSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

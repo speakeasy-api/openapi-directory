@@ -33,16 +33,16 @@ func newUsersWatchHistory(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // DeleteFromWatchHistory - Delete a specific video from a user's watch history
-func (s *usersWatchHistory) DeleteFromWatchHistory(ctx context.Context, request operations.DeleteFromWatchHistoryRequest) (*operations.DeleteFromWatchHistoryResponse, error) {
+func (s *usersWatchHistory) DeleteFromWatchHistory(ctx context.Context, request operations.DeleteFromWatchHistoryRequest, security operations.DeleteFromWatchHistorySecurity) (*operations.DeleteFromWatchHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/watched/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/watched/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -68,7 +68,7 @@ func (s *usersWatchHistory) DeleteFromWatchHistory(ctx context.Context, request 
 }
 
 // DeleteWatchHistory - Delete a user's watch history
-func (s *usersWatchHistory) DeleteWatchHistory(ctx context.Context, request operations.DeleteWatchHistoryRequest) (*operations.DeleteWatchHistoryResponse, error) {
+func (s *usersWatchHistory) DeleteWatchHistory(ctx context.Context) (*operations.DeleteWatchHistoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/watched/videos"
 
@@ -77,7 +77,7 @@ func (s *usersWatchHistory) DeleteWatchHistory(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,7 +103,7 @@ func (s *usersWatchHistory) DeleteWatchHistory(ctx context.Context, request oper
 }
 
 // GetWatchHistory - Get all the videos that a user has watched
-func (s *usersWatchHistory) GetWatchHistory(ctx context.Context, request operations.GetWatchHistoryRequest) (*operations.GetWatchHistoryResponse, error) {
+func (s *usersWatchHistory) GetWatchHistory(ctx context.Context, request operations.GetWatchHistoryRequest, security operations.GetWatchHistorySecurity) (*operations.GetWatchHistoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/watched/videos"
 
@@ -112,11 +112,11 @@ func (s *usersWatchHistory) GetWatchHistory(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

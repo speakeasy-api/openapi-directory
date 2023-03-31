@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsLabelsRevisionsPermissionsListPathParams struct {
-	// Required. The parent Label resource name on which Label Permission are listed. Format: labels/{label}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsListQueryParams struct {
+type DrivelabelsLabelsRevisionsPermissionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type DrivelabelsLabelsRevisionsPermissionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The token of the page to return.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent Label resource name on which Label Permission are listed. Format: labels/{label}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -41,11 +38,6 @@ type DrivelabelsLabelsRevisionsPermissionsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Set to `true` in order to use the user's admin credentials. The server will verify the user is an admin for the Label before allowing access.
 	UseAdminAccess *bool `queryParam:"style=form,explode=true,name=useAdminAccess"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsListRequest struct {
-	PathParams  DrivelabelsLabelsRevisionsPermissionsListPathParams
-	QueryParams DrivelabelsLabelsRevisionsPermissionsListQueryParams
 }
 
 type DrivelabelsLabelsRevisionsPermissionsListResponse struct {

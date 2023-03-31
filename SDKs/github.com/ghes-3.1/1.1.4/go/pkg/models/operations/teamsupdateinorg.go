@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsUpdateInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // TeamsUpdateInOrgRequestBodyPermissionEnum - **Deprecated**. The permission that new repositories will be added to the team with when none is specified.
 type TeamsUpdateInOrgRequestBodyPermissionEnum string
 
@@ -91,8 +84,11 @@ type TeamsUpdateInOrgRequestBody struct {
 }
 
 type TeamsUpdateInOrgRequest struct {
-	PathParams TeamsUpdateInOrgPathParams
-	Request    *TeamsUpdateInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsUpdateInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsUpdateInOrgResponse struct {

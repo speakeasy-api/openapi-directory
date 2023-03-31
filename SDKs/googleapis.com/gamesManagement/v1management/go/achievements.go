@@ -33,20 +33,20 @@ func newAchievements(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GamesManagementAchievementsReset - Resets the achievement with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
-func (s *achievements) GamesManagementAchievementsReset(ctx context.Context, request operations.GamesManagementAchievementsResetRequest) (*operations.GamesManagementAchievementsResetResponse, error) {
+func (s *achievements) GamesManagementAchievementsReset(ctx context.Context, request operations.GamesManagementAchievementsResetRequest, security operations.GamesManagementAchievementsResetSecurity) (*operations.GamesManagementAchievementsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/reset", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/reset", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *achievements) GamesManagementAchievementsReset(ctx context.Context, req
 }
 
 // GamesManagementAchievementsResetAll - Resets all achievements for the currently authenticated player for your application. This method is only accessible to whitelisted tester accounts for your application.
-func (s *achievements) GamesManagementAchievementsResetAll(ctx context.Context, request operations.GamesManagementAchievementsResetAllRequest) (*operations.GamesManagementAchievementsResetAllResponse, error) {
+func (s *achievements) GamesManagementAchievementsResetAll(ctx context.Context, request operations.GamesManagementAchievementsResetAllRequest, security operations.GamesManagementAchievementsResetAllSecurity) (*operations.GamesManagementAchievementsResetAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/achievements/reset"
 
@@ -90,11 +90,11 @@ func (s *achievements) GamesManagementAchievementsResetAll(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *achievements) GamesManagementAchievementsResetAll(ctx context.Context, 
 }
 
 // GamesManagementAchievementsResetAllForAllPlayers - Resets all draft achievements for all players. This method is only available to user accounts for your developer console.
-func (s *achievements) GamesManagementAchievementsResetAllForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetAllForAllPlayersRequest) (*operations.GamesManagementAchievementsResetAllForAllPlayersResponse, error) {
+func (s *achievements) GamesManagementAchievementsResetAllForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetAllForAllPlayersRequest, security operations.GamesManagementAchievementsResetAllForAllPlayersSecurity) (*operations.GamesManagementAchievementsResetAllForAllPlayersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/achievements/resetAllForAllPlayers"
 
@@ -138,11 +138,11 @@ func (s *achievements) GamesManagementAchievementsResetAllForAllPlayers(ctx cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,20 +168,20 @@ func (s *achievements) GamesManagementAchievementsResetAllForAllPlayers(ctx cont
 }
 
 // GamesManagementAchievementsResetForAllPlayers - Resets the achievement with the given ID for all players. This method is only available to user accounts for your developer console. Only draft achievements can be reset.
-func (s *achievements) GamesManagementAchievementsResetForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetForAllPlayersRequest) (*operations.GamesManagementAchievementsResetForAllPlayersResponse, error) {
+func (s *achievements) GamesManagementAchievementsResetForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetForAllPlayersRequest, security operations.GamesManagementAchievementsResetForAllPlayersSecurity) (*operations.GamesManagementAchievementsResetForAllPlayersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/resetForAllPlayers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/resetForAllPlayers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,11 +207,11 @@ func (s *achievements) GamesManagementAchievementsResetForAllPlayers(ctx context
 }
 
 // GamesManagementAchievementsResetMultipleForAllPlayers - Resets achievements with the given IDs for all players. This method is only available to user accounts for your developer console. Only draft achievements may be reset.
-func (s *achievements) GamesManagementAchievementsResetMultipleForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetMultipleForAllPlayersRequest) (*operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse, error) {
+func (s *achievements) GamesManagementAchievementsResetMultipleForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetMultipleForAllPlayersRequest, security operations.GamesManagementAchievementsResetMultipleForAllPlayersSecurity) (*operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/games/v1management/achievements/resetMultipleForAllPlayers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AchievementResetMultipleForAllRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,11 +223,11 @@ func (s *achievements) GamesManagementAchievementsResetMultipleForAllPlayers(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

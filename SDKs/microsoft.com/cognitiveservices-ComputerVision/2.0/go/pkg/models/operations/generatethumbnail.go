@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateThumbnailQueryParams struct {
+type GenerateThumbnailRequest struct {
+	// A JSON document with a URL pointing to the image that is to be analyzed.
+	ImageURL shared.ImageURL `request:"mediaType=application/json"`
 	// Height of the thumbnail, in pixels. It must be between 1 and 1024. Recommended minimum of 50.
 	Height int `queryParam:"style=form,explode=true,name=height"`
 	// Boolean flag for enabling smart cropping.
 	SmartCropping *bool `queryParam:"style=form,explode=true,name=smartCropping"`
 	// Width of the thumbnail, in pixels. It must be between 1 and 1024. Recommended minimum of 50.
 	Width int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type GenerateThumbnailRequest struct {
-	QueryParams GenerateThumbnailQueryParams
-	// A JSON document with a URL pointing to the image that is to be analyzed.
-	Request shared.ImageURL `request:"mediaType=application/json"`
 }
 
 type GenerateThumbnailResponse struct {

@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateWebhookPathParams struct {
-	// The unique identifier of the hook.
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposUpdateWebhookRequestBodyConfig - Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/enterprise-server@3.8/rest/reference/repos#create-hook-config-params).
 type ReposUpdateWebhookRequestBodyConfig struct {
 	Address *string `json:"address,omitempty"`
@@ -43,8 +34,13 @@ type ReposUpdateWebhookRequestBody struct {
 }
 
 type ReposUpdateWebhookRequest struct {
-	PathParams ReposUpdateWebhookPathParams
-	Request    ReposUpdateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposUpdateWebhookRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the hook.
+	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateWebhookResponse struct {

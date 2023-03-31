@@ -35,7 +35,7 @@ func newOwlOntology(defaultClient, securityClient HTTPClient, serverURL, languag
 // GetDlQuery - Placeholder - use OWLery for now
 func (s *owlOntology) GetDlQuery(ctx context.Context, request operations.GetDlQueryRequest) (*operations.GetDlQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/owl/ontology/dlquery/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/owl/ontology/dlquery/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *owlOntology) GetDlQuery(ctx context.Context, request operations.GetDlQu
 // GetSparqlQuery - Placeholder - use direct SPARQL endpoint for now
 func (s *owlOntology) GetSparqlQuery(ctx context.Context, request operations.GetSparqlQueryRequest) (*operations.GetSparqlQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/owl/ontology/sparql/{query}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/owl/ontology/sparql/{query}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

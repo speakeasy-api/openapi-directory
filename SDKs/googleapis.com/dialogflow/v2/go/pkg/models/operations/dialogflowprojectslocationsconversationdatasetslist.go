@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsConversationDatasetsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsConversationDatasetsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsConversationDatasetsListSecurity struct {
@@ -22,12 +22,7 @@ type DialogflowProjectsLocationsConversationDatasetsListSecurity struct {
 	Option2 *DialogflowProjectsLocationsConversationDatasetsListSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsConversationDatasetsListPathParams struct {
-	// Required. The project and location name to list all conversation datasets for. Format: `projects//locations/`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsConversationDatasetsListQueryParams struct {
+type DialogflowProjectsLocationsConversationDatasetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type DialogflowProjectsLocationsConversationDatasetsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The next_page_token value returned from a previous list request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project and location name to list all conversation datasets for. Format: `projects//locations/`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type DialogflowProjectsLocationsConversationDatasetsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsConversationDatasetsListRequest struct {
-	PathParams  DialogflowProjectsLocationsConversationDatasetsListPathParams
-	QueryParams DialogflowProjectsLocationsConversationDatasetsListQueryParams
-	Security    DialogflowProjectsLocationsConversationDatasetsListSecurity
 }
 
 type DialogflowProjectsLocationsConversationDatasetsListResponse struct {

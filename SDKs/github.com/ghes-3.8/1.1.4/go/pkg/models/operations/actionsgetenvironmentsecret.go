@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetEnvironmentSecretPathParams struct {
+type ActionsGetEnvironmentSecretRequest struct {
 	// The name of the environment.
 	EnvironmentName string `pathParam:"style=simple,explode=false,name=environment_name"`
 	// The unique identifier of the repository.
 	RepositoryID int64 `pathParam:"style=simple,explode=false,name=repository_id"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsGetEnvironmentSecretRequest struct {
-	PathParams ActionsGetEnvironmentSecretPathParams
 }
 
 type ActionsGetEnvironmentSecretResponse struct {

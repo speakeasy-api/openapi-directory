@@ -27,7 +27,6 @@ pkg/models/shared/errors.go
 pkg/models/shared/errorproto.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/groupitem.go
 pkg/models/shared/groupitemresource.go
 pkg/models/shared/listgroupitemsresponse.go

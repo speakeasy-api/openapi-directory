@@ -34,14 +34,14 @@ func newVehicles(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetVehicle - Get a vehicle's data
 func (s *vehicles) GetVehicle(ctx context.Context, request operations.GetVehicleRequest) (*operations.GetVehicleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -73,7 +73,7 @@ func (s *vehicles) GetVehicle(ctx context.Context, request operations.GetVehicle
 // GetVehicleBattery - Get a vehicle's battery
 func (s *vehicles) GetVehicleBattery(ctx context.Context, request operations.GetVehicleBatteryRequest) (*operations.GetVehicleBatteryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/battery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/battery", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -108,7 +108,7 @@ func (s *vehicles) GetVehicleBattery(ctx context.Context, request operations.Get
 // GetVehicleCharge - Get a vehicle's charge
 func (s *vehicles) GetVehicleCharge(ctx context.Context, request operations.GetVehicleChargeRequest) (*operations.GetVehicleChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/charge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/charge", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +143,7 @@ func (s *vehicles) GetVehicleCharge(ctx context.Context, request operations.GetV
 // GetVehicleLocation - Get a vehicle's location
 func (s *vehicles) GetVehicleLocation(ctx context.Context, request operations.GetVehicleLocationRequest) (*operations.GetVehicleLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/location", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/location", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +178,7 @@ func (s *vehicles) GetVehicleLocation(ctx context.Context, request operations.Ge
 // GetVehicleOdometer - Get a vehicle's odometer
 func (s *vehicles) GetVehicleOdometer(ctx context.Context, request operations.GetVehicleOdometerRequest) (*operations.GetVehicleOdometerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/odometer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/odometer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -220,7 +220,7 @@ func (s *vehicles) GetVehicles(ctx context.Context, request operations.GetVehicl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -262,9 +262,9 @@ func (s *vehicles) GetVehicles(ctx context.Context, request operations.GetVehicl
 // PostCharge - Change charge
 func (s *vehicles) PostCharge(ctx context.Context, request operations.PostChargeRequest) (*operations.PostChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/charge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/vehicles/{id}/charge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

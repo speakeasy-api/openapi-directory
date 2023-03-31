@@ -37,7 +37,7 @@ func newGists(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#check-if-a-gist-is-starred - API method documentation
 func (s *gists) GistsCheckIsStarred(ctx context.Context, request operations.GistsCheckIsStarredRequest) (*operations.GistsCheckIsStarredResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *gists) GistsCheckIsStarred(ctx context.Context, request operations.Gist
 //
 // **Note:** Don't name your files "gistfile" with a numerical suffix. This is the format of the automatic naming scheme that Gist uses internally.
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#create-a-gist - API method documentation
-func (s *gists) GistsCreate(ctx context.Context, request operations.GistsCreateRequest) (*operations.GistsCreateResponse, error) {
+func (s *gists) GistsCreate(ctx context.Context, request operations.GistsCreateRequestBody) (*operations.GistsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/gists"
 
@@ -178,9 +178,9 @@ func (s *gists) GistsCreate(ctx context.Context, request operations.GistsCreateR
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#create-a-gist-comment - API method documentation
 func (s *gists) GistsCreateComment(ctx context.Context, request operations.GistsCreateCommentRequest) (*operations.GistsCreateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,7 +248,7 @@ func (s *gists) GistsCreateComment(ctx context.Context, request operations.Gists
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#delete-a-gist - API method documentation
 func (s *gists) GistsDelete(ctx context.Context, request operations.GistsDeleteRequest) (*operations.GistsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -298,7 +298,7 @@ func (s *gists) GistsDelete(ctx context.Context, request operations.GistsDeleteR
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#delete-a-gist-comment - API method documentation
 func (s *gists) GistsDeleteComment(ctx context.Context, request operations.GistsDeleteCommentRequest) (*operations.GistsDeleteCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -349,7 +349,7 @@ func (s *gists) GistsDeleteComment(ctx context.Context, request operations.Gists
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#fork-a-gist - API method documentation
 func (s *gists) GistsFork(ctx context.Context, request operations.GistsForkRequest) (*operations.GistsForkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -419,7 +419,7 @@ func (s *gists) GistsFork(ctx context.Context, request operations.GistsForkReque
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#get-a-gist - API method documentation
 func (s *gists) GistsGet(ctx context.Context, request operations.GistsGetRequest) (*operations.GistsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -485,7 +485,7 @@ func (s *gists) GistsGet(ctx context.Context, request operations.GistsGetRequest
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#get-a-gist-comment - API method documentation
 func (s *gists) GistsGetComment(ctx context.Context, request operations.GistsGetCommentRequest) (*operations.GistsGetCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -551,7 +551,7 @@ func (s *gists) GistsGetComment(ctx context.Context, request operations.GistsGet
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#get-a-gist-revision - API method documentation
 func (s *gists) GistsGetRevision(ctx context.Context, request operations.GistsGetRevisionRequest) (*operations.GistsGetRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/{sha}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/{sha}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -626,7 +626,7 @@ func (s *gists) GistsList(ctx context.Context, request operations.GistsListReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -681,14 +681,14 @@ func (s *gists) GistsList(ctx context.Context, request operations.GistsListReque
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#list-gist-comments - API method documentation
 func (s *gists) GistsListComments(ctx context.Context, request operations.GistsListCommentsRequest) (*operations.GistsListCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -745,14 +745,14 @@ func (s *gists) GistsListComments(ctx context.Context, request operations.GistsL
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#list-gist-commits - API method documentation
 func (s *gists) GistsListCommits(ctx context.Context, request operations.GistsListCommitsRequest) (*operations.GistsListCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/commits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/commits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -810,14 +810,14 @@ func (s *gists) GistsListCommits(ctx context.Context, request operations.GistsLi
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#list-gists-for-a-user - API method documentation
 func (s *gists) GistsListForUser(ctx context.Context, request operations.GistsListForUserRequest) (*operations.GistsListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/gists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/gists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -871,14 +871,14 @@ func (s *gists) GistsListForUser(ctx context.Context, request operations.GistsLi
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#list-gist-forks - API method documentation
 func (s *gists) GistsListForks(ctx context.Context, request operations.GistsListForksRequest) (*operations.GistsListForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -945,7 +945,7 @@ func (s *gists) GistsListPublic(ctx context.Context, request operations.GistsLis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1018,7 +1018,7 @@ func (s *gists) GistsListStarred(ctx context.Context, request operations.GistsLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1076,7 +1076,7 @@ func (s *gists) GistsListStarred(ctx context.Context, request operations.GistsLi
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#star-a-gist - API method documentation
 func (s *gists) GistsStar(ctx context.Context, request operations.GistsStarRequest) (*operations.GistsStarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1126,7 +1126,7 @@ func (s *gists) GistsStar(ctx context.Context, request operations.GistsStarReque
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#unstar-a-gist - API method documentation
 func (s *gists) GistsUnstar(ctx context.Context, request operations.GistsUnstarRequest) (*operations.GistsUnstarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1177,9 +1177,9 @@ func (s *gists) GistsUnstar(ctx context.Context, request operations.GistsUnstarR
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists/#update-a-gist - API method documentation
 func (s *gists) GistsUpdate(ctx context.Context, request operations.GistsUpdateRequest) (*operations.GistsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1252,9 +1252,9 @@ func (s *gists) GistsUpdate(ctx context.Context, request operations.GistsUpdateR
 // https://docs.github.com/enterprise-server@3.0/rest/reference/gists#update-a-gist-comment - API method documentation
 func (s *gists) GistsUpdateComment(ctx context.Context, request operations.GistsUpdateCommentRequest) (*operations.GistsUpdateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

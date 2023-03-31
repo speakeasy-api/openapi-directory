@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceSingleLanPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceSingleLanRequestBodyIpv6PrefixAssignmentsOriginTypeEnum - Type of the origin
 type UpdateNetworkApplianceSingleLanRequestBodyIpv6PrefixAssignmentsOriginTypeEnum string
 
@@ -81,8 +77,8 @@ type UpdateNetworkApplianceSingleLanRequestBody struct {
 }
 
 type UpdateNetworkApplianceSingleLanRequest struct {
-	PathParams UpdateNetworkApplianceSingleLanPathParams
-	Request    *UpdateNetworkApplianceSingleLanRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceSingleLanRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkApplianceSingleLan200ApplicationJSONIpv6PrefixAssignmentsOriginTypeEnum - Type of the origin

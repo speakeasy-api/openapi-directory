@@ -32,11 +32,11 @@ func newBillingAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // CloudbillingBillingAccountsEstimateCostScenario - Use custom pricing in the estimate, using a `CostScenario` with a defined `billingAccount`.
-func (s *billingAccounts) CloudbillingBillingAccountsEstimateCostScenario(ctx context.Context, request operations.CloudbillingBillingAccountsEstimateCostScenarioRequest) (*operations.CloudbillingBillingAccountsEstimateCostScenarioResponse, error) {
+func (s *billingAccounts) CloudbillingBillingAccountsEstimateCostScenario(ctx context.Context, request operations.CloudbillingBillingAccountsEstimateCostScenarioRequest, security operations.CloudbillingBillingAccountsEstimateCostScenarioSecurity) (*operations.CloudbillingBillingAccountsEstimateCostScenarioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{billingAccount}:estimateCostScenario", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{billingAccount}:estimateCostScenario", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EstimateCostScenarioForBillingAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *billingAccounts) CloudbillingBillingAccountsEstimateCostScenario(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

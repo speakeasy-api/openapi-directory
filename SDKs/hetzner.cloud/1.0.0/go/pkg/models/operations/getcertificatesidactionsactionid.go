@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetCertificatesIDActionsActionIDPathParams struct {
+type GetCertificatesIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Certificate
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCertificatesIDActionsActionIDRequest struct {
-	PathParams GetCertificatesIDActionsActionIDPathParams
 }
 
 // GetCertificatesIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

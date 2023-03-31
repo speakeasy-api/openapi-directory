@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/cloudresourcemanager/v3/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,37 +15,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudresourcemanagerEffectiveTagsListRequest(
-    security=operations.CloudresourcemanagerEffectiveTagsListSecurity(
-        option1=operations.CloudresourcemanagerEffectiveTagsListSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.CloudresourcemanagerEffectiveTagsListQueryParams(
-        dollar_xgafv="2",
-        access_token="mollitia",
-        alt="media",
-        callback="non",
-        fields="id",
-        key="consequatur",
-        oauth_token="aspernatur",
-        page_size=304540307133973153,
-        page_token="similique",
-        parent="rerum",
-        pretty_print=False,
-        quota_user="ea",
-        upload_type="odit",
-        upload_protocol="vitae",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    parent="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.effective_tags.cloudresourcemanager_effective_tags_list(req)
+res = s.effective_tags.cloudresourcemanager_effective_tags_list(req, operations.CloudresourcemanagerEffectiveTagsListSecurity(
+    option1=operations.CloudresourcemanagerEffectiveTagsListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.list_effective_tags_response is not None:
     # handle response
@@ -53,9 +47,10 @@ if res.list_effective_tags_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### effectiveTags
+
+### effective_tags
 
 * `cloudresourcemanager_effective_tags_list` - Return a list of effective tags for the given Google Cloud resource, as specified in `parent`.
 
@@ -82,17 +77,17 @@ if res.list_effective_tags_response is not None:
 * `cloudresourcemanager_projects_search` - Search for projects that the caller has both `resourcemanager.projects.get` permission on, and also satisfy the specified query. This method returns projects in an unspecified order. This method is eventually consistent with project mutations; this means that a newly created project may not appear in the results or recent updates to an existing project may not be reflected in the results. To retrieve the latest state of a project, use the GetProject method.
 * `cloudresourcemanager_projects_undelete` - Restores the project identified by the specified `name` (for example, `projects/415104041262`). You can only use this method for a project that has a lifecycle state of DELETE_REQUESTED. After deletion starts, the project cannot be restored. The caller must have `resourcemanager.projects.undelete` permission for this project.
 
-### tagBindings
+### tag_bindings
 
 * `cloudresourcemanager_tag_bindings_create` - Creates a TagBinding between a TagValue and a Google Cloud resource.
 * `cloudresourcemanager_tag_bindings_list` - Lists the TagBindings for the given Google Cloud resource, as specified with `parent`. NOTE: The `parent` field is expected to be a full resource name: https://cloud.google.com/apis/design/resource_names#full_resource_name
 
-### tagKeys
+### tag_keys
 
 * `cloudresourcemanager_tag_keys_create` - Creates a new TagKey. If another request with the same parameters is sent while the original request is in process, the second request will receive an error. A maximum of 1000 TagKeys can exist under a parent at any given time.
 * `cloudresourcemanager_tag_keys_list` - Lists all TagKeys for a parent resource.
 
-### tagValues
+### tag_values
 
 * `cloudresourcemanager_tag_values_create` - Creates a TagValue as a child of the specified TagKey. If a another request with the same parameters is sent while the original request is in process the second request will receive an error. A maximum of 1000 TagValues can exist under a TagKey at any given time.
 * `cloudresourcemanager_tag_values_get` - Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the value does not exist or the user does not have permission to view it.
@@ -104,7 +99,17 @@ if res.list_effective_tags_response is not None:
 * `cloudresourcemanager_tag_values_tag_holds_delete` - Deletes a TagHold.
 * `cloudresourcemanager_tag_values_tag_holds_list` - Lists TagHolds under a TagValue.
 * `cloudresourcemanager_tag_values_test_iam_permissions` - Returns permissions that a caller has on the specified TagValue. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. There are no permissions required for making this API call.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

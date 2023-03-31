@@ -8,18 +8,14 @@ import (
 )
 
 type CloudresourcemanagerFoldersPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudresourcemanagerFoldersPatchPathParams struct {
-	// Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example: "folders/1234".
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudresourcemanagerFoldersPatchQueryParams struct {
+type CloudresourcemanagerFoldersPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	FolderInput *shared.FolderInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,6 +26,8 @@ type CloudresourcemanagerFoldersPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example: "folders/1234".
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -42,13 +40,6 @@ type CloudresourcemanagerFoldersPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudresourcemanagerFoldersPatchRequest struct {
-	PathParams  CloudresourcemanagerFoldersPatchPathParams
-	QueryParams CloudresourcemanagerFoldersPatchQueryParams
-	Request     *shared.FolderInput `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerFoldersPatchSecurity
 }
 
 type CloudresourcemanagerFoldersPatchResponse struct {

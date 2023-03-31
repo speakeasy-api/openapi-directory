@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/gambitcomm.local/mimic/21.00/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,22 +14,18 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    )
-)
-    
-req = operations.AccessAddRequest(
-    path_params=operations.AccessAddPathParams(
-        agents="quas",
-        mask="qui",
-        user="ut",
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
     ),
+)
+
+
+req = operations.AccessAddRequest(
+    agents="corrupti",
+    mask="provident",
+    user="distinctio",
 )
     
 res = s.access.access_add(req)
@@ -40,9 +36,10 @@ if res.access_add_200_application_json_string is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### Access
+
+### access
 
 * `access_add` - Adds/Overwrites the user entry in the access control database.
 * `access_del` - Clears a users entry from access control database.
@@ -56,7 +53,7 @@ if res.access_add_200_application_json_string is not None:
 * `access_set_acldb` - Allows setting the name of the current access control database.
 * `access_set_enabled` - Allows the user to enable/disable the access control check.
 
-### Agent
+### agent
 
 * `add_ipalias` - Adds a new ipalias for the agent.
 * `add_timer_script` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
@@ -137,7 +134,7 @@ if res.access_add_200_application_json_string is not None:
 * `trap_config_list` - List the set of trap destinations for this agent instance.
 * `trap_list` - List the outstanding asynchronous traps for this agent instance.
 
-### COAP
+### coap
 
 * `protocol_coap_get_args` - Show the agent's COAP argument structure
 * `protocol_coap_get_config` - Show the agent's COAP configuration
@@ -147,7 +144,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_coap_set_config` - Set the agent's COAP configuration
 * `protocol_coap_set_trace` - Set the agent's COAP traffic tracing
 
-### DHCP
+### dhcp
 
 * `protocol_dhcp_get_args` - Show the agent's DHCP argument structure
 * `protocol_dhcp_get_config` - Show the agent's DHCP configuration
@@ -158,7 +155,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_dhcp_set_config` - Set the agent's DHCP configuration
 * `protocol_dhcp_set_trace` - Set the agent's DHCP traffic tracing
 
-### Daemon
+### daemon
 
 * `add_daemon_timer_script` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 * `cfg_load` - Load the lab configuration file file.
@@ -200,7 +197,7 @@ if res.access_add_200_application_json_string is not None:
 * `store_unset` - Deletes a variable which is currently defined.
 * `terminate` - Terminate the MIMIC daemon.
 
-### IPMI
+### ipmi
 
 * `protocol_ipmi_get_args` - Show the agent's IPMI argument structure
 * `protocol_ipmi_get_attr` - Show the outgoing message's attributes
@@ -212,7 +209,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_ipmi_set_config` - Set the agent's IPMI configuration
 * `protocol_ipmi_set_trace` - Set the agent's IPMI traffic tracing
 
-### MQTT
+### mqtt
 
 * `protocol_mqtt_client_get_protstate` - Show the agent's MQTT TCP connection state
 * `protocol_mqtt_client_get_state` - Show the agent's MQTT state
@@ -247,7 +244,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_mqtt_set_config` - Set the agent's MQTT configuration
 * `protocol_mqtt_set_trace` - Set the agent's MQTT traffic tracing
 
-### NETFLOW
+### netflow
 
 * `protocol_netflow_change_attr` - Change NETFLOW export attributes
 * `protocol_netflow_change_dfs` - Change NETFLOW data export interval
@@ -266,7 +263,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_netflow_set_file_name` - Swap NETFLOW configuration file
 * `protocol_netflow_set_trace` - Set the agent's NETFLOW traffic tracing
 
-### PROXY
+### proxy
 
 * `protocol_proxy_get_args` - Show the agent's PROXY argument structure
 * `protocol_proxy_get_config` - Show the agent's PROXY configuration
@@ -282,7 +279,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_proxy_set_config` - Set the agent's PROXY configuration
 * `protocol_proxy_set_trace` - Set the agent's PROXY traffic tracing
 
-### SFLOW
+### sflow
 
 * `protocol_sflow_get_args` - Show the agent's SFLOW argument structure
 * `protocol_sflow_get_config` - Show the agent's SFLOW configuration
@@ -295,7 +292,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_sflow_set_config` - Set the agent's SFLOW configuration
 * `protocol_sflow_set_trace` - Set the agent's SFLOW traffic tracing
 
-### SNMPTCP
+### snmptcp
 
 * `protocol_snmptcp_get_args` - Show the agent's SNMPTCP argument structure
 * `protocol_snmptcp_get_config` - Show the agent's SNMPTCP configuration
@@ -309,7 +306,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_snmptcp_set_config` - Set the agent's SNMPTCP configuration
 * `protocol_snmptcp_set_trace` - Set the agent's SNMPTCP traffic tracing
 
-### SNMPv3
+### snm_pv3
 
 * `protocol_snmpv3_access_add` - Adds a new access entry with the specified parameters.
 * `protocol_snmpv3_access_clear` - Clears all access entries.
@@ -338,7 +335,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_snmpv3_view_del` - Deletes the specified view entry.
 * `protocol_snmpv3_view_list` - Returns the current view entries as an array of strings.
 
-### SSH
+### ssh
 
 * `protocol_ssh_get_args` - Show the agent's SSH argument structure
 * `protocol_ssh_get_config` - Show the agent's SSH configuration
@@ -352,7 +349,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_ssh_set_config` - Set the agent's SSH configuration
 * `protocol_ssh_set_trace` - Set the agent's SSH traffic tracing
 
-### SYSLOG
+### syslog
 
 * `protocol_syslog_get_args` - Show the agent's SYSLOG argument structure
 * `protocol_syslog_get_attr` - Show the outgoing message's attributes
@@ -365,7 +362,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_syslog_set_config` - Set the agent's SYSLOG configuration
 * `protocol_syslog_set_trace` - Set the agent's SYSLOG traffic tracing
 
-### TELNET
+### telnet
 
 * `protocol_telnet_connection_logon` - Changes the connection's current logon.
 * `protocol_telnet_connection_request` - Executes the command asynchronously .
@@ -388,7 +385,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_telnet_set_config` - Set the agent's TELNET configuration
 * `protocol_telnet_set_trace` - Set the agent's TELNET traffic tracing
 
-### TFTP
+### tftp
 
 * `protocol_tftp_get_args` - Show the agent's TFTP argument structure
 * `protocol_tftp_get_config` - Show the agent's TFTP configuration
@@ -405,7 +402,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_tftp_set_config` - Set the agent's TFTP configuration
 * `protocol_tftp_set_trace` - Set the agent's TFTP traffic tracing
 
-### TOD
+### tod
 
 * `protocol_tod_get_args` - Show the agent's TOD argument structure
 * `protocol_tod_get_config` - Show the agent's TOD configuration
@@ -416,7 +413,7 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_tod_set_config` - Set the agent's TOD configuration
 * `protocol_tod_set_trace` - Set the agent's TOD traffic tracing
 
-### Valuespace
+### valuespace
 
 * `add` - Add an entry to a table.
 * `eval_value` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
@@ -437,7 +434,7 @@ if res.access_add_200_application_json_string is not None:
 * `split_oid` - Split the numerical OID into the object OID and instance OID.
 * `unset_value` - Unset a variable in the Value Space in order to free its memory.
 
-### WEB
+### web
 
 * `protocol_web_get_args` - Show the agent's WEB argument structure
 * `protocol_web_get_config` - Show the agent's WEB configuration
@@ -452,7 +449,17 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_web_port_stop` - Stop the agent's WEB port
 * `protocol_web_set_config` - Set the agent's WEB configuration
 * `protocol_web_set_trace` - Set the agent's WEB traffic tracing
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterSmsRequest struct {
-	// a SMS Number to send an OTP to
-	Request shared.RegisterSmsRequest `request:"mediaType=application/json"`
-}
-
 type RegisterSmsResponse struct {
 	ContentType string
 	StatusCode  int

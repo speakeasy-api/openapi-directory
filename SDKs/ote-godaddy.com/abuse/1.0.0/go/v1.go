@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // CreateTicket - Create a new abuse ticket
-func (s *v1) CreateTicket(ctx context.Context, request operations.CreateTicketRequest) (*operations.CreateTicketResponse, error) {
+func (s *v1) CreateTicket(ctx context.Context, request shared.AbuseTicketCreate) (*operations.CreateTicketResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/abuse/tickets"
 
@@ -96,7 +97,7 @@ func (s *v1) CreateTicket(ctx context.Context, request operations.CreateTicketRe
 // GetTicketInfo - Return the abuse ticket data for a given ticket id
 func (s *v1) GetTicketInfo(ctx context.Context, request operations.GetTicketInfoRequest) (*operations.GetTicketInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/abuse/tickets/{ticketId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/abuse/tickets/{ticketId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -153,7 +154,7 @@ func (s *v1) GetTickets(ctx context.Context, request operations.GetTicketsReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

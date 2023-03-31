@@ -36,7 +36,7 @@ func newPortfolioAnalysis(defaultClient, securityClient HTTPClient, serverURL, l
 //
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
-func (s *portfolioAnalysis) PostPortfolioAnalysisAlpha(ctx context.Context, request operations.PostPortfolioAnalysisAlphaRequest) (*operations.PostPortfolioAnalysisAlphaResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisAlpha(ctx context.Context, request operations.PostPortfolioAnalysisAlphaRequestBody) (*operations.PostPortfolioAnalysisAlphaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/alpha"
 
@@ -94,7 +94,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisAlpha(ctx context.Context, requ
 //
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
-func (s *portfolioAnalysis) PostPortfolioAnalysisBeta(ctx context.Context, request operations.PostPortfolioAnalysisBetaRequest) (*operations.PostPortfolioAnalysisBetaResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisBeta(ctx context.Context, request operations.PostPortfolioAnalysisBetaRequestBody) (*operations.PostPortfolioAnalysisBetaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/beta"
 
@@ -153,7 +153,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisBeta(ctx context.Context, reque
 // References
 // * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
 // * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
-func (s *portfolioAnalysis) PostPortfolioAnalysisConditionalValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisConditionalValueAtRiskRequest) (*operations.PostPortfolioAnalysisConditionalValueAtRiskResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisConditionalValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisConditionalValueAtRiskRequestBody) (*operations.PostPortfolioAnalysisConditionalValueAtRiskResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/conditional-value-at-risk"
 
@@ -211,7 +211,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisConditionalValueAtRisk(ctx cont
 //
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
-func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsReturn(ctx context.Context, request operations.PostPortfolioAnalysisContributionsReturnRequest) (*operations.PostPortfolioAnalysisContributionsReturnResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsReturn(ctx context.Context, request operations.PostPortfolioAnalysisContributionsReturnRequestBody) (*operations.PostPortfolioAnalysisContributionsReturnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/contributions/return"
 
@@ -269,7 +269,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsReturn(ctx context
 //
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
-func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsRisk(ctx context.Context, request operations.PostPortfolioAnalysisContributionsRiskRequest) (*operations.PostPortfolioAnalysisContributionsRiskResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsRisk(ctx context.Context, request operations.PostPortfolioAnalysisContributionsRiskRequestBody) (*operations.PostPortfolioAnalysisContributionsRiskResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/contributions/risk"
 
@@ -327,7 +327,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsRisk(ctx context.C
 //
 // References
 // * [Tristan Froidure, Khalid Jalalzai and Yves Choueifaty, Portfolio Rho-Representativity, International Journal of Theoretical and Applied FinanceVol. 22, No. 07, 1950034 (2019)](https://www.worldscientific.com/doi/10.1142/S0219024919500341)
-func (s *portfolioAnalysis) PostPortfolioAnalysisCorrelationSpectrum(ctx context.Context, request operations.PostPortfolioAnalysisCorrelationSpectrumRequest) (*operations.PostPortfolioAnalysisCorrelationSpectrumResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisCorrelationSpectrum(ctx context.Context, request operations.PostPortfolioAnalysisCorrelationSpectrumRequestBody) (*operations.PostPortfolioAnalysisCorrelationSpectrumResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/correlation-spectrum"
 
@@ -386,7 +386,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisCorrelationSpectrum(ctx context
 // References
 // * [Yves Choueifaty and Yves Coignard, Toward Maximum Diversification, The Journal of Portfolio Management Fall 2008, 35 (1) 40-51](https://doi.org/10.3905/JPM.2008.35.1.40)
 // * [Tristan Froidure, Khalid Jalalzai and Yves Choueifaty, Portfolio Rho-Representativity, International Journal of Theoretical and Applied FinanceVol. 22, No. 07, 1950034 (2019)](https://www.worldscientific.com/doi/10.1142/S0219024919500341)
-func (s *portfolioAnalysis) PostPortfolioAnalysisDiversificationRatio(ctx context.Context, request operations.PostPortfolioAnalysisDiversificationRatioRequest) (*operations.PostPortfolioAnalysisDiversificationRatioResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisDiversificationRatio(ctx context.Context, request operations.PostPortfolioAnalysisDiversificationRatioRequestBody) (*operations.PostPortfolioAnalysisDiversificationRatioResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/diversification-ratio"
 
@@ -444,7 +444,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisDiversificationRatio(ctx contex
 //
 // References
 // * [Wikipedia, Drawdown](https://en.wikipedia.org/wiki/Drawdown_(economics))
-func (s *portfolioAnalysis) PostPortfolioAnalysisDrawdowns(ctx context.Context, request operations.PostPortfolioAnalysisDrawdownsRequest) (*operations.PostPortfolioAnalysisDrawdownsResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisDrawdowns(ctx context.Context, request operations.PostPortfolioAnalysisDrawdownsRequestBody) (*operations.PostPortfolioAnalysisDrawdownsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/drawdowns"
 
@@ -502,7 +502,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisDrawdowns(ctx context.Context, 
 //
 // References
 // * [Meucci, Attilio and Santangelo, Alberto and Deguest, Romain, Risk Budgeting and Diversification Based on Optimized Uncorrelated Factors (November 10, 2015)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2276632)
-func (s *portfolioAnalysis) PostPortfolioAnalysisEffectiveNumberOfBets(ctx context.Context, request operations.PostPortfolioAnalysisEffectiveNumberOfBetsRequest) (*operations.PostPortfolioAnalysisEffectiveNumberOfBetsResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisEffectiveNumberOfBets(ctx context.Context, request operations.PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody) (*operations.PostPortfolioAnalysisEffectiveNumberOfBetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/effective-number-of-bets"
 
@@ -560,7 +560,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisEffectiveNumberOfBets(ctx conte
 //
 // References
 // * [Measuring Factor Exposures: Uses and Abuses, Ronen Israel and Adrienne Ross, The Journal of Alternative Investments Summer 2017, 20 (1) 10-25](https://jai.pm-research.com/content/20/1/10.short)
-func (s *portfolioAnalysis) PostPortfolioAnalysisFactorsExposures(ctx context.Context, request operations.PostPortfolioAnalysisFactorsExposuresRequest) (*operations.PostPortfolioAnalysisFactorsExposuresResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisFactorsExposures(ctx context.Context, request operations.PostPortfolioAnalysisFactorsExposuresRequestBody) (*operations.PostPortfolioAnalysisFactorsExposuresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/factors/exposures"
 
@@ -621,7 +621,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisFactorsExposures(ctx context.Co
 //
 // References
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioAnalysis) PostPortfolioAnalysisMeanVarianceEfficientFrontier(ctx context.Context, request operations.PostPortfolioAnalysisMeanVarianceEfficientFrontierRequest) (*operations.PostPortfolioAnalysisMeanVarianceEfficientFrontierResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisMeanVarianceEfficientFrontier(ctx context.Context, request operations.PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody) (*operations.PostPortfolioAnalysisMeanVarianceEfficientFrontierResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/mean-variance/efficient-frontier"
 
@@ -684,7 +684,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisMeanVarianceEfficientFrontier(c
 //
 // References
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioAnalysis) PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier(ctx context.Context, request operations.PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequest) (*operations.PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier(ctx context.Context, request operations.PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody) (*operations.PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/mean-variance/minimum-variance-frontier"
 
@@ -745,7 +745,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisMeanVarianceMinimumVarianceFron
 // References
 // * [Wikipedia, Rate of Return](https://en.wikipedia.org/wiki/Rate_of_return#Return)
 // * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioAnalysis) PostPortfolioAnalysisReturn(ctx context.Context, request operations.PostPortfolioAnalysisReturnRequest) (*operations.PostPortfolioAnalysisReturnResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisReturn(ctx context.Context, request operations.PostPortfolioAnalysisReturnRequestBody) (*operations.PostPortfolioAnalysisReturnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/return"
 
@@ -803,7 +803,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisReturn(ctx context.Context, req
 //
 // References
 // * [Wikipedia, Arithmetic Average Rate of Return](https://en.wikipedia.org/wiki/Rate_of_return#Arithmetic_average_rate_of_return)
-func (s *portfolioAnalysis) PostPortfolioAnalysisReturnsAverage(ctx context.Context, request operations.PostPortfolioAnalysisReturnsAverageRequest) (*operations.PostPortfolioAnalysisReturnsAverageResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisReturnsAverage(ctx context.Context, request operations.PostPortfolioAnalysisReturnsAverageRequestBody) (*operations.PostPortfolioAnalysisReturnsAverageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/returns/average"
 
@@ -862,7 +862,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisReturnsAverage(ctx context.Cont
 // References
 // * [Wikipedia, Tracking error](https://en.wikipedia.org/wiki/Tracking_error)
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
-func (s *portfolioAnalysis) PostPortfolioAnalysisTrackingError(ctx context.Context, request operations.PostPortfolioAnalysisTrackingErrorRequest) (*operations.PostPortfolioAnalysisTrackingErrorResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisTrackingError(ctx context.Context, request operations.PostPortfolioAnalysisTrackingErrorRequestBody) (*operations.PostPortfolioAnalysisTrackingErrorResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/tracking-error"
 
@@ -921,7 +921,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisTrackingError(ctx context.Conte
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
 // * [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
-func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerIndex(ctx context.Context, request operations.PostPortfolioAnalysisUlcerIndexRequest) (*operations.PostPortfolioAnalysisUlcerIndexResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerIndex(ctx context.Context, request operations.PostPortfolioAnalysisUlcerIndexRequestBody) (*operations.PostPortfolioAnalysisUlcerIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/ulcer-index"
 
@@ -980,7 +980,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerIndex(ctx context.Context,
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
 // * [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
-func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerPerformanceIndex(ctx context.Context, request operations.PostPortfolioAnalysisUlcerPerformanceIndexRequest) (*operations.PostPortfolioAnalysisUlcerPerformanceIndexResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerPerformanceIndex(ctx context.Context, request operations.PostPortfolioAnalysisUlcerPerformanceIndexRequestBody) (*operations.PostPortfolioAnalysisUlcerPerformanceIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/ulcer-performance-index"
 
@@ -1039,7 +1039,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerPerformanceIndex(ctx conte
 // References
 // * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
 // * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
-func (s *portfolioAnalysis) PostPortfolioAnalysisValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisValueAtRiskRequest) (*operations.PostPortfolioAnalysisValueAtRiskResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisValueAtRiskRequestBody) (*operations.PostPortfolioAnalysisValueAtRiskResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/value-at-risk"
 
@@ -1101,7 +1101,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisValueAtRisk(ctx context.Context
 // * [Wikipedia, Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation#Finance)
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
 // * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioAnalysis) PostPortfolioAnalysisVolatility(ctx context.Context, request operations.PostPortfolioAnalysisVolatilityRequest) (*operations.PostPortfolioAnalysisVolatilityResponse, error) {
+func (s *portfolioAnalysis) PostPortfolioAnalysisVolatility(ctx context.Context, request operations.PostPortfolioAnalysisVolatilityRequestBody) (*operations.PostPortfolioAnalysisVolatilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/volatility"
 

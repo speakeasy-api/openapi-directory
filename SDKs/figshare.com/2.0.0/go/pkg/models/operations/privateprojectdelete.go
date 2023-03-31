@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateProjectDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateProjectDeletePathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateProjectDeleteRequest struct {
-	PathParams PrivateProjectDeletePathParams
-	Security   PrivateProjectDeleteSecurity
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectDeleteResponse struct {

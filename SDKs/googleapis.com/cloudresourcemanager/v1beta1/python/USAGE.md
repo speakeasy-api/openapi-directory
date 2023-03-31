@@ -4,38 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudresourcemanagerOrganizationsGetRequest(
-    security=operations.CloudresourcemanagerOrganizationsGetSecurity(
-        option1=operations.CloudresourcemanagerOrganizationsGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.CloudresourcemanagerOrganizationsGetPathParams(
-        name="accusamus",
-    ),
-    query_params=operations.CloudresourcemanagerOrganizationsGetQueryParams(
-        dollar_xgafv="1",
-        access_token="dolorem",
-        alt="json",
-        callback="est",
-        fields="impedit",
-        key="harum",
-        oauth_token="distinctio",
-        organization_id="et",
-        pretty_print=True,
-        quota_user="qui",
-        upload_type="dolor",
-        upload_protocol="consequatur",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    name="corrupti",
+    oauth_token="illum",
+    organization_id="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.organizations.cloudresourcemanager_organizations_get(req)
+res = s.organizations.cloudresourcemanager_organizations_get(req, operations.CloudresourcemanagerOrganizationsGetSecurity(
+    option1=operations.CloudresourcemanagerOrganizationsGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.organization is not None:
     # handle response

@@ -8,13 +8,13 @@ import (
 )
 
 type CloudsearchIndexingDatasourcesItemsUnreserveSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchIndexingDatasourcesItemsUnreserveSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchIndexingDatasourcesItemsUnreserveSecurity struct {
@@ -22,14 +22,10 @@ type CloudsearchIndexingDatasourcesItemsUnreserveSecurity struct {
 	Option2 *CloudsearchIndexingDatasourcesItemsUnreserveSecurityOption2 `security:"option"`
 }
 
-type CloudsearchIndexingDatasourcesItemsUnreservePathParams struct {
-	// The name of the Data Source to unreserve all items. Format: datasources/{source_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CloudsearchIndexingDatasourcesItemsUnreserveQueryParams struct {
+type CloudsearchIndexingDatasourcesItemsUnreserveRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	UnreserveItemsRequest *shared.UnreserveItemsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -40,6 +36,8 @@ type CloudsearchIndexingDatasourcesItemsUnreserveQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The name of the Data Source to unreserve all items. Format: datasources/{source_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -50,13 +48,6 @@ type CloudsearchIndexingDatasourcesItemsUnreserveQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchIndexingDatasourcesItemsUnreserveRequest struct {
-	PathParams  CloudsearchIndexingDatasourcesItemsUnreservePathParams
-	QueryParams CloudsearchIndexingDatasourcesItemsUnreserveQueryParams
-	Request     *shared.UnreserveItemsRequest `request:"mediaType=application/json"`
-	Security    CloudsearchIndexingDatasourcesItemsUnreserveSecurity
 }
 
 type CloudsearchIndexingDatasourcesItemsUnreserveResponse struct {

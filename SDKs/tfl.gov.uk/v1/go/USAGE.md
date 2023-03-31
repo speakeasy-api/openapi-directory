@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.AccidentStatsGetRequest{
-        PathParams: operations.AccidentStatsGetPathParams{
-            Year: 548814,
-        },
+        Year: 548814,
     }
 
     ctx := context.Background()

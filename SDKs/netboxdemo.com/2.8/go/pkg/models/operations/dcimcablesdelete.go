@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimCablesDeletePathParams struct {
+type DcimCablesDeleteRequest struct {
 	// A unique integer value identifying this cable.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimCablesDeleteRequest struct {
-	PathParams DcimCablesDeletePathParams
 }
 
 type DcimCablesDeleteResponse struct {

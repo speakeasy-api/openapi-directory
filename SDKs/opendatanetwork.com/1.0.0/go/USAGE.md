@@ -14,15 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAMapRequest{
-        QueryParams: operations.CreateAMapQueryParams{
-            AppToken: "corrupti",
-            Constraint: "provident",
-            EntityID: "distinctio",
-            Variable: "quibusdam",
-        },
-        Headers: operations.CreateAMapHeaders{
-            XAppToken: "unde",
-        },
+        XAppToken: "corrupti",
+        AppToken: "provident",
+        Constraint: "distinctio",
+        EntityID: "quibusdam",
+        Variable: "unde",
     }
 
     ctx := context.Background()

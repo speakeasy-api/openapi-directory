@@ -9,17 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForTeamDiscussionCommentInOrgPathParams struct {
-	// The number that identifies the comment.
-	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	// The number that identifies the discussion.
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // ReactionsCreateForTeamDiscussionCommentInOrgRequestBodyContentEnum - The [reaction type](https://docs.github.com/github-ae@latest/rest/reference/reactions#reaction-types) to add to the team discussion comment.
 type ReactionsCreateForTeamDiscussionCommentInOrgRequestBodyContentEnum string
 
@@ -68,8 +57,15 @@ type ReactionsCreateForTeamDiscussionCommentInOrgRequestBody struct {
 }
 
 type ReactionsCreateForTeamDiscussionCommentInOrgRequest struct {
-	PathParams ReactionsCreateForTeamDiscussionCommentInOrgPathParams
-	Request    ReactionsCreateForTeamDiscussionCommentInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForTeamDiscussionCommentInOrgRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the comment.
+	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
+	// The number that identifies the discussion.
+	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type ReactionsCreateForTeamDiscussionCommentInOrgResponse struct {

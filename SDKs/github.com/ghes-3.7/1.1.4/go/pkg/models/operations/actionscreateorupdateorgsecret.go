@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type ActionsCreateOrUpdateOrgSecretPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 // ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum - Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
 type ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum string
 
@@ -54,8 +47,11 @@ type ActionsCreateOrUpdateOrgSecretRequestBody struct {
 }
 
 type ActionsCreateOrUpdateOrgSecretRequest struct {
-	PathParams ActionsCreateOrUpdateOrgSecretPathParams
-	Request    ActionsCreateOrUpdateOrgSecretRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateOrUpdateOrgSecretRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type ActionsCreateOrUpdateOrgSecretResponse struct {

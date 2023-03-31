@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2PhoneNumbersCallerIdsJSONQueryParams struct {
+type GetV2PhoneNumbersCallerIdsJSONRequest struct {
 	// E.164 Phone Number
 	PhoneNumber string `queryParam:"style=form,explode=true,name=phone_number"`
-}
-
-type GetV2PhoneNumbersCallerIdsJSONRequest struct {
-	QueryParams GetV2PhoneNumbersCallerIdsJSONQueryParams
 }
 
 type GetV2PhoneNumbersCallerIdsJSONResponse struct {

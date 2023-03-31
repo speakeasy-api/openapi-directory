@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsPathParams struct {
-	// Id of the folder social
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsRequest struct {
 	// range date of the documents
 	Date *string `queryParam:"style=form,explode=true,name=Date"`
 	// index range of the results
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsQueryParams
+	// Id of the folder social
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDNominativeSocialDeclarations200ApplicationJSON struct {

@@ -34,7 +34,7 @@ func newChannels(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // DeleteChannels - Deletes channels asynchronously
 // Allows to delete several channels at once asynchronously
-func (s *channels) DeleteChannels(ctx context.Context, request operations.DeleteChannelsRequest) (*operations.DeleteChannelsResponse, error) {
+func (s *channels) DeleteChannels(ctx context.Context, request shared.DeleteChannelsRequest) (*operations.DeleteChannelsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels/delete"
 
@@ -111,7 +111,7 @@ func (s *channels) DeleteChannels(ctx context.Context, request operations.Delete
 
 // ExportChannels - Export channels
 // Exports channel data to JSON file
-func (s *channels) ExportChannels(ctx context.Context, request operations.ExportChannelsRequest) (*operations.ExportChannelsResponse, error) {
+func (s *channels) ExportChannels(ctx context.Context, request shared.ExportChannelsRequest) (*operations.ExportChannelsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export_channels"
 
@@ -188,7 +188,7 @@ func (s *channels) ExportChannels(ctx context.Context, request operations.Export
 
 // MarkChannelsRead - Mark channels as read
 // Marks channels as read up to the specific message. If no channels is given, mark all channel as read
-func (s *channels) MarkChannelsRead(ctx context.Context, request operations.MarkChannelsReadRequest) (*operations.MarkChannelsReadResponse, error) {
+func (s *channels) MarkChannelsRead(ctx context.Context, request shared.MarkChannelsReadRequest) (*operations.MarkChannelsReadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels/read"
 
@@ -265,7 +265,7 @@ func (s *channels) MarkChannelsRead(ctx context.Context, request operations.Mark
 
 // MuteChannel - Mute channel
 // Mutes channel for user
-func (s *channels) MuteChannel(ctx context.Context, request operations.MuteChannelRequest) (*operations.MuteChannelResponse, error) {
+func (s *channels) MuteChannel(ctx context.Context, request shared.MuteChannelRequest) (*operations.MuteChannelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/mute/channel"
 
@@ -346,7 +346,7 @@ func (s *channels) QueryChannels(ctx context.Context, request operations.QueryCh
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryChannelsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -361,7 +361,7 @@ func (s *channels) QueryChannels(ctx context.Context, request operations.QueryCh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -432,7 +432,7 @@ func (s *channels) QueryMembers(ctx context.Context, request operations.QueryMem
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -503,7 +503,7 @@ func (s *channels) Search(ctx context.Context, request operations.SearchRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -569,7 +569,7 @@ func (s *channels) Sync(ctx context.Context, request operations.SyncRequest) (*o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sync"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SyncRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -584,7 +584,7 @@ func (s *channels) Sync(ctx context.Context, request operations.SyncRequest) (*o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -646,7 +646,7 @@ func (s *channels) Sync(ctx context.Context, request operations.SyncRequest) (*o
 
 // UnmuteChannel - Unmute channel
 // Unmutes channel for user
-func (s *channels) UnmuteChannel(ctx context.Context, request operations.UnmuteChannelRequest) (*operations.UnmuteChannelResponse, error) {
+func (s *channels) UnmuteChannel(ctx context.Context, request shared.UnmuteChannelRequest) (*operations.UnmuteChannelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/moderation/unmute/channel"
 

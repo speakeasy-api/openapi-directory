@@ -12,28 +12,19 @@ var ListEventServerList = []string{
 }
 
 type ListEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListEventPathParams struct {
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-}
-
-type ListEventQueryParams struct {
-	Edge *shared.EventEnumTwilioEdgeEnum `queryParam:"style=form,explode=true,name=Edge"`
+type ListEventRequest struct {
+	CallSid string                          `pathParam:"style=simple,explode=false,name=CallSid"`
+	Edge    *shared.EventEnumTwilioEdgeEnum `queryParam:"style=form,explode=true,name=Edge"`
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListEventRequest struct {
-	PathParams  ListEventPathParams
-	QueryParams ListEventQueryParams
-	Security    ListEventSecurity
-	ServerURL   *string
 }
 
 type ListEventListEventResponseMeta struct {

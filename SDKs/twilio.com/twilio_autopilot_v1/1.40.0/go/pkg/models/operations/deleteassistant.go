@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteAssistantServerList = []string{
@@ -12,18 +11,13 @@ var DeleteAssistantServerList = []string{
 }
 
 type DeleteAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteAssistantPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Assistant resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteAssistantRequest struct {
-	PathParams DeleteAssistantPathParams
-	Security   DeleteAssistantSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the Assistant resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteAssistantResponse struct {

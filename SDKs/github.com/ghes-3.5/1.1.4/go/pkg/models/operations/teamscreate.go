@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreatePathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // TeamsCreateRequestBodyPermissionEnum - **Deprecated**. The permission that new repositories will be added to the team with when none is specified.
 type TeamsCreateRequestBodyPermissionEnum string
 
@@ -98,8 +93,9 @@ type TeamsCreateRequestBody struct {
 }
 
 type TeamsCreateRequest struct {
-	PathParams TeamsCreatePathParams
-	Request    TeamsCreateRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type TeamsCreateResponse struct {

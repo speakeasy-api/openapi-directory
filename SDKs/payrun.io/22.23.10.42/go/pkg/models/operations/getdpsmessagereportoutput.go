@@ -8,7 +8,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetDpsMessageReportOutputQueryParams struct {
+type GetDpsMessageReportOutputRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employer unique key. E.g. ER001
 	EmployerKey string `queryParam:"style=form,explode=true,name=EmployerKey"`
 	// The lower filter date. E.g 2016-04-06
@@ -23,18 +27,6 @@ type GetDpsMessageReportOutputQueryParams struct {
 	StartIndex *string `queryParam:"style=form,explode=true,name=StartIndex"`
 	// The upper filter date. E.g 2017-04-05
 	ToDate *types.Date `queryParam:"style=form,explode=true,name=ToDate"`
-}
-
-type GetDpsMessageReportOutputHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetDpsMessageReportOutputRequest struct {
-	QueryParams GetDpsMessageReportOutputQueryParams
-	Headers     GetDpsMessageReportOutputHeaders
 }
 
 type GetDpsMessageReportOutputResponse struct {

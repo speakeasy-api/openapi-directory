@@ -14,30 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.FindListingRecommendationsRequest{
-        Security: operations.FindListingRecommendationsSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.FindListingRecommendationsQueryParams{
-            Filter: "corrupti",
-            Limit: "provident",
-            Offset: "distinctio",
-        },
-        Headers: operations.FindListingRecommendationsHeaders{
-            XEbayCMarketplaceID: "quibusdam",
-        },
-        Request: &shared.FindListingRecommendationRequest{
+        FindListingRecommendationRequest: &shared.FindListingRecommendationRequest{
             ListingIds: []string{
-                "nulla",
-                "corrupti",
-                "illum",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
+        XEbayCMarketplaceID: "unde",
+        Filter: "nulla",
+        Limit: "corrupti",
+        Offset: "illum",
     }
 
     ctx := context.Background()
-    res, err := s.ListingRecommendation.FindListingRecommendations(ctx, req)
+    res, err := s.ListingRecommendation.FindListingRecommendations(ctx, req, operations.FindListingRecommendationsSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

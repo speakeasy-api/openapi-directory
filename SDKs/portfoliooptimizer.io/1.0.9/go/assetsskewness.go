@@ -36,7 +36,7 @@ func newAssetsSkewness(defaultClient, securityClient HTTPClient, serverURL, lang
 //
 // References
 // * [Wikipedia, Skewness](https://en.wikipedia.org/wiki/Skewness)
-func (s *assetsSkewness) PostAssetsSkewness(ctx context.Context, request operations.PostAssetsSkewnessRequest) (*operations.PostAssetsSkewnessResponse, error) {
+func (s *assetsSkewness) PostAssetsSkewness(ctx context.Context, request operations.PostAssetsSkewnessRequestBody) (*operations.PostAssetsSkewnessResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/skewness"
 

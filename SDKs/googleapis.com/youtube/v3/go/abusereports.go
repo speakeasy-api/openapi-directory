@@ -33,11 +33,11 @@ func newAbuseReports(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // YoutubeAbuseReportsInsert - Inserts a new resource into this collection.
-func (s *abuseReports) YoutubeAbuseReportsInsert(ctx context.Context, request operations.YoutubeAbuseReportsInsertRequest) (*operations.YoutubeAbuseReportsInsertResponse, error) {
+func (s *abuseReports) YoutubeAbuseReportsInsert(ctx context.Context, request operations.YoutubeAbuseReportsInsertRequest, security operations.YoutubeAbuseReportsInsertSecurity) (*operations.YoutubeAbuseReportsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/abuseReports"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AbuseReport", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *abuseReports) YoutubeAbuseReportsInsert(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

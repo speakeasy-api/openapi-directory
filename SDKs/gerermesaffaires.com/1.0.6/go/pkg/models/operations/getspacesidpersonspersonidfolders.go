@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesIDPersonsPersonIDFoldersPathParams struct {
+type GetSpacesIDPersonsPersonIDFoldersRequest struct {
+	// index range of the results
+	Range *string `queryParam:"style=form,explode=true,name=Range"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the person to get folders
 	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type GetSpacesIDPersonsPersonIDFoldersQueryParams struct {
-	// index range of the results
-	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesIDPersonsPersonIDFoldersRequest struct {
-	PathParams  GetSpacesIDPersonsPersonIDFoldersPathParams
-	QueryParams GetSpacesIDPersonsPersonIDFoldersQueryParams
 }
 
 type GetSpacesIDPersonsPersonIDFoldersResponse struct {

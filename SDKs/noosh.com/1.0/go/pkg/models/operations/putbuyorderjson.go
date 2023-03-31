@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutBuyOrderJSONPathParams struct {
-	OrderID     string `pathParam:"style=simple,explode=false,name=order_id"`
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PutBuyOrderJSONRequest struct {
-	PathParams PutBuyOrderJSONPathParams
-	Request    *shared.OrderUpdPersistVO `request:"mediaType=application/json"`
+	OrderUpdPersistVO *shared.OrderUpdPersistVO `request:"mediaType=application/json"`
+	OrderID           string                    `pathParam:"style=simple,explode=false,name=order_id"`
+	ProjectID         string                    `pathParam:"style=simple,explode=false,name=project_id"`
+	WorkgroupID       string                    `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PutBuyOrderJSONResponse struct {

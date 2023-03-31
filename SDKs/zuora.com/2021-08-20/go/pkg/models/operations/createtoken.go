@@ -9,14 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTokenHeaders struct {
-	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
-	//
-	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
-	//
-	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
 // CreateTokenRequestBodyGrantTypeEnum - The OAuth grant type that will be used to generate the token. The value of this parameter must be `client_credentials`.
 type CreateTokenRequestBodyGrantTypeEnum string
 
@@ -51,8 +43,12 @@ type CreateTokenRequestBody struct {
 }
 
 type CreateTokenRequest struct {
-	Headers CreateTokenHeaders
-	Request CreateTokenRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody CreateTokenRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+	//
+	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+	//
+	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 }
 
 type CreateTokenResponse struct {

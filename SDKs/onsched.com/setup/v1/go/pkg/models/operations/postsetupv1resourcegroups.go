@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ResourcegroupsRequest struct {
-	// Resource input model
-	Request *shared.ResourceGroupInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1ResourcegroupsResponse struct {
 	ContentType string
 	// Success

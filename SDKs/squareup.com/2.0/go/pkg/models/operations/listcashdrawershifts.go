@@ -8,10 +8,10 @@ import (
 )
 
 type ListCashDrawerShiftsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCashDrawerShiftsQueryParams struct {
+type ListCashDrawerShiftsRequest struct {
 	// The inclusive start time of the query on opened_at, in ISO 8601 format.
 	BeginTime *string `queryParam:"style=form,explode=true,name=begin_time"`
 	// Opaque cursor for fetching the next page of results.
@@ -26,11 +26,6 @@ type ListCashDrawerShiftsQueryParams struct {
 	// The order in which cash drawer shifts are listed in the response,
 	// based on their opened_at field. Default value: ASC
 	SortOrder *string `queryParam:"style=form,explode=true,name=sort_order"`
-}
-
-type ListCashDrawerShiftsRequest struct {
-	QueryParams ListCashDrawerShiftsQueryParams
-	Security    ListCashDrawerShiftsSecurity
 }
 
 type ListCashDrawerShiftsResponse struct {

@@ -9,12 +9,12 @@ import (
 )
 
 type GetEventsV3EventsGetPageSecurity struct {
-	Hapikey           *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
+	Hapikey           *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
-type GetEventsV3EventsGetPageQueryParams struct {
+type GetEventsV3EventsGetPageRequest struct {
 	// An additional parameter that may be used to get the next `limit` set of results.
 	After  *string `queryParam:"style=form,explode=true,name=after"`
 	Before *string `queryParam:"style=form,explode=true,name=before"`
@@ -32,11 +32,6 @@ type GetEventsV3EventsGetPageQueryParams struct {
 	OccurredBefore *time.Time `queryParam:"style=form,explode=true,name=occurredBefore"`
 	// Selects the sort field and order. Defaults to ascending, prefix with `-` for descending order. `occurredAt` is the only field supported for sorting.
 	Sort []string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetEventsV3EventsGetPageRequest struct {
-	QueryParams GetEventsV3EventsGetPageQueryParams
-	Security    GetEventsV3EventsGetPageSecurity
 }
 
 type GetEventsV3EventsGetPageResponse struct {

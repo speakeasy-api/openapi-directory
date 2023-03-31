@@ -44,14 +44,10 @@ func (e *GetGetUserByOrcidFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetUserByOrcidQueryParams struct {
+type GetGetUserByOrcidRequest struct {
 	Format *GetGetUserByOrcidFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// string
 	Orcid string `queryParam:"style=form,explode=true,name=orcid"`
-}
-
-type GetGetUserByOrcidRequest struct {
-	QueryParams GetGetUserByOrcidQueryParams
 }
 
 type GetGetUserByOrcidResponse struct {

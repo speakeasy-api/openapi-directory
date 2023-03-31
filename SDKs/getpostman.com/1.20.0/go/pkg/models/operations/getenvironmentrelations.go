@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetEnvironmentRelationsPathParams struct {
+type GetEnvironmentRelationsRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
-}
-
-type GetEnvironmentRelationsRequest struct {
-	PathParams GetEnvironmentRelationsPathParams
 }
 
 type GetEnvironmentRelations200ApplicationJSONEnvironment struct {

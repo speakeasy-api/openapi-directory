@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RestoreUsersRequest struct {
-	Request shared.RestoreUsersRequest `request:"mediaType=application/json"`
-}
-
 type RestoreUsersResponse struct {
 	// Bad request
 	APIError    *shared.APIError

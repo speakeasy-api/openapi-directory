@@ -33,18 +33,18 @@ func newCharityOrg(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetCharityOrg - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.
-func (s *charityOrg) GetCharityOrg(ctx context.Context, request operations.GetCharityOrgRequest) (*operations.GetCharityOrgResponse, error) {
+func (s *charityOrg) GetCharityOrg(ctx context.Context, request operations.GetCharityOrgRequest, security operations.GetCharityOrgSecurity) (*operations.GetCharityOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charity_org/{charity_org_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/charity_org/{charity_org_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *charityOrg) GetCharityOrg(ctx context.Context, request operations.GetCh
 }
 
 // GetCharityOrgs - This call is used to search for supported charitable organizations. It allows users to search for a specific charitable organization, or for multiple charitable organizations, from a particular charitable domain and/or geographical region, or by using search criteria.<br /><br />The call returns paginated search results containing the charitable organizations that match the specified criteria.
-func (s *charityOrg) GetCharityOrgs(ctx context.Context, request operations.GetCharityOrgsRequest) (*operations.GetCharityOrgsResponse, error) {
+func (s *charityOrg) GetCharityOrgs(ctx context.Context, request operations.GetCharityOrgsRequest, security operations.GetCharityOrgsSecurity) (*operations.GetCharityOrgsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/charity_org"
 
@@ -93,13 +93,13 @@ func (s *charityOrg) GetCharityOrgs(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetFilesQueryParams struct {
+type GetFilesRequest struct {
 	// The maximum number of results to return per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The result set page number to be returned
@@ -15,10 +15,6 @@ type GetFilesQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// A sort document. Example: {'name':1} sorts the results by name in ascending order
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFilesRequest struct {
-	QueryParams GetFilesQueryParams
 }
 
 type GetFilesResponse struct {

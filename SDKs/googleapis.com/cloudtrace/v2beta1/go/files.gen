@@ -21,6 +21,5 @@ pkg/models/shared/tracesink.go
 pkg/models/shared/outputconfig.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listtracesinksresponse.go
 USAGE.md

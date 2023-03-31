@@ -8,13 +8,13 @@ import (
 )
 
 type TranslateProjectsLocationsDetectLanguageSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TranslateProjectsLocationsDetectLanguageSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TranslateProjectsLocationsDetectLanguageSecurity struct {
@@ -22,14 +22,10 @@ type TranslateProjectsLocationsDetectLanguageSecurity struct {
 	Option2 *TranslateProjectsLocationsDetectLanguageSecurityOption2 `security:"option"`
 }
 
-type TranslateProjectsLocationsDetectLanguagePathParams struct {
-	// Required. Project or location to make a call. Must refer to a caller's project. Format: `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`. Only models within the same region (has same location-id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type TranslateProjectsLocationsDetectLanguageQueryParams struct {
+type TranslateProjectsLocationsDetectLanguageRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv           *shared.XgafvEnum             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DetectLanguageRequest *shared.DetectLanguageRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type TranslateProjectsLocationsDetectLanguageQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Project or location to make a call. Must refer to a caller's project. Format: `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`. Only models within the same region (has same location-id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type TranslateProjectsLocationsDetectLanguageQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TranslateProjectsLocationsDetectLanguageRequest struct {
-	PathParams  TranslateProjectsLocationsDetectLanguagePathParams
-	QueryParams TranslateProjectsLocationsDetectLanguageQueryParams
-	Request     *shared.DetectLanguageRequest `request:"mediaType=application/json"`
-	Security    TranslateProjectsLocationsDetectLanguageSecurity
 }
 
 type TranslateProjectsLocationsDetectLanguageResponse struct {

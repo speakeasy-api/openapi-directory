@@ -8,18 +8,13 @@ import (
 )
 
 type PutWorkspaceSlugOrganizationsOrganizationIDSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PutWorkspaceSlugOrganizationsOrganizationIDPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	WorkspaceSlug  string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PutWorkspaceSlugOrganizationsOrganizationIDRequest struct {
-	PathParams PutWorkspaceSlugOrganizationsOrganizationIDPathParams
-	Request    *shared.Organization `request:"mediaType=application/json"`
-	Security   PutWorkspaceSlugOrganizationsOrganizationIDSecurity
+	Organization   *shared.Organization `request:"mediaType=application/json"`
+	OrganizationID string               `pathParam:"style=simple,explode=false,name=organization_id"`
+	WorkspaceSlug  string               `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type PutWorkspaceSlugOrganizationsOrganizationIDResponse struct {

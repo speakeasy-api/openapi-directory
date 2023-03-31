@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.GetHackathonsIDFormatRequest(
-    path_params=operations.GetHackathonsIDFormatPathParams(
-        id=6129263824403308222,
-    ),
+
+
+req = operations.GETHackathonsIDFormatRequest(
+    id=548814,
 )
     
 res = s.hackathons.get_hackathons_id_format_(req)

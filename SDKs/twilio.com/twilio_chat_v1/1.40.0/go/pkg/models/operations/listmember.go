@@ -12,17 +12,13 @@ var ListMemberServerList = []string{
 }
 
 type ListMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMemberPathParams struct {
+type ListMemberRequest struct {
 	// The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the members to read belong to. Can be the Channel resource's `sid` or `unique_name` value.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to read the resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListMemberQueryParams struct {
 	// The [User](https://www.twilio.com/docs/api/chat/rest/v1/user)'s `identity` value of the resources to read. See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more details.
 	Identity []string `queryParam:"style=form,explode=true,name=Identity"`
 	// The page index. This value is simply for client state.
@@ -31,13 +27,8 @@ type ListMemberQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListMemberRequest struct {
-	PathParams  ListMemberPathParams
-	QueryParams ListMemberQueryParams
-	Security    ListMemberSecurity
-	ServerURL   *string
+	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to read the resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListMemberListMemberResponseMeta struct {

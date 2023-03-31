@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateAssetTagsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateAssetTagsPathParams struct {
-	// UUID of the asset to update
-	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateAssetTagsRequest struct {
-	PathParams UpdateAssetTagsPathParams
 	// tags to apply to the asset
-	Request  shared.AssetTags `request:"mediaType=application/json"`
-	Security UpdateAssetTagsSecurity
+	AssetTags shared.AssetTags `request:"mediaType=application/json"`
+	// UUID of the asset to update
+	AssetID string `pathParam:"style=simple,explode=false,name=asset_id"`
 }
 
 type UpdateAssetTagsResponse struct {

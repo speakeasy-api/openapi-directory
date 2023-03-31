@@ -8,13 +8,13 @@ import (
 )
 
 type BigqueryTablesSetIamPolicySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTablesSetIamPolicySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryTablesSetIamPolicySecurity struct {
@@ -22,12 +22,8 @@ type BigqueryTablesSetIamPolicySecurity struct {
 	Option2 *BigqueryTablesSetIamPolicySecurityOption2 `security:"option"`
 }
 
-type BigqueryTablesSetIamPolicyPathParams struct {
-	// REQUIRED: The resource for which the policy is being specified. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type BigqueryTablesSetIamPolicyQueryParams struct {
+type BigqueryTablesSetIamPolicyRequest struct {
+	SetIamPolicyRequest *shared.SetIamPolicyRequest `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,15 +36,10 @@ type BigqueryTablesSetIamPolicyQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// REQUIRED: The resource for which the policy is being specified. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryTablesSetIamPolicyRequest struct {
-	PathParams  BigqueryTablesSetIamPolicyPathParams
-	QueryParams BigqueryTablesSetIamPolicyQueryParams
-	Request     *shared.SetIamPolicyRequest `request:"mediaType=application/json"`
-	Security    BigqueryTablesSetIamPolicySecurity
 }
 
 type BigqueryTablesSetIamPolicyResponse struct {

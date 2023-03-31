@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCheckPermissionsForProjectInOrgPathParams struct {
+type TeamsCheckPermissionsForProjectInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsCheckPermissionsForProjectInOrgRequest struct {
-	PathParams TeamsCheckPermissionsForProjectInOrgPathParams
 }
 
 type TeamsCheckPermissionsForProjectInOrgResponse struct {

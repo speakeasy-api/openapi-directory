@@ -8,11 +8,6 @@ import (
 	"time"
 )
 
-type SessionsIDViewsPostPathParams struct {
-	// The primary key for a view session
-	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
-}
-
 // SessionsIDViewsPostRequiredParametersToCreateAView - A page view required a page number from the story outline to be created
 type SessionsIDViewsPostRequiredParametersToCreateAView struct {
 	ActiveMSecs *int64    `json:"activeMSecs,omitempty"`
@@ -23,9 +18,10 @@ type SessionsIDViewsPostRequiredParametersToCreateAView struct {
 }
 
 type SessionsIDViewsPostRequest struct {
-	PathParams SessionsIDViewsPostPathParams
 	// Collaborator user id and permission type
-	Request SessionsIDViewsPostRequiredParametersToCreateAView `request:"mediaType=application/json"`
+	RequestBody SessionsIDViewsPostRequiredParametersToCreateAView `request:"mediaType=application/json"`
+	// The primary key for a view session
+	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
 }
 
 type SessionsIDViewsPostResponse struct {

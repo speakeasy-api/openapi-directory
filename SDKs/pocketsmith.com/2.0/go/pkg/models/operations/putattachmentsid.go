@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutAttachmentsIDPathParams struct {
-	// The unique identifier of the attachment.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutAttachmentsIDRequestBody struct {
 	// The new title of the attachment. If the title is blank or not provided, the server will derive a title from the file name.
 	Title *string `json:"title,omitempty"`
 }
 
 type PutAttachmentsIDRequest struct {
-	PathParams PutAttachmentsIDPathParams
-	Request    *PutAttachmentsIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutAttachmentsIDRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the attachment.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutAttachmentsIDResponse struct {

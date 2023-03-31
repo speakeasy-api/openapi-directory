@@ -8,25 +8,16 @@ import (
 )
 
 type ListCheckDetailsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
-type ListCheckDetailsPathParams struct {
+type ListCheckDetailsRequest struct {
 	// ID of the Check
 	CheckID string `pathParam:"style=simple,explode=false,name=check_id"`
-}
-
-type ListCheckDetailsQueryParams struct {
 	// This parameter is used to specify the language wanted for details, if not specified details will come in their original language.
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// Start key value for the pagination
 	StartKey *string `queryParam:"style=form,explode=true,name=start_key"`
-}
-
-type ListCheckDetailsRequest struct {
-	PathParams  ListCheckDetailsPathParams
-	QueryParams ListCheckDetailsQueryParams
-	Security    ListCheckDetailsSecurity
 }
 
 type ListCheckDetailsResponse struct {

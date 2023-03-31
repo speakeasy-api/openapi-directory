@@ -15,10 +15,6 @@ type PostAs2StationsRequestBody struct {
 	PublicCertificate  string  `multipartForm:"name=public_certificate"`
 }
 
-type PostAs2StationsRequest struct {
-	Request PostAs2StationsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAs2StationsResponse struct {
 	// The As2Stations object.
 	As2StationEntity *shared.As2StationEntity

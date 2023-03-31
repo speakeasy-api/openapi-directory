@@ -33,11 +33,11 @@ func newDetections(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // LanguageDetectionsDetect - Detects the language of text within a request.
-func (s *detections) LanguageDetectionsDetect(ctx context.Context, request operations.LanguageDetectionsDetectRequest) (*operations.LanguageDetectionsDetectResponse, error) {
+func (s *detections) LanguageDetectionsDetect(ctx context.Context, request operations.LanguageDetectionsDetectRequest, security operations.LanguageDetectionsDetectSecurity) (*operations.LanguageDetectionsDetectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/detect"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DetectLanguageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *detections) LanguageDetectionsDetect(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *detections) LanguageDetectionsDetect(ctx context.Context, request opera
 }
 
 // LanguageDetectionsList - Detects the language of text within a request.
-func (s *detections) LanguageDetectionsList(ctx context.Context, request operations.LanguageDetectionsListRequest) (*operations.LanguageDetectionsListResponse, error) {
+func (s *detections) LanguageDetectionsList(ctx context.Context, request operations.LanguageDetectionsListRequest, security operations.LanguageDetectionsListSecurity) (*operations.LanguageDetectionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/detect"
 
@@ -97,11 +97,11 @@ func (s *detections) LanguageDetectionsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

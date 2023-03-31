@@ -34,9 +34,9 @@ func newComputeNodes(defaultClient, securityClient HTTPClient, serverURL, langua
 // ComputeNodeAddUser - Adds a user account to the specified compute node.
 func (s *computeNodes) ComputeNodeAddUser(ctx context.Context, request operations.ComputeNodeAddUserRequest) (*operations.ComputeNodeAddUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ComputeNodeUser", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,9 +51,9 @@ func (s *computeNodes) ComputeNodeAddUser(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,16 +97,16 @@ func (s *computeNodes) ComputeNodeAddUser(ctx context.Context, request operation
 // ComputeNodeDeleteUser - Deletes a user account from the specified compute node.
 func (s *computeNodes) ComputeNodeDeleteUser(ctx context.Context, request operations.ComputeNodeDeleteUserRequest) (*operations.ComputeNodeDeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/users/{userName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/users/{userName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -150,9 +150,9 @@ func (s *computeNodes) ComputeNodeDeleteUser(ctx context.Context, request operat
 // ComputeNodeDisableScheduling - Disable task scheduling of the specified compute node.
 func (s *computeNodes) ComputeNodeDisableScheduling(ctx context.Context, request operations.ComputeNodeDisableSchedulingRequest) (*operations.ComputeNodeDisableSchedulingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/disablescheduling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/disablescheduling", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeDisableSchedulingParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -164,9 +164,9 @@ func (s *computeNodes) ComputeNodeDisableScheduling(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -210,16 +210,16 @@ func (s *computeNodes) ComputeNodeDisableScheduling(ctx context.Context, request
 // ComputeNodeEnableScheduling - Enable task scheduling of the specified compute node.
 func (s *computeNodes) ComputeNodeEnableScheduling(ctx context.Context, request operations.ComputeNodeEnableSchedulingRequest) (*operations.ComputeNodeEnableSchedulingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/enablescheduling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/enablescheduling", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -263,16 +263,16 @@ func (s *computeNodes) ComputeNodeEnableScheduling(ctx context.Context, request 
 // ComputeNodeGet - Gets information about the specified compute node.
 func (s *computeNodes) ComputeNodeGet(ctx context.Context, request operations.ComputeNodeGetRequest) (*operations.ComputeNodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -325,16 +325,16 @@ func (s *computeNodes) ComputeNodeGet(ctx context.Context, request operations.Co
 // ComputeNodeGetRemoteDesktop - Gets the Remote Desktop Protocol file for the specified compute node.
 func (s *computeNodes) ComputeNodeGetRemoteDesktop(ctx context.Context, request operations.ComputeNodeGetRemoteDesktopRequest) (*operations.ComputeNodeGetRemoteDesktopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/rdp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/rdp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -387,16 +387,16 @@ func (s *computeNodes) ComputeNodeGetRemoteDesktop(ctx context.Context, request 
 // ComputeNodeGetRemoteLoginSettings - Gets the settings required for remote login to a compute node.
 func (s *computeNodes) ComputeNodeGetRemoteLoginSettings(ctx context.Context, request operations.ComputeNodeGetRemoteLoginSettingsRequest) (*operations.ComputeNodeGetRemoteLoginSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/remoteloginsettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/remoteloginsettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -449,16 +449,16 @@ func (s *computeNodes) ComputeNodeGetRemoteLoginSettings(ctx context.Context, re
 // ComputeNodeList - Lists the compute nodes in the specified pool.
 func (s *computeNodes) ComputeNodeList(ctx context.Context, request operations.ComputeNodeListRequest) (*operations.ComputeNodeListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -511,9 +511,9 @@ func (s *computeNodes) ComputeNodeList(ctx context.Context, request operations.C
 // ComputeNodeReboot - Restarts the specified compute node.
 func (s *computeNodes) ComputeNodeReboot(ctx context.Context, request operations.ComputeNodeRebootRequest) (*operations.ComputeNodeRebootResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/reboot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/reboot", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeRebootParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -525,9 +525,9 @@ func (s *computeNodes) ComputeNodeReboot(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -571,9 +571,9 @@ func (s *computeNodes) ComputeNodeReboot(ctx context.Context, request operations
 // ComputeNodeReimage - Reinstalls the operating system on the specified compute node.
 func (s *computeNodes) ComputeNodeReimage(ctx context.Context, request operations.ComputeNodeReimageRequest) (*operations.ComputeNodeReimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/reimage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/reimage", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeReimageParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -585,9 +585,9 @@ func (s *computeNodes) ComputeNodeReimage(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -631,9 +631,9 @@ func (s *computeNodes) ComputeNodeReimage(ctx context.Context, request operation
 // ComputeNodeUpdateUser - Updates the password or expiration time of a user account on the specified compute node.
 func (s *computeNodes) ComputeNodeUpdateUser(ctx context.Context, request operations.ComputeNodeUpdateUserRequest) (*operations.ComputeNodeUpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/users/{userName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/users/{userName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeUpdateUserParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -648,9 +648,9 @@ func (s *computeNodes) ComputeNodeUpdateUser(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -694,9 +694,9 @@ func (s *computeNodes) ComputeNodeUpdateUser(ctx context.Context, request operat
 // PoolRemoveNodes - Removes compute nodes from the specified pool.
 func (s *computeNodes) PoolRemoveNodes(ctx context.Context, request operations.PoolRemoveNodesRequest) (*operations.PoolRemoveNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/removenodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/removenodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeRemoveParameter", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -711,9 +711,9 @@ func (s *computeNodes) PoolRemoveNodes(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

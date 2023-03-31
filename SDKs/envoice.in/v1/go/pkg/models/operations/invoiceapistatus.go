@@ -8,18 +8,10 @@ import (
 	"net/http"
 )
 
-type InvoiceAPIStatusQueryParams struct {
-	ID int `queryParam:"style=form,explode=true,name=id"`
-}
-
-type InvoiceAPIStatusHeaders struct {
+type InvoiceAPIStatusRequest struct {
+	ID          int    `queryParam:"style=form,explode=true,name=id"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type InvoiceAPIStatusRequest struct {
-	QueryParams InvoiceAPIStatusQueryParams
-	Headers     InvoiceAPIStatusHeaders
 }
 
 // InvoiceAPIStatus200TextJSONEnum - OK

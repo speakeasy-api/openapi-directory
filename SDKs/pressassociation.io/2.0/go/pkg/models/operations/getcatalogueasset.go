@@ -4,21 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCatalogueAssetSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
-type GetCatalogueAssetPathParams struct {
-	// The identifier for the selected catalogue.
-	CatalogueID string `pathParam:"style=simple,explode=false,name=catalogueId"`
-}
-
-type GetCatalogueAssetQueryParams struct {
+type GetCatalogueAssetRequest struct {
 	// Flag to display Legacy and Provider Ids.
 	Aliases *bool `queryParam:"style=form,explode=true,name=aliases"`
+	// The identifier for the selected catalogue.
+	CatalogueID string `pathParam:"style=simple,explode=false,name=catalogueId"`
 	// The End Date for the catalogue date range.
 	End *string `queryParam:"style=form,explode=true,name=end"`
 	// Restrict number of returned items Min = 1, Max = 500.
@@ -29,12 +25,6 @@ type GetCatalogueAssetQueryParams struct {
 	Title *string `queryParam:"style=form,explode=true,name=title"`
 	// Retrieve items only that have been updated after this point.
 	UpdatedAfter *string `queryParam:"style=form,explode=true,name=updatedAfter"`
-}
-
-type GetCatalogueAssetRequest struct {
-	PathParams  GetCatalogueAssetPathParams
-	QueryParams GetCatalogueAssetQueryParams
-	Security    GetCatalogueAssetSecurity
 }
 
 type GetCatalogueAssetResponse struct {

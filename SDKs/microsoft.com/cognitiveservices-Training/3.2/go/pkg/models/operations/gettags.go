@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetTagsQueryParams struct {
+type GetTagsRequest struct {
 	// The iteration id. Defaults to workspace.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type GetTagsRequest struct {
-	PathParams  GetTagsPathParams
-	QueryParams GetTagsQueryParams
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type GetTagsResponse struct {

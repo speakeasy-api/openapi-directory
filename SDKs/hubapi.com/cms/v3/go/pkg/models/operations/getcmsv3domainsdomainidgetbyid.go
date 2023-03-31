@@ -8,25 +8,20 @@ import (
 )
 
 type GetCmsV3DomainsDomainIDGetByIDSecurity struct {
-	Hapikey            *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2             *shared.SchemeOauth2            `security:"scheme,type=oauth2"`
-	Oauth2Legacy       *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	Oauth2Legacy1      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	Oauth3             *shared.SchemeOauth2            `security:"scheme,type=oauth2"`
-	PrivateApps        *shared.SchemePrivateApps       `security:"scheme,type=apiKey,subtype=header"`
-	PrivateApps1       *shared.SchemePrivateApps       `security:"scheme,type=apiKey,subtype=header"`
-	PrivateAppsLegacy  *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-	PrivateAppsLegacy1 *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetCmsV3DomainsDomainIDGetByIDPathParams struct {
-	// The unique ID of the domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	Hapikey            *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2             *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Legacy       *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Legacy1      *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth3             *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateApps        *string `security:"scheme,type=apiKey,subtype=header,name=private-app"`
+	PrivateApps1       *string `security:"scheme,type=apiKey,subtype=header,name=private-app"`
+	PrivateAppsLegacy  *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
+	PrivateAppsLegacy1 *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type GetCmsV3DomainsDomainIDGetByIDRequest struct {
-	PathParams GetCmsV3DomainsDomainIDGetByIDPathParams
-	Security   GetCmsV3DomainsDomainIDGetByIDSecurity
+	// The unique ID of the domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
 }
 
 type GetCmsV3DomainsDomainIDGetByIDResponse struct {

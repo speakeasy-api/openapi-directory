@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodeScanningGetAnalysisPathParams struct {
+type CodeScanningGetAnalysisRequest struct {
 	// The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
 	AnalysisID int64 `pathParam:"style=simple,explode=false,name=analysis_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodeScanningGetAnalysisRequest struct {
-	PathParams CodeScanningGetAnalysisPathParams
 }
 
 // CodeScanningGetAnalysis503ApplicationJSON - Service unavailable

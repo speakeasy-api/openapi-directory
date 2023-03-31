@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetSessionInfoUsingPOSTQueryParams struct {
-	SessionID *string `queryParam:"style=form,explode=true,name=sessionID"`
-}
-
 type GetSessionInfoUsingPOSTRequest struct {
-	QueryParams GetSessionInfoUsingPOSTQueryParams
+	SessionID *string `queryParam:"style=form,explode=true,name=sessionID"`
 }
 
 // GetSessionInfoUsingPOST500ApplicationJSON - internal api error (code 2)

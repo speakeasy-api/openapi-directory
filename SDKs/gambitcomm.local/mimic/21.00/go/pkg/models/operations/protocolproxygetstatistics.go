@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolProxyGetStatisticsPathParams struct {
+type ProtocolProxyGetStatisticsRequest struct {
 	// Agent to show PROXY statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolProxyGetStatisticsRequest struct {
-	PathParams ProtocolProxyGetStatisticsPathParams
 }
 
 type ProtocolProxyGetStatisticsResponse struct {

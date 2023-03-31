@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesCreateWithRepoForAuthenticatedUserPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type CodespacesCreateWithRepoForAuthenticatedUserRequestBody struct {
 	// IP for location auto-detection when proxying a request
 	ClientIP *string `json:"client_ip,omitempty"`
@@ -38,8 +31,11 @@ type CodespacesCreateWithRepoForAuthenticatedUserRequestBody struct {
 }
 
 type CodespacesCreateWithRepoForAuthenticatedUserRequest struct {
-	PathParams CodespacesCreateWithRepoForAuthenticatedUserPathParams
-	Request    CodespacesCreateWithRepoForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesCreateWithRepoForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // CodespacesCreateWithRepoForAuthenticatedUser503ApplicationJSON - Service unavailable

@@ -8,13 +8,7 @@ import (
 )
 
 type LicenseEditorialVideoSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type LicenseEditorialVideoRequest struct {
-	// License editorial video content
-	Request  shared.LicenseEditorialVideoContentRequest `request:"mediaType=application/json"`
-	Security LicenseEditorialVideoSecurity
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LicenseEditorialVideoResponse struct {

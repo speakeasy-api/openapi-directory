@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferingsOfferingIDUsersPathParams struct {
-	// offering's id
-	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
 // GetOfferingsOfferingIDUsersFacilitatorsEnum - If true, facilitators are included in the results.
 type GetOfferingsOfferingIDUsersFacilitatorsEnum string
 
@@ -86,18 +81,15 @@ func (e *GetOfferingsOfferingIDUsersMarkersEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetOfferingsOfferingIDUsersQueryParams struct {
+type GetOfferingsOfferingIDUsersRequest struct {
 	// If true, facilitators are included in the results.
 	Facilitators *GetOfferingsOfferingIDUsersFacilitatorsEnum `queryParam:"style=form,explode=true,name=facilitators"`
 	// If true, learners are included in the results.
 	Learners *GetOfferingsOfferingIDUsersLearnersEnum `queryParam:"style=form,explode=true,name=learners"`
 	// If true, markers are included in the results.
 	Markers *GetOfferingsOfferingIDUsersMarkersEnum `queryParam:"style=form,explode=true,name=markers"`
-}
-
-type GetOfferingsOfferingIDUsersRequest struct {
-	PathParams  GetOfferingsOfferingIDUsersPathParams
-	QueryParams GetOfferingsOfferingIDUsersQueryParams
+	// offering's id
+	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
 }
 
 type GetOfferingsOfferingIDUsersResponse struct {

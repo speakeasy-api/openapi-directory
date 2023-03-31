@@ -32,7 +32,7 @@ func (e *VoiceXMLEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VoiceQueryParams struct {
+type VoiceRequest struct {
 	// Sets the sender. Must be a verified sender. Use an inbound number of yours or one of ours.
 	From *string `queryParam:"style=form,explode=true,name=from"`
 	// The text to convert to a voice message. Accepts valid XML too.
@@ -41,10 +41,6 @@ type VoiceQueryParams struct {
 	To string `queryParam:"style=form,explode=true,name=to"`
 	// Decides whether the parameter "text" is plain text or XML. The default value is 0.
 	XML *VoiceXMLEnum `queryParam:"style=form,explode=true,name=xml"`
-}
-
-type VoiceRequest struct {
-	QueryParams VoiceQueryParams
 }
 
 type VoiceResponse struct {

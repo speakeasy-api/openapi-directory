@@ -33,20 +33,20 @@ func newTasklists(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // TasksTasklistsDelete - Deletes the authenticated user's specified task list.
-func (s *tasklists) TasksTasklistsDelete(ctx context.Context, request operations.TasksTasklistsDeleteRequest) (*operations.TasksTasklistsDeleteResponse, error) {
+func (s *tasklists) TasksTasklistsDelete(ctx context.Context, request operations.TasksTasklistsDeleteRequest, security operations.TasksTasklistsDeleteSecurity) (*operations.TasksTasklistsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,20 +72,20 @@ func (s *tasklists) TasksTasklistsDelete(ctx context.Context, request operations
 }
 
 // TasksTasklistsGet - Returns the authenticated user's specified task list.
-func (s *tasklists) TasksTasklistsGet(ctx context.Context, request operations.TasksTasklistsGetRequest) (*operations.TasksTasklistsGetResponse, error) {
+func (s *tasklists) TasksTasklistsGet(ctx context.Context, request operations.TasksTasklistsGetRequest, security operations.TasksTasklistsGetSecurity) (*operations.TasksTasklistsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,11 +120,11 @@ func (s *tasklists) TasksTasklistsGet(ctx context.Context, request operations.Ta
 }
 
 // TasksTasklistsInsert - Creates a new task list and adds it to the authenticated user's task lists.
-func (s *tasklists) TasksTasklistsInsert(ctx context.Context, request operations.TasksTasklistsInsertRequest) (*operations.TasksTasklistsInsertResponse, error) {
+func (s *tasklists) TasksTasklistsInsert(ctx context.Context, request operations.TasksTasklistsInsertRequest, security operations.TasksTasklistsInsertSecurity) (*operations.TasksTasklistsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tasks/v1/users/@me/lists"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,11 +136,11 @@ func (s *tasklists) TasksTasklistsInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *tasklists) TasksTasklistsInsert(ctx context.Context, request operations
 }
 
 // TasksTasklistsList - Returns all the authenticated user's task lists.
-func (s *tasklists) TasksTasklistsList(ctx context.Context, request operations.TasksTasklistsListRequest) (*operations.TasksTasklistsListResponse, error) {
+func (s *tasklists) TasksTasklistsList(ctx context.Context, request operations.TasksTasklistsListRequest, security operations.TasksTasklistsListSecurity) (*operations.TasksTasklistsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tasks/v1/users/@me/lists"
 
@@ -184,11 +184,11 @@ func (s *tasklists) TasksTasklistsList(ctx context.Context, request operations.T
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *tasklists) TasksTasklistsList(ctx context.Context, request operations.T
 }
 
 // TasksTasklistsPatch - Updates the authenticated user's specified task list. This method supports patch semantics.
-func (s *tasklists) TasksTasklistsPatch(ctx context.Context, request operations.TasksTasklistsPatchRequest) (*operations.TasksTasklistsPatchResponse, error) {
+func (s *tasklists) TasksTasklistsPatch(ctx context.Context, request operations.TasksTasklistsPatchRequest, security operations.TasksTasklistsPatchSecurity) (*operations.TasksTasklistsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,11 +239,11 @@ func (s *tasklists) TasksTasklistsPatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,11 +278,11 @@ func (s *tasklists) TasksTasklistsPatch(ctx context.Context, request operations.
 }
 
 // TasksTasklistsUpdate - Updates the authenticated user's specified task list.
-func (s *tasklists) TasksTasklistsUpdate(ctx context.Context, request operations.TasksTasklistsUpdateRequest) (*operations.TasksTasklistsUpdateResponse, error) {
+func (s *tasklists) TasksTasklistsUpdate(ctx context.Context, request operations.TasksTasklistsUpdateRequest, security operations.TasksTasklistsUpdateSecurity) (*operations.TasksTasklistsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,11 +294,11 @@ func (s *tasklists) TasksTasklistsUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCountriesJSONQueryParams struct {
+type GetCountriesJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetCountriesJSONRequest struct {
-	QueryParams GetCountriesJSONQueryParams
 }
 
 type GetCountriesJSONResponse struct {

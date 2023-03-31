@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetShopScriptTagSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetShopScriptTagPathParams struct {
-	// スクリプトタグID
-	ScriptTagID int64 `pathParam:"style=simple,explode=false,name=scriptTagId"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetShopScriptTagRequest struct {
-	PathParams GetShopScriptTagPathParams
-	Security   GetShopScriptTagSecurity
+	// スクリプトタグID
+	ScriptTagID int64 `pathParam:"style=simple,explode=false,name=scriptTagId"`
 }
 
 // GetShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum - スクリプトを出力するページ

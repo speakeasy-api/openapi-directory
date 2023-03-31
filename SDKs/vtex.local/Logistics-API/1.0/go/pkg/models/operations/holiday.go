@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type HolidayPathParams struct {
-	HolidayID string `pathParam:"style=simple,explode=false,name=holidayId"`
-}
-
-type HolidayHeaders struct {
+type HolidayRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type HolidayRequest struct {
-	PathParams HolidayPathParams
-	Headers    HolidayHeaders
+	HolidayID   string `pathParam:"style=simple,explode=false,name=holidayId"`
 }
 
 type HolidayResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationSmApnsCertPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationSmApnsCertRequest struct {
-	PathParams GetOrganizationSmApnsCertPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationSmApnsCert200ApplicationJSON - Successful operation

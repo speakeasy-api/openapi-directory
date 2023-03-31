@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1LocationsIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1LocationsIDQueryParams struct {
-	RemoveRegion *bool `queryParam:"style=form,explode=true,name=removeRegion"`
-}
-
 type PutSetupV1LocationsIDRequest struct {
-	PathParams  PutSetupV1LocationsIDPathParams
-	QueryParams PutSetupV1LocationsIDQueryParams
-	Request     *shared.LocationUpdateModel `request:"mediaType=application/json"`
+	LocationUpdateModel *shared.LocationUpdateModel `request:"mediaType=application/json"`
+	ID                  string                      `pathParam:"style=simple,explode=false,name=id"`
+	RemoveRegion        *bool                       `queryParam:"style=form,explode=true,name=removeRegion"`
 }
 
 type PutSetupV1LocationsIDResponse struct {

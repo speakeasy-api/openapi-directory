@@ -12,10 +12,11 @@ var ListRegulationServerList = []string{
 }
 
 type ListRegulationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRegulationQueryParams struct {
+type ListRegulationRequest struct {
 	// The type of End User the regulation requires - can be `individual` or `business`.
 	EndUserType *shared.RegulationEnumEndUserTypeEnum `queryParam:"style=form,explode=true,name=EndUserType"`
 	// The ISO country code of the phone number's country.
@@ -28,12 +29,6 @@ type ListRegulationQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListRegulationRequest struct {
-	QueryParams ListRegulationQueryParams
-	Security    ListRegulationSecurity
-	ServerURL   *string
 }
 
 type ListRegulationListRegulationResponseMeta struct {

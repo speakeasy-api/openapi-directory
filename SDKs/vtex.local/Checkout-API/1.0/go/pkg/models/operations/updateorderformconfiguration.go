@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateorderFormconfigurationHeaders struct {
+type UpdateorderFormconfigurationRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdateorderFormconfigurationRequest struct {
-	Headers UpdateorderFormconfigurationHeaders
-	Request shared.UpdateorderFormconfigurationRequest `request:"mediaType=application/json"`
+	ContentType                         string                                     `header:"style=simple,explode=false,name=Content-Type"`
+	UpdateorderFormconfigurationRequest shared.UpdateorderFormconfigurationRequest `request:"mediaType=application/json"`
 }
 
 type UpdateorderFormconfigurationResponse struct {

@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsUpdatePathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsUpdateRequestBodyStateEnum - State of this Pull Request. Either `open` or `closed`.
 type PullsUpdateRequestBodyStateEnum string
 
@@ -53,8 +47,10 @@ type PullsUpdateRequestBody struct {
 }
 
 type PullsUpdateRequest struct {
-	PathParams PullsUpdatePathParams
-	Request    *PullsUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *PullsUpdateRequestBody `request:"mediaType=application/json"`
+	Owner       string                  `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64                   `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string                  `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsUpdateResponse struct {

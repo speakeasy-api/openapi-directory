@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type StoreSetPathParams struct {
+type StoreSetRequest struct {
+	// Value
+	RequestBody *string `request:"mediaType=application/json"`
 	// Persistent setting
 	Persist int `pathParam:"style=simple,explode=false,name=persist"`
 	// Variable name
 	Var string `pathParam:"style=simple,explode=false,name=var"`
-}
-
-type StoreSetRequest struct {
-	PathParams StoreSetPathParams
-	// Value
-	Request *string `request:"mediaType=application/json"`
 }
 
 type StoreSetResponse struct {

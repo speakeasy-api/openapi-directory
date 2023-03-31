@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkspaceQueryParams struct {
+type GetWorkspaceRequest struct {
 	// Workspace identifier
 	WorkspaceID string `queryParam:"style=form,explode=true,name=workspaceId"`
-}
-
-type GetWorkspaceRequest struct {
-	QueryParams GetWorkspaceQueryParams
 }
 
 // GetWorkspace500ApplicationJSON - Internal Server Error

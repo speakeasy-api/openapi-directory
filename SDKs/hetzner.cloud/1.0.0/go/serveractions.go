@@ -34,14 +34,14 @@ func newServerActions(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns all Action objects for a Server. You can `sort` the results by using the sort URI parameter, and filter them with the `status` parameter.
 func (s *serverActions) GetServersIDActions(ctx context.Context, request operations.GetServersIDActionsRequest) (*operations.GetServersIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *serverActions) GetServersIDActions(ctx context.Context, request operati
 // Returns a specific Action object for a Server.
 func (s *serverActions) GetServersIDActionsActionID(ctx context.Context, request operations.GetServersIDActionsActionIDRequest) (*operations.GetServersIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/{action_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/{action_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -136,9 +136,9 @@ func (s *serverActions) GetServersIDActionsActionID(ctx context.Context, request
 // | `server_not_stopped`          | The action requires a stopped server                                 |
 func (s *serverActions) PostServersIDActionsAddToPlacementGroup(ctx context.Context, request operations.PostServersIDActionsAddToPlacementGroupRequest) (*operations.PostServersIDActionsAddToPlacementGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/add_to_placement_group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/add_to_placement_group", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,9 +190,9 @@ func (s *serverActions) PostServersIDActionsAddToPlacementGroup(ctx context.Cont
 // Servers with attached ISOs have a modified boot order: They will try to boot from the ISO first before falling back to hard disk.
 func (s *serverActions) PostServersIDActionsAttachIso(ctx context.Context, request operations.PostServersIDActionsAttachIsoRequest) (*operations.PostServersIDActionsAttachIsoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/attach_iso", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/attach_iso", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -255,9 +255,9 @@ func (s *serverActions) PostServersIDActionsAttachIso(ctx context.Context, reque
 // | `networks_overlap`               | The network IP range overlaps with one of the server networks         |
 func (s *serverActions) PostServersIDActionsAttachToNetwork(ctx context.Context, request operations.PostServersIDActionsAttachToNetworkRequest) (*operations.PostServersIDActionsAttachToNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/attach_to_network", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/attach_to_network", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -307,9 +307,9 @@ func (s *serverActions) PostServersIDActionsAttachToNetwork(ctx context.Context,
 // Changes the alias IPs of an already attached Network. Note that the existing aliases for the specified Network will be replaced with these provided in the request body. So if you want to add an alias IP, you have to provide the existing ones from the Network plus the new alias IP in the request body.
 func (s *serverActions) PostServersIDActionsChangeAliasIps(ctx context.Context, request operations.PostServersIDActionsChangeAliasIpsRequest) (*operations.PostServersIDActionsChangeAliasIpsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_alias_ips", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_alias_ips", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -361,9 +361,9 @@ func (s *serverActions) PostServersIDActionsChangeAliasIps(ctx context.Context, 
 // Floating IPs assigned to the Server are not affected by this.
 func (s *serverActions) PostServersIDActionsChangeDNSPtr(ctx context.Context, request operations.PostServersIDActionsChangeDNSPtrRequest) (*operations.PostServersIDActionsChangeDNSPtrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_dns_ptr", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_dns_ptr", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,9 +413,9 @@ func (s *serverActions) PostServersIDActionsChangeDNSPtr(ctx context.Context, re
 // Changes the protection configuration of the Server.
 func (s *serverActions) PostServersIDActionsChangeProtection(ctx context.Context, request operations.PostServersIDActionsChangeProtectionRequest) (*operations.PostServersIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_protection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_protection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -480,9 +480,9 @@ func (s *serverActions) PostServersIDActionsChangeProtection(ctx context.Context
 // | `server_not_stopped`          | The action requires a stopped server                                 |
 func (s *serverActions) PostServersIDActionsChangeType(ctx context.Context, request operations.PostServersIDActionsChangeTypeRequest) (*operations.PostServersIDActionsChangeTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_type", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/change_type", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -536,9 +536,9 @@ func (s *serverActions) PostServersIDActionsChangeType(ctx context.Context, requ
 // You can either create a `backup` Image that is bound to the Server and therefore will be deleted when the Server is deleted, or you can create an `snapshot` Image which is completely independent of the Server it was created from and will survive Server deletion. Backup Images are only available when the backup option is enabled for the Server. Snapshot Images are billed on a per GB basis.
 func (s *serverActions) PostServersIDActionsCreateImage(ctx context.Context, request operations.PostServersIDActionsCreateImageRequest) (*operations.PostServersIDActionsCreateImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/create_image", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/create_image", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -588,9 +588,9 @@ func (s *serverActions) PostServersIDActionsCreateImage(ctx context.Context, req
 // Detaches a Server from a network. The interface for this network will vanish.
 func (s *serverActions) PostServersIDActionsDetachFromNetwork(ctx context.Context, request operations.PostServersIDActionsDetachFromNetworkRequest) (*operations.PostServersIDActionsDetachFromNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/detach_from_network", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/detach_from_network", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -640,7 +640,7 @@ func (s *serverActions) PostServersIDActionsDetachFromNetwork(ctx context.Contex
 // Detaches an ISO from a Server. In case no ISO Image is attached to the Server, the status of the returned Action is immediately set to `success`
 func (s *serverActions) PostServersIDActionsDetachIso(ctx context.Context, request operations.PostServersIDActionsDetachIsoRequest) (*operations.PostServersIDActionsDetachIsoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/detach_iso", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/detach_iso", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -687,7 +687,7 @@ func (s *serverActions) PostServersIDActionsDetachIso(ctx context.Context, reque
 // Caution: This immediately removes all existing backups for the Server!
 func (s *serverActions) PostServersIDActionsDisableBackup(ctx context.Context, request operations.PostServersIDActionsDisableBackupRequest) (*operations.PostServersIDActionsDisableBackupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/disable_backup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/disable_backup", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -736,7 +736,7 @@ func (s *serverActions) PostServersIDActionsDisableBackup(ctx context.Context, r
 // Disabling rescue mode will not reboot your Server — you will have to do this yourself.
 func (s *serverActions) PostServersIDActionsDisableRescue(ctx context.Context, request operations.PostServersIDActionsDisableRescueRequest) (*operations.PostServersIDActionsDisableRescueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/disable_rescue", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/disable_rescue", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -783,7 +783,7 @@ func (s *serverActions) PostServersIDActionsDisableRescue(ctx context.Context, r
 // Backups are automatically created daily.
 func (s *serverActions) PostServersIDActionsEnableBackup(ctx context.Context, request operations.PostServersIDActionsEnableBackupRequest) (*operations.PostServersIDActionsEnableBackupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/enable_backup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/enable_backup", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -834,9 +834,9 @@ func (s *serverActions) PostServersIDActionsEnableBackup(ctx context.Context, re
 // Enabling rescue mode will not [reboot](https://docs.hetzner.cloud/#server-actions-soft-reboot-a-server) your Server — you will have to do this yourself.
 func (s *serverActions) PostServersIDActionsEnableRescue(ctx context.Context, request operations.PostServersIDActionsEnableRescueRequest) (*operations.PostServersIDActionsEnableRescueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/enable_rescue", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/enable_rescue", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -886,7 +886,7 @@ func (s *serverActions) PostServersIDActionsEnableRescue(ctx context.Context, re
 // Cuts power to the Server. This forcefully stops it without giving the Server operating system time to gracefully stop. May lead to data loss, equivalent to pulling the power cord. Power off should only be used when shutdown does not work.
 func (s *serverActions) PostServersIDActionsPoweroff(ctx context.Context, request operations.PostServersIDActionsPoweroffRequest) (*operations.PostServersIDActionsPoweroffResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/poweroff", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/poweroff", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -931,7 +931,7 @@ func (s *serverActions) PostServersIDActionsPoweroff(ctx context.Context, reques
 // Starts a Server by turning its power on.
 func (s *serverActions) PostServersIDActionsPoweron(ctx context.Context, request operations.PostServersIDActionsPoweronRequest) (*operations.PostServersIDActionsPoweronResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/poweron", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/poweron", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -976,7 +976,7 @@ func (s *serverActions) PostServersIDActionsPoweron(ctx context.Context, request
 // Reboots a Server gracefully by sending an ACPI request. The Server operating system must support ACPI and react to the request, otherwise the Server will not reboot.
 func (s *serverActions) PostServersIDActionsReboot(ctx context.Context, request operations.PostServersIDActionsRebootRequest) (*operations.PostServersIDActionsRebootResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/reboot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/reboot", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1025,9 +1025,9 @@ func (s *serverActions) PostServersIDActionsReboot(ctx context.Context, request 
 // Your Server will automatically be powered off before the rebuild command executes.
 func (s *serverActions) PostServersIDActionsRebuild(ctx context.Context, request operations.PostServersIDActionsRebuildRequest) (*operations.PostServersIDActionsRebuildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/rebuild", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/rebuild", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1077,7 +1077,7 @@ func (s *serverActions) PostServersIDActionsRebuild(ctx context.Context, request
 // Removes a Server from a Placement Group.
 func (s *serverActions) PostServersIDActionsRemoveFromPlacementGroup(ctx context.Context, request operations.PostServersIDActionsRemoveFromPlacementGroupRequest) (*operations.PostServersIDActionsRemoveFromPlacementGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/remove_from_placement_group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/remove_from_placement_group", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1122,7 +1122,7 @@ func (s *serverActions) PostServersIDActionsRemoveFromPlacementGroup(ctx context
 // Requests credentials for remote access via VNC over websocket to keyboard, monitor, and mouse for a Server. The provided URL is valid for 1 minute, after this period a new url needs to be created to connect to the Server. How long the connection is open after the initial connect is not subject to this timeout.
 func (s *serverActions) PostServersIDActionsRequestConsole(ctx context.Context, request operations.PostServersIDActionsRequestConsoleRequest) (*operations.PostServersIDActionsRequestConsoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/request_console", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/request_console", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1167,7 +1167,7 @@ func (s *serverActions) PostServersIDActionsRequestConsole(ctx context.Context, 
 // Cuts power to a Server and starts it again. This forcefully stops it without giving the Server operating system time to gracefully stop. This may lead to data loss, it’s equivalent to pulling the power cord and plugging it in again. Reset should only be used when reboot does not work.
 func (s *serverActions) PostServersIDActionsReset(ctx context.Context, request operations.PostServersIDActionsResetRequest) (*operations.PostServersIDActionsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/reset", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/reset", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1216,7 +1216,7 @@ func (s *serverActions) PostServersIDActionsReset(ctx context.Context, request o
 // If this does not succeed you can use the rescue system to netboot the Server and manually change your Server password by hand.
 func (s *serverActions) PostServersIDActionsResetPassword(ctx context.Context, request operations.PostServersIDActionsResetPasswordRequest) (*operations.PostServersIDActionsResetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/reset_password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/reset_password", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1261,7 +1261,7 @@ func (s *serverActions) PostServersIDActionsResetPassword(ctx context.Context, r
 // Shuts down a Server gracefully by sending an ACPI shutdown request. The Server operating system must support ACPI and react to the request, otherwise the Server will not shut down.
 func (s *serverActions) PostServersIDActionsShutdown(ctx context.Context, request operations.PostServersIDActionsShutdownRequest) (*operations.PostServersIDActionsShutdownResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/shutdown", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/actions/shutdown", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

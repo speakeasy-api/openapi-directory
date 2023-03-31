@@ -3,32 +3,40 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddNotificationChannelRequest(
-    headers=operations.AddNotificationChannelHeaders(
-        x_amz_algorithm="aut",
-        x_amz_content_sha256="voluptate",
-        x_amz_credential="a",
-        x_amz_date="consequatur",
-        x_amz_security_token="dolore",
-        x_amz_signature="assumenda",
-        x_amz_signed_headers="rerum",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.AddNotificationChannelRequestBody(
+)
+
+
+req = operations.AddNotificationChannelRequest(
+    request_body=operations.AddNotificationChannelRequestBody(
         config=operations.AddNotificationChannelRequestBodyConfig(
+            filters=shared.NotificationFilterConfig(
+                message_types=[
+                    "NEW_ASSOCIATION",
+                    "SEVERITY_UPGRADED",
+                    "NEW_RECOMMENDATION",
+                ],
+                severities=[
+                    "HIGH",
+                    "MEDIUM",
+                    "HIGH",
+                ],
+            ),
             sns=shared.SnsChannelConfig(
-                topic_arn="non",
+                topic_arn="vel",
             ),
         ),
     ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
 )
     
 res = s.add_notification_channel(req)

@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // PrivatecaProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) PrivatecaProjectsLocationsList(ctx context.Context, request operations.PrivatecaProjectsLocationsListRequest) (*operations.PrivatecaProjectsLocationsListResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsList(ctx context.Context, request operations.PrivatecaProjectsLocationsListRequest, security operations.PrivatecaProjectsLocationsListSecurity) (*operations.PrivatecaProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) PrivatecaProjectsLocationsList(ctx context.Context, request o
 }
 
 // PrivatecaProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) PrivatecaProjectsLocationsOperationsCancel(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsCancelRequest) (*operations.PrivatecaProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsOperationsCancel(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsCancelRequest, security operations.PrivatecaProjectsLocationsOperationsCancelSecurity) (*operations.PrivatecaProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) PrivatecaProjectsLocationsOperationsCancel(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *projects) PrivatecaProjectsLocationsOperationsCancel(ctx context.Contex
 }
 
 // PrivatecaProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) PrivatecaProjectsLocationsOperationsDelete(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsDeleteRequest) (*operations.PrivatecaProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsOperationsDelete(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsDeleteRequest, security operations.PrivatecaProjectsLocationsOperationsDeleteSecurity) (*operations.PrivatecaProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *projects) PrivatecaProjectsLocationsOperationsDelete(ctx context.Contex
 }
 
 // PrivatecaProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) PrivatecaProjectsLocationsOperationsGet(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsGetRequest) (*operations.PrivatecaProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsOperationsGet(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsGetRequest, security operations.PrivatecaProjectsLocationsOperationsGetSecurity) (*operations.PrivatecaProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,20 +231,20 @@ func (s *projects) PrivatecaProjectsLocationsOperationsGet(ctx context.Context, 
 }
 
 // PrivatecaProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) PrivatecaProjectsLocationsOperationsList(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsListRequest) (*operations.PrivatecaProjectsLocationsOperationsListResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsOperationsList(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsListRequest, security operations.PrivatecaProjectsLocationsOperationsListSecurity) (*operations.PrivatecaProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -279,20 +279,20 @@ func (s *projects) PrivatecaProjectsLocationsOperationsList(ctx context.Context,
 }
 
 // PrivatecaProjectsLocationsReusableConfigsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) PrivatecaProjectsLocationsReusableConfigsGetIamPolicy(ctx context.Context, request operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyRequest) (*operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsReusableConfigsGetIamPolicy(ctx context.Context, request operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyRequest, security operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicySecurity) (*operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -327,11 +327,11 @@ func (s *projects) PrivatecaProjectsLocationsReusableConfigsGetIamPolicy(ctx con
 }
 
 // PrivatecaProjectsLocationsReusableConfigsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) PrivatecaProjectsLocationsReusableConfigsSetIamPolicy(ctx context.Context, request operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyRequest) (*operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsReusableConfigsSetIamPolicy(ctx context.Context, request operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyRequest, security operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicySecurity) (*operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,11 +343,11 @@ func (s *projects) PrivatecaProjectsLocationsReusableConfigsSetIamPolicy(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,11 +382,11 @@ func (s *projects) PrivatecaProjectsLocationsReusableConfigsSetIamPolicy(ctx con
 }
 
 // PrivatecaProjectsLocationsReusableConfigsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) PrivatecaProjectsLocationsReusableConfigsTestIamPermissions(ctx context.Context, request operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsRequest) (*operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsResponse, error) {
+func (s *projects) PrivatecaProjectsLocationsReusableConfigsTestIamPermissions(ctx context.Context, request operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsRequest, security operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsSecurity) (*operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -398,11 +398,11 @@ func (s *projects) PrivatecaProjectsLocationsReusableConfigsTestIamPermissions(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

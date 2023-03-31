@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetAllStatusCheckContextsPathParams struct {
+type ReposGetAllStatusCheckContextsRequest struct {
 	// The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/github-ae@latest/graphql).
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetAllStatusCheckContextsRequest struct {
-	PathParams ReposGetAllStatusCheckContextsPathParams
 }
 
 type ReposGetAllStatusCheckContextsResponse struct {

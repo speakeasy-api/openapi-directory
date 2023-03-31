@@ -36,7 +36,7 @@ func newScripts(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ExportZipUsingGET - exportZip
 func (s *scripts) ExportZipUsingGET(ctx context.Context, request operations.ExportZipUsingGETRequest) (*operations.ExportZipUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *scripts) ExportZipUsingGET(ctx context.Context, request operations.Expo
 // GETScriptDifferencesUsingGET - getScriptDifferences
 func (s *scripts) GETScriptDifferencesUsingGET(ctx context.Context, request operations.GETScriptDifferencesUsingGETRequest) (*operations.GETScriptDifferencesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/differences/{snapshotId1}/{snapshotId2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/differences/{snapshotId1}/{snapshotId2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,14 +134,14 @@ func (s *scripts) GETScriptDifferencesUsingGET(ctx context.Context, request oper
 // GETScriptVersionsUsingGET - getScriptVersions
 func (s *scripts) GETScriptVersionsUsingGET(ctx context.Context, request operations.GETScriptVersionsUsingGETRequest) (*operations.GETScriptVersionsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions/{page}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions/{page}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -187,14 +187,14 @@ func (s *scripts) GETScriptVersionsUsingGET(ctx context.Context, request operati
 // GETScriptVersionsUsingGET1 - getScriptVersions
 func (s *scripts) GETScriptVersionsUsingGET1(ctx context.Context, request operations.GETScriptVersionsUsingGET1Request) (*operations.GETScriptVersionsUsingGET1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,9 +240,9 @@ func (s *scripts) GETScriptVersionsUsingGET1(ctx context.Context, request operat
 // ImportAcceptUsingPOST - importAccept
 func (s *scripts) ImportAcceptUsingPOST(ctx context.Context, request operations.ImportAcceptUsingPOSTRequest) (*operations.ImportAcceptUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/accept", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *scripts) ImportAcceptUsingPOST(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -303,9 +303,9 @@ func (s *scripts) ImportAcceptUsingPOST(ctx context.Context, request operations.
 // ImportZipUsingPOST - importZip
 func (s *scripts) ImportZipUsingPOST(ctx context.Context, request operations.ImportZipUsingPOSTRequest) (*operations.ImportZipUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/preview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/preview", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

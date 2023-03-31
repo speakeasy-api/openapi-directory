@@ -10,7 +10,7 @@ import (
 )
 
 type GetWatchLaterQueueAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetWatchLaterQueueAlt1DirectionEnum - The sort direction of the results.
@@ -94,7 +94,7 @@ func (e *GetWatchLaterQueueAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWatchLaterQueueAlt1QueryParams struct {
+type GetWatchLaterQueueAlt1Request struct {
 	// The sort direction of the results.
 	Direction *GetWatchLaterQueueAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -109,11 +109,6 @@ type GetWatchLaterQueueAlt1QueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetWatchLaterQueueAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetWatchLaterQueueAlt1Request struct {
-	QueryParams GetWatchLaterQueueAlt1QueryParams
-	Security    GetWatchLaterQueueAlt1Security
 }
 
 type GetWatchLaterQueueAlt1Response struct {

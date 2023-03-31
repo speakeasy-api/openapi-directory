@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ChangeCallQueueManagerSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ChangeCallQueueManagerPathParams struct {
-	// Unique Identifier of the Call Queue.
-	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ChangeCallQueueManagerApplicationJSON struct {
@@ -22,9 +16,9 @@ type ChangeCallQueueManagerApplicationJSON struct {
 }
 
 type ChangeCallQueueManagerRequest struct {
-	PathParams ChangeCallQueueManagerPathParams
-	Request    *ChangeCallQueueManagerApplicationJSON `request:"mediaType=application/json"`
-	Security   ChangeCallQueueManagerSecurity
+	RequestBody *ChangeCallQueueManagerApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Call Queue.
+	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
 }
 
 type ChangeCallQueueManagerResponse struct {

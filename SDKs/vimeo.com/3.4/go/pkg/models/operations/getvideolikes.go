@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoLikesPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 // GetVideoLikesDirectionEnum - The sort direction of the results.
 type GetVideoLikesDirectionEnum string
 
@@ -62,7 +57,7 @@ func (e *GetVideoLikesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideoLikesQueryParams struct {
+type GetVideoLikesRequest struct {
 	// The sort direction of the results.
 	Direction *GetVideoLikesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -71,11 +66,8 @@ type GetVideoLikesQueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetVideoLikesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVideoLikesRequest struct {
-	PathParams  GetVideoLikesPathParams
-	QueryParams GetVideoLikesQueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetVideoLikesResponse struct {

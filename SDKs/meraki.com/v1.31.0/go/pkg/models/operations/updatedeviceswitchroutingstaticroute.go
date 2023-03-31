@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceSwitchRoutingStaticRoutePathParams struct {
-	Serial        string `pathParam:"style=simple,explode=false,name=serial"`
-	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
-}
-
 type UpdateDeviceSwitchRoutingStaticRouteRequestBody struct {
 	// Option to advertise static route via OSPF
 	AdvertiseViaOspfEnabled *bool `json:"advertiseViaOspfEnabled,omitempty"`
@@ -25,8 +20,9 @@ type UpdateDeviceSwitchRoutingStaticRouteRequestBody struct {
 }
 
 type UpdateDeviceSwitchRoutingStaticRouteRequest struct {
-	PathParams UpdateDeviceSwitchRoutingStaticRoutePathParams
-	Request    *UpdateDeviceSwitchRoutingStaticRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateDeviceSwitchRoutingStaticRouteRequestBody `request:"mediaType=application/json"`
+	Serial        string                                           `pathParam:"style=simple,explode=false,name=serial"`
+	StaticRouteID string                                           `pathParam:"style=simple,explode=false,name=staticRouteId"`
 }
 
 type UpdateDeviceSwitchRoutingStaticRouteResponse struct {

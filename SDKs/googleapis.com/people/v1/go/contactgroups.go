@@ -33,7 +33,7 @@ func newContactGroups(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // PeopleContactGroupsBatchGet - Get a list of contact groups owned by the authenticated user by specifying a list of contact group resource names.
-func (s *contactGroups) PeopleContactGroupsBatchGet(ctx context.Context, request operations.PeopleContactGroupsBatchGetRequest) (*operations.PeopleContactGroupsBatchGetResponse, error) {
+func (s *contactGroups) PeopleContactGroupsBatchGet(ctx context.Context, request operations.PeopleContactGroupsBatchGetRequest, security operations.PeopleContactGroupsBatchGetSecurity) (*operations.PeopleContactGroupsBatchGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/contactGroups:batchGet"
 
@@ -42,11 +42,11 @@ func (s *contactGroups) PeopleContactGroupsBatchGet(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *contactGroups) PeopleContactGroupsBatchGet(ctx context.Context, request
 }
 
 // PeopleContactGroupsCreate - Create a new contact group owned by the authenticated user. Created contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-func (s *contactGroups) PeopleContactGroupsCreate(ctx context.Context, request operations.PeopleContactGroupsCreateRequest) (*operations.PeopleContactGroupsCreateResponse, error) {
+func (s *contactGroups) PeopleContactGroupsCreate(ctx context.Context, request operations.PeopleContactGroupsCreateRequest, security operations.PeopleContactGroupsCreateSecurity) (*operations.PeopleContactGroupsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/contactGroups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContactGroupRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *contactGroups) PeopleContactGroupsCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *contactGroups) PeopleContactGroupsCreate(ctx context.Context, request o
 }
 
 // PeopleContactGroupsDelete - Delete an existing contact group owned by the authenticated user by specifying a contact group resource name. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-func (s *contactGroups) PeopleContactGroupsDelete(ctx context.Context, request operations.PeopleContactGroupsDeleteRequest) (*operations.PeopleContactGroupsDeleteResponse, error) {
+func (s *contactGroups) PeopleContactGroupsDelete(ctx context.Context, request operations.PeopleContactGroupsDeleteRequest, security operations.PeopleContactGroupsDeleteSecurity) (*operations.PeopleContactGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *contactGroups) PeopleContactGroupsDelete(ctx context.Context, request o
 }
 
 // PeopleContactGroupsList - List all contact groups owned by the authenticated user. Members of the contact groups are not populated.
-func (s *contactGroups) PeopleContactGroupsList(ctx context.Context, request operations.PeopleContactGroupsListRequest) (*operations.PeopleContactGroupsListResponse, error) {
+func (s *contactGroups) PeopleContactGroupsList(ctx context.Context, request operations.PeopleContactGroupsListRequest, security operations.PeopleContactGroupsListSecurity) (*operations.PeopleContactGroupsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/contactGroups"
 
@@ -193,11 +193,11 @@ func (s *contactGroups) PeopleContactGroupsList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,11 +232,11 @@ func (s *contactGroups) PeopleContactGroupsList(ctx context.Context, request ope
 }
 
 // PeopleContactGroupsMembersModify - Modify the members of a contact group owned by the authenticated user. The only system contact groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts removed.
-func (s *contactGroups) PeopleContactGroupsMembersModify(ctx context.Context, request operations.PeopleContactGroupsMembersModifyRequest) (*operations.PeopleContactGroupsMembersModifyResponse, error) {
+func (s *contactGroups) PeopleContactGroupsMembersModify(ctx context.Context, request operations.PeopleContactGroupsMembersModifyRequest, security operations.PeopleContactGroupsMembersModifySecurity) (*operations.PeopleContactGroupsMembersModifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}/members:modify", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}/members:modify", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyContactGroupMembersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -248,11 +248,11 @@ func (s *contactGroups) PeopleContactGroupsMembersModify(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *contactGroups) PeopleContactGroupsMembersModify(ctx context.Context, re
 }
 
 // PeopleContactGroupsUpdate - Update the name of an existing contact group owned by the authenticated user. Updated contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-func (s *contactGroups) PeopleContactGroupsUpdate(ctx context.Context, request operations.PeopleContactGroupsUpdateRequest) (*operations.PeopleContactGroupsUpdateResponse, error) {
+func (s *contactGroups) PeopleContactGroupsUpdate(ctx context.Context, request operations.PeopleContactGroupsUpdateRequest, security operations.PeopleContactGroupsUpdateSecurity) (*operations.PeopleContactGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateContactGroupRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *contactGroups) PeopleContactGroupsUpdate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

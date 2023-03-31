@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSsoStrategiesIDPathParams struct {
+type GetSsoStrategiesIDRequest struct {
 	// Sso Strategy ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSsoStrategiesIDRequest struct {
-	PathParams GetSsoStrategiesIDPathParams
 }
 
 type GetSsoStrategiesIDResponse struct {

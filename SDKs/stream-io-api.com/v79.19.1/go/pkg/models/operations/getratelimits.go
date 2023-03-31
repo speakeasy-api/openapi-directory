@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRateLimitsQueryParams struct {
+type GetRateLimitsRequest struct {
 	Android    *bool   `queryParam:"serialization=json,name=android"`
 	Endpoints  *string `queryParam:"serialization=json,name=endpoints"`
 	Ios        *bool   `queryParam:"serialization=json,name=ios"`
 	ServerSide *bool   `queryParam:"serialization=json,name=server_side"`
 	Web        *bool   `queryParam:"serialization=json,name=web"`
-}
-
-type GetRateLimitsRequest struct {
-	QueryParams GetRateLimitsQueryParams
 }
 
 type GetRateLimitsResponse struct {

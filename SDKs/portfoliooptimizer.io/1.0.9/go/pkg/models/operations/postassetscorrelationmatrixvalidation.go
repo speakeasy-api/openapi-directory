@@ -15,10 +15,6 @@ type PostAssetsCorrelationMatrixValidationRequestBody struct {
 	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`
 }
 
-type PostAssetsCorrelationMatrixValidationRequest struct {
-	Request PostAssetsCorrelationMatrixValidationRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum - Indicates whether the matrix is a valid correlation matrix
 type PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum string
 

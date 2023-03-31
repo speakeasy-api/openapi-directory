@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GETUserContentURLJSONSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GETUserContentURLJSONQueryParams struct {
-	URL *string `queryParam:"style=form,explode=true,name=url"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
 type GETUserContentURLJSONRequest struct {
-	QueryParams GETUserContentURLJSONQueryParams
-	Security    GETUserContentURLJSONSecurity
+	URL *string `queryParam:"style=form,explode=true,name=url"`
 }
 
 type GETUserContentURLJSON200ApplicationJSONDebug struct {

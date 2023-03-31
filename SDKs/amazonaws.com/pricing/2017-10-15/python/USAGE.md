@@ -3,36 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.DescribeServicesRequest(
-    query_params=operations.DescribeServicesQueryParams(
-        max_results="maiores",
-        next_token="nobis",
+    describe_services_request=shared.DescribeServicesRequest(
+        format_version="corrupti",
+        max_results=592845,
+        next_token="distinctio",
+        service_code="quibusdam",
     ),
-    headers=operations.DescribeServicesHeaders(
-        x_amz_algorithm="quos",
-        x_amz_content_sha256="facilis",
-        x_amz_credential="qui",
-        x_amz_date="quis",
-        x_amz_security_token="aut",
-        x_amz_signature="est",
-        x_amz_signed_headers="ipsa",
-        x_amz_target="AWSPriceListService.DescribeServices",
-    ),
-    request=shared.DescribeServicesRequest(
-        format_version="eveniet",
-        max_results=1787359646289181114,
-        next_token="vitae",
-        service_code="quos",
-    ),
+    max_results="unde",
+    next_token="nulla",
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
+    x_amz_target="AWSPriceListService.DescribeServices",
 )
     
 res = s.describe_services(req)

@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
-	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -32,7 +31,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetUser - Get info about the current user
-func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
+func (s *users) GetUser(ctx context.Context) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
 
@@ -41,7 +40,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

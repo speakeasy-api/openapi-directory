@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type PostReviewsReviewIDPathParams struct {
-	// The id of the Review to be updated
-	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
-}
-
-type PostReviewsReviewIDQueryParams struct {
+type PostReviewsReviewIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
 	// The review's description. Limited to 2000 characters.
@@ -20,15 +15,12 @@ type PostReviewsReviewIDQueryParams struct {
 	Headline string `queryParam:"style=form,explode=true,name=headline"`
 	// The rating given within this review. The rating is represented as an integer between 0 and 500 (0 - 5 stars)
 	Rating int64 `queryParam:"style=form,explode=true,name=rating"`
+	// The id of the Review to be updated
+	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
 	// The id of the User account that is posting this review
 	UserAccountID string `queryParam:"style=form,explode=true,name=userAccountId"`
 	// The id of the User that is updating this review
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type PostReviewsReviewIDRequest struct {
-	PathParams  PostReviewsReviewIDPathParams
-	QueryParams PostReviewsReviewIDQueryParams
 }
 
 type PostReviewsReviewIDResponse struct {

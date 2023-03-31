@@ -37,7 +37,7 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete Project
 func (s *projects) DeleteProjectsID(ctx context.Context, request operations.DeleteProjectsIDRequest) (*operations.DeleteProjectsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *projects) GetProjects(ctx context.Context, request operations.GetProjec
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *projects) GetProjects(ctx context.Context, request operations.GetProjec
 // Show Project
 func (s *projects) GetProjectsID(ctx context.Context, request operations.GetProjectsIDRequest) (*operations.GetProjectsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *projects) GetProjectsID(ctx context.Context, request operations.GetProj
 // Update Project
 func (s *projects) PatchProjectsID(ctx context.Context, request operations.PatchProjectsIDRequest) (*operations.PatchProjectsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -297,7 +297,7 @@ func (s *projects) PatchProjectsID(ctx context.Context, request operations.Patch
 
 // PostProjects - Create Project
 // Create Project
-func (s *projects) PostProjects(ctx context.Context, request operations.PostProjectsRequest) (*operations.PostProjectsResponse, error) {
+func (s *projects) PostProjects(ctx context.Context, request operations.PostProjectsRequestBody) (*operations.PostProjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
 

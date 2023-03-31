@@ -33,7 +33,6 @@ pkg/models/shared/osdevices.go
 pkg/models/shared/ios120.go
 pkg/models/shared/android70.go
 pkg/models/shared/accessdenied.go
-pkg/models/shared/security.go
 pkg/models/shared/locations.go
 pkg/models/shared/osbrowsers.go
 pkg/models/shared/browsers.go

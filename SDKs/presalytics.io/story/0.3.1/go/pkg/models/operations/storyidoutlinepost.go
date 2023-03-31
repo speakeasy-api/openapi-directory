@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDOutlinePostPathParams struct {
+type StoryIDOutlinePostRequest struct {
+	// A story outline object
+	RequestBody string `request:"mediaType=application/json"`
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDOutlinePostRequest struct {
-	PathParams StoryIDOutlinePostPathParams
-	// A story outline object
-	Request string `request:"mediaType=application/json"`
 }
 
 type StoryIDOutlinePostResponse struct {

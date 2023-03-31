@@ -155,7 +155,6 @@ pkg/models/operations/directoryverificationcodesinvalidate.go
 pkg/models/operations/directoryverificationcodeslist.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/asp.go
 pkg/models/shared/asps.go
 pkg/models/shared/channel.go

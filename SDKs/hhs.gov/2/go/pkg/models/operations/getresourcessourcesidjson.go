@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesSourcesIDJSONPathParams struct {
+type GetResourcesSourcesIDJSONRequest struct {
 	// The id of the source to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesSourcesIDJSONRequest struct {
-	PathParams GetResourcesSourcesIDJSONPathParams
 }
 
 type GetResourcesSourcesIDJSONResponse struct {

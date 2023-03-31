@@ -33,11 +33,11 @@ func newVideosTextTracks(defaultClient, securityClient HTTPClient, serverURL, la
 
 // CreateTextTrack - Add a text track to a video
 // For additional information, see our [text track upload guide](https://developer.vimeo.com/api/upload/texttracks).
-func (s *videosTextTracks) CreateTextTrack(ctx context.Context, request operations.CreateTextTrackRequest) (*operations.CreateTextTrackResponse, error) {
+func (s *videosTextTracks) CreateTextTrack(ctx context.Context, request operations.CreateTextTrackRequest, security operations.CreateTextTrackSecurity) (*operations.CreateTextTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *videosTextTracks) CreateTextTrack(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,11 +98,11 @@ func (s *videosTextTracks) CreateTextTrack(ctx context.Context, request operatio
 
 // CreateTextTrackAlt1 - Add a text track to a video
 // For additional information, see our [text track upload guide](https://developer.vimeo.com/api/upload/texttracks).
-func (s *videosTextTracks) CreateTextTrackAlt1(ctx context.Context, request operations.CreateTextTrackAlt1Request) (*operations.CreateTextTrackAlt1Response, error) {
+func (s *videosTextTracks) CreateTextTrackAlt1(ctx context.Context, request operations.CreateTextTrackAlt1Request, security operations.CreateTextTrackAlt1Security) (*operations.CreateTextTrackAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/texttracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/texttracks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -117,7 +117,7 @@ func (s *videosTextTracks) CreateTextTrackAlt1(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -162,16 +162,16 @@ func (s *videosTextTracks) CreateTextTrackAlt1(ctx context.Context, request oper
 }
 
 // DeleteTextTrack - Delete a text track
-func (s *videosTextTracks) DeleteTextTrack(ctx context.Context, request operations.DeleteTextTrackRequest) (*operations.DeleteTextTrackResponse, error) {
+func (s *videosTextTracks) DeleteTextTrack(ctx context.Context, request operations.DeleteTextTrackRequest, security operations.DeleteTextTrackSecurity) (*operations.DeleteTextTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks/{texttrack_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks/{texttrack_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -217,11 +217,11 @@ func (s *videosTextTracks) DeleteTextTrack(ctx context.Context, request operatio
 }
 
 // EditTextTrack - Edit a text track
-func (s *videosTextTracks) EditTextTrack(ctx context.Context, request operations.EditTextTrackRequest) (*operations.EditTextTrackResponse, error) {
+func (s *videosTextTracks) EditTextTrack(ctx context.Context, request operations.EditTextTrackRequest, security operations.EditTextTrackSecurity) (*operations.EditTextTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks/{texttrack_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks/{texttrack_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -233,7 +233,7 @@ func (s *videosTextTracks) EditTextTrack(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -282,7 +282,7 @@ func (s *videosTextTracks) EditTextTrack(ctx context.Context, request operations
 // GetTextTrack - Get a specific text track
 func (s *videosTextTracks) GetTextTrack(ctx context.Context, request operations.GetTextTrackRequest) (*operations.GetTextTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks/{texttrack_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks/{texttrack_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *videosTextTracks) GetTextTrack(ctx context.Context, request operations.
 // GetTextTracks - Get all the text tracks of a video
 func (s *videosTextTracks) GetTextTracks(ctx context.Context, request operations.GetTextTracksRequest) (*operations.GetTextTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}/texttracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -400,7 +400,7 @@ func (s *videosTextTracks) GetTextTracks(ctx context.Context, request operations
 // GetTextTracksAlt1 - Get all the text tracks of a video
 func (s *videosTextTracks) GetTextTracksAlt1(ctx context.Context, request operations.GetTextTracksAlt1Request) (*operations.GetTextTracksAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/texttracks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/videos/{video_id}/texttracks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSubscriptionbygroupIDPathParams struct {
+type UpdateSubscriptionbygroupIDRequest struct {
+	UpdateSubscriptionbygroupIDRequest shared.UpdateSubscriptionbygroupIDRequest `request:"mediaType=application/json"`
 	// Group ID.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type UpdateSubscriptionbygroupIDRequest struct {
-	PathParams UpdateSubscriptionbygroupIDPathParams
-	Request    shared.UpdateSubscriptionbygroupIDRequest `request:"mediaType=application/json"`
 }
 
 type UpdateSubscriptionbygroupIDResponse struct {

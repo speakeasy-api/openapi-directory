@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsLabelsCreateQueryParams struct {
+type DrivelabelsLabelsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                           *shared.XgafvEnum                             `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleAppsDriveLabelsV2betaLabelInput *shared.GoogleAppsDriveLabelsV2betaLabelInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,11 +35,6 @@ type DrivelabelsLabelsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Set to `true` in order to use the user's admin privileges. The server will verify the user is an admin before allowing access.
 	UseAdminAccess *bool `queryParam:"style=form,explode=true,name=useAdminAccess"`
-}
-
-type DrivelabelsLabelsCreateRequest struct {
-	QueryParams DrivelabelsLabelsCreateQueryParams
-	Request     *shared.GoogleAppsDriveLabelsV2betaLabelInput `request:"mediaType=application/json"`
 }
 
 type DrivelabelsLabelsCreateResponse struct {

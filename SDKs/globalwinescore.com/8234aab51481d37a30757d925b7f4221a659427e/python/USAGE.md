@@ -3,32 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        token_authentication=shared.SchemeTokenAuthentication(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        token_authentication="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.GetGlobalwinescoresLatestRequest(
-    query_params=operations.GetGlobalwinescoresLatestQueryParams(
-        color="pink",
-        is_primeurs=True,
-        limit=6308795235080022817,
-        lwin="molestiae",
-        lwin_11="error",
-        offset=9017080597034832094,
-        ordering="date",
-        vintage="accusantium",
-        wine_id=[
-            7904238630633999270,
-        ],
-    ),
-    headers=operations.GetGlobalwinescoresLatestHeaders(
-        authorization="labore",
-    ),
+    authorization="corrupti",
+    color="white",
+    is_primeurs=False,
+    limit=715190,
+    lwin="quibusdam",
+    lwin_11="unde",
+    offset=857946,
+    ordering="score",
+    vintage="illum",
+    wine_id=[
+        623564,
+        645894,
+    ],
 )
     
 res = s.global_wine_score.get_globalwinescores_latest_(req)

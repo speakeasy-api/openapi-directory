@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutPlacementGroupsIDPathParams struct {
-	// ID of the resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutPlacementGroupsIDUpdatePlacementGroupRequest struct {
 	// User-defined labels (key-value pairs)
 	Labels map[string]interface{} `json:"labels,omitempty"`
@@ -21,8 +16,9 @@ type PutPlacementGroupsIDUpdatePlacementGroupRequest struct {
 }
 
 type PutPlacementGroupsIDRequest struct {
-	PathParams PutPlacementGroupsIDPathParams
-	Request    *PutPlacementGroupsIDUpdatePlacementGroupRequest `request:"mediaType=application/json"`
+	RequestBody *PutPlacementGroupsIDUpdatePlacementGroupRequest `request:"mediaType=application/json"`
+	// ID of the resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum - Type of the Placement Group

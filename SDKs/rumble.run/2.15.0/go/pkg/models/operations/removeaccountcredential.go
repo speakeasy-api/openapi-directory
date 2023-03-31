@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RemoveAccountCredentialSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RemoveAccountCredentialPathParams struct {
-	// UUID of the credential to delete
-	CredentialID string `pathParam:"style=simple,explode=false,name=credential_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RemoveAccountCredentialRequest struct {
-	PathParams RemoveAccountCredentialPathParams
-	Security   RemoveAccountCredentialSecurity
+	// UUID of the credential to delete
+	CredentialID string `pathParam:"style=simple,explode=false,name=credential_id"`
 }
 
 type RemoveAccountCredentialResponse struct {

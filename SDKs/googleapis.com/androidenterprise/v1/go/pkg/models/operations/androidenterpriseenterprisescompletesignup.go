@@ -8,11 +8,11 @@ import (
 )
 
 type AndroidenterpriseEnterprisesCompleteSignupSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidenterpriseEnterprisesCompleteSignupQueryParams struct {
+type AndroidenterpriseEnterprisesCompleteSignupRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -39,11 +39,6 @@ type AndroidenterpriseEnterprisesCompleteSignupQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseEnterprisesCompleteSignupRequest struct {
-	QueryParams AndroidenterpriseEnterprisesCompleteSignupQueryParams
-	Security    AndroidenterpriseEnterprisesCompleteSignupSecurity
 }
 
 type AndroidenterpriseEnterprisesCompleteSignupResponse struct {

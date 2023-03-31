@@ -32,11 +32,11 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ServiceusageServicesBatchEnable - Enables multiple services on a project. The operation is atomic: if enabling any service fails, then the entire batch fails, and no state changes occur. Operation response type: `google.protobuf.Empty`
-func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request operations.ServiceusageServicesBatchEnableRequest) (*operations.ServiceusageServicesBatchEnableResponse, error) {
+func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request operations.ServiceusageServicesBatchEnableRequest, security operations.ServiceusageServicesBatchEnableSecurity) (*operations.ServiceusageServicesBatchEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/services:batchEnable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/services:batchEnable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchEnableServicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *services) ServiceusageServicesBatchEnable(ctx context.Context, request 
 }
 
 // ServiceusageServicesConsumerQuotaMetricsImportAdminOverrides - Creates or updates multiple admin overrides atomically, all on the same consumer, but on many different metrics or limits. The name field in the quota override message should not be set.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsImportAdminOverrides(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsImportAdminOverrides(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesRequest, security operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics:importAdminOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics:importAdminOverrides", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportAdminOverridesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsImportAdminOverrides(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsImportAdminOverrides(
 }
 
 // ServiceusageServicesConsumerQuotaMetricsImportConsumerOverrides - Creates or updates multiple consumer overrides atomically, all on the same consumer, but on many different metrics or limits. The name field in the quota override message should not be set.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsImportConsumerOverrides(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsImportConsumerOverrides(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesRequest, security operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics:importConsumerOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics:importConsumerOverrides", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportConsumerOverridesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsImportConsumerOverrid
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsImportConsumerOverrid
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreate - Creates an admin override. An admin override is applied by an administrator of a parent folder or parent organization of the consumer receiving the override. An admin override is intended to limit the amount of quota the consumer can use out of the total quota pool allocated to all children of the folder or organization.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreate(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreate(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/adminOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/adminOverrides", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuotaOverride", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,20 +252,20 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesC
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesList - Lists all admin overrides on this limit.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesList(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesList(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/adminOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/adminOverrides", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,11 +300,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesL
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreate - Creates a consumer override. A consumer override is applied to the consumer on its own authority to limit its own quota usage. Consumer overrides cannot be used to grant more quota than would be allowed by admin overrides, producer overrides, or the default limit of the service.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreate(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreate(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerOverrides", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuotaOverride", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,11 +316,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverrid
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,20 +355,20 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverrid
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDelete - Deletes a consumer override.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDelete(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDelete(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,20 +403,20 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverrid
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesList - Lists all consumer overrides on this limit.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesList(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesList(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerOverrides", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerOverrides", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverrid
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatch - Updates a consumer override.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatch(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatch(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuotaOverride", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverrid
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,20 +506,20 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverrid
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsGet - Retrieves a summary of quota information for a specific quota limit.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsGet(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsGet(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest, security operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsLimitsGet(ctx context
 }
 
 // ServiceusageServicesConsumerQuotaMetricsList - Retrieves a summary of all quota information visible to the service consumer, organized by service metric. Each metric includes information about all of its defined limits. Each limit includes the limit configuration (quota unit, preciseness, default value), the current effective limit value, and all of the overrides applied to the limit.
-func (s *services) ServiceusageServicesConsumerQuotaMetricsList(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsListRequest) (*operations.ServiceusageServicesConsumerQuotaMetricsListResponse, error) {
+func (s *services) ServiceusageServicesConsumerQuotaMetricsList(ctx context.Context, request operations.ServiceusageServicesConsumerQuotaMetricsListRequest, security operations.ServiceusageServicesConsumerQuotaMetricsListSecurity) (*operations.ServiceusageServicesConsumerQuotaMetricsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/consumerQuotaMetrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *services) ServiceusageServicesConsumerQuotaMetricsList(ctx context.Cont
 }
 
 // ServiceusageServicesDisable - Disables a service so that it can no longer be used with a project. This prevents unintended usage that may cause unexpected billing charges or security leaks. It is not valid to call the disable method on a service that is not currently enabled. Callers will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled. Operation response type: `google.protobuf.Empty`
-func (s *services) ServiceusageServicesDisable(ctx context.Context, request operations.ServiceusageServicesDisableRequest) (*operations.ServiceusageServicesDisableResponse, error) {
+func (s *services) ServiceusageServicesDisable(ctx context.Context, request operations.ServiceusageServicesDisableRequest, security operations.ServiceusageServicesDisableSecurity) (*operations.ServiceusageServicesDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:disable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *services) ServiceusageServicesDisable(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *services) ServiceusageServicesDisable(ctx context.Context, request oper
 }
 
 // ServiceusageServicesEnable - Enables a service so that it can be used with a project. Operation response type: `google.protobuf.Empty`
-func (s *services) ServiceusageServicesEnable(ctx context.Context, request operations.ServiceusageServicesEnableRequest) (*operations.ServiceusageServicesEnableResponse, error) {
+func (s *services) ServiceusageServicesEnable(ctx context.Context, request operations.ServiceusageServicesEnableRequest, security operations.ServiceusageServicesEnableSecurity) (*operations.ServiceusageServicesEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:enable", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *services) ServiceusageServicesEnable(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,20 +712,20 @@ func (s *services) ServiceusageServicesEnable(ctx context.Context, request opera
 }
 
 // ServiceusageServicesGenerateServiceIdentity - Generates service identity for service.
-func (s *services) ServiceusageServicesGenerateServiceIdentity(ctx context.Context, request operations.ServiceusageServicesGenerateServiceIdentityRequest) (*operations.ServiceusageServicesGenerateServiceIdentityResponse, error) {
+func (s *services) ServiceusageServicesGenerateServiceIdentity(ctx context.Context, request operations.ServiceusageServicesGenerateServiceIdentityRequest, security operations.ServiceusageServicesGenerateServiceIdentitySecurity) (*operations.ServiceusageServicesGenerateServiceIdentityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:generateServiceIdentity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:generateServiceIdentity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,20 +760,20 @@ func (s *services) ServiceusageServicesGenerateServiceIdentity(ctx context.Conte
 }
 
 // ServiceusageServicesList - Lists all services available to the specified project, and the current state of those services with respect to the project. The list includes all public services, all services for which the calling user has the `servicemanagement.services.bind` permission, and all services that have already been enabled on the project. The list can be filtered to only include services in a specific state, for example to only include services enabled on the project.
-func (s *services) ServiceusageServicesList(ctx context.Context, request operations.ServiceusageServicesListRequest) (*operations.ServiceusageServicesListResponse, error) {
+func (s *services) ServiceusageServicesList(ctx context.Context, request operations.ServiceusageServicesListRequest, security operations.ServiceusageServicesListSecurity) (*operations.ServiceusageServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

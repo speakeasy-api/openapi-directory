@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/apigee.net/marketcheck-cars/2.01/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,16 +14,18 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-    
+s = sdk.SDK(
+    security=shared.Security(
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
+)
+
+
 req = operations.CrmCheckRequest(
-    path_params=operations.CrmCheckPathParams(
-        vin="qui",
-    ),
-    query_params=operations.CrmCheckQueryParams(
-        api_key="aut",
-        sale_date="voluptatum",
-    ),
+    api_key="corrupti",
+    sale_date="provident",
+    vin="distinctio",
 )
     
 res = s.crm_cleanse_api.crm_check(req)
@@ -34,17 +36,18 @@ if res.crm_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### CRM Cleanse API
+
+### crm_cleanse_api
 
 * `crm_check` - CRM check of a particular vin
 
-### Car Cached Image
+### car_cached_image
 
 * `get_cached_image` - Fetch cached image
 
-### Car Search
+### car_search
 
 * `auto_complete` - API for auto-completion of inputs
 * `get_listing` - Listing by id
@@ -55,36 +58,47 @@ if res.crm_response is not None:
 * `get_listing_car_fsbo_id_` - Listing by id
 * `get_listing_car_fsbo_id_extra` - Long text Listings attributes for Listing with the given id
 * `get_listing_car_fsbo_id_media` - Listing media by id
+* `get_listing_car_uk_id_` - Listing by id
+* `get_listing_car_uk_id_extra` - Long text Listings attributes for Listing with the given id
+* `get_listing_car_uk_id_media` - Listing media by id
 * `get_listing_car_id_extra` - Long text Listings attributes for Listing with the given id
 * `get_listing_car_id_media` - Listing media by id
+* `get_search_car_active` - Gets active car listings for the given search criteria
 * `get_search_car_auction_active` - Gets active auction car listings for the given search criteria
 * `get_search_car_fsbo_active` - Gets active private party car listings for the given search criteria
 * `get_search_car_recents` - Gets Recent car listings for the given search criteria
-* `search` - Gets active car listings for the given search criteria
+* `get_search_car_uk_recents` - Gets Recent UK car listings for the given search criteria
+* `search` - Gets active car listings in UK for the given search criteria
 
-### Cars History API
+### cars_history_api
 
 * `get_car_history` - Get a cars online listing history
+* `get_history_car_uk_vrm_` - Get a cars online listing history
 
-### Cars Market API
+### cars_market_api
 
+* `fare_value` - Predict fare value of car for UK based on YMMT & miles
 * `get_daily_stats` - Price, Miles and Days on Market stats
 * `get_mds` - Market Days Supply
 * `get_popular_cars` - Get make model wise top 50 popular cars on national, state, city level
 * `get_sales_count` - Get sales count by make, model, year, trim or taxonomy vin
+* `predict_car_price` - Predict car price based on it's specifications
+* `predict_uk_car_price` - Predict car price for UK based on it's specifications
 
-### Dealer API
+### dealer_api
 
 * `dealer_search` - Find car dealers around
 * `get_dealer` - Dealer by id
+* `get_dealer_car_uk_id_` - Dealer by id
 * `get_dealer_heavy_equipment_id_` - Dealer by id
 * `get_dealer_motorcycle_id_` - Dealer by id
 * `get_dealer_rv_id_` - Dealer by id
+* `get_dealers_car_uk` - Find car dealers around
 * `get_dealers_heavy_equipment` - Find car dealers around
 * `get_dealers_motorcycle` - Find car dealers around
 * `get_dealers_rv` - Find car dealers around
 
-### Heavy Equipment Search
+### heavy_equipment_search
 
 * `get_listing_heavy_equipment_id_` - Heavy equipment listing by id
 * `get_listing_heavy_equipment_id_extra` - Long text Heavy equipment Listings attributes for Listing with the given id
@@ -92,7 +106,7 @@ if res.crm_response is not None:
 * `get_search_heavy_equipment_active` - Gets active heavy equipment listings for the given search criteria
 * `get_search_heavy_equipment_auto_complete` - API for auto-completion of inputs
 
-### Motorcycle Search
+### motorcycle_search
 
 * `get_listing_motorcycle_id_` - Motorcycle listing by id
 * `get_listing_motorcycle_id_extra` - Long text Motorcycle Listings attributes for Listing with the given id
@@ -100,34 +114,54 @@ if res.crm_response is not None:
 * `get_search_motorcycle_active` - Gets active motorcycle listings for the given search criteria
 * `get_search_motorcycle_auto_complete` - API for auto-completion of inputs
 
-### OEM Incentive Search
+### oem_incentive_search
 
-* `get_search_car_incentive_oem` - Gets oem incentive listings for the given search criteria
+* `oem_search` - Gets oem incentive listings for the given search criteria
 
-### RV Search
+### rv_search
 
+* `get_listing_rv_uk_id_` - RV listing by id
+* `get_listing_rv_uk_id_extra` - Long text RV Listings attributes for Listing with the given id
+* `get_listing_rv_uk_id_media` - Listing media by id
 * `get_listing_rv_id_` - RV listing by id
 * `get_listing_rv_id_extra` - Long text RV Listings attributes for Listing with the given id
 * `get_listing_rv_id_media` - Listing media by id
 * `get_search_rv_active` - Gets active RV listings for the given search criteria
 * `get_search_rv_auto_complete` - API for auto-completion of inputs
+* `get_search_rv_uk_active` - Gets active RV listings for the given search criteria
 
-### Rank Car Listings
+### rank_car_listings
 
 * `rank_car` - Compute relative rank for car listings.
 * `search_and_rank_car` - Compute relative rank for car listings.
 
-### Recall Search
+### recall_search
 
 * `get_recall_history` - Recall info by vin
 
-### VIN Decoder API
+### vin_decoder_api
 
 * `decode` - VIN Decoder
 * `decode_via_epi` - EPI VIN Decoder
+* `decode_via_neo_vin` - NeoVIN Decoder
 * `get_taxonomy_terms` - API for getting terms from taxonomy
 * `get_specs_car_auto_complete` - API for auto-completion of inputs based on taxonomy
 
+### client_filters
+
+* `get` - get client filters
+* `set` - set client filters
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -44,14 +44,10 @@ func (e *GetGetRecentChangesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGetRecentChangesQueryParams struct {
+type GetGetRecentChangesRequest struct {
 	Format *GetGetRecentChangesFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// Get the changes after this time
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type GetGetRecentChangesRequest struct {
-	QueryParams GetGetRecentChangesQueryParams
 }
 
 type GetGetRecentChangesResponse struct {

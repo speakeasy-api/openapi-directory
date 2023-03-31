@@ -4,34 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ProdTtSasportalCustomersListRequest(
-    security=operations.ProdTtSasportalCustomersListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.ProdTtSasportalCustomersListQueryParams(
-        dollar_xgafv="2",
-        access_token="voluptatem",
-        alt="proto",
-        callback="sunt",
-        fields="quo",
-        key="voluptatum",
-        oauth_token="doloremque",
-        page_size=1362199492306722394,
-        page_token="qui",
-        pretty_print=True,
-        quota_user="reiciendis",
-        upload_type="eveniet",
-        upload_protocol="et",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.customers.prod_tt_sasportal_customers_list(req)
+res = s.customers.prod_tt_sasportal_customers_list(req, operations.ProdTtSasportalCustomersListSecurity(
+    option1=operations.ProdTtSasportalCustomersListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.sas_portal_list_customers_response is not None:
     # handle response

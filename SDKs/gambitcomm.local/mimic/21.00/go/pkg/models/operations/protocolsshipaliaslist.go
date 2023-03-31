@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSSHIpaliasListPathParams struct {
+type ProtocolSSHIpaliasListRequest struct {
 	// Agent to manipulate SSH IP alias
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSSHIpaliasListRequest struct {
-	PathParams ProtocolSSHIpaliasListPathParams
 }
 
 type ProtocolSSHIpaliasListResponse struct {

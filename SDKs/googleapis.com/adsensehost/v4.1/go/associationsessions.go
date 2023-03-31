@@ -33,7 +33,7 @@ func newAssociationsessions(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // AdsensehostAssociationsessionsStart - Create an association session for initiating an association with an AdSense user.
-func (s *associationsessions) AdsensehostAssociationsessionsStart(ctx context.Context, request operations.AdsensehostAssociationsessionsStartRequest) (*operations.AdsensehostAssociationsessionsStartResponse, error) {
+func (s *associationsessions) AdsensehostAssociationsessionsStart(ctx context.Context, request operations.AdsensehostAssociationsessionsStartRequest, security operations.AdsensehostAssociationsessionsStartSecurity) (*operations.AdsensehostAssociationsessionsStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/associationsessions/start"
 
@@ -42,11 +42,11 @@ func (s *associationsessions) AdsensehostAssociationsessionsStart(ctx context.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *associationsessions) AdsensehostAssociationsessionsStart(ctx context.Co
 }
 
 // AdsensehostAssociationsessionsVerify - Verify an association session after the association callback returns from AdSense signup.
-func (s *associationsessions) AdsensehostAssociationsessionsVerify(ctx context.Context, request operations.AdsensehostAssociationsessionsVerifyRequest) (*operations.AdsensehostAssociationsessionsVerifyResponse, error) {
+func (s *associationsessions) AdsensehostAssociationsessionsVerify(ctx context.Context, request operations.AdsensehostAssociationsessionsVerifyRequest, security operations.AdsensehostAssociationsessionsVerifySecurity) (*operations.AdsensehostAssociationsessionsVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/associationsessions/verify"
 
@@ -90,11 +90,11 @@ func (s *associationsessions) AdsensehostAssociationsessionsVerify(ctx context.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

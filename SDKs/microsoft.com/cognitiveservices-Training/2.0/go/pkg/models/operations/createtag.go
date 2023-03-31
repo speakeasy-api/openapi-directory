@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTagPathParams struct {
-	// The project id
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateTagQueryParams struct {
+type CreateTagRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// Optional description for the tag
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// The tag name
 	Name string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type CreateTagHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type CreateTagRequest struct {
-	PathParams  CreateTagPathParams
-	QueryParams CreateTagQueryParams
-	Headers     CreateTagHeaders
+	// The project id
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type CreateTagResponse struct {

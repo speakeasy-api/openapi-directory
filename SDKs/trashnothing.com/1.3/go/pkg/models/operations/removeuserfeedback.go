@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveUserFeedbackPathParams struct {
+type RemoveUserFeedbackRequest struct {
 	// A user ID.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RemoveUserFeedbackRequest struct {
-	PathParams RemoveUserFeedbackPathParams
 }
 
 // RemoveUserFeedback200ApplicationJSON - The updated user.

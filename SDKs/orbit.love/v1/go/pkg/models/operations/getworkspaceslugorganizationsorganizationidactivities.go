@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugOrganizationsOrganizationIDActivitiesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	WorkspaceSlug  string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum
@@ -132,18 +126,14 @@ func (e *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum) Unmarsha
 	}
 }
 
-type GetWorkspaceSlugOrganizationsOrganizationIDActivitiesQueryParams struct {
-	ActivityType *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum `queryParam:"style=form,explode=true,name=activity_type"`
-	Direction    *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum    `queryParam:"style=form,explode=true,name=direction"`
-	Items        *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum        `queryParam:"style=form,explode=true,name=items"`
-	Page         *string                                                                `queryParam:"style=form,explode=true,name=page"`
-	Sort         *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum         `queryParam:"style=form,explode=true,name=sort"`
-}
-
 type GetWorkspaceSlugOrganizationsOrganizationIDActivitiesRequest struct {
-	PathParams  GetWorkspaceSlugOrganizationsOrganizationIDActivitiesPathParams
-	QueryParams GetWorkspaceSlugOrganizationsOrganizationIDActivitiesQueryParams
-	Security    GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSecurity
+	ActivityType   *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum `queryParam:"style=form,explode=true,name=activity_type"`
+	Direction      *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum    `queryParam:"style=form,explode=true,name=direction"`
+	Items          *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum        `queryParam:"style=form,explode=true,name=items"`
+	OrganizationID string                                                                 `pathParam:"style=simple,explode=false,name=organization_id"`
+	Page           *string                                                                `queryParam:"style=form,explode=true,name=page"`
+	Sort           *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum         `queryParam:"style=form,explode=true,name=sort"`
+	WorkspaceSlug  string                                                                 `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugOrganizationsOrganizationIDActivitiesResponse struct {

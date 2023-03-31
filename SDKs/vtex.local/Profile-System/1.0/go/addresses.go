@@ -38,9 +38,9 @@ func newAddresses(defaultClient, securityClient HTTPClient, serverURL, language,
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) CreateClientAddress(ctx context.Context, request operations.CreateClientAddressRequest) (*operations.CreateClientAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Address", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *addresses) CreateClientAddress(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,16 +98,16 @@ func (s *addresses) CreateClientAddress(ctx context.Context, request operations.
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) DeleteAddress(ctx context.Context, request operations.DeleteAddressRequest) (*operations.DeleteAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -144,16 +144,16 @@ func (s *addresses) DeleteAddress(ctx context.Context, request operations.Delete
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) GetAddress(ctx context.Context, request operations.GetAddressRequest) (*operations.GetAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -199,16 +199,16 @@ func (s *addresses) GetAddress(ctx context.Context, request operations.GetAddres
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) GetAddressByVersion(ctx context.Context, request operations.GetAddressByVersionRequest) (*operations.GetAddressByVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}/versions/{addressVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}/versions/{addressVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -254,16 +254,16 @@ func (s *addresses) GetAddressByVersion(ctx context.Context, request operations.
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) GetClientAddresses(ctx context.Context, request operations.GetClientAddressesRequest) (*operations.GetClientAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -307,16 +307,16 @@ func (s *addresses) GetClientAddresses(ctx context.Context, request operations.G
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) GetUnmaskedAddress(ctx context.Context, request operations.GetUnmaskedAddressRequest) (*operations.GetUnmaskedAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}/unmask", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}/unmask", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -360,16 +360,16 @@ func (s *addresses) GetUnmaskedAddress(ctx context.Context, request operations.G
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) GetUnmaskedAddressByVersion(ctx context.Context, request operations.GetUnmaskedAddressByVersionRequest) (*operations.GetUnmaskedAddressByVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}/versions/{addressVersionId}/unmask", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}/versions/{addressVersionId}/unmask", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -413,16 +413,16 @@ func (s *addresses) GetUnmaskedAddressByVersion(ctx context.Context, request ope
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) GetUnmaskedClientAddresses(ctx context.Context, request operations.GetUnmaskedClientAddressesRequest) (*operations.GetUnmaskedClientAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/unmask", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/unmask", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -466,9 +466,9 @@ func (s *addresses) GetUnmaskedClientAddresses(ctx context.Context, request oper
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *addresses) UpdateClientAddress(ctx context.Context, request operations.UpdateClientAddressRequest) (*operations.UpdateClientAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/addresses/{addressId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -480,9 +480,9 @@ func (s *addresses) UpdateClientAddress(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

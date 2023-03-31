@@ -42,14 +42,14 @@ func newFilings(defaultClient, securityClient HTTPClient, serverURL, language, s
 // result sets are approximate; you will want to page through the records until no records are returned.
 func (s *filings) GetCandidateCandidateIDFilings(ctx context.Context, request operations.GetCandidateCandidateIDFilingsRequest) (*operations.GetCandidateCandidateIDFilingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/filings/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/filings/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -94,14 +94,14 @@ func (s *filings) GetCandidateCandidateIDFilings(ctx context.Context, request op
 // result sets are approximate; you will want to page through the records until no records are returned.
 func (s *filings) GetCommitteeCommitteeIDFilings(ctx context.Context, request operations.GetCommitteeCommitteeIDFilingsRequest) (*operations.GetCommitteeCommitteeIDFilingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/filings/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/filings/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -153,7 +153,7 @@ func (s *filings) GetFilings(ctx context.Context, request operations.GetFilingsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -204,7 +204,7 @@ func (s *filings) GetOperationsLog(ctx context.Context, request operations.GetOp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

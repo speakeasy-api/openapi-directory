@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCalendarsQueryParams struct {
+type GetCalendarsRequest struct {
 	// Can only be used by admins or managers to fetch all entities
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Standard users can use this only with their own _userId_
 	UserID *int64 `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetCalendarsRequest struct {
-	QueryParams GetCalendarsQueryParams
 }
 
 type GetCalendarsResponse struct {

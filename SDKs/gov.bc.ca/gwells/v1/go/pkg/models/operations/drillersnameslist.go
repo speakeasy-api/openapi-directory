@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrillersNamesListQueryParams struct {
+type DrillersNamesListRequest struct {
 	// A search term.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type DrillersNamesListRequest struct {
-	QueryParams DrillersNamesListQueryParams
 }
 
 type DrillersNamesListResponse struct {

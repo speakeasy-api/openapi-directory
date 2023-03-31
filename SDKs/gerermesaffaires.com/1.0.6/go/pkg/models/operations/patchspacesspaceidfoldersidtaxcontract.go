@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersIDTaxContractPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersIDTaxContractRequestBodyLevelEnum string
 
 const (
@@ -55,9 +48,12 @@ type PatchSpacesSpaceIDFoldersIDTaxContractRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersIDTaxContractRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersIDTaxContractPathParams
 	// Tax contract to modify (except name, class and archivaldate)
-	Request PatchSpacesSpaceIDFoldersIDTaxContractRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesSpaceIDFoldersIDTaxContractRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersIDTaxContractResponse struct {

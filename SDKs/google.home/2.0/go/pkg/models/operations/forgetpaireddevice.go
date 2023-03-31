@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ForgetpaireddeviceRequest struct {
-	Request shared.ForgetpaireddeviceRequest `request:"mediaType=application/json"`
-}
 
 type ForgetpaireddeviceResponse struct {
 	ContentType                          string

@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type DependabotAddSelectedRepoToOrgSecretPathParams struct {
+type DependabotAddSelectedRepoToOrgSecretRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org          string `pathParam:"style=simple,explode=false,name=org"`
 	RepositoryID int64  `pathParam:"style=simple,explode=false,name=repository_id"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type DependabotAddSelectedRepoToOrgSecretRequest struct {
-	PathParams DependabotAddSelectedRepoToOrgSecretPathParams
 }
 
 type DependabotAddSelectedRepoToOrgSecretResponse struct {

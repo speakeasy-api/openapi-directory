@@ -8,10 +8,10 @@ import (
 )
 
 type GetNegativeKeywordsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetNegativeKeywordsQueryParams struct {
+type GetNegativeKeywordsRequest struct {
 	// A comma-separated list of ad group IDs.<br /><br />This query parameter is used if the seller wants to retrieve the negative keywords from one or more specific ad groups. The results might not include these ad group IDs if other search conditions exclude them.<br /><br /><span class="tablenote"><b>Note:</b>You can call the <a href="/api-docs/sell/marketing/resources/adgroup/methods/getAdGroups">getAdGroups</a> method to retrieve the ad group IDs for a seller.</span><br /><br /><i>Required if</i> the search results must be filtered to include negative keywords created at the ad group level.
 	AdGroupIds *string `queryParam:"style=form,explode=true,name=ad_group_ids"`
 	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br />This query parameter is used if the seller wants to retrieve the negative keywords from a specific campaign. The results might not include these campaign IDs if other search conditions exclude them.<br /><br /><span class="tablenote"><b>Note:</b> Currently, only one campaign ID value is supported for each request.</span>
@@ -22,11 +22,6 @@ type GetNegativeKeywordsQueryParams struct {
 	NegativeKeywordStatus *string `queryParam:"style=form,explode=true,name=negative_keyword_status"`
 	// The number of results that will be skipped in the result set. This is used with the <b>limit</b> field to control the pagination of the output.<br /><br />For example, if the <b>offset</b> is set to <code>0</code> and the <b>limit</b> is set to <code>10</code>, the method will retrieve items 1 through 10 from the list of items returned. If the <b>offset</b> is set to <code>10</code> and the <b>limit</b> is set to <code>10</code>, the method will retrieve items 11 through 20 from the list of items returned.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetNegativeKeywordsRequest struct {
-	QueryParams GetNegativeKeywordsQueryParams
-	Security    GetNegativeKeywordsSecurity
 }
 
 type GetNegativeKeywordsResponse struct {

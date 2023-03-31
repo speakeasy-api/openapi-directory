@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetweatherRequest(
-    query_params=operations.GetweatherQueryParams(
-        city="sit",
-        license="occaecati",
-        state="optio",
-    ),
+    city="Laruecester",
+    license="quibusdam",
+    state="unde",
 )
     
 res = s.weather_by_city_and_state.getweather(req)

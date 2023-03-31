@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsDeleteTokenPathParams struct {
-	// The client ID of the GitHub app.
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
 type AppsDeleteTokenRequestBody struct {
 	// The OAuth access token used to authenticate to the GitHub API.
 	AccessToken string `json:"access_token"`
 }
 
 type AppsDeleteTokenRequest struct {
-	PathParams AppsDeleteTokenPathParams
-	Request    AppsDeleteTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody AppsDeleteTokenRequestBody `request:"mediaType=application/json"`
+	// The client ID of the GitHub app.
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type AppsDeleteTokenResponse struct {

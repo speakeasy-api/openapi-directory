@@ -8,16 +8,11 @@ import (
 )
 
 type BaremetalsolutionProjectsLocationsInstancesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BaremetalsolutionProjectsLocationsInstancesListPathParams struct {
-	// Required. Parent value for ListInstancesRequest.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BaremetalsolutionProjectsLocationsInstancesListQueryParams struct {
+type BaremetalsolutionProjectsLocationsInstancesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type BaremetalsolutionProjectsLocationsInstancesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results from the server.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Parent value for ListInstancesRequest.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type BaremetalsolutionProjectsLocationsInstancesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BaremetalsolutionProjectsLocationsInstancesListRequest struct {
-	PathParams  BaremetalsolutionProjectsLocationsInstancesListPathParams
-	QueryParams BaremetalsolutionProjectsLocationsInstancesListQueryParams
-	Security    BaremetalsolutionProjectsLocationsInstancesListSecurity
 }
 
 type BaremetalsolutionProjectsLocationsInstancesListResponse struct {

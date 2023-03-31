@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateAPIQueryParams struct {
-	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
 type CreateAPIRequestBodyAPI struct {
 	Description *string `json:"description,omitempty"`
 	Name        *string `json:"name,omitempty"`
@@ -21,8 +17,8 @@ type CreateAPIRequestBody struct {
 }
 
 type CreateAPIRequest struct {
-	QueryParams CreateAPIQueryParams
-	Request     *CreateAPIRequestBody `request:"mediaType=application/json"`
+	RequestBody *CreateAPIRequestBody `request:"mediaType=application/json"`
+	Workspace   *string               `queryParam:"style=form,explode=true,name=workspace"`
 }
 
 type CreateAPI200ApplicationJSONAPI struct {

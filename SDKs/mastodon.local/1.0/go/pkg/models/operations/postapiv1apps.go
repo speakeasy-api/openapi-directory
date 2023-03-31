@@ -18,10 +18,6 @@ type PostAPIV1AppsRequestBody struct {
 	Website *string
 }
 
-type PostAPIV1AppsRequest struct {
-	Request []byte `request:"mediaType=application/form-data"`
-}
-
 // PostAPIV1Apps200ApplicationJSON - Success
 type PostAPIV1Apps200ApplicationJSON struct {
 	ClientID     *string `json:"client_id,omitempty"`

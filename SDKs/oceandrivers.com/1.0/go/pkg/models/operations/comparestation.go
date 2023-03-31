@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CompareStationPathParams struct {
+type CompareStationRequest struct {
 	// Weather station to compare, values: cnareanl|rcnp | cmsap|boyaenderrocat|areopuertopalma | EWXXX
 	StationName string `pathParam:"style=simple,explode=false,name=stationName"`
-}
-
-type CompareStationRequest struct {
-	PathParams CompareStationPathParams
 }
 
 type CompareStationResponse struct {

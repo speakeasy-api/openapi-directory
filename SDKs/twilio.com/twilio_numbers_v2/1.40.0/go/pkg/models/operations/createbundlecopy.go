@@ -12,12 +12,8 @@ var CreateBundleCopyServerList = []string{
 }
 
 type CreateBundleCopySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateBundleCopyPathParams struct {
-	// The unique string that identifies the Bundle to be copied.
-	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBundleCopyCreateBundleCopyRequest struct {
@@ -26,10 +22,9 @@ type CreateBundleCopyCreateBundleCopyRequest struct {
 }
 
 type CreateBundleCopyRequest struct {
-	PathParams CreateBundleCopyPathParams
-	Request    *CreateBundleCopyCreateBundleCopyRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateBundleCopySecurity
-	ServerURL  *string
+	// The unique string that identifies the Bundle to be copied.
+	BundleSid   string                                   `pathParam:"style=simple,explode=false,name=BundleSid"`
+	RequestBody *CreateBundleCopyCreateBundleCopyRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateBundleCopyResponse struct {

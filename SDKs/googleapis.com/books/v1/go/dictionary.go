@@ -33,7 +33,7 @@ func newDictionary(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // BooksDictionaryListOfflineMetadata - Returns a list of offline dictionary metadata available
-func (s *dictionary) BooksDictionaryListOfflineMetadata(ctx context.Context, request operations.BooksDictionaryListOfflineMetadataRequest) (*operations.BooksDictionaryListOfflineMetadataResponse, error) {
+func (s *dictionary) BooksDictionaryListOfflineMetadata(ctx context.Context, request operations.BooksDictionaryListOfflineMetadataRequest, security operations.BooksDictionaryListOfflineMetadataSecurity) (*operations.BooksDictionaryListOfflineMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/dictionary/listOfflineMetadata"
 
@@ -42,11 +42,11 @@ func (s *dictionary) BooksDictionaryListOfflineMetadata(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

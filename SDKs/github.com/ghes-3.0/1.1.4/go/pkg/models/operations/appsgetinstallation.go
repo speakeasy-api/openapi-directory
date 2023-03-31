@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsGetInstallationPathParams struct {
+type AppsGetInstallationRequest struct {
 	// installation_id parameter
 	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
-}
-
-type AppsGetInstallationRequest struct {
-	PathParams AppsGetInstallationPathParams
 }
 
 // AppsGetInstallation415ApplicationJSON - Preview header missing

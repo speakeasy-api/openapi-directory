@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type PostUsersUserIDAPIKeysPathParams struct {
-	// User ID.  Provide a value of `0` to operate the current session's user.
-	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum - Permissions for this API Key.  Keys with the `desktop_app` permission set only have the ability to do the functions provided in our Desktop App (File and Share Link operations).  Additional permission sets may become available in the future, such as for a Site Admin to give a key with no administrator privileges.  If you have ideas for permission sets, please let us know.
 type PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum string
 
@@ -65,8 +60,9 @@ type PostUsersUserIDAPIKeysRequestBody struct {
 }
 
 type PostUsersUserIDAPIKeysRequest struct {
-	PathParams PostUsersUserIDAPIKeysPathParams
-	Request    *PostUsersUserIDAPIKeysRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostUsersUserIDAPIKeysRequestBody `request:"mediaType=multipart/form-data"`
+	// User ID.  Provide a value of `0` to operate the current session's user.
+	UserID int `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type PostUsersUserIDAPIKeysResponse struct {

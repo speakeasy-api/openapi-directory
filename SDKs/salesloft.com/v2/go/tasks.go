@@ -45,7 +45,7 @@ func (s *tasks) GetV2TasksJSON(ctx context.Context, request operations.GetV2Task
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *tasks) GetV2TasksJSON(ctx context.Context, request operations.GetV2Task
 // Fetches a task, by ID only.
 func (s *tasks) GetV2TasksIDJSON(ctx context.Context, request operations.GetV2TasksIDJSONRequest) (*operations.GetV2TasksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/tasks/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/tasks/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +130,7 @@ func (s *tasks) GetV2TasksIDJSON(ctx context.Context, request operations.GetV2Ta
 
 // PostV2TasksJSON - Create a Task
 // Creates a task.
-func (s *tasks) PostV2TasksJSON(ctx context.Context, request operations.PostV2TasksJSONRequest) (*operations.PostV2TasksJSONResponse, error) {
+func (s *tasks) PostV2TasksJSON(ctx context.Context, request operations.PostV2TasksJSONRequestBody) (*operations.PostV2TasksJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/tasks.json"
 
@@ -187,9 +187,9 @@ func (s *tasks) PostV2TasksJSON(ctx context.Context, request operations.PostV2Ta
 // Updates a task.
 func (s *tasks) PutV2TasksIDJSON(ctx context.Context, request operations.PutV2TasksIDJSONRequest) (*operations.PutV2TasksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/tasks/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/tasks/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomerCategoriesIDCustomersJSONPathParams struct {
-	// Id of the CustomerCategory
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCustomerCategoriesIDCustomersJSONQueryParams struct {
+type DeleteCustomerCategoriesIDCustomersJSONRequest struct {
+	// Customer parameters.
+	CustomersToCustomerCategory shared.CustomersToCustomerCategory `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the CustomerCategory
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteCustomerCategoriesIDCustomersJSONRequest struct {
-	PathParams  DeleteCustomerCategoriesIDCustomersJSONPathParams
-	QueryParams DeleteCustomerCategoriesIDCustomersJSONQueryParams
-	// Customer parameters.
-	Request shared.CustomersToCustomerCategory `request:"mediaType=application/json"`
 }
 
 type DeleteCustomerCategoriesIDCustomersJSONResponse struct {

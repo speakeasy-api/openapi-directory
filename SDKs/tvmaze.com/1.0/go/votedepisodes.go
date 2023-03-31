@@ -35,7 +35,7 @@ func newVotedEpisodes(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteUserVotesEpisodesEpisodeID - Remove an episode vote
 func (s *votedEpisodes) DeleteUserVotesEpisodesEpisodeID(ctx context.Context, request operations.DeleteUserVotesEpisodesEpisodeIDRequest) (*operations.DeleteUserVotesEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/votes/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/votes/episodes/{episode_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *votedEpisodes) GetUserVotesEpisodes(ctx context.Context) (*operations.G
 // GetUserVotesEpisodesEpisodeID - Check if an episode is voted for
 func (s *votedEpisodes) GetUserVotesEpisodesEpisodeID(ctx context.Context, request operations.GetUserVotesEpisodesEpisodeIDRequest) (*operations.GetUserVotesEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/votes/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/votes/episodes/{episode_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -161,9 +161,9 @@ func (s *votedEpisodes) GetUserVotesEpisodesEpisodeID(ctx context.Context, reque
 // PutUserVotesEpisodesEpisodeID - Vote for an episode
 func (s *votedEpisodes) PutUserVotesEpisodesEpisodeID(ctx context.Context, request operations.PutUserVotesEpisodesEpisodeIDRequest) (*operations.PutUserVotesEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/votes/episodes/{episode_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/votes/episodes/{episode_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EpisodeVoteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

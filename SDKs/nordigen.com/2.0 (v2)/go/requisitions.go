@@ -35,7 +35,7 @@ func newRequisitions(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteRequisitionByIDV2 - Delete requisition and its end user agreement
 func (s *requisitions) DeleteRequisitionByIDV2(ctx context.Context, request operations.DeleteRequisitionByIDV2Request) (*operations.DeleteRequisitionByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -109,7 +109,7 @@ func (s *requisitions) DeleteRequisitionByIDV2(ctx context.Context, request oper
 // RequisitionByID - Retrieve a requisition by ID
 func (s *requisitions) RequisitionByID(ctx context.Context, request operations.RequisitionByIDRequest) (*operations.RequisitionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *requisitions) RequisitionByID(ctx context.Context, request operations.R
 }
 
 // RequisitionCreated - Create a new requisition
-func (s *requisitions) RequisitionCreated(ctx context.Context, request operations.RequisitionCreatedRequest) (*operations.RequisitionCreatedResponse, error) {
+func (s *requisitions) RequisitionCreated(ctx context.Context, request shared.RequisitionV2Request) (*operations.RequisitionCreatedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/requisitions/"
 
@@ -294,7 +294,7 @@ func (s *requisitions) RetrieveAllRequisitions(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

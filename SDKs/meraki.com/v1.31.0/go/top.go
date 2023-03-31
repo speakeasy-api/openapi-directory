@@ -34,14 +34,14 @@ func newTop(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Return the top 10 appliances sorted by utilization over given time range.
 func (s *top) GetOrganizationSummaryTopAppliancesByUtilization(ctx context.Context, request operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest) (*operations.GetOrganizationSummaryTopAppliancesByUtilizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *top) GetOrganizationSummaryTopAppliancesByUtilization(ctx context.Conte
 // Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 func (s *top) GetOrganizationSummaryTopClientsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopClientsByUsageRequest) (*operations.GetOrganizationSummaryTopClientsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,14 +132,14 @@ func (s *top) GetOrganizationSummaryTopClientsByUsage(ctx context.Context, reque
 // Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 func (s *top) GetOrganizationSummaryTopClientsManufacturersByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest) (*operations.GetOrganizationSummaryTopClientsManufacturersByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,14 +181,14 @@ func (s *top) GetOrganizationSummaryTopClientsManufacturersByUsage(ctx context.C
 // Return metrics for organization's top 10 devices sorted by data usage over given time range. Default unit is megabytes.
 func (s *top) GetOrganizationSummaryTopDevicesByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopDevicesByUsageRequest) (*operations.GetOrganizationSummaryTopDevicesByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -230,14 +230,14 @@ func (s *top) GetOrganizationSummaryTopDevicesByUsage(ctx context.Context, reque
 // Return metrics for organization's top 10 device models sorted by data usage over given time range. Default unit is megabytes.
 func (s *top) GetOrganizationSummaryTopDevicesModelsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest) (*operations.GetOrganizationSummaryTopDevicesModelsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -279,14 +279,14 @@ func (s *top) GetOrganizationSummaryTopDevicesModelsByUsage(ctx context.Context,
 // Return metrics for organization's top 10 ssids by data usage over given time range. Default unit is megabytes.
 func (s *top) GetOrganizationSummaryTopSsidsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopSsidsByUsageRequest) (*operations.GetOrganizationSummaryTopSsidsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/ssids/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/ssids/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -328,14 +328,14 @@ func (s *top) GetOrganizationSummaryTopSsidsByUsage(ctx context.Context, request
 // Return metrics for organization's top 10 switches by energy usage over given time range. Default unit is joules.
 func (s *top) GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx context.Context, request operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest) (*operations.GetOrganizationSummaryTopSwitchesByEnergyUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

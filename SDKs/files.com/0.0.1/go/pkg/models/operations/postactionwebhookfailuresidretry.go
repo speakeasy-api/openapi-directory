@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostActionWebhookFailuresIDRetryPathParams struct {
+type PostActionWebhookFailuresIDRetryRequest struct {
 	// Action Webhook Failure ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostActionWebhookFailuresIDRetryRequest struct {
-	PathParams PostActionWebhookFailuresIDRetryPathParams
 }
 
 type PostActionWebhookFailuresIDRetryResponse struct {

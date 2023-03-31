@@ -106,7 +106,6 @@ pkg/models/operations/analyticsprovisioningcreateaccounttree.go
 pkg/models/operations/analyticsuserdeletionuserdeletionrequestupsert.go
 pkg/models/shared/gadata.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/mcfdata.go
 pkg/models/shared/realtimedata.go
 pkg/models/shared/accountsummaries.go

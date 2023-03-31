@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type BankTransferEventSyncRequest struct {
-	Request shared.BankTransferEventSyncRequest `request:"mediaType=application/json"`
-}
 
 type BankTransferEventSyncResponse struct {
 	// OK

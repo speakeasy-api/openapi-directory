@@ -57,7 +57,7 @@ func (e *GetCountriesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCountriesQueryParams struct {
+type GetCountriesRequest struct {
 	// MarketId in which the request is being made, and for which responses should be localized
 	MarketID string `queryParam:"style=form,explode=true,name=marketId"`
 	// The direction to sort the result countries by.
@@ -68,10 +68,6 @@ type GetCountriesQueryParams struct {
 	RegionTypeID *int64 `queryParam:"style=form,explode=true,name=regionTypeId"`
 	// The term to sort the result countries by.
 	Sort *GetCountriesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCountriesRequest struct {
-	QueryParams GetCountriesQueryParams
 }
 
 type GetCountriesResponse struct {

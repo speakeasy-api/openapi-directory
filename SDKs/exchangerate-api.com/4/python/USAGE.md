@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetLatestBaseCurrencyRequest(
-    path_params=operations.GetLatestBaseCurrencyPathParams(
-        base_currency="quo",
-    ),
+    base_currency="corrupti",
 )
     
 res = s.get_latest_base_currency_(req)

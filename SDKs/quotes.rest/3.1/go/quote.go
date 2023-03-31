@@ -34,7 +34,7 @@ func newQuote(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DeleteQuoteDislike - Remove the disLike for the given Quote as a user of the API Key.
-func (s *quote) DeleteQuoteDislike(ctx context.Context, request operations.DeleteQuoteDislikeRequest) (*operations.DeleteQuoteDislikeResponse, error) {
+func (s *quote) DeleteQuoteDislike(ctx context.Context, request operations.DeleteQuoteDislikeRequest, security operations.DeleteQuoteDislikeSecurity) (*operations.DeleteQuoteDislikeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/dislike"
 
@@ -43,11 +43,11 @@ func (s *quote) DeleteQuoteDislike(ctx context.Context, request operations.Delet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,7 +77,7 @@ func (s *quote) DeleteQuoteDislike(ctx context.Context, request operations.Delet
 }
 
 // DeleteQuoteLike - Remove the Like for the given Quote as a user of the API Key.
-func (s *quote) DeleteQuoteLike(ctx context.Context, request operations.DeleteQuoteLikeRequest) (*operations.DeleteQuoteLikeResponse, error) {
+func (s *quote) DeleteQuoteLike(ctx context.Context, request operations.DeleteQuoteLikeRequest, security operations.DeleteQuoteLikeSecurity) (*operations.DeleteQuoteLikeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/like"
 
@@ -86,11 +86,11 @@ func (s *quote) DeleteQuoteLike(ctx context.Context, request operations.DeleteQu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,7 +120,7 @@ func (s *quote) DeleteQuoteLike(ctx context.Context, request operations.DeleteQu
 }
 
 // GetQuote - Gets a `Quote` with a given `id`.
-func (s *quote) GetQuote(ctx context.Context, request operations.GetQuoteRequest) (*operations.GetQuoteResponse, error) {
+func (s *quote) GetQuote(ctx context.Context, request operations.GetQuoteRequest, security operations.GetQuoteSecurity) (*operations.GetQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote"
 
@@ -129,11 +129,11 @@ func (s *quote) GetQuote(ctx context.Context, request operations.GetQuoteRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -169,7 +169,7 @@ func (s *quote) GetQuote(ctx context.Context, request operations.GetQuoteRequest
 }
 
 // GetQuoteAuthorsPopular - Gets a list of popular author names in the system.
-func (s *quote) GetQuoteAuthorsPopular(ctx context.Context, request operations.GetQuoteAuthorsPopularRequest) (*operations.GetQuoteAuthorsPopularResponse, error) {
+func (s *quote) GetQuoteAuthorsPopular(ctx context.Context, request operations.GetQuoteAuthorsPopularRequest, security operations.GetQuoteAuthorsPopularSecurity) (*operations.GetQuoteAuthorsPopularResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/authors/popular"
 
@@ -178,11 +178,11 @@ func (s *quote) GetQuoteAuthorsPopular(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -210,7 +210,7 @@ func (s *quote) GetQuoteAuthorsPopular(ctx context.Context, request operations.G
 }
 
 // GetQuoteAuthorsSearch - Gets a list of author names in the system.
-func (s *quote) GetQuoteAuthorsSearch(ctx context.Context, request operations.GetQuoteAuthorsSearchRequest) (*operations.GetQuoteAuthorsSearchResponse, error) {
+func (s *quote) GetQuoteAuthorsSearch(ctx context.Context, request operations.GetQuoteAuthorsSearchRequest, security operations.GetQuoteAuthorsSearchSecurity) (*operations.GetQuoteAuthorsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/authors/search"
 
@@ -219,11 +219,11 @@ func (s *quote) GetQuoteAuthorsSearch(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *quote) GetQuoteAuthorsSearch(ctx context.Context, request operations.Ge
 }
 
 // GetQuoteCategoriesPopular - Gets a list of popular `Quote` Categories.
-func (s *quote) GetQuoteCategoriesPopular(ctx context.Context, request operations.GetQuoteCategoriesPopularRequest) (*operations.GetQuoteCategoriesPopularResponse, error) {
+func (s *quote) GetQuoteCategoriesPopular(ctx context.Context, request operations.GetQuoteCategoriesPopularRequest, security operations.GetQuoteCategoriesPopularSecurity) (*operations.GetQuoteCategoriesPopularResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/categories/popular"
 
@@ -260,11 +260,11 @@ func (s *quote) GetQuoteCategoriesPopular(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -290,7 +290,7 @@ func (s *quote) GetQuoteCategoriesPopular(ctx context.Context, request operation
 }
 
 // GetQuoteCategoriesSearch - Gets a list of `Quote` Categories matching the query string.
-func (s *quote) GetQuoteCategoriesSearch(ctx context.Context, request operations.GetQuoteCategoriesSearchRequest) (*operations.GetQuoteCategoriesSearchResponse, error) {
+func (s *quote) GetQuoteCategoriesSearch(ctx context.Context, request operations.GetQuoteCategoriesSearchRequest, security operations.GetQuoteCategoriesSearchSecurity) (*operations.GetQuoteCategoriesSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/categories/search"
 
@@ -299,11 +299,11 @@ func (s *quote) GetQuoteCategoriesSearch(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *quote) GetQuoteCategoriesSearch(ctx context.Context, request operations
 }
 
 // GetQuoteRandom - Gets a `Random Quote`. When you are in a hurry this is what you call to get a random famous quote.
-func (s *quote) GetQuoteRandom(ctx context.Context, request operations.GetQuoteRandomRequest) (*operations.GetQuoteRandomResponse, error) {
+func (s *quote) GetQuoteRandom(ctx context.Context, request operations.GetQuoteRandomRequest, security operations.GetQuoteRandomSecurity) (*operations.GetQuoteRandomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/random"
 
@@ -338,11 +338,11 @@ func (s *quote) GetQuoteRandom(ctx context.Context, request operations.GetQuoteR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -378,7 +378,7 @@ func (s *quote) GetQuoteRandom(ctx context.Context, request operations.GetQuoteR
 }
 
 // GetQuoteSearch - Search for a `Quote` in They Said So platform. Optional `category` , `author`, `minlength`, `maxlength` params determines the filters applied while searching for the quote.
-func (s *quote) GetQuoteSearch(ctx context.Context, request operations.GetQuoteSearchRequest) (*operations.GetQuoteSearchResponse, error) {
+func (s *quote) GetQuoteSearch(ctx context.Context, request operations.GetQuoteSearchRequest, security operations.GetQuoteSearchSecurity) (*operations.GetQuoteSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/search"
 
@@ -387,11 +387,11 @@ func (s *quote) GetQuoteSearch(ctx context.Context, request operations.GetQuoteS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -429,7 +429,7 @@ func (s *quote) GetQuoteSearch(ctx context.Context, request operations.GetQuoteS
 }
 
 // PostQuoteDislike - Dislike the given Quote as a user of the API Key. Same as `put` but a convenient alias for those clients that don't support `put` cleanly.
-func (s *quote) PostQuoteDislike(ctx context.Context, request operations.PostQuoteDislikeRequest) (*operations.PostQuoteDislikeResponse, error) {
+func (s *quote) PostQuoteDislike(ctx context.Context, request operations.PostQuoteDislikeRequest, security operations.PostQuoteDislikeSecurity) (*operations.PostQuoteDislikeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/dislike"
 
@@ -438,11 +438,11 @@ func (s *quote) PostQuoteDislike(ctx context.Context, request operations.PostQuo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -472,7 +472,7 @@ func (s *quote) PostQuoteDislike(ctx context.Context, request operations.PostQuo
 }
 
 // PostQuoteLike - Like the given Quote as a user of the API Key. Same as `PUT` but a convenient alias for those clients that don't support `PUT` cleanly.
-func (s *quote) PostQuoteLike(ctx context.Context, request operations.PostQuoteLikeRequest) (*operations.PostQuoteLikeResponse, error) {
+func (s *quote) PostQuoteLike(ctx context.Context, request operations.PostQuoteLikeRequest, security operations.PostQuoteLikeSecurity) (*operations.PostQuoteLikeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/like"
 
@@ -481,11 +481,11 @@ func (s *quote) PostQuoteLike(ctx context.Context, request operations.PostQuoteL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -515,7 +515,7 @@ func (s *quote) PostQuoteLike(ctx context.Context, request operations.PostQuoteL
 }
 
 // PutQuoteDislike - Dislike the given Quote as a user of the API Key. Some clients don't cleanly support `PUT`, in such scenarios use the `POST` version of this.
-func (s *quote) PutQuoteDislike(ctx context.Context, request operations.PutQuoteDislikeRequest) (*operations.PutQuoteDislikeResponse, error) {
+func (s *quote) PutQuoteDislike(ctx context.Context, request operations.PutQuoteDislikeRequest, security operations.PutQuoteDislikeSecurity) (*operations.PutQuoteDislikeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/dislike"
 
@@ -524,11 +524,11 @@ func (s *quote) PutQuoteDislike(ctx context.Context, request operations.PutQuote
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -558,7 +558,7 @@ func (s *quote) PutQuoteDislike(ctx context.Context, request operations.PutQuote
 }
 
 // PutQuoteLike - Like the given Quote as a user of the API Key. Some clients don't cleanly support `PUT`, in such scenarios use the `POST` version of this.
-func (s *quote) PutQuoteLike(ctx context.Context, request operations.PutQuoteLikeRequest) (*operations.PutQuoteLikeResponse, error) {
+func (s *quote) PutQuoteLike(ctx context.Context, request operations.PutQuoteLikeRequest, security operations.PutQuoteLikeSecurity) (*operations.PutQuoteLikeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quote/like"
 
@@ -567,11 +567,11 @@ func (s *quote) PutQuoteLike(ctx context.Context, request operations.PutQuoteLik
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

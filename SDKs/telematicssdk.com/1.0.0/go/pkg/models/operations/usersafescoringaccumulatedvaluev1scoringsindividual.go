@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams struct {
+type UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest struct {
 	EndDate   *string `queryParam:"style=form,explode=true,name=endDate"`
 	StartDate *string `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest struct {
-	QueryParams UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams
 }
 
 type UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONResult struct {

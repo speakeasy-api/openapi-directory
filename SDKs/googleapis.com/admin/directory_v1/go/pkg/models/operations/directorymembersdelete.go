@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryMembersDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMembersDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMembersDeleteSecurity struct {
@@ -22,14 +22,7 @@ type DirectoryMembersDeleteSecurity struct {
 	Option2 *DirectoryMembersDeleteSecurityOption2 `security:"option"`
 }
 
-type DirectoryMembersDeletePathParams struct {
-	// Identifies the group in the API request. The value can be the group's email address, group alias, or the unique group ID.
-	GroupKey string `pathParam:"style=simple,explode=false,name=groupKey"`
-	// Identifies the group member in the API request. A group member can be a user or another group. The value can be the member's (group or user) primary email address, alias, or unique ID.
-	MemberKey string `pathParam:"style=simple,explode=false,name=memberKey"`
-}
-
-type DirectoryMembersDeleteQueryParams struct {
+type DirectoryMembersDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,8 +33,12 @@ type DirectoryMembersDeleteQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifies the group in the API request. The value can be the group's email address, group alias, or the unique group ID.
+	GroupKey string `pathParam:"style=simple,explode=false,name=groupKey"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Identifies the group member in the API request. A group member can be a user or another group. The value can be the member's (group or user) primary email address, alias, or unique ID.
+	MemberKey string `pathParam:"style=simple,explode=false,name=memberKey"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -52,12 +49,6 @@ type DirectoryMembersDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryMembersDeleteRequest struct {
-	PathParams  DirectoryMembersDeletePathParams
-	QueryParams DirectoryMembersDeleteQueryParams
-	Security    DirectoryMembersDeleteSecurity
 }
 
 type DirectoryMembersDeleteResponse struct {

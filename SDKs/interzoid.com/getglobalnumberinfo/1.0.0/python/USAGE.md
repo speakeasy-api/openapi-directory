@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetglobalnumberinfoRequest(
-    query_params=operations.GetglobalnumberinfoQueryParams(
-        intlnumber="perferendis",
-        license="natus",
-    ),
+    intlnumber="corrupti",
+    license="provident",
 )
     
 res = s.global_phone_number_information.getglobalnumberinfo(req)

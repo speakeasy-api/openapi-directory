@@ -8,29 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETAllRecordsForCustomObjectTypePathParams struct {
-	// Specifies the custom object's API name as object. It is case-sensitive.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GETAllRecordsForCustomObjectTypeQueryParams struct {
-	// The `cursor` points to the last record of the previous result set. The cursor record is not included in the query result. The call returns the first page if `cursor` is not provided and `pageSize` is valid.
-	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-	// UUIDs of the records to be queried. For example:
-	//
-	// `GET /objects/records/default/passenger?ids=258d65b2-7bc6-4142-88bc-5184931af493&ids=82ecc9f7-b192-4f88-a4a3-4b2af6c750a1`
-	//
-	Ids *string `queryParam:"style=form,explode=true,name=ids"`
-	// Page size. The value must be between 1 and 1000.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-	// The query string to filter the records of a custom object. See the [Query syntax of custom object records](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Data_Model/Custom_object_records/Query_syntax_of_custom_object_records) for more information.
-	//
-	// Note that the `q` parameter only applies to filterable fields.
-	//
-	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type GETAllRecordsForCustomObjectTypeHeaders struct {
+type GETAllRecordsForCustomObjectTypeRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -44,12 +22,22 @@ type GETAllRecordsForCustomObjectTypeHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type GETAllRecordsForCustomObjectTypeRequest struct {
-	PathParams  GETAllRecordsForCustomObjectTypePathParams
-	QueryParams GETAllRecordsForCustomObjectTypeQueryParams
-	Headers     GETAllRecordsForCustomObjectTypeHeaders
+	// The `cursor` points to the last record of the previous result set. The cursor record is not included in the query result. The call returns the first page if `cursor` is not provided and `pageSize` is valid.
+	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
+	// UUIDs of the records to be queried. For example:
+	//
+	// `GET /objects/records/default/passenger?ids=258d65b2-7bc6-4142-88bc-5184931af493&ids=82ecc9f7-b192-4f88-a4a3-4b2af6c750a1`
+	//
+	Ids *string `queryParam:"style=form,explode=true,name=ids"`
+	// Specifies the custom object's API name as object. It is case-sensitive.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
+	// Page size. The value must be between 1 and 1000.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
+	// The query string to filter the records of a custom object. See the [Query syntax of custom object records](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Data_Model/Custom_object_records/Query_syntax_of_custom_object_records) for more information.
+	//
+	// Note that the `q` parameter only applies to filterable fields.
+	//
+	Q *string `queryParam:"style=form,explode=true,name=q"`
 }
 
 type GETAllRecordsForCustomObjectTypeResponse struct {

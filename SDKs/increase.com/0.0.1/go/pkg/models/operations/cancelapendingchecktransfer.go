@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelAPendingCheckTransferPathParams struct {
-	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
-}
-
 type CancelAPendingCheckTransferRequest struct {
-	PathParams CancelAPendingCheckTransferPathParams
+	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
 type CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum string

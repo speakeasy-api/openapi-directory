@@ -14,25 +14,21 @@ func main() {
     s := sdk.New()
 
     req := operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest{
-        PathParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Filter: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PageSize: 623564,
-            PageToken: "deserunt",
-            PrettyPrint: false,
-            QuotaUser: "suscipit",
-            UploadType: "iure",
-            UploadProtocol: "magnam",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Filter: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PageSize: 423655,
+        PageToken: "error",
+        Parent: "deserunt",
+        PrettyPrint: false,
+        QuotaUser: "suscipit",
+        UploadType: "iure",
+        UploadProtocol: "magnam",
     }
 
     ctx := context.Background()

@@ -36,14 +36,14 @@ func newReviewsFindAndModifyReviews(defaultClient, securityClient HTTPClient, se
 // - Only the review author is able to remove their review
 func (s *reviewsFindAndModifyReviews) DeleteReviewsReviewID(ctx context.Context, request operations.DeleteReviewsReviewIDRequest) (*operations.DeleteReviewsReviewIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *reviewsFindAndModifyReviews) GetReviews(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,7 +125,7 @@ func (s *reviewsFindAndModifyReviews) GetReviews(ctx context.Context, request op
 // GetReviewsReviewID - Find a Review within a particular App and marketplace
 func (s *reviewsFindAndModifyReviews) GetReviewsReviewID(ctx context.Context, request operations.GetReviewsReviewIDRequest) (*operations.GetReviewsReviewIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,14 +174,14 @@ func (s *reviewsFindAndModifyReviews) GetReviewsReviewID(ctx context.Context, re
 // - Returns the newly updated review
 func (s *reviewsFindAndModifyReviews) PatchReviewsReviewID(ctx context.Context, request operations.PatchReviewsReviewIDRequest) (*operations.PatchReviewsReviewIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -236,7 +236,7 @@ func (s *reviewsFindAndModifyReviews) PostReviews(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -284,14 +284,14 @@ func (s *reviewsFindAndModifyReviews) PostReviews(ctx context.Context, request o
 // - Returns the newly updated review
 func (s *reviewsFindAndModifyReviews) PostReviewsReviewID(ctx context.Context, request operations.PostReviewsReviewIDRequest) (*operations.PostReviewsReviewIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reviews/{reviewId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

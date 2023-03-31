@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningPostSecurityProductEnablementForEnterprisePathParams struct {
+type SecretScanningPostSecurityProductEnablementForEnterpriseRequest struct {
 	// The action to take.
 	//
 	// `enable_all` means to enable the specified security feature for all repositories in the enterprise.
@@ -17,10 +17,6 @@ type SecretScanningPostSecurityProductEnablementForEnterprisePathParams struct {
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// The security feature to enable or disable.
 	SecurityProduct shared.EnterpriseSecurityProductEnum `pathParam:"style=simple,explode=false,name=security_product"`
-}
-
-type SecretScanningPostSecurityProductEnablementForEnterpriseRequest struct {
-	PathParams SecretScanningPostSecurityProductEnablementForEnterprisePathParams
 }
 
 type SecretScanningPostSecurityProductEnablementForEnterpriseResponse struct {

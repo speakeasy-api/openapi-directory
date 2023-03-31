@@ -8,17 +8,12 @@ import (
 )
 
 type GetTerminalRefundSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetTerminalRefundPathParams struct {
-	// The unique ID for the desired `TerminalRefund`.
-	TerminalRefundID string `pathParam:"style=simple,explode=false,name=terminal_refund_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTerminalRefundRequest struct {
-	PathParams GetTerminalRefundPathParams
-	Security   GetTerminalRefundSecurity
+	// The unique ID for the desired `TerminalRefund`.
+	TerminalRefundID string `pathParam:"style=simple,explode=false,name=terminal_refund_id"`
 }
 
 type GetTerminalRefundResponse struct {

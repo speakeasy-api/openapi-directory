@@ -8,21 +8,16 @@ import (
 )
 
 type PayOrderSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PayOrderPathParams struct {
-	// The ID of the order being paid.
-	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PayOrderRequest struct {
-	PathParams PayOrderPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.PayOrderRequest `request:"mediaType=application/json"`
-	Security PayOrderSecurity
+	PayOrderRequest shared.PayOrderRequest `request:"mediaType=application/json"`
+	// The ID of the order being paid.
+	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
 }
 
 type PayOrderResponse struct {

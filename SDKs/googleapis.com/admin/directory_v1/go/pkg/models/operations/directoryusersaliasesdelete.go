@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryUsersAliasesDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryUsersAliasesDeleteSecurity struct {
@@ -22,18 +22,13 @@ type DirectoryUsersAliasesDeleteSecurity struct {
 	Option2 *DirectoryUsersAliasesDeleteSecurityOption2 `security:"option"`
 }
 
-type DirectoryUsersAliasesDeletePathParams struct {
-	// The alias to be removed.
-	Alias string `pathParam:"style=simple,explode=false,name=alias"`
-	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type DirectoryUsersAliasesDeleteQueryParams struct {
+type DirectoryUsersAliasesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The alias to be removed.
+	Alias string `pathParam:"style=simple,explode=false,name=alias"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -52,12 +47,8 @@ type DirectoryUsersAliasesDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryUsersAliasesDeleteRequest struct {
-	PathParams  DirectoryUsersAliasesDeletePathParams
-	QueryParams DirectoryUsersAliasesDeleteQueryParams
-	Security    DirectoryUsersAliasesDeleteSecurity
+	// Identifies the user in the API request. The value can be the user's primary email address, alias email address, or unique user ID.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type DirectoryUsersAliasesDeleteResponse struct {

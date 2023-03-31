@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAssociationByIDQueryParams struct {
+type GetAssociationByIDRequest struct {
 	// An association ID usually in the form of `TARGET_ID-DISEASE_ID`.
 	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetAssociationByIDRequest struct {
-	QueryParams GetAssociationByIDQueryParams
 }
 
 type GetAssociationByIDResponse struct {

@@ -8,26 +8,23 @@ import (
 )
 
 type DisplayvideoAdvertisersCreativesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersCreativesDeletePathParams struct {
-	// The ID of the advertiser this creative belongs to.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// The ID of the creative to be deleted.
-	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
-}
-
-type DisplayvideoAdvertisersCreativesDeleteQueryParams struct {
+type DisplayvideoAdvertisersCreativesDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The ID of the advertiser this creative belongs to.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The ID of the creative to be deleted.
+	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,12 +39,6 @@ type DisplayvideoAdvertisersCreativesDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersCreativesDeleteRequest struct {
-	PathParams  DisplayvideoAdvertisersCreativesDeletePathParams
-	QueryParams DisplayvideoAdvertisersCreativesDeleteQueryParams
-	Security    DisplayvideoAdvertisersCreativesDeleteSecurity
 }
 
 type DisplayvideoAdvertisersCreativesDeleteResponse struct {

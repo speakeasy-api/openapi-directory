@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFilterContentsRequest struct {
-	Request *shared.FilterDates `request:"mediaType=application/json"`
-}
-
 type GetFilterContentsResponse struct {
 	ContentType string
 	// UserNotFound

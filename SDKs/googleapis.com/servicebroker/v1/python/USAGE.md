@@ -4,36 +4,28 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ServicebrokerGetIamPolicyRequest(
-    security=operations.ServicebrokerGetIamPolicySecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ServicebrokerGetIamPolicyPathParams(
-        resource="tempora",
-    ),
-    query_params=operations.ServicebrokerGetIamPolicyQueryParams(
-        dollar_xgafv="2",
-        access_token="eveniet",
-        alt="media",
-        callback="quo",
-        fields="quam",
-        key="perspiciatis",
-        oauth_token="saepe",
-        options_requested_policy_version=7684993788770030621,
-        pretty_print=False,
-        quota_user="sunt",
-        upload_type="vero",
-        upload_protocol="aut",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    options_requested_policy_version=847252,
+    pretty_print=False,
+    quota_user="vel",
+    resource="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.v1.servicebroker_get_iam_policy(req)
+res = s.v1.servicebroker_get_iam_policy(req, operations.ServicebrokerGetIamPolicySecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.body is not None:
     # handle response

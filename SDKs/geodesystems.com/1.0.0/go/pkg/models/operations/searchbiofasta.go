@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchBioFastaQueryParams struct {
+type SearchBioFastaRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchBioFastaQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchBioFastaRequest struct {
-	QueryParams SearchBioFastaQueryParams
 }
 
 type SearchBioFastaResponse struct {

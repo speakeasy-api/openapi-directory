@@ -20,10 +20,6 @@ type ExtractPagesV1RequestBody struct {
 	LastPage *int `multipartForm:"name=last_page"`
 }
 
-type ExtractPagesV1Request struct {
-	Request ExtractPagesV1RequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // ExtractPagesV14XXApplicationProblemPlusJSON - Error
 type ExtractPagesV14XXApplicationProblemPlusJSON struct {
 	Errors map[string]interface{} `json:"errors,omitempty"`

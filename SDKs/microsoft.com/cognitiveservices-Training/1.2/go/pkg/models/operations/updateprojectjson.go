@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProjectJSONPathParams struct {
+type UpdateProjectJSONRequest struct {
+	// The updated project model
+	ProjectInput shared.ProjectInput `request:"mediaType=application/json"`
+	TrainingKey  string              `header:"style=simple,explode=false,name=Training-Key"`
 	// The id of the project to update
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateProjectJSONHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type UpdateProjectJSONRequest struct {
-	PathParams UpdateProjectJSONPathParams
-	Headers    UpdateProjectJSONHeaders
-	// The updated project model
-	Request shared.ProjectInput `request:"mediaType=application/json"`
 }
 
 type UpdateProjectJSONResponse struct {

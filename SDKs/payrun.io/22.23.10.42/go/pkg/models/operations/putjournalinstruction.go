@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutJournalInstructionPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The journal instruction unique identifier. E.g JI001
-	JournalInstructionID string `pathParam:"style=simple,explode=false,name=JournalInstructionId"`
-}
-
-type PutJournalInstructionHeaders struct {
+type PutJournalInstructionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PutJournalInstructionRequest struct {
-	PathParams PutJournalInstructionPathParams
-	Headers    PutJournalInstructionHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The journal instruction unique identifier. E.g JI001
+	JournalInstructionID string `pathParam:"style=simple,explode=false,name=JournalInstructionId"`
 }
 
 type PutJournalInstructionResponse struct {

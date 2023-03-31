@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type CodespacesDeleteRepoSecretPathParams struct {
+type CodespacesDeleteRepoSecretRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The name of the secret.
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type CodespacesDeleteRepoSecretRequest struct {
-	PathParams CodespacesDeleteRepoSecretPathParams
 }
 
 type CodespacesDeleteRepoSecretResponse struct {

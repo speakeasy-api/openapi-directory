@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentsresellersubscriptionPartnersSubscriptionsCreatePathParams struct {
-	// Required. The parent resource name, which is the identifier of the partner. It will have the format of "partners/{partner_id}".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type PaymentsresellersubscriptionPartnersSubscriptionsCreateQueryParams struct {
+type PaymentsresellersubscriptionPartnersSubscriptionsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                *shared.XgafvEnum                                                  `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput *shared.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type PaymentsresellersubscriptionPartnersSubscriptionsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent resource name, which is the identifier of the partner. It will have the format of "partners/{partner_id}".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -37,12 +35,6 @@ type PaymentsresellersubscriptionPartnersSubscriptionsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PaymentsresellersubscriptionPartnersSubscriptionsCreateRequest struct {
-	PathParams  PaymentsresellersubscriptionPartnersSubscriptionsCreatePathParams
-	QueryParams PaymentsresellersubscriptionPartnersSubscriptionsCreateQueryParams
-	Request     *shared.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput `request:"mediaType=application/json"`
 }
 
 type PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse struct {

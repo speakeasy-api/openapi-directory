@@ -8,19 +8,14 @@ import (
 )
 
 type GetGroupsByIdsSecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
-}
-
-type GetGroupsByIdsQueryParams struct {
-	// The IDs of the groups to retrieve.  If more than 20 group IDs are passed, only the first 20 groups will be returned.
-	GroupIds string `queryParam:"style=form,explode=true,name=group_ids"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetGroupsByIdsRequest struct {
-	QueryParams GetGroupsByIdsQueryParams
-	Security    GetGroupsByIdsSecurity
+	// The IDs of the groups to retrieve.  If more than 20 group IDs are passed, only the first 20 groups will be returned.
+	GroupIds string `queryParam:"style=form,explode=true,name=group_ids"`
 }
 
 type GetGroupsByIdsResponse struct {

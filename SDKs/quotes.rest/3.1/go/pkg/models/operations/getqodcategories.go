@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQodCategoriesSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQodCategoriesQueryParams struct {
+type GetQodCategoriesRequest struct {
 	// Return detailed information of the categories. Note the data format changes between the two values of this switch.
 	Detailed *bool `queryParam:"style=form,explode=true,name=detailed"`
 	// Language of the QOD category. The language must be supported in our QOD system.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
-}
-
-type GetQodCategoriesRequest struct {
-	QueryParams GetQodCategoriesQueryParams
-	Security    GetQodCategoriesSecurity
 }
 
 type GetQodCategoriesResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsTargetIDKeysPathParams struct {
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDKeysQueryParams struct {
+type GetTargetsTargetIDKeysRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -22,11 +17,8 @@ type GetTargetsTargetIDKeysQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Search term
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetTargetsTargetIDKeysRequest struct {
-	PathParams  GetTargetsTargetIDKeysPathParams
-	QueryParams GetTargetsTargetIDKeysQueryParams
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // GetTargetsTargetIDKeys404ApplicationJSON - Not found

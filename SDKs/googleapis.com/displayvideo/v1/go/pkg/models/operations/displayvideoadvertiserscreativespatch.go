@@ -8,26 +8,24 @@ import (
 )
 
 type DisplayvideoAdvertisersCreativesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersCreativesPatchPathParams struct {
-	// Output only. The unique ID of the advertiser the creative belongs to.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Output only. The unique ID of the creative. Assigned by the system.
-	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
-}
-
-type DisplayvideoAdvertisersCreativesPatchQueryParams struct {
+type DisplayvideoAdvertisersCreativesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CreativeInput *shared.CreativeInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Output only. The unique ID of the advertiser the creative belongs to.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Output only. The unique ID of the creative. Assigned by the system.
+	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -44,13 +42,6 @@ type DisplayvideoAdvertisersCreativesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersCreativesPatchRequest struct {
-	PathParams  DisplayvideoAdvertisersCreativesPatchPathParams
-	QueryParams DisplayvideoAdvertisersCreativesPatchQueryParams
-	Request     *shared.CreativeInput `request:"mediaType=application/json"`
-	Security    DisplayvideoAdvertisersCreativesPatchSecurity
 }
 
 type DisplayvideoAdvertisersCreativesPatchResponse struct {

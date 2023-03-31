@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsUpdateKeyCredentialsPathParams struct {
+type ApplicationsUpdateKeyCredentialsRequest struct {
+	// Parameters to update the keyCredentials of an existing application.
+	KeyCredentialsUpdateParameters shared.KeyCredentialsUpdateParameters `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Application object ID.
 	ApplicationObjectID string `pathParam:"style=simple,explode=false,name=applicationObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsUpdateKeyCredentialsQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsUpdateKeyCredentialsRequest struct {
-	PathParams  ApplicationsUpdateKeyCredentialsPathParams
-	QueryParams ApplicationsUpdateKeyCredentialsQueryParams
-	// Parameters to update the keyCredentials of an existing application.
-	Request shared.KeyCredentialsUpdateParameters `request:"mediaType=application/json"`
 }
 
 type ApplicationsUpdateKeyCredentialsResponse struct {

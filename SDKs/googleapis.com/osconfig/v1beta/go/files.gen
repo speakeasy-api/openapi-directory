@@ -50,7 +50,6 @@ pkg/models/shared/assignmentostype.go
 pkg/models/shared/assignmentgrouplabel.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listguestpoliciesresponse.go
 pkg/models/shared/patchdeployment.go
 pkg/models/shared/patchrollout.go

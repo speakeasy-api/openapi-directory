@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPaymentsQueryParams struct {
+type ListPaymentsRequest struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListPaymentsRequest struct {
-	QueryParams ListPaymentsQueryParams
 }
 
 type ListPaymentsResponse struct {

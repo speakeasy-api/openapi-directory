@@ -109,7 +109,6 @@ pkg/models/shared/apiclassifierout.go
 pkg/models/shared/apiperiodusageout.go
 pkg/models/shared/apiplansubscriptionout.go
 pkg/models/shared/apibillingperiodusageout.go
-pkg/models/shared/security.go
 pkg/models/shared/apiusagehistoryout.go
 pkg/models/shared/apicounterv2out.go
 pkg/models/shared/apiusageaggregatedout.go
@@ -180,4 +179,5 @@ pkg/models/shared/batchfirstlastnamephonenumberin.go
 pkg/models/shared/firstlastnamephonenumberin.go
 pkg/models/shared/batchfirstlastnamephonenumbergeoin.go
 pkg/models/shared/firstlastnamephonenumbergeoin.go
+pkg/models/shared/security.go
 USAGE.md

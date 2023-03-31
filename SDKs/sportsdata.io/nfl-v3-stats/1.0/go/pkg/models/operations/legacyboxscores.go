@@ -33,7 +33,7 @@ func (e *LegacyBoxScoresFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LegacyBoxScoresPathParams struct {
+type LegacyBoxScoresRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format LegacyBoxScoresFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	//           Year of the season and the season type. If no season type is provided, then the default is regular season.
@@ -44,10 +44,6 @@ type LegacyBoxScoresPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type LegacyBoxScoresRequest struct {
-	PathParams LegacyBoxScoresPathParams
 }
 
 type LegacyBoxScoresResponse struct {

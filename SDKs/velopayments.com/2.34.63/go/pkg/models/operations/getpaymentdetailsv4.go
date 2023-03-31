@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPaymentDetailsV4PathParams struct {
+type GetPaymentDetailsV4Request struct {
 	// Payment Id
 	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type GetPaymentDetailsV4QueryParams struct {
 	// Optional. If omitted or set to false, any Personal Identifiable Information (PII) values are returned masked.
 	// If set to true, and you have permission, the PII values will be returned as their original unmasked values.
 	//
 	Sensitive *bool `queryParam:"style=form,explode=true,name=sensitive"`
-}
-
-type GetPaymentDetailsV4Request struct {
-	PathParams  GetPaymentDetailsV4PathParams
-	QueryParams GetPaymentDetailsV4QueryParams
 }
 
 type GetPaymentDetailsV4Response struct {

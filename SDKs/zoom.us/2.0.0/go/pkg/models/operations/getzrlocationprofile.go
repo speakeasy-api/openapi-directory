@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetZRLocationProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetZRLocationProfilePathParams struct {
-	// Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response).
-	LocationID string `pathParam:"style=simple,explode=false,name=locationId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetZRLocationProfileRequest struct {
-	PathParams GetZRLocationProfilePathParams
-	Security   GetZRLocationProfileSecurity
+	// Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response).
+	LocationID string `pathParam:"style=simple,explode=false,name=locationId"`
 }
 
 type GetZRLocationProfile200ApplicationXMLBasic struct {

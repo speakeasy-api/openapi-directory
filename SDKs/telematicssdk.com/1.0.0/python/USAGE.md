@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TripsTripDetailsRequest(
-    query_params=operations.TripsTripDetailsQueryParams(
-        track_token="est",
-    ),
+    track_token="corrupti",
 )
     
-res = s.two_for_mobile_app_optional_.trips_trip_details(req)
+res = s.two_for_mobile_app_optional.trips_trip_details(req)
 
 if res.trips_trip_details_200_application_json_object is not None:
     # handle response

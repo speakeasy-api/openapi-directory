@@ -8,33 +8,33 @@ import (
 )
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption6 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListSecurity struct {
@@ -46,12 +46,7 @@ type BigtableadminProjectsInstancesClustersHotTabletsListSecurity struct {
 	Option6 *BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption6 `security:"option"`
 }
 
-type BigtableadminProjectsInstancesClustersHotTabletsListPathParams struct {
-	// Required. The cluster name to list hot tablets. Value is in the following form: `projects/{project}/instances/{instance}/clusters/{cluster}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type BigtableadminProjectsInstancesClustersHotTabletsListQueryParams struct {
+type BigtableadminProjectsInstancesClustersHotTabletsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -72,6 +67,8 @@ type BigtableadminProjectsInstancesClustersHotTabletsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value of `next_page_token` returned by a previous call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The cluster name to list hot tablets. Value is in the following form: `projects/{project}/instances/{instance}/clusters/{cluster}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -82,12 +79,6 @@ type BigtableadminProjectsInstancesClustersHotTabletsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigtableadminProjectsInstancesClustersHotTabletsListRequest struct {
-	PathParams  BigtableadminProjectsInstancesClustersHotTabletsListPathParams
-	QueryParams BigtableadminProjectsInstancesClustersHotTabletsListQueryParams
-	Security    BigtableadminProjectsInstancesClustersHotTabletsListSecurity
 }
 
 type BigtableadminProjectsInstancesClustersHotTabletsListResponse struct {

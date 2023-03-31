@@ -8,18 +8,18 @@ import (
 )
 
 type CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurity struct {
@@ -28,12 +28,7 @@ type CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurity struct {
 	Option3 *CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurityOption3 `security:"option"`
 }
 
-type CloudidentityGroupsMembershipsCheckTransitiveMembershipPathParams struct {
-	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group to which the Membership belongs to.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityGroupsMembershipsCheckTransitiveMembershipQueryParams struct {
+type CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type CloudidentityGroupsMembershipsCheckTransitiveMembershipQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group to which the Membership belongs to.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Required. A CEL expression that MUST include member specification. This is a `required` field. Certain groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace', which requires an additional query input: 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value'`
@@ -58,12 +55,6 @@ type CloudidentityGroupsMembershipsCheckTransitiveMembershipQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest struct {
-	PathParams  CloudidentityGroupsMembershipsCheckTransitiveMembershipPathParams
-	QueryParams CloudidentityGroupsMembershipsCheckTransitiveMembershipQueryParams
-	Security    CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurity
 }
 
 type CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSSHSetTracePathParams struct {
+type ProtocolSSHSetTraceRequest struct {
 	// Agent to set the SSH tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the SSH tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolSSHSetTraceRequest struct {
-	PathParams ProtocolSSHSetTracePathParams
 }
 
 type ProtocolSSHSetTraceResponse struct {

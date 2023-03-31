@@ -32,20 +32,20 @@ func newInventoryItems(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DfareportingInventoryItemsGet - Gets one inventory item by ID.
-func (s *inventoryItems) DfareportingInventoryItemsGet(ctx context.Context, request operations.DfareportingInventoryItemsGetRequest) (*operations.DfareportingInventoryItemsGetResponse, error) {
+func (s *inventoryItems) DfareportingInventoryItemsGet(ctx context.Context, request operations.DfareportingInventoryItemsGetRequest, security operations.DfareportingInventoryItemsGetSecurity) (*operations.DfareportingInventoryItemsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *inventoryItems) DfareportingInventoryItemsGet(ctx context.Context, requ
 }
 
 // DfareportingInventoryItemsList - Retrieves a list of inventory items, possibly filtered. This method supports paging.
-func (s *inventoryItems) DfareportingInventoryItemsList(ctx context.Context, request operations.DfareportingInventoryItemsListRequest) (*operations.DfareportingInventoryItemsListResponse, error) {
+func (s *inventoryItems) DfareportingInventoryItemsList(ctx context.Context, request operations.DfareportingInventoryItemsListRequest, security operations.DfareportingInventoryItemsListSecurity) (*operations.DfareportingInventoryItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

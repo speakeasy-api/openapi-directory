@@ -39,7 +39,7 @@ func newPortfolioOptimizationMeanVariance(defaultClient, securityClient HTTPClie
 //
 // References
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumReturn(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnRequest) (*operations.PostPortfolioOptimizationMaximumReturnResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumReturn(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnRequestBody) (*operations.PostPortfolioOptimizationMaximumReturnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-return"
 
@@ -104,7 +104,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumRetu
 //   - [Alejandro Corvalan, 2005. Well Diversified Efficient Portfolios, Working Papers Central Bank of Chile 336, Central Bank of Chile](https://ideas.repec.org/p/chb/bcchwp/336.html)
 //   - [Bouchaud, Jean-Philippe and Potters, Marc and Aguilar, Jean-Pierre, Missing Information and Asset Allocation, arXiv, 1997](https://arxiv.org/abs/cond-mat/9707042)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumReturnDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnDiversifiedRequest) (*operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumReturnDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnDiversifiedRequestBody) (*operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-return/diversified"
 
@@ -167,7 +167,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumRetu
 //   - [CSSA, Random Subspace Optimization (RSO)](https://cssanalytics.wordpress.com/2013/10/06/random-subspace-optimization-rso/)
 //   - [Subset Optimization for Asset Allocation,Benjamin J. Gillen](https://www.bengillen.com/uploads/1/2/3/8/123891022/subsets.pdf)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumReturnSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequest) (*operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumReturnSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody) (*operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-return/subset-resampling-based"
 
@@ -228,7 +228,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumRetu
 //
 // References
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumSharpeRatio(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioRequest) (*operations.PostPortfolioOptimizationMaximumSharpeRatioResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumSharpeRatio(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioRequestBody) (*operations.PostPortfolioOptimizationMaximumSharpeRatioResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-sharpe-ratio"
 
@@ -293,7 +293,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumShar
 //   - [Alejandro Corvalan, 2005. Well Diversified Efficient Portfolios, Working Papers Central Bank of Chile 336, Central Bank of Chile](https://ideas.repec.org/p/chb/bcchwp/336.html)
 //   - [Bouchaud, Jean-Philippe and Potters, Marc and Aguilar, Jean-Pierre, Missing Information and Asset Allocation, arXiv, 1997](https://arxiv.org/abs/cond-mat/9707042)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumSharpeRatioDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequest) (*operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumSharpeRatioDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody) (*operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-sharpe-ratio/diversified"
 
@@ -356,7 +356,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumShar
 //   - [CSSA, Random Subspace Optimization (RSO)](https://cssanalytics.wordpress.com/2013/10/06/random-subspace-optimization-rso/)
 //   - [Subset Optimization for Asset Allocation,Benjamin J. Gillen](https://www.bengillen.com/uploads/1/2/3/8/123891022/subsets.pdf)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequest) (*operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody) (*operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/maximum-sharpe-ratio/subset-resampling-based"
 
@@ -419,7 +419,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMaximumShar
 //
 // References
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianceEfficient(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientRequest) (*operations.PostPortfolioOptimizationMeanVarianceEfficientResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianceEfficient(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientRequestBody) (*operations.PostPortfolioOptimizationMeanVarianceEfficientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/mean-variance-efficient"
 
@@ -486,7 +486,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianc
 //   - [Alejandro Corvalan, 2005. Well Diversified Efficient Portfolios, Working Papers Central Bank of Chile 336, Central Bank of Chile](https://ideas.repec.org/p/chb/bcchwp/336.html)
 //   - [Bouchaud, Jean-Philippe and Potters, Marc and Aguilar, Jean-Pierre, Missing Information and Asset Allocation, arXiv, 1997](https://arxiv.org/abs/cond-mat/9707042)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianceEfficientDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequest) (*operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianceEfficientDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody) (*operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/mean-variance-efficient/diversified"
 
@@ -549,7 +549,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianc
 //   - [CSSA, Random Subspace Optimization (RSO)](https://cssanalytics.wordpress.com/2013/10/06/random-subspace-optimization-rso/)
 //   - [Subset Optimization for Asset Allocation,Benjamin J. Gillen](https://www.bengillen.com/uploads/1/2/3/8/123891022/subsets.pdf)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequest) (*operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody) (*operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/mean-variance-efficient/subset-resampling-based"
 
@@ -610,7 +610,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMeanVarianc
 //
 // References
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVariance(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceRequest) (*operations.PostPortfolioOptimizationMinimumVarianceResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVariance(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceRequestBody) (*operations.PostPortfolioOptimizationMinimumVarianceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-variance"
 
@@ -675,7 +675,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVari
 //   - [Alejandro Corvalan, 2005. Well Diversified Efficient Portfolios, Working Papers Central Bank of Chile 336, Central Bank of Chile](https://ideas.repec.org/p/chb/bcchwp/336.html)
 //   - [Bouchaud, Jean-Philippe and Potters, Marc and Aguilar, Jean-Pierre, Missing Information and Asset Allocation, arXiv, 1997](https://arxiv.org/abs/cond-mat/9707042)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVarianceDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceDiversifiedRequest) (*operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVarianceDiversified(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody) (*operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-variance/diversified"
 
@@ -738,7 +738,7 @@ func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVari
 //   - [CSSA, Random Subspace Optimization (RSO)](https://cssanalytics.wordpress.com/2013/10/06/random-subspace-optimization-rso/)
 //   - [Subset Optimization for Asset Allocation,Benjamin J. Gillen](https://www.bengillen.com/uploads/1/2/3/8/123891022/subsets.pdf)
 //   - Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequest) (*operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse, error) {
+func (s *portfolioOptimizationMeanVariance) PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased(ctx context.Context, request operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody) (*operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/optimization/minimum-variance/subset-resampling-based"
 

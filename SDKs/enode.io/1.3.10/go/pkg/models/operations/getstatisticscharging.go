@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type GetStatisticsChargingSecurity struct {
-	UserAccessToken shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
+	UserAccessToken string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetStatisticsChargingResolutionEnum - The unit of time the data will be cut into before aggregate statistics are applied. For instance if you choose DAY, then each item in the returned array will cover 1 day.
@@ -47,7 +46,7 @@ func (e *GetStatisticsChargingResolutionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetStatisticsChargingQueryParams struct {
+type GetStatisticsChargingRequest struct {
 	// Filter statistics to only include this charging location
 	ChargingLocationID *string `queryParam:"style=form,explode=true,name=chargingLocationId"`
 	// Latest date to include in the response (defaults to current date/time)
@@ -58,11 +57,6 @@ type GetStatisticsChargingQueryParams struct {
 	StartDate types.Date `queryParam:"style=form,explode=true,name=startDate"`
 	// Filter statistics to only include this vehicle
 	VehicleID *string `queryParam:"style=form,explode=true,name=vehicleId"`
-}
-
-type GetStatisticsChargingRequest struct {
-	QueryParams GetStatisticsChargingQueryParams
-	Security    GetStatisticsChargingSecurity
 }
 
 // GetStatisticsCharging200ApplicationJSONKw - Aggregate statistics for charge rate in kW

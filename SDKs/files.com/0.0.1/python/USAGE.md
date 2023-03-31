@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetActionNotificationExportResultsRequest(
-    query_params=operations.GetActionNotificationExportResultsQueryParams(
-        action_notification_export_id=2966375377600891262,
-        cursor="aut",
-        per_page=5026721396665135782,
-        user_id=8604752373465719830,
-    ),
+    action_notification_export_id=548814,
+    cursor="provident",
+    per_page=715190,
+    user_id=844266,
 )
     
 res = s.action_notification_export_results.get_action_notification_export_results(req)

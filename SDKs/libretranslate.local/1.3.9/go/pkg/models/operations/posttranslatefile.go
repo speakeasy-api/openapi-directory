@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostTranslateFileRequest struct {
-	Request string `request:"mediaType=multipart/form-data"`
-}
-
 type PostTranslateFileResponse struct {
 	Body        []byte
 	ContentType string

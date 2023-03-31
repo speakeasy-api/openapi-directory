@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1CustomersQueryParams struct {
+type GetConsumerV1CustomersRequest struct {
 	// Filter by deleted status
 	Deleted *bool `queryParam:"style=form,explode=true,name=deleted"`
 	// Filter by email address
@@ -22,10 +22,6 @@ type GetConsumerV1CustomersQueryParams struct {
 	LocationID *string `queryParam:"style=form,explode=true,name=locationId"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetConsumerV1CustomersRequest struct {
-	QueryParams GetConsumerV1CustomersQueryParams
 }
 
 type GetConsumerV1CustomersResponse struct {

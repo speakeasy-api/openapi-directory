@@ -12,19 +12,14 @@ var FetchMessageServerList = []string{
 }
 
 type FetchMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchMessagePathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchMessageRequest struct {
-	PathParams FetchMessagePathParams
-	Security   FetchMessageSecurity
-	ServerURL  *string
+	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchMessageResponse struct {

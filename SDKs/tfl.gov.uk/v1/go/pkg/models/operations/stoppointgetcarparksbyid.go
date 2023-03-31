@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetCarParksByIDPathParams struct {
+type StopPointGetCarParksByIDRequest struct {
 	// stopPointId is required to get the car parks.
 	StopPointID string `pathParam:"style=simple,explode=false,name=stopPointId"`
-}
-
-type StopPointGetCarParksByIDRequest struct {
-	PathParams StopPointGetCarParksByIDPathParams
 }
 
 type StopPointGetCarParksByIDResponse struct {

@@ -16,10 +16,6 @@ type EnterpriseAdminCreateOrgRequestBody struct {
 	ProfileName *string `json:"profile_name,omitempty"`
 }
 
-type EnterpriseAdminCreateOrgRequest struct {
-	Request *EnterpriseAdminCreateOrgRequestBody `request:"mediaType=application/json"`
-}
-
 type EnterpriseAdminCreateOrgResponse struct {
 	ContentType string
 	StatusCode  int

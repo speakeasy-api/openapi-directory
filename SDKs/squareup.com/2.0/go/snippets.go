@@ -37,16 +37,16 @@ func newSnippets(defaultClient, securityClient HTTPClient, serverURL, language, 
 // You can call [ListSites](https://developer.squareup.com/reference/square_2021-08-18/sites-api/list-sites) to get the IDs of the sites that belong to a seller.
 //
 // __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
-func (s *snippets) DeleteSnippet(ctx context.Context, request operations.DeleteSnippetRequest) (*operations.DeleteSnippetResponse, error) {
+func (s *snippets) DeleteSnippet(ctx context.Context, request operations.DeleteSnippetRequest, security operations.DeleteSnippetSecurity) (*operations.DeleteSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *snippets) DeleteSnippet(ctx context.Context, request operations.DeleteS
 // You can call [ListSites](https://developer.squareup.com/reference/square_2021-08-18/sites-api/list-sites) to get the IDs of the sites that belong to a seller.
 //
 // __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
-func (s *snippets) RetrieveSnippet(ctx context.Context, request operations.RetrieveSnippetRequest) (*operations.RetrieveSnippetResponse, error) {
+func (s *snippets) RetrieveSnippet(ctx context.Context, request operations.RetrieveSnippetRequest, security operations.RetrieveSnippetSecurity) (*operations.RetrieveSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *snippets) RetrieveSnippet(ctx context.Context, request operations.Retri
 // You can call [ListSites](https://developer.squareup.com/reference/square_2021-08-18/sites-api/list-sites) to get the IDs of the sites that belong to a seller.
 //
 // __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
-func (s *snippets) UpsertSnippet(ctx context.Context, request operations.UpsertSnippetRequest) (*operations.UpsertSnippetResponse, error) {
+func (s *snippets) UpsertSnippet(ctx context.Context, request operations.UpsertSnippetRequest, security operations.UpsertSnippetSecurity) (*operations.UpsertSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpsertSnippetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -155,7 +155,7 @@ func (s *snippets) UpsertSnippet(ctx context.Context, request operations.UpsertS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

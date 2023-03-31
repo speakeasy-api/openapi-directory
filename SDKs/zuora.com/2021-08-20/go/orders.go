@@ -46,14 +46,14 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // You are not allowed to delete an order if the charges that are affected by this order are invoiced.
 func (s *orders) DELETEOrder(ctx context.Context, request operations.DELETEOrderRequest) (*operations.DELETEOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -106,9 +106,9 @@ func (s *orders) GETAllOrders(ctx context.Context, request operations.GETAllOrde
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -156,14 +156,14 @@ func (s *orders) GETAllOrders(ctx context.Context, request operations.GETAllOrde
 // Get the status and response of an asynchronous job. Currently, an asynchronous job created by "Create an order asynchronously" or "Preview an order asynchronously" is supported.
 func (s *orders) GETJobStatusAndResponse(ctx context.Context, request operations.GETJobStatusAndResponseRequest) (*operations.GETJobStatusAndResponseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/async-jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/async-jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -209,14 +209,14 @@ func (s *orders) GETJobStatusAndResponse(ctx context.Context, request operations
 // Retrieves the detailed information about a specified order.
 func (s *orders) GETOrder(ctx context.Context, request operations.GETOrderRequest) (*operations.GETOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -271,16 +271,16 @@ func (s *orders) GETOrder(ctx context.Context, request operations.GETOrderReques
 // Retrieves the metrics of an evergreen subscription in a specified order.
 func (s *orders) GETOrderMetricsforEvergreenSubscription(ctx context.Context, request operations.GETOrderMetricsforEvergreenSubscriptionRequest) (*operations.GETOrderMetricsforEvergreenSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/evergreenMetrics/{subscriptionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/evergreenMetrics/{subscriptionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -328,16 +328,16 @@ func (s *orders) GETOrderMetricsforEvergreenSubscription(ctx context.Context, re
 // Retrieves the detailed information about all orders for a specified invoice owner.
 func (s *orders) GETOrdersByInvoiceOwner(ctx context.Context, request operations.GETOrdersByInvoiceOwnerRequest) (*operations.GETOrdersByInvoiceOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/invoiceOwner/{accountNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/invoiceOwner/{accountNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -385,16 +385,16 @@ func (s *orders) GETOrdersByInvoiceOwner(ctx context.Context, request operations
 // Retrieves the detailed information about all orders for a specified subscription. Any orders containing the changes on the specified subscription are returned.
 func (s *orders) GETOrdersBySubscriptionNumber(ctx context.Context, request operations.GETOrdersBySubscriptionNumberRequest) (*operations.GETOrdersBySubscriptionNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/subscription/{subscriptionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/subscription/{subscriptionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -442,16 +442,16 @@ func (s *orders) GETOrdersBySubscriptionNumber(ctx context.Context, request oper
 // Retrieves the detailed information about all orders for a specified subscription owner. Any orders containing the changes on the subscriptions owned by this account are returned.
 func (s *orders) GETOrdersBySubscriptionOwner(ctx context.Context, request operations.GETOrdersBySubscriptionOwnerRequest) (*operations.GETOrdersBySubscriptionOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/subscriptionOwner/{accountNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/subscriptionOwner/{accountNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -497,16 +497,16 @@ func (s *orders) GETOrdersBySubscriptionOwner(ctx context.Context, request opera
 // Retrieves the terms of the specified subscription.
 func (s *orders) GETSubscriptionTermInfo(ctx context.Context, request operations.GETSubscriptionTermInfoRequest) (*operations.GETSubscriptionTermInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/term/{subscriptionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/term/{subscriptionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -576,7 +576,7 @@ func (s *orders) POSTCreateOrderAsynchronously(ctx context.Context, request oper
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/async/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTOrderRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -591,9 +591,9 @@ func (s *orders) POSTCreateOrderAsynchronously(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -688,7 +688,7 @@ func (s *orders) POSTOrder(ctx context.Context, request operations.POSTOrderRequ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTOrderRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -703,9 +703,9 @@ func (s *orders) POSTOrder(ctx context.Context, request operations.POSTOrderRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -777,7 +777,7 @@ func (s *orders) POSTPreviewOrder(ctx context.Context, request operations.POSTPr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/orders/preview"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTOrderPreviewRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -792,7 +792,7 @@ func (s *orders) POSTPreviewOrder(ctx context.Context, request operations.POSTPr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -860,7 +860,7 @@ func (s *orders) POSTPreviewOrderAsynchronously(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/async/orders/preview"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "POSTOrderPreviewRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -875,7 +875,7 @@ func (s *orders) POSTPreviewOrderAsynchronously(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -925,9 +925,9 @@ func (s *orders) POSTPreviewOrderAsynchronously(ctx context.Context, request ope
 //   - TermsAndConditions
 func (s *orders) PUTOrderTriggerDates(ctx context.Context, request operations.PUTOrderTriggerDatesRequest) (*operations.PUTOrderTriggerDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/triggerDates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/triggerDates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTOrderActionTriggerDatesRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -942,7 +942,7 @@ func (s *orders) PUTOrderTriggerDates(ctx context.Context, request operations.PU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -988,9 +988,9 @@ func (s *orders) PUTOrderTriggerDates(ctx context.Context, request operations.PU
 // Updates the custom fields of a specified order.
 func (s *orders) PUTUpdateOrderCustomFields(ctx context.Context, request operations.PUTUpdateOrderCustomFieldsRequest) (*operations.PUTUpdateOrderCustomFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderNumber}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTOrderPatchRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1005,7 +1005,7 @@ func (s *orders) PUTUpdateOrderCustomFields(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1049,9 +1049,9 @@ func (s *orders) PUTUpdateOrderCustomFields(ctx context.Context, request operati
 // Updates the custom fields of a specified subscription.
 func (s *orders) PUTUpdateSubscriptionCustomFields(ctx context.Context, request operations.PUTUpdateSubscriptionCustomFieldsRequest) (*operations.PUTUpdateSubscriptionCustomFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionNumber}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{subscriptionNumber}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PUTSubscriptionPatchRequestType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1066,7 +1066,7 @@ func (s *orders) PUTUpdateSubscriptionCustomFields(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

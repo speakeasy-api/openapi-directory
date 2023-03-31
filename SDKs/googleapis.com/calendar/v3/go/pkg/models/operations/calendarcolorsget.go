@@ -8,13 +8,13 @@ import (
 )
 
 type CalendarColorsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarColorsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarColorsGetSecurity struct {
@@ -22,7 +22,7 @@ type CalendarColorsGetSecurity struct {
 	Option2 *CalendarColorsGetSecurityOption2 `security:"option"`
 }
 
-type CalendarColorsGetQueryParams struct {
+type CalendarColorsGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -37,11 +37,6 @@ type CalendarColorsGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarColorsGetRequest struct {
-	QueryParams CalendarColorsGetQueryParams
-	Security    CalendarColorsGetSecurity
 }
 
 type CalendarColorsGetResponse struct {

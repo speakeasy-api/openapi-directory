@@ -14,13 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.PostV1OrderFeedbackRequest{
-        QueryParams: operations.PostV1OrderFeedbackQueryParams{
-            Action: "REJECT",
-            Format: "xml",
-            ID: "distinctio",
-            Key: "quibusdam",
-            Notes: "unde",
-        },
+        Action: "REJECT",
+        Format: "xml",
+        ID: "distinctio",
+        Key: "quibusdam",
+        Notes: "unde",
     }
 
     ctx := context.Background()

@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetImagesIDActionsActionIDPathParams struct {
+type GetImagesIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Image
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetImagesIDActionsActionIDRequest struct {
-	PathParams GetImagesIDActionsActionIDPathParams
 }
 
 // GetImagesIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

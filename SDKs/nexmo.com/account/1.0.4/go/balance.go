@@ -36,10 +36,20 @@ func newBalance(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetAccountBalance - Get Account Balance
 // Retrieve the current balance of your Vonage API account
-func (s *balance) GetAccountBalance(ctx context.Context, request operations.GetAccountBalanceRequest) (*operations.GetAccountBalanceResponse, error) {
+func (s *balance) GetAccountBalance(ctx context.Context, request operations.GetAccountBalanceRequest, opts ...operations.Option) (*operations.GetAccountBalanceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetAccountBalanceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/account/get-balance"
@@ -49,7 +59,7 @@ func (s *balance) GetAccountBalance(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,15 +125,25 @@ func (s *balance) GetAccountBalance(ctx context.Context, request operations.GetA
 // You can top up your account using this API when you have enabled auto-reload in the dashboard. The amount added by the top-up operation will be the same amount as was added in the payment when auto-reload was enabled.
 // Your account balance is checked every 5-10 minutes and if it falls below the threshold and auto-reload is enabled, then it will be topped up automatically. Use this endpoint  if you need to top up at times when your credit may be exhausted more quickly than the auto-reload may occur.
 // https://help.nexmo.com/hc/en-us/articles/205603248-How-do-I-set-up-automatic-payments-using-PayPal-or-credit-card- - Read more about automatic payments on the Knowledgebase
-func (s *balance) TopUpAccountBalance(ctx context.Context, request operations.TopUpAccountBalanceRequest) (*operations.TopUpAccountBalanceResponse, error) {
+func (s *balance) TopUpAccountBalance(ctx context.Context, request operations.TopUpAccountBalanceRequest, opts ...operations.Option) (*operations.TopUpAccountBalanceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.TopUpAccountBalanceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/account/top-up"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TopupRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -138,7 +158,7 @@ func (s *balance) TopUpAccountBalance(ctx context.Context, request operations.To
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

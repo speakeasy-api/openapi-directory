@@ -4,18 +4,19 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRequest(
-    query_params=operations.GetQueryParams(
-        addon=[
-            "country",
-        ],
-        format="json",
-        ip="exercitationem",
-        key="tempora",
-        lang="ru",
-        package="WS4",
-    ),
+    addon=[
+        "geotargeting",
+        "country_groupings",
+        "country_groupings",
+    ],
+    format="xml",
+    ip="8.8.8.8",
+    key="nulla",
+    lang="ja",
+    package="WS22",
 )
     
 res = s.get_(req)

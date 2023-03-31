@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGymArticleDetailsPathParams struct {
+type ArticleGymArticleDetailsRequest struct {
 	// indentity number(primary key) for article object
 	ArticleID int `pathParam:"style=simple,explode=false,name=articleId"`
 	// indentity number(primary key) for gym object
 	GymID int `pathParam:"style=simple,explode=false,name=gymId"`
-}
-
-type ArticleGymArticleDetailsRequest struct {
-	PathParams ArticleGymArticleDetailsPathParams
 }
 
 type ArticleGymArticleDetailsResponse struct {

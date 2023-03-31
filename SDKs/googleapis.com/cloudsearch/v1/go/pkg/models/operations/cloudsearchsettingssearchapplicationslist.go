@@ -8,18 +8,18 @@ import (
 )
 
 type CloudsearchSettingsSearchapplicationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchSettingsSearchapplicationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchSettingsSearchapplicationsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchSettingsSearchapplicationsListSecurity struct {
@@ -28,7 +28,7 @@ type CloudsearchSettingsSearchapplicationsListSecurity struct {
 	Option3 *CloudsearchSettingsSearchapplicationsListSecurityOption3 `security:"option"`
 }
 
-type CloudsearchSettingsSearchapplicationsListQueryParams struct {
+type CloudsearchSettingsSearchapplicationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -57,11 +57,6 @@ type CloudsearchSettingsSearchapplicationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudsearchSettingsSearchapplicationsListRequest struct {
-	QueryParams CloudsearchSettingsSearchapplicationsListQueryParams
-	Security    CloudsearchSettingsSearchapplicationsListSecurity
 }
 
 type CloudsearchSettingsSearchapplicationsListResponse struct {

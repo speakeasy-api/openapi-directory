@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PutRealmUsersIDCredentialsCredentialIDUserLabelPathParams struct {
+type PutRealmUsersIDCredentialsCredentialIDUserLabelRequest struct {
+	RequestBody  string `request:"mediaType=text/plain"`
 	CredentialID string `pathParam:"style=simple,explode=false,name=credentialId"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmUsersIDCredentialsCredentialIDUserLabelRequest struct {
-	PathParams PutRealmUsersIDCredentialsCredentialIDUserLabelPathParams
-	Request    string `request:"mediaType=text/plain"`
 }
 
 type PutRealmUsersIDCredentialsCredentialIDUserLabelResponse struct {

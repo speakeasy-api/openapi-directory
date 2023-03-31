@@ -36,7 +36,7 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // AddApplication - Create an application
 // Application is a group of tiers. A tier is a group of virtual machines based on membership criteria. Tiers are bound to single
 // application. An application name is unique and should not conflict with another application name.
-func (s *applications) AddApplication(ctx context.Context, request operations.AddApplicationRequest) (*operations.AddApplicationResponse, error) {
+func (s *applications) AddApplication(ctx context.Context, request shared.ApplicationRequest, security operations.AddApplicationSecurity) (*operations.AddApplicationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups/applications"
 
@@ -55,7 +55,7 @@ func (s *applications) AddApplication(ctx context.Context, request operations.Ad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,11 +105,11 @@ func (s *applications) AddApplication(ctx context.Context, request operations.Ad
 // AddTier - Create tier in application
 // Create a tier of an application by with specified membership criteria. The membership criteria id defined in terms of
 // virtual machines or ip addresses/subnet. Please refer to API Guide on how to construct membership criteria.
-func (s *applications) AddTier(ctx context.Context, request operations.AddTierRequest) (*operations.AddTierResponse, error) {
+func (s *applications) AddTier(ctx context.Context, request operations.AddTierRequest, security operations.AddTierSecurity) (*operations.AddTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TierRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,7 +124,7 @@ func (s *applications) AddTier(ctx context.Context, request operations.AddTierRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,16 +177,16 @@ func (s *applications) AddTier(ctx context.Context, request operations.AddTierRe
 
 // DeleteApplication - Delete an application
 // Deleting an application deletes all the tiers of the application along with the application
-func (s *applications) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
+func (s *applications) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest, security operations.DeleteApplicationSecurity) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -217,16 +217,16 @@ func (s *applications) DeleteApplication(ctx context.Context, request operations
 
 // DeleteTier - Delete tier
 // Delete tier of an application
-func (s *applications) DeleteTier(ctx context.Context, request operations.DeleteTierRequest) (*operations.DeleteTierResponse, error) {
+func (s *applications) DeleteTier(ctx context.Context, request operations.DeleteTierRequest, security operations.DeleteTierSecurity) (*operations.DeleteTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -257,16 +257,16 @@ func (s *applications) DeleteTier(ctx context.Context, request operations.Delete
 
 // GetApplication - Show application details
 // Show application details
-func (s *applications) GetApplication(ctx context.Context, request operations.GetApplicationRequest) (*operations.GetApplicationResponse, error) {
+func (s *applications) GetApplication(ctx context.Context, request operations.GetApplicationRequest, security operations.GetApplicationSecurity) (*operations.GetApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,16 +307,16 @@ func (s *applications) GetApplication(ctx context.Context, request operations.Ge
 
 // GetApplicationTier - Show tier details
 // Show tier details
-func (s *applications) GetApplicationTier(ctx context.Context, request operations.GetApplicationTierRequest) (*operations.GetApplicationTierResponse, error) {
+func (s *applications) GetApplicationTier(ctx context.Context, request operations.GetApplicationTierRequest, security operations.GetApplicationTierSecurity) (*operations.GetApplicationTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,18 +357,18 @@ func (s *applications) GetApplicationTier(ctx context.Context, request operation
 
 // GetTier - Show tier details
 // Show tier details
-func (s *applications) GetTier(ctx context.Context, request operations.GetTierRequest) (*operations.GetTierResponse, error) {
+func (s *applications) GetTier(ctx context.Context, request operations.GetTierRequest, security operations.GetTierSecurity) (*operations.GetTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/tiers/{tier-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/tiers/{tier-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -409,16 +409,16 @@ func (s *applications) GetTier(ctx context.Context, request operations.GetTierRe
 
 // ListApplicationTiers - List tiers of an application
 // List tiers of an application
-func (s *applications) ListApplicationTiers(ctx context.Context, request operations.ListApplicationTiersRequest) (*operations.ListApplicationTiersResponse, error) {
+func (s *applications) ListApplicationTiers(ctx context.Context, request operations.ListApplicationTiersRequest, security operations.ListApplicationTiersSecurity) (*operations.ListApplicationTiersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,7 +459,7 @@ func (s *applications) ListApplicationTiers(ctx context.Context, request operati
 
 // ListApplications - List applications
 // List applications
-func (s *applications) ListApplications(ctx context.Context, request operations.ListApplicationsRequest) (*operations.ListApplicationsResponse, error) {
+func (s *applications) ListApplications(ctx context.Context, request operations.ListApplicationsRequest, security operations.ListApplicationsSecurity) (*operations.ListApplicationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups/applications"
 
@@ -468,11 +468,11 @@ func (s *applications) ListApplications(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

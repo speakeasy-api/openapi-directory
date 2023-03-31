@@ -25,53 +25,44 @@ func main() {
     s := sdk.New()
 
     req := operations.VisionFilesAnnotateRequest{
-        Security: operations.VisionFilesAnnotateSecurity{
-            Option1: &operations.VisionFilesAnnotateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        QueryParams: operations.VisionFilesAnnotateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest{
-            Parent: "deserunt",
+        DollarXgafv: "2",
+        GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest: &shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest{
+            Parent: "provident",
             Requests: []shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 602763,
+                            Model: "nulla",
+                            Type: "SAFE_SEARCH_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 847252,
+                            Model: "vel",
+                            Type: "IMAGE_PROPERTIES",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 645894,
+                            Model: "suscipit",
+                            Type: "TEXT_DETECTION",
+                        },
                         shared.GoogleCloudVisionV1p2beta1Feature{
                             MaxResults: 297534,
                             Model: "debitis",
                             Type: "TYPE_UNSPECIFIED",
                         },
-                        shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 963663,
-                            Model: "tempora",
-                            Type: "LABEL_DETECTION",
-                        },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
                             AspectRatios: []float32{
+                                2726.56,
+                                3834.41,
+                                4776.65,
                                 7917.25,
-                                8121.69,
                             },
                         },
                         LanguageHints: []string{
+                            "voluptatum",
                             "iusto",
                             "excepturi",
                             "nisi",
@@ -230,12 +221,129 @@ func main() {
                         988374,
                     },
                 },
+                shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
+                    Features: []shared.GoogleCloudVisionV1p2beta1Feature{
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 102044,
+                            Model: "mollitia",
+                            Type: "LANDMARK_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 635059,
+                            Model: "consequuntur",
+                            Type: "OBJECT_LOCALIZATION",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 653108,
+                            Model: "occaecati",
+                            Type: "LOGO_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 414369,
+                            Model: "quam",
+                            Type: "DOCUMENT_TEXT_DETECTION",
+                        },
+                    },
+                    ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
+                        CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
+                            AspectRatios: []float32{
+                                6235.1,
+                            },
+                        },
+                        LanguageHints: []string{
+                            "quis",
+                        },
+                        LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
+                            MaxLatLng: &shared.LatLng{
+                                Latitude: 1103.75,
+                                Longitude: 6747.52,
+                            },
+                            MinLatLng: &shared.LatLng{
+                                Latitude: 6563.3,
+                                Longitude: 3172.02,
+                            },
+                        },
+                        ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
+                            BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
+                                NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                        X: 7783.46,
+                                        Y: 1965.82,
+                                    },
+                                },
+                                Vertices: []shared.GoogleCloudVisionV1p2beta1Vertex{
+                                    shared.GoogleCloudVisionV1p2beta1Vertex{
+                                        X: 368725,
+                                        Y: 662527,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1Vertex{
+                                        X: 820994,
+                                        Y: 13571,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1Vertex{
+                                        X: 97101,
+                                        Y: 622846,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1Vertex{
+                                        X: 837945,
+                                        Y: 673660,
+                                    },
+                                },
+                            },
+                            Filter: "quasi",
+                            ProductCategories: []string{
+                                "voluptatibus",
+                                "vero",
+                                "nihil",
+                                "praesentium",
+                            },
+                            ProductSet: "voluptatibus",
+                        },
+                        TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
+                            AdvancedOcrOptions: []string{
+                                "omnis",
+                            },
+                            EnableTextDetectionConfidenceScore: false,
+                        },
+                        WebDetectionParams: &shared.GoogleCloudVisionV1p2beta1WebDetectionParams{
+                            IncludeGeoResults: false,
+                        },
+                    },
+                    InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
+                        Content: "voluptate",
+                        GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
+                            URI: "https://agile-arch-rival.info",
+                        },
+                        MimeType: "ut",
+                    },
+                    Pages: []int{
+                        120196,
+                        359444,
+                        296140,
+                        480894,
+                    },
+                },
             },
         },
+        AccessToken: "dicta",
+        Alt: "proto",
+        Callback: "enim",
+        Fields: "accusamus",
+        Key: "commodi",
+        OauthToken: "repudiandae",
+        PrettyPrint: false,
+        QuotaUser: "quae",
+        UploadType: "ipsum",
+        UploadProtocol: "quidem",
     }
 
     ctx := context.Background()
-    res, err := s.Files.VisionFilesAnnotate(ctx, req)
+    res, err := s.Files.VisionFilesAnnotate(ctx, req, operations.VisionFilesAnnotateSecurity{
+        Option1: &operations.VisionFilesAnnotateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -248,7 +356,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Files
@@ -269,4 +377,15 @@ func main() {
 * `VisionProjectsLocationsImagesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

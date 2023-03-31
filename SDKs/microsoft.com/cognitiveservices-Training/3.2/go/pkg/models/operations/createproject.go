@@ -65,7 +65,7 @@ func (e *CreateProjectTargetExportPlatformsEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type CreateProjectQueryParams struct {
+type CreateProjectRequest struct {
 	// The type of classifier to create for this project.
 	ClassificationType *CreateProjectClassificationTypeEnum `queryParam:"style=form,explode=true,name=classificationType"`
 	// The description of the project.
@@ -76,10 +76,6 @@ type CreateProjectQueryParams struct {
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// List of platforms the trained model is intending exporting to.
 	TargetExportPlatforms []CreateProjectTargetExportPlatformsEnum `queryParam:"style=form,explode=false,name=targetExportPlatforms"`
-}
-
-type CreateProjectRequest struct {
-	QueryParams CreateProjectQueryParams
 }
 
 type CreateProjectResponse struct {

@@ -4,46 +4,41 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest(
-    security=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams(
-        parent="adipisci",
-    ),
-    query_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="sit",
-        alt="proto",
-        callback="omnis",
-        fields="sint",
-        hub_id="molestias",
-        key="nemo",
-        oauth_token="provident",
-        pretty_print=False,
-        quota_user="vel",
-        request_id="quia",
-        upload_type="voluptatem",
-        upload_protocol="inventore",
-    ),
-    request=shared.HubInput(
-        create_time="at",
-        description="et",
+    dollar_xgafv="2",
+    hub_input=shared.HubInput(
+        create_time="provident",
+        description="distinctio",
         labels={
-            "atque": "corrupti",
+            "unde": "nulla",
+            "corrupti": "illum",
+            "vel": "error",
+            "deserunt": "suscipit",
         },
-        name="eligendi",
-        update_time="magni",
+        name="iure",
+        update_time="magnam",
     ),
+    access_token="debitis",
+    alt="json",
+    callback="delectus",
+    fields_="tempora",
+    hub_id="suscipit",
+    key="molestiae",
+    oauth_token="minus",
+    parent="placeat",
+    pretty_print=False,
+    quota_user="voluptatum",
+    request_id="iusto",
+    upload_type="excepturi",
+    upload_protocol="nisi",
 )
     
-res = s.projects.networkconnectivity_projects_locations_global_hubs_create(req)
+res = s.projects.networkconnectivity_projects_locations_global_hubs_create(req, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_longrunning_operation is not None:
     # handle response

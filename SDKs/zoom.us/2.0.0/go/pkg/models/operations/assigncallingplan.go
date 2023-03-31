@@ -4,15 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AssignCallingPlanSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AssignCallingPlanPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AssignCallingPlanApplicationJSONCallingPlans struct {
@@ -25,9 +20,8 @@ type AssignCallingPlanApplicationJSON struct {
 }
 
 type AssignCallingPlanRequest struct {
-	PathParams AssignCallingPlanPathParams
-	Request    *AssignCallingPlanApplicationJSON `request:"mediaType=application/json"`
-	Security   AssignCallingPlanSecurity
+	RequestBody *AssignCallingPlanApplicationJSON `request:"mediaType=application/json"`
+	UserID      string                            `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type AssignCallingPlanResponse struct {

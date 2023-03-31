@@ -10,7 +10,7 @@ import (
 )
 
 type KkidAllowancePostSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 // KkidAllowancePostTransactionTypeEnum - Sort order:
@@ -39,7 +39,7 @@ func (e *KkidAllowancePostTransactionTypeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type KkidAllowancePostQueryParams struct {
+type KkidAllowancePostRequest struct {
 	// amount you wish to Add/Subtract (subtract value should be a negative value)
 	Amount float64 `queryParam:"style=form,explode=true,name=amount"`
 	// Description (reason) of allowance transaction
@@ -48,11 +48,6 @@ type KkidAllowancePostQueryParams struct {
 	KidUserID int64 `queryParam:"style=form,explode=true,name=kidUserId"`
 	// Transaction Type (Add/Subtract)
 	TransactionType KkidAllowancePostTransactionTypeEnum `queryParam:"style=form,explode=true,name=transactionType"`
-}
-
-type KkidAllowancePostRequest struct {
-	QueryParams KkidAllowancePostQueryParams
-	Security    KkidAllowancePostSecurity
 }
 
 type KkidAllowancePostResponse struct {

@@ -8,10 +8,10 @@ import (
 )
 
 type ExportSystemsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type ExportSystemsQueryParams struct {
+type ExportSystemsRequest struct {
 	// Filter
 	FilterDisplayName *string `queryParam:"style=form,explode=true,name=filter[display_name]"`
 	// Filter
@@ -42,11 +42,6 @@ type ExportSystemsQueryParams struct {
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ExportSystemsRequest struct {
-	QueryParams ExportSystemsQueryParams
-	Security    ExportSystemsSecurity
 }
 
 type ExportSystemsResponse struct {

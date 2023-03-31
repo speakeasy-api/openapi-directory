@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum - The default uplink. Must be one of: 'wan1' or 'wan2'
 type UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum string
 
@@ -415,8 +411,8 @@ type UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody struct {
 }
 
 type UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest struct {
-	PathParams UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams
-	Request    *UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkApplianceTrafficShapingUplinkSelection200ApplicationJSONDefaultUplinkEnum - The default uplink. Must be one of: 'wan1' or 'wan2'

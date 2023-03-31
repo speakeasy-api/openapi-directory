@@ -14,87 +14,103 @@ func main() {
     s := sdk.New()
 
     req := operations.MigrationcenterProjectsLocationsAssetsAggregateValuesRequest{
-        Security: operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.MigrationcenterProjectsLocationsAssetsAggregateValuesPathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.MigrationcenterProjectsLocationsAssetsAggregateValuesQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AggregateAssetsValuesRequest{
+        DollarXgafv: "2",
+        AggregateAssetsValuesRequest: &shared.AggregateAssetsValuesRequest{
             Aggregations: []shared.Aggregation{
                 shared.Aggregation{
                     Count: map[string]interface{}{
+                        "quibusdam": "unde",
+                        "nulla": "corrupti",
+                        "illum": "vel",
+                    },
+                    Field: "error",
+                    Frequency: map[string]interface{}{
+                        "suscipit": "iure",
                         "magnam": "debitis",
                         "ipsa": "delectus",
                     },
-                    Field: "tempora",
-                    Frequency: map[string]interface{}{
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
-                    },
                     Histogram: &shared.AggregationHistogram{
                         LowerBounds: []float64{
-                            5680.45,
-                            3927.85,
+                            3834.41,
+                            4776.65,
                         },
                     },
                     Sum: map[string]interface{}{
+                        "placeat": "voluptatum",
+                        "iusto": "excepturi",
+                        "nisi": "recusandae",
                         "temporibus": "ab",
-                        "quis": "veritatis",
-                        "deserunt": "perferendis",
-                        "ipsam": "repellendus",
                     },
                 },
                 shared.Aggregation{
                     Count: map[string]interface{}{
+                        "veritatis": "deserunt",
+                        "perferendis": "ipsam",
+                    },
+                    Field: "repellendus",
+                    Frequency: map[string]interface{}{
                         "quo": "odit",
                         "at": "at",
                         "maiores": "molestiae",
                         "quod": "quod",
                     },
-                    Field: "esse",
-                    Frequency: map[string]interface{}{
-                        "porro": "dolorum",
-                        "dicta": "nam",
-                        "officia": "occaecati",
-                    },
                     Histogram: &shared.AggregationHistogram{
                         LowerBounds: []float64{
-                            5373.73,
+                            5204.78,
+                            7805.29,
                         },
                     },
                     Sum: map[string]interface{}{
+                        "dicta": "nam",
+                        "officia": "occaecati",
+                        "fugit": "deleniti",
+                    },
+                },
+                shared.Aggregation{
+                    Count: map[string]interface{}{
                         "optio": "totam",
                         "beatae": "commodi",
                         "molestiae": "modi",
                         "qui": "impedit",
                     },
+                    Field: "cum",
+                    Frequency: map[string]interface{}{
+                        "ipsum": "excepturi",
+                        "aspernatur": "perferendis",
+                    },
+                    Histogram: &shared.AggregationHistogram{
+                        LowerBounds: []float64{
+                            6176.36,
+                            1496.75,
+                        },
+                    },
+                    Sum: map[string]interface{}{
+                        "dolor": "natus",
+                        "laboriosam": "hic",
+                        "saepe": "fuga",
+                    },
                 },
             },
-            Filter: "cum",
+            Filter: "in",
         },
+        AccessToken: "corporis",
+        Alt: "media",
+        Callback: "iure",
+        Fields: "saepe",
+        Key: "quidem",
+        OauthToken: "architecto",
+        Parent: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "reiciendis",
+        UploadType: "est",
+        UploadProtocol: "mollitia",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.MigrationcenterProjectsLocationsAssetsAggregateValues(ctx, req)
+    res, err := s.Projects.MigrationcenterProjectsLocationsAssetsAggregateValues(ctx, req, operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

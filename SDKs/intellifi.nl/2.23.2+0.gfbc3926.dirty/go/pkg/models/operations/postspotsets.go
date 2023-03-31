@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSpotsetsRequest struct {
-	// A JSON object containing spot set information
-	Request shared.SpotSetCreate `request:"mediaType=application/json"`
-}
-
 type PostSpotsetsResponse struct {
 	ContentType string
 	// A JSON object containing the newly added resource

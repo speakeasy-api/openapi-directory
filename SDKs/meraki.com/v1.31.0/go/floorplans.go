@@ -34,9 +34,9 @@ func newFloorPlans(defaultClient, securityClient HTTPClient, serverURL, language
 // Upload a floor plan
 func (s *floorPlans) CreateNetworkFloorPlan(ctx context.Context, request operations.CreateNetworkFloorPlanRequest) (*operations.CreateNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *floorPlans) CreateNetworkFloorPlan(ctx context.Context, request operati
 // Destroy a floor plan
 func (s *floorPlans) DeleteNetworkFloorPlan(ctx context.Context, request operations.DeleteNetworkFloorPlanRequest) (*operations.DeleteNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *floorPlans) DeleteNetworkFloorPlan(ctx context.Context, request operati
 // Find a floor plan by ID
 func (s *floorPlans) GetNetworkFloorPlan(ctx context.Context, request operations.GetNetworkFloorPlanRequest) (*operations.GetNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *floorPlans) GetNetworkFloorPlan(ctx context.Context, request operations
 // List the floor plans that belong to your network
 func (s *floorPlans) GetNetworkFloorPlans(ctx context.Context, request operations.GetNetworkFloorPlansRequest) (*operations.GetNetworkFloorPlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *floorPlans) GetNetworkFloorPlans(ctx context.Context, request operation
 // Update a floor plan's geolocation and other meta data
 func (s *floorPlans) UpdateNetworkFloorPlan(ctx context.Context, request operations.UpdateNetworkFloorPlanRequest) (*operations.UpdateNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

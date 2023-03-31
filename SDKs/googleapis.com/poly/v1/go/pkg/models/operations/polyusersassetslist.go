@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PolyUsersAssetsListPathParams struct {
-	// A valid user id. Currently, only the special value 'me', representing the currently-authenticated user is supported. To use 'me', you must pass an OAuth token with the request.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 // PolyUsersAssetsListVisibilityEnum - The visibility of the assets to be returned. Defaults to VISIBILITY_UNSPECIFIED which returns all assets.
 type PolyUsersAssetsListVisibilityEnum string
 
@@ -41,7 +36,7 @@ func (e *PolyUsersAssetsListVisibilityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PolyUsersAssetsListQueryParams struct {
+type PolyUsersAssetsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -56,6 +51,8 @@ type PolyUsersAssetsListQueryParams struct {
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// A valid user id. Currently, only the special value 'me', representing the currently-authenticated user is supported. To use 'me', you must pass an OAuth token with the request.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`. Defaults to `BEST`, which ranks assets based on a combination of popularity and other features.
@@ -74,11 +71,6 @@ type PolyUsersAssetsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The visibility of the assets to be returned. Defaults to VISIBILITY_UNSPECIFIED which returns all assets.
 	Visibility *PolyUsersAssetsListVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type PolyUsersAssetsListRequest struct {
-	PathParams  PolyUsersAssetsListPathParams
-	QueryParams PolyUsersAssetsListQueryParams
 }
 
 type PolyUsersAssetsListResponse struct {

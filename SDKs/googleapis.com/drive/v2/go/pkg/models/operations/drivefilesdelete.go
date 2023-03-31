@@ -8,18 +8,18 @@ import (
 )
 
 type DriveFilesDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesDeleteSecurity struct {
@@ -28,18 +28,15 @@ type DriveFilesDeleteSecurity struct {
 	Option3 *DriveFilesDeleteSecurityOption3 `security:"option"`
 }
 
-type DriveFilesDeletePathParams struct {
-	// The ID of the file to delete.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type DriveFilesDeleteQueryParams struct {
+type DriveFilesDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the file to delete.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -54,12 +51,6 @@ type DriveFilesDeleteQueryParams struct {
 	SupportsTeamDrives *bool `queryParam:"style=form,explode=true,name=supportsTeamDrives"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesDeleteRequest struct {
-	PathParams  DriveFilesDeletePathParams
-	QueryParams DriveFilesDeleteQueryParams
-	Security    DriveFilesDeleteSecurity
 }
 
 type DriveFilesDeleteResponse struct {

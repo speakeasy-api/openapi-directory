@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteRateLimitServerList = []string{
@@ -12,20 +11,15 @@ var DeleteRateLimitServerList = []string{
 }
 
 type DeleteRateLimitSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteRateLimitPathParams struct {
+type DeleteRateLimitRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The Twilio-provided string that uniquely identifies the Rate Limit resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteRateLimitRequest struct {
-	PathParams DeleteRateLimitPathParams
-	Security   DeleteRateLimitSecurity
-	ServerURL  *string
 }
 
 type DeleteRateLimitResponse struct {

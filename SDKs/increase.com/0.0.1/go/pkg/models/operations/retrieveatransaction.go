@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveATransactionPathParams struct {
-	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
-}
-
 type RetrieveATransactionRequest struct {
-	PathParams RetrieveATransactionPathParams
+	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
 }
 
 type RetrieveATransactionDefaultApplicationJSON13StatusEnum string

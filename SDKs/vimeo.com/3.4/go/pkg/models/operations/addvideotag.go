@@ -8,19 +8,14 @@ import (
 )
 
 type AddVideoTagSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVideoTagPathParams struct {
+type AddVideoTagRequest struct {
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 	// The tag word.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type AddVideoTagRequest struct {
-	PathParams AddVideoTagPathParams
-	Security   AddVideoTagSecurity
 }
 
 type AddVideoTagResponse struct {

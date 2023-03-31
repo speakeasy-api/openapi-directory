@@ -3,20 +3,16 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        cast_local_authorization_token=shared.SchemeCastLocalAuthorizationToken(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AccessibilityRequest(
-    request=shared.AccessibilityRequest(
-        endpoint_enabled=False,
-        hotword_enabled=True,
+        cast_local_authorization_token="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = shared.AccessibilityRequest(
+    endpoint_enabled=False,
+    hotword_enabled=False,
 )
     
 res = s.assistant.accessibility(req)

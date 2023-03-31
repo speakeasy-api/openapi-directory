@@ -4,19 +4,18 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.Oauth2TokeninfoRequest(
-    query_params=operations.Oauth2TokeninfoQueryParams(
-        access_token="doloribus",
-        alt="json",
-        fields="autem",
-        id_token="adipisci",
-        key="accusantium",
-        oauth_token="ut",
-        pretty_print=False,
-        quota_user="quaerat",
-        user_ip="et",
-    ),
+    access_token="corrupti",
+    alt="json",
+    fields_="provident",
+    id_token="distinctio",
+    key="quibusdam",
+    oauth_token="unde",
+    pretty_print=False,
+    quota_user="nulla",
+    user_ip="corrupti",
 )
     
 res = s.oauth2_tokeninfo(req)

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type HashtagSuggestionsQueryParams struct {
+type HashtagSuggestionsRequest struct {
 	// Topic
 	Text string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type HashtagSuggestionsRequest struct {
-	QueryParams HashtagSuggestionsQueryParams
 }
 
 type HashtagSuggestionsResponse struct {

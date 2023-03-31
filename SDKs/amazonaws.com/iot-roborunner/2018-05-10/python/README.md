@@ -1,0 +1,86 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/iot-roborunner/2018-05-10/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        hmac="YOUR_API_KEY_HERE",
+    ),
+)
+
+
+req = operations.CreateDestinationRequest(
+    request_body=operations.CreateDestinationRequestBody(
+        additional_fixed_properties="corrupti",
+        client_token="provident",
+        name="distinctio",
+        site="quibusdam",
+        state="DISABLED",
+    ),
+    x_amz_algorithm="nulla",
+    x_amz_content_sha256="corrupti",
+    x_amz_credential="illum",
+    x_amz_date="vel",
+    x_amz_security_token="error",
+    x_amz_signature="deserunt",
+    x_amz_signed_headers="suscipit",
+)
+    
+res = s.create_destination(req)
+
+if res.create_destination_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### SDK SDK
+
+* `create_destination` - Grants permission to create a destination
+* `create_site` - Grants permission to create a site
+* `create_worker` - Grants permission to create a worker
+* `create_worker_fleet` - Grants permission to create a worker fleet
+* `delete_destination` - Grants permission to delete a destination
+* `delete_site` - Grants permission to delete a site
+* `delete_worker` - Grants permission to delete a worker
+* `delete_worker_fleet` - Grants permission to delete a worker fleet
+* `get_destination` - Grants permission to get a destination
+* `get_site` - Grants permission to get a site
+* `get_worker` - Grants permission to get a worker
+* `get_worker_fleet` - Grants permission to get a worker fleet
+* `list_destinations` - Grants permission to list destinations
+* `list_sites` - Grants permission to list sites
+* `list_worker_fleets` - Grants permission to list worker fleets
+* `list_workers` - Grants permission to list workers
+* `update_destination` - Grants permission to update a destination
+* `update_site` - Grants permission to update a site
+* `update_worker` - Grants permission to update a worker
+* `update_worker_fleet` - Grants permission to update a worker fleet
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

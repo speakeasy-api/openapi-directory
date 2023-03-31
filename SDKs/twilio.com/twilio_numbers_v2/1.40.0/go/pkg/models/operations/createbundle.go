@@ -12,7 +12,8 @@ var CreateBundleServerList = []string{
 }
 
 type CreateBundleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBundleCreateBundleRequest struct {
@@ -29,12 +30,6 @@ type CreateBundleCreateBundleRequest struct {
 	RegulationSid *string `form:"name=RegulationSid"`
 	// The URL we call to inform your application of status changes.
 	StatusCallback *string `form:"name=StatusCallback"`
-}
-
-type CreateBundleRequest struct {
-	Request   *CreateBundleCreateBundleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateBundleSecurity
-	ServerURL *string
 }
 
 type CreateBundleResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type SchemaResponsesReadPathParams struct {
+type SchemaResponsesReadRequest struct {
 	// The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
 	SchemaResponseID string `pathParam:"style=simple,explode=false,name=schema_response_id"`
-}
-
-type SchemaResponsesReadRequest struct {
-	PathParams SchemaResponsesReadPathParams
 }
 
 // SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum - A string that represents Schema Response state. `initial` is the state of a Schema Response on a newly registered Registration, to edit a Schema Response you must create a Schema Response Action that triggers a new submission.

@@ -25,9 +25,9 @@ pkg/models/operations/gettemplates.go
 pkg/models/operations/updatetemplate.go
 pkg/models/operations/deleteworkspace.go
 pkg/models/operations/getworkspace.go
-pkg/models/shared/data.go
 pkg/models/shared/outputenum.go
 pkg/models/shared/formatenum.go
+pkg/models/shared/data.go
 pkg/models/shared/batchdata.go
 pkg/models/shared/templatedefinition.go
 pkg/models/shared/component.go

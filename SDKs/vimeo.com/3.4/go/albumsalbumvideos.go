@@ -32,16 +32,16 @@ func newAlbumsAlbumVideos(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // AddVideoToAlbum - Add a specific video to an album
-func (s *albumsAlbumVideos) AddVideoToAlbum(ctx context.Context, request operations.AddVideoToAlbumRequest) (*operations.AddVideoToAlbumResponse, error) {
+func (s *albumsAlbumVideos) AddVideoToAlbum(ctx context.Context, request operations.AddVideoToAlbumRequest, security operations.AddVideoToAlbumSecurity) (*operations.AddVideoToAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,16 +79,16 @@ func (s *albumsAlbumVideos) AddVideoToAlbum(ctx context.Context, request operati
 }
 
 // AddVideoToAlbumAlt1 - Add a specific video to an album
-func (s *albumsAlbumVideos) AddVideoToAlbumAlt1(ctx context.Context, request operations.AddVideoToAlbumAlt1Request) (*operations.AddVideoToAlbumAlt1Response, error) {
+func (s *albumsAlbumVideos) AddVideoToAlbumAlt1(ctx context.Context, request operations.AddVideoToAlbumAlt1Request, security operations.AddVideoToAlbumAlt1Security) (*operations.AddVideoToAlbumAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,14 +129,14 @@ func (s *albumsAlbumVideos) AddVideoToAlbumAlt1(ctx context.Context, request ope
 // This method gets a single video from an album. You can use this method to determine whether the album contains the specified video.
 func (s *albumsAlbumVideos) GetAlbumVideo(ctx context.Context, request operations.GetAlbumVideoRequest) (*operations.GetAlbumVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -188,14 +188,14 @@ func (s *albumsAlbumVideos) GetAlbumVideo(ctx context.Context, request operation
 // This method gets a single video from an album. You can use this method to determine whether the album contains the specified video.
 func (s *albumsAlbumVideos) GetAlbumVideoAlt1(ctx context.Context, request operations.GetAlbumVideoAlt1Request) (*operations.GetAlbumVideoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -246,14 +246,14 @@ func (s *albumsAlbumVideos) GetAlbumVideoAlt1(ctx context.Context, request opera
 // GetAlbumVideos - Get all the videos in an album
 func (s *albumsAlbumVideos) GetAlbumVideos(ctx context.Context, request operations.GetAlbumVideosRequest) (*operations.GetAlbumVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -304,14 +304,14 @@ func (s *albumsAlbumVideos) GetAlbumVideos(ctx context.Context, request operatio
 // GetAlbumVideosAlt1 - Get all the videos in an album
 func (s *albumsAlbumVideos) GetAlbumVideosAlt1(ctx context.Context, request operations.GetAlbumVideosAlt1Request) (*operations.GetAlbumVideosAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -360,16 +360,16 @@ func (s *albumsAlbumVideos) GetAlbumVideosAlt1(ctx context.Context, request oper
 }
 
 // RemoveVideoFromAlbum - Remove a video from an album
-func (s *albumsAlbumVideos) RemoveVideoFromAlbum(ctx context.Context, request operations.RemoveVideoFromAlbumRequest) (*operations.RemoveVideoFromAlbumResponse, error) {
+func (s *albumsAlbumVideos) RemoveVideoFromAlbum(ctx context.Context, request operations.RemoveVideoFromAlbumRequest, security operations.RemoveVideoFromAlbumSecurity) (*operations.RemoveVideoFromAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -407,16 +407,16 @@ func (s *albumsAlbumVideos) RemoveVideoFromAlbum(ctx context.Context, request op
 }
 
 // RemoveVideoFromAlbumAlt1 - Remove a video from an album
-func (s *albumsAlbumVideos) RemoveVideoFromAlbumAlt1(ctx context.Context, request operations.RemoveVideoFromAlbumAlt1Request) (*operations.RemoveVideoFromAlbumAlt1Response, error) {
+func (s *albumsAlbumVideos) RemoveVideoFromAlbumAlt1(ctx context.Context, request operations.RemoveVideoFromAlbumAlt1Request, security operations.RemoveVideoFromAlbumAlt1Security) (*operations.RemoveVideoFromAlbumAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -455,11 +455,11 @@ func (s *albumsAlbumVideos) RemoveVideoFromAlbumAlt1(ctx context.Context, reques
 
 // ReplaceVideosInAlbum - Replace all the videos in an album
 // This method replaces all the existing videos in an album with one or more videos.
-func (s *albumsAlbumVideos) ReplaceVideosInAlbum(ctx context.Context, request operations.ReplaceVideosInAlbumRequest) (*operations.ReplaceVideosInAlbumResponse, error) {
+func (s *albumsAlbumVideos) ReplaceVideosInAlbum(ctx context.Context, request operations.ReplaceVideosInAlbumRequest, security operations.ReplaceVideosInAlbumSecurity) (*operations.ReplaceVideosInAlbumResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,7 +474,7 @@ func (s *albumsAlbumVideos) ReplaceVideosInAlbum(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,11 +513,11 @@ func (s *albumsAlbumVideos) ReplaceVideosInAlbum(ctx context.Context, request op
 
 // ReplaceVideosInAlbumAlt1 - Replace all the videos in an album
 // This method replaces all the existing videos in an album with one or more videos.
-func (s *albumsAlbumVideos) ReplaceVideosInAlbumAlt1(ctx context.Context, request operations.ReplaceVideosInAlbumAlt1Request) (*operations.ReplaceVideosInAlbumAlt1Response, error) {
+func (s *albumsAlbumVideos) ReplaceVideosInAlbumAlt1(ctx context.Context, request operations.ReplaceVideosInAlbumAlt1Request, security operations.ReplaceVideosInAlbumAlt1Security) (*operations.ReplaceVideosInAlbumAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -532,7 +532,7 @@ func (s *albumsAlbumVideos) ReplaceVideosInAlbumAlt1(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -570,11 +570,11 @@ func (s *albumsAlbumVideos) ReplaceVideosInAlbumAlt1(ctx context.Context, reques
 }
 
 // SetVideoAsAlbumThumbnail - Set a video as the album thumbnail
-func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnail(ctx context.Context, request operations.SetVideoAsAlbumThumbnailRequest) (*operations.SetVideoAsAlbumThumbnailResponse, error) {
+func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnail(ctx context.Context, request operations.SetVideoAsAlbumThumbnailRequest, security operations.SetVideoAsAlbumThumbnailSecurity) (*operations.SetVideoAsAlbumThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -586,7 +586,7 @@ func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnail(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -635,11 +635,11 @@ func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnail(ctx context.Context, reques
 }
 
 // SetVideoAsAlbumThumbnailAlt1 - Set a video as the album thumbnail
-func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnailAlt1(ctx context.Context, request operations.SetVideoAsAlbumThumbnailAlt1Request) (*operations.SetVideoAsAlbumThumbnailAlt1Response, error) {
+func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnailAlt1(ctx context.Context, request operations.SetVideoAsAlbumThumbnailAlt1Request, security operations.SetVideoAsAlbumThumbnailAlt1Security) (*operations.SetVideoAsAlbumThumbnailAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -651,7 +651,7 @@ func (s *albumsAlbumVideos) SetVideoAsAlbumThumbnailAlt1(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

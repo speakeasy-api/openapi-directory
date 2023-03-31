@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetHistoryQueryParams struct {
+type GetHistoryRequest struct {
 	// The ID of the application.
 	ApplicationID *string `queryParam:"style=form,explode=true,name=applicationId"`
 	// Beginning of the period (Epoch time, in seconds).
@@ -17,10 +17,6 @@ type GetHistoryQueryParams struct {
 	ServiceID *string `queryParam:"style=form,explode=true,name=serviceId"`
 	// End of the period (Epoch time, in seconds).
 	To *int64 `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetHistoryRequest struct {
-	QueryParams GetHistoryQueryParams
 }
 
 type GetHistoryResponse struct {

@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateDiscussionInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 type TeamsCreateDiscussionInOrgRequestBody struct {
 	// The discussion post's body text.
 	Body string `json:"body"`
@@ -24,8 +17,11 @@ type TeamsCreateDiscussionInOrgRequestBody struct {
 }
 
 type TeamsCreateDiscussionInOrgRequest struct {
-	PathParams TeamsCreateDiscussionInOrgPathParams
-	Request    TeamsCreateDiscussionInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateDiscussionInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsCreateDiscussionInOrgResponse struct {

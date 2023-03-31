@@ -14,6 +14,7 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/cloudtraceprojectstracesbatchwrite.go
 pkg/models/operations/cloudtraceprojectstracesspanscreatespan.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchwritespansrequest.go
 pkg/models/shared/span.go
 pkg/models/shared/timeevents.go
@@ -30,7 +31,5 @@ pkg/models/shared/stackframe.go
 pkg/models/shared/module.go
 pkg/models/shared/links.go
 pkg/models/shared/link.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

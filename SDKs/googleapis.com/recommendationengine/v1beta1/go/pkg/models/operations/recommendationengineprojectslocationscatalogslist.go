@@ -8,16 +8,11 @@ import (
 )
 
 type RecommendationengineProjectsLocationsCatalogsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RecommendationengineProjectsLocationsCatalogsListPathParams struct {
-	// Required. The account resource name with an associated location.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RecommendationengineProjectsLocationsCatalogsListQueryParams struct {
+type RecommendationengineProjectsLocationsCatalogsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RecommendationengineProjectsLocationsCatalogsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListCatalogs` call. Provide this to retrieve the subsequent page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The account resource name with an associated location.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type RecommendationengineProjectsLocationsCatalogsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RecommendationengineProjectsLocationsCatalogsListRequest struct {
-	PathParams  RecommendationengineProjectsLocationsCatalogsListPathParams
-	QueryParams RecommendationengineProjectsLocationsCatalogsListQueryParams
-	Security    RecommendationengineProjectsLocationsCatalogsListSecurity
 }
 
 type RecommendationengineProjectsLocationsCatalogsListResponse struct {

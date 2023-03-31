@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkDeviceUplinkPathParams struct {
+type GetNetworkDeviceUplinkRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Serial    string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
-type GetNetworkDeviceUplinkRequest struct {
-	PathParams GetNetworkDeviceUplinkPathParams
 }
 
 type GetNetworkDeviceUplinkResponse struct {

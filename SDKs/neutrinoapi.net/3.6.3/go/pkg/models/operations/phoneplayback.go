@@ -18,10 +18,6 @@ type PhonePlaybackRequestBody struct {
 	Number string `form:"name=number"`
 }
 
-type PhonePlaybackRequest struct {
-	Request PhonePlaybackRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PhonePlaybackResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError              *shared.APIError

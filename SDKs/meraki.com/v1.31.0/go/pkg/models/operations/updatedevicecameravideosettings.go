@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCameraVideoSettingsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceCameraVideoSettingsRequestBody struct {
 	// Boolean indicating if external rtsp stream is exposed
 	ExternalRtspEnabled *bool `json:"externalRtspEnabled,omitempty"`
 }
 
 type UpdateDeviceCameraVideoSettingsRequest struct {
-	PathParams UpdateDeviceCameraVideoSettingsPathParams
-	Request    *UpdateDeviceCameraVideoSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCameraVideoSettingsRequestBody `request:"mediaType=application/json"`
+	Serial      string                                      `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCameraVideoSettingsResponse struct {

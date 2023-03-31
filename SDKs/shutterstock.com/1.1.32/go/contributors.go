@@ -34,16 +34,16 @@ func newContributors(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // GetContributor - Get details about a single contributor
 // This endpoint shows information about a single contributor, including contributor type, equipment they use, and other attributes.
-func (s *contributors) GetContributor(ctx context.Context, request operations.GetContributorRequest) (*operations.GetContributorResponse, error) {
+func (s *contributors) GetContributor(ctx context.Context, request operations.GetContributorRequest, security operations.GetContributorSecurity) (*operations.GetContributorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,20 +84,20 @@ func (s *contributors) GetContributor(ctx context.Context, request operations.Ge
 
 // GetContributorCollectionItems - Get the items in contributors' collections
 // This endpoint lists the IDs of items in a contributor's collection and the date that each was added.
-func (s *contributors) GetContributorCollectionItems(ctx context.Context, request operations.GetContributorCollectionItemsRequest) (*operations.GetContributorCollectionItemsResponse, error) {
+func (s *contributors) GetContributorCollectionItems(ctx context.Context, request operations.GetContributorCollectionItemsRequest, security operations.GetContributorCollectionItemsSecurity) (*operations.GetContributorCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,16 +140,16 @@ func (s *contributors) GetContributorCollectionItems(ctx context.Context, reques
 
 // GetContributorCollections - Get details about contributors' collections
 // This endpoint gets more detailed information about a contributor's collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
-func (s *contributors) GetContributorCollections(ctx context.Context, request operations.GetContributorCollectionsRequest) (*operations.GetContributorCollectionsResponse, error) {
+func (s *contributors) GetContributorCollections(ctx context.Context, request operations.GetContributorCollectionsRequest, security operations.GetContributorCollectionsSecurity) (*operations.GetContributorCollectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,20 +192,20 @@ func (s *contributors) GetContributorCollections(ctx context.Context, request op
 
 // GetContributorCollectionsList - List contributors' collections
 // This endpoint lists collections based on contributor ID.
-func (s *contributors) GetContributorCollectionsList(ctx context.Context, request operations.GetContributorCollectionsListRequest) (*operations.GetContributorCollectionsListResponse, error) {
+func (s *contributors) GetContributorCollectionsList(ctx context.Context, request operations.GetContributorCollectionsListRequest, security operations.GetContributorCollectionsListSecurity) (*operations.GetContributorCollectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,7 +248,7 @@ func (s *contributors) GetContributorCollectionsList(ctx context.Context, reques
 
 // GetContributorList - Get details about multiple contributors
 // This endpoint lists information about one or more contributors, including contributor type, equipment they use and other attributes.
-func (s *contributors) GetContributorList(ctx context.Context, request operations.GetContributorListRequest) (*operations.GetContributorListResponse, error) {
+func (s *contributors) GetContributorList(ctx context.Context, request operations.GetContributorListRequest, security operations.GetContributorListSecurity) (*operations.GetContributorListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/contributors"
 
@@ -257,11 +257,11 @@ func (s *contributors) GetContributorList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

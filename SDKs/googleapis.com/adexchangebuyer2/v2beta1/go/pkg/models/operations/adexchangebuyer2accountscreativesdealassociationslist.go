@@ -8,26 +8,23 @@ import (
 )
 
 type Adexchangebuyer2AccountsCreativesDealAssociationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsCreativesDealAssociationsListPathParams struct {
-	// The account to list the associations from. Specify "-" to list all creatives the current user has access to.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The creative ID to list the associations from. Specify "-" to list all creatives under the above account.
-	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
-}
-
-type Adexchangebuyer2AccountsCreativesDealAssociationsListQueryParams struct {
+type Adexchangebuyer2AccountsCreativesDealAssociationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The account to list the associations from. Specify "-" to list all creatives the current user has access to.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The creative ID to list the associations from. Specify "-" to list all creatives under the above account.
+	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -48,12 +45,6 @@ type Adexchangebuyer2AccountsCreativesDealAssociationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsCreativesDealAssociationsListRequest struct {
-	PathParams  Adexchangebuyer2AccountsCreativesDealAssociationsListPathParams
-	QueryParams Adexchangebuyer2AccountsCreativesDealAssociationsListQueryParams
-	Security    Adexchangebuyer2AccountsCreativesDealAssociationsListSecurity
 }
 
 type Adexchangebuyer2AccountsCreativesDealAssociationsListResponse struct {

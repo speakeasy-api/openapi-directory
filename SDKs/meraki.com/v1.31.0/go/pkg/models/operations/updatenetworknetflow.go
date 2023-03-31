@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkNetflowPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkNetflowRequestBody struct {
 	// The IPv4 address of the NetFlow collector.
 	CollectorIP *string `json:"collectorIp,omitempty"`
@@ -24,8 +20,8 @@ type UpdateNetworkNetflowRequestBody struct {
 }
 
 type UpdateNetworkNetflowRequest struct {
-	PathParams UpdateNetworkNetflowPathParams
-	Request    *UpdateNetworkNetflowRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkNetflowRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                           `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkNetflowResponse struct {

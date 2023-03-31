@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateHookSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateHookPathParams struct {
-	// Hook ID
-	HookID string `pathParam:"style=simple,explode=false,name=hook_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type UpdateHookRequest struct {
-	PathParams UpdateHookPathParams
 	// Request body updates given hook.
-	Request  shared.CreateHookInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security UpdateHookSecurity
+	CreateHookInput shared.CreateHookInput `request:"mediaType=application/x-www-form-urlencoded"`
+	// Hook ID
+	HookID string `pathParam:"style=simple,explode=false,name=hook_id"`
 }
 
 type UpdateHookResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type UnsetValuePathParams struct {
+type UnsetValueRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Row of the table in the agent's value space. 0 for single instance objects
@@ -15,10 +15,6 @@ type UnsetValuePathParams struct {
 	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Variable
 	Variable string `pathParam:"style=simple,explode=false,name=variable"`
-}
-
-type UnsetValueRequest struct {
-	PathParams UnsetValuePathParams
 }
 
 type UnsetValueResponse struct {

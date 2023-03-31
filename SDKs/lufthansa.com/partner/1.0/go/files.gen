@@ -33,5 +33,4 @@ pkg/models/operations/orders.go
 pkg/models/operations/autocheckin.go
 pkg/models/operations/priceoffers.go
 pkg/models/operations/seatdetails.go
-pkg/models/shared/security.go
 USAGE.md

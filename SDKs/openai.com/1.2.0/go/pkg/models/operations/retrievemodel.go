@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveModelPathParams struct {
+type RetrieveModelRequest struct {
 	// The ID of the model to use for this request
 	Model string `pathParam:"style=simple,explode=false,name=model"`
-}
-
-type RetrieveModelRequest struct {
-	PathParams RetrieveModelPathParams
 }
 
 type RetrieveModelResponse struct {

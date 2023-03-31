@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryBannedUsersQueryParams struct {
-	Payload *shared.QueryBannedUsersRequest `queryParam:"serialization=json,name=payload"`
-}
-
 type QueryBannedUsersRequest struct {
-	QueryParams QueryBannedUsersQueryParams
+	Payload *shared.QueryBannedUsersRequest `queryParam:"serialization=json,name=payload"`
 }
 
 type QueryBannedUsersResponse struct {

@@ -71,7 +71,7 @@ func (s *requests) DeleteAdminRequests(ctx context.Context) (*operations.DeleteA
 // DeleteAdminRequestsRequestID - Delete request by ID
 func (s *requests) DeleteAdminRequestsRequestID(ctx context.Context, request operations.DeleteAdminRequestsRequestIDRequest) (*operations.DeleteAdminRequestsRequestIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -113,7 +113,7 @@ func (s *requests) GetAdminRequests(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,7 +181,7 @@ func (s *requests) GetAdminRequestsUnmatched(ctx context.Context) (*operations.G
 // GetAdminRequestsRequestID - Get request by ID
 func (s *requests) GetAdminRequestsRequestID(ctx context.Context, request operations.GetAdminRequestsRequestIDRequest) (*operations.GetAdminRequestsRequestIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +217,7 @@ func (s *requests) GetAdminRequestsRequestID(ctx context.Context, request operat
 
 // PostAdminRequestsCount - Count requests by criteria
 // Count requests logged in the journal matching the specified criteria
-func (s *requests) PostAdminRequestsCount(ctx context.Context, request operations.PostAdminRequestsCountRequest) (*operations.PostAdminRequestsCountResponse, error) {
+func (s *requests) PostAdminRequestsCount(ctx context.Context, request operations.PostAdminRequestsCountRequestBody) (*operations.PostAdminRequestsCountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/requests/count"
 
@@ -272,7 +272,7 @@ func (s *requests) PostAdminRequestsCount(ctx context.Context, request operation
 
 // PostAdminRequestsFind - Find requests by criteria
 // Retrieve details of requests logged in the journal matching the specified criteria
-func (s *requests) PostAdminRequestsFind(ctx context.Context, request operations.PostAdminRequestsFindRequest) (*operations.PostAdminRequestsFindResponse, error) {
+func (s *requests) PostAdminRequestsFind(ctx context.Context, request operations.PostAdminRequestsFindRequestBody) (*operations.PostAdminRequestsFindResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/requests/find"
 
@@ -318,7 +318,7 @@ func (s *requests) PostAdminRequestsFind(ctx context.Context, request operations
 
 // PostAdminRequestsRemove - Remove requests by criteria
 // Removed requests logged in the journal matching the specified criteria
-func (s *requests) PostAdminRequestsRemove(ctx context.Context, request operations.PostAdminRequestsRemoveRequest) (*operations.PostAdminRequestsRemoveResponse, error) {
+func (s *requests) PostAdminRequestsRemove(ctx context.Context, request operations.PostAdminRequestsRemoveRequestBody) (*operations.PostAdminRequestsRemoveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/requests/remove"
 
@@ -363,7 +363,7 @@ func (s *requests) PostAdminRequestsRemove(ctx context.Context, request operatio
 }
 
 // PostAdminRequestsRemoveByMetadata - Delete requests mappings matching metadata
-func (s *requests) PostAdminRequestsRemoveByMetadata(ctx context.Context, request operations.PostAdminRequestsRemoveByMetadataRequest) (*operations.PostAdminRequestsRemoveByMetadataResponse, error) {
+func (s *requests) PostAdminRequestsRemoveByMetadata(ctx context.Context, request operations.PostAdminRequestsRemoveByMetadataRequestBody) (*operations.PostAdminRequestsRemoveByMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/requests/remove-by-metadata"
 

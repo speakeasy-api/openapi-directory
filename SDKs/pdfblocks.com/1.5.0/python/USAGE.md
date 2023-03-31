@@ -3,28 +3,24 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddImageWatermarkV1Request(
-    request=operations.AddImageWatermarkV1RequestBody(
-        file=operations.AddImageWatermarkV1RequestBodyFile(
-            content="illum".encode(),
-            file="deleniti",
-        ),
-        image=operations.AddImageWatermarkV1RequestBodyImage(
-            content="eius".encode(),
-            image="sed",
-        ),
-        margin=58.200001,
-        transparency=830999398038749909,
+        api_key="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.AddImageWatermarkV1RequestBody(
+    file=operations.AddImageWatermarkV1RequestBodyFile(
+        content="corrupti".encode(),
+        file="provident",
+    ),
+    image=operations.AddImageWatermarkV1RequestBodyImage(
+        content="distinctio".encode(),
+        image="quibusdam",
+    ),
+    margin=1,
+    transparency=50,
 )
     
 res = s.add_image_watermark_v1(req)

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTimerScriptsPathParams struct {
+type ListTimerScriptsRequest struct {
 	// Agent to return the timer script list
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ListTimerScriptsRequest struct {
-	PathParams ListTimerScriptsPathParams
 }
 
 type ListTimerScriptsResponse struct {

@@ -34,14 +34,14 @@ func newFeature(defaultClient, securityClient HTTPClient, serverURL, language, s
 // The geomark feature resource returns a single spatial feature with either a single (Point, LineString, Polygon) or multi-part geometry (MultiPoint, MultiLineString, MultiPolygon) and the geomark attribution.  The geometry and attribution can be downloaded as a spatial download file format in a supported coordinate system. The download files can then be used in a desktop GIS application (e.g. ArcMap), Google Earth or a web mapping application.
 func (s *feature) GetGeomarksGeomarkIDFeatureFileFormatExtension(ctx context.Context, request operations.GetGeomarksGeomarkIDFeatureFileFormatExtensionRequest) (*operations.GetGeomarksGeomarkIDFeatureFileFormatExtensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/geomarks/{geomarkId}/feature.{fileFormatExtension}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/geomarks/{geomarkId}/feature.{fileFormatExtension}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

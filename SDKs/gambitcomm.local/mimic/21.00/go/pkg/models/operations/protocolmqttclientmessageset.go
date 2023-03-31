@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientMessageSetPathParams struct {
+type ProtocolMqttClientMessageSetRequest struct {
 	// Agent to show MQTT state
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Attribute
@@ -15,10 +15,6 @@ type ProtocolMqttClientMessageSetPathParams struct {
 	MsgNum int `pathParam:"style=simple,explode=false,name=msgNum"`
 	// Value
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolMqttClientMessageSetRequest struct {
-	PathParams ProtocolMqttClientMessageSetPathParams
 }
 
 type ProtocolMqttClientMessageSetResponse struct {

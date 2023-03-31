@@ -32,20 +32,20 @@ func newUrlchannels(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // AdsensehostUrlchannelsDelete - Delete a URL channel from the host AdSense account.
-func (s *urlchannels) AdsensehostUrlchannelsDelete(ctx context.Context, request operations.AdsensehostUrlchannelsDeleteRequest) (*operations.AdsensehostUrlchannelsDeleteResponse, error) {
+func (s *urlchannels) AdsensehostUrlchannelsDelete(ctx context.Context, request operations.AdsensehostUrlchannelsDeleteRequest, security operations.AdsensehostUrlchannelsDeleteSecurity) (*operations.AdsensehostUrlchannelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels/{urlChannelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels/{urlChannelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *urlchannels) AdsensehostUrlchannelsDelete(ctx context.Context, request 
 }
 
 // AdsensehostUrlchannelsInsert - Add a new URL channel to the host AdSense account.
-func (s *urlchannels) AdsensehostUrlchannelsInsert(ctx context.Context, request operations.AdsensehostUrlchannelsInsertRequest) (*operations.AdsensehostUrlchannelsInsertResponse, error) {
+func (s *urlchannels) AdsensehostUrlchannelsInsert(ctx context.Context, request operations.AdsensehostUrlchannelsInsertRequest, security operations.AdsensehostUrlchannelsInsertSecurity) (*operations.AdsensehostUrlchannelsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLChannel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *urlchannels) AdsensehostUrlchannelsInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *urlchannels) AdsensehostUrlchannelsInsert(ctx context.Context, request 
 }
 
 // AdsensehostUrlchannelsList - List all host URL channels in the host AdSense account.
-func (s *urlchannels) AdsensehostUrlchannelsList(ctx context.Context, request operations.AdsensehostUrlchannelsListRequest) (*operations.AdsensehostUrlchannelsListResponse, error) {
+func (s *urlchannels) AdsensehostUrlchannelsList(ctx context.Context, request operations.AdsensehostUrlchannelsListRequest, security operations.AdsensehostUrlchannelsListSecurity) (*operations.AdsensehostUrlchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

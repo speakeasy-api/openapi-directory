@@ -14,25 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAccessTokenRequest{
-        Security: operations.CreateAccessTokenSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateAccessTokenPathParams{
-            ServiceSid: "corrupti",
-        },
-        Request: &operations.CreateAccessTokenCreateAccessTokenRequest{
-            FactorFriendlyName: "provident",
+        RequestBody: &operations.CreateAccessTokenCreateAccessTokenRequest{
+            FactorFriendlyName: "corrupti",
             FactorType: "push",
-            Identity: "distinctio",
-            TTL: 844266,
+            Identity: "provident",
+            TTL: 715190,
         },
+        ServiceSid: "quibusdam",
     }
 
     ctx := context.Background()
-    res, err := s.CreateAccessToken(ctx, req)
+    res, err := s.CreateAccessToken(ctx, req, operations.CreateAccessTokenSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

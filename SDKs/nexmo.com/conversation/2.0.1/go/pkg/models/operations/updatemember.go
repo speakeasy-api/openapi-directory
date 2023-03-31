@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMemberPathParams struct {
-	// Conversation ID
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-	// Member ID
-	MemberID string `pathParam:"style=simple,explode=false,name=member_id"`
-}
-
 type UpdateMemberRequestBody struct {
 	// Invite or join a member to a conversation
 	Action *shared.MemberActionEnum `json:"action,omitempty"`
@@ -22,8 +15,11 @@ type UpdateMemberRequestBody struct {
 }
 
 type UpdateMemberRequest struct {
-	PathParams UpdateMemberPathParams
-	Request    *UpdateMemberRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateMemberRequestBody `request:"mediaType=application/json"`
+	// Conversation ID
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
+	// Member ID
+	MemberID string `pathParam:"style=simple,explode=false,name=member_id"`
 }
 
 // UpdateMember200ApplicationJSON - Member retrieved

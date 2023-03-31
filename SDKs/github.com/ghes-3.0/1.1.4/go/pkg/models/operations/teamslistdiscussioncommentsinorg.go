@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListDiscussionCommentsInOrgPathParams struct {
-	DiscussionNumber int64  `pathParam:"style=simple,explode=false,name=discussion_number"`
-	Org              string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsListDiscussionCommentsInOrgQueryParams struct {
+type TeamsListDiscussionCommentsInOrgRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
-	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Direction        *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	DiscussionNumber int64                 `pathParam:"style=simple,explode=false,name=discussion_number"`
+	Org              string                `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListDiscussionCommentsInOrgRequest struct {
-	PathParams  TeamsListDiscussionCommentsInOrgPathParams
-	QueryParams TeamsListDiscussionCommentsInOrgQueryParams
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsListDiscussionCommentsInOrgResponse struct {

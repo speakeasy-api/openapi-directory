@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddEmailListHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type AddEmailListAddEmailListRequestBody struct {
 	// Array of email addresses to include in the email list.
 	Emails []string `json:"emails"`
@@ -22,8 +15,11 @@ type AddEmailListAddEmailListRequestBody struct {
 }
 
 type AddEmailListRequest struct {
-	Headers AddEmailListHeaders
-	Request *AddEmailListAddEmailListRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddEmailListAddEmailListRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddEmailListResponse struct {

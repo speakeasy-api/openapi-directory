@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type RetrieveattachmentPathParams struct {
+type RetrieveattachmentRequest struct {
 	// Two letter word that identifies the data structure
 	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 	// Field to attach the file to, as described in admin
@@ -14,10 +14,6 @@ type RetrieveattachmentPathParams struct {
 	FileName string `pathParam:"style=simple,explode=false,name=file-name"`
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetrieveattachmentRequest struct {
-	PathParams RetrieveattachmentPathParams
 }
 
 type RetrieveattachmentResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1AdminAccountsIDUnsuspendSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1AdminAccountsIDUnsuspendPathParams struct {
-	// ID of the account
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1AdminAccountsIDUnsuspendRequest struct {
-	PathParams PostAPIV1AdminAccountsIDUnsuspendPathParams
-	Security   PostAPIV1AdminAccountsIDUnsuspendSecurity
+	// ID of the account
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1AdminAccountsIDUnsuspendResponse struct {

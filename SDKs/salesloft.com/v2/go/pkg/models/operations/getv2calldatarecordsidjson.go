@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2CallDataRecordsIDJSONPathParams struct {
+type GetV2CallDataRecordsIDJSONRequest struct {
 	// CallDataRecord ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2CallDataRecordsIDJSONRequest struct {
-	PathParams GetV2CallDataRecordsIDJSONPathParams
 }
 
 type GetV2CallDataRecordsIDJSONResponse struct {

@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ServicesIDResourcesPathParams struct {
-	// id of service object
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ServicesIDResourcesQueryParams struct {
+type GetSetupV1ServicesIDResourcesRequest struct {
 	// Google calendar authorization return url
 	GoogleAuthReturnURL *string `queryParam:"style=form,explode=true,name=googleAuthReturnUrl"`
+	// id of service object
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Outlook calendar authorization return url
 	OutlookAuthReturnURL *string `queryParam:"style=form,explode=true,name=outlookAuthReturnUrl"`
-}
-
-type GetSetupV1ServicesIDResourcesRequest struct {
-	PathParams  GetSetupV1ServicesIDResourcesPathParams
-	QueryParams GetSetupV1ServicesIDResourcesQueryParams
 }
 
 type GetSetupV1ServicesIDResourcesResponse struct {

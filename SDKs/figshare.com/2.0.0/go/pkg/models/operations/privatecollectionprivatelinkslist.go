@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateCollectionPrivateLinksListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateCollectionPrivateLinksListPathParams struct {
-	// Collection unique identifier
-	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateCollectionPrivateLinksListRequest struct {
-	PathParams PrivateCollectionPrivateLinksListPathParams
-	Security   PrivateCollectionPrivateLinksListSecurity
+	// Collection unique identifier
+	CollectionID int64 `pathParam:"style=simple,explode=false,name=collection_id"`
 }
 
 type PrivateCollectionPrivateLinksListResponse struct {

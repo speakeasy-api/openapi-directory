@@ -12,14 +12,8 @@ var CreateSyncMapItemServerList = []string{
 }
 
 type CreateSyncMapItemSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSyncMapItemPathParams struct {
-	// The SID of the Sync Map to add the new Map Item to. Can be the Sync Map resource's `sid` or its `unique_name`.
-	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
-	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Map Item in.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSyncMapItemCreateSyncMapItemRequest struct {
@@ -36,10 +30,11 @@ type CreateSyncMapItemCreateSyncMapItemRequest struct {
 }
 
 type CreateSyncMapItemRequest struct {
-	PathParams CreateSyncMapItemPathParams
-	Request    *CreateSyncMapItemCreateSyncMapItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSyncMapItemSecurity
-	ServerURL  *string
+	// The SID of the Sync Map to add the new Map Item to. Can be the Sync Map resource's `sid` or its `unique_name`.
+	MapSid      string                                     `pathParam:"style=simple,explode=false,name=MapSid"`
+	RequestBody *CreateSyncMapItemCreateSyncMapItemRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Map Item in.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateSyncMapItemResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateManifestRequest struct {
-	Request shared.CreateManifestRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateManifestResponse struct {
 	ContentType string
 	StatusCode  int

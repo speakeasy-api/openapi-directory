@@ -18,10 +18,10 @@ pkg/models/operations/fetchvoicenumber.go
 pkg/models/operations/listtrunkingcountry.go
 pkg/models/operations/listvoicecountry.go
 pkg/models/shared/pricingv2trunkingcountryinstance.go
-pkg/models/shared/security.go
 pkg/models/shared/pricingv2trunkingnumber.go
 pkg/models/shared/pricingv2voicevoicecountryinstance.go
 pkg/models/shared/pricingv2voicevoicenumber.go
 pkg/models/shared/pricingv2trunkingcountry.go
 pkg/models/shared/pricingv2voicevoicecountry.go
 USAGE.md
+pkg/models/operations/options.go

@@ -42,7 +42,7 @@ func newApplePay(defaultClient, securityClient HTTPClient, serverURL, language, 
 //
 // To learn more about Web Apple Pay, see
 // [Add the Apple Pay on the Web Button](https://developer.squareup.com/docs/payment-form/add-digital-wallets/apple-pay).
-func (s *applePay) RegisterDomain(ctx context.Context, request operations.RegisterDomainRequest) (*operations.RegisterDomainResponse, error) {
+func (s *applePay) RegisterDomain(ctx context.Context, request shared.RegisterDomainRequest, security operations.RegisterDomainSecurity) (*operations.RegisterDomainResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/apple-pay/domains"
 
@@ -61,7 +61,7 @@ func (s *applePay) RegisterDomain(ctx context.Context, request operations.Regist
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

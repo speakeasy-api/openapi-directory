@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishedEarlyDayMotionGetPathParams struct {
+type PublishedEarlyDayMotionGetRequest struct {
 	// Early Day Motion with the ID specified.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PublishedEarlyDayMotionGetRequest struct {
-	PathParams PublishedEarlyDayMotionGetPathParams
 }
 
 type PublishedEarlyDayMotionGetResponse struct {

@@ -14,12 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CancelRequest{
-        PathParams: operations.CancelPathParams{
-            SubscriptionID: "corrupti",
-        },
-        Headers: operations.CancelHeaders{
-            XShopperID: "provident",
-        },
+        XShopperID: "corrupti",
+        SubscriptionID: "provident",
     }
 
     ctx := context.Background()

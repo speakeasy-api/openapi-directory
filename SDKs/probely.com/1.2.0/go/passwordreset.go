@@ -33,7 +33,7 @@ func newPasswordReset(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // PostCheck - Check validity of password reset token
-func (s *passwordReset) PostCheck(ctx context.Context, request operations.PostCheckRequest) (*operations.PostCheckResponse, error) {
+func (s *passwordReset) PostCheck(ctx context.Context, request operations.PostCheckRequestBody) (*operations.PostCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check/"
 
@@ -97,7 +97,7 @@ func (s *passwordReset) PostCheck(ctx context.Context, request operations.PostCh
 }
 
 // PostReset - Send reset password email
-func (s *passwordReset) PostReset(ctx context.Context, request operations.PostResetRequest) (*operations.PostResetResponse, error) {
+func (s *passwordReset) PostReset(ctx context.Context, request operations.PostResetRequestBody) (*operations.PostResetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reset/"
 
@@ -161,7 +161,7 @@ func (s *passwordReset) PostReset(ctx context.Context, request operations.PostRe
 }
 
 // PostSetpassword - Reset password after asking for a reset (with the token sent by email).
-func (s *passwordReset) PostSetpassword(ctx context.Context, request operations.PostSetpasswordRequest) (*operations.PostSetpasswordResponse, error) {
+func (s *passwordReset) PostSetpassword(ctx context.Context, request operations.PostSetpasswordRequestBody) (*operations.PostSetpasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setpassword/"
 

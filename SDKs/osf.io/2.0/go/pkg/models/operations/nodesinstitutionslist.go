@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type NodesInstitutionsListPathParams struct {
+type NodesInstitutionsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesInstitutionsListRequest struct {
-	PathParams NodesInstitutionsListPathParams
 }
 
 // NodesInstitutionsListInstitutionAttributes - The properties of the institution entity.

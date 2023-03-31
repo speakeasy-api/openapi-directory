@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetWillretainPathParams struct {
+type ProtocolMqttClientSetWillretainRequest struct {
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Retaining will
 	Retain string `pathParam:"style=simple,explode=false,name=retain"`
-}
-
-type ProtocolMqttClientSetWillretainRequest struct {
-	PathParams ProtocolMqttClientSetWillretainPathParams
 }
 
 type ProtocolMqttClientSetWillretainResponse struct {

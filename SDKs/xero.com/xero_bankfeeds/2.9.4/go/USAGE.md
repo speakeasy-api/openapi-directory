@@ -14,15 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateFeedConnectionsRequest{
-        Security: operations.CreateFeedConnectionsSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateFeedConnectionsHeaders{
-            XeroTenantID: "corrupti",
-        },
-        Request: shared.FeedConnections{
+        FeedConnections: shared.FeedConnections{
             Items: []shared.FeedConnection{
                 shared.FeedConnection{
                     AccountID: "079a88ea-276d-41fb-a1f1-366ef3e22921",
@@ -83,10 +75,13 @@ func main() {
                 PageSize: 10,
             },
         },
+        XeroTenantID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.BankFeeds.CreateFeedConnections(ctx, req)
+    res, err := s.BankFeeds.CreateFeedConnections(ctx, req, operations.CreateFeedConnectionsSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsListCommentsForReviewPathParams struct {
+type PullsListCommentsForReviewRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// Page number of the results to fetch.
+	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// The number of results per page (max 100).
+	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The number that identifies the pull request.
 	PullNumber int64 `pathParam:"style=simple,explode=false,name=pull_number"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The unique identifier of the review.
 	ReviewID int64 `pathParam:"style=simple,explode=false,name=review_id"`
-}
-
-type PullsListCommentsForReviewQueryParams struct {
-	// Page number of the results to fetch.
-	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-	// The number of results per page (max 100).
-	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type PullsListCommentsForReviewRequest struct {
-	PathParams  PullsListCommentsForReviewPathParams
-	QueryParams PullsListCommentsForReviewQueryParams
 }
 
 type PullsListCommentsForReviewResponse struct {

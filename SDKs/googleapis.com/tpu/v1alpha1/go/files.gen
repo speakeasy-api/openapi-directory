@@ -28,7 +28,6 @@ pkg/models/shared/listacceleratortypesresponse.go
 pkg/models/shared/acceleratortype.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/operation.go

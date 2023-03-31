@@ -8,19 +8,14 @@ import (
 )
 
 type PostAccountInstitutionReviewCurationIDCommentsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PostAccountInstitutionReviewCurationIDCommentsPathParams struct {
-	// ID of the curation
-	CurationID int64 `pathParam:"style=simple,explode=false,name=curation_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostAccountInstitutionReviewCurationIDCommentsRequest struct {
-	PathParams PostAccountInstitutionReviewCurationIDCommentsPathParams
 	// The content/value of the comment.
-	Request  shared.CurationCommentCreate `request:"mediaType=application/json"`
-	Security PostAccountInstitutionReviewCurationIDCommentsSecurity
+	CurationCommentCreate shared.CurationCommentCreate `request:"mediaType=application/json"`
+	// ID of the curation
+	CurationID int64 `pathParam:"style=simple,explode=false,name=curation_id"`
 }
 
 type PostAccountInstitutionReviewCurationIDCommentsResponse struct {

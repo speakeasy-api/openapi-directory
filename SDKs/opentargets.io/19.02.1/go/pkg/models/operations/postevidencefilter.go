@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostEvidenceFilterRequest struct {
-	// Filters to apply when retrieving evidence string objects.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostEvidenceFilterResponse struct {
 	ContentType string
 	StatusCode  int

@@ -3,31 +3,32 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key_header=shared.SchemeAPIKeyHeader(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CommunicationRequest(
-    query_params=operations.CommunicationQueryParams(
-        all=True,
+        api_key_header="YOUR_API_KEY_HERE",
     ),
-    request=[
+)
+
+
+req = operations.CommunicationRequest(
+    request_body=[
         shared.Post(
-            id="atque",
-            language="tenetur",
-            text="sed",
+            id="1",
+            language="en",
+            text="I love the service",
         ),
         shared.Post(
-            id="non",
-            language="saepe",
-            text="eum",
+            id="1",
+            language="en",
+            text="I love the service",
+        ),
+        shared.Post(
+            id="1",
+            language="en",
+            text="I love the service",
         ),
     ],
+    all=False,
 )
     
 res = s.text_analysis.communication(req)

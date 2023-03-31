@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SelectViewAndGetItsDetailsPathParams struct {
-	// views' class name
-	ClassName string `pathParam:"style=simple,explode=false,name=className"`
-	ViewID    int64  `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type SelectViewAndGetItsDetailsQueryParams struct {
-	PlaceNameDenotesSpecificPlaceInSystemWithTheTable *string `queryParam:"style=form,explode=true,name=place name (denotes specific place in system with the table)"`
-}
-
 type SelectViewAndGetItsDetailsRequest struct {
-	PathParams  SelectViewAndGetItsDetailsPathParams
-	QueryParams SelectViewAndGetItsDetailsQueryParams
+	// views' class name
+	ClassName                                         string  `pathParam:"style=simple,explode=false,name=className"`
+	PlaceNameDenotesSpecificPlaceInSystemWithTheTable *string `queryParam:"style=form,explode=true,name=place name (denotes specific place in system with the table)"`
+	ViewID                                            int64   `pathParam:"style=simple,explode=false,name=viewId"`
 }
 
 type SelectViewAndGetItsDetailsResponse struct {

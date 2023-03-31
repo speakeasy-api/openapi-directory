@@ -12,14 +12,8 @@ var CreatePaymentsServerList = []string{
 }
 
 type CreatePaymentsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreatePaymentsPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the call that will create the resource. Call leg associated with this sid is expected to provide payment information thru DTMF.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreatePaymentsCreatePaymentsRequest struct {
@@ -55,10 +49,11 @@ type CreatePaymentsCreatePaymentsRequest struct {
 }
 
 type CreatePaymentsRequest struct {
-	PathParams CreatePaymentsPathParams
-	Request    *CreatePaymentsCreatePaymentsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreatePaymentsSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the call that will create the resource. Call leg associated with this sid is expected to provide payment information thru DTMF.
+	CallSid     string                               `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *CreatePaymentsCreatePaymentsRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreatePaymentsResponse struct {

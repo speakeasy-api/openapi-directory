@@ -98,7 +98,7 @@ func (s *tsp) Tsp(ctx context.Context) (*operations.TspResponse, error) {
 // **Scopes:** `tsp:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *tsp) TspUpdate(ctx context.Context, request operations.TspUpdateRequest) (*operations.TspUpdateResponse, error) {
+func (s *tsp) TspUpdate(ctx context.Context, request operations.TspUpdateApplicationJSON) (*operations.TspUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tsp"
 
@@ -149,11 +149,11 @@ func (s *tsp) TspUpdate(ctx context.Context, request operations.TspUpdateRequest
 // **Scopes:**`tsp:write:admin` `tsp:write`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *tsp) TspURLUpdate(ctx context.Context, request operations.TspURLUpdateRequest) (*operations.TspURLUpdateResponse, error) {
+func (s *tsp) TspURLUpdate(ctx context.Context, request operations.TspURLUpdateRequest, security operations.TspURLUpdateSecurity) (*operations.TspURLUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -165,7 +165,7 @@ func (s *tsp) TspURLUpdate(ctx context.Context, request operations.TspURLUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,7 +201,7 @@ func (s *tsp) TspURLUpdate(ctx context.Context, request operations.TspURLUpdateR
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *tsp) UserTSP(ctx context.Context, request operations.UserTSPRequest) (*operations.UserTSPResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/{tspId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/{tspId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -259,9 +259,9 @@ func (s *tsp) UserTSP(ctx context.Context, request operations.UserTSPRequest) (*
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *tsp) UserTSPCreate(ctx context.Context, request operations.UserTSPCreateRequest) (*operations.UserTSPCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -327,7 +327,7 @@ func (s *tsp) UserTSPCreate(ctx context.Context, request operations.UserTSPCreat
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *tsp) UserTSPDelete(ctx context.Context, request operations.UserTSPDeleteRequest) (*operations.UserTSPDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/{tspId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/{tspId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -370,9 +370,9 @@ func (s *tsp) UserTSPDelete(ctx context.Context, request operations.UserTSPDelet
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *tsp) UserTSPUpdate(ctx context.Context, request operations.UserTSPUpdateRequest) (*operations.UserTSPUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/{tspId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp/{tspId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -423,7 +423,7 @@ func (s *tsp) UserTSPUpdate(ctx context.Context, request operations.UserTSPUpdat
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *tsp) UserTSPs(ctx context.Context, request operations.UserTSPsRequest) (*operations.UserTSPsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/tsp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

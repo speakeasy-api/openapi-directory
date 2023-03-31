@@ -10,23 +10,23 @@ import (
 )
 
 type DataflowProjectsLocationsTemplatesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsTemplatesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsTemplatesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsTemplatesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsTemplatesGetSecurity struct {
@@ -34,13 +34,6 @@ type DataflowProjectsLocationsTemplatesGetSecurity struct {
 	Option2 *DataflowProjectsLocationsTemplatesGetSecurityOption2 `security:"option"`
 	Option3 *DataflowProjectsLocationsTemplatesGetSecurityOption3 `security:"option"`
 	Option4 *DataflowProjectsLocationsTemplatesGetSecurityOption4 `security:"option"`
-}
-
-type DataflowProjectsLocationsTemplatesGetPathParams struct {
-	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// Required. The ID of the Cloud Platform project that the job belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // DataflowProjectsLocationsTemplatesGetViewEnum - The view to retrieve. Defaults to METADATA_ONLY.
@@ -64,7 +57,7 @@ func (e *DataflowProjectsLocationsTemplatesGetViewEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DataflowProjectsLocationsTemplatesGetQueryParams struct {
+type DataflowProjectsLocationsTemplatesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -79,10 +72,14 @@ type DataflowProjectsLocationsTemplatesGetQueryParams struct {
 	GcsPath *string `queryParam:"style=form,explode=true,name=gcsPath"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the Cloud Platform project that the job belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
@@ -91,12 +88,6 @@ type DataflowProjectsLocationsTemplatesGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The view to retrieve. Defaults to METADATA_ONLY.
 	View *DataflowProjectsLocationsTemplatesGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DataflowProjectsLocationsTemplatesGetRequest struct {
-	PathParams  DataflowProjectsLocationsTemplatesGetPathParams
-	QueryParams DataflowProjectsLocationsTemplatesGetQueryParams
-	Security    DataflowProjectsLocationsTemplatesGetSecurity
 }
 
 type DataflowProjectsLocationsTemplatesGetResponse struct {

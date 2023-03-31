@@ -4,16 +4,10 @@ package webhooks
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PodcastsSubmitAcceptedResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-}
-
-type PodcastsSubmitAcceptedRequest struct {
-	// Triggered by your request to POST /podcasts/submit, if the podcast submission is accepted.
-	Request *shared.PodcastMinimumRss `request:"mediaType=application/json"`
 }

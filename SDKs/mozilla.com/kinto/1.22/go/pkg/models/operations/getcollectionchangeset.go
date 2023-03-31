@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type GetCollectionChangesetPathParams struct {
-	Bid string `pathParam:"style=simple,explode=false,name=bid"`
-	Cid string `pathParam:"style=simple,explode=false,name=cid"`
-}
-
-type GetCollectionChangesetQueryParams struct {
+type GetCollectionChangesetRequest struct {
 	Expected   string  `queryParam:"style=form,explode=true,name=_expected"`
 	Limit      *int64  `queryParam:"style=form,explode=true,name=_limit"`
 	Since      *string `queryParam:"style=form,explode=true,name=_since"`
+	Bid        string  `pathParam:"style=simple,explode=false,name=bid"`
 	Bucket     *string `queryParam:"style=form,explode=true,name=bucket"`
+	Cid        string  `pathParam:"style=simple,explode=false,name=cid"`
 	Collection *string `queryParam:"style=form,explode=true,name=collection"`
-}
-
-type GetCollectionChangesetRequest struct {
-	PathParams  GetCollectionChangesetPathParams
-	QueryParams GetCollectionChangesetQueryParams
 }
 
 type GetCollectionChangesetResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDFileOoxmlautomationidGetPathParams struct {
+type StoryIDFileOoxmlautomationidGetRequest struct {
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// the id of the ooxml_automation object
 	OoxmlAutomationID string `pathParam:"style=simple,explode=false,name=ooxml_automation_id"`
-}
-
-type StoryIDFileOoxmlautomationidGetRequest struct {
-	PathParams StoryIDFileOoxmlautomationidGetPathParams
 }
 
 type StoryIDFileOoxmlautomationidGetResponse struct {

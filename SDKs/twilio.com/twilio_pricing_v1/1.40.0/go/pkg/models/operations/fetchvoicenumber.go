@@ -12,18 +12,13 @@ var FetchVoiceNumberServerList = []string{
 }
 
 type FetchVoiceNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchVoiceNumberPathParams struct {
-	// The phone number to fetch.
-	Number string `pathParam:"style=simple,explode=false,name=Number"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchVoiceNumberRequest struct {
-	PathParams FetchVoiceNumberPathParams
-	Security   FetchVoiceNumberSecurity
-	ServerURL  *string
+	// The phone number to fetch.
+	Number string `pathParam:"style=simple,explode=false,name=Number"`
 }
 
 type FetchVoiceNumberResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetFacilityByIDSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetFacilityByIDPathParams struct {
-	// Facility ID, in the form `<prefix>_<station>`, where prefix is one of "vha", "vba", "nca", or "vc", for health facility, benefits, cemetery, or vet center, respectively.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetFacilityByIDRequest struct {
-	PathParams GetFacilityByIDPathParams
-	Security   GetFacilityByIDSecurity
+	// Facility ID, in the form `<prefix>_<station>`, where prefix is one of "vha", "vba", "nca", or "vc", for health facility, benefits, cemetery, or vet center, respectively.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetFacilityByIDResponse struct {

@@ -43,7 +43,7 @@ func newDashboards(defaultClient, securityClient HTTPClient, serverURL, language
 // **Scopes:** `dashboard_crc:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *dashboards) DashboardCRC(ctx context.Context, request operations.DashboardCRCRequest) (*operations.DashboardCRCResponse, error) {
+func (s *dashboards) DashboardCRC(ctx context.Context, request operations.DashboardCRCRequest, security operations.DashboardCRCSecurity) (*operations.DashboardCRCResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/crc"
 
@@ -52,11 +52,11 @@ func (s *dashboards) DashboardCRC(ctx context.Context, request operations.Dashbo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -107,7 +107,7 @@ func (s *dashboards) DashboardCRC(ctx context.Context, request operations.Dashbo
 // **Scope:** `account:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *dashboards) DashboardClientFeedback(ctx context.Context, request operations.DashboardClientFeedbackRequest) (*operations.DashboardClientFeedbackResponse, error) {
+func (s *dashboards) DashboardClientFeedback(ctx context.Context, request operations.DashboardClientFeedbackRequest, security operations.DashboardClientFeedbackSecurity) (*operations.DashboardClientFeedbackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/client/feedback"
 
@@ -116,11 +116,11 @@ func (s *dashboards) DashboardClientFeedback(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,20 +173,20 @@ func (s *dashboards) DashboardClientFeedback(ctx context.Context, request operat
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 //
 // `
-func (s *dashboards) DashboardClientFeedbackDetail(ctx context.Context, request operations.DashboardClientFeedbackDetailRequest) (*operations.DashboardClientFeedbackDetailResponse, error) {
+func (s *dashboards) DashboardClientFeedbackDetail(ctx context.Context, request operations.DashboardClientFeedbackDetailRequest, security operations.DashboardClientFeedbackDetailSecurity) (*operations.DashboardClientFeedbackDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/client/feedback/{feedbackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/client/feedback/{feedbackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *dashboards) DashboardClientFeedbackDetail(ctx context.Context, request 
 //
 // **Prerequisites:**<br>
 // * Business or a higher plan.
-func (s *dashboards) DashboardIM(ctx context.Context, request operations.DashboardIMRequest) (*operations.DashboardIMResponse, error) {
+func (s *dashboards) DashboardIM(ctx context.Context, request operations.DashboardIMRequest, security operations.DashboardIMSecurity) (*operations.DashboardIMResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/im"
 
@@ -244,11 +244,11 @@ func (s *dashboards) DashboardIM(ctx context.Context, request operations.Dashboa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -299,20 +299,20 @@ func (s *dashboards) DashboardIM(ctx context.Context, request operations.Dashboa
 // **Prerequisites:** <br>
 // * Business or a higher plan.
 // * Zoom Room must be enabled in the account.
-func (s *dashboards) DashboardIssueDetailZoomRoom(ctx context.Context, request operations.DashboardIssueDetailZoomRoomRequest) (*operations.DashboardIssueDetailZoomRoomResponse, error) {
+func (s *dashboards) DashboardIssueDetailZoomRoom(ctx context.Context, request operations.DashboardIssueDetailZoomRoomRequest, security operations.DashboardIssueDetailZoomRoomSecurity) (*operations.DashboardIssueDetailZoomRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/issues/zoomrooms/{zoomroomId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/issues/zoomrooms/{zoomroomId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,7 +362,7 @@ func (s *dashboards) DashboardIssueDetailZoomRoom(ctx context.Context, request o
 // **Prerequisites:**<br>
 // * Business or a higher plan.
 // * Zoom Room must be enabled in the account.
-func (s *dashboards) DashboardIssueZoomRoom(ctx context.Context, request operations.DashboardIssueZoomRoomRequest) (*operations.DashboardIssueZoomRoomResponse, error) {
+func (s *dashboards) DashboardIssueZoomRoom(ctx context.Context, request operations.DashboardIssueZoomRoomRequest, security operations.DashboardIssueZoomRoomSecurity) (*operations.DashboardIssueZoomRoomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/issues/zoomrooms"
 
@@ -371,11 +371,11 @@ func (s *dashboards) DashboardIssueZoomRoom(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -424,20 +424,20 @@ func (s *dashboards) DashboardIssueZoomRoom(ctx context.Context, request operati
 //
 // **Prerequisites:** <br>
 // * Business or a higher plan.
-func (s *dashboards) DashboardMeetingDetail(ctx context.Context, request operations.DashboardMeetingDetailRequest) (*operations.DashboardMeetingDetailResponse, error) {
+func (s *dashboards) DashboardMeetingDetail(ctx context.Context, request operations.DashboardMeetingDetailRequest, security operations.DashboardMeetingDetailSecurity) (*operations.DashboardMeetingDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -486,20 +486,20 @@ func (s *dashboards) DashboardMeetingDetail(ctx context.Context, request operati
 // **Scopes:** `dashboard_meetings:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *dashboards) DashboardMeetingParticipantQOS(ctx context.Context, request operations.DashboardMeetingParticipantQOSRequest) (*operations.DashboardMeetingParticipantQOSResponse, error) {
+func (s *dashboards) DashboardMeetingParticipantQOS(ctx context.Context, request operations.DashboardMeetingParticipantQOSRequest, security operations.DashboardMeetingParticipantQOSSecurity) (*operations.DashboardMeetingParticipantQOSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/{participantId}/qos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/{participantId}/qos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -551,20 +551,20 @@ func (s *dashboards) DashboardMeetingParticipantQOS(ctx context.Context, request
 //
 // **Prerequisites:** <br>
 // * Business or a higher plan.
-func (s *dashboards) DashboardMeetingParticipantShare(ctx context.Context, request operations.DashboardMeetingParticipantShareRequest) (*operations.DashboardMeetingParticipantShareResponse, error) {
+func (s *dashboards) DashboardMeetingParticipantShare(ctx context.Context, request operations.DashboardMeetingParticipantShareRequest, security operations.DashboardMeetingParticipantShareSecurity) (*operations.DashboardMeetingParticipantShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/sharing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/sharing", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -617,20 +617,20 @@ func (s *dashboards) DashboardMeetingParticipantShare(ctx context.Context, reque
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 //
 // **Prerequisites:** Business or a higher plan.
-func (s *dashboards) DashboardMeetingParticipants(ctx context.Context, request operations.DashboardMeetingParticipantsRequest) (*operations.DashboardMeetingParticipantsResponse, error) {
+func (s *dashboards) DashboardMeetingParticipants(ctx context.Context, request operations.DashboardMeetingParticipantsRequest, security operations.DashboardMeetingParticipantsSecurity) (*operations.DashboardMeetingParticipantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -682,20 +682,20 @@ func (s *dashboards) DashboardMeetingParticipants(ctx context.Context, request o
 //
 // **Prerequisites:** <br>
 // * Business or a higher plan.
-func (s *dashboards) DashboardMeetingParticipantsQOS(ctx context.Context, request operations.DashboardMeetingParticipantsQOSRequest) (*operations.DashboardMeetingParticipantsQOSResponse, error) {
+func (s *dashboards) DashboardMeetingParticipantsQOS(ctx context.Context, request operations.DashboardMeetingParticipantsQOSRequest, security operations.DashboardMeetingParticipantsQOSSecurity) (*operations.DashboardMeetingParticipantsQOSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/qos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/qos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -747,7 +747,7 @@ func (s *dashboards) DashboardMeetingParticipantsQOS(ctx context.Context, reques
 //
 // **Prerequisites:** <br>
 // * Business or a higher plan.<br><br>
-func (s *dashboards) DashboardMeetings(ctx context.Context, request operations.DashboardMeetingsRequest) (*operations.DashboardMeetingsResponse, error) {
+func (s *dashboards) DashboardMeetings(ctx context.Context, request operations.DashboardMeetingsRequest, security operations.DashboardMeetingsSecurity) (*operations.DashboardMeetingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/meetings"
 
@@ -756,11 +756,11 @@ func (s *dashboards) DashboardMeetings(ctx context.Context, request operations.D
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -810,20 +810,20 @@ func (s *dashboards) DashboardMeetings(ctx context.Context, request operations.D
 //
 // **Prerequisites:**<br>
 // * Business, Education or API Plan with Webinar add-on.
-func (s *dashboards) DashboardWebinarDetail(ctx context.Context, request operations.DashboardWebinarDetailRequest) (*operations.DashboardWebinarDetailResponse, error) {
+func (s *dashboards) DashboardWebinarDetail(ctx context.Context, request operations.DashboardWebinarDetailRequest, security operations.DashboardWebinarDetailSecurity) (*operations.DashboardWebinarDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -875,20 +875,20 @@ func (s *dashboards) DashboardWebinarDetail(ctx context.Context, request operati
 //
 // **Prerequisites:** <br>
 // * Business, Education or API Plan with Zoom Rooms set up.
-func (s *dashboards) DashboardWebinarParticipantQOS(ctx context.Context, request operations.DashboardWebinarParticipantQOSRequest) (*operations.DashboardWebinarParticipantQOSResponse, error) {
+func (s *dashboards) DashboardWebinarParticipantQOS(ctx context.Context, request operations.DashboardWebinarParticipantQOSRequest, security operations.DashboardWebinarParticipantQOSSecurity) (*operations.DashboardWebinarParticipantQOSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/{participantId}/qos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/{participantId}/qos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -940,20 +940,20 @@ func (s *dashboards) DashboardWebinarParticipantQOS(ctx context.Context, request
 //
 // **Prerequisites:**<br>
 // * Business, Education or API Plan with Webinar add-on.
-func (s *dashboards) DashboardWebinarParticipantShare(ctx context.Context, request operations.DashboardWebinarParticipantShareRequest) (*operations.DashboardWebinarParticipantShareResponse, error) {
+func (s *dashboards) DashboardWebinarParticipantShare(ctx context.Context, request operations.DashboardWebinarParticipantShareRequest, security operations.DashboardWebinarParticipantShareSecurity) (*operations.DashboardWebinarParticipantShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/sharing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/sharing", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1005,20 +1005,20 @@ func (s *dashboards) DashboardWebinarParticipantShare(ctx context.Context, reque
 //
 // **Prerequisites:**<br>
 // * Business, Education or API Plan with Webinar add-on.
-func (s *dashboards) DashboardWebinarParticipants(ctx context.Context, request operations.DashboardWebinarParticipantsRequest) (*operations.DashboardWebinarParticipantsResponse, error) {
+func (s *dashboards) DashboardWebinarParticipants(ctx context.Context, request operations.DashboardWebinarParticipantsRequest, security operations.DashboardWebinarParticipantsSecurity) (*operations.DashboardWebinarParticipantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1070,20 +1070,20 @@ func (s *dashboards) DashboardWebinarParticipants(ctx context.Context, request o
 //
 // **Prerequisites:**
 // * Business, Education or API Plan with Webinar add-on.
-func (s *dashboards) DashboardWebinarParticipantsQOS(ctx context.Context, request operations.DashboardWebinarParticipantsQOSRequest) (*operations.DashboardWebinarParticipantsQOSResponse, error) {
+func (s *dashboards) DashboardWebinarParticipantsQOS(ctx context.Context, request operations.DashboardWebinarParticipantsQOSRequest, security operations.DashboardWebinarParticipantsQOSSecurity) (*operations.DashboardWebinarParticipantsQOSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/qos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/qos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1133,7 +1133,7 @@ func (s *dashboards) DashboardWebinarParticipantsQOS(ctx context.Context, reques
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Resource-intensive`<br>
 // **Prerequisites:**<br>
 // * Business, Education or API Plan with Webinar add-on.
-func (s *dashboards) DashboardWebinars(ctx context.Context, request operations.DashboardWebinarsRequest) (*operations.DashboardWebinarsResponse, error) {
+func (s *dashboards) DashboardWebinars(ctx context.Context, request operations.DashboardWebinarsRequest, security operations.DashboardWebinarsSecurity) (*operations.DashboardWebinarsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/webinars"
 
@@ -1142,11 +1142,11 @@ func (s *dashboards) DashboardWebinars(ctx context.Context, request operations.D
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1197,20 +1197,20 @@ func (s *dashboards) DashboardWebinars(ctx context.Context, request operations.D
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`**Prerequisites:**<br>
 //
 // * Business, Education or API Plan with Zoom Rooms set up.
-func (s *dashboards) DashboardZoomRoom(ctx context.Context, request operations.DashboardZoomRoomRequest) (*operations.DashboardZoomRoomResponse, error) {
+func (s *dashboards) DashboardZoomRoom(ctx context.Context, request operations.DashboardZoomRoomRequest, security operations.DashboardZoomRoomSecurity) (*operations.DashboardZoomRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/zoomrooms/{zoomroomId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/zoomrooms/{zoomroomId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1260,7 +1260,7 @@ func (s *dashboards) DashboardZoomRoom(ctx context.Context, request operations.D
 //	**Prerequisites:**<br>
 //
 // * Business, Education or API Plan with Zoom Rooms set up.
-func (s *dashboards) DashboardZoomRoomIssue(ctx context.Context, request operations.DashboardZoomRoomIssueRequest) (*operations.DashboardZoomRoomIssueResponse, error) {
+func (s *dashboards) DashboardZoomRoomIssue(ctx context.Context, request operations.DashboardZoomRoomIssueRequest, security operations.DashboardZoomRoomIssueSecurity) (*operations.DashboardZoomRoomIssueResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/zoomrooms/issues"
 
@@ -1269,11 +1269,11 @@ func (s *dashboards) DashboardZoomRoomIssue(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1322,7 +1322,7 @@ func (s *dashboards) DashboardZoomRoomIssue(ctx context.Context, request operati
 //	**Prerequisites:**<br>
 //
 // * Business, Education or API Plan with Zoom Rooms set up.
-func (s *dashboards) DashboardZoomRooms(ctx context.Context, request operations.DashboardZoomRoomsRequest) (*operations.DashboardZoomRoomsResponse, error) {
+func (s *dashboards) DashboardZoomRooms(ctx context.Context, request operations.DashboardZoomRoomsRequest, security operations.DashboardZoomRoomsSecurity) (*operations.DashboardZoomRoomsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/zoomrooms"
 
@@ -1331,11 +1331,11 @@ func (s *dashboards) DashboardZoomRooms(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1389,7 +1389,7 @@ func (s *dashboards) DashboardZoomRooms(ctx context.Context, request operations.
 // **Rate Limit Label:** `Light`
 func (s *dashboards) GetCallLogMetricsDetails(ctx context.Context, request operations.GetCallLogMetricsDetailsRequest) (*operations.GetCallLogMetricsDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/metrics/call_logs/{call_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/metrics/call_logs/{call_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1447,7 +1447,7 @@ func (s *dashboards) GetCallLogMetricsDetails(ctx context.Context, request opera
 // **Rate Limit Label:** `Light`
 func (s *dashboards) GetCallQoS(ctx context.Context, request operations.GetCallQoSRequest) (*operations.GetCallQoSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/metrics/call_logs/{callId}/qos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/metrics/call_logs/{callId}/qos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1515,7 +1515,7 @@ func (s *dashboards) ListCallLogsMetrics(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1567,7 +1567,7 @@ func (s *dashboards) ListCallLogsMetrics(ctx context.Context, request operations
 // **Scopes:** `dashboard:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
-func (s *dashboards) ListMeetingSatisfaction(ctx context.Context, request operations.ListMeetingSatisfactionRequest) (*operations.ListMeetingSatisfactionResponse, error) {
+func (s *dashboards) ListMeetingSatisfaction(ctx context.Context, request operations.ListMeetingSatisfactionRequest, security operations.ListMeetingSatisfactionSecurity) (*operations.ListMeetingSatisfactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics/client/satisfaction"
 
@@ -1576,11 +1576,11 @@ func (s *dashboards) ListMeetingSatisfaction(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1633,14 +1633,14 @@ func (s *dashboards) ListMeetingSatisfaction(ctx context.Context, request operat
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 func (s *dashboards) ParticipantFeedback(ctx context.Context, request operations.ParticipantFeedbackRequest) (*operations.ParticipantFeedbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/satisfaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/meetings/{meetingId}/participants/satisfaction", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1700,14 +1700,14 @@ func (s *dashboards) ParticipantFeedback(ctx context.Context, request operations
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 func (s *dashboards) ParticipantWebinarFeedback(ctx context.Context, request operations.ParticipantWebinarFeedbackRequest) (*operations.ParticipantWebinarFeedbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/satisfaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/webinars/{webinarId}/participants/satisfaction", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

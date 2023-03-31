@@ -34,9 +34,9 @@ func newPolicies(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Add an Adaptive Policy
 func (s *policies) CreateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyPolicyRequest) (*operations.CreateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *policies) CreateOrganizationAdaptivePolicyPolicy(ctx context.Context, r
 // Delete an Adaptive Policy
 func (s *policies) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyPolicyRequest) (*operations.DeleteOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,14 +125,14 @@ func (s *policies) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Context, r
 // Get policies for all clients with policies
 func (s *policies) GetNetworkPoliciesByClient(ctx context.Context, request operations.GetNetworkPoliciesByClientRequest) (*operations.GetNetworkPoliciesByClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/policies/byClient", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/policies/byClient", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,7 +176,7 @@ func (s *policies) GetNetworkPoliciesByClient(ctx context.Context, request opera
 // List adaptive policies in an organization
 func (s *policies) GetOrganizationAdaptivePolicyPolicies(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPoliciesRequest) (*operations.GetOrganizationAdaptivePolicyPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *policies) GetOrganizationAdaptivePolicyPolicies(ctx context.Context, re
 // Return an adaptive policy
 func (s *policies) GetOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPolicyRequest) (*operations.GetOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -266,9 +266,9 @@ func (s *policies) GetOrganizationAdaptivePolicyPolicy(ctx context.Context, requ
 // Update an Adaptive Policy
 func (s *policies) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyPolicyRequest) (*operations.UpdateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

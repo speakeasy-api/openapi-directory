@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesIDGroupsSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesIDGroupsPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostSpacesIDGroupsRequestBody - Group
@@ -23,10 +17,10 @@ type PostSpacesIDGroupsRequestBody struct {
 }
 
 type PostSpacesIDGroupsRequest struct {
-	PathParams PostSpacesIDGroupsPathParams
 	// Group
-	Request  PostSpacesIDGroupsRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesIDGroupsSecurity
+	RequestBody PostSpacesIDGroupsRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostSpacesIDGroups201ApplicationJSON - Id of company entity created

@@ -24,7 +24,6 @@ pkg/models/operations/postwebhooksv3appidsubscriptionsbatchupdateupdatebatch.go
 pkg/models/operations/postwebhooksv3appidsubscriptionscreate.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
-pkg/models/shared/security.go
 pkg/models/shared/settingsresponse.go
 pkg/models/shared/throttlingsettings.go
 pkg/models/shared/settingschangerequest.go

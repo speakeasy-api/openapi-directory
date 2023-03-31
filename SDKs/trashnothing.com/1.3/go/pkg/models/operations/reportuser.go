@@ -21,10 +21,6 @@ type ReportUserRequestBody struct {
 	UserID *string `multipartForm:"name=user_id"`
 }
 
-type ReportUserRequest struct {
-	Request *ReportUserRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type ReportUserResponse struct {
 	ContentType string
 	StatusCode  int

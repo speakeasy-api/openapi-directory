@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveADeclinedTransactionPathParams struct {
-	DeclinedTransactionID string `pathParam:"style=simple,explode=false,name=declined_transaction_id"`
-}
-
 type RetrieveADeclinedTransactionRequest struct {
-	PathParams RetrieveADeclinedTransactionPathParams
+	DeclinedTransactionID string `pathParam:"style=simple,explode=false,name=declined_transaction_id"`
 }
 
 type RetrieveADeclinedTransactionDefaultApplicationJSON13StatusEnum string

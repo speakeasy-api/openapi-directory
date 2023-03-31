@@ -178,6 +178,7 @@ pkg/models/shared/adddimensiongroupresponse.go
 pkg/models/shared/adddatasourceresponse.go
 pkg/models/shared/addchartresponse.go
 pkg/models/shared/addbandingresponse.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchupdatespreadsheetrequest.go
 pkg/models/shared/request.go
 pkg/models/shared/updatespreadsheetpropertiesrequest.go
@@ -250,9 +251,7 @@ pkg/models/shared/adddatasourcerequest.go
 pkg/models/shared/addconditionalformatrulerequest.go
 pkg/models/shared/addchartrequest.go
 pkg/models/shared/addbandingrequest.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/searchdevelopermetadataresponse.go
 pkg/models/shared/matcheddevelopermetadata.go
 pkg/models/shared/searchdevelopermetadatarequest.go

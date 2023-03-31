@@ -8,18 +8,13 @@ import (
 )
 
 type CreateLeaveApplicationSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateLeaveApplicationHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateLeaveApplicationRequest struct {
-	Headers  CreateLeaveApplicationHeaders
-	Request  []shared.LeaveApplicationInput `request:"mediaType=application/json"`
-	Security CreateLeaveApplicationSecurity
+	RequestBody []shared.LeaveApplicationInput `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type CreateLeaveApplicationResponse struct {

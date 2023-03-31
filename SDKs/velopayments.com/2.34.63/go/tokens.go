@@ -39,9 +39,9 @@ func newTokens(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // <p>It will be revoked and a new one issued</p>
 func (s *tokens) ResendToken(ctx context.Context, request operations.ResendTokenRequest) (*operations.ResendTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/tokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/tokens", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResendTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

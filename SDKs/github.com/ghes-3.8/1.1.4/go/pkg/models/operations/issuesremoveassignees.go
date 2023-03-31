@@ -7,23 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesRemoveAssigneesPathParams struct {
-	// The number that identifies the issue.
-	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesRemoveAssigneesRequestBody struct {
 	// Usernames of assignees to remove from an issue. _NOTE: Only users with push access can remove assignees from an issue. Assignees are silently ignored otherwise._
 	Assignees []string `json:"assignees,omitempty"`
 }
 
 type IssuesRemoveAssigneesRequest struct {
-	PathParams IssuesRemoveAssigneesPathParams
-	Request    *IssuesRemoveAssigneesRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesRemoveAssigneesRequestBody `request:"mediaType=application/json"`
+	// The number that identifies the issue.
+	IssueNumber int64 `pathParam:"style=simple,explode=false,name=issue_number"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesRemoveAssigneesResponse struct {

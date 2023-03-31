@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditEmployeePathParams struct {
+type EditEmployeeRequest struct {
+	EmployeeEditRequest shared.EmployeeEditRequest `request:"mediaType=application/json"`
 	// The unique identifier of the employee in Noyo
 	EmployeeID string `pathParam:"style=simple,explode=false,name=employee_id"`
 	// The current version identifier of the employee
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type EditEmployeeRequest struct {
-	PathParams EditEmployeePathParams
-	Request    shared.EmployeeEditRequest `request:"mediaType=application/json"`
 }
 
 type EditEmployeeResponse struct {

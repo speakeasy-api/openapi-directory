@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type RunsForRunPathParams struct {
-	// The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
-	RunRef string `pathParam:"style=simple,explode=false,name=run_ref"`
-}
-
 type RunsForRunExpandEnum string
 
 const (
@@ -44,7 +39,7 @@ func (e *RunsForRunExpandEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RunsForRunQueryParams struct {
+type RunsForRunRequest struct {
 	// Date of the request. (optional - defaults to now)
 	DateUtc *time.Time `queryParam:"style=form,explode=true,name=date_utc"`
 	// Your developer id
@@ -53,15 +48,12 @@ type RunsForRunQueryParams struct {
 	Expand []RunsForRunExpandEnum `queryParam:"style=form,explode=true,name=expand"`
 	// Indicates if geopath data will be returned (default = false)
 	IncludeGeopath *bool `queryParam:"style=form,explode=true,name=include_geopath"`
+	// The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
+	RunRef string `pathParam:"style=simple,explode=false,name=run_ref"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RunsForRunRequest struct {
-	PathParams  RunsForRunPathParams
-	QueryParams RunsForRunQueryParams
 }
 
 type RunsForRunResponse struct {

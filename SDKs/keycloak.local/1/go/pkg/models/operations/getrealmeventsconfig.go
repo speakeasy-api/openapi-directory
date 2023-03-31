@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmEventsConfigPathParams struct {
+type GetRealmEventsConfigRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmEventsConfigRequest struct {
-	PathParams GetRealmEventsConfigPathParams
 }
 
 type GetRealmEventsConfigResponse struct {

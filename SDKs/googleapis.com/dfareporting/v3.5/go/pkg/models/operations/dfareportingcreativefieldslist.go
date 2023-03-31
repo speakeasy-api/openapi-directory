@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingCreativeFieldsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingCreativeFieldsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingCreativeFieldsListSortFieldEnum - Field by which to sort the list.
@@ -67,7 +62,7 @@ func (e *DfareportingCreativeFieldsListSortOrderEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DfareportingCreativeFieldsListQueryParams struct {
+type DfareportingCreativeFieldsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -92,6 +87,8 @@ type DfareportingCreativeFieldsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Allows searching for creative fields by name or ID. Wildcards (*) are allowed. For example, "creativefield*2015" will return creative fields with names like "creativefield June 2015", "creativefield April 2015", or simply "creativefield 2015". Most of the searches also add wild-cards implicitly at the start and the end of the search string. For example, a search string of "creativefield" will match creative fields with the name "my creativefield", "creativefield 2015", or simply "creativefield".
@@ -104,12 +101,6 @@ type DfareportingCreativeFieldsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingCreativeFieldsListRequest struct {
-	PathParams  DfareportingCreativeFieldsListPathParams
-	QueryParams DfareportingCreativeFieldsListQueryParams
-	Security    DfareportingCreativeFieldsListSecurity
 }
 
 type DfareportingCreativeFieldsListResponse struct {

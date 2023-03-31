@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmClientsInitialAccessPathParams struct {
+type PostRealmClientsInitialAccessRequest struct {
+	ClientInitialAccessCreatePresentation shared.ClientInitialAccessCreatePresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClientsInitialAccessRequest struct {
-	PathParams PostRealmClientsInitialAccessPathParams
-	Request    shared.ClientInitialAccessCreatePresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmClientsInitialAccessResponse struct {

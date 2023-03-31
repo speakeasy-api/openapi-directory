@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkClientPolicyPathParams struct {
+type GetNetworkClientPolicyRequest struct {
 	ClientID  string `pathParam:"style=simple,explode=false,name=clientId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkClientPolicyRequest struct {
-	PathParams GetNetworkClientPolicyPathParams
 }
 
 type GetNetworkClientPolicyResponse struct {

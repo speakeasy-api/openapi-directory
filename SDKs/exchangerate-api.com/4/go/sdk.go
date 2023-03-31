@@ -95,7 +95,7 @@ func New(opts ...SDKOption) *SDK {
 // GetLatestBaseCurrency - Returns latest exchange rates in parameter-supplied base currency.
 func (s *SDK) GetLatestBaseCurrency(ctx context.Context, request operations.GetLatestBaseCurrencyRequest) (*operations.GetLatestBaseCurrencyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/latest/{base_currency}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/latest/{base_currency}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

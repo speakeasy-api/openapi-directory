@@ -8,16 +8,13 @@ import (
 )
 
 type DeleteAccountAccessConsentsConsentIDSecurity struct {
-	ClientCredentialsToken shared.SchemeClientCredentialsToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
+	ClientCredentialsToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
-type DeleteAccountAccessConsentsConsentIDPathParams struct {
+type DeleteAccountAccessConsentsConsentIDRequest struct {
 	// ConsentId
 	ConsentID string `pathParam:"style=simple,explode=false,name=consentId"`
-}
-
-type DeleteAccountAccessConsentsConsentIDHeaders struct {
 	// The unique id of the sandbox to be used
 	SandboxID string `header:"style=simple,explode=false,name=sandbox-id"`
 	// Indicates the user-agent that the PSU is using.
@@ -30,12 +27,6 @@ type DeleteAccountAccessConsentsConsentIDHeaders struct {
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type DeleteAccountAccessConsentsConsentIDRequest struct {
-	PathParams DeleteAccountAccessConsentsConsentIDPathParams
-	Headers    DeleteAccountAccessConsentsConsentIDHeaders
-	Security   DeleteAccountAccessConsentsConsentIDSecurity
 }
 
 type DeleteAccountAccessConsentsConsentIDResponse struct {

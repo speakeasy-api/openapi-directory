@@ -11,17 +11,12 @@ import (
 )
 
 type GetMeFollowersSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMeFollowersQueryParams struct {
-	// Number of results to return in the collection.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetMeFollowersRequest struct {
-	QueryParams GetMeFollowersQueryParams
-	Security    GetMeFollowersSecurity
+	// Number of results to return in the collection.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetMeFollowers200ApplicationJSONType string

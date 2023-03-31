@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeleteDeploymentPathParams struct {
+type ReposDeleteDeploymentRequest struct {
 	// deployment_id parameter
 	DeploymentID int64 `pathParam:"style=simple,explode=false,name=deployment_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteDeploymentRequest struct {
-	PathParams ReposDeleteDeploymentPathParams
 }
 
 type ReposDeleteDeploymentResponse struct {

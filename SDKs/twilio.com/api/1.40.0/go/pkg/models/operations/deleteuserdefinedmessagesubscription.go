@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUserDefinedMessageSubscriptionServerList = []string{
@@ -12,22 +11,17 @@ var DeleteUserDefinedMessageSubscriptionServerList = []string{
 }
 
 type DeleteUserDefinedMessageSubscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUserDefinedMessageSubscriptionPathParams struct {
+type DeleteUserDefinedMessageSubscriptionRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that subscribed to the User Defined Messages.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Message Subscription is associated with. This refers to the Call SID that is producing the User Defined Messages.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 	// The SID that uniquely identifies this User Defined Message Subscription.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteUserDefinedMessageSubscriptionRequest struct {
-	PathParams DeleteUserDefinedMessageSubscriptionPathParams
-	Security   DeleteUserDefinedMessageSubscriptionSecurity
-	ServerURL  *string
 }
 
 type DeleteUserDefinedMessageSubscriptionResponse struct {

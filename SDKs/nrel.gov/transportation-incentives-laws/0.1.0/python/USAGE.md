@@ -4,18 +4,26 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.GetV1CategoryListOutputFormatRequest(
-    path_params=operations.GetV1CategoryListOutputFormatPathParams(
-        output_format="xml",
-    ),
-    query_params=operations.GetV1CategoryListOutputFormatQueryParams(
-        api_key="beatae",
-        type="user",
-    ),
+
+
+req = operations.TransportationIncentivesLawsAllRequest(
+    api_key="corrupti",
+    expired=False,
+    incentive_type="provident",
+    jurisdiction="distinctio",
+    keyword="quibusdam",
+    law_type="unde",
+    limit=857946,
+    local=False,
+    output_format="xml",
+    poc=False,
+    recent=False,
+    regulation_type="illum",
+    technology="vel",
+    user_type="error",
 )
     
-res = s.get_v1_category_list_output_format_(req)
+res = s.transportation_incentives_laws_all(req)
 
 if res.body is not None:
     # handle response

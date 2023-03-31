@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMemberRolesPathParams struct {
+type GetMemberRolesRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	UserID      string `pathParam:"style=simple,explode=false,name=user_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetMemberRolesRequest struct {
-	PathParams GetMemberRolesPathParams
 }
 
 type GetMemberRolesResponse struct {

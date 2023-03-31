@@ -36,16 +36,16 @@ func newClass(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // ActivateClass - Activate the class
 // Mark the class as `active`. This is mainly used for classes synchronized from Clever that are initially with an `inactive` state and hidden in the UI.
-func (s *class) ActivateClass(ctx context.Context, request operations.ActivateClassRequest) (*operations.ActivateClassResponse, error) {
+func (s *class) ActivateClass(ctx context.Context, request operations.ActivateClassRequest, security operations.ActivateClassSecurity) (*operations.ActivateClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/activate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -95,16 +95,16 @@ func (s *class) ActivateClass(ctx context.Context, request operations.ActivateCl
 // Only users that are part of your Organization can be enrolled in a class of this same Organization.
 //
 // When enrolling a user in the class, Flat will automatically add this user to the corresponding Class group, based on this role in the Organization.
-func (s *class) AddClassUser(ctx context.Context, request operations.AddClassUserRequest) (*operations.AddClassUserResponse, error) {
+func (s *class) AddClassUser(ctx context.Context, request operations.AddClassUserRequest, security operations.AddClassUserSecurity) (*operations.AddClassUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/users/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/users/{user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,16 +141,16 @@ func (s *class) AddClassUser(ctx context.Context, request operations.AddClassUse
 
 // ArchiveAssignment - Archive the assignment
 // Archive the assignment
-func (s *class) ArchiveAssignment(ctx context.Context, request operations.ArchiveAssignmentRequest) (*operations.ArchiveAssignmentResponse, error) {
+func (s *class) ArchiveAssignment(ctx context.Context, request operations.ArchiveAssignmentRequest, security operations.ArchiveAssignmentSecurity) (*operations.ArchiveAssignmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -196,16 +196,16 @@ func (s *class) ArchiveAssignment(ctx context.Context, request operations.Archiv
 
 // ArchiveClass - Archive the class
 // Mark the class as `archived`. When this course is synchronized with another app, like Google Classroom, this state will be automatically be updated.
-func (s *class) ArchiveClass(ctx context.Context, request operations.ArchiveClassRequest) (*operations.ArchiveClassResponse, error) {
+func (s *class) ArchiveClass(ctx context.Context, request operations.ArchiveClassRequest, security operations.ArchiveClassSecurity) (*operations.ArchiveClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -255,11 +255,11 @@ func (s *class) ArchiveClass(ctx context.Context, request operations.ArchiveClas
 // If the original assignment has a due date in the past, this new assingment will be created without a due date.
 //
 // If the new class is synchronized with an external app (e.g. Google Classroom), the copied assignment will also be posted on the external app.
-func (s *class) CopyAssignment(ctx context.Context, request operations.CopyAssignmentRequest) (*operations.CopyAssignmentResponse, error) {
+func (s *class) CopyAssignment(ctx context.Context, request operations.CopyAssignmentRequest, security operations.CopyAssignmentSecurity) (*operations.CopyAssignmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/copy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/copy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignmentCopy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -274,7 +274,7 @@ func (s *class) CopyAssignment(ctx context.Context, request operations.CopyAssig
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -322,11 +322,11 @@ func (s *class) CopyAssignment(ctx context.Context, request operations.CopyAssig
 // Use this method as a teacher to create and post a new assignment to a class.
 //
 // If the class is synchronized with Google Classroom, the assignment will be automatically posted to your Classroom course.
-func (s *class) CreateAssignment(ctx context.Context, request operations.CreateAssignmentRequest) (*operations.CreateAssignmentResponse, error) {
+func (s *class) CreateAssignment(ctx context.Context, request operations.CreateAssignmentRequest, security operations.CreateAssignmentSecurity) (*operations.CreateAssignmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignmentCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,7 +338,7 @@ func (s *class) CreateAssignment(ctx context.Context, request operations.CreateA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,7 +390,7 @@ func (s *class) CreateAssignment(ctx context.Context, request operations.CreateA
 // If the classsroom is synchronized with another application like Google Classroom, some of the meta information will automatically be updated.
 //
 // You can add users to this class using `PUT /classes/{class}/users/{user}`, they will automatically added to the group based on their role on Flat. Users can also enroll themselves to this class using `POST /classes/enroll/{enrollmentCode}` and the `enrollmentCode` returned in the `ClassDetails` response.
-func (s *class) CreateClass(ctx context.Context, request operations.CreateClassRequest) (*operations.CreateClassResponse, error) {
+func (s *class) CreateClass(ctx context.Context, request shared.ClassCreation, security operations.CreateClassSecurity) (*operations.CreateClassResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/classes"
 
@@ -409,7 +409,7 @@ func (s *class) CreateClass(ctx context.Context, request operations.CreateClassR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -459,11 +459,11 @@ func (s *class) CreateClass(ctx context.Context, request operations.CreateClassR
 // Use this method as a student to create, update and submit a submission related to an assignment.
 // Students can only set `attachments` and `submit`.
 // Teachers can use `PUT /classes/{class}/assignments/{assignment}/submissions/{submission}` to update a submission by id.
-func (s *class) CreateSubmission(ctx context.Context, request operations.CreateSubmissionRequest) (*operations.CreateSubmissionResponse, error) {
+func (s *class) CreateSubmission(ctx context.Context, request operations.CreateSubmissionRequest, security operations.CreateSubmissionSecurity) (*operations.CreateSubmissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignmentSubmissionUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -478,7 +478,7 @@ func (s *class) CreateSubmission(ctx context.Context, request operations.CreateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -526,16 +526,16 @@ func (s *class) CreateSubmission(ctx context.Context, request operations.CreateS
 // This method can be used by a teacher to remove a user from the class, or by a student to leave the classroom.
 //
 // Warning: Removing a user from the class will remove the associated resources, including the submissions and feedback related to these submissions.
-func (s *class) DeleteClassUser(ctx context.Context, request operations.DeleteClassUserRequest) (*operations.DeleteClassUserResponse, error) {
+func (s *class) DeleteClassUser(ctx context.Context, request operations.DeleteClassUserRequest, security operations.DeleteClassUserSecurity) (*operations.DeleteClassUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/users/{user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/users/{user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -572,16 +572,16 @@ func (s *class) DeleteClassUser(ctx context.Context, request operations.DeleteCl
 
 // DeleteSubmission - Delete a submission
 // Use this method as a teacher to delete a submission and allow student to start over the assignment
-func (s *class) DeleteSubmission(ctx context.Context, request operations.DeleteSubmissionRequest) (*operations.DeleteSubmissionResponse, error) {
+func (s *class) DeleteSubmission(ctx context.Context, request operations.DeleteSubmissionRequest, security operations.DeleteSubmissionSecurity) (*operations.DeleteSubmissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -617,16 +617,16 @@ func (s *class) DeleteSubmission(ctx context.Context, request operations.DeleteS
 }
 
 // DeleteSubmissionComment - Delete a feedback comment to a submission
-func (s *class) DeleteSubmissionComment(ctx context.Context, request operations.DeleteSubmissionCommentRequest) (*operations.DeleteSubmissionCommentResponse, error) {
+func (s *class) DeleteSubmissionComment(ctx context.Context, request operations.DeleteSubmissionCommentRequest, security operations.DeleteSubmissionCommentSecurity) (*operations.DeleteSubmissionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -664,11 +664,11 @@ func (s *class) DeleteSubmissionComment(ctx context.Context, request operations.
 // EditSubmission - Edit a submission
 // Use this method as a teacher to update the different submission and give feedback.
 // Teachers can only set `return`, `draftGrade` and `grade`
-func (s *class) EditSubmission(ctx context.Context, request operations.EditSubmissionRequest) (*operations.EditSubmissionResponse, error) {
+func (s *class) EditSubmission(ctx context.Context, request operations.EditSubmissionRequest, security operations.EditSubmissionSecurity) (*operations.EditSubmissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignmentSubmissionUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -683,7 +683,7 @@ func (s *class) EditSubmission(ctx context.Context, request operations.EditSubmi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -731,16 +731,16 @@ func (s *class) EditSubmission(ctx context.Context, request operations.EditSubmi
 // Use this method to join a class using an enrollment code given one of the teacher of this class. This code is also available in the `ClassDetails` returned to the teachers when creating the class or listing / fetching a specific class.
 //
 // Flat will automatically add the user to the corresponding class group based on this role in the organization.
-func (s *class) EnrollClass(ctx context.Context, request operations.EnrollClassRequest) (*operations.EnrollClassResponse, error) {
+func (s *class) EnrollClass(ctx context.Context, request operations.EnrollClassRequest, security operations.EnrollClassSecurity) (*operations.EnrollClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/enroll/{enrollmentCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/enroll/{enrollmentCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -786,16 +786,16 @@ func (s *class) EnrollClass(ctx context.Context, request operations.EnrollClassR
 
 // ExportSubmissionsReviewsAsCsv - CSV Grades exports
 // Export list of submissions grades to a CSV file
-func (s *class) ExportSubmissionsReviewsAsCsv(ctx context.Context, request operations.ExportSubmissionsReviewsAsCsvRequest) (*operations.ExportSubmissionsReviewsAsCsvResponse, error) {
+func (s *class) ExportSubmissionsReviewsAsCsv(ctx context.Context, request operations.ExportSubmissionsReviewsAsCsvRequest, security operations.ExportSubmissionsReviewsAsCsvSecurity) (*operations.ExportSubmissionsReviewsAsCsvResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/csv", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/csv", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -841,16 +841,16 @@ func (s *class) ExportSubmissionsReviewsAsCsv(ctx context.Context, request opera
 
 // ExportSubmissionsReviewsAsExcel - Excel Grades exports
 // Export list of submissions grades to an Excel file
-func (s *class) ExportSubmissionsReviewsAsExcel(ctx context.Context, request operations.ExportSubmissionsReviewsAsExcelRequest) (*operations.ExportSubmissionsReviewsAsExcelResponse, error) {
+func (s *class) ExportSubmissionsReviewsAsExcel(ctx context.Context, request operations.ExportSubmissionsReviewsAsExcelRequest, security operations.ExportSubmissionsReviewsAsExcelSecurity) (*operations.ExportSubmissionsReviewsAsExcelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/excel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/excel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -898,11 +898,11 @@ func (s *class) ExportSubmissionsReviewsAsExcel(ctx context.Context, request ope
 // This API call will make a copy of the last revision of the specified score and create a new score. The copy of the score will have a privacy set to `private`.
 //
 // When using a [Flat for Education](https://flat.io/edu) account, the inline and contextualized comments will be accessible in the child document.
-func (s *class) ForkScore(ctx context.Context, request operations.ForkScoreRequest) (*operations.ForkScoreResponse, error) {
+func (s *class) ForkScore(ctx context.Context, request operations.ForkScoreRequest, security operations.ForkScoreSecurity) (*operations.ForkScoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/fork", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/fork", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScoreFork", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -917,11 +917,11 @@ func (s *class) ForkScore(ctx context.Context, request operations.ForkScoreReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -972,16 +972,16 @@ func (s *class) ForkScore(ctx context.Context, request operations.ForkScoreReque
 }
 
 // GetClass - Get the details of a single class
-func (s *class) GetClass(ctx context.Context, request operations.GetClassRequest) (*operations.GetClassResponse, error) {
+func (s *class) GetClass(ctx context.Context, request operations.GetClassRequest, security operations.GetClassSecurity) (*operations.GetClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1027,16 +1027,16 @@ func (s *class) GetClass(ctx context.Context, request operations.GetClassRequest
 
 // GetScoreSubmissions - List submissions related to the score
 // This API call will list the different assignments submissions where the score is attached. This method can be used by anyone that are part of the organization and have at least read access to the document.
-func (s *class) GetScoreSubmissions(ctx context.Context, request operations.GetScoreSubmissionsRequest) (*operations.GetScoreSubmissionsResponse, error) {
+func (s *class) GetScoreSubmissions(ctx context.Context, request operations.GetScoreSubmissionsRequest, security operations.GetScoreSubmissionsSecurity) (*operations.GetScoreSubmissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/submissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scores/{score}/submissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1081,16 +1081,16 @@ func (s *class) GetScoreSubmissions(ctx context.Context, request operations.GetS
 }
 
 // GetSubmission - Get a student submission
-func (s *class) GetSubmission(ctx context.Context, request operations.GetSubmissionRequest) (*operations.GetSubmissionResponse, error) {
+func (s *class) GetSubmission(ctx context.Context, request operations.GetSubmissionRequest, security operations.GetSubmissionSecurity) (*operations.GetSubmissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1135,16 +1135,16 @@ func (s *class) GetSubmission(ctx context.Context, request operations.GetSubmiss
 }
 
 // GetSubmissionComments - List the feedback comments of a submission
-func (s *class) GetSubmissionComments(ctx context.Context, request operations.GetSubmissionCommentsRequest) (*operations.GetSubmissionCommentsResponse, error) {
+func (s *class) GetSubmissionComments(ctx context.Context, request operations.GetSubmissionCommentsRequest, security operations.GetSubmissionCommentsSecurity) (*operations.GetSubmissionCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1194,16 +1194,16 @@ func (s *class) GetSubmissionComments(ctx context.Context, request operations.Ge
 
 // GetSubmissionHistory - Get the history of the submission
 // For teachers only. Returns a detailed history of the submission. This currently includes state and grade histories.
-func (s *class) GetSubmissionHistory(ctx context.Context, request operations.GetSubmissionHistoryRequest) (*operations.GetSubmissionHistoryResponse, error) {
+func (s *class) GetSubmissionHistory(ctx context.Context, request operations.GetSubmissionHistoryRequest, security operations.GetSubmissionHistorySecurity) (*operations.GetSubmissionHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1252,16 +1252,16 @@ func (s *class) GetSubmissionHistory(ctx context.Context, request operations.Get
 }
 
 // GetSubmissions - List the students' submissions
-func (s *class) GetSubmissions(ctx context.Context, request operations.GetSubmissionsRequest) (*operations.GetSubmissionsResponse, error) {
+func (s *class) GetSubmissions(ctx context.Context, request operations.GetSubmissionsRequest, security operations.GetSubmissionsSecurity) (*operations.GetSubmissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1306,16 +1306,16 @@ func (s *class) GetSubmissions(ctx context.Context, request operations.GetSubmis
 }
 
 // ListAssignments - Assignments listing
-func (s *class) ListAssignments(ctx context.Context, request operations.ListAssignmentsRequest) (*operations.ListAssignmentsResponse, error) {
+func (s *class) ListAssignments(ctx context.Context, request operations.ListAssignmentsRequest, security operations.ListAssignmentsSecurity) (*operations.ListAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1361,16 +1361,16 @@ func (s *class) ListAssignments(ctx context.Context, request operations.ListAssi
 
 // ListClassStudentSubmissions - List the submissions for a student
 // Use this method as a teacher to list all the assignment submissions sent by a student of the class
-func (s *class) ListClassStudentSubmissions(ctx context.Context, request operations.ListClassStudentSubmissionsRequest) (*operations.ListClassStudentSubmissionsResponse, error) {
+func (s *class) ListClassStudentSubmissions(ctx context.Context, request operations.ListClassStudentSubmissionsRequest, security operations.ListClassStudentSubmissionsSecurity) (*operations.ListClassStudentSubmissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/students/{user}/submissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/students/{user}/submissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1415,7 +1415,7 @@ func (s *class) ListClassStudentSubmissions(ctx context.Context, request operati
 }
 
 // ListClasses - List the classes available for the current user
-func (s *class) ListClasses(ctx context.Context, request operations.ListClassesRequest) (*operations.ListClassesResponse, error) {
+func (s *class) ListClasses(ctx context.Context, request operations.ListClassesRequest, security operations.ListClassesSecurity) (*operations.ListClassesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/classes"
 
@@ -1424,11 +1424,11 @@ func (s *class) ListClasses(ctx context.Context, request operations.ListClassesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1473,11 +1473,11 @@ func (s *class) ListClasses(ctx context.Context, request operations.ListClassesR
 }
 
 // PostSubmissionComment - Add a feedback comment to a submission
-func (s *class) PostSubmissionComment(ctx context.Context, request operations.PostSubmissionCommentRequest) (*operations.PostSubmissionCommentResponse, error) {
+func (s *class) PostSubmissionComment(ctx context.Context, request operations.PostSubmissionCommentRequest, security operations.PostSubmissionCommentSecurity) (*operations.PostSubmissionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignmentSubmissionCommentCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1492,7 +1492,7 @@ func (s *class) PostSubmissionComment(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1542,16 +1542,16 @@ func (s *class) PostSubmissionComment(ctx context.Context, request operations.Po
 
 // UnarchiveAssignment - Unarchive the assignment.
 // Mark the assignment as `active`.
-func (s *class) UnarchiveAssignment(ctx context.Context, request operations.UnarchiveAssignmentRequest) (*operations.UnarchiveAssignmentResponse, error) {
+func (s *class) UnarchiveAssignment(ctx context.Context, request operations.UnarchiveAssignmentRequest, security operations.UnarchiveAssignmentSecurity) (*operations.UnarchiveAssignmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1597,16 +1597,16 @@ func (s *class) UnarchiveAssignment(ctx context.Context, request operations.Unar
 
 // UnarchiveClass - Unarchive the class
 // Mark the class as `active`. When this course is synchronized with another app, like Google Classroom, this state will be automatically be updated.
-func (s *class) UnarchiveClass(ctx context.Context, request operations.UnarchiveClassRequest) (*operations.UnarchiveClassResponse, error) {
+func (s *class) UnarchiveClass(ctx context.Context, request operations.UnarchiveClassRequest, security operations.UnarchiveClassSecurity) (*operations.UnarchiveClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1652,11 +1652,11 @@ func (s *class) UnarchiveClass(ctx context.Context, request operations.Unarchive
 
 // UpdateClass - Update the class
 // Update the meta information of the class
-func (s *class) UpdateClass(ctx context.Context, request operations.UpdateClassRequest) (*operations.UpdateClassResponse, error) {
+func (s *class) UpdateClass(ctx context.Context, request operations.UpdateClassRequest, security operations.UpdateClassSecurity) (*operations.UpdateClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClassUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1668,7 +1668,7 @@ func (s *class) UpdateClass(ctx context.Context, request operations.UpdateClassR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1713,11 +1713,11 @@ func (s *class) UpdateClass(ctx context.Context, request operations.UpdateClassR
 }
 
 // UpdateSubmissionComment - Update a feedback comment to a submission
-func (s *class) UpdateSubmissionComment(ctx context.Context, request operations.UpdateSubmissionCommentRequest) (*operations.UpdateSubmissionCommentResponse, error) {
+func (s *class) UpdateSubmissionComment(ctx context.Context, request operations.UpdateSubmissionCommentRequest, security operations.UpdateSubmissionCommentSecurity) (*operations.UpdateSubmissionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignmentSubmissionCommentCreation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1732,7 +1732,7 @@ func (s *class) UpdateSubmissionComment(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

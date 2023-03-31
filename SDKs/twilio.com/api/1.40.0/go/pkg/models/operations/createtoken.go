@@ -12,12 +12,8 @@ var CreateTokenServerList = []string{
 }
 
 type CreateTokenSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTokenPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTokenCreateTokenRequest struct {
@@ -26,10 +22,9 @@ type CreateTokenCreateTokenRequest struct {
 }
 
 type CreateTokenRequest struct {
-	PathParams CreateTokenPathParams
-	Request    *CreateTokenCreateTokenRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTokenSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                         `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateTokenCreateTokenRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateTokenResponse struct {

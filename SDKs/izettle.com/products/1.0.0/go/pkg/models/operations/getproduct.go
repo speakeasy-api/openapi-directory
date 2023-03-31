@@ -8,22 +8,13 @@ import (
 )
 
 type GetProductSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetProductPathParams struct {
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-	ProductUUID      string `pathParam:"style=simple,explode=false,name=productUuid"`
-}
-
-type GetProductHeaders struct {
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetProductRequest struct {
-	PathParams GetProductPathParams
-	Headers    GetProductHeaders
-	Security   GetProductSecurity
+	IfNoneMatch      *string `header:"style=simple,explode=false,name=If-None-Match"`
+	OrganizationUUID string  `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ProductUUID      string  `pathParam:"style=simple,explode=false,name=productUuid"`
 }
 
 type GetProductResponse struct {

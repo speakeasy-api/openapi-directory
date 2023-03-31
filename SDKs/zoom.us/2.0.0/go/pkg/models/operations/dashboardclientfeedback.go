@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type DashboardClientFeedbackSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DashboardClientFeedbackQueryParams struct {
+type DashboardClientFeedbackRequest struct {
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
 	From types.Date `queryParam:"style=form,explode=true,name=from"`
 	// End date.
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type DashboardClientFeedbackRequest struct {
-	QueryParams DashboardClientFeedbackQueryParams
-	Security    DashboardClientFeedbackSecurity
 }
 
 type DashboardClientFeedback200ApplicationXMLClientFeedbacks struct {

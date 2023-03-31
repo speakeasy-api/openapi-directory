@@ -17,10 +17,6 @@ type PostPortfolioAnalysisConditionalValueAtRiskRequestBody struct {
 	Portfolios []PostPortfolioAnalysisConditionalValueAtRiskRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisConditionalValueAtRiskRequest struct {
-	Request PostPortfolioAnalysisConditionalValueAtRiskRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisConditionalValueAtRisk200ApplicationJSONPortfolios struct {
 	// The conditional value at risk of the portfolio
 	PortfolioConditionalValueAtRisk float64 `json:"portfolioConditionalValueAtRisk"`

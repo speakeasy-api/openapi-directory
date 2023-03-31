@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchUfoSightingsQueryParams struct {
+type SearchUfoSightingsRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -64,10 +64,6 @@ type SearchUfoSightingsQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchUfoSightingsRequest struct {
-	QueryParams SearchUfoSightingsQueryParams
 }
 
 type SearchUfoSightingsResponse struct {

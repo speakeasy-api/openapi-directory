@@ -32,14 +32,10 @@ func (e *ListExternalAccountsStatusInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListExternalAccountsQueryParams struct {
+type ListExternalAccountsRequest struct {
 	Cursor   *string                            `queryParam:"style=form,explode=true,name=cursor"`
 	Limit    *int64                             `queryParam:"style=form,explode=true,name=limit"`
 	StatusIn []ListExternalAccountsStatusInEnum `queryParam:"style=form,explode=true,name=status.in"`
-}
-
-type ListExternalAccountsRequest struct {
-	QueryParams ListExternalAccountsQueryParams
 }
 
 type ListExternalAccountsDefaultApplicationJSON13StatusEnum string

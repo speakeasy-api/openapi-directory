@@ -2,27 +2,15 @@
 
 package shared
 
-type SchemeJwt struct {
-	APIKey string `security:"name=Authorization"`
-}
-
-type SchemeAPIKey struct {
-	APIKey string `security:"name=api_key"`
-}
-
-type SchemeStreamAuthType struct {
-	APIKey string `security:"name=Stream-Auth-Type"`
-}
-
 type SecurityOption1 struct {
-	Jwt            SchemeJwt            `security:"scheme,type=apiKey,subtype=header"`
-	APIKey         SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	StreamAuthType SchemeStreamAuthType `security:"scheme,type=apiKey,subtype=header"`
+	Jwt            string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	APIKey         string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	StreamAuthType string `security:"scheme,type=apiKey,subtype=header,name=Stream-Auth-Type"`
 }
 
 type SecurityOption2 struct {
-	APIKey         SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	StreamAuthType SchemeStreamAuthType `security:"scheme,type=apiKey,subtype=header"`
+	APIKey         string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	StreamAuthType string `security:"scheme,type=apiKey,subtype=header,name=Stream-Auth-Type"`
 }
 
 type Security struct {

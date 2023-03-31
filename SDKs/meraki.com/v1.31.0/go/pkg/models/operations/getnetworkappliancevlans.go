@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceVlansPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkApplianceVlansRequest struct {
-	PathParams GetNetworkApplianceVlansPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkApplianceVlans200ApplicationJSONDhcpHandlingEnum - The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'

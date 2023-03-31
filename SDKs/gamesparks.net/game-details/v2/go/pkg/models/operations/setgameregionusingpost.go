@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetGameRegionUsingPOSTPathParams struct {
+type SetGameRegionUsingPOSTRequest struct {
 	// gameApiKey
 	GameAPIKey string `pathParam:"style=simple,explode=false,name=gameApiKey"`
 	// regionCode
 	RegionCode string `pathParam:"style=simple,explode=false,name=regionCode"`
-}
-
-type SetGameRegionUsingPOSTRequest struct {
-	PathParams SetGameRegionUsingPOSTPathParams
 }
 
 type SetGameRegionUsingPOSTResponse struct {

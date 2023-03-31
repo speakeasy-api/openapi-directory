@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDependentPathParams struct {
+type GetDependentRequest struct {
 	// The unique identifier of the dependent in Noyo
 	DependentID string `pathParam:"style=simple,explode=false,name=dependent_id"`
-}
-
-type GetDependentRequest struct {
-	PathParams GetDependentPathParams
 }
 
 type GetDependentResponse struct {

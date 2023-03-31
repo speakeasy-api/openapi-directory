@@ -8,35 +8,22 @@ import (
 )
 
 type ReferencesAirportsByAirportCodeGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReferencesAirportsByAirportCodeGetPathParams struct {
-	// 3-letter IATA airport code
-	AirportCode string `pathParam:"style=simple,explode=false,name=airportCode"`
-}
-
-type ReferencesAirportsByAirportCodeGetQueryParams struct {
+type ReferencesAirportsByAirportCodeGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Restrict the results to locations with flights operated by LH (false=0, true=1)
 	LHoperated *bool `queryParam:"style=form,explode=true,name=LHoperated"`
+	// 3-letter IATA airport code
+	AirportCode string `pathParam:"style=simple,explode=false,name=airportCode"`
 	// 2-letter ISO 3166-1 language code
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ReferencesAirportsByAirportCodeGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type ReferencesAirportsByAirportCodeGetRequest struct {
-	PathParams  ReferencesAirportsByAirportCodeGetPathParams
-	QueryParams ReferencesAirportsByAirportCodeGetQueryParams
-	Headers     ReferencesAirportsByAirportCodeGetHeaders
-	Security    ReferencesAirportsByAirportCodeGetSecurity
 }
 
 type ReferencesAirportsByAirportCodeGetResponse struct {

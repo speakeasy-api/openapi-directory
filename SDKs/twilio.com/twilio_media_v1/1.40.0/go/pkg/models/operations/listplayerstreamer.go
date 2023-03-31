@@ -12,10 +12,11 @@ var ListPlayerStreamerServerList = []string{
 }
 
 type ListPlayerStreamerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListPlayerStreamerQueryParams struct {
+type ListPlayerStreamerRequest struct {
 	// The sort order of the list by `date_created`. Can be: `asc` (ascending) or `desc` (descending) with `desc` as the default.
 	Order *shared.PlayerStreamerEnumOrderEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -26,12 +27,6 @@ type ListPlayerStreamerQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Status to filter by, with possible values `created`, `started`, `ended`, or `failed`.
 	Status *shared.PlayerStreamerEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListPlayerStreamerRequest struct {
-	QueryParams ListPlayerStreamerQueryParams
-	Security    ListPlayerStreamerSecurity
-	ServerURL   *string
 }
 
 type ListPlayerStreamerListPlayerStreamerResponseMeta struct {

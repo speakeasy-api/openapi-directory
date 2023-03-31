@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulatesAdvancingTheStateOfACardDisputePathParams struct {
-	CardDisputeID string `pathParam:"style=simple,explode=false,name=card_dispute_id"`
-}
-
 type SimulatesAdvancingTheStateOfACardDisputeRequest struct {
-	PathParams SimulatesAdvancingTheStateOfACardDisputePathParams
-	Request    shared.SimulatesAdvancingTheStateOfACardDisputeParameters `request:"mediaType=application/json"`
+	CardDisputeID                                      string                                                    `pathParam:"style=simple,explode=false,name=card_dispute_id"`
+	SimulatesAdvancingTheStateOfACardDisputeParameters shared.SimulatesAdvancingTheStateOfACardDisputeParameters `request:"mediaType=application/json"`
 }
 
 type SimulatesAdvancingTheStateOfACardDisputeDefaultApplicationJSON13StatusEnum string

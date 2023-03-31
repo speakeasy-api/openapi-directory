@@ -8,21 +8,16 @@ import (
 )
 
 type PatchSpacesSpaceIDPersonsIDCallForDocumentSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PatchSpacesSpaceIDPersonsIDCallForDocumentPathParams struct {
+type PatchSpacesSpaceIDPersonsIDCallForDocumentRequest struct {
+	// Infos to invite
+	ModifyCollect shared.ModifyCollect `request:"mediaType=application/json"`
 	// Id of the person
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type PatchSpacesSpaceIDPersonsIDCallForDocumentRequest struct {
-	PathParams PatchSpacesSpaceIDPersonsIDCallForDocumentPathParams
-	// Infos to invite
-	Request  shared.ModifyCollect `request:"mediaType=application/json"`
-	Security PatchSpacesSpaceIDPersonsIDCallForDocumentSecurity
 }
 
 type PatchSpacesSpaceIDPersonsIDCallForDocumentResponse struct {

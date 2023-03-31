@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectCompletionReportForPamPathParams struct {
+type GetProjectCompletionReportForPamRequest struct {
 	// Quote ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetProjectCompletionReportForPamRequest struct {
-	PathParams GetProjectCompletionReportForPamPathParams
 }
 
 type GetProjectCompletionReportForPamResponse struct {

@@ -11,17 +11,12 @@ import (
 )
 
 type GetVehiclesVehicleidSecurity struct {
-	UserAccessToken  *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken1 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken2 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken3 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken4 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-	UserAccessToken5 *shared.SchemeUserAccessToken `security:"scheme,type=oauth2"`
-}
-
-type GetVehiclesVehicleidPathParams struct {
-	// ID of the Vehicle
-	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken2 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken3 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken4 *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken5 *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetVehiclesVehicleidFieldEnum string
@@ -56,17 +51,13 @@ func (e *GetVehiclesVehicleidFieldEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVehiclesVehicleidQueryParams struct {
+type GetVehiclesVehicleidRequest struct {
 	// An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&field[]=location`
 	//
 	// By default, no fields are included and only the Vehicle ID will be returned. Response time may be impacted by which fields you request.
 	Field []GetVehiclesVehicleidFieldEnum `queryParam:"style=form,explode=true,name=field[]"`
-}
-
-type GetVehiclesVehicleidRequest struct {
-	PathParams  GetVehiclesVehicleidPathParams
-	QueryParams GetVehiclesVehicleidQueryParams
-	Security    GetVehiclesVehicleidSecurity
+	// ID of the Vehicle
+	VehicleID string `pathParam:"style=simple,explode=false,name=vehicleId"`
 }
 
 // GetVehiclesVehicleid200ApplicationJSON - Successful

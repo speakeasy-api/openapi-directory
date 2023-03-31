@@ -6,21 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type DashboardWebinarParticipantQOSSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type DashboardWebinarParticipantQOSPathParams struct {
-	// Participant ID.
-	ParticipantID string `pathParam:"style=simple,explode=false,name=participantId"`
-	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardWebinarParticipantQOSTypeEnum - The webinar type.
@@ -47,15 +37,15 @@ func (e *DashboardWebinarParticipantQOSTypeEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DashboardWebinarParticipantQOSQueryParams struct {
+type DashboardWebinarParticipantQOSRequest struct {
+	// Participant ID.
+	ParticipantID string `pathParam:"style=simple,explode=false,name=participantId"`
 	// The webinar type.
 	Type *DashboardWebinarParticipantQOSTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardWebinarParticipantQOSRequest struct {
-	PathParams  DashboardWebinarParticipantQOSPathParams
-	QueryParams DashboardWebinarParticipantQOSQueryParams
-	Security    DashboardWebinarParticipantQOSSecurity
+	// The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+	WebinarID string `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 // DashboardWebinarParticipantQOSParticipantQOSUserQOSAsDeviceFromCrc - QoS metrics on screen shares by a participant who joined the meeting via a Cloud Room Connector.

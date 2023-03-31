@@ -14,31 +14,22 @@ func main() {
     s := sdk.New()
 
     req := operations.CalendarACLDeleteRequest{
-        Security: operations.CalendarACLDeleteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.CalendarACLDeletePathParams{
-            CalendarID: "corrupti",
-            RuleID: "provident",
-        },
-        QueryParams: operations.CalendarACLDeleteQueryParams{
-            Alt: "json",
-            Fields: "distinctio",
-            Key: "quibusdam",
-            OauthToken: "unde",
-            PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "corrupti",
-        },
+        Alt: "json",
+        CalendarID: "corrupti",
+        Fields: "provident",
+        Key: "distinctio",
+        OauthToken: "quibusdam",
+        PrettyPrint: false,
+        QuotaUser: "unde",
+        RuleID: "nulla",
+        UserIP: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.ACL.CalendarACLDelete(ctx, req)
+    res, err := s.ACL.CalendarACLDelete(ctx, req, operations.CalendarACLDeleteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

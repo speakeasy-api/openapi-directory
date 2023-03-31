@@ -9,12 +9,8 @@ import (
 	"time"
 )
 
-type DeferNetworkFirmwareUpgradesStagedEventsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type DeferNetworkFirmwareUpgradesStagedEventsRequest struct {
-	PathParams DeferNetworkFirmwareUpgradesStagedEventsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // DeferNetworkFirmwareUpgradesStagedEvents200ApplicationJSONProductsSwitchNextUpgradeToVersion - Details of the version the device will upgrade to

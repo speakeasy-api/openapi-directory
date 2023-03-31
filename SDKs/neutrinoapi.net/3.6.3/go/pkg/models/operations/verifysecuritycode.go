@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VerifySecurityCodeQueryParams struct {
+type VerifySecurityCodeRequest struct {
 	// If set then enable additional brute-force protection by limiting the number of attempts by the supplied value. This can be set to any unique identifier you would like to limit by, for example a hash of the users email, phone number or IP address. Requests to this API will be ignored after approximately 10 failed verification attempts
 	LimitBy *string `queryParam:"style=form,explode=true,name=limit-by"`
 	// The security code to verify
 	SecurityCode string `queryParam:"style=form,explode=true,name=security-code"`
-}
-
-type VerifySecurityCodeRequest struct {
-	QueryParams VerifySecurityCodeQueryParams
 }
 
 type VerifySecurityCodeResponse struct {

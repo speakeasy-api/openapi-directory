@@ -12,18 +12,13 @@ var FetchServiceServerList = []string{
 }
 
 type FetchServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchServicePathParams struct {
-	// The SID of the Service resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchServiceRequest struct {
-	PathParams FetchServicePathParams
-	Security   FetchServiceSecurity
-	ServerURL  *string
+	// The SID of the Service resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchServiceResponse struct {

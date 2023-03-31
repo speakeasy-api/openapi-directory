@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PutRealmDefaultOptionalClientScopesClientScopeIDPathParams struct {
+type PutRealmDefaultOptionalClientScopesClientScopeIDRequest struct {
 	ClientScopeID string `pathParam:"style=simple,explode=false,name=clientScopeId"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmDefaultOptionalClientScopesClientScopeIDRequest struct {
-	PathParams PutRealmDefaultOptionalClientScopesClientScopeIDPathParams
 }
 
 type PutRealmDefaultOptionalClientScopesClientScopeIDResponse struct {

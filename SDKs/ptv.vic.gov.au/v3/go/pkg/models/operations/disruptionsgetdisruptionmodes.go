@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisruptionsGetDisruptionModesQueryParams struct {
+type DisruptionsGetDisruptionModesRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DisruptionsGetDisruptionModesRequest struct {
-	QueryParams DisruptionsGetDisruptionModesQueryParams
 }
 
 type DisruptionsGetDisruptionModesResponse struct {

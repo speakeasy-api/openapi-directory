@@ -4,50 +4,44 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest(
-    security=operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.OrgpolicyOrganizationsCustomConstraintsCreatePathParams(
-        parent="veritatis",
-    ),
-    query_params=operations.OrgpolicyOrganizationsCustomConstraintsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="dolor",
-        alt="json",
-        callback="mollitia",
-        fields="rerum",
-        key="rem",
-        oauth_token="recusandae",
-        pretty_print=False,
-        quota_user="reprehenderit",
-        upload_type="dolorem",
-        upload_protocol="omnis",
-    ),
-    request=shared.GoogleCloudOrgpolicyV2CustomConstraintInput(
-        action_type="DENY",
-        condition="omnis",
-        description="itaque",
-        display_name="consequuntur",
+    dollar_xgafv="2",
+    google_cloud_orgpolicy_v2_custom_constraint_input=shared.GoogleCloudOrgpolicyV2CustomConstraintInput(
+        action_type="ALLOW",
+        condition="distinctio",
+        description="quibusdam",
+        display_name="unde",
         method_types=[
             "UPDATE",
+            "DELETE",
             "CREATE",
             "UPDATE",
         ],
-        name="ab",
+        name="deserunt",
         resource_types=[
-            "voluptas",
+            "iure",
+            "magnam",
         ],
     ),
+    access_token="debitis",
+    alt="json",
+    callback="delectus",
+    fields_="tempora",
+    key="suscipit",
+    oauth_token="molestiae",
+    parent="minus",
+    pretty_print=False,
+    quota_user="placeat",
+    upload_type="voluptatum",
+    upload_protocol="iusto",
 )
     
-res = s.organizations.orgpolicy_organizations_custom_constraints_create(req)
+res = s.organizations.orgpolicy_organizations_custom_constraints_create(req, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_orgpolicy_v2_custom_constraint is not None:
     # handle response

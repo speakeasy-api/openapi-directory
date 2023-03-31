@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDGroupsGroupIDFoldersFolderIDPathParams struct {
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the group to modify
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum string
 
 const (
@@ -46,9 +37,14 @@ type PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBody struct {
 }
 
 type PatchSpacesIDGroupsGroupIDFoldersFolderIDRequest struct {
-	PathParams PatchSpacesIDGroupsGroupIDFoldersFolderIDPathParams
 	// Group to modify to add folder access
-	Request PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the group to modify
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchSpacesIDGroupsGroupIDFoldersFolderIDResponse struct {

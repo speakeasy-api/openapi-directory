@@ -8,18 +8,13 @@ import (
 )
 
 type GetGroupDetailsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetGroupDetailsPathParams struct {
-	// Unique identifier of a Flat group
-	//
-	Group string `pathParam:"style=simple,explode=false,name=group"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetGroupDetailsRequest struct {
-	PathParams GetGroupDetailsPathParams
-	Security   GetGroupDetailsSecurity
+	// Unique identifier of a Flat group
+	//
+	Group string `pathParam:"style=simple,explode=false,name=group"`
 }
 
 type GetGroupDetailsResponse struct {

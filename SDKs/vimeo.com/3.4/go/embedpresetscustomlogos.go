@@ -33,16 +33,16 @@ func newEmbedPresetsCustomLogos(defaultClient, securityClient HTTPClient, server
 }
 
 // CreateCustomLogo - Add a custom logo
-func (s *embedPresetsCustomLogos) CreateCustomLogo(ctx context.Context, request operations.CreateCustomLogoRequest) (*operations.CreateCustomLogoResponse, error) {
+func (s *embedPresetsCustomLogos) CreateCustomLogo(ctx context.Context, request operations.CreateCustomLogoRequest, security operations.CreateCustomLogoSecurity) (*operations.CreateCustomLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/customlogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/customlogos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *embedPresetsCustomLogos) CreateCustomLogo(ctx context.Context, request 
 }
 
 // CreateCustomLogoAlt1 - Add a custom logo
-func (s *embedPresetsCustomLogos) CreateCustomLogoAlt1(ctx context.Context, request operations.CreateCustomLogoAlt1Request) (*operations.CreateCustomLogoAlt1Response, error) {
+func (s *embedPresetsCustomLogos) CreateCustomLogoAlt1(ctx context.Context) (*operations.CreateCustomLogoAlt1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/customlogos"
 
@@ -96,7 +96,7 @@ func (s *embedPresetsCustomLogos) CreateCustomLogoAlt1(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,7 +143,7 @@ func (s *embedPresetsCustomLogos) CreateCustomLogoAlt1(ctx context.Context, requ
 // GetCustomLogo - Get a specific custom logo
 func (s *embedPresetsCustomLogos) GetCustomLogo(ctx context.Context, request operations.GetCustomLogoRequest) (*operations.GetCustomLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/customlogos/{logo_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/customlogos/{logo_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *embedPresetsCustomLogos) GetCustomLogo(ctx context.Context, request ope
 // GetCustomLogoAlt1 - Get a specific custom logo
 func (s *embedPresetsCustomLogos) GetCustomLogoAlt1(ctx context.Context, request operations.GetCustomLogoAlt1Request) (*operations.GetCustomLogoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/customlogos/{logo_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/customlogos/{logo_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *embedPresetsCustomLogos) GetCustomLogoAlt1(ctx context.Context, request
 // GetCustomLogos - Get all the custom logos that belong to a user
 func (s *embedPresetsCustomLogos) GetCustomLogos(ctx context.Context, request operations.GetCustomLogosRequest) (*operations.GetCustomLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/customlogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/customlogos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

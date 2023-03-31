@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpgradeAgentSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpgradeAgentPathParams struct {
-	// UUID of the agent to update
-	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpgradeAgentRequest struct {
-	PathParams UpgradeAgentPathParams
-	Security   UpgradeAgentSecurity
+	// UUID of the agent to update
+	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
 }
 
 type UpgradeAgentResponse struct {

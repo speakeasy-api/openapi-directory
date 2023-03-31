@@ -11,11 +11,6 @@ var RecordConversationServerList = []string{
 	"https://api.nexmo.com/v1",
 }
 
-type RecordConversationPathParams struct {
-	// Conversation ID
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 // RecordConversationRequestBody - Record Conversation Request Payload Object
 type RecordConversationRequestBody struct {
 	// Recording Action
@@ -31,10 +26,10 @@ type RecordConversationRequestBody struct {
 }
 
 type RecordConversationRequest struct {
-	PathParams RecordConversationPathParams
 	// Record Conversation Request Payload Object
-	Request   *RecordConversationRequestBody `request:"mediaType=application/json"`
-	ServerURL *string
+	RequestBody *RecordConversationRequestBody `request:"mediaType=application/json"`
+	// Conversation ID
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 type RecordConversationResponse struct {

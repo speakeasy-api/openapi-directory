@@ -8,13 +8,13 @@ import (
 )
 
 type GamesSnapshotsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GamesSnapshotsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GamesSnapshotsListSecurity struct {
@@ -22,12 +22,7 @@ type GamesSnapshotsListSecurity struct {
 	Option2 *GamesSnapshotsListSecurityOption2 `security:"option"`
 }
 
-type GamesSnapshotsListPathParams struct {
-	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
-	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
-}
-
-type GamesSnapshotsListQueryParams struct {
+type GamesSnapshotsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type GamesSnapshotsListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The token returned by the previous request.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// A player ID. A value of `me` may be used in place of the authenticated player's ID.
+	PlayerID string `pathParam:"style=simple,explode=false,name=playerId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -56,12 +53,6 @@ type GamesSnapshotsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GamesSnapshotsListRequest struct {
-	PathParams  GamesSnapshotsListPathParams
-	QueryParams GamesSnapshotsListQueryParams
-	Security    GamesSnapshotsListSecurity
 }
 
 type GamesSnapshotsListResponse struct {

@@ -36,14 +36,14 @@ func newProductListPage(defaultClient, securityClient HTTPClient, serverURL, lan
 // Lists the banners registered for a given query. Check the [configuring banners documentation](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4ViKEivLJtJsvpaW0aqIQ5) for a full explanation of the banner feature.
 func (s *productListPage) GetBannersFacets(ctx context.Context, request operations.GetBannersFacetsRequest) (*operations.GetBannersFacetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banners/{facets}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banners/{facets}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,7 +92,7 @@ func (s *productListPage) GetCorrectionSearch(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -134,14 +134,14 @@ func (s *productListPage) GetCorrectionSearch(ctx context.Context, request opera
 // Lists the possible facets for a given query
 func (s *productListPage) GetFacetsFacets(ctx context.Context, request operations.GetFacetsFacetsRequest) (*operations.GetFacetsFacetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/facets/{facets}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/facets/{facets}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -183,14 +183,14 @@ func (s *productListPage) GetFacetsFacets(ctx context.Context, request operation
 // Lists the products for a given query.
 func (s *productListPage) GetProductSearchFacets(ctx context.Context, request operations.GetProductSearchFacetsRequest) (*operations.GetProductSearchFacetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product_search/{facets}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/product_search/{facets}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -239,7 +239,7 @@ func (s *productListPage) GetSearchSuggestions(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -33,11 +33,11 @@ func newShortLinks(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // FirebasedynamiclinksShortLinksCreate - Creates a short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not expire. Repeated calls with the same long Dynamic Link or Dynamic Link information will produce the same short Dynamic Link. The Dynamic Link domain in the request must be owned by requester's Firebase project.
-func (s *shortLinks) FirebasedynamiclinksShortLinksCreate(ctx context.Context, request operations.FirebasedynamiclinksShortLinksCreateRequest) (*operations.FirebasedynamiclinksShortLinksCreateResponse, error) {
+func (s *shortLinks) FirebasedynamiclinksShortLinksCreate(ctx context.Context, request operations.FirebasedynamiclinksShortLinksCreateRequest, security operations.FirebasedynamiclinksShortLinksCreateSecurity) (*operations.FirebasedynamiclinksShortLinksCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/shortLinks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateShortDynamicLinkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *shortLinks) FirebasedynamiclinksShortLinksCreate(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

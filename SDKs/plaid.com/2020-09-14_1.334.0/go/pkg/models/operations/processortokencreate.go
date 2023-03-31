@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ProcessorTokenCreateRequest struct {
-	Request shared.ProcessorTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type ProcessorTokenCreateResponse struct {
 	ContentType string

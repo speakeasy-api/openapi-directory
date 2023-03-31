@@ -105,7 +105,7 @@ func New(opts ...SDKOption) *SDK {
 // DriverDetails - Driver Details
 func (s *SDK) DriverDetails(ctx context.Context, request operations.DriverDetailsRequest) (*operations.DriverDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/driver/{driverid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/driver/{driverid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *SDK) DriverDetails(ctx context.Context, request operations.DriverDetail
 // DriverRaceProjectionsEntryList - Driver Race Projections (Entry List)
 func (s *SDK) DriverRaceProjectionsEntryList(ctx context.Context, request operations.DriverRaceProjectionsEntryListRequest) (*operations.DriverRaceProjectionsEntryListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DriverRaceProjections/{raceid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DriverRaceProjections/{raceid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +193,7 @@ func (s *SDK) DriverRaceProjectionsEntryList(ctx context.Context, request operat
 // Drivers - Drivers
 func (s *SDK) Drivers(ctx context.Context, request operations.DriversRequest) (*operations.DriversResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/drivers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/drivers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +237,7 @@ func (s *SDK) Drivers(ctx context.Context, request operations.DriversRequest) (*
 // RaceResults - Race Results
 func (s *SDK) RaceResults(ctx context.Context, request operations.RaceResultsRequest) (*operations.RaceResultsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/raceresult/{raceid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/raceresult/{raceid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +281,7 @@ func (s *SDK) RaceResults(ctx context.Context, request operations.RaceResultsReq
 // RacesSchedule - Races / Schedule
 func (s *SDK) RacesSchedule(ctx context.Context, request operations.RacesScheduleRequest) (*operations.RacesScheduleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/races/{season}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/races/{season}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,7 +325,7 @@ func (s *SDK) RacesSchedule(ctx context.Context, request operations.RacesSchedul
 // Series - Series
 func (s *SDK) Series(ctx context.Context, request operations.SeriesRequest) (*operations.SeriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/series", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/series", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -49,11 +49,11 @@ func newOauth(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //	}
 //
 // ```
-func (s *oauth) CreateToken(ctx context.Context, request operations.CreateTokenRequest) (*operations.CreateTokenResponse, error) {
+func (s *oauth) CreateToken(ctx context.Context, request operations.CreateTokenRequest, security operations.CreateTokenSecurity) (*operations.CreateTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/token"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,11 +68,11 @@ func (s *oauth) CreateToken(ctx context.Context, request operations.CreateTokenR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,16 +122,16 @@ func (s *oauth) CreateToken(ctx context.Context, request operations.CreateTokenR
 
 // FetchTokenGroups - Get the groups for a token
 // Get the list of groups a token can be used to access.
-func (s *oauth) FetchTokenGroups(ctx context.Context, request operations.FetchTokenGroupsRequest) (*operations.FetchTokenGroupsResponse, error) {
+func (s *oauth) FetchTokenGroups(ctx context.Context, request operations.FetchTokenGroupsRequest, security operations.FetchTokenGroupsSecurity) (*operations.FetchTokenGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth/token/{id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/oauth/token/{id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,7 +181,7 @@ func (s *oauth) FetchTokenGroups(ctx context.Context, request operations.FetchTo
 // Get the organization a token can be used to access.
 func (s *oauth) FetchTokenOrganization(ctx context.Context, request operations.FetchTokenOrganizationRequest) (*operations.FetchTokenOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth/token/{id}/organization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/oauth/token/{id}/organization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

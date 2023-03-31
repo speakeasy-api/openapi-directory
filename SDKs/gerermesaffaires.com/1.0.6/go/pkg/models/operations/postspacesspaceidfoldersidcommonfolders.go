@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDCommonFoldersSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDCommonFoldersPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum string
@@ -58,10 +50,12 @@ type PostSpacesSpaceIDFoldersIDCommonFoldersRequestBody struct {
 }
 
 type PostSpacesSpaceIDFoldersIDCommonFoldersRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDCommonFoldersPathParams
 	// Common Folder to add
-	Request  PostSpacesSpaceIDFoldersIDCommonFoldersRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDCommonFoldersSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDCommonFoldersRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDCommonFolders201ApplicationJSON - Id of folder created

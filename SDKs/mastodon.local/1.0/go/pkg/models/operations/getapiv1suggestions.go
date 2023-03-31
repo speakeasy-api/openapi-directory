@@ -8,17 +8,12 @@ import (
 )
 
 type GetAPIV1SuggestionsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1SuggestionsQueryParams struct {
-	// Maximum number of results to return. Defaults to 40.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1SuggestionsRequest struct {
-	QueryParams GetAPIV1SuggestionsQueryParams
-	Security    GetAPIV1SuggestionsSecurity
+	// Maximum number of results to return. Defaults to 40.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 }
 
 type GetAPIV1SuggestionsResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type TemplatesCreateSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type TemplatesCreatePathParams struct {
-	// Account to apply operations to
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TemplatesCreateRequest struct {
-	PathParams TemplatesCreatePathParams
-	Request    *shared.TemplateRequest `request:"mediaType=application/json"`
-	Security   TemplatesCreateSecurity
+	TemplateRequest *shared.TemplateRequest `request:"mediaType=application/json"`
+	// Account to apply operations to
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type TemplatesCreateResponse struct {

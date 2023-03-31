@@ -15,5 +15,5 @@ pkg/models/operations/fetchuser.go
 pkg/models/operations/updateuser.go
 pkg/models/shared/frontlinev1user.go
 pkg/models/shared/userenumstatetypeenum.go
-pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

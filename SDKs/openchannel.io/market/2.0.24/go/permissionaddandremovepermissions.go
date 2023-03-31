@@ -34,14 +34,14 @@ func newPermissionAddAndRemovePermissions(defaultClient, securityClient HTTPClie
 // DeletePermissionAppsAppID - Removes permission that allows the app to access this user's data
 func (s *permissionAddAndRemovePermissions) DeletePermissionAppsAppID(ctx context.Context, request operations.DeletePermissionAppsAppIDRequest) (*operations.DeletePermissionAppsAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/permission/apps/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/permission/apps/{appId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -75,14 +75,14 @@ func (s *permissionAddAndRemovePermissions) DeletePermissionAppsAppID(ctx contex
 // GetPermissionAppsAppID - Returns permission that allows the app to access this user's data
 func (s *permissionAddAndRemovePermissions) GetPermissionAppsAppID(ctx context.Context, request operations.GetPermissionAppsAppIDRequest) (*operations.GetPermissionAppsAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/permission/apps/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/permission/apps/{appId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,14 +126,14 @@ func (s *permissionAddAndRemovePermissions) GetPermissionAppsAppID(ctx context.C
 // PostPermissionAppsAppID - Adds permission to allow the app to access this user's data
 func (s *permissionAddAndRemovePermissions) PostPermissionAppsAppID(ctx context.Context, request operations.PostPermissionAppsAppIDRequest) (*operations.PostPermissionAppsAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/permission/apps/{appId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/permission/apps/{appId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

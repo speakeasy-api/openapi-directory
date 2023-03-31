@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DestroyWebhookPathParams struct {
+type DestroyWebhookRequest struct {
 	// Unique identifier of the webhook
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DestroyWebhookRequest struct {
-	PathParams DestroyWebhookPathParams
 }
 
 type DestroyWebhookResponse struct {

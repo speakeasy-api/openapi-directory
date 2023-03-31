@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RoleMemberDeleteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RoleMemberDeletePathParams struct {
+type RoleMemberDeleteRequest struct {
 	// Member's ID
 	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
 	// The role ID
 	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
-}
-
-type RoleMemberDeleteRequest struct {
-	PathParams RoleMemberDeletePathParams
-	Security   RoleMemberDeleteSecurity
 }
 
 type RoleMemberDeleteResponse struct {

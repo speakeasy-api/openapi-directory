@@ -8,18 +8,14 @@ import (
 )
 
 type AdminCustomersChromePrintServersBatchDeletePrintServersSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdminCustomersChromePrintServersBatchDeletePrintServersPathParams struct {
-	// Required. The [unique ID](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format: `customers/{customer.id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AdminCustomersChromePrintServersBatchDeletePrintServersQueryParams struct {
+type AdminCustomersChromePrintServersBatchDeletePrintServersRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                    *shared.XgafvEnum                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BatchDeletePrintServersRequest *shared.BatchDeletePrintServersRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type AdminCustomersChromePrintServersBatchDeletePrintServersQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The [unique ID](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format: `customers/{customer.id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type AdminCustomersChromePrintServersBatchDeletePrintServersQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdminCustomersChromePrintServersBatchDeletePrintServersRequest struct {
-	PathParams  AdminCustomersChromePrintServersBatchDeletePrintServersPathParams
-	QueryParams AdminCustomersChromePrintServersBatchDeletePrintServersQueryParams
-	Request     *shared.BatchDeletePrintServersRequest `request:"mediaType=application/json"`
-	Security    AdminCustomersChromePrintServersBatchDeletePrintServersSecurity
 }
 
 type AdminCustomersChromePrintServersBatchDeletePrintServersResponse struct {

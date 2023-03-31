@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VoiceConversionQueryParams struct {
+type VoiceConversionRequest struct {
 	// Set to _true_ if your user replied to the message you sent. Otherwise, set to _false_.
 	// **Note**: for curl, use 0 and 1.
 	Delivered shared.DeliveredEnum `queryParam:"style=form,explode=true,name=delivered"`
@@ -16,10 +16,6 @@ type VoiceConversionQueryParams struct {
 	// When the user completed your call-to-action (e.g. visited your website, installed your app) in [UTC±00:00](https://en.wikipedia.org/wiki/UTC%C2%B100:00) format: _yyyy-MM-dd HH:mm:ss_.
 	// If you do not set this parameter, Nexmo uses the time it receives this request.
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type VoiceConversionRequest struct {
-	QueryParams VoiceConversionQueryParams
 }
 
 type VoiceConversionResponse struct {

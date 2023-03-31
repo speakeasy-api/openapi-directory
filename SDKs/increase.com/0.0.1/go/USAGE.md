@@ -13,17 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
     req := operations.ActionARealTimeDecisionRequest{
-        PathParams: operations.ActionARealTimeDecisionPathParams{
-            RealTimeDecisionID: "corrupti",
-        },
-        Request: shared.ActionARealTimeDecisionParameters{
+        ActionARealTimeDecisionParameters: shared.ActionARealTimeDecisionParameters{
             CardAuthorization: &shared.ActionARealTimeDecisionParametersCardAuthorization{
                 Decision: "decline",
             },
@@ -32,15 +27,16 @@ func main() {
             },
             DigitalWalletToken: &shared.ActionARealTimeDecisionParametersDigitalWalletToken{
                 Approval: &shared.ActionARealTimeDecisionParametersDigitalWalletTokenApproval{
-                    CardProfileID: "quibusdam",
-                    Email: "Ryan.Little62@yahoo.com",
-                    Phone: "1-542-909-2347 x8545",
+                    CardProfileID: "distinctio",
+                    Email: "Leda_Stiedemann@hotmail.com",
+                    Phone: "1-663-528-0923 x478",
                 },
                 Decline: &shared.ActionARealTimeDecisionParametersDigitalWalletTokenDecline{
-                    Reason: "nisi",
+                    Reason: "voluptatum",
                 },
             },
         },
+        RealTimeDecisionID: "iusto",
     }
 
     ctx := context.Background()

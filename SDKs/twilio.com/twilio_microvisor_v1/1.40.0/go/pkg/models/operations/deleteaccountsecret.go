@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteAccountSecretServerList = []string{
@@ -12,18 +11,13 @@ var DeleteAccountSecretServerList = []string{
 }
 
 type DeleteAccountSecretSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteAccountSecretPathParams struct {
-	// The secret key; up to 100 characters.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteAccountSecretRequest struct {
-	PathParams DeleteAccountSecretPathParams
-	Security   DeleteAccountSecretSecurity
-	ServerURL  *string
+	// The secret key; up to 100 characters.
+	Key string `pathParam:"style=simple,explode=false,name=Key"`
 }
 
 type DeleteAccountSecretResponse struct {

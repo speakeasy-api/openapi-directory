@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CollectionsLinkedNodesRelationshipsDeletePathParams struct {
+type CollectionsLinkedNodesRelationshipsDeleteRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsLinkedNodesRelationshipsDeleteRequest struct {
-	PathParams CollectionsLinkedNodesRelationshipsDeletePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CollectionsLinkedNodesRelationshipsDeleteResponse struct {

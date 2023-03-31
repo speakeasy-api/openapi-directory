@@ -43,9 +43,9 @@ func (s *projectAPI) CreateProject(ctx context.Context, request operations.Creat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,14 +124,14 @@ func (s *projectAPI) CreateProject(ctx context.Context, request operations.Creat
 // DeleteIteration - Delete a specific iteration of a project.
 func (s *projectAPI) DeleteIteration(ctx context.Context, request operations.DeleteIterationRequest) (*operations.DeleteIterationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -171,14 +171,14 @@ func (s *projectAPI) DeleteIteration(ctx context.Context, request operations.Del
 // DeleteProject - Delete a specific project.
 func (s *projectAPI) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -218,16 +218,16 @@ func (s *projectAPI) DeleteProject(ctx context.Context, request operations.Delet
 // ExportIteration - Export a trained iteration.
 func (s *projectAPI) ExportIteration(ctx context.Context, request operations.ExportIterationRequest) (*operations.ExportIterationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -306,14 +306,14 @@ func (s *projectAPI) ExportIteration(ctx context.Context, request operations.Exp
 // GetExports - Get the list of exports for a specific iteration.
 func (s *projectAPI) GetExports(ctx context.Context, request operations.GetExportsRequest) (*operations.GetExportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -393,16 +393,16 @@ func (s *projectAPI) GetExports(ctx context.Context, request operations.GetExpor
 // "Cat" tags, then only images tagged with Dog and/or Cat will be returned
 func (s *projectAPI) GetImagePerformanceCount(ctx context.Context, request operations.GetImagePerformanceCountRequest) (*operations.GetImagePerformanceCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/performance/images/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/performance/images/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -485,16 +485,16 @@ func (s *projectAPI) GetImagePerformanceCount(ctx context.Context, request opera
 // "Cat" tags, then only images tagged with Dog and/or Cat will be returned
 func (s *projectAPI) GetImagePerformances(ctx context.Context, request operations.GetImagePerformancesRequest) (*operations.GetImagePerformancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/performance/images", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/performance/images", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -573,14 +573,14 @@ func (s *projectAPI) GetImagePerformances(ctx context.Context, request operation
 // GetIteration - Get a specific iteration.
 func (s *projectAPI) GetIteration(ctx context.Context, request operations.GetIterationRequest) (*operations.GetIterationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -657,16 +657,16 @@ func (s *projectAPI) GetIteration(ctx context.Context, request operations.GetIte
 // GetIterationPerformance - Get detailed performance information about an iteration.
 func (s *projectAPI) GetIterationPerformance(ctx context.Context, request operations.GetIterationPerformanceRequest) (*operations.GetIterationPerformanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/performance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/performance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -745,14 +745,14 @@ func (s *projectAPI) GetIterationPerformance(ctx context.Context, request operat
 // GetIterations - Get iterations for the project.
 func (s *projectAPI) GetIterations(ctx context.Context, request operations.GetIterationsRequest) (*operations.GetIterationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -829,14 +829,14 @@ func (s *projectAPI) GetIterations(ctx context.Context, request operations.GetIt
 // GetProject - Get a specific project.
 func (s *projectAPI) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -920,7 +920,7 @@ func (s *projectAPI) GetProjects(ctx context.Context, request operations.GetProj
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -997,16 +997,16 @@ func (s *projectAPI) GetProjects(ctx context.Context, request operations.GetProj
 // PublishIteration - Publish a specific iteration.
 func (s *projectAPI) PublishIteration(ctx context.Context, request operations.PublishIterationRequest) (*operations.PublishIterationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1085,16 +1085,16 @@ func (s *projectAPI) PublishIteration(ctx context.Context, request operations.Pu
 // TrainProject - Queues project for training.
 func (s *projectAPI) TrainProject(ctx context.Context, request operations.TrainProjectRequest) (*operations.TrainProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/train", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/train", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1173,14 +1173,14 @@ func (s *projectAPI) TrainProject(ctx context.Context, request operations.TrainP
 // UnpublishIteration - Unpublish a specific iteration.
 func (s *projectAPI) UnpublishIteration(ctx context.Context, request operations.UnpublishIterationRequest) (*operations.UnpublishIterationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1220,9 +1220,9 @@ func (s *projectAPI) UnpublishIteration(ctx context.Context, request operations.
 // UpdateIterationForm - Update a specific iteration.
 func (s *projectAPI) UpdateIterationForm(ctx context.Context, request operations.UpdateIterationFormRequest) (*operations.UpdateIterationFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IterationInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1237,7 +1237,7 @@ func (s *projectAPI) UpdateIterationForm(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1314,9 +1314,9 @@ func (s *projectAPI) UpdateIterationForm(ctx context.Context, request operations
 // UpdateIterationJSON - Update a specific iteration.
 func (s *projectAPI) UpdateIterationJSON(ctx context.Context, request operations.UpdateIterationJSONRequest) (*operations.UpdateIterationJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IterationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1331,7 +1331,7 @@ func (s *projectAPI) UpdateIterationJSON(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1408,9 +1408,9 @@ func (s *projectAPI) UpdateIterationJSON(ctx context.Context, request operations
 // UpdateIterationRaw - Update a specific iteration.
 func (s *projectAPI) UpdateIterationRaw(ctx context.Context, request operations.UpdateIterationRawRequest) (*operations.UpdateIterationRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/iterations/{iterationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1425,7 +1425,7 @@ func (s *projectAPI) UpdateIterationRaw(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1502,9 +1502,9 @@ func (s *projectAPI) UpdateIterationRaw(ctx context.Context, request operations.
 // UpdateProjectForm - Update a specific project.
 func (s *projectAPI) UpdateProjectForm(ctx context.Context, request operations.UpdateProjectFormRequest) (*operations.UpdateProjectFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1519,7 +1519,7 @@ func (s *projectAPI) UpdateProjectForm(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1596,9 +1596,9 @@ func (s *projectAPI) UpdateProjectForm(ctx context.Context, request operations.U
 // UpdateProjectJSON - Update a specific project.
 func (s *projectAPI) UpdateProjectJSON(ctx context.Context, request operations.UpdateProjectJSONRequest) (*operations.UpdateProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1613,7 +1613,7 @@ func (s *projectAPI) UpdateProjectJSON(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1690,9 +1690,9 @@ func (s *projectAPI) UpdateProjectJSON(ctx context.Context, request operations.U
 // UpdateProjectRaw - Update a specific project.
 func (s *projectAPI) UpdateProjectRaw(ctx context.Context, request operations.UpdateProjectRawRequest) (*operations.UpdateProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1707,7 +1707,7 @@ func (s *projectAPI) UpdateProjectRaw(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

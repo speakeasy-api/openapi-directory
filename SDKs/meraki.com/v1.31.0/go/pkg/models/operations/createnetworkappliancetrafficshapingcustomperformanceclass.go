@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody struct {
 	// Maximum jitter in milliseconds
 	MaxJitter *int64 `json:"maxJitter,omitempty"`
@@ -22,8 +18,8 @@ type CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody struc
 }
 
 type CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest struct {
-	PathParams CreateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams
-	Request    CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkApplianceTrafficShapingCustomPerformanceClassResponse struct {

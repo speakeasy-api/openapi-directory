@@ -3,45 +3,45 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateHTTPNamespaceRequest(
-    headers=operations.CreateHTTPNamespaceHeaders(
-        x_amz_algorithm="sapiente",
-        x_amz_content_sha256="at",
-        x_amz_credential="fuga",
-        x_amz_date="dicta",
-        x_amz_security_token="optio",
-        x_amz_signature="aut",
-        x_amz_signed_headers="eum",
-        x_amz_target="Route53AutoNaming_v20170314.CreateHttpNamespace",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateHTTPNamespaceRequest(
-        creator_request_id="non",
-        description="corrupti",
-        name="nam",
+)
+
+
+req = operations.CreateHTTPNamespaceRequest(
+    create_http_namespace_request=shared.CreateHTTPNamespaceRequest(
+        creator_request_id="corrupti",
+        description="provident",
+        name="distinctio",
         tags=[
             shared.Tag(
-                key="adipisci",
-                value="enim",
+                key="unde",
+                value="nulla",
             ),
             shared.Tag(
-                key="laborum",
-                value="rerum",
+                key="corrupti",
+                value="illum",
             ),
             shared.Tag(
-                key="iure",
-                value="sequi",
+                key="vel",
+                value="error",
+            ),
+            shared.Tag(
+                key="deserunt",
+                value="suscipit",
             ),
         ],
     ),
+    x_amz_algorithm="iure",
+    x_amz_content_sha256="magnam",
+    x_amz_credential="debitis",
+    x_amz_date="ipsa",
+    x_amz_security_token="delectus",
+    x_amz_signature="tempora",
+    x_amz_signed_headers="suscipit",
+    x_amz_target="Route53AutoNaming_v20170314.CreateHttpNamespace",
 )
     
 res = s.create_http_namespace(req)

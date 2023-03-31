@@ -8,19 +8,14 @@ import (
 )
 
 type CreateAdGroupSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateAdGroupPathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateAdGroupRequest struct {
-	PathParams CreateAdGroupPathParams
 	// This type defines the fields for the <b>createAdGroup</b> request.
-	Request  shared.CreateAdGroupRequest `request:"mediaType=application/json"`
-	Security CreateAdGroupSecurity
+	CreateAdGroupRequest shared.CreateAdGroupRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type CreateAdGroupResponse struct {

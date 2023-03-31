@@ -12,18 +12,13 @@ var FetchDialingPermissionsCountryServerList = []string{
 }
 
 type FetchDialingPermissionsCountrySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDialingPermissionsCountryPathParams struct {
-	// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the DialingPermissions Country resource to fetch
-	IsoCode string `pathParam:"style=simple,explode=false,name=IsoCode"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDialingPermissionsCountryRequest struct {
-	PathParams FetchDialingPermissionsCountryPathParams
-	Security   FetchDialingPermissionsCountrySecurity
-	ServerURL  *string
+	// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the DialingPermissions Country resource to fetch
+	IsoCode string `pathParam:"style=simple,explode=false,name=IsoCode"`
 }
 
 type FetchDialingPermissionsCountryResponse struct {

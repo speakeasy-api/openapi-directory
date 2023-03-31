@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPatientEnteredObservationHeadingsPathParams struct {
+type GetPatientEnteredObservationHeadingsRequest struct {
 	// userId
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetPatientEnteredObservationHeadingsRequest struct {
-	PathParams GetPatientEnteredObservationHeadingsPathParams
 }
 
 type GetPatientEnteredObservationHeadingsResponse struct {

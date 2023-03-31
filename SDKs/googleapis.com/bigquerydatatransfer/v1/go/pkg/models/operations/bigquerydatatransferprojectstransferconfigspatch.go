@@ -8,18 +8,14 @@ import (
 )
 
 type BigquerydatatransferProjectsTransferConfigsPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BigquerydatatransferProjectsTransferConfigsPatchPathParams struct {
-	// The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsPatchQueryParams struct {
+type BigquerydatatransferProjectsTransferConfigsPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv         *shared.XgafvEnum           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TransferConfigInput *shared.TransferConfigInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type BigquerydatatransferProjectsTransferConfigsPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -48,13 +46,6 @@ type BigquerydatatransferProjectsTransferConfigsPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional version info. This is required only if `transferConfig.dataSourceId` is not 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=version_info&client_id=client_id&scope=data_source_scopes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to update the transfer config.
 	VersionInfo *string `queryParam:"style=form,explode=true,name=versionInfo"`
-}
-
-type BigquerydatatransferProjectsTransferConfigsPatchRequest struct {
-	PathParams  BigquerydatatransferProjectsTransferConfigsPatchPathParams
-	QueryParams BigquerydatatransferProjectsTransferConfigsPatchQueryParams
-	Request     *shared.TransferConfigInput `request:"mediaType=application/json"`
-	Security    BigquerydatatransferProjectsTransferConfigsPatchSecurity
 }
 
 type BigquerydatatransferProjectsTransferConfigsPatchResponse struct {

@@ -33,14 +33,14 @@ func newPremium(defaultClient, securityClient HTTPClient, serverURL, language, s
 // RetrieveAccountTransactionsV2 - Access account premium transactions.
 func (s *premium) RetrieveAccountTransactionsV2(ctx context.Context, request operations.RetrieveAccountTransactionsV2Request) (*operations.RetrieveAccountTransactionsV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/premium/{id}/transactions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/premium/{id}/transactions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -43,7 +43,7 @@ func (s *categoriesEssentials) GetCategories(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,7 +84,7 @@ func (s *categoriesEssentials) GetCategories(ctx context.Context, request operat
 // GetCategory - Get a specific category
 func (s *categoriesEssentials) GetCategory(ctx context.Context, request operations.GetCategoryRequest) (*operations.GetCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

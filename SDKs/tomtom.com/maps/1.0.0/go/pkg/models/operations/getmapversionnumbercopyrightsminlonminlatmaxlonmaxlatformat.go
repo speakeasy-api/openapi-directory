@@ -56,7 +56,9 @@ func (e *GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumbe
 	}
 }
 
-type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams struct {
+type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest struct {
+	// Specifies the jsonp callback method. Only used when format is jsonp.
+	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Format of the response
 	Format GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Maximum latitude coordinate of bounding box defined in terms of latitude/longitude.
@@ -69,16 +71,6 @@ type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams struc
 	MinLon float64 `pathParam:"style=simple,explode=false,name=minLon"`
 	// Version of the service to call. The current version is 1
 	VersionNumber GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams struct {
-	// Specifies the jsonp callback method. Only used when format is jsonp.
-	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-}
-
-type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest struct {
-	PathParams  GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams
-	QueryParams GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams
 }
 
 type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse struct {

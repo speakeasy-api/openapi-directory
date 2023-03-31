@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditEmbedPresetAlt1PathParams struct {
-	// The ID of the preset.
-	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
-}
-
 // EditEmbedPresetAlt1RequestBodyOutroEnum - Disable the outro.
 type EditEmbedPresetAlt1RequestBodyOutroEnum string
 
@@ -41,8 +36,9 @@ type EditEmbedPresetAlt1RequestBody struct {
 }
 
 type EditEmbedPresetAlt1Request struct {
-	PathParams EditEmbedPresetAlt1PathParams
-	Request    *EditEmbedPresetAlt1RequestBody `request:"mediaType=application/vnd.vimeo.preset+json"`
+	RequestBody *EditEmbedPresetAlt1RequestBody `request:"mediaType=application/vnd.vimeo.preset+json"`
+	// The ID of the preset.
+	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
 }
 
 type EditEmbedPresetAlt1Response struct {

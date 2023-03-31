@@ -8,16 +8,11 @@ import (
 )
 
 type NotebooksProjectsLocationsSchedulesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type NotebooksProjectsLocationsSchedulesListPathParams struct {
-	// Required. Format: `parent=projects/{project_id}/locations/{location}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type NotebooksProjectsLocationsSchedulesListQueryParams struct {
+type NotebooksProjectsLocationsSchedulesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type NotebooksProjectsLocationsSchedulesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A previous returned page token that can be used to continue listing from the last result.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Format: `parent=projects/{project_id}/locations/{location}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type NotebooksProjectsLocationsSchedulesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NotebooksProjectsLocationsSchedulesListRequest struct {
-	PathParams  NotebooksProjectsLocationsSchedulesListPathParams
-	QueryParams NotebooksProjectsLocationsSchedulesListQueryParams
-	Security    NotebooksProjectsLocationsSchedulesListSecurity
 }
 
 type NotebooksProjectsLocationsSchedulesListResponse struct {

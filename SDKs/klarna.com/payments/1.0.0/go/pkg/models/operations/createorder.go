@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateOrderPathParams struct {
-	AuthorizationToken string `pathParam:"style=simple,explode=false,name=authorizationToken"`
-}
-
 type CreateOrderRequest struct {
-	PathParams CreateOrderPathParams
-	Request    *shared.CreateOrderRequestInput `request:"mediaType=application/json"`
+	AuthorizationToken      string                          `pathParam:"style=simple,explode=false,name=authorizationToken"`
+	CreateOrderRequestInput *shared.CreateOrderRequestInput `request:"mediaType=application/json"`
 }
 
 type CreateOrderResponse struct {

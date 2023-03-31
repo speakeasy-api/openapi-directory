@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAppsTextSearchQueryParams struct {
+type GetAppsTextSearchRequest struct {
 	// A JSON array containing all the fields to be searched through. Example: ['name', 'customData.description']
 	Fields string `queryParam:"style=form,explode=true,name=fields"`
 	// Whether this result should only contain apps that are owned by this user
@@ -21,10 +21,6 @@ type GetAppsTextSearchQueryParams struct {
 	Text string `queryParam:"style=form,explode=true,name=text"`
 	// The unique id of the user requesting this resource
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetAppsTextSearchRequest struct {
-	QueryParams GetAppsTextSearchQueryParams
 }
 
 type GetAppsTextSearchResponse struct {

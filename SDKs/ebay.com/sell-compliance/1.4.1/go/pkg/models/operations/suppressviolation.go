@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SuppressViolationSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type SuppressViolationRequest struct {
-	// This type is the base request type of the SuppressViolation method.
-	Request  shared.SuppressViolationRequest `request:"mediaType=application/json"`
-	Security SuppressViolationSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SuppressViolationResponse struct {

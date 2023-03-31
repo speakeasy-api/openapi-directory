@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceRolesListQueryParams struct {
+type DcimDeviceRolesListRequest struct {
 	Color *string `queryParam:"style=form,explode=true,name=color"`
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
@@ -16,10 +16,6 @@ type DcimDeviceRolesListQueryParams struct {
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
 	VMRole *string `queryParam:"style=form,explode=true,name=vm_role"`
-}
-
-type DcimDeviceRolesListRequest struct {
-	QueryParams DcimDeviceRolesListQueryParams
 }
 
 type DcimDeviceRolesList200ApplicationJSON struct {

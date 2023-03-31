@@ -8,18 +8,11 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsDeletePathParams struct {
-	// Required. The parent app (package name) of the app of the subscription to delete.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. The unique product ID of the subscription to delete.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsDeleteQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,20 +27,18 @@ type AndroidpublisherMonetizationSubscriptionsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent app (package name) of the app of the subscription to delete.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The unique product ID of the subscription to delete.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsDeleteRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsDeletePathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsDeleteQueryParams
-	Security    AndroidpublisherMonetizationSubscriptionsDeleteSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsDeleteResponse struct {

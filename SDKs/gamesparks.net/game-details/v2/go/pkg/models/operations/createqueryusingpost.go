@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateQueryUsingPOSTPathParams struct {
+type CreateQueryUsingPOSTRequest struct {
+	// query
+	ManageQuery shared.ManageQuery `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type CreateQueryUsingPOSTRequest struct {
-	PathParams CreateQueryUsingPOSTPathParams
-	// query
-	Request shared.ManageQuery `request:"mediaType=application/json"`
 }
 
 type CreateQueryUsingPOSTResponse struct {

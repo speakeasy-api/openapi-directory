@@ -8,16 +8,7 @@ import (
 )
 
 type ReplaceAlbumCustomThumbSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ReplaceAlbumCustomThumbPathParams struct {
-	// The ID of the album.
-	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
-	// The ID of the custom thumbnail.
-	ThumbnailID float64 `pathParam:"style=simple,explode=false,name=thumbnail_id"`
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReplaceAlbumCustomThumbRequestBody struct {
@@ -26,9 +17,13 @@ type ReplaceAlbumCustomThumbRequestBody struct {
 }
 
 type ReplaceAlbumCustomThumbRequest struct {
-	PathParams ReplaceAlbumCustomThumbPathParams
-	Request    *ReplaceAlbumCustomThumbRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
-	Security   ReplaceAlbumCustomThumbSecurity
+	RequestBody *ReplaceAlbumCustomThumbRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
+	// The ID of the album.
+	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
+	// The ID of the custom thumbnail.
+	ThumbnailID float64 `pathParam:"style=simple,explode=false,name=thumbnail_id"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type ReplaceAlbumCustomThumbResponse struct {

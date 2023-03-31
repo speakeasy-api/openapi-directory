@@ -8,17 +8,12 @@ import (
 )
 
 type CreateVideoCustomLogoSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateVideoCustomLogoPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateVideoCustomLogoRequest struct {
-	PathParams CreateVideoCustomLogoPathParams
-	Security   CreateVideoCustomLogoSecurity
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type CreateVideoCustomLogoResponse struct {

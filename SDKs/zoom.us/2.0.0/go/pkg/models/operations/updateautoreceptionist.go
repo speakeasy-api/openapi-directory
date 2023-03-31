@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateAutoReceptionistSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateAutoReceptionistPathParams struct {
-	// Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
-	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateAutoReceptionistApplicationJSON struct {
@@ -24,9 +18,9 @@ type UpdateAutoReceptionistApplicationJSON struct {
 }
 
 type UpdateAutoReceptionistRequest struct {
-	PathParams UpdateAutoReceptionistPathParams
-	Request    *UpdateAutoReceptionistApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateAutoReceptionistSecurity
+	RequestBody *UpdateAutoReceptionistApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
+	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
 }
 
 type UpdateAutoReceptionistResponse struct {

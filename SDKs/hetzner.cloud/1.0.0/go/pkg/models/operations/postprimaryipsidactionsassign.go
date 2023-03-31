@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostPrimaryIpsIDActionsAssignPathParams struct {
-	// ID of the Primary IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum - Type of resource assigning the Primary IP to
 type PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum string
 
@@ -42,8 +37,9 @@ type PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequest struct {
 }
 
 type PostPrimaryIpsIDActionsAssignRequest struct {
-	PathParams PostPrimaryIpsIDActionsAssignPathParams
-	Request    *PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequest `request:"mediaType=application/json"`
+	RequestBody *PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequest `request:"mediaType=application/json"`
+	// ID of the Primary IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostPrimaryIpsIDActionsAssignActionResponseActionError - Error message for the Action if error occurred, otherwise null

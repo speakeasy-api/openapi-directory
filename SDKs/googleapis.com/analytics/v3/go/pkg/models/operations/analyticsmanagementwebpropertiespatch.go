@@ -8,18 +8,14 @@ import (
 )
 
 type AnalyticsManagementWebpropertiesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementWebpropertiesPatchPathParams struct {
+type AnalyticsManagementWebpropertiesPatchRequest struct {
+	WebpropertyInput *shared.WebpropertyInput `request:"mediaType=application/json"`
 	// Account ID to which the web property belongs
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Web property ID
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementWebpropertiesPatchQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,13 +30,8 @@ type AnalyticsManagementWebpropertiesPatchQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementWebpropertiesPatchRequest struct {
-	PathParams  AnalyticsManagementWebpropertiesPatchPathParams
-	QueryParams AnalyticsManagementWebpropertiesPatchQueryParams
-	Request     *shared.WebpropertyInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementWebpropertiesPatchSecurity
+	// Web property ID
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementWebpropertiesPatchResponse struct {

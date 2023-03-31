@@ -3,28 +3,24 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetArticlesearchJSONRequest(
-    query_params=operations.GetArticlesearchJSONQueryParams(
-        begin_date="distinctio",
-        end_date="tempora",
-        facet_field="accusamus",
-        facet_filter=True,
-        fl="magni",
-        fq="dolorem",
-        hl=False,
-        page=5846039825160295552,
-        q="nesciunt",
-        sort="newest",
+        apikey="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetArticlesearchJSONRequest(
+    begin_date="corrupti",
+    end_date="provident",
+    facet_field="distinctio",
+    facet_filter=False,
+    fl="quibusdam",
+    fq="unde",
+    hl=False,
+    page=857946,
+    q="corrupti",
+    sort="oldest",
 )
     
 res = s.stories.get_articlesearch_json(req)

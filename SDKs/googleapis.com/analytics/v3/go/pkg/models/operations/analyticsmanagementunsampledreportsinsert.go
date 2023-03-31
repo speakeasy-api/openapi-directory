@@ -8,13 +8,13 @@ import (
 )
 
 type AnalyticsManagementUnsampledReportsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUnsampledReportsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AnalyticsManagementUnsampledReportsInsertSecurity struct {
@@ -22,16 +22,10 @@ type AnalyticsManagementUnsampledReportsInsertSecurity struct {
 	Option2 *AnalyticsManagementUnsampledReportsInsertSecurityOption2 `security:"option"`
 }
 
-type AnalyticsManagementUnsampledReportsInsertPathParams struct {
+type AnalyticsManagementUnsampledReportsInsertRequest struct {
+	UnsampledReportInput *shared.UnsampledReportInput `request:"mediaType=application/json"`
 	// Account ID to create the unsampled report for.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// View (Profile) ID to create the unsampled report for.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Web property ID to create the unsampled report for.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementUnsampledReportsInsertQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -42,17 +36,14 @@ type AnalyticsManagementUnsampledReportsInsertQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// View (Profile) ID to create the unsampled report for.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementUnsampledReportsInsertRequest struct {
-	PathParams  AnalyticsManagementUnsampledReportsInsertPathParams
-	QueryParams AnalyticsManagementUnsampledReportsInsertQueryParams
-	Request     *shared.UnsampledReportInput `request:"mediaType=application/json"`
-	Security    AnalyticsManagementUnsampledReportsInsertSecurity
+	// Web property ID to create the unsampled report for.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementUnsampledReportsInsertResponse struct {

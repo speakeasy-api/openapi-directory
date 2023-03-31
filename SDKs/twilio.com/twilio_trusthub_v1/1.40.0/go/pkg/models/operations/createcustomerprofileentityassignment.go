@@ -12,12 +12,8 @@ var CreateCustomerProfileEntityAssignmentServerList = []string{
 }
 
 type CreateCustomerProfileEntityAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCustomerProfileEntityAssignmentPathParams struct {
-	// The unique string that we created to identify the CustomerProfile resource.
-	CustomerProfileSid string `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest struct {
@@ -26,10 +22,9 @@ type CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentR
 }
 
 type CreateCustomerProfileEntityAssignmentRequest struct {
-	PathParams CreateCustomerProfileEntityAssignmentPathParams
-	Request    *CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateCustomerProfileEntityAssignmentSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the CustomerProfile resource.
+	CustomerProfileSid string                                                                             `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
+	RequestBody        *CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateCustomerProfileEntityAssignmentResponse struct {

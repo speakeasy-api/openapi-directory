@@ -37,7 +37,7 @@ func newTransaction(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // CreateTransaction - Create Transaction
 // Creates a new Transaction
-func (s *transaction) CreateTransaction(ctx context.Context, request operations.CreateTransactionRequest) (*operations.CreateTransactionResponse, error) {
+func (s *transaction) CreateTransaction(ctx context.Context, request operations.CreateTransactionRequestBody, security operations.CreateTransactionSecurity) (*operations.CreateTransactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transaction"
 
@@ -53,7 +53,7 @@ func (s *transaction) CreateTransaction(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -103,16 +103,16 @@ func (s *transaction) CreateTransaction(ctx context.Context, request operations.
 
 // GetTransaction - Get Transaction
 // Return a Transaction by 'transactionNumber'
-func (s *transaction) GetTransaction(ctx context.Context, request operations.GetTransactionRequest) (*operations.GetTransactionResponse, error) {
+func (s *transaction) GetTransaction(ctx context.Context, request operations.GetTransactionRequest, security operations.GetTransactionSecurity) (*operations.GetTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -162,7 +162,7 @@ func (s *transaction) GetTransaction(ctx context.Context, request operations.Get
 
 // ListTransactions - List Transactions
 // Return a list of all Transactions for the current Vendor
-func (s *transaction) ListTransactions(ctx context.Context, request operations.ListTransactionsRequest) (*operations.ListTransactionsResponse, error) {
+func (s *transaction) ListTransactions(ctx context.Context) (*operations.ListTransactionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transaction"
 
@@ -171,7 +171,7 @@ func (s *transaction) ListTransactions(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -221,11 +221,11 @@ func (s *transaction) ListTransactions(ctx context.Context, request operations.L
 
 // UpdateTransaction - Update Transaction
 // Sets the provided properties to a Transaction. Return an updated Transaction
-func (s *transaction) UpdateTransaction(ctx context.Context, request operations.UpdateTransactionRequest) (*operations.UpdateTransactionResponse, error) {
+func (s *transaction) UpdateTransaction(ctx context.Context, request operations.UpdateTransactionRequest, security operations.UpdateTransactionSecurity) (*operations.UpdateTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -237,7 +237,7 @@ func (s *transaction) UpdateTransaction(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

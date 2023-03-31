@@ -8,18 +8,18 @@ import (
 )
 
 type DriveFilesCreateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCreateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCreateSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesCreateSecurity struct {
@@ -28,7 +28,8 @@ type DriveFilesCreateSecurity struct {
 	Option3 *DriveFilesCreateSecurityOption3 `security:"option"`
 }
 
-type DriveFilesCreateQueryParams struct {
+type DriveFilesCreateRequest struct {
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated. Creating files in multiple folders is no longer supported.
@@ -61,12 +62,6 @@ type DriveFilesCreateQueryParams struct {
 	UseContentAsIndexableText *bool `queryParam:"style=form,explode=true,name=useContentAsIndexableText"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesCreateRequest struct {
-	QueryParams DriveFilesCreateQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
-	Security    DriveFilesCreateSecurity
 }
 
 type DriveFilesCreateResponse struct {

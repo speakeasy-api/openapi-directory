@@ -3,40 +3,40 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CopyBackupToRegionRequest(
-    headers=operations.CopyBackupToRegionHeaders(
-        x_amz_algorithm="sunt",
-        x_amz_content_sha256="asperiores",
-        x_amz_credential="reprehenderit",
-        x_amz_date="consectetur",
-        x_amz_security_token="sequi",
-        x_amz_signature="reprehenderit",
-        x_amz_signed_headers="qui",
-        x_amz_target="BaldrApiService.CopyBackupToRegion",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CopyBackupToRegionRequest(
-        backup_id="enim",
-        destination_region="sint",
+)
+
+
+req = operations.CopyBackupToRegionRequest(
+    copy_backup_to_region_request=shared.CopyBackupToRegionRequest(
+        backup_id="corrupti",
+        destination_region="provident",
         tag_list=[
             shared.Tag(
-                key="rem",
-                value="aliquid",
+                key="quibusdam",
+                value="unde",
             ),
             shared.Tag(
-                key="quo",
-                value="quo",
+                key="nulla",
+                value="corrupti",
+            ),
+            shared.Tag(
+                key="illum",
+                value="vel",
             ),
         ],
     ),
+    x_amz_algorithm="error",
+    x_amz_content_sha256="deserunt",
+    x_amz_credential="suscipit",
+    x_amz_date="iure",
+    x_amz_security_token="magnam",
+    x_amz_signature="debitis",
+    x_amz_signed_headers="ipsa",
+    x_amz_target="BaldrApiService.CopyBackupToRegion",
 )
     
 res = s.copy_backup_to_region(req)

@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ItemRemoveRequest struct {
-	Request shared.ItemRemoveRequest `request:"mediaType=application/json"`
-}
 
 type ItemRemoveResponse struct {
 	ContentType string

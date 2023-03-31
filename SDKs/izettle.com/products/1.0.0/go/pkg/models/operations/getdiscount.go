@@ -8,22 +8,13 @@ import (
 )
 
 type GetDiscountSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetDiscountPathParams struct {
-	DiscountUUID     string `pathParam:"style=simple,explode=false,name=discountUuid"`
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
-}
-
-type GetDiscountHeaders struct {
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetDiscountRequest struct {
-	PathParams GetDiscountPathParams
-	Headers    GetDiscountHeaders
-	Security   GetDiscountSecurity
+	IfNoneMatch      *string `header:"style=simple,explode=false,name=If-None-Match"`
+	DiscountUUID     string  `pathParam:"style=simple,explode=false,name=discountUuid"`
+	OrganizationUUID string  `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type GetDiscountResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetDeployKeyPathParams struct {
+type ReposGetDeployKeyRequest struct {
 	// key_id parameter
 	KeyID int64  `pathParam:"style=simple,explode=false,name=key_id"`
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetDeployKeyRequest struct {
-	PathParams ReposGetDeployKeyPathParams
 }
 
 type ReposGetDeployKeyResponse struct {

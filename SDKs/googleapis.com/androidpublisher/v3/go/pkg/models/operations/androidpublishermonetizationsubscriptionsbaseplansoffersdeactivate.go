@@ -8,28 +8,20 @@ import (
 )
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivatePathParams struct {
-	// Required. The parent base plan (ID) of the offer to deactivate.
-	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
-	// Required. The unique offer ID of the offer to deactivate.
-	OfferID string `pathParam:"style=simple,explode=false,name=offerId"`
-	// Required. The parent app (package name) of the offer to deactivate.
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. The parent subscription (ID) of the offer to deactivate.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateQueryParams struct {
+type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The parent base plan (ID) of the offer to deactivate.
+	BasePlanID string `pathParam:"style=simple,explode=false,name=basePlanId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -38,21 +30,20 @@ type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateQueryPara
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The unique offer ID of the offer to deactivate.
+	OfferID string `pathParam:"style=simple,explode=false,name=offerId"`
+	// Required. The parent app (package name) of the offer to deactivate.
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The parent subscription (ID) of the offer to deactivate.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest struct {
-	PathParams  AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivatePathParams
-	QueryParams AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateSecurity
 }
 
 type AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse struct {

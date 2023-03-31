@@ -12,18 +12,13 @@ var FetchRecordingServerList = []string{
 }
 
 type FetchRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchRecordingPathParams struct {
-	// The SID of the Recording resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchRecordingRequest struct {
-	PathParams FetchRecordingPathParams
-	Security   FetchRecordingSecurity
-	ServerURL  *string
+	// The SID of the Recording resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchRecordingResponse struct {

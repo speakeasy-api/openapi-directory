@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetV2BulkJobsBulkJobsIDResultsPathParams struct {
+type GetV2BulkJobsBulkJobsIDResultsRequest struct {
 	// The id for the Bulk Job
 	BulkJobsID int64 `pathParam:"style=simple,explode=false,name=bulk_jobs_id"`
-}
-
-type GetV2BulkJobsBulkJobsIDResultsQueryParams struct {
 	// Filter by id using comparison operators. Only supports greater than (gt) comparison (i.e. id[gt]=123)
 	ID map[string]interface{} `queryParam:"style=form,explode=true,name=id"`
 	// How many records to show per page in the range [1, 100]. Defaults to 25
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Filter by result status. Accepts multiple statuses. Each status must be one of pending, success, error, retrying
 	Status []string `queryParam:"style=form,explode=false,name=status"`
-}
-
-type GetV2BulkJobsBulkJobsIDResultsRequest struct {
-	PathParams  GetV2BulkJobsBulkJobsIDResultsPathParams
-	QueryParams GetV2BulkJobsBulkJobsIDResultsQueryParams
 }
 
 type GetV2BulkJobsBulkJobsIDResultsResponse struct {

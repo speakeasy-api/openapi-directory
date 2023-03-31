@@ -10,29 +10,24 @@ import (
 )
 
 type MonitoringProjectsTimeSeriesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsTimeSeriesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsTimeSeriesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsTimeSeriesListSecurity struct {
 	Option1 *MonitoringProjectsTimeSeriesListSecurityOption1 `security:"option"`
 	Option2 *MonitoringProjectsTimeSeriesListSecurityOption2 `security:"option"`
 	Option3 *MonitoringProjectsTimeSeriesListSecurityOption3 `security:"option"`
-}
-
-type MonitoringProjectsTimeSeriesListPathParams struct {
-	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum - The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.
@@ -329,7 +324,7 @@ func (e *MonitoringProjectsTimeSeriesListViewEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type MonitoringProjectsTimeSeriesListQueryParams struct {
+type MonitoringProjectsTimeSeriesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -356,6 +351,8 @@ type MonitoringProjectsTimeSeriesListQueryParams struct {
 	IntervalStartTime *string `queryParam:"style=form,explode=true,name=interval.startTime"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Unsupported: must be left blank. The points in each time series are currently returned in reverse time order (most recent to oldest).
@@ -382,12 +379,6 @@ type MonitoringProjectsTimeSeriesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. Specifies which information is returned about the time series.
 	View *MonitoringProjectsTimeSeriesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type MonitoringProjectsTimeSeriesListRequest struct {
-	PathParams  MonitoringProjectsTimeSeriesListPathParams
-	QueryParams MonitoringProjectsTimeSeriesListQueryParams
-	Security    MonitoringProjectsTimeSeriesListSecurity
 }
 
 type MonitoringProjectsTimeSeriesListResponse struct {

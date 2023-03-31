@@ -8,17 +8,12 @@ import (
 )
 
 type GetCampaignByNameSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetCampaignByNameQueryParams struct {
-	// The name of the campaign.
-	CampaignName string `queryParam:"style=form,explode=true,name=campaign_name"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetCampaignByNameRequest struct {
-	QueryParams GetCampaignByNameQueryParams
-	Security    GetCampaignByNameSecurity
+	// The name of the campaign.
+	CampaignName string `queryParam:"style=form,explode=true,name=campaign_name"`
 }
 
 type GetCampaignByNameResponse struct {

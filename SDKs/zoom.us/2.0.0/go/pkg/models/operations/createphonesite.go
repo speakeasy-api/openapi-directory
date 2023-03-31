@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreatePhoneSiteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreatePhoneSiteApplicationJSONDefaultEmergencyAddress struct {
@@ -46,11 +45,6 @@ type CreatePhoneSiteApplicationJSON struct {
 	//
 	//
 	SiteCode *int64 `json:"site_code,omitempty"`
-}
-
-type CreatePhoneSiteRequest struct {
-	Request  *CreatePhoneSiteApplicationJSON `request:"mediaType=application/json"`
-	Security CreatePhoneSiteSecurity
 }
 
 // CreatePhoneSite204ApplicationXML - **HTTP Status Code:** `204` **No Content**<br>

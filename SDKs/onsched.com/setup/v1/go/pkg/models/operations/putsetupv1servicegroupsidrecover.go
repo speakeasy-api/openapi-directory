@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1ServicegroupsIDRecoverPathParams struct {
+type PutSetupV1ServicegroupsIDRecoverRequest struct {
 	// id of serviceGroup object
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1ServicegroupsIDRecoverRequest struct {
-	PathParams PutSetupV1ServicegroupsIDRecoverPathParams
 }
 
 type PutSetupV1ServicegroupsIDRecoverResponse struct {

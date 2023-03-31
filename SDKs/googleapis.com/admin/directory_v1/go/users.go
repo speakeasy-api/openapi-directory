@@ -33,20 +33,20 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DirectoryUsersAliasesDelete - Removes an alias.
-func (s *users) DirectoryUsersAliasesDelete(ctx context.Context, request operations.DirectoryUsersAliasesDeleteRequest) (*operations.DirectoryUsersAliasesDeleteResponse, error) {
+func (s *users) DirectoryUsersAliasesDelete(ctx context.Context, request operations.DirectoryUsersAliasesDeleteRequest, security operations.DirectoryUsersAliasesDeleteSecurity) (*operations.DirectoryUsersAliasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/{alias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/{alias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *users) DirectoryUsersAliasesDelete(ctx context.Context, request operati
 }
 
 // DirectoryUsersAliasesInsert - Adds an alias.
-func (s *users) DirectoryUsersAliasesInsert(ctx context.Context, request operations.DirectoryUsersAliasesInsertRequest) (*operations.DirectoryUsersAliasesInsertResponse, error) {
+func (s *users) DirectoryUsersAliasesInsert(ctx context.Context, request operations.DirectoryUsersAliasesInsertRequest, security operations.DirectoryUsersAliasesInsertSecurity) (*operations.DirectoryUsersAliasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Alias", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *users) DirectoryUsersAliasesInsert(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,20 +127,20 @@ func (s *users) DirectoryUsersAliasesInsert(ctx context.Context, request operati
 }
 
 // DirectoryUsersAliasesList - Lists all aliases for a user.
-func (s *users) DirectoryUsersAliasesList(ctx context.Context, request operations.DirectoryUsersAliasesListRequest) (*operations.DirectoryUsersAliasesListResponse, error) {
+func (s *users) DirectoryUsersAliasesList(ctx context.Context, request operations.DirectoryUsersAliasesListRequest, security operations.DirectoryUsersAliasesListSecurity) (*operations.DirectoryUsersAliasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *users) DirectoryUsersAliasesList(ctx context.Context, request operation
 }
 
 // DirectoryUsersAliasesWatch - Watches for changes in users list.
-func (s *users) DirectoryUsersAliasesWatch(ctx context.Context, request operations.DirectoryUsersAliasesWatchRequest) (*operations.DirectoryUsersAliasesWatchResponse, error) {
+func (s *users) DirectoryUsersAliasesWatch(ctx context.Context, request operations.DirectoryUsersAliasesWatchRequest, security operations.DirectoryUsersAliasesWatchSecurity) (*operations.DirectoryUsersAliasesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *users) DirectoryUsersAliasesWatch(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,20 +230,20 @@ func (s *users) DirectoryUsersAliasesWatch(ctx context.Context, request operatio
 }
 
 // DirectoryUsersDelete - Deletes a user.
-func (s *users) DirectoryUsersDelete(ctx context.Context, request operations.DirectoryUsersDeleteRequest) (*operations.DirectoryUsersDeleteResponse, error) {
+func (s *users) DirectoryUsersDelete(ctx context.Context, request operations.DirectoryUsersDeleteRequest, security operations.DirectoryUsersDeleteSecurity) (*operations.DirectoryUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -269,20 +269,20 @@ func (s *users) DirectoryUsersDelete(ctx context.Context, request operations.Dir
 }
 
 // DirectoryUsersGet - Retrieves a user.
-func (s *users) DirectoryUsersGet(ctx context.Context, request operations.DirectoryUsersGetRequest) (*operations.DirectoryUsersGetResponse, error) {
+func (s *users) DirectoryUsersGet(ctx context.Context, request operations.DirectoryUsersGetRequest, security operations.DirectoryUsersGetSecurity) (*operations.DirectoryUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -317,11 +317,11 @@ func (s *users) DirectoryUsersGet(ctx context.Context, request operations.Direct
 }
 
 // DirectoryUsersInsert - Creates a user.
-func (s *users) DirectoryUsersInsert(ctx context.Context, request operations.DirectoryUsersInsertRequest) (*operations.DirectoryUsersInsertResponse, error) {
+func (s *users) DirectoryUsersInsert(ctx context.Context, request operations.DirectoryUsersInsertRequest, security operations.DirectoryUsersInsertSecurity) (*operations.DirectoryUsersInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/directory/v1/users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,11 +333,11 @@ func (s *users) DirectoryUsersInsert(ctx context.Context, request operations.Dir
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *users) DirectoryUsersInsert(ctx context.Context, request operations.Dir
 }
 
 // DirectoryUsersList - Retrieves a paginated list of either deleted users or all users in a domain.
-func (s *users) DirectoryUsersList(ctx context.Context, request operations.DirectoryUsersListRequest) (*operations.DirectoryUsersListResponse, error) {
+func (s *users) DirectoryUsersList(ctx context.Context, request operations.DirectoryUsersListRequest, security operations.DirectoryUsersListSecurity) (*operations.DirectoryUsersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/directory/v1/users"
 
@@ -381,11 +381,11 @@ func (s *users) DirectoryUsersList(ctx context.Context, request operations.Direc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -420,11 +420,11 @@ func (s *users) DirectoryUsersList(ctx context.Context, request operations.Direc
 }
 
 // DirectoryUsersMakeAdmin - Makes a user a super administrator.
-func (s *users) DirectoryUsersMakeAdmin(ctx context.Context, request operations.DirectoryUsersMakeAdminRequest) (*operations.DirectoryUsersMakeAdminResponse, error) {
+func (s *users) DirectoryUsersMakeAdmin(ctx context.Context, request operations.DirectoryUsersMakeAdminRequest, security operations.DirectoryUsersMakeAdminSecurity) (*operations.DirectoryUsersMakeAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/makeAdmin", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/makeAdmin", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserMakeAdmin", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -436,11 +436,11 @@ func (s *users) DirectoryUsersMakeAdmin(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -466,11 +466,11 @@ func (s *users) DirectoryUsersMakeAdmin(ctx context.Context, request operations.
 }
 
 // DirectoryUsersPatch - Updates a user using patch semantics. The update method should be used instead, because it also supports patch semantics and has better performance. If you're mapping an external identity to a Google identity, use the [`update`](https://developers.google.com/admin-sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the update method instead.
-func (s *users) DirectoryUsersPatch(ctx context.Context, request operations.DirectoryUsersPatchRequest) (*operations.DirectoryUsersPatchResponse, error) {
+func (s *users) DirectoryUsersPatch(ctx context.Context, request operations.DirectoryUsersPatchRequest, security operations.DirectoryUsersPatchSecurity) (*operations.DirectoryUsersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -482,11 +482,11 @@ func (s *users) DirectoryUsersPatch(ctx context.Context, request operations.Dire
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -521,20 +521,20 @@ func (s *users) DirectoryUsersPatch(ctx context.Context, request operations.Dire
 }
 
 // DirectoryUsersPhotosDelete - Removes the user's photo.
-func (s *users) DirectoryUsersPhotosDelete(ctx context.Context, request operations.DirectoryUsersPhotosDeleteRequest) (*operations.DirectoryUsersPhotosDeleteResponse, error) {
+func (s *users) DirectoryUsersPhotosDelete(ctx context.Context, request operations.DirectoryUsersPhotosDeleteRequest, security operations.DirectoryUsersPhotosDeleteSecurity) (*operations.DirectoryUsersPhotosDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -560,20 +560,20 @@ func (s *users) DirectoryUsersPhotosDelete(ctx context.Context, request operatio
 }
 
 // DirectoryUsersPhotosGet - Retrieves the user's photo.
-func (s *users) DirectoryUsersPhotosGet(ctx context.Context, request operations.DirectoryUsersPhotosGetRequest) (*operations.DirectoryUsersPhotosGetResponse, error) {
+func (s *users) DirectoryUsersPhotosGet(ctx context.Context, request operations.DirectoryUsersPhotosGetRequest, security operations.DirectoryUsersPhotosGetSecurity) (*operations.DirectoryUsersPhotosGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,11 +608,11 @@ func (s *users) DirectoryUsersPhotosGet(ctx context.Context, request operations.
 }
 
 // DirectoryUsersPhotosPatch - Adds a photo for the user. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
-func (s *users) DirectoryUsersPhotosPatch(ctx context.Context, request operations.DirectoryUsersPhotosPatchRequest) (*operations.DirectoryUsersPhotosPatchResponse, error) {
+func (s *users) DirectoryUsersPhotosPatch(ctx context.Context, request operations.DirectoryUsersPhotosPatchRequest, security operations.DirectoryUsersPhotosPatchSecurity) (*operations.DirectoryUsersPhotosPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserPhoto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -624,11 +624,11 @@ func (s *users) DirectoryUsersPhotosPatch(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -663,11 +663,11 @@ func (s *users) DirectoryUsersPhotosPatch(ctx context.Context, request operation
 }
 
 // DirectoryUsersPhotosUpdate - Adds a photo for the user.
-func (s *users) DirectoryUsersPhotosUpdate(ctx context.Context, request operations.DirectoryUsersPhotosUpdateRequest) (*operations.DirectoryUsersPhotosUpdateResponse, error) {
+func (s *users) DirectoryUsersPhotosUpdate(ctx context.Context, request operations.DirectoryUsersPhotosUpdateRequest, security operations.DirectoryUsersPhotosUpdateSecurity) (*operations.DirectoryUsersPhotosUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserPhoto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -679,11 +679,11 @@ func (s *users) DirectoryUsersPhotosUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -718,20 +718,20 @@ func (s *users) DirectoryUsersPhotosUpdate(ctx context.Context, request operatio
 }
 
 // DirectoryUsersSignOut - Signs a user out of all web and device sessions and reset their sign-in cookies. User will have to sign in by authenticating again.
-func (s *users) DirectoryUsersSignOut(ctx context.Context, request operations.DirectoryUsersSignOutRequest) (*operations.DirectoryUsersSignOutResponse, error) {
+func (s *users) DirectoryUsersSignOut(ctx context.Context, request operations.DirectoryUsersSignOutRequest, security operations.DirectoryUsersSignOutSecurity) (*operations.DirectoryUsersSignOutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/signOut", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/signOut", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -757,11 +757,11 @@ func (s *users) DirectoryUsersSignOut(ctx context.Context, request operations.Di
 }
 
 // DirectoryUsersUndelete - Undeletes a deleted user.
-func (s *users) DirectoryUsersUndelete(ctx context.Context, request operations.DirectoryUsersUndeleteRequest) (*operations.DirectoryUsersUndeleteResponse, error) {
+func (s *users) DirectoryUsersUndelete(ctx context.Context, request operations.DirectoryUsersUndeleteRequest, security operations.DirectoryUsersUndeleteSecurity) (*operations.DirectoryUsersUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/undelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/undelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserUndelete", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -773,11 +773,11 @@ func (s *users) DirectoryUsersUndelete(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -803,11 +803,11 @@ func (s *users) DirectoryUsersUndelete(ctx context.Context, request operations.D
 }
 
 // DirectoryUsersUpdate - Updates a user. This method supports patch semantics, meaning that you only need to include the fields you wish to update. Fields that are not present in the request will be preserved, and fields set to `null` will be cleared. For repeating fields that contain arrays, individual items in the array can't be patched piecemeal; they must be supplied in the request body with the desired values for all items. See the [user accounts guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-users#update_user) for more information.
-func (s *users) DirectoryUsersUpdate(ctx context.Context, request operations.DirectoryUsersUpdateRequest) (*operations.DirectoryUsersUpdateResponse, error) {
+func (s *users) DirectoryUsersUpdate(ctx context.Context, request operations.DirectoryUsersUpdateRequest, security operations.DirectoryUsersUpdateSecurity) (*operations.DirectoryUsersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -819,11 +819,11 @@ func (s *users) DirectoryUsersUpdate(ctx context.Context, request operations.Dir
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -858,11 +858,11 @@ func (s *users) DirectoryUsersUpdate(ctx context.Context, request operations.Dir
 }
 
 // DirectoryUsersWatch - Watches for changes in users list.
-func (s *users) DirectoryUsersWatch(ctx context.Context, request operations.DirectoryUsersWatchRequest) (*operations.DirectoryUsersWatchResponse, error) {
+func (s *users) DirectoryUsersWatch(ctx context.Context, request operations.DirectoryUsersWatchRequest, security operations.DirectoryUsersWatchSecurity) (*operations.DirectoryUsersWatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/directory/v1/users/watch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -874,11 +874,11 @@ func (s *users) DirectoryUsersWatch(ctx context.Context, request operations.Dire
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

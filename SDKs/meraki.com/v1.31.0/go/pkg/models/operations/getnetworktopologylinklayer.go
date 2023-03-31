@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkTopologyLinkLayerPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkTopologyLinkLayerRequest struct {
-	PathParams GetNetworkTopologyLinkLayerPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkTopologyLinkLayerResponse struct {

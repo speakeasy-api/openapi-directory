@@ -7,12 +7,9 @@ import (
 	"time"
 )
 
-type GetNetworkInsightApplicationHealthByTimePathParams struct {
+type GetNetworkInsightApplicationHealthByTimeRequest struct {
 	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkInsightApplicationHealthByTimeQueryParams struct {
 	// The time resolution in seconds for returned data. The valid resolutions are: 60, 300, 3600, 86400. The default is 300.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
 	// The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
@@ -21,11 +18,6 @@ type GetNetworkInsightApplicationHealthByTimeQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkInsightApplicationHealthByTimeRequest struct {
-	PathParams  GetNetworkInsightApplicationHealthByTimePathParams
-	QueryParams GetNetworkInsightApplicationHealthByTimeQueryParams
 }
 
 type GetNetworkInsightApplicationHealthByTime200ApplicationJSON struct {

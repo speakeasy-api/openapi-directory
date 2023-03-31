@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type LogInRequest struct {
-	// credentials
-	Request *shared.Credentials `request:"mediaType=application/json"`
-}
 
 type LogInResponse struct {
 	Body        []byte

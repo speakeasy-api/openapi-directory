@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetYearMonthJSONRequest{
-        PathParams: operations.GetYearMonthJSONPathParams{
-            Month: 548814,
-            Year: 592845,
-        },
+        Month: 548814,
+        Year: 592845,
     }
 
     ctx := context.Background()

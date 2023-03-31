@@ -12,14 +12,8 @@ var UpdatePhoneNumberServerList = []string{
 }
 
 type UpdatePhoneNumberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdatePhoneNumberPathParams struct {
-	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to update.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the PhoneNumber resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdatePhoneNumberUpdatePhoneNumberRequest struct {
@@ -28,10 +22,11 @@ type UpdatePhoneNumberUpdatePhoneNumberRequest struct {
 }
 
 type UpdatePhoneNumberRequest struct {
-	PathParams UpdatePhoneNumberPathParams
-	Request    *UpdatePhoneNumberUpdatePhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdatePhoneNumberSecurity
-	ServerURL  *string
+	RequestBody *UpdatePhoneNumberUpdatePhoneNumberRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to update.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the PhoneNumber resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdatePhoneNumberResponse struct {

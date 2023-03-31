@@ -34,7 +34,7 @@ func newNtp1(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // BroadcastTx - Broadcasts a signed raw transaction to the network
 // Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.
-func (s *ntp1) BroadcastTx(ctx context.Context, request operations.BroadcastTxRequest) (*operations.BroadcastTxResponse, error) {
+func (s *ntp1) BroadcastTx(ctx context.Context, request shared.BroadcastTxRequest) (*operations.BroadcastTxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ntp1/broadcast"
 
@@ -99,7 +99,7 @@ func (s *ntp1) BroadcastTx(ctx context.Context, request operations.BroadcastTxRe
 
 // BurnToken - Builds a transaction that burns an NTP1 Token
 // Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.
-func (s *ntp1) BurnToken(ctx context.Context, request operations.BurnTokenRequest) (*operations.BurnTokenResponse, error) {
+func (s *ntp1) BurnToken(ctx context.Context, request shared.BurnTokenRequest) (*operations.BurnTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ntp1/burntoken"
 
@@ -166,7 +166,7 @@ func (s *ntp1) BurnToken(ctx context.Context, request operations.BurnTokenReques
 // Returns both NEBL and NTP1 token UTXOs held at the given address.
 func (s *ntp1) GetAddressInfo(ctx context.Context, request operations.GetAddressInfoRequest) (*operations.GetAddressInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/addressinfo/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ntp1/addressinfo/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *ntp1) GetAddressInfo(ctx context.Context, request operations.GetAddress
 // Returns the the the addresses holding a token and how many tokens are held
 func (s *ntp1) GetTokenHolders(ctx context.Context, request operations.GetTokenHoldersRequest) (*operations.GetTokenHoldersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/stakeholders/{tokenid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ntp1/stakeholders/{tokenid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,7 +276,7 @@ func (s *ntp1) GetTokenHolders(ctx context.Context, request operations.GetTokenH
 // Translates a token symbol to a tokenId if a token exists with that symbol on the network
 func (s *ntp1) GetTokenID(ctx context.Context, request operations.GetTokenIDRequest) (*operations.GetTokenIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenid/{tokensymbol}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenid/{tokensymbol}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,14 +321,14 @@ func (s *ntp1) GetTokenID(ctx context.Context, request operations.GetTokenIDRequ
 // Returns the metadata associated with a token.
 func (s *ntp1) GetTokenMetadata(ctx context.Context, request operations.GetTokenMetadataRequest) (*operations.GetTokenMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -380,14 +380,14 @@ func (s *ntp1) GetTokenMetadata(ctx context.Context, request operations.GetToken
 // Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.
 func (s *ntp1) GetTokenMetadataOfUtxo(ctx context.Context, request operations.GetTokenMetadataOfUtxoRequest) (*operations.GetTokenMetadataOfUtxoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}/{utxo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}/{utxo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -439,7 +439,7 @@ func (s *ntp1) GetTokenMetadataOfUtxo(ctx context.Context, request operations.Ge
 // Returns detailed information regarding an NTP1 transaction.
 func (s *ntp1) GetTransactionInfo(ctx context.Context, request operations.GetTransactionInfoRequest) (*operations.GetTransactionInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/transactioninfo/{txid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ntp1/transactioninfo/{txid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -492,7 +492,7 @@ func (s *ntp1) GetTransactionInfo(ctx context.Context, request operations.GetTra
 
 // IssueToken - Builds a transaction that issues a new NTP1 Token
 // Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.
-func (s *ntp1) IssueToken(ctx context.Context, request operations.IssueTokenRequest) (*operations.IssueTokenResponse, error) {
+func (s *ntp1) IssueToken(ctx context.Context, request shared.IssueTokenRequest) (*operations.IssueTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ntp1/issue"
 
@@ -557,7 +557,7 @@ func (s *ntp1) IssueToken(ctx context.Context, request operations.IssueTokenRequ
 
 // SendToken - Builds a transaction that sends an NTP1 Token
 // Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.
-func (s *ntp1) SendToken(ctx context.Context, request operations.SendTokenRequest) (*operations.SendTokenResponse, error) {
+func (s *ntp1) SendToken(ctx context.Context, request shared.SendTokenRequest) (*operations.SendTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ntp1/sendtoken"
 

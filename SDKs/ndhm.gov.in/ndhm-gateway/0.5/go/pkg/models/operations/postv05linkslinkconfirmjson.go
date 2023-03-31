@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05LinksLinkConfirmJSONHeaders struct {
+type PostV05LinksLinkConfirmJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization           string                         `header:"style=simple,explode=false,name=Authorization"`
+	LinkConfirmationRequest shared.LinkConfirmationRequest `request:"mediaType=application/json"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
-}
-
-type PostV05LinksLinkConfirmJSONRequest struct {
-	Headers PostV05LinksLinkConfirmJSONHeaders
-	Request shared.LinkConfirmationRequest `request:"mediaType=application/json"`
 }
 
 type PostV05LinksLinkConfirmJSONResponse struct {

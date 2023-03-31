@@ -13,19 +13,14 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.RegisterDomainRequest{
-        Security: operations.RegisterDomainSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Request: shared.RegisterDomainRequest{
-            DomainName: "corrupti",
-        },
+    req := shared.RegisterDomainRequest{
+        DomainName: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.ApplePay.RegisterDomain(ctx, req)
+    res, err := s.ApplePay.RegisterDomain(ctx, req, operations.RegisterDomainSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

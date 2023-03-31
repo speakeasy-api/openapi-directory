@@ -8,18 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDPayslipsJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDPayslipsJSONPathParams struct {
-	// Id of the folder employee
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDPayslipsApplicationJSON2AccountingWorkbookEnum string
@@ -178,10 +170,12 @@ func (u PostSpacesSpaceIDFoldersIDPayslipsApplicationJSON) MarshalJSON() ([]byte
 }
 
 type PostSpacesSpaceIDFoldersIDPayslipsJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDPayslipsJSONPathParams
 	// Payslip to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDPayslipsApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDPayslipsJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDPayslipsApplicationJSON `request:"mediaType=application/json"`
+	// Id of the folder employee
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDPayslipsJSON201ApplicationJSON - Id of document created

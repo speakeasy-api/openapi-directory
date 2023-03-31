@@ -12,12 +12,8 @@ var CreateAccessTokenServerList = []string{
 }
 
 type CreateAccessTokenSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateAccessTokenPathParams struct {
-	// The unique SID identifier of the Service.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAccessTokenCreateAccessTokenRequest struct {
@@ -31,10 +27,9 @@ type CreateAccessTokenCreateAccessTokenRequest struct {
 }
 
 type CreateAccessTokenRequest struct {
-	PathParams CreateAccessTokenPathParams
-	Request    *CreateAccessTokenCreateAccessTokenRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateAccessTokenSecurity
-	ServerURL  *string
+	RequestBody *CreateAccessTokenCreateAccessTokenRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Service.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateAccessTokenResponse struct {

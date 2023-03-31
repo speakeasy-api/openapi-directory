@@ -43,7 +43,7 @@ func (s *specialSecurityAreas) SsaByDistanceUsV1SsaDistanceQueryPost(ctx context
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/ssa/distance-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSAByDistance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *specialSecurityAreas) SsaByDistanceUsV1SsaDistanceQueryPost(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -111,7 +111,7 @@ func (s *specialSecurityAreas) SsaByPolyUsV1SsaPolygonQueryPost(ctx context.Cont
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/ssa/polygon-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSAByPolygon", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -126,7 +126,7 @@ func (s *specialSecurityAreas) SsaByPolyUsV1SsaPolygonQueryPost(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -179,7 +179,7 @@ func (s *specialSecurityAreas) SsaByRouteUsV1SsaRouteQueryPost(ctx context.Conte
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/ssa/route-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSAByRoute", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -194,7 +194,7 @@ func (s *specialSecurityAreas) SsaByRouteUsV1SsaRouteQueryPost(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

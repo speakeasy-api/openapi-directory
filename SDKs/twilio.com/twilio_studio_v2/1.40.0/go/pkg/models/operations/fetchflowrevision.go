@@ -12,20 +12,15 @@ var FetchFlowRevisionServerList = []string{
 }
 
 type FetchFlowRevisionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchFlowRevisionPathParams struct {
+type FetchFlowRevisionRequest struct {
 	// Specific Revision number or can be `LatestPublished` and `LatestRevision`.
 	Revision string `pathParam:"style=simple,explode=false,name=Revision"`
 	// The SID of the Flow resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchFlowRevisionRequest struct {
-	PathParams FetchFlowRevisionPathParams
-	Security   FetchFlowRevisionSecurity
-	ServerURL  *string
 }
 
 type FetchFlowRevisionResponse struct {

@@ -10,23 +10,23 @@ import (
 )
 
 type DriveFilesInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesInsertSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesInsertSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesInsertSecurity struct {
@@ -60,7 +60,8 @@ func (e *DriveFilesInsertVisibilityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DriveFilesInsertQueryParams struct {
+type DriveFilesInsertRequest struct {
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Whether to convert this file to the corresponding Docs Editors format.
@@ -101,12 +102,6 @@ type DriveFilesInsertQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The visibility of the new file. This parameter is only relevant when convert=false.
 	Visibility *DriveFilesInsertVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type DriveFilesInsertRequest struct {
-	QueryParams DriveFilesInsertQueryParams
-	Request     []byte `request:"mediaType=application/octet-stream"`
-	Security    DriveFilesInsertSecurity
 }
 
 type DriveFilesInsertResponse struct {

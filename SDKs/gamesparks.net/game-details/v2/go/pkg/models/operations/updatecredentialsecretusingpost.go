@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCredentialSecretUsingPOSTPathParams struct {
+type UpdateCredentialSecretUsingPOSTRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// credentialName
 	CredentialName string `pathParam:"style=simple,explode=false,name=credentialName"`
-}
-
-type UpdateCredentialSecretUsingPOSTRequest struct {
-	PathParams UpdateCredentialSecretUsingPOSTPathParams
 }
 
 type UpdateCredentialSecretUsingPOSTResponse struct {

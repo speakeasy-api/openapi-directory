@@ -8,26 +8,24 @@ import (
 )
 
 type Adexchangebuyer2AccountsClientsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsClientsUpdatePathParams struct {
-	// Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer to update a client for. (required)
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// Unique numerical account ID of the client to update. (required)
-	ClientAccountID string `pathParam:"style=simple,explode=false,name=clientAccountId"`
-}
-
-type Adexchangebuyer2AccountsClientsUpdateQueryParams struct {
+type Adexchangebuyer2AccountsClientsUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Client      *shared.Client    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer to update a client for. (required)
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Unique numerical account ID of the client to update. (required)
+	ClientAccountID string `pathParam:"style=simple,explode=false,name=clientAccountId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,13 +40,6 @@ type Adexchangebuyer2AccountsClientsUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsClientsUpdateRequest struct {
-	PathParams  Adexchangebuyer2AccountsClientsUpdatePathParams
-	QueryParams Adexchangebuyer2AccountsClientsUpdateQueryParams
-	Request     *shared.Client `request:"mediaType=application/json"`
-	Security    Adexchangebuyer2AccountsClientsUpdateSecurity
 }
 
 type Adexchangebuyer2AccountsClientsUpdateResponse struct {

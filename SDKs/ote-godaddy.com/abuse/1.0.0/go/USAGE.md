@@ -13,16 +13,14 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateTicketRequest{
-        Request: shared.AbuseTicketCreate{
-            Info: "corrupti",
-            InfoURL: "provident",
-            Intentional: false,
-            Proxy: "distinctio",
-            Source: "quibusdam",
-            Target: "unde",
-            Type: "PHISHING",
-        },
+    req := shared.AbuseTicketCreate{
+        Info: "corrupti",
+        InfoURL: "provident",
+        Intentional: false,
+        Proxy: "distinctio",
+        Source: "quibusdam",
+        Target: "unde",
+        Type: "PHISHING",
     }
 
     ctx := context.Background()

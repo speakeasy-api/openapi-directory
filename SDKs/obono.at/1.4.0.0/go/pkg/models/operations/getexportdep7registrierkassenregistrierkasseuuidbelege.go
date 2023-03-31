@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegePathParams struct {
-	// The `_uuid` of the `Registrierkasse` to export.
-	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
-}
-
-type GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeQueryParams struct {
+type GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeRequest struct {
 	// Only return results that were saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// Only return results that were saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
 	Before *string `queryParam:"style=form,explode=true,name=before"`
-}
-
-type GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeRequest struct {
-	PathParams  GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegePathParams
-	QueryParams GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeQueryParams
+	// The `_uuid` of the `Registrierkasse` to export.
+	RegistrierkasseUUID string `pathParam:"style=simple,explode=false,name=registrierkasseUuid"`
 }
 
 type GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeResponse struct {

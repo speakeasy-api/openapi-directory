@@ -8,11 +8,11 @@ import (
 )
 
 type DriveFilesEmptyTrashSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DriveFilesEmptyTrashQueryParams struct {
+type DriveFilesEmptyTrashRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
@@ -29,11 +29,6 @@ type DriveFilesEmptyTrashQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesEmptyTrashRequest struct {
-	QueryParams DriveFilesEmptyTrashQueryParams
-	Security    DriveFilesEmptyTrashSecurity
 }
 
 type DriveFilesEmptyTrashResponse struct {

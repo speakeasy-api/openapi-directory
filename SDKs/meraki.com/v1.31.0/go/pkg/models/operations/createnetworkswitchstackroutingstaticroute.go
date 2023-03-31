@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkSwitchStackRoutingStaticRoutePathParams struct {
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	SwitchStackID string `pathParam:"style=simple,explode=false,name=switchStackId"`
-}
-
 type CreateNetworkSwitchStackRoutingStaticRouteRequestBody struct {
 	// Option to advertise static route via OSPF
 	AdvertiseViaOspfEnabled *bool `json:"advertiseViaOspfEnabled,omitempty"`
@@ -25,8 +20,9 @@ type CreateNetworkSwitchStackRoutingStaticRouteRequestBody struct {
 }
 
 type CreateNetworkSwitchStackRoutingStaticRouteRequest struct {
-	PathParams CreateNetworkSwitchStackRoutingStaticRoutePathParams
-	Request    CreateNetworkSwitchStackRoutingStaticRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody   CreateNetworkSwitchStackRoutingStaticRouteRequestBody `request:"mediaType=application/json"`
+	NetworkID     string                                                `pathParam:"style=simple,explode=false,name=networkId"`
+	SwitchStackID string                                                `pathParam:"style=simple,explode=false,name=switchStackId"`
 }
 
 type CreateNetworkSwitchStackRoutingStaticRouteResponse struct {

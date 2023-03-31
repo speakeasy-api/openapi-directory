@@ -10,18 +10,18 @@ import (
 )
 
 type StorageBucketsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsInsertSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageBucketsInsertSecurity struct {
@@ -123,7 +123,8 @@ func (e *StorageBucketsInsertProjectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StorageBucketsInsertQueryParams struct {
+type StorageBucketsInsertRequest struct {
+	Bucket *shared.Bucket `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -150,12 +151,6 @@ type StorageBucketsInsertQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageBucketsInsertRequest struct {
-	QueryParams StorageBucketsInsertQueryParams
-	Request     *shared.Bucket `request:"mediaType=application/json"`
-	Security    StorageBucketsInsertSecurity
 }
 
 type StorageBucketsInsertResponse struct {

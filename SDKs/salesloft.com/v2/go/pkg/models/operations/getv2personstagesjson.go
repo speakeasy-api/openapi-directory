@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2PersonStagesJSONQueryParams struct {
+type GetV2PersonStagesJSONRequest struct {
 	// IDs of person stages to fetch.
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -21,10 +21,6 @@ type GetV2PersonStagesJSONQueryParams struct {
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetV2PersonStagesJSONRequest struct {
-	QueryParams GetV2PersonStagesJSONQueryParams
 }
 
 type GetV2PersonStagesJSONResponse struct {

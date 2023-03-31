@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The unique identifier of the pre-receive hook.
-	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-}
-
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody struct {
 	// Whether repositories can override enforcement.
 	AllowDownstreamConfiguration *bool `json:"allow_downstream_configuration,omitempty"`
@@ -22,8 +15,11 @@ type EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody struct {
 }
 
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest struct {
-	PathParams EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams
-	Request    *EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The unique identifier of the pre-receive hook.
+	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
 }
 
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse struct {

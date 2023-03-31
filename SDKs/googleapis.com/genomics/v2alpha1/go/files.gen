@@ -21,6 +21,7 @@ pkg/models/operations/genomicsprojectsworkerscheckin.go
 pkg/models/operations/genomicsworkerscheckin.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/runpipelinerequest.go
 pkg/models/shared/pipeline.go
 pkg/models/shared/resources.go
@@ -36,9 +37,7 @@ pkg/models/shared/accelerator.go
 pkg/models/shared/secret.go
 pkg/models/shared/action.go
 pkg/models/shared/mount.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listoperationsresponse.go
 pkg/models/shared/checkinresponse.go
 pkg/models/shared/checkinrequest.go

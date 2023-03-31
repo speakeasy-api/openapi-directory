@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteOrdersIDSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteOrdersIDPathParams struct {
-	// ID of order that needs to be canceled
-	ID int `pathParam:"style=simple,explode=false,name=id"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteOrdersIDRequest struct {
-	PathParams DeleteOrdersIDPathParams
-	Security   DeleteOrdersIDSecurity
+	// ID of order that needs to be canceled
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteOrdersIDResponse struct {

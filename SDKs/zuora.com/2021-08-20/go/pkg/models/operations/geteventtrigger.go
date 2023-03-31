@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETEventTriggerPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GETEventTriggerHeaders struct {
+type GETEventTriggerRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -23,11 +19,7 @@ type GETEventTriggerHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETEventTriggerRequest struct {
-	PathParams GETEventTriggerPathParams
-	Headers    GETEventTriggerHeaders
+	ID           string  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GETEventTriggerResponse struct {

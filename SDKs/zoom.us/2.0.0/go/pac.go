@@ -44,7 +44,7 @@ func newPac(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // * Personal Audio Conference must be enabled in the user's profile.
 func (s *pac) UserPACs(ctx context.Context, request operations.UserPACsRequest) (*operations.UserPACsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/pac", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/pac", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

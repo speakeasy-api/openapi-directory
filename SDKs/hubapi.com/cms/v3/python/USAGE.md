@@ -4,32 +4,27 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetCmsV3DomainsGetPageRequest(
-    security=operations.GetCmsV3DomainsGetPageSecurity(
-        private_apps_legacy=shared.SchemePrivateAppsLegacy(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    ),
-    query_params=operations.GetCmsV3DomainsGetPageQueryParams(
-        after="sint",
-        archived=True,
-        created_after="1979-06-18T08:47:49Z",
-        created_at="1996-07-01T20:51:37Z",
-        created_before="1975-07-12T06:10:33Z",
-        limit=5059578240158743690,
-        sort=[
-            "officiis",
-            "provident",
-            "aspernatur",
-        ],
-        updated_after="2008-10-11T04:42:47Z",
-        updated_at="1970-09-06T10:10:38Z",
-        updated_before="2002-08-08T17:15:15Z",
-    ),
+    after="corrupti",
+    archived=False,
+    created_after="2021-07-27T21:52:56.087Z",
+    created_at="2021-03-11T23:22:42.658Z",
+    created_before="2021-05-14T08:28:11.899Z",
+    limit=847252,
+    sort=[
+        "error",
+        "deserunt",
+    ],
+    updated_after="2022-07-25T06:44:09.184Z",
+    updated_at="2022-02-09T12:04:06.508Z",
+    updated_before="2022-01-14T06:18:51.036Z",
 )
     
-res = s.domains.get_cms_v3_domains_get_page(req)
+res = s.domains.get_cms_v3_domains_get_page(req, operations.GetCmsV3DomainsGetPageSecurity(
+    hapikey="YOUR_API_KEY_HERE",
+))
 
 if res.collection_response_with_total_domain_forward_paging is not None:
     # handle response

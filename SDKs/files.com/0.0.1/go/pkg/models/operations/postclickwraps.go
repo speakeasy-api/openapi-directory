@@ -100,10 +100,6 @@ type PostClickwrapsRequestBody struct {
 	UseWithUsers *PostClickwrapsRequestBodyUseWithUsersEnum `multipartForm:"name=use_with_users"`
 }
 
-type PostClickwrapsRequest struct {
-	Request *PostClickwrapsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostClickwrapsResponse struct {
 	// The Clickwraps object.
 	ClickwrapEntity *shared.ClickwrapEntity

@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type GetOrganizationAPIRequestsOverviewPathParams struct {
+type GetOrganizationAPIRequestsOverviewRequest struct {
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationAPIRequestsOverviewQueryParams struct {
 	// The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetOrganizationAPIRequestsOverviewRequest struct {
-	PathParams  GetOrganizationAPIRequestsOverviewPathParams
-	QueryParams GetOrganizationAPIRequestsOverviewQueryParams
 }
 
 type GetOrganizationAPIRequestsOverviewResponse struct {

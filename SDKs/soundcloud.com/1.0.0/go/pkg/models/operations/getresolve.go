@@ -8,18 +8,13 @@ import (
 )
 
 type GetResolveSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetResolveQueryParams struct {
-	// SoundCloud URL
-	URL string `queryParam:"style=form,explode=true,name=url"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
 type GetResolveRequest struct {
-	QueryParams GetResolveQueryParams
-	Security    GetResolveSecurity
+	// SoundCloud URL
+	URL string `queryParam:"style=form,explode=true,name=url"`
 }
 
 type GetResolveResponse struct {

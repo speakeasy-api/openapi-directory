@@ -7,26 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmGroupsIDMembersPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// realm name (not id!)
-	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmGroupsIDMembersQueryParams struct {
+type GetRealmGroupsIDMembersRequest struct {
 	// Only return basic information (only guaranteed to return id, username, created, first and last name,
 	//  email, enabled state, email verification state, federation link, and access.
 	//  Note that it means that namely user attributes, required actions, and not before are not returned.)
 	BriefRepresentation *bool `queryParam:"style=form,explode=true,name=briefRepresentation"`
 	// Pagination offset
-	First *int `queryParam:"style=form,explode=true,name=first"`
+	First *int   `queryParam:"style=form,explode=true,name=first"`
+	ID    string `pathParam:"style=simple,explode=false,name=id"`
 	// Maximum results size (defaults to 100)
 	Max *int `queryParam:"style=form,explode=true,name=max"`
-}
-
-type GetRealmGroupsIDMembersRequest struct {
-	PathParams  GetRealmGroupsIDMembersPathParams
-	QueryParams GetRealmGroupsIDMembersQueryParams
+	// realm name (not id!)
+	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 }
 
 type GetRealmGroupsIDMembersResponse struct {

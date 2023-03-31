@@ -12,12 +12,8 @@ var UpdateRecordingServerList = []string{
 }
 
 type UpdateRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRecordingPathParams struct {
-	// The SID of the Trunk that will have its recording settings updated.
-	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRecordingUpdateRecordingRequest struct {
@@ -26,10 +22,9 @@ type UpdateRecordingUpdateRecordingRequest struct {
 }
 
 type UpdateRecordingRequest struct {
-	PathParams UpdateRecordingPathParams
-	Request    *UpdateRecordingUpdateRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRecordingSecurity
-	ServerURL  *string
+	RequestBody *UpdateRecordingUpdateRecordingRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Trunk that will have its recording settings updated.
+	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
 }
 
 type UpdateRecordingResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type IpamServicesDeletePathParams struct {
+type IpamServicesDeleteRequest struct {
 	// A unique integer value identifying this service.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamServicesDeleteRequest struct {
-	PathParams IpamServicesDeletePathParams
 }
 
 type IpamServicesDeleteResponse struct {

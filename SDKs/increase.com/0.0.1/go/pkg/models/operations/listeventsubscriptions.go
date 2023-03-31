@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEventSubscriptionsQueryParams struct {
+type ListEventSubscriptionsRequest struct {
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit  *int64  `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListEventSubscriptionsRequest struct {
-	QueryParams ListEventSubscriptionsQueryParams
 }
 
 type ListEventSubscriptionsDefaultApplicationJSON13StatusEnum string

@@ -8,24 +8,15 @@ import (
 )
 
 type GerUserLikesSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GerUserLikesPathParams struct {
-	// Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
-	//
-	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type GerUserLikesQueryParams struct {
-	// Return only the identifiers of the scores
-	Ids *bool `queryParam:"style=form,explode=true,name=ids"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GerUserLikesRequest struct {
-	PathParams  GerUserLikesPathParams
-	QueryParams GerUserLikesQueryParams
-	Security    GerUserLikesSecurity
+	// Return only the identifiers of the scores
+	Ids *bool `queryParam:"style=form,explode=true,name=ids"`
+	// Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
+	//
+	User string `pathParam:"style=simple,explode=false,name=user"`
 }
 
 type GerUserLikesResponse struct {

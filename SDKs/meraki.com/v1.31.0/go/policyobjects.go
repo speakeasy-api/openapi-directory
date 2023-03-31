@@ -34,9 +34,9 @@ func newPolicyObjects(defaultClient, securityClient HTTPClient, serverURL, langu
 // Creates a new Policy Object.
 func (s *policyObjects) CreateOrganizationPolicyObject(ctx context.Context, request operations.CreateOrganizationPolicyObjectRequest) (*operations.CreateOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *policyObjects) CreateOrganizationPolicyObject(ctx context.Context, requ
 // Creates a new Policy Object Group.
 func (s *policyObjects) CreateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.CreateOrganizationPolicyObjectsGroupRequest) (*operations.CreateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *policyObjects) CreateOrganizationPolicyObjectsGroup(ctx context.Context
 // Deletes a Policy Object.
 func (s *policyObjects) DeleteOrganizationPolicyObject(ctx context.Context, request operations.DeleteOrganizationPolicyObjectRequest) (*operations.DeleteOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *policyObjects) DeleteOrganizationPolicyObject(ctx context.Context, requ
 // Deletes a Policy Object Group.
 func (s *policyObjects) DeleteOrganizationPolicyObjectsGroup(ctx context.Context, request operations.DeleteOrganizationPolicyObjectsGroupRequest) (*operations.DeleteOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -216,7 +216,7 @@ func (s *policyObjects) DeleteOrganizationPolicyObjectsGroup(ctx context.Context
 // Shows details of a Policy Object.
 func (s *policyObjects) GetOrganizationPolicyObject(ctx context.Context, request operations.GetOrganizationPolicyObjectRequest) (*operations.GetOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,14 +261,14 @@ func (s *policyObjects) GetOrganizationPolicyObject(ctx context.Context, request
 // Lists Policy Objects belonging to the organization.
 func (s *policyObjects) GetOrganizationPolicyObjects(ctx context.Context, request operations.GetOrganizationPolicyObjectsRequest) (*operations.GetOrganizationPolicyObjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -312,7 +312,7 @@ func (s *policyObjects) GetOrganizationPolicyObjects(ctx context.Context, reques
 // Shows details of a Policy Object Group.
 func (s *policyObjects) GetOrganizationPolicyObjectsGroup(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupRequest) (*operations.GetOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -357,14 +357,14 @@ func (s *policyObjects) GetOrganizationPolicyObjectsGroup(ctx context.Context, r
 // Lists Policy Object Groups belonging to the organization.
 func (s *policyObjects) GetOrganizationPolicyObjectsGroups(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupsRequest) (*operations.GetOrganizationPolicyObjectsGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -408,9 +408,9 @@ func (s *policyObjects) GetOrganizationPolicyObjectsGroups(ctx context.Context, 
 // Updates a Policy Object.
 func (s *policyObjects) UpdateOrganizationPolicyObject(ctx context.Context, request operations.UpdateOrganizationPolicyObjectRequest) (*operations.UpdateOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,9 +460,9 @@ func (s *policyObjects) UpdateOrganizationPolicyObject(ctx context.Context, requ
 // Updates a Policy Object Group.
 func (s *policyObjects) UpdateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.UpdateOrganizationPolicyObjectsGroupRequest) (*operations.UpdateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

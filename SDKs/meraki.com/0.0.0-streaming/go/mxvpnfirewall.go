@@ -34,7 +34,7 @@ func newMXVPNFirewall(defaultClient, securityClient HTTPClient, serverURL, langu
 // Return the firewall rules for an organization's site-to-site VPN
 func (s *mxVPNFirewall) GetOrganizationVpnFirewallRules(ctx context.Context, request operations.GetOrganizationVpnFirewallRulesRequest) (*operations.GetOrganizationVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/vpnFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *mxVPNFirewall) GetOrganizationVpnFirewallRules(ctx context.Context, req
 // Update the firewall rules of an organization's site-to-site VPN
 func (s *mxVPNFirewall) UpdateOrganizationVpnFirewallRules(ctx context.Context, request operations.UpdateOrganizationVpnFirewallRulesRequest) (*operations.UpdateOrganizationVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/vpnFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

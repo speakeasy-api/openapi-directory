@@ -34,7 +34,7 @@ func newDhcp(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Return the DHCP subnet information for an appliance
 func (s *dhcp) GetDeviceApplianceDhcpSubnets(ctx context.Context, request operations.GetDeviceApplianceDhcpSubnetsRequest) (*operations.GetDeviceApplianceDhcpSubnetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/dhcp/subnets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/dhcp/subnets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *dhcp) GetDeviceApplianceDhcpSubnets(ctx context.Context, request operat
 // Return a layer 3 interface DHCP configuration for a switch
 func (s *dhcp) GetDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, request operations.GetDeviceSwitchRoutingInterfaceDhcpRequest) (*operations.GetDeviceSwitchRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *dhcp) GetDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, request 
 // List common DHCP settings of MGs
 func (s *dhcp) GetNetworkCellularGatewayDhcp(ctx context.Context, request operations.GetNetworkCellularGatewayDhcpRequest) (*operations.GetNetworkCellularGatewayDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,14 +169,14 @@ func (s *dhcp) GetNetworkCellularGatewayDhcp(ctx context.Context, request operat
 // Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)
 func (s *dhcp) GetNetworkSwitchDhcpV4ServersSeen(ctx context.Context, request operations.GetNetworkSwitchDhcpV4ServersSeenRequest) (*operations.GetNetworkSwitchDhcpV4ServersSeenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -220,7 +220,7 @@ func (s *dhcp) GetNetworkSwitchDhcpV4ServersSeen(ctx context.Context, request op
 // Return a layer 3 interface DHCP configuration for a switch stack
 func (s *dhcp) GetNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest) (*operations.GetNetworkSwitchStackRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,9 +265,9 @@ func (s *dhcp) GetNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, re
 // Update a layer 3 interface DHCP configuration for a switch
 func (s *dhcp) UpdateDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, request operations.UpdateDeviceSwitchRoutingInterfaceDhcpRequest) (*operations.UpdateDeviceSwitchRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -317,9 +317,9 @@ func (s *dhcp) UpdateDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, reque
 // Update common DHCP settings of MGs
 func (s *dhcp) UpdateNetworkCellularGatewayDhcp(ctx context.Context, request operations.UpdateNetworkCellularGatewayDhcpRequest) (*operations.UpdateNetworkCellularGatewayDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -369,9 +369,9 @@ func (s *dhcp) UpdateNetworkCellularGatewayDhcp(ctx context.Context, request ope
 // Update a layer 3 interface DHCP configuration for a switch stack
 func (s *dhcp) UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest) (*operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

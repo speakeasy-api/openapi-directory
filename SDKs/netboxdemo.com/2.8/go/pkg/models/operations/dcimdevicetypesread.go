@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceTypesReadPathParams struct {
+type DcimDeviceTypesReadRequest struct {
 	// A unique integer value identifying this device type.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceTypesReadRequest struct {
-	PathParams DcimDeviceTypesReadPathParams
 }
 
 type DcimDeviceTypesReadResponse struct {

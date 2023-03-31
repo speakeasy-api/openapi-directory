@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest(
-    path_params=operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams(
-        owner="sed",
-        repo="dignissimos",
-    ),
+    owner="corrupti",
+    repo="provident",
 )
     
 res = s.activity.activity_check_repo_is_starred_by_authenticated_user(req)

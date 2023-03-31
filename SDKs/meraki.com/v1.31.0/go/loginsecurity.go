@@ -34,7 +34,7 @@ func newLoginSecurity(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns the login security settings for an organization.
 func (s *loginSecurity) GetOrganizationLoginSecurity(ctx context.Context, request operations.GetOrganizationLoginSecurityRequest) (*operations.GetOrganizationLoginSecurityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *loginSecurity) GetOrganizationLoginSecurity(ctx context.Context, reques
 // Update the login security settings for an organization
 func (s *loginSecurity) UpdateOrganizationLoginSecurity(ctx context.Context, request operations.UpdateOrganizationLoginSecurityRequest) (*operations.UpdateOrganizationLoginSecurityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

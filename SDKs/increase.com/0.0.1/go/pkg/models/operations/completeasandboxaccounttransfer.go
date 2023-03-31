@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteASandboxAccountTransferPathParams struct {
-	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
-}
-
 type CompleteASandboxAccountTransferRequest struct {
-	PathParams CompleteASandboxAccountTransferPathParams
+	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
 }
 
 type CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum string

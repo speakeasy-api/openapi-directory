@@ -8,20 +8,15 @@ import (
 )
 
 type GetMeActivitiesSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type GetMeActivitiesQueryParams struct {
+type GetMeActivitiesRequest struct {
 	// Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
 	//
 	Access []shared.AccessEnum `queryParam:"style=form,explode=false,name=access"`
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetMeActivitiesRequest struct {
-	QueryParams GetMeActivitiesQueryParams
-	Security    GetMeActivitiesSecurity
 }
 
 type GetMeActivitiesResponse struct {

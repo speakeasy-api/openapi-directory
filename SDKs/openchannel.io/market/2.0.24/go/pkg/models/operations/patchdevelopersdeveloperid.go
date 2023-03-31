@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type PatchDevelopersDeveloperIDPathParams struct {
-	// The id of the developer to be located
-	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
-}
-
-type PatchDevelopersDeveloperIDQueryParams struct {
+type PatchDevelopersDeveloperIDRequest struct {
 	// A custom JSON object that you can create and attach to this record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
+	// The id of the developer to be located
+	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
 	// The developer's email
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// The developer's name
@@ -22,11 +19,6 @@ type PatchDevelopersDeveloperIDQueryParams struct {
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// The developer's username
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type PatchDevelopersDeveloperIDRequest struct {
-	PathParams  PatchDevelopersDeveloperIDPathParams
-	QueryParams PatchDevelopersDeveloperIDQueryParams
 }
 
 type PatchDevelopersDeveloperIDResponse struct {

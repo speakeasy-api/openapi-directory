@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTaskListOfWorkgroupPathParams struct {
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type GetTaskListOfWorkgroupRequest struct {
-	PathParams GetTaskListOfWorkgroupPathParams
+	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type GetTaskListOfWorkgroupResponse struct {

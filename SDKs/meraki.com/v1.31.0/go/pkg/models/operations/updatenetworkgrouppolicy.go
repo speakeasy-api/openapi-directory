@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkGroupPolicyPathParams struct {
-	GroupPolicyID string `pathParam:"style=simple,explode=false,name=groupPolicyId"`
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits - The bandwidth limits object, specifying upload and download speed for clients bound to the group policy. These are only enforced if 'settings' is set to 'custom'.
 type UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits struct {
 	// The maximum download limit (integer, in Kbps). null indicates no limit
@@ -643,8 +638,9 @@ type UpdateNetworkGroupPolicyRequestBody struct {
 }
 
 type UpdateNetworkGroupPolicyRequest struct {
-	PathParams UpdateNetworkGroupPolicyPathParams
-	Request    *UpdateNetworkGroupPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateNetworkGroupPolicyRequestBody `request:"mediaType=application/json"`
+	GroupPolicyID string                               `pathParam:"style=simple,explode=false,name=groupPolicyId"`
+	NetworkID     string                               `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkGroupPolicyResponse struct {

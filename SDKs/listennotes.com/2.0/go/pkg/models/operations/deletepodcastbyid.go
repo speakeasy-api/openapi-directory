@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePodcastByIDPathParams struct {
-	// Podcast id. You can get podcast id from using other endpoints, e.g., `GET /search`, `GET /best_podcasts`...
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletePodcastByIDQueryParams struct {
-	// The reason why this podcast should be deleted, e.g., copyright violation, the podcaster wants to delete it... You can put "testing" here to indicate that you are testing this endpoint, so we will not actually delete the podcast.
-	Reason *string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type DeletePodcastByIDHeaders struct {
+type DeletePodcastByIDRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type DeletePodcastByIDRequest struct {
-	PathParams  DeletePodcastByIDPathParams
-	QueryParams DeletePodcastByIDQueryParams
-	Headers     DeletePodcastByIDHeaders
+	// Podcast id. You can get podcast id from using other endpoints, e.g., `GET /search`, `GET /best_podcasts`...
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The reason why this podcast should be deleted, e.g., copyright violation, the podcaster wants to delete it... You can put "testing" here to indicate that you are testing this endpoint, so we will not actually delete the podcast.
+	Reason *string `queryParam:"style=form,explode=true,name=reason"`
 }
 
 type DeletePodcastByIDResponse struct {

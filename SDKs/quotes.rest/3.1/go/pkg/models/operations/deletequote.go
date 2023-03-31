@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteQuoteSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteQuoteQueryParams struct {
-	// Quote ID
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type DeleteQuoteRequest struct {
-	QueryParams DeleteQuoteQueryParams
-	Security    DeleteQuoteSecurity
+	// Quote ID
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type DeleteQuoteResponse struct {

@@ -28,15 +28,14 @@ pkg/models/operations/redisprojectslocationsoperationsget.go
 pkg/models/operations/redisprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/instance.go
 pkg/models/shared/persistenceconfig.go
 pkg/models/shared/maintenanceschedule.go
 pkg/models/shared/maintenancepolicy.go
 pkg/models/shared/weeklymaintenancewindow.go
 pkg/models/shared/timeofday.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/exportinstancerequest.go
 pkg/models/shared/outputconfig.go
 pkg/models/shared/gcsdestination.go

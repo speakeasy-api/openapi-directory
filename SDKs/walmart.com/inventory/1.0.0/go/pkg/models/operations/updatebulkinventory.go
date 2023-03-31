@@ -8,6 +8,16 @@ import (
 	"net/http"
 )
 
+type UpdateBulkInventoryRequestBodyFile struct {
+	Content []byte `multipartForm:"content"`
+	File    string `multipartForm:"name=file"`
+}
+
+type UpdateBulkInventoryRequestBody struct {
+	// Feed file to upload
+	File UpdateBulkInventoryRequestBodyFile `multipartForm:"file"`
+}
+
 // UpdateBulkInventoryFeedTypeEnum - The feed Type
 type UpdateBulkInventoryFeedTypeEnum string
 
@@ -32,14 +42,8 @@ func (e *UpdateBulkInventoryFeedTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateBulkInventoryQueryParams struct {
-	// The feed Type
-	FeedType UpdateBulkInventoryFeedTypeEnum `queryParam:"style=form,explode=true,name=feedType"`
-	// The shipNode for which the inventory is to be updated. Not required in case of Multi Node Inventory Update Feed (feedType=MP_INVENTORY)
-	ShipNode *string `queryParam:"style=form,explode=true,name=shipNode"`
-}
-
-type UpdateBulkInventoryHeaders struct {
+type UpdateBulkInventoryRequest struct {
+	RequestBody *UpdateBulkInventoryRequestBody `request:"mediaType=multipart/form-data"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
 	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
@@ -48,22 +52,10 @@ type UpdateBulkInventoryHeaders struct {
 	WmSecAccessToken string `header:"style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN"`
 	// Walmart Service Name
 	WmSvcName string `header:"style=simple,explode=false,name=WM_SVC.NAME"`
-}
-
-type UpdateBulkInventoryRequestBodyFile struct {
-	Content []byte `multipartForm:"content"`
-	File    string `multipartForm:"name=file"`
-}
-
-type UpdateBulkInventoryRequestBody struct {
-	// Feed file to upload
-	File UpdateBulkInventoryRequestBodyFile `multipartForm:"file"`
-}
-
-type UpdateBulkInventoryRequest struct {
-	QueryParams UpdateBulkInventoryQueryParams
-	Headers     UpdateBulkInventoryHeaders
-	Request     *UpdateBulkInventoryRequestBody `request:"mediaType=multipart/form-data"`
+	// The feed Type
+	FeedType UpdateBulkInventoryFeedTypeEnum `queryParam:"style=form,explode=true,name=feedType"`
+	// The shipNode for which the inventory is to be updated. Not required in case of Multi Node Inventory Update Feed (feedType=MP_INVENTORY)
+	ShipNode *string `queryParam:"style=form,explode=true,name=shipNode"`
 }
 
 // UpdateBulkInventory200ApplicationXML - Successful Operation

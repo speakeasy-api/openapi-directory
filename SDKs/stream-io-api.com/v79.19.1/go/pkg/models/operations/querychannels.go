@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryChannelsQueryParams struct {
-	ClientID     *string `queryParam:"serialization=json,name=client_id"`
-	ConnectionID *string `queryParam:"serialization=json,name=connection_id"`
-}
-
 type QueryChannelsRequest struct {
-	QueryParams QueryChannelsQueryParams
 	// Query Channels Request
-	Request shared.QueryChannelsRequest `request:"mediaType=application/json"`
+	QueryChannelsRequest shared.QueryChannelsRequest `request:"mediaType=application/json"`
+	ClientID             *string                     `queryParam:"serialization=json,name=client_id"`
+	ConnectionID         *string                     `queryParam:"serialization=json,name=connection_id"`
 }
 
 type QueryChannelsResponse struct {

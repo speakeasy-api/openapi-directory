@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ProjectsListForOrgStateEnum - Indicates the state of the projects to return.
 type ProjectsListForOrgStateEnum string
 
@@ -41,18 +36,15 @@ func (e *ProjectsListForOrgStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProjectsListForOrgQueryParams struct {
+type ProjectsListForOrgRequest struct {
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Indicates the state of the projects to return.
 	State *ProjectsListForOrgStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ProjectsListForOrgRequest struct {
-	PathParams  ProjectsListForOrgPathParams
-	QueryParams ProjectsListForOrgQueryParams
 }
 
 type ProjectsListForOrgResponse struct {

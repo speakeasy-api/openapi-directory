@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetsubscriptionbyIDPathParams struct {
-	// Subscription ID.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type GetsubscriptionbyIDHeaders struct {
+type GetsubscriptionbyIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetsubscriptionbyIDRequest struct {
-	PathParams GetsubscriptionbyIDPathParams
-	Headers    GetsubscriptionbyIDHeaders
+	// Subscription ID.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type GetsubscriptionbyIDResponse struct {

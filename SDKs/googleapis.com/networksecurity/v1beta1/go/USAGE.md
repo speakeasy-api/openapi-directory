@@ -14,41 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest{
-        Security: operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsPathParams{
-            AddressGroup: "corrupti",
-        },
-        QueryParams: operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AddAddressGroupItemsRequest{
+        DollarXgafv: "2",
+        AddAddressGroupItemsRequest: &shared.AddAddressGroupItemsRequest{
             Items: []string{
-                "iure",
-                "magnam",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            RequestID: "debitis",
+            RequestID: "nulla",
         },
+        AccessToken: "corrupti",
+        AddressGroup: "illum",
+        Alt: "media",
+        Callback: "error",
+        Fields: "deserunt",
+        Key: "suscipit",
+        OauthToken: "iure",
+        PrettyPrint: false,
+        QuotaUser: "magnam",
+        UploadType: "debitis",
+        UploadProtocol: "ipsa",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx, req)
+    res, err := s.Projects.NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx, req, operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

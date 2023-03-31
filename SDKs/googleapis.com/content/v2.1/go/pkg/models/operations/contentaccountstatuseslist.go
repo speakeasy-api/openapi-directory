@@ -8,16 +8,11 @@ import (
 )
 
 type ContentAccountstatusesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentAccountstatusesListPathParams struct {
-	// The ID of the managing account. This must be a multi-client account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type ContentAccountstatusesListQueryParams struct {
+type ContentAccountstatusesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,6 +29,8 @@ type ContentAccountstatusesListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The maximum number of account statuses to return in the response, used for paging.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The ID of the managing account. This must be a multi-client account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// If set, only the accounts with the given name (case sensitive) will be returned.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// OAuth 2.0 token for the current user.
@@ -48,12 +45,6 @@ type ContentAccountstatusesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentAccountstatusesListRequest struct {
-	PathParams  ContentAccountstatusesListPathParams
-	QueryParams ContentAccountstatusesListQueryParams
-	Security    ContentAccountstatusesListSecurity
 }
 
 type ContentAccountstatusesListResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyUsagePathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type KeyUsageQueryParams struct {
+type KeyUsageRequest struct {
 	// An end date/time in the form of a UNIX Timestamp in milliseconds, e.g. `1418556452651`. If no end time is provided, the current time will be used.
-	End *int `queryParam:"style=form,explode=false,name=end"`
+	End *int   `queryParam:"style=form,explode=false,name=end"`
+	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// Sublicensed keys only. This will restrict the analysed dataset to a specific licensee.
 	Licensee *string `queryParam:"style=form,explode=false,name=licensee"`
 	// A start date/time in the form of a UNIX Timestamp in milliseconds, e.g. `1418556452651`. If no start time is provided, the start time will be assigned to a time 21 days prior to the end time.
 	Start *int    `queryParam:"style=form,explode=false,name=start"`
 	Tags  *string `queryParam:"style=form,explode=false,name=tags"`
-}
-
-type KeyUsageRequest struct {
-	PathParams  KeyUsagePathParams
-	QueryParams KeyUsageQueryParams
 }
 
 type KeyUsageResponse struct {

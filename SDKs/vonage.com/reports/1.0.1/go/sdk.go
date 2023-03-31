@@ -95,20 +95,20 @@ func New(opts ...SDKOption) *SDK {
 
 // GetCallLogs - Retrieve call logs for your account
 // Retrieve call logs for your account
-func (s *SDK) GetCallLogs(ctx context.Context, request operations.GetCallLogsRequest) (*operations.GetCallLogsResponse, error) {
+func (s *SDK) GetCallLogs(ctx context.Context, request operations.GetCallLogsRequest, security operations.GetCallLogsSecurity) (*operations.GetCallLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/call-logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/call-logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

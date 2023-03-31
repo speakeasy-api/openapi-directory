@@ -40,7 +40,7 @@ func newBluetooth(defaultClient, securityClient HTTPClient, serverURL, language,
 // **For Part 1 only**
 //
 // This enables/disables Home's bluetooth discovery and other devices can pair with Home (where Home acts as a speaker).
-func (s *bluetooth) ChangeDiscoverability(ctx context.Context, request operations.ChangeDiscoverabilityRequest) (*operations.ChangeDiscoverabilityResponse, error) {
+func (s *bluetooth) ChangeDiscoverability(ctx context.Context, request shared.ChangeDiscoverabilityRequest) (*operations.ChangeDiscoverabilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bluetooth/discovery"
 
@@ -100,7 +100,7 @@ func (s *bluetooth) ChangeDiscoverability(ctx context.Context, request operation
 // **For both parts**
 //
 // This is to forget paired devices by mac address. Works for both kinds of devices (Part 1 and Part 2).
-func (s *bluetooth) Forgetpaireddevice(ctx context.Context, request operations.ForgetpaireddeviceRequest) (*operations.ForgetpaireddeviceResponse, error) {
+func (s *bluetooth) Forgetpaireddevice(ctx context.Context, request shared.ForgetpaireddeviceRequest) (*operations.ForgetpaireddeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bluetooth/bond"
 
@@ -263,7 +263,7 @@ func (s *bluetooth) GetScanResults(ctx context.Context) (*operations.GetScanResu
 // **For Part 2 only**
 //
 // This pairs with other bluetooth speakers by mac address.
-func (s *bluetooth) PairwithSpeaker(ctx context.Context, request operations.PairwithSpeakerRequest) (*operations.PairwithSpeakerResponse, error) {
+func (s *bluetooth) PairwithSpeaker(ctx context.Context, request shared.PairwithSpeakerRequest) (*operations.PairwithSpeakerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bluetooth/connect"
 
@@ -324,7 +324,7 @@ func (s *bluetooth) PairwithSpeaker(ctx context.Context, request operations.Pair
 //
 // This initiates scan for other bluetooth speakers/devices. Scan results will be updated continuously for `timeout` seconds.
 // To get the scan results, see /setup/bluetooth/scan_results.
-func (s *bluetooth) Scanfordevices(ctx context.Context, request operations.ScanfordevicesRequest) (*operations.ScanfordevicesResponse, error) {
+func (s *bluetooth) Scanfordevices(ctx context.Context, request shared.ScanfordevicesRequest) (*operations.ScanfordevicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bluetooth/scan"
 

@@ -6,28 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetRebalanceDetailsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetRebalanceDetailsPathParams struct {
-	// Unique identifier of the rebalance request
-	RebalanceRequestID string `pathParam:"style=simple,explode=false,name=rebalance_request_id"`
-}
-
-type GetRebalanceDetailsHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetRebalanceDetailsRequest struct {
-	PathParams GetRebalanceDetailsPathParams
-	Headers    GetRebalanceDetailsHeaders
-	Security   GetRebalanceDetailsSecurity
+	// Unique identifier of the rebalance request
+	RebalanceRequestID string `pathParam:"style=simple,explode=false,name=rebalance_request_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetRebalanceDetails500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

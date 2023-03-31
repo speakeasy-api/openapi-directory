@@ -37,16 +37,16 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 //
 // The customer is identified by the `customer_id` value
 // and the customer group is identified by the `group_id` value.
-func (s *customers) AddGroupToCustomer(ctx context.Context, request operations.AddGroupToCustomerRequest) (*operations.AddGroupToCustomerResponse, error) {
+func (s *customers) AddGroupToCustomer(ctx context.Context, request operations.AddGroupToCustomerRequest, security operations.AddGroupToCustomerSecurity) (*operations.AddGroupToCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *customers) AddGroupToCustomer(ctx context.Context, request operations.A
 // - `company_name`
 // - `email_address`
 // - `phone_number`
-func (s *customers) CreateCustomer(ctx context.Context, request operations.CreateCustomerRequest) (*operations.CreateCustomerResponse, error) {
+func (s *customers) CreateCustomer(ctx context.Context, request shared.CreateCustomerRequest, security operations.CreateCustomerSecurity) (*operations.CreateCustomerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customers"
 
@@ -110,7 +110,7 @@ func (s *customers) CreateCustomer(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,11 +150,11 @@ func (s *customers) CreateCustomer(ctx context.Context, request operations.Creat
 // As with charges, calls to `CreateCustomerCard` are idempotent. Multiple
 // calls with the same card nonce return the same card record that was created
 // with the provided nonce during the _first_ call.
-func (s *customers) CreateCustomerCard(ctx context.Context, request operations.CreateCustomerCardRequest) (*operations.CreateCustomerCardResponse, error) {
+func (s *customers) CreateCustomerCard(ctx context.Context, request operations.CreateCustomerCardRequest, security operations.CreateCustomerCardSecurity) (*operations.CreateCustomerCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCustomerCardRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -169,7 +169,7 @@ func (s *customers) CreateCustomerCard(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,20 +209,20 @@ func (s *customers) CreateCustomerCard(ctx context.Context, request operations.C
 // As a best practice, you should include the `version` field in the request to enable [optimistic concurrency](https://developer.squareup.com/docs/working-with-apis/optimistic-concurrency) control. The value must be set to the current version of the customer profile.
 //
 // To delete a customer profile that was created by merging existing profiles, you must use the ID of the newly created profile.
-func (s *customers) DeleteCustomer(ctx context.Context, request operations.DeleteCustomerRequest) (*operations.DeleteCustomerResponse, error) {
+func (s *customers) DeleteCustomer(ctx context.Context, request operations.DeleteCustomerRequest, security operations.DeleteCustomerSecurity) (*operations.DeleteCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,16 +258,16 @@ func (s *customers) DeleteCustomer(ctx context.Context, request operations.Delet
 
 // DeleteCustomerCard - DeleteCustomerCard
 // Removes a card on file from a customer.
-func (s *customers) DeleteCustomerCard(ctx context.Context, request operations.DeleteCustomerCardRequest) (*operations.DeleteCustomerCardResponse, error) {
+func (s *customers) DeleteCustomerCard(ctx context.Context, request operations.DeleteCustomerCardRequest, security operations.DeleteCustomerCardSecurity) (*operations.DeleteCustomerCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards/{card_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards/{card_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,7 +307,7 @@ func (s *customers) DeleteCustomerCard(ctx context.Context, request operations.D
 // Under normal operating conditions, newly created or updated customer profiles become available
 // for the listing operation in well under 30 seconds. Occasionally, propagation of the new or updated
 // profiles can take closer to one minute or longer, especially during network incidents and outages.
-func (s *customers) ListCustomers(ctx context.Context, request operations.ListCustomersRequest) (*operations.ListCustomersResponse, error) {
+func (s *customers) ListCustomers(ctx context.Context, request operations.ListCustomersRequest, security operations.ListCustomersSecurity) (*operations.ListCustomersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customers"
 
@@ -316,11 +316,11 @@ func (s *customers) ListCustomers(ctx context.Context, request operations.ListCu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,16 +359,16 @@ func (s *customers) ListCustomers(ctx context.Context, request operations.ListCu
 //
 // The customer is identified by the `customer_id` value
 // and the customer group is identified by the `group_id` value.
-func (s *customers) RemoveGroupFromCustomer(ctx context.Context, request operations.RemoveGroupFromCustomerRequest) (*operations.RemoveGroupFromCustomerResponse, error) {
+func (s *customers) RemoveGroupFromCustomer(ctx context.Context, request operations.RemoveGroupFromCustomerRequest, security operations.RemoveGroupFromCustomerSecurity) (*operations.RemoveGroupFromCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -404,16 +404,16 @@ func (s *customers) RemoveGroupFromCustomer(ctx context.Context, request operati
 
 // RetrieveCustomer - RetrieveCustomer
 // Returns details for a single customer.
-func (s *customers) RetrieveCustomer(ctx context.Context, request operations.RetrieveCustomerRequest) (*operations.RetrieveCustomerResponse, error) {
+func (s *customers) RetrieveCustomer(ctx context.Context, request operations.RetrieveCustomerRequest, security operations.RetrieveCustomerSecurity) (*operations.RetrieveCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -457,7 +457,7 @@ func (s *customers) RetrieveCustomer(ctx context.Context, request operations.Ret
 // Under normal operating conditions, newly created or updated customer profiles become available
 // for the search operation in well under 30 seconds. Occasionally, propagation of the new or updated
 // profiles can take closer to one minute or longer, especially during network incidents and outages.
-func (s *customers) SearchCustomers(ctx context.Context, request operations.SearchCustomersRequest) (*operations.SearchCustomersResponse, error) {
+func (s *customers) SearchCustomers(ctx context.Context, request shared.SearchCustomersRequest, security operations.SearchCustomersSecurity) (*operations.SearchCustomersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/customers/search"
 
@@ -476,7 +476,7 @@ func (s *customers) SearchCustomers(ctx context.Context, request operations.Sear
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -518,11 +518,11 @@ func (s *customers) SearchCustomers(ctx context.Context, request operations.Sear
 // To update a customer profile that was created by merging existing profiles, you must use the ID of the newly created profile.
 //
 // You cannot use this endpoint to change cards on file. To make changes, use the [Cards API](https://developer.squareup.com/reference/square_2021-08-18/cards-api) or [Gift Cards API](https://developer.squareup.com/reference/square_2021-08-18/gift-cards-api).
-func (s *customers) UpdateCustomer(ctx context.Context, request operations.UpdateCustomerRequest) (*operations.UpdateCustomerResponse, error) {
+func (s *customers) UpdateCustomer(ctx context.Context, request operations.UpdateCustomerRequest, security operations.UpdateCustomerSecurity) (*operations.UpdateCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCustomerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -537,7 +537,7 @@ func (s *customers) UpdateCustomer(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

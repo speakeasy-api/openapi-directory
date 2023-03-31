@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateExperimentUsingPOSTPathParams struct {
+type CreateExperimentUsingPOSTRequest struct {
+	// input
+	ExperimentModel shared.ExperimentModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type CreateExperimentUsingPOSTRequest struct {
-	PathParams CreateExperimentUsingPOSTPathParams
-	// input
-	Request shared.ExperimentModel `request:"mediaType=application/json"`
 }
 
 type CreateExperimentUsingPOSTResponse struct {

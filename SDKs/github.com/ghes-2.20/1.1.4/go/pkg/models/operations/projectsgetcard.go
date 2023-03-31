@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsGetCardPathParams struct {
+type ProjectsGetCardRequest struct {
 	// card_id parameter
 	CardID int64 `pathParam:"style=simple,explode=false,name=card_id"`
-}
-
-type ProjectsGetCardRequest struct {
-	PathParams ProjectsGetCardPathParams
 }
 
 type ProjectsGetCardResponse struct {

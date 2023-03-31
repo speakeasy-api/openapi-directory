@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TaxAPIUpdateJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type TaxAPIUpdateJSONRequest struct {
-	Headers TaxAPIUpdateJSONHeaders
-	Request shared.TaxUpdateAPIModel `request:"mediaType=application/json"`
+	TaxUpdateAPIModel shared.TaxUpdateAPIModel `request:"mediaType=application/json"`
+	XAuthKey          string                   `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret       string                   `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type TaxAPIUpdateJSONResponse struct {

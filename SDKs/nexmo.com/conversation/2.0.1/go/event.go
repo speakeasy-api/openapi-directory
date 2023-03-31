@@ -35,9 +35,9 @@ func newEvent(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CreateEvent - Create an event
 func (s *event) CreateEvent(ctx context.Context, request operations.CreateEventRequest) (*operations.CreateEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -86,7 +86,7 @@ func (s *event) CreateEvent(ctx context.Context, request operations.CreateEventR
 // DeleteEvent - Delete an event
 func (s *event) DeleteEvent(ctx context.Context, request operations.DeleteEventRequest) (*operations.DeleteEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +130,7 @@ func (s *event) DeleteEvent(ctx context.Context, request operations.DeleteEventR
 // GetEvent - Retrieve an event
 func (s *event) GetEvent(ctx context.Context, request operations.GetEventRequest) (*operations.GetEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *event) GetEvent(ctx context.Context, request operations.GetEventRequest
 // This endpoint is **DEPRECATED**. Please use [/v0.2/events](/api/conversation.v2#get-events).
 func (s *event) GetEvents(ctx context.Context, request operations.GetEventsRequest) (*operations.GetEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

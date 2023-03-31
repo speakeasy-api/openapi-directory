@@ -12,10 +12,11 @@ var ListEventTypeServerList = []string{
 }
 
 type ListEventTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListEventTypeQueryParams struct {
+type ListEventTypeRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -24,12 +25,6 @@ type ListEventTypeQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// A string parameter filtering the results to return only the Event Types using a given schema.
 	SchemaID *string `queryParam:"style=form,explode=true,name=SchemaId"`
-}
-
-type ListEventTypeRequest struct {
-	QueryParams ListEventTypeQueryParams
-	Security    ListEventTypeSecurity
-	ServerURL   *string
 }
 
 type ListEventTypeListEventTypeResponseMeta struct {

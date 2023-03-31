@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateBreakTypeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateBreakTypePathParams struct {
-	//  The UUID for the `BreakType` being updated.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateBreakTypeRequest struct {
-	PathParams UpdateBreakTypePathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateBreakTypeRequest `request:"mediaType=application/json"`
-	Security UpdateBreakTypeSecurity
+	UpdateBreakTypeRequest shared.UpdateBreakTypeRequest `request:"mediaType=application/json"`
+	//  The UUID for the `BreakType` being updated.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateBreakTypeResponse struct {

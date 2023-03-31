@@ -4,19 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarDeleteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebinarDeletePathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarDeleteQueryParams struct {
+type WebinarDeleteRequest struct {
 	// `true`: Notify panelists and registrants about the webinar cancellation via email.
 	//
 	// `false`: Do not send any email notification to webinar registrants and panelists.
@@ -25,12 +19,8 @@ type WebinarDeleteQueryParams struct {
 	CancelWebinarReminder *string `queryParam:"style=form,explode=true,name=cancel_webinar_reminder"`
 	// The meeting occurrence ID.
 	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
-}
-
-type WebinarDeleteRequest struct {
-	PathParams  WebinarDeletePathParams
-	QueryParams WebinarDeleteQueryParams
-	Security    WebinarDeleteSecurity
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type WebinarDeleteResponse struct {

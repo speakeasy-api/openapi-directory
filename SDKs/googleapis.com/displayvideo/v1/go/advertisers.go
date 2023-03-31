@@ -33,11 +33,11 @@ func newAdvertisers(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DisplayvideoAdvertisersAssetsUpload - Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart). Examples using provided client libraries can be found in our [Creating Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
-func (s *advertisers) DisplayvideoAdvertisersAssetsUpload(ctx context.Context, request operations.DisplayvideoAdvertisersAssetsUploadRequest) (*operations.DisplayvideoAdvertisersAssetsUploadResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersAssetsUpload(ctx context.Context, request operations.DisplayvideoAdvertisersAssetsUploadRequest, security operations.DisplayvideoAdvertisersAssetsUploadSecurity) (*operations.DisplayvideoAdvertisersAssetsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/assets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/assets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *advertisers) DisplayvideoAdvertisersAssetsUpload(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *advertisers) DisplayvideoAdvertisersAssetsUpload(ctx context.Context, r
 }
 
 // DisplayvideoAdvertisersAudit - Audits an advertiser. Returns the counts of used entities per resource type under the advertiser provided. Used entities count towards their respective resource limit. See https://support.google.com/displayvideo/answer/6071450.
-func (s *advertisers) DisplayvideoAdvertisersAudit(ctx context.Context, request operations.DisplayvideoAdvertisersAuditRequest) (*operations.DisplayvideoAdvertisersAuditResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersAudit(ctx context.Context, request operations.DisplayvideoAdvertisersAuditRequest, security operations.DisplayvideoAdvertisersAuditSecurity) (*operations.DisplayvideoAdvertisersAuditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}:audit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}:audit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,11 +136,11 @@ func (s *advertisers) DisplayvideoAdvertisersAudit(ctx context.Context, request 
 }
 
 // DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptions - Bulk edits targeting options under a single advertiser. The operation will delete the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.create_requests .
-func (s *advertisers) DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsRequest) (*operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}:bulkEditAdvertiserAssignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}:bulkEditAdvertiserAssignedTargetingOptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAdvertiserAssignedTargetingOptionsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -152,11 +152,11 @@ func (s *advertisers) DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargeting
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *advertisers) DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargeting
 }
 
 // DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptions - Lists assigned targeting options of an advertiser across targeting types.
-func (s *advertisers) DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsRequest) (*operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}:bulkListAdvertiserAssignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}:bulkListAdvertiserAssignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,20 +239,20 @@ func (s *advertisers) DisplayvideoAdvertisersBulkListAdvertiserAssignedTargeting
 }
 
 // DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptions - Lists assigned targeting options of a campaign across targeting types.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsRequest) (*operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}:bulkListCampaignAssignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}:bulkListCampaignAssignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -287,11 +287,11 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTa
 }
 
 // DisplayvideoAdvertisersCampaignsCreate - Creates a new campaign. Returns the newly created campaign if successful.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsCreateRequest) (*operations.DisplayvideoAdvertisersCampaignsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsCreateRequest, security operations.DisplayvideoAdvertisersCampaignsCreateSecurity) (*operations.DisplayvideoAdvertisersCampaignsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CampaignInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,11 +303,11 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,20 +342,20 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsCreate(ctx context.Context
 }
 
 // DisplayvideoAdvertisersCampaignsDelete - Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsDeleteRequest) (*operations.DisplayvideoAdvertisersCampaignsDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsDeleteRequest, security operations.DisplayvideoAdvertisersCampaignsDeleteSecurity) (*operations.DisplayvideoAdvertisersCampaignsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,20 +390,20 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsDelete(ctx context.Context
 }
 
 // DisplayvideoAdvertisersCampaignsGet - Gets a campaign.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsGet(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsGetRequest) (*operations.DisplayvideoAdvertisersCampaignsGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsGet(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsGetRequest, security operations.DisplayvideoAdvertisersCampaignsGetSecurity) (*operations.DisplayvideoAdvertisersCampaignsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -438,20 +438,20 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsGet(ctx context.Context, r
 }
 
 // DisplayvideoAdvertisersCampaignsList - Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsList(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsListRequest) (*operations.DisplayvideoAdvertisersCampaignsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsList(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsListRequest, security operations.DisplayvideoAdvertisersCampaignsListSecurity) (*operations.DisplayvideoAdvertisersCampaignsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -486,11 +486,11 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsList(ctx context.Context, 
 }
 
 // DisplayvideoAdvertisersCampaignsPatch - Updates an existing campaign. Returns the updated campaign if successful.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsPatchRequest) (*operations.DisplayvideoAdvertisersCampaignsPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsPatchRequest, security operations.DisplayvideoAdvertisersCampaignsPatchSecurity) (*operations.DisplayvideoAdvertisersCampaignsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CampaignInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -502,11 +502,11 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -541,20 +541,20 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsPatch(ctx context.Context,
 }
 
 // DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to a campaign.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest) (*operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -589,20 +589,20 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTarg
 }
 
 // DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to a campaign for a specified targeting type.
-func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest) (*operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -637,11 +637,11 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTarg
 }
 
 // DisplayvideoAdvertisersChannelsCreate - Creates a new channel. Returns the newly created channel if successful.
-func (s *advertisers) DisplayvideoAdvertisersChannelsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsCreateRequest) (*operations.DisplayvideoAdvertisersChannelsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsCreateRequest, security operations.DisplayvideoAdvertisersChannelsCreateSecurity) (*operations.DisplayvideoAdvertisersChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -653,11 +653,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsCreate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -692,20 +692,20 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsCreate(ctx context.Context,
 }
 
 // DisplayvideoAdvertisersChannelsList - Lists channels for a partner or advertiser.
-func (s *advertisers) DisplayvideoAdvertisersChannelsList(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsListRequest) (*operations.DisplayvideoAdvertisersChannelsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsList(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsListRequest, security operations.DisplayvideoAdvertisersChannelsListSecurity) (*operations.DisplayvideoAdvertisersChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -740,11 +740,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsList(ctx context.Context, r
 }
 
 // DisplayvideoAdvertisersChannelsPatch - Updates a channel. Returns the updated channel if successful.
-func (s *advertisers) DisplayvideoAdvertisersChannelsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsPatchRequest) (*operations.DisplayvideoAdvertisersChannelsPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsPatchRequest, security operations.DisplayvideoAdvertisersChannelsPatchSecurity) (*operations.DisplayvideoAdvertisersChannelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -756,11 +756,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsPatch(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -795,11 +795,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsPatch(ctx context.Context, 
 }
 
 // DisplayvideoAdvertisersChannelsSitesBulkEdit - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
-func (s *advertisers) DisplayvideoAdvertisersChannelsSitesBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest) (*operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsSitesBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest, security operations.DisplayvideoAdvertisersChannelsSitesBulkEditSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditSitesRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -811,11 +811,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesBulkEdit(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -850,20 +850,20 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesBulkEdit(ctx context.C
 }
 
 // DisplayvideoAdvertisersChannelsSitesDelete - Deletes a site from a channel.
-func (s *advertisers) DisplayvideoAdvertisersChannelsSitesDelete(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest) (*operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsSitesDelete(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest, security operations.DisplayvideoAdvertisersChannelsSitesDeleteSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites/{urlOrAppId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites/{urlOrAppId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -898,20 +898,20 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesDelete(ctx context.Con
 }
 
 // DisplayvideoAdvertisersChannelsSitesList - Lists sites in a channel.
-func (s *advertisers) DisplayvideoAdvertisersChannelsSitesList(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesListRequest) (*operations.DisplayvideoAdvertisersChannelsSitesListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsSitesList(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesListRequest, security operations.DisplayvideoAdvertisersChannelsSitesListSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -946,11 +946,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesList(ctx context.Conte
 }
 
 // DisplayvideoAdvertisersChannelsSitesReplace - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
-func (s *advertisers) DisplayvideoAdvertisersChannelsSitesReplace(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest) (*operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersChannelsSitesReplace(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest, security operations.DisplayvideoAdvertisersChannelsSitesReplaceSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceSitesRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -962,11 +962,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesReplace(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1001,11 +1001,11 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesReplace(ctx context.Co
 }
 
 // DisplayvideoAdvertisersCreate - Creates a new advertiser. Returns the newly created advertiser if successful. This method can take up to 180 seconds to complete.
-func (s *advertisers) DisplayvideoAdvertisersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCreateRequest) (*operations.DisplayvideoAdvertisersCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCreateRequest, security operations.DisplayvideoAdvertisersCreateSecurity) (*operations.DisplayvideoAdvertisersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/advertisers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvertiserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1017,11 +1017,11 @@ func (s *advertisers) DisplayvideoAdvertisersCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1056,11 +1056,11 @@ func (s *advertisers) DisplayvideoAdvertisersCreate(ctx context.Context, request
 }
 
 // DisplayvideoAdvertisersCreativesCreate - Creates a new creative. Returns the newly created creative if successful.
-func (s *advertisers) DisplayvideoAdvertisersCreativesCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesCreateRequest) (*operations.DisplayvideoAdvertisersCreativesCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCreativesCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesCreateRequest, security operations.DisplayvideoAdvertisersCreativesCreateSecurity) (*operations.DisplayvideoAdvertisersCreativesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1072,11 +1072,11 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1111,20 +1111,20 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesCreate(ctx context.Context
 }
 
 // DisplayvideoAdvertisersCreativesDelete - Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be deleted.
-func (s *advertisers) DisplayvideoAdvertisersCreativesDelete(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesDeleteRequest) (*operations.DisplayvideoAdvertisersCreativesDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCreativesDelete(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesDeleteRequest, security operations.DisplayvideoAdvertisersCreativesDeleteSecurity) (*operations.DisplayvideoAdvertisersCreativesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives/{creativeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1159,20 +1159,20 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesDelete(ctx context.Context
 }
 
 // DisplayvideoAdvertisersCreativesGet - Gets a creative.
-func (s *advertisers) DisplayvideoAdvertisersCreativesGet(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesGetRequest) (*operations.DisplayvideoAdvertisersCreativesGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCreativesGet(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesGetRequest, security operations.DisplayvideoAdvertisersCreativesGetSecurity) (*operations.DisplayvideoAdvertisersCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives/{creativeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1207,20 +1207,20 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesGet(ctx context.Context, r
 }
 
 // DisplayvideoAdvertisersCreativesList - Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-func (s *advertisers) DisplayvideoAdvertisersCreativesList(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesListRequest) (*operations.DisplayvideoAdvertisersCreativesListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCreativesList(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesListRequest, security operations.DisplayvideoAdvertisersCreativesListSecurity) (*operations.DisplayvideoAdvertisersCreativesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1255,11 +1255,11 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesList(ctx context.Context, 
 }
 
 // DisplayvideoAdvertisersCreativesPatch - Updates an existing creative. Returns the updated creative if successful.
-func (s *advertisers) DisplayvideoAdvertisersCreativesPatch(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesPatchRequest) (*operations.DisplayvideoAdvertisersCreativesPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersCreativesPatch(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesPatchRequest, security operations.DisplayvideoAdvertisersCreativesPatchSecurity) (*operations.DisplayvideoAdvertisersCreativesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives/{creativeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1271,11 +1271,11 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1310,20 +1310,20 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesPatch(ctx context.Context,
 }
 
 // DisplayvideoAdvertisersDelete - Deletes an advertiser. Deleting an advertiser will delete all of its child resources, for example, campaigns, insertion orders and line items. A deleted advertiser cannot be recovered.
-func (s *advertisers) DisplayvideoAdvertisersDelete(ctx context.Context, request operations.DisplayvideoAdvertisersDeleteRequest) (*operations.DisplayvideoAdvertisersDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersDelete(ctx context.Context, request operations.DisplayvideoAdvertisersDeleteRequest, security operations.DisplayvideoAdvertisersDeleteSecurity) (*operations.DisplayvideoAdvertisersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1358,20 +1358,20 @@ func (s *advertisers) DisplayvideoAdvertisersDelete(ctx context.Context, request
 }
 
 // DisplayvideoAdvertisersGet - Gets an advertiser.
-func (s *advertisers) DisplayvideoAdvertisersGet(ctx context.Context, request operations.DisplayvideoAdvertisersGetRequest) (*operations.DisplayvideoAdvertisersGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersGet(ctx context.Context, request operations.DisplayvideoAdvertisersGetRequest, security operations.DisplayvideoAdvertisersGetSecurity) (*operations.DisplayvideoAdvertisersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1406,20 +1406,20 @@ func (s *advertisers) DisplayvideoAdvertisersGet(ctx context.Context, request op
 }
 
 // DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptions - Lists assigned targeting options of an insertion order across targeting types.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}:bulkListInsertionOrderAssignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}:bulkListInsertionOrderAssignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1454,11 +1454,11 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrd
 }
 
 // DisplayvideoAdvertisersInsertionOrdersCreate - Creates a new insertion order. Returns the newly created insertion order if successful.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest, security operations.DisplayvideoAdvertisersInsertionOrdersCreateSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertionOrderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1470,11 +1470,11 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1509,20 +1509,20 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersCreate(ctx context.C
 }
 
 // DisplayvideoAdvertisersInsertionOrdersDelete - Deletes an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist. The insertion order should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersDelete(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersDelete(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest, security operations.DisplayvideoAdvertisersInsertionOrdersDeleteSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1557,20 +1557,20 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersDelete(ctx context.C
 }
 
 // DisplayvideoAdvertisersInsertionOrdersGet - Gets an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersGet(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersGetRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersGet(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersGetRequest, security operations.DisplayvideoAdvertisersInsertionOrdersGetSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1605,20 +1605,20 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersGet(ctx context.Cont
 }
 
 // DisplayvideoAdvertisersInsertionOrdersList - Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersList(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersListRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersList(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersListRequest, security operations.DisplayvideoAdvertisersInsertionOrdersListSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1653,11 +1653,11 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersList(ctx context.Con
 }
 
 // DisplayvideoAdvertisersInsertionOrdersPatch - Updates an existing insertion order. Returns the updated insertion order if successful.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest, security operations.DisplayvideoAdvertisersInsertionOrdersPatchSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertionOrderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1669,11 +1669,11 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersPatch(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1708,20 +1708,20 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersPatch(ctx context.Co
 }
 
 // DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to an insertion order.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1756,20 +1756,20 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssign
 }
 
 // DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to an insertion order.
-func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1804,20 +1804,20 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssign
 }
 
 // DisplayvideoAdvertisersInvoicesList - Lists invoices posted for an advertiser in a given month. Invoices generated by billing profiles with a "Partner" invoice level are not retrievable through this method.
-func (s *advertisers) DisplayvideoAdvertisersInvoicesList(ctx context.Context, request operations.DisplayvideoAdvertisersInvoicesListRequest) (*operations.DisplayvideoAdvertisersInvoicesListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInvoicesList(ctx context.Context, request operations.DisplayvideoAdvertisersInvoicesListRequest, security operations.DisplayvideoAdvertisersInvoicesListSecurity) (*operations.DisplayvideoAdvertisersInvoicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/invoices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/invoices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1852,20 +1852,20 @@ func (s *advertisers) DisplayvideoAdvertisersInvoicesList(ctx context.Context, r
 }
 
 // DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency - Retrieves the invoice currency used by an advertiser in a given month.
-func (s *advertisers) DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency(ctx context.Context, request operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest) (*operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency(ctx context.Context, request operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest, security operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencySecurity) (*operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/invoices:lookupInvoiceCurrency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/invoices:lookupInvoiceCurrency", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1900,11 +1900,11 @@ func (s *advertisers) DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency(ctx c
 }
 
 // DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptions - Bulk edits targeting options under a single line item. The operation will delete the assigned targeting options provided in BulkEditLineItemAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditLineItemAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
-func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsRequest) (*operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}:bulkEditLineItemAssignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}:bulkEditLineItemAssignedTargetingOptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditLineItemAssignedTargetingOptionsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1916,11 +1916,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1955,20 +1955,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTa
 }
 
 // DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptions - Lists assigned targeting options of a line item across targeting types.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest) (*operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}:bulkListLineItemAssignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}:bulkListLineItemAssignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2003,11 +2003,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTa
 }
 
 // DisplayvideoAdvertisersLineItemsCreate - Creates a new line item. Returns the newly created line item if successful.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsCreateRequest) (*operations.DisplayvideoAdvertisersLineItemsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsCreateRequest, security operations.DisplayvideoAdvertisersLineItemsCreateSecurity) (*operations.DisplayvideoAdvertisersLineItemsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LineItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2019,11 +2019,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2058,20 +2058,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsCreate(ctx context.Context
 }
 
 // DisplayvideoAdvertisersLineItemsDelete - Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsDeleteRequest) (*operations.DisplayvideoAdvertisersLineItemsDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsDeleteRequest, security operations.DisplayvideoAdvertisersLineItemsDeleteSecurity) (*operations.DisplayvideoAdvertisersLineItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2106,11 +2106,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsDelete(ctx context.Context
 }
 
 // DisplayvideoAdvertisersLineItemsGenerateDefault - Creates a new line item with settings (including targeting) inherited from the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful. There are default values based on the three fields: * The insertion order's insertion_order_type * The insertion order's automation_type * The given line_item_type
-func (s *advertisers) DisplayvideoAdvertisersLineItemsGenerateDefault(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest) (*operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsGenerateDefault(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest, security operations.DisplayvideoAdvertisersLineItemsGenerateDefaultSecurity) (*operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems:generateDefault", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems:generateDefault", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateDefaultLineItemRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2122,11 +2122,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsGenerateDefault(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2161,20 +2161,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsGenerateDefault(ctx contex
 }
 
 // DisplayvideoAdvertisersLineItemsGet - Gets a line item.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsGet(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsGetRequest) (*operations.DisplayvideoAdvertisersLineItemsGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsGet(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsGetRequest, security operations.DisplayvideoAdvertisersLineItemsGetSecurity) (*operations.DisplayvideoAdvertisersLineItemsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2209,20 +2209,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsGet(ctx context.Context, r
 }
 
 // DisplayvideoAdvertisersLineItemsList - Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsList(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsListRequest) (*operations.DisplayvideoAdvertisersLineItemsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsList(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsListRequest, security operations.DisplayvideoAdvertisersLineItemsListSecurity) (*operations.DisplayvideoAdvertisersLineItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2257,11 +2257,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsList(ctx context.Context, 
 }
 
 // DisplayvideoAdvertisersLineItemsPatch - Updates an existing line item. Returns the updated line item if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
-func (s *advertisers) DisplayvideoAdvertisersLineItemsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsPatchRequest) (*operations.DisplayvideoAdvertisersLineItemsPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsPatchRequest, security operations.DisplayvideoAdvertisersLineItemsPatchSecurity) (*operations.DisplayvideoAdvertisersLineItemsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LineItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2273,11 +2273,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsPatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2312,11 +2312,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsPatch(ctx context.Context,
 }
 
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate - Assigns a targeting option to a line item. Returns the assigned targeting option if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * DeleteLineItemAssignedTargetingOption
-func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedTargetingOptionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2328,11 +2328,11 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2367,20 +2367,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 }
 
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete - Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption
-func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2415,20 +2415,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 }
 
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to a line item.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2463,20 +2463,20 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 }
 
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to a line item.
-func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2511,7 +2511,7 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 }
 
 // DisplayvideoAdvertisersList - Lists advertisers that are accessible to the current user. The order is defined by the order_by parameter. A single partner_id is required. Cross-partner listing is not supported.
-func (s *advertisers) DisplayvideoAdvertisersList(ctx context.Context, request operations.DisplayvideoAdvertisersListRequest) (*operations.DisplayvideoAdvertisersListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersList(ctx context.Context, request operations.DisplayvideoAdvertisersListRequest, security operations.DisplayvideoAdvertisersListSecurity) (*operations.DisplayvideoAdvertisersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/advertisers"
 
@@ -2520,11 +2520,11 @@ func (s *advertisers) DisplayvideoAdvertisersList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2559,11 +2559,11 @@ func (s *advertisers) DisplayvideoAdvertisersList(ctx context.Context, request o
 }
 
 // DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit - Bulk edits multiple assignments between locations and a single location list. The operation will delete the assigned locations provided in BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAssignedLocationsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2575,11 +2575,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsBulkE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2614,11 +2614,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsBulkE
 }
 
 // DisplayvideoAdvertisersLocationListsAssignedLocationsCreate - Creates an assignment between a location and a location list.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedLocationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2630,11 +2630,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsCreat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2669,20 +2669,20 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsCreat
 }
 
 // DisplayvideoAdvertisersLocationListsAssignedLocationsDelete - Deletes the assignment between a location and a location list.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{assignedLocationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{assignedLocationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2717,20 +2717,20 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsDelet
 }
 
 // DisplayvideoAdvertisersLocationListsAssignedLocationsList - Lists locations assigned to a location list.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsList(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsList(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2765,11 +2765,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsList(
 }
 
 // DisplayvideoAdvertisersLocationListsCreate - Creates a new location list. Returns the newly created location list if successful.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsCreateRequest) (*operations.DisplayvideoAdvertisersLocationListsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsCreateRequest, security operations.DisplayvideoAdvertisersLocationListsCreateSecurity) (*operations.DisplayvideoAdvertisersLocationListsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationListInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2781,11 +2781,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2820,20 +2820,20 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsCreate(ctx context.Con
 }
 
 // DisplayvideoAdvertisersLocationListsList - Lists location lists based on a given advertiser id.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsList(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsListRequest) (*operations.DisplayvideoAdvertisersLocationListsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsList(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsListRequest, security operations.DisplayvideoAdvertisersLocationListsListSecurity) (*operations.DisplayvideoAdvertisersLocationListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2868,11 +2868,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsList(ctx context.Conte
 }
 
 // DisplayvideoAdvertisersLocationListsPatch - Updates a location list. Returns the updated location list if successful.
-func (s *advertisers) DisplayvideoAdvertisersLocationListsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsPatchRequest) (*operations.DisplayvideoAdvertisersLocationListsPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersLocationListsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsPatchRequest, security operations.DisplayvideoAdvertisersLocationListsPatchSecurity) (*operations.DisplayvideoAdvertisersLocationListsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/locationLists/{locationListId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationListInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2884,11 +2884,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsPatch(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2923,11 +2923,11 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsPatch(ctx context.Cont
 }
 
 // DisplayvideoAdvertisersManualTriggersActivate - Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned.
-func (s *advertisers) DisplayvideoAdvertisersManualTriggersActivate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersActivateRequest) (*operations.DisplayvideoAdvertisersManualTriggersActivateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersManualTriggersActivate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersActivateRequest, security operations.DisplayvideoAdvertisersManualTriggersActivateSecurity) (*operations.DisplayvideoAdvertisersManualTriggersActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2939,11 +2939,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersActivate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2978,11 +2978,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersActivate(ctx context.
 }
 
 // DisplayvideoAdvertisersManualTriggersCreate - Creates a new manual trigger. Returns the newly created manual trigger if successful.
-func (s *advertisers) DisplayvideoAdvertisersManualTriggersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersCreateRequest) (*operations.DisplayvideoAdvertisersManualTriggersCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersManualTriggersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersCreateRequest, security operations.DisplayvideoAdvertisersManualTriggersCreateSecurity) (*operations.DisplayvideoAdvertisersManualTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManualTriggerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2994,11 +2994,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3033,11 +3033,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersCreate(ctx context.Co
 }
 
 // DisplayvideoAdvertisersManualTriggersDeactivate - Deactivates a manual trigger.
-func (s *advertisers) DisplayvideoAdvertisersManualTriggersDeactivate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest) (*operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersManualTriggersDeactivate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest, security operations.DisplayvideoAdvertisersManualTriggersDeactivateSecurity) (*operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3049,11 +3049,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersDeactivate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3088,20 +3088,20 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersDeactivate(ctx contex
 }
 
 // DisplayvideoAdvertisersManualTriggersGet - Gets a manual trigger.
-func (s *advertisers) DisplayvideoAdvertisersManualTriggersGet(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersGetRequest) (*operations.DisplayvideoAdvertisersManualTriggersGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersManualTriggersGet(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersGetRequest, security operations.DisplayvideoAdvertisersManualTriggersGetSecurity) (*operations.DisplayvideoAdvertisersManualTriggersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3136,20 +3136,20 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersGet(ctx context.Conte
 }
 
 // DisplayvideoAdvertisersManualTriggersList - Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required.
-func (s *advertisers) DisplayvideoAdvertisersManualTriggersList(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersListRequest) (*operations.DisplayvideoAdvertisersManualTriggersListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersManualTriggersList(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersListRequest, security operations.DisplayvideoAdvertisersManualTriggersListSecurity) (*operations.DisplayvideoAdvertisersManualTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3184,11 +3184,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersList(ctx context.Cont
 }
 
 // DisplayvideoAdvertisersManualTriggersPatch - Updates a manual trigger. Returns the updated manual trigger if successful.
-func (s *advertisers) DisplayvideoAdvertisersManualTriggersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersPatchRequest) (*operations.DisplayvideoAdvertisersManualTriggersPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersManualTriggersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersPatchRequest, security operations.DisplayvideoAdvertisersManualTriggersPatchSecurity) (*operations.DisplayvideoAdvertisersManualTriggersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManualTriggerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3200,11 +3200,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersPatch(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3239,11 +3239,11 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersPatch(ctx context.Con
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsCreate - Creates a new negative keyword list. Returns the newly created negative keyword list if successful.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsCreateSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NegativeKeywordListInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3255,11 +3255,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsCreate(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3294,20 +3294,20 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsCreate(ctx cont
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsList - Lists negative keyword lists based on a given advertiser id.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsList(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsList(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsListSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3342,11 +3342,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsList(ctx contex
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit - Bulk edits negative keywords in a single negative keyword list. The operation will delete the negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords provided in BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be atomic and will never result in a partial success or partial failure.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditNegativeKeywordsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3358,11 +3358,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3397,20 +3397,20 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete - Deletes a negative keyword from a negative keyword list.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords/{keywordValue}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords/{keywordValue}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3445,20 +3445,20 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList - Lists negative keywords in a negative keyword list.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3493,11 +3493,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace - Replaces all negative keywords in a single negative keyword list. The operation will replace the keywords in a negative keyword list with keywords provided in ReplaceNegativeKeywordsRequest.new_negative_keywords.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceNegativeKeywordsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3509,11 +3509,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3548,11 +3548,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 }
 
 // DisplayvideoAdvertisersNegativeKeywordListsPatch - Updates a negative keyword list. Returns the updated negative keyword list if successful.
-func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest) (*operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsPatchSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NegativeKeywordListInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3564,11 +3564,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsPatch(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3603,11 +3603,11 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsPatch(ctx conte
 }
 
 // DisplayvideoAdvertisersPatch - Updates an existing advertiser. Returns the updated advertiser if successful.
-func (s *advertisers) DisplayvideoAdvertisersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersPatchRequest) (*operations.DisplayvideoAdvertisersPatchResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersPatchRequest, security operations.DisplayvideoAdvertisersPatchSecurity) (*operations.DisplayvideoAdvertisersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvertiserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3619,11 +3619,11 @@ func (s *advertisers) DisplayvideoAdvertisersPatch(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3658,11 +3658,11 @@ func (s *advertisers) DisplayvideoAdvertisersPatch(ctx context.Context, request 
 }
 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate - Assigns a targeting option to an advertiser. Returns the assigned targeting option if successful.
-func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedTargetingOptionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3674,11 +3674,11 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3713,20 +3713,20 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 }
 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete - Deletes an assigned targeting option from an advertiser.
-func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3761,20 +3761,20 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 }
 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to an advertiser.
-func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3809,20 +3809,20 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 }
 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to an advertiser.
-func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse, error) {
+func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -12,20 +12,15 @@ var FetchItemAssignmentServerList = []string{
 }
 
 type FetchItemAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchItemAssignmentPathParams struct {
+type FetchItemAssignmentRequest struct {
 	// The unique string that we created to identify the Bundle resource.
 	BundleSid string `pathParam:"style=simple,explode=false,name=BundleSid"`
 	// The unique string that we created to identify the Identity resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchItemAssignmentRequest struct {
-	PathParams FetchItemAssignmentPathParams
-	Security   FetchItemAssignmentSecurity
-	ServerURL  *string
 }
 
 type FetchItemAssignmentResponse struct {

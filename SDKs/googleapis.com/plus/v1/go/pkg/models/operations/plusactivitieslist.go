@@ -10,13 +10,13 @@ import (
 )
 
 type PlusActivitiesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusActivitiesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusActivitiesListSecurity struct {
@@ -45,16 +45,11 @@ func (e *PlusActivitiesListCollectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlusActivitiesListPathParams struct {
-	// The collection of activities to list.
-	Collection PlusActivitiesListCollectionEnum `pathParam:"style=simple,explode=false,name=collection"`
-	// The ID of the user to get activities for. The special value "me" can be used to indicate the authenticated user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PlusActivitiesListQueryParams struct {
+type PlusActivitiesListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// The collection of activities to list.
+	Collection PlusActivitiesListCollectionEnum `pathParam:"style=simple,explode=false,name=collection"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -69,14 +64,10 @@ type PlusActivitiesListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the user to get activities for. The special value "me" can be used to indicate the authenticated user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type PlusActivitiesListRequest struct {
-	PathParams  PlusActivitiesListPathParams
-	QueryParams PlusActivitiesListQueryParams
-	Security    PlusActivitiesListSecurity
 }
 
 type PlusActivitiesListResponse struct {

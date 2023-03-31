@@ -32,20 +32,20 @@ func newUserRoles(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // DfareportingUserRolesDelete - Deletes an existing user role.
-func (s *userRoles) DfareportingUserRolesDelete(ctx context.Context, request operations.DfareportingUserRolesDeleteRequest) (*operations.DfareportingUserRolesDeleteResponse, error) {
+func (s *userRoles) DfareportingUserRolesDelete(ctx context.Context, request operations.DfareportingUserRolesDeleteRequest, security operations.DfareportingUserRolesDeleteSecurity) (*operations.DfareportingUserRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *userRoles) DfareportingUserRolesDelete(ctx context.Context, request ope
 }
 
 // DfareportingUserRolesGet - Gets one user role by ID.
-func (s *userRoles) DfareportingUserRolesGet(ctx context.Context, request operations.DfareportingUserRolesGetRequest) (*operations.DfareportingUserRolesGetResponse, error) {
+func (s *userRoles) DfareportingUserRolesGet(ctx context.Context, request operations.DfareportingUserRolesGetRequest, security operations.DfareportingUserRolesGetSecurity) (*operations.DfareportingUserRolesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *userRoles) DfareportingUserRolesGet(ctx context.Context, request operat
 }
 
 // DfareportingUserRolesInsert - Inserts a new user role.
-func (s *userRoles) DfareportingUserRolesInsert(ctx context.Context, request operations.DfareportingUserRolesInsertRequest) (*operations.DfareportingUserRolesInsertResponse, error) {
+func (s *userRoles) DfareportingUserRolesInsert(ctx context.Context, request operations.DfareportingUserRolesInsertRequest, security operations.DfareportingUserRolesInsertSecurity) (*operations.DfareportingUserRolesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserRole", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *userRoles) DfareportingUserRolesInsert(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *userRoles) DfareportingUserRolesInsert(ctx context.Context, request ope
 }
 
 // DfareportingUserRolesList - Retrieves a list of user roles, possibly filtered. This method supports paging.
-func (s *userRoles) DfareportingUserRolesList(ctx context.Context, request operations.DfareportingUserRolesListRequest) (*operations.DfareportingUserRolesListResponse, error) {
+func (s *userRoles) DfareportingUserRolesList(ctx context.Context, request operations.DfareportingUserRolesListRequest, security operations.DfareportingUserRolesListSecurity) (*operations.DfareportingUserRolesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *userRoles) DfareportingUserRolesList(ctx context.Context, request opera
 }
 
 // DfareportingUserRolesPatch - Updates an existing user role. This method supports patch semantics.
-func (s *userRoles) DfareportingUserRolesPatch(ctx context.Context, request operations.DfareportingUserRolesPatchRequest) (*operations.DfareportingUserRolesPatchResponse, error) {
+func (s *userRoles) DfareportingUserRolesPatch(ctx context.Context, request operations.DfareportingUserRolesPatchRequest, security operations.DfareportingUserRolesPatchSecurity) (*operations.DfareportingUserRolesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserRole", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *userRoles) DfareportingUserRolesPatch(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *userRoles) DfareportingUserRolesPatch(ctx context.Context, request oper
 }
 
 // DfareportingUserRolesUpdate - Updates an existing user role.
-func (s *userRoles) DfareportingUserRolesUpdate(ctx context.Context, request operations.DfareportingUserRolesUpdateRequest) (*operations.DfareportingUserRolesUpdateResponse, error) {
+func (s *userRoles) DfareportingUserRolesUpdate(ctx context.Context, request operations.DfareportingUserRolesUpdateRequest, security operations.DfareportingUserRolesUpdateSecurity) (*operations.DfareportingUserRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserRole", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *userRoles) DfareportingUserRolesUpdate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

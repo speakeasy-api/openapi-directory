@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ErgoPayCreateBabelBox1PathParams struct {
-	BoxID string `pathParam:"style=simple,explode=false,name=boxId"`
-}
-
 type ErgoPayCreateBabelBox1Request struct {
-	PathParams ErgoPayCreateBabelBox1PathParams
+	BoxID string `pathParam:"style=simple,explode=false,name=boxId"`
 }
 
 type ErgoPayCreateBabelBox1Response struct {

@@ -33,7 +33,7 @@ func newAccountSummaries(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // AnalyticsadminAccountSummariesList - Returns summaries of all accounts accessible by the caller.
-func (s *accountSummaries) AnalyticsadminAccountSummariesList(ctx context.Context, request operations.AnalyticsadminAccountSummariesListRequest) (*operations.AnalyticsadminAccountSummariesListResponse, error) {
+func (s *accountSummaries) AnalyticsadminAccountSummariesList(ctx context.Context, request operations.AnalyticsadminAccountSummariesListRequest, security operations.AnalyticsadminAccountSummariesListSecurity) (*operations.AnalyticsadminAccountSummariesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta/accountSummaries"
 
@@ -42,11 +42,11 @@ func (s *accountSummaries) AnalyticsadminAccountSummariesList(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

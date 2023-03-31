@@ -12,14 +12,8 @@ var UpdateTaskQueueServerList = []string{
 }
 
 type UpdateTaskQueueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTaskQueuePathParams struct {
-	// The SID of the TaskQueue resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-	// The SID of the Workspace with the TaskQueue to update.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTaskQueueUpdateTaskQueueRequest struct {
@@ -37,10 +31,11 @@ type UpdateTaskQueueUpdateTaskQueueRequest struct {
 }
 
 type UpdateTaskQueueRequest struct {
-	PathParams UpdateTaskQueuePathParams
-	Request    *UpdateTaskQueueUpdateTaskQueueRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTaskQueueSecurity
-	ServerURL  *string
+	RequestBody *UpdateTaskQueueUpdateTaskQueueRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the TaskQueue resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The SID of the Workspace with the TaskQueue to update.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type UpdateTaskQueueResponse struct {

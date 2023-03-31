@@ -8,13 +8,7 @@ import (
 )
 
 type PrivateCollectionCreateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateCollectionCreateRequest struct {
-	// Collection description
-	Request  shared.CollectionCreate `request:"mediaType=application/json"`
-	Security PrivateCollectionCreateSecurity
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateCollectionCreateResponse struct {

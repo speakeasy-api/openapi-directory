@@ -7,41 +7,29 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileGetFromComputeNodePathParams struct {
-	// The path to the task file that you want to get the content of.
-	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
-	// The id of the compute node that contains the file.
-	NodeID string `pathParam:"style=simple,explode=false,name=nodeId"`
-	// The id of the pool that contains the compute node.
-	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
-}
-
-type FileGetFromComputeNodeQueryParams struct {
-	// Client API Version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type FileGetFromComputeNodeHeaders struct {
+type FileGetFromComputeNodeRequest struct {
 	// Specify this header to perform the operation only if the resource has been modified since the specified date/time.
 	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
 	// Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
 	IfUnmodifiedSince *string `header:"style=simple,explode=false,name=If-Unmodified-Since"`
+	// Client API Version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The path to the task file that you want to get the content of.
+	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
+	// The id of the compute node that contains the file.
+	NodeID string `pathParam:"style=simple,explode=false,name=nodeId"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Specifies the byte range to be retrieved. The default is to retrieve the entire file.  The format is startRange-endRange.
 	OcpRange *string `header:"style=simple,explode=false,name=ocp-range"`
+	// The id of the pool that contains the compute node.
+	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type FileGetFromComputeNodeRequest struct {
-	PathParams  FileGetFromComputeNodePathParams
-	QueryParams FileGetFromComputeNodeQueryParams
-	Headers     FileGetFromComputeNodeHeaders
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type FileGetFromComputeNodeResponse struct {

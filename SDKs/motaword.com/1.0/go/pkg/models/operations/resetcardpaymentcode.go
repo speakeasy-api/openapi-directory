@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetCardPaymentCodePathParams struct {
+type ResetCardPaymentCodeRequest struct {
 	// Credit Card ID
 	CardID int64 `pathParam:"style=simple,explode=false,name=cardId"`
-}
-
-type ResetCardPaymentCodeRequest struct {
-	PathParams ResetCardPaymentCodePathParams
 }
 
 type ResetCardPaymentCodeResponse struct {

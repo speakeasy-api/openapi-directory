@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SendimmessagesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type SendimmessagesQueryParams struct {
-	// The email address (registered with Zoom) or the userId of the chat user.
-	ChatUser *string `queryParam:"style=form,explode=true,name=chat_user"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SendimmessagesApplicationJSON struct {
@@ -22,9 +16,9 @@ type SendimmessagesApplicationJSON struct {
 }
 
 type SendimmessagesRequest struct {
-	QueryParams SendimmessagesQueryParams
-	Request     *SendimmessagesApplicationJSON `request:"mediaType=application/json"`
-	Security    SendimmessagesSecurity
+	RequestBody *SendimmessagesApplicationJSON `request:"mediaType=application/json"`
+	// The email address (registered with Zoom) or the userId of the chat user.
+	ChatUser *string `queryParam:"style=form,explode=true,name=chat_user"`
 }
 
 // Sendimmessages201ApplicationXML - **HTTP Status Code:** `201`<br>

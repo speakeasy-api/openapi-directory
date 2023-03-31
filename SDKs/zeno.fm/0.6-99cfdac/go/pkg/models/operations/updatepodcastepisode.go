@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePodcastEpisodePathParams struct {
-	EpisodeKey string `pathParam:"style=simple,explode=false,name=episodeKey"`
-	PodcastKey string `pathParam:"style=simple,explode=false,name=podcastKey"`
-}
-
 type UpdatePodcastEpisodeRequestBodyFileLogo struct {
 	Content  []byte `multipartForm:"content"`
 	FileLogo string `multipartForm:"name=file_logo"`
@@ -24,8 +19,9 @@ type UpdatePodcastEpisodeRequestBody struct {
 }
 
 type UpdatePodcastEpisodeRequest struct {
-	PathParams UpdatePodcastEpisodePathParams
-	Request    *UpdatePodcastEpisodeRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UpdatePodcastEpisodeRequestBody `request:"mediaType=multipart/form-data"`
+	EpisodeKey  string                           `pathParam:"style=simple,explode=false,name=episodeKey"`
+	PodcastKey  string                           `pathParam:"style=simple,explode=false,name=podcastKey"`
 }
 
 type UpdatePodcastEpisodeResponse struct {

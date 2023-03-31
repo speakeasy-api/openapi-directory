@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetGifByIDRequest(
-    path_params=operations.GetGifByIDPathParams(
-        gif_id=7811605540752032210,
+        api_key="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetGifByIDRequest(
+    gif_id=548814,
 )
     
 res = s.gifs.get_gif_by_id(req)

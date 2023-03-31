@@ -34,14 +34,14 @@ func newAirMarshal(defaultClient, securityClient HTTPClient, serverURL, language
 // List Air Marshal scan results from a network
 func (s *airMarshal) GetNetworkWirelessAirMarshal(ctx context.Context, request operations.GetNetworkWirelessAirMarshalRequest) (*operations.GetNetworkWirelessAirMarshalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/airMarshal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/airMarshal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -159,7 +159,6 @@ pkg/models/operations/updateunderstandtaskactions.go
 pkg/models/operations/updatewirelessrateplan.go
 pkg/models/operations/updatewirelesssim.go
 pkg/models/shared/previewdeployeddevicesfleetcertificate.go
-pkg/models/shared/security.go
 pkg/models/shared/previewdeployeddevicesfleetdeployment.go
 pkg/models/shared/previewdeployeddevicesfleetdevice.go
 pkg/models/shared/previewdeployeddevicesfleet.go
@@ -209,3 +208,4 @@ pkg/models/shared/synclistitemenumqueryfromboundtypeenum.go
 pkg/models/shared/syncmapitemenumqueryresultorderenum.go
 pkg/models/shared/syncmapitemenumqueryfromboundtypeenum.go
 USAGE.md
+pkg/models/operations/options.go

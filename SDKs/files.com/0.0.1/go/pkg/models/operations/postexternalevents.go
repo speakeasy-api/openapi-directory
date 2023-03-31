@@ -49,10 +49,6 @@ type PostExternalEventsRequestBody struct {
 	Status PostExternalEventsRequestBodyStatusEnum `multipartForm:"name=status"`
 }
 
-type PostExternalEventsRequest struct {
-	Request PostExternalEventsRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostExternalEventsResponse struct {
 	ContentType string
 	// The ExternalEvents object.

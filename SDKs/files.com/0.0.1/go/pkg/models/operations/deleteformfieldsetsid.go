@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFormFieldSetsIDPathParams struct {
+type DeleteFormFieldSetsIDRequest struct {
 	// Form Field Set ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteFormFieldSetsIDRequest struct {
-	PathParams DeleteFormFieldSetsIDPathParams
 }
 
 type DeleteFormFieldSetsIDResponse struct {

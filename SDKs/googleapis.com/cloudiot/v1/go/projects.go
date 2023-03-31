@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudiotProjectsLocationsRegistriesBindDeviceToGateway - Associates the device with the gateway.
-func (s *projects) CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest) (*operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest, security operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity) (*operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:bindDeviceToGateway", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:bindDeviceToGateway", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BindDeviceToGatewayRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx co
 }
 
 // CloudiotProjectsLocationsRegistriesCreate - Creates a device registry that contains devices.
-func (s *projects) CloudiotProjectsLocationsRegistriesCreate(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesCreateRequest) (*operations.CloudiotProjectsLocationsRegistriesCreateResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesCreate(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesCreateRequest, security operations.CloudiotProjectsLocationsRegistriesCreateSecurity) (*operations.CloudiotProjectsLocationsRegistriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/registries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/registries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceRegistry", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesCreate(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) CloudiotProjectsLocationsRegistriesCreate(ctx context.Context
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesConfigVersionsList - Lists the last few versions of the device configuration in descending order (i.e.: newest first).
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesConfigVersionsList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesConfigVersionsList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/configVersions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/configVersions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesConfigVersionsList(
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesCreate - Creates a device in a device registry.
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesCreate(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesCreateRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesCreate(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesCreateRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesCreateSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Device", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesCreate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesCreate(ctx context.
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesDelete - Deletes a device.
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesDelete(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesDeleteRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesDelete(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesDeleteRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesDeleteSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesDelete(ctx context.
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesGet - Gets details about a device.
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesGet(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesGetRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesGet(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesGetRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesGetSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesGet(ctx context.Con
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig - Modifies the configuration for the device, which is eventually sent from the Cloud IoT Core servers. Returns the modified configuration version and its metadata.
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:modifyCloudToDeviceConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:modifyCloudToDeviceConfig", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyCloudToDeviceConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDevice
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDevice
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesPatch - Updates a device.
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesPatch(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesPatchRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesPatch(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesPatchRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesPatchSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Device", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesPatch(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesPatch(ctx context.C
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice - Sends a command to the specified device. In order for a device to be able to receive commands, it must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the group of MQTT topics specified by /devices/{device-id}/commands/#. This subscription will receive commands at the top-level topic /devices/{device-id}/commands as well as commands for subfolders, like /devices/{device-id}/commands/subfolder. Note that subscribing to specific subfolders is not supported. If the command could not be delivered to the device, this method will return an error; in particular, if the device is not subscribed, this method will return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS 1, at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected from the device.
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:sendCommandToDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:sendCommandToDevice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendCommandToDeviceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,20 +506,20 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice
 }
 
 // CloudiotProjectsLocationsRegistriesDevicesStatesList - Lists the last few versions of the device state in descending order (i.e.: newest first).
-func (s *projects) CloudiotProjectsLocationsRegistriesDevicesStatesList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesStatesListRequest) (*operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesDevicesStatesList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesDevicesStatesListRequest, security operations.CloudiotProjectsLocationsRegistriesDevicesStatesListSecurity) (*operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/states", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/states", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) CloudiotProjectsLocationsRegistriesDevicesStatesList(ctx cont
 }
 
 // CloudiotProjectsLocationsRegistriesGroupsDevicesList - List devices in a device registry.
-func (s *projects) CloudiotProjectsLocationsRegistriesGroupsDevicesList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest) (*operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesGroupsDevicesList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest, security operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity) (*operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,11 +602,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsDevicesList(ctx cont
 }
 
 // CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyRequest) (*operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyRequest, security operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicySecurity) (*operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,11 +618,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -657,11 +657,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy(ctx con
 }
 
 // CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy.
-func (s *projects) CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyRequest) (*operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyRequest, security operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicySecurity) (*operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,11 +673,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,11 +712,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy(ctx con
 }
 
 // CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
-func (s *projects) CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsRequest) (*operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsRequest, security operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsSecurity) (*operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -728,11 +728,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,20 +767,20 @@ func (s *projects) CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions(c
 }
 
 // CloudiotProjectsLocationsRegistriesList - Lists device registries.
-func (s *projects) CloudiotProjectsLocationsRegistriesList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesListRequest) (*operations.CloudiotProjectsLocationsRegistriesListResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesList(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesListRequest, security operations.CloudiotProjectsLocationsRegistriesListSecurity) (*operations.CloudiotProjectsLocationsRegistriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/registries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/registries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,11 +815,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesList(ctx context.Context, 
 }
 
 // CloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway - Deletes the association between the device and the gateway.
-func (s *projects) CloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest) (*operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse, error) {
+func (s *projects) CloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway(ctx context.Context, request operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest, security operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurity) (*operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:unbindDeviceFromGateway", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:unbindDeviceFromGateway", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnbindDeviceFromGatewayRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -831,11 +831,11 @@ func (s *projects) CloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

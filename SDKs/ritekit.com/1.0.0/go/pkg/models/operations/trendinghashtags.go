@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type TrendingHashtagsQueryParams struct {
+type TrendingHashtagsRequest struct {
 	// Restrict results only to green hashtags. Hides overused (red) hashtags.
 	Green *bool `queryParam:"style=form,explode=true,name=green"`
 	// Restrict results only to hashtags with latin characters
 	Latin *bool `queryParam:"style=form,explode=true,name=latin"`
-}
-
-type TrendingHashtagsRequest struct {
-	QueryParams TrendingHashtagsQueryParams
 }
 
 type TrendingHashtagsResponse struct {

@@ -8,23 +8,14 @@ import (
 )
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteSecurity struct {
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompletePathParams struct {
-	ExternalEventID string `pathParam:"style=simple,explode=false,name=externalEventId"`
-}
-
-type PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteQueryParams struct {
-	ExternalAccountID string `queryParam:"style=form,explode=true,name=externalAccountId"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteRequest struct {
-	PathParams  PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompletePathParams
-	QueryParams PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteQueryParams
-	Request     shared.MarketingEventCompleteRequestParams `request:"mediaType=application/json"`
-	Security    PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteSecurity
+	MarketingEventCompleteRequestParams shared.MarketingEventCompleteRequestParams `request:"mediaType=application/json"`
+	ExternalAccountID                   string                                     `queryParam:"style=form,explode=true,name=externalAccountId"`
+	ExternalEventID                     string                                     `pathParam:"style=simple,explode=false,name=externalEventId"`
 }
 
 type PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteResponse struct {

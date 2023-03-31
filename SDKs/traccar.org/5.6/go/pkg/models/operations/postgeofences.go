@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostGeofencesRequest struct {
-	Request shared.Geofence `request:"mediaType=application/json"`
-}
-
 type PostGeofencesResponse struct {
 	ContentType string
 	// OK

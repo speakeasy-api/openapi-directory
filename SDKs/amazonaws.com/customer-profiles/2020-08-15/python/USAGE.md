@@ -3,37 +3,32 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AddProfileKeyRequest(
-    path_params=operations.AddProfileKeyPathParams(
-        domain_name="rem",
-    ),
-    headers=operations.AddProfileKeyHeaders(
-        x_amz_algorithm="laudantium",
-        x_amz_content_sha256="corporis",
-        x_amz_credential="qui",
-        x_amz_date="adipisci",
-        x_amz_security_token="qui",
-        x_amz_signature="iste",
-        x_amz_signed_headers="minima",
-    ),
-    request=operations.AddProfileKeyRequestBody(
-        key_name="blanditiis",
-        profile_id="sit",
+    domain_name="corrupti",
+    request_body=operations.AddProfileKeyRequestBody(
+        key_name="provident",
+        profile_id="distinctio",
         values=[
-            "earum",
-            "fugiat",
-            "dolores",
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
         ],
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
 )
     
 res = s.add_profile_key(req)

@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAccountBalanceRequest{
-        QueryParams: operations.GetAccountBalanceQueryParams{
-            APIKey: "abcd1234",
-            APISecret: "ABCDEFGH01234abc",
-        },
+        APIKey: "abcd1234",
+        APISecret: "ABCDEFGH01234abc",
     }
 
     ctx := context.Background()

@@ -126,7 +126,7 @@ func (s *subscription) GetAll4(ctx context.Context) (*operations.GetAll4Response
 
 // Subscribe - Subscribe to event
 // Subscribe to event. Returns subscription Id.
-func (s *subscription) Subscribe(ctx context.Context, request operations.SubscribeRequest) (*operations.SubscribeResponse, error) {
+func (s *subscription) Subscribe(ctx context.Context, request shared.SubscriptionDTO) (*operations.SubscribeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscription"
 
@@ -195,7 +195,7 @@ func (s *subscription) Subscribe(ctx context.Context, request operations.Subscri
 // Unsubscribe from job status changed event
 func (s *subscription) Unsubscribe(ctx context.Context, request operations.UnsubscribeRequest) (*operations.UnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscription/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

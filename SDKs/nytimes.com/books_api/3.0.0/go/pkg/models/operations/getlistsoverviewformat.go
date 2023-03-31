@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GETListsOverviewFormatSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
 // GETListsOverviewFormatFormatEnum
@@ -37,24 +36,15 @@ func (e *GETListsOverviewFormatFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListsOverviewFormatPathParams struct {
+type GETListsOverviewFormatRequest struct {
+	APIKey *string                          `queryParam:"style=form,explode=true,name=api-key"`
 	Format GETListsOverviewFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GETListsOverviewFormatQueryParams struct {
-	APIKey *string `queryParam:"style=form,explode=true,name=api-key"`
 	// The best-seller list publication date. YYYY-MM-DD
 	//
 	// You do not have to specify the exact date the list was published. The service will search forward (into the future) for the closest publication date to the date you specify. For example, a request for lists/overview/2013-05-22 will retrieve the list that was published on 05-26.
 	//
 	// If you do not include a published_date, the current week's best-sellers lists will be returned.
 	PublishedDate *string `queryParam:"style=form,explode=true,name=published_date"`
-}
-
-type GETListsOverviewFormatRequest struct {
-	PathParams  GETListsOverviewFormatPathParams
-	QueryParams GETListsOverviewFormatQueryParams
-	Security    GETListsOverviewFormatSecurity
 }
 
 type GETListsOverviewFormat200ApplicationJSONResultsListsBooks struct {

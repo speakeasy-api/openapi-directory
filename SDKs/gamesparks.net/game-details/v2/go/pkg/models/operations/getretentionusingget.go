@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETRetentionUsingGETPathParams struct {
-	// apiKey
-	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
 // GETRetentionUsingGETStageEnum - stage
 type GETRetentionUsingGETStageEnum string
 
@@ -38,14 +33,11 @@ func (e *GETRetentionUsingGETStageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRetentionUsingGETQueryParams struct {
+type GETRetentionUsingGETRequest struct {
+	// apiKey
+	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// stage
 	Stage GETRetentionUsingGETStageEnum `queryParam:"style=form,explode=true,name=stage"`
-}
-
-type GETRetentionUsingGETRequest struct {
-	PathParams  GETRetentionUsingGETPathParams
-	QueryParams GETRetentionUsingGETQueryParams
 }
 
 type GETRetentionUsingGETResponse struct {

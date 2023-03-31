@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type RemoveAllItemsPathParams struct {
-	// ID of the orderForm corresponding to the cart whose items you want to remove.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type RemoveAllItemsHeaders struct {
+type RemoveAllItemsRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type RemoveAllItemsRequest struct {
-	PathParams RemoveAllItemsPathParams
-	Headers    RemoveAllItemsHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
+	ContentType string                 `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	// ID of the orderForm corresponding to the cart whose items you want to remove.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type RemoveAllItemsResponse struct {

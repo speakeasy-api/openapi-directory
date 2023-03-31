@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmTargetGroupPathParams struct {
+type GetNetworkSmTargetGroupRequest struct {
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	TargetGroupID string `pathParam:"style=simple,explode=false,name=targetGroupId"`
-}
-
-type GetNetworkSmTargetGroupQueryParams struct {
 	// Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
 	WithDetails *bool `queryParam:"style=form,explode=true,name=withDetails"`
-}
-
-type GetNetworkSmTargetGroupRequest struct {
-	PathParams  GetNetworkSmTargetGroupPathParams
-	QueryParams GetNetworkSmTargetGroupQueryParams
 }
 
 type GetNetworkSmTargetGroupResponse struct {

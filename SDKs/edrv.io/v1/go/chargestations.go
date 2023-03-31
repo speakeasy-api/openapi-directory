@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newChargeStations(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteChargeStation - Use to delete a charge station
 func (s *chargeStations) DeleteChargeStation(ctx context.Context, request operations.DeleteChargeStationRequest) (*operations.DeleteChargeStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -71,14 +72,14 @@ func (s *chargeStations) DeleteChargeStation(ctx context.Context, request operat
 // GetChargeStation - Get a single charge station's data
 func (s *chargeStations) GetChargeStation(ctx context.Context, request operations.GetChargeStationRequest) (*operations.GetChargeStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -110,14 +111,14 @@ func (s *chargeStations) GetChargeStation(ctx context.Context, request operation
 // GetChargeStationConnectors - List connectors for a chargestation
 func (s *chargeStations) GetChargeStationConnectors(ctx context.Context, request operations.GetChargeStationConnectorsRequest) (*operations.GetChargeStationConnectorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}/connectors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}/connectors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -158,7 +159,7 @@ func (s *chargeStations) GetChargeStations(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -190,9 +191,9 @@ func (s *chargeStations) GetChargeStations(ctx context.Context, request operatio
 // PatchChargeStation - Update a charge station's data
 func (s *chargeStations) PatchChargeStation(ctx context.Context, request operations.PatchChargeStationRequest) (*operations.PatchChargeStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,7 +244,7 @@ func (s *chargeStations) PatchChargeStation(ctx context.Context, request operati
 }
 
 // PostChargeStations - Create a new charge station
-func (s *chargeStations) PostChargeStations(ctx context.Context, request operations.PostChargeStationsRequest) (*operations.PostChargeStationsResponse, error) {
+func (s *chargeStations) PostChargeStations(ctx context.Context, request shared.Schema1) (*operations.PostChargeStationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/chargestations"
 

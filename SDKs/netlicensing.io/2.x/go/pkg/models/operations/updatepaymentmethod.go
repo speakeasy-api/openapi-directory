@@ -8,12 +8,8 @@ import (
 )
 
 type UpdatePaymentMethodSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdatePaymentMethodPathParams struct {
-	// Payment method number
-	PaymentMethodNumber string `pathParam:"style=simple,explode=false,name=paymentMethodNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdatePaymentMethodRequestBody struct {
@@ -24,9 +20,9 @@ type UpdatePaymentMethodRequestBody struct {
 }
 
 type UpdatePaymentMethodRequest struct {
-	PathParams UpdatePaymentMethodPathParams
-	Request    *UpdatePaymentMethodRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdatePaymentMethodSecurity
+	RequestBody *UpdatePaymentMethodRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Payment method number
+	PaymentMethodNumber string `pathParam:"style=simple,explode=false,name=paymentMethodNumber"`
 }
 
 type UpdatePaymentMethodResponse struct {

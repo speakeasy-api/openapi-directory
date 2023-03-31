@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCaptionsPathParams struct {
-	// Rev.ai API Job Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCaptionsQueryParams struct {
-	// Identifies which channel of the job output to caption. Default is `null` which works only for jobs with no `speaker_channels_count` provided during job submission.
-	SpeakerChannel *int64 `queryParam:"style=form,explode=true,name=speaker_channel"`
-}
-
-type GetCaptionsHeaders struct {
+type GetCaptionsRequest struct {
 	// MIME type specifying the caption output format
 	Accept *shared.AcceptCaptionEnum `header:"style=simple,explode=false,name=Accept"`
-}
-
-type GetCaptionsRequest struct {
-	PathParams  GetCaptionsPathParams
-	QueryParams GetCaptionsQueryParams
-	Headers     GetCaptionsHeaders
+	// Rev.ai API Job Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Identifies which channel of the job output to caption. Default is `null` which works only for jobs with no `speaker_channels_count` provided during job submission.
+	SpeakerChannel *int64 `queryParam:"style=form,explode=true,name=speaker_channel"`
 }
 
 // GetCaptions409ApplicationProblemPlusJSON - Problem details object returned on errors

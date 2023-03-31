@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETDataQueryJobPathParams struct {
-	// Internal identifier of the query job.
-	//
-	JobID string `pathParam:"style=simple,explode=false,name=job-id"`
-}
-
-type GETDataQueryJobHeaders struct {
+type GETDataQueryJobRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -25,11 +19,9 @@ type GETDataQueryJobHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETDataQueryJobRequest struct {
-	PathParams GETDataQueryJobPathParams
-	Headers    GETDataQueryJobHeaders
+	// Internal identifier of the query job.
+	//
+	JobID string `pathParam:"style=simple,explode=false,name=job-id"`
 }
 
 type GETDataQueryJobResponse struct {

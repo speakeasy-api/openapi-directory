@@ -34,7 +34,7 @@ func newEditSubaccount(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // SubaccountEdit - Edit a subaccount
 // Edit a subaccount
-func (s *editSubaccount) SubaccountEdit(ctx context.Context, request operations.SubaccountEditRequest) (*operations.SubaccountEditResponse, error) {
+func (s *editSubaccount) SubaccountEdit(ctx context.Context, request shared.SubaccountRequest) (*operations.SubaccountEditResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subaccount"
 

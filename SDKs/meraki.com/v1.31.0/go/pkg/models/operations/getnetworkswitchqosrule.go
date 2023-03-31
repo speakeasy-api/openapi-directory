@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchQosRulePathParams struct {
+type GetNetworkSwitchQosRuleRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	QosRuleID string `pathParam:"style=simple,explode=false,name=qosRuleId"`
-}
-
-type GetNetworkSwitchQosRuleRequest struct {
-	PathParams GetNetworkSwitchQosRulePathParams
 }
 
 type GetNetworkSwitchQosRuleResponse struct {

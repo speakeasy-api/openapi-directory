@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPublicKeysIDPathParams struct {
+type GetPublicKeysIDRequest struct {
 	// Public Key ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPublicKeysIDRequest struct {
-	PathParams GetPublicKeysIDPathParams
 }
 
 type GetPublicKeysIDResponse struct {

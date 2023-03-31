@@ -43,7 +43,7 @@ func (s *serviceInstance) ListServiceInstances(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func (s *serviceInstance) ListServiceInstances(ctx context.Context, request oper
 // Returns a ServiceInstance object
 func (s *serviceInstance) ShowServiceInstance(ctx context.Context, request operations.ShowServiceInstanceRequest) (*operations.ShowServiceInstanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_instances/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/service_instances/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

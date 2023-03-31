@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetMaskPathParams struct {
+type SetMaskRequest struct {
 	// Agent to set the primary IP address mask
 	AgentNum int64 `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Mask to set for the agent primary IP address
 	Mask string `pathParam:"style=simple,explode=false,name=mask"`
-}
-
-type SetMaskRequest struct {
-	PathParams SetMaskPathParams
 }
 
 type SetMaskResponse struct {

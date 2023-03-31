@@ -16,10 +16,6 @@ type PostGroupUsersRequestBody struct {
 	UserID int `multipartForm:"name=user_id"`
 }
 
-type PostGroupUsersRequest struct {
-	Request PostGroupUsersRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostGroupUsersResponse struct {
 	ContentType string
 	// The GroupUsers object.

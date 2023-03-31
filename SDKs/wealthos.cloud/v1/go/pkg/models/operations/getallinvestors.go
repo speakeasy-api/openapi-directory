@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetAllInvestorsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // GetAllInvestorsSortEnum - Sorting order; results are sorted by creation time.
@@ -38,24 +37,15 @@ func (e *GetAllInvestorsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAllInvestorsQueryParams struct {
+type GetAllInvestorsRequest struct {
 	// Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
 	// Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date & time.
 	PageSize *string `queryParam:"style=form,explode=true,name=page_size"`
 	// Sorting order; results are sorted by creation time.
 	Sort *GetAllInvestorsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAllInvestorsHeaders struct {
 	// ApiSecretKey
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetAllInvestorsRequest struct {
-	QueryParams GetAllInvestorsQueryParams
-	Headers     GetAllInvestorsHeaders
-	Security    GetAllInvestorsSecurity
 }
 
 // GetAllInvestors500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

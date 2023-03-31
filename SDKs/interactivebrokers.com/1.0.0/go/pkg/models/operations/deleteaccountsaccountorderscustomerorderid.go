@@ -9,15 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAccountsAccountOrdersCustomerOrderIDPathParams struct {
+type DeleteAccountsAccountOrdersCustomerOrderIDRequest struct {
 	// Customer Order ID
 	CustomerOrderID string `pathParam:"style=simple,explode=false,name=CustomerOrderId"`
 	// Account Number
 	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type DeleteAccountsAccountOrdersCustomerOrderIDRequest struct {
-	PathParams DeleteAccountsAccountOrdersCustomerOrderIDPathParams
 }
 
 type DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSONSideEnum string

@@ -4,39 +4,52 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PatchAttractionRequest(
-    path_params=operations.PatchAttractionPathParams(
-        id="dolorem",
-    ),
-    headers=operations.PatchAttractionHeaders(
-        tmps_correlation_id="dolores",
-    ),
-    request=shared.AugmentationData(
+    augmentation_data=shared.AugmentationData(
         changes=[
             shared.Change(
-                from_="illo",
-                op="add",
-                path="reiciendis",
+                from_="provident",
+                op="copy",
+                path="quibusdam",
                 value={
-                    "esse": "omnis",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
                 },
             ),
             shared.Change(
-                from_="velit",
-                op="add",
-                path="consequatur",
+                from_="suscipit",
+                op="replace",
+                path="magnam",
                 value={
-                    "quo": "consequatur",
+                    "ipsa": "delectus",
+                    "tempora": "suscipit",
+                    "molestiae": "minus",
+                    "placeat": "voluptatum",
+                },
+            ),
+            shared.Change(
+                from_="iusto",
+                op="move",
+                path="nisi",
+                value={
+                    "temporibus": "ab",
+                    "quis": "veritatis",
+                    "deserunt": "perferendis",
+                    "ipsam": "repellendus",
                 },
             ),
         ],
-        related_entity_id="dolor",
-        related_entity_type="event",
-        score=34.200001,
-        source="eius",
-        version_number=4361261286928758480,
+        related_entity_id="sapiente",
+        related_entity_type="venue",
+        score=1403.5,
+        source="at",
+        version_number=870088,
     ),
+    tmps_correlation_id="maiores",
+    id="molestiae",
 )
     
 res = s.patch_attraction(req)

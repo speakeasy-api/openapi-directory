@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type InvestorGradesQueryParams struct {
+type InvestorGradesRequest struct {
 	EndDate   *string `queryParam:"style=form,explode=true,name=endDate"`
 	Limit     *string `queryParam:"style=form,explode=true,name=limit"`
 	StartDate *string `queryParam:"style=form,explode=true,name=startDate"`
 	Tokens    *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type InvestorGradesRequest struct {
-	QueryParams InvestorGradesQueryParams
 }
 
 type InvestorGradesResponse struct {

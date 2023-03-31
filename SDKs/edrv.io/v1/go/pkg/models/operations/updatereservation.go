@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdatereservationPathParams struct {
-	// ID of the reservation that needs to be fetched
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdatereservationRequestBody struct {
 	Connector *int64  `json:"connector,omitempty"`
 	Driver    *string `json:"driver,omitempty"`
@@ -19,8 +14,9 @@ type UpdatereservationRequestBody struct {
 }
 
 type UpdatereservationRequest struct {
-	PathParams UpdatereservationPathParams
-	Request    UpdatereservationRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdatereservationRequestBody `request:"mediaType=application/json"`
+	// ID of the reservation that needs to be fetched
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // Updatereservation201ApplicationJSON - A successful response

@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkHealthAlertsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkHealthAlertsRequest struct {
-	PathParams GetNetworkHealthAlertsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkHealthAlerts200ApplicationJSONScopeApplications struct {

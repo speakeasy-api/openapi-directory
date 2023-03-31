@@ -8,16 +8,11 @@ import (
 )
 
 type GenderJapaneseNameFullSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GenderJapaneseNameFullPathParams struct {
-	JapaneseName string `pathParam:"style=simple,explode=false,name=japaneseName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type GenderJapaneseNameFullRequest struct {
-	PathParams GenderJapaneseNameFullPathParams
-	Security   GenderJapaneseNameFullSecurity
+	JapaneseName string `pathParam:"style=simple,explode=false,name=japaneseName"`
 }
 
 type GenderJapaneseNameFullResponse struct {

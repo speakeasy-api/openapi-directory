@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newVersion(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CreateVersion - Create version
 // Create a new version
-func (s *version) CreateVersion(ctx context.Context, request operations.CreateVersionRequest) (*operations.CreateVersionResponse, error) {
+func (s *version) CreateVersion(ctx context.Context, request shared.Version, security operations.CreateVersionSecurity) (*operations.CreateVersionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/version"
 
@@ -52,7 +53,7 @@ func (s *version) CreateVersion(ctx context.Context, request operations.CreateVe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -83,16 +84,16 @@ func (s *version) CreateVersion(ctx context.Context, request operations.CreateVe
 
 // DeleteVersion - Delete version
 // Delete a version
-func (s *version) DeleteVersion(ctx context.Context, request operations.DeleteVersionRequest) (*operations.DeleteVersionResponse, error) {
+func (s *version) DeleteVersion(ctx context.Context, request operations.DeleteVersionRequest, security operations.DeleteVersionSecurity) (*operations.DeleteVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/version/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/version/{versionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -123,16 +124,16 @@ func (s *version) DeleteVersion(ctx context.Context, request operations.DeleteVe
 
 // GetVersion - Get version
 // Returns the version with this version ID
-func (s *version) GetVersion(ctx context.Context, request operations.GetVersionRequest) (*operations.GetVersionResponse, error) {
+func (s *version) GetVersion(ctx context.Context, request operations.GetVersionRequest, security operations.GetVersionSecurity) (*operations.GetVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/version/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/version/{versionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -161,7 +162,7 @@ func (s *version) GetVersion(ctx context.Context, request operations.GetVersionR
 
 // GetVersions - Get versions
 // Retrieve a list of versions associated with a project API key
-func (s *version) GetVersions(ctx context.Context, request operations.GetVersionsRequest) (*operations.GetVersionsResponse, error) {
+func (s *version) GetVersions(ctx context.Context) (*operations.GetVersionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/version"
 
@@ -170,7 +171,7 @@ func (s *version) GetVersions(ctx context.Context, request operations.GetVersion
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +198,11 @@ func (s *version) GetVersions(ctx context.Context, request operations.GetVersion
 
 // UpdateVersion - Update version
 // Update an existing version
-func (s *version) UpdateVersion(ctx context.Context, request operations.UpdateVersionRequest) (*operations.UpdateVersionResponse, error) {
+func (s *version) UpdateVersion(ctx context.Context, request operations.UpdateVersionRequest, security operations.UpdateVersionSecurity) (*operations.UpdateVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/version/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/version/{versionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Version", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -216,7 +217,7 @@ func (s *version) UpdateVersion(ctx context.Context, request operations.UpdateVe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

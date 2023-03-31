@@ -24,10 +24,6 @@ type SMSVerifyRequestBody struct {
 	SecurityCode *int `form:"name=security-code"`
 }
 
-type SMSVerifyRequest struct {
-	Request SMSVerifyRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type SMSVerifyResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError          *shared.APIError

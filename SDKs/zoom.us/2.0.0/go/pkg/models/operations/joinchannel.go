@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type JoinChannelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type JoinChannelPathParams struct {
-	// Channel Id.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JoinChannelRequest struct {
-	PathParams JoinChannelPathParams
-	Security   JoinChannelSecurity
+	// Channel Id.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 }
 
 // JoinChannel201ApplicationXML - **HTTP Status Code:** `201`

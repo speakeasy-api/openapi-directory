@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryIDMessagesPostPathParams struct {
+type StoryIDMessagesPostRequest struct {
+	// The message text
+	RequestBody string `request:"mediaType=application/json"`
 	// the id from the story object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StoryIDMessagesPostRequest struct {
-	PathParams StoryIDMessagesPostPathParams
-	// The message text
-	Request string `request:"mediaType=application/json"`
 }
 
 type StoryIDMessagesPostResponse struct {

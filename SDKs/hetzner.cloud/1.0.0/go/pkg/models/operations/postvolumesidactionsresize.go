@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostVolumesIDActionsResizePathParams struct {
-	// ID of the Volume
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostVolumesIDActionsResizeRequestBody struct {
 	// New Volume size in GB (must be greater than current size)
 	Size float64 `json:"size"`
 }
 
 type PostVolumesIDActionsResizeRequest struct {
-	PathParams PostVolumesIDActionsResizePathParams
-	Request    *PostVolumesIDActionsResizeRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostVolumesIDActionsResizeRequestBody `request:"mediaType=application/json"`
+	// ID of the Volume
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostVolumesIDActionsResizeActionResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsDetachFromNetworkPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostLoadBalancersIDActionsDetachFromNetworkRequestBody struct {
 	// ID of an existing network to detach the Load Balancer from
 	Network float64 `json:"network"`
 }
 
 type PostLoadBalancersIDActionsDetachFromNetworkRequest struct {
-	PathParams PostLoadBalancersIDActionsDetachFromNetworkPathParams
-	Request    *PostLoadBalancersIDActionsDetachFromNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsDetachFromNetworkRequestBody `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsDetachFromNetworkActionResponseActionError - Error message for the Action if error occurred, otherwise null

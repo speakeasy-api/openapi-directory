@@ -8,23 +8,23 @@ import (
 )
 
 type DirectoryMembersListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMembersListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMembersListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMembersListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryMembersListSecurity struct {
@@ -34,12 +34,7 @@ type DirectoryMembersListSecurity struct {
 	Option4 *DirectoryMembersListSecurityOption4 `security:"option"`
 }
 
-type DirectoryMembersListPathParams struct {
-	// Identifies the group in the API request. The value can be the group's email address, group alias, or the unique group ID.
-	GroupKey string `pathParam:"style=simple,explode=false,name=groupKey"`
-}
-
-type DirectoryMembersListQueryParams struct {
+type DirectoryMembersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,6 +45,8 @@ type DirectoryMembersListQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifies the group in the API request. The value can be the group's email address, group alias, or the unique group ID.
+	GroupKey string `pathParam:"style=simple,explode=false,name=groupKey"`
 	// Whether to list indirect memberships. Default: false.
 	IncludeDerivedMembership *bool `queryParam:"style=form,explode=true,name=includeDerivedMembership"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -70,12 +67,6 @@ type DirectoryMembersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryMembersListRequest struct {
-	PathParams  DirectoryMembersListPathParams
-	QueryParams DirectoryMembersListQueryParams
-	Security    DirectoryMembersListSecurity
 }
 
 type DirectoryMembersListResponse struct {

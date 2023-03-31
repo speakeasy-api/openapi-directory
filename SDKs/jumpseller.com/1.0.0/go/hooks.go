@@ -36,14 +36,14 @@ func newHooks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteHooksIDJSON - Delete an existing Hook.
 func (s *hooks) DeleteHooksIDJSON(ctx context.Context, request operations.DeleteHooksIDJSONRequest) (*operations.DeleteHooksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *hooks) GetHooksJSON(ctx context.Context, request operations.GetHooksJSO
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *hooks) GetHooksJSON(ctx context.Context, request operations.GetHooksJSO
 // GetHooksIDJSON - Retrieve a single Hook.
 func (s *hooks) GetHooksIDJSON(ctx context.Context, request operations.GetHooksIDJSONRequest) (*operations.GetHooksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -203,7 +203,7 @@ func (s *hooks) PostHooksJSON(ctx context.Context, request operations.PostHooksJ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hooks.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HookEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +218,7 @@ func (s *hooks) PostHooksJSON(ctx context.Context, request operations.PostHooksJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -269,9 +269,9 @@ func (s *hooks) PostHooksJSON(ctx context.Context, request operations.PostHooksJ
 // PutHooksIDJSON - Update a Hook.
 func (s *hooks) PutHooksIDJSON(ctx context.Context, request operations.PutHooksIDJSONRequest) (*operations.PutHooksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HookEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,7 +286,7 @@ func (s *hooks) PutHooksIDJSON(ctx context.Context, request operations.PutHooksI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

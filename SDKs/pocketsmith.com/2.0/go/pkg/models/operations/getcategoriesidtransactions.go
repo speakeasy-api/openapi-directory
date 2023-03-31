@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoriesIDTransactionsPathParams struct {
-	// A comma-separated list of category IDs.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetCategoriesIDTransactionsTypeEnum - Limit to transactions of this type.
 type GetCategoriesIDTransactionsTypeEnum string
 
@@ -38,9 +33,11 @@ func (e *GetCategoriesIDTransactionsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCategoriesIDTransactionsQueryParams struct {
+type GetCategoriesIDTransactionsRequest struct {
 	// Limit to transactions on or before this date. Required if start_date is provided. If not provided, defaults to today's date.
 	EndDate *string `queryParam:"style=form,explode=true,name=end_date"`
+	// A comma-separated list of category IDs.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Limit to transactions that need to be reviewed.
 	NeedsReview *int64 `queryParam:"style=form,explode=true,name=needs_review"`
 	// Choose a particular page of the results.
@@ -55,11 +52,6 @@ type GetCategoriesIDTransactionsQueryParams struct {
 	Uncategorised *int64 `queryParam:"style=form,explode=true,name=uncategorised"`
 	// Limit to transactions updated since an ISO 8601 timestamp.
 	UpdatedSince *string `queryParam:"style=form,explode=true,name=updated_since"`
-}
-
-type GetCategoriesIDTransactionsRequest struct {
-	PathParams  GetCategoriesIDTransactionsPathParams
-	QueryParams GetCategoriesIDTransactionsQueryParams
 }
 
 type GetCategoriesIDTransactionsResponse struct {

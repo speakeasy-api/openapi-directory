@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsRequest struct {
-	Request *shared.TargetInput `request:"mediaType=application/json"`
-}
-
 // PostTargets500ApplicationJSON - Internal server error
 type PostTargets500ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

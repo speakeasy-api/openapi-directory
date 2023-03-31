@@ -34,7 +34,7 @@ func newPicoEnableFixCableLock(defaultClient, securityClient HTTPClient, serverU
 // PicoEnableFixCableLockPost - Try to fix lock the cable of a pico. The pico must be online and a cable (without car) needs to be connected. Otherwise this will fail.
 func (s *picoEnableFixCableLock) PicoEnableFixCableLockPost(ctx context.Context, request operations.PicoEnableFixCableLockPostRequest) (*operations.PicoEnableFixCableLockPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pico/tryenablecablelock/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pico/tryenablecablelock/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

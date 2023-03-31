@@ -7,20 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningListAlertsForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type SecretScanningListAlertsForRepoQueryParams struct {
+type SecretScanningListAlertsForRepoRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
 	Resolution *string `queryParam:"style=form,explode=true,name=resolution"`
 	// A comma-separated list of secret types to return. By default all secret types are returned.
@@ -31,11 +28,6 @@ type SecretScanningListAlertsForRepoQueryParams struct {
 	Sort *shared.SecretScanningAlertSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
 	State *shared.SecretScanningAlertStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type SecretScanningListAlertsForRepoRequest struct {
-	PathParams  SecretScanningListAlertsForRepoPathParams
-	QueryParams SecretScanningListAlertsForRepoQueryParams
 }
 
 // SecretScanningListAlertsForRepo503ApplicationJSON - Service unavailable

@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetFirewallsIDActionsActionIDPathParams struct {
+type GetFirewallsIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Firewall
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFirewallsIDActionsActionIDRequest struct {
-	PathParams GetFirewallsIDActionsActionIDPathParams
 }
 
 // GetFirewallsIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

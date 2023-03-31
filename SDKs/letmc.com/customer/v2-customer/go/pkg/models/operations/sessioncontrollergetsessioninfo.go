@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type SessionControllerGetSessionInfoPathParams struct {
+type SessionControllerGetSessionInfoRequest struct {
 	// The unique client short-name
 	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type SessionControllerGetSessionInfoQueryParams struct {
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type SessionControllerGetSessionInfoRequest struct {
-	PathParams  SessionControllerGetSessionInfoPathParams
-	QueryParams SessionControllerGetSessionInfoQueryParams
 }
 
 type SessionControllerGetSessionInfoResponse struct {

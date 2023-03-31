@@ -32,6 +32,7 @@ pkg/models/shared/createsheetschartresponse.go
 pkg/models/shared/createshaperesponse.go
 pkg/models/shared/createlineresponse.go
 pkg/models/shared/createimageresponse.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchupdatepresentationrequest.go
 pkg/models/shared/request.go
 pkg/models/shared/updatevideopropertiesrequest.go
@@ -123,9 +124,7 @@ pkg/models/shared/createshaperequest.go
 pkg/models/shared/createparagraphbulletsrequest.go
 pkg/models/shared/createlinerequest.go
 pkg/models/shared/createimagerequest.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/presentation.go
 pkg/models/shared/page.go
 pkg/models/shared/pageelement.go

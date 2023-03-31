@@ -42,7 +42,7 @@ func (s *v1) CitiesGetv1V1CitiesGet(ctx context.Context, request operations.Citi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,14 +93,14 @@ func (s *v1) CitiesGetv1V1CitiesGet(ctx context.Context, request operations.Citi
 // CountriesGetV1CountriesCountryIDGet - Countries Get
 func (s *v1) CountriesGetV1CountriesCountryIDGet(ctx context.Context, request operations.CountriesGetV1CountriesCountryIDGetRequest) (*operations.CountriesGetV1CountriesCountryIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/countries/{country_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/countries/{country_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -158,7 +158,7 @@ func (s *v1) CountriesGetv1V1CountriesGet(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -209,14 +209,14 @@ func (s *v1) CountriesGetv1V1CountriesGet(ctx context.Context, request operation
 // LatestV1GetV1LatestLocationIDGet - Latest V1 Get
 func (s *v1) LatestV1GetV1LatestLocationIDGet(ctx context.Context, request operations.LatestV1GetV1LatestLocationIDGetRequest) (*operations.LatestV1GetV1LatestLocationIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/latest/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/latest/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -274,7 +274,7 @@ func (s *v1) LatestV1GetV1LatestGet(ctx context.Context, request operations.Late
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -325,14 +325,14 @@ func (s *v1) LatestV1GetV1LatestGet(ctx context.Context, request operations.Late
 // Locationsv1GetV1LocationsLocationIDGet - Locationsv1 Get
 func (s *v1) Locationsv1GetV1LocationsLocationIDGet(ctx context.Context, request operations.Locationsv1GetV1LocationsLocationIDGetRequest) (*operations.Locationsv1GetV1LocationsLocationIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/locations/{location_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/locations/{location_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -390,7 +390,7 @@ func (s *v1) Locationsv1GetV1LocationsGet(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -448,7 +448,7 @@ func (s *v1) MeasurementsGetV1V1MeasurementsGet(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -506,7 +506,7 @@ func (s *v1) ParametersGetv1V1ParametersGet(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -564,7 +564,7 @@ func (s *v1) SourcesV1GetV1SourcesGet(ctx context.Context, request operations.So
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -3,31 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptPortfolioShareRequest(
-    headers=operations.AcceptPortfolioShareHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="optio",
-        x_amz_credential="iste",
-        x_amz_date="nisi",
-        x_amz_security_token="repudiandae",
-        x_amz_signature="amet",
-        x_amz_signed_headers="impedit",
-        x_amz_target="AWS242ServiceCatalogService.AcceptPortfolioShare",
+    accept_portfolio_share_input=shared.AcceptPortfolioShareInput(
+        accept_language="corrupti",
+        portfolio_id="provident",
+        portfolio_share_type="AWS_ORGANIZATIONS",
     ),
-    request=shared.AcceptPortfolioShareInput(
-        accept_language="eum",
-        portfolio_id="et",
-        portfolio_share_type="AWS_SERVICECATALOG",
-    ),
+    x_amz_algorithm="quibusdam",
+    x_amz_content_sha256="unde",
+    x_amz_credential="nulla",
+    x_amz_date="corrupti",
+    x_amz_security_token="illum",
+    x_amz_signature="vel",
+    x_amz_signed_headers="error",
+    x_amz_target="AWS242ServiceCatalogService.AcceptPortfolioShare",
 )
     
 res = s.accept_portfolio_share(req)

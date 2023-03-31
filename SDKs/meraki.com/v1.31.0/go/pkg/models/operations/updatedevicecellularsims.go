@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceCellularSimsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // UpdateDeviceCellularSimsRequestBodySimFailover - SIM Failover settings.
 type UpdateDeviceCellularSimsRequestBodySimFailover struct {
 	// Failover to secondary SIM (optional)
@@ -105,8 +101,8 @@ type UpdateDeviceCellularSimsRequestBody struct {
 }
 
 type UpdateDeviceCellularSimsRequest struct {
-	PathParams UpdateDeviceCellularSimsPathParams
-	Request    *UpdateDeviceCellularSimsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceCellularSimsRequestBody `request:"mediaType=application/json"`
+	Serial      string                               `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceCellularSimsResponse struct {

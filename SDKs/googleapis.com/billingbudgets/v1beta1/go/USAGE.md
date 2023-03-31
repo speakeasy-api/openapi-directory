@@ -14,124 +14,115 @@ func main() {
     s := sdk.New()
 
     req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
-        Security: operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
-            Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput{
+        DollarXgafv: "2",
+        GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput: &shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput{
             Budget: &shared.GoogleCloudBillingBudgetsV1beta1BudgetInput{
                 AllUpdatesRule: &shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule{
                     DisableDefaultIamRecipients: false,
                     MonitoringNotificationChannels: []string{
-                        "iure",
-                        "magnam",
+                        "distinctio",
+                        "quibusdam",
+                        "unde",
                     },
-                    PubsubTopic: "debitis",
-                    SchemaVersion: "ipsa",
+                    PubsubTopic: "nulla",
+                    SchemaVersion: "corrupti",
                 },
                 Amount: &shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount{
                     LastPeriodAmount: map[string]interface{}{
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
-                        "iusto": "excepturi",
+                        "vel": "error",
+                        "deserunt": "suscipit",
+                        "iure": "magnam",
+                        "debitis": "ipsa",
                     },
                     SpecifiedAmount: &shared.GoogleTypeMoney{
-                        CurrencyCode: "nisi",
-                        Nanos: 925597,
-                        Units: "temporibus",
+                        CurrencyCode: "delectus",
+                        Nanos: 272656,
+                        Units: "suscipit",
                     },
                 },
                 BudgetFilter: &shared.GoogleCloudBillingBudgetsV1beta1Filter{
-                    CalendarPeriod: "CALENDAR_PERIOD_UNSPECIFIED",
+                    CalendarPeriod: "MONTH",
                     CreditTypes: []string{
-                        "veritatis",
-                        "deserunt",
+                        "placeat",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
                     },
-                    CreditTypesTreatment: "CREDIT_TYPES_TREATMENT_UNSPECIFIED",
+                    CreditTypesTreatment: "INCLUDE_ALL_CREDITS",
                     CustomPeriod: &shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod{
                         EndDate: &shared.GoogleTypeDate{
-                            Day: 368241,
-                            Month: 832620,
-                            Year: 957156,
+                            Day: 925597,
+                            Month: 836079,
+                            Year: 71036,
                         },
                         StartDate: &shared.GoogleTypeDate{
-                            Day: 778157,
-                            Month: 140350,
-                            Year: 870013,
+                            Day: 337396,
+                            Month: 87129,
+                            Year: 648172,
                         },
                     },
                     Labels: map[string][]interface{}{
-                        "maiores": []interface{}{
-                            "quod",
-                            "quod",
-                        },
-                        "esse": []interface{}{
-                            "porro",
-                            "dolorum",
-                            "dicta",
-                        },
-                        "nam": []interface{}{
-                            "occaecati",
-                            "fugit",
-                            "deleniti",
-                        },
-                        "hic": []interface{}{
-                            "totam",
-                            "beatae",
-                            "commodi",
-                            "molestiae",
+                        "ipsam": []interface{}{
+                            "sapiente",
+                            "quo",
+                            "odit",
+                            "at",
                         },
                     },
                     Projects: []string{
-                        "qui",
-                        "impedit",
+                        "maiores",
+                        "molestiae",
+                        "quod",
+                        "quod",
                     },
                     Services: []string{
-                        "esse",
-                        "ipsum",
-                        "excepturi",
+                        "totam",
+                        "porro",
                     },
                     Subaccounts: []string{
-                        "perferendis",
+                        "dicta",
+                        "nam",
+                        "officia",
                     },
                 },
-                DisplayName: "ad",
-                Etag: "natus",
+                DisplayName: "occaecati",
+                Etag: "fugit",
                 ThresholdRules: []shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
+                        SpendBasis: "FORECASTED_SPEND",
+                        ThresholdPercent: 7586.16,
+                    },
+                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                         SpendBasis: "CURRENT_SPEND",
-                        ThresholdPercent: 2223.21,
+                        ThresholdPercent: 1059.07,
+                    },
+                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
+                        SpendBasis: "CURRENT_SPEND",
+                        ThresholdPercent: 4736,
                     },
                 },
             },
         },
+        AccessToken: "modi",
+        Alt: "json",
+        Callback: "impedit",
+        Fields: "cum",
+        Key: "esse",
+        OauthToken: "ipsum",
+        Parent: "excepturi",
+        PrettyPrint: false,
+        QuotaUser: "aspernatur",
+        UploadType: "perferendis",
+        UploadProtocol: "ad",
     }
 
     ctx := context.Background()
-    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req)
+    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
+        Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

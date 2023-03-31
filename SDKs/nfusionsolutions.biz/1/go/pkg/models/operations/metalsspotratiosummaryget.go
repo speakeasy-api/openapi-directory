@@ -33,15 +33,11 @@ func (e *MetalsSpotRatioSummaryGETFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MetalsSpotRatioSummaryGETQueryParams struct {
+type MetalsSpotRatioSummaryGETRequest struct {
 	// to override content negotiation specify a value of json or xml
 	Format *MetalsSpotRatioSummaryGETFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// comma separated list of metal pairs. For example: gold/silver,gold/platinum,silver/palladium
 	Pairs string `queryParam:"style=form,explode=true,name=pairs"`
-}
-
-type MetalsSpotRatioSummaryGETRequest struct {
-	QueryParams MetalsSpotRatioSummaryGETQueryParams
 }
 
 type MetalsSpotRatioSummaryGETResponse struct {

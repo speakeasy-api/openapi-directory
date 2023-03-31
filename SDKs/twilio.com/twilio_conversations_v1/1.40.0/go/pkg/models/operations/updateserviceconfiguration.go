@@ -12,12 +12,8 @@ var UpdateServiceConfigurationServerList = []string{
 }
 
 type UpdateServiceConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceConfigurationPathParams struct {
-	// The SID of the Service configuration resource to update.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceConfigurationUpdateServiceConfigurationRequest struct {
@@ -32,10 +28,9 @@ type UpdateServiceConfigurationUpdateServiceConfigurationRequest struct {
 }
 
 type UpdateServiceConfigurationRequest struct {
-	PathParams UpdateServiceConfigurationPathParams
-	Request    *UpdateServiceConfigurationUpdateServiceConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceConfigurationSecurity
-	ServerURL  *string
+	// The SID of the Service configuration resource to update.
+	ChatServiceSid string                                                       `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *UpdateServiceConfigurationUpdateServiceConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateServiceConfigurationResponse struct {

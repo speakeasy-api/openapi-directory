@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetInstancesPathParams struct {
+type GetInstancesRequest struct {
 	// Agent of the value space
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Object (column) of the table in the agent's value space
 	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GetInstancesRequest struct {
-	PathParams GetInstancesPathParams
 }
 
 type GetInstancesResponse struct {

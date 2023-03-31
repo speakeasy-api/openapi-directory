@@ -33,7 +33,7 @@ func newMyconfig(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BooksMyconfigGetUserSettings - Gets the current settings for the user.
-func (s *myconfig) BooksMyconfigGetUserSettings(ctx context.Context, request operations.BooksMyconfigGetUserSettingsRequest) (*operations.BooksMyconfigGetUserSettingsResponse, error) {
+func (s *myconfig) BooksMyconfigGetUserSettings(ctx context.Context, request operations.BooksMyconfigGetUserSettingsRequest, security operations.BooksMyconfigGetUserSettingsSecurity) (*operations.BooksMyconfigGetUserSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/myconfig/getUserSettings"
 
@@ -42,11 +42,11 @@ func (s *myconfig) BooksMyconfigGetUserSettings(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *myconfig) BooksMyconfigGetUserSettings(ctx context.Context, request ope
 }
 
 // BooksMyconfigReleaseDownloadAccess - Release downloaded content access restriction.
-func (s *myconfig) BooksMyconfigReleaseDownloadAccess(ctx context.Context, request operations.BooksMyconfigReleaseDownloadAccessRequest) (*operations.BooksMyconfigReleaseDownloadAccessResponse, error) {
+func (s *myconfig) BooksMyconfigReleaseDownloadAccess(ctx context.Context, request operations.BooksMyconfigReleaseDownloadAccessRequest, security operations.BooksMyconfigReleaseDownloadAccessSecurity) (*operations.BooksMyconfigReleaseDownloadAccessResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/myconfig/releaseDownloadAccess"
 
@@ -90,11 +90,11 @@ func (s *myconfig) BooksMyconfigReleaseDownloadAccess(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *myconfig) BooksMyconfigReleaseDownloadAccess(ctx context.Context, reque
 }
 
 // BooksMyconfigRequestAccess - Request concurrent and download access restrictions.
-func (s *myconfig) BooksMyconfigRequestAccess(ctx context.Context, request operations.BooksMyconfigRequestAccessRequest) (*operations.BooksMyconfigRequestAccessResponse, error) {
+func (s *myconfig) BooksMyconfigRequestAccess(ctx context.Context, request operations.BooksMyconfigRequestAccessRequest, security operations.BooksMyconfigRequestAccessSecurity) (*operations.BooksMyconfigRequestAccessResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/myconfig/requestAccess"
 
@@ -138,11 +138,11 @@ func (s *myconfig) BooksMyconfigRequestAccess(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *myconfig) BooksMyconfigRequestAccess(ctx context.Context, request opera
 }
 
 // BooksMyconfigSyncVolumeLicenses - Request downloaded content access for specified volumes on the My eBooks shelf.
-func (s *myconfig) BooksMyconfigSyncVolumeLicenses(ctx context.Context, request operations.BooksMyconfigSyncVolumeLicensesRequest) (*operations.BooksMyconfigSyncVolumeLicensesResponse, error) {
+func (s *myconfig) BooksMyconfigSyncVolumeLicenses(ctx context.Context, request operations.BooksMyconfigSyncVolumeLicensesRequest, security operations.BooksMyconfigSyncVolumeLicensesSecurity) (*operations.BooksMyconfigSyncVolumeLicensesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/myconfig/syncVolumeLicenses"
 
@@ -186,11 +186,11 @@ func (s *myconfig) BooksMyconfigSyncVolumeLicenses(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,11 +225,11 @@ func (s *myconfig) BooksMyconfigSyncVolumeLicenses(ctx context.Context, request 
 }
 
 // BooksMyconfigUpdateUserSettings - Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.
-func (s *myconfig) BooksMyconfigUpdateUserSettings(ctx context.Context, request operations.BooksMyconfigUpdateUserSettingsRequest) (*operations.BooksMyconfigUpdateUserSettingsResponse, error) {
+func (s *myconfig) BooksMyconfigUpdateUserSettings(ctx context.Context, request operations.BooksMyconfigUpdateUserSettingsRequest, security operations.BooksMyconfigUpdateUserSettingsSecurity) (*operations.BooksMyconfigUpdateUserSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/myconfig/updateUserSettings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Usersettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -241,11 +241,11 @@ func (s *myconfig) BooksMyconfigUpdateUserSettings(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

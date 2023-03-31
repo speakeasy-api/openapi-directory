@@ -12,12 +12,8 @@ var CreateSinkValidateServerList = []string{
 }
 
 type CreateSinkValidateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSinkValidatePathParams struct {
-	// A 34 character string that uniquely identifies the Sink being validated.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSinkValidateCreateSinkValidateRequest struct {
@@ -26,10 +22,9 @@ type CreateSinkValidateCreateSinkValidateRequest struct {
 }
 
 type CreateSinkValidateRequest struct {
-	PathParams CreateSinkValidatePathParams
-	Request    *CreateSinkValidateCreateSinkValidateRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSinkValidateSecurity
-	ServerURL  *string
+	RequestBody *CreateSinkValidateCreateSinkValidateRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies the Sink being validated.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type CreateSinkValidateResponse struct {

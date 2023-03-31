@@ -41,7 +41,7 @@ func (e *GetSchedulesScheduleABySizeSizeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSchedulesScheduleABySizeQueryParams struct {
+type GetSchedulesScheduleABySizeRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -77,10 +77,6 @@ type GetSchedulesScheduleABySizeQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetSchedulesScheduleABySizeRequest struct {
-	QueryParams GetSchedulesScheduleABySizeQueryParams
 }
 
 type GetSchedulesScheduleABySizeResponse struct {

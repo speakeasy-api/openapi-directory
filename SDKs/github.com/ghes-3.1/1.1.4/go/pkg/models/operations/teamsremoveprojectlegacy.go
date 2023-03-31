@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsRemoveProjectLegacyPathParams struct {
+type TeamsRemoveProjectLegacyRequest struct {
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsRemoveProjectLegacyRequest struct {
-	PathParams TeamsRemoveProjectLegacyPathParams
 }
 
 type TeamsRemoveProjectLegacyResponse struct {

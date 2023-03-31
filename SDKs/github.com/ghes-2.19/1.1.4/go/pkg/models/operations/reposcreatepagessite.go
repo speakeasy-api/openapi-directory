@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreatePagesSitePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreatePagesSiteRequestBodySourceBranchEnum - The repository branch used to publish your site's source files. Can be either `master` or `gh-pages`.
 type ReposCreatePagesSiteRequestBodySourceBranchEnum string
 
@@ -77,8 +72,9 @@ type ReposCreatePagesSiteRequestBody struct {
 }
 
 type ReposCreatePagesSiteRequest struct {
-	PathParams ReposCreatePagesSitePathParams
-	Request    ReposCreatePagesSiteRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreatePagesSiteRequestBody `request:"mediaType=application/json"`
+	Owner       string                          `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                          `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposCreatePagesSite415ApplicationJSON - Preview header missing

@@ -6,12 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type UsersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UsersStatusEnum - User statuses:<br>`active` - Users with an active status.<br>`inactive` - Users who are deactivated.<br>`pending` - Users with a pending status.
@@ -41,7 +40,7 @@ func (e *UsersStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UsersQueryParams struct {
+type UsersRequest struct {
 	// Provide a value for this field if you would like to see the following attribute in the response of this API call:<br>
 	//
 	// `custom_attributes`: Returns custom attributes that are associated with the user.<br>`host_key`: Returns [host key](https://support.zoom.us/hc/en-us/articles/205172555-Using-your-host-key) of the user.
@@ -56,11 +55,6 @@ type UsersQueryParams struct {
 	RoleID *string `queryParam:"style=form,explode=true,name=role_id"`
 	// User statuses:<br>`active` - Users with an active status.<br>`inactive` - Users who are deactivated.<br>`pending` - Users with a pending status.
 	Status *UsersStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type UsersRequest struct {
-	QueryParams UsersQueryParams
-	Security    UsersSecurity
 }
 
 type Users200ApplicationXMLUsersCustomAttributes struct {

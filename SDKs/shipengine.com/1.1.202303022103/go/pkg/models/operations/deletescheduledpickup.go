@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteScheduledPickupPathParams struct {
-	PickupID string `pathParam:"style=simple,explode=false,name=pickup_id"`
-}
-
 type DeleteScheduledPickupRequest struct {
-	PathParams DeleteScheduledPickupPathParams
+	PickupID string `pathParam:"style=simple,explode=false,name=pickup_id"`
 }
 
 type DeleteScheduledPickupResponse struct {

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleUpdateStatusQueryParams struct {
+type ArticleUpdateStatusRequest struct {
 	ArticleID *int `queryParam:"style=form,explode=true,name=ArticleId"`
 	// 1 : activate , 2 deactivate
 	Status *int `queryParam:"style=form,explode=true,name=status"`
 	// Updating user
 	UserName *string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type ArticleUpdateStatusRequest struct {
-	QueryParams ArticleUpdateStatusQueryParams
 }
 
 type ArticleUpdateStatusResponse struct {

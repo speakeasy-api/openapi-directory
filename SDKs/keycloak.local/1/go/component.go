@@ -33,7 +33,7 @@ func newComponent(defaultClient, securityClient HTTPClient, serverURL, language,
 
 func (s *component) DeleteRealmComponentsID(ctx context.Context, request operations.DeleteRealmComponentsIDRequest) (*operations.DeleteRealmComponentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -66,14 +66,14 @@ func (s *component) DeleteRealmComponentsID(ctx context.Context, request operati
 }
 func (s *component) GetRealmComponents(ctx context.Context, request operations.GetRealmComponentsRequest) (*operations.GetRealmComponentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -112,7 +112,7 @@ func (s *component) GetRealmComponents(ctx context.Context, request operations.G
 }
 func (s *component) GetRealmComponentsID(ctx context.Context, request operations.GetRealmComponentsIDRequest) (*operations.GetRealmComponentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -156,14 +156,14 @@ func (s *component) GetRealmComponentsID(ctx context.Context, request operations
 // GetRealmComponentsIDSubComponentTypes - List of subcomponent types that are available to configure for a particular parent component.
 func (s *component) GetRealmComponentsIDSubComponentTypes(ctx context.Context, request operations.GetRealmComponentsIDSubComponentTypesRequest) (*operations.GetRealmComponentsIDSubComponentTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}/sub-component-types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}/sub-component-types", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -202,9 +202,9 @@ func (s *component) GetRealmComponentsIDSubComponentTypes(ctx context.Context, r
 }
 func (s *component) PostRealmComponents(ctx context.Context, request operations.PostRealmComponentsRequest) (*operations.PostRealmComponentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ComponentRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -245,9 +245,9 @@ func (s *component) PostRealmComponents(ctx context.Context, request operations.
 }
 func (s *component) PutRealmComponentsID(ctx context.Context, request operations.PutRealmComponentsIDRequest) (*operations.PutRealmComponentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/components/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ComponentRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

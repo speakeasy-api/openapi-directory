@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchBillingRequest struct {
-	Request shared.Billing `request:"mediaType=application/json"`
-}
-
 // PatchBilling403ApplicationJSON - Not allowed to perform operation
 type PatchBilling403ApplicationJSON struct {
 	// Error message.

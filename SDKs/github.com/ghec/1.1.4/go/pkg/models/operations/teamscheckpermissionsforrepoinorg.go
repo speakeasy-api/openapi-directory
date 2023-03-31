@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCheckPermissionsForRepoInOrgPathParams struct {
+type TeamsCheckPermissionsForRepoInOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The account owner of the repository. The name is not case sensitive.
@@ -16,10 +16,6 @@ type TeamsCheckPermissionsForRepoInOrgPathParams struct {
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsCheckPermissionsForRepoInOrgRequest struct {
-	PathParams TeamsCheckPermissionsForRepoInOrgPathParams
 }
 
 type TeamsCheckPermissionsForRepoInOrgResponse struct {

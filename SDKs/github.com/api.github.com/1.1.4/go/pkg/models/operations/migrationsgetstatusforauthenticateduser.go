@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsGetStatusForAuthenticatedUserPathParams struct {
+type MigrationsGetStatusForAuthenticatedUserRequest struct {
+	Exclude []string `queryParam:"style=form,explode=true,name=exclude"`
 	// The unique identifier of the migration.
 	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
-}
-
-type MigrationsGetStatusForAuthenticatedUserQueryParams struct {
-	Exclude []string `queryParam:"style=form,explode=true,name=exclude"`
-}
-
-type MigrationsGetStatusForAuthenticatedUserRequest struct {
-	PathParams  MigrationsGetStatusForAuthenticatedUserPathParams
-	QueryParams MigrationsGetStatusForAuthenticatedUserQueryParams
 }
 
 type MigrationsGetStatusForAuthenticatedUserResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type VirtualizationClusterGroupsDeletePathParams struct {
+type VirtualizationClusterGroupsDeleteRequest struct {
 	// A unique integer value identifying this cluster group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VirtualizationClusterGroupsDeleteRequest struct {
-	PathParams VirtualizationClusterGroupsDeletePathParams
 }
 
 type VirtualizationClusterGroupsDeleteResponse struct {

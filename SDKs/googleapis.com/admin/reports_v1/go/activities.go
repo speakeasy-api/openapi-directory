@@ -32,20 +32,20 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // ReportsActivitiesList - Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for administrator and Google Drive activity reports. For more information about the activity report's parameters, see the activity parameters reference guides.
-func (s *activities) ReportsActivitiesList(ctx context.Context, request operations.ReportsActivitiesListRequest) (*operations.ReportsActivitiesListResponse, error) {
+func (s *activities) ReportsActivitiesList(ctx context.Context, request operations.ReportsActivitiesListRequest, security operations.ReportsActivitiesListSecurity) (*operations.ReportsActivitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/activity/users/{userKey}/applications/{applicationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/activity/users/{userKey}/applications/{applicationName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *activities) ReportsActivitiesList(ctx context.Context, request operatio
 }
 
 // ReportsActivitiesWatch - Start receiving notifications for account activities. For more information, see Receiving Push Notifications.
-func (s *activities) ReportsActivitiesWatch(ctx context.Context, request operations.ReportsActivitiesWatchRequest) (*operations.ReportsActivitiesWatchResponse, error) {
+func (s *activities) ReportsActivitiesWatch(ctx context.Context, request operations.ReportsActivitiesWatchRequest, security operations.ReportsActivitiesWatchSecurity) (*operations.ReportsActivitiesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/activity/users/{userKey}/applications/{applicationName}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/activity/users/{userKey}/applications/{applicationName}/watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *activities) ReportsActivitiesWatch(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

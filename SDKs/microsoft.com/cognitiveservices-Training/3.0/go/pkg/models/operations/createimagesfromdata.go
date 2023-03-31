@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImagesFromDataPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateImagesFromDataQueryParams struct {
-	// The tags ids with which to tag each image. Limited to 20.
-	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
-}
-
-type CreateImagesFromDataHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
 type CreateImagesFromDataRequestBodyImageData struct {
 	Content   []byte `multipartForm:"content"`
 	ImageData string `multipartForm:"name=imageData"`
@@ -33,10 +18,13 @@ type CreateImagesFromDataRequestBody struct {
 }
 
 type CreateImagesFromDataRequest struct {
-	PathParams  CreateImagesFromDataPathParams
-	QueryParams CreateImagesFromDataQueryParams
-	Headers     CreateImagesFromDataHeaders
-	Request     CreateImagesFromDataRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody CreateImagesFromDataRequestBody `request:"mediaType=multipart/form-data"`
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+	// The tags ids with which to tag each image. Limited to 20.
+	TagIds []string `queryParam:"style=form,explode=false,name=tagIds"`
 }
 
 type CreateImagesFromDataResponse struct {

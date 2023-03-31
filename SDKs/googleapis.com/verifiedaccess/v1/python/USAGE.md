@@ -4,36 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.VerifiedaccessChallengeCreateRequest(
-    security=operations.VerifiedaccessChallengeCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.VerifiedaccessChallengeCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="tenetur",
-        alt="media",
-        callback="sunt",
-        fields="qui",
-        key="consequuntur",
-        oauth_token="illo",
-        pretty_print=False,
-        quota_user="sequi",
-        upload_type="dolorem",
-        upload_protocol="ullam",
-    ),
-    request={
-        "eum": "omnis",
-        "qui": "ut",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    pretty_print=False,
+    quota_user="debitis",
+    upload_type="ipsa",
+    upload_protocol="delectus",
 )
     
-res = s.challenge.verifiedaccess_challenge_create(req)
+res = s.challenge.verifiedaccess_challenge_create(req, operations.VerifiedaccessChallengeCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.challenge is not None:
     # handle response

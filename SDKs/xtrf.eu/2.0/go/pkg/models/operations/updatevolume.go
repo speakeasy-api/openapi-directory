@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateVolumePathParams struct {
+type UpdateVolumeRequest struct {
+	// Updated volume for a project.
+	BigDecimalDTO shared.BigDecimalDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateVolumeRequest struct {
-	PathParams UpdateVolumePathParams
-	// Updated volume for a project.
-	Request shared.BigDecimalDTO `request:"mediaType=application/json"`
 }
 
 type UpdateVolumeResponse struct {

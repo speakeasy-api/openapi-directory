@@ -37,7 +37,7 @@ func newMessageComments(defaultClient, securityClient HTTPClient, serverURL, lan
 // Delete Message Comment
 func (s *messageComments) DeleteMessageCommentsID(ctx context.Context, request operations.DeleteMessageCommentsIDRequest) (*operations.DeleteMessageCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/message_comments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *messageComments) GetMessageComments(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *messageComments) GetMessageComments(ctx context.Context, request operat
 // Show Message Comment
 func (s *messageComments) GetMessageCommentsID(ctx context.Context, request operations.GetMessageCommentsIDRequest) (*operations.GetMessageCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/message_comments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *messageComments) GetMessageCommentsID(ctx context.Context, request oper
 // Update Message Comment
 func (s *messageComments) PatchMessageCommentsID(ctx context.Context, request operations.PatchMessageCommentsIDRequest) (*operations.PatchMessageCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/message_comments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -297,7 +297,7 @@ func (s *messageComments) PatchMessageCommentsID(ctx context.Context, request op
 
 // PostMessageComments - Create Message Comment
 // Create Message Comment
-func (s *messageComments) PostMessageComments(ctx context.Context, request operations.PostMessageCommentsRequest) (*operations.PostMessageCommentsResponse, error) {
+func (s *messageComments) PostMessageComments(ctx context.Context, request operations.PostMessageCommentsRequestBody) (*operations.PostMessageCommentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/message_comments"
 

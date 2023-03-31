@@ -8,20 +8,15 @@ import (
 )
 
 type GetUsersUserIDFollowingsFollowingIDSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetUsersUserIDFollowingsFollowingIDPathParams struct {
+type GetUsersUserIDFollowingsFollowingIDRequest struct {
 	// SoundCloud User id to denote a Following of a user
 	FollowingID int64 `pathParam:"style=simple,explode=false,name=following_id"`
 	// SoundCloud User id
 	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUsersUserIDFollowingsFollowingIDRequest struct {
-	PathParams GetUsersUserIDFollowingsFollowingIDPathParams
-	Security   GetUsersUserIDFollowingsFollowingIDSecurity
 }
 
 type GetUsersUserIDFollowingsFollowingIDResponse struct {

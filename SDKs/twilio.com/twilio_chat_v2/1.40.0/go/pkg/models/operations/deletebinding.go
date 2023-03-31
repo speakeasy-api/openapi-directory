@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteBindingServerList = []string{
@@ -12,20 +11,15 @@ var DeleteBindingServerList = []string{
 }
 
 type DeleteBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteBindingPathParams struct {
+type DeleteBindingRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the Binding resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Binding resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteBindingRequest struct {
-	PathParams DeleteBindingPathParams
-	Security   DeleteBindingSecurity
-	ServerURL  *string
 }
 
 type DeleteBindingResponse struct {

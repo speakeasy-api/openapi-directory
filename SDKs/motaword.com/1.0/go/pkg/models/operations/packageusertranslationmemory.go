@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageUserTranslationMemoryPathParams struct {
-	// Source Language Code
-	LanguageCode string `pathParam:"style=simple,explode=false,name=languageCode"`
-}
-
-type PackageUserTranslationMemoryQueryParams struct {
+type PackageUserTranslationMemoryRequest struct {
 	// If you want to package and download the translation memory synchronously, mark this parameter as '0'. It will package the translation memory and then return the packaged file in the response, identical to async/download call after an asynchronous /package call.
 	Async *int64 `queryParam:"style=form,explode=true,name=async"`
 	// If you don't need us to email the TMX, set this to '0'. Default is 1.
 	Email *int64 `queryParam:"style=form,explode=true,name=email"`
-}
-
-type PackageUserTranslationMemoryRequest struct {
-	PathParams  PackageUserTranslationMemoryPathParams
-	QueryParams PackageUserTranslationMemoryQueryParams
+	// Source Language Code
+	LanguageCode string `pathParam:"style=simple,explode=false,name=languageCode"`
 }
 
 type PackageUserTranslationMemoryResponse struct {

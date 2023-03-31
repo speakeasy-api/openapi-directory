@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkApplianceStaticRoutePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkApplianceStaticRouteRequestBody struct {
 	// The gateway IP (next hop) of the static route
 	GatewayIP string `json:"gatewayIp"`
@@ -22,8 +18,8 @@ type CreateNetworkApplianceStaticRouteRequestBody struct {
 }
 
 type CreateNetworkApplianceStaticRouteRequest struct {
-	PathParams CreateNetworkApplianceStaticRoutePathParams
-	Request    CreateNetworkApplianceStaticRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkApplianceStaticRouteRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                       `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkApplianceStaticRouteResponse struct {

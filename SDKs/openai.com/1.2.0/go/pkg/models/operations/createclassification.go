@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateClassificationRequest struct {
-	Request shared.CreateClassificationRequest `request:"mediaType=application/json"`
-}
-
 type CreateClassificationResponse struct {
 	ContentType string
 	// OK

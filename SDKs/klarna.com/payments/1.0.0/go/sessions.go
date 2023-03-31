@@ -35,7 +35,7 @@ func newSessions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CreateCreditSession - Create a new payment session
 // Use this API call to create a Klarna Payments session.<br/>When a session is created you will receive the available `payment_method_categories` for the session, a `session_id` and a `client_token`. The `session_id` can be used to read or update the session using the REST API. The `client_token` should be passed to the browser.
 // Read more on **[Create a new payment session](https://docs.klarna.com/klarna-payments/integrate-with-klarna-payments/step-1-initiate-a-payment/)**.
-func (s *sessions) CreateCreditSession(ctx context.Context, request operations.CreateCreditSessionRequest) (*operations.CreateCreditSessionResponse, error) {
+func (s *sessions) CreateCreditSession(ctx context.Context, request shared.SessionCreateInput) (*operations.CreateCreditSessionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payments/v1/sessions"
 
@@ -96,7 +96,7 @@ func (s *sessions) CreateCreditSession(ctx context.Context, request operations.C
 // Read more on **[Read an existing payment session](https://docs.klarna.com/klarna-payments/other-actions/check-the-details-of-a-payment-session/)**.
 func (s *sessions) ReadCreditSession(ctx context.Context, request operations.ReadCreditSessionRequest) (*operations.ReadCreditSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,9 +145,9 @@ func (s *sessions) ReadCreditSession(ctx context.Context, request operations.Rea
 // Read more on **[Update an existing payment session](https://docs.klarna.com/klarna-payments/other-actions/update-the-cart/)**.
 func (s *sessions) UpdateCreditSession(ctx context.Context, request operations.UpdateCreditSessionRequest) (*operations.UpdateCreditSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SessionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

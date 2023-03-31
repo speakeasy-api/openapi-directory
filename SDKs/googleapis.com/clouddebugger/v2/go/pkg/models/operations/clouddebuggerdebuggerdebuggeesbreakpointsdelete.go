@@ -8,13 +8,13 @@ import (
 )
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurity struct {
@@ -22,24 +22,21 @@ type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurity struct {
 	Option2 *ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurityOption2 `security:"option"`
 }
 
-type ClouddebuggerDebuggerDebuggeesBreakpointsDeletePathParams struct {
-	// Required. ID of the breakpoint to delete.
-	BreakpointID string `pathParam:"style=simple,explode=false,name=breakpointId"`
-	// Required. ID of the debuggee whose breakpoint to delete.
-	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
-}
-
-type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteQueryParams struct {
+type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. ID of the breakpoint to delete.
+	BreakpointID string `pathParam:"style=simple,explode=false,name=breakpointId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Required. The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
 	ClientVersion *string `queryParam:"style=form,explode=true,name=clientVersion"`
+	// Required. ID of the debuggee whose breakpoint to delete.
+	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -54,12 +51,6 @@ type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest struct {
-	PathParams  ClouddebuggerDebuggerDebuggeesBreakpointsDeletePathParams
-	QueryParams ClouddebuggerDebuggerDebuggeesBreakpointsDeleteQueryParams
-	Security    ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurity
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse struct {

@@ -36,7 +36,7 @@ func newManifests(defaultClient, securityClient HTTPClient, serverURL, language,
 // CreateManifest - Create Manifest
 // Each ShipEngine manifest is created for a specific warehouse, so you'll need to provide the warehouse_id
 // rather than the ship_from address. You can create a warehouse for each location that you want to create manifests for.
-func (s *manifests) CreateManifest(ctx context.Context, request operations.CreateManifestRequest) (*operations.CreateManifestResponse, error) {
+func (s *manifests) CreateManifest(ctx context.Context, request shared.CreateManifestRequestBody) (*operations.CreateManifestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/manifests"
 
@@ -105,7 +105,7 @@ func (s *manifests) CreateManifest(ctx context.Context, request operations.Creat
 // Get Manifest By Id
 func (s *manifests) GetManifestByID(ctx context.Context, request operations.GetManifestByIDRequest) (*operations.GetManifestByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/manifests/{manifest_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/manifests/{manifest_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -164,7 +164,7 @@ func (s *manifests) GetManifestByID(ctx context.Context, request operations.GetM
 // Get Manifest Request By Id
 func (s *manifests) GetManifestRequestByID(ctx context.Context, request operations.GetManifestRequestByIDRequest) (*operations.GetManifestRequestByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/manifests/requests/{manifest_request_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/manifests/requests/{manifest_request_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -230,7 +230,7 @@ func (s *manifests) ListManifests(ctx context.Context, request operations.ListMa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

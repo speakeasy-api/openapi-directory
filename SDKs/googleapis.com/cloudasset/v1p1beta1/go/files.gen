@@ -26,7 +26,6 @@ pkg/models/shared/explanation.go
 pkg/models/shared/permissions.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/searchallresourcesresponse.go
 pkg/models/shared/standardresourcemetadata.go
 USAGE.md

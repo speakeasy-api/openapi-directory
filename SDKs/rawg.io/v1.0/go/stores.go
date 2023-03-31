@@ -42,7 +42,7 @@ func (s *stores) StoresList(ctx context.Context, request operations.StoresListRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *stores) StoresList(ctx context.Context, request operations.StoresListRe
 // StoresRead - Get details of the store.
 func (s *stores) StoresRead(ctx context.Context, request operations.StoresReadRequest) (*operations.StoresReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stores/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

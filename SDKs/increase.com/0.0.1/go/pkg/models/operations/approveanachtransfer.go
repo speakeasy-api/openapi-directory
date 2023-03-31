@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApproveAnAchTransferPathParams struct {
-	AchTransferID string `pathParam:"style=simple,explode=false,name=ach_transfer_id"`
-}
-
 type ApproveAnAchTransferRequest struct {
-	PathParams ApproveAnAchTransferPathParams
+	AchTransferID string `pathParam:"style=simple,explode=false,name=ach_transfer_id"`
 }
 
 type ApproveAnAchTransferDefaultApplicationJSON13StatusEnum string

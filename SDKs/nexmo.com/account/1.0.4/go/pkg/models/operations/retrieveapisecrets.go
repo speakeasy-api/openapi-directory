@@ -8,17 +8,13 @@ import (
 )
 
 type RetrieveAPISecretsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type RetrieveAPISecretsPathParams struct {
-	// The API key to manage secrets for
-	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type RetrieveAPISecretsRequest struct {
-	PathParams RetrieveAPISecretsPathParams
-	Security   RetrieveAPISecretsSecurity
+	// The API key to manage secrets for
+	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
 }
 
 // RetrieveAPISecrets401ApplicationJSON - Credentials are missing or invalid

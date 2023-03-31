@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UntagServiceInventoryPathParams struct {
+type UntagServiceInventoryRequest struct {
+	// Tag attributes to removed
+	RequestBody []shared.Tag `request:"mediaType=application/json"`
 	// ID of the resource
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UntagServiceInventoryRequest struct {
-	PathParams UntagServiceInventoryPathParams
-	// Tag attributes to removed
-	Request []shared.Tag `request:"mediaType=application/json"`
 }
 
 type UntagServiceInventoryResponse struct {

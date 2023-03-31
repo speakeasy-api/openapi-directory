@@ -33,7 +33,7 @@ func (e *GetOperationsLogStatusNumEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOperationsLogQueryParams struct {
+type GetOperationsLogRequest struct {
 	// Amendent types:
 	//     -N   new
 	//     -A   amendment
@@ -170,10 +170,6 @@ type GetOperationsLogQueryParams struct {
 	//     -1- Transaction is verified.
 	//
 	StatusNum []GetOperationsLogStatusNumEnum `queryParam:"style=form,explode=true,name=status_num"`
-}
-
-type GetOperationsLogRequest struct {
-	QueryParams GetOperationsLogQueryParams
 }
 
 type GetOperationsLogResponse struct {

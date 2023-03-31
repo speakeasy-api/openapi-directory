@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeleteUserPathParams struct {
+type EnterpriseAdminDeleteUserRequest struct {
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type EnterpriseAdminDeleteUserRequest struct {
-	PathParams EnterpriseAdminDeleteUserPathParams
 }
 
 type EnterpriseAdminDeleteUserResponse struct {

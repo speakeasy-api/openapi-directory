@@ -226,10 +226,6 @@ func (u ManageE911signageApplicationJSON) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type ManageE911signageRequest struct {
-	Request *ManageE911signageApplicationJSON `request:"mediaType=application/json"`
-}
-
 // ManageE911signage202ApplicationXML - **HTTP Status Code:** `202` <br>
 type ManageE911signage202ApplicationXML struct {
 	// Unique identifier of the event related to the content being displayed. This field is only returned if you provided `zoomroom.emergency_alert_displayed` as the value of the `method` parameter.

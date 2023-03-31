@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackagesGetPackageForAuthenticatedUserPathParams struct {
+type PackagesGetPackageForAuthenticatedUserRequest struct {
 	// The name of the package.
 	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
 	// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
 	PackageType shared.PackageTypeEnum `pathParam:"style=simple,explode=false,name=package_type"`
-}
-
-type PackagesGetPackageForAuthenticatedUserRequest struct {
-	PathParams PackagesGetPackageForAuthenticatedUserPathParams
 }
 
 type PackagesGetPackageForAuthenticatedUserResponse struct {

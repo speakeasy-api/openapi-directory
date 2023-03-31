@@ -7,13 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTEmailInvoicePathParams struct {
-	// The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.
-	//
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
-}
-
-type POSTEmailInvoiceHeaders struct {
+type POSTEmailInvoiceRequest struct {
+	PostInvoiceEmailRequestType shared.PostInvoiceEmailRequestType `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -22,12 +17,9 @@ type POSTEmailInvoiceHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type POSTEmailInvoiceRequest struct {
-	PathParams POSTEmailInvoicePathParams
-	Headers    POSTEmailInvoiceHeaders
-	Request    shared.PostInvoiceEmailRequestType `request:"mediaType=application/json"`
+	// The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.
+	//
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoiceId"`
 }
 
 type POSTEmailInvoiceResponse struct {

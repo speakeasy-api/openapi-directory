@@ -12,18 +12,13 @@ var FetchServiceWebhookConfigurationServerList = []string{
 }
 
 type FetchServiceWebhookConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchServiceWebhookConfigurationPathParams struct {
-	// The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchServiceWebhookConfigurationRequest struct {
-	PathParams FetchServiceWebhookConfigurationPathParams
-	Security   FetchServiceWebhookConfigurationSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 }
 
 type FetchServiceWebhookConfigurationResponse struct {

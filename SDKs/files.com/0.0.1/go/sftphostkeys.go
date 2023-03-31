@@ -37,7 +37,7 @@ func newSftpHostKeys(defaultClient, securityClient HTTPClient, serverURL, langua
 // Delete Sftp Host Key
 func (s *sftpHostKeys) DeleteSftpHostKeysID(ctx context.Context, request operations.DeleteSftpHostKeysIDRequest) (*operations.DeleteSftpHostKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *sftpHostKeys) GetSftpHostKeys(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *sftpHostKeys) GetSftpHostKeys(ctx context.Context, request operations.G
 // Show Sftp Host Key
 func (s *sftpHostKeys) GetSftpHostKeysID(ctx context.Context, request operations.GetSftpHostKeysIDRequest) (*operations.GetSftpHostKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *sftpHostKeys) GetSftpHostKeysID(ctx context.Context, request operations
 // Update Sftp Host Key
 func (s *sftpHostKeys) PatchSftpHostKeysID(ctx context.Context, request operations.PatchSftpHostKeysIDRequest) (*operations.PatchSftpHostKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *sftpHostKeys) PatchSftpHostKeysID(ctx context.Context, request operatio
 
 // PostSftpHostKeys - Create Sftp Host Key
 // Create Sftp Host Key
-func (s *sftpHostKeys) PostSftpHostKeys(ctx context.Context, request operations.PostSftpHostKeysRequest) (*operations.PostSftpHostKeysResponse, error) {
+func (s *sftpHostKeys) PostSftpHostKeys(ctx context.Context, request operations.PostSftpHostKeysRequestBody) (*operations.PostSftpHostKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sftp_host_keys"
 

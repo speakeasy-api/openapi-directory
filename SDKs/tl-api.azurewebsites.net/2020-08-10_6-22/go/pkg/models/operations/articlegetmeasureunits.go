@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetMeasureUnitsQueryParams struct {
+type ArticleGetMeasureUnitsRequest struct {
 	// type of the measure unit (all, item, service)
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ArticleGetMeasureUnitsRequest struct {
-	QueryParams ArticleGetMeasureUnitsQueryParams
 }
 
 type ArticleGetMeasureUnitsResponse struct {

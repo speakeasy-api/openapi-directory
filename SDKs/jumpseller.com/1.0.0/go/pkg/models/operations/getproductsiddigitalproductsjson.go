@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProductsIDDigitalProductsJSONPathParams struct {
-	// ID of the Product
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetProductsIDDigitalProductsJSONQueryParams struct {
+type GetProductsIDDigitalProductsJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// ID of the Product
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetProductsIDDigitalProductsJSONRequest struct {
-	PathParams  GetProductsIDDigitalProductsJSONPathParams
-	QueryParams GetProductsIDDigitalProductsJSONQueryParams
 }
 
 type GetProductsIDDigitalProductsJSONResponse struct {

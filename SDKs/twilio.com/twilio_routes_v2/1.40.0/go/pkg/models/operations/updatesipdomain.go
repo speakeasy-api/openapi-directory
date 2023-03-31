@@ -12,11 +12,8 @@ var UpdateSipDomainServerList = []string{
 }
 
 type UpdateSipDomainSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSipDomainPathParams struct {
-	SipDomain string `pathParam:"style=simple,explode=false,name=SipDomain"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSipDomainUpdateSipDomainRequest struct {
@@ -25,10 +22,8 @@ type UpdateSipDomainUpdateSipDomainRequest struct {
 }
 
 type UpdateSipDomainRequest struct {
-	PathParams UpdateSipDomainPathParams
-	Request    *UpdateSipDomainUpdateSipDomainRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSipDomainSecurity
-	ServerURL  *string
+	RequestBody *UpdateSipDomainUpdateSipDomainRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	SipDomain   string                                 `pathParam:"style=simple,explode=false,name=SipDomain"`
 }
 
 type UpdateSipDomainResponse struct {

@@ -14,33 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.AddOrUpdateAdditionalRatesRequest{
-        Security: operations.AddOrUpdateAdditionalRatesSecurity{
-            PaylocityAuth: shared.SchemePaylocityAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        AdditionalRate: shared.AdditionalRate{
+            ChangeReason: "corrupti",
+            CostCenter1: "provident",
+            CostCenter2: "distinctio",
+            CostCenter3: "quibusdam",
+            EffectiveDate: "unde",
+            EndCheckDate: "nulla",
+            Job: "corrupti",
+            Rate: 8472.52,
+            RateCode: "vel",
+            RateNotes: "error",
+            RatePer: "deserunt",
+            Shift: "suscipit",
         },
-        PathParams: operations.AddOrUpdateAdditionalRatesPathParams{
-            CompanyID: "corrupti",
-            EmployeeID: "provident",
-        },
-        Request: shared.AdditionalRate{
-            ChangeReason: "distinctio",
-            CostCenter1: "quibusdam",
-            CostCenter2: "unde",
-            CostCenter3: "nulla",
-            EffectiveDate: "corrupti",
-            EndCheckDate: "illum",
-            Job: "vel",
-            Rate: 6235.64,
-            RateCode: "deserunt",
-            RateNotes: "suscipit",
-            RatePer: "iure",
-            Shift: "magnam",
-        },
+        CompanyID: "iure",
+        EmployeeID: "magnam",
     }
 
     ctx := context.Background()
-    res, err := s.AdditionalRates.AddOrUpdateAdditionalRates(ctx, req)
+    res, err := s.AdditionalRates.AddOrUpdateAdditionalRates(ctx, req, operations.AddOrUpdateAdditionalRatesSecurity{
+        PaylocityAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -39,14 +39,13 @@ pkg/models/operations/networkservicesprojectslocationstlsrouteslist.go
 pkg/models/operations/networkservicesprojectslocationstlsroutespatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/endpointpolicy.go
 pkg/models/shared/trafficportselector.go
 pkg/models/shared/endpointmatcher.go
 pkg/models/shared/endpointmatchermetadatalabelmatcher.go
 pkg/models/shared/endpointmatchermetadatalabelmatchermetadatalabels.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listendpointpoliciesresponse.go
 pkg/models/shared/gateway.go
 pkg/models/shared/listgatewaysresponse.go

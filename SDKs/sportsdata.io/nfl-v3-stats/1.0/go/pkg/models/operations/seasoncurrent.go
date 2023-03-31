@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SeasonCurrentPathParams struct {
+type SeasonCurrentRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type SeasonCurrentRequest struct {
-	PathParams SeasonCurrentPathParams
 }
 
 type SeasonCurrentResponse struct {

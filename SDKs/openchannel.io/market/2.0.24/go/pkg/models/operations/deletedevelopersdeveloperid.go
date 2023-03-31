@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDevelopersDeveloperIDPathParams struct {
+type DeleteDevelopersDeveloperIDRequest struct {
 	// The id of the developer to be removed
 	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
-}
-
-type DeleteDevelopersDeveloperIDRequest struct {
-	PathParams DeleteDevelopersDeveloperIDPathParams
 }
 
 type DeleteDevelopersDeveloperIDResponse struct {

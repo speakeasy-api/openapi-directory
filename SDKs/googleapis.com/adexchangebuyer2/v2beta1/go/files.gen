@@ -66,7 +66,6 @@ pkg/models/operations/adexchangebuyer2biddersfiltersetsnonbillablewinningbidslis
 pkg/models/shared/client.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/clientuserinvitation.go
 pkg/models/shared/listclientuserinvitationsresponse.go
 pkg/models/shared/listclientsresponse.go

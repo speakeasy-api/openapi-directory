@@ -34,9 +34,9 @@ func newObjects(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ObjectsGetObjectsByObjectIds - Gets the directory objects specified in a list of object IDs. You can also specify which resource collections (users, groups, etc.) should be searched by specifying the optional types parameter.
 func (s *objects) ObjectsGetObjectsByObjectIds(ctx context.Context, request operations.ObjectsGetObjectsByObjectIdsRequest) (*operations.ObjectsGetObjectsByObjectIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/getObjectsByObjectIds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/getObjectsByObjectIds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *objects) ObjectsGetObjectsByObjectIds(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

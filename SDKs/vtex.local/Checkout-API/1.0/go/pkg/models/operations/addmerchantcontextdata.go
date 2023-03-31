@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type AddMerchantContextDataPathParams struct {
-	// ID of the orderForm that will receive the relevant information added by the merchant.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type AddMerchantContextDataHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // AddMerchantContextDataRequestBodySalesAssociateData - Sales Associate information.
 type AddMerchantContextDataRequestBodySalesAssociateData struct {
 	// Sales Associate (Seller) identification code. All information should be registered by the merchant. Maximum of 100 characters.
@@ -30,9 +18,13 @@ type AddMerchantContextDataRequestBody struct {
 }
 
 type AddMerchantContextDataRequest struct {
-	PathParams AddMerchantContextDataPathParams
-	Headers    AddMerchantContextDataHeaders
-	Request    AddMerchantContextDataRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                            `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody AddMerchantContextDataRequestBody `request:"mediaType=application/json"`
+	// ID of the orderForm that will receive the relevant information added by the merchant.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 // AddMerchantContextData200ApplicationJSON - OK

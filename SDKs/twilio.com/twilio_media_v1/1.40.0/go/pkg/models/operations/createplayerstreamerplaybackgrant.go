@@ -12,12 +12,8 @@ var CreatePlayerStreamerPlaybackGrantServerList = []string{
 }
 
 type CreatePlayerStreamerPlaybackGrantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreatePlayerStreamerPlaybackGrantPathParams struct {
-	// The unique string generated to identify the PlayerStreamer resource associated with this PlaybackGrant
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest struct {
@@ -28,10 +24,9 @@ type CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest s
 }
 
 type CreatePlayerStreamerPlaybackGrantRequest struct {
-	PathParams CreatePlayerStreamerPlaybackGrantPathParams
-	Request    *CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreatePlayerStreamerPlaybackGrantSecurity
-	ServerURL  *string
+	RequestBody *CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string generated to identify the PlayerStreamer resource associated with this PlaybackGrant
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type CreatePlayerStreamerPlaybackGrantResponse struct {

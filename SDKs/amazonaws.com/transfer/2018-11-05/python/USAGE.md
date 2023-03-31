@@ -3,55 +3,52 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAccessRequest(
-    headers=operations.CreateAccessHeaders(
-        x_amz_algorithm="eos",
-        x_amz_content_sha256="modi",
-        x_amz_credential="et",
-        x_amz_date="culpa",
-        x_amz_security_token="unde",
-        x_amz_signature="quae",
-        x_amz_signed_headers="incidunt",
-        x_amz_target="TransferService.CreateAccess",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateAccessRequest(
-        external_id="nam",
-        home_directory="optio",
+)
+
+
+req = operations.CreateAccessRequest(
+    create_access_request=shared.CreateAccessRequest(
+        external_id="corrupti",
+        home_directory="provident",
         home_directory_mappings=[
             shared.HomeDirectoryMapEntry(
-                entry="ratione",
-                target="quaerat",
+                entry="quibusdam",
+                target="unde",
             ),
             shared.HomeDirectoryMapEntry(
-                entry="qui",
-                target="modi",
+                entry="nulla",
+                target="corrupti",
             ),
             shared.HomeDirectoryMapEntry(
-                entry="cum",
-                target="rem",
+                entry="illum",
+                target="vel",
             ),
         ],
         home_directory_type="LOGICAL",
-        policy="cum",
+        policy="deserunt",
         posix_profile=shared.PosixProfile(
-            gid=5917608095681824334,
+            gid=384382,
             secondary_gids=[
-                7738685661617987022,
+                297534,
+                891773,
             ],
-            uid=3301601712436159733,
+            uid=56713,
         ),
-        role="dolore",
-        server_id="placeat",
+        role="delectus",
+        server_id="tempora",
     ),
+    x_amz_algorithm="suscipit",
+    x_amz_content_sha256="molestiae",
+    x_amz_credential="minus",
+    x_amz_date="placeat",
+    x_amz_security_token="voluptatum",
+    x_amz_signature="iusto",
+    x_amz_signed_headers="excepturi",
+    x_amz_target="TransferService.CreateAccess",
 )
     
 res = s.create_access(req)

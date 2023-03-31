@@ -132,7 +132,7 @@ func (s *account) GetBilling(ctx context.Context) (*operations.GetBillingRespons
 }
 
 // PatchBilling - Partial update billing information
-func (s *account) PatchBilling(ctx context.Context, request operations.PatchBillingRequest) (*operations.PatchBillingResponse, error) {
+func (s *account) PatchBilling(ctx context.Context, request shared.Billing) (*operations.PatchBillingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing/"
 
@@ -206,7 +206,7 @@ func (s *account) PatchBilling(ctx context.Context, request operations.PatchBill
 }
 
 // PostBillingActions - Action that should be taken to enable the selected targets
-func (s *account) PostBillingActions(ctx context.Context, request operations.PostBillingActionsRequest) (*operations.PostBillingActionsResponse, error) {
+func (s *account) PostBillingActions(ctx context.Context, request []string) (*operations.PostBillingActionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing/actions/"
 
@@ -260,7 +260,7 @@ func (s *account) PostBillingActions(ctx context.Context, request operations.Pos
 }
 
 // PostBillingEstimate - Estimate costs of updating a subscription
-func (s *account) PostBillingEstimate(ctx context.Context, request operations.PostBillingEstimateRequest) (*operations.PostBillingEstimateResponse, error) {
+func (s *account) PostBillingEstimate(ctx context.Context, request shared.SubscriptionInput) (*operations.PostBillingEstimateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing/estimate/"
 
@@ -344,7 +344,7 @@ func (s *account) PostBillingEstimate(ctx context.Context, request operations.Po
 }
 
 // PostBillingSubscribe - Update a subscription
-func (s *account) PostBillingSubscribe(ctx context.Context, request operations.PostBillingSubscribeRequest) (*operations.PostBillingSubscribeResponse, error) {
+func (s *account) PostBillingSubscribe(ctx context.Context, request shared.SubscriptionInput) (*operations.PostBillingSubscribeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing/subscribe/"
 
@@ -428,7 +428,7 @@ func (s *account) PostBillingSubscribe(ctx context.Context, request operations.P
 }
 
 // PostTargetActions - Available actions for the selected targets
-func (s *account) PostTargetActions(ctx context.Context, request operations.PostTargetActionsRequest) (*operations.PostTargetActionsResponse, error) {
+func (s *account) PostTargetActions(ctx context.Context, request []string) (*operations.PostTargetActionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/target-actions/"
 
@@ -482,7 +482,7 @@ func (s *account) PostTargetActions(ctx context.Context, request operations.Post
 }
 
 // PutBilling - Update billing information
-func (s *account) PutBilling(ctx context.Context, request operations.PutBillingRequest) (*operations.PutBillingResponse, error) {
+func (s *account) PutBilling(ctx context.Context, request shared.Billing) (*operations.PutBillingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing/"
 

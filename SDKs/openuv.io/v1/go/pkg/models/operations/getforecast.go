@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetForecastQueryParams struct {
+type GetForecastRequest struct {
 	// Altitude in meters, from 0 to 10000m, 0m by default. If provided the altitude correction factor will be applied to clear sky sea level UV Index value.
 	Alt *float64 `queryParam:"style=form,explode=true,name=alt"`
 	// UTC datetime in ISO-8601 format, now by default. Use that parameter to get UV Index Forecast for any point in time.
@@ -19,16 +19,8 @@ type GetForecastQueryParams struct {
 	Lng float64 `queryParam:"style=form,explode=true,name=lng"`
 	// Ozone in du (Dobson Units), from 100 to 550du, the latest forecast from OMI dataset is used by default.
 	Ozone *float64 `queryParam:"style=form,explode=true,name=ozone"`
-}
-
-type GetForecastHeaders struct {
 	// This header is used to send data that contains your OpenUV API key
 	XAccessToken string `header:"style=simple,explode=false,name=x-access-token"`
-}
-
-type GetForecastRequest struct {
-	QueryParams GetForecastQueryParams
-	Headers     GetForecastHeaders
 }
 
 type GetForecastResponse struct {

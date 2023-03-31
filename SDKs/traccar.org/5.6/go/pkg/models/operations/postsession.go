@@ -12,10 +12,6 @@ type PostSessionRequestBody struct {
 	Password string `form:"name=password"`
 }
 
-type PostSessionRequest struct {
-	Request PostSessionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostSessionResponse struct {
 	ContentType string
 	StatusCode  int

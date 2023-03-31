@@ -8,13 +8,13 @@ import (
 )
 
 type StorageDefaultObjectAccessControlsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageDefaultObjectAccessControlsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageDefaultObjectAccessControlsListSecurity struct {
@@ -22,14 +22,11 @@ type StorageDefaultObjectAccessControlsListSecurity struct {
 	Option2 *StorageDefaultObjectAccessControlsListSecurityOption2 `security:"option"`
 }
 
-type StorageDefaultObjectAccessControlsListPathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-}
-
-type StorageDefaultObjectAccessControlsListQueryParams struct {
+type StorageDefaultObjectAccessControlsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, only return default ACL listing if the bucket's current metageneration matches this value.
@@ -50,12 +47,6 @@ type StorageDefaultObjectAccessControlsListQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageDefaultObjectAccessControlsListRequest struct {
-	PathParams  StorageDefaultObjectAccessControlsListPathParams
-	QueryParams StorageDefaultObjectAccessControlsListQueryParams
-	Security    StorageDefaultObjectAccessControlsListSecurity
 }
 
 type StorageDefaultObjectAccessControlsListResponse struct {

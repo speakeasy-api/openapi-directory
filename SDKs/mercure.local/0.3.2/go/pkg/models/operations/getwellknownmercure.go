@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetWellKnownMercureQueryParams struct {
-	// The last received event id, to retrieve missed events.
-	LastEventID *string `queryParam:"style=form,explode=true,name=Last-Event-ID"`
-	// The topic to get updates from, can be a URI template (RFC6570).
-	Topic []string `queryParam:"style=form,explode=true,name=topic"`
-}
-
-type GetWellKnownMercureHeaders struct {
+type GetWellKnownMercureRequest struct {
 	// The last received event id, to retrieve missed events, takes precedence over the query parameter.
 	LastEventID *string `header:"style=simple,explode=false,name=Last-Event-ID"`
-}
-
-type GetWellKnownMercureRequest struct {
-	QueryParams GetWellKnownMercureQueryParams
-	Headers     GetWellKnownMercureHeaders
+	// The last received event id, to retrieve missed events.
+	LastEventIDQueryParameter *string `queryParam:"style=form,explode=true,name=Last-Event-ID"`
+	// The topic to get updates from, can be a URI template (RFC6570).
+	Topic []string `queryParam:"style=form,explode=true,name=topic"`
 }
 
 type GetWellKnownMercureResponse struct {

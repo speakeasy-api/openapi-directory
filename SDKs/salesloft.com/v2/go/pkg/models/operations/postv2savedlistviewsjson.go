@@ -17,10 +17,6 @@ type PostV2SavedListViewsJSONRequestBody struct {
 	ViewParams *string `form:"name=view_params"`
 }
 
-type PostV2SavedListViewsJSONRequest struct {
-	Request PostV2SavedListViewsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2SavedListViewsJSONResponse struct {
 	Body        []byte
 	ContentType string

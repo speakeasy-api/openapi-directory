@@ -15,6 +15,5 @@ pkg/utils/utils.go
 pkg/models/operations/androidpublisherpurchasescancel.go
 pkg/models/operations/androidpublisherpurchasesget.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/subscriptionpurchase.go
 USAGE.md

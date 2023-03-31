@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationDevicesStatusesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationDevicesStatusesProductTypesEnum string
 
 const (
@@ -103,13 +99,14 @@ func (e *GetOrganizationDevicesStatusesTagsFilterTypeEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetOrganizationDevicesStatusesQueryParams struct {
+type GetOrganizationDevicesStatusesRequest struct {
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `queryParam:"style=form,explode=true,name=endingBefore"`
 	// Optional parameter to filter devices by models.
 	Models []string `queryParam:"style=form,explode=false,name=models"`
 	// Optional parameter to filter devices by network ids.
-	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
+	NetworkIds     []string `queryParam:"style=form,explode=false,name=networkIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=perPage"`
 	// An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
@@ -124,11 +121,6 @@ type GetOrganizationDevicesStatusesQueryParams struct {
 	Tags []string `queryParam:"style=form,explode=false,name=tags"`
 	// An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 	TagsFilterType *GetOrganizationDevicesStatusesTagsFilterTypeEnum `queryParam:"style=form,explode=true,name=tagsFilterType"`
-}
-
-type GetOrganizationDevicesStatusesRequest struct {
-	PathParams  GetOrganizationDevicesStatusesPathParams
-	QueryParams GetOrganizationDevicesStatusesQueryParams
 }
 
 // GetOrganizationDevicesStatuses200ApplicationJSONComponents - Components

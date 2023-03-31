@@ -34,7 +34,7 @@ func newComptage(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // Comptage - Compter le nombre de caractère
 // Compte le nombre de SMS necessaire à un envoi
-func (s *comptage) Comptage(ctx context.Context, request operations.ComptageRequest) (*operations.ComptageResponse, error) {
+func (s *comptage) Comptage(ctx context.Context, request shared.ComptageRequest) (*operations.ComptageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/comptage"
 

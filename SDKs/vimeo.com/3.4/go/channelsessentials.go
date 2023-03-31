@@ -34,7 +34,7 @@ func newChannelsEssentials(defaultClient, securityClient HTTPClient, serverURL, 
 
 // CreateChannel - Create a channel
 // This method creates a new channel.
-func (s *channelsEssentials) CreateChannel(ctx context.Context, request operations.CreateChannelRequest) (*operations.CreateChannelResponse, error) {
+func (s *channelsEssentials) CreateChannel(ctx context.Context, request operations.CreateChannelRequestBody, security operations.CreateChannelSecurity) (*operations.CreateChannelResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels"
 
@@ -53,7 +53,7 @@ func (s *channelsEssentials) CreateChannel(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,16 +100,16 @@ func (s *channelsEssentials) CreateChannel(ctx context.Context, request operatio
 }
 
 // DeleteChannel - Delete a channel
-func (s *channelsEssentials) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest) (*operations.DeleteChannelResponse, error) {
+func (s *channelsEssentials) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest, security operations.DeleteChannelSecurity) (*operations.DeleteChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,11 +146,11 @@ func (s *channelsEssentials) DeleteChannel(ctx context.Context, request operatio
 
 // EditChannel - Edit a channel
 // This method edits the specified channel.
-func (s *channelsEssentials) EditChannel(ctx context.Context, request operations.EditChannelRequest) (*operations.EditChannelResponse, error) {
+func (s *channelsEssentials) EditChannel(ctx context.Context, request operations.EditChannelRequest, security operations.EditChannelSecurity) (*operations.EditChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,7 +162,7 @@ func (s *channelsEssentials) EditChannel(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,7 +209,7 @@ func (s *channelsEssentials) EditChannel(ctx context.Context, request operations
 // GetChannel - Get a specific channel
 func (s *channelsEssentials) GetChannel(ctx context.Context, request operations.GetChannelRequest) (*operations.GetChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -253,14 +253,14 @@ func (s *channelsEssentials) GetChannel(ctx context.Context, request operations.
 // GetChannelSubscriptions - Get all the channels to which a user subscribes
 func (s *channelsEssentials) GetChannelSubscriptions(ctx context.Context, request operations.GetChannelSubscriptionsRequest) (*operations.GetChannelSubscriptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,7 +309,7 @@ func (s *channelsEssentials) GetChannelSubscriptionsAlt1(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -358,7 +358,7 @@ func (s *channelsEssentials) GetChannels(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

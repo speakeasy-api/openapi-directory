@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETPathwaysWithDiagramsForCategoryUsingGETPathParams struct {
+type GETPathwaysWithDiagramsForCategoryUsingGETRequest struct {
 	// Pathway Category
 	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
-type GETPathwaysWithDiagramsForCategoryUsingGETRequest struct {
-	PathParams GETPathwaysWithDiagramsForCategoryUsingGETPathParams
 }
 
 type GETPathwaysWithDiagramsForCategoryUsingGETResponse struct {

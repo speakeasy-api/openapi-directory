@@ -34,14 +34,14 @@ func newDesktopLogs(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return historical records of various Systems Manager network connection details for desktop devices.
 func (s *desktopLogs) GetNetworkSmDeviceDesktopLogs(ctx context.Context, request operations.GetNetworkSmDeviceDesktopLogsRequest) (*operations.GetNetworkSmDeviceDesktopLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/desktopLogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/desktopLogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

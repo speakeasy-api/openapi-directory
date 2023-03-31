@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersUserEmailInviteEmailPathParams struct {
+type PostUsersUserEmailInviteEmailRequest struct {
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PostUsersUserEmailInviteEmailRequest struct {
-	PathParams PostUsersUserEmailInviteEmailPathParams
 }
 
 type PostUsersUserEmailInviteEmailResponse struct {

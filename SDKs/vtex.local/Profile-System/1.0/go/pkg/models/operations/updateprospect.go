@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdateProspectPathParams struct {
-	// ID of the prospect as returned by the Create prospect endpoint's response, in the `id` field.
-	ProspectID string `pathParam:"style=simple,explode=false,name=prospectId"`
-}
-
-type UpdateProspectHeaders struct {
+type UpdateProspectRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UpdateProspectRequest struct {
-	PathParams UpdateProspectPathParams
-	Headers    UpdateProspectHeaders
-	Request    interface{} `request:"mediaType=application/json"`
+	ContentType string      `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	// ID of the prospect as returned by the Create prospect endpoint's response, in the `id` field.
+	ProspectID string `pathParam:"style=simple,explode=false,name=prospectId"`
 }
 
 type UpdateProspectResponse struct {

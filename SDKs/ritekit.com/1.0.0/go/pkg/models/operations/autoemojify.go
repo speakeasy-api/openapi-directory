@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AutoEmojifyQueryParams struct {
+type AutoEmojifyRequest struct {
 	// Text of the post
 	Text string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type AutoEmojifyRequest struct {
-	QueryParams AutoEmojifyQueryParams
 }
 
 type AutoEmojifyResponse struct {

@@ -116,7 +116,6 @@ pkg/models/shared/location.go
 pkg/models/shared/geocoordsreadonly.go
 pkg/models/shared/itemupdate.go
 pkg/models/shared/key.go
-pkg/models/shared/security.go
 pkg/models/shared/keyvaluepair.go
 pkg/models/shared/keyvaluepairupdate.go
 pkg/models/shared/locationruleupdate.go
@@ -146,4 +145,5 @@ pkg/models/shared/spotupdate.go
 pkg/models/shared/spotsetupdate.go
 pkg/models/shared/subscription.go
 pkg/models/shared/user.go
+pkg/models/shared/security.go
 USAGE.md

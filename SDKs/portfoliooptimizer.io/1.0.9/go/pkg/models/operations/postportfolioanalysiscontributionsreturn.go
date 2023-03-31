@@ -20,10 +20,6 @@ type PostPortfolioAnalysisContributionsReturnRequestBody struct {
 	Portfolios    []PostPortfolioAnalysisContributionsReturnRequestBodyPortfolios `json:"portfolios"`
 }
 
-type PostPortfolioAnalysisContributionsReturnRequest struct {
-	Request PostPortfolioAnalysisContributionsReturnRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisContributionsReturn200ApplicationJSONPortfolios struct {
 	// assetsGroupsReturnContributions[k] is the return contribution of the group of assets k to the return of the portfolio
 	AssetsGroupsReturnContributions []float64 `json:"assetsGroupsReturnContributions,omitempty"`

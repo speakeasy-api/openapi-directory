@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetShipmentByExternalIDPathParams struct {
-	ExternalShipmentID string `pathParam:"style=simple,explode=false,name=external_shipment_id"`
-}
-
 type GetShipmentByExternalIDRequest struct {
-	PathParams GetShipmentByExternalIDPathParams
+	ExternalShipmentID string `pathParam:"style=simple,explode=false,name=external_shipment_id"`
 }
 
 type GetShipmentByExternalIDResponse struct {

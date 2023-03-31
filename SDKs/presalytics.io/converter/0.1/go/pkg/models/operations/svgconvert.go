@@ -16,11 +16,6 @@ type SvgconvertFileToConvert struct {
 	File *SvgconvertFileToConvertFile `multipartForm:"file"`
 }
 
-type SvgconvertRequest struct {
-	// Fizepath to pptx file
-	Request SvgconvertFileToConvert `request:"mediaType=multipart/form-data"`
-}
-
 // SvgconvertFileURL - Url of svg file
 type SvgconvertFileURL struct {
 	BlobName *string `json:"blob_name,omitempty"`

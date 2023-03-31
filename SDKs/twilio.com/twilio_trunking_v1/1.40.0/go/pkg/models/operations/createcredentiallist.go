@@ -12,12 +12,8 @@ var CreateCredentialListServerList = []string{
 }
 
 type CreateCredentialListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCredentialListPathParams struct {
-	// The SID of the Trunk to associate the credential list with.
-	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCredentialListCreateCredentialListRequest struct {
@@ -26,10 +22,9 @@ type CreateCredentialListCreateCredentialListRequest struct {
 }
 
 type CreateCredentialListRequest struct {
-	PathParams CreateCredentialListPathParams
-	Request    *CreateCredentialListCreateCredentialListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateCredentialListSecurity
-	ServerURL  *string
+	RequestBody *CreateCredentialListCreateCredentialListRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Trunk to associate the credential list with.
+	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
 }
 
 type CreateCredentialListResponse struct {

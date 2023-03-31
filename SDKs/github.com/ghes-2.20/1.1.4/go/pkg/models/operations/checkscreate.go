@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksCreatePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ChecksCreateRequest struct {
-	PathParams ChecksCreatePathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	RequestBody interface{} `request:"mediaType=application/json"`
+	Owner       string      `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string      `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ChecksCreateResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateInstructionsPathParams struct {
+type UpdateInstructionsRequest struct {
+	// Updated instructions for a job.
+	InstructionsDTO shared.InstructionsDTO `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type UpdateInstructionsRequest struct {
-	PathParams UpdateInstructionsPathParams
-	// Updated instructions for a job.
-	Request shared.InstructionsDTO `request:"mediaType=application/json"`
 }
 
 type UpdateInstructionsResponse struct {

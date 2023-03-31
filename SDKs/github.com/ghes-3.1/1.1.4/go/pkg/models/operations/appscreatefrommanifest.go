@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsCreateFromManifestPathParams struct {
-	Code string `pathParam:"style=simple,explode=false,name=code"`
-}
-
 type AppsCreateFromManifestRequest struct {
-	PathParams AppsCreateFromManifestPathParams
+	Code string `pathParam:"style=simple,explode=false,name=code"`
 }
 
 type AppsCreateFromManifestResponse struct {

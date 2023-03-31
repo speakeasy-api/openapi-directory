@@ -8,18 +8,13 @@ import (
 )
 
 type PostWorkspaceSlugMembersMemberSlugNotesSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostWorkspaceSlugMembersMemberSlugNotesPathParams struct {
-	MemberSlug    string `pathParam:"style=simple,explode=false,name=member_slug"`
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostWorkspaceSlugMembersMemberSlugNotesRequest struct {
-	PathParams PostWorkspaceSlugMembersMemberSlugNotesPathParams
-	Request    *shared.Note `request:"mediaType=application/json"`
-	Security   PostWorkspaceSlugMembersMemberSlugNotesSecurity
+	MemberSlug    string       `pathParam:"style=simple,explode=false,name=member_slug"`
+	Note          *shared.Note `request:"mediaType=application/json"`
+	WorkspaceSlug string       `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type PostWorkspaceSlugMembersMemberSlugNotesResponse struct {

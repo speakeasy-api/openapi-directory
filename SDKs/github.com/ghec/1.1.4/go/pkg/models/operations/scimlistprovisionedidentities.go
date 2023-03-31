@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScimListProvisionedIdentitiesPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ScimListProvisionedIdentitiesQueryParams struct {
+type ScimListProvisionedIdentitiesRequest struct {
 	// Used for pagination: the number of results to return.
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// Filters results using the equals query parameter operator (`eq`). You can filter results that are equal to `id`, `userName`, `emails`, and `external_id`. For example, to search for an identity with the `userName` Octocat, you would use this query:
@@ -23,13 +18,10 @@ type ScimListProvisionedIdentitiesQueryParams struct {
 	//
 	// `?filter=emails%20eq%20\"octocat@github.com\"`.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Used for pagination: the index of the first result to return.
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type ScimListProvisionedIdentitiesRequest struct {
-	PathParams  ScimListProvisionedIdentitiesPathParams
-	QueryParams ScimListProvisionedIdentitiesQueryParams
 }
 
 type ScimListProvisionedIdentitiesResponse struct {

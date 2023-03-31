@@ -42,10 +42,9 @@ pkg/models/operations/datalabelingprojectsoperationsget.go
 pkg/models/operations/datalabelingprojectsoperationslist.go
 pkg/models/shared/googleclouddatalabelingv1beta1annotationspecset.go
 pkg/models/shared/googleclouddatalabelingv1beta1annotationspec.go
-pkg/models/shared/googleclouddatalabelingv1beta1createannotationspecsetrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googleclouddatalabelingv1beta1createannotationspecsetrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleclouddatalabelingv1beta1listannotationspecsetsresponse.go
 pkg/models/shared/googleclouddatalabelingv1beta1listexamplesresponse.go
 pkg/models/shared/googleclouddatalabelingv1beta1example.go

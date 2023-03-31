@@ -34,7 +34,7 @@ func newAlternateManagementInterface(defaultClient, securityClient HTTPClient, s
 // Return the switch alternate management interface for the network
 func (s *alternateManagementInterface) GetNetworkSwitchAlternateManagementInterface(ctx context.Context, request operations.GetNetworkSwitchAlternateManagementInterfaceRequest) (*operations.GetNetworkSwitchAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *alternateManagementInterface) GetNetworkSwitchAlternateManagementInterf
 // Return alternate management interface and devices with IP assigned
 func (s *alternateManagementInterface) GetNetworkWirelessAlternateManagementInterface(ctx context.Context, request operations.GetNetworkWirelessAlternateManagementInterfaceRequest) (*operations.GetNetworkWirelessAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,9 +124,9 @@ func (s *alternateManagementInterface) GetNetworkWirelessAlternateManagementInte
 // Update the switch alternate management interface for the network
 func (s *alternateManagementInterface) UpdateNetworkSwitchAlternateManagementInterface(ctx context.Context, request operations.UpdateNetworkSwitchAlternateManagementInterfaceRequest) (*operations.UpdateNetworkSwitchAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,9 +176,9 @@ func (s *alternateManagementInterface) UpdateNetworkSwitchAlternateManagementInt
 // Update alternate management interface and device static IP
 func (s *alternateManagementInterface) UpdateNetworkWirelessAlternateManagementInterface(ctx context.Context, request operations.UpdateNetworkWirelessAlternateManagementInterfaceRequest) (*operations.UpdateNetworkWirelessAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

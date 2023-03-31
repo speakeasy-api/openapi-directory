@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferingsOfferingIDAnalyticsPulsesPathParams struct {
+type GetOfferingsOfferingIDAnalyticsPulsesRequest struct {
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type GetOfferingsOfferingIDAnalyticsPulsesRequest struct {
-	PathParams GetOfferingsOfferingIDAnalyticsPulsesPathParams
 }
 
 type GetOfferingsOfferingIDAnalyticsPulsesResponse struct {

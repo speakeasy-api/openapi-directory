@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DirectionsForRoutePathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-}
-
-type DirectionsForRouteQueryParams struct {
+type DirectionsForRouteRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
+	// Identifier of route; values returned by Routes API - v3/routes
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type DirectionsForRouteRequest struct {
-	PathParams  DirectionsForRoutePathParams
-	QueryParams DirectionsForRouteQueryParams
 }
 
 type DirectionsForRouteResponse struct {

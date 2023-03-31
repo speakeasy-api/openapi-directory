@@ -57,7 +57,11 @@ func (e *ListSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListQueryParams struct {
+type ListRequest struct {
+	// The market that the response should be formatted for
+	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
+	// Shopper ID to return subscriptions for when not using JWT
+	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
 	// Optional details to be included in the response
 	Includes *ListIncludesEnum `queryParam:"style=form,explode=false,name=includes"`
 	// Number of Subscriptions to retrieve in this page, starting after offset
@@ -68,18 +72,6 @@ type ListQueryParams struct {
 	ProductGroupKeys []string `queryParam:"style=form,explode=false,name=productGroupKeys"`
 	// Property name that will be used to sort results. "-" indicates descending
 	Sort *ListSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListHeaders struct {
-	// The market that the response should be formatted for
-	XMarketID *string `header:"style=simple,explode=false,name=X-Market-Id"`
-	// Shopper ID to return subscriptions for when not using JWT
-	XShopperID *string `header:"style=simple,explode=false,name=X-Shopper-Id"`
-}
-
-type ListRequest struct {
-	QueryParams ListQueryParams
-	Headers     ListHeaders
 }
 
 type ListResponse struct {

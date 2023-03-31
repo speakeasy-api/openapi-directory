@@ -123,7 +123,7 @@ func (e *LeagueLeadersBySeasonPositionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LeagueLeadersBySeasonPathParams struct {
+type LeagueLeadersBySeasonRequest struct {
 	// Response member you would like results sorted by.
 	Column LeagueLeadersBySeasonColumnEnum `pathParam:"style=simple,explode=false,name=column"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
@@ -134,10 +134,6 @@ type LeagueLeadersBySeasonPathParams struct {
 	//           <br>Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.
 	//
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type LeagueLeadersBySeasonRequest struct {
-	PathParams LeagueLeadersBySeasonPathParams
 }
 
 type LeagueLeadersBySeasonResponse struct {

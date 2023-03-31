@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetByGeoPointQueryParams struct {
+type StopPointGetByGeoPointRequest struct {
 	// an optional list of comma separated property categories to return in the StopPoint's property bag. If null or empty, all categories of property are returned. Pass the keyword "none" to return no properties (a valid list of categories can be obtained from the /StopPoint/Meta/categories endpoint)
 	Categories  []string `queryParam:"style=form,explode=true,name=categories"`
 	LocationLat float64  `queryParam:"style=form,explode=true,name=location.lat"`
@@ -22,10 +22,6 @@ type StopPointGetByGeoPointQueryParams struct {
 	StopTypes []string `queryParam:"style=form,explode=true,name=stopTypes"`
 	// Re-arrange the output into a parent/child hierarchy
 	UseStopPointHierarchy *bool `queryParam:"style=form,explode=true,name=useStopPointHierarchy"`
-}
-
-type StopPointGetByGeoPointRequest struct {
-	QueryParams StopPointGetByGeoPointQueryParams
 }
 
 type StopPointGetByGeoPointResponse struct {

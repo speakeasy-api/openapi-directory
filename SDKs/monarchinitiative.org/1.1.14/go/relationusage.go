@@ -36,14 +36,14 @@ func newRelationUsage(defaultClient, securityClient HTTPClient, serverURL, langu
 // GetRelationUsageBetweenResource - All relations used plus count of associations
 func (s *relationUsage) GetRelationUsageBetweenResource(ctx context.Context, request operations.GetRelationUsageBetweenResourceRequest) (*operations.GetRelationUsageBetweenResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/relation/usage/between/{subject_category}/{object_category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/relation/usage/between/{subject_category}/{object_category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,7 +91,7 @@ func (s *relationUsage) GetRelationUsagePivotLabelResource(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -139,7 +139,7 @@ func (s *relationUsage) GetRelationUsagePivotResource(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -187,7 +187,7 @@ func (s *relationUsage) GetRelationUsageResource(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

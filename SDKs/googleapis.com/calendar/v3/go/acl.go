@@ -32,20 +32,20 @@ func newACL(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // CalendarACLDelete - Deletes an access control rule.
-func (s *acl) CalendarACLDelete(ctx context.Context, request operations.CalendarACLDeleteRequest) (*operations.CalendarACLDeleteResponse, error) {
+func (s *acl) CalendarACLDelete(ctx context.Context, request operations.CalendarACLDeleteRequest, security operations.CalendarACLDeleteSecurity) (*operations.CalendarACLDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *acl) CalendarACLDelete(ctx context.Context, request operations.Calendar
 }
 
 // CalendarACLGet - Returns an access control rule.
-func (s *acl) CalendarACLGet(ctx context.Context, request operations.CalendarACLGetRequest) (*operations.CalendarACLGetResponse, error) {
+func (s *acl) CalendarACLGet(ctx context.Context, request operations.CalendarACLGetRequest, security operations.CalendarACLGetSecurity) (*operations.CalendarACLGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *acl) CalendarACLGet(ctx context.Context, request operations.CalendarACL
 }
 
 // CalendarACLInsert - Creates an access control rule.
-func (s *acl) CalendarACLInsert(ctx context.Context, request operations.CalendarACLInsertRequest) (*operations.CalendarACLInsertResponse, error) {
+func (s *acl) CalendarACLInsert(ctx context.Context, request operations.CalendarACLInsertRequest, security operations.CalendarACLInsertSecurity) (*operations.CalendarACLInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ACLRule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *acl) CalendarACLInsert(ctx context.Context, request operations.Calendar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *acl) CalendarACLInsert(ctx context.Context, request operations.Calendar
 }
 
 // CalendarACLList - Returns the rules in the access control list for the calendar.
-func (s *acl) CalendarACLList(ctx context.Context, request operations.CalendarACLListRequest) (*operations.CalendarACLListResponse, error) {
+func (s *acl) CalendarACLList(ctx context.Context, request operations.CalendarACLListRequest, security operations.CalendarACLListSecurity) (*operations.CalendarACLListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *acl) CalendarACLList(ctx context.Context, request operations.CalendarAC
 }
 
 // CalendarACLPatch - Updates an access control rule. This method supports patch semantics.
-func (s *acl) CalendarACLPatch(ctx context.Context, request operations.CalendarACLPatchRequest) (*operations.CalendarACLPatchResponse, error) {
+func (s *acl) CalendarACLPatch(ctx context.Context, request operations.CalendarACLPatchRequest, security operations.CalendarACLPatchSecurity) (*operations.CalendarACLPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ACLRule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *acl) CalendarACLPatch(ctx context.Context, request operations.CalendarA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *acl) CalendarACLPatch(ctx context.Context, request operations.CalendarA
 }
 
 // CalendarACLUpdate - Updates an access control rule.
-func (s *acl) CalendarACLUpdate(ctx context.Context, request operations.CalendarACLUpdateRequest) (*operations.CalendarACLUpdateResponse, error) {
+func (s *acl) CalendarACLUpdate(ctx context.Context, request operations.CalendarACLUpdateRequest, security operations.CalendarACLUpdateSecurity) (*operations.CalendarACLUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/{ruleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ACLRule", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *acl) CalendarACLUpdate(ctx context.Context, request operations.Calendar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,11 +332,11 @@ func (s *acl) CalendarACLUpdate(ctx context.Context, request operations.Calendar
 }
 
 // CalendarACLWatch - Watch for changes to ACL resources.
-func (s *acl) CalendarACLWatch(ctx context.Context, request operations.CalendarACLWatchRequest) (*operations.CalendarACLWatchResponse, error) {
+func (s *acl) CalendarACLWatch(ctx context.Context, request operations.CalendarACLWatchRequest, security operations.CalendarACLWatchSecurity) (*operations.CalendarACLWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calendars/{calendarId}/acl/watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -348,11 +348,11 @@ func (s *acl) CalendarACLWatch(ctx context.Context, request operations.CalendarA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

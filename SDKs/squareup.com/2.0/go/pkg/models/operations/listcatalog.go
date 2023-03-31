@@ -8,10 +8,10 @@ import (
 )
 
 type ListCatalogSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCatalogQueryParams struct {
+type ListCatalogRequest struct {
 	// The specific version of the catalog objects to be included in the response.
 	// This allows you to retrieve historical
 	// versions of objects. The specified version value is matched against
@@ -29,11 +29,6 @@ type ListCatalogQueryParams struct {
 	//
 	// If this is unspecified, the operation returns objects of all the types at the version of the Square API used to make the request.
 	Types *string `queryParam:"style=form,explode=true,name=types"`
-}
-
-type ListCatalogRequest struct {
-	QueryParams ListCatalogQueryParams
-	Security    ListCatalogSecurity
 }
 
 type ListCatalogResponse struct {

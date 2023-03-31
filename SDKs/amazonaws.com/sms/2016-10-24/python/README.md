@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/sms/2016-10-24/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,173 +14,225 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAppRequest(
-    headers=operations.CreateAppHeaders(
-        x_amz_algorithm="doloremque",
-        x_amz_content_sha256="eius",
-        x_amz_credential="ut",
-        x_amz_date="omnis",
-        x_amz_security_token="qui",
-        x_amz_signature="voluptate",
-        x_amz_signed_headers="quia",
-        x_amz_target="AWSServerMigrationService_V2016_10_24.CreateApp",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateAppRequest(
-        client_token="voluptates",
-        description="voluptatem",
-        name="iusto",
-        role_name="laudantium",
+)
+
+
+req = operations.CreateAppRequest(
+    create_app_request=shared.CreateAppRequest(
+        client_token="corrupti",
+        description="provident",
+        name="distinctio",
+        role_name="quibusdam",
         server_groups=[
             shared.ServerGroup(
-                name="ea",
-                server_group_id="qui",
+                name="nulla",
+                server_group_id="corrupti",
                 server_list=[
                     shared.Server(
-                        replication_job_id="sapiente",
+                        replication_job_id="vel",
                         replication_job_terminated=False,
-                        server_id="consequatur",
+                        server_id="error",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="dolores",
-                            vm_manager_type="VSPHERE",
-                            vm_name="et",
-                            vm_path="harum",
+                            vm_manager_name="deserunt",
+                            vm_manager_type="SCVMM",
+                            vm_name="iure",
+                            vm_path="magnam",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="iusto",
-                                vm_manager_id="corporis",
+                                vm_id="debitis",
+                                vm_manager_id="ipsa",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="deleniti",
-                        replication_job_terminated=True,
-                        server_id="tempore",
+                        replication_job_id="delectus",
+                        replication_job_terminated=False,
+                        server_id="tempora",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="amet",
-                            vm_manager_type="VSPHERE",
-                            vm_name="quia",
-                            vm_path="nihil",
+                            vm_manager_name="suscipit",
+                            vm_manager_type="SCVMM",
+                            vm_name="minus",
+                            vm_path="placeat",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="voluptas",
-                                vm_manager_id="quidem",
+                                vm_id="voluptatum",
+                                vm_manager_id="iusto",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="excepturi",
+                        replication_job_terminated=False,
+                        server_id="nisi",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="recusandae",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="ab",
+                            vm_path="quis",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="veritatis",
+                                vm_manager_id="deserunt",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="perferendis",
+                        replication_job_terminated=False,
+                        server_id="ipsam",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="repellendus",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="quo",
+                            vm_path="odit",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="at",
+                                vm_manager_id="at",
                             ),
                         ),
                     ),
                 ],
             ),
             shared.ServerGroup(
-                name="quia",
-                server_group_id="voluptas",
+                name="maiores",
+                server_group_id="molestiae",
                 server_list=[
                     shared.Server(
-                        replication_job_id="earum",
-                        replication_job_terminated=True,
-                        server_id="est",
+                        replication_job_id="quod",
+                        replication_job_terminated=False,
+                        server_id="esse",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="soluta",
-                            vm_manager_type="SCVMM",
-                            vm_name="explicabo",
-                            vm_path="corporis",
+                            vm_manager_name="totam",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="dolorum",
+                            vm_path="dicta",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="quia",
-                                vm_manager_id="sunt",
+                                vm_id="nam",
+                                vm_manager_id="officia",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="necessitatibus",
-                        replication_job_terminated=True,
-                        server_id="voluptatem",
+                        replication_job_id="occaecati",
+                        replication_job_terminated=False,
+                        server_id="fugit",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="quia",
-                            vm_manager_type="VSPHERE",
-                            vm_name="possimus",
-                            vm_path="in",
+                            vm_manager_name="deleniti",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="optio",
+                            vm_path="totam",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="totam",
+                                vm_id="beatae",
+                                vm_manager_id="commodi",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="molestiae",
+                        replication_job_terminated=False,
+                        server_id="modi",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="qui",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="cum",
+                            vm_path="esse",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="ipsum",
                                 vm_manager_id="excepturi",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="rerum",
+                        replication_job_id="aspernatur",
                         replication_job_terminated=False,
-                        server_id="facilis",
+                        server_id="perferendis",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="odio",
-                            vm_manager_type="VSPHERE",
-                            vm_name="aut",
-                            vm_path="consectetur",
+                            vm_manager_name="ad",
+                            vm_manager_type="SCVMM",
+                            vm_name="sed",
+                            vm_path="iste",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="nihil",
-                                vm_manager_id="similique",
+                                vm_id="dolor",
+                                vm_manager_id="natus",
                             ),
                         ),
                     ),
                 ],
             ),
             shared.ServerGroup(
-                name="magnam",
-                server_group_id="mollitia",
+                name="laboriosam",
+                server_group_id="hic",
                 server_list=[
                     shared.Server(
-                        replication_job_id="magnam",
+                        replication_job_id="fuga",
                         replication_job_terminated=False,
-                        server_id="et",
+                        server_id="in",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="nisi",
+                            vm_manager_name="corporis",
                             vm_manager_type="SCVMM",
-                            vm_name="quis",
-                            vm_path="consequatur",
+                            vm_name="iure",
+                            vm_path="saepe",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="qui",
-                                vm_manager_id="aut",
+                                vm_id="quidem",
+                                vm_manager_id="architecto",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="modi",
+                        replication_job_id="ipsa",
                         replication_job_terminated=False,
-                        server_id="quia",
+                        server_id="reiciendis",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="eligendi",
+                            vm_manager_name="est",
+                            vm_manager_type="SCVMM",
+                            vm_name="laborum",
+                            vm_path="dolores",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="dolorem",
+                                vm_manager_id="corporis",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="explicabo",
+                        replication_job_terminated=False,
+                        server_id="nobis",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="enim",
+                            vm_manager_type="SCVMM",
+                            vm_name="nemo",
+                            vm_path="minima",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="excepturi",
+                                vm_manager_id="accusantium",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="iure",
+                        replication_job_terminated=False,
+                        server_id="culpa",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="doloribus",
                             vm_manager_type="HYPERV-MANAGER",
-                            vm_name="perspiciatis",
-                            vm_path="molestiae",
+                            vm_name="architecto",
+                            vm_path="mollitia",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="voluptatem",
-                                vm_manager_id="autem",
-                            ),
-                        ),
-                    ),
-                    shared.Server(
-                        replication_job_id="sit",
-                        replication_job_terminated=False,
-                        server_id="molestias",
-                        server_type="VIRTUAL_MACHINE",
-                        vm_server=shared.VMServer(
-                            vm_manager_name="voluptates",
-                            vm_manager_type="VSPHERE",
-                            vm_name="numquam",
-                            vm_path="magni",
-                            vm_server_address=shared.VMServerAddress(
-                                vm_id="veritatis",
-                                vm_manager_id="itaque",
+                                vm_id="dolorem",
+                                vm_manager_id="culpa",
                             ),
                         ),
                     ),
@@ -189,19 +241,19 @@ req = operations.CreateAppRequest(
         ],
         tags=[
             shared.Tag(
-                key="vitae",
-                value="quo",
-            ),
-            shared.Tag(
-                key="corrupti",
-                value="iusto",
-            ),
-            shared.Tag(
-                key="dolores",
-                value="nobis",
+                key="repellat",
+                value="mollitia",
             ),
         ],
     ),
+    x_amz_algorithm="occaecati",
+    x_amz_content_sha256="numquam",
+    x_amz_credential="commodi",
+    x_amz_date="quam",
+    x_amz_security_token="molestiae",
+    x_amz_signature="velit",
+    x_amz_signed_headers="error",
+    x_amz_target="AWSServerMigrationService_V2016_10_24.CreateApp",
 )
     
 res = s.create_app(req)
@@ -212,35 +264,35 @@ if res.create_app_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
 * `create_app` - Creates an application. An application consists of one or more server groups. Each server group contain one or more servers.
-* `create_replication_job` - Creates a replication job. The replication job schedules periodic replication runs to replicate your server to AWS. Each replication run creates an Amazon Machine Image (AMI).
-* `delete_app` - Deletes the specified application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
+* `create_replication_job` - Creates a replication job. The replication job schedules periodic replication runs to replicate your server to Amazon Web Services. Each replication run creates an Amazon Machine Image (AMI).
+* `delete_app` - Deletes the specified application. Optionally deletes the launched stack associated with the application and all Server Migration Service replication jobs for servers in the application.
 * `delete_app_launch_configuration` - Deletes the launch configuration for the specified application.
 * `delete_app_replication_configuration` - Deletes the replication configuration for the specified application.
 * `delete_app_validation_configuration` - Deletes the validation configuration for the specified application.
-* `delete_replication_job` - <p>Deletes the specified replication job.</p> <p>After you delete a replication job, there are no further replication runs. AWS deletes the contents of the Amazon S3 bucket used to store AWS SMS artifacts. The AMIs created by the replication runs are not deleted.</p>
+* `delete_replication_job` - <p>Deletes the specified replication job.</p> <p>After you delete a replication job, there are no further replication runs. Amazon Web Services deletes the contents of the Amazon S3 bucket used to store Server Migration Service artifacts. The AMIs created by the replication runs are not deleted.</p>
 * `delete_server_catalog` - Deletes all servers from your server catalog.
-* `disassociate_connector` - <p>Disassociates the specified connector from AWS SMS.</p> <p>After you disassociate a connector, it is no longer available to support replication jobs.</p>
+* `disassociate_connector` - <p>Disassociates the specified connector from Server Migration Service.</p> <p>After you disassociate a connector, it is no longer available to support replication jobs.</p>
 * `generate_change_set` - Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
-* `generate_template` - Generates an AWS CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
+* `generate_template` - Generates an CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
 * `get_app` - Retrieve information about the specified application.
 * `get_app_launch_configuration` - Retrieves the application launch configuration associated with the specified application.
 * `get_app_replication_configuration` - Retrieves the application replication configuration associated with the specified application.
 * `get_app_validation_configuration` - Retrieves information about a configuration for validating an application.
 * `get_app_validation_output` - Retrieves output from validating an application.
-* `get_connectors` - Describes the connectors registered with the AWS SMS.
+* `get_connectors` - Describes the connectors registered with the Server Migration Service.
 * `get_replication_jobs` - Describes the specified replication job or all of your replication jobs.
 * `get_replication_runs` - Describes the replication runs for the specified replication job.
 * `get_servers` - <p>Describes the servers in your server catalog.</p> <p>Before you can describe your servers, you must import them using <a>ImportServerCatalog</a>.</p>
-* `import_app_catalog` - Allows application import from AWS Migration Hub.
+* `import_app_catalog` - Allows application import from Migration Hub.
 * `import_server_catalog` - <p>Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers to import.</p> <p>This call returns immediately, but might take additional time to retrieve all the servers.</p>
-* `launch_app` - Launches the specified application as a stack in AWS CloudFormation.
+* `launch_app` - Launches the specified application as a stack in CloudFormation.
 * `list_apps` - Retrieves summaries for all applications.
-* `notify_app_validation_output` - Provides information to AWS SMS about whether application validation is successful.
+* `notify_app_validation_output` - Provides information to Server Migration Service about whether application validation is successful.
 * `put_app_launch_configuration` - Creates or updates the launch configuration for the specified application.
 * `put_app_replication_configuration` - Creates or updates the replication configuration for the specified application.
 * `put_app_validation_configuration` - Creates or updates a validation configuration for the specified application.
@@ -251,7 +303,17 @@ if res.create_app_response is not None:
 * `terminate_app` - Terminates the stack for the specified application.
 * `update_app` - Updates the specified application.
 * `update_replication_job` - Updates the specified settings for the specified replication job.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

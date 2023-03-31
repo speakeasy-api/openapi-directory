@@ -35,7 +35,7 @@ func newStatistics(defaultClient, securityClient HTTPClient, serverURL, language
 // GETActiveObjectCountUsingGET - Count of active objects by type, for specified species and date
 func (s *statistics) GETActiveObjectCountUsingGET(ctx context.Context, request operations.GETActiveObjectCountUsingGETRequest) (*operations.GETActiveObjectCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/activeObject/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/activeObject/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *statistics) GETActiveObjectCountUsingGET(ctx context.Context, request o
 // GETActiveObjectDiffUsingGET - Count difference of active objects, by type, for specified species and date range
 func (s *statistics) GETActiveObjectDiffUsingGET(ctx context.Context, request operations.GETActiveObjectDiffUsingGETRequest) (*operations.GETActiveObjectDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/activeObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/activeObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +133,7 @@ func (s *statistics) GETActiveObjectDiffUsingGET(ctx context.Context, request op
 // GETGeneTypeCountUsingGET - Count of gene types, for specified species and date
 func (s *statistics) GETGeneTypeCountUsingGET(ctx context.Context, request operations.GETGeneTypeCountUsingGETRequest) (*operations.GETGeneTypeCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/geneType/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/geneType/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -182,7 +182,7 @@ func (s *statistics) GETGeneTypeCountUsingGET(ctx context.Context, request opera
 // GETGeneTypeDiffUsingGET - Count difference of gene types, for specified species and date range
 func (s *statistics) GETGeneTypeDiffUsingGET(ctx context.Context, request operations.GETGeneTypeDiffUsingGETRequest) (*operations.GETGeneTypeDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/geneType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/geneType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +231,7 @@ func (s *statistics) GETGeneTypeDiffUsingGET(ctx context.Context, request operat
 // GETObjectStatusCountUsingGET - Count of objects with given status, for specified species and date
 func (s *statistics) GETObjectStatusCountUsingGET(ctx context.Context, request operations.GETObjectStatusCountUsingGETRequest) (*operations.GETObjectStatusCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectStatus/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectStatus/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -280,7 +280,7 @@ func (s *statistics) GETObjectStatusCountUsingGET(ctx context.Context, request o
 // GETObjectStatusDiffUsingGET - Count difference of objects with given status, for specified species and date range
 func (s *statistics) GETObjectStatusDiffUsingGET(ctx context.Context, request operations.GETObjectStatusDiffUsingGETRequest) (*operations.GETObjectStatusDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectStatus/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectStatus/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *statistics) GETObjectStatusDiffUsingGET(ctx context.Context, request op
 // GETObjectsWithRefSeqCountUsingGET - Count of objects with reference sequence(s), by object type, for specified species and date
 func (s *statistics) GETObjectsWithRefSeqCountUsingGET(ctx context.Context, request operations.GETObjectsWithRefSeqCountUsingGETRequest) (*operations.GETObjectsWithRefSeqCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectWithRefSeq/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectWithRefSeq/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +378,7 @@ func (s *statistics) GETObjectsWithRefSeqCountUsingGET(ctx context.Context, requ
 // GETObjectsWithRefSeqDiffUsingGET - Count difference of objects with reference sequence(s), by object type, for specified species and date range
 func (s *statistics) GETObjectsWithRefSeqDiffUsingGET(ctx context.Context, request operations.GETObjectsWithRefSeqDiffUsingGETRequest) (*operations.GETObjectsWithRefSeqDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectWithRefSeq/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectWithRefSeq/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -427,7 +427,7 @@ func (s *statistics) GETObjectsWithRefSeqDiffUsingGET(ctx context.Context, reque
 // GETObjectsWithReferenceCountUsingGET - Count of objects with reference, by object type, for specified species and date
 func (s *statistics) GETObjectsWithReferenceCountUsingGET(ctx context.Context, request operations.GETObjectsWithReferenceCountUsingGETRequest) (*operations.GETObjectsWithReferenceCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectWithReference/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectWithReference/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -476,7 +476,7 @@ func (s *statistics) GETObjectsWithReferenceCountUsingGET(ctx context.Context, r
 // GETObjectsWithReferenceDiffUsingGET - Count difference of objects with reference, by object type, for specified species and date range
 func (s *statistics) GETObjectsWithReferenceDiffUsingGET(ctx context.Context, request operations.GETObjectsWithReferenceDiffUsingGETRequest) (*operations.GETObjectsWithReferenceDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectWithReference/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectWithReference/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -525,7 +525,7 @@ func (s *statistics) GETObjectsWithReferenceDiffUsingGET(ctx context.Context, re
 // GETObjectsWithXDBsCountUsingGET - Count of objects with external database ids, by database id, for specified species, object type and date
 func (s *statistics) GETObjectsWithXDBsCountUsingGET(ctx context.Context, request operations.GETObjectsWithXDBsCountUsingGETRequest) (*operations.GETObjectsWithXDBsCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -574,7 +574,7 @@ func (s *statistics) GETObjectsWithXDBsCountUsingGET(ctx context.Context, reques
 // GETObjectsWithXDBsDiffUsingGET - Count difference of objects with external database ids, by database id, for specified species, object type and date range
 func (s *statistics) GETObjectsWithXDBsDiffUsingGET(ctx context.Context, request operations.GETObjectsWithXDBsDiffUsingGETRequest) (*operations.GETObjectsWithXDBsDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -623,7 +623,7 @@ func (s *statistics) GETObjectsWithXDBsDiffUsingGET(ctx context.Context, request
 // GETProteinInteractionCountUsingGET - Count of protein interactions, for specified species and date
 func (s *statistics) GETProteinInteractionCountUsingGET(ctx context.Context, request operations.GETProteinInteractionCountUsingGETRequest) (*operations.GETProteinInteractionCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/proteinInteraction/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/proteinInteraction/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -672,7 +672,7 @@ func (s *statistics) GETProteinInteractionCountUsingGET(ctx context.Context, req
 // GETProteinInteractionDiffUsingGET - Count difference of protein interactions, for specified species and date range
 func (s *statistics) GETProteinInteractionDiffUsingGET(ctx context.Context, request operations.GETProteinInteractionDiffUsingGETRequest) (*operations.GETProteinInteractionDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/proteinInteraction/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/proteinInteraction/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -721,7 +721,7 @@ func (s *statistics) GETProteinInteractionDiffUsingGET(ctx context.Context, requ
 // GETQtlInheritanceTypeCountUsingGET - Count of strains, by qtl inheritance type, for specified species and date
 func (s *statistics) GETQtlInheritanceTypeCountUsingGET(ctx context.Context, request operations.GETQtlInheritanceTypeCountUsingGETRequest) (*operations.GETQtlInheritanceTypeCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/qtlInheritanceType/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/qtlInheritanceType/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -770,7 +770,7 @@ func (s *statistics) GETQtlInheritanceTypeCountUsingGET(ctx context.Context, req
 // GETQtlInheritanceTypeDiffUsingGET - Count difference of strains, by qtl inheritance type, for specified species and date range
 func (s *statistics) GETQtlInheritanceTypeDiffUsingGET(ctx context.Context, request operations.GETQtlInheritanceTypeDiffUsingGETRequest) (*operations.GETQtlInheritanceTypeDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/qtlInheritanceType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/qtlInheritanceType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -819,7 +819,7 @@ func (s *statistics) GETQtlInheritanceTypeDiffUsingGET(ctx context.Context, requ
 // GETRetiredObjectCountUsingGET - Count of retired objects by type, for specified species and date
 func (s *statistics) GETRetiredObjectCountUsingGET(ctx context.Context, request operations.GETRetiredObjectCountUsingGETRequest) (*operations.GETRetiredObjectCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/retiredObject/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/retiredObject/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -868,7 +868,7 @@ func (s *statistics) GETRetiredObjectCountUsingGET(ctx context.Context, request 
 // GETRetiredObjectDiffUsingGET - Count difference of retired objects, by type, for specified species and date range
 func (s *statistics) GETRetiredObjectDiffUsingGET(ctx context.Context, request operations.GETRetiredObjectDiffUsingGETRequest) (*operations.GETRetiredObjectDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/retiredObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/retiredObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -917,7 +917,7 @@ func (s *statistics) GETRetiredObjectDiffUsingGET(ctx context.Context, request o
 // GETStrainTypeCountUsingGET - Count of strain types, for specified species and date
 func (s *statistics) GETStrainTypeCountUsingGET(ctx context.Context, request operations.GETStrainTypeCountUsingGETRequest) (*operations.GETStrainTypeCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/strainType/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/strainType/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -966,7 +966,7 @@ func (s *statistics) GETStrainTypeCountUsingGET(ctx context.Context, request ope
 // GETStrainTypeDiffUsingGET - Count difference of strain types, for specified species and date range
 func (s *statistics) GETStrainTypeDiffUsingGET(ctx context.Context, request operations.GETStrainTypeDiffUsingGETRequest) (*operations.GETStrainTypeDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/strainType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/strainType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1015,7 +1015,7 @@ func (s *statistics) GETStrainTypeDiffUsingGET(ctx context.Context, request oper
 // GETTermStatsUsingGET - getTermStats
 func (s *statistics) GETTermStatsUsingGET(ctx context.Context, request operations.GETTermStatsUsingGETRequest) (*operations.GETTermStatsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/term/{accId}/{filterAccId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/term/{accId}/{filterAccId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1064,7 +1064,7 @@ func (s *statistics) GETTermStatsUsingGET(ctx context.Context, request operation
 // GETWithdrawnObjectCountUsingGET - Count of withdrawn objects by type, for specified species and date
 func (s *statistics) GETWithdrawnObjectCountUsingGET(ctx context.Context, request operations.GETWithdrawnObjectCountUsingGETRequest) (*operations.GETWithdrawnObjectCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/withdrawnObject/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/withdrawnObject/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1113,7 +1113,7 @@ func (s *statistics) GETWithdrawnObjectCountUsingGET(ctx context.Context, reques
 // GETWithdrawnObjectDiffUsingGET - Count difference of withdrawn objects, by type, for specified species and date range
 func (s *statistics) GETWithdrawnObjectDiffUsingGET(ctx context.Context, request operations.GETWithdrawnObjectDiffUsingGETRequest) (*operations.GETWithdrawnObjectDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/withdrawnObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/withdrawnObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1162,7 +1162,7 @@ func (s *statistics) GETWithdrawnObjectDiffUsingGET(ctx context.Context, request
 // GETXdbsCountUsingGET - Count of external database ids, for specied species and date
 func (s *statistics) GETXdbsCountUsingGET(ctx context.Context, request operations.GETXdbsCountUsingGETRequest) (*operations.GETXdbsCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/count/xdb/{speciesTypeKey}/{dateYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/count/xdb/{speciesTypeKey}/{dateYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1211,7 +1211,7 @@ func (s *statistics) GETXdbsCountUsingGET(ctx context.Context, request operation
 // GETXdbsDiffUsingGET - Count difference of external database ids, for specified species and date range
 func (s *statistics) GETXdbsDiffUsingGET(ctx context.Context, request operations.GETXdbsDiffUsingGETRequest) (*operations.GETXdbsDiffUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/xdb/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stats/diff/xdb/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

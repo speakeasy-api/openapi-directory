@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkVlansEnabledStatePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkVlansEnabledStateRequestBody struct {
 	// Boolean indicating whether to enable (true) or disable (false) VLANs for the network
 	Enabled bool `json:"enabled"`
 }
 
 type UpdateNetworkVlansEnabledStateRequest struct {
-	PathParams UpdateNetworkVlansEnabledStatePathParams
-	Request    UpdateNetworkVlansEnabledStateRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkVlansEnabledStateRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkVlansEnabledStateResponse struct {

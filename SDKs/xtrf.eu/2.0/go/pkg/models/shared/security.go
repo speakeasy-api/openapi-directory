@@ -2,20 +2,16 @@
 
 package shared
 
-type SchemeXAuthAccessToken struct {
-	APIKey string `security:"name=X-AUTH-ACCESS-TOKEN"`
-}
-
 type Security struct {
-	XAuthAccessToken   *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken1  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken10 *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken2  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken3  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken4  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken5  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken6  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken7  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken8  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
-	XAuthAccessToken9  *SchemeXAuthAccessToken `security:"scheme,type=apiKey,subtype=header"`
+	XAuthAccessToken   *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken1  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken10 *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken2  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken3  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken4  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken5  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken6  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken7  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken8  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken9  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
 }

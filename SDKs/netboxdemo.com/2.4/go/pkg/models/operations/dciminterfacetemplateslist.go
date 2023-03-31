@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInterfaceTemplatesListQueryParams struct {
+type DcimInterfaceTemplatesListRequest struct {
 	DevicetypeID *string `queryParam:"style=form,explode=true,name=devicetype_id"`
 	FormFactor   *string `queryParam:"style=form,explode=true,name=form_factor"`
 	// Number of results to return per page.
@@ -16,10 +16,6 @@ type DcimInterfaceTemplatesListQueryParams struct {
 	Name     *string `queryParam:"style=form,explode=true,name=name"`
 	// The initial index from which to return the results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type DcimInterfaceTemplatesListRequest struct {
-	QueryParams DcimInterfaceTemplatesListQueryParams
 }
 
 type DcimInterfaceTemplatesList200ApplicationJSON struct {

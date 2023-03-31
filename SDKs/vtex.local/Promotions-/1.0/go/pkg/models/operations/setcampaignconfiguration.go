@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type SetcampaignconfigurationHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // SetcampaignconfigurationRequestBodyLastModified - Object with information about the last update of the campaign audience.
 type SetcampaignconfigurationRequestBodyLastModified struct {
 	// Date of the last update in UTC format.
@@ -239,8 +232,11 @@ type SetcampaignconfigurationRequestBody struct {
 }
 
 type SetcampaignconfigurationRequest struct {
-	Headers SetcampaignconfigurationHeaders
-	Request SetcampaignconfigurationRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                              `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody SetcampaignconfigurationRequestBody `request:"mediaType=application/json"`
 }
 
 // Setcampaignconfiguration200ApplicationJSONLastModified - Object with information about the most recent update of the campaign audience.

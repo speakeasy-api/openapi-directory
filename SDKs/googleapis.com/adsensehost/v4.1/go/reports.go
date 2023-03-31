@@ -33,7 +33,7 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AdsensehostReportsGenerate - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
-func (s *reports) AdsensehostReportsGenerate(ctx context.Context, request operations.AdsensehostReportsGenerateRequest) (*operations.AdsensehostReportsGenerateResponse, error) {
+func (s *reports) AdsensehostReportsGenerate(ctx context.Context, request operations.AdsensehostReportsGenerateRequest, security operations.AdsensehostReportsGenerateSecurity) (*operations.AdsensehostReportsGenerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports"
 
@@ -42,11 +42,11 @@ func (s *reports) AdsensehostReportsGenerate(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

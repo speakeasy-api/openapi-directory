@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsGetStatusForOrgPathParams struct {
-	// The unique identifier of the migration.
-	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // MigrationsGetStatusForOrgExcludeEnum - Allowed values that can be passed to the exclude param.
 type MigrationsGetStatusForOrgExcludeEnum string
 
@@ -37,14 +30,13 @@ func (e *MigrationsGetStatusForOrgExcludeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type MigrationsGetStatusForOrgQueryParams struct {
+type MigrationsGetStatusForOrgRequest struct {
 	// Exclude attributes from the API response to improve performance
 	Exclude []MigrationsGetStatusForOrgExcludeEnum `queryParam:"style=form,explode=true,name=exclude"`
-}
-
-type MigrationsGetStatusForOrgRequest struct {
-	PathParams  MigrationsGetStatusForOrgPathParams
-	QueryParams MigrationsGetStatusForOrgQueryParams
+	// The unique identifier of the migration.
+	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type MigrationsGetStatusForOrgResponse struct {

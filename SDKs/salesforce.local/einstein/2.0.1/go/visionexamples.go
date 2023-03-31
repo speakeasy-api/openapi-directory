@@ -35,11 +35,11 @@ func newVisionExamples(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // AddExample - Create an Example
 // Adds an example with the specified label to a dataset.
-func (s *visionExamples) AddExample(ctx context.Context, request operations.AddExampleRequest) (*operations.AddExampleResponse, error) {
+func (s *visionExamples) AddExample(ctx context.Context, request operations.AddExampleRequest, security operations.AddExampleSecurity) (*operations.AddExampleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *visionExamples) AddExample(ctx context.Context, request operations.AddE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *visionExamples) AddExample(ctx context.Context, request operations.AddE
 
 // GetExamplesByLabel1 - Get All Examples for Label
 // Returns all the examples for the specified label. Returns both uploaded examples and feedback examples.
-func (s *visionExamples) GetExamplesByLabel1(ctx context.Context, request operations.GetExamplesByLabel1Request) (*operations.GetExamplesByLabel1Response, error) {
+func (s *visionExamples) GetExamplesByLabel1(ctx context.Context, request operations.GetExamplesByLabel1Request, security operations.GetExamplesByLabel1Security) (*operations.GetExamplesByLabel1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/examples"
 
@@ -96,11 +96,11 @@ func (s *visionExamples) GetExamplesByLabel1(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *visionExamples) GetExamplesByLabel1(ctx context.Context, request operat
 
 // GetExamples1 - Get All Examples
 // Returns all the examples for the specified dataset. By default, returns examples created by uploading them from a .zip file.
-func (s *visionExamples) GetExamples1(ctx context.Context, request operations.GetExamples1Request) (*operations.GetExamples1Response, error) {
+func (s *visionExamples) GetExamples1(ctx context.Context, request operations.GetExamples1Request, security operations.GetExamples1Security) (*operations.GetExamples1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *visionExamples) GetExamples1(ctx context.Context, request operations.Ge
 
 // ProvideFeedback1 - Create a Feedback Example
 // Adds a feedback example to the dataset associated with the specified model.
-func (s *visionExamples) ProvideFeedback1(ctx context.Context, request operations.ProvideFeedback1Request) (*operations.ProvideFeedback1Response, error) {
+func (s *visionExamples) ProvideFeedback1(ctx context.Context, request operations.ProvideFeedback1RequestBody, security operations.ProvideFeedback1Security) (*operations.ProvideFeedback1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/feedback"
 
@@ -201,7 +201,7 @@ func (s *visionExamples) ProvideFeedback1(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,7 +237,7 @@ func (s *visionExamples) ProvideFeedback1(ctx context.Context, request operation
 
 // UpdateDatasetAsync1 - Create Feedback Examples From a Zip File
 // Adds feedback examples to the dataset associated with the specified object detection model.
-func (s *visionExamples) UpdateDatasetAsync1(ctx context.Context, request operations.UpdateDatasetAsync1Request) (*operations.UpdateDatasetAsync1Response, error) {
+func (s *visionExamples) UpdateDatasetAsync1(ctx context.Context, request operations.UpdateDatasetAsync1RequestBody, security operations.UpdateDatasetAsync1Security) (*operations.UpdateDatasetAsync1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/bulkfeedback"
 
@@ -253,7 +253,7 @@ func (s *visionExamples) UpdateDatasetAsync1(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,11 +289,11 @@ func (s *visionExamples) UpdateDatasetAsync1(ctx context.Context, request operat
 
 // UpdateDatasetAsync2 - Create Examples From a Zip File
 // Adds examples from a .zip file to a dataset. You can use this call only with a dataset that was created from a .zip file.
-func (s *visionExamples) UpdateDatasetAsync2(ctx context.Context, request operations.UpdateDatasetAsync2Request) (*operations.UpdateDatasetAsync2Response, error) {
+func (s *visionExamples) UpdateDatasetAsync2(ctx context.Context, request operations.UpdateDatasetAsync2Request, security operations.UpdateDatasetAsync2Security) (*operations.UpdateDatasetAsync2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/upload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/upload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *visionExamples) UpdateDatasetAsync2(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

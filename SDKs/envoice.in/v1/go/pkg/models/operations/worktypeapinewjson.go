@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WorkTypeAPINewJSONHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type WorkTypeAPINewJSONRequest struct {
-	Headers WorkTypeAPINewJSONHeaders
-	Request shared.WorkTypeCreateAPIModel `request:"mediaType=application/json"`
+	WorkTypeCreateAPIModel shared.WorkTypeCreateAPIModel `request:"mediaType=application/json"`
+	XAuthKey               string                        `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret            string                        `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type WorkTypeAPINewJSONResponse struct {

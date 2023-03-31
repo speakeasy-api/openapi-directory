@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetTargetsTargetIDScansIDReportPathParams struct {
+type GetTargetsTargetIDScansIDReportRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDScansIDReportRequest struct {
-	PathParams GetTargetsTargetIDScansIDReportPathParams
 }
 
 // GetTargetsTargetIDScansIDReport404ApplicationJSON - Not found

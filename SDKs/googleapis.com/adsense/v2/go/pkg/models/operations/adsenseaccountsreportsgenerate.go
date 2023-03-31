@@ -10,23 +10,18 @@ import (
 )
 
 type AdsenseAccountsReportsGenerateSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsGenerateSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsReportsGenerateSecurity struct {
 	Option1 *AdsenseAccountsReportsGenerateSecurityOption1 `security:"option"`
 	Option2 *AdsenseAccountsReportsGenerateSecurityOption2 `security:"option"`
-}
-
-type AdsenseAccountsReportsGeneratePathParams struct {
-	// Required. The account which owns the collection of reports. Format: accounts/{account}
-	Account string `pathParam:"style=simple,explode=false,name=account"`
 }
 
 // AdsenseAccountsReportsGenerateDateRangeEnum - Date range of the report, if unset the range will be considered CUSTOM.
@@ -372,11 +367,13 @@ func (e *AdsenseAccountsReportsGenerateReportingTimeZoneEnum) UnmarshalJSON(data
 	}
 }
 
-type AdsenseAccountsReportsGenerateQueryParams struct {
+type AdsenseAccountsReportsGenerateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The account which owns the collection of reports. Format: accounts/{account}
+	Account string `pathParam:"style=simple,explode=false,name=account"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -425,12 +422,6 @@ type AdsenseAccountsReportsGenerateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdsenseAccountsReportsGenerateRequest struct {
-	PathParams  AdsenseAccountsReportsGeneratePathParams
-	QueryParams AdsenseAccountsReportsGenerateQueryParams
-	Security    AdsenseAccountsReportsGenerateSecurity
 }
 
 type AdsenseAccountsReportsGenerateResponse struct {

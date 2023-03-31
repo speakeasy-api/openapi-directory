@@ -35,7 +35,7 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // CreateDeviceCode - CreateDeviceCode
 // Creates a DeviceCode that can be used to login to a Square Terminal device to enter the connected
 // terminal mode.
-func (s *devices) CreateDeviceCode(ctx context.Context, request operations.CreateDeviceCodeRequest) (*operations.CreateDeviceCodeResponse, error) {
+func (s *devices) CreateDeviceCode(ctx context.Context, request shared.CreateDeviceCodeRequest, security operations.CreateDeviceCodeSecurity) (*operations.CreateDeviceCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/devices/codes"
 
@@ -54,7 +54,7 @@ func (s *devices) CreateDeviceCode(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,16 +90,16 @@ func (s *devices) CreateDeviceCode(ctx context.Context, request operations.Creat
 
 // GetDeviceCode - GetDeviceCode
 // Retrieves DeviceCode with the associated ID.
-func (s *devices) GetDeviceCode(ctx context.Context, request operations.GetDeviceCodeRequest) (*operations.GetDeviceCodeResponse, error) {
+func (s *devices) GetDeviceCode(ctx context.Context, request operations.GetDeviceCodeRequest, security operations.GetDeviceCodeSecurity) (*operations.GetDeviceCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/devices/codes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/devices/codes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *devices) GetDeviceCode(ctx context.Context, request operations.GetDevic
 
 // ListDeviceCodes - ListDeviceCodes
 // Lists all DeviceCodes associated with the merchant.
-func (s *devices) ListDeviceCodes(ctx context.Context, request operations.ListDeviceCodesRequest) (*operations.ListDeviceCodesResponse, error) {
+func (s *devices) ListDeviceCodes(ctx context.Context, request operations.ListDeviceCodesRequest, security operations.ListDeviceCodesSecurity) (*operations.ListDeviceCodesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/devices/codes"
 
@@ -144,11 +144,11 @@ func (s *devices) ListDeviceCodes(ctx context.Context, request operations.ListDe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

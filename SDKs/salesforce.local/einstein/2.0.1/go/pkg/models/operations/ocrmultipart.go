@@ -8,7 +8,7 @@ import (
 )
 
 type OcrMultipartSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type OcrMultipartRequestBodySampleContent struct {
@@ -27,11 +27,6 @@ type OcrMultipartRequestBody struct {
 	SampleLocation *string `multipartForm:"name=sampleLocation"`
 	// Optional. Designates the type of data in the image. Default is text. Valid values: contact, table, and text.
 	Task *string `multipartForm:"name=task"`
-}
-
-type OcrMultipartRequest struct {
-	Request  *OcrMultipartRequestBody `request:"mediaType=multipart/form-data"`
-	Security OcrMultipartSecurity
 }
 
 type OcrMultipartResponse struct {

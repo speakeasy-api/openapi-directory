@@ -34,7 +34,7 @@ func newPush(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // CreateDevice - Create device
 // Adds a new device to a user, if the same device already exists the call will have no effect
-func (s *push) CreateDevice(ctx context.Context, request operations.CreateDeviceRequest) (*operations.CreateDeviceResponse, error) {
+func (s *push) CreateDevice(ctx context.Context, request shared.CreateDeviceRequest) (*operations.CreateDeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/devices"
 
@@ -178,7 +178,7 @@ func (s *push) ListPushProviders(ctx context.Context) (*operations.ListPushProvi
 
 // UpsertPushProvider - Upsert a push provider
 // Upsert a push provider for v2 with multi bundle/package support
-func (s *push) UpsertPushProvider(ctx context.Context, request operations.UpsertPushProviderRequest) (*operations.UpsertPushProviderResponse, error) {
+func (s *push) UpsertPushProvider(ctx context.Context, request shared.UpsertPushProviderRequest) (*operations.UpsertPushProviderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push_providers"
 

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetSubPartnersQueryParams struct {
+type GetSubPartnersRequest struct {
 	// int or array of int (optional)
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// (optional) default 10
@@ -15,10 +15,6 @@ type GetSubPartnersQueryParams struct {
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
 	// ASC / DESC (optional) default ASC
 	Order *string `queryParam:"style=form,explode=true,name=order"`
-}
-
-type GetSubPartnersRequest struct {
-	QueryParams GetSubPartnersQueryParams
 }
 
 type GetSubPartnersResponse struct {

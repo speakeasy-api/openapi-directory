@@ -8,16 +8,11 @@ import (
 )
 
 type RunProjectsLocationsOperationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunProjectsLocationsOperationsListPathParams struct {
-	// Required. To query for all of the operations for a project.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RunProjectsLocationsOperationsListQueryParams struct {
+type RunProjectsLocationsOperationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type RunProjectsLocationsOperationsListQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. To query for all of the operations for a project.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of records that should be returned. Requested page size cannot exceed 100. If not set or set to less than or equal to 0, the default page size is 100. .
@@ -46,12 +43,6 @@ type RunProjectsLocationsOperationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunProjectsLocationsOperationsListRequest struct {
-	PathParams  RunProjectsLocationsOperationsListPathParams
-	QueryParams RunProjectsLocationsOperationsListQueryParams
-	Security    RunProjectsLocationsOperationsListSecurity
 }
 
 type RunProjectsLocationsOperationsListResponse struct {

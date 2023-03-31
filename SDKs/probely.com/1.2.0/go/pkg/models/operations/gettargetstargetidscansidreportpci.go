@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetTargetsTargetIDScansIDReportPciPathParams struct {
+type GetTargetsTargetIDScansIDReportPciRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDScansIDReportPciRequest struct {
-	PathParams GetTargetsTargetIDScansIDReportPciPathParams
 }
 
 // GetTargetsTargetIDScansIDReportPci404ApplicationJSON - Not found

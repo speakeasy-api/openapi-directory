@@ -8,14 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETCustomObjectRecordByIDPathParams struct {
-	// Id identifier in uuid form
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Specifies the custom object's API name as object. It is case-sensitive.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GETCustomObjectRecordByIDHeaders struct {
+type GETCustomObjectRecordByIDRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -29,11 +22,10 @@ type GETCustomObjectRecordByIDHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type GETCustomObjectRecordByIDRequest struct {
-	PathParams GETCustomObjectRecordByIDPathParams
-	Headers    GETCustomObjectRecordByIDHeaders
+	// Id identifier in uuid form
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Specifies the custom object's API name as object. It is case-sensitive.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
 
 type GETCustomObjectRecordByIDResponse struct {

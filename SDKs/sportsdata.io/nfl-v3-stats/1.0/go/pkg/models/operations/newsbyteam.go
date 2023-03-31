@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewsByTeamPathParams struct {
+type NewsByTeamRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
 	// Abbreviation of the team. Example: <code>WAS</code>.
 	Team string `pathParam:"style=simple,explode=false,name=team"`
-}
-
-type NewsByTeamRequest struct {
-	PathParams NewsByTeamPathParams
 }
 
 type NewsByTeamResponse struct {

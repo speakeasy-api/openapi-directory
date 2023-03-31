@@ -14,24 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.GETListsBestSellersHistoryJSONRequest{
-        Security: operations.GETListsBestSellersHistoryJSONSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.GETListsBestSellersHistoryJSONQueryParams{
-            AgeGroup: "corrupti",
-            Author: "provident",
-            Contributor: "distinctio",
-            Isbn: "quibusdam",
-            Price: "unde",
-            Publisher: "nulla",
-            Title: "Ms.",
-        },
+        AgeGroup: "corrupti",
+        Author: "provident",
+        Contributor: "distinctio",
+        Isbn: "quibusdam",
+        Price: "unde",
+        Publisher: "nulla",
+        Title: "Ms.",
     }
 
     ctx := context.Background()
-    res, err := s.GETListsBestSellersHistoryJSON(ctx, req)
+    res, err := s.GETListsBestSellersHistoryJSON(ctx, req, operations.GETListsBestSellersHistoryJSONSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

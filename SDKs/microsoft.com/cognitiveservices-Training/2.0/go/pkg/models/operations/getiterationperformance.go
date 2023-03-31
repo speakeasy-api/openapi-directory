@@ -7,28 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIterationPerformancePathParams struct {
+type GetIterationPerformanceRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The id of the iteration to get
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
-	// The id of the project the iteration belongs to
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetIterationPerformanceQueryParams struct {
 	// If applicable, the bounding box overlap threshold used to determine true predictions
 	OverlapThreshold *float32 `queryParam:"style=form,explode=true,name=overlapThreshold"`
+	// The id of the project the iteration belongs to
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// The threshold used to determine true predictions
 	Threshold *float32 `queryParam:"style=form,explode=true,name=threshold"`
-}
-
-type GetIterationPerformanceHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetIterationPerformanceRequest struct {
-	PathParams  GetIterationPerformancePathParams
-	QueryParams GetIterationPerformanceQueryParams
-	Headers     GetIterationPerformanceHeaders
 }
 
 type GetIterationPerformanceResponse struct {

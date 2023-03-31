@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostNetworksIDActionsChangeIPRangePathParams struct {
-	// ID of the Network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostNetworksIDActionsChangeIPRangeChangeIPRangeRequest struct {
 	// The new prefix for the whole Network
 	IPRange string `json:"ip_range"`
 }
 
 type PostNetworksIDActionsChangeIPRangeRequest struct {
-	PathParams PostNetworksIDActionsChangeIPRangePathParams
-	Request    *PostNetworksIDActionsChangeIPRangeChangeIPRangeRequest `request:"mediaType=application/json"`
+	RequestBody *PostNetworksIDActionsChangeIPRangeChangeIPRangeRequest `request:"mediaType=application/json"`
+	// ID of the Network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostNetworksIDActionsChangeIPRangeActionResponseActionError - Error message for the Action if error occurred, otherwise null

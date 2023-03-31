@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AuthLoginRequest struct {
-	// Login Credentials
-	Request shared.LoginDTO `request:"mediaType=application/json"`
-}
 
 type AuthLoginResponse struct {
 	// Authorizized with a new token or unauthorized request.

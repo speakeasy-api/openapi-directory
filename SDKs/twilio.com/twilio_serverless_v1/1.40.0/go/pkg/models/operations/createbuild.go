@@ -12,12 +12,8 @@ var CreateBuildServerList = []string{
 }
 
 type CreateBuildSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateBuildPathParams struct {
-	// The SID of the Service to create the Build resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBuildCreateBuildRequest struct {
@@ -32,10 +28,9 @@ type CreateBuildCreateBuildRequest struct {
 }
 
 type CreateBuildRequest struct {
-	PathParams CreateBuildPathParams
-	Request    *CreateBuildCreateBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateBuildSecurity
-	ServerURL  *string
+	RequestBody *CreateBuildCreateBuildRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to create the Build resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateBuildResponse struct {

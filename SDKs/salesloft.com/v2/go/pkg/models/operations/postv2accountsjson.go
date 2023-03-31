@@ -71,10 +71,6 @@ type PostV2AccountsJSONRequestBody struct {
 	Website *string `form:"name=website"`
 }
 
-type PostV2AccountsJSONRequest struct {
-	Request PostV2AccountsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2AccountsJSONResponse struct {
 	Body        []byte
 	ContentType string

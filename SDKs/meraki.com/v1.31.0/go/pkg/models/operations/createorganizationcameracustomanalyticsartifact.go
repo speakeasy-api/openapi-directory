@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationCameraCustomAnalyticsArtifactPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationCameraCustomAnalyticsArtifactRequestBody struct {
 	// Unique name of the artifact
 	Name *string `json:"name,omitempty"`
 }
 
 type CreateOrganizationCameraCustomAnalyticsArtifactRequest struct {
-	PathParams CreateOrganizationCameraCustomAnalyticsArtifactPathParams
-	Request    *CreateOrganizationCameraCustomAnalyticsArtifactRequestBody `request:"mediaType=application/json"`
+	RequestBody    *CreateOrganizationCameraCustomAnalyticsArtifactRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                      `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationCameraCustomAnalyticsArtifactResponse struct {

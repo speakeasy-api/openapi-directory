@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceSwitchWarmSparePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceSwitchWarmSpareRequestBody struct {
 	// Enable or disable warm spare for a switch
 	Enabled bool `json:"enabled"`
@@ -18,8 +14,8 @@ type UpdateDeviceSwitchWarmSpareRequestBody struct {
 }
 
 type UpdateDeviceSwitchWarmSpareRequest struct {
-	PathParams UpdateDeviceSwitchWarmSparePathParams
-	Request    UpdateDeviceSwitchWarmSpareRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateDeviceSwitchWarmSpareRequestBody `request:"mediaType=application/json"`
+	Serial      string                                 `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceSwitchWarmSpareResponse struct {

@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AccessToken: shared.SchemeAccessToken{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            AccessToken: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
     req := operations.DeleteRealmAttackDetectionBruteForceUsersRequest{
-        PathParams: operations.DeleteRealmAttackDetectionBruteForceUsersPathParams{
-            Realm: "corrupti",
-        },
+        Realm: "corrupti",
     }
 
     ctx := context.Background()

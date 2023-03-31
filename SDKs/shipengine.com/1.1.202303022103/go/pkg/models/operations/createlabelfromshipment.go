@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLabelFromShipmentPathParams struct {
+type CreateLabelFromShipmentRequest struct {
+	CreateLabelFromShipmentRequestBody shared.CreateLabelFromShipmentRequestBody `request:"mediaType=application/json"`
 	// Shipment ID
 	ShipmentID string `pathParam:"style=simple,explode=false,name=shipment_id"`
-}
-
-type CreateLabelFromShipmentRequest struct {
-	PathParams CreateLabelFromShipmentPathParams
-	Request    shared.CreateLabelFromShipmentRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateLabelFromShipmentResponse struct {

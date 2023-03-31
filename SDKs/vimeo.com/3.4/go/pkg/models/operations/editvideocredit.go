@@ -8,14 +8,7 @@ import (
 )
 
 type EditVideoCreditSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditVideoCreditPathParams struct {
-	// The ID of the credit.
-	CreditID float64 `pathParam:"style=simple,explode=false,name=credit_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditVideoCreditRequestBody struct {
@@ -26,9 +19,11 @@ type EditVideoCreditRequestBody struct {
 }
 
 type EditVideoCreditRequest struct {
-	PathParams EditVideoCreditPathParams
-	Request    *EditVideoCreditRequestBody `request:"mediaType=application/vnd.vimeo.credit+json"`
-	Security   EditVideoCreditSecurity
+	RequestBody *EditVideoCreditRequestBody `request:"mediaType=application/vnd.vimeo.credit+json"`
+	// The ID of the credit.
+	CreditID float64 `pathParam:"style=simple,explode=false,name=credit_id"`
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type EditVideoCreditResponse struct {

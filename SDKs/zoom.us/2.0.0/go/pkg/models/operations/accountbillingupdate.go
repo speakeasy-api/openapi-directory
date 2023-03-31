@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AccountBillingUpdatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountBillingUpdateApplicationJSON - Billing Contact object.
 type AccountBillingUpdateApplicationJSON struct {
 	// Billing Contact's address.
@@ -36,8 +31,9 @@ type AccountBillingUpdateApplicationJSON struct {
 }
 
 type AccountBillingUpdateRequest struct {
-	PathParams AccountBillingUpdatePathParams
-	Request    AccountBillingUpdateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody AccountBillingUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountBillingUpdateResponse struct {

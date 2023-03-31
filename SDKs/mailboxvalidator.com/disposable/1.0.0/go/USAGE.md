@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetV1EmailDisposableRequest{
-        QueryParams: operations.GetV1EmailDisposableQueryParams{
-            Email: "Larue_Rau85@yahoo.com",
-            Format: "xml",
-            Key: "illum",
-        },
+        Email: "Larue_Rau85@yahoo.com",
+        Format: "xml",
+        Key: "illum",
     }
 
     ctx := context.Background()

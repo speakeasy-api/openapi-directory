@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsAddOrUpdateRepoPermissionsLegacyPathParams struct {
-	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-	TeamID int64  `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum - The permission to grant the team on this repository. Can be one of:
 // \* `pull` - team members can pull, but not push to or administer this repository.
 // \* `push` - team members can pull and push, but not administer this repository.
@@ -58,8 +52,10 @@ type TeamsAddOrUpdateRepoPermissionsLegacyRequestBody struct {
 }
 
 type TeamsAddOrUpdateRepoPermissionsLegacyRequest struct {
-	PathParams TeamsAddOrUpdateRepoPermissionsLegacyPathParams
-	Request    *TeamsAddOrUpdateRepoPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody *TeamsAddOrUpdateRepoPermissionsLegacyRequestBody `request:"mediaType=application/json"`
+	Owner       string                                            `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                                            `pathParam:"style=simple,explode=false,name=repo"`
+	TeamID      int64                                             `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type TeamsAddOrUpdateRepoPermissionsLegacyResponse struct {

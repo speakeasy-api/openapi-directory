@@ -8,17 +8,12 @@ import (
 )
 
 type GetTrainedModelMetricsSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTrainedModelMetricsPathParams struct {
-	// Model Id
-	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTrainedModelMetricsRequest struct {
-	PathParams GetTrainedModelMetricsPathParams
-	Security   GetTrainedModelMetricsSecurity
+	// Model Id
+	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
 }
 
 type GetTrainedModelMetricsResponse struct {

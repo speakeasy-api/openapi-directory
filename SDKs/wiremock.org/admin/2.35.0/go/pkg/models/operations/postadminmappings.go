@@ -249,10 +249,6 @@ type PostAdminMappingsRequestBody struct {
 	UUID *string `json:"uuid,omitempty"`
 }
 
-type PostAdminMappingsRequest struct {
-	Request *PostAdminMappingsRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAdminMappings201ApplicationJSONRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against
 type PostAdminMappings201ApplicationJSONRequestBasicAuthCredentials struct {
 	Password string `json:"password"`

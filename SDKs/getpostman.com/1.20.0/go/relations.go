@@ -83,9 +83,9 @@ func newRelations(defaultClient, securityClient HTTPClient, serverURL, language,
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) CreateRelations(ctx context.Context, request operations.CreateRelationsRequest) (*operations.CreateRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -139,7 +139,7 @@ func (s *relations) CreateRelations(ctx context.Context, request operations.Crea
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetContractTestRelations(ctx context.Context, request operations.GetContractTestRelationsRequest) (*operations.GetContractTestRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/contracttest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/contracttest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +188,7 @@ func (s *relations) GetContractTestRelations(ctx context.Context, request operat
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetDocumentationRelations(ctx context.Context, request operations.GetDocumentationRelationsRequest) (*operations.GetDocumentationRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/documentation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/documentation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +237,7 @@ func (s *relations) GetDocumentationRelations(ctx context.Context, request opera
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetEnvironmentRelations(ctx context.Context, request operations.GetEnvironmentRelationsRequest) (*operations.GetEnvironmentRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/environment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/environment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -286,7 +286,7 @@ func (s *relations) GetEnvironmentRelations(ctx context.Context, request operati
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetIntegrationTestRelations(ctx context.Context, request operations.GetIntegrationTestRelationsRequest) (*operations.GetIntegrationTestRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/integrationtest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/integrationtest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -335,7 +335,7 @@ func (s *relations) GetIntegrationTestRelations(ctx context.Context, request ope
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetLinkedRelations(ctx context.Context, request operations.GetLinkedRelationsRequest) (*operations.GetLinkedRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +384,7 @@ func (s *relations) GetLinkedRelations(ctx context.Context, request operations.G
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetMonitorRelations(ctx context.Context, request operations.GetMonitorRelationsRequest) (*operations.GetMonitorRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/monitor", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/monitor", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -433,7 +433,7 @@ func (s *relations) GetMonitorRelations(ctx context.Context, request operations.
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) GetTestSuiteRelations(ctx context.Context, request operations.GetTestSuiteRelationsRequest) (*operations.GetTestSuiteRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/testsuite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/testsuite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -480,7 +480,7 @@ func (s *relations) GetTestSuiteRelations(ctx context.Context, request operation
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *relations) SyncRelationsWithSchema(ctx context.Context, request operations.SyncRelationsWithSchemaRequest) (*operations.SyncRelationsWithSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/{entityType}/{entityId}/syncWithSchema", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/{entityType}/{entityId}/syncWithSchema", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

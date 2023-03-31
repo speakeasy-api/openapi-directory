@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposDeletePathParams struct {
+type ReposDeleteRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposDeleteRequest struct {
-	PathParams ReposDeletePathParams
 }
 
 // ReposDelete403ApplicationJSON - If an organization owner has configured the organization to prevent members from deleting organization-owned repositories, a member will get this response:

@@ -4,53 +4,53 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostV05CareContextsDiscoverRequest(
-    headers=operations.PostV05CareContextsDiscoverHeaders(
-        authorization="nostrum",
-        x_hip_id="architecto",
-    ),
-    request=operations.PostV05CareContextsDiscoverRequests(
-        application_xml="quisquam".encode(),
-        patient_discovery_request=shared.PatientDiscoveryRequest(
-            patient=shared.PatientDiscoveryRequestPatient(
-                gender="O",
-                id="voluptatem",
-                name="eos",
-                unverified_identifiers=[
-                    shared.Identifier(
-                        type="HEALTH_ID",
-                        value="impedit",
-                    ),
-                    shared.Identifier(
-                        type="NDHM_HEALTH_NUMBER",
-                        value="exercitationem",
-                    ),
-                    shared.Identifier(
-                        type="HEALTH_ID",
-                        value="quia",
-                    ),
-                ],
-                verified_identifiers=[
-                    shared.Identifier(
-                        type="HEALTH_ID",
-                        value="sit",
-                    ),
-                    shared.Identifier(
-                        type="HEALTH_ID",
-                        value="debitis",
-                    ),
-                ],
-                year_of_birth=1476005494591598575,
-            ),
-            request_id="quia",
-            timestamp="1999-05-24T06:05:34Z",
-            transaction_id="repellendus",
+
+
+req = operations.PostV05CareContextsDiscoverJSONRequest(
+    authorization="corrupti",
+    patient_discovery_request=shared.PatientDiscoveryRequest(
+        patient=shared.PatientDiscoveryRequestPatient(
+            gender="O",
+            id="<patient-id>@<consent-manager-id>",
+            name="chandler bing",
+            unverified_identifiers=[
+                shared.Identifier(
+                    type="HEALTH_ID",
+                    value="+919800083232",
+                ),
+                shared.Identifier(
+                    type="NDHM_HEALTH_NUMBER",
+                    value="+919800083232",
+                ),
+                shared.Identifier(
+                    type="HEALTH_ID",
+                    value="+919800083232",
+                ),
+            ],
+            verified_identifiers=[
+                shared.Identifier(
+                    type="HEALTH_ID",
+                    value="+919800083232",
+                ),
+                shared.Identifier(
+                    type="MR",
+                    value="+919800083232",
+                ),
+                shared.Identifier(
+                    type="NDHM_HEALTH_NUMBER",
+                    value="+919800083232",
+                ),
+            ],
+            year_of_birth=2000,
         ),
+        request_id="499a5a4a-7dda-4f20-9b67-e24589627061",
+        timestamp="2022-03-26T09:37:56.283Z",
+        transaction_id="74e0f467-cc87-496e-9151-a05dfc2ddf7c",
     ),
+    x_hip_id="quod",
 )
     
-res = s.cm_facing.post_v0_5_care_contexts_discover(req)
+res = s.cm_facing.post_v0_5_care_contexts_discover_json(req)
 
 if res.status_code == 200:
     # handle response

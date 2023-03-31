@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamRolesListQueryParams struct {
+type IpamRolesListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type IpamRolesListRequest struct {
-	QueryParams IpamRolesListQueryParams
 }
 
 type IpamRolesList200ApplicationJSON struct {

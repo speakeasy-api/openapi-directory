@@ -12,16 +12,8 @@ var UpdateStreamServerList = []string{
 }
 
 type UpdateStreamSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateStreamPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Stream resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Stream resource is associated with.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-	// The SID of the Stream resource, or the `name` used when creating the resource
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateStreamUpdateStreamRequest struct {
@@ -29,10 +21,13 @@ type UpdateStreamUpdateStreamRequest struct {
 }
 
 type UpdateStreamRequest struct {
-	PathParams UpdateStreamPathParams
-	Request    *UpdateStreamUpdateStreamRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateStreamSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Stream resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Stream resource is associated with.
+	CallSid     string                           `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *UpdateStreamUpdateStreamRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Stream resource, or the `name` used when creating the resource
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateStreamResponse struct {

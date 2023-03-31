@@ -4,43 +4,35 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest(
-    security=operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity(
-        option1=operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
+    dollar_xgafv="2",
+    database_instance_input=shared.DatabaseInstanceInput(
+        name="provident",
+        type="USER_DATABASE",
     ),
-    path_params=operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams(
-        parent="molestiae",
-    ),
-    query_params=operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="facere",
-        alt="media",
-        callback="aut",
-        database_id="cumque",
-        fields="sint",
-        key="repellendus",
-        oauth_token="cumque",
-        pretty_print=True,
-        quota_user="asperiores",
-        upload_type="ut",
-        upload_protocol="quia",
-        validate_only=False,
-    ),
-    request=shared.DatabaseInstanceInput(
-        name="impedit",
-        type="DATABASE_INSTANCE_TYPE_UNSPECIFIED",
-    ),
+    access_token="quibusdam",
+    alt="media",
+    callback="nulla",
+    database_id="corrupti",
+    fields_="illum",
+    key="vel",
+    oauth_token="error",
+    parent="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
+    validate_only=False,
 )
     
-res = s.projects.firebasedatabase_projects_locations_instances_create(req)
+res = s.projects.firebasedatabase_projects_locations_instances_create(req, operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity(
+    option1=operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.database_instance is not None:
     # handle response

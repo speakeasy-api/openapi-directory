@@ -33,14 +33,14 @@ func newAdditionalData(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetSearchVersionNumberAdditionalDataExt - Additional Data
 func (s *additionalData) GetSearchVersionNumberAdditionalDataExt(ctx context.Context, request operations.GetSearchVersionNumberAdditionalDataExtRequest) (*operations.GetSearchVersionNumberAdditionalDataExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/additionalData.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/additionalData.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

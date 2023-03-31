@@ -12,18 +12,13 @@ var CreateAccountServerList = []string{
 }
 
 type CreateAccountSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAccountCreateAccountRequest struct {
 	// A human readable description of the account to create, defaults to `SubAccount Created at {YYYY-MM-DD HH:MM meridian}`
 	FriendlyName *string `form:"name=FriendlyName"`
-}
-
-type CreateAccountRequest struct {
-	Request   *CreateAccountCreateAccountRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateAccountSecurity
-	ServerURL *string
 }
 
 type CreateAccountResponse struct {

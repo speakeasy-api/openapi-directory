@@ -33,18 +33,18 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // Orders - Orders
 // Retrieve order by ID and optionally name. This service is only accessible for LH privileged partners
-func (s *orders) Orders(ctx context.Context, request operations.OrdersRequest) (*operations.OrdersResponse, error) {
+func (s *orders) Orders(ctx context.Context, request operations.OrdersRequest, security operations.OrdersSecurity) (*operations.OrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/orders/{orderID}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/orders/{orderID}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetFeaturesFeatureIDRequest(
-    path_params=operations.GetFeaturesFeatureIDPathParams(
-        feature_id=4754435599357587291,
-    ),
+    feature_id=548814,
 )
     
 res = s.feature.get_features_feature_id_(req)

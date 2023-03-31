@@ -32,20 +32,20 @@ func newTestEnvironmentCatalog(defaultClient, securityClient HTTPClient, serverU
 }
 
 // TestingTestEnvironmentCatalogGet - Gets the catalog of supported test environments. May return any of the following canonical error codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not exist - INTERNAL - if an internal error occurred
-func (s *testEnvironmentCatalog) TestingTestEnvironmentCatalogGet(ctx context.Context, request operations.TestingTestEnvironmentCatalogGetRequest) (*operations.TestingTestEnvironmentCatalogGetResponse, error) {
+func (s *testEnvironmentCatalog) TestingTestEnvironmentCatalogGet(ctx context.Context, request operations.TestingTestEnvironmentCatalogGetRequest, security operations.TestingTestEnvironmentCatalogGetSecurity) (*operations.TestingTestEnvironmentCatalogGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/testEnvironmentCatalog/{environmentType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/testEnvironmentCatalog/{environmentType}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

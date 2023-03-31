@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteCredentialListServerList = []string{
@@ -12,20 +11,15 @@ var DeleteCredentialListServerList = []string{
 }
 
 type DeleteCredentialListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteCredentialListPathParams struct {
+type DeleteCredentialListRequest struct {
 	// The unique string that we created to identify the CredentialList resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the Trunk from which to delete the credential list.
 	TrunkSid string `pathParam:"style=simple,explode=false,name=TrunkSid"`
-}
-
-type DeleteCredentialListRequest struct {
-	PathParams DeleteCredentialListPathParams
-	Security   DeleteCredentialListSecurity
-	ServerURL  *string
 }
 
 type DeleteCredentialListResponse struct {

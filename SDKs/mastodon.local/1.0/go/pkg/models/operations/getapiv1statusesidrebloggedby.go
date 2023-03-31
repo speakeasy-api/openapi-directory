@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1StatusesIDRebloggedByPathParams struct {
+type GetAPIV1StatusesIDRebloggedByRequest struct {
 	// Local ID of a status in the database.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV1StatusesIDRebloggedByRequest struct {
-	PathParams GetAPIV1StatusesIDRebloggedByPathParams
 }
 
 type GetAPIV1StatusesIDRebloggedByResponse struct {

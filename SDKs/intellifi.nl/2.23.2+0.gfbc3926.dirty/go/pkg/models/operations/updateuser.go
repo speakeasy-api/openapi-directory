@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateUserSecurity struct {
-	CookieSid shared.SchemeCookieSid `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type UpdateUserPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CookieSid string `security:"scheme,type=apiKey,subtype=cookie,name=brain.sid"`
 }
 
 type UpdateUserRequest struct {
-	PathParams UpdateUserPathParams
 	// A JSON object containing user information
-	Request  shared.UserInput `request:"mediaType=application/json"`
-	Security UpdateUserSecurity
+	UserInput shared.UserInput `request:"mediaType=application/json"`
+	// Unique identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateUserResponse struct {

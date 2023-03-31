@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetLocationPathParams struct {
+type GetLocationRequest struct {
 	// The location id that needs to be fetched
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetLocationQueryParams struct {
 	// Populate chargestations
 	IncludeChargestations *bool `queryParam:"style=form,explode=true,name=include_chargestations"`
 	// Populate organization
 	IncludeOrganization *bool `queryParam:"style=form,explode=true,name=include_organization"`
-}
-
-type GetLocationRequest struct {
-	PathParams  GetLocationPathParams
-	QueryParams GetLocationQueryParams
 }
 
 type GetLocationResponse struct {

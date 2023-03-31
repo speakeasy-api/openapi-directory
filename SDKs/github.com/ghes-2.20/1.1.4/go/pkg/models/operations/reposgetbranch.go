@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetBranchPathParams struct {
+type ReposGetBranchRequest struct {
 	// The name of the branch.
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetBranchRequest struct {
-	PathParams ReposGetBranchPathParams
 }
 
 // ReposGetBranch415ApplicationJSON - Preview header missing

@@ -3,34 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateHomeRegionControlRequest(
-    headers=operations.CreateHomeRegionControlHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="deleniti",
-        x_amz_credential="laudantium",
-        x_amz_date="fuga",
-        x_amz_security_token="doloribus",
-        x_amz_signature="quasi",
-        x_amz_signed_headers="et",
-        x_amz_target="AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateHomeRegionControlRequest(
+)
+
+
+req = operations.CreateHomeRegionControlRequest(
+    create_home_region_control_request=shared.CreateHomeRegionControlRequest(
         dry_run=False,
-        home_region="doloremque",
+        home_region="corrupti",
         target=shared.Target(
-            id="minus",
+            id="provident",
             type="ACCOUNT",
         ),
     ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+    x_amz_target="AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
 )
     
 res = s.create_home_region_control(req)

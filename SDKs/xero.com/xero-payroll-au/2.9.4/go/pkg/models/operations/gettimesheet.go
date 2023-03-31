@@ -8,23 +8,14 @@ import (
 )
 
 type GetTimesheetSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetTimesheetPathParams struct {
-	// Timesheet id for single object
-	TimesheetID string `pathParam:"style=simple,explode=false,name=TimesheetID"`
-}
-
-type GetTimesheetHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTimesheetRequest struct {
-	PathParams GetTimesheetPathParams
-	Headers    GetTimesheetHeaders
-	Security   GetTimesheetSecurity
+	// Timesheet id for single object
+	TimesheetID string `pathParam:"style=simple,explode=false,name=TimesheetID"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type GetTimesheetResponse struct {

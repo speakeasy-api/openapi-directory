@@ -8,12 +8,7 @@ import (
 )
 
 type AddBrocadeSwitchSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddBrocadeSwitchRequest struct {
-	Request  *shared.SwitchDataSourceRequest `request:"mediaType=application/json"`
-	Security AddBrocadeSwitchSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddBrocadeSwitchResponse struct {

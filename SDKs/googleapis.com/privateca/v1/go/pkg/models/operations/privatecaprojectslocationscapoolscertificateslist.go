@@ -8,16 +8,11 @@ import (
 )
 
 type PrivatecaProjectsLocationsCaPoolsCertificatesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivatecaProjectsLocationsCaPoolsCertificatesListPathParams struct {
-	// Required. The resource name of the location associated with the Certificates, in the format `projects/*/locations/*/caPools/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type PrivatecaProjectsLocationsCaPoolsCertificatesListQueryParams struct {
+type PrivatecaProjectsLocationsCaPoolsCertificatesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type PrivatecaProjectsLocationsCaPoolsCertificatesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Pagination token, returned earlier via ListCertificatesResponse.next_page_token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the location associated with the Certificates, in the format `projects/*/locations/*/caPools/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type PrivatecaProjectsLocationsCaPoolsCertificatesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PrivatecaProjectsLocationsCaPoolsCertificatesListRequest struct {
-	PathParams  PrivatecaProjectsLocationsCaPoolsCertificatesListPathParams
-	QueryParams PrivatecaProjectsLocationsCaPoolsCertificatesListQueryParams
-	Security    PrivatecaProjectsLocationsCaPoolsCertificatesListSecurity
 }
 
 type PrivatecaProjectsLocationsCaPoolsCertificatesListResponse struct {

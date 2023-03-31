@@ -8,18 +8,18 @@ import (
 )
 
 type CloudbillingServicesSkusListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudbillingServicesSkusListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudbillingServicesSkusListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudbillingServicesSkusListSecurity struct {
@@ -28,12 +28,7 @@ type CloudbillingServicesSkusListSecurity struct {
 	Option3 *CloudbillingServicesSkusListSecurityOption3 `security:"option"`
 }
 
-type CloudbillingServicesSkusListPathParams struct {
-	// Required. The name of the service. Example: "services/DA34-426B-A397"
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudbillingServicesSkusListQueryParams struct {
+type CloudbillingServicesSkusListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -56,6 +51,8 @@ type CloudbillingServicesSkusListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token identifying a page of results to return. This should be a `next_page_token` value returned from a previous `ListSkus` call. If unspecified, the first page of results is returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the service. Example: "services/DA34-426B-A397"
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -66,12 +63,6 @@ type CloudbillingServicesSkusListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudbillingServicesSkusListRequest struct {
-	PathParams  CloudbillingServicesSkusListPathParams
-	QueryParams CloudbillingServicesSkusListQueryParams
-	Security    CloudbillingServicesSkusListSecurity
 }
 
 type CloudbillingServicesSkusListResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionInOrgPathParams struct {
-	DiscussionNumber int64  `pathParam:"style=simple,explode=false,name=discussion_number"`
-	Org              string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 // ReactionsListForTeamDiscussionInOrgContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@3.0/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
 type ReactionsListForTeamDiscussionInOrgContentEnum string
 
@@ -58,18 +51,17 @@ func (e *ReactionsListForTeamDiscussionInOrgContentEnum) UnmarshalJSON(data []by
 	}
 }
 
-type ReactionsListForTeamDiscussionInOrgQueryParams struct {
+type ReactionsListForTeamDiscussionInOrgRequest struct {
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@3.0/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
-	Content *ReactionsListForTeamDiscussionInOrgContentEnum `queryParam:"style=form,explode=true,name=content"`
+	Content          *ReactionsListForTeamDiscussionInOrgContentEnum `queryParam:"style=form,explode=true,name=content"`
+	DiscussionNumber int64                                           `pathParam:"style=simple,explode=false,name=discussion_number"`
+	Org              string                                          `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionInOrgRequest struct {
-	PathParams  ReactionsListForTeamDiscussionInOrgPathParams
-	QueryParams ReactionsListForTeamDiscussionInOrgQueryParams
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type ReactionsListForTeamDiscussionInOrgResponse struct {

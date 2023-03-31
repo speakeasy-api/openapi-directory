@@ -35,16 +35,16 @@ func newSegments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DeleteAPIV2SegmentsID - Deletes the segment with the given ID.
-func (s *segments) DeleteAPIV2SegmentsID(ctx context.Context, request operations.DeleteAPIV2SegmentsIDRequest) (*operations.DeleteAPIV2SegmentsIDResponse, error) {
+func (s *segments) DeleteAPIV2SegmentsID(ctx context.Context, request operations.DeleteAPIV2SegmentsIDRequest, security operations.DeleteAPIV2SegmentsIDSecurity) (*operations.DeleteAPIV2SegmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *segments) DeleteAPIV2SegmentsID(ctx context.Context, request operations
 }
 
 // GetAPIV2Segments - Returns the segments matching the query parameters.
-func (s *segments) GetAPIV2Segments(ctx context.Context, request operations.GetAPIV2SegmentsRequest) (*operations.GetAPIV2SegmentsResponse, error) {
+func (s *segments) GetAPIV2Segments(ctx context.Context, request operations.GetAPIV2SegmentsRequest, security operations.GetAPIV2SegmentsSecurity) (*operations.GetAPIV2SegmentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/segments"
 
@@ -91,11 +91,11 @@ func (s *segments) GetAPIV2Segments(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,16 +142,16 @@ func (s *segments) GetAPIV2Segments(ctx context.Context, request operations.GetA
 }
 
 // GetAPIV2SegmentsID - Returns the segment matching the given ID.
-func (s *segments) GetAPIV2SegmentsID(ctx context.Context, request operations.GetAPIV2SegmentsIDRequest) (*operations.GetAPIV2SegmentsIDResponse, error) {
+func (s *segments) GetAPIV2SegmentsID(ctx context.Context, request operations.GetAPIV2SegmentsIDRequest, security operations.GetAPIV2SegmentsIDSecurity) (*operations.GetAPIV2SegmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,16 +198,16 @@ func (s *segments) GetAPIV2SegmentsID(ctx context.Context, request operations.Ge
 }
 
 // GetAPIV2SegmentsIDContent - UNDER DEVELOPMENT - Returns the audio content segment matching the given ID.
-func (s *segments) GetAPIV2SegmentsIDContent(ctx context.Context, request operations.GetAPIV2SegmentsIDContentRequest) (*operations.GetAPIV2SegmentsIDContentResponse, error) {
+func (s *segments) GetAPIV2SegmentsIDContent(ctx context.Context, request operations.GetAPIV2SegmentsIDContentRequest, security operations.GetAPIV2SegmentsIDContentSecurity) (*operations.GetAPIV2SegmentsIDContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -243,7 +243,7 @@ func (s *segments) GetAPIV2SegmentsIDContent(ctx context.Context, request operat
 }
 
 // PostAPIV2Segments - Creates a new segment.
-func (s *segments) PostAPIV2Segments(ctx context.Context, request operations.PostAPIV2SegmentsRequest) (*operations.PostAPIV2SegmentsResponse, error) {
+func (s *segments) PostAPIV2Segments(ctx context.Context, request operations.PostAPIV2SegmentsRequestBody, security operations.PostAPIV2SegmentsSecurity) (*operations.PostAPIV2SegmentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/segments"
 
@@ -259,7 +259,7 @@ func (s *segments) PostAPIV2Segments(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

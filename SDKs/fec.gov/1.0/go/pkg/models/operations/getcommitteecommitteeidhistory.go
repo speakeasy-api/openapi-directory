@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommitteeCommitteeIDHistoryPathParams struct {
-	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
-	//
-	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
-}
-
 type GetCommitteeCommitteeIDHistoryDesignationEnum string
 
 const (
@@ -53,10 +47,13 @@ func (e *GetCommitteeCommitteeIDHistoryDesignationEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetCommitteeCommitteeIDHistoryQueryParams struct {
+type GetCommitteeCommitteeIDHistoryRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	CommitteeID string `pathParam:"style=simple,explode=false,name=committee_id"`
 	// The one-letter designation code of the organization:
 	//          - A authorized by a candidate
 	//          - J joint fundraising committee
@@ -82,11 +79,6 @@ type GetCommitteeCommitteeIDHistoryQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetCommitteeCommitteeIDHistoryRequest struct {
-	PathParams  GetCommitteeCommitteeIDHistoryPathParams
-	QueryParams GetCommitteeCommitteeIDHistoryQueryParams
 }
 
 type GetCommitteeCommitteeIDHistoryResponse struct {

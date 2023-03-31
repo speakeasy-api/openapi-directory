@@ -10,8 +10,8 @@ import (
 )
 
 type GetSimilarImagesSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSimilarImagesLicenseEnum string
@@ -61,7 +61,7 @@ func (e *GetSimilarImagesViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSimilarImagesQueryParams struct {
+type GetSimilarImagesRequest struct {
 	// The asset ID or upload ID to find similar images for
 	AssetID string `queryParam:"style=form,explode=true,name=asset_id"`
 	// Language for the keywords and categories in the response
@@ -76,11 +76,6 @@ type GetSimilarImagesQueryParams struct {
 	Safe *bool `queryParam:"style=form,explode=true,name=safe"`
 	// Amount of detail to render in the response
 	View *GetSimilarImagesViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetSimilarImagesRequest struct {
-	QueryParams GetSimilarImagesQueryParams
-	Security    GetSimilarImagesSecurity
 }
 
 type GetSimilarImagesResponse struct {

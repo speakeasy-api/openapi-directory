@@ -12,18 +12,13 @@ var FetchAccountSecretServerList = []string{
 }
 
 type FetchAccountSecretSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchAccountSecretPathParams struct {
-	// The secret key; up to 100 characters.
-	Key string `pathParam:"style=simple,explode=false,name=Key"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchAccountSecretRequest struct {
-	PathParams FetchAccountSecretPathParams
-	Security   FetchAccountSecretSecurity
-	ServerURL  *string
+	// The secret key; up to 100 characters.
+	Key string `pathParam:"style=simple,explode=false,name=Key"`
 }
 
 type FetchAccountSecretResponse struct {

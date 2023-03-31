@@ -11,10 +11,6 @@ var EnterpriseAdminGetMaintenanceStatusServerList = []string{
 	"https://{protocol}://{hostname}",
 }
 
-type EnterpriseAdminGetMaintenanceStatusRequest struct {
-	ServerURL *string
-}
-
 type EnterpriseAdminGetMaintenanceStatusResponse struct {
 	ContentType string
 	StatusCode  int

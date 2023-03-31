@@ -13,13 +13,8 @@ var UpdateUserChannelServerList = []string{
 }
 
 type UpdateUserChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUserChannelPathParams struct {
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	UserSid    string `pathParam:"style=simple,explode=false,name=UserSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUserChannelUpdateUserChannelRequest struct {
@@ -29,10 +24,10 @@ type UpdateUserChannelUpdateUserChannelRequest struct {
 }
 
 type UpdateUserChannelRequest struct {
-	PathParams UpdateUserChannelPathParams
-	Request    *UpdateUserChannelUpdateUserChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUserChannelSecurity
-	ServerURL  *string
+	ChannelSid  string                                     `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateUserChannelUpdateUserChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                                     `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	UserSid     string                                     `pathParam:"style=simple,explode=false,name=UserSid"`
 }
 
 type UpdateUserChannelResponse struct {

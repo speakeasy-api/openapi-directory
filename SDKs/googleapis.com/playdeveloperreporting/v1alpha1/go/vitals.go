@@ -32,20 +32,20 @@ func newVitals(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // PlaydeveloperreportingVitalsErrorsIssuesSearch - Searches all error issues in which reports have been grouped.
-func (s *vitals) PlaydeveloperreportingVitalsErrorsIssuesSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest) (*operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse, error) {
+func (s *vitals) PlaydeveloperreportingVitalsErrorsIssuesSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest, security operations.PlaydeveloperreportingVitalsErrorsIssuesSearchSecurity) (*operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/errorIssues:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/errorIssues:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *vitals) PlaydeveloperreportingVitalsErrorsIssuesSearch(ctx context.Cont
 }
 
 // PlaydeveloperreportingVitalsErrorsReportsSearch - Searches all error reports received for an app.
-func (s *vitals) PlaydeveloperreportingVitalsErrorsReportsSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest) (*operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse, error) {
+func (s *vitals) PlaydeveloperreportingVitalsErrorsReportsSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest, security operations.PlaydeveloperreportingVitalsErrorsReportsSearchSecurity) (*operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/errorReports:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/errorReports:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *vitals) PlaydeveloperreportingVitalsErrorsReportsSearch(ctx context.Con
 }
 
 // PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet - Describes the properties of the metric set.
-func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse, error) {
+func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest, security operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetSecurity) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,11 +176,11 @@ func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx 
 }
 
 // PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery - Queries the metrics in the metric set.
-func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse, error) {
+func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest, security operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuerySecurity) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakelockRateMetricSetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -192,11 +192,11 @@ func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

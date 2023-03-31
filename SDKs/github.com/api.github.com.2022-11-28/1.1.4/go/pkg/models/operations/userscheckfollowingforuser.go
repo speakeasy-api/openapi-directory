@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type UsersCheckFollowingForUserPathParams struct {
+type UsersCheckFollowingForUserRequest struct {
 	TargetUser string `pathParam:"style=simple,explode=false,name=target_user"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UsersCheckFollowingForUserRequest struct {
-	PathParams UsersCheckFollowingForUserPathParams
 }
 
 type UsersCheckFollowingForUserResponse struct {

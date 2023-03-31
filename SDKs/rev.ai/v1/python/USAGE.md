@@ -3,14 +3,12 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        access_token=shared.SchemeAccessToken(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
+        access_token="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
 )
+
     
 res = s.account.get_account()
 

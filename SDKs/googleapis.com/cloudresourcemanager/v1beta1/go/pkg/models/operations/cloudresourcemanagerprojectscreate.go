@@ -8,13 +8,14 @@ import (
 )
 
 type CloudresourcemanagerProjectsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudresourcemanagerProjectsCreateQueryParams struct {
+type CloudresourcemanagerProjectsCreateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Project     *shared.Project   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -37,12 +38,6 @@ type CloudresourcemanagerProjectsCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// A now unused experiment opt-out option.
 	UseLegacyStack *bool `queryParam:"style=form,explode=true,name=useLegacyStack"`
-}
-
-type CloudresourcemanagerProjectsCreateRequest struct {
-	QueryParams CloudresourcemanagerProjectsCreateQueryParams
-	Request     *shared.Project `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerProjectsCreateSecurity
 }
 
 type CloudresourcemanagerProjectsCreateResponse struct {

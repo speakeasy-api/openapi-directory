@@ -20,10 +20,6 @@ type QRCodeRequestBody struct {
 	Width *int `form:"name=width"`
 }
 
-type QRCodeRequest struct {
-	Request QRCodeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type QRCodeResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError                             *shared.APIError

@@ -45,10 +45,9 @@ pkg/models/operations/vmmigrationprojectslocationstargetprojectslist.go
 pkg/models/operations/vmmigrationprojectslocationstargetprojectspatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
-pkg/models/shared/addgroupmigrationrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/addgroupmigrationrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/group.go
 pkg/models/shared/listgroupsresponse.go
 pkg/models/shared/removegroupmigrationrequest.go

@@ -25,98 +25,96 @@ func main() {
     s := sdk.New()
 
     req := operations.DigitalassetlinksAssetlinksBulkCheckRequest{
-        QueryParams: operations.DigitalassetlinksAssetlinksBulkCheckQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.BulkCheckRequest{
+        DollarXgafv: "2",
+        BulkCheckRequest: &shared.BulkCheckRequest{
             AllowGoogleInternalDataSources: false,
-            DefaultRelation: "deserunt",
+            DefaultRelation: "provident",
             DefaultSource: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "suscipit",
+                        Sha256Fingerprint: "distinctio",
                     },
-                    PackageName: "iure",
+                    PackageName: "quibusdam",
                 },
                 Web: &shared.WebAsset{
-                    Site: "magnam",
+                    Site: "unde",
                 },
             },
             DefaultTarget: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "debitis",
+                        Sha256Fingerprint: "nulla",
                     },
-                    PackageName: "ipsa",
+                    PackageName: "corrupti",
                 },
                 Web: &shared.WebAsset{
-                    Site: "delectus",
+                    Site: "illum",
                 },
             },
             SkipCacheLookup: false,
             Statements: []shared.StatementTemplate{
                 shared.StatementTemplate{
-                    Relation: "suscipit",
+                    Relation: "error",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "molestiae",
+                                Sha256Fingerprint: "deserunt",
                             },
-                            PackageName: "minus",
+                            PackageName: "suscipit",
                         },
                         Web: &shared.WebAsset{
-                            Site: "placeat",
+                            Site: "iure",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "voluptatum",
+                                Sha256Fingerprint: "magnam",
                             },
-                            PackageName: "iusto",
+                            PackageName: "debitis",
                         },
                         Web: &shared.WebAsset{
-                            Site: "excepturi",
+                            Site: "ipsa",
                         },
                     },
                 },
                 shared.StatementTemplate{
-                    Relation: "nisi",
+                    Relation: "delectus",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "recusandae",
+                                Sha256Fingerprint: "tempora",
                             },
-                            PackageName: "temporibus",
+                            PackageName: "suscipit",
                         },
                         Web: &shared.WebAsset{
-                            Site: "ab",
+                            Site: "molestiae",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "quis",
+                                Sha256Fingerprint: "minus",
                             },
-                            PackageName: "veritatis",
+                            PackageName: "placeat",
                         },
                         Web: &shared.WebAsset{
-                            Site: "deserunt",
+                            Site: "voluptatum",
                         },
                     },
                 },
             },
         },
+        AccessToken: "iusto",
+        Alt: "media",
+        Callback: "nisi",
+        Fields: "recusandae",
+        Key: "temporibus",
+        OauthToken: "ab",
+        PrettyPrint: false,
+        QuotaUser: "quis",
+        UploadType: "veritatis",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()
@@ -133,7 +131,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Assetlinks
@@ -146,4 +144,15 @@ func main() {
 * `DigitalassetlinksStatementsList` - Retrieves a list of all statements from a given source that match the specified target and statement string. The API guarantees that all statements with secure source assets, such as HTTPS websites or Android apps, have been made in a secure way by the owner of those assets, as described in the [Digital Asset Links technical design specification](https://github.com/google/digitalassetlinks/blob/master/well-known/details.md). Specifically, you should consider that for insecure websites (that is, where the URL starts with `http://` instead of `https://`), this guarantee cannot be made. The `List` command is most useful in cases where the API client wants to know all the ways in which two assets are related, or enumerate all the relationships from a particular source asset. Example: a feature that helps users navigate to related items. When a mobile app is running on a device, the feature would make it easy to navigate to the corresponding web site or Google+ profile.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

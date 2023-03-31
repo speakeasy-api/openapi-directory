@@ -11,10 +11,6 @@ type PostCheckRequestBody struct {
 	Token string `json:"token"`
 }
 
-type PostCheckRequest struct {
-	Request PostCheckRequestBody `request:"mediaType=application/json"`
-}
-
 // PostCheck400ApplicationJSON - Bad Request
 type PostCheck400ApplicationJSON struct {
 	// Error message

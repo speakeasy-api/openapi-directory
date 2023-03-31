@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type EmailValidationPathParams struct {
+type EmailValidationRequest struct {
 	// (Required) USER_EMAIL_HERE
 	UserEmailHere string `pathParam:"style=simple,explode=false,name=USER_EMAIL_HERE"`
 	// (Required) YOUR_API_KEY_HERE
 	YourAPIKeyHere string `pathParam:"style=simple,explode=false,name=YOUR_API_KEY_HERE"`
-}
-
-type EmailValidationRequest struct {
-	PathParams EmailValidationPathParams
 }
 
 // EmailValidation500ApplicationJSON - Unexpected error

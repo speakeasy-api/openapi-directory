@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CheckTokenPathParams struct {
+type CheckTokenRequest struct {
 	TokenID   string `pathParam:"style=simple,explode=false,name=tokenId"`
 	TokenName string `pathParam:"style=simple,explode=false,name=tokenName"`
-}
-
-type CheckTokenRequest struct {
-	PathParams CheckTokenPathParams
 }
 
 type CheckTokenResponse struct {

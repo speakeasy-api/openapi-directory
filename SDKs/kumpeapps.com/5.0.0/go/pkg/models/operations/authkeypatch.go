@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AuthkeyPatchQueryParams struct {
+type AuthkeyPatchRequest struct {
 	// auth key to mark as compromised
 	AuthKey string `queryParam:"style=form,explode=true,name=auth_key"`
 	// Comments (like how was this compromised)
 	Comments *string `queryParam:"style=form,explode=true,name=comments"`
-}
-
-type AuthkeyPatchRequest struct {
-	QueryParams AuthkeyPatchQueryParams
 }
 
 type AuthkeyPatchResponse struct {

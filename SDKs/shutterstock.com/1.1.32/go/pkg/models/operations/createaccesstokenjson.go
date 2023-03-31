@@ -77,10 +77,6 @@ type CreateAccessTokenApplicationJSON struct {
 	RefreshToken *string `json:"refresh_token,omitempty"`
 }
 
-type CreateAccessTokenJSONRequest struct {
-	Request *CreateAccessTokenApplicationJSON `request:"mediaType=application/json"`
-}
-
 type CreateAccessTokenJSONResponse struct {
 	ContentType string
 	// OK

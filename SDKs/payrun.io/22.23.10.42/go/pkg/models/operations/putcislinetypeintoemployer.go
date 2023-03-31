@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutCisLineTypeIntoEmployerPathParams struct {
-	// The CIS line type unique identifier. E.g. TYPEA
-	CisLineTypeID string `pathParam:"style=simple,explode=false,name=CisLineTypeId"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type PutCisLineTypeIntoEmployerHeaders struct {
+type PutCisLineTypeIntoEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PutCisLineTypeIntoEmployerRequest struct {
-	PathParams PutCisLineTypeIntoEmployerPathParams
-	Headers    PutCisLineTypeIntoEmployerHeaders
 	// The CIS line type object.
-	Request shared.CisLineType `request:"mediaType=application/json"`
+	CisLineType shared.CisLineType `request:"mediaType=application/json"`
+	// The CIS line type unique identifier. E.g. TYPEA
+	CisLineTypeID string `pathParam:"style=simple,explode=false,name=CisLineTypeId"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type PutCisLineTypeIntoEmployerResponse struct {

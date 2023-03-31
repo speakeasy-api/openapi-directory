@@ -7,29 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PredictImageURLFormPathParams struct {
-	// The project id
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PredictImageURLFormQueryParams struct {
+type PredictImageURLFormRequest struct {
+	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
+	ImageURL      shared.ImageURL `request:"mediaType=application/x-www-form-urlencoded"`
+	PredictionKey string          `header:"style=simple,explode=false,name=Prediction-Key"`
 	// Optional. Specifies the name of application using the endpoint
 	Application *string `queryParam:"style=form,explode=true,name=application"`
 	// Optional. Specifies the id of a particular iteration to evaluate against.
 	//             The default iteration for the project will be used when not specified
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type PredictImageURLFormHeaders struct {
-	PredictionKey string `header:"style=simple,explode=false,name=Prediction-Key"`
-}
-
-type PredictImageURLFormRequest struct {
-	PathParams  PredictImageURLFormPathParams
-	QueryParams PredictImageURLFormQueryParams
-	Headers     PredictImageURLFormHeaders
-	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
-	Request shared.ImageURL `request:"mediaType=application/x-www-form-urlencoded"`
+	// The project id
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type PredictImageURLFormResponse struct {

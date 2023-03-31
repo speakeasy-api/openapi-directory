@@ -8,17 +8,12 @@ import (
 )
 
 type GetSpacesIDTriggersSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSpacesIDTriggersPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSpacesIDTriggersRequest struct {
-	PathParams GetSpacesIDTriggersPathParams
-	Security   GetSpacesIDTriggersSecurity
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpacesIDTriggersResponse struct {

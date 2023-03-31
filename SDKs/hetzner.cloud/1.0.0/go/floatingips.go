@@ -44,7 +44,7 @@ func newFloatingIPs(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes a Floating IP. If it is currently assigned to a Server it will automatically get unassigned.
 func (s *floatingIPs) DeleteFloatingIpsID(ctx context.Context, request operations.DeleteFloatingIpsIDRequest) (*operations.DeleteFloatingIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *floatingIPs) GetFloatingIps(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -129,7 +129,7 @@ func (s *floatingIPs) GetFloatingIps(ctx context.Context, request operations.Get
 // Returns a specific Floating IP object.
 func (s *floatingIPs) GetFloatingIpsID(ctx context.Context, request operations.GetFloatingIpsIDRequest) (*operations.GetFloatingIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *floatingIPs) GetFloatingIpsID(ctx context.Context, request operations.G
 
 // PostFloatingIps - Create a Floating IP
 // Creates a new Floating IP assigned to a Server. If you want to create a Floating IP that is not bound to a Server, you need to provide the `home_location` key instead of `server`. This can be either the ID or the name of the Location this IP shall be created in. Note that a Floating IP can be assigned to a Server in any Location later on. For optimal routing it is advised to use the Floating IP in the same Location it was created in.
-func (s *floatingIPs) PostFloatingIps(ctx context.Context, request operations.PostFloatingIpsRequest) (*operations.PostFloatingIpsResponse, error) {
+func (s *floatingIPs) PostFloatingIps(ctx context.Context, request operations.PostFloatingIpsCreateFloatingIPRequest) (*operations.PostFloatingIpsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/floating_ips"
 
@@ -227,9 +227,9 @@ func (s *floatingIPs) PostFloatingIps(ctx context.Context, request operations.Po
 // Also note that when updating labels, the Floating IP’s current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
 func (s *floatingIPs) PutFloatingIpsID(ctx context.Context, request operations.PutFloatingIpsIDRequest) (*operations.PutFloatingIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

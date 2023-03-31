@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditTaskPathParams struct {
-	// Task ID.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type EditTaskHeaders struct {
+type EditTaskRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type EditTaskRequest struct {
-	PathParams EditTaskPathParams
-	Headers    EditTaskHeaders
-	Request    shared.EditTaskRequest `request:"mediaType=application/json"`
+	ContentType     string                 `header:"style=simple,explode=false,name=Content-Type"`
+	EditTaskRequest shared.EditTaskRequest `request:"mediaType=application/json"`
+	// Task ID.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type EditTaskResponse struct {

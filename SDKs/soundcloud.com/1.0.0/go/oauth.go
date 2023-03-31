@@ -38,7 +38,7 @@ func newOauth(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // <h3>Security Advice</h3>
 // * Using the [implicit OAuth authorization flow](https://tools.ietf.org/html/draft-ietf-oauth-security-topics-16#section-2.1.2) (`response_type=token`)  is **not recommended**. It can suffer from access token leakage and access token replay attacks. Use `response_type=code` instead.
 // * Use the `state` parameter for [CSRF protection](https://tools.ietf.org/html/draft-ietf-oauth-security-topics-16#section-4.7). Pass a sufficient  random nonce here and verify this nonce again after retrieving the token.
-func (s *oauth) GetConnect(ctx context.Context, request operations.GetConnectRequest) (*operations.GetConnectResponse, error) {
+func (s *oauth) GetConnect(ctx context.Context, request operations.GetConnectRequest, security operations.GetConnectSecurity) (*operations.GetConnectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connect"
 
@@ -47,11 +47,11 @@ func (s *oauth) GetConnect(ctx context.Context, request operations.GetConnectReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

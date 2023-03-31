@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type GetQuestionsQueryParams struct {
+type GetQuestionsRequest struct {
+	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
 	// The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
 	// used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
 	AppToken *string `queryParam:"style=form,explode=true,name=app_token"`
@@ -18,16 +20,6 @@ type GetQuestionsQueryParams struct {
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	// String to search against.
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GetQuestionsHeaders struct {
-	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
-	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
-}
-
-type GetQuestionsRequest struct {
-	QueryParams GetQuestionsQueryParams
-	Headers     GetQuestionsHeaders
 }
 
 type GetQuestionsResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasRecentActivityListQueryParams struct {
+type ExtrasRecentActivityListRequest struct {
 	// Number of results to return per page.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The initial index from which to return the results.
 	Offset   *int64  `queryParam:"style=form,explode=true,name=offset"`
 	User     *string `queryParam:"style=form,explode=true,name=user"`
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type ExtrasRecentActivityListRequest struct {
-	QueryParams ExtrasRecentActivityListQueryParams
 }
 
 type ExtrasRecentActivityList200ApplicationJSON struct {

@@ -258,10 +258,6 @@ func (u PostAdminRequestsRemoveByMetadataRequestBody) MarshalJSON() ([]byte, err
 	return nil, nil
 }
 
-type PostAdminRequestsRemoveByMetadataRequest struct {
-	Request *PostAdminRequestsRemoveByMetadataRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAdminRequestsRemoveByMetadataResponse struct {
 	ContentType string
 	StatusCode  int

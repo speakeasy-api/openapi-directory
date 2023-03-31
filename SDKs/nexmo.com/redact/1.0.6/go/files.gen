@@ -20,5 +20,4 @@ pkg/models/shared/errorunauthorized.go
 pkg/models/shared/errorthrottled.go
 pkg/models/shared/errorinvalidid.go
 pkg/models/shared/redacttransaction.go
-pkg/models/shared/security.go
 USAGE.md

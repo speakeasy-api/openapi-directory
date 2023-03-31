@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDeviceRequest struct {
-	Request shared.CreateDeviceRequest `request:"mediaType=application/json"`
-}
-
 type CreateDeviceResponse struct {
 	// Bad request
 	APIError    *shared.APIError

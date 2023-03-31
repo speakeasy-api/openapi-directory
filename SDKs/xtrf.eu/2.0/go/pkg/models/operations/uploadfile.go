@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type UploadFileRequest struct {
-	// Uploaded file
-	Request shared.FileToUploadDto `request:"mediaType=multipart/form-data"`
-}
 
 type UploadFileResponse struct {
 	ContentType string

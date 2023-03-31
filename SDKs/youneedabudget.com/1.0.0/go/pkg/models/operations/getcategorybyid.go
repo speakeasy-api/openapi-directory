@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoryByIDPathParams struct {
+type GetCategoryByIDRequest struct {
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The id of the category
 	CategoryID string `pathParam:"style=simple,explode=false,name=category_id"`
-}
-
-type GetCategoryByIDRequest struct {
-	PathParams GetCategoryByIDPathParams
 }
 
 type GetCategoryByIDResponse struct {

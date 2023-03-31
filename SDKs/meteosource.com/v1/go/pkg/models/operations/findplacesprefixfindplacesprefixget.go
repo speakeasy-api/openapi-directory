@@ -10,7 +10,7 @@ import (
 )
 
 type FindPlacesPrefixFindPlacesPrefixGetSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 // FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum - An enumeration.
@@ -52,7 +52,7 @@ func (e *FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum) UnmarshalJSON(
 	}
 }
 
-type FindPlacesPrefixFindPlacesPrefixGetQueryParams struct {
+type FindPlacesPrefixFindPlacesPrefixGetRequest struct {
 	// Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The language of text summaries and place names (variable names are never translated). Available languages are:
@@ -68,11 +68,6 @@ type FindPlacesPrefixFindPlacesPrefixGetQueryParams struct {
 	Language *FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum `queryParam:"style=form,explode=true,name=language"`
 	// Place name or ZIP code
 	Text string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type FindPlacesPrefixFindPlacesPrefixGetRequest struct {
-	QueryParams FindPlacesPrefixFindPlacesPrefixGetQueryParams
-	Security    FindPlacesPrefixFindPlacesPrefixGetSecurity
 }
 
 type FindPlacesPrefixFindPlacesPrefixGetResponse struct {

@@ -29,7 +29,6 @@ pkg/models/shared/googletypedecimal.go
 pkg/models/shared/googleplaydeveloperreportingv1alpha1dimensionvalue.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleplaydeveloperreportingv1alpha1searcherrorissuesresponse.go
 pkg/models/shared/googleplaydeveloperreportingv1alpha1errorissue.go
 pkg/models/shared/googleplaydeveloperreportingv1alpha1searcherrorreportsresponse.go

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ListPayeeChangesV3QueryParams struct {
+type ListPayeeChangesV3Request struct {
 	// Page number. Default is 1.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// Page size. Default is 100. Max allowable is 1000.
@@ -17,10 +17,6 @@ type ListPayeeChangesV3QueryParams struct {
 	PayorID string `queryParam:"style=form,explode=true,name=payorId"`
 	// The updatedSince filter in the format YYYY-MM-DDThh:mm:ss+hh:mm
 	UpdatedSince time.Time `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type ListPayeeChangesV3Request struct {
-	QueryParams ListPayeeChangesV3QueryParams
 }
 
 type ListPayeeChangesV3Response struct {

@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DialogflowProjectsLocationsAgentEntityTypesBatchDelete - Deletes entity types in the specified agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchDelete(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteRequest) (*operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchDelete(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteRequest, security operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteSecurity) (*operations.DialogflowProjectsLocationsAgentEntityTypesBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes:batchDelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes:batchDelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchDelete(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchDelete(ctx co
 }
 
 // DialogflowProjectsLocationsAgentEntityTypesBatchUpdate - Updates/Creates multiple entity types in the specified agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: BatchUpdateEntityTypesResponse Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchUpdate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesBatchUpdateRequest) (*operations.DialogflowProjectsLocationsAgentEntityTypesBatchUpdateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchUpdate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesBatchUpdateRequest, security operations.DialogflowProjectsLocationsAgentEntityTypesBatchUpdateSecurity) (*operations.DialogflowProjectsLocationsAgentEntityTypesBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchUpdateEntityTypesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchUpdate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesBatchUpdate(ctx co
 }
 
 // DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreate - Creates multiple new entities in the specified entity type. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreateRequest) (*operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreateRequest, security operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreateSecurity) (*operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities:batchCreate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities:batchCreate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchCreateEntitiesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -158,11 +158,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,11 +197,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchCreat
 }
 
 // DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDelete - Deletes entities in the specified entity type. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDelete(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDeleteRequest) (*operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDeleteResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDelete(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDeleteRequest, security operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDeleteSecurity) (*operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities:batchDelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities:batchDelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchDeleteEntitiesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,11 +213,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDelet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,11 +252,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchDelet
 }
 
 // DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdate - Updates or creates multiple entities in the specified entity type. This method does not affect entities in the entity type that aren't explicitly specified in the request. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest) (*operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest, security operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateSecurity) (*operations.DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchUpdateEntitiesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -268,11 +268,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,11 +307,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdat
 }
 
 // DialogflowProjectsLocationsAgentEnvironmentsCreate - Creates an agent environment.
-func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEnvironmentsCreateRequest) (*operations.DialogflowProjectsLocationsAgentEnvironmentsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEnvironmentsCreateRequest, security operations.DialogflowProjectsLocationsAgentEnvironmentsCreateSecurity) (*operations.DialogflowProjectsLocationsAgentEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/environments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/environments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2EnvironmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,11 +323,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsCreate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,20 +362,20 @@ func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsCreate(ctx contex
 }
 
 // DialogflowProjectsLocationsAgentEnvironmentsGetHistory - Gets the history of the specified environment.
-func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsGetHistory(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEnvironmentsGetHistoryRequest) (*operations.DialogflowProjectsLocationsAgentEnvironmentsGetHistoryResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsGetHistory(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEnvironmentsGetHistoryRequest, security operations.DialogflowProjectsLocationsAgentEnvironmentsGetHistorySecurity) (*operations.DialogflowProjectsLocationsAgentEnvironmentsGetHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,20 +410,20 @@ func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsGetHistory(ctx co
 }
 
 // DialogflowProjectsLocationsAgentEnvironmentsList - Returns the list of all non-default environments of the specified agent.
-func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEnvironmentsListRequest) (*operations.DialogflowProjectsLocationsAgentEnvironmentsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentEnvironmentsListRequest, security operations.DialogflowProjectsLocationsAgentEnvironmentsListSecurity) (*operations.DialogflowProjectsLocationsAgentEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/environments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/environments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -458,11 +458,11 @@ func (s *projects) DialogflowProjectsLocationsAgentEnvironmentsList(ctx context.
 }
 
 // DialogflowProjectsLocationsAgentExport - Exports the specified agent to a ZIP file. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: ExportAgentResponse
-func (s *projects) DialogflowProjectsLocationsAgentExport(ctx context.Context, request operations.DialogflowProjectsLocationsAgentExportRequest) (*operations.DialogflowProjectsLocationsAgentExportResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentExport(ctx context.Context, request operations.DialogflowProjectsLocationsAgentExportRequest, security operations.DialogflowProjectsLocationsAgentExportSecurity) (*operations.DialogflowProjectsLocationsAgentExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ExportAgentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -474,11 +474,11 @@ func (s *projects) DialogflowProjectsLocationsAgentExport(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,20 +513,20 @@ func (s *projects) DialogflowProjectsLocationsAgentExport(ctx context.Context, r
 }
 
 // DialogflowProjectsLocationsAgentGetValidationResult - Gets agent validation result. Agent validation is performed during training time and is updated automatically when training is completed.
-func (s *projects) DialogflowProjectsLocationsAgentGetValidationResult(ctx context.Context, request operations.DialogflowProjectsLocationsAgentGetValidationResultRequest) (*operations.DialogflowProjectsLocationsAgentGetValidationResultResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentGetValidationResult(ctx context.Context, request operations.DialogflowProjectsLocationsAgentGetValidationResultRequest, security operations.DialogflowProjectsLocationsAgentGetValidationResultSecurity) (*operations.DialogflowProjectsLocationsAgentGetValidationResultResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent/validationResult", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent/validationResult", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,11 +561,11 @@ func (s *projects) DialogflowProjectsLocationsAgentGetValidationResult(ctx conte
 }
 
 // DialogflowProjectsLocationsAgentImport - Imports the specified agent from a ZIP file. Uploads new intents and entity types without deleting the existing ones. Intents and entity types with the same name are replaced with the new versions from ImportAgentRequest. After the import, the imported draft agent will be trained automatically (unless disabled in agent settings). However, once the import is done, training may not be completed yet. Please call TrainAgent and wait for the operation it returns in order to train explicitly. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) The operation only tracks when importing is complete, not when it is done training. Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentImport(ctx context.Context, request operations.DialogflowProjectsLocationsAgentImportRequest) (*operations.DialogflowProjectsLocationsAgentImportResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentImport(ctx context.Context, request operations.DialogflowProjectsLocationsAgentImportRequest, security operations.DialogflowProjectsLocationsAgentImportSecurity) (*operations.DialogflowProjectsLocationsAgentImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ImportAgentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -577,11 +577,11 @@ func (s *projects) DialogflowProjectsLocationsAgentImport(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -616,11 +616,11 @@ func (s *projects) DialogflowProjectsLocationsAgentImport(ctx context.Context, r
 }
 
 // DialogflowProjectsLocationsAgentIntentsBatchDelete - Deletes intents in the specified agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchDelete(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsBatchDeleteRequest) (*operations.DialogflowProjectsLocationsAgentIntentsBatchDeleteResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchDelete(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsBatchDeleteRequest, security operations.DialogflowProjectsLocationsAgentIntentsBatchDeleteSecurity) (*operations.DialogflowProjectsLocationsAgentIntentsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents:batchDelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents:batchDelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchDeleteIntentsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -632,11 +632,11 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchDelete(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -671,11 +671,11 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchDelete(ctx contex
 }
 
 // DialogflowProjectsLocationsAgentIntentsBatchUpdate - Updates/Creates multiple intents in the specified agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: BatchUpdateIntentsResponse Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchUpdate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsBatchUpdateRequest) (*operations.DialogflowProjectsLocationsAgentIntentsBatchUpdateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchUpdate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsBatchUpdateRequest, security operations.DialogflowProjectsLocationsAgentIntentsBatchUpdateSecurity) (*operations.DialogflowProjectsLocationsAgentIntentsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2BatchUpdateIntentsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -687,11 +687,11 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchUpdate(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -726,11 +726,11 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsBatchUpdate(ctx contex
 }
 
 // DialogflowProjectsLocationsAgentIntentsCreate - Creates an intent in the specified agent. Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentIntentsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsCreateRequest) (*operations.DialogflowProjectsLocationsAgentIntentsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentIntentsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsCreateRequest, security operations.DialogflowProjectsLocationsAgentIntentsCreateSecurity) (*operations.DialogflowProjectsLocationsAgentIntentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2IntentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -742,11 +742,11 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -781,20 +781,20 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsCreate(ctx context.Con
 }
 
 // DialogflowProjectsLocationsAgentIntentsList - Returns the list of all intents in the specified agent.
-func (s *projects) DialogflowProjectsLocationsAgentIntentsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsListRequest) (*operations.DialogflowProjectsLocationsAgentIntentsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentIntentsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentIntentsListRequest, security operations.DialogflowProjectsLocationsAgentIntentsListSecurity) (*operations.DialogflowProjectsLocationsAgentIntentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/intents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,11 +829,11 @@ func (s *projects) DialogflowProjectsLocationsAgentIntentsList(ctx context.Conte
 }
 
 // DialogflowProjectsLocationsAgentRestore - Restores the specified agent from a ZIP file. Replaces the current agent version with a new one. All the intents and entity types in the older version are deleted. After the restore, the restored draft agent will be trained automatically (unless disabled in agent settings). However, once the restore is done, training may not be completed yet. Please call TrainAgent and wait for the operation it returns in order to train explicitly. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) The operation only tracks when restoring is complete, not when it is done training. Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentRestore(ctx context.Context, request operations.DialogflowProjectsLocationsAgentRestoreRequest) (*operations.DialogflowProjectsLocationsAgentRestoreResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentRestore(ctx context.Context, request operations.DialogflowProjectsLocationsAgentRestoreRequest, security operations.DialogflowProjectsLocationsAgentRestoreSecurity) (*operations.DialogflowProjectsLocationsAgentRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:restore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2RestoreAgentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -845,11 +845,11 @@ func (s *projects) DialogflowProjectsLocationsAgentRestore(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -884,20 +884,20 @@ func (s *projects) DialogflowProjectsLocationsAgentRestore(ctx context.Context, 
 }
 
 // DialogflowProjectsLocationsAgentSearch - Returns the list of agents. Since there is at most one conversational agent per project, this method is useful primarily for listing all agents across projects the caller has access to. One can achieve that with a wildcard project collection id "-". Refer to [List Sub-Collections](https://cloud.google.com/apis/design/design_patterns#list_sub-collections).
-func (s *projects) DialogflowProjectsLocationsAgentSearch(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSearchRequest) (*operations.DialogflowProjectsLocationsAgentSearchResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSearch(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSearchRequest, security operations.DialogflowProjectsLocationsAgentSearchSecurity) (*operations.DialogflowProjectsLocationsAgentSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -932,11 +932,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSearch(ctx context.Context, r
 }
 
 // DialogflowProjectsLocationsAgentSessionsContextsCreate - Creates a context. If the specified context already exists, overrides the context.
-func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsContextsCreateRequest) (*operations.DialogflowProjectsLocationsAgentSessionsContextsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsContextsCreateRequest, security operations.DialogflowProjectsLocationsAgentSessionsContextsCreateSecurity) (*operations.DialogflowProjectsLocationsAgentSessionsContextsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/contexts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/contexts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2Context", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -948,11 +948,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsCreate(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -987,20 +987,20 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsCreate(ctx co
 }
 
 // DialogflowProjectsLocationsAgentSessionsContextsList - Returns the list of all contexts in the specified session.
-func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsContextsListRequest) (*operations.DialogflowProjectsLocationsAgentSessionsContextsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsContextsListRequest, security operations.DialogflowProjectsLocationsAgentSessionsContextsListSecurity) (*operations.DialogflowProjectsLocationsAgentSessionsContextsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/contexts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/contexts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1035,20 +1035,20 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsContextsList(ctx cont
 }
 
 // DialogflowProjectsLocationsAgentSessionsDeleteContexts - Deletes all active contexts in the specified session.
-func (s *projects) DialogflowProjectsLocationsAgentSessionsDeleteContexts(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsDeleteContextsRequest) (*operations.DialogflowProjectsLocationsAgentSessionsDeleteContextsResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSessionsDeleteContexts(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsDeleteContextsRequest, security operations.DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurity) (*operations.DialogflowProjectsLocationsAgentSessionsDeleteContextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/contexts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/contexts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1083,11 +1083,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsDeleteContexts(ctx co
 }
 
 // DialogflowProjectsLocationsAgentSessionsDetectIntent - Processes a natural language query and returns structured, actionable data as a result. This method is not idempotent, because it may cause contexts and session entity types to be updated, which in turn might affect results of future queries. If you might use [Agent Assist](https://cloud.google.com/dialogflow/docs/#aa) or other CCAI products now or in the future, consider using AnalyzeContent instead of `DetectIntent`. `AnalyzeContent` has additional functionality for Agent Assist and other CCAI products. Note: Always use agent versions for production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
-func (s *projects) DialogflowProjectsLocationsAgentSessionsDetectIntent(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsDetectIntentRequest) (*operations.DialogflowProjectsLocationsAgentSessionsDetectIntentResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSessionsDetectIntent(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsDetectIntentRequest, security operations.DialogflowProjectsLocationsAgentSessionsDetectIntentSecurity) (*operations.DialogflowProjectsLocationsAgentSessionsDetectIntentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{session}:detectIntent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{session}:detectIntent", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2DetectIntentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1099,11 +1099,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsDetectIntent(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1138,11 +1138,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsDetectIntent(ctx cont
 }
 
 // DialogflowProjectsLocationsAgentSessionsEntityTypesCreate - Creates a session entity type. If the specified session entity type already exists, overrides the session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
-func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsEntityTypesCreateRequest) (*operations.DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsEntityTypesCreateRequest, security operations.DialogflowProjectsLocationsAgentSessionsEntityTypesCreateSecurity) (*operations.DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2SessionEntityType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1154,11 +1154,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesCreate(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1193,20 +1193,20 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesCreate(ctx
 }
 
 // DialogflowProjectsLocationsAgentSessionsEntityTypesList - Returns the list of all session entity types in the specified session. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
-func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsEntityTypesListRequest) (*operations.DialogflowProjectsLocationsAgentSessionsEntityTypesListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentSessionsEntityTypesListRequest, security operations.DialogflowProjectsLocationsAgentSessionsEntityTypesListSecurity) (*operations.DialogflowProjectsLocationsAgentSessionsEntityTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1241,11 +1241,11 @@ func (s *projects) DialogflowProjectsLocationsAgentSessionsEntityTypesList(ctx c
 }
 
 // DialogflowProjectsLocationsAgentTrain - Trains the specified agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsAgentTrain(ctx context.Context, request operations.DialogflowProjectsLocationsAgentTrainRequest) (*operations.DialogflowProjectsLocationsAgentTrainResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentTrain(ctx context.Context, request operations.DialogflowProjectsLocationsAgentTrainRequest, security operations.DialogflowProjectsLocationsAgentTrainSecurity) (*operations.DialogflowProjectsLocationsAgentTrainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:train", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent:train", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1257,11 +1257,11 @@ func (s *projects) DialogflowProjectsLocationsAgentTrain(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1296,11 +1296,11 @@ func (s *projects) DialogflowProjectsLocationsAgentTrain(ctx context.Context, re
 }
 
 // DialogflowProjectsLocationsAgentVersionsCreate - Creates an agent version. The new version points to the agent instance in the "default" environment.
-func (s *projects) DialogflowProjectsLocationsAgentVersionsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentVersionsCreateRequest) (*operations.DialogflowProjectsLocationsAgentVersionsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentVersionsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsAgentVersionsCreateRequest, security operations.DialogflowProjectsLocationsAgentVersionsCreateSecurity) (*operations.DialogflowProjectsLocationsAgentVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2VersionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1312,11 +1312,11 @@ func (s *projects) DialogflowProjectsLocationsAgentVersionsCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1351,20 +1351,20 @@ func (s *projects) DialogflowProjectsLocationsAgentVersionsCreate(ctx context.Co
 }
 
 // DialogflowProjectsLocationsAgentVersionsList - Returns the list of all versions of the specified agent.
-func (s *projects) DialogflowProjectsLocationsAgentVersionsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentVersionsListRequest) (*operations.DialogflowProjectsLocationsAgentVersionsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAgentVersionsList(ctx context.Context, request operations.DialogflowProjectsLocationsAgentVersionsListRequest, security operations.DialogflowProjectsLocationsAgentVersionsListSecurity) (*operations.DialogflowProjectsLocationsAgentVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1399,20 +1399,20 @@ func (s *projects) DialogflowProjectsLocationsAgentVersionsList(ctx context.Cont
 }
 
 // DialogflowProjectsLocationsAnswerRecordsList - Returns the list of all answer records in the specified project in reverse chronological order.
-func (s *projects) DialogflowProjectsLocationsAnswerRecordsList(ctx context.Context, request operations.DialogflowProjectsLocationsAnswerRecordsListRequest) (*operations.DialogflowProjectsLocationsAnswerRecordsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsAnswerRecordsList(ctx context.Context, request operations.DialogflowProjectsLocationsAnswerRecordsListRequest, security operations.DialogflowProjectsLocationsAnswerRecordsListSecurity) (*operations.DialogflowProjectsLocationsAnswerRecordsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/answerRecords", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/answerRecords", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1447,11 +1447,11 @@ func (s *projects) DialogflowProjectsLocationsAnswerRecordsList(ctx context.Cont
 }
 
 // DialogflowProjectsLocationsConversationDatasetsCreate - Creates a new conversation dataset. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: CreateConversationDatasetOperationMetadata - `response`: ConversationDataset
-func (s *projects) DialogflowProjectsLocationsConversationDatasetsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationDatasetsCreateRequest) (*operations.DialogflowProjectsLocationsConversationDatasetsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationDatasetsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationDatasetsCreateRequest, security operations.DialogflowProjectsLocationsConversationDatasetsCreateSecurity) (*operations.DialogflowProjectsLocationsConversationDatasetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationDatasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationDatasets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ConversationDatasetInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1463,11 +1463,11 @@ func (s *projects) DialogflowProjectsLocationsConversationDatasetsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1502,11 +1502,11 @@ func (s *projects) DialogflowProjectsLocationsConversationDatasetsCreate(ctx con
 }
 
 // DialogflowProjectsLocationsConversationDatasetsImportConversationData - Import data into the specified conversation dataset. Note that it is not allowed to import data to a conversation dataset that already has data in it. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: ImportConversationDataOperationMetadata - `response`: ImportConversationDataOperationResponse
-func (s *projects) DialogflowProjectsLocationsConversationDatasetsImportConversationData(ctx context.Context, request operations.DialogflowProjectsLocationsConversationDatasetsImportConversationDataRequest) (*operations.DialogflowProjectsLocationsConversationDatasetsImportConversationDataResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationDatasetsImportConversationData(ctx context.Context, request operations.DialogflowProjectsLocationsConversationDatasetsImportConversationDataRequest, security operations.DialogflowProjectsLocationsConversationDatasetsImportConversationDataSecurity) (*operations.DialogflowProjectsLocationsConversationDatasetsImportConversationDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:importConversationData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:importConversationData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ImportConversationDataRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1518,11 +1518,11 @@ func (s *projects) DialogflowProjectsLocationsConversationDatasetsImportConversa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1557,20 +1557,20 @@ func (s *projects) DialogflowProjectsLocationsConversationDatasetsImportConversa
 }
 
 // DialogflowProjectsLocationsConversationDatasetsList - Returns the list of all conversation datasets in the specified project and location.
-func (s *projects) DialogflowProjectsLocationsConversationDatasetsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationDatasetsListRequest) (*operations.DialogflowProjectsLocationsConversationDatasetsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationDatasetsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationDatasetsListRequest, security operations.DialogflowProjectsLocationsConversationDatasetsListSecurity) (*operations.DialogflowProjectsLocationsConversationDatasetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationDatasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationDatasets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1605,11 +1605,11 @@ func (s *projects) DialogflowProjectsLocationsConversationDatasetsList(ctx conte
 }
 
 // DialogflowProjectsLocationsConversationModelsCreate - Creates a model. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: CreateConversationModelOperationMetadata - `response`: ConversationModel
-func (s *projects) DialogflowProjectsLocationsConversationModelsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsCreateRequest) (*operations.DialogflowProjectsLocationsConversationModelsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationModelsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsCreateRequest, security operations.DialogflowProjectsLocationsConversationModelsCreateSecurity) (*operations.DialogflowProjectsLocationsConversationModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationModels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ConversationModelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1621,11 +1621,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsCreate(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1660,11 +1660,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsCreate(ctx conte
 }
 
 // DialogflowProjectsLocationsConversationModelsDeploy - Deploys a model. If a model is already deployed, deploying it has no effect. A model can only serve prediction requests after it gets deployed. For article suggestion, custom model will not be used unless it is deployed. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: DeployConversationModelOperationMetadata - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-func (s *projects) DialogflowProjectsLocationsConversationModelsDeploy(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsDeployRequest) (*operations.DialogflowProjectsLocationsConversationModelsDeployResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationModelsDeploy(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsDeployRequest, security operations.DialogflowProjectsLocationsConversationModelsDeploySecurity) (*operations.DialogflowProjectsLocationsConversationModelsDeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:deploy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:deploy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1676,11 +1676,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsDeploy(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1715,11 +1715,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsDeploy(ctx conte
 }
 
 // DialogflowProjectsLocationsConversationModelsEvaluationsCreate - Creates evaluation of a conversation model.
-func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsEvaluationsCreateRequest) (*operations.DialogflowProjectsLocationsConversationModelsEvaluationsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsEvaluationsCreateRequest, security operations.DialogflowProjectsLocationsConversationModelsEvaluationsCreateSecurity) (*operations.DialogflowProjectsLocationsConversationModelsEvaluationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/evaluations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/evaluations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2CreateConversationModelEvaluationRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1731,11 +1731,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsCreat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1770,20 +1770,20 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsCreat
 }
 
 // DialogflowProjectsLocationsConversationModelsEvaluationsList - Lists evaluations of a conversation model.
-func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsEvaluationsListRequest) (*operations.DialogflowProjectsLocationsConversationModelsEvaluationsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsEvaluationsListRequest, security operations.DialogflowProjectsLocationsConversationModelsEvaluationsListSecurity) (*operations.DialogflowProjectsLocationsConversationModelsEvaluationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/evaluations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/evaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1818,20 +1818,20 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsEvaluationsList(
 }
 
 // DialogflowProjectsLocationsConversationModelsList - Lists conversation models.
-func (s *projects) DialogflowProjectsLocationsConversationModelsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsListRequest) (*operations.DialogflowProjectsLocationsConversationModelsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationModelsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsListRequest, security operations.DialogflowProjectsLocationsConversationModelsListSecurity) (*operations.DialogflowProjectsLocationsConversationModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1866,11 +1866,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsList(ctx context
 }
 
 // DialogflowProjectsLocationsConversationModelsUndeploy - Undeploys a model. If the model is not deployed this method has no effect. If the model is currently being used: - For article suggestion, article suggestion will fallback to the default model if model is undeployed. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: UndeployConversationModelOperationMetadata - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-func (s *projects) DialogflowProjectsLocationsConversationModelsUndeploy(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsUndeployRequest) (*operations.DialogflowProjectsLocationsConversationModelsUndeployResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationModelsUndeploy(ctx context.Context, request operations.DialogflowProjectsLocationsConversationModelsUndeployRequest, security operations.DialogflowProjectsLocationsConversationModelsUndeploySecurity) (*operations.DialogflowProjectsLocationsConversationModelsUndeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:undeploy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:undeploy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1882,11 +1882,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsUndeploy(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1921,11 +1921,11 @@ func (s *projects) DialogflowProjectsLocationsConversationModelsUndeploy(ctx con
 }
 
 // DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfig - Clears a suggestion feature from a conversation profile for the given participant role. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
-func (s *projects) DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfig(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfigRequest) (*operations.DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfigResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfig(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfigRequest, security operations.DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfigSecurity) (*operations.DialogflowProjectsLocationsConversationProfilesClearSuggestionFeatureConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{conversationProfile}:clearSuggestionFeatureConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{conversationProfile}:clearSuggestionFeatureConfig", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1937,11 +1937,11 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesClearSuggestio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1976,11 +1976,11 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesClearSuggestio
 }
 
 // DialogflowProjectsLocationsConversationProfilesCreate - Creates a conversation profile in the specified project. ConversationProfile.CreateTime and ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via GetConversationProfile API.
-func (s *projects) DialogflowProjectsLocationsConversationProfilesCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesCreateRequest) (*operations.DialogflowProjectsLocationsConversationProfilesCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationProfilesCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesCreateRequest, security operations.DialogflowProjectsLocationsConversationProfilesCreateSecurity) (*operations.DialogflowProjectsLocationsConversationProfilesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ConversationProfileInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1992,11 +1992,11 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2031,20 +2031,20 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesCreate(ctx con
 }
 
 // DialogflowProjectsLocationsConversationProfilesList - Returns the list of all conversation profiles in the specified project.
-func (s *projects) DialogflowProjectsLocationsConversationProfilesList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesListRequest) (*operations.DialogflowProjectsLocationsConversationProfilesListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationProfilesList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesListRequest, security operations.DialogflowProjectsLocationsConversationProfilesListSecurity) (*operations.DialogflowProjectsLocationsConversationProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversationProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2079,11 +2079,11 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesList(ctx conte
 }
 
 // DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfig - Adds or updates a suggestion feature in a conversation profile. If the conversation profile contains the type of suggestion feature for the participant role, it will update it. Otherwise it will insert the suggestion feature. This method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned `Operation` type has the following method-specific fields: - `metadata`: SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running operation to add or update suggestion feature config for the same conversation profile, participant role and suggestion feature type exists, please cancel the existing long running operation before sending such request, otherwise the request will be rejected.
-func (s *projects) DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfig(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfigRequest) (*operations.DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfigResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfig(ctx context.Context, request operations.DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfigRequest, security operations.DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfigSecurity) (*operations.DialogflowProjectsLocationsConversationProfilesSetSuggestionFeatureConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{conversationProfile}:setSuggestionFeatureConfig", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{conversationProfile}:setSuggestionFeatureConfig", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2095,11 +2095,11 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesSetSuggestionF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2134,11 +2134,11 @@ func (s *projects) DialogflowProjectsLocationsConversationProfilesSetSuggestionF
 }
 
 // DialogflowProjectsLocationsConversationsComplete - Completes the specified conversation. Finished conversations are purged from the database after 30 days.
-func (s *projects) DialogflowProjectsLocationsConversationsComplete(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsCompleteRequest) (*operations.DialogflowProjectsLocationsConversationsCompleteResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsComplete(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsCompleteRequest, security operations.DialogflowProjectsLocationsConversationsCompleteSecurity) (*operations.DialogflowProjectsLocationsConversationsCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:complete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:complete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2150,11 +2150,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsComplete(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2189,11 +2189,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsComplete(ctx context.
 }
 
 // DialogflowProjectsLocationsConversationsCreate - Creates a new conversation. Conversations are auto-completed after 24 hours. Conversation Lifecycle: There are two stages during a conversation: Automated Agent Stage and Assist Stage. For Automated Agent Stage, there will be a dialogflow agent responding to user queries. For Assist Stage, there's no dialogflow agent responding to user queries. But we will provide suggestions which are generated from conversation. If Conversation.conversation_profile is configured for a dialogflow agent, conversation will start from `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And during `Automated Agent Stage`, once an Intent with Intent.live_agent_handoff is triggered, conversation will transfer to Assist Stage.
-func (s *projects) DialogflowProjectsLocationsConversationsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsCreateRequest) (*operations.DialogflowProjectsLocationsConversationsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsCreateRequest, security operations.DialogflowProjectsLocationsConversationsCreateSecurity) (*operations.DialogflowProjectsLocationsConversationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ConversationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2205,11 +2205,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2244,20 +2244,20 @@ func (s *projects) DialogflowProjectsLocationsConversationsCreate(ctx context.Co
 }
 
 // DialogflowProjectsLocationsConversationsList - Returns the list of all conversations in the specified project.
-func (s *projects) DialogflowProjectsLocationsConversationsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsListRequest) (*operations.DialogflowProjectsLocationsConversationsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsListRequest, security operations.DialogflowProjectsLocationsConversationsListSecurity) (*operations.DialogflowProjectsLocationsConversationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/conversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2292,20 +2292,20 @@ func (s *projects) DialogflowProjectsLocationsConversationsList(ctx context.Cont
 }
 
 // DialogflowProjectsLocationsConversationsMessagesList - Lists messages that belong to a given conversation. `messages` are ordered by `create_time` in descending order. To fetch updates without duplication, send request with filter `create_time_epoch_microseconds > [first item's create_time of previous request]` and empty page_token.
-func (s *projects) DialogflowProjectsLocationsConversationsMessagesList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsMessagesListRequest) (*operations.DialogflowProjectsLocationsConversationsMessagesListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsMessagesList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsMessagesListRequest, security operations.DialogflowProjectsLocationsConversationsMessagesListSecurity) (*operations.DialogflowProjectsLocationsConversationsMessagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2340,11 +2340,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsMessagesList(ctx cont
 }
 
 // DialogflowProjectsLocationsConversationsParticipantsAnalyzeContent - Adds a text (chat, for example), or audio (phone recording, for example) message from a participant into the conversation. Note: Always use agent versions for production traffic sent to virtual agents. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
-func (s *projects) DialogflowProjectsLocationsConversationsParticipantsAnalyzeContent(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsAnalyzeContentRequest) (*operations.DialogflowProjectsLocationsConversationsParticipantsAnalyzeContentResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsParticipantsAnalyzeContent(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsAnalyzeContentRequest, security operations.DialogflowProjectsLocationsConversationsParticipantsAnalyzeContentSecurity) (*operations.DialogflowProjectsLocationsConversationsParticipantsAnalyzeContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{participant}:analyzeContent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{participant}:analyzeContent", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2AnalyzeContentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2356,11 +2356,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsAnalyzeCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2395,11 +2395,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsAnalyzeCo
 }
 
 // DialogflowProjectsLocationsConversationsParticipantsCreate - Creates a new participant in a conversation.
-func (s *projects) DialogflowProjectsLocationsConversationsParticipantsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsCreateRequest) (*operations.DialogflowProjectsLocationsConversationsParticipantsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsParticipantsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsCreateRequest, security operations.DialogflowProjectsLocationsConversationsParticipantsCreateSecurity) (*operations.DialogflowProjectsLocationsConversationsParticipantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/participants", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2Participant", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2411,11 +2411,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsCreate(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2450,20 +2450,20 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsCreate(ct
 }
 
 // DialogflowProjectsLocationsConversationsParticipantsList - Returns the list of all participants in the specified conversation.
-func (s *projects) DialogflowProjectsLocationsConversationsParticipantsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsListRequest) (*operations.DialogflowProjectsLocationsConversationsParticipantsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsParticipantsList(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsListRequest, security operations.DialogflowProjectsLocationsConversationsParticipantsListSecurity) (*operations.DialogflowProjectsLocationsConversationsParticipantsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/participants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2498,11 +2498,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsList(ctx 
 }
 
 // DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticles - Gets suggested articles for a participant based on specific historical messages.
-func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticles(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesRequest) (*operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticles(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesRequest, security operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesSecurity) (*operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/suggestions:suggestArticles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/suggestions:suggestArticles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2SuggestArticlesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2514,11 +2514,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2553,11 +2553,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestio
 }
 
 // DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswers - Gets suggested faq answers for a participant based on specific historical messages.
-func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswers(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersRequest) (*operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswers(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersRequest, security operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersSecurity) (*operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/suggestions:suggestFaqAnswers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/suggestions:suggestFaqAnswers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2SuggestFaqAnswersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2569,11 +2569,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2608,11 +2608,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestio
 }
 
 // DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartReplies - Gets smart replies for a participant based on specific historical messages.
-func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartReplies(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesRequest) (*operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartReplies(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesRequest, security operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesSecurity) (*operations.DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/suggestions:suggestSmartReplies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/suggestions:suggestSmartReplies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2SuggestSmartRepliesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2624,11 +2624,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2663,11 +2663,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsParticipantsSuggestio
 }
 
 // DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummary - Suggests summary for a conversation based on specific historical messages. The range of the messages to be used for summary can be specified in the request.
-func (s *projects) DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummary(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryRequest) (*operations.DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse, error) {
+func (s *projects) DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummary(ctx context.Context, request operations.DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryRequest, security operations.DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummarySecurity) (*operations.DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{conversation}/suggestions:suggestConversationSummary", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{conversation}/suggestions:suggestConversationSummary", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2SuggestConversationSummaryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2679,11 +2679,11 @@ func (s *projects) DialogflowProjectsLocationsConversationsSuggestionsSuggestCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2718,20 +2718,20 @@ func (s *projects) DialogflowProjectsLocationsConversationsSuggestionsSuggestCon
 }
 
 // DialogflowProjectsLocationsDeleteAgent - Deletes the specified agent.
-func (s *projects) DialogflowProjectsLocationsDeleteAgent(ctx context.Context, request operations.DialogflowProjectsLocationsDeleteAgentRequest) (*operations.DialogflowProjectsLocationsDeleteAgentResponse, error) {
+func (s *projects) DialogflowProjectsLocationsDeleteAgent(ctx context.Context, request operations.DialogflowProjectsLocationsDeleteAgentRequest, security operations.DialogflowProjectsLocationsDeleteAgentSecurity) (*operations.DialogflowProjectsLocationsDeleteAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2766,20 +2766,20 @@ func (s *projects) DialogflowProjectsLocationsDeleteAgent(ctx context.Context, r
 }
 
 // DialogflowProjectsLocationsGetAgent - Retrieves the specified agent.
-func (s *projects) DialogflowProjectsLocationsGetAgent(ctx context.Context, request operations.DialogflowProjectsLocationsGetAgentRequest) (*operations.DialogflowProjectsLocationsGetAgentResponse, error) {
+func (s *projects) DialogflowProjectsLocationsGetAgent(ctx context.Context, request operations.DialogflowProjectsLocationsGetAgentRequest, security operations.DialogflowProjectsLocationsGetAgentSecurity) (*operations.DialogflowProjectsLocationsGetAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2814,11 +2814,11 @@ func (s *projects) DialogflowProjectsLocationsGetAgent(ctx context.Context, requ
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesCreate - Creates a knowledge base.
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesCreate(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesCreateRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesCreate(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesCreateRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesCreateSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/knowledgeBases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/knowledgeBases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2KnowledgeBase", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2830,11 +2830,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2869,11 +2869,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesCreate(ctx context.C
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsCreate - Creates a new document. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: KnowledgeOperationMetadata - `response`: Document
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsCreateRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsCreateResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsCreate(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsCreateRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsCreateSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2DocumentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2885,11 +2885,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsCreate(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2924,20 +2924,20 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsCreate(ctx 
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsDelete - Deletes the specified document. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsDelete(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsDeleteRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsDeleteResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsDelete(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsDeleteRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsDeleteSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2972,11 +2972,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsDelete(ctx 
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsExport - Exports a smart messaging candidate document into the specified destination. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: KnowledgeOperationMetadata - `response`: Document
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsExport(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsExportRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsExportResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsExport(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsExportRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsExportSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ExportDocumentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2988,11 +2988,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsExport(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3027,11 +3027,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsExport(ctx 
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsImport - Creates documents by importing data from external sources. Dialogflow supports up to 350 documents in each request. If you try to import more, Dialogflow will return an error. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: KnowledgeOperationMetadata - `response`: ImportDocumentsResponse
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsImport(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsImportRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsImportResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsImport(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsImportRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsImportSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/documents:import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/documents:import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ImportDocumentsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3043,11 +3043,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsImport(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3082,20 +3082,20 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsImport(ctx 
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsList - Returns the list of all documents of the knowledge base.
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsList(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsListRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsList(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsListRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsListSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/documents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3130,11 +3130,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsList(ctx co
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsPatch - Updates the specified document. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: KnowledgeOperationMetadata - `response`: Document
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsPatch(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsPatchRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsPatchResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsPatch(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsPatchRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsPatchSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2DocumentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3146,11 +3146,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsPatch(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3185,11 +3185,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsPatch(ctx c
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesDocumentsReload - Reloads the specified document from its specified source, content_uri or content. The previously loaded content of the document will be deleted. Note: Even when the content of the document has not changed, there still may be side effects because of internal implementation changes. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: KnowledgeOperationMetadata - `response`: Document Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use `projects.knowledgeBases.documents`.
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsReload(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsReloadRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsReloadResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsReload(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsReloadRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsReloadSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesDocumentsReloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:reload", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:reload", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2ReloadDocumentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3201,11 +3201,11 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsReload(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3240,20 +3240,20 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesDocumentsReload(ctx 
 }
 
 // DialogflowProjectsLocationsKnowledgeBasesList - Returns the list of all knowledge bases of the specified agent.
-func (s *projects) DialogflowProjectsLocationsKnowledgeBasesList(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesListRequest) (*operations.DialogflowProjectsLocationsKnowledgeBasesListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsKnowledgeBasesList(ctx context.Context, request operations.DialogflowProjectsLocationsKnowledgeBasesListRequest, security operations.DialogflowProjectsLocationsKnowledgeBasesListSecurity) (*operations.DialogflowProjectsLocationsKnowledgeBasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/knowledgeBases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/knowledgeBases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3288,20 +3288,20 @@ func (s *projects) DialogflowProjectsLocationsKnowledgeBasesList(ctx context.Con
 }
 
 // DialogflowProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) DialogflowProjectsLocationsList(ctx context.Context, request operations.DialogflowProjectsLocationsListRequest) (*operations.DialogflowProjectsLocationsListResponse, error) {
+func (s *projects) DialogflowProjectsLocationsList(ctx context.Context, request operations.DialogflowProjectsLocationsListRequest, security operations.DialogflowProjectsLocationsListSecurity) (*operations.DialogflowProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3336,11 +3336,11 @@ func (s *projects) DialogflowProjectsLocationsList(ctx context.Context, request 
 }
 
 // DialogflowProjectsLocationsSetAgent - Creates/updates the specified agent. Note: You should always train an agent prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/es/docs/training).
-func (s *projects) DialogflowProjectsLocationsSetAgent(ctx context.Context, request operations.DialogflowProjectsLocationsSetAgentRequest) (*operations.DialogflowProjectsLocationsSetAgentResponse, error) {
+func (s *projects) DialogflowProjectsLocationsSetAgent(ctx context.Context, request operations.DialogflowProjectsLocationsSetAgentRequest, security operations.DialogflowProjectsLocationsSetAgentSecurity) (*operations.DialogflowProjectsLocationsSetAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/agent", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDialogflowV2Agent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3352,11 +3352,11 @@ func (s *projects) DialogflowProjectsLocationsSetAgent(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3391,20 +3391,20 @@ func (s *projects) DialogflowProjectsLocationsSetAgent(ctx context.Context, requ
 }
 
 // DialogflowProjectsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) DialogflowProjectsOperationsCancel(ctx context.Context, request operations.DialogflowProjectsOperationsCancelRequest) (*operations.DialogflowProjectsOperationsCancelResponse, error) {
+func (s *projects) DialogflowProjectsOperationsCancel(ctx context.Context, request operations.DialogflowProjectsOperationsCancelRequest, security operations.DialogflowProjectsOperationsCancelSecurity) (*operations.DialogflowProjectsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3439,20 +3439,20 @@ func (s *projects) DialogflowProjectsOperationsCancel(ctx context.Context, reque
 }
 
 // DialogflowProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) DialogflowProjectsOperationsGet(ctx context.Context, request operations.DialogflowProjectsOperationsGetRequest) (*operations.DialogflowProjectsOperationsGetResponse, error) {
+func (s *projects) DialogflowProjectsOperationsGet(ctx context.Context, request operations.DialogflowProjectsOperationsGetRequest, security operations.DialogflowProjectsOperationsGetSecurity) (*operations.DialogflowProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3487,20 +3487,20 @@ func (s *projects) DialogflowProjectsOperationsGet(ctx context.Context, request 
 }
 
 // DialogflowProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) DialogflowProjectsOperationsList(ctx context.Context, request operations.DialogflowProjectsOperationsListRequest) (*operations.DialogflowProjectsOperationsListResponse, error) {
+func (s *projects) DialogflowProjectsOperationsList(ctx context.Context, request operations.DialogflowProjectsOperationsListRequest, security operations.DialogflowProjectsOperationsListSecurity) (*operations.DialogflowProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

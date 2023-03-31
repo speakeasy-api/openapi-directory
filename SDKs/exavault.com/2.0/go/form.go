@@ -43,14 +43,14 @@ func newForm(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // - It is not possible to un-delete data that is removed in this way
 func (s *form) DeleteFormMessageByID(ctx context.Context, request operations.DeleteFormMessageByIDRequest) (*operations.DeleteFormMessageByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -96,16 +96,16 @@ func (s *form) DeleteFormMessageByID(ctx context.Context, request operations.Del
 // If you prefer to find a form by its shareHash, you can use the [GET /forms](#operation/getFormByShareHash) endpoint instead.
 func (s *form) GetFormByID(ctx context.Context, request operations.GetFormByIDRequest) (*operations.GetFormByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -160,9 +160,9 @@ func (s *form) GetFormByShareHash(ctx context.Context, request operations.GetFor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -204,16 +204,16 @@ func (s *form) GetFormByShareHash(ctx context.Context, request operations.GetFor
 // Returns the form data entries for a specific form for a receive. Optional parameters can be included in the call to manage larger data sets.
 func (s *form) GetFormEntries(ctx context.Context, request operations.GetFormEntriesRequest) (*operations.GetFormEntriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -259,9 +259,9 @@ func (s *form) GetFormEntries(ctx context.Context, request operations.GetFormEnt
 // *This call will **replace** your current form in its entirety.* If you want to keep any existing elements unchanged, be sure to submit the call with an element's current settings to preserve them.
 func (s *form) UpdateFormByID(ctx context.Context, request operations.UpdateFormByIDRequest) (*operations.UpdateFormByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -273,7 +273,7 @@ func (s *form) UpdateFormByID(ctx context.Context, request operations.UpdateForm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

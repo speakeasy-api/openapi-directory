@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type MBusPostFormRequest struct {
-	// The M-BUS Telegram
-	Request shared.MBusData `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type MBusPostFormResponse struct {
 	Body        []byte

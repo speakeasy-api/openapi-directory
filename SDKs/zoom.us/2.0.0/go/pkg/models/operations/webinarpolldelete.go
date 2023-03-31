@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarPollDeleteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebinarPollDeletePathParams struct {
+type WebinarPollDeleteRequest struct {
 	// The poll ID
 	PollID string `pathParam:"style=simple,explode=false,name=pollId"`
 	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
 	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarPollDeleteRequest struct {
-	PathParams WebinarPollDeletePathParams
-	Security   WebinarPollDeleteSecurity
 }
 
 type WebinarPollDeleteResponse struct {

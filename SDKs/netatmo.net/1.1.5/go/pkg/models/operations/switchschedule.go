@@ -8,11 +8,11 @@ import (
 )
 
 type SwitchscheduleSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SwitchscheduleQueryParams struct {
+type SwitchscheduleRequest struct {
 	// The relay id
 	DeviceID string `queryParam:"style=form,explode=true,name=device_id"`
 	// The thermostat id
@@ -20,11 +20,6 @@ type SwitchscheduleQueryParams struct {
 	// The schedule id. It can be found in the getthermstate response, under the keys `therm_program_backup` and `therm_program`.
 	//
 	ScheduleID string `queryParam:"style=form,explode=true,name=schedule_id"`
-}
-
-type SwitchscheduleRequest struct {
-	QueryParams SwitchscheduleQueryParams
-	Security    SwitchscheduleSecurity
 }
 
 type SwitchscheduleResponse struct {

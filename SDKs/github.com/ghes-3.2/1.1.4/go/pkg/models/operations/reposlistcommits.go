@@ -8,33 +8,25 @@ import (
 	"time"
 )
 
-type ReposListCommitsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListCommitsQueryParams struct {
+type ReposListCommitsRequest struct {
 	// GitHub login or email address by which to filter by commit author.
 	Author *string `queryParam:"style=form,explode=true,name=author"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Only commits containing this file path will be returned.
 	Path *string `queryParam:"style=form,explode=true,name=path"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// SHA or branch to start listing commits from. Default: the repository’s default branch (usually `master`).
 	Sha *string `queryParam:"style=form,explode=true,name=sha"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
 	// Only commits before this date will be returned. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Until *time.Time `queryParam:"style=form,explode=true,name=until"`
-}
-
-type ReposListCommitsRequest struct {
-	PathParams  ReposListCommitsPathParams
-	QueryParams ReposListCommitsQueryParams
 }
 
 type ReposListCommitsResponse struct {

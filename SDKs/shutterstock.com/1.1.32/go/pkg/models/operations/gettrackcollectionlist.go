@@ -10,7 +10,7 @@ import (
 )
 
 type GetTrackCollectionListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTrackCollectionListEmbedEnum string
@@ -36,18 +36,13 @@ func (e *GetTrackCollectionListEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTrackCollectionListQueryParams struct {
+type GetTrackCollectionListRequest struct {
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed []GetTrackCollectionListEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetTrackCollectionListRequest struct {
-	QueryParams GetTrackCollectionListQueryParams
-	Security    GetTrackCollectionListSecurity
 }
 
 type GetTrackCollectionListResponse struct {

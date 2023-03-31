@@ -105,7 +105,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // BatchReadFile - Use this interface to get the result of a Read operation, employing the state-of-the-art Optical Character Recognition (OCR) algorithms optimized for text-heavy documents. When you use the Read File interface, the response contains a field called 'Operation-Location'. The 'Operation-Location' field contains the URL that you must use for your 'GetReadOperationResult' operation to access OCR results.​
-func (s *SDK) BatchReadFile(ctx context.Context, request operations.BatchReadFileRequest) (*operations.BatchReadFileResponse, error) {
+func (s *SDK) BatchReadFile(ctx context.Context, request shared.ImageURL) (*operations.BatchReadFileResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/read/core/asyncBatchAnalyze"
 
@@ -164,7 +164,7 @@ func (s *SDK) BatchReadFile(ctx context.Context, request operations.BatchReadFil
 // GetReadOperationResult - This interface is used for getting OCR results of Read operation. The URL to this interface should be retrieved from 'Operation-Location' field returned from Batch Read File interface.
 func (s *SDK) GetReadOperationResult(ctx context.Context, request operations.GetReadOperationResultRequest) (*operations.GetReadOperationResultResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/read/operations/{operationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/read/operations/{operationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +218,7 @@ func (s *SDK) GetReadOperationResult(ctx context.Context, request operations.Get
 // GetTextOperationResult - This interface is used for getting text operation result. The URL to this interface should be retrieved from 'Operation-Location' field returned from Recognize Text interface.
 func (s *SDK) GetTextOperationResult(ctx context.Context, request operations.GetTextOperationResultRequest) (*operations.GetTextOperationResultResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/textOperations/{operationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/textOperations/{operationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -274,7 +274,7 @@ func (s *SDK) RecognizeText(ctx context.Context, request operations.RecognizeTex
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/recognizeText"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -289,7 +289,7 @@ func (s *SDK) RecognizeText(ctx context.Context, request operations.RecognizeTex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttGetStatisticsPathParams struct {
+type ProtocolMqttGetStatisticsRequest struct {
 	// Agent to show MQTT statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttGetStatisticsRequest struct {
-	PathParams ProtocolMqttGetStatisticsPathParams
 }
 
 type ProtocolMqttGetStatisticsResponse struct {

@@ -3,32 +3,28 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateFirewallPolicyRequest(
-    headers=operations.AssociateFirewallPolicyHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="et",
-        x_amz_credential="et",
-        x_amz_date="a",
-        x_amz_security_token="quis",
-        x_amz_signature="est",
-        x_amz_signed_headers="dolorum",
-        x_amz_target="NetworkFirewall_20201112.AssociateFirewallPolicy",
+    associate_firewall_policy_request=shared.AssociateFirewallPolicyRequest(
+        firewall_arn="corrupti",
+        firewall_name="provident",
+        firewall_policy_arn="distinctio",
+        update_token="quibusdam",
     ),
-    request=shared.AssociateFirewallPolicyRequest(
-        firewall_arn="veniam",
-        firewall_name="est",
-        firewall_policy_arn="blanditiis",
-        update_token="aliquid",
-    ),
+    x_amz_algorithm="unde",
+    x_amz_content_sha256="nulla",
+    x_amz_credential="corrupti",
+    x_amz_date="illum",
+    x_amz_security_token="vel",
+    x_amz_signature="error",
+    x_amz_signed_headers="deserunt",
+    x_amz_target="NetworkFirewall_20201112.AssociateFirewallPolicy",
 )
     
 res = s.associate_firewall_policy(req)

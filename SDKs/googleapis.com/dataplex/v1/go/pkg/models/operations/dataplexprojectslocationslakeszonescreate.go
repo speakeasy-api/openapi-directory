@@ -8,18 +8,14 @@ import (
 )
 
 type DataplexProjectsLocationsLakesZonesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataplexProjectsLocationsLakesZonesCreatePathParams struct {
-	// Required. The resource name of the parent lake: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataplexProjectsLocationsLakesZonesCreateQueryParams struct {
+type DataplexProjectsLocationsLakesZonesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                    *shared.XgafvEnum                      `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDataplexV1ZoneInput *shared.GoogleCloudDataplexV1ZoneInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type DataplexProjectsLocationsLakesZonesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The resource name of the parent lake: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,13 +42,6 @@ type DataplexProjectsLocationsLakesZonesCreateQueryParams struct {
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
 	// Required. Zone identifier. This ID will be used to generate names such as database and dataset names when publishing metadata to Hive Metastore and BigQuery. * Must contain only lowercase letters, numbers and hyphens. * Must start with a letter. * Must end with a number or a letter. * Must be between 1-63 characters. * Must be unique across all lakes from all locations in a project. * Must not be one of the reserved IDs (i.e. "default", "global-temp")
 	ZoneID *string `queryParam:"style=form,explode=true,name=zoneId"`
-}
-
-type DataplexProjectsLocationsLakesZonesCreateRequest struct {
-	PathParams  DataplexProjectsLocationsLakesZonesCreatePathParams
-	QueryParams DataplexProjectsLocationsLakesZonesCreateQueryParams
-	Request     *shared.GoogleCloudDataplexV1ZoneInput `request:"mediaType=application/json"`
-	Security    DataplexProjectsLocationsLakesZonesCreateSecurity
 }
 
 type DataplexProjectsLocationsLakesZonesCreateResponse struct {

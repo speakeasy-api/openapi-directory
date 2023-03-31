@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerPortsListQueryParams struct {
+type DcimPowerPortsListRequest struct {
 	AllocatedDraw     *string `queryParam:"style=form,explode=true,name=allocated_draw"`
 	AllocatedDrawGt   *string `queryParam:"style=form,explode=true,name=allocated_draw__gt"`
 	AllocatedDrawGte  *string `queryParam:"style=form,explode=true,name=allocated_draw__gte"`
@@ -70,10 +70,6 @@ type DcimPowerPortsListQueryParams struct {
 	TagN      *string `queryParam:"style=form,explode=true,name=tag__n"`
 	Type      *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN     *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimPowerPortsListRequest struct {
-	QueryParams DcimPowerPortsListQueryParams
 }
 
 type DcimPowerPortsList200ApplicationJSON struct {

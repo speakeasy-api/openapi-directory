@@ -8,13 +8,13 @@ import (
 )
 
 type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity struct {
@@ -22,12 +22,7 @@ type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity struct {
 	Option2 *FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption2 `security:"option"`
 }
 
-type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams struct {
-	// Required. The parent project name shared by all AppAttestConfigs being retrieved, in the format ``` projects/{project_number} ``` The parent collection in the `name` field of any resource being retrieved must match this field, or the entire batch fails.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams struct {
+type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,6 +39,8 @@ type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams struct {
 	Names []string `queryParam:"style=form,explode=true,name=names"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent project name shared by all AppAttestConfigs being retrieved, in the format ``` projects/{project_number} ``` The parent collection in the `name` field of any resource being retrieved must match this field, or the entire batch fails.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest struct {
-	PathParams  FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams
-	QueryParams FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams
-	Security    FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity
 }
 
 type FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type BooksVolumesUseruploadedListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BooksVolumesUseruploadedListProcessingStateEnum string
@@ -43,7 +43,7 @@ func (e *BooksVolumesUseruploadedListProcessingStateEnum) UnmarshalJSON(data []b
 	}
 }
 
-type BooksVolumesUseruploadedListQueryParams struct {
+type BooksVolumesUseruploadedListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -78,11 +78,6 @@ type BooksVolumesUseruploadedListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The ids of the volumes to be returned. If not specified all that match the processingState are returned.
 	VolumeID []string `queryParam:"style=form,explode=true,name=volumeId"`
-}
-
-type BooksVolumesUseruploadedListRequest struct {
-	QueryParams BooksVolumesUseruploadedListQueryParams
-	Security    BooksVolumesUseruploadedListSecurity
 }
 
 type BooksVolumesUseruploadedListResponse struct {

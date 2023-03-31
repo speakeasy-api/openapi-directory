@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type CreateAttachmentPathParams struct {
+type CreateAttachmentRequest struct {
 	BucketID     string `pathParam:"style=simple,explode=false,name=bucket_id"`
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
 	ID           string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CreateAttachmentRequest struct {
-	PathParams CreateAttachmentPathParams
 }
 
 type CreateAttachmentResponse struct {

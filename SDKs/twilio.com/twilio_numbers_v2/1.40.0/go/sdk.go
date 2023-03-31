@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateBundle - Create a new Bundle.
-func (s *SDK) CreateBundle(ctx context.Context, request operations.CreateBundleRequest) (*operations.CreateBundleResponse, error) {
+func (s *SDK) CreateBundle(ctx context.Context, request operations.CreateBundleCreateBundleRequest, security operations.CreateBundleSecurity, opts ...operations.Option) (*operations.CreateBundleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateBundleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/Bundles"
@@ -113,7 +123,7 @@ func (s *SDK) CreateBundle(ctx context.Context, request operations.CreateBundleR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,15 +158,25 @@ func (s *SDK) CreateBundle(ctx context.Context, request operations.CreateBundleR
 }
 
 // CreateBundleCopy - Creates a new copy of a Bundle. It will internally create copies of all the bundle items (identities and documents) of the original bundle
-func (s *SDK) CreateBundleCopy(ctx context.Context, request operations.CreateBundleCopyRequest) (*operations.CreateBundleCopyResponse, error) {
-	baseURL := operations.CreateBundleCopyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateBundleCopy(ctx context.Context, request operations.CreateBundleCopyRequest, security operations.CreateBundleCopySecurity, opts ...operations.Option) (*operations.CreateBundleCopyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Copies", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateBundleCopyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Copies", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +188,7 @@ func (s *SDK) CreateBundleCopy(ctx context.Context, request operations.CreateBun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -203,10 +223,20 @@ func (s *SDK) CreateBundleCopy(ctx context.Context, request operations.CreateBun
 }
 
 // CreateEndUser - Create a new End User.
-func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUserRequest) (*operations.CreateEndUserResponse, error) {
+func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUserCreateEndUserRequest, security operations.CreateEndUserSecurity, opts ...operations.Option) (*operations.CreateEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/EndUsers"
@@ -223,7 +253,7 @@ func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,20 +288,30 @@ func (s *SDK) CreateEndUser(ctx context.Context, request operations.CreateEndUse
 }
 
 // CreateEvaluation - Creates an evaluation for a bundle
-func (s *SDK) CreateEvaluation(ctx context.Context, request operations.CreateEvaluationRequest) (*operations.CreateEvaluationResponse, error) {
-	baseURL := operations.CreateEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateEvaluation(ctx context.Context, request operations.CreateEvaluationRequest, security operations.CreateEvaluationSecurity, opts ...operations.Option) (*operations.CreateEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Evaluations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Evaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,15 +346,25 @@ func (s *SDK) CreateEvaluation(ctx context.Context, request operations.CreateEva
 }
 
 // CreateItemAssignment - Create a new Assigned Item.
-func (s *SDK) CreateItemAssignment(ctx context.Context, request operations.CreateItemAssignmentRequest) (*operations.CreateItemAssignmentResponse, error) {
-	baseURL := operations.CreateItemAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateItemAssignment(ctx context.Context, request operations.CreateItemAssignmentRequest, security operations.CreateItemAssignmentSecurity, opts ...operations.Option) (*operations.CreateItemAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateItemAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -326,7 +376,7 @@ func (s *SDK) CreateItemAssignment(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -361,15 +411,25 @@ func (s *SDK) CreateItemAssignment(ctx context.Context, request operations.Creat
 }
 
 // CreateReplaceItems - Replaces all bundle items in the target bundle (specified in the path) with all the bundle items of the source bundle (specified by the from_bundle_sid body param)
-func (s *SDK) CreateReplaceItems(ctx context.Context, request operations.CreateReplaceItemsRequest) (*operations.CreateReplaceItemsResponse, error) {
-	baseURL := operations.CreateReplaceItemsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateReplaceItems(ctx context.Context, request operations.CreateReplaceItemsRequest, security operations.CreateReplaceItemsSecurity, opts ...operations.Option) (*operations.CreateReplaceItemsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ReplaceItems", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateReplaceItemsServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ReplaceItems", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -381,7 +441,7 @@ func (s *SDK) CreateReplaceItems(ctx context.Context, request operations.CreateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -416,10 +476,20 @@ func (s *SDK) CreateReplaceItems(ctx context.Context, request operations.CreateR
 }
 
 // CreateSupportingDocument - Create a new Supporting Document.
-func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.CreateSupportingDocumentRequest) (*operations.CreateSupportingDocumentResponse, error) {
+func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.CreateSupportingDocumentCreateSupportingDocumentRequest, security operations.CreateSupportingDocumentSecurity, opts ...operations.Option) (*operations.CreateSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/SupportingDocuments"
@@ -436,7 +506,7 @@ func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -471,20 +541,30 @@ func (s *SDK) CreateSupportingDocument(ctx context.Context, request operations.C
 }
 
 // DeleteBundle - Delete a specific Bundle.
-func (s *SDK) DeleteBundle(ctx context.Context, request operations.DeleteBundleRequest) (*operations.DeleteBundleResponse, error) {
-	baseURL := operations.DeleteBundleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteBundle(ctx context.Context, request operations.DeleteBundleRequest, security operations.DeleteBundleSecurity, opts ...operations.Option) (*operations.DeleteBundleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteBundleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -510,20 +590,30 @@ func (s *SDK) DeleteBundle(ctx context.Context, request operations.DeleteBundleR
 }
 
 // DeleteEndUser - Delete a specific End User.
-func (s *SDK) DeleteEndUser(ctx context.Context, request operations.DeleteEndUserRequest) (*operations.DeleteEndUserResponse, error) {
-	baseURL := operations.DeleteEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteEndUser(ctx context.Context, request operations.DeleteEndUserRequest, security operations.DeleteEndUserSecurity, opts ...operations.Option) (*operations.DeleteEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUsers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteEndUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUsers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -549,20 +639,30 @@ func (s *SDK) DeleteEndUser(ctx context.Context, request operations.DeleteEndUse
 }
 
 // DeleteItemAssignment - Remove an Assignment Item Instance.
-func (s *SDK) DeleteItemAssignment(ctx context.Context, request operations.DeleteItemAssignmentRequest) (*operations.DeleteItemAssignmentResponse, error) {
-	baseURL := operations.DeleteItemAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteItemAssignment(ctx context.Context, request operations.DeleteItemAssignmentRequest, security operations.DeleteItemAssignmentSecurity, opts ...operations.Option) (*operations.DeleteItemAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteItemAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,20 +688,30 @@ func (s *SDK) DeleteItemAssignment(ctx context.Context, request operations.Delet
 }
 
 // DeleteSupportingDocument - Delete a specific Supporting Document.
-func (s *SDK) DeleteSupportingDocument(ctx context.Context, request operations.DeleteSupportingDocumentRequest) (*operations.DeleteSupportingDocumentResponse, error) {
-	baseURL := operations.DeleteSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSupportingDocument(ctx context.Context, request operations.DeleteSupportingDocumentRequest, security operations.DeleteSupportingDocumentSecurity, opts ...operations.Option) (*operations.DeleteSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocuments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSupportingDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocuments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -627,20 +737,30 @@ func (s *SDK) DeleteSupportingDocument(ctx context.Context, request operations.D
 }
 
 // FetchBundle - Fetch a specific Bundle instance.
-func (s *SDK) FetchBundle(ctx context.Context, request operations.FetchBundleRequest) (*operations.FetchBundleResponse, error) {
-	baseURL := operations.FetchBundleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchBundle(ctx context.Context, request operations.FetchBundleRequest, security operations.FetchBundleSecurity, opts ...operations.Option) (*operations.FetchBundleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchBundleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -675,20 +795,30 @@ func (s *SDK) FetchBundle(ctx context.Context, request operations.FetchBundleReq
 }
 
 // FetchEndUser - Fetch specific End User Instance.
-func (s *SDK) FetchEndUser(ctx context.Context, request operations.FetchEndUserRequest) (*operations.FetchEndUserResponse, error) {
-	baseURL := operations.FetchEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEndUser(ctx context.Context, request operations.FetchEndUserRequest, security operations.FetchEndUserSecurity, opts ...operations.Option) (*operations.FetchEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUsers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEndUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUsers/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -723,20 +853,30 @@ func (s *SDK) FetchEndUser(ctx context.Context, request operations.FetchEndUserR
 }
 
 // FetchEndUserType - Fetch a specific End-User Type Instance.
-func (s *SDK) FetchEndUserType(ctx context.Context, request operations.FetchEndUserTypeRequest) (*operations.FetchEndUserTypeResponse, error) {
-	baseURL := operations.FetchEndUserTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEndUserType(ctx context.Context, request operations.FetchEndUserTypeRequest, security operations.FetchEndUserTypeSecurity, opts ...operations.Option) (*operations.FetchEndUserTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUserTypes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEndUserTypeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUserTypes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -771,20 +911,30 @@ func (s *SDK) FetchEndUserType(ctx context.Context, request operations.FetchEndU
 }
 
 // FetchEvaluation - Fetch specific Evaluation Instance.
-func (s *SDK) FetchEvaluation(ctx context.Context, request operations.FetchEvaluationRequest) (*operations.FetchEvaluationResponse, error) {
-	baseURL := operations.FetchEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchEvaluation(ctx context.Context, request operations.FetchEvaluationRequest, security operations.FetchEvaluationSecurity, opts ...operations.Option) (*operations.FetchEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Evaluations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Evaluations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -819,20 +969,30 @@ func (s *SDK) FetchEvaluation(ctx context.Context, request operations.FetchEvalu
 }
 
 // FetchItemAssignment - Fetch specific Assigned Item Instance.
-func (s *SDK) FetchItemAssignment(ctx context.Context, request operations.FetchItemAssignmentRequest) (*operations.FetchItemAssignmentResponse, error) {
-	baseURL := operations.FetchItemAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchItemAssignment(ctx context.Context, request operations.FetchItemAssignmentRequest, security operations.FetchItemAssignmentSecurity, opts ...operations.Option) (*operations.FetchItemAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchItemAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -867,20 +1027,30 @@ func (s *SDK) FetchItemAssignment(ctx context.Context, request operations.FetchI
 }
 
 // FetchRegulation - Fetch specific Regulation Instance.
-func (s *SDK) FetchRegulation(ctx context.Context, request operations.FetchRegulationRequest) (*operations.FetchRegulationResponse, error) {
-	baseURL := operations.FetchRegulationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRegulation(ctx context.Context, request operations.FetchRegulationRequest, security operations.FetchRegulationSecurity, opts ...operations.Option) (*operations.FetchRegulationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Regulations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRegulationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Regulations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -915,20 +1085,30 @@ func (s *SDK) FetchRegulation(ctx context.Context, request operations.FetchRegul
 }
 
 // FetchSupportingDocument - Fetch specific Supporting Document Instance.
-func (s *SDK) FetchSupportingDocument(ctx context.Context, request operations.FetchSupportingDocumentRequest) (*operations.FetchSupportingDocumentResponse, error) {
-	baseURL := operations.FetchSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSupportingDocument(ctx context.Context, request operations.FetchSupportingDocumentRequest, security operations.FetchSupportingDocumentSecurity, opts ...operations.Option) (*operations.FetchSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocuments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSupportingDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocuments/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -963,20 +1143,30 @@ func (s *SDK) FetchSupportingDocument(ctx context.Context, request operations.Fe
 }
 
 // FetchSupportingDocumentType - Fetch a specific Supporting Document Type Instance.
-func (s *SDK) FetchSupportingDocumentType(ctx context.Context, request operations.FetchSupportingDocumentTypeRequest) (*operations.FetchSupportingDocumentTypeResponse, error) {
-	baseURL := operations.FetchSupportingDocumentTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSupportingDocumentType(ctx context.Context, request operations.FetchSupportingDocumentTypeRequest, security operations.FetchSupportingDocumentTypeSecurity, opts ...operations.Option) (*operations.FetchSupportingDocumentTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocumentTypes/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSupportingDocumentTypeServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocumentTypes/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1011,10 +1201,20 @@ func (s *SDK) FetchSupportingDocumentType(ctx context.Context, request operation
 }
 
 // ListBundle - Retrieve a list of all Bundles for an account.
-func (s *SDK) ListBundle(ctx context.Context, request operations.ListBundleRequest) (*operations.ListBundleResponse, error) {
+func (s *SDK) ListBundle(ctx context.Context, request operations.ListBundleRequest, security operations.ListBundleSecurity, opts ...operations.Option) (*operations.ListBundleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListBundleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/Bundles"
@@ -1024,11 +1224,11 @@ func (s *SDK) ListBundle(ctx context.Context, request operations.ListBundleReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1063,24 +1263,34 @@ func (s *SDK) ListBundle(ctx context.Context, request operations.ListBundleReque
 }
 
 // ListBundleCopy - Retrieve a list of all Bundles Copies for a Bundle.
-func (s *SDK) ListBundleCopy(ctx context.Context, request operations.ListBundleCopyRequest) (*operations.ListBundleCopyResponse, error) {
-	baseURL := operations.ListBundleCopyServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListBundleCopy(ctx context.Context, request operations.ListBundleCopyRequest, security operations.ListBundleCopySecurity, opts ...operations.Option) (*operations.ListBundleCopyResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Copies", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListBundleCopyServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Copies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1115,10 +1325,20 @@ func (s *SDK) ListBundleCopy(ctx context.Context, request operations.ListBundleC
 }
 
 // ListEndUser - Retrieve a list of all End User for an account.
-func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserRequest) (*operations.ListEndUserResponse, error) {
+func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserRequest, security operations.ListEndUserSecurity, opts ...operations.Option) (*operations.ListEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/EndUsers"
@@ -1128,11 +1348,11 @@ func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1167,10 +1387,20 @@ func (s *SDK) ListEndUser(ctx context.Context, request operations.ListEndUserReq
 }
 
 // ListEndUserType - Retrieve a list of all End-User Types.
-func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUserTypeRequest) (*operations.ListEndUserTypeResponse, error) {
+func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUserTypeRequest, security operations.ListEndUserTypeSecurity, opts ...operations.Option) (*operations.ListEndUserTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListEndUserTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/EndUserTypes"
@@ -1180,11 +1410,11 @@ func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUse
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1219,24 +1449,34 @@ func (s *SDK) ListEndUserType(ctx context.Context, request operations.ListEndUse
 }
 
 // ListEvaluation - Retrieve a list of Evaluations associated to the Bundle resource.
-func (s *SDK) ListEvaluation(ctx context.Context, request operations.ListEvaluationRequest) (*operations.ListEvaluationResponse, error) {
-	baseURL := operations.ListEvaluationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListEvaluation(ctx context.Context, request operations.ListEvaluationRequest, security operations.ListEvaluationSecurity, opts ...operations.Option) (*operations.ListEvaluationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Evaluations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListEvaluationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/Evaluations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1271,24 +1511,34 @@ func (s *SDK) ListEvaluation(ctx context.Context, request operations.ListEvaluat
 }
 
 // ListItemAssignment - Retrieve a list of all Assigned Items for an account.
-func (s *SDK) ListItemAssignment(ctx context.Context, request operations.ListItemAssignmentRequest) (*operations.ListItemAssignmentResponse, error) {
-	baseURL := operations.ListItemAssignmentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListItemAssignment(ctx context.Context, request operations.ListItemAssignmentRequest, security operations.ListItemAssignmentSecurity, opts ...operations.Option) (*operations.ListItemAssignmentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListItemAssignmentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{BundleSid}/ItemAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1323,10 +1573,20 @@ func (s *SDK) ListItemAssignment(ctx context.Context, request operations.ListIte
 }
 
 // ListRegulation - Retrieve a list of all Regulations.
-func (s *SDK) ListRegulation(ctx context.Context, request operations.ListRegulationRequest) (*operations.ListRegulationResponse, error) {
+func (s *SDK) ListRegulation(ctx context.Context, request operations.ListRegulationRequest, security operations.ListRegulationSecurity, opts ...operations.Option) (*operations.ListRegulationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListRegulationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/Regulations"
@@ -1336,11 +1596,11 @@ func (s *SDK) ListRegulation(ctx context.Context, request operations.ListRegulat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1375,10 +1635,20 @@ func (s *SDK) ListRegulation(ctx context.Context, request operations.ListRegulat
 }
 
 // ListSupportingDocument - Retrieve a list of all Supporting Document for an account.
-func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.ListSupportingDocumentRequest) (*operations.ListSupportingDocumentResponse, error) {
+func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.ListSupportingDocumentRequest, security operations.ListSupportingDocumentSecurity, opts ...operations.Option) (*operations.ListSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/SupportingDocuments"
@@ -1388,11 +1658,11 @@ func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1427,10 +1697,20 @@ func (s *SDK) ListSupportingDocument(ctx context.Context, request operations.Lis
 }
 
 // ListSupportingDocumentType - Retrieve a list of all Supporting Document Types.
-func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations.ListSupportingDocumentTypeRequest) (*operations.ListSupportingDocumentTypeResponse, error) {
+func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations.ListSupportingDocumentTypeRequest, security operations.ListSupportingDocumentTypeSecurity, opts ...operations.Option) (*operations.ListSupportingDocumentTypeResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSupportingDocumentTypeServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/RegulatoryCompliance/SupportingDocumentTypes"
@@ -1440,11 +1720,11 @@ func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1479,15 +1759,25 @@ func (s *SDK) ListSupportingDocumentType(ctx context.Context, request operations
 }
 
 // UpdateBundle - Updates a Bundle in an account.
-func (s *SDK) UpdateBundle(ctx context.Context, request operations.UpdateBundleRequest) (*operations.UpdateBundleResponse, error) {
-	baseURL := operations.UpdateBundleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateBundle(ctx context.Context, request operations.UpdateBundleRequest, security operations.UpdateBundleSecurity, opts ...operations.Option) (*operations.UpdateBundleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateBundleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/Bundles/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1499,7 +1789,7 @@ func (s *SDK) UpdateBundle(ctx context.Context, request operations.UpdateBundleR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1534,15 +1824,25 @@ func (s *SDK) UpdateBundle(ctx context.Context, request operations.UpdateBundleR
 }
 
 // UpdateEndUser - Update an existing End User.
-func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUserRequest) (*operations.UpdateEndUserResponse, error) {
-	baseURL := operations.UpdateEndUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUserRequest, security operations.UpdateEndUserSecurity, opts ...operations.Option) (*operations.UpdateEndUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUsers/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateEndUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/EndUsers/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1554,7 +1854,7 @@ func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1589,15 +1889,25 @@ func (s *SDK) UpdateEndUser(ctx context.Context, request operations.UpdateEndUse
 }
 
 // UpdateSupportingDocument - Update an existing Supporting Document.
-func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.UpdateSupportingDocumentRequest) (*operations.UpdateSupportingDocumentResponse, error) {
-	baseURL := operations.UpdateSupportingDocumentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.UpdateSupportingDocumentRequest, security operations.UpdateSupportingDocumentSecurity, opts ...operations.Option) (*operations.UpdateSupportingDocumentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocuments/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSupportingDocumentServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v2/RegulatoryCompliance/SupportingDocuments/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1609,7 +1919,7 @@ func (s *SDK) UpdateSupportingDocument(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

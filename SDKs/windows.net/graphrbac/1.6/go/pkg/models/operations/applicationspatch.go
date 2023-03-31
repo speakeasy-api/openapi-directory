@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ApplicationsPatchPathParams struct {
+type ApplicationsPatchRequest struct {
+	// Parameters to update an existing application.
+	ApplicationUpdateParameters shared.ApplicationUpdateParameters `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Application object ID.
 	ApplicationObjectID string `pathParam:"style=simple,explode=false,name=applicationObjectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ApplicationsPatchQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ApplicationsPatchRequest struct {
-	PathParams  ApplicationsPatchPathParams
-	QueryParams ApplicationsPatchQueryParams
-	// Parameters to update an existing application.
-	Request shared.ApplicationUpdateParameters `request:"mediaType=application/json"`
 }
 
 type ApplicationsPatchResponse struct {

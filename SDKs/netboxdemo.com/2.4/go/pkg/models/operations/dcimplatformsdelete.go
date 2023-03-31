@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimPlatformsDeletePathParams struct {
+type DcimPlatformsDeleteRequest struct {
 	// A unique integer value identifying this platform.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPlatformsDeleteRequest struct {
-	PathParams DcimPlatformsDeletePathParams
 }
 
 type DcimPlatformsDeleteResponse struct {

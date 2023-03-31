@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmRestrictionsPathParams struct {
+type GetNetworkSmRestrictionsRequest struct {
 	DeviceID  string `pathParam:"style=simple,explode=false,name=deviceId"`
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmRestrictionsRequest struct {
-	PathParams GetNetworkSmRestrictionsPathParams
 }
 
 type GetNetworkSmRestrictionsResponse struct {

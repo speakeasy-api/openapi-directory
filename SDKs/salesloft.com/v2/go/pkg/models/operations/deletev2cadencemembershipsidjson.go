@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteV2CadenceMembershipsIDJSONPathParams struct {
+type DeleteV2CadenceMembershipsIDJSONRequest struct {
 	// CadenceMembership ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteV2CadenceMembershipsIDJSONRequest struct {
-	PathParams DeleteV2CadenceMembershipsIDJSONPathParams
 }
 
 type DeleteV2CadenceMembershipsIDJSONResponse struct {

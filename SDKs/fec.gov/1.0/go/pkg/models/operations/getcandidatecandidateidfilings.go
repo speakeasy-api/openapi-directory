@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetCandidateCandidateIDFilingsPathParams struct {
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office.
-	//
-	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
-}
-
 type GetCandidateCandidateIDFilingsAmendmentIndicatorEnum string
 
 const (
@@ -108,7 +101,7 @@ func (e *GetCandidateCandidateIDFilingsOfficeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetCandidateCandidateIDFilingsQueryParams struct {
+type GetCandidateCandidateIDFilingsRequest struct {
 	// Amendent types:
 	//     -N   new
 	//     -A   amendment
@@ -127,6 +120,10 @@ type GetCandidateCandidateIDFilingsQueryParams struct {
 	// PDF URLs to the original document.
 	//
 	BeginningImageNumber []string `queryParam:"style=form,explode=true,name=beginning_image_number"`
+	// A unique identifier assigned to each candidate registered with the FEC.
+	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	//
+	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
 	// The one-letter type code of the organization:
 	//         - C communication cost
 	//         - D delegate
@@ -317,11 +314,6 @@ type GetCandidateCandidateIDFilingsQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// US state or territory where a candidate runs for office
 	State []string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetCandidateCandidateIDFilingsRequest struct {
-	PathParams  GetCandidateCandidateIDFilingsPathParams
-	QueryParams GetCandidateCandidateIDFilingsQueryParams
 }
 
 type GetCandidateCandidateIDFilingsResponse struct {

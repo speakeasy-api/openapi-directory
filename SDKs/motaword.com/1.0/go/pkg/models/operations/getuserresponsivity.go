@@ -10,12 +10,7 @@ import (
 )
 
 type GetUserResponsivitySecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type GetUserResponsivityPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetUserResponsivityPeriodEnum - Period for calcualtion.
@@ -42,15 +37,11 @@ func (e *GetUserResponsivityPeriodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserResponsivityQueryParams struct {
+type GetUserResponsivityRequest struct {
 	// Period for calcualtion.
 	Period *GetUserResponsivityPeriodEnum `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetUserResponsivityRequest struct {
-	PathParams  GetUserResponsivityPathParams
-	QueryParams GetUserResponsivityQueryParams
-	Security    GetUserResponsivitySecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetUserResponsivityResponse struct {

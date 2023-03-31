@@ -4,40 +4,34 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AnalyticsDataGetRequest(
-    security=operations.AnalyticsDataGetSecurity(
-        option1=operations.AnalyticsDataGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.AnalyticsDataGetQueryParams(
-        alt="atom",
-        dimensions="nam",
-        end_date="et",
-        fields="molestiae",
-        filters="qui",
-        ids="sit",
-        key="et",
-        max_results=1727979121818110814,
-        metrics="nemo",
-        oauth_token="facere",
-        pretty_print=False,
-        quota_user="repellat",
-        segment="accusantium",
-        sort="excepturi",
-        start_date="consequuntur",
-        start_index=6545082317487046118,
-        user_ip="delectus",
-    ),
+    alt="atom",
+    dimensions="corrupti",
+    end_date="provident",
+    fields_="distinctio",
+    filters="quibusdam",
+    ids="unde",
+    key="nulla",
+    max_results=544883,
+    metrics="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    segment="deserunt",
+    sort="suscipit",
+    start_date="iure",
+    start_index=297534,
+    user_ip="debitis",
 )
     
-res = s.data.analytics_data_get(req)
+res = s.data.analytics_data_get(req, operations.AnalyticsDataGetSecurity(
+    option1=operations.AnalyticsDataGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.status_code == 200:
     # handle response

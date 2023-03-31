@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitCreateRefPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type GitCreateRefRequestBody struct {
 	Key *string `json:"key,omitempty"`
 	// The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
@@ -23,8 +16,11 @@ type GitCreateRefRequestBody struct {
 }
 
 type GitCreateRefRequest struct {
-	PathParams GitCreateRefPathParams
-	Request    GitCreateRefRequestBody `request:"mediaType=application/json"`
+	RequestBody GitCreateRefRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type GitCreateRefResponse struct {

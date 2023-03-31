@@ -62,7 +62,7 @@ func (e *GetProjectsWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectsQueryParams struct {
+type GetProjectsRequest struct {
 	OrderBy   *GetProjectsOrderByEnum   `queryParam:"style=form,explode=true,name=order_by"`
 	OrderType *shared.ListOrderTypeEnum `queryParam:"style=form,explode=true,name=order_type"`
 	Page      *int64                    `queryParam:"style=form,explode=true,name=page"`
@@ -77,10 +77,6 @@ type GetProjectsQueryParams struct {
 	WithPending *bool `queryParam:"style=form,explode=true,name=with_pending"`
 	// deprecated. use `status[]` param.
 	WithStarted *bool `queryParam:"style=form,explode=true,name=with_started"`
-}
-
-type GetProjectsRequest struct {
-	QueryParams GetProjectsQueryParams
 }
 
 type GetProjectsResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateUserPathParams struct {
-	// User ID
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 type UpdateUserRequestBody struct {
 	// A user who joins a conversation as a member can have one channel per membership type. Channels can be `app`, `phone`, `sip`, `websocket`, or `vbc`
 	Channels *shared.Channel `json:"channels,omitempty"`
@@ -24,8 +19,9 @@ type UpdateUserRequestBody struct {
 }
 
 type UpdateUserRequest struct {
-	PathParams UpdateUserPathParams
-	Request    *UpdateUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateUserRequestBody `request:"mediaType=application/json"`
+	// User ID
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 // UpdateUser200ApplicationJSON - Retrieve a user

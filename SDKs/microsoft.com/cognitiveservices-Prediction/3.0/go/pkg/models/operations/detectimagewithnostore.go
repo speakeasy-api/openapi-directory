@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DetectImageWithNoStorePathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Specifies the name of the model to evaluate against.
-	PublishedName string `pathParam:"style=simple,explode=false,name=publishedName"`
-}
-
-type DetectImageWithNoStoreQueryParams struct {
-	// Optional. Specifies the name of application using the endpoint.
-	Application *string `queryParam:"style=form,explode=true,name=application"`
-}
-
 type DetectImageWithNoStoreRequestBodyImageData struct {
 	Content   []byte `multipartForm:"content"`
 	ImageData string `multipartForm:"name=imageData"`
@@ -30,9 +18,13 @@ type DetectImageWithNoStoreRequestBody struct {
 }
 
 type DetectImageWithNoStoreRequest struct {
-	PathParams  DetectImageWithNoStorePathParams
-	QueryParams DetectImageWithNoStoreQueryParams
-	Request     DetectImageWithNoStoreRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody DetectImageWithNoStoreRequestBody `request:"mediaType=multipart/form-data"`
+	// Optional. Specifies the name of application using the endpoint.
+	Application *string `queryParam:"style=form,explode=true,name=application"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
+	// Specifies the name of the model to evaluate against.
+	PublishedName string `pathParam:"style=simple,explode=false,name=publishedName"`
 }
 
 type DetectImageWithNoStoreResponse struct {

@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type SendPaymentNotificationPathParams struct {
-	// Order ID is a unique code that identifies an order.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
-	// VTEX payment identifier.
-	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type SendPaymentNotificationHeaders struct {
+type SendPaymentNotificationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SendPaymentNotificationRequest struct {
-	PathParams SendPaymentNotificationPathParams
-	Headers    SendPaymentNotificationHeaders
+	// Order ID is a unique code that identifies an order.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	// VTEX payment identifier.
+	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
 }
 
 type SendPaymentNotificationResponse struct {

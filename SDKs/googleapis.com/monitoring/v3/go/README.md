@@ -25,212 +25,199 @@ func main() {
     s := sdk.New()
 
     req := operations.MonitoringProjectsAlertPoliciesCreateRequest{
-        Security: operations.MonitoringProjectsAlertPoliciesCreateSecurity{
-            Option1: &operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.MonitoringProjectsAlertPoliciesCreatePathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.MonitoringProjectsAlertPoliciesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AlertPolicy{
+        DollarXgafv: "2",
+        AlertPolicy: &shared.AlertPolicy{
             AlertStrategy: &shared.AlertStrategy{
-                AutoClose: "suscipit",
+                AutoClose: "provident",
                 NotificationChannelStrategy: []shared.NotificationChannelStrategy{
                     shared.NotificationChannelStrategy{
                         NotificationChannelNames: []string{
-                            "debitis",
-                            "ipsa",
+                            "unde",
+                            "nulla",
+                            "corrupti",
+                            "illum",
                         },
-                        RenotifyInterval: "delectus",
+                        RenotifyInterval: "vel",
                     },
                     shared.NotificationChannelStrategy{
                         NotificationChannelNames: []string{
+                            "deserunt",
                             "suscipit",
-                            "molestiae",
+                            "iure",
                         },
-                        RenotifyInterval: "minus",
+                        RenotifyInterval: "magnam",
+                    },
+                    shared.NotificationChannelStrategy{
+                        NotificationChannelNames: []string{
+                            "ipsa",
+                            "delectus",
+                            "tempora",
+                            "suscipit",
+                        },
+                        RenotifyInterval: "molestiae",
                     },
                 },
                 NotificationRateLimit: &shared.NotificationRateLimit{
-                    Period: "placeat",
+                    Period: "minus",
                 },
             },
-            Combiner: "OR",
+            Combiner: "AND_WITH_MATCHING_RESOURCE",
             Conditions: []shared.Condition{
                 shared.Condition{
                     ConditionAbsent: &shared.MetricAbsence{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "nisi",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_50",
+                                AlignmentPeriod: "excepturi",
+                                CrossSeriesReducer: "REDUCE_STDDEV",
                                 GroupByFields: []string{
+                                    "temporibus",
                                     "ab",
                                     "quis",
                                     "veritatis",
-                                    "deserunt",
                                 },
-                                PerSeriesAligner: "ALIGN_NONE",
+                                PerSeriesAligner: "ALIGN_COUNT_FALSE",
                             },
                             shared.Aggregation{
-                                AlignmentPeriod: "ipsam",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_95",
+                                AlignmentPeriod: "perferendis",
+                                CrossSeriesReducer: "REDUCE_STDDEV",
                                 GroupByFields: []string{
+                                    "sapiente",
                                     "quo",
                                     "odit",
                                     "at",
-                                    "at",
                                 },
-                                PerSeriesAligner: "ALIGN_PERCENT_CHANGE",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "molestiae",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_95",
-                                GroupByFields: []string{
-                                    "esse",
-                                    "totam",
-                                    "porro",
-                                    "dolorum",
-                                },
-                                PerSeriesAligner: "ALIGN_RATE",
+                                PerSeriesAligner: "ALIGN_PERCENTILE_50",
                             },
                         },
-                        Duration: "nam",
-                        Filter: "officia",
+                        Duration: "maiores",
+                        Filter: "molestiae",
                         Trigger: &shared.Trigger{
-                            Count: 582020,
-                            Percent: 1433.53,
+                            Count: 799159,
+                            Percent: 8009.11,
                         },
                     },
                     ConditionMatchedLog: &shared.LogMatch{
-                        Filter: "deleniti",
+                        Filter: "esse",
                         LabelExtractors: map[string]string{
-                            "optio": "totam",
-                            "beatae": "commodi",
-                            "molestiae": "modi",
-                            "qui": "impedit",
+                            "porro": "dolorum",
+                            "dicta": "nam",
+                            "officia": "occaecati",
                         },
                     },
                     ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
-                        Duration: "cum",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_INACTIVE",
-                        Query: "ipsum",
+                        Duration: "fugit",
+                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
+                        Query: "hic",
                         Trigger: &shared.Trigger{
-                            Count: 568434,
-                            Percent: 1352.18,
+                            Count: 758616,
+                            Percent: 5218.48,
                         },
                     },
                     ConditionThreshold: &shared.MetricThreshold{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "ad",
-                                CrossSeriesReducer: "REDUCE_COUNT_FALSE",
+                                AlignmentPeriod: "commodi",
+                                CrossSeriesReducer: "REDUCE_COUNT",
                                 GroupByFields: []string{
-                                    "iste",
+                                    "qui",
+                                    "impedit",
                                 },
-                                PerSeriesAligner: "ALIGN_NEXT_OLDER",
+                                PerSeriesAligner: "ALIGN_PERCENTILE_99",
                             },
                         },
-                        Comparison: "COMPARISON_LE",
+                        Comparison: "COMPARISON_LT",
                         DenominatorAggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "hic",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_50",
+                                AlignmentPeriod: "excepturi",
+                                CrossSeriesReducer: "REDUCE_MEAN",
                                 GroupByFields: []string{
-                                    "in",
-                                    "corporis",
-                                    "iste",
+                                    "ad",
                                 },
-                                PerSeriesAligner: "ALIGN_COUNT",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "saepe",
-                                CrossSeriesReducer: "REDUCE_FRACTION_TRUE",
-                                GroupByFields: []string{
-                                    "ipsa",
-                                },
-                                PerSeriesAligner: "ALIGN_PERCENT_CHANGE",
+                                PerSeriesAligner: "ALIGN_COUNT_TRUE",
                             },
                         },
-                        DenominatorFilter: "est",
-                        Duration: "mollitia",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
-                        Filter: "dolores",
+                        DenominatorFilter: "sed",
+                        Duration: "iste",
+                        EvaluationMissingData: "EVALUATION_MISSING_DATA_UNSPECIFIED",
+                        Filter: "natus",
                         ForecastOptions: &shared.ForecastOptions{
-                            ForecastHorizon: "dolorem",
+                            ForecastHorizon: "laboriosam",
                         },
-                        ThresholdValue: 3581.52,
+                        ThresholdValue: 9437.49,
                         Trigger: &shared.Trigger{
-                            Count: 128926,
-                            Percent: 7506.86,
+                            Count: 902599,
+                            Percent: 6818.2,
                         },
                     },
-                    DisplayName: "enim",
-                    Name: "omnis",
+                    DisplayName: "in",
+                    Name: "corporis",
                 },
                 shared.Condition{
                     ConditionAbsent: &shared.MetricAbsence{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "minima",
-                                CrossSeriesReducer: "REDUCE_COUNT_TRUE",
+                                AlignmentPeriod: "iure",
+                                CrossSeriesReducer: "REDUCE_PERCENTILE_50",
                                 GroupByFields: []string{
-                                    "iure",
+                                    "architecto",
+                                    "ipsa",
+                                    "reiciendis",
                                 },
                                 PerSeriesAligner: "ALIGN_COUNT_FALSE",
                             },
                             shared.Aggregation{
-                                AlignmentPeriod: "doloribus",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_05",
+                                AlignmentPeriod: "mollitia",
+                                CrossSeriesReducer: "REDUCE_FRACTION_TRUE",
                                 GroupByFields: []string{
-                                    "mollitia",
+                                    "dolorem",
                                 },
-                                PerSeriesAligner: "ALIGN_INTERPOLATE",
+                                PerSeriesAligner: "ALIGN_MAX",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "explicabo",
+                                CrossSeriesReducer: "REDUCE_PERCENTILE_99",
+                                GroupByFields: []string{
+                                    "omnis",
+                                    "nemo",
+                                },
+                                PerSeriesAligner: "ALIGN_MAX",
                             },
                         },
-                        Duration: "culpa",
-                        Filter: "consequuntur",
+                        Duration: "excepturi",
+                        Filter: "accusantium",
                         Trigger: &shared.Trigger{
-                            Count: 995300,
-                            Percent: 6531.08,
+                            Count: 438601,
+                            Percent: 6342.74,
                         },
                     },
                     ConditionMatchedLog: &shared.LogMatch{
-                        Filter: "occaecati",
+                        Filter: "doloribus",
                         LabelExtractors: map[string]string{
-                            "commodi": "quam",
-                            "molestiae": "velit",
+                            "architecto": "mollitia",
+                            "dolorem": "culpa",
+                            "consequuntur": "repellat",
+                            "mollitia": "occaecati",
                         },
                     },
                     ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
-                        Duration: "error",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_UNSPECIFIED",
-                        Query: "quis",
+                        Duration: "numquam",
+                        EvaluationMissingData: "EVALUATION_MISSING_DATA_INACTIVE",
+                        Query: "quam",
                         Trigger: &shared.Trigger{
-                            Count: 110375,
-                            Percent: 6747.52,
+                            Count: 474697,
+                            Percent: 2444.25,
                         },
                     },
                     ConditionThreshold: &shared.MetricThreshold{
                         Aggregations: []shared.Aggregation{
+                            shared.Aggregation{
+                                AlignmentPeriod: "quia",
+                                CrossSeriesReducer: "REDUCE_SUM",
+                                GroupByFields: []string{
+                                    "laborum",
+                                },
+                                PerSeriesAligner: "ALIGN_COUNT_FALSE",
+                            },
                             shared.Aggregation{
                                 AlignmentPeriod: "enim",
                                 CrossSeriesReducer: "REDUCE_MEAN",
@@ -252,101 +239,258 @@ func main() {
                                 },
                                 PerSeriesAligner: "ALIGN_PERCENT_CHANGE",
                             },
+                        },
+                        Comparison: "COMPARISON_NE",
+                        DenominatorAggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "voluptatibus",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_50",
+                                AlignmentPeriod: "nihil",
+                                CrossSeriesReducer: "REDUCE_COUNT_TRUE",
                                 GroupByFields: []string{
-                                    "praesentium",
-                                    "voluptatibus",
+                                    "ipsa",
+                                    "omnis",
+                                    "voluptate",
+                                    "cum",
                                 },
-                                PerSeriesAligner: "ALIGN_DELTA",
+                                PerSeriesAligner: "ALIGN_NONE",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "doloremque",
+                                CrossSeriesReducer: "REDUCE_COUNT",
+                                GroupByFields: []string{
+                                    "maiores",
+                                    "dicta",
+                                },
+                                PerSeriesAligner: "ALIGN_MAX",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "dolore",
+                                CrossSeriesReducer: "REDUCE_COUNT",
+                                GroupByFields: []string{
+                                    "harum",
+                                },
+                                PerSeriesAligner: "ALIGN_MAX",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "accusamus",
+                                CrossSeriesReducer: "REDUCE_STDDEV",
+                                GroupByFields: []string{
+                                    "quae",
+                                    "ipsum",
+                                    "quidem",
+                                    "molestias",
+                                },
+                                PerSeriesAligner: "ALIGN_STDDEV",
+                            },
+                        },
+                        DenominatorFilter: "pariatur",
+                        Duration: "modi",
+                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
+                        Filter: "rem",
+                        ForecastOptions: &shared.ForecastOptions{
+                            ForecastHorizon: "voluptates",
+                        },
+                        ThresholdValue: 939.4,
+                        Trigger: &shared.Trigger{
+                            Count: 921158,
+                            Percent: 5759.47,
+                        },
+                    },
+                    DisplayName: "veritatis",
+                    Name: "itaque",
+                },
+                shared.Condition{
+                    ConditionAbsent: &shared.MetricAbsence{
+                        Aggregations: []shared.Aggregation{
+                            shared.Aggregation{
+                                AlignmentPeriod: "enim",
+                                CrossSeriesReducer: "REDUCE_NONE",
+                                GroupByFields: []string{
+                                    "quibusdam",
+                                    "explicabo",
+                                    "deserunt",
+                                },
+                                PerSeriesAligner: "ALIGN_FRACTION_TRUE",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "quibusdam",
+                                CrossSeriesReducer: "REDUCE_SUM",
+                                GroupByFields: []string{
+                                    "qui",
+                                    "aliquid",
+                                },
+                                PerSeriesAligner: "ALIGN_COUNT_TRUE",
+                            },
+                        },
+                        Duration: "quos",
+                        Filter: "perferendis",
+                        Trigger: &shared.Trigger{
+                            Count: 164940,
+                            Percent: 8289.4,
+                        },
+                    },
+                    ConditionMatchedLog: &shared.LogMatch{
+                        Filter: "ipsam",
+                        LabelExtractors: map[string]string{
+                            "fugit": "dolorum",
+                        },
+                    },
+                    ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
+                        Duration: "excepturi",
+                        EvaluationMissingData: "EVALUATION_MISSING_DATA_INACTIVE",
+                        Query: "facilis",
+                        Trigger: &shared.Trigger{
+                            Count: 735194,
+                            Percent: 2884.76,
+                        },
+                    },
+                    ConditionThreshold: &shared.MetricThreshold{
+                        Aggregations: []shared.Aggregation{
+                            shared.Aggregation{
+                                AlignmentPeriod: "eum",
+                                CrossSeriesReducer: "REDUCE_MAX",
+                                GroupByFields: []string{
+                                    "sint",
+                                    "aliquid",
+                                    "provident",
+                                    "necessitatibus",
+                                },
+                                PerSeriesAligner: "ALIGN_STDDEV",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "officia",
+                                CrossSeriesReducer: "REDUCE_MAX",
+                                GroupByFields: []string{
+                                    "a",
+                                    "dolorum",
+                                    "in",
+                                    "in",
+                                },
+                                PerSeriesAligner: "ALIGN_PERCENTILE_50",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "maiores",
+                                CrossSeriesReducer: "REDUCE_FRACTION_TRUE",
+                                GroupByFields: []string{
+                                    "magnam",
+                                },
+                                PerSeriesAligner: "ALIGN_PERCENTILE_99",
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: "facere",
+                                CrossSeriesReducer: "REDUCE_STDDEV",
+                                GroupByFields: []string{
+                                    "laborum",
+                                    "accusamus",
+                                },
+                                PerSeriesAligner: "ALIGN_NEXT_OLDER",
                             },
                         },
                         Comparison: "COMPARISON_LE",
                         DenominatorAggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "cum",
-                                CrossSeriesReducer: "REDUCE_NONE",
+                                AlignmentPeriod: "accusamus",
+                                CrossSeriesReducer: "REDUCE_PERCENTILE_05",
                                 GroupByFields: []string{
-                                    "reprehenderit",
+                                    "provident",
+                                    "nam",
+                                    "id",
                                 },
-                                PerSeriesAligner: "ALIGN_MIN",
+                                PerSeriesAligner: "ALIGN_SUM",
                             },
                             shared.Aggregation{
-                                AlignmentPeriod: "maiores",
-                                CrossSeriesReducer: "REDUCE_MEAN",
+                                AlignmentPeriod: "deleniti",
+                                CrossSeriesReducer: "REDUCE_PERCENTILE_05",
                                 GroupByFields: []string{
-                                    "dolore",
-                                    "iusto",
+                                    "deserunt",
                                 },
-                                PerSeriesAligner: "ALIGN_RATE",
+                                PerSeriesAligner: "ALIGN_MEAN",
                             },
                         },
-                        DenominatorFilter: "harum",
-                        Duration: "enim",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_NO_OP",
-                        Filter: "commodi",
+                        DenominatorFilter: "vel",
+                        Duration: "natus",
+                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
+                        Filter: "molestiae",
                         ForecastOptions: &shared.ForecastOptions{
-                            ForecastHorizon: "repudiandae",
+                            ForecastHorizon: "perferendis",
                         },
-                        ThresholdValue: 641.47,
+                        ThresholdValue: 4701.32,
                         Trigger: &shared.Trigger{
-                            Count: 216822,
-                            Percent: 6924.72,
+                            Count: 301575,
+                            Percent: 7160.75,
                         },
                     },
-                    DisplayName: "molestias",
-                    Name: "excepturi",
+                    DisplayName: "id",
+                    Name: "labore",
                 },
             },
             CreationRecord: &shared.MutationRecord{
-                MutateTime: "pariatur",
-                MutatedBy: "modi",
+                MutateTime: "labore",
+                MutatedBy: "suscipit",
             },
-            DisplayName: "praesentium",
+            DisplayName: "natus",
             Documentation: &shared.Documentation{
-                Content: "rem",
-                MimeType: "voluptates",
+                Content: "nobis",
+                MimeType: "eum",
             },
             Enabled: false,
             MutationRecord: &shared.MutationRecord{
-                MutateTime: "quasi",
-                MutatedBy: "repudiandae",
+                MutateTime: "vero",
+                MutatedBy: "aspernatur",
             },
-            Name: "sint",
+            Name: "architecto",
             NotificationChannels: []string{
-                "itaque",
+                "et",
+                "excepturi",
             },
             UserLabels: map[string]string{
-                "enim": "consequatur",
-                "est": "quibusdam",
+                "provident": "quos",
+                "sint": "accusantium",
             },
             Validity: &shared.Status{
-                Code: 131797,
+                Code: 653201,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "quibusdam": "labore",
-                        "modi": "qui",
-                        "aliquid": "cupiditate",
+                        "ad": "eum",
+                        "dolor": "necessitatibus",
+                        "odit": "nemo",
                     },
                     map[string]interface{}{
-                        "perferendis": "magni",
-                        "assumenda": "ipsam",
-                        "alias": "fugit",
+                        "iure": "doloribus",
                     },
                     map[string]interface{}{
-                        "excepturi": "tempora",
-                        "facilis": "tempore",
-                        "labore": "delectus",
+                        "eius": "maxime",
+                        "deleniti": "facilis",
+                        "in": "architecto",
+                        "architecto": "repudiandae",
+                    },
+                    map[string]interface{}{
+                        "expedita": "nihil",
+                        "repellat": "quibusdam",
                     },
                 },
-                Message: "eum",
+                Message: "sed",
             },
         },
+        AccessToken: "saepe",
+        Alt: "proto",
+        Callback: "accusantium",
+        Fields: "consequuntur",
+        Key: "praesentium",
+        Name: "natus",
+        OauthToken: "magni",
+        PrettyPrint: false,
+        QuotaUser: "sunt",
+        UploadType: "quo",
+        UploadProtocol: "illum",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.MonitoringProjectsAlertPoliciesCreate(ctx, req)
+    res, err := s.Projects.MonitoringProjectsAlertPoliciesCreate(ctx, req, operations.MonitoringProjectsAlertPoliciesCreateSecurity{
+        Option1: &operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -359,7 +503,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -404,4 +548,15 @@ func main() {
 * `MonitoringUptimeCheckIpsList` - Returns the list of IP addresses that checkers run from
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

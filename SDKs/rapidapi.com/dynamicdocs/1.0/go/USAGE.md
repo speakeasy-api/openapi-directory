@@ -13,31 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AdvSecurityToken: &shared.SchemeAdvSecurityToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AdvSecurityToken: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.CompileRequest{
-        PathParams: operations.CompilePathParams{
-            TemplateToken: "7a582350acb835ed",
-        },
-        QueryParams: operations.CompileQueryParams{
-            DocFileName: "brilliantDocument",
-            DocURLExpiresIn: 3600,
-            LatexCompiler: "lualatex",
-            LatexRuns: 592845,
-            MainFileName: "inputFile.tex",
-        },
-        Headers: operations.CompileHeaders{
-            ContentType: "application/json",
-        },
-        Request: map[string]interface{}{
+        ContentType: "application/json",
+        RequestBody: map[string]interface{}{
+            "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
-            "illum": "vel",
         },
+        DocFileName: "brilliantDocument",
+        DocURLExpiresIn: 3600,
+        LatexCompiler: "lualatex",
+        LatexRuns: 423655,
+        MainFileName: "inputFile.tex",
+        TemplateToken: "7a582350acb835ed",
     }
 
     ctx := context.Background()

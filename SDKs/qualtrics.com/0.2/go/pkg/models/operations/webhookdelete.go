@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WebhookDeleteRequest struct {
-	// This is the request body of the webhook
-	Request shared.SubscribeToEventBody `request:"mediaType=application/json"`
-}
-
 type WebhookDeleteResponse struct {
 	ContentType                string
 	EventSubscriptionsResponse *shared.EventSubscriptionsResponse

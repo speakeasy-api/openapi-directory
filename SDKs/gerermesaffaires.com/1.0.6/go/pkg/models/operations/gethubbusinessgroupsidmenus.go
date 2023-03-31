@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetHubBusinessGroupsIDMenusSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetHubBusinessGroupsIDMenusPathParams struct {
-	// Id of the business group
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetHubBusinessGroupsIDMenusRequest struct {
-	PathParams GetHubBusinessGroupsIDMenusPathParams
-	Security   GetHubBusinessGroupsIDMenusSecurity
+	// Id of the business group
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
 }
 
 type GetHubBusinessGroupsIDMenus200ApplicationJSONMenus struct {

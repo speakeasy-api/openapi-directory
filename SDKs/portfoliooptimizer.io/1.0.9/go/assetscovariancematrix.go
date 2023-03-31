@@ -39,7 +39,7 @@ func newAssetsCovarianceMatrix(defaultClient, securityClient HTTPClient, serverU
 //
 // References
 // * [Wikipedia, Covariance Matrix](https://en.wikipedia.org/wiki/Covariance_matrix)
-func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrix(ctx context.Context, request operations.PostAssetsCovarianceMatrixRequest) (*operations.PostAssetsCovarianceMatrixResponse, error) {
+func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrix(ctx context.Context, request operations.PostAssetsCovarianceMatrixRequestBody) (*operations.PostAssetsCovarianceMatrixResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix"
 
@@ -97,7 +97,7 @@ func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrix(ctx context.Context,
 //
 // References
 // * [Olivier Roy and Martin Vetterli, The effective rank: A measure of effective dimensionality, 15th European Signal Processing Conference, 2007](https://ieeexplore.ieee.org/document/7098875)
-func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixEffectiveRank(ctx context.Context, request operations.PostAssetsCovarianceMatrixEffectiveRankRequest) (*operations.PostAssetsCovarianceMatrixEffectiveRankResponse, error) {
+func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixEffectiveRank(ctx context.Context, request operations.PostAssetsCovarianceMatrixEffectiveRankRequestBody) (*operations.PostAssetsCovarianceMatrixEffectiveRankResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix/effective-rank"
 
@@ -155,7 +155,7 @@ func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixEffectiveRank(ctx con
 //
 // References
 // * [RiskMetrics Group. Longerstaey, J. (1996). RiskMetrics technical document, Technical Report fourth edition](https://www.msci.com/documents/10199/5915b101-4206-4ba0-aee2-3449d5c7e95a)
-func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixExponentiallyWeighted(ctx context.Context, request operations.PostAssetsCovarianceMatrixExponentiallyWeightedRequest) (*operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse, error) {
+func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixExponentiallyWeighted(ctx context.Context, request operations.PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody) (*operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix/exponentially-weighted"
 
@@ -213,7 +213,7 @@ func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixExponentiallyWeighted
 //
 // References
 // * [Wikipedia, Covariance Matrix](https://en.wikipedia.org/wiki/Covariance_matrix)
-func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixValidation(ctx context.Context, request operations.PostAssetsCovarianceMatrixValidationRequest) (*operations.PostAssetsCovarianceMatrixValidationResponse, error) {
+func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixValidation(ctx context.Context, request operations.PostAssetsCovarianceMatrixValidationRequestBody) (*operations.PostAssetsCovarianceMatrixValidationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix/validation"
 

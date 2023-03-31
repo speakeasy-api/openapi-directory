@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetGifByIDRequest{
-        PathParams: operations.GetGifByIDPathParams{
-            GifID: 548814,
-        },
+        GifID: 548814,
     }
 
     ctx := context.Background()

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLocationPathParams struct {
+type UpdateLocationRequest struct {
+	// A JSON object containing location information
+	LocationInput shared.LocationInput `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateLocationRequest struct {
-	PathParams UpdateLocationPathParams
-	// A JSON object containing location information
-	Request shared.LocationInput `request:"mediaType=application/json"`
 }
 
 type UpdateLocationResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsAlertsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAlertsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAlertsListSecurity struct {
@@ -22,12 +22,7 @@ type AdsenseAccountsAlertsListSecurity struct {
 	Option2 *AdsenseAccountsAlertsListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsAlertsListPathParams struct {
-	// Required. The account which owns the collection of alerts. Format: accounts/{account}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AdsenseAccountsAlertsListQueryParams struct {
+type AdsenseAccountsAlertsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -44,6 +39,8 @@ type AdsenseAccountsAlertsListQueryParams struct {
 	LanguageCode *string `queryParam:"style=form,explode=true,name=languageCode"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The account which owns the collection of alerts. Format: accounts/{account}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type AdsenseAccountsAlertsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdsenseAccountsAlertsListRequest struct {
-	PathParams  AdsenseAccountsAlertsListPathParams
-	QueryParams AdsenseAccountsAlertsListQueryParams
-	Security    AdsenseAccountsAlertsListSecurity
 }
 
 type AdsenseAccountsAlertsListResponse struct {

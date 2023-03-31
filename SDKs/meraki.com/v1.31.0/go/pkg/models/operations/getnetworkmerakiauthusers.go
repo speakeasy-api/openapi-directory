@@ -7,12 +7,8 @@ import (
 	"time"
 )
 
-type GetNetworkMerakiAuthUsersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkMerakiAuthUsersRequest struct {
-	PathParams GetNetworkMerakiAuthUsersPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkMerakiAuthUsers200ApplicationJSONAuthorizations struct {

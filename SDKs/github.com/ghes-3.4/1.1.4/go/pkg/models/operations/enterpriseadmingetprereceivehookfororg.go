@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetPreReceiveHookForOrgPathParams struct {
+type EnterpriseAdminGetPreReceiveHookForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The unique identifier of the pre-receive hook.
 	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-}
-
-type EnterpriseAdminGetPreReceiveHookForOrgRequest struct {
-	PathParams EnterpriseAdminGetPreReceiveHookForOrgPathParams
 }
 
 type EnterpriseAdminGetPreReceiveHookForOrgResponse struct {

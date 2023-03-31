@@ -8,16 +8,11 @@ import (
 )
 
 type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListPathParams struct {
-	// Required. The parent resource name of the integration execution.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams struct {
+type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -64,6 +59,8 @@ type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams 
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The token returned in the previous response.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name of the integration execution.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -78,12 +75,6 @@ type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest struct {
-	PathParams  IntegrationsProjectsLocationsProductsIntegrationsExecutionsListPathParams
-	QueryParams IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams
-	Security    IntegrationsProjectsLocationsProductsIntegrationsExecutionsListSecurity
 }
 
 type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceStaticRoutePathParams struct {
+type GetNetworkApplianceStaticRouteRequest struct {
 	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
 	StaticRouteID string `pathParam:"style=simple,explode=false,name=staticRouteId"`
-}
-
-type GetNetworkApplianceStaticRouteRequest struct {
-	PathParams GetNetworkApplianceStaticRoutePathParams
 }
 
 type GetNetworkApplianceStaticRouteResponse struct {

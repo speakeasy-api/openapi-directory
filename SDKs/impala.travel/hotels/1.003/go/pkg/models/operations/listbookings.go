@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBookingsQueryParams struct {
+type ListBookingsRequest struct {
 	// Allows for filtering based on creation date and time of the booking in ISO 8601 format (e.g. `2020-11-04T17:37:37Z`) and UTC timezone. Available modifiers include less than (`lt`), greater than (`gt`), lower than or equal to (`lte`), greater than or equal to (`gte`) and equal to (`eq`). Usage example: `?created[lte]=2020-11-04T19:37:37Z&created[gte]=2020-11-04T15:56:37.000Z`
 	Created map[string]interface{} `queryParam:"style=deepObject,explode=true,name=created"`
 	// Allows for filtering based on departure date of the booking in ISO 8601 format (e.g. `2021-12-01`). Available modifiers include less than (`lt`), greater than (`gt`), lower than or equal to (`lte`), greater than or equal to (`gte`) and equal to (`eq`). Usage example: `?end[lte]=2021-12-25&end[gte]=2021-12-15`
@@ -22,10 +22,6 @@ type ListBookingsQueryParams struct {
 	Start map[string]interface{} `queryParam:"style=deepObject,explode=true,name=start"`
 	// Allows for filtering based on the date and time the booking was last updated, in ISO 8601 format (e.g. `2020-11-04T17:37:37Z`) and UTC timezone. Available modifiers include less than (`lt`), greater than (`gt`), lower than or equal to (`lte`), greater than or equal to (`gte`) and equal to (`eq`). Usage example: `?updated[lte]=2020-11-04T19:37:37Z&updated[gte]=2020-11-04T15:56:37.000Z`
 	Updated map[string]interface{} `queryParam:"style=deepObject,explode=true,name=updated"`
-}
-
-type ListBookingsRequest struct {
-	QueryParams ListBookingsQueryParams
 }
 
 // ListBookings200ApplicationJSON - Returns a paginated list of bookings (filtered based on your query parameters).

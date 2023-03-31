@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetBalanceRequest{
-        Security: operations.GetBalanceSecurity{
-            APIKeySecurity: shared.SchemeAPIKeySecurity{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Ibanapi.GetBalance(ctx, req)
+    res, err := s.Ibanapi.GetBalance(ctx)
     if err != nil {
         log.Fatal(err)
     }

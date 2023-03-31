@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/route53resolver/2018-04-01/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,40 +14,48 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AssociateFirewallRuleGroupRequest(
-    headers=operations.AssociateFirewallRuleGroupHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="non",
-        x_amz_credential="nulla",
-        x_amz_date="numquam",
-        x_amz_security_token="quia",
-        x_amz_signature="fugiat",
-        x_amz_signed_headers="laboriosam",
-        x_amz_target="Route53Resolver.AssociateFirewallRuleGroup",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AssociateFirewallRuleGroupRequest(
-        creator_request_id="nam",
-        firewall_rule_group_id="delectus",
-        mutation_protection="ENABLED",
-        name="incidunt",
-        priority=7383927136453695366,
+)
+
+
+req = operations.AssociateFirewallRuleGroupRequest(
+    associate_firewall_rule_group_request=shared.AssociateFirewallRuleGroupRequest(
+        creator_request_id="corrupti",
+        firewall_rule_group_id="provident",
+        mutation_protection="DISABLED",
+        name="quibusdam",
+        priority=602763,
         tags=[
             shared.Tag(
-                key="iste",
-                value="fuga",
+                key="corrupti",
+                value="illum",
+            ),
+            shared.Tag(
+                key="vel",
+                value="error",
+            ),
+            shared.Tag(
+                key="deserunt",
+                value="suscipit",
+            ),
+            shared.Tag(
+                key="iure",
+                value="magnam",
             ),
         ],
-        vpc_id="at",
+        vpc_id="debitis",
     ),
+    x_amz_algorithm="ipsa",
+    x_amz_content_sha256="delectus",
+    x_amz_credential="tempora",
+    x_amz_date="suscipit",
+    x_amz_security_token="molestiae",
+    x_amz_signature="minus",
+    x_amz_signed_headers="placeat",
+    x_amz_target="Route53Resolver.AssociateFirewallRuleGroup",
 )
     
 res = s.associate_firewall_rule_group(req)
@@ -58,7 +66,7 @@ if res.associate_firewall_rule_group_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -87,6 +95,7 @@ if res.associate_firewall_rule_group_response is not None:
 * `get_firewall_rule_group` - Retrieves the specified firewall rule group. 
 * `get_firewall_rule_group_association` - Retrieves a firewall rule group association, which enables DNS filtering for a VPC with one rule group. A VPC can have more than one firewall rule group association, and a rule group can be associated with more than one VPC.
 * `get_firewall_rule_group_policy` - Returns the Identity and Access Management (Amazon Web Services IAM) policy for sharing the specified rule group. You can use the policy to share the rule group using Resource Access Manager (RAM). 
+* `get_resolver_config` - Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
 * `get_resolver_dnssec_config` - Gets DNSSEC validation information for a specified resource.
 * `get_resolver_endpoint` - Gets information about a specified Resolver endpoint, such as whether it's an inbound or an outbound Resolver endpoint, and the current status of the endpoint.
 * `get_resolver_query_log_config` - Gets information about a specified Resolver query logging configuration, such as the number of VPCs that the configuration is logging queries for and the location that logs are sent to. 
@@ -102,6 +111,7 @@ if res.associate_firewall_rule_group_response is not None:
 * `list_firewall_rule_group_associations` - <p>Retrieves the firewall rule group associations that you have defined. Each association enables DNS filtering for a VPC with one rule group. </p> <p>A single call might return only a partial list of the associations. For information, see <code>MaxResults</code>. </p>
 * `list_firewall_rule_groups` - <p>Retrieves the minimal high-level information for the rule groups that you have defined. </p> <p>A single call might return only a partial list of the rule groups. For information, see <code>MaxResults</code>. </p>
 * `list_firewall_rules` - <p>Retrieves the firewall rules that you have defined for the specified firewall rule group. DNS Firewall uses the rules in a rule group to filter DNS network traffic for a VPC. </p> <p>A single call might return only a partial list of the rules. For information, see <code>MaxResults</code>. </p>
+* `list_resolver_configs` - Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage DNS resolution behavior for your VPCs.
 * `list_resolver_dnssec_configs` - Lists the configurations for DNSSEC validation that are associated with the current Amazon Web Services account.
 * `list_resolver_endpoint_ip_addresses` - Gets the IP addresses for a specified Resolver endpoint.
 * `list_resolver_endpoints` - Lists all the Resolver endpoints that were created using the current Amazon Web Services account.
@@ -119,10 +129,21 @@ if res.associate_firewall_rule_group_response is not None:
 * `update_firewall_domains` - Updates the firewall domain list from an array of domain specifications. 
 * `update_firewall_rule` - Updates the specified firewall rule. 
 * `update_firewall_rule_group_association` - Changes the association of a <a>FirewallRuleGroup</a> with a VPC. The association enables DNS filtering for the VPC. 
+* `update_resolver_config` - Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
 * `update_resolver_dnssec_config` - Updates an existing DNSSEC validation configuration. If there is no existing DNSSEC validation configuration, one is created.
-* `update_resolver_endpoint` - Updates the name of an inbound or an outbound Resolver endpoint. 
+* `update_resolver_endpoint` - Updates the name, or enpoint type for an inbound or an outbound Resolver endpoint. You can only update between IPV4 and DUALSTACK, IPV6 endpoint type can't be updated to other type. 
 * `update_resolver_rule` - Updates settings for a specified Resolver rule. <code>ResolverRuleId</code> is required, and all other parameters are optional. If you don't specify a parameter, it retains its current value.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

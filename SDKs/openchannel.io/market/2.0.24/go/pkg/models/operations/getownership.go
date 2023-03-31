@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetOwnershipQueryParams struct {
+type GetOwnershipRequest struct {
 	// The maximum number of results to return per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The result set page number to be returned
@@ -15,10 +15,6 @@ type GetOwnershipQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// A sort document. Example: {'date':1} sorts the results by date in ascending order
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetOwnershipRequest struct {
-	QueryParams GetOwnershipQueryParams
 }
 
 type GetOwnershipResponse struct {

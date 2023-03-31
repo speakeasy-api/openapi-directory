@@ -12,18 +12,13 @@ var FetchMarketplaceInstalledAddOnServerList = []string{
 }
 
 type FetchMarketplaceInstalledAddOnSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchMarketplaceInstalledAddOnPathParams struct {
-	// The SID of the InstalledAddOn resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchMarketplaceInstalledAddOnRequest struct {
-	PathParams FetchMarketplaceInstalledAddOnPathParams
-	Security   FetchMarketplaceInstalledAddOnSecurity
-	ServerURL  *string
+	// The SID of the InstalledAddOn resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchMarketplaceInstalledAddOnResponse struct {

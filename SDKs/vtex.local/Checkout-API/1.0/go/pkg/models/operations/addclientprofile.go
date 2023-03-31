@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type AddClientProfilePathParams struct {
-	// ID of the orderForm that will receive client profile information.
-	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type AddClientProfileHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // AddClientProfileRequestBody - Customer's profile information.
 type AddClientProfileRequestBody struct {
 	// Corporate document, if the customer is a legal entity.
@@ -47,9 +35,13 @@ type AddClientProfileRequestBody struct {
 }
 
 type AddClientProfileRequest struct {
-	PathParams AddClientProfilePathParams
-	Headers    AddClientProfileHeaders
-	Request    AddClientProfileRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                      `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody AddClientProfileRequestBody `request:"mediaType=application/json"`
+	// ID of the orderForm that will receive client profile information.
+	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
 }
 
 type AddClientProfileResponse struct {

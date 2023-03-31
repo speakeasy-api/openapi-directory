@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AppsAddRepoToInstallationForAuthenticatedUserPathParams struct {
+type AppsAddRepoToInstallationForAuthenticatedUserRequest struct {
 	// installation_id parameter
 	InstallationID int64 `pathParam:"style=simple,explode=false,name=installation_id"`
 	RepositoryID   int64 `pathParam:"style=simple,explode=false,name=repository_id"`
-}
-
-type AppsAddRepoToInstallationForAuthenticatedUserRequest struct {
-	PathParams AppsAddRepoToInstallationForAuthenticatedUserPathParams
 }
 
 type AppsAddRepoToInstallationForAuthenticatedUserResponse struct {

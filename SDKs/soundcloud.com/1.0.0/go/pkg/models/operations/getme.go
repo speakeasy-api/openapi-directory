@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMeSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMeRequest struct {
-	Security GetMeSecurity
-}
-
 type GetMeResponse struct {
 	// Success
 	CompleteUser *shared.CompleteUser

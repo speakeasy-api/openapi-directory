@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminPingGlobalWebhookPathParams struct {
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
-type EnterpriseAdminPingGlobalWebhookHeaders struct {
+type EnterpriseAdminPingGlobalWebhookRequest struct {
 	// This API is under preview and subject to change.
 	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type EnterpriseAdminPingGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminPingGlobalWebhookPathParams
-	Headers    EnterpriseAdminPingGlobalWebhookHeaders
+	HookID int64  `pathParam:"style=simple,explode=false,name=hook_id"`
 }
 
 type EnterpriseAdminPingGlobalWebhookResponse struct {

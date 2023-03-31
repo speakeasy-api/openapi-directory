@@ -38,7 +38,7 @@ func newAssetsCorrelationMatrix(defaultClient, securityClient HTTPClient, server
 //
 // References
 // * [Wikipedia, Correlation and Dependence](https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrix(ctx context.Context, request operations.PostAssetsCorrelationMatrixRequest) (*operations.PostAssetsCorrelationMatrixResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrix(ctx context.Context, request operations.PostAssetsCorrelationMatrixRequestBody) (*operations.PostAssetsCorrelationMatrixResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix"
 
@@ -96,7 +96,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrix(ctx context.Contex
 //
 //	References
 //	* [Kawee Numpacharoen & Kornkanok Bunwong (2013) Boundaries of Correlation Adjustment with Applications to Financial Risk Management, Applied Mathematical Finance, 20:4, 403-414](http://dx.doi.org/10.1080/1350486X.2012.723517).
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixBounds(ctx context.Context, request operations.PostAssetsCorrelationMatrixBoundsRequest) (*operations.PostAssetsCorrelationMatrixBoundsResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixBounds(ctx context.Context, request operations.PostAssetsCorrelationMatrixBoundsRequestBody) (*operations.PostAssetsCorrelationMatrixBoundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/bounds"
 
@@ -157,7 +157,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixBounds(ctx context.
 //     References
 //
 //   - [Laurent Laloux, Pierre Cizeau, Jean-Philippe Bouchaud, and Marc Potters, Noise Dressing of Financial Correlation Matrices, Phys. Rev. Lett. 83, 1467](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.83.1467)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDenoised(ctx context.Context, request operations.PostAssetsCorrelationMatrixDenoisedRequest) (*operations.PostAssetsCorrelationMatrixDenoisedResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDenoised(ctx context.Context, request operations.PostAssetsCorrelationMatrixDenoisedRequestBody) (*operations.PostAssetsCorrelationMatrixDenoisedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/denoised"
 
@@ -219,7 +219,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDenoised(ctx contex
 //	References
 //	* [M. Herdin, N. Czink, H. Ozcelik and E. Bonek, Correlation matrix distance, a meaningful measure for evaluation of non-stationary MIMO channels, 2005 IEEE 61st Vehicular Technology Conference, 2005, pp. 136-140 Vol. 1](https://ieeexplore.ieee.org/document/1543265)
 //	* [Rajendra Bhatia, Tanvi Jain, Yongdo Lim, On the Bures–Wasserstein distance between positive definite matrices, Expositiones Mathematicae, Volume 37, Issue 2, 2019](https://www.sciencedirect.com/science/article/pii/S0723086918300021)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDistance(ctx context.Context, request operations.PostAssetsCorrelationMatrixDistanceRequest) (*operations.PostAssetsCorrelationMatrixDistanceResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDistance(ctx context.Context, request operations.PostAssetsCorrelationMatrixDistanceRequestBody) (*operations.PostAssetsCorrelationMatrixDistanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/distance"
 
@@ -277,7 +277,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDistance(ctx contex
 //
 // References
 // * [Olivier Roy and Martin Vetterli, The effective rank: A measure of effective dimensionality, 15th European Signal Processing Conference, 2007](https://ieeexplore.ieee.org/document/7098875)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixEffectiveRank(ctx context.Context, request operations.PostAssetsCorrelationMatrixEffectiveRankRequest) (*operations.PostAssetsCorrelationMatrixEffectiveRankResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixEffectiveRank(ctx context.Context, request operations.PostAssetsCorrelationMatrixEffectiveRankRequestBody) (*operations.PostAssetsCorrelationMatrixEffectiveRankResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/effective-rank"
 
@@ -340,7 +340,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixEffectiveRank(ctx c
 //	* [Austin J. Brockmeier and Tingting Mu and Sophia Ananiadou and John Y. Goulermas, Quantifying the Informativeness of Similarity Measurements, Journal of Machine Learning Research, 2017](http://jmlr.org/papers/v18/16-296.html)
 //	* [M. Herdin, N. Czink, H. Ozcelik and E. Bonek, Correlation matrix distance, a meaningful measure for evaluation of non-stationary MIMO channels, 2005 IEEE 61st Vehicular Technology Conference, 2005, pp. 136-140 Vol. 1](https://ieeexplore.ieee.org/document/1543265)
 //	* [Rajendra Bhatia, Tanvi Jain, Yongdo Lim, On the Bures–Wasserstein distance between positive definite matrices, Expositiones Mathematicae, Volume 37, Issue 2, 2019](https://www.sciencedirect.com/science/article/pii/S0723086918300021)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixInformativeness(ctx context.Context, request operations.PostAssetsCorrelationMatrixInformativenessRequest) (*operations.PostAssetsCorrelationMatrixInformativenessResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixInformativeness(ctx context.Context, request operations.PostAssetsCorrelationMatrixInformativenessRequestBody) (*operations.PostAssetsCorrelationMatrixInformativenessResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/informativeness"
 
@@ -398,7 +398,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixInformativeness(ctx
 //
 // References
 // * [Nicholas J. Higham, Computing the Nearest Correlation Matrix—A Problem from Finance, IMA J. Numer. Anal. 22, 329–343, 2002.](http://www.maths.manchester.ac.uk/~higham/narep/narep369.pdf)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixNearest(ctx context.Context, request operations.PostAssetsCorrelationMatrixNearestRequest) (*operations.PostAssetsCorrelationMatrixNearestResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixNearest(ctx context.Context, request operations.PostAssetsCorrelationMatrixNearestRequestBody) (*operations.PostAssetsCorrelationMatrixNearestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/nearest"
 
@@ -456,7 +456,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixNearest(ctx context
 //
 // References
 // * [Joe, H., Generating random correlation matrices based on partial correlations. Journal of Multivariate Analysis, 2006, 97, 2177-2189](https://www.sciencedirect.com/science/article/pii/S0047259X05000886)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixRandom(ctx context.Context, request operations.PostAssetsCorrelationMatrixRandomRequest) (*operations.PostAssetsCorrelationMatrixRandomResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixRandom(ctx context.Context, request operations.PostAssetsCorrelationMatrixRandomRequestBody) (*operations.PostAssetsCorrelationMatrixRandomResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/random"
 
@@ -523,7 +523,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixRandom(ctx context.
 //     References
 //
 //   - [Steiner, Andreas, Manipulating Valid Correlation Matrices](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1878165)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixShrinkage(ctx context.Context, request operations.PostAssetsCorrelationMatrixShrinkageRequest) (*operations.PostAssetsCorrelationMatrixShrinkageResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixShrinkage(ctx context.Context, request operations.PostAssetsCorrelationMatrixShrinkageRequestBody) (*operations.PostAssetsCorrelationMatrixShrinkageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/shrinkage"
 
@@ -583,7 +583,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixShrinkage(ctx conte
 //
 // References
 // * [Lopez de Prado, Marcos Estimation of Theory-Implied Correlation Matrices (November 9, 2019)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3484152)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixTheoryImplied(ctx context.Context, request operations.PostAssetsCorrelationMatrixTheoryImpliedRequest) (*operations.PostAssetsCorrelationMatrixTheoryImpliedResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixTheoryImplied(ctx context.Context, request operations.PostAssetsCorrelationMatrixTheoryImpliedRequestBody) (*operations.PostAssetsCorrelationMatrixTheoryImpliedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/theory-implied"
 
@@ -641,7 +641,7 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixTheoryImplied(ctx c
 //
 // References
 // * [Wikipedia, Correlation and Dependence](https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices)
-func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixValidation(ctx context.Context, request operations.PostAssetsCorrelationMatrixValidationRequest) (*operations.PostAssetsCorrelationMatrixValidationResponse, error) {
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixValidation(ctx context.Context, request operations.PostAssetsCorrelationMatrixValidationRequestBody) (*operations.PostAssetsCorrelationMatrixValidationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/validation"
 

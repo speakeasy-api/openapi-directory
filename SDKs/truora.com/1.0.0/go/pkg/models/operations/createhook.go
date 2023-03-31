@@ -8,13 +8,7 @@ import (
 )
 
 type CreateHookSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateHookRequest struct {
-	// Request body create a hook.
-	Request  shared.CreateHookInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateHookSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type CreateHookResponse struct {

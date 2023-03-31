@@ -34,9 +34,9 @@ func newStatics(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Add a static delegated prefix from a network
 func (s *statics) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.CreateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.CreateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *statics) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Cont
 // Delete a static delegated prefix from a network
 func (s *statics) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.DeleteNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.DeleteNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *statics) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Cont
 // Return a static delegated prefix from a network
 func (s *statics) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *statics) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Context
 // List static delegated prefixes for a network
 func (s *statics) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticsRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *statics) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Contex
 // Update a static delegated prefix from a network
 func (s *statics) UpdateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.UpdateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.UpdateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

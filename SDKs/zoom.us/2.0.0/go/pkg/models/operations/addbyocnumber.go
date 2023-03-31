@@ -15,10 +15,6 @@ type AddBYOCNumberApplicationJSON struct {
 	SiteID *string `json:"site_id,omitempty"`
 }
 
-type AddBYOCNumberRequest struct {
-	Request *AddBYOCNumberApplicationJSON `request:"mediaType=application/json"`
-}
-
 type AddBYOCNumber201ApplicationXMLPhoneNumbers struct {
 	// Unique identifier of the phone number.
 	ID *string

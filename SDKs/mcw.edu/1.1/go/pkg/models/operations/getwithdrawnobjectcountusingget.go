@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETWithdrawnObjectCountUsingGETPathParams struct {
+type GETWithdrawnObjectCountUsingGETRequest struct {
 	// dateYYYYMMDD
 	DateYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateYYYYMMDD"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETWithdrawnObjectCountUsingGETRequest struct {
-	PathParams GETWithdrawnObjectCountUsingGETPathParams
 }
 
 type GETWithdrawnObjectCountUsingGETResponse struct {

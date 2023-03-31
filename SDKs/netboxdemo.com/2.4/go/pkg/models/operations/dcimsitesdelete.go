@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimSitesDeletePathParams struct {
+type DcimSitesDeleteRequest struct {
 	// A unique integer value identifying this site.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimSitesDeleteRequest struct {
-	PathParams DcimSitesDeletePathParams
 }
 
 type DcimSitesDeleteResponse struct {

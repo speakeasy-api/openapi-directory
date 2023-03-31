@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteLabelsIDPathParams struct {
+type DeleteLabelsIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteLabelsIDRequest struct {
-	PathParams DeleteLabelsIDPathParams
 }
 
 // DeleteLabelsID401ApplicationJSON - Access token is missing or invalid

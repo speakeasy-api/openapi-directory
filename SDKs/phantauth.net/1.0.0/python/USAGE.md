@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetClientClientIDRequest(
-    path_params=operations.GetClientClientIDPathParams(
-        client_id="aspernatur",
-    ),
+    client_id="corrupti",
 )
     
 res = s.client.get_client_client_id_(req)

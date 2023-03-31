@@ -33,7 +33,7 @@ func newTaxes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CreateTaxRates - Create new tax rates
-func (s *taxes) CreateTaxRates(ctx context.Context, request operations.CreateTaxRatesRequest) (*operations.CreateTaxRatesResponse, error) {
+func (s *taxes) CreateTaxRates(ctx context.Context, request shared.TaxRatesCreateRequest, security operations.CreateTaxRatesSecurity) (*operations.CreateTaxRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes"
 
@@ -52,7 +52,7 @@ func (s *taxes) CreateTaxRates(ctx context.Context, request operations.CreateTax
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,16 +98,16 @@ func (s *taxes) CreateTaxRates(ctx context.Context, request operations.CreateTax
 }
 
 // DeleteTaxRate - Delete a single tax rate
-func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxRateRequest) (*operations.DeleteTaxRateResponse, error) {
+func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxRateRequest, security operations.DeleteTaxRateSecurity) (*operations.DeleteTaxRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxR
 }
 
 // GetProductCountForAllTaxes - Get all tax rates and a count of products associated with each
-func (s *taxes) GetProductCountForAllTaxes(ctx context.Context, request operations.GetProductCountForAllTaxesRequest) (*operations.GetProductCountForAllTaxesResponse, error) {
+func (s *taxes) GetProductCountForAllTaxes(ctx context.Context) (*operations.GetProductCountForAllTaxesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/count"
 
@@ -146,7 +146,7 @@ func (s *taxes) GetProductCountForAllTaxes(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,16 +182,16 @@ func (s *taxes) GetProductCountForAllTaxes(ctx context.Context, request operatio
 }
 
 // GetTaxRate - Get a single tax rate
-func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateRequest) (*operations.GetTaxRateResponse, error) {
+func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateRequest, security operations.GetTaxRateSecurity) (*operations.GetTaxRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,7 +229,7 @@ func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateReq
 }
 
 // GetTaxRates - Get all available tax rates
-func (s *taxes) GetTaxRates(ctx context.Context, request operations.GetTaxRatesRequest) (*operations.GetTaxRatesResponse, error) {
+func (s *taxes) GetTaxRates(ctx context.Context) (*operations.GetTaxRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes"
 
@@ -238,7 +238,7 @@ func (s *taxes) GetTaxRates(ctx context.Context, request operations.GetTaxRatesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -274,7 +274,7 @@ func (s *taxes) GetTaxRates(ctx context.Context, request operations.GetTaxRatesR
 }
 
 // GetTaxSettings - Get the organization tax settings
-func (s *taxes) GetTaxSettings(ctx context.Context, request operations.GetTaxSettingsRequest) (*operations.GetTaxSettingsResponse, error) {
+func (s *taxes) GetTaxSettings(ctx context.Context) (*operations.GetTaxSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/settings"
 
@@ -283,7 +283,7 @@ func (s *taxes) GetTaxSettings(ctx context.Context, request operations.GetTaxSet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -319,7 +319,7 @@ func (s *taxes) GetTaxSettings(ctx context.Context, request operations.GetTaxSet
 }
 
 // SetTaxationMode - Update the organization tax settings
-func (s *taxes) SetTaxationMode(ctx context.Context, request operations.SetTaxationModeRequest) (*operations.SetTaxationModeResponse, error) {
+func (s *taxes) SetTaxationMode(ctx context.Context, request shared.TaxSettingsUpdateRequest, security operations.SetTaxationModeSecurity) (*operations.SetTaxationModeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/settings"
 
@@ -338,7 +338,7 @@ func (s *taxes) SetTaxationMode(ctx context.Context, request operations.SetTaxat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -384,11 +384,11 @@ func (s *taxes) SetTaxationMode(ctx context.Context, request operations.SetTaxat
 }
 
 // UpdateTaxRate - Update a single tax rate
-func (s *taxes) UpdateTaxRate(ctx context.Context, request operations.UpdateTaxRateRequest) (*operations.UpdateTaxRateResponse, error) {
+func (s *taxes) UpdateTaxRate(ctx context.Context, request operations.UpdateTaxRateRequest, security operations.UpdateTaxRateSecurity) (*operations.UpdateTaxRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxRateUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -403,7 +403,7 @@ func (s *taxes) UpdateTaxRate(ctx context.Context, request operations.UpdateTaxR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

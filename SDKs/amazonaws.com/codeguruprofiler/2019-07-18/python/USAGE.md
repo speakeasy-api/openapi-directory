@@ -3,40 +3,53 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AddNotificationChannelsRequest(
-    path_params=operations.AddNotificationChannelsPathParams(
-        profiling_group_name="deleniti",
-    ),
-    headers=operations.AddNotificationChannelsHeaders(
-        x_amz_algorithm="corporis",
-        x_amz_content_sha256="voluptas",
-        x_amz_credential="architecto",
-        x_amz_date="et",
-        x_amz_security_token="eum",
-        x_amz_signature="vero",
-        x_amz_signed_headers="totam",
-    ),
-    request=operations.AddNotificationChannelsRequestBody(
+    request_body=operations.AddNotificationChannelsRequestBody(
         channels=[
             shared.Channel(
                 event_publishers=[
                     "AnomalyDetection",
                     "AnomalyDetection",
+                    "AnomalyDetection",
                 ],
-                id="explicabo",
-                uri="consequatur",
+                id="distinctio",
+                uri="https://outstanding-strait.name",
+            ),
+            shared.Channel(
+                event_publishers=[
+                    "AnomalyDetection",
+                    "AnomalyDetection",
+                    "AnomalyDetection",
+                    "AnomalyDetection",
+                ],
+                id="vel",
+                uri="https://present-giggle.info",
+            ),
+            shared.Channel(
+                event_publishers=[
+                    "AnomalyDetection",
+                    "AnomalyDetection",
+                ],
+                id="debitis",
+                uri="http://whirlwind-diver.info",
             ),
         ],
     ),
+    x_amz_algorithm="molestiae",
+    x_amz_content_sha256="minus",
+    x_amz_credential="placeat",
+    x_amz_date="voluptatum",
+    x_amz_security_token="iusto",
+    x_amz_signature="excepturi",
+    x_amz_signed_headers="nisi",
+    profiling_group_name="recusandae",
 )
     
 res = s.add_notification_channels(req)

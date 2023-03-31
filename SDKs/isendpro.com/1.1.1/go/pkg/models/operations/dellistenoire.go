@@ -30,17 +30,13 @@ func (e *DelListeNoireDelListeNoireEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DelListeNoireQueryParams struct {
+type DelListeNoireRequest struct {
 	// Doit valoir "1"
 	DelListeNoire DelListeNoireDelListeNoireEnum `queryParam:"style=form,explode=true,name=delListeNoire"`
 	// Clé API
 	Keyid string `queryParam:"style=form,explode=true,name=keyid"`
 	// numéro de mobile à supprimer
 	Num string `queryParam:"style=form,explode=true,name=num"`
-}
-
-type DelListeNoireRequest struct {
-	QueryParams DelListeNoireQueryParams
 }
 
 type DelListeNoireResponse struct {

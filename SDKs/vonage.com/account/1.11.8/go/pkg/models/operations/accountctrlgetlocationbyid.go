@@ -8,19 +8,14 @@ import (
 )
 
 type AccountCtrlGetLocationByIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type AccountCtrlGetLocationByIDPathParams struct {
+type AccountCtrlGetLocationByIDRequest struct {
 	// The Vonage Business Cloud account ID
 	AccountID float64 `pathParam:"style=simple,explode=false,name=account_id"`
 	// The Vonage Business Cloud location ID
 	LocationID float64 `pathParam:"style=simple,explode=false,name=location_id"`
-}
-
-type AccountCtrlGetLocationByIDRequest struct {
-	PathParams AccountCtrlGetLocationByIDPathParams
-	Security   AccountCtrlGetLocationByIDSecurity
 }
 
 type AccountCtrlGetLocationByIDResponse struct {

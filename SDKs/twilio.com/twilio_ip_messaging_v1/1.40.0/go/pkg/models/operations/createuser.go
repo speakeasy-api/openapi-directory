@@ -12,11 +12,8 @@ var CreateUserServerList = []string{
 }
 
 type CreateUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUserPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUserCreateUserRequest struct {
@@ -27,10 +24,8 @@ type CreateUserCreateUserRequest struct {
 }
 
 type CreateUserRequest struct {
-	PathParams CreateUserPathParams
-	Request    *CreateUserCreateUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateUserSecurity
-	ServerURL  *string
+	RequestBody *CreateUserCreateUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	ServiceSid  string                       `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateUserResponse struct {

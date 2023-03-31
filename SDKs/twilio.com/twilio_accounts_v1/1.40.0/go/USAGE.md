@@ -13,22 +13,17 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCredentialAwsRequest{
-        Security: operations.CreateCredentialAwsSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: &operations.CreateCredentialAwsCreateCredentialAwsRequest{
-            AccountSid: "corrupti",
-            Credentials: "provident",
-            FriendlyName: "distinctio",
-        },
+    req := operations.CreateCredentialAwsCreateCredentialAwsRequest{
+        AccountSid: "corrupti",
+        Credentials: "provident",
+        FriendlyName: "distinctio",
     }
 
     ctx := context.Background()
-    res, err := s.CreateCredentialAws(ctx, req)
+    res, err := s.CreateCredentialAws(ctx, req, operations.CreateCredentialAwsSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

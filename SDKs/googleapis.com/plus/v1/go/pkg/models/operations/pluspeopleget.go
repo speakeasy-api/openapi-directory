@@ -8,23 +8,23 @@ import (
 )
 
 type PlusPeopleGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusPeopleGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusPeopleGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusPeopleGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PlusPeopleGetSecurity struct {
@@ -34,12 +34,7 @@ type PlusPeopleGetSecurity struct {
 	Option4 *PlusPeopleGetSecurityOption4 `security:"option"`
 }
 
-type PlusPeopleGetPathParams struct {
-	// The ID of the person to get the profile for. The special value "me" can be used to indicate the authenticated user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PlusPeopleGetQueryParams struct {
+type PlusPeopleGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -52,14 +47,10 @@ type PlusPeopleGetQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the person to get the profile for. The special value "me" can be used to indicate the authenticated user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type PlusPeopleGetRequest struct {
-	PathParams  PlusPeopleGetPathParams
-	QueryParams PlusPeopleGetQueryParams
-	Security    PlusPeopleGetSecurity
 }
 
 type PlusPeopleGetResponse struct {

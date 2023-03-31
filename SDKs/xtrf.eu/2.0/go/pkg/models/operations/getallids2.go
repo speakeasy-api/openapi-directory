@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetAllIds2QueryParams struct {
+type GetAllIds2Request struct {
 	// exact email of client
 	EmailEquals *string `queryParam:"style=form,explode=true,name=emailEquals"`
 	// exact name of client
 	NameEquals *string `queryParam:"style=form,explode=true,name=nameEquals"`
 	// only clients modified since this timestamp
 	UpdatedSince *int64 `queryParam:"style=form,explode=true,name=updatedSince"`
-}
-
-type GetAllIds2Request struct {
-	QueryParams GetAllIds2QueryParams
 }
 
 type GetAllIds2Response struct {

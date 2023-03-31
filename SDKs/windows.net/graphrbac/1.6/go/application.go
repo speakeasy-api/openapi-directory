@@ -34,9 +34,9 @@ func newApplication(defaultClient, securityClient HTTPClient, serverURL, languag
 // ApplicationsCreate - Create a new application.
 func (s *application) ApplicationsCreate(ctx context.Context, request operations.ApplicationsCreateRequest) (*operations.ApplicationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationCreateParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *application) ApplicationsCreate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,14 +116,14 @@ func (s *application) ApplicationsCreate(ctx context.Context, request operations
 // ApplicationsDelete - Delete an application.
 func (s *application) ApplicationsDelete(ctx context.Context, request operations.ApplicationsDeleteRequest) (*operations.ApplicationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,14 +172,14 @@ func (s *application) ApplicationsDelete(ctx context.Context, request operations
 // ApplicationsGet - Get an application by object ID.
 func (s *application) ApplicationsGet(ctx context.Context, request operations.ApplicationsGetRequest) (*operations.ApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,14 +244,14 @@ func (s *application) ApplicationsGet(ctx context.Context, request operations.Ap
 // ApplicationsList - Lists applications by filter parameters.
 func (s *application) ApplicationsList(ctx context.Context, request operations.ApplicationsListRequest) (*operations.ApplicationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -316,9 +316,9 @@ func (s *application) ApplicationsList(ctx context.Context, request operations.A
 // ApplicationsPatch - Update an existing application.
 func (s *application) ApplicationsPatch(ctx context.Context, request operations.ApplicationsPatchRequest) (*operations.ApplicationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/applications/{applicationObjectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationUpdateParameters", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +333,7 @@ func (s *application) ApplicationsPatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -382,14 +382,14 @@ func (s *application) ApplicationsPatch(ctx context.Context, request operations.
 // DeletedApplicationsHardDelete - Hard-delete an application.
 func (s *application) DeletedApplicationsHardDelete(ctx context.Context, request operations.DeletedApplicationsHardDeleteRequest) (*operations.DeletedApplicationsHardDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/deletedApplications/{applicationObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/deletedApplications/{applicationObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

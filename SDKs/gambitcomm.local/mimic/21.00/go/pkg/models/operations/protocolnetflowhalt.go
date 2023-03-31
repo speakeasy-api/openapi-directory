@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowHaltPathParams struct {
+type ProtocolNetflowHaltRequest struct {
 	// Agent to set the NETFLOW
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolNetflowHaltRequest struct {
-	PathParams ProtocolNetflowHaltPathParams
 }
 
 type ProtocolNetflowHaltResponse struct {

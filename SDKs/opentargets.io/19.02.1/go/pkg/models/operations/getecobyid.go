@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetECObyIDPathParams struct {
+type GetECObyIDRequest struct {
 	// An [evidence code ontology](http://www.ebi.ac.uk/ols/v2/browse.do?ontName=ECO) ID.
 	EcoID string `pathParam:"style=simple,explode=false,name=ECO_ID"`
-}
-
-type GetECObyIDRequest struct {
-	PathParams GetECObyIDPathParams
 }
 
 type GetECObyIDResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type DeprecatedRetrieveInventoryAdjustmentSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeprecatedRetrieveInventoryAdjustmentPathParams struct {
-	// ID of the [InventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryAdjustment) to retrieve.
-	AdjustmentID string `pathParam:"style=simple,explode=false,name=adjustment_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeprecatedRetrieveInventoryAdjustmentRequest struct {
-	PathParams DeprecatedRetrieveInventoryAdjustmentPathParams
-	Security   DeprecatedRetrieveInventoryAdjustmentSecurity
+	// ID of the [InventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryAdjustment) to retrieve.
+	AdjustmentID string `pathParam:"style=simple,explode=false,name=adjustment_id"`
 }
 
 type DeprecatedRetrieveInventoryAdjustmentResponse struct {

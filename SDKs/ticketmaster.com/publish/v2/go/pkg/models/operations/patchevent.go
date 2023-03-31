@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchEventPathParams struct {
-	// ID of the event the patch will be applied
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatchEventHeaders struct {
+type PatchEventRequest struct {
+	// Patch to apply
+	AugmentationData shared.AugmentationData `request:"mediaType=application/json"`
 	// Unique correlation id to be able to trace the request in our system
 	TMPSCorrelationID string `header:"style=simple,explode=false,name=TMPS-Correlation-Id"`
-}
-
-type PatchEventRequest struct {
-	PathParams PatchEventPathParams
-	Headers    PatchEventHeaders
-	// Patch to apply
-	Request shared.AugmentationData `request:"mediaType=application/json"`
+	// ID of the event the patch will be applied
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchEventResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateKvPairPathParams struct {
+type UpdateKvPairRequest struct {
+	// A JSON object containing Key-value information
+	KeyValuePairUpdate shared.KeyValuePairUpdate `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateKvPairRequest struct {
-	PathParams UpdateKvPairPathParams
-	// A JSON object containing Key-value information
-	Request shared.KeyValuePairUpdate `request:"mediaType=application/json"`
 }
 
 type UpdateKvPairResponse struct {

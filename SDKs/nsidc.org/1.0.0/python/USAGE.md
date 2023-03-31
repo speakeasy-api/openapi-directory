@@ -4,19 +4,18 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FacetsRequest(
-    query_params=operations.FacetsQueryParams(
-        count=1284135809095201652,
-        end_date="1980-04-14",
-        facet_filters="sed",
-        search_terms="cupiditate",
-        sort_keys="temporal_duration,,desc",
-        source="ADE",
-        spatial="repellendus",
-        start_date="2004-02-29",
-        start_index=2871197063775501498,
-    ),
+    count=548814,
+    end_date="2021-07-27",
+    facet_filters="quibusdam",
+    search_terms="unde",
+    sort_keys="updated,,desc",
+    source="ADE",
+    spatial="illum",
+    start_date="2022-05-18",
+    start_index=645894,
 )
     
 res = s.swagger_docs.facets(req)

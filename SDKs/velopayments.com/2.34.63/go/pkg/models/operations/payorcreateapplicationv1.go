@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PayorCreateApplicationV1PathParams struct {
+type PayorCreateApplicationV1Request struct {
+	// Details of application to create
+	PayorCreateApplicationRequest shared.PayorCreateApplicationRequest `request:"mediaType=application/json"`
 	// The Payor Id
 	PayorID string `pathParam:"style=simple,explode=false,name=payorId"`
-}
-
-type PayorCreateApplicationV1Request struct {
-	PathParams PayorCreateApplicationV1PathParams
-	// Details of application to create
-	Request shared.PayorCreateApplicationRequest `request:"mediaType=application/json"`
 }
 
 type PayorCreateApplicationV1Response struct {

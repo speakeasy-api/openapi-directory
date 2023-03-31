@@ -34,7 +34,7 @@ func newRefreshTokens(defaultClient, securityClient HTTPClient, serverURL, langu
 
 func (s *refreshTokens) DeleteOauthV1RefreshTokensTokenArchive(ctx context.Context, request operations.DeleteOauthV1RefreshTokensTokenArchiveRequest) (*operations.DeleteOauthV1RefreshTokensTokenArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/refresh-tokens/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/refresh-tokens/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -77,7 +77,7 @@ func (s *refreshTokens) DeleteOauthV1RefreshTokensTokenArchive(ctx context.Conte
 }
 func (s *refreshTokens) GetOauthV1RefreshTokensTokenGet(ctx context.Context, request operations.GetOauthV1RefreshTokensTokenGetRequest) (*operations.GetOauthV1RefreshTokensTokenGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/refresh-tokens/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/refresh-tokens/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

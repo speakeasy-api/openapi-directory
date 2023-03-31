@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type LandlordControllerCreateMaintenancePreferencePathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type LandlordControllerCreateMaintenancePreferenceQueryParams struct {
+type LandlordControllerCreateMaintenancePreferenceRequest struct {
 	// Name of the maintenance preference to add
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// Notes of the maintenance preference to add
 	Notes string `queryParam:"style=form,explode=true,name=notes"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 	// The Tenancy ID
 	TenancyID string `queryParam:"style=form,explode=true,name=tenancyID"`
 	// The login token returned from the /session POST call
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type LandlordControllerCreateMaintenancePreferenceRequest struct {
-	PathParams  LandlordControllerCreateMaintenancePreferencePathParams
-	QueryParams LandlordControllerCreateMaintenancePreferenceQueryParams
 }
 
 type LandlordControllerCreateMaintenancePreferenceResponse struct {

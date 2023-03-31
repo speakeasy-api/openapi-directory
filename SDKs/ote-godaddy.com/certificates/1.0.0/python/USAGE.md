@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CertificateActionRetrieveRequest(
-    path_params=operations.CertificateActionRetrievePathParams(
-        certificate_id="voluptatum",
-    ),
+    certificate_id="corrupti",
 )
     
 res = s.v1.certificate_action_retrieve(req)

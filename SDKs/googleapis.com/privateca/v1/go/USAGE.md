@@ -14,49 +14,39 @@ func main() {
     s := sdk.New()
 
     req := operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateRequest{
-        Security: operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivatePathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ActivateCertificateAuthorityRequest{
-            PemCaCertificate: "suscipit",
-            RequestID: "iure",
+        DollarXgafv: "2",
+        ActivateCertificateAuthorityRequest: &shared.ActivateCertificateAuthorityRequest{
+            PemCaCertificate: "provident",
+            RequestID: "distinctio",
             SubordinateConfig: &shared.SubordinateConfig{
-                CertificateAuthority: "magnam",
+                CertificateAuthority: "quibusdam",
                 PemIssuerChain: &shared.SubordinateConfigChain{
                     PemCertificates: []string{
-                        "ipsa",
-                        "delectus",
-                        "tempora",
-                        "suscipit",
+                        "nulla",
+                        "corrupti",
+                        "illum",
                     },
                 },
             },
         },
+        AccessToken: "vel",
+        Alt: "media",
+        Callback: "deserunt",
+        Fields: "suscipit",
+        Key: "iure",
+        Name: "magnam",
+        OauthToken: "debitis",
+        PrettyPrint: false,
+        QuotaUser: "ipsa",
+        UploadType: "delectus",
+        UploadProtocol: "tempora",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivate(ctx, req)
+    res, err := s.Projects.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivate(ctx, req, operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

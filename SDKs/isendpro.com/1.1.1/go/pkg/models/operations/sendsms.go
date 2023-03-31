@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendSmsRequest struct {
-	// sms request
-	Request shared.SmsUniqueRequest `request:"mediaType=application/json"`
-}
-
 type SendSmsResponse struct {
 	ContentType string
 	// Dysfonctionnement

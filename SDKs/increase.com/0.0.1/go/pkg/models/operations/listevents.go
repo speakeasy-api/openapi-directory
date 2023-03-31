@@ -171,7 +171,7 @@ func (e *ListEventsCategoryInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListEventsQueryParams struct {
+type ListEventsRequest struct {
 	AssociatedObjectID  *string                    `queryParam:"style=form,explode=true,name=associated_object_id"`
 	CategoryIn          []ListEventsCategoryInEnum `queryParam:"style=form,explode=true,name=category.in"`
 	CreatedAtAfter      *time.Time                 `queryParam:"style=form,explode=true,name=created_at.after"`
@@ -180,10 +180,6 @@ type ListEventsQueryParams struct {
 	CreatedAtOnOrBefore *time.Time                 `queryParam:"style=form,explode=true,name=created_at.on_or_before"`
 	Cursor              *string                    `queryParam:"style=form,explode=true,name=cursor"`
 	Limit               *int64                     `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ListEventsRequest struct {
-	QueryParams ListEventsQueryParams
 }
 
 type ListEventsDefaultApplicationJSON13StatusEnum string

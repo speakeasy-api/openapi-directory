@@ -34,11 +34,11 @@ func newAudio(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // AddTrackCollectionItems - Add audio tracks to collections
 // This endpoint adds one or more tracks to a collection by track IDs.
-func (s *audio) AddTrackCollectionItems(ctx context.Context, request operations.AddTrackCollectionItemsRequest) (*operations.AddTrackCollectionItemsResponse, error) {
+func (s *audio) AddTrackCollectionItems(ctx context.Context, request operations.AddTrackCollectionItemsRequest, security operations.AddTrackCollectionItemsSecurity) (*operations.AddTrackCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionItemRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *audio) AddTrackCollectionItems(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *audio) AddTrackCollectionItems(ctx context.Context, request operations.
 
 // CreateTrackCollection - Create audio collections
 // This endpoint creates one or more collections (soundboxes). To add tracks, use `POST /v2/audio/collections/{id}/items`.
-func (s *audio) CreateTrackCollection(ctx context.Context, request operations.CreateTrackCollectionRequest) (*operations.CreateTrackCollectionResponse, error) {
+func (s *audio) CreateTrackCollection(ctx context.Context, request shared.CollectionCreateRequest, security operations.CreateTrackCollectionSecurity) (*operations.CreateTrackCollectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/collections"
 
@@ -107,7 +107,7 @@ func (s *audio) CreateTrackCollection(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,16 +148,16 @@ func (s *audio) CreateTrackCollection(ctx context.Context, request operations.Cr
 
 // DeleteTrackCollection - Delete audio collections
 // This endpoint deletes a collection.
-func (s *audio) DeleteTrackCollection(ctx context.Context, request operations.DeleteTrackCollectionRequest) (*operations.DeleteTrackCollectionResponse, error) {
+func (s *audio) DeleteTrackCollection(ctx context.Context, request operations.DeleteTrackCollectionRequest, security operations.DeleteTrackCollectionSecurity) (*operations.DeleteTrackCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,20 +192,20 @@ func (s *audio) DeleteTrackCollection(ctx context.Context, request operations.De
 
 // DeleteTrackCollectionItems - Remove audio tracks from collections
 // This endpoint removes one or more tracks from a collection.
-func (s *audio) DeleteTrackCollectionItems(ctx context.Context, request operations.DeleteTrackCollectionItemsRequest) (*operations.DeleteTrackCollectionItemsResponse, error) {
+func (s *audio) DeleteTrackCollectionItems(ctx context.Context, request operations.DeleteTrackCollectionItemsRequest, security operations.DeleteTrackCollectionItemsSecurity) (*operations.DeleteTrackCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *audio) DeleteTrackCollectionItems(ctx context.Context, request operatio
 
 // DownloadTracks - Download audio tracks
 // This endpoint redownloads tracks that you have already received a license for. The download links in the response are valid for 8 hours.
-func (s *audio) DownloadTracks(ctx context.Context, request operations.DownloadTracksRequest) (*operations.DownloadTracksResponse, error) {
+func (s *audio) DownloadTracks(ctx context.Context, request operations.DownloadTracksRequest, security operations.DownloadTracksSecurity) (*operations.DownloadTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/licenses/{id}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/licenses/{id}/downloads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -290,20 +290,20 @@ func (s *audio) DownloadTracks(ctx context.Context, request operations.DownloadT
 
 // GetTrack - Get details about audio tracks
 // This endpoint shows information about a track, including its genres, instruments, and other attributes.
-func (s *audio) GetTrack(ctx context.Context, request operations.GetTrackRequest) (*operations.GetTrackResponse, error) {
+func (s *audio) GetTrack(ctx context.Context, request operations.GetTrackRequest, security operations.GetTrackSecurity) (*operations.GetTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -344,20 +344,20 @@ func (s *audio) GetTrack(ctx context.Context, request operations.GetTrackRequest
 
 // GetTrackCollection - Get the details of audio collections
 // This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use `GET /v2/audio/collections/{id}/items`.
-func (s *audio) GetTrackCollection(ctx context.Context, request operations.GetTrackCollectionRequest) (*operations.GetTrackCollectionResponse, error) {
+func (s *audio) GetTrackCollection(ctx context.Context, request operations.GetTrackCollectionRequest, security operations.GetTrackCollectionSecurity) (*operations.GetTrackCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -400,20 +400,20 @@ func (s *audio) GetTrackCollection(ctx context.Context, request operations.GetTr
 
 // GetTrackCollectionItems - Get the contents of audio collections
 // This endpoint lists the IDs of tracks in a collection and the date that each was added.
-func (s *audio) GetTrackCollectionItems(ctx context.Context, request operations.GetTrackCollectionItemsRequest) (*operations.GetTrackCollectionItemsResponse, error) {
+func (s *audio) GetTrackCollectionItems(ctx context.Context, request operations.GetTrackCollectionItemsRequest, security operations.GetTrackCollectionItemsSecurity) (*operations.GetTrackCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -456,7 +456,7 @@ func (s *audio) GetTrackCollectionItems(ctx context.Context, request operations.
 
 // GetTrackCollectionList - List audio collections
 // This endpoint lists your collections of audio tracks and their basic attributes.
-func (s *audio) GetTrackCollectionList(ctx context.Context, request operations.GetTrackCollectionListRequest) (*operations.GetTrackCollectionListResponse, error) {
+func (s *audio) GetTrackCollectionList(ctx context.Context, request operations.GetTrackCollectionListRequest, security operations.GetTrackCollectionListSecurity) (*operations.GetTrackCollectionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/collections"
 
@@ -465,11 +465,11 @@ func (s *audio) GetTrackCollectionList(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -510,7 +510,7 @@ func (s *audio) GetTrackCollectionList(ctx context.Context, request operations.G
 
 // GetTrackLicenseList - List audio licenses
 // This endpoint lists existing licenses. You can filter the results according to the track ID to see if you have an existing license for a specific track.
-func (s *audio) GetTrackLicenseList(ctx context.Context, request operations.GetTrackLicenseListRequest) (*operations.GetTrackLicenseListResponse, error) {
+func (s *audio) GetTrackLicenseList(ctx context.Context, request operations.GetTrackLicenseListRequest, security operations.GetTrackLicenseListSecurity) (*operations.GetTrackLicenseListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/licenses"
 
@@ -519,11 +519,11 @@ func (s *audio) GetTrackLicenseList(ctx context.Context, request operations.GetT
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -564,7 +564,7 @@ func (s *audio) GetTrackLicenseList(ctx context.Context, request operations.GetT
 
 // GetTrackList - List audio tracks
 // This endpoint lists information about one or more audio tracks, including the description and publication date.
-func (s *audio) GetTrackList(ctx context.Context, request operations.GetTrackListRequest) (*operations.GetTrackListResponse, error) {
+func (s *audio) GetTrackList(ctx context.Context, request operations.GetTrackListRequest, security operations.GetTrackListSecurity) (*operations.GetTrackListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio"
 
@@ -573,11 +573,11 @@ func (s *audio) GetTrackList(ctx context.Context, request operations.GetTrackLis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -618,11 +618,11 @@ func (s *audio) GetTrackList(ctx context.Context, request operations.GetTrackLis
 
 // LicenseTrack - License audio tracks
 // This endpoint gets licenses for one or more tracks. The download links in the response are valid for 8 hours.
-func (s *audio) LicenseTrack(ctx context.Context, request operations.LicenseTrackRequest) (*operations.LicenseTrackResponse, error) {
+func (s *audio) LicenseTrack(ctx context.Context, request operations.LicenseTrackRequest, security operations.LicenseTrackSecurity) (*operations.LicenseTrackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/licenses"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAudioRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -637,11 +637,11 @@ func (s *audio) LicenseTrack(ctx context.Context, request operations.LicenseTrac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -682,7 +682,7 @@ func (s *audio) LicenseTrack(ctx context.Context, request operations.LicenseTrac
 
 // ListGenres - List audio genres
 // This endpoint returns a list of all audio genres.
-func (s *audio) ListGenres(ctx context.Context, request operations.ListGenresRequest) (*operations.ListGenresResponse, error) {
+func (s *audio) ListGenres(ctx context.Context, request operations.ListGenresRequest, security operations.ListGenresSecurity) (*operations.ListGenresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/genres"
 
@@ -691,11 +691,11 @@ func (s *audio) ListGenres(ctx context.Context, request operations.ListGenresReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -731,7 +731,7 @@ func (s *audio) ListGenres(ctx context.Context, request operations.ListGenresReq
 
 // ListInstruments - List audio instruments
 // This endpoint returns a list of all audio instruments.
-func (s *audio) ListInstruments(ctx context.Context, request operations.ListInstrumentsRequest) (*operations.ListInstrumentsResponse, error) {
+func (s *audio) ListInstruments(ctx context.Context, request operations.ListInstrumentsRequest, security operations.ListInstrumentsSecurity) (*operations.ListInstrumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/instruments"
 
@@ -740,11 +740,11 @@ func (s *audio) ListInstruments(ctx context.Context, request operations.ListInst
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -780,7 +780,7 @@ func (s *audio) ListInstruments(ctx context.Context, request operations.ListInst
 
 // ListMoods - List audio moods
 // This endpoint returns a list of all audio moods.
-func (s *audio) ListMoods(ctx context.Context, request operations.ListMoodsRequest) (*operations.ListMoodsResponse, error) {
+func (s *audio) ListMoods(ctx context.Context, request operations.ListMoodsRequest, security operations.ListMoodsSecurity) (*operations.ListMoodsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/moods"
 
@@ -789,11 +789,11 @@ func (s *audio) ListMoods(ctx context.Context, request operations.ListMoodsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,11 +829,11 @@ func (s *audio) ListMoods(ctx context.Context, request operations.ListMoodsReque
 
 // RenameTrackCollection - Rename audio collections
 // This endpoint sets a new name for a collection.
-func (s *audio) RenameTrackCollection(ctx context.Context, request operations.RenameTrackCollectionRequest) (*operations.RenameTrackCollectionResponse, error) {
+func (s *audio) RenameTrackCollection(ctx context.Context, request operations.RenameTrackCollectionRequest, security operations.RenameTrackCollectionSecurity) (*operations.RenameTrackCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -848,7 +848,7 @@ func (s *audio) RenameTrackCollection(ctx context.Context, request operations.Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -883,7 +883,7 @@ func (s *audio) RenameTrackCollection(ctx context.Context, request operations.Re
 
 // SearchTracks - Search for tracks
 // This endpoint searches for tracks. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter.
-func (s *audio) SearchTracks(ctx context.Context, request operations.SearchTracksRequest) (*operations.SearchTracksResponse, error) {
+func (s *audio) SearchTracks(ctx context.Context, request operations.SearchTracksRequest, security operations.SearchTracksSecurity) (*operations.SearchTracksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/audio/search"
 
@@ -892,11 +892,11 @@ func (s *audio) SearchTracks(ctx context.Context, request operations.SearchTrack
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

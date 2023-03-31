@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccessLoadPathParams struct {
+type AccessLoadRequest struct {
 	// Filename to load
 	Filename string `pathParam:"style=simple,explode=false,name=filename"`
-}
-
-type AccessLoadRequest struct {
-	PathParams AccessLoadPathParams
 }
 
 type AccessLoadResponse struct {

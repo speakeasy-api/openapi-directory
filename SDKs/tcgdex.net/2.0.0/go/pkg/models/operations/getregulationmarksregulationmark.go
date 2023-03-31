@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRegulationMarksRegulationMarkPathParams struct {
-	RegulationMark string `pathParam:"style=simple,explode=false,name=regulation-mark"`
-}
-
 type GetRegulationMarksRegulationMarkRequest struct {
-	PathParams GetRegulationMarksRegulationMarkPathParams
+	RegulationMark string `pathParam:"style=simple,explode=false,name=regulation-mark"`
 }
 
 type GetRegulationMarksRegulationMarkResponse struct {

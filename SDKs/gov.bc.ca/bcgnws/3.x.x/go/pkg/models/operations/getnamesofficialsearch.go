@@ -185,7 +185,7 @@ func (e *GetNamesOfficialSearchSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNamesOfficialSearchQueryParams struct {
+type GetNamesOfficialSearchRequest struct {
 	// A flag to indicate whether to embed the corresponding 'feature' into each matching name
 	Embed *GetNamesOfficialSearchEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
 	// If the 'name' parameter is specified, 'exactSpelling' specifies whether to include only names that exactly match the search text (exactSpelling=1), or whether to also include names with similar spellings (exactSpelling=0)
@@ -210,10 +210,6 @@ type GetNamesOfficialSearchQueryParams struct {
 	SortBy *GetNamesOfficialSearchSortByEnum `queryParam:"style=form,explode=true,name=sortBy"`
 	// The index of the first record to be returned (>= 1)
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type GetNamesOfficialSearchRequest struct {
-	QueryParams GetNamesOfficialSearchQueryParams
 }
 
 type GetNamesOfficialSearchResponse struct {

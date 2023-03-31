@@ -4,44 +4,40 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CloudresourcemanagerLiensCreateRequest(
-    security=operations.CloudresourcemanagerLiensCreateSecurity(
-        option1=operations.CloudresourcemanagerLiensCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.CloudresourcemanagerLiensCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="nostrum",
-        alt="media",
-        callback="animi",
-        fields="unde",
-        key="expedita",
-        oauth_token="recusandae",
-        pretty_print=True,
-        quota_user="possimus",
-        upload_type="et",
-        upload_protocol="ea",
-    ),
-    request=shared.Lien(
-        create_time="ut",
-        name="magnam",
-        origin="ea",
-        parent="nostrum",
-        reason="incidunt",
+    dollar_xgafv="2",
+    lien=shared.Lien(
+        create_time="provident",
+        name="distinctio",
+        origin="quibusdam",
+        parent="unde",
+        reason="nulla",
         restrictions=[
-            "unde",
+            "illum",
+            "vel",
+            "error",
         ],
     ),
+    access_token="deserunt",
+    alt="media",
+    callback="iure",
+    fields_="magnam",
+    key="debitis",
+    oauth_token="ipsa",
+    pretty_print=False,
+    quota_user="delectus",
+    upload_type="tempora",
+    upload_protocol="suscipit",
 )
     
-res = s.liens.cloudresourcemanager_liens_create(req)
+res = s.liens.cloudresourcemanager_liens_create(req, operations.CloudresourcemanagerLiensCreateSecurity(
+    option1=operations.CloudresourcemanagerLiensCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.lien is not None:
     # handle response

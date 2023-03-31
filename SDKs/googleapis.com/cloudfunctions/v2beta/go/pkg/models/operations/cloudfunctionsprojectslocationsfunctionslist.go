@@ -8,16 +8,11 @@ import (
 )
 
 type CloudfunctionsProjectsLocationsFunctionsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudfunctionsProjectsLocationsFunctionsListPathParams struct {
-	// Required. The project and location from which the function should be listed, specified in the format `projects/*/locations/*` If you want to list functions in all locations, use "-" in place of a location. When listing functions in all locations, if one or more location(s) are unreachable, the response will contain functions from all reachable locations along with the names of any unreachable locations.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudfunctionsProjectsLocationsFunctionsListQueryParams struct {
+type CloudfunctionsProjectsLocationsFunctionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type CloudfunctionsProjectsLocationsFunctionsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last `ListFunctionsResponse`; indicates that this is a continuation of a prior `ListFunctions` call, and that the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project and location from which the function should be listed, specified in the format `projects/*/locations/*` If you want to list functions in all locations, use "-" in place of a location. When listing functions in all locations, if one or more location(s) are unreachable, the response will contain functions from all reachable locations along with the names of any unreachable locations.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type CloudfunctionsProjectsLocationsFunctionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudfunctionsProjectsLocationsFunctionsListRequest struct {
-	PathParams  CloudfunctionsProjectsLocationsFunctionsListPathParams
-	QueryParams CloudfunctionsProjectsLocationsFunctionsListQueryParams
-	Security    CloudfunctionsProjectsLocationsFunctionsListSecurity
 }
 
 type CloudfunctionsProjectsLocationsFunctionsListResponse struct {

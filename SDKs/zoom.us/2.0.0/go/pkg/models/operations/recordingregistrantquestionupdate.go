@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RecordingRegistrantQuestionUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type RecordingRegistrantQuestionUpdatePathParams struct {
-	// To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.
-	//
-	// To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.
-	//
-	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request.
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // RecordingRegistrantQuestionUpdateRecordingRegistrantQuestionsCustomQuestionsTypeEnum - The type of registration question and answers.
@@ -136,10 +126,14 @@ type RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions struct {
 }
 
 type RecordingRegistrantQuestionUpdateRequest struct {
-	PathParams RecordingRegistrantQuestionUpdatePathParams
 	// Recording Registrant Questions
-	Request  RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions `request:"mediaType=application/json"`
-	Security RecordingRegistrantQuestionUpdateSecurity
+	RequestBody RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions `request:"mediaType=application/json"`
+	// To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.
+	//
+	// To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.
+	//
+	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request.
+	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
 }
 
 type RecordingRegistrantQuestionUpdateResponse struct {

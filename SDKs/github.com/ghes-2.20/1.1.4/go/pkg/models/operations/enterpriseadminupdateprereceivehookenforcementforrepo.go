@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// pre_receive_hook_id parameter
-	PreReceiveHookID int64  `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-	Repo             string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum - The state of enforcement for the hook on this repository.
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum string
 
@@ -49,8 +42,11 @@ type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody struct {
 }
 
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest struct {
-	PathParams EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams
-	Request    *EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody `request:"mediaType=application/json"`
+	Owner       string                                                            `pathParam:"style=simple,explode=false,name=owner"`
+	// pre_receive_hook_id parameter
+	PreReceiveHookID int64  `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
+	Repo             string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse struct {

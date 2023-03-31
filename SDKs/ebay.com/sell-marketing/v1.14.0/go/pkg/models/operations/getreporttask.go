@@ -8,17 +8,12 @@ import (
 )
 
 type GetReportTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetReportTaskPathParams struct {
-	// A unique eBay-assigned ID for the report task that's generated when the report task is created by a call to <a href="/api-docs/sell/marketing/resources/ad_report_task/methods/createReportTask">createReportTask</a>.
-	ReportTaskID string `pathParam:"style=simple,explode=false,name=report_task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetReportTaskRequest struct {
-	PathParams GetReportTaskPathParams
-	Security   GetReportTaskSecurity
+	// A unique eBay-assigned ID for the report task that's generated when the report task is created by a call to <a href="/api-docs/sell/marketing/resources/ad_report_task/methods/createReportTask">createReportTask</a>.
+	ReportTaskID string `pathParam:"style=simple,explode=false,name=report_task_id"`
 }
 
 type GetReportTaskResponse struct {

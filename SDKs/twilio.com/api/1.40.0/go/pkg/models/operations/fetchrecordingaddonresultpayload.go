@@ -12,10 +12,11 @@ var FetchRecordingAddOnResultPayloadServerList = []string{
 }
 
 type FetchRecordingAddOnResultPayloadSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRecordingAddOnResultPayloadPathParams struct {
+type FetchRecordingAddOnResultPayloadRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the AddOnResult to which the payload to fetch belongs.
@@ -24,12 +25,6 @@ type FetchRecordingAddOnResultPayloadPathParams struct {
 	ReferenceSid string `pathParam:"style=simple,explode=false,name=ReferenceSid"`
 	// The Twilio-provided string that uniquely identifies the Recording AddOnResult Payload resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRecordingAddOnResultPayloadRequest struct {
-	PathParams FetchRecordingAddOnResultPayloadPathParams
-	Security   FetchRecordingAddOnResultPayloadSecurity
-	ServerURL  *string
 }
 
 type FetchRecordingAddOnResultPayloadResponse struct {

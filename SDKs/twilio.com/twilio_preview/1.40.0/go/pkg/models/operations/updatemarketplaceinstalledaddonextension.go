@@ -12,14 +12,8 @@ var UpdateMarketplaceInstalledAddOnExtensionServerList = []string{
 }
 
 type UpdateMarketplaceInstalledAddOnExtensionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMarketplaceInstalledAddOnExtensionPathParams struct {
-	// The SID of the InstalledAddOn resource with the extension to update.
-	InstalledAddOnSid string `pathParam:"style=simple,explode=false,name=InstalledAddOnSid"`
-	// The SID of the InstalledAddOn Extension resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest struct {
@@ -28,10 +22,11 @@ type UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExte
 }
 
 type UpdateMarketplaceInstalledAddOnExtensionRequest struct {
-	PathParams UpdateMarketplaceInstalledAddOnExtensionPathParams
-	Request    *UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMarketplaceInstalledAddOnExtensionSecurity
-	ServerURL  *string
+	// The SID of the InstalledAddOn resource with the extension to update.
+	InstalledAddOnSid string                                                                                   `pathParam:"style=simple,explode=false,name=InstalledAddOnSid"`
+	RequestBody       *UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the InstalledAddOn Extension resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateMarketplaceInstalledAddOnExtensionResponse struct {

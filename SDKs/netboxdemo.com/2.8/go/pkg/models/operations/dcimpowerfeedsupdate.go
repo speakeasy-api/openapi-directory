@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerFeedsUpdatePathParams struct {
+type DcimPowerFeedsUpdateRequest struct {
+	WritablePowerFeedInput shared.WritablePowerFeedInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this power feed.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerFeedsUpdateRequest struct {
-	PathParams DcimPowerFeedsUpdatePathParams
-	Request    shared.WritablePowerFeedInput `request:"mediaType=application/json"`
 }
 
 type DcimPowerFeedsUpdateResponse struct {

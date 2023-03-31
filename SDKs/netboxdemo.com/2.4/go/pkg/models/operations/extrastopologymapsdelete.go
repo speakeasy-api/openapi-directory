@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExtrasTopologyMapsDeletePathParams struct {
+type ExtrasTopologyMapsDeleteRequest struct {
 	// A unique integer value identifying this topology map.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasTopologyMapsDeleteRequest struct {
-	PathParams ExtrasTopologyMapsDeletePathParams
 }
 
 type ExtrasTopologyMapsDeleteResponse struct {

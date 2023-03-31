@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutProductsIDVariantsVariantIDJSONPathParams struct {
-	// Id of the Product
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the Product Variant
-	VariantID int `pathParam:"style=simple,explode=false,name=variant_id"`
-}
-
-type PutProductsIDVariantsVariantIDJSONQueryParams struct {
+type PutProductsIDVariantsVariantIDJSONRequest struct {
+	// Product Variant parameters to change
+	VariantEdit shared.VariantEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Product
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutProductsIDVariantsVariantIDJSONRequest struct {
-	PathParams  PutProductsIDVariantsVariantIDJSONPathParams
-	QueryParams PutProductsIDVariantsVariantIDJSONQueryParams
-	// Product Variant parameters to change
-	Request shared.VariantEdit `request:"mediaType=application/json"`
+	// Id of the Product Variant
+	VariantID int `pathParam:"style=simple,explode=false,name=variant_id"`
 }
 
 type PutProductsIDVariantsVariantIDJSONResponse struct {

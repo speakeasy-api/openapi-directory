@@ -7,22 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSearchVersionNumberSearchAlongRouteQueryExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Query string. Must be properly URL encoded.
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type PostSearchVersionNumberSearchAlongRouteQueryExtQueryParams struct {
-	// Maximum number of search results that will be returned.
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-	// Maximum detour time
-	MaxDetourTime int64 `queryParam:"style=form,explode=true,name=maxDetourTime"`
-}
-
 type PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoutePoints struct {
 	Lat *float32 `json:"lat,omitempty"`
 	Lon *float32 `json:"lon,omitempty"`
@@ -37,9 +21,17 @@ type PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody struct {
 }
 
 type PostSearchVersionNumberSearchAlongRouteQueryExtRequest struct {
-	PathParams  PostSearchVersionNumberSearchAlongRouteQueryExtPathParams
-	QueryParams PostSearchVersionNumberSearchAlongRouteQueryExtQueryParams
-	Request     *PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody `request:"mediaType=application/json"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
+	// Maximum number of search results that will be returned.
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// Maximum detour time
+	MaxDetourTime int64 `queryParam:"style=form,explode=true,name=maxDetourTime"`
+	// Query string. Must be properly URL encoded.
+	Query string `pathParam:"style=simple,explode=false,name=query"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type PostSearchVersionNumberSearchAlongRouteQueryExtResponse struct {

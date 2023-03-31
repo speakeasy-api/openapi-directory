@@ -32,11 +32,11 @@ func newOrderinvoices(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // ContentOrderinvoicesCreatechargeinvoice - Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice enabled orders.
-func (s *orderinvoices) ContentOrderinvoicesCreatechargeinvoice(ctx context.Context, request operations.ContentOrderinvoicesCreatechargeinvoiceRequest) (*operations.ContentOrderinvoicesCreatechargeinvoiceResponse, error) {
+func (s *orderinvoices) ContentOrderinvoicesCreatechargeinvoice(ctx context.Context, request operations.ContentOrderinvoicesCreatechargeinvoiceRequest, security operations.ContentOrderinvoicesCreatechargeinvoiceSecurity) (*operations.ContentOrderinvoicesCreatechargeinvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createChargeInvoice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createChargeInvoice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderinvoicesCreateChargeInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *orderinvoices) ContentOrderinvoicesCreatechargeinvoice(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *orderinvoices) ContentOrderinvoicesCreatechargeinvoice(ctx context.Cont
 }
 
 // ContentOrderinvoicesCreaterefundinvoice - Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.
-func (s *orderinvoices) ContentOrderinvoicesCreaterefundinvoice(ctx context.Context, request operations.ContentOrderinvoicesCreaterefundinvoiceRequest) (*operations.ContentOrderinvoicesCreaterefundinvoiceResponse, error) {
+func (s *orderinvoices) ContentOrderinvoicesCreaterefundinvoice(ctx context.Context, request operations.ContentOrderinvoicesCreaterefundinvoiceRequest, security operations.ContentOrderinvoicesCreaterefundinvoiceSecurity) (*operations.ContentOrderinvoicesCreaterefundinvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createRefundInvoice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createRefundInvoice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderinvoicesCreateRefundInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *orderinvoices) ContentOrderinvoicesCreaterefundinvoice(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

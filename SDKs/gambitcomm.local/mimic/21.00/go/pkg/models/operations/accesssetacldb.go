@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AccessSetAcldbPathParams struct {
+type AccessSetAcldbRequest struct {
 	// Database name to use
 	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-}
-
-type AccessSetAcldbRequest struct {
-	PathParams AccessSetAcldbPathParams
 }
 
 type AccessSetAcldbResponse struct {

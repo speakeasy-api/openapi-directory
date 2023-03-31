@@ -3,32 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CloneBackendRequest(
-    path_params=operations.CloneBackendPathParams(
-        app_id="laboriosam",
-        backend_environment_name="velit",
+    request_body=operations.CloneBackendRequestBody(
+        target_environment_name="corrupti",
     ),
-    headers=operations.CloneBackendHeaders(
-        x_amz_algorithm="ea",
-        x_amz_content_sha256="tempore",
-        x_amz_credential="fugit",
-        x_amz_date="aut",
-        x_amz_security_token="tempora",
-        x_amz_signature="aliquid",
-        x_amz_signed_headers="mollitia",
-    ),
-    request=operations.CloneBackendRequestBody(
-        target_environment_name="non",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    app_id="vel",
+    backend_environment_name="error",
 )
     
 res = s.clone_backend(req)

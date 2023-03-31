@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IdeahubPlatformsPropertiesIdeasListPathParams struct {
-	// If defined, specifies the creator for which to filter by. Format: publishers/{publisher}/properties/{property}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IdeahubPlatformsPropertiesIdeasListQueryParams struct {
+type IdeahubPlatformsPropertiesIdeasListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -35,6 +30,8 @@ type IdeahubPlatformsPropertiesIdeasListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Used to fetch next page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// If defined, specifies the creator for which to filter by. Format: publishers/{publisher}/properties/{property}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -43,11 +40,6 @@ type IdeahubPlatformsPropertiesIdeasListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdeahubPlatformsPropertiesIdeasListRequest struct {
-	PathParams  IdeahubPlatformsPropertiesIdeasListPathParams
-	QueryParams IdeahubPlatformsPropertiesIdeasListQueryParams
 }
 
 type IdeahubPlatformsPropertiesIdeasListResponse struct {

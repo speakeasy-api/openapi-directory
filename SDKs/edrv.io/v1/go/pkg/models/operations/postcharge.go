@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostChargePathParams struct {
-	// The vehicle id that needs to be fetched
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostChargeRequestBodyActionEnum string
 
 const (
@@ -42,9 +37,10 @@ type PostChargeRequestBody struct {
 }
 
 type PostChargeRequest struct {
-	PathParams PostChargePathParams
 	// Include command properties to send here
-	Request PostChargeRequestBody `request:"mediaType=application/json"`
+	RequestBody PostChargeRequestBody `request:"mediaType=application/json"`
+	// The vehicle id that needs to be fetched
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostCharge200ApplicationJSON - Returns the status of the command

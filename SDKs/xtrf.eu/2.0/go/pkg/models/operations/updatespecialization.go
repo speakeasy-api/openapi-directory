@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSpecializationPathParams struct {
+type UpdateSpecializationRequest struct {
+	// Updated specialization for a project.
+	SpecializationDTO shared.SpecializationDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateSpecializationRequest struct {
-	PathParams UpdateSpecializationPathParams
-	// Updated specialization for a project.
-	Request shared.SpecializationDTO `request:"mediaType=application/json"`
 }
 
 type UpdateSpecializationResponse struct {

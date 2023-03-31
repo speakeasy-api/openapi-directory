@@ -7,11 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLicenseesPathParams struct {
+type ListLicenseesRequest struct {
 	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type ListLicenseesQueryParams struct {
 	// Specify the maximum number of results to return per page. Default and maximum is `100`.
 	Limit *int `queryParam:"style=form,explode=false,name=limit"`
 	// Filter result by licensee name. Query can be shortened to `q=`
@@ -19,11 +16,6 @@ type ListLicenseesQueryParams struct {
 	// Specify ID of the licensee after which you would like to list results
 	StartingAfter *int    `queryParam:"style=form,explode=false,name=starting_after"`
 	UserToken     *string `queryParam:"style=form,explode=false,name=user_token"`
-}
-
-type ListLicenseesRequest struct {
-	PathParams  ListLicenseesPathParams
-	QueryParams ListLicenseesQueryParams
 }
 
 type ListLicenseesResponse struct {

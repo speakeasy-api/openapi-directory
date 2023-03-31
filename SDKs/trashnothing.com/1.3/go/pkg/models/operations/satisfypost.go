@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SatisfyPostPathParams struct {
+type SatisfyPostRequest struct {
 	// The ID of the post to satisfy.
 	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
-type SatisfyPostRequest struct {
-	PathParams SatisfyPostPathParams
 }
 
 type SatisfyPostResponse struct {

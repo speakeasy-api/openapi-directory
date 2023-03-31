@@ -25,34 +25,22 @@ func main() {
     s := sdk.New()
 
     req := operations.WebmastersSearchanalyticsQueryRequest{
-        Security: operations.WebmastersSearchanalyticsQuerySecurity{
-            Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "corrupti",
-        },
-        QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
-            Alt: "json",
-            Fields: "provident",
-            Key: "distinctio",
-            OauthToken: "quibusdam",
-            PrettyPrint: false,
-            QuotaUser: "unde",
-            UserIP: "nulla",
-        },
-        Request: &shared.SearchAnalyticsQueryRequest{
+        SearchAnalyticsQueryRequest: &shared.SearchAnalyticsQueryRequest{
             AggregationType: "corrupti",
-            DataState: "illum",
+            DataState: "provident",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "unde",
+                            Expression: "nulla",
+                            Operator: "corrupti",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "illum",
+                            Expression: "vel",
+                            Operator: "error",
+                        },
                         shared.APIDimensionFilter{
                             Dimension: "deserunt",
                             Expression: "suscipit",
@@ -63,56 +51,67 @@ func main() {
                             Expression: "debitis",
                             Operator: "ipsa",
                         },
-                        shared.APIDimensionFilter{
-                            Dimension: "delectus",
-                            Expression: "tempora",
-                            Operator: "suscipit",
-                        },
                     },
-                    GroupType: "molestiae",
+                    GroupType: "delectus",
                 },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "suscipit",
+                            Expression: "molestiae",
+                            Operator: "minus",
+                        },
                         shared.APIDimensionFilter{
                             Dimension: "placeat",
                             Expression: "voluptatum",
                             Operator: "iusto",
                         },
+                    },
+                    GroupType: "excepturi",
+                },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "excepturi",
-                            Expression: "nisi",
-                            Operator: "recusandae",
+                            Dimension: "recusandae",
+                            Expression: "temporibus",
+                            Operator: "ab",
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "temporibus",
-                            Expression: "ab",
-                            Operator: "quis",
-                        },
-                        shared.APIDimensionFilter{
-                            Dimension: "veritatis",
-                            Expression: "deserunt",
-                            Operator: "perferendis",
+                            Dimension: "quis",
+                            Expression: "veritatis",
+                            Operator: "deserunt",
                         },
                     },
-                    GroupType: "ipsam",
+                    GroupType: "perferendis",
                 },
             },
             Dimensions: []string{
+                "repellendus",
                 "sapiente",
-                "quo",
-                "odit",
-                "at",
             },
-            EndDate: "at",
-            RowLimit: 978619,
-            SearchType: "molestiae",
-            StartDate: "quod",
-            StartRow: 800911,
+            EndDate: "quo",
+            RowLimit: 140350,
+            SearchType: "at",
+            StartDate: "at",
+            StartRow: 978619,
         },
+        Alt: "json",
+        Fields: "molestiae",
+        Key: "quod",
+        OauthToken: "quod",
+        PrettyPrint: false,
+        QuotaUser: "esse",
+        SiteURL: "totam",
+        UserIP: "porro",
     }
 
     ctx := context.Background()
-    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req)
+    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req, operations.WebmastersSearchanalyticsQuerySecurity{
+        Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -125,7 +124,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Searchanalytics
@@ -149,4 +148,15 @@ When date is one of the group by values, any days without data are omitted from 
 * `WebmastersSitesList` - Lists the user's Search Console sites.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

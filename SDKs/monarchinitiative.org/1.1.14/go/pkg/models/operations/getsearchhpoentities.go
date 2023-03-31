@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchHpoEntitiesPathParams struct {
-	// search string, e.g. muscle atrophy, frequent infections
-	Term string `pathParam:"style=simple,explode=false,name=term"`
-}
-
-type GetSearchHpoEntitiesQueryParams struct {
+type GetSearchHpoEntitiesRequest struct {
 	// anatomical system id
 	AnatomicalSystem *string `queryParam:"style=form,explode=true,name=anatomical_system"`
 	// anatomical system label
@@ -27,11 +22,8 @@ type GetSearchHpoEntitiesQueryParams struct {
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// row number to start from
 	Start *string `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetSearchHpoEntitiesRequest struct {
-	PathParams  GetSearchHpoEntitiesPathParams
-	QueryParams GetSearchHpoEntitiesQueryParams
+	// search string, e.g. muscle atrophy, frequent infections
+	Term string `pathParam:"style=simple,explode=false,name=term"`
 }
 
 type GetSearchHpoEntitiesResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CallTransferPathParams struct {
+type CallTransferRequest struct {
+	// Call transfer parameters
+	CallTransfer shared.CallTransfer `request:"mediaType=application/json"`
 	// Unique identifier of the call
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CallTransferRequest struct {
-	PathParams CallTransferPathParams
-	// Call transfer parameters
-	Request shared.CallTransfer `request:"mediaType=application/json"`
 }
 
 type CallTransferResponse struct {

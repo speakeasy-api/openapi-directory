@@ -12,12 +12,8 @@ var CreateExecutionServerList = []string{
 }
 
 type CreateExecutionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateExecutionPathParams struct {
-	// The SID of the Excecution's Flow.
-	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateExecutionCreateExecutionRequest struct {
@@ -30,10 +26,9 @@ type CreateExecutionCreateExecutionRequest struct {
 }
 
 type CreateExecutionRequest struct {
-	PathParams CreateExecutionPathParams
-	Request    *CreateExecutionCreateExecutionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateExecutionSecurity
-	ServerURL  *string
+	// The SID of the Excecution's Flow.
+	FlowSid     string                                 `pathParam:"style=simple,explode=false,name=FlowSid"`
+	RequestBody *CreateExecutionCreateExecutionRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateExecutionResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetRealtimeHeaders struct {
+type GetRealtimeRequest struct {
 	// The JWT token to use for auth
 	SecWebsocketProtocol string `header:"style=simple,explode=false,name=sec-websocket-protocol"`
-}
-
-type GetRealtimeRequest struct {
-	Headers GetRealtimeHeaders
 }
 
 type GetRealtimeResponse struct {

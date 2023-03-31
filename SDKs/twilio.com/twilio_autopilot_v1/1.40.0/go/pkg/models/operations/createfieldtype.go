@@ -12,12 +12,8 @@ var CreateFieldTypeServerList = []string{
 }
 
 type CreateFieldTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateFieldTypePathParams struct {
-	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateFieldTypeCreateFieldTypeRequest struct {
@@ -28,10 +24,9 @@ type CreateFieldTypeCreateFieldTypeRequest struct {
 }
 
 type CreateFieldTypeRequest struct {
-	PathParams CreateFieldTypePathParams
-	Request    *CreateFieldTypeCreateFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateFieldTypeSecurity
-	ServerURL  *string
+	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+	AssistantSid string                                 `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *CreateFieldTypeCreateFieldTypeRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateFieldTypeResponse struct {

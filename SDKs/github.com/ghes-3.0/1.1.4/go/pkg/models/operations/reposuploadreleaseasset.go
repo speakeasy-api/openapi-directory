@@ -11,23 +11,14 @@ var ReposUploadReleaseAssetServerList = []string{
 	"https://{origin}",
 }
 
-type ReposUploadReleaseAssetPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+type ReposUploadReleaseAssetRequest struct {
+	RequestBody *string `request:"mediaType=*/*"`
+	Label       *string `queryParam:"style=form,explode=true,name=label"`
+	Name        string  `queryParam:"style=form,explode=true,name=name"`
+	Owner       string  `pathParam:"style=simple,explode=false,name=owner"`
 	// release_id parameter
 	ReleaseID int64  `pathParam:"style=simple,explode=false,name=release_id"`
 	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposUploadReleaseAssetQueryParams struct {
-	Label *string `queryParam:"style=form,explode=true,name=label"`
-	Name  string  `queryParam:"style=form,explode=true,name=name"`
-}
-
-type ReposUploadReleaseAssetRequest struct {
-	PathParams  ReposUploadReleaseAssetPathParams
-	QueryParams ReposUploadReleaseAssetQueryParams
-	Request     *string `request:"mediaType=*/*"`
-	ServerURL   *string
 }
 
 type ReposUploadReleaseAssetResponse struct {

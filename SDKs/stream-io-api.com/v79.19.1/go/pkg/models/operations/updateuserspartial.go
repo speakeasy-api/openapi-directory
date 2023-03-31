@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateUsersPartialRequest struct {
-	Request shared.UpdateUserPartialRequest `request:"mediaType=application/json"`
-}
-
 type UpdateUsersPartialResponse struct {
 	// Bad request
 	APIError    *shared.APIError

@@ -13,19 +13,15 @@ var ListLogServerList = []string{
 }
 
 type ListLogSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListLogPathParams struct {
-	// The SID of the environment with the Log resources to read.
-	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
-	// The SID of the Service to read the Log resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListLogQueryParams struct {
+type ListLogRequest struct {
 	// The date/time (in GMT, ISO 8601) before which the Log resources must have been created. Defaults to current date/time.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
+	// The SID of the environment with the Log resources to read.
+	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
 	// The SID of the function whose invocation produced the Log resources to read.
 	FunctionSid *string `queryParam:"style=form,explode=true,name=FunctionSid"`
 	// The page index. This value is simply for client state.
@@ -34,15 +30,10 @@ type ListLogQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
+	// The SID of the Service to read the Log resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The date/time (in GMT, ISO 8601) after which the Log resources must have been created. Defaults to 1 day prior to current date/time.
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type ListLogRequest struct {
-	PathParams  ListLogPathParams
-	QueryParams ListLogQueryParams
-	Security    ListLogSecurity
-	ServerURL   *string
 }
 
 type ListLogListLogResponseMeta struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchMessagesIDPathParams struct {
-	// Message ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchMessagesIDRequestBody struct {
 	// Message body.
 	Body string `multipartForm:"name=body"`
@@ -22,8 +17,9 @@ type PatchMessagesIDRequestBody struct {
 }
 
 type PatchMessagesIDRequest struct {
-	PathParams PatchMessagesIDPathParams
-	Request    PatchMessagesIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PatchMessagesIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Message ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchMessagesIDResponse struct {

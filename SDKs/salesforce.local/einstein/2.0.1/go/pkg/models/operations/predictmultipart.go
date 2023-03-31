@@ -8,12 +8,7 @@ import (
 )
 
 type PredictMultipartSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PredictMultipartRequest struct {
-	Request  *shared.ImageClassificationRequest `request:"mediaType=application/json"`
-	Security PredictMultipartSecurity
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PredictMultipartResponse struct {

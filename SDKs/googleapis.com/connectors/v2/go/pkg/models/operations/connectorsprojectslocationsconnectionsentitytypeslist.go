@@ -8,16 +8,11 @@ import (
 )
 
 type ConnectorsProjectsLocationsConnectionsEntityTypesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ConnectorsProjectsLocationsConnectionsEntityTypesListPathParams struct {
-	// Required. Resource name of the Entity Type. Format: projects/{project}/locations/{location}/connections/{connection}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ConnectorsProjectsLocationsConnectionsEntityTypesListQueryParams struct {
+type ConnectorsProjectsLocationsConnectionsEntityTypesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type ConnectorsProjectsLocationsConnectionsEntityTypesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Page token, return from a previous ListEntityTypes call, that can be used retrieve the next page of content. If unspecified, the request returns the first page of entity types.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name of the Entity Type. Format: projects/{project}/locations/{location}/connections/{connection}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type ConnectorsProjectsLocationsConnectionsEntityTypesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ConnectorsProjectsLocationsConnectionsEntityTypesListRequest struct {
-	PathParams  ConnectorsProjectsLocationsConnectionsEntityTypesListPathParams
-	QueryParams ConnectorsProjectsLocationsConnectionsEntityTypesListQueryParams
-	Security    ConnectorsProjectsLocationsConnectionsEntityTypesListSecurity
 }
 
 type ConnectorsProjectsLocationsConnectionsEntityTypesListResponse struct {

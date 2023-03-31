@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsMergePathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsMergeRequestBodyMergeMethodEnum - Merge method to use. Possible values are `merge`, `squash` or `rebase`. Default is `merge`.
 type PullsMergeRequestBodyMergeMethodEnum string
 
@@ -54,8 +48,10 @@ type PullsMergeRequestBody struct {
 }
 
 type PullsMergeRequest struct {
-	PathParams PullsMergePathParams
-	Request    *PullsMergeRequestBody `request:"mediaType=application/json"`
+	RequestBody *PullsMergeRequestBody `request:"mediaType=application/json"`
+	Owner       string                 `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber  int64                  `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo        string                 `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // PullsMerge409ApplicationJSON - Conflict if sha was provided and pull request head did not match

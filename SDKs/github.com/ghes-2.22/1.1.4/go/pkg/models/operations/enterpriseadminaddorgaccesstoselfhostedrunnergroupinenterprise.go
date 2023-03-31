@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams struct {
+type EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// Unique identifier of an organization.
 	OrgID int64 `pathParam:"style=simple,explode=false,name=org_id"`
 	// Unique identifier of the self-hosted runner group.
 	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
-type EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest struct {
-	PathParams EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams
 }
 
 type EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type KkidUserlistDeleteSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type KkidUserlistDeleteQueryParams struct {
-	// userID of the user you wish to delete
-	UserID int64 `queryParam:"style=form,explode=true,name=userID"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 type KkidUserlistDeleteRequest struct {
-	QueryParams KkidUserlistDeleteQueryParams
-	Security    KkidUserlistDeleteSecurity
+	// userID of the user you wish to delete
+	UserID int64 `queryParam:"style=form,explode=true,name=userID"`
 }
 
 type KkidUserlistDeleteResponse struct {

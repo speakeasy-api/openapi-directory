@@ -8,13 +8,7 @@ import (
 )
 
 type GetBenefitsDocumentUploadStatusReportSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBenefitsDocumentUploadStatusReportRequest struct {
-	// List of GUIDs for which to retrieve current status
-	Request  shared.DocumentUploadStatusGUIDList `request:"mediaType=application/json"`
-	Security GetBenefitsDocumentUploadStatusReportSecurity
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 // GetBenefitsDocumentUploadStatusReport500ApplicationJSON - Internal server error

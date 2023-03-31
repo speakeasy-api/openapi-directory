@@ -10,7 +10,7 @@ import (
 )
 
 type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 // PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum - The type of function. This determines when the function will be called.
@@ -40,19 +40,14 @@ func (e *PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrRep
 	}
 }
 
-type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest struct {
+	// The function source code. Must be valid JavaScript code.
+	RequestBody string `request:"mediaType=text/plain"`
+	AppID       int    `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the custom workflow action.
 	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 	// The type of function. This determines when the function will be called.
 	FunctionType PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum `pathParam:"style=simple,explode=false,name=functionType"`
-}
-
-type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest struct {
-	PathParams PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypePathParams
-	// The function source code. Must be valid JavaScript code.
-	Request  string `request:"mediaType=text/plain"`
-	Security PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeSecurity
 }
 
 type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse struct {

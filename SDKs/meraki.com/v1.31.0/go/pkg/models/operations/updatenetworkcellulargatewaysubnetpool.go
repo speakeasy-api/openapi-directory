@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkCellularGatewaySubnetPoolPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkCellularGatewaySubnetPoolRequestBody struct {
 	// CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
 	Cidr *string `json:"cidr,omitempty"`
@@ -18,8 +14,8 @@ type UpdateNetworkCellularGatewaySubnetPoolRequestBody struct {
 }
 
 type UpdateNetworkCellularGatewaySubnetPoolRequest struct {
-	PathParams UpdateNetworkCellularGatewaySubnetPoolPathParams
-	Request    *UpdateNetworkCellularGatewaySubnetPoolRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkCellularGatewaySubnetPoolRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkCellularGatewaySubnetPoolResponse struct {

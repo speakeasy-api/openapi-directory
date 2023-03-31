@@ -34,7 +34,7 @@ func newAuthenticationToken(defaultClient, securityClient HTTPClient, serverURL,
 // Generate a new vMX authentication token
 func (s *authenticationToken) CreateDeviceApplianceVmxAuthenticationToken(ctx context.Context, request operations.CreateDeviceApplianceVmxAuthenticationTokenRequest) (*operations.CreateDeviceApplianceVmxAuthenticationTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/vmx/authenticationToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/vmx/authenticationToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

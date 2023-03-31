@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImageRegionProposalsPathParams struct {
+type GetImageRegionProposalsRequest struct {
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The image id.
 	ImageID string `pathParam:"style=simple,explode=false,name=imageId"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetImageRegionProposalsHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type GetImageRegionProposalsRequest struct {
-	PathParams GetImageRegionProposalsPathParams
-	Headers    GetImageRegionProposalsHeaders
 }
 
 type GetImageRegionProposalsResponse struct {

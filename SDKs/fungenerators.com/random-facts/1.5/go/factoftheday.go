@@ -34,7 +34,7 @@ func newFactOfTheDay(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // GetFactFod - Get fact of the day for the given category.
-func (s *factOfTheDay) GetFactFod(ctx context.Context, request operations.GetFactFodRequest) (*operations.GetFactFodResponse, error) {
+func (s *factOfTheDay) GetFactFod(ctx context.Context, request operations.GetFactFodRequest, security operations.GetFactFodSecurity) (*operations.GetFactFodResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/fod"
 
@@ -43,11 +43,11 @@ func (s *factOfTheDay) GetFactFod(ctx context.Context, request operations.GetFac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *factOfTheDay) GetFactFod(ctx context.Context, request operations.GetFac
 }
 
 // GetFactFodCategories - Get the list of supported fact of the day categories.
-func (s *factOfTheDay) GetFactFodCategories(ctx context.Context, request operations.GetFactFodCategoriesRequest) (*operations.GetFactFodCategoriesResponse, error) {
+func (s *factOfTheDay) GetFactFodCategories(ctx context.Context) (*operations.GetFactFodCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/fod/categories"
 
@@ -84,7 +84,7 @@ func (s *factOfTheDay) GetFactFodCategories(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

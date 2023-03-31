@@ -8,18 +8,18 @@ import (
 )
 
 type DriveFilesGenerateIdsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGenerateIdsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGenerateIdsSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DriveFilesGenerateIdsSecurity struct {
@@ -28,7 +28,7 @@ type DriveFilesGenerateIdsSecurity struct {
 	Option3 *DriveFilesGenerateIdsSecurityOption3 `security:"option"`
 }
 
-type DriveFilesGenerateIdsQueryParams struct {
+type DriveFilesGenerateIdsRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// The number of IDs to return.
@@ -49,11 +49,6 @@ type DriveFilesGenerateIdsQueryParams struct {
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveFilesGenerateIdsRequest struct {
-	QueryParams DriveFilesGenerateIdsQueryParams
-	Security    DriveFilesGenerateIdsSecurity
 }
 
 type DriveFilesGenerateIdsResponse struct {

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GETAffectedGenomicModelsUsingGETRequest{
-        PathParams: operations.GETAffectedGenomicModelsUsingGETPathParams{
-            TaxonID: "corrupti",
-        },
+        TaxonID: "corrupti",
     }
 
     ctx := context.Background()

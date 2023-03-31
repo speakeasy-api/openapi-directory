@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesGameSeriesListPathParams struct {
+type GamesGameSeriesListRequest struct {
 	GamePk string `pathParam:"style=simple,explode=false,name=game_pk"`
-}
-
-type GamesGameSeriesListQueryParams struct {
 	// A page number within the paginated result set.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results to return per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GamesGameSeriesListRequest struct {
-	PathParams  GamesGameSeriesListPathParams
-	QueryParams GamesGameSeriesListQueryParams
 }
 
 type GamesGameSeriesList200ApplicationJSON struct {

@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CargoShipmentTrackingByAWBPrefixAndAWBNumberGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CargoShipmentTrackingByAWBPrefixAndAWBNumberGetPathParams struct {
+type CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// aWBNumber : The Air Waybill Number , format : [0-9]{8} e.g. 08002050
 	AWBNumber string `pathParam:"style=simple,explode=false,name=aWBNumber"`
 	// aWBPrefix : Represents the airline that is the owner of this AWB, i.e. "020" = Lufthansa Cargo, format : [0-9]{3} e.g. 020
 	AWBPrefix string `pathParam:"style=simple,explode=false,name=aWBPrefix"`
-}
-
-type CargoShipmentTrackingByAWBPrefixAndAWBNumberGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest struct {
-	PathParams CargoShipmentTrackingByAWBPrefixAndAWBNumberGetPathParams
-	Headers    CargoShipmentTrackingByAWBPrefixAndAWBNumberGetHeaders
-	Security   CargoShipmentTrackingByAWBPrefixAndAWBNumberGetSecurity
 }
 
 type CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse struct {

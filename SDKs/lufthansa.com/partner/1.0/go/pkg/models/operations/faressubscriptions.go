@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type FaresSubscriptionsSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FaresSubscriptionsQueryParams struct {
+type FaresSubscriptionsRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
 	CabinClass string `queryParam:"style=form,explode=true,name=cabin-class"`
 	// 2-letter ISO 3166-1 country code
@@ -28,17 +29,6 @@ type FaresSubscriptionsQueryParams struct {
 	Trackingid *string `queryParam:"style=form,explode=true,name=trackingid"`
 	// Trip duration in days (e.g. '7')
 	TripDuration string `queryParam:"style=form,explode=true,name=trip-duration"`
-}
-
-type FaresSubscriptionsHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type FaresSubscriptionsRequest struct {
-	QueryParams FaresSubscriptionsQueryParams
-	Headers     FaresSubscriptionsHeaders
-	Security    FaresSubscriptionsSecurity
 }
 
 type FaresSubscriptionsResponse struct {

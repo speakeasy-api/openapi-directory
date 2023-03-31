@@ -12,12 +12,8 @@ var CreateSubscribedEventServerList = []string{
 }
 
 type CreateSubscribedEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSubscribedEventPathParams struct {
-	// The unique SID identifier of the Subscription.
-	SubscriptionSid string `pathParam:"style=simple,explode=false,name=SubscriptionSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSubscribedEventCreateSubscribedEventRequest struct {
@@ -28,10 +24,9 @@ type CreateSubscribedEventCreateSubscribedEventRequest struct {
 }
 
 type CreateSubscribedEventRequest struct {
-	PathParams CreateSubscribedEventPathParams
-	Request    *CreateSubscribedEventCreateSubscribedEventRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSubscribedEventSecurity
-	ServerURL  *string
+	RequestBody *CreateSubscribedEventCreateSubscribedEventRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Subscription.
+	SubscriptionSid string `pathParam:"style=simple,explode=false,name=SubscriptionSid"`
 }
 
 type CreateSubscribedEventResponse struct {

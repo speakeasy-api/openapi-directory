@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UsersCheckPersonIsFollowedByAuthenticatedPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type UsersCheckPersonIsFollowedByAuthenticatedRequest struct {
-	PathParams UsersCheckPersonIsFollowedByAuthenticatedPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UsersCheckPersonIsFollowedByAuthenticatedResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateArticleReserveDoiSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleReserveDoiPathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleReserveDoiRequest struct {
-	PathParams PrivateArticleReserveDoiPathParams
-	Security   PrivateArticleReserveDoiSecurity
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleReserveDoiResponse struct {

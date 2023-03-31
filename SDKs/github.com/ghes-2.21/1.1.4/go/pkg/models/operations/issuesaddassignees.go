@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesAddAssigneesPathParams struct {
-	// issue_number parameter
-	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
-	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesAddAssigneesRequestBody struct {
 	// Usernames of people to assign this issue to. _NOTE: Only users with push access can add assignees to an issue. Assignees are silently ignored otherwise._
 	Assignees []string `json:"assignees,omitempty"`
 }
 
 type IssuesAddAssigneesRequest struct {
-	PathParams IssuesAddAssigneesPathParams
-	Request    *IssuesAddAssigneesRequestBody `request:"mediaType=application/json"`
+	RequestBody *IssuesAddAssigneesRequestBody `request:"mediaType=application/json"`
+	// issue_number parameter
+	IssueNumber int64  `pathParam:"style=simple,explode=false,name=issue_number"`
+	Owner       string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type IssuesAddAssigneesResponse struct {

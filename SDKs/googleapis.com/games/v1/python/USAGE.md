@@ -4,35 +4,29 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GamesAchievementDefinitionsListRequest(
-    security=operations.GamesAchievementDefinitionsListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.GamesAchievementDefinitionsListQueryParams(
-        dollar_xgafv="1",
-        access_token="quod",
-        alt="json",
-        callback="sunt",
-        fields="nostrum",
-        key="et",
-        language="sed",
-        max_results=1042231653372785846,
-        oauth_token="omnis",
-        page_token="similique",
-        pretty_print=True,
-        quota_user="consequatur",
-        upload_type="alias",
-        upload_protocol="voluptas",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    language="corrupti",
+    max_results=847252,
+    oauth_token="vel",
+    page_token="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
-res = s.achievement_definitions.games_achievement_definitions_list(req)
+res = s.achievement_definitions.games_achievement_definitions_list(req, operations.GamesAchievementDefinitionsListSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.achievement_definitions_list_response is not None:
     # handle response

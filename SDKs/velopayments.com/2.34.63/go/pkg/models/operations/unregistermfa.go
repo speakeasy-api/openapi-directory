@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnregisterMFAPathParams struct {
+type UnregisterMFARequest struct {
+	// The MFA Type to unregister
+	UnregisterMFARequest shared.UnregisterMFARequest `request:"mediaType=application/json"`
 	// The UUID of the User.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UnregisterMFARequest struct {
-	PathParams UnregisterMFAPathParams
-	// The MFA Type to unregister
-	Request shared.UnregisterMFARequest `request:"mediaType=application/json"`
 }
 
 type UnregisterMFAResponse struct {

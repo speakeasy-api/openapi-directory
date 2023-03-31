@@ -37,7 +37,7 @@ func newClick(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Retrieve the raw click data for your account. Clicks are retrieved by creation date in descending order.
 //
 //	If there are more results than the limit for the request the response will return you a value in lastId property you can specify it in the continueFrom query parameter to get the next batch of records.
-func (s *click) GetClicks(ctx context.Context, request operations.GetClicksRequest) (*operations.GetClicksResponse, error) {
+func (s *click) GetClicks(ctx context.Context, request operations.GetClicksRequest, security operations.GetClicksSecurity) (*operations.GetClicksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clicks"
 
@@ -46,11 +46,11 @@ func (s *click) GetClicks(ctx context.Context, request operations.GetClicksReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

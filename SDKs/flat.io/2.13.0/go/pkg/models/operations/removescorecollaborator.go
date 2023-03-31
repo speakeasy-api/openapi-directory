@@ -8,21 +8,16 @@ import (
 )
 
 type RemoveScoreCollaboratorSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemoveScoreCollaboratorPathParams struct {
+type RemoveScoreCollaboratorRequest struct {
 	// Unique identifier of a **collaborator permission**, or unique identifier of a **User**, or unique identifier of a **Group**
 	//
 	Collaborator string `pathParam:"style=simple,explode=false,name=collaborator"`
 	// Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
 	//
 	Score string `pathParam:"style=simple,explode=false,name=score"`
-}
-
-type RemoveScoreCollaboratorRequest struct {
-	PathParams RemoveScoreCollaboratorPathParams
-	Security   RemoveScoreCollaboratorSecurity
 }
 
 type RemoveScoreCollaboratorResponse struct {

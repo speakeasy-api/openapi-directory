@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceBayTemplatesListQueryParams struct {
+type DcimDeviceBayTemplatesListRequest struct {
 	DevicetypeID  *string `queryParam:"style=form,explode=true,name=devicetype_id"`
 	DevicetypeIDN *string `queryParam:"style=form,explode=true,name=devicetype_id__n"`
 	ID            *string `queryParam:"style=form,explode=true,name=id"`
@@ -31,10 +31,6 @@ type DcimDeviceBayTemplatesListQueryParams struct {
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Q      *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type DcimDeviceBayTemplatesListRequest struct {
-	QueryParams DcimDeviceBayTemplatesListQueryParams
 }
 
 type DcimDeviceBayTemplatesList200ApplicationJSON struct {

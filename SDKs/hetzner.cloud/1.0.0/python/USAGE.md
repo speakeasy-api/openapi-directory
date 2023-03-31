@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetActionsRequest(
-    query_params=operations.GetActionsQueryParams(
-        id=7105271836128858469,
-        sort="status:asc",
-        status="running",
-    ),
+    id=548814,
+    sort="progress:asc",
+    status="error",
 )
     
 res = s.actions.get_actions(req)

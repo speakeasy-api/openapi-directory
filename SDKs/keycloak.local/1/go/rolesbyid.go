@@ -34,7 +34,7 @@ func newRolesByID(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteRealmRolesByIDRoleID - Delete the role
 func (s *rolesByID) DeleteRealmRolesByIDRoleID(ctx context.Context, request operations.DeleteRealmRolesByIDRoleIDRequest) (*operations.DeleteRealmRolesByIDRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,9 +69,9 @@ func (s *rolesByID) DeleteRealmRolesByIDRoleID(ctx context.Context, request oper
 // DeleteRealmRolesByIDRoleIDComposites - Remove a set of roles from the role’s composite
 func (s *rolesByID) DeleteRealmRolesByIDRoleIDComposites(ctx context.Context, request operations.DeleteRealmRolesByIDRoleIDCompositesRequest) (*operations.DeleteRealmRolesByIDRoleIDCompositesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,7 +114,7 @@ func (s *rolesByID) DeleteRealmRolesByIDRoleIDComposites(ctx context.Context, re
 // GetRealmRolesByIDRoleID - Get a specific role’s representation
 func (s *rolesByID) GetRealmRolesByIDRoleID(ctx context.Context, request operations.GetRealmRolesByIDRoleIDRequest) (*operations.GetRealmRolesByIDRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *rolesByID) GetRealmRolesByIDRoleID(ctx context.Context, request operati
 // GetRealmRolesByIDRoleIDComposites - Get role’s children   Returns a set of role’s children provided the role is a composite.
 func (s *rolesByID) GetRealmRolesByIDRoleIDComposites(ctx context.Context, request operations.GetRealmRolesByIDRoleIDCompositesRequest) (*operations.GetRealmRolesByIDRoleIDCompositesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -202,7 +202,7 @@ func (s *rolesByID) GetRealmRolesByIDRoleIDComposites(ctx context.Context, reque
 // GetRealmRolesByIDRoleIDCompositesClientsClient - Get client-level roles for the client that are in the role’s composite
 func (s *rolesByID) GetRealmRolesByIDRoleIDCompositesClientsClient(ctx context.Context, request operations.GetRealmRolesByIDRoleIDCompositesClientsClientRequest) (*operations.GetRealmRolesByIDRoleIDCompositesClientsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites/clients/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites/clients/{client}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +246,7 @@ func (s *rolesByID) GetRealmRolesByIDRoleIDCompositesClientsClient(ctx context.C
 // GetRealmRolesByIDRoleIDCompositesRealm - Get realm-level roles that are in the role’s composite
 func (s *rolesByID) GetRealmRolesByIDRoleIDCompositesRealm(ctx context.Context, request operations.GetRealmRolesByIDRoleIDCompositesRealmRequest) (*operations.GetRealmRolesByIDRoleIDCompositesRealmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites/realm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites/realm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -290,7 +290,7 @@ func (s *rolesByID) GetRealmRolesByIDRoleIDCompositesRealm(ctx context.Context, 
 // GetRealmRolesByIDRoleIDManagementPermissions - Return object stating whether role Authoirzation permissions have been initialized or not and a reference
 func (s *rolesByID) GetRealmRolesByIDRoleIDManagementPermissions(ctx context.Context, request operations.GetRealmRolesByIDRoleIDManagementPermissionsRequest) (*operations.GetRealmRolesByIDRoleIDManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/management/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -334,9 +334,9 @@ func (s *rolesByID) GetRealmRolesByIDRoleIDManagementPermissions(ctx context.Con
 // PostRealmRolesByIDRoleIDComposites - Make the role a composite role by associating some child roles
 func (s *rolesByID) PostRealmRolesByIDRoleIDComposites(ctx context.Context, request operations.PostRealmRolesByIDRoleIDCompositesRequest) (*operations.PostRealmRolesByIDRoleIDCompositesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/composites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -379,9 +379,9 @@ func (s *rolesByID) PostRealmRolesByIDRoleIDComposites(ctx context.Context, requ
 // PutRealmRolesByIDRoleID - Update the role
 func (s *rolesByID) PutRealmRolesByIDRoleID(ctx context.Context, request operations.PutRealmRolesByIDRoleIDRequest) (*operations.PutRealmRolesByIDRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoleRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -424,9 +424,9 @@ func (s *rolesByID) PutRealmRolesByIDRoleID(ctx context.Context, request operati
 // PutRealmRolesByIDRoleIDManagementPermissions - Return object stating whether role Authoirzation permissions have been initialized or not and a reference
 func (s *rolesByID) PutRealmRolesByIDRoleIDManagementPermissions(ctx context.Context, request operations.PutRealmRolesByIDRoleIDManagementPermissionsRequest) (*operations.PutRealmRolesByIDRoleIDManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/roles-by-id/{role-id}/management/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagementPermissionReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

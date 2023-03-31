@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyHeader: &shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyHeader: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.RotoballerArticlesRequest{
-        PathParams: operations.RotoballerArticlesPathParams{
-            Format: "json",
-        },
+        Format: "json",
     }
 
     ctx := context.Background()

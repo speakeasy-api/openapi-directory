@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayeeByIDV3PathParams struct {
+type GetPayeeByIDV3Request struct {
 	// The UUID of the payee.
 	PayeeID string `pathParam:"style=simple,explode=false,name=payeeId"`
-}
-
-type GetPayeeByIDV3QueryParams struct {
 	// Optional. If omitted or set to false, any Personal Identifiable Information (PII) values are returned masked.
 	// If set to true, and you have permission, the PII values will be returned as their original unmasked values.
 	//
 	Sensitive *bool `queryParam:"style=form,explode=true,name=sensitive"`
-}
-
-type GetPayeeByIDV3Request struct {
-	PathParams  GetPayeeByIDV3PathParams
-	QueryParams GetPayeeByIDV3QueryParams
 }
 
 type GetPayeeByIDV3Response struct {

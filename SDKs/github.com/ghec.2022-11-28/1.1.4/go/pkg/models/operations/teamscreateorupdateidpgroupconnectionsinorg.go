@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCreateOrUpdateIdpGroupConnectionsInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The slug of the team name.
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
 type TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequestBodyGroups struct {
 	// Description of the IdP group.
 	GroupDescription string `json:"group_description"`
@@ -29,8 +22,11 @@ type TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequestBody struct {
 }
 
 type TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequest struct {
-	PathParams TeamsCreateOrUpdateIdpGroupConnectionsInOrgPathParams
-	Request    TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The slug of the team name.
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsCreateOrUpdateIdpGroupConnectionsInOrgResponse struct {

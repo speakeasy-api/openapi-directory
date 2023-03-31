@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type TeamsGetMemberLegacyPathParams struct {
+type TeamsGetMemberLegacyRequest struct {
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
 	// The handle for the GitHub user account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type TeamsGetMemberLegacyRequest struct {
-	PathParams TeamsGetMemberLegacyPathParams
 }
 
 type TeamsGetMemberLegacyResponse struct {

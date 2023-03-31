@@ -103,7 +103,7 @@ func (s *virtualTariff) VirtualTariffGet(ctx context.Context) (*operations.Virtu
 // Gets all virtual tariffs of a folder
 func (s *virtualTariff) GetAPIVirtualTariffID(ctx context.Context, request operations.GetAPIVirtualTariffIDRequest) (*operations.GetAPIVirtualTariffIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/VirtualTariff/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/VirtualTariff/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

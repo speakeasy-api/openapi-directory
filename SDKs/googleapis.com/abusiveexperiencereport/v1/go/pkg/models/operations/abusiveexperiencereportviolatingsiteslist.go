@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AbusiveexperiencereportViolatingSitesListQueryParams struct {
+type AbusiveexperiencereportViolatingSitesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,10 +30,6 @@ type AbusiveexperiencereportViolatingSitesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AbusiveexperiencereportViolatingSitesListRequest struct {
-	QueryParams AbusiveexperiencereportViolatingSitesListQueryParams
 }
 
 type AbusiveexperiencereportViolatingSitesListResponse struct {

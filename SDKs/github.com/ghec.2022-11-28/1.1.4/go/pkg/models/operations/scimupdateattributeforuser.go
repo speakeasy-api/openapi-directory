@@ -11,13 +11,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScimUpdateAttributeForUserPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The unique identifier of the SCIM user.
-	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
-}
-
 type ScimUpdateAttributeForUserRequestBodyOperationsOpEnum string
 
 const (
@@ -162,8 +155,11 @@ type ScimUpdateAttributeForUserRequestBody struct {
 }
 
 type ScimUpdateAttributeForUserRequest struct {
-	PathParams ScimUpdateAttributeForUserPathParams
-	Request    ScimUpdateAttributeForUserRequestBody `request:"mediaType=application/json"`
+	RequestBody ScimUpdateAttributeForUserRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// The unique identifier of the SCIM user.
+	ScimUserID string `pathParam:"style=simple,explode=false,name=scim_user_id"`
 }
 
 type ScimUpdateAttributeForUserResponse struct {

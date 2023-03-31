@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchCalendarEventPathParams struct {
+type FetchCalendarEventRequest struct {
 	// Calendar event identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchCalendarEventRequest struct {
-	PathParams FetchCalendarEventPathParams
 }
 
 type FetchCalendarEventResponse struct {

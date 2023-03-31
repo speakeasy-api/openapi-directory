@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GETChartInfoUsingGETPathParams struct {
+type GETChartInfoUsingGETRequest struct {
 	// Reference RGD ID for a study
 	RefRgdID int `pathParam:"style=simple,explode=false,name=refRgdId"`
 	// Species Type Key - 3=rat 4=chinchilla
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
 	// List of term accession IDs
 	TermString string `pathParam:"style=simple,explode=false,name=termString"`
-}
-
-type GETChartInfoUsingGETRequest struct {
-	PathParams GETChartInfoUsingGETPathParams
 }
 
 type GETChartInfoUsingGETResponse struct {

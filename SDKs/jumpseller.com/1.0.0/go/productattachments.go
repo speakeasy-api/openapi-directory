@@ -35,14 +35,14 @@ func newProductAttachments(defaultClient, securityClient HTTPClient, serverURL, 
 // DeleteProductsIDAttachmentsAttachmentIDJSON - Delete a Product Attachment.
 func (s *productAttachments) DeleteProductsIDAttachmentsAttachmentIDJSON(ctx context.Context, request operations.DeleteProductsIDAttachmentsAttachmentIDJSONRequest) (*operations.DeleteProductsIDAttachmentsAttachmentIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments/{attachment_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments/{attachment_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -94,14 +94,14 @@ func (s *productAttachments) DeleteProductsIDAttachmentsAttachmentIDJSON(ctx con
 // GetProductsIDAttachmentsJSON - Retrieve all Product Attachments.
 func (s *productAttachments) GetProductsIDAttachmentsJSON(ctx context.Context, request operations.GetProductsIDAttachmentsJSONRequest) (*operations.GetProductsIDAttachmentsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -152,14 +152,14 @@ func (s *productAttachments) GetProductsIDAttachmentsJSON(ctx context.Context, r
 // GetProductsIDAttachmentsCountJSON - Count all Product Attachments.
 func (s *productAttachments) GetProductsIDAttachmentsCountJSON(ctx context.Context, request operations.GetProductsIDAttachmentsCountJSONRequest) (*operations.GetProductsIDAttachmentsCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments/count.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments/count.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -210,14 +210,14 @@ func (s *productAttachments) GetProductsIDAttachmentsCountJSON(ctx context.Conte
 // GetProductsIDAttachmentsAttachmentIDJSON - Retrieve a single Product Attachment.
 func (s *productAttachments) GetProductsIDAttachmentsAttachmentIDJSON(ctx context.Context, request operations.GetProductsIDAttachmentsAttachmentIDJSONRequest) (*operations.GetProductsIDAttachmentsAttachmentIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments/{attachment_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments/{attachment_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,9 +268,9 @@ func (s *productAttachments) GetProductsIDAttachmentsAttachmentIDJSON(ctx contex
 // PostProductsIDAttachmentsJSON - Create a new Product Attachment.
 func (s *productAttachments) PostProductsIDAttachmentsJSON(ctx context.Context, request operations.PostProductsIDAttachmentsJSONRequest) (*operations.PostProductsIDAttachmentsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/attachments.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AttachmentEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -285,7 +285,7 @@ func (s *productAttachments) PostProductsIDAttachmentsJSON(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

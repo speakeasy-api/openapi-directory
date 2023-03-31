@@ -12,22 +12,17 @@ var FetchTaskReservationServerList = []string{
 }
 
 type FetchTaskReservationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchTaskReservationPathParams struct {
+type FetchTaskReservationRequest struct {
 	// The SID of the TaskReservation resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the reserved Task resource with the TaskReservation resource to fetch.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 	// The SID of the Workspace with the TaskReservation resource to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchTaskReservationRequest struct {
-	PathParams FetchTaskReservationPathParams
-	Security   FetchTaskReservationSecurity
-	ServerURL  *string
 }
 
 type FetchTaskReservationResponse struct {

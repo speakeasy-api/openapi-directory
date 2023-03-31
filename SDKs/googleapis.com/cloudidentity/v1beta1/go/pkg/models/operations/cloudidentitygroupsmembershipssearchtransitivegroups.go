@@ -8,18 +8,18 @@ import (
 )
 
 type CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity struct {
@@ -28,12 +28,7 @@ type CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity struct {
 	Option3 *CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3 `security:"option"`
 }
 
-type CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams struct {
-	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as this API will search across all groups for a given member.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams struct {
+type CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as this API will search across all groups for a given member.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Required. A CEL expression that MUST include member specification AND label(s). This is a `required` field. Users can search on label attributes of groups. CONTAINS match ('in') is supported on labels. Identity-mapped groups are uniquely identified by both a `member_key_id` and a `member_key_namespace`, which requires an additional query input: `member_key_namespace`. Example query: `member_key_id == 'member_key_id_value' && in labels` Query may optionally contain equality operators on the parent of the group restricting the search within a particular customer, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example, 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels && parent == 'customers/C046psxkn'`
@@ -62,12 +59,6 @@ type CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest struct {
-	PathParams  CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams
-	QueryParams CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams
-	Security    CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse struct {

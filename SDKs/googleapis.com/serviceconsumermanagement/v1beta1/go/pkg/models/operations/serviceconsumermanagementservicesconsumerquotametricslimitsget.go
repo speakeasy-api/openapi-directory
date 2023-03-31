@@ -10,13 +10,8 @@ import (
 )
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetPathParams struct {
-	// The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum - Specifies the level of detail for quota information in the response.
@@ -46,7 +41,7 @@ func (e *ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum)
 	}
 }
 
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetQueryParams struct {
+type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -59,6 +54,8 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetQueryParams s
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -71,12 +68,6 @@ type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetQueryParams s
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies the level of detail for quota information in the response.
 	View *ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetRequest struct {
-	PathParams  ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetPathParams
-	QueryParams ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetQueryParams
-	Security    ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetSecurity
 }
 
 type ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetResponse struct {

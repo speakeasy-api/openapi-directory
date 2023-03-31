@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2CrmActivitiesIDJSONPathParams struct {
+type GetV2CrmActivitiesIDJSONRequest struct {
 	// Crm activity ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2CrmActivitiesIDJSONRequest struct {
-	PathParams GetV2CrmActivitiesIDJSONPathParams
 }
 
 type GetV2CrmActivitiesIDJSONResponse struct {

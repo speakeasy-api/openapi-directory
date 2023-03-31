@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionOrganizationListForUserQueryParams struct {
+type GetActionOrganizationListForUserRequest struct {
 	// The permission the user has against the returned organization
 	Permission *string `queryParam:"style=form,explode=true,name=permission"`
-}
-
-type GetActionOrganizationListForUserRequest struct {
-	QueryParams GetActionOrganizationListForUserQueryParams
 }
 
 type GetActionOrganizationListForUserResponse struct {

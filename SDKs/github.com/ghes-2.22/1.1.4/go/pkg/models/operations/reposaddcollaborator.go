@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposAddCollaboratorPathParams struct {
-	Owner    string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo     string `pathParam:"style=simple,explode=false,name=repo"`
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ReposAddCollaboratorRequestBodyPermissionEnum - The permission to grant the collaborator. **Only valid on organization-owned repositories.** Can be one of:
 // \* `pull` - can pull, but not push to or administer this repository.
 // \* `push` - can pull and push, but not administer this repository.
@@ -65,8 +59,10 @@ type ReposAddCollaboratorRequestBody struct {
 }
 
 type ReposAddCollaboratorRequest struct {
-	PathParams ReposAddCollaboratorPathParams
-	Request    *ReposAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposAddCollaboratorRequestBody `request:"mediaType=application/json"`
+	Owner       string                           `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                           `pathParam:"style=simple,explode=false,name=repo"`
+	Username    string                           `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ReposAddCollaboratorResponse struct {

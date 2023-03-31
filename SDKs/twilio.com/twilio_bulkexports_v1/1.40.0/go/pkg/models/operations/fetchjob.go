@@ -12,18 +12,13 @@ var FetchJobServerList = []string{
 }
 
 type FetchJobSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchJobPathParams struct {
-	// The unique string that that we created to identify the Bulk Export job
-	JobSid string `pathParam:"style=simple,explode=false,name=JobSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchJobRequest struct {
-	PathParams FetchJobPathParams
-	Security   FetchJobSecurity
-	ServerURL  *string
+	// The unique string that that we created to identify the Bulk Export job
+	JobSid string `pathParam:"style=simple,explode=false,name=JobSid"`
 }
 
 type FetchJobResponse struct {

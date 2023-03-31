@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.CorrelationRequest{
-        QueryParams: operations.CorrelationQueryParams{
-            Limit: "1000",
-            Tokens: "3375, 3306",
-        },
+        Limit: "1000",
+        Tokens: "3375, 3306",
     }
 
     ctx := context.Background()

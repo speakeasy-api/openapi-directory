@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListPhoneUsersSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListPhoneUsersQueryParams struct {
+type ListPhoneUsersRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned from a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Unique Identifier of the site. This can be retrieved from the [List Phone Sites](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites) API.
 	SiteID *string `queryParam:"style=form,explode=true,name=site_id"`
-}
-
-type ListPhoneUsersRequest struct {
-	QueryParams ListPhoneUsersQueryParams
-	Security    ListPhoneUsersSecurity
 }
 
 type ListPhoneUsers200ApplicationXMLUsersCallingPlans struct {

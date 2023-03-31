@@ -3,34 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptPageRequest(
-    headers=operations.AcceptPageHeaders(
-        x_amz_algorithm="vitae",
-        x_amz_content_sha256="quasi",
-        x_amz_credential="ipsum",
-        x_amz_date="incidunt",
-        x_amz_security_token="vitae",
-        x_amz_signature="animi",
-        x_amz_signed_headers="eos",
-        x_amz_target="SSMContacts.AcceptPage",
-    ),
-    request=shared.AcceptPageRequest(
-        accept_code="aperiam",
+    accept_page_request=shared.AcceptPageRequest(
+        accept_code="corrupti",
         accept_code_validation="ENFORCE",
-        accept_type="DELIVERED",
-        contact_channel_id="in",
-        note="eum",
-        page_id="quibusdam",
+        accept_type="READ",
+        contact_channel_id="quibusdam",
+        note="unde",
+        page_id="nulla",
     ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="illum",
+    x_amz_credential="vel",
+    x_amz_date="error",
+    x_amz_security_token="deserunt",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="iure",
+    x_amz_target="SSMContacts.AcceptPage",
 )
     
 res = s.accept_page(req)

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersUserEmailPermissionsPermissionNamePathParams struct {
+type PostUsersUserEmailPermissionsPermissionNameRequest struct {
 	// permission name
 	PermissionName shared.PermissionNameEnum `pathParam:"style=simple,explode=false,name=permissionName"`
 	// user's email
 	UserEmail string `pathParam:"style=simple,explode=false,name=userEmail"`
-}
-
-type PostUsersUserEmailPermissionsPermissionNameRequest struct {
-	PathParams PostUsersUserEmailPermissionsPermissionNamePathParams
 }
 
 type PostUsersUserEmailPermissionsPermissionNameResponse struct {

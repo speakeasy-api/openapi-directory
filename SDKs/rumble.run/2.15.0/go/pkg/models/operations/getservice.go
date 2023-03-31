@@ -8,17 +8,12 @@ import (
 )
 
 type GetServiceSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetServicePathParams struct {
-	// UUID of the service to retrieve
-	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetServiceRequest struct {
-	PathParams GetServicePathParams
-	Security   GetServiceSecurity
+	// UUID of the service to retrieve
+	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
 }
 
 type GetServiceResponse struct {

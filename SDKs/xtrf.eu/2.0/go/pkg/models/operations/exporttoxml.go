@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportToXMLRequest struct {
-	// Exported reports definition to XML.
-	Request shared.ExportRequestDTO `request:"mediaType=application/json"`
-}
-
 type ExportToXMLResponse struct {
 	ContentType string
 	// Success

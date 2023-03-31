@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PicoSettingsGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PicoSettingsGetRequest struct {
-	PathParams PicoSettingsGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PicoSettingsGetResponse struct {

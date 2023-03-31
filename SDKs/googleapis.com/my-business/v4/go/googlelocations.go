@@ -35,9 +35,9 @@ func newGoogleLocations(defaultClient, securityClient HTTPClient, serverURL, lan
 // MybusinessGoogleLocationsReport - Report a GoogleLocation.
 func (s *googleLocations) MybusinessGoogleLocationsReport(ctx context.Context, request operations.MybusinessGoogleLocationsReportRequest) (*operations.MybusinessGoogleLocationsReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:report", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportGoogleLocationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *googleLocations) MybusinessGoogleLocationsReport(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -92,7 +92,7 @@ func (s *googleLocations) MybusinessGoogleLocationsSearch(ctx context.Context, r
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/googleLocations:search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchGoogleLocationsRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,7 +104,7 @@ func (s *googleLocations) MybusinessGoogleLocationsSearch(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

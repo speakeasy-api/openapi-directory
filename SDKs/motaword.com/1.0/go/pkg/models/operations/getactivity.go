@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetActivityPathParams struct {
+type GetActivityRequest struct {
 	// Activity ID
 	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetActivityRequest struct {
-	PathParams GetActivityPathParams
 }
 
 type GetActivityResponse struct {

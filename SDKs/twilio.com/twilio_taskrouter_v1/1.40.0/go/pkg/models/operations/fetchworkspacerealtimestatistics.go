@@ -12,24 +12,15 @@ var FetchWorkspaceRealTimeStatisticsServerList = []string{
 }
 
 type FetchWorkspaceRealTimeStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchWorkspaceRealTimeStatisticsPathParams struct {
-	// The SID of the Workspace to fetch.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchWorkspaceRealTimeStatisticsQueryParams struct {
-	// Only calculate real-time statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchWorkspaceRealTimeStatisticsRequest struct {
-	PathParams  FetchWorkspaceRealTimeStatisticsPathParams
-	QueryParams FetchWorkspaceRealTimeStatisticsQueryParams
-	Security    FetchWorkspaceRealTimeStatisticsSecurity
-	ServerURL   *string
+	// Only calculate real-time statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
+	// The SID of the Workspace to fetch.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type FetchWorkspaceRealTimeStatisticsResponse struct {

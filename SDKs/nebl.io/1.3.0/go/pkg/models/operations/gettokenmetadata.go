@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTokenMetadataPathParams struct {
+type GetTokenMetadataRequest struct {
 	// TokenId to request metadata for
 	Tokenid string `pathParam:"style=simple,explode=false,name=tokenid"`
-}
-
-type GetTokenMetadataQueryParams struct {
 	// 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
 	Verbosity *float64 `queryParam:"style=form,explode=true,name=verbosity"`
-}
-
-type GetTokenMetadataRequest struct {
-	PathParams  GetTokenMetadataPathParams
-	QueryParams GetTokenMetadataQueryParams
 }
 
 type GetTokenMetadataResponse struct {

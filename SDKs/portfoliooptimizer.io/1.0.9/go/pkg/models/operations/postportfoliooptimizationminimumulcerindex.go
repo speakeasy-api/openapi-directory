@@ -32,10 +32,6 @@ type PostPortfolioOptimizationMinimumUlcerIndexRequestBody struct {
 	Constraints *PostPortfolioOptimizationMinimumUlcerIndexRequestBodyConstraints `json:"constraints,omitempty"`
 }
 
-type PostPortfolioOptimizationMinimumUlcerIndexRequest struct {
-	Request PostPortfolioOptimizationMinimumUlcerIndexRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMinimumUlcerIndex200ApplicationJSON - OK
 type PostPortfolioOptimizationMinimumUlcerIndex200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

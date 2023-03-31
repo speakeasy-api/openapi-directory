@@ -8,15 +8,10 @@ import (
 )
 
 type PrivateProjectNotesListSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateProjectNotesListPathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
-type PrivateProjectNotesListQueryParams struct {
+type PrivateProjectNotesListRequest struct {
 	// Number of results included on a page. Used for pagination with query
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start the listing(the offset of the first result). Used for pagination with limit
@@ -25,12 +20,8 @@ type PrivateProjectNotesListQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results included on a page. Used for pagination with page
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type PrivateProjectNotesListRequest struct {
-	PathParams  PrivateProjectNotesListPathParams
-	QueryParams PrivateProjectNotesListQueryParams
-	Security    PrivateProjectNotesListSecurity
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectNotesListResponse struct {

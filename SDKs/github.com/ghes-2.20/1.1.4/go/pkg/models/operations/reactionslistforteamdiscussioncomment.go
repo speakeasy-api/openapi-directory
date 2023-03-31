@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsListForTeamDiscussionCommentPathParams struct {
-	CommentNumber    int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsListForTeamDiscussionCommentContentEnum - Returns a single [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
 type ReactionsListForTeamDiscussionCommentContentEnum string
 
@@ -57,24 +51,18 @@ func (e *ReactionsListForTeamDiscussionCommentContentEnum) UnmarshalJSON(data []
 	}
 }
 
-type ReactionsListForTeamDiscussionCommentQueryParams struct {
+type ReactionsListForTeamDiscussionCommentRequest struct {
+	// This API is under preview and subject to change.
+	Accept        string `header:"style=simple,explode=false,name=accept"`
+	CommentNumber int64  `pathParam:"style=simple,explode=false,name=comment_number"`
 	// Returns a single [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
-	Content *ReactionsListForTeamDiscussionCommentContentEnum `queryParam:"style=form,explode=true,name=content"`
+	Content          *ReactionsListForTeamDiscussionCommentContentEnum `queryParam:"style=form,explode=true,name=content"`
+	DiscussionNumber int64                                             `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReactionsListForTeamDiscussionCommentHeaders struct {
-	// This API is under preview and subject to change.
-	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type ReactionsListForTeamDiscussionCommentRequest struct {
-	PathParams  ReactionsListForTeamDiscussionCommentPathParams
-	QueryParams ReactionsListForTeamDiscussionCommentQueryParams
-	Headers     ReactionsListForTeamDiscussionCommentHeaders
+	TeamID  int64  `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsListForTeamDiscussionCommentResponse struct {

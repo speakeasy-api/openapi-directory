@@ -10,23 +10,18 @@ import (
 )
 
 type VaultMattersGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersGetSecurity struct {
 	Option1 *VaultMattersGetSecurityOption1 `security:"option"`
 	Option2 *VaultMattersGetSecurityOption2 `security:"option"`
-}
-
-type VaultMattersGetPathParams struct {
-	// The matter ID.
-	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 }
 
 // VaultMattersGetViewEnum - Specifies how much information about the matter to return in the response.
@@ -56,7 +51,7 @@ func (e *VaultMattersGetViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VaultMattersGetQueryParams struct {
+type VaultMattersGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type VaultMattersGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The matter ID.
+	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -81,12 +78,6 @@ type VaultMattersGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies how much information about the matter to return in the response.
 	View *VaultMattersGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type VaultMattersGetRequest struct {
-	PathParams  VaultMattersGetPathParams
-	QueryParams VaultMattersGetQueryParams
-	Security    VaultMattersGetSecurity
 }
 
 type VaultMattersGetResponse struct {

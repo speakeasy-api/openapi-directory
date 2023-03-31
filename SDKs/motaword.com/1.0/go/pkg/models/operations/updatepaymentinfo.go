@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePaymentInfoRequest struct {
-	Request *shared.UpdatePaymentInfo `request:"mediaType=application/json"`
-}
-
 type UpdatePaymentInfoResponse struct {
 	ContentType string
 	// UserNotFound

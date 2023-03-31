@@ -7,20 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGiftCardHeaders struct {
+type CreateGiftCardRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request. Default value for payment provider protocol is application/json
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
+	ContentType           string                       `header:"style=simple,explode=false,name=Content-Type"`
+	CreateGiftCardRequest shared.CreateGiftCardRequest `request:"mediaType=application/vnd.vtex.giftcard.v1+json"`
 	// The AppKey configured by the merchant
 	XVTEXAPIAppKey string `header:"style=simple,explode=false,name=X-VTEX-API-AppKey"`
 	// The AppToken configured by the merchant
 	XVTEXAPIAppToken string `header:"style=simple,explode=false,name=X-VTEX-API-AppToken"`
-}
-
-type CreateGiftCardRequest struct {
-	Headers CreateGiftCardHeaders
-	Request shared.CreateGiftCardRequest `request:"mediaType=application/vnd.vtex.giftcard.v1+json"`
 }
 
 type CreateGiftCardResponse struct {

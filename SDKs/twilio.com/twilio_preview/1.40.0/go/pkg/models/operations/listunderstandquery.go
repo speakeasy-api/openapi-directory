@@ -12,15 +12,13 @@ var ListUnderstandQueryServerList = []string{
 }
 
 type ListUnderstandQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUnderstandQueryPathParams struct {
+type ListUnderstandQueryRequest struct {
 	// The unique ID of the parent Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-}
-
-type ListUnderstandQueryQueryParams struct {
 	// An ISO language-country string of the sample.
 	Language *string `queryParam:"style=form,explode=true,name=Language"`
 	// The Model Build Sid or unique name of the Model Build to be queried.
@@ -33,13 +31,6 @@ type ListUnderstandQueryQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// A string that described the query status. The values can be: pending_review, reviewed, discarded
 	Status *string `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListUnderstandQueryRequest struct {
-	PathParams  ListUnderstandQueryPathParams
-	QueryParams ListUnderstandQueryQueryParams
-	Security    ListUnderstandQuerySecurity
-	ServerURL   *string
 }
 
 type ListUnderstandQueryListUnderstandQueryResponseMeta struct {

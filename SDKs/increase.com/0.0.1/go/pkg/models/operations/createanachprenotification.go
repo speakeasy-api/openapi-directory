@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnAchPrenotificationRequest struct {
-	Request shared.CreateAnAchPrenotificationParameters `request:"mediaType=application/json"`
-}
-
 type CreateAnAchPrenotificationDefaultApplicationJSON13StatusEnum string
 
 const (

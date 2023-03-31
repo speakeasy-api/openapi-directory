@@ -13,29 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            ApimKey: shared.SchemeApimKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            ApimKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AnalyzeImageRequest{
-        QueryParams: operations.AnalyzeImageQueryParams{
-            Details: []AnalyzeImageDetailsEnum{
-                "Landmarks",
-                "Landmarks",
-                "Landmarks",
-            },
-            Language: "pt",
-            VisualFeatures: []shared.VisualFeaturesEnum{
-                "Color",
-                "Objects",
-                "Categories",
-                "Tags",
-            },
+        ImageURL: shared.ImageURL{
+            URL: "corrupti",
         },
-        Request: shared.ImageURL{
-            URL: "deserunt",
+        Details: []AnalyzeImageDetailsEnum{
+            "Landmarks",
+            "Landmarks",
+            "Landmarks",
+        },
+        Language: "zh",
+        VisualFeatures: []shared.VisualFeaturesEnum{
+            "Objects",
+            "Categories",
+            "Tags",
         },
     }
 

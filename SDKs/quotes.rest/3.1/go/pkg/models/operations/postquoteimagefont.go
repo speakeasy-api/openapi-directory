@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostQuoteImageFontSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type PostQuoteImageFontRequestBodyFont struct {
@@ -21,11 +20,6 @@ type PostQuoteImageFontRequestBody struct {
 	Font PostQuoteImageFontRequestBodyFont `multipartForm:"file"`
 	// Optional comma separated tags
 	Tags *string `multipartForm:"name=tags"`
-}
-
-type PostQuoteImageFontRequest struct {
-	Request  *PostQuoteImageFontRequestBody `request:"mediaType=multipart/form-data"`
-	Security PostQuoteImageFontSecurity
 }
 
 type PostQuoteImageFontResponse struct {

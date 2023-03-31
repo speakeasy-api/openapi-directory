@@ -8,18 +8,13 @@ import (
 )
 
 type GenderGeoSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GenderGeoPathParams struct {
-	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
-	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type GenderGeoRequest struct {
-	PathParams GenderGeoPathParams
-	Security   GenderGeoSecurity
+	CountryIso2 string `pathParam:"style=simple,explode=false,name=countryIso2"`
+	FirstName   string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName    string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type GenderGeoResponse struct {

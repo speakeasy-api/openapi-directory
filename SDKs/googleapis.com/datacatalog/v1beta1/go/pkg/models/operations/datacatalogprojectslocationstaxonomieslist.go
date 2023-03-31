@@ -8,16 +8,11 @@ import (
 )
 
 type DatacatalogProjectsLocationsTaxonomiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatacatalogProjectsLocationsTaxonomiesListPathParams struct {
-	// Required. Resource name of the project to list the taxonomies of.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatacatalogProjectsLocationsTaxonomiesListQueryParams struct {
+type DatacatalogProjectsLocationsTaxonomiesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type DatacatalogProjectsLocationsTaxonomiesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request, if any. If not set, defaults to an empty string.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name of the project to list the taxonomies of.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type DatacatalogProjectsLocationsTaxonomiesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatacatalogProjectsLocationsTaxonomiesListRequest struct {
-	PathParams  DatacatalogProjectsLocationsTaxonomiesListPathParams
-	QueryParams DatacatalogProjectsLocationsTaxonomiesListQueryParams
-	Security    DatacatalogProjectsLocationsTaxonomiesListSecurity
 }
 
 type DatacatalogProjectsLocationsTaxonomiesListResponse struct {

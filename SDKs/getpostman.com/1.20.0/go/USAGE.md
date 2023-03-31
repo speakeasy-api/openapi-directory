@@ -14,16 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateAPIRequest{
-        QueryParams: operations.CreateAPIQueryParams{
-            Workspace: "{{workspaceId}}",
-        },
-        Request: &operations.CreateAPIRequestBody{
+        RequestBody: &operations.CreateAPIRequestBody{
             API: &operations.CreateAPIRequestBodyAPI{
                 Description: "This is description.",
                 Name: "Sync Service API",
                 Summary: "This is supposed to be a short summary.",
             },
         },
+        Workspace: "{{workspaceId}}",
     }
 
     ctx := context.Background()

@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletescorebyfieldPathParams struct {
+type DeletescorebyfieldRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept                    string                           `header:"style=simple,explode=false,name=Accept"`
+	DeletescorebyfieldRequest shared.DeletescorebyfieldRequest `request:"mediaType=application/json"`
 	// Two letter word that identifies the data structure
 	Acronym string `pathParam:"style=simple,explode=false,name=acronym"`
 	// Name of the field to remove score from
 	FieldName string `pathParam:"style=simple,explode=false,name=field-name"`
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeletescorebyfieldHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type DeletescorebyfieldRequest struct {
-	PathParams DeletescorebyfieldPathParams
-	Headers    DeletescorebyfieldHeaders
-	Request    shared.DeletescorebyfieldRequest `request:"mediaType=application/json"`
 }
 
 type DeletescorebyfieldResponse struct {

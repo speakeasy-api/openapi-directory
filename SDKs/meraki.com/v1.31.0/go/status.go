@@ -34,7 +34,7 @@ func newStatus(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Return the SSID statuses of an access point
 func (s *status) GetDeviceWirelessStatus(ctx context.Context, request operations.GetDeviceWirelessStatusRequest) (*operations.GetDeviceWirelessStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

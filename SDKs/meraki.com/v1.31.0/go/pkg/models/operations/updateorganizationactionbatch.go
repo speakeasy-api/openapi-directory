@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationActionBatchPathParams struct {
-	ActionBatchID  string `pathParam:"style=simple,explode=false,name=actionBatchId"`
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationActionBatchRequestBody struct {
 	// A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true.
 	Confirmed *bool `json:"confirmed,omitempty"`
@@ -19,8 +14,9 @@ type UpdateOrganizationActionBatchRequestBody struct {
 }
 
 type UpdateOrganizationActionBatchRequest struct {
-	PathParams UpdateOrganizationActionBatchPathParams
-	Request    *UpdateOrganizationActionBatchRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationActionBatchRequestBody `request:"mediaType=application/json"`
+	ActionBatchID  string                                    `pathParam:"style=simple,explode=false,name=actionBatchId"`
+	OrganizationID string                                    `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationActionBatchResponse struct {

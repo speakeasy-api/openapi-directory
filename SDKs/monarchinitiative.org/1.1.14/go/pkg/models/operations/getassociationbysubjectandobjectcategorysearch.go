@@ -7,20 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssociationBySubjectAndObjectCategorySearchPathParams struct {
-	// Category of entity at link Object (target), e.g. gene, disease, phenotype
-	ObjectCategory string `pathParam:"style=simple,explode=false,name=object_category"`
-	// Category of entity at link Subject (source), e.g. gene, disease, phenotype
-	SubjectCategory string `pathParam:"style=simple,explode=false,name=subject_category"`
-}
-
-type GetAssociationBySubjectAndObjectCategorySearchQueryParams struct {
+type GetAssociationBySubjectAndObjectCategorySearchRequest struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
 	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
 	// If true, excludes associations that involve IEAs (ECO:0000501)
 	ExcludeAutomaticAssertions *bool `queryParam:"style=form,explode=true,name=exclude_automatic_assertions"`
 	// Object CURIE
 	Object *string `queryParam:"style=form,explode=true,name=object"`
+	// Category of entity at link Object (target), e.g. gene, disease, phenotype
+	ObjectCategory string `pathParam:"style=simple,explode=false,name=object_category"`
 	// Object taxon ID, e.g. NCBITaxon:10090 (Includes inferred associations, by default)
 	ObjectTaxon *string `queryParam:"style=form,explode=true,name=object_taxon"`
 	// Filter by relation CURIE, e.g. RO:0002200 (has_phenotype), RO:0002607 (is marker for), RO:HOM0000017 (orthologous to), etc.
@@ -31,17 +26,14 @@ type GetAssociationBySubjectAndObjectCategorySearchQueryParams struct {
 	Start *int64 `queryParam:"style=form,explode=true,name=start"`
 	// Subject CURIE
 	Subject *string `queryParam:"style=form,explode=true,name=subject"`
+	// Category of entity at link Subject (source), e.g. gene, disease, phenotype
+	SubjectCategory string `pathParam:"style=simple,explode=false,name=subject_category"`
 	// Subject taxon ID, e.g. NCBITaxon:9606 (Includes inferred associations, by default)
 	SubjectTaxon *string `queryParam:"style=form,explode=true,name=subject_taxon"`
 	// If true, excludes evidence objects in response
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetAssociationBySubjectAndObjectCategorySearchRequest struct {
-	PathParams  GetAssociationBySubjectAndObjectCategorySearchPathParams
-	QueryParams GetAssociationBySubjectAndObjectCategorySearchQueryParams
 }
 
 type GetAssociationBySubjectAndObjectCategorySearchResponse struct {

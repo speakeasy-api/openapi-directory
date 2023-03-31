@@ -35,9 +35,9 @@ func newSubscriptionGroup(defaultClient, securityClient HTTPClient, serverURL, l
 // Adds an SKU to a given Subscription, filtering by groupId.
 func (s *subscriptionGroup) AdditemsubscriptionGroupID(ctx context.Context, request operations.AdditemsubscriptionGroupIDRequest) (*operations.AdditemsubscriptionGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/additem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/additem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdditemsubscriptionGroupIDRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *subscriptionGroup) AdditemsubscriptionGroupID(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -83,14 +83,14 @@ func (s *subscriptionGroup) AdditemsubscriptionGroupID(ctx context.Context, requ
 // Cancels Subscription by `groupId`
 func (s *subscriptionGroup) CancelSubscriptionbygroupID(ctx context.Context, request operations.CancelSubscriptionbygroupIDRequest) (*operations.CancelSubscriptionbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -128,7 +128,7 @@ func (s *subscriptionGroup) GetAllsubscriptiongroup(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -159,14 +159,14 @@ func (s *subscriptionGroup) GetAllsubscriptiongroup(ctx context.Context, request
 // Retrieves details about a given subscription group's configuration, filtering by groupId.
 func (s *subscriptionGroup) GetConfigsubscriptionsgroup(ctx context.Context, request operations.GetConfigsubscriptionsgroupRequest) (*operations.GetConfigsubscriptionsgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -197,14 +197,14 @@ func (s *subscriptionGroup) GetConfigsubscriptionsgroup(ctx context.Context, req
 // Retrieves the conversation of a given Subscription group, filtering by groupId.
 func (s *subscriptionGroup) GetConversationMessagebygroupID(ctx context.Context, request operations.GetConversationMessagebygroupIDRequest) (*operations.GetConversationMessagebygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/conversation-message", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/conversation-message", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -235,14 +235,14 @@ func (s *subscriptionGroup) GetConversationMessagebygroupID(ctx context.Context,
 // Lists details of a given subscription group's next purchase, filtering by dateStr.
 func (s *subscriptionGroup) GetNextpurchase(ctx context.Context, request operations.GetNextpurchaseRequest) (*operations.GetNextpurchaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/nextPurchase/{dateStr}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/nextPurchase/{dateStr}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -273,14 +273,14 @@ func (s *subscriptionGroup) GetNextpurchase(ctx context.Context, request operati
 // Retrieves Subscription simulations, filtering by groupId.
 func (s *subscriptionGroup) GetSimulatebysubscriptionGroup(ctx context.Context, request operations.GetSimulatebysubscriptionGroupRequest) (*operations.GetSimulatebysubscriptionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/simulate/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/simulate/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -311,14 +311,14 @@ func (s *subscriptionGroup) GetSimulatebysubscriptionGroup(ctx context.Context, 
 // Lists Subscription details, filtering by `groupId`.
 func (s *subscriptionGroup) GetSubscriptionbygroupID(ctx context.Context, request operations.GetSubscriptionbygroupIDRequest) (*operations.GetSubscriptionbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -349,14 +349,14 @@ func (s *subscriptionGroup) GetSubscriptionbygroupID(ctx context.Context, reques
 // Lists addresses linked to a given Subscription group, filtering by groupId.
 func (s *subscriptionGroup) GetaddressesbygroupID(ctx context.Context, request operations.GetaddressesbygroupIDRequest) (*operations.GetaddressesbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/addresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -387,14 +387,14 @@ func (s *subscriptionGroup) GetaddressesbygroupID(ctx context.Context, request o
 // Lists frequency options of a given Subscription group, filtering by groupId.
 func (s *subscriptionGroup) GetfrequencyoptionsbygroupID(ctx context.Context, request operations.GetfrequencyoptionsbygroupIDRequest) (*operations.GetfrequencyoptionsbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/frequency-options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/frequency-options", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -425,14 +425,14 @@ func (s *subscriptionGroup) GetfrequencyoptionsbygroupID(ctx context.Context, re
 // Retrieves payment system's information of a given Subscription group, filtering by groupId.
 func (s *subscriptionGroup) GetpaymentSystembygroupID(ctx context.Context, request operations.GetpaymentSystembygroupIDRequest) (*operations.GetpaymentSystembygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/payment-systems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/payment-systems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -470,7 +470,7 @@ func (s *subscriptionGroup) Getsubscriptiongrouplist(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -501,14 +501,14 @@ func (s *subscriptionGroup) Getsubscriptiongrouplist(ctx context.Context, reques
 // Retrieves Subscription groups listed as 'will create', filtering by groupId.
 func (s *subscriptionGroup) GetwillcreatebygroupID(ctx context.Context, request operations.GetwillcreatebygroupIDRequest) (*operations.GetwillcreatebygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/will-create", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/will-create", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -539,9 +539,9 @@ func (s *subscriptionGroup) GetwillcreatebygroupID(ctx context.Context, request 
 // Insert address information of a given Subscription group, filtering by groupId.
 func (s *subscriptionGroup) InsertAddressesbygroupID(ctx context.Context, request operations.InsertAddressesbygroupIDRequest) (*operations.InsertAddressesbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}/addresses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertAddressesbygroupIDRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,7 +556,7 @@ func (s *subscriptionGroup) InsertAddressesbygroupID(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -587,14 +587,14 @@ func (s *subscriptionGroup) InsertAddressesbygroupID(ctx context.Context, reques
 // Permits the retry of a Subscription group, via API, filtering by groupId and instanceId.
 func (s *subscriptionGroup) RetrysubscriptionbygroupID(ctx context.Context, request operations.RetrysubscriptionbygroupIDRequest) (*operations.RetrysubscriptionbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupid}/instances/{instanceId}/retry", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupid}/instances/{instanceId}/retry", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -625,9 +625,9 @@ func (s *subscriptionGroup) RetrysubscriptionbygroupID(ctx context.Context, requ
 // Updates a Subscription by `groupId`.
 func (s *subscriptionGroup) UpdateSubscriptionbygroupID(ctx context.Context, request operations.UpdateSubscriptionbygroupIDRequest) (*operations.UpdateSubscriptionbygroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions-group/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionbygroupIDRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

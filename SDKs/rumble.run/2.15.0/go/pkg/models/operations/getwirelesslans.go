@@ -8,17 +8,12 @@ import (
 )
 
 type GetWirelessLANsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWirelessLANsQueryParams struct {
-	// an optional search string for filtering results
-	Search *string `queryParam:"style=form,explode=true,name=search"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWirelessLANsRequest struct {
-	QueryParams GetWirelessLANsQueryParams
-	Security    GetWirelessLANsSecurity
+	// an optional search string for filtering results
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type GetWirelessLANsResponse struct {

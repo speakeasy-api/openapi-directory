@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchOrganizationPathParams struct {
+type FetchOrganizationRequest struct {
 	// Organization identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type FetchOrganizationRequest struct {
-	PathParams FetchOrganizationPathParams
 }
 
 type FetchOrganizationResponse struct {

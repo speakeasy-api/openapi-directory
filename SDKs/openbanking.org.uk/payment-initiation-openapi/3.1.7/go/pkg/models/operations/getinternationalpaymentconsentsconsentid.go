@@ -8,17 +8,14 @@ import (
 )
 
 type GetInternationalPaymentConsentsConsentIDSecurity struct {
-	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetInternationalPaymentConsentsConsentIDPathParams struct {
-	// ConsentId
-	ConsentID string `pathParam:"style=simple,explode=false,name=ConsentId"`
-}
-
-type GetInternationalPaymentConsentsConsentIDHeaders struct {
+type GetInternationalPaymentConsentsConsentIDRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// ConsentId
+	ConsentID string `pathParam:"style=simple,explode=false,name=ConsentId"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -29,12 +26,6 @@ type GetInternationalPaymentConsentsConsentIDHeaders struct {
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type GetInternationalPaymentConsentsConsentIDRequest struct {
-	PathParams GetInternationalPaymentConsentsConsentIDPathParams
-	Headers    GetInternationalPaymentConsentsConsentIDHeaders
-	Security   GetInternationalPaymentConsentsConsentIDSecurity
 }
 
 type GetInternationalPaymentConsentsConsentIDResponse struct {

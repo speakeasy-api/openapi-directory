@@ -28,7 +28,6 @@ pkg/models/shared/place.go
 pkg/models/shared/acl.go
 pkg/models/shared/plusaclentryresource.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/activityfeed.go
 pkg/models/shared/comment.go
 pkg/models/shared/commentfeed.go

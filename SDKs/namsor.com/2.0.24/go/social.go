@@ -34,16 +34,16 @@ func newSocial(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // PhoneCode - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, given a personal name and formatted / unformatted phone number.
-func (s *social) PhoneCode(ctx context.Context, request operations.PhoneCodeRequest) (*operations.PhoneCodeResponse, error) {
+func (s *social) PhoneCode(ctx context.Context, request operations.PhoneCodeRequest, security operations.PhoneCodeSecurity) (*operations.PhoneCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCode/{firstName}/{lastName}/{phoneNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCode/{firstName}/{lastName}/{phoneNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *social) PhoneCode(ctx context.Context, request operations.PhoneCodeRequ
 }
 
 // PhoneCodeBatch - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, of up to 100 personal names, detecting automatically the local context given a name and formatted / unformatted phone number.
-func (s *social) PhoneCodeBatch(ctx context.Context, request operations.PhoneCodeBatchRequest) (*operations.PhoneCodeBatchResponse, error) {
+func (s *social) PhoneCodeBatch(ctx context.Context, request shared.BatchFirstLastNamePhoneNumberIn, security operations.PhoneCodeBatchSecurity) (*operations.PhoneCodeBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/phoneCodeBatch"
 
@@ -97,7 +97,7 @@ func (s *social) PhoneCodeBatch(ctx context.Context, request operations.PhoneCod
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,16 +137,16 @@ func (s *social) PhoneCodeBatch(ctx context.Context, request operations.PhoneCod
 }
 
 // PhoneCodeGeo - [USES 11 UNITS PER NAME] Infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
-func (s *social) PhoneCodeGeo(ctx context.Context, request operations.PhoneCodeGeoRequest) (*operations.PhoneCodeGeoResponse, error) {
+func (s *social) PhoneCodeGeo(ctx context.Context, request operations.PhoneCodeGeoRequest, security operations.PhoneCodeGeoSecurity) (*operations.PhoneCodeGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeo/{firstName}/{lastName}/{phoneNumber}/{countryIso2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeo/{firstName}/{lastName}/{phoneNumber}/{countryIso2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *social) PhoneCodeGeo(ctx context.Context, request operations.PhoneCodeG
 }
 
 // PhoneCodeGeoBatch - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, of up to 100 personal names, with a local context (ISO2 country of residence).
-func (s *social) PhoneCodeGeoBatch(ctx context.Context, request operations.PhoneCodeGeoBatchRequest) (*operations.PhoneCodeGeoBatchResponse, error) {
+func (s *social) PhoneCodeGeoBatch(ctx context.Context, request shared.BatchFirstLastNamePhoneNumberGeoIn, security operations.PhoneCodeGeoBatchSecurity) (*operations.PhoneCodeGeoBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/phoneCodeGeoBatch"
 
@@ -200,7 +200,7 @@ func (s *social) PhoneCodeGeoBatch(ctx context.Context, request operations.Phone
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *social) PhoneCodeGeoBatch(ctx context.Context, request operations.Phone
 }
 
 // PhoneCodeGeoFeedbackLoop - [CREDITS 1 UNIT] Feedback loop to better infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
-func (s *social) PhoneCodeGeoFeedbackLoop(ctx context.Context, request operations.PhoneCodeGeoFeedbackLoopRequest) (*operations.PhoneCodeGeoFeedbackLoopResponse, error) {
+func (s *social) PhoneCodeGeoFeedbackLoop(ctx context.Context, request operations.PhoneCodeGeoFeedbackLoopRequest, security operations.PhoneCodeGeoFeedbackLoopSecurity) (*operations.PhoneCodeGeoFeedbackLoopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeoFeedbackLoop/{firstName}/{lastName}/{phoneNumber}/{phoneNumberE164}/{countryIso2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeoFeedbackLoop/{firstName}/{lastName}/{phoneNumber}/{phoneNumberE164}/{countryIso2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

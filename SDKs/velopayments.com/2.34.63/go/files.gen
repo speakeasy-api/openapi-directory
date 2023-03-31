@@ -169,7 +169,6 @@ pkg/models/shared/mfadetails.go
 pkg/models/shared/mfatypeenum.go
 pkg/models/shared/accesstokenvalidationrequest.go
 pkg/models/shared/authresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/createpayeescsvresponsev3.go
 pkg/models/shared/createpayeescsvresponsev3rejectedcsvrows.go
 pkg/models/shared/createpayeesrequestv3.go
@@ -352,4 +351,5 @@ pkg/models/shared/webhookresponse.go
 pkg/models/shared/webhooksresponse.go
 pkg/models/shared/pingresponse.go
 pkg/models/shared/updatewebhookrequest.go
+pkg/models/shared/security.go
 USAGE.md

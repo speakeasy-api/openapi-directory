@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SwitchUserAccountSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type SwitchUserAccountPathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	UserID    string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SwitchUserAccountApplicationJSON struct {
@@ -22,9 +16,9 @@ type SwitchUserAccountApplicationJSON struct {
 }
 
 type SwitchUserAccountRequest struct {
-	PathParams SwitchUserAccountPathParams
-	Request    *SwitchUserAccountApplicationJSON `request:"mediaType=application/json"`
-	Security   SwitchUserAccountSecurity
+	RequestBody *SwitchUserAccountApplicationJSON `request:"mediaType=application/json"`
+	AccountID   string                            `pathParam:"style=simple,explode=false,name=accountId"`
+	UserID      string                            `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SwitchUserAccountResponse struct {

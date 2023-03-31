@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostPermissionsRequest struct {
-	Request shared.Permission `request:"mediaType=application/json"`
-}
-
 type PostPermissionsResponse struct {
 	ContentType string
 	// OK

@@ -34,14 +34,14 @@ func newPerformanceHistory(defaultClient, securityClient HTTPClient, serverURL, 
 // Return historical records of various Systems Manager client metrics for desktop devices.
 func (s *performanceHistory) GetNetworkSmDevicePerformanceHistory(ctx context.Context, request operations.GetNetworkSmDevicePerformanceHistoryRequest) (*operations.GetNetworkSmDevicePerformanceHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/performanceHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/performanceHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRealmAuthenticationFlowsFlowAliasExecutionsPathParams struct {
+type PutRealmAuthenticationFlowsFlowAliasExecutionsRequest struct {
+	AuthenticationExecutionInfoRepresentation shared.AuthenticationExecutionInfoRepresentation `request:"mediaType=application/json"`
 	// Flow alias
 	FlowAlias string `pathParam:"style=simple,explode=false,name=flowAlias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmAuthenticationFlowsFlowAliasExecutionsRequest struct {
-	PathParams PutRealmAuthenticationFlowsFlowAliasExecutionsPathParams
-	Request    shared.AuthenticationExecutionInfoRepresentation `request:"mediaType=application/json"`
 }
 
 type PutRealmAuthenticationFlowsFlowAliasExecutionsResponse struct {

@@ -94,14 +94,14 @@ func New(opts ...SDKOption) *SDK {
 // TransportationIncentivesLawsAll - Return a full list of laws and incentives that match your query.
 func (s *SDK) TransportationIncentivesLawsAll(ctx context.Context, request operations.TransportationIncentivesLawsAllRequest) (*operations.TransportationIncentivesLawsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.{output_format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1.{output_format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -142,14 +142,14 @@ func (s *SDK) TransportationIncentivesLawsAll(ctx context.Context, request opera
 // TransportationIncentivesLawsCategories - Return the law categories for a given category type.
 func (s *SDK) TransportationIncentivesLawsCategories(ctx context.Context, request operations.TransportationIncentivesLawsCategoriesRequest) (*operations.TransportationIncentivesLawsCategoriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/category-list.{output_format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/category-list.{output_format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -190,14 +190,14 @@ func (s *SDK) TransportationIncentivesLawsCategories(ctx context.Context, reques
 // TransportationIncentivesLawsID - Fetch the details of a specific law given the law's ID.
 func (s *SDK) TransportationIncentivesLawsID(ctx context.Context, request operations.TransportationIncentivesLawsIDRequest) (*operations.TransportationIncentivesLawsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{id}.{output_format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{id}.{output_format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -238,14 +238,14 @@ func (s *SDK) TransportationIncentivesLawsID(ctx context.Context, request operat
 // TransportationIncentivesLawsPocs - Get the points of contact for a given jurisdiction.
 func (s *SDK) TransportationIncentivesLawsPocs(ctx context.Context, request operations.TransportationIncentivesLawsPocsRequest) (*operations.TransportationIncentivesLawsPocsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/pocs.{output_format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/pocs.{output_format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

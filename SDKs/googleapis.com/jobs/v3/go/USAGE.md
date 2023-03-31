@@ -14,55 +14,48 @@ func main() {
     s := sdk.New()
 
     req := operations.JobsProjectsClientEventsCreateRequest{
-        Security: operations.JobsProjectsClientEventsCreateSecurity{
-            Option1: &operations.JobsProjectsClientEventsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.JobsProjectsClientEventsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.JobsProjectsClientEventsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.CreateClientEventRequest{
+        DollarXgafv: "2",
+        CreateClientEventRequest: &shared.CreateClientEventRequest{
             ClientEvent: &shared.ClientEvent{
-                CreateTime: "suscipit",
-                EventID: "iure",
+                CreateTime: "provident",
+                EventID: "distinctio",
                 ExtraInfo: map[string]string{
-                    "debitis": "ipsa",
-                    "delectus": "tempora",
+                    "unde": "nulla",
+                    "corrupti": "illum",
+                    "vel": "error",
+                    "deserunt": "suscipit",
                 },
                 JobEvent: &shared.JobEvent{
                     Jobs: []string{
-                        "molestiae",
-                        "minus",
+                        "magnam",
+                        "debitis",
                     },
-                    Type: "HIRED",
+                    Type: "JOB_EVENT_TYPE_UNSPECIFIED",
                 },
-                ParentEventID: "voluptatum",
-                RequestID: "iusto",
+                ParentEventID: "delectus",
+                RequestID: "tempora",
             },
         },
+        AccessToken: "suscipit",
+        Alt: "media",
+        Callback: "minus",
+        Fields: "placeat",
+        Key: "voluptatum",
+        OauthToken: "iusto",
+        Parent: "excepturi",
+        PrettyPrint: false,
+        QuotaUser: "nisi",
+        UploadType: "recusandae",
+        UploadProtocol: "temporibus",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.JobsProjectsClientEventsCreate(ctx, req)
+    res, err := s.Projects.JobsProjectsClientEventsCreate(ctx, req, operations.JobsProjectsClientEventsCreateSecurity{
+        Option1: &operations.JobsProjectsClientEventsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

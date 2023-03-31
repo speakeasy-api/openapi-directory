@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceVpnSiteToSiteVpnPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkApplianceVpnSiteToSiteVpnRequestBodyHubs struct {
 	// The network ID of the hub.
 	HubID string `json:"hubId"`
@@ -63,8 +59,8 @@ type UpdateNetworkApplianceVpnSiteToSiteVpnRequestBody struct {
 }
 
 type UpdateNetworkApplianceVpnSiteToSiteVpnRequest struct {
-	PathParams UpdateNetworkApplianceVpnSiteToSiteVpnPathParams
-	Request    UpdateNetworkApplianceVpnSiteToSiteVpnRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkApplianceVpnSiteToSiteVpnRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                            `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONHubs struct {

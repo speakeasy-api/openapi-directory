@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworksIDActionsPathParams struct {
-	// ID of the Network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetNetworksIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetNetworksIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetNetworksIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetNetworksIDActionsQueryParams struct {
+type GetNetworksIDActionsRequest struct {
+	// ID of the Network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetNetworksIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetNetworksIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetNetworksIDActionsRequest struct {
-	PathParams  GetNetworksIDActionsPathParams
-	QueryParams GetNetworksIDActionsQueryParams
 }
 
 // GetNetworksIDActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

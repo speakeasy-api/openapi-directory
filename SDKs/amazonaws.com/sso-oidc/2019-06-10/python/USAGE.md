@@ -3,37 +3,36 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateTokenRequest(
-    headers=operations.CreateTokenHeaders(
-        x_amz_algorithm="enim",
-        x_amz_content_sha256="quia",
-        x_amz_credential="voluptatem",
-        x_amz_date="suscipit",
-        x_amz_security_token="dolorem",
-        x_amz_signature="beatae",
-        x_amz_signed_headers="at",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=operations.CreateTokenRequestBody(
-        client_id="debitis",
-        client_secret="optio",
-        code="ut",
-        device_code="at",
-        grant_type="sed",
-        redirect_uri="ut",
-        refresh_token="cumque",
+)
+
+
+req = operations.CreateTokenRequest(
+    request_body=operations.CreateTokenRequestBody(
+        client_id="corrupti",
+        client_secret="provident",
+        code="distinctio",
+        device_code="quibusdam",
+        grant_type="unde",
+        redirect_uri="nulla",
+        refresh_token="corrupti",
         scope=[
-            "quibusdam",
+            "vel",
+            "error",
+            "deserunt",
+            "suscipit",
         ],
     ),
+    x_amz_algorithm="iure",
+    x_amz_content_sha256="magnam",
+    x_amz_credential="debitis",
+    x_amz_date="ipsa",
+    x_amz_security_token="delectus",
+    x_amz_signature="tempora",
+    x_amz_signed_headers="suscipit",
 )
     
 res = s.create_token(req)

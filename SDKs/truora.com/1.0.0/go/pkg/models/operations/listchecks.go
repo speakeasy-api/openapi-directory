@@ -8,19 +8,14 @@ import (
 )
 
 type ListChecksSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
-type ListChecksQueryParams struct {
+type ListChecksRequest struct {
 	// Report id checks to be returned
 	ReportID *string `queryParam:"style=form,explode=true,name=report_id"`
 	// Start key value for the pagination
 	StartKey *string `queryParam:"style=form,explode=true,name=start_key"`
-}
-
-type ListChecksRequest struct {
-	QueryParams ListChecksQueryParams
-	Security    ListChecksSecurity
 }
 
 type ListChecksResponse struct {

@@ -45,7 +45,7 @@ func (s *crmActivities) GetV2CrmActivitiesJSON(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *crmActivities) GetV2CrmActivitiesJSON(ctx context.Context, request oper
 // Fetches a crm activity, by ID only.
 func (s *crmActivities) GetV2CrmActivitiesIDJSON(ctx context.Context, request operations.GetV2CrmActivitiesIDJSONRequest) (*operations.GetV2CrmActivitiesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/crm_activities/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/crm_activities/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopsStopsByGeolocationPathParams struct {
-	// Geographic coordinate of latitude
-	Latitude float32 `pathParam:"style=simple,explode=false,name=latitude"`
-	// Geographic coordinate of longitude
-	Longitude float32 `pathParam:"style=simple,explode=false,name=longitude"`
-}
-
 type StopsStopsByGeolocationRouteTypesEnum string
 
 const (
@@ -48,9 +41,13 @@ func (e *StopsStopsByGeolocationRouteTypesEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type StopsStopsByGeolocationQueryParams struct {
+type StopsStopsByGeolocationRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
+	// Geographic coordinate of latitude
+	Latitude float32 `pathParam:"style=simple,explode=false,name=latitude"`
+	// Geographic coordinate of longitude
+	Longitude float32 `pathParam:"style=simple,explode=false,name=longitude"`
 	// Filter by maximum distance (in metres) from location specified via latitude and longitude parameters (default = 300)
 	MaxDistance *float64 `queryParam:"style=form,explode=true,name=max_distance"`
 	// Maximum number of results returned (default = 30)
@@ -63,11 +60,6 @@ type StopsStopsByGeolocationQueryParams struct {
 	StopDisruptions *bool `queryParam:"style=form,explode=true,name=stop_disruptions"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type StopsStopsByGeolocationRequest struct {
-	PathParams  StopsStopsByGeolocationPathParams
-	QueryParams StopsStopsByGeolocationQueryParams
 }
 
 type StopsStopsByGeolocationResponse struct {

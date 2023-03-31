@@ -40,7 +40,11 @@ func (e *GetContentSourceSectionTimePeriodJSONSourceEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetContentSourceSectionTimePeriodJSONPathParams struct {
+type GetContentSourceSectionTimePeriodJSONRequest struct {
+	// Limits the number of results, between 1 and 20
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// Sets the starting point of the result set
+	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// Limits the set of items by one or more sections
 	// all | One or more section names, separated by semicolons
 	//
@@ -57,18 +61,6 @@ type GetContentSourceSectionTimePeriodJSONPathParams struct {
 	Source GetContentSourceSectionTimePeriodJSONSourceEnum `pathParam:"style=simple,explode=false,name=source"`
 	// Limits the set of items by time published, integer in number of hours
 	TimePeriod int64 `pathParam:"style=simple,explode=false,name=time-period"`
-}
-
-type GetContentSourceSectionTimePeriodJSONQueryParams struct {
-	// Limits the number of results, between 1 and 20
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-	// Sets the starting point of the result set
-	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetContentSourceSectionTimePeriodJSONRequest struct {
-	PathParams  GetContentSourceSectionTimePeriodJSONPathParams
-	QueryParams GetContentSourceSectionTimePeriodJSONQueryParams
 }
 
 // GetContentSourceSectionTimePeriodJSON200ApplicationJSON - An array of Articles

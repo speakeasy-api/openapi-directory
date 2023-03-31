@@ -13,15 +13,11 @@ var ListRoomRecordingServerList = []string{
 }
 
 type ListRoomRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRoomRecordingPathParams struct {
-	// The SID of the room with the RoomRecording resources to read.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
-}
-
-type ListRoomRecordingQueryParams struct {
+type ListRoomRecordingRequest struct {
 	// Read only recordings that started on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime with time zone.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Read only Recordings that started before this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime with time zone.
@@ -32,17 +28,12 @@ type ListRoomRecordingQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
+	// The SID of the room with the RoomRecording resources to read.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// Read only the recordings that have this `source_sid`.
 	SourceSid *string `queryParam:"style=form,explode=true,name=SourceSid"`
 	// Read only the recordings with this status. Can be: `processing`, `completed`, or `deleted`.
 	Status *shared.RoomRecordingEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListRoomRecordingRequest struct {
-	PathParams  ListRoomRecordingPathParams
-	QueryParams ListRoomRecordingQueryParams
-	Security    ListRoomRecordingSecurity
-	ServerURL   *string
 }
 
 type ListRoomRecordingListRoomRecordingResponseMeta struct {

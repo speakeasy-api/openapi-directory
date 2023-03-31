@@ -8,12 +8,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkWirelessSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkWirelessSettingsRequest struct {
-	PathParams GetNetworkWirelessSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkWirelessSettings200ApplicationJSONNamedVlansPoolDhcpMonitoring - Named VLAN Pool DHCP Monitoring settings.

@@ -4,10 +4,9 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostJsontoxmlRequest(
-    request="laboriosam",
-)
+
+
+req = "corrupti"
     
 res = s.post_jsontoxml(req)
 

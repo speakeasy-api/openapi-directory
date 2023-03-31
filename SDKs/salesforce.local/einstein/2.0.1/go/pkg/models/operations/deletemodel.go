@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteModelSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteModelPathParams struct {
-	// Model Id
-	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteModelRequest struct {
-	PathParams DeleteModelPathParams
-	Security   DeleteModelSecurity
+	// Model Id
+	ModelID string `pathParam:"style=simple,explode=false,name=modelId"`
 }
 
 type DeleteModelResponse struct {

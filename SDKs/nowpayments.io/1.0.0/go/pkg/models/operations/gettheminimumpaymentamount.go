@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetTheMinimumPaymentAmountQueryParams struct {
+type GetTheMinimumPaymentAmountRequest struct {
 	CurrencyFrom *string `queryParam:"style=form,explode=true,name=currency_from"`
 	CurrencyTo   *string `queryParam:"style=form,explode=true,name=currency_to"`
-}
-
-type GetTheMinimumPaymentAmountHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetTheMinimumPaymentAmountRequest struct {
-	QueryParams GetTheMinimumPaymentAmountQueryParams
-	Headers     GetTheMinimumPaymentAmountHeaders
+	XAPIKey      *string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetTheMinimumPaymentAmount200ApplicationJSON - 200

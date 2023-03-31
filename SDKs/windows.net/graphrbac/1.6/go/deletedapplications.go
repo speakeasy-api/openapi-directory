@@ -34,14 +34,14 @@ func newDeletedApplications(defaultClient, securityClient HTTPClient, serverURL,
 // DeletedApplicationsList - Gets a list of deleted applications in the directory.
 func (s *deletedApplications) DeletedApplicationsList(ctx context.Context, request operations.DeletedApplicationsListRequest) (*operations.DeletedApplicationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/deletedApplications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/deletedApplications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,14 +106,14 @@ func (s *deletedApplications) DeletedApplicationsList(ctx context.Context, reque
 // DeletedApplicationsRestore - Restores the deleted application in the directory.
 func (s *deletedApplications) DeletedApplicationsRestore(ctx context.Context, request operations.DeletedApplicationsRestoreRequest) (*operations.DeletedApplicationsRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/deletedApplications/{objectId}/restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/deletedApplications/{objectId}/restore", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

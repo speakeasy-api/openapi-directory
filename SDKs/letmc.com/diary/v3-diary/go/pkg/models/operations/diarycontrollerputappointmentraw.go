@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type DiaryControllerPutAppointmentRawPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerPutAppointmentRawQueryParams struct {
+type DiaryControllerPutAppointmentRawRequest struct {
 	// Sales or Lettings property?
 	AllowMarketingCorrespondence *bool `queryParam:"style=form,explode=true,name=AllowMarketingCorrespondence"`
+	// The appointment details model
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The unique appointment id
 	AppointmentID string `queryParam:"style=form,explode=true,name=appointmentID"`
 	// Sales or Lettings property?
 	Lettings *bool `queryParam:"style=form,explode=true,name=lettings"`
-}
-
-type DiaryControllerPutAppointmentRawRequest struct {
-	PathParams  DiaryControllerPutAppointmentRawPathParams
-	QueryParams DiaryControllerPutAppointmentRawQueryParams
-	// The appointment details model
-	Request []byte `request:"mediaType=text/xml"`
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerPutAppointmentRawResponse struct {

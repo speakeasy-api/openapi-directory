@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksListForRefPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// ref parameter
-	Ref  string `pathParam:"style=simple,explode=false,name=ref"`
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ChecksListForRefFilterEnum - Filters check runs by their `completed_at` timestamp. Can be one of `latest` (returning the most recent check runs) or `all`.
 type ChecksListForRefFilterEnum string
 
@@ -40,23 +33,22 @@ func (e *ChecksListForRefFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ChecksListForRefQueryParams struct {
+type ChecksListForRefRequest struct {
 	AppID *int64 `queryParam:"style=form,explode=true,name=app_id"`
 	// Returns check runs with the specified `name`.
 	CheckName *string `queryParam:"style=form,explode=true,name=check_name"`
 	// Filters check runs by their `completed_at` timestamp. Can be one of `latest` (returning the most recent check runs) or `all`.
 	Filter *ChecksListForRefFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	Owner  string                      `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// ref parameter
+	Ref  string `pathParam:"style=simple,explode=false,name=ref"`
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Returns check runs with the specified `status`. Can be one of `queued`, `in_progress`, or `completed`.
 	Status *shared.StatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ChecksListForRefRequest struct {
-	PathParams  ChecksListForRefPathParams
-	QueryParams ChecksListForRefQueryParams
 }
 
 // ChecksListForRef200ApplicationJSON - Response

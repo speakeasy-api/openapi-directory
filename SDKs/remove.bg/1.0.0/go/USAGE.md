@@ -13,31 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyHeader: shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyHeader: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.PostRemovebgFormRequest{
-        Request: shared.RemoveBgJSON{
-            AddShadow: false,
-            BgColor: "corrupti",
-            BgImageURL: "provident",
-            Channels: "alpha",
-            Crop: false,
-            CropMargin: "quibusdam",
-            Format: "jpg",
-            ImageFileB64: "nulla",
-            ImageURL: "https://www.remove.bg/example-hd.jpg",
-            Position: "corrupti",
-            Roi: "illum",
-            Scale: "vel",
-            Semitransparency: false,
-            Size: "full",
-            Type: "product",
-            TypeLevel: "1",
-        },
+    req := shared.RemoveBgJSON{
+        AddShadow: false,
+        BgColor: "corrupti",
+        BgImageURL: "provident",
+        Channels: "alpha",
+        Crop: false,
+        CropMargin: "quibusdam",
+        Format: "jpg",
+        ImageFileB64: "nulla",
+        ImageURL: "https://www.remove.bg/example-hd.jpg",
+        Position: "corrupti",
+        Roi: "illum",
+        Scale: "vel",
+        Semitransparency: false,
+        Size: "full",
+        Type: "product",
+        TypeLevel: "1",
     }
 
     ctx := context.Background()

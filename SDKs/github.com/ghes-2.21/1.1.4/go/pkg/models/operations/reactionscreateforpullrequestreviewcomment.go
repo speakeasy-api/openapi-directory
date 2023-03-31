@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForPullRequestReviewCommentPathParams struct {
-	// comment_id parameter
-	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
-	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@2.21/rest/reference/reactions#reaction-types) to add to the pull request review comment.
 type ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum string
 
@@ -64,8 +57,11 @@ type ReactionsCreateForPullRequestReviewCommentRequestBody struct {
 }
 
 type ReactionsCreateForPullRequestReviewCommentRequest struct {
-	PathParams ReactionsCreateForPullRequestReviewCommentPathParams
-	Request    ReactionsCreateForPullRequestReviewCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForPullRequestReviewCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID int64  `pathParam:"style=simple,explode=false,name=comment_id"`
+	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
+	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReactionsCreateForPullRequestReviewComment415ApplicationJSON - Preview header missing

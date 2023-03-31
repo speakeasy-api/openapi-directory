@@ -4,17 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateInventoryTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateInventoryTaskRequest struct {
-	// The request payload containing the version, feedType, and optional filterCriteria.
-	Request  shared.CreateInventoryTaskRequest `request:"mediaType=application/json"`
-	Security CreateInventoryTaskSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateInventoryTaskResponse struct {

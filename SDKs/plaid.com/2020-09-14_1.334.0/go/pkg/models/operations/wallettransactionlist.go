@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type WalletTransactionListRequest struct {
-	Request shared.WalletTransactionListRequest `request:"mediaType=application/json"`
-}
 
 type WalletTransactionListResponse struct {
 	ContentType string

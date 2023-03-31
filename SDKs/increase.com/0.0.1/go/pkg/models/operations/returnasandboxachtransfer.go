@@ -9,13 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReturnASandboxAchTransferPathParams struct {
-	AchTransferID string `pathParam:"style=simple,explode=false,name=ach_transfer_id"`
-}
-
 type ReturnASandboxAchTransferRequest struct {
-	PathParams ReturnASandboxAchTransferPathParams
-	Request    shared.ReturnASandboxAchTransferParameters `request:"mediaType=application/json"`
+	AchTransferID                       string                                     `pathParam:"style=simple,explode=false,name=ach_transfer_id"`
+	ReturnASandboxAchTransferParameters shared.ReturnASandboxAchTransferParameters `request:"mediaType=application/json"`
 }
 
 type ReturnASandboxAchTransferDefaultApplicationJSON13StatusEnum string

@@ -7,26 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListDiscussionsInOrgPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// team_slug parameter
-	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsListDiscussionsInOrgQueryParams struct {
+type TeamsListDiscussionsInOrgRequest struct {
 	// One of `asc` (ascending) or `desc` (descending).
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Org       string                `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Pinned discussions only filter
 	Pinned *string `queryParam:"style=form,explode=true,name=pinned"`
-}
-
-type TeamsListDiscussionsInOrgRequest struct {
-	PathParams  TeamsListDiscussionsInOrgPathParams
-	QueryParams TeamsListDiscussionsInOrgQueryParams
+	// team_slug parameter
+	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
 }
 
 type TeamsListDiscussionsInOrgResponse struct {

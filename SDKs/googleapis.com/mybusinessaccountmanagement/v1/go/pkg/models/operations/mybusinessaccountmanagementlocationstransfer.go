@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessaccountmanagementLocationsTransferPathParams struct {
-	// Required. The name of the location to transfer. `locations/{location_id}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessaccountmanagementLocationsTransferQueryParams struct {
+type MybusinessaccountmanagementLocationsTransferRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv             *shared.XgafvEnum               `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TransferLocationRequest *shared.TransferLocationRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -25,6 +21,8 @@ type MybusinessaccountmanagementLocationsTransferQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the location to transfer. `locations/{location_id}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -35,12 +33,6 @@ type MybusinessaccountmanagementLocationsTransferQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessaccountmanagementLocationsTransferRequest struct {
-	PathParams  MybusinessaccountmanagementLocationsTransferPathParams
-	QueryParams MybusinessaccountmanagementLocationsTransferQueryParams
-	Request     *shared.TransferLocationRequest `request:"mediaType=application/json"`
 }
 
 type MybusinessaccountmanagementLocationsTransferResponse struct {

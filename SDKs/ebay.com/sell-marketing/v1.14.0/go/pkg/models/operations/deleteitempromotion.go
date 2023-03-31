@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteItemPromotionSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type DeleteItemPromotionPathParams struct {
-	// This path parameter takes a concatenation of the ID of the promotion you want to delete plus the marketplace ID on which the promotion is hosted. Concatenate the two values by separating them with an "at sign" (<b>@</b>).  <br><br>The ID of the promotion (<b>promotionId</b>) is a unique eBay-assigned value that's generated when the promotion is created. The Marketplace ID is the ENUM value of eBay marketplace where the promotion is hosted. <br><br><b>Example:</b> <code>1********5@EBAY_US</code>
-	PromotionID string `pathParam:"style=simple,explode=false,name=promotion_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteItemPromotionRequest struct {
-	PathParams DeleteItemPromotionPathParams
-	Security   DeleteItemPromotionSecurity
+	// This path parameter takes a concatenation of the ID of the promotion you want to delete plus the marketplace ID on which the promotion is hosted. Concatenate the two values by separating them with an "at sign" (<b>@</b>).  <br><br>The ID of the promotion (<b>promotionId</b>) is a unique eBay-assigned value that's generated when the promotion is created. The Marketplace ID is the ENUM value of eBay marketplace where the promotion is hosted. <br><br><b>Example:</b> <code>1********5@EBAY_US</code>
+	PromotionID string `pathParam:"style=simple,explode=false,name=promotion_id"`
 }
 
 type DeleteItemPromotionResponse struct {

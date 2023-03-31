@@ -18,5 +18,4 @@ pkg/models/shared/publicbusinessunit.go
 pkg/models/shared/publicbusinessunitlogometadata.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
-pkg/models/shared/security.go
 USAGE.md

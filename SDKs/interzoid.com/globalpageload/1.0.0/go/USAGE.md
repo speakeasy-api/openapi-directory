@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GlobalpageloadRequest{
-        QueryParams: operations.GlobalpageloadQueryParams{
-            License: "corrupti",
-            Origin: "provident",
-            URL: "distinctio",
-        },
+        License: "corrupti",
+        Origin: "provident",
+        URL: "distinctio",
     }
 
     ctx := context.Background()

@@ -35,9 +35,9 @@ func newConfigure(defaultClient, securityClient HTTPClient, serverURL, language,
 // Add a switch to a stack
 func (s *configure) AddNetworkSwitchStack(ctx context.Context, request operations.AddNetworkSwitchStackRequest) (*operations.AddNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *configure) AddNetworkSwitchStack(ctx context.Context, request operation
 // Assign SM seats to a network. This will increase the managed SM device limit of the network
 func (s *configure) AssignOrganizationLicensesSeats(ctx context.Context, request operations.AssignOrganizationLicensesSeatsRequest) (*operations.AssignOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/assignSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/assignSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,9 +145,9 @@ func (s *configure) AssignOrganizationLicensesSeats(ctx context.Context, request
 // Bind a network to a template.
 func (s *configure) BindNetwork(ctx context.Context, request operations.BindNetworkRequest) (*operations.BindNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bind", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bind", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,9 +200,9 @@ func (s *configure) BindNetwork(ctx context.Context, request operations.BindNetw
 // Force check-in a set of devices
 func (s *configure) CheckinNetworkSmDevices(ctx context.Context, request operations.CheckinNetworkSmDevicesRequest) (*operations.CheckinNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/checkin", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/checkin", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -252,9 +252,9 @@ func (s *configure) CheckinNetworkSmDevices(ctx context.Context, request operati
 // Claim a list of devices, licenses, and/or orders into an organization. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory.
 func (s *configure) ClaimIntoOrganization(ctx context.Context, request operations.ClaimIntoOrganizationRequest) (*operations.ClaimIntoOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -304,9 +304,9 @@ func (s *configure) ClaimIntoOrganization(ctx context.Context, request operation
 // Claim a list of devices, licenses, and/or orders into an organization inventory. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory. Use /organizations/{organizationId}/inventory/release to release devices from an organization.
 func (s *configure) ClaimIntoOrganizationInventory(ctx context.Context, request operations.ClaimIntoOrganizationInventoryRequest) (*operations.ClaimIntoOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -356,9 +356,9 @@ func (s *configure) ClaimIntoOrganizationInventory(ctx context.Context, request 
 // Claim devices into a network. (Note: for recently claimed devices, it may take a few minutes for API requsts against that device to succeed)
 func (s *configure) ClaimNetworkDevices(ctx context.Context, request operations.ClaimNetworkDevicesRequest) (*operations.ClaimNetworkDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -402,9 +402,9 @@ func (s *configure) ClaimNetworkDevices(ctx context.Context, request operations.
 // Create a new organization by cloning the addressed organization
 func (s *configure) CloneOrganization(ctx context.Context, request operations.CloneOrganizationRequest) (*operations.CloneOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clone", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clone", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -457,9 +457,9 @@ func (s *configure) CloneOrganization(ctx context.Context, request operations.Cl
 // Clone port-level and some switch-level configuration settings from a source switch to one or more target switches. Cloned settings include: Aggregation Groups, Power Settings, Multicast Settings, MTU Configuration, STP Bridge priority, Port Mirroring
 func (s *configure) CloneOrganizationSwitchDevices(ctx context.Context, request operations.CloneOrganizationSwitchDevicesRequest) (*operations.CloneOrganizationSwitchDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/switch/devices/clone", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/switch/devices/clone", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -512,9 +512,9 @@ func (s *configure) CloneOrganizationSwitchDevices(ctx context.Context, request 
 // Combine multiple networks into a single network
 func (s *configure) CombineOrganizationNetworks(ctx context.Context, request operations.CombineOrganizationNetworksRequest) (*operations.CombineOrganizationNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks/combine", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks/combine", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -567,7 +567,7 @@ func (s *configure) CombineOrganizationNetworks(ctx context.Context, request ope
 // Generate a new vMX authentication token
 func (s *configure) CreateDeviceApplianceVmxAuthenticationToken(ctx context.Context, request operations.CreateDeviceApplianceVmxAuthenticationTokenRequest) (*operations.CreateDeviceApplianceVmxAuthenticationTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/vmx/authenticationToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/vmx/authenticationToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -612,9 +612,9 @@ func (s *configure) CreateDeviceApplianceVmxAuthenticationToken(ctx context.Cont
 // Create a layer 3 interface for a switch
 func (s *configure) CreateDeviceSwitchRoutingInterface(ctx context.Context, request operations.CreateDeviceSwitchRoutingInterfaceRequest) (*operations.CreateDeviceSwitchRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -664,9 +664,9 @@ func (s *configure) CreateDeviceSwitchRoutingInterface(ctx context.Context, requ
 // Create a layer 3 static route for a switch
 func (s *configure) CreateDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.CreateDeviceSwitchRoutingStaticRouteRequest) (*operations.CreateDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -719,9 +719,9 @@ func (s *configure) CreateDeviceSwitchRoutingStaticRoute(ctx context.Context, re
 // Add a static delegated prefix from a network
 func (s *configure) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.CreateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.CreateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -774,9 +774,9 @@ func (s *configure) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Co
 // Add a static route for an MX or teleworker network
 func (s *configure) CreateNetworkApplianceStaticRoute(ctx context.Context, request operations.CreateNetworkApplianceStaticRouteRequest) (*operations.CreateNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -829,9 +829,9 @@ func (s *configure) CreateNetworkApplianceStaticRoute(ctx context.Context, reque
 // Add a custom performance class for an MX network
 func (s *configure) CreateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -884,9 +884,9 @@ func (s *configure) CreateNetworkApplianceTrafficShapingCustomPerformanceClass(c
 // Add a VLAN
 func (s *configure) CreateNetworkApplianceVlan(ctx context.Context, request operations.CreateNetworkApplianceVlanRequest) (*operations.CreateNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -939,9 +939,9 @@ func (s *configure) CreateNetworkApplianceVlan(ctx context.Context, request oper
 // Creates new quality retention profile for this network.
 func (s *configure) CreateNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.CreateNetworkCameraQualityRetentionProfileRequest) (*operations.CreateNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -994,9 +994,9 @@ func (s *configure) CreateNetworkCameraQualityRetentionProfile(ctx context.Conte
 // Creates a new camera wireless profile for this network.
 func (s *configure) CreateNetworkCameraWirelessProfile(ctx context.Context, request operations.CreateNetworkCameraWirelessProfileRequest) (*operations.CreateNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1049,9 +1049,9 @@ func (s *configure) CreateNetworkCameraWirelessProfile(ctx context.Context, requ
 // Rollback a Firmware Upgrade For A Network
 func (s *configure) CreateNetworkFirmwareUpgradesRollback(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesRollbackRequest) (*operations.CreateNetworkFirmwareUpgradesRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/rollbacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/rollbacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1104,9 +1104,9 @@ func (s *configure) CreateNetworkFirmwareUpgradesRollback(ctx context.Context, r
 // Create a Staged Upgrade Event for a network
 func (s *configure) CreateNetworkFirmwareUpgradesStagedEvent(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesStagedEventRequest) (*operations.CreateNetworkFirmwareUpgradesStagedEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1159,9 +1159,9 @@ func (s *configure) CreateNetworkFirmwareUpgradesStagedEvent(ctx context.Context
 // Create a Staged Upgrade Group for a network
 func (s *configure) CreateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesStagedGroupRequest) (*operations.CreateNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1214,9 +1214,9 @@ func (s *configure) CreateNetworkFirmwareUpgradesStagedGroup(ctx context.Context
 // Upload a floor plan
 func (s *configure) CreateNetworkFloorPlan(ctx context.Context, request operations.CreateNetworkFloorPlanRequest) (*operations.CreateNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1269,9 +1269,9 @@ func (s *configure) CreateNetworkFloorPlan(ctx context.Context, request operatio
 // Create a group policy
 func (s *configure) CreateNetworkGroupPolicy(ctx context.Context, request operations.CreateNetworkGroupPolicyRequest) (*operations.CreateNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1324,9 +1324,9 @@ func (s *configure) CreateNetworkGroupPolicy(ctx context.Context, request operat
 // Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)
 func (s *configure) CreateNetworkMerakiAuthUser(ctx context.Context, request operations.CreateNetworkMerakiAuthUserRequest) (*operations.CreateNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1379,9 +1379,9 @@ func (s *configure) CreateNetworkMerakiAuthUser(ctx context.Context, request ope
 // Add an MQTT broker
 func (s *configure) CreateNetworkMqttBroker(ctx context.Context, request operations.CreateNetworkMqttBrokerRequest) (*operations.CreateNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1440,9 +1440,9 @@ func (s *configure) CreateNetworkMqttBroker(ctx context.Context, request operati
 // ```
 func (s *configure) CreateNetworkPiiRequest(ctx context.Context, request operations.CreateNetworkPiiRequestRequest) (*operations.CreateNetworkPiiRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1492,9 +1492,9 @@ func (s *configure) CreateNetworkPiiRequest(ctx context.Context, request operati
 // Creates a sensor alert profile for a network.
 func (s *configure) CreateNetworkSensorAlertsProfile(ctx context.Context, request operations.CreateNetworkSensorAlertsProfileRequest) (*operations.CreateNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1547,9 +1547,9 @@ func (s *configure) CreateNetworkSensorAlertsProfile(ctx context.Context, reques
 // Bypass activation lock attempt
 func (s *configure) CreateNetworkSmBypassActivationLockAttempt(ctx context.Context, request operations.CreateNetworkSmBypassActivationLockAttemptRequest) (*operations.CreateNetworkSmBypassActivationLockAttemptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1602,9 +1602,9 @@ func (s *configure) CreateNetworkSmBypassActivationLockAttempt(ctx context.Conte
 // Add a target group
 func (s *configure) CreateNetworkSmTargetGroup(ctx context.Context, request operations.CreateNetworkSmTargetGroupRequest) (*operations.CreateNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1654,9 +1654,9 @@ func (s *configure) CreateNetworkSmTargetGroup(ctx context.Context, request oper
 // Create an access policy for a switch network. If you would like to enable Meraki Authentication, set radiusServers to empty array.
 func (s *configure) CreateNetworkSwitchAccessPolicy(ctx context.Context, request operations.CreateNetworkSwitchAccessPolicyRequest) (*operations.CreateNetworkSwitchAccessPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1709,9 +1709,9 @@ func (s *configure) CreateNetworkSwitchAccessPolicy(ctx context.Context, request
 // Add a server to be trusted by Dynamic ARP Inspection on this network
 func (s *configure) CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1764,9 +1764,9 @@ func (s *configure) CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServe
 // Create a link aggregation group
 func (s *configure) CreateNetworkSwitchLinkAggregation(ctx context.Context, request operations.CreateNetworkSwitchLinkAggregationRequest) (*operations.CreateNetworkSwitchLinkAggregationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1816,9 +1816,9 @@ func (s *configure) CreateNetworkSwitchLinkAggregation(ctx context.Context, requ
 // Add a switch port schedule
 func (s *configure) CreateNetworkSwitchPortSchedule(ctx context.Context, request operations.CreateNetworkSwitchPortScheduleRequest) (*operations.CreateNetworkSwitchPortScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1871,9 +1871,9 @@ func (s *configure) CreateNetworkSwitchPortSchedule(ctx context.Context, request
 // Add a quality of service rule
 func (s *configure) CreateNetworkSwitchQosRule(ctx context.Context, request operations.CreateNetworkSwitchQosRuleRequest) (*operations.CreateNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1926,9 +1926,9 @@ func (s *configure) CreateNetworkSwitchQosRule(ctx context.Context, request oper
 // Create a multicast rendezvous point
 func (s *configure) CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx context.Context, request operations.CreateNetworkSwitchRoutingMulticastRendezvousPointRequest) (*operations.CreateNetworkSwitchRoutingMulticastRendezvousPointResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1981,9 +1981,9 @@ func (s *configure) CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx conte
 // Create a stack
 func (s *configure) CreateNetworkSwitchStack(ctx context.Context, request operations.CreateNetworkSwitchStackRequest) (*operations.CreateNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2036,9 +2036,9 @@ func (s *configure) CreateNetworkSwitchStack(ctx context.Context, request operat
 // Create a layer 3 interface for a switch stack
 func (s *configure) CreateNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.CreateNetworkSwitchStackRoutingInterfaceRequest) (*operations.CreateNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2091,9 +2091,9 @@ func (s *configure) CreateNetworkSwitchStackRoutingInterface(ctx context.Context
 // Create a layer 3 static route for a switch stack
 func (s *configure) CreateNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.CreateNetworkSwitchStackRoutingStaticRouteRequest) (*operations.CreateNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2146,9 +2146,9 @@ func (s *configure) CreateNetworkSwitchStackRoutingStaticRoute(ctx context.Conte
 // Add an HTTP server to a network
 func (s *configure) CreateNetworkWebhooksHTTPServer(ctx context.Context, request operations.CreateNetworkWebhooksHTTPServerRequest) (*operations.CreateNetworkWebhooksHTTPServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2201,9 +2201,9 @@ func (s *configure) CreateNetworkWebhooksHTTPServer(ctx context.Context, request
 // Create a webhook payload template for a network
 func (s *configure) CreateNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.CreateNetworkWebhooksPayloadTemplateRequest) (*operations.CreateNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2256,9 +2256,9 @@ func (s *configure) CreateNetworkWebhooksPayloadTemplate(ctx context.Context, re
 // Send a test webhook for a network
 func (s *configure) CreateNetworkWebhooksWebhookTest(ctx context.Context, request operations.CreateNetworkWebhooksWebhookTestRequest) (*operations.CreateNetworkWebhooksWebhookTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2311,9 +2311,9 @@ func (s *configure) CreateNetworkWebhooksWebhookTest(ctx context.Context, reques
 // Creates new RF profile for this network
 func (s *configure) CreateNetworkWirelessRfProfile(ctx context.Context, request operations.CreateNetworkWirelessRfProfileRequest) (*operations.CreateNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2366,9 +2366,9 @@ func (s *configure) CreateNetworkWirelessRfProfile(ctx context.Context, request 
 // Create an Identity PSK
 func (s *configure) CreateNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.CreateNetworkWirelessSsidIdentityPskRequest) (*operations.CreateNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2419,7 +2419,7 @@ func (s *configure) CreateNetworkWirelessSsidIdentityPsk(ctx context.Context, re
 
 // CreateOrganization - Create a new organization
 // Create a new organization
-func (s *configure) CreateOrganization(ctx context.Context, request operations.CreateOrganizationRequest) (*operations.CreateOrganizationResponse, error) {
+func (s *configure) CreateOrganization(ctx context.Context, request operations.CreateOrganizationRequestBody) (*operations.CreateOrganizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations"
 
@@ -2476,9 +2476,9 @@ func (s *configure) CreateOrganization(ctx context.Context, request operations.C
 // Create an action batch
 func (s *configure) CreateOrganizationActionBatch(ctx context.Context, request operations.CreateOrganizationActionBatchRequest) (*operations.CreateOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2531,9 +2531,9 @@ func (s *configure) CreateOrganizationActionBatch(ctx context.Context, request o
 // Creates new adaptive policy ACL
 func (s *configure) CreateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyACLRequest) (*operations.CreateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2586,9 +2586,9 @@ func (s *configure) CreateOrganizationAdaptivePolicyACL(ctx context.Context, req
 // Creates a new adaptive policy group
 func (s *configure) CreateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyGroupRequest) (*operations.CreateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2641,9 +2641,9 @@ func (s *configure) CreateOrganizationAdaptivePolicyGroup(ctx context.Context, r
 // Add an Adaptive Policy
 func (s *configure) CreateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.CreateOrganizationAdaptivePolicyPolicyRequest) (*operations.CreateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2696,9 +2696,9 @@ func (s *configure) CreateOrganizationAdaptivePolicyPolicy(ctx context.Context, 
 // Create a new dashboard administrator
 func (s *configure) CreateOrganizationAdmin(ctx context.Context, request operations.CreateOrganizationAdminRequest) (*operations.CreateOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2751,9 +2751,9 @@ func (s *configure) CreateOrganizationAdmin(ctx context.Context, request operati
 // Create an organization-wide alert configuration
 func (s *configure) CreateOrganizationAlertsProfile(ctx context.Context, request operations.CreateOrganizationAlertsProfileRequest) (*operations.CreateOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2806,9 +2806,9 @@ func (s *configure) CreateOrganizationAlertsProfile(ctx context.Context, request
 // Add a new branding policy to an organization
 func (s *configure) CreateOrganizationBrandingPolicy(ctx context.Context, request operations.CreateOrganizationBrandingPolicyRequest) (*operations.CreateOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2858,9 +2858,9 @@ func (s *configure) CreateOrganizationBrandingPolicy(ctx context.Context, reques
 // Create custom analytics artifact. Returns an artifact upload URL with expiry time. Upload the artifact file with a put request to the returned upload URL before its expiry.
 func (s *configure) CreateOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.CreateOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2910,9 +2910,9 @@ func (s *configure) CreateOrganizationCameraCustomAnalyticsArtifact(ctx context.
 // Create a new configuration template
 func (s *configure) CreateOrganizationConfigTemplate(ctx context.Context, request operations.CreateOrganizationConfigTemplateRequest) (*operations.CreateOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2965,9 +2965,9 @@ func (s *configure) CreateOrganizationConfigTemplate(ctx context.Context, reques
 // Create a new early access feature opt-in for an organization
 func (s *configure) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.CreateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.CreateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3020,9 +3020,9 @@ func (s *configure) CreateOrganizationEarlyAccessFeaturesOptIn(ctx context.Conte
 // Add a media server to be monitored for this organization. Only valid for organizations with Meraki Insight.
 func (s *configure) CreateOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.CreateOrganizationInsightMonitoredMediaServerRequest) (*operations.CreateOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3075,9 +3075,9 @@ func (s *configure) CreateOrganizationInsightMonitoredMediaServer(ctx context.Co
 // Imports event logs related to the onboarding app into elastisearch
 func (s *configure) CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3130,9 +3130,9 @@ func (s *configure) CreateOrganizationInventoryOnboardingCloudMonitoringExportEv
 // Commits the import operation to complete the onboarding of a device into Dashboard for monitoring.
 func (s *configure) CreateOrganizationInventoryOnboardingCloudMonitoringImport(ctx context.Context, request operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest) (*operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3185,9 +3185,9 @@ func (s *configure) CreateOrganizationInventoryOnboardingCloudMonitoringImport(c
 // Create a network
 func (s *configure) CreateOrganizationNetwork(ctx context.Context, request operations.CreateOrganizationNetworkRequest) (*operations.CreateOrganizationNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3240,9 +3240,9 @@ func (s *configure) CreateOrganizationNetwork(ctx context.Context, request opera
 // Creates a new Policy Object.
 func (s *configure) CreateOrganizationPolicyObject(ctx context.Context, request operations.CreateOrganizationPolicyObjectRequest) (*operations.CreateOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3295,9 +3295,9 @@ func (s *configure) CreateOrganizationPolicyObject(ctx context.Context, request 
 // Creates a new Policy Object Group.
 func (s *configure) CreateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.CreateOrganizationPolicyObjectsGroupRequest) (*operations.CreateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3350,9 +3350,9 @@ func (s *configure) CreateOrganizationPolicyObjectsGroup(ctx context.Context, re
 // Create a SAML IdP for your organization.
 func (s *configure) CreateOrganizationSamlIdp(ctx context.Context, request operations.CreateOrganizationSamlIdpRequest) (*operations.CreateOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3405,9 +3405,9 @@ func (s *configure) CreateOrganizationSamlIdp(ctx context.Context, request opera
 // Create a SAML role
 func (s *configure) CreateOrganizationSamlRole(ctx context.Context, request operations.CreateOrganizationSamlRoleRequest) (*operations.CreateOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3460,7 +3460,7 @@ func (s *configure) CreateOrganizationSamlRole(ctx context.Context, request oper
 // Postpone by 1 week all pending staged upgrade stages for a network
 func (s *configure) DeferNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.DeferNetworkFirmwareUpgradesStagedEventsRequest) (*operations.DeferNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3505,7 +3505,7 @@ func (s *configure) DeferNetworkFirmwareUpgradesStagedEvents(ctx context.Context
 // Delete a layer 3 interface from the switch
 func (s *configure) DeleteDeviceSwitchRoutingInterface(ctx context.Context, request operations.DeleteDeviceSwitchRoutingInterfaceRequest) (*operations.DeleteDeviceSwitchRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3541,7 +3541,7 @@ func (s *configure) DeleteDeviceSwitchRoutingInterface(ctx context.Context, requ
 // Delete a layer 3 static route for a switch
 func (s *configure) DeleteDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.DeleteDeviceSwitchRoutingStaticRouteRequest) (*operations.DeleteDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3577,7 +3577,7 @@ func (s *configure) DeleteDeviceSwitchRoutingStaticRoute(ctx context.Context, re
 // Delete a network
 func (s *configure) DeleteNetwork(ctx context.Context, request operations.DeleteNetworkRequest) (*operations.DeleteNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3613,7 +3613,7 @@ func (s *configure) DeleteNetwork(ctx context.Context, request operations.Delete
 // Delete a static delegated prefix from a network
 func (s *configure) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.DeleteNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.DeleteNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3649,7 +3649,7 @@ func (s *configure) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Co
 // Delete a static route from an MX or teleworker network
 func (s *configure) DeleteNetworkApplianceStaticRoute(ctx context.Context, request operations.DeleteNetworkApplianceStaticRouteRequest) (*operations.DeleteNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3685,7 +3685,7 @@ func (s *configure) DeleteNetworkApplianceStaticRoute(ctx context.Context, reque
 // Delete a custom performance class from an MX network
 func (s *configure) DeleteNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3721,7 +3721,7 @@ func (s *configure) DeleteNetworkApplianceTrafficShapingCustomPerformanceClass(c
 // Delete a VLAN from a network
 func (s *configure) DeleteNetworkApplianceVlan(ctx context.Context, request operations.DeleteNetworkApplianceVlanRequest) (*operations.DeleteNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3757,7 +3757,7 @@ func (s *configure) DeleteNetworkApplianceVlan(ctx context.Context, request oper
 // Delete an existing quality retention profile for this network.
 func (s *configure) DeleteNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.DeleteNetworkCameraQualityRetentionProfileRequest) (*operations.DeleteNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3793,7 +3793,7 @@ func (s *configure) DeleteNetworkCameraQualityRetentionProfile(ctx context.Conte
 // Delete an existing camera wireless profile for this network.
 func (s *configure) DeleteNetworkCameraWirelessProfile(ctx context.Context, request operations.DeleteNetworkCameraWirelessProfileRequest) (*operations.DeleteNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3829,7 +3829,7 @@ func (s *configure) DeleteNetworkCameraWirelessProfile(ctx context.Context, requ
 // Delete a Staged Upgrade Group
 func (s *configure) DeleteNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest) (*operations.DeleteNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3865,7 +3865,7 @@ func (s *configure) DeleteNetworkFirmwareUpgradesStagedGroup(ctx context.Context
 // Destroy a floor plan
 func (s *configure) DeleteNetworkFloorPlan(ctx context.Context, request operations.DeleteNetworkFloorPlanRequest) (*operations.DeleteNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3901,7 +3901,7 @@ func (s *configure) DeleteNetworkFloorPlan(ctx context.Context, request operatio
 // Delete a group policy
 func (s *configure) DeleteNetworkGroupPolicy(ctx context.Context, request operations.DeleteNetworkGroupPolicyRequest) (*operations.DeleteNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3937,7 +3937,7 @@ func (s *configure) DeleteNetworkGroupPolicy(ctx context.Context, request operat
 // Deauthorize a user. To reauthorize a user after deauthorizing them, POST to this endpoint. (Currently, 802.1X RADIUS, splash guest, and client VPN users can be deauthorized.)
 func (s *configure) DeleteNetworkMerakiAuthUser(ctx context.Context, request operations.DeleteNetworkMerakiAuthUserRequest) (*operations.DeleteNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3973,7 +3973,7 @@ func (s *configure) DeleteNetworkMerakiAuthUser(ctx context.Context, request ope
 // Delete an MQTT broker
 func (s *configure) DeleteNetworkMqttBroker(ctx context.Context, request operations.DeleteNetworkMqttBrokerRequest) (*operations.DeleteNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4015,7 +4015,7 @@ func (s *configure) DeleteNetworkMqttBroker(ctx context.Context, request operati
 // ```
 func (s *configure) DeleteNetworkPiiRequest(ctx context.Context, request operations.DeleteNetworkPiiRequestRequest) (*operations.DeleteNetworkPiiRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4051,7 +4051,7 @@ func (s *configure) DeleteNetworkPiiRequest(ctx context.Context, request operati
 // Deletes a sensor alert profile from a network.
 func (s *configure) DeleteNetworkSensorAlertsProfile(ctx context.Context, request operations.DeleteNetworkSensorAlertsProfileRequest) (*operations.DeleteNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4087,7 +4087,7 @@ func (s *configure) DeleteNetworkSensorAlertsProfile(ctx context.Context, reques
 // Delete a target group from a network
 func (s *configure) DeleteNetworkSmTargetGroup(ctx context.Context, request operations.DeleteNetworkSmTargetGroupRequest) (*operations.DeleteNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4123,7 +4123,7 @@ func (s *configure) DeleteNetworkSmTargetGroup(ctx context.Context, request oper
 // Delete a User Access Device
 func (s *configure) DeleteNetworkSmUserAccessDevice(ctx context.Context, request operations.DeleteNetworkSmUserAccessDeviceRequest) (*operations.DeleteNetworkSmUserAccessDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices/{userAccessDeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices/{userAccessDeviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4159,7 +4159,7 @@ func (s *configure) DeleteNetworkSmUserAccessDevice(ctx context.Context, request
 // Delete an access policy for a switch network
 func (s *configure) DeleteNetworkSwitchAccessPolicy(ctx context.Context, request operations.DeleteNetworkSwitchAccessPolicyRequest) (*operations.DeleteNetworkSwitchAccessPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4195,7 +4195,7 @@ func (s *configure) DeleteNetworkSwitchAccessPolicy(ctx context.Context, request
 // Remove a server from being trusted by Dynamic ARP Inspection on this network
 func (s *configure) DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4231,7 +4231,7 @@ func (s *configure) DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServe
 // Split a link aggregation group into separate ports
 func (s *configure) DeleteNetworkSwitchLinkAggregation(ctx context.Context, request operations.DeleteNetworkSwitchLinkAggregationRequest) (*operations.DeleteNetworkSwitchLinkAggregationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4267,7 +4267,7 @@ func (s *configure) DeleteNetworkSwitchLinkAggregation(ctx context.Context, requ
 // Delete a switch port schedule
 func (s *configure) DeleteNetworkSwitchPortSchedule(ctx context.Context, request operations.DeleteNetworkSwitchPortScheduleRequest) (*operations.DeleteNetworkSwitchPortScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4303,7 +4303,7 @@ func (s *configure) DeleteNetworkSwitchPortSchedule(ctx context.Context, request
 // Delete a quality of service rule
 func (s *configure) DeleteNetworkSwitchQosRule(ctx context.Context, request operations.DeleteNetworkSwitchQosRuleRequest) (*operations.DeleteNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4339,7 +4339,7 @@ func (s *configure) DeleteNetworkSwitchQosRule(ctx context.Context, request oper
 // Delete a multicast rendezvous point
 func (s *configure) DeleteNetworkSwitchRoutingMulticastRendezvousPoint(ctx context.Context, request operations.DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest) (*operations.DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4375,7 +4375,7 @@ func (s *configure) DeleteNetworkSwitchRoutingMulticastRendezvousPoint(ctx conte
 // Delete a stack
 func (s *configure) DeleteNetworkSwitchStack(ctx context.Context, request operations.DeleteNetworkSwitchStackRequest) (*operations.DeleteNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4411,7 +4411,7 @@ func (s *configure) DeleteNetworkSwitchStack(ctx context.Context, request operat
 // Delete a layer 3 interface from a switch stack
 func (s *configure) DeleteNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.DeleteNetworkSwitchStackRoutingInterfaceRequest) (*operations.DeleteNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4447,7 +4447,7 @@ func (s *configure) DeleteNetworkSwitchStackRoutingInterface(ctx context.Context
 // Delete a layer 3 static route for a switch stack
 func (s *configure) DeleteNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.DeleteNetworkSwitchStackRoutingStaticRouteRequest) (*operations.DeleteNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4483,7 +4483,7 @@ func (s *configure) DeleteNetworkSwitchStackRoutingStaticRoute(ctx context.Conte
 // Delete an HTTP server from a network
 func (s *configure) DeleteNetworkWebhooksHTTPServer(ctx context.Context, request operations.DeleteNetworkWebhooksHTTPServerRequest) (*operations.DeleteNetworkWebhooksHTTPServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4519,7 +4519,7 @@ func (s *configure) DeleteNetworkWebhooksHTTPServer(ctx context.Context, request
 // Destroy a webhook payload template for a network. Does not work for included templates ('wpt_00001', 'wpt_00002', 'wpt_00003', 'wpt_00004', 'wpt_00005' or 'wpt_00006')
 func (s *configure) DeleteNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.DeleteNetworkWebhooksPayloadTemplateRequest) (*operations.DeleteNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4555,7 +4555,7 @@ func (s *configure) DeleteNetworkWebhooksPayloadTemplate(ctx context.Context, re
 // Delete a RF Profile
 func (s *configure) DeleteNetworkWirelessRfProfile(ctx context.Context, request operations.DeleteNetworkWirelessRfProfileRequest) (*operations.DeleteNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4591,7 +4591,7 @@ func (s *configure) DeleteNetworkWirelessRfProfile(ctx context.Context, request 
 // Delete an Identity PSK
 func (s *configure) DeleteNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.DeleteNetworkWirelessSsidIdentityPskRequest) (*operations.DeleteNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4627,7 +4627,7 @@ func (s *configure) DeleteNetworkWirelessSsidIdentityPsk(ctx context.Context, re
 // Delete an organization
 func (s *configure) DeleteOrganization(ctx context.Context, request operations.DeleteOrganizationRequest) (*operations.DeleteOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4663,7 +4663,7 @@ func (s *configure) DeleteOrganization(ctx context.Context, request operations.D
 // Delete an action batch
 func (s *configure) DeleteOrganizationActionBatch(ctx context.Context, request operations.DeleteOrganizationActionBatchRequest) (*operations.DeleteOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4699,7 +4699,7 @@ func (s *configure) DeleteOrganizationActionBatch(ctx context.Context, request o
 // Deletes the specified adaptive policy ACL. Note this adaptive policy ACL will also be removed from policies using it.
 func (s *configure) DeleteOrganizationAdaptivePolicyACL(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyACLRequest) (*operations.DeleteOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4735,7 +4735,7 @@ func (s *configure) DeleteOrganizationAdaptivePolicyACL(ctx context.Context, req
 // Deletes the specified adaptive policy group and any associated policies and references
 func (s *configure) DeleteOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyGroupRequest) (*operations.DeleteOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4771,7 +4771,7 @@ func (s *configure) DeleteOrganizationAdaptivePolicyGroup(ctx context.Context, r
 // Delete an Adaptive Policy
 func (s *configure) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.DeleteOrganizationAdaptivePolicyPolicyRequest) (*operations.DeleteOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4807,7 +4807,7 @@ func (s *configure) DeleteOrganizationAdaptivePolicyPolicy(ctx context.Context, 
 // Revoke all access for a dashboard administrator within this organization
 func (s *configure) DeleteOrganizationAdmin(ctx context.Context, request operations.DeleteOrganizationAdminRequest) (*operations.DeleteOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4843,7 +4843,7 @@ func (s *configure) DeleteOrganizationAdmin(ctx context.Context, request operati
 // Removes an organization-wide alert config
 func (s *configure) DeleteOrganizationAlertsProfile(ctx context.Context, request operations.DeleteOrganizationAlertsProfileRequest) (*operations.DeleteOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4879,7 +4879,7 @@ func (s *configure) DeleteOrganizationAlertsProfile(ctx context.Context, request
 // Delete a branding policy
 func (s *configure) DeleteOrganizationBrandingPolicy(ctx context.Context, request operations.DeleteOrganizationBrandingPolicyRequest) (*operations.DeleteOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4915,7 +4915,7 @@ func (s *configure) DeleteOrganizationBrandingPolicy(ctx context.Context, reques
 // Delete Custom Analytics Artifact
 func (s *configure) DeleteOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.DeleteOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4951,7 +4951,7 @@ func (s *configure) DeleteOrganizationCameraCustomAnalyticsArtifact(ctx context.
 // Remove a configuration template
 func (s *configure) DeleteOrganizationConfigTemplate(ctx context.Context, request operations.DeleteOrganizationConfigTemplateRequest) (*operations.DeleteOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4987,7 +4987,7 @@ func (s *configure) DeleteOrganizationConfigTemplate(ctx context.Context, reques
 // Delete an early access feature opt-in
 func (s *configure) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest) (*operations.DeleteOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5023,7 +5023,7 @@ func (s *configure) DeleteOrganizationEarlyAccessFeaturesOptIn(ctx context.Conte
 // Delete a monitored media server from this organization. Only valid for organizations with Meraki Insight.
 func (s *configure) DeleteOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.DeleteOrganizationInsightMonitoredMediaServerRequest) (*operations.DeleteOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5059,7 +5059,7 @@ func (s *configure) DeleteOrganizationInsightMonitoredMediaServer(ctx context.Co
 // Deletes a Policy Object.
 func (s *configure) DeleteOrganizationPolicyObject(ctx context.Context, request operations.DeleteOrganizationPolicyObjectRequest) (*operations.DeleteOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5095,7 +5095,7 @@ func (s *configure) DeleteOrganizationPolicyObject(ctx context.Context, request 
 // Deletes a Policy Object Group.
 func (s *configure) DeleteOrganizationPolicyObjectsGroup(ctx context.Context, request operations.DeleteOrganizationPolicyObjectsGroupRequest) (*operations.DeleteOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5131,7 +5131,7 @@ func (s *configure) DeleteOrganizationPolicyObjectsGroup(ctx context.Context, re
 // Remove a SAML IdP in your organization.
 func (s *configure) DeleteOrganizationSamlIdp(ctx context.Context, request operations.DeleteOrganizationSamlIdpRequest) (*operations.DeleteOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5167,7 +5167,7 @@ func (s *configure) DeleteOrganizationSamlIdp(ctx context.Context, request opera
 // Remove a SAML role
 func (s *configure) DeleteOrganizationSamlRole(ctx context.Context, request operations.DeleteOrganizationSamlRoleRequest) (*operations.DeleteOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5203,7 +5203,7 @@ func (s *configure) DeleteOrganizationSamlRole(ctx context.Context, request oper
 // Delete a user and all of its authentication methods.
 func (s *configure) DeleteOrganizationUser(ctx context.Context, request operations.DeleteOrganizationUserRequest) (*operations.DeleteOrganizationUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5239,7 +5239,7 @@ func (s *configure) DeleteOrganizationUser(ctx context.Context, request operatio
 // Return a single device
 func (s *configure) GetDevice(ctx context.Context, request operations.GetDeviceRequest) (*operations.GetDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5284,7 +5284,7 @@ func (s *configure) GetDevice(ctx context.Context, request operations.GetDeviceR
 // Return the uplink settings for an MX appliance
 func (s *configure) GetDeviceApplianceUplinksSettings(ctx context.Context, request operations.GetDeviceApplianceUplinksSettingsRequest) (*operations.GetDeviceApplianceUplinksSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5329,7 +5329,7 @@ func (s *configure) GetDeviceApplianceUplinksSettings(ctx context.Context, reque
 // Return custom analytics settings for a camera
 func (s *configure) GetDeviceCameraCustomAnalytics(ctx context.Context, request operations.GetDeviceCameraCustomAnalyticsRequest) (*operations.GetDeviceCameraCustomAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5374,7 +5374,7 @@ func (s *configure) GetDeviceCameraCustomAnalytics(ctx context.Context, request 
 // Returns quality and retention settings for the given camera
 func (s *configure) GetDeviceCameraQualityAndRetention(ctx context.Context, request operations.GetDeviceCameraQualityAndRetentionRequest) (*operations.GetDeviceCameraQualityAndRetentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5419,7 +5419,7 @@ func (s *configure) GetDeviceCameraQualityAndRetention(ctx context.Context, requ
 // Returns sense settings for a given camera
 func (s *configure) GetDeviceCameraSense(ctx context.Context, request operations.GetDeviceCameraSenseRequest) (*operations.GetDeviceCameraSenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5464,7 +5464,7 @@ func (s *configure) GetDeviceCameraSense(ctx context.Context, request operations
 // Returns the MV Sense object detection model list for the given camera
 func (s *configure) GetDeviceCameraSenseObjectDetectionModels(ctx context.Context, request operations.GetDeviceCameraSenseObjectDetectionModelsRequest) (*operations.GetDeviceCameraSenseObjectDetectionModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense/objectDetectionModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5509,14 +5509,14 @@ func (s *configure) GetDeviceCameraSenseObjectDetectionModels(ctx context.Contex
 // Returns video link to the specified camera. If a timestamp is supplied, it links to that timestamp.
 func (s *configure) GetDeviceCameraVideoLink(ctx context.Context, request operations.GetDeviceCameraVideoLinkRequest) (*operations.GetDeviceCameraVideoLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/videoLink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/videoLink", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5558,7 +5558,7 @@ func (s *configure) GetDeviceCameraVideoLink(ctx context.Context, request operat
 // Returns video settings for the given camera
 func (s *configure) GetDeviceCameraVideoSettings(ctx context.Context, request operations.GetDeviceCameraVideoSettingsRequest) (*operations.GetDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5603,7 +5603,7 @@ func (s *configure) GetDeviceCameraVideoSettings(ctx context.Context, request op
 // Returns wireless profile assigned to the given camera
 func (s *configure) GetDeviceCameraWirelessProfiles(ctx context.Context, request operations.GetDeviceCameraWirelessProfilesRequest) (*operations.GetDeviceCameraWirelessProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5648,7 +5648,7 @@ func (s *configure) GetDeviceCameraWirelessProfiles(ctx context.Context, request
 // Show the LAN Settings of a MG
 func (s *configure) GetDeviceCellularGatewayLan(ctx context.Context, request operations.GetDeviceCellularGatewayLanRequest) (*operations.GetDeviceCellularGatewayLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5693,7 +5693,7 @@ func (s *configure) GetDeviceCellularGatewayLan(ctx context.Context, request ope
 // Returns the port forwarding rules for a single MG.
 func (s *configure) GetDeviceCellularGatewayPortForwardingRules(ctx context.Context, request operations.GetDeviceCellularGatewayPortForwardingRulesRequest) (*operations.GetDeviceCellularGatewayPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5738,7 +5738,7 @@ func (s *configure) GetDeviceCellularGatewayPortForwardingRules(ctx context.Cont
 // Return the SIM and APN configurations for a cellular device.
 func (s *configure) GetDeviceCellularSims(ctx context.Context, request operations.GetDeviceCellularSimsRequest) (*operations.GetDeviceCellularSimsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5783,7 +5783,7 @@ func (s *configure) GetDeviceCellularSims(ctx context.Context, request operation
 // Return the management interface settings for a device
 func (s *configure) GetDeviceManagementInterface(ctx context.Context, request operations.GetDeviceManagementInterfaceRequest) (*operations.GetDeviceManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5828,7 +5828,7 @@ func (s *configure) GetDeviceManagementInterface(ctx context.Context, request op
 // List the sensor roles for a given sensor or camera device.
 func (s *configure) GetDeviceSensorRelationships(ctx context.Context, request operations.GetDeviceSensorRelationshipsRequest) (*operations.GetDeviceSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5873,7 +5873,7 @@ func (s *configure) GetDeviceSensorRelationships(ctx context.Context, request op
 // Return a switch port
 func (s *configure) GetDeviceSwitchPort(ctx context.Context, request operations.GetDeviceSwitchPortRequest) (*operations.GetDeviceSwitchPortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/{portId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5918,7 +5918,7 @@ func (s *configure) GetDeviceSwitchPort(ctx context.Context, request operations.
 // List the switch ports for a switch
 func (s *configure) GetDeviceSwitchPorts(ctx context.Context, request operations.GetDeviceSwitchPortsRequest) (*operations.GetDeviceSwitchPortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5963,7 +5963,7 @@ func (s *configure) GetDeviceSwitchPorts(ctx context.Context, request operations
 // Return a layer 3 interface for a switch
 func (s *configure) GetDeviceSwitchRoutingInterface(ctx context.Context, request operations.GetDeviceSwitchRoutingInterfaceRequest) (*operations.GetDeviceSwitchRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6008,7 +6008,7 @@ func (s *configure) GetDeviceSwitchRoutingInterface(ctx context.Context, request
 // Return a layer 3 interface DHCP configuration for a switch
 func (s *configure) GetDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, request operations.GetDeviceSwitchRoutingInterfaceDhcpRequest) (*operations.GetDeviceSwitchRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6053,7 +6053,7 @@ func (s *configure) GetDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, req
 // List layer 3 interfaces for a switch. Those for a stack may be found under switch stack routing.
 func (s *configure) GetDeviceSwitchRoutingInterfaces(ctx context.Context, request operations.GetDeviceSwitchRoutingInterfacesRequest) (*operations.GetDeviceSwitchRoutingInterfacesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6098,7 +6098,7 @@ func (s *configure) GetDeviceSwitchRoutingInterfaces(ctx context.Context, reques
 // Return a layer 3 static route for a switch
 func (s *configure) GetDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.GetDeviceSwitchRoutingStaticRouteRequest) (*operations.GetDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6143,7 +6143,7 @@ func (s *configure) GetDeviceSwitchRoutingStaticRoute(ctx context.Context, reque
 // List layer 3 static routes for a switch
 func (s *configure) GetDeviceSwitchRoutingStaticRoutes(ctx context.Context, request operations.GetDeviceSwitchRoutingStaticRoutesRequest) (*operations.GetDeviceSwitchRoutingStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6188,7 +6188,7 @@ func (s *configure) GetDeviceSwitchRoutingStaticRoutes(ctx context.Context, requ
 // Return warm spare configuration for a switch
 func (s *configure) GetDeviceSwitchWarmSpare(ctx context.Context, request operations.GetDeviceSwitchWarmSpareRequest) (*operations.GetDeviceSwitchWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/warmSpare", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/warmSpare", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6233,7 +6233,7 @@ func (s *configure) GetDeviceSwitchWarmSpare(ctx context.Context, request operat
 // Return the bluetooth settings for a wireless device
 func (s *configure) GetDeviceWirelessBluetoothSettings(ctx context.Context, request operations.GetDeviceWirelessBluetoothSettingsRequest) (*operations.GetDeviceWirelessBluetoothSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/bluetooth/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/bluetooth/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6278,7 +6278,7 @@ func (s *configure) GetDeviceWirelessBluetoothSettings(ctx context.Context, requ
 // Return the radio settings of a device
 func (s *configure) GetDeviceWirelessRadioSettings(ctx context.Context, request operations.GetDeviceWirelessRadioSettingsRequest) (*operations.GetDeviceWirelessRadioSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/radio/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/radio/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6323,7 +6323,7 @@ func (s *configure) GetDeviceWirelessRadioSettings(ctx context.Context, request 
 // Return a network
 func (s *configure) GetNetwork(ctx context.Context, request operations.GetNetworkRequest) (*operations.GetNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6368,7 +6368,7 @@ func (s *configure) GetNetwork(ctx context.Context, request operations.GetNetwor
 // Return the alert configuration for this network
 func (s *configure) GetNetworkAlertsSettings(ctx context.Context, request operations.GetNetworkAlertsSettingsRequest) (*operations.GetNetworkAlertsSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alerts/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alerts/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6413,7 +6413,7 @@ func (s *configure) GetNetworkAlertsSettings(ctx context.Context, request operat
 // Return the connectivity testing destinations for an MX network
 func (s *configure) GetNetworkApplianceConnectivityMonitoringDestinations(ctx context.Context, request operations.GetNetworkApplianceConnectivityMonitoringDestinationsRequest) (*operations.GetNetworkApplianceConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6458,7 +6458,7 @@ func (s *configure) GetNetworkApplianceConnectivityMonitoringDestinations(ctx co
 // Return the content filtering settings for an MX network
 func (s *configure) GetNetworkApplianceContentFiltering(ctx context.Context, request operations.GetNetworkApplianceContentFilteringRequest) (*operations.GetNetworkApplianceContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6503,7 +6503,7 @@ func (s *configure) GetNetworkApplianceContentFiltering(ctx context.Context, req
 // List all available content filtering categories for an MX network
 func (s *configure) GetNetworkApplianceContentFilteringCategories(ctx context.Context, request operations.GetNetworkApplianceContentFilteringCategoriesRequest) (*operations.GetNetworkApplianceContentFilteringCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6548,7 +6548,7 @@ func (s *configure) GetNetworkApplianceContentFilteringCategories(ctx context.Co
 // Return the cellular firewall rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallCellularFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallCellularFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6593,7 +6593,7 @@ func (s *configure) GetNetworkApplianceFirewallCellularFirewallRules(ctx context
 // Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
 func (s *configure) GetNetworkApplianceFirewallFirewalledService(ctx context.Context, request operations.GetNetworkApplianceFirewallFirewalledServiceRequest) (*operations.GetNetworkApplianceFirewallFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6638,7 +6638,7 @@ func (s *configure) GetNetworkApplianceFirewallFirewalledService(ctx context.Con
 // List the appliance services and their accessibility rules
 func (s *configure) GetNetworkApplianceFirewallFirewalledServices(ctx context.Context, request operations.GetNetworkApplianceFirewallFirewalledServicesRequest) (*operations.GetNetworkApplianceFirewallFirewalledServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6683,7 +6683,7 @@ func (s *configure) GetNetworkApplianceFirewallFirewalledServices(ctx context.Co
 // Return the inbound cellular firewall rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6728,7 +6728,7 @@ func (s *configure) GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx 
 // Return the inbound firewall rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallInboundFirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallInboundFirewallRulesRequest) (*operations.GetNetworkApplianceFirewallInboundFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6773,7 +6773,7 @@ func (s *configure) GetNetworkApplianceFirewallInboundFirewallRules(ctx context.
 // Return the L3 firewall rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallL3FirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallL3FirewallRulesRequest) (*operations.GetNetworkApplianceFirewallL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6818,7 +6818,7 @@ func (s *configure) GetNetworkApplianceFirewallL3FirewallRules(ctx context.Conte
 // List the MX L7 firewall rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallL7FirewallRules(ctx context.Context, request operations.GetNetworkApplianceFirewallL7FirewallRulesRequest) (*operations.GetNetworkApplianceFirewallL7FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6863,7 +6863,7 @@ func (s *configure) GetNetworkApplianceFirewallL7FirewallRules(ctx context.Conte
 // Return the L7 firewall application categories and their associated applications for an MX network
 func (s *configure) GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx context.Context, request operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesRequest) (*operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6908,7 +6908,7 @@ func (s *configure) GetNetworkApplianceFirewallL7FirewallRulesApplicationCategor
 // Return the 1:Many NAT mapping rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallOneToManyNatRules(ctx context.Context, request operations.GetNetworkApplianceFirewallOneToManyNatRulesRequest) (*operations.GetNetworkApplianceFirewallOneToManyNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6953,7 +6953,7 @@ func (s *configure) GetNetworkApplianceFirewallOneToManyNatRules(ctx context.Con
 // Return the 1:1 NAT mapping rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallOneToOneNatRules(ctx context.Context, request operations.GetNetworkApplianceFirewallOneToOneNatRulesRequest) (*operations.GetNetworkApplianceFirewallOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6998,7 +6998,7 @@ func (s *configure) GetNetworkApplianceFirewallOneToOneNatRules(ctx context.Cont
 // Return the port forwarding rules for an MX network
 func (s *configure) GetNetworkApplianceFirewallPortForwardingRules(ctx context.Context, request operations.GetNetworkApplianceFirewallPortForwardingRulesRequest) (*operations.GetNetworkApplianceFirewallPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7043,7 +7043,7 @@ func (s *configure) GetNetworkApplianceFirewallPortForwardingRules(ctx context.C
 // Return the firewall settings for this network
 func (s *configure) GetNetworkApplianceFirewallSettings(ctx context.Context, request operations.GetNetworkApplianceFirewallSettingsRequest) (*operations.GetNetworkApplianceFirewallSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7088,7 +7088,7 @@ func (s *configure) GetNetworkApplianceFirewallSettings(ctx context.Context, req
 // Return per-port VLAN settings for a single MX port.
 func (s *configure) GetNetworkAppliancePort(ctx context.Context, request operations.GetNetworkAppliancePortRequest) (*operations.GetNetworkAppliancePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7133,7 +7133,7 @@ func (s *configure) GetNetworkAppliancePort(ctx context.Context, request operati
 // List per-port VLAN settings for all ports of a MX.
 func (s *configure) GetNetworkAppliancePorts(ctx context.Context, request operations.GetNetworkAppliancePortsRequest) (*operations.GetNetworkAppliancePortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7178,7 +7178,7 @@ func (s *configure) GetNetworkAppliancePorts(ctx context.Context, request operat
 // Return a static delegated prefix from a network
 func (s *configure) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7223,7 +7223,7 @@ func (s *configure) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Conte
 // List static delegated prefixes for a network
 func (s *configure) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticsRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7268,7 +7268,7 @@ func (s *configure) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Cont
 // Returns all supported intrusion settings for an MX network
 func (s *configure) GetNetworkApplianceSecurityIntrusion(ctx context.Context, request operations.GetNetworkApplianceSecurityIntrusionRequest) (*operations.GetNetworkApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7313,7 +7313,7 @@ func (s *configure) GetNetworkApplianceSecurityIntrusion(ctx context.Context, re
 // Returns all supported malware settings for an MX network
 func (s *configure) GetNetworkApplianceSecurityMalware(ctx context.Context, request operations.GetNetworkApplianceSecurityMalwareRequest) (*operations.GetNetworkApplianceSecurityMalwareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7358,7 +7358,7 @@ func (s *configure) GetNetworkApplianceSecurityMalware(ctx context.Context, requ
 // Return the appliance settings for a network
 func (s *configure) GetNetworkApplianceSettings(ctx context.Context, request operations.GetNetworkApplianceSettingsRequest) (*operations.GetNetworkApplianceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7403,7 +7403,7 @@ func (s *configure) GetNetworkApplianceSettings(ctx context.Context, request ope
 // Return single LAN configuration
 func (s *configure) GetNetworkApplianceSingleLan(ctx context.Context, request operations.GetNetworkApplianceSingleLanRequest) (*operations.GetNetworkApplianceSingleLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7448,7 +7448,7 @@ func (s *configure) GetNetworkApplianceSingleLan(ctx context.Context, request op
 // Return a single MX SSID
 func (s *configure) GetNetworkApplianceSsid(ctx context.Context, request operations.GetNetworkApplianceSsidRequest) (*operations.GetNetworkApplianceSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7493,7 +7493,7 @@ func (s *configure) GetNetworkApplianceSsid(ctx context.Context, request operati
 // List the MX SSIDs in a network
 func (s *configure) GetNetworkApplianceSsids(ctx context.Context, request operations.GetNetworkApplianceSsidsRequest) (*operations.GetNetworkApplianceSsidsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7538,7 +7538,7 @@ func (s *configure) GetNetworkApplianceSsids(ctx context.Context, request operat
 // Return a static route for an MX or teleworker network
 func (s *configure) GetNetworkApplianceStaticRoute(ctx context.Context, request operations.GetNetworkApplianceStaticRouteRequest) (*operations.GetNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7583,7 +7583,7 @@ func (s *configure) GetNetworkApplianceStaticRoute(ctx context.Context, request 
 // List the static routes for an MX or teleworker network
 func (s *configure) GetNetworkApplianceStaticRoutes(ctx context.Context, request operations.GetNetworkApplianceStaticRoutesRequest) (*operations.GetNetworkApplianceStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7628,7 +7628,7 @@ func (s *configure) GetNetworkApplianceStaticRoutes(ctx context.Context, request
 // Display the traffic shaping settings for an MX network
 func (s *configure) GetNetworkApplianceTrafficShaping(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingRequest) (*operations.GetNetworkApplianceTrafficShapingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7673,7 +7673,7 @@ func (s *configure) GetNetworkApplianceTrafficShaping(ctx context.Context, reque
 // Return a custom performance class for an MX network
 func (s *configure) GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7718,7 +7718,7 @@ func (s *configure) GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx 
 // List all custom performance classes for an MX network
 func (s *configure) GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest) (*operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7763,7 +7763,7 @@ func (s *configure) GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ct
 // Display the traffic shaping settings rules for an MX network
 func (s *configure) GetNetworkApplianceTrafficShapingRules(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingRulesRequest) (*operations.GetNetworkApplianceTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7808,7 +7808,7 @@ func (s *configure) GetNetworkApplianceTrafficShapingRules(ctx context.Context, 
 // Returns the uplink bandwidth settings for your MX network.
 func (s *configure) GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest) (*operations.GetNetworkApplianceTrafficShapingUplinkBandwidthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7853,7 +7853,7 @@ func (s *configure) GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx context
 // Show uplink selection settings for an MX network
 func (s *configure) GetNetworkApplianceTrafficShapingUplinkSelection(ctx context.Context, request operations.GetNetworkApplianceTrafficShapingUplinkSelectionRequest) (*operations.GetNetworkApplianceTrafficShapingUplinkSelectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7898,7 +7898,7 @@ func (s *configure) GetNetworkApplianceTrafficShapingUplinkSelection(ctx context
 // Return a VLAN
 func (s *configure) GetNetworkApplianceVlan(ctx context.Context, request operations.GetNetworkApplianceVlanRequest) (*operations.GetNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7943,7 +7943,7 @@ func (s *configure) GetNetworkApplianceVlan(ctx context.Context, request operati
 // List the VLANs for an MX network
 func (s *configure) GetNetworkApplianceVlans(ctx context.Context, request operations.GetNetworkApplianceVlansRequest) (*operations.GetNetworkApplianceVlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7988,7 +7988,7 @@ func (s *configure) GetNetworkApplianceVlans(ctx context.Context, request operat
 // Returns the enabled status of VLANs for the network
 func (s *configure) GetNetworkApplianceVlansSettings(ctx context.Context, request operations.GetNetworkApplianceVlansSettingsRequest) (*operations.GetNetworkApplianceVlansSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8033,7 +8033,7 @@ func (s *configure) GetNetworkApplianceVlansSettings(ctx context.Context, reques
 // Return a Hub BGP Configuration
 func (s *configure) GetNetworkApplianceVpnBgp(ctx context.Context, request operations.GetNetworkApplianceVpnBgpRequest) (*operations.GetNetworkApplianceVpnBgpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8078,7 +8078,7 @@ func (s *configure) GetNetworkApplianceVpnBgp(ctx context.Context, request opera
 // Return the site-to-site VPN settings of a network. Only valid for MX networks.
 func (s *configure) GetNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request operations.GetNetworkApplianceVpnSiteToSiteVpnRequest) (*operations.GetNetworkApplianceVpnSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8123,7 +8123,7 @@ func (s *configure) GetNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, req
 // Return MX warm spare settings
 func (s *configure) GetNetworkApplianceWarmSpare(ctx context.Context, request operations.GetNetworkApplianceWarmSpareRequest) (*operations.GetNetworkApplianceWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8168,7 +8168,7 @@ func (s *configure) GetNetworkApplianceWarmSpare(ctx context.Context, request op
 // Retrieve a single quality retention profile
 func (s *configure) GetNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.GetNetworkCameraQualityRetentionProfileRequest) (*operations.GetNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8213,7 +8213,7 @@ func (s *configure) GetNetworkCameraQualityRetentionProfile(ctx context.Context,
 // List the quality retention profiles for this network
 func (s *configure) GetNetworkCameraQualityRetentionProfiles(ctx context.Context, request operations.GetNetworkCameraQualityRetentionProfilesRequest) (*operations.GetNetworkCameraQualityRetentionProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8258,7 +8258,7 @@ func (s *configure) GetNetworkCameraQualityRetentionProfiles(ctx context.Context
 // Returns a list of all camera recording schedules.
 func (s *configure) GetNetworkCameraSchedules(ctx context.Context, request operations.GetNetworkCameraSchedulesRequest) (*operations.GetNetworkCameraSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8303,7 +8303,7 @@ func (s *configure) GetNetworkCameraSchedules(ctx context.Context, request opera
 // Retrieve a single camera wireless profile.
 func (s *configure) GetNetworkCameraWirelessProfile(ctx context.Context, request operations.GetNetworkCameraWirelessProfileRequest) (*operations.GetNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8348,7 +8348,7 @@ func (s *configure) GetNetworkCameraWirelessProfile(ctx context.Context, request
 // List the camera wireless profiles for this network.
 func (s *configure) GetNetworkCameraWirelessProfiles(ctx context.Context, request operations.GetNetworkCameraWirelessProfilesRequest) (*operations.GetNetworkCameraWirelessProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8393,7 +8393,7 @@ func (s *configure) GetNetworkCameraWirelessProfiles(ctx context.Context, reques
 // Return the connectivity testing destinations for an MG network
 func (s *configure) GetNetworkCellularGatewayConnectivityMonitoringDestinations(ctx context.Context, request operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest) (*operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8438,7 +8438,7 @@ func (s *configure) GetNetworkCellularGatewayConnectivityMonitoringDestinations(
 // List common DHCP settings of MGs
 func (s *configure) GetNetworkCellularGatewayDhcp(ctx context.Context, request operations.GetNetworkCellularGatewayDhcpRequest) (*operations.GetNetworkCellularGatewayDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8483,7 +8483,7 @@ func (s *configure) GetNetworkCellularGatewayDhcp(ctx context.Context, request o
 // Return the subnet pool and mask configured for MGs in the network.
 func (s *configure) GetNetworkCellularGatewaySubnetPool(ctx context.Context, request operations.GetNetworkCellularGatewaySubnetPoolRequest) (*operations.GetNetworkCellularGatewaySubnetPoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8528,7 +8528,7 @@ func (s *configure) GetNetworkCellularGatewaySubnetPool(ctx context.Context, req
 // Returns the uplink settings for your MG network.
 func (s *configure) GetNetworkCellularGatewayUplink(ctx context.Context, request operations.GetNetworkCellularGatewayUplinkRequest) (*operations.GetNetworkCellularGatewayUplinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8573,7 +8573,7 @@ func (s *configure) GetNetworkCellularGatewayUplink(ctx context.Context, request
 // Return the policy assigned to a client on the network. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *configure) GetNetworkClientPolicy(ctx context.Context, request operations.GetNetworkClientPolicyRequest) (*operations.GetNetworkClientPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/policy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8618,7 +8618,7 @@ func (s *configure) GetNetworkClientPolicy(ctx context.Context, request operatio
 // Return the splash authorization for a client, for each SSID they've associated with through splash. Only enabled SSIDs with Click-through splash enabled will be included. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *configure) GetNetworkClientSplashAuthorizationStatus(ctx context.Context, request operations.GetNetworkClientSplashAuthorizationStatusRequest) (*operations.GetNetworkClientSplashAuthorizationStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8663,7 +8663,7 @@ func (s *configure) GetNetworkClientSplashAuthorizationStatus(ctx context.Contex
 // List the devices in a network
 func (s *configure) GetNetworkDevices(ctx context.Context, request operations.GetNetworkDevicesRequest) (*operations.GetNetworkDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8708,7 +8708,7 @@ func (s *configure) GetNetworkDevices(ctx context.Context, request operations.Ge
 // Get firmware upgrade information for a network
 func (s *configure) GetNetworkFirmwareUpgrades(ctx context.Context, request operations.GetNetworkFirmwareUpgradesRequest) (*operations.GetNetworkFirmwareUpgradesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8753,7 +8753,7 @@ func (s *configure) GetNetworkFirmwareUpgrades(ctx context.Context, request oper
 // Get the Staged Upgrade Event from a network
 func (s *configure) GetNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedEventsRequest) (*operations.GetNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8798,7 +8798,7 @@ func (s *configure) GetNetworkFirmwareUpgradesStagedEvents(ctx context.Context, 
 // Get a Staged Upgrade Group from a network
 func (s *configure) GetNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedGroupRequest) (*operations.GetNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8843,7 +8843,7 @@ func (s *configure) GetNetworkFirmwareUpgradesStagedGroup(ctx context.Context, r
 // List of Staged Upgrade Groups in a network
 func (s *configure) GetNetworkFirmwareUpgradesStagedGroups(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedGroupsRequest) (*operations.GetNetworkFirmwareUpgradesStagedGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8888,7 +8888,7 @@ func (s *configure) GetNetworkFirmwareUpgradesStagedGroups(ctx context.Context, 
 // Order of Staged Upgrade Groups in a network
 func (s *configure) GetNetworkFirmwareUpgradesStagedStages(ctx context.Context, request operations.GetNetworkFirmwareUpgradesStagedStagesRequest) (*operations.GetNetworkFirmwareUpgradesStagedStagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8933,7 +8933,7 @@ func (s *configure) GetNetworkFirmwareUpgradesStagedStages(ctx context.Context, 
 // Find a floor plan by ID
 func (s *configure) GetNetworkFloorPlan(ctx context.Context, request operations.GetNetworkFloorPlanRequest) (*operations.GetNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8978,7 +8978,7 @@ func (s *configure) GetNetworkFloorPlan(ctx context.Context, request operations.
 // List the floor plans that belong to your network
 func (s *configure) GetNetworkFloorPlans(ctx context.Context, request operations.GetNetworkFloorPlansRequest) (*operations.GetNetworkFloorPlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9023,7 +9023,7 @@ func (s *configure) GetNetworkFloorPlans(ctx context.Context, request operations
 // List the group policies in a network
 func (s *configure) GetNetworkGroupPolicies(ctx context.Context, request operations.GetNetworkGroupPoliciesRequest) (*operations.GetNetworkGroupPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9068,7 +9068,7 @@ func (s *configure) GetNetworkGroupPolicies(ctx context.Context, request operati
 // Display a group policy
 func (s *configure) GetNetworkGroupPolicy(ctx context.Context, request operations.GetNetworkGroupPolicyRequest) (*operations.GetNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9113,7 +9113,7 @@ func (s *configure) GetNetworkGroupPolicy(ctx context.Context, request operation
 // Return all global alerts on this network
 func (s *configure) GetNetworkHealthAlerts(ctx context.Context, request operations.GetNetworkHealthAlertsRequest) (*operations.GetNetworkHealthAlertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/health/alerts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/health/alerts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9158,7 +9158,7 @@ func (s *configure) GetNetworkHealthAlerts(ctx context.Context, request operatio
 // Return the Meraki Auth splash guest, RADIUS, or client VPN user
 func (s *configure) GetNetworkMerakiAuthUser(ctx context.Context, request operations.GetNetworkMerakiAuthUserRequest) (*operations.GetNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9203,7 +9203,7 @@ func (s *configure) GetNetworkMerakiAuthUser(ctx context.Context, request operat
 // List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a wired network)
 func (s *configure) GetNetworkMerakiAuthUsers(ctx context.Context, request operations.GetNetworkMerakiAuthUsersRequest) (*operations.GetNetworkMerakiAuthUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9248,7 +9248,7 @@ func (s *configure) GetNetworkMerakiAuthUsers(ctx context.Context, request opera
 // Return an MQTT broker
 func (s *configure) GetNetworkMqttBroker(ctx context.Context, request operations.GetNetworkMqttBrokerRequest) (*operations.GetNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9293,7 +9293,7 @@ func (s *configure) GetNetworkMqttBroker(ctx context.Context, request operations
 // List the MQTT brokers for this network
 func (s *configure) GetNetworkMqttBrokers(ctx context.Context, request operations.GetNetworkMqttBrokersRequest) (*operations.GetNetworkMqttBrokersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9338,7 +9338,7 @@ func (s *configure) GetNetworkMqttBrokers(ctx context.Context, request operation
 // Return the NetFlow traffic reporting settings for a network
 func (s *configure) GetNetworkNetflow(ctx context.Context, request operations.GetNetworkNetflowRequest) (*operations.GetNetworkNetflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9389,14 +9389,14 @@ func (s *configure) GetNetworkNetflow(ctx context.Context, request operations.Ge
 // ```
 func (s *configure) GetNetworkPiiPiiKeys(ctx context.Context, request operations.GetNetworkPiiPiiKeysRequest) (*operations.GetNetworkPiiPiiKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/piiKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/piiKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9444,7 +9444,7 @@ func (s *configure) GetNetworkPiiPiiKeys(ctx context.Context, request operations
 // ```
 func (s *configure) GetNetworkPiiRequest(ctx context.Context, request operations.GetNetworkPiiRequestRequest) (*operations.GetNetworkPiiRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests/{requestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9495,7 +9495,7 @@ func (s *configure) GetNetworkPiiRequest(ctx context.Context, request operations
 // ```
 func (s *configure) GetNetworkPiiRequests(ctx context.Context, request operations.GetNetworkPiiRequestsRequest) (*operations.GetNetworkPiiRequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/requests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9546,14 +9546,14 @@ func (s *configure) GetNetworkPiiRequests(ctx context.Context, request operation
 // ```
 func (s *configure) GetNetworkPiiSmDevicesForKey(ctx context.Context, request operations.GetNetworkPiiSmDevicesForKeyRequest) (*operations.GetNetworkPiiSmDevicesForKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/smDevicesForKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/smDevicesForKey", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9601,14 +9601,14 @@ func (s *configure) GetNetworkPiiSmDevicesForKey(ctx context.Context, request op
 // ```
 func (s *configure) GetNetworkPiiSmOwnersForKey(ctx context.Context, request operations.GetNetworkPiiSmOwnersForKeyRequest) (*operations.GetNetworkPiiSmOwnersForKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/smOwnersForKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/pii/smOwnersForKey", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9650,14 +9650,14 @@ func (s *configure) GetNetworkPiiSmOwnersForKey(ctx context.Context, request ope
 // Get policies for all clients with policies
 func (s *configure) GetNetworkPoliciesByClient(ctx context.Context, request operations.GetNetworkPoliciesByClientRequest) (*operations.GetNetworkPoliciesByClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/policies/byClient", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/policies/byClient", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9701,7 +9701,7 @@ func (s *configure) GetNetworkPoliciesByClient(ctx context.Context, request oper
 // Show details of a sensor alert profile for a network.
 func (s *configure) GetNetworkSensorAlertsProfile(ctx context.Context, request operations.GetNetworkSensorAlertsProfileRequest) (*operations.GetNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9746,7 +9746,7 @@ func (s *configure) GetNetworkSensorAlertsProfile(ctx context.Context, request o
 // Lists all sensor alert profiles for a network.
 func (s *configure) GetNetworkSensorAlertsProfiles(ctx context.Context, request operations.GetNetworkSensorAlertsProfilesRequest) (*operations.GetNetworkSensorAlertsProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9791,7 +9791,7 @@ func (s *configure) GetNetworkSensorAlertsProfiles(ctx context.Context, request 
 // List the sensor roles for devices in a given network
 func (s *configure) GetNetworkSensorRelationships(ctx context.Context, request operations.GetNetworkSensorRelationshipsRequest) (*operations.GetNetworkSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/relationships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9836,7 +9836,7 @@ func (s *configure) GetNetworkSensorRelationships(ctx context.Context, request o
 // Return the settings for a network
 func (s *configure) GetNetworkSettings(ctx context.Context, request operations.GetNetworkSettingsRequest) (*operations.GetNetworkSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9881,7 +9881,7 @@ func (s *configure) GetNetworkSettings(ctx context.Context, request operations.G
 // Bypass activation lock attempt status
 func (s *configure) GetNetworkSmBypassActivationLockAttempt(ctx context.Context, request operations.GetNetworkSmBypassActivationLockAttemptRequest) (*operations.GetNetworkSmBypassActivationLockAttemptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9926,7 +9926,7 @@ func (s *configure) GetNetworkSmBypassActivationLockAttempt(ctx context.Context,
 // List the certs on a device
 func (s *configure) GetNetworkSmDeviceCerts(ctx context.Context, request operations.GetNetworkSmDeviceCertsRequest) (*operations.GetNetworkSmDeviceCertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/certs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/certs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9971,7 +9971,7 @@ func (s *configure) GetNetworkSmDeviceCerts(ctx context.Context, request operati
 // Get the installed profiles associated with a device
 func (s *configure) GetNetworkSmDeviceDeviceProfiles(ctx context.Context, request operations.GetNetworkSmDeviceDeviceProfilesRequest) (*operations.GetNetworkSmDeviceDeviceProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/deviceProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/deviceProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10016,7 +10016,7 @@ func (s *configure) GetNetworkSmDeviceDeviceProfiles(ctx context.Context, reques
 // List the network adapters of a device
 func (s *configure) GetNetworkSmDeviceNetworkAdapters(ctx context.Context, request operations.GetNetworkSmDeviceNetworkAdaptersRequest) (*operations.GetNetworkSmDeviceNetworkAdaptersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/networkAdapters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/networkAdapters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10061,7 +10061,7 @@ func (s *configure) GetNetworkSmDeviceNetworkAdapters(ctx context.Context, reque
 // List the restrictions on a device
 func (s *configure) GetNetworkSmDeviceRestrictions(ctx context.Context, request operations.GetNetworkSmDeviceRestrictionsRequest) (*operations.GetNetworkSmDeviceRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/restrictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/restrictions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10106,7 +10106,7 @@ func (s *configure) GetNetworkSmDeviceRestrictions(ctx context.Context, request 
 // List the security centers on a device
 func (s *configure) GetNetworkSmDeviceSecurityCenters(ctx context.Context, request operations.GetNetworkSmDeviceSecurityCentersRequest) (*operations.GetNetworkSmDeviceSecurityCentersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/securityCenters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/securityCenters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10151,7 +10151,7 @@ func (s *configure) GetNetworkSmDeviceSecurityCenters(ctx context.Context, reque
 // Get a list of softwares associated with a device
 func (s *configure) GetNetworkSmDeviceSoftwares(ctx context.Context, request operations.GetNetworkSmDeviceSoftwaresRequest) (*operations.GetNetworkSmDeviceSoftwaresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/softwares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/softwares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10196,7 +10196,7 @@ func (s *configure) GetNetworkSmDeviceSoftwares(ctx context.Context, request ope
 // List the saved SSID names on a device
 func (s *configure) GetNetworkSmDeviceWlanLists(ctx context.Context, request operations.GetNetworkSmDeviceWlanListsRequest) (*operations.GetNetworkSmDeviceWlanListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/wlanLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/wlanLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10241,14 +10241,14 @@ func (s *configure) GetNetworkSmDeviceWlanLists(ctx context.Context, request ope
 // List the devices enrolled in an SM network with various specified fields and filters
 func (s *configure) GetNetworkSmDevices(ctx context.Context, request operations.GetNetworkSmDevicesRequest) (*operations.GetNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10292,7 +10292,7 @@ func (s *configure) GetNetworkSmDevices(ctx context.Context, request operations.
 // List all profiles in a network
 func (s *configure) GetNetworkSmProfiles(ctx context.Context, request operations.GetNetworkSmProfilesRequest) (*operations.GetNetworkSmProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10337,14 +10337,14 @@ func (s *configure) GetNetworkSmProfiles(ctx context.Context, request operations
 // Return a target group
 func (s *configure) GetNetworkSmTargetGroup(ctx context.Context, request operations.GetNetworkSmTargetGroupRequest) (*operations.GetNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10386,14 +10386,14 @@ func (s *configure) GetNetworkSmTargetGroup(ctx context.Context, request operati
 // List the target groups in this network
 func (s *configure) GetNetworkSmTargetGroups(ctx context.Context, request operations.GetNetworkSmTargetGroupsRequest) (*operations.GetNetworkSmTargetGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10435,14 +10435,14 @@ func (s *configure) GetNetworkSmTargetGroups(ctx context.Context, request operat
 // List Trusted Access Configs
 func (s *configure) GetNetworkSmTrustedAccessConfigs(ctx context.Context, request operations.GetNetworkSmTrustedAccessConfigsRequest) (*operations.GetNetworkSmTrustedAccessConfigsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/trustedAccessConfigs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/trustedAccessConfigs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10486,14 +10486,14 @@ func (s *configure) GetNetworkSmTrustedAccessConfigs(ctx context.Context, reques
 // List User Access Devices and its Trusted Access Connections
 func (s *configure) GetNetworkSmUserAccessDevices(ctx context.Context, request operations.GetNetworkSmUserAccessDevicesRequest) (*operations.GetNetworkSmUserAccessDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/userAccessDevices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10537,7 +10537,7 @@ func (s *configure) GetNetworkSmUserAccessDevices(ctx context.Context, request o
 // Get the profiles associated with a user
 func (s *configure) GetNetworkSmUserDeviceProfiles(ctx context.Context, request operations.GetNetworkSmUserDeviceProfilesRequest) (*operations.GetNetworkSmUserDeviceProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10582,7 +10582,7 @@ func (s *configure) GetNetworkSmUserDeviceProfiles(ctx context.Context, request 
 // Get a list of softwares associated with a user
 func (s *configure) GetNetworkSmUserSoftwares(ctx context.Context, request operations.GetNetworkSmUserSoftwaresRequest) (*operations.GetNetworkSmUserSoftwaresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users/{userId}/softwares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users/{userId}/softwares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10627,14 +10627,14 @@ func (s *configure) GetNetworkSmUserSoftwares(ctx context.Context, request opera
 // List the owners in an SM network with various specified fields and filters
 func (s *configure) GetNetworkSmUsers(ctx context.Context, request operations.GetNetworkSmUsersRequest) (*operations.GetNetworkSmUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10676,7 +10676,7 @@ func (s *configure) GetNetworkSmUsers(ctx context.Context, request operations.Ge
 // Return the SNMP settings for a network
 func (s *configure) GetNetworkSnmp(ctx context.Context, request operations.GetNetworkSnmpRequest) (*operations.GetNetworkSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10721,7 +10721,7 @@ func (s *configure) GetNetworkSnmp(ctx context.Context, request operations.GetNe
 // Return the access control lists for a MS network
 func (s *configure) GetNetworkSwitchAccessControlLists(ctx context.Context, request operations.GetNetworkSwitchAccessControlListsRequest) (*operations.GetNetworkSwitchAccessControlListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10766,7 +10766,7 @@ func (s *configure) GetNetworkSwitchAccessControlLists(ctx context.Context, requ
 // List the access policies for a switch network. Only returns access policies with 'my RADIUS server' as authentication method
 func (s *configure) GetNetworkSwitchAccessPolicies(ctx context.Context, request operations.GetNetworkSwitchAccessPoliciesRequest) (*operations.GetNetworkSwitchAccessPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10811,7 +10811,7 @@ func (s *configure) GetNetworkSwitchAccessPolicies(ctx context.Context, request 
 // Return a specific access policy for a switch network
 func (s *configure) GetNetworkSwitchAccessPolicy(ctx context.Context, request operations.GetNetworkSwitchAccessPolicyRequest) (*operations.GetNetworkSwitchAccessPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10856,7 +10856,7 @@ func (s *configure) GetNetworkSwitchAccessPolicy(ctx context.Context, request op
 // Return the switch alternate management interface for the network
 func (s *configure) GetNetworkSwitchAlternateManagementInterface(ctx context.Context, request operations.GetNetworkSwitchAlternateManagementInterfaceRequest) (*operations.GetNetworkSwitchAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10901,7 +10901,7 @@ func (s *configure) GetNetworkSwitchAlternateManagementInterface(ctx context.Con
 // Return the DHCP server settings. Blocked/allowed servers are only applied when default policy is allow/block, respectively
 func (s *configure) GetNetworkSwitchDhcpServerPolicy(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyRequest) (*operations.GetNetworkSwitchDhcpServerPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10946,14 +10946,14 @@ func (s *configure) GetNetworkSwitchDhcpServerPolicy(ctx context.Context, reques
 // Return the list of servers trusted by Dynamic ARP Inspection on this network. These are also known as whitelisted snoop entries
 func (s *configure) GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersRequest) (*operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10997,14 +10997,14 @@ func (s *configure) GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(
 // Return the devices that have a Dynamic ARP Inspection warning and their warnings
 func (s *configure) GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest) (*operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -11048,14 +11048,14 @@ func (s *configure) GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevic
 // Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)
 func (s *configure) GetNetworkSwitchDhcpV4ServersSeen(ctx context.Context, request operations.GetNetworkSwitchDhcpV4ServersSeenRequest) (*operations.GetNetworkSwitchDhcpV4ServersSeenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -11099,7 +11099,7 @@ func (s *configure) GetNetworkSwitchDhcpV4ServersSeen(ctx context.Context, reque
 // Return the DSCP to CoS mappings
 func (s *configure) GetNetworkSwitchDscpToCosMappings(ctx context.Context, request operations.GetNetworkSwitchDscpToCosMappingsRequest) (*operations.GetNetworkSwitchDscpToCosMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dscpToCosMappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dscpToCosMappings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11144,7 +11144,7 @@ func (s *configure) GetNetworkSwitchDscpToCosMappings(ctx context.Context, reque
 // List link aggregation groups
 func (s *configure) GetNetworkSwitchLinkAggregations(ctx context.Context, request operations.GetNetworkSwitchLinkAggregationsRequest) (*operations.GetNetworkSwitchLinkAggregationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11189,7 +11189,7 @@ func (s *configure) GetNetworkSwitchLinkAggregations(ctx context.Context, reques
 // Return the MTU configuration
 func (s *configure) GetNetworkSwitchMtu(ctx context.Context, request operations.GetNetworkSwitchMtuRequest) (*operations.GetNetworkSwitchMtuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11234,7 +11234,7 @@ func (s *configure) GetNetworkSwitchMtu(ctx context.Context, request operations.
 // List switch port schedules
 func (s *configure) GetNetworkSwitchPortSchedules(ctx context.Context, request operations.GetNetworkSwitchPortSchedulesRequest) (*operations.GetNetworkSwitchPortSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11279,7 +11279,7 @@ func (s *configure) GetNetworkSwitchPortSchedules(ctx context.Context, request o
 // Return a quality of service rule
 func (s *configure) GetNetworkSwitchQosRule(ctx context.Context, request operations.GetNetworkSwitchQosRuleRequest) (*operations.GetNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11324,7 +11324,7 @@ func (s *configure) GetNetworkSwitchQosRule(ctx context.Context, request operati
 // List quality of service rules
 func (s *configure) GetNetworkSwitchQosRules(ctx context.Context, request operations.GetNetworkSwitchQosRulesRequest) (*operations.GetNetworkSwitchQosRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11369,7 +11369,7 @@ func (s *configure) GetNetworkSwitchQosRules(ctx context.Context, request operat
 // Return the quality of service rule IDs by order in which they will be processed by the switch
 func (s *configure) GetNetworkSwitchQosRulesOrder(ctx context.Context, request operations.GetNetworkSwitchQosRulesOrderRequest) (*operations.GetNetworkSwitchQosRulesOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11414,7 +11414,7 @@ func (s *configure) GetNetworkSwitchQosRulesOrder(ctx context.Context, request o
 // Return multicast settings for a network
 func (s *configure) GetNetworkSwitchRoutingMulticast(ctx context.Context, request operations.GetNetworkSwitchRoutingMulticastRequest) (*operations.GetNetworkSwitchRoutingMulticastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11459,7 +11459,7 @@ func (s *configure) GetNetworkSwitchRoutingMulticast(ctx context.Context, reques
 // Return a multicast rendezvous point
 func (s *configure) GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx context.Context, request operations.GetNetworkSwitchRoutingMulticastRendezvousPointRequest) (*operations.GetNetworkSwitchRoutingMulticastRendezvousPointResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11504,7 +11504,7 @@ func (s *configure) GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx context.
 // List multicast rendezvous points
 func (s *configure) GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx context.Context, request operations.GetNetworkSwitchRoutingMulticastRendezvousPointsRequest) (*operations.GetNetworkSwitchRoutingMulticastRendezvousPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11549,7 +11549,7 @@ func (s *configure) GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx context
 // Return layer 3 OSPF routing configuration
 func (s *configure) GetNetworkSwitchRoutingOspf(ctx context.Context, request operations.GetNetworkSwitchRoutingOspfRequest) (*operations.GetNetworkSwitchRoutingOspfResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/ospf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/ospf", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11594,7 +11594,7 @@ func (s *configure) GetNetworkSwitchRoutingOspf(ctx context.Context, request ope
 // Returns the switch network settings
 func (s *configure) GetNetworkSwitchSettings(ctx context.Context, request operations.GetNetworkSwitchSettingsRequest) (*operations.GetNetworkSwitchSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11639,7 +11639,7 @@ func (s *configure) GetNetworkSwitchSettings(ctx context.Context, request operat
 // Show a switch stack
 func (s *configure) GetNetworkSwitchStack(ctx context.Context, request operations.GetNetworkSwitchStackRequest) (*operations.GetNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11684,7 +11684,7 @@ func (s *configure) GetNetworkSwitchStack(ctx context.Context, request operation
 // Return a layer 3 interface from a switch stack
 func (s *configure) GetNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfaceRequest) (*operations.GetNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11729,7 +11729,7 @@ func (s *configure) GetNetworkSwitchStackRoutingInterface(ctx context.Context, r
 // Return a layer 3 interface DHCP configuration for a switch stack
 func (s *configure) GetNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest) (*operations.GetNetworkSwitchStackRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11774,7 +11774,7 @@ func (s *configure) GetNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Contex
 // List layer 3 interfaces for a switch stack
 func (s *configure) GetNetworkSwitchStackRoutingInterfaces(ctx context.Context, request operations.GetNetworkSwitchStackRoutingInterfacesRequest) (*operations.GetNetworkSwitchStackRoutingInterfacesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11819,7 +11819,7 @@ func (s *configure) GetNetworkSwitchStackRoutingInterfaces(ctx context.Context, 
 // Return a layer 3 static route for a switch stack
 func (s *configure) GetNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.GetNetworkSwitchStackRoutingStaticRouteRequest) (*operations.GetNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11864,7 +11864,7 @@ func (s *configure) GetNetworkSwitchStackRoutingStaticRoute(ctx context.Context,
 // List layer 3 static routes for a switch stack
 func (s *configure) GetNetworkSwitchStackRoutingStaticRoutes(ctx context.Context, request operations.GetNetworkSwitchStackRoutingStaticRoutesRequest) (*operations.GetNetworkSwitchStackRoutingStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11909,7 +11909,7 @@ func (s *configure) GetNetworkSwitchStackRoutingStaticRoutes(ctx context.Context
 // List the switch stacks in a network
 func (s *configure) GetNetworkSwitchStacks(ctx context.Context, request operations.GetNetworkSwitchStacksRequest) (*operations.GetNetworkSwitchStacksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11954,7 +11954,7 @@ func (s *configure) GetNetworkSwitchStacks(ctx context.Context, request operatio
 // Return the storm control configuration for a switch network
 func (s *configure) GetNetworkSwitchStormControl(ctx context.Context, request operations.GetNetworkSwitchStormControlRequest) (*operations.GetNetworkSwitchStormControlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stormControl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stormControl", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -11999,7 +11999,7 @@ func (s *configure) GetNetworkSwitchStormControl(ctx context.Context, request op
 // Returns STP settings
 func (s *configure) GetNetworkSwitchStp(ctx context.Context, request operations.GetNetworkSwitchStpRequest) (*operations.GetNetworkSwitchStpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12044,7 +12044,7 @@ func (s *configure) GetNetworkSwitchStp(ctx context.Context, request operations.
 // List the syslog servers for a network
 func (s *configure) GetNetworkSyslogServers(ctx context.Context, request operations.GetNetworkSyslogServersRequest) (*operations.GetNetworkSyslogServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12089,7 +12089,7 @@ func (s *configure) GetNetworkSyslogServers(ctx context.Context, request operati
 // Return the traffic analysis settings for a network
 func (s *configure) GetNetworkTrafficAnalysis(ctx context.Context, request operations.GetNetworkTrafficAnalysisRequest) (*operations.GetNetworkTrafficAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12134,7 +12134,7 @@ func (s *configure) GetNetworkTrafficAnalysis(ctx context.Context, request opera
 // Returns the application categories for traffic shaping rules.
 func (s *configure) GetNetworkTrafficShapingApplicationCategories(ctx context.Context, request operations.GetNetworkTrafficShapingApplicationCategoriesRequest) (*operations.GetNetworkTrafficShapingApplicationCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficShaping/applicationCategories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficShaping/applicationCategories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12179,7 +12179,7 @@ func (s *configure) GetNetworkTrafficShapingApplicationCategories(ctx context.Co
 // Returns the available DSCP tagging options for your traffic shaping rules.
 func (s *configure) GetNetworkTrafficShapingDscpTaggingOptions(ctx context.Context, request operations.GetNetworkTrafficShapingDscpTaggingOptionsRequest) (*operations.GetNetworkTrafficShapingDscpTaggingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12224,7 +12224,7 @@ func (s *configure) GetNetworkTrafficShapingDscpTaggingOptions(ctx context.Conte
 // Return an HTTP server for a network
 func (s *configure) GetNetworkWebhooksHTTPServer(ctx context.Context, request operations.GetNetworkWebhooksHTTPServerRequest) (*operations.GetNetworkWebhooksHTTPServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12269,7 +12269,7 @@ func (s *configure) GetNetworkWebhooksHTTPServer(ctx context.Context, request op
 // List the HTTP servers for a network
 func (s *configure) GetNetworkWebhooksHTTPServers(ctx context.Context, request operations.GetNetworkWebhooksHTTPServersRequest) (*operations.GetNetworkWebhooksHTTPServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12314,7 +12314,7 @@ func (s *configure) GetNetworkWebhooksHTTPServers(ctx context.Context, request o
 // Get the webhook payload template for a network
 func (s *configure) GetNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.GetNetworkWebhooksPayloadTemplateRequest) (*operations.GetNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12359,7 +12359,7 @@ func (s *configure) GetNetworkWebhooksPayloadTemplate(ctx context.Context, reque
 // List the webhook payload templates for a network
 func (s *configure) GetNetworkWebhooksPayloadTemplates(ctx context.Context, request operations.GetNetworkWebhooksPayloadTemplatesRequest) (*operations.GetNetworkWebhooksPayloadTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12404,7 +12404,7 @@ func (s *configure) GetNetworkWebhooksPayloadTemplates(ctx context.Context, requ
 // Return the status of a webhook test for a network
 func (s *configure) GetNetworkWebhooksWebhookTest(ctx context.Context, request operations.GetNetworkWebhooksWebhookTestRequest) (*operations.GetNetworkWebhooksWebhookTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12449,7 +12449,7 @@ func (s *configure) GetNetworkWebhooksWebhookTest(ctx context.Context, request o
 // Return alternate management interface and devices with IP assigned
 func (s *configure) GetNetworkWirelessAlternateManagementInterface(ctx context.Context, request operations.GetNetworkWirelessAlternateManagementInterfaceRequest) (*operations.GetNetworkWirelessAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12494,7 +12494,7 @@ func (s *configure) GetNetworkWirelessAlternateManagementInterface(ctx context.C
 // Return the billing settings of this network
 func (s *configure) GetNetworkWirelessBilling(ctx context.Context, request operations.GetNetworkWirelessBillingRequest) (*operations.GetNetworkWirelessBillingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12539,7 +12539,7 @@ func (s *configure) GetNetworkWirelessBilling(ctx context.Context, request opera
 // Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.
 func (s *configure) GetNetworkWirelessBluetoothSettings(ctx context.Context, request operations.GetNetworkWirelessBluetoothSettingsRequest) (*operations.GetNetworkWirelessBluetoothSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/bluetooth/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/bluetooth/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12584,7 +12584,7 @@ func (s *configure) GetNetworkWirelessBluetoothSettings(ctx context.Context, req
 // Return a RF profile
 func (s *configure) GetNetworkWirelessRfProfile(ctx context.Context, request operations.GetNetworkWirelessRfProfileRequest) (*operations.GetNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12629,14 +12629,14 @@ func (s *configure) GetNetworkWirelessRfProfile(ctx context.Context, request ope
 // List the non-basic RF profiles for this network
 func (s *configure) GetNetworkWirelessRfProfiles(ctx context.Context, request operations.GetNetworkWirelessRfProfilesRequest) (*operations.GetNetworkWirelessRfProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -12678,7 +12678,7 @@ func (s *configure) GetNetworkWirelessRfProfiles(ctx context.Context, request op
 // Return the wireless settings for a network
 func (s *configure) GetNetworkWirelessSettings(ctx context.Context, request operations.GetNetworkWirelessSettingsRequest) (*operations.GetNetworkWirelessSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12723,7 +12723,7 @@ func (s *configure) GetNetworkWirelessSettings(ctx context.Context, request oper
 // Return a single MR SSID
 func (s *configure) GetNetworkWirelessSsid(ctx context.Context, request operations.GetNetworkWirelessSsidRequest) (*operations.GetNetworkWirelessSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12768,7 +12768,7 @@ func (s *configure) GetNetworkWirelessSsid(ctx context.Context, request operatio
 // List the Bonjour forwarding setting and rules for the SSID
 func (s *configure) GetNetworkWirelessSsidBonjourForwarding(ctx context.Context, request operations.GetNetworkWirelessSsidBonjourForwardingRequest) (*operations.GetNetworkWirelessSsidBonjourForwardingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12813,7 +12813,7 @@ func (s *configure) GetNetworkWirelessSsidBonjourForwarding(ctx context.Context,
 // List the device type group policies for the SSID
 func (s *configure) GetNetworkWirelessSsidDeviceTypeGroupPolicies(ctx context.Context, request operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest) (*operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12858,7 +12858,7 @@ func (s *configure) GetNetworkWirelessSsidDeviceTypeGroupPolicies(ctx context.Co
 // Return the EAP overridden parameters for an SSID
 func (s *configure) GetNetworkWirelessSsidEapOverride(ctx context.Context, request operations.GetNetworkWirelessSsidEapOverrideRequest) (*operations.GetNetworkWirelessSsidEapOverrideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12903,7 +12903,7 @@ func (s *configure) GetNetworkWirelessSsidEapOverride(ctx context.Context, reque
 // Return the L3 firewall rules for an SSID on an MR network
 func (s *configure) GetNetworkWirelessSsidFirewallL3FirewallRules(ctx context.Context, request operations.GetNetworkWirelessSsidFirewallL3FirewallRulesRequest) (*operations.GetNetworkWirelessSsidFirewallL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12948,7 +12948,7 @@ func (s *configure) GetNetworkWirelessSsidFirewallL3FirewallRules(ctx context.Co
 // Return the L7 firewall rules for an SSID on an MR network
 func (s *configure) GetNetworkWirelessSsidFirewallL7FirewallRules(ctx context.Context, request operations.GetNetworkWirelessSsidFirewallL7FirewallRulesRequest) (*operations.GetNetworkWirelessSsidFirewallL7FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -12993,7 +12993,7 @@ func (s *configure) GetNetworkWirelessSsidFirewallL7FirewallRules(ctx context.Co
 // Return the Hotspot 2.0 settings for an SSID
 func (s *configure) GetNetworkWirelessSsidHotspot20(ctx context.Context, request operations.GetNetworkWirelessSsidHotspot20Request) (*operations.GetNetworkWirelessSsidHotspot20Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13038,7 +13038,7 @@ func (s *configure) GetNetworkWirelessSsidHotspot20(ctx context.Context, request
 // Return an Identity PSK
 func (s *configure) GetNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.GetNetworkWirelessSsidIdentityPskRequest) (*operations.GetNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13083,7 +13083,7 @@ func (s *configure) GetNetworkWirelessSsidIdentityPsk(ctx context.Context, reque
 // List all Identity PSKs in a wireless network
 func (s *configure) GetNetworkWirelessSsidIdentityPsks(ctx context.Context, request operations.GetNetworkWirelessSsidIdentityPsksRequest) (*operations.GetNetworkWirelessSsidIdentityPsksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13128,7 +13128,7 @@ func (s *configure) GetNetworkWirelessSsidIdentityPsks(ctx context.Context, requ
 // List the outage schedule for the SSID
 func (s *configure) GetNetworkWirelessSsidSchedules(ctx context.Context, request operations.GetNetworkWirelessSsidSchedulesRequest) (*operations.GetNetworkWirelessSsidSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13173,7 +13173,7 @@ func (s *configure) GetNetworkWirelessSsidSchedules(ctx context.Context, request
 // Display the splash page settings for the given SSID
 func (s *configure) GetNetworkWirelessSsidSplashSettings(ctx context.Context, request operations.GetNetworkWirelessSsidSplashSettingsRequest) (*operations.GetNetworkWirelessSsidSplashSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13218,7 +13218,7 @@ func (s *configure) GetNetworkWirelessSsidSplashSettings(ctx context.Context, re
 // Display the traffic shaping settings for a SSID on an MR network
 func (s *configure) GetNetworkWirelessSsidTrafficShapingRules(ctx context.Context, request operations.GetNetworkWirelessSsidTrafficShapingRulesRequest) (*operations.GetNetworkWirelessSsidTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13263,7 +13263,7 @@ func (s *configure) GetNetworkWirelessSsidTrafficShapingRules(ctx context.Contex
 // List the VPN settings for the SSID.
 func (s *configure) GetNetworkWirelessSsidVpn(ctx context.Context, request operations.GetNetworkWirelessSsidVpnRequest) (*operations.GetNetworkWirelessSsidVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13308,7 +13308,7 @@ func (s *configure) GetNetworkWirelessSsidVpn(ctx context.Context, request opera
 // List the MR SSIDs in a network
 func (s *configure) GetNetworkWirelessSsids(ctx context.Context, request operations.GetNetworkWirelessSsidsRequest) (*operations.GetNetworkWirelessSsidsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13353,7 +13353,7 @@ func (s *configure) GetNetworkWirelessSsids(ctx context.Context, request operati
 // Return an organization
 func (s *configure) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13398,7 +13398,7 @@ func (s *configure) GetOrganization(ctx context.Context, request operations.GetO
 // Return an action batch
 func (s *configure) GetOrganizationActionBatch(ctx context.Context, request operations.GetOrganizationActionBatchRequest) (*operations.GetOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13443,14 +13443,14 @@ func (s *configure) GetOrganizationActionBatch(ctx context.Context, request oper
 // Return the list of action batches in the organization
 func (s *configure) GetOrganizationActionBatches(ctx context.Context, request operations.GetOrganizationActionBatchesRequest) (*operations.GetOrganizationActionBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13492,7 +13492,7 @@ func (s *configure) GetOrganizationActionBatches(ctx context.Context, request op
 // Returns the adaptive policy ACL information
 func (s *configure) GetOrganizationAdaptivePolicyACL(ctx context.Context, request operations.GetOrganizationAdaptivePolicyACLRequest) (*operations.GetOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13537,7 +13537,7 @@ func (s *configure) GetOrganizationAdaptivePolicyACL(ctx context.Context, reques
 // List adaptive policy ACLs in a organization
 func (s *configure) GetOrganizationAdaptivePolicyAcls(ctx context.Context, request operations.GetOrganizationAdaptivePolicyAclsRequest) (*operations.GetOrganizationAdaptivePolicyAclsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13582,7 +13582,7 @@ func (s *configure) GetOrganizationAdaptivePolicyAcls(ctx context.Context, reque
 // Returns an adaptive policy group
 func (s *configure) GetOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupRequest) (*operations.GetOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13627,7 +13627,7 @@ func (s *configure) GetOrganizationAdaptivePolicyGroup(ctx context.Context, requ
 // List adaptive policy groups in a organization
 func (s *configure) GetOrganizationAdaptivePolicyGroups(ctx context.Context, request operations.GetOrganizationAdaptivePolicyGroupsRequest) (*operations.GetOrganizationAdaptivePolicyGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13672,7 +13672,7 @@ func (s *configure) GetOrganizationAdaptivePolicyGroups(ctx context.Context, req
 // List adaptive policies in an organization
 func (s *configure) GetOrganizationAdaptivePolicyPolicies(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPoliciesRequest) (*operations.GetOrganizationAdaptivePolicyPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13717,7 +13717,7 @@ func (s *configure) GetOrganizationAdaptivePolicyPolicies(ctx context.Context, r
 // Return an adaptive policy
 func (s *configure) GetOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.GetOrganizationAdaptivePolicyPolicyRequest) (*operations.GetOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13762,7 +13762,7 @@ func (s *configure) GetOrganizationAdaptivePolicyPolicy(ctx context.Context, req
 // Returns global adaptive policy settings in an organization
 func (s *configure) GetOrganizationAdaptivePolicySettings(ctx context.Context, request operations.GetOrganizationAdaptivePolicySettingsRequest) (*operations.GetOrganizationAdaptivePolicySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13807,7 +13807,7 @@ func (s *configure) GetOrganizationAdaptivePolicySettings(ctx context.Context, r
 // List the dashboard administrators in this organization
 func (s *configure) GetOrganizationAdmins(ctx context.Context, request operations.GetOrganizationAdminsRequest) (*operations.GetOrganizationAdminsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13852,7 +13852,7 @@ func (s *configure) GetOrganizationAdmins(ctx context.Context, request operation
 // List all organization-wide alert configurations
 func (s *configure) GetOrganizationAlertsProfiles(ctx context.Context, request operations.GetOrganizationAlertsProfilesRequest) (*operations.GetOrganizationAlertsProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13897,7 +13897,7 @@ func (s *configure) GetOrganizationAlertsProfiles(ctx context.Context, request o
 // Returns all supported intrusion settings for an organization
 func (s *configure) GetOrganizationApplianceSecurityIntrusion(ctx context.Context, request operations.GetOrganizationApplianceSecurityIntrusionRequest) (*operations.GetOrganizationApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13942,7 +13942,7 @@ func (s *configure) GetOrganizationApplianceSecurityIntrusion(ctx context.Contex
 // Return the third party VPN peers for an organization
 func (s *configure) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.GetOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -13987,7 +13987,7 @@ func (s *configure) GetOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Co
 // Return the firewall rules for an organization's site-to-site VPN
 func (s *configure) GetOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, request operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest) (*operations.GetOrganizationApplianceVpnVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14032,7 +14032,7 @@ func (s *configure) GetOrganizationApplianceVpnVpnFirewallRules(ctx context.Cont
 // List the branding policies of an organization
 func (s *configure) GetOrganizationBrandingPolicies(ctx context.Context, request operations.GetOrganizationBrandingPoliciesRequest) (*operations.GetOrganizationBrandingPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14077,7 +14077,7 @@ func (s *configure) GetOrganizationBrandingPolicies(ctx context.Context, request
 // Return the branding policy IDs of an organization in priority order. IDs are ordered in ascending order of priority (IDs later in the array have higher priority).
 func (s *configure) GetOrganizationBrandingPoliciesPriorities(ctx context.Context, request operations.GetOrganizationBrandingPoliciesPrioritiesRequest) (*operations.GetOrganizationBrandingPoliciesPrioritiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14122,7 +14122,7 @@ func (s *configure) GetOrganizationBrandingPoliciesPriorities(ctx context.Contex
 // Return a branding policy
 func (s *configure) GetOrganizationBrandingPolicy(ctx context.Context, request operations.GetOrganizationBrandingPolicyRequest) (*operations.GetOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14167,7 +14167,7 @@ func (s *configure) GetOrganizationBrandingPolicy(ctx context.Context, request o
 // Get Custom Analytics Artifact
 func (s *configure) GetOrganizationCameraCustomAnalyticsArtifact(ctx context.Context, request operations.GetOrganizationCameraCustomAnalyticsArtifactRequest) (*operations.GetOrganizationCameraCustomAnalyticsArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14212,7 +14212,7 @@ func (s *configure) GetOrganizationCameraCustomAnalyticsArtifact(ctx context.Con
 // List Custom Analytics Artifacts
 func (s *configure) GetOrganizationCameraCustomAnalyticsArtifacts(ctx context.Context, request operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest) (*operations.GetOrganizationCameraCustomAnalyticsArtifactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14257,14 +14257,14 @@ func (s *configure) GetOrganizationCameraCustomAnalyticsArtifacts(ctx context.Co
 // Fetch onboarding status of cameras
 func (s *configure) GetOrganizationCameraOnboardingStatuses(ctx context.Context, request operations.GetOrganizationCameraOnboardingStatusesRequest) (*operations.GetOrganizationCameraOnboardingStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14306,14 +14306,14 @@ func (s *configure) GetOrganizationCameraOnboardingStatuses(ctx context.Context,
 // Return the client details in an organization
 func (s *configure) GetOrganizationClientsSearch(ctx context.Context, request operations.GetOrganizationClientsSearchRequest) (*operations.GetOrganizationClientsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14357,7 +14357,7 @@ func (s *configure) GetOrganizationClientsSearch(ctx context.Context, request op
 // Return a single configuration template
 func (s *configure) GetOrganizationConfigTemplate(ctx context.Context, request operations.GetOrganizationConfigTemplateRequest) (*operations.GetOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14402,7 +14402,7 @@ func (s *configure) GetOrganizationConfigTemplate(ctx context.Context, request o
 // Return a switch profile port
 func (s *configure) GetOrganizationConfigTemplateSwitchProfilePort(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilePortRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14447,7 +14447,7 @@ func (s *configure) GetOrganizationConfigTemplateSwitchProfilePort(ctx context.C
 // Return all the ports of a switch profile
 func (s *configure) GetOrganizationConfigTemplateSwitchProfilePorts(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilePortsRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilePortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14492,7 +14492,7 @@ func (s *configure) GetOrganizationConfigTemplateSwitchProfilePorts(ctx context.
 // List the switch profiles for your switch template configuration
 func (s *configure) GetOrganizationConfigTemplateSwitchProfiles(ctx context.Context, request operations.GetOrganizationConfigTemplateSwitchProfilesRequest) (*operations.GetOrganizationConfigTemplateSwitchProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14537,7 +14537,7 @@ func (s *configure) GetOrganizationConfigTemplateSwitchProfiles(ctx context.Cont
 // List the configuration templates for this organization
 func (s *configure) GetOrganizationConfigTemplates(ctx context.Context, request operations.GetOrganizationConfigTemplatesRequest) (*operations.GetOrganizationConfigTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14582,14 +14582,14 @@ func (s *configure) GetOrganizationConfigTemplates(ctx context.Context, request 
 // List the devices in an organization
 func (s *configure) GetOrganizationDevices(ctx context.Context, request operations.GetOrganizationDevicesRequest) (*operations.GetOrganizationDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14633,7 +14633,7 @@ func (s *configure) GetOrganizationDevices(ctx context.Context, request operatio
 // List the available early access features for organization
 func (s *configure) GetOrganizationEarlyAccessFeatures(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesRequest) (*operations.GetOrganizationEarlyAccessFeaturesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14678,7 +14678,7 @@ func (s *configure) GetOrganizationEarlyAccessFeatures(ctx context.Context, requ
 // Show an early access feature opt-in for an organization
 func (s *configure) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14723,7 +14723,7 @@ func (s *configure) GetOrganizationEarlyAccessFeaturesOptIn(ctx context.Context,
 // List the early access feature opt-ins for an organization
 func (s *configure) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Context, request operations.GetOrganizationEarlyAccessFeaturesOptInsRequest) (*operations.GetOrganizationEarlyAccessFeaturesOptInsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14768,14 +14768,14 @@ func (s *configure) GetOrganizationEarlyAccessFeaturesOptIns(ctx context.Context
 // Get firmware upgrade information for an organization
 func (s *configure) GetOrganizationFirmwareUpgrades(ctx context.Context, request operations.GetOrganizationFirmwareUpgradesRequest) (*operations.GetOrganizationFirmwareUpgradesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14817,14 +14817,14 @@ func (s *configure) GetOrganizationFirmwareUpgrades(ctx context.Context, request
 // Get firmware upgrade status for the filtered devices
 func (s *configure) GetOrganizationFirmwareUpgradesByDevice(ctx context.Context, request operations.GetOrganizationFirmwareUpgradesByDeviceRequest) (*operations.GetOrganizationFirmwareUpgradesByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/firmware/upgrades/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14868,7 +14868,7 @@ func (s *configure) GetOrganizationFirmwareUpgradesByDevice(ctx context.Context,
 // List all Insight tracked applications
 func (s *configure) GetOrganizationInsightApplications(ctx context.Context, request operations.GetOrganizationInsightApplicationsRequest) (*operations.GetOrganizationInsightApplicationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/applications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14913,7 +14913,7 @@ func (s *configure) GetOrganizationInsightApplications(ctx context.Context, requ
 // Return a monitored media server for this organization. Only valid for organizations with Meraki Insight.
 func (s *configure) GetOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.GetOrganizationInsightMonitoredMediaServerRequest) (*operations.GetOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -14958,7 +14958,7 @@ func (s *configure) GetOrganizationInsightMonitoredMediaServer(ctx context.Conte
 // List the monitored media servers for this organization. Only valid for organizations with Meraki Insight.
 func (s *configure) GetOrganizationInsightMonitoredMediaServers(ctx context.Context, request operations.GetOrganizationInsightMonitoredMediaServersRequest) (*operations.GetOrganizationInsightMonitoredMediaServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15003,7 +15003,7 @@ func (s *configure) GetOrganizationInsightMonitoredMediaServers(ctx context.Cont
 // Return a single device from the inventory of an organization
 func (s *configure) GetOrganizationInventoryDevice(ctx context.Context, request operations.GetOrganizationInventoryDeviceRequest) (*operations.GetOrganizationInventoryDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15048,14 +15048,14 @@ func (s *configure) GetOrganizationInventoryDevice(ctx context.Context, request 
 // Return the device inventory for an organization
 func (s *configure) GetOrganizationInventoryDevices(ctx context.Context, request operations.GetOrganizationInventoryDevicesRequest) (*operations.GetOrganizationInventoryDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15099,14 +15099,14 @@ func (s *configure) GetOrganizationInventoryDevices(ctx context.Context, request
 // Check the status of a committed Import operation
 func (s *configure) GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15148,14 +15148,14 @@ func (s *configure) GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx
 // Returns list of networks eligible for adding cloud monitored device
 func (s *configure) GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx context.Context, request operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest) (*operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15199,7 +15199,7 @@ func (s *configure) GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ct
 // Display a license
 func (s *configure) GetOrganizationLicense(ctx context.Context, request operations.GetOrganizationLicenseRequest) (*operations.GetOrganizationLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15244,14 +15244,14 @@ func (s *configure) GetOrganizationLicense(ctx context.Context, request operatio
 // List the licenses for an organization
 func (s *configure) GetOrganizationLicenses(ctx context.Context, request operations.GetOrganizationLicensesRequest) (*operations.GetOrganizationLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15295,14 +15295,14 @@ func (s *configure) GetOrganizationLicenses(ctx context.Context, request operati
 // List the licenses in a coterm organization
 func (s *configure) GetOrganizationLicensingCotermLicenses(ctx context.Context, request operations.GetOrganizationLicensingCotermLicensesRequest) (*operations.GetOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15346,7 +15346,7 @@ func (s *configure) GetOrganizationLicensingCotermLicenses(ctx context.Context, 
 // Returns the login security settings for an organization.
 func (s *configure) GetOrganizationLoginSecurity(ctx context.Context, request operations.GetOrganizationLoginSecurityRequest) (*operations.GetOrganizationLoginSecurityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15391,14 +15391,14 @@ func (s *configure) GetOrganizationLoginSecurity(ctx context.Context, request op
 // List the networks that the user has privileges on in an organization
 func (s *configure) GetOrganizationNetworks(ctx context.Context, request operations.GetOrganizationNetworksRequest) (*operations.GetOrganizationNetworksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/networks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15442,7 +15442,7 @@ func (s *configure) GetOrganizationNetworks(ctx context.Context, request operati
 // Shows details of a Policy Object.
 func (s *configure) GetOrganizationPolicyObject(ctx context.Context, request operations.GetOrganizationPolicyObjectRequest) (*operations.GetOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15487,14 +15487,14 @@ func (s *configure) GetOrganizationPolicyObject(ctx context.Context, request ope
 // Lists Policy Objects belonging to the organization.
 func (s *configure) GetOrganizationPolicyObjects(ctx context.Context, request operations.GetOrganizationPolicyObjectsRequest) (*operations.GetOrganizationPolicyObjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15538,7 +15538,7 @@ func (s *configure) GetOrganizationPolicyObjects(ctx context.Context, request op
 // Shows details of a Policy Object Group.
 func (s *configure) GetOrganizationPolicyObjectsGroup(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupRequest) (*operations.GetOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15583,14 +15583,14 @@ func (s *configure) GetOrganizationPolicyObjectsGroup(ctx context.Context, reque
 // Lists Policy Object Groups belonging to the organization.
 func (s *configure) GetOrganizationPolicyObjectsGroups(ctx context.Context, request operations.GetOrganizationPolicyObjectsGroupsRequest) (*operations.GetOrganizationPolicyObjectsGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15634,7 +15634,7 @@ func (s *configure) GetOrganizationPolicyObjectsGroups(ctx context.Context, requ
 // Returns the SAML SSO enabled settings for an organization.
 func (s *configure) GetOrganizationSaml(ctx context.Context, request operations.GetOrganizationSamlRequest) (*operations.GetOrganizationSamlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15679,7 +15679,7 @@ func (s *configure) GetOrganizationSaml(ctx context.Context, request operations.
 // Get a SAML IdP from your organization.
 func (s *configure) GetOrganizationSamlIdp(ctx context.Context, request operations.GetOrganizationSamlIdpRequest) (*operations.GetOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15724,7 +15724,7 @@ func (s *configure) GetOrganizationSamlIdp(ctx context.Context, request operatio
 // List the SAML IdPs in your organization.
 func (s *configure) GetOrganizationSamlIdps(ctx context.Context, request operations.GetOrganizationSamlIdpsRequest) (*operations.GetOrganizationSamlIdpsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15769,7 +15769,7 @@ func (s *configure) GetOrganizationSamlIdps(ctx context.Context, request operati
 // Return a SAML role
 func (s *configure) GetOrganizationSamlRole(ctx context.Context, request operations.GetOrganizationSamlRoleRequest) (*operations.GetOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15814,7 +15814,7 @@ func (s *configure) GetOrganizationSamlRole(ctx context.Context, request operati
 // List the SAML roles for this organization
 func (s *configure) GetOrganizationSamlRoles(ctx context.Context, request operations.GetOrganizationSamlRolesRequest) (*operations.GetOrganizationSamlRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15859,7 +15859,7 @@ func (s *configure) GetOrganizationSamlRoles(ctx context.Context, request operat
 // Get the organization's APNS certificate
 func (s *configure) GetOrganizationSmApnsCert(ctx context.Context, request operations.GetOrganizationSmApnsCertRequest) (*operations.GetOrganizationSmApnsCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/apnsCert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/apnsCert", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15904,7 +15904,7 @@ func (s *configure) GetOrganizationSmApnsCert(ctx context.Context, request opera
 // Get a hash containing the unparsed token of the VPP account with the given ID
 func (s *configure) GetOrganizationSmVppAccount(ctx context.Context, request operations.GetOrganizationSmVppAccountRequest) (*operations.GetOrganizationSmVppAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts/{vppAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts/{vppAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15949,7 +15949,7 @@ func (s *configure) GetOrganizationSmVppAccount(ctx context.Context, request ope
 // List the VPP accounts in the organization
 func (s *configure) GetOrganizationSmVppAccounts(ctx context.Context, request operations.GetOrganizationSmVppAccountsRequest) (*operations.GetOrganizationSmVppAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/sm/vppAccounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -15994,7 +15994,7 @@ func (s *configure) GetOrganizationSmVppAccounts(ctx context.Context, request op
 // Return the SNMP settings for an organization
 func (s *configure) GetOrganizationSnmp(ctx context.Context, request operations.GetOrganizationSnmpRequest) (*operations.GetOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -16039,14 +16039,14 @@ func (s *configure) GetOrganizationSnmp(ctx context.Context, request operations.
 // List the switchports in an organization by switch
 func (s *configure) GetOrganizationSwitchPortsBySwitch(ctx context.Context, request operations.GetOrganizationSwitchPortsBySwitchRequest) (*operations.GetOrganizationSwitchPortsBySwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/switch/ports/bySwitch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/switch/ports/bySwitch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16090,14 +16090,14 @@ func (s *configure) GetOrganizationSwitchPortsBySwitch(ctx context.Context, requ
 // Endpoint to see power status for wireless devices
 func (s *configure) GetOrganizationWirelessDevicesEthernetStatuses(ctx context.Context, request operations.GetOrganizationWirelessDevicesEthernetStatusesRequest) (*operations.GetOrganizationWirelessDevicesEthernetStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16186,9 +16186,9 @@ func (s *configure) GetOrganizations(ctx context.Context) (*operations.GetOrgani
 // Lock a set of devices
 func (s *configure) LockNetworkSmDevices(ctx context.Context, request operations.LockNetworkSmDevicesRequest) (*operations.LockNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/lock", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/lock", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16238,9 +16238,9 @@ func (s *configure) LockNetworkSmDevices(ctx context.Context, request operations
 // Add, delete, or update the tags of a set of devices
 func (s *configure) ModifyNetworkSmDevicesTags(ctx context.Context, request operations.ModifyNetworkSmDevicesTagsRequest) (*operations.ModifyNetworkSmDevicesTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/modifyTags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/modifyTags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16293,9 +16293,9 @@ func (s *configure) ModifyNetworkSmDevicesTags(ctx context.Context, request oper
 // Move a set of devices to a new network
 func (s *configure) MoveNetworkSmDevices(ctx context.Context, request operations.MoveNetworkSmDevicesRequest) (*operations.MoveNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16348,9 +16348,9 @@ func (s *configure) MoveNetworkSmDevices(ctx context.Context, request operations
 // Move licenses to another organization. This will also move any devices that the licenses are assigned to
 func (s *configure) MoveOrganizationLicenses(ctx context.Context, request operations.MoveOrganizationLicensesRequest) (*operations.MoveOrganizationLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16403,9 +16403,9 @@ func (s *configure) MoveOrganizationLicenses(ctx context.Context, request operat
 // Move SM seats to another organization
 func (s *configure) MoveOrganizationLicensesSeats(ctx context.Context, request operations.MoveOrganizationLicensesSeatsRequest) (*operations.MoveOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/moveSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/moveSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16458,9 +16458,9 @@ func (s *configure) MoveOrganizationLicensesSeats(ctx context.Context, request o
 // Moves a license to a different organization (coterm only)
 func (s *configure) MoveOrganizationLicensingCotermLicenses(ctx context.Context, request operations.MoveOrganizationLicensingCotermLicensesRequest) (*operations.MoveOrganizationLicensingCotermLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licensing/coterm/licenses/move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16513,9 +16513,9 @@ func (s *configure) MoveOrganizationLicensingCotermLicenses(ctx context.Context,
 // Provisions a client with a name and policy. Clients can be provisioned before they associate to the network.
 func (s *configure) ProvisionNetworkClients(ctx context.Context, request operations.ProvisionNetworkClientsRequest) (*operations.ProvisionNetworkClientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/provision", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/provision", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16568,7 +16568,7 @@ func (s *configure) ProvisionNetworkClients(ctx context.Context, request operati
 // Refresh the details of a device
 func (s *configure) RefreshNetworkSmDeviceDetails(ctx context.Context, request operations.RefreshNetworkSmDeviceDetailsRequest) (*operations.RefreshNetworkSmDeviceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/refreshDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/refreshDetails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -16604,9 +16604,9 @@ func (s *configure) RefreshNetworkSmDeviceDetails(ctx context.Context, request o
 // Release a list of claimed devices from an organization.
 func (s *configure) ReleaseFromOrganizationInventory(ctx context.Context, request operations.ReleaseFromOrganizationInventoryRequest) (*operations.ReleaseFromOrganizationInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/release", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/inventory/release", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16656,9 +16656,9 @@ func (s *configure) ReleaseFromOrganizationInventory(ctx context.Context, reques
 // Remove a single device
 func (s *configure) RemoveNetworkDevices(ctx context.Context, request operations.RemoveNetworkDevicesRequest) (*operations.RemoveNetworkDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16702,9 +16702,9 @@ func (s *configure) RemoveNetworkDevices(ctx context.Context, request operations
 // Remove a switch from a stack
 func (s *configure) RemoveNetworkSwitchStack(ctx context.Context, request operations.RemoveNetworkSwitchStackRequest) (*operations.RemoveNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16757,9 +16757,9 @@ func (s *configure) RemoveNetworkSwitchStack(ctx context.Context, request operat
 // Renew SM seats of a license. This will extend the license expiration date of managed SM devices covered by this license
 func (s *configure) RenewOrganizationLicensesSeats(ctx context.Context, request operations.RenewOrganizationLicensesSeatsRequest) (*operations.RenewOrganizationLicensesSeatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/renewSeats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/renewSeats", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16812,9 +16812,9 @@ func (s *configure) RenewOrganizationLicensesSeats(ctx context.Context, request 
 // Rollback a Staged Upgrade Event for a network
 func (s *configure) RollbacksNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.RollbacksNetworkFirmwareUpgradesStagedEventsRequest) (*operations.RollbacksNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -16867,7 +16867,7 @@ func (s *configure) RollbacksNetworkFirmwareUpgradesStagedEvents(ctx context.Con
 // Split a combined network into individual networks for each type of device
 func (s *configure) SplitNetwork(ctx context.Context, request operations.SplitNetworkRequest) (*operations.SplitNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/split", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/split", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -16912,7 +16912,7 @@ func (s *configure) SplitNetwork(ctx context.Context, request operations.SplitNe
 // Swap MX primary and warm spare appliances
 func (s *configure) SwapNetworkApplianceWarmSpare(ctx context.Context, request operations.SwapNetworkApplianceWarmSpareRequest) (*operations.SwapNetworkApplianceWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare/swap", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare/swap", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -16957,9 +16957,9 @@ func (s *configure) SwapNetworkApplianceWarmSpare(ctx context.Context, request o
 // Unbind a network from a template.
 func (s *configure) UnbindNetwork(ctx context.Context, request operations.UnbindNetworkRequest) (*operations.UnbindNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/unbind", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/unbind", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17009,7 +17009,7 @@ func (s *configure) UnbindNetwork(ctx context.Context, request operations.Unbind
 // Unenroll a device
 func (s *configure) UnenrollNetworkSmDevice(ctx context.Context, request operations.UnenrollNetworkSmDeviceRequest) (*operations.UnenrollNetworkSmDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/unenroll", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/{deviceId}/unenroll", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -17054,9 +17054,9 @@ func (s *configure) UnenrollNetworkSmDevice(ctx context.Context, request operati
 // Update the attributes of a device
 func (s *configure) UpdateDevice(ctx context.Context, request operations.UpdateDeviceRequest) (*operations.UpdateDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17106,9 +17106,9 @@ func (s *configure) UpdateDevice(ctx context.Context, request operations.UpdateD
 // Update the uplink settings for an MX appliance
 func (s *configure) UpdateDeviceApplianceUplinksSettings(ctx context.Context, request operations.UpdateDeviceApplianceUplinksSettingsRequest) (*operations.UpdateDeviceApplianceUplinksSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/uplinks/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17161,9 +17161,9 @@ func (s *configure) UpdateDeviceApplianceUplinksSettings(ctx context.Context, re
 // Update custom analytics settings for a camera
 func (s *configure) UpdateDeviceCameraCustomAnalytics(ctx context.Context, request operations.UpdateDeviceCameraCustomAnalyticsRequest) (*operations.UpdateDeviceCameraCustomAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/customAnalytics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17213,9 +17213,9 @@ func (s *configure) UpdateDeviceCameraCustomAnalytics(ctx context.Context, reque
 // Update quality and retention settings for the given camera
 func (s *configure) UpdateDeviceCameraQualityAndRetention(ctx context.Context, request operations.UpdateDeviceCameraQualityAndRetentionRequest) (*operations.UpdateDeviceCameraQualityAndRetentionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetention", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17265,9 +17265,9 @@ func (s *configure) UpdateDeviceCameraQualityAndRetention(ctx context.Context, r
 // Update sense settings for the given camera
 func (s *configure) UpdateDeviceCameraSense(ctx context.Context, request operations.UpdateDeviceCameraSenseRequest) (*operations.UpdateDeviceCameraSenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/sense", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17317,9 +17317,9 @@ func (s *configure) UpdateDeviceCameraSense(ctx context.Context, request operati
 // Update video settings for the given camera
 func (s *configure) UpdateDeviceCameraVideoSettings(ctx context.Context, request operations.UpdateDeviceCameraVideoSettingsRequest) (*operations.UpdateDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17369,9 +17369,9 @@ func (s *configure) UpdateDeviceCameraVideoSettings(ctx context.Context, request
 // Assign wireless profiles to the given camera. Incremental updates are not supported, all profile assignment need to be supplied at once.
 func (s *configure) UpdateDeviceCameraWirelessProfiles(ctx context.Context, request operations.UpdateDeviceCameraWirelessProfilesRequest) (*operations.UpdateDeviceCameraWirelessProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/wirelessProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17424,9 +17424,9 @@ func (s *configure) UpdateDeviceCameraWirelessProfiles(ctx context.Context, requ
 // Update the LAN Settings for a single MG.
 func (s *configure) UpdateDeviceCellularGatewayLan(ctx context.Context, request operations.UpdateDeviceCellularGatewayLanRequest) (*operations.UpdateDeviceCellularGatewayLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/lan", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17476,9 +17476,9 @@ func (s *configure) UpdateDeviceCellularGatewayLan(ctx context.Context, request 
 // Updates the port forwarding rules for a single MG.
 func (s *configure) UpdateDeviceCellularGatewayPortForwardingRules(ctx context.Context, request operations.UpdateDeviceCellularGatewayPortForwardingRulesRequest) (*operations.UpdateDeviceCellularGatewayPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/portForwardingRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17528,9 +17528,9 @@ func (s *configure) UpdateDeviceCellularGatewayPortForwardingRules(ctx context.C
 // Updates the SIM and APN configurations for a cellular device.
 func (s *configure) UpdateDeviceCellularSims(ctx context.Context, request operations.UpdateDeviceCellularSimsRequest) (*operations.UpdateDeviceCellularSimsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellular/sims", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17580,9 +17580,9 @@ func (s *configure) UpdateDeviceCellularSims(ctx context.Context, request operat
 // Update the management interface settings for a device
 func (s *configure) UpdateDeviceManagementInterface(ctx context.Context, request operations.UpdateDeviceManagementInterfaceRequest) (*operations.UpdateDeviceManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/managementInterface", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17632,9 +17632,9 @@ func (s *configure) UpdateDeviceManagementInterface(ctx context.Context, request
 // Assign one or more sensor roles to a given sensor or camera device.
 func (s *configure) UpdateDeviceSensorRelationships(ctx context.Context, request operations.UpdateDeviceSensorRelationshipsRequest) (*operations.UpdateDeviceSensorRelationshipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/sensor/relationships", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17684,9 +17684,9 @@ func (s *configure) UpdateDeviceSensorRelationships(ctx context.Context, request
 // Update a switch port
 func (s *configure) UpdateDeviceSwitchPort(ctx context.Context, request operations.UpdateDeviceSwitchPortRequest) (*operations.UpdateDeviceSwitchPortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/ports/{portId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17736,9 +17736,9 @@ func (s *configure) UpdateDeviceSwitchPort(ctx context.Context, request operatio
 // Update a layer 3 interface for a switch
 func (s *configure) UpdateDeviceSwitchRoutingInterface(ctx context.Context, request operations.UpdateDeviceSwitchRoutingInterfaceRequest) (*operations.UpdateDeviceSwitchRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17788,9 +17788,9 @@ func (s *configure) UpdateDeviceSwitchRoutingInterface(ctx context.Context, requ
 // Update a layer 3 interface DHCP configuration for a switch
 func (s *configure) UpdateDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, request operations.UpdateDeviceSwitchRoutingInterfaceDhcpRequest) (*operations.UpdateDeviceSwitchRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17840,9 +17840,9 @@ func (s *configure) UpdateDeviceSwitchRoutingInterfaceDhcp(ctx context.Context, 
 // Update a layer 3 static route for a switch
 func (s *configure) UpdateDeviceSwitchRoutingStaticRoute(ctx context.Context, request operations.UpdateDeviceSwitchRoutingStaticRouteRequest) (*operations.UpdateDeviceSwitchRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17892,9 +17892,9 @@ func (s *configure) UpdateDeviceSwitchRoutingStaticRoute(ctx context.Context, re
 // Update warm spare configuration for a switch. The spare will use the same L3 configuration as the primary. Note that this will irreversibly destroy any existing L3 configuration on the spare.
 func (s *configure) UpdateDeviceSwitchWarmSpare(ctx context.Context, request operations.UpdateDeviceSwitchWarmSpareRequest) (*operations.UpdateDeviceSwitchWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/warmSpare", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switch/warmSpare", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17947,9 +17947,9 @@ func (s *configure) UpdateDeviceSwitchWarmSpare(ctx context.Context, request ope
 // Update the bluetooth settings for a wireless device
 func (s *configure) UpdateDeviceWirelessBluetoothSettings(ctx context.Context, request operations.UpdateDeviceWirelessBluetoothSettingsRequest) (*operations.UpdateDeviceWirelessBluetoothSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/bluetooth/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/bluetooth/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -17999,9 +17999,9 @@ func (s *configure) UpdateDeviceWirelessBluetoothSettings(ctx context.Context, r
 // Update the radio settings of a device
 func (s *configure) UpdateDeviceWirelessRadioSettings(ctx context.Context, request operations.UpdateDeviceWirelessRadioSettingsRequest) (*operations.UpdateDeviceWirelessRadioSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/radio/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/wireless/radio/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18051,9 +18051,9 @@ func (s *configure) UpdateDeviceWirelessRadioSettings(ctx context.Context, reque
 // Update a network
 func (s *configure) UpdateNetwork(ctx context.Context, request operations.UpdateNetworkRequest) (*operations.UpdateNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18103,9 +18103,9 @@ func (s *configure) UpdateNetwork(ctx context.Context, request operations.Update
 // Update the alert configuration for this network
 func (s *configure) UpdateNetworkAlertsSettings(ctx context.Context, request operations.UpdateNetworkAlertsSettingsRequest) (*operations.UpdateNetworkAlertsSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alerts/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alerts/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18155,9 +18155,9 @@ func (s *configure) UpdateNetworkAlertsSettings(ctx context.Context, request ope
 // Update the connectivity testing destinations for an MX network
 func (s *configure) UpdateNetworkApplianceConnectivityMonitoringDestinations(ctx context.Context, request operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsRequest) (*operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18207,9 +18207,9 @@ func (s *configure) UpdateNetworkApplianceConnectivityMonitoringDestinations(ctx
 // Update the content filtering settings for an MX network
 func (s *configure) UpdateNetworkApplianceContentFiltering(ctx context.Context, request operations.UpdateNetworkApplianceContentFilteringRequest) (*operations.UpdateNetworkApplianceContentFilteringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/contentFiltering", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18259,9 +18259,9 @@ func (s *configure) UpdateNetworkApplianceContentFiltering(ctx context.Context, 
 // Update the cellular firewall rules of an MX network
 func (s *configure) UpdateNetworkApplianceFirewallCellularFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallCellularFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/cellularFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18311,9 +18311,9 @@ func (s *configure) UpdateNetworkApplianceFirewallCellularFirewallRules(ctx cont
 // Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
 func (s *configure) UpdateNetworkApplianceFirewallFirewalledService(ctx context.Context, request operations.UpdateNetworkApplianceFirewallFirewalledServiceRequest) (*operations.UpdateNetworkApplianceFirewallFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/firewalledServices/{service}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18366,9 +18366,9 @@ func (s *configure) UpdateNetworkApplianceFirewallFirewalledService(ctx context.
 // Update the inbound cellular firewall rules of an MX network
 func (s *configure) UpdateNetworkApplianceFirewallInboundCellularFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18418,9 +18418,9 @@ func (s *configure) UpdateNetworkApplianceFirewallInboundCellularFirewallRules(c
 // Update the inbound firewall rules of an MX network
 func (s *configure) UpdateNetworkApplianceFirewallInboundFirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallInboundFirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallInboundFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/inboundFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18470,9 +18470,9 @@ func (s *configure) UpdateNetworkApplianceFirewallInboundFirewallRules(ctx conte
 // Update the L3 firewall rules of an MX network
 func (s *configure) UpdateNetworkApplianceFirewallL3FirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallL3FirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l3FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18522,9 +18522,9 @@ func (s *configure) UpdateNetworkApplianceFirewallL3FirewallRules(ctx context.Co
 // Update the MX L7 firewall rules for an MX network
 func (s *configure) UpdateNetworkApplianceFirewallL7FirewallRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallL7FirewallRulesRequest) (*operations.UpdateNetworkApplianceFirewallL7FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18574,9 +18574,9 @@ func (s *configure) UpdateNetworkApplianceFirewallL7FirewallRules(ctx context.Co
 // Set the 1:Many NAT mapping rules for an MX network
 func (s *configure) UpdateNetworkApplianceFirewallOneToManyNatRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallOneToManyNatRulesRequest) (*operations.UpdateNetworkApplianceFirewallOneToManyNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18629,9 +18629,9 @@ func (s *configure) UpdateNetworkApplianceFirewallOneToManyNatRules(ctx context.
 // Set the 1:1 NAT mapping rules for an MX network
 func (s *configure) UpdateNetworkApplianceFirewallOneToOneNatRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallOneToOneNatRulesRequest) (*operations.UpdateNetworkApplianceFirewallOneToOneNatRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/oneToOneNatRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18684,9 +18684,9 @@ func (s *configure) UpdateNetworkApplianceFirewallOneToOneNatRules(ctx context.C
 // Update the port forwarding rules for an MX network
 func (s *configure) UpdateNetworkApplianceFirewallPortForwardingRules(ctx context.Context, request operations.UpdateNetworkApplianceFirewallPortForwardingRulesRequest) (*operations.UpdateNetworkApplianceFirewallPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/portForwardingRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18739,9 +18739,9 @@ func (s *configure) UpdateNetworkApplianceFirewallPortForwardingRules(ctx contex
 // Update the firewall settings for this network
 func (s *configure) UpdateNetworkApplianceFirewallSettings(ctx context.Context, request operations.UpdateNetworkApplianceFirewallSettingsRequest) (*operations.UpdateNetworkApplianceFirewallSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/firewall/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18791,9 +18791,9 @@ func (s *configure) UpdateNetworkApplianceFirewallSettings(ctx context.Context, 
 // Update the per-port VLAN settings for a single MX port.
 func (s *configure) UpdateNetworkAppliancePort(ctx context.Context, request operations.UpdateNetworkAppliancePortRequest) (*operations.UpdateNetworkAppliancePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ports/{portId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18843,9 +18843,9 @@ func (s *configure) UpdateNetworkAppliancePort(ctx context.Context, request oper
 // Update a static delegated prefix from a network
 func (s *configure) UpdateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.UpdateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.UpdateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18895,9 +18895,9 @@ func (s *configure) UpdateNetworkAppliancePrefixesDelegatedStatic(ctx context.Co
 // Set the supported intrusion settings for an MX network
 func (s *configure) UpdateNetworkApplianceSecurityIntrusion(ctx context.Context, request operations.UpdateNetworkApplianceSecurityIntrusionRequest) (*operations.UpdateNetworkApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/intrusion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18947,9 +18947,9 @@ func (s *configure) UpdateNetworkApplianceSecurityIntrusion(ctx context.Context,
 // Set the supported malware settings for an MX network
 func (s *configure) UpdateNetworkApplianceSecurityMalware(ctx context.Context, request operations.UpdateNetworkApplianceSecurityMalwareRequest) (*operations.UpdateNetworkApplianceSecurityMalwareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/security/malware", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19002,9 +19002,9 @@ func (s *configure) UpdateNetworkApplianceSecurityMalware(ctx context.Context, r
 // Update the appliance settings for a network
 func (s *configure) UpdateNetworkApplianceSettings(ctx context.Context, request operations.UpdateNetworkApplianceSettingsRequest) (*operations.UpdateNetworkApplianceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19054,9 +19054,9 @@ func (s *configure) UpdateNetworkApplianceSettings(ctx context.Context, request 
 // Update single LAN configuration
 func (s *configure) UpdateNetworkApplianceSingleLan(ctx context.Context, request operations.UpdateNetworkApplianceSingleLanRequest) (*operations.UpdateNetworkApplianceSingleLanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/singleLan", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19106,9 +19106,9 @@ func (s *configure) UpdateNetworkApplianceSingleLan(ctx context.Context, request
 // Update the attributes of an MX SSID
 func (s *configure) UpdateNetworkApplianceSsid(ctx context.Context, request operations.UpdateNetworkApplianceSsidRequest) (*operations.UpdateNetworkApplianceSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/ssids/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19158,9 +19158,9 @@ func (s *configure) UpdateNetworkApplianceSsid(ctx context.Context, request oper
 // Update a static route for an MX or teleworker network
 func (s *configure) UpdateNetworkApplianceStaticRoute(ctx context.Context, request operations.UpdateNetworkApplianceStaticRouteRequest) (*operations.UpdateNetworkApplianceStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19210,9 +19210,9 @@ func (s *configure) UpdateNetworkApplianceStaticRoute(ctx context.Context, reque
 // Update the traffic shaping settings for an MX network
 func (s *configure) UpdateNetworkApplianceTrafficShaping(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingRequest) (*operations.UpdateNetworkApplianceTrafficShapingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19262,9 +19262,9 @@ func (s *configure) UpdateNetworkApplianceTrafficShaping(ctx context.Context, re
 // Update a custom performance class for an MX network
 func (s *configure) UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest) (*operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19314,9 +19314,9 @@ func (s *configure) UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(c
 // Update the traffic shaping settings rules for an MX network
 func (s *configure) UpdateNetworkApplianceTrafficShapingRules(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingRulesRequest) (*operations.UpdateNetworkApplianceTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/rules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19366,9 +19366,9 @@ func (s *configure) UpdateNetworkApplianceTrafficShapingRules(ctx context.Contex
 // Updates the uplink bandwidth settings for your MX network.
 func (s *configure) UpdateNetworkApplianceTrafficShapingUplinkBandwidth(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest) (*operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19418,9 +19418,9 @@ func (s *configure) UpdateNetworkApplianceTrafficShapingUplinkBandwidth(ctx cont
 // Update uplink selection settings for an MX network
 func (s *configure) UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx context.Context, request operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest) (*operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19470,9 +19470,9 @@ func (s *configure) UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx cont
 // Update a VLAN
 func (s *configure) UpdateNetworkApplianceVlan(ctx context.Context, request operations.UpdateNetworkApplianceVlanRequest) (*operations.UpdateNetworkApplianceVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/{vlanId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19522,9 +19522,9 @@ func (s *configure) UpdateNetworkApplianceVlan(ctx context.Context, request oper
 // Enable/Disable VLANs for the given network
 func (s *configure) UpdateNetworkApplianceVlansSettings(ctx context.Context, request operations.UpdateNetworkApplianceVlansSettingsRequest) (*operations.UpdateNetworkApplianceVlansSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vlans/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19574,9 +19574,9 @@ func (s *configure) UpdateNetworkApplianceVlansSettings(ctx context.Context, req
 // Update a Hub BGP Configuration
 func (s *configure) UpdateNetworkApplianceVpnBgp(ctx context.Context, request operations.UpdateNetworkApplianceVpnBgpRequest) (*operations.UpdateNetworkApplianceVpnBgpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/bgp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19629,9 +19629,9 @@ func (s *configure) UpdateNetworkApplianceVpnBgp(ctx context.Context, request op
 // Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.
 func (s *configure) UpdateNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, request operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest) (*operations.UpdateNetworkApplianceVpnSiteToSiteVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19684,9 +19684,9 @@ func (s *configure) UpdateNetworkApplianceVpnSiteToSiteVpn(ctx context.Context, 
 // Update MX warm spare settings
 func (s *configure) UpdateNetworkApplianceWarmSpare(ctx context.Context, request operations.UpdateNetworkApplianceWarmSpareRequest) (*operations.UpdateNetworkApplianceWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/warmSpare", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19739,9 +19739,9 @@ func (s *configure) UpdateNetworkApplianceWarmSpare(ctx context.Context, request
 // Update an existing quality retention profile for this network.
 func (s *configure) UpdateNetworkCameraQualityRetentionProfile(ctx context.Context, request operations.UpdateNetworkCameraQualityRetentionProfileRequest) (*operations.UpdateNetworkCameraQualityRetentionProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19791,9 +19791,9 @@ func (s *configure) UpdateNetworkCameraQualityRetentionProfile(ctx context.Conte
 // Update an existing camera wireless profile in this network.
 func (s *configure) UpdateNetworkCameraWirelessProfile(ctx context.Context, request operations.UpdateNetworkCameraWirelessProfileRequest) (*operations.UpdateNetworkCameraWirelessProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19843,9 +19843,9 @@ func (s *configure) UpdateNetworkCameraWirelessProfile(ctx context.Context, requ
 // Update the connectivity testing destinations for an MG network
 func (s *configure) UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(ctx context.Context, request operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest) (*operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19895,9 +19895,9 @@ func (s *configure) UpdateNetworkCellularGatewayConnectivityMonitoringDestinatio
 // Update common DHCP settings of MGs
 func (s *configure) UpdateNetworkCellularGatewayDhcp(ctx context.Context, request operations.UpdateNetworkCellularGatewayDhcpRequest) (*operations.UpdateNetworkCellularGatewayDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19947,9 +19947,9 @@ func (s *configure) UpdateNetworkCellularGatewayDhcp(ctx context.Context, reques
 // Update the subnet pool and mask configuration for MGs in the network.
 func (s *configure) UpdateNetworkCellularGatewaySubnetPool(ctx context.Context, request operations.UpdateNetworkCellularGatewaySubnetPoolRequest) (*operations.UpdateNetworkCellularGatewaySubnetPoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/subnetPool", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19999,9 +19999,9 @@ func (s *configure) UpdateNetworkCellularGatewaySubnetPool(ctx context.Context, 
 // Updates the uplink settings for your MG network.
 func (s *configure) UpdateNetworkCellularGatewayUplink(ctx context.Context, request operations.UpdateNetworkCellularGatewayUplinkRequest) (*operations.UpdateNetworkCellularGatewayUplinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cellularGateway/uplink", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20051,9 +20051,9 @@ func (s *configure) UpdateNetworkCellularGatewayUplink(ctx context.Context, requ
 // Update the policy assigned to a client on the network. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *configure) UpdateNetworkClientPolicy(ctx context.Context, request operations.UpdateNetworkClientPolicyRequest) (*operations.UpdateNetworkClientPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/policy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20106,9 +20106,9 @@ func (s *configure) UpdateNetworkClientPolicy(ctx context.Context, request opera
 // Update a client's splash authorization. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
 func (s *configure) UpdateNetworkClientSplashAuthorizationStatus(ctx context.Context, request operations.UpdateNetworkClientSplashAuthorizationStatusRequest) (*operations.UpdateNetworkClientSplashAuthorizationStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20161,9 +20161,9 @@ func (s *configure) UpdateNetworkClientSplashAuthorizationStatus(ctx context.Con
 // Update firmware upgrade information for a network
 func (s *configure) UpdateNetworkFirmwareUpgrades(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesRequest) (*operations.UpdateNetworkFirmwareUpgradesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20213,9 +20213,9 @@ func (s *configure) UpdateNetworkFirmwareUpgrades(ctx context.Context, request o
 // Update the Staged Upgrade Event for a network
 func (s *configure) UpdateNetworkFirmwareUpgradesStagedEvents(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedEventsRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20268,9 +20268,9 @@ func (s *configure) UpdateNetworkFirmwareUpgradesStagedEvents(ctx context.Contex
 // Update a Staged Upgrade Group for a network
 func (s *configure) UpdateNetworkFirmwareUpgradesStagedGroup(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20323,9 +20323,9 @@ func (s *configure) UpdateNetworkFirmwareUpgradesStagedGroup(ctx context.Context
 // Assign Staged Upgrade Group order in the sequence.
 func (s *configure) UpdateNetworkFirmwareUpgradesStagedStages(ctx context.Context, request operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest) (*operations.UpdateNetworkFirmwareUpgradesStagedStagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20375,9 +20375,9 @@ func (s *configure) UpdateNetworkFirmwareUpgradesStagedStages(ctx context.Contex
 // Update a floor plan's geolocation and other meta data
 func (s *configure) UpdateNetworkFloorPlan(ctx context.Context, request operations.UpdateNetworkFloorPlanRequest) (*operations.UpdateNetworkFloorPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/floorPlans/{floorPlanId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20427,9 +20427,9 @@ func (s *configure) UpdateNetworkFloorPlan(ctx context.Context, request operatio
 // Update a group policy
 func (s *configure) UpdateNetworkGroupPolicy(ctx context.Context, request operations.UpdateNetworkGroupPolicyRequest) (*operations.UpdateNetworkGroupPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20479,9 +20479,9 @@ func (s *configure) UpdateNetworkGroupPolicy(ctx context.Context, request operat
 // Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)
 func (s *configure) UpdateNetworkMerakiAuthUser(ctx context.Context, request operations.UpdateNetworkMerakiAuthUserRequest) (*operations.UpdateNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20531,9 +20531,9 @@ func (s *configure) UpdateNetworkMerakiAuthUser(ctx context.Context, request ope
 // Update an MQTT broker
 func (s *configure) UpdateNetworkMqttBroker(ctx context.Context, request operations.UpdateNetworkMqttBrokerRequest) (*operations.UpdateNetworkMqttBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20583,9 +20583,9 @@ func (s *configure) UpdateNetworkMqttBroker(ctx context.Context, request operati
 // Update the NetFlow traffic reporting settings for a network
 func (s *configure) UpdateNetworkNetflow(ctx context.Context, request operations.UpdateNetworkNetflowRequest) (*operations.UpdateNetworkNetflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/netflow", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20635,9 +20635,9 @@ func (s *configure) UpdateNetworkNetflow(ctx context.Context, request operations
 // Updates a sensor alert profile for a network.
 func (s *configure) UpdateNetworkSensorAlertsProfile(ctx context.Context, request operations.UpdateNetworkSensorAlertsProfileRequest) (*operations.UpdateNetworkSensorAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20687,9 +20687,9 @@ func (s *configure) UpdateNetworkSensorAlertsProfile(ctx context.Context, reques
 // Update the settings for a network
 func (s *configure) UpdateNetworkSettings(ctx context.Context, request operations.UpdateNetworkSettingsRequest) (*operations.UpdateNetworkSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20739,9 +20739,9 @@ func (s *configure) UpdateNetworkSettings(ctx context.Context, request operation
 // Modify the fields of a device
 func (s *configure) UpdateNetworkSmDevicesFields(ctx context.Context, request operations.UpdateNetworkSmDevicesFieldsRequest) (*operations.UpdateNetworkSmDevicesFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/fields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20794,9 +20794,9 @@ func (s *configure) UpdateNetworkSmDevicesFields(ctx context.Context, request op
 // Update a target group
 func (s *configure) UpdateNetworkSmTargetGroup(ctx context.Context, request operations.UpdateNetworkSmTargetGroupRequest) (*operations.UpdateNetworkSmTargetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20846,9 +20846,9 @@ func (s *configure) UpdateNetworkSmTargetGroup(ctx context.Context, request oper
 // Update the SNMP settings for a network
 func (s *configure) UpdateNetworkSnmp(ctx context.Context, request operations.UpdateNetworkSnmpRequest) (*operations.UpdateNetworkSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/snmp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20898,9 +20898,9 @@ func (s *configure) UpdateNetworkSnmp(ctx context.Context, request operations.Up
 // Update the access control lists for a MS network
 func (s *configure) UpdateNetworkSwitchAccessControlLists(ctx context.Context, request operations.UpdateNetworkSwitchAccessControlListsRequest) (*operations.UpdateNetworkSwitchAccessControlListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessControlLists", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20953,9 +20953,9 @@ func (s *configure) UpdateNetworkSwitchAccessControlLists(ctx context.Context, r
 // Update an access policy for a switch network. If you would like to enable Meraki Authentication, set radiusServers to empty array.
 func (s *configure) UpdateNetworkSwitchAccessPolicy(ctx context.Context, request operations.UpdateNetworkSwitchAccessPolicyRequest) (*operations.UpdateNetworkSwitchAccessPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21005,9 +21005,9 @@ func (s *configure) UpdateNetworkSwitchAccessPolicy(ctx context.Context, request
 // Update the switch alternate management interface for the network
 func (s *configure) UpdateNetworkSwitchAlternateManagementInterface(ctx context.Context, request operations.UpdateNetworkSwitchAlternateManagementInterfaceRequest) (*operations.UpdateNetworkSwitchAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/alternateManagementInterface", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21057,9 +21057,9 @@ func (s *configure) UpdateNetworkSwitchAlternateManagementInterface(ctx context.
 // Update the DHCP server settings. Blocked/allowed servers are only applied when default policy is allow/block, respectively
 func (s *configure) UpdateNetworkSwitchDhcpServerPolicy(ctx context.Context, request operations.UpdateNetworkSwitchDhcpServerPolicyRequest) (*operations.UpdateNetworkSwitchDhcpServerPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21109,9 +21109,9 @@ func (s *configure) UpdateNetworkSwitchDhcpServerPolicy(ctx context.Context, req
 // Update a server that is trusted by Dynamic ARP Inspection on this network
 func (s *configure) UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx context.Context, request operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest) (*operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21161,9 +21161,9 @@ func (s *configure) UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServe
 // Update the DSCP to CoS mappings
 func (s *configure) UpdateNetworkSwitchDscpToCosMappings(ctx context.Context, request operations.UpdateNetworkSwitchDscpToCosMappingsRequest) (*operations.UpdateNetworkSwitchDscpToCosMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dscpToCosMappings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dscpToCosMappings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21216,9 +21216,9 @@ func (s *configure) UpdateNetworkSwitchDscpToCosMappings(ctx context.Context, re
 // Update a link aggregation group
 func (s *configure) UpdateNetworkSwitchLinkAggregation(ctx context.Context, request operations.UpdateNetworkSwitchLinkAggregationRequest) (*operations.UpdateNetworkSwitchLinkAggregationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21268,9 +21268,9 @@ func (s *configure) UpdateNetworkSwitchLinkAggregation(ctx context.Context, requ
 // Update the MTU configuration
 func (s *configure) UpdateNetworkSwitchMtu(ctx context.Context, request operations.UpdateNetworkSwitchMtuRequest) (*operations.UpdateNetworkSwitchMtuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21320,9 +21320,9 @@ func (s *configure) UpdateNetworkSwitchMtu(ctx context.Context, request operatio
 // Update a switch port schedule
 func (s *configure) UpdateNetworkSwitchPortSchedule(ctx context.Context, request operations.UpdateNetworkSwitchPortScheduleRequest) (*operations.UpdateNetworkSwitchPortScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21372,9 +21372,9 @@ func (s *configure) UpdateNetworkSwitchPortSchedule(ctx context.Context, request
 // Update a quality of service rule
 func (s *configure) UpdateNetworkSwitchQosRule(ctx context.Context, request operations.UpdateNetworkSwitchQosRuleRequest) (*operations.UpdateNetworkSwitchQosRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21424,9 +21424,9 @@ func (s *configure) UpdateNetworkSwitchQosRule(ctx context.Context, request oper
 // Update the order in which the rules should be processed by the switch
 func (s *configure) UpdateNetworkSwitchQosRulesOrder(ctx context.Context, request operations.UpdateNetworkSwitchQosRulesOrderRequest) (*operations.UpdateNetworkSwitchQosRulesOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/qosRules/order", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21479,9 +21479,9 @@ func (s *configure) UpdateNetworkSwitchQosRulesOrder(ctx context.Context, reques
 // Update multicast settings for a network
 func (s *configure) UpdateNetworkSwitchRoutingMulticast(ctx context.Context, request operations.UpdateNetworkSwitchRoutingMulticastRequest) (*operations.UpdateNetworkSwitchRoutingMulticastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21531,9 +21531,9 @@ func (s *configure) UpdateNetworkSwitchRoutingMulticast(ctx context.Context, req
 // Update a multicast rendezvous point
 func (s *configure) UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx context.Context, request operations.UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest) (*operations.UpdateNetworkSwitchRoutingMulticastRendezvousPointResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21586,9 +21586,9 @@ func (s *configure) UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx conte
 // Update layer 3 OSPF routing configuration
 func (s *configure) UpdateNetworkSwitchRoutingOspf(ctx context.Context, request operations.UpdateNetworkSwitchRoutingOspfRequest) (*operations.UpdateNetworkSwitchRoutingOspfResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/ospf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/routing/ospf", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21638,9 +21638,9 @@ func (s *configure) UpdateNetworkSwitchRoutingOspf(ctx context.Context, request 
 // Update switch network settings
 func (s *configure) UpdateNetworkSwitchSettings(ctx context.Context, request operations.UpdateNetworkSwitchSettingsRequest) (*operations.UpdateNetworkSwitchSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21690,9 +21690,9 @@ func (s *configure) UpdateNetworkSwitchSettings(ctx context.Context, request ope
 // Update a layer 3 interface for a switch stack
 func (s *configure) UpdateNetworkSwitchStackRoutingInterface(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingInterfaceRequest) (*operations.UpdateNetworkSwitchStackRoutingInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21742,9 +21742,9 @@ func (s *configure) UpdateNetworkSwitchStackRoutingInterface(ctx context.Context
 // Update a layer 3 interface DHCP configuration for a switch stack
 func (s *configure) UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest) (*operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21794,9 +21794,9 @@ func (s *configure) UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx context.Con
 // Update a layer 3 static route for a switch stack
 func (s *configure) UpdateNetworkSwitchStackRoutingStaticRoute(ctx context.Context, request operations.UpdateNetworkSwitchStackRoutingStaticRouteRequest) (*operations.UpdateNetworkSwitchStackRoutingStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21846,9 +21846,9 @@ func (s *configure) UpdateNetworkSwitchStackRoutingStaticRoute(ctx context.Conte
 // Update the storm control configuration for a switch network
 func (s *configure) UpdateNetworkSwitchStormControl(ctx context.Context, request operations.UpdateNetworkSwitchStormControlRequest) (*operations.UpdateNetworkSwitchStormControlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stormControl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stormControl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21898,9 +21898,9 @@ func (s *configure) UpdateNetworkSwitchStormControl(ctx context.Context, request
 // Updates STP settings
 func (s *configure) UpdateNetworkSwitchStp(ctx context.Context, request operations.UpdateNetworkSwitchStpRequest) (*operations.UpdateNetworkSwitchStpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/stp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21950,9 +21950,9 @@ func (s *configure) UpdateNetworkSwitchStp(ctx context.Context, request operatio
 // Update the syslog servers for a network
 func (s *configure) UpdateNetworkSyslogServers(ctx context.Context, request operations.UpdateNetworkSyslogServersRequest) (*operations.UpdateNetworkSyslogServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/syslogServers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22005,9 +22005,9 @@ func (s *configure) UpdateNetworkSyslogServers(ctx context.Context, request oper
 // Update the traffic analysis settings for a network
 func (s *configure) UpdateNetworkTrafficAnalysis(ctx context.Context, request operations.UpdateNetworkTrafficAnalysisRequest) (*operations.UpdateNetworkTrafficAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/trafficAnalysis", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22057,9 +22057,9 @@ func (s *configure) UpdateNetworkTrafficAnalysis(ctx context.Context, request op
 // Update an HTTP server. To change a URL, create a new HTTP server.
 func (s *configure) UpdateNetworkWebhooksHTTPServer(ctx context.Context, request operations.UpdateNetworkWebhooksHTTPServerRequest) (*operations.UpdateNetworkWebhooksHTTPServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22109,9 +22109,9 @@ func (s *configure) UpdateNetworkWebhooksHTTPServer(ctx context.Context, request
 // Update a webhook payload template for a network
 func (s *configure) UpdateNetworkWebhooksPayloadTemplate(ctx context.Context, request operations.UpdateNetworkWebhooksPayloadTemplateRequest) (*operations.UpdateNetworkWebhooksPayloadTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22161,9 +22161,9 @@ func (s *configure) UpdateNetworkWebhooksPayloadTemplate(ctx context.Context, re
 // Update alternate management interface and device static IP
 func (s *configure) UpdateNetworkWirelessAlternateManagementInterface(ctx context.Context, request operations.UpdateNetworkWirelessAlternateManagementInterfaceRequest) (*operations.UpdateNetworkWirelessAlternateManagementInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/alternateManagementInterface", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22213,9 +22213,9 @@ func (s *configure) UpdateNetworkWirelessAlternateManagementInterface(ctx contex
 // Update the billing settings
 func (s *configure) UpdateNetworkWirelessBilling(ctx context.Context, request operations.UpdateNetworkWirelessBillingRequest) (*operations.UpdateNetworkWirelessBillingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/billing", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22265,9 +22265,9 @@ func (s *configure) UpdateNetworkWirelessBilling(ctx context.Context, request op
 // Update the Bluetooth settings for a network. See the docs page for <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a>.
 func (s *configure) UpdateNetworkWirelessBluetoothSettings(ctx context.Context, request operations.UpdateNetworkWirelessBluetoothSettingsRequest) (*operations.UpdateNetworkWirelessBluetoothSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/bluetooth/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/bluetooth/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22317,9 +22317,9 @@ func (s *configure) UpdateNetworkWirelessBluetoothSettings(ctx context.Context, 
 // Updates specified RF profile for this network
 func (s *configure) UpdateNetworkWirelessRfProfile(ctx context.Context, request operations.UpdateNetworkWirelessRfProfileRequest) (*operations.UpdateNetworkWirelessRfProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22369,9 +22369,9 @@ func (s *configure) UpdateNetworkWirelessRfProfile(ctx context.Context, request 
 // Update the wireless settings for a network
 func (s *configure) UpdateNetworkWirelessSettings(ctx context.Context, request operations.UpdateNetworkWirelessSettingsRequest) (*operations.UpdateNetworkWirelessSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22421,9 +22421,9 @@ func (s *configure) UpdateNetworkWirelessSettings(ctx context.Context, request o
 // Update the attributes of an MR SSID
 func (s *configure) UpdateNetworkWirelessSsid(ctx context.Context, request operations.UpdateNetworkWirelessSsidRequest) (*operations.UpdateNetworkWirelessSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22473,9 +22473,9 @@ func (s *configure) UpdateNetworkWirelessSsid(ctx context.Context, request opera
 // Update the bonjour forwarding setting and rules for the SSID
 func (s *configure) UpdateNetworkWirelessSsidBonjourForwarding(ctx context.Context, request operations.UpdateNetworkWirelessSsidBonjourForwardingRequest) (*operations.UpdateNetworkWirelessSsidBonjourForwardingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22525,9 +22525,9 @@ func (s *configure) UpdateNetworkWirelessSsidBonjourForwarding(ctx context.Conte
 // Update the device type group policies for the SSID
 func (s *configure) UpdateNetworkWirelessSsidDeviceTypeGroupPolicies(ctx context.Context, request operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest) (*operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22577,9 +22577,9 @@ func (s *configure) UpdateNetworkWirelessSsidDeviceTypeGroupPolicies(ctx context
 // Update the EAP overridden parameters for an SSID.
 func (s *configure) UpdateNetworkWirelessSsidEapOverride(ctx context.Context, request operations.UpdateNetworkWirelessSsidEapOverrideRequest) (*operations.UpdateNetworkWirelessSsidEapOverrideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22629,9 +22629,9 @@ func (s *configure) UpdateNetworkWirelessSsidEapOverride(ctx context.Context, re
 // Update the L3 firewall rules of an SSID on an MR network
 func (s *configure) UpdateNetworkWirelessSsidFirewallL3FirewallRules(ctx context.Context, request operations.UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest) (*operations.UpdateNetworkWirelessSsidFirewallL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22681,9 +22681,9 @@ func (s *configure) UpdateNetworkWirelessSsidFirewallL3FirewallRules(ctx context
 // Update the L7 firewall rules of an SSID on an MR network
 func (s *configure) UpdateNetworkWirelessSsidFirewallL7FirewallRules(ctx context.Context, request operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesRequest) (*operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22733,9 +22733,9 @@ func (s *configure) UpdateNetworkWirelessSsidFirewallL7FirewallRules(ctx context
 // Update the Hotspot 2.0 settings of an SSID
 func (s *configure) UpdateNetworkWirelessSsidHotspot20(ctx context.Context, request operations.UpdateNetworkWirelessSsidHotspot20Request) (*operations.UpdateNetworkWirelessSsidHotspot20Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22785,9 +22785,9 @@ func (s *configure) UpdateNetworkWirelessSsidHotspot20(ctx context.Context, requ
 // Update an Identity PSK
 func (s *configure) UpdateNetworkWirelessSsidIdentityPsk(ctx context.Context, request operations.UpdateNetworkWirelessSsidIdentityPskRequest) (*operations.UpdateNetworkWirelessSsidIdentityPskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22837,9 +22837,9 @@ func (s *configure) UpdateNetworkWirelessSsidIdentityPsk(ctx context.Context, re
 // Update the outage schedule for the SSID
 func (s *configure) UpdateNetworkWirelessSsidSchedules(ctx context.Context, request operations.UpdateNetworkWirelessSsidSchedulesRequest) (*operations.UpdateNetworkWirelessSsidSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22889,9 +22889,9 @@ func (s *configure) UpdateNetworkWirelessSsidSchedules(ctx context.Context, requ
 // Modify the splash page settings for the given SSID
 func (s *configure) UpdateNetworkWirelessSsidSplashSettings(ctx context.Context, request operations.UpdateNetworkWirelessSsidSplashSettingsRequest) (*operations.UpdateNetworkWirelessSsidSplashSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22941,9 +22941,9 @@ func (s *configure) UpdateNetworkWirelessSsidSplashSettings(ctx context.Context,
 // Update the traffic shaping settings for an SSID on an MR network
 func (s *configure) UpdateNetworkWirelessSsidTrafficShapingRules(ctx context.Context, request operations.UpdateNetworkWirelessSsidTrafficShapingRulesRequest) (*operations.UpdateNetworkWirelessSsidTrafficShapingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22993,9 +22993,9 @@ func (s *configure) UpdateNetworkWirelessSsidTrafficShapingRules(ctx context.Con
 // Update the VPN settings for the SSID
 func (s *configure) UpdateNetworkWirelessSsidVpn(ctx context.Context, request operations.UpdateNetworkWirelessSsidVpnRequest) (*operations.UpdateNetworkWirelessSsidVpnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23045,9 +23045,9 @@ func (s *configure) UpdateNetworkWirelessSsidVpn(ctx context.Context, request op
 // Update an organization
 func (s *configure) UpdateOrganization(ctx context.Context, request operations.UpdateOrganizationRequest) (*operations.UpdateOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23097,9 +23097,9 @@ func (s *configure) UpdateOrganization(ctx context.Context, request operations.U
 // Update an action batch
 func (s *configure) UpdateOrganizationActionBatch(ctx context.Context, request operations.UpdateOrganizationActionBatchRequest) (*operations.UpdateOrganizationActionBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23149,9 +23149,9 @@ func (s *configure) UpdateOrganizationActionBatch(ctx context.Context, request o
 // Updates an adaptive policy ACL
 func (s *configure) UpdateOrganizationAdaptivePolicyACL(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyACLRequest) (*operations.UpdateOrganizationAdaptivePolicyACLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23201,9 +23201,9 @@ func (s *configure) UpdateOrganizationAdaptivePolicyACL(ctx context.Context, req
 // Updates an adaptive policy group. If updating "Infrastructure", only the SGT is allowed. Cannot update "Unknown".
 func (s *configure) UpdateOrganizationAdaptivePolicyGroup(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyGroupRequest) (*operations.UpdateOrganizationAdaptivePolicyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23253,9 +23253,9 @@ func (s *configure) UpdateOrganizationAdaptivePolicyGroup(ctx context.Context, r
 // Update an Adaptive Policy
 func (s *configure) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicyPolicyRequest) (*operations.UpdateOrganizationAdaptivePolicyPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23305,9 +23305,9 @@ func (s *configure) UpdateOrganizationAdaptivePolicyPolicy(ctx context.Context, 
 // Update global adaptive policy settings
 func (s *configure) UpdateOrganizationAdaptivePolicySettings(ctx context.Context, request operations.UpdateOrganizationAdaptivePolicySettingsRequest) (*operations.UpdateOrganizationAdaptivePolicySettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/adaptivePolicy/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23357,9 +23357,9 @@ func (s *configure) UpdateOrganizationAdaptivePolicySettings(ctx context.Context
 // Update an administrator
 func (s *configure) UpdateOrganizationAdmin(ctx context.Context, request operations.UpdateOrganizationAdminRequest) (*operations.UpdateOrganizationAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/admins/{adminId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23409,9 +23409,9 @@ func (s *configure) UpdateOrganizationAdmin(ctx context.Context, request operati
 // Update an organization-wide alert config
 func (s *configure) UpdateOrganizationAlertsProfile(ctx context.Context, request operations.UpdateOrganizationAlertsProfileRequest) (*operations.UpdateOrganizationAlertsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23461,9 +23461,9 @@ func (s *configure) UpdateOrganizationAlertsProfile(ctx context.Context, request
 // Sets supported intrusion settings for an organization
 func (s *configure) UpdateOrganizationApplianceSecurityIntrusion(ctx context.Context, request operations.UpdateOrganizationApplianceSecurityIntrusionRequest) (*operations.UpdateOrganizationApplianceSecurityIntrusionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/security/intrusion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23516,9 +23516,9 @@ func (s *configure) UpdateOrganizationApplianceSecurityIntrusion(ctx context.Con
 // Update the third party VPN peers for an organization
 func (s *configure) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context.Context, request operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest) (*operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23571,9 +23571,9 @@ func (s *configure) UpdateOrganizationApplianceVPNThirdPartyVPNPeers(ctx context
 // Update the firewall rules of an organization's site-to-site VPN
 func (s *configure) UpdateOrganizationApplianceVpnVpnFirewallRules(ctx context.Context, request operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest) (*operations.UpdateOrganizationApplianceVpnVpnFirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23623,9 +23623,9 @@ func (s *configure) UpdateOrganizationApplianceVpnVpnFirewallRules(ctx context.C
 // Update the priority ordering of an organization's branding policies.
 func (s *configure) UpdateOrganizationBrandingPoliciesPriorities(ctx context.Context, request operations.UpdateOrganizationBrandingPoliciesPrioritiesRequest) (*operations.UpdateOrganizationBrandingPoliciesPrioritiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/priorities", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23675,9 +23675,9 @@ func (s *configure) UpdateOrganizationBrandingPoliciesPriorities(ctx context.Con
 // Update a branding policy
 func (s *configure) UpdateOrganizationBrandingPolicy(ctx context.Context, request operations.UpdateOrganizationBrandingPolicyRequest) (*operations.UpdateOrganizationBrandingPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23727,9 +23727,9 @@ func (s *configure) UpdateOrganizationBrandingPolicy(ctx context.Context, reques
 // Notify that credential handoff to camera has completed
 func (s *configure) UpdateOrganizationCameraOnboardingStatuses(ctx context.Context, request operations.UpdateOrganizationCameraOnboardingStatusesRequest) (*operations.UpdateOrganizationCameraOnboardingStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/camera/onboarding/statuses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23779,9 +23779,9 @@ func (s *configure) UpdateOrganizationCameraOnboardingStatuses(ctx context.Conte
 // Update a configuration template
 func (s *configure) UpdateOrganizationConfigTemplate(ctx context.Context, request operations.UpdateOrganizationConfigTemplateRequest) (*operations.UpdateOrganizationConfigTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23831,9 +23831,9 @@ func (s *configure) UpdateOrganizationConfigTemplate(ctx context.Context, reques
 // Update a switch profile port
 func (s *configure) UpdateOrganizationConfigTemplateSwitchProfilePort(ctx context.Context, request operations.UpdateOrganizationConfigTemplateSwitchProfilePortRequest) (*operations.UpdateOrganizationConfigTemplateSwitchProfilePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23883,9 +23883,9 @@ func (s *configure) UpdateOrganizationConfigTemplateSwitchProfilePort(ctx contex
 // Update an early access feature opt-in for an organization
 func (s *configure) UpdateOrganizationEarlyAccessFeaturesOptIn(ctx context.Context, request operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest) (*operations.UpdateOrganizationEarlyAccessFeaturesOptInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23935,9 +23935,9 @@ func (s *configure) UpdateOrganizationEarlyAccessFeaturesOptIn(ctx context.Conte
 // Update a monitored media server for this organization. Only valid for organizations with Meraki Insight.
 func (s *configure) UpdateOrganizationInsightMonitoredMediaServer(ctx context.Context, request operations.UpdateOrganizationInsightMonitoredMediaServerRequest) (*operations.UpdateOrganizationInsightMonitoredMediaServerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23987,9 +23987,9 @@ func (s *configure) UpdateOrganizationInsightMonitoredMediaServer(ctx context.Co
 // Update a license
 func (s *configure) UpdateOrganizationLicense(ctx context.Context, request operations.UpdateOrganizationLicenseRequest) (*operations.UpdateOrganizationLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/licenses/{licenseId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24039,9 +24039,9 @@ func (s *configure) UpdateOrganizationLicense(ctx context.Context, request opera
 // Update the login security settings for an organization
 func (s *configure) UpdateOrganizationLoginSecurity(ctx context.Context, request operations.UpdateOrganizationLoginSecurityRequest) (*operations.UpdateOrganizationLoginSecurityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/loginSecurity", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24091,9 +24091,9 @@ func (s *configure) UpdateOrganizationLoginSecurity(ctx context.Context, request
 // Updates a Policy Object.
 func (s *configure) UpdateOrganizationPolicyObject(ctx context.Context, request operations.UpdateOrganizationPolicyObjectRequest) (*operations.UpdateOrganizationPolicyObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24143,9 +24143,9 @@ func (s *configure) UpdateOrganizationPolicyObject(ctx context.Context, request 
 // Updates a Policy Object Group.
 func (s *configure) UpdateOrganizationPolicyObjectsGroup(ctx context.Context, request operations.UpdateOrganizationPolicyObjectsGroupRequest) (*operations.UpdateOrganizationPolicyObjectsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24195,9 +24195,9 @@ func (s *configure) UpdateOrganizationPolicyObjectsGroup(ctx context.Context, re
 // Updates the SAML SSO enabled settings for an organization.
 func (s *configure) UpdateOrganizationSaml(ctx context.Context, request operations.UpdateOrganizationSamlRequest) (*operations.UpdateOrganizationSamlResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24247,9 +24247,9 @@ func (s *configure) UpdateOrganizationSaml(ctx context.Context, request operatio
 // Update a SAML IdP in your organization
 func (s *configure) UpdateOrganizationSamlIdp(ctx context.Context, request operations.UpdateOrganizationSamlIdpRequest) (*operations.UpdateOrganizationSamlIdpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/saml/idps/{idpId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24299,9 +24299,9 @@ func (s *configure) UpdateOrganizationSamlIdp(ctx context.Context, request opera
 // Update a SAML role
 func (s *configure) UpdateOrganizationSamlRole(ctx context.Context, request operations.UpdateOrganizationSamlRoleRequest) (*operations.UpdateOrganizationSamlRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24351,9 +24351,9 @@ func (s *configure) UpdateOrganizationSamlRole(ctx context.Context, request oper
 // Update the SNMP settings for an organization
 func (s *configure) UpdateOrganizationSnmp(ctx context.Context, request operations.UpdateOrganizationSnmpRequest) (*operations.UpdateOrganizationSnmpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/snmp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24403,9 +24403,9 @@ func (s *configure) UpdateOrganizationSnmp(ctx context.Context, request operatio
 // Claim a vMX into a network
 func (s *configure) VmxNetworkDevicesClaim(ctx context.Context, request operations.VmxNetworkDevicesClaimRequest) (*operations.VmxNetworkDevicesClaimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim/vmx", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/claim/vmx", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24458,9 +24458,9 @@ func (s *configure) VmxNetworkDevicesClaim(ctx context.Context, request operatio
 // Wipe a device
 func (s *configure) WipeNetworkSmDevices(ctx context.Context, request operations.WipeNetworkSmDevicesRequest) (*operations.WipeNetworkSmDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/wipe", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/sm/devices/wipe", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

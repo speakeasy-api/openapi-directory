@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AccessTokenPutJSONRequest struct {
-	Request shared.AccessTokenToPut `request:"mediaType=application/json"`
-}
 
 type AccessTokenPutJSONResponse struct {
 	// OK

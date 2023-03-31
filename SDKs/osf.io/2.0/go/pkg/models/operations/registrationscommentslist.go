@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type RegistrationsCommentsListPathParams struct {
+type RegistrationsCommentsListRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsCommentsListRequest struct {
-	PathParams RegistrationsCommentsListPathParams
 }
 
 // RegistrationsCommentsListCommentAttributes - The properties of the comment entity.

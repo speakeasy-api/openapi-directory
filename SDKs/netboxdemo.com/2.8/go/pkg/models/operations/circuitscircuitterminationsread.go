@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CircuitsCircuitTerminationsReadPathParams struct {
+type CircuitsCircuitTerminationsReadRequest struct {
 	// A unique integer value identifying this circuit termination.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CircuitsCircuitTerminationsReadRequest struct {
-	PathParams CircuitsCircuitTerminationsReadPathParams
 }
 
 type CircuitsCircuitTerminationsReadResponse struct {

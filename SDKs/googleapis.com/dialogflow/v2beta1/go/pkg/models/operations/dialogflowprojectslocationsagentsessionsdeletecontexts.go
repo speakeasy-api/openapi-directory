@@ -8,13 +8,13 @@ import (
 )
 
 type DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurity struct {
@@ -22,12 +22,7 @@ type DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurity struct {
 	Option2 *DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurityOption2 `security:"option"`
 }
 
-type DialogflowProjectsLocationsAgentSessionsDeleteContextsPathParams struct {
-	// Required. The name of the session to delete all contexts from. Supported formats: - `projects//agent/sessions/, - `projects//locations//agent/sessions/`, - `projects//agent/environments//users//sessions/`, - `projects//locations//agent/environments//users//sessions/`, If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DialogflowProjectsLocationsAgentSessionsDeleteContextsQueryParams struct {
+type DialogflowProjectsLocationsAgentSessionsDeleteContextsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type DialogflowProjectsLocationsAgentSessionsDeleteContextsQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The name of the session to delete all contexts from. Supported formats: - `projects//agent/sessions/, - `projects//locations//agent/sessions/`, - `projects//agent/environments//users//sessions/`, - `projects//locations//agent/environments//users//sessions/`, If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,12 +47,6 @@ type DialogflowProjectsLocationsAgentSessionsDeleteContextsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DialogflowProjectsLocationsAgentSessionsDeleteContextsRequest struct {
-	PathParams  DialogflowProjectsLocationsAgentSessionsDeleteContextsPathParams
-	QueryParams DialogflowProjectsLocationsAgentSessionsDeleteContextsQueryParams
-	Security    DialogflowProjectsLocationsAgentSessionsDeleteContextsSecurity
 }
 
 type DialogflowProjectsLocationsAgentSessionsDeleteContextsResponse struct {

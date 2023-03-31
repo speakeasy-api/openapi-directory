@@ -9,15 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CopyTemplateQueryParams struct {
+type CopyTemplateRequest struct {
 	// Name for the copied template. If name is not specified then the original name is used.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Template unique identifier
 	TemplateID int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type CopyTemplateRequest struct {
-	QueryParams CopyTemplateQueryParams
 }
 
 // CopyTemplate500ApplicationJSON - Internal Server Error

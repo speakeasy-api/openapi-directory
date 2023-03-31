@@ -10,23 +10,18 @@ import (
 )
 
 type CalendarEventsQuickAddSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsQuickAddSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsQuickAddSecurity struct {
 	Option1 *CalendarEventsQuickAddSecurityOption1 `security:"option"`
 	Option2 *CalendarEventsQuickAddSecurityOption2 `security:"option"`
-}
-
-type CalendarEventsQuickAddPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 }
 
 // CalendarEventsQuickAddSendUpdatesEnum - Guests who should receive notifications about the creation of the new event.
@@ -56,9 +51,11 @@ func (e *CalendarEventsQuickAddSendUpdatesEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type CalendarEventsQuickAddQueryParams struct {
+type CalendarEventsQuickAddRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -79,12 +76,6 @@ type CalendarEventsQuickAddQueryParams struct {
 	Text string `queryParam:"style=form,explode=true,name=text"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsQuickAddRequest struct {
-	PathParams  CalendarEventsQuickAddPathParams
-	QueryParams CalendarEventsQuickAddQueryParams
-	Security    CalendarEventsQuickAddSecurity
 }
 
 type CalendarEventsQuickAddResponse struct {

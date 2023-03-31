@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAppearancesPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // GetAppearancesDirectionEnum - The sort direction of the results.
 type GetAppearancesDirectionEnum string
 
@@ -95,7 +90,7 @@ func (e *GetAppearancesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAppearancesQueryParams struct {
+type GetAppearancesRequest struct {
 	// The sort direction of the results.
 	Direction *GetAppearancesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -110,11 +105,8 @@ type GetAppearancesQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetAppearancesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAppearancesRequest struct {
-	PathParams  GetAppearancesPathParams
-	QueryParams GetAppearancesQueryParams
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetAppearancesResponse struct {

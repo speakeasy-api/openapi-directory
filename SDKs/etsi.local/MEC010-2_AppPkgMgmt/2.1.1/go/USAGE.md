@@ -14,16 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.AppDGETRequest{
-        PathParams: operations.AppDGETPathParams{
-            AppDID: "corrupti",
-        },
-        QueryParams: operations.AppDGETQueryParams{
-            AllFields: "provident",
-            ExcludeDefault: "distinctio",
-            ExcludeFields: "quibusdam",
-            Fields: "unde",
-            Filter: "nulla",
-        },
+        AllFields: "corrupti",
+        AppDID: "provident",
+        ExcludeDefault: "distinctio",
+        ExcludeFields: "quibusdam",
+        Fields: "unde",
+        Filter: "nulla",
     }
 
     ctx := context.Background()

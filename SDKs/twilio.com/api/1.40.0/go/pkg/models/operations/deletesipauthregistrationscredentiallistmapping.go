@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSipAuthRegistrationsCredentialListMappingServerList = []string{
@@ -12,22 +11,17 @@ var DeleteSipAuthRegistrationsCredentialListMappingServerList = []string{
 }
 
 type DeleteSipAuthRegistrationsCredentialListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSipAuthRegistrationsCredentialListMappingPathParams struct {
+type DeleteSipAuthRegistrationsCredentialListMappingRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The SID of the SIP domain that contains the resources to delete.
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// The Twilio-provided string that uniquely identifies the CredentialListMapping resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSipAuthRegistrationsCredentialListMappingRequest struct {
-	PathParams DeleteSipAuthRegistrationsCredentialListMappingPathParams
-	Security   DeleteSipAuthRegistrationsCredentialListMappingSecurity
-	ServerURL  *string
 }
 
 type DeleteSipAuthRegistrationsCredentialListMappingResponse struct {

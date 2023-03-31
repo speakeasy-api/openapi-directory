@@ -12,12 +12,8 @@ var CreateUserServerList = []string{
 }
 
 type CreateUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateUserHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.UserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateUserCreateUserRequest struct {
@@ -32,10 +28,9 @@ type CreateUserCreateUserRequest struct {
 }
 
 type CreateUserRequest struct {
-	Headers   CreateUserHeaders
-	Request   *CreateUserCreateUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateUserSecurity
-	ServerURL *string
+	RequestBody *CreateUserCreateUserRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.UserEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type CreateUserResponse struct {

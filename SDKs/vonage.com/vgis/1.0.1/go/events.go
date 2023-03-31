@@ -35,7 +35,7 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetEvent - Get event
 func (s *events) GetEvent(ctx context.Context, request operations.GetEventRequest) (*operations.GetEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/events/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/self/events/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -107,7 +107,7 @@ func (s *events) GetEventsCount(ctx context.Context, request operations.GetEvent
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,7 +176,7 @@ func (s *events) ListEvents(ctx context.Context, request operations.ListEventsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

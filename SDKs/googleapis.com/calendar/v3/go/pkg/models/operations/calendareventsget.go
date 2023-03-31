@@ -8,23 +8,23 @@ import (
 )
 
 type CalendarEventsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsGetSecurity struct {
@@ -34,18 +34,15 @@ type CalendarEventsGetSecurity struct {
 	Option4 *CalendarEventsGetSecurityOption4 `security:"option"`
 }
 
-type CalendarEventsGetPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-	// Event identifier.
-	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
-}
-
-type CalendarEventsGetQueryParams struct {
+type CalendarEventsGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
 	AlwaysIncludeEmail *bool `queryParam:"style=form,explode=true,name=alwaysIncludeEmail"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
+	// Event identifier.
+	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -62,12 +59,6 @@ type CalendarEventsGetQueryParams struct {
 	TimeZone *string `queryParam:"style=form,explode=true,name=timeZone"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsGetRequest struct {
-	PathParams  CalendarEventsGetPathParams
-	QueryParams CalendarEventsGetQueryParams
-	Security    CalendarEventsGetSecurity
 }
 
 type CalendarEventsGetResponse struct {

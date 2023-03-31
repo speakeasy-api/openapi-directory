@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type PastMeetingDetailsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type PastMeetingDetailsPathParams struct {
-	// The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a '/'or contains '//' in it.
-	MeetingUUID string `pathParam:"style=simple,explode=false,name=meetingUUID"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PastMeetingDetailsRequest struct {
-	PathParams PastMeetingDetailsPathParams
-	Security   PastMeetingDetailsSecurity
+	// The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a '/'or contains '//' in it.
+	MeetingUUID string `pathParam:"style=simple,explode=false,name=meetingUUID"`
 }
 
 // PastMeetingDetails200ApplicationXML - **HTTP Status Code:** `200`<br>

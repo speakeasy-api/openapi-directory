@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetCustomLabelsForSelfHostedRunnerForOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// Unique identifier of the self-hosted runner.
-	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
 type ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequestBody struct {
 	// The names of the custom labels to set for the runner. You can pass an empty array to remove all custom labels.
 	Labels []string `json:"labels"`
 }
 
 type ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequest struct {
-	PathParams ActionsSetCustomLabelsForSelfHostedRunnerForOrgPathParams
-	Request    ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// Unique identifier of the self-hosted runner.
+	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
 }
 
 // ActionsSetCustomLabelsForSelfHostedRunnerForOrg200ApplicationJSON - Response

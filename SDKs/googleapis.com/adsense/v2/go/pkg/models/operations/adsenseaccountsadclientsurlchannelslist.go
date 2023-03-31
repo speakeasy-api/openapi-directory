@@ -8,13 +8,13 @@ import (
 )
 
 type AdsenseAccountsAdclientsUrlchannelsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdclientsUrlchannelsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdsenseAccountsAdclientsUrlchannelsListSecurity struct {
@@ -22,12 +22,7 @@ type AdsenseAccountsAdclientsUrlchannelsListSecurity struct {
 	Option2 *AdsenseAccountsAdclientsUrlchannelsListSecurityOption2 `security:"option"`
 }
 
-type AdsenseAccountsAdclientsUrlchannelsListPathParams struct {
-	// Required. The ad client which owns the collection of url channels. Format: accounts/{account}/adclients/{adclient}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AdsenseAccountsAdclientsUrlchannelsListQueryParams struct {
+type AdsenseAccountsAdclientsUrlchannelsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type AdsenseAccountsAdclientsUrlchannelsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListUrlChannels` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListUrlChannels` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The ad client which owns the collection of url channels. Format: accounts/{account}/adclients/{adclient}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type AdsenseAccountsAdclientsUrlchannelsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdsenseAccountsAdclientsUrlchannelsListRequest struct {
-	PathParams  AdsenseAccountsAdclientsUrlchannelsListPathParams
-	QueryParams AdsenseAccountsAdclientsUrlchannelsListQueryParams
-	Security    AdsenseAccountsAdclientsUrlchannelsListSecurity
 }
 
 type AdsenseAccountsAdclientsUrlchannelsListResponse struct {

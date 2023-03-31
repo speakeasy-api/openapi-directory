@@ -7,29 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFormEntriesPathParams struct {
-	// ID of the form to retrieve entries for.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFormEntriesQueryParams struct {
-	// Limit of records to be returned (for pagination)
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-	// Current offset of records (for pagination)
-	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetFormEntriesHeaders struct {
+type GetFormEntriesRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API Key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetFormEntriesRequest struct {
-	PathParams  GetFormEntriesPathParams
-	QueryParams GetFormEntriesQueryParams
-	Headers     GetFormEntriesHeaders
+	// ID of the form to retrieve entries for.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Limit of records to be returned (for pagination)
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// Current offset of records (for pagination)
+	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 }
 
 type GetFormEntriesResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type CancelSubscriptionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CancelSubscriptionPathParams struct {
-	// The ID of the subscription to cancel.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelSubscriptionRequest struct {
-	PathParams CancelSubscriptionPathParams
-	Security   CancelSubscriptionSecurity
+	// The ID of the subscription to cancel.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
 }
 
 type CancelSubscriptionResponse struct {

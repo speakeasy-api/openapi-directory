@@ -14,102 +14,90 @@ func main() {
     s := sdk.New()
 
     req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
-        Security: operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
-            Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudBillingBudgetsV1BudgetInput{
+        DollarXgafv: "2",
+        GoogleCloudBillingBudgetsV1BudgetInput: &shared.GoogleCloudBillingBudgetsV1BudgetInput{
             Amount: &shared.GoogleCloudBillingBudgetsV1BudgetAmount{
                 LastPeriodAmount: map[string]interface{}{
-                    "iure": "magnam",
-                    "debitis": "ipsa",
+                    "distinctio": "quibusdam",
+                    "unde": "nulla",
+                    "corrupti": "illum",
                 },
                 SpecifiedAmount: &shared.GoogleTypeMoney{
-                    CurrencyCode: "delectus",
-                    Nanos: 272656,
-                    Units: "suscipit",
+                    CurrencyCode: "vel",
+                    Nanos: 623564,
+                    Units: "deserunt",
                 },
             },
             BudgetFilter: &shared.GoogleCloudBillingBudgetsV1Filter{
                 CalendarPeriod: "MONTH",
                 CreditTypes: []string{
-                    "placeat",
-                    "voluptatum",
-                    "iusto",
-                    "excepturi",
+                    "magnam",
+                    "debitis",
                 },
-                CreditTypesTreatment: "INCLUDE_ALL_CREDITS",
+                CreditTypesTreatment: "CREDIT_TYPES_TREATMENT_UNSPECIFIED",
                 CustomPeriod: &shared.GoogleCloudBillingBudgetsV1CustomPeriod{
                     EndDate: &shared.GoogleTypeDate{
-                        Day: 925597,
-                        Month: 836079,
-                        Year: 71036,
+                        Day: 963663,
+                        Month: 272656,
+                        Year: 383441,
                     },
                     StartDate: &shared.GoogleTypeDate{
-                        Day: 337396,
-                        Month: 87129,
-                        Year: 648172,
+                        Day: 477665,
+                        Month: 791725,
+                        Year: 812169,
                     },
                 },
                 Labels: map[string][]interface{}{
-                    "ipsam": []interface{}{
+                    "iusto": []interface{}{
+                        "nisi",
+                        "recusandae",
+                        "temporibus",
+                    },
+                    "ab": []interface{}{
+                        "veritatis",
+                        "deserunt",
+                    },
+                    "perferendis": []interface{}{
+                        "repellendus",
                         "sapiente",
-                        "quo",
-                        "odit",
-                        "at",
                     },
                 },
                 Projects: []string{
+                    "odit",
+                    "at",
+                    "at",
                     "maiores",
-                    "molestiae",
+                },
+                Services: []string{
                     "quod",
                     "quod",
                 },
-                Services: []string{
+                Subaccounts: []string{
                     "totam",
                     "porro",
                 },
-                Subaccounts: []string{
-                    "dicta",
-                    "nam",
-                    "officia",
-                },
             },
-            DisplayName: "occaecati",
-            Etag: "fugit",
+            DisplayName: "dolorum",
+            Etag: "dicta",
             NotificationsRule: &shared.GoogleCloudBillingBudgetsV1NotificationsRule{
                 DisableDefaultIamRecipients: false,
                 MonitoringNotificationChannels: []string{
-                    "hic",
-                    "optio",
-                    "totam",
+                    "officia",
+                    "occaecati",
+                    "fugit",
                 },
-                PubsubTopic: "beatae",
-                SchemaVersion: "commodi",
+                PubsubTopic: "deleniti",
+                SchemaVersion: "hic",
             },
             ThresholdRules: []shared.GoogleCloudBillingBudgetsV1ThresholdRule{
+                shared.GoogleCloudBillingBudgetsV1ThresholdRule{
+                    SpendBasis: "CURRENT_SPEND",
+                    ThresholdPercent: 1059.07,
+                },
+                shared.GoogleCloudBillingBudgetsV1ThresholdRule{
+                    SpendBasis: "CURRENT_SPEND",
+                    ThresholdPercent: 4736,
+                },
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                     SpendBasis: "BASIS_UNSPECIFIED",
                     ThresholdPercent: 1863.32,
@@ -120,10 +108,26 @@ func main() {
                 },
             },
         },
+        AccessToken: "esse",
+        Alt: "json",
+        Callback: "excepturi",
+        Fields: "aspernatur",
+        Key: "perferendis",
+        OauthToken: "ad",
+        Parent: "natus",
+        PrettyPrint: false,
+        QuotaUser: "sed",
+        UploadType: "iste",
+        UploadProtocol: "dolor",
     }
 
     ctx := context.Background()
-    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req)
+    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
+        Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

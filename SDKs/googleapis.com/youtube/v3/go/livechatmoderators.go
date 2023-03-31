@@ -33,7 +33,7 @@ func newLiveChatModerators(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // YoutubeLiveChatModeratorsDelete - Deletes a chat moderator.
-func (s *liveChatModerators) YoutubeLiveChatModeratorsDelete(ctx context.Context, request operations.YoutubeLiveChatModeratorsDeleteRequest) (*operations.YoutubeLiveChatModeratorsDeleteResponse, error) {
+func (s *liveChatModerators) YoutubeLiveChatModeratorsDelete(ctx context.Context, request operations.YoutubeLiveChatModeratorsDeleteRequest, security operations.YoutubeLiveChatModeratorsDeleteSecurity) (*operations.YoutubeLiveChatModeratorsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveChat/moderators"
 
@@ -42,11 +42,11 @@ func (s *liveChatModerators) YoutubeLiveChatModeratorsDelete(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *liveChatModerators) YoutubeLiveChatModeratorsDelete(ctx context.Context
 }
 
 // YoutubeLiveChatModeratorsInsert - Inserts a new resource into this collection.
-func (s *liveChatModerators) YoutubeLiveChatModeratorsInsert(ctx context.Context, request operations.YoutubeLiveChatModeratorsInsertRequest) (*operations.YoutubeLiveChatModeratorsInsertResponse, error) {
+func (s *liveChatModerators) YoutubeLiveChatModeratorsInsert(ctx context.Context, request operations.YoutubeLiveChatModeratorsInsertRequest, security operations.YoutubeLiveChatModeratorsInsertSecurity) (*operations.YoutubeLiveChatModeratorsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveChat/moderators"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LiveChatModerator", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *liveChatModerators) YoutubeLiveChatModeratorsInsert(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *liveChatModerators) YoutubeLiveChatModeratorsInsert(ctx context.Context
 }
 
 // YoutubeLiveChatModeratorsList - Retrieves a list of resources, possibly filtered.
-func (s *liveChatModerators) YoutubeLiveChatModeratorsList(ctx context.Context, request operations.YoutubeLiveChatModeratorsListRequest) (*operations.YoutubeLiveChatModeratorsListResponse, error) {
+func (s *liveChatModerators) YoutubeLiveChatModeratorsList(ctx context.Context, request operations.YoutubeLiveChatModeratorsListRequest, security operations.YoutubeLiveChatModeratorsListSecurity) (*operations.YoutubeLiveChatModeratorsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveChat/moderators"
 
@@ -136,11 +136,11 @@ func (s *liveChatModerators) YoutubeLiveChatModeratorsList(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

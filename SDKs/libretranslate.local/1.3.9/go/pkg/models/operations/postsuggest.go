@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostSuggestRequest struct {
-	Request *string `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostSuggestResponse struct {
 	Body        []byte
 	ContentType string

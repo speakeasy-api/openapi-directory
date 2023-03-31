@@ -8,16 +8,11 @@ import (
 )
 
 type ContainerProjectsLocationsOperationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContainerProjectsLocationsOperationsListPathParams struct {
-	// The parent (project and location) where the operations will be listed. Specified in the format `projects/*/locations/*`. Location "-" matches all zones and all regions.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ContainerProjectsLocationsOperationsListQueryParams struct {
+type ContainerProjectsLocationsOperationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type ContainerProjectsLocationsOperationsListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The parent (project and location) where the operations will be listed. Specified in the format `projects/*/locations/*`. Location "-" matches all zones and all regions.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Required. Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the parent field.
@@ -44,12 +41,6 @@ type ContainerProjectsLocationsOperationsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for all zones. This field has been deprecated and replaced by the parent field.
 	Zone *string `queryParam:"style=form,explode=true,name=zone"`
-}
-
-type ContainerProjectsLocationsOperationsListRequest struct {
-	PathParams  ContainerProjectsLocationsOperationsListPathParams
-	QueryParams ContainerProjectsLocationsOperationsListQueryParams
-	Security    ContainerProjectsLocationsOperationsListSecurity
 }
 
 type ContainerProjectsLocationsOperationsListResponse struct {

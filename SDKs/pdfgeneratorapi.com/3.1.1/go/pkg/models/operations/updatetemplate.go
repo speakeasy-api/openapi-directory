@@ -9,15 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTemplateQueryParams struct {
+type UpdateTemplateRequest struct {
+	// Template configuration as JSON string
+	TemplateDefinitionNew shared.TemplateDefinitionNew `request:"mediaType=application/json"`
 	// Template unique identifier
 	TemplateID int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type UpdateTemplateRequest struct {
-	QueryParams UpdateTemplateQueryParams
-	// Template configuration as JSON string
-	Request shared.TemplateDefinitionNew `request:"mediaType=application/json"`
 }
 
 // UpdateTemplate500ApplicationJSON - Internal Server Error

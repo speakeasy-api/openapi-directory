@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ServicesQueryParams struct {
+type GetSetupV1ServicesRequest struct {
 	// Filter by deleted status
 	Deleted *bool `queryParam:"style=form,explode=true,name=deleted"`
 	// Page limit default 20, max 100
@@ -18,10 +18,6 @@ type GetSetupV1ServicesQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Filter services by groupId
 	ServiceGroupID *int `queryParam:"style=form,explode=true,name=serviceGroupId"`
-}
-
-type GetSetupV1ServicesRequest struct {
-	QueryParams GetSetupV1ServicesQueryParams
 }
 
 type GetSetupV1ServicesResponse struct {

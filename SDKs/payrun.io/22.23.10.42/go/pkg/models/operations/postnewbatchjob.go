@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostNewBatchJobHeaders struct {
+type PostNewBatchJobRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostNewBatchJobRequest struct {
-	Headers PostNewBatchJobHeaders
 	// The the batch job instruction object.
-	Request shared.BatchJobInstruction `request:"mediaType=application/json"`
+	BatchJobInstruction shared.BatchJobInstruction `request:"mediaType=application/json"`
 }
 
 type PostNewBatchJobResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetBreakTypeSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetBreakTypePathParams struct {
-	// The UUID for the `BreakType` being retrieved.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetBreakTypeRequest struct {
-	PathParams GetBreakTypePathParams
-	Security   GetBreakTypeSecurity
+	// The UUID for the `BreakType` being retrieved.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBreakTypeResponse struct {

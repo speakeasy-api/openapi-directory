@@ -93,10 +93,6 @@ func (u PostAssetsCorrelationMatrixRequestBody) MarshalJSON() ([]byte, error) {
 	return nil, nil
 }
 
-type PostAssetsCorrelationMatrixRequest struct {
-	Request PostAssetsCorrelationMatrixRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrix200ApplicationJSON - OK
 type PostAssetsCorrelationMatrix200ApplicationJSON struct {
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j

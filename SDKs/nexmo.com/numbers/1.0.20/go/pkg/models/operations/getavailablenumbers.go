@@ -48,7 +48,7 @@ func (e *GetAvailableNumbersFeaturesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAvailableNumbersQueryParams struct {
+type GetAvailableNumbersRequest struct {
 	// The two character country code to filter on (in ISO 3166-1 alpha-2 format)
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// Available features are `SMS`, `VOICE` and `MMS`. To look for numbers that support multiple features, use a comma-separated value: `SMS,MMS,VOICE`.
@@ -69,10 +69,6 @@ type GetAvailableNumbersQueryParams struct {
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
 	// Set this parameter to filter the type of number, such as mobile or landline
 	Type *shared.TypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetAvailableNumbersRequest struct {
-	QueryParams GetAvailableNumbersQueryParams
 }
 
 type GetAvailableNumbersResponse struct {

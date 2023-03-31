@@ -10,23 +10,23 @@ import (
 )
 
 type DataflowProjectsTemplatesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsTemplatesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsTemplatesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsTemplatesGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsTemplatesGetSecurity struct {
@@ -34,11 +34,6 @@ type DataflowProjectsTemplatesGetSecurity struct {
 	Option2 *DataflowProjectsTemplatesGetSecurityOption2 `security:"option"`
 	Option3 *DataflowProjectsTemplatesGetSecurityOption3 `security:"option"`
 	Option4 *DataflowProjectsTemplatesGetSecurityOption4 `security:"option"`
-}
-
-type DataflowProjectsTemplatesGetPathParams struct {
-	// Required. The ID of the Cloud Platform project that the job belongs to.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 // DataflowProjectsTemplatesGetViewEnum - The view to retrieve. Defaults to METADATA_ONLY.
@@ -62,7 +57,7 @@ func (e *DataflowProjectsTemplatesGetViewEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type DataflowProjectsTemplatesGetQueryParams struct {
+type DataflowProjectsTemplatesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -83,6 +78,8 @@ type DataflowProjectsTemplatesGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The ID of the Cloud Platform project that the job belongs to.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
@@ -91,12 +88,6 @@ type DataflowProjectsTemplatesGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The view to retrieve. Defaults to METADATA_ONLY.
 	View *DataflowProjectsTemplatesGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type DataflowProjectsTemplatesGetRequest struct {
-	PathParams  DataflowProjectsTemplatesGetPathParams
-	QueryParams DataflowProjectsTemplatesGetQueryParams
-	Security    DataflowProjectsTemplatesGetSecurity
 }
 
 type DataflowProjectsTemplatesGetResponse struct {

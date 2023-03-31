@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetProductInfoRequest{
-        PathParams: operations.GetProductInfoPathParams{
-            Code: "corrupti",
-        },
+        Code: "corrupti",
     }
 
     ctx := context.Background()

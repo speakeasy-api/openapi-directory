@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSubscribedEventServerList = []string{
@@ -12,20 +11,15 @@ var DeleteSubscribedEventServerList = []string{
 }
 
 type DeleteSubscribedEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSubscribedEventPathParams struct {
+type DeleteSubscribedEventRequest struct {
 	// The unique SID identifier of the Subscription.
 	SubscriptionSid string `pathParam:"style=simple,explode=false,name=SubscriptionSid"`
 	// Type of event being subscribed to.
 	Type string `pathParam:"style=simple,explode=false,name=Type"`
-}
-
-type DeleteSubscribedEventRequest struct {
-	PathParams DeleteSubscribedEventPathParams
-	Security   DeleteSubscribedEventSecurity
-	ServerURL  *string
 }
 
 type DeleteSubscribedEventResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EmailVerifyQueryParams struct {
+type EmailVerifyRequest struct {
 	// An email address
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// Automatically attempt to fix typos in the address
 	FixTypos *bool `queryParam:"style=form,explode=true,name=fix-typos"`
-}
-
-type EmailVerifyRequest struct {
-	QueryParams EmailVerifyQueryParams
 }
 
 type EmailVerifyResponse struct {

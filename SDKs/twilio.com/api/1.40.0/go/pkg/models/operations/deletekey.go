@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteKeyServerList = []string{
@@ -12,20 +11,15 @@ var DeleteKeyServerList = []string{
 }
 
 type DeleteKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteKeyPathParams struct {
+type DeleteKeyRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the Key resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteKeyRequest struct {
-	PathParams DeleteKeyPathParams
-	Security   DeleteKeySecurity
-	ServerURL  *string
 }
 
 type DeleteKeyResponse struct {

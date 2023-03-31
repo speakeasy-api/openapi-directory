@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type VirtualTariffsStatusForPropertyGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type VirtualTariffsStatusForPropertyGetRequest struct {
-	PathParams VirtualTariffsStatusForPropertyGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type VirtualTariffsStatusForPropertyGetResponse struct {

@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForPullRequestReviewCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.5/rest/reference/reactions#reaction-types) to add to the pull request review comment.
 type ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum string
 
@@ -66,8 +57,13 @@ type ReactionsCreateForPullRequestReviewCommentRequestBody struct {
 }
 
 type ReactionsCreateForPullRequestReviewCommentRequest struct {
-	PathParams ReactionsCreateForPullRequestReviewCommentPathParams
-	Request    ReactionsCreateForPullRequestReviewCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForPullRequestReviewCommentRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsCreateForPullRequestReviewCommentResponse struct {

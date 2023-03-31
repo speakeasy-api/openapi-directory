@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectStringsForLanguagePathParams struct {
+type GetProjectStringsForLanguageRequest struct {
 	// Target language code
 	Language string `pathParam:"style=simple,explode=false,name=language"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetProjectStringsForLanguageRequest struct {
-	PathParams GetProjectStringsForLanguagePathParams
 }
 
 type GetProjectStringsForLanguageResponse struct {

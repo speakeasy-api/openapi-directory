@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type GetOrganizationAPIRequestsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationAPIRequestsMethodEnum - Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE')
 type GetOrganizationAPIRequestsMethodEnum string
 
@@ -67,7 +63,7 @@ func (e *GetOrganizationAPIRequestsVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetOrganizationAPIRequestsQueryParams struct {
+type GetOrganizationAPIRequestsRequest struct {
 	// Filter the results by the ID of the admin who made the API requests
 	AdminID *string `queryParam:"style=form,explode=true,name=adminId"`
 	// A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -75,7 +71,8 @@ type GetOrganizationAPIRequestsQueryParams struct {
 	// Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE')
 	Method *GetOrganizationAPIRequestsMethodEnum `queryParam:"style=form,explode=true,name=method"`
 	// Filter the results by one or more operation IDs for the API request
-	OperationIds []string `queryParam:"style=form,explode=false,name=operationIds"`
+	OperationIds   []string `queryParam:"style=form,explode=false,name=operationIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// Filter the results by the path of the API requests
 	Path *string `queryParam:"style=form,explode=true,name=path"`
 	// The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50.
@@ -96,11 +93,6 @@ type GetOrganizationAPIRequestsQueryParams struct {
 	UserAgent *string `queryParam:"style=form,explode=true,name=userAgent"`
 	// Filter the results by the API version of the API request
 	Version *GetOrganizationAPIRequestsVersionEnum `queryParam:"style=form,explode=true,name=version"`
-}
-
-type GetOrganizationAPIRequestsRequest struct {
-	PathParams  GetOrganizationAPIRequestsPathParams
-	QueryParams GetOrganizationAPIRequestsQueryParams
 }
 
 // GetOrganizationAPIRequests200ApplicationJSONVersionEnum - API version of the endpoint.

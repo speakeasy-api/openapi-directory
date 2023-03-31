@@ -8,26 +8,23 @@ import (
 )
 
 type Adexchangebuyer2AccountsClientsUsersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsClientsUsersListPathParams struct {
-	// Numerical account ID of the sponsor buyer of the client to list users for. (required)
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The account ID of the client buyer to list users for. (required) You must specify either a string representation of a numerical account identifier or the `-` character to list all the client users for all the clients of a given sponsor buyer.
-	ClientAccountID string `pathParam:"style=simple,explode=false,name=clientAccountId"`
-}
-
-type Adexchangebuyer2AccountsClientsUsersListQueryParams struct {
+type Adexchangebuyer2AccountsClientsUsersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Numerical account ID of the sponsor buyer of the client to list users for. (required)
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The account ID of the client buyer to list users for. (required) You must specify either a string representation of a numerical account identifier or the `-` character to list all the client users for all the clients of a given sponsor buyer.
+	ClientAccountID string `pathParam:"style=simple,explode=false,name=clientAccountId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,12 +43,6 @@ type Adexchangebuyer2AccountsClientsUsersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsClientsUsersListRequest struct {
-	PathParams  Adexchangebuyer2AccountsClientsUsersListPathParams
-	QueryParams Adexchangebuyer2AccountsClientsUsersListQueryParams
-	Security    Adexchangebuyer2AccountsClientsUsersListSecurity
 }
 
 type Adexchangebuyer2AccountsClientsUsersListResponse struct {

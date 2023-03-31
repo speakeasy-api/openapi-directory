@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityGetThreadPathParams struct {
+type ActivityGetThreadRequest struct {
 	// thread_id parameter
 	ThreadID int64 `pathParam:"style=simple,explode=false,name=thread_id"`
-}
-
-type ActivityGetThreadRequest struct {
-	PathParams ActivityGetThreadPathParams
 }
 
 type ActivityGetThreadResponse struct {

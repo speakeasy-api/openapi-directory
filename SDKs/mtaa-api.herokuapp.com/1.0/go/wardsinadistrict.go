@@ -34,7 +34,7 @@ func newWardsInADistrict(defaultClient, securityClient HTTPClient, serverURL, la
 // Returns all wards in a  specified district and district postcode
 func (s *wardsInADistrict) WardsInADistrict(ctx context.Context, request operations.WardsInADistrictRequest) (*operations.WardsInADistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{country}/{region}/{district}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSipCredentialListMappingServerList = []string{
@@ -12,22 +11,17 @@ var DeleteSipCredentialListMappingServerList = []string{
 }
 
 type DeleteSipCredentialListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSipCredentialListMappingPathParams struct {
+type DeleteSipCredentialListMappingRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// A 34 character string that uniquely identifies the SIP Domain that includes the resource to delete.
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// A 34 character string that uniquely identifies the resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSipCredentialListMappingRequest struct {
-	PathParams DeleteSipCredentialListMappingPathParams
-	Security   DeleteSipCredentialListMappingSecurity
-	ServerURL  *string
 }
 
 type DeleteSipCredentialListMappingResponse struct {

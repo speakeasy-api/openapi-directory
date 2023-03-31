@@ -7,33 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TaskAddCollectionPathParams struct {
-	// The id of the job to which the task collection is to be added.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type TaskAddCollectionQueryParams struct {
+type TaskAddCollectionRequest struct {
+	// The tasks to be added.
+	TaskAddCollectionParameter shared.TaskAddCollectionParameter `request:"mediaType=application/json"`
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type TaskAddCollectionHeaders struct {
 	// The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The id of the job to which the task collection is to be added.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Whether the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type TaskAddCollectionRequest struct {
-	PathParams  TaskAddCollectionPathParams
-	QueryParams TaskAddCollectionQueryParams
-	Headers     TaskAddCollectionHeaders
-	// The tasks to be added.
-	Request shared.TaskAddCollectionParameter `request:"mediaType=application/json"`
+	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type TaskAddCollectionResponse struct {

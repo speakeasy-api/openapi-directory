@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchProductsCodesHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type SearchProductsCodesRequestBody struct {
 	// **currency code** for the currency in which to display product pricing
 	CurrencyCode *string `json:"currencyCode,omitempty"`
@@ -21,8 +15,10 @@ type SearchProductsCodesRequestBody struct {
 }
 
 type SearchProductsCodesRequest struct {
-	Headers SearchProductsCodesHeaders
-	Request *SearchProductsCodesRequestBody `request:"mediaType=application/json"`
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string                          `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestBody    *SearchProductsCodesRequestBody `request:"mediaType=application/json"`
 }
 
 type SearchProductsCodes200ApplicationJSONData struct {

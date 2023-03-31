@@ -4,9 +4,14 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.PostOriginKeysRequest(
-    request="iste",
+
+
+req = shared.CheckoutUtilityRequest(
+    origin_domains=[
+        "provident",
+        "distinctio",
+        "quibusdam",
+    ],
 )
     
 res = s.post_origin_keys(req)

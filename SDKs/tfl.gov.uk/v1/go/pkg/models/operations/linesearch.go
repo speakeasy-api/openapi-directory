@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineSearchPathParams struct {
-	// Search term e.g victoria
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-}
-
 type LineSearchServiceTypesEnum string
 
 const (
@@ -37,16 +32,13 @@ func (e *LineSearchServiceTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineSearchQueryParams struct {
+type LineSearchRequest struct {
 	// Optionally filter by the specified modes
 	Modes []string `queryParam:"style=form,explode=true,name=modes"`
+	// Search term e.g victoria
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 	// A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
 	ServiceTypes []LineSearchServiceTypesEnum `queryParam:"style=form,explode=true,name=serviceTypes"`
-}
-
-type LineSearchRequest struct {
-	PathParams  LineSearchPathParams
-	QueryParams LineSearchQueryParams
 }
 
 type LineSearchResponse struct {

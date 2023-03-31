@@ -12,20 +12,15 @@ var FetchKeyServerList = []string{
 }
 
 type FetchKeySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchKeyPathParams struct {
+type FetchKeyRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the Key resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchKeyRequest struct {
-	PathParams FetchKeyPathParams
-	Security   FetchKeySecurity
-	ServerURL  *string
 }
 
 type FetchKeyResponse struct {

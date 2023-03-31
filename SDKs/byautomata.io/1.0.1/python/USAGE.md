@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetContentproSearchRequest(
-    query_params=operations.GetContentproSearchQueryParams(
-        terms="nisi",
-    ),
+    terms="corrupti",
 )
     
 res = s.contentpro_search.get_contentpro_search(req)

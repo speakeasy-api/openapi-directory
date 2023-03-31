@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsIDPathParams struct {
+type GetTargetsIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTargetsIDRequest struct {
-	PathParams GetTargetsIDPathParams
 }
 
 // GetTargetsID500ApplicationJSON - Internal server error

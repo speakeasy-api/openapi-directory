@@ -33,13 +33,9 @@ func (e *RotoballerArticlesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RotoballerArticlesPathParams struct {
+type RotoballerArticlesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format RotoballerArticlesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type RotoballerArticlesRequest struct {
-	PathParams RotoballerArticlesPathParams
 }
 
 type RotoballerArticlesResponse struct {

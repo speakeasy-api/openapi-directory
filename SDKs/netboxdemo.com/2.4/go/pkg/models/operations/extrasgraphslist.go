@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasGraphsListQueryParams struct {
+type ExtrasGraphsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Type   *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ExtrasGraphsListRequest struct {
-	QueryParams ExtrasGraphsListQueryParams
 }
 
 type ExtrasGraphsList200ApplicationJSON struct {

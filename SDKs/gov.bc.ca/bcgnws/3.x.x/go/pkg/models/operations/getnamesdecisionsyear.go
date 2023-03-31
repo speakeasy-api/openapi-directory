@@ -158,7 +158,7 @@ func (e *GetNamesDecisionsYearSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNamesDecisionsYearQueryParams struct {
+type GetNamesDecisionsYearRequest struct {
 	// A flag to indicate whether to embed the corresponding 'feature' into each matching name
 	Embed *GetNamesDecisionsYearEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
 	// A filter to limit the search to names associated with features of a certain 'category'  The value of this parameter should be a 'featureCategoryCode' value returned by the /featureCategories resource, or an asterisk (*) to request that all feature categories be included.
@@ -181,10 +181,6 @@ type GetNamesDecisionsYearQueryParams struct {
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
 	// The year in which to search for names affected by naming decisions'.
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetNamesDecisionsYearRequest struct {
-	QueryParams GetNamesDecisionsYearQueryParams
 }
 
 type GetNamesDecisionsYearResponse struct {

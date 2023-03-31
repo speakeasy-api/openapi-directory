@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GETGenesBySpeciesUsingGETPathParams struct {
+type GETGenesBySpeciesUsingGETRequest struct {
 	// A list of RGD species type keys can be found in the lookup service
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETGenesBySpeciesUsingGETRequest struct {
-	PathParams GETGenesBySpeciesUsingGETPathParams
 }
 
 type GETGenesBySpeciesUsingGETResponse struct {

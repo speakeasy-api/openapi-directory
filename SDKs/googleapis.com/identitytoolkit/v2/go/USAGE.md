@@ -14,46 +14,39 @@ func main() {
     s := sdk.New()
 
     req := operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest{
-        Security: operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest{
-            DisplayName: "deserunt",
-            IDToken: "suscipit",
+        DollarXgafv: "2",
+        GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest{
+            DisplayName: "provident",
+            IDToken: "distinctio",
             PhoneVerificationInfo: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo{
-                AndroidVerificationProof: "iure",
-                Code: "magnam",
-                PhoneNumber: "debitis",
-                SessionInfo: "ipsa",
+                AndroidVerificationProof: "quibusdam",
+                Code: "unde",
+                PhoneNumber: "nulla",
+                SessionInfo: "corrupti",
             },
-            TenantID: "delectus",
+            TenantID: "illum",
             TotpVerificationInfo: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo{
-                SessionInfo: "tempora",
-                VerificationCode: "suscipit",
+                SessionInfo: "vel",
+                VerificationCode: "error",
             },
         },
+        AccessToken: "deserunt",
+        Alt: "media",
+        Callback: "iure",
+        Fields: "magnam",
+        Key: "debitis",
+        OauthToken: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        UploadType: "tempora",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Accounts.IdentitytoolkitAccountsMfaEnrollmentFinalize(ctx, req)
+    res, err := s.Accounts.IdentitytoolkitAccountsMfaEnrollmentFinalize(ctx, req, operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

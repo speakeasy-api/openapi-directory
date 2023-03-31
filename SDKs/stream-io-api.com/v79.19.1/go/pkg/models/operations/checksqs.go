@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckSQSRequest struct {
-	Request shared.CheckSQSRequest `request:"mediaType=application/json"`
-}
-
 type CheckSQSResponse struct {
 	// Bad request
 	APIError *shared.APIError

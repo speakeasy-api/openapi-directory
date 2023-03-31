@@ -40,11 +40,11 @@ func newPhoneCallQueues(defaultClient, securityClient HTTPClient, serverURL, lan
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) AddMembersToCallQueue(ctx context.Context, request operations.AddMembersToCallQueueRequest) (*operations.AddMembersToCallQueueResponse, error) {
+func (s *phoneCallQueues) AddMembersToCallQueue(ctx context.Context, request operations.AddMembersToCallQueueRequest, security operations.AddMembersToCallQueueSecurity) (*operations.AddMembersToCallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *phoneCallQueues) AddMembersToCallQueue(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -109,11 +109,11 @@ func (s *phoneCallQueues) AddMembersToCallQueue(ctx context.Context, request ope
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) AssignPhoneToCallQueue(ctx context.Context, request operations.AssignPhoneToCallQueueRequest) (*operations.AssignPhoneToCallQueueResponse, error) {
+func (s *phoneCallQueues) AssignPhoneToCallQueue(ctx context.Context, request operations.AssignPhoneToCallQueueRequest, security operations.AssignPhoneToCallQueueSecurity) (*operations.AssignPhoneToCallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/phone_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/phone_numbers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -125,7 +125,7 @@ func (s *phoneCallQueues) AssignPhoneToCallQueue(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *phoneCallQueues) AssignPhoneToCallQueue(ctx context.Context, request op
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) ChangeCallQueueManager(ctx context.Context, request operations.ChangeCallQueueManagerRequest) (*operations.ChangeCallQueueManagerResponse, error) {
+func (s *phoneCallQueues) ChangeCallQueueManager(ctx context.Context, request operations.ChangeCallQueueManagerRequest, security operations.ChangeCallQueueManagerSecurity) (*operations.ChangeCallQueueManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/manager", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/manager", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,7 +191,7 @@ func (s *phoneCallQueues) ChangeCallQueueManager(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,7 +245,7 @@ func (s *phoneCallQueues) ChangeCallQueueManager(ctx context.Context, request op
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) CreateCallQueue(ctx context.Context, request operations.CreateCallQueueRequest) (*operations.CreateCallQueueResponse, error) {
+func (s *phoneCallQueues) CreateCallQueue(ctx context.Context, request operations.CreateCallQueueApplicationJSON, security operations.CreateCallQueueSecurity) (*operations.CreateCallQueueResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/call_queues"
 
@@ -261,7 +261,7 @@ func (s *phoneCallQueues) CreateCallQueue(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -314,16 +314,16 @@ func (s *phoneCallQueues) CreateCallQueue(ctx context.Context, request operation
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) DeleteACallQueue(ctx context.Context, request operations.DeleteACallQueueRequest) (*operations.DeleteACallQueueResponse, error) {
+func (s *phoneCallQueues) DeleteACallQueue(ctx context.Context, request operations.DeleteACallQueueRequest, security operations.DeleteACallQueueSecurity) (*operations.DeleteACallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -374,16 +374,16 @@ func (s *phoneCallQueues) DeleteACallQueue(ctx context.Context, request operatio
 // **Scopes:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) GetACallQueue(ctx context.Context, request operations.GetACallQueueRequest) (*operations.GetACallQueueResponse, error) {
+func (s *phoneCallQueues) GetACallQueue(ctx context.Context, request operations.GetACallQueueRequest, security operations.GetACallQueueSecurity) (*operations.GetACallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -432,14 +432,14 @@ func (s *phoneCallQueues) GetACallQueue(ctx context.Context, request operations.
 // * [Automatic call recordings](https://support.zoom.us/hc/en-us/articles/360033511872#h_fcb297bb-14e8-4094-91ca-dc61e1a18734) must be enabled in the Policy Settings for call queues. <br> **Scope:** `phone:read:admin`<br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 func (s *phoneCallQueues) GetCallQueueRecordings(ctx context.Context, request operations.GetCallQueueRecordingsRequest) (*operations.GetCallQueueRecordingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -493,7 +493,7 @@ func (s *phoneCallQueues) GetCallQueueRecordings(ctx context.Context, request op
 // **Scopes:** `phone:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *phoneCallQueues) ListCallQueues(ctx context.Context, request operations.ListCallQueuesRequest) (*operations.ListCallQueuesResponse, error) {
+func (s *phoneCallQueues) ListCallQueues(ctx context.Context, request operations.ListCallQueuesRequest, security operations.ListCallQueuesSecurity) (*operations.ListCallQueuesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/call_queues"
 
@@ -502,11 +502,11 @@ func (s *phoneCallQueues) ListCallQueues(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,16 +554,16 @@ func (s *phoneCallQueues) ListCallQueues(ctx context.Context, request operations
 //   - Account owner or admin permissions
 //   - Zoom Phone license <br> **Scopes:** `phone:write:admin`<br>
 //     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) UnAssignPhoneNumCallQueue(ctx context.Context, request operations.UnAssignPhoneNumCallQueueRequest) (*operations.UnAssignPhoneNumCallQueueResponse, error) {
+func (s *phoneCallQueues) UnAssignPhoneNumCallQueue(ctx context.Context, request operations.UnAssignPhoneNumCallQueueRequest, security operations.UnAssignPhoneNumCallQueueSecurity) (*operations.UnAssignPhoneNumCallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/phone_numbers/{phoneNumberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/phone_numbers/{phoneNumberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -614,16 +614,16 @@ func (s *phoneCallQueues) UnAssignPhoneNumCallQueue(ctx context.Context, request
 //   - Account owner or admin permissions
 //   - Zoom Phone license <br> **Scopes:** `phone:write:admin`<br>
 //     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) UnassignAPhoneNumCallQueue(ctx context.Context, request operations.UnassignAPhoneNumCallQueueRequest) (*operations.UnassignAPhoneNumCallQueueResponse, error) {
+func (s *phoneCallQueues) UnassignAPhoneNumCallQueue(ctx context.Context, request operations.UnassignAPhoneNumCallQueueRequest, security operations.UnassignAPhoneNumCallQueueSecurity) (*operations.UnassignAPhoneNumCallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/phone_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/phone_numbers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -673,16 +673,16 @@ func (s *phoneCallQueues) UnassignAPhoneNumCallQueue(ctx context.Context, reques
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) UnassignAllMembers(ctx context.Context, request operations.UnassignAllMembersRequest) (*operations.UnassignAllMembersResponse, error) {
+func (s *phoneCallQueues) UnassignAllMembers(ctx context.Context, request operations.UnassignAllMembersRequest, security operations.UnassignAllMembersSecurity) (*operations.UnassignAllMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -732,16 +732,16 @@ func (s *phoneCallQueues) UnassignAllMembers(ctx context.Context, request operat
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) UnassignMemberFromCallQueue(ctx context.Context, request operations.UnassignMemberFromCallQueueRequest) (*operations.UnassignMemberFromCallQueueResponse, error) {
+func (s *phoneCallQueues) UnassignMemberFromCallQueue(ctx context.Context, request operations.UnassignMemberFromCallQueueRequest, security operations.UnassignMemberFromCallQueueSecurity) (*operations.UnassignMemberFromCallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}/members/{memberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -794,11 +794,11 @@ func (s *phoneCallQueues) UnassignMemberFromCallQueue(ctx context.Context, reque
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneCallQueues) UpdateCallQueue(ctx context.Context, request operations.UpdateCallQueueRequest) (*operations.UpdateCallQueueResponse, error) {
+func (s *phoneCallQueues) UpdateCallQueue(ctx context.Context, request operations.UpdateCallQueueRequest, security operations.UpdateCallQueueSecurity) (*operations.UpdateCallQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/call_queues/{callQueueId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -810,7 +810,7 @@ func (s *phoneCallQueues) UpdateCallQueue(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

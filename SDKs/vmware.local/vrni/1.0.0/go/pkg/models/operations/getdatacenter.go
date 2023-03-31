@@ -8,23 +8,14 @@ import (
 )
 
 type GetDatacenterSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetDatacenterPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDatacenterQueryParams struct {
-	// time in epoch seconds
-	Time *int64 `queryParam:"style=form,explode=true,name=time"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetDatacenterRequest struct {
-	PathParams  GetDatacenterPathParams
-	QueryParams GetDatacenterQueryParams
-	Security    GetDatacenterSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// time in epoch seconds
+	Time *int64 `queryParam:"style=form,explode=true,name=time"`
 }
 
 type GetDatacenterResponse struct {

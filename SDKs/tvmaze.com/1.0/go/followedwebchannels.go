@@ -35,7 +35,7 @@ func newFollowedWebchannels(defaultClient, securityClient HTTPClient, serverURL,
 // DeleteUserFollowsWebchannelsWebchannelID - Unfollow a webchannel
 func (s *followedWebchannels) DeleteUserFollowsWebchannelsWebchannelID(ctx context.Context, request operations.DeleteUserFollowsWebchannelsWebchannelIDRequest) (*operations.DeleteUserFollowsWebchannelsWebchannelIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/webchannels/{webchannel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/follows/webchannels/{webchannel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *followedWebchannels) GetUserFollowsWebchannels(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -120,7 +120,7 @@ func (s *followedWebchannels) GetUserFollowsWebchannels(ctx context.Context, req
 // GetUserFollowsWebchannelsWebchannelID - Check if a webchannel is followed
 func (s *followedWebchannels) GetUserFollowsWebchannelsWebchannelID(ctx context.Context, request operations.GetUserFollowsWebchannelsWebchannelIDRequest) (*operations.GetUserFollowsWebchannelsWebchannelIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/webchannels/{webchannel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/follows/webchannels/{webchannel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,7 +165,7 @@ func (s *followedWebchannels) GetUserFollowsWebchannelsWebchannelID(ctx context.
 // PutUserFollowsWebchannelsWebchannelID - Follow a webchannel
 func (s *followedWebchannels) PutUserFollowsWebchannelsWebchannelID(ctx context.Context, request operations.PutUserFollowsWebchannelsWebchannelIDRequest) (*operations.PutUserFollowsWebchannelsWebchannelIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/webchannels/{webchannel_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/follows/webchannels/{webchannel_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

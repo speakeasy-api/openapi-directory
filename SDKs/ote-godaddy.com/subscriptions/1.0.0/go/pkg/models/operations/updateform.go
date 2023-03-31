@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFormPathParams struct {
+type UpdateFormRequest struct {
+	// Details of the Subscription to change
+	SubscriptionUpdate shared.SubscriptionUpdate `request:"mediaType=application/x-www-form-urlencoded"`
 	// Unique identifier of the Subscription to update
 	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type UpdateFormRequest struct {
-	PathParams UpdateFormPathParams
-	// Details of the Subscription to change
-	Request shared.SubscriptionUpdate `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateFormResponse struct {

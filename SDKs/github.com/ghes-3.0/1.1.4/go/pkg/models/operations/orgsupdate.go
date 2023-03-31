@@ -11,10 +11,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsUpdatePathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum - Default permission level members have for organization repositories:
 // \* `read` - can pull, but not push to or administer this repository.
 // \* `write` - can pull and push, but not administer this repository.
@@ -144,8 +140,8 @@ type OrgsUpdateRequestBody struct {
 }
 
 type OrgsUpdateRequest struct {
-	PathParams OrgsUpdatePathParams
-	Request    *OrgsUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody *OrgsUpdateRequestBody `request:"mediaType=application/json"`
+	Org         string                 `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsUpdate422ApplicationJSONType string

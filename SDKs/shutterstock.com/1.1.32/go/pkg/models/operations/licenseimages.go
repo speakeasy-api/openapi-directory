@@ -10,7 +10,7 @@ import (
 )
 
 type LicenseImagesSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // LicenseImagesFormatEnum - (Deprecated) Image format
@@ -70,7 +70,9 @@ func (e *LicenseImagesSizeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LicenseImagesQueryParams struct {
+type LicenseImagesRequest struct {
+	// List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
+	LicenseImageRequest shared.LicenseImageRequest `request:"mediaType=application/json"`
 	// (Deprecated) Image format
 	Format *LicenseImagesFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// Search ID that was provided in the results of an image search
@@ -79,13 +81,6 @@ type LicenseImagesQueryParams struct {
 	Size *LicenseImagesSizeEnum `queryParam:"style=form,explode=true,name=size"`
 	// Subscription ID to use to license the image
 	SubscriptionID *string `queryParam:"style=form,explode=true,name=subscription_id"`
-}
-
-type LicenseImagesRequest struct {
-	QueryParams LicenseImagesQueryParams
-	// List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
-	Request  shared.LicenseImageRequest `request:"mediaType=application/json"`
-	Security LicenseImagesSecurity
 }
 
 type LicenseImagesResponse struct {

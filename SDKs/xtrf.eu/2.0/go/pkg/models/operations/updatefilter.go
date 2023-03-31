@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFilterPathParams struct {
+type UpdateFilterRequest struct {
+	// Updated view's filter.
+	RequestBody []shared.FilterPropertyDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateFilterRequest struct {
-	PathParams UpdateFilterPathParams
-	// Updated view's filter.
-	Request []shared.FilterPropertyDTO `request:"mediaType=application/json"`
 }
 
 type UpdateFilterResponse struct {

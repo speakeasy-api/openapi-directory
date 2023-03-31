@@ -3,35 +3,48 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BuildBotLocaleRequest(
-    path_params=operations.BuildBotLocalePathParams(
-        bot_id="dolor",
-        bot_version="voluptatibus",
-        locale_id="aut",
-    ),
-    headers=operations.BuildBotLocaleHeaders(
-        x_amz_algorithm="repellendus",
-        x_amz_content_sha256="et",
-        x_amz_credential="sunt",
-        x_amz_date="exercitationem",
-        x_amz_security_token="voluptatem",
-        x_amz_signature="natus",
-        x_amz_signed_headers="ea",
+        hmac="YOUR_API_KEY_HERE",
     ),
 )
-    
-res = s.build_bot_locale(req)
 
-if res.build_bot_locale_response is not None:
+
+req = operations.BatchCreateCustomVocabularyItemRequest(
+    request_body=operations.BatchCreateCustomVocabularyItemRequestBody(
+        custom_vocabulary_item_list=[
+            shared.NewCustomVocabularyItem(
+                display_as="provident",
+                phrase="distinctio",
+                weight=844266,
+            ),
+            shared.NewCustomVocabularyItem(
+                display_as="unde",
+                phrase="nulla",
+                weight=544883,
+            ),
+            shared.NewCustomVocabularyItem(
+                display_as="illum",
+                phrase="vel",
+                weight=623564,
+            ),
+        ],
+    ),
+    x_amz_algorithm="deserunt",
+    x_amz_content_sha256="suscipit",
+    x_amz_credential="iure",
+    x_amz_date="magnam",
+    x_amz_security_token="debitis",
+    x_amz_signature="ipsa",
+    x_amz_signed_headers="delectus",
+    bot_id="tempora",
+    bot_version="suscipit",
+    locale_id="molestiae",
+)
+    
+res = s.batch_create_custom_vocabulary_item(req)
+
+if res.batch_create_custom_vocabulary_item_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

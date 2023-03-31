@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetRealmUsersIDConsentsPathParams struct {
+type GetRealmUsersIDConsentsRequest struct {
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmUsersIDConsentsRequest struct {
-	PathParams GetRealmUsersIDConsentsPathParams
 }
 
 type GetRealmUsersIDConsentsResponse struct {

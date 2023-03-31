@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkApplianceVlanPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // CreateNetworkApplianceVlanRequestBodyIpv6PrefixAssignmentsOriginTypeEnum - Type of the origin
 type CreateNetworkApplianceVlanRequestBodyIpv6PrefixAssignmentsOriginTypeEnum string
 
@@ -117,8 +113,8 @@ type CreateNetworkApplianceVlanRequestBody struct {
 }
 
 type CreateNetworkApplianceVlanRequest struct {
-	PathParams CreateNetworkApplianceVlanPathParams
-	Request    CreateNetworkApplianceVlanRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkApplianceVlanRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // CreateNetworkApplianceVlan201ApplicationJSONIpv6PrefixAssignmentsOriginTypeEnum - Type of the origin

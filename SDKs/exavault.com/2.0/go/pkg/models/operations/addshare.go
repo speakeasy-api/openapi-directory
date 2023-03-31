@@ -10,13 +10,6 @@ import (
 	"time"
 )
 
-type AddShareHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type AddShareAddShareRequestBodyRecipients struct {
 	// Email address of person you are inviting to the share
 	Email *string `json:"email,omitempty"`
@@ -92,8 +85,11 @@ type AddShareAddShareRequestBody struct {
 }
 
 type AddShareRequest struct {
-	Headers AddShareHeaders
-	Request *AddShareAddShareRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddShareAddShareRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddShareResponse struct {

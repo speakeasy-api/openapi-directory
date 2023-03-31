@@ -6,13 +6,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 	"time"
 )
 
 type DashboardMeetingsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DashboardMeetingsIncludeFieldsEnum - Set the value of this field to "tracking_fields" if you would like to include tracking fields of each meeting in the response.
@@ -65,7 +64,7 @@ func (e *DashboardMeetingsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DashboardMeetingsQueryParams struct {
+type DashboardMeetingsRequest struct {
 	// Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
 	From types.Date `queryParam:"style=form,explode=true,name=from"`
 	// Set the value of this field to "tracking_fields" if you would like to include tracking fields of each meeting in the response.
@@ -80,11 +79,6 @@ type DashboardMeetingsQueryParams struct {
 	//
 	// If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
 	Type *DashboardMeetingsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DashboardMeetingsRequest struct {
-	QueryParams DashboardMeetingsQueryParams
-	Security    DashboardMeetingsSecurity
 }
 
 type DashboardMeetings200ApplicationXMLMetricsCustomKeys struct {

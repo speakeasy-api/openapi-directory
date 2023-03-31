@@ -38,6 +38,7 @@ pkg/models/shared/address.go
 pkg/models/shared/socketaddress.go
 pkg/models/shared/pipe.go
 pkg/models/shared/extension.go
+pkg/models/shared/altenum.go
 pkg/models/shared/clientstatusrequest.go
 pkg/models/shared/nodematcher.go
 pkg/models/shared/structmatcher.go
@@ -49,7 +50,5 @@ pkg/models/shared/listmatcher.go
 pkg/models/shared/doublematcher.go
 pkg/models/shared/doublerange.go
 pkg/models/shared/pathsegment.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

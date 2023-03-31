@@ -8,18 +8,14 @@ import (
 )
 
 type ClassroomCoursesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClassroomCoursesPatchPathParams struct {
-	// Identifier of the course to update. This identifier can be either the Classroom-assigned identifier or an alias.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClassroomCoursesPatchQueryParams struct {
+type ClassroomCoursesPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Course      *shared.Course    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -28,6 +24,8 @@ type ClassroomCoursesPatchQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifier of the course to update. This identifier can be either the Classroom-assigned identifier or an alias.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -42,13 +40,6 @@ type ClassroomCoursesPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesPatchRequest struct {
-	PathParams  ClassroomCoursesPatchPathParams
-	QueryParams ClassroomCoursesPatchQueryParams
-	Request     *shared.Course `request:"mediaType=application/json"`
-	Security    ClassroomCoursesPatchSecurity
 }
 
 type ClassroomCoursesPatchResponse struct {

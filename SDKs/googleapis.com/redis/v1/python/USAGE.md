@@ -4,65 +4,47 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RedisProjectsLocationsInstancesCreateRequest(
-    security=operations.RedisProjectsLocationsInstancesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RedisProjectsLocationsInstancesCreatePathParams(
-        parent="molestiae",
-    ),
-    query_params=operations.RedisProjectsLocationsInstancesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="voluptatem",
-        alt="media",
-        callback="officia",
-        fields="architecto",
-        instance_id="labore",
-        key="laboriosam",
-        oauth_token="in",
-        pretty_print=False,
-        quota_user="beatae",
-        upload_type="blanditiis",
-        upload_protocol="beatae",
-    ),
-    request=shared.InstanceInput(
-        alternative_location_id="voluptate",
+    dollar_xgafv="2",
+    instance_input=shared.InstanceInput(
+        alternative_location_id="provident",
         auth_enabled=False,
-        authorized_network="molestiae",
+        authorized_network="distinctio",
+        available_maintenance_versions=[
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
+        ],
         connect_mode="DIRECT_PEERING",
-        customer_managed_key="ut",
-        display_name="ipsam",
+        customer_managed_key="error",
+        display_name="deserunt",
         labels={
-            "atque": "molestias",
-            "ut": "dolores",
-            "voluptas": "omnis",
+            "iure": "magnam",
+            "debitis": "ipsa",
         },
-        location_id="id",
+        location_id="delectus",
         maintenance_policy=shared.MaintenancePolicyInput(
-            description="nostrum",
+            description="tempora",
             weekly_maintenance_window=[
                 shared.WeeklyMaintenanceWindowInput(
-                    day="TUESDAY",
+                    day="WEDNESDAY",
                     start_time=shared.TimeOfDay(
-                        hours=7207637891447502103,
-                        minutes=8622083641679649735,
-                        nanos=6406047390230794463,
-                        seconds=8648367394506910482,
+                        hours=791725,
+                        minutes=812169,
+                        nanos=528895,
+                        seconds=479977,
                     ),
                 ),
                 shared.WeeklyMaintenanceWindowInput(
-                    day="DAY_OF_WEEK_UNSPECIFIED",
+                    day="THURSDAY",
                     start_time=shared.TimeOfDay(
-                        hours=102516519619783577,
-                        minutes=2317600410149429910,
-                        nanos=4401454000593110478,
-                        seconds=3498630052342442269,
+                        hours=392785,
+                        minutes=925597,
+                        nanos=836079,
+                        seconds=71036,
                     ),
                 ),
             ],
@@ -70,31 +52,51 @@ req = operations.RedisProjectsLocationsInstancesCreateRequest(
         maintenance_schedule=shared.MaintenanceScheduleInput(
             can_reschedule=False,
         ),
-        memory_size_gb=2306973576407439514,
-        name="reprehenderit",
+        maintenance_version="quis",
+        memory_size_gb=87129,
+        name="deserunt",
         persistence_config=shared.PersistenceConfigInput(
             persistence_mode="PERSISTENCE_MODE_UNSPECIFIED",
-            rdb_snapshot_period="TWELVE_HOURS",
-            rdb_snapshot_start_time="eveniet",
+            rdb_snapshot_period="ONE_HOUR",
+            rdb_snapshot_start_time="repellendus",
         ),
-        read_replicas_mode="READ_REPLICAS_DISABLED",
+        read_replicas_mode="READ_REPLICAS_ENABLED",
         redis_configs={
-            "quasi": "voluptates",
+            "odit": "at",
+            "at": "maiores",
+            "molestiae": "quod",
+            "quod": "esse",
         },
-        redis_version="eligendi",
-        replica_count=4525063102438322793,
-        reserved_ip_range="deserunt",
-        secondary_ip_range="ea",
+        redis_version="totam",
+        replica_count=780529,
+        reserved_ip_range="dolorum",
+        secondary_ip_range="dicta",
         suspension_reasons=[
             "CUSTOMER_MANAGED_KEY_ISSUE",
             "CUSTOMER_MANAGED_KEY_ISSUE",
+            "SUSPENSION_REASON_UNSPECIFIED",
         ],
-        tier="TIER_UNSPECIFIED",
-        transit_encryption_mode="TRANSIT_ENCRYPTION_MODE_UNSPECIFIED",
+        tier="BASIC",
+        transit_encryption_mode="DISABLED",
     ),
+    access_token="optio",
+    alt="media",
+    callback="beatae",
+    fields_="commodi",
+    instance_id="molestiae",
+    key="modi",
+    oauth_token="qui",
+    parent="impedit",
+    pretty_print=False,
+    quota_user="cum",
+    upload_type="esse",
+    upload_protocol="ipsum",
 )
     
-res = s.projects.redis_projects_locations_instances_create(req)
+res = s.projects.redis_projects_locations_instances_create(req, operations.RedisProjectsLocationsInstancesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

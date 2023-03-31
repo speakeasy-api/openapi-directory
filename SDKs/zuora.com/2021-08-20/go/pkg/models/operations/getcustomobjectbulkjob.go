@@ -8,12 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GETCustomObjectBulkJobPathParams struct {
-	// The ID of the custom object bulk job to be retrieved.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GETCustomObjectBulkJobHeaders struct {
+type GETCustomObjectBulkJobRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -27,11 +22,8 @@ type GETCustomObjectBulkJobHeaders struct {
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
 	// API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
 	ZuoraVersion *types.Date `header:"style=simple,explode=false,name=Zuora-Version"`
-}
-
-type GETCustomObjectBulkJobRequest struct {
-	PathParams GETCustomObjectBulkJobPathParams
-	Headers    GETCustomObjectBulkJobHeaders
+	// The ID of the custom object bulk job to be retrieved.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GETCustomObjectBulkJobResponse struct {

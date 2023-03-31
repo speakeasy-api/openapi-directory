@@ -13,10 +13,10 @@ import (
 )
 
 type GetOrdersSecurity struct {
-	FdcAuth shared.SchemeFdcAuth `security:"scheme,type=oauth2"`
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetOrdersQueryParams struct {
+type GetOrdersRequest struct {
 	// Date-time in ISO 8601 format for selecting orders after, or at, the specified time
 	FromDate string `queryParam:"style=form,explode=true,name=fromDate"`
 	// Adds additional information to the response, uses a CSV format for multiple values.'
@@ -31,11 +31,6 @@ type GetOrdersQueryParams struct {
 	ToDate string `queryParam:"style=form,explode=true,name=toDate"`
 	// A CSV of warehouse id, '123' or '1,2,3'
 	WarehouseIds []int64 `queryParam:"style=form,explode=false,name=warehouseIds"`
-}
-
-type GetOrdersRequest struct {
-	QueryParams GetOrdersQueryParams
-	Security    GetOrdersSecurity
 }
 
 // GetOrdersErrorStandardV2 - No Orders Found

@@ -7,28 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportIterationPathParams struct {
-	// The iteration id
-	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
-	// The project id
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type ExportIterationQueryParams struct {
+type ExportIterationRequest struct {
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// The flavor of the target platform (Windows, Linux, ARM, or GPU)
 	Flavor *string `queryParam:"style=form,explode=true,name=flavor"`
+	// The iteration id
+	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// The target platform (coreml or tensorflow)
 	Platform string `queryParam:"style=form,explode=true,name=platform"`
-}
-
-type ExportIterationHeaders struct {
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type ExportIterationRequest struct {
-	PathParams  ExportIterationPathParams
-	QueryParams ExportIterationQueryParams
-	Headers     ExportIterationHeaders
+	// The project id
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type ExportIterationResponse struct {

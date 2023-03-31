@@ -8,26 +8,22 @@ import (
 )
 
 type AndroidenterpriseWebappsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidenterpriseWebappsUpdatePathParams struct {
-	// The ID of the enterprise.
-	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
-	// The ID of the web app.
-	WebAppID string `pathParam:"style=simple,explode=false,name=webAppId"`
-}
-
-type AndroidenterpriseWebappsUpdateQueryParams struct {
+type AndroidenterpriseWebappsUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WebApp      *shared.WebApp    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The ID of the enterprise.
+	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,13 +38,8 @@ type AndroidenterpriseWebappsUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseWebappsUpdateRequest struct {
-	PathParams  AndroidenterpriseWebappsUpdatePathParams
-	QueryParams AndroidenterpriseWebappsUpdateQueryParams
-	Request     *shared.WebApp `request:"mediaType=application/json"`
-	Security    AndroidenterpriseWebappsUpdateSecurity
+	// The ID of the web app.
+	WebAppID string `pathParam:"style=simple,explode=false,name=webAppId"`
 }
 
 type AndroidenterpriseWebappsUpdateResponse struct {

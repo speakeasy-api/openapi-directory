@@ -8,21 +8,16 @@ import (
 )
 
 type PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteSecurity struct {
-	Hapikey           *shared.SchemeHapikey           `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Legacy      *shared.SchemeOauth2Legacy      `security:"scheme,type=oauth2"`
-	PrivateAppsLegacy *shared.SchemePrivateAppsLegacy `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostAutomationV4ActionsCallbacksCallbackIDCompleteCompletePathParams struct {
-	// The ID of the target app.
-	CallbackID string `pathParam:"style=simple,explode=false,name=callbackId"`
+	Hapikey           *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2Legacy      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
 }
 
 type PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteRequest struct {
-	PathParams PostAutomationV4ActionsCallbacksCallbackIDCompleteCompletePathParams
 	// The result of the completed action.
-	Request  shared.CallbackCompletionRequest `request:"mediaType=application/json"`
-	Security PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteSecurity
+	CallbackCompletionRequest shared.CallbackCompletionRequest `request:"mediaType=application/json"`
+	// The ID of the target app.
+	CallbackID string `pathParam:"style=simple,explode=false,name=callbackId"`
 }
 
 type PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteResponse struct {

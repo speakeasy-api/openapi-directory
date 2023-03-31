@@ -33,11 +33,11 @@ func newAccountstatuses(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // ContentAccountstatusesCustombatch - Retrieves multiple Merchant Center account statuses in a single request.
-func (s *accountstatuses) ContentAccountstatusesCustombatch(ctx context.Context, request operations.ContentAccountstatusesCustombatchRequest) (*operations.ContentAccountstatusesCustombatchResponse, error) {
+func (s *accountstatuses) ContentAccountstatusesCustombatch(ctx context.Context, request operations.ContentAccountstatusesCustombatchRequest, security operations.ContentAccountstatusesCustombatchSecurity) (*operations.ContentAccountstatusesCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accountstatuses/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountstatusesCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *accountstatuses) ContentAccountstatusesCustombatch(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *accountstatuses) ContentAccountstatusesCustombatch(ctx context.Context,
 }
 
 // ContentAccountstatusesGet - Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-client accounts.
-func (s *accountstatuses) ContentAccountstatusesGet(ctx context.Context, request operations.ContentAccountstatusesGetRequest) (*operations.ContentAccountstatusesGetResponse, error) {
+func (s *accountstatuses) ContentAccountstatusesGet(ctx context.Context, request operations.ContentAccountstatusesGetRequest, security operations.ContentAccountstatusesGetSecurity) (*operations.ContentAccountstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *accountstatuses) ContentAccountstatusesGet(ctx context.Context, request
 }
 
 // ContentAccountstatusesList - Lists the statuses of the sub-accounts in your Merchant Center account.
-func (s *accountstatuses) ContentAccountstatusesList(ctx context.Context, request operations.ContentAccountstatusesListRequest) (*operations.ContentAccountstatusesListResponse, error) {
+func (s *accountstatuses) ContentAccountstatusesList(ctx context.Context, request operations.ContentAccountstatusesListRequest, security operations.ContentAccountstatusesListSecurity) (*operations.ContentAccountstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

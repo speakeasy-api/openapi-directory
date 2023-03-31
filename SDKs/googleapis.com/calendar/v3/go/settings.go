@@ -33,20 +33,20 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CalendarSettingsGet - Returns a single user setting.
-func (s *settings) CalendarSettingsGet(ctx context.Context, request operations.CalendarSettingsGetRequest) (*operations.CalendarSettingsGetResponse, error) {
+func (s *settings) CalendarSettingsGet(ctx context.Context, request operations.CalendarSettingsGetRequest, security operations.CalendarSettingsGetSecurity) (*operations.CalendarSettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/settings/{setting}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/me/settings/{setting}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *settings) CalendarSettingsGet(ctx context.Context, request operations.C
 }
 
 // CalendarSettingsList - Returns all user settings for the authenticated user.
-func (s *settings) CalendarSettingsList(ctx context.Context, request operations.CalendarSettingsListRequest) (*operations.CalendarSettingsListResponse, error) {
+func (s *settings) CalendarSettingsList(ctx context.Context, request operations.CalendarSettingsListRequest, security operations.CalendarSettingsListSecurity) (*operations.CalendarSettingsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/settings"
 
@@ -90,11 +90,11 @@ func (s *settings) CalendarSettingsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,11 +129,11 @@ func (s *settings) CalendarSettingsList(ctx context.Context, request operations.
 }
 
 // CalendarSettingsWatch - Watch for changes to Settings resources.
-func (s *settings) CalendarSettingsWatch(ctx context.Context, request operations.CalendarSettingsWatchRequest) (*operations.CalendarSettingsWatchResponse, error) {
+func (s *settings) CalendarSettingsWatch(ctx context.Context, request operations.CalendarSettingsWatchRequest, security operations.CalendarSettingsWatchSecurity) (*operations.CalendarSettingsWatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me/settings/watch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *settings) CalendarSettingsWatch(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

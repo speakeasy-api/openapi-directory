@@ -34,14 +34,14 @@ func newManufacturers(defaultClient, securityClient HTTPClient, serverURL, langu
 // Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 func (s *manufacturers) GetOrganizationSummaryTopClientsManufacturersByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest) (*operations.GetOrganizationSummaryTopClientsManufacturersByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

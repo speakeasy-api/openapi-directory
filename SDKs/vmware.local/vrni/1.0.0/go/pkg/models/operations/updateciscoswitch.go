@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateCiscoSwitchSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateCiscoSwitchPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateCiscoSwitchRequest struct {
-	PathParams UpdateCiscoSwitchPathParams
-	Request    *shared.CiscoSwitchDataSource `request:"mediaType=application/json"`
-	Security   UpdateCiscoSwitchSecurity
+	CiscoSwitchDataSource *shared.CiscoSwitchDataSource `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateCiscoSwitchResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAs2StationsIDPathParams struct {
+type DeleteAs2StationsIDRequest struct {
 	// As2 Station ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAs2StationsIDRequest struct {
-	PathParams DeleteAs2StationsIDPathParams
 }
 
 type DeleteAs2StationsIDResponse struct {

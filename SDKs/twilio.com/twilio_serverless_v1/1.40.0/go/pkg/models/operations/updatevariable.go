@@ -12,16 +12,8 @@ var UpdateVariableServerList = []string{
 }
 
 type UpdateVariableSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateVariablePathParams struct {
-	// The SID of the Environment with the Variable resource to update.
-	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
-	// The SID of the Service to update the Variable resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The SID of the Variable resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateVariableUpdateVariableRequest struct {
@@ -32,10 +24,13 @@ type UpdateVariableUpdateVariableRequest struct {
 }
 
 type UpdateVariableRequest struct {
-	PathParams UpdateVariablePathParams
-	Request    *UpdateVariableUpdateVariableRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateVariableSecurity
-	ServerURL  *string
+	// The SID of the Environment with the Variable resource to update.
+	EnvironmentSid string                               `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
+	RequestBody    *UpdateVariableUpdateVariableRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to update the Variable resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The SID of the Variable resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateVariableResponse struct {

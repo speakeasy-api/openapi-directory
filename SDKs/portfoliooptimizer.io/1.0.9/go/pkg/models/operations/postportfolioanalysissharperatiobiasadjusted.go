@@ -17,10 +17,6 @@ type PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBody struct {
 	RiskFreeRate float64 `json:"riskFreeRate"`
 }
 
-type PostPortfolioAnalysisSharpeRatioBiasAdjustedRequest struct {
-	Request PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisSharpeRatioBiasAdjusted200ApplicationJSONPortfolios struct {
 	// The bias-adjusted Sharpe ratio of the portfolio
 	PortfolioBiasAdjustedSharpeRatio float64 `json:"portfolioBiasAdjustedSharpeRatio"`

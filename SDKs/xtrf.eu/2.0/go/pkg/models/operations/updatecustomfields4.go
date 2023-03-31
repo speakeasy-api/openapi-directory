@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomFields4PathParams struct {
+type UpdateCustomFields4Request struct {
+	// Updated custom fields of a given quote.
+	RequestBody []shared.CustomFieldDTO `request:"mediaType=application/json"`
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type UpdateCustomFields4Request struct {
-	PathParams UpdateCustomFields4PathParams
-	// Updated custom fields of a given quote.
-	Request []shared.CustomFieldDTO `request:"mediaType=application/json"`
 }
 
 type UpdateCustomFields4Response struct {

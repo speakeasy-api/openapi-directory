@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityListOrgEventsForAuthenticatedUserPathParams struct {
+type ActivityListOrgEventsForAuthenticatedUserRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// The handle for the GitHub user account.
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ActivityListOrgEventsForAuthenticatedUserQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActivityListOrgEventsForAuthenticatedUserRequest struct {
-	PathParams  ActivityListOrgEventsForAuthenticatedUserPathParams
-	QueryParams ActivityListOrgEventsForAuthenticatedUserQueryParams
+	// The handle for the GitHub user account.
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ActivityListOrgEventsForAuthenticatedUserResponse struct {

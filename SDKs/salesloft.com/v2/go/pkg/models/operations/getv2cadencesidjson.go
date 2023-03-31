@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetV2CadencesIDJSONPathParams struct {
+type GetV2CadencesIDJSONRequest struct {
 	// Cadence ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2CadencesIDJSONRequest struct {
-	PathParams GetV2CadencesIDJSONPathParams
 }
 
 type GetV2CadencesIDJSONResponse struct {

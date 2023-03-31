@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmUsersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmUsersQueryParams struct {
+type GetNetworkSmUsersRequest struct {
 	// Filter users by email(s).
 	Emails []string `queryParam:"style=form,explode=false,name=emails"`
 	// Filter users by id(s).
-	Ids []string `queryParam:"style=form,explode=false,name=ids"`
+	Ids       []string `queryParam:"style=form,explode=false,name=ids"`
+	NetworkID string   `pathParam:"style=simple,explode=false,name=networkId"`
 	// Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags.
 	Scope []string `queryParam:"style=form,explode=false,name=scope"`
 	// Filter users by username(s).
 	Usernames []string `queryParam:"style=form,explode=false,name=usernames"`
-}
-
-type GetNetworkSmUsersRequest struct {
-	PathParams  GetNetworkSmUsersPathParams
-	QueryParams GetNetworkSmUsersQueryParams
 }
 
 type GetNetworkSmUsers200ApplicationJSON struct {

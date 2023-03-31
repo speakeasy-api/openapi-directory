@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01SendDigitsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01SendDigitsRequest struct {
-	// POST parameters
-	Request  *shared.SendDigitsParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01SendDigitsSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01SendDigitsResponse struct {

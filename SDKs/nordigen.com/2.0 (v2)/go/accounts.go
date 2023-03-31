@@ -36,7 +36,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Balances will be returned in Berlin Group PSD2 format.
 func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operations.AccountsBalancesRetrieveRequest) (*operations.AccountsBalancesRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/balances/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/balances/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 // Account details will be returned in Berlin Group PSD2 format.
 func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operations.AccountsDetailsRetrieveRequest) (*operations.AccountsDetailsRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/details/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/details/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,14 +268,14 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 // Transactions will be returned in Berlin Group PSD2 format.
 func (s *accounts) AccountsTransactionsRetrieve(ctx context.Context, request operations.AccountsTransactionsRetrieveRequest) (*operations.AccountsTransactionsRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/transactions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/transactions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -390,7 +390,7 @@ func (s *accounts) AccountsTransactionsRetrieve(ctx context.Context, request ope
 // Account status is recalculated based on the error count in the latest req.
 func (s *accounts) RetrieveAccountMetadata(ctx context.Context, request operations.RetrieveAccountMetadataRequest) (*operations.RetrieveAccountMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,10 +15,6 @@ type PostAssetsCorrelationMatrixNearestRequestBody struct {
 	AssetsFixedCorrelations [][]int64 `json:"assetsFixedCorrelations,omitempty"`
 }
 
-type PostAssetsCorrelationMatrixNearestRequest struct {
-	Request PostAssetsCorrelationMatrixNearestRequestBody `request:"mediaType=application/json"`
-}
-
 // PostAssetsCorrelationMatrixNearest200ApplicationJSON - OK
 type PostAssetsCorrelationMatrixNearest200ApplicationJSON struct {
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j

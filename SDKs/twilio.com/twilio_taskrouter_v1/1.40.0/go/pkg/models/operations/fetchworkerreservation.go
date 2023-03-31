@@ -12,22 +12,17 @@ var FetchWorkerReservationServerList = []string{
 }
 
 type FetchWorkerReservationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchWorkerReservationPathParams struct {
+type FetchWorkerReservationRequest struct {
 	// The SID of the WorkerReservation resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The SID of the reserved Worker resource with the WorkerReservation resource to fetch.
 	WorkerSid string `pathParam:"style=simple,explode=false,name=WorkerSid"`
 	// The SID of the Workspace with the WorkerReservation resource to fetch.
 	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchWorkerReservationRequest struct {
-	PathParams FetchWorkerReservationPathParams
-	Security   FetchWorkerReservationSecurity
-	ServerURL  *string
 }
 
 type FetchWorkerReservationResponse struct {

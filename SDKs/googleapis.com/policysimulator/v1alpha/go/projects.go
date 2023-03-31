@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // PolicysimulatorProjectsLocationsReplaysOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) PolicysimulatorProjectsLocationsReplaysOperationsList(ctx context.Context, request operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest) (*operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse, error) {
+func (s *projects) PolicysimulatorProjectsLocationsReplaysOperationsList(ctx context.Context, request operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest, security operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity) (*operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

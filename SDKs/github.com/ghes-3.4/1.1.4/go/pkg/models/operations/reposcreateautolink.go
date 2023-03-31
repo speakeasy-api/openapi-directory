@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateAutolinkPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateAutolinkRequestBody struct {
 	// Whether this autolink reference matches alphanumeric characters. If true, the `<num>` parameter of the `url_template` matches alphanumeric characters `A-Z` (case insensitive), `0-9`, and `-`. If false, this autolink reference only matches numeric characters.
 	IsAlphanumeric *bool `json:"is_alphanumeric,omitempty"`
@@ -24,8 +17,11 @@ type ReposCreateAutolinkRequestBody struct {
 }
 
 type ReposCreateAutolinkRequest struct {
-	PathParams ReposCreateAutolinkPathParams
-	Request    ReposCreateAutolinkRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateAutolinkRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateAutolinkResponse struct {

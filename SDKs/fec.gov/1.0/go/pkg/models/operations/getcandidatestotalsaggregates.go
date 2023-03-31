@@ -104,7 +104,7 @@ func (e *GetCandidatesTotalsAggregatesPartyEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetCandidatesTotalsAggregatesQueryParams struct {
+type GetCandidatesTotalsAggregatesRequest struct {
 	// Candidate totals aggregate_by (Chose one of dropdown options):
 	//         - ' ' grouped by election year
 	//         - office grouped by election year, by office
@@ -164,10 +164,6 @@ type GetCandidatesTotalsAggregatesQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// US state or territory where a candidate runs for office
 	State []string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetCandidatesTotalsAggregatesRequest struct {
-	QueryParams GetCandidatesTotalsAggregatesQueryParams
 }
 
 type GetCandidatesTotalsAggregatesResponse struct {

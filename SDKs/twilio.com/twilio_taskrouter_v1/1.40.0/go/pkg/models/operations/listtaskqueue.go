@@ -12,15 +12,11 @@ var ListTaskQueueServerList = []string{
 }
 
 type ListTaskQueueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTaskQueuePathParams struct {
-	// The SID of the Workspace with the TaskQueue to read.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type ListTaskQueueQueryParams struct {
+type ListTaskQueueRequest struct {
 	// The attributes of the Workers to read. Returns the TaskQueues with Workers that match the attributes specified in this parameter.
 	EvaluateWorkerAttributes *string `queryParam:"style=form,explode=true,name=EvaluateWorkerAttributes"`
 	// The `friendly_name` of the TaskQueue resources to read.
@@ -35,13 +31,8 @@ type ListTaskQueueQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The SID of the Worker with the TaskQueue resources to read.
 	WorkerSid *string `queryParam:"style=form,explode=true,name=WorkerSid"`
-}
-
-type ListTaskQueueRequest struct {
-	PathParams  ListTaskQueuePathParams
-	QueryParams ListTaskQueueQueryParams
-	Security    ListTaskQueueSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the TaskQueue to read.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type ListTaskQueueListTaskQueueResponseMeta struct {

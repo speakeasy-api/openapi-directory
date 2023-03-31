@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateColumnsPathParams struct {
+type UpdateColumnsRequest struct {
+	// Updated columns in view.
+	RequestBody []shared.ColumnDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateColumnsRequest struct {
-	PathParams UpdateColumnsPathParams
-	// Updated columns in view.
-	Request []shared.ColumnDTO `request:"mediaType=application/json"`
 }
 
 type UpdateColumnsResponse struct {

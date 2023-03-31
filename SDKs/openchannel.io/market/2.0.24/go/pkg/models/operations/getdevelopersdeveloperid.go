@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDevelopersDeveloperIDPathParams struct {
+type GetDevelopersDeveloperIDRequest struct {
 	// The id of the developer to be located
 	DeveloperID string `pathParam:"style=simple,explode=false,name=developerId"`
-}
-
-type GetDevelopersDeveloperIDRequest struct {
-	PathParams GetDevelopersDeveloperIDPathParams
 }
 
 type GetDevelopersDeveloperIDResponse struct {

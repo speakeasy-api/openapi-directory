@@ -14,20 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateCustomerServiceMetricTaskRequest{
-        Security: operations.CreateCustomerServiceMetricTaskSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Headers: operations.CreateCustomerServiceMetricTaskHeaders{
-            AcceptLanguage: "corrupti",
-        },
-        Request: shared.CreateServiceMetricsTaskRequest{
-            FeedType: "provident",
+        CreateServiceMetricsTaskRequest: shared.CreateServiceMetricsTaskRequest{
+            FeedType: "corrupti",
             FilterCriteria: &shared.CustomerServiceMetricsFilterCriteria{
-                CustomerServiceMetricType: "distinctio",
-                EvaluationMarketplaceID: "quibusdam",
+                CustomerServiceMetricType: "provident",
+                EvaluationMarketplaceID: "distinctio",
                 ListingCategories: []string{
+                    "unde",
                     "nulla",
                     "corrupti",
                     "illum",
@@ -39,10 +32,13 @@ func main() {
             },
             SchemaVersion: "suscipit",
         },
+        AcceptLanguage: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.CustomerServiceMetricTask.CreateCustomerServiceMetricTask(ctx, req)
+    res, err := s.CustomerServiceMetricTask.CreateCustomerServiceMetricTask(ctx, req, operations.CreateCustomerServiceMetricTaskSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

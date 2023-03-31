@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryBatchStatusV4PathParams struct {
+type QueryBatchStatusV4Request struct {
 	// Batch Id
 	BatchID string `pathParam:"style=simple,explode=false,name=batchId"`
-}
-
-type QueryBatchStatusV4Request struct {
-	PathParams QueryBatchStatusV4PathParams
 }
 
 type QueryBatchStatusV4Response struct {

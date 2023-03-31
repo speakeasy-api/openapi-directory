@@ -30,6 +30,5 @@ pkg/models/shared/tensorshapeprotodim.go
 pkg/models/shared/tensorflowresourcehandleproto.go
 pkg/models/shared/tensorflowdatatypeenum.go
 pkg/models/shared/tensor.go
-pkg/models/shared/security.go
 pkg/models/shared/feedback.go
 USAGE.md

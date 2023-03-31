@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmClientsIDCertificatesAttrGenerateAndDownloadPathParams struct {
-	Attr string `pathParam:"style=simple,explode=false,name=attr"`
+type PostRealmClientsIDCertificatesAttrGenerateAndDownloadRequest struct {
+	// Keystore configuration as JSON
+	KeyStoreConfig shared.KeyStoreConfig `request:"mediaType=application/json"`
+	Attr           string                `pathParam:"style=simple,explode=false,name=attr"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmClientsIDCertificatesAttrGenerateAndDownloadRequest struct {
-	PathParams PostRealmClientsIDCertificatesAttrGenerateAndDownloadPathParams
-	// Keystore configuration as JSON
-	Request shared.KeyStoreConfig `request:"mediaType=application/json"`
 }
 
 type PostRealmClientsIDCertificatesAttrGenerateAndDownloadResponse struct {

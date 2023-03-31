@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05CareContextsOnDiscoverJSONHeaders struct {
+type PostV05CareContextsOnDiscoverJSONRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	PatientDiscoveryResult shared.PatientDiscoveryResult `request:"mediaType=application/json"`
 	// Suffix of the consent manager to which the request was intended.
 	XCmID string `header:"style=simple,explode=false,name=X-CM-ID"`
-}
-
-type PostV05CareContextsOnDiscoverJSONRequest struct {
-	Headers PostV05CareContextsOnDiscoverJSONHeaders
-	Request shared.PatientDiscoveryResult `request:"mediaType=application/json"`
 }
 
 type PostV05CareContextsOnDiscoverJSONResponse struct {

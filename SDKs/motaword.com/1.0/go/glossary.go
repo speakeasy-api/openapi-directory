@@ -37,9 +37,9 @@ func newGlossary(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Upload a new glossary file to your project to be used during translation. Glossaries can be CSV or TBX files.
 func (s *glossary) CreateGlossaryJSON(ctx context.Context, request operations.CreateGlossaryJSONRequest) (*operations.CreateGlossaryJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,9 +107,9 @@ func (s *glossary) CreateGlossaryJSON(ctx context.Context, request operations.Cr
 // Upload a new glossary file to your project to be used during translation. Glossaries can be CSV or TBX files.
 func (s *glossary) CreateGlossaryMultipart(ctx context.Context, request operations.CreateGlossaryMultipartRequest) (*operations.CreateGlossaryMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryUploadRequest1", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -177,7 +177,7 @@ func (s *glossary) CreateGlossaryMultipart(ctx context.Context, request operatio
 // Delete the existing glossary from the project.
 func (s *glossary) DeleteGlossary(ctx context.Context, request operations.DeleteGlossaryRequest) (*operations.DeleteGlossaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -290,7 +290,7 @@ func (s *glossary) DownloadGlobalGlossary(ctx context.Context) (*operations.Down
 // Download a previously uploaded glossary file.
 func (s *glossary) DownloadGlossary(ctx context.Context, request operations.DownloadGlossaryRequest) (*operations.DownloadGlossaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +346,7 @@ func (s *glossary) DownloadGlossary(ctx context.Context, request operations.Down
 // View a list of glossaries previously uploaded to the project.
 func (s *glossary) GetGlossaries(ctx context.Context, request operations.GetGlossariesRequest) (*operations.GetGlossariesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -401,7 +401,7 @@ func (s *glossary) GetGlossaries(ctx context.Context, request operations.GetGlos
 // View the details of a glossary file uploaded to a project.
 func (s *glossary) GetGlossary(ctx context.Context, request operations.GetGlossaryRequest) (*operations.GetGlossaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -454,7 +454,7 @@ func (s *glossary) GetGlossary(ctx context.Context, request operations.GetGlossa
 
 // UpdateGlobalGlossaryJSON - Create or update the account glossary
 // Update your corporate account's global glossary. This endpoint is available only for corporate account customers. This glossary will be automatically attached to each new project under your account.
-func (s *glossary) UpdateGlobalGlossaryJSON(ctx context.Context, request operations.UpdateGlobalGlossaryJSONRequest) (*operations.UpdateGlobalGlossaryJSONResponse, error) {
+func (s *glossary) UpdateGlobalGlossaryJSON(ctx context.Context, request shared.AccountGlossaryUploadRequest) (*operations.UpdateGlobalGlossaryJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/glossary"
 
@@ -518,7 +518,7 @@ func (s *glossary) UpdateGlobalGlossaryJSON(ctx context.Context, request operati
 
 // UpdateGlobalGlossaryMultipart - Create or update the account glossary
 // Update your corporate account's global glossary. This endpoint is available only for corporate account customers. This glossary will be automatically attached to each new project under your account.
-func (s *glossary) UpdateGlobalGlossaryMultipart(ctx context.Context, request operations.UpdateGlobalGlossaryMultipartRequest) (*operations.UpdateGlobalGlossaryMultipartResponse, error) {
+func (s *glossary) UpdateGlobalGlossaryMultipart(ctx context.Context, request shared.AccountGlossaryUploadRequest1) (*operations.UpdateGlobalGlossaryMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/glossary"
 
@@ -584,9 +584,9 @@ func (s *glossary) UpdateGlobalGlossaryMultipart(ctx context.Context, request op
 // Update the existing glossary file in the project. Public users are allowed to have only 1 glossary per project and file name and contents will replaced with the new glossary file that you are uploading via this endpoint.
 func (s *glossary) UpdateGlossaryJSON(ctx context.Context, request operations.UpdateGlossaryJSONRequest) (*operations.UpdateGlossaryJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -652,9 +652,9 @@ func (s *glossary) UpdateGlossaryJSON(ctx context.Context, request operations.Up
 // Update the existing glossary file in the project. Public users are allowed to have only 1 glossary per project and file name and contents will replaced with the new glossary file that you are uploading via this endpoint.
 func (s *glossary) UpdateGlossaryMultipart(ctx context.Context, request operations.UpdateGlossaryMultipartRequest) (*operations.UpdateGlossaryMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryUploadRequest1", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

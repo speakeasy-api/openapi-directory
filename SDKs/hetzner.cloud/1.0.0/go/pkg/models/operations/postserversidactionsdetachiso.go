@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsDetachIsoPathParams struct {
+type PostServersIDActionsDetachIsoRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsDetachIsoRequest struct {
-	PathParams PostServersIDActionsDetachIsoPathParams
 }
 
 // PostServersIDActionsDetachIsoActionResponseActionError - Error message for the Action if error occurred, otherwise null

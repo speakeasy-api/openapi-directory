@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsUpdateMembershipForAuthenticatedUserPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum - The state that the membership should be in. Only `"active"` will be accepted.
 type OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum string
 
@@ -41,8 +36,9 @@ type OrgsUpdateMembershipForAuthenticatedUserRequestBody struct {
 }
 
 type OrgsUpdateMembershipForAuthenticatedUserRequest struct {
-	PathParams OrgsUpdateMembershipForAuthenticatedUserPathParams
-	Request    OrgsUpdateMembershipForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody OrgsUpdateMembershipForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsUpdateMembershipForAuthenticatedUserResponse struct {

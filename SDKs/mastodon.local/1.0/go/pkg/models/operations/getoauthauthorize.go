@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOauthAuthorizeQueryParams struct {
+type GetOauthAuthorizeRequest struct {
 	// Client ID, obtained during app registration.
 	ClientID string `queryParam:"style=form,explode=true,name=client_id"`
 	// Added in 2.6.0. Forces the user to re-login, which is necessary for authorizing with multiple accounts from the same instance.
@@ -18,10 +18,6 @@ type GetOauthAuthorizeQueryParams struct {
 	ResponseType string `queryParam:"style=form,explode=true,name=response_type"`
 	// List of requested OAuth scopes, separated by spaces (or by pluses, if using query parameters). Must be a subset of scopes declared during app registration. If not provided, defaults to read.
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
-}
-
-type GetOauthAuthorizeRequest struct {
-	QueryParams GetOauthAuthorizeQueryParams
 }
 
 type GetOauthAuthorizeResponse struct {

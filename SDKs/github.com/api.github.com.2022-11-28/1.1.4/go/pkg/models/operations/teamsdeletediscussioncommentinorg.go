@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type TeamsDeleteDiscussionCommentInOrgPathParams struct {
+type TeamsDeleteDiscussionCommentInOrgRequest struct {
 	// The number that identifies the comment.
 	CommentNumber int64 `pathParam:"style=simple,explode=false,name=comment_number"`
 	// The number that identifies the discussion.
@@ -15,10 +15,6 @@ type TeamsDeleteDiscussionCommentInOrgPathParams struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type TeamsDeleteDiscussionCommentInOrgRequest struct {
-	PathParams TeamsDeleteDiscussionCommentInOrgPathParams
 }
 
 type TeamsDeleteDiscussionCommentInOrgResponse struct {

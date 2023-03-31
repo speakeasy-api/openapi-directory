@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddExpiryListingsJSONRequest struct {
-	// An array of expiry listings to be loaded
-	Request []shared.AftermarketListingExpiryCreate `request:"mediaType=application/json"`
-}
-
 type AddExpiryListingsJSONResponse struct {
 	// Request was successful
 	AftermarketListingAction *shared.AftermarketListingAction

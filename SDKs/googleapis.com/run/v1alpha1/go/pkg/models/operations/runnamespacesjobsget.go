@@ -8,16 +8,11 @@ import (
 )
 
 type RunNamespacesJobsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunNamespacesJobsGetPathParams struct {
-	// Required. The name of the job to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the project ID or number.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RunNamespacesJobsGetQueryParams struct {
+type RunNamespacesJobsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -30,6 +25,8 @@ type RunNamespacesJobsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The name of the job to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the project ID or number.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -40,12 +37,6 @@ type RunNamespacesJobsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RunNamespacesJobsGetRequest struct {
-	PathParams  RunNamespacesJobsGetPathParams
-	QueryParams RunNamespacesJobsGetQueryParams
-	Security    RunNamespacesJobsGetSecurity
 }
 
 type RunNamespacesJobsGetResponse struct {

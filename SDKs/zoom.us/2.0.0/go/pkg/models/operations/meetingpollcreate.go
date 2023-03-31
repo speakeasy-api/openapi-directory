@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingPollCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingPollCreatePathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingPollCreatePollQuestionsTypeEnum - Poll Question & Answer type:<br>`single` - Single choice<br>`mutliple` - Multiple choice
@@ -62,10 +54,12 @@ type MeetingPollCreatePoll struct {
 }
 
 type MeetingPollCreateRequest struct {
-	PathParams MeetingPollCreatePathParams
 	// Meeting poll object
-	Request  MeetingPollCreatePoll `request:"mediaType=application/json"`
-	Security MeetingPollCreateSecurity
+	RequestBody MeetingPollCreatePoll `request:"mediaType=application/json"`
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
 }
 
 // MeetingPollCreatePollStatusEnum - Status of the Meeting Poll:<br>`notstart` - Poll not started<br>`started` - Poll started<br>`ended` - Poll ended<br>`sharing` - Sharing poll results

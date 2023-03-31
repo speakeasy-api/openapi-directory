@@ -8,13 +8,13 @@ import (
 )
 
 type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurity struct {
@@ -22,12 +22,7 @@ type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurity struct
 	Option2 *ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurityOption2 `security:"option"`
 }
 
-type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListPathParams struct {
-	// Required. The name of the parent resource whose npm packages will be listed.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListQueryParams struct {
+type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListQueryParams str
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the parent resource whose npm packages will be listed.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListQueryParams str
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListRequest struct {
-	PathParams  ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListPathParams
-	QueryParams ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListQueryParams
-	Security    ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurity
 }
 
 type ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse struct {

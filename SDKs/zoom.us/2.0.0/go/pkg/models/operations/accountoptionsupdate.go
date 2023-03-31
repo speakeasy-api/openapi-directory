@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AccountOptionsUpdateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AccountOptionsUpdatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AccountOptionsUpdateApplicationJSONPayModeEnum - Payee:<br>`master` - master account holder pays.<br>`sub` - Sub account holder pays.
@@ -65,9 +59,9 @@ type AccountOptionsUpdateApplicationJSON struct {
 }
 
 type AccountOptionsUpdateRequest struct {
-	PathParams AccountOptionsUpdatePathParams
-	Request    AccountOptionsUpdateApplicationJSON `request:"mediaType=application/json"`
-	Security   AccountOptionsUpdateSecurity
+	RequestBody AccountOptionsUpdateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type AccountOptionsUpdateResponse struct {

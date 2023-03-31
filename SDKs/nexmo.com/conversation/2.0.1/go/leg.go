@@ -35,7 +35,7 @@ func newLeg(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // DeleteLeg - Delete a leg
 func (s *leg) DeleteLeg(ctx context.Context, request operations.DeleteLegRequest) (*operations.DeleteLegResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legs/{leg_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legs/{leg_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

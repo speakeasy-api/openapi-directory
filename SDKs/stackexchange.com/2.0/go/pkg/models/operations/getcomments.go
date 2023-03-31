@@ -56,7 +56,7 @@ func (e *GetCommentsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCommentsQueryParams struct {
+type GetCommentsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -111,10 +111,6 @@ type GetCommentsQueryParams struct {
 	Sort *GetCommentsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetCommentsRequest struct {
-	QueryParams GetCommentsQueryParams
 }
 
 type GetCommentsResponse struct {

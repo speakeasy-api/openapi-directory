@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type MovieCastSearchallReadPathParams struct {
-	Param string `pathParam:"style=simple,explode=false,name=param"`
-}
-
 type MovieCastSearchallReadRequest struct {
-	PathParams MovieCastSearchallReadPathParams
+	Param string `pathParam:"style=simple,explode=false,name=param"`
 }
 
 type MovieCastSearchallReadResponse struct {

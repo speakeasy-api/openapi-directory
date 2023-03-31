@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type TrapConfigDelPathParams struct {
+type TrapConfigDelRequest struct {
 	// IP of the destination
 	IP string `pathParam:"style=simple,explode=false,name=IP"`
 	// Agent to delete the destination
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// port of the destination
 	Port int `pathParam:"style=simple,explode=false,name=port"`
-}
-
-type TrapConfigDelRequest struct {
-	PathParams TrapConfigDelPathParams
 }
 
 type TrapConfigDelResponse struct {

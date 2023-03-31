@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCurrenciesIDPathParams struct {
+type GetCurrenciesIDRequest struct {
 	// The unique identifier of the currency.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCurrenciesIDRequest struct {
-	PathParams GetCurrenciesIDPathParams
 }
 
 type GetCurrenciesIDResponse struct {

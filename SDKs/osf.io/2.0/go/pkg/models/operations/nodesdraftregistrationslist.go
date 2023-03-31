@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type NodesDraftRegistrationsListPathParams struct {
+type NodesDraftRegistrationsListRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesDraftRegistrationsListRequest struct {
-	PathParams NodesDraftRegistrationsListPathParams
 }
 
 type NodesDraftRegistrationsListDraftRegistrationAttributesNodeLicense struct {

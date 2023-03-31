@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMessageCommentReactionsIDPathParams struct {
+type GetMessageCommentReactionsIDRequest struct {
 	// Message Comment Reaction ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetMessageCommentReactionsIDRequest struct {
-	PathParams GetMessageCommentReactionsIDPathParams
 }
 
 type GetMessageCommentReactionsIDResponse struct {

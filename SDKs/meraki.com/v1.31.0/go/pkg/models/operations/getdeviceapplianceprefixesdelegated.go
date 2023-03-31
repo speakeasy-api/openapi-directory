@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetDeviceAppliancePrefixesDelegatedPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GetDeviceAppliancePrefixesDelegatedRequest struct {
-	PathParams GetDeviceAppliancePrefixesDelegatedPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GetDeviceAppliancePrefixesDelegatedResponse struct {

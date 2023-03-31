@@ -26,7 +26,6 @@ pkg/models/shared/validationerror.go
 pkg/models/shared/deviceinfo.go
 pkg/models/shared/vulnerability.go
 pkg/models/shared/devicefeatures.go
-pkg/models/shared/security.go
 pkg/models/shared/defaultaccount.go
 pkg/models/shared/configissue.go
 pkg/models/shared/expiredcert.go

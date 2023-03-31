@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/displayvideo/v2/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,36 +15,28 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DisplayvideoAdvertisersAssetsUploadRequest(
-    security=operations.DisplayvideoAdvertisersAssetsUploadSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DisplayvideoAdvertisersAssetsUploadPathParams(
-        advertiser_id="et",
-    ),
-    query_params=operations.DisplayvideoAdvertisersAssetsUploadQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
-        alt="json",
-        callback="aut",
-        fields="asperiores",
-        key="ea",
-        oauth_token="quam",
-        pretty_print=True,
-        quota_user="consequatur",
-        upload_type="et",
-        upload_protocol="natus",
-    ),
-    request="corrupti".encode(),
+    dollar_xgafv="2",
+    request_body="provident".encode(),
+    access_token="distinctio",
+    advertiser_id="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.advertisers.displayvideo_advertisers_assets_upload(req)
+res = s.advertisers.displayvideo_advertisers_assets_upload(req, operations.DisplayvideoAdvertisersAssetsUploadSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.create_asset_response is not None:
     # handle response
@@ -52,7 +44,8 @@ if res.create_asset_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### advertisers
 
@@ -135,13 +128,20 @@ if res.create_asset_response is not None:
 * `displayvideo_advertisers_targeting_types_assigned_targeting_options_delete` - Deletes an assigned targeting option from an advertiser.
 * `displayvideo_advertisers_targeting_types_assigned_targeting_options_get` - Gets a single targeting option assigned to an advertiser.
 * `displayvideo_advertisers_targeting_types_assigned_targeting_options_list` - Lists the targeting options assigned to an advertiser.
+* `displayvideo_advertisers_youtube_ad_group_ads_get` - Gets a YouTube ad group ad.
+* `displayvideo_advertisers_youtube_ad_group_ads_list` - Lists YouTube ad group ads.
+* `displayvideo_advertisers_youtube_ad_groups_bulk_list_ad_group_assigned_targeting_options` - Lists assigned targeting options for multiple YouTube ad groups across targeting types. Inherieted assigned targeting options are not included.
+* `displayvideo_advertisers_youtube_ad_groups_get` - Gets a YouTube ad group.
+* `displayvideo_advertisers_youtube_ad_groups_list` - Lists YouTube ad groups.
+* `displayvideo_advertisers_youtube_ad_groups_targeting_types_assigned_targeting_options_get` - Gets a single targeting option assigned to a YouTube ad group. Inherited assigned targeting options are not included.
+* `displayvideo_advertisers_youtube_ad_groups_targeting_types_assigned_targeting_options_list` - Lists the targeting options assigned to a YouTube ad group. Inherited assigned targeting options are not included.
 
-### combinedAudiences
+### combined_audiences
 
 * `displayvideo_combined_audiences_get` - Gets a combined audience.
 * `displayvideo_combined_audiences_list` - Lists combined audiences. The order is defined by the order_by parameter.
 
-### customBiddingAlgorithms
+### custom_bidding_algorithms
 
 * `displayvideo_custom_bidding_algorithms_create` - Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if successful.
 * `displayvideo_custom_bidding_algorithms_get` - Gets a custom bidding algorithm.
@@ -152,12 +152,12 @@ if res.create_asset_response is not None:
 * `displayvideo_custom_bidding_algorithms_scripts_list` - Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
 * `displayvideo_custom_bidding_algorithms_upload_script` - Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
 
-### customLists
+### custom_lists
 
 * `displayvideo_custom_lists_get` - Gets a custom list.
 * `displayvideo_custom_lists_list` - Lists custom lists. The order is defined by the order_by parameter.
 
-### firstAndThirdPartyAudiences
+### first_and_third_party_audiences
 
 * `displayvideo_first_and_third_party_audiences_create` - Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 * `displayvideo_first_and_third_party_audiences_edit_customer_match_members` - Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
@@ -165,16 +165,16 @@ if res.create_asset_response is not None:
 * `displayvideo_first_and_third_party_audiences_list` - Lists first and third party audiences. The order is defined by the order_by parameter.
 * `displayvideo_first_and_third_party_audiences_patch` - Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 
-### floodlightGroups
+### floodlight_groups
 
 * `displayvideo_floodlight_groups_get` - Gets a Floodlight group.
 
-### googleAudiences
+### google_audiences
 
 * `displayvideo_google_audiences_get` - Gets a Google audience.
 * `displayvideo_google_audiences_list` - Lists Google audiences. The order is defined by the order_by parameter.
 
-### guaranteedOrders
+### guaranteed_orders
 
 * `displayvideo_guaranteed_orders_create` - Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
 * `displayvideo_guaranteed_orders_edit_guaranteed_order_read_accessors` - Edits read advertisers of a guaranteed order.
@@ -182,7 +182,7 @@ if res.create_asset_response is not None:
 * `displayvideo_guaranteed_orders_list` - Lists guaranteed orders that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 * `displayvideo_guaranteed_orders_patch` - Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
 
-### inventorySourceGroups
+### inventory_source_groups
 
 * `displayvideo_inventory_source_groups_assigned_inventory_sources_bulk_edit` - Bulk edits multiple assignments between inventory sources and a single inventory source group. The operation will delete the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
 * `displayvideo_inventory_source_groups_assigned_inventory_sources_create` - Creates an assignment between an inventory source and an inventory source group.
@@ -193,7 +193,7 @@ if res.create_asset_response is not None:
 * `displayvideo_inventory_source_groups_get` - Gets an inventory source group.
 * `displayvideo_inventory_source_groups_list` - Lists inventory source groups that are accessible to the current user. The order is defined by the order_by parameter.
 
-### inventorySources
+### inventory_sources
 
 * `displayvideo_inventory_sources_create` - Creates a new inventory source. Returns the newly created inventory source if successful.
 * `displayvideo_inventory_sources_edit_inventory_source_read_write_accessors` - Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
@@ -228,7 +228,7 @@ if res.create_asset_response is not None:
 * `displayvideo_sdfdownloadtasks_create` - Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running, asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the operation is SdfDownloadTask. The response will not include the download files, which must be retrieved with media.download. The state of operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the error.message. Note that error.details is expected to be empty.
 * `displayvideo_sdfdownloadtasks_operations_get` - Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.
 
-### targetingTypes
+### targeting_types
 
 * `displayvideo_targeting_types_targeting_options_get` - Gets a single targeting option.
 * `displayvideo_targeting_types_targeting_options_list` - Lists targeting options of a given type.
@@ -242,7 +242,17 @@ if res.create_asset_response is not None:
 * `displayvideo_users_get` - Gets a user.
 * `displayvideo_users_list` - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
 * `displayvideo_users_patch` - Updates an existing user. Returns the updated user if successful.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteClassUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteClassUserPathParams struct {
+type DeleteClassUserRequest struct {
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
 	// Unique identifier of the user
 	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type DeleteClassUserRequest struct {
-	PathParams DeleteClassUserPathParams
-	Security   DeleteClassUserSecurity
 }
 
 type DeleteClassUserResponse struct {

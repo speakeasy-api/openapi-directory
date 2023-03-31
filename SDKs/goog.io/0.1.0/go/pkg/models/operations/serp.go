@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SerpRequest struct {
-	Request shared.SerpData `request:"mediaType=application/json"`
-}
-
 // Serp200ApplicationJSON - Successful Response
 type Serp200ApplicationJSON struct {
 	Position        *int64  `json:"position,omitempty"`

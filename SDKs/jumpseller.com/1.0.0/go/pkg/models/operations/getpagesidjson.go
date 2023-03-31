@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPagesIDJSONPathParams struct {
-	// Id of the Page
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPagesIDJSONQueryParams struct {
+type GetPagesIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Page
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetPagesIDJSONRequest struct {
-	PathParams  GetPagesIDJSONPathParams
-	QueryParams GetPagesIDJSONQueryParams
 }
 
 type GetPagesIDJSONResponse struct {

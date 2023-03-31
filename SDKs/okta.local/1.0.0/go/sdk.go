@@ -126,9 +126,9 @@ func New(opts ...SDKOption) *SDK {
 // Clear User Sessions
 func (s *SDK) ClearUserSessions(ctx context.Context, request operations.ClearUserSessionsRequest) (*operations.ClearUserSessionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/sessions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -171,7 +171,7 @@ func (s *SDK) FindUser(ctx context.Context, request operations.FindUserRequest) 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,7 +183,7 @@ func (s *SDK) FindUser(ctx context.Context, request operations.FindUserRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -216,9 +216,9 @@ func (s *SDK) FindUser(ctx context.Context, request operations.FindUserRequest) 
 // Get Assigned App Links
 func (s *SDK) GetAssignedAppLinks(ctx context.Context, request operations.GetAssignedAppLinksRequest) (*operations.GetAssignedAppLinksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/appLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/appLinks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) GetAssignedAppLinks(ctx context.Context, request operations.GetAss
 
 // GetCurrentUser - Get Current User
 // Get Current User
-func (s *SDK) GetCurrentUser(ctx context.Context, request operations.GetCurrentUserRequest) (*operations.GetCurrentUserResponse, error) {
+func (s *SDK) GetCurrentUser(ctx context.Context, request []byte) (*operations.GetCurrentUserResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/users/me"
 
@@ -302,9 +302,9 @@ func (s *SDK) GetCurrentUser(ctx context.Context, request operations.GetCurrentU
 // Get Groups for User
 func (s *SDK) GetGroupsForUser(ctx context.Context, request operations.GetGroupsForUserRequest) (*operations.GetGroupsForUserResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -345,9 +345,9 @@ func (s *SDK) GetGroupsForUser(ctx context.Context, request operations.GetGroups
 // Get User
 func (s *SDK) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,9 +388,9 @@ func (s *SDK) GetUser(ctx context.Context, request operations.GetUserRequest) (*
 // Reset Factors
 func (s *SDK) ResetFactors(ctx context.Context, request operations.ResetFactorsRequest) (*operations.ResetFactorsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/reset_factors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/reset_factors", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

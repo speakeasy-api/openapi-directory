@@ -11,16 +11,11 @@ import (
 )
 
 type GetUsersUserIDPlaylistsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-	ClientID   shared.SchemeClientID   `security:"scheme,type=apiKey,subtype=query"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	ClientID   string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetUsersUserIDPlaylistsPathParams struct {
-	// SoundCloud User id
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUsersUserIDPlaylistsQueryParams struct {
+type GetUsersUserIDPlaylistsRequest struct {
 	// Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
 	//
 	Access []shared.AccessEnum `queryParam:"style=form,explode=false,name=access"`
@@ -28,12 +23,8 @@ type GetUsersUserIDPlaylistsQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
-}
-
-type GetUsersUserIDPlaylistsRequest struct {
-	PathParams  GetUsersUserIDPlaylistsPathParams
-	QueryParams GetUsersUserIDPlaylistsQueryParams
-	Security    GetUsersUserIDPlaylistsSecurity
+	// SoundCloud User id
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUsersUserIDPlaylists200ApplicationJSONType string

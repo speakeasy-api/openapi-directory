@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetTaskLogSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTaskLogPathParams struct {
-	// UUID of the task
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTaskLogRequest struct {
-	PathParams GetTaskLogPathParams
-	Security   GetTaskLogSecurity
+	// UUID of the task
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetTaskLogResponse struct {

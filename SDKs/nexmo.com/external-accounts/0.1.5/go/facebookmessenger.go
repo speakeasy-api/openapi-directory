@@ -34,7 +34,7 @@ func newFacebookMessenger(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // CreateMessengerAccount - Create a Messenger account
-func (s *facebookMessenger) CreateMessengerAccount(ctx context.Context, request operations.CreateMessengerAccountRequest) (*operations.CreateMessengerAccountResponse, error) {
+func (s *facebookMessenger) CreateMessengerAccount(ctx context.Context, request operations.CreateMessengerAccountRequestBody, security operations.CreateMessengerAccountSecurity) (*operations.CreateMessengerAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/messenger"
 
@@ -53,7 +53,7 @@ func (s *facebookMessenger) CreateMessengerAccount(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -118,16 +118,16 @@ func (s *facebookMessenger) CreateMessengerAccount(ctx context.Context, request 
 }
 
 // DeleteMessengerAccount - Delete a Messenger account
-func (s *facebookMessenger) DeleteMessengerAccount(ctx context.Context, request operations.DeleteMessengerAccountRequest) (*operations.DeleteMessengerAccountResponse, error) {
+func (s *facebookMessenger) DeleteMessengerAccount(ctx context.Context, request operations.DeleteMessengerAccountRequest, security operations.DeleteMessengerAccountSecurity) (*operations.DeleteMessengerAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,16 +175,16 @@ func (s *facebookMessenger) DeleteMessengerAccount(ctx context.Context, request 
 }
 
 // GetMessengerAccount - Retrieve a Messenger account
-func (s *facebookMessenger) GetMessengerAccount(ctx context.Context, request operations.GetMessengerAccountRequest) (*operations.GetMessengerAccountResponse, error) {
+func (s *facebookMessenger) GetMessengerAccount(ctx context.Context, request operations.GetMessengerAccountRequest, security operations.GetMessengerAccountSecurity) (*operations.GetMessengerAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,11 +230,11 @@ func (s *facebookMessenger) GetMessengerAccount(ctx context.Context, request ope
 }
 
 // UpdateMessengerAccount - Update a Messenger account
-func (s *facebookMessenger) UpdateMessengerAccount(ctx context.Context, request operations.UpdateMessengerAccountRequest) (*operations.UpdateMessengerAccountResponse, error) {
+func (s *facebookMessenger) UpdateMessengerAccount(ctx context.Context, request operations.UpdateMessengerAccountRequest, security operations.UpdateMessengerAccountSecurity) (*operations.UpdateMessengerAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -249,7 +249,7 @@ func (s *facebookMessenger) UpdateMessengerAccount(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

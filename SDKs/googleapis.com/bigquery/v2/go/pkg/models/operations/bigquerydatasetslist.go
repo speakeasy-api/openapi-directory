@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryDatasetsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsListSecurity struct {
@@ -28,12 +28,7 @@ type BigqueryDatasetsListSecurity struct {
 	Option3 *BigqueryDatasetsListSecurityOption3 `security:"option"`
 }
 
-type BigqueryDatasetsListPathParams struct {
-	// Project ID of the datasets to be listed
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BigqueryDatasetsListQueryParams struct {
+type BigqueryDatasetsListRequest struct {
 	// Whether to list all datasets, including hidden ones
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Data format for the response.
@@ -52,16 +47,12 @@ type BigqueryDatasetsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the datasets to be listed
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryDatasetsListRequest struct {
-	PathParams  BigqueryDatasetsListPathParams
-	QueryParams BigqueryDatasetsListQueryParams
-	Security    BigqueryDatasetsListSecurity
 }
 
 type BigqueryDatasetsListResponse struct {

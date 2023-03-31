@@ -13,10 +13,11 @@ var ListCompositionHookServerList = []string{
 }
 
 type ListCompositionHookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCompositionHookQueryParams struct {
+type ListCompositionHookRequest struct {
 	// Read only CompositionHook resources created on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime with time zone.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Read only CompositionHook resources created before this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime with time zone.
@@ -31,12 +32,6 @@ type ListCompositionHookQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListCompositionHookRequest struct {
-	QueryParams ListCompositionHookQueryParams
-	Security    ListCompositionHookSecurity
-	ServerURL   *string
 }
 
 type ListCompositionHookListCompositionHookResponseMeta struct {

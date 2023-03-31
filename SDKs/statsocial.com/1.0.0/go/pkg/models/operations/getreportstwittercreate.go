@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportsTwitterCreateQueryParams struct {
+type GetReportsTwitterCreateRequest struct {
 	// Filtering options to be used when creating a filtered report. The options must be in JSON form, example: {'gender':['male'],'ages':['18-24'],'countries':['usa']}
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// (required if twitter_id is not supplied) twitter_handle must be sent with all client requests. Multiple ids are separated by commas.
 	TwitterHandle *string `queryParam:"style=form,explode=true,name=twitter_handle"`
 	// (required if twitter_handle is not supplied) twitter_id must be sent with all client requests. Multiple handles are separated by commas.
 	TwitterID *int64 `queryParam:"style=form,explode=true,name=twitter_id"`
-}
-
-type GetReportsTwitterCreateRequest struct {
-	QueryParams GetReportsTwitterCreateQueryParams
 }
 
 type GetReportsTwitterCreateResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQshowQuotesSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetQshowQuotesQueryParams struct {
-	// Qshow ID
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type GetQshowQuotesRequest struct {
-	QueryParams GetQshowQuotesQueryParams
-	Security    GetQshowQuotesSecurity
+	// Qshow ID
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetQshowQuotesResponse struct {

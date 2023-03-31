@@ -12,12 +12,8 @@ var CreateSipIPAccessControlListServerList = []string{
 }
 
 type CreateSipIPAccessControlListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipIPAccessControlListPathParams struct {
-	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipIPAccessControlListCreateSipIPAccessControlListRequest struct {
@@ -26,10 +22,9 @@ type CreateSipIPAccessControlListCreateSipIPAccessControlListRequest struct {
 }
 
 type CreateSipIPAccessControlListRequest struct {
-	PathParams CreateSipIPAccessControlListPathParams
-	Request    *CreateSipIPAccessControlListCreateSipIPAccessControlListRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipIPAccessControlListSecurity
-	ServerURL  *string
+	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+	AccountSid  string                                                           `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateSipIPAccessControlListCreateSipIPAccessControlListRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipIPAccessControlListResponse struct {

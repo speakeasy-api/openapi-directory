@@ -4,16 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UploadAPISpecificationSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type UploadAPISpecificationHeaders struct {
-	// Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
-	XReadmeVersion string `header:"style=simple,explode=false,name=x-readme-version"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UploadAPISpecificationRequestBodySpec struct {
@@ -27,9 +22,9 @@ type UploadAPISpecificationRequestBody struct {
 }
 
 type UploadAPISpecificationRequest struct {
-	Headers  UploadAPISpecificationHeaders
-	Request  UploadAPISpecificationRequestBody `request:"mediaType=multipart/form-data"`
-	Security UploadAPISpecificationSecurity
+	RequestBody UploadAPISpecificationRequestBody `request:"mediaType=multipart/form-data"`
+	// Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+	XReadmeVersion string `header:"style=simple,explode=false,name=x-readme-version"`
 }
 
 type UploadAPISpecificationResponse struct {

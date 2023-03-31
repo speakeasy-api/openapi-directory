@@ -8,13 +8,13 @@ import (
 )
 
 type CloudidentityDevicesDeviceUsersListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityDevicesDeviceUsersListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityDevicesDeviceUsersListSecurity struct {
@@ -22,12 +22,7 @@ type CloudidentityDevicesDeviceUsersListSecurity struct {
 	Option2 *CloudidentityDevicesDeviceUsersListSecurityOption2 `security:"option"`
 }
 
-type CloudidentityDevicesDeviceUsersListPathParams struct {
-	// Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned by a device, set this to the resource name of the device. Format: devices/{device}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityDevicesDeviceUsersListQueryParams struct {
+type CloudidentityDevicesDeviceUsersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type CloudidentityDevicesDeviceUsersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListDeviceUsers` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListBooks` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned by a device, set this to the resource name of the device. Format: devices/{device}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -60,12 +57,6 @@ type CloudidentityDevicesDeviceUsersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityDevicesDeviceUsersListRequest struct {
-	PathParams  CloudidentityDevicesDeviceUsersListPathParams
-	QueryParams CloudidentityDevicesDeviceUsersListQueryParams
-	Security    CloudidentityDevicesDeviceUsersListSecurity
 }
 
 type CloudidentityDevicesDeviceUsersListResponse struct {

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/ds/2015-04-16/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,29 +14,25 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptSharedDirectoryRequest(
-    headers=operations.AcceptSharedDirectoryHeaders(
-        x_amz_algorithm="quis",
-        x_amz_content_sha256="saepe",
-        x_amz_credential="illo",
-        x_amz_date="aliquam",
-        x_amz_security_token="qui",
-        x_amz_signature="quia",
-        x_amz_signed_headers="aperiam",
-        x_amz_target="DirectoryService_20150416.AcceptSharedDirectory",
+    accept_shared_directory_request=shared.AcceptSharedDirectoryRequest(
+        shared_directory_id="corrupti",
     ),
-    request=shared.AcceptSharedDirectoryRequest(
-        shared_directory_id="voluptatem",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="DirectoryService_20150416.AcceptSharedDirectory",
 )
     
 res = s.accept_shared_directory(req)
@@ -47,7 +43,7 @@ if res.accept_shared_directory_result is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -80,9 +76,11 @@ if res.accept_shared_directory_result is not None:
 * `describe_event_topics` - <p>Obtains information about which Amazon SNS topics receive status messages from the specified directory.</p> <p>If no input parameters are provided, such as DirectoryId or TopicName, this request describes all of the associations in the account.</p>
 * `describe_ldaps_settings` - Describes the status of LDAP security for the specified directory.
 * `describe_regions` - Provides information about the Regions that are configured for multi-Region replication.
+* `describe_settings` - Retrieves information about the configurable settings for the specified directory.
 * `describe_shared_directories` - Returns the shared directories in your account. 
 * `describe_snapshots` - <p>Obtains information about the directory snapshots that belong to this account.</p> <p>This operation supports pagination with the use of the <i>NextToken</i> request and response parameters. If more results are available, the <i>DescribeSnapshots.NextToken</i> member contains a token that you pass in the next call to <a>DescribeSnapshots</a> to retrieve the next set of items.</p> <p>You can also specify a maximum number of return results with the <i>Limit</i> parameter.</p>
 * `describe_trusts` - <p>Obtains information about the trust relationships for this account.</p> <p>If no input parameters are provided, such as DirectoryId or TrustIds, this request describes all the trust relationships belonging to the account.</p>
+* `describe_update_directory` -  Describes the updates of a directory for a particular update type. 
 * `disable_client_authentication` - Disables alternative client authentication methods for the specified directory. 
 * `disable_ldaps` - Deactivates LDAP secure calls for the specified directory.
 * `disable_radius` - Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector or Microsoft AD directory.
@@ -110,11 +108,23 @@ if res.accept_shared_directory_result is not None:
 * `start_schema_extension` - Applies a schema extension to a Microsoft AD directory.
 * `unshare_directory` - Stops the directory sharing between the directory owner and consumer accounts. 
 * `update_conditional_forwarder` - Updates a conditional forwarder that has been set up for your Amazon Web Services directory.
+* `update_directory_setup` -  Updates the directory for a particular update type. 
 * `update_number_of_domain_controllers` - Adds or removes domain controllers to or from the directory. Based on the difference between current value and new value (provided through this API call), domain controllers will be added or removed. It may take up to 45 minutes for any new domain controllers to become fully active once the requested number of domain controllers is updated. During this time, you cannot make another update request.
 * `update_radius` - Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector or Microsoft AD directory.
+* `update_settings` - Updates the configurable settings for the specified directory.
 * `update_trust` - Updates the trust that has been set up between your Managed Microsoft AD directory and an self-managed Active Directory.
 * `verify_trust` - <p>Directory Service for Microsoft Active Directory allows you to configure and verify trust relationships.</p> <p>This action verifies a trust relationship between your Managed Microsoft AD directory and an external domain.</p>
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

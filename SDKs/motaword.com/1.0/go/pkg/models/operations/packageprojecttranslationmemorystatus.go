@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageProjectTranslationMemoryStatusPathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PackageProjectTranslationMemoryStatusQueryParams struct {
+type PackageProjectTranslationMemoryStatusRequest struct {
 	// Async operation key
 	AsyncRequestKey string `queryParam:"style=form,explode=true,name=async_request_key"`
-}
-
-type PackageProjectTranslationMemoryStatusRequest struct {
-	PathParams  PackageProjectTranslationMemoryStatusPathParams
-	QueryParams PackageProjectTranslationMemoryStatusQueryParams
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type PackageProjectTranslationMemoryStatusResponse struct {

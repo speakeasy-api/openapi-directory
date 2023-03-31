@@ -10,23 +10,18 @@ import (
 )
 
 type DirectoryChromeosdevicesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryChromeosdevicesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryChromeosdevicesListSecurity struct {
 	Option1 *DirectoryChromeosdevicesListSecurityOption1 `security:"option"`
 	Option2 *DirectoryChromeosdevicesListSecurityOption2 `security:"option"`
-}
-
-type DirectoryChromeosdevicesListPathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 }
 
 // DirectoryChromeosdevicesListOrderByEnum - Device property to use for sorting results.
@@ -113,7 +108,7 @@ func (e *DirectoryChromeosdevicesListSortOrderEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type DirectoryChromeosdevicesListQueryParams struct {
+type DirectoryChromeosdevicesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -122,6 +117,8 @@ type DirectoryChromeosdevicesListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Return devices from all child orgunits, as well as the specified org unit. If this is set to true, 'orgUnitPath' must be provided.
@@ -152,12 +149,6 @@ type DirectoryChromeosdevicesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryChromeosdevicesListRequest struct {
-	PathParams  DirectoryChromeosdevicesListPathParams
-	QueryParams DirectoryChromeosdevicesListQueryParams
-	Security    DirectoryChromeosdevicesListSecurity
 }
 
 type DirectoryChromeosdevicesListResponse struct {

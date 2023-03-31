@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryRoutinesGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryRoutinesGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryRoutinesGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryRoutinesGetSecurity struct {
@@ -28,18 +28,11 @@ type BigqueryRoutinesGetSecurity struct {
 	Option3 *BigqueryRoutinesGetSecurityOption3 `security:"option"`
 }
 
-type BigqueryRoutinesGetPathParams struct {
-	// Required. Dataset ID of the requested routine
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Required. Project ID of the requested routine
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// Required. Routine ID of the requested routine
-	RoutineID string `pathParam:"style=simple,explode=false,name=routineId"`
-}
-
-type BigqueryRoutinesGetQueryParams struct {
+type BigqueryRoutinesGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. Dataset ID of the requested routine
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -48,18 +41,16 @@ type BigqueryRoutinesGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. Project ID of the requested routine
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// If set, only the Routine fields in the field mask are returned in the response. If unset, all Routine fields are returned.
 	ReadMask *string `queryParam:"style=form,explode=true,name=readMask"`
+	// Required. Routine ID of the requested routine
+	RoutineID string `pathParam:"style=simple,explode=false,name=routineId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryRoutinesGetRequest struct {
-	PathParams  BigqueryRoutinesGetPathParams
-	QueryParams BigqueryRoutinesGetQueryParams
-	Security    BigqueryRoutinesGetSecurity
 }
 
 type BigqueryRoutinesGetResponse struct {

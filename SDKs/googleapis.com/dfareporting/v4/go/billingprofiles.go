@@ -32,20 +32,20 @@ func newBillingProfiles(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // DfareportingBillingProfilesGet - Gets one billing profile by ID.
-func (s *billingProfiles) DfareportingBillingProfilesGet(ctx context.Context, request operations.DfareportingBillingProfilesGetRequest) (*operations.DfareportingBillingProfilesGetResponse, error) {
+func (s *billingProfiles) DfareportingBillingProfilesGet(ctx context.Context, request operations.DfareportingBillingProfilesGetRequest, security operations.DfareportingBillingProfilesGetSecurity) (*operations.DfareportingBillingProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *billingProfiles) DfareportingBillingProfilesGet(ctx context.Context, re
 }
 
 // DfareportingBillingProfilesList - Retrieves a list of billing profiles, possibly filtered. This method supports paging.
-func (s *billingProfiles) DfareportingBillingProfilesList(ctx context.Context, request operations.DfareportingBillingProfilesListRequest) (*operations.DfareportingBillingProfilesListResponse, error) {
+func (s *billingProfiles) DfareportingBillingProfilesList(ctx context.Context, request operations.DfareportingBillingProfilesListRequest, security operations.DfareportingBillingProfilesListSecurity) (*operations.DfareportingBillingProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *billingProfiles) DfareportingBillingProfilesList(ctx context.Context, r
 }
 
 // DfareportingBillingProfilesUpdate - Updates an existing billing profile.
-func (s *billingProfiles) DfareportingBillingProfilesUpdate(ctx context.Context, request operations.DfareportingBillingProfilesUpdateRequest) (*operations.DfareportingBillingProfilesUpdateResponse, error) {
+func (s *billingProfiles) DfareportingBillingProfilesUpdate(ctx context.Context, request operations.DfareportingBillingProfilesUpdateRequest, security operations.DfareportingBillingProfilesUpdateSecurity) (*operations.DfareportingBillingProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillingProfile", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *billingProfiles) DfareportingBillingProfilesUpdate(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

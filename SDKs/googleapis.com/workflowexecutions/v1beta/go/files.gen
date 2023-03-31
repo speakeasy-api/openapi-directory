@@ -25,6 +25,5 @@ pkg/models/shared/stacktraceelement.go
 pkg/models/shared/position.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listexecutionsresponse.go
 USAGE.md

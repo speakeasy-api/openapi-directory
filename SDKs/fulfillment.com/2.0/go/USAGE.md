@@ -14,37 +14,32 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAccountingRequest{
-        Security: operations.GetAccountingSecurity{
-            FdcAuth: shared.SchemeFdcAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        FromDate: "corrupti",
+        Hydrate: []GetAccountingHydrateEnum{
+            "items",
+            "items",
+            "items",
         },
-        QueryParams: operations.GetAccountingQueryParams{
-            FromDate: "corrupti",
-            Hydrate: []GetAccountingHydrateEnum{
-                "items",
-                "items",
-                "items",
-            },
-            Limit: 715190,
-            OrderIds: []int64{
-                602763,
-                857946,
-                544883,
-                847252,
-            },
-            Page: 423655,
-            ToDate: "error",
-            WarehouseIds: []int64{
-                384382,
-                437587,
-                297534,
-            },
+        Limit: 715190,
+        OrderIds: []int64{
+            602763,
+            857946,
+            544883,
+            847252,
+        },
+        Page: 423655,
+        ToDate: "error",
+        WarehouseIds: []int64{
+            384382,
+            437587,
+            297534,
         },
     }
 
     ctx := context.Background()
-    res, err := s.Accounting.GetAccounting(ctx, req)
+    res, err := s.Accounting.GetAccounting(ctx, req, operations.GetAccountingSecurity{
+        FdcAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

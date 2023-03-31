@@ -32,16 +32,16 @@ func newGroupsVideos(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // AddVideoToGroup - Add a video to a group
-func (s *groupsVideos) AddVideoToGroup(ctx context.Context, request operations.AddVideoToGroupRequest) (*operations.AddVideoToGroupResponse, error) {
+func (s *groupsVideos) AddVideoToGroup(ctx context.Context, request operations.AddVideoToGroupRequest, security operations.AddVideoToGroupSecurity) (*operations.AddVideoToGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,16 +87,16 @@ func (s *groupsVideos) AddVideoToGroup(ctx context.Context, request operations.A
 }
 
 // DeleteVideoFromGroup - Remove a video from a group
-func (s *groupsVideos) DeleteVideoFromGroup(ctx context.Context, request operations.DeleteVideoFromGroupRequest) (*operations.DeleteVideoFromGroupResponse, error) {
+func (s *groupsVideos) DeleteVideoFromGroup(ctx context.Context, request operations.DeleteVideoFromGroupRequest, security operations.DeleteVideoFromGroupSecurity) (*operations.DeleteVideoFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *groupsVideos) DeleteVideoFromGroup(ctx context.Context, request operati
 // Check if a group has a video.
 func (s *groupsVideos) GetGroupVideo(ctx context.Context, request operations.GetGroupVideoRequest) (*operations.GetGroupVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,14 +189,14 @@ func (s *groupsVideos) GetGroupVideo(ctx context.Context, request operations.Get
 // GetGroupVideos - Get all the videos in a group
 func (s *groupsVideos) GetGroupVideos(ctx context.Context, request operations.GetGroupVideosRequest) (*operations.GetGroupVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

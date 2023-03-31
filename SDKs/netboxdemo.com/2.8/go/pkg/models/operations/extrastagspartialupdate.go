@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasTagsPartialUpdatePathParams struct {
+type ExtrasTagsPartialUpdateRequest struct {
+	TagInput shared.TagInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this tag.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasTagsPartialUpdateRequest struct {
-	PathParams ExtrasTagsPartialUpdatePathParams
-	Request    shared.TagInput `request:"mediaType=application/json"`
 }
 
 type ExtrasTagsPartialUpdateResponse struct {

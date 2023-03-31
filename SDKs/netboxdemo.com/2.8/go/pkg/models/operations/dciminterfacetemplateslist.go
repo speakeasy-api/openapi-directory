@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInterfaceTemplatesListQueryParams struct {
+type DcimInterfaceTemplatesListRequest struct {
 	DevicetypeID  *string `queryParam:"style=form,explode=true,name=devicetype_id"`
 	DevicetypeIDN *string `queryParam:"style=form,explode=true,name=devicetype_id__n"`
 	ID            *string `queryParam:"style=form,explode=true,name=id"`
@@ -34,10 +34,6 @@ type DcimInterfaceTemplatesListQueryParams struct {
 	Q      *string `queryParam:"style=form,explode=true,name=q"`
 	Type   *string `queryParam:"style=form,explode=true,name=type"`
 	TypeN  *string `queryParam:"style=form,explode=true,name=type__n"`
-}
-
-type DcimInterfaceTemplatesListRequest struct {
-	QueryParams DcimInterfaceTemplatesListQueryParams
 }
 
 type DcimInterfaceTemplatesList200ApplicationJSON struct {

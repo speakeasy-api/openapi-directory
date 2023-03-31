@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTestHarnessScenarioUsingPUTPathParams struct {
+type UpdateTestHarnessScenarioUsingPUTRequest struct {
+	// testHarnessScenarioDTO
+	TestHarnessScenarioModel shared.TestHarnessScenarioModel `request:"mediaType=application/json"`
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// scenarioName
 	ScenarioName string `pathParam:"style=simple,explode=false,name=scenarioName"`
-}
-
-type UpdateTestHarnessScenarioUsingPUTRequest struct {
-	PathParams UpdateTestHarnessScenarioUsingPUTPathParams
-	// testHarnessScenarioDTO
-	Request shared.TestHarnessScenarioModel `request:"mediaType=application/json"`
 }
 
 type UpdateTestHarnessScenarioUsingPUTResponse struct {

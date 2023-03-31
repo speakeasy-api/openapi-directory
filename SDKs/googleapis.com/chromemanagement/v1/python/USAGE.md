@@ -4,39 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest(
-    security=operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ChromemanagementCustomersAppsCountChromeAppRequestsPathParams(
-        customer="sed",
-    ),
-    query_params=operations.ChromemanagementCustomersAppsCountChromeAppRequestsQueryParams(
-        dollar_xgafv="2",
-        access_token="ut",
-        alt="media",
-        callback="nulla",
-        fields="ipsa",
-        key="quia",
-        oauth_token="veniam",
-        order_by="cumque",
-        org_unit_id="quae",
-        page_size=7705353118515142715,
-        page_token="est",
-        pretty_print=True,
-        quota_user="dolore",
-        upload_type="odit",
-        upload_protocol="ipsum",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    customer="unde",
+    fields_="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    order_by="vel",
+    org_unit_id="error",
+    page_size=645894,
+    page_token="suscipit",
+    pretty_print=False,
+    quota_user="iure",
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
-res = s.customers.chromemanagement_customers_apps_count_chrome_app_requests(req)
+res = s.customers.chromemanagement_customers_apps_count_chrome_app_requests(req, operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_chrome_management_v1_count_chrome_app_requests_response is not None:
     # handle response

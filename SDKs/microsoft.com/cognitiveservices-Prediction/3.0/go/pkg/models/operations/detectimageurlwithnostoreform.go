@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DetectImageURLWithNoStoreFormPathParams struct {
+type DetectImageURLWithNoStoreFormRequest struct {
+	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated.
+	ImageURL shared.ImageURL `request:"mediaType=application/x-www-form-urlencoded"`
+	// Optional. Specifies the name of application using the endpoint.
+	Application *string `queryParam:"style=form,explode=true,name=application"`
 	// The project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Specifies the name of the model to evaluate against.
 	PublishedName string `pathParam:"style=simple,explode=false,name=publishedName"`
-}
-
-type DetectImageURLWithNoStoreFormQueryParams struct {
-	// Optional. Specifies the name of application using the endpoint.
-	Application *string `queryParam:"style=form,explode=true,name=application"`
-}
-
-type DetectImageURLWithNoStoreFormRequest struct {
-	PathParams  DetectImageURLWithNoStoreFormPathParams
-	QueryParams DetectImageURLWithNoStoreFormQueryParams
-	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated.
-	Request shared.ImageURL `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type DetectImageURLWithNoStoreFormResponse struct {

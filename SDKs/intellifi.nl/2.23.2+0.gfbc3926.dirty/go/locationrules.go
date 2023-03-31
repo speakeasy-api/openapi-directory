@@ -34,7 +34,7 @@ func newLocationrules(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // AddLocationRule - Create location rule
-func (s *locationrules) AddLocationRule(ctx context.Context, request operations.AddLocationRuleRequest) (*operations.AddLocationRuleResponse, error) {
+func (s *locationrules) AddLocationRule(ctx context.Context, request shared.LocationRuleUpdate) (*operations.AddLocationRuleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locationrules"
 
@@ -90,7 +90,7 @@ func (s *locationrules) AddLocationRule(ctx context.Context, request operations.
 // DeleteLocationRule - Delete location rule
 func (s *locationrules) DeleteLocationRule(ctx context.Context, request operations.DeleteLocationRuleRequest) (*operations.DeleteLocationRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locationrules/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locationrules/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -134,7 +134,7 @@ func (s *locationrules) DeleteLocationRule(ctx context.Context, request operatio
 // GetLocationRuleByID - Get location rule
 func (s *locationrules) GetLocationRuleByID(ctx context.Context, request operations.GetLocationRuleByIDRequest) (*operations.GetLocationRuleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locationrules/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locationrules/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *locationrules) GetLocationRules(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -226,9 +226,9 @@ func (s *locationrules) GetLocationRules(ctx context.Context, request operations
 // UpdateLocationRule - Update existing location rule
 func (s *locationrules) UpdateLocationRule(ctx context.Context, request operations.UpdateLocationRuleRequest) (*operations.UpdateLocationRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locationrules/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/locationrules/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationRuleUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

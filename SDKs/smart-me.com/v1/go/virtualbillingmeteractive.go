@@ -101,7 +101,7 @@ func (s *virtualBillingMeterActive) VirtualBillingMeterActiveGet(ctx context.Con
 
 // VirtualBillingMeterActivePostForm - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
 // Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
-func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostForm(ctx context.Context, request operations.VirtualBillingMeterActivePostFormRequest) (*operations.VirtualBillingMeterActivePostFormResponse, error) {
+func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostForm(ctx context.Context, request shared.VMeterToActivate) (*operations.VirtualBillingMeterActivePostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/VirtualBillingMeterActive"
 
@@ -182,7 +182,7 @@ func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostForm(ctx contex
 
 // VirtualBillingMeterActivePostJSON - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
 // Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
-func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostJSON(ctx context.Context, request operations.VirtualBillingMeterActivePostJSONRequest) (*operations.VirtualBillingMeterActivePostJSONResponse, error) {
+func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostJSON(ctx context.Context, request shared.VMeterToActivate) (*operations.VirtualBillingMeterActivePostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/VirtualBillingMeterActive"
 
@@ -263,7 +263,7 @@ func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostJSON(ctx contex
 
 // VirtualBillingMeterActivePostRaw - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
 // Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
-func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostRaw(ctx context.Context, request operations.VirtualBillingMeterActivePostRawRequest) (*operations.VirtualBillingMeterActivePostRawResponse, error) {
+func (s *virtualBillingMeterActive) VirtualBillingMeterActivePostRaw(ctx context.Context, request []byte) (*operations.VirtualBillingMeterActivePostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/VirtualBillingMeterActive"
 

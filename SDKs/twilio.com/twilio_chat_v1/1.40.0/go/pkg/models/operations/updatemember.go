@@ -12,16 +12,8 @@ var UpdateMemberServerList = []string{
 }
 
 type UpdateMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMemberPathParams struct {
-	// The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the member to update belongs to. Can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the Member resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateMemberUpdateMemberRequest struct {
@@ -32,10 +24,13 @@ type UpdateMemberUpdateMemberRequest struct {
 }
 
 type UpdateMemberRequest struct {
-	PathParams UpdateMemberPathParams
-	Request    *UpdateMemberUpdateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMemberSecurity
-	ServerURL  *string
+	// The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the member to update belongs to. Can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *UpdateMemberUpdateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the Member resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateMemberResponse struct {

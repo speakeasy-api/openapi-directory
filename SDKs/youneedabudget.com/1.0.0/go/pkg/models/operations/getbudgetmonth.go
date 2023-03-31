@@ -8,15 +8,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetBudgetMonthPathParams struct {
+type GetBudgetMonthRequest struct {
 	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The budget month in ISO format (e.g. 2016-12-01) ("current" can also be used to specify the current calendar month (UTC))
 	Month types.Date `pathParam:"style=simple,explode=false,name=month"`
-}
-
-type GetBudgetMonthRequest struct {
-	PathParams GetBudgetMonthPathParams
 }
 
 type GetBudgetMonthResponse struct {

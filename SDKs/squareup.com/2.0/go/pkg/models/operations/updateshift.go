@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateShiftSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateShiftPathParams struct {
-	// The ID of the object being updated.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateShiftRequest struct {
-	PathParams UpdateShiftPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateShiftRequest `request:"mediaType=application/json"`
-	Security UpdateShiftSecurity
+	UpdateShiftRequest shared.UpdateShiftRequest `request:"mediaType=application/json"`
+	// The ID of the object being updated.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateShiftResponse struct {

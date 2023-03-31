@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressPathParams struct {
+type GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressRequest struct {
+	// Google calendar authorization return url
+	GoogleAuthReturnURL *string `queryParam:"style=form,explode=true,name=googleAuthReturnUrl"`
 	// Email address of Google Calendar
 	GoogleEmailAddress string `pathParam:"style=simple,explode=false,name=googleEmailAddress"`
 	// id of resource object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressQueryParams struct {
-	// Google calendar authorization return url
-	GoogleAuthReturnURL *string `queryParam:"style=form,explode=true,name=googleAuthReturnUrl"`
-}
-
-type GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressRequest struct {
-	PathParams  GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressPathParams
-	QueryParams GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressQueryParams
 }
 
 type GetSetupV1ResourcesIDCalendarAuthGoogleGoogleEmailAddressResponse struct {

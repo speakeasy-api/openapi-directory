@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FileProjectsLocationsBackupsCreate - Creates a backup.
-func (s *projects) FileProjectsLocationsBackupsCreate(ctx context.Context, request operations.FileProjectsLocationsBackupsCreateRequest) (*operations.FileProjectsLocationsBackupsCreateResponse, error) {
+func (s *projects) FileProjectsLocationsBackupsCreate(ctx context.Context, request operations.FileProjectsLocationsBackupsCreateRequest, security operations.FileProjectsLocationsBackupsCreateSecurity) (*operations.FileProjectsLocationsBackupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FileProjectsLocationsBackupsCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) FileProjectsLocationsBackupsCreate(ctx context.Context, reque
 }
 
 // FileProjectsLocationsBackupsList - Lists all backups in a project for either a specified location or for all locations.
-func (s *projects) FileProjectsLocationsBackupsList(ctx context.Context, request operations.FileProjectsLocationsBackupsListRequest) (*operations.FileProjectsLocationsBackupsListResponse, error) {
+func (s *projects) FileProjectsLocationsBackupsList(ctx context.Context, request operations.FileProjectsLocationsBackupsListRequest, security operations.FileProjectsLocationsBackupsListSecurity) (*operations.FileProjectsLocationsBackupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) FileProjectsLocationsBackupsList(ctx context.Context, request
 }
 
 // FileProjectsLocationsInstancesCreate - Creates an instance. When creating from a backup, the capacity of the new instance needs to be equal to or larger than the capacity of the backup (and also equal to or larger than the minimum capacity of the tier).
-func (s *projects) FileProjectsLocationsInstancesCreate(ctx context.Context, request operations.FileProjectsLocationsInstancesCreateRequest) (*operations.FileProjectsLocationsInstancesCreateResponse, error) {
+func (s *projects) FileProjectsLocationsInstancesCreate(ctx context.Context, request operations.FileProjectsLocationsInstancesCreateRequest, security operations.FileProjectsLocationsInstancesCreateSecurity) (*operations.FileProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) FileProjectsLocationsInstancesCreate(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) FileProjectsLocationsInstancesCreate(ctx context.Context, req
 }
 
 // FileProjectsLocationsInstancesList - Lists all instances in a project for either a specified location or for all locations.
-func (s *projects) FileProjectsLocationsInstancesList(ctx context.Context, request operations.FileProjectsLocationsInstancesListRequest) (*operations.FileProjectsLocationsInstancesListResponse, error) {
+func (s *projects) FileProjectsLocationsInstancesList(ctx context.Context, request operations.FileProjectsLocationsInstancesListRequest, security operations.FileProjectsLocationsInstancesListSecurity) (*operations.FileProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) FileProjectsLocationsInstancesList(ctx context.Context, reque
 }
 
 // FileProjectsLocationsInstancesRestore - Restores an existing instance's file share from a backup. The capacity of the instance needs to be equal to or larger than the capacity of the backup (and also equal to or larger than the minimum capacity of the tier).
-func (s *projects) FileProjectsLocationsInstancesRestore(ctx context.Context, request operations.FileProjectsLocationsInstancesRestoreRequest) (*operations.FileProjectsLocationsInstancesRestoreResponse, error) {
+func (s *projects) FileProjectsLocationsInstancesRestore(ctx context.Context, request operations.FileProjectsLocationsInstancesRestoreRequest, security operations.FileProjectsLocationsInstancesRestoreSecurity) (*operations.FileProjectsLocationsInstancesRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restore", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restore", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreInstanceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) FileProjectsLocationsInstancesRestore(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) FileProjectsLocationsInstancesRestore(ctx context.Context, re
 }
 
 // FileProjectsLocationsInstancesSnapshotsCreate - Creates a snapshot.
-func (s *projects) FileProjectsLocationsInstancesSnapshotsCreate(ctx context.Context, request operations.FileProjectsLocationsInstancesSnapshotsCreateRequest) (*operations.FileProjectsLocationsInstancesSnapshotsCreateResponse, error) {
+func (s *projects) FileProjectsLocationsInstancesSnapshotsCreate(ctx context.Context, request operations.FileProjectsLocationsInstancesSnapshotsCreateRequest, security operations.FileProjectsLocationsInstancesSnapshotsCreateSecurity) (*operations.FileProjectsLocationsInstancesSnapshotsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/snapshots", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SnapshotInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) FileProjectsLocationsInstancesSnapshotsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) FileProjectsLocationsInstancesSnapshotsCreate(ctx context.Con
 }
 
 // FileProjectsLocationsInstancesSnapshotsList - Lists all snapshots in a project for either a specified location or for all locations.
-func (s *projects) FileProjectsLocationsInstancesSnapshotsList(ctx context.Context, request operations.FileProjectsLocationsInstancesSnapshotsListRequest) (*operations.FileProjectsLocationsInstancesSnapshotsListResponse, error) {
+func (s *projects) FileProjectsLocationsInstancesSnapshotsList(ctx context.Context, request operations.FileProjectsLocationsInstancesSnapshotsListRequest, security operations.FileProjectsLocationsInstancesSnapshotsListSecurity) (*operations.FileProjectsLocationsInstancesSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/snapshots", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/snapshots", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) FileProjectsLocationsInstancesSnapshotsList(ctx context.Conte
 }
 
 // FileProjectsLocationsInstancesSnapshotsPatch - Updates the settings of a specific snapshot.
-func (s *projects) FileProjectsLocationsInstancesSnapshotsPatch(ctx context.Context, request operations.FileProjectsLocationsInstancesSnapshotsPatchRequest) (*operations.FileProjectsLocationsInstancesSnapshotsPatchResponse, error) {
+func (s *projects) FileProjectsLocationsInstancesSnapshotsPatch(ctx context.Context, request operations.FileProjectsLocationsInstancesSnapshotsPatchRequest, security operations.FileProjectsLocationsInstancesSnapshotsPatchSecurity) (*operations.FileProjectsLocationsInstancesSnapshotsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SnapshotInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) FileProjectsLocationsInstancesSnapshotsPatch(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *projects) FileProjectsLocationsInstancesSnapshotsPatch(ctx context.Cont
 }
 
 // FileProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) FileProjectsLocationsList(ctx context.Context, request operations.FileProjectsLocationsListRequest) (*operations.FileProjectsLocationsListResponse, error) {
+func (s *projects) FileProjectsLocationsList(ctx context.Context, request operations.FileProjectsLocationsListRequest, security operations.FileProjectsLocationsListSecurity) (*operations.FileProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *projects) FileProjectsLocationsList(ctx context.Context, request operat
 }
 
 // FileProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) FileProjectsLocationsOperationsCancel(ctx context.Context, request operations.FileProjectsLocationsOperationsCancelRequest) (*operations.FileProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) FileProjectsLocationsOperationsCancel(ctx context.Context, request operations.FileProjectsLocationsOperationsCancelRequest, security operations.FileProjectsLocationsOperationsCancelSecurity) (*operations.FileProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,11 +515,11 @@ func (s *projects) FileProjectsLocationsOperationsCancel(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) FileProjectsLocationsOperationsCancel(ctx context.Context, re
 }
 
 // FileProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-func (s *projects) FileProjectsLocationsOperationsDelete(ctx context.Context, request operations.FileProjectsLocationsOperationsDeleteRequest) (*operations.FileProjectsLocationsOperationsDeleteResponse, error) {
+func (s *projects) FileProjectsLocationsOperationsDelete(ctx context.Context, request operations.FileProjectsLocationsOperationsDeleteRequest, security operations.FileProjectsLocationsOperationsDeleteSecurity) (*operations.FileProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,20 +602,20 @@ func (s *projects) FileProjectsLocationsOperationsDelete(ctx context.Context, re
 }
 
 // FileProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) FileProjectsLocationsOperationsGet(ctx context.Context, request operations.FileProjectsLocationsOperationsGetRequest) (*operations.FileProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) FileProjectsLocationsOperationsGet(ctx context.Context, request operations.FileProjectsLocationsOperationsGetRequest, security operations.FileProjectsLocationsOperationsGetSecurity) (*operations.FileProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,20 +650,20 @@ func (s *projects) FileProjectsLocationsOperationsGet(ctx context.Context, reque
 }
 
 // FileProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) FileProjectsLocationsOperationsList(ctx context.Context, request operations.FileProjectsLocationsOperationsListRequest) (*operations.FileProjectsLocationsOperationsListResponse, error) {
+func (s *projects) FileProjectsLocationsOperationsList(ctx context.Context, request operations.FileProjectsLocationsOperationsListRequest, security operations.FileProjectsLocationsOperationsListSecurity) (*operations.FileProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

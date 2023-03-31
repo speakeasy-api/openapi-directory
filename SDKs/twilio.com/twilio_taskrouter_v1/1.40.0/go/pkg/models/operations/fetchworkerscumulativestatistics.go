@@ -13,15 +13,11 @@ var FetchWorkersCumulativeStatisticsServerList = []string{
 }
 
 type FetchWorkersCumulativeStatisticsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchWorkersCumulativeStatisticsPathParams struct {
-	// The SID of the Workspace with the resource to fetch.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
-}
-
-type FetchWorkersCumulativeStatisticsQueryParams struct {
+type FetchWorkersCumulativeStatisticsRequest struct {
 	// Only calculate statistics from this date and time and earlier, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// Only calculate statistics since this many minutes in the past. The default 15 minutes. This is helpful for displaying statistics for the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see trends.
@@ -30,13 +26,8 @@ type FetchWorkersCumulativeStatisticsQueryParams struct {
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
 	// Only calculate cumulative statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
 	TaskChannel *string `queryParam:"style=form,explode=true,name=TaskChannel"`
-}
-
-type FetchWorkersCumulativeStatisticsRequest struct {
-	PathParams  FetchWorkersCumulativeStatisticsPathParams
-	QueryParams FetchWorkersCumulativeStatisticsQueryParams
-	Security    FetchWorkersCumulativeStatisticsSecurity
-	ServerURL   *string
+	// The SID of the Workspace with the resource to fetch.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type FetchWorkersCumulativeStatisticsResponse struct {

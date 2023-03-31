@@ -8,15 +8,7 @@ import (
 )
 
 type BatchRetrieveInventoryCountsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type BatchRetrieveInventoryCountsRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.BatchRetrieveInventoryCountsRequest `request:"mediaType=application/json"`
-	Security BatchRetrieveInventoryCountsSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BatchRetrieveInventoryCountsResponse struct {

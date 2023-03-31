@@ -14,24 +14,22 @@ func main() {
     s := sdk.New()
 
     req := operations.IdeahubIdeasListRequest{
-        QueryParams: operations.IdeahubIdeasListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Filter: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            OrderBy: "vel",
-            PageSize: 623564,
-            PageToken: "deserunt",
-            Parent: "suscipit",
-            PrettyPrint: false,
-            QuotaUser: "iure",
-            UploadType: "magnam",
-            UploadProtocol: "debitis",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Filter: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        OrderBy: "vel",
+        PageSize: 623564,
+        PageToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()

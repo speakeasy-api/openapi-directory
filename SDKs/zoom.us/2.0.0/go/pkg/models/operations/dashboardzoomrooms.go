@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DashboardZoomRoomsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DashboardZoomRoomsQueryParams struct {
+type DashboardZoomRoomsRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The page number of the current page in the returned records.
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=page_number"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type DashboardZoomRoomsRequest struct {
-	QueryParams DashboardZoomRoomsQueryParams
-	Security    DashboardZoomRoomsSecurity
 }
 
 // DashboardZoomRoomsZoomRoomListZoomRoom - Zoom room.

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3UsmSavePathParams struct {
+type ProtocolSnmpv3UsmSaveRequest struct {
 	// Agent to show the SNMPv3 configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmpv3UsmSaveRequest struct {
-	PathParams ProtocolSnmpv3UsmSavePathParams
 }
 
 type ProtocolSnmpv3UsmSaveResponse struct {

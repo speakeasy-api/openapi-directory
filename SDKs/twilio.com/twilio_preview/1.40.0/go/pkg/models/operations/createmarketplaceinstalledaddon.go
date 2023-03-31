@@ -12,7 +12,8 @@ var CreateMarketplaceInstalledAddOnServerList = []string{
 }
 
 type CreateMarketplaceInstalledAddOnSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMarketplaceInstalledAddOnCreateMarketplaceInstalledAddOnRequest struct {
@@ -24,12 +25,6 @@ type CreateMarketplaceInstalledAddOnCreateMarketplaceInstalledAddOnRequest struc
 	Configuration interface{} `form:"name=Configuration"`
 	// An application-defined string that uniquely identifies the resource. This value must be unique within the Account.
 	UniqueName *string `form:"name=UniqueName"`
-}
-
-type CreateMarketplaceInstalledAddOnRequest struct {
-	Request   *CreateMarketplaceInstalledAddOnCreateMarketplaceInstalledAddOnRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateMarketplaceInstalledAddOnSecurity
-	ServerURL *string
 }
 
 type CreateMarketplaceInstalledAddOnResponse struct {

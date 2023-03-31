@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type UserRegisterUserQueryParams struct {
+type UserRegisterUserRequest struct {
 	// Account number of the user.It can be any stakeholder of the application.even can be a gym.
 	//
 	AccountNumber *string `queryParam:"style=form,explode=true,name=AccountNumber"`
@@ -34,10 +34,6 @@ type UserRegisterUserQueryParams struct {
 	// Indentity number(primary key) for user object. Generated in DB table when inserting a record.
 	//
 	UserID *int `queryParam:"style=form,explode=true,name=UserId"`
-}
-
-type UserRegisterUserRequest struct {
-	QueryParams UserRegisterUserQueryParams
 }
 
 type UserRegisterUserResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFileMigrationsIDPathParams struct {
+type GetFileMigrationsIDRequest struct {
 	// File Migration ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFileMigrationsIDRequest struct {
-	PathParams GetFileMigrationsIDPathParams
 }
 
 type GetFileMigrationsIDResponse struct {

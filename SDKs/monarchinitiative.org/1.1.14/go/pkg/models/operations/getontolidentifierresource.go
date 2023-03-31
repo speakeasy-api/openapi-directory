@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOntolIdentifierResourceQueryParams struct {
+type GetOntolIdentifierResourceRequest struct {
 	// List of labels
 	Label []string `queryParam:"style=form,explode=true,name=label"`
-}
-
-type GetOntolIdentifierResourceRequest struct {
-	QueryParams GetOntolIdentifierResourceQueryParams
 }
 
 type GetOntolIdentifierResourceResponse struct {

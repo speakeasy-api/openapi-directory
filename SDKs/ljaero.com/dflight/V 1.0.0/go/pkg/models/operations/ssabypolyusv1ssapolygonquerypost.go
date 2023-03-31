@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SsaByPolyUsV1SsaPolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type SsaByPolyUsV1SsaPolygonQueryPostRequest struct {
-	Headers SsaByPolyUsV1SsaPolygonQueryPostHeaders
-	Request shared.SSAByPolygon `request:"mediaType=application/json"`
+	SSAByPolygon shared.SSAByPolygon `request:"mediaType=application/json"`
+	XAPIKey      *string             `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type SsaByPolyUsV1SsaPolygonQueryPostResponse struct {

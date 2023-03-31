@@ -12,12 +12,8 @@ var UpdateAssistantServerList = []string{
 }
 
 type UpdateAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAssistantPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Assistant resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAssistantUpdateAssistantRequest struct {
@@ -40,10 +36,9 @@ type UpdateAssistantUpdateAssistantRequest struct {
 }
 
 type UpdateAssistantRequest struct {
-	PathParams UpdateAssistantPathParams
-	Request    *UpdateAssistantUpdateAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateAssistantSecurity
-	ServerURL  *string
+	RequestBody *UpdateAssistantUpdateAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the Assistant resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateAssistantResponse struct {

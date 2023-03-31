@@ -40,10 +40,6 @@ type PostAssetsPricesAdjustedForwardRequestBody struct {
 	Assets []PostAssetsPricesAdjustedForwardRequestBodyAssets `json:"assets"`
 }
 
-type PostAssetsPricesAdjustedForwardRequest struct {
-	Request PostAssetsPricesAdjustedForwardRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices struct {
 	// The date corresponding to the date t in format YYYY-MM-DD
 	Date string `json:"date"`

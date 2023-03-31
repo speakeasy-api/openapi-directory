@@ -84,7 +84,7 @@ func (s *mocks) AllMocks(ctx context.Context) (*operations.AllMocksResponse, err
 // You can also specify the context of a workspace to create a mock in directly by passing the `workspace` as a query param.
 //
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
-func (s *mocks) CreateMock(ctx context.Context, request operations.CreateMockRequest) (*operations.CreateMockResponse, error) {
+func (s *mocks) CreateMock(ctx context.Context, request operations.CreateMockRequestBody) (*operations.CreateMockResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mocks"
 
@@ -140,7 +140,7 @@ func (s *mocks) CreateMock(ctx context.Context, request operations.CreateMockReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *mocks) DeleteMock(ctx context.Context, request operations.DeleteMockRequest) (*operations.DeleteMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -187,7 +187,7 @@ func (s *mocks) DeleteMock(ctx context.Context, request operations.DeleteMockReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key ` request header or `apikey` URL query parameter.
 func (s *mocks) PublishMock(ctx context.Context, request operations.PublishMockRequest) (*operations.PublishMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/publish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -234,7 +234,7 @@ func (s *mocks) PublishMock(ctx context.Context, request operations.PublishMockR
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *mocks) SingleMock(ctx context.Context, request operations.SingleMockRequest) (*operations.SingleMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +281,7 @@ func (s *mocks) SingleMock(ctx context.Context, request operations.SingleMockReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key ` request header or `apikey` URL query parameter.
 func (s *mocks) UnpublishMock(ctx context.Context, request operations.UnpublishMockRequest) (*operations.UnpublishMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/unpublish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/unpublish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -333,9 +333,9 @@ func (s *mocks) UnpublishMock(ctx context.Context, request operations.UnpublishM
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *mocks) UpdateMock(ctx context.Context, request operations.UpdateMockRequest) (*operations.UpdateMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

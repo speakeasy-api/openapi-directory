@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // GETListsBestSellersHistoryJSON - Best Seller History List
-func (s *SDK) GETListsBestSellersHistoryJSON(ctx context.Context, request operations.GETListsBestSellersHistoryJSONRequest) (*operations.GETListsBestSellersHistoryJSONResponse, error) {
+func (s *SDK) GETListsBestSellersHistoryJSON(ctx context.Context, request operations.GETListsBestSellersHistoryJSONRequest, security operations.GETListsBestSellersHistoryJSONSecurity) (*operations.GETListsBestSellersHistoryJSONResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/lists/best-sellers/history.json"
 
@@ -102,11 +102,11 @@ func (s *SDK) GETListsBestSellersHistoryJSON(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,20 +141,20 @@ func (s *SDK) GETListsBestSellersHistoryJSON(ctx context.Context, request operat
 }
 
 // GETListsDateListJSON - Best Seller List by Date
-func (s *SDK) GETListsDateListJSON(ctx context.Context, request operations.GETListsDateListJSONRequest) (*operations.GETListsDateListJSONResponse, error) {
+func (s *SDK) GETListsDateListJSON(ctx context.Context, request operations.GETListsDateListJSONRequest, security operations.GETListsDateListJSONSecurity) (*operations.GETListsDateListJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/{date}/{list}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lists/{date}/{list}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -189,20 +189,20 @@ func (s *SDK) GETListsDateListJSON(ctx context.Context, request operations.GETLi
 }
 
 // GETListsFormat - Best Seller List
-func (s *SDK) GETListsFormat(ctx context.Context, request operations.GETListsFormatRequest) (*operations.GETListsFormatResponse, error) {
+func (s *SDK) GETListsFormat(ctx context.Context, request operations.GETListsFormatRequest, security operations.GETListsFormatSecurity) (*operations.GETListsFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lists.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,20 +237,20 @@ func (s *SDK) GETListsFormat(ctx context.Context, request operations.GETListsFor
 }
 
 // GETListsNamesFormat - Best Seller List Names
-func (s *SDK) GETListsNamesFormat(ctx context.Context, request operations.GETListsNamesFormatRequest) (*operations.GETListsNamesFormatResponse, error) {
+func (s *SDK) GETListsNamesFormat(ctx context.Context, request operations.GETListsNamesFormatRequest, security operations.GETListsNamesFormatSecurity) (*operations.GETListsNamesFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/names.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lists/names.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,20 +285,20 @@ func (s *SDK) GETListsNamesFormat(ctx context.Context, request operations.GETLis
 }
 
 // GETListsOverviewFormat - Best Seller List Overview
-func (s *SDK) GETListsOverviewFormat(ctx context.Context, request operations.GETListsOverviewFormatRequest) (*operations.GETListsOverviewFormatResponse, error) {
+func (s *SDK) GETListsOverviewFormat(ctx context.Context, request operations.GETListsOverviewFormatRequest, security operations.GETListsOverviewFormatSecurity) (*operations.GETListsOverviewFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/overview.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lists/overview.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -333,20 +333,20 @@ func (s *SDK) GETListsOverviewFormat(ctx context.Context, request operations.GET
 }
 
 // GETReviewsFormat - Reviews
-func (s *SDK) GETReviewsFormat(ctx context.Context, request operations.GETReviewsFormatRequest) (*operations.GETReviewsFormatResponse, error) {
+func (s *SDK) GETReviewsFormat(ctx context.Context, request operations.GETReviewsFormatRequest, security operations.GETReviewsFormatSecurity) (*operations.GETReviewsFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reviews.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reviews.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

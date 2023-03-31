@@ -12,12 +12,8 @@ var CreateTaskQueueServerList = []string{
 }
 
 type CreateTaskQueueSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTaskQueuePathParams struct {
-	// The SID of the Workspace that the new TaskQueue belongs to.
-	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTaskQueueCreateTaskQueueRequest struct {
@@ -35,10 +31,9 @@ type CreateTaskQueueCreateTaskQueueRequest struct {
 }
 
 type CreateTaskQueueRequest struct {
-	PathParams CreateTaskQueuePathParams
-	Request    *CreateTaskQueueCreateTaskQueueRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTaskQueueSecurity
-	ServerURL  *string
+	RequestBody *CreateTaskQueueCreateTaskQueueRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Workspace that the new TaskQueue belongs to.
+	WorkspaceSid string `pathParam:"style=simple,explode=false,name=WorkspaceSid"`
 }
 
 type CreateTaskQueueResponse struct {

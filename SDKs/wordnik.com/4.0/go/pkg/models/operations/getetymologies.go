@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetEtymologiesPathParams struct {
-	// Word to return
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetEtymologiesUseCanonicalEnum - If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 type GetEtymologiesUseCanonicalEnum string
 
@@ -37,14 +32,11 @@ func (e *GetEtymologiesUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEtymologiesQueryParams struct {
+type GetEtymologiesRequest struct {
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetEtymologiesUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetEtymologiesRequest struct {
-	PathParams  GetEtymologiesPathParams
-	QueryParams GetEtymologiesQueryParams
+	// Word to return
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetEtymologiesResponse struct {

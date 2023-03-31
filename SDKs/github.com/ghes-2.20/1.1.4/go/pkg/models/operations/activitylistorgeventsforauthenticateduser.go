@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityListOrgEventsForAuthenticatedUserPathParams struct {
-	Org      string `pathParam:"style=simple,explode=false,name=org"`
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type ActivityListOrgEventsForAuthenticatedUserQueryParams struct {
+type ActivityListOrgEventsForAuthenticatedUserRequest struct {
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
-	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActivityListOrgEventsForAuthenticatedUserRequest struct {
-	PathParams  ActivityListOrgEventsForAuthenticatedUserPathParams
-	QueryParams ActivityListOrgEventsForAuthenticatedUserQueryParams
+	PerPage  *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ActivityListOrgEventsForAuthenticatedUserResponse struct {

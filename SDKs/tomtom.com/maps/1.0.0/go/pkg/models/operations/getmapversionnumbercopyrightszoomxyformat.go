@@ -132,13 +132,15 @@ func (e *GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum) UnmarshalJSON(data [
 	}
 }
 
-type GetMapVersionNumberCopyrightsZoomXYFormatPathParams struct {
+type GetMapVersionNumberCopyrightsZoomXYFormatRequest struct {
 	// X coordinate of the tile on zoom grid. Only used for tile-level
 	// copyright calls.
 	X int64 `pathParam:"style=simple,explode=false,name=X"`
 	// Y coordinate of the tile on zoom grid. Only used for tile-level
 	// copyright calls.
 	Y int64 `pathParam:"style=simple,explode=false,name=Y"`
+	// Specifies the jsonp callback method. Only used when format is jsonp.
+	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Format of the response
 	Format GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Version of the service to call. The current version is 1
@@ -146,16 +148,6 @@ type GetMapVersionNumberCopyrightsZoomXYFormatPathParams struct {
 	// Zoom level of tile to be rendered. Only used for tile-level
 	// copyright calls.
 	Zoom GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum `pathParam:"style=simple,explode=false,name=zoom"`
-}
-
-type GetMapVersionNumberCopyrightsZoomXYFormatQueryParams struct {
-	// Specifies the jsonp callback method. Only used when format is jsonp.
-	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-}
-
-type GetMapVersionNumberCopyrightsZoomXYFormatRequest struct {
-	PathParams  GetMapVersionNumberCopyrightsZoomXYFormatPathParams
-	QueryParams GetMapVersionNumberCopyrightsZoomXYFormatQueryParams
 }
 
 type GetMapVersionNumberCopyrightsZoomXYFormatResponse struct {

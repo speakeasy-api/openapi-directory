@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteTargetsTargetIDScheduledscansIDPathParams struct {
+type DeleteTargetsTargetIDScheduledscansIDRequest struct {
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type DeleteTargetsTargetIDScheduledscansIDRequest struct {
-	PathParams DeleteTargetsTargetIDScheduledscansIDPathParams
 }
 
 // DeleteTargetsTargetIDScheduledscansID403ApplicationJSON - Not allowed to perform operation

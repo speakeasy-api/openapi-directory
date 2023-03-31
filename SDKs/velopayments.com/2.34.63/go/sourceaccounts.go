@@ -37,7 +37,7 @@ func newSourceAccounts(defaultClient, securityClient HTTPClient, serverURL, lang
 // Get details about given source account.
 func (s *sourceAccounts) GetSourceAccountV2(ctx context.Context, request operations.GetSourceAccountV2Request) (*operations.GetSourceAccountV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sourceAccounts/{sourceAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sourceAccounts/{sourceAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +122,7 @@ func (s *sourceAccounts) GetSourceAccountV2(ctx context.Context, request operati
 // Get details about given source account.
 func (s *sourceAccounts) GetSourceAccountV3(ctx context.Context, request operations.GetSourceAccountV3Request) (*operations.GetSourceAccountV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +214,7 @@ func (s *sourceAccounts) GetSourceAccountsV2(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -303,7 +303,7 @@ func (s *sourceAccounts) GetSourceAccountsV3(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -386,9 +386,9 @@ func (s *sourceAccounts) GetSourceAccountsV3(ctx context.Context, request operat
 // <p>deprecated since 2.34 (use v3 version)</p>
 func (s *sourceAccounts) SetNotificationsRequest(ctx context.Context, request operations.SetNotificationsRequestRequest) (*operations.SetNotificationsRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/sourceAccounts/{sourceAccountId}/notifications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/sourceAccounts/{sourceAccountId}/notifications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNotificationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -473,9 +473,9 @@ func (s *sourceAccounts) SetNotificationsRequest(ctx context.Context, request op
 // <p>If the balance falls below the amount set in the request an email notification will be sent to the email address registered in the payor profile</p>
 func (s *sourceAccounts) SetNotificationsRequestV3(ctx context.Context, request operations.SetNotificationsRequestV3Request) (*operations.SetNotificationsRequestV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}/notifications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}/notifications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetNotificationsRequest2", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -559,9 +559,9 @@ func (s *sourceAccounts) SetNotificationsRequestV3(ctx context.Context, request 
 // Transfer funds between source accounts for a Payor. The 'from' source account is identified in the URL, and is the account which will be debited. The 'to' (destination) source account is in the body, and is the account which will be credited. Both source accounts must belong to the same Payor. There must be sufficient balance in the 'from' source account, otherwise the transfer attempt will fail.
 func (s *sourceAccounts) TransferFundsV2(ctx context.Context, request operations.TransferFundsV2Request) (*operations.TransferFundsV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sourceAccounts/{sourceAccountId}/transfers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sourceAccounts/{sourceAccountId}/transfers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferRequestV2", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -645,9 +645,9 @@ func (s *sourceAccounts) TransferFundsV2(ctx context.Context, request operations
 // Transfer funds between source accounts for a Payor. The 'from' source account is identified in the URL, and is the account which will be debited. The 'to' (destination) source account is in the body, and is the account which will be credited. Both source accounts must belong to the same Payor. There must be sufficient balance in the 'from' source account, otherwise the transfer attempt will fail.
 func (s *sourceAccounts) TransferFundsV3(ctx context.Context, request operations.TransferFundsV3Request) (*operations.TransferFundsV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}/transfers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/sourceAccounts/{sourceAccountId}/transfers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferRequestV3", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

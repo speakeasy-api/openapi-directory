@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 type PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum string
 
 const (
@@ -59,9 +50,14 @@ type PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestB
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDPathParams
 	// A Corporate Tax Declaration to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDResponse struct {

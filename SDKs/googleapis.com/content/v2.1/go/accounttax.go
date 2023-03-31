@@ -33,11 +33,11 @@ func newAccounttax(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // ContentAccounttaxCustombatch - Retrieves and updates tax settings of multiple accounts in a single request.
-func (s *accounttax) ContentAccounttaxCustombatch(ctx context.Context, request operations.ContentAccounttaxCustombatchRequest) (*operations.ContentAccounttaxCustombatchResponse, error) {
+func (s *accounttax) ContentAccounttaxCustombatch(ctx context.Context, request operations.ContentAccounttaxCustombatchRequest, security operations.ContentAccounttaxCustombatchSecurity) (*operations.ContentAccounttaxCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounttax/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccounttaxCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *accounttax) ContentAccounttaxCustombatch(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *accounttax) ContentAccounttaxCustombatch(ctx context.Context, request o
 }
 
 // ContentAccounttaxGet - Retrieves the tax settings of the account.
-func (s *accounttax) ContentAccounttaxGet(ctx context.Context, request operations.ContentAccounttaxGetRequest) (*operations.ContentAccounttaxGetResponse, error) {
+func (s *accounttax) ContentAccounttaxGet(ctx context.Context, request operations.ContentAccounttaxGetRequest, security operations.ContentAccounttaxGetSecurity) (*operations.ContentAccounttaxGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,20 +136,20 @@ func (s *accounttax) ContentAccounttaxGet(ctx context.Context, request operation
 }
 
 // ContentAccounttaxList - Lists the tax settings of the sub-accounts in your Merchant Center account.
-func (s *accounttax) ContentAccounttaxList(ctx context.Context, request operations.ContentAccounttaxListRequest) (*operations.ContentAccounttaxListResponse, error) {
+func (s *accounttax) ContentAccounttaxList(ctx context.Context, request operations.ContentAccounttaxListRequest, security operations.ContentAccounttaxListSecurity) (*operations.ContentAccounttaxListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,11 +184,11 @@ func (s *accounttax) ContentAccounttaxList(ctx context.Context, request operatio
 }
 
 // ContentAccounttaxUpdate - Updates the tax settings of the account. Any fields that are not provided are deleted from the resource.
-func (s *accounttax) ContentAccounttaxUpdate(ctx context.Context, request operations.ContentAccounttaxUpdateRequest) (*operations.ContentAccounttaxUpdateResponse, error) {
+func (s *accounttax) ContentAccounttaxUpdate(ctx context.Context, request operations.ContentAccounttaxUpdateRequest, security operations.ContentAccounttaxUpdateSecurity) (*operations.ContentAccounttaxUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountTax", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -200,11 +200,11 @@ func (s *accounttax) ContentAccounttaxUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

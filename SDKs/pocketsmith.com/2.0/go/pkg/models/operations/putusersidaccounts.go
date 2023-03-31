@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDAccountsPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutUsersIDAccountsRequestBody struct {
 	// List the account objects in their new display order.
 	Accounts []shared.Account `json:"accounts"`
 }
 
 type PutUsersIDAccountsRequest struct {
-	PathParams PutUsersIDAccountsPathParams
-	Request    *PutUsersIDAccountsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutUsersIDAccountsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutUsersIDAccountsResponse struct {

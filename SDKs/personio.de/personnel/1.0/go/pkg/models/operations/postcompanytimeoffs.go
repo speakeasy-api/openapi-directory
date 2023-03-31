@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCompanyTimeOffsRequest struct {
-	// Absence period to create
-	Request shared.CreateTimeOffPeriodRequest `request:"mediaType=application/json"`
-}
-
 // PostCompanyTimeOffs201ApplicationJSON - The absence period was created successfully
 type PostCompanyTimeOffs201ApplicationJSON struct {
 	Data *shared.CreateTimeOffPeriodResponse `json:"data,omitempty"`

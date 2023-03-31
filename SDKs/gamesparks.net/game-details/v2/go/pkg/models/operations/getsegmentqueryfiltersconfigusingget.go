@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETSegmentQueryFiltersConfigUsingGETPathParams struct {
+type GETSegmentQueryFiltersConfigUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type GETSegmentQueryFiltersConfigUsingGETRequest struct {
-	PathParams GETSegmentQueryFiltersConfigUsingGETPathParams
 }
 
 type GETSegmentQueryFiltersConfigUsingGETResponse struct {

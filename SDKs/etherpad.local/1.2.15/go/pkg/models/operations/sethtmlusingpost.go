@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SetHTMLUsingPOSTQueryParams struct {
+type SetHTMLUsingPOSTRequest struct {
 	HTML  *string `queryParam:"style=form,explode=true,name=html"`
 	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
-type SetHTMLUsingPOSTRequest struct {
-	QueryParams SetHTMLUsingPOSTQueryParams
 }
 
 // SetHTMLUsingPOST500ApplicationJSON - internal api error (code 2)

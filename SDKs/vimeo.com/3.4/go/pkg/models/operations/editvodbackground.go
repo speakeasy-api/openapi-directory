@@ -8,14 +8,7 @@ import (
 )
 
 type EditVodBackgroundSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditVodBackgroundPathParams struct {
-	// The ID of the background.
-	BackgroundID float64 `pathParam:"style=simple,explode=false,name=background_id"`
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type EditVodBackgroundRequestBody struct {
@@ -24,9 +17,11 @@ type EditVodBackgroundRequestBody struct {
 }
 
 type EditVodBackgroundRequest struct {
-	PathParams EditVodBackgroundPathParams
-	Request    *EditVodBackgroundRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
-	Security   EditVodBackgroundSecurity
+	RequestBody *EditVodBackgroundRequestBody `request:"mediaType=application/vnd.vimeo.picture+json"`
+	// The ID of the background.
+	BackgroundID float64 `pathParam:"style=simple,explode=false,name=background_id"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 }
 
 type EditVodBackgroundResponse struct {

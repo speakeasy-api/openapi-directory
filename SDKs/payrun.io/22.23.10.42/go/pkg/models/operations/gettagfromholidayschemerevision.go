@@ -8,7 +8,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTagFromHolidaySchemeRevisionPathParams struct {
+type GetTagFromHolidaySchemeRevisionRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The effective date to be applied. E.g 2016-04-06
 	EffectiveDate types.Date `pathParam:"style=simple,explode=false,name=EffectiveDate"`
 	// The employers' unique identifier. E.g ER001
@@ -17,18 +21,6 @@ type GetTagFromHolidaySchemeRevisionPathParams struct {
 	HolidaySchemeID string `pathParam:"style=simple,explode=false,name=HolidaySchemeId"`
 	// The tag unique identifier. E.g. MyTag
 	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type GetTagFromHolidaySchemeRevisionHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagFromHolidaySchemeRevisionRequest struct {
-	PathParams GetTagFromHolidaySchemeRevisionPathParams
-	Headers    GetTagFromHolidaySchemeRevisionHeaders
 }
 
 type GetTagFromHolidaySchemeRevisionResponse struct {

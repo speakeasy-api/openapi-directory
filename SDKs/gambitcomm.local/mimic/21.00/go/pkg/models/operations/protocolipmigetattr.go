@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolIpmiGetAttrPathParams struct {
+type ProtocolIpmiGetAttrRequest struct {
 	// Agent to set the IPMI tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Attribute
 	Attr string `pathParam:"style=simple,explode=false,name=attr"`
-}
-
-type ProtocolIpmiGetAttrRequest struct {
-	PathParams ProtocolIpmiGetAttrPathParams
 }
 
 type ProtocolIpmiGetAttrResponse struct {

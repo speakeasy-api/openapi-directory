@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentIDPathParams struct {
+type GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentIDRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the folder
 	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentIDRequest struct {
-	PathParams GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentIDPathParams
 }
 
 // GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentID200ApplicationJSON - A nominative social declaration of the folder social

@@ -43,7 +43,7 @@ func (s *resources) AddFolder(ctx context.Context, request operations.AddFolderR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -55,7 +55,7 @@ func (s *resources) AddFolder(ctx context.Context, request operations.AddFolderR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -100,7 +100,7 @@ func (s *resources) CompressFiles(ctx context.Context, request operations.Compre
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources/compress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -112,7 +112,7 @@ func (s *resources) CompressFiles(ctx context.Context, request operations.Compre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -159,7 +159,7 @@ func (s *resources) CopyResources(ctx context.Context, request operations.CopyRe
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources/copy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -171,7 +171,7 @@ func (s *resources) CopyResources(ctx context.Context, request operations.CopyRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -225,14 +225,14 @@ func (s *resources) CopyResources(ctx context.Context, request operations.CopyRe
 // - There is no way to un-delete a deleted resource.
 func (s *resources) DeleteResourceByID(ctx context.Context, request operations.DeleteResourceByIDRequest) (*operations.DeleteResourceByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,7 +278,7 @@ func (s *resources) DeleteResources(ctx context.Context, request operations.Dele
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -290,7 +290,7 @@ func (s *resources) DeleteResources(ctx context.Context, request operations.Dele
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -349,9 +349,9 @@ func (s *resources) Download(ctx context.Context, request operations.DownloadReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -405,7 +405,7 @@ func (s *resources) ExtractFiles(ctx context.Context, request operations.Extract
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources/extract"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -417,7 +417,7 @@ func (s *resources) ExtractFiles(ctx context.Context, request operations.Extract
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -471,9 +471,9 @@ func (s *resources) GetPreviewImage(ctx context.Context, request operations.GetP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -525,9 +525,9 @@ func (s *resources) GetResourceInfo(ctx context.Context, request operations.GetR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -572,16 +572,16 @@ func (s *resources) GetResourceInfo(ctx context.Context, request operations.GetR
 // - Authenticated user should have list permission.
 func (s *resources) GetResourceInfoByID(ctx context.Context, request operations.GetResourceInfoByIDRequest) (*operations.GetResourceInfoByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -628,16 +628,16 @@ func (s *resources) GetResourceInfoByID(ctx context.Context, request operations.
 // - Authenticated user should have list permission.
 func (s *resources) ListResourceContents(ctx context.Context, request operations.ListResourceContentsRequest) (*operations.ListResourceContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/list/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/list/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -700,9 +700,9 @@ func (s *resources) ListResources(ctx context.Context, request operations.ListRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -750,7 +750,7 @@ func (s *resources) MoveResources(ctx context.Context, request operations.MoveRe
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources/move"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -762,7 +762,7 @@ func (s *resources) MoveResources(ctx context.Context, request operations.MoveRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -812,9 +812,9 @@ func (s *resources) MoveResources(ctx context.Context, request operations.MoveRe
 // Update the specified file or folder resource record's "name" parameter. The resource is identified by the numeric resource ID that is passed in as the last segment of the URI.
 func (s *resources) UpdateResourceByID(ctx context.Context, request operations.UpdateResourceByIDRequest) (*operations.UpdateResourceByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -826,7 +826,7 @@ func (s *resources) UpdateResourceByID(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -868,7 +868,7 @@ func (s *resources) UploadFile(ctx context.Context, request operations.UploadFil
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resources/upload"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -880,9 +880,9 @@ func (s *resources) UploadFile(ctx context.Context, request operations.UploadFil
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

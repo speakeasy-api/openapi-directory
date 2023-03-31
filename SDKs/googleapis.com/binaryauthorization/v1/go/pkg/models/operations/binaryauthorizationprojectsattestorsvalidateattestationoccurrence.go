@@ -8,22 +8,20 @@ import (
 )
 
 type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrencePathParams struct {
-	// Required. The resource name of the Attestor of the occurrence, in the format `projects/*/attestors/*`.
-	Attestor string `pathParam:"style=simple,explode=false,name=attestor"`
-}
-
-type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceQueryParams struct {
+type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                          *shared.XgafvEnum                            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ValidateAttestationOccurrenceRequest *shared.ValidateAttestationOccurrenceRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Required. The resource name of the Attestor of the occurrence, in the format `projects/*/attestors/*`.
+	Attestor string `pathParam:"style=simple,explode=false,name=attestor"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -40,13 +38,6 @@ type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceQueryParam
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest struct {
-	PathParams  BinaryauthorizationProjectsAttestorsValidateAttestationOccurrencePathParams
-	QueryParams BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceQueryParams
-	Request     *shared.ValidateAttestationOccurrenceRequest `request:"mediaType=application/json"`
-	Security    BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceSecurity
 }
 
 type BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse struct {

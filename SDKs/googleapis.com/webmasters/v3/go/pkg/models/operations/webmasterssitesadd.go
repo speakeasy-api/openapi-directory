@@ -8,16 +8,11 @@ import (
 )
 
 type WebmastersSitesAddSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebmastersSitesAddPathParams struct {
-	// The URL of the site to add.
-	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
-}
-
-type WebmastersSitesAddQueryParams struct {
+type WebmastersSitesAddRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -30,14 +25,10 @@ type WebmastersSitesAddQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The URL of the site to add.
+	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type WebmastersSitesAddRequest struct {
-	PathParams  WebmastersSitesAddPathParams
-	QueryParams WebmastersSitesAddQueryParams
-	Security    WebmastersSitesAddSecurity
 }
 
 type WebmastersSitesAddResponse struct {

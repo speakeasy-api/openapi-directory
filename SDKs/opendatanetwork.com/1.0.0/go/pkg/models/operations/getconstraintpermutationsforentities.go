@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetConstraintPermutationsForEntitiesPathParams struct {
-	// Full ID of the variable to retrieve.
-	Variable string `pathParam:"style=simple,explode=false,name=variable"`
-}
-
-type GetConstraintPermutationsForEntitiesQueryParams struct {
+type GetConstraintPermutationsForEntitiesRequest struct {
+	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
 	// The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
 	// used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
 	AppToken *string `queryParam:"style=form,explode=true,name=app_token"`
@@ -19,17 +16,8 @@ type GetConstraintPermutationsForEntitiesQueryParams struct {
 	Constraint string `queryParam:"style=form,explode=true,name=constraint"`
 	// Comma separated list of entity IDs.
 	EntityID string `queryParam:"style=form,explode=true,name=entity_id"`
-}
-
-type GetConstraintPermutationsForEntitiesHeaders struct {
-	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
-	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
-}
-
-type GetConstraintPermutationsForEntitiesRequest struct {
-	PathParams  GetConstraintPermutationsForEntitiesPathParams
-	QueryParams GetConstraintPermutationsForEntitiesQueryParams
-	Headers     GetConstraintPermutationsForEntitiesHeaders
+	// Full ID of the variable to retrieve.
+	Variable string `pathParam:"style=simple,explode=false,name=variable"`
 }
 
 type GetConstraintPermutationsForEntitiesResponse struct {

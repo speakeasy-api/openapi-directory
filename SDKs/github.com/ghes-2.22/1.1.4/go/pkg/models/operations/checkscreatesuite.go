@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksCreateSuitePathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ChecksCreateSuiteRequestBody struct {
 	// The sha of the head commit.
 	HeadSha string `json:"head_sha"`
 }
 
 type ChecksCreateSuiteRequest struct {
-	PathParams ChecksCreateSuitePathParams
-	Request    ChecksCreateSuiteRequestBody `request:"mediaType=application/json"`
+	RequestBody ChecksCreateSuiteRequestBody `request:"mediaType=application/json"`
+	Owner       string                       `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                       `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ChecksCreateSuiteResponse struct {

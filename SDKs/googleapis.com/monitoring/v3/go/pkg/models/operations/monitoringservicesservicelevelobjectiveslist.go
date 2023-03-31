@@ -10,29 +10,24 @@ import (
 )
 
 type MonitoringServicesServiceLevelObjectivesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringServicesServiceLevelObjectivesListSecurity struct {
 	Option1 *MonitoringServicesServiceLevelObjectivesListSecurityOption1 `security:"option"`
 	Option2 *MonitoringServicesServiceLevelObjectivesListSecurityOption2 `security:"option"`
 	Option3 *MonitoringServicesServiceLevelObjectivesListSecurityOption3 `security:"option"`
-}
-
-type MonitoringServicesServiceLevelObjectivesListPathParams struct {
-	// Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring Metrics Scope. The formats are: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // MonitoringServicesServiceLevelObjectivesListViewEnum - View of the ServiceLevelObjectives to return. If DEFAULT, return each ServiceLevelObjective as originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a BasicSli, replace the BasicSli with a RequestBasedSli spelling out how the SLI is computed.
@@ -62,7 +57,7 @@ func (e *MonitoringServicesServiceLevelObjectivesListViewEnum) UnmarshalJSON(dat
 	}
 }
 
-type MonitoringServicesServiceLevelObjectivesListQueryParams struct {
+type MonitoringServicesServiceLevelObjectivesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -83,6 +78,8 @@ type MonitoringServicesServiceLevelObjectivesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If this field is not empty then it must contain the nextPageToken value returned by a previous call to this method. Using this field causes the method to return additional results from the previous method call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring Metrics Scope. The formats are: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -93,12 +90,6 @@ type MonitoringServicesServiceLevelObjectivesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// View of the ServiceLevelObjectives to return. If DEFAULT, return each ServiceLevelObjective as originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a BasicSli, replace the BasicSli with a RequestBasedSli spelling out how the SLI is computed.
 	View *MonitoringServicesServiceLevelObjectivesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type MonitoringServicesServiceLevelObjectivesListRequest struct {
-	PathParams  MonitoringServicesServiceLevelObjectivesListPathParams
-	QueryParams MonitoringServicesServiceLevelObjectivesListQueryParams
-	Security    MonitoringServicesServiceLevelObjectivesListSecurity
 }
 
 type MonitoringServicesServiceLevelObjectivesListResponse struct {

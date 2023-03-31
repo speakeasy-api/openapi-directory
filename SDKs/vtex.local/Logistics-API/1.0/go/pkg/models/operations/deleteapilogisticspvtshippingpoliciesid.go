@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteAPILogisticsPvtShippingPoliciesIDPathParams struct {
-	// ID of the shipping policy.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAPILogisticsPvtShippingPoliciesIDHeaders struct {
+type DeleteAPILogisticsPvtShippingPoliciesIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeleteAPILogisticsPvtShippingPoliciesIDRequest struct {
-	PathParams DeleteAPILogisticsPvtShippingPoliciesIDPathParams
-	Headers    DeleteAPILogisticsPvtShippingPoliciesIDHeaders
+	// ID of the shipping policy.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPILogisticsPvtShippingPoliciesIDResponse struct {

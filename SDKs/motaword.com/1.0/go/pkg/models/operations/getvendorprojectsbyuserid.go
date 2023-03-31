@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVendorProjectsByUserIDPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetVendorProjectsByUserIDQueryParams struct {
+type GetVendorProjectsByUserIDRequest struct {
 	// Return only projects that have been completed. When `true`, this makes `joined` true as well.
 	Completed *bool `queryParam:"style=form,explode=true,name=completed"`
 	// Return only projects that this user has already joined
 	Joined  *bool  `queryParam:"style=form,explode=true,name=joined"`
 	Page    *int64 `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVendorProjectsByUserIDRequest struct {
-	PathParams  GetVendorProjectsByUserIDPathParams
-	QueryParams GetVendorProjectsByUserIDQueryParams
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetVendorProjectsByUserIDResponse struct {

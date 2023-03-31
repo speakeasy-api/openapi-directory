@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type NodesDeletePathParams struct {
+type NodesDeleteRequest struct {
 	// The unique identifier of the node.
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type NodesDeleteRequest struct {
-	PathParams NodesDeletePathParams
 }
 
 type NodesDeleteResponse struct {

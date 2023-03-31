@@ -7,22 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberReverseGeocodePositionExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// This is specified as a comma separated string composed of lat., lon.
-	Position string `pathParam:"style=simple,explode=false,name=position"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberReverseGeocodePositionExtQueryParams struct {
+type GetSearchVersionNumberReverseGeocodePositionExtRequest struct {
 	// Specifies the jsonp callback method.
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
 	Heading *float32 `queryParam:"style=form,explode=true,name=heading"`
 	// If a number is sent in along with the request, the response may include the side of the street (Left/Right) and an offset position for that number.
 	Number *string `queryParam:"style=form,explode=true,name=number"`
+	// This is specified as a comma separated string composed of lat., lon.
+	Position string `pathParam:"style=simple,explode=false,name=position"`
 	// The maximum distance in meters from the specified position for the reverse geocoder to consider.
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// Enables return of the road use array for reverse geocodes at street level.
@@ -33,11 +28,8 @@ type GetSearchVersionNumberReverseGeocodePositionExtQueryParams struct {
 	RoadUse *string `queryParam:"style=form,explode=true,name=roadUse"`
 	// If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
 	SpatialKeys *bool `queryParam:"style=form,explode=true,name=spatialKeys"`
-}
-
-type GetSearchVersionNumberReverseGeocodePositionExtRequest struct {
-	PathParams  GetSearchVersionNumberReverseGeocodePositionExtPathParams
-	QueryParams GetSearchVersionNumberReverseGeocodePositionExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberReverseGeocodePositionExtResponse struct {

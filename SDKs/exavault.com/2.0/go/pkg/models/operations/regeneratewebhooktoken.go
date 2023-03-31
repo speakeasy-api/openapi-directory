@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegenerateWebhookTokenPathParams struct {
-	// Webhook ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RegenerateWebhookTokenHeaders struct {
+type RegenerateWebhookTokenRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type RegenerateWebhookTokenRequest struct {
-	PathParams RegenerateWebhookTokenPathParams
-	Headers    RegenerateWebhookTokenHeaders
+	// Webhook ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RegenerateWebhookTokenResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateArticleAuthorDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PrivateArticleAuthorDeletePathParams struct {
+type PrivateArticleAuthorDeleteRequest struct {
 	// Article unique identifier
 	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 	// Article Author unique identifier
 	AuthorID int64 `pathParam:"style=simple,explode=false,name=author_id"`
-}
-
-type PrivateArticleAuthorDeleteRequest struct {
-	PathParams PrivateArticleAuthorDeletePathParams
-	Security   PrivateArticleAuthorDeleteSecurity
 }
 
 type PrivateArticleAuthorDeleteResponse struct {

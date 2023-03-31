@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAWireTransferPathParams struct {
-	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
-}
-
 type RetrieveAWireTransferRequest struct {
-	PathParams RetrieveAWireTransferPathParams
+	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
 type RetrieveAWireTransferDefaultApplicationJSON13StatusEnum string

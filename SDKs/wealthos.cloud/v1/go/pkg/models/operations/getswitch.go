@@ -6,34 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetSwitchSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetSwitchPathParams struct {
-	// Unique identifier of the switch instruction
-	SwitchTransactionID string `pathParam:"style=simple,explode=false,name=switch_transaction_id"`
-}
-
-type GetSwitchQueryParams struct {
-	// If set to `true` details of individual buy and sell (child) transactions will be included
-	IncludeDetails *bool `queryParam:"style=form,explode=true,name=include_details"`
-}
-
-type GetSwitchHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetSwitchRequest struct {
-	PathParams  GetSwitchPathParams
-	QueryParams GetSwitchQueryParams
-	Headers     GetSwitchHeaders
-	Security    GetSwitchSecurity
+	// If set to `true` details of individual buy and sell (child) transactions will be included
+	IncludeDetails *bool `queryParam:"style=form,explode=true,name=include_details"`
+	// Unique identifier of the switch instruction
+	SwitchTransactionID string `pathParam:"style=simple,explode=false,name=switch_transaction_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetSwitch500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

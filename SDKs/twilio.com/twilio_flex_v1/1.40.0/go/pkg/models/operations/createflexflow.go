@@ -12,7 +12,8 @@ var CreateFlexFlowServerList = []string{
 }
 
 type CreateFlexFlowSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateFlexFlowCreateFlexFlowRequest struct {
@@ -48,12 +49,6 @@ type CreateFlexFlowCreateFlexFlowRequest struct {
 	JanitorEnabled *bool `form:"name=JanitorEnabled"`
 	// When enabled, Flex will keep the chat channel active so that it may be used for subsequent interactions with a contact identity. Defaults to `false`.
 	LongLived *bool `form:"name=LongLived"`
-}
-
-type CreateFlexFlowRequest struct {
-	Request   *CreateFlexFlowCreateFlexFlowRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateFlexFlowSecurity
-	ServerURL *string
 }
 
 type CreateFlexFlowResponse struct {

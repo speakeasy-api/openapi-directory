@@ -32,16 +32,16 @@ func newChannelsModerators(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // AddChannelModerator - Add a specific channel moderator
-func (s *channelsModerators) AddChannelModerator(ctx context.Context, request operations.AddChannelModeratorRequest) (*operations.AddChannelModeratorResponse, error) {
+func (s *channelsModerators) AddChannelModerator(ctx context.Context, request operations.AddChannelModeratorRequest, security operations.AddChannelModeratorSecurity) (*operations.AddChannelModeratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,11 +78,11 @@ func (s *channelsModerators) AddChannelModerator(ctx context.Context, request op
 }
 
 // AddChannelModerators - Add a list of channel moderators
-func (s *channelsModerators) AddChannelModerators(ctx context.Context, request operations.AddChannelModeratorsRequest) (*operations.AddChannelModeratorsResponse, error) {
+func (s *channelsModerators) AddChannelModerators(ctx context.Context, request operations.AddChannelModeratorsRequest, security operations.AddChannelModeratorsSecurity) (*operations.AddChannelModeratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,7 +97,7 @@ func (s *channelsModerators) AddChannelModerators(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,7 +147,7 @@ func (s *channelsModerators) AddChannelModerators(ctx context.Context, request o
 // GetChannelModerator - Get a specific channel moderator
 func (s *channelsModerators) GetChannelModerator(ctx context.Context, request operations.GetChannelModeratorRequest) (*operations.GetChannelModeratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,14 +191,14 @@ func (s *channelsModerators) GetChannelModerator(ctx context.Context, request op
 // GetChannelModerators - Get all the moderators in a channel
 func (s *channelsModerators) GetChannelModerators(ctx context.Context, request operations.GetChannelModeratorsRequest) (*operations.GetChannelModeratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -237,16 +237,16 @@ func (s *channelsModerators) GetChannelModerators(ctx context.Context, request o
 }
 
 // RemoveChannelModerator - Remove a specific channel moderator
-func (s *channelsModerators) RemoveChannelModerator(ctx context.Context, request operations.RemoveChannelModeratorRequest) (*operations.RemoveChannelModeratorResponse, error) {
+func (s *channelsModerators) RemoveChannelModerator(ctx context.Context, request operations.RemoveChannelModeratorRequest, security operations.RemoveChannelModeratorSecurity) (*operations.RemoveChannelModeratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,11 +284,11 @@ func (s *channelsModerators) RemoveChannelModerator(ctx context.Context, request
 }
 
 // RemoveChannelModerators - Remove a list of channel moderators
-func (s *channelsModerators) RemoveChannelModerators(ctx context.Context, request operations.RemoveChannelModeratorsRequest) (*operations.RemoveChannelModeratorsResponse, error) {
+func (s *channelsModerators) RemoveChannelModerators(ctx context.Context, request operations.RemoveChannelModeratorsRequest, security operations.RemoveChannelModeratorsSecurity) (*operations.RemoveChannelModeratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *channelsModerators) RemoveChannelModerators(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -350,11 +350,11 @@ func (s *channelsModerators) RemoveChannelModerators(ctx context.Context, reques
 }
 
 // ReplaceChannelModerators - Replace the moderators of a channel
-func (s *channelsModerators) ReplaceChannelModerators(ctx context.Context, request operations.ReplaceChannelModeratorsRequest) (*operations.ReplaceChannelModeratorsResponse, error) {
+func (s *channelsModerators) ReplaceChannelModerators(ctx context.Context, request operations.ReplaceChannelModeratorsRequest, security operations.ReplaceChannelModeratorsSecurity) (*operations.ReplaceChannelModeratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/moderators", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -369,7 +369,7 @@ func (s *channelsModerators) ReplaceChannelModerators(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

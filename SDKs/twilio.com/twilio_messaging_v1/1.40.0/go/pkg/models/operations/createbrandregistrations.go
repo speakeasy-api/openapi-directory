@@ -12,7 +12,8 @@ var CreateBrandRegistrationsServerList = []string{
 }
 
 type CreateBrandRegistrationsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBrandRegistrationsCreateBrandRegistrationsRequest struct {
@@ -26,12 +27,6 @@ type CreateBrandRegistrationsCreateBrandRegistrationsRequest struct {
 	Mock *bool `form:"name=Mock"`
 	// A flag to disable automatic secondary vetting for brands which it would otherwise be done.
 	SkipAutomaticSecVet *bool `form:"name=SkipAutomaticSecVet"`
-}
-
-type CreateBrandRegistrationsRequest struct {
-	Request   *CreateBrandRegistrationsCreateBrandRegistrationsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateBrandRegistrationsSecurity
-	ServerURL *string
 }
 
 type CreateBrandRegistrationsResponse struct {

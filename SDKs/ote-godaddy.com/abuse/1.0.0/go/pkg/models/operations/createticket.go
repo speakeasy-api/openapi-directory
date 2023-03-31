@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreateTicketRequest struct {
-	// The endpoint which allows the Reporter to create a new abuse ticket
-	Request shared.AbuseTicketCreate `request:"mediaType=application/json"`
-}
 
 type CreateTicketResponse struct {
 	Body        []byte

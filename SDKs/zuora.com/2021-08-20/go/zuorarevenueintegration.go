@@ -39,7 +39,7 @@ func (s *zuoraRevenueIntegration) PUTRevProAccountingCodes(ctx context.Context, 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/revpro-accounting-codes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RevproAccountingCodes", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *zuoraRevenueIntegration) PUTRevProAccountingCodes(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

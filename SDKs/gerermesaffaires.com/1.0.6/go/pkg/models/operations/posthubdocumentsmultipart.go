@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostHubDocumentsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostHubDocumentsMultipartFormDataAccountingWorkbookEnum string
@@ -76,12 +75,6 @@ type PostHubDocumentsMultipartFormData1 struct {
 	Date       *string                                      `multipartForm:"name=Date"`
 	File       PostHubDocumentsMultipartFormDataFile        `multipartForm:"file"`
 	Title      string                                       `multipartForm:"name=Title"`
-}
-
-type PostHubDocumentsMultipartRequest struct {
-	// Document to add
-	Request  PostHubDocumentsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostHubDocumentsMultipartSecurity
 }
 
 // PostHubDocumentsMultipart201ApplicationJSON - Id of documents created

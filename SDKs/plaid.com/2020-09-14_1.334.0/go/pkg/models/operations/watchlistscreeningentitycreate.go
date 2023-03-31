@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type WatchlistScreeningEntityCreateRequest struct {
-	Request shared.WatchlistScreeningEntityCreateRequest `request:"mediaType=application/json"`
-}
 
 type WatchlistScreeningEntityCreateResponse struct {
 	ContentType string

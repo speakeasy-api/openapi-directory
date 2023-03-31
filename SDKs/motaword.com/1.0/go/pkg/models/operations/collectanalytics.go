@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CollectAnalyticsPathParams struct {
+type CollectAnalyticsRequest struct {
+	AnalyticsCollection *shared.AnalyticsCollection `request:"mediaType=application/json"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CollectAnalyticsRequest struct {
-	PathParams CollectAnalyticsPathParams
-	Request    *shared.AnalyticsCollection `request:"mediaType=application/json"`
 }
 
 type CollectAnalyticsResponse struct {

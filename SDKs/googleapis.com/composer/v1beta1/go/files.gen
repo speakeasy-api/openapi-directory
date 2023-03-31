@@ -25,10 +25,9 @@ pkg/models/operations/composerprojectslocationsoperationsget.go
 pkg/models/operations/composerprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
-pkg/models/shared/checkupgraderequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/checkupgraderequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/environment.go
 pkg/models/shared/environmentconfig.go
 pkg/models/shared/workloadsconfig.go

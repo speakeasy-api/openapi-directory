@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Send1PathParams struct {
+type Send1Request struct {
 	// quote's internal identifier
 	QuoteID string `pathParam:"style=simple,explode=false,name=quoteId"`
-}
-
-type Send1Request struct {
-	PathParams Send1PathParams
 }
 
 type Send1Response struct {

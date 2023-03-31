@@ -2,10 +2,6 @@
 
 package shared
 
-type SchemeGmaAuth struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	GmaAuth SchemeGmaAuth `security:"scheme,type=oauth2"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }

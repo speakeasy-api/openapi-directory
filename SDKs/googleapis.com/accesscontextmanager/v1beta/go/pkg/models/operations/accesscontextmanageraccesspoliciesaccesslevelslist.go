@@ -10,13 +10,8 @@ import (
 )
 
 type AccesscontextmanagerAccessPoliciesAccessLevelsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type AccesscontextmanagerAccessPoliciesAccessLevelsListPathParams struct {
-	// Required. Resource name for the access policy to list Access Levels from. Format: `accessPolicies/{policy_id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum - Whether to return `BasicLevels` in the Cloud Common Expression language, as `CustomLevels`, rather than as `BasicLevels`. Defaults to returning `AccessLevels` in the format they were defined.
@@ -46,7 +41,7 @@ func (e *AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum
 	}
 }
 
-type AccesscontextmanagerAccessPoliciesAccessLevelsListQueryParams struct {
+type AccesscontextmanagerAccessPoliciesAccessLevelsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// Whether to return `BasicLevels` in the Cloud Common Expression language, as `CustomLevels`, rather than as `BasicLevels`. Defaults to returning `AccessLevels` in the format they were defined.
@@ -67,6 +62,8 @@ type AccesscontextmanagerAccessPoliciesAccessLevelsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Next page token for the next batch of Access Level instances. Defaults to the first page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name for the access policy to list Access Levels from. Format: `accessPolicies/{policy_id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -75,12 +72,6 @@ type AccesscontextmanagerAccessPoliciesAccessLevelsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AccesscontextmanagerAccessPoliciesAccessLevelsListRequest struct {
-	PathParams  AccesscontextmanagerAccessPoliciesAccessLevelsListPathParams
-	QueryParams AccesscontextmanagerAccessPoliciesAccessLevelsListQueryParams
-	Security    AccesscontextmanagerAccessPoliciesAccessLevelsListSecurity
 }
 
 type AccesscontextmanagerAccessPoliciesAccessLevelsListResponse struct {

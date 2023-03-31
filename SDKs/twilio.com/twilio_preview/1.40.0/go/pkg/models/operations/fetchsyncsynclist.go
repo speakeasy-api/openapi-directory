@@ -12,18 +12,13 @@ var FetchSyncSyncListServerList = []string{
 }
 
 type FetchSyncSyncListSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchSyncSyncListPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchSyncSyncListRequest struct {
-	PathParams FetchSyncSyncListPathParams
-	Security   FetchSyncSyncListSecurity
-	ServerURL  *string
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Sid        string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchSyncSyncListResponse struct {

@@ -38,7 +38,7 @@ func newCustomType(defaultClient, securityClient HTTPClient, serverURL, language
 
 // DeleteCustomType - Delete Custom Type
 // Allows deleting a custom type. Person, vehicle, and company types cannot be deleted
-func (s *customType) DeleteCustomType(ctx context.Context, request operations.DeleteCustomTypeRequest) (*operations.DeleteCustomTypeResponse, error) {
+func (s *customType) DeleteCustomType(ctx context.Context, request operations.DeleteCustomTypeRequest, security operations.DeleteCustomTypeSecurity) (*operations.DeleteCustomTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/config"
 
@@ -47,11 +47,11 @@ func (s *customType) DeleteCustomType(ctx context.Context, request operations.De
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,7 +78,7 @@ func (s *customType) DeleteCustomType(ctx context.Context, request operations.De
 
 // UpdateCustomType - Update Custom Type
 // Allows updating a custom type. Person, vehicle, and company types are not modifiable
-func (s *customType) UpdateCustomType(ctx context.Context, request operations.UpdateCustomTypeRequest) (*operations.UpdateCustomTypeResponse, error) {
+func (s *customType) UpdateCustomType(ctx context.Context, request shared.CreateConfigInput, security operations.UpdateCustomTypeSecurity) (*operations.UpdateCustomTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/config"
 
@@ -97,7 +97,7 @@ func (s *customType) UpdateCustomType(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *customType) UpdateCustomType(ctx context.Context, request operations.Up
 
 // CreateScoreConfig - Create Score Configurations
 // Create a custom score configuration selecting the weight for each background check dataset and the country where it applies. Weights are numbers between 0 and 1 that represent how impactful the dataset is for the score. Keep in mind that the sum of all weights must equal 1.
-func (s *customType) CreateScoreConfig(ctx context.Context, request operations.CreateScoreConfigRequest) (*operations.CreateScoreConfigResponse, error) {
+func (s *customType) CreateScoreConfig(ctx context.Context, request shared.CreateConfigInput) (*operations.CreateScoreConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/config"
 
@@ -198,7 +198,7 @@ func (s *customType) ListScoreConfigs(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

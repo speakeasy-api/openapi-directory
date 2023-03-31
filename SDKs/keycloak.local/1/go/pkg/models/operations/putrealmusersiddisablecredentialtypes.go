@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type PutRealmUsersIDDisableCredentialTypesPathParams struct {
+type PutRealmUsersIDDisableCredentialTypesRequest struct {
+	RequestBody []string `request:"mediaType=application/json"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PutRealmUsersIDDisableCredentialTypesRequest struct {
-	PathParams PutRealmUsersIDDisableCredentialTypesPathParams
-	Request    []string `request:"mediaType=application/json"`
 }
 
 type PutRealmUsersIDDisableCredentialTypesResponse struct {

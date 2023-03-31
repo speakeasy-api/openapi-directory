@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPodcastByIDPathParams struct {
-	// Podcast id. You can get podcast id from using other endpoints, e.g., `GET /search`, `GET /best_podcasts`...
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetPodcastByIDSortEnum - How do you want to sort the episodes of this podcast?
 type GetPodcastByIDSortEnum string
 
@@ -38,24 +33,17 @@ func (e *GetPodcastByIDSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPodcastByIDQueryParams struct {
+type GetPodcastByIDRequest struct {
+	// Get API Key on listennotes.com/api
+	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
+	// Podcast id. You can get podcast id from using other endpoints, e.g., `GET /search`, `GET /best_podcasts`...
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// For episodes pagination. It's the value of **next_episode_pub_date** from the response of last request. If not specified, just return latest 10 episodes or oldest 10 episodes, depending on the value of the **sort** parameter.
 	//
 	NextEpisodePubDate *int64 `queryParam:"style=form,explode=true,name=next_episode_pub_date"`
 	// How do you want to sort the episodes of this podcast?
 	//
 	Sort *GetPodcastByIDSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetPodcastByIDHeaders struct {
-	// Get API Key on listennotes.com/api
-	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetPodcastByIDRequest struct {
-	PathParams  GetPodcastByIDPathParams
-	QueryParams GetPodcastByIDQueryParams
-	Headers     GetPodcastByIDHeaders
 }
 
 type GetPodcastByIDResponse struct {

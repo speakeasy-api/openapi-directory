@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateDeployKeyPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateDeployKeyRequestBody struct {
 	// The contents of the key.
 	Key string `json:"key"`
@@ -24,8 +19,9 @@ type ReposCreateDeployKeyRequestBody struct {
 }
 
 type ReposCreateDeployKeyRequest struct {
-	PathParams ReposCreateDeployKeyPathParams
-	Request    ReposCreateDeployKeyRequestBody `request:"mediaType=application/json"`
+	RequestBody ReposCreateDeployKeyRequestBody `request:"mediaType=application/json"`
+	Owner       string                          `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                          `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateDeployKeyResponse struct {

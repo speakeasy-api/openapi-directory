@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type GetpagedadminQueryParams struct {
+type GetpagedadminRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Defines if the SKU binding is active.
 	IsActive *bool `queryParam:"style=form,explode=true,name=isActive"`
 	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
@@ -17,18 +21,6 @@ type GetpagedadminQueryParams struct {
 	Size *string `queryParam:"style=form,explode=true,name=size"`
 	// SKU's unique identifier in the marketplace.
 	SkuID *string `queryParam:"style=form,explode=true,name=skuId"`
-}
-
-type GetpagedadminHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetpagedadminRequest struct {
-	QueryParams GetpagedadminQueryParams
-	Headers     GetpagedadminHeaders
 }
 
 // Getpagedadmin200ApplicationJSON - OK

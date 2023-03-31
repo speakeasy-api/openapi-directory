@@ -35,7 +35,7 @@ func newCall(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // PostV01BulkCall - /v0.1/BulkCall/
 // Initiates multiple concurrent outbound calls
-func (s *call) PostV01BulkCall(ctx context.Context, request operations.PostV01BulkCallRequest) (*operations.PostV01BulkCallResponse, error) {
+func (s *call) PostV01BulkCall(ctx context.Context, request shared.BulkCallParameters, security operations.PostV01BulkCallSecurity) (*operations.PostV01BulkCallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/BulkCall/"
 
@@ -51,7 +51,7 @@ func (s *call) PostV01BulkCall(ctx context.Context, request operations.PostV01Bu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *call) PostV01BulkCall(ctx context.Context, request operations.PostV01Bu
 
 // PostV01Call - /v0.1/Call/
 // Initiates an outbound call
-func (s *call) PostV01Call(ctx context.Context, request operations.PostV01CallRequest) (*operations.PostV01CallResponse, error) {
+func (s *call) PostV01Call(ctx context.Context, request shared.CallParameters, security operations.PostV01CallSecurity) (*operations.PostV01CallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/Call/"
 
@@ -103,7 +103,7 @@ func (s *call) PostV01Call(ctx context.Context, request operations.PostV01CallRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,7 +139,7 @@ func (s *call) PostV01Call(ctx context.Context, request operations.PostV01CallRe
 
 // PostV01CancelScheduledHangup - /v0.1/CancelScheduledHangup/
 // Cancels a scheduled hangup for a call
-func (s *call) PostV01CancelScheduledHangup(ctx context.Context, request operations.PostV01CancelScheduledHangupRequest) (*operations.PostV01CancelScheduledHangupResponse, error) {
+func (s *call) PostV01CancelScheduledHangup(ctx context.Context, request shared.CancelScheduledHangupParameters, security operations.PostV01CancelScheduledHangupSecurity) (*operations.PostV01CancelScheduledHangupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/CancelScheduledHangup/"
 
@@ -155,7 +155,7 @@ func (s *call) PostV01CancelScheduledHangup(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *call) PostV01CancelScheduledHangup(ctx context.Context, request operati
 
 // PostV01CancelScheduledPlay - /v0.1/CancelScheduledPlay/
 // Cancels a scheduled playback request
-func (s *call) PostV01CancelScheduledPlay(ctx context.Context, request operations.PostV01CancelScheduledPlayRequest) (*operations.PostV01CancelScheduledPlayResponse, error) {
+func (s *call) PostV01CancelScheduledPlay(ctx context.Context, request shared.CancelScheduledPlayParameters, security operations.PostV01CancelScheduledPlaySecurity) (*operations.PostV01CancelScheduledPlayResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/CancelScheduledPlay/"
 
@@ -207,7 +207,7 @@ func (s *call) PostV01CancelScheduledPlay(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -243,7 +243,7 @@ func (s *call) PostV01CancelScheduledPlay(ctx context.Context, request operation
 
 // PostV01GroupCall - /v0.1/GroupCall/
 // Initiate multiple racing outbound calls
-func (s *call) PostV01GroupCall(ctx context.Context, request operations.PostV01GroupCallRequest) (*operations.PostV01GroupCallResponse, error) {
+func (s *call) PostV01GroupCall(ctx context.Context, request shared.GroupCallParameters, security operations.PostV01GroupCallSecurity) (*operations.PostV01GroupCallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/GroupCall/"
 
@@ -259,7 +259,7 @@ func (s *call) PostV01GroupCall(ctx context.Context, request operations.PostV01G
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -295,7 +295,7 @@ func (s *call) PostV01GroupCall(ctx context.Context, request operations.PostV01G
 
 // PostV01HangupAllCalls - /v0.1/HangupAllCalls/
 // Hangs up all established calls
-func (s *call) PostV01HangupAllCalls(ctx context.Context, request operations.PostV01HangupAllCallsRequest) (*operations.PostV01HangupAllCallsResponse, error) {
+func (s *call) PostV01HangupAllCalls(ctx context.Context) (*operations.PostV01HangupAllCallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/HangupAllCalls/"
 
@@ -304,7 +304,7 @@ func (s *call) PostV01HangupAllCalls(ctx context.Context, request operations.Pos
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -340,7 +340,7 @@ func (s *call) PostV01HangupAllCalls(ctx context.Context, request operations.Pos
 
 // PostV01HangupCall - /v0.1/HangupCall/
 // Hangs up a specific call
-func (s *call) PostV01HangupCall(ctx context.Context, request operations.PostV01HangupCallRequest) (*operations.PostV01HangupCallResponse, error) {
+func (s *call) PostV01HangupCall(ctx context.Context, request shared.HangupCallParameters, security operations.PostV01HangupCallSecurity) (*operations.PostV01HangupCallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/HangupCall/"
 
@@ -356,7 +356,7 @@ func (s *call) PostV01HangupCall(ctx context.Context, request operations.PostV01
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -392,7 +392,7 @@ func (s *call) PostV01HangupCall(ctx context.Context, request operations.PostV01
 
 // PostV01Play - /v0.1/Play/
 // Plays media into a live call
-func (s *call) PostV01Play(ctx context.Context, request operations.PostV01PlayRequest) (*operations.PostV01PlayResponse, error) {
+func (s *call) PostV01Play(ctx context.Context, request shared.PlayParameters, security operations.PostV01PlaySecurity) (*operations.PostV01PlayResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/Play/"
 
@@ -408,7 +408,7 @@ func (s *call) PostV01Play(ctx context.Context, request operations.PostV01PlayRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,7 +444,7 @@ func (s *call) PostV01Play(ctx context.Context, request operations.PostV01PlayRe
 
 // PostV01PlayStop - /v0.1/PlayStop/
 // Interrupts media playback on a given call
-func (s *call) PostV01PlayStop(ctx context.Context, request operations.PostV01PlayStopRequest) (*operations.PostV01PlayStopResponse, error) {
+func (s *call) PostV01PlayStop(ctx context.Context, request shared.PlayStopParameters, security operations.PostV01PlayStopSecurity) (*operations.PostV01PlayStopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/PlayStop/"
 
@@ -460,7 +460,7 @@ func (s *call) PostV01PlayStop(ctx context.Context, request operations.PostV01Pl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -496,7 +496,7 @@ func (s *call) PostV01PlayStop(ctx context.Context, request operations.PostV01Pl
 
 // PostV01RecordStart - /v0.1/RecordStart/
 // Initiates recording of a given call
-func (s *call) PostV01RecordStart(ctx context.Context, request operations.PostV01RecordStartRequest) (*operations.PostV01RecordStartResponse, error) {
+func (s *call) PostV01RecordStart(ctx context.Context, request shared.RecordStartParameters, security operations.PostV01RecordStartSecurity) (*operations.PostV01RecordStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/RecordStart/"
 
@@ -512,7 +512,7 @@ func (s *call) PostV01RecordStart(ctx context.Context, request operations.PostV0
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -548,7 +548,7 @@ func (s *call) PostV01RecordStart(ctx context.Context, request operations.PostV0
 
 // PostV01RecordStop - /v0.1/RecordStop/
 // Stops the recording of a given call
-func (s *call) PostV01RecordStop(ctx context.Context, request operations.PostV01RecordStopRequest) (*operations.PostV01RecordStopResponse, error) {
+func (s *call) PostV01RecordStop(ctx context.Context, request shared.RecordStopParameters, security operations.PostV01RecordStopSecurity) (*operations.PostV01RecordStopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/RecordStop/"
 
@@ -564,7 +564,7 @@ func (s *call) PostV01RecordStop(ctx context.Context, request operations.PostV01
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -600,7 +600,7 @@ func (s *call) PostV01RecordStop(ctx context.Context, request operations.PostV01
 
 // PostV01ScheduleHangup - /v0.1/ScheduleHangup/
 // Schedules a hangup for a specific call
-func (s *call) PostV01ScheduleHangup(ctx context.Context, request operations.PostV01ScheduleHangupRequest) (*operations.PostV01ScheduleHangupResponse, error) {
+func (s *call) PostV01ScheduleHangup(ctx context.Context, request shared.ScheduleHangupParameters, security operations.PostV01ScheduleHangupSecurity) (*operations.PostV01ScheduleHangupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/ScheduleHangup/"
 
@@ -616,7 +616,7 @@ func (s *call) PostV01ScheduleHangup(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -652,7 +652,7 @@ func (s *call) PostV01ScheduleHangup(ctx context.Context, request operations.Pos
 
 // PostV01SchedulePlay - /v0.1/SchedulePlay/
 // Schedules media playback for a specific call
-func (s *call) PostV01SchedulePlay(ctx context.Context, request operations.PostV01SchedulePlayRequest) (*operations.PostV01SchedulePlayResponse, error) {
+func (s *call) PostV01SchedulePlay(ctx context.Context, request shared.SchedulePlayParameters, security operations.PostV01SchedulePlaySecurity) (*operations.PostV01SchedulePlayResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/SchedulePlay/"
 
@@ -668,7 +668,7 @@ func (s *call) PostV01SchedulePlay(ctx context.Context, request operations.PostV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -704,7 +704,7 @@ func (s *call) PostV01SchedulePlay(ctx context.Context, request operations.PostV
 
 // PostV01SendDigits - /v0.1/SendDigits/
 // Emits DMTF tones to a call
-func (s *call) PostV01SendDigits(ctx context.Context, request operations.PostV01SendDigitsRequest) (*operations.PostV01SendDigitsResponse, error) {
+func (s *call) PostV01SendDigits(ctx context.Context, request shared.SendDigitsParameters, security operations.PostV01SendDigitsSecurity) (*operations.PostV01SendDigitsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/SendDigits/"
 
@@ -720,7 +720,7 @@ func (s *call) PostV01SendDigits(ctx context.Context, request operations.PostV01
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -756,7 +756,7 @@ func (s *call) PostV01SendDigits(ctx context.Context, request operations.PostV01
 
 // PostV01SoundTouch - /v0.1/SoundTouch/
 // Applies SoundTouch effects to a live call
-func (s *call) PostV01SoundTouch(ctx context.Context, request operations.PostV01SoundTouchRequest) (*operations.PostV01SoundTouchResponse, error) {
+func (s *call) PostV01SoundTouch(ctx context.Context, request shared.SoundTouchParameters, security operations.PostV01SoundTouchSecurity) (*operations.PostV01SoundTouchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/SoundTouch/"
 
@@ -772,7 +772,7 @@ func (s *call) PostV01SoundTouch(ctx context.Context, request operations.PostV01
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -808,7 +808,7 @@ func (s *call) PostV01SoundTouch(ctx context.Context, request operations.PostV01
 
 // PostV01SoundTouchStop - /v0.1/SoundTouchStop/
 // Removes SoundTouch effects from a given call
-func (s *call) PostV01SoundTouchStop(ctx context.Context, request operations.PostV01SoundTouchStopRequest) (*operations.PostV01SoundTouchStopResponse, error) {
+func (s *call) PostV01SoundTouchStop(ctx context.Context, request shared.SoundTouchStopParameters, security operations.PostV01SoundTouchStopSecurity) (*operations.PostV01SoundTouchStopResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/SoundTouchStop/"
 
@@ -824,7 +824,7 @@ func (s *call) PostV01SoundTouchStop(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -860,7 +860,7 @@ func (s *call) PostV01SoundTouchStop(ctx context.Context, request operations.Pos
 
 // PostV01TransferCall - /v0.1/TransferCall/
 // Replaces the RestXML flow of a live call
-func (s *call) PostV01TransferCall(ctx context.Context, request operations.PostV01TransferCallRequest) (*operations.PostV01TransferCallResponse, error) {
+func (s *call) PostV01TransferCall(ctx context.Context, request shared.TransferCallParameters, security operations.PostV01TransferCallSecurity) (*operations.PostV01TransferCallResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/TransferCall/"
 
@@ -876,7 +876,7 @@ func (s *call) PostV01TransferCall(ctx context.Context, request operations.PostV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

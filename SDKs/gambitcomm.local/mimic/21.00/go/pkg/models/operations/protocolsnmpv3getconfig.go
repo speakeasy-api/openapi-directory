@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSnmpv3GetConfigPathParams struct {
+type ProtocolSnmpv3GetConfigRequest struct {
 	// Agent to show the SNMPv3 configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmpv3GetConfigRequest struct {
-	PathParams ProtocolSnmpv3GetConfigPathParams
 }
 
 type ProtocolSnmpv3GetConfigResponse struct {

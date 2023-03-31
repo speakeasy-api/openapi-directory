@@ -8,17 +8,13 @@ import (
 )
 
 type DevicesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DevicesQueryParams struct {
-	// Fetch details for a particular OS
-	Os *string `queryParam:"style=form,explode=true,name=os"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DevicesRequest struct {
-	QueryParams DevicesQueryParams
-	Security    DevicesSecurity
+	// Fetch details for a particular OS
+	Os *string `queryParam:"style=form,explode=true,name=os"`
 }
 
 type DevicesResponse struct {

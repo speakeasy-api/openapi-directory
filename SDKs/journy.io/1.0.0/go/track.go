@@ -34,7 +34,7 @@ func newTrack(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // TrackEvent - Track event
 // Endpoint used to track an event for a user or an account.
-func (s *track) TrackEvent(ctx context.Context, request operations.TrackEventRequest) (*operations.TrackEventResponse, error) {
+func (s *track) TrackEvent(ctx context.Context, request operations.TrackEventRequestBody) (*operations.TrackEventResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/track"
 

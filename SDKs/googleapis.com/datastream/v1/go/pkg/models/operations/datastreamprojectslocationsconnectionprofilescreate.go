@@ -8,18 +8,14 @@ import (
 )
 
 type DatastreamProjectsLocationsConnectionProfilesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatastreamProjectsLocationsConnectionProfilesCreatePathParams struct {
-	// Required. The parent that owns the collection of ConnectionProfiles.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatastreamProjectsLocationsConnectionProfilesCreateQueryParams struct {
+type DatastreamProjectsLocationsConnectionProfilesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ConnectionProfileInput *shared.ConnectionProfileInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,6 +32,8 @@ type DatastreamProjectsLocationsConnectionProfilesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent that owns the collection of ConnectionProfiles.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,13 +46,6 @@ type DatastreamProjectsLocationsConnectionProfilesCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Only validate the connection profile, but don't create any resources. The default is false.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type DatastreamProjectsLocationsConnectionProfilesCreateRequest struct {
-	PathParams  DatastreamProjectsLocationsConnectionProfilesCreatePathParams
-	QueryParams DatastreamProjectsLocationsConnectionProfilesCreateQueryParams
-	Request     *shared.ConnectionProfileInput `request:"mediaType=application/json"`
-	Security    DatastreamProjectsLocationsConnectionProfilesCreateSecurity
 }
 
 type DatastreamProjectsLocationsConnectionProfilesCreateResponse struct {

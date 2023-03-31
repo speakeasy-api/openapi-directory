@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagFromEmployerPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The tag unique identifier. E.g. MyTag
-	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
-}
-
-type GetTagFromEmployerHeaders struct {
+type GetTagFromEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetTagFromEmployerRequest struct {
-	PathParams GetTagFromEmployerPathParams
-	Headers    GetTagFromEmployerHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The tag unique identifier. E.g. MyTag
+	TagID string `pathParam:"style=simple,explode=false,name=TagId"`
 }
 
 type GetTagFromEmployerResponse struct {

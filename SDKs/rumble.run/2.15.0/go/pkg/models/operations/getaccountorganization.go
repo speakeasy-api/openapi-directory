@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAccountOrganizationSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAccountOrganizationPathParams struct {
-	// UUID of the organization to retrieve
-	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAccountOrganizationRequest struct {
-	PathParams GetAccountOrganizationPathParams
-	Security   GetAccountOrganizationSecurity
+	// UUID of the organization to retrieve
+	OrgID string `pathParam:"style=simple,explode=false,name=org_id"`
 }
 
 type GetAccountOrganizationResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoryVideosPathParams struct {
-	// The name of the category.
-	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
 // GetCategoryVideosDirectionEnum - The sort direction of the results.
 type GetCategoryVideosDirectionEnum string
 
@@ -107,7 +102,9 @@ func (e *GetCategoryVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCategoryVideosQueryParams struct {
+type GetCategoryVideosRequest struct {
+	// The name of the category.
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The sort direction of the results.
 	Direction *GetCategoryVideosDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
@@ -126,11 +123,6 @@ type GetCategoryVideosQueryParams struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// The way to sort the results.
 	Sort *GetCategoryVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetCategoryVideosRequest struct {
-	PathParams  GetCategoryVideosPathParams
-	QueryParams GetCategoryVideosQueryParams
 }
 
 type GetCategoryVideosResponse struct {

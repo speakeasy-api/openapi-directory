@@ -13,7 +13,8 @@ import (
 )
 
 type GetRecordsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // GetRecordsDirectionEnum - Direction of the communication, either `inbound` (received by our services), or `outbound` (originated from our services). Required for products `SMS` and `MESSAGES`. Optional for `VOICE-CALL`. Invalid for `IN-APP-VOICE`, `CONVERSATIONS`, `NUMBER-INSIGHT`, `VERIFY-API`.
@@ -181,7 +182,7 @@ func (e *GetRecordsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRecordsQueryParams struct {
+type GetRecordsRequest struct {
 	// The account for which the list of reports will be queried.
 	AccountID string `queryParam:"style=form,explode=true,name=account_id"`
 	// **Must be no more than 24 hours later than `date_start`**
@@ -215,11 +216,6 @@ type GetRecordsQueryParams struct {
 	ShowConcatenated *GetRecordsShowConcatenatedEnum `queryParam:"style=form,explode=true,name=show_concatenated"`
 	// The SMS status to search for. Optional where product is `SMS`.
 	Status *GetRecordsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetRecordsRequest struct {
-	QueryParams GetRecordsQueryParams
-	Security    GetRecordsSecurity
 }
 
 // GetRecords422ApplicationJSON3 - Invalid filter

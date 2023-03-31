@@ -35,7 +35,7 @@ func newWells(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // WellsFilesList - list files found for the well identified in the uri
 func (s *wells) WellsFilesList(ctx context.Context, request operations.WellsFilesListRequest) (*operations.WellsFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wells/{tag}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wells/{tag}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *wells) WellsList(ctx context.Context, request operations.WellsListReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -128,7 +128,7 @@ func (s *wells) WellsList(ctx context.Context, request operations.WellsListReque
 // This view is open to all, and has no permissions.
 func (s *wells) WellsRead(ctx context.Context, request operations.WellsReadRequest) (*operations.WellsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wells/{well_tag_number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wells/{well_tag_number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +179,7 @@ func (s *wells) WellsTagsList(ctx context.Context, request operations.WellsTagsL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

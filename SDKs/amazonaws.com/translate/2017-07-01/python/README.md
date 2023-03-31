@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/translate/2017-07-01/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,39 +14,49 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateParallelDataRequest(
-    headers=operations.CreateParallelDataHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ut",
-        x_amz_credential="sapiente",
-        x_amz_date="laborum",
-        x_amz_security_token="dolor",
-        x_amz_signature="accusamus",
-        x_amz_signed_headers="pariatur",
-        x_amz_target="AWSShineFrontendService_20170701.CreateParallelData",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateParallelDataRequest(
-        client_token="eos",
-        description="ut",
+)
+
+
+req = operations.CreateParallelDataRequest(
+    create_parallel_data_request=shared.CreateParallelDataRequest(
+        client_token="corrupti",
+        description="provident",
         encryption_key=shared.EncryptionKey(
-            id="animi",
+            id="distinctio",
             type="KMS",
         ),
-        name="eum",
+        name="quibusdam",
         parallel_data_config=shared.ParallelDataConfig(
-            format="TMX",
-            s3_uri="maiores",
+            format="CSV",
+            s3_uri="nulla",
         ),
+        tags=[
+            shared.Tag(
+                key="illum",
+                value="vel",
+            ),
+            shared.Tag(
+                key="error",
+                value="deserunt",
+            ),
+            shared.Tag(
+                key="suscipit",
+                value="iure",
+            ),
+        ],
     ),
+    x_amz_algorithm="magnam",
+    x_amz_content_sha256="debitis",
+    x_amz_credential="ipsa",
+    x_amz_date="delectus",
+    x_amz_security_token="tempora",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="molestiae",
+    x_amz_target="AWSShineFrontendService_20170701.CreateParallelData",
 )
     
 res = s.create_parallel_data(req)
@@ -57,25 +67,39 @@ if res.create_parallel_data_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
-* `create_parallel_data` - Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3. Parallel data files contain examples of source phrases and their translations from your translation memory. By adding parallel data, you can influence the style, tone, and word choice in your translation output.
+* `create_parallel_data` - Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3. Parallel data files contain examples that show how you want segments of text to be translated. By adding parallel data, you can influence the style, tone, and word choice in your translation output.
 * `delete_parallel_data` - Deletes a parallel data resource in Amazon Translate.
 * `delete_terminology` - A synchronous action that deletes a custom terminology.
-* `describe_text_translation_job` - Gets the properties associated with an asycnhronous batch translation job including name, ID, status, source and target languages, input/output S3 buckets, and so on.
+* `describe_text_translation_job` - Gets the properties associated with an asynchronous batch translation job including name, ID, status, source and target languages, input/output S3 buckets, and so on.
 * `get_parallel_data` - Provides information about a parallel data resource.
 * `get_terminology` - Retrieves a custom terminology.
-* `import_terminology` - <p>Creates or updates a custom terminology, depending on whether or not one already exists for the given terminology name. Importing a terminology with the same name as an existing one will merge the terminologies based on the chosen merge strategy. Currently, the only supported merge strategy is OVERWRITE, and so the imported terminology will overwrite an existing terminology of the same name.</p> <p>If you import a terminology that overwrites an existing one, the new terminology take up to 10 minutes to fully propagate and be available for use in a translation due to cache policies with the DataPlane service that performs the translations.</p>
+* `import_terminology` - <p>Creates or updates a custom terminology, depending on whether one already exists for the given terminology name. Importing a terminology with the same name as an existing one will merge the terminologies based on the chosen merge strategy. The only supported merge strategy is OVERWRITE, where the imported terminology overwrites the existing terminology of the same name.</p> <p>If you import a terminology that overwrites an existing one, the new terminology takes up to 10 minutes to fully propagate. After that, translations have access to the new terminology.</p>
+* `list_languages` - Provides a list of languages (RFC-5646 codes and names) that Amazon Translate supports.
 * `list_parallel_data` - Provides a list of your parallel data resources in Amazon Translate.
+* `list_tags_for_resource` - Lists all tags associated with a given Amazon Translate resource. For more information, see <a href="https://docs.aws.amazon.com/translate/latest/dg/tagging.html"> Tagging your resources</a>.
 * `list_terminologies` - Provides a list of custom terminologies associated with your account.
 * `list_text_translation_jobs` - Gets a list of the batch translation jobs that you have submitted.
-* `start_text_translation_job` - <p>Starts an asynchronous batch translation job. Batch translation jobs can be used to translate large volumes of text across multiple documents at once. For more information, see <a>async</a>.</p> <p>Batch translation jobs can be described with the <a>DescribeTextTranslationJob</a> operation, listed with the <a>ListTextTranslationJobs</a> operation, and stopped with the <a>StopTextTranslationJob</a> operation.</p> <note> <p>Amazon Translate does not support batch translation of multiple source languages at once.</p> </note>
+* `start_text_translation_job` - <p>Starts an asynchronous batch translation job. Use batch translation jobs to translate large volumes of text across multiple documents at once. For batch translation, you can input documents with different source languages (specify <code>auto</code> as the source language). You can specify one or more target languages. Batch translation translates each input document into each of the target languages. For more information, see <a href="https://docs.aws.amazon.com/translate/latest/dg/async.html">Asynchronous batch processing</a>.</p> <p>Batch translation jobs can be described with the <a>DescribeTextTranslationJob</a> operation, listed with the <a>ListTextTranslationJobs</a> operation, and stopped with the <a>StopTextTranslationJob</a> operation.</p>
 * `stop_text_translation_job` - <p>Stops an asynchronous batch translation job that is in progress.</p> <p>If the job's state is <code>IN_PROGRESS</code>, the job will be marked for termination and put into the <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the <code>COMPLETED</code> state. Otherwise, the job is put into the <code>STOPPED</code> state.</p> <p>Asynchronous batch translation jobs are started with the <a>StartTextTranslationJob</a> operation. You can use the <a>DescribeTextTranslationJob</a> or <a>ListTextTranslationJobs</a> operations to get a batch translation job's <code>JobId</code>.</p>
-* `translate_text` - Translates input text from the source language to the target language. For a list of available languages and language codes, see <a>what-is-languages</a>.
+* `tag_resource` - Associates a specific tag with a resource. A tag is a key-value pair that adds as a metadata to a resource. For more information, see <a href="https://docs.aws.amazon.com/translate/latest/dg/tagging.html"> Tagging your resources</a>.
+* `translate_text` - Translates input text from the source language to the target language. For a list of available languages and language codes, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
+* `untag_resource` - Removes a specific tag associated with an Amazon Translate resource. For more information, see <a href="https://docs.aws.amazon.com/translate/latest/dg/tagging.html"> Tagging your resources</a>.
 * `update_parallel_data` - Updates a previously created parallel data resource by importing a new input file from Amazon S3.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

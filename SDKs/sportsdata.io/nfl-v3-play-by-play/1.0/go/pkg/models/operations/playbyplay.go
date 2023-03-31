@@ -33,7 +33,7 @@ func (e *PlayByPlayFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayByPlayPathParams struct {
+type PlayByPlayRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayByPlayFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Abbreviation of the home team. Example: <code>WAS</code>.
@@ -46,10 +46,6 @@ type PlayByPlayPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type PlayByPlayRequest struct {
-	PathParams PlayByPlayPathParams
 }
 
 type PlayByPlayResponse struct {

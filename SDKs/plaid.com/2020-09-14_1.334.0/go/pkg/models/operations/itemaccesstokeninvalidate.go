@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ItemAccessTokenInvalidateRequest struct {
-	Request shared.ItemAccessTokenInvalidateRequest `request:"mediaType=application/json"`
-}
 
 type ItemAccessTokenInvalidateResponse struct {
 	ContentType string

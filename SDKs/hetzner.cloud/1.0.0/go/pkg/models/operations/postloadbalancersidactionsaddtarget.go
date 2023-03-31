@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PostLoadBalancersIDActionsAddTargetPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostLoadBalancersIDActionsAddTargetAddTargetRequestIP - IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
 type PostLoadBalancersIDActionsAddTargetAddTargetRequestIP struct {
 	// IP of a server that belongs to the same customer (public IPv4/IPv6) or private IP in a Subnetwork type vswitch.
@@ -72,8 +67,9 @@ type PostLoadBalancersIDActionsAddTargetAddTargetRequest struct {
 }
 
 type PostLoadBalancersIDActionsAddTargetRequest struct {
-	PathParams PostLoadBalancersIDActionsAddTargetPathParams
-	Request    *PostLoadBalancersIDActionsAddTargetAddTargetRequest `request:"mediaType=application/json"`
+	RequestBody *PostLoadBalancersIDActionsAddTargetAddTargetRequest `request:"mediaType=application/json"`
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostLoadBalancersIDActionsAddTargetActionResponseActionError - Error message for the Action if error occurred, otherwise null

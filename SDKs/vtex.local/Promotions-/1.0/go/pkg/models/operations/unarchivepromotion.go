@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type UnarchivePromotionPathParams struct {
-	// Promotion ID or tax ID.
-	IDCalculatorConfiguration string `pathParam:"style=simple,explode=false,name=idCalculatorConfiguration"`
-}
-
-type UnarchivePromotionHeaders struct {
+type UnarchivePromotionRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type UnarchivePromotionRequest struct {
-	PathParams UnarchivePromotionPathParams
-	Headers    UnarchivePromotionHeaders
+	// Promotion ID or tax ID.
+	IDCalculatorConfiguration string `pathParam:"style=simple,explode=false,name=idCalculatorConfiguration"`
 }
 
 type UnarchivePromotionResponse struct {

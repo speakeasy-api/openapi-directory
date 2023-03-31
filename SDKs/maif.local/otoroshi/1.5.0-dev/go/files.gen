@@ -130,7 +130,6 @@ pkg/models/operations/findclientvalidatorbyid.go
 pkg/models/operations/patchclientvalidator.go
 pkg/models/operations/updateclientvalidator.go
 pkg/models/shared/apikey.go
-pkg/models/shared/security.go
 pkg/models/shared/quotas.go
 pkg/models/shared/group.go
 pkg/models/shared/deleted.go

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchChargeStationPathParams struct {
+type PatchChargeStationRequest struct {
 	// ID of charge station that needs to be updated
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatchChargeStationRequest struct {
-	PathParams PatchChargeStationPathParams
 	// Include charge station properties to update here
-	Request shared.Schema1 `request:"mediaType=application/json"`
+	Schema1 shared.Schema1 `request:"mediaType=application/json"`
 }
 
 // PatchChargeStation200ApplicationJSON - Returns the updated chargestion object

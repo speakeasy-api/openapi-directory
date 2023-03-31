@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByTypeAndIDPathParams struct {
+type GetByTypeAndIDRequest struct {
 	// dictionary value identifier
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// dictionary type
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetByTypeAndIDRequest struct {
-	PathParams GetByTypeAndIDPathParams
 }
 
 type GetByTypeAndIDResponse struct {

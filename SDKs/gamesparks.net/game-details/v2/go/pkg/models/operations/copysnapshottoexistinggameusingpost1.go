@@ -7,16 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CopySnapshotToExistingGameUsingPOST1PathParams struct {
+type CopySnapshotToExistingGameUsingPOST1Request struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-	// snapshotId
-	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
-	// targetApiKey
-	TargetAPIKey string `pathParam:"style=simple,explode=false,name=targetApiKey"`
-}
-
-type CopySnapshotToExistingGameUsingPOST1QueryParams struct {
 	// includeBinaries
 	IncludeBinaries *bool `queryParam:"style=form,explode=true,name=includeBinaries"`
 	// includeCollaborators
@@ -25,11 +18,10 @@ type CopySnapshotToExistingGameUsingPOST1QueryParams struct {
 	IncludeGameConfig *bool `queryParam:"style=form,explode=true,name=includeGameConfig"`
 	// includeMetadata
 	IncludeMetadata *bool `queryParam:"style=form,explode=true,name=includeMetadata"`
-}
-
-type CopySnapshotToExistingGameUsingPOST1Request struct {
-	PathParams  CopySnapshotToExistingGameUsingPOST1PathParams
-	QueryParams CopySnapshotToExistingGameUsingPOST1QueryParams
+	// snapshotId
+	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
+	// targetApiKey
+	TargetAPIKey string `pathParam:"style=simple,explode=false,name=targetApiKey"`
 }
 
 type CopySnapshotToExistingGameUsingPOST1Response struct {

@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetV1VerificationResultRequest(
-    query_params=operations.GetV1VerificationResultQueryParams(
-        format="json",
-        key="voluptatem",
-        otp="nam",
-        tran_id="eum",
-    ),
+    format="xml",
+    key="provident",
+    otp="distinctio",
+    tran_id="quibusdam",
 )
     
 res = s.get_v1_verification_result(req)

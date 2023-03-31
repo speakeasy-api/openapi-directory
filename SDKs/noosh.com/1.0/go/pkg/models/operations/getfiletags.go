@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFileTagsPathParams struct {
+type GetFileTagsRequest struct {
 	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetFileTagsRequest struct {
-	PathParams GetFileTagsPathParams
 }
 
 type GetFileTagsResponse struct {

@@ -43,7 +43,7 @@ func (s *flightRestrictions) TfrByDistanceUsV1RestrictionsDistanceQueryPost(ctx 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/restrictions/distance-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NOTAMsByDistance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *flightRestrictions) TfrByDistanceUsV1RestrictionsDistanceQueryPost(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -111,7 +111,7 @@ func (s *flightRestrictions) TfrByPolyUsV1RestrictionsPolygonQueryPost(ctx conte
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/restrictions/polygon-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NOTAMsByPolygon", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -126,7 +126,7 @@ func (s *flightRestrictions) TfrByPolyUsV1RestrictionsPolygonQueryPost(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -179,7 +179,7 @@ func (s *flightRestrictions) TfrByRouteUsV1RestrictionsRouteQueryPost(ctx contex
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/restrictions/route-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NOTAMsByRoute", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -194,7 +194,7 @@ func (s *flightRestrictions) TfrByRouteUsV1RestrictionsRouteQueryPost(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

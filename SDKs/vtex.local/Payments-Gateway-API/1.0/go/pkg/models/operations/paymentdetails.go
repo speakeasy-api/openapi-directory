@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentDetailsPathParams struct {
-	PaymentID     string `pathParam:"style=simple,explode=false,name=paymentId"`
-	TransactionID string `pathParam:"style=simple,explode=false,name=transactionId"`
-}
-
-type PaymentDetailsHeaders struct {
+type PaymentDetailsRequest struct {
 	// Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// The Media type of the body of the request.  Default value for payment provider protocol is application/json
@@ -21,11 +16,8 @@ type PaymentDetailsHeaders struct {
 	XPROVIDERAPIAppKey string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppKey"`
 	// The AppToken configured by the merchant (optional configuration)
 	XPROVIDERAPIAppToken string `header:"style=simple,explode=false,name=X-PROVIDER-API-AppToken"`
-}
-
-type PaymentDetailsRequest struct {
-	PathParams PaymentDetailsPathParams
-	Headers    PaymentDetailsHeaders
+	PaymentID            string `pathParam:"style=simple,explode=false,name=paymentId"`
+	TransactionID        string `pathParam:"style=simple,explode=false,name=transactionId"`
 }
 
 type PaymentDetailsResponse struct {

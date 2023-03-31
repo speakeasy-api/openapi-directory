@@ -8,18 +8,18 @@ import (
 )
 
 type FirebaserulesProjectsReleasesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaserulesProjectsReleasesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaserulesProjectsReleasesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirebaserulesProjectsReleasesListSecurity struct {
@@ -28,12 +28,7 @@ type FirebaserulesProjectsReleasesListSecurity struct {
 	Option3 *FirebaserulesProjectsReleasesListSecurityOption3 `security:"option"`
 }
 
-type FirebaserulesProjectsReleasesListPathParams struct {
-	// Required. Resource name for the project. Format: `projects/{project_id}`
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type FirebaserulesProjectsReleasesListQueryParams struct {
+type FirebaserulesProjectsReleasesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type FirebaserulesProjectsReleasesListQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Resource name for the project. Format: `projects/{project_id}`
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and the service may choose to load fewer than `page_size` results due to the size of the output. To traverse all of the releases, the caller should iterate until the `page_token` on the response is empty.
@@ -62,12 +59,6 @@ type FirebaserulesProjectsReleasesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirebaserulesProjectsReleasesListRequest struct {
-	PathParams  FirebaserulesProjectsReleasesListPathParams
-	QueryParams FirebaserulesProjectsReleasesListQueryParams
-	Security    FirebaserulesProjectsReleasesListSecurity
 }
 
 type FirebaserulesProjectsReleasesListResponse struct {

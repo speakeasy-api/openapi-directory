@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostQuoteTagsRemoveSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type PostQuoteTagsRemoveQueryParams struct {
+type PostQuoteTagsRemoveRequest struct {
 	// Quote ID
 	ID string `queryParam:"style=form,explode=true,name=id"`
 	// Comma Separated tags
 	Tags string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type PostQuoteTagsRemoveRequest struct {
-	QueryParams PostQuoteTagsRemoveQueryParams
-	Security    PostQuoteTagsRemoveSecurity
 }
 
 type PostQuoteTagsRemoveResponse struct {

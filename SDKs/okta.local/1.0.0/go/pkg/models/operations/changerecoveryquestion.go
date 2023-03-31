@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ChangeRecoveryQuestionPathParams struct {
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type ChangeRecoveryQuestionRequestBodyPassword struct {
 	Value *string `json:"value,omitempty"`
 }
@@ -25,8 +21,8 @@ type ChangeRecoveryQuestionRequestBody struct {
 }
 
 type ChangeRecoveryQuestionRequest struct {
-	PathParams ChangeRecoveryQuestionPathParams
-	Request    *ChangeRecoveryQuestionRequestBody `request:"mediaType=application/json"`
+	RequestBody *ChangeRecoveryQuestionRequestBody `request:"mediaType=application/json"`
+	UserID      string                             `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type ChangeRecoveryQuestionResponse struct {

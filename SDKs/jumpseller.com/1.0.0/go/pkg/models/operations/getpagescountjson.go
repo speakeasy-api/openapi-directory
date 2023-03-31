@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPagesCountJSONQueryParams struct {
+type GetPagesCountJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetPagesCountJSONRequest struct {
-	QueryParams GetPagesCountJSONQueryParams
 }
 
 type GetPagesCountJSONResponse struct {

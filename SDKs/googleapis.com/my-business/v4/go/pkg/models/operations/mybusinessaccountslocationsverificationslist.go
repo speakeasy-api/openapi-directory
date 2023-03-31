@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessAccountsLocationsVerificationsListPathParams struct {
-	// Resource name of the location that verification requests belong to.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MybusinessAccountsLocationsVerificationsListQueryParams struct {
+type MybusinessAccountsLocationsVerificationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type MybusinessAccountsLocationsVerificationsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If specified, returns the next page of verifications.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Resource name of the location that verification requests belong to.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type MybusinessAccountsLocationsVerificationsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessAccountsLocationsVerificationsListRequest struct {
-	PathParams  MybusinessAccountsLocationsVerificationsListPathParams
-	QueryParams MybusinessAccountsLocationsVerificationsListQueryParams
 }
 
 type MybusinessAccountsLocationsVerificationsListResponse struct {

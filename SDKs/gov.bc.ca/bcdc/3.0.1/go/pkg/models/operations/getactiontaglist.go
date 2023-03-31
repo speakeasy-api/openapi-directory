@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetActionTagListQueryParams struct {
+type GetActionTagListRequest struct {
 	// The number of tags to be returned per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The offset (index) of the first tag to return
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetActionTagListRequest struct {
-	QueryParams GetActionTagListQueryParams
 }
 
 type GetActionTagListResponse struct {

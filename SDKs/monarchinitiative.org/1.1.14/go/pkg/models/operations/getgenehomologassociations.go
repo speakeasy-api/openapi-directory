@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGeneHomologAssociationsPathParams struct {
-	// id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetGeneHomologAssociationsHomologyTypeEnum - P (paralog), O (Ortholog) or LDO (least-diverged ortholog)
 type GetGeneHomologAssociationsHomologyTypeEnum string
 
@@ -41,7 +36,7 @@ func (e *GetGeneHomologAssociationsHomologyTypeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetGeneHomologAssociationsQueryParams struct {
+type GetGeneHomologAssociationsRequest struct {
 	// Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
 	Direct *bool `queryParam:"style=form,explode=true,name=direct"`
 	// Set true to exclude inferred taxa
@@ -58,6 +53,8 @@ type GetGeneHomologAssociationsQueryParams struct {
 	FetchObjects *bool `queryParam:"style=form,explode=true,name=fetch_objects"`
 	// P (paralog), O (Ortholog) or LDO (least-diverged ortholog)
 	HomologyType *GetGeneHomologAssociationsHomologyTypeEnum `queryParam:"style=form,explode=true,name=homology_type"`
+	// id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// number of rows
 	Rows *int64 `queryParam:"style=form,explode=true,name=rows"`
 	// Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
@@ -70,11 +67,6 @@ type GetGeneHomologAssociationsQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetGeneHomologAssociationsRequest struct {
-	PathParams  GetGeneHomologAssociationsPathParams
-	QueryParams GetGeneHomologAssociationsQueryParams
 }
 
 type GetGeneHomologAssociationsResponse struct {

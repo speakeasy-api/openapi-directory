@@ -26,10 +26,9 @@ pkg/models/operations/alertcentergetsettings.go
 pkg/models/operations/alertcenterupdatesettings.go
 pkg/models/shared/batchdeletealertsresponse.go
 pkg/models/shared/status.go
-pkg/models/shared/batchdeletealertsrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/batchdeletealertsrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/batchundeletealertsresponse.go
 pkg/models/shared/batchundeletealertsrequest.go
 pkg/models/shared/alertfeedback.go

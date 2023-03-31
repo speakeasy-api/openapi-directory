@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationLoginSecurityPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationLoginSecurityRequest struct {
-	PathParams GetOrganizationLoginSecurityPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // GetOrganizationLoginSecurity200ApplicationJSONAPIAuthenticationIPRestrictionsForKeys - Details for API-only IP restrictions.

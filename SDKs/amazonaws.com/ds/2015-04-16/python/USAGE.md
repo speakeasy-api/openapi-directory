@@ -3,29 +3,25 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AcceptSharedDirectoryRequest(
-    headers=operations.AcceptSharedDirectoryHeaders(
-        x_amz_algorithm="quis",
-        x_amz_content_sha256="saepe",
-        x_amz_credential="illo",
-        x_amz_date="aliquam",
-        x_amz_security_token="qui",
-        x_amz_signature="quia",
-        x_amz_signed_headers="aperiam",
-        x_amz_target="DirectoryService_20150416.AcceptSharedDirectory",
+    accept_shared_directory_request=shared.AcceptSharedDirectoryRequest(
+        shared_directory_id="corrupti",
     ),
-    request=shared.AcceptSharedDirectoryRequest(
-        shared_directory_id="voluptatem",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    x_amz_target="DirectoryService_20150416.AcceptSharedDirectory",
 )
     
 res = s.accept_shared_directory(req)

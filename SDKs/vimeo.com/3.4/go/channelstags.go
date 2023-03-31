@@ -33,16 +33,16 @@ func newChannelsTags(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // AddChannelTag - Add a specific tag to a channel
 // This method adds a single tag to the specified channel.
-func (s *channelsTags) AddChannelTag(ctx context.Context, request operations.AddChannelTagRequest) (*operations.AddChannelTagResponse, error) {
+func (s *channelsTags) AddChannelTag(ctx context.Context, request operations.AddChannelTagRequest, security operations.AddChannelTagSecurity) (*operations.AddChannelTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,11 +91,11 @@ func (s *channelsTags) AddChannelTag(ctx context.Context, request operations.Add
 
 // AddTagsToChannel - Add a list of tags to a channel
 // This method adds multiple tags to the specified channel.
-func (s *channelsTags) AddTagsToChannel(ctx context.Context, request operations.AddTagsToChannelRequest) (*operations.AddTagsToChannelResponse, error) {
+func (s *channelsTags) AddTagsToChannel(ctx context.Context, request operations.AddTagsToChannelRequest, security operations.AddTagsToChannelSecurity) (*operations.AddTagsToChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -110,7 +110,7 @@ func (s *channelsTags) AddTagsToChannel(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *channelsTags) AddTagsToChannel(ctx context.Context, request operations.
 // This method determines whether a specific tag has been added to the channel in question.
 func (s *channelsTags) CheckIfChannelHasTag(ctx context.Context, request operations.CheckIfChannelHasTagRequest) (*operations.CheckIfChannelHasTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,16 +224,16 @@ func (s *channelsTags) CheckIfChannelHasTag(ctx context.Context, request operati
 
 // DeleteTagFromChannel - Remove a tag from a channel
 // This method removes a single tag from the specified channel.
-func (s *channelsTags) DeleteTagFromChannel(ctx context.Context, request operations.DeleteTagFromChannelRequest) (*operations.DeleteTagFromChannelResponse, error) {
+func (s *channelsTags) DeleteTagFromChannel(ctx context.Context, request operations.DeleteTagFromChannelRequest, security operations.DeleteTagFromChannelSecurity) (*operations.DeleteTagFromChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags/{word}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags/{word}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,7 +284,7 @@ func (s *channelsTags) DeleteTagFromChannel(ctx context.Context, request operati
 // This method gets all the tags that have been added to the specified channel.
 func (s *channelsTags) GetChannelTags(ctx context.Context, request operations.GetChannelTagsRequest) (*operations.GetChannelTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

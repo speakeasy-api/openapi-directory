@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type PostRealmAuthenticationFlowsFlowAliasExecutionsFlowPathParams struct {
+type PostRealmAuthenticationFlowsFlowAliasExecutionsFlowRequest struct {
+	// New authentication flow / execution JSON data containing 'alias', 'type', 'provider', and 'description' attributes
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Alias of parent authentication flow
 	FlowAlias string `pathParam:"style=simple,explode=false,name=flowAlias"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmAuthenticationFlowsFlowAliasExecutionsFlowRequest struct {
-	PathParams PostRealmAuthenticationFlowsFlowAliasExecutionsFlowPathParams
-	// New authentication flow / execution JSON data containing 'alias', 'type', 'provider', and 'description' attributes
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse struct {

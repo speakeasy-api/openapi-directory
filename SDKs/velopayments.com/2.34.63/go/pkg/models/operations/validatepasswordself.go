@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidatePasswordSelfRequest struct {
-	// The password
-	Request shared.PasswordRequest `request:"mediaType=application/json"`
-}
-
 type ValidatePasswordSelfResponse struct {
 	ContentType string
 	StatusCode  int

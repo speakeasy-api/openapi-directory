@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateZRLocationProfileSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateZRLocationProfilePathParams struct {
-	// Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API.
-	LocationID string `pathParam:"style=simple,explode=false,name=locationId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateZRLocationProfileApplicationJSONBasic struct {
@@ -43,9 +37,9 @@ type UpdateZRLocationProfileApplicationJSON struct {
 }
 
 type UpdateZRLocationProfileRequest struct {
-	PathParams UpdateZRLocationProfilePathParams
-	Request    *UpdateZRLocationProfileApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateZRLocationProfileSecurity
+	RequestBody *UpdateZRLocationProfileApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API.
+	LocationID string `pathParam:"style=simple,explode=false,name=locationId"`
 }
 
 type UpdateZRLocationProfileResponse struct {

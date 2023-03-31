@@ -6,16 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateBulkDataExporterConfigsSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateBulkDataExporterConfigsRequest struct {
-	Request  *shared.DataExporterConfig `request:"mediaType=application/ndjson"`
-	Security CreateBulkDataExporterConfigsSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateBulkDataExporterConfigs200ApplicationJSONStatusEnum - Status

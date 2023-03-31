@@ -4,34 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest(
-    path_params=operations.AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams(
-        parent="aut",
-    ),
-    query_params=operations.AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="consequatur",
-        alt="proto",
-        callback="asperiores",
-        fields="placeat",
-        key="iure",
-        oauth_token="aut",
-        pretty_print=False,
-        quota_user="voluptatem",
-        upload_type="quia",
-        upload_protocol="ut",
-    ),
-    request=shared.ConfigurationInput(
-        company_name="quisquam",
-        configuration_name="sit",
-        contact_email="ratione",
-        contact_phone="aperiam",
-        custom_message="tenetur",
-        dpc_extras="quia",
-        dpc_resource_path="ut",
+    dollar_xgafv="2",
+    configuration_input=shared.ConfigurationInput(
+        company_name="provident",
+        configuration_name="distinctio",
+        contact_email="quibusdam",
+        contact_phone="unde",
+        custom_message="nulla",
+        dpc_extras="corrupti",
+        dpc_resource_path="illum",
         is_default=False,
     ),
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    oauth_token="magnam",
+    parent="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
 res = s.customers.androiddeviceprovisioning_customers_configurations_create(req)

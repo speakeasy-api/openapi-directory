@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostHooksJSONQueryParams struct {
+type PostHooksJSONRequest struct {
+	// Hook parameters.
+	HookEdit shared.HookEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PostHooksJSONRequest struct {
-	QueryParams PostHooksJSONQueryParams
-	// Hook parameters.
-	Request shared.HookEdit `request:"mediaType=application/json"`
 }
 
 type PostHooksJSONResponse struct {

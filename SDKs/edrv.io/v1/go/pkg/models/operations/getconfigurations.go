@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetConfigurationsQueryParams struct {
+type GetConfigurationsRequest struct {
 	// Date as ISO String
 	CreatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=createdAt[$gte]"`
 	// Date as ISO String
@@ -27,10 +27,6 @@ type GetConfigurationsQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetConfigurationsRequest struct {
-	QueryParams GetConfigurationsQueryParams
 }
 
 type GetConfigurationsResponse struct {

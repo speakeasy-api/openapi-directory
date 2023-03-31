@@ -39,7 +39,7 @@ func newPresences(defaultClient, securityClient HTTPClient, serverURL, language,
 // GetPresenceByID - Get presence
 func (s *presences) GetPresenceByID(ctx context.Context, request operations.GetPresenceByIDRequest) (*operations.GetPresenceByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/presences/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/presences/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *presences) GetPresences(ctx context.Context, request operations.GetPres
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

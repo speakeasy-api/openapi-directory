@@ -8,17 +8,12 @@ import (
 )
 
 type GetReturnPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetReturnPolicyPathParams struct {
-	// This path parameter specifies the of the return policy you want to retrieve.
-	ReturnPolicyID string `pathParam:"style=simple,explode=false,name=return_policy_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetReturnPolicyRequest struct {
-	PathParams GetReturnPolicyPathParams
-	Security   GetReturnPolicySecurity
+	// This path parameter specifies the of the return policy you want to retrieve.
+	ReturnPolicyID string `pathParam:"style=simple,explode=false,name=return_policy_id"`
 }
 
 type GetReturnPolicyResponse struct {

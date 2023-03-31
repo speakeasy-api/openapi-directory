@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudfunctionsProjectsLocationsFunctionsCreate - Creates a new function. If a function with the given name already exists in the specified project, the long running operation will return `ALREADY_EXISTS` error.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsCreate(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsCreate(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest, security operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/functions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/functions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FunctionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsCreate(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsCreate(ctx context.Co
 }
 
 // CloudfunctionsProjectsLocationsFunctionsDelete - Deletes a function with the given name from the specified project. If the given function is used by some trigger, the trigger will be updated to remove this function.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsDelete(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsDeleteRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsDelete(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsDeleteRequest, security operations.CloudfunctionsProjectsLocationsFunctionsDeleteSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsDelete(ctx context.Co
 }
 
 // CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURL - Returns a signed URL for downloading deployed function source code. The URL is only valid for a limited period and should be used within 30 minutes of generation. For more information about the signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURL(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURLRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURLResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURL(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURLRequest, security operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURLSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}:generateDownloadUrl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}:generateDownloadUrl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURL(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateDownloadURL(c
 }
 
 // CloudfunctionsProjectsLocationsFunctionsGenerateUploadURL - Returns a signed URL for uploading a function source code. For more information about the signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls. Once the function source code upload is complete, the used signed URL should be provided in CreateFunction or UpdateFunction request as a reference to the function source code. When uploading source code to the generated signed URL, please follow these restrictions: * Source file type should be a zip file. * No credentials should be attached - the signed URLs provide access to the target bucket using internal service identity; if credentials were attached, the identity from the credentials would be used, but that identity does not have permissions to upload files to the URL. When making a HTTP PUT request, these two headers need to be specified: * `content-type: application/zip` And this header SHOULD NOT be specified: * `Authorization: Bearer YOUR_TOKEN`
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateUploadURL(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadURLRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadURLResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateUploadURL(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadURLRequest, security operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadURLSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadURLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/functions:generateUploadUrl", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/functions:generateUploadUrl", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateUploadURLRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateUploadURL(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsGenerateUploadURL(ctx
 }
 
 // CloudfunctionsProjectsLocationsFunctionsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsGetIamPolicy(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsGetIamPolicy(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyRequest, security operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicySecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,20 +293,20 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsGetIamPolicy(ctx cont
 }
 
 // CloudfunctionsProjectsLocationsFunctionsList - Returns a list of functions that belong to the requested project.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsListRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsListResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsListRequest, security operations.CloudfunctionsProjectsLocationsFunctionsListSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/functions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/functions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -341,11 +341,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsList(ctx context.Cont
 }
 
 // CloudfunctionsProjectsLocationsFunctionsPatch - Updates existing function.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsPatch(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsPatchRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsPatch(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsPatchRequest, security operations.CloudfunctionsProjectsLocationsFunctionsPatchSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FunctionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -357,11 +357,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsPatch(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,11 +396,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsPatch(ctx context.Con
 }
 
 // CloudfunctionsProjectsLocationsFunctionsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsSetIamPolicy(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsSetIamPolicy(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyRequest, security operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicySecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -412,11 +412,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsSetIamPolicy(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,11 +451,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsSetIamPolicy(ctx cont
 }
 
 // CloudfunctionsProjectsLocationsFunctionsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) CloudfunctionsProjectsLocationsFunctionsTestIamPermissions(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsRequest) (*operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsFunctionsTestIamPermissions(ctx context.Context, request operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsRequest, security operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsSecurity) (*operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,11 +467,11 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsTestIamPermissions(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -506,20 +506,20 @@ func (s *projects) CloudfunctionsProjectsLocationsFunctionsTestIamPermissions(ct
 }
 
 // CloudfunctionsProjectsLocationsList - Lists information about the supported locations for this service.
-func (s *projects) CloudfunctionsProjectsLocationsList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsListRequest) (*operations.CloudfunctionsProjectsLocationsListResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsListRequest, security operations.CloudfunctionsProjectsLocationsListSecurity) (*operations.CloudfunctionsProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/locations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/locations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -554,20 +554,20 @@ func (s *projects) CloudfunctionsProjectsLocationsList(ctx context.Context, requ
 }
 
 // CloudfunctionsProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *projects) CloudfunctionsProjectsLocationsOperationsGet(ctx context.Context, request operations.CloudfunctionsProjectsLocationsOperationsGetRequest) (*operations.CloudfunctionsProjectsLocationsOperationsGetResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsOperationsGet(ctx context.Context, request operations.CloudfunctionsProjectsLocationsOperationsGetRequest, security operations.CloudfunctionsProjectsLocationsOperationsGetSecurity) (*operations.CloudfunctionsProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -602,20 +602,20 @@ func (s *projects) CloudfunctionsProjectsLocationsOperationsGet(ctx context.Cont
 }
 
 // CloudfunctionsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) CloudfunctionsProjectsLocationsOperationsList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsOperationsListRequest) (*operations.CloudfunctionsProjectsLocationsOperationsListResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsOperationsList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsOperationsListRequest, security operations.CloudfunctionsProjectsLocationsOperationsListSecurity) (*operations.CloudfunctionsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,20 +650,20 @@ func (s *projects) CloudfunctionsProjectsLocationsOperationsList(ctx context.Con
 }
 
 // CloudfunctionsProjectsLocationsRuntimesList - Returns a list of runtimes that are supported for the requested project.
-func (s *projects) CloudfunctionsProjectsLocationsRuntimesList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsRuntimesListRequest) (*operations.CloudfunctionsProjectsLocationsRuntimesListResponse, error) {
+func (s *projects) CloudfunctionsProjectsLocationsRuntimesList(ctx context.Context, request operations.CloudfunctionsProjectsLocationsRuntimesListRequest, security operations.CloudfunctionsProjectsLocationsRuntimesListSecurity) (*operations.CloudfunctionsProjectsLocationsRuntimesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/runtimes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/runtimes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

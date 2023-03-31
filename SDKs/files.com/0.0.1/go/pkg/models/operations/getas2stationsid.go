@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAs2StationsIDPathParams struct {
+type GetAs2StationsIDRequest struct {
 	// As2 Station ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAs2StationsIDRequest struct {
-	PathParams GetAs2StationsIDPathParams
 }
 
 type GetAs2StationsIDResponse struct {

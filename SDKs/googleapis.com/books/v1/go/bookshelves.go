@@ -32,20 +32,20 @@ func newBookshelves(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // BooksBookshelvesGet - Retrieves metadata for a specific bookshelf for the specified user.
-func (s *bookshelves) BooksBookshelvesGet(ctx context.Context, request operations.BooksBookshelvesGetRequest) (*operations.BooksBookshelvesGetResponse, error) {
+func (s *bookshelves) BooksBookshelvesGet(ctx context.Context, request operations.BooksBookshelvesGetRequest, security operations.BooksBookshelvesGetSecurity) (*operations.BooksBookshelvesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *bookshelves) BooksBookshelvesGet(ctx context.Context, request operation
 }
 
 // BooksBookshelvesList - Retrieves a list of public bookshelves for the specified user.
-func (s *bookshelves) BooksBookshelvesList(ctx context.Context, request operations.BooksBookshelvesListRequest) (*operations.BooksBookshelvesListResponse, error) {
+func (s *bookshelves) BooksBookshelvesList(ctx context.Context, request operations.BooksBookshelvesListRequest, security operations.BooksBookshelvesListSecurity) (*operations.BooksBookshelvesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,20 +128,20 @@ func (s *bookshelves) BooksBookshelvesList(ctx context.Context, request operatio
 }
 
 // BooksBookshelvesVolumesList - Retrieves volumes in a specific bookshelf for the specified user.
-func (s *bookshelves) BooksBookshelvesVolumesList(ctx context.Context, request operations.BooksBookshelvesVolumesListRequest) (*operations.BooksBookshelvesVolumesListResponse, error) {
+func (s *bookshelves) BooksBookshelvesVolumesList(ctx context.Context, request operations.BooksBookshelvesVolumesListRequest, security operations.BooksBookshelvesVolumesListSecurity) (*operations.BooksBookshelvesVolumesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}/volumes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}/volumes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

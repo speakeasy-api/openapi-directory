@@ -8,19 +8,14 @@ import (
 )
 
 type PutTracksTrackIDMultipartSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PutTracksTrackIDMultipartPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type PutTracksTrackIDMultipartRequest struct {
-	PathParams PutTracksTrackIDMultipartPathParams
 	// Track payload
-	Request  *shared.TrackDataRequest `request:"mediaType=multipart/form-data"`
-	Security PutTracksTrackIDMultipartSecurity
+	TrackDataRequest *shared.TrackDataRequest `request:"mediaType=multipart/form-data"`
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type PutTracksTrackIDMultipartResponse struct {

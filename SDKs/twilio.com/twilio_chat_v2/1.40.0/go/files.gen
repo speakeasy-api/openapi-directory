@@ -68,7 +68,6 @@ pkg/models/operations/updateuserchannel.go
 pkg/models/shared/chatv2servicechannel.go
 pkg/models/shared/channelenumchanneltypeenum.go
 pkg/models/shared/channelenumwebhookenabledtypeenum.go
-pkg/models/shared/security.go
 pkg/models/shared/chatv2servicechannelchannelwebhook.go
 pkg/models/shared/channelwebhookenumtypeenum.go
 pkg/models/shared/channelwebhookenummethodenum.go
@@ -94,3 +93,4 @@ pkg/models/shared/userchannelenumchannelstatusenum.go
 pkg/models/shared/userchannelenumnotificationlevelenum.go
 pkg/models/shared/messageenumordertypeenum.go
 USAGE.md
+pkg/models/operations/options.go

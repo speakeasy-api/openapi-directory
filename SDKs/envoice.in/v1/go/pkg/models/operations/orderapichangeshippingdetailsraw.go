@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type OrderAPIChangeShippingDetailsRawQueryParams struct {
-	OrderID int `queryParam:"style=form,explode=true,name=orderId"`
-}
-
-type OrderAPIChangeShippingDetailsRawHeaders struct {
+type OrderAPIChangeShippingDetailsRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
+	OrderID     int    `queryParam:"style=form,explode=true,name=orderId"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type OrderAPIChangeShippingDetailsRawRequest struct {
-	QueryParams OrderAPIChangeShippingDetailsRawQueryParams
-	Headers     OrderAPIChangeShippingDetailsRawHeaders
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPIChangeShippingDetailsRawResponse struct {

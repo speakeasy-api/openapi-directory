@@ -8,18 +8,10 @@ import (
 )
 
 type GetAccountListSecurity struct {
-	BearerAuthOAuth *shared.SchemeBearerAuthOAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuthOAuth *string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAccountListQueryParams struct {
-	// If contained, this function reads the list of accessible payment accounts including the booking balance,
-	// if granted by the PSU in the related consent and available by the ASPSP.
-	// This parameter might be ignored by the ASPSP.
-	//
-	WithBalance *bool `queryParam:"style=form,explode=true,name=withBalance"`
-}
-
-type GetAccountListHeaders struct {
+type GetAccountListRequest struct {
 	// This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
 	//
 	ConsentID string `header:"style=simple,explode=false,name=Consent-ID"`
@@ -74,12 +66,11 @@ type GetAccountListHeaders struct {
 	TPPSignatureCertificate *string `header:"style=simple,explode=false,name=TPP-Signature-Certificate"`
 	// ID of the request, unique to the call, as determined by the initiating party.
 	XRequestID string `header:"style=simple,explode=false,name=X-Request-ID"`
-}
-
-type GetAccountListRequest struct {
-	QueryParams GetAccountListQueryParams
-	Headers     GetAccountListHeaders
-	Security    GetAccountListSecurity
+	// If contained, this function reads the list of accessible payment accounts including the booking balance,
+	// if granted by the PSU in the related consent and available by the ASPSP.
+	// This parameter might be ignored by the ASPSP.
+	//
+	WithBalance *bool `queryParam:"style=form,explode=true,name=withBalance"`
 }
 
 type GetAccountListResponse struct {

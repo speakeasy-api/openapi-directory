@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubUserGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type SubUserGetRequest struct {
-	PathParams SubUserGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SubUserGetResponse struct {

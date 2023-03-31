@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GenomicsProjectsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or Operations.ListOperations to check whether the cancellation succeeded or the operation completed despite cancellation. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `genomics.operations.cancel`
-func (s *projects) GenomicsProjectsOperationsCancel(ctx context.Context, request operations.GenomicsProjectsOperationsCancelRequest) (*operations.GenomicsProjectsOperationsCancelResponse, error) {
+func (s *projects) GenomicsProjectsOperationsCancel(ctx context.Context, request operations.GenomicsProjectsOperationsCancelRequest, security operations.GenomicsProjectsOperationsCancelSecurity) (*operations.GenomicsProjectsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) GenomicsProjectsOperationsCancel(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) GenomicsProjectsOperationsCancel(ctx context.Context, request
 }
 
 // GenomicsProjectsOperationsList - Lists operations that match the specified filter in the request. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `genomics.operations.list`
-func (s *projects) GenomicsProjectsOperationsList(ctx context.Context, request operations.GenomicsProjectsOperationsListRequest) (*operations.GenomicsProjectsOperationsListResponse, error) {
+func (s *projects) GenomicsProjectsOperationsList(ctx context.Context, request operations.GenomicsProjectsOperationsListRequest, security operations.GenomicsProjectsOperationsListSecurity) (*operations.GenomicsProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) GenomicsProjectsOperationsList(ctx context.Context, request o
 }
 
 // GenomicsProjectsWorkersCheckIn - The worker uses this method to retrieve the assigned operation and provide periodic status updates.
-func (s *projects) GenomicsProjectsWorkersCheckIn(ctx context.Context, request operations.GenomicsProjectsWorkersCheckInRequest) (*operations.GenomicsProjectsWorkersCheckInResponse, error) {
+func (s *projects) GenomicsProjectsWorkersCheckIn(ctx context.Context, request operations.GenomicsProjectsWorkersCheckInRequest, security operations.GenomicsProjectsWorkersCheckInSecurity) (*operations.GenomicsProjectsWorkersCheckInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{id}:checkIn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{id}:checkIn", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckInRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) GenomicsProjectsWorkersCheckIn(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

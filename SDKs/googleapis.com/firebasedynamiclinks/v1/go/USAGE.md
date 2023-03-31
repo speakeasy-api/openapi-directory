@@ -14,87 +14,80 @@ func main() {
     s := sdk.New()
 
     req := operations.FirebasedynamiclinksManagedShortLinksCreateRequest{
-        Security: operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.FirebasedynamiclinksManagedShortLinksCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.CreateManagedShortLinkRequest{
+        DollarXgafv: "2",
+        CreateManagedShortLinkRequest: &shared.CreateManagedShortLinkRequest{
             DynamicLinkInfo: &shared.DynamicLinkInfo{
                 AnalyticsInfo: &shared.AnalyticsInfo{
                     GooglePlayAnalytics: &shared.GooglePlayAnalytics{
-                        Gclid: "deserunt",
-                        UtmCampaign: "suscipit",
-                        UtmContent: "iure",
-                        UtmMedium: "magnam",
-                        UtmSource: "debitis",
-                        UtmTerm: "ipsa",
+                        Gclid: "provident",
+                        UtmCampaign: "distinctio",
+                        UtmContent: "quibusdam",
+                        UtmMedium: "unde",
+                        UtmSource: "nulla",
+                        UtmTerm: "corrupti",
                     },
                     ItunesConnectAnalytics: &shared.ITunesConnectAnalytics{
-                        At: "delectus",
-                        Ct: "tempora",
-                        Mt: "suscipit",
-                        Pt: "molestiae",
+                        At: "illum",
+                        Ct: "vel",
+                        Mt: "error",
+                        Pt: "deserunt",
                     },
                 },
                 AndroidInfo: &shared.AndroidInfo{
-                    AndroidFallbackLink: "minus",
-                    AndroidLink: "placeat",
-                    AndroidMinPackageVersionCode: "voluptatum",
-                    AndroidPackageName: "iusto",
+                    AndroidFallbackLink: "suscipit",
+                    AndroidLink: "iure",
+                    AndroidMinPackageVersionCode: "magnam",
+                    AndroidPackageName: "debitis",
                 },
                 DesktopInfo: &shared.DesktopInfo{
-                    DesktopFallbackLink: "excepturi",
+                    DesktopFallbackLink: "ipsa",
                 },
-                DomainURIPrefix: "nisi",
-                DynamicLinkDomain: "recusandae",
+                DomainURIPrefix: "delectus",
+                DynamicLinkDomain: "tempora",
                 IosInfo: &shared.IosInfo{
-                    IosAppStoreID: "temporibus",
-                    IosBundleID: "ab",
-                    IosCustomScheme: "quis",
-                    IosFallbackLink: "veritatis",
-                    IosIpadBundleID: "deserunt",
-                    IosIpadFallbackLink: "perferendis",
-                    IosMinimumVersion: "ipsam",
+                    IosAppStoreID: "suscipit",
+                    IosBundleID: "molestiae",
+                    IosCustomScheme: "minus",
+                    IosFallbackLink: "placeat",
+                    IosIpadBundleID: "voluptatum",
+                    IosIpadFallbackLink: "iusto",
+                    IosMinimumVersion: "excepturi",
                 },
-                Link: "repellendus",
+                Link: "nisi",
                 NavigationInfo: &shared.NavigationInfo{
                     EnableForcedRedirect: false,
                 },
                 SocialMetaTagInfo: &shared.SocialMetaTagInfo{
-                    SocialDescription: "sapiente",
-                    SocialImageLink: "quo",
-                    SocialTitle: "odit",
+                    SocialDescription: "recusandae",
+                    SocialImageLink: "temporibus",
+                    SocialTitle: "ab",
                 },
             },
-            LongDynamicLink: "at",
-            Name: "at",
-            SDKVersion: "maiores",
+            LongDynamicLink: "quis",
+            Name: "veritatis",
+            SDKVersion: "deserunt",
             Suffix: &shared.Suffix{
-                CustomSuffix: "molestiae",
-                Option: "CUSTOM",
+                CustomSuffix: "perferendis",
+                Option: "UNGUESSABLE",
             },
         },
+        AccessToken: "repellendus",
+        Alt: "proto",
+        Callback: "quo",
+        Fields: "odit",
+        Key: "at",
+        OauthToken: "at",
+        PrettyPrint: false,
+        QuotaUser: "maiores",
+        UploadType: "molestiae",
+        UploadProtocol: "quod",
     }
 
     ctx := context.Background()
-    res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, req)
+    res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, req, operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

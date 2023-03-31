@@ -3,50 +3,46 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateCapacityProviderRequest(
-    headers=operations.CreateCapacityProviderHeaders(
-        x_amz_algorithm="praesentium",
-        x_amz_content_sha256="voluptates",
-        x_amz_credential="inventore",
-        x_amz_date="voluptatem",
-        x_amz_security_token="deleniti",
-        x_amz_signature="facere",
-        x_amz_signed_headers="numquam",
-        x_amz_target="AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateCapacityProviderRequest(
+)
+
+
+req = operations.CreateCapacityProviderRequest(
+    create_capacity_provider_request=shared.CreateCapacityProviderRequest(
         auto_scaling_group_provider=shared.AutoScalingGroupProvider(
-            auto_scaling_group_arn="explicabo",
+            auto_scaling_group_arn="corrupti",
             managed_scaling=shared.ManagedScaling(
-                instance_warmup_period=6635728551378606624,
-                maximum_scaling_step_size=5973617793068578508,
-                minimum_scaling_step_size=8160591596675653275,
+                instance_warmup_period=592845,
+                maximum_scaling_step_size=715190,
+                minimum_scaling_step_size=844266,
                 status="DISABLED",
-                target_capacity=7028752311702887101,
+                target_capacity=857946,
             ),
-            managed_termination_protection="ENABLED",
+            managed_termination_protection="DISABLED",
         ),
-        name="qui",
+        name="illum",
         tags=[
             shared.Tag(
-                key="qui",
-                value="et",
+                key="error",
+                value="deserunt",
             ),
             shared.Tag(
-                key="aliquid",
-                value="repellendus",
+                key="suscipit",
+                value="iure",
             ),
         ],
     ),
+    x_amz_algorithm="magnam",
+    x_amz_content_sha256="debitis",
+    x_amz_credential="ipsa",
+    x_amz_date="delectus",
+    x_amz_security_token="tempora",
+    x_amz_signature="suscipit",
+    x_amz_signed_headers="molestiae",
+    x_amz_target="AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
 )
     
 res = s.create_capacity_provider(req)

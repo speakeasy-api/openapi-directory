@@ -42,7 +42,7 @@ func newPhoneDevices(defaultClient, securityClient HTTPClient, serverURL, langua
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneDevices) AddPhoneDevice(ctx context.Context, request operations.AddPhoneDeviceRequest) (*operations.AddPhoneDeviceResponse, error) {
+func (s *phoneDevices) AddPhoneDevice(ctx context.Context, request operations.AddPhoneDeviceApplicationJSON, security operations.AddPhoneDeviceSecurity) (*operations.AddPhoneDeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/devices"
 
@@ -58,7 +58,7 @@ func (s *phoneDevices) AddPhoneDevice(ctx context.Context, request operations.Ad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,16 +111,16 @@ func (s *phoneDevices) AddPhoneDevice(ctx context.Context, request operations.Ad
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneDevices) DeleteADevice(ctx context.Context, request operations.DeleteADeviceRequest) (*operations.DeleteADeviceResponse, error) {
+func (s *phoneDevices) DeleteADevice(ctx context.Context, request operations.DeleteADeviceRequest, security operations.DeleteADeviceSecurity) (*operations.DeleteADeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/devices/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/devices/{deviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,16 +170,16 @@ func (s *phoneDevices) DeleteADevice(ctx context.Context, request operations.Del
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneDevices) GetADevice(ctx context.Context, request operations.GetADeviceRequest) (*operations.GetADeviceResponse, error) {
+func (s *phoneDevices) GetADevice(ctx context.Context, request operations.GetADeviceRequest, security operations.GetADeviceSecurity) (*operations.GetADeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/devices/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/devices/{deviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,7 +232,7 @@ func (s *phoneDevices) GetADevice(ctx context.Context, request operations.GetADe
 // * Account owner or admin permissions<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *phoneDevices) ListPhoneDevices(ctx context.Context, request operations.ListPhoneDevicesRequest) (*operations.ListPhoneDevicesResponse, error) {
+func (s *phoneDevices) ListPhoneDevices(ctx context.Context, request operations.ListPhoneDevicesRequest, security operations.ListPhoneDevicesSecurity) (*operations.ListPhoneDevicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/devices"
 
@@ -241,11 +241,11 @@ func (s *phoneDevices) ListPhoneDevices(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *phoneDevices) ListPhoneDevices(ctx context.Context, request operations.
 // **Scopes:** `phone:write:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneDevices) UpdateADevice(ctx context.Context, request operations.UpdateADeviceRequest) (*operations.UpdateADeviceResponse, error) {
+func (s *phoneDevices) UpdateADevice(ctx context.Context, request operations.UpdateADeviceRequest, security operations.UpdateADeviceSecurity) (*operations.UpdateADeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/devices/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/devices/{deviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,7 +310,7 @@ func (s *phoneDevices) UpdateADevice(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -3,42 +3,37 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        personal_access_token=shared.SchemePersonalAccessToken(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAttachmentForTaskRequest(
-    path_params=operations.CreateAttachmentForTaskPathParams(
-        task_gid="delectus",
-    ),
-    query_params=operations.CreateAttachmentForTaskQueryParams(
-        limit=4628205130743140522,
-        offset="eveniet",
-        opt_fields=[
-            "sit",
-            "est",
-        ],
-        opt_pretty=True,
-    ),
-    request=shared.AttachmentRequest(
-        file=shared.AttachmentRequestFile(
-            content="ipsa".encode(),
-            file="assumenda",
-        ),
-        name="id",
-        resource_subtype="asana_file_attachments",
-        url="ipsam",
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
 )
-    
-res = s.attachments.create_attachment_for_task(req)
 
-if res.create_attachment_for_task_200_application_json_object is not None:
+
+req = operations.CreateAttachmentForObjectRequest(
+    attachment_request=shared.AttachmentRequest(
+        connect_to_app=False,
+        file=shared.AttachmentRequestFile(
+            content="corrupti".encode(),
+            file="provident",
+        ),
+        name="distinctio",
+        parent="quibusdam",
+        resource_subtype="external",
+        url="unde",
+    ),
+    opt_fields=[
+        "corrupti",
+        "illum",
+        "vel",
+        "error",
+    ],
+    opt_pretty=False,
+)
+    
+res = s.attachments.create_attachment_for_object(req)
+
+if res.create_attachment_for_object_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

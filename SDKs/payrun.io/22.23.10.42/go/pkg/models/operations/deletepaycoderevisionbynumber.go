@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePayCodeRevisionByNumberPathParams struct {
+type DeletePayCodeRevisionByNumberRequest struct {
+	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
+	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
+	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
+	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// The employers' unique identifier. E.g ER001
 	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 	// The pay code unique identifier. E.g. BASIC
 	PayCodeID string `pathParam:"style=simple,explode=false,name=PayCodeId"`
 	// The revision number. E.g. 1
 	RevisionNumber string `pathParam:"style=simple,explode=false,name=RevisionNumber"`
-}
-
-type DeletePayCodeRevisionByNumberHeaders struct {
-	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
-	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
-	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type DeletePayCodeRevisionByNumberRequest struct {
-	PathParams DeletePayCodeRevisionByNumberPathParams
-	Headers    DeletePayCodeRevisionByNumberHeaders
 }
 
 type DeletePayCodeRevisionByNumberResponse struct {

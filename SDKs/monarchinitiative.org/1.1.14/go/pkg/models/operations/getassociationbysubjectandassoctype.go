@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssociationBySubjectAndAssocTypePathParams struct {
+type GetAssociationBySubjectAndAssocTypeRequest struct {
 	// Association type, eg gene_phenotype
 	AssociationType string `pathParam:"style=simple,explode=false,name=association_type"`
-}
-
-type GetAssociationBySubjectAndAssocTypeQueryParams struct {
 	// Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
 	Evidence *string `queryParam:"style=form,explode=true,name=evidence"`
 	// If true, excludes associations that involve IEAs (ECO:0000501)
@@ -29,11 +26,6 @@ type GetAssociationBySubjectAndAssocTypeQueryParams struct {
 	UnselectEvidence *bool `queryParam:"style=form,explode=true,name=unselect_evidence"`
 	// If true, returns results in compact associations format
 	UseCompactAssociations *bool `queryParam:"style=form,explode=true,name=use_compact_associations"`
-}
-
-type GetAssociationBySubjectAndAssocTypeRequest struct {
-	PathParams  GetAssociationBySubjectAndAssocTypePathParams
-	QueryParams GetAssociationBySubjectAndAssocTypeQueryParams
 }
 
 type GetAssociationBySubjectAndAssocTypeResponse struct {

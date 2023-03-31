@@ -12,18 +12,13 @@ var FetchDomainConfigServerList = []string{
 }
 
 type FetchDomainConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDomainConfigPathParams struct {
-	// Unique string used to identify the domain that this config should be associated with.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDomainConfigRequest struct {
-	PathParams FetchDomainConfigPathParams
-	Security   FetchDomainConfigSecurity
-	ServerURL  *string
+	// Unique string used to identify the domain that this config should be associated with.
+	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 }
 
 type FetchDomainConfigResponse struct {

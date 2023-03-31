@@ -12,30 +12,21 @@ var ListFieldServerList = []string{
 }
 
 type ListFieldSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListFieldPathParams struct {
+type ListFieldRequest struct {
 	// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to read.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) resource associated with the Field resources to read.
-	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type ListFieldQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListFieldRequest struct {
-	PathParams  ListFieldPathParams
-	QueryParams ListFieldQueryParams
-	Security    ListFieldSecurity
-	ServerURL   *string
+	// The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) resource associated with the Field resources to read.
+	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
 }
 
 type ListFieldListFieldResponseMeta struct {

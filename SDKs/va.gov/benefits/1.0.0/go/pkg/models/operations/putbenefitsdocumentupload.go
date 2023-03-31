@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutBenefitsDocumentUploadHeaders struct {
+type PutBenefitsDocumentUploadRequest struct {
 	// Base64-encoded 128-bit MD5 digest of the message. Use for integrity control
 	ContentMd5 *string `header:"style=simple,explode=false,name=Content-MD5"`
-}
-
-type PutBenefitsDocumentUploadRequest struct {
-	Headers PutBenefitsDocumentUploadHeaders
 }
 
 // PutBenefitsDocumentUpload500ApplicationJSON - Internal server error

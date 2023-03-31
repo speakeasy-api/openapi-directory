@@ -17,5 +17,4 @@ pkg/models/operations/getlistsformat.go
 pkg/models/operations/getlistsnamesformat.go
 pkg/models/operations/getlistsoverviewformat.go
 pkg/models/operations/getreviewsformat.go
-pkg/models/shared/security.go
 USAGE.md

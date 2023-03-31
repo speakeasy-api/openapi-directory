@@ -34,7 +34,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // CreateGroup - Create new Group
 // In this step you’ll pass basic information about the group, such as their name, SIC code, and EIN. You can then move on to further configure the group, associate this group with one or more applications, and add employees and dependents to that group.
-func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroupRequest) (*operations.CreateGroupResponse, error) {
+func (s *groups) CreateGroup(ctx context.Context, request shared.GroupCreateRequest) (*operations.CreateGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/groups"
 
@@ -91,9 +91,9 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 // Edit a group based on the ID provided. The version parameter must match the latest group version.
 func (s *groups) EditGroup(ctx context.Context, request operations.EditGroupRequest) (*operations.EditGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -146,7 +146,7 @@ func (s *groups) EditGroup(ctx context.Context, request operations.EditGroupRequ
 // Returns the latest version of a single group based on the ID provided.
 func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupRequest) (*operations.GetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *groups) GetGroups(ctx context.Context, request operations.GetGroupsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

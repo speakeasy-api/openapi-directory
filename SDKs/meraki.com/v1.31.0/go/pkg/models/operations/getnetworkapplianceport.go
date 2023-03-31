@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkAppliancePortPathParams struct {
+type GetNetworkAppliancePortRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	PortID    string `pathParam:"style=simple,explode=false,name=portId"`
-}
-
-type GetNetworkAppliancePortRequest struct {
-	PathParams GetNetworkAppliancePortPathParams
 }
 
 // GetNetworkAppliancePort200ApplicationJSON - Successful operation

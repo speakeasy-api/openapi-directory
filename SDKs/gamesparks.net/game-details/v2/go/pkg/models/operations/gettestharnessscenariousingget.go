@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETTestHarnessScenarioUsingGETPathParams struct {
+type GETTestHarnessScenarioUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// scenarioName
 	ScenarioName string `pathParam:"style=simple,explode=false,name=scenarioName"`
-}
-
-type GETTestHarnessScenarioUsingGETRequest struct {
-	PathParams GETTestHarnessScenarioUsingGETPathParams
 }
 
 type GETTestHarnessScenarioUsingGETResponse struct {

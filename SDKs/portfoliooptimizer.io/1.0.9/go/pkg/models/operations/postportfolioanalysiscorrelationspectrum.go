@@ -105,10 +105,6 @@ func (u PostPortfolioAnalysisCorrelationSpectrumRequestBody) MarshalJSON() ([]by
 	return nil, nil
 }
 
-type PostPortfolioAnalysisCorrelationSpectrumRequest struct {
-	Request PostPortfolioAnalysisCorrelationSpectrumRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisCorrelationSpectrum200ApplicationJSONPortfolios struct {
 	// The correlation spectrum of the portfolio
 	PortfolioCorrelationSpectrum []float64 `json:"portfolioCorrelationSpectrum"`

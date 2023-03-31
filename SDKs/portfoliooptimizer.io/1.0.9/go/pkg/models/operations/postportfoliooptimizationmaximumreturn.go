@@ -32,10 +32,6 @@ type PostPortfolioOptimizationMaximumReturnRequestBody struct {
 	Constraints   *PostPortfolioOptimizationMaximumReturnRequestBodyConstraints `json:"constraints,omitempty"`
 }
 
-type PostPortfolioOptimizationMaximumReturnRequest struct {
-	Request PostPortfolioOptimizationMaximumReturnRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMaximumReturn200ApplicationJSON - OK
 type PostPortfolioOptimizationMaximumReturn200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

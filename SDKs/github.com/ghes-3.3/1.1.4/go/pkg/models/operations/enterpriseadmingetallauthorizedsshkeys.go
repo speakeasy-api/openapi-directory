@@ -11,10 +11,6 @@ var EnterpriseAdminGetAllAuthorizedSSHKeysServerList = []string{
 	"https://{protocol}://{hostname}",
 }
 
-type EnterpriseAdminGetAllAuthorizedSSHKeysRequest struct {
-	ServerURL *string
-}
-
 type EnterpriseAdminGetAllAuthorizedSSHKeysResponse struct {
 	ContentType string
 	StatusCode  int

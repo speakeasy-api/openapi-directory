@@ -44,7 +44,7 @@ func (s *neo) BrowseNearEarthObjects(ctx context.Context, request operations.Bro
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,7 +91,7 @@ func (s *neo) BrowseNearEarthObjects(ctx context.Context, request operations.Bro
 // Retrieve a Near Earth Objects with a given id
 func (s *neo) RetrieveNearEarthObjectByID(ctx context.Context, request operations.RetrieveNearEarthObjectByIDRequest) (*operations.RetrieveNearEarthObjectByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rest/v1/neo/{asteroid_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rest/v1/neo/{asteroid_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

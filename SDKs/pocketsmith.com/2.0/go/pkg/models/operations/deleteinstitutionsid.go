@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteInstitutionsIDPathParams struct {
+type DeleteInstitutionsIDRequest struct {
 	// The unique identifier of the institution.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteInstitutionsIDQueryParams struct {
 	// The unique identifier of the institution to merge into.
 	MergeIntoInstitutionID *int64 `queryParam:"style=form,explode=true,name=merge_into_institution_id"`
-}
-
-type DeleteInstitutionsIDRequest struct {
-	PathParams  DeleteInstitutionsIDPathParams
-	QueryParams DeleteInstitutionsIDQueryParams
 }
 
 type DeleteInstitutionsIDResponse struct {

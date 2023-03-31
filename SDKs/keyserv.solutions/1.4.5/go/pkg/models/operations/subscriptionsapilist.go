@@ -10,10 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubscriptionsAPIListQueryParams struct {
-	Page *int `queryParam:"style=form,explode=true,name=page"`
-}
-
 type SubscriptionsAPIListRequestBodyType string
 
 const (
@@ -59,8 +55,8 @@ func (u SubscriptionsAPIListRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type SubscriptionsAPIListRequest struct {
-	QueryParams SubscriptionsAPIListQueryParams
-	Request     SubscriptionsAPIListRequestBody `request:"mediaType=application/json"`
+	RequestBody SubscriptionsAPIListRequestBody `request:"mediaType=application/json"`
+	Page        *int                            `queryParam:"style=form,explode=true,name=page"`
 }
 
 type SubscriptionsAPIListResponse struct {

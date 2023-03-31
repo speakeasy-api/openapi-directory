@@ -35,9 +35,9 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 // Create a bank account. Only a single bank account is permitted for a particular group application. If a subsequent one is submitted, you will receive a 409 error.
 func (s *bankAccounts) CreateBankAccount(ctx context.Context, request operations.CreateBankAccountRequest) (*operations.CreateBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BankAccountCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,7 +90,7 @@ func (s *bankAccounts) CreateBankAccount(ctx context.Context, request operations
 // Delete a Bank Account based on the ID provided. The version parameter must match the latest Bank Account version.
 func (s *bankAccounts) DeleteBankAccount(ctx context.Context, request operations.DeleteBankAccountRequest) (*operations.DeleteBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *bankAccounts) DeleteBankAccount(ctx context.Context, request operations
 // Returns the latest version of all bank accounts related to the application whose ID was provided.
 func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operations.GetAllBankAccountsRequest) (*operations.GetAllBankAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operation
 // Returns the latest version of a single bank account based on the ID provided.
 func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

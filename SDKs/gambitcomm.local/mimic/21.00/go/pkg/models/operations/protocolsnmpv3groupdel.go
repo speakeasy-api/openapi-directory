@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmpv3GroupDelPathParams struct {
+type ProtocolSnmpv3GroupDelRequest struct {
 	// Agent to add the SNMPv3 group
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// SNMPv3 group name
 	GroupName string `pathParam:"style=simple,explode=false,name=groupName"`
-}
-
-type ProtocolSnmpv3GroupDelRequest struct {
-	PathParams ProtocolSnmpv3GroupDelPathParams
 }
 
 type ProtocolSnmpv3GroupDelResponse struct {

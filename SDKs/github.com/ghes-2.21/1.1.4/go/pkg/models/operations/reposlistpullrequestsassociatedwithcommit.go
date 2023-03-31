@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListPullRequestsAssociatedWithCommitPathParams struct {
+type ReposListPullRequestsAssociatedWithCommitRequest struct {
 	// commit_sha parameter
 	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
 	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListPullRequestsAssociatedWithCommitQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListPullRequestsAssociatedWithCommitRequest struct {
-	PathParams  ReposListPullRequestsAssociatedWithCommitPathParams
-	QueryParams ReposListPullRequestsAssociatedWithCommitQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // ReposListPullRequestsAssociatedWithCommit415ApplicationJSON - Preview header missing

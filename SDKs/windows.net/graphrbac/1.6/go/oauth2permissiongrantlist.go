@@ -34,14 +34,14 @@ func newOAuth2PermissionGrantList(defaultClient, securityClient HTTPClient, serv
 // OAuth2PermissionGrantList - Queries OAuth2 permissions grants for the relevant SP ObjectId of an app.
 func (s *oAuth2PermissionGrantList) OAuth2PermissionGrantList(ctx context.Context, request operations.OAuth2PermissionGrantListRequest) (*operations.OAuth2PermissionGrantListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/oauth2PermissionGrants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/oauth2PermissionGrants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkWirelessRfProfilePathParams struct {
+type DeleteNetworkWirelessRfProfileRequest struct {
 	NetworkID   string `pathParam:"style=simple,explode=false,name=networkId"`
 	RfProfileID string `pathParam:"style=simple,explode=false,name=rfProfileId"`
-}
-
-type DeleteNetworkWirelessRfProfileRequest struct {
-	PathParams DeleteNetworkWirelessRfProfilePathParams
 }
 
 type DeleteNetworkWirelessRfProfileResponse struct {

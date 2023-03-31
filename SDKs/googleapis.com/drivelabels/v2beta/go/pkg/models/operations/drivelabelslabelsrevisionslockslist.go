@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsLabelsRevisionsLocksListPathParams struct {
-	// Required. Label on which Locks are applied. Format: labels/{label}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DrivelabelsLabelsRevisionsLocksListQueryParams struct {
+type DrivelabelsLabelsRevisionsLocksListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type DrivelabelsLabelsRevisionsLocksListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The token of the page to return.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Label on which Locks are applied. Format: labels/{label}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type DrivelabelsLabelsRevisionsLocksListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DrivelabelsLabelsRevisionsLocksListRequest struct {
-	PathParams  DrivelabelsLabelsRevisionsLocksListPathParams
-	QueryParams DrivelabelsLabelsRevisionsLocksListQueryParams
 }
 
 type DrivelabelsLabelsRevisionsLocksListResponse struct {

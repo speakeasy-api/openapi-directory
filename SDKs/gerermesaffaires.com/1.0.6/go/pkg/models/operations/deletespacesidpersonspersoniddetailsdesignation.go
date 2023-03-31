@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteSpacesIDPersonsPersonIDDetailsDesignationPathParams struct {
+type DeleteSpacesIDPersonsPersonIDDetailsDesignationRequest struct {
 	// designation
 	Designation string `pathParam:"style=simple,explode=false,name=designation"`
 	// Id of the space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the person or memberId
 	PersonID string `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type DeleteSpacesIDPersonsPersonIDDetailsDesignationRequest struct {
-	PathParams DeleteSpacesIDPersonsPersonIDDetailsDesignationPathParams
 }
 
 type DeleteSpacesIDPersonsPersonIDDetailsDesignationResponse struct {

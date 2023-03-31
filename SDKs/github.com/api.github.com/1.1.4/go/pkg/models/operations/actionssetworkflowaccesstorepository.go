@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsSetWorkflowAccessToRepositoryPathParams struct {
+type ActionsSetWorkflowAccessToRepositoryRequest struct {
+	ActionsWorkflowAccessToRepository shared.ActionsWorkflowAccessToRepository `request:"mediaType=application/json"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsSetWorkflowAccessToRepositoryRequest struct {
-	PathParams ActionsSetWorkflowAccessToRepositoryPathParams
-	Request    shared.ActionsWorkflowAccessToRepository `request:"mediaType=application/json"`
 }
 
 type ActionsSetWorkflowAccessToRepositoryResponse struct {

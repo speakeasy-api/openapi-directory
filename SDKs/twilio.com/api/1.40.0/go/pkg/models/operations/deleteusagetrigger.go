@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUsageTriggerServerList = []string{
@@ -12,20 +11,15 @@ var DeleteUsageTriggerServerList = []string{
 }
 
 type DeleteUsageTriggerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUsageTriggerPathParams struct {
+type DeleteUsageTriggerRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the UsageTrigger resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteUsageTriggerRequest struct {
-	PathParams DeleteUsageTriggerPathParams
-	Security   DeleteUsageTriggerSecurity
-	ServerURL  *string
 }
 
 type DeleteUsageTriggerResponse struct {

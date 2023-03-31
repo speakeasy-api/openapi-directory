@@ -15,5 +15,4 @@ pkg/models/operations/getusercontentbydatejson.go
 pkg/models/operations/getusercontentrecentjson.go
 pkg/models/operations/getusercontenturljson.go
 pkg/models/operations/getusercontentuserjson.go
-pkg/models/shared/security.go
 USAGE.md

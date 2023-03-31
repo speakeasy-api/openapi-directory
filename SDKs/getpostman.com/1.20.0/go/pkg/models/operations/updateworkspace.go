@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateWorkspacePathParams struct {
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
-}
-
 type UpdateWorkspaceRequestBodyWorkspaceCollections struct {
 	ID   *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
@@ -44,8 +40,8 @@ type UpdateWorkspaceRequestBody struct {
 }
 
 type UpdateWorkspaceRequest struct {
-	PathParams UpdateWorkspacePathParams
-	Request    *UpdateWorkspaceRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateWorkspaceRequestBody `request:"mediaType=application/json"`
+	WorkspaceID string                      `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
 
 type UpdateWorkspace404ApplicationJSONError struct {

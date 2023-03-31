@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContactPathParams struct {
+type GetContactRequest struct {
 	// The unique identifier of the contact in Noyo
 	ContactID string `pathParam:"style=simple,explode=false,name=contact_id"`
 	// The unique identifier of the group in Noyo
 	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type GetContactRequest struct {
-	PathParams GetContactPathParams
 }
 
 type GetContactResponse struct {

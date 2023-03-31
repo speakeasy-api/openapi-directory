@@ -33,7 +33,7 @@ func newDetailedLeadReports(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // LocalservicesDetailedLeadReportsSearch - Get detailed lead reports containing leads that have been received by all linked GLS accounts. Caller needs to provide their manager customer id and the associated auth credential that allows them read permissions on their linked accounts.
-func (s *detailedLeadReports) LocalservicesDetailedLeadReportsSearch(ctx context.Context, request operations.LocalservicesDetailedLeadReportsSearchRequest) (*operations.LocalservicesDetailedLeadReportsSearchResponse, error) {
+func (s *detailedLeadReports) LocalservicesDetailedLeadReportsSearch(ctx context.Context, request operations.LocalservicesDetailedLeadReportsSearchRequest, security operations.LocalservicesDetailedLeadReportsSearchSecurity) (*operations.LocalservicesDetailedLeadReportsSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/detailedLeadReports:search"
 
@@ -42,11 +42,11 @@ func (s *detailedLeadReports) LocalservicesDetailedLeadReportsSearch(ctx context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

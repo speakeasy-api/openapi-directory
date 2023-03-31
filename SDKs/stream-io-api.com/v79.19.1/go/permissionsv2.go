@@ -34,7 +34,7 @@ func newPermissionsV2(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // CreateRole - Create role
 // Creates custom role
-func (s *permissionsV2) CreateRole(ctx context.Context, request operations.CreateRoleRequest) (*operations.CreateRoleResponse, error) {
+func (s *permissionsV2) CreateRole(ctx context.Context, request shared.CreateRoleRequest) (*operations.CreateRoleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/roles"
 

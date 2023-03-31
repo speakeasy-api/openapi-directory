@@ -32,20 +32,20 @@ func newStorelayoutclusters(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // AndroidenterpriseStorelayoutclustersDelete - Deletes a cluster.
-func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersDelete(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersDeleteRequest) (*operations.AndroidenterpriseStorelayoutclustersDeleteResponse, error) {
+func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersDelete(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersDeleteRequest, security operations.AndroidenterpriseStorelayoutclustersDeleteSecurity) (*operations.AndroidenterpriseStorelayoutclustersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersDelete(ctx con
 }
 
 // AndroidenterpriseStorelayoutclustersGet - Retrieves details of a cluster.
-func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersGet(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersGetRequest) (*operations.AndroidenterpriseStorelayoutclustersGetResponse, error) {
+func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersGet(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersGetRequest, security operations.AndroidenterpriseStorelayoutclustersGetSecurity) (*operations.AndroidenterpriseStorelayoutclustersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersGet(ctx contex
 }
 
 // AndroidenterpriseStorelayoutclustersInsert - Inserts a new cluster in a page.
-func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersInsert(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersInsertRequest) (*operations.AndroidenterpriseStorelayoutclustersInsertResponse, error) {
+func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersInsert(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersInsertRequest, security operations.AndroidenterpriseStorelayoutclustersInsertSecurity) (*operations.AndroidenterpriseStorelayoutclustersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StoreCluster", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersInsert(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersInsert(ctx con
 }
 
 // AndroidenterpriseStorelayoutclustersList - Retrieves the details of all clusters on the specified page.
-func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersList(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersListRequest) (*operations.AndroidenterpriseStorelayoutclustersListResponse, error) {
+func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersList(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersListRequest, security operations.AndroidenterpriseStorelayoutclustersListSecurity) (*operations.AndroidenterpriseStorelayoutclustersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersList(ctx conte
 }
 
 // AndroidenterpriseStorelayoutclustersUpdate - Updates a cluster.
-func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersUpdate(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersUpdateRequest) (*operations.AndroidenterpriseStorelayoutclustersUpdateResponse, error) {
+func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersUpdate(ctx context.Context, request operations.AndroidenterpriseStorelayoutclustersUpdateRequest, security operations.AndroidenterpriseStorelayoutclustersUpdateSecurity) (*operations.AndroidenterpriseStorelayoutclustersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StoreCluster", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *storelayoutclusters) AndroidenterpriseStorelayoutclustersUpdate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -42,9 +42,9 @@ func newInvoice(defaultClient, securityClient HTTPClient, serverURL, language, s
 // > The `Notify invoice` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *invoice) InvoiceNotification2(ctx context.Context, request operations.InvoiceNotification2Request) (*operations.InvoiceNotification2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/invoices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/invoices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvoiceNotificationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -59,7 +59,7 @@ func (s *invoice) InvoiceNotification2(ctx context.Context, request operations.I
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -35,9 +35,9 @@ func newEmbedPresetsEssentials(defaultClient, securityClient HTTPClient, serverU
 // EditEmbedPreset - Edit an embed preset
 func (s *embedPresetsEssentials) EditEmbedPreset(ctx context.Context, request operations.EditEmbedPresetRequest) (*operations.EditEmbedPresetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets/{preset_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -98,9 +98,9 @@ func (s *embedPresetsEssentials) EditEmbedPreset(ctx context.Context, request op
 // EditEmbedPresetAlt1 - Edit an embed preset
 func (s *embedPresetsEssentials) EditEmbedPresetAlt1(ctx context.Context, request operations.EditEmbedPresetAlt1Request) (*operations.EditEmbedPresetAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/presets/{preset_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -161,7 +161,7 @@ func (s *embedPresetsEssentials) EditEmbedPresetAlt1(ctx context.Context, reques
 // GetEmbedPreset - Get a specific embed preset
 func (s *embedPresetsEssentials) GetEmbedPreset(ctx context.Context, request operations.GetEmbedPresetRequest) (*operations.GetEmbedPresetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets/{preset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -205,7 +205,7 @@ func (s *embedPresetsEssentials) GetEmbedPreset(ctx context.Context, request ope
 // GetEmbedPresetAlt1 - Get a specific embed preset
 func (s *embedPresetsEssentials) GetEmbedPresetAlt1(ctx context.Context, request operations.GetEmbedPresetAlt1Request) (*operations.GetEmbedPresetAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/presets/{preset_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/presets/{preset_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,14 +249,14 @@ func (s *embedPresetsEssentials) GetEmbedPresetAlt1(ctx context.Context, request
 // GetEmbedPresets - Get all the embed presets that a user has created
 func (s *embedPresetsEssentials) GetEmbedPresets(ctx context.Context, request operations.GetEmbedPresetsRequest) (*operations.GetEmbedPresetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/presets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -304,7 +304,7 @@ func (s *embedPresetsEssentials) GetEmbedPresetsAlt1(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHolidaySchemeRevisionsPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The holiday schemes' unique identifier. E.g HOLSCH001
-	HolidaySchemeID string `pathParam:"style=simple,explode=false,name=HolidaySchemeId"`
-}
-
-type GetHolidaySchemeRevisionsHeaders struct {
+type GetHolidaySchemeRevisionsRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetHolidaySchemeRevisionsRequest struct {
-	PathParams GetHolidaySchemeRevisionsPathParams
-	Headers    GetHolidaySchemeRevisionsHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The holiday schemes' unique identifier. E.g HOLSCH001
+	HolidaySchemeID string `pathParam:"style=simple,explode=false,name=HolidaySchemeId"`
 }
 
 type GetHolidaySchemeRevisionsResponse struct {

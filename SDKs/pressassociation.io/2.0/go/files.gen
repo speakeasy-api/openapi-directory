@@ -36,5 +36,4 @@ pkg/models/operations/getplatform.go
 pkg/models/operations/listplatformregions.go
 pkg/models/operations/listplatforms.go
 pkg/models/operations/listschedule.go
-pkg/models/shared/security.go
 USAGE.md

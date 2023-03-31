@@ -8,25 +8,16 @@ import (
 )
 
 type GetTracksTrackIDFavoritersSecurity struct {
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=query"`
+	ClientID string `security:"scheme,type=apiKey,subtype=query,name=client_id"`
 }
 
-type GetTracksTrackIDFavoritersPathParams struct {
-	// SoundCloud Track id
-	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
-}
-
-type GetTracksTrackIDFavoritersQueryParams struct {
+type GetTracksTrackIDFavoritersRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetTracksTrackIDFavoritersRequest struct {
-	PathParams  GetTracksTrackIDFavoritersPathParams
-	QueryParams GetTracksTrackIDFavoritersQueryParams
-	Security    GetTracksTrackIDFavoritersSecurity
+	// SoundCloud Track id
+	TrackID int64 `pathParam:"style=simple,explode=false,name=track_id"`
 }
 
 type GetTracksTrackIDFavoritersResponse struct {

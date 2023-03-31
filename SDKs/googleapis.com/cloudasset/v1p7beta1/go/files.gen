@@ -19,7 +19,6 @@ pkg/models/shared/operation.go
 pkg/models/shared/status.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudassetv1p7beta1exportassetsrequest.go
 pkg/models/shared/googlecloudassetv1p7beta1outputconfig.go
 pkg/models/shared/googlecloudassetv1p7beta1gcsdestination.go

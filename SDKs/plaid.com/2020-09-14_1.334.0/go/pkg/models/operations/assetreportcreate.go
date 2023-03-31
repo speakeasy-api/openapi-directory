@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AssetReportCreateRequest struct {
-	Request shared.AssetReportCreateRequest `request:"mediaType=application/json"`
-}
 
 type AssetReportCreateResponse struct {
 	// OK

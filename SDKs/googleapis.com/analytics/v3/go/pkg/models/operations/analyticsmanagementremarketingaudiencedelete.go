@@ -8,20 +8,13 @@ import (
 )
 
 type AnalyticsManagementRemarketingAudienceDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AnalyticsManagementRemarketingAudienceDeletePathParams struct {
+type AnalyticsManagementRemarketingAudienceDeleteRequest struct {
 	// Account ID to which the remarketing audience belongs.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The ID of the remarketing audience to delete.
-	RemarketingAudienceID string `pathParam:"style=simple,explode=false,name=remarketingAudienceId"`
-	// Web property ID to which the remarketing audience belongs.
-	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
-}
-
-type AnalyticsManagementRemarketingAudienceDeleteQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -34,14 +27,12 @@ type AnalyticsManagementRemarketingAudienceDeleteQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the remarketing audience to delete.
+	RemarketingAudienceID string `pathParam:"style=simple,explode=false,name=remarketingAudienceId"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AnalyticsManagementRemarketingAudienceDeleteRequest struct {
-	PathParams  AnalyticsManagementRemarketingAudienceDeletePathParams
-	QueryParams AnalyticsManagementRemarketingAudienceDeleteQueryParams
-	Security    AnalyticsManagementRemarketingAudienceDeleteSecurity
+	// Web property ID to which the remarketing audience belongs.
+	WebPropertyID string `pathParam:"style=simple,explode=false,name=webPropertyId"`
 }
 
 type AnalyticsManagementRemarketingAudienceDeleteResponse struct {

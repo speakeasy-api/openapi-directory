@@ -8,16 +8,11 @@ import (
 )
 
 type CloudchannelAccountsCustomersListPurchasableOffersSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudchannelAccountsCustomersListPurchasableOffersPathParams struct {
-	// Required. The resource name of the customer to list Offers for. Format: accounts/{account_id}/customers/{customer_id}.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-}
-
-type CloudchannelAccountsCustomersListPurchasableOffersQueryParams struct {
+type CloudchannelAccountsCustomersListPurchasableOffersRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type CloudchannelAccountsCustomersListPurchasableOffersQueryParams struct {
 	ChangeOfferPurchaseNewSku *string `queryParam:"style=form,explode=true,name=changeOfferPurchase.newSku"`
 	// Required. SKU that the result should be restricted to. Format: products/{product_id}/skus/{sku_id}.
 	CreateEntitlementPurchaseSku *string `queryParam:"style=form,explode=true,name=createEntitlementPurchase.sku"`
+	// Required. The resource name of the customer to list Offers for. Format: accounts/{account_id}/customers/{customer_id}.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -52,12 +49,6 @@ type CloudchannelAccountsCustomersListPurchasableOffersQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudchannelAccountsCustomersListPurchasableOffersRequest struct {
-	PathParams  CloudchannelAccountsCustomersListPurchasableOffersPathParams
-	QueryParams CloudchannelAccountsCustomersListPurchasableOffersQueryParams
-	Security    CloudchannelAccountsCustomersListPurchasableOffersSecurity
 }
 
 type CloudchannelAccountsCustomersListPurchasableOffersResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCommandsRequest struct {
-	Request shared.Command `request:"mediaType=application/json"`
-}
-
 type PostCommandsResponse struct {
 	// OK
 	Command     *shared.Command

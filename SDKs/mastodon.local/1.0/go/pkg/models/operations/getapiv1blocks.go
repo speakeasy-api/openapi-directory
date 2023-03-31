@@ -8,18 +8,13 @@ import (
 )
 
 type GetAPIV1BlocksSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetAPIV1BlocksQueryParams struct {
-	Limit   *int64  `queryParam:"style=form,explode=true,name=limit"`
-	MaxID   *string `queryParam:"style=form,explode=true,name=max_id"`
-	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetAPIV1BlocksRequest struct {
-	QueryParams GetAPIV1BlocksQueryParams
-	Security    GetAPIV1BlocksSecurity
+	Limit   *int64  `queryParam:"style=form,explode=true,name=limit"`
+	MaxID   *string `queryParam:"style=form,explode=true,name=max_id"`
+	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
 }
 
 type GetAPIV1BlocksResponse struct {

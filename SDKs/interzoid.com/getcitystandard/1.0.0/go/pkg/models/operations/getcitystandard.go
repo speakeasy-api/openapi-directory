@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetcitystandardQueryParams struct {
+type GetcitystandardRequest struct {
 	// City name from which to retrieve the standardized version
 	City string `queryParam:"style=form,explode=true,name=city"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetcitystandardRequest struct {
-	QueryParams GetcitystandardQueryParams
 }
 
 // Getcitystandard200ApplicationJSON - Standardized city name data

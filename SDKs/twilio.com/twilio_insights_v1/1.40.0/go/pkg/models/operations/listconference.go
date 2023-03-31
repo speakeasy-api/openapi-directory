@@ -12,10 +12,11 @@ var ListConferenceServerList = []string{
 }
 
 type ListConferenceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListConferenceQueryParams struct {
+type ListConferenceRequest struct {
 	// The SID of the conference.
 	ConferenceSid *string `queryParam:"style=form,explode=true,name=ConferenceSid"`
 	// Conferences created after the provided timestamp specified in ISO 8601 format
@@ -42,12 +43,6 @@ type ListConferenceQueryParams struct {
 	Subaccount *string `queryParam:"style=form,explode=true,name=Subaccount"`
 	// Tags applied by Twilio for common potential configuration, quality, or performance issues.
 	Tags *string `queryParam:"style=form,explode=true,name=Tags"`
-}
-
-type ListConferenceRequest struct {
-	QueryParams ListConferenceQueryParams
-	Security    ListConferenceSecurity
-	ServerURL   *string
 }
 
 type ListConferenceListConferenceResponseMeta struct {

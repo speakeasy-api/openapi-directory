@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetASiteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetASitePathParams struct {
-	// Unique Identifier of the Site.
-	SiteID string `pathParam:"style=simple,explode=false,name=siteId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetASiteRequest struct {
-	PathParams GetASitePathParams
-	Security   GetASiteSecurity
+	// Unique Identifier of the Site.
+	SiteID string `pathParam:"style=simple,explode=false,name=siteId"`
 }
 
 // GetASite200ApplicationXMLCountry - Site country

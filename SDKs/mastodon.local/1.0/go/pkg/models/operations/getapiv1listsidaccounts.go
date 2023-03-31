@@ -8,27 +8,18 @@ import (
 )
 
 type GetAPIV1ListsIDAccountsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIV1ListsIDAccountsPathParams struct {
+type GetAPIV1ListsIDAccountsRequest struct {
 	// ID of the list in the database
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV1ListsIDAccountsQueryParams struct {
 	// Maximum number of results. Defaults to 40. Max 40. Set to 0 in order to get all accounts without pagination. Pagination is done with the HTTP Link header.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Return results older than ID
 	MaxID *string `queryParam:"style=form,explode=true,name=max_id"`
 	// Return results newer than ID
 	SinceID *string `queryParam:"style=form,explode=true,name=since_id"`
-}
-
-type GetAPIV1ListsIDAccountsRequest struct {
-	PathParams  GetAPIV1ListsIDAccountsPathParams
-	QueryParams GetAPIV1ListsIDAccountsQueryParams
-	Security    GetAPIV1ListsIDAccountsSecurity
 }
 
 type GetAPIV1ListsIDAccountsResponse struct {

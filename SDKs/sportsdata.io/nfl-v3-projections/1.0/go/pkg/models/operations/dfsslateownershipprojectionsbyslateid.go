@@ -33,15 +33,11 @@ func (e *DfsSlateOwnershipProjectionsBySlateidFormatEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DfsSlateOwnershipProjectionsBySlateidPathParams struct {
+type DfsSlateOwnershipProjectionsBySlateidRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DfsSlateOwnershipProjectionsBySlateidFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// SlateID of the DFS Slate you wish to get ownership projections for. Will have an empty SlateOwnershipProjections if this slate was not projected
 	SlateID string `pathParam:"style=simple,explode=false,name=slateId"`
-}
-
-type DfsSlateOwnershipProjectionsBySlateidRequest struct {
-	PathParams DfsSlateOwnershipProjectionsBySlateidPathParams
 }
 
 type DfsSlateOwnershipProjectionsBySlateidResponse struct {

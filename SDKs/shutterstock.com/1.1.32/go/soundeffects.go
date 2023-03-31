@@ -34,16 +34,16 @@ func newSoundEffects(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // DownloadSfx - Download sound effects
 // This endpoint redownloads sound effects that you have already received a license for. The download links in the response are valid for 8 hours.
-func (s *soundEffects) DownloadSfx(ctx context.Context, request operations.DownloadSfxRequest) (*operations.DownloadSfxResponse, error) {
+func (s *soundEffects) DownloadSfx(ctx context.Context, request operations.DownloadSfxRequest, security operations.DownloadSfxSecurity) (*operations.DownloadSfxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sfx/licenses/{id}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sfx/licenses/{id}/downloads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,20 +84,20 @@ func (s *soundEffects) DownloadSfx(ctx context.Context, request operations.Downl
 
 // GetSfxDetails - Get details about sound effects
 // This endpoint shows information about a sound effect.
-func (s *soundEffects) GetSfxDetails(ctx context.Context, request operations.GetSfxDetailsRequest) (*operations.GetSfxDetailsResponse, error) {
+func (s *soundEffects) GetSfxDetails(ctx context.Context, request operations.GetSfxDetailsRequest, security operations.GetSfxDetailsSecurity) (*operations.GetSfxDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sfx/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/sfx/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -138,7 +138,7 @@ func (s *soundEffects) GetSfxDetails(ctx context.Context, request operations.Get
 
 // GetSfxLicenseList - List sound effects licenses
 // This endpoint lists existing licenses.
-func (s *soundEffects) GetSfxLicenseList(ctx context.Context, request operations.GetSfxLicenseListRequest) (*operations.GetSfxLicenseListResponse, error) {
+func (s *soundEffects) GetSfxLicenseList(ctx context.Context, request operations.GetSfxLicenseListRequest, security operations.GetSfxLicenseListSecurity) (*operations.GetSfxLicenseListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/sfx/licenses"
 
@@ -147,11 +147,11 @@ func (s *soundEffects) GetSfxLicenseList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,7 +192,7 @@ func (s *soundEffects) GetSfxLicenseList(ctx context.Context, request operations
 
 // GetSfxListDetails - List details about sound effects
 // This endpoint shows information about sound effects.
-func (s *soundEffects) GetSfxListDetails(ctx context.Context, request operations.GetSfxListDetailsRequest) (*operations.GetSfxListDetailsResponse, error) {
+func (s *soundEffects) GetSfxListDetails(ctx context.Context, request operations.GetSfxListDetailsRequest, security operations.GetSfxListDetailsSecurity) (*operations.GetSfxListDetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/sfx"
 
@@ -201,11 +201,11 @@ func (s *soundEffects) GetSfxListDetails(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,7 +246,7 @@ func (s *soundEffects) GetSfxListDetails(ctx context.Context, request operations
 
 // LicensesSFX - License sound effects
 // This endpoint licenses sounds effect assets.
-func (s *soundEffects) LicensesSFX(ctx context.Context, request operations.LicensesSFXRequest) (*operations.LicensesSFXResponse, error) {
+func (s *soundEffects) LicensesSFX(ctx context.Context, request shared.LicenseSFXRequest, security operations.LicensesSFXSecurity) (*operations.LicensesSFXResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/sfx/licenses"
 
@@ -265,7 +265,7 @@ func (s *soundEffects) LicensesSFX(ctx context.Context, request operations.Licen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *soundEffects) LicensesSFX(ctx context.Context, request operations.Licen
 
 // SearchSFX - Search for sound effects
 // This endpoint searches for sound effects. If you specify more than one search parameter, the API uses an AND condition.
-func (s *soundEffects) SearchSFX(ctx context.Context, request operations.SearchSFXRequest) (*operations.SearchSFXResponse, error) {
+func (s *soundEffects) SearchSFX(ctx context.Context, request operations.SearchSFXRequest, security operations.SearchSFXSecurity) (*operations.SearchSFXResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/sfx/search"
 
@@ -315,11 +315,11 @@ func (s *soundEffects) SearchSFX(ctx context.Context, request operations.SearchS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

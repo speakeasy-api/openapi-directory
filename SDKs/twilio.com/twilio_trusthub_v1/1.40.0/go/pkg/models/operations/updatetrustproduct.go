@@ -12,12 +12,8 @@ var UpdateTrustProductServerList = []string{
 }
 
 type UpdateTrustProductSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTrustProductPathParams struct {
-	// The unique string that we created to identify the Customer-Profile resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTrustProductUpdateTrustProductRequest struct {
@@ -31,10 +27,9 @@ type UpdateTrustProductUpdateTrustProductRequest struct {
 }
 
 type UpdateTrustProductRequest struct {
-	PathParams UpdateTrustProductPathParams
-	Request    *UpdateTrustProductUpdateTrustProductRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateTrustProductSecurity
-	ServerURL  *string
+	RequestBody *UpdateTrustProductUpdateTrustProductRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the Customer-Profile resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateTrustProductResponse struct {

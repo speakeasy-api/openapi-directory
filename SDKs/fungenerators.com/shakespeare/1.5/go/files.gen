@@ -19,5 +19,4 @@ pkg/models/operations/getshakespearegenerateloremipsum.go
 pkg/models/operations/getshakespearegeneratename.go
 pkg/models/operations/getshakespearetranslate.go
 pkg/models/operations/getshakespearequote.go
-pkg/models/shared/security.go
 USAGE.md

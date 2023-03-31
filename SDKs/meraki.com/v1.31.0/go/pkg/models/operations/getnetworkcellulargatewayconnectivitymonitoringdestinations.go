@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest struct {
-	PathParams GetNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkCellularGatewayConnectivityMonitoringDestinationsResponse struct {

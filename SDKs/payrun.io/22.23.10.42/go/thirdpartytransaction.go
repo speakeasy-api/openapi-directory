@@ -35,14 +35,14 @@ func newThirdPartyTransaction(defaultClient, securityClient HTTPClient, serverUR
 // Deletes a tag from the third party transaction
 func (s *thirdPartyTransaction) DeleteThirdPartyTransactionTag(ctx context.Context, request operations.DeleteThirdPartyTransactionTagRequest) (*operations.DeleteThirdPartyTransactionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *thirdPartyTransaction) DeleteThirdPartyTransactionTag(ctx context.Conte
 // Gets all the third party transaction tags
 func (s *thirdPartyTransaction) GetAllThirdPartyTransactionTags(ctx context.Context, request operations.GetAllThirdPartyTransactionTagsRequest) (*operations.GetAllThirdPartyTransactionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *thirdPartyTransaction) GetAllThirdPartyTransactionTags(ctx context.Cont
 // Gets the third party transactions with the specified tag
 func (s *thirdPartyTransaction) GetAllThirdPartyTransactionsWithTag(ctx context.Context, request operations.GetAllThirdPartyTransactionsWithTagRequest) (*operations.GetAllThirdPartyTransactionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *thirdPartyTransaction) GetAllThirdPartyTransactionsWithTag(ctx context.
 // Gets a tag from the third party transaction
 func (s *thirdPartyTransaction) GetTagFromThirdPartyTransaction(ctx context.Context, request operations.GetTagFromThirdPartyTransactionRequest) (*operations.GetTagFromThirdPartyTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,14 +278,14 @@ func (s *thirdPartyTransaction) GetTagFromThirdPartyTransaction(ctx context.Cont
 // Gets all tags from the third party transaction
 func (s *thirdPartyTransaction) GetTagsFromThirdPartyTransaction(ctx context.Context, request operations.GetTagsFromThirdPartyTransactionRequest) (*operations.GetTagsFromThirdPartyTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -341,14 +341,14 @@ func (s *thirdPartyTransaction) GetTagsFromThirdPartyTransaction(ctx context.Con
 // Inserts a tag on the third party transaction
 func (s *thirdPartyTransaction) PutThirdPartyTransactionTag(ctx context.Context, request operations.PutThirdPartyTransactionTagRequest) (*operations.PutThirdPartyTransactionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetTokenMetadataOfUtxoPathParams struct {
+type TestnetGetTokenMetadataOfUtxoRequest struct {
 	// TokenId to request metadata for
 	Tokenid string `pathParam:"style=simple,explode=false,name=tokenid"`
 	// Specific UTXO to request metadata for
 	Utxo string `pathParam:"style=simple,explode=false,name=utxo"`
-}
-
-type TestnetGetTokenMetadataOfUtxoQueryParams struct {
 	// 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
 	Verbosity *float64 `queryParam:"style=form,explode=true,name=verbosity"`
-}
-
-type TestnetGetTokenMetadataOfUtxoRequest struct {
-	PathParams  TestnetGetTokenMetadataOfUtxoPathParams
-	QueryParams TestnetGetTokenMetadataOfUtxoQueryParams
 }
 
 type TestnetGetTokenMetadataOfUtxoResponse struct {

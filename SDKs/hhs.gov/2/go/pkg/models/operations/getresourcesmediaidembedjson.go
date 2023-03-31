@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type GetResourcesMediaIDEmbedJSONPathParams struct {
-	// The id of the media to get embed code for.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesMediaIDEmbedJSONQueryParams struct {
+type GetResourcesMediaIDEmbedJSONRequest struct {
 	// Method used to render an html request. Accepts one: [mv, list, feed]
 	DisplayMethod *string `queryParam:"style=form,explode=false,name=displayMethod"`
 	// Should the div to insert content into have a specific name?
@@ -24,15 +19,12 @@ type GetResourcesMediaIDEmbedJSONQueryParams struct {
 	Flavor *string `queryParam:"style=form,explode=false,name=flavor"`
 	// The height of the generated iframe.
 	Height *int `queryParam:"style=form,explode=false,name=height"`
+	// The id of the media to get embed code for.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// The name of the iframe element
 	IframeName *string `queryParam:"style=form,explode=false,name=iframeName"`
 	// The width of the generated iframe.
 	Width *int `queryParam:"style=form,explode=false,name=width"`
-}
-
-type GetResourcesMediaIDEmbedJSONRequest struct {
-	PathParams  GetResourcesMediaIDEmbedJSONPathParams
-	QueryParams GetResourcesMediaIDEmbedJSONQueryParams
 }
 
 type GetResourcesMediaIDEmbedJSONResponse struct {

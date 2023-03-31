@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListCollaboratorsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposListCollaboratorsAffiliationEnum - Filter collaborators returned by their affiliation. `outside` means all outside collaborators of an organization-owned repository. `direct` means all collaborators with permissions to an organization-owned repository, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
 type ReposListCollaboratorsAffiliationEnum string
 
@@ -43,18 +36,17 @@ func (e *ReposListCollaboratorsAffiliationEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type ReposListCollaboratorsQueryParams struct {
+type ReposListCollaboratorsRequest struct {
 	// Filter collaborators returned by their affiliation. `outside` means all outside collaborators of an organization-owned repository. `direct` means all collaborators with permissions to an organization-owned repository, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
 	Affiliation *ReposListCollaboratorsAffiliationEnum `queryParam:"style=form,explode=true,name=affiliation"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListCollaboratorsRequest struct {
-	PathParams  ReposListCollaboratorsPathParams
-	QueryParams ReposListCollaboratorsQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListCollaboratorsResponse struct {

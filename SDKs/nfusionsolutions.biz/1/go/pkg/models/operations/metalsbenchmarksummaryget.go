@@ -83,7 +83,7 @@ func (e *MetalsBenchmarkSummaryGETUnitofmeasureEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type MetalsBenchmarkSummaryGETQueryParams struct {
+type MetalsBenchmarkSummaryGETRequest struct {
 	// comma separated list of conversion currencies, defaults to USD
 	Currency *string `queryParam:"style=form,explode=true,name=currency"`
 	// to override content negotiation specify a value of json or xml
@@ -100,10 +100,6 @@ type MetalsBenchmarkSummaryGETQueryParams struct {
 	// ct=carat
 	// dwt=pennyweight
 	Unitofmeasure *MetalsBenchmarkSummaryGETUnitofmeasureEnum `queryParam:"style=form,explode=true,name=unitofmeasure"`
-}
-
-type MetalsBenchmarkSummaryGETRequest struct {
-	QueryParams MetalsBenchmarkSummaryGETQueryParams
 }
 
 type MetalsBenchmarkSummaryGETResponse struct {

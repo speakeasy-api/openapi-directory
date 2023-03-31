@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchGroupUsersIDPathParams struct {
-	// Group User ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchGroupUsersIDRequestBody struct {
 	// Is the user a group administrator?
 	Admin *bool `multipartForm:"name=admin"`
@@ -22,8 +17,9 @@ type PatchGroupUsersIDRequestBody struct {
 }
 
 type PatchGroupUsersIDRequest struct {
-	PathParams PatchGroupUsersIDPathParams
-	Request    PatchGroupUsersIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PatchGroupUsersIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Group User ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchGroupUsersIDResponse struct {

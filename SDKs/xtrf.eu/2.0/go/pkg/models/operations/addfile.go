@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddFilePathParams struct {
+type AddFileRequest struct {
+	FileDTO shared.FileDTO `request:"mediaType=application/json"`
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type AddFileRequest struct {
-	PathParams AddFilePathParams
-	Request    shared.FileDTO `request:"mediaType=application/json"`
 }
 
 type AddFileResponse struct {

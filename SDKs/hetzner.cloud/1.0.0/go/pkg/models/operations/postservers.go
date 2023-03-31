@@ -80,33 +80,6 @@ type PostServersCreateServerRequest struct {
 	Volumes []int64 `json:"volumes,omitempty"`
 }
 
-type PostServersRequest struct {
-	// Please note that Server names must be unique per Project and valid hostnames as per RFC 1123 (i.e. may only contain letters, digits, periods, and dashes).
-	//
-	// For `server_type` you can either use the ID as listed in `/server_types` or its name.
-	//
-	// For `image` you can either use the ID as listed in `/images` or its name.
-	//
-	// If you want to create the Server in a Location, you must set `location` to the ID or name as listed in `/locations`. This is the recommended way. You can be even more specific by setting `datacenter` to the ID or name as listed in `/datacenters`. However we only recommend this if you want to assign a specific Primary IP to the Server which is located in the specified Datacenter.
-	//
-	// Some properties like `start_after_create` or `automount` will trigger Actions after the Server is created. Those Actions are listed in the `next_actions` field in the response.
-	//
-	// For accessing your Server we strongly recommend to use SSH keys by passing the respective key IDs in `ssh_keys`. If you do not specify any `ssh_keys` we will generate a root password for you and return it in the response.
-	//
-	// Please note that provided user-data is stored in our systems. While we take measures to protect it we highly recommend that you don’t use it to store passwords or other sensitive information.
-	//
-	// #### Call specific error codes
-	//
-	// | Code                             | Description                                                |
-	// |----------------------------------|------------------------------------------------------------|
-	// | `placement_error`                | An error during the placement occurred                     |
-	// | `primary_ip_assigned`            | The specified Primary IP is already assigned to a server   |
-	// | `primary_ip_datacenter_mismatch` | The specified Primary IP is in a different datacenter      |
-	// | `primary_ip_version_mismatch`    | The specified Primary IP has the wrong IP Version          |
-	//
-	Request *PostServersCreateServerRequest `request:"mediaType=application/json"`
-}
-
 // PostServersCreateServerResponseActionError - Error message for the Action if error occurred, otherwise null
 type PostServersCreateServerResponseActionError struct {
 	// Fixed machine readable code

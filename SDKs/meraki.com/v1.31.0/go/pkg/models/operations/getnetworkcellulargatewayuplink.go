@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkCellularGatewayUplinkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkCellularGatewayUplinkRequest struct {
-	PathParams GetNetworkCellularGatewayUplinkPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkCellularGatewayUplinkResponse struct {

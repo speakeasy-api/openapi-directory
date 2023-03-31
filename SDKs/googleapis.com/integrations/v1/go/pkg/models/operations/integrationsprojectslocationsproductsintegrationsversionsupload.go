@@ -8,18 +8,14 @@ import (
 )
 
 type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadPathParams struct {
-	// Required. The version to upload. Format: projects/{project}/locations/{location}/integrations/{integration}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadQueryParams struct {
+type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                   *shared.XgafvEnum                                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest *shared.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadQueryParams 
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The version to upload. Format: projects/{project}/locations/{location}/integrations/{integration}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadQueryParams 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest struct {
-	PathParams  IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadPathParams
-	QueryParams IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadQueryParams
-	Request     *shared.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest `request:"mediaType=application/json"`
-	Security    IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadSecurity
 }
 
 type IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse struct {

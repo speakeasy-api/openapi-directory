@@ -34,18 +34,18 @@ func newAccountAccess(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // DeleteAccountAccessConsentsConsentID - Delete Account Access Consents
 // Delete Account Access Consents by Consent ID
-func (s *accountAccess) DeleteAccountAccessConsentsConsentID(ctx context.Context, request operations.DeleteAccountAccessConsentsConsentIDRequest) (*operations.DeleteAccountAccessConsentsConsentIDResponse, error) {
+func (s *accountAccess) DeleteAccountAccessConsentsConsentID(ctx context.Context, request operations.DeleteAccountAccessConsentsConsentIDRequest, security operations.DeleteAccountAccessConsentsConsentIDSecurity) (*operations.DeleteAccountAccessConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,18 +101,18 @@ func (s *accountAccess) DeleteAccountAccessConsentsConsentID(ctx context.Context
 
 // GetAccountAccessConsentsConsentID - Get Account Access Consents
 // Get Account Access Consents by Consent ID
-func (s *accountAccess) GetAccountAccessConsentsConsentID(ctx context.Context, request operations.GetAccountAccessConsentsConsentIDRequest) (*operations.GetAccountAccessConsentsConsentIDResponse, error) {
+func (s *accountAccess) GetAccountAccessConsentsConsentID(ctx context.Context, request operations.GetAccountAccessConsentsConsentIDRequest, security operations.GetAccountAccessConsentsConsentIDSecurity) (*operations.GetAccountAccessConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *accountAccess) GetAccountAccessConsentsConsentID(ctx context.Context, r
 
 // PostAccountAccessConsents - Create Account Access Consents
 // Create Account Access Consents
-func (s *accountAccess) PostAccountAccessConsents(ctx context.Context, request operations.PostAccountAccessConsentsRequest) (*operations.PostAccountAccessConsentsResponse, error) {
+func (s *accountAccess) PostAccountAccessConsents(ctx context.Context, request operations.PostAccountAccessConsentsRequest, security operations.PostAccountAccessConsentsSecurity) (*operations.PostAccountAccessConsentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account-access-consents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OBReadConsent1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,9 +199,9 @@ func (s *accountAccess) PostAccountAccessConsents(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

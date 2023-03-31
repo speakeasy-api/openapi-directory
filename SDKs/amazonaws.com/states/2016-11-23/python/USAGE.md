@@ -3,35 +3,39 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateActivityRequest(
-    headers=operations.CreateActivityHeaders(
-        x_amz_algorithm="laboriosam",
-        x_amz_content_sha256="totam",
-        x_amz_credential="atque",
-        x_amz_date="corrupti",
-        x_amz_security_token="quibusdam",
-        x_amz_signature="dolorum",
-        x_amz_signed_headers="placeat",
-        x_amz_target="AWSStepFunctions.CreateActivity",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateActivityInput(
-        name="laborum",
+)
+
+
+req = operations.CreateActivityRequest(
+    create_activity_input=shared.CreateActivityInput(
+        name="corrupti",
         tags=[
             shared.Tag(
-                key="numquam",
-                value="et",
+                key="distinctio",
+                value="quibusdam",
+            ),
+            shared.Tag(
+                key="unde",
+                value="nulla",
+            ),
+            shared.Tag(
+                key="corrupti",
+                value="illum",
             ),
         ],
     ),
+    x_amz_algorithm="vel",
+    x_amz_content_sha256="error",
+    x_amz_credential="deserunt",
+    x_amz_date="suscipit",
+    x_amz_security_token="iure",
+    x_amz_signature="magnam",
+    x_amz_signed_headers="debitis",
+    x_amz_target="AWSStepFunctions.CreateActivity",
 )
     
 res = s.create_activity(req)

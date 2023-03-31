@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostUsersId2faResetPathParams struct {
+type PostUsersId2faResetRequest struct {
 	// User ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostUsersId2faResetRequest struct {
-	PathParams PostUsersId2faResetPathParams
 }
 
 type PostUsersId2faResetResponse struct {

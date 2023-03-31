@@ -33,16 +33,12 @@ func (e *PremiumNewsByPlayerFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PremiumNewsByPlayerPathParams struct {
+type PremiumNewsByPlayerRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PremiumNewsByPlayerFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID.
 	// Example:<code>10000507</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type PremiumNewsByPlayerRequest struct {
-	PathParams PremiumNewsByPlayerPathParams
 }
 
 type PremiumNewsByPlayerResponse struct {

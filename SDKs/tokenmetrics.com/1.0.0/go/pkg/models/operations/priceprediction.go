@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type PricePredictionQueryParams struct {
+type PricePredictionRequest struct {
 	Date   *string `queryParam:"style=form,explode=true,name=date"`
 	Limit  *string `queryParam:"style=form,explode=true,name=limit"`
 	Tokens *string `queryParam:"style=form,explode=true,name=tokens"`
-}
-
-type PricePredictionRequest struct {
-	QueryParams PricePredictionQueryParams
 }
 
 type PricePredictionResponse struct {

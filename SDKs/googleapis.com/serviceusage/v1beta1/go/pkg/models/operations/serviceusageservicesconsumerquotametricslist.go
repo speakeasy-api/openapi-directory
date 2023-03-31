@@ -10,23 +10,18 @@ import (
 )
 
 type ServiceusageServicesConsumerQuotaMetricsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsListSecurity struct {
 	Option1 *ServiceusageServicesConsumerQuotaMetricsListSecurityOption1 `security:"option"`
 	Option2 *ServiceusageServicesConsumerQuotaMetricsListSecurityOption2 `security:"option"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsListPathParams struct {
-	// Parent of the quotas resource. Some example names would be: `projects/123/services/serviceconsumermanagement.googleapis.com` `folders/345/services/serviceconsumermanagement.googleapis.com` `organizations/456/services/serviceconsumermanagement.googleapis.com`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // ServiceusageServicesConsumerQuotaMetricsListViewEnum - Specifies the level of detail for quota information in the response.
@@ -56,7 +51,7 @@ func (e *ServiceusageServicesConsumerQuotaMetricsListViewEnum) UnmarshalJSON(dat
 	}
 }
 
-type ServiceusageServicesConsumerQuotaMetricsListQueryParams struct {
+type ServiceusageServicesConsumerQuotaMetricsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -75,6 +70,8 @@ type ServiceusageServicesConsumerQuotaMetricsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token identifying which result to start with; returned by a previous list call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Parent of the quotas resource. Some example names would be: `projects/123/services/serviceconsumermanagement.googleapis.com` `folders/345/services/serviceconsumermanagement.googleapis.com` `organizations/456/services/serviceconsumermanagement.googleapis.com`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -85,12 +82,6 @@ type ServiceusageServicesConsumerQuotaMetricsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies the level of detail for quota information in the response.
 	View *ServiceusageServicesConsumerQuotaMetricsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsListRequest struct {
-	PathParams  ServiceusageServicesConsumerQuotaMetricsListPathParams
-	QueryParams ServiceusageServicesConsumerQuotaMetricsListQueryParams
-	Security    ServiceusageServicesConsumerQuotaMetricsListSecurity
 }
 
 type ServiceusageServicesConsumerQuotaMetricsListResponse struct {

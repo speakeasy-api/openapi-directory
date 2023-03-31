@@ -8,16 +8,11 @@ import (
 )
 
 type DatacatalogProjectsLocationsEntryGroupsEntriesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatacatalogProjectsLocationsEntryGroupsEntriesListPathParams struct {
-	// Required. The name of the entry group that contains the entries to list. Can be provided in URL format.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatacatalogProjectsLocationsEntryGroupsEntriesListQueryParams struct {
+type DatacatalogProjectsLocationsEntryGroupsEntriesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DatacatalogProjectsLocationsEntryGroupsEntriesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Pagination token that specifies the next page to return. If empty, the first page is returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the entry group that contains the entries to list. Can be provided in URL format.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -46,12 +43,6 @@ type DatacatalogProjectsLocationsEntryGroupsEntriesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatacatalogProjectsLocationsEntryGroupsEntriesListRequest struct {
-	PathParams  DatacatalogProjectsLocationsEntryGroupsEntriesListPathParams
-	QueryParams DatacatalogProjectsLocationsEntryGroupsEntriesListQueryParams
-	Security    DatacatalogProjectsLocationsEntryGroupsEntriesListSecurity
 }
 
 type DatacatalogProjectsLocationsEntryGroupsEntriesListResponse struct {

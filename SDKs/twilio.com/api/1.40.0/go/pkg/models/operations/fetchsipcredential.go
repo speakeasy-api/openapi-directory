@@ -12,22 +12,17 @@ var FetchSipCredentialServerList = []string{
 }
 
 type FetchSipCredentialSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSipCredentialPathParams struct {
+type FetchSipCredentialRequest struct {
 	// The unique id of the Account that is responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The unique id that identifies the credential list that contains the desired credential.
 	CredentialListSid string `pathParam:"style=simple,explode=false,name=CredentialListSid"`
 	// The unique id that identifies the resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSipCredentialRequest struct {
-	PathParams FetchSipCredentialPathParams
-	Security   FetchSipCredentialSecurity
-	ServerURL  *string
 }
 
 type FetchSipCredentialResponse struct {

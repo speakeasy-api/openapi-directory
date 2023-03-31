@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DiaryControllerDeleteAppointmentPathParams struct {
-	// The unique client short-name
-	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
-}
-
-type DiaryControllerDeleteAppointmentQueryParams struct {
+type DiaryControllerDeleteAppointmentRequest struct {
 	// The unique appointment id
 	AppointmentID string `queryParam:"style=form,explode=true,name=appointmentID"`
-}
-
-type DiaryControllerDeleteAppointmentRequest struct {
-	PathParams  DiaryControllerDeleteAppointmentPathParams
-	QueryParams DiaryControllerDeleteAppointmentQueryParams
+	// The unique client short-name
+	ShortName string `pathParam:"style=simple,explode=false,name=shortName"`
 }
 
 type DiaryControllerDeleteAppointmentResponse struct {

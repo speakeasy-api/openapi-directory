@@ -4,27 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-s.config_security(
-    security=shared.Security(
-        basic_scheme=shared.SchemeBasicScheme(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
-    )
-)
-    
+
+
 req = operations.GetInventoryRequest(
-    query_params=operations.GetInventoryQueryParams(
-        ship_node="eligendi",
-        sku="vel",
-    ),
-    headers=operations.GetInventoryHeaders(
-        authorization="ea",
-        wm_consumer_channel_type="ullam",
-        wm_qos_correlation_id="molestiae",
-        wm_sec_access_token="eligendi",
-        wm_svc_name="consequuntur",
-    ),
+    wm_consumer_channel_type="corrupti",
+    wm_qos_correlation_id="provident",
+    wm_sec_access_token="distinctio",
+    wm_svc_name="quibusdam",
+    ship_node="unde",
+    sku="nulla",
 )
     
 res = s.inventory.get_inventory(req)

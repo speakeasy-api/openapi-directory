@@ -8,19 +8,14 @@ import (
 )
 
 type CreateAdsByInventoryReferenceSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateAdsByInventoryReferencePathParams struct {
-	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateAdsByInventoryReferenceRequest struct {
-	PathParams CreateAdsByInventoryReferencePathParams
 	// This request object defines the fields used in the <b>createAdsByInventoryReference</b> request.
-	Request  shared.CreateAdsByInventoryReferenceRequest `request:"mediaType=application/json"`
-	Security CreateAdsByInventoryReferenceSecurity
+	CreateAdsByInventoryReferenceRequest shared.CreateAdsByInventoryReferenceRequest `request:"mediaType=application/json"`
+	// A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class="tablenote"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> method.</span>
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaign_id"`
 }
 
 type CreateAdsByInventoryReferenceResponse struct {

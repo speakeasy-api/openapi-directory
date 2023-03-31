@@ -12,7 +12,8 @@ var CreateServiceServerList = []string{
 }
 
 type CreateServiceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateServiceCreateServiceRequest struct {
@@ -30,12 +31,6 @@ type CreateServiceCreateServiceRequest struct {
 	WebhookURL *string `form:"name=WebhookUrl"`
 	// Whether the Service instance should call `webhook_url` when the REST API is used to update Sync objects. The default is `false`.
 	WebhooksFromRestEnabled *bool `form:"name=WebhooksFromRestEnabled"`
-}
-
-type CreateServiceRequest struct {
-	Request   *CreateServiceCreateServiceRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateServiceSecurity
-	ServerURL *string
 }
 
 type CreateServiceResponse struct {

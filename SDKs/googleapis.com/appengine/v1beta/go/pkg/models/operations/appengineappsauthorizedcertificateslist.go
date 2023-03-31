@@ -10,29 +10,24 @@ import (
 )
 
 type AppengineAppsAuthorizedCertificatesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsAuthorizedCertificatesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsAuthorizedCertificatesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsAuthorizedCertificatesListSecurity struct {
 	Option1 *AppengineAppsAuthorizedCertificatesListSecurityOption1 `security:"option"`
 	Option2 *AppengineAppsAuthorizedCertificatesListSecurityOption2 `security:"option"`
 	Option3 *AppengineAppsAuthorizedCertificatesListSecurityOption3 `security:"option"`
-}
-
-type AppengineAppsAuthorizedCertificatesListPathParams struct {
-	// Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 }
 
 // AppengineAppsAuthorizedCertificatesListViewEnum - Controls the set of fields returned in the LIST response.
@@ -59,13 +54,15 @@ func (e *AppengineAppsAuthorizedCertificatesListViewEnum) UnmarshalJSON(data []b
 	}
 }
 
-type AppengineAppsAuthorizedCertificatesListQueryParams struct {
+type AppengineAppsAuthorizedCertificatesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -88,12 +85,6 @@ type AppengineAppsAuthorizedCertificatesListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Controls the set of fields returned in the LIST response.
 	View *AppengineAppsAuthorizedCertificatesListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type AppengineAppsAuthorizedCertificatesListRequest struct {
-	PathParams  AppengineAppsAuthorizedCertificatesListPathParams
-	QueryParams AppengineAppsAuthorizedCertificatesListQueryParams
-	Security    AppengineAppsAuthorizedCertificatesListSecurity
 }
 
 type AppengineAppsAuthorizedCertificatesListResponse struct {

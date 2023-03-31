@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetGeoIPQueryParams struct {
+type GetGeoIPRequest struct {
 	// Sets the format of the API response. JSON is the default format.
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// Your API Key. Each user has a unique API Key that can be used to access the API functions. If you don't have an account yet, please create new account first.
@@ -15,10 +15,6 @@ type GetGeoIPQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The modules you want to use of the request. It's a CSV (Comma Separated Values)
 	Params *string `queryParam:"style=form,explode=true,name=params"`
-}
-
-type GetGeoIPRequest struct {
-	QueryParams GetGeoIPQueryParams
 }
 
 type GetGeoIPResponse struct {

@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type GetAlmawsV1TaskListsRequestedResourcesQueryParams struct {
+type GetAlmawsV1TaskListsRequestedResourcesRequest struct {
 	// The circulation desk where the action is being performed. Mandatory.
 	CircDesk string `queryParam:"style=form,explode=true,name=circ_desk"`
 	// The order direction in which to retrieve the results. Optional.
@@ -31,10 +31,6 @@ type GetAlmawsV1TaskListsRequestedResourcesQueryParams struct {
 	Printed *string `queryParam:"style=form,explode=true,name=printed"`
 	// Show reported results: Y/N. Optional.
 	Reported *string `queryParam:"style=form,explode=true,name=reported"`
-}
-
-type GetAlmawsV1TaskListsRequestedResourcesRequest struct {
-	QueryParams GetAlmawsV1TaskListsRequestedResourcesQueryParams
 }
 
 type GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopyBaseStatus struct {

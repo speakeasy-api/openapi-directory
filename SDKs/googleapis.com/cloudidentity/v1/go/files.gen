@@ -60,7 +60,6 @@ pkg/models/shared/listuserinvitationsresponse.go
 pkg/models/shared/userinvitation.go
 pkg/models/shared/googleappscloudidentitydevicesv1device.go
 pkg/models/shared/googleappscloudidentitydevicesv1androidattributes.go
-pkg/models/shared/security.go
 pkg/models/shared/googleappscloudidentitydevicesv1approvedeviceuserrequest.go
 pkg/models/shared/googleappscloudidentitydevicesv1blockdeviceuserrequest.go
 pkg/models/shared/googleappscloudidentitydevicesv1cancelwipedeviceuserrequest.go

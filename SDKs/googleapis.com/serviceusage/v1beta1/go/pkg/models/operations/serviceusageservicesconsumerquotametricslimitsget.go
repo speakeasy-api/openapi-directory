@@ -10,23 +10,18 @@ import (
 )
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurity struct {
 	Option1 *ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurityOption1 `security:"option"`
 	Option2 *ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurityOption2 `security:"option"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsLimitsGetPathParams struct {
-	// The resource name of the quota limit. Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // ServiceusageServicesConsumerQuotaMetricsLimitsGetViewEnum - Specifies the level of detail for quota information in the response.
@@ -56,7 +51,7 @@ func (e *ServiceusageServicesConsumerQuotaMetricsLimitsGetViewEnum) UnmarshalJSO
 	}
 }
 
-type ServiceusageServicesConsumerQuotaMetricsLimitsGetQueryParams struct {
+type ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,6 +64,8 @@ type ServiceusageServicesConsumerQuotaMetricsLimitsGetQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The resource name of the quota limit. Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -81,12 +78,6 @@ type ServiceusageServicesConsumerQuotaMetricsLimitsGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies the level of detail for quota information in the response.
 	View *ServiceusageServicesConsumerQuotaMetricsLimitsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest struct {
-	PathParams  ServiceusageServicesConsumerQuotaMetricsLimitsGetPathParams
-	QueryParams ServiceusageServicesConsumerQuotaMetricsLimitsGetQueryParams
-	Security    ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurity
 }
 
 type ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse struct {

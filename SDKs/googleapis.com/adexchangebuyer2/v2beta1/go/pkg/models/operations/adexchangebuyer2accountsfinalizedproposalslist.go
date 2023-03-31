@@ -10,13 +10,8 @@ import (
 )
 
 type Adexchangebuyer2AccountsFinalizedProposalsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type Adexchangebuyer2AccountsFinalizedProposalsListPathParams struct {
-	// Account ID of the buyer.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum - Syntax the filter is written in. Current implementation defaults to PQL but in the future it will be LIST_FILTER.
@@ -46,11 +41,13 @@ func (e *Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum) Unmarsh
 	}
 }
 
-type Adexchangebuyer2AccountsFinalizedProposalsListQueryParams struct {
+type Adexchangebuyer2AccountsFinalizedProposalsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Account ID of the buyer.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -77,12 +74,6 @@ type Adexchangebuyer2AccountsFinalizedProposalsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsFinalizedProposalsListRequest struct {
-	PathParams  Adexchangebuyer2AccountsFinalizedProposalsListPathParams
-	QueryParams Adexchangebuyer2AccountsFinalizedProposalsListQueryParams
-	Security    Adexchangebuyer2AccountsFinalizedProposalsListSecurity
 }
 
 type Adexchangebuyer2AccountsFinalizedProposalsListResponse struct {

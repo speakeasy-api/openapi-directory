@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivityDeleteThreadSubscriptionPathParams struct {
+type ActivityDeleteThreadSubscriptionRequest struct {
 	// The unique identifier of the pull request thread.
 	ThreadID int64 `pathParam:"style=simple,explode=false,name=thread_id"`
-}
-
-type ActivityDeleteThreadSubscriptionRequest struct {
-	PathParams ActivityDeleteThreadSubscriptionPathParams
 }
 
 type ActivityDeleteThreadSubscriptionResponse struct {

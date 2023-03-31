@@ -10,12 +10,8 @@ import (
 )
 
 type UpdateProductModuleSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateProductModulePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the Product Module. Vendor can assign this number when creating a Product Module or let NetLicensing generate one. Read-only after creation of the first Licensee for the Product.
-	ProductModuleNumber string `pathParam:"style=simple,explode=false,name=productModuleNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateProductModuleRequestBodyLicenseTemplateEnum string
@@ -86,9 +82,9 @@ type UpdateProductModuleRequestBody struct {
 }
 
 type UpdateProductModuleRequest struct {
-	PathParams UpdateProductModulePathParams
-	Request    *UpdateProductModuleRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateProductModuleSecurity
+	RequestBody *UpdateProductModuleRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Unique number (across all Products of a Vendor) that identifies the Product Module. Vendor can assign this number when creating a Product Module or let NetLicensing generate one. Read-only after creation of the first Licensee for the Product.
+	ProductModuleNumber string `pathParam:"style=simple,explode=false,name=productModuleNumber"`
 }
 
 type UpdateProductModuleResponse struct {

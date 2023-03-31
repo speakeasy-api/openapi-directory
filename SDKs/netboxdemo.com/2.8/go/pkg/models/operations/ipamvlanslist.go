@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVlansListQueryParams struct {
+type IpamVlansListRequest struct {
 	Created        *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string `queryParam:"style=form,explode=true,name=created__lte"`
@@ -69,10 +69,6 @@ type IpamVlansListQueryParams struct {
 	VidLt          *string `queryParam:"style=form,explode=true,name=vid__lt"`
 	VidLte         *string `queryParam:"style=form,explode=true,name=vid__lte"`
 	VidN           *string `queryParam:"style=form,explode=true,name=vid__n"`
-}
-
-type IpamVlansListRequest struct {
-	QueryParams IpamVlansListQueryParams
 }
 
 type IpamVlansList200ApplicationJSON struct {

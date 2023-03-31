@@ -8,13 +8,7 @@ import (
 )
 
 type SubclassificationBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SubclassificationBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchFirstLastNameGeoIn `request:"mediaType=application/json"`
-	Security SubclassificationBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type SubclassificationBatchResponse struct {

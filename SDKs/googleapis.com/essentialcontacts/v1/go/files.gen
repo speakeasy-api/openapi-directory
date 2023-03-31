@@ -23,7 +23,6 @@ pkg/models/shared/googlecloudessentialcontactsv1computecontactsresponse.go
 pkg/models/shared/googlecloudessentialcontactsv1contact.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudessentialcontactsv1listcontactsresponse.go
 pkg/models/shared/googlecloudessentialcontactsv1sendtestmessagerequest.go
 USAGE.md

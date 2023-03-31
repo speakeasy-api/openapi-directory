@@ -8,17 +8,12 @@ import (
 )
 
 type GetV2EmployeesIDSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetV2EmployeesIDPathParams struct {
-	// UUID for the employee that was requested.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetV2EmployeesIDRequest struct {
-	PathParams GetV2EmployeesIDPathParams
-	Security   GetV2EmployeesIDSecurity
+	// UUID for the employee that was requested.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetV2EmployeesIDResponse struct {

@@ -8,13 +8,8 @@ import (
 )
 
 type PostV01BulkCallSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostV01BulkCallRequest struct {
-	// POST parameters
-	Request  *shared.BulkCallParameters `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PostV01BulkCallSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostV01BulkCallResponse struct {

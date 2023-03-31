@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStatusPathParams struct {
-	// The ID of the shopper to retrieve. Must agree with the shopper id on the token or header, if present
-	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
-}
-
-type GetStatusQueryParams struct {
+type GetStatusRequest struct {
 	// The client IP of the user who originated the request leading to this call.
 	AuditClientIP string `queryParam:"style=form,explode=true,name=auditClientIp"`
-}
-
-type GetStatusRequest struct {
-	PathParams  GetStatusPathParams
-	QueryParams GetStatusQueryParams
+	// The ID of the shopper to retrieve. Must agree with the shopper id on the token or header, if present
+	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
 }
 
 type GetStatusResponse struct {

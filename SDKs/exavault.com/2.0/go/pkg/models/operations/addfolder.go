@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddFolderHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type AddFolderAddFolderRequestBody struct {
 	// Name of the folder to create. Required if **path** is not used
 	Name *string `json:"name,omitempty"`
@@ -24,8 +17,11 @@ type AddFolderAddFolderRequestBody struct {
 }
 
 type AddFolderRequest struct {
-	Headers AddFolderHeaders
-	Request *AddFolderAddFolderRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddFolderAddFolderRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddFolderResponse struct {

@@ -34,14 +34,14 @@ func newConnectivityEvents(defaultClient, securityClient HTTPClient, serverURL, 
 // List the wireless connectivity events for a client within a network in the timespan.
 func (s *connectivityEvents) GetNetworkWirelessClientConnectivityEvents(ctx context.Context, request operations.GetNetworkWirelessClientConnectivityEventsRequest) (*operations.GetNetworkWirelessClientConnectivityEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/clients/{clientId}/connectivityEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/clients/{clientId}/connectivityEvents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

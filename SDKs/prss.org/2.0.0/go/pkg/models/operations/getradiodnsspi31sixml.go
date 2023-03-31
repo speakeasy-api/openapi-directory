@@ -13,10 +13,6 @@ var GetRadiodnsSpi31SIXMLServerList = []string{
 	"https://radiodnsdev.mgmt.prss.org",
 }
 
-type GetRadiodnsSpi31SIXMLRequest struct {
-	ServerURL *string
-}
-
 type GetRadiodnsSpi31SIXMLResponse struct {
 	ContentType string
 	StatusCode  int

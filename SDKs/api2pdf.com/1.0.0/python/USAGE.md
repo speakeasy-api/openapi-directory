@@ -3,24 +3,20 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        header_api_key=shared.SchemeHeaderAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        header_api_key="YOUR_API_KEY_HERE",
+    ),
 )
-    
-req = operations.ChromeFromHTMLPostRequest(
-    request=shared.ChromeHTMLToPdfRequest(
-        file_name="in",
-        html="quia",
-        inline_pdf=False,
-        options=shared.ChromeAdvancedOptions(
-            landscape="quia",
-            print_background=True,
-        ),
+
+
+req = shared.ChromeHTMLToPdfRequest(
+    file_name="test.pdf",
+    html="<p>Hello World</p>",
+    inline_pdf=True,
+    options=shared.ChromeAdvancedOptions(
+        landscape="true",
+        print_background=False,
     ),
 )
     

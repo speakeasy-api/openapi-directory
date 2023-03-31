@@ -34,7 +34,7 @@ func newMtu(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Return the MTU configuration
 func (s *mtu) GetNetworkSwitchMtu(ctx context.Context, request operations.GetNetworkSwitchMtuRequest) (*operations.GetNetworkSwitchMtuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *mtu) GetNetworkSwitchMtu(ctx context.Context, request operations.GetNet
 // Update the MTU configuration
 func (s *mtu) UpdateNetworkSwitchMtu(ctx context.Context, request operations.UpdateNetworkSwitchMtuRequest) (*operations.UpdateNetworkSwitchMtuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/mtu", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

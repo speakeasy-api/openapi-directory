@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetActivityCommentsPathParams struct {
+type GetActivityCommentsRequest struct {
 	// Activity ID
 	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type GetActivityCommentsRequest struct {
-	PathParams GetActivityCommentsPathParams
 }
 
 type GetActivityCommentsResponse struct {

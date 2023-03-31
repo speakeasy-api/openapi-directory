@@ -8,20 +8,14 @@ import (
 )
 
 type CloudtasksProjectsLocationsQueuesTasksBufferSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudtasksProjectsLocationsQueuesTasksBufferPathParams struct {
-	// Required. The parent queue name. For example: projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
-	Queue string `pathParam:"style=simple,explode=false,name=queue"`
-	// Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the task.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type CloudtasksProjectsLocationsQueuesTasksBufferQueryParams struct {
+type CloudtasksProjectsLocationsQueuesTasksBufferRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv       *shared.XgafvEnum         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	BufferTaskRequest *shared.BufferTaskRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,19 +30,16 @@ type CloudtasksProjectsLocationsQueuesTasksBufferQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Required. The parent queue name. For example: projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+	Queue string `pathParam:"style=simple,explode=false,name=queue"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the task.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudtasksProjectsLocationsQueuesTasksBufferRequest struct {
-	PathParams  CloudtasksProjectsLocationsQueuesTasksBufferPathParams
-	QueryParams CloudtasksProjectsLocationsQueuesTasksBufferQueryParams
-	Request     *shared.BufferTaskRequest `request:"mediaType=application/json"`
-	Security    CloudtasksProjectsLocationsQueuesTasksBufferSecurity
 }
 
 type CloudtasksProjectsLocationsQueuesTasksBufferResponse struct {

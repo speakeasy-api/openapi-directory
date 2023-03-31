@@ -3,23 +3,19 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    )
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
 )
-    
-req = operations.CreateConversationRequest(
-    request=operations.CreateConversationRequestBody(
-        display_name="repellendus",
-        image_url="minima",
-        name="consequatur",
-        properties=shared.ConversationProperties(
-            ttl=17.200001,
-        ),
+
+
+req = operations.CreateConversationRequestBody(
+    display_name="Customer Chat",
+    image_url="https://example.com/image.png",
+    name="customer_chat",
+    properties=shared.ConversationProperties(
+        ttl=60,
     ),
 )
     

@@ -36,7 +36,6 @@ pkg/models/operations/servicenetworkingservicessearchrange.go
 pkg/models/operations/servicenetworkingservicesvalidate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
 pkg/models/shared/addsubnetworkrequest.go

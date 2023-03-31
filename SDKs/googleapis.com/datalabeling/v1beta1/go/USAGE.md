@@ -14,57 +14,53 @@ func main() {
     s := sdk.New()
 
     req := operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest{
-        Security: operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DatalabelingProjectsAnnotationSpecSetsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.DatalabelingProjectsAnnotationSpecSetsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest{
+        DollarXgafv: "2",
+        GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest: &shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest{
             AnnotationSpecSet: &shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet{
                 AnnotationSpecs: []shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "iure",
-                        DisplayName: "magnam",
-                        Index: 891773,
+                        Description: "distinctio",
+                        DisplayName: "quibusdam",
+                        Index: 602763,
                     },
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "ipsa",
-                        DisplayName: "delectus",
-                        Index: 272656,
+                        Description: "nulla",
+                        DisplayName: "corrupti",
+                        Index: 847252,
+                    },
+                    shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
+                        Description: "vel",
+                        DisplayName: "error",
+                        Index: 645894,
                     },
                 },
                 BlockingResources: []string{
-                    "molestiae",
-                    "minus",
+                    "iure",
+                    "magnam",
                 },
-                Description: "placeat",
-                DisplayName: "voluptatum",
-                Name: "iusto",
+                Description: "debitis",
+                DisplayName: "ipsa",
+                Name: "delectus",
             },
         },
+        AccessToken: "tempora",
+        Alt: "media",
+        Callback: "molestiae",
+        Fields: "minus",
+        Key: "placeat",
+        OauthToken: "voluptatum",
+        Parent: "iusto",
+        PrettyPrint: false,
+        QuotaUser: "excepturi",
+        UploadType: "nisi",
+        UploadProtocol: "recusandae",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatalabelingProjectsAnnotationSpecSetsCreate(ctx, req)
+    res, err := s.Projects.DatalabelingProjectsAnnotationSpecSetsCreate(ctx, req, operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

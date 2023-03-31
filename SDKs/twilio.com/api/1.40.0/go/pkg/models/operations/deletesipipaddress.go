@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSipIPAddressServerList = []string{
@@ -12,22 +11,17 @@ var DeleteSipIPAddressServerList = []string{
 }
 
 type DeleteSipIPAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSipIPAddressPathParams struct {
+type DeleteSipIPAddressRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The IpAccessControlList Sid that identifies the IpAddress resources to delete.
 	IPAccessControlListSid string `pathParam:"style=simple,explode=false,name=IpAccessControlListSid"`
 	// A 34 character string that uniquely identifies the resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSipIPAddressRequest struct {
-	PathParams DeleteSipIPAddressPathParams
-	Security   DeleteSipIPAddressSecurity
-	ServerURL  *string
 }
 
 type DeleteSipIPAddressResponse struct {

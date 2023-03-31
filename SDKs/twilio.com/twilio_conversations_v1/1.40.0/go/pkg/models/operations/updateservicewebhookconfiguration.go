@@ -12,12 +12,8 @@ var UpdateServiceWebhookConfigurationServerList = []string{
 }
 
 type UpdateServiceWebhookConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceWebhookConfigurationPathParams struct {
-	// The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest struct {
@@ -32,10 +28,9 @@ type UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest s
 }
 
 type UpdateServiceWebhookConfigurationRequest struct {
-	PathParams UpdateServiceWebhookConfigurationPathParams
-	Request    *UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceWebhookConfigurationSecurity
-	ServerURL  *string
+	// The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.
+	ChatServiceSid string                                                                     `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	RequestBody    *UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateServiceWebhookConfigurationResponse struct {

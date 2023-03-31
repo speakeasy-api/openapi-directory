@@ -34,15 +34,14 @@ pkg/models/operations/gkebackupprojectslocationsrestoreplansrestoresvolumerestor
 pkg/models/operations/gkebackupprojectslocationsrestoreplansrestoresvolumerestorestestiampermissions.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/backup.go
 pkg/models/shared/namespaces.go
 pkg/models/shared/namespacednames.go
 pkg/models/shared/namespacedname.go
 pkg/models/shared/encryptionkey.go
 pkg/models/shared/clustermetadata.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listbackupsresponse.go
 pkg/models/shared/listvolumebackupsresponse.go
 pkg/models/shared/volumebackup.go

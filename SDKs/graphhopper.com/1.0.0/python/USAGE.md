@@ -3,60 +3,56 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AsyncClusteringProblemRequest(
-    request=shared.ClusterRequest(
-        configuration=shared.ClusterConfiguration(
-            clustering=shared.ClusterConfigurationClustering(
-                max_quantity=59.099998,
-                min_quantity=79.099998,
-                num_clusters=14.100000,
-            ),
-            response_type="nesciunt",
-            routing=shared.ClusterConfigurationRouting(
-                cost_per_meter=84.099998,
-                cost_per_second=47.200001,
-                profile="voluptatem",
-            ),
-        ),
-        customers=[
-            shared.ClusterCustomer(
-                address=shared.ClusterCustomerAddress(
-                    lat=43.200001,
-                    lon=96.199997,
-                    street_hint="quis",
-                ),
-                id="laborum",
-                quantity=43.099998,
-            ),
-            shared.ClusterCustomer(
-                address=shared.ClusterCustomerAddress(
-                    lat=32.099998,
-                    lon=7.200000,
-                    street_hint="atque",
-                ),
-                id="quo",
-                quantity=34.099998,
-            ),
-            shared.ClusterCustomer(
-                address=shared.ClusterCustomerAddress(
-                    lat=67.099998,
-                    lon=52.099998,
-                    street_hint="aut",
-                ),
-                id="et",
-                quantity=8.100000,
-            ),
-        ],
+        api_key="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = shared.ClusterRequest(
+    configuration=shared.ClusterConfiguration(
+        clustering=shared.ClusterConfigurationClustering(
+            max_quantity=50,
+            min_quantity=30,
+            num_clusters=10,
+        ),
+        response_type="json",
+        routing=shared.ClusterConfigurationRouting(
+            cost_per_meter=5488.14,
+            cost_per_second=1,
+            profile="car",
+        ),
+    ),
+    customers=[
+        shared.ClusterCustomer(
+            address=shared.ClusterCustomerAddress(
+                lat=48.118434,
+                lon=11.53941,
+                street_hint="Lindenschmitstraße 52",
+            ),
+            id="GraphHopper GmbH",
+            quantity=10,
+        ),
+        shared.ClusterCustomer(
+            address=shared.ClusterCustomerAddress(
+                lat=48.118434,
+                lon=11.53941,
+                street_hint="Lindenschmitstraße 52",
+            ),
+            id="GraphHopper GmbH",
+            quantity=10,
+        ),
+        shared.ClusterCustomer(
+            address=shared.ClusterCustomerAddress(
+                lat=48.118434,
+                lon=11.53941,
+                street_hint="Lindenschmitstraße 52",
+            ),
+            id="GraphHopper GmbH",
+            quantity=10,
+        ),
+    ],
 )
     
 res = s.cluster_api.async_clustering_problem(req)

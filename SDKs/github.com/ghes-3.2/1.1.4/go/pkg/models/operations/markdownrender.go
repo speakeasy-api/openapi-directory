@@ -41,10 +41,6 @@ type MarkdownRenderRequestBody struct {
 	Text string `json:"text"`
 }
 
-type MarkdownRenderRequest struct {
-	Request MarkdownRenderRequestBody `request:"mediaType=application/json"`
-}
-
 type MarkdownRenderResponse struct {
 	ContentType string
 	Headers     map[string][]string

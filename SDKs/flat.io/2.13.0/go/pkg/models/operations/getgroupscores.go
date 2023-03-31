@@ -8,24 +8,15 @@ import (
 )
 
 type GetGroupScoresSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetGroupScoresPathParams struct {
-	// Unique identifier of a Flat group
-	//
-	Group string `pathParam:"style=simple,explode=false,name=group"`
-}
-
-type GetGroupScoresQueryParams struct {
-	// Filter the score forked from the score id `parent`
-	Parent *string `queryParam:"style=form,explode=true,name=parent"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetGroupScoresRequest struct {
-	PathParams  GetGroupScoresPathParams
-	QueryParams GetGroupScoresQueryParams
-	Security    GetGroupScoresSecurity
+	// Unique identifier of a Flat group
+	//
+	Group string `pathParam:"style=simple,explode=false,name=group"`
+	// Filter the score forked from the score id `parent`
+	Parent *string `queryParam:"style=form,explode=true,name=parent"`
 }
 
 type GetGroupScoresResponse struct {

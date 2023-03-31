@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerOutletsTracePathParams struct {
+type DcimPowerOutletsTraceRequest struct {
 	// A unique integer value identifying this power outlet.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerOutletsTraceRequest struct {
-	PathParams DcimPowerOutletsTracePathParams
 }
 
 type DcimPowerOutletsTraceResponse struct {

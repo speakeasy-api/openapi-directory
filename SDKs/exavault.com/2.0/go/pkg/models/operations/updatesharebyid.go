@@ -8,18 +8,6 @@ import (
 	"time"
 )
 
-type UpdateShareByIDPathParams struct {
-	// ID of the share entry
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateShareByIDHeaders struct {
-	// Access Token
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type UpdateShareByIDUpdateShareRequestBodyRecipients struct {
 	// Email address of person you are inviting to the share
 	Email *string `json:"email,omitempty"`
@@ -71,9 +59,13 @@ type UpdateShareByIDUpdateShareRequestBody struct {
 }
 
 type UpdateShareByIDRequest struct {
-	PathParams UpdateShareByIDPathParams
-	Headers    UpdateShareByIDHeaders
-	Request    UpdateShareByIDUpdateShareRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateShareByIDUpdateShareRequestBody `request:"mediaType=application/json"`
+	// Access Token
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// ID of the share entry
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateShareByIDResponse struct {

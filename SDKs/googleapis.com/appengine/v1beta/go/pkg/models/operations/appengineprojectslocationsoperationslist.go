@@ -8,18 +8,18 @@ import (
 )
 
 type AppengineProjectsLocationsOperationsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsOperationsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsOperationsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineProjectsLocationsOperationsListSecurity struct {
@@ -28,14 +28,7 @@ type AppengineProjectsLocationsOperationsListSecurity struct {
 	Option3 *AppengineProjectsLocationsOperationsListSecurityOption3 `security:"option"`
 }
 
-type AppengineProjectsLocationsOperationsListPathParams struct {
-	// Part of `name`. See documentation of `projectsId`.
-	LocationsID string `pathParam:"style=simple,explode=false,name=locationsId"`
-	// Part of `name`. The name of the operation's parent resource.
-	ProjectsID string `pathParam:"style=simple,explode=false,name=projectsId"`
-}
-
-type AppengineProjectsLocationsOperationsListQueryParams struct {
+type AppengineProjectsLocationsOperationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,6 +43,8 @@ type AppengineProjectsLocationsOperationsListQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Part of `name`. See documentation of `projectsId`.
+	LocationsID string `pathParam:"style=simple,explode=false,name=locationsId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The standard list page size.
@@ -58,18 +53,14 @@ type AppengineProjectsLocationsOperationsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Part of `name`. The name of the operation's parent resource.
+	ProjectsID string `pathParam:"style=simple,explode=false,name=projectsId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineProjectsLocationsOperationsListRequest struct {
-	PathParams  AppengineProjectsLocationsOperationsListPathParams
-	QueryParams AppengineProjectsLocationsOperationsListQueryParams
-	Security    AppengineProjectsLocationsOperationsListSecurity
 }
 
 type AppengineProjectsLocationsOperationsListResponse struct {

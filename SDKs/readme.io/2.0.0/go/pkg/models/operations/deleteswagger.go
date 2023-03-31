@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSwaggerSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteSwaggerPathParams struct {
-	// ID of swagger the file
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteSwaggerRequest struct {
-	PathParams DeleteSwaggerPathParams
-	Security   DeleteSwaggerSecurity
+	// ID of swagger the file
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteSwaggerResponse struct {

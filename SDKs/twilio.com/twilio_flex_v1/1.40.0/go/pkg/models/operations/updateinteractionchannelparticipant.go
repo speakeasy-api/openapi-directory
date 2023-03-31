@@ -12,16 +12,8 @@ var UpdateInteractionChannelParticipantServerList = []string{
 }
 
 type UpdateInteractionChannelParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateInteractionChannelParticipantPathParams struct {
-	// The Channel Sid for this Participant.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The Interaction Sid for this channel.
-	InteractionSid string `pathParam:"style=simple,explode=false,name=InteractionSid"`
-	// The unique string created by Twilio to identify an Interaction Channel resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest struct {
@@ -29,10 +21,13 @@ type UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantReque
 }
 
 type UpdateInteractionChannelParticipantRequest struct {
-	PathParams UpdateInteractionChannelParticipantPathParams
-	Request    *UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateInteractionChannelParticipantSecurity
-	ServerURL  *string
+	// The Channel Sid for this Participant.
+	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	// The Interaction Sid for this channel.
+	InteractionSid string                                                                         `pathParam:"style=simple,explode=false,name=InteractionSid"`
+	RequestBody    *UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string created by Twilio to identify an Interaction Channel resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateInteractionChannelParticipantResponse struct {

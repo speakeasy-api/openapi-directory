@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UserAssistantsDeletePathParams struct {
+type UserAssistantsDeleteRequest struct {
 	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UserAssistantsDeleteRequest struct {
-	PathParams UserAssistantsDeletePathParams
 }
 
 type UserAssistantsDeleteResponse struct {

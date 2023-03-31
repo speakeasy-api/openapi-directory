@@ -60,7 +60,7 @@ func (e *PlayerSeasonSplitStatsSplitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayerSeasonSplitStatsPathParams struct {
+type PlayerSeasonSplitStatsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerSeasonSplitStatsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
@@ -68,10 +68,6 @@ type PlayerSeasonSplitStatsPathParams struct {
 	Season string `pathParam:"style=simple,explode=false,name=season"`
 	// The desired split of stats. Currently, we support vs. Left/Right/Switch handed pitchers/hitters. Possible values are: <code>L</code>, <code>R</code> and <code>S</code>
 	Split PlayerSeasonSplitStatsSplitEnum `pathParam:"style=simple,explode=false,name=split"`
-}
-
-type PlayerSeasonSplitStatsRequest struct {
-	PathParams PlayerSeasonSplitStatsPathParams
 }
 
 type PlayerSeasonSplitStatsResponse struct {

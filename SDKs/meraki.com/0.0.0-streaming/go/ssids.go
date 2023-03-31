@@ -34,7 +34,7 @@ func newSSIDs(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Return the SSID statuses of an access point
 func (s *ssiDs) GetNetworkDeviceWirelessStatus(ctx context.Context, request operations.GetNetworkDeviceWirelessStatusRequest) (*operations.GetNetworkDeviceWirelessStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/wireless/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/wireless/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *ssiDs) GetNetworkDeviceWirelessStatus(ctx context.Context, request oper
 // Return a single SSID
 func (s *ssiDs) GetNetworkSsid(ctx context.Context, request operations.GetNetworkSsidRequest) (*operations.GetNetworkSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +124,7 @@ func (s *ssiDs) GetNetworkSsid(ctx context.Context, request operations.GetNetwor
 // List the SSIDs in a network. Supports networks with access points or wireless-enabled security appliances and teleworker gateways.
 func (s *ssiDs) GetNetworkSsids(ctx context.Context, request operations.GetNetworkSsidsRequest) (*operations.GetNetworkSsidsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,9 +169,9 @@ func (s *ssiDs) GetNetworkSsids(ctx context.Context, request operations.GetNetwo
 // Update the attributes of an SSID
 func (s *ssiDs) UpdateNetworkSsid(ctx context.Context, request operations.UpdateNetworkSsidRequest) (*operations.UpdateNetworkSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

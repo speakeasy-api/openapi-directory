@@ -34,9 +34,9 @@ func newRollbacks(defaultClient, securityClient HTTPClient, serverURL, language,
 // Rollback a Firmware Upgrade For A Network
 func (s *rollbacks) CreateNetworkFirmwareUpgradesRollback(ctx context.Context, request operations.CreateNetworkFirmwareUpgradesRollbackRequest) (*operations.CreateNetworkFirmwareUpgradesRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/rollbacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firmwareUpgrades/rollbacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

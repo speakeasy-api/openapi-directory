@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ReposGetCodeFrequencyStatsPathParams struct {
+type ReposGetCodeFrequencyStatsRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetCodeFrequencyStatsRequest struct {
-	PathParams ReposGetCodeFrequencyStatsPathParams
 }
 
 type ReposGetCodeFrequencyStatsResponse struct {

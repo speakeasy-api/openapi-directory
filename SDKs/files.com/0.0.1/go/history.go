@@ -44,7 +44,7 @@ func (s *history) HistoryList(ctx context.Context, request operations.HistoryLis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,14 +105,14 @@ func (s *history) HistoryList(ctx context.Context, request operations.HistoryLis
 // List history for specific file.
 func (s *history) HistoryListForFile(ctx context.Context, request operations.HistoryListForFileRequest) (*operations.HistoryListForFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/history/files/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -173,14 +173,14 @@ func (s *history) HistoryListForFile(ctx context.Context, request operations.His
 // List history for specific folder.
 func (s *history) HistoryListForFolder(ctx context.Context, request operations.HistoryListForFolderRequest) (*operations.HistoryListForFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/folders/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/history/folders/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -241,14 +241,14 @@ func (s *history) HistoryListForFolder(ctx context.Context, request operations.H
 // List history for specific user.
 func (s *history) HistoryListForUser(ctx context.Context, request operations.HistoryListForUserRequest) (*operations.HistoryListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/history/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -316,7 +316,7 @@ func (s *history) HistoryListLogins(ctx context.Context, request operations.Hist
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

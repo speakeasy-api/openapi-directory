@@ -12,22 +12,17 @@ var FetchSipIPAccessControlListMappingServerList = []string{
 }
 
 type FetchSipIPAccessControlListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSipIPAccessControlListMappingPathParams struct {
+type FetchSipIPAccessControlListMappingRequest struct {
 	// The unique id of the Account that is responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// A 34 character string that uniquely identifies the SIP domain.
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// A 34 character string that uniquely identifies the resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSipIPAccessControlListMappingRequest struct {
-	PathParams FetchSipIPAccessControlListMappingPathParams
-	Security   FetchSipIPAccessControlListMappingSecurity
-	ServerURL  *string
 }
 
 type FetchSipIPAccessControlListMappingResponse struct {

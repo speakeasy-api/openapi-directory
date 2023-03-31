@@ -87,7 +87,7 @@ func (s *commission) GetCommissions(ctx context.Context) (*operations.GetCommiss
 }
 
 // GetCommissionsByFilter - Returns a commission list of current client.
-func (s *commission) GetCommissionsByFilter(ctx context.Context, request operations.GetCommissionsByFilterRequest) (*operations.GetCommissionsByFilterResponse, error) {
+func (s *commission) GetCommissionsByFilter(ctx context.Context, request shared.ReportFilter) (*operations.GetCommissionsByFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/commissions"
 

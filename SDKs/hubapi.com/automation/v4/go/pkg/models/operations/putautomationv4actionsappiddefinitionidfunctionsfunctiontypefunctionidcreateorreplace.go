@@ -10,7 +10,7 @@ import (
 )
 
 type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 // PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceFunctionTypeEnum - The type of function. This determines when the function will be called.
@@ -40,21 +40,16 @@ func (e *PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDC
 	}
 }
 
-type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplacePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceRequest struct {
+	// The function source code. Must be valid JavaScript code.
+	RequestBody string `request:"mediaType=text/plain"`
+	AppID       int    `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the custom workflow action.
 	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 	// The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types.
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 	// The type of function. This determines when the function will be called.
 	FunctionType PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceFunctionTypeEnum `pathParam:"style=simple,explode=false,name=functionType"`
-}
-
-type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceRequest struct {
-	PathParams PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplacePathParams
-	// The function source code. Must be valid JavaScript code.
-	Request  string `request:"mediaType=text/plain"`
-	Security PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceSecurity
 }
 
 type PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceResponse struct {

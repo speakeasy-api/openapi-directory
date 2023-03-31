@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForTeamDiscussionCommentLegacyPathParams struct {
-	CommentNumber    int64 `pathParam:"style=simple,explode=false,name=comment_number"`
-	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
-	TeamID           int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 // ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.0/rest/reference/reactions#reaction-types) to add to the team discussion comment.
 type ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum string
 
@@ -63,8 +57,10 @@ type ReactionsCreateForTeamDiscussionCommentLegacyRequestBody struct {
 }
 
 type ReactionsCreateForTeamDiscussionCommentLegacyRequest struct {
-	PathParams ReactionsCreateForTeamDiscussionCommentLegacyPathParams
-	Request    ReactionsCreateForTeamDiscussionCommentLegacyRequestBody `request:"mediaType=application/json"`
+	RequestBody      ReactionsCreateForTeamDiscussionCommentLegacyRequestBody `request:"mediaType=application/json"`
+	CommentNumber    int64                                                    `pathParam:"style=simple,explode=false,name=comment_number"`
+	DiscussionNumber int64                                                    `pathParam:"style=simple,explode=false,name=discussion_number"`
+	TeamID           int64                                                    `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type ReactionsCreateForTeamDiscussionCommentLegacyResponse struct {

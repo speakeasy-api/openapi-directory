@@ -32,11 +32,11 @@ func newAPI(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // CloudtasksAPIQueueUpdate - Update queue list by uploading a queue.yaml file. The queue.yaml file is supplied in the request body as a YAML encoded string. This method was added to support gcloud clients versions before 322.0.0. New clients should use CreateQueue instead of this method.
-func (s *api) CloudtasksAPIQueueUpdate(ctx context.Context, request operations.CloudtasksAPIQueueUpdateRequest) (*operations.CloudtasksAPIQueueUpdateResponse, error) {
+func (s *api) CloudtasksAPIQueueUpdate(ctx context.Context, request operations.CloudtasksAPIQueueUpdateRequest, security operations.CloudtasksAPIQueueUpdateSecurity) (*operations.CloudtasksAPIQueueUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/queue/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HTTPBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *api) CloudtasksAPIQueueUpdate(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

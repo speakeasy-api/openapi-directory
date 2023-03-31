@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutFloatingIpsIDPathParams struct {
-	// ID of the Floating IP
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutFloatingIpsIDUpdateFloatingIPRequest struct {
 	// New Description to set
 	Description *string `json:"description,omitempty"`
@@ -23,8 +18,9 @@ type PutFloatingIpsIDUpdateFloatingIPRequest struct {
 }
 
 type PutFloatingIpsIDRequest struct {
-	PathParams PutFloatingIpsIDPathParams
-	Request    *PutFloatingIpsIDUpdateFloatingIPRequest `request:"mediaType=application/json"`
+	RequestBody *PutFloatingIpsIDUpdateFloatingIPRequest `request:"mediaType=application/json"`
+	// ID of the Floating IP
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutFloatingIpsID200ApplicationJSONFloatingIPDNSPtr struct {

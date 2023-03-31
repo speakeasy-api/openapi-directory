@@ -34,14 +34,14 @@ func newPairSim(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetPairSimJaccardResource - Get pairwise similarity
 func (s *pairSim) GetPairSimJaccardResource(ctx context.Context, request operations.GetPairSimJaccardResourceRequest) (*operations.GetPairSimJaccardResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pair/sim/jaccard/{id1}/{id2}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pair/sim/jaccard/{id1}/{id2}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

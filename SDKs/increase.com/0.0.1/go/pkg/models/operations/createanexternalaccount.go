@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnExternalAccountRequest struct {
-	Request shared.CreateAnExternalAccountParameters `request:"mediaType=application/json"`
-}
-
 type CreateAnExternalAccountDefaultApplicationJSON13StatusEnum string
 
 const (

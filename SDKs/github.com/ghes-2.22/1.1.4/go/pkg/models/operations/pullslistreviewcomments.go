@@ -10,12 +10,6 @@ import (
 	"time"
 )
 
-type PullsListReviewCommentsPathParams struct {
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsListReviewCommentsDirectionEnum - Can be either `asc` or `desc`. Ignored without `sort` parameter.
 type PullsListReviewCommentsDirectionEnum string
 
@@ -40,22 +34,20 @@ func (e *PullsListReviewCommentsDirectionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type PullsListReviewCommentsQueryParams struct {
+type PullsListReviewCommentsRequest struct {
 	// Can be either `asc` or `desc`. Ignored without `sort` parameter.
 	Direction *PullsListReviewCommentsDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Owner     string                                `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
-	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	PerPage    *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
 	// One of `created` (when the repository was starred) or `updated` (when it was last pushed to).
 	Sort *shared.SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type PullsListReviewCommentsRequest struct {
-	PathParams  PullsListReviewCommentsPathParams
-	QueryParams PullsListReviewCommentsQueryParams
 }
 
 type PullsListReviewCommentsResponse struct {

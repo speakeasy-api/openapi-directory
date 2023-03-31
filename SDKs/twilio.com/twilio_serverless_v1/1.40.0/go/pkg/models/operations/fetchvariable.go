@@ -12,22 +12,17 @@ var FetchVariableServerList = []string{
 }
 
 type FetchVariableSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchVariablePathParams struct {
+type FetchVariableRequest struct {
 	// The SID of the Environment with the Variable resource to fetch.
 	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
 	// The SID of the Service to fetch the Variable resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Variable resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchVariableRequest struct {
-	PathParams FetchVariablePathParams
-	Security   FetchVariableSecurity
-	ServerURL  *string
 }
 
 type FetchVariableResponse struct {

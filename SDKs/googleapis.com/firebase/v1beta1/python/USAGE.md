@@ -4,36 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FirebaseAvailableProjectsListRequest(
-    security=operations.FirebaseAvailableProjectsListSecurity(
-        option1=operations.FirebaseAvailableProjectsListSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.FirebaseAvailableProjectsListQueryParams(
-        dollar_xgafv="2",
-        access_token="ut",
-        alt="proto",
-        callback="nesciunt",
-        fields="qui",
-        key="nesciunt",
-        oauth_token="quis",
-        page_size=413522258613888617,
-        page_token="dignissimos",
-        pretty_print=False,
-        quota_user="et",
-        upload_type="repellendus",
-        upload_protocol="et",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.available_projects.firebase_available_projects_list(req)
+res = s.available_projects.firebase_available_projects_list(req, operations.FirebaseAvailableProjectsListSecurity(
+    option1=operations.FirebaseAvailableProjectsListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.list_available_projects_response is not None:
     # handle response

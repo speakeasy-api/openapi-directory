@@ -11,15 +11,6 @@ var FetchDialingPermissionsSettingsServerList = []string{
 	"https://voice.twilio.com",
 }
 
-type FetchDialingPermissionsSettingsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDialingPermissionsSettingsRequest struct {
-	Security  FetchDialingPermissionsSettingsSecurity
-	ServerURL *string
-}
-
 type FetchDialingPermissionsSettingsResponse struct {
 	ContentType string
 	StatusCode  int

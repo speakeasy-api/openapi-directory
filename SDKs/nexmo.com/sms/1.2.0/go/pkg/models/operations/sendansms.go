@@ -35,14 +35,10 @@ func (e *SendAnSmsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SendAnSmsPathParams struct {
+type SendAnSmsRequest struct {
+	NewMessage shared.NewMessage `request:"mediaType=application/x-www-form-urlencoded"`
 	// The format of the response
 	Format SendAnSmsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type SendAnSmsRequest struct {
-	PathParams SendAnSmsPathParams
-	Request    shared.NewMessage `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type SendAnSms200TextXMLType string

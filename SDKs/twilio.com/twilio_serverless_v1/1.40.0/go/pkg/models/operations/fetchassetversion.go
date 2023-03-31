@@ -12,22 +12,17 @@ var FetchAssetVersionServerList = []string{
 }
 
 type FetchAssetVersionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchAssetVersionPathParams struct {
+type FetchAssetVersionRequest struct {
 	// The SID of the Asset resource that is the parent of the Asset Version resource to fetch.
 	AssetSid string `pathParam:"style=simple,explode=false,name=AssetSid"`
 	// The SID of the Service to fetch the Asset Version resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Asset Version resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchAssetVersionRequest struct {
-	PathParams FetchAssetVersionPathParams
-	Security   FetchAssetVersionSecurity
-	ServerURL  *string
 }
 
 type FetchAssetVersionResponse struct {

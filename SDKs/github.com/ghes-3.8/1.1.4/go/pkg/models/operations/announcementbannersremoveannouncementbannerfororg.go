@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AnnouncementBannersRemoveAnnouncementBannerForOrgPathParams struct {
+type AnnouncementBannersRemoveAnnouncementBannerForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type AnnouncementBannersRemoveAnnouncementBannerForOrgRequest struct {
-	PathParams AnnouncementBannersRemoveAnnouncementBannerForOrgPathParams
 }
 
 type AnnouncementBannersRemoveAnnouncementBannerForOrgResponse struct {

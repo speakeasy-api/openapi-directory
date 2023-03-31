@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckVideoForTagPathParams struct {
+type CheckVideoForTagRequest struct {
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 	// The tag word.
 	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
-type CheckVideoForTagRequest struct {
-	PathParams CheckVideoForTagPathParams
 }
 
 type CheckVideoForTagResponse struct {

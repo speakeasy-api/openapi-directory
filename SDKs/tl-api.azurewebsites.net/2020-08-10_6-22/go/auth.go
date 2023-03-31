@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // AuthLogin - Authenticate and provide token for autherizations.
-func (s *auth) AuthLogin(ctx context.Context, request operations.AuthLoginRequest) (*operations.AuthLoginResponse, error) {
+func (s *auth) AuthLogin(ctx context.Context, request shared.LoginDTO) (*operations.AuthLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Auth/login"
 

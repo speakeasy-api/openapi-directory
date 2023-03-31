@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineGetByModePathParams struct {
+type LineGetByModeRequest struct {
 	// A comma-separated list of modes e.g. tube,dlr
 	Modes []string `pathParam:"style=simple,explode=false,name=modes"`
-}
-
-type LineGetByModeRequest struct {
-	PathParams LineGetByModePathParams
 }
 
 type LineGetByModeResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesLanguagesIDJSONPathParams struct {
+type GetResourcesLanguagesIDJSONRequest struct {
 	// The id of the language to look up
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetResourcesLanguagesIDJSONRequest struct {
-	PathParams GetResourcesLanguagesIDJSONPathParams
 }
 
 type GetResourcesLanguagesIDJSONResponse struct {

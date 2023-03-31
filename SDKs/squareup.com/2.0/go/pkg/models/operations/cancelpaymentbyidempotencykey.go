@@ -8,15 +8,7 @@ import (
 )
 
 type CancelPaymentByIdempotencyKeySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CancelPaymentByIdempotencyKeyRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CancelPaymentByIdempotencyKeyRequest `request:"mediaType=application/json"`
-	Security CancelPaymentByIdempotencyKeySecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CancelPaymentByIdempotencyKeyResponse struct {

@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetGlobalWebhookPathParams struct {
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
-type EnterpriseAdminGetGlobalWebhookHeaders struct {
+type EnterpriseAdminGetGlobalWebhookRequest struct {
 	// This API is under preview and subject to change.
 	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type EnterpriseAdminGetGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminGetGlobalWebhookPathParams
-	Headers    EnterpriseAdminGetGlobalWebhookHeaders
+	HookID int64  `pathParam:"style=simple,explode=false,name=hook_id"`
 }
 
 type EnterpriseAdminGetGlobalWebhookResponse struct {

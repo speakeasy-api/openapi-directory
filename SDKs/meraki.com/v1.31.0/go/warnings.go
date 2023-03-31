@@ -34,14 +34,14 @@ func newWarnings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Return the devices that have a Dynamic ARP Inspection warning and their warnings
 func (s *warnings) GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx context.Context, request operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest) (*operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDraftRegistrationsDraftIDInstitutionsPathParams struct {
+type GetDraftRegistrationsDraftIDInstitutionsRequest struct {
 	// The unique identifier of the draft registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
-type GetDraftRegistrationsDraftIDInstitutionsRequest struct {
-	PathParams GetDraftRegistrationsDraftIDInstitutionsPathParams
 }
 
 // GetDraftRegistrationsDraftIDInstitutionsInstitutionAttributes - The properties of the institution entity.

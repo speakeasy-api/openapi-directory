@@ -8,15 +8,7 @@ import (
 )
 
 type SearchCatalogObjectsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SearchCatalogObjectsRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.SearchCatalogObjectsRequest `request:"mediaType=application/json"`
-	Security SearchCatalogObjectsSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SearchCatalogObjectsResponse struct {

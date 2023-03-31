@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/people/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,39 +15,35 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.PeopleContactGroupsBatchGetRequest(
-    security=operations.PeopleContactGroupsBatchGetSecurity(
-        option1=operations.PeopleContactGroupsBatchGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.PeopleContactGroupsBatchGetQueryParams(
-        dollar_xgafv="2",
-        access_token="deserunt",
-        alt="media",
-        callback="voluptas",
-        fields="adipisci",
-        group_fields="sit",
-        key="et",
-        max_members=3864639738060764919,
-        oauth_token="voluptas",
-        pretty_print=True,
-        quota_user="eum",
-        resource_names=[
-            "sed",
-        ],
-        upload_type="hic",
-        upload_protocol="laborum",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    group_fields="nulla",
+    key="corrupti",
+    max_members=847252,
+    oauth_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    resource_names=[
+        "suscipit",
+        "iure",
+        "magnam",
+    ],
+    upload_type="debitis",
+    upload_protocol="ipsa",
 )
     
-res = s.contact_groups.people_contact_groups_batch_get(req)
+res = s.contact_groups.people_contact_groups_batch_get(req, operations.PeopleContactGroupsBatchGetSecurity(
+    option1=operations.PeopleContactGroupsBatchGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.batch_get_contact_groups_response is not None:
     # handle response
@@ -55,9 +51,10 @@ if res.batch_get_contact_groups_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### contactGroups
+
+### contact_groups
 
 * `people_contact_groups_batch_get` - Get a list of contact groups owned by the authenticated user by specifying a list of contact group resource names.
 * `people_contact_groups_create` - Create a new contact group owned by the authenticated user. Created contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
@@ -66,7 +63,7 @@ if res.batch_get_contact_groups_response is not None:
 * `people_contact_groups_members_modify` - Modify the members of a contact group owned by the authenticated user. The only system contact groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts removed.
 * `people_contact_groups_update` - Update the name of an existing contact group owned by the authenticated user. Updated contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 
-### otherContacts
+### other_contacts
 
 * `people_other_contacts_copy_other_contact_to_my_contacts_group` - Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 * `people_other_contacts_list` - List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are typically auto created contacts from interactions. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's other contacts that have changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
@@ -88,7 +85,17 @@ if res.batch_get_contact_groups_response is not None:
 * `people_people_search_directory_people` - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory that match the search query.
 * `people_people_update_contact` - Update contact data for an existing contact person. Any non-contact data will not be modified. Any non-contact data in the person to update will be ignored. All fields specified in the `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is not specified for the contact to be updated or if there is no contact source. The server returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact has changed since its data was read. Clients should get the latest person and merge their updates into the latest person. The server returns a 400 error if `memberships` are being updated and there are no contact group memberships specified on the person. The server returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 * `people_people_update_contact_photo` - Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2ImportsJSONQueryParams struct {
+type GetV2ImportsJSONRequest struct {
 	// IDs of imports to fetch. If a record can't be found, that record won't be returned and your request will be successful
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`
 	// Whether to include total_pages and total_count in the metadata. Defaults to false
@@ -23,10 +23,6 @@ type GetV2ImportsJSONQueryParams struct {
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
 	// ID of users to fetch imports for. Using this filter will return an empty array for non-admin users who request other user's imports
 	UserIds []int64 `queryParam:"style=form,explode=false,name=user_ids"`
-}
-
-type GetV2ImportsJSONRequest struct {
-	QueryParams GetV2ImportsJSONQueryParams
 }
 
 type GetV2ImportsJSONResponse struct {

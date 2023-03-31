@@ -8,13 +8,7 @@ import (
 )
 
 type CreateAccountKeySecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateAccountKeyRequest struct {
-	// key parameters
-	Request  shared.APIKeyOptions `request:"mediaType=application/json"`
-	Security CreateAccountKeySecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateAccountKeyResponse struct {

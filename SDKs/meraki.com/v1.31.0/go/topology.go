@@ -34,7 +34,7 @@ func newTopology(defaultClient, securityClient HTTPClient, serverURL, language, 
 // List the LLDP and CDP information for all discovered devices and connections in a network.
 func (s *topology) GetNetworkTopologyLinkLayer(ctx context.Context, request operations.GetNetworkTopologyLinkLayerRequest) (*operations.GetNetworkTopologyLinkLayerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/topology/linkLayer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/topology/linkLayer", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

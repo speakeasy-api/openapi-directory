@@ -36,6 +36,7 @@ pkg/models/operations/accesscontextmanagerorganizationsgcpuseraccessbindingslist
 pkg/models/operations/accesscontextmanagerorganizationsgcpuseraccessbindingspatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/accesslevel.go
 pkg/models/shared/customlevel.go
 pkg/models/shared/expr.go
@@ -43,9 +44,7 @@ pkg/models/shared/basiclevel.go
 pkg/models/shared/condition.go
 pkg/models/shared/devicepolicy.go
 pkg/models/shared/osconstraint.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listaccesslevelsresponse.go
 pkg/models/shared/replaceaccesslevelsrequest.go
 pkg/models/shared/authorizedorgsdesc.go

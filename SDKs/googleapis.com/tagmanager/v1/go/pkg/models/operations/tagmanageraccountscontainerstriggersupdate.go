@@ -8,28 +8,24 @@ import (
 )
 
 type TagmanagerAccountsContainersTriggersUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TagmanagerAccountsContainersTriggersUpdatePathParams struct {
-	// The GTM Account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The GTM Container ID.
-	ContainerID string `pathParam:"style=simple,explode=false,name=containerId"`
-	// The GTM Trigger ID.
-	TriggerID string `pathParam:"style=simple,explode=false,name=triggerId"`
-}
-
-type TagmanagerAccountsContainersTriggersUpdateQueryParams struct {
+type TagmanagerAccountsContainersTriggersUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Trigger     *shared.Trigger   `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The GTM Account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The GTM Container ID.
+	ContainerID string `pathParam:"style=simple,explode=false,name=containerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// When provided, this fingerprint must match the fingerprint of the trigger in storage.
@@ -42,17 +38,12 @@ type TagmanagerAccountsContainersTriggersUpdateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The GTM Trigger ID.
+	TriggerID string `pathParam:"style=simple,explode=false,name=triggerId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TagmanagerAccountsContainersTriggersUpdateRequest struct {
-	PathParams  TagmanagerAccountsContainersTriggersUpdatePathParams
-	QueryParams TagmanagerAccountsContainersTriggersUpdateQueryParams
-	Request     *shared.Trigger `request:"mediaType=application/json"`
-	Security    TagmanagerAccountsContainersTriggersUpdateSecurity
 }
 
 type TagmanagerAccountsContainersTriggersUpdateResponse struct {

@@ -39,7 +39,7 @@ func newOidc(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // https://docs.github.com/rest/actions/oidc#get-the-customization-template-for-an-oidc-subject-claim-for-an-organization - API method documentation
 func (s *oidc) OidcGetOidcCustomSubTemplateForOrg(ctx context.Context, request operations.OidcGetOidcCustomSubTemplateForOrgRequest) (*operations.OidcGetOidcCustomSubTemplateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/oidc/customization/sub", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/oidc/customization/sub", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,9 +87,9 @@ func (s *oidc) OidcGetOidcCustomSubTemplateForOrg(ctx context.Context, request o
 // https://docs.github.com/rest/actions/oidc#set-the-customization-template-for-an-oidc-subject-claim-for-an-organization - API method documentation
 func (s *oidc) OidcUpdateOidcCustomSubTemplateForOrg(ctx context.Context, request operations.OidcUpdateOidcCustomSubTemplateForOrgRequest) (*operations.OidcUpdateOidcCustomSubTemplateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/oidc/customization/sub", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/oidc/customization/sub", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OidcCustomSub", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -12,24 +12,15 @@ var DeleteConversationServerList = []string{
 }
 
 type DeleteConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteConversationPathParams struct {
-	// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteConversationHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ConversationEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteConversationRequest struct {
-	PathParams DeleteConversationPathParams
-	Headers    DeleteConversationHeaders
-	Security   DeleteConversationSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ConversationEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type DeleteConversationResponse struct {

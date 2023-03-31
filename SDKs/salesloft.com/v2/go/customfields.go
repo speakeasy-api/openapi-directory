@@ -37,7 +37,7 @@ func newCustomFields(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes a custom field.
 func (s *customFields) DeleteV2CustomFieldsIDJSON(ctx context.Context, request operations.DeleteV2CustomFieldsIDJSONRequest) (*operations.DeleteV2CustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *customFields) GetV2CustomFieldsJSON(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,7 +123,7 @@ func (s *customFields) GetV2CustomFieldsJSON(ctx context.Context, request operat
 // Fetches a custom field, by ID only.
 func (s *customFields) GetV2CustomFieldsIDJSON(ctx context.Context, request operations.GetV2CustomFieldsIDJSONRequest) (*operations.GetV2CustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *customFields) GetV2CustomFieldsIDJSON(ctx context.Context, request oper
 
 // PostV2CustomFieldsJSON - Create a custom field
 // Creates a custom field.
-func (s *customFields) PostV2CustomFieldsJSON(ctx context.Context, request operations.PostV2CustomFieldsJSONRequest) (*operations.PostV2CustomFieldsJSONResponse, error) {
+func (s *customFields) PostV2CustomFieldsJSON(ctx context.Context, request operations.PostV2CustomFieldsJSONRequestBody) (*operations.PostV2CustomFieldsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/custom_fields.json"
 
@@ -223,9 +223,9 @@ func (s *customFields) PostV2CustomFieldsJSON(ctx context.Context, request opera
 // Update a custom field.
 func (s *customFields) PutV2CustomFieldsIDJSON(ctx context.Context, request operations.PutV2CustomFieldsIDJSONRequest) (*operations.PutV2CustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

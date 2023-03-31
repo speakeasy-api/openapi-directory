@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolMqttClientSetOnDisconnectPathParams struct {
+type ProtocolMqttClientSetOnDisconnectRequest struct {
 	// Action to take
 	Action string `pathParam:"style=simple,explode=false,name=action"`
 	// Agent to set MQTT config
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolMqttClientSetOnDisconnectRequest struct {
-	PathParams ProtocolMqttClientSetOnDisconnectPathParams
 }
 
 type ProtocolMqttClientSetOnDisconnectResponse struct {

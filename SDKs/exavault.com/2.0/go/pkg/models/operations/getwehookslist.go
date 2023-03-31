@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWehooksListQueryParams struct {
+type GetWehooksListRequest struct {
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 	// List of related record types to include. Valid options are `owningAccount` and `resource`
 	Include *string `queryParam:"style=form,explode=true,name=include"`
 	// Limit of the records list
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Records to skip before returning results.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetWehooksListHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type GetWehooksListRequest struct {
-	QueryParams GetWehooksListQueryParams
-	Headers     GetWehooksListHeaders
 }
 
 type GetWehooksListResponse struct {

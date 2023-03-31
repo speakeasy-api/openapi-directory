@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequisitionByIDPathParams struct {
+type RequisitionByIDRequest struct {
 	// A UUID string identifying this requisition.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RequisitionByIDRequest struct {
-	PathParams RequisitionByIDPathParams
 }
 
 type RequisitionByIDResponse struct {

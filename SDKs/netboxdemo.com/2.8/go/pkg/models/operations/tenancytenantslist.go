@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TenancyTenantsListQueryParams struct {
+type TenancyTenantsListRequest struct {
 	Created        *string `queryParam:"style=form,explode=true,name=created"`
 	CreatedGte     *string `queryParam:"style=form,explode=true,name=created__gte"`
 	CreatedLte     *string `queryParam:"style=form,explode=true,name=created__lte"`
@@ -51,10 +51,6 @@ type TenancyTenantsListQueryParams struct {
 	SlugNisw *string `queryParam:"style=form,explode=true,name=slug__nisw"`
 	Tag      *string `queryParam:"style=form,explode=true,name=tag"`
 	TagN     *string `queryParam:"style=form,explode=true,name=tag__n"`
-}
-
-type TenancyTenantsListRequest struct {
-	QueryParams TenancyTenantsListQueryParams
 }
 
 type TenancyTenantsList200ApplicationJSON struct {

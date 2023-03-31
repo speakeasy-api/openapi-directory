@@ -8,21 +8,16 @@ import (
 )
 
 type PublishInvoiceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PublishInvoicePathParams struct {
-	// The ID of the invoice to publish.
-	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PublishInvoiceRequest struct {
-	PathParams PublishInvoicePathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.PublishInvoiceRequest `request:"mediaType=application/json"`
-	Security PublishInvoiceSecurity
+	PublishInvoiceRequest shared.PublishInvoiceRequest `request:"mediaType=application/json"`
+	// The ID of the invoice to publish.
+	InvoiceID string `pathParam:"style=simple,explode=false,name=invoice_id"`
 }
 
 type PublishInvoiceResponse struct {

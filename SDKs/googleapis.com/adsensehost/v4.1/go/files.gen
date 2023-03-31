@@ -45,7 +45,6 @@ pkg/models/operations/adsensehosturlchannelsinsert.go
 pkg/models/operations/adsensehosturlchannelslist.go
 pkg/models/shared/adclient.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/adclients.go
 pkg/models/shared/adunit.go
 pkg/models/shared/adstyle.go

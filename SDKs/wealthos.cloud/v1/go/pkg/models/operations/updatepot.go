@@ -6,22 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type UpdatePotSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdatePotPathParams struct {
-	// Pot Id
-	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
-}
-
-type UpdatePotHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type UpdatePotUpdateRequestBodyForPotStatusEnum string
@@ -60,10 +49,11 @@ type UpdatePotUpdateRequestBodyForPot struct {
 }
 
 type UpdatePotRequest struct {
-	PathParams UpdatePotPathParams
-	Headers    UpdatePotHeaders
-	Request    UpdatePotUpdateRequestBodyForPot `request:"mediaType=application/json"`
-	Security   UpdatePotSecurity
+	RequestBody UpdatePotUpdateRequestBodyForPot `request:"mediaType=application/json"`
+	// Pot Id
+	PotID string `pathParam:"style=simple,explode=false,name=pot_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // UpdatePot500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

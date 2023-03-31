@@ -8,13 +8,13 @@ import (
 )
 
 type IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurity struct {
@@ -22,12 +22,7 @@ type IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurity struct {
 	Option2 *IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurityOption2 `security:"option"`
 }
 
-type IdentitytoolkitProjectsTenantsInboundSamlConfigsListPathParams struct {
-	// The parent resource name, for example, "projects/my-awesome-project".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IdentitytoolkitProjectsTenantsInboundSamlConfigsListQueryParams struct {
+type IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type IdentitytoolkitProjectsTenantsInboundSamlConfigsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous List request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// The parent resource name, for example, "projects/my-awesome-project".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type IdentitytoolkitProjectsTenantsInboundSamlConfigsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest struct {
-	PathParams  IdentitytoolkitProjectsTenantsInboundSamlConfigsListPathParams
-	QueryParams IdentitytoolkitProjectsTenantsInboundSamlConfigsListQueryParams
-	Security    IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurity
 }
 
 type IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse struct {

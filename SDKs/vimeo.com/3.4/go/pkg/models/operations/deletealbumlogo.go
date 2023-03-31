@@ -8,21 +8,16 @@ import (
 )
 
 type DeleteAlbumLogoSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteAlbumLogoPathParams struct {
+type DeleteAlbumLogoRequest struct {
 	// The ID of the album.
 	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 	// The ID of the custom logo.
 	LogoID float64 `pathParam:"style=simple,explode=false,name=logo_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type DeleteAlbumLogoRequest struct {
-	PathParams DeleteAlbumLogoPathParams
-	Security   DeleteAlbumLogoSecurity
 }
 
 type DeleteAlbumLogoResponse struct {

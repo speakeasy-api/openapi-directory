@@ -46,11 +46,11 @@ func newFees(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // CreateFee - Create Fee
 // This endpoint supports the creation of a single fee deduction from an investor's pot. A sucessful fee creation will result in the creation of a fee transaction and updates to holdings. The system will return the `transaction_id` of the fee transaction.
-func (s *fees) CreateFee(ctx context.Context, request operations.CreateFeeRequest) (*operations.CreateFeeResponse, error) {
+func (s *fees) CreateFee(ctx context.Context, request operations.CreateFeeRequest, security operations.CreateFeeSecurity) (*operations.CreateFeeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/transactions/v1/create/Fees"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -65,9 +65,9 @@ func (s *fees) CreateFee(ctx context.Context, request operations.CreateFeeReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

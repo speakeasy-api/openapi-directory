@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSyslogServersPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSyslogServersRequestBodyServers struct {
 	// The IP address of the syslog server
 	Host string `json:"host"`
@@ -25,8 +21,8 @@ type UpdateNetworkSyslogServersRequestBody struct {
 }
 
 type UpdateNetworkSyslogServersRequest struct {
-	PathParams UpdateNetworkSyslogServersPathParams
-	Request    UpdateNetworkSyslogServersRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkSyslogServersRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSyslogServers200ApplicationJSONServers struct {

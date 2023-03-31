@@ -71,7 +71,7 @@ func (s *stubMappings) DeleteAdminMappings(ctx context.Context) (*operations.Del
 // DeleteAdminMappingsStubMappingID - Delete a stub mapping
 func (s *stubMappings) DeleteAdminMappingsStubMappingID(ctx context.Context, request operations.DeleteAdminMappingsStubMappingIDRequest) (*operations.DeleteAdminMappingsStubMappingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *stubMappings) GetAdminMappings(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -156,7 +156,7 @@ func (s *stubMappings) GetAdminMappings(ctx context.Context, request operations.
 // GetAdminMappingsStubMappingID - Get stub mapping by ID
 func (s *stubMappings) GetAdminMappingsStubMappingID(ctx context.Context, request operations.GetAdminMappingsStubMappingIDRequest) (*operations.GetAdminMappingsStubMappingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -199,7 +199,7 @@ func (s *stubMappings) GetAdminMappingsStubMappingID(ctx context.Context, reques
 }
 
 // PostAdminMappings - Create a new stub mapping
-func (s *stubMappings) PostAdminMappings(ctx context.Context, request operations.PostAdminMappingsRequest) (*operations.PostAdminMappingsResponse, error) {
+func (s *stubMappings) PostAdminMappings(ctx context.Context, request operations.PostAdminMappingsRequestBody) (*operations.PostAdminMappingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/mappings"
 
@@ -250,7 +250,7 @@ func (s *stubMappings) PostAdminMappings(ctx context.Context, request operations
 }
 
 // PostAdminMappingsFindByMetadata - Find stubs by matching on their metadata
-func (s *stubMappings) PostAdminMappingsFindByMetadata(ctx context.Context, request operations.PostAdminMappingsFindByMetadataRequest) (*operations.PostAdminMappingsFindByMetadataResponse, error) {
+func (s *stubMappings) PostAdminMappingsFindByMetadata(ctx context.Context, request operations.PostAdminMappingsFindByMetadataRequestBody) (*operations.PostAdminMappingsFindByMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/mappings/find-by-metadata"
 
@@ -340,7 +340,7 @@ func (s *stubMappings) PostAdminMappingsImport(ctx context.Context) (*operations
 }
 
 // PostAdminMappingsRemoveByMetadata - Delete stub mappings matching metadata
-func (s *stubMappings) PostAdminMappingsRemoveByMetadata(ctx context.Context, request operations.PostAdminMappingsRemoveByMetadataRequest) (*operations.PostAdminMappingsRemoveByMetadataResponse, error) {
+func (s *stubMappings) PostAdminMappingsRemoveByMetadata(ctx context.Context, request operations.PostAdminMappingsRemoveByMetadataRequestBody) (*operations.PostAdminMappingsRemoveByMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/mappings/remove-by-metadata"
 
@@ -456,9 +456,9 @@ func (s *stubMappings) PostAdminMappingsSave(ctx context.Context) (*operations.P
 // PutAdminMappingsStubMappingID - Update a stub mapping
 func (s *stubMappings) PutAdminMappingsStubMappingID(ctx context.Context, request operations.PutAdminMappingsStubMappingIDRequest) (*operations.PutAdminMappingsStubMappingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
 type EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody struct {
 	// List of organization IDs to enable for GitHub Actions.
 	SelectedOrganizationIds []int64 `json:"selected_organization_ids"`
 }
 
 type EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest struct {
-	PathParams EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams
-	Request    EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody `request:"mediaType=application/json"`
+	RequestBody EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody `request:"mediaType=application/json"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 }
 
 type EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse struct {

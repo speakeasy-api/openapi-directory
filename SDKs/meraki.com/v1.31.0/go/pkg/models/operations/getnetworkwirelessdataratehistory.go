@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-type GetNetworkWirelessDataRateHistoryPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkWirelessDataRateHistoryBandEnum - Filter results by band (either '2.4', '5' or '6').
 type GetNetworkWirelessDataRateHistoryBandEnum string
 
@@ -40,7 +36,7 @@ func (e *GetNetworkWirelessDataRateHistoryBandEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetNetworkWirelessDataRateHistoryQueryParams struct {
+type GetNetworkWirelessDataRateHistoryRequest struct {
 	// Filter results by AP tag.
 	ApTag *string `queryParam:"style=form,explode=true,name=apTag"`
 	// Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -51,6 +47,7 @@ type GetNetworkWirelessDataRateHistoryQueryParams struct {
 	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 	// Filter results by device.
 	DeviceSerial *string `queryParam:"style=form,explode=true,name=deviceSerial"`
+	NetworkID    string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 	Resolution *int64 `queryParam:"style=form,explode=true,name=resolution"`
 	// Filter results by SSID number.
@@ -61,11 +58,6 @@ type GetNetworkWirelessDataRateHistoryQueryParams struct {
 	T1 *string `queryParam:"style=form,explode=true,name=t1"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkWirelessDataRateHistoryRequest struct {
-	PathParams  GetNetworkWirelessDataRateHistoryPathParams
-	QueryParams GetNetworkWirelessDataRateHistoryQueryParams
 }
 
 type GetNetworkWirelessDataRateHistory200ApplicationJSON struct {

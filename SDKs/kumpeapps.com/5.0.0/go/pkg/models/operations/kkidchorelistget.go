@@ -10,7 +10,7 @@ import (
 )
 
 type KkidChorelistGetSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 // KkidChorelistGetDayEnum - Day of week for chores (Weekly for weekly chores)
@@ -55,7 +55,7 @@ func (e *KkidChorelistGetDayEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type KkidChorelistGetQueryParams struct {
+type KkidChorelistGetRequest struct {
 	// Filter results by blockDash parameter
 	BlockDash *bool `queryParam:"style=form,explode=true,name=blockDash"`
 	// Filter results by canSteal parameter
@@ -70,11 +70,6 @@ type KkidChorelistGetQueryParams struct {
 	Optional *bool `queryParam:"style=form,explode=true,name=optional"`
 	// Status of Chore to search
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type KkidChorelistGetRequest struct {
-	QueryParams KkidChorelistGetQueryParams
-	Security    KkidChorelistGetSecurity
 }
 
 type KkidChorelistGetResponse struct {

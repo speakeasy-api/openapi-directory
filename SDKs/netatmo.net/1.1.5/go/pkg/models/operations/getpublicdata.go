@@ -10,8 +10,8 @@ import (
 )
 
 type GetpublicdataSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetpublicdataRequiredDataEnum string
@@ -46,7 +46,7 @@ func (e *GetpublicdataRequiredDataEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetpublicdataQueryParams struct {
+type GetpublicdataRequest struct {
 	// True to exclude stations with abnormal temperature measures. Default is false.
 	Filter *bool `queryParam:"style=form,explode=true,name=filter"`
 	// Latitude of the north east corner of the requested area. -85 <= lat_ne <= 85 and lat_ne>lat_sw
@@ -59,11 +59,6 @@ type GetpublicdataQueryParams struct {
 	LonSw int `queryParam:"style=form,explode=true,name=lon_sw"`
 	// To filter stations based on relevant measurements you want (e.g. rain will only return stations with rain gauges). Default is no filter. You can find all measurements available on the Thermostat page.
 	RequiredData []GetpublicdataRequiredDataEnum `queryParam:"style=form,explode=false,name=required_data"`
-}
-
-type GetpublicdataRequest struct {
-	QueryParams GetpublicdataQueryParams
-	Security    GetpublicdataSecurity
 }
 
 type GetpublicdataResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPatientManagementPathParams struct {
+type GetPatientManagementRequest struct {
 	// groupId
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// identifierId
 	IdentifierID int64 `pathParam:"style=simple,explode=false,name=identifierId"`
 	// userId
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetPatientManagementRequest struct {
-	PathParams GetPatientManagementPathParams
 }
 
 type GetPatientManagementResponse struct {

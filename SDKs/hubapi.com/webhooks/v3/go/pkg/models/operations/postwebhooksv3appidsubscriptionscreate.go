@@ -8,17 +8,12 @@ import (
 )
 
 type PostWebhooksV3AppIDSubscriptionsCreateSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type PostWebhooksV3AppIDSubscriptionsCreatePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type PostWebhooksV3AppIDSubscriptionsCreateRequest struct {
-	PathParams PostWebhooksV3AppIDSubscriptionsCreatePathParams
-	Request    shared.SubscriptionCreateRequest `request:"mediaType=application/json"`
-	Security   PostWebhooksV3AppIDSubscriptionsCreateSecurity
+	SubscriptionCreateRequest shared.SubscriptionCreateRequest `request:"mediaType=application/json"`
+	AppID                     int                              `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type PostWebhooksV3AppIDSubscriptionsCreateResponse struct {

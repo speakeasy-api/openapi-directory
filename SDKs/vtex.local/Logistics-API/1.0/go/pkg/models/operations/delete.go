@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type DeletePathParams struct {
-	PickupPointID string `pathParam:"style=simple,explode=false,name=pickupPointId"`
-}
-
-type DeleteHeaders struct {
+type DeleteRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type DeleteRequest struct {
-	PathParams DeletePathParams
-	Headers    DeleteHeaders
+	ContentType   string `header:"style=simple,explode=false,name=Content-Type"`
+	PickupPointID string `pathParam:"style=simple,explode=false,name=pickupPointId"`
 }
 
 type DeleteResponse struct {

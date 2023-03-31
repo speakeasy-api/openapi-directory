@@ -35,7 +35,7 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Cancels the order with the referenced Customer Order ID for the account passed in the URL.
 func (s *orders) DeleteAccountsAccountOrdersCustomerOrderID(ctx context.Context, request operations.DeleteAccountsAccountOrdersCustomerOrderIDRequest) (*operations.DeleteAccountsAccountOrdersCustomerOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders/{CustomerOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders/{CustomerOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *orders) DeleteAccountsAccountOrdersCustomerOrderID(ctx context.Context,
 // Returns a list of orders for the account passed in the URL
 func (s *orders) GetAccountsAccountOrders(ctx context.Context, request operations.GetAccountsAccountOrdersRequest) (*operations.GetAccountsAccountOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -147,7 +147,7 @@ func (s *orders) GetAccountsAccountOrders(ctx context.Context, request operation
 // Returns the order with the referenced Customer Order ID for the account passed in the URL.
 func (s *orders) GetAccountsAccountOrdersCustomerOrderID(ctx context.Context, request operations.GetAccountsAccountOrdersCustomerOrderIDRequest) (*operations.GetAccountsAccountOrdersCustomerOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders/{CustomerOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders/{CustomerOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -203,9 +203,9 @@ func (s *orders) GetAccountsAccountOrdersCustomerOrderID(ctx context.Context, re
 // Places order
 func (s *orders) PostAccountsAccountOrders(ctx context.Context, request operations.PostAccountsAccountOrdersRequest) (*operations.PostAccountsAccountOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,9 +269,9 @@ func (s *orders) PostAccountsAccountOrders(ctx context.Context, request operatio
 // Allows the caller to modify the order with the referenced Customer Order ID specified in the URL. A separate Customer Order ID must be provided in the request body for the modification.
 func (s *orders) PutAccountsAccountOrdersCustomerOrderID(ctx context.Context, request operations.PutAccountsAccountOrdersCustomerOrderIDRequest) (*operations.PutAccountsAccountOrdersCustomerOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders/{CustomerOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account}/orders/{CustomerOrderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

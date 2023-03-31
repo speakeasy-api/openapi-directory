@@ -34,14 +34,14 @@ func newTravelTime(defaultClient, securityClient HTTPClient, serverURL, language
 // TravelTimeGetCompareOverlay - Gets the TravelTime overlay.
 func (s *travelTime) TravelTimeGetCompareOverlay(ctx context.Context, request operations.TravelTimeGetCompareOverlayRequest) (*operations.TravelTimeGetCompareOverlayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/TravelTimes/compareOverlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/TravelTimes/compareOverlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,14 +103,14 @@ func (s *travelTime) TravelTimeGetCompareOverlay(ctx context.Context, request op
 // TravelTimeGetOverlay - Gets the TravelTime overlay.
 func (s *travelTime) TravelTimeGetOverlay(ctx context.Context, request operations.TravelTimeGetOverlayRequest) (*operations.TravelTimeGetOverlayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/TravelTimes/overlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/TravelTimes/overlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

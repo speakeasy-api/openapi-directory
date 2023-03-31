@@ -10,13 +10,6 @@ import (
 	"time"
 )
 
-type FareEstimateGetFareEstimateByZonePathParams struct {
-	// Maximum Zone travelled through id. 6
-	MaxZone int `pathParam:"style=simple,explode=false,name=maxZone"`
-	// Minimum Zone travelled through ie. 1
-	MinZone int `pathParam:"style=simple,explode=false,name=minZone"`
-}
-
 type FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum string
 
 const (
@@ -49,7 +42,7 @@ func (e *FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum) UnmarshalJSON
 	}
 }
 
-type FareEstimateGetFareEstimateByZoneQueryParams struct {
+type FareEstimateGetFareEstimateByZoneRequest struct {
 	// Your developer id
 	Devid                   *string `queryParam:"style=form,explode=true,name=devid"`
 	IsJourneyInFreeTramZone *bool   `queryParam:"style=form,explode=true,name=is_journey_in_free_tram_zone"`
@@ -57,16 +50,15 @@ type FareEstimateGetFareEstimateByZoneQueryParams struct {
 	JourneyTouchOffUtc *time.Time `queryParam:"style=form,explode=true,name=journey_touch_off_utc"`
 	// JourneyTouchOnUtc in format yyyy-M-d h:m (e.g 2016-5-31 16:53).
 	JourneyTouchOnUtc *time.Time `queryParam:"style=form,explode=true,name=journey_touch_on_utc"`
+	// Maximum Zone travelled through id. 6
+	MaxZone int `pathParam:"style=simple,explode=false,name=maxZone"`
+	// Minimum Zone travelled through ie. 1
+	MinZone int `pathParam:"style=simple,explode=false,name=minZone"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token               *string                                                    `queryParam:"style=form,explode=true,name=token"`
 	TravelledRouteTypes []FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum `queryParam:"style=form,explode=true,name=travelled_route_types"`
-}
-
-type FareEstimateGetFareEstimateByZoneRequest struct {
-	PathParams  FareEstimateGetFareEstimateByZonePathParams
-	QueryParams FareEstimateGetFareEstimateByZoneQueryParams
 }
 
 type FareEstimateGetFareEstimateByZoneResponse struct {

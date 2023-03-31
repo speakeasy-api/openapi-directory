@@ -13,20 +13,12 @@ type PostWebhooksEventResponse struct {
 	RawResponse *http.Response
 }
 
-type PostWebhooksEventPathParams struct {
-	// Automatically added
-	WebhookURL string `pathParam:"style=simple,explode=false,name=webhookURL"`
-}
-
-type PostWebhooksEventHeaders struct {
+type PostWebhooksEventRequest struct {
+	WebhookEventCallback *shared.WebhookEventCallback `request:"mediaType=application/json"`
 	// The SHA-256 HMAC signature of the raw request body, signed using
 	// the `secretKey` of the webhook.
 	//
 	XUpAuthenticitySignature *string `header:"style=simple,explode=false,name=X-Up-Authenticity-Signature"`
-}
-
-type PostWebhooksEventRequest struct {
-	PathParams PostWebhooksEventPathParams
-	Headers    PostWebhooksEventHeaders
-	Request    *shared.WebhookEventCallback `request:"mediaType=application/json"`
+	// Automatically added
+	WebhookURL string `pathParam:"style=simple,explode=false,name=webhookURL"`
 }

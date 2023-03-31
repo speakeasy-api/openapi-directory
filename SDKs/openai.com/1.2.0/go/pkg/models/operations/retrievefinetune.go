@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveFineTunePathParams struct {
+type RetrieveFineTuneRequest struct {
 	// The ID of the fine-tune job
 	//
 	FineTuneID string `pathParam:"style=simple,explode=false,name=fine_tune_id"`
-}
-
-type RetrieveFineTuneRequest struct {
-	PathParams RetrieveFineTunePathParams
 }
 
 type RetrieveFineTuneResponse struct {

@@ -75,7 +75,7 @@ func (e *LocationsGetV2LocationsGetSortSortEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type LocationsGetV2LocationsGetQueryParams struct {
+type LocationsGetV2LocationsGetRequest struct {
 	//         Limit results by a certain city or cities.
 	//         (ex. ?city=Chicago or ?city=Chicago&city=Boston)
 	//
@@ -120,10 +120,6 @@ type LocationsGetV2LocationsGetQueryParams struct {
 	// Name of the data source
 	SourceName []string `queryParam:"style=form,explode=true,name=sourceName"`
 	Unit       []string `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type LocationsGetV2LocationsGetRequest struct {
-	QueryParams LocationsGetV2LocationsGetQueryParams
 }
 
 type LocationsGetV2LocationsGetResponse struct {

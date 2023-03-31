@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAttributesComputedRequest struct {
-	Request shared.Attribute `request:"mediaType=application/json"`
-}
-
 type PostAttributesComputedResponse struct {
 	// OK
 	Attribute   *shared.Attribute

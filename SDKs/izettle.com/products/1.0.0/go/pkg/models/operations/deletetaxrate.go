@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteTaxRateSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type DeleteTaxRatePathParams struct {
-	TaxRateUUID string `pathParam:"style=simple,explode=false,name=taxRateUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteTaxRateRequest struct {
-	PathParams DeleteTaxRatePathParams
-	Security   DeleteTaxRateSecurity
+	TaxRateUUID string `pathParam:"style=simple,explode=false,name=taxRateUuid"`
 }
 
 type DeleteTaxRateResponse struct {

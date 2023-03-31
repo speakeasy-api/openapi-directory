@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateNsxvControllerClusterSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateNsxvControllerClusterPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateNsxvControllerClusterRequest struct {
-	PathParams UpdateNsxvControllerClusterPathParams
-	Request    *shared.NSXControllerDataCollection `request:"mediaType=application/json"`
-	Security   UpdateNsxvControllerClusterSecurity
+	NSXControllerDataCollection *shared.NSXControllerDataCollection `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateNsxvControllerClusterResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type RotateAccountKeySecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type RotateAccountKeyPathParams struct {
-	// UUID of the key to retrieve
-	KeyID string `pathParam:"style=simple,explode=false,name=key_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type RotateAccountKeyRequest struct {
-	PathParams RotateAccountKeyPathParams
-	Security   RotateAccountKeySecurity
+	// UUID of the key to retrieve
+	KeyID string `pathParam:"style=simple,explode=false,name=key_id"`
 }
 
 type RotateAccountKeyResponse struct {

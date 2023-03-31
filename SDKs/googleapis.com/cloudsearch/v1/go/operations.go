@@ -32,20 +32,20 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // CloudsearchOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *operationsT) CloudsearchOperationsGet(ctx context.Context, request operations.CloudsearchOperationsGetRequest) (*operations.CloudsearchOperationsGetResponse, error) {
+func (s *operationsT) CloudsearchOperationsGet(ctx context.Context, request operations.CloudsearchOperationsGetRequest, security operations.CloudsearchOperationsGetSecurity) (*operations.CloudsearchOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *operationsT) CloudsearchOperationsGet(ctx context.Context, request oper
 }
 
 // CloudsearchOperationsLroList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *operationsT) CloudsearchOperationsLroList(ctx context.Context, request operations.CloudsearchOperationsLroListRequest) (*operations.CloudsearchOperationsLroListResponse, error) {
+func (s *operationsT) CloudsearchOperationsLroList(ctx context.Context, request operations.CloudsearchOperationsLroListRequest, security operations.CloudsearchOperationsLroListSecurity) (*operations.CloudsearchOperationsLroListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/lro", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/lro", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

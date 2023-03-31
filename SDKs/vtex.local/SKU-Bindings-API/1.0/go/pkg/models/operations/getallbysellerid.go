@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetallbySellerIDPathParams struct {
-	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
-	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
-}
-
-type GetallbySellerIDHeaders struct {
+type GetallbySellerIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetallbySellerIDRequest struct {
-	PathParams GetallbySellerIDPathParams
-	Headers    GetallbySellerIDHeaders
+	// ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+	SellerID string `pathParam:"style=simple,explode=false,name=sellerId"`
 }
 
 type GetallbySellerID200ApplicationJSON struct {

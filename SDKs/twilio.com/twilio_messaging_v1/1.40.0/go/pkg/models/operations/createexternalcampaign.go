@@ -12,7 +12,8 @@ var CreateExternalCampaignServerList = []string{
 }
 
 type CreateExternalCampaignSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateExternalCampaignCreateExternalCampaignRequest struct {
@@ -20,12 +21,6 @@ type CreateExternalCampaignCreateExternalCampaignRequest struct {
 	CampaignID string `form:"name=CampaignId"`
 	// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) that the resource is associated with.
 	MessagingServiceSid string `form:"name=MessagingServiceSid"`
-}
-
-type CreateExternalCampaignRequest struct {
-	Request   *CreateExternalCampaignCreateExternalCampaignRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateExternalCampaignSecurity
-	ServerURL *string
 }
 
 type CreateExternalCampaignResponse struct {

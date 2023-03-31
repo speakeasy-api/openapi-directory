@@ -32,20 +32,20 @@ func newTargetableRemarketingLists(defaultClient, securityClient HTTPClient, ser
 }
 
 // DfareportingTargetableRemarketingListsGet - Gets one remarketing list by ID.
-func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsGet(ctx context.Context, request operations.DfareportingTargetableRemarketingListsGetRequest) (*operations.DfareportingTargetableRemarketingListsGetResponse, error) {
+func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsGet(ctx context.Context, request operations.DfareportingTargetableRemarketingListsGetRequest, security operations.DfareportingTargetableRemarketingListsGetSecurity) (*operations.DfareportingTargetableRemarketingListsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsGet(c
 }
 
 // DfareportingTargetableRemarketingListsList - Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
-func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsList(ctx context.Context, request operations.DfareportingTargetableRemarketingListsListRequest) (*operations.DfareportingTargetableRemarketingListsListResponse, error) {
+func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsList(ctx context.Context, request operations.DfareportingTargetableRemarketingListsListRequest, security operations.DfareportingTargetableRemarketingListsListSecurity) (*operations.DfareportingTargetableRemarketingListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

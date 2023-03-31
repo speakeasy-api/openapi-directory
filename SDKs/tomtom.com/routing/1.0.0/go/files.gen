@@ -19,11 +19,11 @@ pkg/models/operations/postroutingversionnumbercalculatereachablerangeoriginconte
 pkg/models/operations/postroutingversionnumbercalculateroutelocationscontenttypejson.go
 pkg/models/operations/postroutingversionnumbercalculateroutelocationscontenttyperaw.go
 pkg/models/shared/windingnessenum.go
+pkg/models/shared/versionnumberenum.go
 pkg/models/shared/travelmodeenum.go
 pkg/models/shared/routetypeenum.go
 pkg/models/shared/reportenum.go
 pkg/models/shared/hillinessenum.go
-pkg/models/shared/versionnumberenum.go
 pkg/models/shared/contenttypeenum.go
 pkg/models/shared/vehicleenginetypeenum.go
 pkg/models/shared/routerepresentationenum.go

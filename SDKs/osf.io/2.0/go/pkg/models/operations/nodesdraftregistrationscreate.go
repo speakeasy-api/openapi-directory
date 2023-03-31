@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type NodesDraftRegistrationsCreatePathParams struct {
-	// The unique identifier of the node.
-	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 type NodesDraftRegistrationsCreateDraftRegistrationAttributesNodeLicense struct {
 	// A list of names of copyright holders for the license.
 	CopyrightHolders []string `json:"copyright_holders,omitempty"`
@@ -41,8 +36,9 @@ type NodesDraftRegistrationsCreateDraftRegistrationInput struct {
 }
 
 type NodesDraftRegistrationsCreateRequest struct {
-	PathParams NodesDraftRegistrationsCreatePathParams
-	Request    NodesDraftRegistrationsCreateDraftRegistrationInput `request:"mediaType=application/json"`
+	RequestBody NodesDraftRegistrationsCreateDraftRegistrationInput `request:"mediaType=application/json"`
+	// The unique identifier of the node.
+	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type NodesDraftRegistrationsCreateResponse struct {

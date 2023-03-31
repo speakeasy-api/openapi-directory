@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListCommentsForCommitPathParams struct {
+type ReposListCommentsForCommitRequest struct {
 	// commit_sha parameter
 	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
 	Owner     string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListCommentsForCommitQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListCommentsForCommitRequest struct {
-	PathParams  ReposListCommentsForCommitPathParams
-	QueryParams ReposListCommentsForCommitQueryParams
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListCommentsForCommitResponse struct {

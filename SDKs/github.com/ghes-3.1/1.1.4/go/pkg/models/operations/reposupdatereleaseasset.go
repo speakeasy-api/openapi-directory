@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposUpdateReleaseAssetPathParams struct {
-	// The unique identifier of the asset.
-	AssetID int64 `pathParam:"style=simple,explode=false,name=asset_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposUpdateReleaseAssetRequestBody struct {
 	// An alternate short description of the asset. Used in place of the filename.
 	Label *string `json:"label,omitempty"`
@@ -25,8 +16,13 @@ type ReposUpdateReleaseAssetRequestBody struct {
 }
 
 type ReposUpdateReleaseAssetRequest struct {
-	PathParams ReposUpdateReleaseAssetPathParams
-	Request    *ReposUpdateReleaseAssetRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposUpdateReleaseAssetRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the asset.
+	AssetID int64 `pathParam:"style=simple,explode=false,name=asset_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposUpdateReleaseAssetResponse struct {

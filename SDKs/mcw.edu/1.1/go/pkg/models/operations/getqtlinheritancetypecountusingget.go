@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GETQtlInheritanceTypeCountUsingGETPathParams struct {
+type GETQtlInheritanceTypeCountUsingGETRequest struct {
 	// dateYYYYMMDD
 	DateYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateYYYYMMDD"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETQtlInheritanceTypeCountUsingGETRequest struct {
-	PathParams GETQtlInheritanceTypeCountUsingGETPathParams
 }
 
 type GETQtlInheritanceTypeCountUsingGETResponse struct {

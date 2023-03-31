@@ -8,17 +8,12 @@ import (
 )
 
 type GetWirelessLANSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWirelessLANPathParams struct {
-	// UUID of the wireless LAN to retrieve
-	WirelessID string `pathParam:"style=simple,explode=false,name=wireless_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetWirelessLANRequest struct {
-	PathParams GetWirelessLANPathParams
-	Security   GetWirelessLANSecurity
+	// UUID of the wireless LAN to retrieve
+	WirelessID string `pathParam:"style=simple,explode=false,name=wireless_id"`
 }
 
 type GetWirelessLANResponse struct {

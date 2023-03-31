@@ -47,13 +47,9 @@ func (e *GetMappingValuesKeyKeyEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMappingValuesKeyPathParams struct {
+type GetMappingValuesKeyRequest struct {
 	// Key of MappingJob for which to get possible values.
 	Key GetMappingValuesKeyKeyEnum `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type GetMappingValuesKeyRequest struct {
-	PathParams GetMappingValuesKeyPathParams
 }
 
 // GetMappingValuesKey200ApplicationJSON - The list of values.

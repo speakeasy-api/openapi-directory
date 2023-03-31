@@ -10,8 +10,8 @@ import (
 )
 
 type AdexchangebuyerProposalsUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AdexchangebuyerProposalsUpdateUpdateActionEnum - The proposed action to take on the proposal. This field is required and it must be set when updating a proposal.
@@ -50,16 +50,8 @@ func (e *AdexchangebuyerProposalsUpdateUpdateActionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type AdexchangebuyerProposalsUpdatePathParams struct {
-	// The proposal id to update.
-	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
-	// The last known revision number to update. If the head revision in the marketplace database has since changed, an error will be thrown. The caller should then fetch the latest proposal at head revision and retry the update at that revision.
-	RevisionNumber string `pathParam:"style=simple,explode=false,name=revisionNumber"`
-	// The proposed action to take on the proposal. This field is required and it must be set when updating a proposal.
-	UpdateAction AdexchangebuyerProposalsUpdateUpdateActionEnum `pathParam:"style=simple,explode=false,name=updateAction"`
-}
-
-type AdexchangebuyerProposalsUpdateQueryParams struct {
+type AdexchangebuyerProposalsUpdateRequest struct {
+	Proposal *shared.Proposal `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -70,17 +62,16 @@ type AdexchangebuyerProposalsUpdateQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// The proposal id to update.
+	ProposalID string `pathParam:"style=simple,explode=false,name=proposalId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The last known revision number to update. If the head revision in the marketplace database has since changed, an error will be thrown. The caller should then fetch the latest proposal at head revision and retry the update at that revision.
+	RevisionNumber string `pathParam:"style=simple,explode=false,name=revisionNumber"`
+	// The proposed action to take on the proposal. This field is required and it must be set when updating a proposal.
+	UpdateAction AdexchangebuyerProposalsUpdateUpdateActionEnum `pathParam:"style=simple,explode=false,name=updateAction"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdexchangebuyerProposalsUpdateRequest struct {
-	PathParams  AdexchangebuyerProposalsUpdatePathParams
-	QueryParams AdexchangebuyerProposalsUpdateQueryParams
-	Request     *shared.Proposal `request:"mediaType=application/json"`
-	Security    AdexchangebuyerProposalsUpdateSecurity
 }
 
 type AdexchangebuyerProposalsUpdateResponse struct {

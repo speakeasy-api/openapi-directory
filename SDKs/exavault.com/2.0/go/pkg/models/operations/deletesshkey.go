@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type DeleteSSHKeyPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSSHKeyHeaders struct {
+type DeleteSSHKeyRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteSSHKeyRequest struct {
-	PathParams DeleteSSHKeyPathParams
-	Headers    DeleteSSHKeyHeaders
+	ID       string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteSSHKeyResponse struct {

@@ -36,14 +36,14 @@ func newCopyrights(defaultClient, securityClient HTTPClient, serverURL, language
 // This call returns copyright information for the whole world.
 func (s *copyrights) GetMapVersionNumberCopyrightsFormat(ctx context.Context, request operations.GetMapVersionNumberCopyrightsFormatRequest) (*operations.GetMapVersionNumberCopyrightsFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,14 +86,14 @@ func (s *copyrights) GetMapVersionNumberCopyrightsFormat(ctx context.Context, re
 // This API returns copyright captions for the map service.
 func (s *copyrights) GetMapVersionNumberCopyrightsCaptionFormat(ctx context.Context, request operations.GetMapVersionNumberCopyrightsCaptionFormatRequest) (*operations.GetMapVersionNumberCopyrightsCaptionFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights/caption.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights/caption.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -138,14 +138,14 @@ func (s *copyrights) GetMapVersionNumberCopyrightsCaptionFormat(ctx context.Cont
 // This call returns copyright information for a specific bounding box.
 func (s *copyrights) GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat(ctx context.Context, request operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest) (*operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights/{minLon}/{minLat}/{maxLon}/{maxLat}.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights/{minLon}/{minLat}/{maxLon}/{maxLat}.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -192,14 +192,14 @@ func (s *copyrights) GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat
 // This call returns copyright information for the a specific map tile.
 func (s *copyrights) GetMapVersionNumberCopyrightsZoomXYFormat(ctx context.Context, request operations.GetMapVersionNumberCopyrightsZoomXYFormatRequest) (*operations.GetMapVersionNumberCopyrightsZoomXYFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights/{zoom}/{X}/{Y}.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/copyrights/{zoom}/{X}/{Y}.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

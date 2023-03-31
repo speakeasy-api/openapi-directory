@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteCallRecordingServerList = []string{
@@ -12,22 +11,17 @@ var DeleteCallRecordingServerList = []string{
 }
 
 type DeleteCallRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteCallRecordingPathParams struct {
+type DeleteCallRecordingRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to delete.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resources to delete.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 	// The Twilio-provided string that uniquely identifies the Recording resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteCallRecordingRequest struct {
-	PathParams DeleteCallRecordingPathParams
-	Security   DeleteCallRecordingSecurity
-	ServerURL  *string
 }
 
 type DeleteCallRecordingResponse struct {

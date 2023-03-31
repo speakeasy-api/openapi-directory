@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesSetRepositoriesForSecretForAuthenticatedUserPathParams struct {
-	// The name of the secret.
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
 type CodespacesSetRepositoriesForSecretForAuthenticatedUserRequestBody struct {
 	// An array of repository ids for which a codespace can access the secret. You can manage the list of selected repositories using the [List selected repositories for a user secret](https://docs.github.com/rest/reference/codespaces#list-selected-repositories-for-a-user-secret), [Add a selected repository to a user secret](https://docs.github.com/rest/reference/codespaces#add-a-selected-repository-to-a-user-secret), and [Remove a selected repository from a user secret](https://docs.github.com/rest/reference/codespaces#remove-a-selected-repository-from-a-user-secret) endpoints.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest struct {
-	PathParams CodespacesSetRepositoriesForSecretForAuthenticatedUserPathParams
-	Request    CodespacesSetRepositoriesForSecretForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody CodespacesSetRepositoriesForSecretForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	// The name of the secret.
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 type CodespacesSetRepositoriesForSecretForAuthenticatedUserResponse struct {

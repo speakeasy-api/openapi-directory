@@ -8,17 +8,12 @@ import (
 )
 
 type GetPromotionSummaryReportSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPromotionSummaryReportQueryParams struct {
-	// The eBay marketplace ID of the site you for which you want a promotion summary report.  <p><b>Valid values:</b></p>  <ul><li><code>EBAY_AU</code> = Australia</li> <li><code>EBAY_DE</code> = Germany</li> <li><code>EBAY_ES</code> = Spain</li> <li><code>EBAY_FR</code> = France</li> <li><code>EBAY_GB</code> = Great Britain</li> <li><code>EBAY_IT</code> = Italy</li> <li><code>EBAY_US</code> = United States</li></ul>
-	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPromotionSummaryReportRequest struct {
-	QueryParams GetPromotionSummaryReportQueryParams
-	Security    GetPromotionSummaryReportSecurity
+	// The eBay marketplace ID of the site you for which you want a promotion summary report.  <p><b>Valid values:</b></p>  <ul><li><code>EBAY_AU</code> = Australia</li> <li><code>EBAY_DE</code> = Germany</li> <li><code>EBAY_ES</code> = Spain</li> <li><code>EBAY_FR</code> = France</li> <li><code>EBAY_GB</code> = Great Britain</li> <li><code>EBAY_IT</code> = Italy</li> <li><code>EBAY_US</code> = United States</li></ul>
+	MarketplaceID string `queryParam:"style=form,explode=true,name=marketplace_id"`
 }
 
 type GetPromotionSummaryReportResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SubUserDeletePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type SubUserDeleteRequest struct {
-	PathParams SubUserDeletePathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SubUserDeleteResponse struct {

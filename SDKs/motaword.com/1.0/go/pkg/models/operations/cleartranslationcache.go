@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClearTranslationCachePathParams struct {
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type ClearTranslationCacheQueryParams struct {
+type ClearTranslationCacheRequest struct {
 	// Continuous Project File ID
 	FileID *int64 `queryParam:"style=form,explode=true,name=file_id"`
 	// Locale
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
-}
-
-type ClearTranslationCacheRequest struct {
-	PathParams  ClearTranslationCachePathParams
-	QueryParams ClearTranslationCacheQueryParams
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type ClearTranslationCacheResponse struct {

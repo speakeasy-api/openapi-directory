@@ -8,18 +8,14 @@ import (
 )
 
 type MetastoreProjectsLocationsServicesRemoveIamPolicySecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams struct {
-	// Required. The relative resource name of the dataplane resource to remove IAM policy, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/databases/{database_id} or projects/{project_id}/locations/{location_id}/services/{service_id}/databases/{database_id}/tables/{table_id}.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams struct {
+type MetastoreProjectsLocationsServicesRemoveIamPolicyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RemoveIamPolicyRequest *shared.RemoveIamPolicyRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,17 +32,12 @@ type MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The relative resource name of the dataplane resource to remove IAM policy, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/databases/{database_id} or projects/{project_id}/locations/{location_id}/services/{service_id}/databases/{database_id}/tables/{table_id}.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MetastoreProjectsLocationsServicesRemoveIamPolicyRequest struct {
-	PathParams  MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams
-	QueryParams MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams
-	Request     *shared.RemoveIamPolicyRequest `request:"mediaType=application/json"`
-	Security    MetastoreProjectsLocationsServicesRemoveIamPolicySecurity
 }
 
 type MetastoreProjectsLocationsServicesRemoveIamPolicyResponse struct {

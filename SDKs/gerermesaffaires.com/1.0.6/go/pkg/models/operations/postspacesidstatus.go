@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostSpacesIDStatusPathParams struct {
-	// Id of the space
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostSpacesIDStatusRequestBody - Status to add or replace
 type PostSpacesIDStatusRequestBody struct {
 	Code    string  `json:"Code"`
@@ -19,9 +14,10 @@ type PostSpacesIDStatusRequestBody struct {
 }
 
 type PostSpacesIDStatusRequest struct {
-	PathParams PostSpacesIDStatusPathParams
 	// Status to add or replace
-	Request PostSpacesIDStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody PostSpacesIDStatusRequestBody `request:"mediaType=application/json"`
+	// Id of the space
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostSpacesIDStatusResponse struct {

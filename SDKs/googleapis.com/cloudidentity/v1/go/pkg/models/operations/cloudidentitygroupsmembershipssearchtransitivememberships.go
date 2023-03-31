@@ -8,18 +8,18 @@ import (
 )
 
 type CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurity struct {
@@ -28,12 +28,7 @@ type CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurity struct {
 	Option3 *CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurityOption3 `security:"option"`
 }
 
-type CloudidentityGroupsMembershipsSearchTransitiveMembershipsPathParams struct {
-	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID assigned to the Group.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityGroupsMembershipsSearchTransitiveMembershipsQueryParams struct {
+type CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type CloudidentityGroupsMembershipsSearchTransitiveMembershipsQueryParams struct
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request, if any.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID assigned to the Group.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -60,12 +57,6 @@ type CloudidentityGroupsMembershipsSearchTransitiveMembershipsQueryParams struct
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest struct {
-	PathParams  CloudidentityGroupsMembershipsSearchTransitiveMembershipsPathParams
-	QueryParams CloudidentityGroupsMembershipsSearchTransitiveMembershipsQueryParams
-	Security    CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurity
 }
 
 type CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse struct {

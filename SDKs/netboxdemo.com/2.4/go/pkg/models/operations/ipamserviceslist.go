@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamServicesListQueryParams struct {
+type IpamServicesListRequest struct {
 	Device   *string `queryParam:"style=form,explode=true,name=device"`
 	DeviceID *string `queryParam:"style=form,explode=true,name=device_id"`
 	// Number of results to return per page.
@@ -21,10 +21,6 @@ type IpamServicesListQueryParams struct {
 	Tag              *string  `queryParam:"style=form,explode=true,name=tag"`
 	VirtualMachine   *string  `queryParam:"style=form,explode=true,name=virtual_machine"`
 	VirtualMachineID *string  `queryParam:"style=form,explode=true,name=virtual_machine_id"`
-}
-
-type IpamServicesListRequest struct {
-	QueryParams IpamServicesListQueryParams
 }
 
 type IpamServicesList200ApplicationJSON struct {

@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetFloatingIpsIDActionsActionIDPathParams struct {
+type GetFloatingIpsIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Floating IP
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFloatingIpsIDActionsActionIDRequest struct {
-	PathParams GetFloatingIpsIDActionsActionIDPathParams
 }
 
 // GetFloatingIpsIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

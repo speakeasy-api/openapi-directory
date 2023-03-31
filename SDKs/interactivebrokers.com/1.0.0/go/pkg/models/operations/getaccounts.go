@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAccountsQueryParams struct {
+type GetAccountsRequest struct {
 	// Account Number
 	Account string `queryParam:"style=form,explode=true,name=account"`
-}
-
-type GetAccountsRequest struct {
-	QueryParams GetAccountsQueryParams
 }
 
 // GetAccounts200ApplicationJSON - An array of accounts

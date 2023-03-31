@@ -8,12 +8,8 @@ import (
 )
 
 type CreateCertSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateCertRequest struct {
-	Request  *shared.Certificate `request:"mediaType=application/json"`
-	Security CreateCertSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateCertResponse struct {

@@ -10,31 +10,24 @@ import (
 )
 
 type AppengineAppsServicesVersionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsServicesVersionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsServicesVersionsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsServicesVersionsListSecurity struct {
 	Option1 *AppengineAppsServicesVersionsListSecurityOption1 `security:"option"`
 	Option2 *AppengineAppsServicesVersionsListSecurityOption2 `security:"option"`
 	Option3 *AppengineAppsServicesVersionsListSecurityOption3 `security:"option"`
-}
-
-type AppengineAppsServicesVersionsListPathParams struct {
-	// Part of `parent`. Name of the parent Service resource. Example: apps/myapp/services/default.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `parent`. See documentation of `appsId`.
-	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
 }
 
 // AppengineAppsServicesVersionsListViewEnum - Controls the set of fields returned in the List response.
@@ -61,13 +54,15 @@ func (e *AppengineAppsServicesVersionsListViewEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type AppengineAppsServicesVersionsListQueryParams struct {
+type AppengineAppsServicesVersionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `parent`. Name of the parent Service resource. Example: apps/myapp/services/default.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -84,18 +79,14 @@ type AppengineAppsServicesVersionsListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Part of `parent`. See documentation of `appsId`.
+	ServicesID string `pathParam:"style=simple,explode=false,name=servicesId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Controls the set of fields returned in the List response.
 	View *AppengineAppsServicesVersionsListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type AppengineAppsServicesVersionsListRequest struct {
-	PathParams  AppengineAppsServicesVersionsListPathParams
-	QueryParams AppengineAppsServicesVersionsListQueryParams
-	Security    AppengineAppsServicesVersionsListSecurity
 }
 
 type AppengineAppsServicesVersionsListResponse struct {

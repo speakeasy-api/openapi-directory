@@ -34,9 +34,9 @@ func newPrefixes(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Add a static delegated prefix from a network
 func (s *prefixes) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.CreateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.CreateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *prefixes) CreateNetworkAppliancePrefixesDelegatedStatic(ctx context.Con
 // Delete a static delegated prefix from a network
 func (s *prefixes) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.DeleteNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.DeleteNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *prefixes) DeleteNetworkAppliancePrefixesDelegatedStatic(ctx context.Con
 // Return current delegated IPv6 prefixes on an appliance.
 func (s *prefixes) GetDeviceAppliancePrefixesDelegated(ctx context.Context, request operations.GetDeviceAppliancePrefixesDelegatedRequest) (*operations.GetDeviceAppliancePrefixesDelegatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *prefixes) GetDeviceAppliancePrefixesDelegated(ctx context.Context, requ
 // Return prefixes assigned to all IPv6 enabled VLANs on an appliance.
 func (s *prefixes) GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx context.Context, request operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsRequest) (*operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *prefixes) GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx contex
 // Return a static delegated prefix from a network
 func (s *prefixes) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,7 +260,7 @@ func (s *prefixes) GetNetworkAppliancePrefixesDelegatedStatic(ctx context.Contex
 // List static delegated prefixes for a network
 func (s *prefixes) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Context, request operations.GetNetworkAppliancePrefixesDelegatedStaticsRequest) (*operations.GetNetworkAppliancePrefixesDelegatedStaticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -305,9 +305,9 @@ func (s *prefixes) GetNetworkAppliancePrefixesDelegatedStatics(ctx context.Conte
 // Update a static delegated prefix from a network
 func (s *prefixes) UpdateNetworkAppliancePrefixesDelegatedStatic(ctx context.Context, request operations.UpdateNetworkAppliancePrefixesDelegatedStaticRequest) (*operations.UpdateNetworkAppliancePrefixesDelegatedStaticResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

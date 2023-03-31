@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrapConfigListPathParams struct {
+type TrapConfigListRequest struct {
 	// Agent to show the IP alias list
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type TrapConfigListRequest struct {
-	PathParams TrapConfigListPathParams
 }
 
 type TrapConfigListResponse struct {

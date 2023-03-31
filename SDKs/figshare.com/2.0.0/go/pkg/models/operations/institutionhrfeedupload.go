@@ -8,7 +8,7 @@ import (
 )
 
 type InstitutionHrfeedUploadSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type InstitutionHrfeedUploadRequestBodyHrfeed struct {
@@ -19,11 +19,6 @@ type InstitutionHrfeedUploadRequestBodyHrfeed struct {
 type InstitutionHrfeedUploadRequestBody struct {
 	// You can find an example in the Hr Feed section
 	Hrfeed *InstitutionHrfeedUploadRequestBodyHrfeed `multipartForm:"file"`
-}
-
-type InstitutionHrfeedUploadRequest struct {
-	Request  *InstitutionHrfeedUploadRequestBody `request:"mediaType=multipart/form-data"`
-	Security InstitutionHrfeedUploadSecurity
 }
 
 type InstitutionHrfeedUploadResponse struct {

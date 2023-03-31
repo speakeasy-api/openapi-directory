@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetTxsQueryParams struct {
+type TestnetGetTxsRequest struct {
 	// Address
 	Address *string `queryParam:"style=form,explode=true,name=address"`
 	// Block Hash
 	Block *string `queryParam:"style=form,explode=true,name=block"`
 	// Page number to display
 	PageNum *float64 `queryParam:"style=form,explode=true,name=pageNum"`
-}
-
-type TestnetGetTxsRequest struct {
-	QueryParams TestnetGetTxsQueryParams
 }
 
 type TestnetGetTxsResponse struct {

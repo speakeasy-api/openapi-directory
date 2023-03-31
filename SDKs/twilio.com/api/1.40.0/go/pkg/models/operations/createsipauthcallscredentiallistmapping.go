@@ -12,14 +12,8 @@ var CreateSipAuthCallsCredentialListMappingServerList = []string{
 }
 
 type CreateSipAuthCallsCredentialListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipAuthCallsCredentialListMappingPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the SIP domain that will contain the new resource.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest struct {
@@ -28,10 +22,11 @@ type CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMapp
 }
 
 type CreateSipAuthCallsCredentialListMappingRequest struct {
-	PathParams CreateSipAuthCallsCredentialListMappingPathParams
-	Request    *CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipAuthCallsCredentialListMappingSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the SIP domain that will contain the new resource.
+	DomainSid   string                                                                                 `pathParam:"style=simple,explode=false,name=DomainSid"`
+	RequestBody *CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipAuthCallsCredentialListMappingResponse struct {

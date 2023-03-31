@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetTaskScanDataSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetTaskScanDataPathParams struct {
-	// UUID of the task
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetTaskScanDataRequest struct {
-	PathParams GetTaskScanDataPathParams
-	Security   GetTaskScanDataSecurity
+	// UUID of the task
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetTaskScanDataResponse struct {

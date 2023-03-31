@@ -33,7 +33,7 @@ func newInlineScript(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CreateInlineScriptTag - インラインスクリプトタグの登録
-func (s *inlineScript) CreateInlineScriptTag(ctx context.Context, request operations.CreateInlineScriptTagRequest) (*operations.CreateInlineScriptTagResponse, error) {
+func (s *inlineScript) CreateInlineScriptTag(ctx context.Context, request operations.CreateInlineScriptTagRequestBody, security operations.CreateInlineScriptTagSecurity) (*operations.CreateInlineScriptTagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/inline_script_tags.json"
 
@@ -49,7 +49,7 @@ func (s *inlineScript) CreateInlineScriptTag(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,16 +84,16 @@ func (s *inlineScript) CreateInlineScriptTag(ctx context.Context, request operat
 }
 
 // DeleteInlineScriptTag - インラインスクリプトタグの削除
-func (s *inlineScript) DeleteInlineScriptTag(ctx context.Context, request operations.DeleteInlineScriptTagRequest) (*operations.DeleteInlineScriptTagResponse, error) {
+func (s *inlineScript) DeleteInlineScriptTag(ctx context.Context, request operations.DeleteInlineScriptTagRequest, security operations.DeleteInlineScriptTagSecurity) (*operations.DeleteInlineScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inline_script_tags/{inlineScriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/inline_script_tags/{inlineScriptTagId}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,16 +119,16 @@ func (s *inlineScript) DeleteInlineScriptTag(ctx context.Context, request operat
 }
 
 // GetInlineScriptTag - インラインスクリプトタグの取得
-func (s *inlineScript) GetInlineScriptTag(ctx context.Context, request operations.GetInlineScriptTagRequest) (*operations.GetInlineScriptTagResponse, error) {
+func (s *inlineScript) GetInlineScriptTag(ctx context.Context, request operations.GetInlineScriptTagRequest, security operations.GetInlineScriptTagSecurity) (*operations.GetInlineScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inline_script_tags/{inlineScriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/inline_script_tags/{inlineScriptTagId}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -163,7 +163,7 @@ func (s *inlineScript) GetInlineScriptTag(ctx context.Context, request operation
 }
 
 // GetInlineScriptTags - インラインスクリプトタグの取得
-func (s *inlineScript) GetInlineScriptTags(ctx context.Context, request operations.GetInlineScriptTagsRequest) (*operations.GetInlineScriptTagsResponse, error) {
+func (s *inlineScript) GetInlineScriptTags(ctx context.Context) (*operations.GetInlineScriptTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/inline_script_tags.json"
 
@@ -172,7 +172,7 @@ func (s *inlineScript) GetInlineScriptTags(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,11 +207,11 @@ func (s *inlineScript) GetInlineScriptTags(ctx context.Context, request operatio
 }
 
 // UpdateInlineScriptTag - インラインスクリプトタグの更新
-func (s *inlineScript) UpdateInlineScriptTag(ctx context.Context, request operations.UpdateInlineScriptTagRequest) (*operations.UpdateInlineScriptTagResponse, error) {
+func (s *inlineScript) UpdateInlineScriptTag(ctx context.Context, request operations.UpdateInlineScriptTagRequest, security operations.UpdateInlineScriptTagSecurity) (*operations.UpdateInlineScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inline_script_tags/{inlineScriptTagId}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/inline_script_tags/{inlineScriptTagId}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +223,7 @@ func (s *inlineScript) UpdateInlineScriptTag(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCompanyTimeOffsIDPathParams struct {
+type DeleteCompanyTimeOffsIDRequest struct {
 	// ID of the absence period to delete
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCompanyTimeOffsIDRequest struct {
-	PathParams DeleteCompanyTimeOffsIDPathParams
 }
 
 type DeleteCompanyTimeOffsIDResponse struct {

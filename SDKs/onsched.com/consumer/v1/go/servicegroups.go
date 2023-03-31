@@ -43,7 +43,7 @@ func (s *serviceGroups) GetConsumerV1Servicegroups(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func (s *serviceGroups) GetConsumerV1Servicegroups(ctx context.Context, request 
 // <p>Use this endpoint to return a <b>Service Group</b> object. A valid <b>serviceGroup id</b> is required. Find serviceGroup id's by using the <i>GET /consumer/v1/serviceGroups</i> endpoint.</p>
 func (s *serviceGroups) GetConsumerV1ServicegroupsID(ctx context.Context, request operations.GetConsumerV1ServicegroupsIDRequest) (*operations.GetConsumerV1ServicegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/servicegroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/servicegroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

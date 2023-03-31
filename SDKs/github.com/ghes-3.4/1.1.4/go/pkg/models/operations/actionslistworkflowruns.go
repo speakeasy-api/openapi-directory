@@ -8,16 +8,7 @@ import (
 	"time"
 )
 
-type ActionsListWorkflowRunsPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-	// The ID of the workflow. You can also pass the workflow file name as a string.
-	WorkflowID shared.WorkflowID `pathParam:"style=simple,explode=false,name=workflow_id"`
-}
-
-type ActionsListWorkflowRunsQueryParams struct {
+type ActionsListWorkflowRunsRequest struct {
 	// Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run.
 	Actor *string `queryParam:"style=form,explode=true,name=actor"`
 	// Returns workflow runs associated with a branch. Use the name of the branch of the `push`.
@@ -28,17 +19,18 @@ type ActionsListWorkflowRunsQueryParams struct {
 	Event *string `queryParam:"style=form,explode=true,name=event"`
 	// If `true` pull requests are omitted from the response (empty array).
 	ExcludePullRequests *bool `queryParam:"style=form,explode=true,name=exclude_pull_requests"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
 	Status *shared.WorkflowRunStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ActionsListWorkflowRunsRequest struct {
-	PathParams  ActionsListWorkflowRunsPathParams
-	QueryParams ActionsListWorkflowRunsQueryParams
+	// The ID of the workflow. You can also pass the workflow file name as a string.
+	WorkflowID shared.WorkflowID `pathParam:"style=simple,explode=false,name=workflow_id"`
 }
 
 // ActionsListWorkflowRuns200ApplicationJSON - Response

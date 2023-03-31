@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type InsertSKUBindingHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // InsertSKUBindingRequestBody - Request body
 type InsertSKUBindingRequestBody struct {
 	// Defines if the SKU binding is active.
@@ -26,9 +19,12 @@ type InsertSKUBindingRequestBody struct {
 }
 
 type InsertSKUBindingRequest struct {
-	Headers InsertSKUBindingHeaders
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Request body
-	Request InsertSKUBindingRequestBody `request:"mediaType=application/json"`
+	RequestBody InsertSKUBindingRequestBody `request:"mediaType=application/json"`
 }
 
 type InsertSKUBindingResponse struct {

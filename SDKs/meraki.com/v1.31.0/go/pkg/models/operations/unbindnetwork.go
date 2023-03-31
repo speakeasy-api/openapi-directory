@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type UnbindNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UnbindNetworkRequestBody struct {
 	// Optional boolean to retain all the current configs given by the template.
 	RetainConfigs *bool `json:"retainConfigs,omitempty"`
 }
 
 type UnbindNetworkRequest struct {
-	PathParams UnbindNetworkPathParams
-	Request    *UnbindNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody *UnbindNetworkRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UnbindNetwork200ApplicationJSON - Successful operation

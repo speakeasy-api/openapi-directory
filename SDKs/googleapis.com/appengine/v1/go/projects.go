@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AppengineProjectsLocationsApplicationsCreate - Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The ID of the target Cloud Platform project. location - The region (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application located.For more information about App Engine applications, see Managing Projects, Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
-func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsCreateRequest) (*operations.AppengineProjectsLocationsApplicationsCreateResponse, error) {
+func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsCreateRequest, security operations.AppengineProjectsLocationsApplicationsCreateSecurity) (*operations.AppengineProjectsLocationsApplicationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectsId}/locations/{locationsId}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectsId}/locations/{locationsId}/applications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Cont
 }
 
 // AppengineProjectsLocationsApplicationsGet - Gets information about an application.
-func (s *projects) AppengineProjectsLocationsApplicationsGet(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsGetRequest) (*operations.AppengineProjectsLocationsApplicationsGetResponse, error) {
+func (s *projects) AppengineProjectsLocationsApplicationsGet(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsGetRequest, security operations.AppengineProjectsLocationsApplicationsGetSecurity) (*operations.AppengineProjectsLocationsApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

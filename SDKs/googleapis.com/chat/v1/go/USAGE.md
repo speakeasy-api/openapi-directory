@@ -14,36 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.ChatMediaDownloadRequest{
-        Security: operations.ChatMediaDownloadSecurity{
-            Option1: &operations.ChatMediaDownloadSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.ChatMediaDownloadPathParams{
-            ResourceName: "corrupti",
-        },
-        QueryParams: operations.ChatMediaDownloadQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PrettyPrint: false,
+        QuotaUser: "illum",
+        ResourceName: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Media.ChatMediaDownload(ctx, req)
+    res, err := s.Media.ChatMediaDownload(ctx, req, operations.ChatMediaDownloadSecurity{
+        Option1: &operations.ChatMediaDownloadSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

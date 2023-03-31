@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateFeeSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateFeeHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // CreateFeeRootTypeForFeeSubTransactionTypeEnum - Fee sub transaction type
@@ -78,9 +72,9 @@ type CreateFeeRootTypeForFee struct {
 }
 
 type CreateFeeRequest struct {
-	Headers  CreateFeeHeaders
-	Request  CreateFeeRootTypeForFee `request:"mediaType=application/json"`
-	Security CreateFeeSecurity
+	RequestBody CreateFeeRootTypeForFee `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreateFee500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AgentRemovePathParams struct {
+type AgentRemoveRequest struct {
 	// Agent to return the primary IP
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type AgentRemoveRequest struct {
-	PathParams AgentRemovePathParams
 }
 
 type AgentRemoveResponse struct {

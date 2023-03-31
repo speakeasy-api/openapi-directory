@@ -3,42 +3,40 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        django_rest_token=shared.SchemeDjangoRestToken(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        django_rest_token="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CreateUrlsExportRequest(
-    path_params=operations.CreateUrlsExportPathParams(
-        analysis_slug="error",
-        project_slug="minus",
-        username="animi",
-    ),
-    query_params=operations.CreateUrlsExportQueryParams(
-        area="disappeared",
-    ),
-    request=shared.UrlsQuery(
-        fields=[
-            "vitae",
+    urls_query=shared.UrlsQuery(
+        fields_=[
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
         filters={
-            "non": "reiciendis",
-            "id": "aut",
+            "nulla": "corrupti",
+            "illum": "vel",
+            "error": "deserunt",
         },
         sort=[
             {
-                "quaerat": "exercitationem",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
             {
-                "ipsum": "rerum",
-                "assumenda": "porro",
+                "suscipit": "molestiae",
+                "minus": "placeat",
             },
         ],
     ),
+    analysis_slug="voluptatum",
+    area="disappeared",
+    project_slug="excepturi",
+    username="Glen.Walsh33",
 )
     
 res = s.analysis.create_urls_export(req)

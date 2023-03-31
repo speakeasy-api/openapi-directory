@@ -32,20 +32,20 @@ func newCustomchannels(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // AdsensehostCustomchannelsDelete - Delete a specific custom channel from the host AdSense account.
-func (s *customchannels) AdsensehostCustomchannelsDelete(ctx context.Context, request operations.AdsensehostCustomchannelsDeleteRequest) (*operations.AdsensehostCustomchannelsDeleteResponse, error) {
+func (s *customchannels) AdsensehostCustomchannelsDelete(ctx context.Context, request operations.AdsensehostCustomchannelsDeleteRequest, security operations.AdsensehostCustomchannelsDeleteSecurity) (*operations.AdsensehostCustomchannelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *customchannels) AdsensehostCustomchannelsDelete(ctx context.Context, re
 }
 
 // AdsensehostCustomchannelsGet - Get a specific custom channel from the host AdSense account.
-func (s *customchannels) AdsensehostCustomchannelsGet(ctx context.Context, request operations.AdsensehostCustomchannelsGetRequest) (*operations.AdsensehostCustomchannelsGetResponse, error) {
+func (s *customchannels) AdsensehostCustomchannelsGet(ctx context.Context, request operations.AdsensehostCustomchannelsGetRequest, security operations.AdsensehostCustomchannelsGetSecurity) (*operations.AdsensehostCustomchannelsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *customchannels) AdsensehostCustomchannelsGet(ctx context.Context, reque
 }
 
 // AdsensehostCustomchannelsInsert - Add a new custom channel to the host AdSense account.
-func (s *customchannels) AdsensehostCustomchannelsInsert(ctx context.Context, request operations.AdsensehostCustomchannelsInsertRequest) (*operations.AdsensehostCustomchannelsInsertResponse, error) {
+func (s *customchannels) AdsensehostCustomchannelsInsert(ctx context.Context, request operations.AdsensehostCustomchannelsInsertRequest, security operations.AdsensehostCustomchannelsInsertSecurity) (*operations.AdsensehostCustomchannelsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomChannel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *customchannels) AdsensehostCustomchannelsInsert(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *customchannels) AdsensehostCustomchannelsInsert(ctx context.Context, re
 }
 
 // AdsensehostCustomchannelsList - List all host custom channels in this AdSense account.
-func (s *customchannels) AdsensehostCustomchannelsList(ctx context.Context, request operations.AdsensehostCustomchannelsListRequest) (*operations.AdsensehostCustomchannelsListResponse, error) {
+func (s *customchannels) AdsensehostCustomchannelsList(ctx context.Context, request operations.AdsensehostCustomchannelsListRequest, security operations.AdsensehostCustomchannelsListSecurity) (*operations.AdsensehostCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *customchannels) AdsensehostCustomchannelsList(ctx context.Context, requ
 }
 
 // AdsensehostCustomchannelsPatch - Update a custom channel in the host AdSense account. This method supports patch semantics.
-func (s *customchannels) AdsensehostCustomchannelsPatch(ctx context.Context, request operations.AdsensehostCustomchannelsPatchRequest) (*operations.AdsensehostCustomchannelsPatchResponse, error) {
+func (s *customchannels) AdsensehostCustomchannelsPatch(ctx context.Context, request operations.AdsensehostCustomchannelsPatchRequest, security operations.AdsensehostCustomchannelsPatchSecurity) (*operations.AdsensehostCustomchannelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomChannel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *customchannels) AdsensehostCustomchannelsPatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *customchannels) AdsensehostCustomchannelsPatch(ctx context.Context, req
 }
 
 // AdsensehostCustomchannelsUpdate - Update a custom channel in the host AdSense account.
-func (s *customchannels) AdsensehostCustomchannelsUpdate(ctx context.Context, request operations.AdsensehostCustomchannelsUpdateRequest) (*operations.AdsensehostCustomchannelsUpdateResponse, error) {
+func (s *customchannels) AdsensehostCustomchannelsUpdate(ctx context.Context, request operations.AdsensehostCustomchannelsUpdateRequest, security operations.AdsensehostCustomchannelsUpdateSecurity) (*operations.AdsensehostCustomchannelsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomChannel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *customchannels) AdsensehostCustomchannelsUpdate(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -10,22 +10,13 @@ var ProductSearchSimilarsServerList = []string{
 	"http://example.com/.{environment}.com.br",
 }
 
-type ProductSearchSimilarsPathParams struct {
-	// Product's unique identifier
-	ProductID int64 `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ProductSearchSimilarsHeaders struct {
+type ProductSearchSimilarsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ProductSearchSimilarsRequest struct {
-	PathParams ProductSearchSimilarsPathParams
-	Headers    ProductSearchSimilarsHeaders
-	ServerURL  *string
+	// Product's unique identifier
+	ProductID int64 `pathParam:"style=simple,explode=false,name=productId"`
 }
 
 type ProductSearchSimilarsResponse struct {

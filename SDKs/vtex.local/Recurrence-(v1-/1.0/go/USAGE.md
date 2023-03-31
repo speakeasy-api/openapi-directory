@@ -13,55 +13,47 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddrecurrenceitemRequest{
-        PathParams: operations.AddrecurrenceitemPathParams{
-            RecurrenceID: "corrupti",
-        },
-        Headers: operations.AddrecurrenceitemHeaders{
-            Accept: "application/json",
-            ContentType: "application/json",
-        },
-        Request: []shared.AddrecurrenceitemRequest{
+        Accept: "application/json",
+        ContentType: "application/json",
+        RequestBody: []shared.AddrecurrenceitemRequest{
             shared.AddrecurrenceitemRequest{
                 Frequency: shared.Frequency{
-                    Interval: 715190,
-                    Periodicity: "quibusdam",
+                    Interval: 592845,
+                    Periodicity: "distinctio",
                 },
-                Quantity: 602763,
-                Seller: "nulla",
-                ShippingAddressID: "corrupti",
-                Sku: "illum",
+                Quantity: 844266,
+                Seller: "unde",
+                ShippingAddressID: "nulla",
+                Sku: "corrupti",
             },
             shared.AddrecurrenceitemRequest{
                 Frequency: shared.Frequency{
-                    Interval: 423655,
-                    Periodicity: "error",
+                    Interval: 847252,
+                    Periodicity: "vel",
                 },
-                Quantity: 645894,
-                Seller: "suscipit",
-                ShippingAddressID: "iure",
-                Sku: "magnam",
-            },
-            shared.AddrecurrenceitemRequest{
-                Frequency: shared.Frequency{
-                    Interval: 891773,
-                    Periodicity: "ipsa",
-                },
-                Quantity: 963663,
-                Seller: "tempora",
+                Quantity: 623564,
+                Seller: "deserunt",
                 ShippingAddressID: "suscipit",
-                Sku: "molestiae",
+                Sku: "iure",
+            },
+            shared.AddrecurrenceitemRequest{
+                Frequency: shared.Frequency{
+                    Interval: 297534,
+                    Periodicity: "debitis",
+                },
+                Quantity: 56713,
+                Seller: "delectus",
+                ShippingAddressID: "tempora",
+                Sku: "suscipit",
             },
         },
+        RecurrenceID: "molestiae",
     }
 
     ctx := context.Background()

@@ -8,17 +8,16 @@ import (
 )
 
 type CreateFilePaymentConsentsConsentIDFileJSONSecurity struct {
-	TPPOAuth2Security shared.SchemeTppoAuth2Security `security:"scheme,type=oauth2"`
+	TPPOAuth2Security string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CreateFilePaymentConsentsConsentIDFileJSONPathParams struct {
-	// ConsentId
-	ConsentID string `pathParam:"style=simple,explode=false,name=ConsentId"`
-}
-
-type CreateFilePaymentConsentsConsentIDFileJSONHeaders struct {
+type CreateFilePaymentConsentsConsentIDFileJSONRequest struct {
 	// An Authorisation Token as per https://tools.ietf.org/html/rfc6750
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// ConsentId
+	ConsentID string `pathParam:"style=simple,explode=false,name=ConsentId"`
+	// Default
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -35,14 +34,6 @@ type CreateFilePaymentConsentsConsentIDFileJSONHeaders struct {
 	XIdempotencyKey string `header:"style=simple,explode=false,name=x-idempotency-key"`
 	// A detached JWS signature of the body of the payload.
 	XJwsSignature string `header:"style=simple,explode=false,name=x-jws-signature"`
-}
-
-type CreateFilePaymentConsentsConsentIDFileJSONRequest struct {
-	PathParams CreateFilePaymentConsentsConsentIDFileJSONPathParams
-	Headers    CreateFilePaymentConsentsConsentIDFileJSONHeaders
-	// Default
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security CreateFilePaymentConsentsConsentIDFileJSONSecurity
 }
 
 type CreateFilePaymentConsentsConsentIDFileJSONResponse struct {

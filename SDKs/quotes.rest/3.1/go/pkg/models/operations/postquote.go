@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostQuoteSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type PostQuoteQueryParams struct {
+type PostQuoteRequest struct {
 	// Quote Author
 	Author *string `queryParam:"style=form,explode=true,name=author"`
 	// Language. If not supplied an auto detection mechanism will be used to detect a language.
@@ -20,11 +19,6 @@ type PostQuoteQueryParams struct {
 	Quote string `queryParam:"style=form,explode=true,name=quote"`
 	// Comma Separated tags
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type PostQuoteRequest struct {
-	QueryParams PostQuoteQueryParams
-	Security    PostQuoteSecurity
 }
 
 type PostQuoteResponse struct {

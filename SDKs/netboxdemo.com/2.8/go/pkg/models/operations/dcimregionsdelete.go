@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimRegionsDeletePathParams struct {
+type DcimRegionsDeleteRequest struct {
 	// A unique integer value identifying this region.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRegionsDeleteRequest struct {
-	PathParams DcimRegionsDeletePathParams
 }
 
 type DcimRegionsDeleteResponse struct {

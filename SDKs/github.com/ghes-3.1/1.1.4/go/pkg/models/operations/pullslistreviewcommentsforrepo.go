@@ -10,13 +10,6 @@ import (
 	"time"
 )
 
-type PullsListReviewCommentsForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // PullsListReviewCommentsForRepoDirectionEnum - Can be either `asc` or `desc`. Ignored without `sort` parameter.
 type PullsListReviewCommentsForRepoDirectionEnum string
 
@@ -68,21 +61,20 @@ func (e *PullsListReviewCommentsForRepoSortEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type PullsListReviewCommentsForRepoQueryParams struct {
+type PullsListReviewCommentsForRepoRequest struct {
 	// Can be either `asc` or `desc`. Ignored without `sort` parameter.
 	Direction *PullsListReviewCommentsForRepoDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time                              `queryParam:"style=form,explode=true,name=since"`
 	Sort  *PullsListReviewCommentsForRepoSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type PullsListReviewCommentsForRepoRequest struct {
-	PathParams  PullsListReviewCommentsForRepoPathParams
-	QueryParams PullsListReviewCommentsForRepoQueryParams
 }
 
 type PullsListReviewCommentsForRepoResponse struct {

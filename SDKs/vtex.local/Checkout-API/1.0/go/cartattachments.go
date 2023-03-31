@@ -39,9 +39,9 @@ func newCartAttachments(defaultClient, securityClient HTTPClient, serverURL, lan
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddClientPreferences(ctx context.Context, request operations.AddClientPreferencesRequest) (*operations.AddClientPreferencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientPreferencesData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientPreferencesData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *cartAttachments) AddClientPreferences(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -102,9 +102,9 @@ func (s *cartAttachments) AddClientPreferences(ctx context.Context, request oper
 // >⚠️ The authentication of this endpoint can change depending on the customer context. If you are modifying information from a customer with a complete profile on the store, the response will return the customer's data masked. You can only access the customer data with an authenticated request.
 func (s *cartAttachments) AddClientProfile(ctx context.Context, request operations.AddClientProfileRequest) (*operations.AddClientProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientProfileData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientProfileData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -119,7 +119,7 @@ func (s *cartAttachments) AddClientProfile(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -154,9 +154,9 @@ func (s *cartAttachments) AddClientProfile(ctx context.Context, request operatio
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddMarketingData(ctx context.Context, request operations.AddMarketingDataRequest) (*operations.AddMarketingDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/marketingData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/marketingData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -171,7 +171,7 @@ func (s *cartAttachments) AddMarketingData(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -206,9 +206,9 @@ func (s *cartAttachments) AddMarketingData(ctx context.Context, request operatio
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddMerchantContextData(ctx context.Context, request operations.AddMerchantContextDataRequest) (*operations.AddMerchantContextDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/merchantContextData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/merchantContextData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +223,7 @@ func (s *cartAttachments) AddMerchantContextData(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -267,9 +267,9 @@ func (s *cartAttachments) AddMerchantContextData(ctx context.Context, request op
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddPaymentData(ctx context.Context, request operations.AddPaymentDataRequest) (*operations.AddPaymentDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/paymentData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/paymentData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -284,7 +284,7 @@ func (s *cartAttachments) AddPaymentData(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -323,9 +323,9 @@ func (s *cartAttachments) AddPaymentData(ctx context.Context, request operations
 // >⚠️ The authentication of this endpoint can change depending on the customer context. If you are modifying information from a customer with a complete profile on the store, the response will return the customer's data masked. You can only access the customer data with an authenticated request.
 func (s *cartAttachments) AddShippingAddress(ctx context.Context, request operations.AddShippingAddressRequest) (*operations.AddShippingAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/shippingData", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/shippingData", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -340,7 +340,7 @@ func (s *cartAttachments) AddShippingAddress(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -385,9 +385,9 @@ func (s *cartAttachments) GetClientProfileByEmail(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

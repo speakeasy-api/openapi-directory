@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcesMediaMostPopularMediaFormatPathParams struct {
+type GetResourcesMediaMostPopularMediaFormatRequest struct {
 	// Automatically added
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type GetResourcesMediaMostPopularMediaFormatQueryParams struct {
 	// The maximum number of records to return
 	Max *int `queryParam:"style=form,explode=false,name=max"`
 	// The offset of the records set to return for pagination.
 	Offset *int `queryParam:"style=form,explode=false,name=offset"`
-}
-
-type GetResourcesMediaMostPopularMediaFormatRequest struct {
-	PathParams  GetResourcesMediaMostPopularMediaFormatPathParams
-	QueryParams GetResourcesMediaMostPopularMediaFormatQueryParams
 }
 
 type GetResourcesMediaMostPopularMediaFormatResponse struct {

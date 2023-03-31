@@ -34,7 +34,7 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CheckPush - Check push
 // Sends a test message via push, this is a test endpoint to verify your push settings
-func (s *settings) CheckPush(ctx context.Context, request operations.CheckPushRequest) (*operations.CheckPushResponse, error) {
+func (s *settings) CheckPush(ctx context.Context, request shared.CheckPushRequest) (*operations.CheckPushResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_push"
 
@@ -111,7 +111,7 @@ func (s *settings) CheckPush(ctx context.Context, request operations.CheckPushRe
 
 // CheckSQS - Check SQS
 // Validates Amazon SQS credentials
-func (s *settings) CheckSQS(ctx context.Context, request operations.CheckSQSRequest) (*operations.CheckSQSResponse, error) {
+func (s *settings) CheckSQS(ctx context.Context, request shared.CheckSQSRequest) (*operations.CheckSQSResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/check_sqs"
 
@@ -188,7 +188,7 @@ func (s *settings) CheckSQS(ctx context.Context, request operations.CheckSQSRequ
 
 // CreateBlockList - Create block list
 // Creates a new application blocklist, once created the blocklist can be used by any channel type
-func (s *settings) CreateBlockList(ctx context.Context, request operations.CreateBlockListRequest) (*operations.CreateBlockListResponse, error) {
+func (s *settings) CreateBlockList(ctx context.Context, request shared.CreateBlockListRequest) (*operations.CreateBlockListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/blocklists"
 
@@ -265,7 +265,7 @@ func (s *settings) CreateBlockList(ctx context.Context, request operations.Creat
 
 // CreateChannelType - Create channel type
 // Creates new channel type
-func (s *settings) CreateChannelType(ctx context.Context, request operations.CreateChannelTypeRequest) (*operations.CreateChannelTypeResponse, error) {
+func (s *settings) CreateChannelType(ctx context.Context, request shared.CreateChannelTypeRequest) (*operations.CreateChannelTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channeltypes"
 
@@ -418,7 +418,7 @@ func (s *settings) GetRateLimits(ctx context.Context, request operations.GetRate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -681,7 +681,7 @@ func (s *settings) ListPushProviders(ctx context.Context) (*operations.ListPushP
 
 // UpdateApp - Update App Settings
 // This method updates one or more application settings
-func (s *settings) UpdateApp(ctx context.Context, request operations.UpdateAppRequest) (*operations.UpdateAppResponse, error) {
+func (s *settings) UpdateApp(ctx context.Context, request shared.UpdateAppRequest) (*operations.UpdateAppResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/app"
 
@@ -758,7 +758,7 @@ func (s *settings) UpdateApp(ctx context.Context, request operations.UpdateAppRe
 
 // UpsertPushProvider - Upsert a push provider
 // Upsert a push provider for v2 with multi bundle/package support
-func (s *settings) UpsertPushProvider(ctx context.Context, request operations.UpsertPushProviderRequest) (*operations.UpsertPushProviderResponse, error) {
+func (s *settings) UpsertPushProvider(ctx context.Context, request shared.UpsertPushProviderRequest) (*operations.UpsertPushProviderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push_providers"
 

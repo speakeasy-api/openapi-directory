@@ -8,17 +8,12 @@ import (
 )
 
 type UpdateTaxRateSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type UpdateTaxRatePathParams struct {
-	TaxRateUUID string `pathParam:"style=simple,explode=false,name=taxRateUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateTaxRateRequest struct {
-	PathParams UpdateTaxRatePathParams
-	Request    shared.TaxRateUpdateRequest `request:"mediaType=application/json"`
-	Security   UpdateTaxRateSecurity
+	TaxRateUpdateRequest shared.TaxRateUpdateRequest `request:"mediaType=application/json"`
+	TaxRateUUID          string                      `pathParam:"style=simple,explode=false,name=taxRateUuid"`
 }
 
 type UpdateTaxRateResponse struct {

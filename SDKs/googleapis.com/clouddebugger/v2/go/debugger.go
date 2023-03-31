@@ -33,20 +33,20 @@ func newDebugger(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ClouddebuggerDebuggerDebuggeesBreakpointsDelete - Deletes the breakpoint from the debuggee.
-func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsDelete(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse, error) {
+func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsDelete(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsDelete(ctx context.C
 }
 
 // ClouddebuggerDebuggerDebuggeesBreakpointsGet - Gets breakpoint information.
-func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsGet(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse, error) {
+func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsGet(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,20 +129,20 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsGet(ctx context.Cont
 }
 
 // ClouddebuggerDebuggerDebuggeesBreakpointsList - Lists all breakpoints for the debuggee.
-func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsList(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse, error) {
+func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsList(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,11 +177,11 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsList(ctx context.Con
 }
 
 // ClouddebuggerDebuggerDebuggeesBreakpointsSet - Sets the breakpoint to the debuggee.
-func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsSet(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse, error) {
+func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsSet(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/set", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/set", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Breakpoint", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -193,11 +193,11 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsSet(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -232,7 +232,7 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsSet(ctx context.Cont
 }
 
 // ClouddebuggerDebuggerDebuggeesList - Lists all the debuggees that the user has access to.
-func (s *debugger) ClouddebuggerDebuggerDebuggeesList(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesListRequest) (*operations.ClouddebuggerDebuggerDebuggeesListResponse, error) {
+func (s *debugger) ClouddebuggerDebuggerDebuggeesList(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesListRequest, security operations.ClouddebuggerDebuggerDebuggeesListSecurity) (*operations.ClouddebuggerDebuggerDebuggeesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/debugger/debuggees"
 
@@ -241,11 +241,11 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

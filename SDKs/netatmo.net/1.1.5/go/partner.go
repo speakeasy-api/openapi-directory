@@ -34,7 +34,7 @@ func newPartner(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // Getmeasure - The method getmeasure returns the measurements of a device or a module.
-func (s *partner) Getmeasure(ctx context.Context, request operations.GetmeasureRequest) (*operations.GetmeasureResponse, error) {
+func (s *partner) Getmeasure(ctx context.Context, request operations.GetmeasureRequest, security operations.GetmeasureSecurity) (*operations.GetmeasureResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getmeasure"
 
@@ -43,11 +43,11 @@ func (s *partner) Getmeasure(ctx context.Context, request operations.GetmeasureR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *partner) Getmeasure(ctx context.Context, request operations.GetmeasureR
 }
 
 // Partnerdevices - The method partnerdevices returns the list of device_id to which your partner application has access to.
-func (s *partner) Partnerdevices(ctx context.Context, request operations.PartnerdevicesRequest) (*operations.PartnerdevicesResponse, error) {
+func (s *partner) Partnerdevices(ctx context.Context) (*operations.PartnerdevicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partnerdevices"
 
@@ -91,7 +91,7 @@ func (s *partner) Partnerdevices(ctx context.Context, request operations.Partner
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

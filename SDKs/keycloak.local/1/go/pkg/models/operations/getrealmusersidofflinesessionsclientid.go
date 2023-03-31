@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmUsersIDOfflineSessionsClientIDPathParams struct {
+type GetRealmUsersIDOfflineSessionsClientIDRequest struct {
 	ClientID string `pathParam:"style=simple,explode=false,name=clientId"`
 	// User id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmUsersIDOfflineSessionsClientIDRequest struct {
-	PathParams GetRealmUsersIDOfflineSessionsClientIDPathParams
 }
 
 type GetRealmUsersIDOfflineSessionsClientIDResponse struct {

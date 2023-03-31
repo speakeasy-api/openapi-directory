@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartPathParams struct {
-	// Id of the folder exchange or followup
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the requireddocument
-	Requireddocumentid string `pathParam:"style=simple,explode=false,name=requireddocumentid"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartFormDataFile struct {
@@ -32,10 +22,14 @@ type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartFormD
 }
 
 type PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartPathParams
 	// Required Document to add
-	Request  PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartFormData `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartFormData `request:"mediaType=multipart/form-data"`
+	// Id of the folder exchange or followup
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the requireddocument
+	Requireddocumentid string `pathParam:"style=simple,explode=false,name=requireddocumentid"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipart201ApplicationJSON - Id of document created

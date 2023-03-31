@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1LocationsIDEmailTemplatesPathParams struct {
+type PostSetupV1LocationsIDEmailTemplatesRequest struct {
+	// Input model for email template
+	EmailTemplateInputModel *shared.EmailTemplateInputModel `request:"mediaType=application/json"`
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1LocationsIDEmailTemplatesRequest struct {
-	PathParams PostSetupV1LocationsIDEmailTemplatesPathParams
-	// Input model for email template
-	Request *shared.EmailTemplateInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1LocationsIDEmailTemplatesResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type RunAMonitorPathParams struct {
-	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
-}
-
 type RunAMonitorRequest struct {
-	PathParams RunAMonitorPathParams
+	MonitorUID string `pathParam:"style=simple,explode=false,name=monitor_uid"`
 }
 
 type RunAMonitor200ApplicationJSONRunExecutionsItem struct {

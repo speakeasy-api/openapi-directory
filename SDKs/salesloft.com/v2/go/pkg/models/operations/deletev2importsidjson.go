@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteV2ImportsIDJSONPathParams struct {
+type DeleteV2ImportsIDJSONRequest struct {
 	// Import ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteV2ImportsIDJSONQueryParams struct {
 	// Whether to delete people on this Import. Possible values are: [not present], all, single.
 	//
 	// 'single' will delete people who are only present in this Import.
@@ -19,11 +16,6 @@ type DeleteV2ImportsIDJSONQueryParams struct {
 	// Not specifying this parameter will not delete any people
 	//
 	Undo *string `queryParam:"style=form,explode=true,name=undo"`
-}
-
-type DeleteV2ImportsIDJSONRequest struct {
-	PathParams  DeleteV2ImportsIDJSONPathParams
-	QueryParams DeleteV2ImportsIDJSONQueryParams
 }
 
 type DeleteV2ImportsIDJSONResponse struct {

@@ -34,7 +34,7 @@ func newGeneration(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetPirateGenerateInsult - Generate random pirate insults.
-func (s *generation) GetPirateGenerateInsult(ctx context.Context, request operations.GetPirateGenerateInsultRequest) (*operations.GetPirateGenerateInsultResponse, error) {
+func (s *generation) GetPirateGenerateInsult(ctx context.Context, request operations.GetPirateGenerateInsultRequest, security operations.GetPirateGenerateInsultSecurity) (*operations.GetPirateGenerateInsultResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pirate/generate/insult"
 
@@ -43,11 +43,11 @@ func (s *generation) GetPirateGenerateInsult(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *generation) GetPirateGenerateInsult(ctx context.Context, request operat
 }
 
 // GetPirateGenerateLoremIpsum - Generate pirate lorem ipsum.
-func (s *generation) GetPirateGenerateLoremIpsum(ctx context.Context, request operations.GetPirateGenerateLoremIpsumRequest) (*operations.GetPirateGenerateLoremIpsumResponse, error) {
+func (s *generation) GetPirateGenerateLoremIpsum(ctx context.Context, request operations.GetPirateGenerateLoremIpsumRequest, security operations.GetPirateGenerateLoremIpsumSecurity) (*operations.GetPirateGenerateLoremIpsumResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pirate/generate/lorem-ipsum"
 
@@ -84,11 +84,11 @@ func (s *generation) GetPirateGenerateLoremIpsum(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -116,7 +116,7 @@ func (s *generation) GetPirateGenerateLoremIpsum(ctx context.Context, request op
 }
 
 // GetPirateGenerateName - Generate random pirate names.
-func (s *generation) GetPirateGenerateName(ctx context.Context, request operations.GetPirateGenerateNameRequest) (*operations.GetPirateGenerateNameResponse, error) {
+func (s *generation) GetPirateGenerateName(ctx context.Context, request operations.GetPirateGenerateNameRequest, security operations.GetPirateGenerateNameSecurity) (*operations.GetPirateGenerateNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pirate/generate/name"
 
@@ -125,11 +125,11 @@ func (s *generation) GetPirateGenerateName(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type ProvisionNetworkClientsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type ProvisionNetworkClientsRequestBodyClients struct {
 	// The MAC address of the client. Required.
 	Mac string `json:"mac"`
@@ -703,8 +699,8 @@ type ProvisionNetworkClientsRequestBody struct {
 }
 
 type ProvisionNetworkClientsRequest struct {
-	PathParams ProvisionNetworkClientsPathParams
-	Request    ProvisionNetworkClientsRequestBody `request:"mediaType=application/json"`
+	RequestBody ProvisionNetworkClientsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type ProvisionNetworkClientsResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlaceGetByGeoQueryParams struct {
+type PlaceGetByGeoRequest struct {
 	// An optional parameter to limit the results to active records only (Currently only the 'VariableMessageSign' place type is supported)
 	ActiveOnly *bool `queryParam:"style=form,explode=true,name=activeOnly"`
 	// An optional list of comma separated property categories to return in the Place's property bag. If null or empty, all categories of property are returned. Pass the keyword "none" to return no properties (a valid list of categories can be obtained from the /Place/Meta/categories endpoint)
@@ -26,10 +26,6 @@ type PlaceGetByGeoQueryParams struct {
 	Radius *float64 `queryParam:"style=form,explode=true,name=radius"`
 	// Place types to filter on, or null to return all types
 	Type []string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type PlaceGetByGeoRequest struct {
-	QueryParams PlaceGetByGeoQueryParams
 }
 
 type PlaceGetByGeoResponse struct {

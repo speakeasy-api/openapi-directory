@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddKvPairsRequest struct {
-	// A JSON object containing Key-value information
-	Request shared.KeyValuePairInput `request:"mediaType=application/json"`
-}
-
 type AddKvPairsResponse struct {
 	ContentType string
 	// A JSON object containing the newly added resource

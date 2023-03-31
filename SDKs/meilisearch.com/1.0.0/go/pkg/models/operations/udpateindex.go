@@ -10,10 +10,6 @@ type UdpateIndexRequestBody struct {
 	PrimaryKey *string `json:"primaryKey,omitempty"`
 }
 
-type UdpateIndexRequest struct {
-	Request *UdpateIndexRequestBody `request:"mediaType=application/json"`
-}
-
 type UdpateIndexResponse struct {
 	ContentType string
 	StatusCode  int

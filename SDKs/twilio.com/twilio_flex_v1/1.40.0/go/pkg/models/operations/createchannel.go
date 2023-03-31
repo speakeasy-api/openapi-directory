@@ -12,7 +12,8 @@ var CreateChannelServerList = []string{
 }
 
 type CreateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateChannelCreateChannelRequest struct {
@@ -36,12 +37,6 @@ type CreateChannelCreateChannelRequest struct {
 	TaskAttributes *string `form:"name=TaskAttributes"`
 	// The SID of the TaskRouter Task. Only valid when integration type is `task`. `null` for integration types `studio` & `external`
 	TaskSid *string `form:"name=TaskSid"`
-}
-
-type CreateChannelRequest struct {
-	Request   *CreateChannelCreateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateChannelSecurity
-	ServerURL *string
 }
 
 type CreateChannelResponse struct {

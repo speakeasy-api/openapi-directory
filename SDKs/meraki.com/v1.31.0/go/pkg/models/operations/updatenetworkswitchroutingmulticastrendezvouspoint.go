@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchRoutingMulticastRendezvousPointPathParams struct {
-	NetworkID         string `pathParam:"style=simple,explode=false,name=networkId"`
-	RendezvousPointID string `pathParam:"style=simple,explode=false,name=rendezvousPointId"`
-}
-
 type UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody struct {
 	// The IP address of the interface to use
 	InterfaceIP string `json:"interfaceIp"`
@@ -19,8 +14,9 @@ type UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody struct {
 }
 
 type UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest struct {
-	PathParams UpdateNetworkSwitchRoutingMulticastRendezvousPointPathParams
-	Request    UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody `request:"mediaType=application/json"`
+	NetworkID         string                                                        `pathParam:"style=simple,explode=false,name=networkId"`
+	RendezvousPointID string                                                        `pathParam:"style=simple,explode=false,name=rendezvousPointId"`
 }
 
 type UpdateNetworkSwitchRoutingMulticastRendezvousPointResponse struct {

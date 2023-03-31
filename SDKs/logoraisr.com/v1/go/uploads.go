@@ -34,7 +34,7 @@ func newUploads(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // UploadsCreate - Upload a new image
 // This POST-Method uploads a new file on the server.
-func (s *uploads) UploadsCreate(ctx context.Context, request operations.UploadsCreateRequest) (*operations.UploadsCreateResponse, error) {
+func (s *uploads) UploadsCreate(ctx context.Context, request operations.UploadsCreateRequestBody) (*operations.UploadsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/"
 

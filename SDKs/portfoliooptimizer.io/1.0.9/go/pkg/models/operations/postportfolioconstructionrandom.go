@@ -25,10 +25,6 @@ type PostPortfolioConstructionRandomRequestBody struct {
 	Portfolios *int64 `json:"portfolios,omitempty"`
 }
 
-type PostPortfolioConstructionRandomRequest struct {
-	Request PostPortfolioConstructionRandomRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioConstructionRandom200ApplicationJSONPortfolios struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage
 	AssetsWeights []float64 `json:"assetsWeights"`

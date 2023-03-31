@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamVrfsCreateRequest struct {
-	Request shared.WritableVRFInput `request:"mediaType=application/json"`
-}
-
 type IpamVrfsCreateResponse struct {
 	ContentType string
 	StatusCode  int

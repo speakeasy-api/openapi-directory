@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSpotPathParams struct {
+type UpdateSpotRequest struct {
+	// A JSON object containing spot information
+	SpotUpdateInput shared.SpotUpdateInput `request:"mediaType=application/json"`
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateSpotRequest struct {
-	PathParams UpdateSpotPathParams
-	// A JSON object containing spot information
-	Request shared.SpotUpdateInput `request:"mediaType=application/json"`
 }
 
 type UpdateSpotResponse struct {

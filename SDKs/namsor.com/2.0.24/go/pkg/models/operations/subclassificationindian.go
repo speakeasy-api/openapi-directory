@@ -8,17 +8,12 @@ import (
 )
 
 type SubclassificationIndianSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SubclassificationIndianPathParams struct {
-	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type SubclassificationIndianRequest struct {
-	PathParams SubclassificationIndianPathParams
-	Security   SubclassificationIndianSecurity
+	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
+	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type SubclassificationIndianResponse struct {

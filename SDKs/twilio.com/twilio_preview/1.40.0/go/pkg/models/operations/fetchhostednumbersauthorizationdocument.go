@@ -12,18 +12,13 @@ var FetchHostedNumbersAuthorizationDocumentServerList = []string{
 }
 
 type FetchHostedNumbersAuthorizationDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchHostedNumbersAuthorizationDocumentPathParams struct {
-	// A 34 character string that uniquely identifies this AuthorizationDocument.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchHostedNumbersAuthorizationDocumentRequest struct {
-	PathParams FetchHostedNumbersAuthorizationDocumentPathParams
-	Security   FetchHostedNumbersAuthorizationDocumentSecurity
-	ServerURL  *string
+	// A 34 character string that uniquely identifies this AuthorizationDocument.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchHostedNumbersAuthorizationDocumentResponse struct {

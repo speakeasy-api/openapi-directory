@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2EmailTemplatesJSONQueryParams struct {
+type GetV2EmailTemplatesJSONRequest struct {
 	// Filters email templates to those belonging to the cadence. Not to exceed 100 IDs. If a record can't be found, that record won't be returned and your request will be successful
 	CadenceID []int64 `queryParam:"style=form,explode=false,name=cadence_id"`
 	// Filters email templates by current authenticated user
@@ -45,10 +45,6 @@ type GetV2EmailTemplatesJSONQueryParams struct {
 	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
 	//
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
-}
-
-type GetV2EmailTemplatesJSONRequest struct {
-	QueryParams GetV2EmailTemplatesJSONQueryParams
 }
 
 type GetV2EmailTemplatesJSONResponse struct {

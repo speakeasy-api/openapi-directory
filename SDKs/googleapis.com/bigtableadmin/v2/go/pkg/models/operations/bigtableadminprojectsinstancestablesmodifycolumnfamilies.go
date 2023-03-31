@@ -8,28 +8,28 @@ import (
 )
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity struct {
@@ -40,14 +40,10 @@ type BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity struct {
 	Option5 *BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption5 `security:"option"`
 }
 
-type BigtableadminProjectsInstancesTablesModifyColumnFamiliesPathParams struct {
-	// Required. The unique name of the table whose families should be modified. Values are of the form `projects/{project}/instances/{instance}/tables/{table}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BigtableadminProjectsInstancesTablesModifyColumnFamiliesQueryParams struct {
+type BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                 *shared.XgafvEnum                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ModifyColumnFamiliesRequest *shared.ModifyColumnFamiliesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -58,6 +54,8 @@ type BigtableadminProjectsInstancesTablesModifyColumnFamiliesQueryParams struct 
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. The unique name of the table whose families should be modified. Values are of the form `projects/{project}/instances/{instance}/tables/{table}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -68,13 +66,6 @@ type BigtableadminProjectsInstancesTablesModifyColumnFamiliesQueryParams struct 
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest struct {
-	PathParams  BigtableadminProjectsInstancesTablesModifyColumnFamiliesPathParams
-	QueryParams BigtableadminProjectsInstancesTablesModifyColumnFamiliesQueryParams
-	Request     *shared.ModifyColumnFamiliesRequest `request:"mediaType=application/json"`
-	Security    BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity
 }
 
 type BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse struct {

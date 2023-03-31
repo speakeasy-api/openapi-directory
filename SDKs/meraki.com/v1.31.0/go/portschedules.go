@@ -34,9 +34,9 @@ func newPortSchedules(defaultClient, securityClient HTTPClient, serverURL, langu
 // Add a switch port schedule
 func (s *portSchedules) CreateNetworkSwitchPortSchedule(ctx context.Context, request operations.CreateNetworkSwitchPortScheduleRequest) (*operations.CreateNetworkSwitchPortScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *portSchedules) CreateNetworkSwitchPortSchedule(ctx context.Context, req
 // Delete a switch port schedule
 func (s *portSchedules) DeleteNetworkSwitchPortSchedule(ctx context.Context, request operations.DeleteNetworkSwitchPortScheduleRequest) (*operations.DeleteNetworkSwitchPortScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *portSchedules) DeleteNetworkSwitchPortSchedule(ctx context.Context, req
 // List switch port schedules
 func (s *portSchedules) GetNetworkSwitchPortSchedules(ctx context.Context, request operations.GetNetworkSwitchPortSchedulesRequest) (*operations.GetNetworkSwitchPortSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,9 +170,9 @@ func (s *portSchedules) GetNetworkSwitchPortSchedules(ctx context.Context, reque
 // Update a switch port schedule
 func (s *portSchedules) UpdateNetworkSwitchPortSchedule(ctx context.Context, request operations.UpdateNetworkSwitchPortScheduleRequest) (*operations.UpdateNetworkSwitchPortScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

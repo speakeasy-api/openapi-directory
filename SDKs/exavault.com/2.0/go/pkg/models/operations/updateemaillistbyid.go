@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEmailListByIDPathParams struct {
-	// ID of the email list to update.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateEmailListByIDHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type UpdateEmailListByIDUpdateEmailListRequestBody struct {
 	// Email addresses that replace existing list.
 	Emails []string `json:"emails,omitempty"`
@@ -27,9 +15,13 @@ type UpdateEmailListByIDUpdateEmailListRequestBody struct {
 }
 
 type UpdateEmailListByIDRequest struct {
-	PathParams UpdateEmailListByIDPathParams
-	Headers    UpdateEmailListByIDHeaders
-	Request    *UpdateEmailListByIDUpdateEmailListRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateEmailListByIDUpdateEmailListRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
+	// ID of the email list to update.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateEmailListByIDResponse struct {

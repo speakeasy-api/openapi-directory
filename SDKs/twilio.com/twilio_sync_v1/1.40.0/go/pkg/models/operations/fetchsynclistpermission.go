@@ -12,22 +12,17 @@ var FetchSyncListPermissionServerList = []string{
 }
 
 type FetchSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSyncListPermissionPathParams struct {
+type FetchSyncListPermissionRequest struct {
 	// The application-defined string that uniquely identifies the User's Sync List Permission resource to fetch.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// The SID of the Sync List with the Sync List Permission resource to fetch. Can be the Sync List resource's `sid` or its `unique_name`.
 	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to fetch.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type FetchSyncListPermissionRequest struct {
-	PathParams FetchSyncListPermissionPathParams
-	Security   FetchSyncListPermissionSecurity
-	ServerURL  *string
 }
 
 type FetchSyncListPermissionResponse struct {

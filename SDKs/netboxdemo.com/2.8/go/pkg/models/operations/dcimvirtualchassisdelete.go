@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DcimVirtualChassisDeletePathParams struct {
+type DcimVirtualChassisDeleteRequest struct {
 	// A unique integer value identifying this virtual chassis.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimVirtualChassisDeleteRequest struct {
-	PathParams DcimVirtualChassisDeletePathParams
 }
 
 type DcimVirtualChassisDeleteResponse struct {

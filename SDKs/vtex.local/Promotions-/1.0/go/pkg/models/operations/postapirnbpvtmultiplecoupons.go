@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostAPIRnbPvtMultipleCouponsHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // PostAPIRnbPvtMultipleCouponsRequestBodyCouponConfiguration - Object that contains all coupon configuration.
 type PostAPIRnbPvtMultipleCouponsRequestBodyCouponConfiguration struct {
 	// Coupon code.
@@ -37,8 +30,11 @@ type PostAPIRnbPvtMultipleCouponsRequestBody struct {
 }
 
 type PostAPIRnbPvtMultipleCouponsRequest struct {
-	Headers PostAPIRnbPvtMultipleCouponsHeaders
-	Request []PostAPIRnbPvtMultipleCouponsRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                                    `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []PostAPIRnbPvtMultipleCouponsRequestBody `request:"mediaType=application/json"`
 }
 
 type PostAPIRnbPvtMultipleCouponsResponse struct {

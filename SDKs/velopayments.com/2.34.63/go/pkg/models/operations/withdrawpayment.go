@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WithdrawPaymentPathParams struct {
+type WithdrawPaymentRequest struct {
+	// details for withdrawal
+	WithdrawPaymentRequest shared.WithdrawPaymentRequest `request:"mediaType=application/json"`
 	// Id of the Payment
 	PaymentID string `pathParam:"style=simple,explode=false,name=paymentId"`
-}
-
-type WithdrawPaymentRequest struct {
-	PathParams WithdrawPaymentPathParams
-	// details for withdrawal
-	Request shared.WithdrawPaymentRequest `request:"mediaType=application/json"`
 }
 
 type WithdrawPaymentResponse struct {

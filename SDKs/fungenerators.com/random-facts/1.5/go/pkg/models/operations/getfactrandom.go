@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetFactRandomSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetFactRandomQueryParams struct {
+type GetFactRandomRequest struct {
 	// Category to get the fact from
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Sub Category to get the fact from
 	Subcategory *string `queryParam:"style=form,explode=true,name=subcategory"`
-}
-
-type GetFactRandomRequest struct {
-	QueryParams GetFactRandomQueryParams
-	Security    GetFactRandomSecurity
 }
 
 type GetFactRandomResponse struct {

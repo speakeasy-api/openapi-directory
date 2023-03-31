@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsMapCommitAuthorPathParams struct {
-	AuthorID int64 `pathParam:"style=simple,explode=false,name=author_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type MigrationsMapCommitAuthorRequestBody struct {
 	// The new Git author email.
 	Email *string `json:"email,omitempty"`
@@ -23,8 +15,12 @@ type MigrationsMapCommitAuthorRequestBody struct {
 }
 
 type MigrationsMapCommitAuthorRequest struct {
-	PathParams MigrationsMapCommitAuthorPathParams
-	Request    *MigrationsMapCommitAuthorRequestBody `request:"mediaType=application/json"`
+	RequestBody *MigrationsMapCommitAuthorRequestBody `request:"mediaType=application/json"`
+	AuthorID    int64                                 `pathParam:"style=simple,explode=false,name=author_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type MigrationsMapCommitAuthorResponse struct {

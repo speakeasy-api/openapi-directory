@@ -8,16 +8,11 @@ import (
 )
 
 type AndroidpublisherUsersListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherUsersListPathParams struct {
-	// Required. The developer account to fetch users from. Format: developers/{developer}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AndroidpublisherUsersListQueryParams struct {
+type AndroidpublisherUsersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type AndroidpublisherUsersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A token received from a previous call to this method, in order to retrieve further results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The developer account to fetch users from. Format: developers/{developer}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type AndroidpublisherUsersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherUsersListRequest struct {
-	PathParams  AndroidpublisherUsersListPathParams
-	QueryParams AndroidpublisherUsersListQueryParams
-	Security    AndroidpublisherUsersListSecurity
 }
 
 type AndroidpublisherUsersListResponse struct {

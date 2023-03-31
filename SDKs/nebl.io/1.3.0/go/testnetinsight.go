@@ -36,7 +36,7 @@ func newTestnetInsight(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns NEBL address object containing information on a specific address
 func (s *testnetInsight) TestnetGetAddress(ctx context.Context, request operations.TestnetGetAddressRequest) (*operations.TestnetGetAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *testnetInsight) TestnetGetAddress(ctx context.Context, request operatio
 // Returns NEBL address balance in satoshis
 func (s *testnetInsight) TestnetGetAddressBalance(ctx context.Context, request operations.TestnetGetAddressBalanceRequest) (*operations.TestnetGetAddressBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/balance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/balance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *testnetInsight) TestnetGetAddressBalance(ctx context.Context, request o
 // Returns total NEBL received by address in satoshis
 func (s *testnetInsight) TestnetGetAddressTotalReceived(ctx context.Context, request operations.TestnetGetAddressTotalReceivedRequest) (*operations.TestnetGetAddressTotalReceivedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalReceived", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalReceived", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *testnetInsight) TestnetGetAddressTotalReceived(ctx context.Context, req
 // Returns total NEBL sent by address in satoshis
 func (s *testnetInsight) TestnetGetAddressTotalSent(ctx context.Context, request operations.TestnetGetAddressTotalSentRequest) (*operations.TestnetGetAddressTotalSentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalSent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalSent", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,7 +216,7 @@ func (s *testnetInsight) TestnetGetAddressTotalSent(ctx context.Context, request
 // Returns NEBL address unconfirmed balance in satoshis
 func (s *testnetInsight) TestnetGetAddressUnconfirmedBalance(ctx context.Context, request operations.TestnetGetAddressUnconfirmedBalanceRequest) (*operations.TestnetGetAddressUnconfirmedBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/unconfirmedBalance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/unconfirmedBalance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *testnetInsight) TestnetGetAddressUnconfirmedBalance(ctx context.Context
 // Returns information on each Unspent Transaction Output contained at an address
 func (s *testnetInsight) TestnetGetAddressUtxos(ctx context.Context, request operations.TestnetGetAddressUtxosRequest) (*operations.TestnetGetAddressUtxosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/utxo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/utxo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *testnetInsight) TestnetGetAddressUtxos(ctx context.Context, request ope
 // Returns blockchain data for a given block based upon the block hash
 func (s *testnetInsight) TestnetGetBlock(ctx context.Context, request operations.TestnetGetBlockRequest) (*operations.TestnetGetBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block/{blockhash}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block/{blockhash}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +351,7 @@ func (s *testnetInsight) TestnetGetBlock(ctx context.Context, request operations
 // Returns the block hash of a block at a given block index
 func (s *testnetInsight) TestnetGetBlockIndex(ctx context.Context, request operations.TestnetGetBlockIndexRequest) (*operations.TestnetGetBlockIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block-index/{blockindex}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block-index/{blockindex}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -396,7 +396,7 @@ func (s *testnetInsight) TestnetGetBlockIndex(ctx context.Context, request opera
 // Returns raw transaction hex representing a NEBL transaction
 func (s *testnetInsight) TestnetGetRawTx(ctx context.Context, request operations.TestnetGetRawTxRequest) (*operations.TestnetGetRawTxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/rawtx/{txid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/rawtx/{txid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -448,7 +448,7 @@ func (s *testnetInsight) TestnetGetStatus(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -535,7 +535,7 @@ func (s *testnetInsight) TestnetGetSync(ctx context.Context) (*operations.Testne
 // Returns NEBL transaction object representing a NEBL transaction
 func (s *testnetInsight) TestnetGetTx(ctx context.Context, request operations.TestnetGetTxRequest) (*operations.TestnetGetTxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/tx/{txid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/tx/{txid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -587,7 +587,7 @@ func (s *testnetInsight) TestnetGetTxs(ctx context.Context, request operations.T
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -627,7 +627,7 @@ func (s *testnetInsight) TestnetGetTxs(ctx context.Context, request operations.T
 
 // TestnetSendTx - Broadcasts a signed raw transaction to the network (not NTP1 specific)
 // Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.
-func (s *testnetInsight) TestnetSendTx(ctx context.Context, request operations.TestnetSendTxRequest) (*operations.TestnetSendTxResponse, error) {
+func (s *testnetInsight) TestnetSendTx(ctx context.Context, request shared.SendTxRequest) (*operations.TestnetSendTxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/testnet/ins/tx/send"
 

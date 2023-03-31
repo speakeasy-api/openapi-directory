@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetAuthorNameUsingPOSTQueryParams struct {
-	AuthorID *string `queryParam:"style=form,explode=true,name=authorID"`
-}
-
 type GetAuthorNameUsingPOSTRequest struct {
-	QueryParams GetAuthorNameUsingPOSTQueryParams
+	AuthorID *string `queryParam:"style=form,explode=true,name=authorID"`
 }
 
 // GetAuthorNameUsingPOST500ApplicationJSON - internal api error (code 2)

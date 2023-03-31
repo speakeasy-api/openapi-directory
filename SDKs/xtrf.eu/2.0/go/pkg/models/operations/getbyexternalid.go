@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetByExternalIDQueryParams struct {
+type GetByExternalIDRequest struct {
 	// job's external identifier
 	ExternalID *string `queryParam:"style=form,explode=true,name=externalId"`
 	// job's externalProjectId
 	ExternalProjectID *string `queryParam:"style=form,explode=true,name=externalProjectId"`
-}
-
-type GetByExternalIDRequest struct {
-	QueryParams GetByExternalIDQueryParams
 }
 
 type GetByExternalIDResponse struct {

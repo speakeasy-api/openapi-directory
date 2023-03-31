@@ -14,12 +14,8 @@ var UpdateSimServerList = []string{
 }
 
 type UpdateSimSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSimPathParams struct {
-	// The SID or the `unique_name` of the Sim resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateSimUpdateSimRequestCallbackMethodEnum - The HTTP method we should use to call `callback_url`. Can be: `POST` or `GET`. The default is `POST`.
@@ -276,10 +272,9 @@ type UpdateSimUpdateSimRequest struct {
 }
 
 type UpdateSimRequest struct {
-	PathParams UpdateSimPathParams
-	Request    *UpdateSimUpdateSimRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSimSecurity
-	ServerURL  *string
+	RequestBody *UpdateSimUpdateSimRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID or the `unique_name` of the Sim resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSimResponse struct {

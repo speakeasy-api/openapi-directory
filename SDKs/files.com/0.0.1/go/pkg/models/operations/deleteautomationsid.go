@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAutomationsIDPathParams struct {
+type DeleteAutomationsIDRequest struct {
 	// Automation ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAutomationsIDRequest struct {
-	PathParams DeleteAutomationsIDPathParams
 }
 
 type DeleteAutomationsIDResponse struct {

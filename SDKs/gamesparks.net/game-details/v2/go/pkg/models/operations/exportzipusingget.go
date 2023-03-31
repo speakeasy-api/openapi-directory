@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ExportZipUsingGETPathParams struct {
+type ExportZipUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
-}
-
-type ExportZipUsingGETRequest struct {
-	PathParams ExportZipUsingGETPathParams
 }
 
 type ExportZipUsingGETResponse struct {

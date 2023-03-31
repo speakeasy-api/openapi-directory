@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNodeResourcePathParams struct {
+type GetNodeResourceRequest struct {
 	// CURIE e.g. HP:0000465
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetNodeResourceRequest struct {
-	PathParams GetNodeResourcePathParams
 }
 
 type GetNodeResourceResponse struct {

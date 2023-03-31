@@ -32,20 +32,20 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DirectoryDomainsDelete - Deletes a domain of the customer.
-func (s *domains) DirectoryDomainsDelete(ctx context.Context, request operations.DirectoryDomainsDeleteRequest) (*operations.DirectoryDomainsDeleteResponse, error) {
+func (s *domains) DirectoryDomainsDelete(ctx context.Context, request operations.DirectoryDomainsDeleteRequest, security operations.DirectoryDomainsDeleteSecurity) (*operations.DirectoryDomainsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *domains) DirectoryDomainsDelete(ctx context.Context, request operations
 }
 
 // DirectoryDomainsGet - Retrieves a domain of the customer.
-func (s *domains) DirectoryDomainsGet(ctx context.Context, request operations.DirectoryDomainsGetRequest) (*operations.DirectoryDomainsGetResponse, error) {
+func (s *domains) DirectoryDomainsGet(ctx context.Context, request operations.DirectoryDomainsGetRequest, security operations.DirectoryDomainsGetSecurity) (*operations.DirectoryDomainsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *domains) DirectoryDomainsGet(ctx context.Context, request operations.Di
 }
 
 // DirectoryDomainsInsert - Inserts a domain of the customer.
-func (s *domains) DirectoryDomainsInsert(ctx context.Context, request operations.DirectoryDomainsInsertRequest) (*operations.DirectoryDomainsInsertResponse, error) {
+func (s *domains) DirectoryDomainsInsert(ctx context.Context, request operations.DirectoryDomainsInsertRequest, security operations.DirectoryDomainsInsertSecurity) (*operations.DirectoryDomainsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Domains", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *domains) DirectoryDomainsInsert(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *domains) DirectoryDomainsInsert(ctx context.Context, request operations
 }
 
 // DirectoryDomainsList - Lists the domains of the customer.
-func (s *domains) DirectoryDomainsList(ctx context.Context, request operations.DirectoryDomainsListRequest) (*operations.DirectoryDomainsListResponse, error) {
+func (s *domains) DirectoryDomainsList(ctx context.Context, request operations.DirectoryDomainsListRequest, security operations.DirectoryDomainsListSecurity) (*operations.DirectoryDomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

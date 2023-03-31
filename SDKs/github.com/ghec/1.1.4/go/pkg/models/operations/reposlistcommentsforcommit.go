@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListCommentsForCommitPathParams struct {
+type ReposListCommentsForCommitRequest struct {
 	// The SHA of the commit.
 	CommitSha string `pathParam:"style=simple,explode=false,name=commit_sha"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposListCommentsForCommitQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ReposListCommentsForCommitRequest struct {
-	PathParams  ReposListCommentsForCommitPathParams
-	QueryParams ReposListCommentsForCommitQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposListCommentsForCommitResponse struct {

@@ -35,7 +35,7 @@ func newInfo(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // GetVersion - Show version info
 // Show version info
-func (s *info) GetVersion(ctx context.Context, request operations.GetVersionRequest) (*operations.GetVersionResponse, error) {
+func (s *info) GetVersion(ctx context.Context) (*operations.GetVersionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/info/version"
 
@@ -44,7 +44,7 @@ func (s *info) GetVersion(ctx context.Context, request operations.GetVersionRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

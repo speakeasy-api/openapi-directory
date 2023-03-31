@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResendPayeeInviteV3PathParams struct {
+type ResendPayeeInviteV3Request struct {
+	// Provide Payor Id in body of request
+	InvitePayeeRequestV3 shared.InvitePayeeRequestV3 `request:"mediaType=application/json"`
 	// The UUID of the payee.
 	PayeeID string `pathParam:"style=simple,explode=false,name=payeeId"`
-}
-
-type ResendPayeeInviteV3Request struct {
-	PathParams ResendPayeeInviteV3PathParams
-	// Provide Payor Id in body of request
-	Request shared.InvitePayeeRequestV3 `request:"mediaType=application/json"`
 }
 
 type ResendPayeeInviteV3Response struct {

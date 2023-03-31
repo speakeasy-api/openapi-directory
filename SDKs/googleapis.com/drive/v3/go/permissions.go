@@ -32,11 +32,11 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // DrivePermissionsCreate - Creates a permission for a file or shared drive. For more information on creating permissions, see Share files, folders & drives.
-func (s *permissions) DrivePermissionsCreate(ctx context.Context, request operations.DrivePermissionsCreateRequest) (*operations.DrivePermissionsCreateResponse, error) {
+func (s *permissions) DrivePermissionsCreate(ctx context.Context, request operations.DrivePermissionsCreateRequest, security operations.DrivePermissionsCreateSecurity) (*operations.DrivePermissionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PermissionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *permissions) DrivePermissionsCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *permissions) DrivePermissionsCreate(ctx context.Context, request operat
 }
 
 // DrivePermissionsDelete - Deletes a permission.
-func (s *permissions) DrivePermissionsDelete(ctx context.Context, request operations.DrivePermissionsDeleteRequest) (*operations.DrivePermissionsDeleteResponse, error) {
+func (s *permissions) DrivePermissionsDelete(ctx context.Context, request operations.DrivePermissionsDeleteRequest, security operations.DrivePermissionsDeleteSecurity) (*operations.DrivePermissionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *permissions) DrivePermissionsDelete(ctx context.Context, request operat
 }
 
 // DrivePermissionsGet - Gets a permission by ID.
-func (s *permissions) DrivePermissionsGet(ctx context.Context, request operations.DrivePermissionsGetRequest) (*operations.DrivePermissionsGetResponse, error) {
+func (s *permissions) DrivePermissionsGet(ctx context.Context, request operations.DrivePermissionsGetRequest, security operations.DrivePermissionsGetSecurity) (*operations.DrivePermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *permissions) DrivePermissionsGet(ctx context.Context, request operation
 }
 
 // DrivePermissionsList - Lists a file's or shared drive's permissions.
-func (s *permissions) DrivePermissionsList(ctx context.Context, request operations.DrivePermissionsListRequest) (*operations.DrivePermissionsListResponse, error) {
+func (s *permissions) DrivePermissionsList(ctx context.Context, request operations.DrivePermissionsListRequest, security operations.DrivePermissionsListSecurity) (*operations.DrivePermissionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *permissions) DrivePermissionsList(ctx context.Context, request operatio
 }
 
 // DrivePermissionsUpdate - Updates a permission with patch semantics.
-func (s *permissions) DrivePermissionsUpdate(ctx context.Context, request operations.DrivePermissionsUpdateRequest) (*operations.DrivePermissionsUpdateResponse, error) {
+func (s *permissions) DrivePermissionsUpdate(ctx context.Context, request operations.DrivePermissionsUpdateRequest, security operations.DrivePermissionsUpdateSecurity) (*operations.DrivePermissionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PermissionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *permissions) DrivePermissionsUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

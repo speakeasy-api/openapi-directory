@@ -8,18 +8,18 @@ import (
 )
 
 type StorageProjectsHmacKeysDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysDeleteSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsHmacKeysDeleteSecurity struct {
@@ -28,14 +28,9 @@ type StorageProjectsHmacKeysDeleteSecurity struct {
 	Option3 *StorageProjectsHmacKeysDeleteSecurityOption3 `security:"option"`
 }
 
-type StorageProjectsHmacKeysDeletePathParams struct {
+type StorageProjectsHmacKeysDeleteRequest struct {
 	// Name of the HMAC key to be deleted.
 	AccessID string `pathParam:"style=simple,explode=false,name=accessId"`
-	// Project ID owning the requested key
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type StorageProjectsHmacKeysDeleteQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -46,6 +41,8 @@ type StorageProjectsHmacKeysDeleteQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID owning the requested key
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Upload protocol for media (e.g. "media", "multipart", "resumable").
@@ -54,12 +51,6 @@ type StorageProjectsHmacKeysDeleteQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageProjectsHmacKeysDeleteRequest struct {
-	PathParams  StorageProjectsHmacKeysDeletePathParams
-	QueryParams StorageProjectsHmacKeysDeleteQueryParams
-	Security    StorageProjectsHmacKeysDeleteSecurity
 }
 
 type StorageProjectsHmacKeysDeleteResponse struct {

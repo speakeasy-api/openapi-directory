@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePrincipalsUpdatePathParams struct {
+type ServicePrincipalsUpdateRequest struct {
+	// Parameters to update a service principal.
+	ServicePrincipalUpdateParameters shared.ServicePrincipalUpdateParameters `request:"mediaType=application/json"`
+	// Client API version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// The object ID of the service principal to delete.
 	ObjectID string `pathParam:"style=simple,explode=false,name=objectId"`
 	// The tenant ID.
 	TenantID string `pathParam:"style=simple,explode=false,name=tenantID"`
-}
-
-type ServicePrincipalsUpdateQueryParams struct {
-	// Client API version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-}
-
-type ServicePrincipalsUpdateRequest struct {
-	PathParams  ServicePrincipalsUpdatePathParams
-	QueryParams ServicePrincipalsUpdateQueryParams
-	// Parameters to update a service principal.
-	Request shared.ServicePrincipalUpdateParameters `request:"mediaType=application/json"`
 }
 
 type ServicePrincipalsUpdateResponse struct {

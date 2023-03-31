@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type AddBlockedDeliveryWindowsPathParams struct {
-	CarrierID string `pathParam:"style=simple,explode=false,name=carrierId"`
-}
-
-type AddBlockedDeliveryWindowsHeaders struct {
+type AddBlockedDeliveryWindowsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type AddBlockedDeliveryWindowsRequest struct {
-	PathParams AddBlockedDeliveryWindowsPathParams
-	Headers    AddBlockedDeliveryWindowsHeaders
-	Request    string `request:"mediaType=application/json"`
+	RequestBody string `request:"mediaType=application/json"`
+	CarrierID   string `pathParam:"style=simple,explode=false,name=carrierId"`
 }
 
 type AddBlockedDeliveryWindowsResponse struct {

@@ -8,16 +8,11 @@ import (
 )
 
 type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListPathParams struct {
-	// Required. The parent placement resource name such as `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListQueryParams struct {
+type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyReg
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. The previous `ListPredictionApiKeyRegistration.nextPageToken`.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent placement resource name such as `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyReg
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListRequest struct {
-	PathParams  RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListPathParams
-	QueryParams RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListQueryParams
-	Security    RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListSecurity
 }
 
 type RecommendationengineProjectsLocationsCatalogsEventStoresPredictionAPIKeyRegistrationsListResponse struct {

@@ -14,12 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetFamilyDetailsRequest{
-        QueryParams: operations.GetFamilyDetailsQueryParams{
-            ID: "{family_id}",
-        },
-        Headers: operations.GetFamilyDetailsHeaders{
-            OcpApimSubscriptionKey: "{{apiKey}}",
-        },
+        OcpApimSubscriptionKey: "{{apiKey}}",
+        ID: "{family_id}",
     }
 
     ctx := context.Background()

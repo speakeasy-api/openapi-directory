@@ -8,17 +8,12 @@ import (
 )
 
 type GetInventoryTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetInventoryTaskPathParams struct {
-	// The ID of the task. This ID was generated when the task was created by the <strong>createInventoryTask</strong> method
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetInventoryTaskRequest struct {
-	PathParams GetInventoryTaskPathParams
-	Security   GetInventoryTaskSecurity
+	// The ID of the task. This ID was generated when the task was created by the <strong>createInventoryTask</strong> method
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetInventoryTaskResponse struct {

@@ -14,34 +14,25 @@ func main() {
     s := sdk.New()
 
     req := operations.BigqueryDatasetsDeleteRequest{
-        Security: operations.BigqueryDatasetsDeleteSecurity{
-            Option1: &operations.BigqueryDatasetsDeleteSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BigqueryDatasetsDeletePathParams{
-            DatasetID: "corrupti",
-            ProjectID: "provident",
-        },
-        QueryParams: operations.BigqueryDatasetsDeleteQueryParams{
-            Alt: "json",
-            DeleteContents: false,
-            Fields: "distinctio",
-            Key: "quibusdam",
-            OauthToken: "unde",
-            PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "corrupti",
-        },
+        Alt: "json",
+        DatasetID: "corrupti",
+        DeleteContents: false,
+        Fields: "provident",
+        Key: "distinctio",
+        OauthToken: "quibusdam",
+        PrettyPrint: false,
+        ProjectID: "unde",
+        QuotaUser: "nulla",
+        UserIP: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Datasets.BigqueryDatasetsDelete(ctx, req)
+    res, err := s.Datasets.BigqueryDatasetsDelete(ctx, req, operations.BigqueryDatasetsDeleteSecurity{
+        Option1: &operations.BigqueryDatasetsDeleteSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -8,17 +8,12 @@ import (
 )
 
 type GetNsxvControllerClusterSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNsxvControllerClusterPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetNsxvControllerClusterRequest struct {
-	PathParams GetNsxvControllerClusterPathParams
-	Security   GetNsxvControllerClusterSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetNsxvControllerClusterResponse struct {

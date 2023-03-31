@@ -12,14 +12,8 @@ var UpdateCallFeedbackServerList = []string{
 }
 
 type UpdateCallFeedbackSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCallFeedbackPathParams struct {
-	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The call sid that uniquely identifies the call
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCallFeedbackUpdateCallFeedbackRequest struct {
@@ -30,10 +24,11 @@ type UpdateCallFeedbackUpdateCallFeedbackRequest struct {
 }
 
 type UpdateCallFeedbackRequest struct {
-	PathParams UpdateCallFeedbackPathParams
-	Request    *UpdateCallFeedbackUpdateCallFeedbackRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCallFeedbackSecurity
-	ServerURL  *string
+	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The call sid that uniquely identifies the call
+	CallSid     string                                       `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *UpdateCallFeedbackUpdateCallFeedbackRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateCallFeedbackResponse struct {

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetReviewbyReviewIDPathParams struct {
-	// Review ID.
-	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
-}
-
-type GetReviewbyReviewIDHeaders struct {
+type GetReviewbyReviewIDRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetReviewbyReviewIDRequest struct {
-	PathParams GetReviewbyReviewIDPathParams
-	Headers    GetReviewbyReviewIDHeaders
+	// Review ID.
+	ReviewID string `pathParam:"style=simple,explode=false,name=reviewId"`
 }
 
 // GetReviewbyReviewID200ApplicationJSON - OK

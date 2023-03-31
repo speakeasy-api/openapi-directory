@@ -78,7 +78,7 @@ func (s *session) GetSession(ctx context.Context, request operations.GetSessionR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,7 +118,7 @@ func (s *session) GetSession(ctx context.Context, request operations.GetSessionR
 }
 
 // PostSession - Create a new Session
-func (s *session) PostSession(ctx context.Context, request operations.PostSessionRequest) (*operations.PostSessionResponse, error) {
+func (s *session) PostSession(ctx context.Context, request operations.PostSessionRequestBody) (*operations.PostSessionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/session"
 

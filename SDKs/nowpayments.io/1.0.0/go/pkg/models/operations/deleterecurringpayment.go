@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteRecurringPaymentPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
 type DeleteRecurringPaymentRequest struct {
-	PathParams DeleteRecurringPaymentPathParams
-	Request    []byte `request:"mediaType=text/plain"`
+	RequestBody []byte `request:"mediaType=text/plain"`
+	SubID       string `pathParam:"style=simple,explode=false,name=sub_id"`
 }
 
 // DeleteRecurringPayment404ApplicationJSON - 404

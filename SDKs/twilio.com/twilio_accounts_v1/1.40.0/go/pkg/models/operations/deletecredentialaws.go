@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteCredentialAwsServerList = []string{
@@ -12,18 +11,13 @@ var DeleteCredentialAwsServerList = []string{
 }
 
 type DeleteCredentialAwsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteCredentialAwsPathParams struct {
-	// The Twilio-provided string that uniquely identifies the AWS resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteCredentialAwsRequest struct {
-	PathParams DeleteCredentialAwsPathParams
-	Security   DeleteCredentialAwsSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the AWS resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteCredentialAwsResponse struct {

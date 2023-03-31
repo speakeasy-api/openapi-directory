@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodBackgroundsPathParams struct {
+type GetVodBackgroundsRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type GetVodBackgroundsQueryParams struct {
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVodBackgroundsRequest struct {
-	PathParams  GetVodBackgroundsPathParams
-	QueryParams GetVodBackgroundsQueryParams
 }
 
 type GetVodBackgroundsResponse struct {

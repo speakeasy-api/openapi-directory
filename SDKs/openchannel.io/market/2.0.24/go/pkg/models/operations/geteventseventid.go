@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetEventsEventIDPathParams struct {
+type GetEventsEventIDRequest struct {
 	// The id of the event
 	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
-}
-
-type GetEventsEventIDRequest struct {
-	PathParams GetEventsEventIDPathParams
 }
 
 type GetEventsEventIDResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetDataset1Security struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetDataset1PathParams struct {
-	// Dataset Id
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetDataset1Request struct {
-	PathParams GetDataset1PathParams
-	Security   GetDataset1Security
+	// Dataset Id
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 }
 
 type GetDataset1Response struct {

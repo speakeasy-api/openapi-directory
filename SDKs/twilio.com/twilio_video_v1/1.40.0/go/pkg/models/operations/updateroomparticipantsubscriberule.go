@@ -12,14 +12,8 @@ var UpdateRoomParticipantSubscribeRuleServerList = []string{
 }
 
 type UpdateRoomParticipantSubscribeRuleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRoomParticipantSubscribeRulePathParams struct {
-	// The SID of the Participant resource to update the Subscribe Rules.
-	ParticipantSid string `pathParam:"style=simple,explode=false,name=ParticipantSid"`
-	// The SID of the Room resource where the subscribe rules to update apply.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest struct {
@@ -28,10 +22,11 @@ type UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest
 }
 
 type UpdateRoomParticipantSubscribeRuleRequest struct {
-	PathParams UpdateRoomParticipantSubscribeRulePathParams
-	Request    *UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRoomParticipantSubscribeRuleSecurity
-	ServerURL  *string
+	// The SID of the Participant resource to update the Subscribe Rules.
+	ParticipantSid string                                                                       `pathParam:"style=simple,explode=false,name=ParticipantSid"`
+	RequestBody    *UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Room resource where the subscribe rules to update apply.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 }
 
 type UpdateRoomParticipantSubscribeRuleResponse struct {

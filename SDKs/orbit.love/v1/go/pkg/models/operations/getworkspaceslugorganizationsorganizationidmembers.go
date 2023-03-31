@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetWorkspaceSlugOrganizationsOrganizationIDMembersSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetWorkspaceSlugOrganizationsOrganizationIDMembersPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	WorkspaceSlug  string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum
@@ -45,15 +39,11 @@ func (e *GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum) UnmarshalJ
 	}
 }
 
-type GetWorkspaceSlugOrganizationsOrganizationIDMembersQueryParams struct {
-	Items *GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum `queryParam:"style=form,explode=true,name=items"`
-	Page  *string                                                      `queryParam:"style=form,explode=true,name=page"`
-}
-
 type GetWorkspaceSlugOrganizationsOrganizationIDMembersRequest struct {
-	PathParams  GetWorkspaceSlugOrganizationsOrganizationIDMembersPathParams
-	QueryParams GetWorkspaceSlugOrganizationsOrganizationIDMembersQueryParams
-	Security    GetWorkspaceSlugOrganizationsOrganizationIDMembersSecurity
+	Items          *GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum `queryParam:"style=form,explode=true,name=items"`
+	OrganizationID string                                                       `pathParam:"style=simple,explode=false,name=organization_id"`
+	Page           *string                                                      `queryParam:"style=form,explode=true,name=page"`
+	WorkspaceSlug  string                                                       `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type GetWorkspaceSlugOrganizationsOrganizationIDMembersResponse struct {

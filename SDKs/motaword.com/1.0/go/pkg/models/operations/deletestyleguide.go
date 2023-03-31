@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteStyleGuidePathParams struct {
+type DeleteStyleGuideRequest struct {
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 	// Style Guide ID
 	StyleGuideID int64 `pathParam:"style=simple,explode=false,name=styleGuideId"`
-}
-
-type DeleteStyleGuideRequest struct {
-	PathParams DeleteStyleGuidePathParams
 }
 
 type DeleteStyleGuideResponse struct {

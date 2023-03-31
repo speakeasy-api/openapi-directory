@@ -14,28 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.KeepNotesCreateRequest{
-        Security: operations.KeepNotesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.KeepNotesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            Alt: "proto",
-            Callback: "quibusdam",
-            Fields: "unde",
-            Key: "nulla",
-            OauthToken: "corrupti",
-            PrettyPrint: false,
-            QuotaUser: "illum",
-            UploadType: "vel",
-            UploadProtocol: "error",
-        },
-        Request: &shared.NoteInput{
+        DollarXgafv: "2",
+        NoteInput: &shared.NoteInput{
             Body: &shared.Section{
                 List: &shared.ListContent{
                     ListItems: []shared.ListItem{
@@ -44,9 +24,10 @@ func main() {
                             ChildListItems: []shared.ListItem{
                                 shared.ListItem{},
                                 shared.ListItem{},
+                                shared.ListItem{},
                             },
                             Text: &shared.TextContent{
-                                Text: "iure",
+                                Text: "quibusdam",
                             },
                         },
                         shared.ListItem{
@@ -54,32 +35,48 @@ func main() {
                             ChildListItems: []shared.ListItem{
                                 shared.ListItem{},
                                 shared.ListItem{},
+                                shared.ListItem{},
                             },
                             Text: &shared.TextContent{
-                                Text: "debitis",
+                                Text: "nulla",
                             },
                         },
                         shared.ListItem{
                             Checked: false,
                             ChildListItems: []shared.ListItem{
                                 shared.ListItem{},
+                                shared.ListItem{},
+                                shared.ListItem{},
                             },
                             Text: &shared.TextContent{
-                                Text: "delectus",
+                                Text: "illum",
                             },
                         },
                     },
                 },
                 Text: &shared.TextContent{
-                    Text: "tempora",
+                    Text: "vel",
                 },
             },
-            Title: "Mrs.",
+            Title: "Miss",
         },
+        AccessToken: "deserunt",
+        Alt: "media",
+        Callback: "iure",
+        Fields: "magnam",
+        Key: "debitis",
+        OauthToken: "ipsa",
+        PrettyPrint: false,
+        QuotaUser: "delectus",
+        UploadType: "tempora",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Notes.KeepNotesCreate(ctx, req)
+    res, err := s.Notes.KeepNotesCreate(ctx, req, operations.KeepNotesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

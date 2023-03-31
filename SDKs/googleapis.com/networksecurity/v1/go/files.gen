@@ -29,14 +29,13 @@ pkg/models/operations/networksecurityprojectslocationsservertlspoliciessetiampol
 pkg/models/operations/networksecurityprojectslocationsservertlspoliciestestiampermissions.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/authorizationpolicy.go
 pkg/models/shared/rule.go
 pkg/models/shared/source.go
 pkg/models/shared/destination.go
 pkg/models/shared/httpheadermatch.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listauthorizationpoliciesresponse.go
 pkg/models/shared/clienttlspolicy.go
 pkg/models/shared/validationca.go

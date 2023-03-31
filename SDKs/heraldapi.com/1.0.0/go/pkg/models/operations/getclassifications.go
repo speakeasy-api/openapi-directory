@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClassificationsQueryParams struct {
+type GetClassificationsRequest struct {
 	// Used to limit the amount of classification results per page.
 	Limit *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// Used to query on 2017 NAICS codes. Can be queried by any 2-digit to 6-digit NAICS codes. Supports multiple queries.
@@ -16,10 +16,6 @@ type GetClassificationsQueryParams struct {
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// Used to query on classification descriptions, as defined in 2017 NAICS. Powered by elastic search.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetClassificationsRequest struct {
-	QueryParams GetClassificationsQueryParams
 }
 
 // GetClassifications400ApplicationJSON - Bad Request: something was wrong with the included query param(s)

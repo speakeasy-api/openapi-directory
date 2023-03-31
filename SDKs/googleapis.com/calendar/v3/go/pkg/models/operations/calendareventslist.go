@@ -10,23 +10,23 @@ import (
 )
 
 type CalendarEventsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsListSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CalendarEventsListSecurity struct {
@@ -34,11 +34,6 @@ type CalendarEventsListSecurity struct {
 	Option2 *CalendarEventsListSecurityOption2 `security:"option"`
 	Option3 *CalendarEventsListSecurityOption3 `security:"option"`
 	Option4 *CalendarEventsListSecurityOption4 `security:"option"`
-}
-
-type CalendarEventsListPathParams struct {
-	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 }
 
 // CalendarEventsListOrderByEnum - The order of the events returned in the result. Optional. The default is an unspecified, stable order.
@@ -65,11 +60,13 @@ func (e *CalendarEventsListOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CalendarEventsListQueryParams struct {
+type CalendarEventsListRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
 	AlwaysIncludeEmail *bool `queryParam:"style=form,explode=true,name=alwaysIncludeEmail"`
+	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
 	// Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is used by the Working Location developer preview and only the default value is allowed for non-opted-in users.
 	EventTypes []string `queryParam:"style=form,explode=true,name=eventTypes"`
 	// Selector specifying which fields to include in a partial response.
@@ -129,12 +126,6 @@ type CalendarEventsListQueryParams struct {
 	UpdatedMin *string `queryParam:"style=form,explode=true,name=updatedMin"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type CalendarEventsListRequest struct {
-	PathParams  CalendarEventsListPathParams
-	QueryParams CalendarEventsListQueryParams
-	Security    CalendarEventsListSecurity
 }
 
 type CalendarEventsListResponse struct {

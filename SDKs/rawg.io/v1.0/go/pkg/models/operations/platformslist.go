@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlatformsListQueryParams struct {
+type PlatformsListRequest struct {
 	// Which field to use when ordering the results.
 	Ordering *string `queryParam:"style=form,explode=true,name=ordering"`
 	// A page number within the paginated result set.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results to return per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type PlatformsListRequest struct {
-	QueryParams PlatformsListQueryParams
 }
 
 type PlatformsList200ApplicationJSON struct {

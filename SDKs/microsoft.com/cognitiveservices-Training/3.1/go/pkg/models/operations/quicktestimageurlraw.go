@@ -7,30 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QuickTestImageURLRawPathParams struct {
-	// The project to evaluate against.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type QuickTestImageURLRawQueryParams struct {
+type QuickTestImageURLRawRequest struct {
+	// An ImageUrl that contains the url of the image to be evaluated.
+	RequestBody []byte `request:"mediaType=text/xml"`
+	// API key.
+	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
 	// Optional. Specifies the id of a particular iteration to evaluate against.
 	//             The default iteration for the project will be used when not specified.
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
+	// The project to evaluate against.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Optional. Specifies whether or not to store the result of this prediction. The default is true, to store.
 	Store *bool `queryParam:"style=form,explode=true,name=store"`
-}
-
-type QuickTestImageURLRawHeaders struct {
-	// API key.
-	TrainingKey string `header:"style=simple,explode=false,name=Training-Key"`
-}
-
-type QuickTestImageURLRawRequest struct {
-	PathParams  QuickTestImageURLRawPathParams
-	QueryParams QuickTestImageURLRawQueryParams
-	Headers     QuickTestImageURLRawHeaders
-	// An ImageUrl that contains the url of the image to be evaluated.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type QuickTestImageURLRawResponse struct {

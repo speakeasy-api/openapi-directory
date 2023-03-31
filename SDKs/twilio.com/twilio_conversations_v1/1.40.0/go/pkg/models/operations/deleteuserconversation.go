@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUserConversationServerList = []string{
@@ -12,20 +11,15 @@ var DeleteUserConversationServerList = []string{
 }
 
 type DeleteUserConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUserConversationPathParams struct {
+type DeleteUserConversationRequest struct {
 	// The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
 	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
 	// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
 	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
-}
-
-type DeleteUserConversationRequest struct {
-	PathParams DeleteUserConversationPathParams
-	Security   DeleteUserConversationSecurity
-	ServerURL  *string
 }
 
 type DeleteUserConversationResponse struct {

@@ -8,12 +8,6 @@ import (
 	"net/http"
 )
 
-type GetUsersIdsCommentsToidPathParams struct {
-	// Number list (semicolon delimited).
-	Ids  string `pathParam:"style=simple,explode=false,name=ids"`
-	Toid int64  `pathParam:"style=simple,explode=false,name=toid"`
-}
-
 // GetUsersIdsCommentsToidOrderEnum
 type GetUsersIdsCommentsToidOrderEnum string
 
@@ -62,7 +56,7 @@ func (e *GetUsersIdsCommentsToidSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersIdsCommentsToidQueryParams struct {
+type GetUsersIdsCommentsToidRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -100,6 +94,8 @@ type GetUsersIdsCommentsToidQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Unix date.
 	Fromdate *int64 `queryParam:"style=form,explode=true,name=fromdate"`
+	// Number list (semicolon delimited).
+	Ids string `pathParam:"style=simple,explode=false,name=ids"`
 	// sort = creation => date
 	// sort = votes => number
 	//
@@ -117,11 +113,7 @@ type GetUsersIdsCommentsToidQueryParams struct {
 	Sort *GetUsersIdsCommentsToidSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetUsersIdsCommentsToidRequest struct {
-	PathParams  GetUsersIdsCommentsToidPathParams
-	QueryParams GetUsersIdsCommentsToidQueryParams
+	Toid   int64  `pathParam:"style=simple,explode=false,name=toid"`
 }
 
 type GetUsersIdsCommentsToidResponse struct {

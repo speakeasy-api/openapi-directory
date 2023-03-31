@@ -10,12 +10,7 @@ import (
 )
 
 type ListSystemAdvisoriesSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ListSystemAdvisoriesPathParams struct {
-	// Inventory ID
-	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 // ListSystemAdvisoriesSortEnum - Sort field
@@ -51,7 +46,7 @@ func (e *ListSystemAdvisoriesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSystemAdvisoriesQueryParams struct {
+type ListSystemAdvisoriesRequest struct {
 	// Filter
 	FilterAdvisoryType *string `queryParam:"style=form,explode=true,name=filter[advisory_type]"`
 	// Filter
@@ -64,6 +59,8 @@ type ListSystemAdvisoriesQueryParams struct {
 	FilterSeverity *string `queryParam:"style=form,explode=true,name=filter[severity]"`
 	// Filter
 	FilterSynopsis *string `queryParam:"style=form,explode=true,name=filter[synopsis]"`
+	// Inventory ID
+	InventoryID string `pathParam:"style=simple,explode=false,name=inventory_id"`
 	// Limit for paging, set -1 to return all
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset for paging
@@ -72,12 +69,6 @@ type ListSystemAdvisoriesQueryParams struct {
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// Sort field
 	Sort *ListSystemAdvisoriesSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListSystemAdvisoriesRequest struct {
-	PathParams  ListSystemAdvisoriesPathParams
-	QueryParams ListSystemAdvisoriesQueryParams
-	Security    ListSystemAdvisoriesSecurity
 }
 
 type ListSystemAdvisoriesResponse struct {

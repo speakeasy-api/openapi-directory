@@ -44,7 +44,7 @@ func (e *GetRemoveOntologyTagFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRemoveOntologyTagQueryParams struct {
+type GetRemoveOntologyTagRequest struct {
 	// The authentication key
 	Auth   string                          `queryParam:"style=form,explode=true,name=auth"`
 	Format *GetRemoveOntologyTagFormatEnum `queryParam:"style=form,explode=true,name=format"`
@@ -54,10 +54,6 @@ type GetRemoveOntologyTagQueryParams struct {
 	TermID string `queryParam:"style=form,explode=true,name=termId"`
 	// The username
 	User string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type GetRemoveOntologyTagRequest struct {
-	QueryParams GetRemoveOntologyTagQueryParams
 }
 
 type GetRemoveOntologyTagResponse struct {

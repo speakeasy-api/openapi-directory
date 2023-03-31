@@ -8,13 +8,7 @@ import (
 )
 
 type PinyinChineseNameBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PinyinChineseNameBatchRequest struct {
-	// A list of Chinese names
-	Request  *shared.BatchPersonalNameIn `request:"mediaType=application/json"`
-	Security PinyinChineseNameBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type PinyinChineseNameBatchResponse struct {

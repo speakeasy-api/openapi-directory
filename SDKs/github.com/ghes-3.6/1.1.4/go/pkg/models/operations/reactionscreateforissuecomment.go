@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReactionsCreateForIssueCommentPathParams struct {
-	// The unique identifier of the comment.
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReactionsCreateForIssueCommentRequestBodyContentEnum - The [reaction type](https://docs.github.com/enterprise-server@3.6/rest/reference/reactions#reaction-types) to add to the issue comment.
 type ReactionsCreateForIssueCommentRequestBodyContentEnum string
 
@@ -66,8 +57,13 @@ type ReactionsCreateForIssueCommentRequestBody struct {
 }
 
 type ReactionsCreateForIssueCommentRequest struct {
-	PathParams ReactionsCreateForIssueCommentPathParams
-	Request    ReactionsCreateForIssueCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody ReactionsCreateForIssueCommentRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the comment.
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReactionsCreateForIssueCommentResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetBulkLookupQueryParams struct {
+type GetBulkLookupRequest struct {
 	// Sets the format of the API response. JSON is the default format.
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// The IP Addresses you want to lookup. It's a CSV (Comma Separated Values)
@@ -17,10 +17,6 @@ type GetBulkLookupQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The modules you want to use of the request. It's a CSV (Comma Separated Values)
 	Params *string `queryParam:"style=form,explode=true,name=params"`
-}
-
-type GetBulkLookupRequest struct {
-	QueryParams GetBulkLookupQueryParams
 }
 
 type GetBulkLookupResponse struct {

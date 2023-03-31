@@ -44,12 +44,11 @@ pkg/models/shared/aggregationresulthistogram.go
 pkg/models/shared/aggregationresulthistogrambucket.go
 pkg/models/shared/aggregationresultfrequency.go
 pkg/models/shared/aggregationresultcount.go
+pkg/models/shared/altenum.go
 pkg/models/shared/aggregateassetsvaluesrequest.go
 pkg/models/shared/aggregation.go
 pkg/models/shared/aggregationhistogram.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/batchdeleteassetsrequest.go
 pkg/models/shared/batchupdateassetsresponse.go
 pkg/models/shared/asset.go

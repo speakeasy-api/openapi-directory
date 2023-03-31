@@ -8,13 +8,8 @@ import (
 )
 
 type StartScreenshotTestSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type StartScreenshotTestRequest struct {
-	// start screenshot test payload.
-	Request  shared.ScreenshotPayload `request:"mediaType=application/json"`
-	Security StartScreenshotTestSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type StartScreenshotTestResponse struct {

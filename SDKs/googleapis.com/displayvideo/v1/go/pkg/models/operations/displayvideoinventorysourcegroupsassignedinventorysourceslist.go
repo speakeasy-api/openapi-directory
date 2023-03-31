@@ -8,16 +8,11 @@ import (
 )
 
 type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListPathParams struct {
-	// Required. The ID of the inventory source group to which these assignments are assigned.
-	InventorySourceGroupID string `pathParam:"style=simple,explode=false,name=inventorySourceGroupId"`
-}
-
-type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListQueryParams struct {
+type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -32,6 +27,8 @@ type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListQueryParams st
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Allows filtering by assigned inventory source fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId` The length of this field should be no more than 500 characters.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Required. The ID of the inventory source group to which these assignments are assigned.
+	InventorySourceGroupID string `pathParam:"style=simple,explode=false,name=inventorySourceGroupId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -52,12 +49,6 @@ type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListQueryParams st
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListRequest struct {
-	PathParams  DisplayvideoInventorySourceGroupsAssignedInventorySourcesListPathParams
-	QueryParams DisplayvideoInventorySourceGroupsAssignedInventorySourcesListQueryParams
-	Security    DisplayvideoInventorySourceGroupsAssignedInventorySourcesListSecurity
 }
 
 type DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse struct {

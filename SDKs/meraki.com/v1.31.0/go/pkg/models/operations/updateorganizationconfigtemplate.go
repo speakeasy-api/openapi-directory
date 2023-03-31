@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationConfigTemplatePathParams struct {
-	ConfigTemplateID string `pathParam:"style=simple,explode=false,name=configTemplateId"`
-	OrganizationID   string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type UpdateOrganizationConfigTemplateRequestBody struct {
 	// The name of the configuration template
 	Name *string `json:"name,omitempty"`
@@ -19,8 +14,9 @@ type UpdateOrganizationConfigTemplateRequestBody struct {
 }
 
 type UpdateOrganizationConfigTemplateRequest struct {
-	PathParams UpdateOrganizationConfigTemplatePathParams
-	Request    *UpdateOrganizationConfigTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody      *UpdateOrganizationConfigTemplateRequestBody `request:"mediaType=application/json"`
+	ConfigTemplateID string                                       `pathParam:"style=simple,explode=false,name=configTemplateId"`
+	OrganizationID   string                                       `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationConfigTemplateResponse struct {

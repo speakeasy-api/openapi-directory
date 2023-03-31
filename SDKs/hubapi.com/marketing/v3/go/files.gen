@@ -39,7 +39,6 @@ pkg/models/shared/standarderror.go
 pkg/models/shared/errorcategory.go
 pkg/models/shared/batchinputmarketingeventsubscriber.go
 pkg/models/shared/marketingeventsubscriber.go
-pkg/models/shared/security.go
 pkg/models/shared/batchresponsesubscriberemailresponse.go
 pkg/models/shared/subscriberemailresponse.go
 pkg/models/shared/batchinputmarketingeventemailsubscriber.go

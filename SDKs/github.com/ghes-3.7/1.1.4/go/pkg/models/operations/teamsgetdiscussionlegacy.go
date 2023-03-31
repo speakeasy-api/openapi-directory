@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsGetDiscussionLegacyPathParams struct {
+type TeamsGetDiscussionLegacyRequest struct {
 	// The number that identifies the discussion.
 	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsGetDiscussionLegacyRequest struct {
-	PathParams TeamsGetDiscussionLegacyPathParams
 }
 
 type TeamsGetDiscussionLegacyResponse struct {

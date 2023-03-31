@@ -12,12 +12,8 @@ var CreateTrustProductChannelEndpointAssignmentServerList = []string{
 }
 
 type CreateTrustProductChannelEndpointAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTrustProductChannelEndpointAssignmentPathParams struct {
-	// The unique string that we created to identify the CustomerProfile resource.
-	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest struct {
@@ -28,10 +24,9 @@ type CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpoin
 }
 
 type CreateTrustProductChannelEndpointAssignmentRequest struct {
-	PathParams CreateTrustProductChannelEndpointAssignmentPathParams
-	Request    *CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTrustProductChannelEndpointAssignmentSecurity
-	ServerURL  *string
+	RequestBody *CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the CustomerProfile resource.
+	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
 }
 
 type CreateTrustProductChannelEndpointAssignmentResponse struct {

@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUpdateDockHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type CreateUpdateDockCreateUpdateDockRequestAddress1Country struct {
 	Acronym string `json:"acronym"`
 	Name    string `json:"name"`
@@ -44,8 +37,11 @@ type CreateUpdateDockCreateUpdateDockRequest struct {
 }
 
 type CreateUpdateDockRequest struct {
-	Headers CreateUpdateDockHeaders
-	Request CreateUpdateDockCreateUpdateDockRequest `request:"mediaType=application/json"`
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent
+	ContentType string                                  `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody CreateUpdateDockCreateUpdateDockRequest `request:"mediaType=application/json"`
 }
 
 type CreateUpdateDockResponse struct {

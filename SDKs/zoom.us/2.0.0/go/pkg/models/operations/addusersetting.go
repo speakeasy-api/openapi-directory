@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AddUserSettingSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AddUserSettingPathParams struct {
-	// Corresponds to the setting item you wish to modify. Allowed values: `voice_mail`
-	SettingType string `pathParam:"style=simple,explode=false,name=settingType"`
-	// Unique identifier of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AddUserSettingApplicationJSONVoiceMail - Update the voicemail setting.
@@ -34,9 +26,11 @@ type AddUserSettingApplicationJSON struct {
 }
 
 type AddUserSettingRequest struct {
-	PathParams AddUserSettingPathParams
-	Request    *AddUserSettingApplicationJSON `request:"mediaType=application/json"`
-	Security   AddUserSettingSecurity
+	RequestBody *AddUserSettingApplicationJSON `request:"mediaType=application/json"`
+	// Corresponds to the setting item you wish to modify. Allowed values: `voice_mail`
+	SettingType string `pathParam:"style=simple,explode=false,name=settingType"`
+	// Unique identifier of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type AddUserSetting201ApplicationXMLVoiceMail struct {

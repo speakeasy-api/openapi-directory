@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteAPIV1AnnouncementsIDReactionsNameRequest{
-        Security: operations.DeleteAPIV1AnnouncementsIDReactionsNameSecurity{
-            BearerAuth: shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DeleteAPIV1AnnouncementsIDReactionsNamePathParams{
-            ID: "corrupti",
-            Name: "provident",
-        },
+        ID: "corrupti",
+        Name: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.DeleteAPIV1AnnouncementsIDReactionsName(ctx, req)
+    res, err := s.DeleteAPIV1AnnouncementsIDReactionsName(ctx, req, operations.DeleteAPIV1AnnouncementsIDReactionsNameSecurity{
+        BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

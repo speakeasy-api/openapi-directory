@@ -33,16 +33,16 @@ func newCatalogue(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // GetCatalogue - Catalogue Detail
 // Return the content of the selected catalogue.
-func (s *catalogue) GetCatalogue(ctx context.Context, request operations.GetCatalogueRequest) (*operations.GetCatalogueResponse, error) {
+func (s *catalogue) GetCatalogue(ctx context.Context, request operations.GetCatalogueRequest, security operations.GetCatalogueSecurity) (*operations.GetCatalogueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *catalogue) GetCatalogue(ctx context.Context, request operations.GetCata
 
 // GetCatalogueAsset - Catalogue Asset Collection
 // Return the content of the selected catalogue.
-func (s *catalogue) GetCatalogueAsset(ctx context.Context, request operations.GetCatalogueAssetRequest) (*operations.GetCatalogueAssetResponse, error) {
+func (s *catalogue) GetCatalogueAsset(ctx context.Context, request operations.GetCatalogueAssetRequest, security operations.GetCatalogueAssetSecurity) (*operations.GetCatalogueAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,16 +127,16 @@ func (s *catalogue) GetCatalogueAsset(ctx context.Context, request operations.Ge
 
 // GetCatalogueAssetDetail - Catalogue Asset Detail
 // Return the content of the selected catalogue asset.
-func (s *catalogue) GetCatalogueAssetDetail(ctx context.Context, request operations.GetCatalogueAssetDetailRequest) (*operations.GetCatalogueAssetDetailResponse, error) {
+func (s *catalogue) GetCatalogueAssetDetail(ctx context.Context, request operations.GetCatalogueAssetDetailRequest, security operations.GetCatalogueAssetDetailSecurity) (*operations.GetCatalogueAssetDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset/{assetId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset/{assetId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *catalogue) GetCatalogueAssetDetail(ctx context.Context, request operati
 
 // ListCatalogues - Catalogue Collection
 // Return a collection of Catalogues.
-func (s *catalogue) ListCatalogues(ctx context.Context, request operations.ListCataloguesRequest) (*operations.ListCataloguesResponse, error) {
+func (s *catalogue) ListCatalogues(ctx context.Context) (*operations.ListCataloguesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/catalogue"
 
@@ -181,7 +181,7 @@ func (s *catalogue) ListCatalogues(ctx context.Context, request operations.ListC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

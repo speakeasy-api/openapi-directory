@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateUserQueryParams struct {
+type CreateUserRequest struct {
+	User *shared.User `request:"mediaType=application/json"`
 	// Send a welcome email to the user
 	Notify *bool `queryParam:"style=form,explode=true,name=notify"`
-}
-
-type CreateUserRequest struct {
-	QueryParams CreateUserQueryParams
-	Request     *shared.User `request:"mediaType=application/json"`
 }
 
 type CreateUserResponse struct {

@@ -33,7 +33,6 @@ pkg/models/shared/endpointwebsocket.go
 pkg/models/shared/endpointvbcextension.go
 pkg/models/shared/endpointphonefrom.go
 pkg/models/shared/createcallrequestanswerurl.go
-pkg/models/shared/security.go
 pkg/models/shared/getcallresponse.go
 pkg/models/shared/to.go
 pkg/models/shared/from.go

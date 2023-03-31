@@ -11,19 +11,14 @@ import (
 )
 
 type GetMeFollowingsSecurity struct {
-	AuthHeader shared.SchemeAuthHeader `security:"scheme,type=apiKey,subtype=header"`
+	AuthHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type GetMeFollowingsQueryParams struct {
+type GetMeFollowingsRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetMeFollowingsRequest struct {
-	QueryParams GetMeFollowingsQueryParams
-	Security    GetMeFollowingsSecurity
 }
 
 type GetMeFollowings200ApplicationJSONType string

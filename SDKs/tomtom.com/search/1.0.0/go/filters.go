@@ -33,14 +33,14 @@ func newFilters(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetSearchVersionNumberGeometryFilterExt - Geometry Filter
 func (s *filters) GetSearchVersionNumberGeometryFilterExt(ctx context.Context, request operations.GetSearchVersionNumberGeometryFilterExtRequest) (*operations.GetSearchVersionNumberGeometryFilterExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *filters) GetSearchVersionNumberGeometryFilterExt(ctx context.Context, r
 // GetSearchVersionNumberRoutedFilterPositionHeadingExt - Routed Filter
 func (s *filters) GetSearchVersionNumberRoutedFilterPositionHeadingExt(ctx context.Context, request operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest) (*operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,9 +131,9 @@ func (s *filters) GetSearchVersionNumberRoutedFilterPositionHeadingExt(ctx conte
 // PostSearchVersionNumberGeometryFilterExt - Geometry Filter
 func (s *filters) PostSearchVersionNumberGeometryFilterExt(ctx context.Context, request operations.PostSearchVersionNumberGeometryFilterExtRequest) (*operations.PostSearchVersionNumberGeometryFilterExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,9 +183,9 @@ func (s *filters) PostSearchVersionNumberGeometryFilterExt(ctx context.Context, 
 // PostSearchVersionNumberRoutedFilterPositionHeadingExt - Routed Filter
 func (s *filters) PostSearchVersionNumberRoutedFilterPositionHeadingExt(ctx context.Context, request operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest) (*operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,7 +197,7 @@ func (s *filters) PostSearchVersionNumberRoutedFilterPositionHeadingExt(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

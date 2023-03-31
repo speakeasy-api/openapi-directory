@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetTicketInfoPathParams struct {
+type GetTicketInfoRequest struct {
 	// A unique abuse ticket identifier
 	TicketID string `pathParam:"style=simple,explode=false,name=ticketId"`
-}
-
-type GetTicketInfoRequest struct {
-	PathParams GetTicketInfoPathParams
 }
 
 type GetTicketInfoResponse struct {

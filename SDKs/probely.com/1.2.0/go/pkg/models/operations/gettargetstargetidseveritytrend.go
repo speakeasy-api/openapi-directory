@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type GetTargetsTargetIDSeverityTrendPathParams struct {
+type GetTargetsTargetIDSeverityTrendRequest struct {
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type GetTargetsTargetIDSeverityTrendRequest struct {
-	PathParams GetTargetsTargetIDSeverityTrendPathParams
 }
 
 type GetTargetsTargetIDSeverityTrend200ApplicationJSONResultsHigh struct {

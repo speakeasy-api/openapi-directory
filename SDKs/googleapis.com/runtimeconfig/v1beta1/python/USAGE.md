@@ -4,42 +4,34 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RuntimeconfigProjectsConfigsCreateRequest(
-    security=operations.RuntimeconfigProjectsConfigsCreateSecurity(
-        option1=operations.RuntimeconfigProjectsConfigsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
+    dollar_xgafv="2",
+    runtime_config=shared.RuntimeConfig(
+        description="provident",
+        name="distinctio",
     ),
-    path_params=operations.RuntimeconfigProjectsConfigsCreatePathParams(
-        parent="consequatur",
-    ),
-    query_params=operations.RuntimeconfigProjectsConfigsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="aut",
-        alt="proto",
-        callback="hic",
-        fields="nostrum",
-        key="ex",
-        oauth_token="sint",
-        pretty_print=True,
-        quota_user="atque",
-        request_id="eos",
-        upload_type="sed",
-        upload_protocol="molestiae",
-    ),
-    request=shared.RuntimeConfig(
-        description="impedit",
-        name="accusantium",
-    ),
+    access_token="quibusdam",
+    alt="media",
+    callback="nulla",
+    fields_="corrupti",
+    key="illum",
+    oauth_token="vel",
+    parent="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    request_id="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.projects.runtimeconfig_projects_configs_create(req)
+res = s.projects.runtimeconfig_projects_configs_create(req, operations.RuntimeconfigProjectsConfigsCreateSecurity(
+    option1=operations.RuntimeconfigProjectsConfigsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.runtime_config is not None:
     # handle response

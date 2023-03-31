@@ -23,9 +23,8 @@ pkg/models/shared/googleiamv1auditlogconfig.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1bindingexplanation.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1bindingexplanationannotatedmembership.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1troubleshootiampolicyrequest.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1accesstuple.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

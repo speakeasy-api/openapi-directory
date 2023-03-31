@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationActionBatchesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationActionBatchesStatusEnum - Filter batches by status. Valid types are pending, completed, and failed.
 type GetOrganizationActionBatchesStatusEnum string
 
@@ -39,14 +35,10 @@ func (e *GetOrganizationActionBatchesStatusEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetOrganizationActionBatchesQueryParams struct {
+type GetOrganizationActionBatchesRequest struct {
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// Filter batches by status. Valid types are pending, completed, and failed.
 	Status *GetOrganizationActionBatchesStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetOrganizationActionBatchesRequest struct {
-	PathParams  GetOrganizationActionBatchesPathParams
-	QueryParams GetOrganizationActionBatchesQueryParams
 }
 
 type GetOrganizationActionBatchesResponse struct {

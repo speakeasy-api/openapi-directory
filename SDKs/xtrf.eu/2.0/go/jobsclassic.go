@@ -34,9 +34,9 @@ func newJobsClassic(defaultClient, securityClient HTTPClient, serverURL, languag
 
 func (s *jobsClassic) AssignFileToJobOutput(ctx context.Context, request operations.AssignFileToJobOutputRequest) (*operations.AssignFileToJobOutputResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/files/output", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/files/output", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskFileDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -80,9 +80,9 @@ func (s *jobsClassic) AssignFileToJobOutput(ctx context.Context, request operati
 // Assigns vendor to a job in a project.
 func (s *jobsClassic) AssignVendor(ctx context.Context, request operations.AssignVendorRequest) (*operations.AssignVendorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/vendor", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/vendor", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignVendorDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -126,9 +126,9 @@ func (s *jobsClassic) AssignVendor(ctx context.Context, request operations.Assig
 // Changes job status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys:<ul><li>OPEN – available when the job has one of the following statuses: ACCEPTED, CANCELED</li><li>ACCEPTED – available when the job has one of the following statuses: OPEN (Vendor and dates have to be set before calling the operation), STARTED</li><li>STARTED – available when the job has one of the following statuses: ACCEPTED, READY</li><li>READY – available when the job has one of the following statuses: STARTED</li><li>CANCELLED – available when the job has one of the following statuses: OPEN, ACCEPTED, STARTED, OFFERS_SENT</li><li>OFFERS_SENT – not available as a target status for this operation</li></ul>
 func (s *jobsClassic) ChangeStatus(ctx context.Context, request operations.ChangeStatusRequest) (*operations.ChangeStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobStatusDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -172,7 +172,7 @@ func (s *jobsClassic) ChangeStatus(ctx context.Context, request operations.Chang
 // Returns job details by jobId.
 func (s *jobsClassic) GetJobDetails(ctx context.Context, request operations.GetJobDetailsRequest) (*operations.GetJobDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +217,7 @@ func (s *jobsClassic) GetJobDetails(ctx context.Context, request operations.GetJ
 // Returns list of input and output files of a job.
 func (s *jobsClassic) GetJobFiles(ctx context.Context, request operations.GetJobFilesRequest) (*operations.GetJobFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -262,7 +262,7 @@ func (s *jobsClassic) GetJobFiles(ctx context.Context, request operations.GetJob
 // Returns file metadata.
 func (s *jobsClassic) GetJobFiles1(ctx context.Context, request operations.GetJobFiles1Request) (*operations.GetJobFiles1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -307,9 +307,9 @@ func (s *jobsClassic) GetJobFiles1(ctx context.Context, request operations.GetJo
 // Updates dates of a given job.
 func (s *jobsClassic) UpdateDates(ctx context.Context, request operations.UpdateDatesRequest) (*operations.UpdateDatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/dates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/dates", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobDatesDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -353,9 +353,9 @@ func (s *jobsClassic) UpdateDates(ctx context.Context, request operations.Update
 // Updates instructions for a job.
 func (s *jobsClassic) UpdateInstructions(ctx context.Context, request operations.UpdateInstructionsRequest) (*operations.UpdateInstructionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/instructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstructionsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

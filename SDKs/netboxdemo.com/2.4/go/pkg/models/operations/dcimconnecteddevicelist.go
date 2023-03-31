@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConnectedDeviceListQueryParams struct {
+type DcimConnectedDeviceListRequest struct {
 	// The name of the peer device
 	PeerDevice string `queryParam:"style=form,explode=true,name=peer_device"`
 	// The name of the peer interface
 	PeerInterface string `queryParam:"style=form,explode=true,name=peer_interface"`
-}
-
-type DcimConnectedDeviceListRequest struct {
-	QueryParams DcimConnectedDeviceListQueryParams
 }
 
 type DcimConnectedDeviceListResponse struct {

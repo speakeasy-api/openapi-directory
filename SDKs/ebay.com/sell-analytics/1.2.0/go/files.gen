@@ -27,7 +27,6 @@ pkg/models/shared/distribution.go
 pkg/models/shared/metricbenchmark.go
 pkg/models/shared/benchmarkmetadata.go
 pkg/models/shared/dimension.go
-pkg/models/shared/security.go
 pkg/models/shared/findsellerstandardsprofilesresponse.go
 pkg/models/shared/standardsprofile.go
 pkg/models/shared/cycle.go

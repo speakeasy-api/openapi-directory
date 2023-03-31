@@ -16,7 +16,6 @@ pkg/models/operations/findeligibleitems.go
 pkg/models/operations/sendoffertointerestedbuyers.go
 pkg/models/shared/pagedeligibleitemcollection.go
 pkg/models/shared/eligibleitem.go
-pkg/models/shared/security.go
 pkg/models/shared/sendoffertointerestedbuyerscollectionresponse.go
 pkg/models/shared/offer.go
 pkg/models/shared/offereditem.go

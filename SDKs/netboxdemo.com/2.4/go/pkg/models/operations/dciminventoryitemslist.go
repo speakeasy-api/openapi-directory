@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimInventoryItemsListQueryParams struct {
+type DcimInventoryItemsListRequest struct {
 	AssetTag   *string `queryParam:"style=form,explode=true,name=asset_tag"`
 	Device     *string `queryParam:"style=form,explode=true,name=device"`
 	DeviceID   *string `queryParam:"style=form,explode=true,name=device_id"`
@@ -24,10 +24,6 @@ type DcimInventoryItemsListQueryParams struct {
 	Q        *string `queryParam:"style=form,explode=true,name=q"`
 	Serial   *string `queryParam:"style=form,explode=true,name=serial"`
 	Tag      *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type DcimInventoryItemsListRequest struct {
-	QueryParams DcimInventoryItemsListQueryParams
 }
 
 type DcimInventoryItemsList200ApplicationJSON struct {

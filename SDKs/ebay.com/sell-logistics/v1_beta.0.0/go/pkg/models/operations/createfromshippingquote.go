@@ -8,13 +8,7 @@ import (
 )
 
 type CreateFromShippingQuoteSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateFromShippingQuoteRequest struct {
-	// The create shipment from quote request.
-	Request  shared.CreateShipmentFromQuoteRequest `request:"mediaType=application/json"`
-	Security CreateFromShippingQuoteSecurity
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateFromShippingQuoteResponse struct {

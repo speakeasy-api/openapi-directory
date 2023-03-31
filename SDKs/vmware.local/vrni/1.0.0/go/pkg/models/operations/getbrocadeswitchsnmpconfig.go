@@ -8,17 +8,12 @@ import (
 )
 
 type GetBrocadeSwitchSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBrocadeSwitchSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetBrocadeSwitchSnmpConfigRequest struct {
-	PathParams GetBrocadeSwitchSnmpConfigPathParams
-	Security   GetBrocadeSwitchSnmpConfigSecurity
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBrocadeSwitchSnmpConfigResponse struct {

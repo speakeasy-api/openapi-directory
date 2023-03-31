@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/appengine/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,58 +15,51 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AppengineAppsAuthorizedCertificatesCreateRequest(
-    security=operations.AppengineAppsAuthorizedCertificatesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.AppengineAppsAuthorizedCertificatesCreatePathParams(
-        apps_id="et",
-    ),
-    query_params=operations.AppengineAppsAuthorizedCertificatesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="saepe",
-        alt="proto",
-        callback="ducimus",
-        fields="rerum",
-        key="autem",
-        oauth_token="sint",
-        pretty_print=False,
-        quota_user="blanditiis",
-        upload_type="impedit",
-        upload_protocol="sunt",
-    ),
-    request=shared.AuthorizedCertificate(
+    dollar_xgafv="2",
+    authorized_certificate=shared.AuthorizedCertificate(
         certificate_raw_data=shared.CertificateRawData(
-            private_key="ea",
-            public_certificate="asperiores",
+            private_key="provident",
+            public_certificate="distinctio",
         ),
-        display_name="ipsam",
-        domain_mappings_count=4423674668372831048,
+        display_name="quibusdam",
+        domain_mappings_count=602763,
         domain_names=[
-            "eaque",
-            "esse",
+            "corrupti",
+            "illum",
+            "vel",
+            "error",
         ],
-        expire_time="ut",
-        id="sapiente",
+        expire_time="deserunt",
+        id="suscipit",
         managed_certificate=shared.ManagedCertificate(
-            last_renewal_time="natus",
-            status="FAILED_RETRYING_CAA_CHECKING",
+            last_renewal_time="iure",
+            status="PENDING",
         ),
-        name="tempora",
+        name="debitis",
         visible_domain_mappings=[
-            "ad",
-            "culpa",
+            "delectus",
         ],
     ),
+    access_token="tempora",
+    alt="media",
+    apps_id="molestiae",
+    callback="minus",
+    fields_="placeat",
+    key="voluptatum",
+    oauth_token="iusto",
+    pretty_print=False,
+    quota_user="excepturi",
+    upload_type="nisi",
+    upload_protocol="recusandae",
 )
     
-res = s.apps.appengine_apps_authorized_certificates_create(req)
+res = s.apps.appengine_apps_authorized_certificates_create(req, operations.AppengineAppsAuthorizedCertificatesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.authorized_certificate is not None:
     # handle response
@@ -74,7 +67,8 @@ if res.authorized_certificate is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### apps
 
@@ -100,7 +94,7 @@ if res.authorized_certificate is not None:
 * `appengine_apps_locations_get` - Gets information about a location.
 * `appengine_apps_locations_list` - Lists information about the supported locations for this service.
 * `appengine_apps_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `appengine_apps_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `appengine_apps_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 * `appengine_apps_patch` - Updates the specified Application resource. You can update the following fields: auth_domain - Google authentication domain for controlling user access to the application. default_cookie_expiration - Cookie expiration policy for the application. iap - Identity-Aware Proxy properties for the application.
 * `appengine_apps_repair` - Recreates the required App Engine features for the specified App Engine application, for example a Cloud Storage bucket or App Engine service account. Use this method if you receive an error message about a missing feature, for example, Error retrieving the App Engine service account. If you have deleted your App Engine service account, this will not be able to recreate it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be found in the Cloud Console Activity Log.
 * `appengine_apps_services_delete` - Deletes the specified service and all enclosed versions.
@@ -117,6 +111,21 @@ if res.authorized_certificate is not None:
 * `appengine_apps_services_versions_list` - Lists the versions of a service.
 * `appengine_apps_services_versions_patch` - Updates the specified Version resource. You can specify the following fields depending on the App Engine environment and type of scaling that the version resource uses:Standard environment instance_class (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.instance_class)automatic scaling in the standard environment: automatic_scaling.min_idle_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.max_idle_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automaticScaling.standard_scheduler_settings.max_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.min_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.target_cpu_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.target_throughput_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)basic scaling or manual scaling in the standard environment: serving_status (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status) manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#manualscaling)Flexible environment serving_status (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in the flexible environment: automatic_scaling.min_total_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.max_total_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling in the flexible environment: manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#manualscaling)
 
+### projects
+
+* `appengine_projects_locations_applications_create` - Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The ID of the target Cloud Platform project. location - The region (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application located.For more information about App Engine applications, see Managing Projects, Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
+* `appengine_projects_locations_applications_get` - Gets information about an application.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

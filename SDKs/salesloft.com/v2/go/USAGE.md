@@ -14,22 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.GetV2AccountStagesJSONRequest{
-        QueryParams: operations.GetV2AccountStagesJSONQueryParams{
-            Ids: []int64{
-                592845,
-                715190,
-                844266,
-            },
-            IncludePagingCounts: false,
-            LimitPagingCounts: false,
-            Page: 602763,
-            PerPage: 857946,
-            SortBy: "corrupti",
-            SortDirection: "illum",
-            UpdatedAt: []string{
-                "error",
-                "deserunt",
-            },
+        Ids: []int64{
+            592845,
+            715190,
+            844266,
+        },
+        IncludePagingCounts: false,
+        LimitPagingCounts: false,
+        Page: 602763,
+        PerPage: 857946,
+        SortBy: "corrupti",
+        SortDirection: "illum",
+        UpdatedAt: []string{
+            "error",
+            "deserunt",
         },
     }
 

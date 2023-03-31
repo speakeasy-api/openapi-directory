@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetV2EmailTemplatesIDJSONPathParams struct {
+type GetV2EmailTemplatesIDJSONRequest struct {
 	// EmailTemplate ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV2EmailTemplatesIDJSONQueryParams struct {
 	// Optionally will return the templates with the current user's email signature
 	IncludeSignature *bool `queryParam:"style=form,explode=true,name=include_signature"`
-}
-
-type GetV2EmailTemplatesIDJSONRequest struct {
-	PathParams  GetV2EmailTemplatesIDJSONPathParams
-	QueryParams GetV2EmailTemplatesIDJSONQueryParams
 }
 
 type GetV2EmailTemplatesIDJSONResponse struct {

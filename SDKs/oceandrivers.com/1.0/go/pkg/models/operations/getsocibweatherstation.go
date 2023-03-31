@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSocibWeatherStationPathParams struct {
+type GetSocibWeatherStationRequest struct {
 	// Period of time to get the data. Options: lastdata lasthour lastday
 	Period string `pathParam:"style=simple,explode=false,name=period"`
 	// station name currently: boyaenderrocat | playadepalma
 	StationName string `pathParam:"style=simple,explode=false,name=stationName"`
-}
-
-type GetSocibWeatherStationRequest struct {
-	PathParams GetSocibWeatherStationPathParams
 }
 
 type GetSocibWeatherStationResponse struct {

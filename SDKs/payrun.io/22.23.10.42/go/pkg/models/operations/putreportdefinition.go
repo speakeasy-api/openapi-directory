@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutReportDefinitionPathParams struct {
-	// The report definition unique identifier.
-	ReportDefinitionID string `pathParam:"style=simple,explode=false,name=ReportDefinitionId"`
-}
-
-type PutReportDefinitionHeaders struct {
+type PutReportDefinitionRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PutReportDefinitionRequest struct {
-	PathParams PutReportDefinitionPathParams
-	Headers    PutReportDefinitionHeaders
 	// The report definition object.
-	Request shared.ReportDefinition `request:"mediaType=application/json"`
+	ReportDefinition shared.ReportDefinition `request:"mediaType=application/json"`
+	// The report definition unique identifier.
+	ReportDefinitionID string `pathParam:"style=simple,explode=false,name=ReportDefinitionId"`
 }
 
 type PutReportDefinitionResponse struct {

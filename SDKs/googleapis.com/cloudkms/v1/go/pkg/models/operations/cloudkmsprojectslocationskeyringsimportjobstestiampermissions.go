@@ -8,13 +8,13 @@ import (
 )
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurity struct {
@@ -22,14 +22,10 @@ type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurity struc
 	Option2 *CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurityOption2 `security:"option"`
 }
 
-type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsPathParams struct {
-	// REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsQueryParams struct {
+type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv               *shared.XgafvEnum                 `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TestIamPermissionsRequest *shared.TestIamPermissionsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,17 +42,12 @@ type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsQueryParams st
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsRequest struct {
-	PathParams  CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsPathParams
-	QueryParams CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsQueryParams
-	Request     *shared.TestIamPermissionsRequest `request:"mediaType=application/json"`
-	Security    CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsSecurity
 }
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse struct {

@@ -32,11 +32,11 @@ func newSavedQueries(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // CloudassetSavedQueriesCreate - Creates a saved query in a parent project/folder/organization.
-func (s *savedQueries) CloudassetSavedQueriesCreate(ctx context.Context, request operations.CloudassetSavedQueriesCreateRequest) (*operations.CloudassetSavedQueriesCreateResponse, error) {
+func (s *savedQueries) CloudassetSavedQueriesCreate(ctx context.Context, request operations.CloudassetSavedQueriesCreateRequest, security operations.CloudassetSavedQueriesCreateSecurity) (*operations.CloudassetSavedQueriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SavedQueryInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *savedQueries) CloudassetSavedQueriesCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *savedQueries) CloudassetSavedQueriesCreate(ctx context.Context, request
 }
 
 // CloudassetSavedQueriesDelete - Deletes a saved query.
-func (s *savedQueries) CloudassetSavedQueriesDelete(ctx context.Context, request operations.CloudassetSavedQueriesDeleteRequest) (*operations.CloudassetSavedQueriesDeleteResponse, error) {
+func (s *savedQueries) CloudassetSavedQueriesDelete(ctx context.Context, request operations.CloudassetSavedQueriesDeleteRequest, security operations.CloudassetSavedQueriesDeleteSecurity) (*operations.CloudassetSavedQueriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,20 +135,20 @@ func (s *savedQueries) CloudassetSavedQueriesDelete(ctx context.Context, request
 }
 
 // CloudassetSavedQueriesGet - Gets details about a saved query.
-func (s *savedQueries) CloudassetSavedQueriesGet(ctx context.Context, request operations.CloudassetSavedQueriesGetRequest) (*operations.CloudassetSavedQueriesGetResponse, error) {
+func (s *savedQueries) CloudassetSavedQueriesGet(ctx context.Context, request operations.CloudassetSavedQueriesGetRequest, security operations.CloudassetSavedQueriesGetSecurity) (*operations.CloudassetSavedQueriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *savedQueries) CloudassetSavedQueriesGet(ctx context.Context, request op
 }
 
 // CloudassetSavedQueriesList - Lists all saved queries in a parent project/folder/organization.
-func (s *savedQueries) CloudassetSavedQueriesList(ctx context.Context, request operations.CloudassetSavedQueriesListRequest) (*operations.CloudassetSavedQueriesListResponse, error) {
+func (s *savedQueries) CloudassetSavedQueriesList(ctx context.Context, request operations.CloudassetSavedQueriesListRequest, security operations.CloudassetSavedQueriesListSecurity) (*operations.CloudassetSavedQueriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *savedQueries) CloudassetSavedQueriesList(ctx context.Context, request o
 }
 
 // CloudassetSavedQueriesPatch - Updates a saved query.
-func (s *savedQueries) CloudassetSavedQueriesPatch(ctx context.Context, request operations.CloudassetSavedQueriesPatchRequest) (*operations.CloudassetSavedQueriesPatchResponse, error) {
+func (s *savedQueries) CloudassetSavedQueriesPatch(ctx context.Context, request operations.CloudassetSavedQueriesPatchRequest, security operations.CloudassetSavedQueriesPatchSecurity) (*operations.CloudassetSavedQueriesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SavedQueryInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *savedQueries) CloudassetSavedQueriesPatch(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

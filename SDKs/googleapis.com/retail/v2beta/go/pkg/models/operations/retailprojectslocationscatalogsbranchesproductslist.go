@@ -8,16 +8,11 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsBranchesProductsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsBranchesProductsListPathParams struct {
-	// Required. The parent branch resource name, such as `projects/*/locations/global/catalogs/default_catalog/branches/0`. Use `default_branch` as the branch ID, to list products under the default branch. If the caller does not have permission to list Products under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED error is returned.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsListQueryParams struct {
+type RetailProjectsLocationsCatalogsBranchesProductsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type RetailProjectsLocationsCatalogsBranchesProductsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token ListProductsResponse.next_page_token, received from a previous ProductService.ListProducts call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ProductService.ListProducts must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT error is returned.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent branch resource name, such as `projects/*/locations/global/catalogs/default_catalog/branches/0`. Use `default_branch` as the branch ID, to list products under the default branch. If the caller does not have permission to list Products under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED error is returned.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type RetailProjectsLocationsCatalogsBranchesProductsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsListRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsBranchesProductsListPathParams
-	QueryParams RetailProjectsLocationsCatalogsBranchesProductsListQueryParams
-	Security    RetailProjectsLocationsCatalogsBranchesProductsListSecurity
 }
 
 type RetailProjectsLocationsCatalogsBranchesProductsListResponse struct {

@@ -4,7 +4,6 @@ package callbacks
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateWorkflowMessageStatusResponse struct {
@@ -13,16 +12,8 @@ type CreateWorkflowMessageStatusResponse struct {
 	RawResponse *http.Response
 }
 
-type CreateWorkflowMessageStatusRequest struct {
-	Request shared.MessageStatus `request:"mediaType=application/json"`
-}
-
 type CreateWorkflowFinalReportResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-}
-
-type CreateWorkflowFinalReportRequest struct {
-	Request shared.FinalReport `request:"mediaType=application/json"`
 }

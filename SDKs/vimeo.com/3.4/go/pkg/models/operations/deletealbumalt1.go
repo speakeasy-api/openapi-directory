@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteAlbumAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteAlbumAlt1PathParams struct {
-	// The ID of the album.
-	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteAlbumAlt1Request struct {
-	PathParams DeleteAlbumAlt1PathParams
-	Security   DeleteAlbumAlt1Security
+	// The ID of the album.
+	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 }
 
 type DeleteAlbumAlt1Response struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSuffixesSuffixPathParams struct {
-	Suffix string `pathParam:"style=simple,explode=false,name=suffix"`
-}
-
 type GetSuffixesSuffixRequest struct {
-	PathParams GetSuffixesSuffixPathParams
+	Suffix string `pathParam:"style=simple,explode=false,name=suffix"`
 }
 
 type GetSuffixesSuffixResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddressCleanseQueryParams struct {
-	APIKey *string `queryParam:"style=form,explode=false,name=api_key"`
-}
-
 type AddressCleanseRequestBody struct {
 	// Freeform address input to cleanse
 	//
@@ -18,8 +14,8 @@ type AddressCleanseRequestBody struct {
 }
 
 type AddressCleanseRequest struct {
-	QueryParams AddressCleanseQueryParams
-	Request     AddressCleanseRequestBody `request:"mediaType=application/json"`
+	RequestBody AddressCleanseRequestBody `request:"mediaType=application/json"`
+	APIKey      *string                   `queryParam:"style=form,explode=false,name=api_key"`
 }
 
 type AddressCleanseResponse struct {

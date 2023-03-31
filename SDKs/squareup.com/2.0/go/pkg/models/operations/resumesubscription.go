@@ -8,17 +8,12 @@ import (
 )
 
 type ResumeSubscriptionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ResumeSubscriptionPathParams struct {
-	// The ID of the subscription to resume.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ResumeSubscriptionRequest struct {
-	PathParams ResumeSubscriptionPathParams
-	Security   ResumeSubscriptionSecurity
+	// The ID of the subscription to resume.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
 }
 
 type ResumeSubscriptionResponse struct {

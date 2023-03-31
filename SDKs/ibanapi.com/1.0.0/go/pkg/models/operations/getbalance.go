@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBalanceSecurity struct {
-	APIKeySecurity shared.SchemeAPIKeySecurity `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetBalanceRequest struct {
-	Security GetBalanceSecurity
-}
-
 type GetBalanceResponse struct {
 	// Your balance is exhausted or bad request
 	FourHundred *shared.FourHundred

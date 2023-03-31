@@ -28,10 +28,6 @@ type CreateApplicationRequestBody struct {
 	Privacy *CreateApplicationRequestBodyPrivacy `json:"privacy,omitempty"`
 }
 
-type CreateApplicationRequest struct {
-	Request CreateApplicationRequestBody `request:"mediaType=application/json"`
-}
-
 // CreateApplication415ApplicationJSON - Unsupported Content Type Header
 type CreateApplication415ApplicationJSON struct {
 	Detail *string `json:"detail,omitempty"`

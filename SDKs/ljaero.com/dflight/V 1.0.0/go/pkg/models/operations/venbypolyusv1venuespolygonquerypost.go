@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VenByPolyUsV1VenuesPolygonQueryPostHeaders struct {
-	XAPIKey *string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
 type VenByPolyUsV1VenuesPolygonQueryPostRequest struct {
-	Headers VenByPolyUsV1VenuesPolygonQueryPostHeaders
-	Request shared.VenuesByPolygon `request:"mediaType=application/json"`
+	VenuesByPolygon shared.VenuesByPolygon `request:"mediaType=application/json"`
+	XAPIKey         *string                `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 type VenByPolyUsV1VenuesPolygonQueryPostResponse struct {

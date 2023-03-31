@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteV2WebhookSubscriptionsIDPathParams struct {
+type DeleteV2WebhookSubscriptionsIDRequest struct {
 	// The id of the Webhook Subscription to delete
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteV2WebhookSubscriptionsIDRequest struct {
-	PathParams DeleteV2WebhookSubscriptionsIDPathParams
 }
 
 type DeleteV2WebhookSubscriptionsIDResponse struct {

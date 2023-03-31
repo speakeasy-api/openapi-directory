@@ -4,109 +4,60 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatafusionProjectsLocationsInstancesCreateRequest(
-    security=operations.DatafusionProjectsLocationsInstancesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatafusionProjectsLocationsInstancesCreatePathParams(
-        parent="qui",
-    ),
-    query_params=operations.DatafusionProjectsLocationsInstancesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="minima",
-        alt="media",
-        callback="cum",
-        fields="unde",
-        instance_id="iure",
-        key="voluptatem",
-        oauth_token="quae",
-        pretty_print=False,
-        quota_user="consectetur",
-        upload_type="delectus",
-        upload_protocol="doloribus",
-    ),
-    request=shared.InstanceInput(
-        accelerators=[
-            shared.Accelerator(
-                accelerator_type="ACCELERATOR_TYPE_UNSPECIFIED",
-                state="DISABLED",
-            ),
-            shared.Accelerator(
-                accelerator_type="ACCELERATOR_TYPE_UNSPECIFIED",
-                state="STATE_UNSPECIFIED",
-            ),
-            shared.Accelerator(
-                accelerator_type="CDC",
-                state="DISABLED",
-            ),
-        ],
-        available_version=[
-            shared.Version(
-                available_features=[
-                    "porro",
-                ],
-                default_version=True,
-                type="TYPE_GENERAL_AVAILABILITY",
-                version_number="aut",
-            ),
-            shared.Version(
-                available_features=[
-                    "distinctio",
-                    "sint",
-                ],
-                default_version=True,
-                type="TYPE_GENERAL_AVAILABILITY",
-                version_number="atque",
-            ),
-            shared.Version(
-                available_features=[
-                    "rerum",
-                    "voluptatibus",
-                ],
-                default_version=True,
-                type="TYPE_UNSPECIFIED",
-                version_number="eum",
-            ),
-        ],
+    dollar_xgafv="2",
+    instance_input=shared.InstanceInput(
         crypto_key_config=shared.CryptoKeyConfig(
-            key_reference="sit",
+            key_reference="provident",
         ),
-        dataproc_service_account="aut",
-        description="nisi",
-        display_name="velit",
+        dataproc_service_account="distinctio",
+        description="quibusdam",
+        display_name="unde",
         enable_rbac=False,
         enable_stackdriver_logging=False,
-        enable_stackdriver_monitoring=True,
+        enable_stackdriver_monitoring=False,
+        enable_zone_separation=False,
         event_publish_config=shared.EventPublishConfig(
             enabled=False,
-            topic="repellat",
+            topic="nulla",
         ),
         labels={
-            "consequatur": "eveniet",
-            "sint": "iusto",
+            "illum": "vel",
+            "error": "deserunt",
+            "suscipit": "iure",
         },
         network_config=shared.NetworkConfig(
-            ip_allocation="deleniti",
-            network="aperiam",
+            ip_allocation="magnam",
+            network="debitis",
         ),
         options={
-            "eius": "debitis",
-            "sit": "impedit",
+            "delectus": "tempora",
         },
         private_instance=False,
-        type="TYPE_UNSPECIFIED",
-        version="magni",
-        zone="quibusdam",
+        type="BASIC",
+        version="molestiae",
+        zone="minus",
     ),
+    access_token="placeat",
+    alt="media",
+    callback="iusto",
+    fields_="excepturi",
+    instance_id="nisi",
+    key="recusandae",
+    oauth_token="temporibus",
+    parent="ab",
+    pretty_print=False,
+    quota_user="quis",
+    upload_type="veritatis",
+    upload_protocol="deserunt",
 )
     
-res = s.projects.datafusion_projects_locations_instances_create(req)
+res = s.projects.datafusion_projects_locations_instances_create(req, operations.DatafusionProjectsLocationsInstancesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IdeahubPlatformsPropertiesLocalesListPathParams struct {
-	// Required. The web property to check idea availability for Format: platforms/{platform}/property/{property}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IdeahubPlatformsPropertiesLocalesListQueryParams struct {
+type IdeahubPlatformsPropertiesLocalesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -31,6 +26,8 @@ type IdeahubPlatformsPropertiesLocalesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListAvailableLocales` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListAvailableLocales` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The web property to check idea availability for Format: platforms/{platform}/property/{property}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,11 +36,6 @@ type IdeahubPlatformsPropertiesLocalesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IdeahubPlatformsPropertiesLocalesListRequest struct {
-	PathParams  IdeahubPlatformsPropertiesLocalesListPathParams
-	QueryParams IdeahubPlatformsPropertiesLocalesListQueryParams
 }
 
 type IdeahubPlatformsPropertiesLocalesListResponse struct {

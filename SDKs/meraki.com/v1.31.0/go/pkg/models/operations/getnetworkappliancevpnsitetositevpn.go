@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceVpnSiteToSiteVpnPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkApplianceVpnSiteToSiteVpnRequest struct {
-	PathParams GetNetworkApplianceVpnSiteToSiteVpnPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONHubs struct {

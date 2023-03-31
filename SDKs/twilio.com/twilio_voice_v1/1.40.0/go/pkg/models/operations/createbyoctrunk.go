@@ -14,7 +14,8 @@ var CreateByocTrunkServerList = []string{
 }
 
 type CreateByocTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateByocTrunkCreateByocTrunkRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback_url`. Can be: `GET` or `POST`.
@@ -146,12 +147,6 @@ type CreateByocTrunkCreateByocTrunkRequest struct {
 	VoiceMethod *CreateByocTrunkCreateByocTrunkRequestVoiceMethodEnum `form:"name=VoiceMethod"`
 	// The URL we should call when the BYOC Trunk receives a call.
 	VoiceURL *string `form:"name=VoiceUrl"`
-}
-
-type CreateByocTrunkRequest struct {
-	Request   *CreateByocTrunkCreateByocTrunkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateByocTrunkSecurity
-	ServerURL *string
 }
 
 type CreateByocTrunkResponse struct {

@@ -30,7 +30,6 @@ pkg/models/operations/referencesairportsbyairportcodeget.go
 pkg/models/operations/referencesairportsnearestbylatitudeandlongitudeget.go
 pkg/models/operations/referencescitiesbycitycodeget.go
 pkg/models/operations/referencescountriesbycountrycodeget.go
-pkg/models/shared/security.go
 pkg/models/shared/airportresponse.go
 pkg/models/shared/airportresource.go
 pkg/models/shared/link.go

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDatesPathParams struct {
+type UpdateDatesRequest struct {
+	// New job dates.
+	JobDatesDto shared.JobDatesDto `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type UpdateDatesRequest struct {
-	PathParams UpdateDatesPathParams
-	// New job dates.
-	Request shared.JobDatesDto `request:"mediaType=application/json"`
 }
 
 type UpdateDatesResponse struct {

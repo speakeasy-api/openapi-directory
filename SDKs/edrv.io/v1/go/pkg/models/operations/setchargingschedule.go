@@ -18,10 +18,6 @@ type SetchargingscheduleRequestBody struct {
 	Schedule  []SetchargingscheduleRequestBodySchedule `json:"schedule,omitempty"`
 }
 
-type SetchargingscheduleRequest struct {
-	Request SetchargingscheduleRequestBody `request:"mediaType=application/json"`
-}
-
 // Setchargingschedule201ApplicationJSON - A successful response
 type Setchargingschedule201ApplicationJSON struct {
 	Command map[string]interface{} `json:"command,omitempty"`

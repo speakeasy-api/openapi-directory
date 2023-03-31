@@ -8,16 +8,11 @@ import (
 )
 
 type WebmastersSitesDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type WebmastersSitesDeletePathParams struct {
-	// The URI of the property as defined in Search Console. Examples: http://www.example.com/ or android-app://com.example/ Note: for property-sets, use the URI that starts with sc-set: which is used in Search Console URLs.
-	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
-}
-
-type WebmastersSitesDeleteQueryParams struct {
+type WebmastersSitesDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -30,14 +25,10 @@ type WebmastersSitesDeleteQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The URI of the property as defined in Search Console. Examples: http://www.example.com/ or android-app://com.example/ Note: for property-sets, use the URI that starts with sc-set: which is used in Search Console URLs.
+	SiteURL string `pathParam:"style=simple,explode=false,name=siteUrl"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type WebmastersSitesDeleteRequest struct {
-	PathParams  WebmastersSitesDeletePathParams
-	QueryParams WebmastersSitesDeleteQueryParams
-	Security    WebmastersSitesDeleteSecurity
 }
 
 type WebmastersSitesDeleteResponse struct {

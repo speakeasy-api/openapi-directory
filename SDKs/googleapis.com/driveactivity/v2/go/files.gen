@@ -65,9 +65,8 @@ pkg/models/shared/actor.go
 pkg/models/shared/systemevent.go
 pkg/models/shared/impersonation.go
 pkg/models/shared/action.go
+pkg/models/shared/altenum.go
 pkg/models/shared/querydriveactivityrequest.go
 pkg/models/shared/consolidationstrategy.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

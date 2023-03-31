@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesUpdateForAuthenticatedUserPathParams struct {
-	// The name of the codespace.
-	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
-}
-
 type CodespacesUpdateForAuthenticatedUserRequestBody struct {
 	// Display name for this codespace
 	DisplayName *string `json:"display_name,omitempty"`
@@ -22,8 +17,9 @@ type CodespacesUpdateForAuthenticatedUserRequestBody struct {
 }
 
 type CodespacesUpdateForAuthenticatedUserRequest struct {
-	PathParams CodespacesUpdateForAuthenticatedUserPathParams
-	Request    *CodespacesUpdateForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *CodespacesUpdateForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
+	// The name of the codespace.
+	CodespaceName string `pathParam:"style=simple,explode=false,name=codespace_name"`
 }
 
 type CodespacesUpdateForAuthenticatedUserResponse struct {

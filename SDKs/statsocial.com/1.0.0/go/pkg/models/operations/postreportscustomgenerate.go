@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostReportsCustomGenerateQueryParams struct {
+type PostReportsCustomGenerateRequest struct {
 	// Name of the report
 	ReportName string `queryParam:"style=form,explode=true,name=report_name"`
-}
-
-type PostReportsCustomGenerateRequest struct {
-	QueryParams PostReportsCustomGenerateQueryParams
 }
 
 type PostReportsCustomGenerateResponse struct {

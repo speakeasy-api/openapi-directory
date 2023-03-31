@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1ScansSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAPIV1ScansQueryParams struct {
-	Name    *string `queryParam:"style=form,explode=true,name=name"`
-	PerPage *string `queryParam:"style=form,explode=true,name=per_page"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=apiKey"`
 }
 
 type GetAPIV1ScansRequest struct {
-	QueryParams GetAPIV1ScansQueryParams
-	Security    GetAPIV1ScansSecurity
+	Name    *string `queryParam:"style=form,explode=true,name=name"`
+	PerPage *string `queryParam:"style=form,explode=true,name=per_page"`
 }
 
 type GetAPIV1ScansResponse struct {

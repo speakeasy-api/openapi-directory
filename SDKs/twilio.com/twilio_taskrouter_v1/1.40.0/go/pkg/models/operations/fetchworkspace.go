@@ -12,18 +12,13 @@ var FetchWorkspaceServerList = []string{
 }
 
 type FetchWorkspaceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchWorkspacePathParams struct {
-	// The SID of the Workspace resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchWorkspaceRequest struct {
-	PathParams FetchWorkspacePathParams
-	Security   FetchWorkspaceSecurity
-	ServerURL  *string
+	// The SID of the Workspace resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchWorkspaceResponse struct {

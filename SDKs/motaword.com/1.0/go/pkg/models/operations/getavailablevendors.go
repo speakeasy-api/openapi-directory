@@ -29,14 +29,10 @@ func (e *GetAvailableVendorsWithEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAvailableVendorsQueryParams struct {
+type GetAvailableVendorsRequest struct {
+	AvailableVendorsFilter *shared.AvailableVendorsFilter `request:"mediaType=application/json"`
 	// Include detailed information. Possible values 'user'. Requesting user info enrichment takes much longer.
 	With []GetAvailableVendorsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
-}
-
-type GetAvailableVendorsRequest struct {
-	QueryParams GetAvailableVendorsQueryParams
-	Request     *shared.AvailableVendorsFilter `request:"mediaType=application/json"`
 }
 
 type GetAvailableVendorsResponse struct {

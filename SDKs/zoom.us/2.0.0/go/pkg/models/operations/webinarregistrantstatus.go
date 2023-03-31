@@ -6,21 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type WebinarRegistrantStatusSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type WebinarRegistrantStatusPathParams struct {
-	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
-	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
-}
-
-type WebinarRegistrantStatusQueryParams struct {
-	// The meeting occurrence ID.
-	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // WebinarRegistrantStatusApplicationJSONActionEnum - Used to approve a registrant, deny a registrant, or cancel a previously approved registrant.
@@ -65,10 +54,11 @@ type WebinarRegistrantStatusApplicationJSON struct {
 }
 
 type WebinarRegistrantStatusRequest struct {
-	PathParams  WebinarRegistrantStatusPathParams
-	QueryParams WebinarRegistrantStatusQueryParams
-	Request     WebinarRegistrantStatusApplicationJSON `request:"mediaType=application/json"`
-	Security    WebinarRegistrantStatusSecurity
+	RequestBody WebinarRegistrantStatusApplicationJSON `request:"mediaType=application/json"`
+	// The meeting occurrence ID.
+	OccurrenceID *string `queryParam:"style=form,explode=true,name=occurrence_id"`
+	// The webinar ID in "**long**" format(represented as int64 data type in JSON).
+	WebinarID int64 `pathParam:"style=simple,explode=false,name=webinarId"`
 }
 
 type WebinarRegistrantStatusResponse struct {

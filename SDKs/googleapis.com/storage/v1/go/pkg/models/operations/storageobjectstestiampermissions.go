@@ -8,28 +8,28 @@ import (
 )
 
 type StorageObjectsTestIamPermissionsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsTestIamPermissionsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsTestIamPermissionsSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsTestIamPermissionsSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsTestIamPermissionsSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageObjectsTestIamPermissionsSecurity struct {
@@ -40,16 +40,11 @@ type StorageObjectsTestIamPermissionsSecurity struct {
 	Option5 *StorageObjectsTestIamPermissionsSecurityOption5 `security:"option"`
 }
 
-type StorageObjectsTestIamPermissionsPathParams struct {
-	// Name of the bucket in which the object resides.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type StorageObjectsTestIamPermissionsQueryParams struct {
+type StorageObjectsTestIamPermissionsRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of the bucket in which the object resides.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// If present, selects a specific revision of this object (as opposed to the latest version, the default).
@@ -58,6 +53,8 @@ type StorageObjectsTestIamPermissionsQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Name of the object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 	// Permissions to test.
 	Permissions []string `queryParam:"style=form,explode=true,name=permissions"`
 	// Returns response with indentations and line breaks.
@@ -70,12 +67,6 @@ type StorageObjectsTestIamPermissionsQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageObjectsTestIamPermissionsRequest struct {
-	PathParams  StorageObjectsTestIamPermissionsPathParams
-	QueryParams StorageObjectsTestIamPermissionsQueryParams
-	Security    StorageObjectsTestIamPermissionsSecurity
 }
 
 type StorageObjectsTestIamPermissionsResponse struct {

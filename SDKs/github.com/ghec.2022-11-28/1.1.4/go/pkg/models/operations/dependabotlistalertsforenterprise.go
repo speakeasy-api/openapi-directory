@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependabotListAlertsForEnterprisePathParams struct {
-	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type DependabotListAlertsForEnterpriseQueryParams struct {
+type DependabotListAlertsForEnterpriseRequest struct {
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
 	After *string `queryParam:"style=form,explode=true,name=after"`
 	// A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
@@ -23,6 +18,8 @@ type DependabotListAlertsForEnterpriseQueryParams struct {
 	//
 	// Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
 	Ecosystem *string `queryParam:"style=form,explode=true,name=ecosystem"`
+	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// **Deprecated**. The number of results per page (max 100), starting from the first matching result.
 	// This parameter must not be used in combination with `last`.
 	// Instead, use `per_page` in combination with `after` to fetch the first page of results.
@@ -49,11 +46,6 @@ type DependabotListAlertsForEnterpriseQueryParams struct {
 	//
 	// Can be: `dismissed`, `fixed`, `open`
 	State *string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type DependabotListAlertsForEnterpriseRequest struct {
-	PathParams  DependabotListAlertsForEnterprisePathParams
-	QueryParams DependabotListAlertsForEnterpriseQueryParams
 }
 
 type DependabotListAlertsForEnterpriseResponse struct {

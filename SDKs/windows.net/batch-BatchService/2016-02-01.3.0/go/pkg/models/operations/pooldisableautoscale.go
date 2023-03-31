@@ -7,31 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PoolDisableAutoScalePathParams struct {
-	// The id of the pool on which to disable automatic scaling.
-	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
-}
-
-type PoolDisableAutoScaleQueryParams struct {
+type PoolDisableAutoScaleRequest struct {
 	// Client API Version.
 	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type PoolDisableAutoScaleHeaders struct {
 	// The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
+	// The id of the pool on which to disable automatic scaling.
+	PoolID string `pathParam:"style=simple,explode=false,name=poolId"`
 	// Whether the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type PoolDisableAutoScaleRequest struct {
-	PathParams  PoolDisableAutoScalePathParams
-	QueryParams PoolDisableAutoScaleQueryParams
-	Headers     PoolDisableAutoScaleHeaders
+	// The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type PoolDisableAutoScaleResponse struct {

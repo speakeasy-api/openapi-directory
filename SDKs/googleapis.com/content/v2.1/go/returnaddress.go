@@ -33,11 +33,11 @@ func newReturnaddress(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // ContentReturnaddressCustombatch - Batches multiple return address related calls in a single request.
-func (s *returnaddress) ContentReturnaddressCustombatch(ctx context.Context, request operations.ContentReturnaddressCustombatchRequest) (*operations.ContentReturnaddressCustombatchResponse, error) {
+func (s *returnaddress) ContentReturnaddressCustombatch(ctx context.Context, request operations.ContentReturnaddressCustombatchRequest, security operations.ContentReturnaddressCustombatchSecurity) (*operations.ContentReturnaddressCustombatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/returnaddress/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnaddressCustomBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *returnaddress) ContentReturnaddressCustombatch(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,20 +88,20 @@ func (s *returnaddress) ContentReturnaddressCustombatch(ctx context.Context, req
 }
 
 // ContentReturnaddressDelete - Deletes a return address for the given Merchant Center account.
-func (s *returnaddress) ContentReturnaddressDelete(ctx context.Context, request operations.ContentReturnaddressDeleteRequest) (*operations.ContentReturnaddressDeleteResponse, error) {
+func (s *returnaddress) ContentReturnaddressDelete(ctx context.Context, request operations.ContentReturnaddressDeleteRequest, security operations.ContentReturnaddressDeleteSecurity) (*operations.ContentReturnaddressDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,20 +127,20 @@ func (s *returnaddress) ContentReturnaddressDelete(ctx context.Context, request 
 }
 
 // ContentReturnaddressGet - Gets a return address of the Merchant Center account.
-func (s *returnaddress) ContentReturnaddressGet(ctx context.Context, request operations.ContentReturnaddressGetRequest) (*operations.ContentReturnaddressGetResponse, error) {
+func (s *returnaddress) ContentReturnaddressGet(ctx context.Context, request operations.ContentReturnaddressGetRequest, security operations.ContentReturnaddressGetSecurity) (*operations.ContentReturnaddressGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *returnaddress) ContentReturnaddressGet(ctx context.Context, request ope
 }
 
 // ContentReturnaddressInsert - Inserts a return address for the Merchant Center account.
-func (s *returnaddress) ContentReturnaddressInsert(ctx context.Context, request operations.ContentReturnaddressInsertRequest) (*operations.ContentReturnaddressInsertResponse, error) {
+func (s *returnaddress) ContentReturnaddressInsert(ctx context.Context, request operations.ContentReturnaddressInsertRequest, security operations.ContentReturnaddressInsertSecurity) (*operations.ContentReturnaddressInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnAddress", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *returnaddress) ContentReturnaddressInsert(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,20 +230,20 @@ func (s *returnaddress) ContentReturnaddressInsert(ctx context.Context, request 
 }
 
 // ContentReturnaddressList - Lists the return addresses of the Merchant Center account.
-func (s *returnaddress) ContentReturnaddressList(ctx context.Context, request operations.ContentReturnaddressListRequest) (*operations.ContentReturnaddressListResponse, error) {
+func (s *returnaddress) ContentReturnaddressList(ctx context.Context, request operations.ContentReturnaddressListRequest, security operations.ContentReturnaddressListSecurity) (*operations.ContentReturnaddressListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

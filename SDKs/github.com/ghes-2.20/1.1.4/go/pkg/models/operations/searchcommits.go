@@ -33,7 +33,7 @@ func (e *SearchCommitsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchCommitsQueryParams struct {
+type SearchCommitsRequest struct {
 	// Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// Page number of the results to fetch.
@@ -44,10 +44,6 @@ type SearchCommitsQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Sorts the results of your query by `author-date` or `committer-date`. Default: [best match](https://docs.github.com/enterprise-server@2.20/rest/reference/search#ranking-search-results)
 	Sort *SearchCommitsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchCommitsRequest struct {
-	QueryParams SearchCommitsQueryParams
 }
 
 // SearchCommits415ApplicationJSON - Preview header missing

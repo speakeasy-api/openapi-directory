@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShareAsReferenceFilesPathParams struct {
+type ShareAsReferenceFilesRequest struct {
+	// Shared selected files as Reference Files with a job in a project.
+	FilesDto shared.FilesDto `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type ShareAsReferenceFilesRequest struct {
-	PathParams ShareAsReferenceFilesPathParams
-	// Shared selected files as Reference Files with a job in a project.
-	Request shared.FilesDto `request:"mediaType=application/json"`
 }
 
 type ShareAsReferenceFilesResponse struct {

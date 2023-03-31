@@ -44,7 +44,7 @@ func (s *campaigns) GetResourcesCampaignsJSON(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,7 +89,7 @@ func (s *campaigns) GetResourcesCampaignsJSON(ctx context.Context, request opera
 // Information about a specific campaign
 func (s *campaigns) GetResourcesCampaignsIDJSON(ctx context.Context, request operations.GetResourcesCampaignsIDJSONRequest) (*operations.GetResourcesCampaignsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/campaigns/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/campaigns/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,14 +137,14 @@ func (s *campaigns) GetResourcesCampaignsIDJSON(ctx context.Context, request ope
 // Campaign Listings
 func (s *campaigns) GetResourcesCampaignsIDMediaJSON(ctx context.Context, request operations.GetResourcesCampaignsIDMediaJSONRequest) (*operations.GetResourcesCampaignsIDMediaJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/campaigns/{id}/media.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/campaigns/{id}/media.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -189,14 +189,14 @@ func (s *campaigns) GetResourcesCampaignsIDMediaJSON(ctx context.Context, reques
 // MediaItem
 func (s *campaigns) GetResourcesCampaignsIDSyndicateFormat(ctx context.Context, request operations.GetResourcesCampaignsIDSyndicateFormatRequest) (*operations.GetResourcesCampaignsIDSyndicateFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/campaigns/{id}/syndicate.{format}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/resources/campaigns/{id}/syndicate.{format}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

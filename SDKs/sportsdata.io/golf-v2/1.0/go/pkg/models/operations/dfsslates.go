@@ -33,15 +33,11 @@ func (e *DfsSlatesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DfsSlatesPathParams struct {
+type DfsSlatesRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format DfsSlatesFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are <code>58</code>, <code>61</code>, etc.
 	Tournamentid string `pathParam:"style=simple,explode=false,name=tournamentid"`
-}
-
-type DfsSlatesRequest struct {
-	PathParams DfsSlatesPathParams
 }
 
 type DfsSlatesResponse struct {

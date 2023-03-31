@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutCustomFieldsIDJSONPathParams struct {
-	// Id of the CustomField
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutCustomFieldsIDJSONQueryParams struct {
+type PutCustomFieldsIDJSONRequest struct {
+	// CustomField parameters.
+	CustomFieldEdit shared.CustomFieldEdit `request:"mediaType=application/json"`
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the CustomField
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type PutCustomFieldsIDJSONRequest struct {
-	PathParams  PutCustomFieldsIDJSONPathParams
-	QueryParams PutCustomFieldsIDJSONQueryParams
-	// CustomField parameters.
-	Request shared.CustomFieldEdit `request:"mediaType=application/json"`
 }
 
 type PutCustomFieldsIDJSONResponse struct {

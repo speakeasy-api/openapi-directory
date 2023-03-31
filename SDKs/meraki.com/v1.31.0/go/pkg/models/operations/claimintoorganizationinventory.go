@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type ClaimIntoOrganizationInventoryPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // ClaimIntoOrganizationInventoryRequestBodyLicensesModeEnum - Co-term licensing only: either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. Does not apply to organizations using per-device licensing model.
 type ClaimIntoOrganizationInventoryRequestBodyLicensesModeEnum string
 
@@ -53,8 +49,8 @@ type ClaimIntoOrganizationInventoryRequestBody struct {
 }
 
 type ClaimIntoOrganizationInventoryRequest struct {
-	PathParams ClaimIntoOrganizationInventoryPathParams
-	Request    *ClaimIntoOrganizationInventoryRequestBody `request:"mediaType=application/json"`
+	RequestBody    *ClaimIntoOrganizationInventoryRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                     `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type ClaimIntoOrganizationInventoryResponse struct {

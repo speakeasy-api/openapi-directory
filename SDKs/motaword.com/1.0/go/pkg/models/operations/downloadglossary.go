@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadGlossaryPathParams struct {
+type DownloadGlossaryRequest struct {
 	// Glossary ID
 	GlossaryID int64 `pathParam:"style=simple,explode=false,name=glossaryId"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DownloadGlossaryRequest struct {
-	PathParams DownloadGlossaryPathParams
 }
 
 type DownloadGlossaryResponse struct {

@@ -48,7 +48,7 @@ func (s *surfaceObstacles) ObstaclesByDistanceUsV1ObstaclesDistanceQueryPost(ctx
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/obstacles/distance-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ObstaclesByDistance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -63,7 +63,7 @@ func (s *surfaceObstacles) ObstaclesByDistanceUsV1ObstaclesDistanceQueryPost(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -116,7 +116,7 @@ func (s *surfaceObstacles) ObstaclesByPolyUsV1ObstaclesPolygonQueryPost(ctx cont
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/obstacles/polygon-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ObstaclesByPolygon", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *surfaceObstacles) ObstaclesByPolyUsV1ObstaclesPolygonQueryPost(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -184,7 +184,7 @@ func (s *surfaceObstacles) ObstaclesByRouteUsV1ObstaclesRouteQueryPost(ctx conte
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/us/v1/obstacles/route-query"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ObstaclesByRoute", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,7 +199,7 @@ func (s *surfaceObstacles) ObstaclesByRouteUsV1ObstaclesRouteQueryPost(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -8,13 +8,13 @@ import (
 )
 
 type StorageDefaultObjectAccessControlsInsertSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageDefaultObjectAccessControlsInsertSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageDefaultObjectAccessControlsInsertSecurity struct {
@@ -22,14 +22,12 @@ type StorageDefaultObjectAccessControlsInsertSecurity struct {
 	Option2 *StorageDefaultObjectAccessControlsInsertSecurityOption2 `security:"option"`
 }
 
-type StorageDefaultObjectAccessControlsInsertPathParams struct {
-	// Name of a bucket.
-	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
-}
-
-type StorageDefaultObjectAccessControlsInsertQueryParams struct {
+type StorageDefaultObjectAccessControlsInsertRequest struct {
+	ObjectAccessControl *shared.ObjectAccessControl `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Name of a bucket.
+	Bucket string `pathParam:"style=simple,explode=false,name=bucket"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,13 +44,6 @@ type StorageDefaultObjectAccessControlsInsertQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request. Required for Requester Pays buckets.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageDefaultObjectAccessControlsInsertRequest struct {
-	PathParams  StorageDefaultObjectAccessControlsInsertPathParams
-	QueryParams StorageDefaultObjectAccessControlsInsertQueryParams
-	Request     *shared.ObjectAccessControl `request:"mediaType=application/json"`
-	Security    StorageDefaultObjectAccessControlsInsertSecurity
 }
 
 type StorageDefaultObjectAccessControlsInsertResponse struct {

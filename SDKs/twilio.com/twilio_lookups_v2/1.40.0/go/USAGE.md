@@ -14,33 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.FetchPhoneNumberRequest{
-        Security: operations.FetchPhoneNumberSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.FetchPhoneNumberPathParams{
-            PhoneNumber: "corrupti",
-        },
-        QueryParams: operations.FetchPhoneNumberQueryParams{
-            AddressCountryCode: "provident",
-            AddressLine1: "distinctio",
-            AddressLine2: "quibusdam",
-            City: "Stiedemannstad",
-            CountryCode: "illum",
-            DateOfBirth: "vel",
-            Fields: "error",
-            FirstName: "Luna",
-            LastName: "Hoppe",
-            NationalID: "iure",
-            PostalCode: "80923",
-            State: "molestiae",
-        },
+        AddressCountryCode: "corrupti",
+        AddressLine1: "provident",
+        AddressLine2: "distinctio",
+        City: "New Orleans",
+        CountryCode: "nulla",
+        DateOfBirth: "corrupti",
+        Fields: "illum",
+        FirstName: "Henry",
+        LastName: "Mueller",
+        NationalID: "deserunt",
+        PhoneNumber: "suscipit",
+        PostalCode: "28092",
+        State: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.FetchPhoneNumber(ctx, req)
+    res, err := s.FetchPhoneNumber(ctx, req, operations.FetchPhoneNumberSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

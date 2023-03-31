@@ -8,13 +8,14 @@ import (
 )
 
 type CloudresourcemanagerTagValuesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudresourcemanagerTagValuesCreateQueryParams struct {
+type CloudresourcemanagerTagValuesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TagValueInput *shared.TagValueInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -37,12 +38,6 @@ type CloudresourcemanagerTagValuesCreateQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. Set as true to perform the validations necessary for creating the resource, but not actually perform the action.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type CloudresourcemanagerTagValuesCreateRequest struct {
-	QueryParams CloudresourcemanagerTagValuesCreateQueryParams
-	Request     *shared.TagValueInput `request:"mediaType=application/json"`
-	Security    CloudresourcemanagerTagValuesCreateSecurity
 }
 
 type CloudresourcemanagerTagValuesCreateResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRackGroupsReadPathParams struct {
+type DcimRackGroupsReadRequest struct {
 	// A unique integer value identifying this rack group.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRackGroupsReadRequest struct {
-	PathParams DcimRackGroupsReadPathParams
 }
 
 type DcimRackGroupsReadResponse struct {

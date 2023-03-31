@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDevicePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type UpdateDeviceRequestBody struct {
 	// The address of a device
 	Address *string `json:"address,omitempty"`
@@ -32,8 +28,8 @@ type UpdateDeviceRequestBody struct {
 }
 
 type UpdateDeviceRequest struct {
-	PathParams UpdateDevicePathParams
-	Request    *UpdateDeviceRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateDeviceRequestBody `request:"mediaType=application/json"`
+	Serial      string                   `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type UpdateDeviceResponse struct {

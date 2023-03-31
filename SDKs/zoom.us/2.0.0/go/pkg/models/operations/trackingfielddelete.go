@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TrackingfieldDeleteSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type TrackingfieldDeletePathParams struct {
-	// The Tracking Field ID
-	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TrackingfieldDeleteRequest struct {
-	PathParams TrackingfieldDeletePathParams
-	Security   TrackingfieldDeleteSecurity
+	// The Tracking Field ID
+	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
 }
 
 type TrackingfieldDeleteResponse struct {

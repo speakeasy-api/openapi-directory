@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StoryPostFileJSONQueryParams struct {
+type StoryPostFileJSONRequest struct {
+	// A json-formatted object that includes a base64 encoded file (file encoded utf-8)
+	FileUpload *shared.FileUpload `request:"mediaType=application/json"`
 	// Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
 	IncludeOutline *bool `queryParam:"style=form,explode=true,name=include_outline"`
-}
-
-type StoryPostFileJSONRequest struct {
-	QueryParams StoryPostFileJSONQueryParams
-	// A json-formatted object that includes a base64 encoded file (file encoded utf-8)
-	Request *shared.FileUpload `request:"mediaType=application/json"`
 }
 
 type StoryPostFileJSONResponse struct {

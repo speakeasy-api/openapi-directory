@@ -14,11 +14,6 @@ type CreatePayeeV3MultipartFormData struct {
 	PayorID *string                           `multipartForm:"name=payorId"`
 }
 
-type CreatePayeeV3MultipartRequest struct {
-	// Post payees to create.
-	Request *CreatePayeeV3MultipartFormData `request:"mediaType=multipart/form-data"`
-}
-
 type CreatePayeeV3MultipartResponse struct {
 	ContentType string
 	// HTTP Created. Body created only on CSV requests

@@ -35,7 +35,7 @@ func newDrillers(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DrillersFilesList - list files found for the aquifer identified in the uri
 func (s *drillers) DrillersFilesList(ctx context.Context, request operations.DrillersFilesListRequest) (*operations.DrillersFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drillers/{person_guid}/files/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/drillers/{person_guid}/files/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *drillers) DrillersList(ctx context.Context, request operations.Drillers
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -134,7 +134,7 @@ func (s *drillers) DrillersNamesList(ctx context.Context, request operations.Dri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

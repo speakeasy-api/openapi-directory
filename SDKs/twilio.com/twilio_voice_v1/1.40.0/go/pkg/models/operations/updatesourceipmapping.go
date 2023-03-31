@@ -12,12 +12,8 @@ var UpdateSourceIPMappingServerList = []string{
 }
 
 type UpdateSourceIPMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSourceIPMappingPathParams struct {
-	// The Twilio-provided string that uniquely identifies the IP Record resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSourceIPMappingUpdateSourceIPMappingRequest struct {
@@ -26,10 +22,9 @@ type UpdateSourceIPMappingUpdateSourceIPMappingRequest struct {
 }
 
 type UpdateSourceIPMappingRequest struct {
-	PathParams UpdateSourceIPMappingPathParams
-	Request    *UpdateSourceIPMappingUpdateSourceIPMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSourceIPMappingSecurity
-	ServerURL  *string
+	RequestBody *UpdateSourceIPMappingUpdateSourceIPMappingRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the IP Record resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSourceIPMappingResponse struct {

@@ -4,38 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.EventarcProjectsLocationsListRequest(
-    security=operations.EventarcProjectsLocationsListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.EventarcProjectsLocationsListPathParams(
-        name="saepe",
-    ),
-    query_params=operations.EventarcProjectsLocationsListQueryParams(
-        dollar_xgafv="1",
-        access_token="maxime",
-        alt="proto",
-        callback="aut",
-        fields="et",
-        filter="fugit",
-        key="nostrum",
-        oauth_token="quia",
-        page_size=862857162017981555,
-        page_token="quia",
-        pretty_print=False,
-        quota_user="assumenda",
-        upload_type="doloremque",
-        upload_protocol="quia",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    name="illum",
+    oauth_token="vel",
+    page_size=623564,
+    page_token="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.projects.eventarc_projects_locations_list(req)
+res = s.projects.eventarc_projects_locations_list(req, operations.EventarcProjectsLocationsListSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.list_locations_response is not None:
     # handle response

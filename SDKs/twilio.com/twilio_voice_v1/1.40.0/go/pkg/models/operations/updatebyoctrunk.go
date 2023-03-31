@@ -14,12 +14,8 @@ var UpdateByocTrunkServerList = []string{
 }
 
 type UpdateByocTrunkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateByocTrunkPathParams struct {
-	// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateByocTrunkUpdateByocTrunkRequestStatusCallbackMethodEnum - The HTTP method we should use to call `status_callback_url`. Can be: `GET` or `POST`.
@@ -154,10 +150,9 @@ type UpdateByocTrunkUpdateByocTrunkRequest struct {
 }
 
 type UpdateByocTrunkRequest struct {
-	PathParams UpdateByocTrunkPathParams
-	Request    *UpdateByocTrunkUpdateByocTrunkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateByocTrunkSecurity
-	ServerURL  *string
+	RequestBody *UpdateByocTrunkUpdateByocTrunkRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateByocTrunkResponse struct {

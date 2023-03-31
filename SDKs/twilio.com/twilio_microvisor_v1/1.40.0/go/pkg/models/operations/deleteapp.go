@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteAppServerList = []string{
@@ -12,18 +11,13 @@ var DeleteAppServerList = []string{
 }
 
 type DeleteAppSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteAppPathParams struct {
-	// A 34-character string that uniquely identifies this App.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteAppRequest struct {
-	PathParams DeleteAppPathParams
-	Security   DeleteAppSecurity
-	ServerURL  *string
+	// A 34-character string that uniquely identifies this App.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteAppResponse struct {

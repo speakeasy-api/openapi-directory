@@ -33,7 +33,7 @@ func newKeysAPI(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 func (s *keysAPI) KeysAPICurrent(ctx context.Context, request operations.KeysAPICurrentRequest) (*operations.KeysAPICurrentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Current/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Current/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -75,7 +75,7 @@ func (s *keysAPI) KeysAPICurrent(ctx context.Context, request operations.KeysAPI
 }
 func (s *keysAPI) KeysAPICustom(ctx context.Context, request operations.KeysAPICustomRequest) (*operations.KeysAPICustomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Custom/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Custom/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -117,7 +117,7 @@ func (s *keysAPI) KeysAPICustom(ctx context.Context, request operations.KeysAPIC
 }
 func (s *keysAPI) KeysAPIExpiry(ctx context.Context, request operations.KeysAPIExpiryRequest) (*operations.KeysAPIExpiryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Expiry/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Expiry/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -159,7 +159,7 @@ func (s *keysAPI) KeysAPIExpiry(ctx context.Context, request operations.KeysAPIE
 }
 func (s *keysAPI) KeysAPIFind(ctx context.Context, request operations.KeysAPIFindRequest) (*operations.KeysAPIFindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Find/{serial}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Find/{serial}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

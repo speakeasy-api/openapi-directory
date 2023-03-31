@@ -13,26 +13,20 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            ApimKey: shared.SchemeApimKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            ApimKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ClassifyImageRequest{
-        PathParams: operations.ClassifyImagePathParams{
-            ProjectID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-            PublishedName: "deserunt",
-        },
-        QueryParams: operations.ClassifyImageQueryParams{
-            Application: "perferendis",
-        },
-        Request: operations.ClassifyImageRequestBody{
+        RequestBody: operations.ClassifyImageRequestBody{
             ImageData: operations.ClassifyImageRequestBodyImageData{
-                Content: []byte("ipsam"),
-                ImageData: "repellendus",
+                Content: []byte("corrupti"),
+                ImageData: "provident",
             },
         },
+        Application: "distinctio",
+        ProjectID: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
+        PublishedName: "repellendus",
     }
 
     ctx := context.Background()

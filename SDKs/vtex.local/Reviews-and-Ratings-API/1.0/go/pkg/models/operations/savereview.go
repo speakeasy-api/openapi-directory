@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveReviewHeaders struct {
+type SaveReviewRequest struct {
 	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SaveReviewRequest struct {
-	Headers SaveReviewHeaders
-	Request shared.SaveReviewRequest `request:"mediaType=application/json"`
+	ContentType       string                   `header:"style=simple,explode=false,name=Content-Type"`
+	SaveReviewRequest shared.SaveReviewRequest `request:"mediaType=application/json"`
 }
 
 // SaveReview200ApplicationJSON - OK

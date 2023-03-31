@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchGridaggregationQueryParams struct {
+type SearchGridaggregationRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchGridaggregationQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchGridaggregationRequest struct {
-	QueryParams SearchGridaggregationQueryParams
 }
 
 type SearchGridaggregationResponse struct {

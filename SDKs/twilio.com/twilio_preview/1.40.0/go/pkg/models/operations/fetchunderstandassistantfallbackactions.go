@@ -12,17 +12,12 @@ var FetchUnderstandAssistantFallbackActionsServerList = []string{
 }
 
 type FetchUnderstandAssistantFallbackActionsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUnderstandAssistantFallbackActionsPathParams struct {
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchUnderstandAssistantFallbackActionsRequest struct {
-	PathParams FetchUnderstandAssistantFallbackActionsPathParams
-	Security   FetchUnderstandAssistantFallbackActionsSecurity
-	ServerURL  *string
+	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 }
 
 type FetchUnderstandAssistantFallbackActionsResponse struct {

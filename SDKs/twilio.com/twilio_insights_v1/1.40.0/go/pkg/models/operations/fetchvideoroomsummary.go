@@ -12,18 +12,13 @@ var FetchVideoRoomSummaryServerList = []string{
 }
 
 type FetchVideoRoomSummarySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchVideoRoomSummaryPathParams struct {
-	// The SID of the Room resource.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchVideoRoomSummaryRequest struct {
-	PathParams FetchVideoRoomSummaryPathParams
-	Security   FetchVideoRoomSummarySecurity
-	ServerURL  *string
+	// The SID of the Room resource.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 }
 
 type FetchVideoRoomSummaryResponse struct {

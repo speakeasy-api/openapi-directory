@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetQodLanguagesSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetQodLanguagesRequest struct {
-	Security GetQodLanguagesSecurity
-}
 
 type GetQodLanguagesResponse struct {
 	ContentType string

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetsQueryParams struct {
+type GetTargetsRequest struct {
 	// Number of results to return per page
 	Length *int64 `queryParam:"style=form,explode=true,name=length"`
 	// Which field to use when ordering the results, prefix with `-` to invert ordering.
@@ -17,10 +17,6 @@ type GetTargetsQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Search term
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetTargetsRequest struct {
-	QueryParams GetTargetsQueryParams
 }
 
 // GetTargets500ApplicationJSON - Internal server error

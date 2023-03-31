@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetItemsQueryParams struct {
+type GetItemsRequest struct {
 	// Limits on `time_created`, Marks the start of a range, optionally use `before` to set the end. Result output excludes the given timestamp.
 	After *time.Time `queryParam:"style=form,explode=true,name=after"`
 	// Limits directly on `code_hex`. Marks the start of a range, optionally use `before_code` to set the end. Result output excludes the given `code_hex` value.
@@ -79,10 +79,6 @@ type GetItemsQueryParams struct {
 	UntilCode *string `queryParam:"style=form,explode=true,name=until_code"`
 	// Limits on `id`. Marks the end of a range, optionally use `from_id` to set the start. Result output includes the given `id` value. Please note that `id` is in chronological order.
 	UntilID *string `queryParam:"style=form,explode=true,name=until_id"`
-}
-
-type GetItemsRequest struct {
-	QueryParams GetItemsQueryParams
 }
 
 // GetItems200ApplicationJSON - A JSON object containing a list of items

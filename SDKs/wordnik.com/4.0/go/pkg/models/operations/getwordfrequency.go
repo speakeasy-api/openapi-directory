@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetWordFrequencyPathParams struct {
-	// Word to return
-	Word string `pathParam:"style=simple,explode=false,name=word"`
-}
-
 // GetWordFrequencyUseCanonicalEnum - If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 type GetWordFrequencyUseCanonicalEnum string
 
@@ -37,18 +32,15 @@ func (e *GetWordFrequencyUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWordFrequencyQueryParams struct {
+type GetWordFrequencyRequest struct {
 	// Ending Year
 	EndYear *int `queryParam:"style=form,explode=true,name=endYear"`
 	// Starting Year
 	StartYear *int `queryParam:"style=form,explode=true,name=startYear"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetWordFrequencyUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
-}
-
-type GetWordFrequencyRequest struct {
-	PathParams  GetWordFrequencyPathParams
-	QueryParams GetWordFrequencyQueryParams
+	// Word to return
+	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
 type GetWordFrequencyResponse struct {

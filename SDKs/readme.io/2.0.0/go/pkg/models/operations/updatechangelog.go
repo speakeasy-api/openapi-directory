@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateChangelogSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateChangelogPathParams struct {
-	// Slug of changelog
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateChangelogRequest struct {
-	PathParams UpdateChangelogPathParams
 	// Changelog object
-	Request  shared.Changelog `request:"mediaType=application/json"`
-	Security UpdateChangelogSecurity
+	Changelog shared.Changelog `request:"mediaType=application/json"`
+	// Slug of changelog
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type UpdateChangelogResponse struct {

@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
 type ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequestBody struct {
 	// List of repository IDs that can access the runner group.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequest struct {
-	PathParams ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgPathParams
-	Request    ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 type ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse struct {

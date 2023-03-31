@@ -8,19 +8,14 @@ import (
 )
 
 type CreateCustomerServiceMetricTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type CreateCustomerServiceMetricTaskHeaders struct {
-	// Use this header to specify the natural language in which the authenticated user desires the response.
-	AcceptLanguage string `header:"style=simple,explode=false,name=accept-language"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateCustomerServiceMetricTaskRequest struct {
-	Headers CreateCustomerServiceMetricTaskHeaders
 	// Request payload containing version, feedType, and optional filterCriteria.
-	Request  shared.CreateServiceMetricsTaskRequest `request:"mediaType=application/json"`
-	Security CreateCustomerServiceMetricTaskSecurity
+	CreateServiceMetricsTaskRequest shared.CreateServiceMetricsTaskRequest `request:"mediaType=application/json"`
+	// Use this header to specify the natural language in which the authenticated user desires the response.
+	AcceptLanguage string `header:"style=simple,explode=false,name=accept-language"`
 }
 
 type CreateCustomerServiceMetricTaskResponse struct {

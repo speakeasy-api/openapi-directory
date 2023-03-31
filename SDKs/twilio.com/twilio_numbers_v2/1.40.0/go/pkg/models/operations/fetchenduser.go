@@ -12,18 +12,13 @@ var FetchEndUserServerList = []string{
 }
 
 type FetchEndUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchEndUserPathParams struct {
-	// The unique string created by Twilio to identify the End User resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchEndUserRequest struct {
-	PathParams FetchEndUserPathParams
-	Security   FetchEndUserSecurity
-	ServerURL  *string
+	// The unique string created by Twilio to identify the End User resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchEndUserResponse struct {

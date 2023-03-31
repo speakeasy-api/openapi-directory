@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetOrganizationDevicesStatusesOverviewPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationDevicesStatusesOverviewProductTypesEnum string
 
 const (
@@ -50,16 +46,12 @@ func (e *GetOrganizationDevicesStatusesOverviewProductTypesEnum) UnmarshalJSON(d
 	}
 }
 
-type GetOrganizationDevicesStatusesOverviewQueryParams struct {
+type GetOrganizationDevicesStatusesOverviewRequest struct {
 	// An optional parameter to filter device statuses by network.
-	NetworkIds []string `queryParam:"style=form,explode=false,name=networkIds"`
+	NetworkIds     []string `queryParam:"style=form,explode=false,name=networkIds"`
+	OrganizationID string   `pathParam:"style=simple,explode=false,name=organizationId"`
 	// An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
 	ProductTypes []GetOrganizationDevicesStatusesOverviewProductTypesEnum `queryParam:"style=form,explode=false,name=productTypes"`
-}
-
-type GetOrganizationDevicesStatusesOverviewRequest struct {
-	PathParams  GetOrganizationDevicesStatusesOverviewPathParams
-	QueryParams GetOrganizationDevicesStatusesOverviewQueryParams
 }
 
 // GetOrganizationDevicesStatusesOverview200ApplicationJSONCountsByStatus - byStatus

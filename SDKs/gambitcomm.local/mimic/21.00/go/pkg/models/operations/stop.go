@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type StopPathParams struct {
+type StopRequest struct {
 	// Agent to return the primary IP
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type StopRequest struct {
-	PathParams StopPathParams
 }
 
 type StopResponse struct {

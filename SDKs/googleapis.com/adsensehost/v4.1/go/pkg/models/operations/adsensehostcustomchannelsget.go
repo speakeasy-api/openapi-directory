@@ -8,20 +8,17 @@ import (
 )
 
 type AdsensehostCustomchannelsGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AdsensehostCustomchannelsGetPathParams struct {
+type AdsensehostCustomchannelsGetRequest struct {
 	// Ad client from which to get the custom channel.
 	AdClientID string `pathParam:"style=simple,explode=false,name=adClientId"`
-	// Custom channel to get.
-	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
-}
-
-type AdsensehostCustomchannelsGetQueryParams struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Custom channel to get.
+	CustomChannelID string `pathParam:"style=simple,explode=false,name=customChannelId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -34,12 +31,6 @@ type AdsensehostCustomchannelsGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AdsensehostCustomchannelsGetRequest struct {
-	PathParams  AdsensehostCustomchannelsGetPathParams
-	QueryParams AdsensehostCustomchannelsGetQueryParams
-	Security    AdsensehostCustomchannelsGetSecurity
 }
 
 type AdsensehostCustomchannelsGetResponse struct {

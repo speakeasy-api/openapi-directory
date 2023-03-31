@@ -33,20 +33,20 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // ServicemanagementOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-func (s *operationsT) ServicemanagementOperationsGet(ctx context.Context, request operations.ServicemanagementOperationsGetRequest) (*operations.ServicemanagementOperationsGetResponse, error) {
+func (s *operationsT) ServicemanagementOperationsGet(ctx context.Context, request operations.ServicemanagementOperationsGetRequest, security operations.ServicemanagementOperationsGetSecurity) (*operations.ServicemanagementOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *operationsT) ServicemanagementOperationsGet(ctx context.Context, reques
 }
 
 // ServicemanagementOperationsList - Lists service operations that match the specified filter in the request.
-func (s *operationsT) ServicemanagementOperationsList(ctx context.Context, request operations.ServicemanagementOperationsListRequest) (*operations.ServicemanagementOperationsListResponse, error) {
+func (s *operationsT) ServicemanagementOperationsList(ctx context.Context, request operations.ServicemanagementOperationsListRequest, security operations.ServicemanagementOperationsListSecurity) (*operations.ServicemanagementOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations"
 
@@ -90,11 +90,11 @@ func (s *operationsT) ServicemanagementOperationsList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

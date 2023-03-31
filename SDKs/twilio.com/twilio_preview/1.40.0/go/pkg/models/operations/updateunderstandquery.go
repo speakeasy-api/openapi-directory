@@ -12,14 +12,8 @@ var UpdateUnderstandQueryServerList = []string{
 }
 
 type UpdateUnderstandQuerySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandQueryPathParams struct {
-	// The unique ID of the parent Assistant.
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
-	// A 34 character string that uniquely identifies this resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandQueryUpdateUnderstandQueryRequest struct {
@@ -30,10 +24,11 @@ type UpdateUnderstandQueryUpdateUnderstandQueryRequest struct {
 }
 
 type UpdateUnderstandQueryRequest struct {
-	PathParams UpdateUnderstandQueryPathParams
-	Request    *UpdateUnderstandQueryUpdateUnderstandQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandQuerySecurity
-	ServerURL  *string
+	// The unique ID of the parent Assistant.
+	AssistantSid string                                             `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandQueryUpdateUnderstandQueryRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// A 34 character string that uniquely identifies this resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateUnderstandQueryResponse struct {

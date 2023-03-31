@@ -12,16 +12,8 @@ var UpdateSiprecServerList = []string{
 }
 
 type UpdateSiprecSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSiprecPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Siprec resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Siprec resource is associated with.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-	// The SID of the Siprec resource, or the `name` used when creating the resource
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSiprecUpdateSiprecRequest struct {
@@ -29,10 +21,13 @@ type UpdateSiprecUpdateSiprecRequest struct {
 }
 
 type UpdateSiprecRequest struct {
-	PathParams UpdateSiprecPathParams
-	Request    *UpdateSiprecUpdateSiprecRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSiprecSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Siprec resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Siprec resource is associated with.
+	CallSid     string                           `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *UpdateSiprecUpdateSiprecRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Siprec resource, or the `name` used when creating the resource
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSiprecResponse struct {

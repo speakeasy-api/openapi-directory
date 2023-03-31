@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetEasywindPathParams struct {
+type GetEasywindRequest struct {
 	// currently: 'EW013'|'EW008'
 	EasywindID string `pathParam:"style=simple,explode=false,name=easywindId"`
-}
-
-type GetEasywindQueryParams struct {
 	// Period of time to get the data latestdata|latesthour|latestday
 	Period string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetEasywindRequest struct {
-	PathParams  GetEasywindPathParams
-	QueryParams GetEasywindQueryParams
 }
 
 type GetEasywindResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubmitPodcastHeaders struct {
+type SubmitPodcastRequest struct {
+	SubmitPodcastForm shared.SubmitPodcastForm `request:"mediaType=application/x-www-form-urlencoded"`
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type SubmitPodcastRequest struct {
-	Headers SubmitPodcastHeaders
-	Request shared.SubmitPodcastForm `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type SubmitPodcastResponse struct {

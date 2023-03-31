@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBinIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetBinIDRequest struct {
-	PathParams GetBinIDPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBinIDResponse struct {

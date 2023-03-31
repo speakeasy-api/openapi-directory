@@ -12,18 +12,13 @@ var FetchCustomerProfileServerList = []string{
 }
 
 type FetchCustomerProfileSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCustomerProfilePathParams struct {
-	// The unique string that we created to identify the Customer-Profile resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchCustomerProfileRequest struct {
-	PathParams FetchCustomerProfilePathParams
-	Security   FetchCustomerProfileSecurity
-	ServerURL  *string
+	// The unique string that we created to identify the Customer-Profile resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchCustomerProfileResponse struct {

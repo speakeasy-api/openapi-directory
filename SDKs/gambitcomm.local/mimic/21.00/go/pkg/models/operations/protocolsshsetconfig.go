@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ProtocolSSHSetConfigPathParams struct {
+type ProtocolSSHSetConfigRequest struct {
 	// Agent to set the SSH configuration
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Parameter to set the SSH configuration
 	Argument string `pathParam:"style=simple,explode=false,name=argument"`
 	// Value to set the SSH configuration
 	Value string `pathParam:"style=simple,explode=false,name=value"`
-}
-
-type ProtocolSSHSetConfigRequest struct {
-	PathParams ProtocolSSHSetConfigPathParams
 }
 
 type ProtocolSSHSetConfigResponse struct {

@@ -33,20 +33,20 @@ func newVolumes(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // BooksVolumesAssociatedList - Return a list of associated books.
-func (s *volumes) BooksVolumesAssociatedList(ctx context.Context, request operations.BooksVolumesAssociatedListRequest) (*operations.BooksVolumesAssociatedListResponse, error) {
+func (s *volumes) BooksVolumesAssociatedList(ctx context.Context, request operations.BooksVolumesAssociatedListRequest, security operations.BooksVolumesAssociatedListSecurity) (*operations.BooksVolumesAssociatedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/associated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/associated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,20 +81,20 @@ func (s *volumes) BooksVolumesAssociatedList(ctx context.Context, request operat
 }
 
 // BooksVolumesGet - Gets volume information for a single volume.
-func (s *volumes) BooksVolumesGet(ctx context.Context, request operations.BooksVolumesGetRequest) (*operations.BooksVolumesGetResponse, error) {
+func (s *volumes) BooksVolumesGet(ctx context.Context, request operations.BooksVolumesGetRequest, security operations.BooksVolumesGetSecurity) (*operations.BooksVolumesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *volumes) BooksVolumesGet(ctx context.Context, request operations.BooksV
 }
 
 // BooksVolumesList - Performs a book search.
-func (s *volumes) BooksVolumesList(ctx context.Context, request operations.BooksVolumesListRequest) (*operations.BooksVolumesListResponse, error) {
+func (s *volumes) BooksVolumesList(ctx context.Context, request operations.BooksVolumesListRequest, security operations.BooksVolumesListSecurity) (*operations.BooksVolumesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/volumes"
 
@@ -138,11 +138,11 @@ func (s *volumes) BooksVolumesList(ctx context.Context, request operations.Books
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *volumes) BooksVolumesList(ctx context.Context, request operations.Books
 }
 
 // BooksVolumesMybooksList - Return a list of books in My Library.
-func (s *volumes) BooksVolumesMybooksList(ctx context.Context, request operations.BooksVolumesMybooksListRequest) (*operations.BooksVolumesMybooksListResponse, error) {
+func (s *volumes) BooksVolumesMybooksList(ctx context.Context, request operations.BooksVolumesMybooksListRequest, security operations.BooksVolumesMybooksListSecurity) (*operations.BooksVolumesMybooksListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/volumes/mybooks"
 
@@ -186,11 +186,11 @@ func (s *volumes) BooksVolumesMybooksList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *volumes) BooksVolumesMybooksList(ctx context.Context, request operation
 }
 
 // BooksVolumesRecommendedList - Return a list of recommended books for the current user.
-func (s *volumes) BooksVolumesRecommendedList(ctx context.Context, request operations.BooksVolumesRecommendedListRequest) (*operations.BooksVolumesRecommendedListResponse, error) {
+func (s *volumes) BooksVolumesRecommendedList(ctx context.Context, request operations.BooksVolumesRecommendedListRequest, security operations.BooksVolumesRecommendedListSecurity) (*operations.BooksVolumesRecommendedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/volumes/recommended"
 
@@ -234,11 +234,11 @@ func (s *volumes) BooksVolumesRecommendedList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,7 +273,7 @@ func (s *volumes) BooksVolumesRecommendedList(ctx context.Context, request opera
 }
 
 // BooksVolumesRecommendedRate - Rate a recommended book for the current user.
-func (s *volumes) BooksVolumesRecommendedRate(ctx context.Context, request operations.BooksVolumesRecommendedRateRequest) (*operations.BooksVolumesRecommendedRateResponse, error) {
+func (s *volumes) BooksVolumesRecommendedRate(ctx context.Context, request operations.BooksVolumesRecommendedRateRequest, security operations.BooksVolumesRecommendedRateSecurity) (*operations.BooksVolumesRecommendedRateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/volumes/recommended/rate"
 
@@ -282,11 +282,11 @@ func (s *volumes) BooksVolumesRecommendedRate(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -321,7 +321,7 @@ func (s *volumes) BooksVolumesRecommendedRate(ctx context.Context, request opera
 }
 
 // BooksVolumesUseruploadedList - Return a list of books uploaded by the current user.
-func (s *volumes) BooksVolumesUseruploadedList(ctx context.Context, request operations.BooksVolumesUseruploadedListRequest) (*operations.BooksVolumesUseruploadedListResponse, error) {
+func (s *volumes) BooksVolumesUseruploadedList(ctx context.Context, request operations.BooksVolumesUseruploadedListRequest, security operations.BooksVolumesUseruploadedListSecurity) (*operations.BooksVolumesUseruploadedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/volumes/useruploaded"
 
@@ -330,11 +330,11 @@ func (s *volumes) BooksVolumesUseruploadedList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

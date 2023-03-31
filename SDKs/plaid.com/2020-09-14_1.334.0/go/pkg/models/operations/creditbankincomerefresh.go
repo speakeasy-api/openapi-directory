@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreditBankIncomeRefreshRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 type CreditBankIncomeRefreshResponse struct {
 	ContentType string
 	// OK

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteRoleServerList = []string{
@@ -12,20 +11,15 @@ var DeleteRoleServerList = []string{
 }
 
 type DeleteRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteRolePathParams struct {
+type DeleteRoleRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the Role resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Role resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteRoleRequest struct {
-	PathParams DeleteRolePathParams
-	Security   DeleteRoleSecurity
-	ServerURL  *string
 }
 
 type DeleteRoleResponse struct {

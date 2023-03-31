@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchDscpToCosMappingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSwitchDscpToCosMappingsRequestBodyMappings struct {
 	// The actual layer-2 CoS queue the DSCP value is mapped to. These are not bits set on outgoing frames. Value can be in the range of 0 to 5 inclusive.
 	Cos int64 `json:"cos"`
@@ -25,8 +21,8 @@ type UpdateNetworkSwitchDscpToCosMappingsRequestBody struct {
 }
 
 type UpdateNetworkSwitchDscpToCosMappingsRequest struct {
-	PathParams UpdateNetworkSwitchDscpToCosMappingsPathParams
-	Request    UpdateNetworkSwitchDscpToCosMappingsRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkSwitchDscpToCosMappingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                          `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchDscpToCosMappingsResponse struct {

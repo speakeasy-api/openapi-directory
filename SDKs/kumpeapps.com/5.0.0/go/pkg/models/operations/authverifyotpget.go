@@ -8,17 +8,12 @@ import (
 )
 
 type AuthVerifyotpGetSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AuthVerifyotpGetQueryParams struct {
-	// YubiKey OTP code
-	Otp string `queryParam:"style=form,explode=true,name=otp"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 type AuthVerifyotpGetRequest struct {
-	QueryParams AuthVerifyotpGetQueryParams
-	Security    AuthVerifyotpGetSecurity
+	// YubiKey OTP code
+	Otp string `queryParam:"style=form,explode=true,name=otp"`
 }
 
 type AuthVerifyotpGetResponse struct {

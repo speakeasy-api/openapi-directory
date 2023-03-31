@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type GetpagedQueryParams struct {
-	Keyword  string `queryParam:"style=form,explode=true,name=keyword"`
-	Page     string `queryParam:"style=form,explode=true,name=page"`
-	PageSize string `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetpagedHeaders struct {
+type GetpagedRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetpagedRequest struct {
-	QueryParams GetpagedQueryParams
-	Headers     GetpagedHeaders
+	Keyword     string `queryParam:"style=form,explode=true,name=keyword"`
+	Page        string `queryParam:"style=form,explode=true,name=page"`
+	PageSize    string `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GetpagedResponse struct {

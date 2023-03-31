@@ -32,20 +32,20 @@ func newRoutines(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // BigqueryRoutinesDelete - Deletes the routine specified by routineId from the dataset.
-func (s *routines) BigqueryRoutinesDelete(ctx context.Context, request operations.BigqueryRoutinesDeleteRequest) (*operations.BigqueryRoutinesDeleteResponse, error) {
+func (s *routines) BigqueryRoutinesDelete(ctx context.Context, request operations.BigqueryRoutinesDeleteRequest, security operations.BigqueryRoutinesDeleteSecurity) (*operations.BigqueryRoutinesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *routines) BigqueryRoutinesDelete(ctx context.Context, request operation
 }
 
 // BigqueryRoutinesGet - Gets the specified routine resource by routine ID.
-func (s *routines) BigqueryRoutinesGet(ctx context.Context, request operations.BigqueryRoutinesGetRequest) (*operations.BigqueryRoutinesGetResponse, error) {
+func (s *routines) BigqueryRoutinesGet(ctx context.Context, request operations.BigqueryRoutinesGetRequest, security operations.BigqueryRoutinesGetSecurity) (*operations.BigqueryRoutinesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *routines) BigqueryRoutinesGet(ctx context.Context, request operations.B
 }
 
 // BigqueryRoutinesInsert - Creates a new routine in the dataset.
-func (s *routines) BigqueryRoutinesInsert(ctx context.Context, request operations.BigqueryRoutinesInsertRequest) (*operations.BigqueryRoutinesInsertResponse, error) {
+func (s *routines) BigqueryRoutinesInsert(ctx context.Context, request operations.BigqueryRoutinesInsertRequest, security operations.BigqueryRoutinesInsertSecurity) (*operations.BigqueryRoutinesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoutineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *routines) BigqueryRoutinesInsert(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *routines) BigqueryRoutinesInsert(ctx context.Context, request operation
 }
 
 // BigqueryRoutinesList - Lists all routines in the specified dataset. Requires the READER dataset role.
-func (s *routines) BigqueryRoutinesList(ctx context.Context, request operations.BigqueryRoutinesListRequest) (*operations.BigqueryRoutinesListResponse, error) {
+func (s *routines) BigqueryRoutinesList(ctx context.Context, request operations.BigqueryRoutinesListRequest, security operations.BigqueryRoutinesListSecurity) (*operations.BigqueryRoutinesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *routines) BigqueryRoutinesList(ctx context.Context, request operations.
 }
 
 // BigqueryRoutinesUpdate - Updates information in an existing routine. The update method replaces the entire Routine resource.
-func (s *routines) BigqueryRoutinesUpdate(ctx context.Context, request operations.BigqueryRoutinesUpdateRequest) (*operations.BigqueryRoutinesUpdateResponse, error) {
+func (s *routines) BigqueryRoutinesUpdate(ctx context.Context, request operations.BigqueryRoutinesUpdateRequest, security operations.BigqueryRoutinesUpdateSecurity) (*operations.BigqueryRoutinesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoutineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *routines) BigqueryRoutinesUpdate(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

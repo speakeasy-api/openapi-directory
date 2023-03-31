@@ -12,17 +12,13 @@ var ListInviteServerList = []string{
 }
 
 type ListInviteSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListInvitePathParams struct {
+type ListInviteRequest struct {
 	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Invite resources to read belong to. This value can be the Channel resource's `sid` or `unique_name`.
 	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Invite resources from.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListInviteQueryParams struct {
 	// The [User](https://www.twilio.com/docs/chat/rest/user-resource)'s `identity` value of the resources to read. See [access tokens](https://www.twilio.com/docs/chat/create-tokens) for more details.
 	Identity []string `queryParam:"style=form,explode=true,name=Identity"`
 	// The page index. This value is simply for client state.
@@ -31,13 +27,8 @@ type ListInviteQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListInviteRequest struct {
-	PathParams  ListInvitePathParams
-	QueryParams ListInviteQueryParams
-	Security    ListInviteSecurity
-	ServerURL   *string
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Invite resources from.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListInviteListInviteResponseMeta struct {

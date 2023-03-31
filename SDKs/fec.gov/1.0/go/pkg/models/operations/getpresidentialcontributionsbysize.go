@@ -41,7 +41,7 @@ func (e *GetPresidentialContributionsBySizeSizeEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetPresidentialContributionsBySizeQueryParams struct {
+type GetPresidentialContributionsBySizeRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -78,10 +78,6 @@ type GetPresidentialContributionsBySizeQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetPresidentialContributionsBySizeRequest struct {
-	QueryParams GetPresidentialContributionsBySizeQueryParams
 }
 
 type GetPresidentialContributionsBySizeResponse struct {

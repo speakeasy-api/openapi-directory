@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGlossaryJSONPathParams struct {
+type CreateGlossaryJSONRequest struct {
+	GlossaryUploadRequest *shared.GlossaryUploadRequest `request:"mediaType=application/json"`
 	// Project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type CreateGlossaryJSONRequest struct {
-	PathParams CreateGlossaryJSONPathParams
-	Request    *shared.GlossaryUploadRequest `request:"mediaType=application/json"`
 }
 
 type CreateGlossaryJSONResponse struct {

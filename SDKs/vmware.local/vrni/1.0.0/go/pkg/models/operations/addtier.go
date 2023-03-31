@@ -8,18 +8,13 @@ import (
 )
 
 type AddTierSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AddTierPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type AddTierRequest struct {
-	PathParams AddTierPathParams
-	Request    shared.TierRequest `request:"mediaType=application/json"`
-	Security   AddTierSecurity
+	TierRequest shared.TierRequest `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AddTierResponse struct {

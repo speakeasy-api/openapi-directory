@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDocumentPathParams struct {
+type GetDocumentRequest struct {
 	// Document ID or filename
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type GetDocumentRequest struct {
-	PathParams GetDocumentPathParams
 }
 
 type GetDocumentResponse struct {

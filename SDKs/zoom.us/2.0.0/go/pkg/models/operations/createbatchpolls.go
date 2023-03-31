@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateBatchPollsPathParams struct {
-	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
 // CreateBatchPollsApplicationJSONQuestionsTypeEnum - Question type:<br>`single` - Single choice<br>`mutliple` - Multiple choice
 type CreateBatchPollsApplicationJSONQuestionsTypeEnum string
 
@@ -53,9 +49,9 @@ type CreateBatchPollsApplicationJSON struct {
 }
 
 type CreateBatchPollsRequest struct {
-	PathParams CreateBatchPollsPathParams
 	// Batch Meeting poll object
-	Request *CreateBatchPollsApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *CreateBatchPollsApplicationJSON `request:"mediaType=application/json"`
+	MeetingID   string                           `pathParam:"style=simple,explode=false,name=meetingId"`
 }
 
 // CreateBatchPolls201ApplicationXMLPollsQuestionsTypeEnum - Poll question and answer type.

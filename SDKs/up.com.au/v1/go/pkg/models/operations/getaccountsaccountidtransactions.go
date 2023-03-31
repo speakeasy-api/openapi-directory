@@ -8,13 +8,10 @@ import (
 	"time"
 )
 
-type GetAccountsAccountIDTransactionsPathParams struct {
+type GetAccountsAccountIDTransactionsRequest struct {
 	// The unique identifier for the account.
 	//
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type GetAccountsAccountIDTransactionsQueryParams struct {
 	// The category identifier for which to filter transactions.
 	// Both parent and child categories can be filtered through
 	// this parameter. Providing an invalid category identifier
@@ -44,11 +41,6 @@ type GetAccountsAccountIDTransactionsQueryParams struct {
 	// The number of records to return in each page.
 	//
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`
-}
-
-type GetAccountsAccountIDTransactionsRequest struct {
-	PathParams  GetAccountsAccountIDTransactionsPathParams
-	QueryParams GetAccountsAccountIDTransactionsQueryParams
 }
 
 type GetAccountsAccountIDTransactionsResponse struct {

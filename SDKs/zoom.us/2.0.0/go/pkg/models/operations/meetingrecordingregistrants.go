@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeetingRecordingRegistrantsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type MeetingRecordingRegistrantsPathParams struct {
-	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
-	//
-	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // MeetingRecordingRegistrantsStatusEnum - The registrant status:<br>`pending` - Registrant's status is pending.<br>`approved` - Registrant's status is approved.<br>`denied` - Registrant's status is denied.
@@ -47,7 +39,11 @@ func (e *MeetingRecordingRegistrantsStatusEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type MeetingRecordingRegistrantsQueryParams struct {
+type MeetingRecordingRegistrantsRequest struct {
+	// The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+	//
+	// While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+	MeetingID int64 `pathParam:"style=simple,explode=false,name=meetingId"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
@@ -58,12 +54,6 @@ type MeetingRecordingRegistrantsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The registrant status:<br>`pending` - Registrant's status is pending.<br>`approved` - Registrant's status is approved.<br>`denied` - Registrant's status is denied.
 	Status *MeetingRecordingRegistrantsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type MeetingRecordingRegistrantsRequest struct {
-	PathParams  MeetingRecordingRegistrantsPathParams
-	QueryParams MeetingRecordingRegistrantsQueryParams
-	Security    MeetingRecordingRegistrantsSecurity
 }
 
 // MeetingRecordingRegistrantsRecordingRegistrationListRegistrantsCustomQuestions - Custom Question.

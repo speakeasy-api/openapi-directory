@@ -25,47 +25,41 @@ func main() {
     s := sdk.New()
 
     req := operations.DatastoreProjectsAllocateIdsRequest{
-        Security: operations.DatastoreProjectsAllocateIdsSecurity{
-            Option1: &operations.DatastoreProjectsAllocateIdsSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.DatastoreProjectsAllocateIdsPathParams{
-            ProjectID: "corrupti",
-        },
-        QueryParams: operations.DatastoreProjectsAllocateIdsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AllocateIdsRequest{
-            DatabaseID: "suscipit",
+        DollarXgafv: "2",
+        AllocateIdsRequest: &shared.AllocateIdsRequest{
+            DatabaseID: "provident",
             Keys: []shared.Key{
                 shared.Key{
                     PartitionID: &shared.PartitionID{
-                        DatabaseID: "magnam",
-                        NamespaceID: "debitis",
-                        ProjectID: "ipsa",
+                        DatabaseID: "quibusdam",
+                        NamespaceID: "unde",
+                        ProjectID: "nulla",
                     },
                     Path: []shared.PathElement{
                         shared.PathElement{
-                            ID: "tempora",
-                            Kind: "suscipit",
-                            Name: "molestiae",
+                            ID: "illum",
+                            Kind: "vel",
+                            Name: "error",
                         },
+                        shared.PathElement{
+                            ID: "deserunt",
+                            Kind: "suscipit",
+                            Name: "iure",
+                        },
+                        shared.PathElement{
+                            ID: "magnam",
+                            Kind: "debitis",
+                            Name: "ipsa",
+                        },
+                    },
+                },
+                shared.Key{
+                    PartitionID: &shared.PartitionID{
+                        DatabaseID: "delectus",
+                        NamespaceID: "tempora",
+                        ProjectID: "suscipit",
+                    },
+                    Path: []shared.PathElement{
                         shared.PathElement{
                             ID: "minus",
                             Kind: "placeat",
@@ -76,20 +70,20 @@ func main() {
                             Kind: "excepturi",
                             Name: "nisi",
                         },
-                        shared.PathElement{
-                            ID: "recusandae",
-                            Kind: "temporibus",
-                            Name: "ab",
-                        },
                     },
                 },
                 shared.Key{
                     PartitionID: &shared.PartitionID{
-                        DatabaseID: "quis",
-                        NamespaceID: "veritatis",
-                        ProjectID: "deserunt",
+                        DatabaseID: "recusandae",
+                        NamespaceID: "temporibus",
+                        ProjectID: "ab",
                     },
                     Path: []shared.PathElement{
+                        shared.PathElement{
+                            ID: "veritatis",
+                            Kind: "deserunt",
+                            Name: "perferendis",
+                        },
                         shared.PathElement{
                             ID: "ipsam",
                             Kind: "repellendus",
@@ -99,10 +93,26 @@ func main() {
                 },
             },
         },
+        AccessToken: "quo",
+        Alt: "json",
+        Callback: "at",
+        Fields: "at",
+        Key: "maiores",
+        OauthToken: "molestiae",
+        PrettyPrint: false,
+        ProjectID: "quod",
+        QuotaUser: "quod",
+        UploadType: "esse",
+        UploadProtocol: "totam",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.DatastoreProjectsAllocateIds(ctx, req)
+    res, err := s.Projects.DatastoreProjectsAllocateIds(ctx, req, operations.DatastoreProjectsAllocateIdsSecurity{
+        Option1: &operations.DatastoreProjectsAllocateIdsSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -115,7 +125,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -140,4 +150,15 @@ func main() {
 * `DatastoreProjectsRunQuery` - Queries for entities.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingChangeLogsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingChangeLogsListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingChangeLogsListActionEnum - Select only change logs with the specified action.
@@ -229,7 +224,7 @@ func (e *DfareportingChangeLogsListObjectTypeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DfareportingChangeLogsListQueryParams struct {
+type DfareportingChangeLogsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -262,6 +257,8 @@ type DfareportingChangeLogsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Select only change logs whose object ID, user name, old or new values match the search string.
@@ -272,12 +269,6 @@ type DfareportingChangeLogsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Select only change logs with these user profile IDs.
 	UserProfileIds []string `queryParam:"style=form,explode=true,name=userProfileIds"`
-}
-
-type DfareportingChangeLogsListRequest struct {
-	PathParams  DfareportingChangeLogsListPathParams
-	QueryParams DfareportingChangeLogsListQueryParams
-	Security    DfareportingChangeLogsListSecurity
 }
 
 type DfareportingChangeLogsListResponse struct {

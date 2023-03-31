@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateCustomerSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateCustomerPathParams struct {
-	// The ID of the customer to update.
-	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateCustomerRequest struct {
-	PathParams UpdateCustomerPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateCustomerRequest `request:"mediaType=application/json"`
-	Security UpdateCustomerSecurity
+	UpdateCustomerRequest shared.UpdateCustomerRequest `request:"mediaType=application/json"`
+	// The ID of the customer to update.
+	CustomerID string `pathParam:"style=simple,explode=false,name=customer_id"`
 }
 
 type UpdateCustomerResponse struct {

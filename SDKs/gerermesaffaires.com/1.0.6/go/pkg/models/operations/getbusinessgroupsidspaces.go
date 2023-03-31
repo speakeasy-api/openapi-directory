@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetBusinessGroupsIDSpacesSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetBusinessGroupsIDSpacesPathParams struct {
-	// Id of the group
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetBusinessGroupsIDSpacesTypeEnum - Type of the space
@@ -48,19 +42,15 @@ func (e *GetBusinessGroupsIDSpacesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBusinessGroupsIDSpacesQueryParams struct {
+type GetBusinessGroupsIDSpacesRequest struct {
 	// Name of the space
 	Name *string `queryParam:"style=form,explode=true,name=Name"`
 	// registration number of the space
 	RegistrationNumber *string `queryParam:"style=form,explode=true,name=RegistrationNumber"`
 	// Type of the space
 	Type *GetBusinessGroupsIDSpacesTypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type GetBusinessGroupsIDSpacesRequest struct {
-	PathParams  GetBusinessGroupsIDSpacesPathParams
-	QueryParams GetBusinessGroupsIDSpacesQueryParams
-	Security    GetBusinessGroupsIDSpacesSecurity
+	// Id of the group
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBusinessGroupsIDSpaces200ApplicationJSONTypeEnum string

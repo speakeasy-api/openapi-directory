@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetV1EmailFreeRequest(
-    query_params=operations.GetV1EmailFreeQueryParams(
-        email="labore",
-        format="xml",
-        key="nemo",
-    ),
+    email="Larue_Rau85@yahoo.com",
+    format="xml",
+    key="illum",
 )
     
 res = s.get_v1_email_free(req)

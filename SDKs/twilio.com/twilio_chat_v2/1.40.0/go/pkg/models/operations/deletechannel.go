@@ -12,26 +12,17 @@ var DeleteChannelServerList = []string{
 }
 
 type DeleteChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteChannelPathParams struct {
+type DeleteChannelRequest struct {
 	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Channel resource to delete.  This value can be either the `sid` or the `unique_name` of the Channel resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteChannelHeaders struct {
 	// The X-Twilio-Webhook-Enabled HTTP request header
 	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
-}
-
-type DeleteChannelRequest struct {
-	PathParams DeleteChannelPathParams
-	Headers    DeleteChannelHeaders
-	Security   DeleteChannelSecurity
-	ServerURL  *string
 }
 
 type DeleteChannelResponse struct {

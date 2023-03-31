@@ -36,7 +36,7 @@ func (e *EnterpriseAdminListPreReceiveHooksSortEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type EnterpriseAdminListPreReceiveHooksQueryParams struct {
+type EnterpriseAdminListPreReceiveHooksRequest struct {
 	// The direction to sort the results by.
 	Direction *shared.DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -45,10 +45,6 @@ type EnterpriseAdminListPreReceiveHooksQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The property to sort the results by.
 	Sort *EnterpriseAdminListPreReceiveHooksSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type EnterpriseAdminListPreReceiveHooksRequest struct {
-	QueryParams EnterpriseAdminListPreReceiveHooksQueryParams
 }
 
 type EnterpriseAdminListPreReceiveHooksResponse struct {

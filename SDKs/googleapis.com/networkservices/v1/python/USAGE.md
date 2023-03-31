@@ -4,69 +4,71 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest(
-    security=operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams(
-        parent="optio",
-    ),
-    query_params=operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="accusamus",
-        alt="proto",
-        callback="dolorum",
-        endpoint_policy_id="veritatis",
-        fields="doloribus",
-        key="in",
-        oauth_token="maxime",
-        pretty_print=False,
-        quota_user="corporis",
-        upload_type="nam",
-        upload_protocol="assumenda",
-    ),
-    request=shared.EndpointPolicyInput(
-        authorization_policy="molestias",
-        client_tls_policy="aut",
-        description="esse",
+    dollar_xgafv="2",
+    endpoint_policy_input=shared.EndpointPolicyInput(
+        authorization_policy="provident",
+        client_tls_policy="distinctio",
+        description="quibusdam",
         endpoint_matcher=shared.EndpointMatcher(
             metadata_label_matcher=shared.EndpointMatcherMetadataLabelMatcher(
-                metadata_label_match_criteria="MATCH_ALL",
+                metadata_label_match_criteria="MATCH_ANY",
                 metadata_labels=[
                     shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
-                        label_name="cumque",
-                        label_value="aut",
+                        label_name="corrupti",
+                        label_value="illum",
                     ),
                     shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
-                        label_name="qui",
-                        label_value="incidunt",
+                        label_name="vel",
+                        label_value="error",
+                    ),
+                    shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
+                        label_name="deserunt",
+                        label_value="suscipit",
+                    ),
+                    shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
+                        label_name="iure",
+                        label_value="magnam",
                     ),
                 ],
             ),
         ),
         labels={
-            "possimus": "qui",
-            "possimus": "alias",
+            "ipsa": "delectus",
+            "tempora": "suscipit",
+            "molestiae": "minus",
+            "placeat": "voluptatum",
         },
-        name="ipsam",
-        server_tls_policy="commodi",
+        name="iusto",
+        server_tls_policy="excepturi",
         traffic_port_selector=shared.TrafficPortSelector(
             ports=[
-                "corrupti",
-                "voluptatem",
+                "recusandae",
+                "temporibus",
             ],
         ),
-        type="SIDECAR_PROXY",
+        type="ENDPOINT_POLICY_TYPE_UNSPECIFIED",
     ),
+    access_token="quis",
+    alt="json",
+    callback="deserunt",
+    endpoint_policy_id="perferendis",
+    fields_="ipsam",
+    key="repellendus",
+    oauth_token="sapiente",
+    parent="quo",
+    pretty_print=False,
+    quota_user="odit",
+    upload_type="at",
+    upload_protocol="at",
 )
     
-res = s.projects.networkservices_projects_locations_endpoint_policies_create(req)
+res = s.projects.networkservices_projects_locations_endpoint_policies_create(req, operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

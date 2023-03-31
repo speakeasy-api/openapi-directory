@@ -38,16 +38,16 @@ func newProductRatePlans(defaultClient, securityClient HTTPClient, serverURL, la
 // For a use case of this operation, see [Retrieve the product catalog](https://www.zuora.com/developer/api-guides/#Retrieve-the-product-catalog).
 func (s *productRatePlans) GETProductRatePlans(ctx context.Context, request operations.GETProductRatePlansRequest) (*operations.GETProductRatePlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/rateplan/{product_id}/productRatePlan", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/rateplan/{product_id}/productRatePlan", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,14 +90,14 @@ func (s *productRatePlans) GETProductRatePlans(ctx context.Context, request oper
 // ObjectDELETEProductRatePlan - CRUD: Delete a product rate plan
 func (s *productRatePlans) ObjectDELETEProductRatePlan(ctx context.Context, request operations.ObjectDELETEProductRatePlanRequest) (*operations.ObjectDELETEProductRatePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -150,16 +150,16 @@ func (s *productRatePlans) ObjectDELETEProductRatePlan(ctx context.Context, requ
 // ObjectGETProductRatePlan - CRUD: Retrieve a product rate plan
 func (s *productRatePlans) ObjectGETProductRatePlan(ctx context.Context, request operations.ObjectGETProductRatePlanRequest) (*operations.ObjectGETProductRatePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -228,7 +228,7 @@ func (s *productRatePlans) ObjectPOSTProductRatePlan(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/product-rate-plan"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateProductRatePlan", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,9 +243,9 @@ func (s *productRatePlans) ObjectPOSTProductRatePlan(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -312,9 +312,9 @@ func (s *productRatePlans) ObjectPOSTProductRatePlan(ctx context.Context, reques
 // ObjectPUTProductRatePlan - CRUD: Update a product rate plan
 func (s *productRatePlans) ObjectPUTProductRatePlan(ctx context.Context, request operations.ObjectPUTProductRatePlanRequest) (*operations.ObjectPUTProductRatePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyProductRatePlan", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -329,9 +329,9 @@ func (s *productRatePlans) ObjectPUTProductRatePlan(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

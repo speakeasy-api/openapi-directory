@@ -8,13 +8,13 @@ import (
 )
 
 type SasportalNodesNodesNodesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SasportalNodesNodesNodesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SasportalNodesNodesNodesListSecurity struct {
@@ -22,12 +22,7 @@ type SasportalNodesNodesNodesListSecurity struct {
 	Option2 *SasportalNodesNodesNodesListSecurityOption2 `security:"option"`
 }
 
-type SasportalNodesNodesNodesListPathParams struct {
-	// Required. The parent resource name, for example, "nodes/1".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type SasportalNodesNodesNodesListQueryParams struct {
+type SasportalNodesNodesNodesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -48,6 +43,8 @@ type SasportalNodesNodesNodesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A pagination token returned from a previous call to ListNodes that indicates where this listing should continue from.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name, for example, "nodes/1".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -56,12 +53,6 @@ type SasportalNodesNodesNodesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SasportalNodesNodesNodesListRequest struct {
-	PathParams  SasportalNodesNodesNodesListPathParams
-	QueryParams SasportalNodesNodesNodesListQueryParams
-	Security    SasportalNodesNodesNodesListSecurity
 }
 
 type SasportalNodesNodesNodesListResponse struct {

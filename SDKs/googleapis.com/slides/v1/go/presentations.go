@@ -33,11 +33,11 @@ func newPresentations(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // SlidesPresentationsBatchUpdate - Applies one or more updates to the presentation. Each request is validated before being applied. If any request is not valid, then the entire request will fail and nothing will be applied. Some requests have replies to give you some information about how they are applied. Other requests do not need to return information; these each return an empty reply. The order of replies matches that of the requests. For example, suppose you call batchUpdate with four updates, and only the third one returns information. The response would have two empty replies: the reply to the third request, and another empty reply, in that order. Because other users may be editing the presentation, the presentation might not exactly reflect your changes: your changes may be altered with respect to collaborator changes. If there are no collaborators, the presentation should reflect your changes. In any case, the updates in your request are guaranteed to be applied together atomically.
-func (s *presentations) SlidesPresentationsBatchUpdate(ctx context.Context, request operations.SlidesPresentationsBatchUpdateRequest) (*operations.SlidesPresentationsBatchUpdateResponse, error) {
+func (s *presentations) SlidesPresentationsBatchUpdate(ctx context.Context, request operations.SlidesPresentationsBatchUpdateRequest, security operations.SlidesPresentationsBatchUpdateSecurity) (*operations.SlidesPresentationsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}:batchUpdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}:batchUpdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdatePresentationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *presentations) SlidesPresentationsBatchUpdate(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *presentations) SlidesPresentationsBatchUpdate(ctx context.Context, requ
 }
 
 // SlidesPresentationsCreate - Creates a blank presentation using the title given in the request. If a `presentationId` is provided, it is used as the ID of the new presentation. Otherwise, a new ID is generated. Other fields in the request, including any provided content, are ignored. Returns the created presentation.
-func (s *presentations) SlidesPresentationsCreate(ctx context.Context, request operations.SlidesPresentationsCreateRequest) (*operations.SlidesPresentationsCreateResponse, error) {
+func (s *presentations) SlidesPresentationsCreate(ctx context.Context, request operations.SlidesPresentationsCreateRequest, security operations.SlidesPresentationsCreateSecurity) (*operations.SlidesPresentationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/presentations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Presentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *presentations) SlidesPresentationsCreate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,20 +143,20 @@ func (s *presentations) SlidesPresentationsCreate(ctx context.Context, request o
 }
 
 // SlidesPresentationsGet - Gets the latest version of the specified presentation.
-func (s *presentations) SlidesPresentationsGet(ctx context.Context, request operations.SlidesPresentationsGetRequest) (*operations.SlidesPresentationsGetResponse, error) {
+func (s *presentations) SlidesPresentationsGet(ctx context.Context, request operations.SlidesPresentationsGetRequest, security operations.SlidesPresentationsGetSecurity) (*operations.SlidesPresentationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,20 +191,20 @@ func (s *presentations) SlidesPresentationsGet(ctx context.Context, request oper
 }
 
 // SlidesPresentationsPagesGet - Gets the latest version of the specified page in the presentation.
-func (s *presentations) SlidesPresentationsPagesGet(ctx context.Context, request operations.SlidesPresentationsPagesGetRequest) (*operations.SlidesPresentationsPagesGetResponse, error) {
+func (s *presentations) SlidesPresentationsPagesGet(ctx context.Context, request operations.SlidesPresentationsPagesGetRequest, security operations.SlidesPresentationsPagesGetSecurity) (*operations.SlidesPresentationsPagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,20 +239,20 @@ func (s *presentations) SlidesPresentationsPagesGet(ctx context.Context, request
 }
 
 // SlidesPresentationsPagesGetThumbnail - Generates a thumbnail of the latest version of the specified page in the presentation and returns a URL to the thumbnail image. This request counts as an [expensive read request](/slides/limits) for quota purposes.
-func (s *presentations) SlidesPresentationsPagesGetThumbnail(ctx context.Context, request operations.SlidesPresentationsPagesGetThumbnailRequest) (*operations.SlidesPresentationsPagesGetThumbnailResponse, error) {
+func (s *presentations) SlidesPresentationsPagesGetThumbnail(ctx context.Context, request operations.SlidesPresentationsPagesGetThumbnailRequest, security operations.SlidesPresentationsPagesGetThumbnailSecurity) (*operations.SlidesPresentationsPagesGetThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}/thumbnail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

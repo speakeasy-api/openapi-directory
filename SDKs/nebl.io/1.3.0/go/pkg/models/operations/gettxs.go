@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTxsQueryParams struct {
+type GetTxsRequest struct {
 	// Address
 	Address *string `queryParam:"style=form,explode=true,name=address"`
 	// Block Hash
 	Block *string `queryParam:"style=form,explode=true,name=block"`
 	// Page number to display
 	PageNum *float64 `queryParam:"style=form,explode=true,name=pageNum"`
-}
-
-type GetTxsRequest struct {
-	QueryParams GetTxsQueryParams
 }
 
 type GetTxsResponse struct {

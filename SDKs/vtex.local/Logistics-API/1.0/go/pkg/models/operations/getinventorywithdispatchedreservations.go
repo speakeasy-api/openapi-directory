@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetinventorywithdispatchedreservationsPathParams struct {
-	ItemID      string `pathParam:"style=simple,explode=false,name=itemId"`
-	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
-}
-
-type GetinventorywithdispatchedreservationsHeaders struct {
+type GetinventorywithdispatchedreservationsRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetinventorywithdispatchedreservationsRequest struct {
-	PathParams GetinventorywithdispatchedreservationsPathParams
-	Headers    GetinventorywithdispatchedreservationsHeaders
+	ItemID      string `pathParam:"style=simple,explode=false,name=itemId"`
+	WarehouseID string `pathParam:"style=simple,explode=false,name=warehouseId"`
 }
 
 type Getinventorywithdispatchedreservations200ApplicationJSON struct {

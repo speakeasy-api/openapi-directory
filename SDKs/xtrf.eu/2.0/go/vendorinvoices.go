@@ -37,9 +37,9 @@ func newVendorInvoices(defaultClient, securityClient HTTPClient, serverURL, lang
 // Creates a new payment on the vendor account and assigns the payment to the invoice.
 func (s *vendorInvoices) CreatePayment1(ctx context.Context, request operations.CreatePayment1Request) (*operations.CreatePayment1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -81,7 +81,7 @@ func (s *vendorInvoices) CreatePayment1(ctx context.Context, request operations.
 
 // Create4 - Creates a new invoice.
 // Creates a new invoice from jobs. Jobs are grouped by provider and currency, therefore multiple invoices can be created.If any of the jobs cannot be invoiced (ie. it is already invoiced) then an error is reported.
-func (s *vendorInvoices) Create4(ctx context.Context, request operations.Create4Request) (*operations.Create4Response, error) {
+func (s *vendorInvoices) Create4(ctx context.Context, request shared.ProviderInvoiceCreateDTO) (*operations.Create4Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/providers/invoices"
 
@@ -138,7 +138,7 @@ func (s *vendorInvoices) Create4(ctx context.Context, request operations.Create4
 // Removes a provider invoice.
 func (s *vendorInvoices) Delete6(ctx context.Context, request operations.Delete6Request) (*operations.Delete6Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +174,7 @@ func (s *vendorInvoices) Delete6(ctx context.Context, request operations.Delete6
 // Removes a provider payment.
 func (s *vendorInvoices) Delete7(ctx context.Context, request operations.Delete7Request) (*operations.Delete7Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/payments/{paymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/payments/{paymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -217,7 +217,7 @@ func (s *vendorInvoices) GetAllIds3(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -266,7 +266,7 @@ func (s *vendorInvoices) GetAll2(ctx context.Context, request operations.GetAll2
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -308,7 +308,7 @@ func (s *vendorInvoices) GetAll2(ctx context.Context, request operations.GetAll2
 // Returns provider invoice details.
 func (s *vendorInvoices) GetByID3(ctx context.Context, request operations.GetByID3Request) (*operations.GetByID3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -353,7 +353,7 @@ func (s *vendorInvoices) GetByID3(ctx context.Context, request operations.GetByI
 // Generates provider invoice document (PDF).
 func (s *vendorInvoices) GetDocument1(ctx context.Context, request operations.GetDocument1Request) (*operations.GetDocument1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/document", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/document", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *vendorInvoices) GetDocument1(ctx context.Context, request operations.Ge
 // Returns all payments for the vendor invoice.
 func (s *vendorInvoices) GetPayments1(ctx context.Context, request operations.GetPayments1Request) (*operations.GetPayments1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -443,7 +443,7 @@ func (s *vendorInvoices) GetPayments1(ctx context.Context, request operations.Ge
 // Sends a provider invoice.
 func (s *vendorInvoices) Send(ctx context.Context, request operations.SendRequest) (*operations.SendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/send", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/send", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -479,9 +479,9 @@ func (s *vendorInvoices) Send(ctx context.Context, request operations.SendReques
 // Changes invoice status to given status.
 func (s *vendorInvoices) SetStatus(ctx context.Context, request operations.SetStatusRequest) (*operations.SetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StatusRequestDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

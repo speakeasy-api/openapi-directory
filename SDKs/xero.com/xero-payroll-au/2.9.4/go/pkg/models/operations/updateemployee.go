@@ -8,24 +8,15 @@ import (
 )
 
 type UpdateEmployeeSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateEmployeePathParams struct {
-	// Employee id for single object
-	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeID"`
-}
-
-type UpdateEmployeeHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateEmployeeRequest struct {
-	PathParams UpdateEmployeePathParams
-	Headers    UpdateEmployeeHeaders
-	Request    []shared.EmployeeInput `request:"mediaType=application/json"`
-	Security   UpdateEmployeeSecurity
+	// Employee id for single object
+	EmployeeID  string                 `pathParam:"style=simple,explode=false,name=EmployeeID"`
+	RequestBody []shared.EmployeeInput `request:"mediaType=application/json"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=Xero-Tenant-Id"`
 }
 
 type UpdateEmployeeResponse struct {

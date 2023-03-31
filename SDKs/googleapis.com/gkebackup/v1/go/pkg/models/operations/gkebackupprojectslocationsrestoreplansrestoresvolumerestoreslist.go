@@ -8,16 +8,11 @@ import (
 )
 
 type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListPathParams struct {
-	// Required. The Restore that contains the VolumeRestores to list. Format: `projects/*/locations/*/restorePlans/*/restores/*`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams struct {
+type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value of next_page_token received from a previous `ListVolumeRestores` call. Provide this to retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters provided to `ListVolumeRestores` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The Restore that contains the VolumeRestores to list. Format: `projects/*/locations/*/restorePlans/*/restores/*`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -48,12 +45,6 @@ type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest struct {
-	PathParams  GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListPathParams
-	QueryParams GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams
-	Security    GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity
 }
 
 type GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse struct {

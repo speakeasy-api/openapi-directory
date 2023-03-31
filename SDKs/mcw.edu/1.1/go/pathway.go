@@ -34,7 +34,7 @@ func newPathway(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GETPathwaysWithDiagramsForCategoryUsingGET - Return a list of pathways based on category provided
 func (s *pathway) GETPathwaysWithDiagramsForCategoryUsingGET(ctx context.Context, request operations.GETPathwaysWithDiagramsForCategoryUsingGETRequest) (*operations.GETPathwaysWithDiagramsForCategoryUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pathways/diagramsForCategory/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pathways/diagramsForCategory/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *pathway) GETPathwaysWithDiagramsForCategoryUsingGET(ctx context.Context
 // SearchPathwaysUsingGET - Return a list of pathways based on search term
 func (s *pathway) SearchPathwaysUsingGET(ctx context.Context, request operations.SearchPathwaysUsingGETRequest) (*operations.SearchPathwaysUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pathways/diagrams/search/{searchString}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pathways/diagrams/search/{searchString}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

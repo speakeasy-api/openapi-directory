@@ -8,12 +8,7 @@ import (
 )
 
 type GetVeteranStatusSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetVeteranStatusRequest struct {
-	Request  shared.VeteranStatusRequest `request:"mediaType=application/json"`
-	Security GetVeteranStatusSecurity
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type GetVeteranStatusResponse struct {

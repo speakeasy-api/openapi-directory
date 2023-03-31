@@ -4,13 +4,12 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.CampaignAnalyticsRequest(
-    query_params=operations.CampaignAnalyticsQueryParams(
-        campaign_id="cumque",
-        ending_at="tenetur",
-        length="non",
-    ),
+    campaign_id="{{campaign_identifier}}",
+    ending_at="2020-06-28T23:59:59-5:00",
+    length="7",
 )
     
 res = s.campaign.campaign_analytics(req)

@@ -8,13 +8,13 @@ import (
 )
 
 type VaultMattersExportsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersExportsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersExportsListSecurity struct {
@@ -22,12 +22,7 @@ type VaultMattersExportsListSecurity struct {
 	Option2 *VaultMattersExportsListSecurityOption2 `security:"option"`
 }
 
-type VaultMattersExportsListPathParams struct {
-	// The matter ID.
-	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
-}
-
-type VaultMattersExportsListQueryParams struct {
+type VaultMattersExportsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +35,8 @@ type VaultMattersExportsListQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The matter ID.
+	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The number of exports to return in the response.
@@ -54,12 +51,6 @@ type VaultMattersExportsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VaultMattersExportsListRequest struct {
-	PathParams  VaultMattersExportsListPathParams
-	QueryParams VaultMattersExportsListQueryParams
-	Security    VaultMattersExportsListSecurity
 }
 
 type VaultMattersExportsListResponse struct {

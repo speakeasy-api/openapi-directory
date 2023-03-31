@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScheduleForPayoutPathParams struct {
+type ScheduleForPayoutRequest struct {
+	// schedule payout parameters
+	SchedulePayoutRequestV3 *shared.SchedulePayoutRequestV3 `request:"mediaType=application/json"`
 	// Id of the payout
 	PayoutID string `pathParam:"style=simple,explode=false,name=payoutId"`
-}
-
-type ScheduleForPayoutRequest struct {
-	PathParams ScheduleForPayoutPathParams
-	// schedule payout parameters
-	Request *shared.SchedulePayoutRequestV3 `request:"mediaType=application/json"`
 }
 
 type ScheduleForPayoutResponse struct {

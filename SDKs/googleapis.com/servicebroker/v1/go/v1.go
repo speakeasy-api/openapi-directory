@@ -34,20 +34,20 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // ServicebrokerGetIamPolicy - Gets the access control policy for a resource.
 // Returns an empty policy if the resource exists and does not have a policy
 // set.
-func (s *v1) ServicebrokerGetIamPolicy(ctx context.Context, request operations.ServicebrokerGetIamPolicyRequest) (*operations.ServicebrokerGetIamPolicyResponse, error) {
+func (s *v1) ServicebrokerGetIamPolicy(ctx context.Context, request operations.ServicebrokerGetIamPolicyRequest, security operations.ServicebrokerGetIamPolicySecurity) (*operations.ServicebrokerGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,11 +85,11 @@ func (s *v1) ServicebrokerGetIamPolicy(ctx context.Context, request operations.S
 // existing policy.
 //
 // Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
-func (s *v1) ServicebrokerSetIamPolicy(ctx context.Context, request operations.ServicebrokerSetIamPolicyRequest) (*operations.ServicebrokerSetIamPolicyResponse, error) {
+func (s *v1) ServicebrokerSetIamPolicy(ctx context.Context, request operations.ServicebrokerSetIamPolicyRequest, security operations.ServicebrokerSetIamPolicySecurity) (*operations.ServicebrokerSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -101,11 +101,11 @@ func (s *v1) ServicebrokerSetIamPolicy(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,11 +146,11 @@ func (s *v1) ServicebrokerSetIamPolicy(ctx context.Context, request operations.S
 // Note: This operation is designed to be used for building permission-aware
 // UIs and command-line tools, not for authorization checking. This operation
 // may "fail open" without warning.
-func (s *v1) ServicebrokerTestIamPermissions(ctx context.Context, request operations.ServicebrokerTestIamPermissionsRequest) (*operations.ServicebrokerTestIamPermissionsResponse, error) {
+func (s *v1) ServicebrokerTestIamPermissions(ctx context.Context, request operations.ServicebrokerTestIamPermissionsRequest, security operations.ServicebrokerTestIamPermissionsSecurity) (*operations.ServicebrokerTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -162,11 +162,11 @@ func (s *v1) ServicebrokerTestIamPermissions(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

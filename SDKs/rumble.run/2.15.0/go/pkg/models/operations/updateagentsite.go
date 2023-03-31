@@ -8,19 +8,14 @@ import (
 )
 
 type UpdateAgentSiteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type UpdateAgentSitePathParams struct {
-	// UUID of the agent to update
-	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type UpdateAgentSiteRequest struct {
-	PathParams UpdateAgentSitePathParams
 	// site_id to associate with the agent
-	Request  shared.AgentSiteID `request:"mediaType=application/json"`
-	Security UpdateAgentSiteSecurity
+	AgentSiteID shared.AgentSiteID `request:"mediaType=application/json"`
+	// UUID of the agent to update
+	AgentID string `pathParam:"style=simple,explode=false,name=agent_id"`
 }
 
 type UpdateAgentSiteResponse struct {

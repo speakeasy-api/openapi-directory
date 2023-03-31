@@ -8,19 +8,14 @@ import (
 )
 
 type RetrieveTransactionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetrieveTransactionPathParams struct {
+type RetrieveTransactionRequest struct {
 	// The ID of the transaction's associated location.
 	LocationID string `pathParam:"style=simple,explode=false,name=location_id"`
 	// The ID of the transaction to retrieve.
 	TransactionID string `pathParam:"style=simple,explode=false,name=transaction_id"`
-}
-
-type RetrieveTransactionRequest struct {
-	PathParams RetrieveTransactionPathParams
-	Security   RetrieveTransactionSecurity
 }
 
 type RetrieveTransactionResponse struct {

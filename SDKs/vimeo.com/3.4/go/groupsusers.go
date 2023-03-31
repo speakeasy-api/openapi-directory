@@ -35,7 +35,7 @@ func newGroupsUsers(defaultClient, securityClient HTTPClient, serverURL, languag
 // CheckIfUserJoinedGroup - Check if a user has joined a group
 func (s *groupsUsers) CheckIfUserJoinedGroup(ctx context.Context, request operations.CheckIfUserJoinedGroupRequest) (*operations.CheckIfUserJoinedGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *groupsUsers) CheckIfUserJoinedGroup(ctx context.Context, request operat
 // CheckIfUserJoinedGroupAlt1 - Check if a user has joined a group
 func (s *groupsUsers) CheckIfUserJoinedGroupAlt1(ctx context.Context, request operations.CheckIfUserJoinedGroupAlt1Request) (*operations.CheckIfUserJoinedGroupAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -125,14 +125,14 @@ func (s *groupsUsers) CheckIfUserJoinedGroupAlt1(ctx context.Context, request op
 // GetGroupMembers - Get all the members of a group
 func (s *groupsUsers) GetGroupMembers(ctx context.Context, request operations.GetGroupMembersRequest) (*operations.GetGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{group_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -183,14 +183,14 @@ func (s *groupsUsers) GetGroupMembers(ctx context.Context, request operations.Ge
 // GetUserGroups - Get all the groups that a user has joined
 func (s *groupsUsers) GetUserGroups(ctx context.Context, request operations.GetUserGroupsRequest) (*operations.GetUserGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -238,7 +238,7 @@ func (s *groupsUsers) GetUserGroupsAlt1(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

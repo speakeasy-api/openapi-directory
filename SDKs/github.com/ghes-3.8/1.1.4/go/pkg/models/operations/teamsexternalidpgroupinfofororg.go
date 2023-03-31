@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsExternalIdpGroupInfoForOrgPathParams struct {
+type TeamsExternalIdpGroupInfoForOrgRequest struct {
 	// The unique identifier of the group.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type TeamsExternalIdpGroupInfoForOrgRequest struct {
-	PathParams TeamsExternalIdpGroupInfoForOrgPathParams
 }
 
 type TeamsExternalIdpGroupInfoForOrgResponse struct {

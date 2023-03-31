@@ -13,36 +13,31 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCompositionRequest{
-        Security: operations.CreateCompositionSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+    req := operations.CreateCompositionCreateCompositionRequest{
+        AudioSources: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
-        Request: &operations.CreateCompositionCreateCompositionRequest{
-            AudioSources: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-            AudioSourcesExcluded: []string{
-                "nulla",
-                "corrupti",
-                "illum",
-            },
-            Format: "mp4",
-            Resolution: "error",
-            RoomSid: "deserunt",
-            StatusCallback: "http://innocent-effect.org",
-            StatusCallbackMethod: "HEAD",
-            Trim: false,
-            VideoLayout: "delectus",
+        AudioSourcesExcluded: []string{
+            "nulla",
+            "corrupti",
+            "illum",
         },
+        Format: "mp4",
+        Resolution: "error",
+        RoomSid: "deserunt",
+        StatusCallback: "http://innocent-effect.org",
+        StatusCallbackMethod: "HEAD",
+        Trim: false,
+        VideoLayout: "delectus",
     }
 
     ctx := context.Background()
-    res, err := s.CreateComposition(ctx, req)
+    res, err := s.CreateComposition(ctx, req, operations.CreateCompositionSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

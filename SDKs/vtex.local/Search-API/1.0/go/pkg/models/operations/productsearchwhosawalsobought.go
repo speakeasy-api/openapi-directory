@@ -10,22 +10,13 @@ var ProductSearchWhoSawAlsoBoughtServerList = []string{
 	"http://example.com/.{environment}.com.br",
 }
 
-type ProductSearchWhoSawAlsoBoughtPathParams struct {
-	// Product unique identifier.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ProductSearchWhoSawAlsoBoughtHeaders struct {
+type ProductSearchWhoSawAlsoBoughtRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ProductSearchWhoSawAlsoBoughtRequest struct {
-	PathParams ProductSearchWhoSawAlsoBoughtPathParams
-	Headers    ProductSearchWhoSawAlsoBoughtHeaders
-	ServerURL  *string
+	// Product unique identifier.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 }
 
 type ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages struct {

@@ -24,6 +24,5 @@ pkg/models/shared/googlecloudadvisorynotificationsv1csv.go
 pkg/models/shared/googlecloudadvisorynotificationsv1csvcsvrow.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudadvisorynotificationsv1listnotificationsresponse.go
 USAGE.md

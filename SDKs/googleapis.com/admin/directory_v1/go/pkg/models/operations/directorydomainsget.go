@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryDomainsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryDomainsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryDomainsGetSecurity struct {
@@ -22,14 +22,7 @@ type DirectoryDomainsGetSecurity struct {
 	Option2 *DirectoryDomainsGetSecurityOption2 `security:"option"`
 }
 
-type DirectoryDomainsGetPathParams struct {
-	// The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to fetch all groups for a customer, use this field instead of `domain`. You can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the `customer` or the `domain` parameter.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-	// Name of domain to be retrieved
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type DirectoryDomainsGetQueryParams struct {
+type DirectoryDomainsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +31,10 @@ type DirectoryDomainsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to fetch all groups for a customer, use this field instead of `domain`. You can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the `customer` or the `domain` parameter.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
+	// Name of domain to be retrieved
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -52,12 +49,6 @@ type DirectoryDomainsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryDomainsGetRequest struct {
-	PathParams  DirectoryDomainsGetPathParams
-	QueryParams DirectoryDomainsGetQueryParams
-	Security    DirectoryDomainsGetSecurity
 }
 
 type DirectoryDomainsGetResponse struct {

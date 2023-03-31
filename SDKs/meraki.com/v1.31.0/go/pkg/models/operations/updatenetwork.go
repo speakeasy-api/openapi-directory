@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkRequestBody struct {
 	// A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break.
 	EnrollmentString *string `json:"enrollmentString,omitempty"`
@@ -24,8 +20,8 @@ type UpdateNetworkRequestBody struct {
 }
 
 type UpdateNetworkRequest struct {
-	PathParams UpdateNetworkPathParams
-	Request    *UpdateNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetwork200ApplicationJSON - Successful operation

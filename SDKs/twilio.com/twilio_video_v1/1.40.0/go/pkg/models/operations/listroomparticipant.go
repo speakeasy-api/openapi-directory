@@ -13,15 +13,11 @@ var ListRoomParticipantServerList = []string{
 }
 
 type ListRoomParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListRoomParticipantPathParams struct {
-	// The SID of the room with the Participant resources to read.
-	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
-}
-
-type ListRoomParticipantQueryParams struct {
+type ListRoomParticipantRequest struct {
 	// Read only Participants that started after this date in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#UTC) format.
 	DateCreatedAfter *time.Time `queryParam:"style=form,explode=true,name=DateCreatedAfter"`
 	// Read only Participants that started before this date in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#UTC) format.
@@ -34,15 +30,10 @@ type ListRoomParticipantQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
+	// The SID of the room with the Participant resources to read.
+	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// Read only the participants with this status. Can be: `connected` or `disconnected`. For `in-progress` Rooms the default Status is `connected`, for `completed` Rooms only `disconnected` Participants are returned.
 	Status *shared.RoomParticipantEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListRoomParticipantRequest struct {
-	PathParams  ListRoomParticipantPathParams
-	QueryParams ListRoomParticipantQueryParams
-	Security    ListRoomParticipantSecurity
-	ServerURL   *string
 }
 
 type ListRoomParticipantListRoomParticipantResponseMeta struct {

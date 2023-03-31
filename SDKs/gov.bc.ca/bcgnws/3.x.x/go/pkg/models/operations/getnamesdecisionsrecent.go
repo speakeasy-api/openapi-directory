@@ -158,7 +158,7 @@ func (e *GetNamesDecisionsRecentSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNamesDecisionsRecentQueryParams struct {
+type GetNamesDecisionsRecentRequest struct {
 	// The number of days used to define the time window of naming decisions to search.  The number is interpreted as searching for 'names affected by decisions within the last X days'.
 	Days int64 `queryParam:"style=form,explode=true,name=days"`
 	// A flag to indicate whether to embed the corresponding 'feature' into each matching name
@@ -181,10 +181,6 @@ type GetNamesDecisionsRecentQueryParams struct {
 	SortBy *GetNamesDecisionsRecentSortByEnum `queryParam:"style=form,explode=true,name=sortBy"`
 	// The index of the first record to be returned (>= 1)
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type GetNamesDecisionsRecentRequest struct {
-	QueryParams GetNamesDecisionsRecentQueryParams
 }
 
 type GetNamesDecisionsRecentResponse struct {

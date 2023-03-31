@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmRolesRoleNameCompositesPathParams struct {
+type PostRealmRolesRoleNameCompositesRequest struct {
+	RequestBody []shared.RoleRepresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// role’s name (not id!)
 	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type PostRealmRolesRoleNameCompositesRequest struct {
-	PathParams PostRealmRolesRoleNameCompositesPathParams
-	Request    []shared.RoleRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmRolesRoleNameCompositesResponse struct {

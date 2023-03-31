@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostSsoStrategiesIDSyncPathParams struct {
+type PostSsoStrategiesIDSyncRequest struct {
 	// Sso Strategy ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSsoStrategiesIDSyncRequest struct {
-	PathParams PostSsoStrategiesIDSyncPathParams
 }
 
 type PostSsoStrategiesIDSyncResponse struct {

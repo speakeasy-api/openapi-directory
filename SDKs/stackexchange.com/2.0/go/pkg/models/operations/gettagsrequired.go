@@ -59,7 +59,7 @@ func (e *GetTagsRequiredSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTagsRequiredQueryParams struct {
+type GetTagsRequiredRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -117,10 +117,6 @@ type GetTagsRequiredQueryParams struct {
 	Sort *GetTagsRequiredSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetTagsRequiredRequest struct {
-	QueryParams GetTagsRequiredQueryParams
 }
 
 type GetTagsRequiredResponse struct {

@@ -32,11 +32,11 @@ func newObjects(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // StorageObjectsCompose - Concatenates a list of existing objects into a new object in the same bucket.
-func (s *objects) StorageObjectsCompose(ctx context.Context, request operations.StorageObjectsComposeRequest) (*operations.StorageObjectsComposeResponse, error) {
+func (s *objects) StorageObjectsCompose(ctx context.Context, request operations.StorageObjectsComposeRequest, security operations.StorageObjectsComposeSecurity) (*operations.StorageObjectsComposeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{destinationBucket}/o/{destinationObject}/compose", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{destinationBucket}/o/{destinationObject}/compose", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ComposeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *objects) StorageObjectsCompose(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *objects) StorageObjectsCompose(ctx context.Context, request operations.
 }
 
 // StorageObjectsCopy - Copies an object to a destination in the same location. Optionally overrides metadata.
-func (s *objects) StorageObjectsCopy(ctx context.Context, request operations.StorageObjectsCopyRequest) (*operations.StorageObjectsCopyResponse, error) {
+func (s *objects) StorageObjectsCopy(ctx context.Context, request operations.StorageObjectsCopyRequest, security operations.StorageObjectsCopySecurity) (*operations.StorageObjectsCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{sourceBucket}/o/{sourceObject}/copyTo/b/{destinationBucket}/o/{destinationObject}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{sourceBucket}/o/{sourceObject}/copyTo/b/{destinationBucket}/o/{destinationObject}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *objects) StorageObjectsCopy(ctx context.Context, request operations.Sto
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *objects) StorageObjectsCopy(ctx context.Context, request operations.Sto
 }
 
 // StorageObjectsDelete - Deletes data blobs and associated metadata. Deletions are permanent if versioning is not enabled for the bucket, or if the generation parameter is used.
-func (s *objects) StorageObjectsDelete(ctx context.Context, request operations.StorageObjectsDeleteRequest) (*operations.StorageObjectsDeleteResponse, error) {
+func (s *objects) StorageObjectsDelete(ctx context.Context, request operations.StorageObjectsDeleteRequest, security operations.StorageObjectsDeleteSecurity) (*operations.StorageObjectsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,20 +181,20 @@ func (s *objects) StorageObjectsDelete(ctx context.Context, request operations.S
 }
 
 // StorageObjectsGet - Retrieves objects or their associated metadata.
-func (s *objects) StorageObjectsGet(ctx context.Context, request operations.StorageObjectsGetRequest) (*operations.StorageObjectsGetResponse, error) {
+func (s *objects) StorageObjectsGet(ctx context.Context, request operations.StorageObjectsGetRequest, security operations.StorageObjectsGetSecurity) (*operations.StorageObjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,11 +229,11 @@ func (s *objects) StorageObjectsGet(ctx context.Context, request operations.Stor
 }
 
 // StorageObjectsInsert - Stores new data blobs and associated metadata.
-func (s *objects) StorageObjectsInsert(ctx context.Context, request operations.StorageObjectsInsertRequest) (*operations.StorageObjectsInsertResponse, error) {
+func (s *objects) StorageObjectsInsert(ctx context.Context, request operations.StorageObjectsInsertRequest, security operations.StorageObjectsInsertSecurity) (*operations.StorageObjectsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -245,11 +245,11 @@ func (s *objects) StorageObjectsInsert(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,20 +284,20 @@ func (s *objects) StorageObjectsInsert(ctx context.Context, request operations.S
 }
 
 // StorageObjectsList - Retrieves a list of objects matching the criteria.
-func (s *objects) StorageObjectsList(ctx context.Context, request operations.StorageObjectsListRequest) (*operations.StorageObjectsListResponse, error) {
+func (s *objects) StorageObjectsList(ctx context.Context, request operations.StorageObjectsListRequest, security operations.StorageObjectsListSecurity) (*operations.StorageObjectsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,11 +332,11 @@ func (s *objects) StorageObjectsList(ctx context.Context, request operations.Sto
 }
 
 // StorageObjectsPatch - Updates a data blob's associated metadata. This method supports patch semantics.
-func (s *objects) StorageObjectsPatch(ctx context.Context, request operations.StorageObjectsPatchRequest) (*operations.StorageObjectsPatchResponse, error) {
+func (s *objects) StorageObjectsPatch(ctx context.Context, request operations.StorageObjectsPatchRequest, security operations.StorageObjectsPatchSecurity) (*operations.StorageObjectsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -348,11 +348,11 @@ func (s *objects) StorageObjectsPatch(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -387,11 +387,11 @@ func (s *objects) StorageObjectsPatch(ctx context.Context, request operations.St
 }
 
 // StorageObjectsUpdate - Updates a data blob's associated metadata.
-func (s *objects) StorageObjectsUpdate(ctx context.Context, request operations.StorageObjectsUpdateRequest) (*operations.StorageObjectsUpdateResponse, error) {
+func (s *objects) StorageObjectsUpdate(ctx context.Context, request operations.StorageObjectsUpdateRequest, security operations.StorageObjectsUpdateSecurity) (*operations.StorageObjectsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -403,11 +403,11 @@ func (s *objects) StorageObjectsUpdate(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -442,11 +442,11 @@ func (s *objects) StorageObjectsUpdate(ctx context.Context, request operations.S
 }
 
 // StorageObjectsWatchAll - Watch for changes on all objects in a bucket.
-func (s *objects) StorageObjectsWatchAll(ctx context.Context, request operations.StorageObjectsWatchAllRequest) (*operations.StorageObjectsWatchAllResponse, error) {
+func (s *objects) StorageObjectsWatchAll(ctx context.Context, request operations.StorageObjectsWatchAllRequest, security operations.StorageObjectsWatchAllSecurity) (*operations.StorageObjectsWatchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/watch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -458,11 +458,11 @@ func (s *objects) StorageObjectsWatchAll(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

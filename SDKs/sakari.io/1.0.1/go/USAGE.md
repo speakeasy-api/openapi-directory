@@ -13,12 +13,10 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AuthTokenRequest{
-        Request: &shared.TokenRequest{
-            ClientID: "00000000-0000-0000-0000-00000000000",
-            ClientSecret: "00000000-0000-0000-0000-00000000000",
-            GrantType: "client_credentials",
-        },
+    req := shared.TokenRequest{
+        ClientID: "00000000-0000-0000-0000-00000000000",
+        ClientSecret: "00000000-0000-0000-0000-00000000000",
+        GrantType: "client_credentials",
     }
 
     ctx := context.Background()

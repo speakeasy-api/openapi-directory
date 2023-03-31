@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDEventsPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDEventsQueryParams struct {
+type GetUsersIDEventsRequest struct {
 	// Return the events until and including this date.
 	EndDate string `queryParam:"style=form,explode=true,name=end_date"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Return the events from and including this date.
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type GetUsersIDEventsRequest struct {
-	PathParams  GetUsersIDEventsPathParams
-	QueryParams GetUsersIDEventsQueryParams
 }
 
 type GetUsersIDEventsResponse struct {

@@ -33,10 +33,9 @@ pkg/models/operations/cloudprivatecatalogproducercatalogsundelete.go
 pkg/models/operations/cloudprivatecatalogproduceroperationscancel.go
 pkg/models/operations/cloudprivatecatalogproduceroperationslist.go
 pkg/models/shared/googlecloudprivatecatalogproducerv1beta1association.go
-pkg/models/shared/googlecloudprivatecatalogproducerv1beta1createassociationrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googlecloudprivatecatalogproducerv1beta1createassociationrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudprivatecatalogproducerv1beta1listassociationsresponse.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go

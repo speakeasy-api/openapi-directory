@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/lakeformation/2017-03-31/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,96 +14,141 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddLfTagsToResourceRequest(
-    headers=operations.AddLfTagsToResourceHeaders(
-        x_amz_algorithm="velit",
-        x_amz_content_sha256="maiores",
-        x_amz_credential="sunt",
-        x_amz_date="et",
-        x_amz_security_token="est",
-        x_amz_signature="reprehenderit",
-        x_amz_signed_headers="totam",
-        x_amz_target="AWSLakeFormation.AddLFTagsToResource",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddLfTagsToResourceRequest(
-        catalog_id="voluptas",
+)
+
+
+req = operations.AddLFTagsToResourceRequest(
+    request_body=operations.AddLFTagsToResourceRequestBody(
+        catalog_id="corrupti",
         lf_tags=[
-            shared.LfTagPair(
-                catalog_id="consequatur",
-                tag_key="veritatis",
+            shared.LFTagPair(
+                catalog_id="distinctio",
+                tag_key="quibusdam",
                 tag_values=[
-                    "et",
-                    "nisi",
-                    "cupiditate",
+                    "nulla",
+                    "corrupti",
+                    "illum",
+                ],
+            ),
+            shared.LFTagPair(
+                catalog_id="vel",
+                tag_key="error",
+                tag_values=[
+                    "suscipit",
+                    "iure",
+                    "magnam",
+                ],
+            ),
+            shared.LFTagPair(
+                catalog_id="debitis",
+                tag_key="ipsa",
+                tag_values=[
+                    "tempora",
+                    "suscipit",
+                    "molestiae",
+                    "minus",
                 ],
             ),
         ],
-        resource=shared.Resource(
+        resource=operations.AddLFTagsToResourceRequestBodyResource(
             catalog={
-                "quos": "et",
+                "voluptatum": "iusto",
+                "excepturi": "nisi",
+                "recusandae": "temporibus",
+                "ab": "quis",
             },
+            data_cells_filter=shared.DataCellsFilterResource(
+                database_name="veritatis",
+                name="deserunt",
+                table_catalog_id="perferendis",
+                table_name="ipsam",
+            ),
             data_location=shared.DataLocationResource(
-                catalog_id="perspiciatis",
-                resource_arn="quo",
+                catalog_id="repellendus",
+                resource_arn="sapiente",
             ),
             database=shared.DatabaseResource(
-                catalog_id="nulla",
-                name="modi",
+                catalog_id="quo",
+                name="odit",
             ),
-            lf_tag=shared.LfTagKeyResource(
-                catalog_id="est",
-                tag_key="impedit",
+            lf_tag=shared.LFTagKeyResource(
+                catalog_id="at",
+                tag_key="at",
                 tag_values=[
-                    "qui",
-                    "ut",
+                    "molestiae",
+                    "quod",
+                    "quod",
+                    "esse",
                 ],
             ),
-            lf_tag_policy=shared.LfTagPolicyResource(
-                catalog_id="possimus",
+            lf_tag_policy=shared.LFTagPolicyResource(
+                catalog_id="totam",
                 expression=[
-                    shared.LfTag(
-                        tag_key="iusto",
+                    shared.LFTag(
+                        tag_key="dolorum",
                         tag_values=[
-                            "qui",
+                            "nam",
+                        ],
+                    ),
+                    shared.LFTag(
+                        tag_key="officia",
+                        tag_values=[
+                            "fugit",
+                            "deleniti",
+                            "hic",
+                        ],
+                    ),
+                    shared.LFTag(
+                        tag_key="optio",
+                        tag_values=[
+                            "beatae",
+                            "commodi",
+                            "molestiae",
+                        ],
+                    ),
+                    shared.LFTag(
+                        tag_key="modi",
+                        tag_values=[
+                            "impedit",
                         ],
                     ),
                 ],
                 resource_type="TABLE",
             ),
             table=shared.TableResource(
-                catalog_id="totam",
-                database_name="at",
-                name="aliquam",
+                catalog_id="esse",
+                database_name="ipsum",
+                name="excepturi",
                 table_wildcard={
-                    "inventore": "esse",
-                    "consectetur": "cumque",
-                    "fugit": "qui",
+                    "perferendis": "ad",
                 },
             ),
             table_with_columns=shared.TableWithColumnsResource(
-                catalog_id="quia",
+                catalog_id="natus",
                 column_names=[
-                    "incidunt",
+                    "iste",
                 ],
                 column_wildcard=shared.ColumnWildcard(
                     excluded_column_names=[
-                        "neque",
+                        "natus",
                     ],
                 ),
-                database_name="alias",
-                name="tempore",
+                database_name="laboriosam",
+                name="hic",
             ),
         ),
     ),
+    x_amz_algorithm="saepe",
+    x_amz_content_sha256="fuga",
+    x_amz_credential="in",
+    x_amz_date="corporis",
+    x_amz_security_token="iste",
+    x_amz_signature="iure",
+    x_amz_signed_headers="saepe",
 )
     
 res = s.add_lf_tags_to_resource(req)
@@ -114,34 +159,68 @@ if res.add_lf_tags_to_resource_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
-* `add_lf_tags_to_resource` - Attaches one or more tags to an existing resource.
+* `add_lf_tags_to_resource` - Attaches one or more LF-tags to an existing resource.
+* `assume_decorated_role_with_saml` - <p>Allows a caller to assume an IAM role decorated as the SAML user specified in the SAML assertion included in the request. This decoration allows Lake Formation to enforce access policies against the SAML users and groups. This API operation requires SAML federation setup in the caller’s account as it can only be called with valid SAML assertions. Lake Formation does not scope down the permission of the assumed role. All permissions attached to the role via the SAML federation setup will be included in the role session. </p> <p> This decorated role is expected to access data in Amazon S3 by getting temporary access from Lake Formation which is authorized via the virtual API <code>GetDataAccess</code>. Therefore, all SAML roles that can be assumed via <code>AssumeDecoratedRoleWithSAML</code> must at a minimum include <code>lakeformation:GetDataAccess</code> in their role policies. A typical IAM policy attached to such a role would look as follows: </p>
 * `batch_grant_permissions` - Batch operation to grant permissions to the principal.
 * `batch_revoke_permissions` - Batch operation to revoke permissions from the principal.
-* `create_lf_tag` - Creates a tag with the specified name and values.
-* `delete_lf_tag` - Deletes the specified tag key name. If the attribute key does not exist or the tag does not exist, then the operation will not do anything. If the attribute key exists, then the operation checks if any resources are tagged with this attribute key, if yes, the API throws a 400 Exception with the message "Delete not allowed" as the tag key is still attached with resources. You can consider untagging resources with this tag key.
+* `cancel_transaction` - Attempts to cancel the specified transaction. Returns an exception if the transaction was previously committed.
+* `commit_transaction` - Attempts to commit the specified transaction. Returns an exception if the transaction was previously aborted. This API action is idempotent if called multiple times for the same transaction.
+* `create_data_cells_filter` - Creates a data cell filter to allow one to grant access to certain columns on certain rows.
+* `create_lf_tag` - Creates an LF-tag with the specified name and values.
+* `delete_data_cells_filter` - Deletes a data cell filter.
+* `delete_lf_tag` - Deletes the specified LF-tag given a key name. If the input parameter tag key was not found, then the operation will throw an exception. When you delete an LF-tag, the <code>LFTagPolicy</code> attached to the LF-tag becomes invalid. If the deleted LF-tag was still assigned to any resource, the tag policy attach to the deleted LF-tag will no longer be applied to the resource.
+* `delete_objects_on_cancel` - <p>For a specific governed table, provides a list of Amazon S3 objects that will be written during the current transaction and that can be automatically deleted if the transaction is canceled. Without this call, no Amazon S3 objects are automatically deleted when a transaction cancels. </p> <p> The Glue ETL library function <code>write_dynamic_frame.from_catalog()</code> includes an option to automatically call <code>DeleteObjectsOnCancel</code> before writes. For more information, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/transactions-data-operations.html#rolling-back-writes">Rolling Back Amazon S3 Writes</a>. </p>
 * `deregister_resource` - <p>Deregisters the resource as managed by the Data Catalog.</p> <p>When you deregister a path, Lake Formation removes the path from the inline policy attached to your service-linked role.</p>
-* `describe_resource` - Retrieves the current data access role for the given resource registered in AWS Lake Formation.
+* `describe_resource` - Retrieves the current data access role for the given resource registered in Lake Formation.
+* `describe_transaction` - Returns the details of a single transaction.
+* `extend_transaction` - <p>Indicates to the service that the specified transaction is still active and should not be treated as idle and aborted.</p> <p>Write transactions that remain idle for a long period are automatically aborted unless explicitly extended.</p>
+* `get_data_cells_filter` - Returns a data cells filter.
 * `get_data_lake_settings` - Retrieves the list of the data lake administrators of a Lake Formation-managed data lake. 
 * `get_effective_permissions_for_path` - Returns the Lake Formation permissions for a specified table or database resource located at a path in Amazon S3. <code>GetEffectivePermissionsForPath</code> will not return databases and tables if the catalog is encrypted.
-* `get_lf_tag` - Returns a tag definition.
-* `get_resource_lf_tags` - Returns the tags applied to a resource.
-* `grant_permissions` - <p>Grants permissions to the principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.</p> <p>For information about permissions, see <a href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control to Metadata and Data</a>.</p>
-* `list_lf_tags` - Lists tags that the requester has permission to view. 
+* `get_lf_tag` - Returns an LF-tag definition.
+* `get_query_state` - Returns the state of a query previously submitted. Clients are expected to poll <code>GetQueryState</code> to monitor the current state of the planning before retrieving the work units. A query state is only visible to the principal that made the initial call to <code>StartQueryPlanning</code>.
+* `get_query_statistics` - Retrieves statistics on the planning and execution of a query.
+* `get_resource_lf_tags` - Returns the LF-tags applied to a resource.
+* `get_table_objects` - Returns the set of Amazon S3 objects that make up the specified governed table. A transaction ID or timestamp can be specified for time-travel queries.
+* `get_temporary_glue_partition_credentials` - This API is identical to <code>GetTemporaryTableCredentials</code> except that this is used when the target Data Catalog resource is of type Partition. Lake Formation restricts the permission of the vended credentials with the same scope down policy which restricts access to a single Amazon S3 prefix.
+* `get_temporary_glue_table_credentials` - Allows a caller in a secure environment to assume a role with permission to access Amazon S3. In order to vend such credentials, Lake Formation assumes the role associated with a registered location, for example an Amazon S3 bucket, with a scope down policy which restricts the access to a single prefix.
+* `get_work_unit_results` - Returns the work units resulting from the query. Work units can be executed in any order and in parallel. 
+* `get_work_units` - Retrieves the work units generated by the <code>StartQueryPlanning</code> operation.
+* `grant_permissions` - <p>Grants permissions to the principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.</p> <p>For information about permissions, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control to Metadata and Data</a>.</p>
+* `list_data_cells_filter` - Lists all the data cell filters on a table.
+* `list_lf_tags` - Lists LF-tags that the requester has permission to view. 
 * `list_permissions` - <p>Returns a list of the principal permissions on the resource, filtered by the permissions of the caller. For example, if you are granted an ALTER permission, you are able to see only the principal permissions for ALTER.</p> <p>This operation returns only those permissions that have been explicitly granted.</p> <p>For information about permissions, see <a href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control to Metadata and Data</a>.</p>
 * `list_resources` - Lists the resources registered to be managed by the Data Catalog.
+* `list_table_storage_optimizers` - Returns the configuration of all storage optimizers associated with a specified table.
+* `list_transactions` - <p>Returns metadata about transactions and their status. To prevent the response from growing indefinitely, only uncommitted transactions and those available for time-travel queries are returned.</p> <p>This operation can help you identify uncommitted transactions or to get information about transactions.</p>
 * `put_data_lake_settings` - <p>Sets the list of data lake administrators who have admin privileges on all resources managed by Lake Formation. For more information on admin privileges, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/lake-formation-permissions.html">Granting Lake Formation Permissions</a>.</p> <p>This API replaces the current list of data lake admins with the new list being passed. To add an admin, fetch the current list and add the new admin to that list and pass that list in this API.</p>
-* `register_resource` - <p>Registers the resource as managed by the Data Catalog.</p> <p>To add or update data, Lake Formation needs read/write access to the chosen Amazon S3 path. Choose a role that you know has permission to do this, or choose the AWSServiceRoleForLakeFormationDataAccess service-linked role. When you register the first Amazon S3 path, the service-linked role and a new inline policy are created on your behalf. Lake Formation adds the first path to the inline policy and attaches it to the service-linked role. When you register subsequent paths, Lake Formation adds the path to the existing policy.</p> <p>The following request registers a new location and gives AWS Lake Formation permission to use the service-linked role to access that location.</p> <p> <code>ResourceArn = arn:aws:s3:::my-bucket UseServiceLinkedRole = true</code> </p> <p>If <code>UseServiceLinkedRole</code> is not set to true, you must provide or set the <code>RoleArn</code>:</p> <p> <code>arn:aws:iam::12345:role/my-data-access-role</code> </p>
-* `remove_lf_tags_from_resource` - Removes a tag from the resource. Only database, table, or tableWithColumns resource are allowed. To tag columns, use the column inclusion list in <code>tableWithColumns</code> to specify column input.
+* `register_resource` - <p>Registers the resource as managed by the Data Catalog.</p> <p>To add or update data, Lake Formation needs read/write access to the chosen Amazon S3 path. Choose a role that you know has permission to do this, or choose the AWSServiceRoleForLakeFormationDataAccess service-linked role. When you register the first Amazon S3 path, the service-linked role and a new inline policy are created on your behalf. Lake Formation adds the first path to the inline policy and attaches it to the service-linked role. When you register subsequent paths, Lake Formation adds the path to the existing policy.</p> <p>The following request registers a new location and gives Lake Formation permission to use the service-linked role to access that location.</p> <p> <code>ResourceArn = arn:aws:s3:::my-bucket UseServiceLinkedRole = true</code> </p> <p>If <code>UseServiceLinkedRole</code> is not set to true, you must provide or set the <code>RoleArn</code>:</p> <p> <code>arn:aws:iam::12345:role/my-data-access-role</code> </p>
+* `remove_lf_tags_from_resource` - Removes an LF-tag from the resource. Only database, table, or tableWithColumns resource are allowed. To tag columns, use the column inclusion list in <code>tableWithColumns</code> to specify column input.
 * `revoke_permissions` - Revokes permissions to the principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
 * `search_databases_by_lf_tags` - This operation allows a search on <code>DATABASE</code> resources by <code>TagCondition</code>. This operation is used by admins who want to grant user permissions on certain <code>TagConditions</code>. Before making a grant, the admin can use <code>SearchDatabasesByTags</code> to find all resources where the given <code>TagConditions</code> are valid to verify whether the returned resources can be shared.
-* `search_tables_by_lf_tags` - This operation allows a search on <code>TABLE</code> resources by <code>LFTag</code>s. This will be used by admins who want to grant user permissions on certain LFTags. Before making a grant, the admin can use <code>SearchTablesByLFTags</code> to find all resources where the given <code>LFTag</code>s are valid to verify whether the returned resources can be shared.
-* `update_lf_tag` - Updates the list of possible values for the specified tag key. If the tag does not exist, the operation throws an EntityNotFoundException. The values in the delete key values will be deleted from list of possible values. If any value in the delete key values is attached to a resource, then API errors out with a 400 Exception - "Update not allowed". Untag the attribute before deleting the tag key's value. 
-* `update_resource` - Updates the data access role used for vending access to the given (registered) resource in AWS Lake Formation. 
-
+* `search_tables_by_lf_tags` - This operation allows a search on <code>TABLE</code> resources by <code>LFTag</code>s. This will be used by admins who want to grant user permissions on certain LF-tags. Before making a grant, the admin can use <code>SearchTablesByLFTags</code> to find all resources where the given <code>LFTag</code>s are valid to verify whether the returned resources can be shared.
+* `start_query_planning` - <p>Submits a request to process a query statement.</p> <p>This operation generates work units that can be retrieved with the <code>GetWorkUnits</code> operation as soon as the query state is WORKUNITS_AVAILABLE or FINISHED.</p>
+* `start_transaction` - Starts a new transaction and returns its transaction ID. Transaction IDs are opaque objects that you can use to identify a transaction.
+* `update_data_cells_filter` - Updates a data cell filter.
+* `update_lf_tag` - Updates the list of possible values for the specified LF-tag key. If the LF-tag does not exist, the operation throws an EntityNotFoundException. The values in the delete key values will be deleted from list of possible values. If any value in the delete key values is attached to a resource, then API errors out with a 400 Exception - "Update not allowed". Untag the attribute before deleting the LF-tag key's value. 
+* `update_resource` - Updates the data access role used for vending access to the given (registered) resource in Lake Formation. 
+* `update_table_objects` - Updates the manifest of Amazon S3 objects that make up the specified governed table.
+* `update_table_storage_optimizer` - Updates the configuration of the storage optimizers for a table.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

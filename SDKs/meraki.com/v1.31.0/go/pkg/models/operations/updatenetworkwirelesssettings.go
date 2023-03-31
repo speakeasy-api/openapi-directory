@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum - The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
 type UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum string
 
@@ -50,8 +46,8 @@ type UpdateNetworkWirelessSettingsRequestBody struct {
 }
 
 type UpdateNetworkWirelessSettingsRequest struct {
-	PathParams UpdateNetworkWirelessSettingsPathParams
-	Request    *UpdateNetworkWirelessSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSettingsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkWirelessSettings200ApplicationJSONNamedVlansPoolDhcpMonitoring - Named VLAN Pool DHCP Monitoring settings.

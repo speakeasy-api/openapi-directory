@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePathParams struct {
+type CreateRequest struct {
+	// Created view for given class.
+	ViewDTO shared.ViewDTO `request:"mediaType=application/json"`
 	// view's class name
 	ClassName string `pathParam:"style=simple,explode=false,name=className"`
-}
-
-type CreateRequest struct {
-	PathParams CreatePathParams
-	// Created view for given class.
-	Request shared.ViewDTO `request:"mediaType=application/json"`
 }
 
 type CreateResponse struct {

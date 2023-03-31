@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceVpnBgpPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceVpnBgpRequestBodyNeighborsIpv6 - Information regarding IPv6 address of the neighbor, Required if `ip` is not present.
 type UpdateNetworkApplianceVpnBgpRequestBodyNeighborsIpv6 struct {
 	// The IPv6 address of the neighbor.
@@ -45,8 +41,8 @@ type UpdateNetworkApplianceVpnBgpRequestBody struct {
 }
 
 type UpdateNetworkApplianceVpnBgpRequest struct {
-	PathParams UpdateNetworkApplianceVpnBgpPathParams
-	Request    UpdateNetworkApplianceVpnBgpRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkApplianceVpnBgpRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                  `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceVpnBgpResponse struct {

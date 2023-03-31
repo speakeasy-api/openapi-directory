@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetDeviceWirelessLatencyStatsPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 // GetDeviceWirelessLatencyStatsBandEnum - Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
 type GetDeviceWirelessLatencyStatsBandEnum string
 
@@ -39,13 +35,14 @@ func (e *GetDeviceWirelessLatencyStatsBandEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetDeviceWirelessLatencyStatsQueryParams struct {
+type GetDeviceWirelessLatencyStatsRequest struct {
 	// Filter results by AP Tag
 	ApTag *string `queryParam:"style=form,explode=true,name=apTag"`
 	// Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
 	Band *GetDeviceWirelessLatencyStatsBandEnum `queryParam:"style=form,explode=true,name=band"`
 	// Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Serial string  `pathParam:"style=simple,explode=false,name=serial"`
 	// Filter results by SSID
 	Ssid *int64 `queryParam:"style=form,explode=true,name=ssid"`
 	// The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -56,11 +53,6 @@ type GetDeviceWirelessLatencyStatsQueryParams struct {
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
 	// Filter results by VLAN
 	Vlan *int64 `queryParam:"style=form,explode=true,name=vlan"`
-}
-
-type GetDeviceWirelessLatencyStatsRequest struct {
-	PathParams  GetDeviceWirelessLatencyStatsPathParams
-	QueryParams GetDeviceWirelessLatencyStatsQueryParams
 }
 
 type GetDeviceWirelessLatencyStatsResponse struct {

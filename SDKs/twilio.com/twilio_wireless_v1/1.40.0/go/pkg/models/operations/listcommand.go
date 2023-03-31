@@ -12,10 +12,11 @@ var ListCommandServerList = []string{
 }
 
 type ListCommandSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCommandQueryParams struct {
+type ListCommandRequest struct {
 	// Only return Commands with this direction value.
 	Direction *shared.CommandEnumDirectionEnum `queryParam:"style=form,explode=true,name=Direction"`
 	// The page index. This value is simply for client state.
@@ -30,12 +31,6 @@ type ListCommandQueryParams struct {
 	Status *shared.CommandEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// Only return Commands with this transport value. Can be: `sms` or `ip`.
 	Transport *shared.CommandEnumTransportEnum `queryParam:"style=form,explode=true,name=Transport"`
-}
-
-type ListCommandRequest struct {
-	QueryParams ListCommandQueryParams
-	Security    ListCommandSecurity
-	ServerURL   *string
 }
 
 type ListCommandListCommandResponseMeta struct {

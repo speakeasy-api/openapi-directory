@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1BusinessusersQueryParams struct {
+type GetSetupV1BusinessusersRequest struct {
 	// Filter by email address
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Page limit default 20, max 100
@@ -18,10 +18,6 @@ type GetSetupV1BusinessusersQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Filter user role
 	Role *string `queryParam:"style=form,explode=true,name=role"`
-}
-
-type GetSetupV1BusinessusersRequest struct {
-	QueryParams GetSetupV1BusinessusersQueryParams
 }
 
 type GetSetupV1BusinessusersResponse struct {

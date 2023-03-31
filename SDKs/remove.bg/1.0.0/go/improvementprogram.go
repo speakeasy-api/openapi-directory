@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -45,7 +46,7 @@ func newImprovementProgram(defaultClient, securityClient HTTPClient, serverURL, 
 // Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
 //
 // Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
-func (s *improvementProgram) PostImproveForm(ctx context.Context, request operations.PostImproveFormRequest) (*operations.PostImproveFormResponse, error) {
+func (s *improvementProgram) PostImproveForm(ctx context.Context, request shared.ImprovementProgramJSON) (*operations.PostImproveFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/improve"
 
@@ -117,7 +118,7 @@ func (s *improvementProgram) PostImproveForm(ctx context.Context, request operat
 // Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
 //
 // Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
-func (s *improvementProgram) PostImproveJSON(ctx context.Context, request operations.PostImproveJSONRequest) (*operations.PostImproveJSONResponse, error) {
+func (s *improvementProgram) PostImproveJSON(ctx context.Context, request shared.ImprovementProgramJSON) (*operations.PostImproveJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/improve"
 
@@ -189,7 +190,7 @@ func (s *improvementProgram) PostImproveJSON(ctx context.Context, request operat
 // Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
 //
 // Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
-func (s *improvementProgram) PostImproveMultipart(ctx context.Context, request operations.PostImproveMultipartRequest) (*operations.PostImproveMultipartResponse, error) {
+func (s *improvementProgram) PostImproveMultipart(ctx context.Context, request shared.ImprovementProgramMultipart) (*operations.PostImproveMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/improve"
 

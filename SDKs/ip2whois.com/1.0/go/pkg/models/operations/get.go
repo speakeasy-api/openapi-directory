@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// Domain name for lookup purpose.
 	Domain string `queryParam:"style=form,explode=true,name=domain"`
 	// Returns the API response in json (default) or xml format.
 	Format *string `queryParam:"style=form,explode=true,name=format"`
 	// API key.
 	Key string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 type GetResponse struct {

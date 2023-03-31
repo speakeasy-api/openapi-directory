@@ -7,21 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteResourcesHeaders struct {
-	// Access Token
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type DeleteResourcesDeleteResourcesRequestBody struct {
 	// Resource identifiers of items to delete.
 	Resources []string `json:"resources"`
 }
 
 type DeleteResourcesRequest struct {
-	Headers DeleteResourcesHeaders
-	Request *DeleteResourcesDeleteResourcesRequestBody `request:"mediaType=application/json"`
+	RequestBody *DeleteResourcesDeleteResourcesRequestBody `request:"mediaType=application/json"`
+	// Access Token
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type DeleteResourcesResponse struct {

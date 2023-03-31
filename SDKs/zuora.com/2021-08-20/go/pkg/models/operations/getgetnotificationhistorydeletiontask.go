@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETGETNotificationHistoryDeletionTaskPathParams struct {
-	// The ID of the notification history deletion task. You can get the deletion task ID from the 202 response body of the [Delete notification histories for an account](https://www.zuora.com/developer/api-reference/#operation/DELETE_Delete_Notification_History_For_Account) operation.
-	//
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GETGETNotificationHistoryDeletionTaskHeaders struct {
+type GETGETNotificationHistoryDeletionTaskRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
@@ -27,11 +21,9 @@ type GETGETNotificationHistoryDeletionTaskHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETGETNotificationHistoryDeletionTaskRequest struct {
-	PathParams GETGETNotificationHistoryDeletionTaskPathParams
-	Headers    GETGETNotificationHistoryDeletionTaskHeaders
+	// The ID of the notification history deletion task. You can get the deletion task ID from the 202 response body of the [Delete notification histories for an account](https://www.zuora.com/developer/api-reference/#operation/DELETE_Delete_Notification_History_For_Account) operation.
+	//
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GETGETNotificationHistoryDeletionTaskResponse struct {

@@ -32,17 +32,13 @@ func (e *ListPendingTransactionsStatusInEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPendingTransactionsQueryParams struct {
+type ListPendingTransactionsRequest struct {
 	AccountID *string                               `queryParam:"style=form,explode=true,name=account_id"`
 	Cursor    *string                               `queryParam:"style=form,explode=true,name=cursor"`
 	Limit     *int64                                `queryParam:"style=form,explode=true,name=limit"`
 	RouteID   *string                               `queryParam:"style=form,explode=true,name=route_id"`
 	SourceID  *string                               `queryParam:"style=form,explode=true,name=source_id"`
 	StatusIn  []ListPendingTransactionsStatusInEnum `queryParam:"style=form,explode=true,name=status.in"`
-}
-
-type ListPendingTransactionsRequest struct {
-	QueryParams ListPendingTransactionsQueryParams
 }
 
 type ListPendingTransactionsDefaultApplicationJSON13StatusEnum string

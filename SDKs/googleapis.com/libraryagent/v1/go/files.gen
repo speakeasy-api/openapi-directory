@@ -20,7 +20,6 @@ pkg/models/operations/libraryagentshelveslist.go
 pkg/models/shared/googleexamplelibraryagentv1book.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleexamplelibraryagentv1listbooksresponse.go
 pkg/models/shared/googleexamplelibraryagentv1listshelvesresponse.go
 pkg/models/shared/googleexamplelibraryagentv1shelf.go

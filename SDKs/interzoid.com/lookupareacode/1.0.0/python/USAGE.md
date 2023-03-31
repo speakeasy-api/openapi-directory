@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetareacodeRequest(
-    query_params=operations.GetareacodeQueryParams(
-        areacode="minima",
-        license="in",
-    ),
+    areacode="corrupti",
+    license="provident",
 )
     
 res = s.area_code_information.getareacode(req)

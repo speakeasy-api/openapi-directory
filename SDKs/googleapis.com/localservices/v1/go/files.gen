@@ -20,7 +20,6 @@ pkg/models/shared/googleadshomeserviceslocalservicesv1accountreport.go
 pkg/models/shared/googleadshomeserviceslocalservicesv1aggregatorinfo.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googleadshomeserviceslocalservicesv1searchdetailedleadreportsresponse.go
 pkg/models/shared/googleadshomeserviceslocalservicesv1detailedleadreport.go
 pkg/models/shared/googletypetimezone.go

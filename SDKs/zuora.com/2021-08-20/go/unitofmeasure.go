@@ -35,14 +35,14 @@ func newUnitOfMeasure(defaultClient, securityClient HTTPClient, serverURL, langu
 // ObjectDELETEUnitOfMeasure - CRUD: Delete a unit of measure
 func (s *unitOfMeasure) ObjectDELETEUnitOfMeasure(ctx context.Context, request operations.ObjectDELETEUnitOfMeasureRequest) (*operations.ObjectDELETEUnitOfMeasureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/unit-of-measure/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/unit-of-measure/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -95,16 +95,16 @@ func (s *unitOfMeasure) ObjectDELETEUnitOfMeasure(ctx context.Context, request o
 // ObjectGETUnitOfMeasure - CRUD: Retrieve a unit of measure
 func (s *unitOfMeasure) ObjectGETUnitOfMeasure(ctx context.Context, request operations.ObjectGETUnitOfMeasureRequest) (*operations.ObjectGETUnitOfMeasureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/unit-of-measure/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/unit-of-measure/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -173,7 +173,7 @@ func (s *unitOfMeasure) ObjectPOSTUnitOfMeasure(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/object/unit-of-measure"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyCreateUnitOfMeasure", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -188,9 +188,9 @@ func (s *unitOfMeasure) ObjectPOSTUnitOfMeasure(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -257,9 +257,9 @@ func (s *unitOfMeasure) ObjectPOSTUnitOfMeasure(ctx context.Context, request ope
 // ObjectPUTUnitOfMeasure - CRUD: Update a unit of measure
 func (s *unitOfMeasure) ObjectPUTUnitOfMeasure(ctx context.Context, request operations.ObjectPUTUnitOfMeasureRequest) (*operations.ObjectPUTUnitOfMeasureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/unit-of-measure/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/unit-of-measure/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyUnitOfMeasure", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -274,9 +274,9 @@ func (s *unitOfMeasure) ObjectPUTUnitOfMeasure(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

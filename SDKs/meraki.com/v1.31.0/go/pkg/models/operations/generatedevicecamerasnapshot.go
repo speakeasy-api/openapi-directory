@@ -7,10 +7,6 @@ import (
 	"time"
 )
 
-type GenerateDeviceCameraSnapshotPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type GenerateDeviceCameraSnapshotRequestBody struct {
 	// [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
 	Fullframe *bool `json:"fullframe,omitempty"`
@@ -19,8 +15,8 @@ type GenerateDeviceCameraSnapshotRequestBody struct {
 }
 
 type GenerateDeviceCameraSnapshotRequest struct {
-	PathParams GenerateDeviceCameraSnapshotPathParams
-	Request    *GenerateDeviceCameraSnapshotRequestBody `request:"mediaType=application/json"`
+	RequestBody *GenerateDeviceCameraSnapshotRequestBody `request:"mediaType=application/json"`
+	Serial      string                                   `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type GenerateDeviceCameraSnapshotResponse struct {

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetcampaignconfigurationPathParams struct {
-	// Campaign audience unique identifier.
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
-}
-
-type GetcampaignconfigurationHeaders struct {
+type GetcampaignconfigurationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Describes the type of the content being sent.
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetcampaignconfigurationRequest struct {
-	PathParams GetcampaignconfigurationPathParams
-	Headers    GetcampaignconfigurationHeaders
+	// Campaign audience unique identifier.
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
 }
 
 // Getcampaignconfiguration200ApplicationJSONLastModified - Object with information about the most recent update of the campaign audience.

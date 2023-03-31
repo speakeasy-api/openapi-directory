@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendPathParams struct {
-	// Id of the person
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the invitation
-	InvitationID string `pathParam:"style=simple,explode=false,name=invitationId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendRequestBody - content of invitation message to send
@@ -29,10 +19,14 @@ type PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendRequestBody struct {
 }
 
 type PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendRequest struct {
-	PathParams PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendPathParams
 	// content of invitation message to send
-	Request  PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendSecurity
+	RequestBody PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendRequestBody `request:"mediaType=application/json"`
+	// Id of the person
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the invitation
+	InvitationID string `pathParam:"style=simple,explode=false,name=invitationId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDPersonsIDInvitationInvitationIDSend201ApplicationJSON - Id of document created

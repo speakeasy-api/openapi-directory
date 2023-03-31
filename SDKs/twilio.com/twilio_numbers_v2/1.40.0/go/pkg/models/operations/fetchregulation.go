@@ -12,18 +12,13 @@ var FetchRegulationServerList = []string{
 }
 
 type FetchRegulationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchRegulationPathParams struct {
-	// The unique string that identifies the Regulation resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchRegulationRequest struct {
-	PathParams FetchRegulationPathParams
-	Security   FetchRegulationSecurity
-	ServerURL  *string
+	// The unique string that identifies the Regulation resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchRegulationResponse struct {

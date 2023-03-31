@@ -13,24 +13,16 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateNewCustomerAddressRequest{
-        QueryParams: operations.CreateNewCustomerAddressQueryParams{
-            Schema: "schema",
-        },
-        Headers: operations.CreateNewCustomerAddressHeaders{
-            Accept: "application/json",
-            ContentType: "application/json",
-        },
-        Request: shared.CreateUpdateAddressRequests{
+        Accept: "application/json",
+        ContentType: "application/json",
+        Schema: "schema",
+        CreateUpdateAddressRequests: shared.CreateUpdateAddressRequests{
             AddressName: "My house",
             AddressType: "residential",
             City: "Rio de Janeiro",

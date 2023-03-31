@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesScreenshotsListPathParams struct {
+type GamesScreenshotsListRequest struct {
 	GamePk string `pathParam:"style=simple,explode=false,name=game_pk"`
-}
-
-type GamesScreenshotsListQueryParams struct {
 	// Which field to use when ordering the results.
 	Ordering *string `queryParam:"style=form,explode=true,name=ordering"`
 	// A page number within the paginated result set.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results to return per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GamesScreenshotsListRequest struct {
-	PathParams  GamesScreenshotsListPathParams
-	QueryParams GamesScreenshotsListQueryParams
 }
 
 type GamesScreenshotsList200ApplicationJSON struct {

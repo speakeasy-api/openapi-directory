@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDPasswordsSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDPasswordsPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // PostSpacesSpaceIDFoldersIDPasswordsRequestBody - Password to write
@@ -28,10 +20,12 @@ type PostSpacesSpaceIDFoldersIDPasswordsRequestBody struct {
 }
 
 type PostSpacesSpaceIDFoldersIDPasswordsRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDPasswordsPathParams
 	// Password to write
-	Request  PostSpacesSpaceIDFoldersIDPasswordsRequestBody `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDPasswordsSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDPasswordsRequestBody `request:"mediaType=application/json"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PostSpacesSpaceIDFoldersIDPasswordsResponse struct {

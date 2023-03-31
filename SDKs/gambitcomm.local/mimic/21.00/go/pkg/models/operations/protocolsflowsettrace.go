@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSflowSetTracePathParams struct {
+type ProtocolSflowSetTraceRequest struct {
 	// Agent to set the SFLOW tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the SFLOW tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolSflowSetTraceRequest struct {
-	PathParams ProtocolSflowSetTracePathParams
 }
 
 type ProtocolSflowSetTraceResponse struct {

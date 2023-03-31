@@ -12,17 +12,15 @@ var ListServiceConversationMessageServerList = []string{
 }
 
 type ListServiceConversationMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListServiceConversationMessagePathParams struct {
+type ListServiceConversationMessageRequest struct {
 	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
 	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for messages.
 	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-}
-
-type ListServiceConversationMessageQueryParams struct {
 	// The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending), with `asc` as the default.
 	Order *shared.ServiceConversationMessageEnumOrderTypeEnum `queryParam:"style=form,explode=true,name=Order"`
 	// The page index. This value is simply for client state.
@@ -31,13 +29,6 @@ type ListServiceConversationMessageQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListServiceConversationMessageRequest struct {
-	PathParams  ListServiceConversationMessagePathParams
-	QueryParams ListServiceConversationMessageQueryParams
-	Security    ListServiceConversationMessageSecurity
-	ServerURL   *string
 }
 
 type ListServiceConversationMessageListServiceConversationMessageResponseMeta struct {

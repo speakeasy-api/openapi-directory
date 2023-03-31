@@ -12,18 +12,13 @@ var FetchEventTypeServerList = []string{
 }
 
 type FetchEventTypeSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchEventTypePathParams struct {
-	// A string that uniquely identifies this Event Type.
-	Type string `pathParam:"style=simple,explode=false,name=Type"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchEventTypeRequest struct {
-	PathParams FetchEventTypePathParams
-	Security   FetchEventTypeSecurity
-	ServerURL  *string
+	// A string that uniquely identifies this Event Type.
+	Type string `pathParam:"style=simple,explode=false,name=Type"`
 }
 
 type FetchEventTypeResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMibsPathParams struct {
+type GetMibsRequest struct {
 	// Agent to return the MIB triplets
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type GetMibsRequest struct {
-	PathParams GetMibsPathParams
 }
 
 type GetMibsResponse struct {

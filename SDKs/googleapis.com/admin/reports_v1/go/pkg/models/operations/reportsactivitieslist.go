@@ -10,8 +10,8 @@ import (
 )
 
 type ReportsActivitiesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportsActivitiesListApplicationNameEnum - Application name for which the events are to be retrieved.
@@ -95,14 +95,7 @@ func (e *ReportsActivitiesListApplicationNameEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ReportsActivitiesListPathParams struct {
-	// Application name for which the events are to be retrieved.
-	ApplicationName ReportsActivitiesListApplicationNameEnum `pathParam:"style=simple,explode=false,name=applicationName"`
-	// Represents the profile ID or the user email for which the data should be filtered. Can be `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or their primary email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
-	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
-}
-
-type ReportsActivitiesListQueryParams struct {
+type ReportsActivitiesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -111,6 +104,8 @@ type ReportsActivitiesListQueryParams struct {
 	ActorIPAddress *string `queryParam:"style=form,explode=true,name=actorIpAddress"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Application name for which the events are to be retrieved.
+	ApplicationName ReportsActivitiesListApplicationNameEnum `pathParam:"style=simple,explode=false,name=applicationName"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// The unique ID of the customer to retrieve data for.
@@ -145,12 +140,8 @@ type ReportsActivitiesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ReportsActivitiesListRequest struct {
-	PathParams  ReportsActivitiesListPathParams
-	QueryParams ReportsActivitiesListQueryParams
-	Security    ReportsActivitiesListSecurity
+	// Represents the profile ID or the user email for which the data should be filtered. Can be `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or their primary email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
+	UserKey string `pathParam:"style=simple,explode=false,name=userKey"`
 }
 
 type ReportsActivitiesListResponse struct {

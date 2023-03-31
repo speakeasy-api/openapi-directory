@@ -36,7 +36,7 @@ func newInsight(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Returns NEBL address object containing information on a specific address
 func (s *insight) GetAddress(ctx context.Context, request operations.GetAddressRequest) (*operations.GetAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *insight) GetAddress(ctx context.Context, request operations.GetAddressR
 // Returns NEBL address balance in satoshis
 func (s *insight) GetAddressBalance(ctx context.Context, request operations.GetAddressBalanceRequest) (*operations.GetAddressBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/balance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/balance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *insight) GetAddressBalance(ctx context.Context, request operations.GetA
 // Returns total NEBL received by address in satoshis
 func (s *insight) GetAddressTotalReceived(ctx context.Context, request operations.GetAddressTotalReceivedRequest) (*operations.GetAddressTotalReceivedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/totalReceived", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/totalReceived", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *insight) GetAddressTotalReceived(ctx context.Context, request operation
 // Returns total NEBL sent by address in satoshis
 func (s *insight) GetAddressTotalSent(ctx context.Context, request operations.GetAddressTotalSentRequest) (*operations.GetAddressTotalSentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/totalSent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/totalSent", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,7 +216,7 @@ func (s *insight) GetAddressTotalSent(ctx context.Context, request operations.Ge
 // Returns NEBL address unconfirmed balance in satoshis
 func (s *insight) GetAddressUnconfirmedBalance(ctx context.Context, request operations.GetAddressUnconfirmedBalanceRequest) (*operations.GetAddressUnconfirmedBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/unconfirmedBalance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/unconfirmedBalance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *insight) GetAddressUnconfirmedBalance(ctx context.Context, request oper
 // Returns information on each Unspent Transaction Output contained at an address
 func (s *insight) GetAddressUtxos(ctx context.Context, request operations.GetAddressUtxosRequest) (*operations.GetAddressUtxosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/utxo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/addr/{address}/utxo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *insight) GetAddressUtxos(ctx context.Context, request operations.GetAdd
 // Returns blockchain data for a given block based upon the block hash
 func (s *insight) GetBlock(ctx context.Context, request operations.GetBlockRequest) (*operations.GetBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/block/{blockhash}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/block/{blockhash}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +351,7 @@ func (s *insight) GetBlock(ctx context.Context, request operations.GetBlockReque
 // Returns the block hash of a block at a given block index
 func (s *insight) GetBlockIndex(ctx context.Context, request operations.GetBlockIndexRequest) (*operations.GetBlockIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/block-index/{blockindex}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/block-index/{blockindex}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -396,7 +396,7 @@ func (s *insight) GetBlockIndex(ctx context.Context, request operations.GetBlock
 // Returns raw transaction hex representing a NEBL transaction
 func (s *insight) GetRawTx(ctx context.Context, request operations.GetRawTxRequest) (*operations.GetRawTxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/rawtx/{txid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/rawtx/{txid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -448,7 +448,7 @@ func (s *insight) GetStatus(ctx context.Context, request operations.GetStatusReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -535,7 +535,7 @@ func (s *insight) GetSync(ctx context.Context) (*operations.GetSyncResponse, err
 // Returns NEBL transaction object representing a NEBL transaction
 func (s *insight) GetTx(ctx context.Context, request operations.GetTxRequest) (*operations.GetTxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ins/tx/{txid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ins/tx/{txid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -587,7 +587,7 @@ func (s *insight) GetTxs(ctx context.Context, request operations.GetTxsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -627,7 +627,7 @@ func (s *insight) GetTxs(ctx context.Context, request operations.GetTxsRequest) 
 
 // SendTx - Broadcasts a signed raw transaction to the network (not NTP1 specific)
 // Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.
-func (s *insight) SendTx(ctx context.Context, request operations.SendTxRequest) (*operations.SendTxResponse, error) {
+func (s *insight) SendTx(ctx context.Context, request shared.SendTxRequest) (*operations.SendTxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ins/tx/send"
 

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidHotspot20PathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 type UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs struct {
 	// MCC value
 	Mcc *string `json:"mcc,omitempty"`
@@ -352,8 +347,9 @@ type UpdateNetworkWirelessSsidHotspot20RequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidHotspot20Request struct {
-	PathParams UpdateNetworkWirelessSsidHotspot20PathParams
-	Request    *UpdateNetworkWirelessSsidHotspot20RequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidHotspot20RequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                         `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                         `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidHotspot20Response struct {

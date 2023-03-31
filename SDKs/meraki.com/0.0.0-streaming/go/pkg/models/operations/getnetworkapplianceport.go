@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkAppliancePortPathParams struct {
+type GetNetworkAppliancePortRequest struct {
 	AppliancePortID string `pathParam:"style=simple,explode=false,name=appliancePortId"`
 	NetworkID       string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkAppliancePortRequest struct {
-	PathParams GetNetworkAppliancePortPathParams
 }
 
 type GetNetworkAppliancePortResponse struct {

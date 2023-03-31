@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmKeysPathParams struct {
+type GetRealmKeysRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmKeysRequest struct {
-	PathParams GetRealmKeysPathParams
 }
 
 type GetRealmKeysResponse struct {

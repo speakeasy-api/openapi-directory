@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type VmxNetworkDevicesClaimPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // VmxNetworkDevicesClaimRequestBodySizeEnum - The size of the vMX you claim. It can be one of: small, medium, large, 100
 type VmxNetworkDevicesClaimRequestBodySizeEnum string
 
@@ -48,8 +44,8 @@ type VmxNetworkDevicesClaimRequestBody struct {
 }
 
 type VmxNetworkDevicesClaimRequest struct {
-	PathParams VmxNetworkDevicesClaimPathParams
-	Request    VmxNetworkDevicesClaimRequestBody `request:"mediaType=application/json"`
+	RequestBody VmxNetworkDevicesClaimRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                            `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type VmxNetworkDevicesClaimResponse struct {

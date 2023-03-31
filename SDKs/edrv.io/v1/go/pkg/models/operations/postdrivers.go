@@ -61,11 +61,6 @@ type PostDriversRequestBody struct {
 	Source    PostDriversRequestBodySourceEnum `json:"source"`
 }
 
-type PostDriversRequest struct {
-	// Include driver properties to create here
-	Request PostDriversRequestBody `request:"mediaType=application/json"`
-}
-
 // PostDrivers200ApplicationJSON - Returns the newly created driver object
 type PostDrivers200ApplicationJSON struct {
 	Message *string                `json:"message,omitempty"`

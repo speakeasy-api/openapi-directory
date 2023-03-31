@@ -10,13 +10,8 @@ import (
 )
 
 type DfareportingBillingProfilesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type DfareportingBillingProfilesListPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // DfareportingBillingProfilesListSortFieldEnum - Field by which to sort the list.
@@ -93,7 +88,7 @@ func (e *DfareportingBillingProfilesListStatusEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type DfareportingBillingProfilesListQueryParams struct {
+type DfareportingBillingProfilesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -122,6 +117,8 @@ type DfareportingBillingProfilesListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Field by which to sort the list.
@@ -136,12 +133,6 @@ type DfareportingBillingProfilesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingBillingProfilesListRequest struct {
-	PathParams  DfareportingBillingProfilesListPathParams
-	QueryParams DfareportingBillingProfilesListQueryParams
-	Security    DfareportingBillingProfilesListSecurity
 }
 
 type DfareportingBillingProfilesListResponse struct {

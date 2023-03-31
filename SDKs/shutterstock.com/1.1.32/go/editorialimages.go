@@ -34,7 +34,7 @@ func newEditorialImages(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // GetEditorialCategories - (Deprecated) List editorial categories
 // Deprecated; use `GET /v2/editorial/images/categories` instead. This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-func (s *editorialImages) GetEditorialCategories(ctx context.Context, request operations.GetEditorialCategoriesRequest) (*operations.GetEditorialCategoriesResponse, error) {
+func (s *editorialImages) GetEditorialCategories(ctx context.Context) (*operations.GetEditorialCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/categories"
 
@@ -43,7 +43,7 @@ func (s *editorialImages) GetEditorialCategories(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -84,20 +84,20 @@ func (s *editorialImages) GetEditorialCategories(ctx context.Context, request op
 
 // GetEditorialImage - Get editorial content details
 // This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
-func (s *editorialImages) GetEditorialImage(ctx context.Context, request operations.GetEditorialImageRequest) (*operations.GetEditorialImageResponse, error) {
+func (s *editorialImages) GetEditorialImage(ctx context.Context, request operations.GetEditorialImageRequest, security operations.GetEditorialImageSecurity) (*operations.GetEditorialImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *editorialImages) GetEditorialImage(ctx context.Context, request operati
 
 // GetEditorialImageLicenseList - List editorial image licenses
 // This endpoint lists existing editorial image licenses.
-func (s *editorialImages) GetEditorialImageLicenseList(ctx context.Context, request operations.GetEditorialImageLicenseListRequest) (*operations.GetEditorialImageLicenseListResponse, error) {
+func (s *editorialImages) GetEditorialImageLicenseList(ctx context.Context, request operations.GetEditorialImageLicenseListRequest, security operations.GetEditorialImageLicenseListSecurity) (*operations.GetEditorialImageLicenseListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/licenses"
 
@@ -149,11 +149,11 @@ func (s *editorialImages) GetEditorialImageLicenseList(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -193,20 +193,20 @@ func (s *editorialImages) GetEditorialImageLicenseList(ctx context.Context, requ
 }
 
 // GetEditorialImageLivefeed - Get editorial livefeed
-func (s *editorialImages) GetEditorialImageLivefeed(ctx context.Context, request operations.GetEditorialImageLivefeedRequest) (*operations.GetEditorialImageLivefeedResponse, error) {
+func (s *editorialImages) GetEditorialImageLivefeed(ctx context.Context, request operations.GetEditorialImageLivefeedRequest, security operations.GetEditorialImageLivefeedSecurity) (*operations.GetEditorialImageLivefeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,20 +248,20 @@ func (s *editorialImages) GetEditorialImageLivefeed(ctx context.Context, request
 }
 
 // GetEditorialImageLivefeedItems - Get editorial livefeed items
-func (s *editorialImages) GetEditorialImageLivefeedItems(ctx context.Context, request operations.GetEditorialImageLivefeedItemsRequest) (*operations.GetEditorialImageLivefeedItemsResponse, error) {
+func (s *editorialImages) GetEditorialImageLivefeedItems(ctx context.Context, request operations.GetEditorialImageLivefeedItemsRequest, security operations.GetEditorialImageLivefeedItemsSecurity) (*operations.GetEditorialImageLivefeedItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -303,7 +303,7 @@ func (s *editorialImages) GetEditorialImageLivefeedItems(ctx context.Context, re
 }
 
 // GetEditorialImageLivefeedList - Get editorial livefeed list
-func (s *editorialImages) GetEditorialImageLivefeedList(ctx context.Context, request operations.GetEditorialImageLivefeedListRequest) (*operations.GetEditorialImageLivefeedListResponse, error) {
+func (s *editorialImages) GetEditorialImageLivefeedList(ctx context.Context, request operations.GetEditorialImageLivefeedListRequest, security operations.GetEditorialImageLivefeedListSecurity) (*operations.GetEditorialImageLivefeedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/livefeeds"
 
@@ -312,11 +312,11 @@ func (s *editorialImages) GetEditorialImageLivefeedList(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,20 +359,20 @@ func (s *editorialImages) GetEditorialImageLivefeedList(ctx context.Context, req
 
 // GetEditorialLivefeed - (Deprecated) Get editorial livefeed
 // Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
-func (s *editorialImages) GetEditorialLivefeed(ctx context.Context, request operations.GetEditorialLivefeedRequest) (*operations.GetEditorialLivefeedResponse, error) {
+func (s *editorialImages) GetEditorialLivefeed(ctx context.Context, request operations.GetEditorialLivefeedRequest, security operations.GetEditorialLivefeedSecurity) (*operations.GetEditorialLivefeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -415,20 +415,20 @@ func (s *editorialImages) GetEditorialLivefeed(ctx context.Context, request oper
 
 // GetEditorialLivefeedItems - (Deprecated) Get editorial livefeed items
 // Deprecated; use `GET /v2/editorial/images/livefeeds/{id}/items` instead to get editorial livefeed items.
-func (s *editorialImages) GetEditorialLivefeedItems(ctx context.Context, request operations.GetEditorialLivefeedItemsRequest) (*operations.GetEditorialLivefeedItemsResponse, error) {
+func (s *editorialImages) GetEditorialLivefeedItems(ctx context.Context, request operations.GetEditorialLivefeedItemsRequest, security operations.GetEditorialLivefeedItemsSecurity) (*operations.GetEditorialLivefeedItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -471,7 +471,7 @@ func (s *editorialImages) GetEditorialLivefeedItems(ctx context.Context, request
 
 // GetEditorialLivefeedList - (Deprecated) Get editorial livefeed list
 // Deprecated; use `GET /v2/editorial/images/livefeeds` instead to get a list of editorial livefeeds.
-func (s *editorialImages) GetEditorialLivefeedList(ctx context.Context, request operations.GetEditorialLivefeedListRequest) (*operations.GetEditorialLivefeedListResponse, error) {
+func (s *editorialImages) GetEditorialLivefeedList(ctx context.Context, request operations.GetEditorialLivefeedListRequest, security operations.GetEditorialLivefeedListSecurity) (*operations.GetEditorialLivefeedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/livefeeds"
 
@@ -480,11 +480,11 @@ func (s *editorialImages) GetEditorialLivefeedList(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -527,7 +527,7 @@ func (s *editorialImages) GetEditorialLivefeedList(ctx context.Context, request 
 
 // GetUpdatedEditorialImage - (Deprecated) List updated content
 // Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
-func (s *editorialImages) GetUpdatedEditorialImage(ctx context.Context, request operations.GetUpdatedEditorialImageRequest) (*operations.GetUpdatedEditorialImageResponse, error) {
+func (s *editorialImages) GetUpdatedEditorialImage(ctx context.Context, request operations.GetUpdatedEditorialImageRequest, security operations.GetUpdatedEditorialImageSecurity) (*operations.GetUpdatedEditorialImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/updated"
 
@@ -536,11 +536,11 @@ func (s *editorialImages) GetUpdatedEditorialImage(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -583,7 +583,7 @@ func (s *editorialImages) GetUpdatedEditorialImage(ctx context.Context, request 
 
 // GetUpdatedEditorialImages - List updated content
 // This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
-func (s *editorialImages) GetUpdatedEditorialImages(ctx context.Context, request operations.GetUpdatedEditorialImagesRequest) (*operations.GetUpdatedEditorialImagesResponse, error) {
+func (s *editorialImages) GetUpdatedEditorialImages(ctx context.Context, request operations.GetUpdatedEditorialImagesRequest, security operations.GetUpdatedEditorialImagesSecurity) (*operations.GetUpdatedEditorialImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/updated"
 
@@ -592,11 +592,11 @@ func (s *editorialImages) GetUpdatedEditorialImages(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -639,20 +639,20 @@ func (s *editorialImages) GetUpdatedEditorialImages(ctx context.Context, request
 
 // GetV2EditorialID - (Deprecated) Get editorial content details
 // Deprecated; use `GET /v2/editorial/images/{id}` instead to show information about an editorial image, including a URL to a preview image and the sizes that it is available in.
-func (s *editorialImages) GetV2EditorialID(ctx context.Context, request operations.GetV2EditorialIDRequest) (*operations.GetV2EditorialIDResponse, error) {
+func (s *editorialImages) GetV2EditorialID(ctx context.Context, request operations.GetV2EditorialIDRequest, security operations.GetV2EditorialIDSecurity) (*operations.GetV2EditorialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -695,7 +695,7 @@ func (s *editorialImages) GetV2EditorialID(ctx context.Context, request operatio
 
 // LicenseEditorialImage - (Deprecated) License editorial content
 // Deprecated; use `POST /v2/editorial/images/licenses` instead to get licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
-func (s *editorialImages) LicenseEditorialImage(ctx context.Context, request operations.LicenseEditorialImageRequest) (*operations.LicenseEditorialImageResponse, error) {
+func (s *editorialImages) LicenseEditorialImage(ctx context.Context, request shared.LicenseEditorialContentRequest, security operations.LicenseEditorialImageSecurity) (*operations.LicenseEditorialImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/licenses"
 
@@ -714,7 +714,7 @@ func (s *editorialImages) LicenseEditorialImage(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -757,7 +757,7 @@ func (s *editorialImages) LicenseEditorialImage(ctx context.Context, request ope
 
 // LicenseEditorialImages - License editorial content
 // This endpoint gets licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
-func (s *editorialImages) LicenseEditorialImages(ctx context.Context, request operations.LicenseEditorialImagesRequest) (*operations.LicenseEditorialImagesResponse, error) {
+func (s *editorialImages) LicenseEditorialImages(ctx context.Context, request shared.LicenseEditorialContentRequest, security operations.LicenseEditorialImagesSecurity) (*operations.LicenseEditorialImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/licenses"
 
@@ -776,7 +776,7 @@ func (s *editorialImages) LicenseEditorialImages(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -819,7 +819,7 @@ func (s *editorialImages) LicenseEditorialImages(ctx context.Context, request op
 
 // ListEditorialImageCategories - List editorial categories
 // This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-func (s *editorialImages) ListEditorialImageCategories(ctx context.Context, request operations.ListEditorialImageCategoriesRequest) (*operations.ListEditorialImageCategoriesResponse, error) {
+func (s *editorialImages) ListEditorialImageCategories(ctx context.Context) (*operations.ListEditorialImageCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/categories"
 
@@ -828,7 +828,7 @@ func (s *editorialImages) ListEditorialImageCategories(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -869,7 +869,7 @@ func (s *editorialImages) ListEditorialImageCategories(ctx context.Context, requ
 
 // SearchEditorial - (Deprecated) Search editorial content
 // Deprecated; use `GET /v2/editorial/images/search` instead to search for editorial images.
-func (s *editorialImages) SearchEditorial(ctx context.Context, request operations.SearchEditorialRequest) (*operations.SearchEditorialResponse, error) {
+func (s *editorialImages) SearchEditorial(ctx context.Context, request operations.SearchEditorialRequest, security operations.SearchEditorialSecurity) (*operations.SearchEditorialResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/search"
 
@@ -878,11 +878,11 @@ func (s *editorialImages) SearchEditorial(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -925,7 +925,7 @@ func (s *editorialImages) SearchEditorial(ctx context.Context, request operation
 
 // SearchEditorialImages - Search editorial images
 // This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to "Alone,Performing" and also specify a `query` parameter, the results include only images that match the query and are in both the Alone and Performing categories. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
-func (s *editorialImages) SearchEditorialImages(ctx context.Context, request operations.SearchEditorialImagesRequest) (*operations.SearchEditorialImagesResponse, error) {
+func (s *editorialImages) SearchEditorialImages(ctx context.Context, request operations.SearchEditorialImagesRequest, security operations.SearchEditorialImagesSecurity) (*operations.SearchEditorialImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/search"
 
@@ -934,11 +934,11 @@ func (s *editorialImages) SearchEditorialImages(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

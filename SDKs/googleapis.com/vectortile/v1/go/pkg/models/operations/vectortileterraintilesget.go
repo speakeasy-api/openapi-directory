@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VectortileTerraintilesGetPathParams struct {
-	// Required. Resource name of the tile. The tile resource name is prefixed by its collection ID `terraintiles/` followed by the resource ID, which encodes the tile's global x and y coordinates and zoom level as `@,,z`. For example, `terraintiles/@1,2,3z`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 // VectortileTerraintilesGetClientInfoPlatformEnum - Platform where the application is running.
 type VectortileTerraintilesGetClientInfoPlatformEnum string
 
@@ -82,7 +77,7 @@ func (e *VectortileTerraintilesGetTerrainFormatsEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type VectortileTerraintilesGetQueryParams struct {
+type VectortileTerraintilesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -125,6 +120,8 @@ type VectortileTerraintilesGetQueryParams struct {
 	MaxElevationResolutionCells *int64 `queryParam:"style=form,explode=true,name=maxElevationResolutionCells"`
 	//  api-linter: core::0131::request-unknown-fields=disabled aip.dev/not-precedent: Maintaining existing request parameter pattern. The minimum allowed resolution for the returned elevation heightmap. Possible values: between 0 and 1024 (and not more than max_elevation_resolution_cells). Zero is supported for backward compatibility. Under-sized heightmaps will be non-uniformly up-sampled such that each edge is no shorter than this value. Non-uniformity is chosen to maximise the amount of preserved data. For example: Original resolution: 30px (width) * 10px (height) min_elevation_resolution: 30 New resolution: 30px (width) * 30px (height)
 	MinElevationResolutionCells *int64 `queryParam:"style=form,explode=true,name=minElevationResolutionCells"`
+	// Required. Resource name of the tile. The tile resource name is prefixed by its collection ID `terraintiles/` followed by the resource ID, which encodes the tile's global x and y coordinates and zoom level as `@,,z`. For example, `terraintiles/@1,2,3z`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -139,11 +136,6 @@ type VectortileTerraintilesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type VectortileTerraintilesGetRequest struct {
-	PathParams  VectortileTerraintilesGetPathParams
-	QueryParams VectortileTerraintilesGetQueryParams
 }
 
 type VectortileTerraintilesGetResponse struct {

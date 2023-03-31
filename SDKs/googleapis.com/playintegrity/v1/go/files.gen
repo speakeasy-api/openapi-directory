@@ -21,8 +21,7 @@ pkg/models/shared/deviceintegrity.go
 pkg/models/shared/appintegrity.go
 pkg/models/shared/accountdetails.go
 pkg/models/shared/accountactivity.go
-pkg/models/shared/decodeintegritytokenrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/decodeintegritytokenrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 USAGE.md

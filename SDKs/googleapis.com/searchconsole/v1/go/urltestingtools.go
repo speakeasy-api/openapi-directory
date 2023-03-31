@@ -37,7 +37,7 @@ func (s *urlTestingTools) SearchconsoleURLTestingToolsMobileFriendlyTestRun(ctx 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/urlTestingTools/mobileFriendlyTest:run"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunMobileFriendlyTestRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *urlTestingTools) SearchconsoleURLTestingToolsMobileFriendlyTestRun(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

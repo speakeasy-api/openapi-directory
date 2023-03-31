@@ -8,17 +8,13 @@ import (
 )
 
 type ProductNumberSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ProductNumberPathParams struct {
-	// Unique number that identifies the Product.
-	ProductNumber string `pathParam:"style=simple,explode=false,name=productNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ProductNumberRequest struct {
-	PathParams ProductNumberPathParams
-	Security   ProductNumberSecurity
+	// Unique number that identifies the Product.
+	ProductNumber string `pathParam:"style=simple,explode=false,name=productNumber"`
 }
 
 type ProductNumberResponse struct {

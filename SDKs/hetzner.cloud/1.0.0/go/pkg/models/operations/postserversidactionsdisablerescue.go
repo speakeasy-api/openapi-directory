@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type PostServersIDActionsDisableRescuePathParams struct {
+type PostServersIDActionsDisableRescueRequest struct {
 	// ID of the Server
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostServersIDActionsDisableRescueRequest struct {
-	PathParams PostServersIDActionsDisableRescuePathParams
 }
 
 // PostServersIDActionsDisableRescueActionResponseActionError - Error message for the Action if error occurred, otherwise null

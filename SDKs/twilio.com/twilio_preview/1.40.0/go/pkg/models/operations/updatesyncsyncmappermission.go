@@ -12,16 +12,8 @@ var UpdateSyncSyncMapPermissionServerList = []string{
 }
 
 type UpdateSyncSyncMapPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSyncSyncMapPermissionPathParams struct {
-	// Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
-	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
-	// Identifier of the Sync Map. Either a SID or a unique name.
-	MapSid string `pathParam:"style=simple,explode=false,name=MapSid"`
-	// The unique SID identifier of the Sync Service Instance.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest struct {
@@ -34,10 +26,13 @@ type UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest struct {
 }
 
 type UpdateSyncSyncMapPermissionRequest struct {
-	PathParams UpdateSyncSyncMapPermissionPathParams
-	Request    *UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSyncSyncMapPermissionSecurity
-	ServerURL  *string
+	// Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
+	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
+	// Identifier of the Sync Map. Either a SID or a unique name.
+	MapSid      string                                                         `pathParam:"style=simple,explode=false,name=MapSid"`
+	RequestBody *UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Sync Service Instance.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type UpdateSyncSyncMapPermissionResponse struct {

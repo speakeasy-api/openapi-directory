@@ -4,21 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type FileUploadSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	OAuth      *shared.SchemeOAuth      `security:"scheme,type=oauth2"`
-}
-
-type FileUploadQueryParams struct {
-	// Customer ID
-	C int64 `queryParam:"style=form,explode=true,name=c"`
-	// If true, the server returns the extracted document that was indexed
-	D *bool `queryParam:"style=form,explode=true,name=d"`
-	// Corpus ID
-	O int64 `queryParam:"style=form,explode=true,name=o"`
+	APIKeyAuth *string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
+	OAuth      *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FileUploadRequestBodyFile struct {
@@ -34,9 +24,13 @@ type FileUploadRequestBody struct {
 }
 
 type FileUploadRequest struct {
-	QueryParams FileUploadQueryParams
-	Request     *FileUploadRequestBody `request:"mediaType=multipart/form-data"`
-	Security    FileUploadSecurity
+	RequestBody *FileUploadRequestBody `request:"mediaType=multipart/form-data"`
+	// Customer ID
+	C int64 `queryParam:"style=form,explode=true,name=c"`
+	// If true, the server returns the extracted document that was indexed
+	D *bool `queryParam:"style=form,explode=true,name=d"`
+	// Corpus ID
+	O int64 `queryParam:"style=form,explode=true,name=o"`
 }
 
 // FileUpload400ApplicationJSON - An invalid request was sent.  e.g. one or more parameters was missing, or the corpus does not exist.

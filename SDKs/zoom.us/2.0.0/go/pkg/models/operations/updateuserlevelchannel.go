@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateUserLevelChannelSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateUserLevelChannelPathParams struct {
-	// Channel Id.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateUserLevelChannelApplicationJSON struct {
@@ -22,9 +16,9 @@ type UpdateUserLevelChannelApplicationJSON struct {
 }
 
 type UpdateUserLevelChannelRequest struct {
-	PathParams UpdateUserLevelChannelPathParams
-	Request    *UpdateUserLevelChannelApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateUserLevelChannelSecurity
+	RequestBody *UpdateUserLevelChannelApplicationJSON `request:"mediaType=application/json"`
+	// Channel Id.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 }
 
 type UpdateUserLevelChannelResponse struct {

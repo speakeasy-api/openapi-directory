@@ -8,17 +8,12 @@ import (
 )
 
 type GetPaymentPolicySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPaymentPolicyPathParams struct {
-	// This path parameter specifies the ID of the payment policy you want to retrieve.
-	PaymentPolicyID string `pathParam:"style=simple,explode=false,name=payment_policy_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPaymentPolicyRequest struct {
-	PathParams GetPaymentPolicyPathParams
-	Security   GetPaymentPolicySecurity
+	// This path parameter specifies the ID of the payment policy you want to retrieve.
+	PaymentPolicyID string `pathParam:"style=simple,explode=false,name=payment_policy_id"`
 }
 
 type GetPaymentPolicyResponse struct {

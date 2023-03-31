@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetNetworksQueryParams struct {
+type GetNetworksRequest struct {
 	// Can be used to filter networks by labels. The response will only contain networks with a matching label selector pattern.
 	LabelSelector *string `queryParam:"style=form,explode=true,name=label_selector"`
 	// Can be used to filter networks by their name. The response will only contain the networks matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetNetworksRequest struct {
-	QueryParams GetNetworksQueryParams
 }
 
 type GetNetworks200ApplicationJSONMetaPagination struct {

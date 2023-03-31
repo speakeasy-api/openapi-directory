@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete4PathParams struct {
+type Delete4Request struct {
 	// customer price list's internal identifier
 	PriceListID int64 `pathParam:"style=simple,explode=false,name=priceListId"`
-}
-
-type Delete4Request struct {
-	PathParams Delete4PathParams
 }
 
 type Delete4Response struct {

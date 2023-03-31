@@ -8,18 +8,14 @@ import (
 )
 
 type BeyondcorpProjectsLocationsClientConnectorServicesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type BeyondcorpProjectsLocationsClientConnectorServicesPatchPathParams struct {
-	// Required. Name of resource. The name is ignored during creation.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type BeyondcorpProjectsLocationsClientConnectorServicesPatchQueryParams struct {
+type BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                 *shared.XgafvEnum                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ClientConnectorServiceInput *shared.ClientConnectorServiceInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Optional. If set as true, will create the resource if it is not found.
@@ -32,6 +28,8 @@ type BeyondcorpProjectsLocationsClientConnectorServicesPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Name of resource. The name is ignored during creation.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -48,13 +46,6 @@ type BeyondcorpProjectsLocationsClientConnectorServicesPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Optional. If set, validates request by executing a dry-run which would not alter the resource in any way.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest struct {
-	PathParams  BeyondcorpProjectsLocationsClientConnectorServicesPatchPathParams
-	QueryParams BeyondcorpProjectsLocationsClientConnectorServicesPatchQueryParams
-	Request     *shared.ClientConnectorServiceInput `request:"mediaType=application/json"`
-	Security    BeyondcorpProjectsLocationsClientConnectorServicesPatchSecurity
 }
 
 type BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse struct {

@@ -8,26 +8,24 @@ import (
 )
 
 type Adexchangebuyer2AccountsCreativesWatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsCreativesWatchPathParams struct {
-	// The account of the creative to watch.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The creative ID to watch for status changes. Specify "-" to watch all creatives under the above account. If both creative-level and account-level notifications are sent, only a single notification will be sent to the creative-level notification topic.
-	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
-}
-
-type Adexchangebuyer2AccountsCreativesWatchQueryParams struct {
+type Adexchangebuyer2AccountsCreativesWatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	WatchCreativeRequest *shared.WatchCreativeRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// The account of the creative to watch.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The creative ID to watch for status changes. Specify "-" to watch all creatives under the above account. If both creative-level and account-level notifications are sent, only a single notification will be sent to the creative-level notification topic.
+	CreativeID string `pathParam:"style=simple,explode=false,name=creativeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,13 +40,6 @@ type Adexchangebuyer2AccountsCreativesWatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsCreativesWatchRequest struct {
-	PathParams  Adexchangebuyer2AccountsCreativesWatchPathParams
-	QueryParams Adexchangebuyer2AccountsCreativesWatchQueryParams
-	Request     *shared.WatchCreativeRequest `request:"mediaType=application/json"`
-	Security    Adexchangebuyer2AccountsCreativesWatchSecurity
 }
 
 type Adexchangebuyer2AccountsCreativesWatchResponse struct {

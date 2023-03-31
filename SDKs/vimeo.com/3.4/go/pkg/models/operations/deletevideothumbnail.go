@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteVideoThumbnailSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVideoThumbnailPathParams struct {
+type DeleteVideoThumbnailRequest struct {
 	// The ID of the picture.
 	PictureID float64 `pathParam:"style=simple,explode=false,name=picture_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteVideoThumbnailRequest struct {
-	PathParams DeleteVideoThumbnailPathParams
-	Security   DeleteVideoThumbnailSecurity
 }
 
 type DeleteVideoThumbnailResponse struct {

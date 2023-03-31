@@ -37,10 +37,6 @@ type ClientAuthRequestBody struct {
 	Scope string `json:"scope"`
 }
 
-type ClientAuthRequest struct {
-	Request ClientAuthRequestBody `request:"mediaType=application/vnd.vimeo.auth+json"`
-}
-
 type ClientAuthResponse struct {
 	ContentType string
 	StatusCode  int

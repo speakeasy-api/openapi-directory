@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateRevokePathParams struct {
+type CertificateRevokeRequest struct {
+	// The certificate revocation request
+	CertificateRevoke shared.CertificateRevoke `request:"mediaType=application/json"`
 	// Certificate id to revoke
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CertificateRevokeRequest struct {
-	PathParams CertificateRevokePathParams
-	// The certificate revocation request
-	Request shared.CertificateRevoke `request:"mediaType=application/json"`
 }
 
 type CertificateRevokeResponse struct {

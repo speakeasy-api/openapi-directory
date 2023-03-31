@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryOrgunitsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryOrgunitsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryOrgunitsGetSecurity struct {
@@ -22,14 +22,7 @@ type DirectoryOrgunitsGetSecurity struct {
 	Option2 *DirectoryOrgunitsGetSecurityOption2 `security:"option"`
 }
 
-type DirectoryOrgunitsGetPathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-	// The full path of the organizational unit (minus the leading `/`) or its unique ID.
-	OrgUnitPath string `pathParam:"style=simple,explode=false,name=orgUnitPath"`
-}
-
-type DirectoryOrgunitsGetQueryParams struct {
+type DirectoryOrgunitsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,12 +31,16 @@ type DirectoryOrgunitsGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The full path of the organizational unit (minus the leading `/`) or its unique ID.
+	OrgUnitPath string `pathParam:"style=simple,explode=false,name=orgUnitPath"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -52,12 +49,6 @@ type DirectoryOrgunitsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryOrgunitsGetRequest struct {
-	PathParams  DirectoryOrgunitsGetPathParams
-	QueryParams DirectoryOrgunitsGetQueryParams
-	Security    DirectoryOrgunitsGetSecurity
 }
 
 type DirectoryOrgunitsGetResponse struct {

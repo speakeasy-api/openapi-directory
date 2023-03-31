@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchConnectorPathParams struct {
-	// ID of connector that needs to be updated
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PatchConnectorRequestBody - Include connector properties to update here
 type PatchConnectorRequestBody struct {
 	Chargestation *string `json:"chargestation,omitempty"`
@@ -22,9 +17,10 @@ type PatchConnectorRequestBody struct {
 }
 
 type PatchConnectorRequest struct {
-	PathParams PatchConnectorPathParams
 	// Include connector properties to update here
-	Request PatchConnectorRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchConnectorRequestBody `request:"mediaType=application/json"`
+	// ID of connector that needs to be updated
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PatchConnector201ApplicationJSON - Returns the updated connector object

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostLocksPathPathParams struct {
-	// Path
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
 type PostLocksPathRequestBody struct {
 	// Allow lock to be updated by any user?
 	AllowAccessByAnyUser *bool `multipartForm:"name=allow_access_by_any_user"`
@@ -24,8 +19,9 @@ type PostLocksPathRequestBody struct {
 }
 
 type PostLocksPathRequest struct {
-	PathParams PostLocksPathPathParams
-	Request    *PostLocksPathRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostLocksPathRequestBody `request:"mediaType=multipart/form-data"`
+	// Path
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PostLocksPathResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDraftRegistrationsDraftIDPathParams struct {
+type DeleteDraftRegistrationsDraftIDRequest struct {
 	// The unique identifier of the draft registration.
 	DraftID string `pathParam:"style=simple,explode=false,name=draft_id"`
-}
-
-type DeleteDraftRegistrationsDraftIDRequest struct {
-	PathParams DeleteDraftRegistrationsDraftIDPathParams
 }
 
 type DeleteDraftRegistrationsDraftIDResponse struct {

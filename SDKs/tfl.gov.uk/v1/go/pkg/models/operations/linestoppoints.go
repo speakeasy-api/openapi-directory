@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineStopPointsPathParams struct {
+type LineStopPointsRequest struct {
 	// A single line id e.g. victoria
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type LineStopPointsQueryParams struct {
 	// If the national-rail line is requested, this flag will filter the national rail stations so that only those operated by TfL are returned
 	TflOperatedNationalRailStationsOnly *bool `queryParam:"style=form,explode=true,name=tflOperatedNationalRailStationsOnly"`
-}
-
-type LineStopPointsRequest struct {
-	PathParams  LineStopPointsPathParams
-	QueryParams LineStopPointsQueryParams
 }
 
 type LineStopPointsResponse struct {

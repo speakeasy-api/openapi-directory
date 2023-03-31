@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferSweepGetRequest struct {
-	Request shared.TransferSweepGetRequest `request:"mediaType=application/json"`
-}
 
 type TransferSweepGetResponse struct {
 	ContentType string

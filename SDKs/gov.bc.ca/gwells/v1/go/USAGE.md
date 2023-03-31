@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Bearer: shared.SchemeBearer{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Bearer: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AquiferCodesDemandListRequest{
-        QueryParams: operations.AquiferCodesDemandListQueryParams{
-            Limit: 548814,
-            Offset: 592845,
-        },
+        Limit: 548814,
+        Offset: 592845,
     }
 
     ctx := context.Background()

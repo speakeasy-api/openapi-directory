@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListActionsPathParams struct {
+type ListActionsRequest struct {
 	// Service ID of the service for which actions are to be listed
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type ListActionsRequest struct {
-	PathParams ListActionsPathParams
 }
 
 type ListActionsResponse struct {

@@ -21,7 +21,6 @@ pkg/models/operations/postcrmv3extensionscardsappidcreate.go
 pkg/models/operations/getcrmv3extensionscardssampleresponsegetcardssampleresponse.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
-pkg/models/shared/security.go
 pkg/models/shared/cardresponse.go
 pkg/models/shared/cardfetchbody.go
 pkg/models/shared/cardobjecttypebody.go

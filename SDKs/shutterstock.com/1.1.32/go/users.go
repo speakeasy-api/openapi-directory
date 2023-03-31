@@ -33,7 +33,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetAccessToken - Get access token details
-func (s *users) GetAccessToken(ctx context.Context, request operations.GetAccessTokenRequest) (*operations.GetAccessTokenResponse, error) {
+func (s *users) GetAccessToken(ctx context.Context) (*operations.GetAccessTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/access_token"
 
@@ -42,7 +42,7 @@ func (s *users) GetAccessToken(ctx context.Context, request operations.GetAccess
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *users) GetAccessToken(ctx context.Context, request operations.GetAccess
 }
 
 // GetUser - Get user details
-func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
+func (s *users) GetUser(ctx context.Context) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user"
 
@@ -91,7 +91,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 }
 
 // GetUserSubscriptionList - List user subscriptions
-func (s *users) GetUserSubscriptionList(ctx context.Context, request operations.GetUserSubscriptionListRequest) (*operations.GetUserSubscriptionListResponse, error) {
+func (s *users) GetUserSubscriptionList(ctx context.Context) (*operations.GetUserSubscriptionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/subscriptions"
 
@@ -140,7 +140,7 @@ func (s *users) GetUserSubscriptionList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

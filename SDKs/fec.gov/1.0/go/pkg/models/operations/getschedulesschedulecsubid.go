@@ -9,11 +9,7 @@ import (
 	"time"
 )
 
-type GetSchedulesScheduleCSubIDPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
-type GetSchedulesScheduleCSubIDQueryParams struct {
+type GetSchedulesScheduleCSubIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -29,12 +25,8 @@ type GetSchedulesScheduleCSubIDQueryParams struct {
 	// Toggle that filters out all rows having sort column that is non-null
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
-	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetSchedulesScheduleCSubIDRequest struct {
-	PathParams  GetSchedulesScheduleCSubIDPathParams
-	QueryParams GetSchedulesScheduleCSubIDQueryParams
+	SortNullsLast *bool  `queryParam:"style=form,explode=true,name=sort_nulls_last"`
+	SubID         string `pathParam:"style=simple,explode=false,name=sub_id"`
 }
 
 type GetSchedulesScheduleCSubIDDefaultApplicationJSONResults struct {

@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type GetForecastTimeSeriesWrfPathParams struct {
-	// latitude for the forecast
-	Latitude float32 `pathParam:"style=simple,explode=false,name=latitude"`
-	// longitude for the forecast
-	Longitude float32 `pathParam:"style=simple,explode=false,name=longitude"`
-}
-
-type GetForecastTimeSeriesWrfQueryParams struct {
+type GetForecastTimeSeriesWrfRequest struct {
 	// optional number of days in string. Will be added to init forecast date
 	Days *int `queryParam:"style=form,explode=true,name=days"`
 	// end date for the forecast ISO string YYYY-MM-DDTHH:mm:SS.SZ
@@ -24,15 +17,14 @@ type GetForecastTimeSeriesWrfQueryParams struct {
 	Hours *int `queryParam:"style=form,explode=true,name=hours"`
 	// initial date for the forecast ISO string YYYY-MM-DDTHH:mm:SS.SZ
 	Inittime *string `queryParam:"style=form,explode=true,name=inittime"`
+	// latitude for the forecast
+	Latitude float32 `pathParam:"style=simple,explode=false,name=latitude"`
+	// longitude for the forecast
+	Longitude float32 `pathParam:"style=simple,explode=false,name=longitude"`
 	//  Comma separated values for the wave parameteres height,direction,period
 	Wave *string `queryParam:"style=form,explode=true,name=wave"`
 	//  Comma separated values for the weather parameteres temperature,rain,wind_u,wind_v,gust,pressure,cloud,humidity&wave=height,direction,period
 	Weather string `queryParam:"style=form,explode=true,name=weather"`
-}
-
-type GetForecastTimeSeriesWrfRequest struct {
-	PathParams  GetForecastTimeSeriesWrfPathParams
-	QueryParams GetForecastTimeSeriesWrfQueryParams
 }
 
 type GetForecastTimeSeriesWrfResponse struct {

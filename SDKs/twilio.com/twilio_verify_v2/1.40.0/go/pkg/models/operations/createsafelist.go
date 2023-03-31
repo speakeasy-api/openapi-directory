@@ -12,18 +12,13 @@ var CreateSafelistServerList = []string{
 }
 
 type CreateSafelistSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSafelistCreateSafelistRequest struct {
 	// The phone number to be added in SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
 	PhoneNumber string `form:"name=PhoneNumber"`
-}
-
-type CreateSafelistRequest struct {
-	Request   *CreateSafelistCreateSafelistRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSafelistSecurity
-	ServerURL *string
 }
 
 type CreateSafelistResponse struct {

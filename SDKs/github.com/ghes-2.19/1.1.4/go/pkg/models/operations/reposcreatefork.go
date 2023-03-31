@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateForkPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateForkRequestBody struct {
 	// Optional parameter to specify the organization name if forking into an organization.
 	Organization *string `json:"organization,omitempty"`
 }
 
 type ReposCreateForkRequest struct {
-	PathParams ReposCreateForkPathParams
-	Request    *ReposCreateForkRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposCreateForkRequestBody `request:"mediaType=application/json"`
+	Owner       string                      `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                      `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateForkResponse struct {

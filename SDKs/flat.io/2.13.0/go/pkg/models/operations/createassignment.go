@@ -8,18 +8,13 @@ import (
 )
 
 type CreateAssignmentSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateAssignmentPathParams struct {
-	// Unique identifier of the class
-	Class string `pathParam:"style=simple,explode=false,name=class"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateAssignmentRequest struct {
-	PathParams CreateAssignmentPathParams
-	Request    *shared.AssignmentCreation `request:"mediaType=application/json"`
-	Security   CreateAssignmentSecurity
+	AssignmentCreation *shared.AssignmentCreation `request:"mediaType=application/json"`
+	// Unique identifier of the class
+	Class string `pathParam:"style=simple,explode=false,name=class"`
 }
 
 type CreateAssignmentResponse struct {

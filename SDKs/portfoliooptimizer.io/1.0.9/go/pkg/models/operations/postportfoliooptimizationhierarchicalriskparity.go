@@ -85,10 +85,6 @@ type PostPortfolioOptimizationHierarchicalRiskParityRequestBody struct {
 	Constraints        *PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints            `json:"constraints,omitempty"`
 }
 
-type PostPortfolioOptimizationHierarchicalRiskParityRequest struct {
-	Request PostPortfolioOptimizationHierarchicalRiskParityRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationHierarchicalRiskParity200ApplicationJSON - OK
 type PostPortfolioOptimizationHierarchicalRiskParity200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

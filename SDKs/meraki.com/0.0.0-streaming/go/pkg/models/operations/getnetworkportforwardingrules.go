@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkPortForwardingRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkPortForwardingRulesRequest struct {
-	PathParams GetNetworkPortForwardingRulesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkPortForwardingRulesResponse struct {

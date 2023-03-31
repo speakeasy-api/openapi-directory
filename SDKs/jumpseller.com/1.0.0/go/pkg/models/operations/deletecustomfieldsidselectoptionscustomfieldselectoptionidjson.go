@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONPathParams struct {
+type DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest struct {
+	// API OAuth token.
+	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Id of the CustomFieldSelectOption
 	CustomFieldSelectOptionID int `pathParam:"style=simple,explode=false,name=custom_field_select_option_id"`
 	// Id of the CustomField
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONQueryParams struct {
-	// API OAuth token.
-	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest struct {
-	PathParams  DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONPathParams
-	QueryParams DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONQueryParams
 }
 
 type DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONResponse struct {

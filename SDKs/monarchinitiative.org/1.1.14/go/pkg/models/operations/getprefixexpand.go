@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPrefixExpandPathParams struct {
+type GetPrefixExpandRequest struct {
 	// ID of entity to be contracted to URI, e.g "MGI:1"
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPrefixExpandRequest struct {
-	PathParams GetPrefixExpandPathParams
 }
 
 type GetPrefixExpandResponse struct {

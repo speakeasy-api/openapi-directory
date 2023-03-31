@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type GetNetworkSmDevicesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSmDevicesQueryParams struct {
+type GetNetworkSmDevicesRequest struct {
 	// Number of devices to return, 1000 is the default as well as the max.
 	BatchSize *int64 `queryParam:"style=form,explode=true,name=batchSize"`
 	// If the network has more devices than the batch size, a batch token will be returned
@@ -27,18 +23,14 @@ type GetNetworkSmDevicesQueryParams struct {
 	//     hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityPatchVersion.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Filter devices by id(s). Multiple ids can be passed in as comma separated values.
-	Ids *string `queryParam:"style=form,explode=true,name=ids"`
+	Ids       *string `queryParam:"style=form,explode=true,name=ids"`
+	NetworkID string  `pathParam:"style=simple,explode=false,name=networkId"`
 	// Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values.
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
 	// Filter devices by serial(s). Multiple serials can be passed in as comma separated values.
 	Serials *string `queryParam:"style=form,explode=true,name=serials"`
 	// Filter devices by wifi mac(s). Multiple wifi macs can be passed in as comma separated values.
 	WifiMacs *string `queryParam:"style=form,explode=true,name=wifiMacs"`
-}
-
-type GetNetworkSmDevicesRequest struct {
-	PathParams  GetNetworkSmDevicesPathParams
-	QueryParams GetNetworkSmDevicesQueryParams
 }
 
 type GetNetworkSmDevicesResponse struct {

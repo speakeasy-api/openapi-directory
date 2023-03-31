@@ -34,9 +34,9 @@ func newMerakiAuthUsers(defaultClient, securityClient HTTPClient, serverURL, lan
 // Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)
 func (s *merakiAuthUsers) CreateNetworkMerakiAuthUser(ctx context.Context, request operations.CreateNetworkMerakiAuthUserRequest) (*operations.CreateNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *merakiAuthUsers) CreateNetworkMerakiAuthUser(ctx context.Context, reque
 // Deauthorize a user. To reauthorize a user after deauthorizing them, POST to this endpoint. (Currently, 802.1X RADIUS, splash guest, and client VPN users can be deauthorized.)
 func (s *merakiAuthUsers) DeleteNetworkMerakiAuthUser(ctx context.Context, request operations.DeleteNetworkMerakiAuthUserRequest) (*operations.DeleteNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *merakiAuthUsers) DeleteNetworkMerakiAuthUser(ctx context.Context, reque
 // Return the Meraki Auth splash guest, RADIUS, or client VPN user
 func (s *merakiAuthUsers) GetNetworkMerakiAuthUser(ctx context.Context, request operations.GetNetworkMerakiAuthUserRequest) (*operations.GetNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *merakiAuthUsers) GetNetworkMerakiAuthUser(ctx context.Context, request 
 // List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a wired network)
 func (s *merakiAuthUsers) GetNetworkMerakiAuthUsers(ctx context.Context, request operations.GetNetworkMerakiAuthUsersRequest) (*operations.GetNetworkMerakiAuthUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,9 +215,9 @@ func (s *merakiAuthUsers) GetNetworkMerakiAuthUsers(ctx context.Context, request
 // Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)
 func (s *merakiAuthUsers) UpdateNetworkMerakiAuthUser(ctx context.Context, request operations.UpdateNetworkMerakiAuthUserRequest) (*operations.UpdateNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

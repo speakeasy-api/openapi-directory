@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewsPathParams struct {
+type NewsRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format string `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type NewsRequest struct {
-	PathParams NewsPathParams
 }
 
 type NewsResponse struct {

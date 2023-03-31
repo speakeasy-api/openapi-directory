@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksListAnnotationsPathParams struct {
+type ChecksListAnnotationsRequest struct {
 	// The unique identifier of the check run.
 	CheckRunID int64 `pathParam:"style=simple,explode=false,name=check_run_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksListAnnotationsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ChecksListAnnotationsRequest struct {
-	PathParams  ChecksListAnnotationsPathParams
-	QueryParams ChecksListAnnotationsQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ChecksListAnnotationsResponse struct {

@@ -10,7 +10,7 @@ import (
 )
 
 type CreateDatasetSecurity struct {
-	BearerToken shared.SchemeBearerToken `security:"scheme,type=http,subtype=bearer"`
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // CreateDatasetRequestBodyTypeEnum - Type of dataset data
@@ -44,11 +44,6 @@ type CreateDatasetRequestBody struct {
 	Name *string `multipartForm:"name=name"`
 	// Type of dataset data
 	Type *CreateDatasetRequestBodyTypeEnum `multipartForm:"name=type"`
-}
-
-type CreateDatasetRequest struct {
-	Request  *CreateDatasetRequestBody `request:"mediaType=multipart/form-data"`
-	Security CreateDatasetSecurity
 }
 
 type CreateDatasetResponse struct {

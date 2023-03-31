@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type PatchOwnershipOwnershipIDPathParams struct {
-	// The id of the ownership to be updated
-	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
-}
-
-type PatchOwnershipOwnershipIDQueryParams struct {
+type PatchOwnershipOwnershipIDRequest struct {
 	// Custom JSON object that will be attached to this ownership record
 	CustomData *string `queryParam:"style=form,explode=true,name=customData"`
 	// The date (in millis) of when this app ownership expires
 	Expires *int64 `queryParam:"style=form,explode=true,name=expires"`
-}
-
-type PatchOwnershipOwnershipIDRequest struct {
-	PathParams  PatchOwnershipOwnershipIDPathParams
-	QueryParams PatchOwnershipOwnershipIDQueryParams
+	// The id of the ownership to be updated
+	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
 }
 
 type PatchOwnershipOwnershipIDResponse struct {

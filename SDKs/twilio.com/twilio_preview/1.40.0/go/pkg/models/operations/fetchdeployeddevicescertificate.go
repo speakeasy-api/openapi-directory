@@ -12,19 +12,14 @@ var FetchDeployedDevicesCertificateServerList = []string{
 }
 
 type FetchDeployedDevicesCertificateSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDeployedDevicesCertificatePathParams struct {
-	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
-	// Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDeployedDevicesCertificateRequest struct {
-	PathParams FetchDeployedDevicesCertificatePathParams
-	Security   FetchDeployedDevicesCertificateSecurity
-	ServerURL  *string
+	FleetSid string `pathParam:"style=simple,explode=false,name=FleetSid"`
+	// Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchDeployedDevicesCertificateResponse struct {

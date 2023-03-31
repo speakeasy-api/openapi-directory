@@ -12,18 +12,13 @@ var FetchDeviceServerList = []string{
 }
 
 type FetchDeviceSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchDevicePathParams struct {
-	// A 34-character string that uniquely identifies this Device.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchDeviceRequest struct {
-	PathParams FetchDevicePathParams
-	Security   FetchDeviceSecurity
-	ServerURL  *string
+	// A 34-character string that uniquely identifies this Device.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchDeviceResponse struct {

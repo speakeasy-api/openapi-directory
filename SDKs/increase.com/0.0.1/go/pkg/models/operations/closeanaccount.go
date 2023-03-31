@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CloseAnAccountPathParams struct {
-	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
-}
-
 type CloseAnAccountRequest struct {
-	PathParams CloseAnAccountPathParams
+	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
 type CloseAnAccountDefaultApplicationJSON13StatusEnum string

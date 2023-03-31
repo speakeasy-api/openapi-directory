@@ -14,36 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.LicensingLicenseAssignmentsDeleteRequest{
-        Security: operations.LicensingLicenseAssignmentsDeleteSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.LicensingLicenseAssignmentsDeletePathParams{
-            ProductID: "corrupti",
-            SkuID: "provident",
-            UserID: "distinctio",
-        },
-        QueryParams: operations.LicensingLicenseAssignmentsDeleteQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "unde",
-            Alt: "proto",
-            Callback: "corrupti",
-            Fields: "illum",
-            Key: "vel",
-            OauthToken: "error",
-            PrettyPrint: false,
-            QuotaUser: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        OauthToken: "corrupti",
+        PrettyPrint: false,
+        ProductID: "illum",
+        QuotaUser: "vel",
+        SkuID: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
+        UserID: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.LicenseAssignments.LicensingLicenseAssignmentsDelete(ctx, req)
+    res, err := s.LicenseAssignments.LicensingLicenseAssignmentsDelete(ctx, req, operations.LicensingLicenseAssignmentsDeleteSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIV1StatusesIDFavouritedByPathParams struct {
+type GetAPIV1StatusesIDFavouritedByRequest struct {
 	// Local ID of a status in the database.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIV1StatusesIDFavouritedByRequest struct {
-	PathParams GetAPIV1StatusesIDFavouritedByPathParams
 }
 
 type GetAPIV1StatusesIDFavouritedByResponse struct {

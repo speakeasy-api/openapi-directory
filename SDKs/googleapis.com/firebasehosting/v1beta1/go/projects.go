@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FirebasehostingProjectsSitesCreate - Creates a new Hosting Site in the specified parent Firebase project. Note that Hosting sites can take several minutes to propagate through Firebase systems.
-func (s *projects) FirebasehostingProjectsSitesCreate(ctx context.Context, request operations.FirebasehostingProjectsSitesCreateRequest) (*operations.FirebasehostingProjectsSitesCreateResponse, error) {
+func (s *projects) FirebasehostingProjectsSitesCreate(ctx context.Context, request operations.FirebasehostingProjectsSitesCreateRequest, security operations.FirebasehostingProjectsSitesCreateSecurity) (*operations.FirebasehostingProjectsSitesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) FirebasehostingProjectsSitesCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) FirebasehostingProjectsSitesCreate(ctx context.Context, reque
 }
 
 // FirebasehostingProjectsSitesList - Lists each Hosting Site associated with the specified parent Firebase project.
-func (s *projects) FirebasehostingProjectsSitesList(ctx context.Context, request operations.FirebasehostingProjectsSitesListRequest) (*operations.FirebasehostingProjectsSitesListResponse, error) {
+func (s *projects) FirebasehostingProjectsSitesList(ctx context.Context, request operations.FirebasehostingProjectsSitesListRequest, security operations.FirebasehostingProjectsSitesListSecurity) (*operations.FirebasehostingProjectsSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,11 +33,11 @@ func newCommentThreads(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // YoutubeCommentThreadsInsert - Inserts a new resource into this collection.
-func (s *commentThreads) YoutubeCommentThreadsInsert(ctx context.Context, request operations.YoutubeCommentThreadsInsertRequest) (*operations.YoutubeCommentThreadsInsertResponse, error) {
+func (s *commentThreads) YoutubeCommentThreadsInsert(ctx context.Context, request operations.YoutubeCommentThreadsInsertRequest, security operations.YoutubeCommentThreadsInsertSecurity) (*operations.YoutubeCommentThreadsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/commentThreads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommentThread", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *commentThreads) YoutubeCommentThreadsInsert(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *commentThreads) YoutubeCommentThreadsInsert(ctx context.Context, reques
 }
 
 // YoutubeCommentThreadsList - Retrieves a list of resources, possibly filtered.
-func (s *commentThreads) YoutubeCommentThreadsList(ctx context.Context, request operations.YoutubeCommentThreadsListRequest) (*operations.YoutubeCommentThreadsListResponse, error) {
+func (s *commentThreads) YoutubeCommentThreadsList(ctx context.Context, request operations.YoutubeCommentThreadsListRequest, security operations.YoutubeCommentThreadsListSecurity) (*operations.YoutubeCommentThreadsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/commentThreads"
 
@@ -97,11 +97,11 @@ func (s *commentThreads) YoutubeCommentThreadsList(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

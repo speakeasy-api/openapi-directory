@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDDocumentsDocumentIDFoldersPathParams struct {
+type GetSpacesSpaceIDDocumentsDocumentIDFoldersRequest struct {
 	// Id of the document
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsDocumentIDFoldersRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsDocumentIDFoldersPathParams
 }
 
 type GetSpacesSpaceIDDocumentsDocumentIDFolders200ApplicationJSONFolders struct {

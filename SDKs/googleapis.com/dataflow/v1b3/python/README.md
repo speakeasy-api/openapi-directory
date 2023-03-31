@@ -1,0 +1,109 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/dataflow/v1b3/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = operations.DataflowProjectsDeleteSnapshotsRequest(
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    location="corrupti",
+    oauth_token="illum",
+    pretty_print=False,
+    project_id="vel",
+    quota_user="error",
+    snapshot_id="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
+)
+    
+res = s.projects.dataflow_projects_delete_snapshots(req, operations.DataflowProjectsDeleteSnapshotsSecurity(
+    option1=operations.DataflowProjectsDeleteSnapshotsSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
+
+if res.delete_snapshot_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### projects
+
+* `dataflow_projects_delete_snapshots` - Deletes a snapshot.
+* `dataflow_projects_jobs_aggregated` - List the jobs of a project across all regions.
+* `dataflow_projects_jobs_create` - Creates a Cloud Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not enter confidential information when you supply string values using the API.
+* `dataflow_projects_jobs_debug_get_config` - Get encoded debug configuration for component. Not cacheable.
+* `dataflow_projects_jobs_debug_send_capture` - Send encoded debug capture data for component.
+* `dataflow_projects_jobs_get` - Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in `us-central1`.
+* `dataflow_projects_jobs_get_metrics` - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
+* `dataflow_projects_jobs_list` - List the jobs of a project. To list the jobs of a project in a region, we recommend using `projects.locations.jobs.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running in `us-central1`.
+* `dataflow_projects_jobs_messages_list` - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
+* `dataflow_projects_jobs_snapshot` - Snapshot the state of a streaming job.
+* `dataflow_projects_jobs_update` - Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we recommend using `projects.locations.jobs.update` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state of jobs that are running in `us-central1`.
+* `dataflow_projects_jobs_work_items_lease` - Leases a dataflow WorkItem to run.
+* `dataflow_projects_jobs_work_items_report_status` - Reports the status of dataflow WorkItems leased by a worker.
+* `dataflow_projects_locations_flex_templates_launch` - Launch a job with a FlexTemplate.
+* `dataflow_projects_locations_jobs_create` - Creates a Cloud Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not enter confidential information when you supply string values using the API.
+* `dataflow_projects_locations_jobs_debug_get_config` - Get encoded debug configuration for component. Not cacheable.
+* `dataflow_projects_locations_jobs_debug_send_capture` - Send encoded debug capture data for component.
+* `dataflow_projects_locations_jobs_get` - Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in `us-central1`.
+* `dataflow_projects_locations_jobs_get_execution_details` - Request detailed information about the execution status of the job. EXPERIMENTAL. This API is subject to change or removal without notice.
+* `dataflow_projects_locations_jobs_get_metrics` - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
+* `dataflow_projects_locations_jobs_list` - List the jobs of a project. To list the jobs of a project in a region, we recommend using `projects.locations.jobs.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running in `us-central1`.
+* `dataflow_projects_locations_jobs_messages_list` - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
+* `dataflow_projects_locations_jobs_snapshot` - Snapshot the state of a streaming job.
+* `dataflow_projects_locations_jobs_snapshots_list` - Lists snapshots.
+* `dataflow_projects_locations_jobs_stages_get_execution_details` - Request detailed information about the execution status of a stage of the job. EXPERIMENTAL. This API is subject to change or removal without notice.
+* `dataflow_projects_locations_jobs_update` - Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we recommend using `projects.locations.jobs.update` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state of jobs that are running in `us-central1`.
+* `dataflow_projects_locations_jobs_work_items_lease` - Leases a dataflow WorkItem to run.
+* `dataflow_projects_locations_jobs_work_items_report_status` - Reports the status of dataflow WorkItems leased by a worker.
+* `dataflow_projects_locations_snapshots_delete` - Deletes a snapshot.
+* `dataflow_projects_locations_snapshots_get` - Gets information about a snapshot.
+* `dataflow_projects_locations_snapshots_list` - Lists snapshots.
+* `dataflow_projects_locations_templates_create` - Creates a Cloud Dataflow job from a template. Do not enter confidential information when you supply string values using the API.
+* `dataflow_projects_locations_templates_get` - Get the template associated with a template.
+* `dataflow_projects_locations_templates_launch` - Launch a template.
+* `dataflow_projects_locations_worker_messages` - Send a worker_message to the service.
+* `dataflow_projects_snapshots_get` - Gets information about a snapshot.
+* `dataflow_projects_snapshots_list` - Lists snapshots.
+* `dataflow_projects_templates_create` - Creates a Cloud Dataflow job from a template. Do not enter confidential information when you supply string values using the API.
+* `dataflow_projects_templates_get` - Get the template associated with a template.
+* `dataflow_projects_templates_launch` - Launch a template.
+* `dataflow_projects_worker_messages` - Send a worker_message to the service.
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

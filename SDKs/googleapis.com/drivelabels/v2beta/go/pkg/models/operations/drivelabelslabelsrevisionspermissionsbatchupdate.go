@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DrivelabelsLabelsRevisionsPermissionsBatchUpdatePathParams struct {
-	// Required. The parent Label resource name shared by all permissions being updated. Format: labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must either be empty or match this field.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsBatchUpdateQueryParams struct {
+type DrivelabelsLabelsRevisionsPermissionsBatchUpdateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                   *shared.XgafvEnum                                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest *shared.GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type DrivelabelsLabelsRevisionsPermissionsBatchUpdateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent Label resource name shared by all permissions being updated. Format: labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must either be empty or match this field.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -35,12 +33,6 @@ type DrivelabelsLabelsRevisionsPermissionsBatchUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DrivelabelsLabelsRevisionsPermissionsBatchUpdateRequest struct {
-	PathParams  DrivelabelsLabelsRevisionsPermissionsBatchUpdatePathParams
-	QueryParams DrivelabelsLabelsRevisionsPermissionsBatchUpdateQueryParams
-	Request     *shared.GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest `request:"mediaType=application/json"`
 }
 
 type DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse struct {

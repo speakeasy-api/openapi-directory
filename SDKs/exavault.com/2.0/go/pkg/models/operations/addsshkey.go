@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddSSHKeyHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type AddSSHKeyAddSSHKeyRequestBody struct {
 	// Public Key to provide ExaVault. You can provide the Public Key as formatted from the ssh-keygen command or a standard rfc-4716 format.
 	PublicKey string `json:"publicKey"`
@@ -22,8 +15,11 @@ type AddSSHKeyAddSSHKeyRequestBody struct {
 }
 
 type AddSSHKeyRequest struct {
-	Headers AddSSHKeyHeaders
-	Request *AddSSHKeyAddSSHKeyRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddSSHKeyAddSSHKeyRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type AddSSHKeyResponse struct {

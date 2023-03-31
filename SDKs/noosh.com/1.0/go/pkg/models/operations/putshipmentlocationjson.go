@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutShipmentLocationJSONPathParams struct {
-	LocationID  string `pathParam:"style=simple,explode=false,name=location_id"`
-	ProjectID   string `pathParam:"style=simple,explode=false,name=project_id"`
-	ShipmentID  string `pathParam:"style=simple,explode=false,name=shipment_id"`
-	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
 type PutShipmentLocationJSONRequest struct {
-	PathParams PutShipmentLocationJSONPathParams
-	Request    *shared.ShipmentLocationPersistVO `request:"mediaType=application/json"`
+	ShipmentLocationPersistVO *shared.ShipmentLocationPersistVO `request:"mediaType=application/json"`
+	LocationID                string                            `pathParam:"style=simple,explode=false,name=location_id"`
+	ProjectID                 string                            `pathParam:"style=simple,explode=false,name=project_id"`
+	ShipmentID                string                            `pathParam:"style=simple,explode=false,name=shipment_id"`
+	WorkgroupID               string                            `pathParam:"style=simple,explode=false,name=workgroup_id"`
 }
 
 type PutShipmentLocationJSONResponse struct {

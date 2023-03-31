@@ -8,21 +8,16 @@ import (
 )
 
 type AddOrUpdateEmergencyContactsSecurity struct {
-	PaylocityAuth shared.SchemePaylocityAuth `security:"scheme,type=oauth2"`
-}
-
-type AddOrUpdateEmergencyContactsPathParams struct {
-	// Company Id
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-	// Employee Id
-	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
+	PaylocityAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AddOrUpdateEmergencyContactsRequest struct {
-	PathParams AddOrUpdateEmergencyContactsPathParams
+	// Company Id
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Emergency Contact Model
-	Request  shared.EmergencyContact `request:"mediaType=application/json"`
-	Security AddOrUpdateEmergencyContactsSecurity
+	EmergencyContact shared.EmergencyContact `request:"mediaType=application/json"`
+	// Employee Id
+	EmployeeID string `pathParam:"style=simple,explode=false,name=employeeId"`
 }
 
 type AddOrUpdateEmergencyContactsResponse struct {

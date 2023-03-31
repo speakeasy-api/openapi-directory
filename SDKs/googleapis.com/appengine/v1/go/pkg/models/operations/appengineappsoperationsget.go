@@ -8,18 +8,18 @@ import (
 )
 
 type AppengineAppsOperationsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsOperationsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsOperationsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsOperationsGetSecurity struct {
@@ -28,20 +28,15 @@ type AppengineAppsOperationsGetSecurity struct {
 	Option3 *AppengineAppsOperationsGetSecurityOption3 `security:"option"`
 }
 
-type AppengineAppsOperationsGetPathParams struct {
-	// Part of `name`. The name of the operation resource.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-	// Part of `name`. See documentation of `appsId`.
-	OperationsID string `pathParam:"style=simple,explode=false,name=operationsId"`
-}
-
-type AppengineAppsOperationsGetQueryParams struct {
+type AppengineAppsOperationsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `name`. The name of the operation resource.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -50,6 +45,8 @@ type AppengineAppsOperationsGetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Part of `name`. See documentation of `appsId`.
+	OperationsID string `pathParam:"style=simple,explode=false,name=operationsId"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -58,12 +55,6 @@ type AppengineAppsOperationsGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsOperationsGetRequest struct {
-	PathParams  AppengineAppsOperationsGetPathParams
-	QueryParams AppengineAppsOperationsGetQueryParams
-	Security    AppengineAppsOperationsGetSecurity
 }
 
 type AppengineAppsOperationsGetResponse struct {

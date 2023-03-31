@@ -9,14 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRoutingNumbersQueryParams struct {
+type ListRoutingNumbersRequest struct {
 	Cursor        *string `queryParam:"style=form,explode=true,name=cursor"`
 	Limit         *int64  `queryParam:"style=form,explode=true,name=limit"`
 	RoutingNumber string  `queryParam:"style=form,explode=true,name=routing_number"`
-}
-
-type ListRoutingNumbersRequest struct {
-	QueryParams ListRoutingNumbersQueryParams
 }
 
 type ListRoutingNumbersDefaultApplicationJSON13StatusEnum string

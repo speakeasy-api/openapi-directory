@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type RediscoverPathParams struct {
+type RediscoverRequest struct {
 	// The ID of the device.
 	DeviceID int `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type RediscoverRequest struct {
-	PathParams RediscoverPathParams
 }
 
 type RediscoverResponse struct {

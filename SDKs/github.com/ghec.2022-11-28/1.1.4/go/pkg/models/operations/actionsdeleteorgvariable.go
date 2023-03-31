@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteOrgVariablePathParams struct {
+type ActionsDeleteOrgVariableRequest struct {
 	// The name of the variable.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsDeleteOrgVariableRequest struct {
-	PathParams ActionsDeleteOrgVariablePathParams
 }
 
 type ActionsDeleteOrgVariableResponse struct {

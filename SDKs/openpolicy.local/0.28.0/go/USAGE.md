@@ -14,17 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.PostCompileRequest{
-        QueryParams: operations.PostCompileQueryParams{
-            Explain: "corrupti",
-            Instrument: false,
-            Metrics: false,
-            Pretty: false,
+        RequestBody: map[string]interface{}{
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
         },
-        Request: map[string]interface{}{
-            "distinctio": "quibusdam",
-            "unde": "nulla",
-            "corrupti": "illum",
-        },
+        Explain: "illum",
+        Instrument: false,
+        Metrics: false,
+        Pretty: false,
     }
 
     ctx := context.Background()

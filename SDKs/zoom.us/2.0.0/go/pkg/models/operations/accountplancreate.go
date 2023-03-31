@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AccountPlanCreatePathParams struct {
-	// The account ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
 // AccountPlanCreateApplicationJSONContact - Billing Contact object.
 type AccountPlanCreateApplicationJSONContact struct {
 	// Billing Contact's address.
@@ -142,8 +137,9 @@ type AccountPlanCreateApplicationJSON struct {
 }
 
 type AccountPlanCreateRequest struct {
-	PathParams AccountPlanCreatePathParams
-	Request    AccountPlanCreateApplicationJSON `request:"mediaType=application/json"`
+	RequestBody AccountPlanCreateApplicationJSON `request:"mediaType=application/json"`
+	// The account ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 // AccountPlanCreate201ApplicationJSONPlanAudio - Additional audio conferencing <a href="https://marketplace.zoom.us/docs/api-reference/other-references/plans#audio-conferencing-plans">plan type</a>.

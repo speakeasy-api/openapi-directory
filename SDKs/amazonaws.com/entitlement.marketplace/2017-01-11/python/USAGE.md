@@ -3,37 +3,44 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetEntitlementsRequest(
-    headers=operations.GetEntitlementsHeaders(
-        x_amz_algorithm="fugit",
-        x_amz_content_sha256="cumque",
-        x_amz_credential="corporis",
-        x_amz_date="adipisci",
-        x_amz_security_token="aliquid",
-        x_amz_signature="accusantium",
-        x_amz_signed_headers="exercitationem",
-        x_amz_target="AWSMPEntitlementService.GetEntitlements",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.GetEntitlementsRequest(
+)
+
+
+req = operations.GetEntitlementsRequest(
+    get_entitlements_request=shared.GetEntitlementsRequest(
         filter={
-            "perspiciatis": [
-                "inventore",
-                "voluptatem",
+            "provident": [
+                "quibusdam",
+                "unde",
+                "nulla",
+            ],
+            "corrupti": [
+                "vel",
+                "error",
+                "deserunt",
+                "suscipit",
+            ],
+            "iure": [
+                "debitis",
+                "ipsa",
             ],
         },
-        max_results=2441923158078746440,
-        next_token="ut",
-        product_code="ullam",
+        max_results=963663,
+        next_token="tempora",
+        product_code="suscipit",
     ),
+    x_amz_algorithm="molestiae",
+    x_amz_content_sha256="minus",
+    x_amz_credential="placeat",
+    x_amz_date="voluptatum",
+    x_amz_security_token="iusto",
+    x_amz_signature="excepturi",
+    x_amz_signed_headers="nisi",
+    x_amz_target="AWSMPEntitlementService.GetEntitlements",
 )
     
 res = s.get_entitlements(req)

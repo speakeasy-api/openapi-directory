@@ -139,7 +139,7 @@ func (s *SDK) ListAndSearchMediaItems(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -224,7 +224,7 @@ func (s *SDK) RetrieveAMediaItem(ctx context.Context) (*operations.RetrieveAMedi
 
 // UpdateAMediaItem - Update a media item
 // Update a previously created media item by ID.
-func (s *SDK) UpdateAMediaItem(ctx context.Context, request operations.UpdateAMediaItemRequest) (*operations.UpdateAMediaItemResponse, error) {
+func (s *SDK) UpdateAMediaItem(ctx context.Context, request operations.UpdateAMediaItemRequestBody) (*operations.UpdateAMediaItemResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/:id/info"
 

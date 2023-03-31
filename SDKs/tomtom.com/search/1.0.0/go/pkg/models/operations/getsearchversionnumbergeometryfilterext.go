@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberGeometryFilterExtPathParams struct {
+type GetSearchVersionNumberGeometryFilterExtRequest struct {
 	// Expected response format.
 	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberGeometryFilterExtQueryParams struct {
 	// List of geometries to filter by. Available types are CIRCLE (with the radius expressed in meters) and POLYGON.
 	GeometryList string `queryParam:"style=form,explode=true,name=geometryList"`
 	// List of POIs to filter. The only required attribute of a POI is position, everything else is optional and will be echoed back when passed in.
 	PoiList string `queryParam:"style=form,explode=true,name=poiList"`
-}
-
-type GetSearchVersionNumberGeometryFilterExtRequest struct {
-	PathParams  GetSearchVersionNumberGeometryFilterExtPathParams
-	QueryParams GetSearchVersionNumberGeometryFilterExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberGeometryFilterExtResponse struct {

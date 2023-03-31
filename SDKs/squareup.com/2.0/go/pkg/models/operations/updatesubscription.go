@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateSubscriptionSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateSubscriptionPathParams struct {
-	// The ID for the subscription to update.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateSubscriptionRequest struct {
-	PathParams UpdateSubscriptionPathParams
 	// An object containing the fields to POST for the request.
 	//
 	// See the corresponding object definition for field details.
-	Request  shared.UpdateSubscriptionRequest `request:"mediaType=application/json"`
-	Security UpdateSubscriptionSecurity
+	UpdateSubscriptionRequest shared.UpdateSubscriptionRequest `request:"mediaType=application/json"`
+	// The ID for the subscription to update.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscription_id"`
 }
 
 type UpdateSubscriptionResponse struct {

@@ -95,16 +95,16 @@ func New(opts ...SDKOption) *SDK {
 
 // GetEvent - Retrieve individual audit event
 // Get the specified audit event.
-func (s *SDK) GetEvent(ctx context.Context, request operations.GetEventRequest) (*operations.GetEventResponse, error) {
+func (s *SDK) GetEvent(ctx context.Context, request operations.GetEventRequest, security operations.GetEventSecurity) (*operations.GetEventResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,7 +160,7 @@ func (s *SDK) GetEvent(ctx context.Context, request operations.GetEventRequest) 
 
 // GetEvents - Retrieve audit events
 // Get a series of audit events describing changes made to your Vonage API account over time.
-func (s *SDK) GetEvents(ctx context.Context, request operations.GetEventsRequest) (*operations.GetEventsResponse, error) {
+func (s *SDK) GetEvents(ctx context.Context, request operations.GetEventsRequest, security operations.GetEventsSecurity) (*operations.GetEventsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events"
 
@@ -169,11 +169,11 @@ func (s *SDK) GetEvents(ctx context.Context, request operations.GetEventsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,7 +239,7 @@ func (s *SDK) GetEvents(ctx context.Context, request operations.GetEventsRequest
 
 // GetEventsOptions - Retrieve audit event types
 // Get audit event types.
-func (s *SDK) GetEventsOptions(ctx context.Context, request operations.GetEventsOptionsRequest) (*operations.GetEventsOptionsResponse, error) {
+func (s *SDK) GetEventsOptions(ctx context.Context) (*operations.GetEventsOptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events"
 
@@ -248,7 +248,7 @@ func (s *SDK) GetEventsOptions(ctx context.Context, request operations.GetEvents
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

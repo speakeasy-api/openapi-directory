@@ -37,7 +37,7 @@ func newLicensee(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CreateLicensee - Create Licensee
 // Creates a new Licensee
-func (s *licensee) CreateLicensee(ctx context.Context, request operations.CreateLicenseeRequest) (*operations.CreateLicenseeResponse, error) {
+func (s *licensee) CreateLicensee(ctx context.Context, request operations.CreateLicenseeRequestBody, security operations.CreateLicenseeSecurity) (*operations.CreateLicenseeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/licensee"
 
@@ -53,7 +53,7 @@ func (s *licensee) CreateLicensee(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,20 +105,20 @@ func (s *licensee) CreateLicensee(ctx context.Context, request operations.Create
 
 // DeleteLicensee - Delete Licensee
 // Delete a Licensee by 'number'
-func (s *licensee) DeleteLicensee(ctx context.Context, request operations.DeleteLicenseeRequest) (*operations.DeleteLicenseeResponse, error) {
+func (s *licensee) DeleteLicensee(ctx context.Context, request operations.DeleteLicenseeRequest, security operations.DeleteLicenseeSecurity) (*operations.DeleteLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,16 +168,16 @@ func (s *licensee) DeleteLicensee(ctx context.Context, request operations.Delete
 
 // GetLicensee - Get Licensee
 // Return a Licensee by 'licenseeNumber'
-func (s *licensee) GetLicensee(ctx context.Context, request operations.GetLicenseeRequest) (*operations.GetLicenseeResponse, error) {
+func (s *licensee) GetLicensee(ctx context.Context, request operations.GetLicenseeRequest, security operations.GetLicenseeSecurity) (*operations.GetLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -227,7 +227,7 @@ func (s *licensee) GetLicensee(ctx context.Context, request operations.GetLicens
 
 // ListLicensees - List Licensees
 // Return a list of all Licensees for the current Vendor
-func (s *licensee) ListLicensees(ctx context.Context, request operations.ListLicenseesRequest) (*operations.ListLicenseesResponse, error) {
+func (s *licensee) ListLicensees(ctx context.Context) (*operations.ListLicenseesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/licensee"
 
@@ -236,7 +236,7 @@ func (s *licensee) ListLicensees(ctx context.Context, request operations.ListLic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *licensee) ListLicensees(ctx context.Context, request operations.ListLic
 
 // TransferLicenses - Transfer Licenses
 // Licenses transfer between Licensees
-func (s *licensee) TransferLicenses(ctx context.Context, request operations.TransferLicensesRequest) (*operations.TransferLicensesResponse, error) {
+func (s *licensee) TransferLicenses(ctx context.Context, request operations.TransferLicensesRequest, security operations.TransferLicensesSecurity) (*operations.TransferLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/transfer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/transfer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -305,7 +305,7 @@ func (s *licensee) TransferLicenses(ctx context.Context, request operations.Tran
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -355,11 +355,11 @@ func (s *licensee) TransferLicenses(ctx context.Context, request operations.Tran
 
 // UpdateLicensee - Update Licensee
 // Sets the provided properties to a Licensee. Return an updated Licensee
-func (s *licensee) UpdateLicensee(ctx context.Context, request operations.UpdateLicenseeRequest) (*operations.UpdateLicenseeResponse, error) {
+func (s *licensee) UpdateLicensee(ctx context.Context, request operations.UpdateLicenseeRequest, security operations.UpdateLicenseeSecurity) (*operations.UpdateLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -371,7 +371,7 @@ func (s *licensee) UpdateLicensee(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,11 +423,11 @@ func (s *licensee) UpdateLicensee(ctx context.Context, request operations.Update
 
 // ValidateLicensee - Validate Licensee
 // Validates active Licenses of the Licensee
-func (s *licensee) ValidateLicensee(ctx context.Context, request operations.ValidateLicenseeRequest) (*operations.ValidateLicenseeResponse, error) {
+func (s *licensee) ValidateLicensee(ctx context.Context, request operations.ValidateLicenseeRequest, security operations.ValidateLicenseeSecurity) (*operations.ValidateLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/validate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/validate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,7 +439,7 @@ func (s *licensee) ValidateLicensee(ctx context.Context, request operations.Vali
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

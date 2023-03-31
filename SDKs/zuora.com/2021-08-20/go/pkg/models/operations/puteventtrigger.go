@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PUTEventTriggerPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PUTEventTriggerHeaders struct {
+type PUTEventTriggerRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	PutEventTriggerRequest shared.PutEventTriggerRequest `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -23,12 +20,7 @@ type PUTEventTriggerHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type PUTEventTriggerRequest struct {
-	PathParams PUTEventTriggerPathParams
-	Headers    PUTEventTriggerHeaders
-	Request    shared.PutEventTriggerRequest `request:"mediaType=application/json"`
+	ID           string  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PUTEventTriggerResponse struct {

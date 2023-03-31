@@ -25,60 +25,55 @@ func main() {
     s := sdk.New()
 
     req := operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
-        Security: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
-            Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            CapacityCommitmentID: "nulla",
-            EnforceSingleAdminProjectPerOrg: false,
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.CapacityCommitmentInput{
+        DollarXgafv: "2",
+        CapacityCommitmentInput: &shared.CapacityCommitmentInput{
             FailureStatus: &shared.Status{
-                Code: 437587,
+                Code: 592845,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "ipsa": "delectus",
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
+                        "unde": "nulla",
+                        "corrupti": "illum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
                     },
                     map[string]interface{}{
-                        "excepturi": "nisi",
-                        "recusandae": "temporibus",
+                        "magnam": "debitis",
+                        "ipsa": "delectus",
+                    },
+                    map[string]interface{}{
+                        "suscipit": "molestiae",
+                        "minus": "placeat",
                     },
                 },
-                Message: "ab",
+                Message: "voluptatum",
             },
             MultiRegionAuxiliary: false,
-            Plan: "FLEX",
-            RenewalPlan: "COMMITMENT_PLAN_UNSPECIFIED",
-            SlotCount: "deserunt",
+            Plan: "TRIAL",
+            RenewalPlan: "TRIAL",
+            SlotCount: "nisi",
         },
+        AccessToken: "recusandae",
+        Alt: "proto",
+        Callback: "ab",
+        CapacityCommitmentID: "quis",
+        EnforceSingleAdminProjectPerOrg: false,
+        Fields: "veritatis",
+        Key: "deserunt",
+        OauthToken: "perferendis",
+        Parent: "ipsam",
+        PrettyPrint: false,
+        QuotaUser: "repellendus",
+        UploadType: "sapiente",
+        UploadProtocol: "quo",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req)
+    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
+        Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -91,7 +86,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Projects
@@ -111,4 +106,15 @@ func main() {
 * `BigqueryreservationProjectsLocationsSearchAssignments` - Looks up assignments for a specified resource for a particular region. If the request is about a project: 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments created on the closest ancestor will be returned. 3. Assignments for different JobTypes will all be returned. The same logic applies if the request is about a folder. If the request is about an organization, then assignments created on the organization will be returned (organization doesn't have ancestors). Comparing to ListAssignments, there are some behavior differences: 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup (project->folder->organization) happens in this API. 3. Parent here is `projects/*/locations/*`, instead of `projects/*/locations/*reservations/*`. **Note** "-" cannot be used for projects nor locations.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

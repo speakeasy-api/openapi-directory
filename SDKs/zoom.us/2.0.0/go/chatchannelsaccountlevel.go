@@ -40,7 +40,7 @@ func newChatChannelsAccountLevel(defaultClient, securityClient HTTPClient, serve
 // <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b> This API only supports <b>user-managed</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>.</p><br>
 func (s *chatChannelsAccountLevel) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest) (*operations.DeleteChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,16 +96,16 @@ func (s *chatChannelsAccountLevel) DeleteChannel(ctx context.Context, request op
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` <br>
 //
 // <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b> For an<b> account-level</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>, this API can only be used on behalf of a user who is assigned with a <b> <a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."> role</a>  that has View or Edit permission for Chat Channels</b>.</p>
-func (s *chatChannelsAccountLevel) GetChannel(ctx context.Context, request operations.GetChannelRequest) (*operations.GetChannelResponse, error) {
+func (s *chatChannelsAccountLevel) GetChannel(ctx context.Context, request operations.GetChannelRequest, security operations.GetChannelSecurity) (*operations.GetChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,11 +156,11 @@ func (s *chatChannelsAccountLevel) GetChannel(ctx context.Context, request opera
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 //
 //	</b> For an<b> account-level</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>, this API can only be used on behalf of a user who is assigned with a <b><a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."> role</a> that has Edit permission for Chat Channels</b>.</p>
-func (s *chatChannelsAccountLevel) InviteChannelMembers(ctx context.Context, request operations.InviteChannelMembersRequest) (*operations.InviteChannelMembersResponse, error) {
+func (s *chatChannelsAccountLevel) InviteChannelMembers(ctx context.Context, request operations.InviteChannelMembersRequest, security operations.InviteChannelMembersSecurity) (*operations.InviteChannelMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -172,7 +172,7 @@ func (s *chatChannelsAccountLevel) InviteChannelMembers(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,20 +222,20 @@ func (s *chatChannelsAccountLevel) InviteChannelMembers(ctx context.Context, req
 // **Scopes:** `chat_channel:read:admin`<br>
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-func (s *chatChannelsAccountLevel) ListChannelMembers(ctx context.Context, request operations.ListChannelMembersRequest) (*operations.ListChannelMembersResponse, error) {
+func (s *chatChannelsAccountLevel) ListChannelMembers(ctx context.Context, request operations.ListChannelMembersRequest, security operations.ListChannelMembersSecurity) (*operations.ListChannelMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,16 +286,16 @@ func (s *chatChannelsAccountLevel) ListChannelMembers(ctx context.Context, reque
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` <br>
 //
 // <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b> For an<b> account-level</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>, this API can only be used on behalf of a user who is assigned with a <b><a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."> role</a> that has Edit permission for Chat Channels</b>.</p>
-func (s *chatChannelsAccountLevel) RemoveAChannelMember(ctx context.Context, request operations.RemoveAChannelMemberRequest) (*operations.RemoveAChannelMemberResponse, error) {
+func (s *chatChannelsAccountLevel) RemoveAChannelMember(ctx context.Context, request operations.RemoveAChannelMemberRequest, security operations.RemoveAChannelMemberSecurity) (*operations.RemoveAChannelMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}/members/{memberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,11 +342,11 @@ func (s *chatChannelsAccountLevel) RemoveAChannelMember(ctx context.Context, req
 // **Scope:** `chat_channel:write:admin`	<br>
 // **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 // <p style="background-color:#e1f5fe; color:#01579b; padding:8px"> <b>Note: </b> For an<b> account-level</b> <a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app">OAuth app</a>, this API can only be used on behalf of a user who is assigned with a <b> <a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."> role</a>  that has Edit permission for Chat Channel</b>.</p>
-func (s *chatChannelsAccountLevel) UpdateChannel(ctx context.Context, request operations.UpdateChannelRequest) (*operations.UpdateChannelResponse, error) {
+func (s *chatChannelsAccountLevel) UpdateChannel(ctx context.Context, request operations.UpdateChannelRequest, security operations.UpdateChannelSecurity) (*operations.UpdateChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/chat/users/{userId}/channels/{channelId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -358,7 +358,7 @@ func (s *chatChannelsAccountLevel) UpdateChannel(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

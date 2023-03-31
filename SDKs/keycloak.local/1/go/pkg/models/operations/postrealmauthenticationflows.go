@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRealmAuthenticationFlowsPathParams struct {
+type PostRealmAuthenticationFlowsRequest struct {
+	// Authentication flow representation
+	AuthenticationFlowRepresentation shared.AuthenticationFlowRepresentation `request:"mediaType=application/json"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmAuthenticationFlowsRequest struct {
-	PathParams PostRealmAuthenticationFlowsPathParams
-	// Authentication flow representation
-	Request shared.AuthenticationFlowRepresentation `request:"mediaType=application/json"`
 }
 
 type PostRealmAuthenticationFlowsResponse struct {

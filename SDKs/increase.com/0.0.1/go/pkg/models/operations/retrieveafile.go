@@ -9,12 +9,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveAFilePathParams struct {
-	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
 type RetrieveAFileRequest struct {
-	PathParams RetrieveAFilePathParams
+	FileID string `pathParam:"style=simple,explode=false,name=file_id"`
 }
 
 type RetrieveAFileDefaultApplicationJSON13StatusEnum string

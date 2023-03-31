@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type UsersReadPathParams struct {
+type UsersReadRequest struct {
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type UsersReadRequest struct {
-	PathParams UsersReadPathParams
 }
 
 // UsersReadUserAttributes - The properties of the user entity.

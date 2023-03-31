@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodBackgroundPathParams struct {
+type GetVodBackgroundRequest struct {
 	// The ID of the background.
 	BackgroundID float64 `pathParam:"style=simple,explode=false,name=background_id"`
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type GetVodBackgroundRequest struct {
-	PathParams GetVodBackgroundPathParams
 }
 
 type GetVodBackgroundResponse struct {

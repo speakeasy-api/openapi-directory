@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BanRequest struct {
-	Request shared.BanRequest `request:"mediaType=application/json"`
-}
-
 type BanResponse struct {
 	// Bad request
 	APIError    *shared.APIError

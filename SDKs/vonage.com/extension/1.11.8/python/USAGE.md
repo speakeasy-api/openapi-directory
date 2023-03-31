@@ -4,20 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ExtensionCtrlGetAccountExtensionByIDRequest(
-    security=operations.ExtensionCtrlGetAccountExtensionByIDSecurity(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ExtensionCtrlGetAccountExtensionByIDPathParams(
-        account_id="omnis",
-        extension_number=82.199997,
-    ),
+    account_id="corrupti",
+    extension_number=5928.45,
 )
     
-res = s.extension_ctrl_get_account_extension_by_id(req)
+res = s.extension_ctrl_get_account_extension_by_id(req, operations.ExtensionCtrlGetAccountExtensionByIDSecurity(
+    bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+))
 
 if res.end_user_route_hal_response is not None:
     # handle response

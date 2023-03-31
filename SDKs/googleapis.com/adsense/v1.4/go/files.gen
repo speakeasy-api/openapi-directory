@@ -62,7 +62,6 @@ pkg/models/operations/adsensesavedadstyleslist.go
 pkg/models/operations/adsenseurlchannelslist.go
 pkg/models/shared/adcode.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/adclients.go
 pkg/models/shared/adclient.go
 pkg/models/shared/customchannels.go

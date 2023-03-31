@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListRunnerApplicationsForOrgPathParams struct {
+type ActionsListRunnerApplicationsForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type ActionsListRunnerApplicationsForOrgRequest struct {
-	PathParams ActionsListRunnerApplicationsForOrgPathParams
 }
 
 type ActionsListRunnerApplicationsForOrgResponse struct {

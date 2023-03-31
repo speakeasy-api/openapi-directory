@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAccessTokensAccessTokensPathParams struct {
+type GetAccessTokensAccessTokensRequest struct {
 	// String list (semicolon delimited).
 	AccessTokens string `pathParam:"style=simple,explode=false,name=accessTokens"`
-}
-
-type GetAccessTokensAccessTokensQueryParams struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -49,11 +46,6 @@ type GetAccessTokensAccessTokensQueryParams struct {
 	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
 	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
-}
-
-type GetAccessTokensAccessTokensRequest struct {
-	PathParams  GetAccessTokensAccessTokensPathParams
-	QueryParams GetAccessTokensAccessTokensQueryParams
 }
 
 type GetAccessTokensAccessTokensResponse struct {

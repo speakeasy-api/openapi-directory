@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type NodesForksCreatePathParams struct {
-	// The unique identifier of the node.
-	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 // NodesForksCreateNodeAttributesCategoryEnum - The category of the node, as selected by project contributors.
 type NodesForksCreateNodeAttributesCategoryEnum string
 
@@ -87,8 +82,9 @@ type NodesForksCreateNodeInput struct {
 }
 
 type NodesForksCreateRequest struct {
-	PathParams NodesForksCreatePathParams
-	Request    NodesForksCreateNodeInput `request:"mediaType=application/json"`
+	RequestBody NodesForksCreateNodeInput `request:"mediaType=application/json"`
+	// The unique identifier of the node.
+	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type NodesForksCreateResponse struct {

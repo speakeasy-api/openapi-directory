@@ -32,20 +32,20 @@ func newPlacementStrategies(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // DfareportingPlacementStrategiesDelete - Deletes an existing placement strategy.
-func (s *placementStrategies) DfareportingPlacementStrategiesDelete(ctx context.Context, request operations.DfareportingPlacementStrategiesDeleteRequest) (*operations.DfareportingPlacementStrategiesDeleteResponse, error) {
+func (s *placementStrategies) DfareportingPlacementStrategiesDelete(ctx context.Context, request operations.DfareportingPlacementStrategiesDeleteRequest, security operations.DfareportingPlacementStrategiesDeleteSecurity) (*operations.DfareportingPlacementStrategiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *placementStrategies) DfareportingPlacementStrategiesDelete(ctx context.
 }
 
 // DfareportingPlacementStrategiesGet - Gets one placement strategy by ID.
-func (s *placementStrategies) DfareportingPlacementStrategiesGet(ctx context.Context, request operations.DfareportingPlacementStrategiesGetRequest) (*operations.DfareportingPlacementStrategiesGetResponse, error) {
+func (s *placementStrategies) DfareportingPlacementStrategiesGet(ctx context.Context, request operations.DfareportingPlacementStrategiesGetRequest, security operations.DfareportingPlacementStrategiesGetSecurity) (*operations.DfareportingPlacementStrategiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,11 +119,11 @@ func (s *placementStrategies) DfareportingPlacementStrategiesGet(ctx context.Con
 }
 
 // DfareportingPlacementStrategiesInsert - Inserts a new placement strategy.
-func (s *placementStrategies) DfareportingPlacementStrategiesInsert(ctx context.Context, request operations.DfareportingPlacementStrategiesInsertRequest) (*operations.DfareportingPlacementStrategiesInsertResponse, error) {
+func (s *placementStrategies) DfareportingPlacementStrategiesInsert(ctx context.Context, request operations.DfareportingPlacementStrategiesInsertRequest, security operations.DfareportingPlacementStrategiesInsertSecurity) (*operations.DfareportingPlacementStrategiesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementStrategy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -135,11 +135,11 @@ func (s *placementStrategies) DfareportingPlacementStrategiesInsert(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *placementStrategies) DfareportingPlacementStrategiesInsert(ctx context.
 }
 
 // DfareportingPlacementStrategiesList - Retrieves a list of placement strategies, possibly filtered. This method supports paging.
-func (s *placementStrategies) DfareportingPlacementStrategiesList(ctx context.Context, request operations.DfareportingPlacementStrategiesListRequest) (*operations.DfareportingPlacementStrategiesListResponse, error) {
+func (s *placementStrategies) DfareportingPlacementStrategiesList(ctx context.Context, request operations.DfareportingPlacementStrategiesListRequest, security operations.DfareportingPlacementStrategiesListSecurity) (*operations.DfareportingPlacementStrategiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *placementStrategies) DfareportingPlacementStrategiesList(ctx context.Co
 }
 
 // DfareportingPlacementStrategiesPatch - Updates an existing placement strategy. This method supports patch semantics.
-func (s *placementStrategies) DfareportingPlacementStrategiesPatch(ctx context.Context, request operations.DfareportingPlacementStrategiesPatchRequest) (*operations.DfareportingPlacementStrategiesPatchResponse, error) {
+func (s *placementStrategies) DfareportingPlacementStrategiesPatch(ctx context.Context, request operations.DfareportingPlacementStrategiesPatchRequest, security operations.DfareportingPlacementStrategiesPatchSecurity) (*operations.DfareportingPlacementStrategiesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementStrategy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *placementStrategies) DfareportingPlacementStrategiesPatch(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *placementStrategies) DfareportingPlacementStrategiesPatch(ctx context.C
 }
 
 // DfareportingPlacementStrategiesUpdate - Updates an existing placement strategy.
-func (s *placementStrategies) DfareportingPlacementStrategiesUpdate(ctx context.Context, request operations.DfareportingPlacementStrategiesUpdateRequest) (*operations.DfareportingPlacementStrategiesUpdateResponse, error) {
+func (s *placementStrategies) DfareportingPlacementStrategiesUpdate(ctx context.Context, request operations.DfareportingPlacementStrategiesUpdateRequest, security operations.DfareportingPlacementStrategiesUpdateSecurity) (*operations.DfareportingPlacementStrategiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementStrategy", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *placementStrategies) DfareportingPlacementStrategiesUpdate(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

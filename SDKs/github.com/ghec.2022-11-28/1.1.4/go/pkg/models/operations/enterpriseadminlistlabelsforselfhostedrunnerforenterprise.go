@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListLabelsForSelfHostedRunnerForEnterprisePathParams struct {
+type EnterpriseAdminListLabelsForSelfHostedRunnerForEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type EnterpriseAdminListLabelsForSelfHostedRunnerForEnterpriseRequest struct {
-	PathParams EnterpriseAdminListLabelsForSelfHostedRunnerForEnterprisePathParams
 }
 
 // EnterpriseAdminListLabelsForSelfHostedRunnerForEnterprise200ApplicationJSON - Response

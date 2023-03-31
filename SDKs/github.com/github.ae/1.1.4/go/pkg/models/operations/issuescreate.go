@@ -10,13 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesCreatePathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type IssuesCreateRequestBodyLabels2 struct {
 	Color       *string `json:"color,omitempty"`
 	Description *string `json:"description,omitempty"`
@@ -243,8 +236,11 @@ type IssuesCreateRequestBody struct {
 }
 
 type IssuesCreateRequest struct {
-	PathParams IssuesCreatePathParams
-	Request    IssuesCreateRequestBody `request:"mediaType=application/json"`
+	RequestBody IssuesCreateRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // IssuesCreate503ApplicationJSON - Service unavailable

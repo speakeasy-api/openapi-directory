@@ -10,8 +10,8 @@ import (
 )
 
 type AndroidenterpriseEnterprisesPullNotificationSetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // AndroidenterpriseEnterprisesPullNotificationSetRequestModeEnum - The request mode for pulling notifications. Specifying waitForNotifications will cause the request to block and wait until one or more notifications are present, or return an empty notification list if no notifications are present after some time. Specifying returnImmediately will cause the request to immediately return the pending notifications, or an empty list if no notifications are present. If omitted, defaults to waitForNotifications.
@@ -38,7 +38,7 @@ func (e *AndroidenterpriseEnterprisesPullNotificationSetRequestModeEnum) Unmarsh
 	}
 }
 
-type AndroidenterpriseEnterprisesPullNotificationSetQueryParams struct {
+type AndroidenterpriseEnterprisesPullNotificationSetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -63,11 +63,6 @@ type AndroidenterpriseEnterprisesPullNotificationSetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseEnterprisesPullNotificationSetRequest struct {
-	QueryParams AndroidenterpriseEnterprisesPullNotificationSetQueryParams
-	Security    AndroidenterpriseEnterprisesPullNotificationSetSecurity
 }
 
 type AndroidenterpriseEnterprisesPullNotificationSetResponse struct {

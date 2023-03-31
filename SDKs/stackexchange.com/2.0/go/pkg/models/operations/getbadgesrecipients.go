@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetBadgesRecipientsQueryParams struct {
+type GetBadgesRecipientsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -51,10 +51,6 @@ type GetBadgesRecipientsQueryParams struct {
 	Site string `queryParam:"style=form,explode=true,name=site"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetBadgesRecipientsRequest struct {
-	QueryParams GetBadgesRecipientsQueryParams
 }
 
 type GetBadgesRecipientsResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSipIPAccessControlListMappingServerList = []string{
@@ -12,22 +11,17 @@ var DeleteSipIPAccessControlListMappingServerList = []string{
 }
 
 type DeleteSipIPAccessControlListMappingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSipIPAccessControlListMappingPathParams struct {
+type DeleteSipIPAccessControlListMappingRequest struct {
 	// The unique id of the Account that is responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// A 34 character string that uniquely identifies the SIP domain.
 	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 	// A 34 character string that uniquely identifies the resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteSipIPAccessControlListMappingRequest struct {
-	PathParams DeleteSipIPAccessControlListMappingPathParams
-	Security   DeleteSipIPAccessControlListMappingSecurity
-	ServerURL  *string
 }
 
 type DeleteSipIPAccessControlListMappingResponse struct {

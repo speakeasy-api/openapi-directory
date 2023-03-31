@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportProjectPathParams struct {
+type ExportProjectRequest struct {
 	// The project id of the project to export.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type ExportProjectRequest struct {
-	PathParams ExportProjectPathParams
 }
 
 type ExportProjectResponse struct {

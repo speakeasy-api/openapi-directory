@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DigitalassetlinksStatementsListQueryParams struct {
+type DigitalassetlinksStatementsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,10 +38,6 @@ type DigitalassetlinksStatementsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DigitalassetlinksStatementsListRequest struct {
-	QueryParams DigitalassetlinksStatementsListQueryParams
 }
 
 type DigitalassetlinksStatementsListResponse struct {

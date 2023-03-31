@@ -8,23 +8,14 @@ import (
 )
 
 type GetDistrictRankingsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetDistrictRankingsPathParams struct {
-	// TBA District Key, eg `2016fim`
-	DistrictKey string `pathParam:"style=simple,explode=false,name=district_key"`
-}
-
-type GetDistrictRankingsHeaders struct {
-	// Value of the `ETag` header in the most recently cached response by the client.
-	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-TBA-Auth-Key"`
 }
 
 type GetDistrictRankingsRequest struct {
-	PathParams GetDistrictRankingsPathParams
-	Headers    GetDistrictRankingsHeaders
-	Security   GetDistrictRankingsSecurity
+	// Value of the `ETag` header in the most recently cached response by the client.
+	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
+	// TBA District Key, eg `2016fim`
+	DistrictKey string `pathParam:"style=simple,explode=false,name=district_key"`
 }
 
 type GetDistrictRankingsResponse struct {

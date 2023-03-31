@@ -123,7 +123,6 @@ pkg/models/shared/relatedentity.go
 pkg/models/shared/abusetype.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/activitylistresponse.go
 pkg/models/shared/pageinfo.go
 pkg/models/shared/activity.go

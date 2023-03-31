@@ -10,8 +10,8 @@ import (
 )
 
 type GetImageListSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetImageListViewEnum - Amount of detail to render in the response
@@ -38,18 +38,13 @@ func (e *GetImageListViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImageListQueryParams struct {
+type GetImageListRequest struct {
 	// One or more image IDs
 	ID []string `queryParam:"style=form,explode=true,name=id"`
 	// The ID of the search that is related to this request
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`
 	// Amount of detail to render in the response
 	View *GetImageListViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetImageListRequest struct {
-	QueryParams GetImageListQueryParams
-	Security    GetImageListSecurity
 }
 
 type GetImageListResponse struct {

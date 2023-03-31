@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostRealmLogoutAllPathParams struct {
+type PostRealmLogoutAllRequest struct {
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type PostRealmLogoutAllRequest struct {
-	PathParams PostRealmLogoutAllPathParams
 }
 
 type PostRealmLogoutAllResponse struct {

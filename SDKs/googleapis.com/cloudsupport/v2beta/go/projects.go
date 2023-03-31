@@ -32,20 +32,20 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudsupportProjectsCasesAttachmentsList - Retrieve all attachments associated with a support case.
-func (s *projects) CloudsupportProjectsCasesAttachmentsList(ctx context.Context, request operations.CloudsupportProjectsCasesAttachmentsListRequest) (*operations.CloudsupportProjectsCasesAttachmentsListResponse, error) {
+func (s *projects) CloudsupportProjectsCasesAttachmentsList(ctx context.Context, request operations.CloudsupportProjectsCasesAttachmentsListRequest, security operations.CloudsupportProjectsCasesAttachmentsListSecurity) (*operations.CloudsupportProjectsCasesAttachmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,11 +80,11 @@ func (s *projects) CloudsupportProjectsCasesAttachmentsList(ctx context.Context,
 }
 
 // CloudsupportProjectsCasesClose - Close the specified case.
-func (s *projects) CloudsupportProjectsCasesClose(ctx context.Context, request operations.CloudsupportProjectsCasesCloseRequest) (*operations.CloudsupportProjectsCasesCloseResponse, error) {
+func (s *projects) CloudsupportProjectsCasesClose(ctx context.Context, request operations.CloudsupportProjectsCasesCloseRequest, security operations.CloudsupportProjectsCasesCloseSecurity) (*operations.CloudsupportProjectsCasesCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:close", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,11 +96,11 @@ func (s *projects) CloudsupportProjectsCasesClose(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,11 +135,11 @@ func (s *projects) CloudsupportProjectsCasesClose(ctx context.Context, request o
 }
 
 // CloudsupportProjectsCasesCommentsCreate - Add a new comment to the specified Case. The comment object must have the following fields set: body.
-func (s *projects) CloudsupportProjectsCasesCommentsCreate(ctx context.Context, request operations.CloudsupportProjectsCasesCommentsCreateRequest) (*operations.CloudsupportProjectsCasesCommentsCreateResponse, error) {
+func (s *projects) CloudsupportProjectsCasesCommentsCreate(ctx context.Context, request operations.CloudsupportProjectsCasesCommentsCreateRequest, security operations.CloudsupportProjectsCasesCommentsCreateSecurity) (*operations.CloudsupportProjectsCasesCommentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,11 +151,11 @@ func (s *projects) CloudsupportProjectsCasesCommentsCreate(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,20 +190,20 @@ func (s *projects) CloudsupportProjectsCasesCommentsCreate(ctx context.Context, 
 }
 
 // CloudsupportProjectsCasesCommentsList - Retrieve all Comments associated with the Case object.
-func (s *projects) CloudsupportProjectsCasesCommentsList(ctx context.Context, request operations.CloudsupportProjectsCasesCommentsListRequest) (*operations.CloudsupportProjectsCasesCommentsListResponse, error) {
+func (s *projects) CloudsupportProjectsCasesCommentsList(ctx context.Context, request operations.CloudsupportProjectsCasesCommentsListRequest, security operations.CloudsupportProjectsCasesCommentsListSecurity) (*operations.CloudsupportProjectsCasesCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *projects) CloudsupportProjectsCasesCommentsList(ctx context.Context, re
 }
 
 // CloudsupportProjectsCasesCreate - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
-func (s *projects) CloudsupportProjectsCasesCreate(ctx context.Context, request operations.CloudsupportProjectsCasesCreateRequest) (*operations.CloudsupportProjectsCasesCreateResponse, error) {
+func (s *projects) CloudsupportProjectsCasesCreate(ctx context.Context, request operations.CloudsupportProjectsCasesCreateRequest, security operations.CloudsupportProjectsCasesCreateSecurity) (*operations.CloudsupportProjectsCasesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/cases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/cases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CaseInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,11 +254,11 @@ func (s *projects) CloudsupportProjectsCasesCreate(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) CloudsupportProjectsCasesCreate(ctx context.Context, request 
 }
 
 // CloudsupportProjectsCasesEscalate - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
-func (s *projects) CloudsupportProjectsCasesEscalate(ctx context.Context, request operations.CloudsupportProjectsCasesEscalateRequest) (*operations.CloudsupportProjectsCasesEscalateResponse, error) {
+func (s *projects) CloudsupportProjectsCasesEscalate(ctx context.Context, request operations.CloudsupportProjectsCasesEscalateRequest, security operations.CloudsupportProjectsCasesEscalateSecurity) (*operations.CloudsupportProjectsCasesEscalateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:escalate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:escalate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EscalateCaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) CloudsupportProjectsCasesEscalate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,20 +348,20 @@ func (s *projects) CloudsupportProjectsCasesEscalate(ctx context.Context, reques
 }
 
 // CloudsupportProjectsCasesGet - Retrieve the specified case.
-func (s *projects) CloudsupportProjectsCasesGet(ctx context.Context, request operations.CloudsupportProjectsCasesGetRequest) (*operations.CloudsupportProjectsCasesGetResponse, error) {
+func (s *projects) CloudsupportProjectsCasesGet(ctx context.Context, request operations.CloudsupportProjectsCasesGetRequest, security operations.CloudsupportProjectsCasesGetSecurity) (*operations.CloudsupportProjectsCasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,20 +396,20 @@ func (s *projects) CloudsupportProjectsCasesGet(ctx context.Context, request ope
 }
 
 // CloudsupportProjectsCasesList - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
-func (s *projects) CloudsupportProjectsCasesList(ctx context.Context, request operations.CloudsupportProjectsCasesListRequest) (*operations.CloudsupportProjectsCasesListResponse, error) {
+func (s *projects) CloudsupportProjectsCasesList(ctx context.Context, request operations.CloudsupportProjectsCasesListRequest, security operations.CloudsupportProjectsCasesListSecurity) (*operations.CloudsupportProjectsCasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/cases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/cases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,11 +444,11 @@ func (s *projects) CloudsupportProjectsCasesList(ctx context.Context, request op
 }
 
 // CloudsupportProjectsUpdateCases - Update the specified case. Only a subset of fields can be updated.
-func (s *projects) CloudsupportProjectsUpdateCases(ctx context.Context, request operations.CloudsupportProjectsUpdateCasesRequest) (*operations.CloudsupportProjectsUpdateCasesResponse, error) {
+func (s *projects) CloudsupportProjectsUpdateCases(ctx context.Context, request operations.CloudsupportProjectsUpdateCasesRequest, security operations.CloudsupportProjectsUpdateCasesSecurity) (*operations.CloudsupportProjectsUpdateCasesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CaseInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -460,11 +460,11 @@ func (s *projects) CloudsupportProjectsUpdateCases(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

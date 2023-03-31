@@ -8,17 +8,12 @@ import (
 )
 
 type RetrieveInventoryTransferSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type RetrieveInventoryTransferPathParams struct {
-	// ID of the [InventoryTransfer](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryTransfer) to retrieve.
-	TransferID string `pathParam:"style=simple,explode=false,name=transfer_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RetrieveInventoryTransferRequest struct {
-	PathParams RetrieveInventoryTransferPathParams
-	Security   RetrieveInventoryTransferSecurity
+	// ID of the [InventoryTransfer](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryTransfer) to retrieve.
+	TransferID string `pathParam:"style=simple,explode=false,name=transfer_id"`
 }
 
 type RetrieveInventoryTransferResponse struct {

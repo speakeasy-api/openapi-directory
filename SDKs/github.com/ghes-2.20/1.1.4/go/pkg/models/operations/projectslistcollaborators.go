@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProjectsListCollaboratorsPathParams struct {
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
-}
-
 // ProjectsListCollaboratorsAffiliationEnum - Filters the collaborators by their affiliation. Can be one of:
 // \* `outside`: Outside collaborators of a project that are not a member of the project's organization.
 // \* `direct`: Collaborators with permissions to a project, regardless of organization membership status.
@@ -43,7 +39,7 @@ func (e *ProjectsListCollaboratorsAffiliationEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ProjectsListCollaboratorsQueryParams struct {
+type ProjectsListCollaboratorsRequest struct {
 	// Filters the collaborators by their affiliation. Can be one of:
 	// \* `outside`: Outside collaborators of a project that are not a member of the project's organization.
 	// \* `direct`: Collaborators with permissions to a project, regardless of organization membership status.
@@ -52,12 +48,8 @@ type ProjectsListCollaboratorsQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
-	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ProjectsListCollaboratorsRequest struct {
-	PathParams  ProjectsListCollaboratorsPathParams
-	QueryParams ProjectsListCollaboratorsQueryParams
+	PerPage   *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	ProjectID int64  `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 // ProjectsListCollaborators415ApplicationJSON - Preview header missing

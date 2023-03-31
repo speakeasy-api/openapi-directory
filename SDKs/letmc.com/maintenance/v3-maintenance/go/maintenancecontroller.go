@@ -34,9 +34,9 @@ func newMaintenanceController(defaultClient, securityClient HTTPClient, serverUR
 // MaintenanceControllerCreateMaintenanceJobForm - Create a maintenance job for a specific branch
 func (s *maintenanceController) MaintenanceControllerCreateMaintenanceJobForm(ctx context.Context, request operations.MaintenanceControllerCreateMaintenanceJobFormRequest) (*operations.MaintenanceControllerCreateMaintenanceJobFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MaintenanceIssueModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -109,9 +109,9 @@ func (s *maintenanceController) MaintenanceControllerCreateMaintenanceJobForm(ct
 // MaintenanceControllerCreateMaintenanceJobJSON - Create a maintenance job for a specific branch
 func (s *maintenanceController) MaintenanceControllerCreateMaintenanceJobJSON(ctx context.Context, request operations.MaintenanceControllerCreateMaintenanceJobJSONRequest) (*operations.MaintenanceControllerCreateMaintenanceJobJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MaintenanceIssueModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -184,9 +184,9 @@ func (s *maintenanceController) MaintenanceControllerCreateMaintenanceJobJSON(ct
 // MaintenanceControllerCreateMaintenanceJobRaw - Create a maintenance job for a specific branch
 func (s *maintenanceController) MaintenanceControllerCreateMaintenanceJobRaw(ctx context.Context, request operations.MaintenanceControllerCreateMaintenanceJobRawRequest) (*operations.MaintenanceControllerCreateMaintenanceJobRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

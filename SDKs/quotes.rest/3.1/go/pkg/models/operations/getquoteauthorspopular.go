@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQuoteAuthorsPopularSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQuoteAuthorsPopularQueryParams struct {
+type GetQuoteAuthorsPopularRequest struct {
 	// Should return detailed author information such as `birthday`, `death date`, `occupation`, `description` etc. Only available at certain subscription levels.
 	Detailed *bool `queryParam:"style=form,explode=true,name=detailed"`
 	// Language. A same author may have quotes in two or more different languages. So for example 'Mahatma Gandhi' may be returned for language "en"(English), and "மஹாத்மா காந்தி" may be returned when the language is "ta" (Tamil).
@@ -20,11 +19,6 @@ type GetQuoteAuthorsPopularQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Response is paged. This parameter controls where response starts the listing at
 	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetQuoteAuthorsPopularRequest struct {
-	QueryParams GetQuoteAuthorsPopularQueryParams
-	Security    GetQuoteAuthorsPopularSecurity
 }
 
 type GetQuoteAuthorsPopularResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ResetAccountUserLockoutSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ResetAccountUserLockoutPathParams struct {
-	// UUID of the user to retrieve
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ResetAccountUserLockoutRequest struct {
-	PathParams ResetAccountUserLockoutPathParams
-	Security   ResetAccountUserLockoutSecurity
+	// UUID of the user to retrieve
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type ResetAccountUserLockoutResponse struct {

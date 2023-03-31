@@ -4,26 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.SafebrowsingEncodedFullHashesGetRequest(
-    path_params=operations.SafebrowsingEncodedFullHashesGetPathParams(
-        encoded_request="libero",
-    ),
-    query_params=operations.SafebrowsingEncodedFullHashesGetQueryParams(
-        dollar_xgafv="1",
-        access_token="quo",
-        alt="proto",
-        callback="deserunt",
-        client_id="amet",
-        client_version="numquam",
-        fields="tenetur",
-        key="sit",
-        oauth_token="reiciendis",
-        pretty_print=False,
-        quota_user="et",
-        upload_type="unde",
-        upload_protocol="aut",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    client_id="unde",
+    client_version="nulla",
+    encoded_request="corrupti",
+    fields_="illum",
+    key="vel",
+    oauth_token="error",
+    pretty_print=False,
+    quota_user="deserunt",
+    upload_type="suscipit",
+    upload_protocol="iure",
 )
     
 res = s.encoded_full_hashes.safebrowsing_encoded_full_hashes_get(req)

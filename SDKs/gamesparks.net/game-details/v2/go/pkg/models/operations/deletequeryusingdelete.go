@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEQueryUsingDELETEPathParams struct {
+type DELETEQueryUsingDELETERequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// shortCode
 	ShortCode string `pathParam:"style=simple,explode=false,name=shortCode"`
-}
-
-type DELETEQueryUsingDELETERequest struct {
-	PathParams DELETEQueryUsingDELETEPathParams
 }
 
 type DELETEQueryUsingDELETEResponse struct {

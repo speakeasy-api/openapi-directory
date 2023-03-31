@@ -10,23 +10,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VerifySearchPathParams struct {
-	// The response format.
-	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type VerifySearchQueryParams struct {
+type VerifySearchRequest struct {
 	APIKey    string `queryParam:"style=form,explode=true,name=api_key"`
 	APISecret string `queryParam:"style=form,explode=true,name=api_secret"`
+	// The response format.
+	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The `request_id` you received in the Verify Request Response. Required if `request_ids` not provided.
 	RequestID string `queryParam:"style=form,explode=true,name=request_id"`
 	// More than one `request_id`. Each `request_id` is a new parameter in the Verify Search request. Required if `request_id` not provided.
 	RequestIds []string `queryParam:"style=form,explode=true,name=request_ids"`
-}
-
-type VerifySearchRequest struct {
-	PathParams  VerifySearchPathParams
-	QueryParams VerifySearchQueryParams
 }
 
 type VerifySearch200TextXMLType string

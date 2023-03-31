@@ -11,17 +11,13 @@ import (
 )
 
 type GetReportSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetReportPathParams struct {
-	// UUID of the report request (`request_id` in response).
-	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetReportRequest struct {
-	PathParams GetReportPathParams
-	Security   GetReportSecurity
+	// UUID of the report request (`request_id` in response).
+	ReportID string `pathParam:"style=simple,explode=false,name=report_id"`
 }
 
 // GetReport404ApplicationJSON - Not found

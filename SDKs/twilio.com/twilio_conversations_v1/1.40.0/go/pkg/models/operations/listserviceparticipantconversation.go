@@ -12,17 +12,15 @@ var ListServiceParticipantConversationServerList = []string{
 }
 
 type ListServiceParticipantConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListServiceParticipantConversationPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant Conversations resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-}
-
-type ListServiceParticipantConversationQueryParams struct {
+type ListServiceParticipantConversationRequest struct {
 	// A unique string identifier for the conversation participant who's not a Conversation User. This parameter could be found in messaging_binding.address field of Participant resource. It should be url-encoded.
 	Address *string `queryParam:"style=form,explode=true,name=Address"`
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant Conversations resource is associated with.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
 	// A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.
 	Identity *string `queryParam:"style=form,explode=true,name=Identity"`
 	// The page index. This value is simply for client state.
@@ -31,13 +29,6 @@ type ListServiceParticipantConversationQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListServiceParticipantConversationRequest struct {
-	PathParams  ListServiceParticipantConversationPathParams
-	QueryParams ListServiceParticipantConversationQueryParams
-	Security    ListServiceParticipantConversationSecurity
-	ServerURL   *string
 }
 
 type ListServiceParticipantConversationListServiceParticipantConversationResponseMeta struct {

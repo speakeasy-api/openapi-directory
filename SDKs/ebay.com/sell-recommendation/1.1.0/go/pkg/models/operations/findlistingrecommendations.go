@@ -8,28 +8,19 @@ import (
 )
 
 type FindListingRecommendationsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FindListingRecommendationsQueryParams struct {
+type FindListingRecommendationsRequest struct {
+	FindListingRecommendationRequest *shared.FindListingRecommendationRequest `request:"mediaType=application/json"`
+	// Use this header to specify the eBay marketplace where you list the items for which you want to get recommendations.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 	// Provide a list of key-value pairs to specify the criteria you want to use to filter the response. In the list, separate each filter key from its associated value with a colon (&quot;:&quot;). Currently, the only supported filter value is recommendationTypes and it supports only the (&quot;AD&quot;) type. Follow the recommendationTypes specifier with the filter type(s) enclosed in curly braces (&quot;{ }&quot;), and separate multiple types with commas. Example: filter=recommendationTypes:{AD} Default: recommendationTypes:{AD}
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Use this query parameter to set the maximum number of ads to return on a page from the paginated response. Default: 10 Maximum: 500
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Specifies the number of ads to skip in the result set before returning the first ad in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type FindListingRecommendationsHeaders struct {
-	// Use this header to specify the eBay marketplace where you list the items for which you want to get recommendations.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
-}
-
-type FindListingRecommendationsRequest struct {
-	QueryParams FindListingRecommendationsQueryParams
-	Headers     FindListingRecommendationsHeaders
-	Request     *shared.FindListingRecommendationRequest `request:"mediaType=application/json"`
-	Security    FindListingRecommendationsSecurity
 }
 
 type FindListingRecommendationsResponse struct {

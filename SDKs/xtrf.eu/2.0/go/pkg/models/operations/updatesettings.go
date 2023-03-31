@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSettingsPathParams struct {
+type UpdateSettingsRequest struct {
+	// Updated view's settings.
+	SettingsDTO shared.SettingsDTO `request:"mediaType=application/json"`
 	// view's identifier
 	ViewID int64 `pathParam:"style=simple,explode=false,name=viewId"`
-}
-
-type UpdateSettingsRequest struct {
-	PathParams UpdateSettingsPathParams
-	// Updated view's settings.
-	Request shared.SettingsDTO `request:"mediaType=application/json"`
 }
 
 type UpdateSettingsResponse struct {

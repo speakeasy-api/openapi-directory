@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimDeviceRolesReadPathParams struct {
+type DcimDeviceRolesReadRequest struct {
 	// A unique integer value identifying this device role.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimDeviceRolesReadRequest struct {
-	PathParams DcimDeviceRolesReadPathParams
 }
 
 type DcimDeviceRolesReadResponse struct {

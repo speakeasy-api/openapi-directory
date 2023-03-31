@@ -13,10 +13,11 @@ var ListAlertServerList = []string{
 }
 
 type ListAlertSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListAlertQueryParams struct {
+type ListAlertRequest struct {
 	// Only include alerts that occurred on or before this date and time. Specify the date and time in GMT and format as `YYYY-MM-DD` or `YYYY-MM-DDThh:mm:ssZ`. Queries for alerts older than 30 days are not supported.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// Only show alerts for this log-level.  Can be: `error`, `warning`, `notice`, or `debug`.
@@ -29,12 +30,6 @@ type ListAlertQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Only include alerts that occurred on or after this date and time. Specify the date and time in GMT and format as `YYYY-MM-DD` or `YYYY-MM-DDThh:mm:ssZ`. Queries for alerts older than 30 days are not supported.
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type ListAlertRequest struct {
-	QueryParams ListAlertQueryParams
-	Security    ListAlertSecurity
-	ServerURL   *string
 }
 
 type ListAlertListAlertResponseMeta struct {

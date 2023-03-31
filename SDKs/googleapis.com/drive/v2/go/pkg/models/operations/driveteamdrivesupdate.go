@@ -8,16 +8,12 @@ import (
 )
 
 type DriveTeamdrivesUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DriveTeamdrivesUpdatePathParams struct {
-	// The ID of the Team Drive
-	TeamDriveID string `pathParam:"style=simple,explode=false,name=teamDriveId"`
-}
-
-type DriveTeamdrivesUpdateQueryParams struct {
+type DriveTeamdrivesUpdateRequest struct {
+	TeamDrive *shared.TeamDrive `request:"mediaType=application/json"`
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -30,17 +26,12 @@ type DriveTeamdrivesUpdateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The ID of the Team Drive
+	TeamDriveID string `pathParam:"style=simple,explode=false,name=teamDriveId"`
 	// Issue the request as a domain administrator; if set to true, then the requester will be granted access if they are an administrator of the domain to which the Team Drive belongs.
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type DriveTeamdrivesUpdateRequest struct {
-	PathParams  DriveTeamdrivesUpdatePathParams
-	QueryParams DriveTeamdrivesUpdateQueryParams
-	Request     *shared.TeamDrive `request:"mediaType=application/json"`
-	Security    DriveTeamdrivesUpdateSecurity
 }
 
 type DriveTeamdrivesUpdateResponse struct {

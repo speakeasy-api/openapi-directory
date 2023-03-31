@@ -10,13 +10,8 @@ import (
 )
 
 type CloudassetAnalyzeMoveSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
-}
-
-type CloudassetAnalyzeMovePathParams struct {
-	// Required. Name of the resource to perform the analysis against. Only Google Cloud projects are supported as of today. Hence, this can only be a project ID (such as "projects/my-project-id") or a project number (such as "projects/12345").
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CloudassetAnalyzeMoveViewEnum - Analysis view indicating what information should be included in the analysis response. If unspecified, the default view is FULL.
@@ -46,7 +41,7 @@ func (e *CloudassetAnalyzeMoveViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CloudassetAnalyzeMoveQueryParams struct {
+type CloudassetAnalyzeMoveRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -67,18 +62,14 @@ type CloudassetAnalyzeMoveQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. Name of the resource to perform the analysis against. Only Google Cloud projects are supported as of today. Hence, this can only be a project ID (such as "projects/my-project-id") or a project number (such as "projects/12345").
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Analysis view indicating what information should be included in the analysis response. If unspecified, the default view is FULL.
 	View *CloudassetAnalyzeMoveViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type CloudassetAnalyzeMoveRequest struct {
-	PathParams  CloudassetAnalyzeMovePathParams
-	QueryParams CloudassetAnalyzeMoveQueryParams
-	Security    CloudassetAnalyzeMoveSecurity
 }
 
 type CloudassetAnalyzeMoveResponse struct {

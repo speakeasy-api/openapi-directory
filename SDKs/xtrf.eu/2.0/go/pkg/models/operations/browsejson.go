@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type BrowseJSONQueryParams struct {
+type BrowseJSONRequest struct {
 	AdditionalOrder *string `queryParam:"style=form,explode=true,name=additionalOrder"`
 	// overrides view's default rows limit, supported values 10 to 1000
 	MaxRows            *int    `queryParam:"style=form,explode=true,name=maxRows"`
@@ -14,10 +14,6 @@ type BrowseJSONQueryParams struct {
 	UseDeferredColumns *string `queryParam:"style=form,explode=true,name=useDeferredColumns"`
 	// view's identifier
 	ViewID *int64 `queryParam:"style=form,explode=true,name=viewId"`
-}
-
-type BrowseJSONRequest struct {
-	QueryParams BrowseJSONQueryParams
 }
 
 type BrowseJSONResponse struct {

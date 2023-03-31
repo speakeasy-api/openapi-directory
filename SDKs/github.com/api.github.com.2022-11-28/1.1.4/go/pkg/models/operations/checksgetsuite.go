@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChecksGetSuitePathParams struct {
+type ChecksGetSuiteRequest struct {
 	// The unique identifier of the check suite.
 	CheckSuiteID int64 `pathParam:"style=simple,explode=false,name=check_suite_id"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ChecksGetSuiteRequest struct {
-	PathParams ChecksGetSuitePathParams
 }
 
 type ChecksGetSuiteResponse struct {

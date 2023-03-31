@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateGetEntitlementQueryParams struct {
+type CertificateGetEntitlementRequest struct {
 	// Entitlement id to lookup
 	EntitlementID string `queryParam:"style=form,explode=true,name=entitlementId"`
 	// Fetch only the most recent certificate
 	Latest *bool `queryParam:"style=form,explode=true,name=latest"`
-}
-
-type CertificateGetEntitlementRequest struct {
-	QueryParams CertificateGetEntitlementQueryParams
 }
 
 type CertificateGetEntitlementResponse struct {

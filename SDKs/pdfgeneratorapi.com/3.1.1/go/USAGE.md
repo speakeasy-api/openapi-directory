@@ -13,23 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            JSONWebTokenAuth: shared.SchemeJSONWebTokenAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            JSONWebTokenAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
     req := operations.MergeTemplateRequest{
-        QueryParams: operations.MergeTemplateQueryParams{
-            Format: "pdf",
-            Name: "My document",
-            Output: "base64",
-            TemplateID: 19375,
-        },
-        Request: shared.Data{
+        Data: shared.Data{
             ID: 12312,
             Name: "Sample Data",
         },
+        Format: "pdf",
+        Name: "My document",
+        Output: "base64",
+        TemplateID: 19375,
     }
 
     ctx := context.Background()

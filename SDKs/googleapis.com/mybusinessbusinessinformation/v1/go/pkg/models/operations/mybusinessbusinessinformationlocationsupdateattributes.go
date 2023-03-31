@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessbusinessinformationLocationsUpdateAttributesPathParams struct {
-	// Required. Google identifier for this location in the form of `locations/{location_id}/attributes`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessbusinessinformationLocationsUpdateAttributesQueryParams struct {
+type MybusinessbusinessinformationLocationsUpdateAttributesRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv     *shared.XgafvEnum       `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AttributesInput *shared.AttributesInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -27,6 +23,8 @@ type MybusinessbusinessinformationLocationsUpdateAttributesQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Required. Google identifier for this location in the form of `locations/{location_id}/attributes`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -37,12 +35,6 @@ type MybusinessbusinessinformationLocationsUpdateAttributesQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessbusinessinformationLocationsUpdateAttributesRequest struct {
-	PathParams  MybusinessbusinessinformationLocationsUpdateAttributesPathParams
-	QueryParams MybusinessbusinessinformationLocationsUpdateAttributesQueryParams
-	Request     *shared.AttributesInput `request:"mediaType=application/json"`
 }
 
 type MybusinessbusinessinformationLocationsUpdateAttributesResponse struct {

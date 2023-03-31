@@ -7,13 +7,9 @@ import (
 	"time"
 )
 
-type CommentsReadPathParams struct {
+type CommentsReadRequest struct {
 	// The unique identifier of the comment you wish to retrieve.
 	CommentID string `pathParam:"style=simple,explode=false,name=comment_id"`
-}
-
-type CommentsReadRequest struct {
-	PathParams CommentsReadPathParams
 }
 
 // CommentsReadCommentAttributes - The properties of the comment entity.

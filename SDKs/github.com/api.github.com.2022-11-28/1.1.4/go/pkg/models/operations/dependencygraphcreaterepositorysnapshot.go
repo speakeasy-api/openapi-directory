@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DependencyGraphCreateRepositorySnapshotPathParams struct {
+type DependencyGraphCreateRepositorySnapshotRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type DependencyGraphCreateRepositorySnapshotRequest struct {
-	PathParams DependencyGraphCreateRepositorySnapshotPathParams
-	Request    shared.Snapshot `request:"mediaType=application/json"`
+	Repo     string          `pathParam:"style=simple,explode=false,name=repo"`
+	Snapshot shared.Snapshot `request:"mediaType=application/json"`
 }
 
 // DependencyGraphCreateRepositorySnapshot201ApplicationJSON - Response

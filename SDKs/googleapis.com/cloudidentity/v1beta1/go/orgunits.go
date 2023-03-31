@@ -32,20 +32,20 @@ func newOrgUnits(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CloudidentityOrgUnitsMembershipsList - List OrgMembership resources in an OrgUnit treated as 'parent'. Parent format: orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits)
-func (s *orgUnits) CloudidentityOrgUnitsMembershipsList(ctx context.Context, request operations.CloudidentityOrgUnitsMembershipsListRequest) (*operations.CloudidentityOrgUnitsMembershipsListResponse, error) {
+func (s *orgUnits) CloudidentityOrgUnitsMembershipsList(ctx context.Context, request operations.CloudidentityOrgUnitsMembershipsListRequest, security operations.CloudidentityOrgUnitsMembershipsListSecurity) (*operations.CloudidentityOrgUnitsMembershipsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,9 +82,9 @@ func (s *orgUnits) CloudidentityOrgUnitsMembershipsList(ctx context.Context, req
 // CloudidentityOrgUnitsMembershipsMove - Move an OrgMembership to a new OrgUnit. NOTE: This is an atomic copy-and-delete. The resource will have a new copy under the destination OrgUnit and be deleted from the source OrgUnit. The resource can only be searched under the destination OrgUnit afterwards.
 func (s *orgUnits) CloudidentityOrgUnitsMembershipsMove(ctx context.Context, request operations.CloudidentityOrgUnitsMembershipsMoveRequest) (*operations.CloudidentityOrgUnitsMembershipsMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:move", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MoveOrgMembershipRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *orgUnits) CloudidentityOrgUnitsMembershipsMove(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

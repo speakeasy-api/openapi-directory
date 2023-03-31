@@ -33,20 +33,20 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // Area120tablesWorkspacesGet - Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
-func (s *workspaces) Area120tablesWorkspacesGet(ctx context.Context, request operations.Area120tablesWorkspacesGetRequest) (*operations.Area120tablesWorkspacesGetResponse, error) {
+func (s *workspaces) Area120tablesWorkspacesGet(ctx context.Context, request operations.Area120tablesWorkspacesGetRequest, security operations.Area120tablesWorkspacesGetSecurity) (*operations.Area120tablesWorkspacesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *workspaces) Area120tablesWorkspacesGet(ctx context.Context, request ope
 }
 
 // Area120tablesWorkspacesList - Lists workspaces for the user.
-func (s *workspaces) Area120tablesWorkspacesList(ctx context.Context, request operations.Area120tablesWorkspacesListRequest) (*operations.Area120tablesWorkspacesListResponse, error) {
+func (s *workspaces) Area120tablesWorkspacesList(ctx context.Context, request operations.Area120tablesWorkspacesListRequest, security operations.Area120tablesWorkspacesListSecurity) (*operations.Area120tablesWorkspacesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha1/workspaces"
 
@@ -90,11 +90,11 @@ func (s *workspaces) Area120tablesWorkspacesList(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

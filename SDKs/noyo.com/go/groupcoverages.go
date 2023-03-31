@@ -35,9 +35,9 @@ func newGroupCoverages(defaultClient, securityClient HTTPClient, serverURL, lang
 // Here you’ll be able to add the lines of coverage for your group, including type of coverage and the requested effective date.
 func (s *groupCoverages) CreateGroupCoverage(ctx context.Context, request operations.CreateGroupCoverageRequest) (*operations.CreateGroupCoverageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/group_coverages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/group_coverages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupCoverageCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *groupCoverages) CreateGroupCoverage(ctx context.Context, request operat
 // Edit a group coverage based on the ID provided. The version parameter must match the latest group coverage version.
 func (s *groupCoverages) EditGroupCoverage(ctx context.Context, request operations.EditGroupCoverageRequest) (*operations.EditGroupCoverageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupCoverageEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,14 +145,14 @@ func (s *groupCoverages) EditGroupCoverage(ctx context.Context, request operatio
 // Returns a list of all group coverages for a given application
 func (s *groupCoverages) GetApplicationGroupCoverages(ctx context.Context, request operations.GetApplicationGroupCoveragesRequest) (*operations.GetApplicationGroupCoveragesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/group_coverages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/group_coverages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,7 +194,7 @@ func (s *groupCoverages) GetApplicationGroupCoverages(ctx context.Context, reque
 // Returns the latest version of a single group coverage based on the ID provided.
 func (s *groupCoverages) GetGroupCoverage(ctx context.Context, request operations.GetGroupCoverageRequest) (*operations.GetGroupCoverageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/group_coverages/{group_coverage_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -10,7 +10,7 @@ import (
 )
 
 type GetAPIV2BroadcastservicesSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetAPIV2BroadcastservicesOrderByIDEnum - The sort order of the list of broadcast services, based on broadcast service ID. If unspecified, the broadcast services are returned in random order. If using paging to iterate through the results, sort order should be specified.
@@ -37,18 +37,13 @@ func (e *GetAPIV2BroadcastservicesOrderByIDEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetAPIV2BroadcastservicesQueryParams struct {
+type GetAPIV2BroadcastservicesRequest struct {
 	// The sort order of the list of broadcast services, based on broadcast service ID. If unspecified, the broadcast services are returned in random order. If using paging to iterate through the results, sort order should be specified.
 	OrderByID *GetAPIV2BroadcastservicesOrderByIDEnum `queryParam:"style=form,explode=true,name=orderById"`
 	// The number of items to return. Must be between 0 and 500, inclusive.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The start page of the results to return. The first item is indexed at 0.
 	PageStart *int `queryParam:"style=form,explode=true,name=pageStart"`
-}
-
-type GetAPIV2BroadcastservicesRequest struct {
-	QueryParams GetAPIV2BroadcastservicesQueryParams
-	Security    GetAPIV2BroadcastservicesSecurity
 }
 
 type GetAPIV2BroadcastservicesResponse struct {

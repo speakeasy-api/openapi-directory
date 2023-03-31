@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ProtocolSflowReloadPathParams struct {
+type ProtocolSflowReloadRequest struct {
 	// Agent to set the SFLOW
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSflowReloadRequest struct {
-	PathParams ProtocolSflowReloadPathParams
 }
 
 type ProtocolSflowReloadResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConversationsQueryParams struct {
+type GetConversationsRequest struct {
 	// The cursor to start returning results from.
 	//
 	// You are not expected to provide this manually, but to follow the url provided in `_links.next.href` in the response which contains a `cursor` value
@@ -21,10 +21,6 @@ type GetConversationsQueryParams struct {
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// The number of results returned per page.   The default value is `10`. The maximum value is `100`.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetConversationsRequest struct {
-	QueryParams GetConversationsQueryParams
 }
 
 type GetConversations200ApplicationJSONEmbeddedData struct {

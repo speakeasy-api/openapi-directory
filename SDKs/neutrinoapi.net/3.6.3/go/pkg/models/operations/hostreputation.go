@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type HostReputationQueryParams struct {
+type HostReputationRequest struct {
 	// An IP address, domain name, FQDN or URL. <br>If you supply a domain/URL it will be checked against the URI DNSBL lists
 	Host string `queryParam:"style=form,explode=true,name=host"`
 	// Only check lists with this rating or better
 	ListRating *int `queryParam:"style=form,explode=true,name=list-rating"`
 	// Only check these DNSBL zones/hosts. Multiple zones can be supplied as comma-separated values
 	Zones *string `queryParam:"style=form,explode=true,name=zones"`
-}
-
-type HostReputationRequest struct {
-	QueryParams HostReputationQueryParams
 }
 
 type HostReputationResponse struct {

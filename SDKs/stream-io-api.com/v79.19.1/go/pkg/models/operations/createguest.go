@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGuestRequest struct {
-	Request shared.GuestRequest `request:"mediaType=application/json"`
-}
-
 type CreateGuestResponse struct {
 	// Bad request
 	APIError    *shared.APIError

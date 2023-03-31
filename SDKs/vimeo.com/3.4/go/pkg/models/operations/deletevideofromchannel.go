@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteVideoFromChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteVideoFromChannelPathParams struct {
+type DeleteVideoFromChannelRequest struct {
 	// The ID of the channel.
 	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type DeleteVideoFromChannelRequest struct {
-	PathParams DeleteVideoFromChannelPathParams
-	Security   DeleteVideoFromChannelSecurity
 }
 
 type DeleteVideoFromChannelResponse struct {

@@ -4,43 +4,37 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.LanguageDocumentsAnalyzeEntitiesRequest(
-    security=operations.LanguageDocumentsAnalyzeEntitiesSecurity(
-        option1=operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.LanguageDocumentsAnalyzeEntitiesQueryParams(
-        dollar_xgafv="1",
-        access_token="eligendi",
-        alt="json",
-        callback="sed",
-        fields="maiores",
-        key="non",
-        oauth_token="expedita",
-        pretty_print=False,
-        quota_user="sint",
-        upload_type="quia",
-        upload_protocol="ea",
-    ),
-    request=shared.AnalyzeEntitiesRequest(
+    dollar_xgafv="2",
+    analyze_entities_request=shared.AnalyzeEntitiesRequest(
         document=shared.Document(
-            content="quia",
-            gcs_content_uri="pariatur",
-            language="aliquam",
-            type="HTML",
+            content="provident",
+            gcs_content_uri="distinctio",
+            language="quibusdam",
+            type="PLAIN_TEXT",
         ),
         encoding_type="UTF32",
     ),
+    access_token="corrupti",
+    alt="proto",
+    callback="vel",
+    fields_="error",
+    key="deserunt",
+    oauth_token="suscipit",
+    pretty_print=False,
+    quota_user="iure",
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
-res = s.documents.language_documents_analyze_entities(req)
+res = s.documents.language_documents_analyze_entities(req, operations.LanguageDocumentsAnalyzeEntitiesSecurity(
+    option1=operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.analyze_entities_response is not None:
     # handle response

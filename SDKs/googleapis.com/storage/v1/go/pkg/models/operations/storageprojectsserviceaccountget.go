@@ -8,28 +8,28 @@ import (
 )
 
 type StorageProjectsServiceAccountGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsServiceAccountGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsServiceAccountGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsServiceAccountGetSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsServiceAccountGetSecurityOption5 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type StorageProjectsServiceAccountGetSecurity struct {
@@ -40,12 +40,7 @@ type StorageProjectsServiceAccountGetSecurity struct {
 	Option5 *StorageProjectsServiceAccountGetSecurityOption5 `security:"option"`
 }
 
-type StorageProjectsServiceAccountGetPathParams struct {
-	// Project ID
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type StorageProjectsServiceAccountGetQueryParams struct {
+type StorageProjectsServiceAccountGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -56,6 +51,8 @@ type StorageProjectsServiceAccountGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Upload protocol for media (e.g. "media", "multipart", "resumable").
@@ -64,12 +61,6 @@ type StorageProjectsServiceAccountGetQueryParams struct {
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
 	// The project to be billed for this request.
 	UserProject *string `queryParam:"style=form,explode=true,name=userProject"`
-}
-
-type StorageProjectsServiceAccountGetRequest struct {
-	PathParams  StorageProjectsServiceAccountGetPathParams
-	QueryParams StorageProjectsServiceAccountGetQueryParams
-	Security    StorageProjectsServiceAccountGetSecurity
 }
 
 type StorageProjectsServiceAccountGetResponse struct {

@@ -8,13 +8,13 @@ import (
 )
 
 type AdminCustomersChromePrintServersListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdminCustomersChromePrintServersListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AdminCustomersChromePrintServersListSecurity struct {
@@ -22,12 +22,7 @@ type AdminCustomersChromePrintServersListSecurity struct {
 	Option2 *AdminCustomersChromePrintServersListSecurityOption2 `security:"option"`
 }
 
-type AdminCustomersChromePrintServersListPathParams struct {
-	// Required. The [unique ID](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format: `customers/{id}`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type AdminCustomersChromePrintServersListQueryParams struct {
+type AdminCustomersChromePrintServersListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -52,6 +47,8 @@ type AdminCustomersChromePrintServersListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// A generated token to paginate results (the `next_page_token` from a previous call).
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The [unique ID](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format: `customers/{id}`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -60,12 +57,6 @@ type AdminCustomersChromePrintServersListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AdminCustomersChromePrintServersListRequest struct {
-	PathParams  AdminCustomersChromePrintServersListPathParams
-	QueryParams AdminCustomersChromePrintServersListQueryParams
-	Security    AdminCustomersChromePrintServersListSecurity
 }
 
 type AdminCustomersChromePrintServersListResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OrgsRemoveOutsideCollaboratorPathParams struct {
+type OrgsRemoveOutsideCollaboratorRequest struct {
 	Org      string `pathParam:"style=simple,explode=false,name=org"`
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type OrgsRemoveOutsideCollaboratorRequest struct {
-	PathParams OrgsRemoveOutsideCollaboratorPathParams
 }
 
 // OrgsRemoveOutsideCollaborator422ApplicationJSON - Unprocessable Entity if user is a member of the organization

@@ -37,7 +37,7 @@ func newWarehouses(defaultClient, securityClient HTTPClient, serverURL, language
 // CreateWarehouse - Create Warehouse
 // Create a warehouse location that you can use to create shipping items by simply passing in the generated warehouse id.
 // If the return address is not supplied in the request body then it is assumed that the origin address is the return address as well
-func (s *warehouses) CreateWarehouse(ctx context.Context, request operations.CreateWarehouseRequest) (*operations.CreateWarehouseResponse, error) {
+func (s *warehouses) CreateWarehouse(ctx context.Context, request shared.CreateWarehouseRequestBodyInput) (*operations.CreateWarehouseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/warehouses"
 
@@ -108,7 +108,7 @@ func (s *warehouses) CreateWarehouse(ctx context.Context, request operations.Cre
 // Delete a warehouse by ID
 func (s *warehouses) DeleteWarehouse(ctx context.Context, request operations.DeleteWarehouseRequest) (*operations.DeleteWarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *warehouses) DeleteWarehouse(ctx context.Context, request operations.Del
 // Retrieve warehouse data based on the warehouse ID
 func (s *warehouses) GetWarehouseByID(ctx context.Context, request operations.GetWarehouseByIDRequest) (*operations.GetWarehouseByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -294,9 +294,9 @@ func (s *warehouses) ListWarehouses(ctx context.Context) (*operations.ListWareho
 // Update Warehouse object information
 func (s *warehouses) UpdateWarehouse(ctx context.Context, request operations.UpdateWarehouseRequest) (*operations.UpdateWarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWarehouseRequestBodyInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -372,9 +372,9 @@ func (s *warehouses) UpdateWarehouse(ctx context.Context, request operations.Upd
 // Update Warehouse settings object information
 func (s *warehouses) UpdateWarehouseSettings(ctx context.Context, request operations.UpdateWarehouseSettingsRequest) (*operations.UpdateWarehouseSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/warehouses/{warehouse_id}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWarehouseSettingsRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

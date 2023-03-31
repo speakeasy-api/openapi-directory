@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminCreateRegistrationTokenForEnterprisePathParams struct {
+type EnterpriseAdminCreateRegistrationTokenForEnterpriseRequest struct {
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type EnterpriseAdminCreateRegistrationTokenForEnterpriseRequest struct {
-	PathParams EnterpriseAdminCreateRegistrationTokenForEnterprisePathParams
 }
 
 type EnterpriseAdminCreateRegistrationTokenForEnterpriseResponse struct {

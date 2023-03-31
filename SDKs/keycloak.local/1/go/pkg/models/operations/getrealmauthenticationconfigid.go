@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmAuthenticationConfigIDPathParams struct {
+type GetRealmAuthenticationConfigIDRequest struct {
 	// Configuration id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// realm name (not id!)
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
-}
-
-type GetRealmAuthenticationConfigIDRequest struct {
-	PathParams GetRealmAuthenticationConfigIDPathParams
 }
 
 type GetRealmAuthenticationConfigIDResponse struct {

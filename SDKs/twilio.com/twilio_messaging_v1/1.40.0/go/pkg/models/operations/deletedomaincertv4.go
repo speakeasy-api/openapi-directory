@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteDomainCertV4ServerList = []string{
@@ -12,18 +11,13 @@ var DeleteDomainCertV4ServerList = []string{
 }
 
 type DeleteDomainCertV4Security struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDomainCertV4PathParams struct {
-	// Unique string used to identify the domain that this certificate should be associated with.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteDomainCertV4Request struct {
-	PathParams DeleteDomainCertV4PathParams
-	Security   DeleteDomainCertV4Security
-	ServerURL  *string
+	// Unique string used to identify the domain that this certificate should be associated with.
+	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
 }
 
 type DeleteDomainCertV4Response struct {

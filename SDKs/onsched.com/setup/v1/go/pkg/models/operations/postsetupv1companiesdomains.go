@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1CompaniesDomainsRequest struct {
-	// Company Domain Input Model
-	Request *shared.CompanyDomainInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1CompaniesDomainsResponse struct {
 	// Success
 	CompanyDomainViewModel *shared.CompanyDomainViewModel

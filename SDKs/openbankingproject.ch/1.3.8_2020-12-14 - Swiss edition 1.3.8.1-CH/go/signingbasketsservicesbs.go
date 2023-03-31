@@ -36,11 +36,11 @@ func newSigningBasketsServiceSBS(defaultClient, securityClient HTTPClient, serve
 // CreateSigningBasket - Create a signing basket resource
 // Create a signing basket resource for authorising several transactions with one SCA method.
 // The resource identifications of these transactions are contained in the payload of this access method
-func (s *signingBasketsServiceSBS) CreateSigningBasket(ctx context.Context, request operations.CreateSigningBasketRequest) (*operations.CreateSigningBasketResponse, error) {
+func (s *signingBasketsServiceSBS) CreateSigningBasket(ctx context.Context, request operations.CreateSigningBasketRequest, security operations.CreateSigningBasketSecurity) (*operations.CreateSigningBasketResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/signing-baskets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SigningBasket", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,9 +52,9 @@ func (s *signingBasketsServiceSBS) CreateSigningBasket(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,18 +223,18 @@ func (s *signingBasketsServiceSBS) CreateSigningBasket(ctx context.Context, requ
 //
 // Remark: The signing basket as such is not deletable after a first (partial) authorisation has been applied.
 // Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
-func (s *signingBasketsServiceSBS) DeleteSigningBasket(ctx context.Context, request operations.DeleteSigningBasketRequest) (*operations.DeleteSigningBasketResponse, error) {
+func (s *signingBasketsServiceSBS) DeleteSigningBasket(ctx context.Context, request operations.DeleteSigningBasketRequest, security operations.DeleteSigningBasketSecurity) (*operations.DeleteSigningBasketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,18 +389,18 @@ func (s *signingBasketsServiceSBS) DeleteSigningBasket(ctx context.Context, requ
 
 // GetSigningBasket - Returns the content of an signing basket object
 // Returns the content of a signing basket object.
-func (s *signingBasketsServiceSBS) GetSigningBasket(ctx context.Context, request operations.GetSigningBasketRequest) (*operations.GetSigningBasketResponse, error) {
+func (s *signingBasketsServiceSBS) GetSigningBasket(ctx context.Context, request operations.GetSigningBasketRequest, security operations.GetSigningBasketSecurity) (*operations.GetSigningBasketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -567,18 +567,18 @@ func (s *signingBasketsServiceSBS) GetSigningBasket(ctx context.Context, request
 // Read a list of all authorisation subresources IDs which have been created.
 //
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
-func (s *signingBasketsServiceSBS) GetSigningBasketAuthorisation(ctx context.Context, request operations.GetSigningBasketAuthorisationRequest) (*operations.GetSigningBasketAuthorisationResponse, error) {
+func (s *signingBasketsServiceSBS) GetSigningBasketAuthorisation(ctx context.Context, request operations.GetSigningBasketAuthorisationRequest, security operations.GetSigningBasketAuthorisationSecurity) (*operations.GetSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -743,18 +743,18 @@ func (s *signingBasketsServiceSBS) GetSigningBasketAuthorisation(ctx context.Con
 
 // GetSigningBasketScaStatus - Read the SCA status of the signing basket authorisation
 // This method returns the SCA status of a signing basket's authorisation sub-resource.
-func (s *signingBasketsServiceSBS) GetSigningBasketScaStatus(ctx context.Context, request operations.GetSigningBasketScaStatusRequest) (*operations.GetSigningBasketScaStatusResponse, error) {
+func (s *signingBasketsServiceSBS) GetSigningBasketScaStatus(ctx context.Context, request operations.GetSigningBasketScaStatusRequest, security operations.GetSigningBasketScaStatusSecurity) (*operations.GetSigningBasketScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -919,18 +919,18 @@ func (s *signingBasketsServiceSBS) GetSigningBasketScaStatus(ctx context.Context
 
 // GetSigningBasketStatus - Read the status of the signing basket
 // Returns the status of a signing basket object.
-func (s *signingBasketsServiceSBS) GetSigningBasketStatus(ctx context.Context, request operations.GetSigningBasketStatusRequest) (*operations.GetSigningBasketStatusResponse, error) {
+func (s *signingBasketsServiceSBS) GetSigningBasketStatus(ctx context.Context, request operations.GetSigningBasketStatusRequest, security operations.GetSigningBasketStatusSecurity) (*operations.GetSigningBasketStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1127,11 +1127,11 @@ func (s *signingBasketsServiceSBS) GetSigningBasketStatus(ctx context.Context, r
 //   - The related payment cancellation request cannot be applied yet since a multilevel SCA is mandate for
 //     executing the cancellation.
 //   - The signing basket needs to be authorised yet.
-func (s *signingBasketsServiceSBS) StartSigningBasketAuthorisation(ctx context.Context, request operations.StartSigningBasketAuthorisationRequest) (*operations.StartSigningBasketAuthorisationResponse, error) {
+func (s *signingBasketsServiceSBS) StartSigningBasketAuthorisation(ctx context.Context, request operations.StartSigningBasketAuthorisationRequest, security operations.StartSigningBasketAuthorisationSecurity) (*operations.StartSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1143,9 +1143,9 @@ func (s *signingBasketsServiceSBS) StartSigningBasketAuthorisation(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1347,11 +1347,11 @@ func (s *signingBasketsServiceSBS) StartSigningBasketAuthorisation(ctx context.C
 //     WARNING: This method needs a reduced header,
 //     therefore many optional elements are not present.
 //     Maybe in a later version the access path will change.
-func (s *signingBasketsServiceSBS) UpdateSigningBasketPsuData(ctx context.Context, request operations.UpdateSigningBasketPsuDataRequest) (*operations.UpdateSigningBasketPsuDataResponse, error) {
+func (s *signingBasketsServiceSBS) UpdateSigningBasketPsuData(ctx context.Context, request operations.UpdateSigningBasketPsuDataRequest, security operations.UpdateSigningBasketPsuDataSecurity) (*operations.UpdateSigningBasketPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1363,9 +1363,9 @@ func (s *signingBasketsServiceSBS) UpdateSigningBasketPsuData(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

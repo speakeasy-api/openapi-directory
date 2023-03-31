@@ -14,18 +14,16 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        QueryParams: operations.GetQueryParams{
-            Addon: []GetAddonEnum{
-                "geotargeting",
-                "country_groupings",
-                "country_groupings",
-            },
-            Format: "xml",
-            IP: "8.8.8.8",
-            Key: "nulla",
-            Lang: "ja",
-            Package: "WS22",
+        Addon: []GetAddonEnum{
+            "geotargeting",
+            "country_groupings",
+            "country_groupings",
         },
+        Format: "xml",
+        IP: "8.8.8.8",
+        Key: "nulla",
+        Lang: "ja",
+        Package: "WS22",
     }
 
     ctx := context.Background()

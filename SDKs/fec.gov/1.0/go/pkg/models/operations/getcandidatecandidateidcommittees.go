@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCandidateCandidateIDCommitteesPathParams struct {
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office.
-	//
-	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
-}
-
 type GetCandidateCandidateIDCommitteesCommitteeTypeEnum string
 
 const (
@@ -204,10 +197,14 @@ func (e *GetCandidateCandidateIDCommitteesOrganizationTypeEnum) UnmarshalJSON(da
 	}
 }
 
-type GetCandidateCandidateIDCommitteesQueryParams struct {
+type GetCandidateCandidateIDCommitteesRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// A unique identifier assigned to each candidate registered with the FEC.
+	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	//
+	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
 	// The one-letter type code of the organization:
 	//         - C communication cost
 	//         - D delegate
@@ -275,11 +272,6 @@ type GetCandidateCandidateIDCommitteesQueryParams struct {
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
 	// A year that the committee was active— (after original registration date     or filing but before expiration date)
 	Year []int `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCandidateCandidateIDCommitteesRequest struct {
-	PathParams  GetCandidateCandidateIDCommitteesPathParams
-	QueryParams GetCandidateCandidateIDCommitteesQueryParams
 }
 
 type GetCandidateCandidateIDCommitteesResponse struct {

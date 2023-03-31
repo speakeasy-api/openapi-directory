@@ -8,13 +8,13 @@ import (
 )
 
 type TasksTasksListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TasksTasksListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TasksTasksListSecurity struct {
@@ -22,12 +22,7 @@ type TasksTasksListSecurity struct {
 	Option2 *TasksTasksListSecurityOption2 `security:"option"`
 }
 
-type TasksTasksListPathParams struct {
-	// Task list identifier.
-	Tasklist string `pathParam:"style=simple,explode=false,name=tasklist"`
-}
-
-type TasksTasksListQueryParams struct {
+type TasksTasksListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -64,18 +59,14 @@ type TasksTasksListQueryParams struct {
 	ShowDeleted *bool `queryParam:"style=form,explode=true,name=showDeleted"`
 	// Flag indicating whether hidden tasks are returned in the result. Optional. The default is False.
 	ShowHidden *bool `queryParam:"style=form,explode=true,name=showHidden"`
+	// Task list identifier.
+	Tasklist string `pathParam:"style=simple,explode=false,name=tasklist"`
 	// Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by last modification time.
 	UpdatedMin *string `queryParam:"style=form,explode=true,name=updatedMin"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TasksTasksListRequest struct {
-	PathParams  TasksTasksListPathParams
-	QueryParams TasksTasksListQueryParams
-	Security    TasksTasksListSecurity
 }
 
 type TasksTasksListResponse struct {

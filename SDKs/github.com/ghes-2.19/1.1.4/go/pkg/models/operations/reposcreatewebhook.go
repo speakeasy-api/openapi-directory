@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateWebhookPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // ReposCreateWebhookRequestBodyConfig - Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/enterprise-server@2.19/rest/reference/repos#create-hook-config-params).
 type ReposCreateWebhookRequestBodyConfig struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
@@ -37,8 +32,9 @@ type ReposCreateWebhookRequestBody struct {
 }
 
 type ReposCreateWebhookRequest struct {
-	PathParams ReposCreateWebhookPathParams
-	Request    *ReposCreateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposCreateWebhookRequestBody `request:"mediaType=application/json"`
+	Owner       string                         `pathParam:"style=simple,explode=false,name=owner"`
+	Repo        string                         `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateWebhookResponse struct {

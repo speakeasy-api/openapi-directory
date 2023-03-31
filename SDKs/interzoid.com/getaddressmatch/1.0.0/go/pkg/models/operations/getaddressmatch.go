@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetaddressmatchQueryParams struct {
+type GetaddressmatchRequest struct {
 	// Address from which to generate similarity key
 	Address string `queryParam:"style=form,explode=true,name=address"`
 	// Your Interzoid license API key. Register at www.interzoid.com/register
 	License string `queryParam:"style=form,explode=true,name=license"`
-}
-
-type GetaddressmatchRequest struct {
-	QueryParams GetaddressmatchQueryParams
 }
 
 // Getaddressmatch200ApplicationJSON - Generated similarity key for address data

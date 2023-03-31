@@ -4,92 +4,189 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest(
-    security=operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams(
-        parent="in",
-    ),
-    query_params=operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
-        alt="proto",
-        callback="vero",
-        delivery_pipeline_id="et",
-        fields="dolor",
-        key="quibusdam",
-        oauth_token="sit",
-        pretty_print=True,
-        quota_user="eum",
-        request_id="natus",
-        upload_type="ipsa",
-        upload_protocol="et",
-        validate_only=False,
-    ),
-    request=shared.DeliveryPipelineInput(
+    dollar_xgafv="2",
+    delivery_pipeline_input=shared.DeliveryPipelineInput(
         annotations={
-            "sapiente": "iure",
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
         condition=shared.PipelineCondition(
             pipeline_ready_condition=shared.PipelineReadyCondition(
-                status=True,
-                update_time="omnis",
+                status=False,
+                update_time="vel",
             ),
             targets_present_condition=shared.TargetsPresentCondition(
                 missing_targets=[
-                    "fugit",
+                    "deserunt",
+                    "suscipit",
+                    "iure",
                 ],
-                status=True,
-                update_time="inventore",
+                status=False,
+                update_time="magnam",
+            ),
+            targets_type_condition=shared.TargetsTypeCondition(
+                error_details="debitis",
+                status=False,
             ),
         ),
-        description="a",
-        etag="laboriosam",
+        description="ipsa",
+        etag="delectus",
         labels={
-            "voluptates": "laborum",
-            "eligendi": "est",
+            "suscipit": "molestiae",
+            "minus": "placeat",
         },
-        name="inventore",
+        name="voluptatum",
         serial_pipeline=shared.SerialPipeline(
             stages=[
                 shared.Stage(
                     profiles=[
-                        "sapiente",
+                        "nisi",
+                        "recusandae",
+                        "temporibus",
                     ],
                     strategy=shared.Strategy(
+                        canary=shared.Canary(
+                            canary_deployment=shared.CanaryDeployment(
+                                percentages=[
+                                    337396,
+                                ],
+                                verify=False,
+                            ),
+                            custom_canary_deployment=shared.CustomCanaryDeployment(
+                                phase_configs=[
+                                    shared.PhaseConfig(
+                                        percentage=648172,
+                                        phase_id="perferendis",
+                                        profiles=[
+                                            "repellendus",
+                                            "sapiente",
+                                        ],
+                                        verify=False,
+                                    ),
+                                ],
+                            ),
+                            runtime_config=shared.RuntimeConfig(
+                                cloud_run=shared.CloudRunConfig(
+                                    automatic_traffic_control=False,
+                                ),
+                                kubernetes=shared.KubernetesConfig(
+                                    gateway_service_mesh=shared.GatewayServiceMesh(
+                                        deployment="quo",
+                                        http_route="odit",
+                                        service="at",
+                                    ),
+                                    service_networking=shared.ServiceNetworking(
+                                        deployment="at",
+                                        service="maiores",
+                                    ),
+                                ),
+                            ),
+                        ),
                         standard=shared.Standard(
                             verify=False,
                         ),
                     ),
-                    target_id="aliquam",
+                    target_id="molestiae",
                 ),
                 shared.Stage(
                     profiles=[
-                        "dolores",
-                        "vel",
-                        "cumque",
+                        "quod",
+                        "esse",
+                        "totam",
+                        "porro",
                     ],
                     strategy=shared.Strategy(
+                        canary=shared.Canary(
+                            canary_deployment=shared.CanaryDeployment(
+                                percentages=[
+                                    118274,
+                                    720633,
+                                    639921,
+                                ],
+                                verify=False,
+                            ),
+                            custom_canary_deployment=shared.CustomCanaryDeployment(
+                                phase_configs=[
+                                    shared.PhaseConfig(
+                                        percentage=143353,
+                                        phase_id="deleniti",
+                                        profiles=[
+                                            "optio",
+                                            "totam",
+                                            "beatae",
+                                            "commodi",
+                                        ],
+                                        verify=False,
+                                    ),
+                                    shared.PhaseConfig(
+                                        percentage=473600,
+                                        phase_id="modi",
+                                        profiles=[
+                                            "impedit",
+                                        ],
+                                        verify=False,
+                                    ),
+                                    shared.PhaseConfig(
+                                        percentage=736918,
+                                        phase_id="esse",
+                                        profiles=[
+                                            "excepturi",
+                                        ],
+                                        verify=False,
+                                    ),
+                                ],
+                            ),
+                            runtime_config=shared.RuntimeConfig(
+                                cloud_run=shared.CloudRunConfig(
+                                    automatic_traffic_control=False,
+                                ),
+                                kubernetes=shared.KubernetesConfig(
+                                    gateway_service_mesh=shared.GatewayServiceMesh(
+                                        deployment="aspernatur",
+                                        http_route="perferendis",
+                                        service="ad",
+                                    ),
+                                    service_networking=shared.ServiceNetworking(
+                                        deployment="natus",
+                                        service="sed",
+                                    ),
+                                ),
+                            ),
+                        ),
                         standard=shared.Standard(
-                            verify=True,
+                            verify=False,
                         ),
                     ),
-                    target_id="nihil",
+                    target_id="iste",
                 ),
             ],
         ),
-        suspended=True,
+        suspended=False,
     ),
+    access_token="dolor",
+    alt="media",
+    callback="laboriosam",
+    delivery_pipeline_id="hic",
+    fields_="saepe",
+    key="fuga",
+    oauth_token="in",
+    parent="corporis",
+    pretty_print=False,
+    quota_user="iste",
+    request_id="iure",
+    upload_type="saepe",
+    upload_protocol="quidem",
+    validate_only=False,
 )
     
-res = s.projects.clouddeploy_projects_locations_delivery_pipelines_create(req)
+res = s.projects.clouddeploy_projects_locations_delivery_pipelines_create(req, operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

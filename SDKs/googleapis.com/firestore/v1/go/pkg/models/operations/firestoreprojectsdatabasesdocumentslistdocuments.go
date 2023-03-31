@@ -8,13 +8,13 @@ import (
 )
 
 type FirestoreProjectsDatabasesDocumentsListDocumentsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsListDocumentsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsListDocumentsSecurity struct {
@@ -22,14 +22,7 @@ type FirestoreProjectsDatabasesDocumentsListDocumentsSecurity struct {
 	Option2 *FirestoreProjectsDatabasesDocumentsListDocumentsSecurityOption2 `security:"option"`
 }
 
-type FirestoreProjectsDatabasesDocumentsListDocumentsPathParams struct {
-	// Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`. This is optional, and when not provided, Firestore will list documents from all collections under the provided `parent`.
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
-	// Required. The parent resource name. In the format: `projects/{project_id}/databases/{database_id}/documents` or `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type FirestoreProjectsDatabasesDocumentsListDocumentsQueryParams struct {
+type FirestoreProjectsDatabasesDocumentsListDocumentsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +31,8 @@ type FirestoreProjectsDatabasesDocumentsListDocumentsQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`. This is optional, and when not provided, Firestore will list documents from all collections under the provided `parent`.
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -52,6 +47,8 @@ type FirestoreProjectsDatabasesDocumentsListDocumentsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous `ListDocuments` response. Provide this to retrieve the subsequent page. When paginating, all other parameters (with the exception of `page_size`) must match the values set in the request that generated the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The parent resource name. In the format: `projects/{project_id}/databases/{database_id}/documents` or `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -66,12 +63,6 @@ type FirestoreProjectsDatabasesDocumentsListDocumentsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirestoreProjectsDatabasesDocumentsListDocumentsRequest struct {
-	PathParams  FirestoreProjectsDatabasesDocumentsListDocumentsPathParams
-	QueryParams FirestoreProjectsDatabasesDocumentsListDocumentsQueryParams
-	Security    FirestoreProjectsDatabasesDocumentsListDocumentsSecurity
 }
 
 type FirestoreProjectsDatabasesDocumentsListDocumentsResponse struct {

@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type RenewOrganizationLicensesSeatsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type RenewOrganizationLicensesSeatsRequestBody struct {
 	// The ID of the SM license to renew. This license must already be assigned to an SM network
 	LicenseIDToRenew string `json:"licenseIdToRenew"`
@@ -20,8 +16,8 @@ type RenewOrganizationLicensesSeatsRequestBody struct {
 }
 
 type RenewOrganizationLicensesSeatsRequest struct {
-	PathParams RenewOrganizationLicensesSeatsPathParams
-	Request    RenewOrganizationLicensesSeatsRequestBody `request:"mediaType=application/json"`
+	RequestBody    RenewOrganizationLicensesSeatsRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                    `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type RenewOrganizationLicensesSeats200ApplicationJSONResultingLicensesPermanentlyQueuedLicenses struct {

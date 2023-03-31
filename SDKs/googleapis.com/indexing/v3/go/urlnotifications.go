@@ -33,7 +33,7 @@ func newURLNotifications(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // IndexingURLNotificationsGetMetadata - Gets metadata about a Web Document. This method can _only_ be used to query URLs that were previously seen in successful Indexing API notifications. Includes the latest `UrlNotification` received via this API.
-func (s *urlNotifications) IndexingURLNotificationsGetMetadata(ctx context.Context, request operations.IndexingURLNotificationsGetMetadataRequest) (*operations.IndexingURLNotificationsGetMetadataResponse, error) {
+func (s *urlNotifications) IndexingURLNotificationsGetMetadata(ctx context.Context, request operations.IndexingURLNotificationsGetMetadataRequest, security operations.IndexingURLNotificationsGetMetadataSecurity) (*operations.IndexingURLNotificationsGetMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/urlNotifications/metadata"
 
@@ -42,11 +42,11 @@ func (s *urlNotifications) IndexingURLNotificationsGetMetadata(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *urlNotifications) IndexingURLNotificationsGetMetadata(ctx context.Conte
 }
 
 // IndexingURLNotificationsPublish - Notifies that a URL has been updated or deleted.
-func (s *urlNotifications) IndexingURLNotificationsPublish(ctx context.Context, request operations.IndexingURLNotificationsPublishRequest) (*operations.IndexingURLNotificationsPublishResponse, error) {
+func (s *urlNotifications) IndexingURLNotificationsPublish(ctx context.Context, request operations.IndexingURLNotificationsPublishRequest, security operations.IndexingURLNotificationsPublishSecurity) (*operations.IndexingURLNotificationsPublishResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/urlNotifications:publish"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLNotification", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *urlNotifications) IndexingURLNotificationsPublish(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

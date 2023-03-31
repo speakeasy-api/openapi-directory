@@ -36,7 +36,7 @@ func newInvestmentProducts(defaultClient, securityClient HTTPClient, serverURL, 
 
 // GetConfiguredInvestmentProductPrices - Get Current Prices of all Investment Products
 // Returns current prices of all the investment products configured for this tenancy
-func (s *investmentProducts) GetConfiguredInvestmentProductPrices(ctx context.Context, request operations.GetConfiguredInvestmentProductPricesRequest) (*operations.GetConfiguredInvestmentProductPricesResponse, error) {
+func (s *investmentProducts) GetConfiguredInvestmentProductPrices(ctx context.Context, request operations.GetConfiguredInvestmentProductPricesRequest, security operations.GetConfiguredInvestmentProductPricesSecurity) (*operations.GetConfiguredInvestmentProductPricesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/investment-products/v1/getCurrentPrices"
 
@@ -45,13 +45,13 @@ func (s *investmentProducts) GetConfiguredInvestmentProductPrices(ctx context.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *investmentProducts) GetConfiguredInvestmentProductPrices(ctx context.Co
 
 // GetConfiguredInvestmentProducts - Get Configured Investment Products
 // Returns all the investment products configured for this tenancy. Request can be filtered by status to return all `active` or `inactive` investment products
-func (s *investmentProducts) GetConfiguredInvestmentProducts(ctx context.Context, request operations.GetConfiguredInvestmentProductsRequest) (*operations.GetConfiguredInvestmentProductsResponse, error) {
+func (s *investmentProducts) GetConfiguredInvestmentProducts(ctx context.Context, request operations.GetConfiguredInvestmentProductsRequest, security operations.GetConfiguredInvestmentProductsSecurity) (*operations.GetConfiguredInvestmentProductsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tenant/investment-products/v1"
 
@@ -146,13 +146,13 @@ func (s *investmentProducts) GetConfiguredInvestmentProducts(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,18 +238,18 @@ func (s *investmentProducts) GetConfiguredInvestmentProducts(ctx context.Context
 
 // GetInvestmentProduct - Get details of a given Investment Product
 // Returns the requested investment product
-func (s *investmentProducts) GetInvestmentProduct(ctx context.Context, request operations.GetInvestmentProductRequest) (*operations.GetInvestmentProductResponse, error) {
+func (s *investmentProducts) GetInvestmentProduct(ctx context.Context, request operations.GetInvestmentProductRequest, security operations.GetInvestmentProductSecurity) (*operations.GetInvestmentProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,18 +335,18 @@ func (s *investmentProducts) GetInvestmentProduct(ctx context.Context, request o
 
 // GetInvestmentProductPrice - Get Current Price of an Investment Product
 // Returns current price of the requested investment product
-func (s *investmentProducts) GetInvestmentProductPrice(ctx context.Context, request operations.GetInvestmentProductPriceRequest) (*operations.GetInvestmentProductPriceResponse, error) {
+func (s *investmentProducts) GetInvestmentProductPrice(ctx context.Context, request operations.GetInvestmentProductPriceRequest, security operations.GetInvestmentProductPriceSecurity) (*operations.GetInvestmentProductPriceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}/getCurrentPrice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}/getCurrentPrice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

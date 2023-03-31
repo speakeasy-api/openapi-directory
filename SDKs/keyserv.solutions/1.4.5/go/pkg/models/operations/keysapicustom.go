@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type KeysAPICustomPathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type KeysAPICustomRequest struct {
-	PathParams KeysAPICustomPathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type KeysAPICustomResponse struct {

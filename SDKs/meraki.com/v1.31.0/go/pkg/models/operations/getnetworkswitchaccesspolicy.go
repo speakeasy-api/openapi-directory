@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkSwitchAccessPolicyPathParams struct {
+type GetNetworkSwitchAccessPolicyRequest struct {
 	AccessPolicyNumber string `pathParam:"style=simple,explode=false,name=accessPolicyNumber"`
 	NetworkID          string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkSwitchAccessPolicyRequest struct {
-	PathParams GetNetworkSwitchAccessPolicyPathParams
 }
 
 // GetNetworkSwitchAccessPolicy200ApplicationJSONAccessPolicyTypeEnum - Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.

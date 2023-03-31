@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GamesStoresListPathParams struct {
+type GamesStoresListRequest struct {
 	GamePk string `pathParam:"style=simple,explode=false,name=game_pk"`
-}
-
-type GamesStoresListQueryParams struct {
 	// Which field to use when ordering the results.
 	Ordering *string `queryParam:"style=form,explode=true,name=ordering"`
 	// A page number within the paginated result set.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results to return per page.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GamesStoresListRequest struct {
-	PathParams  GamesStoresListPathParams
-	QueryParams GamesStoresListQueryParams
 }
 
 type GamesStoresList200ApplicationJSON struct {

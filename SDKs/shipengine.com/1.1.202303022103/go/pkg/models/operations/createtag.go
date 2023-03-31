@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTagPathParams struct {
-	TagName string `pathParam:"style=simple,explode=false,name=tag_name"`
-}
-
 type CreateTagRequest struct {
-	PathParams CreateTagPathParams
+	TagName string `pathParam:"style=simple,explode=false,name=tag_name"`
 }
 
 type CreateTagResponse struct {

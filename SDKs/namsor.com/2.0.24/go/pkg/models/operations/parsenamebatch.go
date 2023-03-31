@@ -8,13 +8,7 @@ import (
 )
 
 type ParseNameBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ParseNameBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchPersonalNameIn `request:"mediaType=application/json"`
-	Security ParseNameBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type ParseNameBatchResponse struct {

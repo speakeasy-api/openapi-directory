@@ -36,14 +36,14 @@ func newTagging(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Deletes a tag from the CIS instruction
 func (s *tagging) DeleteCisInstructionTag(ctx context.Context, request operations.DeleteCisInstructionTagRequest) (*operations.DeleteCisInstructionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,14 +90,14 @@ func (s *tagging) DeleteCisInstructionTag(ctx context.Context, request operation
 // Deletes a tag from the CIS line
 func (s *tagging) DeleteCisLineTag(ctx context.Context, request operations.DeleteCisLineTagRequest) (*operations.DeleteCisLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,14 +144,14 @@ func (s *tagging) DeleteCisLineTag(ctx context.Context, request operations.Delet
 // Deletes a tag from the CIS line type
 func (s *tagging) DeleteCisLineTypeTag(ctx context.Context, request operations.DeleteCisLineTypeTagRequest) (*operations.DeleteCisLineTypeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -198,14 +198,14 @@ func (s *tagging) DeleteCisLineTypeTag(ctx context.Context, request operations.D
 // Deletes a tag from the employee
 func (s *tagging) DeleteEmployeeTag(ctx context.Context, request operations.DeleteEmployeeTagRequest) (*operations.DeleteEmployeeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -252,14 +252,14 @@ func (s *tagging) DeleteEmployeeTag(ctx context.Context, request operations.Dele
 // Deletes a tag from the employer
 func (s *tagging) DeleteEmployerTag(ctx context.Context, request operations.DeleteEmployerTagRequest) (*operations.DeleteEmployerTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -306,14 +306,14 @@ func (s *tagging) DeleteEmployerTag(ctx context.Context, request operations.Dele
 // Deletes a tag from the holiday scheme
 func (s *tagging) DeleteHolidaySchemeTag(ctx context.Context, request operations.DeleteHolidaySchemeTagRequest) (*operations.DeleteHolidaySchemeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -360,14 +360,14 @@ func (s *tagging) DeleteHolidaySchemeTag(ctx context.Context, request operations
 // Deletes a tag from the journal line
 func (s *tagging) DeleteJournalLineTag(ctx context.Context, request operations.DeleteJournalLineTagRequest) (*operations.DeleteJournalLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -414,14 +414,14 @@ func (s *tagging) DeleteJournalLineTag(ctx context.Context, request operations.D
 // Deletes a tag from the pay code
 func (s *tagging) DeletePayCodeTag(ctx context.Context, request operations.DeletePayCodeTagRequest) (*operations.DeletePayCodeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -468,14 +468,14 @@ func (s *tagging) DeletePayCodeTag(ctx context.Context, request operations.Delet
 // Deletes a tag from the pay instruction
 func (s *tagging) DeletePayInstructionTag(ctx context.Context, request operations.DeletePayInstructionTagRequest) (*operations.DeletePayInstructionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -522,14 +522,14 @@ func (s *tagging) DeletePayInstructionTag(ctx context.Context, request operation
 // Deletes a tag from the pay line
 func (s *tagging) DeletePayLineTag(ctx context.Context, request operations.DeletePayLineTagRequest) (*operations.DeletePayLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -576,14 +576,14 @@ func (s *tagging) DeletePayLineTag(ctx context.Context, request operations.Delet
 // Deletes a tag from the pay run
 func (s *tagging) DeletePayRunTag(ctx context.Context, request operations.DeletePayRunTagRequest) (*operations.DeletePayRunTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -630,14 +630,14 @@ func (s *tagging) DeletePayRunTag(ctx context.Context, request operations.Delete
 // Deletes a tag from the pay schedule
 func (s *tagging) DeletePayScheduleTag(ctx context.Context, request operations.DeletePayScheduleTagRequest) (*operations.DeletePayScheduleTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -684,14 +684,14 @@ func (s *tagging) DeletePayScheduleTag(ctx context.Context, request operations.D
 // Deletes a tag from the Permission
 func (s *tagging) DeletePermissionTag(ctx context.Context, request operations.DeletePermissionTagRequest) (*operations.DeletePermissionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -738,14 +738,14 @@ func (s *tagging) DeletePermissionTag(ctx context.Context, request operations.De
 // Deletes a tag from the RTI transaction
 func (s *tagging) DeleteRtiTransactionTag(ctx context.Context, request operations.DeleteRtiTransactionTagRequest) (*operations.DeleteRtiTransactionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -792,14 +792,14 @@ func (s *tagging) DeleteRtiTransactionTag(ctx context.Context, request operation
 // Deletes a tag from the sub contractor
 func (s *tagging) DeleteSubContractorTag(ctx context.Context, request operations.DeleteSubContractorTagRequest) (*operations.DeleteSubContractorTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -846,14 +846,14 @@ func (s *tagging) DeleteSubContractorTag(ctx context.Context, request operations
 // Deletes a tag from the third party transaction
 func (s *tagging) DeleteThirdPartyTransactionTag(ctx context.Context, request operations.DeleteThirdPartyTransactionTagRequest) (*operations.DeleteThirdPartyTransactionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -900,14 +900,14 @@ func (s *tagging) DeleteThirdPartyTransactionTag(ctx context.Context, request op
 // Deletes a tag from the user
 func (s *tagging) DeleteUserTag(ctx context.Context, request operations.DeleteUserTagRequest) (*operations.DeleteUserTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -954,14 +954,14 @@ func (s *tagging) DeleteUserTag(ctx context.Context, request operations.DeleteUs
 // Gets all the CIS instruction tags
 func (s *tagging) GetAllCisInstructionTags(ctx context.Context, request operations.GetAllCisInstructionTagsRequest) (*operations.GetAllCisInstructionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1017,14 +1017,14 @@ func (s *tagging) GetAllCisInstructionTags(ctx context.Context, request operatio
 // Gets all the CIS line tags
 func (s *tagging) GetAllCisLineTags(ctx context.Context, request operations.GetAllCisLineTagsRequest) (*operations.GetAllCisLineTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1080,14 +1080,14 @@ func (s *tagging) GetAllCisLineTags(ctx context.Context, request operations.GetA
 // Gets all the CIS line type tags
 func (s *tagging) GetAllCisLineTypeTags(ctx context.Context, request operations.GetAllCisLineTypeTagsRequest) (*operations.GetAllCisLineTypeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1143,14 +1143,14 @@ func (s *tagging) GetAllCisLineTypeTags(ctx context.Context, request operations.
 // Gets all the employee tags
 func (s *tagging) GetAllEmployeeTags(ctx context.Context, request operations.GetAllEmployeeTagsRequest) (*operations.GetAllEmployeeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1213,7 +1213,7 @@ func (s *tagging) GetAllEmployerTags(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1269,14 +1269,14 @@ func (s *tagging) GetAllEmployerTags(ctx context.Context, request operations.Get
 // Gets all the holiday scheme tags
 func (s *tagging) GetAllHolidaySchemeTags(ctx context.Context, request operations.GetAllHolidaySchemeTagsRequest) (*operations.GetAllHolidaySchemeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1332,14 +1332,14 @@ func (s *tagging) GetAllHolidaySchemeTags(ctx context.Context, request operation
 // Gets all the journal line tags
 func (s *tagging) GetAllJournalLineTags(ctx context.Context, request operations.GetAllJournalLineTagsRequest) (*operations.GetAllJournalLineTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1395,14 +1395,14 @@ func (s *tagging) GetAllJournalLineTags(ctx context.Context, request operations.
 // Gets the journal lines with the specified tag
 func (s *tagging) GetAllJournalLinesWithTag(ctx context.Context, request operations.GetAllJournalLinesWithTagRequest) (*operations.GetAllJournalLinesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1458,14 +1458,14 @@ func (s *tagging) GetAllJournalLinesWithTag(ctx context.Context, request operati
 // Gets all the pay code tags
 func (s *tagging) GetAllPayCodeTags(ctx context.Context, request operations.GetAllPayCodeTagsRequest) (*operations.GetAllPayCodeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1521,14 +1521,14 @@ func (s *tagging) GetAllPayCodeTags(ctx context.Context, request operations.GetA
 // Gets all the pay instruction tags
 func (s *tagging) GetAllPayInstructionTags(ctx context.Context, request operations.GetAllPayInstructionTagsRequest) (*operations.GetAllPayInstructionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1584,14 +1584,14 @@ func (s *tagging) GetAllPayInstructionTags(ctx context.Context, request operatio
 // Gets all the pay line tags
 func (s *tagging) GetAllPayLineTags(ctx context.Context, request operations.GetAllPayLineTagsRequest) (*operations.GetAllPayLineTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1647,14 +1647,14 @@ func (s *tagging) GetAllPayLineTags(ctx context.Context, request operations.GetA
 // Gets all the pay run tags
 func (s *tagging) GetAllPayRunTags(ctx context.Context, request operations.GetAllPayRunTagsRequest) (*operations.GetAllPayRunTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1710,14 +1710,14 @@ func (s *tagging) GetAllPayRunTags(ctx context.Context, request operations.GetAl
 // Gets all the pay schedule tags
 func (s *tagging) GetAllPayScheduleTags(ctx context.Context, request operations.GetAllPayScheduleTagsRequest) (*operations.GetAllPayScheduleTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1780,7 +1780,7 @@ func (s *tagging) GetAllPermissionTags(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1836,14 +1836,14 @@ func (s *tagging) GetAllPermissionTags(ctx context.Context, request operations.G
 // Gets the Permissions with the specified tag
 func (s *tagging) GetAllPermissionsWithTag(ctx context.Context, request operations.GetAllPermissionsWithTagRequest) (*operations.GetAllPermissionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permissions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permissions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1899,14 +1899,14 @@ func (s *tagging) GetAllPermissionsWithTag(ctx context.Context, request operatio
 // Gets all the RTI transaction tags
 func (s *tagging) GetAllRtiTransactionTags(ctx context.Context, request operations.GetAllRtiTransactionTagsRequest) (*operations.GetAllRtiTransactionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1962,14 +1962,14 @@ func (s *tagging) GetAllRtiTransactionTags(ctx context.Context, request operatio
 // Gets all the sub contractor tags
 func (s *tagging) GetAllSubContractorTags(ctx context.Context, request operations.GetAllSubContractorTagsRequest) (*operations.GetAllSubContractorTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2025,14 +2025,14 @@ func (s *tagging) GetAllSubContractorTags(ctx context.Context, request operation
 // Gets all the third party transaction tags
 func (s *tagging) GetAllThirdPartyTransactionTags(ctx context.Context, request operations.GetAllThirdPartyTransactionTagsRequest) (*operations.GetAllThirdPartyTransactionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2088,14 +2088,14 @@ func (s *tagging) GetAllThirdPartyTransactionTags(ctx context.Context, request o
 // Gets the third party transactions with the specified tag
 func (s *tagging) GetAllThirdPartyTransactionsWithTag(ctx context.Context, request operations.GetAllThirdPartyTransactionsWithTagRequest) (*operations.GetAllThirdPartyTransactionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2158,7 +2158,7 @@ func (s *tagging) GetAllUserTags(ctx context.Context, request operations.GetAllU
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2214,14 +2214,14 @@ func (s *tagging) GetAllUserTags(ctx context.Context, request operations.GetAllU
 // Gets the users with the specified tag
 func (s *tagging) GetAllUsersWithTag(ctx context.Context, request operations.GetAllUsersWithTagRequest) (*operations.GetAllUsersWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Users/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Users/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2277,14 +2277,14 @@ func (s *tagging) GetAllUsersWithTag(ctx context.Context, request operations.Get
 // Gets the CIS instruction with the tag
 func (s *tagging) GetCisInstructionsWithTag(ctx context.Context, request operations.GetCisInstructionsWithTagRequest) (*operations.GetCisInstructionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2340,14 +2340,14 @@ func (s *tagging) GetCisInstructionsWithTag(ctx context.Context, request operati
 // Gets the CIS line type with the tag
 func (s *tagging) GetCisLineTypesWithTag(ctx context.Context, request operations.GetCisLineTypesWithTagRequest) (*operations.GetCisLineTypesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2403,14 +2403,14 @@ func (s *tagging) GetCisLineTypesWithTag(ctx context.Context, request operations
 // Gets the CIS line with the tag
 func (s *tagging) GetCisLinesWithTag(ctx context.Context, request operations.GetCisLinesWithTagRequest) (*operations.GetCisLinesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2466,14 +2466,14 @@ func (s *tagging) GetCisLinesWithTag(ctx context.Context, request operations.Get
 // Gets the employees with the tag
 func (s *tagging) GetEmployeesWithTag(ctx context.Context, request operations.GetEmployeesWithTagRequest) (*operations.GetEmployeesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employees/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2529,14 +2529,14 @@ func (s *tagging) GetEmployeesWithTag(ctx context.Context, request operations.Ge
 // Gets the employers with the tag
 func (s *tagging) GetEmployersWithTag(ctx context.Context, request operations.GetEmployersWithTagRequest) (*operations.GetEmployersWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employers/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employers/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2592,14 +2592,14 @@ func (s *tagging) GetEmployersWithTag(ctx context.Context, request operations.Ge
 // Gets the holiday scheme with the tag
 func (s *tagging) GetHolidaySchemesWithTag(ctx context.Context, request operations.GetHolidaySchemesWithTagRequest) (*operations.GetHolidaySchemesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2655,14 +2655,14 @@ func (s *tagging) GetHolidaySchemesWithTag(ctx context.Context, request operatio
 // Gets the pay codes with the tag
 func (s *tagging) GetPayCodesWithTag(ctx context.Context, request operations.GetPayCodesWithTagRequest) (*operations.GetPayCodesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2718,14 +2718,14 @@ func (s *tagging) GetPayCodesWithTag(ctx context.Context, request operations.Get
 // Gets the pay instructions with the tag
 func (s *tagging) GetPayInstructionsWithTag(ctx context.Context, request operations.GetPayInstructionsWithTagRequest) (*operations.GetPayInstructionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2781,14 +2781,14 @@ func (s *tagging) GetPayInstructionsWithTag(ctx context.Context, request operati
 // Gets the pay line with the tag
 func (s *tagging) GetPayLinesWithTag(ctx context.Context, request operations.GetPayLinesWithTagRequest) (*operations.GetPayLinesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2844,14 +2844,14 @@ func (s *tagging) GetPayLinesWithTag(ctx context.Context, request operations.Get
 // Gets the pay runs with the tag
 func (s *tagging) GetPayRunsWithTag(ctx context.Context, request operations.GetPayRunsWithTagRequest) (*operations.GetPayRunsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2907,14 +2907,14 @@ func (s *tagging) GetPayRunsWithTag(ctx context.Context, request operations.GetP
 // Gets the pay schedules with the tag
 func (s *tagging) GetPaySchedulesWithTag(ctx context.Context, request operations.GetPaySchedulesWithTagRequest) (*operations.GetPaySchedulesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedules/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2970,14 +2970,14 @@ func (s *tagging) GetPaySchedulesWithTag(ctx context.Context, request operations
 // Gets the RTI transactions with the tag
 func (s *tagging) GetRtiTransactionsWithTag(ctx context.Context, request operations.GetRtiTransactionsWithTagRequest) (*operations.GetRtiTransactionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3033,14 +3033,14 @@ func (s *tagging) GetRtiTransactionsWithTag(ctx context.Context, request operati
 // Gets the sub contractor with the tag
 func (s *tagging) GetSubContractorsWithTag(ctx context.Context, request operations.GetSubContractorsWithTagRequest) (*operations.GetSubContractorsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3096,14 +3096,14 @@ func (s *tagging) GetSubContractorsWithTag(ctx context.Context, request operatio
 // Gets the tag from the CIS instruction
 func (s *tagging) GetTagFromCisInstruction(ctx context.Context, request operations.GetTagFromCisInstructionRequest) (*operations.GetTagFromCisInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3159,14 +3159,14 @@ func (s *tagging) GetTagFromCisInstruction(ctx context.Context, request operatio
 // Gets the tag from the CIS line
 func (s *tagging) GetTagFromCisLine(ctx context.Context, request operations.GetTagFromCisLineRequest) (*operations.GetTagFromCisLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3222,14 +3222,14 @@ func (s *tagging) GetTagFromCisLine(ctx context.Context, request operations.GetT
 // Gets the tag from the CIS line type
 func (s *tagging) GetTagFromCisLineType(ctx context.Context, request operations.GetTagFromCisLineTypeRequest) (*operations.GetTagFromCisLineTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3285,14 +3285,14 @@ func (s *tagging) GetTagFromCisLineType(ctx context.Context, request operations.
 // Gets the tag from the employee
 func (s *tagging) GetTagFromEmployee(ctx context.Context, request operations.GetTagFromEmployeeRequest) (*operations.GetTagFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3348,14 +3348,14 @@ func (s *tagging) GetTagFromEmployee(ctx context.Context, request operations.Get
 // Gets the tag from the employee revision
 func (s *tagging) GetTagFromEmployeeRevision(ctx context.Context, request operations.GetTagFromEmployeeRevisionRequest) (*operations.GetTagFromEmployeeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3411,14 +3411,14 @@ func (s *tagging) GetTagFromEmployeeRevision(ctx context.Context, request operat
 // Gets the tag from the employer
 func (s *tagging) GetTagFromEmployer(ctx context.Context, request operations.GetTagFromEmployerRequest) (*operations.GetTagFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3474,14 +3474,14 @@ func (s *tagging) GetTagFromEmployer(ctx context.Context, request operations.Get
 // Gets the tag from the employer revision
 func (s *tagging) GetTagFromEmployerRevision(ctx context.Context, request operations.GetTagFromEmployerRevisionRequest) (*operations.GetTagFromEmployerRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3537,14 +3537,14 @@ func (s *tagging) GetTagFromEmployerRevision(ctx context.Context, request operat
 // Gets the tag from the holiday scheme
 func (s *tagging) GetTagFromHolidayScheme(ctx context.Context, request operations.GetTagFromHolidaySchemeRequest) (*operations.GetTagFromHolidaySchemeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3600,14 +3600,14 @@ func (s *tagging) GetTagFromHolidayScheme(ctx context.Context, request operation
 // Gets the tag from the holiday scheme revision
 func (s *tagging) GetTagFromHolidaySchemeRevision(ctx context.Context, request operations.GetTagFromHolidaySchemeRevisionRequest) (*operations.GetTagFromHolidaySchemeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3663,14 +3663,14 @@ func (s *tagging) GetTagFromHolidaySchemeRevision(ctx context.Context, request o
 // Gets a tag from the journal line
 func (s *tagging) GetTagFromJournalLine(ctx context.Context, request operations.GetTagFromJournalLineRequest) (*operations.GetTagFromJournalLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3726,14 +3726,14 @@ func (s *tagging) GetTagFromJournalLine(ctx context.Context, request operations.
 // Gets the tag from the pay code
 func (s *tagging) GetTagFromPayCode(ctx context.Context, request operations.GetTagFromPayCodeRequest) (*operations.GetTagFromPayCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3789,14 +3789,14 @@ func (s *tagging) GetTagFromPayCode(ctx context.Context, request operations.GetT
 // Gets the tag from the pay instruction
 func (s *tagging) GetTagFromPayInstruction(ctx context.Context, request operations.GetTagFromPayInstructionRequest) (*operations.GetTagFromPayInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3852,14 +3852,14 @@ func (s *tagging) GetTagFromPayInstruction(ctx context.Context, request operatio
 // Gets the tag from the pay line
 func (s *tagging) GetTagFromPayLine(ctx context.Context, request operations.GetTagFromPayLineRequest) (*operations.GetTagFromPayLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3915,14 +3915,14 @@ func (s *tagging) GetTagFromPayLine(ctx context.Context, request operations.GetT
 // Gets the tag from the pay run
 func (s *tagging) GetTagFromPayRun(ctx context.Context, request operations.GetTagFromPayRunRequest) (*operations.GetTagFromPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -3978,14 +3978,14 @@ func (s *tagging) GetTagFromPayRun(ctx context.Context, request operations.GetTa
 // Gets the tag from the pay schedule
 func (s *tagging) GetTagFromPaySchedule(ctx context.Context, request operations.GetTagFromPayScheduleRequest) (*operations.GetTagFromPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4041,14 +4041,14 @@ func (s *tagging) GetTagFromPaySchedule(ctx context.Context, request operations.
 // Gets a tag from the Permission
 func (s *tagging) GetTagFromPermission(ctx context.Context, request operations.GetTagFromPermissionRequest) (*operations.GetTagFromPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4104,14 +4104,14 @@ func (s *tagging) GetTagFromPermission(ctx context.Context, request operations.G
 // Gets the tag from the RTI transaction
 func (s *tagging) GetTagFromRtiTransaction(ctx context.Context, request operations.GetTagFromRtiTransactionRequest) (*operations.GetTagFromRtiTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4167,14 +4167,14 @@ func (s *tagging) GetTagFromRtiTransaction(ctx context.Context, request operatio
 // Gets the tag from the sub contractor
 func (s *tagging) GetTagFromSubContractor(ctx context.Context, request operations.GetTagFromSubContractorRequest) (*operations.GetTagFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4230,14 +4230,14 @@ func (s *tagging) GetTagFromSubContractor(ctx context.Context, request operation
 // Gets the tag from the sub contractor revision
 func (s *tagging) GetTagFromSubContractorRevision(ctx context.Context, request operations.GetTagFromSubContractorRevisionRequest) (*operations.GetTagFromSubContractorRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4293,14 +4293,14 @@ func (s *tagging) GetTagFromSubContractorRevision(ctx context.Context, request o
 // Gets a tag from the third party transaction
 func (s *tagging) GetTagFromThirdPartyTransaction(ctx context.Context, request operations.GetTagFromThirdPartyTransactionRequest) (*operations.GetTagFromThirdPartyTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4356,14 +4356,14 @@ func (s *tagging) GetTagFromThirdPartyTransaction(ctx context.Context, request o
 // Gets a tag from the user
 func (s *tagging) GetTagFromUser(ctx context.Context, request operations.GetTagFromUserRequest) (*operations.GetTagFromUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4419,14 +4419,14 @@ func (s *tagging) GetTagFromUser(ctx context.Context, request operations.GetTagF
 // Gets all the tags from the CIS instruction
 func (s *tagging) GetTagsFromCisInstruction(ctx context.Context, request operations.GetTagsFromCisInstructionRequest) (*operations.GetTagsFromCisInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4482,14 +4482,14 @@ func (s *tagging) GetTagsFromCisInstruction(ctx context.Context, request operati
 // Gets all the tags from the CIS line
 func (s *tagging) GetTagsFromCisLine(ctx context.Context, request operations.GetTagsFromCisLineRequest) (*operations.GetTagsFromCisLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4545,14 +4545,14 @@ func (s *tagging) GetTagsFromCisLine(ctx context.Context, request operations.Get
 // Gets all the tags from the CIS line type
 func (s *tagging) GetTagsFromCisLineType(ctx context.Context, request operations.GetTagsFromCisLineTypeRequest) (*operations.GetTagsFromCisLineTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4608,14 +4608,14 @@ func (s *tagging) GetTagsFromCisLineType(ctx context.Context, request operations
 // Gets all the tags from the employee
 func (s *tagging) GetTagsFromEmployee(ctx context.Context, request operations.GetTagsFromEmployeeRequest) (*operations.GetTagsFromEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4671,14 +4671,14 @@ func (s *tagging) GetTagsFromEmployee(ctx context.Context, request operations.Ge
 // Gets all the tags from the employee revision
 func (s *tagging) GetTagsFromEmployeeRevision(ctx context.Context, request operations.GetTagsFromEmployeeRevisionRequest) (*operations.GetTagsFromEmployeeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4734,14 +4734,14 @@ func (s *tagging) GetTagsFromEmployeeRevision(ctx context.Context, request opera
 // Gets all the tags from the employer
 func (s *tagging) GetTagsFromEmployer(ctx context.Context, request operations.GetTagsFromEmployerRequest) (*operations.GetTagsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4797,14 +4797,14 @@ func (s *tagging) GetTagsFromEmployer(ctx context.Context, request operations.Ge
 // Gets all the tags from the employer revision
 func (s *tagging) GetTagsFromEmployerRevision(ctx context.Context, request operations.GetTagsFromEmployerRevisionRequest) (*operations.GetTagsFromEmployerRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tags/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tags/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4860,14 +4860,14 @@ func (s *tagging) GetTagsFromEmployerRevision(ctx context.Context, request opera
 // Gets all the tags from the holiday scheme
 func (s *tagging) GetTagsFromHolidayScheme(ctx context.Context, request operations.GetTagsFromHolidaySchemeRequest) (*operations.GetTagsFromHolidaySchemeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4923,14 +4923,14 @@ func (s *tagging) GetTagsFromHolidayScheme(ctx context.Context, request operatio
 // Gets all the tags from the holiday scheme revision
 func (s *tagging) GetTagsFromHolidaySchemeRevision(ctx context.Context, request operations.GetTagsFromHolidaySchemeRevisionRequest) (*operations.GetTagsFromHolidaySchemeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -4986,14 +4986,14 @@ func (s *tagging) GetTagsFromHolidaySchemeRevision(ctx context.Context, request 
 // Gets all tags from the journal line
 func (s *tagging) GetTagsFromJournalLine(ctx context.Context, request operations.GetTagsFromJournalLineRequest) (*operations.GetTagsFromJournalLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5049,14 +5049,14 @@ func (s *tagging) GetTagsFromJournalLine(ctx context.Context, request operations
 // Gets all the tags from the pay code
 func (s *tagging) GetTagsFromPayCode(ctx context.Context, request operations.GetTagsFromPayCodeRequest) (*operations.GetTagsFromPayCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5112,14 +5112,14 @@ func (s *tagging) GetTagsFromPayCode(ctx context.Context, request operations.Get
 // Gets all the tags from the pay instruction
 func (s *tagging) GetTagsFromPayInstruction(ctx context.Context, request operations.GetTagsFromPayInstructionRequest) (*operations.GetTagsFromPayInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5175,14 +5175,14 @@ func (s *tagging) GetTagsFromPayInstruction(ctx context.Context, request operati
 // Gets all the tags from the pay line
 func (s *tagging) GetTagsFromPayLine(ctx context.Context, request operations.GetTagsFromPayLineRequest) (*operations.GetTagsFromPayLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5238,14 +5238,14 @@ func (s *tagging) GetTagsFromPayLine(ctx context.Context, request operations.Get
 // Gets all the tags from the pay run
 func (s *tagging) GetTagsFromPayRun(ctx context.Context, request operations.GetTagsFromPayRunRequest) (*operations.GetTagsFromPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5301,14 +5301,14 @@ func (s *tagging) GetTagsFromPayRun(ctx context.Context, request operations.GetT
 // Gets all the tags from the pay schedule
 func (s *tagging) GetTagsFromPaySchedule(ctx context.Context, request operations.GetTagsFromPayScheduleRequest) (*operations.GetTagsFromPayScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5364,14 +5364,14 @@ func (s *tagging) GetTagsFromPaySchedule(ctx context.Context, request operations
 // Gets all tags from the Permission
 func (s *tagging) GetTagsFromPermission(ctx context.Context, request operations.GetTagsFromPermissionRequest) (*operations.GetTagsFromPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5427,14 +5427,14 @@ func (s *tagging) GetTagsFromPermission(ctx context.Context, request operations.
 // Gets all the tags from the RTI transaction
 func (s *tagging) GetTagsFromRtiTransaction(ctx context.Context, request operations.GetTagsFromRtiTransactionRequest) (*operations.GetTagsFromRtiTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5490,14 +5490,14 @@ func (s *tagging) GetTagsFromRtiTransaction(ctx context.Context, request operati
 // Gets all the tags from the sub contractor
 func (s *tagging) GetTagsFromSubContractor(ctx context.Context, request operations.GetTagsFromSubContractorRequest) (*operations.GetTagsFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5553,14 +5553,14 @@ func (s *tagging) GetTagsFromSubContractor(ctx context.Context, request operatio
 // Gets all the tags from the sub contractor revision
 func (s *tagging) GetTagsFromSubContractorRevision(ctx context.Context, request operations.GetTagsFromSubContractorRevisionRequest) (*operations.GetTagsFromSubContractorRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5616,14 +5616,14 @@ func (s *tagging) GetTagsFromSubContractorRevision(ctx context.Context, request 
 // Gets all tags from the third party transaction
 func (s *tagging) GetTagsFromThirdPartyTransaction(ctx context.Context, request operations.GetTagsFromThirdPartyTransactionRequest) (*operations.GetTagsFromThirdPartyTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5679,14 +5679,14 @@ func (s *tagging) GetTagsFromThirdPartyTransaction(ctx context.Context, request 
 // Gets all tags from the user
 func (s *tagging) GetTagsFromUser(ctx context.Context, request operations.GetTagsFromUserRequest) (*operations.GetTagsFromUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5742,14 +5742,14 @@ func (s *tagging) GetTagsFromUser(ctx context.Context, request operations.GetTag
 // Inserts a new tag on the CIS instruction
 func (s *tagging) PutCisInstructionTag(ctx context.Context, request operations.PutCisInstructionTagRequest) (*operations.PutCisInstructionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5805,14 +5805,14 @@ func (s *tagging) PutCisInstructionTag(ctx context.Context, request operations.P
 // Inserts a new tag on the CIS line
 func (s *tagging) PutCisLineTag(ctx context.Context, request operations.PutCisLineTagRequest) (*operations.PutCisLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5868,14 +5868,14 @@ func (s *tagging) PutCisLineTag(ctx context.Context, request operations.PutCisLi
 // Inserts a new tag on the CIS line type
 func (s *tagging) PutCisLineTypeTag(ctx context.Context, request operations.PutCisLineTypeTagRequest) (*operations.PutCisLineTypeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5931,14 +5931,14 @@ func (s *tagging) PutCisLineTypeTag(ctx context.Context, request operations.PutC
 // Inserts a new tag on the employee
 func (s *tagging) PutEmployeeTag(ctx context.Context, request operations.PutEmployeeTagRequest) (*operations.PutEmployeeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -5994,14 +5994,14 @@ func (s *tagging) PutEmployeeTag(ctx context.Context, request operations.PutEmpl
 // Inserts a new tag on the employer
 func (s *tagging) PutEmployerTag(ctx context.Context, request operations.PutEmployerTagRequest) (*operations.PutEmployerTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6057,14 +6057,14 @@ func (s *tagging) PutEmployerTag(ctx context.Context, request operations.PutEmpl
 // Inserts a new tag on the holiday scheme
 func (s *tagging) PutHolidaySchemeTag(ctx context.Context, request operations.PutHolidaySchemeTagRequest) (*operations.PutHolidaySchemeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6120,14 +6120,14 @@ func (s *tagging) PutHolidaySchemeTag(ctx context.Context, request operations.Pu
 // Inserts a tag on the journal line
 func (s *tagging) PutJournalLineTag(ctx context.Context, request operations.PutJournalLineTagRequest) (*operations.PutJournalLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6183,14 +6183,14 @@ func (s *tagging) PutJournalLineTag(ctx context.Context, request operations.PutJ
 // Inserts a new tag on the pay code
 func (s *tagging) PutPayCodeTag(ctx context.Context, request operations.PutPayCodeTagRequest) (*operations.PutPayCodeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6246,14 +6246,14 @@ func (s *tagging) PutPayCodeTag(ctx context.Context, request operations.PutPayCo
 // Inserts a new tag on the pay instruction
 func (s *tagging) PutPayInstructionTag(ctx context.Context, request operations.PutPayInstructionTagRequest) (*operations.PutPayInstructionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6309,14 +6309,14 @@ func (s *tagging) PutPayInstructionTag(ctx context.Context, request operations.P
 // Inserts a new tag on the pay line
 func (s *tagging) PutPayLineTag(ctx context.Context, request operations.PutPayLineTagRequest) (*operations.PutPayLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6372,14 +6372,14 @@ func (s *tagging) PutPayLineTag(ctx context.Context, request operations.PutPayLi
 // Inserts a new tag on the pay run
 func (s *tagging) PutPayRunTag(ctx context.Context, request operations.PutPayRunTagRequest) (*operations.PutPayRunTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6435,14 +6435,14 @@ func (s *tagging) PutPayRunTag(ctx context.Context, request operations.PutPayRun
 // Inserts a new tag on the pay schedule
 func (s *tagging) PutPayScheduleTag(ctx context.Context, request operations.PutPayScheduleTagRequest) (*operations.PutPayScheduleTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6498,14 +6498,14 @@ func (s *tagging) PutPayScheduleTag(ctx context.Context, request operations.PutP
 // Inserts a tag on the Permission
 func (s *tagging) PutPermissionTag(ctx context.Context, request operations.PutPermissionTagRequest) (*operations.PutPermissionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Permission/{PermissionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6561,14 +6561,14 @@ func (s *tagging) PutPermissionTag(ctx context.Context, request operations.PutPe
 // Inserts a new tag on the RTI transaction
 func (s *tagging) PutRtiTransactionTag(ctx context.Context, request operations.PutRtiTransactionTagRequest) (*operations.PutRtiTransactionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6624,14 +6624,14 @@ func (s *tagging) PutRtiTransactionTag(ctx context.Context, request operations.P
 // Inserts a new tag on the sub contractor
 func (s *tagging) PutSubContractorTag(ctx context.Context, request operations.PutSubContractorTagRequest) (*operations.PutSubContractorTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6687,14 +6687,14 @@ func (s *tagging) PutSubContractorTag(ctx context.Context, request operations.Pu
 // Inserts a tag on the third party transaction
 func (s *tagging) PutThirdPartyTransactionTag(ctx context.Context, request operations.PutThirdPartyTransactionTagRequest) (*operations.PutThirdPartyTransactionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -6750,14 +6750,14 @@ func (s *tagging) PutThirdPartyTransactionTag(ctx context.Context, request opera
 // Inserts a tag on the user
 func (s *tagging) PutUserTag(ctx context.Context, request operations.PutUserTagRequest) (*operations.PutUserTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/User/{UserId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

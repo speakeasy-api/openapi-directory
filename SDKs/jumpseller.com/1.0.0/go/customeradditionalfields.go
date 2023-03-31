@@ -35,14 +35,14 @@ func newCustomerAdditionalFields(defaultClient, securityClient HTTPClient, serve
 // DeleteCustomersIDFieldsFieldID - Delete a Customer Additional Field.
 func (s *customerAdditionalFields) DeleteCustomersIDFieldsFieldID(ctx context.Context, request operations.DeleteCustomersIDFieldsFieldIDRequest) (*operations.DeleteCustomersIDFieldsFieldIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -94,14 +94,14 @@ func (s *customerAdditionalFields) DeleteCustomersIDFieldsFieldID(ctx context.Co
 // GetCustomersIDFields - Retrieves the Customer Additional Field of a Customer.
 func (s *customerAdditionalFields) GetCustomersIDFields(ctx context.Context, request operations.GetCustomersIDFieldsRequest) (*operations.GetCustomersIDFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -152,14 +152,14 @@ func (s *customerAdditionalFields) GetCustomersIDFields(ctx context.Context, req
 // GetCustomersIDFieldsFieldID - Retrieve a single Customer Additional Field.
 func (s *customerAdditionalFields) GetCustomersIDFieldsFieldID(ctx context.Context, request operations.GetCustomersIDFieldsFieldIDRequest) (*operations.GetCustomersIDFieldsFieldIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -210,9 +210,9 @@ func (s *customerAdditionalFields) GetCustomersIDFieldsFieldID(ctx context.Conte
 // PostCustomersIDFields - Adds Customer Additional Fields to a Customer.
 func (s *customerAdditionalFields) PostCustomersIDFields(ctx context.Context, request operations.PostCustomersIDFieldsRequest) (*operations.PostCustomersIDFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerAdditionalFieldEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *customerAdditionalFields) PostCustomersIDFields(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -278,9 +278,9 @@ func (s *customerAdditionalFields) PostCustomersIDFields(ctx context.Context, re
 // PutCustomersIDFieldsFieldID - Update a Customer Additional Field.
 func (s *customerAdditionalFields) PutCustomersIDFieldsFieldID(ctx context.Context, request operations.PutCustomersIDFieldsFieldIDRequest) (*operations.PutCustomersIDFieldsFieldIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerAdditionalFieldEdit", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,7 +295,7 @@ func (s *customerAdditionalFields) PutCustomersIDFieldsFieldID(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

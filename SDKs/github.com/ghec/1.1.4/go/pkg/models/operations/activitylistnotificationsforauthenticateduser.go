@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ActivityListNotificationsForAuthenticatedUserQueryParams struct {
+type ActivityListNotificationsForAuthenticatedUserRequest struct {
 	// If `true`, show notifications marked as read.
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// Only show notifications updated before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
@@ -21,10 +21,6 @@ type ActivityListNotificationsForAuthenticatedUserQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
-}
-
-type ActivityListNotificationsForAuthenticatedUserRequest struct {
-	QueryParams ActivityListNotificationsForAuthenticatedUserQueryParams
 }
 
 type ActivityListNotificationsForAuthenticatedUserResponse struct {

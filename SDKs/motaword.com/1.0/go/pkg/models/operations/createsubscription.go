@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSubscriptionPathParams struct {
+type CreateSubscriptionRequest struct {
+	Subscription shared.Subscription `request:"mediaType=application/json"`
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CreateSubscriptionRequest struct {
-	PathParams CreateSubscriptionPathParams
-	Request    shared.Subscription `request:"mediaType=application/json"`
 }
 
 type CreateSubscriptionResponse struct {

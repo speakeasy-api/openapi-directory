@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteRepoSecretPathParams struct {
+type ActionsDeleteRepoSecretRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 	// secret_name parameter
 	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsDeleteRepoSecretRequest struct {
-	PathParams ActionsDeleteRepoSecretPathParams
 }
 
 type ActionsDeleteRepoSecretResponse struct {

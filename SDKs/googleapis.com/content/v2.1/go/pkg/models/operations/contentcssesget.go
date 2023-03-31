@@ -8,18 +8,11 @@ import (
 )
 
 type ContentCssesGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ContentCssesGetPathParams struct {
-	// Required. The ID of the CSS domain to return.
-	CSSDomainID string `pathParam:"style=simple,explode=false,name=cssDomainId"`
-	// Required. The ID of the managing account. If this parameter is not the same as [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be the ID of a CSS domain affiliated with this group.
-	CSSGroupID string `pathParam:"style=simple,explode=false,name=cssGroupId"`
-}
-
-type ContentCssesGetQueryParams struct {
+type ContentCssesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,6 +21,10 @@ type ContentCssesGetQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The ID of the CSS domain to return.
+	CSSDomainID string `pathParam:"style=simple,explode=false,name=cssDomainId"`
+	// Required. The ID of the managing account. If this parameter is not the same as [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be the ID of a CSS domain affiliated with this group.
+	CSSGroupID string `pathParam:"style=simple,explode=false,name=cssGroupId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -42,12 +39,6 @@ type ContentCssesGetQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ContentCssesGetRequest struct {
-	PathParams  ContentCssesGetPathParams
-	QueryParams ContentCssesGetQueryParams
-	Security    ContentCssesGetSecurity
 }
 
 type ContentCssesGetResponse struct {

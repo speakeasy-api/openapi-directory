@@ -8,18 +8,18 @@ import (
 )
 
 type BigqueryDatasetsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsGetSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type BigqueryDatasetsGetSecurity struct {
@@ -28,16 +28,11 @@ type BigqueryDatasetsGetSecurity struct {
 	Option3 *BigqueryDatasetsGetSecurityOption3 `security:"option"`
 }
 
-type BigqueryDatasetsGetPathParams struct {
-	// Dataset ID of the requested dataset
-	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
-	// Project ID of the requested dataset
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BigqueryDatasetsGetQueryParams struct {
+type BigqueryDatasetsGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Dataset ID of the requested dataset
+	DatasetID string `pathParam:"style=simple,explode=false,name=datasetId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,16 +41,12 @@ type BigqueryDatasetsGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the requested dataset
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type BigqueryDatasetsGetRequest struct {
-	PathParams  BigqueryDatasetsGetPathParams
-	QueryParams BigqueryDatasetsGetQueryParams
-	Security    BigqueryDatasetsGetSecurity
 }
 
 type BigqueryDatasetsGetResponse struct {

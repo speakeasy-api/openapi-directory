@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ModeArrivalsPathParams struct {
-	// A mode name e.g. tube, dlr
-	Mode string `pathParam:"style=simple,explode=false,name=mode"`
-}
-
-type ModeArrivalsQueryParams struct {
+type ModeArrivalsRequest struct {
 	// A number of arrivals to return for each stop, -1 to return all available.
 	Count *int `queryParam:"style=form,explode=true,name=count"`
-}
-
-type ModeArrivalsRequest struct {
-	PathParams  ModeArrivalsPathParams
-	QueryParams ModeArrivalsQueryParams
+	// A mode name e.g. tube, dlr
+	Mode string `pathParam:"style=simple,explode=false,name=mode"`
 }
 
 type ModeArrivalsResponse struct {

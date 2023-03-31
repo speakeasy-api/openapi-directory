@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationAlertsProfilesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationAlertsProfilesRequest struct {
-	PathParams GetOrganizationAlertsProfilesPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationAlertsProfilesResponse struct {

@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListSettingTemplatesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListSettingTemplatesQueryParams struct {
+type ListSettingTemplatesRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// Number of records returns within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Unique identifier of the site. This field is required only if multiple sites have been enabled.  of the site. Required only when multiple sites are enabled. See [Managing multiple sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-multiple-sites) for details. If this is not provided, the response lists the account level setting templates.
 	SiteID *string `queryParam:"style=form,explode=true,name=site_id"`
-}
-
-type ListSettingTemplatesRequest struct {
-	QueryParams ListSettingTemplatesQueryParams
-	Security    ListSettingTemplatesSecurity
 }
 
 // ListSettingTemplates200ApplicationXMLTemplatesTypeEnum - Template type.<br>

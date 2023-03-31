@@ -3,34 +3,30 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetDeviceRegistrationRequest(
-    headers=operations.GetDeviceRegistrationHeaders(
-        x_amz_algorithm="quos",
-        x_amz_content_sha256="quam",
-        x_amz_credential="quam",
-        x_amz_date="totam",
-        x_amz_security_token="omnis",
-        x_amz_signature="qui",
-        x_amz_signed_headers="neque",
-    ),
-    request=operations.GetDeviceRegistrationRequestBody(
-        device_fleet_name="officia",
-        device_name="quo",
+        hmac="YOUR_API_KEY_HERE",
     ),
 )
-    
-res = s.get_device_registration(req)
 
-if res.get_device_registration_result is not None:
+
+req = operations.GetDeploymentsRequest(
+    request_body=operations.GetDeploymentsRequestBody(
+        device_fleet_name="corrupti",
+        device_name="provident",
+    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+)
+    
+res = s.get_deployments(req)
+
+if res.get_deployments_result is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

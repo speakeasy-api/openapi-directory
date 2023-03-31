@@ -8,18 +8,13 @@ import (
 )
 
 type JapaneseNameKanjiCandidates1Security struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type JapaneseNameKanjiCandidates1PathParams struct {
-	JapaneseGivenNameLatin string `pathParam:"style=simple,explode=false,name=japaneseGivenNameLatin"`
-	JapaneseSurnameLatin   string `pathParam:"style=simple,explode=false,name=japaneseSurnameLatin"`
-	KnownGender            string `pathParam:"style=simple,explode=false,name=knownGender"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type JapaneseNameKanjiCandidates1Request struct {
-	PathParams JapaneseNameKanjiCandidates1PathParams
-	Security   JapaneseNameKanjiCandidates1Security
+	JapaneseGivenNameLatin string `pathParam:"style=simple,explode=false,name=japaneseGivenNameLatin"`
+	JapaneseSurnameLatin   string `pathParam:"style=simple,explode=false,name=japaneseSurnameLatin"`
+	KnownGender            string `pathParam:"style=simple,explode=false,name=knownGender"`
 }
 
 type JapaneseNameKanjiCandidates1Response struct {

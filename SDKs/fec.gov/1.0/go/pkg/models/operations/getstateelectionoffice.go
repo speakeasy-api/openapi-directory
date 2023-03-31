@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStateElectionOfficeQueryParams struct {
+type GetStateElectionOfficeRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -29,10 +29,6 @@ type GetStateElectionOfficeQueryParams struct {
 	//
 	//
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetStateElectionOfficeRequest struct {
-	QueryParams GetStateElectionOfficeQueryParams
 }
 
 type GetStateElectionOfficeResponse struct {

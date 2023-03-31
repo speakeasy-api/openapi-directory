@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDriverPathParams struct {
+type DeleteDriverRequest struct {
 	// The driver id that needs to be deleted
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteDriverRequest struct {
-	PathParams DeleteDriverPathParams
 }
 
 type DeleteDriverResponse struct {

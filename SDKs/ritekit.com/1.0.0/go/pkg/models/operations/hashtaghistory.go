@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type HashtagHistoryPathParams struct {
+type HashtagHistoryRequest struct {
 	// Hashtag without # mark
 	Hashtag string `pathParam:"style=simple,explode=false,name=hashtag"`
-}
-
-type HashtagHistoryRequest struct {
-	PathParams HashtagHistoryPathParams
 }
 
 type HashtagHistoryResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetCustomerServiceMetricTaskSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetCustomerServiceMetricTaskPathParams struct {
-	// Use this path parameter to specify the task ID value for the customer service metric task to retrieve.
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetCustomerServiceMetricTaskRequest struct {
-	PathParams GetCustomerServiceMetricTaskPathParams
-	Security   GetCustomerServiceMetricTaskSecurity
+	// Use this path parameter to specify the task ID value for the customer service metric task to retrieve.
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type GetCustomerServiceMetricTaskResponse struct {

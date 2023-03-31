@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRoadIdsPathParams struct {
+type GetRoadIdsRequest struct {
 	// Comma-separated list of road identifiers e.g. "A406, A2" (a full list of supported road identifiers can be found at the /Road/ endpoint)
 	Ids []string `pathParam:"style=simple,explode=false,name=ids"`
-}
-
-type GetRoadIdsRequest struct {
-	PathParams GetRoadIdsPathParams
 }
 
 type GetRoadIdsResponse struct {

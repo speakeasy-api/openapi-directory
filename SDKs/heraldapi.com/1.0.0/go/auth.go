@@ -59,7 +59,7 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // GET /producers
 // Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybUlkIjoiZm9vYmFyIiwiaWF0IjoxNjQ2NTkzNzUwLCJleHAiOjE2NDY2ODAxNTB9.UEe8fXdaiS4rynpeVlISm6wWglQitbZfW5_YXs-SEbg
 // ```
-func (s *auth) PostAuthToken(ctx context.Context, request operations.PostAuthTokenRequest) (*operations.PostAuthTokenResponse, error) {
+func (s *auth) PostAuthToken(ctx context.Context, request operations.PostAuthTokenRequestBody) (*operations.PostAuthTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/token"
 

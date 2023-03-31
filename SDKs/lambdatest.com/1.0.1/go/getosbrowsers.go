@@ -34,7 +34,7 @@ func newGetOSBrowsers(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // OsBrowsers - Fetch all available os-browser combinations.
 // Fetch all os browsers combinations available on lambdatest platform.
-func (s *getOSBrowsers) OsBrowsers(ctx context.Context, request operations.OsBrowsersRequest) (*operations.OsBrowsersResponse, error) {
+func (s *getOSBrowsers) OsBrowsers(ctx context.Context, request operations.OsBrowsersRequest, security operations.OsBrowsersSecurity) (*operations.OsBrowsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/os-browsers"
 
@@ -43,11 +43,11 @@ func (s *getOSBrowsers) OsBrowsers(ctx context.Context, request operations.OsBro
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

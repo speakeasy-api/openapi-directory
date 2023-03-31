@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCodeownersErrorsPathParams struct {
+type ReposCodeownersErrorsRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposCodeownersErrorsQueryParams struct {
 	// A branch, tag or commit name used to determine which version of the CODEOWNERS file to use. Default: the repository's default branch (e.g. `main`)
 	Ref *string `queryParam:"style=form,explode=true,name=ref"`
-}
-
-type ReposCodeownersErrorsRequest struct {
-	PathParams  ReposCodeownersErrorsPathParams
-	QueryParams ReposCodeownersErrorsQueryParams
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCodeownersErrorsResponse struct {

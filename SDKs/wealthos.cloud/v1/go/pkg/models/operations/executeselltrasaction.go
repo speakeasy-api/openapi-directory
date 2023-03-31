@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExecuteSellTrasactionSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ExecuteSellTrasactionHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // ExecuteSellTrasactionSellTransactionRequestInstructionBuySell - Definition of an single instruction(buy|sell)
@@ -38,9 +32,9 @@ type ExecuteSellTrasactionSellTransactionRequest struct {
 }
 
 type ExecuteSellTrasactionRequest struct {
-	Headers  ExecuteSellTrasactionHeaders
-	Request  *ExecuteSellTrasactionSellTransactionRequest `request:"mediaType=application/json"`
-	Security ExecuteSellTrasactionSecurity
+	RequestBody *ExecuteSellTrasactionSellTransactionRequest `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // ExecuteSellTrasaction500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

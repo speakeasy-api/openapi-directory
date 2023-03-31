@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.KkidAllowanceGetRequest{
-        Security: operations.KkidAllowanceGetSecurity{
-            AuthKey: shared.SchemeAuthKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.KkidAllowanceGetQueryParams{
-            KidUserID: 548814,
-            TransactionDays: 592845,
-        },
+        KidUserID: 548814,
+        TransactionDays: 592845,
     }
 
     ctx := context.Background()
-    res, err := s.KKid.KkidAllowanceGet(ctx, req)
+    res, err := s.KKid.KkidAllowanceGet(ctx, req, operations.KkidAllowanceGetSecurity{
+        AuthKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

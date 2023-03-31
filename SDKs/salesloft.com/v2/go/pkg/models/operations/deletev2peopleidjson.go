@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteV2PeopleIDJSONPathParams struct {
+type DeleteV2PeopleIDJSONRequest struct {
 	// Person id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteV2PeopleIDJSONRequest struct {
-	PathParams DeleteV2PeopleIDJSONPathParams
 }
 
 type DeleteV2PeopleIDJSONResponse struct {

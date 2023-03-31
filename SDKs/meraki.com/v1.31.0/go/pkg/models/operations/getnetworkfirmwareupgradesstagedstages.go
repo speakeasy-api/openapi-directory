@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkFirmwareUpgradesStagedStagesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkFirmwareUpgradesStagedStagesRequest struct {
-	PathParams GetNetworkFirmwareUpgradesStagedStagesPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkFirmwareUpgradesStagedStages200ApplicationJSONGroup - The Staged Upgrade Group

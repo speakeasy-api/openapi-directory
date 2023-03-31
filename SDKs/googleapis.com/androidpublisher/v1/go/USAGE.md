@@ -14,32 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.AndroidpublisherPurchasesCancelRequest{
-        Security: operations.AndroidpublisherPurchasesCancelSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.AndroidpublisherPurchasesCancelPathParams{
-            PackageName: "corrupti",
-            SubscriptionID: "provident",
-            Token: "distinctio",
-        },
-        QueryParams: operations.AndroidpublisherPurchasesCancelQueryParams{
-            Alt: "json",
-            Fields: "quibusdam",
-            Key: "unde",
-            OauthToken: "nulla",
-            PrettyPrint: false,
-            QuotaUser: "corrupti",
-            UserIP: "illum",
-        },
+        Alt: "json",
+        Fields: "corrupti",
+        Key: "provident",
+        OauthToken: "distinctio",
+        PackageName: "quibusdam",
+        PrettyPrint: false,
+        QuotaUser: "unde",
+        SubscriptionID: "nulla",
+        Token: "corrupti",
+        UserIP: "illum",
     }
 
     ctx := context.Background()
-    res, err := s.Purchases.AndroidpublisherPurchasesCancel(ctx, req)
+    res, err := s.Purchases.AndroidpublisherPurchasesCancel(ctx, req, operations.AndroidpublisherPurchasesCancelSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

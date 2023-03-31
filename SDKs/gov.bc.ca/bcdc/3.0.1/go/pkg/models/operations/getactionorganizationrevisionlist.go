@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetActionOrganizationRevisionListQueryParams struct {
+type GetActionOrganizationRevisionListRequest struct {
 	// The name or id of the organization
 	ID *string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetActionOrganizationRevisionListRequest struct {
-	QueryParams GetActionOrganizationRevisionListQueryParams
 }
 
 type GetActionOrganizationRevisionListResponse struct {

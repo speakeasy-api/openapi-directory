@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
-	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -34,7 +33,7 @@ func newWorks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // GetShakespeareQuote - Get a random Shakespeare quote.
-func (s *works) GetShakespeareQuote(ctx context.Context, request operations.GetShakespeareQuoteRequest) (*operations.GetShakespeareQuoteResponse, error) {
+func (s *works) GetShakespeareQuote(ctx context.Context) (*operations.GetShakespeareQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shakespeare/quote"
 
@@ -43,7 +42,7 @@ func (s *works) GetShakespeareQuote(ctx context.Context, request operations.GetS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

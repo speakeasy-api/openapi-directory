@@ -8,18 +8,11 @@ import (
 )
 
 type AndroidpublisherPurchasesSubscriptionsv2GetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherPurchasesSubscriptionsv2GetPathParams struct {
-	// The package of the application for which this subscription was purchased (for example, 'com.some.thing').
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Required. The token provided to the user's device when the subscription was purchased.
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type AndroidpublisherPurchasesSubscriptionsv2GetQueryParams struct {
+type AndroidpublisherPurchasesSubscriptionsv2GetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -34,20 +27,18 @@ type AndroidpublisherPurchasesSubscriptionsv2GetQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The package of the application for which this subscription was purchased (for example, 'com.some.thing').
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The token provided to the user's device when the subscription was purchased.
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidpublisherPurchasesSubscriptionsv2GetRequest struct {
-	PathParams  AndroidpublisherPurchasesSubscriptionsv2GetPathParams
-	QueryParams AndroidpublisherPurchasesSubscriptionsv2GetQueryParams
-	Security    AndroidpublisherPurchasesSubscriptionsv2GetSecurity
 }
 
 type AndroidpublisherPurchasesSubscriptionsv2GetResponse struct {

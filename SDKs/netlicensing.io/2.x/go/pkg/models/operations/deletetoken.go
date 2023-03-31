@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteTokenSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteTokenPathParams struct {
-	// Token number
-	TokenNumber string `pathParam:"style=simple,explode=false,name=tokenNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteTokenRequest struct {
-	PathParams DeleteTokenPathParams
-	Security   DeleteTokenSecurity
+	// Token number
+	TokenNumber string `pathParam:"style=simple,explode=false,name=tokenNumber"`
 }
 
 type DeleteTokenResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePodcast1PathParams struct {
+type DeletePodcast1Request struct {
 	EpisodeKey string `pathParam:"style=simple,explode=false,name=episodeKey"`
 	PodcastKey string `pathParam:"style=simple,explode=false,name=podcastKey"`
-}
-
-type DeletePodcast1Request struct {
-	PathParams DeletePodcast1PathParams
 }
 
 type DeletePodcast1Response struct {

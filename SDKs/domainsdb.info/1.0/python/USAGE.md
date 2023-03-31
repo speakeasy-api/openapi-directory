@@ -4,18 +4,15 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetDomainsTldZoneIDDownloadRequest(
-    path_params=operations.GetDomainsTldZoneIDDownloadPathParams(
-        zone_id="maxime",
-    ),
-    query_params=operations.GetDomainsTldZoneIDDownloadQueryParams(
-        api_key="omnis",
-        date_="voluptas",
-    ),
+    api_key="corrupti",
+    date_="provident",
+    zone_id="distinctio",
 )
     
-res = s.domains_.get_domains_tld_zone_id_download(req)
+res = s.domains.get_domains_tld_zone_id_download(req)
 
 if res.status_code == 200:
     # handle response

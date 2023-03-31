@@ -12,12 +12,8 @@ var UpdateCredentialAwsServerList = []string{
 }
 
 type UpdateCredentialAwsSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCredentialAwsPathParams struct {
-	// The Twilio-provided string that uniquely identifies the AWS resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCredentialAwsUpdateCredentialAwsRequest struct {
@@ -26,10 +22,9 @@ type UpdateCredentialAwsUpdateCredentialAwsRequest struct {
 }
 
 type UpdateCredentialAwsRequest struct {
-	PathParams UpdateCredentialAwsPathParams
-	Request    *UpdateCredentialAwsUpdateCredentialAwsRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateCredentialAwsSecurity
-	ServerURL  *string
+	RequestBody *UpdateCredentialAwsUpdateCredentialAwsRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The Twilio-provided string that uniquely identifies the AWS resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateCredentialAwsResponse struct {

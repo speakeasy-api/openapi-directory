@@ -33,13 +33,9 @@ func (e *CurrentSeasonDetailsFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CurrentSeasonDetailsPathParams struct {
+type CurrentSeasonDetailsRequest struct {
 	// Desired response format. Valid entries are <code>xml</code> or <code>json</code>.
 	Format CurrentSeasonDetailsFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type CurrentSeasonDetailsRequest struct {
-	PathParams CurrentSeasonDetailsPathParams
 }
 
 type CurrentSeasonDetailsResponse struct {

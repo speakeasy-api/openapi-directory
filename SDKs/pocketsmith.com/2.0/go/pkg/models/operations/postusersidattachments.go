@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDAttachmentsPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostUsersIDAttachmentsRequestBody struct {
 	// The base64-encoded contents of the source file. The supported file types are png, jpg, pdf, xls, xlsx, doc, docx.
 	FileData *string `json:"file_data,omitempty"`
@@ -22,8 +17,9 @@ type PostUsersIDAttachmentsRequestBody struct {
 }
 
 type PostUsersIDAttachmentsRequest struct {
-	PathParams PostUsersIDAttachmentsPathParams
-	Request    *PostUsersIDAttachmentsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostUsersIDAttachmentsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostUsersIDAttachmentsResponse struct {

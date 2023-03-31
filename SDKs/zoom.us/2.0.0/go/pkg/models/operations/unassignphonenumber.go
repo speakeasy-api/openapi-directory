@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UnassignPhoneNumberSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UnassignPhoneNumberPathParams struct {
+type UnassignPhoneNumberRequest struct {
 	// Provide either phone number or phoneNumberId of the user.
 	PhoneNumberID string `pathParam:"style=simple,explode=false,name=phoneNumberId"`
 	// Provide either userId or email address of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UnassignPhoneNumberRequest struct {
-	PathParams UnassignPhoneNumberPathParams
-	Security   UnassignPhoneNumberSecurity
 }
 
 type UnassignPhoneNumberResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IPBlocklistDownloadQueryParams struct {
+type IPBlocklistDownloadRequest struct {
 	// Output IPs using CIDR notation. This option should be preferred but is off by default for backwards compatibility
 	Cidr *bool `queryParam:"style=form,explode=true,name=cidr"`
 	// The data format. Can be either CSV or TXT
@@ -16,10 +16,6 @@ type IPBlocklistDownloadQueryParams struct {
 	IncludeVpn *bool `queryParam:"style=form,explode=true,name=include-vpn"`
 	// Output the IPv6 version of the blocklist, the default is to output IPv4 only. Note that this option enables CIDR notation too as this is the only notation currently supported for IPv6
 	Ip6 *bool `queryParam:"style=form,explode=true,name=ip6"`
-}
-
-type IPBlocklistDownloadRequest struct {
-	QueryParams IPBlocklistDownloadQueryParams
 }
 
 type IPBlocklistDownloadResponse struct {

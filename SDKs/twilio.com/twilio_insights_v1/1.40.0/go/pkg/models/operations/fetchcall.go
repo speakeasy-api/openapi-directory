@@ -12,17 +12,12 @@ var FetchCallServerList = []string{
 }
 
 type FetchCallSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchCallPathParams struct {
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchCallRequest struct {
-	PathParams FetchCallPathParams
-	Security   FetchCallSecurity
-	ServerURL  *string
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchCallResponse struct {

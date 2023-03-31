@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
-req = operations.RetrieveNeoFeedTodayRequest(
-    query_params=operations.RetrieveNeoFeedTodayQueryParams(
-        detailed=False,
-    ),
+
+
+req = operations.RetrieveNEOFeedTodayRequest(
+    detailed=False,
 )
     
 res = s.feed.retrieve_neo_feed_today(req)

@@ -12,12 +12,8 @@ var UpdateRoleServerList = []string{
 }
 
 type UpdateRoleSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateRolePathParams struct {
-	// The SID of the Role resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRoleUpdateRoleRequest struct {
@@ -26,10 +22,9 @@ type UpdateRoleUpdateRoleRequest struct {
 }
 
 type UpdateRoleRequest struct {
-	PathParams UpdateRolePathParams
-	Request    *UpdateRoleUpdateRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateRoleSecurity
-	ServerURL  *string
+	RequestBody *UpdateRoleUpdateRoleRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Role resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateRoleResponse struct {

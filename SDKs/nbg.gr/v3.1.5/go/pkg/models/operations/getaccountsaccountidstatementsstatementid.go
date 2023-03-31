@@ -8,20 +8,17 @@ import (
 )
 
 type GetAccountsAccountIDStatementsStatementIDSecurity struct {
-	AuthorizationCodeToken shared.SchemeAuthorizationCodeToken `security:"scheme,type=oauth2"`
-	ClientID               shared.SchemeClientID               `security:"scheme,type=apiKey,subtype=header"`
+	AuthorizationCodeToken string `security:"scheme,type=oauth2,name=Authorization"`
+	ClientID               string `security:"scheme,type=apiKey,subtype=header,name=Client-Id"`
 }
 
-type GetAccountsAccountIDStatementsStatementIDPathParams struct {
+type GetAccountsAccountIDStatementsStatementIDRequest struct {
 	// AccountId
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// StatementId
-	StatementID string `pathParam:"style=simple,explode=false,name=statementId"`
-}
-
-type GetAccountsAccountIDStatementsStatementIDHeaders struct {
 	// The unique id of the sandbox to be used
 	SandboxID string `header:"style=simple,explode=false,name=sandbox-id"`
+	// StatementId
+	StatementID string `pathParam:"style=simple,explode=false,name=statementId"`
 	// Indicates the user-agent that the PSU is using.
 	XCustomerUserAgent *string `header:"style=simple,explode=false,name=x-customer-user-agent"`
 	// The time when the PSU last logged in with the TPP.
@@ -32,12 +29,6 @@ type GetAccountsAccountIDStatementsStatementIDHeaders struct {
 	XFapiCustomerIPAddress *string `header:"style=simple,explode=false,name=x-fapi-customer-ip-address"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type GetAccountsAccountIDStatementsStatementIDRequest struct {
-	PathParams GetAccountsAccountIDStatementsStatementIDPathParams
-	Headers    GetAccountsAccountIDStatementsStatementIDHeaders
-	Security   GetAccountsAccountIDStatementsStatementIDSecurity
 }
 
 type GetAccountsAccountIDStatementsStatementIDResponse struct {

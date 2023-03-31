@@ -33,15 +33,11 @@ func (e *PlayByPlaySimulationFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayByPlaySimulationPathParams struct {
+type PlayByPlaySimulationRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayByPlaySimulationFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The number of plays to progress in this NFL live game simulation. Example entries are <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>150</code>, <code>200</code>, etc.
 	Numberofplays string `pathParam:"style=simple,explode=false,name=numberofplays"`
-}
-
-type PlayByPlaySimulationRequest struct {
-	PathParams PlayByPlaySimulationPathParams
 }
 
 type PlayByPlaySimulationResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2StepsJSONQueryParams struct {
+type GetV2StepsJSONRequest struct {
 	// Filter by cadence ID
 	CadenceID *int64 `queryParam:"style=form,explode=true,name=cadence_id"`
 	// Filter by whether a step has due actions
@@ -27,10 +27,6 @@ type GetV2StepsJSONQueryParams struct {
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
 	// Filter by step type
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetV2StepsJSONRequest struct {
-	QueryParams GetV2StepsJSONQueryParams
 }
 
 type GetV2StepsJSONResponse struct {

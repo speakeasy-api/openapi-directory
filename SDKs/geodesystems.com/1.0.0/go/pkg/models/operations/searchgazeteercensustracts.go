@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchGazeteerCensusTractsQueryParams struct {
+type SearchGazeteerCensusTractsRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -60,10 +60,6 @@ type SearchGazeteerCensusTractsQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchGazeteerCensusTractsRequest struct {
-	QueryParams SearchGazeteerCensusTractsQueryParams
 }
 
 type SearchGazeteerCensusTractsResponse struct {

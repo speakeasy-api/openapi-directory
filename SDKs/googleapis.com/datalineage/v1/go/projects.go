@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // DatalineageProjectsLocationsBatchSearchLinkProcesses - Retrieve information about LineageProcesses associated with specific links. LineageProcesses are transformation pipelines that result in data flowing from **source** to **target** assets. Links between assets represent this operation. If you have specific link names, you can use this method to verify which LineageProcesses contribute to creating those links. See the SearchLinks method for more information on how to retrieve link name. You can retrieve the LineageProcess information in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
-func (s *projects) DatalineageProjectsLocationsBatchSearchLinkProcesses(ctx context.Context, request operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest) (*operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse, error) {
+func (s *projects) DatalineageProjectsLocationsBatchSearchLinkProcesses(ctx context.Context, request operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest, security operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity) (*operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:batchSearchLinkProcesses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:batchSearchLinkProcesses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) DatalineageProjectsLocationsBatchSearchLinkProcesses(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *projects) DatalineageProjectsLocationsBatchSearchLinkProcesses(ctx cont
 }
 
 // DatalineageProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-func (s *projects) DatalineageProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatalineageProjectsLocationsOperationsCancelRequest) (*operations.DatalineageProjectsLocationsOperationsCancelResponse, error) {
+func (s *projects) DatalineageProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatalineageProjectsLocationsOperationsCancelRequest, security operations.DatalineageProjectsLocationsOperationsCancelSecurity) (*operations.DatalineageProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,11 +103,11 @@ func (s *projects) DatalineageProjectsLocationsOperationsCancel(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,20 +142,20 @@ func (s *projects) DatalineageProjectsLocationsOperationsCancel(ctx context.Cont
 }
 
 // DatalineageProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-func (s *projects) DatalineageProjectsLocationsOperationsList(ctx context.Context, request operations.DatalineageProjectsLocationsOperationsListRequest) (*operations.DatalineageProjectsLocationsOperationsListResponse, error) {
+func (s *projects) DatalineageProjectsLocationsOperationsList(ctx context.Context, request operations.DatalineageProjectsLocationsOperationsListRequest, security operations.DatalineageProjectsLocationsOperationsListSecurity) (*operations.DatalineageProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *projects) DatalineageProjectsLocationsOperationsList(ctx context.Contex
 }
 
 // DatalineageProjectsLocationsProcessesCreate - Creates a new process.
-func (s *projects) DatalineageProjectsLocationsProcessesCreate(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesCreateRequest) (*operations.DatalineageProjectsLocationsProcessesCreateResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesCreate(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesCreateRequest, security operations.DatalineageProjectsLocationsProcessesCreateSecurity) (*operations.DatalineageProjectsLocationsProcessesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/processes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/processes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogLineageV1Process", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -206,11 +206,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -245,20 +245,20 @@ func (s *projects) DatalineageProjectsLocationsProcessesCreate(ctx context.Conte
 }
 
 // DatalineageProjectsLocationsProcessesList - List processes in the given project and location. List order is descending by insertion time.
-func (s *projects) DatalineageProjectsLocationsProcessesList(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesListRequest) (*operations.DatalineageProjectsLocationsProcessesListResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesList(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesListRequest, security operations.DatalineageProjectsLocationsProcessesListSecurity) (*operations.DatalineageProjectsLocationsProcessesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/processes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/processes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,11 +293,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesList(ctx context.Context
 }
 
 // DatalineageProjectsLocationsProcessesRunsCreate - Creates a new run.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsCreate(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsCreateRequest) (*operations.DatalineageProjectsLocationsProcessesRunsCreateResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsCreate(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsCreateRequest, security operations.DatalineageProjectsLocationsProcessesRunsCreateSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogLineageV1Run", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -309,11 +309,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsCreate(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,11 +348,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsCreate(ctx context.C
 }
 
 // DatalineageProjectsLocationsProcessesRunsLineageEventsCreate - Creates a new lineage event.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsCreate(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateRequest) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsCreate(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateRequest, security operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lineageEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lineageEvents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogLineageV1LineageEvent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,11 +364,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsCreate(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -403,20 +403,20 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsCreate(
 }
 
 // DatalineageProjectsLocationsProcessesRunsLineageEventsDelete - Deletes the lineage event with the specified name.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsDelete(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRequest) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsDelete(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRequest, security operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsDelete(
 }
 
 // DatalineageProjectsLocationsProcessesRunsLineageEventsGet - Gets details of a specified lineage event.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsGet(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetRequest) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsGet(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetRequest, security operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,20 +499,20 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsGet(ctx
 }
 
 // DatalineageProjectsLocationsProcessesRunsLineageEventsList - Lists lineage events in the given project and location. The list order is not defined.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsList(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListRequest) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsList(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListRequest, security operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lineageEvents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lineageEvents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,20 +547,20 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsLineageEventsList(ct
 }
 
 // DatalineageProjectsLocationsProcessesRunsList - Lists runs in the given project and location. List order is descending by `start_time`.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsList(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsListRequest) (*operations.DatalineageProjectsLocationsProcessesRunsListResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsList(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsListRequest, security operations.DatalineageProjectsLocationsProcessesRunsListSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -595,11 +595,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsList(ctx context.Con
 }
 
 // DatalineageProjectsLocationsProcessesRunsPatch - Updates a run.
-func (s *projects) DatalineageProjectsLocationsProcessesRunsPatch(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsPatchRequest) (*operations.DatalineageProjectsLocationsProcessesRunsPatchResponse, error) {
+func (s *projects) DatalineageProjectsLocationsProcessesRunsPatch(ctx context.Context, request operations.DatalineageProjectsLocationsProcessesRunsPatchRequest, security operations.DatalineageProjectsLocationsProcessesRunsPatchSecurity) (*operations.DatalineageProjectsLocationsProcessesRunsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogLineageV1Run", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,11 +611,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsPatch(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *projects) DatalineageProjectsLocationsProcessesRunsPatch(ctx context.Co
 }
 
 // DatalineageProjectsLocationsSearchLinks - Retrieve a list of links connected to a specific asset. Links represent the data flow between **source** (upstream) and **target** (downstream) assets in transformation pipelines. Links are stored in the same project as the Lineage Events that create them. You can retrieve links in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
-func (s *projects) DatalineageProjectsLocationsSearchLinks(ctx context.Context, request operations.DatalineageProjectsLocationsSearchLinksRequest) (*operations.DatalineageProjectsLocationsSearchLinksResponse, error) {
+func (s *projects) DatalineageProjectsLocationsSearchLinks(ctx context.Context, request operations.DatalineageProjectsLocationsSearchLinksRequest, security operations.DatalineageProjectsLocationsSearchLinksSecurity) (*operations.DatalineageProjectsLocationsSearchLinksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:searchLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:searchLinks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogLineageV1SearchLinksRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,11 +666,11 @@ func (s *projects) DatalineageProjectsLocationsSearchLinks(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -19,6 +19,5 @@ pkg/models/shared/image.go
 pkg/models/shared/location.go
 pkg/models/shared/geocoordinates.go
 pkg/models/shared/address.go
-pkg/models/shared/security.go
 pkg/models/shared/charitysearchresponse.go
 USAGE.md

@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCatalogueAssetDetailSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
-type GetCatalogueAssetDetailPathParams struct {
+type GetCatalogueAssetDetailRequest struct {
 	// The identifier for the selected catalogue asset.
 	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
 	// The identifier for the selected catalogue.
 	CatalogueID string `pathParam:"style=simple,explode=false,name=catalogueId"`
-}
-
-type GetCatalogueAssetDetailRequest struct {
-	PathParams GetCatalogueAssetDetailPathParams
-	Security   GetCatalogueAssetDetailSecurity
 }
 
 type GetCatalogueAssetDetailResponse struct {

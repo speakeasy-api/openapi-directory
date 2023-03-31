@@ -4,14 +4,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DeleteAddressRequest(
-    headers=operations.DeleteAddressHeaders(
-        authorization="dolores",
-    ),
-    request=shared.DeleteAddressRequest(
-        ethereumaddress="sit",
-        password="id",
+    authorization="q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",
+    delete_address_request=shared.DeleteAddressRequest(
+        ethereumaddress="corrupti",
+        password="provident",
     ),
 )
     

@@ -33,7 +33,7 @@ func (e *AveragesV2GetV2AveragesGetSortSortEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type AveragesV2GetV2AveragesGetQueryParams struct {
+type AveragesV2GetV2AveragesGetRequest struct {
 	//         Limit results by a certain country using two letter country code.
 	//         (ex. ?country=US or ?country=US&country=MX)
 	//
@@ -62,10 +62,6 @@ type AveragesV2GetV2AveragesGetQueryParams struct {
 	// An enumeration.
 	Temporal shared.TemporalEnum `queryParam:"style=form,explode=true,name=temporal"`
 	Unit     []string            `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type AveragesV2GetV2AveragesGetRequest struct {
-	QueryParams AveragesV2GetV2AveragesGetQueryParams
 }
 
 type AveragesV2GetV2AveragesGetResponse struct {

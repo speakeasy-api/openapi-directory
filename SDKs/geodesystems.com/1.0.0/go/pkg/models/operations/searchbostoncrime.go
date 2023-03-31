@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchBostonCrimeQueryParams struct {
+type SearchBostonCrimeRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -66,10 +66,6 @@ type SearchBostonCrimeQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchBostonCrimeRequest struct {
-	QueryParams SearchBostonCrimeQueryParams
 }
 
 type SearchBostonCrimeResponse struct {

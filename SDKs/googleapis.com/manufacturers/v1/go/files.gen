@@ -22,7 +22,6 @@ pkg/models/operations/manufacturersaccountsproductslist.go
 pkg/models/operations/manufacturersaccountsproductsupdate.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/productcertification.go
 pkg/models/shared/issue.go
 pkg/models/shared/destinationstatus.go

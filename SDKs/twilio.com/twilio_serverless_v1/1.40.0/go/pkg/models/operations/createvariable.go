@@ -12,14 +12,8 @@ var CreateVariableServerList = []string{
 }
 
 type CreateVariableSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateVariablePathParams struct {
-	// The SID of the Environment in which the Variable resource exists.
-	EnvironmentSid string `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
-	// The SID of the Service to create the Variable resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateVariableCreateVariableRequest struct {
@@ -30,10 +24,11 @@ type CreateVariableCreateVariableRequest struct {
 }
 
 type CreateVariableRequest struct {
-	PathParams CreateVariablePathParams
-	Request    *CreateVariableCreateVariableRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateVariableSecurity
-	ServerURL  *string
+	// The SID of the Environment in which the Variable resource exists.
+	EnvironmentSid string                               `pathParam:"style=simple,explode=false,name=EnvironmentSid"`
+	RequestBody    *CreateVariableCreateVariableRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the Service to create the Variable resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateVariableResponse struct {

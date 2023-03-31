@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetMeTagsTagsTopQuestionsPathParams struct {
-	// String list (semicolon delimited).
-	Tags string `pathParam:"style=simple,explode=false,name=tags"`
-}
-
 // GetMeTagsTagsTopQuestionsOrderEnum
 type GetMeTagsTagsTopQuestionsOrderEnum string
 
@@ -76,7 +71,7 @@ func (e *GetMeTagsTagsTopQuestionsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMeTagsTagsTopQuestionsQueryParams struct {
+type GetMeTagsTagsTopQuestionsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -139,13 +134,10 @@ type GetMeTagsTagsTopQuestionsQueryParams struct {
 	//
 	Site string                             `queryParam:"style=form,explode=true,name=site"`
 	Sort *GetMeTagsTagsTopQuestionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	// String list (semicolon delimited).
+	Tags string `pathParam:"style=simple,explode=false,name=tags"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetMeTagsTagsTopQuestionsRequest struct {
-	PathParams  GetMeTagsTagsTopQuestionsPathParams
-	QueryParams GetMeTagsTagsTopQuestionsQueryParams
 }
 
 type GetMeTagsTagsTopQuestionsResponse struct {

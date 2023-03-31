@@ -13,15 +13,13 @@ var ListMessageServerList = []string{
 }
 
 type ListMessageSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListMessagePathParams struct {
+type ListMessageRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resources to read.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-}
-
-type ListMessageQueryParams struct {
 	// The date of the messages to show. Specify a date as `YYYY-MM-DD` in GMT to read only messages sent on this date. For example: `2009-07-06`. You can also specify an inequality, such as `DateSent<=YYYY-MM-DD`, to read messages sent on or before midnight on a date, and `DateSent>=YYYY-MM-DD` to read messages sent on or after midnight on a date.
 	DateSent *time.Time `queryParam:"style=form,explode=true,name=DateSent"`
 	// The date of the messages to show. Specify a date as `YYYY-MM-DD` in GMT to read only messages sent on this date. For example: `2009-07-06`. You can also specify an inequality, such as `DateSent<=YYYY-MM-DD`, to read messages sent on or before midnight on a date, and `DateSent>=YYYY-MM-DD` to read messages sent on or after midnight on a date.
@@ -38,13 +36,6 @@ type ListMessageQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// Read messages sent to only this phone number.
 	To *string `queryParam:"style=form,explode=true,name=To"`
-}
-
-type ListMessageRequest struct {
-	PathParams  ListMessagePathParams
-	QueryParams ListMessageQueryParams
-	Security    ListMessageSecurity
-	ServerURL   *string
 }
 
 // ListMessageListMessageResponse - OK

@@ -35,7 +35,7 @@ func newBadges(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Responds with the badge for an offering matching the offeringId.
 func (s *badges) GetOfferingsOfferingIDBadges(ctx context.Context, request operations.GetOfferingsOfferingIDBadgesRequest) (*operations.GetOfferingsOfferingIDBadgesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/badges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/badges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *badges) GetOfferingsOfferingIDBadges(ctx context.Context, request opera
 // Responds with all badges that the specified user has been awarded.
 func (s *badges) GetUsersUserEmailBadges(ctx context.Context, request operations.GetUsersUserEmailBadgesRequest) (*operations.GetUsersUserEmailBadgesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/badges", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/badges", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *badges) GetUsersUserEmailBadges(ctx context.Context, request operations
 // Awards a badge to a user in the offering.
 func (s *badges) PostOfferingsOfferingIDUsersUserEmailBadgesAward(ctx context.Context, request operations.PostOfferingsOfferingIDUsersUserEmailBadgesAwardRequest) (*operations.PostOfferingsOfferingIDUsersUserEmailBadgesAwardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/badges/award", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/badges/award", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

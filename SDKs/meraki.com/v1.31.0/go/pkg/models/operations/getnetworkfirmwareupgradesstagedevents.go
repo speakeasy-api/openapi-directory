@@ -9,12 +9,8 @@ import (
 	"time"
 )
 
-type GetNetworkFirmwareUpgradesStagedEventsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkFirmwareUpgradesStagedEventsRequest struct {
-	PathParams GetNetworkFirmwareUpgradesStagedEventsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // GetNetworkFirmwareUpgradesStagedEvents200ApplicationJSONProductsSwitchNextUpgradeToVersion - Details of the version the device will upgrade to

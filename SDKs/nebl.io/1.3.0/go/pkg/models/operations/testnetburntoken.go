@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetBurnTokenRequest struct {
-	// Object representing the token to be burned
-	Request shared.BurnTokenRequest `request:"mediaType=application/json"`
-}
-
 type TestnetBurnTokenResponse struct {
 	ContentType string
 	// Unexpected error

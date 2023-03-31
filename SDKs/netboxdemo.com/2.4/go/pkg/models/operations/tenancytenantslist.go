@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TenancyTenantsListQueryParams struct {
+type TenancyTenantsListRequest struct {
 	Group   *string `queryParam:"style=form,explode=true,name=group"`
 	GroupID *string `queryParam:"style=form,explode=true,name=group_id"`
 	// Multiple values may be separated by commas.
@@ -19,10 +19,6 @@ type TenancyTenantsListQueryParams struct {
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Q      *string `queryParam:"style=form,explode=true,name=q"`
 	Tag    *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type TenancyTenantsListRequest struct {
-	QueryParams TenancyTenantsListQueryParams
 }
 
 type TenancyTenantsList200ApplicationJSON struct {

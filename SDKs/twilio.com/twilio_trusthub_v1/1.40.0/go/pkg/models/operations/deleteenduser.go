@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteEndUserServerList = []string{
@@ -12,18 +11,13 @@ var DeleteEndUserServerList = []string{
 }
 
 type DeleteEndUserSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteEndUserPathParams struct {
-	// The unique string created by Twilio to identify the End User resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteEndUserRequest struct {
-	PathParams DeleteEndUserPathParams
-	Security   DeleteEndUserSecurity
-	ServerURL  *string
+	// The unique string created by Twilio to identify the End User resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteEndUserResponse struct {

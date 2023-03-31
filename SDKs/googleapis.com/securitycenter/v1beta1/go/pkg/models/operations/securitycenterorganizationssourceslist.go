@@ -8,16 +8,11 @@ import (
 )
 
 type SecuritycenterOrganizationsSourcesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SecuritycenterOrganizationsSourcesListPathParams struct {
-	// Required. Resource name of the parent of sources to list. Its format should be "organizations/[organization_id]".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type SecuritycenterOrganizationsSourcesListQueryParams struct {
+type SecuritycenterOrganizationsSourcesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type SecuritycenterOrganizationsSourcesListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a prior `ListSources` call, and that the system should return the next page of data.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name of the parent of sources to list. Its format should be "organizations/[organization_id]".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type SecuritycenterOrganizationsSourcesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SecuritycenterOrganizationsSourcesListRequest struct {
-	PathParams  SecuritycenterOrganizationsSourcesListPathParams
-	QueryParams SecuritycenterOrganizationsSourcesListQueryParams
-	Security    SecuritycenterOrganizationsSourcesListSecurity
 }
 
 type SecuritycenterOrganizationsSourcesListResponse struct {

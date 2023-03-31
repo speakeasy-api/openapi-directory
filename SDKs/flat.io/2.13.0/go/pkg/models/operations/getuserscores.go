@@ -8,24 +8,15 @@ import (
 )
 
 type GetUserScoresSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetUserScoresPathParams struct {
-	// Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
-	//
-	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type GetUserScoresQueryParams struct {
-	// Filter the score forked from the score id `parent`
-	Parent *string `queryParam:"style=form,explode=true,name=parent"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetUserScoresRequest struct {
-	PathParams  GetUserScoresPathParams
-	QueryParams GetUserScoresQueryParams
-	Security    GetUserScoresSecurity
+	// Filter the score forked from the score id `parent`
+	Parent *string `queryParam:"style=form,explode=true,name=parent"`
+	// Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
+	//
+	User string `pathParam:"style=simple,explode=false,name=user"`
 }
 
 type GetUserScoresResponse struct {

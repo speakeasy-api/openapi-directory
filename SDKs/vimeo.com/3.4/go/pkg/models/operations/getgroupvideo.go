@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupVideoPathParams struct {
+type GetGroupVideoRequest struct {
 	// The ID of the group.
 	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type GetGroupVideoRequest struct {
-	PathParams GetGroupVideoPathParams
 }
 
 type GetGroupVideoResponse struct {

@@ -33,7 +33,7 @@ func newClientInitialAccess(defaultClient, securityClient HTTPClient, serverURL,
 
 func (s *clientInitialAccess) DeleteRealmClientsInitialAccessID(ctx context.Context, request operations.DeleteRealmClientsInitialAccessIDRequest) (*operations.DeleteRealmClientsInitialAccessIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients-initial-access/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients-initial-access/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -66,7 +66,7 @@ func (s *clientInitialAccess) DeleteRealmClientsInitialAccessID(ctx context.Cont
 }
 func (s *clientInitialAccess) GetRealmClientsInitialAccess(ctx context.Context, request operations.GetRealmClientsInitialAccessRequest) (*operations.GetRealmClientsInitialAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients-initial-access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients-initial-access", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -110,9 +110,9 @@ func (s *clientInitialAccess) GetRealmClientsInitialAccess(ctx context.Context, 
 // PostRealmClientsInitialAccess - Create a new initial access token.
 func (s *clientInitialAccess) PostRealmClientsInitialAccess(ctx context.Context, request operations.PostRealmClientsInitialAccessRequest) (*operations.PostRealmClientsInitialAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients-initial-access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/clients-initial-access", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientInitialAccessCreatePresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

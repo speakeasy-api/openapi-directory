@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type CreateEventNotificationHeaders struct {
+type CreateEventNotificationRequest struct {
+	// Create an Callback URI
+	RequestBody string `request:"mediaType=application/jwt"`
 	// The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.
 	XFapiFinancialID string `header:"style=simple,explode=false,name=x-fapi-financial-id"`
 	// An RFC4122 UID used as a correlation id.
 	XFapiInteractionID *string `header:"style=simple,explode=false,name=x-fapi-interaction-id"`
-}
-
-type CreateEventNotificationRequest struct {
-	Headers CreateEventNotificationHeaders
-	// Create an Callback URI
-	Request string `request:"mediaType=application/jwt"`
 }
 
 type CreateEventNotificationResponse struct {

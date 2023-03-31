@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetProductRequest{
-        Security: operations.GetProductSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GetProductPathParams{
-            Epid: "corrupti",
-        },
-        Headers: operations.GetProductHeaders{
-            XEbayCMarketplaceID: "provident",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        Epid: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Product.GetProduct(ctx, req)
+    res, err := s.Product.GetProduct(ctx, req, operations.GetProductSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

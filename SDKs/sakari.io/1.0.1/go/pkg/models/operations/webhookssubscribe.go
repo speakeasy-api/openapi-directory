@@ -10,12 +10,7 @@ import (
 )
 
 type WebhooksSubscribeSecurity struct {
-	SakariAuth shared.SchemeSakariAuth `security:"scheme,type=oauth2"`
-}
-
-type WebhooksSubscribePathParams struct {
-	// Account to apply operations to
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	SakariAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type WebhooksSubscribeRequestBodyEventTypesEnum string
@@ -74,9 +69,9 @@ type WebhooksSubscribeRequestBody struct {
 }
 
 type WebhooksSubscribeRequest struct {
-	PathParams WebhooksSubscribePathParams
-	Request    WebhooksSubscribeRequestBody `request:"mediaType=application/json"`
-	Security   WebhooksSubscribeSecurity
+	RequestBody WebhooksSubscribeRequestBody `request:"mediaType=application/json"`
+	// Account to apply operations to
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
 type WebhooksSubscribeResponse struct {

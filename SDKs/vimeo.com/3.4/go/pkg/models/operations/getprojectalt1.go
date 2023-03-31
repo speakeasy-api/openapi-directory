@@ -8,17 +8,12 @@ import (
 )
 
 type GetProjectAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetProjectAlt1PathParams struct {
-	// The ID of the project.
-	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetProjectAlt1Request struct {
-	PathParams GetProjectAlt1PathParams
-	Security   GetProjectAlt1Security
+	// The ID of the project.
+	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type GetProjectAlt1Response struct {

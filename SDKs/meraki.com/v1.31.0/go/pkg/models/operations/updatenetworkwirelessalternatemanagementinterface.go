@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessAlternateManagementInterfacePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkWirelessAlternateManagementInterfaceRequestBodyAccessPoints struct {
 	// Wireless alternate management interface device IP. Provide an empty string to remove alternate management IP assignment
 	AlternateManagementIP string `json:"alternateManagementIp"`
@@ -68,8 +64,8 @@ type UpdateNetworkWirelessAlternateManagementInterfaceRequestBody struct {
 }
 
 type UpdateNetworkWirelessAlternateManagementInterfaceRequest struct {
-	PathParams UpdateNetworkWirelessAlternateManagementInterfacePathParams
-	Request    *UpdateNetworkWirelessAlternateManagementInterfaceRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessAlternateManagementInterfaceRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                        `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkWirelessAlternateManagementInterfaceResponse struct {

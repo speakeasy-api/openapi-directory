@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProductsAfterIDJSONPathParams struct {
-	// Id of the Product
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetProductsAfterIDJSONQueryParams struct {
+type GetProductsAfterIDJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
+	// Id of the Product
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 	// Locale code of the translation
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// API OAuth login.
 	Login string `queryParam:"style=form,explode=true,name=login"`
-}
-
-type GetProductsAfterIDJSONRequest struct {
-	PathParams  GetProductsAfterIDJSONPathParams
-	QueryParams GetProductsAfterIDJSONQueryParams
 }
 
 type GetProductsAfterIDJSONResponse struct {

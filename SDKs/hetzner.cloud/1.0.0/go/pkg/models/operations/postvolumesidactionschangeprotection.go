@@ -8,19 +8,15 @@ import (
 	"net/http"
 )
 
-type PostVolumesIDActionsChangeProtectionPathParams struct {
-	// ID of the Volume
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostVolumesIDActionsChangeProtectionRequestBody struct {
 	// If true, prevents the Volume from being deleted
 	Delete *bool `json:"delete,omitempty"`
 }
 
 type PostVolumesIDActionsChangeProtectionRequest struct {
-	PathParams PostVolumesIDActionsChangeProtectionPathParams
-	Request    *PostVolumesIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostVolumesIDActionsChangeProtectionRequestBody `request:"mediaType=application/json"`
+	// ID of the Volume
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PostVolumesIDActionsChangeProtectionActionResponseActionError - Error message for the Action if error occurred, otherwise null

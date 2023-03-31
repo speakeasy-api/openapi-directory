@@ -4,16 +4,10 @@ package webhooks
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PodcastDeletedResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-}
-
-type PodcastDeletedRequest struct {
-	// Triggered by your request to DELETE /podcasts/{id}, if the podcast is actually deleted.
-	Request *shared.PodcastMinimumRss `request:"mediaType=application/json"`
 }

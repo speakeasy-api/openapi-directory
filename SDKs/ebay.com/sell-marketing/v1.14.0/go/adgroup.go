@@ -32,11 +32,11 @@ func newAdGroup(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // CreateAdGroup - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method adds an ad group to an existing PLA campaign that uses the Cost Per Click (CPC) funding model.<br /><br />To create an ad group for a campaign, specify the <b>defaultBid</b> for the ad group in the payload of the request. Then specify the campaign to which the ad group should be associated using the <b>campaign_id</b> path parameter.<br /><br />Each campaign can have one or more associated ad groups.
-func (s *adGroup) CreateAdGroup(ctx context.Context, request operations.CreateAdGroupRequest) (*operations.CreateAdGroupResponse, error) {
+func (s *adGroup) CreateAdGroup(ctx context.Context, request operations.CreateAdGroupRequest, security operations.CreateAdGroupSecurity) (*operations.CreateAdGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAdGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *adGroup) CreateAdGroup(ctx context.Context, request operations.CreateAd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -95,16 +95,16 @@ func (s *adGroup) CreateAdGroup(ctx context.Context, request operations.CreateAd
 }
 
 // GetAdGroup - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method retrieves the details of a specified ad group, such as the ad group’s default bid and status.<br /><br />In the request, specify the <b>campaign_id</b> and <b>ad_group_id</b> as path parameters.<br /><br />Call <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> to retrieve a list of the current campaign IDs for a seller and call <a href="/api-docs/sell/marketing/resources/adgroup/methods/getAdGroups">getAdGroups</a> for the ad group ID of the ad group you wish to retrieve.
-func (s *adGroup) GetAdGroup(ctx context.Context, request operations.GetAdGroupRequest) (*operations.GetAdGroupResponse, error) {
+func (s *adGroup) GetAdGroup(ctx context.Context, request operations.GetAdGroupRequest, security operations.GetAdGroupSecurity) (*operations.GetAdGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,20 +146,20 @@ func (s *adGroup) GetAdGroup(ctx context.Context, request operations.GetAdGroupR
 }
 
 // GetAdGroups - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method retrieves ad groups for the specified campaigns.<br /><br />Each campaign can only have <b>one</b> ad group.<br /><br />In the request, supply the <b>campaign_ids</b> as path parameters.<br /><br />Call <a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns">getCampaigns</a> to retrieve a list of the current campaign IDs for a seller.
-func (s *adGroup) GetAdGroups(ctx context.Context, request operations.GetAdGroupsRequest) (*operations.GetAdGroupsResponse, error) {
+func (s *adGroup) GetAdGroups(ctx context.Context, request operations.GetAdGroupsRequest, security operations.GetAdGroupsSecurity) (*operations.GetAdGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,11 +201,11 @@ func (s *adGroup) GetAdGroups(ctx context.Context, request operations.GetAdGroup
 }
 
 // SuggestBids - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method allows sellers to retrieve the suggested bids for input keywords and match type.
-func (s *adGroup) SuggestBids(ctx context.Context, request operations.SuggestBidsRequest) (*operations.SuggestBidsResponse, error) {
+func (s *adGroup) SuggestBids(ctx context.Context, request operations.SuggestBidsRequest, security operations.SuggestBidsSecurity) (*operations.SuggestBidsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_bids", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_bids", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetedBidRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -220,7 +220,7 @@ func (s *adGroup) SuggestBids(ctx context.Context, request operations.SuggestBid
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,11 +262,11 @@ func (s *adGroup) SuggestBids(ctx context.Context, request operations.SuggestBid
 }
 
 // SuggestKeywords - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method allows sellers to retrieve a list of keyword ideas to be targeted for Promoted Listings campaigns.
-func (s *adGroup) SuggestKeywords(ctx context.Context, request operations.SuggestKeywordsRequest) (*operations.SuggestKeywordsResponse, error) {
+func (s *adGroup) SuggestKeywords(ctx context.Context, request operations.SuggestKeywordsRequest, security operations.SuggestKeywordsSecurity) (*operations.SuggestKeywordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_keywords", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_keywords", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetedKeywordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,7 +278,7 @@ func (s *adGroup) SuggestKeywords(ctx context.Context, request operations.Sugges
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -320,11 +320,11 @@ func (s *adGroup) SuggestKeywords(ctx context.Context, request operations.Sugges
 }
 
 // UpdateAdGroup - <span class="tablenote"><b>Note:</b> This method is only available for select partners who have been approved for the eBay Promoted Listings Advanced (PLA) program. For information about how to request access to this program, refer to <a href="/api-docs/sell/static/marketing/pl-verify-eligibility.html#access-requests " target="_blank "> Promoted Listings Advanced Access Requests</a> in the Promoted Listings Playbook. To determine if a seller qualifies for PLA, use the <a href="/api-docs/sell/account/resources/advertising_eligibility/methods/getAdvertisingEligibility " target="_blank ">getAdvertisingEligibility</a> method in Account API.</span><br />This method updates the ad group associated with a campaign.<br /><br />With this method, you can modify the <b>default bid</b> for the ad group, change the state of the ad group, or change the name of the ad group. Pass the <b>ad_group_id</b> you want to update as a URI parameter, and configure the <b>adGroupStatus</b> and <b>defaultBid</b> in the request payload.<br /><br />Call <a href="/api-docs/sell/marketing/resources/adgroup/methods/getAdGroup">getAdGroup</a> to retrieve the current default bid and status of the ad group that you would like to update.
-func (s *adGroup) UpdateAdGroup(ctx context.Context, request operations.UpdateAdGroupRequest) (*operations.UpdateAdGroupResponse, error) {
+func (s *adGroup) UpdateAdGroup(ctx context.Context, request operations.UpdateAdGroupRequest, security operations.UpdateAdGroupSecurity) (*operations.UpdateAdGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAdGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -339,7 +339,7 @@ func (s *adGroup) UpdateAdGroup(ctx context.Context, request operations.UpdateAd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

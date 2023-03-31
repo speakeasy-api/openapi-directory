@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetWorkflowPathParams struct {
+type ActionsGetWorkflowRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 	// The ID of the workflow. You can also pass the workflow file name as a string.
 	WorkflowID shared.WorkflowID `pathParam:"style=simple,explode=false,name=workflow_id"`
-}
-
-type ActionsGetWorkflowRequest struct {
-	PathParams ActionsGetWorkflowPathParams
 }
 
 type ActionsGetWorkflowResponse struct {

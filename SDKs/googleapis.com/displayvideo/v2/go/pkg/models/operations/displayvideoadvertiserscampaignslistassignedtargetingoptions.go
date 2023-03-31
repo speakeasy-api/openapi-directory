@@ -8,26 +8,23 @@ import (
 )
 
 type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsPathParams struct {
-	// Required. The ID of the advertiser the campaign belongs to.
-	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
-	// Required. The ID of the campaign to list assigned targeting options for.
-	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
-}
-
-type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsQueryParams struct {
+type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Required. The ID of the advertiser the campaign belongs to.
+	AdvertiserID string `pathParam:"style=simple,explode=false,name=advertiserId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Required. The ID of the campaign to list assigned targeting options for.
+	CampaignID string `pathParam:"style=simple,explode=false,name=campaignId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER `targetingType="TARGETING_TYPE_LANGUAGE" OR targetingType="TARGETING_TYPE_GENDER"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500 characters.
@@ -50,12 +47,6 @@ type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsQueryParams str
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest struct {
-	PathParams  DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsPathParams
-	QueryParams DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsQueryParams
-	Security    DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsSecurity
 }
 
 type DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsResponse struct {

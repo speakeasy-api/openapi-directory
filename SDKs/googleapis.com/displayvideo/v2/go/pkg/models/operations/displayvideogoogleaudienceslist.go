@@ -8,11 +8,11 @@ import (
 )
 
 type DisplayvideoGoogleAudiencesListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DisplayvideoGoogleAudiencesListQueryParams struct {
+type DisplayvideoGoogleAudiencesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -47,11 +47,6 @@ type DisplayvideoGoogleAudiencesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DisplayvideoGoogleAudiencesListRequest struct {
-	QueryParams DisplayvideoGoogleAudiencesListQueryParams
-	Security    DisplayvideoGoogleAudiencesListSecurity
 }
 
 type DisplayvideoGoogleAudiencesListResponse struct {

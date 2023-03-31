@@ -32,13 +32,9 @@ func (e *WeekLastCompletedFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type WeekLastCompletedPathParams struct {
+type WeekLastCompletedRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format WeekLastCompletedFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type WeekLastCompletedRequest struct {
-	PathParams WeekLastCompletedPathParams
 }
 
 type WeekLastCompletedResponse struct {

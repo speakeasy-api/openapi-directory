@@ -35,14 +35,14 @@ func newCis(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Delete the specified CIS instruction
 func (s *cis) DeleteCisInstruction(ctx context.Context, request operations.DeleteCisInstructionRequest) (*operations.DeleteCisInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *cis) DeleteCisInstruction(ctx context.Context, request operations.Delet
 // Deletes a tag from the CIS instruction
 func (s *cis) DeleteCisInstructionTag(ctx context.Context, request operations.DeleteCisInstructionTagRequest) (*operations.DeleteCisInstructionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,14 +143,14 @@ func (s *cis) DeleteCisInstructionTag(ctx context.Context, request operations.De
 // Delete the specified CIS line
 func (s *cis) DeleteCisLine(ctx context.Context, request operations.DeleteCisLineRequest) (*operations.DeleteCisLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -197,14 +197,14 @@ func (s *cis) DeleteCisLine(ctx context.Context, request operations.DeleteCisLin
 // Deletes a tag from the CIS line
 func (s *cis) DeleteCisLineTag(ctx context.Context, request operations.DeleteCisLineTagRequest) (*operations.DeleteCisLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -251,14 +251,14 @@ func (s *cis) DeleteCisLineTag(ctx context.Context, request operations.DeleteCis
 // Delete the specified CIS line type
 func (s *cis) DeleteCisLineType(ctx context.Context, request operations.DeleteCisLineTypeRequest) (*operations.DeleteCisLineTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -305,14 +305,14 @@ func (s *cis) DeleteCisLineType(ctx context.Context, request operations.DeleteCi
 // Deletes a tag from the CIS line type
 func (s *cis) DeleteCisLineTypeTag(ctx context.Context, request operations.DeleteCisLineTypeTagRequest) (*operations.DeleteCisLineTypeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -359,14 +359,14 @@ func (s *cis) DeleteCisLineTypeTag(ctx context.Context, request operations.Delet
 // Deletes the specified CIS transaction
 func (s *cis) DeleteCisTransaction(ctx context.Context, request operations.DeleteCisTransactionRequest) (*operations.DeleteCisTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -413,14 +413,14 @@ func (s *cis) DeleteCisTransaction(ctx context.Context, request operations.Delet
 // Deletes a tag from the sub contractor
 func (s *cis) DeleteSubContractorTag(ctx context.Context, request operations.DeleteSubContractorTagRequest) (*operations.DeleteSubContractorTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -467,14 +467,14 @@ func (s *cis) DeleteSubContractorTag(ctx context.Context, request operations.Del
 // Gets all the CIS instruction tags
 func (s *cis) GetAllCisInstructionTags(ctx context.Context, request operations.GetAllCisInstructionTagsRequest) (*operations.GetAllCisInstructionTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -530,14 +530,14 @@ func (s *cis) GetAllCisInstructionTags(ctx context.Context, request operations.G
 // Gets all the CIS line tags
 func (s *cis) GetAllCisLineTags(ctx context.Context, request operations.GetAllCisLineTagsRequest) (*operations.GetAllCisLineTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -593,14 +593,14 @@ func (s *cis) GetAllCisLineTags(ctx context.Context, request operations.GetAllCi
 // Gets all the CIS line type tags
 func (s *cis) GetAllCisLineTypeTags(ctx context.Context, request operations.GetAllCisLineTypeTagsRequest) (*operations.GetAllCisLineTypeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -656,14 +656,14 @@ func (s *cis) GetAllCisLineTypeTags(ctx context.Context, request operations.GetA
 // Gets all the sub contractor tags
 func (s *cis) GetAllSubContractorTags(ctx context.Context, request operations.GetAllSubContractorTagsRequest) (*operations.GetAllSubContractorTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -719,14 +719,14 @@ func (s *cis) GetAllSubContractorTags(ctx context.Context, request operations.Ge
 // Gets the specified CIS instruction from sub contractor.
 func (s *cis) GetCisInstructionFromSubContractor(ctx context.Context, request operations.GetCisInstructionFromSubContractorRequest) (*operations.GetCisInstructionFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -782,14 +782,14 @@ func (s *cis) GetCisInstructionFromSubContractor(ctx context.Context, request op
 // Get links to all CIS instructions for the specified sub contractor.
 func (s *cis) GetCisInstructionsFromSubContractor(ctx context.Context, request operations.GetCisInstructionsFromSubContractorRequest) (*operations.GetCisInstructionsFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -845,14 +845,14 @@ func (s *cis) GetCisInstructionsFromSubContractor(ctx context.Context, request o
 // Gets the CIS instruction with the tag
 func (s *cis) GetCisInstructionsWithTag(ctx context.Context, request operations.GetCisInstructionsWithTagRequest) (*operations.GetCisInstructionsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -908,14 +908,14 @@ func (s *cis) GetCisInstructionsWithTag(ctx context.Context, request operations.
 // Gets the specified CIS line from sub contractor.
 func (s *cis) GetCisLineFromSubContractor(ctx context.Context, request operations.GetCisLineFromSubContractorRequest) (*operations.GetCisLineFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -971,14 +971,14 @@ func (s *cis) GetCisLineFromSubContractor(ctx context.Context, request operation
 // Gets the specified CIS line type from employer.
 func (s *cis) GetCisLineTypeFromEmployer(ctx context.Context, request operations.GetCisLineTypeFromEmployerRequest) (*operations.GetCisLineTypeFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1034,14 +1034,14 @@ func (s *cis) GetCisLineTypeFromEmployer(ctx context.Context, request operations
 // Get links to all CIS line types for the specified employer.
 func (s *cis) GetCisLineTypesFromEmployer(ctx context.Context, request operations.GetCisLineTypesFromEmployerRequest) (*operations.GetCisLineTypesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1097,14 +1097,14 @@ func (s *cis) GetCisLineTypesFromEmployer(ctx context.Context, request operation
 // Gets the CIS line type with the tag
 func (s *cis) GetCisLineTypesWithTag(ctx context.Context, request operations.GetCisLineTypesWithTagRequest) (*operations.GetCisLineTypesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1160,14 +1160,14 @@ func (s *cis) GetCisLineTypesWithTag(ctx context.Context, request operations.Get
 // Get links to all CIS lines for the specified sub contractor.
 func (s *cis) GetCisLinesFromSubContractor(ctx context.Context, request operations.GetCisLinesFromSubContractorRequest) (*operations.GetCisLinesFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1223,14 +1223,14 @@ func (s *cis) GetCisLinesFromSubContractor(ctx context.Context, request operatio
 // Gets the CIS line with the tag
 func (s *cis) GetCisLinesWithTag(ctx context.Context, request operations.GetCisLinesWithTagRequest) (*operations.GetCisLinesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1286,14 +1286,14 @@ func (s *cis) GetCisLinesWithTag(ctx context.Context, request operations.GetCisL
 // Returns the specified CIS transaction
 func (s *cis) GetCisTransactionFromEmployer(ctx context.Context, request operations.GetCisTransactionFromEmployerRequest) (*operations.GetCisTransactionFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1349,14 +1349,14 @@ func (s *cis) GetCisTransactionFromEmployer(ctx context.Context, request operati
 // Get links for all CIS transactions for the specified employer
 func (s *cis) GetCisTransactionsFromEmployer(ctx context.Context, request operations.GetCisTransactionsFromEmployerRequest) (*operations.GetCisTransactionsFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisTransactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisTransactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1412,14 +1412,14 @@ func (s *cis) GetCisTransactionsFromEmployer(ctx context.Context, request operat
 // Gets the sub contractor with the tag
 func (s *cis) GetSubContractorsWithTag(ctx context.Context, request operations.GetSubContractorsWithTagRequest) (*operations.GetSubContractorsWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1475,14 +1475,14 @@ func (s *cis) GetSubContractorsWithTag(ctx context.Context, request operations.G
 // Gets the tag from the CIS instruction
 func (s *cis) GetTagFromCisInstruction(ctx context.Context, request operations.GetTagFromCisInstructionRequest) (*operations.GetTagFromCisInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1538,14 +1538,14 @@ func (s *cis) GetTagFromCisInstruction(ctx context.Context, request operations.G
 // Gets the tag from the CIS line
 func (s *cis) GetTagFromCisLine(ctx context.Context, request operations.GetTagFromCisLineRequest) (*operations.GetTagFromCisLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1601,14 +1601,14 @@ func (s *cis) GetTagFromCisLine(ctx context.Context, request operations.GetTagFr
 // Gets the tag from the CIS line type
 func (s *cis) GetTagFromCisLineType(ctx context.Context, request operations.GetTagFromCisLineTypeRequest) (*operations.GetTagFromCisLineTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1664,14 +1664,14 @@ func (s *cis) GetTagFromCisLineType(ctx context.Context, request operations.GetT
 // Gets the tag from the sub contractor
 func (s *cis) GetTagFromSubContractor(ctx context.Context, request operations.GetTagFromSubContractorRequest) (*operations.GetTagFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1727,14 +1727,14 @@ func (s *cis) GetTagFromSubContractor(ctx context.Context, request operations.Ge
 // Gets the tag from the sub contractor revision
 func (s *cis) GetTagFromSubContractorRevision(ctx context.Context, request operations.GetTagFromSubContractorRevisionRequest) (*operations.GetTagFromSubContractorRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1790,14 +1790,14 @@ func (s *cis) GetTagFromSubContractorRevision(ctx context.Context, request opera
 // Gets all the tags from the CIS instruction
 func (s *cis) GetTagsFromCisInstruction(ctx context.Context, request operations.GetTagsFromCisInstructionRequest) (*operations.GetTagsFromCisInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1853,14 +1853,14 @@ func (s *cis) GetTagsFromCisInstruction(ctx context.Context, request operations.
 // Gets all the tags from the CIS line
 func (s *cis) GetTagsFromCisLine(ctx context.Context, request operations.GetTagsFromCisLineRequest) (*operations.GetTagsFromCisLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1916,14 +1916,14 @@ func (s *cis) GetTagsFromCisLine(ctx context.Context, request operations.GetTags
 // Gets all the tags from the CIS line type
 func (s *cis) GetTagsFromCisLineType(ctx context.Context, request operations.GetTagsFromCisLineTypeRequest) (*operations.GetTagsFromCisLineTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1979,14 +1979,14 @@ func (s *cis) GetTagsFromCisLineType(ctx context.Context, request operations.Get
 // Gets all the tags from the sub contractor
 func (s *cis) GetTagsFromSubContractor(ctx context.Context, request operations.GetTagsFromSubContractorRequest) (*operations.GetTagsFromSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2042,14 +2042,14 @@ func (s *cis) GetTagsFromSubContractor(ctx context.Context, request operations.G
 // Gets all the tags from the sub contractor revision
 func (s *cis) GetTagsFromSubContractorRevision(ctx context.Context, request operations.GetTagsFromSubContractorRevisionRequest) (*operations.GetTagsFromSubContractorRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2105,14 +2105,14 @@ func (s *cis) GetTagsFromSubContractorRevision(ctx context.Context, request oper
 // Update an existing CIS instruction object
 func (s *cis) PatchCisInstruction(ctx context.Context, request operations.PatchCisInstructionRequest) (*operations.PatchCisInstructionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2168,9 +2168,9 @@ func (s *cis) PatchCisInstruction(ctx context.Context, request operations.PatchC
 // Create a new CIS instruction object
 func (s *cis) PostCisInstructionIntoSubContractor(ctx context.Context, request operations.PostCisInstructionIntoSubContractorRequest) (*operations.PostCisInstructionIntoSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CisInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2185,7 +2185,7 @@ func (s *cis) PostCisInstructionIntoSubContractor(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2241,9 +2241,9 @@ func (s *cis) PostCisInstructionIntoSubContractor(ctx context.Context, request o
 // Create a new CIS line type object
 func (s *cis) PostCisLineTypeIntoEmployer(ctx context.Context, request operations.PostCisLineTypeIntoEmployerRequest) (*operations.PostCisLineTypeIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineTypes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CisLineType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2258,7 +2258,7 @@ func (s *cis) PostCisLineTypeIntoEmployer(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2314,9 +2314,9 @@ func (s *cis) PostCisLineTypeIntoEmployer(ctx context.Context, request operation
 // Insert or update existing CIS instruction object
 func (s *cis) PutCisInstructionIntoSubContractor(ctx context.Context, request operations.PutCisInstructionIntoSubContractorRequest) (*operations.PutCisInstructionIntoSubContractorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CisInstruction", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2331,7 +2331,7 @@ func (s *cis) PutCisInstructionIntoSubContractor(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2387,14 +2387,14 @@ func (s *cis) PutCisInstructionIntoSubContractor(ctx context.Context, request op
 // Inserts a new tag on the CIS instruction
 func (s *cis) PutCisInstructionTag(ctx context.Context, request operations.PutCisInstructionTagRequest) (*operations.PutCisInstructionTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2450,14 +2450,14 @@ func (s *cis) PutCisInstructionTag(ctx context.Context, request operations.PutCi
 // Inserts a new tag on the CIS line
 func (s *cis) PutCisLineTag(ctx context.Context, request operations.PutCisLineTagRequest) (*operations.PutCisLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2513,9 +2513,9 @@ func (s *cis) PutCisLineTag(ctx context.Context, request operations.PutCisLineTa
 // Updates the existing specified CIS line type object
 func (s *cis) PutCisLineTypeIntoEmployer(ctx context.Context, request operations.PutCisLineTypeIntoEmployerRequest) (*operations.PutCisLineTypeIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CisLineType", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2530,7 +2530,7 @@ func (s *cis) PutCisLineTypeIntoEmployer(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2586,14 +2586,14 @@ func (s *cis) PutCisLineTypeIntoEmployer(ctx context.Context, request operations
 // Inserts a new tag on the CIS line type
 func (s *cis) PutCisLineTypeTag(ctx context.Context, request operations.PutCisLineTypeTagRequest) (*operations.PutCisLineTypeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -2649,14 +2649,14 @@ func (s *cis) PutCisLineTypeTag(ctx context.Context, request operations.PutCisLi
 // Inserts a new tag on the sub contractor
 func (s *cis) PutSubContractorTag(ctx context.Context, request operations.PutSubContractorTagRequest) (*operations.PutSubContractorTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

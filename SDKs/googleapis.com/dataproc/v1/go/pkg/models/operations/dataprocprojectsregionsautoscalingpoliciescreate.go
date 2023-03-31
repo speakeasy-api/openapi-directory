@@ -8,18 +8,14 @@ import (
 )
 
 type DataprocProjectsRegionsAutoscalingPoliciesCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DataprocProjectsRegionsAutoscalingPoliciesCreatePathParams struct {
-	// Required. The "resource name" of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies.create, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.autoscalingPolicies.create, the resource name of the location has the following format: projects/{project_id}/locations/{location}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DataprocProjectsRegionsAutoscalingPoliciesCreateQueryParams struct {
+type DataprocProjectsRegionsAutoscalingPoliciesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AutoscalingPolicyInput *shared.AutoscalingPolicyInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type DataprocProjectsRegionsAutoscalingPoliciesCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The "resource name" of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies.create, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.autoscalingPolicies.create, the resource name of the location has the following format: projects/{project_id}/locations/{location}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type DataprocProjectsRegionsAutoscalingPoliciesCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataprocProjectsRegionsAutoscalingPoliciesCreateRequest struct {
-	PathParams  DataprocProjectsRegionsAutoscalingPoliciesCreatePathParams
-	QueryParams DataprocProjectsRegionsAutoscalingPoliciesCreateQueryParams
-	Request     *shared.AutoscalingPolicyInput `request:"mediaType=application/json"`
-	Security    DataprocProjectsRegionsAutoscalingPoliciesCreateSecurity
 }
 
 type DataprocProjectsRegionsAutoscalingPoliciesCreateResponse struct {

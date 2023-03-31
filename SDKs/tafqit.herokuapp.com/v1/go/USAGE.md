@@ -13,12 +13,10 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.ConvertRequest{
-        Request: &operations.ConvertRequestBody{
-            HundredsForm: "مائة",
-            TheNumber: "2519.50",
-            Unit: " ريال سعودي",
-        },
+    req := operations.ConvertRequestBody{
+        HundredsForm: "مائة",
+        TheNumber: "2519.50",
+        Unit: " ريال سعودي",
     }
 
     ctx := context.Background()

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsGetSelfHostedRunnerForOrgPathParams struct {
+type ActionsGetSelfHostedRunnerForOrgRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsGetSelfHostedRunnerForOrgRequest struct {
-	PathParams ActionsGetSelfHostedRunnerForOrgPathParams
 }
 
 type ActionsGetSelfHostedRunnerForOrgResponse struct {

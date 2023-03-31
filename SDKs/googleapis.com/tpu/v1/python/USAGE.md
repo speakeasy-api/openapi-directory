@@ -4,39 +4,31 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.TpuProjectsLocationsAcceleratorTypesListRequest(
-    security=operations.TpuProjectsLocationsAcceleratorTypesListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.TpuProjectsLocationsAcceleratorTypesListPathParams(
-        parent="cumque",
-    ),
-    query_params=operations.TpuProjectsLocationsAcceleratorTypesListQueryParams(
-        dollar_xgafv="2",
-        access_token="dolor",
-        alt="json",
-        callback="nihil",
-        fields="a",
-        filter="aliquid",
-        key="repudiandae",
-        oauth_token="aperiam",
-        order_by="tempora",
-        page_size=3192688218102539939,
-        page_token="cum",
-        pretty_print=True,
-        quota_user="et",
-        upload_type="in",
-        upload_protocol="libero",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    order_by="vel",
+    page_size=623564,
+    page_token="deserunt",
+    parent="suscipit",
+    pretty_print=False,
+    quota_user="iure",
+    upload_type="magnam",
+    upload_protocol="debitis",
 )
     
-res = s.projects.tpu_projects_locations_accelerator_types_list(req)
+res = s.projects.tpu_projects_locations_accelerator_types_list(req, operations.TpuProjectsLocationsAcceleratorTypesListSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.list_accelerator_types_response is not None:
     # handle response

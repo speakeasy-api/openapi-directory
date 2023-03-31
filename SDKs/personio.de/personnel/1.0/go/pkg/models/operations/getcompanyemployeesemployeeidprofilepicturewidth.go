@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetCompanyEmployeesEmployeeIDProfilePictureWidthPathParams struct {
+type GetCompanyEmployeesEmployeeIDProfilePictureWidthRequest struct {
 	// Numeric `id` of the employee
 	EmployeeID int `pathParam:"style=simple,explode=false,name=employee_id"`
 	// Width of the image. Default 75x75
 	Width int `pathParam:"style=simple,explode=false,name=width"`
-}
-
-type GetCompanyEmployeesEmployeeIDProfilePictureWidthRequest struct {
-	PathParams GetCompanyEmployeesEmployeeIDProfilePictureWidthPathParams
 }
 
 type GetCompanyEmployeesEmployeeIDProfilePictureWidthResponse struct {

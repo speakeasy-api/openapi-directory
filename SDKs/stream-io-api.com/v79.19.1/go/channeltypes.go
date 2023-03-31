@@ -34,7 +34,7 @@ func newChannelTypes(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // CreateChannelType - Create channel type
 // Creates new channel type
-func (s *channelTypes) CreateChannelType(ctx context.Context, request operations.CreateChannelTypeRequest) (*operations.CreateChannelTypeResponse, error) {
+func (s *channelTypes) CreateChannelType(ctx context.Context, request shared.CreateChannelTypeRequest) (*operations.CreateChannelTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channeltypes"
 

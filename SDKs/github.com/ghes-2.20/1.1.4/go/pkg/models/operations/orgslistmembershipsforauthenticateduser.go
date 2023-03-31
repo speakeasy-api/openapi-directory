@@ -33,17 +33,13 @@ func (e *OrgsListMembershipsForAuthenticatedUserStateEnum) UnmarshalJSON(data []
 	}
 }
 
-type OrgsListMembershipsForAuthenticatedUserQueryParams struct {
+type OrgsListMembershipsForAuthenticatedUserRequest struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Indicates the state of the memberships to return. Can be either `active` or `pending`. If not specified, the API returns both active and pending memberships.
 	State *OrgsListMembershipsForAuthenticatedUserStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type OrgsListMembershipsForAuthenticatedUserRequest struct {
-	QueryParams OrgsListMembershipsForAuthenticatedUserQueryParams
 }
 
 type OrgsListMembershipsForAuthenticatedUserResponse struct {

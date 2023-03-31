@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DevicesPostFormRequest struct {
-	// Device object with all the data
-	Request shared.DeviceToPost `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type DevicesPostFormResponse struct {
 	Body        []byte
 	ContentType string

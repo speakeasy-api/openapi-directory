@@ -35,9 +35,9 @@ func newDependents(defaultClient, securityClient HTTPClient, serverURL, language
 // Now, you can associate dependents who are electing coverage with respective employees.
 func (s *dependents) CreateDependent(ctx context.Context, request operations.CreateDependentRequest) (*operations.CreateDependentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}/dependents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}/dependents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DependentCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -90,9 +90,9 @@ func (s *dependents) CreateDependent(ctx context.Context, request operations.Cre
 // Edit a dependent based on the ID provided. The version parameter must match the latest dependent version.
 func (s *dependents) EditDependent(ctx context.Context, request operations.EditDependentRequest) (*operations.EditDependentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/dependents/{dependent_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/dependents/{dependent_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DependentEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *dependents) EditDependent(ctx context.Context, request operations.EditD
 // Returns the latest version of a single dependent based on the ID provided.
 func (s *dependents) GetDependent(ctx context.Context, request operations.GetDependentRequest) (*operations.GetDependentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/dependents/{dependent_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/dependents/{dependent_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,14 +190,14 @@ func (s *dependents) GetDependent(ctx context.Context, request operations.GetDep
 // Returns a list of all dependents for a given employee
 func (s *dependents) GetEmployeeDependentsList(ctx context.Context, request operations.GetEmployeeDependentsListRequest) (*operations.GetEmployeeDependentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}/dependents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/employees/{employee_id}/dependents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

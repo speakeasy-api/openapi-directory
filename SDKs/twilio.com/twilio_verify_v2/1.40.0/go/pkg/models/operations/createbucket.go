@@ -12,14 +12,8 @@ var CreateBucketServerList = []string{
 }
 
 type CreateBucketSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateBucketPathParams struct {
-	// The Twilio-provided string that uniquely identifies the Rate Limit resource.
-	RateLimitSid string `pathParam:"style=simple,explode=false,name=RateLimitSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateBucketCreateBucketRequest struct {
@@ -30,10 +24,11 @@ type CreateBucketCreateBucketRequest struct {
 }
 
 type CreateBucketRequest struct {
-	PathParams CreateBucketPathParams
-	Request    *CreateBucketCreateBucketRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateBucketSecurity
-	ServerURL  *string
+	// The Twilio-provided string that uniquely identifies the Rate Limit resource.
+	RateLimitSid string                           `pathParam:"style=simple,explode=false,name=RateLimitSid"`
+	RequestBody  *CreateBucketCreateBucketRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateBucketResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUserAccountPathParams struct {
+type DeleteUserAccountRequest struct {
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteUserAccountRequest struct {
-	PathParams DeleteUserAccountPathParams
 }
 
 type DeleteUserAccountResponse struct {

@@ -37,16 +37,16 @@ func newCustomExchangeRates(defaultClient, securityClient HTTPClient, serverURL,
 // This reference describes how to query custom foreign exchange rates from Zuora. You can use this API method to query exchange rates only if you use a custom exchange rate provider and upload rates with the Import Foreign Exchange Rates mass action.
 func (s *customExchangeRates) GETCustomExchangeRates(ctx context.Context, request operations.GETCustomExchangeRatesRequest) (*operations.GETCustomExchangeRatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-exchange-rates/{currency}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-exchange-rates/{currency}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

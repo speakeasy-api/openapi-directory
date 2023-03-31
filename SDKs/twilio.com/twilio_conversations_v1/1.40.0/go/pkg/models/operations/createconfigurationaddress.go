@@ -12,7 +12,8 @@ var CreateConfigurationAddressServerList = []string{
 }
 
 type CreateConfigurationAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateConfigurationAddressCreateConfigurationAddressRequest struct {
@@ -35,12 +36,6 @@ type CreateConfigurationAddressCreateConfigurationAddressRequest struct {
 	// The human-readable name of this configuration, limited to 256 characters. Optional.
 	FriendlyName *string                                 `form:"name=FriendlyName"`
 	Type         shared.ConfigurationAddressEnumTypeEnum `form:"name=Type"`
-}
-
-type CreateConfigurationAddressRequest struct {
-	Request   *CreateConfigurationAddressCreateConfigurationAddressRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateConfigurationAddressSecurity
-	ServerURL *string
 }
 
 type CreateConfigurationAddressResponse struct {

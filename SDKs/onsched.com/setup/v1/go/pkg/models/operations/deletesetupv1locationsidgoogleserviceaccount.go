@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSetupV1LocationsIDGoogleServiceAccountPathParams struct {
+type DeleteSetupV1LocationsIDGoogleServiceAccountRequest struct {
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSetupV1LocationsIDGoogleServiceAccountRequest struct {
-	PathParams DeleteSetupV1LocationsIDGoogleServiceAccountPathParams
 }
 
 type DeleteSetupV1LocationsIDGoogleServiceAccountResponse struct {

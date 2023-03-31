@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCorporateByIDPathParams struct {
+type GetCorporateByIDRequest struct {
 	// Corporate ID
 	CorporateID int64 `pathParam:"style=simple,explode=false,name=corporateId"`
-}
-
-type GetCorporateByIDRequest struct {
-	PathParams GetCorporateByIDPathParams
 }
 
 type GetCorporateByIDResponse struct {

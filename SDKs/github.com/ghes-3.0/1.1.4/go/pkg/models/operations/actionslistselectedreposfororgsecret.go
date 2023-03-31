@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListSelectedReposForOrgSecretPathParams struct {
+type ActionsListSelectedReposForOrgSecretRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// secret_name parameter
-	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
-}
-
-type ActionsListSelectedReposForOrgSecretQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListSelectedReposForOrgSecretRequest struct {
-	PathParams  ActionsListSelectedReposForOrgSecretPathParams
-	QueryParams ActionsListSelectedReposForOrgSecretQueryParams
+	// secret_name parameter
+	SecretName string `pathParam:"style=simple,explode=false,name=secret_name"`
 }
 
 // ActionsListSelectedReposForOrgSecret200ApplicationJSON - Response

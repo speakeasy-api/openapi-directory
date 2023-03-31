@@ -10,12 +10,7 @@ import (
 )
 
 type GetImageCollectionItemsSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetImageCollectionItemsPathParams struct {
-	// Collection ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetImageCollectionItemsSortEnum - Sort order
@@ -42,7 +37,9 @@ func (e *GetImageCollectionItemsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetImageCollectionItemsQueryParams struct {
+type GetImageCollectionItemsRequest struct {
+	// Collection ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
@@ -51,12 +48,6 @@ type GetImageCollectionItemsQueryParams struct {
 	ShareCode *string `queryParam:"style=form,explode=true,name=share_code"`
 	// Sort order
 	Sort *GetImageCollectionItemsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetImageCollectionItemsRequest struct {
-	PathParams  GetImageCollectionItemsPathParams
-	QueryParams GetImageCollectionItemsQueryParams
-	Security    GetImageCollectionItemsSecurity
 }
 
 type GetImageCollectionItemsResponse struct {

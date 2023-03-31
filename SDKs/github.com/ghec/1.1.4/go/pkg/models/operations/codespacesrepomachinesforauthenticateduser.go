@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CodespacesRepoMachinesForAuthenticatedUserPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type CodespacesRepoMachinesForAuthenticatedUserQueryParams struct {
+type CodespacesRepoMachinesForAuthenticatedUserRequest struct {
 	// IP for location auto-detection when proxying a request
 	ClientIP *string `queryParam:"style=form,explode=true,name=client_ip"`
 	// The location to check for available machines. Assigned by IP if not provided.
 	Location *string `queryParam:"style=form,explode=true,name=location"`
-}
-
-type CodespacesRepoMachinesForAuthenticatedUserRequest struct {
-	PathParams  CodespacesRepoMachinesForAuthenticatedUserPathParams
-	QueryParams CodespacesRepoMachinesForAuthenticatedUserQueryParams
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 // CodespacesRepoMachinesForAuthenticatedUser200ApplicationJSON - Response

@@ -35,16 +35,16 @@ func newRevisions(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByID - Get a revision for a custom action
 // Returns the given version of a custom workflow action.
-func (s *revisions) GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDRequest) (*operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDResponse, error) {
+func (s *revisions) GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,20 +90,20 @@ func (s *revisions) GetAutomationV4ActionsAppIDDefinitionIDRevisionsRevisionIDGe
 
 // GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPage - Get all revisions for a custom action
 // Returns a list of revisions for a custom workflow action.
-func (s *revisions) GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageRequest) (*operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageResponse, error) {
+func (s *revisions) GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDRevisionsGetPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

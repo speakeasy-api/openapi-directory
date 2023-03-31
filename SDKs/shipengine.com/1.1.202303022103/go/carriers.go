@@ -37,9 +37,9 @@ func newCarriers(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Add Funds To A Carrier
 func (s *carriers) AddFundsToCarrier(ctx context.Context, request operations.AddFundsToCarrierRequest) (*operations.AddFundsToCarrierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/add_funds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/add_funds", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddFundsToCarrierRequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *carriers) AddFundsToCarrier(ctx context.Context, request operations.Add
 // Retrive carrier info by ID
 func (s *carriers) GetCarrierByID(ctx context.Context, request operations.GetCarrierByIDRequest) (*operations.GetCarrierByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,7 +165,7 @@ func (s *carriers) GetCarrierByID(ctx context.Context, request operations.GetCar
 // Get a list of the options available for the carrier
 func (s *carriers) GetCarrierOptions(ctx context.Context, request operations.GetCarrierOptionsRequest) (*operations.GetCarrierOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/options", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *carriers) GetCarrierOptions(ctx context.Context, request operations.Get
 // List the package types associated with the carrier
 func (s *carriers) ListCarrierPackageTypes(ctx context.Context, request operations.ListCarrierPackageTypesRequest) (*operations.ListCarrierPackageTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/packages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/packages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -283,7 +283,7 @@ func (s *carriers) ListCarrierPackageTypes(ctx context.Context, request operatio
 // List the services associated with the carrier ID
 func (s *carriers) ListCarrierServices(ctx context.Context, request operations.ListCarrierServicesRequest) (*operations.ListCarrierServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/services", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/carriers/{carrier_id}/services", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

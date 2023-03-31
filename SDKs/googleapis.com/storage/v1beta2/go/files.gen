@@ -52,7 +52,6 @@ pkg/models/operations/storageobjectspatch.go
 pkg/models/operations/storageobjectsupdate.go
 pkg/models/operations/storageobjectswatchall.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/bucketaccesscontrol.go
 pkg/models/shared/bucketaccesscontrols.go
 pkg/models/shared/bucket.go

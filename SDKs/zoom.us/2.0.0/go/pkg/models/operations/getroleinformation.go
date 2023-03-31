@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetRoleInformationSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GetRoleInformationPathParams struct {
-	// Role Id.
-	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetRoleInformationRequest struct {
-	PathParams GetRoleInformationPathParams
-	Security   GetRoleInformationSecurity
+	// Role Id.
+	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
 }
 
 // GetRoleInformation200ApplicationXMLSubAccountPrivileges - This field will only be displayed to accounts that are enrolled in a partner plan and follow the master accounts and sub accounts structure.

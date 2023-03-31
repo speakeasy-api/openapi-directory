@@ -22,5 +22,4 @@ pkg/models/shared/nexthref.go
 pkg/models/shared/firsthref.go
 pkg/models/shared/calllogsembeddedobject.go
 pkg/models/shared/calllog.go
-pkg/models/shared/security.go
 USAGE.md

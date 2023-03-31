@@ -36,7 +36,7 @@ func newAttributes(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteAttributesComputedID - Delete an Attribute
 func (s *attributes) DeleteAttributesComputedID(ctx context.Context, request operations.DeleteAttributesComputedIDRequest) (*operations.DeleteAttributesComputedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *attributes) GetAttributesComputed(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,7 +118,7 @@ func (s *attributes) GetAttributesComputed(ctx context.Context, request operatio
 }
 
 // PostAttributesComputed - Create an Attribute
-func (s *attributes) PostAttributesComputed(ctx context.Context, request operations.PostAttributesComputedRequest) (*operations.PostAttributesComputedResponse, error) {
+func (s *attributes) PostAttributesComputed(ctx context.Context, request shared.Attribute) (*operations.PostAttributesComputedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/attributes/computed"
 
@@ -174,9 +174,9 @@ func (s *attributes) PostAttributesComputed(ctx context.Context, request operati
 // PutAttributesComputedID - Update an Attribute
 func (s *attributes) PutAttributesComputedID(ctx context.Context, request operations.PutAttributesComputedIDRequest) (*operations.PutAttributesComputedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Attribute", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

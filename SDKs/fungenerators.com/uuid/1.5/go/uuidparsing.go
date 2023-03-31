@@ -34,7 +34,7 @@ func newUUIDParsing(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // PostUUID - Parse a UUID string and return its version and check whether it is valid.
-func (s *uuidParsing) PostUUID(ctx context.Context, request operations.PostUUIDRequest) (*operations.PostUUIDResponse, error) {
+func (s *uuidParsing) PostUUID(ctx context.Context, request operations.PostUUIDRequest, security operations.PostUUIDSecurity) (*operations.PostUUIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uuid"
 
@@ -43,11 +43,11 @@ func (s *uuidParsing) PostUUID(ctx context.Context, request operations.PostUUIDR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

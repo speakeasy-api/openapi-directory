@@ -32,16 +32,16 @@ func newUserManagement(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // DeleteUsersUserid - Unlink User
 // Deletes a User and all of their data permanently, and invalidates any associated sessions, authorization codes, and access/refresh tokens
-func (s *userManagement) DeleteUsersUserid(ctx context.Context, request operations.DeleteUsersUseridRequest) (*operations.DeleteUsersUseridResponse, error) {
+func (s *userManagement) DeleteUsersUserid(ctx context.Context, request operations.DeleteUsersUseridRequest, security operations.DeleteUsersUseridSecurity) (*operations.DeleteUsersUseridResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,16 +72,16 @@ func (s *userManagement) DeleteUsersUserid(ctx context.Context, request operatio
 // All other User data is retained, and if the User is sent through the Link User flow in the future their account will be just as they left it.
 //
 // No webhook events will be generated for a deauthorized user.
-func (s *userManagement) DeleteUsersUseridAuthorization(ctx context.Context, request operations.DeleteUsersUseridAuthorizationRequest) (*operations.DeleteUsersUseridAuthorizationResponse, error) {
+func (s *userManagement) DeleteUsersUseridAuthorization(ctx context.Context, request operations.DeleteUsersUseridAuthorizationRequest, security operations.DeleteUsersUseridAuthorizationSecurity) (*operations.DeleteUsersUseridAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/authorization", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/authorization", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,11 +108,11 @@ func (s *userManagement) DeleteUsersUseridAuthorization(ctx context.Context, req
 
 // PostUsersUseridLink - Link User
 // Creates an Enode Link session attached to the provided User ID. If this User does not exist, it will be created. The returned `linkState` gives the user short-lived access to Enode Link.
-func (s *userManagement) PostUsersUseridLink(ctx context.Context, request operations.PostUsersUseridLinkRequest) (*operations.PostUsersUseridLinkResponse, error) {
+func (s *userManagement) PostUsersUseridLink(ctx context.Context, request operations.PostUsersUseridLinkRequest, security operations.PostUsersUseridLinkSecurity) (*operations.PostUsersUseridLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/link", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/link", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,7 +124,7 @@ func (s *userManagement) PostUsersUseridLink(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

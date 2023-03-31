@@ -10,13 +10,6 @@ import (
 	"time"
 )
 
-type IssuesListCommentsForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesListCommentsForRepoDirectionEnum - Either `asc` or `desc`. Ignored without the `sort` parameter.
 type IssuesListCommentsForRepoDirectionEnum string
 
@@ -41,22 +34,21 @@ func (e *IssuesListCommentsForRepoDirectionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type IssuesListCommentsForRepoQueryParams struct {
+type IssuesListCommentsForRepoRequest struct {
 	// Either `asc` or `desc`. Ignored without the `sort` parameter.
 	Direction *IssuesListCommentsForRepoDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
 	// The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
 	Sort *shared.SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type IssuesListCommentsForRepoRequest struct {
-	PathParams  IssuesListCommentsForRepoPathParams
-	QueryParams IssuesListCommentsForRepoQueryParams
 }
 
 type IssuesListCommentsForRepoResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolSnmptcpSetTracePathParams struct {
+type ProtocolSnmptcpSetTraceRequest struct {
 	// Agent to set the SNMPTCP tracing
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Value to set the SNMPTCP tracing
 	EnableOrNot string `pathParam:"style=simple,explode=false,name=enableOrNot"`
-}
-
-type ProtocolSnmptcpSetTraceRequest struct {
-	PathParams ProtocolSnmptcpSetTracePathParams
 }
 
 type ProtocolSnmptcpSetTraceResponse struct {

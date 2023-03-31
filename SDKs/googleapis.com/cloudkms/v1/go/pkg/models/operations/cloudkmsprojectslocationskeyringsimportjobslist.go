@@ -8,13 +8,13 @@ import (
 )
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsListSecurity struct {
@@ -22,12 +22,7 @@ type CloudkmsProjectsLocationsKeyRingsImportJobsListSecurity struct {
 	Option2 *CloudkmsProjectsLocationsKeyRingsImportJobsListSecurityOption2 `security:"option"`
 }
 
-type CloudkmsProjectsLocationsKeyRingsImportJobsListPathParams struct {
-	// Required. The resource name of the KeyRing to list, in the format `projects/*/locations/*/keyRings/*`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsImportJobsListQueryParams struct {
+type CloudkmsProjectsLocationsKeyRingsImportJobsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -50,6 +45,8 @@ type CloudkmsProjectsLocationsKeyRingsImportJobsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Optional pagination token, returned earlier via ListImportJobsResponse.next_page_token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The resource name of the KeyRing to list, in the format `projects/*/locations/*/keyRings/*`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -58,12 +55,6 @@ type CloudkmsProjectsLocationsKeyRingsImportJobsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudkmsProjectsLocationsKeyRingsImportJobsListRequest struct {
-	PathParams  CloudkmsProjectsLocationsKeyRingsImportJobsListPathParams
-	QueryParams CloudkmsProjectsLocationsKeyRingsImportJobsListQueryParams
-	Security    CloudkmsProjectsLocationsKeyRingsImportJobsListSecurity
 }
 
 type CloudkmsProjectsLocationsKeyRingsImportJobsListResponse struct {

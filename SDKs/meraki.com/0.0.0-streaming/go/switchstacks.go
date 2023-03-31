@@ -34,9 +34,9 @@ func newSwitchStacks(defaultClient, securityClient HTTPClient, serverURL, langua
 // Add a switch to a stack
 func (s *switchStacks) AddNetworkSwitchStack(ctx context.Context, request operations.AddNetworkSwitchStackRequest) (*operations.AddNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}/add", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}/add", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,9 +89,9 @@ func (s *switchStacks) AddNetworkSwitchStack(ctx context.Context, request operat
 // Create a stack
 func (s *switchStacks) CreateNetworkSwitchStack(ctx context.Context, request operations.CreateNetworkSwitchStackRequest) (*operations.CreateNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *switchStacks) CreateNetworkSwitchStack(ctx context.Context, request ope
 // Delete a stack
 func (s *switchStacks) DeleteNetworkSwitchStack(ctx context.Context, request operations.DeleteNetworkSwitchStackRequest) (*operations.DeleteNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *switchStacks) DeleteNetworkSwitchStack(ctx context.Context, request ope
 // Show a switch stack
 func (s *switchStacks) GetNetworkSwitchStack(ctx context.Context, request operations.GetNetworkSwitchStackRequest) (*operations.GetNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *switchStacks) GetNetworkSwitchStack(ctx context.Context, request operat
 // List the switch stacks in a network
 func (s *switchStacks) GetNetworkSwitchStacks(ctx context.Context, request operations.GetNetworkSwitchStacksRequest) (*operations.GetNetworkSwitchStacksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,9 +270,9 @@ func (s *switchStacks) GetNetworkSwitchStacks(ctx context.Context, request opera
 // Remove a switch from a stack
 func (s *switchStacks) RemoveNetworkSwitchStack(ctx context.Context, request operations.RemoveNetworkSwitchStackRequest) (*operations.RemoveNetworkSwitchStackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/switchStacks/{switchStackId}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

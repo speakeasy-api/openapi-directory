@@ -8,18 +8,11 @@ import (
 )
 
 type AndroidpublisherInappproductsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidpublisherInappproductsDeletePathParams struct {
-	// Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
-	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Unique identifier for the in-app product.
-	Sku string `pathParam:"style=simple,explode=false,name=sku"`
-}
-
-type AndroidpublisherInappproductsDeleteQueryParams struct {
+type AndroidpublisherInappproductsDeleteRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
@@ -28,18 +21,16 @@ type AndroidpublisherInappproductsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Unique identifier for the in-app product.
+	Sku string `pathParam:"style=simple,explode=false,name=sku"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type AndroidpublisherInappproductsDeleteRequest struct {
-	PathParams  AndroidpublisherInappproductsDeletePathParams
-	QueryParams AndroidpublisherInappproductsDeleteQueryParams
-	Security    AndroidpublisherInappproductsDeleteSecurity
 }
 
 type AndroidpublisherInappproductsDeleteResponse struct {

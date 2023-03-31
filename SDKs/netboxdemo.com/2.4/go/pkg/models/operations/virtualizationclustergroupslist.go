@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VirtualizationClusterGroupsListQueryParams struct {
+type VirtualizationClusterGroupsListRequest struct {
 	// Number of results to return per page.
 	Limit *int64  `queryParam:"style=form,explode=true,name=limit"`
 	Name  *string `queryParam:"style=form,explode=true,name=name"`
 	// The initial index from which to return the results.
 	Offset *int64  `queryParam:"style=form,explode=true,name=offset"`
 	Slug   *string `queryParam:"style=form,explode=true,name=slug"`
-}
-
-type VirtualizationClusterGroupsListRequest struct {
-	QueryParams VirtualizationClusterGroupsListQueryParams
 }
 
 type VirtualizationClusterGroupsList200ApplicationJSON struct {

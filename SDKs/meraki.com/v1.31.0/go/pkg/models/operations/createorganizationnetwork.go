@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationNetworkPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationNetworkRequestBodyProductTypesEnum string
 
 const (
@@ -66,8 +62,8 @@ type CreateOrganizationNetworkRequestBody struct {
 }
 
 type CreateOrganizationNetworkRequest struct {
-	PathParams CreateOrganizationNetworkPathParams
-	Request    CreateOrganizationNetworkRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationNetworkRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                               `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 // CreateOrganizationNetwork201ApplicationJSON - Successful operation

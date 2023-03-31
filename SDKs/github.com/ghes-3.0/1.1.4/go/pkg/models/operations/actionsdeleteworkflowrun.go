@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteWorkflowRunPathParams struct {
+type ActionsDeleteWorkflowRunRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
 	// The id of the workflow run.
 	RunID int64 `pathParam:"style=simple,explode=false,name=run_id"`
-}
-
-type ActionsDeleteWorkflowRunRequest struct {
-	PathParams ActionsDeleteWorkflowRunPathParams
 }
 
 type ActionsDeleteWorkflowRunResponse struct {

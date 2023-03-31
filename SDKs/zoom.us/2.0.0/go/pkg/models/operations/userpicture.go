@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UserPicturePathParams struct {
-	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
 type UserPictureRequestBodyPicFile struct {
 	Content []byte `multipartForm:"content"`
 	PicFile string `multipartForm:"name=pic_file"`
@@ -22,8 +17,9 @@ type UserPictureRequestBody struct {
 }
 
 type UserPictureRequest struct {
-	PathParams UserPicturePathParams
-	Request    UserPictureRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody UserPictureRequestBody `request:"mediaType=multipart/form-data"`
+	// The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UserPictureResponse struct {

@@ -45,7 +45,7 @@ func (e *PackagesListPackagesForAuthenticatedUserPackageTypeEnum) UnmarshalJSON(
 	}
 }
 
-type PackagesListPackagesForAuthenticatedUserQueryParams struct {
+type PackagesListPackagesForAuthenticatedUserRequest struct {
 	// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
 	PackageType PackagesListPackagesForAuthenticatedUserPackageTypeEnum `queryParam:"style=form,explode=true,name=package_type"`
 	// The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
@@ -53,10 +53,6 @@ type PackagesListPackagesForAuthenticatedUserQueryParams struct {
 	// The `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.
 	// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/enterprise-cloud@latest//packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
 	Visibility *shared.PackageVisibilityEnum `queryParam:"style=form,explode=true,name=visibility"`
-}
-
-type PackagesListPackagesForAuthenticatedUserRequest struct {
-	QueryParams PackagesListPackagesForAuthenticatedUserQueryParams
 }
 
 type PackagesListPackagesForAuthenticatedUserResponse struct {

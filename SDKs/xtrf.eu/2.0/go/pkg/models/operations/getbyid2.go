@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetByID2PathParams struct {
+type GetByID2Request struct {
 	// client's internal identifier
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type GetByID2QueryParams struct {
 	// list of additional fields which should be embedded in the response (available options: persons)
 	Embed *string `queryParam:"style=form,explode=true,name=embed"`
-}
-
-type GetByID2Request struct {
-	PathParams  GetByID2PathParams
-	QueryParams GetByID2QueryParams
 }
 
 type GetByID2Response struct {

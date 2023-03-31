@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddDocumentPathParams struct {
+type AddDocumentRequest struct {
+	AddOrUpdateDocumentRequest *shared.AddOrUpdateDocumentRequest `request:"mediaType=application/json"`
 	// Continuous project ID
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type AddDocumentRequest struct {
-	PathParams AddDocumentPathParams
-	Request    *shared.AddOrUpdateDocumentRequest `request:"mediaType=application/json"`
 }
 
 type AddDocumentResponse struct {

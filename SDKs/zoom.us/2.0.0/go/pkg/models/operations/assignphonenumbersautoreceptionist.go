@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AssignPhoneNumbersAutoReceptionistSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type AssignPhoneNumbersAutoReceptionistPathParams struct {
-	// Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
-	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AssignPhoneNumbersAutoReceptionistApplicationJSONPhoneNumbers struct {
@@ -29,9 +23,9 @@ type AssignPhoneNumbersAutoReceptionistApplicationJSON struct {
 }
 
 type AssignPhoneNumbersAutoReceptionistRequest struct {
-	PathParams AssignPhoneNumbersAutoReceptionistPathParams
-	Request    *AssignPhoneNumbersAutoReceptionistApplicationJSON `request:"mediaType=application/json"`
-	Security   AssignPhoneNumbersAutoReceptionistSecurity
+	RequestBody *AssignPhoneNumbersAutoReceptionistApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
+	AutoReceptionistID string `pathParam:"style=simple,explode=false,name=autoReceptionistId"`
 }
 
 type AssignPhoneNumbersAutoReceptionistResponse struct {

@@ -33,7 +33,7 @@ func newLiveStreams(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // YoutubeLiveStreamsDelete - Deletes an existing stream for the authenticated user.
-func (s *liveStreams) YoutubeLiveStreamsDelete(ctx context.Context, request operations.YoutubeLiveStreamsDeleteRequest) (*operations.YoutubeLiveStreamsDeleteResponse, error) {
+func (s *liveStreams) YoutubeLiveStreamsDelete(ctx context.Context, request operations.YoutubeLiveStreamsDeleteRequest, security operations.YoutubeLiveStreamsDeleteSecurity) (*operations.YoutubeLiveStreamsDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveStreams"
 
@@ -42,11 +42,11 @@ func (s *liveStreams) YoutubeLiveStreamsDelete(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *liveStreams) YoutubeLiveStreamsDelete(ctx context.Context, request oper
 }
 
 // YoutubeLiveStreamsInsert - Inserts a new stream for the authenticated user.
-func (s *liveStreams) YoutubeLiveStreamsInsert(ctx context.Context, request operations.YoutubeLiveStreamsInsertRequest) (*operations.YoutubeLiveStreamsInsertResponse, error) {
+func (s *liveStreams) YoutubeLiveStreamsInsert(ctx context.Context, request operations.YoutubeLiveStreamsInsertRequest, security operations.YoutubeLiveStreamsInsertSecurity) (*operations.YoutubeLiveStreamsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveStreams"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LiveStream", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *liveStreams) YoutubeLiveStreamsInsert(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *liveStreams) YoutubeLiveStreamsInsert(ctx context.Context, request oper
 }
 
 // YoutubeLiveStreamsList - Retrieve the list of streams associated with the given channel. --
-func (s *liveStreams) YoutubeLiveStreamsList(ctx context.Context, request operations.YoutubeLiveStreamsListRequest) (*operations.YoutubeLiveStreamsListResponse, error) {
+func (s *liveStreams) YoutubeLiveStreamsList(ctx context.Context, request operations.YoutubeLiveStreamsListRequest, security operations.YoutubeLiveStreamsListSecurity) (*operations.YoutubeLiveStreamsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveStreams"
 
@@ -136,11 +136,11 @@ func (s *liveStreams) YoutubeLiveStreamsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,11 +175,11 @@ func (s *liveStreams) YoutubeLiveStreamsList(ctx context.Context, request operat
 }
 
 // YoutubeLiveStreamsUpdate - Updates an existing stream for the authenticated user.
-func (s *liveStreams) YoutubeLiveStreamsUpdate(ctx context.Context, request operations.YoutubeLiveStreamsUpdateRequest) (*operations.YoutubeLiveStreamsUpdateResponse, error) {
+func (s *liveStreams) YoutubeLiveStreamsUpdate(ctx context.Context, request operations.YoutubeLiveStreamsUpdateRequest, security operations.YoutubeLiveStreamsUpdateSecurity) (*operations.YoutubeLiveStreamsUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/youtube/v3/liveStreams"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LiveStream", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -191,11 +191,11 @@ func (s *liveStreams) YoutubeLiveStreamsUpdate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

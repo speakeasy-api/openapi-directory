@@ -14,42 +14,33 @@ func main() {
     s := sdk.New()
 
     req := operations.VaultMattersAddPermissionsRequest{
-        Security: operations.VaultMattersAddPermissionsSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.VaultMattersAddPermissionsPathParams{
-            MatterID: "corrupti",
-        },
-        QueryParams: operations.VaultMattersAddPermissionsQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.AddMatterPermissionsRequest{
+        DollarXgafv: "2",
+        AddMatterPermissionsRequest: &shared.AddMatterPermissionsRequest{
             CcMe: false,
             MatterPermission: &shared.MatterPermission{
-                AccountID: "suscipit",
-                Role: "COLLABORATOR",
+                AccountID: "provident",
+                Role: "OWNER",
             },
             SendEmails: false,
         },
+        AccessToken: "quibusdam",
+        Alt: "media",
+        Callback: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        MatterID: "vel",
+        OauthToken: "error",
+        PrettyPrint: false,
+        QuotaUser: "deserunt",
+        UploadType: "suscipit",
+        UploadProtocol: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Matters.VaultMattersAddPermissions(ctx, req)
+    res, err := s.Matters.VaultMattersAddPermissions(ctx, req, operations.VaultMattersAddPermissionsSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

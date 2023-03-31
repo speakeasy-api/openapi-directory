@@ -12,18 +12,13 @@ var FetchRatePlanServerList = []string{
 }
 
 type FetchRatePlanSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchRatePlanPathParams struct {
-	// The SID of the RatePlan resource to fetch.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchRatePlanRequest struct {
-	PathParams FetchRatePlanPathParams
-	Security   FetchRatePlanSecurity
-	ServerURL  *string
+	// The SID of the RatePlan resource to fetch.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type FetchRatePlanResponse struct {

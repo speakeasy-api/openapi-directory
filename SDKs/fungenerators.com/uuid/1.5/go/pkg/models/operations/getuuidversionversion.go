@@ -4,31 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetUUIDVersionVersionSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
-type GetUUIDVersionVersionPathParams struct {
-	// Version of the UUID spec to use. (0-5), Use '0' for nil (00000000-0000-0000-0000-000000000000) UUID.
-	Version int64 `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetUUIDVersionVersionQueryParams struct {
+type GetUUIDVersionVersionRequest struct {
 	// Number of UUID's to generate (defaults to 1)
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// For v3 and v5 of UUID Spec supply the text value for the type specified dns/url/oid/x500/nil. For example specify a dns/domain string if the type is "dns"
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// For v3 and v5 of UUID Spec you can supply the type (dns/url/oid/x500/nil).
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetUUIDVersionVersionRequest struct {
-	PathParams  GetUUIDVersionVersionPathParams
-	QueryParams GetUUIDVersionVersionQueryParams
-	Security    GetUUIDVersionVersionSecurity
+	// Version of the UUID spec to use. (0-5), Use '0' for nil (00000000-0000-0000-0000-000000000000) UUID.
+	Version int64 `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type GetUUIDVersionVersionResponse struct {

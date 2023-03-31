@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type PostSessionsHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // PostSessionsRequestBodyPublicCustomSessionKeys - Contains every schema criteria. This is a serialized JSON object
 type PostSessionsRequestBodyPublicCustomSessionKeys struct {
 	// Order Configuration criteria
@@ -31,8 +24,11 @@ type PostSessionsRequestBody struct {
 }
 
 type PostSessionsRequest struct {
-	Headers PostSessionsHeaders
-	Request *PostSessionsRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent
+	ContentType string                   `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *PostSessionsRequestBody `request:"mediaType=application/json"`
 }
 
 type PostSessionsResponse struct {

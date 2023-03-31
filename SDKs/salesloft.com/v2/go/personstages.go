@@ -38,7 +38,7 @@ func newPersonStages(defaultClient, securityClient HTTPClient, serverURL, langua
 // This operation can be called multiple times successfully.
 func (s *personStages) DeleteV2PersonStagesIDJSON(ctx context.Context, request operations.DeleteV2PersonStagesIDJSONRequest) (*operations.DeleteV2PersonStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *personStages) GetV2PersonStagesJSON(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,7 +124,7 @@ func (s *personStages) GetV2PersonStagesJSON(ctx context.Context, request operat
 // Fetches a person stage, by ID only.
 func (s *personStages) GetV2PersonStagesIDJSON(ctx context.Context, request operations.GetV2PersonStagesIDJSONRequest) (*operations.GetV2PersonStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +167,7 @@ func (s *personStages) GetV2PersonStagesIDJSON(ctx context.Context, request oper
 
 // PostV2PersonStagesJSON - Create a person stage
 // Creates a person stage.
-func (s *personStages) PostV2PersonStagesJSON(ctx context.Context, request operations.PostV2PersonStagesJSONRequest) (*operations.PostV2PersonStagesJSONResponse, error) {
+func (s *personStages) PostV2PersonStagesJSON(ctx context.Context, request operations.PostV2PersonStagesJSONRequestBody) (*operations.PostV2PersonStagesJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/person_stages.json"
 
@@ -224,9 +224,9 @@ func (s *personStages) PostV2PersonStagesJSON(ctx context.Context, request opera
 // Updates a person stage.
 func (s *personStages) PutV2PersonStagesIDJSON(ctx context.Context, request operations.PutV2PersonStagesIDJSONRequest) (*operations.PutV2PersonStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

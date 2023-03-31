@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETSnippetUsingGETPathParams struct {
+type GETSnippetUsingGETRequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// shortCode
 	ShortCode string `pathParam:"style=simple,explode=false,name=shortCode"`
-}
-
-type GETSnippetUsingGETRequest struct {
-	PathParams GETSnippetUsingGETPathParams
 }
 
 type GETSnippetUsingGETResponse struct {

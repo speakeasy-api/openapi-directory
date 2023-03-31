@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/amazonaws.com/memorydb/2021-01-01/python
 ```
 <!-- End SDK Installation -->
 
@@ -14,36 +14,32 @@ pip install openapi
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BatchUpdateClusterRequest(
-    headers=operations.BatchUpdateClusterHeaders(
-        x_amz_algorithm="dicta",
-        x_amz_content_sha256="inventore",
-        x_amz_credential="perspiciatis",
-        x_amz_date="ut",
-        x_amz_security_token="esse",
-        x_amz_signature="facere",
-        x_amz_signed_headers="commodi",
-        x_amz_target="AmazonMemoryDB.BatchUpdateCluster",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.BatchUpdateClusterRequest(
+)
+
+
+req = operations.BatchUpdateClusterRequest(
+    batch_update_cluster_request=shared.BatchUpdateClusterRequest(
         cluster_names=[
-            "asperiores",
-            "amet",
-            "cupiditate",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
         service_update=shared.ServiceUpdateRequest(
-            service_update_name_to_apply="nisi",
+            service_update_name_to_apply="unde",
         ),
     ),
+    x_amz_algorithm="nulla",
+    x_amz_content_sha256="corrupti",
+    x_amz_credential="illum",
+    x_amz_date="vel",
+    x_amz_security_token="error",
+    x_amz_signature="deserunt",
+    x_amz_signed_headers="suscipit",
+    x_amz_target="AmazonMemoryDB.BatchUpdateCluster",
 )
     
 res = s.batch_update_cluster(req)
@@ -54,7 +50,7 @@ if res.batch_update_cluster_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -78,13 +74,16 @@ if res.batch_update_cluster_response is not None:
 * `describe_events` - Returns events related to clusters, security groups, and parameter groups. You can obtain events specific to a particular cluster, security group, or parameter group by providing the name as a parameter. By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth of events if necessary.
 * `describe_parameter_groups` - Returns a list of parameter group descriptions. If a parameter group name is specified, the list contains only the descriptions for that group.
 * `describe_parameters` - Returns the detailed parameter list for a particular parameter group.
+* `describe_reserved_nodes` - Returns information about reserved nodes for this account, or about a specified reserved node.
+* `describe_reserved_nodes_offerings` - Lists available reserved node offerings.
 * `describe_service_updates` - Returns details of the service updates
 * `describe_snapshots` - Returns information about cluster snapshots. By default, DescribeSnapshots lists all of your snapshots; it can optionally describe a single snapshot, or just the snapshots associated with a particular cluster.
 * `describe_subnet_groups` - Returns a list of subnet group descriptions. If a subnet group name is specified, the list contains only the description of that group.
 * `describe_users` - Returns a list of users.
-* `failover_shard` - Used to failover a shard
+* `failover_shard` - Used to failover a shard. This API is designed for testing the behavior of your application in case of MemoryDB failover. It is not designed to be used as a production-level tool for initiating a failover to overcome a problem you may have with the cluster. Moreover, in certain conditions such as large scale operational events, Amazon may block this API. 
 * `list_allowed_node_type_updates` - Lists all available node types that you can scale to from your cluster's current node type. When you use the UpdateCluster operation to scale your cluster, the value of the NodeType parameter must be one of the node types returned by this operation.
 * `list_tags` - Lists all tags currently on a named resource. A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track your MemoryDB resources. For more information, see <a href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/Tagging-Resources.html">Tagging your MemoryDB resources</a> 
+* `purchase_reserved_nodes_offering` - Allows you to purchase a reserved node offering. Reserved nodes are not eligible for cancellation and are non-refundable.
 * `reset_parameter_group` - Modifies the parameters of a parameter group to the engine or system default value. You can reset specific parameters by submitting a list of parameter names. To reset the entire parameter group, specify the AllParameters and ParameterGroupName parameters.
 * `tag_resource` - <p>A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your MemoryDB resources. When you add or remove tags on clusters, those actions will be replicated to all nodes in the cluster. For more information, see <a href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/iam.resourcelevelpermissions.html">Resource-level permissions</a>.</p> <p>For example, you can use cost-allocation tags to your MemoryDB resources, Amazon generates a cost allocation report as a comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply tags that represent business categories (such as cost centers, application names, or owners) to organize your costs across multiple services. For more information, see <a href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/tagging.html">Using Cost Allocation Tags</a>.</p>
 * `untag_resource` - Use this operation to remove tags on a resource
@@ -93,7 +92,17 @@ if res.batch_update_cluster_response is not None:
 * `update_parameter_group` - Updates the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a list parameter name and value pairs.
 * `update_subnet_group` - Updates a subnet group. For more information, see <a href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/ubnetGroups.Modifying.html">Updating a subnet group</a> 
 * `update_user` - Changes user password(s) and/or access string.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

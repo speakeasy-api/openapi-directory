@@ -13,27 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddClientPreferencesRequest{
-        PathParams: operations.AddClientPreferencesPathParams{
-            OrderFormID: "corrupti",
-        },
-        Headers: operations.AddClientPreferencesHeaders{
-            Accept: "provident",
-            ContentType: "distinctio",
-        },
-        Request: operations.AddClientPreferencesRequestBody{
-            Locale: "quibusdam",
+        Accept: "corrupti",
+        ContentType: "provident",
+        RequestBody: operations.AddClientPreferencesRequestBody{
+            Locale: "distinctio",
             OptinNewsLetter: false,
         },
+        OrderFormID: "quibusdam",
     }
 
     ctx := context.Background()

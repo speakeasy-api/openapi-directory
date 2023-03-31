@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV1PollsIDSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1PollsIDPathParams struct {
-	// ID of the poll in the database.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1PollsIDRequestBody struct {
@@ -21,9 +16,9 @@ type PostAPIV1PollsIDRequestBody struct {
 }
 
 type PostAPIV1PollsIDRequest struct {
-	PathParams PostAPIV1PollsIDPathParams
-	Request    *PostAPIV1PollsIDRequestBody `request:"mediaType=application/json"`
-	Security   PostAPIV1PollsIDSecurity
+	RequestBody *PostAPIV1PollsIDRequestBody `request:"mediaType=application/json"`
+	// ID of the poll in the database.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostAPIV1PollsIDResponse struct {

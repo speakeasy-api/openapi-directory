@@ -12,10 +12,11 @@ var ListTollfreeVerificationServerList = []string{
 }
 
 type ListTollfreeVerificationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListTollfreeVerificationQueryParams struct {
+type ListTollfreeVerificationRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -26,12 +27,6 @@ type ListTollfreeVerificationQueryParams struct {
 	Status *shared.TollfreeVerificationEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// The SID of the Phone Number associated with the Tollfree Verification.
 	TollfreePhoneNumberSid *string `queryParam:"style=form,explode=true,name=TollfreePhoneNumberSid"`
-}
-
-type ListTollfreeVerificationRequest struct {
-	QueryParams ListTollfreeVerificationQueryParams
-	Security    ListTollfreeVerificationSecurity
-	ServerURL   *string
 }
 
 type ListTollfreeVerificationListTollfreeVerificationResponseMeta struct {

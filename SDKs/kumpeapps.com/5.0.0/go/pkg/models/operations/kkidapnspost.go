@@ -10,7 +10,7 @@ import (
 )
 
 type KkidApnsPostSecurity struct {
-	AuthKey shared.SchemeAuthKey `security:"scheme,type=apiKey,subtype=header"`
+	AuthKey string `security:"scheme,type=apiKey,subtype=header,name=X-Auth"`
 }
 
 // KkidApnsPostPriorityEnum - Notification section name (optional for send, default is active)
@@ -109,7 +109,7 @@ func (e *KkidApnsPostToolEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type KkidApnsPostQueryParams struct {
+type KkidApnsPostRequest struct {
 	// Number for badge icon (optional for send)
 	Badge *int64 `queryParam:"style=form,explode=true,name=badge"`
 	// Name of device to associate to token (required for register)
@@ -130,11 +130,6 @@ type KkidApnsPostQueryParams struct {
 	Token *string `queryParam:"style=form,explode=true,name=token"`
 	// tool you wish to talk to
 	Tool KkidApnsPostToolEnum `queryParam:"style=form,explode=true,name=tool"`
-}
-
-type KkidApnsPostRequest struct {
-	QueryParams KkidApnsPostQueryParams
-	Security    KkidApnsPostSecurity
 }
 
 type KkidApnsPostResponse struct {

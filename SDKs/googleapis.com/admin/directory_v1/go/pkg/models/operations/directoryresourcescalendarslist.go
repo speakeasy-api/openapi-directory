@@ -8,13 +8,13 @@ import (
 )
 
 type DirectoryResourcesCalendarsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryResourcesCalendarsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DirectoryResourcesCalendarsListSecurity struct {
@@ -22,12 +22,7 @@ type DirectoryResourcesCalendarsListSecurity struct {
 	Option2 *DirectoryResourcesCalendarsListSecurityOption2 `security:"option"`
 }
 
-type DirectoryResourcesCalendarsListPathParams struct {
-	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's customer ID.
-	Customer string `pathParam:"style=simple,explode=false,name=customer"`
-}
-
-type DirectoryResourcesCalendarsListQueryParams struct {
+type DirectoryResourcesCalendarsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type DirectoryResourcesCalendarsListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The unique ID for the customer's Google Workspace account. As an account administrator, you can also use the `my_customer` alias to represent your account's customer ID.
+	Customer string `pathParam:"style=simple,explode=false,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -58,12 +55,6 @@ type DirectoryResourcesCalendarsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DirectoryResourcesCalendarsListRequest struct {
-	PathParams  DirectoryResourcesCalendarsListPathParams
-	QueryParams DirectoryResourcesCalendarsListQueryParams
-	Security    DirectoryResourcesCalendarsListSecurity
 }
 
 type DirectoryResourcesCalendarsListResponse struct {

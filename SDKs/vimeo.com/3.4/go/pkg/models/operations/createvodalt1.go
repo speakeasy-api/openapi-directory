@@ -373,10 +373,6 @@ type CreateVodAlt1RequestBody struct {
 	Type CreateVodAlt1RequestBodyTypeEnum `json:"type"`
 }
 
-type CreateVodAlt1Request struct {
-	Request CreateVodAlt1RequestBody `request:"mediaType=application/json"`
-}
-
 type CreateVodAlt1Response struct {
 	ContentType string
 	StatusCode  int

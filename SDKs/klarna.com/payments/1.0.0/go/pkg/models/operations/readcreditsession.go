@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReadCreditSessionPathParams struct {
+type ReadCreditSessionRequest struct {
 	// session_id
 	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
-}
-
-type ReadCreditSessionRequest struct {
-	PathParams ReadCreditSessionPathParams
 }
 
 type ReadCreditSessionResponse struct {

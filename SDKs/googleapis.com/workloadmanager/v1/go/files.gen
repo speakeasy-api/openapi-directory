@@ -22,13 +22,12 @@ pkg/models/operations/workloadmanagerprojectslocationsoperationsget.go
 pkg/models/operations/workloadmanagerprojectslocationsoperationslist.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
+pkg/models/shared/altenum.go
 pkg/models/shared/evaluation.go
 pkg/models/shared/resourcestatus.go
 pkg/models/shared/resourcefilter.go
 pkg/models/shared/gceinstancefilter.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listevaluationsresponse.go
 pkg/models/shared/writeinsightrequest.go
 pkg/models/shared/insight.go

@@ -8,24 +8,15 @@ import (
 )
 
 type UpdateFolderSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type UpdateFolderPathParams struct {
-	// Folder id for single object
-	FolderID string `pathParam:"style=simple,explode=false,name=FolderId"`
-}
-
-type UpdateFolderHeaders struct {
-	// Xero identifier for Tenant
-	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateFolderRequest struct {
-	PathParams UpdateFolderPathParams
-	Headers    UpdateFolderHeaders
-	Request    shared.Folder `request:"mediaType=application/json"`
-	Security   UpdateFolderSecurity
+	Folder shared.Folder `request:"mediaType=application/json"`
+	// Folder id for single object
+	FolderID string `pathParam:"style=simple,explode=false,name=FolderId"`
+	// Xero identifier for Tenant
+	XeroTenantID string `header:"style=simple,explode=false,name=xero-tenant-id"`
 }
 
 type UpdateFolderResponse struct {

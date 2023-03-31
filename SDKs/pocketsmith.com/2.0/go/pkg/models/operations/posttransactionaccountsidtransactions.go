@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTransactionAccountsIDTransactionsPathParams struct {
-	// The unique identifier of the transaction account.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostTransactionAccountsIDTransactionsRequestBody struct {
 	// The amount of the transaction. A positive amount is a credit, and a negative amount is a debit.
 	Amount float64 `json:"amount"`
@@ -36,8 +31,9 @@ type PostTransactionAccountsIDTransactionsRequestBody struct {
 }
 
 type PostTransactionAccountsIDTransactionsRequest struct {
-	PathParams PostTransactionAccountsIDTransactionsPathParams
-	Request    *PostTransactionAccountsIDTransactionsRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostTransactionAccountsIDTransactionsRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the transaction account.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostTransactionAccountsIDTransactionsResponse struct {

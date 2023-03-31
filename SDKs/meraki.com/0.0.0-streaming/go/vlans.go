@@ -34,9 +34,9 @@ func newVLANs(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Add a VLAN
 func (s *vlaNs) CreateNetworkVlan(ctx context.Context, request operations.CreateNetworkVlanRequest) (*operations.CreateNetworkVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -89,7 +89,7 @@ func (s *vlaNs) CreateNetworkVlan(ctx context.Context, request operations.Create
 // Delete a VLAN from a network
 func (s *vlaNs) DeleteNetworkVlan(ctx context.Context, request operations.DeleteNetworkVlanRequest) (*operations.DeleteNetworkVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans/{vlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *vlaNs) DeleteNetworkVlan(ctx context.Context, request operations.Delete
 // Return a VLAN
 func (s *vlaNs) GetNetworkVlan(ctx context.Context, request operations.GetNetworkVlanRequest) (*operations.GetNetworkVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans/{vlanId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *vlaNs) GetNetworkVlan(ctx context.Context, request operations.GetNetwor
 // List the VLANs for an MX network
 func (s *vlaNs) GetNetworkVlans(ctx context.Context, request operations.GetNetworkVlansRequest) (*operations.GetNetworkVlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *vlaNs) GetNetworkVlans(ctx context.Context, request operations.GetNetwo
 // Returns the enabled status of VLANs for the network
 func (s *vlaNs) GetNetworkVlansEnabledState(ctx context.Context, request operations.GetNetworkVlansEnabledStateRequest) (*operations.GetNetworkVlansEnabledStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlansEnabledState", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlansEnabledState", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,9 +260,9 @@ func (s *vlaNs) GetNetworkVlansEnabledState(ctx context.Context, request operati
 // Update a VLAN
 func (s *vlaNs) UpdateNetworkVlan(ctx context.Context, request operations.UpdateNetworkVlanRequest) (*operations.UpdateNetworkVlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans/{vlanId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlans/{vlanId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -312,9 +312,9 @@ func (s *vlaNs) UpdateNetworkVlan(ctx context.Context, request operations.Update
 // Enable/Disable VLANs for the given network
 func (s *vlaNs) UpdateNetworkVlansEnabledState(ctx context.Context, request operations.UpdateNetworkVlansEnabledStateRequest) (*operations.UpdateNetworkVlansEnabledStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlansEnabledState", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/vlansEnabledState", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

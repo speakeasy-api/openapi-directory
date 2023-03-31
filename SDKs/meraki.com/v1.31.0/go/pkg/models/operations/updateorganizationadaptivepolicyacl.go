@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationAdaptivePolicyACLPathParams struct {
-	ACLID          string `pathParam:"style=simple,explode=false,name=aclId"`
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // UpdateOrganizationAdaptivePolicyACLRequestBodyIPVersionEnum - IP version of adpative policy ACL. One of: 'any', 'ipv4' or 'ipv6'
 type UpdateOrganizationAdaptivePolicyACLRequestBodyIPVersionEnum string
 
@@ -117,8 +112,9 @@ type UpdateOrganizationAdaptivePolicyACLRequestBody struct {
 }
 
 type UpdateOrganizationAdaptivePolicyACLRequest struct {
-	PathParams UpdateOrganizationAdaptivePolicyACLPathParams
-	Request    *UpdateOrganizationAdaptivePolicyACLRequestBody `request:"mediaType=application/json"`
+	RequestBody    *UpdateOrganizationAdaptivePolicyACLRequestBody `request:"mediaType=application/json"`
+	ACLID          string                                          `pathParam:"style=simple,explode=false,name=aclId"`
+	OrganizationID string                                          `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type UpdateOrganizationAdaptivePolicyACLResponse struct {

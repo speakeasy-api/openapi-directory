@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartPathParams struct {
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum string
@@ -130,10 +122,12 @@ type PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormData1 struct {
 }
 
 type PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartPathParams
 	// Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormData1 `request:"mediaType=multipart/form-data"`
-	Security PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormData1 `request:"mediaType=multipart/form-data"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDContractualDocumentsMultipart201ApplicationJSON - Id of document created

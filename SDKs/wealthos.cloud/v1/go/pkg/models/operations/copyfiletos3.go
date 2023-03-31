@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CopyFileToS3Security struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CopyFileToS3Headers struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type CopyFileToS3RequestBodyFilePaths struct {
@@ -29,9 +23,9 @@ type CopyFileToS3RequestBody struct {
 }
 
 type CopyFileToS3Request struct {
-	Headers  CopyFileToS3Headers
-	Request  *CopyFileToS3RequestBody `request:"mediaType=application/json"`
-	Security CopyFileToS3Security
+	RequestBody *CopyFileToS3RequestBody `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CopyFileToS3500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

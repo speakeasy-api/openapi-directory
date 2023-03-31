@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodSeasonPathParams struct {
+type GetVodSeasonRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The ID of the season.
 	SeasonID float64 `pathParam:"style=simple,explode=false,name=season_id"`
-}
-
-type GetVodSeasonRequest struct {
-	PathParams GetVodSeasonPathParams
 }
 
 type GetVodSeasonResponse struct {

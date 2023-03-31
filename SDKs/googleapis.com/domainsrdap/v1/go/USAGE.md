@@ -14,22 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.DomainsrdapAutnumGetRequest{
-        PathParams: operations.DomainsrdapAutnumGetPathParams{
-            AutnumID: "corrupti",
-        },
-        QueryParams: operations.DomainsrdapAutnumGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        AutnumID: "quibusdam",
+        Callback: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/datamigration/v1beta1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,109 +15,119 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest(
-    security=operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="animi",
-    ),
-    query_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="qui",
-        alt="media",
-        callback="quis",
-        connection_profile_id="repudiandae",
-        fields="dolorem",
-        key="eum",
-        oauth_token="aut",
-        pretty_print=False,
-        quota_user="velit",
-        request_id="unde",
-        upload_type="esse",
-        upload_protocol="libero",
-    ),
-    request=shared.ConnectionProfileInput(
+    dollar_xgafv="2",
+    connection_profile_input=shared.ConnectionProfileInput(
         cloudsql=shared.CloudSQLConnectionProfileInput(
             settings=shared.CloudSQLSettingsInput(
-                activation_policy="NEVER",
+                activation_policy="ALWAYS",
                 auto_storage_increase=False,
-                data_disk_size_gb="id",
+                data_disk_size_gb="distinctio",
                 data_disk_type="PD_HDD",
                 database_flags={
-                    "molestiae": "est",
-                    "molestiae": "commodi",
-                    "impedit": "ipsa",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
                 },
                 database_version="MYSQL_5_6",
                 ip_config=shared.SQLIPConfig(
                     authorized_networks=[
                         shared.SQLACLEntry(
-                            expire_time="aut",
-                            label="aut",
-                            ttl="consequuntur",
-                            value="asperiores",
+                            expire_time="magnam",
+                            label="debitis",
+                            ttl="ipsa",
+                            value="delectus",
+                        ),
+                        shared.SQLACLEntry(
+                            expire_time="tempora",
+                            label="suscipit",
+                            ttl="molestiae",
+                            value="minus",
                         ),
                     ],
                     enable_ipv4=False,
-                    private_network="in",
-                    require_ssl=True,
+                    private_network="placeat",
+                    require_ssl=False,
                 ),
-                root_password="molestiae",
-                source_id="dolores",
-                storage_auto_resize_limit="ut",
-                tier="eos",
+                root_password="voluptatum",
+                source_id="iusto",
+                storage_auto_resize_limit="excepturi",
+                tier="nisi",
                 user_labels={
-                    "tempora": "excepturi",
-                    "repellendus": "nihil",
+                    "temporibus": "ab",
+                    "quis": "veritatis",
+                    "deserunt": "perferendis",
+                    "ipsam": "repellendus",
                 },
-                zone="quasi",
+                zone="sapiente",
             ),
         ),
-        display_name="et",
+        display_name="quo",
         error=shared.Status(
-            code=5616495351279140944,
+            code=140350,
             details=[
                 {
-                    "aut": "qui",
-                    "laborum": "quod",
-                    "eius": "officia",
+                    "maiores": "molestiae",
+                    "quod": "quod",
+                    "esse": "totam",
+                    "porro": "dolorum",
                 },
                 {
-                    "itaque": "a",
+                    "nam": "officia",
+                },
+                {
+                    "fugit": "deleniti",
+                    "hic": "optio",
+                    "totam": "beatae",
+                },
+                {
+                    "molestiae": "modi",
+                    "qui": "impedit",
                 },
             ],
-            message="minima",
+            message="cum",
         ),
         labels={
-            "est": "sed",
-            "odio": "non",
+            "ipsum": "excepturi",
+            "aspernatur": "perferendis",
         },
         mysql=shared.MySQLConnectionProfileInput(
-            cloud_sql_id="aspernatur",
-            host="quod",
-            password="et",
-            port=8176960718989686902,
+            cloud_sql_id="ad",
+            host="natus",
+            password="sed",
+            port=612096,
             ssl=shared.SslConfigInput(
-                ca_certificate="corporis",
-                client_certificate="rerum",
-                client_key="ut",
+                ca_certificate="dolor",
+                client_certificate="natus",
+                client_key="laboriosam",
             ),
-            username="asperiores",
+            username="Tyra.Turcotte35",
         ),
-        name="animi",
+        name="iste",
         provider="CLOUDSQL",
-        state="DELETING",
+        state="FAILED",
     ),
+    access_token="quidem",
+    alt="json",
+    callback="ipsa",
+    connection_profile_id="reiciendis",
+    fields_="est",
+    key="mollitia",
+    oauth_token="laborum",
+    parent="dolores",
+    pretty_print=False,
+    quota_user="dolorem",
+    request_id="corporis",
+    upload_type="explicabo",
+    upload_protocol="nobis",
 )
     
-res = s.projects.datamigration_projects_locations_connection_profiles_create(req)
+res = s.projects.datamigration_projects_locations_connection_profiles_create(req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response
@@ -125,7 +135,8 @@ if res.operation is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -148,8 +159,18 @@ if res.operation is not None:
 * `datamigration_projects_locations_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `datamigration_projects_locations_operations_delete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `datamigration_projects_locations_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `datamigration_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `datamigration_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

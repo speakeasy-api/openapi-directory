@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposListForUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // ReposListForUserDirectionEnum - Can be one of `asc` or `desc`. Default: `asc` when using `full_name`, otherwise `desc`
 type ReposListForUserDirectionEnum string
 
@@ -94,7 +90,7 @@ func (e *ReposListForUserTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReposListForUserQueryParams struct {
+type ReposListForUserRequest struct {
 	// Can be one of `asc` or `desc`. Default: `asc` when using `full_name`, otherwise `desc`
 	Direction *ReposListForUserDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// Page number of the results to fetch.
@@ -104,12 +100,8 @@ type ReposListForUserQueryParams struct {
 	// Can be one of `created`, `updated`, `pushed`, `full_name`.
 	Sort *ReposListForUserSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be one of `all`, `owner`, `member`.
-	Type *ReposListForUserTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ReposListForUserRequest struct {
-	PathParams  ReposListForUserPathParams
-	QueryParams ReposListForUserQueryParams
+	Type     *ReposListForUserTypeEnum `queryParam:"style=form,explode=true,name=type"`
+	Username string                    `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ReposListForUserResponse struct {

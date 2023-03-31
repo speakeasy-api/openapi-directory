@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type SetMultipleCustomFieldValuesPathParams struct {
+type SetMultipleCustomFieldValuesRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string                 `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// ID of the app created with the configuration API.
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 	// ID of the orderForm that will receive the new custom field values.
 	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type SetMultipleCustomFieldValuesHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SetMultipleCustomFieldValuesRequest struct {
-	PathParams SetMultipleCustomFieldValuesPathParams
-	Headers    SetMultipleCustomFieldValuesHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type SetMultipleCustomFieldValuesResponse struct {

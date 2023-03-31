@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchBioOntologySampleQueryParams struct {
+type SearchBioOntologySampleRequest struct {
 	// Archive change date from
 	ChangedateFrom *time.Time `queryParam:"style=form,explode=true,name=changedate.from"`
 	// Archive change date to
@@ -42,10 +42,6 @@ type SearchBioOntologySampleQueryParams struct {
 	Text *string `queryParam:"style=form,explode=true,name=text"`
 	// To date
 	Todate *time.Time `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type SearchBioOntologySampleRequest struct {
-	QueryParams SearchBioOntologySampleQueryParams
 }
 
 type SearchBioOntologySampleResponse struct {

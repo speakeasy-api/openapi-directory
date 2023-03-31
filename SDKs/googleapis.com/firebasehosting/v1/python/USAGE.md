@@ -4,28 +4,26 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.FirebasehostingOperationsCancelRequest(
-    path_params=operations.FirebasehostingOperationsCancelPathParams(
-        name="inventore",
-    ),
-    query_params=operations.FirebasehostingOperationsCancelQueryParams(
-        dollar_xgafv="1",
-        access_token="cumque",
-        alt="media",
-        callback="voluptatem",
-        fields="tempore",
-        key="cum",
-        oauth_token="ratione",
-        pretty_print=True,
-        quota_user="eius",
-        upload_type="et",
-        upload_protocol="consequatur",
-    ),
-    request={
-        "placeat": "est",
-        "voluptas": "et",
+    dollar_xgafv="2",
+    request_body={
+        "distinctio": "quibusdam",
+        "unde": "nulla",
+        "corrupti": "illum",
     },
+    access_token="vel",
+    alt="media",
+    callback="deserunt",
+    fields_="suscipit",
+    key="iure",
+    name="magnam",
+    oauth_token="debitis",
+    pretty_print=False,
+    quota_user="ipsa",
+    upload_type="delectus",
+    upload_protocol="tempora",
 )
     
 res = s.operations.firebasehosting_operations_cancel(req)

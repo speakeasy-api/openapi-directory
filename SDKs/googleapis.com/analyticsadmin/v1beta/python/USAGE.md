@@ -4,36 +4,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.AnalyticsadminAccountSummariesListRequest(
-    security=operations.AnalyticsadminAccountSummariesListSecurity(
-        option1=operations.AnalyticsadminAccountSummariesListSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.AnalyticsadminAccountSummariesListQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
-        alt="json",
-        callback="vel",
-        fields="quia",
-        key="voluptatibus",
-        oauth_token="beatae",
-        page_size=3724472702297372290,
-        page_token="sequi",
-        pretty_print=False,
-        quota_user="occaecati",
-        upload_type="et",
-        upload_protocol="in",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    key="nulla",
+    oauth_token="corrupti",
+    page_size=847252,
+    page_token="vel",
+    pretty_print=False,
+    quota_user="error",
+    upload_type="deserunt",
+    upload_protocol="suscipit",
 )
     
-res = s.account_summaries.analyticsadmin_account_summaries_list(req)
+res = s.account_summaries.analyticsadmin_account_summaries_list(req, operations.AnalyticsadminAccountSummariesListSecurity(
+    option1=operations.AnalyticsadminAccountSummariesListSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.google_analytics_admin_v1beta_list_account_summaries_response is not None:
     # handle response

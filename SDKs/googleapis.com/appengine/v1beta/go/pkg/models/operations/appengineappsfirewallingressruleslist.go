@@ -8,18 +8,18 @@ import (
 )
 
 type AppengineAppsFirewallIngressRulesListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsFirewallIngressRulesListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsFirewallIngressRulesListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppengineAppsFirewallIngressRulesListSecurity struct {
@@ -28,18 +28,15 @@ type AppengineAppsFirewallIngressRulesListSecurity struct {
 	Option3 *AppengineAppsFirewallIngressRulesListSecurityOption3 `security:"option"`
 }
 
-type AppengineAppsFirewallIngressRulesListPathParams struct {
-	// Part of `parent`. Name of the Firewall collection to retrieve. Example: apps/myapp/firewall/ingressRules.
-	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
-}
-
-type AppengineAppsFirewallIngressRulesListQueryParams struct {
+type AppengineAppsFirewallIngressRulesListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// Part of `parent`. Name of the Firewall collection to retrieve. Example: apps/myapp/firewall/ingressRules.
+	AppsID string `pathParam:"style=simple,explode=false,name=appsId"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
@@ -62,12 +59,6 @@ type AppengineAppsFirewallIngressRulesListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AppengineAppsFirewallIngressRulesListRequest struct {
-	PathParams  AppengineAppsFirewallIngressRulesListPathParams
-	QueryParams AppengineAppsFirewallIngressRulesListQueryParams
-	Security    AppengineAppsFirewallIngressRulesListSecurity
 }
 
 type AppengineAppsFirewallIngressRulesListResponse struct {

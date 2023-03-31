@@ -9,19 +9,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MergeTemplatesQueryParams struct {
+type MergeTemplatesRequest struct {
+	// Data used to specify templates and data objects which are used to merge the template
+	RequestBody []shared.BatchData `request:"mediaType=application/json"`
 	// Document format. The zip option will return a ZIP file with PDF files.
 	Format *shared.FormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// Document name, returned in the meta data.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Response format. With the url option, the document is stored for 30 days and automatically deleted.
 	Output *shared.OutputEnum `queryParam:"style=form,explode=true,name=output"`
-}
-
-type MergeTemplatesRequest struct {
-	QueryParams MergeTemplatesQueryParams
-	// Data used to specify templates and data objects which are used to merge the template
-	Request []shared.BatchData `request:"mediaType=application/json"`
 }
 
 // MergeTemplates500ApplicationJSON - Internal Server Error

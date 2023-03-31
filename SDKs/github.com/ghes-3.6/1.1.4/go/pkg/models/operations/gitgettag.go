@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitGetTagPathParams struct {
+type GitGetTagRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
 	TagSha string `pathParam:"style=simple,explode=false,name=tag_sha"`
-}
-
-type GitGetTagRequest struct {
-	PathParams GitGetTagPathParams
 }
 
 type GitGetTagResponse struct {

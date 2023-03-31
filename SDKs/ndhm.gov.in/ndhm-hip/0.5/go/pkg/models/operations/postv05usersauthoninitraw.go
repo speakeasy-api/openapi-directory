@@ -11,19 +11,14 @@ var PostV05UsersAuthOnInitRawServerList = []string{
 	"https://your-hrp-server.com",
 }
 
-type PostV05UsersAuthOnInitRawHeaders struct {
+type PostV05UsersAuthOnInitRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 	// Identifier of the health information provider to which the request was intended.
 	XHipID string `header:"style=simple,explode=false,name=X-HIP-ID"`
 	// Identifier of the health information user to which the request was intended.
 	XHiuID string `header:"style=simple,explode=false,name=X-HIU-ID"`
-}
-
-type PostV05UsersAuthOnInitRawRequest struct {
-	Headers   PostV05UsersAuthOnInitRawHeaders
-	Request   []byte `request:"mediaType=application/xml"`
-	ServerURL *string
 }
 
 type PostV05UsersAuthOnInitRawResponse struct {

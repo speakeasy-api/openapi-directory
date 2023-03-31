@@ -3,19 +3,15 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    )
-)
-    
-req = operations.DeleteChargeStationRequest(
-    path_params=operations.DeleteChargeStationPathParams(
-        id="omnis",
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
     ),
+)
+
+
+req = operations.DeleteChargeStationRequest(
+    id="corrupti",
 )
     
 res = s.charge_stations.delete_charge_station(req)

@@ -30,7 +30,7 @@ func (e *SearchCodeSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchCodeQueryParams struct {
+type SearchCodeRequest struct {
 	// Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
 	Order *shared.OrderEnum `queryParam:"style=form,explode=true,name=order"`
 	// Page number of the results to fetch.
@@ -41,10 +41,6 @@ type SearchCodeQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Sorts the results of your query. Can only be `indexed`, which indicates how recently a file has been indexed by the GitHub Enterprise Cloud search infrastructure. Default: [best match](https://docs.github.com/enterprise-cloud@latest//rest/reference/search#ranking-search-results)
 	Sort *SearchCodeSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type SearchCodeRequest struct {
-	QueryParams SearchCodeQueryParams
 }
 
 // SearchCode503ApplicationJSON - Service unavailable

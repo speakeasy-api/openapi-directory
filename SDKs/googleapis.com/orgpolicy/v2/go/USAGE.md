@@ -14,48 +14,42 @@ func main() {
     s := sdk.New()
 
     req := operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest{
-        Security: operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.OrgpolicyOrganizationsCustomConstraintsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.OrgpolicyOrganizationsCustomConstraintsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GoogleCloudOrgpolicyV2CustomConstraintInput{
+        DollarXgafv: "2",
+        GoogleCloudOrgpolicyV2CustomConstraintInput: &shared.GoogleCloudOrgpolicyV2CustomConstraintInput{
             ActionType: "ALLOW",
-            Condition: "iure",
-            Description: "magnam",
-            DisplayName: "debitis",
+            Condition: "distinctio",
+            Description: "quibusdam",
+            DisplayName: "unde",
             MethodTypes: []shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum{
+                "UPDATE",
                 "DELETE",
+                "CREATE",
+                "UPDATE",
             },
-            Name: "tempora",
+            Name: "deserunt",
             ResourceTypes: []string{
-                "molestiae",
-                "minus",
+                "iure",
+                "magnam",
             },
         },
+        AccessToken: "debitis",
+        Alt: "json",
+        Callback: "delectus",
+        Fields: "tempora",
+        Key: "suscipit",
+        OauthToken: "molestiae",
+        Parent: "minus",
+        PrettyPrint: false,
+        QuotaUser: "placeat",
+        UploadType: "voluptatum",
+        UploadProtocol: "iusto",
     }
 
     ctx := context.Background()
-    res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, req)
+    res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, req, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

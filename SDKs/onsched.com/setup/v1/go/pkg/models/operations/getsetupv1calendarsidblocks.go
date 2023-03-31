@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1CalendarsIDBlocksPathParams struct {
+type GetSetupV1CalendarsIDBlocksRequest struct {
 	// id of calendar to list blocks
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1CalendarsIDBlocksQueryParams struct {
 	// Page limit default 20, max 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Starting row of page, default 0
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetSetupV1CalendarsIDBlocksRequest struct {
-	PathParams  GetSetupV1CalendarsIDBlocksPathParams
-	QueryParams GetSetupV1CalendarsIDBlocksQueryParams
 }
 
 type GetSetupV1CalendarsIDBlocksResponse struct {

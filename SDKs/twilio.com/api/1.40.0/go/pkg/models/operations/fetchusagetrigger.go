@@ -12,20 +12,15 @@ var FetchUsageTriggerServerList = []string{
 }
 
 type FetchUsageTriggerSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchUsageTriggerPathParams struct {
+type FetchUsageTriggerRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The Twilio-provided string that uniquely identifies the UsageTrigger resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchUsageTriggerRequest struct {
-	PathParams FetchUsageTriggerPathParams
-	Security   FetchUsageTriggerSecurity
-	ServerURL  *string
 }
 
 type FetchUsageTriggerResponse struct {

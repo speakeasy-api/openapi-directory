@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ForgetWiFiNetworkRequest struct {
-	Request shared.ForgetWiFiNetworkRequest `request:"mediaType=application/json"`
-}
 
 type ForgetWiFiNetworkResponse struct {
 	ContentType                         string

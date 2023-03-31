@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateWebACLRequest(
-    headers=operations.AssociateWebACLHeaders(
-        x_amz_algorithm="consequatur",
-        x_amz_content_sha256="modi",
-        x_amz_credential="consequatur",
-        x_amz_date="quia",
-        x_amz_security_token="eaque",
-        x_amz_signature="et",
-        x_amz_signed_headers="assumenda",
-        x_amz_target="AWSWAF_Regional_20161128.AssociateWebACL",
+    associate_web_acl_request=shared.AssociateWebACLRequest(
+        resource_arn="corrupti",
+        web_acl_id="provident",
     ),
-    request=shared.AssociateWebACLRequest(
-        resource_arn="perspiciatis",
-        web_acl_id="quia",
-    ),
+    x_amz_algorithm="distinctio",
+    x_amz_content_sha256="quibusdam",
+    x_amz_credential="unde",
+    x_amz_date="nulla",
+    x_amz_security_token="corrupti",
+    x_amz_signature="illum",
+    x_amz_signed_headers="vel",
+    x_amz_target="AWSWAF_Regional_20161128.AssociateWebACL",
 )
     
 res = s.associate_web_acl(req)

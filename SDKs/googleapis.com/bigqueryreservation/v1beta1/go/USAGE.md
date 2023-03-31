@@ -14,60 +14,55 @@ func main() {
     s := sdk.New()
 
     req := operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
-        Security: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
-            Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            CapacityCommitmentID: "nulla",
-            EnforceSingleAdminProjectPerOrg: false,
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.CapacityCommitmentInput{
+        DollarXgafv: "2",
+        CapacityCommitmentInput: &shared.CapacityCommitmentInput{
             FailureStatus: &shared.Status{
-                Code: 437587,
+                Code: 592845,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "ipsa": "delectus",
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
+                        "unde": "nulla",
+                        "corrupti": "illum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
                     },
                     map[string]interface{}{
-                        "excepturi": "nisi",
-                        "recusandae": "temporibus",
+                        "magnam": "debitis",
+                        "ipsa": "delectus",
+                    },
+                    map[string]interface{}{
+                        "suscipit": "molestiae",
+                        "minus": "placeat",
                     },
                 },
-                Message: "ab",
+                Message: "voluptatum",
             },
             MultiRegionAuxiliary: false,
-            Plan: "FLEX",
-            RenewalPlan: "COMMITMENT_PLAN_UNSPECIFIED",
-            SlotCount: "deserunt",
+            Plan: "TRIAL",
+            RenewalPlan: "TRIAL",
+            SlotCount: "nisi",
         },
+        AccessToken: "recusandae",
+        Alt: "proto",
+        Callback: "ab",
+        CapacityCommitmentID: "quis",
+        EnforceSingleAdminProjectPerOrg: false,
+        Fields: "veritatis",
+        Key: "deserunt",
+        OauthToken: "perferendis",
+        Parent: "ipsam",
+        PrettyPrint: false,
+        QuotaUser: "repellendus",
+        UploadType: "sapiente",
+        UploadProtocol: "quo",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req)
+    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
+        Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

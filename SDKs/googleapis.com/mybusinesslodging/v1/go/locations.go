@@ -34,14 +34,14 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinesslodgingLocationsGetLodging - Returns the Lodging of a specific location.
 func (s *locations) MybusinesslodgingLocationsGetLodging(ctx context.Context, request operations.MybusinesslodgingLocationsGetLodgingRequest) (*operations.MybusinesslodgingLocationsGetLodgingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *locations) MybusinesslodgingLocationsGetLodging(ctx context.Context, re
 // MybusinesslodgingLocationsLodgingGetGoogleUpdated - Returns the Google updated Lodging of a specific location.
 func (s *locations) MybusinesslodgingLocationsLodgingGetGoogleUpdated(ctx context.Context, request operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedRequest) (*operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getGoogleUpdated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getGoogleUpdated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,9 +130,9 @@ func (s *locations) MybusinesslodgingLocationsLodgingGetGoogleUpdated(ctx contex
 // MybusinesslodgingLocationsUpdateLodging - Updates the Lodging of a specific location.
 func (s *locations) MybusinesslodgingLocationsUpdateLodging(ctx context.Context, request operations.MybusinesslodgingLocationsUpdateLodgingRequest) (*operations.MybusinesslodgingLocationsUpdateLodgingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LodgingInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *locations) MybusinesslodgingLocationsUpdateLodging(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

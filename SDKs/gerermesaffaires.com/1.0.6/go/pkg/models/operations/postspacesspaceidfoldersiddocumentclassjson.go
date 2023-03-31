@@ -8,20 +8,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostSpacesSpaceIDFoldersIDDocumentClassJSONSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type PostSpacesSpaceIDFoldersIDDocumentClassJSONPathParams struct {
-	// class of the document
-	DocumentClass string `pathParam:"style=simple,explode=false,name=documentClass"`
-	// Id of the folder
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSpacesSpaceIDFoldersIDDocumentClassApplicationJSON2AccountingWorkbookEnum string
@@ -162,10 +152,14 @@ func (u PostSpacesSpaceIDFoldersIDDocumentClassApplicationJSON) MarshalJSON() ([
 }
 
 type PostSpacesSpaceIDFoldersIDDocumentClassJSONRequest struct {
-	PathParams PostSpacesSpaceIDFoldersIDDocumentClassJSONPathParams
 	// Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
-	Request  PostSpacesSpaceIDFoldersIDDocumentClassApplicationJSON `request:"mediaType=application/json"`
-	Security PostSpacesSpaceIDFoldersIDDocumentClassJSONSecurity
+	RequestBody PostSpacesSpaceIDFoldersIDDocumentClassApplicationJSON `request:"mediaType=application/json"`
+	// class of the document
+	DocumentClass string `pathParam:"style=simple,explode=false,name=documentClass"`
+	// Id of the folder
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 // PostSpacesSpaceIDFoldersIDDocumentClassJSON201ApplicationJSON - Id of document created

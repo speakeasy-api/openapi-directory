@@ -20,11 +20,6 @@ type GetSecdefRequestBody struct {
 	Type *string `json:"type,omitempty"`
 }
 
-type GetSecdefRequest struct {
-	// Order Parameters
-	Request GetSecdefRequestBody `request:"mediaType=application/json"`
-}
-
 type GetSecdef200ApplicationJSON struct {
 	CompanyName  *string  `json:"CompanyName,omitempty"`
 	ContractID   *float64 `json:"ContractId,omitempty"`

@@ -3,44 +3,40 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.ActivatePipelineRequest(
-    headers=operations.ActivatePipelineHeaders(
-        x_amz_algorithm="molestias",
-        x_amz_content_sha256="asperiores",
-        x_amz_credential="suscipit",
-        x_amz_date="nam",
-        x_amz_security_token="ducimus",
-        x_amz_signature="ullam",
-        x_amz_signed_headers="corrupti",
-        x_amz_target="DataPipeline.ActivatePipeline",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.ActivatePipelineInput(
+)
+
+
+req = operations.ActivatePipelineRequest(
+    activate_pipeline_input=shared.ActivatePipelineInput(
         parameter_values=[
             shared.ParameterValue(
-                id="suscipit",
-                string_value="magnam",
+                id="provident",
+                string_value="distinctio",
             ),
             shared.ParameterValue(
-                id="aspernatur",
-                string_value="corporis",
+                id="quibusdam",
+                string_value="unde",
             ),
             shared.ParameterValue(
-                id="accusamus",
-                string_value="fugit",
+                id="nulla",
+                string_value="corrupti",
             ),
         ],
-        pipeline_id="qui",
-        start_timestamp="1993-08-20T08:47:17Z",
+        pipeline_id="illum",
+        start_timestamp="2022-05-18T09:34:54.894Z",
     ),
+    x_amz_algorithm="deserunt",
+    x_amz_content_sha256="suscipit",
+    x_amz_credential="iure",
+    x_amz_date="magnam",
+    x_amz_security_token="debitis",
+    x_amz_signature="ipsa",
+    x_amz_signed_headers="delectus",
+    x_amz_target="DataPipeline.ActivatePipeline",
 )
     
 res = s.activate_pipeline(req)

@@ -32,20 +32,20 @@ func newDatabases(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // SQLDatabasesDelete - Deletes a database from a Cloud SQL instance.
-func (s *databases) SQLDatabasesDelete(ctx context.Context, request operations.SQLDatabasesDeleteRequest) (*operations.SQLDatabasesDeleteResponse, error) {
+func (s *databases) SQLDatabasesDelete(ctx context.Context, request operations.SQLDatabasesDeleteRequest, security operations.SQLDatabasesDeleteSecurity) (*operations.SQLDatabasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,20 +80,20 @@ func (s *databases) SQLDatabasesDelete(ctx context.Context, request operations.S
 }
 
 // SQLDatabasesGet - Retrieves a resource containing information about a database inside a Cloud SQL instance.
-func (s *databases) SQLDatabasesGet(ctx context.Context, request operations.SQLDatabasesGetRequest) (*operations.SQLDatabasesGetResponse, error) {
+func (s *databases) SQLDatabasesGet(ctx context.Context, request operations.SQLDatabasesGetRequest, security operations.SQLDatabasesGetSecurity) (*operations.SQLDatabasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,11 +128,11 @@ func (s *databases) SQLDatabasesGet(ctx context.Context, request operations.SQLD
 }
 
 // SQLDatabasesInsert - Inserts a resource containing information about a database inside a Cloud SQL instance.
-func (s *databases) SQLDatabasesInsert(ctx context.Context, request operations.SQLDatabasesInsertRequest) (*operations.SQLDatabasesInsertResponse, error) {
+func (s *databases) SQLDatabasesInsert(ctx context.Context, request operations.SQLDatabasesInsertRequest, security operations.SQLDatabasesInsertSecurity) (*operations.SQLDatabasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Database", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,11 +144,11 @@ func (s *databases) SQLDatabasesInsert(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,20 +183,20 @@ func (s *databases) SQLDatabasesInsert(ctx context.Context, request operations.S
 }
 
 // SQLDatabasesList - Lists databases in the specified Cloud SQL instance.
-func (s *databases) SQLDatabasesList(ctx context.Context, request operations.SQLDatabasesListRequest) (*operations.SQLDatabasesListResponse, error) {
+func (s *databases) SQLDatabasesList(ctx context.Context, request operations.SQLDatabasesListRequest, security operations.SQLDatabasesListSecurity) (*operations.SQLDatabasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *databases) SQLDatabasesList(ctx context.Context, request operations.SQL
 }
 
 // SQLDatabasesPatch - Partially updates a resource containing information about a database inside a Cloud SQL instance. This method supports patch semantics.
-func (s *databases) SQLDatabasesPatch(ctx context.Context, request operations.SQLDatabasesPatchRequest) (*operations.SQLDatabasesPatchResponse, error) {
+func (s *databases) SQLDatabasesPatch(ctx context.Context, request operations.SQLDatabasesPatchRequest, security operations.SQLDatabasesPatchSecurity) (*operations.SQLDatabasesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Database1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,11 +247,11 @@ func (s *databases) SQLDatabasesPatch(ctx context.Context, request operations.SQ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -286,11 +286,11 @@ func (s *databases) SQLDatabasesPatch(ctx context.Context, request operations.SQ
 }
 
 // SQLDatabasesUpdate - Updates a resource containing information about a database inside a Cloud SQL instance.
-func (s *databases) SQLDatabasesUpdate(ctx context.Context, request operations.SQLDatabasesUpdateRequest) (*operations.SQLDatabasesUpdateResponse, error) {
+func (s *databases) SQLDatabasesUpdate(ctx context.Context, request operations.SQLDatabasesUpdateRequest, security operations.SQLDatabasesUpdateSecurity) (*operations.SQLDatabasesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/databases/{database}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Database1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -302,11 +302,11 @@ func (s *databases) SQLDatabasesUpdate(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

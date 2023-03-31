@@ -34,7 +34,7 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // GetAccessToken - Retrieve an access token
 // MotaWord API is using OAuth2 procedures when authenticating or authorizing your API call.
-func (s *auth) GetAccessToken(ctx context.Context, request operations.GetAccessTokenRequest) (*operations.GetAccessTokenResponse, error) {
+func (s *auth) GetAccessToken(ctx context.Context, request shared.TokenRequest, security operations.GetAccessTokenSecurity) (*operations.GetAccessTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
@@ -50,7 +50,7 @@ func (s *auth) GetAccessToken(ctx context.Context, request operations.GetAccessT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

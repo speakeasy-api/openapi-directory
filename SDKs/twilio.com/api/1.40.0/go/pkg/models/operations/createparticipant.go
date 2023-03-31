@@ -14,14 +14,8 @@ var CreateParticipantServerList = []string{
 }
 
 type CreateParticipantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateParticipantPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The SID of the participant's conference.
-	ConferenceSid string `pathParam:"style=simple,explode=false,name=ConferenceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateParticipantCreateParticipantRequestAmdStatusCallbackMethodEnum - The HTTP method we should use when calling the `amd_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.
@@ -336,10 +330,11 @@ type CreateParticipantCreateParticipantRequest struct {
 }
 
 type CreateParticipantRequest struct {
-	PathParams CreateParticipantPathParams
-	Request    *CreateParticipantCreateParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateParticipantSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The SID of the participant's conference.
+	ConferenceSid string                                     `pathParam:"style=simple,explode=false,name=ConferenceSid"`
+	RequestBody   *CreateParticipantCreateParticipantRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateParticipantResponse struct {

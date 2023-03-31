@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCustomPageSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCustomPagePathParams struct {
-	// Slug of custom page
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetCustomPageRequest struct {
-	PathParams GetCustomPagePathParams
-	Security   GetCustomPageSecurity
+	// Slug of custom page
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type GetCustomPageResponse struct {

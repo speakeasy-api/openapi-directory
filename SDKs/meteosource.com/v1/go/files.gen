@@ -26,7 +26,6 @@ pkg/models/shared/httpvalidationerror.go
 pkg/models/shared/validationerror.go
 pkg/models/shared/generalrequesterror.go
 pkg/models/shared/findplacesmodel.go
-pkg/models/shared/security.go
 pkg/models/shared/airqualitypointdata.go
 pkg/models/shared/airqualitypointhourlydata.go
 pkg/models/shared/pointpointdata.go

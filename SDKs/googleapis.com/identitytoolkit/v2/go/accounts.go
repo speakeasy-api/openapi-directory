@@ -33,11 +33,11 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // IdentitytoolkitAccountsMfaEnrollmentFinalize - Finishes enrolling a second factor for the user.
-func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentFinalize(ctx context.Context, request operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest) (*operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse, error) {
+func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentFinalize(ctx context.Context, request operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest, security operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity) (*operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/mfaEnrollment:finalize"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,11 +49,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentFinalize(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentFinalize(ctx context.Cont
 }
 
 // IdentitytoolkitAccountsMfaEnrollmentStart - Step one of the MFA enrollment process. In SMS case, this sends an SMS verification code to the user.
-func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentStart(ctx context.Context, request operations.IdentitytoolkitAccountsMfaEnrollmentStartRequest) (*operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse, error) {
+func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentStart(ctx context.Context, request operations.IdentitytoolkitAccountsMfaEnrollmentStartRequest, security operations.IdentitytoolkitAccountsMfaEnrollmentStartSecurity) (*operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/mfaEnrollment:start"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2StartMfaEnrollmentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -104,11 +104,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentStart(ctx context.Context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentStart(ctx context.Context
 }
 
 // IdentitytoolkitAccountsMfaEnrollmentWithdraw - Revokes one second factor from the enrolled second factors for an account.
-func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentWithdraw(ctx context.Context, request operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawRequest) (*operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse, error) {
+func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentWithdraw(ctx context.Context, request operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawRequest, security operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawSecurity) (*operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/mfaEnrollment:withdraw"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2WithdrawMfaRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,11 +159,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentWithdraw(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,11 +198,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaEnrollmentWithdraw(ctx context.Cont
 }
 
 // IdentitytoolkitAccountsMfaSignInFinalize - Verifies the MFA challenge and performs sign-in
-func (s *accounts) IdentitytoolkitAccountsMfaSignInFinalize(ctx context.Context, request operations.IdentitytoolkitAccountsMfaSignInFinalizeRequest) (*operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse, error) {
+func (s *accounts) IdentitytoolkitAccountsMfaSignInFinalize(ctx context.Context, request operations.IdentitytoolkitAccountsMfaSignInFinalizeRequest, security operations.IdentitytoolkitAccountsMfaSignInFinalizeSecurity) (*operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/mfaSignIn:finalize"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,11 +214,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaSignInFinalize(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,11 +253,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaSignInFinalize(ctx context.Context,
 }
 
 // IdentitytoolkitAccountsMfaSignInStart - Sends the MFA challenge
-func (s *accounts) IdentitytoolkitAccountsMfaSignInStart(ctx context.Context, request operations.IdentitytoolkitAccountsMfaSignInStartRequest) (*operations.IdentitytoolkitAccountsMfaSignInStartResponse, error) {
+func (s *accounts) IdentitytoolkitAccountsMfaSignInStart(ctx context.Context, request operations.IdentitytoolkitAccountsMfaSignInStartRequest, security operations.IdentitytoolkitAccountsMfaSignInStartSecurity) (*operations.IdentitytoolkitAccountsMfaSignInStartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/mfaSignIn:start"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2StartMfaSignInRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -269,11 +269,11 @@ func (s *accounts) IdentitytoolkitAccountsMfaSignInStart(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

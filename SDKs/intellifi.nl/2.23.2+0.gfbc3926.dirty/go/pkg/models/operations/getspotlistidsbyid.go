@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetSpotListIdsByIDPathParams struct {
+type GetSpotListIdsByIDRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpotListIdsByIDRequest struct {
-	PathParams GetSpotListIdsByIDPathParams
 }
 
 type GetSpotListIdsByIDResponse struct {

@@ -8,13 +8,7 @@ import (
 )
 
 type PhoneCodeBatchSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PhoneCodeBatchRequest struct {
-	// A list of personal names
-	Request  *shared.BatchFirstLastNamePhoneNumberIn `request:"mediaType=application/json"`
-	Security PhoneCodeBatchSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type PhoneCodeBatchResponse struct {

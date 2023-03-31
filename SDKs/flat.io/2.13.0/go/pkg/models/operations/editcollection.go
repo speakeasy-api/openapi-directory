@@ -8,10 +8,11 @@ import (
 )
 
 type EditCollectionSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type EditCollectionPathParams struct {
+type EditCollectionRequest struct {
+	CollectionModification *shared.CollectionModification `request:"mediaType=application/json"`
 	// Unique identifier of the collection.
 	// The following aliases are supported:
 	// - `root`: The root collection of the account
@@ -19,12 +20,6 @@ type EditCollectionPathParams struct {
 	// - `trash`: Automatically contains resources that have been deleted
 	//
 	Collection string `pathParam:"style=simple,explode=false,name=collection"`
-}
-
-type EditCollectionRequest struct {
-	PathParams EditCollectionPathParams
-	Request    *shared.CollectionModification `request:"mediaType=application/json"`
-	Security   EditCollectionSecurity
 }
 
 type EditCollectionResponse struct {

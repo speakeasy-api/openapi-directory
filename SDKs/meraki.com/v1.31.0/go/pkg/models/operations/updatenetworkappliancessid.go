@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceSsidPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkApplianceSsidRequestBodyAuthModeEnum - The association control method for the SSID ('open', 'psk', '8021x-meraki' or '8021x-radius').
 type UpdateNetworkApplianceSsidRequestBodyAuthModeEnum string
 
@@ -136,8 +131,9 @@ type UpdateNetworkApplianceSsidRequestBody struct {
 }
 
 type UpdateNetworkApplianceSsidRequest struct {
-	PathParams UpdateNetworkApplianceSsidPathParams
-	Request    *UpdateNetworkApplianceSsidRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkApplianceSsidRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                 `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                 `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkApplianceSsid200ApplicationJSONRadiusServers struct {

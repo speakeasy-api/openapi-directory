@@ -10,29 +10,24 @@ import (
 )
 
 type CloudidentityOrgUnitsMembershipsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityOrgUnitsMembershipsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityOrgUnitsMembershipsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudidentityOrgUnitsMembershipsListSecurity struct {
 	Option1 *CloudidentityOrgUnitsMembershipsListSecurityOption1 `security:"option"`
 	Option2 *CloudidentityOrgUnitsMembershipsListSecurityOption2 `security:"option"`
 	Option3 *CloudidentityOrgUnitsMembershipsListSecurityOption3 `security:"option"`
-}
-
-type CloudidentityOrgUnitsMembershipsListPathParams struct {
-	// Required. Immutable. OrgUnit which is queried for a list of memberships. Format: orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
 // CloudidentityOrgUnitsMembershipsListPageSizeEnum - The maximum number of results to return. The service may return fewer than this value. If omitted (or defaulted to zero) the server will default to 50. The maximum allowed value is 100, though requests with page_size greater than that will be silently interpreted as 100.
@@ -59,7 +54,7 @@ func (e *CloudidentityOrgUnitsMembershipsListPageSizeEnum) UnmarshalJSON(data []
 	}
 }
 
-type CloudidentityOrgUnitsMembershipsListQueryParams struct {
+type CloudidentityOrgUnitsMembershipsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -82,6 +77,8 @@ type CloudidentityOrgUnitsMembershipsListQueryParams struct {
 	PageSize *CloudidentityOrgUnitsMembershipsListPageSizeEnum `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `OrgMembershipsService.ListOrgMemberships` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListOrgMembershipsRequest` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Immutable. OrgUnit which is queried for a list of memberships. Format: orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -90,12 +87,6 @@ type CloudidentityOrgUnitsMembershipsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityOrgUnitsMembershipsListRequest struct {
-	PathParams  CloudidentityOrgUnitsMembershipsListPathParams
-	QueryParams CloudidentityOrgUnitsMembershipsListQueryParams
-	Security    CloudidentityOrgUnitsMembershipsListSecurity
 }
 
 type CloudidentityOrgUnitsMembershipsListResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpecTypeFieldsPathParams struct {
+type GetSpecTypeFieldsRequest struct {
 	SpecTypeID  string `pathParam:"style=simple,explode=false,name=spec_type_id"`
 	WorkgroupID string `pathParam:"style=simple,explode=false,name=workgroup_id"`
-}
-
-type GetSpecTypeFieldsRequest struct {
-	PathParams GetSpecTypeFieldsPathParams
 }
 
 type GetSpecTypeFieldsResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams struct {
+type EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest struct {
 	// Used for pagination: the number of results to return per page.
 	Count *int `queryParam:"style=form,explode=true,name=count"`
 	// Excludes the specified attribute from being returned in the results. Using this parameter can speed up response time.
@@ -16,10 +16,6 @@ type EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams struct {
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Used for pagination: the starting index of the first result to return when paginating through values.
 	StartIndex *int `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest struct {
-	QueryParams EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams
 }
 
 type EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse struct {

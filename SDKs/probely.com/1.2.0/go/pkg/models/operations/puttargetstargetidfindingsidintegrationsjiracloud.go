@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutTargetsTargetIDFindingsIDIntegrationsJiraCloudPathParams struct {
+type PutTargetsTargetIDFindingsIDIntegrationsJiraCloudRequest struct {
+	JiraFinding shared.JiraFinding `request:"mediaType=application/json"`
 	// Object Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Target id
 	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
-type PutTargetsTargetIDFindingsIDIntegrationsJiraCloudRequest struct {
-	PathParams PutTargetsTargetIDFindingsIDIntegrationsJiraCloudPathParams
-	Request    shared.JiraFinding `request:"mediaType=application/json"`
 }
 
 // PutTargetsTargetIDFindingsIDIntegrationsJiraCloud404ApplicationJSON - Not found

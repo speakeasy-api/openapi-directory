@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateappkeyPathParams struct {
+type UpdateappkeyRequest struct {
+	// Request body for updating AppKeys
+	UpdateappkeyRequest shared.UpdateappkeyRequest `request:"mediaType=application/json"`
 	// ID from the appKey which will be updated
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateappkeyRequest struct {
-	PathParams UpdateappkeyPathParams
-	// Request body for updating AppKeys
-	Request shared.UpdateappkeyRequest `request:"mediaType=application/json"`
 }
 
 type UpdateappkeyResponse struct {

@@ -12,22 +12,17 @@ var FetchCallRecordingServerList = []string{
 }
 
 type FetchCallRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchCallRecordingPathParams struct {
+type FetchCallRecordingRequest struct {
 	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to fetch.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource to fetch.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
 	// The Twilio-provided string that uniquely identifies the Recording resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchCallRecordingRequest struct {
-	PathParams FetchCallRecordingPathParams
-	Security   FetchCallRecordingSecurity
-	ServerURL  *string
 }
 
 type FetchCallRecordingResponse struct {

@@ -34,7 +34,7 @@ func (e *PublishedOralQuestionGetParametersQuestionTypeEnum) UnmarshalJSON(data 
 	}
 }
 
-type PublishedOralQuestionGetQueryParams struct {
+type PublishedOralQuestionGetRequest struct {
 	// Which answering body is to respond. A list of answering bodies can be found <a target="_blank" href="http://data.parliament.uk/membersdataplatform/services/mnis/referencedata/AnsweringBodies/">here</a>.
 	ParametersAnsweringBodyIds []int `queryParam:"style=form,explode=true,name=parameters.answeringBodyIds"`
 	// Oral Questions where the answering date has been set on or before the date provided. Date format YYYY-MM-DD.
@@ -53,10 +53,6 @@ type PublishedOralQuestionGetQueryParams struct {
 	ParametersTake *int `queryParam:"style=form,explode=true,name=parameters.take"`
 	// The UIN for the question - note that UINs reset at the start of each Parliamentary session.
 	ParametersUINs []int `queryParam:"style=form,explode=true,name=parameters.uINs"`
-}
-
-type PublishedOralQuestionGetRequest struct {
-	QueryParams PublishedOralQuestionGetQueryParams
 }
 
 type PublishedOralQuestionGetResponse struct {

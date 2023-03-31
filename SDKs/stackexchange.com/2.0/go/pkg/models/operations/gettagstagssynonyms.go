@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetTagsTagsSynonymsPathParams struct {
-	// String list (semicolon delimited).
-	Tags string `pathParam:"style=simple,explode=false,name=tags"`
-}
-
 // GetTagsTagsSynonymsOrderEnum
 type GetTagsTagsSynonymsOrderEnum string
 
@@ -64,7 +59,7 @@ func (e *GetTagsTagsSynonymsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTagsTagsSynonymsQueryParams struct {
+type GetTagsTagsSynonymsRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -119,13 +114,10 @@ type GetTagsTagsSynonymsQueryParams struct {
 	//
 	Site string                       `queryParam:"style=form,explode=true,name=site"`
 	Sort *GetTagsTagsSynonymsSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	// String list (semicolon delimited).
+	Tags string `pathParam:"style=simple,explode=false,name=tags"`
 	// Unix date.
 	Todate *int64 `queryParam:"style=form,explode=true,name=todate"`
-}
-
-type GetTagsTagsSynonymsRequest struct {
-	PathParams  GetTagsTagsSynonymsPathParams
-	QueryParams GetTagsTagsSynonymsQueryParams
 }
 
 type GetTagsTagsSynonymsResponse struct {

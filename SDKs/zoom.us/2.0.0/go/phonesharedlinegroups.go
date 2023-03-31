@@ -45,9 +45,9 @@ func newPhoneSharedLineGroups(defaultClient, securityClient HTTPClient, serverUR
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) AddMembersToSharedLineGroup(ctx context.Context, request operations.AddMembersToSharedLineGroupRequest) (*operations.AddMembersToSharedLineGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -115,9 +115,9 @@ func (s *phoneSharedLineGroups) AddMembersToSharedLineGroup(ctx context.Context,
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) AssignPhoneNumbersSLG(ctx context.Context, request operations.AssignPhoneNumbersSLGRequest) (*operations.AssignPhoneNumbersSLGResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +168,7 @@ func (s *phoneSharedLineGroups) AssignPhoneNumbersSLG(ctx context.Context, reque
 // **Scopes:** `phone:write:admin`
 //
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-func (s *phoneSharedLineGroups) CreateASharedLineGroup(ctx context.Context, request operations.CreateASharedLineGroupRequest) (*operations.CreateASharedLineGroupResponse, error) {
+func (s *phoneSharedLineGroups) CreateASharedLineGroup(ctx context.Context, request operations.CreateASharedLineGroupApplicationJSON, security operations.CreateASharedLineGroupSecurity) (*operations.CreateASharedLineGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phone/shared_line_groups"
 
@@ -184,7 +184,7 @@ func (s *phoneSharedLineGroups) CreateASharedLineGroup(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,7 +238,7 @@ func (s *phoneSharedLineGroups) CreateASharedLineGroup(ctx context.Context, requ
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) DeleteAMemberSLG(ctx context.Context, request operations.DeleteAMemberSLGRequest) (*operations.DeleteAMemberSLGResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/members/{memberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/members/{memberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -284,7 +284,7 @@ func (s *phoneSharedLineGroups) DeleteAMemberSLG(ctx context.Context, request op
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) DeleteAPhoneNumberSLG(ctx context.Context, request operations.DeleteAPhoneNumberSLGRequest) (*operations.DeleteAPhoneNumberSLGResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers/{phoneNumberId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers/{phoneNumberId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -331,7 +331,7 @@ func (s *phoneSharedLineGroups) DeleteAPhoneNumberSLG(ctx context.Context, reque
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) DeleteASharedLineGroup(ctx context.Context, request operations.DeleteASharedLineGroupRequest) (*operations.DeleteASharedLineGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -392,7 +392,7 @@ func (s *phoneSharedLineGroups) DeleteASharedLineGroup(ctx context.Context, requ
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) DeleteMembersOfSLG(ctx context.Context, request operations.DeleteMembersOfSLGRequest) (*operations.DeleteMembersOfSLGResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -453,7 +453,7 @@ func (s *phoneSharedLineGroups) DeleteMembersOfSLG(ctx context.Context, request 
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) GetASharedLineGroup(ctx context.Context, request operations.GetASharedLineGroupRequest) (*operations.GetASharedLineGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -520,7 +520,7 @@ func (s *phoneSharedLineGroups) ListSharedLineGroups(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -576,9 +576,9 @@ func (s *phoneSharedLineGroups) ListSharedLineGroups(ctx context.Context, reques
 //	**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 func (s *phoneSharedLineGroups) UpdateASharedLineGroup(ctx context.Context, request operations.UpdateASharedLineGroupRequest) (*operations.UpdateASharedLineGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/phone/shared_line_groups/{sharedLineGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

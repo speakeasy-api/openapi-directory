@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteRiddleSecurity struct {
-	XFungeneratorsAPISecret shared.SchemeXFungeneratorsAPISecret `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteRiddleQueryParams struct {
-	// Riddle ID
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
 }
 
 type DeleteRiddleRequest struct {
-	QueryParams DeleteRiddleQueryParams
-	Security    DeleteRiddleSecurity
+	// Riddle ID
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type DeleteRiddleResponse struct {

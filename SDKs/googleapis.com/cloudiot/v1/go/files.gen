@@ -28,10 +28,9 @@ pkg/models/operations/cloudiotprojectslocationsregistriesgroupssetiampolicy.go
 pkg/models/operations/cloudiotprojectslocationsregistriesgroupstestiampermissions.go
 pkg/models/operations/cloudiotprojectslocationsregistrieslist.go
 pkg/models/operations/cloudiotprojectslocationsregistriesunbinddevicefromgateway.go
-pkg/models/shared/binddevicetogatewayrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/binddevicetogatewayrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/deviceregistry.go
 pkg/models/shared/statenotificationconfig.go
 pkg/models/shared/mqttconfig.go

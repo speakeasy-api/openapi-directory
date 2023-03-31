@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PostEnrichmentTargetRequest struct {
-	// IDs of the targets to do the enrichment analysis for.
-	Request string `request:"mediaType=application/json"`
-}
-
 type PostEnrichmentTargetResponse struct {
 	ContentType string
 	StatusCode  int

@@ -3,33 +3,27 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.AssociateDeviceWithPlacementRequest(
-    path_params=operations.AssociateDeviceWithPlacementPathParams(
-        device_template_name="voluptatem",
-        placement_name="magnam",
-        project_name="recusandae",
+    request_body=operations.AssociateDeviceWithPlacementRequestBody(
+        device_id="corrupti",
     ),
-    headers=operations.AssociateDeviceWithPlacementHeaders(
-        x_amz_algorithm="quos",
-        x_amz_content_sha256="aspernatur",
-        x_amz_credential="veniam",
-        x_amz_date="minima",
-        x_amz_security_token="harum",
-        x_amz_signature="et",
-        x_amz_signed_headers="alias",
-    ),
-    request=operations.AssociateDeviceWithPlacementRequestBody(
-        device_id="aliquam",
-    ),
+    x_amz_algorithm="provident",
+    x_amz_content_sha256="distinctio",
+    x_amz_credential="quibusdam",
+    x_amz_date="unde",
+    x_amz_security_token="nulla",
+    x_amz_signature="corrupti",
+    x_amz_signed_headers="illum",
+    device_template_name="vel",
+    placement_name="error",
+    project_name="deserunt",
 )
     
 res = s.associate_device_with_placement(req)

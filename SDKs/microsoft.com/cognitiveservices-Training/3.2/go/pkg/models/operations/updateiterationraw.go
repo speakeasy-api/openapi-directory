@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIterationRawPathParams struct {
+type UpdateIterationRawRequest struct {
+	// The updated iteration model.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Iteration id.
 	IterationID string `pathParam:"style=simple,explode=false,name=iterationId"`
 	// Project id.
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateIterationRawRequest struct {
-	PathParams UpdateIterationRawPathParams
-	// The updated iteration model.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type UpdateIterationRawResponse struct {

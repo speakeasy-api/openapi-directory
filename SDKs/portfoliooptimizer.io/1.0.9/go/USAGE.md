@@ -13,35 +13,31 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.PostAssetsAnalysisAbsorptionRatioRequest{
-        Request: operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
-            Assets: 548814,
-            AssetsCovarianceMatrix: [][]float64{
-                []float64{
-                    8442.66,
-                    6027.63,
-                    8579.46,
-                },
-                []float64{
-                    8472.52,
-                    4236.55,
-                    6235.64,
-                },
-                []float64{
-                    3843.82,
-                    4375.87,
-                    2975.34,
-                },
+    req := operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
+        Assets: 548814,
+        AssetsCovarianceMatrix: [][]float64{
+            []float64{
+                8442.66,
+                6027.63,
+                8579.46,
             },
-            AssetsCovarianceMatrixEigenvectors: &operations.PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors{
-                EigenvectorsRetained: 891773,
+            []float64{
+                8472.52,
+                4236.55,
+                6235.64,
             },
+            []float64{
+                3843.82,
+                4375.87,
+                2975.34,
+            },
+        },
+        AssetsCovarianceMatrixEigenvectors: &operations.PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors{
+            EigenvectorsRetained: 891773,
         },
     }
 

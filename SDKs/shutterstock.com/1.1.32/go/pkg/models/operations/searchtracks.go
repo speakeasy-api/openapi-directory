@@ -10,8 +10,8 @@ import (
 )
 
 type SearchTracksSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // SearchTracksLibraryEnum - Which library to search
@@ -125,7 +125,7 @@ func (e *SearchTracksViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchTracksQueryParams struct {
+type SearchTracksRequest struct {
 	// Show tracks with one of the specified artist names or IDs
 	Artists []string `queryParam:"style=form,explode=true,name=artists"`
 	// (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute
@@ -168,11 +168,6 @@ type SearchTracksQueryParams struct {
 	View *SearchTracksViewEnum `queryParam:"style=form,explode=true,name=view"`
 	// Show tracks with the specified vocal description (male, female)
 	VocalDescription *string `queryParam:"style=form,explode=true,name=vocal_description"`
-}
-
-type SearchTracksRequest struct {
-	QueryParams SearchTracksQueryParams
-	Security    SearchTracksSecurity
 }
 
 type SearchTracksResponse struct {

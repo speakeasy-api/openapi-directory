@@ -45,7 +45,6 @@ pkg/models/shared/account.go
 pkg/models/shared/userdata.go
 pkg/models/shared/authtoken.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 pkg/models/shared/contact.go
 pkg/models/shared/command.go
 pkg/models/shared/contactslistresponse.go

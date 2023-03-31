@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type EnterpriseAdminDeleteGlobalWebhookPathParams struct {
-	HookID int64 `pathParam:"style=simple,explode=false,name=hook_id"`
-}
-
-type EnterpriseAdminDeleteGlobalWebhookHeaders struct {
+type EnterpriseAdminDeleteGlobalWebhookRequest struct {
 	// This API is under preview and subject to change.
 	Accept string `header:"style=simple,explode=false,name=accept"`
-}
-
-type EnterpriseAdminDeleteGlobalWebhookRequest struct {
-	PathParams EnterpriseAdminDeleteGlobalWebhookPathParams
-	Headers    EnterpriseAdminDeleteGlobalWebhookHeaders
+	HookID int64  `pathParam:"style=simple,explode=false,name=hook_id"`
 }
 
 type EnterpriseAdminDeleteGlobalWebhookResponse struct {

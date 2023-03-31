@@ -8,17 +8,12 @@ import (
 )
 
 type DowngradeUserProofreaderSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type DowngradeUserProofreaderPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DowngradeUserProofreaderRequest struct {
-	PathParams DowngradeUserProofreaderPathParams
-	Security   DowngradeUserProofreaderSecurity
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DowngradeUserProofreaderResponse struct {

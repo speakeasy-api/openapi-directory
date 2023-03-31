@@ -7,18 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberNearbySearchExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberNearbySearchExtQueryParams struct {
+type GetSearchVersionNumberNearbySearchExtRequest struct {
 	// Bottom right position of the bounding box. This is specified as a comma separated string composed of lat., lon.
 	BtmRight *string `queryParam:"style=form,explode=true,name=btmRight"`
 	// Comma separated string of country codes. This will limit the search to the specified countries.
 	CountrySet *string `queryParam:"style=form,explode=true,name=countrySet"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// Indexes for which extended postal codes should be included in the results. Available indexes are:
 	//   - <b>Addr</b> = Address ranges
 	//   - <b>Geo</b> = Geographies
@@ -55,13 +50,10 @@ type GetSearchVersionNumberNearbySearchExtQueryParams struct {
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
 	TopLeft *string `queryParam:"style=form,explode=true,name=topLeft"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Geopolitical View.
 	View *shared.ViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetSearchVersionNumberNearbySearchExtRequest struct {
-	PathParams  GetSearchVersionNumberNearbySearchExtPathParams
-	QueryParams GetSearchVersionNumberNearbySearchExtQueryParams
 }
 
 type GetSearchVersionNumberNearbySearchExtResponse struct {

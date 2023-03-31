@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GroupsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type GroupsRequest struct {
-	Security GroupsSecurity
-}
 
 // Groups200ApplicationXMLGroups - Group object.
 type Groups200ApplicationXMLGroups struct {

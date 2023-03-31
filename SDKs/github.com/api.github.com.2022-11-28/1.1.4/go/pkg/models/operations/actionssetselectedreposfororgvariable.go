@@ -6,21 +6,17 @@ import (
 	"net/http"
 )
 
-type ActionsSetSelectedReposForOrgVariablePathParams struct {
-	// The name of the variable.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 type ActionsSetSelectedReposForOrgVariableRequestBody struct {
 	// The IDs of the repositories that can access the organization variable.
 	SelectedRepositoryIds []int64 `json:"selected_repository_ids"`
 }
 
 type ActionsSetSelectedReposForOrgVariableRequest struct {
-	PathParams ActionsSetSelectedReposForOrgVariablePathParams
-	Request    ActionsSetSelectedReposForOrgVariableRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsSetSelectedReposForOrgVariableRequestBody `request:"mediaType=application/json"`
+	// The name of the variable.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsSetSelectedReposForOrgVariableResponse struct {

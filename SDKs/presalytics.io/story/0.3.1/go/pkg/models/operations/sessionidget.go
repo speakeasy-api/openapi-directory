@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SessionIDGetPathParams struct {
-	// The primary key for a view session
-	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
-}
-
-type SessionIDGetQueryParams struct {
+type SessionIDGetRequest struct {
 	// Indicate whether the returned object should include child relationships
 	IncludeRelationships *bool `queryParam:"style=form,explode=true,name=include_relationships"`
-}
-
-type SessionIDGetRequest struct {
-	PathParams  SessionIDGetPathParams
-	QueryParams SessionIDGetQueryParams
+	// The primary key for a view session
+	SessionID string `pathParam:"style=simple,explode=false,name=session_id"`
 }
 
 type SessionIDGetResponse struct {

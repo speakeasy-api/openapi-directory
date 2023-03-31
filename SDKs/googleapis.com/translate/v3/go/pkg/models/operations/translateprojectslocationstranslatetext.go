@@ -8,13 +8,13 @@ import (
 )
 
 type TranslateProjectsLocationsTranslateTextSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TranslateProjectsLocationsTranslateTextSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TranslateProjectsLocationsTranslateTextSecurity struct {
@@ -22,14 +22,10 @@ type TranslateProjectsLocationsTranslateTextSecurity struct {
 	Option2 *TranslateProjectsLocationsTranslateTextSecurityOption2 `security:"option"`
 }
 
-type TranslateProjectsLocationsTranslateTextPathParams struct {
-	// Required. Project or location to make a call. Must refer to a caller's project. Format: `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is required for requests using AutoML models or custom glossaries. Models and glossaries must be within the same region (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type TranslateProjectsLocationsTranslateTextQueryParams struct {
+type TranslateProjectsLocationsTranslateTextRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	TranslateTextRequest *shared.TranslateTextRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type TranslateProjectsLocationsTranslateTextQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. Project or location to make a call. Must refer to a caller's project. Format: `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is required for requests using AutoML models or custom glossaries. Models and glossaries must be within the same region (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -50,13 +48,6 @@ type TranslateProjectsLocationsTranslateTextQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type TranslateProjectsLocationsTranslateTextRequest struct {
-	PathParams  TranslateProjectsLocationsTranslateTextPathParams
-	QueryParams TranslateProjectsLocationsTranslateTextQueryParams
-	Request     *shared.TranslateTextRequest `request:"mediaType=application/json"`
-	Security    TranslateProjectsLocationsTranslateTextSecurity
 }
 
 type TranslateProjectsLocationsTranslateTextResponse struct {

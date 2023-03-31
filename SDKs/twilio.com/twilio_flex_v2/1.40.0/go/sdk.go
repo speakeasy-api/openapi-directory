@@ -92,10 +92,20 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWebChannelRequest) (*operations.CreateWebChannelResponse, error) {
+func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWebChannelCreateWebChannelRequest, security operations.CreateWebChannelSecurity, opts ...operations.Option) (*operations.CreateWebChannelResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateWebChannelServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/WebChats"
@@ -112,7 +122,7 @@ func (s *SDK) CreateWebChannel(ctx context.Context, request operations.CreateWeb
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

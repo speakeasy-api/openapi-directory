@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolNetflowChangeDfsPathParams struct {
+type ProtocolNetflowChangeDfsRequest struct {
 	// Agent to set the NETFLOW
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// NETFLOW export interval
 	Interval int `pathParam:"style=simple,explode=false,name=interval"`
-}
-
-type ProtocolNetflowChangeDfsRequest struct {
-	PathParams ProtocolNetflowChangeDfsPathParams
 }
 
 type ProtocolNetflowChangeDfsResponse struct {

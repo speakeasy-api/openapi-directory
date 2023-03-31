@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteAnAPIPathParams struct {
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
 type DeleteAnAPIRequest struct {
-	PathParams DeleteAnAPIPathParams
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
 }
 
 type DeleteAnAPI200ApplicationJSONAPI struct {

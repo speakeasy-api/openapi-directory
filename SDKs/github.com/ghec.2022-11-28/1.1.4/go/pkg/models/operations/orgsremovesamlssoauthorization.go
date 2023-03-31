@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsRemoveSamlSsoAuthorizationPathParams struct {
+type OrgsRemoveSamlSsoAuthorizationRequest struct {
 	CredentialID int64 `pathParam:"style=simple,explode=false,name=credential_id"`
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type OrgsRemoveSamlSsoAuthorizationRequest struct {
-	PathParams OrgsRemoveSamlSsoAuthorizationPathParams
 }
 
 type OrgsRemoveSamlSsoAuthorizationResponse struct {

@@ -14,39 +14,30 @@ func main() {
     s := sdk.New()
 
     req := operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest{
-        Security: operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity{
-            Option1: &operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.ClouddebuggerControllerDebuggeesBreakpointsListPathParams{
-            DebuggeeID: "corrupti",
-        },
-        QueryParams: operations.ClouddebuggerControllerDebuggeesBreakpointsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            AgentID: "quibusdam",
-            Alt: "media",
-            Callback: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            SuccessOnTimeout: false,
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-            WaitToken: "iure",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        AgentID: "distinctio",
+        Alt: "proto",
+        Callback: "unde",
+        DebuggeeID: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        SuccessOnTimeout: false,
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
+        WaitToken: "iure",
     }
 
     ctx := context.Background()
-    res, err := s.Controller.ClouddebuggerControllerDebuggeesBreakpointsList(ctx, req)
+    res, err := s.Controller.ClouddebuggerControllerDebuggeesBreakpointsList(ctx, req, operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity{
+        Option1: &operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -8,18 +8,11 @@ import (
 )
 
 type DfareportingRemarketingListSharesGetSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DfareportingRemarketingListSharesGetPathParams struct {
-	// User profile ID associated with this request.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-	// Remarketing list ID.
-	RemarketingListID string `pathParam:"style=simple,explode=false,name=remarketingListId"`
-}
-
-type DfareportingRemarketingListSharesGetQueryParams struct {
+type DfareportingRemarketingListSharesGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,18 +29,16 @@ type DfareportingRemarketingListSharesGetQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// User profile ID associated with this request.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Remarketing list ID.
+	RemarketingListID string `pathParam:"style=simple,explode=false,name=remarketingListId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DfareportingRemarketingListSharesGetRequest struct {
-	PathParams  DfareportingRemarketingListSharesGetPathParams
-	QueryParams DfareportingRemarketingListSharesGetQueryParams
-	Security    DfareportingRemarketingListSharesGetSecurity
 }
 
 type DfareportingRemarketingListSharesGetResponse struct {

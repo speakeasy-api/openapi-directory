@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DestroyCallPathParams struct {
+type DestroyCallRequest struct {
 	// Unique identifier of the call
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DestroyCallRequest struct {
-	PathParams DestroyCallPathParams
 }
 
 type DestroyCallResponse struct {

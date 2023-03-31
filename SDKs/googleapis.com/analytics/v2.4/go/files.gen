@@ -20,5 +20,4 @@ pkg/models/operations/analyticsmanagementprofileslist.go
 pkg/models/operations/analyticsmanagementsegmentslist.go
 pkg/models/operations/analyticsmanagementwebpropertieslist.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
 USAGE.md

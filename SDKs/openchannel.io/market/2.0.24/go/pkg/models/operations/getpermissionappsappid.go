@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPermissionAppsAppIDPathParams struct {
+type GetPermissionAppsAppIDRequest struct {
 	// The id of the app
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type GetPermissionAppsAppIDQueryParams struct {
 	// The id of the user
 	UserID string `queryParam:"style=form,explode=true,name=userId"`
-}
-
-type GetPermissionAppsAppIDRequest struct {
-	PathParams  GetPermissionAppsAppIDPathParams
-	QueryParams GetPermissionAppsAppIDQueryParams
 }
 
 type GetPermissionAppsAppIDResponse struct {

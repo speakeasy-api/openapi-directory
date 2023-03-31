@@ -20,5 +20,4 @@ pkg/models/shared/aspect.go
 pkg/models/shared/pricingsummary.go
 pkg/models/shared/amount.go
 pkg/models/shared/charity.go
-pkg/models/shared/security.go
 USAGE.md

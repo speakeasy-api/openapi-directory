@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchOrganizationPathParams struct {
-	// ID of organization that needs to be updated
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchOrganizationRequestBodyAddress struct {
 	City            *string `json:"city,omitempty"`
 	Country         *string `json:"country,omitempty"`
@@ -82,9 +77,10 @@ type PatchOrganizationRequestBody struct {
 }
 
 type PatchOrganizationRequest struct {
-	PathParams PatchOrganizationPathParams
 	// Include organization properties to create here
-	Request PatchOrganizationRequestBody `request:"mediaType=application/json"`
+	RequestBody PatchOrganizationRequestBody `request:"mediaType=application/json"`
+	// ID of organization that needs to be updated
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchOrganizationResponse struct {

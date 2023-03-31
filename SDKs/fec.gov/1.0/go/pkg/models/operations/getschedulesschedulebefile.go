@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetSchedulesScheduleBEfileQueryParams struct {
+type GetSchedulesScheduleBEfileRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -45,10 +45,6 @@ type GetSchedulesScheduleBEfileQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetSchedulesScheduleBEfileRequest struct {
-	QueryParams GetSchedulesScheduleBEfileQueryParams
 }
 
 type GetSchedulesScheduleBEfileResponse struct {

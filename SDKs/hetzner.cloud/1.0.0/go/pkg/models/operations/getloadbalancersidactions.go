@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetLoadBalancersIDActionsPathParams struct {
-	// ID of the Load Balancer
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetLoadBalancersIDActionsSortParameterSortEnum - Can be used multiple times.
 type GetLoadBalancersIDActionsSortParameterSortEnum string
 
@@ -112,16 +107,13 @@ func (e *GetLoadBalancersIDActionsStatusParameterStatusEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetLoadBalancersIDActionsQueryParams struct {
+type GetLoadBalancersIDActionsRequest struct {
+	// ID of the Load Balancer
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Can be used multiple times.
 	Sort *GetLoadBalancersIDActionsSortParameterSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Can be used multiple times, the response will contain only Actions with specified statuses
 	Status *GetLoadBalancersIDActionsStatusParameterStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetLoadBalancersIDActionsRequest struct {
-	PathParams  GetLoadBalancersIDActionsPathParams
-	QueryParams GetLoadBalancersIDActionsQueryParams
 }
 
 // GetLoadBalancersIDActionsActionsResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -33,7 +33,7 @@ func newAvailableProjects(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // FirebaseAvailableProjectsList - Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-manager/reference/rest/v1/projects) that can have Firebase resources added to it. A Project will only be listed if: - The caller has sufficient [Google IAM](https://cloud.google.com/iam) permissions to call AddFirebase. - The Project is not already a FirebaseProject. - The Project is not in an Organization which has policies that prevent Firebase resources from being added.
-func (s *availableProjects) FirebaseAvailableProjectsList(ctx context.Context, request operations.FirebaseAvailableProjectsListRequest) (*operations.FirebaseAvailableProjectsListResponse, error) {
+func (s *availableProjects) FirebaseAvailableProjectsList(ctx context.Context, request operations.FirebaseAvailableProjectsListRequest, security operations.FirebaseAvailableProjectsListSecurity) (*operations.FirebaseAvailableProjectsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1beta1/availableProjects"
 
@@ -42,11 +42,11 @@ func (s *availableProjects) FirebaseAvailableProjectsList(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

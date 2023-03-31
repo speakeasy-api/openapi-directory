@@ -11,7 +11,7 @@ import (
 )
 
 type GetAPIV2EpisodesSecurity struct {
-	CdOauth2 shared.SchemeCdOauth2 `security:"scheme,type=oauth2"`
+	CdOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetAPIV2EpisodesOrderByIDEnum - The sort order of the list of episodes, based on episode ID. If unspecified, the episodes are returned in random order. If using paging to iterate through the results, sort order should be specified.
@@ -38,7 +38,7 @@ func (e *GetAPIV2EpisodesOrderByIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV2EpisodesQueryParams struct {
+type GetAPIV2EpisodesRequest struct {
 	// Matches on the begin air date of the episode (inclusive).
 	BeginAirDateAfter *time.Time `queryParam:"style=form,explode=true,name=beginAirDateAfter"`
 	// Matches on the end air date of the episode (inclusive).
@@ -53,11 +53,6 @@ type GetAPIV2EpisodesQueryParams struct {
 	PageStart *int `queryParam:"style=form,explode=true,name=pageStart"`
 	// Matches on the ID of the program that owns the episode.
 	ProgramID int64 `queryParam:"style=form,explode=true,name=programId"`
-}
-
-type GetAPIV2EpisodesRequest struct {
-	QueryParams GetAPIV2EpisodesQueryParams
-	Security    GetAPIV2EpisodesSecurity
 }
 
 type GetAPIV2EpisodesResponse struct {

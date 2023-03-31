@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RouteTypesGetRouteTypesQueryParams struct {
+type RouteTypesGetRouteTypesRequest struct {
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RouteTypesGetRouteTypesRequest struct {
-	QueryParams RouteTypesGetRouteTypesQueryParams
 }
 
 type RouteTypesGetRouteTypesResponse struct {

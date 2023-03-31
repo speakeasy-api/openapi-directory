@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationInsightApplicationsPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationInsightApplicationsRequest struct {
-	PathParams GetOrganizationInsightApplicationsPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationInsightApplications200ApplicationJSONThresholdsByNetwork struct {

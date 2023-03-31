@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkCellularGatewaySubnetPoolPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkCellularGatewaySubnetPoolRequest struct {
-	PathParams GetNetworkCellularGatewaySubnetPoolPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkCellularGatewaySubnetPoolResponse struct {

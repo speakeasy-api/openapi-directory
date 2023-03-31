@@ -37,7 +37,7 @@ func newAPIKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete Api Key
 func (s *apiKeys) DeleteAPIKeysID(ctx context.Context, request operations.DeleteAPIKeysIDRequest) (*operations.DeleteAPIKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *apiKeys) GetAPIKeys(ctx context.Context, request operations.GetAPIKeysR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -161,7 +161,7 @@ func (s *apiKeys) GetAPIKeys(ctx context.Context, request operations.GetAPIKeysR
 // Show Api Key
 func (s *apiKeys) GetAPIKeysID(ctx context.Context, request operations.GetAPIKeysIDRequest) (*operations.GetAPIKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,9 +225,9 @@ func (s *apiKeys) GetAPIKeysID(ctx context.Context, request operations.GetAPIKey
 // Update Api Key
 func (s *apiKeys) PatchAPIKeysID(ctx context.Context, request operations.PatchAPIKeysIDRequest) (*operations.PatchAPIKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *apiKeys) PatchAPIKeysID(ctx context.Context, request operations.PatchAP
 
 // PostAPIKeys - Create Api Key
 // Create Api Key
-func (s *apiKeys) PostAPIKeys(ctx context.Context, request operations.PostAPIKeysRequest) (*operations.PostAPIKeysResponse, error) {
+func (s *apiKeys) PostAPIKeys(ctx context.Context, request operations.PostAPIKeysRequestBody) (*operations.PostAPIKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api_keys"
 

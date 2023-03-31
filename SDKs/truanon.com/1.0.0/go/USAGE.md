@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetProfileRequest{
-        QueryParams: operations.GetProfileQueryParams{
-            ID: "{{your-member-id}}",
-            Service: "{{service-identifier}}",
-        },
+        ID: "{{your-member-id}}",
+        Service: "{{service-identifier}}",
     }
 
     ctx := context.Background()

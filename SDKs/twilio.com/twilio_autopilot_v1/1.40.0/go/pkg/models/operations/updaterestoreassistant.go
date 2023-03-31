@@ -12,18 +12,13 @@ var UpdateRestoreAssistantServerList = []string{
 }
 
 type UpdateRestoreAssistantSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateRestoreAssistantUpdateRestoreAssistantRequest struct {
 	// The Twilio-provided string that uniquely identifies the Assistant resource to restore.
 	Assistant string `form:"name=Assistant"`
-}
-
-type UpdateRestoreAssistantRequest struct {
-	Request   *UpdateRestoreAssistantUpdateRestoreAssistantRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  UpdateRestoreAssistantSecurity
-	ServerURL *string
 }
 
 type UpdateRestoreAssistantResponse struct {

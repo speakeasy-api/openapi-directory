@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SwapNetworkWarmSparePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type SwapNetworkWarmSpareRequest struct {
-	PathParams SwapNetworkWarmSparePathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type SwapNetworkWarmSpareResponse struct {

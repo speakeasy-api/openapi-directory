@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExtrasGraphsUpdatePathParams struct {
+type ExtrasGraphsUpdateRequest struct {
+	WritableGraphInput shared.WritableGraphInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this graph.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ExtrasGraphsUpdateRequest struct {
-	PathParams ExtrasGraphsUpdatePathParams
-	Request    shared.WritableGraphInput `request:"mediaType=application/json"`
 }
 
 type ExtrasGraphsUpdateResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FilterStoppingsPathParams struct {
+type FilterStoppingsRequest struct {
+	// Filter the stopping words from the provided input data or links
+	ExudeBean shared.ExudeBean `request:"mediaType=multipart/form-data"`
 	// provide the type of filtering required stopping/swear
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type FilterStoppingsRequest struct {
-	PathParams FilterStoppingsPathParams
-	// Filter the stopping words from the provided input data or links
-	Request shared.ExudeBean `request:"mediaType=multipart/form-data"`
 }
 
 type FilterStoppingsResponse struct {

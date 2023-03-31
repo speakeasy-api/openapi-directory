@@ -8,12 +8,7 @@ import (
 )
 
 type PostAPIV1MarkersSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type PostAPIV1MarkersRequest struct {
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostAPIV1MarkersSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type PostAPIV1MarkersResponse struct {

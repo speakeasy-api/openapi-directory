@@ -8,15 +8,7 @@ import (
 )
 
 type DeprecatedBatchRetrieveInventoryChangesSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeprecatedBatchRetrieveInventoryChangesRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.BatchRetrieveInventoryChangesRequest `request:"mediaType=application/json"`
-	Security DeprecatedBatchRetrieveInventoryChangesSecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeprecatedBatchRetrieveInventoryChangesResponse struct {

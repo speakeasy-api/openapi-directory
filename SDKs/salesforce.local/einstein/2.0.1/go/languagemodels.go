@@ -34,16 +34,16 @@ func newLanguageModels(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // DeleteModel - Delete a Model
 // Deletes the specified model.
-func (s *languageModels) DeleteModel(ctx context.Context, request operations.DeleteModelRequest) (*operations.DeleteModelResponse, error) {
+func (s *languageModels) DeleteModel(ctx context.Context, request operations.DeleteModelRequest, security operations.DeleteModelSecurity) (*operations.DeleteModelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,20 +79,20 @@ func (s *languageModels) DeleteModel(ctx context.Context, request operations.Del
 
 // GetTrainedModelLearningCurve - Get Model Learning Curve
 // Returns the metrics for each epoch in a model.
-func (s *languageModels) GetTrainedModelLearningCurve(ctx context.Context, request operations.GetTrainedModelLearningCurveRequest) (*operations.GetTrainedModelLearningCurveResponse, error) {
+func (s *languageModels) GetTrainedModelLearningCurve(ctx context.Context, request operations.GetTrainedModelLearningCurveRequest, security operations.GetTrainedModelLearningCurveSecurity) (*operations.GetTrainedModelLearningCurveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}/lc", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}/lc", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -128,16 +128,16 @@ func (s *languageModels) GetTrainedModelLearningCurve(ctx context.Context, reque
 
 // GetTrainedModelMetrics - Get Model Metrics
 // Returns the metrics for a model
-func (s *languageModels) GetTrainedModelMetrics(ctx context.Context, request operations.GetTrainedModelMetricsRequest) (*operations.GetTrainedModelMetricsResponse, error) {
+func (s *languageModels) GetTrainedModelMetrics(ctx context.Context, request operations.GetTrainedModelMetricsRequest, security operations.GetTrainedModelMetricsSecurity) (*operations.GetTrainedModelMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,20 +173,20 @@ func (s *languageModels) GetTrainedModelMetrics(ctx context.Context, request ope
 
 // GetTrainedModels - Get All Models
 // Returns all models for the specified dataset.
-func (s *languageModels) GetTrainedModels(ctx context.Context, request operations.GetTrainedModelsRequest) (*operations.GetTrainedModelsResponse, error) {
+func (s *languageModels) GetTrainedModels(ctx context.Context, request operations.GetTrainedModelsRequest, security operations.GetTrainedModelsSecurity) (*operations.GetTrainedModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

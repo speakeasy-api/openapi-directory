@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSchedulesScheduleETotalsByCandidateQueryParams struct {
+type GetSchedulesScheduleETotalsByCandidateRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
@@ -36,10 +36,6 @@ type GetSchedulesScheduleETotalsByCandidateQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-}
-
-type GetSchedulesScheduleETotalsByCandidateRequest struct {
-	QueryParams GetSchedulesScheduleETotalsByCandidateQueryParams
 }
 
 type GetSchedulesScheduleETotalsByCandidateResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type GetContributorListSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetContributorListQueryParams struct {
-	// One or more contributor IDs
-	ID []string `queryParam:"style=form,explode=true,name=id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetContributorListRequest struct {
-	QueryParams GetContributorListQueryParams
-	Security    GetContributorListSecurity
+	// One or more contributor IDs
+	ID []string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetContributorListResponse struct {

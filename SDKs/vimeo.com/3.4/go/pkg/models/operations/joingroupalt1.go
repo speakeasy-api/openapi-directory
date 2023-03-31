@@ -8,17 +8,12 @@ import (
 )
 
 type JoinGroupAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type JoinGroupAlt1PathParams struct {
-	// The ID of the group.
-	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JoinGroupAlt1Request struct {
-	PathParams JoinGroupAlt1PathParams
-	Security   JoinGroupAlt1Security
+	// The ID of the group.
+	GroupID float64 `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type JoinGroupAlt1Response struct {

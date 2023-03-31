@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type GetNetworkTrafficPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // GetNetworkTrafficDeviceTypeEnum - Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage.
 type GetNetworkTrafficDeviceTypeEnum string
 
@@ -42,18 +38,14 @@ func (e *GetNetworkTrafficDeviceTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNetworkTrafficQueryParams struct {
+type GetNetworkTrafficRequest struct {
 	// Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage.
 	DeviceType *GetNetworkTrafficDeviceTypeEnum `queryParam:"style=form,explode=true,name=deviceType"`
+	NetworkID  string                           `pathParam:"style=simple,explode=false,name=networkId"`
 	// The beginning of the timespan for the data. The maximum lookback period is 30 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkTrafficRequest struct {
-	PathParams  GetNetworkTrafficPathParams
-	QueryParams GetNetworkTrafficQueryParams
 }
 
 type GetNetworkTrafficResponse struct {

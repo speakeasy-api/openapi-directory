@@ -34,11 +34,11 @@ func newPlayDTMF(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // StartDTMF - Play DTMF tones into a call
 // Play DTMF tones into a call
-func (s *playDTMF) StartDTMF(ctx context.Context, request operations.StartDTMFRequest) (*operations.StartDTMFResponse, error) {
+func (s *playDTMF) StartDTMF(ctx context.Context, request operations.StartDTMFRequest, security operations.StartDTMFSecurity) (*operations.StartDTMFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/dtmf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/dtmf", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DTMFRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *playDTMF) StartDTMF(ctx context.Context, request operations.StartDTMFRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

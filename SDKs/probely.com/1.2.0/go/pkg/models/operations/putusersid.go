@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDPathParams struct {
-	// Object Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutUsersIDRequestBodyInput struct {
 	// User's email (changing this resets the user's password and revokes existing tokens)
 	Email string `json:"email"`
@@ -21,8 +16,9 @@ type PutUsersIDRequestBodyInput struct {
 }
 
 type PutUsersIDRequest struct {
-	PathParams PutUsersIDPathParams
-	Request    PutUsersIDRequestBodyInput `request:"mediaType=application/json"`
+	RequestBody PutUsersIDRequestBodyInput `request:"mediaType=application/json"`
+	// Object Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutUsersID404ApplicationJSON - Not found

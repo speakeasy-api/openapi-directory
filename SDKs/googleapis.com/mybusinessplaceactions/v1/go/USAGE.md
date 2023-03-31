@@ -14,28 +14,24 @@ func main() {
     s := sdk.New()
 
     req := operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest{
-        PathParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.PlaceActionLinkInput{
+        DollarXgafv: "2",
+        PlaceActionLinkInput: &shared.PlaceActionLinkInput{
             IsPreferred: false,
-            Name: "suscipit",
-            PlaceActionType: "DINING_RESERVATION",
-            URI: "http://unique-baboon.org",
+            Name: "provident",
+            PlaceActionType: "FOOD_DELIVERY",
+            URI: "https://outstanding-strait.name",
         },
+        AccessToken: "illum",
+        Alt: "media",
+        Callback: "error",
+        Fields: "deserunt",
+        Key: "suscipit",
+        OauthToken: "iure",
+        Parent: "magnam",
+        PrettyPrint: false,
+        QuotaUser: "debitis",
+        UploadType: "ipsa",
+        UploadProtocol: "delectus",
     }
 
     ctx := context.Background()

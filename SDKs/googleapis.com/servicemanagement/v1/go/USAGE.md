@@ -14,36 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.ServicemanagementOperationsGetRequest{
-        Security: operations.ServicemanagementOperationsGetSecurity{
-            Option1: &operations.ServicemanagementOperationsGetSecurityOption1{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-                Oauth2c: shared.SchemeOauth2c{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            },
-        },
-        PathParams: operations.ServicemanagementOperationsGetPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.ServicemanagementOperationsGetQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
+        DollarXgafv: "2",
+        AccessToken: "provident",
+        Alt: "proto",
+        Callback: "quibusdam",
+        Fields: "unde",
+        Key: "nulla",
+        Name: "corrupti",
+        OauthToken: "illum",
+        PrettyPrint: false,
+        QuotaUser: "vel",
+        UploadType: "error",
+        UploadProtocol: "deserunt",
     }
 
     ctx := context.Background()
-    res, err := s.Operations.ServicemanagementOperationsGet(ctx, req)
+    res, err := s.Operations.ServicemanagementOperationsGet(ctx, req, operations.ServicemanagementOperationsGetSecurity{
+        Option1: &operations.ServicemanagementOperationsGetSecurityOption1{
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

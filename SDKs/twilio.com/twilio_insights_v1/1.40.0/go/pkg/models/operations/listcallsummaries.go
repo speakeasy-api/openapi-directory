@@ -12,10 +12,11 @@ var ListCallSummariesServerList = []string{
 }
 
 type ListCallSummariesSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCallSummariesQueryParams struct {
+type ListCallSummariesRequest struct {
 	AbnormalSession *bool   `queryParam:"style=form,explode=true,name=AbnormalSession"`
 	Branded         *bool   `queryParam:"style=form,explode=true,name=Branded"`
 	CallState       *string `queryParam:"style=form,explode=true,name=CallState"`
@@ -40,12 +41,6 @@ type ListCallSummariesQueryParams struct {
 	ToCarrier       *string                                             `queryParam:"style=form,explode=true,name=ToCarrier"`
 	ToCountryCode   *string                                             `queryParam:"style=form,explode=true,name=ToCountryCode"`
 	VerifiedCaller  *bool                                               `queryParam:"style=form,explode=true,name=VerifiedCaller"`
-}
-
-type ListCallSummariesRequest struct {
-	QueryParams ListCallSummariesQueryParams
-	Security    ListCallSummariesSecurity
-	ServerURL   *string
 }
 
 type ListCallSummariesListCallSummariesResponseMeta struct {

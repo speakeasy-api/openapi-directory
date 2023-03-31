@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAutomationV4ActionsAppIDDefinitionIDArchiveSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type DeleteAutomationV4ActionsAppIDDefinitionIDArchivePathParams struct {
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
-	// The ID of the custom workflow action.
-	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type DeleteAutomationV4ActionsAppIDDefinitionIDArchiveRequest struct {
-	PathParams DeleteAutomationV4ActionsAppIDDefinitionIDArchivePathParams
-	Security   DeleteAutomationV4ActionsAppIDDefinitionIDArchiveSecurity
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	// The ID of the custom workflow action.
+	DefinitionID string `pathParam:"style=simple,explode=false,name=definitionId"`
 }
 
 type DeleteAutomationV4ActionsAppIDDefinitionIDArchiveResponse struct {

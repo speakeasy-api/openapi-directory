@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetInlineScriptTagsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetInlineScriptTagsRequest struct {
-	Security GetInlineScriptTagsSecurity
-}
 
 // GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum - インラインスクリプトを出力するページ。
 //

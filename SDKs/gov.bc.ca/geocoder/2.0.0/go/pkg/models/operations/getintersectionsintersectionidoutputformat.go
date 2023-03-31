@@ -49,15 +49,6 @@ func (e *GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum) UnmarshalJS
 	}
 }
 
-type GetIntersectionsIntersectionIDOutputFormatPathParams struct {
-	// A unique intersection identifier
-	IntersectionID string `pathParam:"style=simple,explode=false,name=intersectionID"`
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
 // GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum string
 
@@ -100,14 +91,15 @@ func (e *GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum) UnmarshalJSON(
 	}
 }
 
-type GetIntersectionsIntersectionIDOutputFormatQueryParams struct {
+type GetIntersectionsIntersectionIDOutputFormatRequest struct {
+	// A unique intersection identifier
+	IntersectionID string `pathParam:"style=simple,explode=false,name=intersectionID"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
-}
-
-type GetIntersectionsIntersectionIDOutputFormatRequest struct {
-	PathParams  GetIntersectionsIntersectionIDOutputFormatPathParams
-	QueryParams GetIntersectionsIntersectionIDOutputFormatQueryParams
 }
 
 type GetIntersectionsIntersectionIDOutputFormatResponse struct {

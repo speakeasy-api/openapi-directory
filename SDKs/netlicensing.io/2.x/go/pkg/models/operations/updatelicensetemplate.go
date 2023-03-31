@@ -8,12 +8,8 @@ import (
 )
 
 type UpdateLicenseTemplateSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateLicenseTemplatePathParams struct {
-	// Unique number (across all Products of a Vendor) that identifies the License Template. Vendor can assign this number when creating a License Template or let NetLicensing generate one. Read-only after creation of the first License from this License Template.
-	LicenseTemplateNumber string `pathParam:"style=simple,explode=false,name=licenseTemplateNumber"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateLicenseTemplateRequestBody struct {
@@ -48,9 +44,9 @@ type UpdateLicenseTemplateRequestBody struct {
 }
 
 type UpdateLicenseTemplateRequest struct {
-	PathParams UpdateLicenseTemplatePathParams
-	Request    *UpdateLicenseTemplateRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateLicenseTemplateSecurity
+	RequestBody *UpdateLicenseTemplateRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Unique number (across all Products of a Vendor) that identifies the License Template. Vendor can assign this number when creating a License Template or let NetLicensing generate one. Read-only after creation of the first License from this License Template.
+	LicenseTemplateNumber string `pathParam:"style=simple,explode=false,name=licenseTemplateNumber"`
 }
 
 type UpdateLicenseTemplateResponse struct {

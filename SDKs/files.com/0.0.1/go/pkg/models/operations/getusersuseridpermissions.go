@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersUserIDPermissionsPathParams struct {
-	// DEPRECATED: User ID.  If provided, will scope permissions to this user. Use `filter[user_id]` instead.`
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetUsersUserIDPermissionsQueryParams struct {
+type GetUsersUserIDPermissionsRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
@@ -37,11 +32,8 @@ type GetUsersUserIDPermissionsQueryParams struct {
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[group_id]=desc`). Valid fields are `group_id`, `path`, `user_id` or `permission`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
-}
-
-type GetUsersUserIDPermissionsRequest struct {
-	PathParams  GetUsersUserIDPermissionsPathParams
-	QueryParams GetUsersUserIDPermissionsQueryParams
+	// DEPRECATED: User ID.  If provided, will scope permissions to this user. Use `filter[user_id]` instead.`
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type GetUsersUserIDPermissionsResponse struct {

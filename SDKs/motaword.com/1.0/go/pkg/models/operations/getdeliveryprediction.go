@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeliveryPredictionRequest struct {
-	Request *shared.DeliveryPredictionPayload `request:"mediaType=application/json"`
-}
-
 type GetDeliveryPredictionResponse struct {
 	ContentType string
 	// Prediction and its probability

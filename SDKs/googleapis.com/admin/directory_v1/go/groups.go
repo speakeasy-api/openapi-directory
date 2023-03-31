@@ -33,20 +33,20 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // DirectoryGroupsAliasesDelete - Removes an alias.
-func (s *groups) DirectoryGroupsAliasesDelete(ctx context.Context, request operations.DirectoryGroupsAliasesDeleteRequest) (*operations.DirectoryGroupsAliasesDeleteResponse, error) {
+func (s *groups) DirectoryGroupsAliasesDelete(ctx context.Context, request operations.DirectoryGroupsAliasesDeleteRequest, security operations.DirectoryGroupsAliasesDeleteSecurity) (*operations.DirectoryGroupsAliasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases/{alias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases/{alias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,11 +72,11 @@ func (s *groups) DirectoryGroupsAliasesDelete(ctx context.Context, request opera
 }
 
 // DirectoryGroupsAliasesInsert - Adds an alias for the group.
-func (s *groups) DirectoryGroupsAliasesInsert(ctx context.Context, request operations.DirectoryGroupsAliasesInsertRequest) (*operations.DirectoryGroupsAliasesInsertResponse, error) {
+func (s *groups) DirectoryGroupsAliasesInsert(ctx context.Context, request operations.DirectoryGroupsAliasesInsertRequest, security operations.DirectoryGroupsAliasesInsertSecurity) (*operations.DirectoryGroupsAliasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Alias", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -88,11 +88,11 @@ func (s *groups) DirectoryGroupsAliasesInsert(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,20 +127,20 @@ func (s *groups) DirectoryGroupsAliasesInsert(ctx context.Context, request opera
 }
 
 // DirectoryGroupsAliasesList - Lists all aliases for a group.
-func (s *groups) DirectoryGroupsAliasesList(ctx context.Context, request operations.DirectoryGroupsAliasesListRequest) (*operations.DirectoryGroupsAliasesListResponse, error) {
+func (s *groups) DirectoryGroupsAliasesList(ctx context.Context, request operations.DirectoryGroupsAliasesListRequest, security operations.DirectoryGroupsAliasesListSecurity) (*operations.DirectoryGroupsAliasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,20 +175,20 @@ func (s *groups) DirectoryGroupsAliasesList(ctx context.Context, request operati
 }
 
 // DirectoryGroupsDelete - Deletes a group.
-func (s *groups) DirectoryGroupsDelete(ctx context.Context, request operations.DirectoryGroupsDeleteRequest) (*operations.DirectoryGroupsDeleteResponse, error) {
+func (s *groups) DirectoryGroupsDelete(ctx context.Context, request operations.DirectoryGroupsDeleteRequest, security operations.DirectoryGroupsDeleteSecurity) (*operations.DirectoryGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,20 +214,20 @@ func (s *groups) DirectoryGroupsDelete(ctx context.Context, request operations.D
 }
 
 // DirectoryGroupsGet - Retrieves a group's properties.
-func (s *groups) DirectoryGroupsGet(ctx context.Context, request operations.DirectoryGroupsGetRequest) (*operations.DirectoryGroupsGetResponse, error) {
+func (s *groups) DirectoryGroupsGet(ctx context.Context, request operations.DirectoryGroupsGetRequest, security operations.DirectoryGroupsGetSecurity) (*operations.DirectoryGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,11 +262,11 @@ func (s *groups) DirectoryGroupsGet(ctx context.Context, request operations.Dire
 }
 
 // DirectoryGroupsInsert - Creates a group.
-func (s *groups) DirectoryGroupsInsert(ctx context.Context, request operations.DirectoryGroupsInsertRequest) (*operations.DirectoryGroupsInsertResponse, error) {
+func (s *groups) DirectoryGroupsInsert(ctx context.Context, request operations.DirectoryGroupsInsertRequest, security operations.DirectoryGroupsInsertSecurity) (*operations.DirectoryGroupsInsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/directory/v1/groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,11 +278,11 @@ func (s *groups) DirectoryGroupsInsert(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -317,7 +317,7 @@ func (s *groups) DirectoryGroupsInsert(ctx context.Context, request operations.D
 }
 
 // DirectoryGroupsList - Retrieves all groups of a domain or of a user given a userKey (paginated).
-func (s *groups) DirectoryGroupsList(ctx context.Context, request operations.DirectoryGroupsListRequest) (*operations.DirectoryGroupsListResponse, error) {
+func (s *groups) DirectoryGroupsList(ctx context.Context, request operations.DirectoryGroupsListRequest, security operations.DirectoryGroupsListSecurity) (*operations.DirectoryGroupsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/directory/v1/groups"
 
@@ -326,11 +326,11 @@ func (s *groups) DirectoryGroupsList(ctx context.Context, request operations.Dir
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -365,11 +365,11 @@ func (s *groups) DirectoryGroupsList(ctx context.Context, request operations.Dir
 }
 
 // DirectoryGroupsPatch - Updates a group's properties. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
-func (s *groups) DirectoryGroupsPatch(ctx context.Context, request operations.DirectoryGroupsPatchRequest) (*operations.DirectoryGroupsPatchResponse, error) {
+func (s *groups) DirectoryGroupsPatch(ctx context.Context, request operations.DirectoryGroupsPatchRequest, security operations.DirectoryGroupsPatchSecurity) (*operations.DirectoryGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -381,11 +381,11 @@ func (s *groups) DirectoryGroupsPatch(ctx context.Context, request operations.Di
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -420,11 +420,11 @@ func (s *groups) DirectoryGroupsPatch(ctx context.Context, request operations.Di
 }
 
 // DirectoryGroupsUpdate - Updates a group's properties.
-func (s *groups) DirectoryGroupsUpdate(ctx context.Context, request operations.DirectoryGroupsUpdateRequest) (*operations.DirectoryGroupsUpdateResponse, error) {
+func (s *groups) DirectoryGroupsUpdate(ctx context.Context, request operations.DirectoryGroupsUpdateRequest, security operations.DirectoryGroupsUpdateSecurity) (*operations.DirectoryGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -436,11 +436,11 @@ func (s *groups) DirectoryGroupsUpdate(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type StopPointDirectionPathParams struct {
+type StopPointDirectionRequest struct {
 	// Originating stop id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Destination stop id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
-	ToStopPointID string `pathParam:"style=simple,explode=false,name=toStopPointId"`
-}
-
-type StopPointDirectionQueryParams struct {
 	// Optional line id filter e.g. victoria
 	LineID *string `queryParam:"style=form,explode=true,name=lineId"`
-}
-
-type StopPointDirectionRequest struct {
-	PathParams  StopPointDirectionPathParams
-	QueryParams StopPointDirectionQueryParams
+	// Destination stop id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+	ToStopPointID string `pathParam:"style=simple,explode=false,name=toStopPointId"`
 }
 
 type StopPointDirectionResponse struct {

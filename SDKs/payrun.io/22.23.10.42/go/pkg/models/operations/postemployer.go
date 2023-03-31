@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostEmployerHeaders struct {
+type PostEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostEmployerRequest struct {
-	Headers PostEmployerHeaders
 	// The employer object.
-	Request shared.Employer `request:"mediaType=application/json"`
+	Employer shared.Employer `request:"mediaType=application/json"`
 }
 
 type PostEmployerResponse struct {

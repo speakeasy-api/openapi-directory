@@ -8,13 +8,13 @@ import (
 )
 
 type MirrorTimelineGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MirrorTimelineGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MirrorTimelineGetSecurity struct {
@@ -22,16 +22,13 @@ type MirrorTimelineGetSecurity struct {
 	Option2 *MirrorTimelineGetSecurityOption2 `security:"option"`
 }
 
-type MirrorTimelineGetPathParams struct {
-	// The ID of the timeline item.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type MirrorTimelineGetQueryParams struct {
+type MirrorTimelineGetRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The ID of the timeline item.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -42,12 +39,6 @@ type MirrorTimelineGetQueryParams struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`
-}
-
-type MirrorTimelineGetRequest struct {
-	PathParams  MirrorTimelineGetPathParams
-	QueryParams MirrorTimelineGetQueryParams
-	Security    MirrorTimelineGetSecurity
 }
 
 type MirrorTimelineGetResponse struct {

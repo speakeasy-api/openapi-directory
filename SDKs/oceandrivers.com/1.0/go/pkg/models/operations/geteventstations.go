@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetEventStationsPathParams struct {
+type GetEventStationsRequest struct {
 	// currently: 'trofeoprincesasofia|palmavela'
 	EventID string `pathParam:"style=simple,explode=false,name=eventId"`
-}
-
-type GetEventStationsRequest struct {
-	PathParams GetEventStationsPathParams
 }
 
 type GetEventStationsResponse struct {

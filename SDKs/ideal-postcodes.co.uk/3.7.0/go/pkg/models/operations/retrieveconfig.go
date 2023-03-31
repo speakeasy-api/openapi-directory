@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveConfigPathParams struct {
+type RetrieveConfigRequest struct {
 	Config string `pathParam:"style=simple,explode=false,name=config"`
 	Key    string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type RetrieveConfigRequest struct {
-	PathParams RetrieveConfigPathParams
 }
 
 type RetrieveConfigResponse struct {

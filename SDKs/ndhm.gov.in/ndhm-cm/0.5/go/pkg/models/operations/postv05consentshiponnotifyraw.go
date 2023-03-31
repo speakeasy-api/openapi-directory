@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV05ConsentsHipOnNotifyRawHeaders struct {
+type PostV05ConsentsHipOnNotifyRawRequest struct {
 	// Access token which was issued after successful login with gateway auth server.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostV05ConsentsHipOnNotifyRawRequest struct {
-	Headers PostV05ConsentsHipOnNotifyRawHeaders
-	Request []byte `request:"mediaType=application/xml"`
+	RequestBody   []byte `request:"mediaType=application/xml"`
 }
 
 type PostV05ConsentsHipOnNotifyRawResponse struct {

@@ -10,25 +10,18 @@ import (
 )
 
 type VaultMattersHoldsGetSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersHoldsGetSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type VaultMattersHoldsGetSecurity struct {
 	Option1 *VaultMattersHoldsGetSecurityOption1 `security:"option"`
 	Option2 *VaultMattersHoldsGetSecurityOption2 `security:"option"`
-}
-
-type VaultMattersHoldsGetPathParams struct {
-	// The hold ID.
-	HoldID string `pathParam:"style=simple,explode=false,name=holdId"`
-	// The matter ID.
-	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 }
 
 // VaultMattersHoldsGetViewEnum - The amount of detail to return for a hold.
@@ -58,7 +51,7 @@ func (e *VaultMattersHoldsGetViewEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VaultMattersHoldsGetQueryParams struct {
+type VaultMattersHoldsGetRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -69,8 +62,12 @@ type VaultMattersHoldsGetQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The hold ID.
+	HoldID string `pathParam:"style=simple,explode=false,name=holdId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The matter ID.
+	MatterID string `pathParam:"style=simple,explode=false,name=matterId"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -83,12 +80,6 @@ type VaultMattersHoldsGetQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// The amount of detail to return for a hold.
 	View *VaultMattersHoldsGetViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type VaultMattersHoldsGetRequest struct {
-	PathParams  VaultMattersHoldsGetPathParams
-	QueryParams VaultMattersHoldsGetQueryParams
-	Security    VaultMattersHoldsGetSecurity
 }
 
 type VaultMattersHoldsGetResponse struct {

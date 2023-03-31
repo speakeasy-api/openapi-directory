@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDCategoriesPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PostUsersIDCategoriesRequestBodyRefundBehaviourEnum - Set the refund behaviour of the category.
 type PostUsersIDCategoriesRequestBodyRefundBehaviourEnum string
 
@@ -59,8 +54,9 @@ type PostUsersIDCategoriesRequestBody struct {
 }
 
 type PostUsersIDCategoriesRequest struct {
-	PathParams PostUsersIDCategoriesPathParams
-	Request    *PostUsersIDCategoriesRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostUsersIDCategoriesRequestBody `request:"mediaType=application/json"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostUsersIDCategoriesResponse struct {

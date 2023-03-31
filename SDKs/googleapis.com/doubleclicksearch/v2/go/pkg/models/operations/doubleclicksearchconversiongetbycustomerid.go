@@ -8,16 +8,11 @@ import (
 )
 
 type DoubleclicksearchConversionGetByCustomerIDSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DoubleclicksearchConversionGetByCustomerIDPathParams struct {
-	// Customer ID of a client account in the new Search Ads 360 experience.
-	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
-}
-
-type DoubleclicksearchConversionGetByCustomerIDQueryParams struct {
+type DoubleclicksearchConversionGetByCustomerIDRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -38,6 +33,8 @@ type DoubleclicksearchConversionGetByCustomerIDQueryParams struct {
 	CampaignID *string `queryParam:"style=form,explode=true,name=campaignId"`
 	// Numeric ID of the criterion.
 	CriterionID *string `queryParam:"style=form,explode=true,name=criterionId"`
+	// Customer ID of a client account in the new Search Ads 360 experience.
+	CustomerID string `pathParam:"style=simple,explode=false,name=customerId"`
 	// Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
 	EndDate int64 `queryParam:"style=form,explode=true,name=endDate"`
 	// Numeric ID of the engine account.
@@ -62,12 +59,6 @@ type DoubleclicksearchConversionGetByCustomerIDQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DoubleclicksearchConversionGetByCustomerIDRequest struct {
-	PathParams  DoubleclicksearchConversionGetByCustomerIDPathParams
-	QueryParams DoubleclicksearchConversionGetByCustomerIDQueryParams
-	Security    DoubleclicksearchConversionGetByCustomerIDSecurity
 }
 
 type DoubleclicksearchConversionGetByCustomerIDResponse struct {

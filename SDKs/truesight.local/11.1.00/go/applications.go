@@ -44,7 +44,7 @@ func (s *applications) GetApplications(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *applications) GetApplications(ctx context.Context, request operations.G
 // You need to provide an <b>Application ID</b>:<br>- use the <b>hardware/applications</b> service to retrieve all available application IDs.
 func (s *applications) GetOneApplication(ctx context.Context, request operations.GetOneApplicationRequest) (*operations.GetOneApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/applications/{applicationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hardware/applications/{applicationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

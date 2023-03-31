@@ -14,16 +14,8 @@ var UpdateMemberServerList = []string{
 }
 
 type UpdateMemberSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateMemberPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to update.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
-	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource(s) to update.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-	// The SID of the Queue in which to find the members to update.
-	QueueSid string `pathParam:"style=simple,explode=false,name=QueueSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // UpdateMemberUpdateMemberRequestMethodEnum - How to pass the update request data. Can be `GET` or `POST` and the default is `POST`. `POST` sends the data as encoded form data and `GET` sends the data as query parameters.
@@ -70,10 +62,13 @@ type UpdateMemberUpdateMemberRequest struct {
 }
 
 type UpdateMemberRequest struct {
-	PathParams UpdateMemberPathParams
-	Request    *UpdateMemberUpdateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateMemberSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to update.
+	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	// The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource(s) to update.
+	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	// The SID of the Queue in which to find the members to update.
+	QueueSid    string                           `pathParam:"style=simple,explode=false,name=QueueSid"`
+	RequestBody *UpdateMemberUpdateMemberRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateMemberResponse struct {

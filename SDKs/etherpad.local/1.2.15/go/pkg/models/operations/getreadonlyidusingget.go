@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GETReadOnlyIDUsingGETQueryParams struct {
-	PadID *string `queryParam:"style=form,explode=true,name=padID"`
-}
-
 type GETReadOnlyIDUsingGETRequest struct {
-	QueryParams GETReadOnlyIDUsingGETQueryParams
+	PadID *string `queryParam:"style=form,explode=true,name=padID"`
 }
 
 // GETReadOnlyIDUsingGET500ApplicationJSON - internal api error (code 2)

@@ -67,7 +67,6 @@ pkg/models/shared/cancelrequest.go
 pkg/models/shared/buyer.go
 pkg/models/shared/taxidentifier.go
 pkg/models/shared/taxaddress.go
-pkg/models/shared/security.go
 pkg/models/shared/ordersearchpagedcollection.go
 pkg/models/shared/error.go
 pkg/models/shared/errorparameter.go
@@ -103,3 +102,4 @@ pkg/models/shared/lineitemreference.go
 pkg/models/shared/shippingfulfillment.go
 pkg/models/shared/shippingfulfillmentpagedcollection.go
 USAGE.md
+pkg/models/operations/options.go

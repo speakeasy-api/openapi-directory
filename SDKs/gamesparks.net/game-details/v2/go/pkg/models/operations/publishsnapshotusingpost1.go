@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishSnapshotUsingPOST1PathParams struct {
+type PublishSnapshotUsingPOST1Request struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// snapshotId
 	SnapshotID string `pathParam:"style=simple,explode=false,name=snapshotId"`
-}
-
-type PublishSnapshotUsingPOST1Request struct {
-	PathParams PublishSnapshotUsingPOST1PathParams
 }
 
 type PublishSnapshotUsingPOST1Response struct {

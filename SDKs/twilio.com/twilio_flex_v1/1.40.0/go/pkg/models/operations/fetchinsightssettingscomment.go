@@ -12,18 +12,13 @@ var FetchInsightsSettingsCommentServerList = []string{
 }
 
 type FetchInsightsSettingsCommentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchInsightsSettingsCommentHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FetchInsightsSettingsCommentRequest struct {
-	Headers   FetchInsightsSettingsCommentHeaders
-	Security  FetchInsightsSettingsCommentSecurity
-	ServerURL *string
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type FetchInsightsSettingsCommentResponse struct {

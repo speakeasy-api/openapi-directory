@@ -8,19 +8,14 @@ import (
 )
 
 type AddVodGenreSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AddVodGenrePathParams struct {
+type AddVodGenreRequest struct {
 	// The ID of the genre.
 	GenreID string `pathParam:"style=simple,explode=false,name=genre_id"`
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type AddVodGenreRequest struct {
-	PathParams AddVodGenrePathParams
-	Security   AddVodGenreSecurity
 }
 
 type AddVodGenreResponse struct {

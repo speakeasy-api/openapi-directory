@@ -12,7 +12,8 @@ var CreateSinkServerList = []string{
 }
 
 type CreateSinkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateSinkCreateSinkRequest struct {
@@ -21,12 +22,6 @@ type CreateSinkCreateSinkRequest struct {
 	// The information required for Twilio to connect to the provided Sink encoded as JSON.
 	SinkConfiguration interface{}                 `form:"name=SinkConfiguration"`
 	SinkType          shared.SinkEnumSinkTypeEnum `form:"name=SinkType"`
-}
-
-type CreateSinkRequest struct {
-	Request   *CreateSinkCreateSinkRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security  CreateSinkSecurity
-	ServerURL *string
 }
 
 type CreateSinkResponse struct {

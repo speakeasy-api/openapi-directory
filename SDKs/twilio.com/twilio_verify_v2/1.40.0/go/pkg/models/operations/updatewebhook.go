@@ -12,14 +12,8 @@ var UpdateWebhookServerList = []string{
 }
 
 type UpdateWebhookSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWebhookPathParams struct {
-	// The unique SID identifier of the Service.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// The Twilio-provided string that uniquely identifies the Webhook resource to update.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateWebhookUpdateWebhookRequest struct {
@@ -34,10 +28,11 @@ type UpdateWebhookUpdateWebhookRequest struct {
 }
 
 type UpdateWebhookRequest struct {
-	PathParams UpdateWebhookPathParams
-	Request    *UpdateWebhookUpdateWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateWebhookSecurity
-	ServerURL  *string
+	RequestBody *UpdateWebhookUpdateWebhookRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Service.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// The Twilio-provided string that uniquely identifies the Webhook resource to update.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateWebhookResponse struct {

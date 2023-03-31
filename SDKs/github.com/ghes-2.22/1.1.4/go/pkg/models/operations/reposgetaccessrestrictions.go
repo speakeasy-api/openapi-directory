@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetAccessRestrictionsPathParams struct {
+type ReposGetAccessRestrictionsRequest struct {
 	// The name of the branch.
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	Owner  string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo   string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetAccessRestrictionsRequest struct {
-	PathParams ReposGetAccessRestrictionsPathParams
 }
 
 type ReposGetAccessRestrictionsResponse struct {

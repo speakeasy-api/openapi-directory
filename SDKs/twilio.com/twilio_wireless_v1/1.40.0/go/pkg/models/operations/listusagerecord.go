@@ -13,15 +13,11 @@ var ListUsageRecordServerList = []string{
 }
 
 type ListUsageRecordSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListUsageRecordPathParams struct {
-	// The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource)  to read the usage from.
-	SimSid string `pathParam:"style=simple,explode=false,name=SimSid"`
-}
-
-type ListUsageRecordQueryParams struct {
+type ListUsageRecordRequest struct {
 	// Only include usage that occurred on or before this date, specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html). The default is the current time.
 	End *time.Time `queryParam:"style=form,explode=true,name=End"`
 	// How to summarize the usage by time. Can be: `daily`, `hourly`, or `all`. The default is `all`. A value of `all` returns one Usage Record that describes the usage for the entire period.
@@ -32,15 +28,10 @@ type ListUsageRecordQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
+	// The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource)  to read the usage from.
+	SimSid string `pathParam:"style=simple,explode=false,name=SimSid"`
 	// Only include usage that has occurred on or after this date, specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html). The default is one month before the `end` parameter value.
 	Start *time.Time `queryParam:"style=form,explode=true,name=Start"`
-}
-
-type ListUsageRecordRequest struct {
-	PathParams  ListUsageRecordPathParams
-	QueryParams ListUsageRecordQueryParams
-	Security    ListUsageRecordSecurity
-	ServerURL   *string
 }
 
 type ListUsageRecordListUsageRecordResponseMeta struct {

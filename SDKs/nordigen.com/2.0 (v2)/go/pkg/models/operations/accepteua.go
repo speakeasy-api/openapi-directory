@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AcceptEUAPathParams struct {
+type AcceptEUARequest struct {
+	EnduserAcceptanceDetailsRequest shared.EnduserAcceptanceDetailsRequest `request:"mediaType=application/json"`
 	// A UUID string identifying this end user agreement.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AcceptEUARequest struct {
-	PathParams AcceptEUAPathParams
-	Request    shared.EnduserAcceptanceDetailsRequest `request:"mediaType=application/json"`
 }
 
 type AcceptEUAResponse struct {

@@ -12,10 +12,11 @@ var ListSubscriptionServerList = []string{
 }
 
 type ListSubscriptionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListSubscriptionQueryParams struct {
+type ListSubscriptionRequest struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -24,12 +25,6 @@ type ListSubscriptionQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
 	// The SID of the sink that the list of Subscriptions should be filtered by.
 	SinkSid *string `queryParam:"style=form,explode=true,name=SinkSid"`
-}
-
-type ListSubscriptionRequest struct {
-	QueryParams ListSubscriptionQueryParams
-	Security    ListSubscriptionSecurity
-	ServerURL   *string
 }
 
 type ListSubscriptionListSubscriptionResponseMeta struct {

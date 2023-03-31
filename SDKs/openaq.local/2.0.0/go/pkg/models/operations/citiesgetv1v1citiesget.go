@@ -63,7 +63,7 @@ func (e *CitiesGetv1V1CitiesGetSortSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CitiesGetv1V1CitiesGetQueryParams struct {
+type CitiesGetv1V1CitiesGetRequest struct {
 	//         Limit results by a certain city or cities.
 	//         (ex. ?city=Chicago or ?city=Chicago&city=Boston)
 	//
@@ -86,10 +86,6 @@ type CitiesGetv1V1CitiesGetQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Define sort order.
 	Sort *CitiesGetv1V1CitiesGetSortSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type CitiesGetv1V1CitiesGetRequest struct {
-	QueryParams CitiesGetv1V1CitiesGetQueryParams
 }
 
 type CitiesGetv1V1CitiesGetResponse struct {

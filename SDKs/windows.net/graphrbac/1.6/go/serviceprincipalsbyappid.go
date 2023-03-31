@@ -34,14 +34,14 @@ func newServicePrincipalsByAppID(defaultClient, securityClient HTTPClient, serve
 // ApplicationsGetServicePrincipalsIDByAppID - Gets an object id for a given application id from the current tenant.
 func (s *servicePrincipalsByAppID) ApplicationsGetServicePrincipalsIDByAppID(ctx context.Context, request operations.ApplicationsGetServicePrincipalsIDByAppIDRequest) (*operations.ApplicationsGetServicePrincipalsIDByAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipalsByAppId/{applicationID}/objectId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{tenantID}/servicePrincipalsByAppId/{applicationID}/objectId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -12,12 +12,8 @@ var UpdateAnnotationServerList = []string{
 }
 
 type UpdateAnnotationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateAnnotationPathParams struct {
-	// The unique string that Twilio created to identify this Call resource. It always starts with a CA.
-	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateAnnotationUpdateAnnotationRequest struct {
@@ -36,10 +32,9 @@ type UpdateAnnotationUpdateAnnotationRequest struct {
 }
 
 type UpdateAnnotationRequest struct {
-	PathParams UpdateAnnotationPathParams
-	Request    *UpdateAnnotationUpdateAnnotationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateAnnotationSecurity
-	ServerURL  *string
+	// The unique string that Twilio created to identify this Call resource. It always starts with a CA.
+	CallSid     string                                   `pathParam:"style=simple,explode=false,name=CallSid"`
+	RequestBody *UpdateAnnotationUpdateAnnotationRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateAnnotationResponse struct {

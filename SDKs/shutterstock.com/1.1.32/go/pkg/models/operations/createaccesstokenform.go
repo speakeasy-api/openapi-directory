@@ -101,10 +101,6 @@ type CreateAccessTokenApplicationXWwwFormUrlencoded struct {
 	RefreshToken *string `form:"name=refresh_token"`
 }
 
-type CreateAccessTokenFormRequest struct {
-	Request *CreateAccessTokenApplicationXWwwFormUrlencoded `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type CreateAccessTokenFormResponse struct {
 	ContentType string
 	// OK

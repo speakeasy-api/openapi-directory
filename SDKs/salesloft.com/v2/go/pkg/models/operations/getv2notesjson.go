@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2NotesJSONQueryParams struct {
+type GetV2NotesJSONRequest struct {
 	// ID of the item with which the note is associated.  The associated_with_type must also be present if this parameter is used
 	AssociatedWithID *int64 `queryParam:"style=form,explode=true,name=associated_with_id"`
 	// Case insensitive type of item with which the note is associated.  Value must be one of: person, account
@@ -31,10 +31,6 @@ type GetV2NotesJSONQueryParams struct {
 	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
 	//
 	UpdatedAt []string `queryParam:"style=form,explode=false,name=updated_at"`
-}
-
-type GetV2NotesJSONRequest struct {
-	QueryParams GetV2NotesJSONQueryParams
 }
 
 type GetV2NotesJSONResponse struct {

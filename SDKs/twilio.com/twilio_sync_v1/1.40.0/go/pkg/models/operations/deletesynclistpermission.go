@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncListPermissionServerList = []string{
@@ -12,22 +11,17 @@ var DeleteSyncListPermissionServerList = []string{
 }
 
 type DeleteSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSyncListPermissionPathParams struct {
+type DeleteSyncListPermissionRequest struct {
 	// The application-defined string that uniquely identifies the User's Sync List Permission resource to delete.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// The SID of the Sync List with the Sync List Permission resource to delete. Can be the Sync List resource's `sid` or its `unique_name`.
 	ListSid string `pathParam:"style=simple,explode=false,name=ListSid"`
 	// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to delete.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteSyncListPermissionRequest struct {
-	PathParams DeleteSyncListPermissionPathParams
-	Security   DeleteSyncListPermissionSecurity
-	ServerURL  *string
 }
 
 type DeleteSyncListPermissionResponse struct {

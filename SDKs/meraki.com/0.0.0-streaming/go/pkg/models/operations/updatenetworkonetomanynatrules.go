@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkOneToManyNatRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum - 'tcp' or 'udp'
 type UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum string
 
@@ -90,8 +86,8 @@ type UpdateNetworkOneToManyNatRulesRequestBody struct {
 }
 
 type UpdateNetworkOneToManyNatRulesRequest struct {
-	PathParams UpdateNetworkOneToManyNatRulesPathParams
-	Request    UpdateNetworkOneToManyNatRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkOneToManyNatRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkOneToManyNatRulesResponse struct {

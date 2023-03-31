@@ -8,17 +8,12 @@ import (
 )
 
 type PrivateArticleEmbargoDeleteSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleEmbargoDeletePathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleEmbargoDeleteRequest struct {
-	PathParams PrivateArticleEmbargoDeletePathParams
-	Security   PrivateArticleEmbargoDeleteSecurity
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleEmbargoDeleteResponse struct {

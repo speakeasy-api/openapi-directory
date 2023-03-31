@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyHeader: &shared.SchemeAPIKeyHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyHeader: sdk.String("YOUR_API_KEY_HERE"),
         }),
     )
 
     req := operations.AreGamesInProgressRequest{
-        PathParams: operations.AreGamesInProgressPathParams{
-            Format: "JSON",
-        },
+        Format: "JSON",
     }
 
     ctx := context.Background()

@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateClientProfileQueryParams struct {
+type CreateClientProfileRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType string          `header:"style=simple,explode=false,name=Content-Type"`
+	Profile     *shared.Profile `request:"mediaType=application/json"`
 	// This parameter sets the the Time To Live (TTL), in days, of the specific document being created or updated with this request. After this period of time from the moment of the request, the document is deleted. By sending this parameter you override the TTL set for the schema.
 	//
 	// > Currently, the available default document schemas have no TTL. This means that documents are stored indefinitely, unless a TTL is sent when creating or updating.
 	TTL *int64 `queryParam:"style=form,explode=true,name=ttl"`
-}
-
-type CreateClientProfileHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type CreateClientProfileRequest struct {
-	QueryParams CreateClientProfileQueryParams
-	Headers     CreateClientProfileHeaders
-	Request     *shared.Profile `request:"mediaType=application/json"`
 }
 
 type CreateClientProfileResponse struct {

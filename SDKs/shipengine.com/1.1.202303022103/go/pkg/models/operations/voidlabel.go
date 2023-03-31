@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VoidLabelPathParams struct {
+type VoidLabelRequest struct {
 	// Label ID
 	LabelID string `pathParam:"style=simple,explode=false,name=label_id"`
-}
-
-type VoidLabelRequest struct {
-	PathParams VoidLabelPathParams
 }
 
 type VoidLabelResponse struct {

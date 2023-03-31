@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatchQuoteSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type PatchQuoteQueryParams struct {
+type PatchQuoteRequest struct {
 	// Quote Author
 	Author *string `queryParam:"style=form,explode=true,name=author"`
 	// Quote ID
@@ -22,11 +21,6 @@ type PatchQuoteQueryParams struct {
 	Quote *string `queryParam:"style=form,explode=true,name=quote"`
 	// Comma Separated tags
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type PatchQuoteRequest struct {
-	QueryParams PatchQuoteQueryParams
-	Security    PatchQuoteSecurity
 }
 
 type PatchQuoteResponse struct {

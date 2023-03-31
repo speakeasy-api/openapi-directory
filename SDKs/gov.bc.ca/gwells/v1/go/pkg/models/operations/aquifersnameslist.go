@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AquifersNamesListQueryParams struct {
+type AquifersNamesListRequest struct {
 	// A search term.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type AquifersNamesListRequest struct {
-	QueryParams AquifersNamesListQueryParams
 }
 
 type AquifersNamesListResponse struct {

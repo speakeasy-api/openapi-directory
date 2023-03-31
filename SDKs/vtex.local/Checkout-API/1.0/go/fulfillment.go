@@ -37,14 +37,14 @@ func newFulfillment(defaultClient, securityClient HTTPClient, serverURL, languag
 // This request can be used to implement auto complete functionality when a customer needs to fill in an address.
 func (s *fulfillment) GetAddressByPostalCode(ctx context.Context, request operations.GetAddressByPostalCodeRequest) (*operations.GetAddressByPostalCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/postal-code/{countryCode}/{postalCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/postal-code/{countryCode}/{postalCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -84,9 +84,9 @@ func (s *fulfillment) ListPickupPpointsByLocation(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

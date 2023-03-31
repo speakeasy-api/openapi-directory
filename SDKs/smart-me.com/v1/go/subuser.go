@@ -36,7 +36,7 @@ func newSubUser(defaultClient, securityClient HTTPClient, serverURL, language, s
 // SubUserDelete - Delete a subuser
 func (s *subUser) SubUserDelete(ctx context.Context, request operations.SubUserDeleteRequest) (*operations.SubUserDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -71,7 +71,7 @@ func (s *subUser) SubUserDelete(ctx context.Context, request operations.SubUserD
 // SubUserGet - Get a sub user. The user must be assigend to the user that makes this call.
 func (s *subUser) SubUserGet(ctx context.Context, request operations.SubUserGetRequest) (*operations.SubUserGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *subUser) SubUserGet(ctx context.Context, request operations.SubUserGetR
 // SubUserPostForm - Creates or updates a subuser.
 //
 //	To create a new user set no ID (empty)
-func (s *subUser) SubUserPostForm(ctx context.Context, request operations.SubUserPostFormRequest) (*operations.SubUserPostFormResponse, error) {
+func (s *subUser) SubUserPostForm(ctx context.Context, request shared.SubUserData) (*operations.SubUserPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/SubUser"
 
@@ -183,7 +183,7 @@ func (s *subUser) SubUserPostForm(ctx context.Context, request operations.SubUse
 // SubUserPostJSON - Creates or updates a subuser.
 //
 //	To create a new user set no ID (empty)
-func (s *subUser) SubUserPostJSON(ctx context.Context, request operations.SubUserPostJSONRequest) (*operations.SubUserPostJSONResponse, error) {
+func (s *subUser) SubUserPostJSON(ctx context.Context, request shared.SubUserData) (*operations.SubUserPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/SubUser"
 
@@ -230,7 +230,7 @@ func (s *subUser) SubUserPostJSON(ctx context.Context, request operations.SubUse
 // SubUserPostRaw - Creates or updates a subuser.
 //
 //	To create a new user set no ID (empty)
-func (s *subUser) SubUserPostRaw(ctx context.Context, request operations.SubUserPostRawRequest) (*operations.SubUserPostRawResponse, error) {
+func (s *subUser) SubUserPostRaw(ctx context.Context, request []byte) (*operations.SubUserPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/SubUser"
 

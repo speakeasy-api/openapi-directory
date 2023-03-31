@@ -32,11 +32,11 @@ func newPools(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // ReplicapoolPoolsDelete - Deletes a replica pool.
-func (s *pools) ReplicapoolPoolsDelete(ctx context.Context, request operations.ReplicapoolPoolsDeleteRequest) (*operations.ReplicapoolPoolsDeleteResponse, error) {
+func (s *pools) ReplicapoolPoolsDelete(ctx context.Context, request operations.ReplicapoolPoolsDeleteRequest, security operations.ReplicapoolPoolsDeleteSecurity) (*operations.ReplicapoolPoolsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolsDeleteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *pools) ReplicapoolPoolsDelete(ctx context.Context, request operations.R
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,20 +78,20 @@ func (s *pools) ReplicapoolPoolsDelete(ctx context.Context, request operations.R
 }
 
 // ReplicapoolPoolsGet - Gets information about a single replica pool.
-func (s *pools) ReplicapoolPoolsGet(ctx context.Context, request operations.ReplicapoolPoolsGetRequest) (*operations.ReplicapoolPoolsGetResponse, error) {
+func (s *pools) ReplicapoolPoolsGet(ctx context.Context, request operations.ReplicapoolPoolsGetRequest, security operations.ReplicapoolPoolsGetSecurity) (*operations.ReplicapoolPoolsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,11 +126,11 @@ func (s *pools) ReplicapoolPoolsGet(ctx context.Context, request operations.Repl
 }
 
 // ReplicapoolPoolsInsert - Inserts a new replica pool.
-func (s *pools) ReplicapoolPoolsInsert(ctx context.Context, request operations.ReplicapoolPoolsInsertRequest) (*operations.ReplicapoolPoolsInsertResponse, error) {
+func (s *pools) ReplicapoolPoolsInsert(ctx context.Context, request operations.ReplicapoolPoolsInsertRequest, security operations.ReplicapoolPoolsInsertSecurity) (*operations.ReplicapoolPoolsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Pool", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -142,11 +142,11 @@ func (s *pools) ReplicapoolPoolsInsert(ctx context.Context, request operations.R
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -181,20 +181,20 @@ func (s *pools) ReplicapoolPoolsInsert(ctx context.Context, request operations.R
 }
 
 // ReplicapoolPoolsList - List all replica pools.
-func (s *pools) ReplicapoolPoolsList(ctx context.Context, request operations.ReplicapoolPoolsListRequest) (*operations.ReplicapoolPoolsListResponse, error) {
+func (s *pools) ReplicapoolPoolsList(ctx context.Context, request operations.ReplicapoolPoolsListRequest, security operations.ReplicapoolPoolsListSecurity) (*operations.ReplicapoolPoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,20 +229,20 @@ func (s *pools) ReplicapoolPoolsList(ctx context.Context, request operations.Rep
 }
 
 // ReplicapoolPoolsResize - Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
-func (s *pools) ReplicapoolPoolsResize(ctx context.Context, request operations.ReplicapoolPoolsResizeRequest) (*operations.ReplicapoolPoolsResizeResponse, error) {
+func (s *pools) ReplicapoolPoolsResize(ctx context.Context, request operations.ReplicapoolPoolsResizeRequest, security operations.ReplicapoolPoolsResizeSecurity) (*operations.ReplicapoolPoolsResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/resize", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/resize", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,11 +277,11 @@ func (s *pools) ReplicapoolPoolsResize(ctx context.Context, request operations.R
 }
 
 // ReplicapoolPoolsUpdatetemplate - Update the template used by the pool.
-func (s *pools) ReplicapoolPoolsUpdatetemplate(ctx context.Context, request operations.ReplicapoolPoolsUpdatetemplateRequest) (*operations.ReplicapoolPoolsUpdatetemplateResponse, error) {
+func (s *pools) ReplicapoolPoolsUpdatetemplate(ctx context.Context, request operations.ReplicapoolPoolsUpdatetemplateRequest, security operations.ReplicapoolPoolsUpdatetemplateSecurity) (*operations.ReplicapoolPoolsUpdatetemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/updateTemplate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/updateTemplate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Template", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -293,11 +293,11 @@ func (s *pools) ReplicapoolPoolsUpdatetemplate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

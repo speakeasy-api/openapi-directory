@@ -37,7 +37,7 @@ func newLicenses(defaultClient, securityClient HTTPClient, serverURL, language, 
 // https://docs.github.com/enterprise-server@3.5/rest/reference/licenses#get-a-license - API method documentation
 func (s *licenses) LicensesGet(ctx context.Context, request operations.LicensesGetRequest) (*operations.LicensesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licenses/{license}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/licenses/{license}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *licenses) LicensesGetAllCommonlyUsed(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -148,7 +148,7 @@ func (s *licenses) LicensesGetAllCommonlyUsed(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@3.5/rest/reference/licenses/#get-the-license-for-a-repository - API method documentation
 func (s *licenses) LicensesGetForRepo(ctx context.Context, request operations.LicensesGetForRepoRequest) (*operations.LicensesGetForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/license", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/license", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

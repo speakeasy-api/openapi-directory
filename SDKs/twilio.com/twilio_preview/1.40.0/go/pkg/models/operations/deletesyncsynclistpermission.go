@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteSyncSyncListPermissionServerList = []string{
@@ -12,21 +11,16 @@ var DeleteSyncSyncListPermissionServerList = []string{
 }
 
 type DeleteSyncSyncListPermissionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteSyncSyncListPermissionPathParams struct {
+type DeleteSyncSyncListPermissionRequest struct {
 	// Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
 	Identity string `pathParam:"style=simple,explode=false,name=Identity"`
 	// Identifier of the Sync List. Either a SID or a unique name.
 	ListSid    string `pathParam:"style=simple,explode=false,name=ListSid"`
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type DeleteSyncSyncListPermissionRequest struct {
-	PathParams DeleteSyncSyncListPermissionPathParams
-	Security   DeleteSyncSyncListPermissionSecurity
-	ServerURL  *string
 }
 
 type DeleteSyncSyncListPermissionResponse struct {

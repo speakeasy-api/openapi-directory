@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContacts2PathParams struct {
+type UpdateContacts2Request struct {
+	// Updated Client Contacts for a project.
+	SmartContactsDTO shared.SmartContactsDTO `request:"mediaType=application/json"`
 	// project's internal identifier
 	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateContacts2Request struct {
-	PathParams UpdateContacts2PathParams
-	// Updated Client Contacts for a project.
-	Request shared.SmartContactsDTO `request:"mediaType=application/json"`
 }
 
 type UpdateContacts2Response struct {

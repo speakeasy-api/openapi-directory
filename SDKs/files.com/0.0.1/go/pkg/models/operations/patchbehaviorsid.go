@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchBehaviorsIDPathParams struct {
-	// Behavior ID.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PatchBehaviorsIDRequestBodyAttachmentFile struct {
 	AttachmentFile string `multipartForm:"name=attachment_file"`
 	Content        []byte `multipartForm:"content"`
@@ -35,8 +30,9 @@ type PatchBehaviorsIDRequestBody struct {
 }
 
 type PatchBehaviorsIDRequest struct {
-	PathParams PatchBehaviorsIDPathParams
-	Request    *PatchBehaviorsIDRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PatchBehaviorsIDRequestBody `request:"mediaType=multipart/form-data"`
+	// Behavior ID.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchBehaviorsIDResponse struct {

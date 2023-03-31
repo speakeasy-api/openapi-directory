@@ -44,7 +44,7 @@ func (e *PostCreatePathwayFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostCreatePathwayQueryParams struct {
+type PostCreatePathwayRequest struct {
 	// The authentication info
 	Auth   string                       `queryParam:"style=form,explode=true,name=auth"`
 	Format *PostCreatePathwayFormatEnum `queryParam:"style=form,explode=true,name=format"`
@@ -52,10 +52,6 @@ type PostCreatePathwayQueryParams struct {
 	Gpml string `queryParam:"style=form,explode=true,name=gpml"`
 	// The user name
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type PostCreatePathwayRequest struct {
-	QueryParams PostCreatePathwayQueryParams
 }
 
 type PostCreatePathwayResponse struct {

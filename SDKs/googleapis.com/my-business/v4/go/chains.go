@@ -35,14 +35,14 @@ func newChains(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // MybusinessChainsGet - Gets the specified chain. Returns `NOT_FOUND` if the chain does not exist.
 func (s *chains) MybusinessChainsGet(ctx context.Context, request operations.MybusinessChainsGetRequest) (*operations.MybusinessChainsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *chains) MybusinessChainsSearch(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -99,10 +99,6 @@ type PostV2PersonUpsertsJSONRequestBody struct {
 	WorkState *string `form:"name=work_state"`
 }
 
-type PostV2PersonUpsertsJSONRequest struct {
-	Request *PostV2PersonUpsertsJSONRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PostV2PersonUpsertsJSONResponse struct {
 	Body        []byte
 	ContentType string

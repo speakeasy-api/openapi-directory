@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostStringsRequest struct {
-	Request *shared.DeprecatedStringTranslationContent `request:"mediaType=application/json"`
-}
-
 type PostStringsResponse struct {
 	ContentType string
 	// Machine Translated Strings in JSON

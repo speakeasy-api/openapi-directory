@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteRequestsIDPathParams struct {
+type DeleteRequestsIDRequest struct {
 	// Request ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteRequestsIDRequest struct {
-	PathParams DeleteRequestsIDPathParams
 }
 
 type DeleteRequestsIDResponse struct {

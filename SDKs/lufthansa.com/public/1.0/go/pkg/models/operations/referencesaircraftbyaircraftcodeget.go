@@ -4,35 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReferencesAircraftByAircraftCodeGetSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReferencesAircraftByAircraftCodeGetPathParams struct {
+type ReferencesAircraftByAircraftCodeGetRequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// 3-character IATA aircraft code
 	AircraftCode string `pathParam:"style=simple,explode=false,name=aircraftCode"`
-}
-
-type ReferencesAircraftByAircraftCodeGetQueryParams struct {
 	// Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// Number of records skipped. Defaults to 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ReferencesAircraftByAircraftCodeGetHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type ReferencesAircraftByAircraftCodeGetRequest struct {
-	PathParams  ReferencesAircraftByAircraftCodeGetPathParams
-	QueryParams ReferencesAircraftByAircraftCodeGetQueryParams
-	Headers     ReferencesAircraftByAircraftCodeGetHeaders
-	Security    ReferencesAircraftByAircraftCodeGetSecurity
 }
 
 type ReferencesAircraftByAircraftCodeGetResponse struct {

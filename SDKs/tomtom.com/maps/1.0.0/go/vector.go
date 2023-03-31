@@ -34,14 +34,14 @@ func newVector(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // The Maps API Vector Service delivers vector tiles, which are representations of square sections of map data.
 func (s *vector) GetMapVersionNumberTileLayerStyleZoomXYPbf(ctx context.Context, request operations.GetMapVersionNumberTileLayerStyleZoomXYPbfRequest) (*operations.GetMapVersionNumberTileLayerStyleZoomXYPbfResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.pbf", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.pbf", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -12,22 +12,17 @@ var FetchSipIPAddressServerList = []string{
 }
 
 type FetchSipIPAddressSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchSipIPAddressPathParams struct {
+type FetchSipIPAddressRequest struct {
 	// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The IpAccessControlList Sid that identifies the IpAddress resources to fetch.
 	IPAccessControlListSid string `pathParam:"style=simple,explode=false,name=IpAccessControlListSid"`
 	// A 34 character string that uniquely identifies the IpAddress resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchSipIPAddressRequest struct {
-	PathParams FetchSipIPAddressPathParams
-	Security   FetchSipIPAddressSecurity
-	ServerURL  *string
 }
 
 type FetchSipIPAddressResponse struct {

@@ -4,18 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ImGroupMembersCreateSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type ImGroupMembersCreatePathParams struct {
-	// The group ID.<br>
-	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ImGroupMembersCreateApplicationJSONMembers struct {
@@ -31,9 +24,10 @@ type ImGroupMembersCreateApplicationJSON struct {
 }
 
 type ImGroupMembersCreateRequest struct {
-	PathParams ImGroupMembersCreatePathParams
-	Request    ImGroupMembersCreateApplicationJSON `request:"mediaType=application/json"`
-	Security   ImGroupMembersCreateSecurity
+	RequestBody ImGroupMembersCreateApplicationJSON `request:"mediaType=application/json"`
+	// The group ID.<br>
+	// Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // ImGroupMembersCreate201ApplicationXML - **HTTP Status Code:** `201` <br>

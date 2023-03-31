@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UpdateAGroupMemberSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
-}
-
-type UpdateAGroupMemberPathParams struct {
-	// Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.<br> To change a member's primary group, provide the groupId of the member's current primary group as the value of this field.<br> To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-	// Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API.
-	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // UpdateAGroupMemberApplicationJSONActionEnum - Specify the type of action to be performed:<br><br>
@@ -61,9 +53,11 @@ type UpdateAGroupMemberApplicationJSON struct {
 }
 
 type UpdateAGroupMemberRequest struct {
-	PathParams UpdateAGroupMemberPathParams
-	Request    *UpdateAGroupMemberApplicationJSON `request:"mediaType=application/json"`
-	Security   UpdateAGroupMemberSecurity
+	RequestBody *UpdateAGroupMemberApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.<br> To change a member's primary group, provide the groupId of the member's current primary group as the value of this field.<br> To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	// Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API.
+	MemberID string `pathParam:"style=simple,explode=false,name=memberId"`
 }
 
 type UpdateAGroupMemberResponse struct {

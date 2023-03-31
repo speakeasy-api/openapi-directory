@@ -8,23 +8,15 @@ import (
 	"time"
 )
 
-type GetSchedulesScheduleFSubIDPathParams struct {
-	SubID string `pathParam:"style=simple,explode=false,name=sub_id"`
-}
-
-type GetSchedulesScheduleFSubIDQueryParams struct {
+type GetSchedulesScheduleFSubIDRequest struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// For paginating through results, starting at page 1
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results returned per page. Defaults to 20.
-	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetSchedulesScheduleFSubIDRequest struct {
-	PathParams  GetSchedulesScheduleFSubIDPathParams
-	QueryParams GetSchedulesScheduleFSubIDQueryParams
+	PerPage *int   `queryParam:"style=form,explode=true,name=per_page"`
+	SubID   string `pathParam:"style=simple,explode=false,name=sub_id"`
 }
 
 type GetSchedulesScheduleFSubIDDefaultApplicationJSONResults struct {

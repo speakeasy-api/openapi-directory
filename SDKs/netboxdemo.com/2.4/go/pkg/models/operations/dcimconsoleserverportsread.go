@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimConsoleServerPortsReadPathParams struct {
+type DcimConsoleServerPortsReadRequest struct {
 	// A unique integer value identifying this console server port.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimConsoleServerPortsReadRequest struct {
-	PathParams DcimConsoleServerPortsReadPathParams
 }
 
 type DcimConsoleServerPortsReadResponse struct {

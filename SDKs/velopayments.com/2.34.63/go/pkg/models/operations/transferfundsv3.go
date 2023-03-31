@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TransferFundsV3PathParams struct {
+type TransferFundsV3Request struct {
+	// Body
+	TransferRequestV3 shared.TransferRequestV3 `request:"mediaType=application/json"`
 	// The 'from' source account id, which will be debited
 	SourceAccountID string `pathParam:"style=simple,explode=false,name=sourceAccountId"`
-}
-
-type TransferFundsV3Request struct {
-	PathParams TransferFundsV3PathParams
-	// Body
-	Request shared.TransferRequestV3 `request:"mediaType=application/json"`
 }
 
 type TransferFundsV3Response struct {

@@ -4,21 +4,20 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAllAccountsRequest(
-    security=operations.GetAllAccountsSecurity(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
-    ),
-    query_params=operations.GetAllAccountsQueryParams(
-        page_number=2026501706608884453,
-        page_size=8487117128927338036,
-        provider="whatsapp",
-    ),
+    page_number=1,
+    page_size=1,
+    provider="viber_service_msg",
 )
     
-res = s.account.get_all_accounts(req)
+res = s.account.get_all_accounts(req, operations.GetAllAccountsSecurity(
+    basic_auth=shared.SchemeBasicAuth(
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
+    ),
+))
 
 if res.get_all_accounts_200_application_json_object is not None:
     # handle response

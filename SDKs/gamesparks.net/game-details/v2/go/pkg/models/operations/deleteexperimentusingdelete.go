@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DELETEExperimentUsingDELETEPathParams struct {
+type DELETEExperimentUsingDELETERequest struct {
 	// apiKey
 	APIKey string `pathParam:"style=simple,explode=false,name=apiKey"`
 	// id
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DELETEExperimentUsingDELETERequest struct {
-	PathParams DELETEExperimentUsingDELETEPathParams
 }
 
 type DELETEExperimentUsingDELETEResponse struct {

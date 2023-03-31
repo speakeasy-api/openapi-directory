@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIChangeShippingDetailsFormQueryParams struct {
-	OrderID int `queryParam:"style=form,explode=true,name=orderId"`
-}
-
-type OrderAPIChangeShippingDetailsFormHeaders struct {
-	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
-	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
 type OrderAPIChangeShippingDetailsFormRequest struct {
-	QueryParams OrderAPIChangeShippingDetailsFormQueryParams
-	Headers     OrderAPIChangeShippingDetailsFormHeaders
-	Request     shared.OrderShippingDetailsAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	OrderShippingDetailsAPIModel shared.OrderShippingDetailsAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
+	OrderID                      int                                 `queryParam:"style=form,explode=true,name=orderId"`
+	XAuthKey                     string                              `header:"style=simple,explode=false,name=x-auth-key"`
+	XAuthSecret                  string                              `header:"style=simple,explode=false,name=x-auth-secret"`
 }
 
 type OrderAPIChangeShippingDetailsFormResponse struct {

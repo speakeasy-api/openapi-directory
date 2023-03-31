@@ -8,18 +8,14 @@ import (
 )
 
 type PatchGlobalJwtVerifierSecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchGlobalJwtVerifierPathParams struct {
-	// The jwt verifier id
-	VerifierID string `pathParam:"style=simple,explode=false,name=verifierId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PatchGlobalJwtVerifierRequest struct {
-	PathParams PatchGlobalJwtVerifierPathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchGlobalJwtVerifierSecurity
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
+	// The jwt verifier id
+	VerifierID string `pathParam:"style=simple,explode=false,name=verifierId"`
 }
 
 type PatchGlobalJwtVerifierResponse struct {

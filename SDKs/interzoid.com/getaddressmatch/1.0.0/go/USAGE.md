@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetaddressmatchRequest{
-        QueryParams: operations.GetaddressmatchQueryParams{
-            Address: "5786 Little Streets",
-            License: "vel",
-        },
+        Address: "5786 Little Streets",
+        License: "vel",
     }
 
     ctx := context.Background()

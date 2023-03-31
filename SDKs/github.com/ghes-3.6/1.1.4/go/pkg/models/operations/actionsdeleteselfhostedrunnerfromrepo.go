@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteSelfHostedRunnerFromRepoPathParams struct {
+type ActionsDeleteSelfHostedRunnerFromRepoRequest struct {
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 	// Unique identifier of the self-hosted runner.
 	RunnerID int64 `pathParam:"style=simple,explode=false,name=runner_id"`
-}
-
-type ActionsDeleteSelfHostedRunnerFromRepoRequest struct {
-	PathParams ActionsDeleteSelfHostedRunnerFromRepoPathParams
 }
 
 type ActionsDeleteSelfHostedRunnerFromRepoResponse struct {

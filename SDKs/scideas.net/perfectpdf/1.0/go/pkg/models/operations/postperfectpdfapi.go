@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostPerfectpdfAPIRequest struct {
-	Request shared.PerfectpdfAPIBody `request:"mediaType=application/json"`
-}
 
 type PostPerfectpdfAPIResponse struct {
 	Body        []byte

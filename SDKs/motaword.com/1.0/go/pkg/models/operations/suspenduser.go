@@ -8,18 +8,13 @@ import (
 )
 
 type SuspendUserSecurity struct {
-	MwoAuth shared.SchemeMwoAuth `security:"scheme,type=oauth2"`
-}
-
-type SuspendUserPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
+	MwoAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SuspendUserRequest struct {
-	PathParams SuspendUserPathParams
-	Request    *shared.SuspendUserRequest `request:"mediaType=application/json"`
-	Security   SuspendUserSecurity
+	SuspendUserRequest *shared.SuspendUserRequest `request:"mediaType=application/json"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type SuspendUserResponse struct {

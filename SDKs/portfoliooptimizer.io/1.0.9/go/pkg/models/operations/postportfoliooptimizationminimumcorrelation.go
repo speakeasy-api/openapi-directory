@@ -14,10 +14,6 @@ type PostPortfolioOptimizationMinimumCorrelationRequestBody struct {
 	AssetsVolatilities []float64 `json:"assetsVolatilities"`
 }
 
-type PostPortfolioOptimizationMinimumCorrelationRequest struct {
-	Request PostPortfolioOptimizationMinimumCorrelationRequestBody `request:"mediaType=application/json"`
-}
-
 // PostPortfolioOptimizationMinimumCorrelation200ApplicationJSON - OK
 type PostPortfolioOptimizationMinimumCorrelation200ApplicationJSON struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage

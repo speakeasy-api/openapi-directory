@@ -37,9 +37,9 @@ func newQuotesClassic(defaultClient, securityClient HTTPClient, serverURL, langu
 // Creates a new language combination for a given quote without creating a task.
 func (s *quotesClassic) CreateLanguageCombination1(ctx context.Context, request operations.CreateLanguageCombination1Request) (*operations.CreateLanguageCombination1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/languageCombinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/languageCombinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommonLanguageCombinationDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -92,9 +92,9 @@ func (s *quotesClassic) CreateLanguageCombination1(ctx context.Context, request 
 // Adds a payable.
 func (s *quotesClassic) CreatePayable1(ctx context.Context, request operations.CreatePayable1Request) (*operations.CreatePayable1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/payables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/payables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -147,9 +147,9 @@ func (s *quotesClassic) CreatePayable1(ctx context.Context, request operations.C
 // Adds a receivable.
 func (s *quotesClassic) CreateReceivable1(ctx context.Context, request operations.CreateReceivable1Request) (*operations.CreateReceivable1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/receivables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/receivables", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableCreateDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,9 +202,9 @@ func (s *quotesClassic) CreateReceivable1(ctx context.Context, request operation
 // Creates a new task for a given quote. Required fields are presented in the example.
 func (s *quotesClassic) CreateTask1(ctx context.Context, request operations.CreateTask1Request) (*operations.CreateTask1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/tasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *quotesClassic) CreateTask1(ctx context.Context, request operations.Crea
 // Deletes a payable.
 func (s *quotesClassic) DeletePayable1(ctx context.Context, request operations.DeletePayable1Request) (*operations.DeletePayable1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/payables/{payableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/payables/{payableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -293,7 +293,7 @@ func (s *quotesClassic) DeletePayable1(ctx context.Context, request operations.D
 // Deletes a receivable.
 func (s *quotesClassic) DeleteReceivable1(ctx context.Context, request operations.DeleteReceivable1Request) (*operations.DeleteReceivable1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/receivables/{receivableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/receivables/{receivableId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *quotesClassic) DeleteReceivable1(ctx context.Context, request operation
 // Removes a quote.
 func (s *quotesClassic) Delete13(ctx context.Context, request operations.Delete13Request) (*operations.Delete13Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *quotesClassic) GetAllIds7(ctx context.Context, request operations.GetAl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -414,14 +414,14 @@ func (s *quotesClassic) GetAllIds7(ctx context.Context, request operations.GetAl
 // Returns quote details. If the specified quote ID refers to Smart Quote, 400 Bad Request is returned instead.
 func (s *quotesClassic) GetByID8(ctx context.Context, request operations.GetByID8Request) (*operations.GetByID8Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -463,7 +463,7 @@ func (s *quotesClassic) GetByID8(ctx context.Context, request operations.GetByID
 // Returns custom fields of a given quote.
 func (s *quotesClassic) GetCustomFields6(ctx context.Context, request operations.GetCustomFields6Request) (*operations.GetCustomFields6Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/customFields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -508,7 +508,7 @@ func (s *quotesClassic) GetCustomFields6(ctx context.Context, request operations
 // Returns dates of a given quote.
 func (s *quotesClassic) GetDates2(ctx context.Context, request operations.GetDates2Request) (*operations.GetDates2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/dates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/dates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -553,7 +553,7 @@ func (s *quotesClassic) GetDates2(ctx context.Context, request operations.GetDat
 // Returns finance of a given quote.
 func (s *quotesClassic) GetFinance1(ctx context.Context, request operations.GetFinance1Request) (*operations.GetFinance1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -598,7 +598,7 @@ func (s *quotesClassic) GetFinance1(ctx context.Context, request operations.GetF
 // Returns instructions of a given quote.
 func (s *quotesClassic) GetInstructions1(ctx context.Context, request operations.GetInstructions1Request) (*operations.GetInstructions1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/instructions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -643,7 +643,7 @@ func (s *quotesClassic) GetInstructions1(ctx context.Context, request operations
 // Sends a quote for customer confirmation. Quote status is changed to SENT and a document is sent to the customer.
 func (s *quotesClassic) Send1(ctx context.Context, request operations.Send1Request) (*operations.Send1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/confirmation/send", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/confirmation/send", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -679,7 +679,7 @@ func (s *quotesClassic) Send1(ctx context.Context, request operations.Send1Reque
 // Starts a quote.
 func (s *quotesClassic) Start(ctx context.Context, request operations.StartRequest) (*operations.StartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -715,9 +715,9 @@ func (s *quotesClassic) Start(ctx context.Context, request operations.StartReque
 // Updates custom fields of a given quote.
 func (s *quotesClassic) UpdateCustomFields4(ctx context.Context, request operations.UpdateCustomFields4Request) (*operations.UpdateCustomFields4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/customFields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/customFields", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -770,9 +770,9 @@ func (s *quotesClassic) UpdateCustomFields4(ctx context.Context, request operati
 // Updates instructions of a given quote.
 func (s *quotesClassic) UpdateInstructions2(ctx context.Context, request operations.UpdateInstructions2Request) (*operations.UpdateInstructions2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/instructions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/instructions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstructionsDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -825,9 +825,9 @@ func (s *quotesClassic) UpdateInstructions2(ctx context.Context, request operati
 // Updates a payable.
 func (s *quotesClassic) UpdatePayable1(ctx context.Context, request operations.UpdatePayable1Request) (*operations.UpdatePayable1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/payables/{payableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/payables/{payableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -880,9 +880,9 @@ func (s *quotesClassic) UpdatePayable1(ctx context.Context, request operations.U
 // Updates a receivable.
 func (s *quotesClassic) UpdateReceivable1(ctx context.Context, request operations.UpdateReceivable1Request) (*operations.UpdateReceivable1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/receivables/{receivableId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quoteId}/finance/receivables/{receivableId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableDTO", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

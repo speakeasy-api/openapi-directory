@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1LocationsQueryParams struct {
+type GetConsumerV1LocationsRequest struct {
 	// Frienldy Id of location
 	FriendlyID *string `queryParam:"style=form,explode=true,name=friendlyId"`
 	// Don't include the Primary Location
@@ -28,10 +28,6 @@ type GetConsumerV1LocationsQueryParams struct {
 	ServiceID *string `queryParam:"style=form,explode=true,name=serviceId"`
 	// Distance either imperial(miles), metric(kilometers)
 	Units *string `queryParam:"style=form,explode=true,name=units"`
-}
-
-type GetConsumerV1LocationsRequest struct {
-	QueryParams GetConsumerV1LocationsQueryParams
 }
 
 type GetConsumerV1LocationsResponse struct {

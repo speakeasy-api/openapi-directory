@@ -34,11 +34,11 @@ func newPayrollAu(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // CreateEmployee - Creates a payroll employee
-func (s *payrollAu) CreateEmployee(ctx context.Context, request operations.CreateEmployeeRequest) (*operations.CreateEmployeeResponse, error) {
+func (s *payrollAu) CreateEmployee(ctx context.Context, request operations.CreateEmployeeRequest, security operations.CreateEmployeeSecurity) (*operations.CreateEmployeeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Employees"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *payrollAu) CreateEmployee(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,11 +91,11 @@ func (s *payrollAu) CreateEmployee(ctx context.Context, request operations.Creat
 }
 
 // CreateLeaveApplication - Creates a leave application
-func (s *payrollAu) CreateLeaveApplication(ctx context.Context, request operations.CreateLeaveApplicationRequest) (*operations.CreateLeaveApplicationResponse, error) {
+func (s *payrollAu) CreateLeaveApplication(ctx context.Context, request operations.CreateLeaveApplicationRequest, security operations.CreateLeaveApplicationSecurity) (*operations.CreateLeaveApplicationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/LeaveApplications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -110,9 +110,9 @@ func (s *payrollAu) CreateLeaveApplication(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,11 +148,11 @@ func (s *payrollAu) CreateLeaveApplication(ctx context.Context, request operatio
 }
 
 // CreatePayItem - Creates a pay item
-func (s *payrollAu) CreatePayItem(ctx context.Context, request operations.CreatePayItemRequest) (*operations.CreatePayItemResponse, error) {
+func (s *payrollAu) CreatePayItem(ctx context.Context, request operations.CreatePayItemRequest, security operations.CreatePayItemSecurity) (*operations.CreatePayItemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PayItems"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -167,9 +167,9 @@ func (s *payrollAu) CreatePayItem(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -205,11 +205,11 @@ func (s *payrollAu) CreatePayItem(ctx context.Context, request operations.Create
 }
 
 // CreatePayRun - Creates a pay run
-func (s *payrollAu) CreatePayRun(ctx context.Context, request operations.CreatePayRunRequest) (*operations.CreatePayRunResponse, error) {
+func (s *payrollAu) CreatePayRun(ctx context.Context, request operations.CreatePayRunRequest, security operations.CreatePayRunSecurity) (*operations.CreatePayRunResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PayRuns"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -224,9 +224,9 @@ func (s *payrollAu) CreatePayRun(ctx context.Context, request operations.CreateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,11 +262,11 @@ func (s *payrollAu) CreatePayRun(ctx context.Context, request operations.CreateP
 }
 
 // CreatePayrollCalendar - Creates a Payroll Calendar
-func (s *payrollAu) CreatePayrollCalendar(ctx context.Context, request operations.CreatePayrollCalendarRequest) (*operations.CreatePayrollCalendarResponse, error) {
+func (s *payrollAu) CreatePayrollCalendar(ctx context.Context, request operations.CreatePayrollCalendarRequest, security operations.CreatePayrollCalendarSecurity) (*operations.CreatePayrollCalendarResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PayrollCalendars"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -281,9 +281,9 @@ func (s *payrollAu) CreatePayrollCalendar(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -319,11 +319,11 @@ func (s *payrollAu) CreatePayrollCalendar(ctx context.Context, request operation
 }
 
 // CreateSuperfund - Creates a superfund
-func (s *payrollAu) CreateSuperfund(ctx context.Context, request operations.CreateSuperfundRequest) (*operations.CreateSuperfundResponse, error) {
+func (s *payrollAu) CreateSuperfund(ctx context.Context, request operations.CreateSuperfundRequest, security operations.CreateSuperfundSecurity) (*operations.CreateSuperfundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Superfunds"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,9 +338,9 @@ func (s *payrollAu) CreateSuperfund(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -376,11 +376,11 @@ func (s *payrollAu) CreateSuperfund(ctx context.Context, request operations.Crea
 }
 
 // CreateTimesheet - Creates a timesheet
-func (s *payrollAu) CreateTimesheet(ctx context.Context, request operations.CreateTimesheetRequest) (*operations.CreateTimesheetResponse, error) {
+func (s *payrollAu) CreateTimesheet(ctx context.Context, request operations.CreateTimesheetRequest, security operations.CreateTimesheetSecurity) (*operations.CreateTimesheetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Timesheets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -395,9 +395,9 @@ func (s *payrollAu) CreateTimesheet(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -433,18 +433,18 @@ func (s *payrollAu) CreateTimesheet(ctx context.Context, request operations.Crea
 }
 
 // GetEmployee - Retrieves an employee's detail by unique employee id
-func (s *payrollAu) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest) (*operations.GetEmployeeResponse, error) {
+func (s *payrollAu) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest, security operations.GetEmployeeSecurity) (*operations.GetEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -479,7 +479,7 @@ func (s *payrollAu) GetEmployee(ctx context.Context, request operations.GetEmplo
 }
 
 // GetEmployees - Searches payroll employees
-func (s *payrollAu) GetEmployees(ctx context.Context, request operations.GetEmployeesRequest) (*operations.GetEmployeesResponse, error) {
+func (s *payrollAu) GetEmployees(ctx context.Context, request operations.GetEmployeesRequest, security operations.GetEmployeesSecurity) (*operations.GetEmployeesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Employees"
 
@@ -488,13 +488,13 @@ func (s *payrollAu) GetEmployees(ctx context.Context, request operations.GetEmpl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -539,18 +539,18 @@ func (s *payrollAu) GetEmployees(ctx context.Context, request operations.GetEmpl
 }
 
 // GetLeaveApplication - Retrieves a leave application by a unique leave application id
-func (s *payrollAu) GetLeaveApplication(ctx context.Context, request operations.GetLeaveApplicationRequest) (*operations.GetLeaveApplicationResponse, error) {
+func (s *payrollAu) GetLeaveApplication(ctx context.Context, request operations.GetLeaveApplicationRequest, security operations.GetLeaveApplicationSecurity) (*operations.GetLeaveApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -585,7 +585,7 @@ func (s *payrollAu) GetLeaveApplication(ctx context.Context, request operations.
 }
 
 // GetLeaveApplications - Retrieves leave applications
-func (s *payrollAu) GetLeaveApplications(ctx context.Context, request operations.GetLeaveApplicationsRequest) (*operations.GetLeaveApplicationsResponse, error) {
+func (s *payrollAu) GetLeaveApplications(ctx context.Context, request operations.GetLeaveApplicationsRequest, security operations.GetLeaveApplicationsSecurity) (*operations.GetLeaveApplicationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/LeaveApplications"
 
@@ -594,13 +594,13 @@ func (s *payrollAu) GetLeaveApplications(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -645,7 +645,7 @@ func (s *payrollAu) GetLeaveApplications(ctx context.Context, request operations
 }
 
 // GetPayItems - Retrieves pay items
-func (s *payrollAu) GetPayItems(ctx context.Context, request operations.GetPayItemsRequest) (*operations.GetPayItemsResponse, error) {
+func (s *payrollAu) GetPayItems(ctx context.Context, request operations.GetPayItemsRequest, security operations.GetPayItemsSecurity) (*operations.GetPayItemsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PayItems"
 
@@ -654,13 +654,13 @@ func (s *payrollAu) GetPayItems(ctx context.Context, request operations.GetPayIt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -705,18 +705,18 @@ func (s *payrollAu) GetPayItems(ctx context.Context, request operations.GetPayIt
 }
 
 // GetPayRun - Retrieves a pay run by using a unique pay run id
-func (s *payrollAu) GetPayRun(ctx context.Context, request operations.GetPayRunRequest) (*operations.GetPayRunResponse, error) {
+func (s *payrollAu) GetPayRun(ctx context.Context, request operations.GetPayRunRequest, security operations.GetPayRunSecurity) (*operations.GetPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -751,7 +751,7 @@ func (s *payrollAu) GetPayRun(ctx context.Context, request operations.GetPayRunR
 }
 
 // GetPayRuns - Retrieves pay runs
-func (s *payrollAu) GetPayRuns(ctx context.Context, request operations.GetPayRunsRequest) (*operations.GetPayRunsResponse, error) {
+func (s *payrollAu) GetPayRuns(ctx context.Context, request operations.GetPayRunsRequest, security operations.GetPayRunsSecurity) (*operations.GetPayRunsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PayRuns"
 
@@ -760,13 +760,13 @@ func (s *payrollAu) GetPayRuns(ctx context.Context, request operations.GetPayRun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -811,18 +811,18 @@ func (s *payrollAu) GetPayRuns(ctx context.Context, request operations.GetPayRun
 }
 
 // GetPayrollCalendar - Retrieves payroll calendar by using a unique payroll calendar ID
-func (s *payrollAu) GetPayrollCalendar(ctx context.Context, request operations.GetPayrollCalendarRequest) (*operations.GetPayrollCalendarResponse, error) {
+func (s *payrollAu) GetPayrollCalendar(ctx context.Context, request operations.GetPayrollCalendarRequest, security operations.GetPayrollCalendarSecurity) (*operations.GetPayrollCalendarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/PayrollCalendars/{PayrollCalendarID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/PayrollCalendars/{PayrollCalendarID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -867,7 +867,7 @@ func (s *payrollAu) GetPayrollCalendar(ctx context.Context, request operations.G
 }
 
 // GetPayrollCalendars - Retrieves payroll calendars
-func (s *payrollAu) GetPayrollCalendars(ctx context.Context, request operations.GetPayrollCalendarsRequest) (*operations.GetPayrollCalendarsResponse, error) {
+func (s *payrollAu) GetPayrollCalendars(ctx context.Context, request operations.GetPayrollCalendarsRequest, security operations.GetPayrollCalendarsSecurity) (*operations.GetPayrollCalendarsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PayrollCalendars"
 
@@ -876,13 +876,13 @@ func (s *payrollAu) GetPayrollCalendars(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -927,18 +927,18 @@ func (s *payrollAu) GetPayrollCalendars(ctx context.Context, request operations.
 }
 
 // GetPayslip - Retrieves for a payslip by a unique payslip id
-func (s *payrollAu) GetPayslip(ctx context.Context, request operations.GetPayslipRequest) (*operations.GetPayslipResponse, error) {
+func (s *payrollAu) GetPayslip(ctx context.Context, request operations.GetPayslipRequest, security operations.GetPayslipSecurity) (*operations.GetPayslipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -973,7 +973,7 @@ func (s *payrollAu) GetPayslip(ctx context.Context, request operations.GetPaysli
 }
 
 // GetSettings - Retrieves payroll settings
-func (s *payrollAu) GetSettings(ctx context.Context, request operations.GetSettingsRequest) (*operations.GetSettingsResponse, error) {
+func (s *payrollAu) GetSettings(ctx context.Context, request operations.GetSettingsRequest, security operations.GetSettingsSecurity) (*operations.GetSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Settings"
 
@@ -982,9 +982,9 @@ func (s *payrollAu) GetSettings(ctx context.Context, request operations.GetSetti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1019,18 +1019,18 @@ func (s *payrollAu) GetSettings(ctx context.Context, request operations.GetSetti
 }
 
 // GetSuperfund - Retrieves a superfund by using a unique superfund ID
-func (s *payrollAu) GetSuperfund(ctx context.Context, request operations.GetSuperfundRequest) (*operations.GetSuperfundResponse, error) {
+func (s *payrollAu) GetSuperfund(ctx context.Context, request operations.GetSuperfundRequest, security operations.GetSuperfundSecurity) (*operations.GetSuperfundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1065,7 +1065,7 @@ func (s *payrollAu) GetSuperfund(ctx context.Context, request operations.GetSupe
 }
 
 // GetSuperfundProducts - Retrieves superfund products
-func (s *payrollAu) GetSuperfundProducts(ctx context.Context, request operations.GetSuperfundProductsRequest) (*operations.GetSuperfundProductsResponse, error) {
+func (s *payrollAu) GetSuperfundProducts(ctx context.Context, request operations.GetSuperfundProductsRequest, security operations.GetSuperfundProductsSecurity) (*operations.GetSuperfundProductsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/SuperfundProducts"
 
@@ -1074,13 +1074,13 @@ func (s *payrollAu) GetSuperfundProducts(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1125,7 +1125,7 @@ func (s *payrollAu) GetSuperfundProducts(ctx context.Context, request operations
 }
 
 // GetSuperfunds - Retrieves superfunds
-func (s *payrollAu) GetSuperfunds(ctx context.Context, request operations.GetSuperfundsRequest) (*operations.GetSuperfundsResponse, error) {
+func (s *payrollAu) GetSuperfunds(ctx context.Context, request operations.GetSuperfundsRequest, security operations.GetSuperfundsSecurity) (*operations.GetSuperfundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Superfunds"
 
@@ -1134,13 +1134,13 @@ func (s *payrollAu) GetSuperfunds(ctx context.Context, request operations.GetSup
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1185,18 +1185,18 @@ func (s *payrollAu) GetSuperfunds(ctx context.Context, request operations.GetSup
 }
 
 // GetTimesheet - Retrieves a timesheet by using a unique timesheet id
-func (s *payrollAu) GetTimesheet(ctx context.Context, request operations.GetTimesheetRequest) (*operations.GetTimesheetResponse, error) {
+func (s *payrollAu) GetTimesheet(ctx context.Context, request operations.GetTimesheetRequest, security operations.GetTimesheetSecurity) (*operations.GetTimesheetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1231,7 +1231,7 @@ func (s *payrollAu) GetTimesheet(ctx context.Context, request operations.GetTime
 }
 
 // GetTimesheets - Retrieves timesheets
-func (s *payrollAu) GetTimesheets(ctx context.Context, request operations.GetTimesheetsRequest) (*operations.GetTimesheetsResponse, error) {
+func (s *payrollAu) GetTimesheets(ctx context.Context, request operations.GetTimesheetsRequest, security operations.GetTimesheetsSecurity) (*operations.GetTimesheetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Timesheets"
 
@@ -1240,13 +1240,13 @@ func (s *payrollAu) GetTimesheets(ctx context.Context, request operations.GetTim
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1292,11 +1292,11 @@ func (s *payrollAu) GetTimesheets(ctx context.Context, request operations.GetTim
 
 // UpdateEmployee - Updates an employee's detail
 // Update properties on a single employee
-func (s *payrollAu) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest) (*operations.UpdateEmployeeResponse, error) {
+func (s *payrollAu) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest, security operations.UpdateEmployeeSecurity) (*operations.UpdateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1308,9 +1308,9 @@ func (s *payrollAu) UpdateEmployee(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1345,11 +1345,11 @@ func (s *payrollAu) UpdateEmployee(ctx context.Context, request operations.Updat
 }
 
 // UpdateLeaveApplication - Updates a specific leave application
-func (s *payrollAu) UpdateLeaveApplication(ctx context.Context, request operations.UpdateLeaveApplicationRequest) (*operations.UpdateLeaveApplicationResponse, error) {
+func (s *payrollAu) UpdateLeaveApplication(ctx context.Context, request operations.UpdateLeaveApplicationRequest, security operations.UpdateLeaveApplicationSecurity) (*operations.UpdateLeaveApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1364,9 +1364,9 @@ func (s *payrollAu) UpdateLeaveApplication(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1403,11 +1403,11 @@ func (s *payrollAu) UpdateLeaveApplication(ctx context.Context, request operatio
 
 // UpdatePayRun - Updates a pay run
 // Update properties on a single PayRun
-func (s *payrollAu) UpdatePayRun(ctx context.Context, request operations.UpdatePayRunRequest) (*operations.UpdatePayRunResponse, error) {
+func (s *payrollAu) UpdatePayRun(ctx context.Context, request operations.UpdatePayRunRequest, security operations.UpdatePayRunSecurity) (*operations.UpdatePayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1419,9 +1419,9 @@ func (s *payrollAu) UpdatePayRun(ctx context.Context, request operations.UpdateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1457,11 +1457,11 @@ func (s *payrollAu) UpdatePayRun(ctx context.Context, request operations.UpdateP
 
 // UpdatePayslip - Updates a payslip
 // Update lines on a single payslips
-func (s *payrollAu) UpdatePayslip(ctx context.Context, request operations.UpdatePayslipRequest) (*operations.UpdatePayslipResponse, error) {
+func (s *payrollAu) UpdatePayslip(ctx context.Context, request operations.UpdatePayslipRequest, security operations.UpdatePayslipSecurity) (*operations.UpdatePayslipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1473,9 +1473,9 @@ func (s *payrollAu) UpdatePayslip(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1511,11 +1511,11 @@ func (s *payrollAu) UpdatePayslip(ctx context.Context, request operations.Update
 
 // UpdateSuperfund - Updates a superfund
 // Update properties on a single Superfund
-func (s *payrollAu) UpdateSuperfund(ctx context.Context, request operations.UpdateSuperfundRequest) (*operations.UpdateSuperfundResponse, error) {
+func (s *payrollAu) UpdateSuperfund(ctx context.Context, request operations.UpdateSuperfundRequest, security operations.UpdateSuperfundSecurity) (*operations.UpdateSuperfundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1527,9 +1527,9 @@ func (s *payrollAu) UpdateSuperfund(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1565,11 +1565,11 @@ func (s *payrollAu) UpdateSuperfund(ctx context.Context, request operations.Upda
 
 // UpdateTimesheet - Updates a timesheet
 // Update properties on a single timesheet
-func (s *payrollAu) UpdateTimesheet(ctx context.Context, request operations.UpdateTimesheetRequest) (*operations.UpdateTimesheetResponse, error) {
+func (s *payrollAu) UpdateTimesheet(ctx context.Context, request operations.UpdateTimesheetRequest, security operations.UpdateTimesheetSecurity) (*operations.UpdateTimesheetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1581,9 +1581,9 @@ func (s *payrollAu) UpdateTimesheet(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

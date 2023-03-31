@@ -84,7 +84,6 @@ pkg/models/operations/getteamsocialmedia.go
 pkg/models/operations/getteamyearsparticipated.go
 pkg/models/shared/apistatus.go
 pkg/models/shared/apistatusappversion.go
-pkg/models/shared/security.go
 pkg/models/shared/event.go
 pkg/models/shared/webcast.go
 pkg/models/shared/districtlist.go

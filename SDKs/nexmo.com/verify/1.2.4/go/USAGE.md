@@ -14,16 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.VerifyCheckRequest{
-        PathParams: operations.VerifyCheckPathParams{
-            Format: "xml",
-        },
-        Request: shared.CheckRequest{
+        CheckRequest: shared.CheckRequest{
             APIKey: "abcd1234",
             APISecret: "Sup3rS3cr3t!!",
             Code: "1234",
             IPAddress: "123.0.0.255",
             RequestID: "abcdef0123456789abcdef0123456789",
         },
+        Format: "xml",
     }
 
     ctx := context.Background()

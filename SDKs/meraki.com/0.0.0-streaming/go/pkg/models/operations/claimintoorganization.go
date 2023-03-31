@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type ClaimIntoOrganizationPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // ClaimIntoOrganizationRequestBodyLicensesModeEnum - Either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. This parameter is legacy and does not apply to organizations with per-device licensing enabled.
 type ClaimIntoOrganizationRequestBodyLicensesModeEnum string
 
@@ -53,8 +49,8 @@ type ClaimIntoOrganizationRequestBody struct {
 }
 
 type ClaimIntoOrganizationRequest struct {
-	PathParams ClaimIntoOrganizationPathParams
-	Request    *ClaimIntoOrganizationRequestBody `request:"mediaType=application/json"`
+	RequestBody    *ClaimIntoOrganizationRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                            `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type ClaimIntoOrganizationResponse struct {

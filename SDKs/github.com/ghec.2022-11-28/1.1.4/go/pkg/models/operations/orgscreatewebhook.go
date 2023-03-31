@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsCreateWebhookPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsCreateWebhookRequestBodyConfig - Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/enterprise-cloud@latest//rest/reference/orgs#create-hook-config-params).
 type OrgsCreateWebhookRequestBodyConfig struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
@@ -37,8 +32,9 @@ type OrgsCreateWebhookRequestBody struct {
 }
 
 type OrgsCreateWebhookRequest struct {
-	PathParams OrgsCreateWebhookPathParams
-	Request    OrgsCreateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody OrgsCreateWebhookRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type OrgsCreateWebhookResponse struct {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetCallQueueRecordingsPathParams struct {
+type GetCallQueueRecordingsRequest struct {
 	// Unique Identifier of the Call Queue.
 	CallQueueID string `pathParam:"style=simple,explode=false,name=callQueueId"`
-}
-
-type GetCallQueueRecordingsQueryParams struct {
 	// Start date (within a 6 month range).
 	From *types.Date `queryParam:"style=form,explode=true,name=from"`
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -21,11 +18,6 @@ type GetCallQueueRecordingsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// End date (within a 6 month range).
 	To *types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetCallQueueRecordingsRequest struct {
-	PathParams  GetCallQueueRecordingsPathParams
-	QueryParams GetCallQueueRecordingsQueryParams
 }
 
 type GetCallQueueRecordings200ApplicationXMLRecordings struct {

@@ -35,14 +35,14 @@ func newReservations(defaultClient, securityClient HTTPClient, serverURL, langua
 // Acknowledges reservations made by reservation ID.
 func (s *reservations) AcknowledgmentReservation(ctx context.Context, request operations.AcknowledgmentReservationRequest) (*operations.AcknowledgmentReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/acknowledge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/acknowledge", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -73,14 +73,14 @@ func (s *reservations) AcknowledgmentReservation(ctx context.Context, request op
 // Cancels reservation by reservation ID.
 func (s *reservations) CancelReservation(ctx context.Context, request operations.CancelReservationRequest) (*operations.CancelReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -111,14 +111,14 @@ func (s *reservations) CancelReservation(ctx context.Context, request operations
 // Confirms reservation by reservation ID.
 func (s *reservations) ConfirmReservation(ctx context.Context, request operations.ConfirmReservationRequest) (*operations.ConfirmReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/confirm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/confirm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -151,7 +151,7 @@ func (s *reservations) CreateReservation(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/logistics/pvt/inventory/reservations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -166,7 +166,7 @@ func (s *reservations) CreateReservation(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -208,14 +208,14 @@ func (s *reservations) CreateReservation(ctx context.Context, request operations
 // Lists reservation's information by ID.
 func (s *reservations) ReservationByID(ctx context.Context, request operations.ReservationByIDRequest) (*operations.ReservationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -257,14 +257,14 @@ func (s *reservations) ReservationByID(ctx context.Context, request operations.R
 // Lists reservations in your store, by searching through warehouse and SKU.
 func (s *reservations) ReservationbyWarehouseandSku(ctx context.Context, request operations.ReservationbyWarehouseandSkuRequest) (*operations.ReservationbyWarehouseandSkuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{warehouseId}/{skuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{warehouseId}/{skuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

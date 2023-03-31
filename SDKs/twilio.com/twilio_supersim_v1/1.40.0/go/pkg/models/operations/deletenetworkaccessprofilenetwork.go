@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteNetworkAccessProfileNetworkServerList = []string{
@@ -12,20 +11,15 @@ var DeleteNetworkAccessProfileNetworkServerList = []string{
 }
 
 type DeleteNetworkAccessProfileNetworkSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteNetworkAccessProfileNetworkPathParams struct {
+type DeleteNetworkAccessProfileNetworkRequest struct {
 	// The unique string that identifies the Network Access Profile resource.
 	NetworkAccessProfileSid string `pathParam:"style=simple,explode=false,name=NetworkAccessProfileSid"`
 	// The SID of the Network resource to be removed from the Network Access Profile resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteNetworkAccessProfileNetworkRequest struct {
-	PathParams DeleteNetworkAccessProfileNetworkPathParams
-	Security   DeleteNetworkAccessProfileNetworkSecurity
-	ServerURL  *string
 }
 
 type DeleteNetworkAccessProfileNetworkResponse struct {

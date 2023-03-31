@@ -3,24 +3,18 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        api_key=shared.SchemeAPIKey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-        api_secret=shared.SchemeAPISecret(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.BuyANumberRequest(
-    request=shared.NumberDetails(
-        country="sed",
-        msisdn="quibusdam",
-        target_api_key="consequatur",
+        api_key="YOUR_API_KEY_HERE",
+        api_secret="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = shared.NumberDetails(
+    country="GB",
+    msisdn="447700900000",
+    target_api_key="1a2345b7",
 )
     
 res = s.buy_a_number(req)

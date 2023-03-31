@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetAddressPathParams struct {
+type TestnetGetAddressRequest struct {
 	// Address
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type TestnetGetAddressRequest struct {
-	PathParams TestnetGetAddressPathParams
 }
 
 type TestnetGetAddressResponse struct {

@@ -43,7 +43,7 @@ func (s *folderMenu) FolderMenuGet(ctx context.Context, request operations.Folde
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,7 +103,7 @@ func (s *folderMenu) FolderMenuGet(ctx context.Context, request operations.Folde
 }
 
 // FolderMenuPostForm - Creates and updates the folder menu items
-func (s *folderMenu) FolderMenuPostForm(ctx context.Context, request operations.FolderMenuPostFormRequest) (*operations.FolderMenuPostFormResponse, error) {
+func (s *folderMenu) FolderMenuPostForm(ctx context.Context, request shared.FolderMenuConfiguration) (*operations.FolderMenuPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/FolderMenu"
 
@@ -148,7 +148,7 @@ func (s *folderMenu) FolderMenuPostForm(ctx context.Context, request operations.
 }
 
 // FolderMenuPostJSON - Creates and updates the folder menu items
-func (s *folderMenu) FolderMenuPostJSON(ctx context.Context, request operations.FolderMenuPostJSONRequest) (*operations.FolderMenuPostJSONResponse, error) {
+func (s *folderMenu) FolderMenuPostJSON(ctx context.Context, request shared.FolderMenuConfiguration) (*operations.FolderMenuPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/FolderMenu"
 
@@ -193,7 +193,7 @@ func (s *folderMenu) FolderMenuPostJSON(ctx context.Context, request operations.
 }
 
 // FolderMenuPostRaw - Creates and updates the folder menu items
-func (s *folderMenu) FolderMenuPostRaw(ctx context.Context, request operations.FolderMenuPostRawRequest) (*operations.FolderMenuPostRawResponse, error) {
+func (s *folderMenu) FolderMenuPostRaw(ctx context.Context, request []byte) (*operations.FolderMenuPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/FolderMenu"
 

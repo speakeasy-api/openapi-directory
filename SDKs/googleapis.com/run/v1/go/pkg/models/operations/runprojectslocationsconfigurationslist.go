@@ -8,16 +8,11 @@ import (
 )
 
 type RunProjectsLocationsConfigurationsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunProjectsLocationsConfigurationsListPathParams struct {
-	// The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id} with the project ID or number.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RunProjectsLocationsConfigurationsListQueryParams struct {
+type RunProjectsLocationsConfigurationsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -42,6 +37,8 @@ type RunProjectsLocationsConfigurationsListQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id} with the project ID or number.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type RunProjectsLocationsConfigurationsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Not supported by Cloud Run.
 	Watch *bool `queryParam:"style=form,explode=true,name=watch"`
-}
-
-type RunProjectsLocationsConfigurationsListRequest struct {
-	PathParams  RunProjectsLocationsConfigurationsListPathParams
-	QueryParams RunProjectsLocationsConfigurationsListQueryParams
-	Security    RunProjectsLocationsConfigurationsListSecurity
 }
 
 type RunProjectsLocationsConfigurationsListResponse struct {

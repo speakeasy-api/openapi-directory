@@ -12,32 +12,23 @@ var ListCustomerProfileChannelEndpointAssignmentServerList = []string{
 }
 
 type ListCustomerProfileChannelEndpointAssignmentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCustomerProfileChannelEndpointAssignmentPathParams struct {
-	// The unique string that we created to identify the CustomerProfile resource.
-	CustomerProfileSid string `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
-}
-
-type ListCustomerProfileChannelEndpointAssignmentQueryParams struct {
+type ListCustomerProfileChannelEndpointAssignmentRequest struct {
 	// The SID of an channel endpoint
 	ChannelEndpointSid *string `queryParam:"style=form,explode=true,name=ChannelEndpointSid"`
 	// comma separated list of channel endpoint sids
 	ChannelEndpointSids *string `queryParam:"style=form,explode=true,name=ChannelEndpointSids"`
+	// The unique string that we created to identify the CustomerProfile resource.
+	CustomerProfileSid string `pathParam:"style=simple,explode=false,name=CustomerProfileSid"`
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListCustomerProfileChannelEndpointAssignmentRequest struct {
-	PathParams  ListCustomerProfileChannelEndpointAssignmentPathParams
-	QueryParams ListCustomerProfileChannelEndpointAssignmentQueryParams
-	Security    ListCustomerProfileChannelEndpointAssignmentSecurity
-	ServerURL   *string
 }
 
 type ListCustomerProfileChannelEndpointAssignmentListCustomerProfileChannelEndpointAssignmentResponseMeta struct {

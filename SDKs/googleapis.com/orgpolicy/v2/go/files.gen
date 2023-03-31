@@ -25,7 +25,6 @@ pkg/models/operations/orgpolicyprojectspoliciespatch.go
 pkg/models/shared/googlecloudorgpolicyv2customconstraint.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlecloudorgpolicyv2listcustomconstraintsresponse.go
 pkg/models/shared/googlecloudorgpolicyv2listconstraintsresponse.go
 pkg/models/shared/googlecloudorgpolicyv2constraint.go

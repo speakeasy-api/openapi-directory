@@ -42,7 +42,7 @@ func (s *genres) GenresList(ctx context.Context, request operations.GenresListRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *genres) GenresList(ctx context.Context, request operations.GenresListRe
 // GenresRead - Get details of the genre.
 func (s *genres) GenresRead(ctx context.Context, request operations.GenresReadRequest) (*operations.GenresReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genres/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/genres/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

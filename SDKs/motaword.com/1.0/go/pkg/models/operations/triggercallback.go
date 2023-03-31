@@ -36,15 +36,11 @@ func (e *TriggerCallbackActionTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TriggerCallbackPathParams struct {
+type TriggerCallbackRequest struct {
 	// Callback type
 	ActionType TriggerCallbackActionTypeEnum `pathParam:"style=simple,explode=false,name=actionType"`
 	// Project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TriggerCallbackRequest struct {
-	PathParams TriggerCallbackPathParams
 }
 
 type TriggerCallbackResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetWeakCertsSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetWeakCertsPathParams struct {
-	// SHA2 hash of device firmware
-	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetWeakCertsRequest struct {
-	PathParams GetWeakCertsPathParams
-	Security   GetWeakCertsSecurity
+	// SHA2 hash of device firmware
+	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
 }
 
 type GetWeakCertsResponse struct {

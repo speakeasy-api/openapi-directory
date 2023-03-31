@@ -12,12 +12,8 @@ var CreateMessagingConfigurationServerList = []string{
 }
 
 type CreateMessagingConfigurationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateMessagingConfigurationPathParams struct {
-	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMessagingConfigurationCreateMessagingConfigurationRequest struct {
@@ -28,10 +24,9 @@ type CreateMessagingConfigurationCreateMessagingConfigurationRequest struct {
 }
 
 type CreateMessagingConfigurationRequest struct {
-	PathParams CreateMessagingConfigurationPathParams
-	Request    *CreateMessagingConfigurationCreateMessagingConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateMessagingConfigurationSecurity
-	ServerURL  *string
+	RequestBody *CreateMessagingConfigurationCreateMessagingConfigurationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateMessagingConfigurationResponse struct {

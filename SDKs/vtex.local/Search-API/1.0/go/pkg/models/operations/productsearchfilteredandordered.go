@@ -10,7 +10,11 @@ var ProductSearchFilteredandOrderedServerList = []string{
 	"http://example.com/.{environment}.com.br",
 }
 
-type ProductSearchFilteredandOrderedQueryParams struct {
+type ProductSearchFilteredandOrderedRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Sorting method. It can be by Price (`O=OrderByPriceDESC` or `O=OrderByPriceASC`), by Top Selling Products (`O=OrderByTopSaleDESC`), by Best Reviews (`O=OrderByReviewRateDESC`), by Name (`O=OrderByNameASC` or `O=OrderByNameDESC`), by Release Date (`O=OrderByReleaseDateDESC`), by Best Discounts (`O=OrderByBestDiscountDESC`), by Score (`O=OrderByScoreDESC`)
 	O *string `queryParam:"style=form,explode=true,name=O"`
 	// Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
@@ -21,19 +25,6 @@ type ProductSearchFilteredandOrderedQueryParams struct {
 	Fq *string `queryParam:"style=form,explode=true,name=fq"`
 	// Filter by full text. The form is`ft={searchWord}`
 	Ft *string `queryParam:"style=form,explode=true,name=ft"`
-}
-
-type ProductSearchFilteredandOrderedHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ProductSearchFilteredandOrderedRequest struct {
-	QueryParams ProductSearchFilteredandOrderedQueryParams
-	Headers     ProductSearchFilteredandOrderedHeaders
-	ServerURL   *string
 }
 
 type ProductSearchFilteredandOrdered200ApplicationJSONItemsImages struct {

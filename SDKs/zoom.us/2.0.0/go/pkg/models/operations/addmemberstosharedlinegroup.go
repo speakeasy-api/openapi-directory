@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type AddMembersToSharedLineGroupPathParams struct {
-	// Unique Identifier of the shared line group.
-	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
-}
-
 type AddMembersToSharedLineGroupApplicationJSONMembersUsers struct {
 	// Email address of the user.
 	Email *string `json:"email,omitempty"`
@@ -32,8 +27,9 @@ type AddMembersToSharedLineGroupApplicationJSON struct {
 }
 
 type AddMembersToSharedLineGroupRequest struct {
-	PathParams AddMembersToSharedLineGroupPathParams
-	Request    *AddMembersToSharedLineGroupApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *AddMembersToSharedLineGroupApplicationJSON `request:"mediaType=application/json"`
+	// Unique Identifier of the shared line group.
+	SharedLineGroupID string `pathParam:"style=simple,explode=false,name=sharedLineGroupId"`
 }
 
 type AddMembersToSharedLineGroupResponse struct {

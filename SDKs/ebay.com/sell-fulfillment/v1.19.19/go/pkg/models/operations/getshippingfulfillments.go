@@ -8,17 +8,12 @@ import (
 )
 
 type GetShippingFulfillmentsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetShippingFulfillmentsPathParams struct {
-	// The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the <b>getOrders</b> method in the <b>orders.orderId</b> field.
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetShippingFulfillmentsRequest struct {
-	PathParams GetShippingFulfillmentsPathParams
-	Security   GetShippingFulfillmentsSecurity
+	// The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the <b>getOrders</b> method in the <b>orders.orderId</b> field.
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 type GetShippingFulfillmentsResponse struct {

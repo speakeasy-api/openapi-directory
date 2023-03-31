@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type ImportExportedDataRequest struct {
-	Request []byte `request:"mediaType=application/octet-stream"`
-}
-
 type ImportExportedData400ApplicationJSONErrorDetails struct {
 	Param *string `json:"param,omitempty"`
 }

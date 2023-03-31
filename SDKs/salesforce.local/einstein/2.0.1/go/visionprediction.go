@@ -35,7 +35,7 @@ func newVisionPrediction(defaultClient, securityClient HTTPClient, serverURL, la
 
 // DetectMultipart - Detection with Image File
 // Returns labels, probabilities, and bounding box coordinates for items detected in the specified local image file.
-func (s *visionPrediction) DetectMultipart(ctx context.Context, request operations.DetectMultipartRequest) (*operations.DetectMultipartResponse, error) {
+func (s *visionPrediction) DetectMultipart(ctx context.Context, request shared.ObjectDetectionRequest, security operations.DetectMultipartSecurity) (*operations.DetectMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/detect"
 
@@ -51,7 +51,7 @@ func (s *visionPrediction) DetectMultipart(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *visionPrediction) DetectMultipart(ctx context.Context, request operatio
 
 // OcrMultipart - Detect Text
 // Returns a prediction from an OCR model for the specified image URL or local image file.
-func (s *visionPrediction) OcrMultipart(ctx context.Context, request operations.OcrMultipartRequest) (*operations.OcrMultipartResponse, error) {
+func (s *visionPrediction) OcrMultipart(ctx context.Context, request operations.OcrMultipartRequestBody, security operations.OcrMultipartSecurity) (*operations.OcrMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/ocr"
 
@@ -103,7 +103,7 @@ func (s *visionPrediction) OcrMultipart(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -139,7 +139,7 @@ func (s *visionPrediction) OcrMultipart(ctx context.Context, request operations.
 
 // PredictMultipart - Make Prediction
 // Returns a prediction from an image or multi-label model for the specified image.
-func (s *visionPrediction) PredictMultipart(ctx context.Context, request operations.PredictMultipartRequest) (*operations.PredictMultipartResponse, error) {
+func (s *visionPrediction) PredictMultipart(ctx context.Context, request shared.ImageClassificationRequest, security operations.PredictMultipartSecurity) (*operations.PredictMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/vision/predict"
 
@@ -155,7 +155,7 @@ func (s *visionPrediction) PredictMultipart(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -72,12 +72,8 @@ func (e *DevicesByEnergyGetMeterEnergyTypeEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type DevicesByEnergyGetQueryParams struct {
-	MeterEnergyType DevicesByEnergyGetMeterEnergyTypeEnum `queryParam:"style=form,explode=true,name=meterEnergyType"`
-}
-
 type DevicesByEnergyGetRequest struct {
-	QueryParams DevicesByEnergyGetQueryParams
+	MeterEnergyType DevicesByEnergyGetMeterEnergyTypeEnum `queryParam:"style=form,explode=true,name=meterEnergyType"`
 }
 
 type DevicesByEnergyGetResponse struct {

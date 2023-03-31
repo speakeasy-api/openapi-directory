@@ -35,7 +35,7 @@ func newVideosEssentials(defaultClient, securityClient HTTPClient, serverURL, la
 // CheckIfUserOwnsVideo - Check if a user owns a video
 func (s *videosEssentials) CheckIfUserOwnsVideo(ctx context.Context, request operations.CheckIfUserOwnsVideoRequest) (*operations.CheckIfUserOwnsVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *videosEssentials) CheckIfUserOwnsVideo(ctx context.Context, request ope
 // CheckIfUserOwnsVideoAlt1 - Check if a user owns a video
 func (s *videosEssentials) CheckIfUserOwnsVideoAlt1(ctx context.Context, request operations.CheckIfUserOwnsVideoAlt1Request) (*operations.CheckIfUserOwnsVideoAlt1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -141,16 +141,16 @@ func (s *videosEssentials) CheckIfUserOwnsVideoAlt1(ctx context.Context, request
 }
 
 // DeleteVideo - Delete a video
-func (s *videosEssentials) DeleteVideo(ctx context.Context, request operations.DeleteVideoRequest) (*operations.DeleteVideoResponse, error) {
+func (s *videosEssentials) DeleteVideo(ctx context.Context, request operations.DeleteVideoRequest, security operations.DeleteVideoSecurity) (*operations.DeleteVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -186,11 +186,11 @@ func (s *videosEssentials) DeleteVideo(ctx context.Context, request operations.D
 }
 
 // EditVideo - Edit a video
-func (s *videosEssentials) EditVideo(ctx context.Context, request operations.EditVideoRequest) (*operations.EditVideoResponse, error) {
+func (s *videosEssentials) EditVideo(ctx context.Context, request operations.EditVideoRequest, security operations.EditVideoSecurity) (*operations.EditVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -205,7 +205,7 @@ func (s *videosEssentials) EditVideo(ctx context.Context, request operations.Edi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,14 +254,14 @@ func (s *videosEssentials) EditVideo(ctx context.Context, request operations.Edi
 // GetAppearances - Get all the videos in which a user appears
 func (s *videosEssentials) GetAppearances(ctx context.Context, request operations.GetAppearancesRequest) (*operations.GetAppearancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/appearances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/appearances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,7 +309,7 @@ func (s *videosEssentials) GetAppearancesAlt1(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -350,7 +350,7 @@ func (s *videosEssentials) GetAppearancesAlt1(ctx context.Context, request opera
 // GetVideo - Get a specific video
 func (s *videosEssentials) GetVideo(ctx context.Context, request operations.GetVideoRequest) (*operations.GetVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/videos/{video_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -404,14 +404,14 @@ func (s *videosEssentials) GetVideo(ctx context.Context, request operations.GetV
 // GetVideos - Get all the videos that a user has uploaded
 func (s *videosEssentials) GetVideos(ctx context.Context, request operations.GetVideosRequest) (*operations.GetVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -460,7 +460,7 @@ func (s *videosEssentials) GetVideosAlt1(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -509,7 +509,7 @@ func (s *videosEssentials) SearchVideos(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -34,14 +34,14 @@ func newModels(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Return metrics for organization's top 10 device models sorted by data usage over given time range. Default unit is megabytes.
 func (s *models) GetOrganizationSummaryTopDevicesModelsByUsage(ctx context.Context, request operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest) (*operations.GetOrganizationSummaryTopDevicesModelsByUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

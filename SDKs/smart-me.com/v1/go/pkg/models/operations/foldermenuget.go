@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FolderMenuGetQueryParams struct {
+type FolderMenuGetRequest struct {
 	// (optional) Filter for the folders and meters:
 	//             all: load everything
 	//             assigned: load only folders and meters that are assigend to a folder
@@ -15,10 +15,6 @@ type FolderMenuGetQueryParams struct {
 	//             user: load only folder and all users assigned to this folders
 	//             subuserlist: load all subusers as a list
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-}
-
-type FolderMenuGetRequest struct {
-	QueryParams FolderMenuGetQueryParams
 }
 
 type FolderMenuGetResponse struct {

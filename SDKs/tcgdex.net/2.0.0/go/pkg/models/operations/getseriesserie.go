@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSeriesSeriePathParams struct {
+type GetSeriesSerieRequest struct {
 	// the serie ID or name
 	Serie string `pathParam:"style=simple,explode=false,name=serie"`
-}
-
-type GetSeriesSerieRequest struct {
-	PathParams GetSeriesSeriePathParams
 }
 
 type GetSeriesSerieResponse struct {

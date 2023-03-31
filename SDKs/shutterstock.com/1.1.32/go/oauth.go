@@ -44,7 +44,7 @@ func (s *oauth) Authorize(ctx context.Context, request operations.AuthorizeReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -90,7 +90,7 @@ func (s *oauth) Authorize(ctx context.Context, request operations.AuthorizeReque
 
 // CreateAccessTokenForm - Get access tokens
 // This endpoint returns an access token for the specified user and with the specified scopes. The token does not expire until the user changes their password. The body parameters must be encoded as form data.
-func (s *oauth) CreateAccessTokenForm(ctx context.Context, request operations.CreateAccessTokenFormRequest) (*operations.CreateAccessTokenFormResponse, error) {
+func (s *oauth) CreateAccessTokenForm(ctx context.Context, request operations.CreateAccessTokenApplicationXWwwFormUrlencoded) (*operations.CreateAccessTokenFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/oauth/access_token"
 
@@ -147,7 +147,7 @@ func (s *oauth) CreateAccessTokenForm(ctx context.Context, request operations.Cr
 
 // CreateAccessTokenJSON - Get access tokens
 // This endpoint returns an access token for the specified user and with the specified scopes. The token does not expire until the user changes their password. The body parameters must be encoded as form data.
-func (s *oauth) CreateAccessTokenJSON(ctx context.Context, request operations.CreateAccessTokenJSONRequest) (*operations.CreateAccessTokenJSONResponse, error) {
+func (s *oauth) CreateAccessTokenJSON(ctx context.Context, request operations.CreateAccessTokenApplicationJSON) (*operations.CreateAccessTokenJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/oauth/access_token"
 

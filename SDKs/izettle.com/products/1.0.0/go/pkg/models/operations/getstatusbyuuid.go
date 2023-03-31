@@ -8,17 +8,12 @@ import (
 )
 
 type GetStatusByUUIDSecurity struct {
-	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
-}
-
-type GetStatusByUUIDPathParams struct {
-	ImportUUID       string `pathParam:"style=simple,explode=false,name=importUuid"`
-	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetStatusByUUIDRequest struct {
-	PathParams GetStatusByUUIDPathParams
-	Security   GetStatusByUUIDSecurity
+	ImportUUID       string `pathParam:"style=simple,explode=false,name=importUuid"`
+	OrganizationUUID string `pathParam:"style=simple,explode=false,name=organizationUuid"`
 }
 
 type GetStatusByUUIDResponse struct {

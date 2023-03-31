@@ -40,7 +40,7 @@ func newRegistrationSchemaBlocks(defaultClient, securityClient HTTPClient, serve
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrationSchemaBlocks) GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockID(ctx context.Context, request operations.GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRequest) (*operations.GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/schema_blocks/{schema_response_block_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/schema_blocks/{schema_response_block_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *registrationSchemaBlocks) GetSchemaResponsesSchemaResponseIDSchemaBlock
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *registrationSchemaBlocks) SchemaResponseBlocksRead(ctx context.Context, request operations.SchemaResponseBlocksReadRequest) (*operations.SchemaResponseBlocksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/schema_blocks/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}/schema_blocks/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

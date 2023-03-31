@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRawPathParams struct {
+type UpdateRawRequest struct {
+	// Details of the Subscription to change
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Unique identifier of the Subscription to update
 	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type UpdateRawRequest struct {
-	PathParams UpdateRawPathParams
-	// Details of the Subscription to change
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type UpdateRawResponse struct {

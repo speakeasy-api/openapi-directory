@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PackageProjectTranslationMemoryForLanguagePathParams struct {
-	// Language Code
-	LanguageCode string `pathParam:"style=simple,explode=false,name=languageCode"`
-	// Project ID
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PackageProjectTranslationMemoryForLanguageQueryParams struct {
+type PackageProjectTranslationMemoryForLanguageRequest struct {
 	// If you want to package and download the translation memory synchronously, mark this parameter as '0'. It will package the translation memory and then return the packaged file in the response, identical to async/download call after an asynchronous /package call.
 	Async *int64 `queryParam:"style=form,explode=true,name=async"`
 	// Translation Memory file format
 	Format *string `queryParam:"style=form,explode=true,name=format"`
-}
-
-type PackageProjectTranslationMemoryForLanguageRequest struct {
-	PathParams  PackageProjectTranslationMemoryForLanguagePathParams
-	QueryParams PackageProjectTranslationMemoryForLanguageQueryParams
+	// Language Code
+	LanguageCode string `pathParam:"style=simple,explode=false,name=languageCode"`
+	// Project ID
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type PackageProjectTranslationMemoryForLanguageResponse struct {

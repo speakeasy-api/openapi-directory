@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetV2EmailTemplateAttachmentsJSONQueryParams struct {
+type GetV2EmailTemplateAttachmentsJSONRequest struct {
 	// Filters email template attachments by email template IDs
 	EmailTemplateID []int64 `queryParam:"style=form,explode=false,name=email_template_id"`
 	// IDs of email template attachments to fetch. If a record can't be found, that record won't be returned and your request will be successful
@@ -19,10 +19,6 @@ type GetV2EmailTemplateAttachmentsJSONQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// How many records to show per page in the range [1, 100]. Defaults to 25
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetV2EmailTemplateAttachmentsJSONRequest struct {
-	QueryParams GetV2EmailTemplateAttachmentsJSONQueryParams
 }
 
 type GetV2EmailTemplateAttachmentsJSONResponse struct {

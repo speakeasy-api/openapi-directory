@@ -12,20 +12,15 @@ var FetchExecutionServerList = []string{
 }
 
 type FetchExecutionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchExecutionPathParams struct {
+type FetchExecutionRequest struct {
 	// The SID of the Flow with the Execution resource to fetch
 	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
 	// The SID of the Execution resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchExecutionRequest struct {
-	PathParams FetchExecutionPathParams
-	Security   FetchExecutionSecurity
-	ServerURL  *string
 }
 
 type FetchExecutionResponse struct {

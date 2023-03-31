@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFile1PathParams struct {
+type UploadFile1Request struct {
+	// Uploaded file to the project as a file delivered in the job.
+	FileToUploadDto shared.FileToUploadDto `request:"mediaType=multipart/form-data"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type UploadFile1Request struct {
-	PathParams UploadFile1PathParams
-	// Uploaded file to the project as a file delivered in the job.
-	Request shared.FileToUploadDto `request:"mediaType=multipart/form-data"`
 }
 
 type UploadFile1Response struct {

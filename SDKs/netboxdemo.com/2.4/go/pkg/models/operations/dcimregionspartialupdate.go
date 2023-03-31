@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimRegionsPartialUpdatePathParams struct {
+type DcimRegionsPartialUpdateRequest struct {
+	WritableRegionInput shared.WritableRegionInput `request:"mediaType=application/json"`
 	// A unique integer value identifying this region.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimRegionsPartialUpdateRequest struct {
-	PathParams DcimRegionsPartialUpdatePathParams
-	Request    shared.WritableRegionInput `request:"mediaType=application/json"`
 }
 
 type DcimRegionsPartialUpdateResponse struct {

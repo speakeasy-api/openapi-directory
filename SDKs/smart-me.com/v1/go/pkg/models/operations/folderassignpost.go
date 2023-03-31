@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type FolderAssignPostQueryParams struct {
+type FolderAssignPostRequest struct {
 	// The ID of the meter or folder that should be assign
 	Source string `queryParam:"style=form,explode=true,name=source"`
 	// The ID of the meter or folder that should be the parent
 	Target string `queryParam:"style=form,explode=true,name=target"`
-}
-
-type FolderAssignPostRequest struct {
-	QueryParams FolderAssignPostQueryParams
 }
 
 type FolderAssignPostResponse struct {

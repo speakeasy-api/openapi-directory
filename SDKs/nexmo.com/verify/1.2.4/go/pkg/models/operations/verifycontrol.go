@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type VerifyControlPathParams struct {
+type VerifyControlRequest struct {
+	ControlRequest shared.ControlRequest `request:"mediaType=application/x-www-form-urlencoded"`
 	// The response format.
 	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type VerifyControlRequest struct {
-	PathParams VerifyControlPathParams
-	Request    shared.ControlRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type VerifyControl200TextXMLType string

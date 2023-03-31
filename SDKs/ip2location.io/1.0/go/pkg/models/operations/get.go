@@ -116,7 +116,7 @@ func (e *GetLangEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// Format of the response message.
 	Format *GetFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// IP address (IPv4 or IPv6) for reverse IP location lookup purposes. If not present, the server IP address will be used for the location lookup.
@@ -125,10 +125,6 @@ type GetQueryParams struct {
 	Key string `queryParam:"style=form,explode=true,name=key"`
 	// Translation information. The translation only applicable for continent, country, region and city name. This parameter is only available for Plus and Security plan only.
 	Lang *GetLangEnum `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 type GetResponse struct {

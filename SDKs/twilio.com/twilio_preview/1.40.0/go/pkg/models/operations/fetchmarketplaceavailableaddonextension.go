@@ -12,20 +12,15 @@ var FetchMarketplaceAvailableAddOnExtensionServerList = []string{
 }
 
 type FetchMarketplaceAvailableAddOnExtensionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchMarketplaceAvailableAddOnExtensionPathParams struct {
+type FetchMarketplaceAvailableAddOnExtensionRequest struct {
 	// The SID of the AvailableAddOn resource with the extension to fetch.
 	AvailableAddOnSid string `pathParam:"style=simple,explode=false,name=AvailableAddOnSid"`
 	// The SID of the AvailableAddOn Extension resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchMarketplaceAvailableAddOnExtensionRequest struct {
-	PathParams FetchMarketplaceAvailableAddOnExtensionPathParams
-	Security   FetchMarketplaceAvailableAddOnExtensionSecurity
-	ServerURL  *string
 }
 
 type FetchMarketplaceAvailableAddOnExtensionResponse struct {

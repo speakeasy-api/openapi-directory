@@ -6,34 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type GetPotsSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPotsPathParams struct {
-	// Investor Id
-	InvestorID string `pathParam:"style=simple,explode=false,name=investor_id"`
-}
-
-type GetPotsQueryParams struct {
-	// multiple financial product ids as comma seperated string
-	FinancialProductID *string `queryParam:"style=form,explode=true,name=financial_product_id"`
-}
-
-type GetPotsHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetPotsRequest struct {
-	PathParams  GetPotsPathParams
-	QueryParams GetPotsQueryParams
-	Headers     GetPotsHeaders
-	Security    GetPotsSecurity
+	// multiple financial product ids as comma seperated string
+	FinancialProductID *string `queryParam:"style=form,explode=true,name=financial_product_id"`
+	// Investor Id
+	InvestorID string `pathParam:"style=simple,explode=false,name=investor_id"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // GetPots500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

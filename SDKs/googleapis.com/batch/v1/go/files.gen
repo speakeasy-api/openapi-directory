@@ -56,7 +56,6 @@ pkg/models/shared/attacheddisk.go
 pkg/models/shared/accelerator.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listjobsresponse.go
 pkg/models/shared/listtasksresponse.go
 pkg/models/shared/task.go

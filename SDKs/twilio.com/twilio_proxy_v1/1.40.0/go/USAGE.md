@@ -14,29 +14,24 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateMessageInteractionRequest{
-        Security: operations.CreateMessageInteractionSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateMessageInteractionPathParams{
-            ParticipantSid: "corrupti",
-            ServiceSid: "provident",
-            SessionSid: "distinctio",
-        },
-        Request: &operations.CreateMessageInteractionCreateMessageInteractionRequest{
-            Body: "quibusdam",
+        ParticipantSid: "corrupti",
+        RequestBody: &operations.CreateMessageInteractionCreateMessageInteractionRequest{
+            Body: "provident",
             MediaURL: []string{
-                "https://moral-star.info",
-                "https://present-giggle.info",
-                "http://unique-baboon.org",
+                "https://outstanding-strait.name",
+                "https://impressive-ox.name",
+                "http://innocent-effect.org",
             },
         },
+        ServiceSid: "ipsa",
+        SessionSid: "delectus",
     }
 
     ctx := context.Background()
-    res, err := s.CreateMessageInteraction(ctx, req)
+    res, err := s.CreateMessageInteraction(ctx, req, operations.CreateMessageInteractionSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

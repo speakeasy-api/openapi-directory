@@ -8,16 +8,11 @@ import (
 )
 
 type PinyinChineseNameSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PinyinChineseNamePathParams struct {
-	ChineseName string `pathParam:"style=simple,explode=false,name=chineseName"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
 }
 
 type PinyinChineseNameRequest struct {
-	PathParams PinyinChineseNamePathParams
-	Security   PinyinChineseNameSecurity
+	ChineseName string `pathParam:"style=simple,explode=false,name=chineseName"`
 }
 
 type PinyinChineseNameResponse struct {

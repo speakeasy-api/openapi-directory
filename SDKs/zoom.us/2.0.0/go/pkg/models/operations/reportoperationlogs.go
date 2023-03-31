@@ -6,13 +6,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 	"time"
 )
 
 type ReportOperationLogsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ReportOperationLogsCategoryTypeEnum - **Optional**<br>
@@ -71,7 +70,7 @@ func (e *ReportOperationLogsCategoryTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ReportOperationLogsQueryParams struct {
+type ReportOperationLogsRequest struct {
 	// **Optional**<br>
 	// Filter your response by a category type to see reports for a specific category.
 	// The value for this field can be one of the following:<br> `all`<br>`user`<br>`user_settings`<br>`account`<br>`billing`<br>`im`<br>`recording`<br>`phone_contacts`<br>`webinar`<br>`sub_account`<br>`role`<br>`zoom_rooms`
@@ -84,11 +83,6 @@ type ReportOperationLogsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// End date.
 	To types.Date `queryParam:"style=form,explode=true,name=to"`
-}
-
-type ReportOperationLogsRequest struct {
-	QueryParams ReportOperationLogsQueryParams
-	Security    ReportOperationLogsSecurity
 }
 
 type ReportOperationLogs200ApplicationXMLOperationLogs struct {

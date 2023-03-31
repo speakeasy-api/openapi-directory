@@ -56,13 +56,6 @@ func (e *GetGeomarksGeomarkIDPartsFileFormatExtensionFileFormatExtensionEnum) Un
 	}
 }
 
-type GetGeomarksGeomarkIDPartsFileFormatExtensionPathParams struct {
-	// The file format name extension used to represent the geomark download.
-	FileFormatExtension GetGeomarksGeomarkIDPartsFileFormatExtensionFileFormatExtensionEnum `pathParam:"style=simple,explode=false,name=fileFormatExtension"`
-	// The unique identifier for the geomark
-	GeomarkID string `pathParam:"style=simple,explode=false,name=geomarkId"`
-}
-
 // GetGeomarksGeomarkIDPartsFileFormatExtensionSridEnum - The srid of the coordinate system the geometry should be converted to.
 type GetGeomarksGeomarkIDPartsFileFormatExtensionSridEnum string
 
@@ -105,14 +98,13 @@ func (e *GetGeomarksGeomarkIDPartsFileFormatExtensionSridEnum) UnmarshalJSON(dat
 	}
 }
 
-type GetGeomarksGeomarkIDPartsFileFormatExtensionQueryParams struct {
+type GetGeomarksGeomarkIDPartsFileFormatExtensionRequest struct {
+	// The file format name extension used to represent the geomark download.
+	FileFormatExtension GetGeomarksGeomarkIDPartsFileFormatExtensionFileFormatExtensionEnum `pathParam:"style=simple,explode=false,name=fileFormatExtension"`
+	// The unique identifier for the geomark
+	GeomarkID string `pathParam:"style=simple,explode=false,name=geomarkId"`
 	// The srid of the coordinate system the geometry should be converted to.
 	Srid *GetGeomarksGeomarkIDPartsFileFormatExtensionSridEnum `queryParam:"style=form,explode=true,name=srid"`
-}
-
-type GetGeomarksGeomarkIDPartsFileFormatExtensionRequest struct {
-	PathParams  GetGeomarksGeomarkIDPartsFileFormatExtensionPathParams
-	QueryParams GetGeomarksGeomarkIDPartsFileFormatExtensionQueryParams
 }
 
 type GetGeomarksGeomarkIDPartsFileFormatExtensionResponse struct {

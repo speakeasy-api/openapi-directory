@@ -8,13 +8,13 @@ import (
 )
 
 type FirestoreProjectsDatabasesDocumentsPatchSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsPatchSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FirestoreProjectsDatabasesDocumentsPatchSecurity struct {
@@ -22,14 +22,10 @@ type FirestoreProjectsDatabasesDocumentsPatchSecurity struct {
 	Option2 *FirestoreProjectsDatabasesDocumentsPatchSecurityOption2 `security:"option"`
 }
 
-type FirestoreProjectsDatabasesDocumentsPatchPathParams struct {
-	// The resource name of the document, for example `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type FirestoreProjectsDatabasesDocumentsPatchQueryParams struct {
+type FirestoreProjectsDatabasesDocumentsPatchRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Document    *shared.Document  `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -46,6 +42,8 @@ type FirestoreProjectsDatabasesDocumentsPatchQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// The list of field paths in the mask. See Document.fields for a field path syntax reference.
 	MaskFieldPaths []string `queryParam:"style=form,explode=true,name=mask.fieldPaths"`
+	// The resource name of the document, for example `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -58,13 +56,6 @@ type FirestoreProjectsDatabasesDocumentsPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type FirestoreProjectsDatabasesDocumentsPatchRequest struct {
-	PathParams  FirestoreProjectsDatabasesDocumentsPatchPathParams
-	QueryParams FirestoreProjectsDatabasesDocumentsPatchQueryParams
-	Request     *shared.Document `request:"mediaType=application/json"`
-	Security    FirestoreProjectsDatabasesDocumentsPatchSecurity
 }
 
 type FirestoreProjectsDatabasesDocumentsPatchResponse struct {

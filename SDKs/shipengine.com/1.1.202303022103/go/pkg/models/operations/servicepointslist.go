@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ServicePointsListRequest struct {
-	Request shared.GetServicePointsRequest `request:"mediaType=application/json"`
-}
-
 type ServicePointsListResponse struct {
 	ContentType string
 	StatusCode  int

@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportSubmissionsReviewsAsCsvSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ExportSubmissionsReviewsAsCsvPathParams struct {
+type ExportSubmissionsReviewsAsCsvRequest struct {
 	// Unique identifier of the assignment
 	Assignment string `pathParam:"style=simple,explode=false,name=assignment"`
 	// Unique identifier of the class
 	Class string `pathParam:"style=simple,explode=false,name=class"`
-}
-
-type ExportSubmissionsReviewsAsCsvRequest struct {
-	PathParams ExportSubmissionsReviewsAsCsvPathParams
-	Security   ExportSubmissionsReviewsAsCsvSecurity
 }
 
 type ExportSubmissionsReviewsAsCsvResponse struct {

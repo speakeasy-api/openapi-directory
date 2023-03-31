@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodGenresByOndemandIDPathParams struct {
+type GetVodGenresByOndemandIDRequest struct {
 	// The ID of the On Demand.
 	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
-type GetVodGenresByOndemandIDRequest struct {
-	PathParams GetVodGenresByOndemandIDPathParams
 }
 
 type GetVodGenresByOndemandIDResponse struct {

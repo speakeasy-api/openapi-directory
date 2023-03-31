@@ -13,32 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            ClientID: shared.SchemeClientID{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            PlaidVersion: shared.SchemePlaidVersion{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            Secret: shared.SchemeSecret{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            ClientID: "YOUR_API_KEY_HERE",
+            PlaidVersion: "YOUR_API_KEY_HERE",
+            Secret: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.AccountsBalanceGetRequest{
-        Request: shared.AccountsBalanceGetRequest{
-            AccessToken: "corrupti",
-            ClientID: "provident",
-            Options: &shared.AccountsBalanceGetRequestOptions{
-                AccountIds: []string{
-                    "quibusdam",
-                    "unde",
-                    "nulla",
-                },
-                MinLastUpdatedDatetime: "2021-04-22T12:08:58.275Z",
+    req := shared.AccountsBalanceGetRequest{
+        AccessToken: "corrupti",
+        ClientID: "provident",
+        Options: &shared.AccountsBalanceGetRequestOptions{
+            AccountIds: []string{
+                "quibusdam",
+                "unde",
+                "nulla",
             },
-            Secret: "vel",
+            MinLastUpdatedDatetime: "2021-04-22T12:08:58.275Z",
         },
+        Secret: "vel",
     }
 
     ctx := context.Background()

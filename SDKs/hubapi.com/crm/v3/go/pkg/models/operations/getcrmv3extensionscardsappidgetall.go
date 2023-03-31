@@ -8,17 +8,12 @@ import (
 )
 
 type GetCrmV3ExtensionsCardsAppIDGetAllSecurity struct {
-	DeveloperHapikey shared.SchemeDeveloperHapikey `security:"scheme,type=apiKey,subtype=query"`
-}
-
-type GetCrmV3ExtensionsCardsAppIDGetAllPathParams struct {
-	// The ID of the target app.
-	AppID int `pathParam:"style=simple,explode=false,name=appId"`
+	DeveloperHapikey string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
 }
 
 type GetCrmV3ExtensionsCardsAppIDGetAllRequest struct {
-	PathParams GetCrmV3ExtensionsCardsAppIDGetAllPathParams
-	Security   GetCrmV3ExtensionsCardsAppIDGetAllSecurity
+	// The ID of the target app.
+	AppID int `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type GetCrmV3ExtensionsCardsAppIDGetAllResponse struct {

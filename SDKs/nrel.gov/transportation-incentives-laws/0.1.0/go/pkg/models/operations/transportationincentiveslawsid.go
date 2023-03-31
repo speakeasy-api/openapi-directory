@@ -32,25 +32,17 @@ func (e *TransportationIncentivesLawsIDOutputFormatEnum) UnmarshalJSON(data []by
 	}
 }
 
-type TransportationIncentivesLawsIDPathParams struct {
-	// The id of the law that you are searching
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-	// Response format
-	OutputFormat TransportationIncentivesLawsIDOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
-}
-
-type TransportationIncentivesLawsIDQueryParams struct {
+type TransportationIncentivesLawsIDRequest struct {
 	// API Key
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// The 'true' value returns a record no matter its status (current, expired, archived, or repealed). The default 'false' value returns only current laws and incentives.
 	Expired *bool `queryParam:"style=form,explode=true,name=expired"`
+	// The id of the law that you are searching
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Response format
+	OutputFormat TransportationIncentivesLawsIDOutputFormatEnum `pathParam:"style=simple,explode=false,name=output_format"`
 	// Include points of contacts in the return value.
 	Poc *bool `queryParam:"style=form,explode=true,name=poc"`
-}
-
-type TransportationIncentivesLawsIDRequest struct {
-	PathParams  TransportationIncentivesLawsIDPathParams
-	QueryParams TransportationIncentivesLawsIDQueryParams
 }
 
 type TransportationIncentivesLawsIDResponse struct {

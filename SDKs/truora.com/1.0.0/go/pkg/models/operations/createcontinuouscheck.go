@@ -8,12 +8,7 @@ import (
 )
 
 type CreateContinuousCheckSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateContinuousCheckRequest struct {
-	Request  shared.CreateContinuousCheckInput `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CreateContinuousCheckSecurity
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
 }
 
 type CreateContinuousCheckResponse struct {

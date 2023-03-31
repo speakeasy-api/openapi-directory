@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteMockPathParams struct {
-	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
-}
-
 type DeleteMockRequest struct {
-	PathParams DeleteMockPathParams
+	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
 }
 
 type DeleteMock200ApplicationJSONMock struct {

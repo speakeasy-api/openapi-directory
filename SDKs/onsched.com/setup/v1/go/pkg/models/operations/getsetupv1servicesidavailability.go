@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1ServicesIDAvailabilityPathParams struct {
+type GetSetupV1ServicesIDAvailabilityRequest struct {
 	// id of service object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1ServicesIDAvailabilityRequest struct {
-	PathParams GetSetupV1ServicesIDAvailabilityPathParams
 }
 
 type GetSetupV1ServicesIDAvailabilityResponse struct {

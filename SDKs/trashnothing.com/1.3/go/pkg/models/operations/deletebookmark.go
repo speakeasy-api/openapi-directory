@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteBookmarkPathParams struct {
-	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
-}
-
 type DeleteBookmarkRequest struct {
-	PathParams DeleteBookmarkPathParams
+	PostID string `pathParam:"style=simple,explode=false,name=post_id"`
 }
 
 type DeleteBookmarkResponse struct {

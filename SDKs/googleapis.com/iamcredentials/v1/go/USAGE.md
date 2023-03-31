@@ -14,44 +14,38 @@ func main() {
     s := sdk.New()
 
     req := operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest{
-        Security: operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.GenerateAccessTokenRequest{
+        DollarXgafv: "2",
+        GenerateAccessTokenRequest: &shared.GenerateAccessTokenRequest{
             Delegates: []string{
-                "iure",
-                "magnam",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            Lifetime: "debitis",
+            Lifetime: "nulla",
             Scope: []string{
-                "delectus",
+                "illum",
+                "vel",
+                "error",
             },
         },
+        AccessToken: "deserunt",
+        Alt: "media",
+        Callback: "iure",
+        Fields: "magnam",
+        Key: "debitis",
+        Name: "ipsa",
+        OauthToken: "delectus",
+        PrettyPrint: false,
+        QuotaUser: "tempora",
+        UploadType: "suscipit",
+        UploadProtocol: "molestiae",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx, req)
+    res, err := s.Projects.IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx, req, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

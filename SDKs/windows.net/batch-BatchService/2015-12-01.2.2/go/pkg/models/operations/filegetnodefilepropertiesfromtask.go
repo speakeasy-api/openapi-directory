@@ -7,39 +7,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FileGetNodeFilePropertiesFromTaskPathParams struct {
-	// The path to the task file that you want to get the properties of.
-	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
-	// The id of the job that contains the task.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The id of the task whose file you want to get the properties of.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type FileGetNodeFilePropertiesFromTaskQueryParams struct {
-	// Client API Version.
-	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
-	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
-	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
-}
-
-type FileGetNodeFilePropertiesFromTaskHeaders struct {
+type FileGetNodeFilePropertiesFromTaskRequest struct {
 	// Specify this header to perform the operation only if the resource has been modified since the specified date/time.
 	IfModifiedSince *string `header:"style=simple,explode=false,name=If-Modified-Since"`
 	// Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
 	IfUnmodifiedSince *string `header:"style=simple,explode=false,name=If-Unmodified-Since"`
+	// Client API Version.
+	APIVersion string `queryParam:"style=form,explode=true,name=api-version"`
 	// Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
 	ClientRequestID *string `header:"style=simple,explode=false,name=client-request-id"`
+	// The path to the task file that you want to get the properties of.
+	FileName string `pathParam:"style=simple,explode=false,name=fileName"`
+	// The id of the job that contains the task.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
 	OcpDate *string `header:"style=simple,explode=false,name=ocp-date"`
 	// Specifies if the server should return the client-request-id identifier in the response.
 	ReturnClientRequestID *bool `header:"style=simple,explode=false,name=return-client-request-id"`
-}
-
-type FileGetNodeFilePropertiesFromTaskRequest struct {
-	PathParams  FileGetNodeFilePropertiesFromTaskPathParams
-	QueryParams FileGetNodeFilePropertiesFromTaskQueryParams
-	Headers     FileGetNodeFilePropertiesFromTaskHeaders
+	// The id of the task whose file you want to get the properties of.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
+	// Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+	Timeout *int `queryParam:"style=form,explode=true,name=timeout"`
 }
 
 type FileGetNodeFilePropertiesFromTaskResponse struct {

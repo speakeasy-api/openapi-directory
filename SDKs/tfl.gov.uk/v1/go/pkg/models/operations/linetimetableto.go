@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LineTimetableToPathParams struct {
+type LineTimetableToRequest struct {
 	// The originating station's stop point id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
 	FromStopPointID string `pathParam:"style=simple,explode=false,name=fromStopPointId"`
 	// A single line id e.g. victoria
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The destination stations's Naptan code
 	ToStopPointID string `pathParam:"style=simple,explode=false,name=toStopPointId"`
-}
-
-type LineTimetableToRequest struct {
-	PathParams LineTimetableToPathParams
 }
 
 type LineTimetableToResponse struct {

@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteInsightsQuestionnairesCategoryServerList = []string{
@@ -12,24 +11,15 @@ var DeleteInsightsQuestionnairesCategoryServerList = []string{
 }
 
 type DeleteInsightsQuestionnairesCategorySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteInsightsQuestionnairesCategoryPathParams struct {
-	// The ID of the category to be deleted
-	CategoryID string `pathParam:"style=simple,explode=false,name=CategoryId"`
-}
-
-type DeleteInsightsQuestionnairesCategoryHeaders struct {
-	// The Token HTTP request header
-	Token *string `header:"style=simple,explode=false,name=Token"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteInsightsQuestionnairesCategoryRequest struct {
-	PathParams DeleteInsightsQuestionnairesCategoryPathParams
-	Headers    DeleteInsightsQuestionnairesCategoryHeaders
-	Security   DeleteInsightsQuestionnairesCategorySecurity
-	ServerURL  *string
+	// The ID of the category to be deleted
+	CategoryID string `pathParam:"style=simple,explode=false,name=CategoryId"`
+	// The Token HTTP request header
+	Token *string `header:"style=simple,explode=false,name=Token"`
 }
 
 type DeleteInsightsQuestionnairesCategoryResponse struct {

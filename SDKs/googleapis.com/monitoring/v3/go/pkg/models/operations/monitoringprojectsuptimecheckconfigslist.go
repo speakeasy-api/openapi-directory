@@ -8,18 +8,18 @@ import (
 )
 
 type MonitoringProjectsUptimeCheckConfigsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsUptimeCheckConfigsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsUptimeCheckConfigsListSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MonitoringProjectsUptimeCheckConfigsListSecurity struct {
@@ -28,12 +28,7 @@ type MonitoringProjectsUptimeCheckConfigsListSecurity struct {
 	Option3 *MonitoringProjectsUptimeCheckConfigsListSecurityOption3 `security:"option"`
 }
 
-type MonitoringProjectsUptimeCheckConfigsListPathParams struct {
-	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Uptime check configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type MonitoringProjectsUptimeCheckConfigsListQueryParams struct {
+type MonitoringProjectsUptimeCheckConfigsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -54,6 +49,8 @@ type MonitoringProjectsUptimeCheckConfigsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// If this field is not empty then it must contain the nextPageToken value returned by a previous call to this method. Using this field causes the method to return more results from the previous method call.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Uptime check configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -62,12 +59,6 @@ type MonitoringProjectsUptimeCheckConfigsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MonitoringProjectsUptimeCheckConfigsListRequest struct {
-	PathParams  MonitoringProjectsUptimeCheckConfigsListPathParams
-	QueryParams MonitoringProjectsUptimeCheckConfigsListQueryParams
-	Security    MonitoringProjectsUptimeCheckConfigsListSecurity
 }
 
 type MonitoringProjectsUptimeCheckConfigsListResponse struct {

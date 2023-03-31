@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetSchemaPathParams struct {
+type GetSchemaRequest struct {
 	APIID        string `pathParam:"style=simple,explode=false,name=apiId"`
 	APIVersionID string `pathParam:"style=simple,explode=false,name=apiVersionId"`
 	SchemaID     string `pathParam:"style=simple,explode=false,name=schemaId"`
-}
-
-type GetSchemaRequest struct {
-	PathParams GetSchemaPathParams
 }
 
 type GetSchema200ApplicationJSONSchema struct {

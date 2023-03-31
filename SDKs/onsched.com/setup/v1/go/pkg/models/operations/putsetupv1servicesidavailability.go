@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSetupV1ServicesIDAvailabilityPathParams struct {
+type PutSetupV1ServicesIDAvailabilityRequest struct {
+	// Service Availability Input Model
+	AvailabilityInputModel *shared.AvailabilityInputModel `request:"mediaType=application/json"`
 	// id of service object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutSetupV1ServicesIDAvailabilityRequest struct {
-	PathParams PutSetupV1ServicesIDAvailabilityPathParams
-	// Service Availability Input Model
-	Request *shared.AvailabilityInputModel `request:"mediaType=application/json"`
 }
 
 type PutSetupV1ServicesIDAvailabilityResponse struct {

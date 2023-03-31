@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersIDPayrollsPathParams struct {
-	// Id of the folder social
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDFoldersIDPayrollsQueryParams struct {
+type GetSpacesSpaceIDFoldersIDPayrollsRequest struct {
 	// begin date of the payrolls
 	Begin *string `queryParam:"style=form,explode=true,name=Begin"`
 	// range date of the documents
@@ -23,11 +16,10 @@ type GetSpacesSpaceIDFoldersIDPayrollsQueryParams struct {
 	End *string `queryParam:"style=form,explode=true,name=End"`
 	// index range of the results
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
-}
-
-type GetSpacesSpaceIDFoldersIDPayrollsRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersIDPayrollsPathParams
-	QueryParams GetSpacesSpaceIDFoldersIDPayrollsQueryParams
+	// Id of the folder social
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersIDPayrollsResponse struct {

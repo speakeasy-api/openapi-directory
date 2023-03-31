@@ -12,20 +12,15 @@ var FetchRoomRecordingServerList = []string{
 }
 
 type FetchRoomRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchRoomRecordingPathParams struct {
+type FetchRoomRecordingRequest struct {
 	// The SID of the Room resource with the recording to fetch.
 	RoomSid string `pathParam:"style=simple,explode=false,name=RoomSid"`
 	// The SID of the RoomRecording resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchRoomRecordingRequest struct {
-	PathParams FetchRoomRecordingPathParams
-	Security   FetchRoomRecordingSecurity
-	ServerURL  *string
 }
 
 type FetchRoomRecordingResponse struct {

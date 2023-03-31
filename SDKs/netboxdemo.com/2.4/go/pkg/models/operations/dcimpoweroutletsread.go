@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DcimPowerOutletsReadPathParams struct {
+type DcimPowerOutletsReadRequest struct {
 	// A unique integer value identifying this power outlet.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DcimPowerOutletsReadRequest struct {
-	PathParams DcimPowerOutletsReadPathParams
 }
 
 type DcimPowerOutletsReadResponse struct {

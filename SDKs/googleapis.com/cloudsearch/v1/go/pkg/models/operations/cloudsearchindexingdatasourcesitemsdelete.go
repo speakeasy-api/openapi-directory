@@ -10,23 +10,18 @@ import (
 )
 
 type CloudsearchIndexingDatasourcesItemsDeleteSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchIndexingDatasourcesItemsDeleteSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CloudsearchIndexingDatasourcesItemsDeleteSecurity struct {
 	Option1 *CloudsearchIndexingDatasourcesItemsDeleteSecurityOption1 `security:"option"`
 	Option2 *CloudsearchIndexingDatasourcesItemsDeleteSecurityOption2 `security:"option"`
-}
-
-type CloudsearchIndexingDatasourcesItemsDeletePathParams struct {
-	// Required. The name of the item to delete. Format: datasources/{source_id}/items/{item_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // CloudsearchIndexingDatasourcesItemsDeleteModeEnum - Required. The RequestMode for this request.
@@ -56,7 +51,7 @@ func (e *CloudsearchIndexingDatasourcesItemsDeleteModeEnum) UnmarshalJSON(data [
 	}
 }
 
-type CloudsearchIndexingDatasourcesItemsDeleteQueryParams struct {
+type CloudsearchIndexingDatasourcesItemsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -75,6 +70,8 @@ type CloudsearchIndexingDatasourcesItemsDeleteQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Required. The RequestMode for this request.
 	Mode *CloudsearchIndexingDatasourcesItemsDeleteModeEnum `queryParam:"style=form,explode=true,name=mode"`
+	// Required. The name of the item to delete. Format: datasources/{source_id}/items/{item_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -87,12 +84,6 @@ type CloudsearchIndexingDatasourcesItemsDeleteQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Required. The incremented version of the item to delete from the index. The indexing system stores the version from the datasource as a byte string and compares the Item version in the index to the version of the queued Item using lexical ordering. Cloud Search Indexing won't delete any queued item with a version value that is less than or equal to the version of the currently indexed item. The maximum length for this field is 1024 bytes. For information on how item version affects the deletion process, refer to [Handle revisions after manual deletes](https://developers.google.com/cloud-search/docs/guides/operations).
 	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type CloudsearchIndexingDatasourcesItemsDeleteRequest struct {
-	PathParams  CloudsearchIndexingDatasourcesItemsDeletePathParams
-	QueryParams CloudsearchIndexingDatasourcesItemsDeleteQueryParams
-	Security    CloudsearchIndexingDatasourcesItemsDeleteSecurity
 }
 
 type CloudsearchIndexingDatasourcesItemsDeleteResponse struct {

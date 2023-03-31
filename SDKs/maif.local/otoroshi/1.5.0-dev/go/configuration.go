@@ -35,7 +35,7 @@ func newConfiguration(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GlobalConfig - Get the full configuration of Otoroshi
 // Get the full configuration of Otoroshi
-func (s *configuration) GlobalConfig(ctx context.Context, request operations.GlobalConfigRequest) (*operations.GlobalConfigResponse, error) {
+func (s *configuration) GlobalConfig(ctx context.Context) (*operations.GlobalConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/globalconfig"
 
@@ -44,7 +44,7 @@ func (s *configuration) GlobalConfig(ctx context.Context, request operations.Glo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *configuration) GlobalConfig(ctx context.Context, request operations.Glo
 
 // PatchGlobalConfig - Update the global configuration with a diff
 // Update the global configuration with a diff
-func (s *configuration) PatchGlobalConfig(ctx context.Context, request operations.PatchGlobalConfigRequest) (*operations.PatchGlobalConfigResponse, error) {
+func (s *configuration) PatchGlobalConfig(ctx context.Context, request []shared.Patch, security operations.PatchGlobalConfigSecurity) (*operations.PatchGlobalConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/globalconfig"
 
@@ -101,7 +101,7 @@ func (s *configuration) PatchGlobalConfig(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,7 +142,7 @@ func (s *configuration) PatchGlobalConfig(ctx context.Context, request operation
 
 // PutGlobalConfig - Update the global configuration
 // Update the global configuration
-func (s *configuration) PutGlobalConfig(ctx context.Context, request operations.PutGlobalConfigRequest) (*operations.PutGlobalConfigResponse, error) {
+func (s *configuration) PutGlobalConfig(ctx context.Context, request shared.GlobalConfig, security operations.PutGlobalConfigSecurity) (*operations.PutGlobalConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/globalconfig"
 
@@ -158,7 +158,7 @@ func (s *configuration) PutGlobalConfig(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

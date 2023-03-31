@@ -35,14 +35,14 @@ func newHolidayScheme(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete the specified holiday scheme
 func (s *holidayScheme) DeleteHolidayScheme(ctx context.Context, request operations.DeleteHolidaySchemeRequest) (*operations.DeleteHolidaySchemeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *holidayScheme) DeleteHolidayScheme(ctx context.Context, request operati
 // Deletes the specified holiday scheme revision for the matching revision date
 func (s *holidayScheme) DeleteHolidaySchemeRevision(ctx context.Context, request operations.DeleteHolidaySchemeRevisionRequest) (*operations.DeleteHolidaySchemeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,14 +143,14 @@ func (s *holidayScheme) DeleteHolidaySchemeRevision(ctx context.Context, request
 // Deletes the specified holiday scheme revision for the matching revision number
 func (s *holidayScheme) DeleteHolidaySchemeRevisionByNumber(ctx context.Context, request operations.DeleteHolidaySchemeRevisionByNumberRequest) (*operations.DeleteHolidaySchemeRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -197,14 +197,14 @@ func (s *holidayScheme) DeleteHolidaySchemeRevisionByNumber(ctx context.Context,
 // Deletes a tag from the holiday scheme
 func (s *holidayScheme) DeleteHolidaySchemeTag(ctx context.Context, request operations.DeleteHolidaySchemeTagRequest) (*operations.DeleteHolidaySchemeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -251,14 +251,14 @@ func (s *holidayScheme) DeleteHolidaySchemeTag(ctx context.Context, request oper
 // Gets all the holiday scheme tags
 func (s *holidayScheme) GetAllHolidaySchemeTags(ctx context.Context, request operations.GetAllHolidaySchemeTagsRequest) (*operations.GetAllHolidaySchemeTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -314,14 +314,14 @@ func (s *holidayScheme) GetAllHolidaySchemeTags(ctx context.Context, request ope
 // Returns the holiday scheme's state at the specified effective date.
 func (s *holidayScheme) GetHolidaySchemeByEffectiveDate(ctx context.Context, request operations.GetHolidaySchemeByEffectiveDateRequest) (*operations.GetHolidaySchemeByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -377,14 +377,14 @@ func (s *holidayScheme) GetHolidaySchemeByEffectiveDate(ctx context.Context, req
 // Gets the specified holiday scheme from employer.
 func (s *holidayScheme) GetHolidaySchemeFromEmployer(ctx context.Context, request operations.GetHolidaySchemeFromEmployerRequest) (*operations.GetHolidaySchemeFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -440,14 +440,14 @@ func (s *holidayScheme) GetHolidaySchemeFromEmployer(ctx context.Context, reques
 // Get the holiday scheme revision matching the specified revision number
 func (s *holidayScheme) GetHolidaySchemeRevisionByNumber(ctx context.Context, request operations.GetHolidaySchemeRevisionByNumberRequest) (*operations.GetHolidaySchemeRevisionByNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -503,14 +503,14 @@ func (s *holidayScheme) GetHolidaySchemeRevisionByNumber(ctx context.Context, re
 // Gets links to all the holiday scheme revisions
 func (s *holidayScheme) GetHolidaySchemeRevisions(ctx context.Context, request operations.GetHolidaySchemeRevisionsRequest) (*operations.GetHolidaySchemeRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revisions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revisions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -566,14 +566,14 @@ func (s *holidayScheme) GetHolidaySchemeRevisions(ctx context.Context, request o
 // Get links to all holiday schemes for the employer on specified effective date.
 func (s *holidayScheme) GetHolidaySchemesByEffectiveDate(ctx context.Context, request operations.GetHolidaySchemesByEffectiveDateRequest) (*operations.GetHolidaySchemesByEffectiveDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -629,14 +629,14 @@ func (s *holidayScheme) GetHolidaySchemesByEffectiveDate(ctx context.Context, re
 // Get links to all holiday schemes for the specified employer.
 func (s *holidayScheme) GetHolidaySchemesFromEmployer(ctx context.Context, request operations.GetHolidaySchemesFromEmployerRequest) (*operations.GetHolidaySchemesFromEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -692,14 +692,14 @@ func (s *holidayScheme) GetHolidaySchemesFromEmployer(ctx context.Context, reque
 // Gets the holiday scheme with the tag
 func (s *holidayScheme) GetHolidaySchemesWithTag(ctx context.Context, request operations.GetHolidaySchemesWithTagRequest) (*operations.GetHolidaySchemesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -755,14 +755,14 @@ func (s *holidayScheme) GetHolidaySchemesWithTag(ctx context.Context, request op
 // Gets the tag from the holiday scheme
 func (s *holidayScheme) GetTagFromHolidayScheme(ctx context.Context, request operations.GetTagFromHolidaySchemeRequest) (*operations.GetTagFromHolidaySchemeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -818,14 +818,14 @@ func (s *holidayScheme) GetTagFromHolidayScheme(ctx context.Context, request ope
 // Gets the tag from the holiday scheme revision
 func (s *holidayScheme) GetTagFromHolidaySchemeRevision(ctx context.Context, request operations.GetTagFromHolidaySchemeRevisionRequest) (*operations.GetTagFromHolidaySchemeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -881,14 +881,14 @@ func (s *holidayScheme) GetTagFromHolidaySchemeRevision(ctx context.Context, req
 // Gets all the tags from the holiday scheme
 func (s *holidayScheme) GetTagsFromHolidayScheme(ctx context.Context, request operations.GetTagsFromHolidaySchemeRequest) (*operations.GetTagsFromHolidaySchemeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -944,14 +944,14 @@ func (s *holidayScheme) GetTagsFromHolidayScheme(ctx context.Context, request op
 // Gets all the tags from the holiday scheme revision
 func (s *holidayScheme) GetTagsFromHolidaySchemeRevision(ctx context.Context, request operations.GetTagsFromHolidaySchemeRevisionRequest) (*operations.GetTagsFromHolidaySchemeRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1007,9 +1007,9 @@ func (s *holidayScheme) GetTagsFromHolidaySchemeRevision(ctx context.Context, re
 // Patches the specified holiday scheme with the supplied values
 func (s *holidayScheme) PatchHolidayScheme(ctx context.Context, request operations.PatchHolidaySchemeRequest) (*operations.PatchHolidaySchemeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HolidayScheme", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1024,7 +1024,7 @@ func (s *holidayScheme) PatchHolidayScheme(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1080,9 +1080,9 @@ func (s *holidayScheme) PatchHolidayScheme(ctx context.Context, request operatio
 // Create a new holiday scheme object
 func (s *holidayScheme) PostHolidaySchemeIntoEmployer(ctx context.Context, request operations.PostHolidaySchemeIntoEmployerRequest) (*operations.PostHolidaySchemeIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidaySchemes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HolidayScheme", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1097,7 +1097,7 @@ func (s *holidayScheme) PostHolidaySchemeIntoEmployer(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1153,9 +1153,9 @@ func (s *holidayScheme) PostHolidaySchemeIntoEmployer(ctx context.Context, reque
 // Updates the existing specified holiday scheme object
 func (s *holidayScheme) PutHolidaySchemeIntoEmployer(ctx context.Context, request operations.PutHolidaySchemeIntoEmployerRequest) (*operations.PutHolidaySchemeIntoEmployerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HolidayScheme", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1170,7 +1170,7 @@ func (s *holidayScheme) PutHolidaySchemeIntoEmployer(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1226,14 +1226,14 @@ func (s *holidayScheme) PutHolidaySchemeIntoEmployer(ctx context.Context, reques
 // Inserts a new tag on the holiday scheme
 func (s *holidayScheme) PutHolidaySchemeTag(ctx context.Context, request operations.PutHolidaySchemeTagRequest) (*operations.PutHolidaySchemeTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

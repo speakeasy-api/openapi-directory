@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteLocationRulePathParams struct {
+type DeleteLocationRuleRequest struct {
 	// Unique identifier
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteLocationRuleRequest struct {
-	PathParams DeleteLocationRulePathParams
 }
 
 type DeleteLocationRuleResponse struct {

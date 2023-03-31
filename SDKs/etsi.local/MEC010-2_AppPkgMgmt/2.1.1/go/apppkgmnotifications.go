@@ -35,7 +35,7 @@ func newAppPkgmNotifications(defaultClient, securityClient HTTPClient, serverURL
 
 // AppPkgNotificationPOST - Registers a notification endpoint to notify application package operations
 // Registers a notification endpoint to notify application package operations
-func (s *appPkgmNotifications) AppPkgNotificationPOST(ctx context.Context, request operations.AppPkgNotificationPOSTRequest) (*operations.AppPkgNotificationPOSTResponse, error) {
+func (s *appPkgmNotifications) AppPkgNotificationPOST(ctx context.Context, request shared.AppPkgNotification) (*operations.AppPkgNotificationPOSTResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user_defined_notification"
 

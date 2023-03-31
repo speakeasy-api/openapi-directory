@@ -12,12 +12,8 @@ var UpdateDomainConfigServerList = []string{
 }
 
 type UpdateDomainConfigSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDomainConfigPathParams struct {
-	// Unique string used to identify the domain that this config should be associated with.
-	DomainSid string `pathParam:"style=simple,explode=false,name=DomainSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDomainConfigUpdateDomainConfigRequest struct {
@@ -32,10 +28,9 @@ type UpdateDomainConfigUpdateDomainConfigRequest struct {
 }
 
 type UpdateDomainConfigRequest struct {
-	PathParams UpdateDomainConfigPathParams
-	Request    *UpdateDomainConfigUpdateDomainConfigRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateDomainConfigSecurity
-	ServerURL  *string
+	// Unique string used to identify the domain that this config should be associated with.
+	DomainSid   string                                       `pathParam:"style=simple,explode=false,name=DomainSid"`
+	RequestBody *UpdateDomainConfigUpdateDomainConfigRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateDomainConfigResponse struct {

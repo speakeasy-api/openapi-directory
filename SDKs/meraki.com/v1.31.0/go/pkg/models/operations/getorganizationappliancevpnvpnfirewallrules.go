@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetOrganizationApplianceVpnVpnFirewallRulesPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type GetOrganizationApplianceVpnVpnFirewallRulesRequest struct {
-	PathParams GetOrganizationApplianceVpnVpnFirewallRulesPathParams
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type GetOrganizationApplianceVpnVpnFirewallRulesResponse struct {

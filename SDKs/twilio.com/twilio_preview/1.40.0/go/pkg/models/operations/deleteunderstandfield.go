@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteUnderstandFieldServerList = []string{
@@ -12,22 +11,17 @@ var DeleteUnderstandFieldServerList = []string{
 }
 
 type DeleteUnderstandFieldSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteUnderstandFieldPathParams struct {
+type DeleteUnderstandFieldRequest struct {
 	// The unique ID of the Assistant.
 	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
 	// A 34 character string that uniquely identifies this resource.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 	// The unique ID of the Task associated with this Field.
 	TaskSid string `pathParam:"style=simple,explode=false,name=TaskSid"`
-}
-
-type DeleteUnderstandFieldRequest struct {
-	PathParams DeleteUnderstandFieldPathParams
-	Security   DeleteUnderstandFieldSecurity
-	ServerURL  *string
 }
 
 type DeleteUnderstandFieldResponse struct {

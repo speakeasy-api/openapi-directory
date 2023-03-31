@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GETListsBestSellersHistoryJSONSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
 }
 
-type GETListsBestSellersHistoryJSONQueryParams struct {
+type GETListsBestSellersHistoryJSONRequest struct {
 	// The target age group for the best seller.
 	AgeGroup *string `queryParam:"style=form,explode=true,name=age-group"`
 	// The author of the best seller. The author field does not include additional contributors (see Data Structure for more details about the author and contributor fields).
@@ -38,11 +37,6 @@ type GETListsBestSellersHistoryJSONQueryParams struct {
 	//
 	// When searching, you can specify a portion of a title or a full title.
 	Title *string `queryParam:"style=form,explode=true,name=title"`
-}
-
-type GETListsBestSellersHistoryJSONRequest struct {
-	QueryParams GETListsBestSellersHistoryJSONQueryParams
-	Security    GETListsBestSellersHistoryJSONSecurity
 }
 
 type GETListsBestSellersHistoryJSON200ApplicationJSONResultsIsbns struct {

@@ -8,27 +8,18 @@ import (
 )
 
 type ExportPackageSystemsSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
-type ExportPackageSystemsPathParams struct {
-	// Package name
-	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
-}
-
-type ExportPackageSystemsQueryParams struct {
+type ExportPackageSystemsRequest struct {
 	// Filter systems by their SAP SIDs
 	FilterSystemProfileSapSidsIn []string `queryParam:"style=form,explode=true,name=filter[system_profile][sap_sids][in]"`
 	// Filter only SAP systems
 	FilterSystemProfileSapSystem *string `queryParam:"style=form,explode=true,name=filter[system_profile][sap_system]"`
+	// Package name
+	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
 	// Tag filter
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type ExportPackageSystemsRequest struct {
-	PathParams  ExportPackageSystemsPathParams
-	QueryParams ExportPackageSystemsQueryParams
-	Security    ExportPackageSystemsSecurity
 }
 
 type ExportPackageSystemsResponse struct {

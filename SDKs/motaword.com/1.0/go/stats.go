@@ -87,7 +87,7 @@ func (s *stats) GetCommissionStats(ctx context.Context) (*operations.GetCommissi
 }
 
 // GetCommissionStatsByFilter - Returns the total commissions stats by report filter.
-func (s *stats) GetCommissionStatsByFilter(ctx context.Context, request operations.GetCommissionStatsByFilterRequest) (*operations.GetCommissionStatsByFilterResponse, error) {
+func (s *stats) GetCommissionStatsByFilter(ctx context.Context, request shared.ReportFilter) (*operations.GetCommissionStatsByFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stats/commissions"
 

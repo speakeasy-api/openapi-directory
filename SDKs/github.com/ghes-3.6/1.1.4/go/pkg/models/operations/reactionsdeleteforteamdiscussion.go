@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ReactionsDeleteForTeamDiscussionPathParams struct {
+type ReactionsDeleteForTeamDiscussionRequest struct {
 	// The number that identifies the discussion.
 	DiscussionNumber int64 `pathParam:"style=simple,explode=false,name=discussion_number"`
 	// The organization name. The name is not case sensitive.
@@ -15,10 +15,6 @@ type ReactionsDeleteForTeamDiscussionPathParams struct {
 	ReactionID int64 `pathParam:"style=simple,explode=false,name=reaction_id"`
 	// The slug of the team name.
 	TeamSlug string `pathParam:"style=simple,explode=false,name=team_slug"`
-}
-
-type ReactionsDeleteForTeamDiscussionRequest struct {
-	PathParams ReactionsDeleteForTeamDiscussionPathParams
 }
 
 type ReactionsDeleteForTeamDiscussionResponse struct {

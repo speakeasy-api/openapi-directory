@@ -42,7 +42,6 @@ pkg/models/shared/googlefirebaseappcheckv1betabatchgetappattestconfigsresponse.g
 pkg/models/shared/googlefirebaseappcheckv1betaappattestconfig.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlefirebaseappcheckv1betadebugtoken.go
 pkg/models/shared/googlefirebaseappcheckv1betalistdebugtokensresponse.go
 pkg/models/shared/googlefirebaseappcheckv1betabatchgetdevicecheckconfigsresponse.go

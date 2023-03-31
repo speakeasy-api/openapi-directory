@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FeedConfigurationHeaders struct {
+type FeedConfigurationRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type FeedConfigurationRequest struct {
-	Headers FeedConfigurationHeaders
-	Request shared.FeedConfigurationRequest `request:"mediaType=application/json"`
+	ContentType              string                          `header:"style=simple,explode=false,name=Content-Type"`
+	FeedConfigurationRequest shared.FeedConfigurationRequest `request:"mediaType=application/json"`
 }
 
 type FeedConfigurationResponse struct {

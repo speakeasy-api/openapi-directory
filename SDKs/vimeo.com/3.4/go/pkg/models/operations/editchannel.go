@@ -10,12 +10,7 @@ import (
 )
 
 type EditChannelSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditChannelPathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // EditChannelRequestBodyPrivacyEnum - The privacy level of the channel.
@@ -57,9 +52,9 @@ type EditChannelRequestBody struct {
 }
 
 type EditChannelRequest struct {
-	PathParams EditChannelPathParams
-	Request    *EditChannelRequestBody `request:"mediaType=application/vnd.vimeo.channel+json"`
-	Security   EditChannelSecurity
+	RequestBody *EditChannelRequestBody `request:"mediaType=application/vnd.vimeo.channel+json"`
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 }
 
 type EditChannelResponse struct {

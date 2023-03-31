@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CopyResourcesHeaders struct {
-	// Access token required to make the API call.
-	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
-	// API Key required to make the API call.
-	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
 type CopyResourcesCopyResourcesRequestBody struct {
 	// Resource identifier for folder where items will be copied to.
 	ParentResource string `json:"parentResource"`
@@ -22,8 +15,11 @@ type CopyResourcesCopyResourcesRequestBody struct {
 }
 
 type CopyResourcesRequest struct {
-	Headers CopyResourcesHeaders
-	Request *CopyResourcesCopyResourcesRequestBody `request:"mediaType=application/json"`
+	RequestBody *CopyResourcesCopyResourcesRequestBody `request:"mediaType=application/json"`
+	// Access token required to make the API call.
+	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
+	// API Key required to make the API call.
+	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
 }
 
 type CopyResourcesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolTelnetIpaliasListPathParams struct {
+type ProtocolTelnetIpaliasListRequest struct {
 	// Agent to manipulate TELNET IP alias
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolTelnetIpaliasListRequest struct {
-	PathParams ProtocolTelnetIpaliasListPathParams
 }
 
 type ProtocolTelnetIpaliasListResponse struct {

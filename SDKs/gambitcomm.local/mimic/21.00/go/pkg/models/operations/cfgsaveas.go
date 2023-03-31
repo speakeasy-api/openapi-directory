@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type CfgSaveasPathParams struct {
+type CfgSaveasRequest struct {
 	// MIMIC agent configuration file to save
 	CfgFile string `pathParam:"style=simple,explode=false,name=cfgFile"`
 	// Agent number in cfgFile to start the loading
 	FirstAgentNum int `pathParam:"style=simple,explode=false,name=firstAgentNum"`
 	// Agent number in cfgFile to end the loading
 	LastAgentNum int `pathParam:"style=simple,explode=false,name=lastAgentNum"`
-}
-
-type CfgSaveasRequest struct {
-	PathParams CfgSaveasPathParams
 }
 
 type CfgSaveasResponse struct {

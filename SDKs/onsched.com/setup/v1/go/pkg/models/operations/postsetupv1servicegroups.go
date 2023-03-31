@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ServicegroupsRequest struct {
-	Request *shared.ServiceGroupInputModel `request:"mediaType=application/json"`
-}
-
 type PostSetupV1ServicegroupsResponse struct {
 	ContentType string
 	// Success

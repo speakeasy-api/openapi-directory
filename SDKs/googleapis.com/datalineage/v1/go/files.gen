@@ -28,10 +28,9 @@ pkg/models/operations/datalineageprojectslocationssearchlinks.go
 pkg/models/shared/googleclouddatacataloglineagev1batchsearchlinkprocessesresponse.go
 pkg/models/shared/googleclouddatacataloglineagev1processlinks.go
 pkg/models/shared/googleclouddatacataloglineagev1processlinkinfo.go
-pkg/models/shared/googleclouddatacataloglineagev1batchsearchlinkprocessesrequest.go
 pkg/models/shared/altenum.go
+pkg/models/shared/googleclouddatacataloglineagev1batchsearchlinkprocessesrequest.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
 pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateJSONPathParams struct {
+type UpdateJSONRequest struct {
+	// The Shopper details to update
+	ShopperUpdate shared.ShopperUpdate `request:"mediaType=application/json"`
 	// The ID of the Shopper to update
 	ShopperID string `pathParam:"style=simple,explode=false,name=shopperId"`
-}
-
-type UpdateJSONRequest struct {
-	PathParams UpdateJSONPathParams
-	// The Shopper details to update
-	Request shared.ShopperUpdate `request:"mediaType=application/json"`
 }
 
 type UpdateJSONResponse struct {

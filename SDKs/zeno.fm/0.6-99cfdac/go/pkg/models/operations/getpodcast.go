@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetPodcastPathParams struct {
-	PodcastKey string `pathParam:"style=simple,explode=false,name=podcastKey"`
-}
-
 type GetPodcastRequest struct {
-	PathParams GetPodcastPathParams
+	PodcastKey string `pathParam:"style=simple,explode=false,name=podcastKey"`
 }
 
 type GetPodcastResponse struct {

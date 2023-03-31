@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PaymentsCreditorsRetrievePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PaymentsCreditorsRetrieveRequest struct {
-	PathParams PaymentsCreditorsRetrievePathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PaymentsCreditorsRetrieveResponse struct {

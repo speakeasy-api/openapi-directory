@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/files.com/0.0.1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,14 +15,13 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetActionNotificationExportResultsRequest(
-    query_params=operations.GetActionNotificationExportResultsQueryParams(
-        action_notification_export_id=2966375377600891262,
-        cursor="aut",
-        per_page=5026721396665135782,
-        user_id=8604752373465719830,
-    ),
+    action_notification_export_id=548814,
+    cursor="provident",
+    per_page=715190,
+    user_id=844266,
 )
     
 res = s.action_notification_export_results.get_action_notification_export_results(req)
@@ -33,7 +32,8 @@ if res.action_notification_export_result_entities is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### action_notification_export_results
 
@@ -66,13 +66,34 @@ if res.action_notification_export_result_entities is not None:
 
 * `get_apps` - List Apps
 
-### as2_keys
+### as2_incoming_messages
 
-* `delete_as2_keys_id` - Delete As2 Key
-* `get_as2_keys` - List As2 Keys
-* `get_as2_keys_id` - Show As2 Key
-* `patch_as2_keys_id` - Update As2 Key
-* `post_as2_keys` - Create As2 Key
+* `get_as2_incoming_messages` - List As2 Incoming Messages
+
+### as2_outgoing_messages
+
+* `get_as2_outgoing_messages` - List As2 Outgoing Messages
+
+### as2_partners
+
+* `delete_as2_partners_id` - Delete As2 Partner
+* `get_as2_partners` - List As2 Partners
+* `get_as2_partners_id` - Show As2 Partner
+* `patch_as2_partners_id` - Update As2 Partner
+* `post_as2_partners` - Create As2 Partner
+
+### as2_stations
+
+* `delete_as2_stations_id` - Delete As2 Station
+* `get_as2_stations` - List As2 Stations
+* `get_as2_stations_id` - Show As2 Station
+* `patch_as2_stations_id` - Update As2 Station
+* `post_as2_stations` - Create As2 Station
+
+### automation_runs
+
+* `get_automation_runs` - List Automation Runs
+* `get_automation_runs_id` - Show Automation Run
 
 ### automations
 
@@ -99,6 +120,14 @@ if res.action_notification_export_result_entities is not None:
 ### bundle_downloads
 
 * `get_bundle_downloads` - List Bundle Downloads
+
+### bundle_notifications
+
+* `delete_bundle_notifications_id` - Delete Bundle Notification
+* `get_bundle_notifications` - List Bundle Notifications
+* `get_bundle_notifications_id` - Show Bundle Notification
+* `patch_bundle_notifications_id` - Update Bundle Notification
+* `post_bundle_notifications` - Create Bundle Notification
 
 ### bundle_recipients
 
@@ -140,7 +169,7 @@ if res.action_notification_export_result_entities is not None:
 
 * `file_action_begin_upload` - Begin file upload
 * `file_action_copy` - Copy file/folder
-* `file_action_metadata` - Return metadata for file/folder
+* `file_action_find` - Find file/folder by path
 * `file_action_move` - Move file/folder
 
 ### file_comment_reactions
@@ -176,6 +205,8 @@ if res.action_notification_export_result_entities is not None:
 * `delete_form_field_sets_id` - Delete Form Field Set
 * `get_form_field_sets` - List Form Field Sets
 * `get_form_field_sets_id` - Show Form Field Set
+* `patch_form_field_sets_id` - Update Form Field Set
+* `post_form_field_sets` - Create Form Field Set
 
 ### group_users
 
@@ -235,6 +266,7 @@ if res.action_notification_export_result_entities is not None:
 ### ip_addresses
 
 * `get_ip_addresses` - List IP Addresses associated with the current site
+* `get_ip_addresses_exavault_reserved` - List all possible public ExaVault IP addresses
 * `get_ip_addresses_reserved` - List all possible public IP addresses
 
 ### locks
@@ -292,6 +324,10 @@ if res.action_notification_export_result_entities is not None:
 * `get_permissions` - List Permissions
 * `post_permissions` - Create Permission
 
+### priorities
+
+* `get_priorities` - List Priorities
+
 ### projects
 
 * `delete_projects_id` - Delete Project
@@ -308,13 +344,19 @@ if res.action_notification_export_result_entities is not None:
 * `patch_public_keys_id` - Update Public Key
 * `post_public_keys` - Create Public Key
 
+### remote_bandwidth_snapshots
+
+* `get_remote_bandwidth_snapshots` - List Remote Bandwidth Snapshots
+
 ### remote_servers
 
 * `delete_remote_servers_id` - Delete Remote Server
 * `get_remote_servers` - List Remote Servers
 * `get_remote_servers_id` - Show Remote Server
+* `get_remote_servers_id_configuration_file` - Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
 * `patch_remote_servers_id` - Update Remote Server
 * `post_remote_servers` - Create Remote Server
+* `post_remote_servers_id_configuration_file` - Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
 
 ### requests
 
@@ -332,6 +374,14 @@ if res.action_notification_export_result_entities is not None:
 
 * `get_settings_changes` - List Settings Changes
 
+### sftp_host_keys
+
+* `delete_sftp_host_keys_id` - Delete Sftp Host Key
+* `get_sftp_host_keys` - List Sftp Host Keys
+* `get_sftp_host_keys_id` - Show Sftp Host Key
+* `patch_sftp_host_keys_id` - Update Sftp Host Key
+* `post_sftp_host_keys` - Create Sftp Host Key
+
 ### site
 
 * `get_site` - Show site settings
@@ -347,16 +397,13 @@ if res.action_notification_export_result_entities is not None:
 
 * `get_sso_strategies` - List Sso Strategies
 * `get_sso_strategies_id` - Show Sso Strategy
+* `post_sso_strategies_id_sync` - Synchronize provisioning data with the SSO remote server.
 
 ### styles
 
 * `delete_styles_path` - Delete Style
 * `get_styles_path` - Show Style
 * `patch_styles_path` - Update Style
-
-### sync_jobs
-
-* `get_sync_jobs` - List Sync Jobs
 
 ### usage_daily_snapshots
 
@@ -369,12 +416,10 @@ if res.action_notification_export_result_entities is not None:
 ### user
 
 * `get_user_api_keys` - List Api Keys
-* `get_user_as2_keys` - List As2 Keys
 * `get_user_groups` - List Group Users
 * `get_user_public_keys` - List Public Keys
 * `patch_user` - Update User
 * `post_user_api_keys` - Create Api Key
-* `post_user_as2_keys` - Create As2 Key
 * `post_user_public_keys` - Create Public Key
 
 ### user_cipher_uses
@@ -394,7 +439,6 @@ if res.action_notification_export_result_entities is not None:
 * `get_users` - List Users
 * `get_users_id` - Show User
 * `get_users_user_id_api_keys` - List Api Keys
-* `get_users_user_id_as2_keys` - List As2 Keys
 * `get_users_user_id_cipher_uses` - List User Cipher Uses
 * `get_users_user_id_groups` - List Group Users
 * `get_users_user_id_permissions` - List Permissions
@@ -405,13 +449,22 @@ if res.action_notification_export_result_entities is not None:
 * `post_users_id_resend_welcome_email` - Resend user welcome email
 * `post_users_id_unlock` - Unlock user who has been locked out due to failed logins.
 * `post_users_user_id_api_keys` - Create Api Key
-* `post_users_user_id_as2_keys` - Create As2 Key
 * `post_users_user_id_public_keys` - Create Public Key
 
 ### webhook_tests
 
 * `post_webhook_tests` - Create Webhook Test
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

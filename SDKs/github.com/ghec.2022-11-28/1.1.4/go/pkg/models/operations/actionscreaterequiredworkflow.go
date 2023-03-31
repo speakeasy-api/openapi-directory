@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsCreateRequiredWorkflowPathParams struct {
-	// The organization name. The name is not case sensitive.
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // ActionsCreateRequiredWorkflowRequestBodyScopeEnum - Enable the required workflow for all repositories or selected repositories in the organization.
 type ActionsCreateRequiredWorkflowRequestBodyScopeEnum string
 
@@ -50,8 +45,9 @@ type ActionsCreateRequiredWorkflowRequestBody struct {
 }
 
 type ActionsCreateRequiredWorkflowRequest struct {
-	PathParams ActionsCreateRequiredWorkflowPathParams
-	Request    ActionsCreateRequiredWorkflowRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsCreateRequiredWorkflowRequestBody `request:"mediaType=application/json"`
+	// The organization name. The name is not case sensitive.
+	Org string `pathParam:"style=simple,explode=false,name=org"`
 }
 
 type ActionsCreateRequiredWorkflowResponse struct {

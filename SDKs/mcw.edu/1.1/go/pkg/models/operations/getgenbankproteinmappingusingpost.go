@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetGenBankProteinMappingUsingPOSTRequest struct {
-	// data
-	Request *shared.RGDIDListRequest `request:"mediaType=application/json"`
-}
 
 type GetGenBankProteinMappingUsingPOSTResponse struct {
 	Body        []byte

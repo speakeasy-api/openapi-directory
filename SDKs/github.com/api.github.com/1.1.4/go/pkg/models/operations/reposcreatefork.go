@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposCreateForkPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ReposCreateForkRequestBody struct {
 	// When forking from an existing repository, fork with only the default branch.
 	DefaultBranchOnly *bool `json:"default_branch_only,omitempty"`
@@ -24,8 +17,11 @@ type ReposCreateForkRequestBody struct {
 }
 
 type ReposCreateForkRequest struct {
-	PathParams ReposCreateForkPathParams
-	Request    *ReposCreateForkRequestBody `request:"mediaType=application/json"`
+	RequestBody *ReposCreateForkRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ReposCreateForkResponse struct {

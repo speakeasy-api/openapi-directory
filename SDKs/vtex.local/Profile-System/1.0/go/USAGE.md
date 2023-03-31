@@ -13,27 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateClientAddressRequest{
-        PathParams: operations.CreateClientAddressPathParams{
-            ProfileID: "70caf394-8534-447e-a0ca-1803c669c771",
-        },
-        QueryParams: operations.CreateClientAddressQueryParams{
-            AlternativeKey: "email",
-        },
-        Headers: operations.CreateClientAddressHeaders{
-            Accept: "application/json",
-            ContentType: "application/json",
-        },
-        Request: &shared.Address{
+        Accept: "application/json",
+        ContentType: "application/json",
+        Address: &shared.Address{
             AdministrativeAreaLevel1: "RJ",
             CountryCode: "BR",
             CountryName: "Brasil",
@@ -43,6 +31,8 @@ func main() {
             Route: "51",
             StreetNumber: "999",
         },
+        AlternativeKey: "email",
+        ProfileID: "70caf394-8534-447e-a0ca-1803c669c771",
     }
 
     ctx := context.Background()

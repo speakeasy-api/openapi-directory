@@ -7,26 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetSingleCustomFieldValuePathParams struct {
+type SetSingleCustomFieldValueRequest struct {
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Type of the content being sent.
+	ContentType                      string                                  `header:"style=simple,explode=false,name=Content-Type"`
+	SetsinglecustomfieldvalueRequest shared.SetsinglecustomfieldvalueRequest `request:"mediaType=application/json"`
 	// Name of the app's field created through the Update orderForm Configuration endpoint.
 	AppFieldName string `pathParam:"style=simple,explode=false,name=appFieldName"`
 	// ID of the app created through the Update orderForm Configuration endpoint.
 	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 	// The ID of the orderForm whose custom field's value you want to change.
 	OrderFormID string `pathParam:"style=simple,explode=false,name=orderFormId"`
-}
-
-type SetSingleCustomFieldValueHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SetSingleCustomFieldValueRequest struct {
-	PathParams SetSingleCustomFieldValuePathParams
-	Headers    SetSingleCustomFieldValueHeaders
-	Request    shared.SetsinglecustomfieldvalueRequest `request:"mediaType=application/json"`
 }
 
 type SetSingleCustomFieldValueResponse struct {

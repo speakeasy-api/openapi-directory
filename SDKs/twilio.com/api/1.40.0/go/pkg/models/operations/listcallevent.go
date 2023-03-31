@@ -12,30 +12,21 @@ var ListCallEventServerList = []string{
 }
 
 type ListCallEventSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListCallEventPathParams struct {
+type ListCallEventRequest struct {
 	// The unique SID identifier of the Account.
 	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
 	// The unique SID identifier of the Call.
 	CallSid string `pathParam:"style=simple,explode=false,name=CallSid"`
-}
-
-type ListCallEventQueryParams struct {
 	// The page index. This value is simply for client state.
 	Page *int64 `queryParam:"style=form,explode=true,name=Page"`
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListCallEventRequest struct {
-	PathParams  ListCallEventPathParams
-	QueryParams ListCallEventQueryParams
-	Security    ListCallEventSecurity
-	ServerURL   *string
 }
 
 // ListCallEventListCallEventResponse - OK

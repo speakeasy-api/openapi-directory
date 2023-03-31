@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetTokenMetadataPathParams struct {
+type TestnetGetTokenMetadataRequest struct {
 	// TokenId to request metadata for
 	Tokenid string `pathParam:"style=simple,explode=false,name=tokenid"`
-}
-
-type TestnetGetTokenMetadataQueryParams struct {
 	// 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
 	Verbosity *float64 `queryParam:"style=form,explode=true,name=verbosity"`
-}
-
-type TestnetGetTokenMetadataRequest struct {
-	PathParams  TestnetGetTokenMetadataPathParams
-	QueryParams TestnetGetTokenMetadataQueryParams
 }
 
 type TestnetGetTokenMetadataResponse struct {

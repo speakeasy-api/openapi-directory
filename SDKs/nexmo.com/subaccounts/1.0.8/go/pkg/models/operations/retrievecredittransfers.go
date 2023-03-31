@@ -8,27 +8,19 @@ import (
 )
 
 type RetrieveCreditTransfersSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type RetrieveCreditTransfersPathParams struct {
+type RetrieveCreditTransfersRequest struct {
 	// ID of the primary account.
 	APIKey string `pathParam:"style=simple,explode=false,name=api_key"`
-}
-
-type RetrieveCreditTransfersQueryParams struct {
 	// End of the retrieval period. If absent then all transfers until now is returned.
 	EndDate *string `queryParam:"style=form,explode=true,name=end_date"`
 	// Start of the retrieval period.
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
 	// Subaccount to filter by. You may send this multiple times to filter on multiple subaccounts
 	Subaccount *string `queryParam:"style=form,explode=true,name=subaccount"`
-}
-
-type RetrieveCreditTransfersRequest struct {
-	PathParams  RetrieveCreditTransfersPathParams
-	QueryParams RetrieveCreditTransfersQueryParams
-	Security    RetrieveCreditTransfersSecurity
 }
 
 // RetrieveCreditTransfers404ApplicationJSON - Invalid API Key

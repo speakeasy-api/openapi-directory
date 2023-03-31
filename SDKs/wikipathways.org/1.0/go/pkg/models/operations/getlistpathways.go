@@ -44,14 +44,10 @@ func (e *GetListPathwaysFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetListPathwaysQueryParams struct {
+type GetListPathwaysRequest struct {
 	Format *GetListPathwaysFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The organism to filter by (optional)
 	Organism *string `queryParam:"style=form,explode=true,name=organism"`
-}
-
-type GetListPathwaysRequest struct {
-	QueryParams GetListPathwaysQueryParams
 }
 
 type GetListPathwaysResponse struct {

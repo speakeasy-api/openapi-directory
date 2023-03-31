@@ -7,29 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PredictImageURLWithNoStoreRawPathParams struct {
-	// The project id
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type PredictImageURLWithNoStoreRawQueryParams struct {
+type PredictImageURLWithNoStoreRawRequest struct {
+	PredictionKey string `header:"style=simple,explode=false,name=Prediction-Key"`
+	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Optional. Specifies the name of application using the endpoint
 	Application *string `queryParam:"style=form,explode=true,name=application"`
 	// Optional. Specifies the id of a particular iteration to evaluate against.
 	//             The default iteration for the project will be used when not specified
 	IterationID *string `queryParam:"style=form,explode=true,name=iterationId"`
-}
-
-type PredictImageURLWithNoStoreRawHeaders struct {
-	PredictionKey string `header:"style=simple,explode=false,name=Prediction-Key"`
-}
-
-type PredictImageURLWithNoStoreRawRequest struct {
-	PathParams  PredictImageURLWithNoStoreRawPathParams
-	QueryParams PredictImageURLWithNoStoreRawQueryParams
-	Headers     PredictImageURLWithNoStoreRawHeaders
-	// An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
-	Request []byte `request:"mediaType=text/xml"`
+	// The project id
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type PredictImageURLWithNoStoreRawResponse struct {

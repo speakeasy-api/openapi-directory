@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CreateWithdrawalSecurity struct {
-	APISecretKey shared.SchemeAPISecretKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CreateWithdrawalHeaders struct {
-	// ApiSecretKey
-	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 // CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum - Withdrawal sub transaction type
@@ -56,9 +50,9 @@ type CreateWithdrawalRootTypeForWithdrawal struct {
 }
 
 type CreateWithdrawalRequest struct {
-	Headers  CreateWithdrawalHeaders
-	Request  CreateWithdrawalRootTypeForWithdrawal `request:"mediaType=application/json"`
-	Security CreateWithdrawalSecurity
+	RequestBody CreateWithdrawalRootTypeForWithdrawal `request:"mediaType=application/json"`
+	// ApiSecretKey
+	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
 }
 
 // CreateWithdrawal500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support

@@ -33,7 +33,7 @@ func (e *PlayerGameStatsByWeekDeltaFormatEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type PlayerGameStatsByWeekDeltaPathParams struct {
+type PlayerGameStatsByWeekDeltaRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayerGameStatsByWeekDeltaFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:<br>
@@ -48,10 +48,6 @@ type PlayerGameStatsByWeekDeltaPathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type PlayerGameStatsByWeekDeltaRequest struct {
-	PathParams PlayerGameStatsByWeekDeltaPathParams
 }
 
 type PlayerGameStatsByWeekDeltaResponse struct {

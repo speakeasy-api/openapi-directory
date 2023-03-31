@@ -4,11 +4,10 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetAreasRequest(
-    query_params=operations.GetAreasQueryParams(
-        format="xml",
-    ),
+    format="xml",
 )
     
 res = s.resources.get_areas(req)

@@ -35,9 +35,9 @@ func newExperiments(defaultClient, securityClient HTTPClient, serverURL, languag
 // CreateExperimentUsingPOST - createExperiment
 func (s *experiments) CreateExperimentUsingPOST(ctx context.Context, request operations.CreateExperimentUsingPOSTRequest) (*operations.CreateExperimentUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExperimentModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -102,7 +102,7 @@ func (s *experiments) CreateExperimentUsingPOST(ctx context.Context, request ope
 // DELETEExperimentUsingDELETE - deleteExperiment
 func (s *experiments) DELETEExperimentUsingDELETE(ctx context.Context, request operations.DELETEExperimentUsingDELETERequest) (*operations.DELETEExperimentUsingDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +151,7 @@ func (s *experiments) DELETEExperimentUsingDELETE(ctx context.Context, request o
 // DoActionExperimentUsingPOST - doActionExperiment
 func (s *experiments) DoActionExperimentUsingPOST(ctx context.Context, request operations.DoActionExperimentUsingPOSTRequest) (*operations.DoActionExperimentUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}/{action}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}/{action}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -208,7 +208,7 @@ func (s *experiments) DoActionExperimentUsingPOST(ctx context.Context, request o
 // GETExperimentUsingGET - getExperiment
 func (s *experiments) GETExperimentUsingGET(ctx context.Context, request operations.GETExperimentUsingGETRequest) (*operations.GETExperimentUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +265,7 @@ func (s *experiments) GETExperimentUsingGET(ctx context.Context, request operati
 // GETExperimentsUsingGET - getExperiments
 func (s *experiments) GETExperimentsUsingGET(ctx context.Context, request operations.GETExperimentsUsingGETRequest) (*operations.GETExperimentsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -322,9 +322,9 @@ func (s *experiments) GETExperimentsUsingGET(ctx context.Context, request operat
 // UpdateExperimentUsingPUT - updateExperiment
 func (s *experiments) UpdateExperimentUsingPUT(ctx context.Context, request operations.UpdateExperimentUsingPUTRequest) (*operations.UpdateExperimentUsingPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/manage/experiments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExperimentModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

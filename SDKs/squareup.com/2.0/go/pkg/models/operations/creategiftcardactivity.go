@@ -8,15 +8,7 @@ import (
 )
 
 type CreateGiftCardActivitySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateGiftCardActivityRequest struct {
-	// An object containing the fields to POST for the request.
-	//
-	// See the corresponding object definition for field details.
-	Request  shared.CreateGiftCardActivityRequest `request:"mediaType=application/json"`
-	Security CreateGiftCardActivitySecurity
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateGiftCardActivityResponse struct {

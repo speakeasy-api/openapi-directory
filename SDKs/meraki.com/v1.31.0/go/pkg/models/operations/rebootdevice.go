@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type RebootDevicePathParams struct {
-	Serial string `pathParam:"style=simple,explode=false,name=serial"`
-}
-
 type RebootDeviceRequest struct {
-	PathParams RebootDevicePathParams
+	Serial string `pathParam:"style=simple,explode=false,name=serial"`
 }
 
 type RebootDeviceResponse struct {

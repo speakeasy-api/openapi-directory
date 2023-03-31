@@ -46,11 +46,6 @@ type PostFloatingIpsCreateFloatingIPRequest struct {
 	Type PostFloatingIpsCreateFloatingIPRequestTypeEnum `json:"type"`
 }
 
-type PostFloatingIpsRequest struct {
-	// The `type` argument is required while `home_location` and `server` are mutually exclusive.
-	Request *PostFloatingIpsCreateFloatingIPRequest `request:"mediaType=application/json"`
-}
-
 // PostFloatingIps201ApplicationJSONActionError - Error message for the Action if error occurred, otherwise null
 type PostFloatingIps201ApplicationJSONActionError struct {
 	// Fixed machine readable code

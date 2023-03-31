@@ -12,19 +12,8 @@ var UpdateChannelServerList = []string{
 }
 
 type UpdateChannelSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateChannelPathParams struct {
-	// The unique SID identifier of the Service.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-	// A 34 character string that uniquely identifies this Channel.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type UpdateChannelHeaders struct {
-	// The X-Twilio-Webhook-Enabled HTTP request header
-	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateChannelUpdateChannelRequest struct {
@@ -34,11 +23,13 @@ type UpdateChannelUpdateChannelRequest struct {
 }
 
 type UpdateChannelRequest struct {
-	PathParams UpdateChannelPathParams
-	Headers    UpdateChannelHeaders
-	Request    *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateChannelSecurity
-	ServerURL  *string
+	RequestBody *UpdateChannelUpdateChannelRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Service.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	// A 34 character string that uniquely identifies this Channel.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	// The X-Twilio-Webhook-Enabled HTTP request header
+	XTwilioWebhookEnabled *shared.ChannelEnumWebhookEnabledTypeEnum `header:"style=simple,explode=false,name=X-Twilio-Webhook-Enabled"`
 }
 
 type UpdateChannelResponse struct {

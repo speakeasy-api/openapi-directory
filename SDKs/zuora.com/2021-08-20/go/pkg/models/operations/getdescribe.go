@@ -6,15 +6,7 @@ import (
 	"net/http"
 )
 
-type GETDescribePathParams struct {
-	// API name of an object in your Zuora tenant. For example, `InvoiceItem`. See [Zuora Object Model](https://www.zuora.com/developer/api-reference/#section/Zuora-Object-Model) for the list of valid object names.
-	//
-	// Depending on the features enabled in your Zuora tenant, you may not be able to list the fields of some objects.
-	//
-	Object string `pathParam:"style=simple,explode=false,name=object"`
-}
-
-type GETDescribeHeaders struct {
+type GETDescribeRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -23,11 +15,11 @@ type GETDescribeHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETDescribeRequest struct {
-	PathParams GETDescribePathParams
-	Headers    GETDescribeHeaders
+	// API name of an object in your Zuora tenant. For example, `InvoiceItem`. See [Zuora Object Model](https://www.zuora.com/developer/api-reference/#section/Zuora-Object-Model) for the list of valid object names.
+	//
+	// Depending on the features enabled in your Zuora tenant, you may not be able to list the fields of some objects.
+	//
+	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
 
 type GETDescribeResponse struct {

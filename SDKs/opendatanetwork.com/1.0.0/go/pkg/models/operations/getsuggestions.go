@@ -41,12 +41,9 @@ func (e *GetSuggestionsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSuggestionsPathParams struct {
-	// Type of the object to find.
-	Type GetSuggestionsTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetSuggestionsQueryParams struct {
+type GetSuggestionsRequest struct {
+	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
 	// The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
 	// used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
 	AppToken *string `queryParam:"style=form,explode=true,name=app_token"`
@@ -55,6 +52,8 @@ type GetSuggestionsQueryParams struct {
 	Limit *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// Query to match.
 	Query string `queryParam:"style=form,explode=true,name=query"`
+	// Type of the object to find.
+	Type GetSuggestionsTypeEnum `pathParam:"style=simple,explode=false,name=type"`
 	// This parameter is only available when suggesting entities with `type=entity`.
 	// If it is provided, suggestions will be filtered to include
 	// only entities that have data for the given variable.
@@ -64,17 +63,6 @@ type GetSuggestionsQueryParams struct {
 	// Note that this filtering will increase response time significantly,
 	// so it should only be used when necessary.
 	VariableID *string `queryParam:"style=form,explode=true,name=variable_id"`
-}
-
-type GetSuggestionsHeaders struct {
-	// e.g. cQovpGcdUT1CSzgYk0KPYdAI0
-	XAppToken *string `header:"style=simple,explode=false,name=X-App-Token"`
-}
-
-type GetSuggestionsRequest struct {
-	PathParams  GetSuggestionsPathParams
-	QueryParams GetSuggestionsQueryParams
-	Headers     GetSuggestionsHeaders
 }
 
 type GetSuggestionsResponse struct {

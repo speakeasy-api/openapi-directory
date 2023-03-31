@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteBinIDRequest{
-        PathParams: operations.DeleteBinIDPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()

@@ -33,7 +33,7 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject - Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The metrics scope representing the specified monitored project will always be the first entry in the response.
-func (s *locations) MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject(ctx context.Context, request operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest) (*operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectResponse, error) {
+func (s *locations) MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject(ctx context.Context, request operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest, security operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity) (*operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/locations/global/metricsScopes:listMetricsScopesByMonitoredProject"
 
@@ -42,11 +42,11 @@ func (s *locations) MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,11 +81,11 @@ func (s *locations) MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMon
 }
 
 // MonitoringLocationsGlobalMetricsScopesProjectsCreate - Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
-func (s *locations) MonitoringLocationsGlobalMetricsScopesProjectsCreate(ctx context.Context, request operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateRequest) (*operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateResponse, error) {
+func (s *locations) MonitoringLocationsGlobalMetricsScopesProjectsCreate(ctx context.Context, request operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateRequest, security operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateSecurity) (*operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/projects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MonitoredProjectInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,11 +97,11 @@ func (s *locations) MonitoringLocationsGlobalMetricsScopesProjectsCreate(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

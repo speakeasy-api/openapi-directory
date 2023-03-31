@@ -74,9 +74,9 @@ func newAPIVersion(defaultClient, securityClient HTTPClient, serverURL, language
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *apiVersion) CreateAPIVersion(ctx context.Context, request operations.CreateAPIVersionRequest) (*operations.CreateAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -130,7 +130,7 @@ func (s *apiVersion) CreateAPIVersion(ctx context.Context, request operations.Cr
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *apiVersion) DeleteAnAPIVersion(ctx context.Context, request operations.DeleteAnAPIVersionRequest) (*operations.DeleteAnAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -179,7 +179,7 @@ func (s *apiVersion) DeleteAnAPIVersion(ctx context.Context, request operations.
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *apiVersion) GetAllAPIVersions(ctx context.Context, request operations.GetAllAPIVersionsRequest) (*operations.GetAllAPIVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +228,7 @@ func (s *apiVersion) GetAllAPIVersions(ctx context.Context, request operations.G
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *apiVersion) GetAnAPIVersion(ctx context.Context, request operations.GetAnAPIVersionRequest) (*operations.GetAnAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,9 +279,9 @@ func (s *apiVersion) GetAnAPIVersion(ctx context.Context, request operations.Get
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *apiVersion) UpdateAnAPIVersion(ctx context.Context, request operations.UpdateAnAPIVersionRequest) (*operations.UpdateAnAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

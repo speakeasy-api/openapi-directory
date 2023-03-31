@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRealmClientsIDRolesRoleNameCompositesClientsClientPathParams struct {
+type GetRealmClientsIDRolesRoleNameCompositesClientsClientRequest struct {
 	Client string `pathParam:"style=simple,explode=false,name=client"`
 	// id of client (not client-id)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -15,10 +15,6 @@ type GetRealmClientsIDRolesRoleNameCompositesClientsClientPathParams struct {
 	Realm string `pathParam:"style=simple,explode=false,name=realm"`
 	// role’s name (not id!)
 	RoleName string `pathParam:"style=simple,explode=false,name=role-name"`
-}
-
-type GetRealmClientsIDRolesRoleNameCompositesClientsClientRequest struct {
-	PathParams GetRealmClientsIDRolesRoleNameCompositesClientsClientPathParams
 }
 
 type GetRealmClientsIDRolesRoleNameCompositesClientsClientResponse struct {

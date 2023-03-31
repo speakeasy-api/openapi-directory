@@ -103,10 +103,6 @@ func (u PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody) MarshalJSON() 
 	return nil, nil
 }
 
-type PostPortfolioAnalysisSharpeRatioProbabilisticRequest struct {
-	Request PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody `request:"mediaType=application/json"`
-}
-
 type PostPortfolioAnalysisSharpeRatioProbabilistic200ApplicationJSONPortfolios struct {
 	// The probabilistic Sharpe ratio of the portfolio, in percentage
 	PortfolioProbabilisticSharpeRatio float64 `json:"portfolioProbabilisticSharpeRatio"`

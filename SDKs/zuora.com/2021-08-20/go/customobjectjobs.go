@@ -55,9 +55,9 @@ func (s *customObjectJobs) GETAllCustomObjectBulkJobs(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,14 +103,14 @@ func (s *customObjectJobs) GETAllCustomObjectBulkJobs(ctx context.Context, reque
 // Only the users that have the "View Custom Objects" permission can retrieve custom object bulk jobs. See [Platform Permissions](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/User_Roles/h_Platform_Roles#Platform_Permissions) for more information.
 func (s *customObjectJobs) GETCustomObjectBulkJob(ctx context.Context, request operations.GETCustomObjectBulkJobRequest) (*operations.GETCustomObjectBulkJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/jobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/jobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -164,14 +164,14 @@ func (s *customObjectJobs) GETCustomObjectBulkJob(ctx context.Context, request o
 // Lists all errors for a custom object bulk job.
 func (s *customObjectJobs) GETCustomObjectBulkJobErrors(ctx context.Context, request operations.GETCustomObjectBulkJobErrorsRequest) (*operations.GETCustomObjectBulkJobErrorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/jobs/{id}/errors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/jobs/{id}/errors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -231,7 +231,7 @@ func (s *customObjectJobs) POSTCustomObjectBulkJob(ctx context.Context, request 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/objects/jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomObjectBulkJobRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -246,7 +246,7 @@ func (s *customObjectJobs) POSTCustomObjectBulkJob(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -304,9 +304,9 @@ func (s *customObjectJobs) POSTCustomObjectBulkJob(ctx context.Context, request 
 // Only the users that have the "Edit Custom Objects" permission can upload files to custom object bulk jobs. See [Platform Permissions](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/User_Roles/h_Platform_Roles#Platform_Permissions) for more information.
 func (s *customObjectJobs) POSTUploadFileForCustomObjectBulkJob(ctx context.Context, request operations.POSTUploadFileForCustomObjectBulkJobRequest) (*operations.POSTUploadFileForCustomObjectBulkJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/objects/jobs/{id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/objects/jobs/{id}/files", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -321,7 +321,7 @@ func (s *customObjectJobs) POSTUploadFileForCustomObjectBulkJob(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

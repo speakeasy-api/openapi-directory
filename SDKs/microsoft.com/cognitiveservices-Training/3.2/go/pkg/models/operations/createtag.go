@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTagPathParams struct {
-	// The project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
 // CreateTagTypeEnum - Optional type for the tag.
 type CreateTagTypeEnum string
 
@@ -38,18 +33,15 @@ func (e *CreateTagTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateTagQueryParams struct {
+type CreateTagRequest struct {
 	// Optional description for the tag.
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// The tag name.
 	Name string `queryParam:"style=form,explode=true,name=name"`
+	// The project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Optional type for the tag.
 	Type *CreateTagTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type CreateTagRequest struct {
-	PathParams  CreateTagPathParams
-	QueryParams CreateTagQueryParams
 }
 
 type CreateTagResponse struct {

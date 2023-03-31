@@ -10,13 +10,8 @@ import (
 )
 
 type GetContributorCollectionsListSecurity struct {
-	Basic              *shared.SchemeBasic              `security:"scheme,type=http,subtype=basic"`
-	CustomerAccessCode *shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type GetContributorCollectionsListPathParams struct {
-	// Contributor ID
-	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetContributorCollectionsListSortEnum - Sort order
@@ -46,15 +41,11 @@ func (e *GetContributorCollectionsListSortEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetContributorCollectionsListQueryParams struct {
+type GetContributorCollectionsListRequest struct {
+	// Contributor ID
+	ContributorID string `pathParam:"style=simple,explode=false,name=contributor_id"`
 	// Sort order
 	Sort *GetContributorCollectionsListSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetContributorCollectionsListRequest struct {
-	PathParams  GetContributorCollectionsListPathParams
-	QueryParams GetContributorCollectionsListQueryParams
-	Security    GetContributorCollectionsListSecurity
 }
 
 type GetContributorCollectionsListResponse struct {

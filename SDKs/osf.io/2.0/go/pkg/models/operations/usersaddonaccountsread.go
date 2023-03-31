@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UsersAddonAccountsReadPathParams struct {
+type UsersAddonAccountsReadRequest struct {
 	// The unique identifier of the addon account.
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 	// The unique identifier of the addon provider.
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type UsersAddonAccountsReadRequest struct {
-	PathParams UsersAddonAccountsReadPathParams
 }
 
 // UsersAddonAccountsReadAddonAccountAttributes - The properties of the addon account entity.

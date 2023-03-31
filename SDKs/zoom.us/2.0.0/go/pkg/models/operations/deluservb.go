@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DelUserVBPathParams struct {
-	// Unique identifier of the user. Retrieve the value of this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DelUserVBQueryParams struct {
+type DelUserVBRequest struct {
 	// Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
 	FileIds *string `queryParam:"style=form,explode=true,name=file_ids"`
-}
-
-type DelUserVBRequest struct {
-	PathParams  DelUserVBPathParams
-	QueryParams DelUserVBQueryParams
+	// Unique identifier of the user. Retrieve the value of this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DelUserVBResponse struct {

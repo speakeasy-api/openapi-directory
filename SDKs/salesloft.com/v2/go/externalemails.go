@@ -35,7 +35,7 @@ func newExternalEmails(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // PostV2ExternalEmailsJSON - Create an External Email
 // Creates an external email object.
-func (s *externalEmails) PostV2ExternalEmailsJSON(ctx context.Context, request operations.PostV2ExternalEmailsJSONRequest) (*operations.PostV2ExternalEmailsJSONResponse, error) {
+func (s *externalEmails) PostV2ExternalEmailsJSON(ctx context.Context, request operations.PostV2ExternalEmailsJSONRequestBody) (*operations.PostV2ExternalEmailsJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/external_emails.json"
 

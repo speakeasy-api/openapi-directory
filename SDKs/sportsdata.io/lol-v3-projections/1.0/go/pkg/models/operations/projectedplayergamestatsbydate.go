@@ -33,16 +33,12 @@ func (e *ProjectedPlayerGameStatsByDateFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ProjectedPlayerGameStatsByDatePathParams struct {
+type ProjectedPlayerGameStatsByDateRequest struct {
 	// The date of the game(s).
 	// <br>Example: <code>2019-01-20</code>
 	Date string `pathParam:"style=simple,explode=false,name=date"`
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format ProjectedPlayerGameStatsByDateFormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
-type ProjectedPlayerGameStatsByDateRequest struct {
-	PathParams ProjectedPlayerGameStatsByDatePathParams
 }
 
 type ProjectedPlayerGameStatsByDateResponse struct {

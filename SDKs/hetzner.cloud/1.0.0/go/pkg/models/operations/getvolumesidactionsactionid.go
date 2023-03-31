@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type GetVolumesIDActionsActionIDPathParams struct {
+type GetVolumesIDActionsActionIDRequest struct {
 	// ID of the Action
 	ActionID int64 `pathParam:"style=simple,explode=false,name=action_id"`
 	// ID of the Volume
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetVolumesIDActionsActionIDRequest struct {
-	PathParams GetVolumesIDActionsActionIDPathParams
 }
 
 // GetVolumesIDActionsActionIDActionResponseActionError - Error message for the Action if error occurred, otherwise null

@@ -25,7 +25,6 @@ pkg/models/operations/youtubereportingreporttypeslist.go
 pkg/models/shared/job.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/listjobsresponse.go
 pkg/models/shared/report.go
 pkg/models/shared/listreportsresponse.go

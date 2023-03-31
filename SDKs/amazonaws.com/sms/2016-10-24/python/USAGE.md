@@ -3,173 +3,225 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.CreateAppRequest(
-    headers=operations.CreateAppHeaders(
-        x_amz_algorithm="doloremque",
-        x_amz_content_sha256="eius",
-        x_amz_credential="ut",
-        x_amz_date="omnis",
-        x_amz_security_token="qui",
-        x_amz_signature="voluptate",
-        x_amz_signed_headers="quia",
-        x_amz_target="AWSServerMigrationService_V2016_10_24.CreateApp",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.CreateAppRequest(
-        client_token="voluptates",
-        description="voluptatem",
-        name="iusto",
-        role_name="laudantium",
+)
+
+
+req = operations.CreateAppRequest(
+    create_app_request=shared.CreateAppRequest(
+        client_token="corrupti",
+        description="provident",
+        name="distinctio",
+        role_name="quibusdam",
         server_groups=[
             shared.ServerGroup(
-                name="ea",
-                server_group_id="qui",
+                name="nulla",
+                server_group_id="corrupti",
                 server_list=[
                     shared.Server(
-                        replication_job_id="sapiente",
+                        replication_job_id="vel",
                         replication_job_terminated=False,
-                        server_id="consequatur",
+                        server_id="error",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="dolores",
-                            vm_manager_type="VSPHERE",
-                            vm_name="et",
-                            vm_path="harum",
+                            vm_manager_name="deserunt",
+                            vm_manager_type="SCVMM",
+                            vm_name="iure",
+                            vm_path="magnam",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="iusto",
-                                vm_manager_id="corporis",
+                                vm_id="debitis",
+                                vm_manager_id="ipsa",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="deleniti",
-                        replication_job_terminated=True,
-                        server_id="tempore",
+                        replication_job_id="delectus",
+                        replication_job_terminated=False,
+                        server_id="tempora",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="amet",
-                            vm_manager_type="VSPHERE",
-                            vm_name="quia",
-                            vm_path="nihil",
+                            vm_manager_name="suscipit",
+                            vm_manager_type="SCVMM",
+                            vm_name="minus",
+                            vm_path="placeat",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="voluptas",
-                                vm_manager_id="quidem",
+                                vm_id="voluptatum",
+                                vm_manager_id="iusto",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="excepturi",
+                        replication_job_terminated=False,
+                        server_id="nisi",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="recusandae",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="ab",
+                            vm_path="quis",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="veritatis",
+                                vm_manager_id="deserunt",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="perferendis",
+                        replication_job_terminated=False,
+                        server_id="ipsam",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="repellendus",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="quo",
+                            vm_path="odit",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="at",
+                                vm_manager_id="at",
                             ),
                         ),
                     ),
                 ],
             ),
             shared.ServerGroup(
-                name="quia",
-                server_group_id="voluptas",
+                name="maiores",
+                server_group_id="molestiae",
                 server_list=[
                     shared.Server(
-                        replication_job_id="earum",
-                        replication_job_terminated=True,
-                        server_id="est",
+                        replication_job_id="quod",
+                        replication_job_terminated=False,
+                        server_id="esse",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="soluta",
-                            vm_manager_type="SCVMM",
-                            vm_name="explicabo",
-                            vm_path="corporis",
+                            vm_manager_name="totam",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="dolorum",
+                            vm_path="dicta",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="quia",
-                                vm_manager_id="sunt",
+                                vm_id="nam",
+                                vm_manager_id="officia",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="necessitatibus",
-                        replication_job_terminated=True,
-                        server_id="voluptatem",
+                        replication_job_id="occaecati",
+                        replication_job_terminated=False,
+                        server_id="fugit",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="quia",
-                            vm_manager_type="VSPHERE",
-                            vm_name="possimus",
-                            vm_path="in",
+                            vm_manager_name="deleniti",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="optio",
+                            vm_path="totam",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="totam",
+                                vm_id="beatae",
+                                vm_manager_id="commodi",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="molestiae",
+                        replication_job_terminated=False,
+                        server_id="modi",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="qui",
+                            vm_manager_type="HYPERV-MANAGER",
+                            vm_name="cum",
+                            vm_path="esse",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="ipsum",
                                 vm_manager_id="excepturi",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="rerum",
+                        replication_job_id="aspernatur",
                         replication_job_terminated=False,
-                        server_id="facilis",
+                        server_id="perferendis",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="odio",
-                            vm_manager_type="VSPHERE",
-                            vm_name="aut",
-                            vm_path="consectetur",
+                            vm_manager_name="ad",
+                            vm_manager_type="SCVMM",
+                            vm_name="sed",
+                            vm_path="iste",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="nihil",
-                                vm_manager_id="similique",
+                                vm_id="dolor",
+                                vm_manager_id="natus",
                             ),
                         ),
                     ),
                 ],
             ),
             shared.ServerGroup(
-                name="magnam",
-                server_group_id="mollitia",
+                name="laboriosam",
+                server_group_id="hic",
                 server_list=[
                     shared.Server(
-                        replication_job_id="magnam",
+                        replication_job_id="fuga",
                         replication_job_terminated=False,
-                        server_id="et",
+                        server_id="in",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="nisi",
+                            vm_manager_name="corporis",
                             vm_manager_type="SCVMM",
-                            vm_name="quis",
-                            vm_path="consequatur",
+                            vm_name="iure",
+                            vm_path="saepe",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="qui",
-                                vm_manager_id="aut",
+                                vm_id="quidem",
+                                vm_manager_id="architecto",
                             ),
                         ),
                     ),
                     shared.Server(
-                        replication_job_id="modi",
+                        replication_job_id="ipsa",
                         replication_job_terminated=False,
-                        server_id="quia",
+                        server_id="reiciendis",
                         server_type="VIRTUAL_MACHINE",
                         vm_server=shared.VMServer(
-                            vm_manager_name="eligendi",
+                            vm_manager_name="est",
+                            vm_manager_type="SCVMM",
+                            vm_name="laborum",
+                            vm_path="dolores",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="dolorem",
+                                vm_manager_id="corporis",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="explicabo",
+                        replication_job_terminated=False,
+                        server_id="nobis",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="enim",
+                            vm_manager_type="SCVMM",
+                            vm_name="nemo",
+                            vm_path="minima",
+                            vm_server_address=shared.VMServerAddress(
+                                vm_id="excepturi",
+                                vm_manager_id="accusantium",
+                            ),
+                        ),
+                    ),
+                    shared.Server(
+                        replication_job_id="iure",
+                        replication_job_terminated=False,
+                        server_id="culpa",
+                        server_type="VIRTUAL_MACHINE",
+                        vm_server=shared.VMServer(
+                            vm_manager_name="doloribus",
                             vm_manager_type="HYPERV-MANAGER",
-                            vm_name="perspiciatis",
-                            vm_path="molestiae",
+                            vm_name="architecto",
+                            vm_path="mollitia",
                             vm_server_address=shared.VMServerAddress(
-                                vm_id="voluptatem",
-                                vm_manager_id="autem",
-                            ),
-                        ),
-                    ),
-                    shared.Server(
-                        replication_job_id="sit",
-                        replication_job_terminated=False,
-                        server_id="molestias",
-                        server_type="VIRTUAL_MACHINE",
-                        vm_server=shared.VMServer(
-                            vm_manager_name="voluptates",
-                            vm_manager_type="VSPHERE",
-                            vm_name="numquam",
-                            vm_path="magni",
-                            vm_server_address=shared.VMServerAddress(
-                                vm_id="veritatis",
-                                vm_manager_id="itaque",
+                                vm_id="dolorem",
+                                vm_manager_id="culpa",
                             ),
                         ),
                     ),
@@ -178,19 +230,19 @@ req = operations.CreateAppRequest(
         ],
         tags=[
             shared.Tag(
-                key="vitae",
-                value="quo",
-            ),
-            shared.Tag(
-                key="corrupti",
-                value="iusto",
-            ),
-            shared.Tag(
-                key="dolores",
-                value="nobis",
+                key="repellat",
+                value="mollitia",
             ),
         ],
     ),
+    x_amz_algorithm="occaecati",
+    x_amz_content_sha256="numquam",
+    x_amz_credential="commodi",
+    x_amz_date="quam",
+    x_amz_security_token="molestiae",
+    x_amz_signature="velit",
+    x_amz_signed_headers="error",
+    x_amz_target="AWSServerMigrationService_V2016_10_24.CreateApp",
 )
     
 res = s.create_app(req)

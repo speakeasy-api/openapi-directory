@@ -8,20 +8,18 @@ import (
 )
 
 type Adexchangebuyer2AccountsProposalsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type Adexchangebuyer2AccountsProposalsCreatePathParams struct {
-	// Account ID of the buyer.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type Adexchangebuyer2AccountsProposalsCreateQueryParams struct {
+type Adexchangebuyer2AccountsProposalsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	ProposalInput *shared.ProposalInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
+	// Account ID of the buyer.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
@@ -40,13 +38,6 @@ type Adexchangebuyer2AccountsProposalsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type Adexchangebuyer2AccountsProposalsCreateRequest struct {
-	PathParams  Adexchangebuyer2AccountsProposalsCreatePathParams
-	QueryParams Adexchangebuyer2AccountsProposalsCreateQueryParams
-	Request     *shared.ProposalInput `request:"mediaType=application/json"`
-	Security    Adexchangebuyer2AccountsProposalsCreateSecurity
 }
 
 type Adexchangebuyer2AccountsProposalsCreateResponse struct {

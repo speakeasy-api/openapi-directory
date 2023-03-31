@@ -8,19 +8,14 @@ import (
 )
 
 type PrivateProjectNotesCreateSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateProjectNotesCreatePathParams struct {
-	// Project unique identifier
-	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateProjectNotesCreateRequest struct {
-	PathParams PrivateProjectNotesCreatePathParams
 	// Note message
-	Request  shared.ProjectNoteCreate `request:"mediaType=application/json"`
-	Security PrivateProjectNotesCreateSecurity
+	ProjectNoteCreate shared.ProjectNoteCreate `request:"mediaType=application/json"`
+	// Project unique identifier
+	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 }
 
 type PrivateProjectNotesCreateResponse struct {

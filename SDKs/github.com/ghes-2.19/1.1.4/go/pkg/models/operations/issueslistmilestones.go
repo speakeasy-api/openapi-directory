@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IssuesListMilestonesPathParams struct {
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	Repo  string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // IssuesListMilestonesDirectionEnum - The direction of the sort. Either `asc` or `desc`.
 type IssuesListMilestonesDirectionEnum string
 
@@ -89,22 +84,19 @@ func (e *IssuesListMilestonesStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IssuesListMilestonesQueryParams struct {
+type IssuesListMilestonesRequest struct {
 	// The direction of the sort. Either `asc` or `desc`.
 	Direction *IssuesListMilestonesDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	Owner     string                             `pathParam:"style=simple,explode=false,name=owner"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
+	Repo    string `pathParam:"style=simple,explode=false,name=repo"`
 	// What to sort results by. Either `due_on` or `completeness`.
 	Sort *IssuesListMilestonesSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// The state of the milestone. Either `open`, `closed`, or `all`.
 	State *IssuesListMilestonesStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type IssuesListMilestonesRequest struct {
-	PathParams  IssuesListMilestonesPathParams
-	QueryParams IssuesListMilestonesQueryParams
 }
 
 type IssuesListMilestonesResponse struct {

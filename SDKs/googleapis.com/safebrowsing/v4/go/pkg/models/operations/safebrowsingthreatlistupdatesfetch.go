@@ -7,9 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SafebrowsingThreatListUpdatesFetchQueryParams struct {
+type SafebrowsingThreatListUpdatesFetchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                               *shared.XgafvEnum                                                 `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest *shared.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -30,11 +31,6 @@ type SafebrowsingThreatListUpdatesFetchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SafebrowsingThreatListUpdatesFetchRequest struct {
-	QueryParams SafebrowsingThreatListUpdatesFetchQueryParams
-	Request     *shared.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest `request:"mediaType=application/json"`
 }
 
 type SafebrowsingThreatListUpdatesFetchResponse struct {

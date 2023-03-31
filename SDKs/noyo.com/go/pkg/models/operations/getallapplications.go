@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAllApplicationsQueryParams struct {
+type GetAllApplicationsRequest struct {
 	// The application type used to filter results
 	ApplicationType *string `queryParam:"style=form,explode=true,name=application_type"`
 	// The associated carrier ID used to filter results
@@ -20,10 +20,6 @@ type GetAllApplicationsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// The application status used to filter results
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetAllApplicationsRequest struct {
-	QueryParams GetAllApplicationsQueryParams
 }
 
 type GetAllApplicationsResponse struct {

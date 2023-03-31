@@ -32,11 +32,11 @@ func newOrdertrackingsignals(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // ContentOrdertrackingsignalsCreate - Creates new order tracking signal.
-func (s *ordertrackingsignals) ContentOrdertrackingsignalsCreate(ctx context.Context, request operations.ContentOrdertrackingsignalsCreateRequest) (*operations.ContentOrdertrackingsignalsCreateResponse, error) {
+func (s *ordertrackingsignals) ContentOrdertrackingsignalsCreate(ctx context.Context, request operations.ContentOrdertrackingsignalsCreateRequest, security operations.ContentOrdertrackingsignalsCreateSecurity) (*operations.ContentOrdertrackingsignalsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordertrackingsignals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordertrackingsignals", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderTrackingSignalInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *ordertrackingsignals) ContentOrdertrackingsignalsCreate(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

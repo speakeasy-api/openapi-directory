@@ -19,6 +19,5 @@ pkg/models/shared/containerthreatdetectionsettings.go
 pkg/models/shared/config.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/websecurityscannersettings.go
 USAGE.md

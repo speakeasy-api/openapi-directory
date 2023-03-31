@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type Delete8PathParams struct {
+type Delete8Request struct {
 	// person's internal identifier
 	PersonID int64 `pathParam:"style=simple,explode=false,name=personId"`
-}
-
-type Delete8Request struct {
-	PathParams Delete8PathParams
 }
 
 type Delete8Response struct {

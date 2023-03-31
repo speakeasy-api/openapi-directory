@@ -13,16 +13,8 @@ var UpdateServiceUserConversationServerList = []string{
 }
 
 type UpdateServiceUserConversationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateServiceUserConversationPathParams struct {
-	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
-	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
-	// The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-	ConversationSid string `pathParam:"style=simple,explode=false,name=ConversationSid"`
-	// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
-	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateServiceUserConversationUpdateServiceUserConversationRequest struct {
@@ -34,10 +26,13 @@ type UpdateServiceUserConversationUpdateServiceUserConversationRequest struct {
 }
 
 type UpdateServiceUserConversationRequest struct {
-	PathParams UpdateServiceUserConversationPathParams
-	Request    *UpdateServiceUserConversationUpdateServiceUserConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateServiceUserConversationSecurity
-	ServerURL  *string
+	// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
+	ChatServiceSid string `pathParam:"style=simple,explode=false,name=ChatServiceSid"`
+	// The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+	ConversationSid string                                                             `pathParam:"style=simple,explode=false,name=ConversationSid"`
+	RequestBody     *UpdateServiceUserConversationUpdateServiceUserConversationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
+	UserSid string `pathParam:"style=simple,explode=false,name=UserSid"`
 }
 
 type UpdateServiceUserConversationResponse struct {

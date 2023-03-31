@@ -34,7 +34,7 @@ func newUUIDGeneration(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // GetUUID - Generate a random UUID (v4).
-func (s *uuidGeneration) GetUUID(ctx context.Context, request operations.GetUUIDRequest) (*operations.GetUUIDResponse, error) {
+func (s *uuidGeneration) GetUUID(ctx context.Context, request operations.GetUUIDRequest, security operations.GetUUIDSecurity) (*operations.GetUUIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uuid"
 
@@ -43,11 +43,11 @@ func (s *uuidGeneration) GetUUID(ctx context.Context, request operations.GetUUID
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -75,20 +75,20 @@ func (s *uuidGeneration) GetUUID(ctx context.Context, request operations.GetUUID
 }
 
 // GetUUIDVersionVersion - Generate a random UUID (v4).
-func (s *uuidGeneration) GetUUIDVersionVersion(ctx context.Context, request operations.GetUUIDVersionVersionRequest) (*operations.GetUUIDVersionVersionResponse, error) {
+func (s *uuidGeneration) GetUUIDVersionVersion(ctx context.Context, request operations.GetUUIDVersionVersionRequest, security operations.GetUUIDVersionVersionSecurity) (*operations.GetUUIDVersionVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/uuid/version/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/uuid/version/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

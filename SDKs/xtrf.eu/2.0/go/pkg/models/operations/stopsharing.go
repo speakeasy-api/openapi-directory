@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopSharingPathParams struct {
+type StopSharingRequest struct {
+	// File sharing stopped for a project task.
+	FilesDto shared.FilesDto `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type StopSharingRequest struct {
-	PathParams StopSharingPathParams
-	// File sharing stopped for a project task.
-	Request shared.FilesDto `request:"mediaType=application/json"`
 }
 
 type StopSharingResponse struct {

@@ -1,0 +1,110 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/nexmo.com/voice/1.3.10/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+
+
+req = shared.CreateCallRequestAnswerURL(
+    answer_method="GET",
+    answer_url=[
+        "quibusdam",
+        "unde",
+        "nulla",
+    ],
+    event_method="GET",
+    event_url=[
+        "http://physical-pegboard.info",
+        "http://fond-teen.com",
+        "https://fatherly-geyser.info",
+        "https://studious-lynx.info",
+    ],
+    from_=shared.EndpointPhoneFrom(
+        number="14155550100",
+        type="phone",
+    ),
+    length_timer=568045,
+    machine_detection="continue",
+    random_from_number=False,
+    ringing_timer=392785,
+    to=[
+        shared.EndpointVBCExtension(
+            extension="1234",
+            type="vbc",
+        ),
+        shared.EndpointPhoneTo(
+            dtmf_answer="p*123#",
+            number="14155550100",
+            type="phone",
+        ),
+        shared.EndpointSip(
+            type="sip",
+            uri="sip:rebekka@sip.example.com",
+        ),
+        shared.EndpointPhoneTo(
+            dtmf_answer="p*123#",
+            number="14155550100",
+            type="phone",
+        ),
+    ],
+)
+    
+res = s.calls.create_call(req, operations.CreateCallSecurity(
+    bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+))
+
+if res.create_call_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### calls
+
+* `create_call` - Create an outbound call
+* `get_call` - Get detail of a specific call
+* `get_calls` - Get details of your calls
+* `update_call` - Modify an in progress call
+
+### play_dtmf
+
+* `start_dtmf` - Play DTMF tones into a call
+
+### play_tts
+
+* `start_talk` - Play text to speech into a call
+* `stop_talk` - Stop text to speech in a call
+
+### stream_audio
+
+* `start_stream` - Play an audio file into a call
+* `stop_stream` - Stop playing an audio file into a call
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

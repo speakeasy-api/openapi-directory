@@ -14,12 +14,8 @@ var CreateSipDomainServerList = []string{
 }
 
 type CreateSipDomainSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateSipDomainPathParams struct {
-	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
-	AccountSid string `pathParam:"style=simple,explode=false,name=AccountSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // CreateSipDomainCreateSipDomainRequestVoiceFallbackMethodEnum - The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.
@@ -160,10 +156,9 @@ type CreateSipDomainCreateSipDomainRequest struct {
 }
 
 type CreateSipDomainRequest struct {
-	PathParams CreateSipDomainPathParams
-	Request    *CreateSipDomainCreateSipDomainRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateSipDomainSecurity
-	ServerURL  *string
+	// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+	AccountSid  string                                 `pathParam:"style=simple,explode=false,name=AccountSid"`
+	RequestBody *CreateSipDomainCreateSipDomainRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CreateSipDomainResponse struct {

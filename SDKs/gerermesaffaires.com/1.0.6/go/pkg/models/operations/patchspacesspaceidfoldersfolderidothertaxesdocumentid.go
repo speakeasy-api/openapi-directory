@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDPathParams struct {
-	// Id of the document
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-	// Id of the folder
-	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequestBody - A  Tax Declaration to modify
 type PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequestBody struct {
 	Amount          *float32 `json:"Amount,omitempty"`
@@ -23,9 +14,14 @@ type PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequestBody struct {
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequest struct {
-	PathParams PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDPathParams
 	// A  Tax Declaration to modify
-	Request *PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequestBody `request:"mediaType=application/json"`
+	// Id of the document
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	// Id of the folder
+	FolderID string `pathParam:"style=simple,explode=false,name=folderId"`
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDResponse struct {

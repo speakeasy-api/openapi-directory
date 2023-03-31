@@ -68,7 +68,7 @@ func newBehavior(defaultClient, securityClient HTTPClient, serverURL, language, 
 // </table>
 //
 // **NOTE:** If the reason of your report is not here, please contact Truora support team.
-func (s *behavior) ReportBehavior(ctx context.Context, request operations.ReportBehaviorRequest) (*operations.ReportBehaviorResponse, error) {
+func (s *behavior) ReportBehavior(ctx context.Context, request shared.CreateBehaviorInput, security operations.ReportBehaviorSecurity) (*operations.ReportBehaviorResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/behavior"
 
@@ -87,7 +87,7 @@ func (s *behavior) ReportBehavior(ctx context.Context, request operations.Report
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

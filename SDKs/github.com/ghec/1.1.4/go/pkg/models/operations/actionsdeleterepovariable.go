@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type ActionsDeleteRepoVariablePathParams struct {
+type ActionsDeleteRepoVariableRequest struct {
 	// The name of the variable.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The account owner of the repository. The name is not case sensitive.
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsDeleteRepoVariableRequest struct {
-	PathParams ActionsDeleteRepoVariablePathParams
 }
 
 type ActionsDeleteRepoVariableResponse struct {

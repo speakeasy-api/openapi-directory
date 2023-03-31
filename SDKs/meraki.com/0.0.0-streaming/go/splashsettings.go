@@ -34,7 +34,7 @@ func newSplashSettings(defaultClient, securityClient HTTPClient, serverURL, lang
 // Display the splash page settings for the given SSID
 func (s *splashSettings) GetNetworkSsidSplashSettings(ctx context.Context, request operations.GetNetworkSsidSplashSettingsRequest) (*operations.GetNetworkSsidSplashSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,9 +79,9 @@ func (s *splashSettings) GetNetworkSsidSplashSettings(ctx context.Context, reque
 // Modify the splash page settings for the given SSID
 func (s *splashSettings) UpdateNetworkSsidSplashSettings(ctx context.Context, request operations.UpdateNetworkSsidSplashSettingsRequest) (*operations.UpdateNetworkSsidSplashSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -6,20 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateorupdatefixedpricesonpricetableortradepolicyPathParams struct {
-	// SKU ID.
-	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-	// SKU **price table** name or **trade policy** ID.
-	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
-}
-
-type CreateorupdatefixedpricesonpricetableortradepolicyHeaders struct {
-	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 // CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange - Period of time when the fixed price will be applied to the SKU.
 type CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange struct {
 	// Start date of the price.
@@ -40,9 +26,15 @@ type CreateorupdatefixedpricesonpricetableortradepolicyRequestBody struct {
 }
 
 type CreateorupdatefixedpricesonpricetableortradepolicyRequest struct {
-	PathParams CreateorupdatefixedpricesonpricetableortradepolicyPathParams
-	Headers    CreateorupdatefixedpricesonpricetableortradepolicyHeaders
-	Request    []CreateorupdatefixedpricesonpricetableortradepolicyRequestBody `request:"mediaType=application/json"`
+	// HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string                                                          `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody []CreateorupdatefixedpricesonpricetableortradepolicyRequestBody `request:"mediaType=application/json"`
+	// SKU ID.
+	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
+	// SKU **price table** name or **trade policy** ID.
+	PriceTableID string `pathParam:"style=simple,explode=false,name=priceTableId"`
 }
 
 type CreateorupdatefixedpricesonpricetableortradepolicyResponse struct {

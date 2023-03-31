@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportSubnetUtilizationStatsCSVSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type ExportSubnetUtilizationStatsCSVQueryParams struct {
-	// an optional subnet mask size (ex:24)
-	Mask *string `queryParam:"style=form,explode=true,name=mask"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type ExportSubnetUtilizationStatsCSVRequest struct {
-	QueryParams ExportSubnetUtilizationStatsCSVQueryParams
-	Security    ExportSubnetUtilizationStatsCSVSecurity
+	// an optional subnet mask size (ex:24)
+	Mask *string `queryParam:"style=form,explode=true,name=mask"`
 }
 
 type ExportSubnetUtilizationStatsCSVResponse struct {

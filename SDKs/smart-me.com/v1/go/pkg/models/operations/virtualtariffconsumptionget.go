@@ -8,17 +8,13 @@ import (
 	"time"
 )
 
-type VirtualTariffConsumptionGetQueryParams struct {
+type VirtualTariffConsumptionGetRequest struct {
 	// The end date (UTC)
 	EndDate time.Time `queryParam:"style=form,explode=true,name=endDate"`
 	// The ID of the Folder
 	FolderID string `queryParam:"style=form,explode=true,name=folderId"`
 	// The start date (UTC)
 	StartDate time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type VirtualTariffConsumptionGetRequest struct {
-	QueryParams VirtualTariffConsumptionGetQueryParams
 }
 
 type VirtualTariffConsumptionGetResponse struct {

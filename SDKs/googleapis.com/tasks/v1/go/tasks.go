@@ -32,20 +32,20 @@ func newTasks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // TasksTasksClear - Clears all completed tasks from the specified task list. The affected tasks will be marked as 'hidden' and no longer be returned by default when retrieving all tasks for a task list.
-func (s *tasks) TasksTasksClear(ctx context.Context, request operations.TasksTasksClearRequest) (*operations.TasksTasksClearResponse, error) {
+func (s *tasks) TasksTasksClear(ctx context.Context, request operations.TasksTasksClearRequest, security operations.TasksTasksClearSecurity) (*operations.TasksTasksClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *tasks) TasksTasksClear(ctx context.Context, request operations.TasksTas
 }
 
 // TasksTasksDelete - Deletes the specified task from the task list.
-func (s *tasks) TasksTasksDelete(ctx context.Context, request operations.TasksTasksDeleteRequest) (*operations.TasksTasksDeleteResponse, error) {
+func (s *tasks) TasksTasksDelete(ctx context.Context, request operations.TasksTasksDeleteRequest, security operations.TasksTasksDeleteSecurity) (*operations.TasksTasksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,20 +110,20 @@ func (s *tasks) TasksTasksDelete(ctx context.Context, request operations.TasksTa
 }
 
 // TasksTasksGet - Returns the specified task.
-func (s *tasks) TasksTasksGet(ctx context.Context, request operations.TasksTasksGetRequest) (*operations.TasksTasksGetResponse, error) {
+func (s *tasks) TasksTasksGet(ctx context.Context, request operations.TasksTasksGetRequest, security operations.TasksTasksGetSecurity) (*operations.TasksTasksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -158,11 +158,11 @@ func (s *tasks) TasksTasksGet(ctx context.Context, request operations.TasksTasks
 }
 
 // TasksTasksInsert - Creates a new task on the specified task list.
-func (s *tasks) TasksTasksInsert(ctx context.Context, request operations.TasksTasksInsertRequest) (*operations.TasksTasksInsertResponse, error) {
+func (s *tasks) TasksTasksInsert(ctx context.Context, request operations.TasksTasksInsertRequest, security operations.TasksTasksInsertSecurity) (*operations.TasksTasksInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Task", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -174,11 +174,11 @@ func (s *tasks) TasksTasksInsert(ctx context.Context, request operations.TasksTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -213,20 +213,20 @@ func (s *tasks) TasksTasksInsert(ctx context.Context, request operations.TasksTa
 }
 
 // TasksTasksList - Returns all tasks in the specified task list.
-func (s *tasks) TasksTasksList(ctx context.Context, request operations.TasksTasksListRequest) (*operations.TasksTasksListResponse, error) {
+func (s *tasks) TasksTasksList(ctx context.Context, request operations.TasksTasksListRequest, security operations.TasksTasksListSecurity) (*operations.TasksTasksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -261,20 +261,20 @@ func (s *tasks) TasksTasksList(ctx context.Context, request operations.TasksTask
 }
 
 // TasksTasksMove - Moves the specified task to another position in the task list. This can include putting it as a child task under a new parent and/or move it to a different position among its sibling tasks.
-func (s *tasks) TasksTasksMove(ctx context.Context, request operations.TasksTasksMoveRequest) (*operations.TasksTasksMoveResponse, error) {
+func (s *tasks) TasksTasksMove(ctx context.Context, request operations.TasksTasksMoveRequest, security operations.TasksTasksMoveSecurity) (*operations.TasksTasksMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}/move", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}/move", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -309,11 +309,11 @@ func (s *tasks) TasksTasksMove(ctx context.Context, request operations.TasksTask
 }
 
 // TasksTasksPatch - Updates the specified task. This method supports patch semantics.
-func (s *tasks) TasksTasksPatch(ctx context.Context, request operations.TasksTasksPatchRequest) (*operations.TasksTasksPatchResponse, error) {
+func (s *tasks) TasksTasksPatch(ctx context.Context, request operations.TasksTasksPatchRequest, security operations.TasksTasksPatchSecurity) (*operations.TasksTasksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Task1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -325,11 +325,11 @@ func (s *tasks) TasksTasksPatch(ctx context.Context, request operations.TasksTas
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -364,11 +364,11 @@ func (s *tasks) TasksTasksPatch(ctx context.Context, request operations.TasksTas
 }
 
 // TasksTasksUpdate - Updates the specified task.
-func (s *tasks) TasksTasksUpdate(ctx context.Context, request operations.TasksTasksUpdateRequest) (*operations.TasksTasksUpdateResponse, error) {
+func (s *tasks) TasksTasksUpdate(ctx context.Context, request operations.TasksTasksUpdateRequest, security operations.TasksTasksUpdateSecurity) (*operations.TasksTasksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/lists/{tasklist}/tasks/{task}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Task1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -380,11 +380,11 @@ func (s *tasks) TasksTasksUpdate(ctx context.Context, request operations.TasksTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

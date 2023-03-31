@@ -10,7 +10,7 @@ import (
 )
 
 type ListClassesSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListClassesStateEnum - Filter the classes by state
@@ -40,14 +40,9 @@ func (e *ListClassesStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListClassesQueryParams struct {
+type ListClassesRequest struct {
 	// Filter the classes by state
 	State *ListClassesStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ListClassesRequest struct {
-	QueryParams ListClassesQueryParams
-	Security    ListClassesSecurity
 }
 
 type ListClassesResponse struct {

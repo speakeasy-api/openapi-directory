@@ -8,18 +8,14 @@ import (
 )
 
 type NetworksecurityProjectsLocationsAddressGroupsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type NetworksecurityProjectsLocationsAddressGroupsCreatePathParams struct {
-	// Required. The parent resource of the AddressGroup. Must be in the format `projects/*/locations/{location}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type NetworksecurityProjectsLocationsAddressGroupsCreateQueryParams struct {
+type NetworksecurityProjectsLocationsAddressGroupsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv       *shared.XgafvEnum         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AddressGroupInput *shared.AddressGroupInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Required. Short name of the AddressGroup resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. "authz_policy".
@@ -34,6 +30,8 @@ type NetworksecurityProjectsLocationsAddressGroupsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent resource of the AddressGroup. Must be in the format `projects/*/locations/{location}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,13 +42,6 @@ type NetworksecurityProjectsLocationsAddressGroupsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type NetworksecurityProjectsLocationsAddressGroupsCreateRequest struct {
-	PathParams  NetworksecurityProjectsLocationsAddressGroupsCreatePathParams
-	QueryParams NetworksecurityProjectsLocationsAddressGroupsCreateQueryParams
-	Request     *shared.AddressGroupInput `request:"mediaType=application/json"`
-	Security    NetworksecurityProjectsLocationsAddressGroupsCreateSecurity
 }
 
 type NetworksecurityProjectsLocationsAddressGroupsCreateResponse struct {

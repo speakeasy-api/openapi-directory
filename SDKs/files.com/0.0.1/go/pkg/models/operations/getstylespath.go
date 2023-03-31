@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStylesPathPathParams struct {
+type GetStylesPathRequest struct {
 	// Style path.
 	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type GetStylesPathRequest struct {
-	PathParams GetStylesPathPathParams
 }
 
 type GetStylesPathResponse struct {

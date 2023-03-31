@@ -1,0 +1,134 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/vectara.io/1.0.0/python
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK(
+    security=shared.Security(
+        o_auth="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.CreateCorpusRequest(
+    admin_create_corpus_request=shared.AdminCreateCorpusRequest(
+        corpus=shared.AdminCorpus(
+            custom_dimensions=[
+                shared.AdminDimension(
+                    description="provident",
+                    indexing_default=7151.9,
+                    name="quibusdam",
+                    serving_default=6027.63,
+                ),
+                shared.AdminDimension(
+                    description="nulla",
+                    indexing_default=5448.83,
+                    name="illum",
+                    serving_default=4236.55,
+                ),
+                shared.AdminDimension(
+                    description="error",
+                    indexing_default=6458.94,
+                    name="suscipit",
+                    serving_default=4375.87,
+                ),
+            ],
+            description="magnam",
+            dt_provision="debitis",
+            enabled=False,
+            encoder_id="ipsa",
+            encrypted=False,
+            filter_attributes=[
+                shared.AdminFilterAttribute(
+                    description="tempora",
+                    indexed=False,
+                    level="FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
+                    name="molestiae",
+                    type="FILTER_ATTRIBUTE_TYPE__TEXT",
+                ),
+                shared.AdminFilterAttribute(
+                    description="placeat",
+                    indexed=False,
+                    level="FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
+                    name="iusto",
+                    type="FILTER_ATTRIBUTE_TYPE__REAL",
+                ),
+                shared.AdminFilterAttribute(
+                    description="nisi",
+                    indexed=False,
+                    level="FILTER_ATTRIBUTE_LEVEL__DOCUMENT_PART",
+                    name="temporibus",
+                    type="FILTER_ATTRIBUTE_TYPE__UNDEFINED",
+                ),
+                shared.AdminFilterAttribute(
+                    description="quis",
+                    indexed=False,
+                    level="FILTER_ATTRIBUTE_LEVEL__UNDEFINED",
+                    name="deserunt",
+                    type="FILTER_ATTRIBUTE_TYPE__UNDEFINED",
+                ),
+            ],
+            id=368241,
+            metadata_max_bytes=832620,
+            name="sapiente",
+            swap_ienc=False,
+            swap_qenc=False,
+            textless=False,
+        ),
+    ),
+    customer_id=778157,
+)
+    
+res = s.admin_service.create_corpus(req)
+
+if res.admin_create_corpus_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+
+### admin_service
+
+* `create_corpus` - Create Corpus
+* `delete_corpus` - Delete Corpus
+* `list_corpora` - List Corpora
+* `reset_corpus` - Reset Corpus
+
+### index_service
+
+* `delete` - Delete
+* `file_upload` - File Upload
+* `index` - Index
+
+### query_service
+
+* `query` - Query
+* `stream_query` - Stream Query
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

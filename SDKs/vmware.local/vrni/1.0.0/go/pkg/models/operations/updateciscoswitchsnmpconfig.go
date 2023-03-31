@@ -8,18 +8,13 @@ import (
 )
 
 type UpdateCiscoSwitchSnmpConfigSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UpdateCiscoSwitchSnmpConfigPathParams struct {
-	// entity id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type UpdateCiscoSwitchSnmpConfigRequest struct {
-	PathParams UpdateCiscoSwitchSnmpConfigPathParams
-	Request    *shared.SNMPConfig `request:"mediaType=application/json"`
-	Security   UpdateCiscoSwitchSnmpConfigSecurity
+	SNMPConfig *shared.SNMPConfig `request:"mediaType=application/json"`
+	// entity id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateCiscoSwitchSnmpConfigResponse struct {

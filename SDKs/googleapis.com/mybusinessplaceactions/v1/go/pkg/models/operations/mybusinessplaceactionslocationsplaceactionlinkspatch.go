@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MybusinessplaceactionsLocationsPlaceActionLinksPatchPathParams struct {
-	// Optional. The resource name, in the format `locations/{location_id}/placeActionLinks/{place_action_link_id}`. The name field will only be considered in UpdatePlaceActionLink and DeletePlaceActionLink requests for updating and deleting links respectively. However, it will be ignored in CreatePlaceActionLink request, where `place_action_link_id` will be assigned by the server on successful creation of a new link and returned as part of the response.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type MybusinessplaceactionsLocationsPlaceActionLinksPatchQueryParams struct {
+type MybusinessplaceactionsLocationsPlaceActionLinksPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv          *shared.XgafvEnum            `queryParam:"style=form,explode=true,name=$.xgafv"`
+	PlaceActionLinkInput *shared.PlaceActionLinkInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -25,6 +21,8 @@ type MybusinessplaceactionsLocationsPlaceActionLinksPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Optional. The resource name, in the format `locations/{location_id}/placeActionLinks/{place_action_link_id}`. The name field will only be considered in UpdatePlaceActionLink and DeletePlaceActionLink requests for updating and deleting links respectively. However, it will be ignored in CreatePlaceActionLink request, where `place_action_link_id` will be assigned by the server on successful creation of a new link and returned as part of the response.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -37,12 +35,6 @@ type MybusinessplaceactionsLocationsPlaceActionLinksPatchQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type MybusinessplaceactionsLocationsPlaceActionLinksPatchRequest struct {
-	PathParams  MybusinessplaceactionsLocationsPlaceActionLinksPatchPathParams
-	QueryParams MybusinessplaceactionsLocationsPlaceActionLinksPatchQueryParams
-	Request     *shared.PlaceActionLinkInput `request:"mediaType=application/json"`
 }
 
 type MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse struct {

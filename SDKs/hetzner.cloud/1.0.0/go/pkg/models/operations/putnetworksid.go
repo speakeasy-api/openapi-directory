@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutNetworksIDPathParams struct {
-	// ID of the network
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PutNetworksIDUpdateNetworkRequestLabels - User-defined labels (key-value pairs)
 type PutNetworksIDUpdateNetworkRequestLabels struct {
 	Labelkey *string `json:"labelkey,omitempty"`
@@ -26,8 +21,9 @@ type PutNetworksIDUpdateNetworkRequest struct {
 }
 
 type PutNetworksIDRequest struct {
-	PathParams PutNetworksIDPathParams
-	Request    *PutNetworksIDUpdateNetworkRequest `request:"mediaType=application/json"`
+	RequestBody *PutNetworksIDUpdateNetworkRequest `request:"mediaType=application/json"`
+	// ID of the network
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutNetworksID200ApplicationJSONNetworkProtection - Protection configuration for the Network

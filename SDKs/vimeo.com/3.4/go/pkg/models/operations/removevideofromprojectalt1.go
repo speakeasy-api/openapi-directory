@@ -8,19 +8,14 @@ import (
 )
 
 type RemoveVideoFromProjectAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemoveVideoFromProjectAlt1PathParams struct {
+type RemoveVideoFromProjectAlt1Request struct {
 	// The ID of the project.
 	ProjectID float64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The ID of the video.
 	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
-type RemoveVideoFromProjectAlt1Request struct {
-	PathParams RemoveVideoFromProjectAlt1PathParams
-	Security   RemoveVideoFromProjectAlt1Security
 }
 
 type RemoveVideoFromProjectAlt1Response struct {

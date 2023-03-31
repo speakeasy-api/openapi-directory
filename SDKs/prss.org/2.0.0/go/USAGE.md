@@ -14,20 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAPIV2BroadcastservicesRequest{
-        Security: operations.GetAPIV2BroadcastservicesSecurity{
-            CdOauth2: shared.SchemeCdOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetAPIV2BroadcastservicesQueryParams{
-            OrderByID: "desc",
-            PageSize: 592845,
-            PageStart: 715190,
-        },
+        OrderByID: "desc",
+        PageSize: 592845,
+        PageStart: 715190,
     }
 
     ctx := context.Background()
-    res, err := s.BroadcastServices.GetAPIV2Broadcastservices(ctx, req)
+    res, err := s.BroadcastServices.GetAPIV2Broadcastservices(ctx, req, operations.GetAPIV2BroadcastservicesSecurity{
+        CdOauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

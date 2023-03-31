@@ -3,47 +3,43 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AddTagsToOnPremisesInstancesRequest(
-    headers=operations.AddTagsToOnPremisesInstancesHeaders(
-        x_amz_algorithm="deserunt",
-        x_amz_content_sha256="sed",
-        x_amz_credential="sint",
-        x_amz_date="est",
-        x_amz_security_token="est",
-        x_amz_signature="omnis",
-        x_amz_signed_headers="reiciendis",
-        x_amz_target="CodeDeploy_20141006.AddTagsToOnPremisesInstances",
+        hmac="YOUR_API_KEY_HERE",
     ),
-    request=shared.AddTagsToOnPremisesInstancesInput(
+)
+
+
+req = operations.AddTagsToOnPremisesInstancesRequest(
+    add_tags_to_on_premises_instances_input=shared.AddTagsToOnPremisesInstancesInput(
         instance_names=[
-            "et",
-            "molestias",
-            "minus",
+            "provident",
+            "distinctio",
+            "quibusdam",
         ],
         tags=[
             shared.Tag(
-                key="voluptatum",
-                value="tenetur",
+                key="nulla",
+                value="corrupti",
             ),
             shared.Tag(
-                key="rem",
-                value="autem",
+                key="illum",
+                value="vel",
             ),
             shared.Tag(
-                key="enim",
-                value="quia",
+                key="error",
+                value="deserunt",
             ),
         ],
     ),
+    x_amz_algorithm="suscipit",
+    x_amz_content_sha256="iure",
+    x_amz_credential="magnam",
+    x_amz_date="debitis",
+    x_amz_security_token="ipsa",
+    x_amz_signature="delectus",
+    x_amz_signed_headers="tempora",
+    x_amz_target="CodeDeploy_20141006.AddTagsToOnPremisesInstances",
 )
     
 res = s.add_tags_to_on_premises_instances(req)

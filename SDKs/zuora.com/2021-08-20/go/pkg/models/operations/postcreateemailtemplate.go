@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTCreateEmailTemplateHeaders struct {
+type POSTCreateEmailTemplateRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	// Note that you must regenerate the OAuth token after the Custom Events feature is enabled in your Zuora tenant. The OAuth tokens generated before this feature is turned on will not work.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
+	// The request body to create an email template.
+	POSTPublicEmailTemplateRequest shared.POSTPublicEmailTemplateRequest `request:"mediaType=application/json"`
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -21,12 +23,6 @@ type POSTCreateEmailTemplateHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type POSTCreateEmailTemplateRequest struct {
-	Headers POSTCreateEmailTemplateHeaders
-	// The request body to create an email template.
-	Request shared.POSTPublicEmailTemplateRequest `request:"mediaType=application/json"`
 }
 
 type POSTCreateEmailTemplateResponse struct {

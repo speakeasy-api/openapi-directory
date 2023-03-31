@@ -8,18 +8,14 @@ import (
 )
 
 type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreatePathParams struct {
-	// Required. The parent resource where this TemplateVersion will be created. Format: projects/{project}/location/{location}/product/{product}/integrationtemplates/{integrationtemplate}
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateQueryParams struct {
+type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                                   *shared.XgafvEnum                                                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionInput *shared.GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -34,6 +30,8 @@ type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateQuer
 	NewIntegration *bool `queryParam:"style=form,explode=true,name=newIntegration"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent resource where this TemplateVersion will be created. Format: projects/{project}/location/{location}/product/{product}/integrationtemplates/{integrationtemplate}
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -42,13 +40,6 @@ type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateQuer
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateRequest struct {
-	PathParams  IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreatePathParams
-	QueryParams IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateQueryParams
-	Request     *shared.GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionInput `request:"mediaType=application/json"`
-	Security    IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateSecurity
 }
 
 type IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateResponse struct {

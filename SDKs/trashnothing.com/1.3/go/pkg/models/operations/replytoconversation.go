@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReplyToConversationPathParams struct {
-	// The ID of the conversation to reply to.
-	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
-}
-
 type ReplyToConversationRequestBody struct {
 	// The content of the reply.
 	Content string `multipartForm:"name=content"`
@@ -22,8 +17,9 @@ type ReplyToConversationRequestBody struct {
 }
 
 type ReplyToConversationRequest struct {
-	PathParams ReplyToConversationPathParams
-	Request    ReplyToConversationRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody ReplyToConversationRequestBody `request:"mediaType=multipart/form-data"`
+	// The ID of the conversation to reply to.
+	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 }
 
 type ReplyToConversationResponse struct {

@@ -37,7 +37,7 @@ func newDhcp(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Agent's DHCP configuration particulars
 func (s *dhcp) ProtocolDhcpGetArgs(ctx context.Context, request operations.ProtocolDhcpGetArgsRequest) (*operations.ProtocolDhcpGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/args", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/args", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *dhcp) ProtocolDhcpGetArgs(ctx context.Context, request operations.Proto
 // Agent's DHCP configuration hwaddr,classid,add_options,script
 func (s *dhcp) ProtocolDhcpGetConfig(ctx context.Context, request operations.ProtocolDhcpGetConfigRequest) (*operations.ProtocolDhcpGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *dhcp) ProtocolDhcpGetConfig(ctx context.Context, request operations.Pro
 // Statistics of fields indicated in the headers
 func (s *dhcp) ProtocolDhcpGetStatistics(ctx context.Context, request operations.ProtocolDhcpGetStatisticsRequest) (*operations.ProtocolDhcpGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +221,7 @@ func (s *dhcp) ProtocolDhcpGetStatsHdr(ctx context.Context) (*operations.Protoco
 // Trace 1 means enabled, 0 means not
 func (s *dhcp) ProtocolDhcpGetTrace(ctx context.Context, request operations.ProtocolDhcpGetTraceRequest) (*operations.ProtocolDhcpGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/trace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/trace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *dhcp) ProtocolDhcpGetTrace(ctx context.Context, request operations.Prot
 // DHCP-OFFER message parameters
 func (s *dhcp) ProtocolDhcpParams(ctx context.Context, request operations.ProtocolDhcpParamsRequest) (*operations.ProtocolDhcpParamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/params", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/params", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -313,7 +313,7 @@ func (s *dhcp) ProtocolDhcpParams(ctx context.Context, request operations.Protoc
 // Agent's DHCP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *dhcp) ProtocolDhcpSetConfig(ctx context.Context, request operations.ProtocolDhcpSetConfigRequest) (*operations.ProtocolDhcpSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/config/{argument}/{value}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/config/{argument}/{value}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -360,7 +360,7 @@ func (s *dhcp) ProtocolDhcpSetConfig(ctx context.Context, request operations.Pro
 // 1 to enable, 0 to disable
 func (s *dhcp) ProtocolDhcpSetTrace(ctx context.Context, request operations.ProtocolDhcpSetTraceRequest) (*operations.ProtocolDhcpSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/trace/{enableOrNot}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/trace/{enableOrNot}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFields7PathParams struct {
+type GetCustomFields7Request struct {
 	// task's internal identifier
 	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type GetCustomFields7Request struct {
-	PathParams GetCustomFields7PathParams
 }
 
 type GetCustomFields7Response struct {

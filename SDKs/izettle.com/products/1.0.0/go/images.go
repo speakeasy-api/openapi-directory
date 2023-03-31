@@ -33,16 +33,16 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GetAllImageUrls - Retrieve all library item images
 // Retrieves all library items images used by the organization, sorted by updated date
-func (s *images) GetAllImageUrls(ctx context.Context, request operations.GetAllImageUrlsRequest) (*operations.GetAllImageUrlsResponse, error) {
+func (s *images) GetAllImageUrls(ctx context.Context, request operations.GetAllImageUrlsRequest, security operations.GetAllImageUrlsSecurity) (*operations.GetAllImageUrlsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/images", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/images", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

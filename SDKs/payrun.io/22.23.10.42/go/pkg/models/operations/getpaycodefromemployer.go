@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayCodeFromEmployerPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The pay code unique identifier. E.g. BASIC
-	PayCodeID string `pathParam:"style=simple,explode=false,name=PayCodeId"`
-}
-
-type GetPayCodeFromEmployerHeaders struct {
+type GetPayCodeFromEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetPayCodeFromEmployerRequest struct {
-	PathParams GetPayCodeFromEmployerPathParams
-	Headers    GetPayCodeFromEmployerHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The pay code unique identifier. E.g. BASIC
+	PayCodeID string `pathParam:"style=simple,explode=false,name=PayCodeId"`
 }
 
 type GetPayCodeFromEmployerResponse struct {

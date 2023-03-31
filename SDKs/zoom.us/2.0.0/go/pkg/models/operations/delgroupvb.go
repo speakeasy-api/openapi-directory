@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DelGroupVBPathParams struct {
-	// Unique identifier of the group. Retrieve the value for this field by calling the [List groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type DelGroupVBQueryParams struct {
+type DelGroupVBRequest struct {
 	// Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
 	FileIds *string `queryParam:"style=form,explode=true,name=file_ids"`
-}
-
-type DelGroupVBRequest struct {
-	PathParams  DelGroupVBPathParams
-	QueryParams DelGroupVBQueryParams
+	// Unique identifier of the group. Retrieve the value for this field by calling the [List groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type DelGroupVBResponse struct {

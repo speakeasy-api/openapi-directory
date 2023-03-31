@@ -8,16 +8,11 @@ import (
 )
 
 type RealtimebiddingBuyersUserListsListSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RealtimebiddingBuyersUserListsListPathParams struct {
-	// Required. The name of the parent buyer for the user lists to be returned that must follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RealtimebiddingBuyersUserListsListQueryParams struct {
+type RealtimebiddingBuyersUserListsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -36,6 +31,8 @@ type RealtimebiddingBuyersUserListsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Continuation page token (as received from a previous response).
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. The name of the parent buyer for the user lists to be returned that must follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -44,12 +41,6 @@ type RealtimebiddingBuyersUserListsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RealtimebiddingBuyersUserListsListRequest struct {
-	PathParams  RealtimebiddingBuyersUserListsListPathParams
-	QueryParams RealtimebiddingBuyersUserListsListQueryParams
-	Security    RealtimebiddingBuyersUserListsListSecurity
 }
 
 type RealtimebiddingBuyersUserListsListResponse struct {

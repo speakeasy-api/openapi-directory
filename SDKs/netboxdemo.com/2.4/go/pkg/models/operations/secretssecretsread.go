@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretsSecretsReadPathParams struct {
+type SecretsSecretsReadRequest struct {
 	// A unique integer value identifying this secret.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SecretsSecretsReadRequest struct {
-	PathParams SecretsSecretsReadPathParams
 }
 
 type SecretsSecretsReadResponse struct {

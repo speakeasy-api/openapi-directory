@@ -36,16 +36,16 @@ func newEdit(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Get the rendering status, temporary asset url and details of a render by ID.
 //
 // **base URL:** https://api.shotstack.io/{version}
-func (s *edit) GetRender(ctx context.Context, request operations.GetRenderRequest) (*operations.GetRenderResponse, error) {
+func (s *edit) GetRender(ctx context.Context, request operations.GetRenderRequest, security operations.GetRenderSecurity) (*operations.GetRenderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/render/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/render/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *edit) GetRender(ctx context.Context, request operations.GetRenderReques
 
 // PostRender - Render Asset
 // Queue and render the contents of a timeline as a video, image or audio file.
-func (s *edit) PostRender(ctx context.Context, request operations.PostRenderRequest) (*operations.PostRenderResponse, error) {
+func (s *edit) PostRender(ctx context.Context, request shared.Edit, security operations.PostRenderSecurity) (*operations.PostRenderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/render"
 
@@ -100,7 +100,7 @@ func (s *edit) PostRender(ctx context.Context, request operations.PostRenderRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

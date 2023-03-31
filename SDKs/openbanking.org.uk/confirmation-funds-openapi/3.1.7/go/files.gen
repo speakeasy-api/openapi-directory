@@ -22,7 +22,6 @@ pkg/models/shared/links.go
 pkg/models/shared/oberrorresponse1.go
 pkg/models/shared/oberror1.go
 pkg/models/shared/obfundsconfirmationconsent1.go
-pkg/models/shared/security.go
 pkg/models/shared/obfundsconfirmationresponse1.go
 pkg/models/shared/obfundsconfirmation1.go
 USAGE.md

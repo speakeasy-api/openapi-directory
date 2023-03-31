@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkCellularGatewayDhcpPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkCellularGatewayDhcpRequestBody struct {
 	// DHCP Lease time for all MG of the network. Possible values are '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'.
 	DhcpLeaseTime *string `json:"dhcpLeaseTime,omitempty"`
@@ -22,8 +18,8 @@ type UpdateNetworkCellularGatewayDhcpRequestBody struct {
 }
 
 type UpdateNetworkCellularGatewayDhcpRequest struct {
-	PathParams UpdateNetworkCellularGatewayDhcpPathParams
-	Request    *UpdateNetworkCellularGatewayDhcpRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkCellularGatewayDhcpRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                       `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkCellularGatewayDhcp200ApplicationJSONDhcpLeaseTimeEnum - DHCP Lease time for all MG in the network.

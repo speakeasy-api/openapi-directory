@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOrganizationAdaptivePolicyACLPathParams struct {
+type DeleteOrganizationAdaptivePolicyACLRequest struct {
 	ACLID          string `pathParam:"style=simple,explode=false,name=aclId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type DeleteOrganizationAdaptivePolicyACLRequest struct {
-	PathParams DeleteOrganizationAdaptivePolicyACLPathParams
 }
 
 type DeleteOrganizationAdaptivePolicyACLResponse struct {

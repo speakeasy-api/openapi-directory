@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetNetworkUplinkSettingsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type GetNetworkUplinkSettingsRequest struct {
-	PathParams GetNetworkUplinkSettingsPathParams
+	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type GetNetworkUplinkSettingsResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmbedPresetPathParams struct {
+type GetEmbedPresetRequest struct {
 	// The ID of the preset.
 	PresetID float64 `pathParam:"style=simple,explode=false,name=preset_id"`
 	// The ID of the user.
 	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type GetEmbedPresetRequest struct {
-	PathParams GetEmbedPresetPathParams
 }
 
 type GetEmbedPresetResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DevelopersReadPathParams struct {
+type DevelopersReadRequest struct {
 	// A unique integer value identifying this Developer.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DevelopersReadRequest struct {
-	PathParams DevelopersReadPathParams
 }
 
 type DevelopersReadResponse struct {

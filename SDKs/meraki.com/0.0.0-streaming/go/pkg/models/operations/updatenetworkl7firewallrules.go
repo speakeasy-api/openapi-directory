@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkL7FirewallRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum - 'Deny' traffic specified by this rule
 type UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum string
 
@@ -81,8 +77,8 @@ type UpdateNetworkL7FirewallRulesRequestBody struct {
 }
 
 type UpdateNetworkL7FirewallRulesRequest struct {
-	PathParams UpdateNetworkL7FirewallRulesPathParams
-	Request    *UpdateNetworkL7FirewallRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkL7FirewallRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                   `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkL7FirewallRulesResponse struct {

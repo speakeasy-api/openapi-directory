@@ -8,17 +8,12 @@ import (
 )
 
 type GetExpiredCertsSecurity struct {
-	APIKeyHeader shared.SchemeAPIKeyHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetExpiredCertsPathParams struct {
-	// SHA2 hash of device firmware
-	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
+	APIKeyHeader string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
 type GetExpiredCertsRequest struct {
-	PathParams GetExpiredCertsPathParams
-	Security   GetExpiredCertsSecurity
+	// SHA2 hash of device firmware
+	FirmwareHash string `pathParam:"style=simple,explode=false,name=firmware_hash"`
 }
 
 type GetExpiredCertsResponse struct {

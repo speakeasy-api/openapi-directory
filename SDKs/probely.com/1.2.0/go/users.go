@@ -36,7 +36,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteUsersID - Deactivate a user
 func (s *users) DeleteUsersID(ctx context.Context, request operations.DeleteUsersIDRequest) (*operations.DeleteUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -108,7 +108,7 @@ func (s *users) GetProfile(ctx context.Context, request operations.GetProfileReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -156,7 +156,7 @@ func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -207,7 +207,7 @@ func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest
 // GetUsersID - Retrieve user
 func (s *users) GetUsersID(ctx context.Context, request operations.GetUsersIDRequest) (*operations.GetUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,9 +271,9 @@ func (s *users) GetUsersID(ctx context.Context, request operations.GetUsersIDReq
 // PatchUsersID - Partial update user
 func (s *users) PatchUsersID(ctx context.Context, request operations.PatchUsersIDRequest) (*operations.PatchUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -365,7 +365,7 @@ func (s *users) PatchUsersID(ctx context.Context, request operations.PatchUsersI
 // PostProfileChangePassword - Change user password
 // Our password policy requires a minimum password length of 10 chars with
 // at least one symbol or number.
-func (s *users) PostProfileChangePassword(ctx context.Context, request operations.PostProfileChangePasswordRequest) (*operations.PostProfileChangePasswordResponse, error) {
+func (s *users) PostProfileChangePassword(ctx context.Context, request operations.PostProfileChangePasswordRequestBody) (*operations.PostProfileChangePasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/profile/change_password/"
 
@@ -439,7 +439,7 @@ func (s *users) PostProfileChangePassword(ctx context.Context, request operation
 }
 
 // PostUsers - Create/Reactivate a user.
-func (s *users) PostUsers(ctx context.Context, request operations.PostUsersRequest) (*operations.PostUsersResponse, error) {
+func (s *users) PostUsers(ctx context.Context, request operations.PostUsersRequestBodyInput) (*operations.PostUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/"
 
@@ -495,9 +495,9 @@ func (s *users) PostUsers(ctx context.Context, request operations.PostUsersReque
 // PutUsersID - Update user
 func (s *users) PutUsersID(ctx context.Context, request operations.PutUsersIDRequest) (*operations.PutUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

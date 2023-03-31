@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFundingAccountV2PathParams struct {
-	FundingAccountID string `pathParam:"style=simple,explode=false,name=fundingAccountId"`
-}
-
-type GetFundingAccountV2QueryParams struct {
-	Sensitive *bool `queryParam:"style=form,explode=true,name=sensitive"`
-}
-
 type GetFundingAccountV2Request struct {
-	PathParams  GetFundingAccountV2PathParams
-	QueryParams GetFundingAccountV2QueryParams
+	FundingAccountID string `pathParam:"style=simple,explode=false,name=fundingAccountId"`
+	Sensitive        *bool  `queryParam:"style=form,explode=true,name=sensitive"`
 }
 
 type GetFundingAccountV2Response struct {

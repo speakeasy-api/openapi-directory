@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointArrivalsPathParams struct {
+type StopPointArrivalsRequest struct {
 	// A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StopPointArrivalsRequest struct {
-	PathParams StopPointArrivalsPathParams
 }
 
 type StopPointArrivalsResponse struct {

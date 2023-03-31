@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSegmentRequest struct {
-	Request shared.CreateSegmentRequest `request:"mediaType=application/json"`
-}
-
 type CreateSegmentResponse struct {
 	// Bad request
 	APIError    *shared.APIError

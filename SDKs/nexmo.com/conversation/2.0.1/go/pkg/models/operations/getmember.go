@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetMemberPathParams struct {
+type GetMemberRequest struct {
 	// Conversation ID
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 	// Member ID
 	MemberID string `pathParam:"style=simple,explode=false,name=member_id"`
-}
-
-type GetMemberRequest struct {
-	PathParams GetMemberPathParams
 }
 
 // GetMember200ApplicationJSON - Retrieve member payload

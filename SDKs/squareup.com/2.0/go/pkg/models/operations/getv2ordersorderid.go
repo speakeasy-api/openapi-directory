@@ -8,17 +8,12 @@ import (
 )
 
 type GetV2OrdersOrderIDSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetV2OrdersOrderIDPathParams struct {
-	// The ID of the order to retrieve.
-	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetV2OrdersOrderIDRequest struct {
-	PathParams GetV2OrdersOrderIDPathParams
-	Security   GetV2OrdersOrderIDSecurity
+	// The ID of the order to retrieve.
+	OrderID string `pathParam:"style=simple,explode=false,name=order_id"`
 }
 
 type GetV2OrdersOrderIDResponse struct {

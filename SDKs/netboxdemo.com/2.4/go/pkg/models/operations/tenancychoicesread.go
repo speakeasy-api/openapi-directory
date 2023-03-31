@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type TenancyChoicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type TenancyChoicesReadRequest struct {
-	PathParams TenancyChoicesReadPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type TenancyChoicesReadResponse struct {

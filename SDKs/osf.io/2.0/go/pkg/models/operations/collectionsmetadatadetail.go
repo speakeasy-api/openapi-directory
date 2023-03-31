@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type CollectionsMetadataDetailPathParams struct {
+type CollectionsMetadataDetailRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// A short id for that piece of metadata
 	CgmID string `pathParam:"style=simple,explode=false,name=cgm_id"`
 	// A short id for that collection
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-}
-
-type CollectionsMetadataDetailRequest struct {
-	PathParams CollectionsMetadataDetailPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CollectionsMetadataDetailResponse struct {

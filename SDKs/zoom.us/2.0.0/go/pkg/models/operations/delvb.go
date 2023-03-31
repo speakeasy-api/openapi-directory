@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type DelVBPathParams struct {
+type DelVBRequest struct {
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type DelVBQueryParams struct {
 	// Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
 	FileIds *string `queryParam:"style=form,explode=true,name=file_ids"`
-}
-
-type DelVBRequest struct {
-	PathParams  DelVBPathParams
-	QueryParams DelVBQueryParams
 }
 
 type DelVBResponse struct {

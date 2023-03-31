@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnAccountRequest struct {
-	Request shared.CreateAnAccountParameters `request:"mediaType=application/json"`
-}
-
 type CreateAnAccountDefaultApplicationJSON13StatusEnum string
 
 const (

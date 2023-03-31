@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkApplianceFirewallOneToOneNatRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkApplianceFirewallOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum - Either of the following: 'tcp', 'udp', 'icmp-ping' or 'any'
 type UpdateNetworkApplianceFirewallOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum string
 
@@ -94,8 +90,8 @@ type UpdateNetworkApplianceFirewallOneToOneNatRulesRequestBody struct {
 }
 
 type UpdateNetworkApplianceFirewallOneToOneNatRulesRequest struct {
-	PathParams UpdateNetworkApplianceFirewallOneToOneNatRulesPathParams
-	Request    UpdateNetworkApplianceFirewallOneToOneNatRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkApplianceFirewallOneToOneNatRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                    `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkApplianceFirewallOneToOneNatRulesResponse struct {

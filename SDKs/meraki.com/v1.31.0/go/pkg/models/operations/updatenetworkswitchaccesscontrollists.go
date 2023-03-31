@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchAccessControlListsPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkSwitchAccessControlListsRequestBodyRulesIPVersionEnum - IP address version (must be 'any', 'ipv4' or 'ipv6'). Applicable only if network supports IPv6. Default value is 'ipv4'.
 type UpdateNetworkSwitchAccessControlListsRequestBodyRulesIPVersionEnum string
 
@@ -117,8 +113,8 @@ type UpdateNetworkSwitchAccessControlListsRequestBody struct {
 }
 
 type UpdateNetworkSwitchAccessControlListsRequest struct {
-	PathParams UpdateNetworkSwitchAccessControlListsPathParams
-	Request    UpdateNetworkSwitchAccessControlListsRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateNetworkSwitchAccessControlListsRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                           `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 // UpdateNetworkSwitchAccessControlLists200ApplicationJSONRulesIPVersionEnum - IP address version

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCorpusHeaders struct {
+type CreateCorpusRequest struct {
+	AdminCreateCorpusRequest shared.AdminCreateCorpusRequest `request:"mediaType=application/json"`
 	// The Customer ID to use for the request.
 	CustomerID int64 `header:"style=simple,explode=false,name=customer-id"`
-}
-
-type CreateCorpusRequest struct {
-	Headers CreateCorpusHeaders
-	Request shared.AdminCreateCorpusRequest `request:"mediaType=application/json"`
 }
 
 type CreateCorpusResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJournalLineFromEmployerPathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The journal line unique identifier. E.g JL001
-	JournalLineID string `pathParam:"style=simple,explode=false,name=JournalLineId"`
-}
-
-type GetJournalLineFromEmployerHeaders struct {
+type GetJournalLineFromEmployerRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetJournalLineFromEmployerRequest struct {
-	PathParams GetJournalLineFromEmployerPathParams
-	Headers    GetJournalLineFromEmployerHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The journal line unique identifier. E.g JL001
+	JournalLineID string `pathParam:"style=simple,explode=false,name=JournalLineId"`
 }
 
 type GetJournalLineFromEmployerResponse struct {

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/webmasters/v3/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,78 +15,95 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.WebmastersSearchanalyticsQueryRequest(
-    security=operations.WebmastersSearchanalyticsQuerySecurity(
-        option1=operations.WebmastersSearchanalyticsQuerySecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.WebmastersSearchanalyticsQueryPathParams(
-        site_url="non",
-    ),
-    query_params=operations.WebmastersSearchanalyticsQueryQueryParams(
-        alt="json",
-        fields="eos",
-        key="aut",
-        oauth_token="dolores",
-        pretty_print=True,
-        quota_user="beatae",
-        user_ip="aliquid",
-    ),
-    request=shared.SearchAnalyticsQueryRequest(
-        aggregation_type="adipisci",
-        data_state="nostrum",
+    search_analytics_query_request=shared.SearchAnalyticsQueryRequest(
+        aggregation_type="corrupti",
+        data_state="provident",
         dimension_filter_groups=[
             shared.APIDimensionFilterGroup(
                 filters=[
                     shared.APIDimensionFilter(
-                        dimension="aut",
-                        expression="cumque",
-                        operator="et",
+                        dimension="unde",
+                        expression="nulla",
+                        operator="corrupti",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="illum",
+                        expression="vel",
+                        operator="error",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="deserunt",
+                        expression="suscipit",
+                        operator="iure",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="magnam",
+                        expression="debitis",
+                        operator="ipsa",
                     ),
                 ],
-                group_type="atque",
+                group_type="delectus",
             ),
             shared.APIDimensionFilterGroup(
                 filters=[
                     shared.APIDimensionFilter(
-                        dimension="nobis",
-                        expression="doloribus",
-                        operator="veniam",
+                        dimension="suscipit",
+                        expression="molestiae",
+                        operator="minus",
                     ),
                     shared.APIDimensionFilter(
-                        dimension="rem",
-                        expression="pariatur",
-                        operator="totam",
-                    ),
-                    shared.APIDimensionFilter(
-                        dimension="error",
-                        expression="et",
-                        operator="dolore",
+                        dimension="placeat",
+                        expression="voluptatum",
+                        operator="iusto",
                     ),
                 ],
-                group_type="corporis",
+                group_type="excepturi",
+            ),
+            shared.APIDimensionFilterGroup(
+                filters=[
+                    shared.APIDimensionFilter(
+                        dimension="recusandae",
+                        expression="temporibus",
+                        operator="ab",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="quis",
+                        expression="veritatis",
+                        operator="deserunt",
+                    ),
+                ],
+                group_type="perferendis",
             ),
         ],
         dimensions=[
-            "blanditiis",
-            "vitae",
+            "repellendus",
+            "sapiente",
         ],
-        end_date="ullam",
-        row_limit=5161140233781953582,
-        search_type="dolorem",
-        start_date="ea",
-        start_row=940405060983898307,
+        end_date="quo",
+        row_limit=140350,
+        search_type="at",
+        start_date="at",
+        start_row=978619,
     ),
+    alt="json",
+    fields_="molestiae",
+    key="quod",
+    oauth_token="quod",
+    pretty_print=False,
+    quota_user="esse",
+    site_url="totam",
+    user_ip="porro",
 )
     
-res = s.searchanalytics.webmasters_searchanalytics_query(req)
+res = s.searchanalytics.webmasters_searchanalytics_query(req, operations.WebmastersSearchanalyticsQuerySecurity(
+    option1=operations.WebmastersSearchanalyticsQuerySecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.search_analytics_query_response is not None:
     # handle response
@@ -94,7 +111,8 @@ if res.search_analytics_query_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### searchanalytics
 
@@ -115,7 +133,17 @@ When date is one of the group by values, any days without data are omitted from 
 * `webmasters_sites_delete` - Removes a site from the set of the user's Search Console sites.
 * `webmasters_sites_get` - Retrieves information about specific site.
 * `webmasters_sites_list` - Lists the user's Search Console sites.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

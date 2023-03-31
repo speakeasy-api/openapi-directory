@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PutWebhooksFirehoseSecurity struct {
-	ClientAccessToken shared.SchemeClientAccessToken `security:"scheme,type=oauth2"`
+	ClientAccessToken string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PutWebhooksFirehoseRequestBody struct {
@@ -16,11 +15,6 @@ type PutWebhooksFirehoseRequestBody struct {
 	Secret *string `json:"secret,omitempty"`
 	// The HTTPS url to which Enode should POST the event payload when a watched property changes
 	URL *string `json:"url,omitempty"`
-}
-
-type PutWebhooksFirehoseRequest struct {
-	Request  *PutWebhooksFirehoseRequestBody `request:"mediaType=application/json"`
-	Security PutWebhooksFirehoseSecurity
 }
 
 type PutWebhooksFirehoseResponse struct {

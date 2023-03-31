@@ -8,20 +8,15 @@ import (
 )
 
 type SetpersonshomeSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SetpersonshomeQueryParams struct {
+type SetpersonshomeRequest struct {
 	// ID of the Home you're interested in
 	HomeID string `queryParam:"style=form,explode=true,name=home_id"`
 	// List of persons IDs
 	PersonIds string `queryParam:"style=form,explode=true,name=person_ids"`
-}
-
-type SetpersonshomeRequest struct {
-	QueryParams SetpersonshomeQueryParams
-	Security    SetpersonshomeSecurity
 }
 
 type SetpersonshomeResponse struct {

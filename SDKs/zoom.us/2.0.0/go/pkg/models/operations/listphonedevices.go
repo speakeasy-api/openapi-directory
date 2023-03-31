@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListPhoneDevicesSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // ListPhoneDevicesTypeEnum - State of the device. The value should be either `assigned` to list devices that have been assigned to user(s) or `unassigned` to list devices that have not yet been assigned to any user in the Zoom account.
@@ -37,18 +36,13 @@ func (e *ListPhoneDevicesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPhoneDevicesQueryParams struct {
+type ListPhoneDevicesRequest struct {
 	// The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 	NextPageToken *string `queryParam:"style=form,explode=true,name=next_page_token"`
 	// The number of records returned within a single API call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// State of the device. The value should be either `assigned` to list devices that have been assigned to user(s) or `unassigned` to list devices that have not yet been assigned to any user in the Zoom account.
 	Type ListPhoneDevicesTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListPhoneDevicesRequest struct {
-	QueryParams ListPhoneDevicesQueryParams
-	Security    ListPhoneDevicesSecurity
 }
 
 type ListPhoneDevices200ApplicationXMLDevicesAssignee struct {

@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostQuoteImageBackgroundSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
 type PostQuoteImageBackgroundRequestBodyImage struct {
@@ -21,11 +20,6 @@ type PostQuoteImageBackgroundRequestBody struct {
 	Image PostQuoteImageBackgroundRequestBodyImage `multipartForm:"file"`
 	// Optional comma separated tags
 	Tags *string `multipartForm:"name=tags"`
-}
-
-type PostQuoteImageBackgroundRequest struct {
-	Request  *PostQuoteImageBackgroundRequestBody `request:"mediaType=multipart/form-data"`
-	Security PostQuoteImageBackgroundSecurity
 }
 
 type PostQuoteImageBackgroundResponse struct {

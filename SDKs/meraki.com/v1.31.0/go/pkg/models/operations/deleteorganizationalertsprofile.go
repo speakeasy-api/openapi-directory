@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOrganizationAlertsProfilePathParams struct {
+type DeleteOrganizationAlertsProfileRequest struct {
 	AlertConfigID  string `pathParam:"style=simple,explode=false,name=alertConfigId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type DeleteOrganizationAlertsProfileRequest struct {
-	PathParams DeleteOrganizationAlertsProfilePathParams
 }
 
 type DeleteOrganizationAlertsProfileResponse struct {

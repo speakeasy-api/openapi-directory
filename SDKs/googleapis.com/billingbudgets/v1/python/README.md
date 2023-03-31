@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/billingbudgets/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,114 +15,122 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.BillingbudgetsBillingAccountsBudgetsCreateRequest(
-    security=operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity(
-        option1=operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    path_params=operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams(
-        parent="nihil",
-    ),
-    query_params=operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="at",
-        alt="media",
-        callback="ducimus",
-        fields="sit",
-        key="ut",
-        oauth_token="impedit",
-        pretty_print=False,
-        quota_user="officiis",
-        upload_type="exercitationem",
-        upload_protocol="dolores",
-    ),
-    request=shared.GoogleCloudBillingBudgetsV1BudgetInput(
+    dollar_xgafv="2",
+    google_cloud_billing_budgets_v1_budget_input=shared.GoogleCloudBillingBudgetsV1BudgetInput(
         amount=shared.GoogleCloudBillingBudgetsV1BudgetAmount(
             last_period_amount={
-                "et": "iure",
-                "ea": "tempora",
-                "cumque": "id",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
             specified_amount=shared.GoogleTypeMoney(
-                currency_code="sint",
-                nanos=2804072079223311850,
-                units="eum",
+                currency_code="vel",
+                nanos=623564,
+                units="deserunt",
             ),
         ),
         budget_filter=shared.GoogleCloudBillingBudgetsV1Filter(
-            calendar_period="QUARTER",
+            calendar_period="MONTH",
             credit_types=[
-                "aut",
+                "magnam",
+                "debitis",
             ],
-            credit_types_treatment="EXCLUDE_ALL_CREDITS",
+            credit_types_treatment="CREDIT_TYPES_TREATMENT_UNSPECIFIED",
             custom_period=shared.GoogleCloudBillingBudgetsV1CustomPeriod(
                 end_date=shared.GoogleTypeDate(
-                    day=7940414151295099142,
-                    month=7958944695709345380,
-                    year=71631997747501121,
+                    day=963663,
+                    month=272656,
+                    year=383441,
                 ),
                 start_date=shared.GoogleTypeDate(
-                    day=2278120660741257848,
-                    month=5472587920773032124,
-                    year=7486886862016919883,
+                    day=477665,
+                    month=791725,
+                    year=812169,
                 ),
             ),
             labels={
-                "corrupti": [
-                    "illo",
-                    "et",
-                    "earum",
-                ],
-                "sunt": [
-                    "quis",
-                    "blanditiis",
+                "iusto": [
+                    "nisi",
                     "recusandae",
+                    "temporibus",
+                ],
+                "ab": [
+                    "veritatis",
+                    "deserunt",
+                ],
+                "perferendis": [
+                    "repellendus",
+                    "sapiente",
                 ],
             },
             projects=[
-                "dolorem",
+                "odit",
+                "at",
+                "at",
+                "maiores",
             ],
             services=[
-                "est",
-                "accusantium",
-                "illum",
+                "quod",
+                "quod",
             ],
             subaccounts=[
-                "qui",
-                "dicta",
+                "totam",
+                "porro",
             ],
         ),
-        display_name="eligendi",
-        etag="eum",
+        display_name="dolorum",
+        etag="dicta",
         notifications_rule=shared.GoogleCloudBillingBudgetsV1NotificationsRule(
             disable_default_iam_recipients=False,
             monitoring_notification_channels=[
-                "a",
+                "officia",
+                "occaecati",
+                "fugit",
             ],
-            pubsub_topic="laudantium",
-            schema_version="porro",
+            pubsub_topic="deleniti",
+            schema_version="hic",
         ),
         threshold_rules=[
             shared.GoogleCloudBillingBudgetsV1ThresholdRule(
                 spend_basis="CURRENT_SPEND",
-                threshold_percent=82.099998,
+                threshold_percent=1059.07,
+            ),
+            shared.GoogleCloudBillingBudgetsV1ThresholdRule(
+                spend_basis="CURRENT_SPEND",
+                threshold_percent=4736,
             ),
             shared.GoogleCloudBillingBudgetsV1ThresholdRule(
                 spend_basis="BASIS_UNSPECIFIED",
-                threshold_percent=21.100000,
+                threshold_percent=1863.32,
+            ),
+            shared.GoogleCloudBillingBudgetsV1ThresholdRule(
+                spend_basis="FORECASTED_SPEND",
+                threshold_percent=7369.18,
             ),
         ],
     ),
+    access_token="esse",
+    alt="json",
+    callback="excepturi",
+    fields_="aspernatur",
+    key="perferendis",
+    oauth_token="ad",
+    parent="natus",
+    pretty_print=False,
+    quota_user="sed",
+    upload_type="iste",
+    upload_protocol="dolor",
 )
     
-res = s.billing_accounts.billingbudgets_billing_accounts_budgets_create(req)
+res = s.billing_accounts.billingbudgets_billing_accounts_budgets_create(req, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity(
+    option1=operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.google_cloud_billing_budgets_v1_budget is not None:
     # handle response
@@ -130,16 +138,27 @@ if res.google_cloud_billing_budgets_v1_budget is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### billingAccounts
+
+### billing_accounts
 
 * `billingbudgets_billing_accounts_budgets_create` - Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
 * `billingbudgets_billing_accounts_budgets_delete` - Deletes a budget. Returns successfully if already deleted.
 * `billingbudgets_billing_accounts_budgets_get` - Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
 * `billingbudgets_billing_accounts_budgets_list` - Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
 * `billingbudgets_billing_accounts_budgets_patch` - Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

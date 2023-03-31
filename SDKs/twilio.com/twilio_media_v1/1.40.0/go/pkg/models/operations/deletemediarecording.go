@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteMediaRecordingServerList = []string{
@@ -12,18 +11,13 @@ var DeleteMediaRecordingServerList = []string{
 }
 
 type DeleteMediaRecordingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteMediaRecordingPathParams struct {
-	// The SID of the MediaRecording resource to delete.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteMediaRecordingRequest struct {
-	PathParams DeleteMediaRecordingPathParams
-	Security   DeleteMediaRecordingSecurity
-	ServerURL  *string
+	// The SID of the MediaRecording resource to delete.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type DeleteMediaRecordingResponse struct {

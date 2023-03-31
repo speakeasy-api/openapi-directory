@@ -7,22 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PullsCreateReplyForReviewCommentPathParams struct {
-	// comment_id parameter
-	CommentID  int64  `pathParam:"style=simple,explode=false,name=comment_id"`
-	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
-	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
-	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type PullsCreateReplyForReviewCommentRequestBody struct {
 	// The text of the review comment.
 	Body string `json:"body"`
 }
 
 type PullsCreateReplyForReviewCommentRequest struct {
-	PathParams PullsCreateReplyForReviewCommentPathParams
-	Request    PullsCreateReplyForReviewCommentRequestBody `request:"mediaType=application/json"`
+	RequestBody PullsCreateReplyForReviewCommentRequestBody `request:"mediaType=application/json"`
+	// comment_id parameter
+	CommentID  int64  `pathParam:"style=simple,explode=false,name=comment_id"`
+	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
+	PullNumber int64  `pathParam:"style=simple,explode=false,name=pull_number"`
+	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type PullsCreateReplyForReviewCommentResponse struct {

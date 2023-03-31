@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRoleRequest struct {
-	Request shared.CreateRoleRequest `request:"mediaType=application/json"`
-}
-
 type CreateRoleResponse struct {
 	// Bad request
 	APIError    *shared.APIError

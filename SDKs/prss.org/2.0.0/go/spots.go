@@ -34,16 +34,16 @@ func newSpots(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DeleteAPIV2SpotsID - Deletes the spot with the given ID.
-func (s *spots) DeleteAPIV2SpotsID(ctx context.Context, request operations.DeleteAPIV2SpotsIDRequest) (*operations.DeleteAPIV2SpotsIDResponse, error) {
+func (s *spots) DeleteAPIV2SpotsID(ctx context.Context, request operations.DeleteAPIV2SpotsIDRequest, security operations.DeleteAPIV2SpotsIDSecurity) (*operations.DeleteAPIV2SpotsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *spots) DeleteAPIV2SpotsID(ctx context.Context, request operations.Delet
 }
 
 // GetAPIV2Spots - Returns the spots matching the query parameters.
-func (s *spots) GetAPIV2Spots(ctx context.Context, request operations.GetAPIV2SpotsRequest) (*operations.GetAPIV2SpotsResponse, error) {
+func (s *spots) GetAPIV2Spots(ctx context.Context, request operations.GetAPIV2SpotsRequest, security operations.GetAPIV2SpotsSecurity) (*operations.GetAPIV2SpotsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/spots"
 
@@ -90,11 +90,11 @@ func (s *spots) GetAPIV2Spots(ctx context.Context, request operations.GetAPIV2Sp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,16 +141,16 @@ func (s *spots) GetAPIV2Spots(ctx context.Context, request operations.GetAPIV2Sp
 }
 
 // GetAPIV2SpotsID - Returns the spot matching the given ID.
-func (s *spots) GetAPIV2SpotsID(ctx context.Context, request operations.GetAPIV2SpotsIDRequest) (*operations.GetAPIV2SpotsIDResponse, error) {
+func (s *spots) GetAPIV2SpotsID(ctx context.Context, request operations.GetAPIV2SpotsIDRequest, security operations.GetAPIV2SpotsIDSecurity) (*operations.GetAPIV2SpotsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *spots) GetAPIV2SpotsID(ctx context.Context, request operations.GetAPIV2
 }
 
 // PostAPIV2Spots - Creates a new spot.
-func (s *spots) PostAPIV2Spots(ctx context.Context, request operations.PostAPIV2SpotsRequest) (*operations.PostAPIV2SpotsResponse, error) {
+func (s *spots) PostAPIV2Spots(ctx context.Context, request operations.PostAPIV2SpotsRequestBody, security operations.PostAPIV2SpotsSecurity) (*operations.PostAPIV2SpotsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/spots"
 
@@ -213,7 +213,7 @@ func (s *spots) PostAPIV2Spots(ctx context.Context, request operations.PostAPIV2
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

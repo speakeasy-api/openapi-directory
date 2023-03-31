@@ -12,12 +12,8 @@ var UpdateSupportingDocumentServerList = []string{
 }
 
 type UpdateSupportingDocumentSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateSupportingDocumentPathParams struct {
-	// The unique string created by Twilio to identify the Supporting Document resource.
-	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateSupportingDocumentUpdateSupportingDocumentRequest struct {
@@ -28,10 +24,9 @@ type UpdateSupportingDocumentUpdateSupportingDocumentRequest struct {
 }
 
 type UpdateSupportingDocumentRequest struct {
-	PathParams UpdateSupportingDocumentPathParams
-	Request    *UpdateSupportingDocumentUpdateSupportingDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateSupportingDocumentSecurity
-	ServerURL  *string
+	RequestBody *UpdateSupportingDocumentUpdateSupportingDocumentRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string created by Twilio to identify the Supporting Document resource.
+	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
 }
 
 type UpdateSupportingDocumentResponse struct {

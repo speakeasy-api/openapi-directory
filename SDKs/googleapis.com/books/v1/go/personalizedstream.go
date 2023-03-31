@@ -33,7 +33,7 @@ func newPersonalizedstream(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // BooksPersonalizedstreamGet - Returns a stream of personalized book clusters
-func (s *personalizedstream) BooksPersonalizedstreamGet(ctx context.Context, request operations.BooksPersonalizedstreamGetRequest) (*operations.BooksPersonalizedstreamGetResponse, error) {
+func (s *personalizedstream) BooksPersonalizedstreamGet(ctx context.Context, request operations.BooksPersonalizedstreamGetRequest, security operations.BooksPersonalizedstreamGetSecurity) (*operations.BooksPersonalizedstreamGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/books/v1/personalizedstream/get"
 
@@ -42,11 +42,11 @@ func (s *personalizedstream) BooksPersonalizedstreamGet(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

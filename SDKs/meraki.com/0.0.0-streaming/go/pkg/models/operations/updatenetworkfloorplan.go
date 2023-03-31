@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkFloorPlanPathParams struct {
-	FloorPlanID string `pathParam:"style=simple,explode=false,name=floorPlanId"`
-	NetworkID   string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 // UpdateNetworkFloorPlanRequestBodyBottomLeftCorner - The longitude and latitude of the bottom left corner of your floor plan.
 type UpdateNetworkFloorPlanRequestBodyBottomLeftCorner struct {
 	// Latitude
@@ -69,8 +64,9 @@ type UpdateNetworkFloorPlanRequestBody struct {
 }
 
 type UpdateNetworkFloorPlanRequest struct {
-	PathParams UpdateNetworkFloorPlanPathParams
-	Request    *UpdateNetworkFloorPlanRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkFloorPlanRequestBody `request:"mediaType=application/json"`
+	FloorPlanID string                             `pathParam:"style=simple,explode=false,name=floorPlanId"`
+	NetworkID   string                             `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkFloorPlanResponse struct {

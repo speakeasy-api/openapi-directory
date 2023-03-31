@@ -33,9 +33,8 @@ pkg/models/operations/identitytoolkitrelyingpartyverifycustomtoken.go
 pkg/models/operations/identitytoolkitrelyingpartyverifypassword.go
 pkg/models/operations/identitytoolkitrelyingpartyverifyphonenumber.go
 pkg/models/shared/createauthuriresponse.go
-pkg/models/shared/identitytoolkitrelyingpartycreateauthurirequest.go
 pkg/models/shared/altenum.go
-pkg/models/shared/security.go
+pkg/models/shared/identitytoolkitrelyingpartycreateauthurirequest.go
 pkg/models/shared/deleteaccountresponse.go
 pkg/models/shared/identitytoolkitrelyingpartydeleteaccountrequest.go
 pkg/models/shared/downloadaccountresponse.go

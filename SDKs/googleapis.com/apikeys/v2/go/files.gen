@@ -24,7 +24,6 @@ pkg/models/operations/apikeysprojectslocationskeysundelete.go
 pkg/models/shared/v2lookupkeyresponse.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
 pkg/models/shared/v2key.go

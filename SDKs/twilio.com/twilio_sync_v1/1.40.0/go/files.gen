@@ -60,7 +60,6 @@ pkg/models/operations/updatesyncmapitem.go
 pkg/models/operations/updatesyncmappermission.go
 pkg/models/operations/updatesyncstream.go
 pkg/models/shared/syncv1servicedocument.go
-pkg/models/shared/security.go
 pkg/models/shared/syncv1service.go
 pkg/models/shared/syncv1servicesyncstreamstreammessage.go
 pkg/models/shared/syncv1servicesynclist.go
@@ -76,3 +75,4 @@ pkg/models/shared/synclistitemenumqueryfromboundtypeenum.go
 pkg/models/shared/syncmapitemenumqueryresultorderenum.go
 pkg/models/shared/syncmapitemenumqueryfromboundtypeenum.go
 USAGE.md
+pkg/models/operations/options.go

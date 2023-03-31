@@ -32,20 +32,20 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // BloggerUsersGet - Gets one user by user_id.
-func (s *users) BloggerUsersGet(ctx context.Context, request operations.BloggerUsersGetRequest) (*operations.BloggerUsersGetResponse, error) {
+func (s *users) BloggerUsersGet(ctx context.Context, request operations.BloggerUsersGetRequest, security operations.BloggerUsersGetSecurity) (*operations.BloggerUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

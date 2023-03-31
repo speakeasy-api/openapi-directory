@@ -8,6 +8,42 @@ import (
 	"net/http"
 )
 
+// GetOccupantsNearestOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+type GetOccupantsNearestOutputFormatLocationDescriptorEnum string
+
+const (
+	GetOccupantsNearestOutputFormatLocationDescriptorEnumAny            GetOccupantsNearestOutputFormatLocationDescriptorEnum = "any"
+	GetOccupantsNearestOutputFormatLocationDescriptorEnumAccessPoint    GetOccupantsNearestOutputFormatLocationDescriptorEnum = "accessPoint"
+	GetOccupantsNearestOutputFormatLocationDescriptorEnumFrontDoorPoint GetOccupantsNearestOutputFormatLocationDescriptorEnum = "frontDoorPoint"
+	GetOccupantsNearestOutputFormatLocationDescriptorEnumParcelPoint    GetOccupantsNearestOutputFormatLocationDescriptorEnum = "parcelPoint"
+	GetOccupantsNearestOutputFormatLocationDescriptorEnumRooftopPoint   GetOccupantsNearestOutputFormatLocationDescriptorEnum = "rooftopPoint"
+	GetOccupantsNearestOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsNearestOutputFormatLocationDescriptorEnum = "routingPoint"
+)
+
+func (e *GetOccupantsNearestOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "any":
+		fallthrough
+	case "accessPoint":
+		fallthrough
+	case "frontDoorPoint":
+		fallthrough
+	case "parcelPoint":
+		fallthrough
+	case "rooftopPoint":
+		fallthrough
+	case "routingPoint":
+		*e = GetOccupantsNearestOutputFormatLocationDescriptorEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetOccupantsNearestOutputFormatLocationDescriptorEnum: %s", s)
+	}
+}
+
 // GetOccupantsNearestOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
 //
 // Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
@@ -46,49 +82,6 @@ func (e *GetOccupantsNearestOutputFormatOutputFormatEnum) UnmarshalJSON(data []b
 		return nil
 	default:
 		return fmt.Errorf("invalid value for GetOccupantsNearestOutputFormatOutputFormatEnum: %s", s)
-	}
-}
-
-type GetOccupantsNearestOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
-	//
-	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
-	OutputFormat GetOccupantsNearestOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
-}
-
-// GetOccupantsNearestOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
-type GetOccupantsNearestOutputFormatLocationDescriptorEnum string
-
-const (
-	GetOccupantsNearestOutputFormatLocationDescriptorEnumAny            GetOccupantsNearestOutputFormatLocationDescriptorEnum = "any"
-	GetOccupantsNearestOutputFormatLocationDescriptorEnumAccessPoint    GetOccupantsNearestOutputFormatLocationDescriptorEnum = "accessPoint"
-	GetOccupantsNearestOutputFormatLocationDescriptorEnumFrontDoorPoint GetOccupantsNearestOutputFormatLocationDescriptorEnum = "frontDoorPoint"
-	GetOccupantsNearestOutputFormatLocationDescriptorEnumParcelPoint    GetOccupantsNearestOutputFormatLocationDescriptorEnum = "parcelPoint"
-	GetOccupantsNearestOutputFormatLocationDescriptorEnumRooftopPoint   GetOccupantsNearestOutputFormatLocationDescriptorEnum = "rooftopPoint"
-	GetOccupantsNearestOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsNearestOutputFormatLocationDescriptorEnum = "routingPoint"
-)
-
-func (e *GetOccupantsNearestOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "any":
-		fallthrough
-	case "accessPoint":
-		fallthrough
-	case "frontDoorPoint":
-		fallthrough
-	case "parcelPoint":
-		fallthrough
-	case "rooftopPoint":
-		fallthrough
-	case "routingPoint":
-		*e = GetOccupantsNearestOutputFormatLocationDescriptorEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetOccupantsNearestOutputFormatLocationDescriptorEnum: %s", s)
 	}
 }
 
@@ -134,13 +127,17 @@ func (e *GetOccupantsNearestOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetOccupantsNearestOutputFormatQueryParams struct {
+type GetOccupantsNearestOutputFormatRequest struct {
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
 	Brief *bool `queryParam:"style=form,explode=true,name=brief"`
 	// Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 	LocationDescriptor *GetOccupantsNearestOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	// The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
 	MaxDistance *int64 `queryParam:"style=form,explode=true,name=maxDistance"`
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+	OutputFormat GetOccupantsNearestOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetOccupantsNearestOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
@@ -149,11 +146,6 @@ type GetOccupantsNearestOutputFormatQueryParams struct {
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`
 	// Example: schools;courts;employment<br>A list of tags separated by semicolons.
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
-}
-
-type GetOccupantsNearestOutputFormatRequest struct {
-	PathParams  GetOccupantsNearestOutputFormatPathParams
-	QueryParams GetOccupantsNearestOutputFormatQueryParams
 }
 
 type GetOccupantsNearestOutputFormatResponse struct {

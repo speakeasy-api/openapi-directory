@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPayCodesFromNominalCodePathParams struct {
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-	// The nominal code unique identifier. E.g. NOM001
-	NominalCodeID string `pathParam:"style=simple,explode=false,name=NominalCodeId"`
-}
-
-type GetPayCodesFromNominalCodeHeaders struct {
+type GetPayCodesFromNominalCodeRequest struct {
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type GetPayCodesFromNominalCodeRequest struct {
-	PathParams GetPayCodesFromNominalCodePathParams
-	Headers    GetPayCodesFromNominalCodeHeaders
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
+	// The nominal code unique identifier. E.g. NOM001
+	NominalCodeID string `pathParam:"style=simple,explode=false,name=NominalCodeId"`
 }
 
 type GetPayCodesFromNominalCodeResponse struct {

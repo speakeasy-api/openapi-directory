@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CertificateSitesealGetPathParams struct {
-	// Certificate id
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
 // CertificateSitesealGetThemeEnum - This value represents the visual theme of the seal. If seal doesn't exist, default values are used if params not present. If seal does exist, default values will not be used to update unless params present.
 type CertificateSitesealGetThemeEnum string
 
@@ -38,16 +33,13 @@ func (e *CertificateSitesealGetThemeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CertificateSitesealGetQueryParams struct {
+type CertificateSitesealGetRequest struct {
+	// Certificate id
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 	// Determine locale for text displayed in seal image and verification page. If seal doesn't exist, default values are used if params not present. If seal does exist, default values will not be used to update unless params present.
 	Locale *string `queryParam:"style=form,explode=true,name=locale"`
 	// This value represents the visual theme of the seal. If seal doesn't exist, default values are used if params not present. If seal does exist, default values will not be used to update unless params present.
 	Theme *CertificateSitesealGetThemeEnum `queryParam:"style=form,explode=true,name=theme"`
-}
-
-type CertificateSitesealGetRequest struct {
-	PathParams  CertificateSitesealGetPathParams
-	QueryParams CertificateSitesealGetQueryParams
 }
 
 type CertificateSitesealGetResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteEventPathParams struct {
+type DeleteEventRequest struct {
 	// Conversation ID
 	ConversationID string `pathParam:"style=simple,explode=false,name=conversation_id"`
 	// Event ID
 	EventID string `pathParam:"style=simple,explode=false,name=event_id"`
-}
-
-type DeleteEventRequest struct {
-	PathParams DeleteEventPathParams
 }
 
 type DeleteEventResponse struct {

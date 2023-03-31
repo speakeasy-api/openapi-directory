@@ -26,10 +26,6 @@ type PhoneVerifyRequestBody struct {
 	SecurityCode *int `form:"name=security-code"`
 }
 
-type PhoneVerifyRequest struct {
-	Request PhoneVerifyRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type PhoneVerifyResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError            *shared.APIError

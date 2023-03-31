@@ -8,18 +8,14 @@ import (
 )
 
 type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentPathParams struct {
-	// Required. The resource name of the HumanReviewConfig that the document will be reviewed with.
-	HumanReviewConfig string `pathParam:"style=simple,explode=false,name=humanReviewConfig"`
-}
-
-type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryParams struct {
+type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                                  *shared.XgafvEnum                                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDocumentaiV1ReviewDocumentRequest *shared.GoogleCloudDocumentaiV1ReviewDocumentRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -28,6 +24,8 @@ type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryPa
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Required. The resource name of the HumanReviewConfig that the document will be reviewed with.
+	HumanReviewConfig string `pathParam:"style=simple,explode=false,name=humanReviewConfig"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -40,13 +38,6 @@ type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryPa
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest struct {
-	PathParams  DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentPathParams
-	QueryParams DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryParams
-	Request     *shared.GoogleCloudDocumentaiV1ReviewDocumentRequest `request:"mediaType=application/json"`
-	Security    DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentSecurity
 }
 
 type DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse struct {

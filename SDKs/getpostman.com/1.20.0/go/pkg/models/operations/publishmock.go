@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PublishMockPathParams struct {
-	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
-}
-
 type PublishMockRequest struct {
-	PathParams PublishMockPathParams
+	MockUID string `pathParam:"style=simple,explode=false,name=mock_uid"`
 }
 
 type PublishMock200ApplicationJSONMock struct {

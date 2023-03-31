@@ -8,17 +8,12 @@ import (
 )
 
 type FindFormByFormNameSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type FindFormByFormNamePathParams struct {
-	// The VA form_name of the form being requested. The exact form name must be passed, including proper placement of prefixes and/or hyphens.
-	FormName string `pathParam:"style=simple,explode=false,name=form_name"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
 }
 
 type FindFormByFormNameRequest struct {
-	PathParams FindFormByFormNamePathParams
-	Security   FindFormByFormNameSecurity
+	// The VA form_name of the form being requested. The exact form name must be passed, including proper placement of prefixes and/or hyphens.
+	FormName string `pathParam:"style=simple,explode=false,name=form_name"`
 }
 
 // FindFormByFormName429ApplicationJSON - Too many requests

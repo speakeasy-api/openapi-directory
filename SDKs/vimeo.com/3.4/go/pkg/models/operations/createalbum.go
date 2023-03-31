@@ -10,12 +10,7 @@ import (
 )
 
 type CreateAlbumSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CreateAlbumPathParams struct {
-	// The ID of the user.
-	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // CreateAlbumRequestBodyLayoutEnum - The type of layout for presenting the album.
@@ -162,9 +157,9 @@ type CreateAlbumRequestBody struct {
 }
 
 type CreateAlbumRequest struct {
-	PathParams CreateAlbumPathParams
-	Request    CreateAlbumRequestBody `request:"mediaType=application/vnd.vimeo.album+json"`
-	Security   CreateAlbumSecurity
+	RequestBody CreateAlbumRequestBody `request:"mediaType=application/vnd.vimeo.album+json"`
+	// The ID of the user.
+	UserID float64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type CreateAlbumResponse struct {

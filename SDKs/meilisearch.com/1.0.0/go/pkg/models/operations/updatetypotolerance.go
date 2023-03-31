@@ -17,10 +17,6 @@ type UpdateTypoToleranceRequestBody struct {
 	MinWordSizeForTypos *UpdateTypoToleranceRequestBodyMinWordSizeForTypos `json:"minWordSizeForTypos,omitempty"`
 }
 
-type UpdateTypoToleranceRequest struct {
-	Request *UpdateTypoToleranceRequestBody `request:"mediaType=application/json"`
-}
-
 type UpdateTypoToleranceResponse struct {
 	ContentType string
 	StatusCode  int

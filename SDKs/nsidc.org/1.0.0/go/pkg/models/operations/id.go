@@ -32,15 +32,11 @@ func (e *IDSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IDQueryParams struct {
+type IDRequest struct {
 	// Search terms typed into the interface (minimum two characters)
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Custom parameter for selecting which source to use; the Arctic Data Explorer (ADE) uses data aggregated from many sources, including, but not limited to, NSIDC
 	Source IDSourceEnum `queryParam:"style=form,explode=true,name=source"`
-}
-
-type IDRequest struct {
-	QueryParams IDQueryParams
 }
 
 type IDResponse struct {

@@ -13,19 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateDKIMRequest{
-        PathParams: operations.CreateDKIMPathParams{
-            EmailProvider: "corrupti",
-        },
+        EmailProvider: "corrupti",
     }
 
     ctx := context.Background()

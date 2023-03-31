@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetQshowListSecurity struct {
-	XTheySaidSoAPISecret shared.SchemeXTheySaidSoAPISecret `security:"scheme,type=apiKey,subtype=header"`
+	XTheySaidSoAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret"`
 }
 
-type GetQshowListQueryParams struct {
+type GetQshowListRequest struct {
 	// Should include public qshows or not in the list
 	Public *bool `queryParam:"style=form,explode=true,name=public"`
 	// Response is paged. This parameter controls where response starts the listing at
 	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetQshowListRequest struct {
-	QueryParams GetQshowListQueryParams
-	Security    GetQshowListSecurity
 }
 
 type GetQshowListResponse struct {

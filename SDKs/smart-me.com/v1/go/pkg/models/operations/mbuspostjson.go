@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type MBusPostJSONRequest struct {
-	// The M-BUS Telegram
-	Request shared.MBusData `request:"mediaType=application/json"`
-}
 
 type MBusPostJSONResponse struct {
 	Body        []byte

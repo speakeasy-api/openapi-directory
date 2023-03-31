@@ -33,16 +33,12 @@ func (e *PlayersByTeamFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PlayersByTeamPathParams struct {
+type PlayersByTeamRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayersByTeamFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The abbreviation of the requested team.
 	// <br>Examples: <code>SF</code>, <code>NYY</code>.
 	Team string `pathParam:"style=simple,explode=false,name=team"`
-}
-
-type PlayersByTeamRequest struct {
-	PathParams PlayersByTeamPathParams
 }
 
 type PlayersByTeamResponse struct {

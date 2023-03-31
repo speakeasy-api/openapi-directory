@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateNetworkFirmwareUpgradesStagedGroupPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type CreateNetworkFirmwareUpgradesStagedGroupRequestBodyAssignedDevicesDevices struct {
 	// Name of the device
 	Name *string `json:"name,omitempty"`
@@ -44,8 +40,8 @@ type CreateNetworkFirmwareUpgradesStagedGroupRequestBody struct {
 }
 
 type CreateNetworkFirmwareUpgradesStagedGroupRequest struct {
-	PathParams CreateNetworkFirmwareUpgradesStagedGroupPathParams
-	Request    CreateNetworkFirmwareUpgradesStagedGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateNetworkFirmwareUpgradesStagedGroupRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                              `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type CreateNetworkFirmwareUpgradesStagedGroupResponse struct {

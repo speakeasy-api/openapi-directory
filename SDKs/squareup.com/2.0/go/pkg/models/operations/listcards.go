@@ -8,10 +8,10 @@ import (
 )
 
 type ListCardsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ListCardsQueryParams struct {
+type ListCardsRequest struct {
 	// A pagination cursor returned by a previous call to this endpoint.
 	// Provide this to retrieve the next set of results for your original query.
 	//
@@ -28,11 +28,6 @@ type ListCardsQueryParams struct {
 	// Sorts the returned list by when the card was created with the specified order.
 	// This field defaults to ASC.
 	SortOrder *string `queryParam:"style=form,explode=true,name=sort_order"`
-}
-
-type ListCardsRequest struct {
-	QueryParams ListCardsQueryParams
-	Security    ListCardsSecurity
 }
 
 type ListCardsResponse struct {

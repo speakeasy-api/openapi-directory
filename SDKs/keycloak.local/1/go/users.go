@@ -34,7 +34,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteRealmUsersID - Delete the user
 func (s *users) DeleteRealmUsersID(ctx context.Context, request operations.DeleteRealmUsersIDRequest) (*operations.DeleteRealmUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *users) DeleteRealmUsersID(ctx context.Context, request operations.Delet
 // DeleteRealmUsersIDConsentsClient - Revoke consent and offline tokens for particular client from user
 func (s *users) DeleteRealmUsersIDConsentsClient(ctx context.Context, request operations.DeleteRealmUsersIDConsentsClientRequest) (*operations.DeleteRealmUsersIDConsentsClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/consents/{client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/consents/{client}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -104,7 +104,7 @@ func (s *users) DeleteRealmUsersIDConsentsClient(ctx context.Context, request op
 // DeleteRealmUsersIDCredentialsCredentialID - Remove a credential for a user
 func (s *users) DeleteRealmUsersIDCredentialsCredentialID(ctx context.Context, request operations.DeleteRealmUsersIDCredentialsCredentialIDRequest) (*operations.DeleteRealmUsersIDCredentialsCredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -139,7 +139,7 @@ func (s *users) DeleteRealmUsersIDCredentialsCredentialID(ctx context.Context, r
 // DeleteRealmUsersIDFederatedIdentityProvider - Remove a social login provider from user
 func (s *users) DeleteRealmUsersIDFederatedIdentityProvider(ctx context.Context, request operations.DeleteRealmUsersIDFederatedIdentityProviderRequest) (*operations.DeleteRealmUsersIDFederatedIdentityProviderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/federated-identity/{provider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/federated-identity/{provider}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *users) DeleteRealmUsersIDFederatedIdentityProvider(ctx context.Context,
 }
 func (s *users) DeleteRealmUsersIDGroupsGroupID(ctx context.Context, request operations.DeleteRealmUsersIDGroupsGroupIDRequest) (*operations.DeleteRealmUsersIDGroupsGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -207,14 +207,14 @@ func (s *users) DeleteRealmUsersIDGroupsGroupID(ctx context.Context, request ope
 // GetRealmUsers - Get users   Returns a list of users, filtered according to query parameters
 func (s *users) GetRealmUsers(ctx context.Context, request operations.GetRealmUsersRequest) (*operations.GetRealmUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -255,14 +255,14 @@ func (s *users) GetRealmUsers(ctx context.Context, request operations.GetRealmUs
 // GetRealmUsersCount - Returns the number of users that match the given criteria.
 func (s *users) GetRealmUsersCount(ctx context.Context, request operations.GetRealmUsersCountRequest) (*operations.GetRealmUsersCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -303,7 +303,7 @@ func (s *users) GetRealmUsersCount(ctx context.Context, request operations.GetRe
 // GetRealmUsersID - Get representation of the user
 func (s *users) GetRealmUsersID(ctx context.Context, request operations.GetRealmUsersIDRequest) (*operations.GetRealmUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -347,7 +347,7 @@ func (s *users) GetRealmUsersID(ctx context.Context, request operations.GetRealm
 // GetRealmUsersIDConfiguredUserStorageCredentialTypes - Return credential types, which are provided by the user storage where user is stored.
 func (s *users) GetRealmUsersIDConfiguredUserStorageCredentialTypes(ctx context.Context, request operations.GetRealmUsersIDConfiguredUserStorageCredentialTypesRequest) (*operations.GetRealmUsersIDConfiguredUserStorageCredentialTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/configured-user-storage-credential-types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/configured-user-storage-credential-types", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +391,7 @@ func (s *users) GetRealmUsersIDConfiguredUserStorageCredentialTypes(ctx context.
 // GetRealmUsersIDConsents - Get consents granted by the user
 func (s *users) GetRealmUsersIDConsents(ctx context.Context, request operations.GetRealmUsersIDConsentsRequest) (*operations.GetRealmUsersIDConsentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/consents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/consents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -433,7 +433,7 @@ func (s *users) GetRealmUsersIDConsents(ctx context.Context, request operations.
 }
 func (s *users) GetRealmUsersIDCredentials(ctx context.Context, request operations.GetRealmUsersIDCredentialsRequest) (*operations.GetRealmUsersIDCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -477,7 +477,7 @@ func (s *users) GetRealmUsersIDCredentials(ctx context.Context, request operatio
 // GetRealmUsersIDFederatedIdentity - Get social logins associated with the user
 func (s *users) GetRealmUsersIDFederatedIdentity(ctx context.Context, request operations.GetRealmUsersIDFederatedIdentityRequest) (*operations.GetRealmUsersIDFederatedIdentityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/federated-identity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/federated-identity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -519,14 +519,14 @@ func (s *users) GetRealmUsersIDFederatedIdentity(ctx context.Context, request op
 }
 func (s *users) GetRealmUsersIDGroups(ctx context.Context, request operations.GetRealmUsersIDGroupsRequest) (*operations.GetRealmUsersIDGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -565,14 +565,14 @@ func (s *users) GetRealmUsersIDGroups(ctx context.Context, request operations.Ge
 }
 func (s *users) GetRealmUsersIDGroupsCount(ctx context.Context, request operations.GetRealmUsersIDGroupsCountRequest) (*operations.GetRealmUsersIDGroupsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -613,7 +613,7 @@ func (s *users) GetRealmUsersIDGroupsCount(ctx context.Context, request operatio
 // GetRealmUsersIDOfflineSessionsClientID - Get offline sessions associated with the user and client
 func (s *users) GetRealmUsersIDOfflineSessionsClientID(ctx context.Context, request operations.GetRealmUsersIDOfflineSessionsClientIDRequest) (*operations.GetRealmUsersIDOfflineSessionsClientIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/offline-sessions/{clientId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/offline-sessions/{clientId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -657,7 +657,7 @@ func (s *users) GetRealmUsersIDOfflineSessionsClientID(ctx context.Context, requ
 // GetRealmUsersIDSessions - Get sessions associated with the user
 func (s *users) GetRealmUsersIDSessions(ctx context.Context, request operations.GetRealmUsersIDSessionsRequest) (*operations.GetRealmUsersIDSessionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -701,9 +701,9 @@ func (s *users) GetRealmUsersIDSessions(ctx context.Context, request operations.
 // PostRealmUsers - Create a new user   Username must be unique.
 func (s *users) PostRealmUsers(ctx context.Context, request operations.PostRealmUsersRequest) (*operations.PostRealmUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -746,7 +746,7 @@ func (s *users) PostRealmUsers(ctx context.Context, request operations.PostRealm
 // PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialID - Move a credential to a position behind another credential
 func (s *users) PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialID(ctx context.Context, request operations.PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDRequest) (*operations.PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}/moveAfter/{newPreviousCredentialId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}/moveAfter/{newPreviousCredentialId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -781,7 +781,7 @@ func (s *users) PostRealmUsersIDCredentialsCredentialIDMoveAfterNewPreviousCrede
 // PostRealmUsersIDCredentialsCredentialIDMoveToFirst - Move a credential to a first position in the credentials list of the user
 func (s *users) PostRealmUsersIDCredentialsCredentialIDMoveToFirst(ctx context.Context, request operations.PostRealmUsersIDCredentialsCredentialIDMoveToFirstRequest) (*operations.PostRealmUsersIDCredentialsCredentialIDMoveToFirstResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}/moveToFirst", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}/moveToFirst", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -816,9 +816,9 @@ func (s *users) PostRealmUsersIDCredentialsCredentialIDMoveToFirst(ctx context.C
 // PostRealmUsersIDFederatedIdentityProvider - Add a social login provider to the user
 func (s *users) PostRealmUsersIDFederatedIdentityProvider(ctx context.Context, request operations.PostRealmUsersIDFederatedIdentityProviderRequest) (*operations.PostRealmUsersIDFederatedIdentityProviderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/federated-identity/{provider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/federated-identity/{provider}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FederatedIdentityRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -861,7 +861,7 @@ func (s *users) PostRealmUsersIDFederatedIdentityProvider(ctx context.Context, r
 // PostRealmUsersIDImpersonation - Impersonate the user
 func (s *users) PostRealmUsersIDImpersonation(ctx context.Context, request operations.PostRealmUsersIDImpersonationRequest) (*operations.PostRealmUsersIDImpersonationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/impersonation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/impersonation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -905,7 +905,7 @@ func (s *users) PostRealmUsersIDImpersonation(ctx context.Context, request opera
 // PostRealmUsersIDLogout - Remove all user sessions associated with the user   Also send notification to all clients that have an admin URL to invalidate the sessions for the particular user.
 func (s *users) PostRealmUsersIDLogout(ctx context.Context, request operations.PostRealmUsersIDLogoutRequest) (*operations.PostRealmUsersIDLogoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/logout", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/logout", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -940,9 +940,9 @@ func (s *users) PostRealmUsersIDLogout(ctx context.Context, request operations.P
 // PutRealmUsersID - Update the user
 func (s *users) PutRealmUsersID(ctx context.Context, request operations.PutRealmUsersIDRequest) (*operations.PutRealmUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -985,9 +985,9 @@ func (s *users) PutRealmUsersID(ctx context.Context, request operations.PutRealm
 // PutRealmUsersIDCredentialsCredentialIDUserLabel - Update a credential label for a user
 func (s *users) PutRealmUsersIDCredentialsCredentialIDUserLabel(ctx context.Context, request operations.PutRealmUsersIDCredentialsCredentialIDUserLabelRequest) (*operations.PutRealmUsersIDCredentialsCredentialIDUserLabelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}/userLabel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/credentials/{credentialId}/userLabel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1030,9 +1030,9 @@ func (s *users) PutRealmUsersIDCredentialsCredentialIDUserLabel(ctx context.Cont
 // PutRealmUsersIDDisableCredentialTypes - Disable all credentials for a user of a specific type
 func (s *users) PutRealmUsersIDDisableCredentialTypes(ctx context.Context, request operations.PutRealmUsersIDDisableCredentialTypesRequest) (*operations.PutRealmUsersIDDisableCredentialTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/disable-credential-types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/disable-credential-types", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1075,9 +1075,9 @@ func (s *users) PutRealmUsersIDDisableCredentialTypes(ctx context.Context, reque
 // PutRealmUsersIDExecuteActionsEmail - Send a update account email to the user   An email contains a link the user can click to perform a set of required actions.
 func (s *users) PutRealmUsersIDExecuteActionsEmail(ctx context.Context, request operations.PutRealmUsersIDExecuteActionsEmailRequest) (*operations.PutRealmUsersIDExecuteActionsEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/execute-actions-email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/execute-actions-email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1092,7 +1092,7 @@ func (s *users) PutRealmUsersIDExecuteActionsEmail(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1122,7 +1122,7 @@ func (s *users) PutRealmUsersIDExecuteActionsEmail(ctx context.Context, request 
 }
 func (s *users) PutRealmUsersIDGroupsGroupID(ctx context.Context, request operations.PutRealmUsersIDGroupsGroupIDRequest) (*operations.PutRealmUsersIDGroupsGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1157,9 +1157,9 @@ func (s *users) PutRealmUsersIDGroupsGroupID(ctx context.Context, request operat
 // PutRealmUsersIDResetPassword - Set up a new password for the user.
 func (s *users) PutRealmUsersIDResetPassword(ctx context.Context, request operations.PutRealmUsersIDResetPasswordRequest) (*operations.PutRealmUsersIDResetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/reset-password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/reset-password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CredentialRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1202,14 +1202,14 @@ func (s *users) PutRealmUsersIDResetPassword(ctx context.Context, request operat
 // PutRealmUsersIDSendVerifyEmail - Send an email-verification email to the user   An email contains a link the user can click to verify their email address.
 func (s *users) PutRealmUsersIDSendVerifyEmail(ctx context.Context, request operations.PutRealmUsersIDSendVerifyEmailRequest) (*operations.PutRealmUsersIDSendVerifyEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/send-verify-email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/users/{id}/send-verify-email", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

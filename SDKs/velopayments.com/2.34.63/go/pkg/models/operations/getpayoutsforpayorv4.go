@@ -85,7 +85,7 @@ func (e *GetPayoutsForPayorV4StatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPayoutsForPayorV4QueryParams struct {
+type GetPayoutsForPayorV4Request struct {
 	// The name of the payor whose payees are being paid. This filters via a case insensitive substring match.
 	FromPayorName *string `queryParam:"style=form,explode=true,name=fromPayorName"`
 	// Page number. Default is 1.
@@ -113,10 +113,6 @@ type GetPayoutsForPayorV4QueryParams struct {
 	SubmittedDateFrom *types.Date `queryParam:"style=form,explode=true,name=submittedDateFrom"`
 	// The submitted date to range filter. Format is yyyy-MM-dd.
 	SubmittedDateTo *types.Date `queryParam:"style=form,explode=true,name=submittedDateTo"`
-}
-
-type GetPayoutsForPayorV4Request struct {
-	QueryParams GetPayoutsForPayorV4QueryParams
 }
 
 type GetPayoutsForPayorV4Response struct {

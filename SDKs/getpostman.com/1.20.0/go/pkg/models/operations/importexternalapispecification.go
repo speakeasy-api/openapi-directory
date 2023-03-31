@@ -96,10 +96,6 @@ type ImportExternalAPISpecificationRequestBody struct {
 	Type  *string                                         `json:"type,omitempty"`
 }
 
-type ImportExternalAPISpecificationRequest struct {
-	Request *ImportExternalAPISpecificationRequestBody `request:"mediaType=application/json"`
-}
-
 type ImportExternalAPISpecification400ApplicationJSONErrorDetails struct {
 	Param *string `json:"param,omitempty"`
 }

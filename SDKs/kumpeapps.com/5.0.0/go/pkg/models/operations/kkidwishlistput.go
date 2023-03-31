@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KkidWishlistPutQueryParams struct {
+type KkidWishlistPutRequest struct {
 	// Item Description
 	Description *string `queryParam:"style=form,explode=true,name=description"`
 	// URL Link to item
@@ -18,10 +18,6 @@ type KkidWishlistPutQueryParams struct {
 	Title *string `queryParam:"style=form,explode=true,name=title"`
 	// Wish list item ID to update
 	WishID int64 `queryParam:"style=form,explode=true,name=wishId"`
-}
-
-type KkidWishlistPutRequest struct {
-	QueryParams KkidWishlistPutQueryParams
 }
 
 type KkidWishlistPutResponse struct {

@@ -6,7 +6,11 @@ import (
 	"net/http"
 )
 
-type ListSellerLeadsQueryParams struct {
+type ListSellerLeadsRequest struct {
+	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Describes the type of the content being sent.
+	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
 	// Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
 	AccountName string `queryParam:"style=form,explode=true,name=accountName"`
 	// Environment to use. Used as part of the URL.
@@ -27,18 +31,6 @@ type ListSellerLeadsQueryParams struct {
 	Search string `queryParam:"style=form,explode=true,name=search"`
 	// Seller Lead's status. Includes `accepted`, `connected` or `invited`.
 	Status string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListSellerLeadsHeaders struct {
-	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Describes the type of the content being sent.
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ListSellerLeadsRequest struct {
-	QueryParams ListSellerLeadsQueryParams
-	Headers     ListSellerLeadsHeaders
 }
 
 type ListSellerLeadsResponse struct {

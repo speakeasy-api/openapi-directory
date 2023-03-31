@@ -113,7 +113,7 @@ func (e *FindSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type FindQueryParams struct {
+type FindRequest struct {
 	// Filter attractions by classification id: id of any segment, genre, sub-genre, type, sub-type
 	ClassificationID []interface{} `queryParam:"style=form,explode=true,name=classificationId"`
 	// Filter attractions by classification name: name of any segment, genre, sub-genre, type, sub-type
@@ -138,10 +138,6 @@ type FindQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Filter entities by its source name
 	Source *FindSourceEnum `queryParam:"style=form,explode=true,name=source"`
-}
-
-type FindRequest struct {
-	QueryParams FindQueryParams
 }
 
 type FindResponse struct {

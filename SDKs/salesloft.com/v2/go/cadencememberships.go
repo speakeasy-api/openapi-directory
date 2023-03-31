@@ -37,7 +37,7 @@ func newCadenceMemberships(defaultClient, securityClient HTTPClient, serverURL, 
 // Cadence Membership
 func (s *cadenceMemberships) DeleteV2CadenceMembershipsIDJSON(ctx context.Context, request operations.DeleteV2CadenceMembershipsIDJSONRequest) (*operations.DeleteV2CadenceMembershipsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *cadenceMemberships) GetV2CadenceMembershipsJSON(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,7 +125,7 @@ func (s *cadenceMemberships) GetV2CadenceMembershipsJSON(ctx context.Context, re
 // Fetches a cadence membership, by ID only.
 func (s *cadenceMemberships) GetV2CadenceMembershipsIDJSON(ctx context.Context, request operations.GetV2CadenceMembershipsIDJSONRequest) (*operations.GetV2CadenceMembershipsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +181,7 @@ func (s *cadenceMemberships) PostV2CadenceMembershipsJSON(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

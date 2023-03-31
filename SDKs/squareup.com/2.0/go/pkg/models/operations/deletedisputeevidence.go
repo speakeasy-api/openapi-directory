@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteDisputeEvidenceSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteDisputeEvidencePathParams struct {
+type DeleteDisputeEvidenceRequest struct {
 	// The ID of the dispute you want to remove evidence from.
 	DisputeID string `pathParam:"style=simple,explode=false,name=dispute_id"`
 	// The ID of the evidence you want to remove.
 	EvidenceID string `pathParam:"style=simple,explode=false,name=evidence_id"`
-}
-
-type DeleteDisputeEvidenceRequest struct {
-	PathParams DeleteDisputeEvidencePathParams
-	Security   DeleteDisputeEvidenceSecurity
 }
 
 type DeleteDisputeEvidenceResponse struct {

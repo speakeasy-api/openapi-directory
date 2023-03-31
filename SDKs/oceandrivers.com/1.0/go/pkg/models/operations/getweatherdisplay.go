@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type GetWeatherDisplayPathParams struct {
-	// currently: 'cnarenal'|'campastilla' | 'cncg'
-	StationName string `pathParam:"style=simple,explode=false,name=stationName"`
-}
-
-type GetWeatherDisplayQueryParams struct {
+type GetWeatherDisplayRequest struct {
 	// Period of time to get the data latestdata|latesthour|latestday|dailylog
 	Period string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetWeatherDisplayRequest struct {
-	PathParams  GetWeatherDisplayPathParams
-	QueryParams GetWeatherDisplayQueryParams
+	// currently: 'cnarenal'|'campastilla' | 'cncg'
+	StationName string `pathParam:"style=simple,explode=false,name=stationName"`
 }
 
 type GetWeatherDisplayResponse struct {

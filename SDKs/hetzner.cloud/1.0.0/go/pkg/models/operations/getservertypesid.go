@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetServerTypesIDPathParams struct {
+type GetServerTypesIDRequest struct {
 	// ID of Server Type
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetServerTypesIDRequest struct {
-	PathParams GetServerTypesIDPathParams
 }
 
 // GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum - Type of cpu

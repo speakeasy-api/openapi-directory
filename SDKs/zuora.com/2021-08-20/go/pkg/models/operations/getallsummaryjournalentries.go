@@ -7,18 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GETAllSummaryJournalEntriesPathParams struct {
-	// Journal run number.
-	JrNumber string `pathParam:"style=simple,explode=false,name=jr-number"`
-}
-
-type GETAllSummaryJournalEntriesQueryParams struct {
-	// Number of rows returned per page.
-	//
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GETAllSummaryJournalEntriesHeaders struct {
+type GETAllSummaryJournalEntriesRequest struct {
 	// An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
 	//
 	ZuoraEntityIds *string `header:"style=simple,explode=false,name=Zuora-Entity-Ids"`
@@ -27,12 +16,11 @@ type GETAllSummaryJournalEntriesHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type GETAllSummaryJournalEntriesRequest struct {
-	PathParams  GETAllSummaryJournalEntriesPathParams
-	QueryParams GETAllSummaryJournalEntriesQueryParams
-	Headers     GETAllSummaryJournalEntriesHeaders
+	// Journal run number.
+	JrNumber string `pathParam:"style=simple,explode=false,name=jr-number"`
+	// Number of rows returned per page.
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type GETAllSummaryJournalEntriesResponse struct {

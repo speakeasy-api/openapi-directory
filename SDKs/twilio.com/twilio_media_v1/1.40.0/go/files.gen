@@ -26,7 +26,6 @@ pkg/models/operations/updatemediaprocessor.go
 pkg/models/operations/updateplayerstreamer.go
 pkg/models/shared/mediav1mediaprocessor.go
 pkg/models/shared/mediaprocessorenumstatusenum.go
-pkg/models/shared/security.go
 pkg/models/shared/mediav1playerstreamer.go
 pkg/models/shared/playerstreamerenumstatusenum.go
 pkg/models/shared/playerstreamerenumendedreasonenum.go
@@ -40,3 +39,4 @@ pkg/models/shared/playerstreamerenumorderenum.go
 pkg/models/shared/mediaprocessorenumupdatestatusenum.go
 pkg/models/shared/playerstreamerenumupdatestatusenum.go
 USAGE.md
+pkg/models/operations/options.go

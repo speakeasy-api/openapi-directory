@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateCustomPageSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCustomPagePathParams struct {
-	// Slug of custom page
-	Slug string `pathParam:"style=simple,explode=false,name=slug"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCustomPageRequest struct {
-	PathParams UpdateCustomPagePathParams
 	// CustomPage object
-	Request  shared.CustomPage `request:"mediaType=application/json"`
-	Security UpdateCustomPageSecurity
+	CustomPage shared.CustomPage `request:"mediaType=application/json"`
+	// Slug of custom page
+	Slug string `pathParam:"style=simple,explode=false,name=slug"`
 }
 
 type UpdateCustomPageResponse struct {

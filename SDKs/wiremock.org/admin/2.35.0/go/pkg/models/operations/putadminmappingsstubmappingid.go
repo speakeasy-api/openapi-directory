@@ -10,11 +10,6 @@ import (
 	"net/http"
 )
 
-type PutAdminMappingsStubMappingIDPathParams struct {
-	// The UUID of stub mapping
-	StubMappingID string `pathParam:"style=simple,explode=false,name=stubMappingId"`
-}
-
 // PutAdminMappingsStubMappingIDRequestBodyRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against
 type PutAdminMappingsStubMappingIDRequestBodyRequestBasicAuthCredentials struct {
 	Password string `json:"password"`
@@ -255,8 +250,9 @@ type PutAdminMappingsStubMappingIDRequestBody struct {
 }
 
 type PutAdminMappingsStubMappingIDRequest struct {
-	PathParams PutAdminMappingsStubMappingIDPathParams
-	Request    *PutAdminMappingsStubMappingIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutAdminMappingsStubMappingIDRequestBody `request:"mediaType=application/json"`
+	// The UUID of stub mapping
+	StubMappingID string `pathParam:"style=simple,explode=false,name=stubMappingId"`
 }
 
 // PutAdminMappingsStubMappingID200ApplicationJSONRequestBasicAuthCredentials - Pre-emptive basic auth credentials to match against

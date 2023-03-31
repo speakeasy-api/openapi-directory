@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type AppendChatMessageUsingGETQueryParams struct {
+type AppendChatMessageUsingGETRequest struct {
 	AuthorID *string `queryParam:"style=form,explode=true,name=authorID"`
 	PadID    *string `queryParam:"style=form,explode=true,name=padID"`
 	Text     *string `queryParam:"style=form,explode=true,name=text"`
 	Time     *string `queryParam:"style=form,explode=true,name=time"`
-}
-
-type AppendChatMessageUsingGETRequest struct {
-	QueryParams AppendChatMessageUsingGETQueryParams
 }
 
 // AppendChatMessageUsingGET500ApplicationJSON - internal api error (code 2)

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type IpamPrefixesReadPathParams struct {
+type IpamPrefixesReadRequest struct {
 	// A unique integer value identifying this prefix.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type IpamPrefixesReadRequest struct {
-	PathParams IpamPrefixesReadPathParams
 }
 
 type IpamPrefixesReadResponse struct {

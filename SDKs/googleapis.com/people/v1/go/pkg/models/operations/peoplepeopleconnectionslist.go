@@ -10,23 +10,18 @@ import (
 )
 
 type PeoplePeopleConnectionsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PeoplePeopleConnectionsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PeoplePeopleConnectionsListSecurity struct {
 	Option1 *PeoplePeopleConnectionsListSecurityOption1 `security:"option"`
 	Option2 *PeoplePeopleConnectionsListSecurityOption2 `security:"option"`
-}
-
-type PeoplePeopleConnectionsListPathParams struct {
-	// Required. The resource name to return connections for. Only `people/me` is valid.
-	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
 }
 
 // PeoplePeopleConnectionsListSortOrderEnum - Optional. The order in which the connections should be sorted. Defaults to `LAST_MODIFIED_ASCENDING`.
@@ -88,7 +83,7 @@ func (e *PeoplePeopleConnectionsListSourcesEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type PeoplePeopleConnectionsListQueryParams struct {
+type PeoplePeopleConnectionsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -117,6 +112,8 @@ type PeoplePeopleConnectionsListQueryParams struct {
 	RequestMaskIncludeField *string `queryParam:"style=form,explode=true,name=requestMask.includeField"`
 	// Optional. Whether the response should return `next_sync_token` on the last page of results. It can be used to get incremental changes since the last request by setting it on the request `sync_token`. More details about sync behavior at `people.connections.list`.
 	RequestSyncToken *bool `queryParam:"style=form,explode=true,name=requestSyncToken"`
+	// Required. The resource name to return connections for. Only `people/me` is valid.
+	ResourceName string `pathParam:"style=simple,explode=false,name=resourceName"`
 	// Optional. The order in which the connections should be sorted. Defaults to `LAST_MODIFIED_ASCENDING`.
 	SortOrder *PeoplePeopleConnectionsListSortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
 	// Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
@@ -127,12 +124,6 @@ type PeoplePeopleConnectionsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type PeoplePeopleConnectionsListRequest struct {
-	PathParams  PeoplePeopleConnectionsListPathParams
-	QueryParams PeoplePeopleConnectionsListQueryParams
-	Security    PeoplePeopleConnectionsListSecurity
 }
 
 type PeoplePeopleConnectionsListResponse struct {

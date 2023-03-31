@@ -8,17 +8,12 @@ import (
 )
 
 type LatestPackageSecurity struct {
-	RhIdentity shared.SchemeRhIdentity `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type LatestPackagePathParams struct {
-	// package_name - latest, nevra - exact version
-	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
+	RhIdentity string `security:"scheme,type=apiKey,subtype=header,name=x-rh-identity"`
 }
 
 type LatestPackageRequest struct {
-	PathParams LatestPackagePathParams
-	Security   LatestPackageSecurity
+	// package_name - latest, nevra - exact version
+	PackageName string `pathParam:"style=simple,explode=false,name=package_name"`
 }
 
 type LatestPackageResponse struct {

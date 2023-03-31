@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteEUAByIDV2PathParams struct {
+type DeleteEUAByIDV2Request struct {
 	// A UUID string identifying this end user agreement.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteEUAByIDV2Request struct {
-	PathParams DeleteEUAByIDV2PathParams
 }
 
 type DeleteEUAByIDV2Response struct {

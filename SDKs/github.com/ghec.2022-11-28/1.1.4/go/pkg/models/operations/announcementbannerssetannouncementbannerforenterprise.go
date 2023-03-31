@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AnnouncementBannersSetAnnouncementBannerForEnterprisePathParams struct {
+type AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest struct {
+	Announcement shared.Announcement `request:"mediaType=application/json"`
 	// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
 	Enterprise string `pathParam:"style=simple,explode=false,name=enterprise"`
-}
-
-type AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest struct {
-	PathParams AnnouncementBannersSetAnnouncementBannerForEnterprisePathParams
-	Request    shared.Announcement `request:"mediaType=application/json"`
 }
 
 type AnnouncementBannersSetAnnouncementBannerForEnterpriseResponse struct {

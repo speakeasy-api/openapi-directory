@@ -44,7 +44,7 @@ func (e *GetRemoveCurationTagFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRemoveCurationTagQueryParams struct {
+type GetRemoveCurationTagRequest struct {
 	// The authentication data
 	Auth   string                          `queryParam:"style=form,explode=true,name=auth"`
 	Format *GetRemoveCurationTagFormatEnum `queryParam:"style=form,explode=true,name=format"`
@@ -54,10 +54,6 @@ type GetRemoveCurationTagQueryParams struct {
 	TagName string `queryParam:"style=form,explode=true,name=tagName"`
 	// The user name
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetRemoveCurationTagRequest struct {
-	QueryParams GetRemoveCurationTagQueryParams
 }
 
 type GetRemoveCurationTagResponse struct {

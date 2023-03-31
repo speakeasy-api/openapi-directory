@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProtocolSnmptcpGetTracePathParams struct {
+type ProtocolSnmptcpGetTraceRequest struct {
 	// Agent to show whether SNMPTCP tracing is enabled
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
-}
-
-type ProtocolSnmptcpGetTraceRequest struct {
-	PathParams ProtocolSnmptcpGetTracePathParams
 }
 
 type ProtocolSnmptcpGetTraceResponse struct {

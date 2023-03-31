@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacesSpaceIDFoldersPathParams struct {
-	// Id of the space
-	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
 // GetSpacesSpaceIDFoldersRootFoldersEnum - only root folders
 type GetSpacesSpaceIDFoldersRootFoldersEnum string
 
@@ -35,7 +30,7 @@ func (e *GetSpacesSpaceIDFoldersRootFoldersEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetSpacesSpaceIDFoldersQueryParams struct {
+type GetSpacesSpaceIDFoldersRequest struct {
 	// class of the folder
 	Class *string `queryParam:"style=form,explode=true,name=Class"`
 	// keywords attached to the folder
@@ -46,11 +41,8 @@ type GetSpacesSpaceIDFoldersQueryParams struct {
 	Range *string `queryParam:"style=form,explode=true,name=Range"`
 	// only root folders
 	RootFolders *GetSpacesSpaceIDFoldersRootFoldersEnum `queryParam:"style=form,explode=true,name=RootFolders"`
-}
-
-type GetSpacesSpaceIDFoldersRequest struct {
-	PathParams  GetSpacesSpaceIDFoldersPathParams
-	QueryParams GetSpacesSpaceIDFoldersQueryParams
+	// Id of the space
+	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
 }
 
 type GetSpacesSpaceIDFoldersResponse struct {

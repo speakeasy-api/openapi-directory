@@ -33,16 +33,12 @@ func (e *MembershipsByTeamHistoricalFormatEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type MembershipsByTeamHistoricalPathParams struct {
+type MembershipsByTeamHistoricalRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format MembershipsByTeamHistoricalFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Team ID.
 	// Example:<code>100000165</code>.
 	Teamid string `pathParam:"style=simple,explode=false,name=teamid"`
-}
-
-type MembershipsByTeamHistoricalRequest struct {
-	PathParams MembershipsByTeamHistoricalPathParams
 }
 
 type MembershipsByTeamHistoricalResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetPrivdirPathParams struct {
+type SetPrivdirRequest struct {
 	// Agent to set the directory path
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// Directory path for the agent
 	Privdir string `pathParam:"style=simple,explode=false,name=privdir"`
-}
-
-type SetPrivdirRequest struct {
-	PathParams SetPrivdirPathParams
 }
 
 type SetPrivdirResponse struct {

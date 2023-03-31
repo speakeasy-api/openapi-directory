@@ -4,7 +4,6 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var DeleteFunctionServerList = []string{
@@ -12,20 +11,15 @@ var DeleteFunctionServerList = []string{
 }
 
 type DeleteFunctionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type DeleteFunctionPathParams struct {
+type DeleteFunctionRequest struct {
 	// The SID of the Service to delete the Function resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Function resource to delete.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type DeleteFunctionRequest struct {
-	PathParams DeleteFunctionPathParams
-	Security   DeleteFunctionSecurity
-	ServerURL  *string
 }
 
 type DeleteFunctionResponse struct {

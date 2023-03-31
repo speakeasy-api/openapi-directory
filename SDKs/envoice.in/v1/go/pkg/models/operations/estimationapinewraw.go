@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EstimationAPINewRawHeaders struct {
+type EstimationAPINewRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	XAuthKey    string `header:"style=simple,explode=false,name=x-auth-key"`
 	XAuthSecret string `header:"style=simple,explode=false,name=x-auth-secret"`
-}
-
-type EstimationAPINewRawRequest struct {
-	Headers EstimationAPINewRawHeaders
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type EstimationAPINewRawResponse struct {

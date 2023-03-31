@@ -32,20 +32,20 @@ func newEntityUsageReports(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // ReportsEntityUsageReportsGet - Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the Entities Usage Report guide. For more information about the entities report's parameters, see the Entities Usage parameters reference guides.
-func (s *entityUsageReports) ReportsEntityUsageReportsGet(ctx context.Context, request operations.ReportsEntityUsageReportsGetRequest) (*operations.ReportsEntityUsageReportsGetResponse, error) {
+func (s *entityUsageReports) ReportsEntityUsageReportsGet(ctx context.Context, request operations.ReportsEntityUsageReportsGetRequest, security operations.ReportsEntityUsageReportsGetSecurity) (*operations.ReportsEntityUsageReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/{entityType}/{entityKey}/dates/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/{entityType}/{entityKey}/dates/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

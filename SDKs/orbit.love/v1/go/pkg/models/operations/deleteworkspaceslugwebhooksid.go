@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteWorkspaceSlugWebhooksIDSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
-}
-
-type DeleteWorkspaceSlugWebhooksIDPathParams struct {
-	ID            string `pathParam:"style=simple,explode=false,name=id"`
-	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type DeleteWorkspaceSlugWebhooksIDRequest struct {
-	PathParams DeleteWorkspaceSlugWebhooksIDPathParams
-	Security   DeleteWorkspaceSlugWebhooksIDSecurity
+	ID            string `pathParam:"style=simple,explode=false,name=id"`
+	WorkspaceSlug string `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }
 
 type DeleteWorkspaceSlugWebhooksIDResponse struct {

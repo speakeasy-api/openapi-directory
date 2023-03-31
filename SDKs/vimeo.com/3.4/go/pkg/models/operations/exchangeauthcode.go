@@ -39,10 +39,6 @@ type ExchangeAuthCodeRequestBody struct {
 	RedirectURI string `json:"redirect_uri"`
 }
 
-type ExchangeAuthCodeRequest struct {
-	Request ExchangeAuthCodeRequestBody `request:"mediaType=application/vnd.vimeo.auth+json"`
-}
-
 type ExchangeAuthCodeResponse struct {
 	ContentType string
 	StatusCode  int

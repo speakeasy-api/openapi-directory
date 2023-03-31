@@ -33,7 +33,7 @@ func newPagespeedapi(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // PagespeedonlinePagespeedapiRunpagespeed - Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list of suggestions to make that page faster, and other information.
-func (s *pagespeedapi) PagespeedonlinePagespeedapiRunpagespeed(ctx context.Context, request operations.PagespeedonlinePagespeedapiRunpagespeedRequest) (*operations.PagespeedonlinePagespeedapiRunpagespeedResponse, error) {
+func (s *pagespeedapi) PagespeedonlinePagespeedapiRunpagespeed(ctx context.Context, request operations.PagespeedonlinePagespeedapiRunpagespeedRequest, security operations.PagespeedonlinePagespeedapiRunpagespeedSecurity) (*operations.PagespeedonlinePagespeedapiRunpagespeedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pagespeedonline/v5/runPagespeed"
 
@@ -42,11 +42,11 @@ func (s *pagespeedapi) PagespeedonlinePagespeedapiRunpagespeed(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

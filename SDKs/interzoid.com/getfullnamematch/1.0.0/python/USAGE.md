@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetfullnamematchRequest(
-    query_params=operations.GetfullnamematchQueryParams(
-        fullname="reprehenderit",
-        license="maxime",
-    ),
+    fullname="corrupti",
+    license="provident",
 )
     
 res = s.full_name_match_similarity_key.getfullnamematch(req)

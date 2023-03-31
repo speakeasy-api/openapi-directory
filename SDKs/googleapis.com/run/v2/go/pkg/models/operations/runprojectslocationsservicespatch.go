@@ -8,18 +8,14 @@ import (
 )
 
 type RunProjectsLocationsServicesPatchSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RunProjectsLocationsServicesPatchPathParams struct {
-	// The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type RunProjectsLocationsServicesPatchQueryParams struct {
+type RunProjectsLocationsServicesPatchRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                  *shared.XgafvEnum                    `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudRunV2ServiceInput *shared.GoogleCloudRunV2ServiceInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// This field is currently not used by Cloud Run; setting it does not have any effect.
@@ -32,6 +28,8 @@ type RunProjectsLocationsServicesPatchQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Returns response with indentations and line breaks.
@@ -44,13 +42,6 @@ type RunProjectsLocationsServicesPatchQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Indicates that the request should be validated and default values populated, without persisting the request or updating any resources.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-}
-
-type RunProjectsLocationsServicesPatchRequest struct {
-	PathParams  RunProjectsLocationsServicesPatchPathParams
-	QueryParams RunProjectsLocationsServicesPatchQueryParams
-	Request     *shared.GoogleCloudRunV2ServiceInput `request:"mediaType=application/json"`
-	Security    RunProjectsLocationsServicesPatchSecurity
 }
 
 type RunProjectsLocationsServicesPatchResponse struct {

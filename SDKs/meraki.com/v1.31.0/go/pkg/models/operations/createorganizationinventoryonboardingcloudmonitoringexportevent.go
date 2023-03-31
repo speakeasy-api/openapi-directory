@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateOrganizationInventoryOnboardingCloudMonitoringExportEventPathParams struct {
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 type CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequestBody struct {
 	// The type of log event this is recording, e.g. download or opening a banner
 	LogEvent string `json:"logEvent"`
@@ -22,8 +18,8 @@ type CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequestBody 
 }
 
 type CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest struct {
-	PathParams CreateOrganizationInventoryOnboardingCloudMonitoringExportEventPathParams
-	Request    CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequestBody `request:"mediaType=application/json"`
+	RequestBody    CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequestBody `request:"mediaType=application/json"`
+	OrganizationID string                                                                     `pathParam:"style=simple,explode=false,name=organizationId"`
 }
 
 type CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse struct {

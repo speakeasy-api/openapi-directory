@@ -36,7 +36,7 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // Cancels a group application to the carrier based on the ID provided.
 func (s *applications) CancelGroupApplication(ctx context.Context, request operations.CancelGroupApplicationRequest) (*operations.CancelGroupApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/{version}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/{version}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -81,9 +81,9 @@ func (s *applications) CancelGroupApplication(ctx context.Context, request opera
 // After creating a group, you can then create one or more new applications (one per carrier). Just pass the carrier ID and carrier group ID (if known) for the carrier associated with the application and the application type. The carrier group ID will allow us to reference the group in the carrier’s system if that has already been allocated.
 func (s *applications) CreateGroupApplication(ctx context.Context, request operations.CreateGroupApplicationRequest) (*operations.CreateGroupApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/applications", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,9 +136,9 @@ func (s *applications) CreateGroupApplication(ctx context.Context, request opera
 // Edit a group application based on the ID provided. The version parameter must match the latest group application version.
 func (s *applications) EditGroupApplication(ctx context.Context, request operations.EditGroupApplicationRequest) (*operations.EditGroupApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/{version}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationEditRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -198,7 +198,7 @@ func (s *applications) GetAllApplications(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -240,7 +240,7 @@ func (s *applications) GetAllApplications(ctx context.Context, request operation
 // Returns the latest version of a single group application based on the ID provided.
 func (s *applications) GetGroupApplication(ctx context.Context, request operations.GetGroupApplicationRequest) (*operations.GetGroupApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -285,14 +285,14 @@ func (s *applications) GetGroupApplication(ctx context.Context, request operatio
 // Returns a list of all applications for the given group
 func (s *applications) GetGroupApplications(ctx context.Context, request operations.GetGroupApplicationsRequest) (*operations.GetGroupApplicationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/applications", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groups/{group_id}/applications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -334,7 +334,7 @@ func (s *applications) GetGroupApplications(ctx context.Context, request operati
 // Submits a group application to the carrier based on the ID provided.
 func (s *applications) SubmitGroupApplication(ctx context.Context, request operations.SubmitGroupApplicationRequest) (*operations.SubmitGroupApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/{version}/submit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/{version}/submit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -389,7 +389,7 @@ func (s *applications) SubmitGroupApplication(ctx context.Context, request opera
 // Returns a list of errors if the group application is not valid else an empty list is returned
 func (s *applications) ValidateGroupApplication(ctx context.Context, request operations.ValidateGroupApplicationRequest) (*operations.ValidateGroupApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/validate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/applications/{application_id}/validate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

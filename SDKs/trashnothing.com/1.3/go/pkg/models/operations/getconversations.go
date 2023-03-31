@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConversationsQueryParams struct {
+type GetConversationsRequest struct {
 	// Used to filter messases by category.  Must be set to one of the following three categories: inbox, archived, blocked
 	//
 	Category *string `queryParam:"style=form,explode=true,name=category"`
@@ -23,10 +23,6 @@ type GetConversationsQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of conversations to return per page (must be >= 1 and <= 30).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetConversationsRequest struct {
-	QueryParams GetConversationsQueryParams
 }
 
 // GetConversations200ApplicationJSON - The conversations and paging data.

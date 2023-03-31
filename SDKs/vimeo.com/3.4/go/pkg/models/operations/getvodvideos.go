@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVodVideosPathParams struct {
-	// The ID of the On Demand.
-	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
-}
-
 // GetVodVideosDirectionEnum - The sort direction of the results.
 type GetVodVideosDirectionEnum string
 
@@ -128,22 +123,19 @@ func (e *GetVodVideosSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVodVideosQueryParams struct {
+type GetVodVideosRequest struct {
 	// The sort direction of the results.
 	Direction *GetVodVideosDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The attribute by which to filter the results.
 	Filter *GetVodVideosFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	// The ID of the On Demand.
+	OndemandID float64 `pathParam:"style=simple,explode=false,name=ondemand_id"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetVodVideosSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVodVideosRequest struct {
-	PathParams  GetVodVideosPathParams
-	QueryParams GetVodVideosQueryParams
 }
 
 type GetVodVideosResponse struct {

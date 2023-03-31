@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRelatedVideosPathParams struct {
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 // GetRelatedVideosFilterEnum - The attribute by which to filter the results.
 type GetRelatedVideosFilterEnum string
 
@@ -35,18 +30,15 @@ func (e *GetRelatedVideosFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRelatedVideosQueryParams struct {
+type GetRelatedVideosRequest struct {
 	// The attribute by which to filter the results.
 	Filter *GetRelatedVideosFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// The page number of the results to show.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of items to show on each page of results, up to a maximum of 100.
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetRelatedVideosRequest struct {
-	PathParams  GetRelatedVideosPathParams
-	QueryParams GetRelatedVideosQueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetRelatedVideosResponse struct {

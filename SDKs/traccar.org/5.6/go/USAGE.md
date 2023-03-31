@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
         }),
     )
 
     req := operations.DeleteAttributesComputedIDRequest{
-        PathParams: operations.DeleteAttributesComputedIDPathParams{
-            ID: 548814,
-        },
+        ID: 548814,
     }
 
     ctx := context.Background()

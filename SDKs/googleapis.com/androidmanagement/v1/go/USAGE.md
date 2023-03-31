@@ -14,79 +14,70 @@ func main() {
     s := sdk.New()
 
     req := operations.AndroidmanagementEnterprisesCreateRequest{
-        Security: operations.AndroidmanagementEnterprisesCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.AndroidmanagementEnterprisesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "provident",
-            AgreementAccepted: false,
-            Alt: "proto",
-            Callback: "quibusdam",
-            EnterpriseToken: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            ProjectID: "vel",
-            QuotaUser: "error",
-            SignupURLName: "deserunt",
-            UploadType: "suscipit",
-            UploadProtocol: "iure",
-        },
-        Request: &shared.Enterprise{
+        DollarXgafv: "2",
+        Enterprise: &shared.Enterprise{
             AppAutoApprovalEnabled: false,
             ContactInfo: &shared.ContactInfo{
-                ContactEmail: "magnam",
-                DataProtectionOfficerEmail: "debitis",
-                DataProtectionOfficerName: "ipsa",
-                DataProtectionOfficerPhone: "delectus",
-                EuRepresentativeEmail: "tempora",
-                EuRepresentativeName: "suscipit",
-                EuRepresentativePhone: "molestiae",
+                ContactEmail: "provident",
+                DataProtectionOfficerEmail: "distinctio",
+                DataProtectionOfficerName: "quibusdam",
+                DataProtectionOfficerPhone: "unde",
+                EuRepresentativeEmail: "nulla",
+                EuRepresentativeName: "corrupti",
+                EuRepresentativePhone: "illum",
             },
             EnabledNotificationTypes: []shared.EnterpriseEnabledNotificationTypesEnum{
-                "COMMAND",
                 "STATUS_REPORT",
-                "COMPLIANCE_REPORT",
                 "STATUS_REPORT",
             },
-            EnterpriseDisplayName: "nisi",
+            EnterpriseDisplayName: "suscipit",
             Logo: &shared.ExternalData{
-                Sha256Hash: "recusandae",
-                URL: "temporibus",
+                Sha256Hash: "iure",
+                URL: "magnam",
             },
-            Name: "ab",
-            PrimaryColor: 337396,
-            PubsubTopic: "veritatis",
+            Name: "debitis",
+            PrimaryColor: 56713,
+            PubsubTopic: "delectus",
             SigninDetails: []shared.SigninDetail{
                 shared.SigninDetail{
-                    AllowPersonalUsage: "ALLOW_PERSONAL_USAGE_UNSPECIFIED",
-                    QrCode: "ipsam",
-                    SigninEnrollmentToken: "repellendus",
-                    SigninURL: "sapiente",
-                },
-                shared.SigninDetail{
-                    AllowPersonalUsage: "PERSONAL_USAGE_DISALLOWED",
-                    QrCode: "odit",
-                    SigninEnrollmentToken: "at",
-                    SigninURL: "at",
-                },
-                shared.SigninDetail{
-                    AllowPersonalUsage: "PERSONAL_USAGE_DISALLOWED",
+                    AllowPersonalUsage: "PERSONAL_USAGE_ALLOWED",
                     QrCode: "molestiae",
-                    SigninEnrollmentToken: "quod",
-                    SigninURL: "quod",
+                    SigninEnrollmentToken: "minus",
+                    SigninURL: "placeat",
+                },
+                shared.SigninDetail{
+                    AllowPersonalUsage: "PERSONAL_USAGE_ALLOWED",
+                    QrCode: "iusto",
+                    SigninEnrollmentToken: "excepturi",
+                    SigninURL: "nisi",
                 },
             },
             TermsAndConditions: []shared.TermsAndConditions{
                 shared.TermsAndConditions{
                     Content: &shared.UserFacingMessage{
+                        DefaultMessage: "temporibus",
+                        LocalizedMessages: map[string]string{
+                            "quis": "veritatis",
+                        },
+                    },
+                    Header: &shared.UserFacingMessage{
+                        DefaultMessage: "deserunt",
+                        LocalizedMessages: map[string]string{
+                            "ipsam": "repellendus",
+                        },
+                    },
+                },
+                shared.TermsAndConditions{
+                    Content: &shared.UserFacingMessage{
+                        DefaultMessage: "sapiente",
+                        LocalizedMessages: map[string]string{
+                            "odit": "at",
+                            "at": "maiores",
+                            "molestiae": "quod",
+                            "quod": "esse",
+                        },
+                    },
+                    Header: &shared.UserFacingMessage{
                         DefaultMessage: "totam",
                         LocalizedMessages: map[string]string{
                             "dolorum": "dicta",
@@ -95,7 +86,9 @@ func main() {
                             "deleniti": "hic",
                         },
                     },
-                    Header: &shared.UserFacingMessage{
+                },
+                shared.TermsAndConditions{
+                    Content: &shared.UserFacingMessage{
                         DefaultMessage: "optio",
                         LocalizedMessages: map[string]string{
                             "beatae": "commodi",
@@ -103,16 +96,16 @@ func main() {
                             "qui": "impedit",
                         },
                     },
-                },
-                shared.TermsAndConditions{
-                    Content: &shared.UserFacingMessage{
+                    Header: &shared.UserFacingMessage{
                         DefaultMessage: "cum",
                         LocalizedMessages: map[string]string{
                             "ipsum": "excepturi",
                             "aspernatur": "perferendis",
                         },
                     },
-                    Header: &shared.UserFacingMessage{
+                },
+                shared.TermsAndConditions{
+                    Content: &shared.UserFacingMessage{
                         DefaultMessage: "ad",
                         LocalizedMessages: map[string]string{
                             "sed": "iste",
@@ -120,13 +113,38 @@ func main() {
                             "laboriosam": "hic",
                         },
                     },
+                    Header: &shared.UserFacingMessage{
+                        DefaultMessage: "saepe",
+                        LocalizedMessages: map[string]string{
+                            "in": "corporis",
+                            "iste": "iure",
+                            "saepe": "quidem",
+                        },
+                    },
                 },
             },
         },
+        AccessToken: "architecto",
+        AgreementAccepted: false,
+        Alt: "json",
+        Callback: "reiciendis",
+        EnterpriseToken: "est",
+        Fields: "mollitia",
+        Key: "laborum",
+        OauthToken: "dolores",
+        PrettyPrint: false,
+        ProjectID: "dolorem",
+        QuotaUser: "corporis",
+        SignupURLName: "explicabo",
+        UploadType: "nobis",
+        UploadProtocol: "enim",
     }
 
     ctx := context.Background()
-    res, err := s.Enterprises.AndroidmanagementEnterprisesCreate(ctx, req)
+    res, err := s.Enterprises.AndroidmanagementEnterprisesCreate(ctx, req, operations.AndroidmanagementEnterprisesCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

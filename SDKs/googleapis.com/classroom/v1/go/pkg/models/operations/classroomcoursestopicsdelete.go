@@ -8,18 +8,11 @@ import (
 )
 
 type ClassroomCoursesTopicsDeleteSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClassroomCoursesTopicsDeletePathParams struct {
-	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
-	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
-	// Identifier of the topic to delete.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClassroomCoursesTopicsDeleteQueryParams struct {
+type ClassroomCoursesTopicsDeleteRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -28,8 +21,12 @@ type ClassroomCoursesTopicsDeleteQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
+	CourseID string `pathParam:"style=simple,explode=false,name=courseId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Identifier of the topic to delete.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
@@ -42,12 +39,6 @@ type ClassroomCoursesTopicsDeleteQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type ClassroomCoursesTopicsDeleteRequest struct {
-	PathParams  ClassroomCoursesTopicsDeletePathParams
-	QueryParams ClassroomCoursesTopicsDeleteQueryParams
-	Security    ClassroomCoursesTopicsDeleteSecurity
 }
 
 type ClassroomCoursesTopicsDeleteResponse struct {

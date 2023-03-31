@@ -8,18 +8,13 @@ import (
 )
 
 type PrivateArticleCategoriesAddSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PrivateArticleCategoriesAddPathParams struct {
-	// Article unique identifier
-	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PrivateArticleCategoriesAddRequest struct {
-	PathParams PrivateArticleCategoriesAddPathParams
-	Request    shared.CategoriesCreator `request:"mediaType=application/json"`
-	Security   PrivateArticleCategoriesAddSecurity
+	CategoriesCreator shared.CategoriesCreator `request:"mediaType=application/json"`
+	// Article unique identifier
+	ArticleID int64 `pathParam:"style=simple,explode=false,name=article_id"`
 }
 
 type PrivateArticleCategoriesAddResponse struct {

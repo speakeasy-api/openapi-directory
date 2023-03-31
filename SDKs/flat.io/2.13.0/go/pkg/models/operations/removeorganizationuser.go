@@ -8,27 +8,18 @@ import (
 )
 
 type RemoveOrganizationUserSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemoveOrganizationUserPathParams struct {
-	// Unique identifier of the Flat account
-	//
-	User string `pathParam:"style=simple,explode=false,name=user"`
-}
-
-type RemoveOrganizationUserQueryParams struct {
+type RemoveOrganizationUserRequest struct {
 	// If `true`, the account will be only removed from the organization and converted into an individual account on our public website, https://flat.io.
 	// This operation will remove the education-related data from the account.
 	// Before realizing this operation, you need to be sure that the user is at least 13 years old and that this one has read and agreed to the Individual Terms of Services of Flat available on https://flat.io/legal.
 	//
 	ConvertToIndividual *bool `queryParam:"style=form,explode=true,name=convertToIndividual"`
-}
-
-type RemoveOrganizationUserRequest struct {
-	PathParams  RemoveOrganizationUserPathParams
-	QueryParams RemoveOrganizationUserQueryParams
-	Security    RemoveOrganizationUserSecurity
+	// Unique identifier of the Flat account
+	//
+	User string `pathParam:"style=simple,explode=false,name=user"`
 }
 
 type RemoveOrganizationUserResponse struct {

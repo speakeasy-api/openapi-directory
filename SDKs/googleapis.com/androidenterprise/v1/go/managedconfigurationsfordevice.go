@@ -32,20 +32,20 @@ func newManagedconfigurationsfordevice(defaultClient, securityClient HTTPClient,
 }
 
 // AndroidenterpriseManagedconfigurationsfordeviceDelete - Removes a per-device managed configuration for an app for the specified device.
-func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceDelete(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceDeleteRequest) (*operations.AndroidenterpriseManagedconfigurationsfordeviceDeleteResponse, error) {
+func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceDelete(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceDeleteRequest, security operations.AndroidenterpriseManagedconfigurationsfordeviceDeleteSecurity) (*operations.AndroidenterpriseManagedconfigurationsfordeviceDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsf
 }
 
 // AndroidenterpriseManagedconfigurationsfordeviceGet - Retrieves details of a per-device managed configuration.
-func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceGet(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceGetRequest) (*operations.AndroidenterpriseManagedconfigurationsfordeviceGetResponse, error) {
+func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceGet(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceGetRequest, security operations.AndroidenterpriseManagedconfigurationsfordeviceGetSecurity) (*operations.AndroidenterpriseManagedconfigurationsfordeviceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsf
 }
 
 // AndroidenterpriseManagedconfigurationsfordeviceList - Lists all the per-device managed configurations for the specified device. Only the ID is set.
-func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceListRequest) (*operations.AndroidenterpriseManagedconfigurationsfordeviceListResponse, error) {
+func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceListRequest, security operations.AndroidenterpriseManagedconfigurationsfordeviceListSecurity) (*operations.AndroidenterpriseManagedconfigurationsfordeviceListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,11 +167,11 @@ func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsf
 }
 
 // AndroidenterpriseManagedconfigurationsfordeviceUpdate - Adds or updates a per-device managed configuration for an app for the specified device.
-func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceUpdate(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceUpdateRequest) (*operations.AndroidenterpriseManagedconfigurationsfordeviceUpdateResponse, error) {
+func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsfordeviceUpdate(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationsfordeviceUpdateRequest, security operations.AndroidenterpriseManagedconfigurationsfordeviceUpdateSecurity) (*operations.AndroidenterpriseManagedconfigurationsfordeviceUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,11 +183,11 @@ func (s *managedconfigurationsfordevice) AndroidenterpriseManagedconfigurationsf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

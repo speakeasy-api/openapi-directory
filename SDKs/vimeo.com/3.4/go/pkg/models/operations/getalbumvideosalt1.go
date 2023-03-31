@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAlbumVideosAlt1PathParams struct {
-	// The ID of the album.
-	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
-}
-
 // GetAlbumVideosAlt1DirectionEnum - The sort direction of the results.
 type GetAlbumVideosAlt1DirectionEnum string
 
@@ -104,7 +99,9 @@ func (e *GetAlbumVideosAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAlbumVideosAlt1QueryParams struct {
+type GetAlbumVideosAlt1Request struct {
+	// The ID of the album.
+	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 	// The page containing the video URI.
 	ContainingURI *string `queryParam:"style=form,explode=true,name=containing_uri"`
 	// The sort direction of the results.
@@ -125,11 +122,6 @@ type GetAlbumVideosAlt1QueryParams struct {
 	Sort *GetAlbumVideosAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name.
 	WeakSearch *bool `queryParam:"style=form,explode=true,name=weak_search"`
-}
-
-type GetAlbumVideosAlt1Request struct {
-	PathParams  GetAlbumVideosAlt1PathParams
-	QueryParams GetAlbumVideosAlt1QueryParams
 }
 
 type GetAlbumVideosAlt1Response struct {

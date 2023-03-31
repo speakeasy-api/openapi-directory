@@ -33,20 +33,20 @@ func newUserProfiles(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // DfareportingUserProfilesGet - Gets one user profile by ID.
-func (s *userProfiles) DfareportingUserProfilesGet(ctx context.Context, request operations.DfareportingUserProfilesGetRequest) (*operations.DfareportingUserProfilesGetResponse, error) {
+func (s *userProfiles) DfareportingUserProfilesGet(ctx context.Context, request operations.DfareportingUserProfilesGetRequest, security operations.DfareportingUserProfilesGetSecurity) (*operations.DfareportingUserProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *userProfiles) DfareportingUserProfilesGet(ctx context.Context, request 
 }
 
 // DfareportingUserProfilesList - Retrieves list of user profiles for a user.
-func (s *userProfiles) DfareportingUserProfilesList(ctx context.Context, request operations.DfareportingUserProfilesListRequest) (*operations.DfareportingUserProfilesListResponse, error) {
+func (s *userProfiles) DfareportingUserProfilesList(ctx context.Context, request operations.DfareportingUserProfilesListRequest, security operations.DfareportingUserProfilesListSecurity) (*operations.DfareportingUserProfilesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/userprofiles"
 
@@ -90,11 +90,11 @@ func (s *userProfiles) DfareportingUserProfilesList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

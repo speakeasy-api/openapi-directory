@@ -8,19 +8,14 @@ import (
 )
 
 type RenameVideoCollectionSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
-}
-
-type RenameVideoCollectionPathParams struct {
-	// The ID of the collection to rename
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RenameVideoCollectionRequest struct {
-	PathParams RenameVideoCollectionPathParams
 	// The new name for the collection
-	Request  shared.CollectionUpdateRequest `request:"mediaType=application/json"`
-	Security RenameVideoCollectionSecurity
+	CollectionUpdateRequest shared.CollectionUpdateRequest `request:"mediaType=application/json"`
+	// The ID of the collection to rename
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RenameVideoCollectionResponse struct {

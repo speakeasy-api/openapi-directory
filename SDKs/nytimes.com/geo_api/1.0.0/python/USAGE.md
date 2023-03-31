@@ -3,30 +3,26 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        apikey=shared.SchemeApikey(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.GetQueryJSONRequest(
-    query_params=operations.GetQueryJSONQueryParams(
-        date_range="ut",
-        elevation=3532929727473047315,
-        facets=6728514527585200019,
-        filter="laborum",
-        latitude="ab",
-        limit=8131292705867972818,
-        longitude="ex",
-        name="est",
-        offset=7726756373010514897,
-        query="nulla",
-        sort="natus",
-        sw="commodi",
+        apikey="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.GetQueryJSONRequest(
+    date_range="corrupti",
+    elevation=592845,
+    facets="1",
+    filter="quibusdam",
+    latitude="unde",
+    limit=857946,
+    longitude="corrupti",
+    name="illum",
+    offset=423655,
+    query="error",
+    sort="deserunt",
+    sw="suscipit",
 )
     
 res = s.events.get_query_json(req)

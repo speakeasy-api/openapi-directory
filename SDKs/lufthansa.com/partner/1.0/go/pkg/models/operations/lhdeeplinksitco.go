@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type LHDeepLinksITCOSecurity struct {
-	Auth shared.SchemeAuth `security:"scheme,type=oauth2"`
+	Auth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type LHDeepLinksITCOQueryParams struct {
+type LHDeepLinksITCORequest struct {
+	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
 	CabinClass *string `queryParam:"style=form,explode=true,name=cabin-class"`
 	// Carrier for which the deep link will be created (e.g. 'LH')
@@ -46,17 +47,6 @@ type LHDeepLinksITCOQueryParams struct {
 	TravelDate string `queryParam:"style=form,explode=true,name=travel-date"`
 	// Type and number of travelers (e.g. '(adult=2;child=2;infant=1)')
 	Travelers *string `queryParam:"style=form,explode=true,name=travelers"`
-}
-
-type LHDeepLinksITCOHeaders struct {
-	// http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-}
-
-type LHDeepLinksITCORequest struct {
-	QueryParams LHDeepLinksITCOQueryParams
-	Headers     LHDeepLinksITCOHeaders
-	Security    LHDeepLinksITCOSecurity
 }
 
 type LHDeepLinksITCOResponse struct {

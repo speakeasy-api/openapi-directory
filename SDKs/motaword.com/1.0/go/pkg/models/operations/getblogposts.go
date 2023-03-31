@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBlogPostsQueryParams struct {
+type GetBlogPostsRequest struct {
 	// When `true`, and no article is found in the locale, it falls back to `locale=en`.
 	Fallback *bool `queryParam:"style=form,explode=true,name=fallback"`
 	// Article language, default `en`. When no blog article is available and `fallback=true` is specified, it falls back to `en`.
 	Locale  *string `queryParam:"style=form,explode=true,name=locale"`
 	Page    *int64  `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64  `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetBlogPostsRequest struct {
-	QueryParams GetBlogPostsQueryParams
 }
 
 type GetBlogPostsResponse struct {

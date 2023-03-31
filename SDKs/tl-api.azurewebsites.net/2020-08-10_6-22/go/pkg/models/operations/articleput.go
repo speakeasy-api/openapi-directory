@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticlePutRequest struct {
-	// article object
-	Request shared.ArticleDTO `request:"mediaType=application/json"`
-}
-
 type ArticlePutResponse struct {
 	APIException *shared.APIException
 	ContentType  string

@@ -8,28 +8,24 @@ import (
 )
 
 type AndroidenterpriseDevicesUpdateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AndroidenterpriseDevicesUpdatePathParams struct {
-	// The ID of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-	// The ID of the enterprise.
-	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
-	// The ID of the user.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type AndroidenterpriseDevicesUpdateQueryParams struct {
+type AndroidenterpriseDevicesUpdateRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	Device      *shared.Device    `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The ID of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
+	// The ID of the enterprise.
+	EnterpriseID string `pathParam:"style=simple,explode=false,name=enterpriseId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -46,13 +42,8 @@ type AndroidenterpriseDevicesUpdateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type AndroidenterpriseDevicesUpdateRequest struct {
-	PathParams  AndroidenterpriseDevicesUpdatePathParams
-	QueryParams AndroidenterpriseDevicesUpdateQueryParams
-	Request     *shared.Device `request:"mediaType=application/json"`
-	Security    AndroidenterpriseDevicesUpdateSecurity
+	// The ID of the user.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type AndroidenterpriseDevicesUpdateResponse struct {

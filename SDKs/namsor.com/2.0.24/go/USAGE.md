@@ -13,18 +13,14 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AnonymizeRequest{
-        PathParams: operations.AnonymizePathParams{
-            Anonymized: false,
-            Source: "corrupti",
-            Token: "provident",
-        },
+        Anonymized: false,
+        Source: "corrupti",
+        Token: "provident",
     }
 
     ctx := context.Background()

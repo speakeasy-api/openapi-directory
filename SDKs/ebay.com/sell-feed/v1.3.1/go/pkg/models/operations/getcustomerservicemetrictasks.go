@@ -8,10 +8,10 @@ import (
 )
 
 type GetCustomerServiceMetricTasksSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetCustomerServiceMetricTasksQueryParams struct {
+type GetCustomerServiceMetricTasksRequest struct {
 	// The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the <code>look_back_days</code> parameter.<p><strong>Format: </strong>UTC</p><p>For example, tasks within a range: </p><p><code>yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ </code></p><p>Tasks created on March 8, 2020</p><p><code>2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z</code></p><p><b>Maximum: </b>90 days</p>
 	DateRange *string `queryParam:"style=form,explode=true,name=date_range"`
 	// The feed type associated with the task. The only presently supported value is <code>CUSTOMER_SERVICE_METRICS_REPORT</code>.
@@ -22,11 +22,6 @@ type GetCustomerServiceMetricTasksQueryParams struct {
 	LookBackDays *string `queryParam:"style=form,explode=true,name=look_back_days"`
 	// The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. <p>Combine <strong>offset</strong> with the <strong>limit</strong> query parameter to control the items returned in the response. For example, if you supply an <strong>offset</strong> of <code>0</code> and a <strong>limit</strong> of <code>10</code>, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If <strong>offset</strong> is <code>10</code> and <strong>limit</strong> is <code>20</code>, the first page of the response contains items 11-30 from the complete result set. <br /><br /><b>Default: </b>0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetCustomerServiceMetricTasksRequest struct {
-	QueryParams GetCustomerServiceMetricTasksQueryParams
-	Security    GetCustomerServiceMetricTasksSecurity
 }
 
 type GetCustomerServiceMetricTasksResponse struct {

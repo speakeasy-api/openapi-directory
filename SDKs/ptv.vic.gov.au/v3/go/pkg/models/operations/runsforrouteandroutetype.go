@@ -10,6 +10,35 @@ import (
 	"time"
 )
 
+type RunsForRouteAndRouteTypeExpandEnum string
+
+const (
+	RunsForRouteAndRouteTypeExpandEnumAll               RunsForRouteAndRouteTypeExpandEnum = "All"
+	RunsForRouteAndRouteTypeExpandEnumVehicleDescriptor RunsForRouteAndRouteTypeExpandEnum = "VehicleDescriptor"
+	RunsForRouteAndRouteTypeExpandEnumVehiclePosition   RunsForRouteAndRouteTypeExpandEnum = "VehiclePosition"
+	RunsForRouteAndRouteTypeExpandEnumNone              RunsForRouteAndRouteTypeExpandEnum = "None"
+)
+
+func (e *RunsForRouteAndRouteTypeExpandEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "All":
+		fallthrough
+	case "VehicleDescriptor":
+		fallthrough
+	case "VehiclePosition":
+		fallthrough
+	case "None":
+		*e = RunsForRouteAndRouteTypeExpandEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for RunsForRouteAndRouteTypeExpandEnum: %s", s)
+	}
+}
+
 // RunsForRouteAndRouteTypeRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
 type RunsForRouteAndRouteTypeRouteTypeEnum string
 
@@ -43,58 +72,21 @@ func (e *RunsForRouteAndRouteTypeRouteTypeEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type RunsForRouteAndRouteTypePathParams struct {
-	// Identifier of route; values returned by Routes API - v3/routes.
-	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
-	// Number identifying transport mode; values returned via RouteTypes API
-	RouteType RunsForRouteAndRouteTypeRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
-}
-
-type RunsForRouteAndRouteTypeExpandEnum string
-
-const (
-	RunsForRouteAndRouteTypeExpandEnumAll               RunsForRouteAndRouteTypeExpandEnum = "All"
-	RunsForRouteAndRouteTypeExpandEnumVehicleDescriptor RunsForRouteAndRouteTypeExpandEnum = "VehicleDescriptor"
-	RunsForRouteAndRouteTypeExpandEnumVehiclePosition   RunsForRouteAndRouteTypeExpandEnum = "VehiclePosition"
-	RunsForRouteAndRouteTypeExpandEnumNone              RunsForRouteAndRouteTypeExpandEnum = "None"
-)
-
-func (e *RunsForRouteAndRouteTypeExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "All":
-		fallthrough
-	case "VehicleDescriptor":
-		fallthrough
-	case "VehiclePosition":
-		fallthrough
-	case "None":
-		*e = RunsForRouteAndRouteTypeExpandEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RunsForRouteAndRouteTypeExpandEnum: %s", s)
-	}
-}
-
-type RunsForRouteAndRouteTypeQueryParams struct {
+type RunsForRouteAndRouteTypeRequest struct {
 	// Date of the request. (optional - defaults to now)
 	DateUtc *time.Time `queryParam:"style=form,explode=true,name=date_utc"`
 	// Your developer id
 	Devid *string `queryParam:"style=form,explode=true,name=devid"`
 	// List of objects to be returned in full (i.e. expanded) - options include: All, VehiclePosition, VehicleDescriptor, or None. Default is All.
 	Expand []RunsForRouteAndRouteTypeExpandEnum `queryParam:"style=form,explode=true,name=expand"`
+	// Identifier of route; values returned by Routes API - v3/routes.
+	RouteID int `pathParam:"style=simple,explode=false,name=route_id"`
+	// Number identifying transport mode; values returned via RouteTypes API
+	RouteType RunsForRouteAndRouteTypeRouteTypeEnum `pathParam:"style=simple,explode=false,name=route_type"`
 	// Authentication signature for request
 	Signature *string `queryParam:"style=form,explode=true,name=signature"`
 	// Please ignore
 	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type RunsForRouteAndRouteTypeRequest struct {
-	PathParams  RunsForRouteAndRouteTypePathParams
-	QueryParams RunsForRouteAndRouteTypeQueryParams
 }
 
 type RunsForRouteAndRouteTypeResponse struct {

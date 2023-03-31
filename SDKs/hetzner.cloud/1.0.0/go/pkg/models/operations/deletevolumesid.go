@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteVolumesIDPathParams struct {
+type DeleteVolumesIDRequest struct {
 	// ID of the Volume
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteVolumesIDRequest struct {
-	PathParams DeleteVolumesIDPathParams
 }
 
 type DeleteVolumesIDResponse struct {

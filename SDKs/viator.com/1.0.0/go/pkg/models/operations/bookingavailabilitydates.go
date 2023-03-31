@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type BookingAvailabilityDatesQueryParams struct {
-	// **unique alphanumeric identifier** of the product
-	ProductCode *string `queryParam:"style=form,explode=true,name=productCode"`
-}
-
-type BookingAvailabilityDatesHeaders struct {
+type BookingAvailabilityDatesRequest struct {
 	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
 	//
 	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type BookingAvailabilityDatesRequest struct {
-	QueryParams BookingAvailabilityDatesQueryParams
-	Headers     BookingAvailabilityDatesHeaders
+	// **unique alphanumeric identifier** of the product
+	ProductCode *string `queryParam:"style=form,explode=true,name=productCode"`
 }
 
 // BookingAvailabilityDates200ApplicationJSON - Success

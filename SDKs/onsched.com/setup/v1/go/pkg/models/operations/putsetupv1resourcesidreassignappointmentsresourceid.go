@@ -8,25 +8,17 @@ import (
 	"time"
 )
 
-type PutSetupV1ResourcesIDReassignAppointmentsResourceIDPathParams struct {
-	// id of the original resource
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// id of the target resource
-	ResourceID string `pathParam:"style=simple,explode=false,name=resourceId"`
-}
-
-type PutSetupV1ResourcesIDReassignAppointmentsResourceIDQueryParams struct {
+type PutSetupV1ResourcesIDReassignAppointmentsResourceIDRequest struct {
 	// CalendarId of calendar containing appointments
 	CalendarID *string `queryParam:"style=form,explode=true,name=calendarId"`
 	// YYYY-MM-DD, Appt range end date
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=endDate"`
+	// id of the original resource
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// id of the target resource
+	ResourceID string `pathParam:"style=simple,explode=false,name=resourceId"`
 	// YYYY-MM-DD, Appt range start date
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
-}
-
-type PutSetupV1ResourcesIDReassignAppointmentsResourceIDRequest struct {
-	PathParams  PutSetupV1ResourcesIDReassignAppointmentsResourceIDPathParams
-	QueryParams PutSetupV1ResourcesIDReassignAppointmentsResourceIDQueryParams
 }
 
 type PutSetupV1ResourcesIDReassignAppointmentsResourceIDResponse struct {

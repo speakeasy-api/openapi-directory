@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostNewAEAssessmentPathParams struct {
-	// The employees' unique identifier. E.g EE001
-	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
-	// The employers' unique identifier. E.g ER001
-	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
-}
-
-type PostNewAEAssessmentHeaders struct {
+type PostNewAEAssessmentRequest struct {
+	// The auto enrolment assessment object.
+	AEAssessment shared.AEAssessment `request:"mediaType=application/json"`
 	// The version of the api to target. Omit or set as &apos;default&apos; to target the current api version.
 	APIVersion string `header:"style=simple,explode=false,name=Api-Version"`
 	// The OAuth 1 authorization header. &apos;Auto&apos; enables auto complete.
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
-type PostNewAEAssessmentRequest struct {
-	PathParams PostNewAEAssessmentPathParams
-	Headers    PostNewAEAssessmentHeaders
-	// The auto enrolment assessment object.
-	Request shared.AEAssessment `request:"mediaType=application/json"`
+	// The employees' unique identifier. E.g EE001
+	EmployeeID string `pathParam:"style=simple,explode=false,name=EmployeeId"`
+	// The employers' unique identifier. E.g ER001
+	EmployerID string `pathParam:"style=simple,explode=false,name=EmployerId"`
 }
 
 type PostNewAEAssessmentResponse struct {

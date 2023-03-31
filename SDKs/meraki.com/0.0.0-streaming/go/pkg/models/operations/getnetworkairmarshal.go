@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetNetworkAirMarshalPathParams struct {
+type GetNetworkAirMarshalRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
-type GetNetworkAirMarshalQueryParams struct {
 	// The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 	T0 *string `queryParam:"style=form,explode=true,name=t0"`
 	// The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 	Timespan *float32 `queryParam:"style=form,explode=true,name=timespan"`
-}
-
-type GetNetworkAirMarshalRequest struct {
-	PathParams  GetNetworkAirMarshalPathParams
-	QueryParams GetNetworkAirMarshalQueryParams
 }
 
 type GetNetworkAirMarshalResponse struct {

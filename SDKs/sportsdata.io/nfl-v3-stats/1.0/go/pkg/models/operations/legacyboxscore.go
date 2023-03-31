@@ -33,7 +33,7 @@ func (e *LegacyBoxScoreFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LegacyBoxScorePathParams struct {
+type LegacyBoxScoreRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format LegacyBoxScoreFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Abbreviation of the home team. Example: <code>WAS</code>.
@@ -46,10 +46,6 @@ type LegacyBoxScorePathParams struct {
 	//           Example: <code>1</code>
 	//
 	Week string `pathParam:"style=simple,explode=false,name=week"`
-}
-
-type LegacyBoxScoreRequest struct {
-	PathParams LegacyBoxScorePathParams
 }
 
 type LegacyBoxScoreResponse struct {

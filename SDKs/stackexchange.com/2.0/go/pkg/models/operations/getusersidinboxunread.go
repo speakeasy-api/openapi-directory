@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type GetUsersIDInboxUnreadPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetUsersIDInboxUnreadQueryParams struct {
+type GetUsersIDInboxUnreadRequest struct {
 	// All API responses are JSON, we do support JSONP with the callback query parameter.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -46,6 +42,7 @@ type GetUsersIDInboxUnreadQueryParams struct {
 	// For ease of transition from earlier API versions, the filters _b, _ba, _bc, _bca, _a, _ac, and _c are also built in. These are unsafe, and exclude a combination of question and answer body, comments, and answers so as to mimic the body, answers, and comments parameters that have been removed in V2.0. New applications should not use these filters.
 	//
 	Filter   *string `queryParam:"style=form,explode=true,name=filter"`
+	ID       int64   `pathParam:"style=simple,explode=false,name=id"`
 	Page     *int64  `queryParam:"style=form,explode=true,name=page"`
 	Pagesize *int64  `queryParam:"style=form,explode=true,name=pagesize"`
 	// Unix date.
@@ -53,11 +50,6 @@ type GetUsersIDInboxUnreadQueryParams struct {
 	// Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
 	//
 	Site string `queryParam:"style=form,explode=true,name=site"`
-}
-
-type GetUsersIDInboxUnreadRequest struct {
-	PathParams  GetUsersIDInboxUnreadPathParams
-	QueryParams GetUsersIDInboxUnreadQueryParams
 }
 
 type GetUsersIDInboxUnreadResponse struct {

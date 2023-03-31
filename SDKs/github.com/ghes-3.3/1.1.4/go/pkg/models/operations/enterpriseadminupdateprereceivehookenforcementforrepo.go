@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams struct {
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The unique identifier of the pre-receive hook.
-	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 // EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum - The state of enforcement for the hook on this repository.
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum string
 
@@ -51,8 +42,13 @@ type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody struct {
 }
 
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest struct {
-	PathParams EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams
-	Request    *EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody `request:"mediaType=application/json"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The unique identifier of the pre-receive hook.
+	PreReceiveHookID int64 `pathParam:"style=simple,explode=false,name=pre_receive_hook_id"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse struct {

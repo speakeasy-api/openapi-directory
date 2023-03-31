@@ -4,19 +4,16 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetRequest(
-    query_params=operations.GetQueryParams(
-        keys=[
-            "repellat",
-            "ut",
-            "autem",
-        ],
-    ),
-    headers=operations.GetHeaders(
-        x_market_id="repudiandae",
-        x_private_label_id=2378040459682270966,
-    ),
+    x_market_id="corrupti",
+    x_private_label_id=592845,
+    keys=[
+        "quibusdam",
+        "unde",
+        "nulla",
+    ],
 )
     
 res = s.v1.get(req)

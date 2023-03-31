@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteCustomerGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteCustomerGroupPathParams struct {
-	// The ID of the customer group to delete.
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteCustomerGroupRequest struct {
-	PathParams DeleteCustomerGroupPathParams
-	Security   DeleteCustomerGroupSecurity
+	// The ID of the customer group to delete.
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type DeleteCustomerGroupResponse struct {

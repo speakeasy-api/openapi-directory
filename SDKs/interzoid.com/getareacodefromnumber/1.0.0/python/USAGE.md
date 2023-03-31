@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetareacodefromnumberRequest(
-    query_params=operations.GetareacodefromnumberQueryParams(
-        license="aut",
-        number="modi",
-    ),
+    license="corrupti",
+    number="provident",
 )
     
 res = s.area_code_information.getareacodefromnumber(req)

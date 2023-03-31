@@ -14,14 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest{
-        Headers: operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders{
-            XAPIKey: "corrupti",
+        AerodromesByDistance: shared.AerodromesByDistance{
+            Distance: 592845,
+            Latitude: 844266,
+            Longitude: 857946,
         },
-        Request: shared.AerodromesByDistance{
-            Distance: 715190,
-            Latitude: 602763,
-            Longitude: 544883,
-        },
+        XAPIKey: "corrupti",
     }
 
     ctx := context.Background()

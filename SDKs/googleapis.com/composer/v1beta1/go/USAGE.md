@@ -14,37 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeRequest{
-        Security: operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        CheckUpgradeRequest: &shared.CheckUpgradeRequest{
+            ImageVersion: "provident",
         },
-        PathParams: operations.ComposerProjectsLocationsEnvironmentsCheckUpgradePathParams{
-            Environment: "corrupti",
-        },
-        QueryParams: operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.CheckUpgradeRequest{
-            ImageVersion: "suscipit",
-        },
+        AccessToken: "distinctio",
+        Alt: "proto",
+        Callback: "unde",
+        Environment: "nulla",
+        Fields: "corrupti",
+        Key: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCheckUpgrade(ctx, req)
+    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCheckUpgrade(ctx, req, operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

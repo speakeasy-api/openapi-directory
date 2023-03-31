@@ -4,48 +4,49 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.MybusinessaccountmanagementAccountsCreateRequest(
-    query_params=operations.MybusinessaccountmanagementAccountsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="atque",
-        alt="proto",
-        callback="nobis",
-        fields="quod",
-        key="ipsam",
-        oauth_token="quibusdam",
-        pretty_print=False,
-        quota_user="itaque",
-        upload_type="quae",
-        upload_protocol="aliquid",
-    ),
-    request=shared.AccountInput(
-        account_name="ut",
-        name="magni",
+    dollar_xgafv="2",
+    account_input=shared.AccountInput(
+        account_name="provident",
+        name="distinctio",
         organization_info=shared.OrganizationInfoInput(
             address=shared.PostalAddress(
                 address_lines=[
-                    "facilis",
-                    "fugiat",
+                    "unde",
+                    "nulla",
+                    "corrupti",
+                    "illum",
                 ],
-                administrative_area="dolorem",
-                language_code="quas",
-                locality="sed",
-                organization="quo",
-                postal_code="cum",
+                administrative_area="vel",
+                language_code="error",
+                locality="deserunt",
+                organization="suscipit",
+                postal_code="28092",
                 recipients=[
-                    "culpa",
-                    "omnis",
+                    "molestiae",
+                    "minus",
                 ],
-                region_code="sit",
-                revision=5851310603061245360,
-                sorting_code="totam",
-                sublocality="magnam",
+                region_code="placeat",
+                revision=528895,
+                sorting_code="iusto",
+                sublocality="excepturi",
             ),
         ),
-        primary_owner="culpa",
-        type="USER_GROUP",
+        primary_owner="nisi",
+        type="ORGANIZATION",
     ),
+    access_token="temporibus",
+    alt="json",
+    callback="quis",
+    fields_="veritatis",
+    key="deserunt",
+    oauth_token="perferendis",
+    pretty_print=False,
+    quota_user="ipsam",
+    upload_type="repellendus",
+    upload_protocol="sapiente",
 )
     
 res = s.accounts.mybusinessaccountmanagement_accounts_create(req)

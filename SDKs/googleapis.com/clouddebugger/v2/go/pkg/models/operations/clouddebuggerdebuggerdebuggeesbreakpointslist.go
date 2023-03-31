@@ -10,23 +10,18 @@ import (
 )
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity struct {
 	Option1 *ClouddebuggerDebuggerDebuggeesBreakpointsListSecurityOption1 `security:"option"`
 	Option2 *ClouddebuggerDebuggerDebuggeesBreakpointsListSecurityOption2 `security:"option"`
-}
-
-type ClouddebuggerDebuggerDebuggeesBreakpointsListPathParams struct {
-	// Required. ID of the debuggee whose breakpoints to list.
-	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
 }
 
 // ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum - Only breakpoints with the specified action will pass the filter.
@@ -53,7 +48,7 @@ func (e *ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum) Unmarshal
 	}
 }
 
-type ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams struct {
+type ClouddebuggerDebuggerDebuggeesBreakpointsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -66,6 +61,8 @@ type ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Required. The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
 	ClientVersion *string `queryParam:"style=form,explode=true,name=clientVersion"`
+	// Required. ID of the debuggee whose breakpoints to list.
+	DebuggeeID string `pathParam:"style=simple,explode=false,name=debuggeeId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// When set to `true`, the response includes the list of breakpoints set by any user. Otherwise, it includes only breakpoints set by the caller.
@@ -88,12 +85,6 @@ type ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams struct {
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// A wait token that, if specified, blocks the call until the breakpoints list has changed, or a server selected timeout has expired. The value should be set from the last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait timeout, which should be called again with the same `wait_token`.
 	WaitToken *string `queryParam:"style=form,explode=true,name=waitToken"`
-}
-
-type ClouddebuggerDebuggerDebuggeesBreakpointsListRequest struct {
-	PathParams  ClouddebuggerDebuggerDebuggeesBreakpointsListPathParams
-	QueryParams ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams
-	Security    ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity
 }
 
 type ClouddebuggerDebuggerDebuggeesBreakpointsListResponse struct {

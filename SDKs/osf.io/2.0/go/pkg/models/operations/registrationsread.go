@@ -9,13 +9,9 @@ import (
 	"time"
 )
 
-type RegistrationsReadPathParams struct {
+type RegistrationsReadRequest struct {
 	// The unique identifier of the registration.
 	RegistrationID string `pathParam:"style=simple,explode=false,name=registration_id"`
-}
-
-type RegistrationsReadRequest struct {
-	PathParams RegistrationsReadPathParams
 }
 
 // RegistrationsReadRegistrationAttributesCategoryEnum - The category of the registered node.

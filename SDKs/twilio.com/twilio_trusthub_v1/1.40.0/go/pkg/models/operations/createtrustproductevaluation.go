@@ -12,12 +12,8 @@ var CreateTrustProductEvaluationServerList = []string{
 }
 
 type CreateTrustProductEvaluationSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTrustProductEvaluationPathParams struct {
-	// The unique string that we created to identify the trust_product resource.
-	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTrustProductEvaluationCreateTrustProductEvaluationRequest struct {
@@ -26,10 +22,9 @@ type CreateTrustProductEvaluationCreateTrustProductEvaluationRequest struct {
 }
 
 type CreateTrustProductEvaluationRequest struct {
-	PathParams CreateTrustProductEvaluationPathParams
-	Request    *CreateTrustProductEvaluationCreateTrustProductEvaluationRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateTrustProductEvaluationSecurity
-	ServerURL  *string
+	RequestBody *CreateTrustProductEvaluationCreateTrustProductEvaluationRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique string that we created to identify the trust_product resource.
+	TrustProductSid string `pathParam:"style=simple,explode=false,name=TrustProductSid"`
 }
 
 type CreateTrustProductEvaluationResponse struct {

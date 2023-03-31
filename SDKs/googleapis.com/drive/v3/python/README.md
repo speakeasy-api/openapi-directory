@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/drive/v3/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,30 +15,24 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DriveAboutGetRequest(
-    security=operations.DriveAboutGetSecurity(
-        option1=operations.DriveAboutGetSecurityOption1(
-            oauth2=shared.SchemeOauth2(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-            oauth2c=shared.SchemeOauth2c(
-                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            ),
-        ),
-    ),
-    query_params=operations.DriveAboutGetQueryParams(
-        alt="json",
-        fields="dolores",
-        key="voluptates",
-        oauth_token="illo",
-        pretty_print=True,
-        quota_user="eveniet",
-        user_ip="molestiae",
-    ),
+    alt="json",
+    fields_="corrupti",
+    key="provident",
+    oauth_token="distinctio",
+    pretty_print=False,
+    quota_user="quibusdam",
+    user_ip="unde",
 )
     
-res = s.about.drive_about_get(req)
+res = s.about.drive_about_get(req, operations.DriveAboutGetSecurity(
+    option1=operations.DriveAboutGetSecurityOption1(
+        oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+        oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+    ),
+))
 
 if res.about is not None:
     # handle response
@@ -46,7 +40,8 @@ if res.about is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### about
 
@@ -56,7 +51,7 @@ if res.about is not None:
 
 * `drive_changes_get_start_page_token` - Gets the starting pageToken for listing future changes.
 * `drive_changes_list` - Lists the changes for a user or shared drive.
-* `drive_changes_watch` - Subscribes to changes for a user.
+* `drive_changes_watch` - Subscribes to changes for a user. To use this method, you must include the pageToken query parameter.
 
 ### channels
 
@@ -64,7 +59,7 @@ if res.about is not None:
 
 ### comments
 
-* `drive_comments_create` - Creates a new comment on a file.
+* `drive_comments_create` - Creates a comment on a file.
 * `drive_comments_delete` - Deletes a comment.
 * `drive_comments_get` - Gets a comment by ID.
 * `drive_comments_list` - Lists a file's comments.
@@ -72,18 +67,18 @@ if res.about is not None:
 
 ### drives
 
-* `drive_drives_create` - Creates a new shared drive.
+* `drive_drives_create` - Creates a shared drive.
 * `drive_drives_delete` - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
 * `drive_drives_get` - Gets a shared drive's metadata by ID.
 * `drive_drives_hide` - Hides a shared drive from the default view.
 * `drive_drives_list` - Lists the user's shared drives.
 * `drive_drives_unhide` - Restores a shared drive to the default view.
-* `drive_drives_update` - Updates the metadate for a shared drive.
+* `drive_drives_update` - Updates the metadata for a shared drive.
 
 ### files
 
 * `drive_files_copy` - Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied.
-* `drive_files_create` - Creates a new file.
+* `drive_files_create` - Creates a file.
 * `drive_files_delete` - Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. If the target is a folder, all descendants owned by the user are also deleted.
 * `drive_files_empty_trash` - Permanently deletes all of the user's trashed files.
 * `drive_files_export` - Exports a Google Workspace document to the requested MIME type and returns exported byte content. Note that the exported content is limited to 10MB.
@@ -97,7 +92,7 @@ if res.about is not None:
 
 ### permissions
 
-* `drive_permissions_create` - Creates a permission for a file or shared drive.
+* `drive_permissions_create` - Creates a permission for a file or shared drive. For more information on creating permissions, see Share files, folders & drives.
 * `drive_permissions_delete` - Deletes a permission.
 * `drive_permissions_get` - Gets a permission by ID.
 * `drive_permissions_list` - Lists a file's or shared drive's permissions.
@@ -105,7 +100,7 @@ if res.about is not None:
 
 ### replies
 
-* `drive_replies_create` - Creates a new reply to a comment.
+* `drive_replies_create` - Creates a reply to a comment.
 * `drive_replies_delete` - Deletes a reply.
 * `drive_replies_get` - Gets a reply by ID.
 * `drive_replies_list` - Lists a comment's replies.
@@ -125,7 +120,17 @@ if res.about is not None:
 * `drive_teamdrives_get` - Deprecated use drives.get instead.
 * `drive_teamdrives_list` - Deprecated use drives.list instead.
 * `drive_teamdrives_update` - Deprecated use drives.update instead
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -10,12 +10,7 @@ import (
 )
 
 type EditAlbumAlt1Security struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type EditAlbumAlt1PathParams struct {
-	// The ID of the album.
-	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // EditAlbumAlt1RequestBodyLayoutEnum - The type of layout for presenting the album.
@@ -168,9 +163,9 @@ type EditAlbumAlt1RequestBody struct {
 }
 
 type EditAlbumAlt1Request struct {
-	PathParams EditAlbumAlt1PathParams
-	Request    *EditAlbumAlt1RequestBody `request:"mediaType=application/vnd.vimeo.album+json"`
-	Security   EditAlbumAlt1Security
+	RequestBody *EditAlbumAlt1RequestBody `request:"mediaType=application/vnd.vimeo.album+json"`
+	// The ID of the album.
+	AlbumID float64 `pathParam:"style=simple,explode=false,name=album_id"`
 }
 
 type EditAlbumAlt1Response struct {

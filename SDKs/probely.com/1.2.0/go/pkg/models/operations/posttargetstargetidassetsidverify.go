@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTargetsTargetIDAssetsIDVerifyPathParams struct {
-	// Object Id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Target id
-	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
-}
-
 type PostTargetsTargetIDAssetsIDVerifyRequestBody struct {
 	// Type of verification:
 	// * dns - we look or a TXT record on the host you registered containing
@@ -25,8 +18,11 @@ type PostTargetsTargetIDAssetsIDVerifyRequestBody struct {
 }
 
 type PostTargetsTargetIDAssetsIDVerifyRequest struct {
-	PathParams PostTargetsTargetIDAssetsIDVerifyPathParams
-	Request    PostTargetsTargetIDAssetsIDVerifyRequestBody `request:"mediaType=application/json"`
+	RequestBody PostTargetsTargetIDAssetsIDVerifyRequestBody `request:"mediaType=application/json"`
+	// Object Id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Target id
+	TargetID string `pathParam:"style=simple,explode=false,name=target_id"`
 }
 
 // PostTargetsTargetIDAssetsIDVerify404ApplicationJSON - Not found

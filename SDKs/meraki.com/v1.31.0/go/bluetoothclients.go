@@ -34,14 +34,14 @@ func newBluetoothClients(defaultClient, securityClient HTTPClient, serverURL, la
 // Return a Bluetooth client. Bluetooth clients can be identified by their ID or their MAC.
 func (s *bluetoothClients) GetNetworkBluetoothClient(ctx context.Context, request operations.GetNetworkBluetoothClientRequest) (*operations.GetNetworkBluetoothClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bluetoothClients/{bluetoothClientId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bluetoothClients/{bluetoothClientId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *bluetoothClients) GetNetworkBluetoothClient(ctx context.Context, reques
 // List the Bluetooth clients seen by APs in this network
 func (s *bluetoothClients) GetNetworkBluetoothClients(ctx context.Context, request operations.GetNetworkBluetoothClientsRequest) (*operations.GetNetworkBluetoothClientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bluetoothClients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/bluetoothClients", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

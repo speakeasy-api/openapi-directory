@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrgsListOutsideCollaboratorsPathParams struct {
-	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
 // OrgsListOutsideCollaboratorsFilterEnum - Filter the list of outside collaborators. Can be one of:
 // \* `2fa_disabled`: Outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled.
 // \* `all`: All outside collaborators.
@@ -39,20 +35,16 @@ func (e *OrgsListOutsideCollaboratorsFilterEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type OrgsListOutsideCollaboratorsQueryParams struct {
+type OrgsListOutsideCollaboratorsRequest struct {
 	// Filter the list of outside collaborators. Can be one of:
 	// \* `2fa_disabled`: Outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled.
 	// \* `all`: All outside collaborators.
 	Filter *OrgsListOutsideCollaboratorsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
+	Org    string                                  `pathParam:"style=simple,explode=false,name=org"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type OrgsListOutsideCollaboratorsRequest struct {
-	PathParams  OrgsListOutsideCollaboratorsPathParams
-	QueryParams OrgsListOutsideCollaboratorsQueryParams
 }
 
 type OrgsListOutsideCollaboratorsResponse struct {

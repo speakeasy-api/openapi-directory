@@ -12,14 +12,11 @@ var ListBindingServerList = []string{
 }
 
 type ListBindingSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListBindingPathParams struct {
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
-}
-
-type ListBindingQueryParams struct {
+type ListBindingRequest struct {
 	BindingType []shared.BindingEnumBindingTypeEnum `queryParam:"style=form,explode=true,name=BindingType"`
 	Identity    []string                            `queryParam:"style=form,explode=true,name=Identity"`
 	// The page index. This value is simply for client state.
@@ -27,14 +24,8 @@ type ListBindingQueryParams struct {
 	// How many resources to return in each list page. The default is 50, and the maximum is 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The page token. This is provided by the API.
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListBindingRequest struct {
-	PathParams  ListBindingPathParams
-	QueryParams ListBindingQueryParams
-	Security    ListBindingSecurity
-	ServerURL   *string
+	PageToken  *string `queryParam:"style=form,explode=true,name=PageToken"`
+	ServiceSid string  `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type ListBindingListBindingResponseMeta struct {

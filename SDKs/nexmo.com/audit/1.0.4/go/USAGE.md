@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetEventRequest{
-        Security: operations.GetEventSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.GetEventPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.GetEvent(ctx, req)
+    res, err := s.GetEvent(ctx, req, operations.GetEventSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

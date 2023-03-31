@@ -8,20 +8,16 @@ import (
 )
 
 type UpdateAPIKeySecurity struct {
-	OtoroshiAuth shared.SchemeOtoroshiAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type UpdateAPIKeyPathParams struct {
+type UpdateAPIKeyRequest struct {
+	APIKey *shared.APIKey `request:"mediaType=application/json"`
 	// the api key id
 	ClientID string `pathParam:"style=simple,explode=false,name=clientId"`
 	// The api key service id
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type UpdateAPIKeyRequest struct {
-	PathParams UpdateAPIKeyPathParams
-	Request    *shared.APIKey `request:"mediaType=application/json"`
-	Security   UpdateAPIKeySecurity
 }
 
 type UpdateAPIKeyResponse struct {

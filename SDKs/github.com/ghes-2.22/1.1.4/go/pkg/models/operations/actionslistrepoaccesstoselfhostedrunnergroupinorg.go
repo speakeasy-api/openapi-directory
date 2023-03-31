@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActionsListRepoAccessToSelfHostedRunnerGroupInOrgPathParams struct {
+type ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-	// Unique identifier of the self-hosted runner group.
-	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
-}
-
-type ActionsListRepoAccessToSelfHostedRunnerGroupInOrgQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest struct {
-	PathParams  ActionsListRepoAccessToSelfHostedRunnerGroupInOrgPathParams
-	QueryParams ActionsListRepoAccessToSelfHostedRunnerGroupInOrgQueryParams
+	// Unique identifier of the self-hosted runner group.
+	RunnerGroupID int64 `pathParam:"style=simple,explode=false,name=runner_group_id"`
 }
 
 // ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSON - Response

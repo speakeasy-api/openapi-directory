@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GitGetRefPathParams struct {
+type GitGetRefRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// ref parameter
 	Ref  string `pathParam:"style=simple,explode=false,name=ref"`
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type GitGetRefRequest struct {
-	PathParams GitGetRefPathParams
 }
 
 type GitGetRefResponse struct {

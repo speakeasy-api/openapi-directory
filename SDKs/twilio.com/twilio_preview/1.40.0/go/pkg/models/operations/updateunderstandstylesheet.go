@@ -12,12 +12,8 @@ var UpdateUnderstandStyleSheetServerList = []string{
 }
 
 type UpdateUnderstandStyleSheetSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateUnderstandStyleSheetPathParams struct {
-	// The unique ID of the Assistant
-	AssistantSid string `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest struct {
@@ -26,10 +22,9 @@ type UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest struct {
 }
 
 type UpdateUnderstandStyleSheetRequest struct {
-	PathParams UpdateUnderstandStyleSheetPathParams
-	Request    *UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   UpdateUnderstandStyleSheetSecurity
-	ServerURL  *string
+	// The unique ID of the Assistant
+	AssistantSid string                                                       `pathParam:"style=simple,explode=false,name=AssistantSid"`
+	RequestBody  *UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type UpdateUnderstandStyleSheetResponse struct {

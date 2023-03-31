@@ -14,19 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.DiscoveryApisGetRestRequest{
-        PathParams: operations.DiscoveryApisGetRestPathParams{
-            API: "corrupti",
-            Version: "provident",
-        },
-        QueryParams: operations.DiscoveryApisGetRestQueryParams{
-            Alt: "json",
-            Fields: "distinctio",
-            Key: "quibusdam",
-            OauthToken: "unde",
-            PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "corrupti",
-        },
+        Alt: "json",
+        API: "corrupti",
+        Fields: "provident",
+        Key: "distinctio",
+        OauthToken: "quibusdam",
+        PrettyPrint: false,
+        QuotaUser: "unde",
+        UserIP: "nulla",
+        Version: "corrupti",
     }
 
     ctx := context.Background()

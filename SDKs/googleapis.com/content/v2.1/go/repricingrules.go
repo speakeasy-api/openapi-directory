@@ -32,11 +32,11 @@ func newRepricingrules(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // ContentRepricingrulesCreate - Creates a repricing rule for your Merchant Center account.
-func (s *repricingrules) ContentRepricingrulesCreate(ctx context.Context, request operations.ContentRepricingrulesCreateRequest) (*operations.ContentRepricingrulesCreateResponse, error) {
+func (s *repricingrules) ContentRepricingrulesCreate(ctx context.Context, request operations.ContentRepricingrulesCreateRequest, security operations.ContentRepricingrulesCreateSecurity) (*operations.ContentRepricingrulesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepricingRuleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *repricingrules) ContentRepricingrulesCreate(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *repricingrules) ContentRepricingrulesCreate(ctx context.Context, reques
 }
 
 // ContentRepricingrulesDelete - Deletes a repricing rule in your Merchant Center account.
-func (s *repricingrules) ContentRepricingrulesDelete(ctx context.Context, request operations.ContentRepricingrulesDeleteRequest) (*operations.ContentRepricingrulesDeleteResponse, error) {
+func (s *repricingrules) ContentRepricingrulesDelete(ctx context.Context, request operations.ContentRepricingrulesDeleteRequest, security operations.ContentRepricingrulesDeleteSecurity) (*operations.ContentRepricingrulesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *repricingrules) ContentRepricingrulesDelete(ctx context.Context, reques
 }
 
 // ContentRepricingrulesGet - Retrieves a repricing rule from your Merchant Center account.
-func (s *repricingrules) ContentRepricingrulesGet(ctx context.Context, request operations.ContentRepricingrulesGetRequest) (*operations.ContentRepricingrulesGetResponse, error) {
+func (s *repricingrules) ContentRepricingrulesGet(ctx context.Context, request operations.ContentRepricingrulesGetRequest, security operations.ContentRepricingrulesGetSecurity) (*operations.ContentRepricingrulesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *repricingrules) ContentRepricingrulesGet(ctx context.Context, request o
 }
 
 // ContentRepricingrulesList - Lists the repricing rules in your Merchant Center account.
-func (s *repricingrules) ContentRepricingrulesList(ctx context.Context, request operations.ContentRepricingrulesListRequest) (*operations.ContentRepricingrulesListResponse, error) {
+func (s *repricingrules) ContentRepricingrulesList(ctx context.Context, request operations.ContentRepricingrulesListRequest, security operations.ContentRepricingrulesListSecurity) (*operations.ContentRepricingrulesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,11 +222,11 @@ func (s *repricingrules) ContentRepricingrulesList(ctx context.Context, request 
 }
 
 // ContentRepricingrulesPatch - Updates a repricing rule in your Merchant Center account. All mutable fields will be overwritten in each update request. In each update, you must provide all required mutable fields, or an error will be thrown. If you do not provide an optional field in the update request, if that field currently exists, it will be deleted from the rule.
-func (s *repricingrules) ContentRepricingrulesPatch(ctx context.Context, request operations.ContentRepricingrulesPatchRequest) (*operations.ContentRepricingrulesPatchResponse, error) {
+func (s *repricingrules) ContentRepricingrulesPatch(ctx context.Context, request operations.ContentRepricingrulesPatchRequest, security operations.ContentRepricingrulesPatchSecurity) (*operations.ContentRepricingrulesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepricingRuleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,11 +238,11 @@ func (s *repricingrules) ContentRepricingrulesPatch(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,20 +277,20 @@ func (s *repricingrules) ContentRepricingrulesPatch(ctx context.Context, request
 }
 
 // ContentRepricingrulesRepricingreportsList - Lists the metrics report for a given Repricing rule.
-func (s *repricingrules) ContentRepricingrulesRepricingreportsList(ctx context.Context, request operations.ContentRepricingrulesRepricingreportsListRequest) (*operations.ContentRepricingrulesRepricingreportsListResponse, error) {
+func (s *repricingrules) ContentRepricingrulesRepricingreportsList(ctx context.Context, request operations.ContentRepricingrulesRepricingreportsListRequest, security operations.ContentRepricingrulesRepricingreportsListSecurity) (*operations.ContentRepricingrulesRepricingreportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}/repricingreports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}/repricingreports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

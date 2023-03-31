@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeStatus1PathParams struct {
+type ChangeStatus1Request struct {
+	// Changed job status.
+	JobStatusDTO shared.JobStatusDTO `request:"mediaType=application/json"`
 	// job's internal identifier
 	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type ChangeStatus1Request struct {
-	PathParams ChangeStatus1PathParams
-	// Changed job status.
-	Request shared.JobStatusDTO `request:"mediaType=application/json"`
 }
 
 type ChangeStatus1Response struct {

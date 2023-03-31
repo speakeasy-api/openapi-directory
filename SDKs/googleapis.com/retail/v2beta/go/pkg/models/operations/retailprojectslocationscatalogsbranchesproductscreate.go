@@ -8,18 +8,14 @@ import (
 )
 
 type RetailProjectsLocationsCatalogsBranchesProductsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RetailProjectsLocationsCatalogsBranchesProductsCreatePathParams struct {
-	// Required. The parent catalog resource name, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsCreateQueryParams struct {
+type RetailProjectsLocationsCatalogsBranchesProductsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                         *shared.XgafvEnum                           `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudRetailV2betaProductInput *shared.GoogleCloudRetailV2betaProductInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type RetailProjectsLocationsCatalogsBranchesProductsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The parent catalog resource name, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Required. The ID to use for the Product, which will become the final component of the Product.name. If the caller does not have permission to create the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all Products with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -42,13 +40,6 @@ type RetailProjectsLocationsCatalogsBranchesProductsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type RetailProjectsLocationsCatalogsBranchesProductsCreateRequest struct {
-	PathParams  RetailProjectsLocationsCatalogsBranchesProductsCreatePathParams
-	QueryParams RetailProjectsLocationsCatalogsBranchesProductsCreateQueryParams
-	Request     *shared.GoogleCloudRetailV2betaProductInput `request:"mediaType=application/json"`
-	Security    RetailProjectsLocationsCatalogsBranchesProductsCreateSecurity
 }
 
 type RetailProjectsLocationsCatalogsBranchesProductsCreateResponse struct {

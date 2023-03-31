@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopPointGetByTypePathParams struct {
+type StopPointGetByTypeRequest struct {
 	// A comma-separated list of the types to return. Max. approx. 12 types.
 	//             A list of valid stop types can be obtained from the StopPoint/meta/stoptypes endpoint.
 	Types []string `pathParam:"style=simple,explode=false,name=types"`
-}
-
-type StopPointGetByTypeRequest struct {
-	PathParams StopPointGetByTypePathParams
 }
 
 type StopPointGetByTypeResponse struct {

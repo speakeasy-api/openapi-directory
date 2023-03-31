@@ -10,7 +10,7 @@ import (
 )
 
 type PutAPIV1ListsSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 // PutAPIV1ListsRequestBodyRepliesPolicyEnum - Enumerable oneOf followed list none. Defaults to list.
@@ -45,11 +45,6 @@ type PutAPIV1ListsRequestBody struct {
 	RepliesPolicy *PutAPIV1ListsRequestBodyRepliesPolicyEnum `json:"replies_policy,omitempty"`
 	// The title of the list to be created.
 	Title *string `json:"title,omitempty"`
-}
-
-type PutAPIV1ListsRequest struct {
-	Request  *PutAPIV1ListsRequestBody `request:"mediaType=application/json"`
-	Security PutAPIV1ListsSecurity
 }
 
 type PutAPIV1ListsResponse struct {

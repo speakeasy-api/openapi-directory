@@ -14,37 +14,28 @@ func main() {
     s := sdk.New()
 
     req := operations.AccessapprovalProjectsApprovalRequestsApproveRequest{
-        Security: operations.AccessapprovalProjectsApprovalRequestsApproveSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        ApproveApprovalRequestMessage: &shared.ApproveApprovalRequestMessage{
+            ExpireTime: "provident",
         },
-        PathParams: operations.AccessapprovalProjectsApprovalRequestsApprovePathParams{
-            Name: "corrupti",
-        },
-        QueryParams: operations.AccessapprovalProjectsApprovalRequestsApproveQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            Fields: "nulla",
-            Key: "corrupti",
-            OauthToken: "illum",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "error",
-            UploadProtocol: "deserunt",
-        },
-        Request: &shared.ApproveApprovalRequestMessage{
-            ExpireTime: "suscipit",
-        },
+        AccessToken: "distinctio",
+        Alt: "proto",
+        Callback: "unde",
+        Fields: "nulla",
+        Key: "corrupti",
+        Name: "illum",
+        OauthToken: "vel",
+        PrettyPrint: false,
+        QuotaUser: "error",
+        UploadType: "deserunt",
+        UploadProtocol: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.AccessapprovalProjectsApprovalRequestsApprove(ctx, req)
+    res, err := s.Projects.AccessapprovalProjectsApprovalRequestsApprove(ctx, req, operations.AccessapprovalProjectsApprovalRequestsApproveSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

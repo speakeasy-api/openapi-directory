@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type GetExportThermalPrintBelegeBelegUUIDPathParams struct {
-	// The `_uuid` of a particular `Beleg` to export.
-	BelegUUID string `pathParam:"style=simple,explode=false,name=belegUuid"`
-}
-
 // GetExportThermalPrintBelegeBelegUUIDDialectEnum - The thermal printer dialect.
 type GetExportThermalPrintBelegeBelegUUIDDialectEnum string
 
@@ -67,7 +62,9 @@ func (e *GetExportThermalPrintBelegeBelegUUIDEncodingEnum) UnmarshalJSON(data []
 	}
 }
 
-type GetExportThermalPrintBelegeBelegUUIDQueryParams struct {
+type GetExportThermalPrintBelegeBelegUUIDRequest struct {
+	// The `_uuid` of a particular `Beleg` to export.
+	BelegUUID string `pathParam:"style=simple,explode=false,name=belegUuid"`
 	// The thermal printer dialect.
 	Dialect *GetExportThermalPrintBelegeBelegUUIDDialectEnum `queryParam:"style=form,explode=true,name=dialect"`
 	// The encoding of the binary data.
@@ -76,11 +73,6 @@ type GetExportThermalPrintBelegeBelegUUIDQueryParams struct {
 	Qr *bool `queryParam:"style=form,explode=true,name=qr"`
 	// Number of characters per line.
 	Width *int64 `queryParam:"style=form,explode=true,name=width"`
-}
-
-type GetExportThermalPrintBelegeBelegUUIDRequest struct {
-	PathParams  GetExportThermalPrintBelegeBelegUUIDPathParams
-	QueryParams GetExportThermalPrintBelegeBelegUUIDQueryParams
 }
 
 type GetExportThermalPrintBelegeBelegUUIDResponse struct {

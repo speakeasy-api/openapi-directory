@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type AppsListInstallationsQueryParams struct {
+type AppsListInstallationsRequest struct {
 	Outdated *string `queryParam:"style=form,explode=true,name=outdated"`
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
@@ -16,10 +16,6 @@ type AppsListInstallationsQueryParams struct {
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	Since *time.Time `queryParam:"style=form,explode=true,name=since"`
-}
-
-type AppsListInstallationsRequest struct {
-	QueryParams AppsListInstallationsQueryParams
 }
 
 type AppsListInstallationsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteV2CustomFieldsIDJSONPathParams struct {
+type DeleteV2CustomFieldsIDJSONRequest struct {
 	// Custom Field ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteV2CustomFieldsIDJSONRequest struct {
-	PathParams DeleteV2CustomFieldsIDJSONPathParams
 }
 
 type DeleteV2CustomFieldsIDJSONResponse struct {

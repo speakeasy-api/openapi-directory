@@ -13,25 +13,17 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AppKey: shared.SchemeAppKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            AppToken: shared.SchemeAppToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            AppKey: "YOUR_API_KEY_HERE",
+            AppToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AffiliationByIDRequest{
-        PathParams: operations.AffiliationByIDPathParams{
-            AffiliationID: "e046d326-5421-45ab-95ae-f13d37f260b5",
-        },
-        Headers: operations.AffiliationByIDHeaders{
-            Accept: "application/json",
-            ContentType: "application/json",
-            XPROVIDERAPIAppKey: "{{X-PROVIDER-API-AppKey}}",
-            XPROVIDERAPIAppToken: "{{X-PROVIDER-API-AppToken}}",
-        },
+        Accept: "application/json",
+        ContentType: "application/json",
+        XPROVIDERAPIAppKey: "{{X-PROVIDER-API-AppKey}}",
+        XPROVIDERAPIAppToken: "{{X-PROVIDER-API-AppToken}}",
+        AffiliationID: "e046d326-5421-45ab-95ae-f13d37f260b5",
     }
 
     ctx := context.Background()

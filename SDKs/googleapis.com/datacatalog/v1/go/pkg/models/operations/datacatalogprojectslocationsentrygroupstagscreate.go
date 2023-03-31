@@ -8,18 +8,14 @@ import (
 )
 
 type DatacatalogProjectsLocationsEntryGroupsTagsCreateSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DatacatalogProjectsLocationsEntryGroupsTagsCreatePathParams struct {
-	// Required. The name of the resource to attach this tag to. Tags can be attached to entries or entry groups. An entry can have up to 1000 attached tags. Note: The tag and its child resources might not be stored in the location specified in its name.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type DatacatalogProjectsLocationsEntryGroupsTagsCreateQueryParams struct {
+type DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                      *shared.XgafvEnum                        `queryParam:"style=form,explode=true,name=$.xgafv"`
+	GoogleCloudDatacatalogV1TagInput *shared.GoogleCloudDatacatalogV1TagInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -32,6 +28,8 @@ type DatacatalogProjectsLocationsEntryGroupsTagsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The name of the resource to attach this tag to. Tags can be attached to entries or entry groups. An entry can have up to 1000 attached tags. Note: The tag and its child resources might not be stored in the location specified in its name.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -40,13 +38,6 @@ type DatacatalogProjectsLocationsEntryGroupsTagsCreateQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest struct {
-	PathParams  DatacatalogProjectsLocationsEntryGroupsTagsCreatePathParams
-	QueryParams DatacatalogProjectsLocationsEntryGroupsTagsCreateQueryParams
-	Request     *shared.GoogleCloudDatacatalogV1TagInput `request:"mediaType=application/json"`
-	Security    DatacatalogProjectsLocationsEntryGroupsTagsCreateSecurity
 }
 
 type DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse struct {

@@ -34,14 +34,14 @@ func newBandwidthUsageHistory(defaultClient, securityClient HTTPClient, serverUR
 // Returns a timeseries of total traffic consumption rates for all clients on a network within a given timespan, in megabits per second.
 func (s *bandwidthUsageHistory) GetNetworkClientsBandwidthUsageHistory(ctx context.Context, request operations.GetNetworkClientsBandwidthUsageHistoryRequest) (*operations.GetNetworkClientsBandwidthUsageHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/bandwidthUsageHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/bandwidthUsageHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,14 +85,14 @@ func (s *bandwidthUsageHistory) GetNetworkClientsBandwidthUsageHistory(ctx conte
 // Return data usage (in megabits per second) over time for all clients in the given organization within a given time range.
 func (s *bandwidthUsageHistory) GetOrganizationClientsBandwidthUsageHistory(ctx context.Context, request operations.GetOrganizationClientsBandwidthUsageHistoryRequest) (*operations.GetOrganizationClientsBandwidthUsageHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

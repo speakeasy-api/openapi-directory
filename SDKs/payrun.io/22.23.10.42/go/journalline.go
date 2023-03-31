@@ -35,14 +35,14 @@ func newJournalLine(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes a tag from the journal line
 func (s *journalLine) DeleteJournalLineTag(ctx context.Context, request operations.DeleteJournalLineTagRequest) (*operations.DeleteJournalLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -89,14 +89,14 @@ func (s *journalLine) DeleteJournalLineTag(ctx context.Context, request operatio
 // Gets all the journal line tags
 func (s *journalLine) GetAllJournalLineTags(ctx context.Context, request operations.GetAllJournalLineTagsRequest) (*operations.GetAllJournalLineTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -152,14 +152,14 @@ func (s *journalLine) GetAllJournalLineTags(ctx context.Context, request operati
 // Gets the journal lines with the specified tag
 func (s *journalLine) GetAllJournalLinesWithTag(ctx context.Context, request operations.GetAllJournalLinesWithTagRequest) (*operations.GetAllJournalLinesWithTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLines/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,14 +215,14 @@ func (s *journalLine) GetAllJournalLinesWithTag(ctx context.Context, request ope
 // Gets a tag from the journal line
 func (s *journalLine) GetTagFromJournalLine(ctx context.Context, request operations.GetTagFromJournalLineRequest) (*operations.GetTagFromJournalLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,14 +278,14 @@ func (s *journalLine) GetTagFromJournalLine(ctx context.Context, request operati
 // Gets all tags from the journal line
 func (s *journalLine) GetTagsFromJournalLine(ctx context.Context, request operations.GetTagsFromJournalLineRequest) (*operations.GetTagsFromJournalLineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -341,14 +341,14 @@ func (s *journalLine) GetTagsFromJournalLine(ctx context.Context, request operat
 // Inserts a tag on the journal line
 func (s *journalLine) PutJournalLineTag(ctx context.Context, request operations.PutJournalLineTagRequest) (*operations.PutJournalLineTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UserVanityNameQueryParams struct {
+type UserVanityNameRequest struct {
 	// Personal meeting room name.
 	VanityName string `queryParam:"style=form,explode=true,name=vanity_name"`
-}
-
-type UserVanityNameRequest struct {
-	QueryParams UserVanityNameQueryParams
 }
 
 // UserVanityName200ApplicationXML - **HTTP Status Code:** `200`<br>

@@ -32,20 +32,20 @@ func newModels(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // BigqueryModelsDelete - Deletes the model specified by modelId from the dataset.
-func (s *models) BigqueryModelsDelete(ctx context.Context, request operations.BigqueryModelsDeleteRequest) (*operations.BigqueryModelsDeleteResponse, error) {
+func (s *models) BigqueryModelsDelete(ctx context.Context, request operations.BigqueryModelsDeleteRequest, security operations.BigqueryModelsDeleteSecurity) (*operations.BigqueryModelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -71,20 +71,20 @@ func (s *models) BigqueryModelsDelete(ctx context.Context, request operations.Bi
 }
 
 // BigqueryModelsGet - Gets the specified model resource by model ID.
-func (s *models) BigqueryModelsGet(ctx context.Context, request operations.BigqueryModelsGetRequest) (*operations.BigqueryModelsGetResponse, error) {
+func (s *models) BigqueryModelsGet(ctx context.Context, request operations.BigqueryModelsGetRequest, security operations.BigqueryModelsGetSecurity) (*operations.BigqueryModelsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,20 +119,20 @@ func (s *models) BigqueryModelsGet(ctx context.Context, request operations.Bigqu
 }
 
 // BigqueryModelsList - Lists all models in the specified dataset. Requires the READER dataset role. After retrieving the list of models, you can get information about a particular model by calling the models.get method.
-func (s *models) BigqueryModelsList(ctx context.Context, request operations.BigqueryModelsListRequest) (*operations.BigqueryModelsListResponse, error) {
+func (s *models) BigqueryModelsList(ctx context.Context, request operations.BigqueryModelsListRequest, security operations.BigqueryModelsListSecurity) (*operations.BigqueryModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,11 +167,11 @@ func (s *models) BigqueryModelsList(ctx context.Context, request operations.Bigq
 }
 
 // BigqueryModelsPatch - Patch specific fields in the specified model.
-func (s *models) BigqueryModelsPatch(ctx context.Context, request operations.BigqueryModelsPatchRequest) (*operations.BigqueryModelsPatchResponse, error) {
+func (s *models) BigqueryModelsPatch(ctx context.Context, request operations.BigqueryModelsPatchRequest, security operations.BigqueryModelsPatchSecurity) (*operations.BigqueryModelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModelInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -183,11 +183,11 @@ func (s *models) BigqueryModelsPatch(ctx context.Context, request operations.Big
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

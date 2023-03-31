@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteWebhookPathParams struct {
-	// Webhook endpoint ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteWebhookHeaders struct {
+type DeleteWebhookRequest struct {
 	// Access token required to make the API call.
 	EvAccessToken string `header:"style=simple,explode=false,name=ev-access-token"`
 	// API key required to make the API call.
 	EvAPIKey string `header:"style=simple,explode=false,name=ev-api-key"`
-}
-
-type DeleteWebhookRequest struct {
-	PathParams DeleteWebhookPathParams
-	Headers    DeleteWebhookHeaders
+	// Webhook endpoint ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteWebhookResponse struct {

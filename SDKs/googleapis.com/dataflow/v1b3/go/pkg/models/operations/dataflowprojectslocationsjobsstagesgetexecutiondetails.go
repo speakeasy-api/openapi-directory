@@ -8,23 +8,23 @@ import (
 )
 
 type DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity struct {
@@ -34,18 +34,7 @@ type DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity struct {
 	Option4 *DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption4 `security:"option"`
 }
 
-type DataflowProjectsLocationsJobsStagesGetExecutionDetailsPathParams struct {
-	// The job to get execution details for.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains the job specified by job_id.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// A project id.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-	// The stage for which to fetch information.
-	StageID string `pathParam:"style=simple,explode=false,name=stageId"`
-}
-
-type DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams struct {
+type DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -58,8 +47,12 @@ type DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams struct {
 	EndTime *string `queryParam:"style=form,explode=true,name=endTime"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// The job to get execution details for.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains the job specified by job_id.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// If specified, determines the maximum number of work items to return. If unspecified, the service may choose an appropriate default, or may return an arbitrarily large number of results.
@@ -68,20 +61,18 @@ type DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// A project id.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The stage for which to fetch information.
+	StageID string `pathParam:"style=simple,explode=false,name=stageId"`
 	// Lower time bound of work items to include, by start time.
 	StartTime *string `queryParam:"style=form,explode=true,name=startTime"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest struct {
-	PathParams  DataflowProjectsLocationsJobsStagesGetExecutionDetailsPathParams
-	QueryParams DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams
-	Security    DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity
 }
 
 type DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse struct {

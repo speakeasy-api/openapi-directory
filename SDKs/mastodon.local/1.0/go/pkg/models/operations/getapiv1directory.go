@@ -33,7 +33,7 @@ func (e *GetAPIV1DirectoryOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV1DirectoryQueryParams struct {
+type GetAPIV1DirectoryRequest struct {
 	// How many accounts to load. Default 40.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Only return local accounts.
@@ -42,10 +42,6 @@ type GetAPIV1DirectoryQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// the `active` to sort by most recently posted statuses (default) or `new` to sort by most recently created profiles.
 	Order *GetAPIV1DirectoryOrderEnum `queryParam:"style=form,explode=true,name=order"`
-}
-
-type GetAPIV1DirectoryRequest struct {
-	QueryParams GetAPIV1DirectoryQueryParams
 }
 
 type GetAPIV1DirectoryResponse struct {

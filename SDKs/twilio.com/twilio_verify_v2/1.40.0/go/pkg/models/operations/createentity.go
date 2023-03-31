@@ -12,12 +12,8 @@ var CreateEntityServerList = []string{
 }
 
 type CreateEntitySecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateEntityPathParams struct {
-	// The unique SID identifier of the Service.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateEntityCreateEntityRequest struct {
@@ -26,10 +22,9 @@ type CreateEntityCreateEntityRequest struct {
 }
 
 type CreateEntityRequest struct {
-	PathParams CreateEntityPathParams
-	Request    *CreateEntityCreateEntityRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateEntitySecurity
-	ServerURL  *string
+	RequestBody *CreateEntityCreateEntityRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The unique SID identifier of the Service.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateEntityResponse struct {

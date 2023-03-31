@@ -38,7 +38,7 @@ func newPeople(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // This operation can be called multiple times successfully.
 func (s *people) DeleteV2PeopleIDJSON(ctx context.Context, request operations.DeleteV2PeopleIDJSONRequest) (*operations.DeleteV2PeopleIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *people) GetV2PeopleJSON(ctx context.Context, request operations.GetV2Pe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,7 +124,7 @@ func (s *people) GetV2PeopleJSON(ctx context.Context, request operations.GetV2Pe
 // Fetches a person, by ID only.
 func (s *people) GetV2PeopleIDJSON(ctx context.Context, request operations.GetV2PeopleIDJSONRequest) (*operations.GetV2PeopleIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *people) GetV2PeopleIDJSON(ctx context.Context, request operations.GetV2
 // PostV2PeopleJSON - Create a person
 // Creates a person. Either email_address or phone/last_name must be provided as a unique lookup
 // on the team.
-func (s *people) PostV2PeopleJSON(ctx context.Context, request operations.PostV2PeopleJSONRequest) (*operations.PostV2PeopleJSONResponse, error) {
+func (s *people) PostV2PeopleJSON(ctx context.Context, request operations.PostV2PeopleJSONRequestBody) (*operations.PostV2PeopleJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/people.json"
 
@@ -222,9 +222,9 @@ func (s *people) PostV2PeopleJSON(ctx context.Context, request operations.PostV2
 // Updates a person.
 func (s *people) PutV2PeopleIDJSON(ctx context.Context, request operations.PutV2PeopleIDJSONRequest) (*operations.PutV2PeopleIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

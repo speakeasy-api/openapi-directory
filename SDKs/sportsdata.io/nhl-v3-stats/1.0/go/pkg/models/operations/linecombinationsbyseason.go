@@ -33,17 +33,13 @@ func (e *LineCombinationsBySeasonFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LineCombinationsBySeasonPathParams struct {
+type LineCombinationsBySeasonRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format LineCombinationsBySeasonFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Year of the season.
 	//  <br>Examples: <code>2016</code>, <code>2017</code>.
 	//
 	Season string `pathParam:"style=simple,explode=false,name=season"`
-}
-
-type LineCombinationsBySeasonRequest struct {
-	PathParams LineCombinationsBySeasonPathParams
 }
 
 type LineCombinationsBySeasonResponse struct {

@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type GetNetworksIDPathParams struct {
+type GetNetworksIDRequest struct {
 	// ID of the network
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetNetworksIDRequest struct {
-	PathParams GetNetworksIDPathParams
 }
 
 // GetNetworksID200ApplicationJSONNetworkProtection - Protection configuration for the Network

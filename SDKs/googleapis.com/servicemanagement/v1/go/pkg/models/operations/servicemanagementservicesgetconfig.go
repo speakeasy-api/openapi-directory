@@ -10,23 +10,23 @@ import (
 )
 
 type ServicemanagementServicesGetConfigSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesGetConfigSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesGetConfigSecurityOption3 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesGetConfigSecurityOption4 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ServicemanagementServicesGetConfigSecurity struct {
@@ -34,11 +34,6 @@ type ServicemanagementServicesGetConfigSecurity struct {
 	Option2 *ServicemanagementServicesGetConfigSecurityOption2 `security:"option"`
 	Option3 *ServicemanagementServicesGetConfigSecurityOption3 `security:"option"`
 	Option4 *ServicemanagementServicesGetConfigSecurityOption4 `security:"option"`
-}
-
-type ServicemanagementServicesGetConfigPathParams struct {
-	// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements. For example: `example.googleapis.com`.
-	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
 }
 
 // ServicemanagementServicesGetConfigViewEnum - Specifies which parts of the Service Config should be returned in the response.
@@ -65,7 +60,7 @@ func (e *ServicemanagementServicesGetConfigViewEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ServicemanagementServicesGetConfigQueryParams struct {
+type ServicemanagementServicesGetConfigRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -86,18 +81,14 @@ type ServicemanagementServicesGetConfigQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements. For example: `example.googleapis.com`.
+	ServiceName string `pathParam:"style=simple,explode=false,name=serviceName"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// Specifies which parts of the Service Config should be returned in the response.
 	View *ServicemanagementServicesGetConfigViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type ServicemanagementServicesGetConfigRequest struct {
-	PathParams  ServicemanagementServicesGetConfigPathParams
-	QueryParams ServicemanagementServicesGetConfigQueryParams
-	Security    ServicemanagementServicesGetConfigSecurity
 }
 
 type ServicemanagementServicesGetConfigResponse struct {

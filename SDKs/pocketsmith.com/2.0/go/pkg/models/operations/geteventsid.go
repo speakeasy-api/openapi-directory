@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEventsIDPathParams struct {
+type GetEventsIDRequest struct {
 	// The unique identifier of the event.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEventsIDRequest struct {
-	PathParams GetEventsIDPathParams
 }
 
 type GetEventsIDResponse struct {

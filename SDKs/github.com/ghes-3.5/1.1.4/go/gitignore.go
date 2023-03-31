@@ -86,7 +86,7 @@ func (s *gitignore) GitignoreGetAllTemplates(ctx context.Context) (*operations.G
 // https://docs.github.com/enterprise-server@3.5/rest/reference/gitignore#get-a-gitignore-template - API method documentation
 func (s *gitignore) GitignoreGetTemplate(ctx context.Context, request operations.GitignoreGetTemplateRequest) (*operations.GitignoreGetTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gitignore/templates/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/gitignore/templates/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

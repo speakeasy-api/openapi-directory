@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type TaxonomyCategoriesQueryParams struct {
+type TaxonomyCategoriesRequest struct {
+	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+	//
+	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
 	// **unique numeric identifier** of the destination to enquire about (optional)
 	// - `destinationId` is returned by [/taxonomy/destinations](#operation/taxonomyDestinations)
 	//
 	DestID *int64 `queryParam:"style=form,explode=true,name=destId"`
-}
-
-type TaxonomyCategoriesHeaders struct {
-	// Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
-	//
-	AcceptLanguage string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type TaxonomyCategoriesRequest struct {
-	QueryParams TaxonomyCategoriesQueryParams
-	Headers     TaxonomyCategoriesHeaders
 }
 
 type TaxonomyCategories200ApplicationJSONDataSubcategories struct {

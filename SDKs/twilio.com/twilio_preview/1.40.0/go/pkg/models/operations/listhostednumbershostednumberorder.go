@@ -12,10 +12,11 @@ var ListHostedNumbersHostedNumberOrderServerList = []string{
 }
 
 type ListHostedNumbersHostedNumberOrderSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type ListHostedNumbersHostedNumberOrderQueryParams struct {
+type ListHostedNumbersHostedNumberOrderRequest struct {
 	// A human readable description of this resource, up to 64 characters.
 	FriendlyName *string `queryParam:"style=form,explode=true,name=FriendlyName"`
 	// A 34 character string that uniquely identifies the IncomingPhoneNumber resource created by this HostedNumberOrder.
@@ -32,12 +33,6 @@ type ListHostedNumbersHostedNumberOrderQueryParams struct {
 	Status *shared.HostedNumberOrderEnumStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// Provides a unique and addressable name to be assigned to this HostedNumberOrder, assigned by the developer, to be optionally used in addition to SID.
 	UniqueName *string `queryParam:"style=form,explode=true,name=UniqueName"`
-}
-
-type ListHostedNumbersHostedNumberOrderRequest struct {
-	QueryParams ListHostedNumbersHostedNumberOrderQueryParams
-	Security    ListHostedNumbersHostedNumberOrderSecurity
-	ServerURL   *string
 }
 
 type ListHostedNumbersHostedNumberOrderListHostedNumbersHostedNumberOrderResponseMeta struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDBudgetSummaryPathParams struct {
-	// The unique identifier of the user.
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetUsersIDBudgetSummaryPeriodEnum - The period to analyse in, one of `weeks`, `months` or `years`. Also supported is `event`, although event period analysis is only possible when the budget events gathered align, so in this case where all categories are analysed together, it's highly unlikely that event period analysis will be possible.
 type GetUsersIDBudgetSummaryPeriodEnum string
 
@@ -44,20 +39,17 @@ func (e *GetUsersIDBudgetSummaryPeriodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUsersIDBudgetSummaryQueryParams struct {
+type GetUsersIDBudgetSummaryRequest struct {
 	// The date to stop analysing the budget from. This will be bumped out to make full periods as necessary.
 	EndDate string `queryParam:"style=form,explode=true,name=end_date"`
+	// The unique identifier of the user.
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// The period interval, e.g. if the interval is 2 and the period is weeks, the budget will be analysed fortnightly.
 	Interval int64 `queryParam:"style=form,explode=true,name=interval"`
 	// The period to analyse in, one of `weeks`, `months` or `years`. Also supported is `event`, although event period analysis is only possible when the budget events gathered align, so in this case where all categories are analysed together, it's highly unlikely that event period analysis will be possible.
 	Period GetUsersIDBudgetSummaryPeriodEnum `queryParam:"style=form,explode=true,name=period"`
 	// The date to start analysing the budget from. This will be bumped out to make full periods as necessary.
 	StartDate string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type GetUsersIDBudgetSummaryRequest struct {
-	PathParams  GetUsersIDBudgetSummaryPathParams
-	QueryParams GetUsersIDBudgetSummaryQueryParams
 }
 
 type GetUsersIDBudgetSummaryResponse struct {

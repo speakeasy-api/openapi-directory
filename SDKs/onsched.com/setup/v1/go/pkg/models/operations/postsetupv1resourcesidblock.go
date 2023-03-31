@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostSetupV1ResourcesIDBlockPathParams struct {
+type PostSetupV1ResourcesIDBlockRequest struct {
+	ResourceBlockInputModel *shared.ResourceBlockInputModel `request:"mediaType=application/json"`
 	// id of resource object
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostSetupV1ResourcesIDBlockRequest struct {
-	PathParams PostSetupV1ResourcesIDBlockPathParams
-	Request    *shared.ResourceBlockInputModel `request:"mediaType=application/json"`
 }
 
 type PostSetupV1ResourcesIDBlockResponse struct {

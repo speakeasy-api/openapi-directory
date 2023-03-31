@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchEntitiesPathParams struct {
-	// search string, e.g. shh, parkinson, femur
-	Term string `pathParam:"style=simple,explode=false,name=term"`
-}
-
-type GetSearchEntitiesQueryParams struct {
+type GetSearchEntitiesRequest struct {
 	// boost function e.g. pow(edges,0.334)
 	BoostFx []string `queryParam:"style=form,explode=true,name=boost_fx"`
 	// boost query e.g. category:genotype^-10
@@ -39,11 +34,8 @@ type GetSearchEntitiesQueryParams struct {
 	Start *string `queryParam:"style=form,explode=true,name=start"`
 	// taxon filter, eg NCBITaxon:9606, includes inferred taxa
 	Taxon []string `queryParam:"style=form,explode=true,name=taxon"`
-}
-
-type GetSearchEntitiesRequest struct {
-	PathParams  GetSearchEntitiesPathParams
-	QueryParams GetSearchEntitiesQueryParams
+	// search string, e.g. shh, parkinson, femur
+	Term string `pathParam:"style=simple,explode=false,name=term"`
 }
 
 type GetSearchEntitiesResponse struct {

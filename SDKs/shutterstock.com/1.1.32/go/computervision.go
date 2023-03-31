@@ -34,7 +34,7 @@ func newComputerVision(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetKeywords - List suggested keywords
 // This endpoint returns a list of suggested keywords for a media item that you specify or upload.
-func (s *computerVision) GetKeywords(ctx context.Context, request operations.GetKeywordsRequest) (*operations.GetKeywordsResponse, error) {
+func (s *computerVision) GetKeywords(ctx context.Context, request operations.GetKeywordsRequest, security operations.GetKeywordsSecurity) (*operations.GetKeywordsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cv/keywords"
 
@@ -43,11 +43,11 @@ func (s *computerVision) GetKeywords(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *computerVision) GetKeywords(ctx context.Context, request operations.Get
 
 // GetSimilarImages - List similar images
 // This endpoint returns images that are visually similar to an image that you specify or upload.
-func (s *computerVision) GetSimilarImages(ctx context.Context, request operations.GetSimilarImagesRequest) (*operations.GetSimilarImagesResponse, error) {
+func (s *computerVision) GetSimilarImages(ctx context.Context, request operations.GetSimilarImagesRequest, security operations.GetSimilarImagesSecurity) (*operations.GetSimilarImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cv/similar/images"
 
@@ -99,11 +99,11 @@ func (s *computerVision) GetSimilarImages(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *computerVision) GetSimilarImages(ctx context.Context, request operation
 
 // GetSimilarVideos - List similar videos
 // This endpoint returns videos that are visually similar to an image that you specify or upload.
-func (s *computerVision) GetSimilarVideos(ctx context.Context, request operations.GetSimilarVideosRequest) (*operations.GetSimilarVideosResponse, error) {
+func (s *computerVision) GetSimilarVideos(ctx context.Context, request operations.GetSimilarVideosRequest, security operations.GetSimilarVideosSecurity) (*operations.GetSimilarVideosResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cv/similar/videos"
 
@@ -153,11 +153,11 @@ func (s *computerVision) GetSimilarVideos(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *computerVision) GetSimilarVideos(ctx context.Context, request operation
 
 // UploadEphemeralImage - Upload ephemeral images
 // Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
-func (s *computerVision) UploadEphemeralImage(ctx context.Context, request operations.UploadEphemeralImageRequest) (*operations.UploadEphemeralImageResponse, error) {
+func (s *computerVision) UploadEphemeralImage(ctx context.Context, request shared.ImageCreateRequest, security operations.UploadEphemeralImageSecurity) (*operations.UploadEphemeralImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images"
 
@@ -217,7 +217,7 @@ func (s *computerVision) UploadEphemeralImage(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -260,7 +260,7 @@ func (s *computerVision) UploadEphemeralImage(ctx context.Context, request opera
 
 // UploadImage - Upload images
 // This endpoint uploads an image for reverse image or video search. Images must be in JPEG or PNG format. To get the search results, pass the upload ID that this endpoint returns to the GET /v2/cv/similar/images or GET /v2/cv/similar/videos endpoints. Contact us for access to this endpoint.
-func (s *computerVision) UploadImage(ctx context.Context, request operations.UploadImageRequest) (*operations.UploadImageResponse, error) {
+func (s *computerVision) UploadImage(ctx context.Context, request shared.ImageCreateRequest, security operations.UploadImageSecurity) (*operations.UploadImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/cv/images"
 
@@ -279,7 +279,7 @@ func (s *computerVision) UploadImage(ctx context.Context, request operations.Upl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

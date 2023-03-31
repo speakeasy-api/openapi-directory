@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FetchRewardEarningsQueryParams struct {
+type FetchRewardEarningsRequest struct {
 	// Group identifiers
 	FilterGroups string `queryParam:"style=form,explode=true,name=filter[groups]"`
 	// Patient identifier
 	FilterPatient string `queryParam:"style=form,explode=true,name=filter[patient]"`
 	// If true, only returns those reward earnings for which ready_for_fulfillment is true and fulfilled_at is null. If false, only returns those reward earnings for which ready_for_fulfillment is false and fulfilled_at is null.
 	FilterReadyForFulfillment *bool `queryParam:"style=form,explode=true,name=filter[ready_for_fulfillment]"`
-}
-
-type FetchRewardEarningsRequest struct {
-	QueryParams FetchRewardEarningsQueryParams
 }
 
 type FetchRewardEarningsResponse struct {

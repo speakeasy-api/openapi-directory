@@ -37,7 +37,7 @@ func newToken(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateToken - Create token
 // Create token by 'tokenType' and additional token parameters
-func (s *token) CreateToken(ctx context.Context, request operations.CreateTokenRequest) (*operations.CreateTokenResponse, error) {
+func (s *token) CreateToken(ctx context.Context, request operations.CreateTokenRequestBody, security operations.CreateTokenSecurity) (*operations.CreateTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
@@ -56,7 +56,7 @@ func (s *token) CreateToken(ctx context.Context, request operations.CreateTokenR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,16 +106,16 @@ func (s *token) CreateToken(ctx context.Context, request operations.CreateTokenR
 
 // DeleteToken - Delete token
 // Delete a token by 'number'
-func (s *token) DeleteToken(ctx context.Context, request operations.DeleteTokenRequest) (*operations.DeleteTokenResponse, error) {
+func (s *token) DeleteToken(ctx context.Context, request operations.DeleteTokenRequest, security operations.DeleteTokenSecurity) (*operations.DeleteTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,16 +165,16 @@ func (s *token) DeleteToken(ctx context.Context, request operations.DeleteTokenR
 
 // GetToken - Get token
 // Return a token by 'tokenNumber'
-func (s *token) GetToken(ctx context.Context, request operations.GetTokenRequest) (*operations.GetTokenResponse, error) {
+func (s *token) GetToken(ctx context.Context, request operations.GetTokenRequest, security operations.GetTokenSecurity) (*operations.GetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *token) GetToken(ctx context.Context, request operations.GetTokenRequest
 
 // ListTokens - List Tokens
 // Return a list of all tokens for the current Vendor
-func (s *token) ListTokens(ctx context.Context, request operations.ListTokensRequest) (*operations.ListTokensResponse, error) {
+func (s *token) ListTokens(ctx context.Context) (*operations.ListTokensResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
@@ -233,7 +233,7 @@ func (s *token) ListTokens(ctx context.Context, request operations.ListTokensReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

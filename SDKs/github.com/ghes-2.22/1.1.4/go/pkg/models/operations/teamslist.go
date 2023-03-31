@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsListPathParams struct {
+type TeamsListRequest struct {
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type TeamsListQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Results per page (max 100)
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type TeamsListRequest struct {
-	PathParams  TeamsListPathParams
-	QueryParams TeamsListQueryParams
 }
 
 type TeamsListResponse struct {

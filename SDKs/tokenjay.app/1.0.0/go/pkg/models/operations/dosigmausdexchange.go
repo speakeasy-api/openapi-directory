@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DoSigmaUsdExchangeQueryParams struct {
+type DoSigmaUsdExchangeRequest struct {
 	Address      string `queryParam:"style=form,explode=true,name=address"`
 	Amount       int64  `queryParam:"style=form,explode=true,name=amount"`
 	CheckRate    *int64 `queryParam:"style=form,explode=true,name=checkRate"`
 	ExecutionFee *int64 `queryParam:"style=form,explode=true,name=executionFee"`
-}
-
-type DoSigmaUsdExchangeRequest struct {
-	QueryParams DoSigmaUsdExchangeQueryParams
 }
 
 type DoSigmaUsdExchangeResponse struct {

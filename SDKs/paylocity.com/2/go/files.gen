@@ -59,7 +59,6 @@ pkg/models/operations/addorupdatesensitivedata.go
 pkg/models/operations/getsensitivedata.go
 pkg/models/shared/error.go
 pkg/models/shared/additionalrate.go
-pkg/models/shared/security.go
 pkg/models/shared/clientcredentialsresponse.go
 pkg/models/shared/addclientsecret.go
 pkg/models/shared/companycodes.go

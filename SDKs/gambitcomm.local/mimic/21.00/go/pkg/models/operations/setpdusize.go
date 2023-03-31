@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SetPdusizePathParams struct {
+type SetPdusizeRequest struct {
 	// Agent to return the PDU size
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// PDU size setting for the agent
 	Pdusize int `pathParam:"style=simple,explode=false,name=pdusize"`
-}
-
-type SetPdusizeRequest struct {
-	PathParams SetPdusizePathParams
 }
 
 type SetPdusizeResponse struct {

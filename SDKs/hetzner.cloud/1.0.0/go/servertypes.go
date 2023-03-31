@@ -45,7 +45,7 @@ func (s *serverTypes) GetServerTypes(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *serverTypes) GetServerTypes(ctx context.Context, request operations.Get
 // Gets a specific Server type object.
 func (s *serverTypes) GetServerTypesID(ctx context.Context, request operations.GetServerTypesIDRequest) (*operations.GetServerTypesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/server_types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/server_types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

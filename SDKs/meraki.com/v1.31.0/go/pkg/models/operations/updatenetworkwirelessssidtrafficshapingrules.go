@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidTrafficShapingRulesPathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 // UpdateNetworkWirelessSsidTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum - The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
 type UpdateNetworkWirelessSsidTrafficShapingRulesRequestBodyRulesDefinitionsTypeEnum string
 
@@ -110,8 +105,9 @@ type UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidTrafficShapingRulesRequest struct {
-	PathParams UpdateNetworkWirelessSsidTrafficShapingRulesPathParams
-	Request    *UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                   `pathParam:"style=simple,explode=false,name=networkId"`
+	Number      string                                                   `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidTrafficShapingRulesResponse struct {

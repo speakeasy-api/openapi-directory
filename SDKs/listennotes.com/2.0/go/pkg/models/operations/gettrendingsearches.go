@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTrendingSearchesHeaders struct {
+type GetTrendingSearchesRequest struct {
 	// Get API Key on listennotes.com/api
 	XListenAPIKey string `header:"style=simple,explode=false,name=X-ListenAPI-Key"`
-}
-
-type GetTrendingSearchesRequest struct {
-	Headers GetTrendingSearchesHeaders
 }
 
 type GetTrendingSearchesResponse struct {

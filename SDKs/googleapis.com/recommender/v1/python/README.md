@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install openapi
+pip install git+https://github.com/speakeasy-api/openapi-directory.git#subdirectory=SDKs/googleapis.com/recommender/v1/python
 ```
 <!-- End SDK Installation -->
 
@@ -15,38 +15,30 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest(
-    security=operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.RecommenderProjectsLocationsInsightTypesInsightsListPathParams(
-        parent="autem",
-    ),
-    query_params=operations.RecommenderProjectsLocationsInsightTypesInsightsListQueryParams(
-        dollar_xgafv="2",
-        access_token="et",
-        alt="json",
-        callback="repudiandae",
-        fields="non",
-        filter="aut",
-        key="ut",
-        oauth_token="ea",
-        page_size=4697312711795634432,
-        page_token="necessitatibus",
-        pretty_print=True,
-        quota_user="ut",
-        upload_type="voluptas",
-        upload_protocol="voluptatem",
-    ),
+    dollar_xgafv="2",
+    access_token="provident",
+    alt="proto",
+    callback="quibusdam",
+    fields_="unde",
+    filter="nulla",
+    key="corrupti",
+    oauth_token="illum",
+    page_size=423655,
+    page_token="error",
+    parent="deserunt",
+    pretty_print=False,
+    quota_user="suscipit",
+    upload_type="iure",
+    upload_protocol="magnam",
 )
     
-res = s.projects.recommender_projects_locations_insight_types_insights_list(req)
+res = s.projects.recommender_projects_locations_insight_types_insights_list(req, operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.google_cloud_recommender_v1_list_insights_response is not None:
     # handle response
@@ -54,7 +46,8 @@ if res.google_cloud_recommender_v1_list_insights_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
+
 
 ### projects
 
@@ -63,10 +56,21 @@ if res.google_cloud_recommender_v1_list_insights_response is not None:
 * `recommender_projects_locations_recommenders_recommendations_get` - Gets the requested recommendation. Requires the recommender.*.get IAM permission for the specified recommender.
 * `recommender_projects_locations_recommenders_recommendations_list` - Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified recommender.
 * `recommender_projects_locations_recommenders_recommendations_mark_claimed` - Marks the Recommendation State as Claimed. Users can use this method to indicate to the Recommender API that they are starting to apply the recommendation themselves. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationClaimed can be applied to recommendations in CLAIMED, SUCCEEDED, FAILED, or ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
+* `recommender_projects_locations_recommenders_recommendations_mark_dismissed` - Mark the Recommendation State as Dismissed. Users can use this method to indicate to the Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED. MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
 * `recommender_projects_locations_recommenders_recommendations_mark_failed` - Marks the Recommendation State as Failed. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation failed. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
 * `recommender_projects_locations_recommenders_recommendations_mark_succeeded` - Marks the Recommendation State as Succeeded. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation was successful. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationSucceeded can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
 * `recommender_projects_locations_recommenders_update_config` - Updates a Recommender Config. This will create a new revision of the config.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

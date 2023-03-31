@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVideoLikesAlt1PathParams struct {
-	// The ID of the channel.
-	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
-	// The ID of the video.
-	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
-}
-
 // GetVideoLikesAlt1DirectionEnum - The sort direction of the results.
 type GetVideoLikesAlt1DirectionEnum string
 
@@ -64,7 +57,9 @@ func (e *GetVideoLikesAlt1SortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideoLikesAlt1QueryParams struct {
+type GetVideoLikesAlt1Request struct {
+	// The ID of the channel.
+	ChannelID float64 `pathParam:"style=simple,explode=false,name=channel_id"`
 	// The sort direction of the results.
 	Direction *GetVideoLikesAlt1DirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	// The page number of the results to show.
@@ -73,11 +68,8 @@ type GetVideoLikesAlt1QueryParams struct {
 	PerPage *float64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The way to sort the results.
 	Sort *GetVideoLikesAlt1SortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetVideoLikesAlt1Request struct {
-	PathParams  GetVideoLikesAlt1PathParams
-	QueryParams GetVideoLikesAlt1QueryParams
+	// The ID of the video.
+	VideoID float64 `pathParam:"style=simple,explode=false,name=video_id"`
 }
 
 type GetVideoLikesAlt1Response struct {

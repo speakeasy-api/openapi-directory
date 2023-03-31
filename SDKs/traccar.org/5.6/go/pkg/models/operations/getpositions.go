@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetPositionsQueryParams struct {
+type GetPositionsRequest struct {
 	// _deviceId_ is optional, but requires the _from_ and _to_ parameters when used
 	DeviceID *int64 `queryParam:"style=form,explode=true,name=deviceId"`
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
@@ -17,10 +17,6 @@ type GetPositionsQueryParams struct {
 	ID *int64 `queryParam:"style=form,explode=true,name=id"`
 	// in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
 	To *time.Time `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetPositionsRequest struct {
-	QueryParams GetPositionsQueryParams
 }
 
 type GetPositionsResponse struct {

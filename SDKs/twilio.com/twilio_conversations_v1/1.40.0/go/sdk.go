@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateConfigurationAddress - Create a new address configuration
-func (s *SDK) CreateConfigurationAddress(ctx context.Context, request operations.CreateConfigurationAddressRequest) (*operations.CreateConfigurationAddressResponse, error) {
+func (s *SDK) CreateConfigurationAddress(ctx context.Context, request operations.CreateConfigurationAddressCreateConfigurationAddressRequest, security operations.CreateConfigurationAddressSecurity, opts ...operations.Option) (*operations.CreateConfigurationAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateConfigurationAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration/Addresses"
@@ -113,7 +123,7 @@ func (s *SDK) CreateConfigurationAddress(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,15 +158,25 @@ func (s *SDK) CreateConfigurationAddress(ctx context.Context, request operations
 }
 
 // CreateConversation - Create a new conversation in your account's default service
-func (s *SDK) CreateConversation(ctx context.Context, request operations.CreateConversationRequest) (*operations.CreateConversationResponse, error) {
+func (s *SDK) CreateConversation(ctx context.Context, request operations.CreateConversationRequest, security operations.CreateConversationSecurity, opts ...operations.Option) (*operations.CreateConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Conversations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,9 +188,9 @@ func (s *SDK) CreateConversation(ctx context.Context, request operations.CreateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -205,15 +225,25 @@ func (s *SDK) CreateConversation(ctx context.Context, request operations.CreateC
 }
 
 // CreateConversationMessage - Add a new message to the conversation
-func (s *SDK) CreateConversationMessage(ctx context.Context, request operations.CreateConversationMessageRequest) (*operations.CreateConversationMessageResponse, error) {
-	baseURL := operations.CreateConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateConversationMessage(ctx context.Context, request operations.CreateConversationMessageRequest, security operations.CreateConversationMessageSecurity, opts ...operations.Option) (*operations.CreateConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -225,9 +255,9 @@ func (s *SDK) CreateConversationMessage(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,15 +292,25 @@ func (s *SDK) CreateConversationMessage(ctx context.Context, request operations.
 }
 
 // CreateConversationParticipant - Add a new participant to the conversation
-func (s *SDK) CreateConversationParticipant(ctx context.Context, request operations.CreateConversationParticipantRequest) (*operations.CreateConversationParticipantResponse, error) {
-	baseURL := operations.CreateConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateConversationParticipant(ctx context.Context, request operations.CreateConversationParticipantRequest, security operations.CreateConversationParticipantSecurity, opts ...operations.Option) (*operations.CreateConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -282,9 +322,9 @@ func (s *SDK) CreateConversationParticipant(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -319,15 +359,25 @@ func (s *SDK) CreateConversationParticipant(ctx context.Context, request operati
 }
 
 // CreateConversationScopedWebhook - Create a new webhook scoped to the conversation
-func (s *SDK) CreateConversationScopedWebhook(ctx context.Context, request operations.CreateConversationScopedWebhookRequest) (*operations.CreateConversationScopedWebhookResponse, error) {
-	baseURL := operations.CreateConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateConversationScopedWebhook(ctx context.Context, request operations.CreateConversationScopedWebhookRequest, security operations.CreateConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.CreateConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -339,7 +389,7 @@ func (s *SDK) CreateConversationScopedWebhook(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -374,10 +424,20 @@ func (s *SDK) CreateConversationScopedWebhook(ctx context.Context, request opera
 }
 
 // CreateCredential - Add a new push notification credential to your account
-func (s *SDK) CreateCredential(ctx context.Context, request operations.CreateCredentialRequest) (*operations.CreateCredentialResponse, error) {
+func (s *SDK) CreateCredential(ctx context.Context, request operations.CreateCredentialCreateCredentialRequest, security operations.CreateCredentialSecurity, opts ...operations.Option) (*operations.CreateCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Credentials"
@@ -394,7 +454,7 @@ func (s *SDK) CreateCredential(ctx context.Context, request operations.CreateCre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -429,10 +489,20 @@ func (s *SDK) CreateCredential(ctx context.Context, request operations.CreateCre
 }
 
 // CreateRole - Create a new user role in your account's default service
-func (s *SDK) CreateRole(ctx context.Context, request operations.CreateRoleRequest) (*operations.CreateRoleResponse, error) {
+func (s *SDK) CreateRole(ctx context.Context, request operations.CreateRoleCreateRoleRequest, security operations.CreateRoleSecurity, opts ...operations.Option) (*operations.CreateRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Roles"
@@ -449,7 +519,7 @@ func (s *SDK) CreateRole(ctx context.Context, request operations.CreateRoleReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -484,10 +554,20 @@ func (s *SDK) CreateRole(ctx context.Context, request operations.CreateRoleReque
 }
 
 // CreateService - Create a new conversation service on your account
-func (s *SDK) CreateService(ctx context.Context, request operations.CreateServiceRequest) (*operations.CreateServiceResponse, error) {
+func (s *SDK) CreateService(ctx context.Context, request operations.CreateServiceCreateServiceRequest, security operations.CreateServiceSecurity, opts ...operations.Option) (*operations.CreateServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Services"
@@ -504,7 +584,7 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -539,15 +619,25 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 }
 
 // CreateServiceConversation - Create a new conversation in your service
-func (s *SDK) CreateServiceConversation(ctx context.Context, request operations.CreateServiceConversationRequest) (*operations.CreateServiceConversationResponse, error) {
-	baseURL := operations.CreateServiceConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateServiceConversation(ctx context.Context, request operations.CreateServiceConversationRequest, security operations.CreateServiceConversationSecurity, opts ...operations.Option) (*operations.CreateServiceConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateServiceConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -559,9 +649,9 @@ func (s *SDK) CreateServiceConversation(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -596,15 +686,25 @@ func (s *SDK) CreateServiceConversation(ctx context.Context, request operations.
 }
 
 // CreateServiceConversationMessage - Add a new message to the conversation in a specific service
-func (s *SDK) CreateServiceConversationMessage(ctx context.Context, request operations.CreateServiceConversationMessageRequest) (*operations.CreateServiceConversationMessageResponse, error) {
-	baseURL := operations.CreateServiceConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateServiceConversationMessage(ctx context.Context, request operations.CreateServiceConversationMessageRequest, security operations.CreateServiceConversationMessageSecurity, opts ...operations.Option) (*operations.CreateServiceConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateServiceConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -616,9 +716,9 @@ func (s *SDK) CreateServiceConversationMessage(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -653,15 +753,25 @@ func (s *SDK) CreateServiceConversationMessage(ctx context.Context, request oper
 }
 
 // CreateServiceConversationParticipant - Add a new participant to the conversation in a specific service
-func (s *SDK) CreateServiceConversationParticipant(ctx context.Context, request operations.CreateServiceConversationParticipantRequest) (*operations.CreateServiceConversationParticipantResponse, error) {
-	baseURL := operations.CreateServiceConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateServiceConversationParticipant(ctx context.Context, request operations.CreateServiceConversationParticipantRequest, security operations.CreateServiceConversationParticipantSecurity, opts ...operations.Option) (*operations.CreateServiceConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateServiceConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -673,9 +783,9 @@ func (s *SDK) CreateServiceConversationParticipant(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -710,15 +820,25 @@ func (s *SDK) CreateServiceConversationParticipant(ctx context.Context, request 
 }
 
 // CreateServiceConversationScopedWebhook - Create a new webhook scoped to the conversation in a specific service
-func (s *SDK) CreateServiceConversationScopedWebhook(ctx context.Context, request operations.CreateServiceConversationScopedWebhookRequest) (*operations.CreateServiceConversationScopedWebhookResponse, error) {
-	baseURL := operations.CreateServiceConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateServiceConversationScopedWebhook(ctx context.Context, request operations.CreateServiceConversationScopedWebhookRequest, security operations.CreateServiceConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.CreateServiceConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateServiceConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -730,7 +850,7 @@ func (s *SDK) CreateServiceConversationScopedWebhook(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -765,15 +885,25 @@ func (s *SDK) CreateServiceConversationScopedWebhook(ctx context.Context, reques
 }
 
 // CreateServiceRole - Create a new user role in your service
-func (s *SDK) CreateServiceRole(ctx context.Context, request operations.CreateServiceRoleRequest) (*operations.CreateServiceRoleResponse, error) {
-	baseURL := operations.CreateServiceRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateServiceRole(ctx context.Context, request operations.CreateServiceRoleRequest, security operations.CreateServiceRoleSecurity, opts ...operations.Option) (*operations.CreateServiceRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateServiceRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -785,7 +915,7 @@ func (s *SDK) CreateServiceRole(ctx context.Context, request operations.CreateSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -820,15 +950,25 @@ func (s *SDK) CreateServiceRole(ctx context.Context, request operations.CreateSe
 }
 
 // CreateServiceUser - Add a new conversation user to your service
-func (s *SDK) CreateServiceUser(ctx context.Context, request operations.CreateServiceUserRequest) (*operations.CreateServiceUserResponse, error) {
-	baseURL := operations.CreateServiceUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) CreateServiceUser(ctx context.Context, request operations.CreateServiceUserRequest, security operations.CreateServiceUserSecurity, opts ...operations.Option) (*operations.CreateServiceUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.CreateServiceUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -840,9 +980,9 @@ func (s *SDK) CreateServiceUser(ctx context.Context, request operations.CreateSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,15 +1017,25 @@ func (s *SDK) CreateServiceUser(ctx context.Context, request operations.CreateSe
 }
 
 // CreateUser - Add a new conversation user to your account's default service
-func (s *SDK) CreateUser(ctx context.Context, request operations.CreateUserRequest) (*operations.CreateUserResponse, error) {
+func (s *SDK) CreateUser(ctx context.Context, request operations.CreateUserRequest, security operations.CreateUserSecurity, opts ...operations.Option) (*operations.CreateUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -897,9 +1047,9 @@ func (s *SDK) CreateUser(ctx context.Context, request operations.CreateUserReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -934,20 +1084,30 @@ func (s *SDK) CreateUser(ctx context.Context, request operations.CreateUserReque
 }
 
 // DeleteConfigurationAddress - Remove an existing address configuration
-func (s *SDK) DeleteConfigurationAddress(ctx context.Context, request operations.DeleteConfigurationAddressRequest) (*operations.DeleteConfigurationAddressResponse, error) {
-	baseURL := operations.DeleteConfigurationAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConfigurationAddress(ctx context.Context, request operations.DeleteConfigurationAddressRequest, security operations.DeleteConfigurationAddressSecurity, opts ...operations.Option) (*operations.DeleteConfigurationAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Configuration/Addresses/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConfigurationAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Configuration/Addresses/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -973,22 +1133,32 @@ func (s *SDK) DeleteConfigurationAddress(ctx context.Context, request operations
 }
 
 // DeleteConversation - Remove a conversation from your account's default service
-func (s *SDK) DeleteConversation(ctx context.Context, request operations.DeleteConversationRequest) (*operations.DeleteConversationResponse, error) {
-	baseURL := operations.DeleteConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConversation(ctx context.Context, request operations.DeleteConversationRequest, security operations.DeleteConversationSecurity, opts ...operations.Option) (*operations.DeleteConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1014,22 +1184,32 @@ func (s *SDK) DeleteConversation(ctx context.Context, request operations.DeleteC
 }
 
 // DeleteConversationMessage - Remove a message from the conversation
-func (s *SDK) DeleteConversationMessage(ctx context.Context, request operations.DeleteConversationMessageRequest) (*operations.DeleteConversationMessageResponse, error) {
-	baseURL := operations.DeleteConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConversationMessage(ctx context.Context, request operations.DeleteConversationMessageRequest, security operations.DeleteConversationMessageSecurity, opts ...operations.Option) (*operations.DeleteConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1055,22 +1235,32 @@ func (s *SDK) DeleteConversationMessage(ctx context.Context, request operations.
 }
 
 // DeleteConversationParticipant - Remove a participant from the conversation
-func (s *SDK) DeleteConversationParticipant(ctx context.Context, request operations.DeleteConversationParticipantRequest) (*operations.DeleteConversationParticipantResponse, error) {
-	baseURL := operations.DeleteConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConversationParticipant(ctx context.Context, request operations.DeleteConversationParticipantRequest, security operations.DeleteConversationParticipantSecurity, opts ...operations.Option) (*operations.DeleteConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1096,20 +1286,30 @@ func (s *SDK) DeleteConversationParticipant(ctx context.Context, request operati
 }
 
 // DeleteConversationScopedWebhook - Remove an existing webhook scoped to the conversation
-func (s *SDK) DeleteConversationScopedWebhook(ctx context.Context, request operations.DeleteConversationScopedWebhookRequest) (*operations.DeleteConversationScopedWebhookResponse, error) {
-	baseURL := operations.DeleteConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteConversationScopedWebhook(ctx context.Context, request operations.DeleteConversationScopedWebhookRequest, security operations.DeleteConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.DeleteConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1135,20 +1335,30 @@ func (s *SDK) DeleteConversationScopedWebhook(ctx context.Context, request opera
 }
 
 // DeleteCredential - Remove a push notification credential from your account
-func (s *SDK) DeleteCredential(ctx context.Context, request operations.DeleteCredentialRequest) (*operations.DeleteCredentialResponse, error) {
-	baseURL := operations.DeleteCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCredential(ctx context.Context, request operations.DeleteCredentialRequest, security operations.DeleteCredentialSecurity, opts ...operations.Option) (*operations.DeleteCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1174,20 +1384,30 @@ func (s *SDK) DeleteCredential(ctx context.Context, request operations.DeleteCre
 }
 
 // DeleteRole - Remove a user role from your account's default service
-func (s *SDK) DeleteRole(ctx context.Context, request operations.DeleteRoleRequest) (*operations.DeleteRoleResponse, error) {
-	baseURL := operations.DeleteRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRole(ctx context.Context, request operations.DeleteRoleRequest, security operations.DeleteRoleSecurity, opts ...operations.Option) (*operations.DeleteRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Roles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Roles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1213,20 +1433,30 @@ func (s *SDK) DeleteRole(ctx context.Context, request operations.DeleteRoleReque
 }
 
 // DeleteService - Remove a conversation service with all its nested resources from your account
-func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServiceRequest) (*operations.DeleteServiceResponse, error) {
-	baseURL := operations.DeleteServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServiceRequest, security operations.DeleteServiceSecurity, opts ...operations.Option) (*operations.DeleteServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1252,20 +1482,30 @@ func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServic
 }
 
 // DeleteServiceBinding - Remove a push notification binding from the conversation service
-func (s *SDK) DeleteServiceBinding(ctx context.Context, request operations.DeleteServiceBindingRequest) (*operations.DeleteServiceBindingResponse, error) {
-	baseURL := operations.DeleteServiceBindingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceBinding(ctx context.Context, request operations.DeleteServiceBindingRequest, security operations.DeleteServiceBindingSecurity, opts ...operations.Option) (*operations.DeleteServiceBindingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceBindingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1291,22 +1531,32 @@ func (s *SDK) DeleteServiceBinding(ctx context.Context, request operations.Delet
 }
 
 // DeleteServiceConversation - Remove a conversation from your service
-func (s *SDK) DeleteServiceConversation(ctx context.Context, request operations.DeleteServiceConversationRequest) (*operations.DeleteServiceConversationResponse, error) {
-	baseURL := operations.DeleteServiceConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceConversation(ctx context.Context, request operations.DeleteServiceConversationRequest, security operations.DeleteServiceConversationSecurity, opts ...operations.Option) (*operations.DeleteServiceConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1332,22 +1582,32 @@ func (s *SDK) DeleteServiceConversation(ctx context.Context, request operations.
 }
 
 // DeleteServiceConversationMessage - Remove a message from the conversation
-func (s *SDK) DeleteServiceConversationMessage(ctx context.Context, request operations.DeleteServiceConversationMessageRequest) (*operations.DeleteServiceConversationMessageResponse, error) {
-	baseURL := operations.DeleteServiceConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceConversationMessage(ctx context.Context, request operations.DeleteServiceConversationMessageRequest, security operations.DeleteServiceConversationMessageSecurity, opts ...operations.Option) (*operations.DeleteServiceConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1373,22 +1633,32 @@ func (s *SDK) DeleteServiceConversationMessage(ctx context.Context, request oper
 }
 
 // DeleteServiceConversationParticipant - Remove a participant from the conversation
-func (s *SDK) DeleteServiceConversationParticipant(ctx context.Context, request operations.DeleteServiceConversationParticipantRequest) (*operations.DeleteServiceConversationParticipantResponse, error) {
-	baseURL := operations.DeleteServiceConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceConversationParticipant(ctx context.Context, request operations.DeleteServiceConversationParticipantRequest, security operations.DeleteServiceConversationParticipantSecurity, opts ...operations.Option) (*operations.DeleteServiceConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1414,20 +1684,30 @@ func (s *SDK) DeleteServiceConversationParticipant(ctx context.Context, request 
 }
 
 // DeleteServiceConversationScopedWebhook - Remove an existing webhook scoped to the conversation
-func (s *SDK) DeleteServiceConversationScopedWebhook(ctx context.Context, request operations.DeleteServiceConversationScopedWebhookRequest) (*operations.DeleteServiceConversationScopedWebhookResponse, error) {
-	baseURL := operations.DeleteServiceConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceConversationScopedWebhook(ctx context.Context, request operations.DeleteServiceConversationScopedWebhookRequest, security operations.DeleteServiceConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.DeleteServiceConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1453,20 +1733,30 @@ func (s *SDK) DeleteServiceConversationScopedWebhook(ctx context.Context, reques
 }
 
 // DeleteServiceRole - Remove a user role from your service
-func (s *SDK) DeleteServiceRole(ctx context.Context, request operations.DeleteServiceRoleRequest) (*operations.DeleteServiceRoleResponse, error) {
-	baseURL := operations.DeleteServiceRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceRole(ctx context.Context, request operations.DeleteServiceRoleRequest, security operations.DeleteServiceRoleSecurity, opts ...operations.Option) (*operations.DeleteServiceRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1492,22 +1782,32 @@ func (s *SDK) DeleteServiceRole(ctx context.Context, request operations.DeleteSe
 }
 
 // DeleteServiceUser - Remove a conversation user from your service
-func (s *SDK) DeleteServiceUser(ctx context.Context, request operations.DeleteServiceUserRequest) (*operations.DeleteServiceUserResponse, error) {
-	baseURL := operations.DeleteServiceUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceUser(ctx context.Context, request operations.DeleteServiceUserRequest, security operations.DeleteServiceUserSecurity, opts ...operations.Option) (*operations.DeleteServiceUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1533,20 +1833,30 @@ func (s *SDK) DeleteServiceUser(ctx context.Context, request operations.DeleteSe
 }
 
 // DeleteServiceUserConversation - Delete a specific User Conversation.
-func (s *SDK) DeleteServiceUserConversation(ctx context.Context, request operations.DeleteServiceUserConversationRequest) (*operations.DeleteServiceUserConversationResponse, error) {
-	baseURL := operations.DeleteServiceUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteServiceUserConversation(ctx context.Context, request operations.DeleteServiceUserConversationRequest, security operations.DeleteServiceUserConversationSecurity, opts ...operations.Option) (*operations.DeleteServiceUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteServiceUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1572,22 +1882,32 @@ func (s *SDK) DeleteServiceUserConversation(ctx context.Context, request operati
 }
 
 // DeleteUser - Remove a conversation user from your account's default service
-func (s *SDK) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
-	baseURL := operations.DeleteUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteUser(ctx context.Context, request operations.DeleteUserRequest, security operations.DeleteUserSecurity, opts ...operations.Option) (*operations.DeleteUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1613,20 +1933,30 @@ func (s *SDK) DeleteUser(ctx context.Context, request operations.DeleteUserReque
 }
 
 // DeleteUserConversation - Delete a specific User Conversation.
-func (s *SDK) DeleteUserConversation(ctx context.Context, request operations.DeleteUserConversationRequest) (*operations.DeleteUserConversationResponse, error) {
-	baseURL := operations.DeleteUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteUserConversation(ctx context.Context, request operations.DeleteUserConversationRequest, security operations.DeleteUserConversationSecurity, opts ...operations.Option) (*operations.DeleteUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1652,10 +1982,20 @@ func (s *SDK) DeleteUserConversation(ctx context.Context, request operations.Del
 }
 
 // FetchConfiguration - Fetch the global configuration of conversations on your account
-func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchConfigurationRequest) (*operations.FetchConfigurationResponse, error) {
+func (s *SDK) FetchConfiguration(ctx context.Context, opts ...operations.Option) (*operations.FetchConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration"
@@ -1665,7 +2005,7 @@ func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1700,20 +2040,30 @@ func (s *SDK) FetchConfiguration(ctx context.Context, request operations.FetchCo
 }
 
 // FetchConfigurationAddress - Fetch an address configuration
-func (s *SDK) FetchConfigurationAddress(ctx context.Context, request operations.FetchConfigurationAddressRequest) (*operations.FetchConfigurationAddressResponse, error) {
-	baseURL := operations.FetchConfigurationAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConfigurationAddress(ctx context.Context, request operations.FetchConfigurationAddressRequest, security operations.FetchConfigurationAddressSecurity, opts ...operations.Option) (*operations.FetchConfigurationAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Configuration/Addresses/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConfigurationAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Configuration/Addresses/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1746,10 +2096,20 @@ func (s *SDK) FetchConfigurationAddress(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *SDK) FetchConfigurationWebhook(ctx context.Context, request operations.FetchConfigurationWebhookRequest) (*operations.FetchConfigurationWebhookResponse, error) {
+func (s *SDK) FetchConfigurationWebhook(ctx context.Context, opts ...operations.Option) (*operations.FetchConfigurationWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.FetchConfigurationWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration/Webhooks"
@@ -1759,7 +2119,7 @@ func (s *SDK) FetchConfigurationWebhook(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1794,20 +2154,30 @@ func (s *SDK) FetchConfigurationWebhook(ctx context.Context, request operations.
 }
 
 // FetchConversation - Fetch a conversation from your account's default service
-func (s *SDK) FetchConversation(ctx context.Context, request operations.FetchConversationRequest) (*operations.FetchConversationResponse, error) {
-	baseURL := operations.FetchConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConversation(ctx context.Context, request operations.FetchConversationRequest, security operations.FetchConversationSecurity, opts ...operations.Option) (*operations.FetchConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1842,20 +2212,30 @@ func (s *SDK) FetchConversation(ctx context.Context, request operations.FetchCon
 }
 
 // FetchConversationMessage - Fetch a message from the conversation
-func (s *SDK) FetchConversationMessage(ctx context.Context, request operations.FetchConversationMessageRequest) (*operations.FetchConversationMessageResponse, error) {
-	baseURL := operations.FetchConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConversationMessage(ctx context.Context, request operations.FetchConversationMessageRequest, security operations.FetchConversationMessageSecurity, opts ...operations.Option) (*operations.FetchConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1890,20 +2270,30 @@ func (s *SDK) FetchConversationMessage(ctx context.Context, request operations.F
 }
 
 // FetchConversationMessageReceipt - Fetch the delivery and read receipts of the conversation message
-func (s *SDK) FetchConversationMessageReceipt(ctx context.Context, request operations.FetchConversationMessageReceiptRequest) (*operations.FetchConversationMessageReceiptResponse, error) {
-	baseURL := operations.FetchConversationMessageReceiptServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConversationMessageReceipt(ctx context.Context, request operations.FetchConversationMessageReceiptRequest, security operations.FetchConversationMessageReceiptSecurity, opts ...operations.Option) (*operations.FetchConversationMessageReceiptResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConversationMessageReceiptServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1938,20 +2328,30 @@ func (s *SDK) FetchConversationMessageReceipt(ctx context.Context, request opera
 }
 
 // FetchConversationParticipant - Fetch a participant of the conversation
-func (s *SDK) FetchConversationParticipant(ctx context.Context, request operations.FetchConversationParticipantRequest) (*operations.FetchConversationParticipantResponse, error) {
-	baseURL := operations.FetchConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConversationParticipant(ctx context.Context, request operations.FetchConversationParticipantRequest, security operations.FetchConversationParticipantSecurity, opts ...operations.Option) (*operations.FetchConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1986,20 +2386,30 @@ func (s *SDK) FetchConversationParticipant(ctx context.Context, request operatio
 }
 
 // FetchConversationScopedWebhook - Fetch the configuration of a conversation-scoped webhook
-func (s *SDK) FetchConversationScopedWebhook(ctx context.Context, request operations.FetchConversationScopedWebhookRequest) (*operations.FetchConversationScopedWebhookResponse, error) {
-	baseURL := operations.FetchConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchConversationScopedWebhook(ctx context.Context, request operations.FetchConversationScopedWebhookRequest, security operations.FetchConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.FetchConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2034,20 +2444,30 @@ func (s *SDK) FetchConversationScopedWebhook(ctx context.Context, request operat
 }
 
 // FetchCredential - Fetch a push notification credential from your account
-func (s *SDK) FetchCredential(ctx context.Context, request operations.FetchCredentialRequest) (*operations.FetchCredentialResponse, error) {
-	baseURL := operations.FetchCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCredential(ctx context.Context, request operations.FetchCredentialRequest, security operations.FetchCredentialSecurity, opts ...operations.Option) (*operations.FetchCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2082,20 +2502,30 @@ func (s *SDK) FetchCredential(ctx context.Context, request operations.FetchCrede
 }
 
 // FetchRole - Fetch a user role from your account's default service
-func (s *SDK) FetchRole(ctx context.Context, request operations.FetchRoleRequest) (*operations.FetchRoleResponse, error) {
-	baseURL := operations.FetchRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRole(ctx context.Context, request operations.FetchRoleRequest, security operations.FetchRoleSecurity, opts ...operations.Option) (*operations.FetchRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Roles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Roles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2130,20 +2560,30 @@ func (s *SDK) FetchRole(ctx context.Context, request operations.FetchRoleRequest
 }
 
 // FetchService - Fetch a conversation service from your account
-func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceRequest) (*operations.FetchServiceResponse, error) {
-	baseURL := operations.FetchServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceRequest, security operations.FetchServiceSecurity, opts ...operations.Option) (*operations.FetchServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2178,20 +2618,30 @@ func (s *SDK) FetchService(ctx context.Context, request operations.FetchServiceR
 }
 
 // FetchServiceBinding - Fetch a push notification binding from the conversation service
-func (s *SDK) FetchServiceBinding(ctx context.Context, request operations.FetchServiceBindingRequest) (*operations.FetchServiceBindingResponse, error) {
-	baseURL := operations.FetchServiceBindingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceBinding(ctx context.Context, request operations.FetchServiceBindingRequest, security operations.FetchServiceBindingSecurity, opts ...operations.Option) (*operations.FetchServiceBindingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceBindingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2226,20 +2676,30 @@ func (s *SDK) FetchServiceBinding(ctx context.Context, request operations.FetchS
 }
 
 // FetchServiceConfiguration - Fetch the configuration of a conversation service
-func (s *SDK) FetchServiceConfiguration(ctx context.Context, request operations.FetchServiceConfigurationRequest) (*operations.FetchServiceConfigurationResponse, error) {
-	baseURL := operations.FetchServiceConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceConfiguration(ctx context.Context, request operations.FetchServiceConfigurationRequest, security operations.FetchServiceConfigurationSecurity, opts ...operations.Option) (*operations.FetchServiceConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceConfigurationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2274,20 +2734,30 @@ func (s *SDK) FetchServiceConfiguration(ctx context.Context, request operations.
 }
 
 // FetchServiceConversation - Fetch a conversation from your service
-func (s *SDK) FetchServiceConversation(ctx context.Context, request operations.FetchServiceConversationRequest) (*operations.FetchServiceConversationResponse, error) {
-	baseURL := operations.FetchServiceConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceConversation(ctx context.Context, request operations.FetchServiceConversationRequest, security operations.FetchServiceConversationSecurity, opts ...operations.Option) (*operations.FetchServiceConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2322,20 +2792,30 @@ func (s *SDK) FetchServiceConversation(ctx context.Context, request operations.F
 }
 
 // FetchServiceConversationMessage - Fetch a message from the conversation
-func (s *SDK) FetchServiceConversationMessage(ctx context.Context, request operations.FetchServiceConversationMessageRequest) (*operations.FetchServiceConversationMessageResponse, error) {
-	baseURL := operations.FetchServiceConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceConversationMessage(ctx context.Context, request operations.FetchServiceConversationMessageRequest, security operations.FetchServiceConversationMessageSecurity, opts ...operations.Option) (*operations.FetchServiceConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2370,20 +2850,30 @@ func (s *SDK) FetchServiceConversationMessage(ctx context.Context, request opera
 }
 
 // FetchServiceConversationMessageReceipt - Fetch the delivery and read receipts of the conversation message
-func (s *SDK) FetchServiceConversationMessageReceipt(ctx context.Context, request operations.FetchServiceConversationMessageReceiptRequest) (*operations.FetchServiceConversationMessageReceiptResponse, error) {
-	baseURL := operations.FetchServiceConversationMessageReceiptServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceConversationMessageReceipt(ctx context.Context, request operations.FetchServiceConversationMessageReceiptRequest, security operations.FetchServiceConversationMessageReceiptSecurity, opts ...operations.Option) (*operations.FetchServiceConversationMessageReceiptResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceConversationMessageReceiptServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2418,20 +2908,30 @@ func (s *SDK) FetchServiceConversationMessageReceipt(ctx context.Context, reques
 }
 
 // FetchServiceConversationParticipant - Fetch a participant of the conversation
-func (s *SDK) FetchServiceConversationParticipant(ctx context.Context, request operations.FetchServiceConversationParticipantRequest) (*operations.FetchServiceConversationParticipantResponse, error) {
-	baseURL := operations.FetchServiceConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceConversationParticipant(ctx context.Context, request operations.FetchServiceConversationParticipantRequest, security operations.FetchServiceConversationParticipantSecurity, opts ...operations.Option) (*operations.FetchServiceConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2466,20 +2966,30 @@ func (s *SDK) FetchServiceConversationParticipant(ctx context.Context, request o
 }
 
 // FetchServiceConversationScopedWebhook - Fetch the configuration of a conversation-scoped webhook
-func (s *SDK) FetchServiceConversationScopedWebhook(ctx context.Context, request operations.FetchServiceConversationScopedWebhookRequest) (*operations.FetchServiceConversationScopedWebhookResponse, error) {
-	baseURL := operations.FetchServiceConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceConversationScopedWebhook(ctx context.Context, request operations.FetchServiceConversationScopedWebhookRequest, security operations.FetchServiceConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.FetchServiceConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2514,20 +3024,30 @@ func (s *SDK) FetchServiceConversationScopedWebhook(ctx context.Context, request
 }
 
 // FetchServiceNotification - Fetch push notification service settings
-func (s *SDK) FetchServiceNotification(ctx context.Context, request operations.FetchServiceNotificationRequest) (*operations.FetchServiceNotificationResponse, error) {
-	baseURL := operations.FetchServiceNotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceNotification(ctx context.Context, request operations.FetchServiceNotificationRequest, security operations.FetchServiceNotificationSecurity, opts ...operations.Option) (*operations.FetchServiceNotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceNotificationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2562,20 +3082,30 @@ func (s *SDK) FetchServiceNotification(ctx context.Context, request operations.F
 }
 
 // FetchServiceRole - Fetch a user role from your service
-func (s *SDK) FetchServiceRole(ctx context.Context, request operations.FetchServiceRoleRequest) (*operations.FetchServiceRoleResponse, error) {
-	baseURL := operations.FetchServiceRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceRole(ctx context.Context, request operations.FetchServiceRoleRequest, security operations.FetchServiceRoleSecurity, opts ...operations.Option) (*operations.FetchServiceRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2610,20 +3140,30 @@ func (s *SDK) FetchServiceRole(ctx context.Context, request operations.FetchServ
 }
 
 // FetchServiceUser - Fetch a conversation user from your service
-func (s *SDK) FetchServiceUser(ctx context.Context, request operations.FetchServiceUserRequest) (*operations.FetchServiceUserResponse, error) {
-	baseURL := operations.FetchServiceUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceUser(ctx context.Context, request operations.FetchServiceUserRequest, security operations.FetchServiceUserSecurity, opts ...operations.Option) (*operations.FetchServiceUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2658,20 +3198,30 @@ func (s *SDK) FetchServiceUser(ctx context.Context, request operations.FetchServ
 }
 
 // FetchServiceUserConversation - Fetch a specific User Conversation.
-func (s *SDK) FetchServiceUserConversation(ctx context.Context, request operations.FetchServiceUserConversationRequest) (*operations.FetchServiceUserConversationResponse, error) {
-	baseURL := operations.FetchServiceUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceUserConversation(ctx context.Context, request operations.FetchServiceUserConversationRequest, security operations.FetchServiceUserConversationSecurity, opts ...operations.Option) (*operations.FetchServiceUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2706,20 +3256,30 @@ func (s *SDK) FetchServiceUserConversation(ctx context.Context, request operatio
 }
 
 // FetchServiceWebhookConfiguration - Fetch a specific service webhook configuration.
-func (s *SDK) FetchServiceWebhookConfiguration(ctx context.Context, request operations.FetchServiceWebhookConfigurationRequest) (*operations.FetchServiceWebhookConfigurationResponse, error) {
-	baseURL := operations.FetchServiceWebhookConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchServiceWebhookConfiguration(ctx context.Context, request operations.FetchServiceWebhookConfigurationRequest, security operations.FetchServiceWebhookConfigurationSecurity, opts ...operations.Option) (*operations.FetchServiceWebhookConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchServiceWebhookConfigurationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2754,20 +3314,30 @@ func (s *SDK) FetchServiceWebhookConfiguration(ctx context.Context, request oper
 }
 
 // FetchUser - Fetch a conversation user from your account's default service
-func (s *SDK) FetchUser(ctx context.Context, request operations.FetchUserRequest) (*operations.FetchUserResponse, error) {
-	baseURL := operations.FetchUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchUser(ctx context.Context, request operations.FetchUserRequest, security operations.FetchUserSecurity, opts ...operations.Option) (*operations.FetchUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2802,20 +3372,30 @@ func (s *SDK) FetchUser(ctx context.Context, request operations.FetchUserRequest
 }
 
 // FetchUserConversation - Fetch a specific User Conversation.
-func (s *SDK) FetchUserConversation(ctx context.Context, request operations.FetchUserConversationRequest) (*operations.FetchUserConversationResponse, error) {
-	baseURL := operations.FetchUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchUserConversation(ctx context.Context, request operations.FetchUserConversationRequest, security operations.FetchUserConversationSecurity, opts ...operations.Option) (*operations.FetchUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2850,10 +3430,20 @@ func (s *SDK) FetchUserConversation(ctx context.Context, request operations.Fetc
 }
 
 // ListConfigurationAddress - Retrieve a list of address configurations for an account
-func (s *SDK) ListConfigurationAddress(ctx context.Context, request operations.ListConfigurationAddressRequest) (*operations.ListConfigurationAddressResponse, error) {
+func (s *SDK) ListConfigurationAddress(ctx context.Context, request operations.ListConfigurationAddressRequest, security operations.ListConfigurationAddressSecurity, opts ...operations.Option) (*operations.ListConfigurationAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListConfigurationAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration/Addresses"
@@ -2863,11 +3453,11 @@ func (s *SDK) ListConfigurationAddress(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2902,10 +3492,20 @@ func (s *SDK) ListConfigurationAddress(ctx context.Context, request operations.L
 }
 
 // ListConversation - Retrieve a list of conversations in your account's default service
-func (s *SDK) ListConversation(ctx context.Context, request operations.ListConversationRequest) (*operations.ListConversationResponse, error) {
+func (s *SDK) ListConversation(ctx context.Context, request operations.ListConversationRequest, security operations.ListConversationSecurity, opts ...operations.Option) (*operations.ListConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Conversations"
@@ -2915,11 +3515,11 @@ func (s *SDK) ListConversation(ctx context.Context, request operations.ListConve
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2954,24 +3554,34 @@ func (s *SDK) ListConversation(ctx context.Context, request operations.ListConve
 }
 
 // ListConversationMessage - Retrieve a list of all messages in the conversation
-func (s *SDK) ListConversationMessage(ctx context.Context, request operations.ListConversationMessageRequest) (*operations.ListConversationMessageResponse, error) {
-	baseURL := operations.ListConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConversationMessage(ctx context.Context, request operations.ListConversationMessageRequest, security operations.ListConversationMessageSecurity, opts ...operations.Option) (*operations.ListConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3006,24 +3616,34 @@ func (s *SDK) ListConversationMessage(ctx context.Context, request operations.Li
 }
 
 // ListConversationMessageReceipt - Retrieve a list of all delivery and read receipts of the conversation message
-func (s *SDK) ListConversationMessageReceipt(ctx context.Context, request operations.ListConversationMessageReceiptRequest) (*operations.ListConversationMessageReceiptResponse, error) {
-	baseURL := operations.ListConversationMessageReceiptServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConversationMessageReceipt(ctx context.Context, request operations.ListConversationMessageReceiptRequest, security operations.ListConversationMessageReceiptSecurity, opts ...operations.Option) (*operations.ListConversationMessageReceiptResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConversationMessageReceiptServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3058,24 +3678,34 @@ func (s *SDK) ListConversationMessageReceipt(ctx context.Context, request operat
 }
 
 // ListConversationParticipant - Retrieve a list of all participants of the conversation
-func (s *SDK) ListConversationParticipant(ctx context.Context, request operations.ListConversationParticipantRequest) (*operations.ListConversationParticipantResponse, error) {
-	baseURL := operations.ListConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConversationParticipant(ctx context.Context, request operations.ListConversationParticipantRequest, security operations.ListConversationParticipantSecurity, opts ...operations.Option) (*operations.ListConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3110,24 +3740,34 @@ func (s *SDK) ListConversationParticipant(ctx context.Context, request operation
 }
 
 // ListConversationScopedWebhook - Retrieve a list of all webhooks scoped to the conversation
-func (s *SDK) ListConversationScopedWebhook(ctx context.Context, request operations.ListConversationScopedWebhookRequest) (*operations.ListConversationScopedWebhookResponse, error) {
-	baseURL := operations.ListConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListConversationScopedWebhook(ctx context.Context, request operations.ListConversationScopedWebhookRequest, security operations.ListConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.ListConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3162,10 +3802,20 @@ func (s *SDK) ListConversationScopedWebhook(ctx context.Context, request operati
 }
 
 // ListCredential - Retrieve a list of all push notification credentials on your account
-func (s *SDK) ListCredential(ctx context.Context, request operations.ListCredentialRequest) (*operations.ListCredentialResponse, error) {
+func (s *SDK) ListCredential(ctx context.Context, request operations.ListCredentialRequest, security operations.ListCredentialSecurity, opts ...operations.Option) (*operations.ListCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Credentials"
@@ -3175,11 +3825,11 @@ func (s *SDK) ListCredential(ctx context.Context, request operations.ListCredent
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3214,10 +3864,20 @@ func (s *SDK) ListCredential(ctx context.Context, request operations.ListCredent
 }
 
 // ListParticipantConversation - Retrieve a list of all Conversations that this Participant belongs to by identity or by address. Only one parameter should be specified.
-func (s *SDK) ListParticipantConversation(ctx context.Context, request operations.ListParticipantConversationRequest) (*operations.ListParticipantConversationResponse, error) {
+func (s *SDK) ListParticipantConversation(ctx context.Context, request operations.ListParticipantConversationRequest, security operations.ListParticipantConversationSecurity, opts ...operations.Option) (*operations.ListParticipantConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListParticipantConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ParticipantConversations"
@@ -3227,11 +3887,11 @@ func (s *SDK) ListParticipantConversation(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3266,10 +3926,20 @@ func (s *SDK) ListParticipantConversation(ctx context.Context, request operation
 }
 
 // ListRole - Retrieve a list of all user roles in your account's default service
-func (s *SDK) ListRole(ctx context.Context, request operations.ListRoleRequest) (*operations.ListRoleResponse, error) {
+func (s *SDK) ListRole(ctx context.Context, request operations.ListRoleRequest, security operations.ListRoleSecurity, opts ...operations.Option) (*operations.ListRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Roles"
@@ -3279,11 +3949,11 @@ func (s *SDK) ListRole(ctx context.Context, request operations.ListRoleRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3318,10 +3988,20 @@ func (s *SDK) ListRole(ctx context.Context, request operations.ListRoleRequest) 
 }
 
 // ListService - Retrieve a list of all conversation services on your account
-func (s *SDK) ListService(ctx context.Context, request operations.ListServiceRequest) (*operations.ListServiceResponse, error) {
+func (s *SDK) ListService(ctx context.Context, request operations.ListServiceRequest, security operations.ListServiceSecurity, opts ...operations.Option) (*operations.ListServiceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListServiceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Services"
@@ -3331,11 +4011,11 @@ func (s *SDK) ListService(ctx context.Context, request operations.ListServiceReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3370,24 +4050,34 @@ func (s *SDK) ListService(ctx context.Context, request operations.ListServiceReq
 }
 
 // ListServiceBinding - Retrieve a list of all push notification bindings in the conversation service
-func (s *SDK) ListServiceBinding(ctx context.Context, request operations.ListServiceBindingRequest) (*operations.ListServiceBindingResponse, error) {
-	baseURL := operations.ListServiceBindingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceBinding(ctx context.Context, request operations.ListServiceBindingRequest, security operations.ListServiceBindingSecurity, opts ...operations.Option) (*operations.ListServiceBindingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Bindings", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceBindingServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Bindings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3422,24 +4112,34 @@ func (s *SDK) ListServiceBinding(ctx context.Context, request operations.ListSer
 }
 
 // ListServiceConversation - Retrieve a list of conversations in your service
-func (s *SDK) ListServiceConversation(ctx context.Context, request operations.ListServiceConversationRequest) (*operations.ListServiceConversationResponse, error) {
-	baseURL := operations.ListServiceConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceConversation(ctx context.Context, request operations.ListServiceConversationRequest, security operations.ListServiceConversationSecurity, opts ...operations.Option) (*operations.ListServiceConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3474,24 +4174,34 @@ func (s *SDK) ListServiceConversation(ctx context.Context, request operations.Li
 }
 
 // ListServiceConversationMessage - Retrieve a list of all messages in the conversation
-func (s *SDK) ListServiceConversationMessage(ctx context.Context, request operations.ListServiceConversationMessageRequest) (*operations.ListServiceConversationMessageResponse, error) {
-	baseURL := operations.ListServiceConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceConversationMessage(ctx context.Context, request operations.ListServiceConversationMessageRequest, security operations.ListServiceConversationMessageSecurity, opts ...operations.Option) (*operations.ListServiceConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3526,24 +4236,34 @@ func (s *SDK) ListServiceConversationMessage(ctx context.Context, request operat
 }
 
 // ListServiceConversationMessageReceipt - Retrieve a list of all delivery and read receipts of the conversation message
-func (s *SDK) ListServiceConversationMessageReceipt(ctx context.Context, request operations.ListServiceConversationMessageReceiptRequest) (*operations.ListServiceConversationMessageReceiptResponse, error) {
-	baseURL := operations.ListServiceConversationMessageReceiptServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceConversationMessageReceipt(ctx context.Context, request operations.ListServiceConversationMessageReceiptRequest, security operations.ListServiceConversationMessageReceiptSecurity, opts ...operations.Option) (*operations.ListServiceConversationMessageReceiptResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceConversationMessageReceiptServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3578,24 +4298,34 @@ func (s *SDK) ListServiceConversationMessageReceipt(ctx context.Context, request
 }
 
 // ListServiceConversationParticipant - Retrieve a list of all participants of the conversation
-func (s *SDK) ListServiceConversationParticipant(ctx context.Context, request operations.ListServiceConversationParticipantRequest) (*operations.ListServiceConversationParticipantResponse, error) {
-	baseURL := operations.ListServiceConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceConversationParticipant(ctx context.Context, request operations.ListServiceConversationParticipantRequest, security operations.ListServiceConversationParticipantSecurity, opts ...operations.Option) (*operations.ListServiceConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3630,24 +4360,34 @@ func (s *SDK) ListServiceConversationParticipant(ctx context.Context, request op
 }
 
 // ListServiceConversationScopedWebhook - Retrieve a list of all webhooks scoped to the conversation
-func (s *SDK) ListServiceConversationScopedWebhook(ctx context.Context, request operations.ListServiceConversationScopedWebhookRequest) (*operations.ListServiceConversationScopedWebhookResponse, error) {
-	baseURL := operations.ListServiceConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceConversationScopedWebhook(ctx context.Context, request operations.ListServiceConversationScopedWebhookRequest, security operations.ListServiceConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.ListServiceConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3682,24 +4422,34 @@ func (s *SDK) ListServiceConversationScopedWebhook(ctx context.Context, request 
 }
 
 // ListServiceParticipantConversation - Retrieve a list of all Conversations that this Participant belongs to by identity or by address. Only one parameter should be specified.
-func (s *SDK) ListServiceParticipantConversation(ctx context.Context, request operations.ListServiceParticipantConversationRequest) (*operations.ListServiceParticipantConversationResponse, error) {
-	baseURL := operations.ListServiceParticipantConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceParticipantConversation(ctx context.Context, request operations.ListServiceParticipantConversationRequest, security operations.ListServiceParticipantConversationSecurity, opts ...operations.Option) (*operations.ListServiceParticipantConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/ParticipantConversations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceParticipantConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/ParticipantConversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3734,24 +4484,34 @@ func (s *SDK) ListServiceParticipantConversation(ctx context.Context, request op
 }
 
 // ListServiceRole - Retrieve a list of all user roles in your service
-func (s *SDK) ListServiceRole(ctx context.Context, request operations.ListServiceRoleRequest) (*operations.ListServiceRoleResponse, error) {
-	baseURL := operations.ListServiceRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceRole(ctx context.Context, request operations.ListServiceRoleRequest, security operations.ListServiceRoleSecurity, opts ...operations.Option) (*operations.ListServiceRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3786,24 +4546,34 @@ func (s *SDK) ListServiceRole(ctx context.Context, request operations.ListServic
 }
 
 // ListServiceUser - Retrieve a list of all conversation users in your service
-func (s *SDK) ListServiceUser(ctx context.Context, request operations.ListServiceUserRequest) (*operations.ListServiceUserResponse, error) {
-	baseURL := operations.ListServiceUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceUser(ctx context.Context, request operations.ListServiceUserRequest, security operations.ListServiceUserSecurity, opts ...operations.Option) (*operations.ListServiceUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3838,24 +4608,34 @@ func (s *SDK) ListServiceUser(ctx context.Context, request operations.ListServic
 }
 
 // ListServiceUserConversation - Retrieve a list of all User Conversations for the User.
-func (s *SDK) ListServiceUserConversation(ctx context.Context, request operations.ListServiceUserConversationRequest) (*operations.ListServiceUserConversationResponse, error) {
-	baseURL := operations.ListServiceUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListServiceUserConversation(ctx context.Context, request operations.ListServiceUserConversationRequest, security operations.ListServiceUserConversationSecurity, opts ...operations.Option) (*operations.ListServiceUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListServiceUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3890,10 +4670,20 @@ func (s *SDK) ListServiceUserConversation(ctx context.Context, request operation
 }
 
 // ListUser - Retrieve a list of all conversation users in your account's default service
-func (s *SDK) ListUser(ctx context.Context, request operations.ListUserRequest) (*operations.ListUserResponse, error) {
+func (s *SDK) ListUser(ctx context.Context, request operations.ListUserRequest, security operations.ListUserSecurity, opts ...operations.Option) (*operations.ListUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Users"
@@ -3903,11 +4693,11 @@ func (s *SDK) ListUser(ctx context.Context, request operations.ListUserRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3942,24 +4732,34 @@ func (s *SDK) ListUser(ctx context.Context, request operations.ListUserRequest) 
 }
 
 // ListUserConversation - Retrieve a list of all User Conversations for the User.
-func (s *SDK) ListUserConversation(ctx context.Context, request operations.ListUserConversationRequest) (*operations.ListUserConversationResponse, error) {
-	baseURL := operations.ListUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUserConversation(ctx context.Context, request operations.ListUserConversationRequest, security operations.ListUserConversationSecurity, opts ...operations.Option) (*operations.ListUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3994,10 +4794,20 @@ func (s *SDK) ListUserConversation(ctx context.Context, request operations.ListU
 }
 
 // UpdateConfiguration - Update the global configuration of conversations on your account
-func (s *SDK) UpdateConfiguration(ctx context.Context, request operations.UpdateConfigurationRequest) (*operations.UpdateConfigurationResponse, error) {
+func (s *SDK) UpdateConfiguration(ctx context.Context, request operations.UpdateConfigurationUpdateConfigurationRequest, security operations.UpdateConfigurationSecurity, opts ...operations.Option) (*operations.UpdateConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UpdateConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration"
@@ -4014,7 +4824,7 @@ func (s *SDK) UpdateConfiguration(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4049,15 +4859,25 @@ func (s *SDK) UpdateConfiguration(ctx context.Context, request operations.Update
 }
 
 // UpdateConfigurationAddress - Update an existing address configuration
-func (s *SDK) UpdateConfigurationAddress(ctx context.Context, request operations.UpdateConfigurationAddressRequest) (*operations.UpdateConfigurationAddressResponse, error) {
-	baseURL := operations.UpdateConfigurationAddressServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConfigurationAddress(ctx context.Context, request operations.UpdateConfigurationAddressRequest, security operations.UpdateConfigurationAddressSecurity, opts ...operations.Option) (*operations.UpdateConfigurationAddressResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Configuration/Addresses/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConfigurationAddressServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Configuration/Addresses/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4069,7 +4889,7 @@ func (s *SDK) UpdateConfigurationAddress(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4102,10 +4922,20 @@ func (s *SDK) UpdateConfigurationAddress(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *SDK) UpdateConfigurationWebhook(ctx context.Context, request operations.UpdateConfigurationWebhookRequest) (*operations.UpdateConfigurationWebhookResponse, error) {
+func (s *SDK) UpdateConfigurationWebhook(ctx context.Context, request operations.UpdateConfigurationWebhookUpdateConfigurationWebhookRequest, security operations.UpdateConfigurationWebhookSecurity, opts ...operations.Option) (*operations.UpdateConfigurationWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UpdateConfigurationWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Configuration/Webhooks"
@@ -4122,7 +4952,7 @@ func (s *SDK) UpdateConfigurationWebhook(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4157,15 +4987,25 @@ func (s *SDK) UpdateConfigurationWebhook(ctx context.Context, request operations
 }
 
 // UpdateConversation - Update an existing conversation in your account's default service
-func (s *SDK) UpdateConversation(ctx context.Context, request operations.UpdateConversationRequest) (*operations.UpdateConversationResponse, error) {
-	baseURL := operations.UpdateConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConversation(ctx context.Context, request operations.UpdateConversationRequest, security operations.UpdateConversationSecurity, opts ...operations.Option) (*operations.UpdateConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4177,9 +5017,9 @@ func (s *SDK) UpdateConversation(ctx context.Context, request operations.UpdateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4214,15 +5054,25 @@ func (s *SDK) UpdateConversation(ctx context.Context, request operations.UpdateC
 }
 
 // UpdateConversationMessage - Update an existing message in the conversation
-func (s *SDK) UpdateConversationMessage(ctx context.Context, request operations.UpdateConversationMessageRequest) (*operations.UpdateConversationMessageResponse, error) {
-	baseURL := operations.UpdateConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConversationMessage(ctx context.Context, request operations.UpdateConversationMessageRequest, security operations.UpdateConversationMessageSecurity, opts ...operations.Option) (*operations.UpdateConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4234,9 +5084,9 @@ func (s *SDK) UpdateConversationMessage(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4271,15 +5121,25 @@ func (s *SDK) UpdateConversationMessage(ctx context.Context, request operations.
 }
 
 // UpdateConversationParticipant - Update an existing participant in the conversation
-func (s *SDK) UpdateConversationParticipant(ctx context.Context, request operations.UpdateConversationParticipantRequest) (*operations.UpdateConversationParticipantResponse, error) {
-	baseURL := operations.UpdateConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConversationParticipant(ctx context.Context, request operations.UpdateConversationParticipantRequest, security operations.UpdateConversationParticipantSecurity, opts ...operations.Option) (*operations.UpdateConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4291,9 +5151,9 @@ func (s *SDK) UpdateConversationParticipant(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4328,15 +5188,25 @@ func (s *SDK) UpdateConversationParticipant(ctx context.Context, request operati
 }
 
 // UpdateConversationScopedWebhook - Update an existing conversation-scoped webhook
-func (s *SDK) UpdateConversationScopedWebhook(ctx context.Context, request operations.UpdateConversationScopedWebhookRequest) (*operations.UpdateConversationScopedWebhookResponse, error) {
-	baseURL := operations.UpdateConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateConversationScopedWebhook(ctx context.Context, request operations.UpdateConversationScopedWebhookRequest, security operations.UpdateConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.UpdateConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4348,7 +5218,7 @@ func (s *SDK) UpdateConversationScopedWebhook(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4383,15 +5253,25 @@ func (s *SDK) UpdateConversationScopedWebhook(ctx context.Context, request opera
 }
 
 // UpdateCredential - Update an existing push notification credential on your account
-func (s *SDK) UpdateCredential(ctx context.Context, request operations.UpdateCredentialRequest) (*operations.UpdateCredentialResponse, error) {
-	baseURL := operations.UpdateCredentialServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateCredential(ctx context.Context, request operations.UpdateCredentialRequest, security operations.UpdateCredentialSecurity, opts ...operations.Option) (*operations.UpdateCredentialResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateCredentialServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Credentials/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4403,7 +5283,7 @@ func (s *SDK) UpdateCredential(ctx context.Context, request operations.UpdateCre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4438,15 +5318,25 @@ func (s *SDK) UpdateCredential(ctx context.Context, request operations.UpdateCre
 }
 
 // UpdateRole - Update an existing user role in your account's default service
-func (s *SDK) UpdateRole(ctx context.Context, request operations.UpdateRoleRequest) (*operations.UpdateRoleResponse, error) {
-	baseURL := operations.UpdateRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRole(ctx context.Context, request operations.UpdateRoleRequest, security operations.UpdateRoleSecurity, opts ...operations.Option) (*operations.UpdateRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Roles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Roles/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4458,7 +5348,7 @@ func (s *SDK) UpdateRole(ctx context.Context, request operations.UpdateRoleReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4493,15 +5383,25 @@ func (s *SDK) UpdateRole(ctx context.Context, request operations.UpdateRoleReque
 }
 
 // UpdateServiceConfiguration - Update configuration settings of a conversation service
-func (s *SDK) UpdateServiceConfiguration(ctx context.Context, request operations.UpdateServiceConfigurationRequest) (*operations.UpdateServiceConfigurationResponse, error) {
-	baseURL := operations.UpdateServiceConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceConfiguration(ctx context.Context, request operations.UpdateServiceConfigurationRequest, security operations.UpdateServiceConfigurationSecurity, opts ...operations.Option) (*operations.UpdateServiceConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceConfigurationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4513,7 +5413,7 @@ func (s *SDK) UpdateServiceConfiguration(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4548,15 +5448,25 @@ func (s *SDK) UpdateServiceConfiguration(ctx context.Context, request operations
 }
 
 // UpdateServiceConversation - Update an existing conversation in your service
-func (s *SDK) UpdateServiceConversation(ctx context.Context, request operations.UpdateServiceConversationRequest) (*operations.UpdateServiceConversationResponse, error) {
-	baseURL := operations.UpdateServiceConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceConversation(ctx context.Context, request operations.UpdateServiceConversationRequest, security operations.UpdateServiceConversationSecurity, opts ...operations.Option) (*operations.UpdateServiceConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4568,9 +5478,9 @@ func (s *SDK) UpdateServiceConversation(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4605,15 +5515,25 @@ func (s *SDK) UpdateServiceConversation(ctx context.Context, request operations.
 }
 
 // UpdateServiceConversationMessage - Update an existing message in the conversation
-func (s *SDK) UpdateServiceConversationMessage(ctx context.Context, request operations.UpdateServiceConversationMessageRequest) (*operations.UpdateServiceConversationMessageResponse, error) {
-	baseURL := operations.UpdateServiceConversationMessageServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceConversationMessage(ctx context.Context, request operations.UpdateServiceConversationMessageRequest, security operations.UpdateServiceConversationMessageSecurity, opts ...operations.Option) (*operations.UpdateServiceConversationMessageResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceConversationMessageServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4625,9 +5545,9 @@ func (s *SDK) UpdateServiceConversationMessage(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4662,15 +5582,25 @@ func (s *SDK) UpdateServiceConversationMessage(ctx context.Context, request oper
 }
 
 // UpdateServiceConversationParticipant - Update an existing participant in the conversation
-func (s *SDK) UpdateServiceConversationParticipant(ctx context.Context, request operations.UpdateServiceConversationParticipantRequest) (*operations.UpdateServiceConversationParticipantResponse, error) {
-	baseURL := operations.UpdateServiceConversationParticipantServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceConversationParticipant(ctx context.Context, request operations.UpdateServiceConversationParticipantRequest, security operations.UpdateServiceConversationParticipantSecurity, opts ...operations.Option) (*operations.UpdateServiceConversationParticipantResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceConversationParticipantServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4682,9 +5612,9 @@ func (s *SDK) UpdateServiceConversationParticipant(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4719,15 +5649,25 @@ func (s *SDK) UpdateServiceConversationParticipant(ctx context.Context, request 
 }
 
 // UpdateServiceConversationScopedWebhook - Update an existing conversation-scoped webhook
-func (s *SDK) UpdateServiceConversationScopedWebhook(ctx context.Context, request operations.UpdateServiceConversationScopedWebhookRequest) (*operations.UpdateServiceConversationScopedWebhookResponse, error) {
-	baseURL := operations.UpdateServiceConversationScopedWebhookServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceConversationScopedWebhook(ctx context.Context, request operations.UpdateServiceConversationScopedWebhookRequest, security operations.UpdateServiceConversationScopedWebhookSecurity, opts ...operations.Option) (*operations.UpdateServiceConversationScopedWebhookResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceConversationScopedWebhookServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4739,7 +5679,7 @@ func (s *SDK) UpdateServiceConversationScopedWebhook(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4774,15 +5714,25 @@ func (s *SDK) UpdateServiceConversationScopedWebhook(ctx context.Context, reques
 }
 
 // UpdateServiceNotification - Update push notification service settings
-func (s *SDK) UpdateServiceNotification(ctx context.Context, request operations.UpdateServiceNotificationRequest) (*operations.UpdateServiceNotificationResponse, error) {
-	baseURL := operations.UpdateServiceNotificationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceNotification(ctx context.Context, request operations.UpdateServiceNotificationRequest, security operations.UpdateServiceNotificationSecurity, opts ...operations.Option) (*operations.UpdateServiceNotificationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceNotificationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4794,7 +5744,7 @@ func (s *SDK) UpdateServiceNotification(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4829,15 +5779,25 @@ func (s *SDK) UpdateServiceNotification(ctx context.Context, request operations.
 }
 
 // UpdateServiceRole - Update an existing user role in your service
-func (s *SDK) UpdateServiceRole(ctx context.Context, request operations.UpdateServiceRoleRequest) (*operations.UpdateServiceRoleResponse, error) {
-	baseURL := operations.UpdateServiceRoleServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceRole(ctx context.Context, request operations.UpdateServiceRoleRequest, security operations.UpdateServiceRoleSecurity, opts ...operations.Option) (*operations.UpdateServiceRoleResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceRoleServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4849,7 +5809,7 @@ func (s *SDK) UpdateServiceRole(ctx context.Context, request operations.UpdateSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4884,15 +5844,25 @@ func (s *SDK) UpdateServiceRole(ctx context.Context, request operations.UpdateSe
 }
 
 // UpdateServiceUser - Update an existing conversation user in your service
-func (s *SDK) UpdateServiceUser(ctx context.Context, request operations.UpdateServiceUserRequest) (*operations.UpdateServiceUserResponse, error) {
-	baseURL := operations.UpdateServiceUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceUser(ctx context.Context, request operations.UpdateServiceUserRequest, security operations.UpdateServiceUserSecurity, opts ...operations.Option) (*operations.UpdateServiceUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4904,9 +5874,9 @@ func (s *SDK) UpdateServiceUser(ctx context.Context, request operations.UpdateSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4941,15 +5911,25 @@ func (s *SDK) UpdateServiceUser(ctx context.Context, request operations.UpdateSe
 }
 
 // UpdateServiceUserConversation - Update a specific User Conversation.
-func (s *SDK) UpdateServiceUserConversation(ctx context.Context, request operations.UpdateServiceUserConversationRequest) (*operations.UpdateServiceUserConversationResponse, error) {
-	baseURL := operations.UpdateServiceUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceUserConversation(ctx context.Context, request operations.UpdateServiceUserConversationRequest, security operations.UpdateServiceUserConversationSecurity, opts ...operations.Option) (*operations.UpdateServiceUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4961,7 +5941,7 @@ func (s *SDK) UpdateServiceUserConversation(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4996,15 +5976,25 @@ func (s *SDK) UpdateServiceUserConversation(ctx context.Context, request operati
 }
 
 // UpdateServiceWebhookConfiguration - Update a specific Webhook.
-func (s *SDK) UpdateServiceWebhookConfiguration(ctx context.Context, request operations.UpdateServiceWebhookConfigurationRequest) (*operations.UpdateServiceWebhookConfigurationResponse, error) {
-	baseURL := operations.UpdateServiceWebhookConfigurationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateServiceWebhookConfiguration(ctx context.Context, request operations.UpdateServiceWebhookConfigurationRequest, security operations.UpdateServiceWebhookConfigurationSecurity, opts ...operations.Option) (*operations.UpdateServiceWebhookConfigurationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateServiceWebhookConfigurationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5016,7 +6006,7 @@ func (s *SDK) UpdateServiceWebhookConfiguration(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5051,15 +6041,25 @@ func (s *SDK) UpdateServiceWebhookConfiguration(ctx context.Context, request ope
 }
 
 // UpdateUser - Update an existing conversation user in your account's default service
-func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
-	baseURL := operations.UpdateUserServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserRequest, security operations.UpdateUserSecurity, opts ...operations.Option) (*operations.UpdateUserResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateUserServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5071,9 +6071,9 @@ func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5108,15 +6108,25 @@ func (s *SDK) UpdateUser(ctx context.Context, request operations.UpdateUserReque
 }
 
 // UpdateUserConversation - Update a specific User Conversation.
-func (s *SDK) UpdateUserConversation(ctx context.Context, request operations.UpdateUserConversationRequest) (*operations.UpdateUserConversationResponse, error) {
-	baseURL := operations.UpdateUserConversationServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateUserConversation(ctx context.Context, request operations.UpdateUserConversationRequest, security operations.UpdateUserConversationSecurity, opts ...operations.Option) (*operations.UpdateUserConversationResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateUserConversationServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5128,7 +6138,7 @@ func (s *SDK) UpdateUserConversation(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

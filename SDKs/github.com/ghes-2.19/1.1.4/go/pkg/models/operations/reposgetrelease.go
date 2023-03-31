@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReposGetReleasePathParams struct {
+type ReposGetReleaseRequest struct {
 	Owner string `pathParam:"style=simple,explode=false,name=owner"`
 	// release_id parameter
 	ReleaseID int64  `pathParam:"style=simple,explode=false,name=release_id"`
 	Repo      string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ReposGetReleaseRequest struct {
-	PathParams ReposGetReleasePathParams
 }
 
 type ReposGetReleaseResponse struct {

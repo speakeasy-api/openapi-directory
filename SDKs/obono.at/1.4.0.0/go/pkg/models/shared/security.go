@@ -2,15 +2,6 @@
 
 package shared
 
-type SchemeBasicAuth struct {
-	Password string `security:"name=password"`
-	Username string `security:"name=username"`
-}
-
-type SchemeJwt struct {
-	APIKey string `security:"name=Authorization"`
-}
-
 type Security struct {
-	Jwt SchemeJwt `security:"scheme,type=apiKey,subtype=header"`
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }

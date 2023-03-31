@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuoteForLanguagePathParams struct {
+type GetQuoteForLanguageRequest struct {
 	// Continuous project ID
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Target language that you want to complete
 	TargetLanguage string `pathParam:"style=simple,explode=false,name=targetLanguage"`
-}
-
-type GetQuoteForLanguageRequest struct {
-	PathParams GetQuoteForLanguagePathParams
 }
 
 type GetQuoteForLanguageResponse struct {

@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type ActionsUpdateRepoVariablePathParams struct {
-	// The name of the variable.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The account owner of the repository. The name is not case sensitive.
-	Owner string `pathParam:"style=simple,explode=false,name=owner"`
-	// The name of the repository. The name is not case sensitive.
-	Repo string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
 type ActionsUpdateRepoVariableRequestBody struct {
 	// The name of the variable.
 	Name *string `json:"name,omitempty"`
@@ -23,8 +14,13 @@ type ActionsUpdateRepoVariableRequestBody struct {
 }
 
 type ActionsUpdateRepoVariableRequest struct {
-	PathParams ActionsUpdateRepoVariablePathParams
-	Request    ActionsUpdateRepoVariableRequestBody `request:"mediaType=application/json"`
+	RequestBody ActionsUpdateRepoVariableRequestBody `request:"mediaType=application/json"`
+	// The name of the variable.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The account owner of the repository. The name is not case sensitive.
+	Owner string `pathParam:"style=simple,explode=false,name=owner"`
+	// The name of the repository. The name is not case sensitive.
+	Repo string `pathParam:"style=simple,explode=false,name=repo"`
 }
 
 type ActionsUpdateRepoVariableResponse struct {

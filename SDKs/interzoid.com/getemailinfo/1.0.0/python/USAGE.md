@@ -4,12 +4,11 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GetemailinfoRequest(
-    query_params=operations.GetemailinfoQueryParams(
-        email="non",
-        license="cupiditate",
-    ),
+    email="Larue_Rau85@yahoo.com",
+    license="corrupti",
 )
     
 res = s.email_address_information.getemailinfo(req)

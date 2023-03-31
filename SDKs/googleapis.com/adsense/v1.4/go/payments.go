@@ -33,7 +33,7 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AdsensePaymentsList - List the payments for this AdSense account.
-func (s *payments) AdsensePaymentsList(ctx context.Context, request operations.AdsensePaymentsListRequest) (*operations.AdsensePaymentsListResponse, error) {
+func (s *payments) AdsensePaymentsList(ctx context.Context, request operations.AdsensePaymentsListRequest, security operations.AdsensePaymentsListSecurity) (*operations.AdsensePaymentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payments"
 
@@ -42,11 +42,11 @@ func (s *payments) AdsensePaymentsList(ctx context.Context, request operations.A
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

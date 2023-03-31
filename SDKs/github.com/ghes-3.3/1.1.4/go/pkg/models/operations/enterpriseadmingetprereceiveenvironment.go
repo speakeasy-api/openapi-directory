@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminGetPreReceiveEnvironmentPathParams struct {
+type EnterpriseAdminGetPreReceiveEnvironmentRequest struct {
 	// The unique identifier of the pre-receive environment.
 	PreReceiveEnvironmentID int64 `pathParam:"style=simple,explode=false,name=pre_receive_environment_id"`
-}
-
-type EnterpriseAdminGetPreReceiveEnvironmentRequest struct {
-	PathParams EnterpriseAdminGetPreReceiveEnvironmentPathParams
 }
 
 type EnterpriseAdminGetPreReceiveEnvironmentResponse struct {

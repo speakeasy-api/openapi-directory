@@ -32,14 +32,14 @@ func newExport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 func (s *export) GetExportCsvRegistrierkassenRegistrierkasseUUIDBelege(ctx context.Context, request operations.GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeRequest) (*operations.GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/csv/registrierkassen/{registrierkasseUuid}/belege", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/csv/registrierkassen/{registrierkasseUuid}/belege", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -69,14 +69,14 @@ func (s *export) GetExportCsvRegistrierkassenRegistrierkasseUUIDBelege(ctx conte
 }
 func (s *export) GetExportDep131RegistrierkassenRegistrierkasseUUIDBelege(ctx context.Context, request operations.GetExportDep131RegistrierkassenRegistrierkasseUUIDBelegeRequest) (*operations.GetExportDep131RegistrierkassenRegistrierkasseUUIDBelegeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/dep131/registrierkassen/{registrierkasseUuid}/belege", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/dep131/registrierkassen/{registrierkasseUuid}/belege", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -106,14 +106,14 @@ func (s *export) GetExportDep131RegistrierkassenRegistrierkasseUUIDBelege(ctx co
 }
 func (s *export) GetExportDep7RegistrierkassenRegistrierkasseUUIDBelege(ctx context.Context, request operations.GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeRequest) (*operations.GetExportDep7RegistrierkassenRegistrierkasseUUIDBelegeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/dep7/registrierkassen/{registrierkasseUuid}/belege", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/dep7/registrierkassen/{registrierkasseUuid}/belege", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,14 +143,14 @@ func (s *export) GetExportDep7RegistrierkassenRegistrierkasseUUIDBelege(ctx cont
 }
 func (s *export) GetExportGobdRegistrierkassenRegistrierkasseUUID(ctx context.Context, request operations.GetExportGobdRegistrierkassenRegistrierkasseUUIDRequest) (*operations.GetExportGobdRegistrierkassenRegistrierkasseUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/gobd/registrierkassen/{registrierkasseUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/gobd/registrierkassen/{registrierkasseUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,7 +180,7 @@ func (s *export) GetExportGobdRegistrierkassenRegistrierkasseUUID(ctx context.Co
 }
 func (s *export) GetExportHTMLBelegeBelegUUID(ctx context.Context, request operations.GetExportHTMLBelegeBelegUUIDRequest) (*operations.GetExportHTMLBelegeBelegUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/html/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/html/belege/{belegUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +213,7 @@ func (s *export) GetExportHTMLBelegeBelegUUID(ctx context.Context, request opera
 }
 func (s *export) GetExportPdfBelegeBelegUUID(ctx context.Context, request operations.GetExportPdfBelegeBelegUUIDRequest) (*operations.GetExportPdfBelegeBelegUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/pdf/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/pdf/belege/{belegUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +246,7 @@ func (s *export) GetExportPdfBelegeBelegUUID(ctx context.Context, request operat
 }
 func (s *export) GetExportQrBelegeBelegUUID(ctx context.Context, request operations.GetExportQrBelegeBelegUUIDRequest) (*operations.GetExportQrBelegeBelegUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/qr/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/qr/belege/{belegUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,14 +279,14 @@ func (s *export) GetExportQrBelegeBelegUUID(ctx context.Context, request operati
 }
 func (s *export) GetExportThermalPrintBelegeBelegUUID(ctx context.Context, request operations.GetExportThermalPrintBelegeBelegUUIDRequest) (*operations.GetExportThermalPrintBelegeBelegUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/thermal-print/belege/{belegUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/thermal-print/belege/{belegUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -316,14 +316,14 @@ func (s *export) GetExportThermalPrintBelegeBelegUUID(ctx context.Context, reque
 }
 func (s *export) GetExportXlsRegistrierkassenRegistrierkasseUUIDBelege(ctx context.Context, request operations.GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeRequest) (*operations.GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/xls/registrierkassen/{registrierkasseUuid}/belege", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/xls/registrierkassen/{registrierkasseUuid}/belege", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

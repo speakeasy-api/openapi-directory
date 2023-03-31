@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOrganizationEarlyAccessFeaturesOptInPathParams struct {
+type DeleteOrganizationEarlyAccessFeaturesOptInRequest struct {
 	OptInID        string `pathParam:"style=simple,explode=false,name=optInId"`
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type DeleteOrganizationEarlyAccessFeaturesOptInRequest struct {
-	PathParams DeleteOrganizationEarlyAccessFeaturesOptInPathParams
 }
 
 type DeleteOrganizationEarlyAccessFeaturesOptInResponse struct {

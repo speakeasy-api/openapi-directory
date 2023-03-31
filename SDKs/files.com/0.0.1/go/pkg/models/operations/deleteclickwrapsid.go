@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteClickwrapsIDPathParams struct {
+type DeleteClickwrapsIDRequest struct {
 	// Clickwrap ID.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteClickwrapsIDRequest struct {
-	PathParams DeleteClickwrapsIDPathParams
 }
 
 type DeleteClickwrapsIDResponse struct {

@@ -12,22 +12,17 @@ var FetchStepContextServerList = []string{
 }
 
 type FetchStepContextSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchStepContextPathParams struct {
+type FetchStepContextRequest struct {
 	// The SID of the Engagement with the Step to fetch.
 	EngagementSid string `pathParam:"style=simple,explode=false,name=EngagementSid"`
 	// The SID of the Flow with the Step to fetch.
 	FlowSid string `pathParam:"style=simple,explode=false,name=FlowSid"`
 	// The SID of the Step to fetch
 	StepSid string `pathParam:"style=simple,explode=false,name=StepSid"`
-}
-
-type FetchStepContextRequest struct {
-	PathParams FetchStepContextPathParams
-	Security   FetchStepContextSecurity
-	ServerURL  *string
 }
 
 type FetchStepContextResponse struct {

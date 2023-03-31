@@ -37,7 +37,7 @@ func newCache(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // An endpoint for broswer retreive html documents that were cached durin the rendering process via a nonce (token)
 func (s *cache) CacheNonceGet(ctx context.Context, request operations.CacheNonceGetRequest) (*operations.CacheNonceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cache/{nonce}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cache/{nonce}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -95,7 +95,7 @@ func (s *cache) CacheNonceGet(ctx context.Context, request operations.CacheNonce
 
 // CachePost - Cache: Store Subdocument
 // An endpoint for Presalytics Renderers to cache html subdocuments for subsequent retrieval by the browser.  Documents Are retrieved via token expire after 1 minute.
-func (s *cache) CachePost(ctx context.Context, request operations.CachePostRequest) (*operations.CachePostResponse, error) {
+func (s *cache) CachePost(ctx context.Context, request shared.CachePostRequest) (*operations.CachePostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cache"
 

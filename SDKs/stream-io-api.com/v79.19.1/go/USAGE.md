@@ -14,28 +14,20 @@ func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
             Option1: &shared.SecurityOption1{
-                Jwt: shared.SchemeJwt{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                StreamAuthType: shared.SchemeStreamAuthType{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
+                Jwt: "YOUR_API_KEY_HERE",
+                APIKey: "YOUR_API_KEY_HERE",
+                StreamAuthType: "YOUR_API_KEY_HERE",
             },
         }),
     )
 
-    req := operations.GetCallToken1Request{
-        Request: shared.GetCallTokenRequest{
-            User: map[string]interface{}{
-                "provident": "distinctio",
-                "quibusdam": "unde",
-                "nulla": "corrupti",
-            },
-            UserID: "illum",
+    req := shared.GetCallTokenRequest{
+        User: map[string]interface{}{
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
         },
+        UserID: "illum",
     }
 
     ctx := context.Background()

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminDeleteScimGroupFromEnterprisePathParams struct {
+type EnterpriseAdminDeleteScimGroupFromEnterpriseRequest struct {
 	// A unique identifier of the SCIM group.
 	ScimGroupID string `pathParam:"style=simple,explode=false,name=scim_group_id"`
-}
-
-type EnterpriseAdminDeleteScimGroupFromEnterpriseRequest struct {
-	PathParams EnterpriseAdminDeleteScimGroupFromEnterprisePathParams
 }
 
 type EnterpriseAdminDeleteScimGroupFromEnterpriseResponse struct {

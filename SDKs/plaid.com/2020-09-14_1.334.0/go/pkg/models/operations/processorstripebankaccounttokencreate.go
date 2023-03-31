@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ProcessorStripeBankAccountTokenCreateRequest struct {
-	Request shared.ProcessorStripeBankAccountTokenCreateRequest `request:"mediaType=application/json"`
-}
 
 type ProcessorStripeBankAccountTokenCreateResponse struct {
 	ContentType string

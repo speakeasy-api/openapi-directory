@@ -8,25 +8,16 @@ import (
 )
 
 type GetStorySecurity struct {
-	APIKey         *shared.SchemeAPIKey         `security:"scheme,type=apiKey,subtype=query"`
-	Oauth2Code     *shared.SchemeOauth2Code     `security:"scheme,type=oauth2"`
-	Oauth2Implicit *shared.SchemeOauth2Implicit `security:"scheme,type=oauth2"`
-}
-
-type GetStoryPathParams struct {
-	// The ID of the story to retrieve.
-	StoryID string `pathParam:"style=simple,explode=false,name=story_id"`
-}
-
-type GetStoryQueryParams struct {
-	// Client device pixel ratio used to determine thumbnail size (default 1.0).
-	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
+	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetStoryRequest struct {
-	PathParams  GetStoryPathParams
-	QueryParams GetStoryQueryParams
-	Security    GetStorySecurity
+	// Client device pixel ratio used to determine thumbnail size (default 1.0).
+	DevicePixelRatio *float64 `queryParam:"style=form,explode=true,name=device_pixel_ratio"`
+	// The ID of the story to retrieve.
+	StoryID string `pathParam:"style=simple,explode=false,name=story_id"`
 }
 
 type GetStoryResponse struct {

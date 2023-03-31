@@ -8,13 +8,13 @@ import (
 )
 
 type JobsProjectsTenantsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type JobsProjectsTenantsListSecurity struct {
@@ -22,12 +22,7 @@ type JobsProjectsTenantsListSecurity struct {
 	Option2 *JobsProjectsTenantsListSecurityOption2 `security:"option"`
 }
 
-type JobsProjectsTenantsListPathParams struct {
-	// Required. Resource name of the project under which the tenant is created. The format is "projects/{project_id}", for example, "projects/foo".
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type JobsProjectsTenantsListQueryParams struct {
+type JobsProjectsTenantsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -46,6 +41,8 @@ type JobsProjectsTenantsListQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The starting indicator from which to return results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// Required. Resource name of the project under which the tenant is created. The format is "projects/{project_id}", for example, "projects/foo".
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -54,12 +51,6 @@ type JobsProjectsTenantsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type JobsProjectsTenantsListRequest struct {
-	PathParams  JobsProjectsTenantsListPathParams
-	QueryParams JobsProjectsTenantsListQueryParams
-	Security    JobsProjectsTenantsListSecurity
 }
 
 type JobsProjectsTenantsListResponse struct {

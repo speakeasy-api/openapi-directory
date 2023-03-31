@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type ActionsDownloadArtifactPathParams struct {
+type ActionsDownloadArtifactRequest struct {
 	ArchiveFormat string `pathParam:"style=simple,explode=false,name=archive_format"`
 	// artifact_id parameter
 	ArtifactID int64  `pathParam:"style=simple,explode=false,name=artifact_id"`
 	Owner      string `pathParam:"style=simple,explode=false,name=owner"`
 	Repo       string `pathParam:"style=simple,explode=false,name=repo"`
-}
-
-type ActionsDownloadArtifactRequest struct {
-	PathParams ActionsDownloadArtifactPathParams
 }
 
 type ActionsDownloadArtifactResponse struct {

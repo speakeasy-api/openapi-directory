@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TeamsCheckPermissionsForProjectLegacyPathParams struct {
+type TeamsCheckPermissionsForProjectLegacyRequest struct {
 	// The unique identifier of the project.
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=project_id"`
 	// The unique identifier of the team.
 	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
-type TeamsCheckPermissionsForProjectLegacyRequest struct {
-	PathParams TeamsCheckPermissionsForProjectLegacyPathParams
 }
 
 type TeamsCheckPermissionsForProjectLegacyResponse struct {

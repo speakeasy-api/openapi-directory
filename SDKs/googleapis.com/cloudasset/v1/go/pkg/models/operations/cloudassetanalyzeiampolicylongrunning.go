@@ -8,18 +8,14 @@ import (
 )
 
 type CloudassetAnalyzeIamPolicyLongrunningSecurity struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CloudassetAnalyzeIamPolicyLongrunningPathParams struct {
-	// Required. The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
-	Scope string `pathParam:"style=simple,explode=false,name=scope"`
-}
-
-type CloudassetAnalyzeIamPolicyLongrunningQueryParams struct {
+type CloudassetAnalyzeIamPolicyLongrunningRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv                        *shared.XgafvEnum                          `queryParam:"style=form,explode=true,name=$.xgafv"`
+	AnalyzeIamPolicyLongrunningRequest *shared.AnalyzeIamPolicyLongrunningRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -36,17 +32,12 @@ type CloudassetAnalyzeIamPolicyLongrunningQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Required. The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+	Scope string `pathParam:"style=simple,explode=false,name=scope"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudassetAnalyzeIamPolicyLongrunningRequest struct {
-	PathParams  CloudassetAnalyzeIamPolicyLongrunningPathParams
-	QueryParams CloudassetAnalyzeIamPolicyLongrunningQueryParams
-	Request     *shared.AnalyzeIamPolicyLongrunningRequest `request:"mediaType=application/json"`
-	Security    CloudassetAnalyzeIamPolicyLongrunningSecurity
 }
 
 type CloudassetAnalyzeIamPolicyLongrunningResponse struct {

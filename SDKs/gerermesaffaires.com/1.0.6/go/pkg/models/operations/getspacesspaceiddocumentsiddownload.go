@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetSpacesSpaceIDDocumentsIDDownloadPathParams struct {
+type GetSpacesSpaceIDDocumentsIDDownloadRequest struct {
 	// Id of the document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Id of the space
 	SpaceID string `pathParam:"style=simple,explode=false,name=spaceId"`
-}
-
-type GetSpacesSpaceIDDocumentsIDDownloadRequest struct {
-	PathParams GetSpacesSpaceIDDocumentsIDDownloadPathParams
 }
 
 type GetSpacesSpaceIDDocumentsIDDownload200ApplicationJSONFile struct {

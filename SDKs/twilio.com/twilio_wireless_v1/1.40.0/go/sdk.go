@@ -93,10 +93,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateCommand - Send a Command to a Sim.
-func (s *SDK) CreateCommand(ctx context.Context, request operations.CreateCommandRequest) (*operations.CreateCommandResponse, error) {
+func (s *SDK) CreateCommand(ctx context.Context, request operations.CreateCommandCreateCommandRequest, security operations.CreateCommandSecurity, opts ...operations.Option) (*operations.CreateCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Commands"
@@ -113,7 +123,7 @@ func (s *SDK) CreateCommand(ctx context.Context, request operations.CreateComman
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,10 +156,20 @@ func (s *SDK) CreateCommand(ctx context.Context, request operations.CreateComman
 
 	return res, nil
 }
-func (s *SDK) CreateRatePlan(ctx context.Context, request operations.CreateRatePlanRequest) (*operations.CreateRatePlanResponse, error) {
+func (s *SDK) CreateRatePlan(ctx context.Context, request operations.CreateRatePlanCreateRatePlanRequest, security operations.CreateRatePlanSecurity, opts ...operations.Option) (*operations.CreateRatePlanResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.CreateRatePlanServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/RatePlans"
@@ -166,7 +186,7 @@ func (s *SDK) CreateRatePlan(ctx context.Context, request operations.CreateRateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -201,20 +221,30 @@ func (s *SDK) CreateRatePlan(ctx context.Context, request operations.CreateRateP
 }
 
 // DeleteCommand - Delete a Command instance from your account.
-func (s *SDK) DeleteCommand(ctx context.Context, request operations.DeleteCommandRequest) (*operations.DeleteCommandResponse, error) {
-	baseURL := operations.DeleteCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteCommand(ctx context.Context, request operations.DeleteCommandRequest, security operations.DeleteCommandSecurity, opts ...operations.Option) (*operations.DeleteCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Commands/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteCommandServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Commands/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,20 +268,30 @@ func (s *SDK) DeleteCommand(ctx context.Context, request operations.DeleteComman
 
 	return res, nil
 }
-func (s *SDK) DeleteRatePlan(ctx context.Context, request operations.DeleteRatePlanRequest) (*operations.DeleteRatePlanResponse, error) {
-	baseURL := operations.DeleteRatePlanServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteRatePlan(ctx context.Context, request operations.DeleteRatePlanRequest, security operations.DeleteRatePlanSecurity, opts ...operations.Option) (*operations.DeleteRatePlanResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/RatePlans/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteRatePlanServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/RatePlans/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,20 +317,30 @@ func (s *SDK) DeleteRatePlan(ctx context.Context, request operations.DeleteRateP
 }
 
 // DeleteSim - Delete a Sim resource on your Account.
-func (s *SDK) DeleteSim(ctx context.Context, request operations.DeleteSimRequest) (*operations.DeleteSimResponse, error) {
-	baseURL := operations.DeleteSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) DeleteSim(ctx context.Context, request operations.DeleteSimRequest, security operations.DeleteSimSecurity, opts ...operations.Option) (*operations.DeleteSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.DeleteSimServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -316,20 +366,30 @@ func (s *SDK) DeleteSim(ctx context.Context, request operations.DeleteSimRequest
 }
 
 // FetchCommand - Fetch a Command instance from your account.
-func (s *SDK) FetchCommand(ctx context.Context, request operations.FetchCommandRequest) (*operations.FetchCommandResponse, error) {
-	baseURL := operations.FetchCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchCommand(ctx context.Context, request operations.FetchCommandRequest, security operations.FetchCommandSecurity, opts ...operations.Option) (*operations.FetchCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Commands/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchCommandServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Commands/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,20 +422,30 @@ func (s *SDK) FetchCommand(ctx context.Context, request operations.FetchCommandR
 
 	return res, nil
 }
-func (s *SDK) FetchRatePlan(ctx context.Context, request operations.FetchRatePlanRequest) (*operations.FetchRatePlanResponse, error) {
-	baseURL := operations.FetchRatePlanServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchRatePlan(ctx context.Context, request operations.FetchRatePlanRequest, security operations.FetchRatePlanSecurity, opts ...operations.Option) (*operations.FetchRatePlanResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/RatePlans/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchRatePlanServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/RatePlans/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,20 +480,30 @@ func (s *SDK) FetchRatePlan(ctx context.Context, request operations.FetchRatePla
 }
 
 // FetchSim - Fetch a Sim resource on your Account.
-func (s *SDK) FetchSim(ctx context.Context, request operations.FetchSimRequest) (*operations.FetchSimResponse, error) {
-	baseURL := operations.FetchSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) FetchSim(ctx context.Context, request operations.FetchSimRequest, security operations.FetchSimSecurity, opts ...operations.Option) (*operations.FetchSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.FetchSimServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -456,10 +536,20 @@ func (s *SDK) FetchSim(ctx context.Context, request operations.FetchSimRequest) 
 
 	return res, nil
 }
-func (s *SDK) ListAccountUsageRecord(ctx context.Context, request operations.ListAccountUsageRecordRequest) (*operations.ListAccountUsageRecordResponse, error) {
+func (s *SDK) ListAccountUsageRecord(ctx context.Context, request operations.ListAccountUsageRecordRequest, security operations.ListAccountUsageRecordSecurity, opts ...operations.Option) (*operations.ListAccountUsageRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListAccountUsageRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/UsageRecords"
@@ -469,11 +559,11 @@ func (s *SDK) ListAccountUsageRecord(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -508,10 +598,20 @@ func (s *SDK) ListAccountUsageRecord(ctx context.Context, request operations.Lis
 }
 
 // ListCommand - Retrieve a list of Commands from your account.
-func (s *SDK) ListCommand(ctx context.Context, request operations.ListCommandRequest) (*operations.ListCommandResponse, error) {
+func (s *SDK) ListCommand(ctx context.Context, request operations.ListCommandRequest, security operations.ListCommandSecurity, opts ...operations.Option) (*operations.ListCommandResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListCommandServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Commands"
@@ -521,11 +621,11 @@ func (s *SDK) ListCommand(ctx context.Context, request operations.ListCommandReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -558,24 +658,34 @@ func (s *SDK) ListCommand(ctx context.Context, request operations.ListCommandReq
 
 	return res, nil
 }
-func (s *SDK) ListDataSession(ctx context.Context, request operations.ListDataSessionRequest) (*operations.ListDataSessionResponse, error) {
-	baseURL := operations.ListDataSessionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListDataSession(ctx context.Context, request operations.ListDataSessionRequest, security operations.ListDataSessionSecurity, opts ...operations.Option) (*operations.ListDataSessionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/DataSessions", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListDataSessionServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/DataSessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,10 +718,20 @@ func (s *SDK) ListDataSession(ctx context.Context, request operations.ListDataSe
 
 	return res, nil
 }
-func (s *SDK) ListRatePlan(ctx context.Context, request operations.ListRatePlanRequest) (*operations.ListRatePlanResponse, error) {
+func (s *SDK) ListRatePlan(ctx context.Context, request operations.ListRatePlanRequest, security operations.ListRatePlanSecurity, opts ...operations.Option) (*operations.ListRatePlanResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListRatePlanServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/RatePlans"
@@ -621,11 +741,11 @@ func (s *SDK) ListRatePlan(ctx context.Context, request operations.ListRatePlanR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -660,10 +780,20 @@ func (s *SDK) ListRatePlan(ctx context.Context, request operations.ListRatePlanR
 }
 
 // ListSim - Retrieve a list of Sim resources on your Account.
-func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest) (*operations.ListSimResponse, error) {
+func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest, security operations.ListSimSecurity, opts ...operations.Option) (*operations.ListSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ListSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/Sims"
@@ -673,11 +803,11 @@ func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -710,24 +840,34 @@ func (s *SDK) ListSim(ctx context.Context, request operations.ListSimRequest) (*
 
 	return res, nil
 }
-func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageRecordRequest) (*operations.ListUsageRecordResponse, error) {
-	baseURL := operations.ListUsageRecordServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageRecordRequest, security operations.ListUsageRecordSecurity, opts ...operations.Option) (*operations.ListUsageRecordResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/UsageRecords", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.ListUsageRecordServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{SimSid}/UsageRecords", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -760,15 +900,25 @@ func (s *SDK) ListUsageRecord(ctx context.Context, request operations.ListUsageR
 
 	return res, nil
 }
-func (s *SDK) UpdateRatePlan(ctx context.Context, request operations.UpdateRatePlanRequest) (*operations.UpdateRatePlanResponse, error) {
-	baseURL := operations.UpdateRatePlanServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateRatePlan(ctx context.Context, request operations.UpdateRatePlanRequest, security operations.UpdateRatePlanSecurity, opts ...operations.Option) (*operations.UpdateRatePlanResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/RatePlans/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateRatePlanServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/RatePlans/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -780,7 +930,7 @@ func (s *SDK) UpdateRatePlan(ctx context.Context, request operations.UpdateRateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -815,15 +965,25 @@ func (s *SDK) UpdateRatePlan(ctx context.Context, request operations.UpdateRateP
 }
 
 // UpdateSim - Updates the given properties of a Sim resource on your Account.
-func (s *SDK) UpdateSim(ctx context.Context, request operations.UpdateSimRequest) (*operations.UpdateSimResponse, error) {
-	baseURL := operations.UpdateSimServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *SDK) UpdateSim(ctx context.Context, request operations.UpdateSimRequest, security operations.UpdateSimSecurity, opts ...operations.Option) (*operations.UpdateSimResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UpdateSimServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	url := utils.GenerateURL(ctx, baseURL, "/v1/Sims/{Sid}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -835,7 +995,7 @@ func (s *SDK) UpdateSim(ctx context.Context, request operations.UpdateSimRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

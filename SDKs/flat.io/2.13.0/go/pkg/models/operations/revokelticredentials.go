@@ -8,18 +8,13 @@ import (
 )
 
 type RevokeLtiCredentialsSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type RevokeLtiCredentialsPathParams struct {
-	// Credentials unique identifier
-	//
-	Credentials string `pathParam:"style=simple,explode=false,name=credentials"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type RevokeLtiCredentialsRequest struct {
-	PathParams RevokeLtiCredentialsPathParams
-	Security   RevokeLtiCredentialsSecurity
+	// Credentials unique identifier
+	//
+	Credentials string `pathParam:"style=simple,explode=false,name=credentials"`
 }
 
 type RevokeLtiCredentialsResponse struct {

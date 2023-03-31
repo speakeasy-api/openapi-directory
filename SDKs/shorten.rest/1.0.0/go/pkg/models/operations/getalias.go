@@ -8,19 +8,14 @@ import (
 )
 
 type GetAliasSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
 }
 
-type GetAliasQueryParams struct {
+type GetAliasRequest struct {
 	// alias value (without `/` at the beginning)
 	AliasName string `queryParam:"style=form,explode=true,name=aliasName"`
 	// domain which alias belongs to (string without `http/https` or `/`)
 	DomainName *string `queryParam:"style=form,explode=true,name=domainName"`
-}
-
-type GetAliasRequest struct {
-	QueryParams GetAliasQueryParams
-	Security    GetAliasSecurity
 }
 
 type GetAliasResponse struct {

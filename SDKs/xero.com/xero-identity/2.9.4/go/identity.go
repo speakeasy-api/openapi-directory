@@ -34,16 +34,16 @@ func newIdentity(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // DeleteConnection - Deletes a connection for this user (i.e. disconnect a tenant)
 // Override the base server url that include version
-func (s *identity) DeleteConnection(ctx context.Context, request operations.DeleteConnectionRequest) (*operations.DeleteConnectionResponse, error) {
+func (s *identity) DeleteConnection(ctx context.Context, request operations.DeleteConnectionRequest, security operations.DeleteConnectionSecurity) (*operations.DeleteConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Connections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Connections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *identity) DeleteConnection(ctx context.Context, request operations.Dele
 
 // GetConnections - Retrieves the connections for this user
 // Override the base server url that include version
-func (s *identity) GetConnections(ctx context.Context, request operations.GetConnectionsRequest) (*operations.GetConnectionsResponse, error) {
+func (s *identity) GetConnections(ctx context.Context, request operations.GetConnectionsRequest, security operations.GetConnectionsSecurity) (*operations.GetConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Connections"
 
@@ -81,11 +81,11 @@ func (s *identity) GetConnections(ctx context.Context, request operations.GetCon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

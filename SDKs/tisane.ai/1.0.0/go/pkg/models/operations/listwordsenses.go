@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type ListWordSensesQueryParams struct {
+type ListWordSensesRequest struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
 	// (Required) a standard culture code (ISO-639 language code with an optional country extension)
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// (Required) the word to inspect
 	Word *string `queryParam:"style=form,explode=true,name=word"`
-}
-
-type ListWordSensesHeaders struct {
-	// {{apiKeyDescription}}
-	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
-}
-
-type ListWordSensesRequest struct {
-	QueryParams ListWordSensesQueryParams
-	Headers     ListWordSensesHeaders
 }
 
 type ListWordSenses200ApplicationJSONFamilies struct {

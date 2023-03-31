@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOfferingsOfferingIDUsersPathParams struct {
+type PostOfferingsOfferingIDUsersRequest struct {
+	RequestBody []shared.OfferingUser `request:"mediaType=application/json"`
 	// offering's id
 	OfferingID string `pathParam:"style=simple,explode=false,name=offeringId"`
-}
-
-type PostOfferingsOfferingIDUsersRequest struct {
-	PathParams PostOfferingsOfferingIDUsersPathParams
-	Request    []shared.OfferingUser `request:"mediaType=application/json"`
 }
 
 type PostOfferingsOfferingIDUsers207ApplicationJSONType string

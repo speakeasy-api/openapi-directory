@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type FolderMenuPostJSONRequest struct {
-	Request shared.FolderMenuConfiguration `request:"mediaType=application/json"`
-}
 
 type FolderMenuPostJSONResponse struct {
 	ContentType string

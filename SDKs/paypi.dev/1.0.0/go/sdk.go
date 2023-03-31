@@ -118,7 +118,7 @@ func New(opts ...SDKOption) *SDK {
 // PostCheckCode - Check verification code
 // Checks the user's emailed code is valid.
 // If this returns success=true, you can safely assume the user you are interacting with is the owner of that email address.
-func (s *SDK) PostCheckCode(ctx context.Context, request operations.PostCheckCodeRequest) (*operations.PostCheckCodeResponse, error) {
+func (s *SDK) PostCheckCode(ctx context.Context, request operations.PostCheckCodeRequestBody) (*operations.PostCheckCodeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/checkCode"
 
@@ -193,7 +193,7 @@ func (s *SDK) PostCheckCode(ctx context.Context, request operations.PostCheckCod
 
 // PostSendCode - Send verification code
 // This request send's a code to the given email address, which should be returned to check it is correct.
-func (s *SDK) PostSendCode(ctx context.Context, request operations.PostSendCodeRequest) (*operations.PostSendCodeResponse, error) {
+func (s *SDK) PostSendCode(ctx context.Context, request operations.PostSendCodeRequestBody) (*operations.PostSendCodeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sendCode"
 

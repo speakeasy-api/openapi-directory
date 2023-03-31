@@ -105,7 +105,7 @@ func New(opts ...SDKOption) *SDK {
 // DfsSlatesByDate - Dfs Slates By Date
 func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesByDateRequest) (*operations.DfsSlatesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 // This endpoint provides all currently injured soccer players by competition, along with injury details.
 func (s *SDK) InjuredPlayersByCompetition(ctx context.Context, request operations.InjuredPlayersByCompetitionRequest) (*operations.InjuredPlayersByCompetitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers/{competition}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers/{competition}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +194,7 @@ func (s *SDK) InjuredPlayersByCompetition(ctx context.Context, request operation
 // ProjectedPlayerGameStatsByCompetitionWDfsSalaries - Projected Player Game Stats by Competition (w/ DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByCompetitionWDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByCompetitionWDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByCompetition/{competition}/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByCompetition/{competition}/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +238,7 @@ func (s *SDK) ProjectedPlayerGameStatsByCompetitionWDfsSalaries(ctx context.Cont
 // ProjectedPlayerGameStatsByDateWDfsSalaries - Projected Player Game Stats by Date (w/ DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByDateWDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByDateWDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByDateWDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByDate/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByDate/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +282,7 @@ func (s *SDK) ProjectedPlayerGameStatsByDateWDfsSalaries(ctx context.Context, re
 // ProjectedPlayerGameStatsByPlayerWDfsSalaries - Projected Player Game Stats by Player (w/ DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByPlayerWDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByPlayerWDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,7 +326,7 @@ func (s *SDK) ProjectedPlayerGameStatsByPlayerWDfsSalaries(ctx context.Context, 
 // UpcomingDfsSlatesByCompetition - Upcoming Dfs Slates By Competition
 func (s *SDK) UpcomingDfsSlatesByCompetition(ctx context.Context, request operations.UpcomingDfsSlatesByCompetitionRequest) (*operations.UpcomingDfsSlatesByCompetitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingDfsSlatesByCompetition/{competitionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingDfsSlatesByCompetition/{competitionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

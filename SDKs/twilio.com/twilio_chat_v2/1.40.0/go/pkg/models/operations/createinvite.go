@@ -12,14 +12,8 @@ var CreateInviteServerList = []string{
 }
 
 type CreateInviteSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateInvitePathParams struct {
-	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Invite resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
-	ChannelSid string `pathParam:"style=simple,explode=false,name=ChannelSid"`
-	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the Invite resource under.
-	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateInviteCreateInviteRequest struct {
@@ -30,10 +24,11 @@ type CreateInviteCreateInviteRequest struct {
 }
 
 type CreateInviteRequest struct {
-	PathParams CreateInvitePathParams
-	Request    *CreateInviteCreateInviteRequest `request:"mediaType=application/x-www-form-urlencoded"`
-	Security   CreateInviteSecurity
-	ServerURL  *string
+	// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Invite resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+	ChannelSid  string                           `pathParam:"style=simple,explode=false,name=ChannelSid"`
+	RequestBody *CreateInviteCreateInviteRequest `request:"mediaType=application/x-www-form-urlencoded"`
+	// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the Invite resource under.
+	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 }
 
 type CreateInviteResponse struct {

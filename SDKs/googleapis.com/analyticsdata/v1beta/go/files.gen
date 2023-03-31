@@ -33,6 +33,7 @@ pkg/models/shared/responsemetadata.go
 pkg/models/shared/schemarestrictionresponse.go
 pkg/models/shared/activemetricrestriction.go
 pkg/models/shared/dimensionheader.go
+pkg/models/shared/altenum.go
 pkg/models/shared/batchrunpivotreportsrequest.go
 pkg/models/shared/runpivotreportrequest.go
 pkg/models/shared/pivot.go
@@ -59,9 +60,7 @@ pkg/models/shared/cohortspec.go
 pkg/models/shared/cohortsrange.go
 pkg/models/shared/cohort.go
 pkg/models/shared/cohortreportsettings.go
-pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
-pkg/models/shared/security.go
 pkg/models/shared/batchrunreportsresponse.go
 pkg/models/shared/runreportresponse.go
 pkg/models/shared/batchrunreportsrequest.go

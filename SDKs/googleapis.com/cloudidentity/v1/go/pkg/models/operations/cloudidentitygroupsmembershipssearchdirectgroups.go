@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CloudidentityGroupsMembershipsSearchDirectGroupsPathParams struct {
-	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search transitive memberships in. Format: groups/{group_id}, where group_id is always '-' as this API will search across all groups for a given member.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type CloudidentityGroupsMembershipsSearchDirectGroupsQueryParams struct {
+type CloudidentityGroupsMembershipsSearchDirectGroupsRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -33,6 +28,8 @@ type CloudidentityGroupsMembershipsSearchDirectGroupsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The next_page_token value returned from a previous list request, if any
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
+	// [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search transitive memberships in. Format: groups/{group_id}, where group_id is always '-' as this API will search across all groups for a given member.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Required. A CEL expression that MUST include member specification AND label(s). Users can search on label attributes of groups. CONTAINS match ('in') is supported on labels. Identity-mapped groups are uniquely identified by both a `member_key_id` and a `member_key_namespace`, which requires an additional query input: `member_key_namespace`. Example query: `member_key_id == 'member_key_id_value' && 'label_value' in labels`
@@ -43,11 +40,6 @@ type CloudidentityGroupsMembershipsSearchDirectGroupsQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type CloudidentityGroupsMembershipsSearchDirectGroupsRequest struct {
-	PathParams  CloudidentityGroupsMembershipsSearchDirectGroupsPathParams
-	QueryParams CloudidentityGroupsMembershipsSearchDirectGroupsQueryParams
 }
 
 type CloudidentityGroupsMembershipsSearchDirectGroupsResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetKeyByIDSecurity struct {
-	CookieSid shared.SchemeCookieSid `security:"scheme,type=apiKey,subtype=cookie"`
-}
-
-type GetKeyByIDPathParams struct {
-	// Unique identifier
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	CookieSid string `security:"scheme,type=apiKey,subtype=cookie,name=brain.sid"`
 }
 
 type GetKeyByIDRequest struct {
-	PathParams GetKeyByIDPathParams
-	Security   GetKeyByIDSecurity
+	// Unique identifier
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetKeyByIDResponse struct {

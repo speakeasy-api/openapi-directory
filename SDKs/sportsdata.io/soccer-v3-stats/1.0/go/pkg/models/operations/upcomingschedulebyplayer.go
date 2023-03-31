@@ -33,16 +33,12 @@ func (e *UpcomingScheduleByPlayerFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpcomingScheduleByPlayerPathParams struct {
+type UpcomingScheduleByPlayerRequest struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format UpcomingScheduleByPlayerFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// Unique FantasyData Player ID.
 	// Example:<code>90026231</code>.
 	Playerid string `pathParam:"style=simple,explode=false,name=playerid"`
-}
-
-type UpcomingScheduleByPlayerRequest struct {
-	PathParams UpcomingScheduleByPlayerPathParams
 }
 
 type UpcomingScheduleByPlayerResponse struct {

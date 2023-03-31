@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GETProteinInteractionDiffUsingGETPathParams struct {
+type GETProteinInteractionDiffUsingGETRequest struct {
 	// dateFromYYYYMMDD
 	DateFromYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateFromYYYYMMDD"`
 	// dateToYYYYMMDD
 	DateToYYYYMMDD string `pathParam:"style=simple,explode=false,name=dateToYYYYMMDD"`
 	// speciesTypeKey
 	SpeciesTypeKey int `pathParam:"style=simple,explode=false,name=speciesTypeKey"`
-}
-
-type GETProteinInteractionDiffUsingGETRequest struct {
-	PathParams GETProteinInteractionDiffUsingGETPathParams
 }
 
 type GETProteinInteractionDiffUsingGETResponse struct {

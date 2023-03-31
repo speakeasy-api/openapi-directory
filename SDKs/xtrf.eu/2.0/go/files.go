@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -39,7 +40,7 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //	Each file must be uploaded separately.
 //	Keep in mind that file token has limited validity (ie. 10 minutes).
 //	Therefore files must be uploaded just before issuing API call which reference them.
-func (s *files) UploadFile(ctx context.Context, request operations.UploadFileRequest) (*operations.UploadFileResponse, error) {
+func (s *files) UploadFile(ctx context.Context, request shared.FileToUploadDto) (*operations.UploadFileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files"
 

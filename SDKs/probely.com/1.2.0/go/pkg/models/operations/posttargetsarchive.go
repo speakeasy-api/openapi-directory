@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type PostTargetsArchiveRequest struct {
-	Request []string `request:"mediaType=application/json"`
-}
-
 // PostTargetsArchive403ApplicationJSON - Not allowed to perform operation
 type PostTargetsArchive403ApplicationJSON struct {
 	// Error message.

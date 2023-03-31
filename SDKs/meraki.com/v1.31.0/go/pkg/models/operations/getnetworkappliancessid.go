@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNetworkApplianceSsidPathParams struct {
+type GetNetworkApplianceSsidRequest struct {
 	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
 	Number    string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type GetNetworkApplianceSsidRequest struct {
-	PathParams GetNetworkApplianceSsidPathParams
 }
 
 type GetNetworkApplianceSsid200ApplicationJSONRadiusServers struct {

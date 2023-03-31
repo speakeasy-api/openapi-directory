@@ -30,13 +30,6 @@ func (e *GetSearchVersionNumberAdditionalDataExtExtEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetSearchVersionNumberAdditionalDataExtPathParams struct {
-	// Expected response format.
-	Ext GetSearchVersionNumberAdditionalDataExtExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
 // GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum - Defines the precision of the geometries.
 type GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum string
 
@@ -124,16 +117,15 @@ func (e *GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum) UnmarshalJSO
 	}
 }
 
-type GetSearchVersionNumberAdditionalDataExtQueryParams struct {
+type GetSearchVersionNumberAdditionalDataExtRequest struct {
+	// Expected response format.
+	Ext GetSearchVersionNumberAdditionalDataExtExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// Comma separated list of geometry UUIDs, previously retrieved from an Search API request.
 	Geometries string `queryParam:"style=form,explode=true,name=geometries"`
 	// Defines the precision of the geometries.
 	GeometriesZoom *GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum `queryParam:"style=form,explode=true,name=geometriesZoom"`
-}
-
-type GetSearchVersionNumberAdditionalDataExtRequest struct {
-	PathParams  GetSearchVersionNumberAdditionalDataExtPathParams
-	QueryParams GetSearchVersionNumberAdditionalDataExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberAdditionalDataExtResponse struct {

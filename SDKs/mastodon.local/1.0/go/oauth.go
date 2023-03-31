@@ -42,7 +42,7 @@ func (s *oauth) GetOauthAuthorize(ctx context.Context, request operations.GetOau
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,7 +82,7 @@ func (s *oauth) GetOauthAuthorize(ctx context.Context, request operations.GetOau
 }
 
 // PostOauthRevoke - Revoke an access token to make it no longer valid for use.
-func (s *oauth) PostOauthRevoke(ctx context.Context, request operations.PostOauthRevokeRequest) (*operations.PostOauthRevokeResponse, error) {
+func (s *oauth) PostOauthRevoke(ctx context.Context, request []byte) (*operations.PostOauthRevokeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/revoke"
 
@@ -134,7 +134,7 @@ func (s *oauth) PostOauthRevoke(ctx context.Context, request operations.PostOaut
 }
 
 // PostOauthToken - Returns an access token, to be used during API calls that are not public.
-func (s *oauth) PostOauthToken(ctx context.Context, request operations.PostOauthTokenRequest) (*operations.PostOauthTokenResponse, error) {
+func (s *oauth) PostOauthToken(ctx context.Context, request []byte) (*operations.PostOauthTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/token"
 

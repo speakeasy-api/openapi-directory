@@ -38,17 +38,13 @@ func (e *GetSpacesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSpacesQueryParams struct {
+type GetSpacesRequest struct {
 	// Name of the space
 	Name *string `queryParam:"style=form,explode=true,name=Name"`
 	// registration number of the space
 	RegistrationNumber *string `queryParam:"style=form,explode=true,name=RegistrationNumber"`
 	// Type of the space
 	Type *GetSpacesTypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type GetSpacesRequest struct {
-	QueryParams GetSpacesQueryParams
 }
 
 type GetSpaces200ApplicationJSONTypeEnum string

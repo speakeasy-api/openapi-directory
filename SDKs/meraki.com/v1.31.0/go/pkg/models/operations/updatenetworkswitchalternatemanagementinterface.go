@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkSwitchAlternateManagementInterfacePathParams struct {
-	NetworkID string `pathParam:"style=simple,explode=false,name=networkId"`
-}
-
 type UpdateNetworkSwitchAlternateManagementInterfaceRequestBodyProtocolsEnum string
 
 const (
@@ -61,8 +57,8 @@ type UpdateNetworkSwitchAlternateManagementInterfaceRequestBody struct {
 }
 
 type UpdateNetworkSwitchAlternateManagementInterfaceRequest struct {
-	PathParams UpdateNetworkSwitchAlternateManagementInterfacePathParams
-	Request    *UpdateNetworkSwitchAlternateManagementInterfaceRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateNetworkSwitchAlternateManagementInterfaceRequestBody `request:"mediaType=application/json"`
+	NetworkID   string                                                      `pathParam:"style=simple,explode=false,name=networkId"`
 }
 
 type UpdateNetworkSwitchAlternateManagementInterfaceResponse struct {

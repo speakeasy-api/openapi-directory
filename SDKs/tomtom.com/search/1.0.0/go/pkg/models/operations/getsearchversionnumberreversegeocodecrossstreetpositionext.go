@@ -7,31 +7,23 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams struct {
+type GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest struct {
 	// Expected response format.
 	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// This is specified as a comma separated string composed of lat., lon.
-	Position string `pathParam:"style=simple,explode=false,name=position"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams struct {
 	// The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
 	Heading *float32 `queryParam:"style=form,explode=true,name=heading"`
 	// Language in which search results should be returned. Should be one of <a href="/search-api/search-api-documentation/supported-languages">supported IETF language tags</a>, case insensitive.
 	Language *string `queryParam:"style=form,explode=true,name=language"`
 	// Maximum number of cross-streets to return.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// This is specified as a comma separated string composed of lat., lon.
+	Position string `pathParam:"style=simple,explode=false,name=position"`
 	// The maximum distance in meters from the specified position for the reverse geocoder to consider.
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
 	SpatialKeys *bool `queryParam:"style=form,explode=true,name=spatialKeys"`
-}
-
-type GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest struct {
-	PathParams  GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams
-	QueryParams GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 }
 
 type GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse struct {

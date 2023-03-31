@@ -8,17 +8,12 @@ import (
 )
 
 type GetReportMetadataForReportTypeSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetReportMetadataForReportTypePathParams struct {
-	// The name of the report type whose metadata you want to retrieve.<br /><br /><span class="tablenote"><b>Tip:</b> For details about available report types and their descriptions, refer to the <a href="/api-docs/sell/marketing/types/plr:ReportTypeEnum">ReportTypeEnum</a>.</span>
-	ReportType string `pathParam:"style=simple,explode=false,name=report_type"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetReportMetadataForReportTypeRequest struct {
-	PathParams GetReportMetadataForReportTypePathParams
-	Security   GetReportMetadataForReportTypeSecurity
+	// The name of the report type whose metadata you want to retrieve.<br /><br /><span class="tablenote"><b>Tip:</b> For details about available report types and their descriptions, refer to the <a href="/api-docs/sell/marketing/types/plr:ReportTypeEnum">ReportTypeEnum</a>.</span>
+	ReportType string `pathParam:"style=simple,explode=false,name=report_type"`
 }
 
 type GetReportMetadataForReportTypeResponse struct {

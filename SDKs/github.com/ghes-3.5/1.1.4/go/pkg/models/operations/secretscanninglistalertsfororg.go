@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SecretScanningListAlertsForOrgPathParams struct {
+type SecretScanningListAlertsForOrgRequest struct {
 	// The organization name. The name is not case sensitive.
 	Org string `pathParam:"style=simple,explode=false,name=org"`
-}
-
-type SecretScanningListAlertsForOrgQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
@@ -25,11 +22,6 @@ type SecretScanningListAlertsForOrgQueryParams struct {
 	SecretType *string `queryParam:"style=form,explode=true,name=secret_type"`
 	// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
 	State *shared.SecretScanningAlertStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type SecretScanningListAlertsForOrgRequest struct {
-	PathParams  SecretScanningListAlertsForOrgPathParams
-	QueryParams SecretScanningListAlertsForOrgQueryParams
 }
 
 // SecretScanningListAlertsForOrg503ApplicationJSON - Service unavailable

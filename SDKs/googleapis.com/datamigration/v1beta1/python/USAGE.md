@@ -4,109 +4,119 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest(
-    security=operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="animi",
-    ),
-    query_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="qui",
-        alt="media",
-        callback="quis",
-        connection_profile_id="repudiandae",
-        fields="dolorem",
-        key="eum",
-        oauth_token="aut",
-        pretty_print=False,
-        quota_user="velit",
-        request_id="unde",
-        upload_type="esse",
-        upload_protocol="libero",
-    ),
-    request=shared.ConnectionProfileInput(
+    dollar_xgafv="2",
+    connection_profile_input=shared.ConnectionProfileInput(
         cloudsql=shared.CloudSQLConnectionProfileInput(
             settings=shared.CloudSQLSettingsInput(
-                activation_policy="NEVER",
+                activation_policy="ALWAYS",
                 auto_storage_increase=False,
-                data_disk_size_gb="id",
+                data_disk_size_gb="distinctio",
                 data_disk_type="PD_HDD",
                 database_flags={
-                    "molestiae": "est",
-                    "molestiae": "commodi",
-                    "impedit": "ipsa",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
                 },
                 database_version="MYSQL_5_6",
                 ip_config=shared.SQLIPConfig(
                     authorized_networks=[
                         shared.SQLACLEntry(
-                            expire_time="aut",
-                            label="aut",
-                            ttl="consequuntur",
-                            value="asperiores",
+                            expire_time="magnam",
+                            label="debitis",
+                            ttl="ipsa",
+                            value="delectus",
+                        ),
+                        shared.SQLACLEntry(
+                            expire_time="tempora",
+                            label="suscipit",
+                            ttl="molestiae",
+                            value="minus",
                         ),
                     ],
                     enable_ipv4=False,
-                    private_network="in",
-                    require_ssl=True,
+                    private_network="placeat",
+                    require_ssl=False,
                 ),
-                root_password="molestiae",
-                source_id="dolores",
-                storage_auto_resize_limit="ut",
-                tier="eos",
+                root_password="voluptatum",
+                source_id="iusto",
+                storage_auto_resize_limit="excepturi",
+                tier="nisi",
                 user_labels={
-                    "tempora": "excepturi",
-                    "repellendus": "nihil",
+                    "temporibus": "ab",
+                    "quis": "veritatis",
+                    "deserunt": "perferendis",
+                    "ipsam": "repellendus",
                 },
-                zone="quasi",
+                zone="sapiente",
             ),
         ),
-        display_name="et",
+        display_name="quo",
         error=shared.Status(
-            code=5616495351279140944,
+            code=140350,
             details=[
                 {
-                    "aut": "qui",
-                    "laborum": "quod",
-                    "eius": "officia",
+                    "maiores": "molestiae",
+                    "quod": "quod",
+                    "esse": "totam",
+                    "porro": "dolorum",
                 },
                 {
-                    "itaque": "a",
+                    "nam": "officia",
+                },
+                {
+                    "fugit": "deleniti",
+                    "hic": "optio",
+                    "totam": "beatae",
+                },
+                {
+                    "molestiae": "modi",
+                    "qui": "impedit",
                 },
             ],
-            message="minima",
+            message="cum",
         ),
         labels={
-            "est": "sed",
-            "odio": "non",
+            "ipsum": "excepturi",
+            "aspernatur": "perferendis",
         },
         mysql=shared.MySQLConnectionProfileInput(
-            cloud_sql_id="aspernatur",
-            host="quod",
-            password="et",
-            port=8176960718989686902,
+            cloud_sql_id="ad",
+            host="natus",
+            password="sed",
+            port=612096,
             ssl=shared.SslConfigInput(
-                ca_certificate="corporis",
-                client_certificate="rerum",
-                client_key="ut",
+                ca_certificate="dolor",
+                client_certificate="natus",
+                client_key="laboriosam",
             ),
-            username="asperiores",
+            username="Tyra.Turcotte35",
         ),
-        name="animi",
+        name="iste",
         provider="CLOUDSQL",
-        state="DELETING",
+        state="FAILED",
     ),
+    access_token="quidem",
+    alt="json",
+    callback="ipsa",
+    connection_profile_id="reiciendis",
+    fields_="est",
+    key="mollitia",
+    oauth_token="laborum",
+    parent="dolores",
+    pretty_print=False,
+    quota_user="dolorem",
+    request_id="corporis",
+    upload_type="explicabo",
+    upload_protocol="nobis",
 )
     
-res = s.projects.datamigration_projects_locations_connection_profiles_create(req)
+res = s.projects.datamigration_projects_locations_connection_profiles_create(req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

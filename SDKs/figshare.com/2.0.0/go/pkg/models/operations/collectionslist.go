@@ -66,7 +66,9 @@ func (e *CollectionsListOrderDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CollectionsListQueryParams struct {
+type CollectionsListRequest struct {
+	// Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+	XCursor *string `header:"style=simple,explode=false,name=X-Cursor"`
 	// only return collections with this doi
 	Doi *string `queryParam:"style=form,explode=true,name=doi"`
 	// only return collections from this group
@@ -92,16 +94,6 @@ type CollectionsListQueryParams struct {
 	PublishedSince *string `queryParam:"style=form,explode=true,name=published_since"`
 	// only return collections with this resource_doi
 	ResourceDoi *string `queryParam:"style=form,explode=true,name=resource_doi"`
-}
-
-type CollectionsListHeaders struct {
-	// Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
-	XCursor *string `header:"style=simple,explode=false,name=X-Cursor"`
-}
-
-type CollectionsListRequest struct {
-	QueryParams CollectionsListQueryParams
-	Headers     CollectionsListHeaders
 }
 
 type CollectionsListResponse struct {

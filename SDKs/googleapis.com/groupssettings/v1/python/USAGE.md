@@ -4,31 +4,23 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GroupsSettingsGroupsGetRequest(
-    security=operations.GroupsSettingsGroupsGetSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GroupsSettingsGroupsGetPathParams(
-        group_unique_id="sunt",
-    ),
-    query_params=operations.GroupsSettingsGroupsGetQueryParams(
-        alt="json",
-        fields="aut",
-        key="vel",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="maiores",
-        user_ip="et",
-    ),
+    alt="json",
+    fields_="provident",
+    group_unique_id="distinctio",
+    key="quibusdam",
+    oauth_token="unde",
+    pretty_print=False,
+    quota_user="nulla",
+    user_ip="corrupti",
 )
     
-res = s.groups.groups_settings_groups_get(req)
+res = s.groups.groups_settings_groups_get(req, operations.GroupsSettingsGroupsGetSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.groups is not None:
     # handle response

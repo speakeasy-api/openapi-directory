@@ -14,40 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.EventarcProjectsLocationsChannelConnectionsCreateRequest{
-        Security: operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+        DollarXgafv: "2",
+        ChannelConnectionInput: &shared.ChannelConnectionInput{
+            ActivationToken: "provident",
+            Channel: "distinctio",
+            Name: "quibusdam",
         },
-        PathParams: operations.EventarcProjectsLocationsChannelConnectionsCreatePathParams{
-            Parent: "corrupti",
-        },
-        QueryParams: operations.EventarcProjectsLocationsChannelConnectionsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "distinctio",
-            Alt: "proto",
-            Callback: "unde",
-            ChannelConnectionID: "nulla",
-            Fields: "corrupti",
-            Key: "illum",
-            OauthToken: "vel",
-            PrettyPrint: false,
-            QuotaUser: "error",
-            UploadType: "deserunt",
-            UploadProtocol: "suscipit",
-        },
-        Request: &shared.ChannelConnectionInput{
-            ActivationToken: "iure",
-            Channel: "magnam",
-            Name: "debitis",
-        },
+        AccessToken: "unde",
+        Alt: "proto",
+        Callback: "corrupti",
+        ChannelConnectionID: "illum",
+        Fields: "vel",
+        Key: "error",
+        OauthToken: "deserunt",
+        Parent: "suscipit",
+        PrettyPrint: false,
+        QuotaUser: "iure",
+        UploadType: "magnam",
+        UploadProtocol: "debitis",
     }
 
     ctx := context.Background()
-    res, err := s.Projects.EventarcProjectsLocationsChannelConnectionsCreate(ctx, req)
+    res, err := s.Projects.EventarcProjectsLocationsChannelConnectionsCreate(ctx, req, operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

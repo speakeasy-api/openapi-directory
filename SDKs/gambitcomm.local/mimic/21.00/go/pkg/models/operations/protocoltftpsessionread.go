@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ProtocolTftpSessionReadPathParams struct {
+type ProtocolTftpSessionReadRequest struct {
 	// Agent to show TFTP statistics
 	AgentNum int `pathParam:"style=simple,explode=false,name=agentNum"`
 	// File name to retrieve from server
 	Srcfile string `pathParam:"style=simple,explode=false,name=srcfile"`
-}
-
-type ProtocolTftpSessionReadRequest struct {
-	PathParams ProtocolTftpSessionReadPathParams
 }
 
 type ProtocolTftpSessionReadResponse struct {

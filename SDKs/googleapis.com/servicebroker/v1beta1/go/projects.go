@@ -32,11 +32,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ServicebrokerProjectsBrokersCreate - CreateBroker creates a Broker.
-func (s *projects) ServicebrokerProjectsBrokersCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersCreateRequest) (*operations.ServicebrokerProjectsBrokersCreateResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersCreateRequest, security operations.ServicebrokerProjectsBrokersCreateSecurity) (*operations.ServicebrokerProjectsBrokersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1Broker", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *projects) ServicebrokerProjectsBrokersCreate(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *projects) ServicebrokerProjectsBrokersCreate(ctx context.Context, reque
 }
 
 // ServicebrokerProjectsBrokersInstancesBindingsList - Lists all the bindings in the instance.
-func (s *projects) ServicebrokerProjectsBrokersInstancesBindingsList(ctx context.Context, request operations.ServicebrokerProjectsBrokersInstancesBindingsListRequest) (*operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersInstancesBindingsList(ctx context.Context, request operations.ServicebrokerProjectsBrokersInstancesBindingsListRequest, security operations.ServicebrokerProjectsBrokersInstancesBindingsListSecurity) (*operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/bindings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/bindings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,20 +137,20 @@ func (s *projects) ServicebrokerProjectsBrokersInstancesBindingsList(ctx context
 // ServicebrokerProjectsBrokersInstancesList - Lists all the instances in the brokers
 // This API is an extension and not part of the OSB spec.
 // Hence the path is a standard Google API URL.
-func (s *projects) ServicebrokerProjectsBrokersInstancesList(ctx context.Context, request operations.ServicebrokerProjectsBrokersInstancesListRequest) (*operations.ServicebrokerProjectsBrokersInstancesListResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersInstancesList(ctx context.Context, request operations.ServicebrokerProjectsBrokersInstancesListRequest, security operations.ServicebrokerProjectsBrokersInstancesListSecurity) (*operations.ServicebrokerProjectsBrokersInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -185,20 +185,20 @@ func (s *projects) ServicebrokerProjectsBrokersInstancesList(ctx context.Context
 }
 
 // ServicebrokerProjectsBrokersList - ListBrokers lists brokers.
-func (s *projects) ServicebrokerProjectsBrokersList(ctx context.Context, request operations.ServicebrokerProjectsBrokersListRequest) (*operations.ServicebrokerProjectsBrokersListResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersList(ctx context.Context, request operations.ServicebrokerProjectsBrokersListRequest, security operations.ServicebrokerProjectsBrokersListSecurity) (*operations.ServicebrokerProjectsBrokersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,20 +235,20 @@ func (s *projects) ServicebrokerProjectsBrokersList(ctx context.Context, request
 // ServicebrokerProjectsBrokersV2CatalogList - Lists all the Services registered with this broker for consumption for
 // given service registry broker, which contains an set of services.
 // Note, that Service producer API is separate from Broker API.
-func (s *projects) ServicebrokerProjectsBrokersV2CatalogList(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2CatalogListRequest) (*operations.ServicebrokerProjectsBrokersV2CatalogListResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2CatalogList(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2CatalogListRequest, security operations.ServicebrokerProjectsBrokersV2CatalogListSecurity) (*operations.ServicebrokerProjectsBrokersV2CatalogListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/catalog", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/catalog", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,11 +294,11 @@ func (s *projects) ServicebrokerProjectsBrokersV2CatalogList(ctx context.Context
 // If identical instance exists, then HTTP 200 response will be returned.
 // If an instance with identical ID but mismatching parameters exists, then
 // HTTP 409 status code will be returned.
-func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateRequest) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/service_instances/{instance_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/service_instances/{instance_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1ServiceInstance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,11 +310,11 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesCreate(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -350,11 +350,11 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesCreate(ctx cont
 
 // ServicebrokerProjectsBrokersV2ServiceInstancesPatch - Updates an existing service instance.
 // See CreateServiceInstance for possible response codes.
-func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesPatch(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesPatch(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1ServiceInstance", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -366,11 +366,11 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesPatch(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,11 +406,11 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesPatch(ctx conte
 
 // ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate - CreateBinding generates a service binding to an existing service instance.
 // See ProviServiceInstance for async operation details.
-func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/service_bindings/{binding_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/service_bindings/{binding_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1Binding", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -422,11 +422,11 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -464,20 +464,20 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 // For synchronous/asynchronous request details see CreateServiceInstance
 // method.
 // If binding does not exist HTTP 410 status will be returned.
-func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -512,20 +512,20 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 }
 
 // ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGet - GetBinding returns the binding information.
-func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGet(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetRequest) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGet(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -561,20 +561,20 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 
 // ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperation - Returns the state of the last operation for the binding.
 // Only last (or current) operation can be polled.
-func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperation(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse, error) {
+func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperation(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/last_operation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/last_operation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

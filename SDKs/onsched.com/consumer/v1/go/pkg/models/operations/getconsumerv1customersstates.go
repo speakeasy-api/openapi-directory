@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConsumerV1CustomersStatesQueryParams struct {
-	Country *string `queryParam:"style=form,explode=true,name=country"`
-}
-
 type GetConsumerV1CustomersStatesRequest struct {
-	QueryParams GetConsumerV1CustomersStatesQueryParams
+	Country *string `queryParam:"style=form,explode=true,name=country"`
 }
 
 type GetConsumerV1CustomersStatesResponse struct {

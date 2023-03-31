@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestnetGetTokenHoldersPathParams struct {
+type TestnetGetTokenHoldersRequest struct {
 	// TokenId to request metadata for
 	Tokenid string `pathParam:"style=simple,explode=false,name=tokenid"`
-}
-
-type TestnetGetTokenHoldersRequest struct {
-	PathParams TestnetGetTokenHoldersPathParams
 }
 
 type TestnetGetTokenHoldersResponse struct {

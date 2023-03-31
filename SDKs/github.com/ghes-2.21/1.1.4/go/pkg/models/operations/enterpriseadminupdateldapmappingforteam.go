@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnterpriseAdminUpdateLdapMappingForTeamPathParams struct {
-	TeamID int64 `pathParam:"style=simple,explode=false,name=team_id"`
-}
-
 type EnterpriseAdminUpdateLdapMappingForTeamRequestBody struct {
 	// The [distinguished name](https://www.ldap.com/ldap-dns-and-rdns) (DN) of the LDAP entry to map to a team.
 	LdapDn *string `json:"ldap_dn,omitempty"`
 }
 
 type EnterpriseAdminUpdateLdapMappingForTeamRequest struct {
-	PathParams EnterpriseAdminUpdateLdapMappingForTeamPathParams
-	Request    *EnterpriseAdminUpdateLdapMappingForTeamRequestBody `request:"mediaType=application/json"`
+	RequestBody *EnterpriseAdminUpdateLdapMappingForTeamRequestBody `request:"mediaType=application/json"`
+	TeamID      int64                                               `pathParam:"style=simple,explode=false,name=team_id"`
 }
 
 type EnterpriseAdminUpdateLdapMappingForTeamResponse struct {

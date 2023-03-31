@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPromotionsJSONQueryParams struct {
+type GetPromotionsJSONRequest struct {
 	// API OAuth token.
 	Authtoken string `queryParam:"style=form,explode=true,name=authtoken"`
 	// Promotions' list restriction (default: 50 | max: 200).
@@ -16,10 +16,6 @@ type GetPromotionsJSONQueryParams struct {
 	Login string `queryParam:"style=form,explode=true,name=login"`
 	// Promotions' list page (default: 1).
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetPromotionsJSONRequest struct {
-	QueryParams GetPromotionsJSONQueryParams
 }
 
 type GetPromotionsJSONResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddShortlinkRequest struct {
-	// add sub account request
-	Request shared.ShortlinkRequest `request:"mediaType=application/json"`
-}
-
 type AddShortlinkResponse struct {
 	ContentType string
 	// Dysfonctionnement

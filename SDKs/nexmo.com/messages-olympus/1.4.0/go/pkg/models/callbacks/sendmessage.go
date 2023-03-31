@@ -155,7 +155,3 @@ func (u SendMessageMessageStatusRequestBody) MarshalJSON() ([]byte, error) {
 
 	return nil, nil
 }
-
-type SendMessageMessageStatusRequest struct {
-	Request SendMessageMessageStatusRequestBody `request:"mediaType=application/json"`
-}

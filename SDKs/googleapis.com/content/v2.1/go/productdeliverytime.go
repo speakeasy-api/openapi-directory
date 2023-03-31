@@ -32,11 +32,11 @@ func newProductdeliverytime(defaultClient, securityClient HTTPClient, serverURL,
 }
 
 // ContentProductdeliverytimeCreate - Creates or updates the delivery time of a product.
-func (s *productdeliverytime) ContentProductdeliverytimeCreate(ctx context.Context, request operations.ContentProductdeliverytimeCreateRequest) (*operations.ContentProductdeliverytimeCreateResponse, error) {
+func (s *productdeliverytime) ContentProductdeliverytimeCreate(ctx context.Context, request operations.ContentProductdeliverytimeCreateRequest, security operations.ContentProductdeliverytimeCreateSecurity) (*operations.ContentProductdeliverytimeCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductDeliveryTime", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,11 +48,11 @@ func (s *productdeliverytime) ContentProductdeliverytimeCreate(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,20 +87,20 @@ func (s *productdeliverytime) ContentProductdeliverytimeCreate(ctx context.Conte
 }
 
 // ContentProductdeliverytimeDelete - Deletes the delivery time of a product.
-func (s *productdeliverytime) ContentProductdeliverytimeDelete(ctx context.Context, request operations.ContentProductdeliverytimeDeleteRequest) (*operations.ContentProductdeliverytimeDeleteResponse, error) {
+func (s *productdeliverytime) ContentProductdeliverytimeDelete(ctx context.Context, request operations.ContentProductdeliverytimeDeleteRequest, security operations.ContentProductdeliverytimeDeleteSecurity) (*operations.ContentProductdeliverytimeDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,20 +126,20 @@ func (s *productdeliverytime) ContentProductdeliverytimeDelete(ctx context.Conte
 }
 
 // ContentProductdeliverytimeGet - Gets `productDeliveryTime` by `productId`.
-func (s *productdeliverytime) ContentProductdeliverytimeGet(ctx context.Context, request operations.ContentProductdeliverytimeGetRequest) (*operations.ContentProductdeliverytimeGetResponse, error) {
+func (s *productdeliverytime) ContentProductdeliverytimeGet(ctx context.Context, request operations.ContentProductdeliverytimeGetRequest, security operations.ContentProductdeliverytimeGetSecurity) (*operations.ContentProductdeliverytimeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

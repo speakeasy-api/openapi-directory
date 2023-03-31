@@ -8,13 +8,13 @@ import (
 )
 
 type OsloginUsersImportSSHPublicKeySecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type OsloginUsersImportSSHPublicKeySecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type OsloginUsersImportSSHPublicKeySecurity struct {
@@ -22,14 +22,10 @@ type OsloginUsersImportSSHPublicKeySecurity struct {
 	Option2 *OsloginUsersImportSSHPublicKeySecurityOption2 `security:"option"`
 }
 
-type OsloginUsersImportSSHPublicKeyPathParams struct {
-	// Required. The unique ID for the user in format `users/{user}`.
-	Parent string `pathParam:"style=simple,explode=false,name=parent"`
-}
-
-type OsloginUsersImportSSHPublicKeyQueryParams struct {
+type OsloginUsersImportSSHPublicKeyRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
+	DollarXgafv       *shared.XgafvEnum         `queryParam:"style=form,explode=true,name=$.xgafv"`
+	SSHPublicKeyInput *shared.SSHPublicKeyInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
@@ -42,6 +38,8 @@ type OsloginUsersImportSSHPublicKeyQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// Required. The unique ID for the user in format `users/{user}`.
+	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// The project ID of the Google Cloud Platform project.
@@ -52,13 +50,6 @@ type OsloginUsersImportSSHPublicKeyQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type OsloginUsersImportSSHPublicKeyRequest struct {
-	PathParams  OsloginUsersImportSSHPublicKeyPathParams
-	QueryParams OsloginUsersImportSSHPublicKeyQueryParams
-	Request     *shared.SSHPublicKeyInput `request:"mediaType=application/json"`
-	Security    OsloginUsersImportSSHPublicKeySecurity
 }
 
 type OsloginUsersImportSSHPublicKeyResponse struct {

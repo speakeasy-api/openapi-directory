@@ -28,10 +28,6 @@ type ImageWatermarkRequestBody struct {
 	Width *int `form:"name=width"`
 }
 
-type ImageWatermarkRequest struct {
-	Request ImageWatermarkRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type ImageWatermarkResponse struct {
 	// Your API request has been rejected. Check error code for details
 	APIError                                     *shared.APIError

@@ -35,18 +35,18 @@ func newMatch(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GetEventMatchTimeseries - Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data.
 // *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up.
 // *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
-func (s *match) GetEventMatchTimeseries(ctx context.Context, request operations.GetEventMatchTimeseriesRequest) (*operations.GetEventMatchTimeseriesResponse, error) {
+func (s *match) GetEventMatchTimeseries(ctx context.Context, request operations.GetEventMatchTimeseriesRequest, security operations.GetEventMatchTimeseriesSecurity) (*operations.GetEventMatchTimeseriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches/timeseries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches/timeseries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,18 +86,18 @@ func (s *match) GetEventMatchTimeseries(ctx context.Context, request operations.
 }
 
 // GetEventMatches - Gets a list of matches for the given event.
-func (s *match) GetEventMatches(ctx context.Context, request operations.GetEventMatchesRequest) (*operations.GetEventMatchesResponse, error) {
+func (s *match) GetEventMatches(ctx context.Context, request operations.GetEventMatchesRequest, security operations.GetEventMatchesSecurity) (*operations.GetEventMatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -137,18 +137,18 @@ func (s *match) GetEventMatches(ctx context.Context, request operations.GetEvent
 }
 
 // GetEventMatchesKeys - Gets a list of match keys for the given event.
-func (s *match) GetEventMatchesKeys(ctx context.Context, request operations.GetEventMatchesKeysRequest) (*operations.GetEventMatchesKeysResponse, error) {
+func (s *match) GetEventMatchesKeys(ctx context.Context, request operations.GetEventMatchesKeysRequest, security operations.GetEventMatchesKeysSecurity) (*operations.GetEventMatchesKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -188,18 +188,18 @@ func (s *match) GetEventMatchesKeys(ctx context.Context, request operations.GetE
 }
 
 // GetEventMatchesSimple - Gets a short-form list of matches for the given event.
-func (s *match) GetEventMatchesSimple(ctx context.Context, request operations.GetEventMatchesSimpleRequest) (*operations.GetEventMatchesSimpleResponse, error) {
+func (s *match) GetEventMatchesSimple(ctx context.Context, request operations.GetEventMatchesSimpleRequest, security operations.GetEventMatchesSimpleSecurity) (*operations.GetEventMatchesSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/event/{event_key}/matches/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -239,18 +239,18 @@ func (s *match) GetEventMatchesSimple(ctx context.Context, request operations.Ge
 }
 
 // GetMatch - Gets a `Match` object for the given match key.
-func (s *match) GetMatch(ctx context.Context, request operations.GetMatchRequest) (*operations.GetMatchResponse, error) {
+func (s *match) GetMatch(ctx context.Context, request operations.GetMatchRequest, security operations.GetMatchSecurity) (*operations.GetMatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -290,18 +290,18 @@ func (s *match) GetMatch(ctx context.Context, request operations.GetMatchRequest
 }
 
 // GetMatchSimple - Gets a short-form `Match` object for the given match key.
-func (s *match) GetMatchSimple(ctx context.Context, request operations.GetMatchSimpleRequest) (*operations.GetMatchSimpleResponse, error) {
+func (s *match) GetMatchSimple(ctx context.Context, request operations.GetMatchSimpleRequest, security operations.GetMatchSimpleSecurity) (*operations.GetMatchSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,18 +343,18 @@ func (s *match) GetMatchSimple(ctx context.Context, request operations.GetMatchS
 // GetMatchTimeseries - Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available.
 // *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up.
 // *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
-func (s *match) GetMatchTimeseries(ctx context.Context, request operations.GetMatchTimeseriesRequest) (*operations.GetMatchTimeseriesResponse, error) {
+func (s *match) GetMatchTimeseries(ctx context.Context, request operations.GetMatchTimeseriesRequest, security operations.GetMatchTimeseriesSecurity) (*operations.GetMatchTimeseriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}/timeseries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}/timeseries", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -394,18 +394,18 @@ func (s *match) GetMatchTimeseries(ctx context.Context, request operations.GetMa
 }
 
 // GetMatchZebra - Gets Zebra MotionWorks data for a Match for the given match key.
-func (s *match) GetMatchZebra(ctx context.Context, request operations.GetMatchZebraRequest) (*operations.GetMatchZebraResponse, error) {
+func (s *match) GetMatchZebra(ctx context.Context, request operations.GetMatchZebraRequest, security operations.GetMatchZebraSecurity) (*operations.GetMatchZebraResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}/zebra_motionworks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/match/{match_key}/zebra_motionworks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -445,18 +445,18 @@ func (s *match) GetMatchZebra(ctx context.Context, request operations.GetMatchZe
 }
 
 // GetTeamEventMatches - Gets a list of matches for the given team and event.
-func (s *match) GetTeamEventMatches(ctx context.Context, request operations.GetTeamEventMatchesRequest) (*operations.GetTeamEventMatchesResponse, error) {
+func (s *match) GetTeamEventMatches(ctx context.Context, request operations.GetTeamEventMatchesRequest, security operations.GetTeamEventMatchesSecurity) (*operations.GetTeamEventMatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/event/{event_key}/matches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/event/{event_key}/matches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -496,18 +496,18 @@ func (s *match) GetTeamEventMatches(ctx context.Context, request operations.GetT
 }
 
 // GetTeamEventMatchesKeys - Gets a list of match keys for matches for the given team and event.
-func (s *match) GetTeamEventMatchesKeys(ctx context.Context, request operations.GetTeamEventMatchesKeysRequest) (*operations.GetTeamEventMatchesKeysResponse, error) {
+func (s *match) GetTeamEventMatchesKeys(ctx context.Context, request operations.GetTeamEventMatchesKeysRequest, security operations.GetTeamEventMatchesKeysSecurity) (*operations.GetTeamEventMatchesKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/event/{event_key}/matches/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/event/{event_key}/matches/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -547,18 +547,18 @@ func (s *match) GetTeamEventMatchesKeys(ctx context.Context, request operations.
 }
 
 // GetTeamEventMatchesSimple - Gets a short-form list of matches for the given team and event.
-func (s *match) GetTeamEventMatchesSimple(ctx context.Context, request operations.GetTeamEventMatchesSimpleRequest) (*operations.GetTeamEventMatchesSimpleResponse, error) {
+func (s *match) GetTeamEventMatchesSimple(ctx context.Context, request operations.GetTeamEventMatchesSimpleRequest, security operations.GetTeamEventMatchesSimpleSecurity) (*operations.GetTeamEventMatchesSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/event/{event_key}/matches/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/event/{event_key}/matches/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -598,18 +598,18 @@ func (s *match) GetTeamEventMatchesSimple(ctx context.Context, request operation
 }
 
 // GetTeamMatchesByYear - Gets a list of matches for the given team and year.
-func (s *match) GetTeamMatchesByYear(ctx context.Context, request operations.GetTeamMatchesByYearRequest) (*operations.GetTeamMatchesByYearResponse, error) {
+func (s *match) GetTeamMatchesByYear(ctx context.Context, request operations.GetTeamMatchesByYearRequest, security operations.GetTeamMatchesByYearSecurity) (*operations.GetTeamMatchesByYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/matches/{year}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/matches/{year}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -649,18 +649,18 @@ func (s *match) GetTeamMatchesByYear(ctx context.Context, request operations.Get
 }
 
 // GetTeamMatchesByYearKeys - Gets a list of match keys for matches for the given team and year.
-func (s *match) GetTeamMatchesByYearKeys(ctx context.Context, request operations.GetTeamMatchesByYearKeysRequest) (*operations.GetTeamMatchesByYearKeysResponse, error) {
+func (s *match) GetTeamMatchesByYearKeys(ctx context.Context, request operations.GetTeamMatchesByYearKeysRequest, security operations.GetTeamMatchesByYearKeysSecurity) (*operations.GetTeamMatchesByYearKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/matches/{year}/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/matches/{year}/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -700,18 +700,18 @@ func (s *match) GetTeamMatchesByYearKeys(ctx context.Context, request operations
 }
 
 // GetTeamMatchesByYearSimple - Gets a short-form list of matches for the given team and year.
-func (s *match) GetTeamMatchesByYearSimple(ctx context.Context, request operations.GetTeamMatchesByYearSimpleRequest) (*operations.GetTeamMatchesByYearSimpleResponse, error) {
+func (s *match) GetTeamMatchesByYearSimple(ctx context.Context, request operations.GetTeamMatchesByYearSimpleRequest, security operations.GetTeamMatchesByYearSimpleSecurity) (*operations.GetTeamMatchesByYearSimpleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/matches/{year}/simple", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team/{team_key}/matches/{year}/simple", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

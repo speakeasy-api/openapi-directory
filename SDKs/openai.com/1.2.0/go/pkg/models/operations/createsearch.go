@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSearchPathParams struct {
+type CreateSearchRequest struct {
+	CreateSearchRequest shared.CreateSearchRequest `request:"mediaType=application/json"`
 	// The ID of the engine to use for this request.  You can select one of `ada`, `babbage`, `curie`, or `davinci`.
 	EngineID string `pathParam:"style=simple,explode=false,name=engine_id"`
-}
-
-type CreateSearchRequest struct {
-	PathParams CreateSearchPathParams
-	Request    shared.CreateSearchRequest `request:"mediaType=application/json"`
 }
 
 type CreateSearchResponse struct {

@@ -12,20 +12,15 @@ var FetchFunctionServerList = []string{
 }
 
 type FetchFunctionSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FetchFunctionPathParams struct {
+type FetchFunctionRequest struct {
 	// The SID of the Service to fetch the Function resource from.
 	ServiceSid string `pathParam:"style=simple,explode=false,name=ServiceSid"`
 	// The SID of the Function resource to fetch.
 	Sid string `pathParam:"style=simple,explode=false,name=Sid"`
-}
-
-type FetchFunctionRequest struct {
-	PathParams FetchFunctionPathParams
-	Security   FetchFunctionSecurity
-	ServerURL  *string
 }
 
 type FetchFunctionResponse struct {

@@ -4,94 +4,161 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-    
+
+
 req = operations.GkehubProjectsLocationsFeaturesCreateRequest(
-    security=operations.GkehubProjectsLocationsFeaturesCreateSecurity(
-        oauth2=shared.SchemeOauth2(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+    dollar_xgafv="2",
+    feature_input=shared.FeatureInput(
+        fleet_default_member_config=shared.CommonFleetDefaultMemberConfigSpecInput(
+            identityservice=shared.IdentityServiceMembershipSpecInput(
+                auth_methods=[
+                    shared.IdentityServiceAuthMethodInput(
+                        azuread_config=shared.IdentityServiceAzureADConfigInput(
+                            client_id="distinctio",
+                            client_secret="quibusdam",
+                            kubectl_redirect_uri="unde",
+                            tenant="nulla",
+                        ),
+                        google_config=shared.IdentityServiceGoogleConfig(
+                            disable=False,
+                        ),
+                        name="corrupti",
+                        oidc_config=shared.IdentityServiceOidcConfigInput(
+                            certificate_authority_data="illum",
+                            client_id="vel",
+                            client_secret="error",
+                            deploy_cloud_console_proxy=False,
+                            enable_access_token=False,
+                            extra_params="deserunt",
+                            group_prefix="suscipit",
+                            groups_claim="iure",
+                            issuer_uri="magnam",
+                            kubectl_redirect_uri="debitis",
+                            scopes="ipsa",
+                            user_claim="delectus",
+                            user_prefix="tempora",
+                        ),
+                        proxy="suscipit",
+                    ),
+                    shared.IdentityServiceAuthMethodInput(
+                        azuread_config=shared.IdentityServiceAzureADConfigInput(
+                            client_id="molestiae",
+                            client_secret="minus",
+                            kubectl_redirect_uri="placeat",
+                            tenant="voluptatum",
+                        ),
+                        google_config=shared.IdentityServiceGoogleConfig(
+                            disable=False,
+                        ),
+                        name="iusto",
+                        oidc_config=shared.IdentityServiceOidcConfigInput(
+                            certificate_authority_data="excepturi",
+                            client_id="nisi",
+                            client_secret="recusandae",
+                            deploy_cloud_console_proxy=False,
+                            enable_access_token=False,
+                            extra_params="temporibus",
+                            group_prefix="ab",
+                            groups_claim="quis",
+                            issuer_uri="veritatis",
+                            kubectl_redirect_uri="deserunt",
+                            scopes="perferendis",
+                            user_claim="ipsam",
+                            user_prefix="repellendus",
+                        ),
+                        proxy="sapiente",
+                    ),
+                    shared.IdentityServiceAuthMethodInput(
+                        azuread_config=shared.IdentityServiceAzureADConfigInput(
+                            client_id="quo",
+                            client_secret="odit",
+                            kubectl_redirect_uri="at",
+                            tenant="at",
+                        ),
+                        google_config=shared.IdentityServiceGoogleConfig(
+                            disable=False,
+                        ),
+                        name="maiores",
+                        oidc_config=shared.IdentityServiceOidcConfigInput(
+                            certificate_authority_data="molestiae",
+                            client_id="quod",
+                            client_secret="quod",
+                            deploy_cloud_console_proxy=False,
+                            enable_access_token=False,
+                            extra_params="esse",
+                            group_prefix="totam",
+                            groups_claim="porro",
+                            issuer_uri="dolorum",
+                            kubectl_redirect_uri="dicta",
+                            scopes="nam",
+                            user_claim="officia",
+                            user_prefix="occaecati",
+                        ),
+                        proxy="fugit",
+                    ),
+                ],
+            ),
         ),
-        oauth2c=shared.SchemeOauth2c(
-            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        ),
-    ),
-    path_params=operations.GkehubProjectsLocationsFeaturesCreatePathParams(
-        parent="dignissimos",
-    ),
-    query_params=operations.GkehubProjectsLocationsFeaturesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="nihil",
-        alt="json",
-        callback="tempore",
-        feature_id="exercitationem",
-        fields="et",
-        key="dolorem",
-        oauth_token="quaerat",
-        pretty_print=True,
-        quota_user="inventore",
-        request_id="reiciendis",
-        upload_type="quidem",
-        upload_protocol="ut",
-    ),
-    request=shared.FeatureInput(
         labels={
-            "quo": "assumenda",
-            "quisquam": "ad",
+            "hic": "optio",
+            "totam": "beatae",
+            "commodi": "molestiae",
         },
         membership_specs={
-            "est": shared.MembershipFeatureSpecInput(
+            "qui": shared.MembershipFeatureSpecInput(
                 anthosobservability=shared.AnthosObservabilityMembershipSpec(
-                    do_not_optimize_metrics=True,
+                    do_not_optimize_metrics=False,
                     enable_stackdriver_on_applications=False,
-                    version="necessitatibus",
+                    version="impedit",
                 ),
                 cloudbuild=shared.CloudBuildMembershipSpec(
-                    security_policy="SECURITY_POLICY_UNSPECIFIED",
-                    version="corporis",
+                    security_policy="PRIVILEGED",
+                    version="esse",
                 ),
                 configmanagement=shared.ConfigManagementMembershipSpec(
                     binauthz=shared.ConfigManagementBinauthzConfig(
                         enabled=False,
                     ),
                     config_sync=shared.ConfigManagementConfigSync(
-                        allow_vertical_scale=True,
+                        allow_vertical_scale=False,
                         enabled=False,
                         git=shared.ConfigManagementGitConfig(
-                            gcp_service_account_email="dolorum",
-                            https_proxy="praesentium",
-                            policy_dir="totam",
-                            secret_type="voluptates",
-                            sync_branch="et",
-                            sync_repo="consectetur",
-                            sync_rev="ratione",
-                            sync_wait_secs="rerum",
+                            gcp_service_account_email="ipsum",
+                            https_proxy="excepturi",
+                            policy_dir="aspernatur",
+                            secret_type="perferendis",
+                            sync_branch="ad",
+                            sync_repo="natus",
+                            sync_rev="sed",
+                            sync_wait_secs="iste",
                         ),
                         oci=shared.ConfigManagementOciConfig(
-                            gcp_service_account_email="commodi",
-                            policy_dir="enim",
-                            secret_type="distinctio",
-                            sync_repo="voluptatem",
-                            sync_wait_secs="omnis",
+                            gcp_service_account_email="dolor",
+                            policy_dir="natus",
+                            secret_type="laboriosam",
+                            sync_repo="hic",
+                            sync_wait_secs="saepe",
                         ),
-                        prevent_drift=True,
-                        source_format="modi",
+                        prevent_drift=False,
+                        source_format="fuga",
                     ),
                     hierarchy_controller=shared.ConfigManagementHierarchyControllerConfig(
                         enable_hierarchical_resource_quota=False,
-                        enable_pod_tree_labels=True,
+                        enable_pod_tree_labels=False,
                         enabled=False,
                     ),
                     policy_controller=shared.ConfigManagementPolicyController(
-                        audit_interval_seconds="dolor",
-                        enabled=True,
+                        audit_interval_seconds="in",
+                        enabled=False,
                         exemptable_namespaces=[
-                            "quisquam",
-                            "quo",
-                            "deleniti",
+                            "iste",
+                            "iure",
                         ],
-                        log_denies_enabled=True,
+                        log_denies_enabled=False,
                         monitoring=shared.ConfigManagementPolicyControllerMonitoring(
                             backends=[
                                 "CLOUD_MONITORING",
+                                "MONITORING_BACKEND_UNSPECIFIED",
                                 "MONITORING_BACKEND_UNSPECIFIED",
                                 "CLOUD_MONITORING",
                             ],
@@ -100,56 +167,523 @@ req = operations.GkehubProjectsLocationsFeaturesCreateRequest(
                         referential_rules_enabled=False,
                         template_library_installed=False,
                     ),
-                    version="voluptatibus",
+                    version="est",
                 ),
-                fleet_inherited=True,
+                fleet_inherited=False,
                 fleetobservability={
-                    "sit": "ut",
+                    "laborum": "dolores",
+                    "dolorem": "corporis",
+                    "explicabo": "nobis",
                 },
                 identityservice=shared.IdentityServiceMembershipSpecInput(
                     auth_methods=[
                         shared.IdentityServiceAuthMethodInput(
-                            azuread_config=shared.IdentityServiceAzureAdConfigInput(
-                                client_id="officia",
-                                client_secret="aliquam",
-                                kubectl_redirect_uri="veniam",
-                                tenant="autem",
+                            azuread_config=shared.IdentityServiceAzureADConfigInput(
+                                client_id="omnis",
+                                client_secret="nemo",
+                                kubectl_redirect_uri="minima",
+                                tenant="excepturi",
                             ),
                             google_config=shared.IdentityServiceGoogleConfig(
-                                disable=True,
+                                disable=False,
                             ),
-                            name="impedit",
+                            name="accusantium",
                             oidc_config=shared.IdentityServiceOidcConfigInput(
-                                certificate_authority_data="et",
-                                client_id="sed",
-                                client_secret="facere",
+                                certificate_authority_data="iure",
+                                client_id="culpa",
+                                client_secret="doloribus",
                                 deploy_cloud_console_proxy=False,
-                                enable_access_token=True,
-                                extra_params="architecto",
-                                group_prefix="nemo",
-                                groups_claim="quos",
-                                issuer_uri="deserunt",
-                                kubectl_redirect_uri="mollitia",
-                                scopes="ipsam",
-                                user_claim="dolor",
-                                user_prefix="rerum",
+                                enable_access_token=False,
+                                extra_params="sapiente",
+                                group_prefix="architecto",
+                                groups_claim="mollitia",
+                                issuer_uri="dolorem",
+                                kubectl_redirect_uri="culpa",
+                                scopes="consequuntur",
+                                user_claim="repellat",
+                                user_prefix="mollitia",
                             ),
-                            proxy="architecto",
+                            proxy="occaecati",
+                        ),
+                        shared.IdentityServiceAuthMethodInput(
+                            azuread_config=shared.IdentityServiceAzureADConfigInput(
+                                client_id="numquam",
+                                client_secret="commodi",
+                                kubectl_redirect_uri="quam",
+                                tenant="molestiae",
+                            ),
+                            google_config=shared.IdentityServiceGoogleConfig(
+                                disable=False,
+                            ),
+                            name="velit",
+                            oidc_config=shared.IdentityServiceOidcConfigInput(
+                                certificate_authority_data="error",
+                                client_id="quia",
+                                client_secret="quis",
+                                deploy_cloud_console_proxy=False,
+                                enable_access_token=False,
+                                extra_params="vitae",
+                                group_prefix="laborum",
+                                groups_claim="animi",
+                                issuer_uri="enim",
+                                kubectl_redirect_uri="odit",
+                                scopes="quo",
+                                user_claim="sequi",
+                                user_prefix="tenetur",
+                            ),
+                            proxy="ipsam",
                         ),
                     ],
                 ),
                 mesh=shared.ServiceMeshMembershipSpec(
                     control_plane="AUTOMATIC",
-                    default_channel="REGULAR",
+                    default_channel="STABLE",
+                    management="MANAGEMENT_UNSPECIFIED",
+                ),
+                policycontroller=shared.PolicyControllerMembershipSpec(
+                    policy_controller_hub_config=shared.PolicyControllerHubConfig(
+                        audit_interval_seconds="quasi",
+                        constraint_violation_limit="error",
+                        deployment_configs={
+                            "laborum": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="quasi",
+                                        memory="reiciendis",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="voluptatibus",
+                                        memory="vero",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="praesentium",
+                                        key="voluptatibus",
+                                        operator="ipsa",
+                                        value="omnis",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="voluptate",
+                                        key="cum",
+                                        operator="perferendis",
+                                        value="doloremque",
+                                    ),
+                                ],
+                                replica_count="reprehenderit",
+                            ),
+                            "ut": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="maiores",
+                                        memory="dicta",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="corporis",
+                                        memory="dolore",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="dicta",
+                                        key="harum",
+                                        operator="enim",
+                                        value="accusamus",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="commodi",
+                                        key="repudiandae",
+                                        operator="quae",
+                                        value="ipsum",
+                                    ),
+                                ],
+                                replica_count="quidem",
+                            ),
+                            "molestias": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="excepturi",
+                                        memory="pariatur",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="modi",
+                                        memory="praesentium",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="voluptates",
+                                        key="quasi",
+                                        operator="repudiandae",
+                                        value="sint",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="veritatis",
+                                        key="itaque",
+                                        operator="incidunt",
+                                        value="enim",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="consequatur",
+                                        key="est",
+                                        operator="quibusdam",
+                                        value="explicabo",
+                                    ),
+                                ],
+                                replica_count="deserunt",
+                            ),
+                            "distinctio": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="quibusdam",
+                                        memory="labore",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="modi",
+                                        memory="qui",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="cupiditate",
+                                        key="quos",
+                                        operator="perferendis",
+                                        value="magni",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="assumenda",
+                                        key="ipsam",
+                                        operator="alias",
+                                        value="fugit",
+                                    ),
+                                ],
+                                replica_count="dolorum",
+                            ),
+                        },
+                        exemptable_namespaces=[
+                            "tempora",
+                            "facilis",
+                            "tempore",
+                        ],
+                        install_spec="INSTALL_SPEC_NOT_INSTALLED",
+                        log_denies_enabled=False,
+                        monitoring=shared.PolicyControllerMonitoringConfig(
+                            backends=[
+                                "PROMETHEUS",
+                                "MONITORING_BACKEND_UNSPECIFIED",
+                                "CLOUD_MONITORING",
+                                "PROMETHEUS",
+                            ],
+                        ),
+                        mutation_enabled=False,
+                        policy_content=shared.PolicyControllerPolicyContentSpec(
+                            bundles={
+                                "provident": shared.PolicyControllerBundleInstallSpec(
+                                    exempted_namespaces=[
+                                        "sint",
+                                        "officia",
+                                        "dolor",
+                                        "debitis",
+                                    ],
+                                    management="INSTALLED",
+                                ),
+                                "dolorum": shared.PolicyControllerBundleInstallSpec(
+                                    exempted_namespaces=[
+                                        "in",
+                                        "illum",
+                                    ],
+                                    management="INSTALLED",
+                                ),
+                            },
+                            template_library=shared.PolicyControllerTemplateLibraryConfig(
+                                included=False,
+                                installation="ALL",
+                            ),
+                        ),
+                        referential_rules_enabled=False,
+                        template_library_config=shared.PolicyControllerTemplateLibraryConfig(
+                            included=False,
+                            installation="INSTALLATION_UNSPECIFIED",
+                        ),
+                    ),
+                    version="magnam",
+                ),
+                workloadcertificate=shared.MembershipSpec(
+                    certificate_management="ENABLED",
+                ),
+            ),
+            "facere": shared.MembershipFeatureSpecInput(
+                anthosobservability=shared.AnthosObservabilityMembershipSpec(
+                    do_not_optimize_metrics=False,
+                    enable_stackdriver_on_applications=False,
+                    version="ea",
+                ),
+                cloudbuild=shared.CloudBuildMembershipSpec(
+                    security_policy="NON_PRIVILEGED",
+                    version="laborum",
+                ),
+                configmanagement=shared.ConfigManagementMembershipSpec(
+                    binauthz=shared.ConfigManagementBinauthzConfig(
+                        enabled=False,
+                    ),
+                    config_sync=shared.ConfigManagementConfigSync(
+                        allow_vertical_scale=False,
+                        enabled=False,
+                        git=shared.ConfigManagementGitConfig(
+                            gcp_service_account_email="accusamus",
+                            https_proxy="non",
+                            policy_dir="occaecati",
+                            secret_type="enim",
+                            sync_branch="accusamus",
+                            sync_repo="delectus",
+                            sync_rev="quidem",
+                            sync_wait_secs="provident",
+                        ),
+                        oci=shared.ConfigManagementOciConfig(
+                            gcp_service_account_email="nam",
+                            policy_dir="id",
+                            secret_type="blanditiis",
+                            sync_repo="deleniti",
+                            sync_wait_secs="sapiente",
+                        ),
+                        prevent_drift=False,
+                        source_format="amet",
+                    ),
+                    hierarchy_controller=shared.ConfigManagementHierarchyControllerConfig(
+                        enable_hierarchical_resource_quota=False,
+                        enable_pod_tree_labels=False,
+                        enabled=False,
+                    ),
+                    policy_controller=shared.ConfigManagementPolicyController(
+                        audit_interval_seconds="deserunt",
+                        enabled=False,
+                        exemptable_namespaces=[
+                            "vel",
+                            "natus",
+                        ],
+                        log_denies_enabled=False,
+                        monitoring=shared.ConfigManagementPolicyControllerMonitoring(
+                            backends=[
+                                "PROMETHEUS",
+                                "MONITORING_BACKEND_UNSPECIFIED",
+                                "PROMETHEUS",
+                            ],
+                        ),
+                        mutation_enabled=False,
+                        referential_rules_enabled=False,
+                        template_library_installed=False,
+                    ),
+                    version="magnam",
+                ),
+                fleet_inherited=False,
+                fleetobservability={
+                    "id": "labore",
+                    "labore": "suscipit",
+                    "natus": "nobis",
+                },
+                identityservice=shared.IdentityServiceMembershipSpecInput(
+                    auth_methods=[
+                        shared.IdentityServiceAuthMethodInput(
+                            azuread_config=shared.IdentityServiceAzureADConfigInput(
+                                client_id="vero",
+                                client_secret="aspernatur",
+                                kubectl_redirect_uri="architecto",
+                                tenant="magnam",
+                            ),
+                            google_config=shared.IdentityServiceGoogleConfig(
+                                disable=False,
+                            ),
+                            name="et",
+                            oidc_config=shared.IdentityServiceOidcConfigInput(
+                                certificate_authority_data="excepturi",
+                                client_id="ullam",
+                                client_secret="provident",
+                                deploy_cloud_console_proxy=False,
+                                enable_access_token=False,
+                                extra_params="quos",
+                                group_prefix="sint",
+                                groups_claim="accusantium",
+                                issuer_uri="mollitia",
+                                kubectl_redirect_uri="reiciendis",
+                                scopes="mollitia",
+                                user_claim="ad",
+                                user_prefix="eum",
+                            ),
+                            proxy="dolor",
+                        ),
+                        shared.IdentityServiceAuthMethodInput(
+                            azuread_config=shared.IdentityServiceAzureADConfigInput(
+                                client_id="necessitatibus",
+                                client_secret="odit",
+                                kubectl_redirect_uri="nemo",
+                                tenant="quasi",
+                            ),
+                            google_config=shared.IdentityServiceGoogleConfig(
+                                disable=False,
+                            ),
+                            name="iure",
+                            oidc_config=shared.IdentityServiceOidcConfigInput(
+                                certificate_authority_data="doloribus",
+                                client_id="debitis",
+                                client_secret="eius",
+                                deploy_cloud_console_proxy=False,
+                                enable_access_token=False,
+                                extra_params="maxime",
+                                group_prefix="deleniti",
+                                groups_claim="facilis",
+                                issuer_uri="in",
+                                kubectl_redirect_uri="architecto",
+                                scopes="architecto",
+                                user_claim="repudiandae",
+                                user_prefix="ullam",
+                            ),
+                            proxy="expedita",
+                        ),
+                    ],
+                ),
+                mesh=shared.ServiceMeshMembershipSpec(
+                    control_plane="AUTOMATIC",
+                    default_channel="STABLE",
                     management="MANAGEMENT_MANUAL",
                 ),
                 policycontroller=shared.PolicyControllerMembershipSpec(
                     policy_controller_hub_config=shared.PolicyControllerHubConfig(
-                        audit_interval_seconds="dignissimos",
+                        audit_interval_seconds="sed",
+                        constraint_violation_limit="saepe",
+                        deployment_configs={
+                            "accusantium": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="consequuntur",
+                                        memory="praesentium",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="natus",
+                                        memory="magni",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="quo",
+                                        key="illum",
+                                        operator="pariatur",
+                                        value="maxime",
+                                    ),
+                                ],
+                                replica_count="ea",
+                            ),
+                            "excepturi": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="odit",
+                                        memory="ea",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="accusantium",
+                                        memory="ab",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="quidem",
+                                        key="ipsam",
+                                        operator="voluptate",
+                                        value="autem",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="nam",
+                                        key="eaque",
+                                        operator="pariatur",
+                                        value="nemo",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="voluptatibus",
+                                        key="perferendis",
+                                        operator="fugiat",
+                                        value="amet",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="aut",
+                                        key="cumque",
+                                        operator="corporis",
+                                        value="hic",
+                                    ),
+                                ],
+                                replica_count="libero",
+                            ),
+                            "nobis": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="dolores",
+                                        memory="quis",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="totam",
+                                        memory="dignissimos",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="quis",
+                                        key="nesciunt",
+                                        operator="eos",
+                                        value="perferendis",
+                                    ),
+                                ],
+                                replica_count="dolores",
+                            ),
+                            "minus": shared.PolicyControllerPolicyControllerDeploymentConfig(
+                                container_resources=shared.PolicyControllerResourceRequirements(
+                                    limits=shared.PolicyControllerResourceList(
+                                        cpu="quam",
+                                        memory="dolor",
+                                    ),
+                                    requests=shared.PolicyControllerResourceList(
+                                        cpu="vero",
+                                        memory="nostrum",
+                                    ),
+                                ),
+                                pod_anti_affinity=False,
+                                pod_tolerations=[
+                                    shared.PolicyControllerToleration(
+                                        effect="recusandae",
+                                        key="omnis",
+                                        operator="facilis",
+                                        value="perspiciatis",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="voluptatem",
+                                        key="porro",
+                                        operator="consequuntur",
+                                        value="blanditiis",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="error",
+                                        key="eaque",
+                                        operator="occaecati",
+                                        value="rerum",
+                                    ),
+                                    shared.PolicyControllerToleration(
+                                        effect="adipisci",
+                                        key="asperiores",
+                                        operator="earum",
+                                        value="modi",
+                                    ),
+                                ],
+                                replica_count="iste",
+                            ),
+                        },
                         exemptable_namespaces=[
-                            "voluptates",
-                            "libero",
-                            "mollitia",
+                            "deleniti",
+                            "pariatur",
+                            "provident",
                         ],
                         install_spec="INSTALL_SPEC_SUSPENDED",
                         log_denies_enabled=False,
@@ -157,93 +691,127 @@ req = operations.GkehubProjectsLocationsFeaturesCreateRequest(
                             backends=[
                                 "CLOUD_MONITORING",
                                 "MONITORING_BACKEND_UNSPECIFIED",
+                                "PROMETHEUS",
                             ],
                         ),
-                        mutation_enabled=True,
+                        mutation_enabled=False,
+                        policy_content=shared.PolicyControllerPolicyContentSpec(
+                            bundles={
+                                "dolorem": shared.PolicyControllerBundleInstallSpec(
+                                    exempted_namespaces=[
+                                        "dolor",
+                                    ],
+                                    management="MANAGEMENT_UNSPECIFIED",
+                                ),
+                                "ipsum": shared.PolicyControllerBundleInstallSpec(
+                                    exempted_namespaces=[
+                                        "excepturi",
+                                        "cum",
+                                        "voluptate",
+                                        "dignissimos",
+                                    ],
+                                    management="INSTALLED",
+                                ),
+                            },
+                            template_library=shared.PolicyControllerTemplateLibraryConfig(
+                                included=False,
+                                installation="INSTALLATION_UNSPECIFIED",
+                            ),
+                        ),
                         referential_rules_enabled=False,
                         template_library_config=shared.PolicyControllerTemplateLibraryConfig(
                             included=False,
+                            installation="ALL",
                         ),
                     ),
-                    version="delectus",
+                    version="numquam",
                 ),
                 workloadcertificate=shared.MembershipSpec(
-                    certificate_management="DISABLED",
+                    certificate_management="CERTIFICATE_MANAGEMENT_UNSPECIFIED",
                 ),
             ),
         },
         resource_state=shared.FeatureResourceState(
-            state="DISABLING",
+            state="STATE_UNSPECIFIED",
         ),
         scope_specs={
-            "qui": {
-                "et": "ex",
-                "quia": "exercitationem",
-            },
-            "debitis": {
-                "eum": "possimus",
-            },
-            "enim": {
-                "eligendi": "sequi",
-                "sit": "vitae",
-                "unde": "facilis",
+            "iure": {
+                "quaerat": "accusamus",
+                "quidem": "voluptatibus",
             },
         },
         spec=shared.CommonFeatureSpec(
             anthosobservability=shared.AnthosObservabilityFeatureSpec(
                 default_membership_spec=shared.AnthosObservabilityMembershipSpec(
-                    do_not_optimize_metrics=True,
+                    do_not_optimize_metrics=False,
                     enable_stackdriver_on_applications=False,
-                    version="aut",
+                    version="voluptas",
                 ),
             ),
             appdevexperience={
-                "harum": "quo",
-                "aut": "consequatur",
-                "iste": "aut",
+                "eos": "atque",
+                "sit": "fugiat",
+                "ab": "soluta",
             },
             cloudauditlogging=shared.CloudAuditLoggingFeatureSpec(
                 allowlisted_service_accounts=[
-                    "facilis",
-                    "a",
-                    "ut",
+                    "iusto",
+                    "voluptate",
+                    "dolorum",
                 ],
             ),
             fleetobservability={
-                "maxime": "odio",
+                "omnis": "necessitatibus",
+                "distinctio": "asperiores",
+                "nihil": "ipsum",
             },
             multiclusteringress=shared.MultiClusterIngressFeatureSpec(
-                billing="ANTHOS_LICENSE",
-                config_membership="quia",
+                billing="PAY_AS_YOU_GO",
+                config_membership="id",
             ),
             workloadcertificate=shared.FeatureSpec(
                 default_config=shared.MembershipSpec(
-                    certificate_management="DISABLED",
+                    certificate_management="ENABLED",
                 ),
                 provision_google_ca="GOOGLE_CA_PROVISIONING_UNSPECIFIED",
             ),
         ),
-        state=shared.CommonFeatureState1(
+        state=shared.CommonFeatureStateInput(
             appdevexperience=shared.AppDevExperienceFeatureState(
                 networking_install_succeeded=shared.Status(
                     code="CODE_UNSPECIFIED",
-                    description="ea",
+                    description="perferendis",
                 ),
             ),
             fleetobservability={
-                "nisi": "sint",
-                "itaque": "doloremque",
+                "optio": "accusamus",
             },
             state=shared.FeatureState(
                 code="OK",
-                description="cumque",
-                update_time="et",
+                description="saepe",
+                update_time="suscipit",
             ),
         ),
     ),
+    access_token="deserunt",
+    alt="media",
+    callback="minima",
+    feature_id="repellendus",
+    fields_="totam",
+    key="similique",
+    oauth_token="alias",
+    parent="at",
+    pretty_print=False,
+    quota_user="quaerat",
+    request_id="tempora",
+    upload_type="vel",
+    upload_protocol="quod",
 )
     
-res = s.projects.gkehub_projects_locations_features_create(req)
+res = s.projects.gkehub_projects_locations_features_create(req, operations.GkehubProjectsLocationsFeaturesCreateSecurity(
+    oauth2="Bearer YOUR_ACCESS_TOKEN_HERE",
+    oauth2c="Bearer YOUR_ACCESS_TOKEN_HERE",
+))
 
 if res.operation is not None:
     # handle response

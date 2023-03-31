@@ -11,15 +11,6 @@ var FetchUsecaseServerList = []string{
 	"https://messaging.twilio.com",
 }
 
-type FetchUsecaseSecurity struct {
-	AccountSidAuthToken shared.SchemeAccountSidAuthToken `security:"scheme,type=http,subtype=basic"`
-}
-
-type FetchUsecaseRequest struct {
-	Security  FetchUsecaseSecurity
-	ServerURL *string
-}
-
 type FetchUsecaseResponse struct {
 	ContentType string
 	StatusCode  int

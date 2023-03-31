@@ -35,17 +35,13 @@ func (e *SearchEverywhereIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchEverywhereQueryParams struct {
+type SearchEverywhereRequest struct {
 	// Search in these entities. Current oprions are projects, documents, strings. Can be multiple. When not provided, we'll search through all entities.
 	Include []SearchEverywhereIncludeEnum `queryParam:"style=form,explode=true,name=include[]"`
 	Page    *int64                        `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64                        `queryParam:"style=form,explode=true,name=per_page"`
 	// Search query term
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type SearchEverywhereRequest struct {
-	QueryParams SearchEverywhereQueryParams
 }
 
 type SearchEverywhereResponse struct {

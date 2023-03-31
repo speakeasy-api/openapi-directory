@@ -8,13 +8,13 @@ import (
 )
 
 type SQLBackupRunsListSecurityOption1 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLBackupRunsListSecurityOption2 struct {
-	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
-	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+	Oauth2  string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SQLBackupRunsListSecurity struct {
@@ -22,14 +22,7 @@ type SQLBackupRunsListSecurity struct {
 	Option2 *SQLBackupRunsListSecurityOption2 `security:"option"`
 }
 
-type SQLBackupRunsListPathParams struct {
-	// Cloud SQL instance ID, or "-" for all instances. This does not include the project ID.
-	Instance string `pathParam:"style=simple,explode=false,name=instance"`
-	// Project ID of the project that contains the instance.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type SQLBackupRunsListQueryParams struct {
+type SQLBackupRunsListRequest struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
@@ -40,6 +33,8 @@ type SQLBackupRunsListQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Cloud SQL instance ID, or "-" for all instances. This does not include the project ID.
+	Instance string `pathParam:"style=simple,explode=false,name=instance"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Maximum number of backup runs per response.
@@ -50,18 +45,14 @@ type SQLBackupRunsListQueryParams struct {
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
+	// Project ID of the project that contains the instance.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-}
-
-type SQLBackupRunsListRequest struct {
-	PathParams  SQLBackupRunsListPathParams
-	QueryParams SQLBackupRunsListQueryParams
-	Security    SQLBackupRunsListSecurity
 }
 
 type SQLBackupRunsListResponse struct {

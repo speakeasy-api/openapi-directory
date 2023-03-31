@@ -35,16 +35,16 @@ func newProductRatePlanChargeTiers(defaultClient, securityClient HTTPClient, ser
 // ObjectGETProductRatePlanChargeTier - CRUD: Retrieve a product rate plan charge tier
 func (s *productRatePlanChargeTiers) ObjectGETProductRatePlanChargeTier(ctx context.Context, request operations.ObjectGETProductRatePlanChargeTierRequest) (*operations.ObjectGETProductRatePlanChargeTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan-charge-tier/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan-charge-tier/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -114,9 +114,9 @@ func (s *productRatePlanChargeTiers) ObjectGETProductRatePlanChargeTier(ctx cont
 // To make other updates to product rate plan charge tiers, use [CRUD: Update a product rate plan charge](https://www.zuora.com/developer/api-reference/#operation/Object_PUTProductRatePlanCharge) and specify `ProductRatePlanChargeTierData` in the request body.
 func (s *productRatePlanChargeTiers) ObjectPUTProductRatePlanChargeTier(ctx context.Context, request operations.ObjectPUTProductRatePlanChargeTierRequest) (*operations.ObjectPUTProductRatePlanChargeTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan-charge-tier/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/object/product-rate-plan-charge-tier/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProxyModifyProductRatePlanChargeTier", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,9 +131,9 @@ func (s *productRatePlanChargeTiers) ObjectPUTProductRatePlanChargeTier(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

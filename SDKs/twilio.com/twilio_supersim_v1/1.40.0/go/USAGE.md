@@ -13,23 +13,18 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateEsimProfileRequest{
-        Security: operations.CreateEsimProfileSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: &operations.CreateEsimProfileCreateEsimProfileRequest{
-            CallbackMethod: "PATCH",
-            CallbackURL: "provident",
-            Eid: "distinctio",
-            GenerateMatchingID: false,
-        },
+    req := operations.CreateEsimProfileCreateEsimProfileRequest{
+        CallbackMethod: "PATCH",
+        CallbackURL: "provident",
+        Eid: "distinctio",
+        GenerateMatchingID: false,
     }
 
     ctx := context.Background()
-    res, err := s.CreateEsimProfile(ctx, req)
+    res, err := s.CreateEsimProfile(ctx, req, operations.CreateEsimProfileSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -10,7 +10,7 @@ import (
 )
 
 type GetVideoCollectionListSecurity struct {
-	CustomerAccessCode shared.SchemeCustomerAccessCode `security:"scheme,type=oauth2"`
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetVideoCollectionListEmbedEnum string
@@ -36,18 +36,13 @@ func (e *GetVideoCollectionListEmbedEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVideoCollectionListQueryParams struct {
+type GetVideoCollectionListRequest struct {
 	// Which sharing information to include in the response, such as a URL to the collection
 	Embed []GetVideoCollectionListEmbedEnum `queryParam:"style=form,explode=true,name=embed"`
 	// Page number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of results per page
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetVideoCollectionListRequest struct {
-	QueryParams GetVideoCollectionListQueryParams
-	Security    GetVideoCollectionListSecurity
 }
 
 type GetVideoCollectionListResponse struct {

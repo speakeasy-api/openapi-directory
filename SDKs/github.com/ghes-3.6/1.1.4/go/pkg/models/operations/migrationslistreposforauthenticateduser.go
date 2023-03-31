@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrationsListReposForAuthenticatedUserPathParams struct {
+type MigrationsListReposForAuthenticatedUserRequest struct {
 	// The unique identifier of the migration.
 	MigrationID int64 `pathParam:"style=simple,explode=false,name=migration_id"`
-}
-
-type MigrationsListReposForAuthenticatedUserQueryParams struct {
 	// Page number of the results to fetch.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type MigrationsListReposForAuthenticatedUserRequest struct {
-	PathParams  MigrationsListReposForAuthenticatedUserPathParams
-	QueryParams MigrationsListReposForAuthenticatedUserQueryParams
 }
 
 type MigrationsListReposForAuthenticatedUserResponse struct {

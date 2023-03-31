@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type PostCustomGatewayRefundOwnershipIDPathParams struct {
-	// The id of the ownership record involved in this transaction
-	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
-}
-
-type PostCustomGatewayRefundOwnershipIDQueryParams struct {
+type PostCustomGatewayRefundOwnershipIDRequest struct {
 	// The total amount refunded in cents
 	Amount int64 `queryParam:"style=form,explode=true,name=amount"`
 	// A custom JSON object to attach to this transaction
@@ -24,11 +19,8 @@ type PostCustomGatewayRefundOwnershipIDQueryParams struct {
 	FeeAmount *int64 `queryParam:"style=form,explode=true,name=feeAmount"`
 	// The amount (in cents) recovered from the marketplace owner as a commission refund for the purchase of this app
 	MarketplaceAmount *int64 `queryParam:"style=form,explode=true,name=marketplaceAmount"`
-}
-
-type PostCustomGatewayRefundOwnershipIDRequest struct {
-	PathParams  PostCustomGatewayRefundOwnershipIDPathParams
-	QueryParams PostCustomGatewayRefundOwnershipIDQueryParams
+	// The id of the ownership record involved in this transaction
+	OwnershipID string `pathParam:"style=simple,explode=false,name=ownershipId"`
 }
 
 type PostCustomGatewayRefundOwnershipIDResponse struct {

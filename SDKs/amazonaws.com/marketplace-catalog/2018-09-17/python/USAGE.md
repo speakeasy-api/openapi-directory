@@ -3,29 +3,23 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        hmac=shared.SchemeHmac(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
+        hmac="YOUR_API_KEY_HERE",
+    ),
 )
-    
+
+
 req = operations.CancelChangeSetRequest(
-    query_params=operations.CancelChangeSetQueryParams(
-        catalog="error",
-        change_set_id="voluptatem",
-    ),
-    headers=operations.CancelChangeSetHeaders(
-        x_amz_algorithm="quia",
-        x_amz_content_sha256="enim",
-        x_amz_credential="aut",
-        x_amz_date="impedit",
-        x_amz_security_token="ratione",
-        x_amz_signature="adipisci",
-        x_amz_signed_headers="eius",
-    ),
+    x_amz_algorithm="corrupti",
+    x_amz_content_sha256="provident",
+    x_amz_credential="distinctio",
+    x_amz_date="quibusdam",
+    x_amz_security_token="unde",
+    x_amz_signature="nulla",
+    x_amz_signed_headers="corrupti",
+    catalog="illum",
+    change_set_id="vel",
 )
     
 res = s.cancel_change_set(req)

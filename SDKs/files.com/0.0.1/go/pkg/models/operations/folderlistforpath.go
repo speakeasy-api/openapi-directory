@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FolderListForPathPathParams struct {
-	// Path to operate on.
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type FolderListForPathQueryParams struct {
+type FolderListForPathRequest struct {
 	// Send cursor to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header or the X-Files-Cursor-Prev header.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If specified, will filter folders/files list by this string.  Wildcards of `*` and `?` are acceptable here.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Path to operate on.
+	Path string `pathParam:"style=simple,explode=false,name=path"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// Request a preview size.  Can be `small` (default), `large`, `xlarge`, or `pdf`.
@@ -29,11 +26,6 @@ type FolderListForPathQueryParams struct {
 	WithPreviews *bool `queryParam:"style=form,explode=true,name=with_previews"`
 	// Include file priority color information?
 	WithPriorityColor *bool `queryParam:"style=form,explode=true,name=with_priority_color"`
-}
-
-type FolderListForPathRequest struct {
-	PathParams  FolderListForPathPathParams
-	QueryParams FolderListForPathQueryParams
 }
 
 type FolderListForPathResponse struct {

@@ -6,12 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateNetworkWirelessSsidIdentityPskPathParams struct {
-	IdentityPskID string `pathParam:"style=simple,explode=false,name=identityPskId"`
-	NetworkID     string `pathParam:"style=simple,explode=false,name=networkId"`
-	Number        string `pathParam:"style=simple,explode=false,name=number"`
-}
-
 type UpdateNetworkWirelessSsidIdentityPskRequestBody struct {
 	// The group policy to be applied to clients
 	GroupPolicyID *string `json:"groupPolicyId,omitempty"`
@@ -22,8 +16,10 @@ type UpdateNetworkWirelessSsidIdentityPskRequestBody struct {
 }
 
 type UpdateNetworkWirelessSsidIdentityPskRequest struct {
-	PathParams UpdateNetworkWirelessSsidIdentityPskPathParams
-	Request    *UpdateNetworkWirelessSsidIdentityPskRequestBody `request:"mediaType=application/json"`
+	RequestBody   *UpdateNetworkWirelessSsidIdentityPskRequestBody `request:"mediaType=application/json"`
+	IdentityPskID string                                           `pathParam:"style=simple,explode=false,name=identityPskId"`
+	NetworkID     string                                           `pathParam:"style=simple,explode=false,name=networkId"`
+	Number        string                                           `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNetworkWirelessSsidIdentityPskResponse struct {

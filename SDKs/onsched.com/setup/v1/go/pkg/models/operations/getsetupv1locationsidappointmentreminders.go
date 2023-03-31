@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSetupV1LocationsIDAppointmentremindersPathParams struct {
+type GetSetupV1LocationsIDAppointmentremindersRequest struct {
 	// id of business location, defaults to primary business location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSetupV1LocationsIDAppointmentremindersRequest struct {
-	PathParams GetSetupV1LocationsIDAppointmentremindersPathParams
 }
 
 type GetSetupV1LocationsIDAppointmentremindersResponse struct {

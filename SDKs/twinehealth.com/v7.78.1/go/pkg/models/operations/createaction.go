@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateActionRequest struct {
-	Request shared.CreateActionRequestInput `request:"mediaType=application/vnd.api+json"`
-}
-
 type CreateActionResponse struct {
 	ContentType string
 	// OK

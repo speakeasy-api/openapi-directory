@@ -7,20 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchVersionNumberSQueryExtPathParams struct {
-	// Expected response format.
-	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
-	// Query string. Must be properly URL encoded.
-	Query string `pathParam:"style=simple,explode=false,name=query"`
-	// Service version number. The current value is 2.
-	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
-}
-
-type GetSearchVersionNumberSQueryExtQueryParams struct {
+type GetSearchVersionNumberSQueryExtRequest struct {
 	// Bottom right position of the bounding box. This is specified as a comma separated string composed of lat., lon.
 	BtmRight *string `queryParam:"style=form,explode=true,name=btmRight"`
 	// Comma separated string of country codes. This will limit the search to the specified countries.
 	CountrySet *string `queryParam:"style=form,explode=true,name=countrySet"`
+	// Expected response format.
+	Ext shared.ExtEnum `pathParam:"style=simple,explode=false,name=ext"`
 	// A comma separated list of indexes which should be utilized for the search. Item order does not matter. Available indexes are:
 	//   - <b>Addr</b> = Address range interpolation (when there is no PAD)
 	//   - <b>Geo</b> = Geographies
@@ -41,19 +34,18 @@ type GetSearchVersionNumberSQueryExtQueryParams struct {
 	Lon *float32 `queryParam:"style=form,explode=true,name=lon"`
 	// Starting offset of the returned results within the full result set.
 	Ofs *int64 `queryParam:"style=form,explode=true,name=ofs"`
+	// Query string. Must be properly URL encoded.
+	Query string `pathParam:"style=simple,explode=false,name=query"`
 	// If radius <b>and</b> position are set, the results will be constrained to the defined area. The radius parameter is specified in meters.
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
 	TopLeft *string `queryParam:"style=form,explode=true,name=topLeft"`
 	// If the "typeahead" flag is set, the query will be interpreted as a partial input and the search will enter <b>predictive</b> mode.
 	Typeahead *bool `queryParam:"style=form,explode=true,name=typeahead"`
+	// Service version number. The current value is 2.
+	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`
 	// Geopolitical View.
 	View *shared.ViewEnum `queryParam:"style=form,explode=true,name=view"`
-}
-
-type GetSearchVersionNumberSQueryExtRequest struct {
-	PathParams  GetSearchVersionNumberSQueryExtPathParams
-	QueryParams GetSearchVersionNumberSQueryExtQueryParams
 }
 
 type GetSearchVersionNumberSQueryExtResponse struct {

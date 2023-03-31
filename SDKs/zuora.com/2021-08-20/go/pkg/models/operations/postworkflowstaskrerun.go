@@ -7,13 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type POSTWorkflowsTaskRerunPathParams struct {
-	// The unique ID of the task.
-	//
-	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
-}
-
-type POSTWorkflowsTaskRerunHeaders struct {
+type POSTWorkflowsTaskRerunRequest struct {
 	// `Bearer {token}` for a valid OAuth token.
 	//
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
@@ -25,11 +19,9 @@ type POSTWorkflowsTaskRerunHeaders struct {
 	// The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
 	//
 	ZuoraTrackID *string `header:"style=simple,explode=false,name=Zuora-Track-Id"`
-}
-
-type POSTWorkflowsTaskRerunRequest struct {
-	PathParams POSTWorkflowsTaskRerunPathParams
-	Headers    POSTWorkflowsTaskRerunHeaders
+	// The unique ID of the task.
+	//
+	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 
 type POSTWorkflowsTaskRerunResponse struct {

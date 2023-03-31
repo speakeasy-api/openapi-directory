@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostV2CadenceMembershipsJSONQueryParams struct {
+type PostV2CadenceMembershipsJSONRequest struct {
 	// ID of the cadence to create a cadence membership for
 	CadenceID int64 `queryParam:"style=form,explode=true,name=cadence_id"`
 	// ID of the person to create a cadence membership for
@@ -15,10 +15,6 @@ type PostV2CadenceMembershipsJSONQueryParams struct {
 	StepID *int64 `queryParam:"style=form,explode=true,name=step_id"`
 	// ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
 	UserID *int64 `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type PostV2CadenceMembershipsJSONRequest struct {
-	QueryParams PostV2CadenceMembershipsJSONQueryParams
 }
 
 type PostV2CadenceMembershipsJSONResponse struct {

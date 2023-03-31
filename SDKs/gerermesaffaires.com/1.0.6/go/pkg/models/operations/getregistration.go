@@ -7,21 +7,15 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetRegistrationSecurity struct {
-	GmaAuth shared.SchemeGmaAuth `security:"scheme,type=oauth2"`
-}
-
-type GetRegistrationQueryParams struct {
-	// Code of the invitation
-	Code string `queryParam:"style=form,explode=true,name=Code"`
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetRegistrationRequest struct {
-	QueryParams GetRegistrationQueryParams
-	Security    GetRegistrationSecurity
+	// Code of the invitation
+	Code string `queryParam:"style=form,explode=true,name=Code"`
 }
 
 type GetRegistration200ApplicationJSON2 struct {

@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateAnInboundWireDrawdownRequestBeingCreatedRequest struct {
-	Request shared.SimulateAnInboundWireDrawdownRequestBeingCreatedParameters `request:"mediaType=application/json"`
-}
-
 type SimulateAnInboundWireDrawdownRequestBeingCreatedDefaultApplicationJSON13StatusEnum string
 
 const (

@@ -3,20 +3,16 @@
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
-        bearer=shared.SchemeBearer(
-            api_key="YOUR_API_KEY_HERE",
-        ),
-    )
-)
-    
-req = operations.AquiferCodesDemandListRequest(
-    query_params=operations.AquiferCodesDemandListQueryParams(
-        limit=4105802276156407248,
-        offset=7219591670737759335,
+        bearer="YOUR_API_KEY_HERE",
     ),
+)
+
+
+req = operations.AquiferCodesDemandListRequest(
+    limit=548814,
+    offset=592845,
 )
     
 res = s.aquifer_codes.aquifer_codes_demand_list(req)

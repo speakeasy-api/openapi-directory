@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetRecurrencebyrecurrenceIDPathParams struct {
-	RecurrenceID string `pathParam:"style=simple,explode=false,name=recurrenceId"`
-}
-
-type GetRecurrencebyrecurrenceIDHeaders struct {
+type GetRecurrencebyrecurrenceIDRequest struct {
 	// HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Type of the content being sent
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetRecurrencebyrecurrenceIDRequest struct {
-	PathParams GetRecurrencebyrecurrenceIDPathParams
-	Headers    GetRecurrencebyrecurrenceIDHeaders
+	ContentType  string `header:"style=simple,explode=false,name=Content-Type"`
+	RecurrenceID string `pathParam:"style=simple,explode=false,name=recurrenceId"`
 }
 
 type GetRecurrencebyrecurrenceIDResponse struct {

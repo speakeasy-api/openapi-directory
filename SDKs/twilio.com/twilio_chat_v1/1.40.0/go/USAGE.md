@@ -14,25 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateChannelRequest{
-        Security: operations.CreateChannelSecurity{
-            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "corrupti",
-        },
-        Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "provident",
-            FriendlyName: "distinctio",
+        RequestBody: &operations.CreateChannelCreateChannelRequest{
+            Attributes: "corrupti",
+            FriendlyName: "provident",
             Type: "private",
-            UniqueName: "unde",
+            UniqueName: "quibusdam",
         },
+        ServiceSid: "unde",
     }
 
     ctx := context.Background()
-    res, err := s.CreateChannel(ctx, req)
+    res, err := s.CreateChannel(ctx, req, operations.CreateChannelSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

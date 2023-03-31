@@ -35,16 +35,16 @@ func newManageSuggestions(defaultClient, securityClient HTTPClient, serverURL, l
 // This endpoint deletes a chosen SKU suggestion. Only one SKU should be deleted per request. This request cannot be undone. A workaround to revert its action, is to send the suggestion again, through the Send Suggestion API.
 func (s *manageSuggestions) DeleteSuggestion(ctx context.Context, request operations.DeleteSuggestionRequest) (*operations.DeleteSuggestionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerSkuId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -81,9 +81,9 @@ func (s *manageSuggestions) DeleteSuggestion(ctx context.Context, request operat
 // In the Send Suggestion request, the seller must send information about the SKU, such as the product and SKU name, the seller ID, and the image URL. All parameters are explained below.
 func (s *manageSuggestions) SaveSuggestion(ctx context.Context, request operations.SaveSuggestionRequest) (*operations.SaveSuggestionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerSkuId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerSkuId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveSuggestionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -98,9 +98,9 @@ func (s *manageSuggestions) SaveSuggestion(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

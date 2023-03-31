@@ -8,13 +8,7 @@ import (
 )
 
 type CreateSiteSecurity struct {
-	BearerAuth shared.SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateSiteRequest struct {
-	// site definition
-	Request  shared.SiteOptions `request:"mediaType=application/json"`
-	Security CreateSiteSecurity
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateSiteResponse struct {

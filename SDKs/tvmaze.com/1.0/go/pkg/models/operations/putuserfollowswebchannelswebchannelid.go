@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUserFollowsWebchannelsWebchannelIDPathParams struct {
-	WebchannelID int64 `pathParam:"style=simple,explode=false,name=webchannel_id"`
-}
-
 type PutUserFollowsWebchannelsWebchannelIDRequest struct {
-	PathParams PutUserFollowsWebchannelsWebchannelIDPathParams
+	WebchannelID int64 `pathParam:"style=simple,explode=false,name=webchannel_id"`
 }
 
 type PutUserFollowsWebchannelsWebchannelIDResponse struct {

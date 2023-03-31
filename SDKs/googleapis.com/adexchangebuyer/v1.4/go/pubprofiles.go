@@ -32,20 +32,20 @@ func newPubprofiles(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // AdexchangebuyerPubprofilesList - Gets the requested publisher profile(s) by publisher accountId.
-func (s *pubprofiles) AdexchangebuyerPubprofilesList(ctx context.Context, request operations.AdexchangebuyerPubprofilesListRequest) (*operations.AdexchangebuyerPubprofilesListResponse, error) {
+func (s *pubprofiles) AdexchangebuyerPubprofilesList(ctx context.Context, request operations.AdexchangebuyerPubprofilesListRequest, security operations.AdexchangebuyerPubprofilesListSecurity) (*operations.AdexchangebuyerPubprofilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publisher/{accountId}/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/publisher/{accountId}/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

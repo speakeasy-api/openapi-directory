@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetCountryQueryParams struct {
+type GetCountryRequest struct {
 	// The Country Code of the country you want to fetch it's data.
 	CountryCode string `queryParam:"style=form,explode=true,name=CountryCode"`
 	// Sets the format of the API response. JSON is the default format.
@@ -17,10 +17,6 @@ type GetCountryQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The modules you want to use of the request. It's a CSV (Comma Separated Values)
 	Params *string `queryParam:"style=form,explode=true,name=params"`
-}
-
-type GetCountryRequest struct {
-	QueryParams GetCountryQueryParams
 }
 
 type GetCountryResponse struct {

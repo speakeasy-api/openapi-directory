@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ReportMeetingPollsSecurity struct {
-	OAuth shared.SchemeOAuth `security:"scheme,type=oauth2"`
+	OAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ReportMeetingPollsPathParams struct {
+type ReportMeetingPollsRequest struct {
 	// The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
 	//
 	// If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
 	MeetingID string `pathParam:"style=simple,explode=false,name=meetingId"`
-}
-
-type ReportMeetingPollsRequest struct {
-	PathParams ReportMeetingPollsPathParams
-	Security   ReportMeetingPollsSecurity
 }
 
 type ReportMeetingPolls200ApplicationXMLQuestionsQuestionDetails struct {

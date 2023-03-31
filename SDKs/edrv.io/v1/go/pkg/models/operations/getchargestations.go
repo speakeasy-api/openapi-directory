@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetChargeStationsQueryParams struct {
+type GetChargeStationsRequest struct {
 	// Chargestations that have been activated/deactivated by the admin
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Date as ISO String
@@ -43,10 +43,6 @@ type GetChargeStationsQueryParams struct {
 	UpdatedAtDollarGte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$gte]"`
 	// Date as ISO String
 	UpdatedAtDollarLte *time.Time `queryParam:"style=form,explode=true,name=updatedAt[$lte]"`
-}
-
-type GetChargeStationsRequest struct {
-	QueryParams GetChargeStationsQueryParams
 }
 
 type GetChargeStationsResponse struct {

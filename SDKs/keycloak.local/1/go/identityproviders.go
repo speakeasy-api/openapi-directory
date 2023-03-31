@@ -34,7 +34,7 @@ func newIdentityProviders(defaultClient, securityClient HTTPClient, serverURL, l
 // DeleteRealmIdentityProviderInstancesAlias - Delete the identity provider
 func (s *identityProviders) DeleteRealmIdentityProviderInstancesAlias(ctx context.Context, request operations.DeleteRealmIdentityProviderInstancesAliasRequest) (*operations.DeleteRealmIdentityProviderInstancesAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *identityProviders) DeleteRealmIdentityProviderInstancesAlias(ctx contex
 // DeleteRealmIdentityProviderInstancesAliasMappersID - Delete a mapper for the identity provider
 func (s *identityProviders) DeleteRealmIdentityProviderInstancesAliasMappersID(ctx context.Context, request operations.DeleteRealmIdentityProviderInstancesAliasMappersIDRequest) (*operations.DeleteRealmIdentityProviderInstancesAliasMappersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -104,7 +104,7 @@ func (s *identityProviders) DeleteRealmIdentityProviderInstancesAliasMappersID(c
 // GetRealmIdentityProviderInstances - Get identity providers
 func (s *identityProviders) GetRealmIdentityProviderInstances(ctx context.Context, request operations.GetRealmIdentityProviderInstancesRequest) (*operations.GetRealmIdentityProviderInstancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +148,7 @@ func (s *identityProviders) GetRealmIdentityProviderInstances(ctx context.Contex
 // GetRealmIdentityProviderInstancesAlias - Get the identity provider
 func (s *identityProviders) GetRealmIdentityProviderInstancesAlias(ctx context.Context, request operations.GetRealmIdentityProviderInstancesAliasRequest) (*operations.GetRealmIdentityProviderInstancesAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,14 +192,14 @@ func (s *identityProviders) GetRealmIdentityProviderInstancesAlias(ctx context.C
 // GetRealmIdentityProviderInstancesAliasExport - Export public broker configuration for identity provider
 func (s *identityProviders) GetRealmIdentityProviderInstancesAliasExport(ctx context.Context, request operations.GetRealmIdentityProviderInstancesAliasExportRequest) (*operations.GetRealmIdentityProviderInstancesAliasExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,7 +231,7 @@ func (s *identityProviders) GetRealmIdentityProviderInstancesAliasExport(ctx con
 // GetRealmIdentityProviderInstancesAliasManagementPermissions - Return object stating whether client Authorization permissions have been initialized or not and a reference
 func (s *identityProviders) GetRealmIdentityProviderInstancesAliasManagementPermissions(ctx context.Context, request operations.GetRealmIdentityProviderInstancesAliasManagementPermissionsRequest) (*operations.GetRealmIdentityProviderInstancesAliasManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/management/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -275,7 +275,7 @@ func (s *identityProviders) GetRealmIdentityProviderInstancesAliasManagementPerm
 // GetRealmIdentityProviderInstancesAliasMapperTypes - Get mapper types for identity provider
 func (s *identityProviders) GetRealmIdentityProviderInstancesAliasMapperTypes(ctx context.Context, request operations.GetRealmIdentityProviderInstancesAliasMapperTypesRequest) (*operations.GetRealmIdentityProviderInstancesAliasMapperTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mapper-types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mapper-types", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -310,7 +310,7 @@ func (s *identityProviders) GetRealmIdentityProviderInstancesAliasMapperTypes(ct
 // GetRealmIdentityProviderInstancesAliasMappers - Get mappers for identity provider
 func (s *identityProviders) GetRealmIdentityProviderInstancesAliasMappers(ctx context.Context, request operations.GetRealmIdentityProviderInstancesAliasMappersRequest) (*operations.GetRealmIdentityProviderInstancesAliasMappersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -354,7 +354,7 @@ func (s *identityProviders) GetRealmIdentityProviderInstancesAliasMappers(ctx co
 // GetRealmIdentityProviderInstancesAliasMappersID - Get mapper by id for the identity provider
 func (s *identityProviders) GetRealmIdentityProviderInstancesAliasMappersID(ctx context.Context, request operations.GetRealmIdentityProviderInstancesAliasMappersIDRequest) (*operations.GetRealmIdentityProviderInstancesAliasMappersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *identityProviders) GetRealmIdentityProviderInstancesAliasMappersID(ctx 
 // GetRealmIdentityProviderProvidersProviderID - Get identity providers
 func (s *identityProviders) GetRealmIdentityProviderProvidersProviderID(ctx context.Context, request operations.GetRealmIdentityProviderProvidersProviderIDRequest) (*operations.GetRealmIdentityProviderProvidersProviderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/providers/{provider_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/providers/{provider_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -433,7 +433,7 @@ func (s *identityProviders) GetRealmIdentityProviderProvidersProviderID(ctx cont
 // PostRealmIdentityProviderImportConfig - Import identity provider from uploaded JSON file
 func (s *identityProviders) PostRealmIdentityProviderImportConfig(ctx context.Context, request operations.PostRealmIdentityProviderImportConfigRequest) (*operations.PostRealmIdentityProviderImportConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/import-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/import-config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -477,9 +477,9 @@ func (s *identityProviders) PostRealmIdentityProviderImportConfig(ctx context.Co
 // PostRealmIdentityProviderInstances - Create a new identity provider
 func (s *identityProviders) PostRealmIdentityProviderInstances(ctx context.Context, request operations.PostRealmIdentityProviderInstancesRequest) (*operations.PostRealmIdentityProviderInstancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentityProviderRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -522,9 +522,9 @@ func (s *identityProviders) PostRealmIdentityProviderInstances(ctx context.Conte
 // PostRealmIdentityProviderInstancesAliasMappers - Add a mapper to identity provider
 func (s *identityProviders) PostRealmIdentityProviderInstancesAliasMappers(ctx context.Context, request operations.PostRealmIdentityProviderInstancesAliasMappersRequest) (*operations.PostRealmIdentityProviderInstancesAliasMappersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentityProviderMapperRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -567,9 +567,9 @@ func (s *identityProviders) PostRealmIdentityProviderInstancesAliasMappers(ctx c
 // PutRealmIdentityProviderInstancesAlias - Update the identity provider
 func (s *identityProviders) PutRealmIdentityProviderInstancesAlias(ctx context.Context, request operations.PutRealmIdentityProviderInstancesAliasRequest) (*operations.PutRealmIdentityProviderInstancesAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentityProviderRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -612,9 +612,9 @@ func (s *identityProviders) PutRealmIdentityProviderInstancesAlias(ctx context.C
 // PutRealmIdentityProviderInstancesAliasManagementPermissions - Return object stating whether client Authorization permissions have been initialized or not and a reference
 func (s *identityProviders) PutRealmIdentityProviderInstancesAliasManagementPermissions(ctx context.Context, request operations.PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest) (*operations.PutRealmIdentityProviderInstancesAliasManagementPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/management/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/management/permissions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagementPermissionReference", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,9 +666,9 @@ func (s *identityProviders) PutRealmIdentityProviderInstancesAliasManagementPerm
 // PutRealmIdentityProviderInstancesAliasMappersID - Update a mapper for the identity provider
 func (s *identityProviders) PutRealmIdentityProviderInstancesAliasMappersID(ctx context.Context, request operations.PutRealmIdentityProviderInstancesAliasMappersIDRequest) (*operations.PutRealmIdentityProviderInstancesAliasMappersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IdentityProviderMapperRepresentation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

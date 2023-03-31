@@ -8,20 +8,15 @@ import (
 )
 
 type GeteventsuntilSecurity struct {
-	CodeOauth     *shared.SchemeCodeOauth     `security:"scheme,type=oauth2"`
-	PasswordOauth *shared.SchemePasswordOauth `security:"scheme,type=oauth2"`
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GeteventsuntilQueryParams struct {
+type GeteventsuntilRequest struct {
 	// Your request will retrieve all the events until this one
 	EventID string `queryParam:"style=form,explode=true,name=event_id"`
 	// ID of the Home you're interested in
 	HomeID string `queryParam:"style=form,explode=true,name=home_id"`
-}
-
-type GeteventsuntilRequest struct {
-	QueryParams GeteventsuntilQueryParams
-	Security    GeteventsuntilSecurity
 }
 
 type GeteventsuntilResponse struct {
